@@ -19,7 +19,7 @@ ms.locfileid: "54415405"
 
 ## <a name="new-to-net"></a>.NET을 처음 사용하는 경우
 
-.NET에 대한 대략적인 개요는 [.NET이란?](https://www.microsoft.com/net/learn/what-is-dotnet)을 체크 아웃하세요.
+.NET에 대한 대략적인 개요는 [.NET이란?](https://www.microsoft.com/net/learn/what-is-dotnet)을 확인하세요.
 
 .NET을 처음 사용하는 경우 [시작](get-started.md) 문서를 확인하세요.
 
@@ -35,17 +35,17 @@ ms.locfileid: "54415405"
 
 .NET Standard를 처음 사용하는 경우 [.NET Standard](net-standard.md)를 확인하세요.
 
-## <a name="porting-net-framework-code-to-net-core"></a>.NET Core로 .NET Framework 코드 이식
+## <a name="porting-net-framework-code-to-net-core"></a>.NET Framework 코드를 .NET Core로 이식
 
-애플리케이션, 서비스 또는 시스템의 일부 구성 요소를 .NET Core로 이식하려는 경우 [.NET Framework에서.NET Core로 이식](../core/porting/index.md)을 확인하세요.
+애플리케이션이나 서비스 또는 시스템의 일부 구성 요소를 .NET Core로 이식하려는 경우 [.NET Framework에서.NET Core로 이식](../core/porting/index.md)을 확인하세요.
 
 ## <a name="porting-a-nuget-package-from-net-framework-to-net-standard-or-net-core"></a>.NET Framework에서 .NET Standard 또는 .NET Core로 NuGet 패키지 이식
 
-.NET Standard로 NuGet 패키지를 이식하려는 경우 [.NET Framework에서 .NET Core로 이식](../core/porting/index.md)을 확인하세요.  .NET Standard 및 .NET Core에 대한 도구가 공유되므로 .NET Core뿐만 아니라 .NET Standard로의 이식에 대한 콘텐츠가 서로 관련이 있습니다.
+.NET Standard로 NuGet 패키지를 이식하려는 경우 [.NET Framework에서 .NET Core로 이식](../core/porting/index.md)을 확인하세요.  .NET Standard와 .NET Core 도구는 공통적으로 사용할 수 있으므로 .NET Standard와 .NET Core 이식에 관한 내용은 서로 관련이 있습니다.
 
 ## <a name="interested-in-major-net-concepts"></a>주요 .NET 개념에 관심이 있는 경우
 
-.NET의 주요 개념 중 일부에 관심이 있다면 다음을 확인해 보세요.
+.NET의 주요 개념에 관심이 있다면 다음을 확인해 보세요.
 
 * [.NET 아키텍처 구성 요소](components.md)
 * [.NET Standard](net-standard.md)
@@ -56,7 +56,7 @@ ms.locfileid: "54415405"
 * [날짜, 시간 및 표준 시간대](datetime/index.md)
 * [비동기 프로그래밍](async.md)
 
-또한 세 가지 주요 .NET 언어에 대해 알아보려면 각 언어 가이드를 확인해 보세요.
+.NET의 세 가지 주요 언어는 다음의 언어별 가이드에서 확인해 보세요.
 
 * [C# 가이드](../csharp/index.md)
 * [F# 가이드](../fsharp/index.md)
