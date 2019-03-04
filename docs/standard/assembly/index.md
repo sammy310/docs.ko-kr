@@ -30,7 +30,7 @@ ms.assetid: 149f5ca5-5b34-4746-9542-1ae43b2d0256
   
 -   *어셈블리 참조 목록*: 누군가가 만들었을 수 있으며 사용자의 애플리케이션에 필요한 .dlls 또는 기타 파일을 비롯한 모든 외부 종속성 목록 어셈블리 참조는 global 및 private 개체에 대한 참조를 포함합니다. 전역 개체는 다른 모든 애플리케이션에서 사용할 수 있습니다. .NET Core에서는 특정 .NET Core 런타임과 결합됩니다. .NET Framework에서는 전역 어셈블리 캐시에 있습니다. <xref:System.IO?displayProperty=nameWithType> 네임스페이스는 전역 어셈블리 캐시의 어셈블리에 대한 예입니다. private 개체는 애플리케이션이 설치된 디렉터리와 같거나 낮은 수준에 있는 디렉터리에 있어야 합니다.  
   
- 어셈블리는 콘텐츠, 버전 관리 및 종속성에 대한 정보를 포함하므로 사용한 애플리케이션은 제대로 작동하기 위해 Windows 레지스트리 값에 의존하지 않습니다. 어셈블리는 .dll 충돌을 줄이고 더 안정적이고 배포하기 쉬운 애플리케이션을 구현합니다. 많은 경우에 해당 파일을 대상 컴퓨터에 복사하는 것만으로 .NET 기반 애플리케이션을 설치할 수 있습니다. 자세한 내용은 [어셈블리 매니페스트](../../framework/app-domains/assembly-manifest.md)합니다.  
+ 어셈블리는 콘텐츠, 버전 관리 및 종속성에 대한 정보를 포함하므로 사용한 애플리케이션은 제대로 작동하기 위해 Windows 레지스트리 값에 의존하지 않습니다. 어셈블리는 .dll 충돌을 줄이고 더 안정적이고 배포하기 쉬운 애플리케이션을 구현합니다. 많은 경우에 해당 파일을 대상 컴퓨터에 복사하는 것만으로 .NET 기반 애플리케이션을 설치할 수 있습니다. 자세한 내용은 [어셈블리 매니페스트](../../framework/app-domains/assembly-manifest.md)를 참조하세요.  
   
 ## <a name="adding-a-reference-to-an-assembly"></a>어셈블리에 대한 참조 추가  
  어셈블리를 사용하려면 해당 참조를 추가해야 합니다. 그런 다음 C#의 [using 지시문](../../csharp/language-reference/keywords/using-directive.md) 또는 Visual Basic의 [Imports 지시문](../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)을 사용하여 사용할 항목의 네임스페이스를 선택할 수 있습니다. 어셈블리를 참조하고 가져오면 해당 코드가 소스 파일에 속해 있는 것처럼 해당 네임스페이스의 액세스 가능한 모든 유형, 속성, 메서드 및 다른 멤버를 애플리케이션에서 사용할 수 있습니다.  
@@ -48,11 +48,12 @@ ms.assetid: 149f5ca5-5b34-4746-9542-1ae43b2d0256
 
 ## <a name="see-also"></a>참고 항목
 
- - [.NET 어셈블리 파일 형식](file-format.md)  
+ - [.NET 어셈블리 파일 형식](file-format.md)
  - [공용 언어 런타임의 어셈블리](../../framework/app-domains/assemblies-in-the-common-language-runtime.md)  
  - [Friend 어셈블리(C#)](../../csharp/programming-guide/concepts/assemblies-gac/friend-assemblies.md)  
  - [Friend 어셈블리(Visual Basic)](../../visual-basic/programming-guide/concepts/assemblies-gac/friend-assemblies.md)  
  - [방법: 어셈블리 로드 및 언로드(C#)](../../csharp/programming-guide/concepts/assemblies-gac/how-to-load-and-unload-assemblies.md)  
  - [방법: 어셈블리 로드 및 언로드(Visual Basic)](../../visual-basic/programming-guide/concepts/assemblies-gac/how-to-load-and-unload-assemblies.md)  
+ - [방법: .NET Core에서 어셈블리 언로드 기능 사용 및 디버그](unloadability-howto.md)
  - [방법: 파일이 어셈블리인지 확인(C#)](../../csharp/programming-guide/concepts/assemblies-gac/how-to-determine-if-a-file-is-an-assembly.md)  
  - [방법: 파일이 어셈블리인지 확인(Visual Basic)](../../visual-basic/programming-guide/concepts/assemblies-gac/how-to-determine-if-a-file-is-an-assembly.md)  
