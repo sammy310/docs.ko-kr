@@ -6,12 +6,12 @@ helpviewer_keywords:
 - I/O [Visual Basic], My.Computer.FileSystem.WriteAllText method
 - I/O [Visual Basic], WriteAllText method
 ms.assetid: bbbd7fb5-f169-41a9-b53f-520ea9613913
-ms.openlocfilehash: 5fabd0b6894fc5ab7d4bab1979d71b171d2b21c4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d7518493cca62018ccda9659e977333184888ea7
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54498218"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56968688"
 ---
 # <a name="how-to-append-to-text-files-in-visual-basic"></a>방법: Visual Basic에서 텍스트 파일에 추가
 <xref:Microsoft.VisualBasic.FileIO.FileSystem.WriteAllText%2A> 메서드는 `append` 매개 변수가 `True`로 설정되도록 지정하여 텍스트 파일에 추가하는 데 사용될 수 있습니다.  
@@ -22,7 +22,7 @@ ms.locfileid: "54498218"
   
      이 예제에서는 `Testfile.txt`라는 파일에 `"This is a test string."` 문자열을 씁니다.  
   
-     [!code-vb[VbFileIOWrite#6](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/how-to-append-to-text-files_1.vb)]  
+     [!code-vb[VbFileIOWrite#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbFileIOWrite/VB/Class1.vb#6)]  
   
 ## <a name="robust-programming"></a>강력한 프로그래밍  
  다음 조건에서 예외가 발생합니다.  

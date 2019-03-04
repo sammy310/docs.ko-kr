@@ -7,12 +7,12 @@ helpviewer_keywords:
 - My.Settings object [Visual Basic], changing user settings
 - examples [Visual Basic], changing user settings
 ms.assetid: 41250181-c594-4854-9988-8183b9eb03cf
-ms.openlocfilehash: 3cf50f838124539dc774574cd1ad0b629d01a9ef
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4e93dbf453b831bb28707250466ea928bfe9a716
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54688193"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56976384"
 ---
 # <a name="how-to-change-user-settings-in-visual-basic"></a>방법: Visual Basic에서 사용자 설정 변경
 설정의 `My.Settings` 개체에 대한 속성에 새 값을 할당하여 사용자 설정을 변경할 수 있습니다.  
@@ -25,7 +25,7 @@ ms.locfileid: "54688193"
 ## <a name="example"></a>예제  
  이 예제에서는 `Nickname` 사용자 설정의 값을 변경합니다.  
   
- [!code-vb[VbVbalrMyResources#7](../../../../visual-basic/developing-apps/programming/app-settings/codesnippet/VisualBasic/how-to-change-user-settings_1.vb)]  
+ [!code-vb[VbVbalrMyResources#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyResources/VB/Form1.vb#7)]  
   
  이 예제가 작동하려면 애플리케이션에 `String` 형식의 `Nickname` 사용자 설정이 있어야 합니다.  
   

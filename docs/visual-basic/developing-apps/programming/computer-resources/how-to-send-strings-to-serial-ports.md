@@ -7,12 +7,12 @@ helpviewer_keywords:
 - My.Computer.Ports object
 - serial ports, sending strings to
 ms.assetid: 6ebf46cd-b2d0-4b2c-9a1f-be177b22ad52
-ms.openlocfilehash: b2ba25f4ca3f63e1e7831d26745fa35cd337dc48
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ca799f4aa1b1c535e6955eda1bcb9740b5b2de3c
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54503029"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56971704"
 ---
 # <a name="how-to-send-strings-to-serial-ports-in-visual-basic"></a>방법: Visual Basic에서 직렬 포트로 문자열 보내기
 이 항목에서는 Visual Basic에서 `My.Computer.Ports`를 사용하여 컴퓨터의 직렬 포트에 문자열을 보내는 방법을 설명합니다.  
@@ -26,7 +26,7 @@ ms.locfileid: "54503029"
   
  <xref:System.IO.Ports.SerialPort.WriteLine%2A> 메서드는 데이터를 직렬 포트로 보냅니다.  
   
- [!code-vb[VbVbalrMyComputer#33](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/VisualBasic/how-to-send-strings-to-serial-ports_1.vb)]  
+ [!code-vb[VbVbalrMyComputer#33](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyComputer/VB/Class2.vb#33)]  
   
 ## <a name="compiling-the-code"></a>코드 컴파일  
   

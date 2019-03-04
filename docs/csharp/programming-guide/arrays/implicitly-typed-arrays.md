@@ -7,12 +7,12 @@ helpviewer_keywords:
 - implicitly-typed arrays [C#]
 - C# language, implicitly typed arrays
 ms.assetid: e05be95c-6732-403d-ae42-b35f057cbbea
-ms.openlocfilehash: 2b52bca57bde2fd198fd1621cb8a8f7dfc73ec9e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: de47d4a4b588b4e051450976ea91c813210eda1e
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54740764"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57202017"
 ---
 # <a name="implicitly-typed-arrays-c-programming-guide"></a>암시적으로 형식화된 배열(C# 프로그래밍 가이드)
 
@@ -22,7 +22,7 @@ ms.locfileid: "54740764"
   
  다음 예제에서는 암시적으로 형식화된 배열을 만드는 방법을 보여 줍니다.  
   
- [!code-csharp[csProgGuideLINQ#37](../../../csharp/programming-guide/arrays/codesnippet/CSharp/implicitly-typed-arrays_1.cs)]  
+ [!code-csharp[csProgGuideLINQ#37](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideLINQ/CS/csRef30LangFeatures_2.cs#37)]  
   
  앞의 예제에서 암시적으로 형식화된 배열의 경우 초기화 문의 왼쪽에 대괄호가 사용되지 않는 것을 확인합니다. 또한 가변 배열이 1차원 배열과 마찬가지로 `new []`를 사용하여 초기화됩니다.  
   
@@ -30,7 +30,7 @@ ms.locfileid: "54740764"
 
  배열이 포함된 무명 형식을 만드는 경우 해당 형식의 개체 이니셜라이저에서 배열을 암시적으로 형식화해야 합니다. 다음 예제에서 `contacts`는 각각 `PhoneNumbers`라는 배열이 포함된 무명 형식의 암시적으로 형식화된 배열입니다. `var` 키워드는 개체 이니셜라이저 내부에서 사용되지 않았습니다.  
   
- [!code-csharp[csProgGuideLINQ#38](../../../csharp/programming-guide/arrays/codesnippet/CSharp/implicitly-typed-arrays_2.cs)]  
+ [!code-csharp[csProgGuideLINQ#38](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideLINQ/CS/csRef30LangFeatures_2.cs#38)]  
   
 ## <a name="see-also"></a>참고 항목
 

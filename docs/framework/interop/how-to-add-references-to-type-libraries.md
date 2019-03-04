@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: f5cfa6ba-cc25-4017-82cd-ba7391859113
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 71c2a6b183890aa9625dcffbef59d14c27ebe754
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.openlocfilehash: c12096739e66a47fadd89eb27e30ba3de43c7da3
+ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56219402"
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56836437"
 ---
 # <a name="how-to-add-references-to-type-libraries"></a>방법: 형식 라이브러리에 참조 추가
 Visual Studio에서는 형식 라이브러리에 참조를 추가하면 메타데이터가 포함된 interop 어셈블리를 생성합니다. 주 interop 어셈블리를 사용할 수 있는 경우 Visual Studio는 새 interop 어셈블리를 생성하기 전에 기존 어셈블리를 사용합니다.  
@@ -47,8 +47,6 @@ Visual Studio에서는 형식 라이브러리에 참조를 추가하면 메타�
 ## <a name="see-also"></a>참고 항목
 - [형식 라이브러리를 어셈블리로 가져오기](importing-a-type-library-as-an-assembly.md)
 - [.NET Framework에 COM 구성 요소 노출](exposing-com-components.md)
-- [연습: Visual Studio에서 Microsoft Office 어셈블리의 형식 정보 포함(C#)](../../csharp/programming-guide/concepts/assemblies-gac/walkthrough-embedding-type-information-from-microsoft-office-assemblies.md)
-- [연습: Visual Studio에서 Microsoft Office 어셈블리의 형식 정보 포함(Visual Basic)](../../visual-basic/programming-guide/concepts/assemblies-gac/walkthrough-embedding-type-information-from-microsoft-office-assemblies-in-vs.md)
 - [연습: Visual Studio에서 관리형 어셈블리의 형식 포함(C#)](/docs/csharp/programming-guide/concepts/assemblies-gac/walkthrough-embedding-types-from-managed-assemblies-in-visual-studio.md) 
 - [연습: Visual Studio에서 관리형 어셈블리의 형식 포함(Visual Basic)](/docs/visual-basic/programming-guide/concepts/assemblies-gac/walkthrough-embedding-types-from-managed-assemblies-in-vs.md)
 - [/link(C# 컴파일러 옵션)](../../csharp/language-reference/compiler-options/link-compiler-option.md)

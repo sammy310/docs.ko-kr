@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: d1898229-cd40-426e-a275-f3eb65fbc79f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 133d70058cc8151b22d31a3211d48188095e5f07
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.openlocfilehash: 043fe74f66635c30f12555efb9ccc9415e200ec3
+ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56218909"
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56835241"
 ---
 # <a name="importing-a-type-library-as-an-assembly"></a>형식 라이브러리를 어셈블리로 가져오기
 COM 형식 정의는 일반적으로 형식 라이브러리에 있습니다. 반면 CLS 규격 컴파일러는 어셈블리에서 형식 메타데이터를 생성합니다. 형식 정보의 두 가지 소스는 약간 다릅니다. 이 항목에서는 형식 라이브러리에서 메타데이터를 생성하기 위한 기술을 설명합니다. 결과 어셈블리를 interop 어셈블리라고 하고 포함된 형식 정보를 통해 .NET Framework 애플리케이션이 COM 형식을 사용할 수 있습니다.  
@@ -44,7 +44,7 @@ COM 형식 정의는 일반적으로 형식 라이브러리에 있습니다. 반
   
 -   Visual Studio  
   
-     Visual Studio는 형식 라이브러리의 COM 형식을 어셈블리의 메타데이터로 자동으로 변환합니다. 자세한 내용은 [방법: 형식 라이브러리에 참조 추가](../../../docs/framework/interop/how-to-add-references-to-type-libraries.md), [연습: Visual Studio에서 Microsoft Office 어셈블리의 형식 정보 포함(C#)](../../csharp/programming-guide/concepts/assemblies-gac/walkthrough-embedding-type-information-from-microsoft-office-assemblies.md) 및 [연습: Visual Studio에서 Microsoft Office 어셈블리의 형식 정보 포함(Visual Basic)](../../visual-basic/programming-guide/concepts/assemblies-gac/walkthrough-embedding-type-information-from-microsoft-office-assemblies-in-vs.md).  
+     Visual Studio는 형식 라이브러리의 COM 형식을 어셈블리의 메타데이터로 자동으로 변환합니다. 자세한 내용은 [방법: 형식 라이브러리에 참조 추가](../../../docs/framework/interop/how-to-add-references-to-type-libraries.md).  
   
 -   [형식 라이브러리 가져오기(Tlbimp.exe)](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md)  
   
@@ -81,5 +81,3 @@ COM 형식 정의는 일반적으로 형식 라이브러리에 있습니다. 반
 - [Interop 애플리케이션 배포](../../../docs/framework/interop/deploying-an-interop-application.md)
 - [방법: 형식 라이브러리에 참조 추가](../../../docs/framework/interop/how-to-add-references-to-type-libraries.md)
 - [방법: 형식 라이브러리에서 Interop 어셈블리 생성](../../../docs/framework/interop/how-to-generate-interop-assemblies-from-type-libraries.md)
-- [연습: Visual Studio에서 Microsoft Office 어셈블리의 형식 정보 포함(C#)](../../csharp/programming-guide/concepts/assemblies-gac/walkthrough-embedding-type-information-from-microsoft-office-assemblies.md)
-- [연습: Visual Studio에서 Microsoft Office 어셈블리의 형식 정보 포함(Visual Basic)](../../visual-basic/programming-guide/concepts/assemblies-gac/walkthrough-embedding-type-information-from-microsoft-office-assemblies-in-vs.md)

@@ -17,12 +17,12 @@ helpviewer_keywords:
 - AsyncOperation class
 - AsyncCompletedEventArgs class
 ms.assetid: 43402d19-8d30-426d-8785-1a4478233bfa
-ms.openlocfilehash: cab25e5a87345c69484f386584688a2efc8459d5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2c95b903ae03ea261674885262b24a33efa9e2db
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54579539"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56973745"
 ---
 # <a name="implementing-the-event-based-asynchronous-pattern"></a>이벤트 기반 비동기 패턴 구현
 상당한 지연을 일으킬 수 있는 몇 가지 작업을 사용하여 클래스를 작성하는 경우 [이벤트 기반 비동기 패턴 개요](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md)를 구현하여 비동기 기능을 부여하는 것을 고려할 수 있습니다.  
@@ -65,7 +65,7 @@ ms.locfileid: "54579539"
   
  다음 작업을 수행하는 _MethodName_**Async** 메서드를 정의합니다.  
   
--   `void`를 반환합니다.  
+-   `void`을 반환합니다.  
   
 -   *MethodName* 메서드와 동일한 매개 변수를 사용합니다.  
   
@@ -131,7 +131,7 @@ ms.locfileid: "54579539"
 |전체 클래스에서 단일 비동기 작업|`Sub MethodNameAsyncCancel(ByVal userState As Object)`|`Sub MethodNameAsyncCancel()`|  
 |클래스의 여러 비동기 작업|`Sub CancelAsync(ByVal userState As Object)`|`Sub CancelAsync()`|  
   
-### <a name="c"></a>C#  
+### <a name="c"></a>C\#
   
 ||다중 동시 작업 지원|한 번에 하나의 작업|  
 |------|------------------------------------------------|----------------------------------|  

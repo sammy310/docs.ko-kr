@@ -7,12 +7,12 @@ helpviewer_keywords:
 - connections [Visual Basic], checking status
 - connection status [Visual Basic]
 ms.assetid: 4d9ee8ab-9a6f-4279-ace4-b75afc976a74
-ms.openlocfilehash: c7a43fd154616e516f8c5e7d36d25f34924649ac
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: bb3d5751ae7d88af05c2a77e9b64f9cb28179a35
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54499962"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56973017"
 ---
 # <a name="how-to-check-connection-status-in-visual-basic"></a>방법: Visual Basic에서 연결 상태 확인
 <xref:Microsoft.VisualBasic.Devices.Network.IsAvailable> 속성은 컴퓨터에 작동하는 네트워크 또는 인터넷 연결이 있는지 확인하는 데 사용될 수 있습니다.  
@@ -23,7 +23,7 @@ ms.locfileid: "54499962"
   
 -   `IsAvailable` 속성이 `True` 또는 `False`인지 확인합니다. 다음 코드에서는 속성의 상태를 확인하고 보고합니다.  
   
-     [!code-vb[VbResourceTasks#3](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/VisualBasic/how-to-check-connection-status_1.vb)]  
+     [!code-vb[VbResourceTasks#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbResourceTasks/VB/Class1.vb#3)]  
   
      이 코드 예제는 IntelliSense 코드 조각으로 사용할 수도 있습니다. 코드 조각 선택에서는 **연결 및 네트워킹**에 있습니다. 자세한 내용은 [코드 조각](/visualstudio/ide/code-snippets)을 참조하세요.  
   

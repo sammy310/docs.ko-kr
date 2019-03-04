@@ -5,12 +5,12 @@ helpviewer_keywords:
 - I/O [Visual Basic], renaming files
 - files [Visual Basic], renaming
 ms.assetid: 0ea7e0c8-2cb2-4bf5-a00d-7b6e3c08a3bc
-ms.openlocfilehash: 3b1e85cc9e0b0768f7065ff690f6dc969ee040b2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0fac312c4c20f57e93dc88d0d6bb6b13932f7682
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54676369"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56966985"
 ---
 # <a name="how-to-rename-a-file-in-visual-basic"></a>방법: Visual Basic에서 파일 이름 바꾸기
 `My.Computer.FileSystem` 개체의 `RenameFile` 메서드를 사용하면 현재 위치, 파일 이름 및 새 파일 이름을 제공하여 파일 이름을 바꿀 수 있습니다. 이 메서드를 사용하여 파일을 이동할 수는 없습니다. 파일을 이동하고 파일 이름을 바꾸려면 `MoveFile` 메서드를 사용합니다.  
@@ -19,7 +19,7 @@ ms.locfileid: "54676369"
   
 -   `My.Computer.FileSystem.RenameFile` 메서드를 사용하여 파일 이름을 바꿉니다. 이 예제에서는 `Test.txt` 파일의 이름을 `SecondTest.txt`로 바꿉니다.  
   
-     [!code-vb[VbVbcnMyFileSystem#9](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/how-to-rename-a-file_1.vb)]  
+     [!code-vb[VbVbcnMyFileSystem#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#9)]  
   
  이 코드 예제는 IntelliSense 코드 조각으로 사용할 수도 있습니다. 코드 조각 선택에서 코드 조각은 **파일 시스템 - 드라이브, 폴더, 파일 처리**에 있습니다. 자세한 내용은 [코드 조각](/visualstudio/ide/code-snippets)을 참조하세요.  
   

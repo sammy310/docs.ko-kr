@@ -6,12 +6,12 @@ ms.author: johalex
 ms.date: 02/08/2019
 ms.topic: tutorial
 ms.custom: mvc, seodec18
-ms.openlocfilehash: 10e0fa2cedff3e31575ad2b9c8bc2d9ecc81f3e8
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
+ms.openlocfilehash: d9c87c4f4a81c02979259a47e8c4167d80f06377
+ms.sourcegitcommit: a532e8314c3a4b5b039656567fedff9787a31957
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56092542"
+ms.lasthandoff: 03/02/2019
+ms.locfileid: "57251094"
 ---
 # <a name="tutorial-predict-prices-using-a-regression-learner-with-mlnet"></a>자습서: ML.NET와 함께 회귀 학습자를 사용하여 가격 예측
 
@@ -307,11 +307,11 @@ private static void TestSinglePrediction(MLContext mlContext)
 
 [!code-csharp[LoadTheModel](../../../samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#21 "Load the model")]
 
-`model`은 여러 데이터 행에서 작동하는 `transformer`이지만, 일반적인 프로덕션 시나리오에서는 개별 예제에 대한 예측이 필요합니다. <xref:Microsoft.ML.PredictionEngine%602>은 `CreatePredictionEngine` 메서드에서 반환되는 래퍼입니다. 다음 코드를 추가하여 `PredictionEngine`을 `Predict` 메서드의 첫째 줄로 만듭니다.
+`model`은 여러 데이터 행에서 작동하는 `transformer`이지만, 일반적인 프로덕션 시나리오에서는 개별 예제에 대한 예측이 필요합니다. <xref:Microsoft.ML.PredictionEngine%602>은 `CreatePredictionEngine` 메서드에서 반환되는 래퍼입니다. 다음 코드를 추가하여 `PredictionEngine`을 `TestSinglePrediction` 메서드의 다음 줄로 만듭니다.
 
 [!code-csharp[MakePredictionEngine](../../../samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#22 "Create the PredictionFunction")]
   
-이 자습서에서는 이 클래스 내에서 하나의 테스트 이동을 사용합니다. 나중에 이 모델로 실험할 다른 시나리오를 추가할 수 있습니다. `TaxiTrip` 인스턴스를 만들어 주행을 추가하여 `Predict` 메서드에서 학습된 모델의 비용 예측을 테스트합니다.
+이 자습서에서는 이 클래스 내에서 하나의 테스트 이동을 사용합니다. 나중에 이 모델로 실험할 다른 시나리오를 추가할 수 있습니다. `TaxiTrip` 인스턴스를 만들어 주행을 추가하여 `TestSinglePrediction` 메서드에서 학습된 모델의 비용 예측을 테스트합니다.
 
 [!code-csharp[PredictionData](../../../samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#23 "Create test data for single prediction")]
 
@@ -319,7 +319,7 @@ private static void TestSinglePrediction(MLContext mlContext)
 
 [!code-csharp[Predict](../../../samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#24 "Create a prediction of taxi fare")]
 
-지정한 주행의 예상 운임을 표시하려면 `Main` 메서드에 다음 코드를 추가합니다.
+지정한 주행의 예상 운임을 표시하려면 `TestSinglePrediction` 메서드에 다음 코드를 추가합니다.
 
 [!code-csharp[Predict](../../../samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#25 "Display the prediction.")]
 

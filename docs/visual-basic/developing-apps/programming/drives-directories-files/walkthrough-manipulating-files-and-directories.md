@@ -15,12 +15,12 @@ helpviewer_keywords:
 - writing to files [Visual Basic], walkthroughs
 - I/O [Visual Basic], reading text from files
 ms.assetid: cae77565-9f78-4e46-8e42-eb2f9f8e1ffd
-ms.openlocfilehash: f199cc8c58dbcbb0fce17dbf3c7b8e198daf0305
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: cb7fda617118c01e6ee54339bcc3ff8f8b342450
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54709731"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57202446"
 ---
 # <a name="walkthrough-manipulating-files-and-directories-in-visual-basic"></a>연습: Visual Basic에서 파일과 디렉터리 조작
 이 연습에서는 Visual Basic에서 파일 I/O의 기본 개념을 소개합니다. 디렉터리에 텍스트 파일을 나열하고 검사하는 작은 애플리케이션을 만드는 방법을 설명합니다. 선택한 각 텍스트 파일에 대해 애플리케이션은 파일 특성 및 내용의 첫 줄을 제공합니다. 로그 파일에 정보를 기록하는 옵션이 있습니다.  
@@ -43,7 +43,7 @@ ms.locfileid: "54709731"
   
 4.  다음 표의 컨트롤을 양식에 추가하고 속성의 해당 값을 설정합니다.  
   
-    |Control|속성|값|  
+    |컨트롤|속성|값|  
     |-------------|--------------|-----------|  
     |**ListBox**|**이름**|`filesListBox`|  
     |**Button**|**이름**<br /><br /> **텍스트**|`browseButton`<br /><br /> **찾아보기**|  
@@ -57,13 +57,13 @@ ms.locfileid: "54709731"
   
 2.  다음 코드를 `Click` 이벤트 처리기에 추가합니다.  
   
-     [!code-vb[VbVbcnMyFileSystem#103](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/walkthrough-manipulating-files-and-directories_1.vb)]  
+     [!code-vb[VbVbcnMyFileSystem#103](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/class2.vb#103)]  
   
      `FolderBrowserDialog1.ShowDialog` 호출은 **폴더 찾아보기** 대화 상자를 엽니다. 사용자가 **확인**을 클릭하면 <xref:System.Windows.Forms.FolderBrowserDialog.SelectedPath%2A> 속성이 `ListFiles` 메서드로 인수에 전송됩니다. 다음 단계에서 이 메서드를 추가합니다.  
   
 3.  다음 `ListFiles` 메서드를 추가합니다.  
   
-     [!code-vb[VbVbcnMyFileSystem#104](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/walkthrough-manipulating-files-and-directories_2.vb)]  
+     [!code-vb[VbVbcnMyFileSystem#104](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/class2.vb#104)]  
   
      이 코드는 먼저 **ListBox**를 지웁니다.  
   
@@ -83,7 +83,7 @@ ms.locfileid: "54709731"
   
 2.  다음 코드를 `Click` 이벤트 처리기에 추가합니다.  
   
-     [!code-vb[VbVbcnMyFileSystem#105](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/walkthrough-manipulating-files-and-directories_3.vb)]  
+     [!code-vb[VbVbcnMyFileSystem#105](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/class2.vb#105)]  
   
      이 코드는 항목이 `ListBox`에서 선택되었는지 확인합니다. 그런 다음 `ListBox`에서 파일 경로 항목을 가져옵니다. <xref:Microsoft.VisualBasic.FileIO.FileSystem.FileExists%2A> 메서드는 파일이 아직 있는지를 확인하는 데 사용됩니다.  
   
@@ -91,7 +91,7 @@ ms.locfileid: "54709731"
   
 3.  다음 `GetTextForOutput` 메서드를 추가합니다.  
   
-     [!code-vb[VbVbcnMyFileSystem#107](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/walkthrough-manipulating-files-and-directories_4.vb)]  
+     [!code-vb[VbVbcnMyFileSystem#107](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/class2.vb#107)]  
   
      이 코드는 <xref:Microsoft.VisualBasic.FileIO.FileSystem.GetFileInfo%2A> 메서드를 사용하여 파일 매개 변수를 가져옵니다. 파일 매개 변수는 <xref:System.Text.StringBuilder>에 추가됩니다.  
   
@@ -107,7 +107,7 @@ ms.locfileid: "54709731"
   
 1.  다음 코드를 `examineButton_Click` 이벤트 처리기의 끝에 추가합니다.  
   
-     [!code-vb[VbVbcnMyFileSystem#106](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/walkthrough-manipulating-files-and-directories_5.vb)]  
+     [!code-vb[VbVbcnMyFileSystem#106](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/class2.vb#106)]  
   
      이 코드는 선택한 파일과 동일한 디렉터리에 로그 파일을 저장하도록 로그 파일 경로를 설정합니다. 로그 항목의 텍스트는 파일 정보 뒤에 현재 날짜 및 시간으로 설정됩니다.  
   
@@ -123,7 +123,7 @@ ms.locfileid: "54709731"
   
 2.  다음 코드를 이벤트 처리기에 추가합니다.  
   
-     [!code-vb[VbVbcnMyFileSystem#102](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/walkthrough-manipulating-files-and-directories_6.vb)]  
+     [!code-vb[VbVbcnMyFileSystem#102](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/class2.vb#102)]  
   
      이 코드는 폴더 브라우저의 기본 디렉터리를 현재 디렉터리로 설정합니다.  
   
@@ -135,7 +135,7 @@ ms.locfileid: "54709731"
   
 1.  다음 `SetEnabled` 메서드를 추가합니다.  
   
-     [!code-vb[VbVbcnMyFileSystem#108](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/walkthrough-manipulating-files-and-directories_7.vb)]  
+     [!code-vb[VbVbcnMyFileSystem#108](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/class2.vb#108)]  
   
      `ListBox`에서 항목이 선택되었는지에 따라 `SetEnabled` 메서드는 컨트롤의 사용 여부를 설정합니다.  
   
@@ -152,12 +152,12 @@ ms.locfileid: "54709731"
 ## <a name="full-example-using-mycomputerfilesystem"></a>My.Computer.FileSystem을 사용하는 전체 예제  
  다음은 전체 예제입니다.  
   
- [!code-vb[VbVbcnMyFileSystem#101](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/walkthrough-manipulating-files-and-directories_8.vb)]  
+ [!code-vb[VbVbcnMyFileSystem#101](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/class2.vb#101)]  
   
 ## <a name="full-example-using-systemio"></a>System.IO를 사용하는 전체 예제  
  동등한 다음 예제에서는 `My.Computer.FileSystem` 개체를 사용하는 대신 <xref:System.IO> 네임스페이스의 클래스를 사용합니다.  
   
- [!code-vb[VbVbcnMyFileSystem#111](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/walkthrough-manipulating-files-and-directories_9.vb)]  
+ [!code-vb[VbVbcnMyFileSystem#111](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/class3.vb#111)]  
   
 ## <a name="see-also"></a>참고 항목
 - <xref:System.IO>

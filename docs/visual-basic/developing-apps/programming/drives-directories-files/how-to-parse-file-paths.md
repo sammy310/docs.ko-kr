@@ -5,12 +5,12 @@ helpviewer_keywords:
 - file names [Visual Basic], parsing [Visual Basic]
 - parsing, file paths [Visual Basic]
 ms.assetid: c1bd99c9-8160-456a-b5ab-60a49139b923
-ms.openlocfilehash: 2b31dedbdd33ddfb3c15863a45b93148fd722faa
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4e3cfca9a84ef56ceb9ac0785af039f9b24603e2
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54707754"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56971990"
 ---
 # <a name="how-to-parse-file-paths-in-visual-basic"></a>방법: Visual Basic에서 파일 경로 구문 분석
 <xref:Microsoft.VisualBasic.FileIO.FileSystem> 개체는 파일 경로를 구문 분석할 때 유용한 메서드 여러 개를 제공합니다.  
@@ -27,13 +27,13 @@ ms.locfileid: "54707754"
   
 -   <xref:System.IO.FileInfo.DirectoryName%2A> 개체의 <xref:System.IO.FileInfo.Name%2A> 및 <xref:System.IO.FileInfo> 속성을 사용하여 파일의 이름과 경로를 확인합니다. 이 예제에서는 이름과 경로를 확인하고 이를 표시합니다.  
   
-     [!code-vb[VbVbcnMyFileSystem#54](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/how-to-parse-file-paths_1.vb)]  
+     [!code-vb[VbVbcnMyFileSystem#54](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#54)]  
   
 ### <a name="to-combine-a-files-name-and-directory-to-create-the-full-path"></a>파일의 이름과 디렉터리를 결합하여 전체 경로를 만들려면  
   
 -   디렉터리와 이름을 제공하여 `CombinePath` 메서드를 사용합니다. 이 예제에서는 이전 예제에서 만들어진 문자열 `folderPath` 와 `fileName` 을 가져와서 이를 결합한 다음 결과를 표시합니다.  
   
-     [!code-vb[VbVbcnMyFileSystem#55](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/how-to-parse-file-paths_2.vb)]  
+     [!code-vb[VbVbcnMyFileSystem#55](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#55)]  
   
 ## <a name="see-also"></a>참고 항목
 - <xref:Microsoft.VisualBasic.FileIO.FileSystem>

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - exceptions, logging
 - exceptions, tracking
 ms.assetid: a26c60e2-ae39-444a-aebb-33eccadc0eeb
-ms.openlocfilehash: ea2cad121a6722b2cb59e29831f90648ad4cff78
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 10d1d25f830ff563cf70369e7b9d4c66f639c121
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54664696"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56969793"
 ---
 # <a name="how-to-log-exceptions-in-visual-basic"></a>방법: Visual Basic에서 예외 기록
 `My.Application.Log` 및 `My.Log` 개체를 사용하여 애플리케이션에서 발생하는 예외에 대한 정보를 기록할 수 있습니다. 이 예제에서는 `My.Application.Log.WriteException` 메서드를 사용하여 명시적으로 catch하는 예외 및 처리되지 않은 예외를 기록하는 방법을 보여 줍니다.  
@@ -21,25 +21,25 @@ ms.locfileid: "54664696"
   
 1.  예외 정보를 생성하는 메서드를 만듭니다.  
   
-     [!code-vb[VbVbalrMyApplicationLog#9](../../../../visual-basic/developing-apps/programming/log-info/codesnippet/VisualBasic/how-to-log-exceptions_1.vb)]  
+     [!code-vb[VbVbalrMyApplicationLog#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyApplicationLog/VB/Form1.vb#9)]  
   
 2.  `Try...Catch` 블록을 사용하여 예외를 catch합니다.  
   
-     [!code-vb[VbVbalrMyApplicationLog#6](../../../../visual-basic/developing-apps/programming/log-info/codesnippet/VisualBasic/how-to-log-exceptions_2.vb)]  
+     [!code-vb[VbVbalrMyApplicationLog#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyApplicationLog/VB/Form1.vb#6)]  
   
 3.  예외를 생성할 수 있는 코드를 `Try` 블록에 넣습니다.  
   
      `Dim` 및 `MsgBox` 줄의 주석 처리를 제거하여 <xref:System.NullReferenceException> 예외를 발생시킵니다.  
   
-     [!code-vb[VbVbalrMyApplicationLog#7](../../../../visual-basic/developing-apps/programming/log-info/codesnippet/VisualBasic/how-to-log-exceptions_3.vb)]  
+     [!code-vb[VbVbalrMyApplicationLog#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyApplicationLog/VB/Form1.vb#7)]  
   
 4.  `Catch` 블록에서 `My.Application.Log.WriteException` 메서드를 사용하여 예외 정보를 씁니다.  
   
-     [!code-vb[VbVbalrMyApplicationLog#8](../../../../visual-basic/developing-apps/programming/log-info/codesnippet/VisualBasic/how-to-log-exceptions_4.vb)]  
+     [!code-vb[VbVbalrMyApplicationLog#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyApplicationLog/VB/Form1.vb#8)]  
   
      다음 예제에서는 처리된 예외를 기록하기 위한 전체 코드를 보여 줍니다.  
   
-     [!code-vb[VbVbalrMyApplicationLog#10](../../../../visual-basic/developing-apps/programming/log-info/codesnippet/VisualBasic/how-to-log-exceptions_5.vb)]  
+     [!code-vb[VbVbalrMyApplicationLog#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyApplicationLog/VB/Form1.vb#10)]  
   
 ### <a name="to-log-an-unhandled-exception"></a>처리되지 않은 예외를 기록하려면  
   
@@ -59,11 +59,11 @@ ms.locfileid: "54664696"
   
 6.  `My.Application.Log.WriteException` 이벤트 처리기에 `UnhandledException` 메서드를 추가합니다.  
   
-     [!code-vb[VbVbalrMyApplicationLog#4](../../../../visual-basic/developing-apps/programming/log-info/codesnippet/VisualBasic/how-to-log-exceptions_6.vb)]  
+     [!code-vb[VbVbalrMyApplicationLog#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyApplicationLog/VB/MyEventsFake.vb#4)]  
   
      다음 예제에서는 처리되지 않은 예외를 기록하기 위한 전체 코드를 보여 줍니다.  
   
-     [!code-vb[VbVbalrMyApplicationLog#5](../../../../visual-basic/developing-apps/programming/log-info/codesnippet/VisualBasic/how-to-log-exceptions_7.vb)]  
+     [!code-vb[VbVbalrMyApplicationLog#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyApplicationLog/VB/MyEventsFake.vb#5)]  
   
 ## <a name="see-also"></a>참고 항목
 - <xref:Microsoft.VisualBasic.Logging.Log?displayProperty=nameWithType>

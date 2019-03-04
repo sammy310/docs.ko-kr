@@ -9,12 +9,12 @@ helpviewer_keywords:
 - CopyFile method [Visual Basic], copying files in Visual Basic
 - I/O [Visual Basic], copying files
 ms.assetid: b2fdda86-e666-42c2-9706-9527e9fa68ff
-ms.openlocfilehash: a221c878fd2a44a9d4cd65d7a297b296cd6aed20
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a6e5d31df7d507c16b5a84bd1816f12f384e9dab
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54667104"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56972965"
 ---
 # <a name="how-to-create-a-copy-of-a-file-in-the-same-directory-in-visual-basic"></a>방법: Visual Basic에서 동일한 디렉터리에 파일의 복사본 만들기
 `My.Computer.FileSystem.CopyFile` 메서드를 사용하여 파일을 복사합니다. 매개 변수를 통해 기존 파일을 덮어쓰고, 파일 이름을 바꾸고, 작업의 진행률을 표시하고, 사용자가 작업을 취소할 수 있습니다.  
@@ -23,13 +23,13 @@ ms.locfileid: "54667104"
   
 -   대상 파일과 위치를 제공하여 `CopyFile` 메서드를 사용합니다. 다음 예제에서는 `test2.txt`라는 `test.txt`의 복사본을 만듭니다.  
   
-     [!code-vb[VbVbcnMyFileSystem#51](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/how-to-create-a-copy-of-a-file-in-the-same-directory_1.vb)]  
+     [!code-vb[VbVbcnMyFileSystem#51](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#51)]  
   
 ### <a name="to-create-a-copy-of-a-file-in-the-same-folder-overwriting-existing-files"></a>동일한 폴더에 파일의 복사본을 만들고 기존 파일을 덮어쓰려면  
   
 -   대상 파일과 위치를 제공하고 `overwrite`를 `True`로 설정하여 `CopyFile` 메서드를 사용합니다. 다음 예제에서는 `test2.txt`라는 `test.txt`의 복사본을 만들고 해당 이름의 기존 파일을 덮어씁니다.  
   
-     [!code-vb[VbVbcnMyFileSystem#52](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/how-to-create-a-copy-of-a-file-in-the-same-directory_2.vb)]  
+     [!code-vb[VbVbcnMyFileSystem#52](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#52)]  
   
 ## <a name="robust-programming"></a>강력한 프로그래밍  
  다음 조건에서는 예외가 throw될 수 있습니다.  

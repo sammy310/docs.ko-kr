@@ -6,12 +6,12 @@ helpviewer_keywords:
 - I/O [Visual Basic], parsing files
 - files [Visual Basic], parsing
 ms.assetid: fc31d6e6-af0c-403f-8a00-d556b2c57567
-ms.openlocfilehash: 09821e9b1985913b7433b070ae19c4818265926e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e1368e3bcf91026abf4928ab554ff970331f86ec
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54585399"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56969741"
 ---
 # <a name="parsing-text-files-with-the-textfieldparser-object-visual-basic"></a>TextFieldParser 개체를 사용하여 텍스트 파일 구문 분석(Visual Basic)
 `TextFieldParser` 개체를 사용하면 로그 파일 또는 레거시 데이터베이스 정보와 같은 구분된 너비 열로 구성된 매우 큰 파일을 구문 분석하고 처리할 수 있습니다. `TextFieldParser`를 사용한 텍스트 파일 구문 분석은 텍스트 파일 반복과 비슷하고, 텍스트의 필드를 추출하는 구문 분석 메서드는 구분된 문자열을 토큰화하는 데 사용되는 문자열 조작 메서드와 비슷합니다.  
@@ -19,11 +19,11 @@ ms.locfileid: "54585399"
 ## <a name="parsing-different-types-of-text-files"></a>다양한 형식의 텍스트 파일 구문 분석  
  텍스트 파일에는 쉼표 또는 탭 공백과 같은 문자로 구분된 다양한 너비의 필드가 있을 수 있습니다. `SetDelimiters` 메서드를 사용하여 탭으로 구분된 텍스트 파일을 정의하는 다음 예제와 같이 `TextFieldType` 및 구분 기호를 정의합니다.  
   
- [!code-vb[VbVbalrTextFieldParser#21](../../../../visual-basic/developing-apps/development-with-my/codesnippet/VisualBasic/parsing-text-files-with-the-textfieldparser-object_1.vb)]  
+ [!code-vb[VbVbalrTextFieldParser#21](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrTextFieldParser/VB/Class1.vb#21)]  
   
  기타 텍스트 파일에는 고정된 필드 너비가 있을 수 있습니다. 이러한 경우에는 `TextFieldType`을 `FixedWidth`로 정의하고 다음 예제와 같이 각 필드의 너비를 정의해야 합니다. 이 예제에서는 `SetFieldWidths` 메서드를 사용하여 텍스트 열을 정의합니다. 첫 번째 열은 너비가 5자이고, 두 번째 열은 10자, 세 번째 열은 11자, 네 번째 열은 가변 너비입니다.  
   
- [!code-vb[VbVbalrTextFieldParser#22](../../../../visual-basic/developing-apps/development-with-my/codesnippet/VisualBasic/parsing-text-files-with-the-textfieldparser-object_2.vb)]  
+ [!code-vb[VbVbalrTextFieldParser#22](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrTextFieldParser/VB/Class1.vb#22)]  
   
  형식이 정의되고 나면 `ReadFields` 메서드로 각 줄을 차례로 처리하여 파일을 반복할 수 있습니다.  
   

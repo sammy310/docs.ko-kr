@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - registry [Visual Basic]
 ms.assetid: 4a0dcce0-c27b-4199-baa8-ee4528da6a56
-ms.openlocfilehash: d55bd991587016aee48a522b69fdbdb5d4041512
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9b88257dcdd80c5ec5e81e0c3c20822157907fa5
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54530829"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56966270"
 ---
 # <a name="reading-from-and-writing-to-the-registry-using-the-microsoftwin32-namespace-visual-basic"></a>Microsoft.Win32 네임스페이스를 사용하여 레지스트리 읽기 및 쓰기(Visual Basic)
 `My.Computer.Registry`는 레지스트리에 대해 프로그래밍할 때 기본 요구를 충족해야 하지만, [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]의 <xref:Microsoft.Win32> 네임스페이스에서 <xref:Microsoft.Win32.Registry> 및 <xref:Microsoft.Win32.RegistryKey> 클래스를 사용할 수도 있습니다.  
@@ -33,11 +33,11 @@ ms.locfileid: "54530829"
 ## <a name="reading-a-value-from-the-registry"></a>레지스트리에서 값 읽기  
  다음 코드는 HKEY_CURRENT_USER에서 문자열을 읽는 방법을 보여 줍니다.  
   
- [!code-vb[VbResourceTasks#20](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/VisualBasic/reading-from-and-writing-to-the-registry-using-the-microsoft-win32-namespace_1.vb)]  
+ [!code-vb[VbResourceTasks#20](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbResourceTasks/VB/Class1.vb#20)]  
   
  다음 코드는 문자열을 읽고, 늘리고, HKEY_CURRENT_USER에 씁니다.  
   
- [!code-vb[VbResourceTasks#21](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/VisualBasic/reading-from-and-writing-to-the-registry-using-the-microsoft-win32-namespace_2.vb)]  
+ [!code-vb[VbResourceTasks#21](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbResourceTasks/VB/Class1.vb#21)]  
   
 ## <a name="see-also"></a>참고 항목
 - <xref:System.SystemException>

@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: dd7604eb-9fa3-4b60-b2dd-b47739fa3148
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a6bf86986f9e6f72fca9d6e88ac16699ff7cdb4e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 83fe9180e222dd71c9d94810e4eedbac398acad4
+ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54606481"
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56836476"
 ---
 # <a name="applying-attributes"></a>특성 적용
 다음 프로세스를 사용하여 코드 요소에 특성을 적용합니다.  
@@ -57,4 +57,5 @@ ms.locfileid: "54606481"
 - [특성](../../../docs/standard/attributes/index.md)
 - [특성에 저장된 정보 검색](../../../docs/standard/attributes/retrieving-information-stored-in-attributes.md)
 - [개념](/cpp/windows/attributed-programming-concepts)
-- [특성](https://msdn.microsoft.com/library/ae334cee-d96c-4243-a5e3-06dd7fcaf205)
+- [특성(C#)](../../csharp/programming-guide/concepts/attributes/index.md)
+- [특성 개요(Visual Basic)](../../visual-basic/programming-guide/concepts/attributes/index.md)

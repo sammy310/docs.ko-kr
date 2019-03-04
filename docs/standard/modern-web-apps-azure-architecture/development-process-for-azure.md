@@ -4,19 +4,19 @@ description: ASP.NET Core 및 Azure를 사용하여 최신 웹 애플리케이�
 author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
-ms.openlocfilehash: 72e6f468cc55ea344d53b4342fb7d9c776a1a16c
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.openlocfilehash: b7a6ae343feae7c28fb7debdc8a6b617872d262f
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55827476"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57202108"
 ---
 # <a name="development-process-for-azure"></a>Azure 개발 프로세스
 
 > _"클라우드를 사용하면 개인과 소규모 기업은 손가락만으로 엔터프라이즈급 서비스를 즉시 설정할 수 있습니다."_  
 > _- Roy Stephan_
 
- ## <a name="vision"></a>비전
+## <a name="vision"></a>비전
 
 > *Visual Studio 또는 dotnet CLI와 Visual Studio Code 또는 원하는 편집기를 사용하여 원하는 방식으로 잘 설계된 ASP.NET Core 애플리케이션을 개발합니다.*
 

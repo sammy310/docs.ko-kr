@@ -6,12 +6,12 @@ ms.author: wiwagn
 ms.date: 06/20/2016
 ms.technology: dotnet-standard
 ms.assetid: c00939e1-59e3-4e61-8fe9-08ad6b3f1295
-ms.openlocfilehash: 8ce7f39d78006765a49bbd4e3d46c611761a4bd1
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: eb1ba14bbcfe4e561fa575b9802126fab59d31fc
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50181737"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56968038"
 ---
 # <a name="linq-language-integrated-query"></a>LINQ(Language-Integrated Query)
 
@@ -77,7 +77,7 @@ public static IEnumerable<XElement> FindAllElementsWithAttribute(XElement docume
 
 이 작업을 수행하기 위해 수동으로 XML 문서를 트래버스하는 코드를 작성하는 것이 훨씬 더 어려울 것입니다.
 
-XML 조작이 LINQ 공급자로 수행할 수 있는 유일한 작업은 아닙니다. [LINQ to SQL](../../docs/framework/data/adonet/sql/linq/index.md)은 MSSQL Server Database에 대한 기본적인 ORM(개체 관계형 매퍼)입니다. [JSON.NET](https://www.newtonsoft.com/json/help/html/LINQtoJSON.htm) 라이브러리는 LINQ를 통한 효율적인 JSON 문서 통과 기능을 제공합니다. 또한 필요한 작업을 수행하는 라이브러리가 없을 경우 [고유한 LINQ 공급자를 작성](https://msdn.microsoft.com/library/Bb546158.aspx)할 수도 있습니다.
+XML 조작이 LINQ 공급자로 수행할 수 있는 유일한 작업은 아닙니다. [LINQ to SQL](../../docs/framework/data/adonet/sql/linq/index.md)은 MSSQL Server Database에 대한 기본적인 ORM(개체 관계형 매퍼)입니다. [JSON.NET](https://www.newtonsoft.com/json/help/html/LINQtoJSON.htm) 라이브러리는 LINQ를 통한 효율적인 JSON 문서 통과 기능을 제공합니다. 또한 필요한 작업을 수행하는 라이브러리가 없을 경우 [고유한 LINQ 공급자를 작성](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2012/bb546158(v=vs.110))할 수도 있습니다.
 
 ## <a name="why-use-the-query-syntax"></a>왜 쿼리 구문을 사용하나요?
 

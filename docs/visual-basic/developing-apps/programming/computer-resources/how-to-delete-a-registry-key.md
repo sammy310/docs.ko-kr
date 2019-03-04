@@ -11,12 +11,12 @@ helpviewer_keywords:
 - registry [Visual Basic], deleting keys
 - examples [Visual Basic], registry
 ms.assetid: ab9aca0e-42b0-4ff7-8ff9-845a4bfdf9f2
-ms.openlocfilehash: 226dc22f42783bec11eb1ddc38f270477bb0fbab
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7ff6ba8e31638b64fa7100b1807303c61a454c81
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54633965"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56981675"
 ---
 # <a name="how-to-delete-a-registry-key-in-visual-basic"></a>방법: Visual Basic에서 레지스트리 키 삭제
 <xref:Microsoft.Win32.RegistryKey.DeleteSubKey%28System.String%29> 및 <xref:Microsoft.Win32.RegistryKey.DeleteSubKey%28System.String%2CSystem.Boolean%29> 메서드를 사용하여 레지스트리 키를 삭제할 수 있습니다.  
@@ -27,7 +27,7 @@ ms.locfileid: "54633965"
   
 -   `DeleteSubKey` 메서드를 사용하여 레지스트리 키를 삭제합니다. 이 예제에서는 CurrentUser 하이브에서 Software/TestApp 키를 삭제합니다. 코드에서 이 키를 적절한 문자열로 변경하거나 사용자가 제공한 정보를 사용하도록 할 수 있습니다.  
   
-     [!code-vb[VbResourceTasks#19](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/VisualBasic/how-to-delete-a-registry-key_1.vb)]  
+     [!code-vb[VbResourceTasks#19](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbResourceTasks/VB/Class1.vb#19)]  
   
 ## <a name="robust-programming"></a>강력한 프로그래밍  
  키/값 쌍이 존재하지 않는 경우 `DeleteSubKey` 메서드는 빈 문자열을 반환합니다.  

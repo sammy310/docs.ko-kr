@@ -5,12 +5,12 @@ helpviewer_keywords:
 - My.Application.Log object, walkthroughs
 - event logs, changing output location
 ms.assetid: ecc74f95-743c-450d-93f6-09a30db0fe4a
-ms.openlocfilehash: b0d9e40f3f41eac5b16037a89a3cac45cbfc8c57
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2c86d175ca7a592b4ae329cf9a9eedb8a649712f
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54574447"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56980427"
 ---
 # <a name="walkthrough-changing-where-myapplicationlog-writes-information-visual-basic"></a>연습: My.Application.Log가 정보를 기록하는 위치 변경(Visual Basic)
 `My.Application.Log` 및 `My.Log` 개체를 사용하여 애플리케이션에서 발생하는 이벤트에 대한 정보를 기록할 수 있습니다. 이 연습에서는 기본 설정을 재정의하고 `Log` 개체가 다른 로그 수신기에 쓰도록 만드는 방법을 보여 줍니다.  
@@ -175,7 +175,7 @@ ms.locfileid: "54574447"
   
 2.  이 코드 예제에서는 정규화된 형식(이 경우 "System.Diagnostics.FileLogTraceListener")에 대한 강력한 이름이 지정된 형식 이름을 확인하는 방법을 보여 줍니다.  
   
-     [!code-vb[VbVbalrMyApplicationLog#15](../../../../visual-basic/developing-apps/programming/log-info/codesnippet/VisualBasic/walkthrough-changing-where-my-application-log-writes-information_1.vb)]  
+     [!code-vb[VbVbalrMyApplicationLog#15](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyApplicationLog/VB/Form1.vb#15)]  
   
      출력은 다음과 같으며, 위의 "수신기를 추가하려면" 절차에서처럼 이 출력을 사용하여 강력한 이름의 형식을 고유하게 참조할 수 있습니다.  
   

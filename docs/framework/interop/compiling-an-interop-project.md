@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 6fcf6588-5e25-41af-b4ae-780974f2c3df
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6cb23eb652cd769a0f3387833a9ece507479c464
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.openlocfilehash: 9b9f0cd44e5ab9a33db4dd2ef52681f40ca54080
+ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56218972"
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56835163"
 ---
 # <a name="compiling-an-interop-project"></a>Interop 프로젝트 컴파일
 
@@ -30,7 +30,7 @@ ms.locfileid: "56218972"
 
  이러한 두 방법 간의 차이점은 [관리 코드에서 COM 형식 사용](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/3y76b69k(v=vs.100))에서 자세히 설명합니다.
 
- Visual Studio에 interop 형식을 포함하는 방법은 [연습: Microsoft Office 어셈블리의 형식 정보 포함(C# 및 Visual Basic)](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ee317478(v=vs.100)), [연습: Visual Studio에서 관리형 어셈블리의 형식 포함(C#)](/docs/csharp/programming-guide/concepts/assemblies-gac/walkthrough-embedding-types-from-managed-assemblies-in-visual-studio.md) 및 [연습: Visual Studio에서 관리형 어셈블리의 형식 포함(Visual Basic)](/docs/visual-basic/programming-guide/concepts/assemblies-gac/walkthrough-embedding-types-from-managed-assemblies-in-vs.md).
+ Visual Studio에 interop 형식을 포함하는 방법은 [연습: Visual Studio에서 관리형 어셈블리의 형식 포함(C#)](/docs/csharp/programming-guide/concepts/assemblies-gac/walkthrough-embedding-types-from-managed-assemblies-in-visual-studio.md) 및 [연습: Visual Studio에서 관리형 어셈블리의 형식 포함(Visual Basic)](/docs/visual-basic/programming-guide/concepts/assemblies-gac/walkthrough-embedding-types-from-managed-assemblies-in-vs.md).
 
  명령줄 컴파일러를 사용하여 interop 어셈블리를 참조하고 실행 파일에 형식 정보를 포함하려면 [/link(C# 컴파일러 옵션)](../../csharp/language-reference/compiler-options/link-compiler-option.md) 또는 [/link(Visual Basic)](../../visual-basic/reference/command-line-compiler/link.md) 컴파일러 스위치를 사용하고 interop 어셈블리의 이름을 지정합니다.
 
@@ -44,8 +44,6 @@ ms.locfileid: "56218972"
 - [.NET Framework에 COM 구성 요소 노출](exposing-com-components.md)
 - [언어 독립성 및 언어 독립적 구성 요소](../../standard/language-independence-and-language-independent-components.md)
 - [관리 코드에서 COM 형식 사용](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/3y76b69k(v=vs.100))
-- [연습: Visual Studio에서 Microsoft Office 어셈블리의 형식 정보 포함(C#)](../../csharp/programming-guide/concepts/assemblies-gac/walkthrough-embedding-type-information-from-microsoft-office-assemblies.md) 
-- [연습: Visual Studio에서 Microsoft Office 어셈블리의 형식 정보 포함(Visual Basic)](../../visual-basic/programming-guide/concepts/assemblies-gac/walkthrough-embedding-type-information-from-microsoft-office-assemblies-in-vs.md)
 - [연습: Visual Studio에서 관리형 어셈블리의 형식 포함(C#)](/docs/csharp/programming-guide/concepts/assemblies-gac/walkthrough-embedding-types-from-managed-assemblies-in-visual-studio.md)
 - [연습: Visual Studio에서 관리형 어셈블리의 형식 포함(Visual Basic)](/docs/visual-basic/programming-guide/concepts/assemblies-gac/walkthrough-embedding-types-from-managed-assemblies-in-vs.md)
 - [형식 라이브러리를 어셈블리로 가져오기](importing-a-type-library-as-an-assembly.md)

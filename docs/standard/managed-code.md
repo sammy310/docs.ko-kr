@@ -6,12 +6,12 @@ ms.author: mairaw
 ms.date: 06/20/2016
 ms.technology: dotnet-standard
 ms.assetid: 20bb7ea8-192e-4a96-8ef3-e10e1950fd3d
-ms.openlocfilehash: 268ffe9c5cbbc9490ed91f2b4c28f8f876b8ff5e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 87be8c94c3d356a81f447f7b9542315783eea10d
+ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33574545"
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56836281"
 ---
 # <a name="what-is-managed-code"></a>"관리 코드"란?
 
@@ -39,6 +39,6 @@ ms.locfileid: "33574545"
 
 ## <a name="more-resources"></a>추가 리소스
 
-*   [.NET Framework 개념 개요](https://msdn.microsoft.com/library/zw4w595w.aspx)
-*   [안전하지 않은 코드 및 포인터](../../docs/csharp/programming-guide/unsafe-code-pointers/index.md)
-*   [상호 운용성(C# 프로그래밍 가이드)](https://msdn.microsoft.com/library/ms173184.aspx)
+* [.NET Framework의 개요](../framework/get-started/overview.md)
+* [안전하지 않은 코드 및 포인터](../../docs/csharp/programming-guide/unsafe-code-pointers/index.md)
+* [기본 상호 운용성](./native-interop/index.md)

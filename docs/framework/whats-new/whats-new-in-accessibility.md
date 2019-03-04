@@ -9,22 +9,22 @@ helpviewer_keywords:
 - what's new [.NET Framework]
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 092b1cfc9350ea398eb18199f19a8eee7ea9f218
-ms.sourcegitcommit: b8ace47d839f943f785b89e2fff8092b0bf8f565
+ms.openlocfilehash: 2bdb1bf5d7e32c2e05eb779eed16c311cbd3eae7
+ms.sourcegitcommit: 79066169e93d9d65203028b21983574ad9dcf6b4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "55675441"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57212510"
 ---
 # <a name="whats-new-in-accessibility-in-the-net-framework"></a>.NET Framework에서 내게 필요한 옵션의 새로운 기능
 
-.NET Framework는 애플리케이션을 사용자에게 더욱 액세스 가능하도록 만드는 것을 목표로 합니다. 내게 필요한 옵션 기능을 통해 애플리케이션은 사용자에게 보조 기술에 대한 적절한 환경을 제공할 수 있습니다. .NET Framework 4.7.1부터 .NET Framework에 개발자가 액세스 가능한 애플리케이션을 만들도록 허용하는 다수의 내게 필요한 옵션 개선 사항이 포함되어 있습니다. 
+.NET Framework는 애플리케이션을 사용자에게 더욱 액세스 가능하도록 만드는 것을 목표로 합니다. 내게 필요한 옵션 기능을 통해 애플리케이션은 사용자에게 보조 기술에 대한 적절한 환경을 제공할 수 있습니다. .NET Framework 4.7.1부터 .NET Framework에 개발자가 액세스 가능한 애플리케이션을 만들도록 허용하는 다수의 내게 필요한 옵션 개선 사항이 포함되어 있습니다.
 
 ## <a name="accessibility-switches"></a>내게 필요한 옵션 스위치
 
 .NET Framework 4.7 이전 버전을 대상으로 하지만 .NET Framework 4.7.1 이상에서 실행되는 경우 내게 필요한 옵션 기능으로 옵트인하도록 앱을 구성할 수 있습니다. .NET Framework 4.7.1 이상을 대상으로 하는 경우 레거시 기능(및 내게 필요한 옵션 기능을 활용하지 못하도록)을 사용하도록 앱을 구성할 수도 있습니다. 내게 필요한 옵션 기능을 포함하는 .NET Framework의 각 버전에는 애플리케이션의 구성 파일의 [`<runtime>`](~/docs/framework/configure-apps/file-schema/runtime/index.md) 섹션에서 [`<AppContextSwitchOverrides>`](~/docs/framework/configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md) 요소에 추가하는 버전별 내게 필요한 옵션 스위치가 있습니다. 다음은 지원되는 스위치입니다.
 
-|버전|전환|
+|버전|스위치|
 |---|---|
 |.NET Framework 4.7.1|"Switch.UseLegacyAccessibilityFeatures"|
 |.NET Framework 4.7.2|"Switch.UseLegacyAccessibilityFeatures.2"|
@@ -51,7 +51,7 @@ ms.locfileid: "55675441"
 
 ### <a name="restoring-legacy-behavior"></a>레거시 동작 복원
 
-4.7.1부터 시작하는 .NET Framework의 버전을 대상으로 하는 애플리케이션은 애플리케이션의 구성 파일의 [`<runtime>`](~/docs/framework/configure-apps/file-schema/runtime/index.md) 섹션에서 [`<AppContextSwitchOverrides>`](~/docs/framework/configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md) 요소에 스위치를 추가하고 `true`로 해당 값을 설정하여 내게 필요한 옵션 기능을 비활성화할 수 있습니다. 예를 들어 다음 구성은 .NET Framework 4.7.2에 도입된 내게 필요한 옵션 기능을 옵트아웃합니다.  
+4.7.1부터 시작하는 .NET Framework의 버전을 대상으로 하는 애플리케이션은 애플리케이션의 구성 파일의 [`<runtime>`](~/docs/framework/configure-apps/file-schema/runtime/index.md) 섹션에서 [`<AppContextSwitchOverrides>`](~/docs/framework/configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md) 요소에 스위치를 추가하고 `true`로 해당 값을 설정하여 내게 필요한 옵션 기능을 비활성화할 수 있습니다. 예를 들어 다음 구성은 .NET Framework 4.7.2에 도입된 내게 필요한 옵션 기능을 옵트아웃합니다.
 
 ```xml
 <runtime>
@@ -69,6 +69,7 @@ ms.locfileid: "55675441"
 - [WPF(Windows Presentation Foundation)](#wpf472)
 
 <a name="winforms472"></a>
+
 ### <a name="windows-forms"></a>Windows Forms
 
 **고대비 테마에서 OS 정의 색**
@@ -80,7 +81,7 @@ ms.locfileid: "55675441"
 - <xref:System.Windows.Forms.ButtonBase.FlatStyle>이 <xref:System.Windows.Forms.FlatStyle.Flat?displayProperty=nameWithType> 또는 <xref:System.Windows.Forms.FlatStyle.Popup?displayProperty=nameWithType>으로 설정된 <xref:System.Windows.Forms.Button>, <xref:System.Windows.Forms.RadioButton> 및 <xref:System.Windows.Forms.CheckBox> 컨트롤 이전에 선택한 텍스트 및 배경색이 대비되지 않았고 읽기가 어려웠습니다.
 
 - 해당 <xref:System.Windows.Forms.Control.Enabled> 속성이 `false`로 설정된 <xref:System.Windows.Forms.GroupBox> 내부에 포함된 컨트롤
- 
+
 - 고대비 모드에서 명도 대비를 증가시킨 <xref:System.Windows.Forms.ToolStripButton>, <xref:System.Windows.Forms.ToolStripComboBox> 및 <xref:System.Windows.Forms.ToolStripDropDownButton> 컨트롤
 
 - <xref:System.Windows.Forms.DataGridViewLinkCell>의 <xref:System.Windows.Forms.DataGridViewLinkCell.LinkColor> 속성입니다.
@@ -89,7 +90,7 @@ ms.locfileid: "55675441"
 
 .NET Framework 4.7.2부터 내레이터 지원이 다음과 같이 향상됩니다.
 
-- <xref:System.Windows.Forms.ToolStripMenuItem>의 텍스트를 발표할 경우 <xref:System.Windows.Forms.ToolStripMenuItem.ShortcutKeys?displayProperty=nameWithType> 속성 값도 발표합니다. 
+- <xref:System.Windows.Forms.ToolStripMenuItem>의 텍스트를 발표할 경우 <xref:System.Windows.Forms.ToolStripMenuItem.ShortcutKeys?displayProperty=nameWithType> 속성 값도 발표합니다.
 
 - <xref:System.Windows.Forms.ToolStripMenuItem>이 해당 <xref:System.Windows.Forms.Control.Enabled> 속성을 `false`로 설정할 때를 지정합니다.
 
@@ -122,6 +123,7 @@ ms.locfileid: "55675441"
 - <xref:System.Windows.Forms.ToolStripButton> 컨트롤은 <xref:System.Windows.Forms.ToolStripPanel.TabStop> 속성이 `true`로 설정된 <xref:System.Windows.Forms.ToolStripPanel>에 포함된 경우 포커스를 허용합니다.
 
 <a name="wpf472"></a>
+
 ### <a name="windows-presentation-foundation-wpf"></a>WPF(Windows Presentation Foundation)
 
 **CheckBox 및 RadioButton 컨트롤에 대한 변경**
@@ -151,6 +153,7 @@ NET Framework 4.7.2에서 이러한 시각적 개체는 이제 테마에서 더�
 - [Windows WF(Workflow Foundation) 워크플로 디자이너](#wf471)
 
 <a name="wpf471"></a>
+
 ### <a name="windows-presentation-foundation-wpf"></a>WPF(Windows Presentation Foundation)
 
 **화면 판독기 개선 사항**
@@ -160,14 +163,14 @@ NET Framework 4.7.2에서 이러한 시각적 개체는 이제 테마에서 더�
 - .NET Framework 4.7 이전 버전에서 <xref:System.Windows.Controls.Expander> 컨트롤은 단추로 화면 판독기에서 공지되었습니다. .NET Framework 4.7.1부터 확장/축소 가능한 그룹으로 올바르게 공지됩니다.
 
 - .NET Framework 4.7 이전 버전에서 <xref:System.Windows.Controls.DataGridCell> 컨트롤은 “사용자 지정”으로 화면 판독기에서 공지되었습니다. .NET Framework 4.7.1부터 이제 데이터 표 셸(지역화된)로 올바르게 공지됩니다.
- 
+
 - .NET Framework 4.7.1부터 화면 판독기는 편집 가능한 <xref:System.Windows.Controls.ComboBox>의 이름을 공지합니다.
 
 - .NET Framework 4.7 이전 버전에서 <xref:System.Windows.Controls.PasswordBox> 컨트롤은 "보기에 항목 없음"으로 공지되었거나 그렇지 않은 경우 잘못된 동작이 있었습니다. 이 문제는 .NET Framework 4.7.1부터 수정되었습니다.
 
 **UIAutomation LiveRegion 지원**
 
-내레이터와 같은 화면 판독기는 사용자가 일반적으로 포커스가 있는 UI 콘텐츠의 텍스트 음성 변환 출력에 의해 애플리케이션의 UI 콘텐츠를 읽는 데 도움을 줍니다. 그러나 UI 요소가 변경되고 포커스가 없는 경우 사용자는 알림을 받지 못하고 중요한 정보를 놓칠 수 있습니다. 라이브 영역은 이 문제를 해결하는 것을 목표로 합니다. 개발자는 화면 판독기 또는 다른 UIAutomation 클라이언트에게 UI 요소에 중요한 변경 내용이 만들어졌음을 알리는 데 사용할 수 있습니다. 화면 판독기는 사용자에게 이 변경 내용을 알리는 방법 및 시점을 결정할 수 있습니다. 
+내레이터와 같은 화면 판독기는 사용자가 일반적으로 포커스가 있는 UI 콘텐츠의 텍스트 음성 변환 출력에 의해 애플리케이션의 UI 콘텐츠를 읽는 데 도움을 줍니다. 그러나 UI 요소가 변경되고 포커스가 없는 경우 사용자는 알림을 받지 못하고 중요한 정보를 놓칠 수 있습니다. 라이브 영역은 이 문제를 해결하는 것을 목표로 합니다. 개발자는 화면 판독기 또는 다른 UIAutomation 클라이언트에게 UI 요소에 중요한 변경 내용이 만들어졌음을 알리는 데 사용할 수 있습니다. 화면 판독기는 사용자에게 이 변경 내용을 알리는 방법 및 시점을 결정할 수 있습니다.
 
 라이브 영역을 지원하기 위해 다음과 같은 API가 WPF에 추가되었습니다.
 
@@ -176,19 +179,19 @@ NET Framework 4.7.2에서 이러한 시각적 개체는 이제 테마에서 더�
 - **AutomationProperties.LiveSetting** 연결된 속성으로, 화면 판독기에 사용자에 대한 UI 변경 내용의 중요성을 알려줍니다.
 
 - **AutomationProperties.LiveSetting** 연결된 속성을 식별하는 <xref:System.Windows.Automation.AutomationProperties.LiveSettingProperty?displayProperty=nameWithType> 속성
- 
+
 - **LiveSetting** 값을 제공하도록 재정의될 수 있는 <xref:System.Windows.Automation.Peers.AutomationPeer.GetLiveSettingCore%2A?displayProperty=nameWithType> 메서드
 
 - **LiveSetting** 값을 가져오고 설정하는 <xref:System.Windows.Automation.AutomationProperties.GetLiveSetting%2A?displayProperty=nameWithType> 및 <xref:System.Windows.Automation.AutomationProperties.SetLiveSetting%2A?displayProperty=nameWithType> 메서드
- 
+
 - 다음 가능한 **LiveSetting** 값을 정의하는 <xref:System.Windows.Automation.AutomationLiveSetting?displayProperty=nameWithType> 열거형
 
-   - <xref:System.Windows.Automation.AutomationLiveSetting.Off?displayProperty=nameWithType>. 라이브 영역의 콘텐츠가 변경된 경우 요소는 알림을 보내지 않습니다.   
-   - <xref:System.Windows.Automation.AutomationLiveSetting.Polite?displayProperty=nameWithType>. 라이브 영역의 콘텐츠가 변경된 경우 요소는 비중단 알림을 보냅니다.   
+   - <xref:System.Windows.Automation.AutomationLiveSetting.Off?displayProperty=nameWithType>. 라이브 영역의 콘텐츠가 변경된 경우 요소는 알림을 보내지 않습니다.
+   - <xref:System.Windows.Automation.AutomationLiveSetting.Polite?displayProperty=nameWithType>. 라이브 영역의 콘텐츠가 변경된 경우 요소는 비중단 알림을 보냅니다.
 
-  - <xref:System.Windows.Automation.AutomationLiveSetting.Assertive?displayProperty=nameWithType>. 라이브 영역의 콘텐츠가 변경된 경우 요소는 중단 알림을 보냅니다.   
+   - <xref:System.Windows.Automation.AutomationLiveSetting.Assertive?displayProperty=nameWithType>. 라이브 영역의 콘텐츠가 변경된 경우 요소는 중단 알림을 보냅니다.
 
-다음 예제와 같이 관심 있는 요소에 **AutomationProperties.LiveSetting** 속성을 설정하여 LiveRegion을 만들 수 있습니다.   
+다음 예제와 같이 관심 있는 요소에 **AutomationProperties.LiveSetting** 속성을 설정하여 LiveRegion을 만들 수 있습니다.
 
 ```xaml
 <TextBlock Name="myTextBlock" AutomationProperties.LiveSetting="Assertive">announcement</TextBlock>
@@ -216,7 +219,7 @@ peer.RaiseAutomationEvent(AutomationEvents.LiveRegionChanged)
     <xref:System.Windows.Controls.Expander> 컨트롤에 대한 포커스 시각적 개체는 이제 표시됩니다. <xref:System.Windows.Controls.ComboBox>, <xref:System.Windows.Controls.ListBox> 및 <xref:System.Windows.Controls.RadioButton> 컨트롤에 대한 키보드 시각적 개체도 표시됩니다. 예:
 
     이전: 
-    
+
     ![내게 필요한 옵션 개선 사항 이전의 포커스가 있는 Expander 컨트롤](media/expander-before.png)
 
     이후: 
@@ -224,21 +227,21 @@ peer.RaiseAutomationEvent(AutomationEvents.LiveRegionChanged)
     ![내게 필요한 옵션 개선 사항 이후의 포커스가 있는 Expander 컨트롤](media/expander-after.png)
 
 - <xref:System.Windows.Controls.CheckBox> 및 <xref:System.Windows.Controls.RadioButton> 컨트롤
- 
+
     <xref:System.Windows.Controls.CheckBox> 및 <xref:System.Windows.Controls.RadioButton> 컨트롤의 텍스트는 이제 고대비 테마에서 선택하면 쉽게 볼 수 있습니다. 예:
 
     이전: 
 
     ![내게 필요한 옵션 개선 사항 이전의 포커스가 있는 고대비 라디오 단추](media/radio-button-before.png)
-    
+
     이후: 
 
     ![내게 필요한 옵션 개선 사항 이후의 포커스가 있는 고대비 라디오 단추](media/radio-button-after.png)
 
 - <xref:System.Windows.Controls.ComboBox> 컨트롤
- 
+
     .NET Framework 4.7.1부터 비활성화된 <xref:System.Windows.Controls.ComboBox> 컨트롤의 테두리는 비활성화된 텍스트와 동일한 색입니다. 예:
-    
+
     이전: 
 
      ![내게 필요한 옵션 개선 사항 이전의 콤보 상자 비활성화된 테두리 및 텍스트](media/combo-disabled-before.png)
@@ -252,7 +255,7 @@ peer.RaiseAutomationEvent(AutomationEvents.LiveRegionChanged)
     이전:
 
     ![내게 필요한 옵션 개선 사항 이전의 단추 테마 색](media/button-themes-before.png) 
-    
+
     이후: 
 
     ![내게 필요한 옵션 개선 사항 이후의 단추 테마 색](media/button-themes-after.png) 
@@ -262,7 +265,7 @@ peer.RaiseAutomationEvent(AutomationEvents.LiveRegionChanged)
     이전: 
 
     ![내게 필요한 옵션 개선 사항 이전의 Toolbar.ComboBoxStyleKey](media/comboboxstylekey-before.png) 
-    
+
     이후: 
 
     ![내게 필요한 옵션 개선 사항 이후의 Toolbar.ComboBoxStyleKey](media/comboboxstylekey-after.png) 
@@ -274,24 +277,25 @@ peer.RaiseAutomationEvent(AutomationEvents.LiveRegionChanged)
     이전: 
 
     ![내게 필요한 옵션 개선 사항 이전의 정렬 표시기 화살표](media/sort-indicator-before.png) 
-    
+
     이후:   
- 
+
     ![내게 필요한 옵션 개선 사항 이후의 정렬 표시기 화살표](media/sort-indicator-after.png) 
-    
+
     또한 .NET Framework 4.7 이전 버전에서 기본 링크 스타일은 고대비 모드의 마우스에서 잘못된 색으로 변경되었습니다. 이는 .NET Framework 4.7.1부터 해결되었습니다. 마찬가지로 <xref:System.Windows.Controls.DataGrid> 확인란 열은 .NET Framework 4.7.1부터 키보드 포커스 피드백에 대해 예상되는 색을 사용합니다.
 
     이전: 
 
     ![내게 필요한 옵션 개선 사항 이전의 DataGrid 기본 링크 스타일](media/default-link-style-before.png) 
- 
+
     이후:    
-  
-    ![내게 필요한 옵션 개선 사항 이후의 DataGrid 기본 링크 스타일](media/default-link-style-after.png)  
+
+    ![내게 필요한 옵션 개선 사항 이후의 DataGrid 기본 링크 스타일](media/default-link-style-after.png) 
 
 .NET Framework 4.7.1에서 WPF 내게 필요한 옵션 개선 사항에 대한 자세한 내용은 [WPF의 내게 필요한 옵션 개선 사항](../migration-guide/retargeting/4.7-4.7.1.md#accessibility-improvements-in-wpf)을 참조하세요.
 
 <a name="winforms471"></a>
+
 ### <a name="windows-forms-accessibility-improvements"></a>Windows Forms 내게 필요한 옵션 개선 사항
 
 .NET Framework 4.7.1에서 WinForms(Windows Forms)는 다음 영역에서 내게 필요한 옵션 변경 내용을 포함합니다.
@@ -304,6 +308,7 @@ peer.RaiseAutomationEvent(AutomationEvents.LiveRegionChanged)
 <!-- Windows 10 -->
 <supportedOS Id=”{8e0f7a12-bfb3-4fe8-b9a5-48fd50a15a9a}” />
 ```
+
 고대비 변경 내용의 몇 가지 예는 다음과 같습니다.
 
 - <xref:System.Windows.Forms.MenuStrip> 항목의 확인 표시는 보기가 쉽습니다.
@@ -331,9 +336,9 @@ peer.RaiseAutomationEvent(AutomationEvents.LiveRegionChanged)
 - <xref:System.Windows.Forms.MonthCalendar> 컨트롤은 내레이터 및 다른 UI 자동화 도구로 액세스할 수 있습니다.
 
 - <xref:System.Windows.Forms.CheckedListBox> 컨트롤은 항목의 선택 상태가 변경되어 목록 항목의 값을 변경했음을 사용자에게 알릴 때 내레이터에 알립니다.
- 
+
 - <xref:System.Windows.Forms.DataGridViewCell> 컨트롤은 올바른 읽기 전용 상태를 내레이터에 보고합니다.
- 
+
 - 내레이터는 이제 비활성화된 <xref:System.Windows.Forms.ToolStripMenuItem> 텍스트를 읽을 수 있는 반면 이전에는 비활성화된 메뉴 항목을 건너뛰었습니다.
 
 **UIAutomation 내게 필요한 옵션 패턴에 대한 향상된 지원**
@@ -341,9 +346,9 @@ peer.RaiseAutomationEvent(AutomationEvents.LiveRegionChanged)
 .NET Framework 4.7.1부터 내게 필요한 옵션 기술 도구의 개발자는 API 내게 필요한 옵션의 일반 패턴 및 여러 WinForms 컨트롤에 대한 속성을 활용할 수 있습니다. 이러한 내게 필요한 옵션 개선 사항은 다음을 포함합니다.
 
 - <xref:System.Windows.Forms.ComboBox> 및 <xref:System.Windows.Forms.ToolStripSplitButton>은 이제 [확장/축소 패턴](../ui-automation/implementing-the-ui-automation-expandcollapse-control-pattern.md)을 지원합니다.
- 
+
 - <xref:System.Windows.Forms.DataGridViewCheckBoxCell>은 이제 [토글 패턴](../ui-automation/implementing-the-ui-automation-toggle-control-pattern.md)을 지원합니다.
- 
+
 - <xref:System.Windows.Forms.ToolStripItem> 컨트롤은 <xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.Name> 속성 및 [확장/축소 패턴](../ui-automation/implementing-the-ui-automation-expandcollapse-control-pattern.md)을 지원합니다.
 
 - <xref:System.Windows.Forms.NumericUpDown> 및 <xref:System.Windows.Forms.DomainUpDown> 컨트롤은 <xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.Name> 속성을 지원합니다.
@@ -356,8 +361,9 @@ peer.RaiseAutomationEvent(AutomationEvents.LiveRegionChanged)
 - 불필요한 탭 정지의 감소
 - 컨트롤 형식의 향상된 보고
 - 향상된 내레이터 동작
- 
+
 <a name="aspnet471"></a>
+
 ### <a name="aspnet-web-controls"></a>ASP.NET 웹 컨트롤
 
 .NET Framework 4.7.1 및 Visual Studio 2017 15.3부터 ASP.NET은 ASP.NET 웹 컨트롤이 Visual Studio의 내게 필요한 옵션 기술과 연동하는 방식을 개선합니다. 변경 내용은 다음과 같습니다.
@@ -369,13 +375,15 @@ peer.RaiseAutomationEvent(AutomationEvents.LiveRegionChanged)
 - DataPager 컨트롤의 **호출기 필드 편집** 마법사의 **필드** 대화 상자, **ObjectContext 구성** 대화 상자 또는 **데이터 원본 구성** 마법사의 **데이터 선택 구성** 대화 상자와 같은 컨트롤의 키보드 탐색 환경을 개선하도록 변경됨.
 
 <a name="tools471"></a>
+
 ### <a name="net-sdk-tools"></a>.NET SDK Tools
 
-[Configuration Editor 도구(SvcConfigEditor.exe)](../wcf/configuration-editor-tool-svcconfigeditor-exe.md) 및 [Service Trace Viewer 도구(SvcTraceViewer.exe)](../wcf/service-trace-viewer-tool-svctraceviewer-exe.md)는 다양한 액세스 가능성 문제를 수정하여 향상되었습니다. 이들 중 대부분은 정의되지 않은 이름이나 특정 UI 자동화 패턴이 올바르게 구현되지 않은 것과 같은 사소한 문제였습니다. 많은 사용자가 이러한 잘못된 값을 인식하지 못하지만, 화면 판독기와 같은 보조 기술을 사용하는 고객은 이러한 SDK 도구를 보다 쉽게 사용할 수 있습니다. 
+[Configuration Editor 도구(SvcConfigEditor.exe)](../wcf/configuration-editor-tool-svcconfigeditor-exe.md) 및 [Service Trace Viewer 도구(SvcTraceViewer.exe)](../wcf/service-trace-viewer-tool-svctraceviewer-exe.md)는 다양한 액세스 가능성 문제를 수정하여 향상되었습니다. 이들 중 대부분은 정의되지 않은 이름이나 특정 UI 자동화 패턴이 올바르게 구현되지 않은 것과 같은 사소한 문제였습니다. 많은 사용자가 이러한 잘못된 값을 인식하지 못하지만, 화면 판독기와 같은 보조 기술을 사용하는 고객은 이러한 SDK 도구를 보다 쉽게 사용할 수 있습니다.
 
 이러한 개선 사항은 키보드 포커스 순서 등의 일부 이전 동작을 변경합니다.
 
 <a name="wf471"></a>
+
 ### <a name="windows-workflow-foundation-wf-workflow-designer"></a>Windows WF(Workflow Foundation) 워크플로 디자이너
 
 워크플로 디자이너에서 내게 필요한 옵션 변경 내용은 다음과 같습니다.
@@ -442,4 +450,3 @@ peer.RaiseAutomationEvent(AutomationEvents.LiveRegionChanged)
 ## <a name="see-also"></a>참고 항목
 
 - [.NET Framework의 새로운 기능](whats-new.md)
-

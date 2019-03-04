@@ -9,12 +9,12 @@ helpviewer_keywords:
 - expression lambda [C#]
 - expressions [C#], lambda
 ms.assetid: 57e3ba27-9a82-4067-aca7-5ca446b7bf93
-ms.openlocfilehash: 91d972f468f80c509a90ea293937b117d54a2e7d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 77701653abacbe6d876c0890a11586f0840bad5d
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54737522"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57200899"
 ---
 # <a name="lambda-expressions-c-programming-guide"></a>람다 식(C# 프로그래밍 가이드)
 
@@ -97,9 +97,9 @@ namespace ConsoleApplication1
 
  문 람다의 본문에 지정할 수 있는 문의 개수에는 제한이 없지만 일반적으로 2-3개 정도만 지정합니다.  
   
-[!code-csharp[StatementLamba#1](~/samples/snippets/csharp/programming-guide/lambda-expressions/statements.cs#1)]
+[!code-csharp[StatementLambda#1](~/samples/snippets/csharp/programming-guide/lambda-expressions/statements.cs#1)]
 
-[!code-csharp[StatementLamba#2](~/samples/snippets/csharp/programming-guide/lambda-expressions/statements.cs#2)]
+[!code-csharp[StatementLambda#2](~/samples/snippets/csharp/programming-guide/lambda-expressions/statements.cs#2)]
 
  무명 메서드와 마찬가지로 문 람다는 식 트리를 만드는 데 사용할 수 없습니다.  
   
@@ -280,7 +280,7 @@ class Test
   
 ## <a name="featured-book-chapter"></a>중요 설명서 장
 
- [C# 3.0 Cookbook, Third Edition: C# 3.0 프로그래머를 위한 250개가 넘는 솔루션](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/ff518995%28v=orm.10%29)의 [대리자, 이벤트 및 Lambda 식](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/ff518994%28v=orm.10%29)  
+ [C# 3.0 Cookbook, Third Edition: C# 3.0 프로그래머를 위한 250개가 넘는 솔루션](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/ff518995%28v=orm.10%29)의 대리자, 이벤트 및 Lambda 식  
   
 ## <a name="see-also"></a>참고 항목
 

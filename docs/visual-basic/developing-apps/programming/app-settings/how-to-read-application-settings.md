@@ -6,12 +6,12 @@ helpviewer_keywords:
 - My.Settings object [Visual Basic], reading application settings
 - application settings [Visual Basic], reading
 ms.assetid: eb3428ef-115e-49a8-a878-e0613183fee0
-ms.openlocfilehash: 032e06e674f2298d68f879f3ad474c79e3ff02db
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: abee69d9959e899259aff8b8a49caea6bcd997fb
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54659499"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56975240"
 ---
 # <a name="how-to-read-application-settings-in-visual-basic"></a>방법: Visual Basic에서 애플리케이션 설정 읽기
 `My.Settings` 개체에서 설정의 속성에 액세스하여 사용자 설정을 읽을 수 있습니다.  
@@ -21,7 +21,7 @@ ms.locfileid: "54659499"
 ## <a name="example"></a>예제  
  이 예제에서는 `Nickname` 설정의 값을 표시합니다.  
   
- [!code-vb[VbVbalrMyResources#14](../../../../visual-basic/developing-apps/programming/app-settings/codesnippet/VisualBasic/how-to-read-application-settings_1.vb)]  
+ [!code-vb[VbVbalrMyResources#14](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyResources/VB/Form1.vb#14)]  
   
  이 예제가 작동하려면 애플리케이션에 `String` 형식의 `Nickname` 설정이 있어야 합니다. 자세한 내용은 [애플리케이션 설정 관리(.NET)](/visualstudio/ide/managing-application-settings-dotnet)를 참조하세요.  
   
