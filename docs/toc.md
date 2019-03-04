@@ -33,6 +33,7 @@
 ## [예외 처리 및 Throw](standard/exceptions/)
 ## [.NET 어셈블리](standard/assembly/index.md)
 ### [.NET 어셈블리 파일 형식](standard/assembly/file-format.md)
+### [방법: .NET Core에서 어셈블리 언로드 기능 사용 및 디버그](standard/assembly/unloadability-howto.md)
 ## [가비지 수집](standard/garbage-collection/)
 ## [제네릭 형식](standard/generics.md)
 ## [대리자 및 람다 식](standard/delegates-lambdas.md)
@@ -268,9 +269,9 @@
 ## [C# 둘러보기](csharp/tour-of-csharp/)
 <!-- The "What's New" section is short, and one level
     deep, so leave it in the main TOC -->
-<!-- markdownlint-disable MD003 -->
+<!-- markdownlint-disable MD003 MD020 -->
 ## C#의 새로운 기능
-<!-- markdownlint-enable MD003 -->
+<!-- markdownlint-enable MD003 MD020 -->
 ### [C# 8.0 - Preview 2](csharp/whats-new/csharp-8.md)
 ### [C# 7.3](csharp/whats-new/csharp-7-3.md)
 ### [C# 7.2](csharp/whats-new/csharp-7-2.md)
