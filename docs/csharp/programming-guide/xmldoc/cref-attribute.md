@@ -5,22 +5,22 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - cref [C#]
 ms.assetid: 66a6b0e5-b961-4504-a461-3a4cf481fc8b
-ms.openlocfilehash: e2909040cc0cd38494ef0ffa16a4f361ca73925c
-ms.sourcegitcommit: e39d93d358974b9ed4541cedf4e25c0101015c3c
+ms.openlocfilehash: 9352718371226279f0a468913040e48cbeed984d
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/29/2019
-ms.locfileid: "55204290"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56971366"
 ---
-# <a name="cref-attribute-c-programming-guide"></a><span data-ttu-id="34fb4-102">cref 특성(C# 프로그래밍 가이드)</span><span class="sxs-lookup"><span data-stu-id="34fb4-102">cref Attribute (C# Programming Guide)</span></span>
-<span data-ttu-id="34fb4-103">XML 문서 태그의 `cref` 특성은 "코드 참조"를 의미합니다.</span><span class="sxs-lookup"><span data-stu-id="34fb4-103">The `cref` attribute in an XML documentation tag means "code reference."</span></span> <span data-ttu-id="34fb4-104">태그의 내부 텍스트를 형식, 메서드, 속성 등의 코드 요소로 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="34fb4-104">It specifies that the inner text of the tag is a code element, such as a type, method, or property.</span></span> <span data-ttu-id="34fb4-105">[DocFX](https://dotnet.github.io/docfx/) 및 [Sandcastle](https://github.com/EWSoftware/SHFB) 등의 문서화 도구는 `cref` 특성을 사용하여 형식 또는 멤버가 문서화된 페이지에 대한 하이퍼링크를 자동으로 생성합니다.</span><span class="sxs-lookup"><span data-stu-id="34fb4-105">Documentation tools like [DocFX](https://dotnet.github.io/docfx/) and [Sandcastle](https://github.com/EWSoftware/SHFB) use the `cref` attributes to automatically generate hyperlinks to the page where the type or member is documented.</span></span>  
+# <a name="cref-attribute-c-programming-guide"></a><span data-ttu-id="c45cb-102">cref 특성(C# 프로그래밍 가이드)</span><span class="sxs-lookup"><span data-stu-id="c45cb-102">cref Attribute (C# Programming Guide)</span></span>
+<span data-ttu-id="c45cb-103">XML 문서 태그의 `cref` 특성은 "코드 참조"를 의미합니다.</span><span class="sxs-lookup"><span data-stu-id="c45cb-103">The `cref` attribute in an XML documentation tag means "code reference."</span></span> <span data-ttu-id="c45cb-104">태그의 내부 텍스트를 형식, 메서드, 속성 등의 코드 요소로 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="c45cb-104">It specifies that the inner text of the tag is a code element, such as a type, method, or property.</span></span> <span data-ttu-id="c45cb-105">[DocFX](https://dotnet.github.io/docfx/) 및 [Sandcastle](https://github.com/EWSoftware/SHFB) 등의 문서화 도구는 `cref` 특성을 사용하여 형식 또는 멤버가 문서화된 페이지에 대한 하이퍼링크를 자동으로 생성합니다.</span><span class="sxs-lookup"><span data-stu-id="c45cb-105">Documentation tools like [DocFX](https://dotnet.github.io/docfx/) and [Sandcastle](https://github.com/EWSoftware/SHFB) use the `cref` attributes to automatically generate hyperlinks to the page where the type or member is documented.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="34fb4-106">예</span><span class="sxs-lookup"><span data-stu-id="34fb4-106">Example</span></span>  
- <span data-ttu-id="34fb4-107">다음 예제에서는 [\<see>](../../../csharp/programming-guide/xmldoc/see.md) 태그에 사용된 `cref` 특성을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="34fb4-107">The following example shows `cref` attributes used in [\<see>](../../../csharp/programming-guide/xmldoc/see.md) tags.</span></span>  
+## <a name="example"></a><span data-ttu-id="c45cb-106">예제</span><span class="sxs-lookup"><span data-stu-id="c45cb-106">Example</span></span>  
+ <span data-ttu-id="c45cb-107">다음 예제에서는 [\<see>](../../../csharp/programming-guide/xmldoc/see.md) 태그에 사용된 `cref` 특성을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="c45cb-107">The following example shows `cref` attributes used in [\<see>](../../../csharp/programming-guide/xmldoc/see.md) tags.</span></span>  
   
- [!code-csharp[csProgGuideDocComments#3](../../../csharp/programming-guide/xmldoc/codesnippet/CSharp/cref-attribute_1.cs)]  
+ [!code-csharp[csProgGuideDocComments#3](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDocComments/CS/DocComments.cs#3)]  
   
- <span data-ttu-id="34fb4-108">컴파일하면 프로그램이 다음 XML 파일을 생성합니다.</span><span class="sxs-lookup"><span data-stu-id="34fb4-108">When compiled, the program produces the following XML file.</span></span> <span data-ttu-id="34fb4-109">예를 들어 `GetZero` 메서드의 `cref` 특성은 컴파일러에서 `"M:TestNamespace.TestClass.GetZero"`로 변환되었습니다.</span><span class="sxs-lookup"><span data-stu-id="34fb4-109">Notice that the `cref` attribute for the `GetZero` method, for example, has been transformed by the compiler to `"M:TestNamespace.TestClass.GetZero"`.</span></span> <span data-ttu-id="34fb4-110">"M:" 접두사는 "메서드"를 의미하며, DocFX 및 Sandcastle 등의 문서화 도구에서 인식되는 규칙입니다.</span><span class="sxs-lookup"><span data-stu-id="34fb4-110">The "M:" prefix means "method" and is a convention that is recognized by documentation tools such as DocFX and Sandcastle.</span></span> <span data-ttu-id="34fb4-111">접두사의 전체 목록은 [XML 파일 처리](../../../csharp/programming-guide/xmldoc/processing-the-xml-file.md)를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="34fb4-111">For a complete list of prefixes, see [Processing the XML File](../../../csharp/programming-guide/xmldoc/processing-the-xml-file.md).</span></span>  
+ <span data-ttu-id="c45cb-108">컴파일하면 프로그램이 다음 XML 파일을 생성합니다.</span><span class="sxs-lookup"><span data-stu-id="c45cb-108">When compiled, the program produces the following XML file.</span></span> <span data-ttu-id="c45cb-109">예를 들어 `GetZero` 메서드의 `cref` 특성은 컴파일러에서 `"M:TestNamespace.TestClass.GetZero"`로 변환되었습니다.</span><span class="sxs-lookup"><span data-stu-id="c45cb-109">Notice that the `cref` attribute for the `GetZero` method, for example, has been transformed by the compiler to `"M:TestNamespace.TestClass.GetZero"`.</span></span> <span data-ttu-id="c45cb-110">"M:" 접두사는 "메서드"를 의미하며, DocFX 및 Sandcastle 등의 문서화 도구에서 인식되는 규칙입니다.</span><span class="sxs-lookup"><span data-stu-id="c45cb-110">The "M:" prefix means "method" and is a convention that is recognized by documentation tools such as DocFX and Sandcastle.</span></span> <span data-ttu-id="c45cb-111">접두사의 전체 목록은 [XML 파일 처리](../../../csharp/programming-guide/xmldoc/processing-the-xml-file.md)를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="c45cb-111">For a complete list of prefixes, see [Processing the XML File](../../../csharp/programming-guide/xmldoc/processing-the-xml-file.md).</span></span>  
   
 ```xml  
 <?xml version="1.0"?>  
@@ -119,7 +119,7 @@ ms.locfileid: "55204290"
 </doc>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="34fb4-112">참고 항목</span><span class="sxs-lookup"><span data-stu-id="34fb4-112">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="c45cb-112">참고 항목</span><span class="sxs-lookup"><span data-stu-id="c45cb-112">See also</span></span>
 
-- [<span data-ttu-id="34fb4-113">XML 문서 주석</span><span class="sxs-lookup"><span data-stu-id="34fb4-113">XML Documentation Comments</span></span>](../../../csharp/programming-guide/xmldoc/xml-documentation-comments.md)
-- [<span data-ttu-id="34fb4-114">문서 주석에 대한 권장 태그</span><span class="sxs-lookup"><span data-stu-id="34fb4-114">Recommended Tags for Documentation Comments</span></span>](../../../csharp/programming-guide/xmldoc/recommended-tags-for-documentation-comments.md)
+- [<span data-ttu-id="c45cb-113">XML 문서 주석</span><span class="sxs-lookup"><span data-stu-id="c45cb-113">XML Documentation Comments</span></span>](../../../csharp/programming-guide/xmldoc/xml-documentation-comments.md)
+- [<span data-ttu-id="c45cb-114">문서 주석에 대한 권장 태그</span><span class="sxs-lookup"><span data-stu-id="c45cb-114">Recommended Tags for Documentation Comments</span></span>](../../../csharp/programming-guide/xmldoc/recommended-tags-for-documentation-comments.md)

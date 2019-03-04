@@ -6,69 +6,69 @@ helpviewer_keywords:
 - jagged arrays [C#]
 - arrays [C#], jagged
 ms.assetid: 537c65a6-0e0a-4a00-a2b8-086f38519c70
-ms.openlocfilehash: 118e92be724723d4364cf8b40c9ff850fcb1931a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9fc05c8bdebf9c1c6b613db0b6a121e06765ac00
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54698399"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57200678"
 ---
-# <a name="jagged-arrays-c-programming-guide"></a><span data-ttu-id="c0cec-102">가변 배열(C# 프로그래밍 가이드)</span><span class="sxs-lookup"><span data-stu-id="c0cec-102">Jagged Arrays (C# Programming Guide)</span></span>
+# <a name="jagged-arrays-c-programming-guide"></a><span data-ttu-id="dd8f8-102">가변 배열(C# 프로그래밍 가이드)</span><span class="sxs-lookup"><span data-stu-id="dd8f8-102">Jagged Arrays (C# Programming Guide)</span></span>
 
-<span data-ttu-id="c0cec-103">가변 배열의 요소에는 배열이 사용됩니다.</span><span class="sxs-lookup"><span data-stu-id="c0cec-103">A jagged array is an array whose elements are arrays.</span></span> <span data-ttu-id="c0cec-104">가변 배열의 요소는 차원과 크기가 서로 다를 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="c0cec-104">The elements of a jagged array can be of different dimensions and sizes.</span></span> <span data-ttu-id="c0cec-105">가변 배열을 “배열의 배열”이라고도 합니다.</span><span class="sxs-lookup"><span data-stu-id="c0cec-105">A jagged array is sometimes called an "array of arrays."</span></span> <span data-ttu-id="c0cec-106">다음 예제에서는 가변 배열을 선언, 초기화 및 액세스하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="c0cec-106">The following examples show how to declare, initialize, and access jagged arrays.</span></span>  
+<span data-ttu-id="dd8f8-103">가변 배열의 요소에는 배열이 사용됩니다.</span><span class="sxs-lookup"><span data-stu-id="dd8f8-103">A jagged array is an array whose elements are arrays.</span></span> <span data-ttu-id="dd8f8-104">가변 배열의 요소는 차원과 크기가 서로 다를 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="dd8f8-104">The elements of a jagged array can be of different dimensions and sizes.</span></span> <span data-ttu-id="dd8f8-105">가변 배열을 “배열의 배열”이라고도 합니다.</span><span class="sxs-lookup"><span data-stu-id="dd8f8-105">A jagged array is sometimes called an "array of arrays."</span></span> <span data-ttu-id="dd8f8-106">다음 예제에서는 가변 배열을 선언, 초기화 및 액세스하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="dd8f8-106">The following examples show how to declare, initialize, and access jagged arrays.</span></span>  
   
- <span data-ttu-id="c0cec-107">다음은 각각 정수의 1차원 배열인 세 개의 요소를 포함하는 1차원 배열의 선언입니다.</span><span class="sxs-lookup"><span data-stu-id="c0cec-107">The following is a declaration of a single-dimensional array that has three elements, each of which is a single-dimensional array of integers:</span></span>  
+ <span data-ttu-id="dd8f8-107">다음은 각각 정수의 1차원 배열인 세 개의 요소를 포함하는 1차원 배열의 선언입니다.</span><span class="sxs-lookup"><span data-stu-id="dd8f8-107">The following is a declaration of a single-dimensional array that has three elements, each of which is a single-dimensional array of integers:</span></span>  
   
- [!code-csharp[csProgGuideArrays#19](../../../csharp/programming-guide/arrays/codesnippet/CSharp/jagged-arrays_1.cs)]  
+ [!code-csharp[csProgGuideArrays#19](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideArrays/CS/Arrays.cs#19)]  
   
- <span data-ttu-id="c0cec-108">`jaggedArray`를 사용하려면 먼저 해당 요소를 초기화해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="c0cec-108">Before you can use `jaggedArray`, its elements must be initialized.</span></span> <span data-ttu-id="c0cec-109">다음과 같이 요소를 초기화할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="c0cec-109">You can initialize the elements like this:</span></span>  
+ <span data-ttu-id="dd8f8-108">`jaggedArray`를 사용하려면 먼저 해당 요소를 초기화해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="dd8f8-108">Before you can use `jaggedArray`, its elements must be initialized.</span></span> <span data-ttu-id="dd8f8-109">다음과 같이 요소를 초기화할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="dd8f8-109">You can initialize the elements like this:</span></span>  
   
- [!code-csharp[csProgGuideArrays#20](../../../csharp/programming-guide/arrays/codesnippet/CSharp/jagged-arrays_2.cs)]  
+ [!code-csharp[csProgGuideArrays#20](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideArrays/CS/Arrays.cs#20)]  
   
- <span data-ttu-id="c0cec-110">각 요소는 정수의 1차원 배열입니다.</span><span class="sxs-lookup"><span data-stu-id="c0cec-110">Each of the elements is a single-dimensional array of integers.</span></span> <span data-ttu-id="c0cec-111">첫 번째 요소는 5개 정수의 배열이고, 두 번째 요소는 4개 정수의 배열이고, 세 번째 요소는 2개 정수의 배열입니다.</span><span class="sxs-lookup"><span data-stu-id="c0cec-111">The first element is an array of 5 integers, the second is an array of 4 integers, and the third is an array of 2 integers.</span></span>  
+ <span data-ttu-id="dd8f8-110">각 요소는 정수의 1차원 배열입니다.</span><span class="sxs-lookup"><span data-stu-id="dd8f8-110">Each of the elements is a single-dimensional array of integers.</span></span> <span data-ttu-id="dd8f8-111">첫 번째 요소는 5개 정수의 배열이고, 두 번째 요소는 4개 정수의 배열이고, 세 번째 요소는 2개 정수의 배열입니다.</span><span class="sxs-lookup"><span data-stu-id="dd8f8-111">The first element is an array of 5 integers, the second is an array of 4 integers, and the third is an array of 2 integers.</span></span>  
   
- <span data-ttu-id="c0cec-112">이니셜라이저를 사용하여 배열 요소에 값을 채울 수도 있으며, 이 경우 배열 크기가 필요 없습니다.</span><span class="sxs-lookup"><span data-stu-id="c0cec-112">It is also possible to use initializers to fill the array elements with values, in which case you do not need the array size.</span></span> <span data-ttu-id="c0cec-113">예:</span><span class="sxs-lookup"><span data-stu-id="c0cec-113">For example:</span></span>  
+ <span data-ttu-id="dd8f8-112">이니셜라이저를 사용하여 배열 요소에 값을 채울 수도 있으며, 이 경우 배열 크기가 필요 없습니다.</span><span class="sxs-lookup"><span data-stu-id="dd8f8-112">It is also possible to use initializers to fill the array elements with values, in which case you do not need the array size.</span></span> <span data-ttu-id="dd8f8-113">예:</span><span class="sxs-lookup"><span data-stu-id="dd8f8-113">For example:</span></span>  
   
- [!code-csharp[csProgGuideArrays#21](../../../csharp/programming-guide/arrays/codesnippet/CSharp/jagged-arrays_3.cs)]  
+ [!code-csharp[csProgGuideArrays#21](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideArrays/CS/Arrays.cs#21)]  
   
- <span data-ttu-id="c0cec-114">다음과 같이 선언 시 배열을 초기화할 수도 있습니다.</span><span class="sxs-lookup"><span data-stu-id="c0cec-114">You can also initialize the array upon declaration like this:</span></span>  
+ <span data-ttu-id="dd8f8-114">다음과 같이 선언 시 배열을 초기화할 수도 있습니다.</span><span class="sxs-lookup"><span data-stu-id="dd8f8-114">You can also initialize the array upon declaration like this:</span></span>  
   
- [!code-csharp[csProgGuideArrays#22](../../../csharp/programming-guide/arrays/codesnippet/CSharp/jagged-arrays_4.cs)]  
+ [!code-csharp[csProgGuideArrays#22](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideArrays/CS/Arrays.cs#22)]  
   
- <span data-ttu-id="c0cec-115">다음과 같은 약식 형태를 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="c0cec-115">You can use the following shorthand form.</span></span> <span data-ttu-id="c0cec-116">요소에 대한 기본 초기화가 없으므로 요소 초기화에서 `new` 연산자를 생략할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="c0cec-116">Notice that you cannot omit the `new` operator from the elements initialization because there is no default initialization for the elements:</span></span>  
+ <span data-ttu-id="dd8f8-115">다음과 같은 약식 형태를 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="dd8f8-115">You can use the following shorthand form.</span></span> <span data-ttu-id="dd8f8-116">요소에 대한 기본 초기화가 없으므로 요소 초기화에서 `new` 연산자를 생략할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="dd8f8-116">Notice that you cannot omit the `new` operator from the elements initialization because there is no default initialization for the elements:</span></span>  
   
- [!code-csharp[csProgGuideArrays#23](../../../csharp/programming-guide/arrays/codesnippet/CSharp/jagged-arrays_5.cs)]  
+ [!code-csharp[csProgGuideArrays#23](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideArrays/CS/Arrays.cs#23)]  
   
- <span data-ttu-id="c0cec-117">가변 배열은 여러 배열로 구성되어 있기 때문에 해당 요소가 참조 형식이며, `null`로 초기화됩니다.</span><span class="sxs-lookup"><span data-stu-id="c0cec-117">A jagged array is an array of arrays, and therefore its elements are reference types and are initialized to `null`.</span></span>  
+ <span data-ttu-id="dd8f8-117">가변 배열은 여러 배열로 구성되어 있기 때문에 해당 요소가 참조 형식이며, `null`로 초기화됩니다.</span><span class="sxs-lookup"><span data-stu-id="dd8f8-117">A jagged array is an array of arrays, and therefore its elements are reference types and are initialized to `null`.</span></span>  
   
- <span data-ttu-id="c0cec-118">다음 예제처럼 개별 배열 요소에 액세스할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="c0cec-118">You can access individual array elements like these examples:</span></span>  
+ <span data-ttu-id="dd8f8-118">다음 예제처럼 개별 배열 요소에 액세스할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="dd8f8-118">You can access individual array elements like these examples:</span></span>  
   
- [!code-csharp[csProgGuideArrays#24](../../../csharp/programming-guide/arrays/codesnippet/CSharp/jagged-arrays_6.cs)]  
+ [!code-csharp[csProgGuideArrays#24](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideArrays/CS/Arrays.cs#24)]  
   
- <span data-ttu-id="c0cec-119">가변 배열과 다차원 배열을 함께 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="c0cec-119">It is possible to mix jagged and multidimensional arrays.</span></span> <span data-ttu-id="c0cec-120">다음은 서로 다른 크기의 세 가지 2차원 배열 요소를 포함하는 1차원 가변 배열의 선언과 초기화입니다.</span><span class="sxs-lookup"><span data-stu-id="c0cec-120">The following is a declaration and initialization of a single-dimensional jagged array that contains three two-dimensional array elements of different sizes.</span></span> <span data-ttu-id="c0cec-121">2차원 배열에 대한 자세한 내용은 [다차원 배열](../../../csharp/programming-guide/arrays/multidimensional-arrays.md)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="c0cec-121">For more information about two-dimensional arrays, see [Multidimensional Arrays](../../../csharp/programming-guide/arrays/multidimensional-arrays.md).</span></span>  
+ <span data-ttu-id="dd8f8-119">가변 배열과 다차원 배열을 함께 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="dd8f8-119">It is possible to mix jagged and multidimensional arrays.</span></span> <span data-ttu-id="dd8f8-120">다음은 서로 다른 크기의 세 가지 2차원 배열 요소를 포함하는 1차원 가변 배열의 선언과 초기화입니다.</span><span class="sxs-lookup"><span data-stu-id="dd8f8-120">The following is a declaration and initialization of a single-dimensional jagged array that contains three two-dimensional array elements of different sizes.</span></span> <span data-ttu-id="dd8f8-121">2차원 배열에 대한 자세한 내용은 [다차원 배열](../../../csharp/programming-guide/arrays/multidimensional-arrays.md)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="dd8f8-121">For more information about two-dimensional arrays, see [Multidimensional Arrays](../../../csharp/programming-guide/arrays/multidimensional-arrays.md).</span></span>  
   
- [!code-csharp[csProgGuideArrays#25](../../../csharp/programming-guide/arrays/codesnippet/CSharp/jagged-arrays_7.cs)]  
+ [!code-csharp[csProgGuideArrays#25](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideArrays/CS/Arrays.cs#25)]  
   
- <span data-ttu-id="c0cec-122">이 예제와 같이, 첫 번째 배열의 `[1,0]` 요소 값(값 `5`)을 표시하는 개별 요소에 액세스할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="c0cec-122">You can access individual elements as shown in this example, which displays the value of the element `[1,0]` of the first array (value `5`):</span></span>  
+ <span data-ttu-id="dd8f8-122">이 예제와 같이, 첫 번째 배열의 `[1,0]` 요소 값(값 `5`)을 표시하는 개별 요소에 액세스할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="dd8f8-122">You can access individual elements as shown in this example, which displays the value of the element `[1,0]` of the first array (value `5`):</span></span>  
   
- [!code-csharp[csProgGuideArrays#26](../../../csharp/programming-guide/arrays/codesnippet/CSharp/jagged-arrays_8.cs)]  
+ [!code-csharp[csProgGuideArrays#26](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideArrays/CS/Arrays.cs#26)]  
   
- <span data-ttu-id="c0cec-123">`Length` 메서드는 가변 배열에 포함된 배열 수를 반환합니다.</span><span class="sxs-lookup"><span data-stu-id="c0cec-123">The method `Length` returns the number of arrays contained in the jagged array.</span></span> <span data-ttu-id="c0cec-124">예를 들어 이전 배열을 선언했다고 가정합니다.</span><span class="sxs-lookup"><span data-stu-id="c0cec-124">For example, assuming you have declared the previous array, this line:</span></span>  
+ <span data-ttu-id="dd8f8-123">`Length` 메서드는 가변 배열에 포함된 배열 수를 반환합니다.</span><span class="sxs-lookup"><span data-stu-id="dd8f8-123">The method `Length` returns the number of arrays contained in the jagged array.</span></span> <span data-ttu-id="dd8f8-124">예를 들어 이전 배열을 선언했다고 가정합니다.</span><span class="sxs-lookup"><span data-stu-id="dd8f8-124">For example, assuming you have declared the previous array, this line:</span></span>  
   
- [!code-csharp[csProgGuideArrays#27](../../../csharp/programming-guide/arrays/codesnippet/CSharp/jagged-arrays_9.cs)]  
+ [!code-csharp[csProgGuideArrays#27](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideArrays/CS/Arrays.cs#27)]  
   
- <span data-ttu-id="c0cec-125">이 경우 위 줄은 값 3을 반환합니다.</span><span class="sxs-lookup"><span data-stu-id="c0cec-125">returns a value of 3.</span></span>  
+ <span data-ttu-id="dd8f8-125">이 경우 위 줄은 값 3을 반환합니다.</span><span class="sxs-lookup"><span data-stu-id="dd8f8-125">returns a value of 3.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="c0cec-126">예제</span><span class="sxs-lookup"><span data-stu-id="c0cec-126">Example</span></span>
+## <a name="example"></a><span data-ttu-id="dd8f8-126">예제</span><span class="sxs-lookup"><span data-stu-id="dd8f8-126">Example</span></span>
 
- <span data-ttu-id="c0cec-127">이 예제에서는 요소 자체가 배열인 배열을 작성합니다.</span><span class="sxs-lookup"><span data-stu-id="c0cec-127">This example builds an array whose elements are themselves arrays.</span></span> <span data-ttu-id="c0cec-128">각 배열 요소의 크기가 서로 다릅니다.</span><span class="sxs-lookup"><span data-stu-id="c0cec-128">Each one of the array elements has a different size.</span></span>  
+ <span data-ttu-id="dd8f8-127">이 예제에서는 요소 자체가 배열인 배열을 작성합니다.</span><span class="sxs-lookup"><span data-stu-id="dd8f8-127">This example builds an array whose elements are themselves arrays.</span></span> <span data-ttu-id="dd8f8-128">각 배열 요소의 크기가 서로 다릅니다.</span><span class="sxs-lookup"><span data-stu-id="dd8f8-128">Each one of the array elements has a different size.</span></span>  
   
- [!code-csharp[csProgGuideArrays#18](../../../csharp/programming-guide/arrays/codesnippet/CSharp/jagged-arrays_10.cs)]  
+ [!code-csharp[csProgGuideArrays#18](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideArrays/CS/Arrays.cs#18)]  
   
-## <a name="see-also"></a><span data-ttu-id="c0cec-129">참고 항목</span><span class="sxs-lookup"><span data-stu-id="c0cec-129">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="dd8f8-129">참고 항목</span><span class="sxs-lookup"><span data-stu-id="dd8f8-129">See also</span></span>
 
 - <xref:System.Array>
-- [<span data-ttu-id="c0cec-130">C# 프로그래밍 가이드</span><span class="sxs-lookup"><span data-stu-id="c0cec-130">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)
-- [<span data-ttu-id="c0cec-131">배열</span><span class="sxs-lookup"><span data-stu-id="c0cec-131">Arrays</span></span>](../../../csharp/programming-guide/arrays/index.md)
-- [<span data-ttu-id="c0cec-132">1차원 배열</span><span class="sxs-lookup"><span data-stu-id="c0cec-132">Single-Dimensional Arrays</span></span>](../../../csharp/programming-guide/arrays/single-dimensional-arrays.md)
-- [<span data-ttu-id="c0cec-133">다차원 배열</span><span class="sxs-lookup"><span data-stu-id="c0cec-133">Multidimensional Arrays</span></span>](../../../csharp/programming-guide/arrays/multidimensional-arrays.md)
+- [<span data-ttu-id="dd8f8-130">C# 프로그래밍 가이드</span><span class="sxs-lookup"><span data-stu-id="dd8f8-130">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)
+- [<span data-ttu-id="dd8f8-131">배열</span><span class="sxs-lookup"><span data-stu-id="dd8f8-131">Arrays</span></span>](../../../csharp/programming-guide/arrays/index.md)
+- [<span data-ttu-id="dd8f8-132">1차원 배열</span><span class="sxs-lookup"><span data-stu-id="dd8f8-132">Single-Dimensional Arrays</span></span>](../../../csharp/programming-guide/arrays/single-dimensional-arrays.md)
+- [<span data-ttu-id="dd8f8-133">다차원 배열</span><span class="sxs-lookup"><span data-stu-id="dd8f8-133">Multidimensional Arrays</span></span>](../../../csharp/programming-guide/arrays/multidimensional-arrays.md)
