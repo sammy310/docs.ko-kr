@@ -7,12 +7,12 @@ helpviewer_keywords:
 - C# language, operators
 - operators [C#], about operators
 ms.assetid: 214e7b83-1a41-4f7c-9867-64e9c0bab39f
-ms.openlocfilehash: 55b1829537224118de9870fa696ec2b1689d5066
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a0174ca42cb65c7c8f0c8ba2dc9adfd5c43c22b8
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54603069"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56981584"
 ---
 # <a name="operators-c-programming-guide"></a>연산자(C# 프로그래밍 가이드)
 
@@ -20,11 +20,11 @@ C#에서 *연산자* 는 식 또는 문에서 하나 이상의 *피연산자* �
   
  다음 C# 문에는 단항 연산자 하나와 피연산자 하나가 들어 있습니다. 증가 연산자 `++`는 피연산자 `y`의 값을 수정합니다.  
   
- [!code-csharp[csProgGuideStatements#5](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/operators_1.cs)]  
+ [!code-csharp[csProgGuideStatements#5](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStatements/CS/Statements.cs#5)]  
   
  다음 C# 문에는 이항 연산자가 두 개 있습니다. 각 연산자는 피연산자를 두 개씩 사용합니다. 할당 연산자 `=`에는 정수 변수 `y` 와 식 `2 + 3` 이 피연산자로 사용됩니다. 식 `2 + 3` 자체는 더하기 연산자와 두 개의 피연산자, `2` 및 `3`으로 구성됩니다.  
   
- [!code-csharp[csProgGuideStatements#6](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/operators_2.cs)]  
+ [!code-csharp[csProgGuideStatements#6](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStatements/CS/Statements.cs#6)]  
   
 ## <a name="operators-evaluation-and-operator-precedence"></a>연산자, 평가 및 연산자 우선 순위
 
@@ -95,7 +95,7 @@ C#에서 *연산자* 는 식 또는 문에서 하나 이상의 *피연산자* �
   
 |식|설명|  
 |----------------|-----------------|  
-|x [\<](../../../csharp/language-reference/operators/less-than-operator.md) y|보다 작음|  
+|x [\<](../../../csharp/language-reference/operators/less-than-operator.md) y|다음보다 적음|  
 |x [>](../../../csharp/language-reference/operators/greater-than-operator.md) y|보다 큼|  
 |x [\<=](../../../csharp/language-reference/operators/less-than-equal-operator.md) y|작거나 같음|  
 |x [>=](../../../csharp/language-reference/operators/greater-than-equal-operator.md) y|크거나 같음|  

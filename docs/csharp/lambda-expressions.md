@@ -5,14 +5,14 @@ ms.author: ronpet
 author: rpetrusha
 ms.date: 11/22/2016
 ms.assetid: b6a0539a-8ce5-4da7-adcf-44be345a2714
-ms.openlocfilehash: 74ad1c5ddae69864b85099535e8b83a4504275a7
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 642422a4cc077ffebb5ee6db9d7ffb937fc1e173
+ms.sourcegitcommit: 79066169e93d9d65203028b21983574ad9dcf6b4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50183133"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57212354"
 ---
-# <a name="lambda-expressions"></a>람다 식 #
+# <a name="lambda-expressions"></a>람다 식
 
 *람다 식*은 개체로 처리되는 코드 블록(식 또는 문 블록)입니다. 이 식은 인수로 메서드에 전달할 수 있으며 메서드 호출에서 반환될 수도 있습니다. 람다 식은 다음과 같은 경우에 광범위하게 사용됩니다.
 
@@ -32,7 +32,7 @@ ms.locfileid: "50183133"
 
 [!code-csharp[csSnippets.Lambdas](../../samples/snippets/csharp/concepts/lambda-expressions/lambda2.cs#2)]
 
-## <a name="expression-lambdas"></a>식 람다 ##
+## <a name="expression-lambdas"></a>식 람다
 
  => 연산자의 오른쪽에 식이 있는 람다 식을 *식 람다*라고 합니다. 식 람다는 [식 트리](expression-trees.md)를 만드는 데 광범위하게 사용됩니다. 식 람다는 식의 결과를 반환하며 기본 형식은 다음과 같습니다.
 
@@ -54,7 +54,7 @@ ms.locfileid: "50183133"
 
 위의 예제에서 식 람다의 본문은 메서드 호출로 구성될 수 있습니다. 그러나 SQL Server 또는 EF(Entity Framework)와 같이 .NET Framework 외부에서 평가되는 식 트리를 만드는 경우 .NET 구현 컨텍스트 외부에서는 메서드가 의미가 없을 수 있으므로 람다 식에서 메서드 호출을 사용할 수 없도록 방지해야 합니다. 이 경우 메서드 호출을 사용하도록 선택하면 메서드 호출을 철저히 테스트하여 성공적으로 해결할 수 있도록 해야 합니다.
 
-## <a name="statement-lambdas"></a>문 람다 ##
+## <a name="statement-lambdas"></a>문 람다
 
 문 람다는 다음과 같이 중괄호 안에 문을 지정한다는 점을 제외하면 식 람다와 비슷합니다.
 
@@ -68,7 +68,7 @@ ms.locfileid: "50183133"
 
 무명 메서드와 마찬가지로 문 람다는 식 트리를 만드는 데 사용할 수 없습니다.
 
-## <a name="async-lambdas"></a>비동기 람다 ##
+## <a name="async-lambdas"></a>비동기 람다
 
 [async](language-reference/keywords/async.md) 및 [await](language-reference/keywords/await.md) 키워드를 사용하여 비동기 처리를 통합하는 람다 식과 문을 쉽게 만들 수 있습니다. 예를 들어 예제에서는 비동기적으로 실행되는 `ShowSquares` 메서드를 호출합니다.
 
@@ -76,7 +76,7 @@ ms.locfileid: "50183133"
 
 비동기 메서드를 만들고 사용하는 방법에 대한 자세한 내용은 [Async 및 Await를 사용한 비동기 프로그래밍](programming-guide/concepts/async/index.md)을 참조하세요.
 
-## <a name="lambda-expressions-and-tuples"></a>람다 식 및 튜플 ##
+## <a name="lambda-expressions-and-tuples"></a>람다 식 및 튜플
 
 C# 7.0부터 C# 언어에서 튜플을 기본적으로 지원합니다. 람다 식에 인수로 튜플을 제공할 수 있으며 람다 식에서 튜플을 반환할 수도 있습니다. 경우에 따라 C# 컴파일러는 형식 유추를 사용하여 튜플 구성 요소의 형식을 확인할 수 있습니다.
 
@@ -90,7 +90,7 @@ C# 7.0부터 C# 언어에서 튜플을 기본적으로 지원합니다. 람다 �
 
 C#의 튜플 지원에 대한 자세한 내용은 [C# 튜플 형식](tuples.md)을 참조하세요.
 
-## <a name="lambdas-with-the-standard-query-operators"></a>표준 쿼리 연산자와 람다 식 ##
+## <a name="lambdas-with-the-standard-query-operators"></a>표준 쿼리 연산자와 람다 식
 
 다른 구현 중에 LINQ to Objects는 형식이 제네릭 대리자의 <xref:System.Func%601> 패밀리 중 하나인 입력 매개 변수를 사용합니다. 이러한 대리자는 형식 매개 변수를 사용하여 입력 매개 변수의 수와 형식 및 대리자의 반환 형식을 정의합니다. `Func` 대리자는 소스 데이터 집합에 있는 각 요소에 적용할 사용자 정의 식을 캡슐화하는 데 매우 유용합니다. 예를 들어 구문이 다음과 같은 <xref:System.Func%601> 대리자를 가정해 보세요.
 
@@ -118,7 +118,7 @@ C#의 튜플 지원에 대한 자세한 내용은 [C# 튜플 형식](tuples.md)�
 
 [!code-csharp[csSnippets.Lambdas](../../samples/snippets/csharp/concepts/lambda-expressions/query1.cs#6)]
 
-## <a name="type-inference-in-lambda-expressions"></a>람다 식에서의 형식 유추 ##
+## <a name="type-inference-in-lambda-expressions"></a>람다 식에서의 형식 유추
 
 컴파일러에서는 람다 식 본문, 매개 변수 형식 및 C# 언어 사양에 설명되어 있는 기타 요소를 기준으로 형식을 유추할 수 있기 때문에 대부분의 경우에는 람다 식을 작성할 때 입력 매개 변수의 형식을 지정하지 않아도 됩니다. 대부분의 표준 쿼리 연산자에서 첫 번째 입력 형식은 소스 시퀀스 요소의 형식입니다. `IEnumerable<Customer>`를 쿼리할 경우 입력 변수가 `Customer` 개체로 유추됩니다. 이는 이 개체의 메서드와 속성에 액세스할 수 있음을 의미합니다.
 
@@ -134,7 +134,7 @@ C#의 튜플 지원에 대한 자세한 내용은 [C# 튜플 형식](tuples.md)�
 
 공용 형식 시스템에는 "람다 식"이라는 개념이 기본적으로 포함되어 있지 않기 때문에 람다 식 자체에는 형식이 없습니다. 그러나 람다 식의 "형식"을 비공식적으로 언급해야 할 경우도 있는데 이 경우 형식은 대리자 형식 또는 람다 식이 변환되는 <xref:System.Linq.Expressions.Expression> 형식을 의미합니다.
 
-## <a name="variable-scope-in-lambda-expressions"></a>람다 식의 변수 범위 ##
+## <a name="variable-scope-in-lambda-expressions"></a>람다 식의 변수 범위
 
 람다 식은 람다 함수를 정의하는 메서드 범위 내에 있거나 람다 식을 포함하는 형식 범위 내에 있는 *외부 변수*([무명 메서드](programming-guide/statements-expressions-operators/anonymous-methods.md) 참조)를 참조할 수 있습니다. 이러한 방식으로 캡처되는 변수는 변수가 범위를 벗어나 가비지 수집되는 경우에도 람다 식에 사용할 수 있도록 저장됩니다. 외부 변수는 명확하게 할당해야만 람다 식에 사용할 수 있습니다. 다음 예제에서는 이러한 규칙을 보여 줍니다.
 
@@ -152,7 +152,7 @@ C#의 튜플 지원에 대한 자세한 내용은 [C# 튜플 형식](tuples.md)�
 
 - 점프문의 대상이 블록 외부에 있는 경우 람다 식에 람다 함수 내에 있는 `goto` 문, `break` 문 또는 `continue` 문을 포함할 수 없습니다. 대상이 블록 내에 있는 경우 람다 함수 블록 외부에 점프문을 사용해도 오류가 발생합니다.
 
-## <a name="see-also"></a>참고 항목 ##
+## <a name="see-also"></a>참고 항목
 
 - [LINQ(Language-Integrated Query)](../standard/using-linq.md)
 - [무명 메서드](programming-guide/statements-expressions-operators/anonymous-methods.md)

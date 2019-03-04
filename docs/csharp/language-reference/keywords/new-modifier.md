@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - new modifier keyword [C#]
 ms.assetid: a2e20856-33b9-4620-b535-a60dbce8349b
-ms.openlocfilehash: 07986ac0c49387422aa334711b6997b159151e79
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: d5fd244ea22fd48bf5b81d2cdf55127f745c145b
+ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53244969"
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56835020"
 ---
 # <a name="new-modifier-c-reference"></a>new 한정자(C# 참조)
 
@@ -24,11 +24,11 @@ ms.locfileid: "53244969"
 
 상속을 사용한 이름 숨기기는 다음 중 한 가지 형식을 취합니다. 
 
-일반적으로 클래스 또는 구조체에 파생된 상수, 필드, 속성 또는 형식은 동일한 이름의 모든 기본 클래스 멤버를 숨깁니다.  이 사항이 적용되지 않는 경우가 있습니다.  예를 들어 호출할 수 없는 형식이 포함된 `N`이라는 이름의 새 필드를 선언하고 기본 형식에서 `N`을 메서드로 선언하면 새 필드가 호출 구문에서 기본 선언을 숨기지 않습니다.  자세한 내용은 [C# 5.0 언어 사양](https://www.microsoft.com/download/details.aspx?id=7029)을 참조하세요("식" 섹션의 "멤버 조회" 섹션 참조).
+- 일반적으로 클래스 또는 구조체에 파생된 상수, 필드, 속성 또는 형식은 동일한 이름의 모든 기본 클래스 멤버를 숨깁니다.  이 사항이 적용되지 않는 경우가 있습니다.  예를 들어 호출할 수 없는 형식이 포함된 `N`이라는 이름의 새 필드를 선언하고 기본 형식에서 `N`을 메서드로 선언하면 새 필드가 호출 구문에서 기본 선언을 숨기지 않습니다.  자세한 내용은 [C# 5.0 언어 사양](https://www.microsoft.com/download/details.aspx?id=7029)을 참조하세요("식" 섹션의 "멤버 조회" 섹션 참조).
 
-클래스 또는 구조체에 파생된 메서드는 기본 클래스에서 동일한 이름의 속성, 필드 및 형식을 숨깁니다. 또한 시그니처가 동일한 기본 클래스 메서드도 모두 숨깁니다.
+- 클래스 또는 구조체에 파생된 메서드는 기본 클래스에서 동일한 이름의 속성, 필드 및 형식을 숨깁니다. 또한 시그니처가 동일한 기본 클래스 메서드도 모두 숨깁니다.
 
-클래스 또는 구조체에 파생된 인덱서는 시그니처가 동일한 기본 클래스 인덱서를 모두 숨깁니다.
+- 클래스 또는 구조체에 파생된 인덱서는 시그니처가 동일한 기본 클래스 인덱서를 모두 숨깁니다.
 
 동일한 멤버에 대해 `new`와 [override](override.md)를 모두 사용하면 오류가 발생합니다. 두 한정자는 함께 사용할 수 없는 의미를 지니고 있기 때문입니다. `new` 한정자는 동일한 이름의 새 멤버를 만들고 원래 멤버를 숨기도록 하는 반면, `override` 한정자는 상속된 멤버에 대한 구현을 확장합니다.
 
@@ -40,7 +40,7 @@ ms.locfileid: "53244969"
 
 [!code-csharp[csrefKeywordsOperator#9](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsOperator/CS/csrefKeywordsOperators.cs#9)]
 
-## <a name="example"></a>예
+## <a name="example"></a>예제
 
 이 예제에서 중첩 클래스는 기본 클래스에서 이름이 동일한 클래스를 숨깁니다. 이 예제에서는 `new` 한정자를 사용하여 경고 메시지를 제거하는 방법과 정규화된 이름을 사용하여 숨겨진 클래스 멤버에 액세스하는 방법을 보여 줍니다.
 

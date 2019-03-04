@@ -3,14 +3,14 @@ title: 튜플 형식 - C# 가이드
 description: C#의 명명되지 않은 튜플 형식과 명명된 튜플 형식에 대한 자세한 정보
 ms.date: 05/15/2018
 ms.assetid: ee8bf7c3-aa3e-4c9e-a5c6-e05cc6138baa
-ms.openlocfilehash: 2c2b25c34555699c196099c0e1c51681fba8c358
-ms.sourcegitcommit: 0069cb3de8eed4e92b2195d29e5769a76111acdd
+ms.openlocfilehash: d9d3424e1e59e7b33a098537738a0a1f6af27d74
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/16/2019
-ms.locfileid: "56332756"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56971413"
 ---
-# <a name="c-tuple-types"></a>C# 튜플 형식 #
+# <a name="c-tuple-types"></a>C# 튜플 형식
 
 C# 튜플은 간단한 구문을 사용하여 정의하는 형식입니다. 이 형식은 더 간단한 구문, 요소 수(카디널리티라고 함) 및 형식에 따른 변환 규칙, 복사, 같음 테스트 및 할당에 대한 일관된 규칙 등이 장점입니다. 반면, 튜플은 상속과 관련된 개체 지향 구문의 일부를 지원하지 않습니다. [C# 7.0의 새로운 기능 문서의 튜플](whats-new/csharp-7.md#tuples)에 대한 섹션에서 전반적인 개요를 확인할 수 있습니다.
 

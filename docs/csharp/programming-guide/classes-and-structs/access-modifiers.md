@@ -6,12 +6,12 @@ helpviewer_keywords:
 - C# Language, access modifiers
 - access modifiers [C#], about
 ms.assetid: 6e81ee82-224f-4a12-9baf-a0dca2656c5b
-ms.openlocfilehash: 7c20292a906ecfbf08311a616e05a02cd8f8a25c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a5fbf74f30e5fc6abd9e1c5542eaadc7e3fcf552
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54731701"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56977567"
 ---
 # <a name="access-modifiers-c-programming-guide"></a>액세스 한정자(C# 프로그래밍 가이드)
 모든 형식과 형식 멤버에는 사용 중인 어셈블리나 기타 어셈블리의 다른 코드에서 사용될 수 있는지 여부를 제어하는 액세스 가능성 수준이 있습니다. 다음 액세스 한정자를 사용하여 형식 또는 멤버를 선언할 때 해당 항목의 액세스 가능성을 지정할 수 있습니다.  
@@ -33,7 +33,7 @@ ms.locfileid: "54731701"
   
  다음 예제에서는 형식 및 멤버에 대해 액세스 한정자를 지정하는 방법을 보여 줍니다.  
   
- [!code-csharp[csProgGuideObjects#72](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/access-modifiers_1.cs)]  
+ [!code-csharp[csProgGuideObjects#72](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#72)]  
   
  모든 액세스 한정자를 모든 컨텍스트의 모든 형식이나 멤버에서 사용할 수 있는 것은 아니며, 경우에 따라 형식 멤버의 액세스 가능성이 포함하는 형식의 액세스 가능성에 의해 제한됩니다. 다음 섹션에서는 액세스 가능성을 자세히 설명합니다.  
   
@@ -59,7 +59,7 @@ ms.locfileid: "54731701"
   
  클래스 또는 구조체 멤버의 액세스 수준을 설정하려면 다음 예제와 같이 멤버 선언에 해당 키워드를 추가합니다.  
   
- [!code-csharp[csProgGuideObjects#73](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/access-modifiers_2.cs)]  
+ [!code-csharp[csProgGuideObjects#73](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#73)]  
   
 > [!NOTE]
 >  protected internal 액세스 가능성 수준은 protected 및 internal이 아니라 protected 또는 internal을 의미합니다. 즉, 파생 클래스를 포함하여 같은 어셈블리의 모든 클래스에서 protected internal 멤버에 액세스할 수 있습니다. 액세스 가능성을 같은 어셈블리 파생 클래스로만 제한하려면 클래스 자체를 internal로 선언하고 해당 멤버를 protected로 선언합니다. 또한 C# 7.2부터 private protected 액세스 한정자를 사용하여 포함하는 클래스를 internal로 만들 필요 없이 같은 결과를 얻을 수 있습니다.  

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - <param> C# XML tag
 - param C# XML tag
 ms.assetid: 46d329b1-5b84-4537-9e17-73ca97313e4e
-ms.openlocfilehash: 3f1099da6a43ed7f48389a16e3be6a3b6b98a148
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 08b5257cedfcaf6fe34b8218dda93163d4c0d98b
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55271579"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56976684"
 ---
 # <a name="param-c-programming-guide"></a>\<param>(C# 프로그래밍 가이드)
 ## <a name="syntax"></a>구문  
@@ -37,8 +37,8 @@ ms.locfileid: "55271579"
   
  [/doc](../../../csharp/language-reference/compiler-options/doc-compiler-option.md)로 컴파일하여 문서 주석을 파일로 처리합니다.  
   
-## <a name="example"></a>예  
- [!code-csharp[csProgGuideDocComments#1](../../../csharp/programming-guide/xmldoc/codesnippet/CSharp/param_1.cs)]  
+## <a name="example"></a>예제  
+ [!code-csharp[csProgGuideDocComments#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDocComments/CS/DocComments.cs#1)]  
   
 ## <a name="see-also"></a>참고 항목
 

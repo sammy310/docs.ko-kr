@@ -6,18 +6,18 @@ helpviewer_keywords:
 - C# language, structs
 - structs [C#]
 ms.assetid: b7cf4ff2-0eb7-4e5c-93d5-b2196b4f5d89
-ms.openlocfilehash: 609169d4624802f679f9661b7aa0596403cc48e7
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 6c260408b7cdbb7bd55477a57ca879d89c3c0144
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55261622"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56977034"
 ---
 # <a name="structs-c-programming-guide"></a>구조체(C# 프로그래밍 가이드)
 
 구조체는 [struct](../../language-reference/keywords/struct.md) 키워드를 사용하여 정의합니다. 예를 들면 다음과 같습니다.  
   
-[!code-csharp[csProgGuideObjects#39](./codesnippet/CSharp/structs_1.cs)]  
+ [!code-csharp[csProgGuideObjects#39](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#39)]  
   
 구조체는 클래스와 대부분 동일한 구문을 공유합니다. 구조체의 이름은 유효한 C# [식별자 이름](../inside-a-program/identifier-names.md)이어야 합니다. 구조체는 다음과 같은 방법으로 클래스보다 더 제한적입니다.  
   

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - objects [C#], about objects
 - variables [C#]
 ms.assetid: af4a5230-fbf3-4eea-95e1-8b883c2f845c
-ms.openlocfilehash: 12c31db32b2b3ff3da7ed0972ea2cf090701f3e4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5e028ecd6e448237d192894c4a02233c1e0dd4c0
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54491744"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57201497"
 ---
 # <a name="objects-c-programming-guide"></a>개체(C# 프로그래밍 가이드)
 클래스 또는 구조체 정의는 형식이 수행할 수 있는 작업을 지정하는 청사진과 비슷합니다. 개체는 기본적으로 청사진에 따라 구성 및 할당된 메모리 블록입니다. 프로그램에서 동일한 클래스의 많은 개체를 만들 수 있습니다. 개체를 인스턴스라고도 하며, 명명된 변수나 배열 또는 컬렉션에 저장할 수 있습니다. 클라이언트 코드는 이러한 변수를 사용하여 메서드를 호출하고 개체의 공용 속성에 액세스하는 코드입니다. C#과 같은 개체 지향 언어에서 일반적인 프로그램은 동적으로 상호 작용하는 여러 개체로 구성됩니다.  
@@ -24,11 +24,11 @@ ms.locfileid: "54491744"
   
  클래스 인스턴스는 [new 연산자](../../../csharp/language-reference/keywords/new-operator.md)를 사용하여 생성됩니다. 다음 예제에서 `Person`은 형식이고 `person1` 및 `person 2`는 해당 형식의 인스턴스 또는 개체입니다.  
   
- [!code-csharp[csProgGuideStatements#30](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/objects_1.cs)]  
+ [!code-csharp[csProgGuideStatements#30](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStatements/CS/Statements.cs#30)]  
   
  구조체는 값 형식이므로 구조체 개체의 변수는 전체 개체의 복사본을 포함합니다. 다음 예제와 같이 `new` 연산자를 사용하여 구조체 인스턴스를 만들 수도 있지만 필수는 아닙니다.  
   
- [!code-csharp[csProgGuideStatements#31](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/objects_2.cs)]  
+ [!code-csharp[csProgGuideStatements#31](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStatements/CS/Statements.cs#31)]  
   
  `p1` 및 `p2` 둘 다에 대한 메모리가 스레드 스택에서 할당됩니다. 해당 메모리가 선언된 형식 또는 메서드와 함께 회수됩니다. 이는 할당 시 구조체가 복사되는 이유 중 하나입니다. 반면, 클래스 인스턴스에 할당된 메모리는 개체에 대한 모든 참조가 범위를 벗어날 때 공용 언어 런타임에 의해 자동으로 회수(가비지 수집)됩니다. C++에서와 같이 클래스 개체를 자동으로 제거할 수 없습니다. [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]의 가비지 수집에 대한 자세한 내용은 [가비지 수집](../../../standard/garbage-collection/index.md)을 참조하세요.  
   
@@ -42,7 +42,7 @@ ms.locfileid: "54491744"
   
 -   두 구조체 인스턴스의 인스턴스 필드 값이 같은지 확인하려면 <xref:System.ValueType.Equals%2A?displayProperty=nameWithType> 메서드를 사용합니다. 모든 구조체가 <xref:System.ValueType?displayProperty=nameWithType>에서 암시적으로 상속하기 때문에 다음 예제와 같이 개체에서 직접 메서드를 호출합니다.  
   
- [!code-csharp[csProgGuideStatements#32](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/objects_3.cs)]  
+ [!code-csharp[csProgGuideStatements#32](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStatements/CS/Statements.cs#32)]  
   
  `Equals`의 <xref:System.ValueType?displayProperty=nameWithType> 구현에서는 구조체의 필드를 확인할 수 있어야 하므로 리플렉션을 사용합니다. 고유한 구조체를 만드는 경우 `Equals` 메서드를 재정의하여 해당 형식과 관련된 효율적인 같음 알고리즘을 제공합니다.  
   

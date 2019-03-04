@@ -8,18 +8,18 @@ f1_keywords:
 helpviewer_keywords:
 - is keyword [C#]
 ms.assetid: bc62316a-d41f-4f90-8300-c6f4f0556e43
-ms.openlocfilehash: 2721048145253a441770a96f8383358bb1ceda01
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a391449afd53b28ae4293865314275782d6e9505
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54710354"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56977060"
 ---
-# <a name="is-c-reference"></a>is(C# 참조) #
+# <a name="is-c-reference"></a>is(C# 참조)
 
 개체가 지정된 형식과 호환되는지 확인하거나 (C# 7.0부터는) 패턴에 대해 식을 테스트합니다.
 
-## <a name="testing-for-type-compatibility"></a>형식 호환성 테스트 ##
+## <a name="testing-for-type-compatibility"></a>형식 호환성 테스트
 
 `is` 키워드는 런타임에 형식 호환성을 평가합니다. 개체 인스턴스 또는 식의 결과를 지정된 형식으로 변환할 수 있는지 확인합니다. 사용되는 구문은 다음과 같습니다.
 
@@ -56,7 +56,7 @@ ms.locfileid: "54710354"
 
 C# 7.0부터는 [형식 패턴](#type)을 사용한 패턴 일치를 통해 `is` 문을 사용하는 보다 간결한 코드를 작성할 수 있습니다.
 
-## <a name="pattern-matching-with-is"></a>`is`를 사용한 패턴 일치 ##
+## <a name="pattern-matching-with-is"></a>`is`를 사용한 패턴 일치
 
 C# 7.0부터는 `is` 및 [switch](../../../csharp/language-reference/keywords/switch.md) 문에서 패턴 일치를 지원합니다. `is` 키워드는 다음과 같은 패턴을 지원합니다.
 
@@ -104,7 +104,7 @@ C# 7.0부터는 `is` 및 [switch](../../../csharp/language-reference/keywords/sw
 
 [!code-csharp[is#10](../../../../samples/snippets/csharp/language-reference/keywords/is/is-type-pattern10.cs#10)]
 
-### <a name="a-nameconstant--constant-pattern"></a><a name="constant" /> 상수 패턴 ###
+### <a name="a-nameconstant--constant-pattern"></a><a name="constant" /> 상수 패턴
 
 상수 패턴을 사용한 패턴 일치를 수행하는 경우 `is`는 식이 지정된 상수와 같은지 여부를 테스트합니다. C# 6 이전 버전에서는 상수 패턴이 [switch](switch.md) 문에서 지원됩니다. C# 7.0부터는 `is` 문에서도 지원됩니다. 사용되는 구문은 다음과 같습니다.
 

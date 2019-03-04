@@ -7,27 +7,27 @@ helpviewer_keywords:
 - methods [C#], anonymous
 - delegates [C#], anonymous methods
 ms.assetid: a62441fa-f0a3-4acb-9aa6-93762a635275
-ms.openlocfilehash: ba80626a777f9f2d813694abf3deda0ef0c93606
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 94e9f7133c9a78ece7df5bd10cfc27c79d0652c2
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54732522"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57203015"
 ---
 # <a name="anonymous-methods-c-programming-guide"></a>무명 메서드(C# 프로그래밍 가이드)
 2.0 이전의 C# 버전에서 [delegate](../../../csharp/language-reference/keywords/delegate.md)를 선언하는 유일한 방법은 [명명된 메서드](../../../csharp/programming-guide/delegates/delegates-with-named-vs-anonymous-methods.md)를 사용하는 것이었습니다. C# 2.0에서는 무명 메서드가 도입되었고, C# 3.0 이상에서는 람다 식이 인라인 코드를 작성하는 기본 방법으로 무명 메서드를 대체합니다. 그러나 이 항목의 무명 메서드 관련 정보는 람다 식에도 적용됩니다. 무명 메서드가 람다 식에서 찾을 수 없는 기능을 제공하는 한 가지 경우가 있습니다. 무명 메서드를 사용하여 매개 변수 목록을 생략할 수 있습니다. 즉, 무명 메서드를 여러 시그니처를 가진 대리자로 변환할 수 있습니다. 람다 식에서는 이 작업이 불가능합니다. 람다 식에 대한 자세한 내용은 [람다 식](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)을 참조하세요.  
   
  무명 메서드를 만드는 것은 기본적으로 코드 블록을 대리자 매개 변수로 전달하는 방법 중 하나입니다. 다음 두 가지 예제를 살펴보세요.  
   
- [!code-csharp[csProgGuideDelegates#6](../../../csharp/programming-guide/delegates/codesnippet/CSharp/anonymous-methods_1.cs)]  
+ [!code-csharp[csProgGuideDelegates#6](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDelegates/CS/Delegates.cs#6)]  
   
- [!code-csharp[csProgGuideDelegates#5](../../../csharp/programming-guide/delegates/codesnippet/CSharp/anonymous-methods_2.cs)]  
+ [!code-csharp[csProgGuideDelegates#5](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDelegates/CS/Delegates.cs#5)]  
   
  무명 메서드를 사용하면 별도 메서드를 만들 필요가 없기 때문에 대리자를 인스턴스화하는 코딩 오버헤드가 줄어듭니다.  
   
  예를 들어 메서드를 만드는 것이 불필요한 오버헤드처럼 보일 수도 있는 경우 대리자 대신 코드 블록을 지정하는 것이 유용할 수 있습니다. 좋은 예로 새 스레드를 시작하는 경우를 들 수 있습니다. 이 클래스는 스레드를 만들며, 대리자에 대한 추가 메서드를 만들지 않고 스레드에서 실행하는 코드도 포함합니다.  
   
- [!code-csharp[csProgGuideDelegates#7](../../../csharp/programming-guide/delegates/codesnippet/CSharp/anonymous-methods_3.cs)]  
+ [!code-csharp[csProgGuideDelegates#7](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDelegates/CS/Delegates.cs#7)]  
   
 ## <a name="remarks"></a>주의  
  무명 메서드의 매개 변수 범위는 *무명 메서드 블록*입니다.  
@@ -36,7 +36,7 @@ ms.locfileid: "54732522"
   
  범위에 무명 메서드 선언이 포함된 지역 변수 및 매개 변수를 무명 메서드의 *외부* 변수라고 합니다. 예를 들어 다음 코드 세그먼트에서 `n`은 외부 변수입니다.  
   
- [!code-csharp[csProgGuideDelegates#8](../../../csharp/programming-guide/delegates/codesnippet/CSharp/anonymous-methods_4.cs)]  
+ [!code-csharp[csProgGuideDelegates#8](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDelegates/CS/Delegates.cs#8)]  
   
  외부 변수 `n`에 대한 참조는 대리자를 만들 때 *캡처*됩니다. 지역 변수와 달리 캡처된 변수의 수명은 무명 메서드를 참조하는 대리자가 가비지 수집에 적격할 때까지 연장됩니다.  
   
@@ -55,7 +55,7 @@ ms.locfileid: "54732522"
   
  각각의 경우 대리자를 호출할 때 메시지가 표시됩니다.  
   
- [!code-csharp[csProgGuideDelegates#4](../../../csharp/programming-guide/delegates/codesnippet/CSharp/anonymous-methods_5.cs)]  
+ [!code-csharp[csProgGuideDelegates#4](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDelegates/CS/Delegates.cs#4)]  
   
 ## <a name="see-also"></a>참고 항목
 

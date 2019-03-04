@@ -7,16 +7,16 @@ helpviewer_keywords:
 - type constraints [C#]
 - type parameters [C#], constraints
 - unbound type parameter [C#]
-ms.openlocfilehash: 38b8a0fc8c89975318b42380ca936869544af601
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 08863e677413c27461d621c7126c64f2b76c33a8
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54694973"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57202602"
 ---
 # <a name="constraints-on-type-parameters-c-programming-guide"></a>형식 매개 변수에 대한 제약 조건(C# 프로그래밍 가이드)
 
-제약 조건은 형식 인수에서 갖추고 있어야 하는 기능을 컴파일러에 알립니다. 제약 조건이 없으면 형식 인수가 어떤 형식이든 될 수 있습니다. 컴파일러는 모든 .NET 형식의 궁극적인 기본 클래스인 <xref:System.Object?displayPropety=nameWithType>의 멤버만 가정할 수 있습니다. 자세한 내용은 [제약 조건을 사용하는 이유](#why-use-constraints)를 참조하세요. 클라이언트 코드에서 제약 조건에 의해 허용되지 않는 형식을 사용하여 클래스를 인스턴스화하려고 하면 컴파일 시간 오류가 발생합니다. 제약 조건은 `where` 상황별 키워드를 사용하여 지정됩니다. 다음 표에는 7가지 형식의 제약 조건이 나와 있습니다.
+제약 조건은 형식 인수에서 갖추고 있어야 하는 기능을 컴파일러에 알립니다. 제약 조건이 없으면 형식 인수가 어떤 형식이든 될 수 있습니다. 컴파일러는 모든 .NET 형식의 궁극적인 기본 클래스인 <xref:System.Object?displayProperty=nameWithType>의 멤버만 가정할 수 있습니다. 자세한 내용은 [제약 조건을 사용하는 이유](#why-use-constraints)를 참조하세요. 클라이언트 코드에서 제약 조건에 의해 허용되지 않는 형식을 사용하여 클래스를 인스턴스화하려고 하면 컴파일 시간 오류가 발생합니다. 제약 조건은 `where` 상황별 키워드를 사용하여 지정됩니다. 다음 표에는 7가지 형식의 제약 조건이 나와 있습니다.
 
 |제약 조건|설명|
 |----------------|-----------------|

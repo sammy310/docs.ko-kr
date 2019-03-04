@@ -9,12 +9,12 @@ helpviewer_keywords:
 - value equality [C#]
 - equivalence [C#]
 ms.assetid: 4084581e-b931-498b-9534-cf7ef5b68690
-ms.openlocfilehash: 456555a34347771c9918341d7d1a797e611f5577
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fef242d491fca667d66e24a8cd6715e6f6d08483
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54589319"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57203112"
 ---
 # <a name="how-to-define-value-equality-for-a-type-c-programming-guide"></a>방법: 형식의 값 일치 정의(C# 프로그래밍 가이드)
 클래스 또는 구조체를 정의할 때 형식에 대한 값 같음(또는 동등)의 사용자 지정 정의를 만드는 것이 적합한지 결정합니다. 일반적으로 형식의 개체를 일종의 컬렉션에 추가해야 하는 경우 또는 주요 용도가 필드 또는 속성 집합 저장인 경우 값 같음을 구현합니다. 형식의 모든 필드 및 속성 비교를 기준으로 값 같음의 정의를 만들거나, 하위 집합을 기준으로 정의를 만들 수 있습니다. 그러나 두 경우 모두, 클래스와 구조체 둘 다에서 구현이 동등의 5가지 사항을 따라야 합니다.  
@@ -48,7 +48,7 @@ ms.locfileid: "54589319"
 ## <a name="example"></a>예제  
  다음 예제에서는 클래스(참조 형식)에서 값 같음을 구현하는 방법을 보여 줍니다.  
   
- [!code-csharp[csProgGuideStatements#19](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-define-value-equality-for-a-type_1.cs)]  
+ [!code-csharp[csProgGuideStatements#19](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStatements/CS/Statements.cs#19)]  
   
  클래스(참조 형식)에서 두 <xref:System.Object.Equals%28System.Object%29?displayProperty=nameWithType> 메서드의 기본 구현은 값이 같은지 검사하지 않고 참조가 같은지 비교합니다. 구현자가 가상 메서드를 재정의하는 경우 값 같음 의미 체계를 제공하기 위한 것입니다.  
   
@@ -57,7 +57,7 @@ ms.locfileid: "54589319"
 ## <a name="example"></a>예제  
  다음 예제에서는 구조체(값 형식)에서 값 같음을 구현하는 방법을 보여 줍니다.  
   
- [!code-csharp[csProgGuideStatements#20](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-define-value-equality-for-a-type_2.cs)]  
+ [!code-csharp[csProgGuideStatements#20](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStatements/CS/Statements.cs#20)]  
   
  구조체의 경우 <xref:System.Object.Equals%28System.Object%29?displayProperty=nameWithType>의 기본 구현(<xref:System.ValueType?displayProperty=nameWithType>의 재정의된 버전)에서 리플렉션을 통해 형식에 있는 모든 필드의 값을 비교하여 값이 같은지 검사합니다. 구현자가 구조체의 가상 `Equals` 메서드를 재정의하는 경우 값이 같은지 검사하는 보다 효율적인 수단을 제공하고 필요에 따라 구조체 필드 또는 속성의 하위 집합을 기준으로 비교하기 위한 것입니다.  
   
