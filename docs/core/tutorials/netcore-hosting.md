@@ -4,12 +4,12 @@ description: .NET Core 런타임의 작동 방식을 제어해야 하는 고급 
 author: mjrousos
 ms.date: 12/21/2018
 ms.custom: seodec18
-ms.openlocfilehash: 994cc82745d2c473f1126eae9a889c899f5e741a
-ms.sourcegitcommit: 07c4368273b446555cb2c85397ea266b39d5fe50
+ms.openlocfilehash: 78eb4bb1f0dfb1b2469b69f2b90b9bacc66754aa
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/21/2019
-ms.locfileid: "56583851"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56980375"
 ---
 # <a name="write-a-custom-net-core-host-to-control-the-net-runtime-from-your-native-code"></a>사용자 지정 .NET Core 호스트를 작성하여 네이티브 코드에서 .NET 런타임 제어
 
@@ -68,7 +68,7 @@ CoreCLR 라이브러리를 로드한 후 다음 단계는 `GetProcAddress`(Windo
 
 일반적인 속성은 다음과 같습니다.
 
-* `TRUSTED_PLATFORM_ASSEMBLIES` 런타임이 기본적으로 확인할 수 있는 어셈블리 경로의 목록입니다(Windows에서 ';'으로 구분되고 Linux에서 ':'으로 구분됨). 일부 호스트에는 로드할 수 있는 어셈블리를 나열하는 하드 코딩된 매니페스트가 있습니다. 다른 호스트는 이 목록의 특정 위치(예: *coreclr.dll* 옆)에 라이브러리를 배치합니다.
+* `TRUSTED_PLATFORM_ASSEMBLIES` 런타임이 기본적으로 확인할 수 있는 어셈블리 경로의 목록입니다(Windows에서 ‘;’으로 구분되고 Linux에서 ‘:’으로 구분됨). 일부 호스트에는 로드할 수 있는 어셈블리를 나열하는 하드 코딩된 매니페스트가 있습니다. 다른 호스트는 이 목록의 특정 위치(예: *coreclr.dll* 옆)에 라이브러리를 배치합니다.
 * `APP_PATHS` TPA(신뢰할 수 있는 플랫폼 어셈블리) 목록에서 찾을 수 없는 경우 어셈블리에 대해 검색하는 경로 목록입니다. 호스트는 TPA 목록을 사용하여 로드되는 어셈블리를 더 세부적으로 제어할 수 있지만 호스트가 로드해야 하는 어셈블리를 결정하고 명시적으로 나열하는 것이 가장 좋은 방법입니다. 하지만 런타임 시 검색이 필요한 경우 이 속성으로 해당 시나리오를 구현할 수 있습니다.
 *  `APP_NI_PATHS` 이 목록은 네이티브 이미지에 대해 검색되는 경로를 제외하고, APP_PATHS와 비슷합니다.
 *  `NATIVE_DLL_SEARCH_DIRECTORIES` 이 속성은 p/invoke를 통해 호출되는 네이티브 라이브러리를 찾을 때 로더에서 검색해야 하는 경로 목록입니다.

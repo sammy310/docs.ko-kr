@@ -4,12 +4,12 @@ description: 컨테이너화된 .NET 애플리케이션용 .NET 마이크로 서
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 01/07/2019
-ms.openlocfilehash: a4da138540d8a2b8c1ac322c00904cff2b329aea
-ms.sourcegitcommit: dcc8feeff4718664087747529638ec9b47e65234
+ms.openlocfilehash: 4c1149c02c32c357c4817af539eb0cf529266181
+ms.sourcegitcommit: a532e8314c3a4b5b039656567fedff9787a31957
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2019
-ms.locfileid: "55479908"
+ms.lasthandoff: 03/02/2019
+ms.locfileid: "57251016"
 ---
 # <a name="when-to-choose-net-framework-for-docker-containers"></a>Docker 컨테이너에 대해 .NET Framework를 선택하는 경우
 
@@ -23,7 +23,7 @@ ms.locfileid: "55479908"
 
 ## <a name="using-third-party-net-libraries-or-nuget-packages-not-available-for-net-core"></a>.NET Core에 사용할 수 없는 타사 .NET 라이브러리 또는 NuGet 패키지 사용
 
-타사 라이브러리는 [.NET 표준](../../net-standard.md)을 빠르게 수용하여 .NET Core를 포함한 모든 .NET 계열에서 코드 공유를 사용할 수 있게 합니다. .NET Standard 라이브러리 2.0 이상에서는 서로 다른 프레임워크 간의 API 표면 호환성이 상당히 증가하였으며, .NET Core 2.x에서는 애플리케이션이 기존 .NET Framework 라이브러리를 직접 참조할 수도 있습니다([호환 shim](https://github.com/dotnet/standard/blob/master/docs/netstandard-20/README.md#net-framework-461-supporting-net-standard-20) 참조).
+타사 라이브러리는 [.NET 표준](../../net-standard.md)을 빠르게 수용하여 .NET Core를 포함한 모든 .NET 계열에서 코드 공유를 사용할 수 있게 합니다. .NET 표준 라이브러리 2.0 이상에서는 서로 다른 프레임워크 간의 API 표면 호환성이 상당히 증가하였으며, .NET Core 2.x에서는 애플리케이션이 기존 .NET Framework 라이브러리를 직접 참조할 수도 있습니다([.NET 표준 2.0을 지원하는 .NET Framework 4.6.1](https://github.com/dotnet/standard/blob/master/docs/planning/netstandard-2.0/README.md#net-framework-461-supporting-net-standard-20) 참조).
 
 또한 Windows의 .NET Standard 2.0에 사용할 수 있는 API 노출을 확장하기 위해 2017년 11월에 [Windows 호환성 팩](../../../core/porting/windows-compat-pack.md)이 릴리스되었습니다. 이 팩을 사용하면 수정 사항이 거의 없거나 전혀 없이 Windows에서 실행하도록 대부분의 기존 코드를 .NET Standard 2.x에 다시 컴파일할 수 있습니다.
 

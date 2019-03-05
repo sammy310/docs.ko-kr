@@ -2,14 +2,14 @@
 title: C#에서 기본 네임스페이스 범위1
 ms.date: 07/20/2015
 ms.assetid: fe826236-830f-457a-9027-7ad62c909fae
-ms.openlocfilehash: 77345bfb2a4814c8cd38405c4481bea86fa84823
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: dfc86e2e58eb936106807aba21b2953f52101cbc
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54613859"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56979712"
 ---
-# <a name="scope-of-default-namespaces-in-c"></a>C#에서 기본 네임스페이스 범위
+# <a name="scope-of-default-namespaces-in-c"></a>C\#에서 기본 네임스페이스 범위
 XML 트리에 나타나는 기본 네임스페이스는 쿼리에 범위에 포함되지 않습니다. 기본 네임스페이스에 있는 XML을 사용하는 경우 <xref:System.Xml.Linq.XNamespace> 변수를 선언하고 로컬 이름과 결합하여 쿼리에서 사용할 정규화된 이름을 만들어야 합니다.  
   
  XML 트리를 쿼리할 때 가장 일반적인 문제 중 하나는 XML 트리에 기본 네임스페이스가 있으면 개발자가 경우에 따라 XML이 네임스페이스에 없는 것처럼 쿼리를 작성하는 것입니다.  

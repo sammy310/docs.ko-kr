@@ -3,16 +3,16 @@ title: 익명 함수 - C# 프로그래밍 가이드
 ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
-- lambda expressions [C#], as anonymus functions
+- lambda expressions [C#], as anonymous functions
 - anonymous functions [C#]
 - anonymous methods [C#]
 ms.assetid: 6ce3f04d-0c71-4728-9127-634c7e9a8365
-ms.openlocfilehash: 05098d1f26526c60656cca2255a2f93922c025da
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f7ab471514cd437b7b1816d7e0bde30459f281a9
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54613729"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57203326"
 ---
 # <a name="anonymous-functions-c-programming-guide"></a>익명 함수(C# 프로그래밍 가이드)
 익명 함수는 대리자 형식이 예상되는 곳에서 항상 사용할 수 있는 “인라인” 문 또는 식입니다. 이를 사용하여 명명된 대리자를 초기화하거나 명명된 대리자 형식 대신 이를 메서드 매개 변수로 전달할 수 있습니다.  
@@ -26,12 +26,12 @@ ms.locfileid: "54613729"
     > [!NOTE]
     >  람다 식은 식 트리 및 대리자에 바인딩될 수 있습니다.  
   
-## <a name="the-evolution-of-delegates-in-c"></a>C#에서 대리자의 발전  
+## <a name="the-evolution-of-delegates-in-c"></a>C\#에서 대리자의 발전
  C# 1.0에서는 코드의 다른 위치에 정의된 메서드를 사용하여 명시적으로 초기화하는 방식으로 대리자의 인스턴스를 만들었습니다. C# 2.0에서는 대리자 호출에서 실행될 수 있는 이름 없는 인라인 문 블록을 작성하는 방법으로 무명 메서드의 개념을 소개했습니다. C# 3.0에서는 개념적으로 무명 메서드와 비슷하지만 더 간결하고 표현이 다양한 람다 식을 소개했습니다. 이러한 두 기능을 함께 *익명 함수*라고 합니다. 일반적으로 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]의 버전 3.5 이상을 대상으로 하는 애플리케이션은 람다 식을 사용해야 합니다.  
   
  다음 예제에서는 C# 1.0에서 C# 3.0까지 대리자 만들기의 발전을 보여 줍니다.  
   
- [!code-csharp[csProgGuideLINQ#65](../../../csharp/programming-guide/arrays/codesnippet/CSharp/anonymous-functions_1.cs)]  
+ [!code-csharp[csProgGuideLINQ#65](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideLINQ/CS/csRef30LangFeatures_2.cs#65)]  
   
 ## <a name="c-language-specification"></a>C# 언어 사양  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  

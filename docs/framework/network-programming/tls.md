@@ -12,12 +12,12 @@ helpviewer_keywords:
 - Internet, security
 - security [.NET Framework], Internet
 - permissions [.NET Framework], Internet
-ms.openlocfilehash: 2d7555d39b3aa92ca49368ca5ad59750e3603606
-ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
+ms.openlocfilehash: b08d119c0c7edb71ceab5c763c1359bf4c90cfec
+ms.sourcegitcommit: 79066169e93d9d65203028b21983574ad9dcf6b4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/19/2019
-ms.locfileid: "54415899"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57212536"
 ---
 # <a name="transport-layer-security-tls-best-practices-with-the-net-framework"></a>.NET Framework를 사용한 TLS(전송 계층 보안) 모범 사례
 
@@ -237,7 +237,7 @@ Windows Registry Editor Version 5.00
 
 `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols` 레지스트리 키로 시작합니다. `SSL 2.0`, `SSL 3.0`, `TLS 1.0`, `TLS 1.1` 및 `TLS 1.2` 집합에서 해당 키 아래에 하위 키를 만들 수 있습니다. 각 하위 키 아래에 하위 키 `Client` 및/또는 `Server`를 만들 수 있습니다. `Client` 및 `Server` 아래에 DWORD 값 `DisabledByDefault`(0 또는 1) 및 `Enabled`(0 또는 0xFFFFFFFF)를 만들 수 있습니다.
 
-## <a name="the-schusestrongcrypto-flag"></a>SCH_USE_STRONG_CRYPTO 플래그
+## <a name="the-sch_use_strong_crypto-flag"></a>SCH_USE_STRONG_CRYPTO 플래그
 
 사용으로 설정된 경우(기본적으로, `AppContext` 스위치 또는 Windows 레지스트리에서) .NET Framework는 앱이 TLS 보안 프로토콜을 요청할 때 `SCH_USE_STRONG_CRYPTO` 플래그를 사용합니다. `SCH_USE_STRONG_CRYPTO` 플래그는 기본적으로 `AppContext` 스위치 또는 레지스트리와 함께 사용할 수 있습니다. OS는 플래그를 `Schannel`에 전달하여 상호 운용성 향상을 위해 사용하도록 설정될 수 있는, 알려진 약한 암호화 알고리즘, 암호 도구 모음 및 TLS/SSL 프로토콜 버전을 사용하지 않도록 설정하도록 지시합니다. 자세한 내용은 다음을 참조하세요.
 
@@ -270,10 +270,10 @@ TLS 1.2 및/또는 TLS 1.1을 지원하는 시스템에서 이를 사용하도�
 
 | **OS** | **TLS 1.2 지원** |
 | --- | --- |
-| Windows 10</br>Windows Server 2016 | 지원되며 기본적으로 사용하도록 설정됩니다. |
-| Windows 8.1</br>Windows Server 2012 R2 | 지원되며 기본적으로 사용하도록 설정됩니다. |
-| Windows 8.0</br>Windows Server 2012 | 지원되며 기본적으로 사용하도록 설정됩니다. |
-| Windows 7 SP1</br>Windows Server 2008 R2 SP1 | 지원되지만 기본적으로 사용하도록 설정되지 않습니다. TLS 1.2를 사용하도록 설정하는 방법에 대한 자세한 내용은 [TLS(전송 계층 보안) 레지스트리 설정](/windows-server/security/tls/tls-registry-settings) 웹 페이지를 참조하세요. |
+| Windows 10<br>Windows Server 2016 | 지원되며 기본적으로 사용하도록 설정됩니다. |
+| Windows 8.1<br>Windows Server 2012 R2 | 지원되며 기본적으로 사용하도록 설정됩니다. |
+| Windows 8.0<br>Windows Server 2012 | 지원되며 기본적으로 사용하도록 설정됩니다. |
+| Windows 7 SP1<br>Windows Server 2008 R2 SP1 | 지원되지만 기본적으로 사용하도록 설정되지 않습니다. TLS 1.2를 사용하도록 설정하는 방법에 대한 자세한 내용은 [TLS(전송 계층 보안) 레지스트리 설정](/windows-server/security/tls/tls-registry-settings) 웹 페이지를 참조하세요. |
 | Windows Server 2008 | TLS 1.2 및 TLS 1.1 지원에는 업데이트가 필요합니다. [Windows Server 2008 SP2에서 TLS 1.1 및 TLS 1.2에 대한 지원을 추가하는 업데이트](https://support.microsoft.com/help/4019276/update-to-add-support-for-tls-1-1-and-tls-1-2-in-windows-server-2008-s)를 참조하세요. |
 | Windows Vista | 지원되지 않습니다. |
 
@@ -285,10 +285,10 @@ Windows의 각 버전에서 기본적으로 사용하도록 설정되는 TLS/SSL
 
 | **OS** | **.NET Framework 3.5에서 TLS 1.2를 지원하는 데 필요한 최소 업데이트** |
 | --- | --- |
-| Windows 10</br>Windows Server 2016 | [Windows 10 버전 1511 및 Windows Server 2016 Technical Preview 4용 누적 업데이트: 2016년 5월 10일](https://support.microsoft.com/help/3156421/cumulative-update-for-windows-10-version-1511-and-windows-server-2016) |
-| Windows 8.1</br>Windows Server 2012 R2 | [Windows 8.1 및 Windows Server 2012 R2 기반 .NET Framework 3.5에 포함된 TLS 시스템 기본 버전에 대한 지원](https://support.microsoft.com/help/3154520/support-for-tls-system-default-versions-included-in-the--net-framework) |
-| Windows 8.0</br>Windows Server 2012 | [Windows Server 2012 기반 .NET Framework 3.5에 포함된 TLS 시스템 기본 버전에 대한 지원](https://support.microsoft.com/help/3154519/support-for-tls-system-default-versions-included-in-the--net-framework) |
-| Windows 7 SP1</br>Windows Server 2008 R2 SP1 | [Windows 7 SP1 및 Server 2008 R2 SP1 기반 .NET Framework 3.5.1에 포함된 TLS 시스템 기본 버전에 대한 지원](https://support.microsoft.com/help/3154518/support-for-tls-system-default-versions-included-in-the--net-framework) |
+| Windows 10<br>Windows Server 2016 | [Windows 10 버전 1511 및 Windows Server 2016 Technical Preview 4용 누적 업데이트: 2016년 5월 10일](https://support.microsoft.com/help/3156421/cumulative-update-for-windows-10-version-1511-and-windows-server-2016) |
+| Windows 8.1<br>Windows Server 2012 R2 | [Windows 8.1 및 Windows Server 2012 R2 기반 .NET Framework 3.5에 포함된 TLS 시스템 기본 버전에 대한 지원](https://support.microsoft.com/help/3154520/support-for-tls-system-default-versions-included-in-the--net-framework) |
+| Windows 8.0<br>Windows Server 2012 | [Windows Server 2012 기반 .NET Framework 3.5에 포함된 TLS 시스템 기본 버전에 대한 지원](https://support.microsoft.com/help/3154519/support-for-tls-system-default-versions-included-in-the--net-framework) |
+| Windows 7 SP1<br>Windows Server 2008 R2 SP1 | [Windows 7 SP1 및 Server 2008 R2 SP1 기반 .NET Framework 3.5.1에 포함된 TLS 시스템 기본 버전에 대한 지원](https://support.microsoft.com/help/3154518/support-for-tls-system-default-versions-included-in-the--net-framework) |
 | Windows Server 2008 | [Windows Vista SP2 및 Server 2008 SP2 기반 .NET Framework 2.0 SP2에 포함된 TLS 시스템 기본 버전에 대한 지원](https://support.microsoft.com/help/3154517/support-for-tls-system-default-versions-included-in-the--net-framework) |
 | Windows Vista | 지원 안 함 |
 

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - strings [C#], searching with String methods
 - strings [C#], searching with regular expressions
 ms.assetid: fb1d9a6d-598d-4a35-bd5f-b86012edcb2b
-ms.openlocfilehash: 030d71f95947e98d9f269095908b0431c2192430
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b9c27e419d37b6c0730f214d3b2b9bbdf7e30d11
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54623393"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57202875"
 ---
 # <a name="how-to-search-strings"></a>방법: 문자열 검색
 
@@ -46,7 +46,7 @@ ms.locfileid: "54623393"
 | pattern  | 의미     |
 | -------- |-------------|
 | the      | 텍스트 "the" 일치 |
-| (eir)?   | "eir"와 0 또는 1개 항목 일치 |
+| (eir)?   | “eir”과 0 또는 1개 항목 일치 |
 | \s       | 공백 문자 찾기    |
   
 [!code-csharp-interactive[Search using regular expressions](../../../samples/snippets/csharp/how-to/strings/SearchStrings.cs#3)]

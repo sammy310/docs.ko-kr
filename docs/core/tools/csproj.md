@@ -3,12 +3,12 @@ title: .NET Core용 csproj 형식에 대한 추가 사항
 description: 기존 및 .NET Core csproj 파일 간의 차이점에 대해 알아보기
 author: blackdwarf
 ms.date: 09/22/2017
-ms.openlocfilehash: d715a3a30c48f1c3fa837b24ee21b49fa947011a
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
+ms.openlocfilehash: 792ec6e5570afd5ecfad483d2a0551df10c61a95
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56748012"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56981532"
 ---
 # <a name="additions-to-the-csproj-format-for-net-core"></a>.NET Core용 csproj 형식에 대한 추가 사항
 
@@ -45,11 +45,14 @@ ms.locfileid: "56748012"
 
 다음 표에는 SDK에 모두 포함되거나 제외되는 요소 및 [GLOB](https://en.wikipedia.org/wiki/Glob_(programming))가 나와 있습니다. 
 
-| 요소           | GLOB 포함                              | GLOB 제외                                                  | GLOB 제거                |
+| 요소           | GLOB 포함                                | GLOB 제외                                                    | GLOB 제거                |
 |-------------------|-------------------------------------------|---------------------------------------------------------------|----------------------------|
-| Compile           | \*\*/\*.cs(또는 기타 언어 확장) | \*\*/\*.user;  \*\*/\*.\*proj;  \*\*/\*.sln;  \*\*/\*.vssscc  | N/A                        |
-| EmbeddedResource  | \*\*/\*.resx                              | \*\*/\*.user; \*\*/\*.\*proj; \*\*/\*.sln; \*\*/\*.vssscc     | N/A                        |
-| 없음              | \*\*/\*                                   | \*\*/\*.user; \*\*/\*.\*proj; \*\*/\*.sln; \*\*/\*.vssscc     | - \*\*/\*.cs; \*\*/\*.resx |
+| Compile           | \*\*/\*.cs(또는 기타 언어 확장) | \*\*/\*.user;  \*\*/\*.\*proj;  \*\*/\*.sln;  \*\*/\*.vssscc  | 해당 없음                        |
+| EmbeddedResource  | \*\*/\*.resx                              | \*\*/\*.user; \*\*/\*.\*proj; \*\*/\*.sln; \*\*/\*.vssscc     | 해당 없음                        |
+| 없음              | \*\*/\*                                   | \*\*/\*.user; \*\*/\*.\*proj; \*\*/\*.sln; \*\*/\*.vssscc     | \*\*/\*.cs; \*\*/\*.resx   |
+
+> [!NOTE]
+> **GLOB 제외**는 각각 `$(BaseOutputPath)` 및 `$(BaseIntermediateOutputPath)` MSBuild 속성으로 나타내는 `./bin` 및 `./obj` 폴더를 제외합니다. 전체적으로 모든 제외는 `$(DefaultItemExcludes)`로 나타냅니다.
 
 프로젝트에 GLOB가 있고 최신 SDK를 사용하여 빌드하려는 경우 다음 오류가 발생합니다.
 
@@ -208,7 +211,7 @@ UI 표시를 위한 패키지에 대한 자세한 설명입니다.
 
 ### <a name="packagelicenseexpression"></a>PackageLicenseExpression
 
-SPDX 라이선스 식 또는 패키지에 포함된 라이선스 파일의 경로로, 보통 UI 디스플레이와 nuget.org에 표시됩니다.
+[SPDX 라이선스 식별자](https://spdx.org/licenses/) 또는 식입니다. 예를 들어, `Apache-2.0`을 입력합니다.
 
 [SPDX 라이선스 식별자](https://spdx.org/licenses/)에서 전체 식별자 목록을 확인할 수 있습니다. 라이선스 형식 식을 사용하는 경우, NuGet.org에서는 OSI 또는 FSF 승인된 라이선스만 허용합니다.
 
@@ -236,23 +239,6 @@ license-expression =  1*1(simple-expression / compound-expression / UNLICENSED)
 
 SPDX 식별자가 할당되지 않은 라이선스나 사용자 지정 라이선스를 사용하는 경우, 패키지에 포함된 라이선스 파일의 경로입니다. (그 밖의 경우에는 `PackageLicenseExpression`이 권장됩니다.)
 
-> [!NOTE]
-> 한 번에 `PackageLicenseExpression`, `PackageLicenseFile` 및 `PackageLicenseUrl` 중 하나만 지정할 수 있습니다.
-
-### <a name="packagelicenseurl"></a>PackageLicenseUrl
-
-패키지에 적용되는 라이선스에 대한 URL입니다. (Visual Studio 15.9.4, .NET SDK 2.1.502 및 2.2.101 이후부터 사용되지 않습니다.)
-
-### <a name="packagelicenseexpression"></a>PackageLicenseExpression
-
-[SPDX 라이선스 식별자](https://spdx.org/licenses/) 또는 식입니다(예:`Apache-2.0`).
-
-`PackageLicenseUrl`을 대체하며, `PackageLicenseFile`과 함께 사용할 수 없고, Visual Studio 15.9.4, .NET SDK 2.1.502 또는 2.2.101 이상이 필요합니다.
-
-### <a name="packagelicensefile"></a>PackageLicenseFile
-
-디스크에 있는 라이선스 파일의 경로로, 프로젝트 파일에 상대적인 경로입니다(예: `LICENSE.txt`).
-
 `PackageLicenseUrl`을 대체하며, `PackageLicenseExpression`과 함께 사용할 수 없고, Visual Studio 15.9.4, .NET SDK 2.1.502 또는 2.2.101 이상이 필요합니다.
 
 라이선스 파일이 누락되지 않도록 라이선스 파일을 프로젝트에 명시적으로 추가해야 합니다. 사용 예:
@@ -264,6 +250,12 @@ SPDX 식별자가 할당되지 않은 라이선스나 사용자 지정 라이선
   <None Include="licenses\LICENSE.txt" Pack="true" PackagePath="$(PackageLicenseFile)"/>
 </ItemGroup>
 ```
+
+### <a name="packagelicenseurl"></a>PackageLicenseUrl
+
+패키지에 적용되는 라이선스에 대한 URL입니다. (Visual Studio 15.9.4, .NET SDK 2.1.502 및 2.2.101 이후부터 사용되지 않습니다.)
+
+
 ### <a name="packageiconurl"></a>PackageIconUrl
 UI 표시에서 패키지에 대한 아이콘으로 사용하는 투명한 배경의 64x64 이미지에 대한 URL입니다.
 

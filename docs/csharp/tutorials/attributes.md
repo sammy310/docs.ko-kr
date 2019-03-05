@@ -4,14 +4,14 @@ description: C#에서 특성이 작동하는 방식을 알아봅니다.
 author: mgroves
 ms.date: 03/06/2017
 ms.assetid: b152cf36-76e4-43a5-b805-1a1952e53b79
-ms.openlocfilehash: 254c408e854bdf6e923d64a4e8cca42b7a3b11cc
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.openlocfilehash: e744f3585fe7be02fb8bdd25f559a12a88b61730
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55826826"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56975604"
 ---
-# <a name="using-attributes-in-c"></a>C#에서 특성 사용 #
+# <a name="using-attributes-in-c"></a>C\#에서 특성 사용
 
 특성은 선언적으로 정보를 코드와 연결하는 방법을 제공합니다. 다양한 대상에 적용할 수 있는 재사용 가능 요소를 제공할 수도 있습니다.
 

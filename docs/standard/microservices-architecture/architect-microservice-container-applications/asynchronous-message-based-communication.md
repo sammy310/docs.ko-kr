@@ -4,12 +4,12 @@ description: 컨테이너화된 .NET 애플리케이션용 .NET 마이크로 서
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/20/2018
-ms.openlocfilehash: 5346e5f3e780961e8353c9dec0860bebd4fc6657
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 10e2a05e8fa33ecbf2aec2432c0cf51204fc35c1
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53148901"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56969364"
 ---
 # <a name="asynchronous-message-based-communication"></a>비동기 메시지 기반 통신
 
@@ -37,11 +37,11 @@ ms.locfileid: "53148901"
 
 **그림 4-18**. 비동기 메시지를 수신하는 단일 마이크로 서비스
 
-명령이 클라이언트 응용 프로그램에서 오는 경우 HTTP 동기 명령처럼 구현될 수 있는지 유의하십시오. 보다 큰 확장성이 필요하거나 메시지 기반 비즈니스 프로세스가 이미 실행 중인 경우 메시지 기반 명령을 사용해야 합니다.
+명령이 클라이언트 애플리케이션에서 오는 경우 HTTP 동기 명령처럼 구현될 수 있는지 유의하십시오. 보다 큰 확장성이 필요하거나 메시지 기반 비즈니스 프로세스가 이미 실행 중인 경우 메시지 기반 명령을 사용해야 합니다.
 
 ## <a name="multiple-receivers-message-based-communication"></a>다중 수신자 메시지 기반 통신
 
-게시/구독 메커니즘을 보다 유연하게 사용할 수 있게 돼 발신자의 통신이 추가 구독자 마이크로 서비스나 외부 응용 프로그램에 사용될 수 있습니다. 따라서 발송 서비스에서 [개방/폐쇄 원칙](https://en.wikipedia.org/wiki/Open/closed_principle)을 준수하도록 도와줍니다. 이렇게 추가 구독자는 발송자 서비스를 수정할 필요 없이 나중에 추가될 수 있습니다.
+게시/구독 메커니즘을 보다 유연하게 사용할 수 있게 돼 발신자의 통신이 추가 구독자 마이크로 서비스나 외부 애플리케이션에 사용될 수 있습니다. 따라서 발송 서비스에서 [개방/폐쇄 원칙](https://en.wikipedia.org/wiki/Open/closed_principle)을 준수하도록 도와줍니다. 이렇게 추가 구독자는 발송자 서비스를 수정할 필요 없이 나중에 추가될 수 있습니다.
 
 게시/구독 통신을 사용하는 경우 이벤트 버스 인터페이스를 사용하여 모든 구독자에게 이벤트를 게시할 수 있습니다.
 
@@ -65,9 +65,9 @@ ms.locfileid: "53148901"
 
 ## <a name="a-note-about-messaging-technologies-for-production-systems"></a>생산 시스템용 메시징 기술에 대한 유의사항
 
-추상적 이벤트 버스 구현을 위해 사용할 수 있는 메시징 기술은 다양한 수준입니다. 예를 들어, RabbitMQ(메시징 브로커 전송)과 Azure Service Bus 같은 제품은 RabbitMQ와 Azure Service Bus 위에서 작동할 수 있는 NServiceBus, MassTransit, Brighter 같은 제품보다 낮은 수준에 있습니다. 선택 기준은 응용 프로그램에 얼마나 많은 기본 확장성과 얼마나 많은 기능이 필요한지에 달려 있습니다. 개발 환경을 위한 이벤트 버스 개념 증명을 구현하기 위해서는 eShopOnContainers 샘플에서와 같이 Docker 컨테이너에서 실행되는 RabbitMQ에서의 간단한 구현만으로 충분할 수 있습니다.
+추상적 이벤트 버스 구현을 위해 사용할 수 있는 메시징 기술은 다양한 수준입니다. 예를 들어, RabbitMQ(메시징 브로커 전송)과 Azure Service Bus 같은 제품은 RabbitMQ와 Azure Service Bus 위에서 작동할 수 있는 NServiceBus, MassTransit, Brighter 같은 제품보다 낮은 수준에 있습니다. 선택 기준은 애플리케이션에 얼마나 많은 기본 확장성과 얼마나 많은 기능이 필요한지에 달려 있습니다. 개발 환경을 위한 이벤트 버스 개념 증명을 구현하기 위해서는 eShopOnContainers 샘플에서와 같이 Docker 컨테이너에서 실행되는 RabbitMQ에서의 간단한 구현만으로 충분할 수 있습니다.
 
-높은 확장성이 필요한 중요 업무용 생산 시스템을 위해 Azure Service Bus를 평가할 수 있습니다. 분산 응용 프로그램 개발을 더 쉽게 해주는 상위 수준의 추상적 개념 및 기능을 위해서는 NServiceBus, MassTransit, Brighter 같은 다른 상용 및 오픈 소스 서비스 버스를 평가 하는 것이 좋습니다. 물론, RabbitMQ 및 Docker 같은 하위 수준의 기술을 기반으로 서비스 버스 기능을 직접 빌드할 수 있습니다. 그러나 배관 작업은 사용자 지정 엔터프라이즈 응용 프로그램의 경우 너무 많은 비용이 들어갑니다.
+높은 확장성이 필요한 중요 업무용 생산 시스템을 위해 Azure Service Bus를 평가할 수 있습니다. 분산 애플리케이션 개발을 더 쉽게 해주는 상위 수준의 추상적 개념 및 기능을 위해서는 NServiceBus, MassTransit, Brighter 같은 다른 상용 및 오픈 소스 서비스 버스를 평가 하는 것이 좋습니다. 물론, RabbitMQ 및 Docker 같은 하위 수준의 기술을 기반으로 서비스 버스 기능을 직접 빌드할 수 있습니다. 그러나 배관 작업은 사용자 지정 엔터프라이즈 애플리케이션의 경우 너무 많은 비용이 들어갑니다.
 
 ## <a name="resiliently-publishing-to-the-event-bus"></a>이벤트 버스에 탄력적으로 게시
 
@@ -77,7 +77,7 @@ ms.locfileid: "53148901"
 
 - [트랜잭션 로그 마이닝](https://www.scoop.it/t/sql-server-transaction-log-mining)을 사용합니다.
 
-- 전체 [이벤트 소싱](https://msdn.microsoft.com/library/dn589792.aspx) 패턴을 사용합니다.
+- 전체 [이벤트 소싱](https://docs.microsoft.com/azure/architecture/patterns/event-sourcing) 패턴을 사용합니다.
 
 - [보낼 메일함 패턴](http://gistlabs.com/2014/05/the-outbox/) 사용: 이벤트를 만들고 게시하는 이벤트 생성자 구성 요소의 기본이 되는 메시지 큐로서의 트랜잭션 데이터베이스 테이블입니다.
 

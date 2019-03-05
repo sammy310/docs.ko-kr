@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: eaa720d8-8999-4eb7-8df5-3c19ca61cad0
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1a1cf3ea782752f750f3545a28699a8bc325e4a5
-ms.sourcegitcommit: c6f69b0cf149f6b54483a6d5c2ece222913f43ce
+ms.openlocfilehash: 9227d10e2c12f88d33b283d1f1328d628b64afa0
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2019
-ms.locfileid: "55903892"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56975734"
 ---
 # <a name="introduction-to-plinq"></a>PLINQ 소개
 ## <a name="what-is-a-parallel-query"></a>병렬 쿼리는 무엇입니까?  
@@ -33,7 +33,7 @@ ms.locfileid: "55903892"
 ## <a name="the-parallelenumerable-class"></a>ParallelEnumerable 클래스  
  <xref:System.Linq.ParallelEnumerable?displayProperty=nameWithType> 클래스는 거의 모든 PLINQ 기능을 노출합니다.  해당 항목 및 나머지 <xref:System.Linq?displayProperty=nameWithType> 네임스페이스 형식은 System.Core.dll 어셈블리에 컴파일됩니다. Visual Studio에서 기본 C# 및 Visual Basic 프로젝트는 모두 어셈블리를 참조하고 네임스페이스를 가져옵니다.  
   
- <xref:System.Linq.ParallelEnumerable>은 각각을 병렬 처리하려고 하지 않지만 LINQ to Objects가 지원하는 모든 표준 쿼리 연산자의 구현을 포함합니다. [!INCLUDE[vbteclinq](../../../includes/vbteclinq-md.md)]와 익숙하지 않은 경우 [LINQ 소개](https://msdn.microsoft.com/library/24dddf19-12a0-4707-a4bc-eba4fa7f219e)를 참조하세요.  
+ <xref:System.Linq.ParallelEnumerable>은 각각을 병렬 처리하려고 하지 않지만 LINQ to Objects가 지원하는 모든 표준 쿼리 연산자의 구현을 포함합니다. [!INCLUDE[vbteclinq](../../../includes/vbteclinq-md.md)]에 익숙하지 않은 경우 [LINQ 소개(C#)](../../csharp/programming-guide/concepts/linq/introduction-to-linq.md) 및 [LINQ 소개(Visual Basic)](../../visual-basic/programming-guide/concepts/linq/introduction-to-linq.md)를 참조하세요.  
   
  표준 쿼리 연산자뿐만 아니라 <xref:System.Linq.ParallelEnumerable> 클래스에는 병렬 실행과 관련된 동작을 사용하도록 설정하는 메서드 집합이 포함되어 있습니다. 이러한 PLINQ 전용 메서드는 다음 표에 나열되어 있습니다.  
   

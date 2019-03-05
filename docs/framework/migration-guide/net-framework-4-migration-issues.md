@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: df478548-8c05-4de2-8ba7-adcdbe1c2a60
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 35cac6c93594847f5118849a14c4c5f991601367
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.openlocfilehash: d861aa59b31871d20d21d88d9587239f76ae386d
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56221318"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57203641"
 ---
 # <a name="net-framework-4-migration-issues"></a>.NET Framework 4 마이그레이션 문제
 

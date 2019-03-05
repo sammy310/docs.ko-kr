@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4f0b77d0-4844-464f-af73-6e06bedeafc6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b25f3dbe655dd60c9284ae5ef5591e95fc1b84e5
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 2d8957a5376e17ff69bf9e811125af5a4af1e3b6
+ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48842829"
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56836554"
 ---
 # <a name="language-independence-and-language-independent-components"></a>언어 독립성 및 언어 독립적 구성 요소
 .NET Framework는 언어에 국한되지 않습니다. 즉, 개발자로서 .NET Framework를 대상으로 하는 많은 언어 중 하나로 개발할 수 있습니다(예: C#, C++/CLI, Eiffel, F#, IronPython, IronRuby, PowerBuilder, Visual Basic, Visual COBOL 및 Windows PowerShell). 원래 작성된 언어를 모르거나 원래의 언어 규칙을 따르지 않고도 .NET Framework를 위해 개발된 클래스 라이브러리의 형식과 멤버에 액세스할 수 있습니다. 사용자가 구성 요소 개발자일 경우 언어와 상관없이 모든 .NET Framework 응용 프로그램에서 구성 요소를 액세스할 수 있습니다.  
@@ -28,9 +28,10 @@ ms.locfileid: "48842829"
 > [!NOTE]
 >  이 문서의 첫 부분에서는 언어 독립 구성 요소를 만드는 방법에 대해 설명합니다. 즉, 이러한 구성 요소는 어떠한 언어로 작성된 앱에서도 사용할 수 있습니다. 여러 언어로 작성된 소스 코드에서 구성 요소나 앱을 하나 만들 수도 있습니다. 이 문서의 두 번째 부분에서 [언어 간 상호 운용성](#CrossLang)을 참조하세요.  
   
- 어떠한 언어로 작성된 다른 개체와도 완전하게 상호 작용하려면 개체는 모든 언어에 공통적인 기능만 호출자에게 노출해야 합니다. 기능의 공통 집합은 생성된 어셈블리에 적용되는 규칙 집합인 CLS(공용 언어 사양)에서 정의됩니다. 공용 언어 사양은 [ECMA-335 Standard: Common Language Infrastructure](https://www.ecma-international.org/publications/standards/Ecma-335.htm)에서 Partition I, Clauses 7~11에 정의되어 있습니다.  
+ 어떠한 언어로 작성된 다른 개체와도 완전하게 상호 작용하려면 개체는 모든 언어에 공통적인 기능만 호출자에게 노출해야 합니다. 기능의 공통 집합은 생성된 어셈블리에 적용되는 규칙 집합인 CLS(공용 언어 사양)에서 정의됩니다. 공용 언어 사양은 [ECMA-335 Standard: Common Language Infrastructure](https://www.ecma-international.org/publications/standards/Ecma-335.htm)의 Partition I, Clauses 7~11에 정의되어 있습니다.  
   
- 구성 요소가 공용 언어 사양을 따르는 경우, 이 구성 요소는 CLS 규격임이 보장되고 CLS를 지원하는 모든 프로그래밍 언어로 작성된 어셈블리 코드에서 액세스할 수 있습니다. <xref:System.CLSCompliantAttribute> 특성을 소스 코드에 적용하여 구성 요소가 컴파일 타임에 공용 언어 사양을 준수하는지 여부를 결정할 수 있습니다. 자세한 내용은 [CLSCompliantAttribute 특성](#CLSAttribute)을 참조하세요.  
+ 구성 요소가 공용 언어 사양을 따르는 경우, 이 구성 요소는 CLS 규격임이 보장되고 CLS를 지원하는 모든 프로그래밍 언어로 작성된 어셈블리 코드에서 액세스할 수 있습니다. 
+  <xref:System.CLSCompliantAttribute> 특성을 소스 코드에 적용하여 구성 요소가 컴파일 타임에 공용 언어 사양을 준수하는지 여부를 결정할 수 있습니다. 자세한 내용은 [CLSCompliantAttribute 특성](#CLSAttribute)을 참조하세요.  
   
  이 문서의 내용  
   
@@ -72,7 +73,7 @@ ms.locfileid: "48842829"
   
 <a name="Rules"></a>   
 ## <a name="cls-compliance-rules"></a>CLS 규격 규칙  
- 이 섹션에서는 CLS 규격 구성 요소를 만드는 규칙을 설명합니다. 규칙의 전체 목록은 [ECMA-335 Standard: Common Language Infrastructure](https://www.ecma-international.org/publications/standards/Ecma-335.htm)에서 Partition I, Clause 11을 참조하세요.  
+ 이 섹션에서는 CLS 규격 구성 요소를 만드는 규칙을 설명합니다. 규칙의 전체 목록은 [ECMA-335 Standard: Common Language Infrastructure](https://www.ecma-international.org/publications/standards/Ecma-335.htm)의 Partition I, Clauses 11에 정의되어 있습니다.  
   
 > [!NOTE]
 >  공용 언어 사양에서는 소비자(CLS 규격인 구성 요소를 프로그래밍 방식으로 액세스하는 개발자), 프레임워크(언어 컴파일러를 사용하여 CLS 규격 라이브러리를 만드는 개발자) 및 extender(CLS 규격 구성 요소를 생성하는 언어 컴파일러 또는 코드 파서 등의 도구를 만드는 개발자)에게 적용되는 CLS 규격에 대한 각 규칙을 설명합니다. 이 문서에서는 프레임워크에 적용되는 규칙에 초점을 맞춥니다. 그러나 extender에 적용되는 규칙 중 일부를 Reflection.Emit을 사용하여 만든 어셈블리에도 적용할 수 있습니다.  
@@ -87,7 +88,8 @@ ms.locfileid: "48842829"
  [!code-csharp[Conceptual.CLSCompliant#1](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.clscompliant/cs/public1.cs#1)]
  [!code-vb[Conceptual.CLSCompliant#1](../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.clscompliant/vb/public1.vb#1)]  
   
- `Person` 속성의 형식을 `Age`에서 CLS 규격 16비트 부호 있는 정수인 <xref:System.UInt16>으로 변경하여 <xref:System.Int16> 클래스를 CLS 규격으로 만들 수 있습니다. private `personAge` 필드의 형식을 변경할 필요가 없습니다.  
+ 
+  `Person` 속성의 형식을 `Age`에서 CLS 규격 16비트 부호 있는 정수인 <xref:System.UInt16>으로 변경하여 <xref:System.Int16> 클래스를 CLS 규격으로 만들 수 있습니다. private `personAge` 필드의 형식을 변경할 필요가 없습니다.  
   
  [!code-csharp[Conceptual.CLSCompliant#2](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.clscompliant/cs/public2.cs#2)]
  [!code-vb[Conceptual.CLSCompliant#2](../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.clscompliant/vb/public2.vb#2)]  
@@ -100,9 +102,9 @@ ms.locfileid: "48842829"
   
 -   공용 클래스의 공용 메서드에 대한 매개 변수 및 반환 형식, 파생 클래스에서 액세스할 수 있는 메서드에 대한 매개 변수 및 반환 형식  
   
- CLS 규격의 규칙은 다음 표에 나와 있습니다. 규칙 텍스트는 [ECMA-335 Standard: Common Language Infrastructure](https://www.ecma-international.org/publications/standards/Ecma-335.htm)에서 그대로 가져온 것으로, Copyright 2012 by Ecma International입니다. 이러한 규칙에 대한 보다 자세한 내용은 다음 섹션에서 찾을 수 있습니다.  
+ CLS 규격의 규칙은 다음 표에 나와 있습니다. 규칙의 텍스트는 [ECMA-335 Standard: Common Language Infrastructure](https://www.ecma-international.org/publications/standards/Ecma-335.htm)(Copyright 2012 by Ecma International)에서 가져온 약어입니다. 이러한 규칙에 대한 보다 자세한 내용은 다음 섹션에서 찾을 수 있습니다.  
   
-|범주|보기|규칙|규칙 번호|  
+|범주|참조|규칙|규칙 번호|  
 |--------------|---------|----------|-----------------|  
 |액세스 가능성|[멤버 접근성](#MemberAccess)|`family-or-assembly` 액세스 가능성을 갖는 다른 어셈블리에서 상속된 메서드를 재정의하는 경우를 제외하고는, 상속된 메서드를 재정의할 때 액세스 가능성이 변경되어서는 안 됩니다. 이 경우, 재정의는 `family` 액세스 가능성을 가져야 합니다.|10|  
 |액세스 가능성|[멤버 접근성](#MemberAccess)|형식과 멤버의 표시 유형 및 접근성은 해당 멤버가 표시되고 액세스 가능한 경우 모든 멤버의 시그니처에 있는 해당 형식이 표시되고 액세스 가능해야 합니다. 예를 들어 어셈블리 외부에 표시되는 공용 메서드는 어셈블리 내부에서만 표시되는 형식의 인수를 가질 수 없습니다. 해당 멤버가 표시되고 액세스 가능한 경우 모든 멤버의 시그니처에 사용된 인스턴스화된 제네릭 형식을 구성하는 형식의 표시 유형과 액세스 가능성은 표시되고 액세스 가능해야 합니다. 예를 들어 어셈블리 외부에 표시되는 멤버의 시그니처에 있는 인스턴스화된 제네릭 형식은 어셈블리 내부에서만 표시되는 형식의 제네릭 인수를 가질 수 없습니다.|12|  
@@ -113,12 +115,13 @@ ms.locfileid: "48842829"
 |생성자|[생성자](#ctors)|개체 생성자는 상속된 인스턴스 데이터에 액세스하기 전에 기본 클래스의 일부 인스턴스 생성자를 호출해야 합니다. (생성자가 필요하지 않은 값 형식에는 적용되지 않습니다.)|21|  
 |생성자|[생성자](#ctors)|개체 생성자는 개체 만들기 작업의 일부로 호출되는 것을 제외하고 호출되어서는 안 되며 개체는 두 번 초기화해서는 안 됩니다.|22|  
 |열거형|[열거형](#enums)|열거형의 기본 형식은 기본 제공 CLS 정수 형식이고, 필드의 이름은 "value__"이며, 해당 필드는 `RTSpecialName`으로 표시되어야 합니다.|7|  
-|열거형|[열거형](#enums)|<xref:System.FlagsAttribute?displayProperty=nameWithType>(Partition IV 라이브러리 참조) 사용자 지정 특성의 존재 여부에 따라 표시되는 다음 두 가지 구분되는 열거형이 있습니다. 하나는 명명된 정수 값을 나타내며, 다른 하나는 명명되지 않은 값을 생성하도록 결합될 수 있는 명명된 비트 플래그를 나타냅니다. `enum`의 값은 지정된 값으로 제한되지 않습니다.|8|  
-|열거형|[열거형](#enums)|열거형의 리터럴 정적 필드는 그 자체가 열거형 형식을 갖습니다.|10|  
+|열거형|[열거형](#enums)|
+  <xref:System.FlagsAttribute?displayProperty=nameWithType>(Partition IV 라이브러리 참조) 사용자 지정 특성의 존재 여부에 따라 표시되는 다음 두 가지 구분되는 열거형이 있습니다. 하나는 명명된 정수 값을 나타내며, 다른 하나는 명명되지 않은 값을 생성하도록 결합될 수 있는 명명된 비트 플래그를 나타냅니다. `enum`의 값은 지정된 값으로 제한되지 않습니다.|8|  
+|열거형|[열거형](#enums)|열거형의 리터럴 정적 필드는 그 자체가 열거형 형식을 갖습니다.|9|  
 |이벤트|[이벤트](#events)|이벤트를 구현하는 메서드는 메타데이터에서 `SpecialName`으로 표시됩니다.|29|  
 |이벤트|[이벤트](#events)|이벤트와 접근자의 액세스 가능성이 동일해야 합니다.|30|  
 |이벤트|[이벤트](#events)|이벤트에 대한 `add` 및 `remove` 메서드는 모두 있거나 모두 없어야 합니다.|31|  
-|이벤트|[이벤트](#events)|이벤트에 대한 `add` 및 `remove` 메서드는 이벤트 유형 정의 형식을 갖는 하나의 매개 변수를 각각 사용해야 하며, 해당 형식은 <xref:System.Delegate?displayProperty=nameWithType>에서 파생된 것이어야 합니다.|32|  
+|이벤트|[이벤트](#events)|이벤트에 대한 `add` 및 `remove` 메서드는 이벤트 형식 정의 형식을 갖는 하나의 매개 변수를 각각 사용해야 하며, 해당 형식은 <xref:System.Delegate?displayProperty=nameWithType>에서 파생된 것이어야 합니다.|32|  
 |이벤트|[이벤트](#events)|이벤트는 특정 이름 지정 패턴을 따라야 합니다. CLS 규칙 29에서 참조되는 `SpecialName` 특성은 적절한 이름 비교에서 무시되고 식별자 규칙을 따릅니다.|33|  
 |예외|[예외](#exceptions)|throw되는 개체는 <xref:System.Exception?displayProperty=nameWithType> 형식 또는 이 형식에서 상속되는 형식이어야 합니다. 그렇더라도 다른 형식의 예외 전파를 차단하는 데 CLS 규격 메서드는 필요하지 않습니다.|40|  
 |일반|[CLS 규격: 규칙](#Rules)|CLS 규칙은 정의 어셈블리 외부에서 액세스하거나 볼 수 있는 형식의 해당 부분에만 적용됩니다.|1|  
@@ -154,7 +157,8 @@ ms.locfileid: "48842829"
   
 <a name="Types"></a>   
 ### <a name="types-and-type-member-signatures"></a>형식 및 형식 멤버 시그니처  
- <xref:System.Object?displayProperty=nameWithType> 형식은 CLS 규격이고 .NET Framework 형식 시스템의 모든 개체 형식의 기본 형식입니다. .NET Framework의 상속은 암시적(예: <xref:System.String> 클래스는 <xref:System.Object> 클래스에서 암시적으로 상속됨)이거나 명시적(예: <xref:System.Globalization.CultureNotFoundException> 클래스는 <xref:System.ArgumentException> 클래스에서 명시적으로 상속되고, 이 클래스는 다시 <xref:System.SystemException> 클래스에서 명시적으로 상속되며, 이 클래스는 다시 <xref:System.Exception> 클래스에서 명시적으로 상속됨)입니다. 파생된 형식은 CLS 규격이어야 하며, 그 기본 형식도 CLS 규격이어야 합니다.  
+ 
+  <xref:System.Object?displayProperty=nameWithType> 형식은 CLS 규격이고 .NET Framework 형식 시스템의 모든 개체 형식의 기본 형식입니다. .NET Framework의 상속은 암시적(예: <xref:System.String> 클래스는 <xref:System.Object> 클래스에서 암시적으로 상속됨)이거나 명시적(예: <xref:System.Globalization.CultureNotFoundException> 클래스는 <xref:System.ArgumentException> 클래스에서 명시적으로 상속되고, 이 클래스는 다시 <xref:System.SystemException> 클래스에서 명시적으로 상속되며, 이 클래스는 다시 <xref:System.Exception> 클래스에서 명시적으로 상속됨)입니다. 파생된 형식은 CLS 규격이어야 하며, 그 기본 형식도 CLS 규격이어야 합니다.  
   
  다음 예제에서는 기본 형식이 CLS 규격이 아닌 파생 형식을 보여 줍니다. 부호 없는 32비트 정수를 카운터로 사용하는 기본 `Counter` 클래스를 정의합니다. 이 클래스는 부호 없는 정수를 래핑하여 카운터 기능을 제공하므로 CLS 비규격으로 표시됩니다. 따라서 파생된 클래스인 `NonZeroCounter`도 CLS 규격이 아닙니다.  
   
@@ -204,7 +208,8 @@ ms.locfileid: "48842829"
   
  형식이 CLS 규격이 아닌 경우 <xref:System.CLSCompliantAttribute>의 `isCompliant` 값으로 `false` 특성을 해당 형식에 적용해야 합니다. 자세한 내용은 [CLSCompliantAttribute 특성](#CLSAttribute) 섹션을 참조하세요.  
   
- 다음 예제에서는 메서드 시그니처와 제네릭 형식 인스턴스화의 CLS 규격 문제를 보여 줍니다. `InvoiceItem` 클래스를 <xref:System.UInt32> 형식의 속성, `Nullable(Of UInt32)` 형식의 속성, <xref:System.UInt32> 및 `Nullable(Of UInt32)` 형식의 매개 변수를 가진 생성자로 정의합니다. 이 예제를 컴파일하려고 할 때 4개의 컴파일러 경고가 표시됩니다.  
+ 다음 예제에서는 메서드 시그니처와 제네릭 형식 인스턴스화의 CLS 규격 문제를 보여 줍니다. 
+  `InvoiceItem` 클래스를 <xref:System.UInt32> 형식의 속성, `Nullable(Of UInt32)` 형식의 속성, <xref:System.UInt32> 및 `Nullable(Of UInt32)` 형식의 매개 변수를 가진 생성자로 정의합니다. 이 예제를 컴파일하려고 할 때 4개의 컴파일러 경고가 표시됩니다.  
   
  [!code-csharp[Conceptual.CLSCompliant#3](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.clscompliant/cs/type1.cs#3)]
  [!code-vb[Conceptual.CLSCompliant#3](../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.clscompliant/vb/type1.vb#3)]  
@@ -275,7 +280,8 @@ ms.locfileid: "48842829"
 ### <a name="arrays"></a>배열  
  CLS 규격 배열은 다음 규칙을 따릅니다.  
   
--   배열의 모든 크기는 하한이 0이어야 합니다. 다음 예제에서는 하한이 1인 CLS 비규격 배열을 만듭니다. <xref:System.CLSCompliantAttribute> 특성이 있음에도 불구하고 `Numbers.GetTenPrimes` 메서드에서 반환된 배열이 CLS 규격이 아님을 컴파일러에서 감지하지 못합니다.  
+-   배열의 모든 크기는 하한이 0이어야 합니다. 다음 예제에서는 하한이 1인 CLS 비규격 배열을 만듭니다. 
+  <xref:System.CLSCompliantAttribute> 특성이 있음에도 불구하고 `Numbers.GetTenPrimes` 메서드에서 반환된 배열이 CLS 규격이 아님을 컴파일러에서 감지하지 못합니다.  
   
      [!code-csharp[Conceptual.CLSCompliant#8](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.clscompliant/cs/array1.cs#8)]
      [!code-vb[Conceptual.CLSCompliant#8](../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.clscompliant/vb/array1.vb#8)]  
@@ -305,7 +311,7 @@ ms.locfileid: "48842829"
   
      이 규칙 때문에 CLS 규격이 아닌 멤버를 구현하는 데에는 CLS 규격 형식이 필요하지 않습니다. CLS 규격 프레임워크에서 CLS 비규격 인터페이스를 구현하는 클래스를 노출하는 경우, 모든 CLS 비규격 멤버의 구체적 구현도 제공해야 합니다.  
   
- CLS 규격 언어 컴파일러를 사용하면 클래스는 다중 인터페이스에서 동일한 이름과 시그니처를 가진 멤버를 개별적으로 구현할 수 있습니다.  C# 및 Visual Basic 모두에서 [명시적 인터페이스 구현](~/docs/csharp/programming-guide/interfaces/explicit-interface-implementation.md)을 지원하여 동일한 이름의 메서드를 다르게 구현할 수 있습니다. Visual Basic에서는 `Implements` 키워드도 지원하므로 특정 멤버가 구현하는 인터페이스와 멤버를 명시적으로 지정할 수 있습니다. 다음 예제에서는 `Temperature` 및 `ICelsius` 인터페이스를 명시적 인터페이스 구현으로 구현하는 `IFahrenheit` 클래스를 정의하여 이 시나리오를 보여 줍니다.  
+ CLS 규격 언어 컴파일러를 사용하면 클래스는 다중 인터페이스에서 동일한 이름과 시그니처를 가진 멤버를 개별적으로 구현할 수 있습니다.  C# 및 Visual Basic 모두에서 [명시적 인터페이스 구현](../csharp/programming-guide/interfaces/explicit-interface-implementation.md)을 지원하여 동일한 이름의 메서드를 다르게 구현할 수 있습니다. Visual Basic에서는 `Implements` 키워드도 지원하므로 특정 멤버가 구현하는 인터페이스와 멤버를 명시적으로 지정할 수 있습니다. 다음 예제에서는 `Temperature` 및 `ICelsius` 인터페이스를 명시적 인터페이스 구현으로 구현하는 `IFahrenheit` 클래스를 정의하여 이 시나리오를 보여 줍니다.  
   
  [!code-csharp[Conceptual.CLSCompliant#24](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.clscompliant/cs/eii1.cs#24)]
  [!code-vb[Conceptual.CLSCompliant#24](../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.clscompliant/vb/eii1.vb#24)]  
@@ -329,7 +335,7 @@ ms.locfileid: "48842829"
   
     -   결합하여 명명되지 않은 값을 생성할 수 있는 비트 플래그 집합을 나타내는 열거형. 이러한 유형의 열거형은 <xref:System.FlagsAttribute?displayProperty=nameWithType> 사용자 지정 특성이 있는 것으로 표시됩니다.  
   
-     자세한 내용은 <xref:System.Enum> 구조체에 대한 설명서를 참조하세요.  
+     자세한 내용은 <xref:System.Enum> 구조체에 대한 설명서를 참조하십시오.  
   
 -   열거형의 값은 지정된 값의 범위로 제한되지 않습니다. 즉, 열거형의 값 범위는 기본 값의 범위입니다. <xref:System.Enum.IsDefined%2A?displayProperty=nameWithType> 메서드를 사용하여 지정된 값이 열거형 멤버인지 여부를 확인할 수 있습니다.  
   
@@ -357,7 +363,8 @@ ms.locfileid: "48842829"
 ### <a name="generic-types-and-members"></a>제네릭 형식 및 멤버  
  중첩 형식에는 적어도 바깥쪽 형식과 같은 수의 제네릭 매개 변수가 항상 있어야 합니다. 이러한 값은 바깥쪽 형식의 제네릭 매개 변수와 위치가 같습니다. 제네릭 형식은 새 제네릭 매개 변수를 포함할 수도 있습니다.  
   
- 포함 형식의 제네릭 형식 매개 변수와 중첩 형식 사이의 관계는 개별 언어의 구문에 의해 숨겨질 수 있습니다. 다음 예제에서 제네릭 형식 `Outer<T>`에는 두 개의 중첩된 클래스인 `Inner1A` 및 `Inner1B<U>`가 포함됩니다. `ToString`에서 각 클래스를 상속하는 <xref:System.Object.ToString%2A?displayProperty=nameWithType> 메서드에 대한 호출은 포함하는 해당 클래스의 형식 매개 변수가 각 중첩 클래스에 포함되는 것을 보여 줍니다.  
+ 포함 형식의 제네릭 형식 매개 변수와 중첩 형식 사이의 관계는 개별 언어의 구문에 의해 숨겨질 수 있습니다. 다음 예제에서 제네릭 형식 `Outer<T>`에는 두 개의 중첩된 클래스인 `Inner1A` 및 `Inner1B<U>`가 포함됩니다. 
+  `ToString`에서 각 클래스를 상속하는 <xref:System.Object.ToString%2A?displayProperty=nameWithType> 메서드에 대한 호출은 포함하는 해당 클래스의 형식 매개 변수가 각 중첩 클래스에 포함되는 것을 보여 줍니다.  
   
  [!code-csharp[Conceptual.CLSCompliant#29](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.clscompliant/cs/nestedgenerics2.cs#29)]
  [!code-vb[Conceptual.CLSCompliant#29](../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.clscompliant/vb/nestedgenerics2.vb#29)]  
@@ -494,7 +501,9 @@ ms.locfileid: "48842829"
   
 <a name="CLSAttribute"></a>   
 ## <a name="the-clscompliantattribute-attribute"></a>CLSCompliantAttribute 특성  
- <xref:System.CLSCompliantAttribute> 특성은 프로그램 요소가 공용 언어 사양을 준수하는지 여부를 나타내는 데 사용됩니다. <xref:System.CLSCompliantAttribute.%23ctor%28System.Boolean%29?displayProperty=nameWithType> 생성자에는 프로그램 요소가 CLS 규격인지 여부를 나타내는 단일 필수 매개 변수 `isCompliant`가 포함되어 있습니다.  
+ 
+  <xref:System.CLSCompliantAttribute> 특성은 프로그램 요소가 공용 언어 사양을 준수하는지 여부를 나타내는 데 사용됩니다. 
+  <xref:System.CLSCompliantAttribute.%23ctor%28System.Boolean%29?displayProperty=nameWithType> 생성자에는 프로그램 요소가 CLS 규격인지 여부를 나타내는 단일 필수 매개 변수 `isCompliant`가 포함되어 있습니다.  
   
  컴파일 타임에 컴파일러는 CLS 규격으로 우선 간주되었던 비규격 요소를 검색하고 경고를 발생시킵니다. 컴파일러는 비규격으로 명시적 선언된 형식 또는 멤버에 대해서는 경고를 발생시키지 않습니다.  
   
@@ -507,7 +516,8 @@ ms.locfileid: "48842829"
 > [!WARNING]
 >  경우에 따라 언어 컴파일러는 <xref:System.CLSCompliantAttribute> 특성 사용 여부에 관계없이 CLS 규격 규칙을 적용합니다. 예를 들어, 인터페이스에서 정적 멤버를 정의하면 CLS 규칙에 위반됩니다. 이와 관련하여 인터페이스의 `static`(C#) 또는 `Shared`(Visual Basic) 멤버를 정의하는 경우, C# 및 Visual Basic 컴파일러 모두에서 오류 메시지가 표시되고 앱이 컴파일되지 않습니다.  
   
- <xref:System.CLSCompliantAttribute> 특성은 <xref:System.AttributeUsageAttribute>의 값을 갖는 <xref:System.AttributeTargets.All?displayProperty=nameWithType> 특성으로 표시됩니다. 이 값을 사용하면 <xref:System.CLSCompliantAttribute> 특성을 어셈블리, 모듈, 형식(클래스, 구조체, 열거형, 인터페이스 및 대리자), 형식 멤버(생성자, 메서드, 속성, 필드 및 이벤트), 매개 변수, 제네릭 매개 변수 및 반환 값 등 어떤 프로그램 요소에도 적용할 수 있습니다. 그러나 실제로는 어셈블리, 형식 및 형식 멤버에만 이 특성을 적용해야 합니다. 그러지 않으면 컴파일러는 특성을 무시하고 라이브러리의 공용 인터페이스에서 비규격 매개 변수, 제네릭 매개 변수 또는 반환 값이 발생할 때마다 컴파일러 경고를 계속해서 생성합니다.  
+ 
+  <xref:System.CLSCompliantAttribute> 특성은 <xref:System.AttributeUsageAttribute>의 값을 갖는 <xref:System.AttributeTargets.All?displayProperty=nameWithType> 특성으로 표시됩니다. 이 값을 사용하면 <xref:System.CLSCompliantAttribute> 특성을 어셈블리, 모듈, 형식(클래스, 구조체, 열거형, 인터페이스 및 대리자), 형식 멤버(생성자, 메서드, 속성, 필드 및 이벤트), 매개 변수, 제네릭 매개 변수 및 반환 값 등 어떤 프로그램 요소에도 적용할 수 있습니다. 그러나 실제로는 어셈블리, 형식 및 형식 멤버에만 이 특성을 적용해야 합니다. 그러지 않으면 컴파일러는 특성을 무시하고 라이브러리의 공용 인터페이스에서 비규격 매개 변수, 제네릭 매개 변수 또는 반환 값이 발생할 때마다 컴파일러 경고를 계속해서 생성합니다.  
   
  <xref:System.CLSCompliantAttribute> 특성의 값은 포함된 프로그램 요소에 의해 상속됩니다. 예를 들어, 어셈블리가 CLS 규격으로 표시되어 있으면 해당 형식도 CLS 규격입니다. 또한 형식이 CLS 규격으로 표시되어 있으면 해당 중첩 형식 및 멤버도 CLS 규격입니다.  
   
@@ -548,23 +558,23 @@ ms.locfileid: "48842829"
   
  두 클래스를 단일 어셈블리로 패키징하려면 모듈로 컴파일해야 합니다. Visual Basic 소스 코드 파일을 모듈로 컴파일하려면 다음 명령을 사용합니다.  
   
-```  
+```console  
 vbc /t:module StringUtil.vb   
 ```  
   
- Visual Basic 컴파일러의 명령줄 구문에 대한 자세한 내용은 [명령줄에서 빌드](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md)를 참조하세요.  
+ Visual Basic 컴파일러의 명령줄 구문에 대한 자세한 내용은 [명령줄에서 빌드](../visual-basic/reference/command-line-compiler/building-from-the-command-line.md)를 참조하세요.  
   
  C# 소스 코드 파일을 모듈로 컴파일하려면 다음 명령을 사용합니다.  
   
-```  
+```console  
 csc /t:module NumberUtil.cs  
 ```  
   
- C# 컴파일러의 명령줄 구문에 대한 자세한 내용은 [csc.exe를 사용한 명령줄 빌드](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)를 참조하세요.  
+ C# 컴파일러의 명령줄 구문에 대한 자세한 내용은 [csc.exe를 사용한 명령줄 빌드](../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)를 참조하세요.  
   
- 그런 다음 [링크 도구(Link.exe)](https://msdn.microsoft.com/library/c1d51b8a-bd23-416d-81e4-900e02b2c129)를 사용하여 두 모듈을 하나의 어셈블리로 컴파일합니다.  
+ 그런 다음, [링커 옵션](/cpp/build/reference/linker-options)을 사용하여 두 모듈을 하나의 어셈블리로 컴파일합니다.  
   
-```  
+```console  
 link numberutil.netmodule stringutil.netmodule /out:UtilityLib.dll /dll   
 ```  
   
@@ -575,13 +585,13 @@ link numberutil.netmodule stringutil.netmodule /out:UtilityLib.dll /dll
   
  Visual Basic 코드를 컴파일하려면 다음 명령을 사용합니다.  
   
-```  
+```console  
 vbc example.vb /r:UtilityLib.dll  
 ```  
   
  C#으로 컴파일하려면 **vbc**에서 **csc**로 컴파일러의 이름을 변경하고 .vb에서 .cs로 파일 확장명을 변경합니다.  
   
-```  
+```console  
 csc example.cs /r:UtilityLib.dll  
 ```  
   

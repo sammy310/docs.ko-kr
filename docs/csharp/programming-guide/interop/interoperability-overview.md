@@ -9,12 +9,12 @@ helpviewer_keywords:
 - interoperability, about interoperability
 - platform invoke
 ms.assetid: c025b2e0-2357-4c27-8461-118f0090aeff
-ms.openlocfilehash: 8ad6b5767c349379121352930341be5b916131e6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 499efae13a0805ba161cd9db160d697b496183c0
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54502068"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56974707"
 ---
 # <a name="interoperability-overview-c-programming-guide"></a>상호 운용성 개요(C# 프로그래밍 가이드)
 이 항목에서는 C# 관리 코드와 비관리 코드 간의 상호 운용성을 사용하도록 설정하는 방법을 설명합니다.  
@@ -30,7 +30,7 @@ ms.locfileid: "54502068"
 ## <a name="c-interop"></a>C++ Interop  
  C# 또는 다른 .NET Framework 언어로 작성된 코드에서 사용할 수 있도록 IJW(It Just Works)라고도 하는 C++ interop를 사용하여 네이티브 C++ 클래스를 래핑할 수 있습니다. 이렇게 하려면 C++ 코드를 작성하여 네이티브 DLL 또는 COM 구성 요소를 래핑합니다. 다른 .NET Framework 언어와 달리 [!INCLUDE[vcprvc](~/includes/vcprvc-md.md)]에는 관리 코드와 비관리 코드가 동일한 애플리케이션 및 동일한 파일에 있을 수 있도록 하는 상호 운용성 지원이 있습니다. 그런 다음 **/clr** 컴파일러 스위치로 관리되는 어셈블리를 생성하여 C++ 코드를 빌드합니다. 마지막으로, C# 프로젝트의 어셈블리에 대한 참조를 추가하고 다른 관리되는 클래스를 사용하는 것처럼 래핑된 개체를 사용합니다.  
   
-## <a name="exposing-com-components-to-c"></a>C#에 COM 구성 요소 노출  
+## <a name="exposing-com-components-to-c"></a>C\#에 COM 구성 요소 노출
  C# 프로젝트에서 COM 구성 요소를 사용할 수 있습니다. 일반적인 단계는 다음과 같습니다.  
   
 1.  COM 구성 요소를 찾아서 사용하고 등록합니다. regsvr32.exe를 사용하여 COM DLL을 등록하거나 등록을 취소합니다.  

@@ -4,12 +4,12 @@ description: 컨테이너화된 .NET 애플리케이션의.NET 마이크로 서�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/02/2018
-ms.openlocfilehash: b95e256bf8df7207eed0895587c0945f37b08ecb
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: eef1ad347cb621e1f26c9c65d46d71e83a2c3a23
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53128958"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56971782"
 ---
 # <a name="subscribing-to-events"></a>이벤트 구독
 
@@ -93,23 +93,23 @@ CQRS 방식을 사용하는 경우와 같은 고급 마이크로 서비스의 �
 
 ### <a name="designing-atomicity-and-resiliency-when-publishing-to-the-event-bus"></a>이벤트 버스로 게시할 경우 원자성 및 복원력 디자인
 
-이벤트 버스와 같은 분산 메시징 시스템을 통해 통합 이벤트를 게시할 경우 원본 데이터베이스를 업데이트하고 이벤트를 게시하는 데 기본적인 문제가 있습니다(즉, 작업이 모두 완성되거나 모두 완성되지 않음). 예를 들어 위에 나와 있는 간단 예제의 코드는 제품 가격이 변경될 때 데이터베이스에 데이터를 커밋한 다음, ProductPriceChangedIntegrationEvent 메시지를 게시합니다. 초기에는 이러한 두 작업을 하나의 큰 단위로 수행해야만 하는 것처럼 보입니다. 하지만 [MSMQ(Microsoft Message Queuing)](https://msdn.microsoft.com/library/ms711472\(v=vs.85\).aspx) 등의 기존 시스템과 같은 방식으로 데이터베이스 및 메시지 브로커가 포함된 분산 트랜잭션을 사용하는 경우에는 [CAP 공식](https://www.quora.com/What-Is-CAP-Theorem-1)에서 설명하는 이유 때문에 적절하지 않습니다.
+이벤트 버스와 같은 분산 메시징 시스템을 통해 통합 이벤트를 게시할 경우 원본 데이터베이스를 업데이트하고 이벤트를 게시하는 데 기본적인 문제가 있습니다(즉, 작업이 모두 완성되거나 모두 완성되지 않음). 예를 들어 위에 나와 있는 간단 예제의 코드는 제품 가격이 변경될 때 데이터베이스에 데이터를 커밋한 다음, ProductPriceChangedIntegrationEvent 메시지를 게시합니다. 초기에는 이러한 두 작업을 하나의 큰 단위로 수행해야만 하는 것처럼 보입니다. 하지만 [MSMQ(Microsoft Message Queuing)](https://msdn.microsoft.com/library/windows/desktop/ms711472(v=vs.85).aspx) 등의 기존 시스템과 같은 방식으로 데이터베이스 및 메시지 브로커가 포함된 분산 트랜잭션을 사용하는 경우에는 [CAP 공식](https://www.quora.com/What-Is-CAP-Theorem-1)에서 설명하는 이유 때문에 적절하지 않습니다.
 
 기본적으로 마이크로 서비스는 확장 가능하고 가용성이 높은 시스템을 빌드하는 데 사용합니다. 간단히 말해, CAP 공식에 따르면 지속적으로 가용하며 일관성이 높고 *그리고* 모든 파티션에 허용되는 분산 데이터베이스(또는 해당 모델을 소유하는 마이크로 서비스)를 빌드할 수 없습니다. 다음과 같은 특성 중 두 가지를 선택해야 합니다.
 
-마이크로 서비스 기반 아키텍처에서는 가용성과 허용을 선택해야 하며 강력한 일관성은 중요하지 않습니다. 따라서 [MSMQ](https://msdn.microsoft.com/library/ms711472\(v=vs.85\).aspx)와 함께 Windows DTC(Distributed Transaction Coordinator) 기반 [분산 트랜잭션](https://msdn.microsoft.com/library/ms681205\(v=vs.85\).aspx)을 구현할 때와 마찬가지로 오늘날 대부분의 마이크로 서비스 기반 응용 프로그램에서는 일반적으로 메시징에 분산 트랜잭션을 사용하지 않습니다.
+마이크로 서비스 기반 아키텍처에서는 가용성과 허용을 선택해야 하며 강력한 일관성은 중요하지 않습니다. 따라서 [MSMQ](https://msdn.microsoft.com/library/windows/desktop/ms711472(v=vs.85).aspx)와 함께 Windows DTC(Distributed Transaction Coordinator) 기반 [분산 트랜잭션](https://docs.microsoft.com/previous-versions/windows/desktop/ms681205(v=vs.85))을 구현할 때와 마찬가지로 오늘날 대부분의 마이크로 서비스 기반 애플리케이션에서는 일반적으로 메시징에 분산 트랜잭션을 사용하지 않습니다.
 
 처음의 문제와 해당 예를 다시 살펴보겠습니다. 데이터베이스를 업데이트한 후부터(이 경우 \_context.SaveChangesAsync()가 포함된 코드 라인 직후) 통합 이벤트를 게시하기 전까지 서비스가 충돌하는 경우 전체 시스템이 비일관 상태가 될 수 있습니다. 이 경우 처리하는 특정 비즈니스 작업에 따라 중요 비즈니스 문제가 될 수 있습니다.
 
 앞의 아키텍처 섹션에서 언급했듯이 몇 가지 방식으로 이 문제를 해결할 수 있습니다.
 
--   [전체 이벤트 소싱](https://msdn.microsoft.com/library/dn589792.aspx) 패턴 사용.
+-   [전체 이벤트 소싱](https://docs.microsoft.com/azure/architecture/patterns/event-sourcing) 패턴 사용.
 
 -   [트랜잭션 로그 마이닝](https://www.scoop.it/t/sql-server-transaction-log-mining) 사용.
 
 -   [아웃박스 패턴](http://gistlabs.com/2014/05/the-outbox/) 사용. 이 트랜잭션 테이블에는 통합 이벤트를 저장합니다(로컬 트랜잭션 확장).
 
-이 시나리오의 경우 ES(이벤트 소싱) 패턴이 *가장* 적절하거나 적절한 방법 중 하나입니다. 하지만 대부분의 응용 프로그램 시나리오에서는 전체 ES 시스템을 구현하지 못할 수 있습니다. ES란 현재 상태 데이터를 저장하는 대신 트랜잭션 데이터베이스에 도메인 이벤트만 저장하는 것을 의미합니다. 도메인 이벤트만 저장할 경우 시스템 기록을 사용할 수 있다는 점, 지난 시스템 상태를 확인할 수 있다는 점 등의 뛰어난 이점이 있습니다. 하지만 전체 ES 시스템을 구현하려면 대부분의 시스템을 재설계해야 하며 그 외에도 많은 복잡성과 요구 사항이 있습니다. 예를 들어 [이벤트 저장소](https://eventstore.org/) 등의 이벤트 소싱용으로 만든 데이터베이스 또는 Azure Cosmos DB, MongoDB, Cassandra, CouchDB, RavenDB 등의 문서 중심 데이터베이스를 사용하려는 경우가 있습니다. ES는 이 문제에 적합한 방식이지만 이벤트 소싱에 대해 잘 알고 있는 경우가 아니면 가장 쉬운 솔루션이 아닙니다.
+이 시나리오의 경우 ES(이벤트 소싱) 패턴이 *가장* 적절하거나 적절한 방법 중 하나입니다. 하지만 대부분의 애플리케이션 시나리오에서는 전체 ES 시스템을 구현하지 못할 수 있습니다. ES란 현재 상태 데이터를 저장하는 대신 트랜잭션 데이터베이스에 도메인 이벤트만 저장하는 것을 의미합니다. 도메인 이벤트만 저장할 경우 시스템 기록을 사용할 수 있다는 점, 지난 시스템 상태를 확인할 수 있다는 점 등의 뛰어난 이점이 있습니다. 하지만 전체 ES 시스템을 구현하려면 대부분의 시스템을 재설계해야 하며 그 외에도 많은 복잡성과 요구 사항이 있습니다. 예를 들어 [이벤트 저장소](https://eventstore.org/) 등의 이벤트 소싱용으로 만든 데이터베이스 또는 Azure Cosmos DB, MongoDB, Cassandra, CouchDB, RavenDB 등의 문서 중심 데이터베이스를 사용하려는 경우가 있습니다. ES는 이 문제에 적합한 방식이지만 이벤트 소싱에 대해 잘 알고 있는 경우가 아니면 가장 쉬운 솔루션이 아닙니다.
 
 트랜잭션 로그 마이닝을 사용하는 옵션은 처음에는 매우 간단해 보입니다. 하지만 이 방식을 사용하려면 마이크로 서비스를 SQL Server 트랜잭션 로그와 같은 RDBMS 트랜잭션 로그에 결합해야 합니다. 이는 바람직하지 않을 수 있습니다. 또 다른 단점은 트랜잭션 로그에 기록된 하위 수준 업데이트가 상위 수준 통합 이벤트와 같은 수준이 아닐 수 있다는 점입니다. 그럴 경우 이러한 트랜잭션 로그 작업을 리버스 엔지니어링하는 프로세스가 어려울 수 있습니다.
 
@@ -121,7 +121,7 @@ CQRS 방식을 사용하는 경우와 같은 고급 마이크로 서비스의 �
 
 따라서 이러한 균형적 방식이 간소화된 ES 시스템입니다. 통합 이벤트와 해당 현재 상태의 목록이 필요합니다("게시 준비 완료" 및 "게시됨"). 하지만 통합 서비스에 대해서만 이러한 상태를 구현해야 합니다. 이 방식에서는 전체 ES 시스템처럼 트랜잭션 데이터베이스에 모든 도메인 데이터를 이벤트로 저장하지 않아도 됩니다.
 
-이미 관계형 데이터베이스를 사용하고 있는 경우 트랜잭션 테이블을 사용하여 통합 이벤트를 저장할 수 있습니다. 응용 프로그램에서 원자성을 달성하려면 로컬 트랜잭션을 기반으로 하는 2단계 프로세스를 사용합니다. 기본적으로 IntegrationEvent 테이블은 도메인 엔터티가 있는 데이터베이스에 있습니다. 이 테이블은 원자성 달성을 위한 보험과 같기 때문에 사용자는 도메인 데이터를 커밋하는 대상 트랜잭션과 동일한 트랜잭션에 지속된 통합 이벤트를 포함합니다.
+이미 관계형 데이터베이스를 사용하고 있는 경우 트랜잭션 테이블을 사용하여 통합 이벤트를 저장할 수 있습니다. 애플리케이션에서 원자성을 달성하려면 로컬 트랜잭션을 기반으로 하는 2단계 프로세스를 사용합니다. 기본적으로 IntegrationEvent 테이블은 도메인 엔터티가 있는 데이터베이스에 있습니다. 이 테이블은 원자성 달성을 위한 보험과 같기 때문에 사용자는 도메인 데이터를 커밋하는 대상 트랜잭션과 동일한 트랜잭션에 지속된 통합 이벤트를 포함합니다.
 
 단계별 프로세스는 다음과 같이 이루어집니다.
 
@@ -137,7 +137,7 @@ CQRS 방식을 사용하는 경우와 같은 고급 마이크로 서비스의 �
 
 -   트랜잭션을 커밋한 직후 통합 이벤트를 게시하고 다른 로컬 트랜잭션을 사용하여 게시 중인 테이블에서 이벤트를 표시합니다. 그런 다음, 원격 마이크로 서비스의 문제가 발생할 경우에 대비해 통합 이벤트를 추적하기 위한 아티팩트로 테이블을 사용하고 저장된 통합 이벤트를 기준으로 보상 작업을 수행합니다.
 
--   테이블을 일종의 큐로 사용합니다. 별도의 응용 프로그램 스레드 또는 프로세스가 통합 이벤트 테이블을 쿼리하고 이벤트 버스로 이벤트를 게시한 다음, 로컬 트랜잭션을 사용하여 이벤트가 게시된 것으로 표시합니다.
+-   테이블을 일종의 큐로 사용합니다. 별도의 애플리케이션 스레드 또는 프로세스가 통합 이벤트 테이블을 쿼리하고 이벤트 버스로 이벤트를 게시한 다음, 로컬 트랜잭션을 사용하여 이벤트가 게시된 것으로 표시합니다.
 
 그림 6-22는 첫 번째 방법의 아키텍처를 보여줍니다.
 
@@ -153,7 +153,7 @@ CQRS 방식을 사용하는 경우와 같은 고급 마이크로 서비스의 �
 
 **그림 6-23** 작업자 마이크로 서비스를 사용하여 이벤트 버스로 이벤트를 게시할 경우 원자성
 
-간단한 설명을 위해 eShopOnContainers 샘플은 첫 번째 방식(추가 프로세스 또는 검사기 마이크로 서비스가 없음)과 이벤트 버스를 사용하는 경우를 가정했습니다. 하지만 eShopOnContainers는 발생 가능한 모든 실패 케이스를 처리하지 않습니다. 클라우드로 배포하는 실제 응용 프로그램에서는 언젠가 문제가 발생한다는 사실을 감안하고 이러한 검사 및 재전송 논리를 구현해야 합니다. 테이블을 큐로 사용하는 방법은 이벤트 버스를 통해 작업자를 사용하여 이벤트를 게시할 때 해당 테이블이 이벤트의 단일 원본인 경우 첫 번째 방법보다 훨씬 효과적일 수 있습니다.
+간단한 설명을 위해 eShopOnContainers 샘플은 첫 번째 방식(추가 프로세스 또는 검사기 마이크로 서비스가 없음)과 이벤트 버스를 사용하는 경우를 가정했습니다. 하지만 eShopOnContainers는 발생 가능한 모든 실패 케이스를 처리하지 않습니다. 클라우드로 배포하는 실제 애플리케이션에서는 언젠가 문제가 발생한다는 사실을 감안하고 이러한 검사 및 재전송 논리를 구현해야 합니다. 테이블을 큐로 사용하는 방법은 이벤트 버스를 통해 작업자를 사용하여 이벤트를 게시할 때 해당 테이블이 이벤트의 단일 원본인 경우 첫 번째 방법보다 훨씬 효과적일 수 있습니다.
 
 ### <a name="implementing-atomicity-when-publishing-integration-events-through-the-event-bus"></a>이벤트 버스를 통해 통합 이벤트를 게시할 경우 원자성 구현
 
@@ -289,7 +289,7 @@ namespace Microsoft.eShopOnContainers.Services.Basket.API.IntegrationEvents.Even
 
 업데이트 메시지 이벤트에서 중요한 점은 통신의 임의 지점에서 문제가 발생할 경우 메시지를 재시도하도록 해야 한다는 점입니다. 그렇지 않을 경우 백그라운드 작업이 이미 게시된 이벤트를 게시하려고 하여 경합 상태가 될 수 있습니다. 업데이트가 한 번만 전송되도록 하거나 중복 여부를 감지해 폐기하고 하나의 응답만 회신하는 데 충분한 정보를 제공해야 합니다.
 
-앞에서 언급했듯이, 멱등성이란 결과를 바꾸지 않고 작업을 여러 번 수행할 수 있음을 의미합니다. 통신 이벤트와 같은 메시징 환경에서는 수신자 마이크로 서비스의 결과를 바꾸지 않고 이벤트를 여러 번 전달할 수 있을 경우 이벤트에 멱등성이 있다고 합니다. 멱등성은 이벤트 자체의 특성 때문에 또는 시스템이 이벤트를 처리하는 방식 때문에 필요할 수 있습니다. 메시지 멱등성은 이벤트 버스 패턴을 구현하는 응용 프로그램뿐만 아니라 메시징을 사용하는 모든 응용 프로그램에서 중요합니다.
+앞에서 언급했듯이, 멱등성이란 결과를 바꾸지 않고 작업을 여러 번 수행할 수 있음을 의미합니다. 통신 이벤트와 같은 메시징 환경에서는 수신자 마이크로 서비스의 결과를 바꾸지 않고 이벤트를 여러 번 전달할 수 있을 경우 이벤트에 멱등성이 있다고 합니다. 멱등성은 이벤트 자체의 특성 때문에 또는 시스템이 이벤트를 처리하는 방식 때문에 필요할 수 있습니다. 메시지 멱등성은 이벤트 버스 패턴을 구현하는 애플리케이션뿐만 아니라 메시징을 사용하는 모든 애플리케이션에서 중요합니다.
 
 예를 들어 테이블에 데이터가 없을 경우에만 테이블에 해당 데이터를 삽입하는 SQL 문은 멱등성 작업입니다. 해당 삽입 SQL 문을 몇 번 수행하는가는 중요하지 않으며 테이블에 해당 데이터가 포함된다는 결과는 동일합니다. 이와 같은 멱등성은 메시지가 전송되어 두 번 이상 처리될 수 있는 경우 메시지를 처리하는 데 필요할 수 있습니다. 예를 들어 발신자가 정확히 동일한 메시지를 두 번 이상 전송하도록 하는 재시도 논리의 경우 멱등성인지 여부를 확인해야 합니다.
 
@@ -304,11 +304,11 @@ namespace Microsoft.eShopOnContainers.Services.Basket.API.IntegrationEvents.Even
 ### <a name="additional-resources"></a>추가 자료
 
 -   **메시지 멱등성 준수** <br/>
-    [*https://msdn.microsoft.com/library/jj591565.aspx#honoring_message_idempotency*](https://msdn.microsoft.com/library/jj591565.aspx)
+    <https://docs.microsoft.com/previous-versions/msp-n-p/jj591565(v=pandp.10)#honoring-message-idempotency>
 
 ## <a name="deduplicating-integration-event-messages"></a>통합 이벤트 메시지 중복 제거
 
-메시지 이벤트가 다른 수준의 구독자별로 한 번만 전송 및 처리되었는지 여부를 확인할 수 있습니다. 한 가지 방법은 사용하고 있는 메시징 인프라에서 제공하는 중복 제거 기능을 사용하는 것입니다. 또한 대상 마이크로 서비스에 사용자 지정 논리를 구현할 수도 있습니다. 전송 수준 및 응용 프로그램 수준에서 검증하는 것이 가장 좋습니다.
+메시지 이벤트가 다른 수준의 구독자별로 한 번만 전송 및 처리되었는지 여부를 확인할 수 있습니다. 한 가지 방법은 사용하고 있는 메시징 인프라에서 제공하는 중복 제거 기능을 사용하는 것입니다. 또한 대상 마이크로 서비스에 사용자 지정 논리를 구현할 수도 있습니다. 전송 수준 및 애플리케이션 수준에서 검증하는 것이 가장 좋습니다.
 
 ### <a name="deduplicating-message-events-at-the-eventhandler-level"></a>EventHandler 수준에서 메시지 이벤트 중복 제거
 
@@ -337,7 +337,7 @@ namespace Microsoft.eShopOnContainers.Services.Basket.API.IntegrationEvents.Even
     [*https://www.enterpriseintegrationpatterns.com/patterns/messaging/PublishSubscribeChannel.html*](https://www.enterpriseintegrationpatterns.com/patterns/messaging/PublishSubscribeChannel.html)
 
 -   **바인딩된 컨텍스트 간 통신** <br/>
-    [*https://msdn.microsoft.com/library/jj591572.aspx*](https://msdn.microsoft.com/library/jj591572.aspx)
+    <https://docs.microsoft.com/previous-versions/msp-n-p/jj591572(v=pandp.10)>
 
 -   **최종 일관성** <br/>
     [*https://en.wikipedia.org/wiki/Eventual\_consistency*](https://en.wikipedia.org/wiki/Eventual_consistency)
@@ -352,7 +352,7 @@ namespace Microsoft.eShopOnContainers.Services.Basket.API.IntegrationEvents.Even
     [*https://microservices.io/patterns/data/event-sourcing.html*](https://microservices.io/patterns/data/event-sourcing.html)
 
 -   **이벤트 소싱 소개** <br/>
-    [*https://msdn.microsoft.com/library/jj591559.aspx*](https://msdn.microsoft.com/library/jj591559.aspx)
+    <https://docs.microsoft.com/previous-versions/msp-n-p/jj591559(v=pandp.10)>
 
 -   **Event Store database**. 공식 사이트입니다. <br/>
     [*https://geteventstore.com/*](https://geteventstore.com/)
@@ -367,12 +367,12 @@ namespace Microsoft.eShopOnContainers.Services.Basket.API.IntegrationEvents.Even
     [*https://www.quora.com/What-Is-CAP-Theorem-1*](https://www.quora.com/What-Is-CAP-Theorem-1)
 
 -   **데이터 일관성 입문서** <br/>
-    [*https://msdn.microsoft.com/library/dn589800.aspx*](https://msdn.microsoft.com/library/dn589800.aspx)
+    <https://docs.microsoft.com/previous-versions/msp-n-p/dn589800(v=pandp.10)>
 
 -   **Rick Saling. CAP 원리: 클라우드와 인터넷의 "모든 것이 다른" 이유** <br/>
     [*https://blogs.msdn.microsoft.com/rickatmicrosoft/2013/01/03/the-cap-theorem-why-everything-is-different-with-the-cloud-and-internet/*](https://blogs.msdn.microsoft.com/rickatmicrosoft/2013/01/03/the-cap-theorem-why-everything-is-different-with-the-cloud-and-internet/)
 
--   **Eric Brewer. CAP 12년 후: "규칙"이 변경되는 방법** <br/>
+-   **Eric Brewer. CAP 12년 후: "규칙"이 변화하는 방식** <br/>
     [*https://www.infoq.com/articles/cap-twelve-years-later-how-the-rules-have-changed*](https://www.infoq.com/articles/cap-twelve-years-later-how-the-rules-have-changed)
 
 -   **Azure Service Bus. 조정된 메시징: 중복 검색**  <br/>
@@ -380,9 +380,6 @@ namespace Microsoft.eShopOnContainers.Services.Basket.API.IntegrationEvents.Even
 
 -   **안정성 가이드**(RabbitMQ 설명서)* <br/>
     [*https://www.rabbitmq.com/reliability.html\#consumer*](https://www.rabbitmq.com/reliability.html#consumer)
-
--   **외부(DTC) 트랜잭션에 참여**(MSMQ) <br/>
-    [*https://msdn.microsoft.com/library/ms978430.aspx\#bdadotnetasync2\_topic3c*](https://msdn.microsoft.com/library/ms978430.aspx%23bdadotnetasync2_topic3c)
 
 -   **Azure Service Bus. 조정된 메시징: 중복 검색** <br/>
     [*https://code.msdn.microsoft.com/Brokered-Messaging-c0acea25*](https://code.msdn.microsoft.com/Brokered-Messaging-c0acea25)

@@ -1,14 +1,14 @@
 ---
 title: '연습: C#을 사용하여 개체 유지'
 ms.date: 04/26/2018
-ms.openlocfilehash: 61e7496b39bcbc42b0ebb2642fcb1ad1d32696af
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 85b58e93d667d39800538bb2c29d4ba69146e7f3
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54512452"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56975825"
 ---
-# <a name="walkthrough-persisting-an-object-using-c"></a>연습: C#을 사용하여 개체 유지 #
+# <a name="walkthrough-persisting-an-object-using-c"></a>C\#을 사용하여 개체 유지
 
 serialization을 사용하면 인스턴스 간에 개체의 데이터를 유지할 수 있으므로, 다음에 개체를 인스턴스화할 때 값을 저장하고 검색할 수 있습니다.
 

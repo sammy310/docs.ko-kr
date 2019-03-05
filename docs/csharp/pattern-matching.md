@@ -3,14 +3,14 @@ title: 패턴 일치 - C# 가이드
 description: C#의 패턴 일치 식에 대한 자세한 정보
 ms.date: 01/24/2017
 ms.assetid: 1e575c32-2e2b-4425-9dca-7d118f3ed15b
-ms.openlocfilehash: fa327dafe3f924d22b5f0d459eb0b6c7ba60a684
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: eccc982c94a1f124d7250e1795a44d696e43a53c
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43522028"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56969984"
 ---
-# <a name="pattern-matching"></a>패턴 일치 #
+# <a name="pattern-matching"></a>패턴 일치
 
 패턴은 값에 특정 *모양*이 있는지 테스트하고 모양이 일치하는 경우 값에서 정보를 *추출*할 수 있습니다. 패턴 일치는 이미 사용하고 있는 알고리즘에 대해 더 간결한 구문을 제공합니다. 이미 기존 구문을 사용하여 패턴 일치 알고리즘을 만듭니다. 값을 테스트하는 `if` 또는 `switch` 문을 작성합니다. 그런 다음 이러한 문이 일치할 경우 해당 값에서 정보를 추출하고 사용합니다. 새 구문 요소는 이미 친숙한 `is` 및 `switch` 문에 대한 확장입니다. 이러한 새 확장은 값 테스트와 해당 정보 추출을 결합합니다.
 
@@ -36,7 +36,7 @@ C# 7.0 이전에는 일련의 `if` 및 `is` 문에서 각 형식을 테스트해
 
 [!code-csharp[ClassicIsExpression](../../samples/csharp/PatternMatching/GeometricUtilities.cs#02_ClassicIsExpression "Classic type pattern using is")]
 
-위의 코드는 *형식 패턴*의 클래식 식입니다. 변수를 테스트하여 해당 형식을 확인하고 해당 형식에 따라 다른 작업을 수행합니다.
+위의 코드는 ‘형식 패턴’의 클래식 식입니다. 변수를 테스트하여 해당 형식을 확인하고 해당 형식에 따라 다른 작업을 수행합니다.
 
 `is` 식에 대한 확장을 사용하여 테스트에 성공할 경우 변수를 할당하면 이 코드가 더 간단해집니다.
 

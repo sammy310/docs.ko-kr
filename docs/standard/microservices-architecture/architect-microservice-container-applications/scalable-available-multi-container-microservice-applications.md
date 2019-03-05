@@ -4,12 +4,12 @@ description: Kubernetes 애플리케이션 수명 주기를 개발하는 동안 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/20/2018
-ms.openlocfilehash: 8f8d05a79189b909990fd7ef0c05bd84d556a94a
-ms.sourcegitcommit: 75567a3cb437009db55949c6092f4e77ed1a9da4
+ms.openlocfilehash: 0a3ecbb8d186adf3fdc492654e23111ee4c508b1
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54307437"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56980232"
 ---
 # <a name="orchestrating-microservices-and-multi-container-applications-for-high-scalability-and-availability"></a>높은 확장성 및 가용성을 위한 마이크로 서비스 및 다중 컨테이너 애플리케이션 오케스트레이션
 
@@ -137,9 +137,11 @@ Azure Dev Spaces는 Visual Studio 2017 또는 Visual Studio Code를 사용하기
 
 기본적으로 Azure에 공유 개발 공간을 설정할 수 있습니다. 각 개발자는 애플리케이션에서 자신이 맡은 부분에만 집중할 수 있으며 자신의 시나리오에 의존하는 다른 모든 서비스 및 클라우드 리소스가 포함된 개발 공간에서 커밋 전 코드를 반복해서 개발할 수 있습니다. 종속성은 항상 최신 상태로 유지되며 개발자가 생산을 미러링하는 방식으로 작업합니다.
 
-Azure Dev Spaces는 팀 구성원과 분리될 걱정 없이 격리되어 작업할 수 있는 공간의 개념을 제공합니다. 이 기능은 URL 사전 수정에 기반함으로, 모든 컨테이너의 요청에 대해 URL의 개발 공간 접두사를 사용하는 경우 존재하는 공간에 대해 컨테이너의 특별한 버전을 실행합니다. 그렇지 않으면 글로벌/통합 버전을 실행합니다.
+Azure Dev Spaces는 팀 작업과 분리될 걱정 없이 상대적으로 격리되어 작업할 수 있는 공간의 개념을 제공합니다. 각 개발 공간은 고유하게 작업 중인 마이크로 서비스를 사용하여 "상위" 마스터 개발 공간의 마이크로 서비스(하나 이상)를 재정의할 수 있는 계층 구조의 일부입니다.
 
-구체적인 예에 대한 실용적인 보기를 가져오려면 [Azure Dev Spaces의 eShopOnContainers wiki 페이지](https://github.com/dotnet-architecture/eShopOnContainers/wiki/10.2-Using-Azure-Dev-Spaces-and-AKS)를 참조할 수 있습니다.
+이 기능은 URL 접두사를 기반으로 하므로 URL에서 개발 공간 접두사를 사용할 때 요청이 개발 공간에 있는 경우 대상 마이크로 서비스에서 처리됩니다. 그렇지 않으면, 계층 구조에 있는 대상 마이크로 서비스의 첫 번째 인스턴스로 전달되어 결국 맨 위에 있는 마스터 개발 공간에 도달합니다.
+
+구체적인 예에 대한 실용적인 보기를 가져오려면 [Azure Dev Spaces의 eShopOnContainers wiki 페이지](https://github.com/dotnet-architecture/eShopOnContainers/wiki/10.1-Using-Azure-Dev-Spaces-and-AKS)를 참조할 수 있습니다.
 
 자세한 내용은 [Azure Dev Spaces로 팀 개발](https://docs.microsoft.com/azure/dev-spaces/team-development-netcore)에 대한 문서를 확인하세요.
 

@@ -5,12 +5,12 @@ ms.date: 10/03/2018
 helpviewer_keywords:
 - indexers [C#], about indexers
 ms.assetid: df70e1a2-3ce3-4aba-ad80-4b2f3538699f
-ms.openlocfilehash: a6e2ea41c463d5e6959ce7f05a3547ef24f08765
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6b129177e6eb916982a27ba76aca517b0642344c
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54601937"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57203300"
 ---
 # <a name="using-indexers-c-programming-guide"></a>인덱서 사용(C# 프로그래밍 가이드)
 
@@ -53,7 +53,7 @@ public int this[int index]   // Indexer declaration
   
  인덱서의 액세스가 `Console.Write` 문 등에서 평가될 때 [get](../../../csharp/language-reference/keywords/get.md) 접근자가 호출됩니다. 따라서 `get` 접근자가 없으면 컴파일 시간 오류가 발생합니다.  
   
-[!code-csharp[csProgGuideIndexers#1](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-indexers_1.cs)]  
+ [!code-csharp[csProgGuideIndexers#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideIndexers/CS/Indexers.cs#1)]  
   
 ## <a name="indexing-using-other-values"></a>다른 값을 사용하여 인덱싱
 
@@ -63,7 +63,7 @@ C#은 인덱스 매개 변수 형식을 정수로 제한되지 않습니다. 예
   
 다음 예제에서는 요일을 저장하는 클래스를 선언합니다. `get` 접근자는 문자열인 요일 이름을 사용하고 해당 정수를 반환합니다. 예를 들어 “일요일”이면 0을 반환하고, “월요일”이면 1을 반환합니다.  
   
-[!code-csharp[csProgGuideIndexers#2](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-indexers_2.cs)]  
+ [!code-csharp[csProgGuideIndexers#2](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideIndexers/CS/Indexers.cs#2)]  
   
 ## <a name="robust-programming"></a>강력한 프로그래밍
 

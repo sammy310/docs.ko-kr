@@ -8,35 +8,37 @@ helpviewer_keywords:
 - variables [C#], pointers
 - pointers [C#], * operator
 ms.assetid: 460a813a-4995-44c1-9de2-213b91dc7668
-ms.openlocfilehash: 5fbc925b6770bc951a0d7ec856898f62c265462e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 288d8cb2d286f55cc9a162614d45ef7b298f79f1
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54577154"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56974486"
 ---
 # <a name="how-to-obtain-the-value-of-a-pointer-variable-c-programming-guide"></a>방법: 포인터 변수의 값 가져오기(C# 프로그래밍 가이드)
+
 포인터 간접 참조 연산자를 사용하여 포인터가 가리키는 위치에 있는 변수를 가져올 수 있습니다. 식의 형식은 다음과 같습니다. 여기서 `p`는 포인터 형식입니다.  
-  
-```  
+
+```csharp
 *p;  
-```  
+```
+
+포인터 형식이 아닌 식에서는 단항 간접 참조 연산자를 사용할 수 없습니다. 또한 [void](../../../csharp/language-reference/keywords/void.md) 포인터에는 적용할 수 없습니다.  
+
+[null](../../../csharp/language-reference/keywords/null.md) 포인터에 간접 참조 연산자를 적용할 때의 결과는 구현에 따라 달라집니다.  
+
+## <a name="example"></a>예제
+
+다음 예제에서는 다양한 형식의 포인터를 사용하여 `char` 형식의 변수에 액세스합니다. 변수에 할당되는 물리적 주소가 변경될 수 있으므로 `theChar`의 주소는 실행할 때마다 달라집니다.  
+
+ [!code-csharp[csProgGuidePointers#5](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuidePointers/CS/Pointers2.cs#5)]  
+
+ [!code-csharp[csProgGuidePointers#6](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuidePointers/CS/Pointers.cs#6)]  
   
- 포인터 형식이 아닌 식에서는 단항 간접 참조 연산자를 사용할 수 없습니다. 또한 [void](../../../csharp/language-reference/keywords/void.md) 포인터에는 적용할 수 없습니다.  
-  
- [null](../../../csharp/language-reference/keywords/null.md) 포인터에 간접 참조 연산자를 적용할 때의 결과는 구현에 따라 달라집니다.  
-  
-## <a name="example"></a>예제  
- 다음 예제에서는 다양한 형식의 포인터를 사용하여 `char` 형식의 변수에 액세스합니다. 변수에 할당되는 물리적 주소가 변경될 수 있으므로 `theChar`의 주소는 실행할 때마다 달라집니다.  
-  
- [!code-csharp[csProgGuidePointers#5](../../../csharp/programming-guide/unsafe-code-pointers/codesnippet/CSharp/how-to-obtain-the-value-of-a-pointer-variable_1.cs)]  
-  
- [!code-csharp[csProgGuidePointers#6](../../../csharp/programming-guide/unsafe-code-pointers/codesnippet/CSharp/how-to-obtain-the-value-of-a-pointer-variable_2.cs)]  
-  
-**theChar 값 = Z**
-**theChar 주소 = 12F718**
-**pChar 값 = Z**
-**pInt 값 = 90**
+**Value of theChar = Z**  
+**Address of theChar = 12F718**  
+**Value of pChar = Z**  
+**Value of pInt = 90**  
 
 ## <a name="see-also"></a>참고 항목
 

@@ -3,12 +3,12 @@ title: C# 식 - C# 언어 둘러보기
 description: 식, 피연산자 및 연산자는 C# 언어의 기본 구성 요소입니다.
 ms.date: 11/06/2016
 ms.assetid: 20d5eb10-7381-47b9-ad90-f1cc895aa27e
-ms.openlocfilehash: 28e1d6952975c6932dc9ae40af28c7201d61d778
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 682f98d51bf4eb3c1641297972afb86956e06d3e
+ms.sourcegitcommit: 79066169e93d9d65203028b21983574ad9dcf6b4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53154936"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57212094"
 ---
 # <a name="expressions"></a>식
 
@@ -35,7 +35,7 @@ ms.locfileid: "53154936"
     - `x--`: 후위 감소
     - `new T(...)`: 개체 및 대리자 생성
     - `new T(...){...}`: 이니셜라이저를 사용한 개체 생성
-    - `new {...}`: 익명 개체 이니셜라이저
+    - `new {...}`:  익명 개체 이니셜라이저
     - `new T[...]`: 배열 생성
     - `typeof(T)`: `T`에 대한 <xref:System.Type> 개체 가져오기
     - `checked(x)`: checked 컨텍스트에서 식 계산
@@ -43,7 +43,7 @@ ms.locfileid: "53154936"
     - `default(T)`: `T` 형식의 기본값 가져오기
     - `delegate {...}`: 익명 함수(무명 메서드)
 * 단항
-    - `+x`: ID
+    - `+x`: 클레임
     - `-x`: 부정
     - `!x`: 논리 부정
     - `~x`: 비트 부정 연산
@@ -53,7 +53,7 @@ ms.locfileid: "53154936"
     - `await x`: 비동기적으로 `x` 완료 대기
 * 곱하기
     - `x * y`: 곱하기
-    - `x / y`: 나누기
+    - `x / y`: 나눗셈 기호
     - `x % y`: 나머지
 * 더하기
     - `x + y`: 더하기, 문자열 연결, 대리자 결합
@@ -62,15 +62,15 @@ ms.locfileid: "53154936"
     - `x << y`: 왼쪽 시프트
     - `x >> y`: 오른쪽 시프트
 * 관계형 및 형식 테스트
-    - `x < y`: 보다 작음
+    - `x < y`: 다음보다 적음
     - `x > y`: 보다 큼
-    - `x <= y`: 작거나 같음
+    - `x <= y`: 다음보다 적거나 같음
     - `x >= y`: 크거나 같음
     - `x is T`: `x`가 `T`이면 `true` 반환, 그렇지 않으면 `false` 반환
     - `x as T`: `T`로 형식이 지정된 `x` 반환, `x`가 `T`가 아닌 경우 `null` 반환
 * 같음
     - `x == y`: 같음
-    - `x != y`: 같지 않음
+    - `x != y`: 다음과 같지 않음
 * 논리적 AND
     - `x & y`: 정수 비트 AND, 부울 논리곱 AND
 * 논리 XOR
@@ -86,11 +86,11 @@ ms.locfileid: "53154936"
 * 조건
     - `x ? y : z`: `x`가 `true`이면 `y`, `x`가 `false`이면 `z`로 평가
 * 대입 또는 익명 함수
-    - `x = y`: 대입
+    - `x = y`: 할당
     - `x op= y`: 복합 대입. 지원되는 연산자는 다음과 같습니다.
         - `*=`   `/=`   `%=`   `+=`   `-=`   `<<=`   `>>=`   `&=`  `^=`  `|=`
     - `(T x) => y`: 익명 함수(람다 식)
 
->[!div class="step-by-step"]
->[이전](types-and-variables.md)
->[다음](statements.md)
+> [!div class="step-by-step"]
+> [이전](types-and-variables.md)
+> [다음](statements.md)

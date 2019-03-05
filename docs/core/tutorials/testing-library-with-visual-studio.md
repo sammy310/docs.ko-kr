@@ -8,12 +8,12 @@ dev_langs:
 - csharp
 - vb
 ms.custom: vs-dotnet, seodoc18
-ms.openlocfilehash: 7f0f1da48294fd3856f0b2524ef5239b8b63f3e6
-ms.sourcegitcommit: 542aa405b295955eb055765f33723cb8b588d0d0
+ms.openlocfilehash: c099bde5a90e7e95eb5d9da6aacf763054a865ae
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/17/2019
-ms.locfileid: "54362693"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57201328"
 ---
 # <a name="test-a-net-standard-library-with-net-core-in-visual-studio-2017"></a>Visual Studio 2017에서 .NET Core를 사용하여 .NET Standard 라이브러리 테스트
 
@@ -163,7 +163,7 @@ Assert 메서드 | 함수
 
    ![Is False 어설션 실패를 표시하는 테스트 탐색기 창](./media/testing-library-with-visual-studio/failed-test-detail.png)
 
-1. 추가한 코드(`"Error", `)를 제거하고 테스트를 다시 실행합니다. 테스트를 통과합니다.
+1. 1단계에서 수행한 수정을 실행 취소하고 “오류” 문자열을 제거합니다. 테스트를 다시 실행하면 테스트를 통과합니다.
 
 ## <a name="testing-the-release-version-of-the-library"></a>라이브러리의 릴리스 버전 테스트
 

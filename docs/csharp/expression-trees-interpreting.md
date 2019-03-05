@@ -3,12 +3,12 @@ title: 식 해석
 description: 식 트리의 구조를 검사하는 코드를 작성하는 방법을 알아봅니다.
 ms.date: 06/20/2016
 ms.assetid: adf73dde-1e52-4df3-9929-2e0670e28e16
-ms.openlocfilehash: 95fbb021aeeb9f2f4eb36f664f9fe904d1d52453
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 49c030706a0a6196dfdd72e3c2fbff90b7667f48
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43506421"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57201978"
 ---
 # <a name="interpreting-expressions"></a>식 해석
 

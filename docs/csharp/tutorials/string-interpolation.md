@@ -3,14 +3,14 @@ title: C#의 문자열 보간
 description: 문자열 보간을 사용하여 C#으로 결과 문자열에 서식이 지정된 식 결과를 포함하는 방법을 알아봅니다.
 author: pkulikov
 ms.date: 05/09/2018
-ms.openlocfilehash: 702a586d6a1d6844e7f5efb14a86ec635d41445c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5a637937de2f3cff7f5425f47c223a56efa8d0c2
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54727861"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56976059"
 ---
-# <a name="string-interpolation-in-c"></a>C#의 문자열 보간 #
+# <a name="string-interpolation-in-c"></a>C\#의 문자열 보간
 
 이 자습서에서는 [문자열 보간](../language-reference/tokens/interpolated.md)을 사용하여 결과 문자열에서 식 결과의 서식을 지정하고 포함하는 방법을 보여줍니다. 예제에서는 사용자가 기본 C# 개념 및 .NET 형식 서식 지정에 익숙하다고 가정합니다. 문자열 보간 또는 .NET 형식 서식 지정을 처음 접하는 경우 [대화형 문자열 보간 자습서](../tutorials/intro-to-csharp/interpolated-strings.yml)을 먼저 체크 아웃합니다. .NET에서 형식 서식 지정하는 방법에 대한 자세한 내용은 [.NET의 형식 지정](../../standard/base-types/formatting-types.md) 항목을 참조하세요.
 

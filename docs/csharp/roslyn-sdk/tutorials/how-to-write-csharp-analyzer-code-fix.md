@@ -1,16 +1,16 @@
 ---
-title: '자습서: 첫 번째 분석기 및 코드 수정 사항 작성'
+title: '자습서: 첫 번째 분석기 및 코드 수정 작성'
 description: 이 자습서에서는 .NET Complier SDK(Roslyn API)를 사용하여 분석기 및 코드 수정 사항을 빌드하는 단계별 지침을 제공합니다.
 ms.date: 08/01/2018
 ms.custom: mvc
-ms.openlocfilehash: 2959fe3008bfca972d3a164ed27d05c2a8b0e69a
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 727e1deb859cf0f719f47b71129407b683978681
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47398000"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57201900"
 ---
-# <a name="tutorial-write-your-first-analyzer-and-code-fix"></a>자습서: 첫 번째 분석기 및 코드 수정 사항 작성
+# <a name="tutorial-write-your-first-analyzer-and-code-fix"></a>자습서: 첫 번째 분석기 및 코드 수정 작성
 
 .NET Compiler Platform SDK는 C# 또는 Visual Basic 코드를 대상으로 하는 사용자 지정 경고를 만드는 데 필요한 도구를 제공합니다. **분석기**에는 규칙 위반을 인식하는 코드가 포함됩니다. **코드 수정 사항**에는 위반을 수정하는 코드가 포함됩니다. 구현하는 규칙은 코드 구조에서 코딩 스타일, 명명 규칙 등에 이를 수 있습니다. .NET Compiler Platform은 개발자가 코드를 작성할 때 분석을 실행하기 위한 프레임워크와 코드를 수정하기 위한 모든 Visual Studio UI 기능(편집기에 물결선 표시, Visual Studio 오류 목록 채우기, “전구” 제안 만들기, 제안된 수정 사항의 다양한 미리 보기 표시)을 제공합니다.
 
@@ -59,7 +59,7 @@ Console.WriteLine(x);
 > [!TIP]
 > 분석기를 실행할 때 Visual Studio의 두 번째 복사본을 시작합니다. 이 두 번째 복사본은 다른 레지스트리 하이브를 사용하여 설정을 저장합니다. 이렇게 하면 Visual Studio의 두 복사본에서 시각적 설정을 구별할 수 있습니다. Visual Studio의 실험 실행에 서로 다른 테마를 선택할 수 있습니다. 또한 Visual Studio의 실험 실행을 사용하여 사용자 설정 또는 로그인을 Visual Studio 계정에 로밍하지 마세요. 이렇게 하면 설정이 다르게 유지됩니다.
 
-방금 시작한 두 번째 Visual Studio 인스턴스에서 새 C# 콘솔 응용 프로그램 프로젝트를 만듭니다(.NET Core 또는 .NET Framework 프로젝트가 작동함 - 분석기는 소스 수준에서 작동함). 물결 무늬 밑줄이 있는 토큰을 마우스로 가리키면 분석기가 제공하는 경고 텍스트가 나타납니다.
+방금 시작한 두 번째 Visual Studio 인스턴스에서 새 C# 콘솔 애플리케이션 프로젝트를 만듭니다(.NET Core 또는 .NET Framework 프로젝트가 작동함 - 분석기는 소스 수준에서 작동함). 물결 무늬 밑줄이 있는 토큰을 마우스로 가리키면 분석기가 제공하는 경고 텍스트가 나타납니다.
 
 템플릿은 다음 그림에 표시된 대로 형식 이름에 소문자가 포함된 각 형식 선언에 대한 경고를 보고하는 분석기를 만듭니다.
 
@@ -169,7 +169,7 @@ if (dataFlowAnalysis.WrittenOutside.Contains(variableSymbol))
 context.ReportDiagnostic(Diagnostic.Create(Rule, context.Node.GetLocation()));
 ```
 
-**F5** 키를 눌러 분석기를 실행하여 진행 상황을 확인할 수 있습니다. 이전에 만든 콘솔 응용 프로그램을 로드한 후 다음 테스트 코드를 추가할 수 있습니다.
+**F5** 키를 눌러 분석기를 실행하여 진행 상황을 확인할 수 있습니다. 이전에 만든 콘솔 애플리케이션을 로드한 후 다음 테스트 코드를 추가할 수 있습니다.
 
 ```csharp
 int x = 0;
@@ -250,7 +250,7 @@ using Microsoft.CodeAnalysis.Formatting;
 
 [!code-csharp[replace the declaration](~/samples/csharp/roslyn-sdk/Tutorials/MakeConst/MakeConst/MakeConstCodeFixProvider.cs#ReplaceDocument  "Generate a new document by replacing the declaration")]
 
-코드 수정 사항을 시도할 준비가 되었습니다.  F5 키를 눌러 Visual Studio의 두 번째 인스턴스에서 분석기 프로젝트를 실행합니다. Visual Studio의 두 번째 인스턴스에서 새 C# 콘솔 응용 프로그램 프로젝트를 만들고 상수 값으로 초기화된 몇 개의 지역 변수 선언을 Main 메서드에 추가합니다. 아래와 같이 경고로 보고되었음을 알 수 있습니다.
+코드 수정 사항을 시도할 준비가 되었습니다.  F5 키를 눌러 Visual Studio의 두 번째 인스턴스에서 분석기 프로젝트를 실행합니다. Visual Studio의 두 번째 인스턴스에서 새 C# 콘솔 애플리케이션 프로젝트를 만들고 상수 값으로 초기화된 몇 개의 지역 변수 선언을 Main 메서드에 추가합니다. 아래와 같이 경고로 보고되었음을 알 수 있습니다.
 
 ![const 경고를 만들 수 있음](media/how-to-write-csharp-analyzer-code-fix/make-const-warning.png)
 
@@ -282,7 +282,7 @@ public void WhenTestCodeIsValidNoDiagnosticIsTriggered(string testCode)
 ```csharp
 [DataTestMethod]
 [DataRow(LocalIntCouldBeConstant, LocalIntCouldBeConstantFixed, 10, 13)]
-public void WhenDiagosticIsRaisedFixUpdatesCode(
+public void WhenDiagnosticIsRaisedFixUpdatesCode(
     string test,
     string fixTest,
     int line,
@@ -504,7 +504,7 @@ using Microsoft.CodeAnalysis.Simplification;
 
 테스트를 실행하면 모두 성공합니다. 완료된 분석기를 직접 실행할 수 있습니다. Ctrl+F5를 눌러 Roslyn 미리 보기 확장이 로드된 Visual Studio의 두 번째 인스턴스에서 분석기 프로젝트를 실행합니다.
 
-* 두 번째 Visual Studio 인스턴스에서 새 C# 콘솔 응용 프로그램 프로젝트를 만들고 `int x = "abc";`을 Main 메서드에 추가합니다. 첫 번째 버그 수정 덕분에 이 지역 변수 선언에 대한 경고가 보고되지 않습니다(컴파일러 오류는 예상대로 발생함).
+* 두 번째 Visual Studio 인스턴스에서 새 C# 콘솔 애플리케이션 프로젝트를 만들고 `int x = "abc";`을 Main 메서드에 추가합니다. 첫 번째 버그 수정 덕분에 이 지역 변수 선언에 대한 경고가 보고되지 않습니다(컴파일러 오류는 예상대로 발생함).
 * 그런 다음, `object s = "abc";`을 Main 메서드에 추가합니다. 두 번째 버그 수정으로 인해 경고가 보고되지 않습니다.
 * 마지막으로 `var` 키워드를 사용하는 다른 지역 변수를 추가합니다. 경고가 보고되고 제안이 왼쪽 바로 아래에 표시됩니다.
 * 편집기 캐럿을 물결선 위로 이동하고 Ctrl+.를 눌러 제안된 코드 수정 사항을 표시합니다. 코드 수정 사항을 선택하면 var' 키워드가 올바르게 처리됩니다.

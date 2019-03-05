@@ -5,15 +5,15 @@ ms.technology: dotnet-standard
 ms.assetid: 1bbb4d05-ead7-4bda-8ece-f86d35c57ad4
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 8e6e89cafeb4cc580edb9630ba7415a669ea750c
-ms.sourcegitcommit: c6f69b0cf149f6b54483a6d5c2ece222913f43ce
+ms.openlocfilehash: f1a4587838180896b52bb79d447ed7ede3e22d1a
+ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2019
-ms.locfileid: "55904417"
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56836489"
 ---
 # <a name="processing-xml-data-in-memory"></a>메모리 내 XML 데이터 처리
-Microsoft .NET Framework에는 XML 데이터를 처리할 수 있는 세 가지 모델 즉, <xref:System.Xml.XmlDocument> 클래스, <xref:System.Xml.XPath.XPathDocument> 클래스 및 [LINQ to XML](https://msdn.microsoft.com/library/f0fe21e9-ee43-4a55-b91a-0800e5782c13)이 포함되어 있습니다.  
+Microsoft .NET Framework에는 <xref:System.Xml.XmlDocument> 클래스, <xref:System.Xml.XPath.XPathDocument> 클래스 및 [LINQ to XML(C#)](../../../csharp/programming-guide/concepts/linq/linq-to-xml.md)과 [LINQ to XML(Visual Basic)](../../../visual-basic/programming-guide/concepts/linq/linq-to-xml.md)이라는 XML 데이터를 처리할 수 있는 세 가지 모델이 포함되어 있습니다.  
   
  
   <xref:System.Xml.XmlDocument> 클래스는 W3C DOM(문서 개체 모델) Level 1 Core 및 DOM Level 2 Core 권장 사항을 구현합니다. DOM은 XML 문서의 메모리 내(캐시) 트리 표현입니다. 

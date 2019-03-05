@@ -5,12 +5,12 @@ author: rpetrusha
 ms.author: ronpet
 ms.date: 07/05/2018
 ms.assetid: aeb68c74-0ea0-406f-9fbe-2ce02d47ef31
-ms.openlocfilehash: 6db3db3ebe3e1934a8e74212692f07158b88b1d5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 942950570253b73cfb9896117bd22189e56389ea
+ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54717521"
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56836645"
 ---
 # <a name="inheritance-in-c-and-net"></a>C# 및 .NET의 상속
 
@@ -81,7 +81,7 @@ public class B : A
 }
 ```
 
-일부 경우에 파생 클래스는 기본 클래스 구현을 *반드시* 재정의해야 합니다. [abstract](../language-reference/keywords/abstract.md) 키워드로 표시된 기본 클래스 멤버의 경우 파생 클래스에서 재정의해야 합니다. 다음 예제를 컴파일하려고 하면 클래스 `B`가 `A.Method1`에 대한 구현을 제공하지 않으므로 컴파일러 오류 CS0534, "<class>은(는) 상속된 추상 멤버 '<member>'을(를) 구현하지 않습니다.”가 표시됩니다.
+일부 경우에 파생 클래스는 기본 클래스 구현을 *반드시* 재정의해야 합니다. [abstract](../language-reference/keywords/abstract.md) 키워드로 표시된 기본 클래스 멤버의 경우 파생 클래스에서 재정의해야 합니다. 다음 예제를 컴파일하려고 하면 클래스 `B`가 `A.Method1`에 대한 구현을 제공하지 않으므로 컴파일러 오류 CS0534, “&lt;class&gt;는 상속된 추상 멤버 &lt;member&gt;를 구현하지 않습니다.”가 표시됩니다.
 
 ```csharp
 public abstract class A

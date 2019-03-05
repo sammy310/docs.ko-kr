@@ -18,12 +18,12 @@ helpviewer_keywords:
 - format specifiers, standard numeric format strings
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1074abf9784bc26086c85f78047baa98e9c6dee7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0a11a9d18999bc7741e12af16d43fba8c03318da
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54506721"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56979966"
 ---
 # <a name="standard-numeric-format-strings"></a>표준 숫자 형식 문자열
 
@@ -55,14 +55,14 @@ ms.locfileid: "54506721"
   
 |형식 지정자|name|설명|예제|  
 |----------------------|----------|-----------------|--------------|  
-|"C" 또는 "c"|통화|결과: 통화 값.<br /><br /> 지원 대상: 모든 숫자 형식.<br /><br /> 전체 자릿수 지정자: 십진수의 수.<br /><br /> 기본 전체 자릿수 지정자: 정의한 <xref:System.Globalization.NumberFormatInfo.CurrencyDecimalDigits%2A?displayProperty=nameWithType>합니다.<br /><br /> 추가 정보: [통화("C") 서식 지정자](#CFormatString).|123.456 ("C", en-US) -> $123.46<br /><br /> 123.456 ("C", fr-FR) -> 123,46 €<br /><br /> 123.456 ("C", ja-JP) -> ¥123<br /><br /> -123.456 ("C3", en-US) -> ($123.456)<br /><br /> -123.456 ("C3", fr-FR) -> -123,456 €<br /><br /> -123.456 ("C3", ja-JP) -> -¥123.456|  
+|"C" 또는 "c"|통화|결과: 통화 값.<br /><br /> 지원 대상: 모든 숫자 형식.<br /><br /> 전체 자릿수 지정자: 십진수의 수.<br /><br /> 기본 전체 자릿수 지정자: <xref:System.Globalization.NumberFormatInfo.CurrencyDecimalDigits%2A?displayProperty=nameWithType>에 의해 정의됩니다.<br /><br /> 추가 정보: [통화("C") 서식 지정자](#CFormatString).|123.456 ("C", en-US) -> $123.46<br /><br /> 123.456 ("C", fr-FR) -> 123,46 €<br /><br /> 123.456 ("C", ja-JP) -> ¥123<br /><br /> -123.456 ("C3", en-US) -> ($123.456)<br /><br /> -123.456 ("C3", fr-FR) -> -123,456 €<br /><br /> -123.456 ("C3", ja-JP) -> -¥123.456|  
 |"D" 또는 "d"|Decimal|결과: 정수(선택적 음수 기호 포함).<br /><br /> 지원 대상: 정수 형식만.<br /><br /> 전체 자릿수 지정자: 최소 자릿수.<br /><br /> 기본 전체 자릿수 지정자: 필요한 최소 자릿수.<br /><br /> 추가 정보: [10진수("D") 서식 지정자](#DFormatString).|1234 ("D") -> 1234<br /><br /> -1234 ("D6") -> -001234|  
 |"E" 또는 "e"|지수(과학적 표기법)|결과: 지수 표기법.<br /><br /> 지원 대상: 모든 숫자 형식.<br /><br /> 전체 자릿수 지정자: 십진수의 수.<br /><br /> 기본 전체 자릿수 지정자: 6.<br /><br /> 추가 정보: [지수("E") 서식 지정자](#EFormatString).|1052.0329112756 ("E", en-US) -> 1.052033E+003<br /><br /> 1052.0329112756 ("e", fr-FR) -> 1,052033e+003<br /><br /> -1052.0329112756 ("e2", en-US) -> -1.05e+003<br /><br /> -1052.0329112756 ("E2", fr-FR) -> -1,05E+003|  
-|"F" 또는 "f"|고정 소수점|결과: 선택적 음수 기호가 있는 정수 부분과 소수 부분.<br /><br /> 지원 대상: 모든 숫자 형식.<br /><br /> 전체 자릿수 지정자: 십진수의 수.<br /><br /> 기본 전체 자릿수 지정자: 정의한 <xref:System.Globalization.NumberFormatInfo.NumberDecimalDigits%2A?displayProperty=nameWithType>합니다.<br /><br /> 추가 정보: [고정 소수점("F") 서식 지정자](#FFormatString).|1234.567 ("F", en-US) -> 1234.57<br /><br /> 1234.567 ("F", de-DE) -> 1234,57<br /><br /> 1234 ("F1", en-US) -> 1234.0<br /><br /> 1234 ("F1", de-DE) -> 1234,0<br /><br /> -1234.56 ("F4", en-US) -> -1234.5600<br /><br /> -1234.56 ("F4", de-DE) -> -1234,5600|  
+|"F" 또는 "f"|고정 소수점|결과: 선택적 음수 기호가 있는 정수 부분과 소수 부분.<br /><br /> 지원 대상: 모든 숫자 형식.<br /><br /> 전체 자릿수 지정자: 십진수의 수.<br /><br /> 기본 전체 자릿수 지정자: <xref:System.Globalization.NumberFormatInfo.NumberDecimalDigits%2A?displayProperty=nameWithType>에 의해 정의됩니다.<br /><br /> 추가 정보: [고정 소수점("F") 서식 지정자](#FFormatString).|1234.567 ("F", en-US) -> 1234.57<br /><br /> 1234.567 ("F", de-DE) -> 1234,57<br /><br /> 1234 ("F1", en-US) -> 1234.0<br /><br /> 1234 ("F1", de-DE) -> 1234,0<br /><br /> -1234.56 ("F4", en-US) -> -1234.5600<br /><br /> -1234.56 ("F4", de-DE) -> -1234,5600|  
 |"G" 또는 "g"|일반|결과: 더 간단한 형태의 고정 소수점 또는 과학적 표기법.<br /><br /> 지원 대상: 모든 숫자 형식.<br /><br /> 전체 자릿수 지정자: 유효 자릿수.<br /><br /> 기본 전체 자릿수 지정자: 숫자 형식에 따라 달라집니다.<br /><br /> 추가 정보: [일반("G") 서식 지정자](#GFormatString).|-123.456 ("G", en-US) -> -123.456<br /><br /> -123.456 ("G", sv-SE) -> -123,456<br /><br /> 123.4546 ("G4", en-US) -> 123.5<br /><br /> 123.4546 ("G4", sv-SE) -> 123,5<br /><br /> -1.234567890e-25 ("G", en-US) -> -1.23456789E-25<br /><br /> -1.234567890e-25 ("G", sv-SE) -> -1,23456789E-25|  
-|"N" 또는 "n"|수|결과: 선택적 음수 기호가 있는 정수 부분과 소수 부분, 그룹 구분 기호 및 소수 구분 기호.<br /><br /> 지원 대상: 모든 숫자 형식.<br /><br /> 전체 자릿수 지정자: 원하는 소수 자릿수.<br /><br /> 기본 전체 자릿수 지정자: 정의한 <xref:System.Globalization.NumberFormatInfo.NumberDecimalDigits%2A?displayProperty=nameWithType>합니다.<br /><br /> 추가 정보: [숫자("N") 서식 지정자](#NFormatString).|1234.567 ("N", en-US) -> 1,234.57<br /><br /> 1234.567 ("N", ru-RU) -> 1 234,57<br /><br /> 1234 ("N1", en-US) -> 1,234.0<br /><br /> 1234 ("N1", ru-RU) -> 1 234,0<br /><br /> -1234.56 ("N3", en-US) -> -1,234.560<br /><br /> -1234.56 ("N3", ru-RU) -> -1 234,560|  
+|"N" 또는 "n"|수|결과: 선택적 음수 기호가 있는 정수 부분과 소수 부분, 그룹 구분 기호 및 소수 구분 기호.<br /><br /> 지원 대상: 모든 숫자 형식.<br /><br /> 전체 자릿수 지정자: 원하는 소수 자릿수.<br /><br /> 기본 전체 자릿수 지정자: <xref:System.Globalization.NumberFormatInfo.NumberDecimalDigits%2A?displayProperty=nameWithType>에 의해 정의됩니다.<br /><br /> 추가 정보: [숫자("N") 서식 지정자](#NFormatString).|1234.567 ("N", en-US) -> 1,234.57<br /><br /> 1234.567 ("N", ru-RU) -> 1 234,57<br /><br /> 1234 ("N1", en-US) -> 1,234.0<br /><br /> 1234 ("N1", ru-RU) -> 1 234,0<br /><br /> -1234.56 ("N3", en-US) -> -1,234.560<br /><br /> -1234.56 ("N3", ru-RU) -> -1 234,560|  
 |"P" 또는 "p"|백분율|결과: 100으로 곱하고 백분율 기호와 함께 표시되는 숫자.<br /><br /> 지원 대상: 모든 숫자 형식.<br /><br /> 전체 자릿수 지정자: 원하는 소수 자릿수.<br /><br /> 기본 전체 자릿수 지정자: <xref:System.Globalization.NumberFormatInfo.PercentDecimalDigits%2A?displayProperty=nameWithType>에 의해 정의됩니다.<br /><br /> 추가 정보: [백분율("P") 서식 지정자](#PFormatString).|1 ("P", en-US) -> 100.00 %<br /><br /> 1 ("P", fr-FR) -> 100,00 %<br /><br /> -0.39678 ("P1", en-US) -> -39.7 %<br /><br /> -0.39678 ("P1", fr-FR) -> -39,7 %|  
-|"R" 또는 "r"|라운드트립|결과: 해당 숫자로 라운드트립할 수 있는 문자열.<br /><br /> 지원되는 형식: <xref:System.Single>, <xref:System.Double> 및 <xref:System.Numerics.BigInteger><br /><br /> 참고: <xref:System.Numerics.BigInteger> 형식에만 권장됩니다. <xref:System.Double> 형식에는 “G17”을 사용하고 <xref:System.Single> 형식에는 “G9”을 사용합니다. </br> 전체 자릿수 지정자: 무시됩니다.<br /><br /> 추가 정보: [라운드트립("R") 서식 지정자](#RFormatString).|123456789.12345678 ("R") -> 123456789.12345678<br /><br /> -1234567890.12345678 ("R") -> -1234567890.1234567|  
+|"R" 또는 "r"|라운드트립|결과: 해당 숫자로 라운드트립할 수 있는 문자열.<br /><br /> 지원되는 형식: <xref:System.Single>, <xref:System.Double> 및 <xref:System.Numerics.BigInteger><br /><br /> 참고: <xref:System.Numerics.BigInteger> 형식에만 권장됩니다. <xref:System.Double> 형식에는 “G17”을 사용하고 <xref:System.Single> 형식에는 “G9”을 사용합니다. <br> 전체 자릿수 지정자: 무시됩니다.<br /><br /> 추가 정보: [라운드트립("R") 서식 지정자](#RFormatString).|123456789.12345678 ("R") -> 123456789.12345678<br /><br /> -1234567890.12345678 ("R") -> -1234567890.1234567|  
 |"X" 또는 "x"|16진수|결과: 16진수 문자열.<br /><br /> 지원 대상: 정수 형식만.<br /><br /> 전체 자릿수 지정자: 결과 문자열의 자릿수.<br /><br /> 추가 정보: [16진수("X") 서식 지정자](#XFormatString).|255 ("X") -> FF<br /><br /> -1 ("x") -> ff<br /><br /> 255 ("x4") -> 00ff<br /><br /> -1 ("X4") -> 00FF|  
 |기타 모든 단일 문자|알 수 없는 지정자|결과: 런타임에 <xref:System.FormatException>을 throw합니다.||  
   
@@ -307,7 +307,8 @@ ms.locfileid: "54506721"
 > [!IMPORTANT]
 >  `/platform:x64` 또는 `/platform:anycpu` 스위치를 사용하여 컴파일되고 64비트 시스템에서 실행되는 경우 "R" 표준 숫자 형식 문자열로 형식이 지정된 <xref:System.Double> 값이 성공적으로 라운드트립되지 않는 경우가 있습니다. 자세한 내용은 다음 단락을 참조하세요.  
   
- `/platform:x64` 또는 `/platform:anycpu` 스위치를 사용하여 컴파일되고 64비트 시스템에서 실행되는 경우 "R" 표준 숫자 형식 문자열로 형식이 지정된 <xref:System.Double> 값이 성공적으로 라운드트립되지 않는 문제를 해결하려면 "G17" 표준 숫자 서식 문자열을 사용하여 <xref:System.Double> 값에 서식을 지정하면 됩니다. 다음 예제에서는 성공적으로 라운드트립되지 않는 <xref:System.Double> 값에 "R" 형식 문자열을 사용하고 "G17" 형식 문자열도 사용하여 원래 값을 성공적으로 라운드트립합니다.  
+ 
+  `/platform:x64` 또는 `/platform:anycpu` 스위치를 사용하여 컴파일되고 64비트 시스템에서 실행되는 경우 "R" 표준 숫자 형식 문자열로 형식이 지정된 <xref:System.Double> 값이 성공적으로 라운드트립되지 않는 문제를 해결하려면 "G17" 표준 숫자 서식 문자열을 사용하여 <xref:System.Double> 값에 서식을 지정하면 됩니다. 다음 예제에서는 성공적으로 라운드트립되지 않는 <xref:System.Double> 값에 "R" 형식 문자열을 사용하고 "G17" 형식 문자열도 사용하여 원래 값을 성공적으로 라운드트립합니다.  
   
  [!code-csharp[System.Double.ToString#5](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.Double.ToString/cs/roundtripex1.cs#5)]
  [!code-vb[System.Double.ToString#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Double.ToString/vb/roundtripex1.vb#5)]  
@@ -331,7 +332,7 @@ ms.locfileid: "54506721"
  [표로 이동](#table)  
   
 <a name="NotesStandardFormatting"></a>   
-## <a name="notes"></a>노트  
+## <a name="notes"></a>참고 사항  
   
 ### <a name="control-panel-settings"></a>제어판 설정  
  제어판에 있는 **국가 및 언어 옵션** 항목의 설정은 서식 지정 작업으로 생성되는 결과 문자열에 영향을 줍니다. 이러한 설정은 서식을 제어하는 데 사용되는 값을 제공하는 현재 스레드 문화권과 연결된 <xref:System.Globalization.NumberFormatInfo> 개체를 초기화하는 데 사용됩니다. 다른 설정을 사용하는 컴퓨터는 다른 결과 문자열을 생성합니다.  

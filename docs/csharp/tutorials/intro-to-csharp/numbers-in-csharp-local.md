@@ -3,14 +3,14 @@ title: C#의 숫자 - C# 소개 자습서
 description: 숫자 형식, 해당 속성 및 메서드를 살펴보면서 C#을 학습합니다.
 ms.date: 10/31/2017
 ms.custom: mvc
-ms.openlocfilehash: 52feb91fc011902f1e30f6b747512a7e0908bfbf
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 009c737297c331b1aa4dcad058ac6bfdf05ac037
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50197459"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56978620"
 ---
-# <a name="manipulate-integral-and-floating-point-numbers-in-c"></a>C#에서 정수 및 부동 소수점 수 조작 #
+# <a name="manipulate-integral-and-floating-point-numbers-in-c"></a>C\#에서 정수 및 부동 소수점 수 조작
 
 이 자습서에서는 C#의 숫자 형식을 대화형으로 설명합니다. 작은 양의 코드를 작성한 다음 해당 코드를 컴파일하고 실행합니다. 이 자습서에는 C#의 숫자 및 수학 연산을 살펴보는 일련의 단원이 포함되어 있습니다. 이러한 단원에서는 C# 언어의 기본 사항을 설명합니다.
 

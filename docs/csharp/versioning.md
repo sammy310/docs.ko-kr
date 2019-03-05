@@ -3,14 +3,14 @@ title: C# 버전 관리 - C# 가이드
 description: C# 및 .NET에서 버전 관리의 작동 방식 이해
 ms.date: 01/08/2017
 ms.assetid: aa8732d7-5cd0-46e1-994a-78017f20d861
-ms.openlocfilehash: a0c75e2f1397f43fadf91d145e8b63de1d4d90eb
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 9ba18f82ad83749d5333628bf4431a0282b0964f
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53243493"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56965672"
 ---
-# <a name="versioning-in-c"></a>C#으로 버전 관리 #
+# <a name="versioning-in-c"></a>C\#으로 버전 관리
 
 이 자습서에서는 .NET에서 버전 관리가 어떤 의미인지에 대해 배웁니다. 또한 라이브러리의 버전을 관리할 때 및 라이브러리의 새 버전으로 업그레이드할 때 고려해야 할 요소에 대해 배웁니다.
 

@@ -7,14 +7,14 @@ helpviewer_keywords:
 - LINQ, C#
 - queries [LINQ], LINQ in C#
 ms.assetid: b8700c1f-05c9-4380-b6eb-e34c4da38e54
-ms.openlocfilehash: 843126d86df36b2aeaa8f57248afb930b92a9ff0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 585bbd9a9fbc78029911dac8af4c1ad3eebe35b0
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33339321"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56970703"
 ---
-# <a name="getting-started-with-linq-in-c"></a>C#에서 LINQ 시작
+# <a name="getting-started-with-linq-in-c"></a>C\#에서 LINQ 시작
 이 섹션에서는 LINQ 설명서 및 샘플의 나머지 부분을 이해하는 데 도움이 되는 기본 배경 정보를 제공합니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
@@ -50,7 +50,7 @@ ms.locfileid: "33339321"
  LINQ의 쿼리에 대한 개요를 포함하고 추가 리소스에 대한 링크를 제공합니다.  
   
  [LINQ에 대한 Visual Studio IDE 및 도구 지원(C#)](../../../../csharp/programming-guide/concepts/linq/visual-studio-ide-and-tools-support-for-linq.md)  
- 디자인, 코딩 및 LINQ 지원 응용 프로그램 디버깅을 위해 Visual Studio 환경에서 사용할 수 있는 도구에 대해 설명합니다.  
+ 디자인, 코딩 및 LINQ 지원 애플리케이션 디버깅을 위해 Visual Studio 환경에서 사용할 수 있는 도구에 대해 설명합니다.  
   
  [표준 쿼리 연산자 개요(C#)](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)  
  LINQ에서 사용되는 표준 메서드를 소개합니다.  

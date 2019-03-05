@@ -3,14 +3,14 @@ title: C#의 역사 - C# 가이드
 description: 이 언어의 초창기 버전은 어떤 모습이었으며 이후 어떻게 변했는가?
 author: erikdietrich
 ms.date: 09/20/2017
-ms.openlocfilehash: f5bf9a7de7c8681fa2ebb49ba1cf6991b9b137c9
-ms.sourcegitcommit: 90775b20343b6ad831af6f5380f8ab7553abb16b
+ms.openlocfilehash: c750bf8e1ae6dd94c11dc887921c5c365cc04b10
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/10/2019
-ms.locfileid: "54186230"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56981935"
 ---
-# <a name="the-history-of-c"></a>C#의 역사 #
+# <a name="the-history-of-c"></a>C\#의 역사
 
 이 문서에서는 C# 언어의 각 주요 릴리스에 대한 기록을 제공합니다. C# 팀은 계속해서 새로운 기능을 혁신하고 추가하고 있습니다. 예정된 릴리스에서 고려되는 기능을 비롯한 자세한 언어 기능 상태는 GitHub의 [dotnet/roslyn 리포지토리에서](https://github.com/dotnet/roslyn/blob/master/docs/Language%20Feature%20Status.md) 확인할 수 있습니다.
 

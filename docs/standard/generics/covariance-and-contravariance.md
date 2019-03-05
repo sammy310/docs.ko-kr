@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 2678dc63-c7f9-4590-9ddc-0a4df684d42e
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 18244ab0473ca4de97e8b6e4eb84151d3a1a5b6e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 931edf3610d083f6821ec87d3e05db855e88c6f9
+ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54692966"
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56836424"
 ---
 # <a name="covariance-and-contravariance-in-generics"></a>제네릭의 공 분산과 반공 분산
 <a name="top"></a> 공변성(Covariance)과 반공변성(Contravariance)은 원래 지정된 것보다 더 많이 파생되거나(더 구체적인) 더 적게 파생된 형식(덜 구체적인)을 사용할 수 있는 능력을 지칭하는 용어입니다. 제네릭 형식 매개 변수는 더욱 유연하게 제네릭 형식을 할당하고 사용할 수 있도록 공변성과 반공변성을 지원합니다. 형식 시스템을 참조할 때 공변성, 반공변성 및 불변성의 정의는 다음과 같습니다. 이 예제에서는 `Base` 라는 기본 클래스와 `Derived`라는 파생 클래스가 있는 것으로 가정합니다.  
@@ -135,7 +135,7 @@ ms.locfileid: "54692966"
 ### <a name="variance-in-generic-and-non-generic-delegates"></a>제네릭 및 제네릭이 아닌 대리자의 가변성  
  위의 코드에서 `MyMethod` 의 시그니처는 생성된 제네릭 대리자 `Func<Base, Derived>` (Visual Basic의 경우`Func(Of Base, Derived)` )의 시그니처와 정확하게 일치합니다. 이 예제에서는 모든 대리자 형식이 제네릭 대리자 형식 <xref:System.Func%602>에서 생성되는 한 더 많이 파생된 매개 변수 형식과 더 적게 파생된 반환 형식이 있는 메서드 매개 변수 또는 변수에 이 제네릭 대리자를 저장할 수 있음을 보여 줍니다.  
   
- 다음은 중요한 내용입니다. 제네릭 대리자의 형식 매개 변수가 지니는 공변성 및 반공변성의 효과는 일반적인 대리자 바인딩이 지니는 공변성 및 반의 효과와 비슷합니다. 자세한 내용은 [대리자의 차이](https://msdn.microsoft.com/library/e3b98197-6c5b-4e55-9c6e-9739b60645ca)를 참조하세요. 그러나 대리자 바인딩의 가변성은 variant 형식 매개 변수가 있는 제네릭 대리자 형식뿐 아니라 모든 대리자 형식에서 작동합니다. 또한 대리자 바인딩이 가변성을 지니면 더 제한적인 매개 변수 형식과 덜 제한적인 반환 형식이 있는 임의의 대리자에 메서드를 바인딩할 수 있는 반면, 제네릭 대리자의 할당은 두 대리자 형식이 모두 동일한 제네릭 형식 정의에서 생성되는 경우에만 작동합니다.  
+ 다음은 중요한 내용입니다. 제네릭 대리자의 형식 매개 변수가 지니는 공변성 및 반공변성의 효과는 일반적인 대리자 바인딩이 지니는 공변성 및 반의 효과와 비슷합니다. 자세한 내용은 [대리자의 가변성(C#)](../../csharp/programming-guide/concepts/covariance-contravariance/variance-in-delegates.md) 및 [대리자의 가변성(Visual Basic)](../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-delegates.md)을 참조하세요. 그러나 대리자 바인딩의 가변성은 variant 형식 매개 변수가 있는 제네릭 대리자 형식뿐 아니라 모든 대리자 형식에서 작동합니다. 또한 대리자 바인딩이 가변성을 지니면 더 제한적인 매개 변수 형식과 덜 제한적인 반환 형식이 있는 임의의 대리자에 메서드를 바인딩할 수 있는 반면, 제네릭 대리자의 할당은 두 대리자 형식이 모두 동일한 제네릭 형식 정의에서 생성되는 경우에만 작동합니다.  
   
  다음 예제에서는 대리자 바인딩의 가변성과 제네릭 형식 매개 변수의 가변성이 결합된 효과를 보여 줍니다. 이 예제에서는 가장 적게 파생된 형식(`Type1`)부터 가장 많이 파생된 형식(`Type3`)까지 세 개의 형식을 포함하는 형식 계층을 정의합니다. 일반적인 대리자 바인딩의 가변성은 `Type1` 의 매개 변수 형식과 `Type3` 의 반환 형식이 있는 제네릭 대리자에 `Type2` 의 매개 변수 형식과 `Type2`의 반환 형식이 있는 메서드를 바인딩하는 데 사용됩니다. 결과로 생성된 제네릭 대리자는 제네릭 형식 매개 변수의 공 분산과 반공 분산을 사용하여 제네릭 대리자의 매개 변수 형식과 반환 형식이 각각 `Type3` 과 `Type1`인 다른 변수에 할당됩니다. 이 두 번째 할당을 수행하려면 변수 형식과 대리자 형식이 둘 다 같은 제네릭 형식 정의(이 예제의 경우 <xref:System.Func%602>)에서 생성된 것이어야 합니다.  
   
@@ -162,7 +162,7 @@ ms.locfileid: "54692966"
   
  Visual Basic과 C#에서는 공변 및 반공변 형식 매개 변수의 사용 규칙을 위반하거나 인터페이스와 대리자가 아닌 다른 형식의 형식 매개 변수에 공 분산 및 반공 분산 주석을 추가할 수 없습니다. [MSIL 어셈블러](../../../docs/framework/tools/ilasm-exe-il-assembler.md) 에서는 이러한 검사를 수행하지 않지만 규칙을 위반하는 형식을 로드하려고 하면 <xref:System.TypeLoadException> 이 throw됩니다.  
   
- 자세한 내용과 예제 코드는 [제네릭 인터페이스의 차이](https://msdn.microsoft.com/library/e14322da-1db3-42f2-9a67-397daddd6b6a)를 참조하세요.  
+ 자세한 내용과 예제 코드는 [제네릭 인터페이스의 가변성(C#)](../../csharp/programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md) 및 [제네릭 인터페이스의 가변성(Visual Basic)](../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md)을 참조하세요.  
   
  [맨 위로 이동](#top)  
   
@@ -192,4 +192,5 @@ ms.locfileid: "54692966"
 
 - [공변성(Covariance) 및 반공변성(Contravariance)(C#)](../../csharp/programming-guide/concepts/covariance-contravariance/index.md)
 - [공변성(covariance) 및 반공변성(contravariance)(Visual Basic)](../../visual-basic/programming-guide/concepts/covariance-contravariance/index.md)
-- [대리자의 가변성](https://msdn.microsoft.com/library/e3b98197-6c5b-4e55-9c6e-9739b60645ca)
+- [대리자의 가변성(C#)](../../csharp/programming-guide/concepts/covariance-contravariance/variance-in-delegates.md)
+- [대리자의 가변성(Visual Basic)](../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-delegates.md)

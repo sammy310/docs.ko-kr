@@ -7,12 +7,12 @@ dev_langs:
 - vb
 ms.technology: dotnet-standard
 ms.assetid: 2dbed1bc-86f5-43cd-9a57-adbb1c5efba4
-ms.openlocfilehash: 9ee6e9a06d590d9d8452dcdaea11219070e613c4
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 9e63b16106f69ec35b7713ffc1a28e2cfb19d2d9
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50188185"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57203654"
 ---
 # <a name="language-independence-and-language-independent-components"></a>언어 독립성 및 언어 독립적 구성 요소
 
@@ -21,7 +21,7 @@ ms.locfileid: "50188185"
 > [!NOTE]
 > 이 문서의 첫 부분에서는 언어 독립적 구성 요소, 즉 모든 언어로 작성된 앱에서 사용할 수 있는 구성 요소를 만드는 방법을 설명합니다. 여러 언어로 작성된 소스 코드에서 구성 요소나 앱을 하나 만들 수도 있습니다. 이 문서의 두 번째 부분에서 [언어 간 상호 운용성](#cross-language-interoperability)을 참조하세요. 
 
-어떠한 언어로 작성된 다른 개체와도 완전하게 상호 작용하려면 개체는 모든 언어에 공통적인 기능만 호출자에게 노출해야 합니다. 기능의 공통 집합은 생성된 어셈블리에 적용되는 규칙 집합인 CLS(공용 언어 사양)에서 정의됩니다. 공용 언어 사양은 [ECMA-335 Standard: Common Language Infrastructure](https://www.ecma-international.org/publications/standards/Ecma-335.htm)에서 Partition I, Clauses 7~11에 정의되어 있습니다. 
+어떠한 언어로 작성된 다른 개체와도 완전하게 상호 작용하려면 개체는 모든 언어에 공통적인 기능만 호출자에게 노출해야 합니다. 기능의 공통 집합은 생성된 어셈블리에 적용되는 규칙 집합인 CLS(공용 언어 사양)에서 정의됩니다. 공용 언어 사양은 [ECMA-335 Standard: Common Language Infrastructure](https://www.ecma-international.org/publications/standards/Ecma-335.htm)의 Partition I, Clauses 7~11에 정의되어 있습니다. 
 
 구성 요소가 공용 언어 사양을 따르는 경우, 이 구성 요소는 CLS 규격임이 보장되고 CLS를 지원하는 모든 프로그래밍 언어로 작성된 어셈블리 코드에서 액세스할 수 있습니다. [CLSCompliantAttribute](xref:System.CLSCompliantAttribute) 특성을 소스 코드에 적용하여 구성 요소가 컴파일 시간에 공용 언어 사양을 준수하는지 여부를 확인할 수 있습니다. 자세한 내용은 [CLSCompliantAttribute 특성](#the-clscompliantattribute-attribute)을 참조하세요.
 
@@ -65,7 +65,7 @@ ms.locfileid: "50188185"
 
 ## <a name="cls-compliance-rules"></a>CLS 규격 규칙
 
-이 섹션에서는 CLS 규격 구성 요소를 만드는 규칙을 설명합니다. 규칙의 전체 목록은 [ECMA-335 Standard: Common Language Infrastructure](https://www.ecma-international.org/publications/standards/Ecma-335.htm)에서 Partition I, Clause 11을 참조하세요.
+이 섹션에서는 CLS 규격 구성 요소를 만드는 규칙을 설명합니다. 규칙의 전체 목록은 [ECMA-335 Standard: Common Language Infrastructure](https://www.ecma-international.org/publications/standards/Ecma-335.htm)의 Partition I, Clauses 11에 정의되어 있습니다.
 
 > [!NOTE]
 > 공용 언어 사양에서는 소비자(CLS 규격인 구성 요소를 프로그래밍 방식으로 액세스하는 개발자), 프레임워크(언어 컴파일러를 사용하여 CLS 규격 라이브러리를 만드는 개발자) 및 extender(CLS 규격 구성 요소를 생성하는 언어 컴파일러 또는 코드 파서 등의 도구를 만드는 개발자)에게 적용되는 CLS 규격에 대한 각 규칙을 설명합니다. 이 문서에서는 프레임워크에 적용되는 규칙에 초점을 맞춥니다. 그러나 extender에 적용되는 규칙 중 일부는 [Reflection.Emit](xref:System.Reflection.Emit)를 사용하여 만든 어셈블리에도 적용할 수 있습니다. 
@@ -150,21 +150,21 @@ End Class
 
 * 공용 클래스의 공용 메서드에 대한 매개 변수 및 반환 형식, 파생 클래스에서 액세스할 수 있는 메서드에 대한 매개 변수 및 반환 형식 
 
-CLS 규격의 규칙은 다음 표에 나와 있습니다. 규칙 텍스트는 [ECMA-335 Standard: Common Language Infrastructure](https://www.ecma-international.org/publications/standards/Ecma-335.htm)에서 그대로 가져온 것으로, Copyright 2012 by Ecma International입니다. 이러한 규칙에 대한 보다 자세한 내용은 다음 섹션에서 찾을 수 있습니다. 
+CLS 규격의 규칙은 다음 표에 나와 있습니다. 규칙의 텍스트는 [ECMA-335 Standard: Common Language Infrastructure](https://www.ecma-international.org/publications/standards/Ecma-335.htm)(Copyright 2012 by Ecma International)에서 가져온 약어입니다. 이러한 규칙에 대한 보다 자세한 내용은 다음 섹션에서 찾을 수 있습니다. 
 
-범주 | 보기 | 규칙 | 규칙 번호
+범주 | 참조 | 규칙 | 규칙 번호
 -------- | --- | ---- | -----------
 액세스 가능성 | [멤버 접근성](#member-accessibility) | `family-or-assembly` 액세스 가능성을 갖는 다른 어셈블리에서 상속된 메서드를 재정의하는 경우를 제외하고는, 상속된 메서드를 재정의할 때 액세스 가능성이 변경되어서는 안 됩니다. 이 경우, 재정의는 `family` 액세스 가능성을 가져야 합니다. | 10
 액세스 가능성 | [멤버 접근성](#member-accessibility) | 형식과 멤버의 표시 유형 및 접근성은 해당 멤버가 표시되고 액세스 가능한 경우 모든 멤버의 시그니처에 있는 해당 형식이 표시되고 액세스 가능해야 합니다. 예를 들어 어셈블리 외부에 표시되는 공용 메서드는 어셈블리 내부에서만 표시되는 형식의 인수를 가질 수 없습니다. 해당 멤버가 표시되고 액세스 가능한 경우 모든 멤버의 시그니처에 사용된 인스턴스화된 제네릭 형식을 구성하는 형식의 표시 유형과 액세스 가능성은 표시되고 액세스 가능해야 합니다. 예를 들어 어셈블리 외부에 표시되는 멤버의 시그니처에 있는 인스턴스화된 제네릭 형식은 어셈블리 내부에서만 표시되는 형식의 제네릭 인수를 가질 수 없습니다. | 12
 배열 | [배열](#arrays) | 배열에는 CLS 규격 형식의 요소가 있어야 하며 배열의 모든 차원은 하한이 0이어야 합니다. 항목은 배열이며 이 배열의 요소 형식은 오버로드 간에 구분되어야 합니다. 오버로드가 2개 이상의 배열 형식에 기반하는 경우 요소 형식은 명명된 형식이어야 합니다. | 16
 특성 | [특성](#attributes) | 특성은 [System.Attribute](xref:System.Attribute) 형식 또는 이 형식에서 상속받는 형식입니다. | 41
-특성 | [특성](#attributes) | CLS에서는 사용자 지정 특성 인코딩의 하위 집합만을 허용합니다. 이러한 인코딩에 표시되는 형식은(Partition IV 참조) [System.Type](xref:System.Type), [System.String](xref:System.String), [System.Char](xref:System.Char), [System.Boolean](xref:System.Boolean), [System.Byte](xref:System.Byte), [System.Int16](xref:System.Int16), [System.Int32](xref:System.Int32), [System.Int64](xref:System.Int64), [System.Single](xref:System.Single), [System.Double](xref:System.Double) 및 CLS 규격 기본 정수 형식을 기반으로 하는 열거형 형식뿐입니다. | 34
+특성 | [특성](#attributes) | CLS에서는 사용자 지정 특성 인코딩의 하위 집합만을 허용합니다. 이러한 인코딩에 표시될 수 있는 유일한 형식은 다음과 같습니다(Partition IV 참조). [System.Type](xref:System.Type), [System.String](xref:System.String), [System.Char](xref:System.Char), [System.Boolean](xref:System.Boolean), [System.Byte](xref:System.Byte), [System.Int16](xref:System.Int16), [System.Int32](xref:System.Int32), [System.Int64](xref:System.Int64), [System.Single](xref:System.Single), [System.Double](xref:System.Double) 및 CLS 규격 기본 정수 형식을 기반으로 하는 열거형 형식 | 34
 특성 | [특성](#attributes) | CLS에서는 공개적으로 표시되는 필수 한정자(`modreq`)를 허용하지 않지만, CLS에서 인식할 수 없는 선택적 한정자(`modopt`, Partition II 참조)는 허용합니다. | 35
 생성자 | [생성자](#constructors) | 개체 생성자는 상속된 인스턴스 데이터에 액세스하기 전에 기본 클래스의 일부 인스턴스 생성자를 호출해야 합니다. (생성자가 필요하지 않은 값 형식에는 적용되지 않습니다.)  | 21
 생성자 | [생성자](#constructors) | 개체 생성자는 개체 만들기 작업의 일부로 호출되는 것을 제외하고 호출되어서는 안 되며 개체는 두 번 초기화해서는 안 됩니다. | 22
 열거형 | [열거형](#enumerations) | 열거형의 기본 형식은 기본 제공 CLS 정수 형식이고, 필드의 이름은 "value__"이며, 해당 필드는 `RTSpecialName`으로 표시되어야 합니다. |  7
 열거형 | [열거형](#enumerations) | [System.FlagsAttribute](xref:System.FlagsAttribute)(Partition IV 라이브러리 참조) 사용자 지정 특성의 존재 여부에 따라 지정되는 두 가지 종류의 열거형이 있습니다. 하나는 명명된 정수 값을 나타내며, 다른 하나는 명명되지 않은 값을 생성하도록 결합될 수 있는 명명된 비트 플래그를 나타냅니다. `enum`의 값은 지정된 값으로 제한되지 않습니다. |  8
-열거형 | [열거형](#enumerations) | 열거형의 리터럴 정적 필드는 그 자체가 열거형 형식을 갖습니다. |  10
+열거형 | [열거형](#enumerations) | 열거형의 리터럴 정적 필드는 그 자체가 열거형 형식을 갖습니다. |  9
 이벤트 | [이벤트](#events) | 이벤트를 구현하는 메서드는 메타데이터에서 `SpecialName`으로 표시됩니다. |29
 이벤트 | [이벤트](#events) | 이벤트와 접근자의 액세스 가능성이 동일해야 합니다. |30
 이벤트 | [이벤트](#events) | 이벤트에 대한 `add` 및 `remove` 메서드는 모두 있거나 모두 없어야 합니다. |31
@@ -2058,7 +2058,7 @@ CLS 규격 클래스의 생성자와 구조체는 다음 규칙을 따라야 합
 
 CLS 규격 형식의 속성은 다음 규칙을 따라야 합니다.
 
-* 속성에는 setter, getter 또는 둘 모두가 있어야 합니다. 어셈블리에서 이러한 메서드는 특수 메서드로 구현됩니다. 즉, 어셈블리의 메타데이터에서 ‘SpecialName’으로 표시되는 별도 메서드(이름이 getter는 `get`\_*propertyname*, setter는 `set*\_*propertyname*) marked as `임)로 나타납니다. C# 컴파일러에서는 [CLSCompliantAttribute](xref:System.CLSCompliantAttribute) 특성을 적용할 필요 없이 자동으로 이 규칙이 적용됩니다. 
+* 속성에는 setter, getter 또는 둘 모두가 있어야 합니다. 어셈블리에서 이러한 메서드는 특수한 메서드로 구현됩니다. 즉, 어셈블리의 메타데이터에 `SpecialName`으로 표시되는 별도 메서드(getter의 이름은 `get`\_*propertyname*이고, setter의 이름은 `set`\_*propertyname*임)로 나타납니다. C# 컴파일러에서는 <xref:System.CLSCompliantAttribute> 특성을 적용할 필요 없이 자동으로 이 규칙을 적용합니다. 
 
 * 속성의 형식은 속성 getter의 반환 형식이며 setter의 마지막 인수입니다. 이러한 형식은 CLS 규격이어야 하며 인수는 참조로 속성에 할당할 수 없습니다. 즉, 관리되는 포인터일 수 없습니다. 
 

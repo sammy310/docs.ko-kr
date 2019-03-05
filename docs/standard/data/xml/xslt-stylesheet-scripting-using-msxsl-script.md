@@ -1,5 +1,5 @@
 ---
-title: <msxsl:script>를 사용한 XSLT 스타일시트 스크립트
+title: <msxsl:script>를 사용한 XSLT 스타일시트 스크립팅
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -8,22 +8,25 @@ dev_langs:
 ms.assetid: 60e2541b-0cea-4b2e-a4fa-85f4c50f1bef
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f3abaa8115d2e52a98f0b42588860dece6361df5
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 78dec0d4c3c6e7cab6e179be9dbe61cfd01dc7fc
+ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55267302"
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56835254"
 ---
 # <a name="xslt-stylesheet-scripting-using-msxslscript"></a>\<msxsl:script>를 사용한 XSLT 스타일시트 스크립팅
-<xref:System.Xml.Xsl.XslTransform> 클래스는 `script` 요소를 사용하여 포함 스크립트를 지원합니다.  
+
+  <xref:System.Xml.Xsl.XslTransform> 클래스는 `script` 요소를 사용하여 포함 스크립트를 지원합니다.  
   
 > [!NOTE]
 >  <xref:System.Xml.Xsl.XslTransform> 클래스는 [!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)]에서 사용되지 않습니다. <xref:System.Xml.Xsl.XslCompiledTransform> 클래스를 사용하여 XSLT(Extensible Stylesheet Language for Transformations) 변환을 수행할 수 있습니다. 자세한 내용은 [XslCompiledTransform 클래스 사용](../../../../docs/standard/data/xml/using-the-xslcompiledtransform-class.md) 및 [XslTransform 클래스에서 마이그레이션](../../../../docs/standard/data/xml/migrating-from-the-xsltransform-class.md)을 참조하세요.  
   
- <xref:System.Xml.Xsl.XslTransform> 클래스는 `script` 요소를 사용하여 포함 스크립트를 지원합니다. 스타일시트가 로드될 때 정의된 모든 함수는 클래스 정의에서 래핑되어 MSIL(Microsoft Intermediate Language)로 컴파일되므로 성능이 저하되지 않습니다.  
+ 
+  <xref:System.Xml.Xsl.XslTransform> 클래스는 `script` 요소를 사용하여 포함 스크립트를 지원합니다. 스타일시트가 로드될 때 정의된 모든 함수는 클래스 정의에서 래핑되어 MSIL(Microsoft Intermediate Language)로 컴파일되므로 성능이 저하되지 않습니다.  
   
- `<msxsl:script>` 요소는 다음에 정의되어 있습니다.  
+ 
+  `<msxsl:script>` 요소는 다음에 정의되어 있습니다.  
   
 ```xml  
 <msxsl:script language = "language-name" implements-prefix = "prefix of user namespace"> </msxsl:script>  
@@ -31,21 +34,27 @@ ms.locfileid: "55267302"
   
  여기서 `msxsl`은 네임스페이스 `urn:schemas-microsoft-com:xslt`에 바인딩되는 접두사입니다.  
   
- `language` 특성은 필수 항목은 아니지만, 지정할 경우 C#, VB, JScript, JavaScript, VisualBasic 또는 CSharp 중 하나여야 합니다. 지정하지 않을 경우 언어 기본값은 JScript입니다. `language-name`은 대/소문자를 구분하지 않으므로 'JavaScript'와 'javascript'는 같습니다.  
+ `language` 특성은 필수 항목은 아니지만, 지정할 경우 값이 C#, VB, JScript, JavaScript, VisualBasic 또는 CSharp 중 하나여야 합니다. 지정하지 않을 경우 언어 기본값은 JScript입니다. 
+  `language-name`은 대/소문자를 구분하지 않으므로 'JavaScript'와 'javascript'는 같습니다.  
   
- `implements-prefix` 특성은 필수 항목입니다. 이 특성은 네임스페이스를 선언하고 스크립트 블록에 연결하는 데 사용됩니다. 이 특성 값은 네임스페이스를 나타내는 접두사입니다. 이 네임스페이스는 스타일시트에서 정의할 수 있습니다.  
+ 
+  `implements-prefix` 특성은 필수 항목입니다. 이 특성은 네임스페이스를 선언하고 스크립트 블록에 연결하는 데 사용됩니다. 이 특성 값은 네임스페이스를 나타내는 접두사입니다. 이 네임스페이스는 스타일시트에서 정의할 수 있습니다.  
   
- `msxsl:script` 요소가 네임스페이스 `urn:schemas-microsoft-com:xslt`에 속하기 때문에 스타일시트에는 네임스페이스 선언 `xmlns:msxsl=urn:schemas-microsoft-com:xslt`가 있어야 합니다.  
+ 
+  `msxsl:script` 요소가 네임스페이스 `urn:schemas-microsoft-com:xslt`에 속하기 때문에 스타일시트에는 네임스페이스 선언 `xmlns:msxsl=urn:schemas-microsoft-com:xslt`가 있어야 합니다.  
   
  스크립트의 호출자에게 <xref:System.Security.Permissions.SecurityPermissionFlag> 액세스 권한이 없으면 스타일시트의 스크립트는 컴파일되지 않으며 <xref:System.Xml.Xsl.XslTransform.Load%2A>에 대한 호출도 실패합니다.  
   
  호출자에게 `UnmanagedCode` 권한이 없는 경우에는 스크립트가 컴파일되지만 로드할 때 제공된 증명 정보에 따라 허용되는 작업이 결정됩니다.  
   
- <xref:System.Xml.Xsl.XslTransform.Load%2A> 또는 <xref:System.Xml.XmlReader>를 사용하는 <xref:System.Xml.XPath.XPathNavigator> 메서드 중 하나를 사용하여 스타일시트를 로드하는 경우 <xref:System.Xml.Xsl.XslTransform.Load%2A> 매개 변수를 인수 중 하나로 사용하는 <xref:System.Security.Policy.Evidence> 오버로드를 사용해야 합니다. 증명 정보를 제공하려는 경우 호출자는 <xref:System.Security.Permissions.SecurityPermissionFlag> 권한이 있어야 스크립트 어셈블리에 대한 `Evidence`를 제공할 수 있습니다. 호출자에게 이 권한이 없으면 `Evidence` 매개 변수를 `null`로 설정할 수 있습니다. 그러면 <xref:System.Xml.Xsl.XslTransform.Load%2A> 함수는 스크립트를 찾는 데 실패합니다. `ControlEvidence` 권한은 충분히 신뢰할 수 있는 코드에만 부여되는 매우 강력한 권한으로 간주됩니다.  
+ 
+  <xref:System.Xml.Xsl.XslTransform.Load%2A> 또는 <xref:System.Xml.XmlReader>를 사용하는 <xref:System.Xml.XPath.XPathNavigator> 메서드 중 하나를 사용하여 스타일시트를 로드하는 경우 <xref:System.Xml.Xsl.XslTransform.Load%2A> 매개 변수를 인수 중 하나로 사용하는 <xref:System.Security.Policy.Evidence> 오버로드를 사용해야 합니다. 증명 정보를 제공하려는 경우 호출자는 <xref:System.Security.Permissions.SecurityPermissionFlag> 권한이 있어야 스크립트 어셈블리에 대한 `Evidence`를 제공할 수 있습니다. 호출자에게 이 권한이 없으면 `Evidence` 매개 변수를 `null`로 설정할 수 있습니다. 그러면 <xref:System.Xml.Xsl.XslTransform.Load%2A> 함수는 스크립트를 찾는 데 실패합니다. 
+  `ControlEvidence` 권한은 충분히 신뢰할 수 있는 코드에만 부여되는 매우 강력한 권한으로 간주됩니다.  
   
  어셈블리에서 증명 정보를 가져오려면 `this.GetType().Assembly.Evidence`를 사용합니다. URI(Uniform Resource Identifier)에서 증명 정보를 가져오려면 `Evidence e = XmlSecureResolver.CreateEvidenceForUrl(stylesheetURI)`을 사용합니다.  
   
- <xref:System.Xml.Xsl.XslTransform.Load%2A>가 아닌 <xref:System.Xml.XmlResolver>를 사용하는 `Evidence` 메서드를 사용하는 경우 어셈블리의 보안 영역은 기본적으로 Full Trust가 됩니다. 자세한 내용은 <xref:System.Security.SecurityZone> 및 [명명된 권한 집합](https://msdn.microsoft.com/library/08250d67-c99d-4ab0-8d2b-b0e12019f6e3)을 참조하세요.  
+ 
+  <xref:System.Xml.Xsl.XslTransform.Load%2A>가 아닌 <xref:System.Xml.XmlResolver>를 사용하는 `Evidence` 메서드를 사용하는 경우 어셈블리의 보안 영역은 기본적으로 Full Trust가 됩니다. 자세한 내용은 <xref:System.Security.SecurityZone> 및 [명명된 권한 집합](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/4652tyx7(v=vs.100))을 참조하세요.  
   
  함수는 `msxsl:script` 요소 내에서 선언할 수 있습니다. 다음 표에서는 기본적으로 지원되는 네임스페이스를 보여 줍니다. 나열된 네임스페이스 외부에 있는 클래스는 사용할 수 있지만, 정규화되어야만 사용 가능합니다.  
   
@@ -100,7 +109,7 @@ ms.locfileid: "55267302"
   
  이 경우 앰퍼샌드가 이스케이프되지 않기 때문에 예외가 throw됩니다. 문서는 XML로 로드되고 `msxsl:script` 요소 태그 사이의 텍스트에는 특별한 작업이 수행되지 않습니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 예제에서는 포함 스크립트를 사용하여 주어진 반지름으로 원의 원주를 계산합니다.  
   
 ```vb  

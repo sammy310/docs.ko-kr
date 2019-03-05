@@ -1,15 +1,15 @@
 ---
 title: docker-compose.yml을 사용하여 다중 컨테이너 애플리케이션 정의
-description: 컨테이너화된 .NET 애플리케이션에 대한 .NET 마이크로 서비스 아키텍처 | docker-compose.yml을 사용하여 다중 컨테이너 애플리케이션용 마이크로 서비스 구성을 지정하는 방법.
+description: docker-compose.yml을 사용하여 다중 컨테이너 애플리케이션에서 마이크로 서비스 컴퍼지션을 지정하는 방법입니다.
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/02/2018
-ms.openlocfilehash: b00b0021f71097f2c6cedcb1ddea7861f1936f84
-ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
+ms.openlocfilehash: 908837c470e97e66a6f6b06ef89e87fca80982f2
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "56442232"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56973511"
 ---
 # <a name="defining-your-multi-container-application-with-docker-composeyml"></a>docker-compose.yml을 사용하여 다중 컨테이너 애플리케이션 정의 
 
@@ -468,7 +468,7 @@ ENTRYPOINT ["dotnet", "run"]
     [*https://blogs.msdn.microsoft.com/stevelasker/2016/09/29/building-optimized-docker-images-with-asp-net-core/*](https://blogs.msdn.microsoft.com/stevelasker/2016/09/29/building-optimized-docker-images-with-asp-net-core/)
 
 -   **.NET Core 애플리케이션에 대한 Docker 이미지 작성** <br/>
-    [*https://docs.microsoft.com/en-us/dotnet/core/docker/building-net-docker-images*](../../../core/docker/building-net-docker-images.md)
+    [*https://docs.microsoft.com/dotnet/core/docker/building-net-docker-images*](../../../core/docker/building-net-docker-images.md)
 
 >[!div class="step-by-step"]
 >[이전](data-driven-crud-microservice.md)

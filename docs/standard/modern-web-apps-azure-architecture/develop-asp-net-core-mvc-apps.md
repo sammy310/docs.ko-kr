@@ -4,12 +4,12 @@ description: ASP.NET Core 및 Azure를 사용하여 최신 웹 애플리케이�
 author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
-ms.openlocfilehash: a56b7ba047499842a9b76612df17d22c64491301
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.openlocfilehash: 3ab7de919ed98df1d3fcda02772ba66f9d6294ae
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55827880"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56978334"
 ---
 # <a name="develop-aspnet-core-mvc-apps"></a>ASP.NET Core MVC 앱 개발
 
@@ -172,7 +172,7 @@ ASP.NET Core UI 프로젝트는 모든 UI 수준의 문제를 담당하지만 �
 
 ### <a name="feature-organization"></a>기능 구성
 
-기본적으로 ASP.NET Core 애플리케이션은 Controllers 및 Views를 포함하고, ViewModels를 자주 포함하도록 자체의 폴더 구조를 구성합니다. 이러한 서버 쪽 구조를 지원하는 클라이언트 쪽 코드는 일반적으로 wwwroot 폴더에 별도로 저장됩니다. 그러나 작업 중이거나 지정된 기능이 이러한 폴더 간에 자주 이동해야 하므로 큰 애플리케이션에서 이 기능으로 인해 문제가 발생할 수 있습니다. 이 경우 각 폴더의 파일 및 하위 폴더의 수가 증가함에 따라 점점 더 어려워지고, 이로 인해 솔루션 탐색기를 통해 많은 양의 스크롤이 수행됩니다. 이 문제를 해결하는 한 가지 방법은 애플리케이션 코드를 파일 형식 대신 _기능_으로 구성하는 것입니다. 이 구성 스타일은 일반적으로 기능 폴더 또는 [기능 조각](https://msdn.microsoft.com/en-us/magazine/mt763233.aspx)이라고 합니다(또는: [수직 분할 영역](https://deviq.com/vertical-slices/)을 참조하세요).
+기본적으로 ASP.NET Core 애플리케이션은 Controllers 및 Views를 포함하고, ViewModels를 자주 포함하도록 자체의 폴더 구조를 구성합니다. 이러한 서버 쪽 구조를 지원하는 클라이언트 쪽 코드는 일반적으로 wwwroot 폴더에 별도로 저장됩니다. 그러나 작업 중이거나 지정된 기능이 이러한 폴더 간에 자주 이동해야 하므로 큰 애플리케이션에서 이 기능으로 인해 문제가 발생할 수 있습니다. 이 경우 각 폴더의 파일 및 하위 폴더의 수가 증가함에 따라 점점 더 어려워지고, 이로 인해 솔루션 탐색기를 통해 많은 양의 스크롤이 수행됩니다. 이 문제를 해결하는 한 가지 방법은 애플리케이션 코드를 파일 형식 대신 _기능_으로 구성하는 것입니다. 이 구성 스타일은 일반적으로 기능 폴더 또는 [기능 조각](https://msdn.microsoft.com/magazine/mt763233.aspx)이라고 합니다(또는: [수직 분할 영역](https://deviq.com/vertical-slices/)을 참조하세요).
 
 ASP.NET Core MVC는 이러한 용도를 위해 Areas를 지원합니다. Areas를 사용하면 각 Area 폴더에 별도의 Controllers 및 Views 폴더 집합(관련된 모델도 포함)을 만들 수 있습니다. 그림 7-1에서는 Areas를 사용하는 폴더 구조의 예를 보여 줍니다.
 
@@ -328,7 +328,7 @@ public async Task<IActionResult> Put(int id, [FromBody]Author author)
 
 웹 애플리케이션 보안은 많은 고려 사항이 있는 큰 주제입니다. 가장 기본적인 수준에서 보안은 지정된 요청을 발급한 사용자를 확인한 다음, 해당 요청에서 필요한 리소스에만 액세스할 수 있도록 합니다. 인증은 요청과 함께 제공되는 자격 증명을 신뢰할 수 있는 데이터 저장소의 자격 증명과 비교하여 해당 요청을 알려진 엔터티에서 제공하는 것으로 처리해야 하는지 여부를 확인하는 프로세스입니다. 권한 부여는 사용자 ID에 따라 특정 리소스에 대한 액세스를 제한하는 프로세스입니다. 세 번째 보안 문제는 요청을 제3자의 도청으로부터 보호하는 것이며, 이를 위해 적어도 [애플리케이션에서 SSL을 사용](/aspnet/core/security/enforcing-ssl)하도록 설정해야 합니다.
 
-### <a name="authentication"></a>Authentication
+### <a name="authentication"></a>인증
 
 ASP.NET Core Identity는 애플리케이션에 대한 로그인 기능을 지원하는 데 사용할 수 있는 멤버 자격 시스템입니다. 로컬 사용자 계정뿐만 아니라 Microsoft 계정, Twitter, Facebook, Google 등과 같은 공급자의 외부 로그인 공급자도 지원합니다. 애플리케이션에서 ASP.NET Core Identity 외에도 Windows 인증 또는 [IdentityServer](https://github.com/IdentityServer/IdentityServer4)와 같은 타사 ID 공급자를 사용할 수 있습니다.
 

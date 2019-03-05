@@ -3,12 +3,12 @@ title: 표준 .NET 이벤트 패턴
 description: 표준 이벤트 소스를 만들고 코드에서 표준 이벤트를 구독 및 처리하는 방법과 .NET 이벤트 패턴에 대해 알아봅니다.
 ms.date: 06/20/2016
 ms.assetid: 8a3133d6-4ef2-46f9-9c8d-a8ea8898e4c9
-ms.openlocfilehash: 16a091dabe34a064ab3ee65a6d9f3e0ab36f1db4
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 11755b4754b15070869adf12d5be409af99035d4
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53129404"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57201250"
 ---
 # <a name="standard-net-event-patterns"></a>표준 .NET 이벤트 패턴
 
@@ -47,7 +47,7 @@ void OnEventRaised(object sender, EventArgs args);
 
 FileSearcher 클래스를 입력하여 패턴과 일치하는 파일을 검색하고 일치하는 항목이 검색되면 올바른 이벤트를 발생시켜 보겠습니다.
 
-[!code-csharp[FileSearxcher](../../samples/csharp/events/Program.cs#FileSearcherV1 "Create the initial file searcher")]
+[!code-csharp[FileSearcher](../../samples/csharp/events/Program.cs#FileSearcherV1 "Create the initial file searcher")]
 
 ## <a name="defining-and-raising-field-like-events"></a>필드와 유사한 이벤트 정의 및 발생
 
@@ -137,7 +137,7 @@ EventHandler<FileFoundArgs> onFileFound = (sender, eventArgs) =>
 
 [!code-csharp[SearchImplementation](../../samples/csharp/events/Program.cs#FinalImplementation "Implementation to search directories")]
 
-이제 모든 하위 디렉터리를 검색하기 위해 오버로드를 호출하는 응용 프로그램을 실행할 수 있습니다. 새 `ChangeDirectory` 이벤트에는 구독자가 없지만 `?.Invoke()` 관용구를 사용하여 이 작업이 제대로 작동하도록 합니다.
+이제 모든 하위 디렉터리를 검색하기 위해 오버로드를 호출하는 애플리케이션을 실행할 수 있습니다. 새 `ChangeDirectory` 이벤트에는 구독자가 없지만 `?.Invoke()` 관용구를 사용하여 이 작업이 제대로 작동하도록 합니다.
 
  콘솔 창에 진행률을 표시하는 줄을 작성하는 처리기를 추가해 보겠습니다. 
 

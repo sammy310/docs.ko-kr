@@ -5,26 +5,28 @@ ms.technology: dotnet-standard
 ms.assetid: a4ebdbad-087c-4cfe-acc0-17c48142f81a
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ab96d5bdefee0cd85d98174f8f7410e940cb12b4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b662ca537bf33dc9702e99f279bd068f92de6664
+ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54498374"
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56836450"
 ---
 # <a name="xslt-extension-objects"></a>XSLT 확장명 개체
-확장명 개체를 사용하여 스타일시트의 기능을 확장할 수 있습니다. 확장 개체는 <xref:System.Xml.Xsl.XsltArgumentList> 클래스를 사용하여 유지 관리합니다.  
+확장 개체를 사용하여 스타일시트의 기능을 확장할 수 있습니다. 확장명 개체는 <xref:System.Xml.Xsl.XsltArgumentList> 클래스를 사용하여 유지 관리합니다.  
   
- 포함 스크립트를 사용하는 대신 확장 개체를 사용하면 다음과 같은 이점을 활용할 수 있습니다.  
+ 포함 스크립트를 사용하는 대신 확장명 개체를 사용하면 다음과 같은 이점을 활용할 수 있습니다.  
   
--   클래스 캡슐화 및 재사용에 효과적입니다.  
+-   클래스의 캡슐화 및 재사용에 효과적입니다.  
   
 -   스타일시트를 더 작게 유지하고 보다 쉽게 관리할 수 있습니다.  
   
- <xref:System.Xml.Xsl.XsltArgumentList> 메서드를 사용하여 <xref:System.Xml.Xsl.XsltArgumentList.AddExtensionObject%2A> 개체에 XSLT 확장 개체를 추가합니다. 이 때 정규화된 이름과 네임스페이스 URI가 확장 개체와 연결됩니다.  
+ 
+  <xref:System.Xml.Xsl.XsltArgumentList> 메서드를 사용하여 <xref:System.Xml.Xsl.XsltArgumentList.AddExtensionObject%2A> 개체에 XSLT 확장 개체를 추가합니다. 이 때 정규화된 이름과 네임스페이스 URI가 확장 개체와 연결됩니다.  
   
 > [!NOTE]
->  <xref:System.Xml.Xsl.XsltArgumentList.AddExtensionObject%2A> 메서드를 호출하려면 FullTrust 권한 집합이 필요합니다. 자세한 내용은 [코드 액세스 보안](../../../../docs/framework/misc/code-access-security.md) 및 [NIB: 명명된 권한 집합](https://msdn.microsoft.com/library/08250d67-c99d-4ab0-8d2b-b0e12019f6e3).  
+>  
+  <xref:System.Xml.Xsl.XsltArgumentList.AddExtensionObject%2A> 메서드를 호출하려면 FullTrust 권한 집합이 필요합니다. 자세한 내용은 [코드 액세스 보안](../../../../docs/framework/misc/code-access-security.md) 및 [명명된 권한 세트](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/4652tyx7(v=vs.100))를 참조하세요.  
   
  확장명 개체에서 반환된 데이터 형식은 네 가지 기본 XPath 데이터 형식인 `number`, `string`, `Boolean` 및 `node set` 중 하나입니다.  
   
@@ -32,7 +34,8 @@ ms.locfileid: "54498374"
   
 ### <a name="to-use-an-xslt-extension-object"></a>XSLT 확장명 개체를 사용하려면  
   
-1.  <xref:System.Xml.Xsl.XsltArgumentList> 개체를 만들고 <xref:System.Xml.Xsl.XsltArgumentList.AddExtensionObject%2A> 메서드를 사용하여 확장 개체를 추가합니다.  
+1.  
+  <xref:System.Xml.Xsl.XsltArgumentList> 개체를 만들고 <xref:System.Xml.Xsl.XsltArgumentList.AddExtensionObject%2A> 메서드를 사용하여 확장 개체를 추가합니다.  
   
 2.  스타일시트에서 확장명 개체를 호출합니다.  
   

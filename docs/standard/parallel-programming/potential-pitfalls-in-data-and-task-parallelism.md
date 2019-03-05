@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 1e357177-e699-4b8f-9e49-56d3513ed128
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5613128950d53946d55050ba3fd77cf1f0bb048a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c251bfc15ce588d426dd30f2ff1634a1f2a01336
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54513427"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56971951"
 ---
 # <a name="potential-pitfalls-in-data-and-task-parallelism"></a>데이터 및 작업 병렬 처리에서 발생할 수 있는 문제
 대부분의 경우 <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> 및 <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType>는 일반 순차적 루프에 대해 상당한 성능 향상을 제공할 수 있습니다. 그러나 루프를 병렬화하는 작업은 순차적 코드에서 일반적이지 않거나 전혀 발생하지 않는 문제를 일으킬 수 있는 복잡성을 도입합니다. 이 항목에서는 병렬 루프를 작성할 때 주의해야 할 사항을 나열합니다.  
@@ -52,10 +52,10 @@ ms.locfileid: "54513427"
 >  쿼리에서 <xref:System.Console.WriteLine%2A>에 일부 호출을 삽입하여 이를 직접 테스트할 수 있습니다. 이 메서드는 설명 목적으로 설명서 예제에서 사용되지만 필요하지 않는 한 병렬 루프에서 사용하지 마세요.  
   
 ## <a name="be-aware-of-thread-affinity-issues"></a>스레드 선호도 문제 인식  
- STA(단일 스레드 아파트) 구성 요소에 대한 COM 상호 운용성, Windows Forms 및 WPF(Windows Presentation Foundation)와 같은 일부 기술은 특정 스레드에서 실행하는 코드를 필요로 하는 스레드 선호도 제한 사항이 적용됩니다. 예를 들어 Windows Forms 및 WPF에서 컨트롤은 작성된 스레드에서만 액세스될 수 있습니다. 즉, 예를 들어 스레드 스케줄러를 UI 스레드에서만 작업을 예약하도록 구성하지 않는 한 병렬 루프에서 목록 컨트롤을 업데이트할 수 없습니다. 자세한 내용은 [방법: UI(사용자 인터페이스) 스레드에서 작업 예약](https://msdn.microsoft.com/library/32a846a5-d628-4933-907b-4888ff72c663)을 참조하세요.  
+ STA(단일 스레드 아파트) 구성 요소에 대한 COM 상호 운용성, Windows Forms 및 WPF(Windows Presentation Foundation)와 같은 일부 기술은 특정 스레드에서 실행하는 코드를 필요로 하는 스레드 선호도 제한 사항이 적용됩니다. 예를 들어 Windows Forms 및 WPF에서 컨트롤은 작성된 스레드에서만 액세스될 수 있습니다. 즉, 예를 들어 스레드 스케줄러를 UI 스레드에서만 작업을 예약하도록 구성하지 않는 한 병렬 루프에서 목록 컨트롤을 업데이트할 수 없습니다. 자세한 내용은 [동기화 컨텍스트 지정](xref:System.Threading.Tasks.TaskScheduler#specifying-a-synchronization-context)을 참조하세요.  
   
 ## <a name="use-caution-when-waiting-in-delegates-that-are-called-by-parallelinvoke"></a>Parallel.Invoke에 의해 호출되는 대리자에서 대기하는 경우 주의  
- 특정 상황에서 작업 병렬 라이브러리는 작업을 인라인합니다. 즉 현재 스레드를 실행 중인 작업을 실행합니다. (자세한 내용은 [작업 스케줄러](https://msdn.microsoft.com/library/638f8ea5-21db-47a2-a934-86e1e961bf65)를 참조하세요.) 이러한 성능 최적화로 인해 특정 경우에서 교착 상태가 발생할 수 있습니다. 예를 들어 두 작업은 이벤트가 발생할 때 신호를 받은 다음 다른 작업이 신호를 받기를 기다리는 동일한 대리자 코드를 실행할 수 있습니다. 두 번째 작업이 첫 번째와 동일한 스레드에서 인라인되고 첫 번째가 대기 상태로 되는 경우 두 번째 작업은 해당 이벤트의 신호를 받을 수 없게 됩니다. 이러한 발생을 방지하려면 대기 작업에 시간 제한을 지정하거나 명시적 스레드 생성자를 사용하여 하나의 작업이 다른 작업을 차단할 수 없도록 할 수 있습니다.  
+ 특정 상황에서 작업 병렬 라이브러리는 작업을 인라인합니다. 즉 현재 스레드를 실행 중인 작업을 실행합니다. (자세한 내용은 [작업 스케줄러](xref:System.Threading.Tasks.TaskScheduler)를 참조하세요.) 이러한 성능 최적화로 인해 특정 경우에서 교착 상태가 발생할 수 있습니다. 예를 들어 두 작업은 이벤트가 발생할 때 신호를 받은 다음 다른 작업이 신호를 받기를 기다리는 동일한 대리자 코드를 실행할 수 있습니다. 두 번째 작업이 첫 번째와 동일한 스레드에서 인라인되고 첫 번째가 대기 상태로 되는 경우 두 번째 작업은 해당 이벤트의 신호를 받을 수 없게 됩니다. 이러한 발생을 방지하려면 대기 작업에 시간 제한을 지정하거나 명시적 스레드 생성자를 사용하여 하나의 작업이 다른 작업을 차단할 수 없도록 할 수 있습니다.  
   
 ## <a name="do-not-assume-that-iterations-of-foreach-for-and-forall-always-execute-in-parallel"></a>ForEach, For 및 ForAll의 반복이 항상 병렬로 실행된다고 가정하지 마세요.  
  <xref:System.Threading.Tasks.Parallel.For%2A>, <xref:System.Threading.Tasks.Parallel.ForEach%2A> 또는 <xref:System.Linq.ParallelEnumerable.ForAll%2A> 루프에서 개별 반복이 실행될 수 있지만 병렬로 실행할 필요가 없다는 것을 유념해야 합니다. 따라서 반복의 병렬 실행 또는 특정 순서로 반복 실행의 정확성에 의존하는 코드를 작성하지 마세요. 예를 들어 다음 코드는 교착 상태의 가능성이 있습니다.  
