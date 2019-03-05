@@ -1,7 +1,7 @@
 ---
 title: . 연산자 - C# 참조
 ms.custom: seodec18
-ms.date: 07/20/2015
+ms.date: 02/25/2019
 f1_keywords:
 - ._CSharpKeyword
 helpviewer_keywords:
@@ -9,47 +9,46 @@ helpviewer_keywords:
 - . operator [C#]
 - dot operator (.) [C#]
 ms.assetid: a1f54b52-b686-4ae5-a48e-a2a9ebd0eb7b
-ms.openlocfilehash: a59f69d0349a054c8c2a5b701b8f63df113a6580
-ms.sourcegitcommit: 5c36aaa8299a2437c155700c810585aff19edbec
+ms.openlocfilehash: 2661676d53deb874c5e5a90b4443b301730e09df
+ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54333722"
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56836463"
 ---
-# <a name="-operator-c-reference"></a><span data-ttu-id="d9fa5-103">.</span><span class="sxs-lookup"><span data-stu-id="d9fa5-103">.</span></span> <span data-ttu-id="d9fa5-104">연산자(C# 참조)</span><span class="sxs-lookup"><span data-stu-id="d9fa5-104">operator (C# Reference)</span></span>
+# <a name="-operator-c-reference"></a><span data-ttu-id="c7bb5-103">.</span><span class="sxs-lookup"><span data-stu-id="c7bb5-103">.</span></span> <span data-ttu-id="c7bb5-104">연산자(C# 참조)</span><span class="sxs-lookup"><span data-stu-id="c7bb5-104">operator (C# Reference)</span></span>
 
-<span data-ttu-id="d9fa5-105">점 연산자(`.`)는 멤버 액세스에 사용됩니다.</span><span class="sxs-lookup"><span data-stu-id="d9fa5-105">The dot operator (`.`) is used for member access.</span></span> <span data-ttu-id="d9fa5-106">점 연산자는 형식 또는 네임스페이스의 멤버를 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="d9fa5-106">The dot operator specifies a member of a type or namespace.</span></span> <span data-ttu-id="d9fa5-107">예를 들어 점 연산자는 .NET Framework 클래스 라이브러리 내의 특정 메서드에 액세스하는 데 사용됩니다.</span><span class="sxs-lookup"><span data-stu-id="d9fa5-107">For example, the dot operator is used to access specific methods within the .NET Framework class libraries:</span></span>
+<span data-ttu-id="c7bb5-105">일반적으로 점(`.`)은 멤버 액세스에 사용됩니다.</span><span class="sxs-lookup"><span data-stu-id="c7bb5-105">The dot, `.`, is typically used for member access.</span></span>
 
-[!code-csharp[csRefOperators#16](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefOperators/CS/csrefOperators.cs#16)]
+<span data-ttu-id="c7bb5-106">다음 예제와 같이 `.` 토큰을 사용하여 네임스페이스 또는 형식의 멤버에 액세스합니다.</span><span class="sxs-lookup"><span data-stu-id="c7bb5-106">You use the `.` token to access a member of a namespace or a type, as the following examples demonstrate:</span></span>
 
-<span data-ttu-id="d9fa5-108">예를 들어 다음 클래스를 예로 들어 볼 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="d9fa5-108">For example, consider the following class:</span></span>
+- <span data-ttu-id="c7bb5-107">[ `using` 지시문](../keywords/using-directive.md)의 다음 예제와 같이 `.`을 사용하여 네임스페이스 내에 중첩된 네임스페이스에 액세스합니다.</span><span class="sxs-lookup"><span data-stu-id="c7bb5-107">Use `.` to access a nested namespace within a namespace, as the following example of a [`using` directive](../keywords/using-directive.md) shows:</span></span>
 
-[!code-csharp[csRefOperators#17](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefOperators/CS/csrefOperators.cs#17)]
+  [!code-csharp[nested namespaces](~/samples/snippets/csharp/language-reference/operators/MemberAccessExamples.cs#NestedNamespace)]
 
-[!code-csharp[csRefOperators#18](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefOperators/CS/csrefOperators.cs#18)]
+- <span data-ttu-id="c7bb5-108">다음 코드와 같이 `.`을 사용하여 ‘정규화된 이름’을 만들고 네임스페이스 내의 형식에 액세스합니다.</span><span class="sxs-lookup"><span data-stu-id="c7bb5-108">Use `.` to form a *qualified name* to access a type within a namespace, as the following code shows:</span></span>
 
-<span data-ttu-id="d9fa5-109">`s` 변수에는 두 개의 멤버 `a`와 `b`가 있으며, 액세스하려면 점 연산자를 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="d9fa5-109">The variable `s` has two members, `a` and `b`; to access them, use the dot operator:</span></span>
+  [!code-csharp[qualified name](~/samples/snippets/csharp/language-reference/operators/MemberAccessExamples.cs#QualifiedName)]
 
-[!code-csharp[csRefOperators#19](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefOperators/CS/csrefOperators.cs#19)]
+  <span data-ttu-id="c7bb5-109">[`using` 지시문](../keywords/using-directive.md)을 사용하여 정규화된 이름 사용을 선택 사항으로 설정합니다.</span><span class="sxs-lookup"><span data-stu-id="c7bb5-109">Use the [`using` directive](../keywords/using-directive.md) to make the use of qualified names optional.</span></span>
 
-<span data-ttu-id="d9fa5-110">예를 들어 점은 속하는 네임스페이스 또는 인터페이스를 지정하는 이름인 정규화된 이름을 형성하는 데에도 사용됩니다.</span><span class="sxs-lookup"><span data-stu-id="d9fa5-110">The dot is also used to form qualified names, which are names that specify the namespace or interface, for example, to which they belong.</span></span>
+- <span data-ttu-id="c7bb5-110">다음 코드와 같이 `.`을 사용하여 정적 및 비정적 [형식 멤버](../../programming-guide/classes-and-structs/index.md#members)에 액세스합니다.</span><span class="sxs-lookup"><span data-stu-id="c7bb5-110">Use `.` to access [type members](../../programming-guide/classes-and-structs/index.md#members), static and non-static, as the following code shows:</span></span>
 
-[!code-csharp[csRefOperators#20](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefOperators/CS/csrefOperators.cs#20)]
+  [!code-csharp-interactive[type members](~/samples/snippets/csharp/language-reference/operators/MemberAccessExamples.cs#TypeMemberAccess)]
 
-<span data-ttu-id="d9fa5-111">using 지시문을 사용하면 일부 이름 한정이 선택 사항이 됩니다.</span><span class="sxs-lookup"><span data-stu-id="d9fa5-111">The using directive makes some name qualification optional:</span></span>
+<span data-ttu-id="c7bb5-111">`.`을 사용하여 [확장 메서드](../../programming-guide/classes-and-structs/extension-methods.md)를 호출할 수도 있습니다.</span><span class="sxs-lookup"><span data-stu-id="c7bb5-111">You can also use `.` to invoke an [extension method](../../programming-guide/classes-and-structs/extension-methods.md).</span></span>
 
-[!code-csharp[csRefOperators#21](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefOperators/CS/csrefOperators.cs#21)]
+## <a name="operator-overloadability"></a><span data-ttu-id="c7bb5-112">연산자 오버로드 가능성</span><span class="sxs-lookup"><span data-stu-id="c7bb5-112">Operator overloadability</span></span>
 
-<span data-ttu-id="d9fa5-112">하지만 식별자가 모호한 경우 정규화해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="d9fa5-112">But when an identifier is ambiguous, it must be qualified:</span></span>
+<span data-ttu-id="c7bb5-113">`.` 연산자를 오버로드할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="c7bb5-113">The operator `.` cannot be overloaded.</span></span>
 
-[!code-csharp[csRefOperators#22](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefOperators/CS/csrefOperators.cs#22)]
+## <a name="c-language-specification"></a><span data-ttu-id="c7bb5-114">C# 언어 사양</span><span class="sxs-lookup"><span data-stu-id="c7bb5-114">C# language specification</span></span>
 
-## <a name="c-language-specification"></a><span data-ttu-id="d9fa5-113">C# 언어 사양</span><span class="sxs-lookup"><span data-stu-id="d9fa5-113">C# language specification</span></span>
+<span data-ttu-id="c7bb5-115">자세한 내용은 [C# 언어 사양](../language-specification/index.md)의 [멤버 액세스](~/_csharplang/spec/expressions.md#member-access) 섹션을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="c7bb5-115">For more information, see the [Member access](~/_csharplang/spec/expressions.md#member-access) section of the [C# language specification](../language-specification/index.md).</span></span>
 
-[!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
+## <a name="see-also"></a><span data-ttu-id="c7bb5-116">참고 항목</span><span class="sxs-lookup"><span data-stu-id="c7bb5-116">See also</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="d9fa5-114">참고 항목</span><span class="sxs-lookup"><span data-stu-id="d9fa5-114">See also</span></span>
-
-- [<span data-ttu-id="d9fa5-115">C# 참조</span><span class="sxs-lookup"><span data-stu-id="d9fa5-115">C# Reference</span></span>](../index.md)
-- [<span data-ttu-id="d9fa5-116">C# 프로그래밍 가이드</span><span class="sxs-lookup"><span data-stu-id="d9fa5-116">C# Programming Guide</span></span>](../../programming-guide/index.md)
-- [<span data-ttu-id="d9fa5-117">C# 연산자</span><span class="sxs-lookup"><span data-stu-id="d9fa5-117">C# Operators</span></span>](index.md)
+- [<span data-ttu-id="c7bb5-117">C# 참조</span><span class="sxs-lookup"><span data-stu-id="c7bb5-117">C# Reference</span></span>](../index.md)
+- [<span data-ttu-id="c7bb5-118">C# 프로그래밍 가이드</span><span class="sxs-lookup"><span data-stu-id="c7bb5-118">C# Programming Guide</span></span>](../../programming-guide/index.md)
+- [<span data-ttu-id="c7bb5-119">C# 연산자</span><span class="sxs-lookup"><span data-stu-id="c7bb5-119">C# Operators</span></span>](index.md)
+- <span data-ttu-id="c7bb5-120">[?. 및 ?[] 연산자](null-conditional-operators.md)</span><span class="sxs-lookup"><span data-stu-id="c7bb5-120">[?. and ?[] operators](null-conditional-operators.md)</span></span>
