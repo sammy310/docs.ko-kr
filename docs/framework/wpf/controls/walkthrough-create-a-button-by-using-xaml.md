@@ -4,22 +4,22 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - buttons [WPF]
 ms.assetid: 138c41c4-1759-4bbf-8d77-77031a06a8a0
-ms.openlocfilehash: d88eca573d09c0c40575718a125a65b2d13593d8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0d8b3e476488f81e4154c876e555b3090d0287f9
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54606785"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57377293"
 ---
 # <a name="walkthrough-create-a-button-by-using-xaml"></a>연습: XAML을 사용하여 단추 만들기
 이 연습의 목적은 Windows Presentation Foundation (WPF) 응용 프로그램에서 사용 하기 위해 애니메이션된 단추를 만드는 방법에 알아봅니다. 이 연습에서는 스타일 및 템플릿을 사용 하 여 코드의 재사용 및 단추 선언에서 단추 논리의 분리 허용 하는 사용자 지정된 단추 리소스를 만듭니다. 이 연습에 완전히 기록 됩니다 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]합니다.  
   
 > [!IMPORTANT]
->  이 연습에서는 입력 하거나 복사 및 붙여넣기 하 여 응용 프로그램을 만드는 단계를 안내 합니다 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] Microsoft Visual Studio로 합니다. 디자인 도구 (Microsoft Expression Blend)를 사용 하 여 동일한 응용 프로그램 만들기를 참조 하는 방법을 알아보려면 선호 [Microsoft Expression Blend를 사용 하 여 단추 만들기](../../../../docs/framework/wpf/controls/walkthrough-create-a-button-by-using-microsoft-expression-blend.md)합니다.  
+>  이 연습에서는 입력 하거나 복사 및 붙여넣기 하 여 응용 프로그램을 만드는 단계를 안내 합니다 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] Microsoft Visual Studio로 합니다. 디자인 도구 (Microsoft Expression Blend)를 사용 하 여 동일한 응용 프로그램 만들기를 참조 하는 방법을 알아보려면 선호 [Microsoft Expression Blend를 사용 하 여 단추 만들기](walkthrough-create-a-button-by-using-microsoft-expression-blend.md)합니다.  
   
  다음 그림은 완료 단추를 보여 줍니다.  
   
- ![XAML을 사용 하 여 생성 된 사용자 지정 단추](../../../../docs/framework/wpf/controls/media/custom-button-animatedbutton-5.gif "custom_button_AnimatedButton_5")  
+ ![XAML을 사용 하 여 생성 된 사용자 지정 단추](./media/custom-button-animatedbutton-5.gif "custom_button_AnimatedButton_5")  
   
 ## <a name="create-basic-buttons"></a>기본 단추 만들기  
  새 프로젝트를 만들고 창에 단추 몇 개를 추가 하 여 시작 해 보겠습니다.  
@@ -49,12 +49,12 @@ ms.locfileid: "54606785"
   
      F5 키를 눌러 응용 프로그램을 실행 하려면 다음 그림 처럼 보이는 단추 집합이 표시 됩니다.  
   
-     ![세 개의 기본 단추](../../../../docs/framework/wpf/controls/media/custom-button-animatedbutton-1.gif "custom_button_AnimatedButton_1")  
+     ![세 개의 기본 단추](./media/custom-button-animatedbutton-1.gif "custom_button_AnimatedButton_1")  
   
      기본 단추를 만들었으므로 이제 Window1.xaml 파일의 작업 완료 됩니다. 연습의 나머지 부분에 중점을 둡니다 app.xaml 파일 스타일 및 단추에 대 한 템플릿을 정의 합니다.  
   
 ## <a name="set-basic-properties"></a>기본 속성 설정  
- 다음으로 단추 모양 및 레이아웃을 제어 하려면이 단추에 몇 가지 속성을 설정 해 보겠습니다. 단추의 속성을 개별적으로 설정 하는 대신 전체 응용 프로그램에 대 한 단추 속성을 정의 하려면 리소스를 사용 합니다. 그러나 응용 프로그램 리소스는 외부와 개념적으로 유사 [!INCLUDE[TLA#tla_css](../../../../includes/tlasharptla-css-md.md)] 웹 페이지, 리소스는 보다 훨씬 더 강력 [!INCLUDE[TLA#tla_css](../../../../includes/tlasharptla-css-md.md)]처럼이 연습의 끝 부분에서 표시 됩니다. 리소스에 대 한 자세한 내용은 참조 하세요 [XAML 리소스](../../../../docs/framework/wpf/advanced/xaml-resources.md)합니다.  
+ 다음으로 단추 모양 및 레이아웃을 제어 하려면이 단추에 몇 가지 속성을 설정 해 보겠습니다. 단추의 속성을 개별적으로 설정 하는 대신 전체 응용 프로그램에 대 한 단추 속성을 정의 하려면 리소스를 사용 합니다. 그러나 응용 프로그램 리소스는 외부와 개념적으로 유사 [!INCLUDE[TLA#tla_css](../../../../includes/tlasharptla-css-md.md)] 웹 페이지, 리소스는 보다 훨씬 더 강력 [!INCLUDE[TLA#tla_css](../../../../includes/tlasharptla-css-md.md)]처럼이 연습의 끝 부분에서 표시 됩니다. 리소스에 대 한 자세한 내용은 참조 하세요 [XAML 리소스](../advanced/xaml-resources.md)합니다.  
   
 #### <a name="to-use-styles-to-set-basic-properties-on-the-buttons"></a>스타일을 사용 하 여 단추에서 기본 속성을 설정 하려면  
   
@@ -72,7 +72,7 @@ ms.locfileid: "54606785"
     </Application>  
     ```  
   
-     리소스 범위는 리소스를 정의 하 여 결정 됩니다. 리소스 정의 `Application.Resources` 는 app.xaml에서 파일을 통해 리소스를 응용 프로그램의 어디에서 사용할 수 있습니다. 리소스의 범위를 정의 하는 방법에 대 한 자세한 내용은 참조 하세요 [XAML 리소스](../../../../docs/framework/wpf/advanced/xaml-resources.md)합니다.  
+     리소스 범위는 리소스를 정의 하 여 결정 됩니다. 리소스 정의 `Application.Resources` 는 app.xaml에서 파일을 통해 리소스를 응용 프로그램의 어디에서 사용할 수 있습니다. 리소스의 범위를 정의 하는 방법에 대 한 자세한 내용은 참조 하세요 [XAML 리소스](../advanced/xaml-resources.md)합니다.  
   
 2.  **스타일을 만들고이 사용 하 여 기본 속성 값을 정의 합니다.** 다음 태그를 추가 합니다 `Application.Resources` 블록입니다. 이 태그를 만듭니다는 <xref:System.Windows.Style> 응용 프로그램 설정에서 모든 단추에 적용 되는 합니다 <xref:System.Windows.FrameworkElement.Width%2A> 90 단추 중 및 <xref:System.Windows.FrameworkElement.Margin%2A> 10:  
   
@@ -87,9 +87,9 @@ ms.locfileid: "54606785"
   
      합니다 <xref:System.Windows.Style.TargetType%2A> 속성의 스타일 유형의 모든 개체에 적용 되도록 지정 <xref:System.Windows.Controls.Button>합니다. 각 <xref:System.Windows.Setter> 서로 다른 속성 값을 설정 합니다 <xref:System.Windows.Style>합니다. 따라서이 시점에서 응용 프로그램에서 모든 단추에는 너비 90, 여백 10의  F5 키를 눌러 응용 프로그램을 실행 하는 경우 다음과 같은 창이 표시 됩니다.  
   
-     ![너비 90, 여백 10의 단추](../../../../docs/framework/wpf/controls/media/custom-button-animatedbutton-2.gif "custom_button_AnimatedButton_2")  
+     ![너비 90, 여백 10의 단추](./media/custom-button-animatedbutton-2.gif "custom_button_AnimatedButton_2")  
   
-     훨씬 더 다양 한 개체를 대상으로 미세 조정 하는 방법 포함 하 고 복잡 한 속성 값을 지정도 다른 스타일에 대 한 입력으로 스타일을 사용 하 스타일을 사용 하 여 수행할 수 있습니다. 자세한 내용은 [스타일 지정 및 템플릿](../../../../docs/framework/wpf/controls/styling-and-templating.md)을 참조하세요.  
+     훨씬 더 다양 한 개체를 대상으로 미세 조정 하는 방법 포함 하 고 복잡 한 속성 값을 지정도 다른 스타일에 대 한 입력으로 스타일을 사용 하 스타일을 사용 하 여 수행할 수 있습니다. 자세한 내용은 [스타일 지정 및 템플릿](styling-and-templating.md)을 참조하세요.  
   
 3.  **리소스에 스타일 속성 값을 설정 합니다.** 리소스는 일반적으로 정의 된 개체 및 값을 다시 사용 하는 간단한 방법을 사용 하도록 설정 합니다. 특히 리소스를 사용 하 여 코드를 더 모듈식 쉽게 복잡 한 값을 정의 하는 것이 유용 합니다. App.xaml에 다음 강조 표시 된 태그를 추가 합니다.  
   
@@ -112,7 +112,7 @@ ms.locfileid: "54606785"
   
      F5 키를 눌러 애플리케이션을 실행합니다. 다음과 같이 표시 됩니다.  
   
-     ![그라데이션 배경이 있는 단추](../../../../docs/framework/wpf/controls/media/custom-button-animatedbutton-3.gif "custom_button_AnimatedButton_3")  
+     ![그라데이션 배경이 있는 단추](./media/custom-button-animatedbutton-3.gif "custom_button_AnimatedButton_3")  
   
 ## <a name="create-a-template-that-defines-the-look-of-the-button"></a>단추의 모양을 정의 하는 템플릿 만들기  
  이 섹션에서는 단추의 모양을 (presentation) 사용자 지정 하는 템플릿을 만들 수 있습니다. 단추 표시 단추에 고유한 모양을 제공 하려면 사각형 및 기타 구성 요소를 포함 하는 여러 개체의 구성 됩니다.  
@@ -165,7 +165,7 @@ ms.locfileid: "54606785"
   
      F5 키를 눌러 애플리케이션을 실행합니다. 다음과 같이 표시 됩니다.  
   
-     ![](../../../../docs/framework/wpf/controls/media/custom-button-animatedbutton-4.gif "custom_button_AnimatedButton_4")  
+     ![](./media/custom-button-animatedbutton-4.gif "custom_button_AnimatedButton_4")  
   
 3.  **서식 파일을 템플릿에 추가 합니다.** 다음은 투명 효과 추가 합니다. 먼저 투명 그라데이션 효과 만드는 리소스를 만듭니다. 이러한 그라데이션 리소스 내에서 추가 된 `Application.Resources` 블록:  
   
@@ -244,7 +244,7 @@ ms.locfileid: "54606785"
   
      있음을 합니다 <xref:System.Windows.UIElement.Opacity%2A> 사용 하 여 사각형의는 `x:Name` "glassCube"의 속성은 0으로, 샘플을 실행 하는 경우 표시 되지 않으면 위쪽에 오버레이된 투명 효과 사각형을 하므로 합니다. 나중에 트리거를 추가 하기 위한 템플릿이 단추와 상호 작용할 때 때문입니다. 단추 모양을 지금 변경 하 여 볼 수는 있지만 <xref:System.Windows.UIElement.Opacity%2A> 값 1 및 응용 프로그램을 실행 합니다. 다음 그림을 참조하세요. 다음 단계를 계속 하기 전에 변경 된 <xref:System.Windows.UIElement.Opacity%2A> 다시 0으로 합니다.  
   
-     ![XAML을 사용 하 여 생성 된 사용자 지정 단추](../../../../docs/framework/wpf/controls/media/custom-button-animatedbutton-5.gif "custom_button_AnimatedButton_5")  
+     ![XAML을 사용 하 여 생성 된 사용자 지정 단추](./media/custom-button-animatedbutton-5.gif "custom_button_AnimatedButton_5")  
   
 ## <a name="create-button-interactivity"></a>단추 대화형 작업 만들기  
  이 섹션에서는 속성 트리거 및 이벤트 트리거 속성 값을 변경 하 고 애니메이션 단추 위로 마우스 포인터를 이동 하 고 클릭과 같은 사용자 작업에 대 한 응답을 실행를 만듭니다.  
@@ -396,7 +396,7 @@ ms.locfileid: "54606785"
   
      포인터를 단추 위로 이동할 때 트리거되는 두 개의 애니메이션이 (<xref:System.Windows.UIElement.MouseEnter> 이벤트 발생). 이러한 애니메이션 X 및 Y 축에 투명 효과 사각형을 축소 합니다. 속성을 확인 합니다 <xref:System.Windows.Media.Animation.DoubleAnimation> 요소 — <xref:System.Windows.Media.Animation.Timeline.Duration%2A> 및 <xref:System.Windows.Media.Animation.DoubleAnimation.By%2A>. 합니다 <xref:System.Windows.Media.Animation.Timeline.Duration%2A> 애니메이션 0.5 초 동안에 발생 하도록 지정 및 <xref:System.Windows.Media.Animation.DoubleAnimation.By%2A> 투명 10% 씩 축소를 지정 합니다.  
   
-     두 번째 이벤트 트리거 (<xref:System.Windows.UIElement.MouseLeave>) 첫 번째 중지 됩니다. 중지 하는 경우는 <xref:System.Windows.Media.Animation.Storyboard>, 기본값으로 애니메이션된 속성을 모두 반환 합니다. 따라서 사용자를 단추 밖 포인터를 움직이면 단추가 돌아갑니다를 단추 위로 마우스 포인터를 이동 하기 전의 방식. 애니메이션에 대 한 자세한 내용은 참조 하세요. [애니메이션 개요](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)합니다.  
+     두 번째 이벤트 트리거 (<xref:System.Windows.UIElement.MouseLeave>) 첫 번째 중지 됩니다. 중지 하는 경우는 <xref:System.Windows.Media.Animation.Storyboard>, 기본값으로 애니메이션된 속성을 모두 반환 합니다. 따라서 사용자를 단추 밖 포인터를 움직이면 단추가 돌아갑니다를 단추 위로 마우스 포인터를 이동 하기 전의 방식. 애니메이션에 대 한 자세한 내용은 참조 하세요. [애니메이션 개요](../graphics-multimedia/animation-overview.md)합니다.  
   
 5.  **단추를 클릭 하는 경우에 대 한 애니메이션을 추가 합니다.** 마지막 단계는 사용자가 단추를 클릭에 대 한 트리거를 추가 하는 것입니다. 내에 다음 태그를 추가 합니다 `ControlTemplate.Triggers` 블록:  
   
@@ -432,8 +432,8 @@ ms.locfileid: "54606785"
 -   사용자 작업에 대 한 응답에 있는 단추에 대 한 동작을 사용자 지정 (같은 <xref:System.Windows.UIElement.MouseEnter>, <xref:System.Windows.UIElement.MouseLeave>, 및 <xref:System.Windows.Controls.Primitives.ButtonBase.Click>) 애니메이션 효과 포함 하는 합니다.  
   
 ## <a name="see-also"></a>참고자료
-- [Microsoft Expression Blend를 사용하여 단추 만들기](../../../../docs/framework/wpf/controls/walkthrough-create-a-button-by-using-microsoft-expression-blend.md)
-- [스타일 지정 및 템플릿](../../../../docs/framework/wpf/controls/styling-and-templating.md)
-- [애니메이션 개요](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)
-- [단색 및 그라데이션을 사용한 그리기 개요](../../../../docs/framework/wpf/graphics-multimedia/painting-with-solid-colors-and-gradients-overview.md)
-- [비트맵 효과 개요](../../../../docs/framework/wpf/graphics-multimedia/bitmap-effects-overview.md)
+- [Microsoft Expression Blend를 사용하여 단추 만들기](walkthrough-create-a-button-by-using-microsoft-expression-blend.md)
+- [스타일 지정 및 템플릿](styling-and-templating.md)
+- [애니메이션 개요](../graphics-multimedia/animation-overview.md)
+- [단색 및 그라데이션을 사용한 그리기 개요](../graphics-multimedia/painting-with-solid-colors-and-gradients-overview.md)
+- [비트맵 효과 개요](../graphics-multimedia/bitmap-effects-overview.md)

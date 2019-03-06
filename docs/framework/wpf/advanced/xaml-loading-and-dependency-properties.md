@@ -9,12 +9,12 @@ helpviewer_keywords:
 - dependency properties [WPF], XAML loading and
 - loading XML data [WPF]
 ms.assetid: 6eea9f4e-45ce-413b-a266-f08238737bf2
-ms.openlocfilehash: 3cce6e09cd2dbb02a07487ade781b03406fcad96
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ed608a658b5077a20ed56419c4ac731641610e3d
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54580280"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57373077"
 ---
 # <a name="xaml-loading-and-dependency-properties"></a>XAML 로드 및 종속성 속성
 현재 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 프로세서에서 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]를 구현할 때는 기본적으로 종속성 속성을 인식합니다. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 프로세서는 이진 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]을 로드하고 종속성 속성인 특성을 처리할 때 종속성 속성에 대해 속성 시스템 메서드를 사용합니다. 이렇게 하면 속성 래퍼를 효과적으로 우회할 수 있습니다. 사용자 지정 종속성 속성을 구현 하면이 동작에 대해 고려해 야 하 속성 시스템 메서드 이외의 속성 래퍼에 다른 코드를 배치 하지 말아야 <xref:System.Windows.DependencyObject.GetValue%2A> 고 <xref:System.Windows.DependencyObject.SetValue%2A>입니다.  
@@ -22,7 +22,7 @@ ms.locfileid: "54580280"
   
 <a name="prerequisites"></a>   
 ## <a name="prerequisites"></a>전제 조건  
- 이 항목에서는 사용자가 소비자와 작성자의 입장에서 종속성 속성을 이해하고 있으며 [종속성 속성 개요](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md) 및 [사용자 지정 종속성 속성](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md)을 읽었다고 가정합니다. 또한 [XAML 개요(WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md) 및 [XAML 구문 정보](../../../../docs/framework/wpf/advanced/xaml-syntax-in-detail.md)도 읽어야 합니다.  
+ 이 항목에서는 사용자가 소비자와 작성자의 입장에서 종속성 속성을 이해하고 있으며 [종속성 속성 개요](dependency-properties-overview.md) 및 [사용자 지정 종속성 속성](custom-dependency-properties.md)을 읽었다고 가정합니다. 또한 [XAML 개요(WPF)](xaml-overview-wpf.md) 및 [XAML 구문 정보](xaml-syntax-in-detail.md)도 읽어야 합니다.  
   
 <a name="implementation"></a>   
 ## <a name="the-wpf-xaml-loader-implementation-and-performance"></a>WPF XAML 로더 구현 및 성능  
@@ -38,13 +38,13 @@ ms.locfileid: "54580280"
   
  다음 예제는 래퍼에 권장되는 종속성 속성 정의로서, 여기서 속성 식별자는 `public` `static` `readonly` 필드로 저장되고 `get` 및 `set` 정의에는 종속성 속성 백업을 정의하는 필수 속성 시스템 메서드 이외의 코드는 포함되어 있지 않습니다.  
   
- [!code-csharp[WPFAquariumSln#AGWithWrapper](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WPFAquariumSln/CSharp/WPFAquariumObjects/Class1.cs#agwithwrapper)]
- [!code-vb[WPFAquariumSln#AGWithWrapper](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WPFAquariumSln/visualbasic/wpfaquariumobjects/class1.vb#agwithwrapper)]  
+ [!code-csharp[WPFAquariumSln#AGWithWrapper](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFAquariumSln/CSharp/WPFAquariumObjects/Class1.cs#agwithwrapper)]
+ [!code-vb[WPFAquariumSln#AGWithWrapper](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WPFAquariumSln/visualbasic/wpfaquariumobjects/class1.vb#agwithwrapper)]  
   
 ## <a name="see-also"></a>참고자료
-- [종속성 속성 개요](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)
-- [XAML 개요(WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)
-- [종속성 속성 메타데이터](../../../../docs/framework/wpf/advanced/dependency-property-metadata.md)
-- [컬렉션 형식 종속성 속성](../../../../docs/framework/wpf/advanced/collection-type-dependency-properties.md)
-- [종속성 속성 보안](../../../../docs/framework/wpf/advanced/dependency-property-security.md)
-- [DependencyObjects의 안전한 생성자 패턴](../../../../docs/framework/wpf/advanced/safe-constructor-patterns-for-dependencyobjects.md)
+- [종속성 속성 개요](dependency-properties-overview.md)
+- [XAML 개요(WPF)](xaml-overview-wpf.md)
+- [종속성 속성 메타데이터](dependency-property-metadata.md)
+- [컬렉션 형식 종속성 속성](collection-type-dependency-properties.md)
+- [종속성 속성 보안](dependency-property-security.md)
+- [DependencyObjects의 안전한 생성자 패턴](safe-constructor-patterns-for-dependencyobjects.md)

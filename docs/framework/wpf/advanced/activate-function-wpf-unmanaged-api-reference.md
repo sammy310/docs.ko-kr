@@ -8,12 +8,12 @@ api_name:
 api_location:
 - PresentationHost_v0400.dll
 ms.assetid: 1400329c-b598-465f-80f2-e3dabf044811
-ms.openlocfilehash: 4e79b74dc8bb7d57125c27e17e8f52d607fffcf1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6410b05a1b858a7b75c9bff3220d47505beabd7c
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54722005"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57357276"
 ---
 # <a name="activate-function-wpf-unmanaged-api-reference"></a>Activate 함수 (F 관리 되지 않는 API 참조)
 이 API는 Windows Presentation Foundation (WPF) 인프라를 지원 하며 코드에서 직접 사용할 수 없습니다.  
@@ -37,7 +37,7 @@ void Activate(
  에 대 한 포인터를 포함 하는 단일 요소 버퍼의 주소에 대 한 포인터를 <xref:Microsoft.VisualStudio.OLE.Interop.IOleDocument> 개체입니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** 참조 [.NET Framework 시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)합니다.  
+ **플랫폼:** 참조 [.NET Framework 시스템 요구 사항](../../get-started/system-requirements.md)합니다.  
   
  **DLL:**  
   
@@ -48,4 +48,4 @@ void Activate(
  **.NET framework 버전:** [!INCLUDE[net_current_v30plus](../../../../includes/net-current-v30plus-md.md)]  
   
 ## <a name="see-also"></a>참고자료
-- [F 관리되지 않는 API 참조](../../../../docs/framework/wpf/advanced/wpf-unmanaged-api-reference.md)
+- [F 관리되지 않는 API 참조](wpf-unmanaged-api-reference.md)

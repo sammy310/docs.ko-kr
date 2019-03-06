@@ -10,12 +10,12 @@ helpviewer_keywords:
 - XAML browser applications (XBAP)
 - browser-hosted applications [WPF]
 ms.assetid: 3a7a86a8-75d5-4898-96b9-73da151e5e16
-ms.openlocfilehash: 04bfc2df15829b63e6f2541eb95a4dd14836744c
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
+ms.openlocfilehash: 6229e7fff4171f04d35bbc5be0596526f513191a
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56747021"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57370191"
 ---
 # <a name="wpf-xaml-browser-applications-overview"></a>WPF XAML 브라우저 애플리케이션 개요
 <a name="introduction"></a>
@@ -37,10 +37,10 @@ ms.locfileid: "56747021"
 ## <a name="creating-a-new-xaml-browser-application-xbap"></a>새 XBAP(XAML 브라우저 애플리케이션) 만들기  
  새 XBAP 프로젝트를 만드는 가장 간단한 방법은 Microsoft Visual Studio를 사용 하 여 합니다. 새 프로젝트를 만들려면 템플릿 목록에서 **WPF 브라우저 애플리케이션**을 선택합니다. 자세한 내용은 [방법: 새 WPF 브라우저 응용 프로그램 프로젝트 만들기](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/bb628663(v=vs.100))합니다.  
   
- XBAP 프로젝트를 실행하면 독립 실행형 창이 아닌 브라우저 창에서 열립니다. Visual Studio에서 XBAP를 디버깅 하면 응용 프로그램이 인터넷 영역 권한으로 실행 되 고 해당 권한을 초과 하는 경우에 따라서 보안 예외를 throw 합니다. 자세한 내용은 [보안](../../../../docs/framework/wpf/security-wpf.md) 및 [WPF 부분 신뢰 보안](../../../../docs/framework/wpf/wpf-partial-trust-security.md)을 참조하세요.  
+ XBAP 프로젝트를 실행하면 독립 실행형 창이 아닌 브라우저 창에서 열립니다. Visual Studio에서 XBAP를 디버깅 하면 응용 프로그램이 인터넷 영역 권한으로 실행 되 고 해당 권한을 초과 하는 경우에 따라서 보안 예외를 throw 합니다. 자세한 내용은 [보안](../security-wpf.md) 및 [WPF 부분 신뢰 보안](../wpf-partial-trust-security.md)을 참조하세요.  
   
 > [!NOTE]
->  Visual Studio 또는 원하는 프로젝트 파일에 자세히 알아보려면 개발 하지 않는 경우 참조 [WPF 응용 프로그램 빌드](../../../../docs/framework/wpf/app-development/building-a-wpf-application-wpf.md)합니다.  
+>  Visual Studio 또는 원하는 프로젝트 파일에 자세히 알아보려면 개발 하지 않는 경우 참조 [WPF 응용 프로그램 빌드](building-a-wpf-application-wpf.md)합니다.  
   
 <a name="deploying_a_xbap"></a>   
 ## <a name="deploying-an-xbap"></a>XBAP 배포  
@@ -52,7 +52,7 @@ ms.locfileid: "56747021"
 |애플리케이션 매니페스트(.manifest)|애플리케이션과 연결된 메타데이터가 포함되며 확장명이 .manifest입니다.|  
 |배포 매니페스트(.xbap)|이 파일에는 ClickOnce 응용 프로그램을 배포 하기 위해 사용 하 고 확장명이.xbap 정보를 포함 합니다.|  
   
- XBAP를 웹 서버에 배포합니다(예: [!INCLUDE[TLA#tla_iis50](../../../../includes/tlasharptla-iis50-md.md)] 이상 버전). 웹 서버에.NET Framework 설치 필요는 없지만 등록 해야 합니다 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] [!INCLUDE[TLA#tla_mime](../../../../includes/tlasharptla-mime-md.md)] 형식 및 파일 이름 확장명입니다. 자세한 내용은 [IIS 5.0 및 IIS 6.0을 구성하여 WPF 애플리케이션 배포](../../../../docs/framework/wpf/app-development/how-to-configure-iis-5-0-and-iis-6-0-to-deploy-wpf-applications.md)를 참조하세요.  
+ XBAP를 웹 서버에 배포합니다(예: [!INCLUDE[TLA#tla_iis50](../../../../includes/tlasharptla-iis50-md.md)] 이상 버전). 웹 서버에.NET Framework 설치 필요는 없지만 등록 해야 합니다 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] [!INCLUDE[TLA#tla_mime](../../../../includes/tlasharptla-mime-md.md)] 형식 및 파일 이름 확장명입니다. 자세한 내용은 [IIS 5.0 및 IIS 6.0을 구성하여 WPF 애플리케이션 배포](how-to-configure-iis-5-0-and-iis-6-0-to-deploy-wpf-applications.md)를 참조하세요.  
   
  배포를 위해 XBAP를 준비하려면 .exe 및 연결된 매니페스트를 웹 서버에 복사합니다. 확장명이 .xbap인 파일인 배포 매니페스트를 여는 하이퍼링크가 포함된 HTML 페이지를 만듭니다. 사용자가.xbap 파일에 대 한 링크를 클릭 하면 ClickOnce는 자동으로 다운로드 하 고 응용 프로그램 시작에 대 한 메커니즘을 처리 합니다. 다음 예제 코드는 XBAP를 가리키는 하이퍼링크가 포함된 HTML 페이지를 보여 줍니다.  
   
@@ -88,14 +88,14 @@ ms.locfileid: "56747021"
  Mage.exe -cc
  ```
   
- 이 명령은 최신 버전의 XBAP가 시작되도록 보장해 줍니다. Visual Studio에서 응용 프로그램을 디버깅할 때는 최신 버전의 XBAP 시작 해야 합니다. 일반적으로 배포 시마다 배포 버전 번호를 업데이트합니다. Mage에 자세한 내용은 [Mage.exe(매니페스트 생성 및 편집 도구)](../../../../docs/framework/tools/mage-exe-manifest-generation-and-editing-tool.md)를 참조하세요.  
+ 이 명령은 최신 버전의 XBAP가 시작되도록 보장해 줍니다. Visual Studio에서 응용 프로그램을 디버깅할 때는 최신 버전의 XBAP 시작 해야 합니다. 일반적으로 배포 시마다 배포 버전 번호를 업데이트합니다. Mage에 자세한 내용은 [Mage.exe(매니페스트 생성 및 편집 도구)](../../tools/mage-exe-manifest-generation-and-editing-tool.md)를 참조하세요.  
   
 <a name="communicating_with_the_host_web_page"></a>   
 ## <a name="communicating-with-the-host-web-page"></a>호스트 웹 페이지와 통신  
  애플리케이션이 HTML 프레임에서 호스팅되는 경우 XBAP가 포함된 웹 페이지와 통신할 수 있습니다. 검색 하 여이 작업을 수행 합니다 <xref:System.Windows.Interop.BrowserInteropHelper.HostScript%2A> 속성의 <xref:System.Windows.Interop.BrowserInteropHelper>합니다. 이 속성은 HTML 창을 나타내는 스크립트 개체를 반환합니다. 그런 다음 정규 점(dot) 구문을 사용하여 [창 개체](https://go.microsoft.com/fwlink/?LinkId=160274)에서 속성, 메서드 및 이벤트에 액세스할 수 있습니다. 또한 스크립트 메서드 및 전역 변수에도 액세스할 수 있습니다. 다음 예제에서는 스크립트 개체를 검색하고 브라우저를 닫는 방법을 보여 줍니다.  
   
- [!code-csharp[XbapBrowserInterop#10](../../../../samples/snippets/csharp/VS_Snippets_Wpf/xbapbrowserinterop/cs/page1.xaml.cs#10)]
- [!code-vb[XbapBrowserInterop#10](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/xbapbrowserinterop/vb/page1.xaml.vb#10)]  
+ [!code-csharp[XbapBrowserInterop#10](~/samples/snippets/csharp/VS_Snippets_Wpf/xbapbrowserinterop/cs/page1.xaml.cs#10)]
+ [!code-vb[XbapBrowserInterop#10](~/samples/snippets/visualbasic/VS_Snippets_Wpf/xbapbrowserinterop/vb/page1.xaml.vb#10)]  
   
 ### <a name="debugging-xbaps-that-use-hostscript"></a>HostScript를 사용하는 XBAP 디버깅  
  XBAP를 사용 하는 경우는 <xref:System.Windows.Interop.BrowserInteropHelper.HostScript%2A> 개체를 실행 하 고 Visual Studio에서 응용 프로그램을 디버깅할 지정 해야 하는 두 설정이 HTML 창과 통신 합니다. 애플리케이션은 원본 사이트에 대한 액세스 권한이 있어야 하고 XBAP가 포함된 HTML 페이지로 애플리케이션을 시작해야 합니다. 다음 단계는 이러한 두 설정을 확인하는 방법을 설명합니다.  
@@ -127,11 +127,11 @@ ms.locfileid: "56747021"
   
 <a name="xbap_security_considerations"></a>   
 ## <a name="xbap-security-considerations"></a>XBAP 보안 고려 사항  
- 일반적으로 XBAP는 인터넷 영역 권한 설정으로 제한된 부분 신뢰 보안 샌드박스에서 실행됩니다. 따라서 인터넷 영역에서 지원 되는 WPF 요소의 하위 집합을 지원 하도록 구현 하거나 응용 프로그램의 권한을 높여야 합니다. 자세한 내용은 [보안](../../../../docs/framework/wpf/security-wpf.md)을 참조하세요.  
+ 일반적으로 XBAP는 인터넷 영역 권한 설정으로 제한된 부분 신뢰 보안 샌드박스에서 실행됩니다. 따라서 인터넷 영역에서 지원 되는 WPF 요소의 하위 집합을 지원 하도록 구현 하거나 응용 프로그램의 권한을 높여야 합니다. 자세한 내용은 [보안](../security-wpf.md)을 참조하세요.  
   
  사용 하는 경우는 <xref:System.Windows.Controls.WebBrowser> WPF 응용 프로그램에서 컨트롤 원시 WebBrowser ActiveX 컨트롤을 내부적으로 인스턴스화합니다. 애플리케이션이 Internet Explorer에서 실행되는 부분 신뢰 XBAP인 경우 ActiveX 컨트롤은 Internet Explorer 프로세스의 전용 스레드에서 실행됩니다. 따라서 다음 제한 사항이 적용됩니다.  
   
--   <xref:System.Windows.Controls.WebBrowser> 컨트롤 보안 제한 사항을 포함 하 여 호스트 브라우저와 유사한 동작을 제공 해야 합니다. 이러한 보안 제한 사항 중 일부는 Internet Explorer 보안 설정을 통해 제어할 수 있습니다. 자세한 내용은 [보안](../../../../docs/framework/wpf/security-wpf.md)을 참조하세요.  
+-   <xref:System.Windows.Controls.WebBrowser> 컨트롤 보안 제한 사항을 포함 하 여 호스트 브라우저와 유사한 동작을 제공 해야 합니다. 이러한 보안 제한 사항 중 일부는 Internet Explorer 보안 설정을 통해 제어할 수 있습니다. 자세한 내용은 [보안](../security-wpf.md)을 참조하세요.  
   
 -   XBAP가 HTML 페이지의 도메인 간에 로드되면 예외가 throw됩니다.  
   
@@ -187,5 +187,5 @@ ms.locfileid: "56747021"
  또한 ClickOnce 다운로드 시퀀스의 동시성을 향상 된 시작 시간이 10%까지 향상 됩니다. ClickOnce 다운로드 하 고 유효성을 검사 한 후 매니페스트, 응용 프로그램 다운로드가 시작 되 고 진행률 표시줄을 업데이트 하기 시작 합니다.  
   
 ## <a name="see-also"></a>참고자료
-- [Visual Studio를 구성하여 웹 서비스를 호출하는 XAML 브라우저 응용 프로그램 디버깅](../../../../docs/framework/wpf/app-development/configure-vs-to-debug-a-xaml-browser-to-call-a-web-service.md)
-- [WPF 응용 프로그램 배포](../../../../docs/framework/wpf/app-development/deploying-a-wpf-application-wpf.md)
+- [Visual Studio를 구성하여 웹 서비스를 호출하는 XAML 브라우저 응용 프로그램 디버깅](configure-vs-to-debug-a-xaml-browser-to-call-a-web-service.md)
+- [WPF 응용 프로그램 배포](deploying-a-wpf-application-wpf.md)

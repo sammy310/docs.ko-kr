@@ -8,12 +8,12 @@ helpviewer_keywords:
 - printing XPS files programmatically [WPF]
 - XPS files [WPF], printing programmatically
 ms.assetid: 0b1c0a3f-b19e-43d6-bcc9-eb3ec4e555ad
-ms.openlocfilehash: 53cc58b3e30b91e8694a8090f3cc85cf0b3c0af6
-ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
+ms.openlocfilehash: c00a12000dd10ba32bd550186377547b3ef72d25
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "56442921"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57372726"
 ---
 # <a name="how-to-programmatically-print-xps-files"></a>방법: 프로그래밍 방식으로 XPS 파일 인쇄
 한 오버 로드를 사용할 수는 <xref:System.Printing.PrintQueue.AddJob%2A> 인쇄 하는 방법 [!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)] 열지 않고 파일을 <xref:System.Windows.Controls.PrintDialog> 또는 원칙적으로 모든 [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] 전혀 합니다.  
@@ -43,8 +43,8 @@ ms.locfileid: "56442921"
   
  예제의 핵심은 `static`**BatchXPSPrinter.PrintXPS** 메서드에 있습니다. 인쇄 서버와 인쇄 대기열을 만든 후에 메서드는 사용자에게 [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] 파일을 포함하는 디렉터리를 묻는 메시지를 표시합니다. 디렉터리의 존재 및 유효성 검사 후 \*에.xps 파일, 인쇄 큐에 있는 이러한 각 파일을 추가 하는 메서드. 이 예제에서는 프린터가 XPSDrv가 아니라고 전달 하므로 가정 `false` 의 마지막 매개 변수에 <xref:System.Printing.PrintQueue.AddJob%28System.String%2CSystem.String%2CSystem.Boolean%29> 메서드. 이런 이유로 메서드는 프린터의 페이지 설명 언어로 변환하도록 시도하기 전에 파일에서 [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] 표시의 유효성을 검사합니다. 유효성 검사에 실패하면 예외가 throw됩니다. 예제 코드는 예외를 catch하고 사용자에게 알린 후에 계속해서 [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] 파일을 처리합니다.  
   
- [!code-csharp[BatchPrintXPSFiles#BatchPrintXPSFiles](../../../../samples/snippets/csharp/VS_Snippets_Wpf/BatchPrintXPSFiles/CSharp/Program.cs#batchprintxpsfiles)]
- [!code-vb[BatchPrintXPSFiles#BatchPrintXPSFiles](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/BatchPrintXPSFiles/visualbasic/program.vb#batchprintxpsfiles)]  
+ [!code-csharp[BatchPrintXPSFiles#BatchPrintXPSFiles](~/samples/snippets/csharp/VS_Snippets_Wpf/BatchPrintXPSFiles/CSharp/Program.cs#batchprintxpsfiles)]
+ [!code-vb[BatchPrintXPSFiles#BatchPrintXPSFiles](~/samples/snippets/visualbasic/VS_Snippets_Wpf/BatchPrintXPSFiles/visualbasic/program.vb#batchprintxpsfiles)]  
   
  XPSDrv 프린터를 사용하는 경우 마지막 매개 변수를 `true`로 설정할 수 있습니다. 이 경우에 [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)]가 프린터의 페이지 설명 언어이므로 메서드는 유효성을 검사하거나 다른 페이지 설명 언어로 변환하지 않고 파일을 프린터로 보냅니다. 확실 하지 않은 디자인 타임에 있는지 여부는 응용 프로그램 사용 XPSDrv 프린터를 응용 프로그램을 수정할 수 있습니다는 <xref:System.Printing.PrintQueue.IsXpsDevice%2A> 속성 및 내용에 따라 분기 합니다.  
   

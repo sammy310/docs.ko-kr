@@ -6,16 +6,16 @@ helpviewer_keywords:
 - Win32 code [WPF], WPF interoperation
 - interoperability [WPF], Win32
 ms.assetid: 3cc8644a-34f3-4082-9ddc-77623e4df2d8
-ms.openlocfilehash: fa0457cd44304084355f3882d9fc5c82b29c4827
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9764b995cea0ba5c93625495509b7ee2dd8393ff
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54725470"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57370035"
 ---
 # <a name="hosting-win32-content-in-wpf"></a>WPF에서 Win32 콘텐츠 호스팅
 ## <a name="prerequisites"></a>전제 조건  
- 참조 [WPF 및 Win32 상호 운용성](../../../../docs/framework/wpf/advanced/wpf-and-win32-interoperation.md)합니다.  
+ 참조 [WPF 및 Win32 상호 운용성](wpf-and-win32-interoperation.md)합니다.  
   
 ## <a name="a-walkthrough-of-win32-inside-windows-presentation-framework-hwndhost"></a>Windows Presentation Framework (HwndHost) 내에서 win32 연습  
  다시 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 내의 콘텐츠 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 응용 프로그램을 사용 하 여 <xref:System.Windows.Interop.HwndHost>, Hwnd 같이 하는 컨트롤인 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 콘텐츠입니다.  같은 <xref:System.Windows.Interop.HwndSource>, <xref:System.Windows.Interop.HwndHost> 사용 하기는 간단 하지만:에서 파생 <xref:System.Windows.Interop.HwndHost> 하 고 구현 `BuildWindowCore` 및 `DestroyWindowCore` 메서드를 인스턴스화할에 <xref:System.Windows.Interop.HwndHost> 클래스를 파생 하 고 내부에 배치 프로그램 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 응용 프로그램입니다.  
@@ -357,7 +357,7 @@ public partial class Window1 : Window {
   
  하면:  
   
- ![WPF 응용 프로그램 스크린 샷](../../../../docs/framework/wpf/advanced/media/interoparch09.PNG "InteropArch09")  
+ ![WPF 응용 프로그램 스크린 샷](./media/interoparch09.PNG "InteropArch09")  
   
 ## <a name="see-also"></a>참고자료
-- [WPF 및 Win32 상호 운용성](../../../../docs/framework/wpf/advanced/wpf-and-win32-interoperation.md)
+- [WPF 및 Win32 상호 운용성](wpf-and-win32-interoperation.md)

@@ -9,15 +9,15 @@ helpviewer_keywords:
 - styles [WPF], DataGrid
 - parts [WPF], DataGrid
 ms.assetid: 9cb31d63-f148-4d25-b079-816e73f988c7
-ms.openlocfilehash: 1a8eb1acf1143c31197ef12e4be3bd4451d98eaf
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 582179d8469cabc3551e1bed53c87e045f26e7cf
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54685440"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57366077"
 ---
 # <a name="datagrid-styles-and-templates"></a>DataGrid 스타일 및 템플릿
-이 항목에서는 스타일 및 템플릿에 대해 설명 합니다 <xref:System.Windows.Controls.DataGrid> 제어 합니다. 기본값을 수정할 수 있습니다 <xref:System.Windows.Controls.ControlTemplate> 고유한 모양을 제어할 수 있습니다. 자세한 내용은 [ControlTemplate을 만들어 기존 컨트롤의 모양 사용자 지정](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md)을 참조하세요.  
+이 항목에서는 스타일 및 템플릿에 대해 설명 합니다 <xref:System.Windows.Controls.DataGrid> 제어 합니다. 기본값을 수정할 수 있습니다 <xref:System.Windows.Controls.ControlTemplate> 고유한 모양을 제어할 수 있습니다. 자세한 내용은 [ControlTemplate을 만들어 기존 컨트롤의 모양 사용자 지정](customizing-the-appearance-of-an-existing-control.md)을 참조하세요.  
   
 ## <a name="datagrid-parts"></a>DataGrid 파트  
  다음 표에서 대 한 명명된 된 파트를 <xref:System.Windows.Controls.DataGrid> 제어 합니다.  
@@ -28,7 +28,7 @@ ms.locfileid: "54685440"
   
  만들 때를 <xref:System.Windows.Controls.ControlTemplate> 에 대 한는 <xref:System.Windows.Controls.DataGrid>, 템플릿에 포함 될 수 있습니다는 <xref:System.Windows.Controls.ItemsPresenter> 내는 <xref:System.Windows.Controls.ScrollViewer>합니다. (합니다 <xref:System.Windows.Controls.ItemsPresenter> 에 각 항목을 표시 합니다 <xref:System.Windows.Controls.DataGrid>, <xref:System.Windows.Controls.ScrollViewer> 컨트롤 내에서 스크롤을 사용할 수)입니다.  경우는 <xref:System.Windows.Controls.ItemsPresenter> 의 직접 자식이 아닌 합니다 <xref:System.Windows.Controls.ScrollViewer>, 부여 해야 합니다는 <xref:System.Windows.Controls.ItemsPresenter> 이름 `ItemsPresenter`합니다.  
   
- 기본 템플릿에 <xref:System.Windows.Controls.DataGrid> 포함을 <xref:System.Windows.Controls.ScrollViewer> 제어 합니다. 정의 된 요소에 대 한 자세한 합니다 <xref:System.Windows.Controls.ScrollViewer>를 참조 하세요 [ScrollViewer 스타일 및 템플릿](../../../../docs/framework/wpf/controls/scrollviewer-styles-and-templates.md)합니다.  
+ 기본 템플릿에 <xref:System.Windows.Controls.DataGrid> 포함을 <xref:System.Windows.Controls.ScrollViewer> 제어 합니다. 정의 된 요소에 대 한 자세한 합니다 <xref:System.Windows.Controls.ScrollViewer>를 참조 하세요 [ScrollViewer 스타일 및 템플릿](scrollviewer-styles-and-templates.md)합니다.  
   
 ## <a name="datagrid-states"></a>DataGrid 상태  
  다음 표에서 대 한 시각적 상태를 <xref:System.Windows.Controls.DataGrid> 제어 합니다.  
@@ -161,18 +161,18 @@ ms.locfileid: "54685440"
 ## <a name="datagrid-controltemplate-example"></a>DataGrid ControlTemplate 예제  
  다음 예제에서는 정의 하는 방법을 보여 줍니다는 <xref:System.Windows.Controls.ControlTemplate> 에 대 한는 <xref:System.Windows.Controls.DataGrid> 컨트롤과 연결 된 해당 형식입니다.  
   
- [!code-xaml[ControlTemplateExamples#DataGrid](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/datagrid.xaml#datagrid)]  
+ [!code-xaml[ControlTemplateExamples#DataGrid](~/samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/datagrid.xaml#datagrid)]  
   
  앞의 예제에서는 다음 리소스를 하나 이상 사용합니다.  
   
- [!code-xaml[ControlTemplateExamples#Resources](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/shared.xaml#resources)]  
+ [!code-xaml[ControlTemplateExamples#Resources](~/samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/shared.xaml#resources)]  
   
  전체 샘플을 보려면 [Styling with ControlTemplates Sample](https://github.com/Microsoft/WPF-Samples/tree/master/Styles%20&%20Templates/IntroToStylingAndTemplating)(ControlTemplate으로 스타일 지정 샘플)을 참조하세요.  
   
 ## <a name="see-also"></a>참고자료
 - <xref:System.Windows.FrameworkElement.Style%2A>
 - <xref:System.Windows.Controls.ControlTemplate>
-- [Control 스타일 및 템플릿](../../../../docs/framework/wpf/controls/control-styles-and-templates.md)
-- [컨트롤 사용자 지정](../../../../docs/framework/wpf/controls/control-customization.md)
-- [스타일 지정 및 템플릿](../../../../docs/framework/wpf/controls/styling-and-templating.md)
-- [ControlTemplate을 만들어 기존 컨트롤의 모양 사용자 지정](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md)
+- [Control 스타일 및 템플릿](control-styles-and-templates.md)
+- [컨트롤 사용자 지정](control-customization.md)
+- [스타일 지정 및 템플릿](styling-and-templating.md)
+- [ControlTemplate을 만들어 기존 컨트롤의 모양 사용자 지정](customizing-the-appearance-of-an-existing-control.md)

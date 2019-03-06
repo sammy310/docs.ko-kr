@@ -16,21 +16,21 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 420a02d2f7757c52d6e8ff92a9ca30e44938cd18
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8bef18468ef02e37b857316cd9fa2bf4cf5f9e9b
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54546441"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57369338"
 ---
 # <a name="formatfromrawvalue-function"></a>FormatFromRawValue 함수
-형식 변환이 시간 기반인 경우 하나의 원시 성능 데이터 값을 지정된 형식으로 변화하거나 두 개의 원시 성능 데이터 값으로 변환합니다.   
-  
+형식 변환이 시간 기반인 경우 하나의 원시 성능 데이터 값을 지정된 형식으로 변화하거나 두 개의 원시 성능 데이터 값으로 변환합니다. 
+
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
-  
-## <a name="syntax"></a>구문  
-  
-```  
+
+## <a name="syntax"></a>구문
+
+```
 int FormatFromRawValue (
    [in] uint                    dwCounterType, 
    [in] uint                    dwFormat, 
@@ -39,14 +39,14 @@ int FormatFromRawValue (
    [in] PDH_RAW_COUNTER*        pRawValue2,
    [out] PDH_FMT_COUNTERVALUE*  pFmtValue
 ); 
-```  
+```
 
 ## <a name="parameters"></a>매개 변수
 
-`dwCounterType`  
+`dwCounterType`\
 [in] 카운터 형식입니다. 카운터 형식 목록을 참조 하세요 [WMI 성능 카운터 형식](/windows/desktop/WmiSdk/wmi-performance-counter-types)합니다. `dwCounterType` 제외 하 고 카운터 형식일 수 있습니다 `PERF_LARGE_RAW_FRACTION` 고 `PERF_LARGE_RAW_BASE`입니다. 
 
-`dwFormat`  
+`dwFormat`\
 [in] 원시 성능 데이터를 변환할 대상 형식입니다. 다음 값 중 하나일 수 있습니다.
 
 |상수  |값  |설명 |
@@ -62,14 +62,16 @@ int FormatFromRawValue (
 | `PDH_FMT_NOSCALE` | 0x00001000 | 카운터의 배율 적용 되지 않습니다. |
 | `PDH_FMT_1000` | 0x00002000 | 1,000 최종 값을 곱하십시오. | 
 
-`pTimeBase`  
+`pTimeBase`\
 [in] 기본 시간을 형식으로 변환 하는 데 필요한 경우에 대 한 포인터입니다. 시간 기본 정보, 형식 변환에 대 한 필요가 없는 경우이 매개 변수의 값은 무시 됩니다.
 
-`pRawValue1` [in] 에 대 한 포인터를 [ `PDH_RAW_COUNTER` ](/windows/desktop/api/pdh/ns-pdh-_pdh_raw_counter) 원시 성능 값을 나타내는 구조체입니다.
+`pRawValue1`\ [in]에 대 한 포인터를 [ `PDH_RAW_COUNTER` ](/windows/desktop/api/pdh/ns-pdh-_pdh_raw_counter) 원시 성능 값을 나타내는 구조체입니다.
 
-`pRawValue2` [in] 에 대 한 포인터를 [ `PDH_RAW_COUNTER` ](/windows/desktop/api/pdh/ns-pdh-_pdh_raw_counter) 두 번째 원시 성능 값을 나타내는 구조체입니다. 두 번째 원시 성능 값이 필요한 경우이 매개 변수 여야 합니다 `null`합니다.
+`pRawValue2`\
+[in] 에 대 한 포인터를 [ `PDH_RAW_COUNTER` ](/windows/desktop/api/pdh/ns-pdh-_pdh_raw_counter) 두 번째 원시 성능 값을 나타내는 구조체입니다. 두 번째 원시 성능 값이 필요한 경우이 매개 변수 여야 합니다 `null`합니다.
 
-`pFmtValue` [out] 에 대 한 포인터를 [ `PDH_FMT_COUNTERVALUE` ](/windows/desktop/api/pdh/ns-pdh-_pdh_fmt_countervalue) 구조체 형식이 지정 된 성능 값입니다.
+`pFmtValue`\
+[out] 에 대 한 포인터를 [ `PDH_FMT_COUNTERVALUE` ](/windows/desktop/api/pdh/ns-pdh-_pdh_fmt_countervalue) 구조체 형식이 지정 된 성능 값입니다.
 
 ## <a name="return-value"></a>반환 값
 
@@ -80,17 +82,19 @@ int FormatFromRawValue (
 | `ERROR_SUCCESS` | 0 | 함수 호출에 성공 했습니다. |
 | `PDH_INVALID_ARGUMENT` | 0xC0000BBD | 필수 인수가 누락 되었거나 잘못 되었습니다. | 
 | `PDH_INVALID_HANDLE` | 0xC0000BBC | 핸들이 올바른 PDH 개체가 아닙니다. |
-  
+
 ## <a name="remarks"></a>설명
 
 이 함수에 대 한 호출을 래핑하는 [FormatFromRawValue](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.0/ms231047%28v=vs.85%29) 함수입니다.
 
-## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
-  
- **라이브러리:** PerfCounter.dll  
-  
- **.NET Framework 버전:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
-  
+## <a name="requirements"></a>요구 사항
+
+ **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.
+
+ **라이브러리:** PerfCounter.dll
+
+ **.NET Framework 버전:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
+
 ## <a name="see-also"></a>참고자료
+
 - [WMI 및 성능 카운터 (관리 되지 않는 API 참조)](index.md)

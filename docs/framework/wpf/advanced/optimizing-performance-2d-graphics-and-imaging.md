@@ -12,12 +12,12 @@ helpviewer_keywords:
 - 2-D graphics [WPF]
 - images [WPF], optimizing performance
 ms.assetid: e335601e-28c8-4d64-ba27-778fffd55f72
-ms.openlocfilehash: d138f7ebc6fe62f03cd80189185c8ba73d3a2006
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6ec03775f42e7f7a60d182eba134f9e1f7ba8466
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54630816"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57371400"
 ---
 # <a name="optimizing-performance-2d-graphics-and-imaging"></a>성능 최적화: 2차원 그래픽 및 이미징
 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]는 응용 프로그램 요구 사항에 맞게 최적화할 수 있는 다양한 범위의 2D 그래픽 및 이미징 기능을 제공합니다. 이 항목에서는 이러한 영역의 성능 최적화에 대한 정보를 제공합니다.  
@@ -49,7 +49,7 @@ ms.locfileid: "54630816"
   
  이후 <xref:System.Windows.Shapes.Shape> 개체에서 파생 된 <xref:System.Windows.FrameworkElement> 클래스를 사용 하는 응용 프로그램에서 메모리 사용량이 크게 증가할을 추가할 수 있습니다. 실제로 필요 하지 않은 경우는 <xref:System.Windows.FrameworkElement> 그래픽 콘텐츠에 대해 기능 보다 간단한을 사용해 <xref:System.Windows.Media.Drawing> 개체입니다.  
   
- 에 대 한 자세한 <xref:System.Windows.Media.Drawing> 개체를 참조 하세요 [Drawing 개체 개요](../../../../docs/framework/wpf/graphics-multimedia/drawing-objects-overview.md)합니다.  
+ 에 대 한 자세한 <xref:System.Windows.Media.Drawing> 개체를 참조 하세요 [Drawing 개체 개요](../graphics-multimedia/drawing-objects-overview.md)합니다.  
   
 <a name="StreamGeometry_Objects"></a>   
 ## <a name="streamgeometry-objects"></a>StreamGeometry 개체  
@@ -57,13 +57,13 @@ ms.locfileid: "54630816"
   
  다음 예제에서는 특성 구문을 사용 하 여 삼각형을 만드는 <xref:System.Windows.Media.StreamGeometry> 에서 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]합니다.  
   
- [!code-xaml[GeometriesMiscSnippets_snip#StreamGeometryTriangleExampleWholePage](../../../../samples/snippets/xaml/VS_Snippets_Wpf/GeometriesMiscSnippets_snip/XAML/StreamGeometryExample.xaml#streamgeometrytriangleexamplewholepage)]  
+ [!code-xaml[GeometriesMiscSnippets_snip#StreamGeometryTriangleExampleWholePage](~/samples/snippets/xaml/VS_Snippets_Wpf/GeometriesMiscSnippets_snip/XAML/StreamGeometryExample.xaml#streamgeometrytriangleexamplewholepage)]  
   
- 에 대 한 자세한 <xref:System.Windows.Media.StreamGeometry> 개체를 참조 하세요 [StreamGeometry를 사용 하 여 도형 만들기](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-shape-using-a-streamgeometry.md)합니다.  
+ 에 대 한 자세한 <xref:System.Windows.Media.StreamGeometry> 개체를 참조 하세요 [StreamGeometry를 사용 하 여 도형 만들기](../graphics-multimedia/how-to-create-a-shape-using-a-streamgeometry.md)합니다.  
   
 <a name="DrawingVisual_Objects"></a>   
 ## <a name="drawingvisual-objects"></a>DrawingVisual 개체  
- <xref:System.Windows.Media.DrawingVisual> 개체는 경량 그리기 클래스 도형, 이미지 또는 텍스트를 렌더링 하는 데 사용 되는 합니다. 이 클래스는 성능을 향상시키는 레이아웃이나 이벤트 처리를 제공하지 않으므로 간단한 클래스로 간주됩니다. 이러한 이유 때문에 그리기는 배경 및 클립 아트에 적합합니다. 자세한 내용은 [DrawingVisual 개체 사용](../../../../docs/framework/wpf/graphics-multimedia/using-drawingvisual-objects.md)을 참조하세요.  
+ <xref:System.Windows.Media.DrawingVisual> 개체는 경량 그리기 클래스 도형, 이미지 또는 텍스트를 렌더링 하는 데 사용 되는 합니다. 이 클래스는 성능을 향상시키는 레이아웃이나 이벤트 처리를 제공하지 않으므로 간단한 클래스로 간주됩니다. 이러한 이유 때문에 그리기는 배경 및 클립 아트에 적합합니다. 자세한 내용은 [DrawingVisual 개체 사용](../graphics-multimedia/using-drawingvisual-objects.md)을 참조하세요.  
   
 <a name="Images"></a>   
 ## <a name="images"></a>이미지  
@@ -77,15 +77,15 @@ ms.locfileid: "54630816"
   
 -   가능한 경우 여러 이미지로 구성된 필름 스트립과 같은 단일 이미지로 이미지를 결합합니다.  
   
--   자세한 내용은 [이미징 개요](../../../../docs/framework/wpf/graphics-multimedia/imaging-overview.md)를 참조하세요.  
+-   자세한 내용은 [이미징 개요](../graphics-multimedia/imaging-overview.md)를 참조하세요.  
   
 ### <a name="bitmapscalingmode"></a>BitmapScalingMode  
  비트맵의 배율에 애니메이션 효과를 주면 기본 고품질 이미지 샘플 다시 만들기 알고리즘에 시스템 리소스가 많이 사용되므로 프레임 속도가 떨어지고 애니메이션이 끊길 수 있습니다. 설정 하 여 합니다 <xref:System.Windows.Media.RenderOptions.BitmapScalingMode%2A> 의 속성을 <xref:System.Windows.Media.RenderOptions> 개체를 <xref:System.Windows.Media.BitmapScalingMode.LowQuality> 비트맵 크기를 조정할 때 보다 부드러운 애니메이션을 만들 수 있습니다. <xref:System.Windows.Media.BitmapScalingMode.LowQuality> 모드 지시를 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 이미지를 처리할 때 품질 최적화 알고리즘에서 속도 최적화 알고리즘을 전환 하려면 렌더링 엔진입니다.  
   
  다음 예제에서는 설정 하는 방법의 <xref:System.Windows.Media.BitmapScalingMode> 이미지 개체에 대 한 합니다.  
   
- [!code-csharp[RenderOptions#RenderOptionsSnippet2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/RenderOptions/CSharp/Window1.xaml.cs#renderoptionssnippet2)]
- [!code-vb[RenderOptions#RenderOptionsSnippet2](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/RenderOptions/visualbasic/window1.xaml.vb#renderoptionssnippet2)]  
+ [!code-csharp[RenderOptions#RenderOptionsSnippet2](~/samples/snippets/csharp/VS_Snippets_Wpf/RenderOptions/CSharp/Window1.xaml.cs#renderoptionssnippet2)]
+ [!code-vb[RenderOptions#RenderOptionsSnippet2](~/samples/snippets/visualbasic/VS_Snippets_Wpf/RenderOptions/visualbasic/window1.xaml.vb#renderoptionssnippet2)]  
   
 ### <a name="cachinghint"></a>CachingHint  
  기본적으로 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 의 렌더링된 된 콘텐츠를 캐시 하지 않습니다 <xref:System.Windows.Media.TileBrush> 개체와 같은 <xref:System.Windows.Media.DrawingBrush> 고 <xref:System.Windows.Media.VisualBrush>입니다. 정적 시나리오에서 있는 내용을 아니고 사용을 <xref:System.Windows.Media.TileBrush> 에서 장면 변경, 합리적이 지 비디오 메모리를 절약 하기 때문입니다. 경우 수행 하지는 <xref:System.Windows.Media.TileBrush> 정적 콘텐츠를 사용 하 여 정적이 지 않은 방식으로 사용 됩니다-등의 경우 정적 <xref:System.Windows.Media.DrawingBrush> 또는 <xref:System.Windows.Media.VisualBrush> 회전 3D 개체 표면에 매핑된. 기본 동작 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 의 콘텐츠 전체를 다시 렌더링 하는 것은 <xref:System.Windows.Media.DrawingBrush> 또는 <xref:System.Windows.Media.VisualBrush> 모든 프레임에 대 한도 콘텐츠가 변경 되지 합니다.  
@@ -96,17 +96,17 @@ ms.locfileid: "54630816"
   
  다음 예제에 대 한 캐싱 힌트 옵션을 사용 하는 방법을 보여 줍니다는 <xref:System.Windows.Media.DrawingBrush>합니다.  
   
- [!code-csharp[RenderOptions#RenderOptionsSnippet3](../../../../samples/snippets/csharp/VS_Snippets_Wpf/RenderOptions/CSharp/Window1.xaml.cs#renderoptionssnippet3)]
- [!code-vb[RenderOptions#RenderOptionsSnippet3](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/RenderOptions/visualbasic/window1.xaml.vb#renderoptionssnippet3)]  
+ [!code-csharp[RenderOptions#RenderOptionsSnippet3](~/samples/snippets/csharp/VS_Snippets_Wpf/RenderOptions/CSharp/Window1.xaml.cs#renderoptionssnippet3)]
+ [!code-vb[RenderOptions#RenderOptionsSnippet3](~/samples/snippets/visualbasic/VS_Snippets_Wpf/RenderOptions/visualbasic/window1.xaml.vb#renderoptionssnippet3)]  
   
 ## <a name="see-also"></a>참고자료
-- [WPF 응용 프로그램 성능 최적화](../../../../docs/framework/wpf/advanced/optimizing-wpf-application-performance.md)
-- [응용 프로그램 성능 계획](../../../../docs/framework/wpf/advanced/planning-for-application-performance.md)
-- [하드웨어 이용](../../../../docs/framework/wpf/advanced/optimizing-performance-taking-advantage-of-hardware.md)
-- [레이아웃 및 디자인](../../../../docs/framework/wpf/advanced/optimizing-performance-layout-and-design.md)
-- [개체 동작](../../../../docs/framework/wpf/advanced/optimizing-performance-object-behavior.md)
-- [응용 프로그램 리소스](../../../../docs/framework/wpf/advanced/optimizing-performance-application-resources.md)
-- [텍스트](../../../../docs/framework/wpf/advanced/optimizing-performance-text.md)
-- [데이터 바인딩](../../../../docs/framework/wpf/advanced/optimizing-performance-data-binding.md)
-- [기타 성능 권장 사항](../../../../docs/framework/wpf/advanced/optimizing-performance-other-recommendations.md)
-- [애니메이션에 대한 유용한 정보](../../../../docs/framework/wpf/graphics-multimedia/animation-tips-and-tricks.md)
+- [WPF 응용 프로그램 성능 최적화](optimizing-wpf-application-performance.md)
+- [애플리케이션 성능 계획](planning-for-application-performance.md)
+- [하드웨어 이용](optimizing-performance-taking-advantage-of-hardware.md)
+- [레이아웃 및 디자인](optimizing-performance-layout-and-design.md)
+- [개체 동작](optimizing-performance-object-behavior.md)
+- [애플리케이션 리소스](optimizing-performance-application-resources.md)
+- [텍스트](optimizing-performance-text.md)
+- [데이터 바인딩](optimizing-performance-data-binding.md)
+- [기타 성능 권장 사항](optimizing-performance-other-recommendations.md)
+- [애니메이션에 대한 유용한 정보](../graphics-multimedia/animation-tips-and-tricks.md)

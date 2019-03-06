@@ -7,21 +7,21 @@ helpviewer_keywords:
 - controls [WPF], RichTextBox
 - RichTextBox control [WPF]
 ms.assetid: a177374d-ee54-4d00-aaae-c983481cae9b
-ms.openlocfilehash: c521c5c5d4ecb2b20954b5b6e303bbbda0a26418
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e3f2bf274db3a7b14f817dd2dbfffc39d2957ec4
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54508642"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57374546"
 ---
 # <a name="richtextbox"></a>RichTextBox
 <xref:System.Windows.Controls.RichTextBox> 요소 잘라내기 및 붙여넣기, 풍부한 문서 프레젠테이션 및 콘텐츠 선택 같은 기능에 대 한 기본 제공 지원을 통해 편집 컨트롤을 정의 합니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
- [RichTextBox 개요](../../../../docs/framework/wpf/controls/richtextbox-overview.md)  
- [방법 항목](../../../../docs/framework/wpf/controls/richtextbox-how-to-topics.md)  
+ [RichTextBox 개요](richtextbox-overview.md)  
+ [방법 항목](richtextbox-how-to-topics.md)  
   
 ## <a name="see-also"></a>참고자료
 - <xref:System.Windows.Controls.TextBox>
-- [WPF의 문서](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)
-- [유동 문서 개요](../../../../docs/framework/wpf/advanced/flow-document-overview.md)
+- [WPF의 문서](../advanced/documents-in-wpf.md)
+- [유동 문서 개요](../advanced/flow-document-overview.md)

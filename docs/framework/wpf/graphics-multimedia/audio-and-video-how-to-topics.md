@@ -7,23 +7,23 @@ helpviewer_keywords:
 - multimedia [WPF]
 - media [WPF]
 ms.assetid: f7d96707-ffb5-486c-9e85-db6f0d5ac547
-ms.openlocfilehash: afc39b0d079bf273170a649f03a3756953c29eea
-ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
+ms.openlocfilehash: 2f46a548f28cffb1824ffbdc51f8d4d79c4c9d02
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56836398"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57363698"
 ---
 # <a name="audio-and-video-how-to-topics"></a>오디오 및 비디오 방법 항목
 다음 항목에 사용 하는 방법을 보여 줍니다는 <xref:System.Windows.Controls.MediaElement> 응용 프로그램에서 오디오 및 비디오 콘텐츠에 통합 합니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
- [MediaElement 제어(재생, 일시 중지, 정지, 볼륨 및 속도)](../../../../docs/framework/wpf/graphics-multimedia/how-to-control-a-mediaelement-play-pause-stop-volume-and-speed.md)  
- [Storyboard를 사용하여 MediaElement 제어](../../../../docs/framework/wpf/graphics-multimedia/how-to-control-a-mediaelement-by-using-a-storyboard.md)  
- [사용자 이벤트를 사용하여 미디어 재생 트리거](../../../../docs/framework/wpf/graphics-multimedia/how-to-trigger-media-playback-with-a-user-event.md)  
- [미디어 재생 반복](../../../../docs/framework/wpf/graphics-multimedia/how-to-repeat-media-playback.md)  
- [애니메이션이 있는 미디어 재생](../../../../docs/framework/wpf/graphics-multimedia/how-to-play-media-with-animations.md)  
- [MediaElement에서 변환 사용](../../../../docs/framework/wpf/graphics-multimedia/how-to-use-transforms-on-a-mediaelement.md)  
+ [MediaElement 제어(재생, 일시 중지, 정지, 볼륨 및 속도)](how-to-control-a-mediaelement-play-pause-stop-volume-and-speed.md)  
+ [Storyboard를 사용하여 MediaElement 제어](how-to-control-a-mediaelement-by-using-a-storyboard.md)  
+ [사용자 이벤트를 사용하여 미디어 재생 트리거](how-to-trigger-media-playback-with-a-user-event.md)  
+ [미디어 재생 반복](how-to-repeat-media-playback.md)  
+ [애니메이션이 있는 미디어 재생](how-to-play-media-with-animations.md)  
+ [MediaElement에서 변환 사용](how-to-use-transforms-on-a-mediaelement.md)  
   
 ## <a name="reference"></a>참조  
  <xref:System.Windows.Controls.MediaElement>  
@@ -33,4 +33,4 @@ ms.locfileid: "56836398"
  <xref:System.Windows.Media.MediaTimeline>  
   
 ## <a name="related-sections"></a>관련 단원  
- [그래픽 및 멀티미디어](../../../../docs/framework/wpf/graphics-multimedia/index.md)
+ [그래픽 및 멀티미디어](index.md)

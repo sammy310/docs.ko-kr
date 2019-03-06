@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Expander control [WPF], creating
 - controls [WPF], ScrollViewer
 ms.assetid: 2ad124d2-2406-4157-aaf2-64e067298f01
-ms.openlocfilehash: 8d21c7ec0172dca23f218a0d710c3976872f162c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9e7c023ec371dd6695ffba3368502e5b593c4608
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54681965"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57369541"
 ---
 # <a name="how-to-create-an-expander-with-a-scrollviewer"></a>방법: ScrollViewer가 있는 Expander 만들기
 만드는 방법을 보여 주는이 예제는 <xref:System.Windows.Controls.Expander> 이미지 및 텍스트와 같은 복잡 한 콘텐츠를 포함 하는 컨트롤입니다. 예제의 콘텐츠도 포함 합니다 <xref:System.Windows.Controls.Expander> 에 <xref:System.Windows.Controls.ScrollViewer> 제어 합니다.  
@@ -22,11 +22,11 @@ ms.locfileid: "54681965"
   
  설정 하는 예제는 합니다 <xref:System.Windows.FrameworkElement.Height%2A> 속성에는 <xref:System.Windows.Controls.ScrollViewer> 대신 콘텐츠. 경우는 <xref:System.Windows.FrameworkElement.Height%2A> 콘텐츠를 설정 합니다 <xref:System.Windows.Controls.ScrollViewer> 내용을 스크롤 하는 사용자를 허용 하지 않습니다. <xref:System.Windows.FrameworkElement.Width%2A> 속성이 설정 되어 합니다 <xref:System.Windows.Controls.Expander> 컨트롤과이 설정을 적용할를 <xref:System.Windows.Controls.HeaderedContentControl.Header%2A> 및 확장 된 콘텐츠입니다.  
   
- [!code-xaml[ExpanderRichContent#CreateExpander](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ExpanderRichContent/CSharp/Window1.xaml#createexpander)]  
+ [!code-xaml[ExpanderRichContent#CreateExpander](~/samples/snippets/csharp/VS_Snippets_Wpf/ExpanderRichContent/CSharp/Window1.xaml#createexpander)]  
   
- [!code-csharp[ExpanderRichContent#CreateExpanderCode](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ExpanderRichContent/CSharp/Window1.xaml.cs#createexpandercode)]  
+ [!code-csharp[ExpanderRichContent#CreateExpanderCode](~/samples/snippets/csharp/VS_Snippets_Wpf/ExpanderRichContent/CSharp/Window1.xaml.cs#createexpandercode)]  
   
 ## <a name="see-also"></a>참고자료
 - <xref:System.Windows.Controls.Expander>
-- [Expander 개요](../../../../docs/framework/wpf/controls/expander-overview.md)
-- [방법 항목](../../../../docs/framework/wpf/controls/expander-how-to-topics.md)
+- [Expander 개요](expander-overview.md)
+- [방법 항목](expander-how-to-topics.md)

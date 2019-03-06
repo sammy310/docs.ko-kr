@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC31535
 ms.assetid: 6540c1d0-bb19-4051-a579-2e4f9094585e
-ms.openlocfilehash: ff2cdbebe13f6224209ef8da62600c99348c911b
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 796c16e912283d86496a4ccbd3b675ac1433f02d
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55286821"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57356405"
 ---
 # <a name="friend-assembly-reference-reference-is-invalid"></a>Friend 어셈블리 참조 \<참조 > 올바르지 않습니다
 Friend 어셈블리 참조 \<참조 > 올바르지 않습니다. 강력한 이름의 서명된 어셈블리는 InternalsVisibleTo 선언에 공개 키를 지정해야 합니다.  
@@ -27,6 +27,6 @@ Friend 어셈블리 참조 \<참조 > 올바르지 않습니다. 강력한 이�
   
 ## <a name="see-also"></a>참고자료
 - <xref:System.Reflection.AssemblyName>
-- [Friend 어셈블리](../../programming-guide/concepts/assemblies-gac/friend-assemblies.md)
+- [Friend 어셈블리](../../../standard/assembly/friend-assemblies.md)
 
 

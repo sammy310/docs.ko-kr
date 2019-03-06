@@ -6,12 +6,12 @@ helpviewer_keywords:
 - styling rows in ListViews implementing GridViews [WPF]
 - ListView controls [WPF], styling rows with GridViews
 ms.assetid: 2e406ba2-70a0-4e62-841f-0934859de76e
-ms.openlocfilehash: 39801af88d3e64b92aa7e99ff794c3d7e7239df5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0c8806c399959fdc1466e0839ba469881718092b
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54680233"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57361631"
 ---
 # <a name="how-to-style-a-row-in-a-listview-that-implements-a-gridview"></a>방법: GridView를 구현하는 ListView 행의 스타일 지정
 행 스타일을 지정 하는 방법을 보여주는이 예제는 <xref:System.Windows.Controls.ListView> 구현 하는 컨트롤을 <xref:System.Windows.Controls.GridView> <xref:System.Windows.Controls.ListView.View%2A> 모드입니다.  
@@ -23,19 +23,19 @@ ms.locfileid: "54680233"
   
  다음 예제에서는 정의 하는 방법을 보여 줍니다 <xref:System.Windows.Controls.ItemsControl.ItemContainerStyle%2A> 에 대 한는 <xref:System.Windows.Controls.ListViewItem> 곡 모음집의 곡을 나타내는 개체입니다. 합니다 <xref:System.Windows.Controls.ItemsControl.ItemContainerStyle%2A> 참조가 <xref:System.Windows.Controls.ControlTemplate> 곡 정보 행을 표시 하는 방법을 지정 하는 개체입니다.  
   
- [!code-xaml[ListViewItemStyleSnippet#ItemContainerStyle](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ListViewItemStyleSnippet/CS/Window1.xaml#itemcontainerstyle)]  
+ [!code-xaml[ListViewItemStyleSnippet#ItemContainerStyle](~/samples/snippets/csharp/VS_Snippets_Wpf/ListViewItemStyleSnippet/CS/Window1.xaml#itemcontainerstyle)]  
   
  에서는 다음 예제는 <xref:System.Windows.Controls.ControlTemplate> 텍스트 문자열을 추가 하는 `"Strongly Recommended"` 행입니다. 이 서식 파일에서 참조 되는 <xref:System.Windows.Controls.ItemsControl.ItemContainerStyle%2A> 곡의 5 (5)의 값이 표시 됩니다. <xref:System.Windows.Controls.ControlTemplate> 포함를 <xref:System.Windows.Controls.GridViewRowPresenter> 정의 된 대로 열에서 행의 내용을 배치 하는 개체는 <xref:System.Windows.Controls.GridView> 보기 모드입니다.  
   
- [!code-xaml[ListViewItemStyleSnippet#ControlTemplate](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ListViewItemStyleSnippet/CS/Window1.xaml#controltemplate)]  
+ [!code-xaml[ListViewItemStyleSnippet#ControlTemplate](~/samples/snippets/csharp/VS_Snippets_Wpf/ListViewItemStyleSnippet/CS/Window1.xaml#controltemplate)]  
   
  다음 예제에서는 정의 <xref:System.Windows.Controls.GridView>합니다.  
   
- [!code-xaml[ListViewItemStyleSnippet#GridView](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ListViewItemStyleSnippet/CS/Window1.xaml#gridview)]  
+ [!code-xaml[ListViewItemStyleSnippet#GridView](~/samples/snippets/csharp/VS_Snippets_Wpf/ListViewItemStyleSnippet/CS/Window1.xaml#gridview)]  
   
 ## <a name="see-also"></a>참고자료
 - <xref:System.Windows.Controls.ListView>
 - <xref:System.Windows.Controls.GridView>
-- [방법 항목](../../../../docs/framework/wpf/controls/listview-how-to-topics.md)
-- [ListView 개요](../../../../docs/framework/wpf/controls/listview-overview.md)
-- [스타일 지정 및 템플릿](../../../../docs/framework/wpf/controls/styling-and-templating.md)
+- [방법 항목](listview-how-to-topics.md)
+- [ListView 개요](listview-overview.md)
+- [스타일 지정 및 템플릿](styling-and-templating.md)

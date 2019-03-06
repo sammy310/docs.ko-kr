@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - Button controls [WPF], creating
 ms.assetid: 607a193c-4098-4dd8-8dc0-51256cec2020
-ms.openlocfilehash: cfebe53047531ecddde42a3a0596dfd949629ecd
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fe9f35a6f83c5a839823d94c4d3c55e01b192fb1
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54682067"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57352037"
 ---
 # <a name="how-to-create-a-button-that-has-an-image"></a>방법: 이미지가 있는 단추 만들기
 이 예제에서 이미지를 포함 하는 방법을 보여 줍니다는 <xref:System.Windows.Controls.Button>합니다.  
@@ -22,11 +22,11 @@ ms.locfileid: "54682067"
   
  이 예제에서는 <xref:System.Windows.Controls.Button> 태그를 사용 하 여 제어 하지만 코드를 사용 하 여 작성 된 <xref:System.Windows.Controls.Primitives.ButtonBase.Click> 이벤트 처리기입니다.  
   
- [!code-xaml[BtnColor#4](../../../../samples/snippets/csharp/VS_Snippets_Wpf/BtnColor/CSharp/Pane1.xaml#4)]  
+ [!code-xaml[BtnColor#4](~/samples/snippets/csharp/VS_Snippets_Wpf/BtnColor/CSharp/Pane1.xaml#4)]  
   
- [!code-csharp[BtnColor#6](../../../../samples/snippets/csharp/VS_Snippets_Wpf/BtnColor/CSharp/Pane1.xaml.cs#6)]
- [!code-vb[BtnColor#6](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/BtnColor/VisualBasic/Pane1.xaml.vb#6)]  
+ [!code-csharp[BtnColor#6](~/samples/snippets/csharp/VS_Snippets_Wpf/BtnColor/CSharp/Pane1.xaml.cs#6)]
+ [!code-vb[BtnColor#6](~/samples/snippets/visualbasic/VS_Snippets_Wpf/BtnColor/VisualBasic/Pane1.xaml.vb#6)]  
   
 ## <a name="see-also"></a>참고자료
-- [컨트롤](../../../../docs/framework/wpf/controls/index.md)
-- [컨트롤 라이브러리](../../../../docs/framework/wpf/controls/control-library.md)
+- [컨트롤](index.md)
+- [컨트롤 라이브러리](control-library.md)

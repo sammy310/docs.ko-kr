@@ -8,18 +8,18 @@ helpviewer_keywords:
 - Firefox [WPF], detecting installation
 - detecting whether the WPF plug-in for Firefox is installed [WPF]
 ms.assetid: 5f839373-e3fb-44f1-88ad-4a0761f02189
-ms.openlocfilehash: f017aec8788d9ed38476262bba457f4621217519
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3cc2f95627bc35fa4cb6c486d3b8ad61f69d7fea
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54677981"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57372895"
 ---
 # <a name="how-to-detect-whether-the-wpf-plug-in-for-firefox-is-installed"></a>방법: Firefox용 WPF 플러그 인 설치 여부 확인
 Windows Presentation Foundation (WPF) Firefox 플러그 인을 사용 하면 [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)] 및 느슨한 XAML 파일에서 Mozilla Firefox 브라우저를 실행 합니다. 이 항목에서는 관리자 Firefox 용 WPF 플러그 설치 되어 있는지 확인 하는 데 사용할 수 있는 JavaScript 및 HTML로 작성 된 스크립트를 제공 합니다.  
   
 > [!NOTE]
->  설치, 배포 및 검색 하는 방법에 대 한 자세한 내용은 합니다 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]를 참조 하세요 [개발자 용.NET Framework를 설치](../../../../docs/framework/install/guide-for-developers.md)합니다.  
+>  설치, 배포 및 검색 하는 방법에 대 한 자세한 내용은 합니다 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]를 참조 하세요 [개발자 용.NET Framework를 설치](../../install/guide-for-developers.md)합니다.  
   
 ## <a name="example"></a>예제  
  경우는 [!INCLUDE[net_v35_short](../../../../includes/net-v35-short-md.md)] 가 설치 된 클라이언트 컴퓨터가 구성 된 WPF 플러그 인을 사용 하 여 Firefox에 대 한 합니다. 다음 예제 스크립트 Firefox 용 WPF 플러그 인에 대해 확인 하 고는 적절 한 상태 메시지를 표시 합니다.  
@@ -63,6 +63,6 @@ Windows Presentation Foundation (WPF) Firefox 플러그 인을 사용 하면 [!I
  `The WPF plug-in for Firefox is not installed. Please install or reinstall the .NET Framework 3.5.`  
   
 ## <a name="see-also"></a>참고자료
-- [.NET Framework 3.0 설치 여부 확인](../../../../docs/framework/wpf/app-development/how-to-detect-whether-the-net-framework-3-0-is-installed.md)
-- [.NET Framework 3.5 설치 여부 확인](../../../../docs/framework/wpf/app-development/how-to-detect-whether-the-net-framework-3-5-is-installed.md)
-- [WPF XAML 브라우저 응용 프로그램 개요](../../../../docs/framework/wpf/app-development/wpf-xaml-browser-applications-overview.md)
+- [.NET Framework 3.0 설치 여부 확인](how-to-detect-whether-the-net-framework-3-0-is-installed.md)
+- [.NET Framework 3.5 설치 여부 확인](how-to-detect-whether-the-net-framework-3-5-is-installed.md)
+- [WPF XAML 브라우저 응용 프로그램 개요](wpf-xaml-browser-applications-overview.md)

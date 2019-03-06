@@ -2,12 +2,12 @@
 title: 비동기 작업 또는 (Visual Basic) 작업 목록 취소
 ms.date: 07/20/2015
 ms.assetid: a9ee1b71-5bec-4736-a1e9-448042dd7215
-ms.openlocfilehash: e4e0fcb1d706fef09233543487aebdeb01cdfbcf
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 81676324145bcf8f6d9a13e757865fa86e6d2e23
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54695895"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57374455"
 ---
 # <a name="cancel-an-async-task-or-a-list-of-tasks-visual-basic"></a>비동기 작업 또는 (Visual Basic) 작업 목록 취소
 작업이 완료될 때까지 기다리지 않으려면 비동기 애플리케이션을 취소할 때 사용하는 단추를 설정할 수 있습니다. 이 항목의 예제에 따라 한 웹 사이트 또는 웹 사이트 목록의 콘텐츠를 다운로드하는 애플리케이션에 취소 단추를 추가할 수 있습니다.  
@@ -17,11 +17,11 @@ ms.locfileid: "54695895"
 > [!NOTE]
 >  예제를 실행하려면 Visual Studio 2012 이상 및 .NET Framework 4.5 이상이 컴퓨터에 설치되어 있어야 합니다.  
   
-##  <a name="BKMK_CancelaTask"></a> 작업 취소  
+## <a name="BKMK_CancelaTask"></a> 작업 취소  
  첫 번째 예제에서는 **취소** 단추를 단일 다운로드 작업에 연결합니다. 애플리케이션이 콘텐츠를 다운로드하는 동안 단추를 선택하면 다운로드가 취소됩니다.  
   
 ### <a name="downloading-the-example"></a>예제 다운로드  
- 전체 Windows Presentation Foundation (WPF) 프로젝트를 다운로드할 수 있습니다 [Async 샘플: 응용 프로그램 튜닝을 세부적으로](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea) 및 다음이 단계를 수행 합니다.  
+ [Async 샘플: 애플리케이션 미세 조정](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)에서 WPF(Windows Presentation Foundation) 프로젝트를 다운로드한 후, 다음 단계를 수행합니다.  
   
 1.  다운로드한 파일의 압축을 푼 다음 Visual Studio를 시작합니다.  
   
@@ -135,11 +135,11 @@ ms.locfileid: "54695895"
     Download canceled.  
     ```  
   
-##  <a name="BKMK_CancelaListofTasks"></a> 작업 목록 취소  
+## <a name="BKMK_CancelaListofTasks"></a> 작업 목록 취소  
  이전 예제를 확장하여 같은 `CancellationTokenSource` 인스턴스를 각 작업과 연결하는 방식으로 여러 작업을 취소할 수 있습니다. **취소** 단추를 선택하면 아직 완료되지 않은 모든 작업이 취소됩니다.  
   
 ### <a name="downloading-the-example"></a>예제 다운로드  
- 전체 Windows Presentation Foundation (WPF) 프로젝트를 다운로드할 수 있습니다 [Async 샘플: 응용 프로그램 튜닝을 세부적으로](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea) 및 다음이 단계를 수행 합니다.  
+ [Async 샘플: 애플리케이션 미세 조정](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)에서 WPF(Windows Presentation Foundation) 프로젝트를 다운로드한 후, 다음 단계를 수행합니다.  
   
 1.  다운로드한 파일의 압축을 푼 다음 Visual Studio를 시작합니다.  
   
@@ -247,10 +247,10 @@ ms.locfileid: "54695895"
     Downloads canceled.  
     ```  
   
-##  <a name="BKMK_CompleteExamples"></a> 전체 예제  
+## <a name="BKMK_CompleteExamples"></a> 전체 예제  
  다음 섹션에는 각각의 이전 예제에 대한 코드가 있습니다. <xref:System.Net.Http>에 대한 참조를 추가해야 합니다.  
   
- 프로젝트를 다운로드할 수 있습니다 [Async 샘플: 응용 프로그램을 제대로 튜닝](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)합니다.  
+ 프로젝트를 다운로드할 수 있습니다 [Async 샘플: 애플리케이션 미세 조정](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)에서 프로젝트를 다운로드할 수 있습니다.  
   
 ### <a name="cancel-a-task-example"></a>작업 취소 예제  
  다음 코드는 단일 작업을 취소 하는 예제의 전체 MainWindow.xaml.vb 파일입니다.  

@@ -4,6 +4,7 @@ description: '사용 하 여 Azure 서비스 사용에 대 한 가이드F#'
 author: sylvanc
 ms.date: 09/22/2016
 ---
+
 # <a name="using-f-on-azure"></a>Azure에서 F# 사용
 
 F#은 클라우드 프로그래밍의 뛰어난 언어이며 웹 애플리케이션, 클라우드 서비스, 클라우드 호스티드 마이크로 서비스를 작성하는 데 자주 사용되고 확장 가능한 데이터 처리에도 사용됩니다.
@@ -87,7 +88,7 @@ Azure Notification Hubs는 다음과 같은 두 가지 방법으로 F#과 함께
 
 ## <a name="implementing-webhooks-on-azure-with-f"></a>F 사용 하 여 Azure에서 Webhook 구현\#
 
-[Webhook](https://en.wikipedia.org/wiki/Webhook)는 웹 요청을 통해 트리거되는 콜백입니다. Webhook는 신호 이벤트에 대한 GitHub와 같은 사이트에 사용됩니다. 
+[Webhook](https://en.wikipedia.org/wiki/Webhook)는 웹 요청을 통해 트리거되는 콜백입니다. Webhook는 신호 이벤트에 대한 GitHub와 같은 사이트에 사용됩니다.
 
 Webhook은 [F#의 Azure Function 및 Webhook 바인딩](/azure/azure-functions/functions-bindings-http-webhook)을 통해 Azure에서 F#으로 구현하고 호스트할 수 있습니다.
 
@@ -109,7 +110,7 @@ Azure VM은 Microsoft.Azure.Management 패키지 및 API를 사용하여 프로�
 
 마찬가지로, 동일한 구성 요소를 사용하여 F# 스크립트에서 다른 Azure 리소스를 배포하고 관리할 수 있습니다. 예를 들어 저장소 계정을 만들고, Azure Cloud Services, Azure Cosmos DB 인스턴스를 만들를 배포한 Azure Notifcation Hubs에서 프로그래밍 방식으로 관리 F# 스크립트입니다.
 
-F# 스크립트를 사용하여 리소스를 배포하고 관리하는 작업은 일반적으로 필요하지 않습니다. 예를 들어 Azure 리소스는 JSON 템플릿 설명에서 직접 배포할 수도 있습니다(매개 변수화할 수 있음). [Azure 퀵 스타트 템플릿](https://azure.microsoft.com/resources/templates/)과 같은 예제를 비롯하여 [Azure Resource Manager 템플릿](/azure/azure-resource-manager/resource-manager-template-best-practices)을 참조하세요.
+F# 스크립트를 사용하여 리소스를 배포하고 관리하는 작업은 일반적으로 필요하지 않습니다. 예를 들어, Azure 리소스를 매개 변수화 할 수 있는 JSON 템플릿 설명에서 직접 배포할 수도 있습니다. [Azure 퀵 스타트 템플릿](https://azure.microsoft.com/resources/templates/)과 같은 예제를 비롯하여 [Azure Resource Manager 템플릿](/azure/azure-resource-manager/resource-manager-template-best-practices)을 참조하세요.
 
 ## <a name="other-resources"></a>기타 리소스
 

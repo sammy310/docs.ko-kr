@@ -8,12 +8,12 @@ helpviewer_keywords:
 - routed events [WPF], handling
 - bubbling events [WPF]
 ms.assetid: 157787b4-f469-4047-8777-5b034145f32e
-ms.openlocfilehash: 40cacbf6b36cf474f5267870531e5f4ac048dc56
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 42f5f247e775fbf0bd323fc693a74d6149c87bb3
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54561337"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57368196"
 ---
 # <a name="how-to-handle-a-routed-event"></a>방법: 라우트된 이벤트 처리
 이 예제에서는 버블링 이벤트가 작동하는 방법과 라우트된 이벤트 데이터를 처리할 수 있는 처리기를 작성하는 방법을 보여 줍니다.  
@@ -27,16 +27,16 @@ ms.locfileid: "54561337"
   
  부모에 유의 <xref:System.Windows.Controls.StackPanel> 요소를 <xref:System.Windows.Controls.Primitives.ButtonBase.Click> 특성을 부분적으로 정규화 하는 이름으로 지정 하는 이벤트 이름을 <xref:System.Windows.Controls.Button> 클래스입니다. 합니다 <xref:System.Windows.Controls.Button> 클래스는를 <xref:System.Windows.Controls.Primitives.ButtonBase> 파생 된 클래스는 <xref:System.Windows.Controls.Primitives.ButtonBase.Click> 해당 멤버 목록에 이벤트입니다. 처리중인 이벤트가 라우트된 이벤트 처리기가 연결된 요소의 멤버 목록에 있지 않은 경우 이벤트 처리기 연결을 위해 이러한 부분 한정 기술이 필요합니다.  
   
- [!code-xaml[RoutedEventHandle#XAML](../../../../samples/snippets/csharp/VS_Snippets_Wpf/RoutedEventHandle/CSharp/default.xaml#xaml)]  
+ [!code-xaml[RoutedEventHandle#XAML](~/samples/snippets/csharp/VS_Snippets_Wpf/RoutedEventHandle/CSharp/default.xaml#xaml)]  
   
  다음 예제에서는 처리 된 <xref:System.Windows.Controls.Primitives.ButtonBase.Click> 이벤트입니다.  이 예제에서는 이벤트를 처리하는 요소와 이벤트를 발생시키는 요소를 보여 줍니다. 이벤트 처리기는 두 버튼 중 하나를 클릭할 때 실행됩니다.  
   
- [!code-csharp[RoutedEventHandle#Handler](../../../../samples/snippets/csharp/VS_Snippets_Wpf/RoutedEventHandle/CSharp/default.xaml.cs#handler)]
- [!code-vb[RoutedEventHandle#Handler](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/RoutedEventHandle/VisualBasic/MainWindow.xaml.vb#handler)]  
+ [!code-csharp[RoutedEventHandle#Handler](~/samples/snippets/csharp/VS_Snippets_Wpf/RoutedEventHandle/CSharp/default.xaml.cs#handler)]
+ [!code-vb[RoutedEventHandle#Handler](~/samples/snippets/visualbasic/VS_Snippets_Wpf/RoutedEventHandle/VisualBasic/MainWindow.xaml.vb#handler)]  
   
 ## <a name="see-also"></a>참고자료
 - <xref:System.Windows.RoutedEvent>
-- [입력 개요](../../../../docs/framework/wpf/advanced/input-overview.md)
-- [라우트된 이벤트 개요](../../../../docs/framework/wpf/advanced/routed-events-overview.md)
-- [방법 항목](../../../../docs/framework/wpf/advanced/events-how-to-topics.md)
-- [XAML 구문 정보](../../../../docs/framework/wpf/advanced/xaml-syntax-in-detail.md)
+- [입력 개요](input-overview.md)
+- [라우트된 이벤트 개요](routed-events-overview.md)
+- [방법 항목](events-how-to-topics.md)
+- [XAML 구문 정보](xaml-syntax-in-detail.md)

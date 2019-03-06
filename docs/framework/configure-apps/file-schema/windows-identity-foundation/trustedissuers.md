@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 ms.assetid: d818c917-07b4-40db-9801-8676561859fd
 author: BrucePerlerMS
 ms.openlocfilehash: bb4cb5178885b90ef25ee827c2f11593ead6e73d
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55276681"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57354559"
 ---
 # <a name="trustedissuers"></a>\<trustedIssuers>
 구성 기반 발급자 이름 레지스트리에 사용 되는 신뢰할 수 있는 발급자 인증서의 목록 구성 (<xref:System.IdentityModel.Tokens.ConfigurationBasedIssuerNameRegistry>).  

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - controls [WPF], layout system
 - layout system [WPF]
 ms.assetid: 3eecdced-3623-403a-a077-7595453a9221
-ms.openlocfilehash: d6326ae34b53ca4f68bc58b85e395c10726a377d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4c114d7ed22ac01b69f9ad77a69b4089f574c13f
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54738828"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57369853"
 ---
 # <a name="layout"></a>레이아웃
 이 항목에서는 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 레이아웃 시스템에 대해 설명합니다. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]에서 사용자 인터페이스를 만들려면 언제, 어떻게 레이아웃을 계산해야 하는지를 이해해야 합니다.  
@@ -41,22 +41,22 @@ ms.locfileid: "54738828"
   
  다음 그림에서는 간단한 레이아웃을 보여 줍니다.  
   
- ![경계 상자가 없이 겹쳐 놓은 일반적인 Grid](../../../../docs/framework/wpf/advanced/media/boundingbox1.png "boundingbox1")  
+ ![경계 상자가 없이 겹쳐 놓은 일반적인 Grid](./media/boundingbox1.png "boundingbox1")  
   
  다음 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]을 사용하여 이 레이아웃을 실현할 수 있습니다.  
   
- [!code-xaml[LayoutInformation#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/LayoutInformation/CSharp/Window1.xaml#1)]  
+ [!code-xaml[LayoutInformation#1](~/samples/snippets/csharp/VS_Snippets_Wpf/LayoutInformation/CSharp/Window1.xaml#1)]  
   
  단일 <xref:System.Windows.Controls.TextBlock> 요소 내에 호스팅되는 <xref:System.Windows.Controls.Grid>합니다. 텍스트를 채우는 첫 번째 열에 할당된 된 공간 왼쪽 위 모퉁이 <xref:System.Windows.Controls.TextBlock> 실제로 훨씬 큽니다. 경계 상자 <xref:System.Windows.FrameworkElement> 를 사용 하 여 검색할 수는 <xref:System.Windows.Controls.Primitives.LayoutInformation.GetLayoutSlot%2A> 메서드. 다음 그림에서는 경계 상자는 <xref:System.Windows.Controls.TextBlock> 요소입니다.  
   
- ![이제 TextBlock의 경계 상자가 표시됨](../../../../docs/framework/wpf/advanced/media/boundingbox2.png "boundingbox2")  
+ ![이제 TextBlock의 경계 상자가 표시됨](./media/boundingbox2.png "boundingbox2")  
   
  노란색 사각형에 할당된 된 공간에 표시 된 대로 <xref:System.Windows.Controls.TextBlock> 요소인 것 보다 실제로 훨씬 큽니다. 추가 요소에 추가 되는 <xref:System.Windows.Controls.Grid>,이 할당이 축소 정도 형식과 추가 되는 요소의 크기에 따라 확장 합니다.  
   
  레이아웃 슬롯을 <xref:System.Windows.Controls.TextBlock> 변환 됩니다를 <xref:System.Windows.Shapes.Path> 를 사용 하 여를 <xref:System.Windows.Controls.Primitives.LayoutInformation.GetLayoutSlot%2A> 메서드. 이 기술은 요소의 경계 상자를 표시하는 데 유용합니다.  
   
- [!code-csharp[LayoutInformation#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/LayoutInformation/CSharp/Window1.xaml.cs#2)]
- [!code-vb[LayoutInformation#2](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/LayoutInformation/VisualBasic/Window1.xaml.vb#2)]  
+ [!code-csharp[LayoutInformation#2](~/samples/snippets/csharp/VS_Snippets_Wpf/LayoutInformation/CSharp/Window1.xaml.cs#2)]
+ [!code-vb[LayoutInformation#2](~/samples/snippets/visualbasic/VS_Snippets_Wpf/LayoutInformation/VisualBasic/Window1.xaml.vb#2)]  
   
 <a name="LayoutSystem_Overview"></a>   
 ## <a name="the-layout-system"></a>레이아웃 시스템  
@@ -111,7 +111,7 @@ ms.locfileid: "54738828"
 |<xref:System.Windows.Controls.DockPanel>|자식 요소를 서로 맞춰 가로 또는 세로로 정렬할 수 있는 영역을 정의합니다.|  
 |<xref:System.Windows.Controls.Grid>|열 및 행으로 구성되는 유연한 모눈 영역을 정의합니다.|  
 |<xref:System.Windows.Controls.StackPanel>|가로 또는 세로 방향으로 한 줄로 자식 요소를 정렬합니다.|  
-|<xref:System.Windows.Controls.VirtualizingPanel>|자식 데이터 컬렉션을 가상화하는 <xref:System.Windows.Controls.Panel> 요소를 위한 프레임워크를 제공합니다. 이 클래스는 추상 클래스입니다.|  
+|<xref:System.Windows.Controls.VirtualizingPanel>|에 대 한 프레임 워크를 제공 <xref:System.Windows.Controls.Panel> 해당 자식 데이터 컬렉션을 가상화 하는 요소입니다. 이 클래스는 추상 클래스입니다.|  
 |<xref:System.Windows.Controls.WrapPanel>|콘텐츠를 컨테이너의 가장자리에서 다음 줄로 나눠 왼쪽에서 오른쪽으로 자식 요소의 위치를 지정합니다. 위쪽에서에서 아래쪽으로 또는 오른쪽에서 왼쪽으로 값에 따라 순차적으로 발생 정렬 된 <xref:System.Windows.Controls.WrapPanel.Orientation%2A> 속성입니다.|  
   
  미리 정의 된 사용 가능 하지 않은 레이아웃이 필요한 응용 프로그램에 대 한 <xref:System.Windows.Controls.Panel> 에서 상속 하 여 요소를 사용자 지정 레이아웃 동작을 수행할 수 있습니다 <xref:System.Windows.Controls.Panel> 재정의 <xref:System.Windows.FrameworkElement.MeasureOverride%2A> 고 <xref:System.Windows.FrameworkElement.ArrangeOverride%2A> 메서드. 예제는 [Custom Radial Panel Sample](https://go.microsoft.com/fwlink/?LinkID=159982)(사용자 지정 방사형 패널 샘플)을 참조하세요.  
@@ -122,7 +122,7 @@ ms.locfileid: "54738828"
   
 -   레이아웃 시스템에서 재귀적으로 업데이트하도록 하는 속성 값 변경에 주의해야 합니다.  
   
-     레이아웃 시스템을 초기화하는 값을 가진 종속성 속성은 공용 플래그로 표시됩니다. <xref:System.Windows.FrameworkPropertyMetadata.AffectsMeasure%2A> 및 <xref:System.Windows.FrameworkPropertyMetadata.AffectsArrange%2A> 레이아웃 시스템에서 업데이트 값이 변경 되는 속성에 대 한 재귀를 강제로 유용한 단서를 제공 합니다. 요소의 경계 상자 크기에 영향을 줄 수 있는 모든 속성을 해야 일반적으로 <xref:System.Windows.FrameworkPropertyMetadata.AffectsMeasure%2A> 플래그가 true로 설정 합니다. 자세한 내용은 [종속성 속성 개요](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)를 참조하세요.  
+     레이아웃 시스템을 초기화하는 값을 가진 종속성 속성은 공용 플래그로 표시됩니다. <xref:System.Windows.FrameworkPropertyMetadata.AffectsMeasure%2A> 및 <xref:System.Windows.FrameworkPropertyMetadata.AffectsArrange%2A> 레이아웃 시스템에서 업데이트 값이 변경 되는 속성에 대 한 재귀를 강제로 유용한 단서를 제공 합니다. 요소의 경계 상자 크기에 영향을 줄 수 있는 모든 속성을 해야 일반적으로 <xref:System.Windows.FrameworkPropertyMetadata.AffectsMeasure%2A> 플래그가 true로 설정 합니다. 자세한 내용은 [종속성 속성 개요](dependency-properties-overview.md)를 참조하세요.  
   
 -   사용 가능한 경우는 <xref:System.Windows.UIElement.RenderTransform%2A> of를 <xref:System.Windows.FrameworkElement.LayoutTransform%2A>입니다.  
   
@@ -146,11 +146,11 @@ ms.locfileid: "54738828"
   
 <a name="LayoutSystem_whatsnext"></a>   
 ## <a name="whats-next"></a>새로운 기능  
- 요소의 측정 방법과 정렬 방법을 이해하는 것이 레이아웃을 이해하기 위한 첫 단계입니다. 자세한 내용은 사용 가능한 <xref:System.Windows.Controls.Panel> 요소를 참조 하세요 [Panel 개요](../../../../docs/framework/wpf/controls/panels-overview.md)합니다. 레이아웃에 영향을 줄 수 있는 다양한 배치 속성을 더 잘 이해하려면 [맞춤, 여백 및 안쪽 여백 개요](../../../../docs/framework/wpf/advanced/alignment-margins-and-padding-overview.md)를 참조하세요. 사용자 지정의 예 <xref:System.Windows.Controls.Panel> 요소를 참조 하세요 [사용자 지정 방사형 패널 샘플](https://go.microsoft.com/fwlink/?LinkID=159982)합니다. 간단한 응용 프로그램에서 모두 함께 배치할 준비가 되었을 때 참조 [연습: 내 첫 WPF 데스크톱 응용 프로그램](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md)합니다.  
+ 요소의 측정 방법과 정렬 방법을 이해하는 것이 레이아웃을 이해하기 위한 첫 단계입니다. 자세한 내용은 사용 가능한 <xref:System.Windows.Controls.Panel> 요소를 참조 하세요 [Panel 개요](../controls/panels-overview.md)합니다. 레이아웃에 영향을 줄 수 있는 다양한 배치 속성을 더 잘 이해하려면 [맞춤, 여백 및 안쪽 여백 개요](alignment-margins-and-padding-overview.md)를 참조하세요. 사용자 지정의 예 <xref:System.Windows.Controls.Panel> 요소를 참조 하세요 [사용자 지정 방사형 패널 샘플](https://go.microsoft.com/fwlink/?LinkID=159982)합니다. 간단한 응용 프로그램에서 모두 함께 배치할 준비가 되었을 때 참조 [연습: 내 첫 WPF 데스크톱 응용 프로그램](../getting-started/walkthrough-my-first-wpf-desktop-application.md)합니다.  
   
 ## <a name="see-also"></a>참고자료
 - <xref:System.Windows.FrameworkElement>
 - <xref:System.Windows.UIElement>
-- [패널 개요](../../../../docs/framework/wpf/controls/panels-overview.md)
-- [맞춤, 여백 및 안쪽 여백 개요](../../../../docs/framework/wpf/advanced/alignment-margins-and-padding-overview.md)
-- [레이아웃 및 디자인](../../../../docs/framework/wpf/advanced/optimizing-performance-layout-and-design.md)
+- [패널 개요](../controls/panels-overview.md)
+- [맞춤, 여백 및 안쪽 여백 개요](alignment-margins-and-padding-overview.md)
+- [레이아웃 및 디자인](optimizing-performance-layout-and-design.md)

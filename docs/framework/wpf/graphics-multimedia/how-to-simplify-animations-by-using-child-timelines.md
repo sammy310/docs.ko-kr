@@ -6,12 +6,12 @@ helpviewer_keywords:
 - animation [WPF], simplifying by child timelines
 - child timelines [WPF]
 ms.assetid: 8335d770-d13d-42bd-8dfa-63f92c0327e2
-ms.openlocfilehash: b5af20ce791c442eada0774cd46f52205e5b93e4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 933ba2dff86b99bddd8d8f75bafcd94833b2e066
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54648195"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57370360"
 ---
 # <a name="how-to-simplify-animations-by-using-child-timelines"></a>방법: 자식 Timeline을 사용하여 애니메이션 단순화
 이 예제에서는 자식을 사용 하 여 애니메이션 단순화 <xref:System.Windows.Media.Animation.ParallelTimeline> 개체입니다. <xref:System.Windows.Media.Animation.Storyboard> 유형의 <xref:System.Windows.Media.Animation.Timeline> 있기 타임 라인에 대 한 대상 정보를 제공 합니다. 사용 하 여를 <xref:System.Windows.Media.Animation.Storyboard> 타임 라인 대상 개체 및 속성 정보를 포함 한 정보를 제공 합니다.  
@@ -23,8 +23,8 @@ ms.locfileid: "54648195"
  **성능 참고 사항:** 중첩 시킬 수 있지만 <xref:System.Windows.Media.Animation.Storyboard> 타임 라인, 서로의 내부 <xref:System.Windows.Media.Animation.ParallelTimeline>가 중첩 오버 헤드를 덜 필요 하기 때문에 더 적합 합니다. (합니다 <xref:System.Windows.Media.Animation.Storyboard> 클래스에서 상속 된 <xref:System.Windows.Media.Animation.ParallelTimeline> 클래스입니다.)  
   
 ## <a name="example"></a>예제  
- [!code-xaml[Timelines_snip#ParallelTimelineWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Timelines_snip/CS/ParallelTimelineExample.xaml#paralleltimelinewholepage)]  
+ [!code-xaml[Timelines_snip#ParallelTimelineWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/Timelines_snip/CS/ParallelTimelineExample.xaml#paralleltimelinewholepage)]  
   
 ## <a name="see-also"></a>참고자료
-- [애니메이션 개요](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)
-- [Storyboard 애니메이션 간의 HandoffBehavior 지정](../../../../docs/framework/wpf/graphics-multimedia/how-to-specify-handoffbehavior-between-storyboard-animations.md)
+- [애니메이션 개요](animation-overview.md)
+- [Storyboard 애니메이션 간의 HandoffBehavior 지정](how-to-specify-handoffbehavior-between-storyboard-animations.md)

@@ -15,12 +15,12 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: 2cc712e6560fc58af7526428ba40c424be388eee
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 336e47d531fc880571165cd55f117825cd1a2abb
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54746663"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57374871"
 ---
 # <a name="ixclrdatamodulerequest-method"></a>IXCLRDataModule::Request 메서드
 
@@ -39,15 +39,20 @@ HRESULT Request([in] ULONG32 reqCode,
 
 ### <a name="parameters"></a>매개 변수
 
-`reqCode` [in] 요청 전송 하는 유형입니다.
+`reqCode`\
+[in] 요청 전송 하는 유형입니다.
 
-`inBufferSize` [in]에 전달 되어야 하는 입력된 버퍼의 크기입니다.
+`inBufferSize`\
+[in]에 전달 되어야 하는 입력된 버퍼의 크기입니다.
 
-`inBuffer` [in, size_is(inBufferSize)] 요청에서 보낼 원시 데이터에 대 한 버퍼 포인터입니다.
+`inBuffer`\
+[in, size_is(inBufferSize)] 요청에서 보낼 원시 데이터에 대 한 버퍼 포인터입니다.
 
-`outBufferSize` [in] 출력 버퍼의 크기입니다.
+`outBufferSize`\
+[in] 출력 버퍼의 크기입니다.
 
-`outBuffer` [out, size_is(outBufferSize)] 요청 응답을 저장 하는 데 버퍼 포인터입니다.
+`outBuffer`\
+[out, size_is(outBufferSize)] 요청 응답을 저장 하는 데 버퍼 포인터입니다.
 
 ## <a name="remarks"></a>설명
 
@@ -61,5 +66,5 @@ HRESULT Request([in] ULONG32 reqCode,
 **.NET Framework 버전:** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
 
 ## <a name="see-also"></a>참고자료
-- [디버깅](../../../../docs/framework/unmanaged-api/debugging/index.md)
-- [IXCLRDataModule 인터페이스](../../../../docs/framework/unmanaged-api/debugging/ixclrdatamodule-interface.md)
+- [디버깅](index.md)
+- [IXCLRDataModule 인터페이스](ixclrdatamodule-interface.md)

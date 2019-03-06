@@ -8,12 +8,12 @@ helpviewer_keywords:
 - troubleshooting graphics rendering [WPF]
 - graphics [WPF], rendering
 ms.assetid: f4b41b42-327d-407c-b398-3ed5f505df8b
-ms.openlocfilehash: 020570c66401661f55b82a0c7111b4ac53f9c884
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4b02a5ef1fb28e83ecdfc257dd81d9a890b77121
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54556157"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57375352"
 ---
 # <a name="graphics-rendering-registry-settings"></a>그래픽 렌더링 레지스트리 설정
 이 항목에서는 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 애플리케이션에 영향을 미치는 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 그래픽 렌더링 레지스트리 설정에 대해 간략하게 설명합니다.  
@@ -50,7 +50,7 @@ ms.locfileid: "54556157"
   
  **하드웨어 가속 옵션 사용 안 함**을 사용하여 디버깅 및 테스트 목적으로 하드웨어 가속을 해제할 수 있습니다. 애플리케이션에서 렌더링 아티팩트를 표시되면 하드웨어 가속을 해제하세요. 아티팩트가 사라지면 비디오 드라이버에 문제가 있는 것일 수 있습니다.  
   
- **하드웨어 가속 옵션 사용 안 함**은 0 또는 1의 DWORD 값입니다. 이 값이 1이면 하드웨어 가속이 사용되지 않습니다. 이 값이 0이면 시스템이 하드웨어 가속 요구를 충족할 경우 하드웨어 가속이 사용됩니다. 자세한 내용은 [그래픽 렌더링 계층](../../../../docs/framework/wpf/advanced/graphics-rendering-tiers.md)을 참조하세요.  
+ **하드웨어 가속 옵션 사용 안 함**은 0 또는 1의 DWORD 값입니다. 이 값이 1이면 하드웨어 가속이 사용되지 않습니다. 이 값이 0이면 시스템이 하드웨어 가속 요구를 충족할 경우 하드웨어 가속이 사용됩니다. 자세한 내용은 [그래픽 렌더링 계층](../advanced/graphics-rendering-tiers.md)을 참조하세요.  
   
 <a name="maxmultisample"></a>   
 ## <a name="maximum-multisample-value"></a>최대 다중 샘플 값  
@@ -98,5 +98,5 @@ ms.locfileid: "54556157"
  **참조 래스터라이저 옵션 사용**은 DWORD 값을 사용합니다. 값이 0이면 참조 래스터라이저가 사용되지 않는 것입니다. 0이 아닌 값을 지정하면 강제로 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]가 참조 래스터라이저를 사용하게 됩니다.  
   
 ## <a name="see-also"></a>참고자료
-- [그래픽 렌더링 계층](../../../../docs/framework/wpf/advanced/graphics-rendering-tiers.md)
-- [WPF 그래픽 렌더링 개요](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)
+- [그래픽 렌더링 계층](../advanced/graphics-rendering-tiers.md)
+- [WPF 그래픽 렌더링 개요](wpf-graphics-rendering-overview.md)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - DataGrid [WPF], validation
 - validation [WPF], DataGrid
 ms.assetid: ec6078a8-1e42-4648-b414-f4348e81bda1
-ms.openlocfilehash: 8921d9fd36e011fd33628e15f8a055d79c3959d6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e3be25fecc58ba41dbb5b2e904eddcb9c2b3c98a
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54674598"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57371088"
 ---
 # <a name="how-to-implement-validation-with-the-datagrid-control"></a>방법: DataGrid 컨트롤을 사용 하 여 유효성 검사 구현
 <xref:System.Windows.Controls.DataGrid> 컨트롤을 사용 하면 셀 및 행 수준에서 유효성 검사를 수행할 수 있습니다. 셀 수준 유효성 검사를 사용 하 여 사용자는 값을 업데이트 하는 경우 바인딩된 데이터 개체의 개별 속성을 확인 합니다. 행 수준 유효성 검사를 사용 하 여 행에 변경 내용을 커밋할 때 전체 데이터 개체에 유효성 검사 합니다. 유효성 검사 오류에 대 한 사용자 지정된 시각적 피드백을 제공 하거나 기본 시각적 피드백을 사용할 수도 있습니다는 <xref:System.Windows.Controls.DataGrid> 제어를 제공 합니다.  
@@ -22,11 +22,11 @@ ms.locfileid: "54674598"
   
 ### <a name="to-validate-individual-cell-values"></a>개별 셀 값의 유효성 검사  
   
--   열을 사용 하 여 사용 되는 바인딩에 대해 하나 이상의 유효성 검사 규칙을 지정 합니다. 에 설명 된 대로이 간단한 컨트롤의 데이터 유효성 검사 비슷합니다 [데이터 바인딩 개요](../../../../docs/framework/wpf/data/data-binding-overview.md)합니다.  
+-   열을 사용 하 여 사용 되는 바인딩에 대해 하나 이상의 유효성 검사 규칙을 지정 합니다. 에 설명 된 대로이 간단한 컨트롤의 데이터 유효성 검사 비슷합니다 [데이터 바인딩 개요](../data/data-binding-overview.md)합니다.  
   
      다음 예제와 <xref:System.Windows.Controls.DataGrid> 비즈니스 개체의 다른 속성에 바인딩된 열 4 개를 사용 하 여 제어 합니다. 세 개의 열을 지정 합니다 <xref:System.Windows.Controls.ExceptionValidationRule> 설정 하 여는 <xref:System.Windows.Data.Binding.ValidatesOnExceptions%2A> 속성을 `true`입니다.  
   
-     [!code-xaml[DataGrid_Validation#BasicXaml](../../../../samples/snippets/csharp/VS_Snippets_Wpf/datagrid_validation/cs/window1.xaml#basicxaml)]  
+     [!code-xaml[DataGrid_Validation#BasicXaml](~/samples/snippets/csharp/VS_Snippets_Wpf/datagrid_validation/cs/window1.xaml#basicxaml)]  
   
      사용자가 잘못 된 값 (예: 정수가 아닌 과정 ID 열에서)을 입력 셀 주위에 빨간색 테두리가 나타납니다. 다음 절차에 설명 된 대로이 기본 유효성 검사 의견을 변경할 수 있습니다.  
   
@@ -36,7 +36,7 @@ ms.locfileid: "54674598"
   
      다음 예에서는 유효성 검사 규칙을 사용 하 여 세 개의 열을 기준으로 공유 하는 오류 스타일을 추가 하 여 앞의 예제를 업데이트 합니다. 사용자가 잘못 된 값을 입력 스타일 셀 배경색을 변경 하 고 도구 설명을 추가 합니다. 유효성 검사 오류가 있는지 여부를 확인 하는 트리거 사용을 note 합니다. 현재 셀에 대 한 전용된 오류 템플릿이 있기 때문에 이것이 필요 합니다.  
   
-     [!code-xaml[DataGrid_Validation#CellValidationXaml](../../../../samples/snippets/csharp/VS_Snippets_Wpf/datagrid_validation/cs/mainwindow.xaml#cellvalidationxaml)]  
+     [!code-xaml[DataGrid_Validation#CellValidationXaml](~/samples/snippets/csharp/VS_Snippets_Wpf/datagrid_validation/cs/mainwindow.xaml#cellvalidationxaml)]  
   
      대체 하 여 보다 광범위 한 사용자 지정을 구현할 수 있습니다는 <xref:System.Windows.Controls.DataGridColumn.CellStyle%2A> 열을 기준으로 사용 합니다.  
   
@@ -46,24 +46,25 @@ ms.locfileid: "54674598"
   
      다음 예제에서는이 유효성 검사이 프로세스를 여부를 `StartDate` 속성 값을 `Course` 개체가 이전의 해당 `EndDate` 속성 값.  
   
-     [!code-csharp[DataGrid_Validation#CourseValidationRule](../../../../samples/snippets/csharp/VS_Snippets_Wpf/datagrid_validation/cs/mainwindow.xaml.cs#coursevalidationrule)]
-     [!code-vb[DataGrid_Validation#CourseValidationRule](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/datagrid_validation/vb/mainwindow.xaml.vb#coursevalidationrule)]  
+     [!code-csharp[DataGrid_Validation#CourseValidationRule](~/samples/snippets/csharp/VS_Snippets_Wpf/datagrid_validation/cs/mainwindow.xaml.cs#coursevalidationrule)]
+     [!code-vb[DataGrid_Validation#CourseValidationRule](~/samples/snippets/visualbasic/VS_Snippets_Wpf/datagrid_validation/vb/mainwindow.xaml.vb#coursevalidationrule)]  
   
 2.  유효성 검사 규칙을 추가 합니다 <xref:System.Windows.Controls.DataGrid.RowValidationRules%2A?displayProperty=nameWithType> 컬렉션입니다. <xref:System.Windows.Controls.DataGrid.RowValidationRules%2A> 속성에 대 한 직접 액세스를 제공 합니다 <xref:System.Windows.Data.BindingGroup.ValidationRules%2A> 의 속성을 <xref:System.Windows.Data.BindingGroup> 컨트롤에서 사용 하는 모든 바인딩이 그룹화 하는 인스턴스.  
   
      다음 예제에서는 <xref:System.Windows.Controls.DataGrid.RowValidationRules%2A> XAML의 속성입니다. 합니다 <xref:System.Windows.Controls.ValidationRule.ValidationStep%2A> 속성이 <xref:System.Windows.Controls.ValidationStep.UpdatedValue> 바인딩된 데이터 개체를 업데이트 한 후에 유효성 검사가 수행 되도록 합니다.  
   
-     [!code-xaml[DataGrid_Validation#RowValidationRulesXaml](../../../../samples/snippets/csharp/VS_Snippets_Wpf/datagrid_validation/cs/mainwindow.xaml#rowvalidationrulesxaml)]  
+     [!code-xaml[DataGrid_Validation#RowValidationRulesXaml](~/samples/snippets/csharp/VS_Snippets_Wpf/datagrid_validation/cs/mainwindow.xaml#rowvalidationrulesxaml)]  
   
      사용자 종료 날짜는 시작 날짜 보다 이전 인지를 지정 하는 경우 빨간색 느낌표 (!) 행 머리글에 나타납니다. 다음 절차에 설명 된 대로이 기본 유효성 검사 의견을 변경할 수 있습니다.  
   
 ### <a name="to-customize-row-validation-feedback"></a>행 유효성 검사 피드백을 사용자 지정 하려면  
   
--   <xref:System.Windows.Controls.DataGrid.RowValidationErrorTemplate%2A?displayProperty=nameWithType> 속성을 설정합니다. 이 속성을 사용 하면 개인에 대 한 행 유효성 검사 피드백을 사용자 지정할 수 있습니다 <xref:System.Windows.Controls.DataGrid> 컨트롤입니다. 암시적 행 스타일을 설정 하 여 여러 컨트롤에 영향을 줄 수도 있습니다는 <xref:System.Windows.Controls.DataGridRow.ValidationErrorTemplate%2A?displayProperty=nameWithType> 속성입니다.  
+-   
+  <xref:System.Windows.Controls.DataGrid.RowValidationErrorTemplate%2A?displayProperty=nameWithType> 속성을 설정합니다. 이 속성을 사용 하면 개인에 대 한 행 유효성 검사 피드백을 사용자 지정할 수 있습니다 <xref:System.Windows.Controls.DataGrid> 컨트롤입니다. 암시적 행 스타일을 설정 하 여 여러 컨트롤에 영향을 줄 수도 있습니다는 <xref:System.Windows.Controls.DataGridRow.ValidationErrorTemplate%2A?displayProperty=nameWithType> 속성입니다.  
   
      다음 예제에서는 기본 행 유효성 검사 의견을 더 잘 보이도록 표시기를 바꿉니다. 사용자가 잘못 된 값을 입력 하는 경우 행 머리글에 흰색 느낌표가 있는 빨간색 원이 나타납니다. 이 행 및 셀 모두 유효성 검사 오류가 발생합니다. 관련된 된 오류 메시지는 도구 설명에 표시 됩니다.  
   
-     [!code-xaml[DataGrid_Validation#RowValidationFeedbackXaml](../../../../samples/snippets/csharp/VS_Snippets_Wpf/datagrid_validation/cs/mainwindow.xaml#rowvalidationfeedbackxaml)]  
+     [!code-xaml[DataGrid_Validation#RowValidationFeedbackXaml](~/samples/snippets/csharp/VS_Snippets_Wpf/datagrid_validation/cs/mainwindow.xaml#rowvalidationfeedbackxaml)]  
   
 ## <a name="example"></a>예제  
  다음 예에서는 셀 및 행 유효성 검사의 전체 데모를 제공합니다. 합니다 `Course` 클래스를 구현 하는 샘플 데이터 개체를 제공 합니다. <xref:System.ComponentModel.IEditableObject> 트랜잭션을 지원 합니다. 합니다 <xref:System.Windows.Controls.DataGrid> 컨트롤이와 상호 작용 <xref:System.ComponentModel.IEditableObject> 사용자가 ESC 키를 눌러 변경 내용이 되돌릴 수 있도록 합니다.  
@@ -85,14 +86,14 @@ ms.locfileid: "54674598"
   
 -   유효성 검사 오류가 발생 하면 관련된 된 오류 메시지를 보려면 행 머리글의 표시기 위로 마우스 포인터를 이동 합니다.  
   
- [!code-csharp[DataGrid_Validation#FullCode](../../../../samples/snippets/csharp/VS_Snippets_Wpf/datagrid_validation/cs/mainwindow.xaml.cs#fullcode)]
- [!code-vb[DataGrid_Validation#FullCode](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/datagrid_validation/vb/mainwindow.xaml.vb#fullcode)]  
+ [!code-csharp[DataGrid_Validation#FullCode](~/samples/snippets/csharp/VS_Snippets_Wpf/datagrid_validation/cs/mainwindow.xaml.cs#fullcode)]
+ [!code-vb[DataGrid_Validation#FullCode](~/samples/snippets/visualbasic/VS_Snippets_Wpf/datagrid_validation/vb/mainwindow.xaml.vb#fullcode)]  
   
- [!code-xaml[DataGrid_Validation#FullXaml](../../../../samples/snippets/csharp/VS_Snippets_Wpf/datagrid_validation/cs/mainwindow.xaml#fullxaml)]  
+ [!code-xaml[DataGrid_Validation#FullXaml](~/samples/snippets/csharp/VS_Snippets_Wpf/datagrid_validation/cs/mainwindow.xaml#fullxaml)]  
   
 ## <a name="see-also"></a>참고자료
 - <xref:System.Windows.Controls.DataGrid>
-- [DataGrid](../../../../docs/framework/wpf/controls/datagrid.md)
-- [데이터 바인딩](../../../../docs/framework/wpf/data/data-binding-wpf.md)
-- [바인딩 유효성 검사 구현](../../../../docs/framework/wpf/data/how-to-implement-binding-validation.md)
-- [사용자 지정 개체의 유효성 검사 논리 구현](../../../../docs/framework/wpf/data/how-to-implement-validation-logic-on-custom-objects.md)
+- [DataGrid](datagrid.md)
+- [데이터 바인딩](../data/data-binding-wpf.md)
+- [바인딩 유효성 검사 구현](../data/how-to-implement-binding-validation.md)
+- [사용자 지정 개체의 유효성 검사 논리 구현](../data/how-to-implement-validation-logic-on-custom-objects.md)

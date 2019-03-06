@@ -8,12 +8,12 @@ helpviewer_keywords:
 - application startup [WPF]
 - performance [WPF], startup time
 ms.assetid: f0ec58d8-626f-4d8a-9873-c20f95e08b96
-ms.openlocfilehash: 6c72a69a1593c97ebda924e2b8aeb49a3cbefe1e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0bd7875f1e819497ea3a4d846a2876084a54ab80
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54527330"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57379109"
 ---
 # <a name="application-startup-time"></a>애플리케이션 시작 시간
 WPF 애플리케이션을 시작하는 데 필요한 시간은 크게 다를 수 있습니다. 이 항목에서는 WPF(Windows Presentation Foundation) 애플리케이션의 체감 시작 시간과 실제 시작 시간을 줄일 수 있는 다양한 기술에 대해 설명합니다.  
@@ -24,7 +24,7 @@ WPF 애플리케이션을 시작하는 데 필요한 시간은 크게 다를 수
  웜 시작은 주 CLR(공용 언어 런타임) 구성 요소의 페이지 대부분이 메모리에 이미 로드되어 있을 때 발생하며, 이 경우 비용이 많이 드는 디스크 액세스 시간을 줄일 수 있습니다. 이에 따라 관리되는 애플리케이션을 다시 실행할 때 더 빠르게 시작됩니다.  
   
 ## <a name="implement-a-splash-screen"></a>시작 화면 구현  
- 애플리케이션을 시작한 후 첫 번째 UI가 표시될 때까지 어쩔 수 없이 상당히 지연될 경우 *시작 화면*을 사용하여 체감 시작 시간을 최적화합니다. 이 방법을 사용하면 사용자가 애플리케이션을 시작한 직후에 이미지가 표시됩니다. 애플리케이션에서 첫 번째 UI를 표시할 준비가 되면 시작 화면이 사라집니다. 부터 합니다 [!INCLUDE[net_v35SP1_short](../../../../includes/net-v35sp1-short-md.md)]를 사용할 수는 <xref:System.Windows.SplashScreen> 시작 화면을 구현 하는 클래스입니다. 자세한 내용은 [WPF 애플리케이션에 시작 화면 추가](../../../../docs/framework/wpf/app-development/how-to-add-a-splash-screen-to-a-wpf-application.md)를 참조하세요.  
+ 애플리케이션을 시작한 후 첫 번째 UI가 표시될 때까지 어쩔 수 없이 상당히 지연될 경우 *시작 화면*을 사용하여 체감 시작 시간을 최적화합니다. 이 방법을 사용하면 사용자가 애플리케이션을 시작한 직후에 이미지가 표시됩니다. 애플리케이션에서 첫 번째 UI를 표시할 준비가 되면 시작 화면이 사라집니다. 부터 합니다 [!INCLUDE[net_v35SP1_short](../../../../includes/net-v35sp1-short-md.md)]를 사용할 수는 <xref:System.Windows.SplashScreen> 시작 화면을 구현 하는 클래스입니다. 자세한 내용은 [WPF 애플리케이션에 시작 화면 추가](../app-development/how-to-add-a-splash-screen-to-a-wpf-application.md)를 참조하세요.  
   
  네이티브 Win32 그래픽을 사용하여 사용자 고유의 시작 화면을 구현할 수도 있습니다. 구현 하기 전에 표시 된 <xref:System.Windows.Application.Run%2A> 메서드가 호출 됩니다.  
   
@@ -53,7 +53,7 @@ WPF 애플리케이션을 시작하는 데 필요한 시간은 크게 다를 수
  애플리케이션을 구성하지 않는 것이 좋습니다. 예를 들어 애플리케이션에 대한 구성 요구 사항이 간단하고, 시작 시간 목표가 명확한 경우 레지스트리 항목이나 간단한 INI 파일을 사용하여 시작하는 것이 더 빠를 수 있습니다.  
   
 ## <a name="utilize-the-gac"></a>GAC 사용  
- 어셈블리가 GAC(전역 어셈블리 캐시)에 설치되어 있지 않으면 강력한 이름의 어셈블리에 대한 해시 확인 및 컴퓨터에서 해당 어셈블리의 네이티브 이미지를 사용할 수 있는 경우의 Ngen 이미지 유효성 검사로 인해 지연이 발생할 수 있습니다. GAC에 설치된 모든 어셈블리에서는 강력한 이름 확인을 건너뜁니다. 자세한 내용은 [Gacutil.exe(전역 어셈블리 캐시 도구)](../../../../docs/framework/tools/gacutil-exe-gac-tool.md)를 참조하세요.  
+ 어셈블리가 GAC(전역 어셈블리 캐시)에 설치되어 있지 않으면 강력한 이름의 어셈블리에 대한 해시 확인 및 컴퓨터에서 해당 어셈블리의 네이티브 이미지를 사용할 수 있는 경우의 Ngen 이미지 유효성 검사로 인해 지연이 발생할 수 있습니다. GAC에 설치된 모든 어셈블리에서는 강력한 이름 확인을 건너뜁니다. 자세한 내용은 [Gacutil.exe(전역 어셈블리 캐시 도구)](../../tools/gacutil-exe-gac-tool.md)를 참조하세요.  
   
 ## <a name="use-ngenexe"></a>Ngen.exe 사용  
  애플리케이션에서 네이티브 이미지 생성기(Ngen.exe)를 사용하는 것이 좋습니다. Ngen.exe에서 생성하는 네이티브 이미지가 일반적으로 MSIL 이미지보다 클 수 있기 때문에 Ngen.exe를 사용하면 CPU 사용량이 줄어드는 대신 디스크 액세스가 많아질 수 있습니다.  
@@ -67,14 +67,14 @@ WPF 애플리케이션을 시작하는 데 필요한 시간은 크게 다를 수
 ### <a name="ngen-and-clickonce"></a>Ngen 및 ClickOnce  
  애플리케이션 배포 계획에 따라서도 로드 시간이 달라질 수 있습니다. [!INCLUDE[ndptecclick](../../../../includes/ndptecclick-md.md)] 응용 프로그램 배포는 Ngen을 지원하지 않습니다. 애플리케이션에 Ngen.exe를 사용하려면 Windows Installer와 같은 다른 배포 메커니즘을 사용해야 합니다.  
   
- 자세한 내용은 [Ngen.exe(네이티브 이미지 생성기)](../../../../docs/framework/tools/ngen-exe-native-image-generator.md)를 참조하세요.  
+ 자세한 내용은 [Ngen.exe(네이티브 이미지 생성기)](../../tools/ngen-exe-native-image-generator.md)를 참조하세요.  
   
 ### <a name="rebasing-and-dll-address-collisions"></a>기준 주소 다시 지정 및 DLL 주소 충돌  
  Ngen.exe를 사용하는 경우 네이티브 이미지가 메모리에 로드될 때 기준 주소 다시 지정이 발생할 수 있습니다. 해당 주소 범위가 이미 할당되어 있어 기본 설정된 기준 주소에 DLL을 로드할 수 없으면, Windows 로더에서 다른 주소에 DLL을 로드하지만 이 작업에는 시간이 오래 걸릴 수 있습니다.  
   
  가상 주소 덤프 도구(Vadump.exe)를 사용하여 모든 페이지가 전용(private)으로 된 모듈이 있는지 확인할 수 있습니다. 이러한 모듈이 있는 경우 해당 모듈은 다른 주소로 다시 지정되며, 이로 인해 해당 페이지를 공유할 수 없습니다.  
   
- 기준 주소 설정 방법에 대한 자세한 내용은 [Ngen.exe(네이티브 이미지 생성기)](../../../../docs/framework/tools/ngen-exe-native-image-generator.md)를 참조하세요.  
+ 기준 주소 설정 방법에 대한 자세한 내용은 [Ngen.exe(네이티브 이미지 생성기)](../../tools/ngen-exe-native-image-generator.md)를 참조하세요.  
   
 ## <a name="optimize-authenticode"></a>Authenticode 최적화  
  Authenticode 확인으로 인해 시작 시간이 길어질 수 있습니다. Authenticode로 서명된 어셈블리는 CA(인증 기관)에서 확인해야 합니다. 이 확인 작업을 수행하는 경우 현재 인증서 해지 목록을 다운로드하기 위해 네트워크에 여러 번 연결해야 하므로 시간이 오래 걸릴 수 있습니다. 또한 신뢰할 수 있는 루트에 대한 경로에 유효한 인증서의 전체 체인이 있는지도 확인합니다. 이로 인해 어셈블리가 로드되는 동안 몇 초 정도 지연될 수 있습니다.  
@@ -91,7 +91,7 @@ WPF 애플리케이션을 시작하는 데 필요한 시간은 크게 다를 수
 </configuration>  
 ```  
   
- 자세한 내용은 [\<generatePublisherEvidence> 요소](../../../../docs/framework/configure-apps/file-schema/runtime/generatepublisherevidence-element.md)를 참조하세요.  
+ 자세한 내용은 [\<generatePublisherEvidence> 요소](../../configure-apps/file-schema/runtime/generatepublisherevidence-element.md)를 참조하세요.  
   
 ## <a name="compare-performance-on-windows-vista"></a>Windows Vista에서 성능 비교  
  Windows Vista의 메모리 관리자에는 SuperFetch라는 기술이 있습니다. SuperFetch는 시간의 경과에 따른 메모리 사용 패턴을 분석하여 특정 사용자에 맞는 최적의 메모리 콘텐츠를 결정하며, 해당 콘텐츠를 항상 유지하기 위해 지속적으로 작동합니다.  
@@ -127,6 +127,6 @@ WPF 애플리케이션을 시작하는 데 필요한 시간은 크게 다를 수
 - <xref:System.AppDomain>
 - <xref:System.Resources.NeutralResourcesLanguageAttribute>
 - <xref:System.Resources.ResourceManager>
-- [WPF 응용 프로그램에 시작 화면 추가](../../../../docs/framework/wpf/app-development/how-to-add-a-splash-screen-to-a-wpf-application.md)
-- [Ngen.exe(네이티브 이미지 생성기)](../../../../docs/framework/tools/ngen-exe-native-image-generator.md)
-- [\<generatePublisherEvidence> 요소](../../../../docs/framework/configure-apps/file-schema/runtime/generatepublisherevidence-element.md)
+- [WPF 응용 프로그램에 시작 화면 추가](../app-development/how-to-add-a-splash-screen-to-a-wpf-application.md)
+- [Ngen.exe(네이티브 이미지 생성기)](../../tools/ngen-exe-native-image-generator.md)
+- [\<generatePublisherEvidence> 요소](../../configure-apps/file-schema/runtime/generatepublisherevidence-element.md)

@@ -1,6 +1,6 @@
 ---
 title: 다음 함수 (관리 되지 않는 API 참조)
-description: 다음 함수 retireves 열거형에서 다음 속성입니다.
+description: 다음 함수는 열거형에서 다음 속성을 검색합니다.
 ms.date: 11/06/2017
 api_name:
 - Next
@@ -16,54 +16,54 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1c6e39c1bc4c2860e400e2708e588416eb5769bd
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 240544330fa352cbfdc01944e4be6bcad28dc96f
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56971886"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57373201"
 ---
 # <a name="next-function"></a>Next 함수
-에 대 한 호출을 시작 하는 열거형의 다음 속성을 검색 [BeginEnumeration](beginenumeration.md)합니다.  
+에 대 한 호출을 시작 하는 열거형의 다음 속성을 검색 [BeginEnumeration](beginenumeration.md)합니다.
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
-  
-## <a name="syntax"></a>구문  
-  
-```  
+
+## <a name="syntax"></a>구문
+
+```cpp
 HRESULT Next (
-   [in] int               vFunc, 
-   [in] IWbemClassObject* ptr, 
+   [in] int               vFunc,
+   [in] IWbemClassObject* ptr,
    [in] LONG              lFlags,
    [out] BSTR*            pstrName,
    [out] VARIANT*         pVal,
    [out] CIMTYPE*         pvtType,
-   [out] LONG*            plFlavor     
-); 
-```  
+   [out] LONG*            plFlavor
+);
+```
 
 ## <a name="parameters"></a>매개 변수
 
-`vFunc`  
+`vFunc`\
 [in] 이 매개 변수 사용 되지 않습니다.
 
-`ptr`  
+`ptr`\
 [in] 에 대 한 포인터를 [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) 인스턴스.
 
-`lFlags`  
+`lFlags`\
 [in] 예약되어 있습니다. 이 매개 변수는 0 이어야 합니다.
 
-`pstrName`  
+`pstrName`\
 [out] 새 `BSTR` 속성 이름을 포함 하는 합니다. 이 매개 변수를 설정할 수 있습니다 `null` 이름이 필요 하지 않은 경우.
 
-`pVal`  
-[out] `VARIANT` 속성의 값으로 채워집니다. 이 매개 변수를 설정할 수 있습니다 `null` 값 필요 하지 않은 경우. 함수는 오류 코드를 반환 하는 경우는 `VARIANT` 전달할 `pVal` 는 왼쪽 수정 되지 않은 합니다. 
+`pVal`\
+[out] `VARIANT` 속성의 값으로 채워집니다. 이 매개 변수를 설정할 수 있습니다 `null` 값 필요 하지 않은 경우. 함수는 오류 코드를 반환 하는 경우는 `VARIANT` 전달할 `pVal` 는 왼쪽 수정 되지 않은 합니다.
 
-`pvtType`  
-[out] 에 대 한 포인터를 `CIMTYPE` 변수 (한 `LONG` 배치 되는 속성의 형식으로). 이 속성의 값 수를 `VT_NULL_VARIANT`, 실제 형식의 속성을 확인 해야 하는 경우. 이 매개 변수 수도 있습니다 `null`합니다. 
+`pvtType`\
+[out] 에 대 한 포인터를 `CIMTYPE` 변수 (한 `LONG` 배치 되는 속성의 형식으로). 이 속성의 값 수를 `VT_NULL_VARIANT`, 실제 형식의 속성을 확인 해야 하는 경우. 이 매개 변수 수도 있습니다 `null`합니다.
 
-`plFlavor`  
-[out] `null`, 또는 속성의 원본에서 정보를 수신 하는 값입니다. 가능한 값에 대 한 [설명] 섹션을 참조 하세요. 
+`plFlavor`\
+[out] `null`, 또는 속성의 원본에서 정보를 수신 하는 값입니다. 가능한 값에 대 한 [설명] 섹션을 참조 하세요.
 
 ## <a name="return-value"></a>반환 값
 
@@ -75,10 +75,10 @@ HRESULT Next (
 | `WBEM_E_INVALID_PARAMETER` | 0x80041008 | 매개 변수가 잘못 되었습니다. |
 | `WBEM_E_UNEXPECTED` | 0x8004101d | 에 대 한 호출이 없습니다 합니다 [ `BeginEnumeration` ](beginenumeration.md) 함수입니다. |
 | `WBEM_E_OUT_OF_MEMORY` | 0x80041006 | 새 열거형 시작에 사용할 있는 메모리가 충분 하지 않습니다. |
-| `WBEM_E_TRANSPORT_FAILURE` | 0x80041015 | 원격 프로시저는 현재 프로세스와 실패 한 Windows 관리 간에 호출 합니다. |
+| `WBEM_E_TRANSPORT_FAILURE` | 0x80041015 | 현재 프로세스와 실패 한 Windows 관리 원격 프로시저 호출 합니다. |
 | `WBEM_S_NO_ERROR` | 0 | 함수 호출이 성공 했습니다.  |
 | `WBEM_S_NO_MORE_DATA` | 0x40005 | 열거형에 더 많은 속성이 있습니다. |
-  
+
 ## <a name="remarks"></a>설명
 
 이 함수에 대 한 호출을 래핑하는 [IWbemClassObject::Next](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-next) 메서드.
@@ -95,12 +95,14 @@ HRESULT Next (
 | `WBEM_FLAVOR_ORIGIN_PROPAGATED` | 0x20 | 클래스: 속성은 부모 클래스에서 상속 됩니다. <br> 인스턴스: 속성을 부모 클래스에서 상속 하는 동안에 의해 수정 되지 인스턴스.  |
 | `WBEM_FLAVOR_ORIGIN_LOCAL` | 0 | 클래스: 속성은 파생된 클래스에 속합니다. <br> 인스턴스: 인스턴스에서; 속성이 수정 됩니다. 즉, 값이 제공 된 또는 한정자를 추가 또는 수정 합니다. |
 
-## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
-  
- **헤더:** WMINet_Utils.idl  
-  
- **.NET Framework 버전:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
-  
+## <a name="requirements"></a>요구 사항
+
+**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.
+
+**헤더:** WMINet_Utils.idl
+
+**.NET Framework 버전:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
+
 ## <a name="see-also"></a>참고자료
+
 - [WMI 및 성능 카운터 (관리 되지 않는 API 참조)](index.md)

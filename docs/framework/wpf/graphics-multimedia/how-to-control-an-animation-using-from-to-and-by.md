@@ -7,15 +7,15 @@ helpviewer_keywords:
 - animation [WPF], basic animation
 - From/to/by animation
 ms.assetid: 59afba57-6fc1-44c8-987e-8a5f4142adad
-ms.openlocfilehash: dda8cdb6159cc6d8e6da5b7d430ebf76aaa100b7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 35973a2a3dea233468f91c6bd24851be088b84e0
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54530313"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57373844"
 ---
 # <a name="how-to-control-an-animation-using-from-to-and-by"></a>방법: From, To 및 By를 사용하여 애니메이션 제어
-"From/To/By" 또는 "기본 애니메이션"은 두 대상 값 사이 전환을 만듭니다 (참조 [애니메이션 개요](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md) 다양 한 유형의 애니메이션 소개). 기본 애니메이션의 대상 값을 설정 하려면 해당 <xref:System.Windows.Media.Animation.DoubleAnimation.From%2A>하십시오 <xref:System.Windows.Media.Animation.DoubleAnimation.To%2A>, 및 <xref:System.Windows.Media.Animation.DoubleAnimation.By%2A> 속성입니다.  다음 표에서 요약 하는 방법을 <xref:System.Windows.Media.Animation.DoubleAnimation.From%2A>, <xref:System.Windows.Media.Animation.DoubleAnimation.To%2A>, 및 <xref:System.Windows.Media.Animation.DoubleAnimation.By%2A> 속성을 함께 사용할 수 있습니다. 또는 개별적으로 애니메이션의 대상 값을 확인 하 합니다.  
+"From/To/By" 또는 "기본 애니메이션"은 두 대상 값 사이 전환을 만듭니다 (참조 [애니메이션 개요](animation-overview.md) 다양 한 유형의 애니메이션 소개). 기본 애니메이션의 대상 값을 설정 하려면 해당 <xref:System.Windows.Media.Animation.DoubleAnimation.From%2A>하십시오 <xref:System.Windows.Media.Animation.DoubleAnimation.To%2A>, 및 <xref:System.Windows.Media.Animation.DoubleAnimation.By%2A> 속성입니다.  다음 표에서 요약 하는 방법을 <xref:System.Windows.Media.Animation.DoubleAnimation.From%2A>, <xref:System.Windows.Media.Animation.DoubleAnimation.To%2A>, 및 <xref:System.Windows.Media.Animation.DoubleAnimation.By%2A> 속성을 함께 사용할 수 있습니다. 또는 개별적으로 애니메이션의 대상 값을 확인 하 합니다.  
   
 |지정된 속성|결과 동작|  
 |--------------------------|------------------------|  
@@ -28,16 +28,16 @@ ms.locfileid: "54530313"
 > [!NOTE]
 >  둘 다 설정 하지 않으면 합니다 <xref:System.Windows.Media.Animation.DoubleAnimation.To%2A> 속성 및 <xref:System.Windows.Media.Animation.DoubleAnimation.By%2A> 같은 애니메이션에서 속성입니다.  
   
- 다른 보간 방법을 사용하거나 둘 이상의 대상 값 사이에 애니메이션 효과를 주려면 키 프레임 애니메이션을 사용합니다. 참조 [키 프레임 애니메이션 개요](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md) 자세한 내용은 합니다.  
+ 다른 보간 방법을 사용하거나 둘 이상의 대상 값 사이에 애니메이션 효과를 주려면 키 프레임 애니메이션을 사용합니다. 참조 [키 프레임 애니메이션 개요](key-frame-animations-overview.md) 자세한 내용은 합니다.  
   
- 단일 속성에 여러 애니메이션을 적용 하는 방법에 대 한 내용은 [키 프레임 애니메이션 개요](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md)합니다.  
+ 단일 속성에 여러 애니메이션을 적용 하는 방법에 대 한 내용은 [키 프레임 애니메이션 개요](key-frame-animations-overview.md)합니다.  
   
  아래 예제에서는 설정의 다른 결과 보여 줍니다 <xref:System.Windows.Media.Animation.DoubleAnimation.To%2A>, <xref:System.Windows.Media.Animation.DoubleAnimation.By%2A>, 및 <xref:System.Windows.Media.Animation.DoubleAnimation.From%2A> 애니메이션의 속성입니다.  
   
 ## <a name="example"></a>예제  
- [!code-xaml[BasicAnimations_snippet#AnimationTargetValuesWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/BasicAnimations_snippet/CS/AnimationTargetValuesExample.xaml#animationtargetvalueswholepage)]  
+ [!code-xaml[BasicAnimations_snippet#AnimationTargetValuesWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/BasicAnimations_snippet/CS/AnimationTargetValuesExample.xaml#animationtargetvalueswholepage)]  
   
 ## <a name="see-also"></a>참고자료
-- [애니메이션 개요](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)
-- [키 프레임 애니메이션 개요](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md)
+- [애니메이션 개요](animation-overview.md)
+- [키 프레임 애니메이션 개요](key-frame-animations-overview.md)
 - [From, To 및 By 애니메이션 대상 값 샘플](https://go.microsoft.com/fwlink/?LinkID=159988)

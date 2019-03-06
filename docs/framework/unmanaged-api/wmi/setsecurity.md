@@ -16,32 +16,34 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3b3e8ddb34849611daae4dfa1d2762a25ac5cf82
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7200e3a19fcadabb5e149c38b620b3f60907c392
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54721141"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57377419"
 ---
 # <a name="setsecurity-function"></a>SetSecurity 함수
-현재 스레드와 연결된 가장 토큰을 검색합니다.   
-  
+
+현재 스레드와 연결된 가장 토큰을 검색합니다. 
+
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
-  
-## <a name="syntax"></a>구문  
-  
-```  
+
+## <a name="syntax"></a>구문
+
+```
 HRESULT SetSecurity (
    [out] boolean* pNeedToReset, 
    [out] HANDLE* pCurrentThreadToken
 ); 
-```  
+```
 
 ## <a name="parameters"></a>매개 변수
 
-`pNeedToReset` [out] 함수는 반환 될 때 포함에 대 한 포인터를 `boolean` 를 호출 하 여 토큰을 다시 설정 해야 하는지 여부를 나타내는 합니다 [ResetSecurity](resetsecurity.md) 함수입니다.  
+`pNeedToReset`\
+[out] 함수는 반환 될 때 포함에 대 한 포인터를 `boolean` 를 호출 하 여 토큰을 다시 설정 해야 하는지 여부를 나타내는 합니다 [ResetSecurity](resetsecurity.md) 함수입니다.
 
-`token`  
+`token`\
 [out] 함수는 반환 될 때 현재 스레드와 연결 된 가장 토큰 핸들에 대 한 포인터를 포함 합니다. 해당 값은 `null` 현재 스레드와 연결 된 토큰이 없는 경우. 
 
 ## <a name="return-value"></a>반환 값
@@ -49,13 +51,15 @@ HRESULT SetSecurity (
 함수가 성공할 경우 반환 값은 `S_OK` (0).
 
 함수가 실패 한 경우 반환 값은 0이 아닌 오류 코드입니다. 오류 정보를 호출 합니다 [GetErrorInfo](geterrorinfo.md) 함수입니다.
-  
-## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
-  
- **헤더:** WMINet_Utils.idl  
-  
- **.NET Framework 버전:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
-  
+
+## <a name="requirements"></a>요구 사항
+
+ **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.
+
+ **헤더:** WMINet_Utils.idl
+
+ **.NET Framework 버전:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
+
 ## <a name="see-also"></a>참고자료
+
 - [WMI 및 성능 카운터 (관리 되지 않는 API 참조)](index.md)

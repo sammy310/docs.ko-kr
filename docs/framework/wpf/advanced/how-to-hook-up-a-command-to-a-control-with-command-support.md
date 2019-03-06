@@ -10,12 +10,12 @@ helpviewer_keywords:
 - RoutedCommand class [WPF], attaching to a Control
 - classes [WPF], RoutedCommand [WPF], attaching to a Control
 ms.assetid: 8d8592ae-0c91-469e-a1cd-d179c4544548
-ms.openlocfilehash: 4eded4812d8894b58331f26ec75c592c15e95419
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2bb3e00cad1a629a405fa75ef32a289c4006f324
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54663208"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57364439"
 ---
 # <a name="how-to-hook-up-a-command-to-a-control-with-command-support"></a>방법: 명령을 지원하는 컨트롤에 명령 후크
 다음 예제는 <xref:System.Windows.Input.RoutedCommand>를 명령에 대한 지원을 기본 제공하는 <xref:System.Windows.Controls.Control>에 후크하는 방법을 보여줍니다.  여러 소스에 명령을 후크하는 전체 샘플은 [Create a Custom RoutedCommand Sample](https://github.com/Microsoft/WPF-Samples/tree/master/Input%20and%20Commands/CustomRoutedCommand)(사용자 지정 RoutedCommand 만들기 샘플)을 참조하세요.  
@@ -31,11 +31,11 @@ ms.locfileid: "54663208"
   
  <xref:System.Windows.Controls.MenuItem>이 만들어지고 <xref:System.Windows.Controls.MenuItem.Command%2A> 속성이 <xref:System.Windows.Input.ApplicationCommands.Paste%2A> 명령으로 설정됩니다.  <xref:System.Windows.Controls.MenuItem.CommandTarget%2A>이 명시적으로 <xref:System.Windows.Controls.TextBox> 개체로 설정되지 않습니다.  <xref:System.Windows.Controls.MenuItem.CommandTarget%2A>이 설정되지 않는 경우 명령의 대상은 키보드 포커스가 있는 요소입니다.  키보드 포커스가 있는 요소가 <xref:System.Windows.Input.ApplicationCommands.Paste%2A> 명령을 지원하지 않거나 현재 붙여넣기 명령을 실행할 수 없는 경우(예를 들어 클립보드가 비어있는 경우) <xref:System.Windows.Controls.MenuItem>이 회색으로 표시됩니다.  
   
- [!code-xaml[MenuItemCommandTask_XAML#MenuItemCommanding](../../../../samples/snippets/csharp/VS_Snippets_Wpf/MenuItemCommandTask_XAML/CS/Window1.xaml#menuitemcommanding)]  
+ [!code-xaml[MenuItemCommandTask_XAML#MenuItemCommanding](~/samples/snippets/csharp/VS_Snippets_Wpf/MenuItemCommandTask_XAML/CS/Window1.xaml#menuitemcommanding)]  
   
- [!code-csharp[MenuItemCommandTask#MenuItemCommandingCodeBehind](../../../../samples/snippets/csharp/VS_Snippets_Wpf/MenuItemCommandTask/CSharp/Window1.xaml.cs#menuitemcommandingcodebehind)]
- [!code-vb[MenuItemCommandTask#MenuItemCommandingCodeBehind](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/MenuItemCommandTask/VisualBasic/Window1.xaml.vb#menuitemcommandingcodebehind)]  
+ [!code-csharp[MenuItemCommandTask#MenuItemCommandingCodeBehind](~/samples/snippets/csharp/VS_Snippets_Wpf/MenuItemCommandTask/CSharp/Window1.xaml.cs#menuitemcommandingcodebehind)]
+ [!code-vb[MenuItemCommandTask#MenuItemCommandingCodeBehind](~/samples/snippets/visualbasic/VS_Snippets_Wpf/MenuItemCommandTask/VisualBasic/Window1.xaml.vb#menuitemcommandingcodebehind)]  
   
 ## <a name="see-also"></a>참고자료
-- [명령 개요](../../../../docs/framework/wpf/advanced/commanding-overview.md)
-- [명령을 지원하지 않는 컨트롤에 명령 후크](../../../../docs/framework/wpf/advanced/how-to-hook-up-a-command-to-a-control-with-no-command-support.md)
+- [명령 개요](commanding-overview.md)
+- [명령을 지원하지 않는 컨트롤에 명령 후크](how-to-hook-up-a-command-to-a-control-with-no-command-support.md)

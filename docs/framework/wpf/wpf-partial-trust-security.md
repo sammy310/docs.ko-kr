@@ -15,15 +15,15 @@ helpviewer_keywords:
 - feature security requirements [WPF]
 - managing permissions [WPF]
 ms.assetid: ef2c0810-1dbf-4511-babd-1fab95b523b5
-ms.openlocfilehash: ec3c7a15627cf423d27221b870286009a8f7606f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c0391099d02933cb8a32a2e134dad949034138ad
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54534793"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57371634"
 ---
 # <a name="wpf-partial-trust-security"></a>WPF 부분 신뢰 보안
-<a name="introduction"></a> 일반적으로 악의적인 손상을 방지하기 위해 중요한 시스템 리소스에 직접 액세스하지 않도록 인터넷 응용 프로그램을 제한해야 합니다. 기본적으로 [!INCLUDE[TLA#tla_html](../../../includes/tlasharptla-html-md.md)] 되며 클라이언트 쪽 스크립트 언어인 중요 한 시스템 리소스에 액세스할 수 없습니다. Windows Presentation Foundation (WPF) 브라우저에서 호스팅된 응용 프로그램은 브라우저에서 시작할 수 있으므로 비슷한 일련의 제한 사항에 따라야 합니다. 이러한 제한 사항이 적용 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 둘 다에 의존 [!INCLUDE[TLA#tla_cas](../../../includes/tlasharptla-cas-md.md)] 하 고 [!INCLUDE[TLA#tla_clickonce](../../../includes/tlasharptla-clickonce-md.md)] (참조 [WPF 보안 전략-플랫폼 보안](../../../docs/framework/wpf/wpf-security-strategy-platform-security.md)). 기본적으로 브라우저에서 호스팅된 응용 프로그램 요청 인터넷 영역 [!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)] 인터넷, 로컬 인트라넷 또는 로컬 컴퓨터에서 실행 되는 여부에 관계 없이 사용 권한 집합입니다. 전체 권한 집합보다 적은 권한으로 실행하는 애플리케이션은 부분 신뢰로 실행된다고 할 수 있습니다.  
+<a name="introduction"></a> 일반적으로 악의적인 손상을 방지하기 위해 중요한 시스템 리소스에 직접 액세스하지 않도록 인터넷 응용 프로그램을 제한해야 합니다. 기본적으로 [!INCLUDE[TLA#tla_html](../../../includes/tlasharptla-html-md.md)] 되며 클라이언트 쪽 스크립트 언어인 중요 한 시스템 리소스에 액세스할 수 없습니다. Windows Presentation Foundation (WPF) 브라우저에서 호스팅된 응용 프로그램은 브라우저에서 시작할 수 있으므로 비슷한 일련의 제한 사항에 따라야 합니다. 이러한 제한 사항이 적용 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 둘 다에 의존 [!INCLUDE[TLA#tla_cas](../../../includes/tlasharptla-cas-md.md)] 하 고 [!INCLUDE[TLA#tla_clickonce](../../../includes/tlasharptla-clickonce-md.md)] (참조 [WPF 보안 전략-플랫폼 보안](wpf-security-strategy-platform-security.md)). 기본적으로 브라우저에서 호스팅된 응용 프로그램 요청 인터넷 영역 [!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)] 인터넷, 로컬 인트라넷 또는 로컬 컴퓨터에서 실행 되는 여부에 관계 없이 사용 권한 집합입니다. 전체 권한 집합보다 적은 권한으로 실행하는 애플리케이션은 부분 신뢰로 실행된다고 할 수 있습니다.  
   
  [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 다양 한 많은 기능을 최대한 사용할 수 있도록 안전 하 게 함께 부분 신뢰에 되도록 지원 제공 [!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)], 부분 신뢰 프로그래밍에 대 한 추가 지원을 제공 합니다.  
   
@@ -52,11 +52,11 @@ ms.locfileid: "54534793"
   
  이 표는 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 높은 수준 기능입니다. 자세한 내용은 합니다 [!INCLUDE[TLA#tla_lhsdk](../../../includes/tlasharptla-lhsdk-md.md)] 의 각 멤버에 필요한 사용 권한에 대해 설명 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]합니다. 또한 다음 기능에는 특별한 고려 사항을 포함하는 부분 신뢰 실행에 대한 자세한 정보가 있습니다.  
   
--   [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] (참조 [XAML 개요 (WPF)](../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)).  
+-   [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] (참조 [XAML 개요 (WPF)](./advanced/xaml-overview-wpf.md)).  
   
 -   팝업 (참조 <xref:System.Windows.Controls.Primitives.Popup?displayProperty=nameWithType>).  
   
--   끌어서 놓기 (참조 [끌어서 놓기 개요](../../../docs/framework/wpf/advanced/drag-and-drop-overview.md)).  
+-   끌어서 놓기 (참조 [끌어서 놓기 개요](./advanced/drag-and-drop-overview.md)).  
   
 -   클립보드 (참조 <xref:System.Windows.Clipboard?displayProperty=nameWithType>).  
   
@@ -95,10 +95,10 @@ ms.locfileid: "54534793"
 ### <a name="detecting-permissions-using-cas"></a>CAS를 사용하여 권한 검색  
  상황에 따라 두 독립 실행형 응용 프로그램에서 사용할 라이브러리 어셈블리의 공유 코드는 및 [!INCLUDE[TLA2#tla_xbap#plural](../../../includes/tla2sharptla-xbapsharpplural-md.md)]합니다. 이러한 경우 코드는 애플리케이션에서 얻은 권한 집합이 허용하는 것보다 많은 권한이 필요할 수 있는 기능을 실행할 수 있습니다. 응용 프로그램이 Microsoft.NET Framework의 보안을 사용 하 여 특정 권한을 갖고 있는지 여부를 검색할 수 있습니다. 특히, 호출 하 여 특정 권한이 있는지 여부를 테스트할 수 있습니다는 <xref:System.Security.CodeAccessPermission.Demand%2A> 원하는 권한의 인스턴스에서 메서드. 다음 예제는 로컬 디스크에 파일을 저장하는 기능이 있는지 여부에 대해 쿼리하는 코드입니다.  
   
- [!code-csharp[PartialTrustSecurityOverviewSnippets#DetectPermsCODE1](../../../samples/snippets/csharp/VS_Snippets_Wpf/PartialTrustSecurityOverviewSnippets/CSharp/FileHandling.cs#detectpermscode1)]
- [!code-vb[PartialTrustSecurityOverviewSnippets#DetectPermsCODE1](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/PartialTrustSecurityOverviewSnippets/VisualBasic/FileHandling.vb#detectpermscode1)]  
-[!code-csharp[PartialTrustSecurityOverviewSnippets#DetectPermsCODE2](../../../samples/snippets/csharp/VS_Snippets_Wpf/PartialTrustSecurityOverviewSnippets/CSharp/FileHandling.cs#detectpermscode2)]
-[!code-vb[PartialTrustSecurityOverviewSnippets#DetectPermsCODE2](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/PartialTrustSecurityOverviewSnippets/VisualBasic/FileHandling.vb#detectpermscode2)]  
+ [!code-csharp[PartialTrustSecurityOverviewSnippets#DetectPermsCODE1](~/samples/snippets/csharp/VS_Snippets_Wpf/PartialTrustSecurityOverviewSnippets/CSharp/FileHandling.cs#detectpermscode1)]
+ [!code-vb[PartialTrustSecurityOverviewSnippets#DetectPermsCODE1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PartialTrustSecurityOverviewSnippets/VisualBasic/FileHandling.vb#detectpermscode1)]  
+[!code-csharp[PartialTrustSecurityOverviewSnippets#DetectPermsCODE2](~/samples/snippets/csharp/VS_Snippets_Wpf/PartialTrustSecurityOverviewSnippets/CSharp/FileHandling.cs#detectpermscode2)]
+[!code-vb[PartialTrustSecurityOverviewSnippets#DetectPermsCODE2](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PartialTrustSecurityOverviewSnippets/VisualBasic/FileHandling.vb#detectpermscode2)]  
   
  응용 프로그램에 필요한 사용 권한이 호출 없으면 <xref:System.Security.CodeAccessPermission.Demand%2A> 보안 예외를 throw 합니다. 그렇지 않은 경우 사용 권한이 부여됩니다. `IsPermissionGranted` 이 동작을 캡슐화 하 고 반환 `true` 또는 `false` 적절 하 게 합니다.  
   
@@ -106,14 +106,14 @@ ms.locfileid: "54534793"
 ### <a name="graceful-degradation-of-functionality"></a>점진적인 기능 저하  
  코드에 필요한 작업을 수행할 권한이 있는지 확인하는 것은 다른 영역에서 실행될 수 있는 코드와 관련되어 있습니다. 영역 검색이 하나의 방법이지만, 가능한 경우 사용자를 위한 대안을 제공하는 것이 좋습니다. 예를 들어 부분 신뢰 애플리케이션은 격리된 저장소에만 파일을 만들 수 있지만, 일반적으로 완전 신뢰 애플리케이션은 사용자가 원하는 모든 곳에 파일을 만들 수가 있습니다. 파일을 만드는 코드가 완전 신뢰(독립 실행형) 애플리케이션과 부분 신뢰(브라우저에서 호스트된) 애플리케이션에서 공유되는 어셈블리에 존재하고 두 애플리케이션에서 사용자가 파일을 만들도록 하는 경우, 공유 코드는 해당 위치에 파일을 만들기 전에 부분 또는 완전 신뢰에서 실행 중인지 감지해야 합니다. 다음 코드는 두 사항을 모두 보여줍니다.  
   
- [!code-csharp[PartialTrustSecurityOverviewSnippets#DetectPermsGracefulCODE1](../../../samples/snippets/csharp/VS_Snippets_Wpf/PartialTrustSecurityOverviewSnippets/CSharp/FileHandlingGraceful.cs#detectpermsgracefulcode1)]
- [!code-vb[PartialTrustSecurityOverviewSnippets#DetectPermsGracefulCODE1](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/PartialTrustSecurityOverviewSnippets/VisualBasic/FileHandlingGraceful.vb#detectpermsgracefulcode1)]  
-[!code-csharp[PartialTrustSecurityOverviewSnippets#DetectPermsGracefulCODE2](../../../samples/snippets/csharp/VS_Snippets_Wpf/PartialTrustSecurityOverviewSnippets/CSharp/FileHandlingGraceful.cs#detectpermsgracefulcode2)]
-[!code-vb[PartialTrustSecurityOverviewSnippets#DetectPermsGracefulCODE2](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/PartialTrustSecurityOverviewSnippets/VisualBasic/FileHandlingGraceful.vb#detectpermsgracefulcode2)]  
+ [!code-csharp[PartialTrustSecurityOverviewSnippets#DetectPermsGracefulCODE1](~/samples/snippets/csharp/VS_Snippets_Wpf/PartialTrustSecurityOverviewSnippets/CSharp/FileHandlingGraceful.cs#detectpermsgracefulcode1)]
+ [!code-vb[PartialTrustSecurityOverviewSnippets#DetectPermsGracefulCODE1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PartialTrustSecurityOverviewSnippets/VisualBasic/FileHandlingGraceful.vb#detectpermsgracefulcode1)]  
+[!code-csharp[PartialTrustSecurityOverviewSnippets#DetectPermsGracefulCODE2](~/samples/snippets/csharp/VS_Snippets_Wpf/PartialTrustSecurityOverviewSnippets/CSharp/FileHandlingGraceful.cs#detectpermsgracefulcode2)]
+[!code-vb[PartialTrustSecurityOverviewSnippets#DetectPermsGracefulCODE2](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PartialTrustSecurityOverviewSnippets/VisualBasic/FileHandlingGraceful.vb#detectpermsgracefulcode2)]  
   
  대부분의 경우, 부분 신뢰 대체 항목을 찾을 수 있어야 됩니다.  
   
- 인트라넷과 같은 제어 된 환경 사용자 지정 관리 framework 기반 클라이언트를 통해 설치할 수 있습니다는 [!INCLUDE[TLA#tla_gac](../../../includes/tlasharptla-gac-md.md)]합니다. 이러한 라이브러리는 완전 신뢰가 필요한 코드를 실행할 수 및 사용 하 여 부분 신뢰 에서만 허용 되는 응용 프로그램에서 참조할 수 <xref:System.Security.AllowPartiallyTrustedCallersAttribute> (자세한 내용은 참조 하십시오 [Security](../../../docs/framework/wpf/security-wpf.md) 고 [WPF 보안 전략-플랫폼 보안](../../../docs/framework/wpf/wpf-security-strategy-platform-security.md)).  
+ 인트라넷과 같은 제어 된 환경 사용자 지정 관리 framework 기반 클라이언트를 통해 설치할 수 있습니다는 [!INCLUDE[TLA#tla_gac](../../../includes/tlasharptla-gac-md.md)]합니다. 이러한 라이브러리는 완전 신뢰가 필요한 코드를 실행할 수 및 사용 하 여 부분 신뢰 에서만 허용 되는 응용 프로그램에서 참조할 수 <xref:System.Security.AllowPartiallyTrustedCallersAttribute> (자세한 내용은 참조 하십시오 [Security](security-wpf.md) 고 [WPF 보안 전략-플랫폼 보안](wpf-security-strategy-platform-security.md)).  
   
 <a name="Browser_Host_Detection"></a>   
 ### <a name="browser-host-detection"></a>브라우저 호스트 검색  
@@ -151,19 +151,19 @@ ms.locfileid: "54534793"
 > [!NOTE]
 >  잘라내기 및 붙여넣기는 사용자가 시작한 경우 부분 신뢰에서만 허용됩니다.  
   
- 권한을 높이는 경우 프로젝트 설정 및 ClickOnce 애플리케이션 매니페스트를 변경해야 합니다. 자세한 내용은 [WPF XAML 브라우저 애플리케이션 개요](../../../docs/framework/wpf/app-development/wpf-xaml-browser-applications-overview.md)를 참조하세요. 다음 문서도 유용할 수 있습니다.  
+ 권한을 높이는 경우 프로젝트 설정 및 ClickOnce 애플리케이션 매니페스트를 변경해야 합니다. 자세한 내용은 [WPF XAML 브라우저 애플리케이션 개요](./app-development/wpf-xaml-browser-applications-overview.md)를 참조하세요. 다음 문서도 유용할 수 있습니다.  
   
--   [Mage.exe(매니페스트 생성 및 편집 도구)](../../../docs/framework/tools/mage-exe-manifest-generation-and-editing-tool.md).  
+-   [Mage.exe(매니페스트 생성 및 편집 도구)](../tools/mage-exe-manifest-generation-and-editing-tool.md).  
   
--   [MageUI.exe(매니페스트 생성 및 편집 도구, 그래픽 클라이언트)](../../../docs/framework/tools/mageui-exe-manifest-generation-and-editing-tool-graphical-client.md).  
+-   [MageUI.exe(매니페스트 생성 및 편집 도구, 그래픽 클라이언트)](../tools/mageui-exe-manifest-generation-and-editing-tool-graphical-client.md).  
   
 -   [ClickOnce 응용 프로그램 보안](/visualstudio/deployment/securing-clickonce-applications).  
   
  경우에 [!INCLUDE[TLA2#tla_xbap](../../../includes/tla2sharptla-xbap-md.md)] 완전 신뢰가 필요한 것과 동일한 도구를 사용 하 여 요청 된 권한 수준을 높입니다. 하지만 [!INCLUDE[TLA2#tla_xbap](../../../includes/tla2sharptla-xbap-md.md)] 에 설치 되 고 로컬 컴퓨터, 인트라넷 또는 신뢰할 수 있는 허용 된 사이트 또는 브라우저에 나열 된 URL에서 시작 된 경우에 완전 신뢰를 받게 됩니다. 인트라넷 또는 신뢰할 수 있는 사이트에서 애플리케이션이 설치되면, 사용자는 상승된 권한을 알리는 표준 ClickOnce 프롬프트를 받습니다. 사용자는 설치를 계속하거나 취소하도록 선택할 수 있습니다.  
   
- 또는 모든 보안 영역에서 완전 신뢰 배포를 위한 ClickOnce 신뢰 배포 모델을 사용할 수 있습니다. 자세한 내용은 [Trusted Application Deployment Overview](/visualstudio/deployment/trusted-application-deployment-overview) 하 고 [보안](../../../docs/framework/wpf/security-wpf.md)합니다.  
+ 또는 모든 보안 영역에서 완전 신뢰 배포를 위한 ClickOnce 신뢰 배포 모델을 사용할 수 있습니다. 자세한 내용은 [Trusted Application Deployment Overview](/visualstudio/deployment/trusted-application-deployment-overview) 하 고 [보안](security-wpf.md)합니다.  
   
 ## <a name="see-also"></a>참고자료
-- [보안](../../../docs/framework/wpf/security-wpf.md)
-- [WPF 보안 전략 - 플랫폼 보안](../../../docs/framework/wpf/wpf-security-strategy-platform-security.md)
-- [WPF 보안 전략 - 보안 엔지니어링](../../../docs/framework/wpf/wpf-security-strategy-security-engineering.md)
+- [보안](security-wpf.md)
+- [WPF 보안 전략 - 플랫폼 보안](wpf-security-strategy-platform-security.md)
+- [WPF 보안 전략 - 보안 엔지니어링](wpf-security-strategy-security-engineering.md)

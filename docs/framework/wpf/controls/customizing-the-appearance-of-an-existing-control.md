@@ -12,12 +12,12 @@ helpviewer_keywords:
 - controls [WPF], appearance specified by state
 - templates [WPF], custom for existing controls
 ms.assetid: 678dd116-43a2-4b8c-82b5-6b826f126e31
-ms.openlocfilehash: f8802ae00de2bdb87e4e47fb82f6ebdf2108e2a9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5d4b16721dd8cabc5d662538274dcb82ab734cca
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54547295"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57375105"
 ---
 # <a name="customizing-the-appearance-of-an-existing-control-by-creating-a-controltemplate"></a>ControlTemplate을 만들어 기존 컨트롤의 모양 사용자 지정
 <a name="introduction"></a> <xref:System.Windows.Controls.ControlTemplate> 시각적 구조 및 컨트롤의 시각적 동작을 지정 합니다. 새 제공 하 여 컨트롤의 모양을 사용자 지정할 수 있습니다 <xref:System.Windows.Controls.ControlTemplate>합니다. 만들 때는 <xref:System.Windows.Controls.ControlTemplate>, 해당 기능을 변경 하지 않고 기존 컨트롤의 모양을 바꿉니다. 예를 들어, 만들 수 단추 응용 프로그램에서 기본 사각형 모양 대신 둥근 있지만 단추에서 여전히 발생을 <xref:System.Windows.Controls.Primitives.ButtonBase.Click> 이벤트입니다.  
@@ -26,16 +26,16 @@ ms.locfileid: "54547295"
   
  다음 그림에 나온을 <xref:System.Windows.Controls.Button> 를 사용 하는 <xref:System.Windows.Controls.ControlTemplate> 이 항목에서 만들어집니다.  
   
- ![사용자 지정 컨트롤 템플릿 사용 하 여는 단추입니다. ](../../../../docs/framework/wpf/controls/media/ndp-buttonnormal.png "NDP_ButtonNormal")  
+ ![사용자 지정 컨트롤 템플릿 사용 하 여는 단추입니다. ](./media/ndp-buttonnormal.png "NDP_ButtonNormal")  
 사용자 지정 컨트롤 템플릿을 사용하는 단추  
   
- ![빨간색 테두리가 있는 단추입니다. ](../../../../docs/framework/wpf/controls/media/ndp-buttonmouseover.png "NDP_ButtonMouseOver")  
+ ![빨간색 테두리가 있는 단추입니다. ](./media/ndp-buttonmouseover.png "NDP_ButtonMouseOver")  
 사용자 지정 컨트롤 템플릿을 사용하고 마우스 포인터가 위에 놓여 있는 단추  
   
   
 <a name="prerequisites"></a>   
 ## <a name="prerequisites"></a>전제 조건  
- 이 항목에서는 [컨트롤](../../../../docs/framework/wpf/controls/index.md)에 설명된 대로 컨트롤과 스타일을 만들고 사용하는 방법을 알고 있다고 가정합니다. 이 항목에서 설명한 개념에서 상속 되는 요소에 적용 합니다 <xref:System.Windows.Controls.Control> 클래스를 제외 하 고는 <xref:System.Windows.Controls.UserControl>합니다. 적용할 수 없습니다는 <xref:System.Windows.Controls.ControlTemplate> 에 <xref:System.Windows.Controls.UserControl>합니다.  
+ 이 항목에서는 [컨트롤](index.md)에 설명된 대로 컨트롤과 스타일을 만들고 사용하는 방법을 알고 있다고 가정합니다. 이 항목에서 설명한 개념에서 상속 되는 요소에 적용 합니다 <xref:System.Windows.Controls.Control> 클래스를 제외 하 고는 <xref:System.Windows.Controls.UserControl>합니다. 적용할 수 없습니다는 <xref:System.Windows.Controls.ControlTemplate> 에 <xref:System.Windows.Controls.UserControl>합니다.  
   
 <a name="when_you_should_create_a_controltemplate"></a>   
 ## <a name="when-you-should-create-a-controltemplate"></a>ControlTemplate을 만들어야 하는 경우  
@@ -47,12 +47,12 @@ ms.locfileid: "54547295"
   
  다음 그림에 표시 된 <xref:System.Windows.Controls.CheckBox> 기본값을 사용 하는 <xref:System.Windows.Controls.ControlTemplate>합니다.  
   
- ![기본 컨트롤 템플릿이 있는 확인란을 선택 합니다. ](../../../../docs/framework/wpf/controls/media/ndp-checkboxdefault.png "NDP_CheckBoxDefault")  
+ ![기본 컨트롤 템플릿이 있는 확인란을 선택 합니다. ](./media/ndp-checkboxdefault.png "NDP_CheckBoxDefault")  
 기본 컨트롤 템플릿을 사용하는 확인란  
   
  다음 그림에 표시를 <xref:System.Windows.Controls.CheckBox> 사용자 지정을 사용 하는 <xref:System.Windows.Controls.ControlTemplate> 의 콘텐츠를 배치 하는 <xref:System.Windows.Controls.CheckBox> X 표시 및 선택 표시기 위에 때는 <xref:System.Windows.Controls.CheckBox> 을 선택 합니다.  
   
- ![사용자 지정 컨트롤 템플릿 사용 하 여 확인란을 선택 합니다. ](../../../../docs/framework/wpf/controls/media/ndp-checkboxcustom.png "NDP_CheckBoxCustom")  
+ ![사용자 지정 컨트롤 템플릿 사용 하 여 확인란을 선택 합니다. ](./media/ndp-checkboxcustom.png "NDP_CheckBoxCustom")  
 사용자 지정 컨트롤 템플릿을 사용하는 확인란  
   
  <xref:System.Windows.Controls.ControlTemplate> 에 대 한는 <xref:System.Windows.Controls.CheckBox> 이 샘플에는 비교적 복잡 하므로이 항목을 만드는 간단한 예제를 사용 하는 <xref:System.Windows.Controls.ControlTemplate> 에 대 한는 <xref:System.Windows.Controls.Button>.  
@@ -71,14 +71,14 @@ ms.locfileid: "54547295"
   
 -   <xref:System.Windows.Controls.ContentPresenter> 단추의 콘텐츠를 표시 하는 합니다. <xref:System.Windows.Controls.ContentPresenter> 모든 형식의 개체를 표시할 수 있습니다.  
   
- [!code-xaml[VSMButtonTemplate#BasicTemplate](../../../../samples/snippets/csharp/VS_Snippets_Wpf/vsmbuttontemplate/csharp/buttonstages.xaml#basictemplate)]  
+ [!code-xaml[VSMButtonTemplate#BasicTemplate](~/samples/snippets/csharp/VS_Snippets_Wpf/vsmbuttontemplate/csharp/buttonstages.xaml#basictemplate)]  
   
 ### <a name="preserving-the-functionality-of-a-controls-properties-by-using-templatebinding"></a>TemplateBinding을 사용하여 컨트롤의 속성 기능 유지  
- 새로 만들 때 <xref:System.Windows.Controls.ControlTemplate>를 계속 하려는 공용 속성을 사용 하 여 컨트롤의 모양을 변경 합니다. [TemplateBinding](../../../../docs/framework/wpf/advanced/templatebinding-markup-extension.md) 태그 확장에 있는 요소의 속성을 바인딩하는 <xref:System.Windows.Controls.ControlTemplate> 컨트롤에 의해 정의 된 공용 속성입니다. [TemplateBinding](../../../../docs/framework/wpf/advanced/templatebinding-markup-extension.md)을 사용하면 컨트롤의 속성이 템플릿의 매개 변수로 작동됩니다. 즉, 컨트롤의 속성을 설정하면 해당 값은 [TemplateBinding](../../../../docs/framework/wpf/advanced/templatebinding-markup-extension.md)이 있는 요소로 전달됩니다.  
+ 새로 만들 때 <xref:System.Windows.Controls.ControlTemplate>를 계속 하려는 공용 속성을 사용 하 여 컨트롤의 모양을 변경 합니다. [TemplateBinding](../advanced/templatebinding-markup-extension.md) 태그 확장에 있는 요소의 속성을 바인딩하는 <xref:System.Windows.Controls.ControlTemplate> 컨트롤에 의해 정의 된 공용 속성입니다. [TemplateBinding](../advanced/templatebinding-markup-extension.md)을 사용하면 컨트롤의 속성이 템플릿의 매개 변수로 작동됩니다. 즉, 컨트롤의 속성을 설정하면 해당 값은 [TemplateBinding](../advanced/templatebinding-markup-extension.md)이 있는 요소로 전달됩니다.  
   
- 앞의 예제를 사용 하는 부분을 반복 하는 다음 예제는 [TemplateBinding](../../../../docs/framework/wpf/advanced/templatebinding-markup-extension.md) 태그 확장에 있는 요소의 속성에 바인딩할는 <xref:System.Windows.Controls.ControlTemplate> 단추에 의해 정의 된 public 속성입니다.  
+ 앞의 예제를 사용 하는 부분을 반복 하는 다음 예제는 [TemplateBinding](../advanced/templatebinding-markup-extension.md) 태그 확장에 있는 요소의 속성에 바인딩할는 <xref:System.Windows.Controls.ControlTemplate> 단추에 의해 정의 된 public 속성입니다.  
   
- [!code-xaml[VSMButtonTemplate#TemplateBinding](../../../../samples/snippets/csharp/VS_Snippets_Wpf/vsmbuttontemplate/csharp/buttonstages.xaml#templatebinding)]  
+ [!code-xaml[VSMButtonTemplate#TemplateBinding](~/samples/snippets/csharp/VS_Snippets_Wpf/vsmbuttontemplate/csharp/buttonstages.xaml#templatebinding)]  
   
  이 예제는 <xref:System.Windows.Controls.Grid> 에 해당 <xref:System.Windows.Controls.Panel.Background%2A?displayProperty=nameWithType> 속성 템플릿 바인딩되어 <xref:System.Windows.Controls.Control.Background%2A?displayProperty=nameWithType>합니다. 때문에 <xref:System.Windows.Controls.Panel.Background%2A?displayProperty=nameWithType> 은 템플릿 바인딩되어를 동일한 것을 사용 하는 여러 단추를 만들 수 있습니다 <xref:System.Windows.Controls.ControlTemplate> 설정의 <xref:System.Windows.Controls.Control.Background%2A?displayProperty=nameWithType> 각 단추에 대해 서로 다른 값으로. 경우 <xref:System.Windows.Controls.Control.Background%2A?displayProperty=nameWithType> 템플릿은 그렇지 않은 요소의 속성에 바인딩된 합니다 <xref:System.Windows.Controls.ControlTemplate>설정는 <xref:System.Windows.Controls.Control.Background%2A?displayProperty=nameWithType> 단추의 모양에 영향을 미치지 것을 단추.  
   
@@ -112,11 +112,11 @@ ms.locfileid: "54547295"
   
  다음 예제에서는 사용 하는 두 개의 단추는 <xref:System.Windows.Controls.ControlTemplate> 앞의 예제에서 정의 합니다. 예제에서는 합니다 <xref:System.Windows.Controls.Control.Background%2A>, <xref:System.Windows.Controls.Control.Foreground%2A>, 및 <xref:System.Windows.Controls.Control.FontSize%2A> 각 단추에는 속성입니다. 설정 된 <xref:System.Windows.Controls.Control.Background%2A> 속성에서 템플릿 바인딩되어 있기 때문에 영향을 주지는 <xref:System.Windows.Controls.ControlTemplate>합니다. 경우에 합니다 <xref:System.Windows.Controls.Control.Foreground%2A> 및 <xref:System.Windows.Controls.Control.FontSize%2A> 속성은 템플릿 바인딩되어 있지, 해당 값이 상속 되기 때문에 설정 해도 효과가 합니다.  
   
- [!code-xaml[VSMButtonTemplate#ButtonDeclaration](../../../../samples/snippets/csharp/VS_Snippets_Wpf/vsmbuttontemplate/csharp/buttonstages.xaml#buttondeclaration)]  
+ [!code-xaml[VSMButtonTemplate#ButtonDeclaration](~/samples/snippets/csharp/VS_Snippets_Wpf/vsmbuttontemplate/csharp/buttonstages.xaml#buttondeclaration)]  
   
  앞의 예제에서는 다음 그림과 유사한 출력을 생성합니다.  
   
- ![두 개의 단추, 하나의 파란색 단추 하 나와 자주색입니다. ](../../../../docs/framework/wpf/controls/media/ndp-buttontwo.png "NDP_ButtonTwo")  
+ ![두 개의 단추, 하나의 파란색 단추 하 나와 자주색입니다. ](./media/ndp-buttontwo.png "NDP_ButtonTwo")  
 배경색이 서로 다른 두 개의 단추  
   
 <a name="changing_the_appearance_of_a_control_depending_on_its_state"></a>   
@@ -127,7 +127,7 @@ ms.locfileid: "54547295"
   
  다음 예제에서는 합니다 <xref:System.Windows.VisualState> 의 모양을 변경 하는 <xref:System.Windows.Controls.Button> 위로 마우스 포인터의 경우. 합니다 <xref:System.Windows.Media.Animation.Storyboard> 색을 변경 하 여 단추의 테두리 색을 변경 합니다 `BorderBrush`합니다. 참조 하는 경우는 <xref:System.Windows.Controls.ControlTemplate> 예제에서는이 항목의 부분을 하는 이전에 설명한 대로 `BorderBrush` 의 이름입니다는 <xref:System.Windows.Media.SolidColorBrush> 에 할당 된를 <xref:System.Windows.Controls.Border.Background%2A> 의 <xref:System.Windows.Controls.Border>.  
   
- [!code-xaml[VSMButtonTemplate#4](../../../../samples/snippets/csharp/VS_Snippets_Wpf/vsmbuttontemplate/csharp/skinnedbutton.xaml#4)]  
+ [!code-xaml[VSMButtonTemplate#4](~/samples/snippets/csharp/VS_Snippets_Wpf/vsmbuttontemplate/csharp/skinnedbutton.xaml#4)]  
   
  이 컨트롤을 통해 해당 컨트롤 계약의 일부로 상태를 정의합니다. 컨트롤 계약에 대해서는 이 항목의 뒷부분에 있는 [컨트롤 계약을 이해하여 다른 컨트롤 사용자 지정](#customizing_other_controls_by_understanding_the_control_contract)에서 자세히 설명합니다. 다음 테이블에 대해 지정 된 상태를 나열 합니다 <xref:System.Windows.Controls.Button>합니다.  
   
@@ -147,20 +147,20 @@ ms.locfileid: "54547295"
 > [!NOTE]
 >  설정 해야 합니다 <xref:System.Windows.VisualStateManager.VisualStateGroups%2A?displayProperty=nameWithType> 루트에 연결 <xref:System.Windows.FrameworkElement> 의 <xref:System.Windows.Controls.ControlTemplate>합니다.  
   
- [!code-xaml[VSMButtonTemplate#VisualStates](../../../../samples/snippets/csharp/VS_Snippets_Wpf/vsmbuttontemplate/csharp/buttonstages.xaml#visualstates)]  
+ [!code-xaml[VSMButtonTemplate#VisualStates](~/samples/snippets/csharp/VS_Snippets_Wpf/vsmbuttontemplate/csharp/buttonstages.xaml#visualstates)]  
   
  앞의 예제에서는 다음 그림과 유사한 출력을 생성합니다.  
   
- ![사용자 지정 컨트롤 템플릿 사용 하 여는 단추입니다. ](../../../../docs/framework/wpf/controls/media/ndp-buttonnormal.png "NDP_ButtonNormal")  
+ ![사용자 지정 컨트롤 템플릿 사용 하 여는 단추입니다. ](./media/ndp-buttonnormal.png "NDP_ButtonNormal")  
 정상 상태에서 사용자 지정 컨트롤 템플릿을 사용하는 단추  
   
- ![빨간색 테두리가 있는 단추입니다. ](../../../../docs/framework/wpf/controls/media/ndp-buttonmouseover.png "NDP_ButtonMouseOver")  
+ ![빨간색 테두리가 있는 단추입니다. ](./media/ndp-buttonmouseover.png "NDP_ButtonMouseOver")  
 마우스가 위에 있는 상태에서 사용자 지정 컨트롤 템플릿을 사용하는 단추  
   
- ![테두리는 단추를 누르면 투명 합니다. ](../../../../docs/framework/wpf/controls/media/ndp-buttonpressed.png "NDP_ButtonPressed")  
+ ![테두리는 단추를 누르면 투명 합니다. ](./media/ndp-buttonpressed.png "NDP_ButtonPressed")  
 누름 상태에서 사용자 지정 컨트롤 템플릿을 사용하는 단추  
   
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]와 함께 제공된 컨트롤의 시각적 상태를 찾으려면 [Control 스타일 및 템플릿](../../../../docs/framework/wpf/controls/control-styles-and-templates.md)을 참조하세요.  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]와 함께 제공된 컨트롤의 시각적 상태를 찾으려면 [Control 스타일 및 템플릿](control-styles-and-templates.md)을 참조하세요.  
   
 <a name="specifying_the_behavior_of_a_control_when_it_transitions_between_states"></a>   
 ## <a name="specifying-the-behavior-of-a-control-when-it-transitions-between-states"></a>상태 간 전환 시 컨트롤의 동작 지정  
@@ -177,12 +177,12 @@ ms.locfileid: "54547295"
 ### <a name="specifying-the-duration-of-a-transition"></a>전환 기간 지정  
  전환 하는 걸리는 시간을 설정 하 여 지정할 수 있습니다는 <xref:System.Windows.VisualTransition.GeneratedDuration%2A> 속성입니다. 앞의 예제에는 <xref:System.Windows.VisualState> 를 지정 하는 애니메이션 단추를 신속 하 게 눌렀다 하는 경우에 너무 오래 걸리는 단추를 누를 때 단추의 테두리가 투명해 집니다. 사용할 수는 <xref:System.Windows.VisualTransition> 기간을 지정 하려면 걸리는 컨트롤이 누른 상태로 전환 합니다. 다음 예제에서는 컨트롤이 누른 상태로 전환되는 데 1/100초가 걸리도록 지정합니다.  
   
- [!code-xaml[VSMButtonTemplate#PressedTransition](../../../../samples/snippets/csharp/VS_Snippets_Wpf/vsmbuttontemplate/csharp/skinnedbutton.xaml#pressedtransition)]  
+ [!code-xaml[VSMButtonTemplate#PressedTransition](~/samples/snippets/csharp/VS_Snippets_Wpf/vsmbuttontemplate/csharp/skinnedbutton.xaml#pressedtransition)]  
   
 ### <a name="specifying-changes-to-the-controls-appearance-during-a-transition"></a>전환 중 컨트롤의 모양 변경 지정  
  합니다 <xref:System.Windows.VisualTransition> 포함을 <xref:System.Windows.Media.Animation.Storyboard> 컨트롤 상태 간에 전환 될 때 시작 합니다. 예를 들어 컨트롤이 `MouseOver` 상태에서 `Normal` 상태로 전환될 때 특정 애니메이션이 적용되도록 지정할 수 있습니다. 다음 예제에서는 <xref:System.Windows.VisualTransition> 는 변경 되도록 지정 하는 사용자를 단추에서 마우스 포인터를 움직이면 단추의 테두리를 blue로 다음 노랑, 검정 순으로 1.5 초 내에 있습니다.  
   
- [!code-xaml[VSMButtonTemplate#8](../../../../samples/snippets/csharp/VS_Snippets_Wpf/vsmbuttontemplate/csharp/skinnedbutton.xaml#8)]  
+ [!code-xaml[VSMButtonTemplate#8](~/samples/snippets/csharp/VS_Snippets_Wpf/vsmbuttontemplate/csharp/skinnedbutton.xaml#8)]  
   
 ### <a name="specifying-when-a-visualtransition-is-applied"></a>VisualTransition 적용 시기 지정  
  <xref:System.Windows.VisualTransition> 특정 상태에만 적용 되도록 제한 수 또는 적용할 수 있습니다 언제 든 지 상태 간의 컨트롤 전환 합니다. 앞의 예제에서를 <xref:System.Windows.VisualTransition> 컨트롤에서 이동 하는 경우 적용 되는 `MouseOver` 상태를 `Normal` 상태는 앞의 예제에서는 <xref:System.Windows.VisualTransition> 컨트롤 화할 때 적용 됩니다는 `Pressed` 상태. 시간을 제한할 수는 <xref:System.Windows.VisualTransition> 설정 하 여 적용 되는 <xref:System.Windows.VisualTransition.To%2A> 및 <xref:System.Windows.VisualTransition.From%2A> 속성. 다음 표에서는 최대한의 제한에서 최소한의 제한까지 제한 수준에 대해 설명합니다.  
@@ -196,7 +196,7 @@ ms.locfileid: "54547295"
   
  여러 개 있을 수 있습니다 <xref:System.Windows.VisualTransition> 개체는 <xref:System.Windows.VisualStateGroup> 동일한 상태를 참조 하는 있지만 이러한 이전 표에 지정 된 순서 대로 사용 됩니다. 다음 예제에서는 두 개의 <xref:System.Windows.VisualTransition> 개체입니다. 컨트롤에서 전환 하는 경우는 `Pressed` 상태는 `MouseOver` 상태를 <xref:System.Windows.VisualTransition> 둘 다를 포함 하는 <xref:System.Windows.VisualTransition.From%2A> 및 <xref:System.Windows.VisualTransition.To%2A> 집합이 사용 됩니다. 컨트롤이 `Pressed`가 아닌 상태에서 `MouseOver` 상태로 전환될 때는 다른 상태가 사용됩니다.  
   
- [!code-xaml[VSMButtonTemplate#7](../../../../samples/snippets/csharp/VS_Snippets_Wpf/vsmbuttontemplate/csharp/skinnedbutton.xaml#7)]  
+ [!code-xaml[VSMButtonTemplate#7](~/samples/snippets/csharp/VS_Snippets_Wpf/vsmbuttontemplate/csharp/skinnedbutton.xaml#7)]  
   
  <xref:System.Windows.VisualStateGroup> 에 <xref:System.Windows.VisualStateGroup.Transitions%2A> 포함 하는 속성을 <xref:System.Windows.VisualTransition> 에 적용 되는 개체를 <xref:System.Windows.VisualState> 개체를 <xref:System.Windows.VisualStateGroup>. 로 <xref:System.Windows.Controls.ControlTemplate> 작성자는 모두 포함할 수 <xref:System.Windows.VisualTransition> 있습니다. 그러나 경우 합니다 <xref:System.Windows.VisualTransition.To%2A> 및 <xref:System.Windows.VisualTransition.From%2A> 속성에 없는 상태 이름으로 설정 되는 <xref:System.Windows.VisualStateGroup>, <xref:System.Windows.VisualTransition> 무시 됩니다.  
   
@@ -210,7 +210,7 @@ ms.locfileid: "54547295"
   
 -   `MouseOver` 상태에서 `Normal` 상태로 전환  
   
- [!code-xaml[VSMButtonTemplate#VisualTransitions](../../../../samples/snippets/csharp/VS_Snippets_Wpf/vsmbuttontemplate/csharp/buttonstages.xaml#visualtransitions)]  
+ [!code-xaml[VSMButtonTemplate#VisualTransitions](~/samples/snippets/csharp/VS_Snippets_Wpf/vsmbuttontemplate/csharp/buttonstages.xaml#visualtransitions)]  
   
 <a name="customizing_other_controls_by_understanding_the_control_contract"></a>   
 ## <a name="customizing-other-controls-by-understanding-the-control-contract"></a>컨트롤 계약을 이해하여 다른 컨트롤 사용자 지정  
@@ -229,25 +229,25 @@ ms.locfileid: "54547295"
   
  다음 예제에서는 합니다 <xref:System.Windows.TemplatePartAttribute> 에 지정 된 개체는 <xref:System.Windows.Controls.ComboBox> 클래스입니다. 논리 <xref:System.Windows.Controls.ComboBox> 찾으려고 시도 <xref:System.Windows.Controls.TextBox> 라는 `PART_EditableTextBox` 와 <xref:System.Windows.Controls.Primitives.Popup> 라는 `PART_Popup` 에 해당 <xref:System.Windows.Controls.ControlTemplate>.  
   
- [!code-csharp[VSMButtonTemplate#ComboBoxContract](../../../../samples/snippets/csharp/VS_Snippets_Wpf/vsmbuttontemplate/csharp/controlcontracts.cs#comboboxcontract)]
- [!code-vb[VSMButtonTemplate#ComboBoxContract](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/vsmbuttontemplate/visualbasic/window1.xaml.vb#comboboxcontract)]  
+ [!code-csharp[VSMButtonTemplate#ComboBoxContract](~/samples/snippets/csharp/VS_Snippets_Wpf/vsmbuttontemplate/csharp/controlcontracts.cs#comboboxcontract)]
+ [!code-vb[VSMButtonTemplate#ComboBoxContract](~/samples/snippets/visualbasic/VS_Snippets_Wpf/vsmbuttontemplate/visualbasic/window1.xaml.vb#comboboxcontract)]  
   
  다음 예제에서는 간소화 된 <xref:System.Windows.Controls.ControlTemplate> 에 대 한는 <xref:System.Windows.Controls.ComboBox> 로 지정 되는 요소를 포함 하는 합니다 <xref:System.Windows.TemplatePartAttribute> 개체에서 <xref:System.Windows.Controls.ComboBox> 클래스입니다.  
   
- [!code-xaml[VSMButtonTemplate#ComboBoxTemplate](../../../../samples/snippets/csharp/VS_Snippets_Wpf/vsmbuttontemplate/csharp/window1.xaml#comboboxtemplate)]  
+ [!code-xaml[VSMButtonTemplate#ComboBoxTemplate](~/samples/snippets/csharp/VS_Snippets_Wpf/vsmbuttontemplate/csharp/window1.xaml#comboboxtemplate)]  
   
 ### <a name="states-in-the-control-contract"></a>컨트롤 계약의 상태  
  컨트롤의 상태도 컨트롤 계약의 파트입니다. 만드는 예제는 <xref:System.Windows.Controls.ControlTemplate> 에 대 한는 <xref:System.Windows.Controls.Button> 의 모양을 지정 하는 방법을 보여 줍니다는 <xref:System.Windows.Controls.Button> 해당 상태에 따라 합니다. 만든를 <xref:System.Windows.VisualState> 각 상태를 지정 하 고 모든 배치에 대 한 <xref:System.Windows.VisualState> 공유 하는 개체를 <xref:System.Windows.TemplateVisualStateAttribute.GroupName%2A> 에 <xref:System.Windows.VisualStateGroup>에 설명 된 대로 [해당 상태에 따라 컨트롤의 모양 변경](#changing_the_appearance_of_a_control_depending_on_its_state) 이 이전 항목입니다. 타사 컨트롤 상태를 사용 하 여 지정 해야는 <xref:System.Windows.TemplateVisualStateAttribute>, 컨트롤 템플릿 작성에 대 한 컨트롤의 상태를 노출 하려면 Expression Blend와 같은 디자이너 도구를 수 있습니다.  
   
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]와 함께 제공되는 컨트롤의 컨트롤 계약을 찾으려면 [Control 스타일 및 템플릿](../../../../docs/framework/wpf/controls/control-styles-and-templates.md)을 참조하세요.  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]와 함께 제공되는 컨트롤의 컨트롤 계약을 찾으려면 [Control 스타일 및 템플릿](control-styles-and-templates.md)을 참조하세요.  
   
 ### <a name="properties-in-the-control-contract"></a>컨트롤 계약의 속성  
- 시각적으로 컨트롤에 영향을 주는 공용 속성도 컨트롤 계약에 포함됩니다. 새로 만들지 않고 컨트롤의 모양을 변경 하려면 이러한 속성을 설정할 수 있습니다 <xref:System.Windows.Controls.ControlTemplate>합니다. 사용할 수도 있습니다는 [TemplateBinding](../../../../docs/framework/wpf/advanced/templatebinding-markup-extension.md) 태그 확장에 있는 요소의 속성에 바인딩할를 <xref:System.Windows.Controls.ControlTemplate> 에 정의 된 public 속성을 <xref:System.Windows.Controls.Button>입니다.  
+ 시각적으로 컨트롤에 영향을 주는 공용 속성도 컨트롤 계약에 포함됩니다. 새로 만들지 않고 컨트롤의 모양을 변경 하려면 이러한 속성을 설정할 수 있습니다 <xref:System.Windows.Controls.ControlTemplate>합니다. 사용할 수도 있습니다는 [TemplateBinding](../advanced/templatebinding-markup-extension.md) 태그 확장에 있는 요소의 속성에 바인딩할를 <xref:System.Windows.Controls.ControlTemplate> 에 정의 된 public 속성을 <xref:System.Windows.Controls.Button>입니다.  
   
  다음 예제에서는 단추의 컨트롤 계약을 보여 줍니다.  
   
- [!code-csharp[VSMButtonTemplate#ButtonContract](../../../../samples/snippets/csharp/VS_Snippets_Wpf/vsmbuttontemplate/csharp/controlcontracts.cs#buttoncontract)]
- [!code-vb[VSMButtonTemplate#ButtonContract](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/vsmbuttontemplate/visualbasic/window1.xaml.vb#buttoncontract)]  
+ [!code-csharp[VSMButtonTemplate#ButtonContract](~/samples/snippets/csharp/VS_Snippets_Wpf/vsmbuttontemplate/csharp/controlcontracts.cs#buttoncontract)]
+ [!code-vb[VSMButtonTemplate#ButtonContract](~/samples/snippets/visualbasic/VS_Snippets_Wpf/vsmbuttontemplate/visualbasic/window1.xaml.vb#buttoncontract)]  
   
  만들 때를 <xref:System.Windows.Controls.ControlTemplate>, 기존 시작 쉬운 경우가 <xref:System.Windows.Controls.ControlTemplate> 변경 하 고 있습니다. 기존 변경 하려면 다음 중 하나를 수행할 수 있습니다 <xref:System.Windows.Controls.ControlTemplate>:  
   
@@ -259,7 +259,7 @@ ms.locfileid: "54547295"
 ## <a name="complete-example"></a>완성된 예제  
  다음 예제에서는 전체 <xref:System.Windows.Controls.Button> <xref:System.Windows.Controls.ControlTemplate> 는이 항목에서 설명 합니다.  
   
- [!code-xaml[VSMButtonTemplate#3](../../../../samples/snippets/csharp/VS_Snippets_Wpf/vsmbuttontemplate/csharp/skinnedbutton.xaml#3)]  
+ [!code-xaml[VSMButtonTemplate#3](~/samples/snippets/csharp/VS_Snippets_Wpf/vsmbuttontemplate/csharp/skinnedbutton.xaml#3)]  
   
 ## <a name="see-also"></a>참고자료
-- [스타일 지정 및 템플릿](../../../../docs/framework/wpf/controls/styling-and-templating.md)
+- [스타일 지정 및 템플릿](styling-and-templating.md)

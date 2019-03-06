@@ -8,12 +8,12 @@ helpviewer_keywords:
 - animation [WPF], properties [WPF], with AnimationClocks
 - AnimationClocks [WPF]
 ms.assetid: e6542021-714c-4675-9567-04f1c7380834
-ms.openlocfilehash: 7940d65c61d57ec9c6a2a6e02e3b1e3e0bb2795f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d93f1eb352aef4f5e74512a8deeb0ec3fe7943c0
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54610476"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57357185"
 ---
 # <a name="how-to-animate-a-property-by-using-an-animationclock"></a>방법: AnimationClock을 사용하여 속성에 애니메이션 효과 적용
 이 예제에 사용 하는 방법을 보여 줍니다 <xref:System.Windows.Media.Animation.Clock> 속성 애니메이션을 적용 하는 개체입니다.  
@@ -26,17 +26,17 @@ ms.locfileid: "54610476"
   
 -   만들기는 <xref:System.Windows.Media.Animation.AnimationClock> 에서 <xref:System.Windows.Media.Animation.AnimationTimeline> 속성에 적용 합니다.  
   
- <xref:System.Windows.Media.Animation.Storyboard> 개체 및 <xref:System.Windows.Media.Animation.Animatable.BeginAnimation%2A> 방법을 사용 하면 직접 만들어 시계를 배포 하지 않고 속성에 애니메이션 효과를 (예를 참조 하십시오 [Storyboard를 사용 하 여 속성에 애니메이션 효과](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-property-by-using-a-storyboard.md) 및 [를 속성 없이 애니메이션 효과 주기 스토리 보드를 사용 하 여](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-property-without-using-a-storyboard.md)); 클록 생성 및 자동으로 배포 됩니다.  
+ <xref:System.Windows.Media.Animation.Storyboard> 개체 및 <xref:System.Windows.Media.Animation.Animatable.BeginAnimation%2A> 방법을 사용 하면 직접 만들어 시계를 배포 하지 않고 속성에 애니메이션 효과를 (예를 참조 하십시오 [Storyboard를 사용 하 여 속성에 애니메이션 효과](how-to-animate-a-property-by-using-a-storyboard.md) 및 [를 속성 없이 애니메이션 효과 주기 스토리 보드를 사용 하 여](how-to-animate-a-property-without-using-a-storyboard.md)); 클록 생성 및 자동으로 배포 됩니다.  
   
 ## <a name="example"></a>예제  
  다음 예제에서는 만드는 방법을 보여 줍니다는 <xref:System.Windows.Media.Animation.AnimationClock> 두 개의 비슷한 속성에 적용 합니다.  
   
- [!code-csharp[timingbehaviors_procedural_snip#GraphicsMMCreateAnimationClockWholeClass](../../../../samples/snippets/csharp/VS_Snippets_Wpf/timingbehaviors_procedural_snip/CSharp/AnimationClockExample.cs#graphicsmmcreateanimationclockwholeclass)]
- [!code-vb[timingbehaviors_procedural_snip#GraphicsMMCreateAnimationClockWholeClass](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/timingbehaviors_procedural_snip/visualbasic/animationclockexample.vb#graphicsmmcreateanimationclockwholeclass)]  
+ [!code-csharp[timingbehaviors_procedural_snip#GraphicsMMCreateAnimationClockWholeClass](~/samples/snippets/csharp/VS_Snippets_Wpf/timingbehaviors_procedural_snip/CSharp/AnimationClockExample.cs#graphicsmmcreateanimationclockwholeclass)]
+ [!code-vb[timingbehaviors_procedural_snip#GraphicsMMCreateAnimationClockWholeClass](~/samples/snippets/visualbasic/VS_Snippets_Wpf/timingbehaviors_procedural_snip/visualbasic/animationclockexample.vb#graphicsmmcreateanimationclockwholeclass)]  
   
- 대화형으로 제어 하는 방법을 보여 주는 예는 <xref:System.Windows.Media.Animation.Clock> 시작 되 면 참조 [대화형으로 Clock 제어](../../../../docs/framework/wpf/graphics-multimedia/how-to-interactively-control-a-clock.md)입니다.  
+ 대화형으로 제어 하는 방법을 보여 주는 예는 <xref:System.Windows.Media.Animation.Clock> 시작 되 면 참조 [대화형으로 Clock 제어](how-to-interactively-control-a-clock.md)입니다.  
   
 ## <a name="see-also"></a>참고자료
-- [Storyboard를 사용하여 속성에 애니메이션 효과 주기](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-property-by-using-a-storyboard.md)
-- [Storyboard를 사용하지 않고 속성에 애니메이션 효과 주기](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-property-without-using-a-storyboard.md)
-- [속성 애니메이션 기술 개요](../../../../docs/framework/wpf/graphics-multimedia/property-animation-techniques-overview.md)
+- [Storyboard를 사용하여 속성에 애니메이션 효과 주기](how-to-animate-a-property-by-using-a-storyboard.md)
+- [Storyboard를 사용하지 않고 속성에 애니메이션 효과 주기](how-to-animate-a-property-without-using-a-storyboard.md)
+- [속성 애니메이션 기술 개요](property-animation-techniques-overview.md)

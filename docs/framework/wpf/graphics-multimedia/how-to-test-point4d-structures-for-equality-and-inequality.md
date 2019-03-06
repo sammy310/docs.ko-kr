@@ -9,12 +9,12 @@ helpviewer_keywords:
 - testing [WPF], Point4D structures for inequality
 - Point4D structures [WPF], testing for equality
 ms.assetid: e004a67e-db7f-4af8-a31f-e6b2a44ccf34
-ms.openlocfilehash: 1366f66a54266aaae61baf1cf6eee9792da732f7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d72aef8a1328742f0b04c2ad009126e21390398a
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54724530"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57367208"
 ---
 # <a name="how-to-test-point4d-structures-for-equality-and-inequality"></a>방법: Point4D 구조체가 서로 같은지 및 다른지 여부 테스트
 이 예제에서는 테스트 <xref:System.Windows.Media.Media3D.Point4D> 같음 및 다름에 대 한 구조입니다.  
@@ -22,7 +22,7 @@ ms.locfileid: "54724530"
  다음 코드를 테스트 하는 방법을 보여 줍니다 <xref:System.Windows.Media.Media3D.Point4D> 같음 및 같지 않음 사용에 대 한 구조는 <xref:System.Windows.Media.Media3D.Point4D> 같음 메서드.  <xref:System.Windows.Media.Media3D.Point4D> 구조는 오버 로드 된 같음을 사용 하 여 같음 테스트 (`==`) 연산자를 오버 로드 된 같지 않음을 사용 하 여 다른 지에 대 한 다음 (`!=`) 연산자를 마지막으로 <xref:System.Windows.Media.Media3D.Point3D> 구조 및 <xref:System.Windows.Media.Media3D.Point4D> 구조 정적을 사용 하 여 같은지 확인 <xref:System.Windows.Media.Media3D.Point4D.Equals%2A> 메서드.  
   
 ## <a name="example"></a>예제  
- [!code-csharp[3DGallery_procedural_snip#Point4DEqualityExample_csharp](../../../../samples/snippets/csharp/VS_Snippets_Wpf/3DGallery_procedural_snip/CSharp/Misc3DOperationsExample.cs#point4dequalityexample_csharp)]  
+ [!code-csharp[3DGallery_procedural_snip#Point4DEqualityExample_csharp](~/samples/snippets/csharp/VS_Snippets_Wpf/3DGallery_procedural_snip/CSharp/Misc3DOperationsExample.cs#point4dequalityexample_csharp)]  
   
 ## <a name="see-also"></a>참고자료
 - <xref:System.Windows.Media.Media3D.Point4D.op_Equality%2A>

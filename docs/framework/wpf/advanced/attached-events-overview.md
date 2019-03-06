@@ -12,12 +12,12 @@ helpviewer_keywords:
 - backing attached events with routed events [WPF]
 - attached events [WPF], definition
 ms.assetid: 2c40eae3-80e4-4a45-ae09-df6c9ab4d91e
-ms.openlocfilehash: b82af44b1262f4eb2839efef85a4b35eba534524
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8586f09d5c12f732c63bccf4682edf94144fd47f
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54682958"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57371673"
 ---
 # <a name="attached-events-overview"></a>연결된 이벤트 개요
 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]은 *연결된 이벤트*라는 이벤트의 유형 및 언어 구성 요소를 정의합니다. 연결된 이벤트의 개념을 사용하면 실제로 정의하거나 이벤트를 상속하는 요소가 아닌 임의의 요소에 특정 이벤트의 핸들러를 추가할 수 있습니다. 이 경우 이벤트를 잠재적으로 발생시키는 개체나 인스턴스를 처리하는 대상이 정의하지 않으며 또는 그렇지 않으면 이벤트를 "소유"합니다.  
@@ -26,7 +26,7 @@ ms.locfileid: "54682958"
   
 <a name="prerequisites"></a>   
 ## <a name="prerequisites"></a>전제 조건  
- 이 항목에서는 [라우트된 이벤트 개요](../../../../docs/framework/wpf/advanced/routed-events-overview.md) 및 [XAML 개요(WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)를 읽었다고 가정합니다.  
+ 이 항목에서는 [라우트된 이벤트 개요](routed-events-overview.md) 및 [XAML 개요(WPF)](xaml-overview-wpf.md)를 읽었다고 가정합니다.  
   
 <a name="Syntax"></a>   
 ## <a name="attached-event-syntax"></a>연결된 이벤트 구문  
@@ -36,7 +36,7 @@ ms.locfileid: "54682958"
   
  예를 들어, 다음은 사용자 지정 `NeedsCleaning` 연결된 이벤트에 대해 핸들러를 연결하기 위한 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 구문입니다.  
   
- [!code-xaml[WPFAquariumSln#AE](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WPFAquariumSln/CSharp/WPFAquarium/Window1.xaml#ae)]  
+ [!code-xaml[WPFAquariumSln#AE](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFAquariumSln/CSharp/WPFAquarium/Window1.xaml#ae)]  
   
  `aqua:` 접두사. 연결된 이벤트가 사용자 지정 맵핑된 xmlns에서 오는 사용자 지정 이벤트이기 때문에 이 경우에 접두사가 필요합니다.  
   
@@ -58,7 +58,7 @@ ms.locfileid: "54682958"
   
  일반적으로 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 연결된 이벤트는 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 라우트된 이벤트와 크게 다르지 않습니다. 이벤트가 발생하는 방법 및 클래스에 의해 구성원으로 노출되는 방법에서 다릅니다([!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 처리기 구문에도 영향을 미침).  
   
- 그러나 앞서 설명한 것처럼, 기존 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 연결된 이벤트는 특별히 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 처리에 사용되지 않습니다. 이벤트의 목적은 합성 이벤트가 작성 시 부모 요소에 상태를 보고할 수 있게 하는 것으로, 이 경우 이벤트는 일반적으로 코드에서 발생하며 관련 부모 클래스에서 처리하는 클래스에도 사용됩니다. 예를 들어, 내에서 항목을 <xref:System.Windows.Controls.Primitives.Selector> 연결 된 발생 해야 하는 <xref:System.Windows.Controls.Primitives.Selector.Selected> 클래스 되는 이벤트 처리를 <xref:System.Windows.Controls.Primitives.Selector> 클래스 및 다음에서 잠재적으로 변환를 <xref:System.Windows.Controls.Primitives.Selector> 라우트된 이벤트를 다른 클래스 <xref:System.Windows.Controls.Primitives.Selector.SelectionChanged> . 라우트된 이벤트 및 클래스 처리에 대한 자세한 내용은 [라우트된 이벤트를 처리된 것으로 표시 및 클래스 처리](../../../../docs/framework/wpf/advanced/marking-routed-events-as-handled-and-class-handling.md)를 참조하십시오.  
+ 그러나 앞서 설명한 것처럼, 기존 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 연결된 이벤트는 특별히 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 처리에 사용되지 않습니다. 이벤트의 목적은 합성 이벤트가 작성 시 부모 요소에 상태를 보고할 수 있게 하는 것으로, 이 경우 이벤트는 일반적으로 코드에서 발생하며 관련 부모 클래스에서 처리하는 클래스에도 사용됩니다. 예를 들어, 내에서 항목을 <xref:System.Windows.Controls.Primitives.Selector> 연결 된 발생 해야 하는 <xref:System.Windows.Controls.Primitives.Selector.Selected> 클래스 되는 이벤트 처리를 <xref:System.Windows.Controls.Primitives.Selector> 클래스 및 다음에서 잠재적으로 변환를 <xref:System.Windows.Controls.Primitives.Selector> 라우트된 이벤트를 다른 클래스 <xref:System.Windows.Controls.Primitives.Selector.SelectionChanged> . 라우트된 이벤트 및 클래스 처리에 대한 자세한 내용은 [라우트된 이벤트를 처리된 것으로 표시 및 클래스 처리](marking-routed-events-as-handled-and-class-handling.md)를 참조하십시오.  
   
 <a name="Custom"></a>   
 ## <a name="defining-your-own-attached-events-as-routed-events"></a>연결된 이벤트를 라우트된 이벤트로 정의  
@@ -80,10 +80,10 @@ ms.locfileid: "54682958"
   
  예를 들어, 라우트된 이벤트로 연결된 이벤트를 선언하는 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 연결된 이벤트 전략을 사용하여, 다음 코드는 소유자 클래스의 `NeedsCleaning` 연결된 소유자 클래스 `Aquarium` 정의합니다.  
   
- [!code-csharp[WPFAquariumSln#AECode](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WPFAquariumSln/CSharp/WPFAquariumObjects/Class1.cs#aecode)]
- [!code-vb[WPFAquariumSln#AECode](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WPFAquariumSln/visualbasic/wpfaquariumobjects/class1.vb#aecode)]  
+ [!code-csharp[WPFAquariumSln#AECode](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFAquariumSln/CSharp/WPFAquariumObjects/Class1.cs#aecode)]
+ [!code-vb[WPFAquariumSln#AECode](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WPFAquariumSln/visualbasic/wpfaquariumobjects/class1.vb#aecode)]  
   
- 메서드가 연결 된 이벤트 식별자 필드를 설정 하는 데 사용 <xref:System.Windows.EventManager.RegisterRoutedEvent%2A>, 연결 되지 않은 라우트된 이벤트를 등록 하는 데 사용 되는 동일한 방법을 실제로 됩니다. 연결된 이벤트 및 라우트된 이벤트 모두 중앙 집중화된 내부 저장소에 등록됩니다. 이 이벤트 저장소 구현은 [라우트된 이벤트 개요](../../../../docs/framework/wpf/advanced/routed-events-overview.md)에서 설명하는 “인터페이스로서의 이벤트” 개념 고려 사항을 사용합니다.  
+ 메서드가 연결 된 이벤트 식별자 필드를 설정 하는 데 사용 <xref:System.Windows.EventManager.RegisterRoutedEvent%2A>, 연결 되지 않은 라우트된 이벤트를 등록 하는 데 사용 되는 동일한 방법을 실제로 됩니다. 연결된 이벤트 및 라우트된 이벤트 모두 중앙 집중화된 내부 저장소에 등록됩니다. 이 이벤트 저장소 구현은 [라우트된 이벤트 개요](routed-events-overview.md)에서 설명하는 “인터페이스로서의 이벤트” 개념 고려 사항을 사용합니다.  
   
 <a name="Raising"></a>   
 ## <a name="raising-a-wpf-attached-event"></a>WPF 연결된 이벤트 발생  
@@ -92,6 +92,6 @@ ms.locfileid: "54682958"
  그러나 기반 사용자 지정 연결 된 이벤트를 정의 하는 경우는 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 에 연결 된 이벤트 모델에 <xref:System.Windows.RoutedEvent>를 사용할 수 있습니다 <xref:System.Windows.UIElement.RaiseEvent%2A> 에서 연결 된 이벤트를 발생 시키는 <xref:System.Windows.UIElement> 또는 <xref:System.Windows.ContentElement>합니다. 이벤트 소스로 요소 트리의 특정 요소를 선언 하는 필요 (또는 연결 되지 않은) 라우트된 이벤트를 발생 시키기 해당 원본으로 보고 되는 <xref:System.Windows.UIElement.RaiseEvent%2A> 호출자입니다. 트리에서 소스로 보고되는 요소 판별은 서비스에 따라 다릅니다.  
   
 ## <a name="see-also"></a>참고자료
-- [라우트된 이벤트 개요](../../../../docs/framework/wpf/advanced/routed-events-overview.md)
-- [XAML 구문 정보](../../../../docs/framework/wpf/advanced/xaml-syntax-in-detail.md)
-- [WPF에 대한 XAML 및 사용자 지정 클래스](../../../../docs/framework/wpf/advanced/xaml-and-custom-classes-for-wpf.md)
+- [라우트된 이벤트 개요](routed-events-overview.md)
+- [XAML 구문 정보](xaml-syntax-in-detail.md)
+- [WPF에 대한 XAML 및 사용자 지정 클래스](xaml-and-custom-classes-for-wpf.md)

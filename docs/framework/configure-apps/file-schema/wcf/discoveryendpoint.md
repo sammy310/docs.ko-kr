@@ -3,11 +3,11 @@ title: <discoveryEndpoint>
 ms.date: 03/30/2017
 ms.assetid: fae2f48b-a635-4e4b-859d-a1432ac37e1c
 ms.openlocfilehash: d1a3371872f5587a682b8242c29b71808508ca3d
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55274785"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57374299"
 ---
 # <a name="discoveryendpoint"></a>\<discoveryEndpoint>
 
@@ -58,7 +58,7 @@ ms.locfileid: "55274785"
 
 다음 예제에서는 피어 넷 멀티캐스트 전송을 통해 검색 메시지를 수신하는 서비스를 보여 줍니다. 이 예제에서는 WS-Discovery April 2005 버전을 명시적으로 지정합니다.  
   
-표준 엔드포인트 구성이 서비스별로 정의되고 서비스 간에 공유될 수 없습니다. 따라서 다른 서비스에서 동일한 검색 엔드포인트를 사용하려는 경우 해당 서비스의 섹션에 동일한 구성을 추가해야 합니다.  
+표준 끝점 구성이 서비스별로 정의되고 서비스 간에 공유될 수 없습니다. 따라서 다른 서비스에서 동일한 검색 엔드포인트를 사용하려는 경우 해당 서비스의 섹션에 동일한 구성을 추가해야 합니다.  
   
 ```xml  
 <services>

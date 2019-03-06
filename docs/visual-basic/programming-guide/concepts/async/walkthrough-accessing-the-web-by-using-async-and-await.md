@@ -2,12 +2,12 @@
 title: '연습: 비동기를 사용 하 여 웹 서비스에 액세스 하 고 Await (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 84fd047f-fab8-4d89-8ced-104fb7310a91
-ms.openlocfilehash: 51fb2a90a7398da5334e2fd4508f90d4594e5dc7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a9eb9f53b456b309997ef9e6fdb83b770478889b
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54709496"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57379122"
 ---
 # <a name="walkthrough-accessing-the-web-by-using-async-and-await-visual-basic"></a>연습: 비동기를 사용 하 여 웹 서비스에 액세스 하 고 Await (Visual Basic)
 async/await 기능을 사용하여 비동기 프로그램을 보다 쉽고 직관적인 방식으로 작성할 수 있습니다. 동기 코드처럼 보이는 비동기 코드를 작성하고 일반적으로 비동기 코드에 수반되는 어려운 콜백 함수 및 연속 작업을 컴파일러에서 처리하도록 할 수 있습니다.  
@@ -47,7 +47,7 @@ async/await 기능을 사용하여 비동기 프로그램을 보다 쉽고 직�
 ## <a name="prerequisites"></a>전제 조건  
  Visual Studio 2012 이상이 컴퓨터에 설치되어 있어야 합니다. 자세한 내용은 [Microsoft 웹 사이트](https://go.microsoft.com/fwlink/?LinkId=235233)를 참조하세요.  
   
-###  <a name="CreateWPFApp"></a> WPF 응용 프로그램을 만들려면  
+### <a name="CreateWPFApp"></a> WPF 응용 프로그램을 만들려면  
   
 1.  Visual Studio를 시작합니다.  
   
@@ -61,8 +61,8 @@ async/await 기능을 사용하여 비동기 프로그램을 보다 쉽고 직�
   
      **솔루션 탐색기**에 새 프로젝트가 표시됩니다.  
   
-##  <a name="BKMK_DesignWPFMainWin"></a>   
-###  <a name="MainWindow"></a> 간단한 WPF MainWindow를 디자인하려면  
+## <a name="BKMK_DesignWPFMainWin"></a>   
+### <a name="MainWindow"></a> 간단한 WPF MainWindow를 디자인하려면  
   
 1.  Visual Studio 코드 편집기에서 **MainWindow.xaml** 탭을 선택합니다.  
   
@@ -90,8 +90,8 @@ async/await 기능을 사용하여 비동기 프로그램을 보다 쉽고 직�
   
      WPF XAML 디자이너에 대한 자세한 내용은 [XAML 디자이너를 사용하여 UI 만들기](/visualstudio/designers/creating-a-ui-by-using-xaml-designer-in-visual-studio)를 참조하세요.  
   
-##  <a name="BKMK_AddReference"></a>   
-###  <a name="AddRef"></a> 참조를 추가하려면  
+## <a name="BKMK_AddReference"></a>   
+### <a name="AddRef"></a> 참조를 추가하려면  
   
 1.  **솔루션 탐색기**에서 프로젝트의 이름을 강조 표시합니다.  
   
@@ -107,8 +107,8 @@ async/await 기능을 사용하여 비동기 프로그램을 보다 쉽고 직�
   
 6.  **확인** 단추를 선택하여 대화 상자를 닫습니다.  
   
-##  <a name="BKMK_AddStatesandDirs"></a>   
-###  <a name="ImportsState"></a> 필요한 Import 문을 추가 하려면  
+## <a name="BKMK_AddStatesandDirs"></a>   
+### <a name="ImportsState"></a> 필요한 Import 문을 추가 하려면  
   
 1.  **솔루션 탐색기**, MainWindow.xaml.vb에 대 한 바로 가기 메뉴를 열고 선택한 후 **코드 보기**합니다.  
   
@@ -120,8 +120,8 @@ async/await 기능을 사용하여 비동기 프로그램을 보다 쉽고 직�
     Imports System.IO  
     ```  
   
-##  <a name="BKMK_CreatSynchApp"></a>   
-###  <a name="synchronous"></a> 동기식 응용 프로그램을 만들려면  
+## <a name="BKMK_CreatSynchApp"></a>   
+### <a name="synchronous"></a> 동기식 응용 프로그램을 만들려면  
   
 1.  디자인 창 MainWindow.xaml 두 번 클릭 합니다 **시작** 를 만드는 단추는 `startButton_Click` MainWindow.xaml.vb의 이벤트 처리기입니다.  
   
@@ -221,8 +221,8 @@ async/await 기능을 사용하여 비동기 프로그램을 보다 쉽고 직�
     End Sub  
     ```  
   
-##  <a name="BKMK_TestSynchSol"></a>   
-###  <a name="testSynch"></a> 동기 솔루션을 테스트하려면  
+## <a name="BKMK_TestSynchSol"></a>   
+### <a name="testSynch"></a> 동기 솔루션을 테스트하려면  
   
 1.  F5 키를 선택하여 프로그램을 실행한 다음 **시작** 단추를 선택합니다.  
   
@@ -247,8 +247,8 @@ async/await 기능을 사용하여 비동기 프로그램을 보다 쉽고 직�
   
      개수를 표시하려면 몇 초 정도 걸릴 수 있습니다. 이 시간 동안 UI 스레드는 차단되어 요청한 리소스가 다운로드될 때까지 기다립니다. 따라서 **시작** 단추를 선택한 후에도 표시 창을 이동, 최대화, 최소화할 수 없으며 닫을 수도 없습니다. 이러한 작업은 바이트 개수가 나타나기 시작할 때까지 실패합니다. 웹 사이트가 응답하지 않는 경우 실패한 사이트를 표시하지 않아도 됩니다. 대기를 중지하고 프로그램을 닫는 것도 어렵습니다.  
   
-##  <a name="BKMK_ConvertGtBtArr"></a>   
-###  <a name="GetURLContents"></a> GetURLContents를 비동기 메서드로 변환하려면  
+## <a name="BKMK_ConvertGtBtArr"></a>   
+### <a name="GetURLContents"></a> GetURLContents를 비동기 메서드로 변환하려면  
   
 1.  동기 솔루션을 비동기 솔루션으로 변환하려면 `GetURLContents`에서 시작하는 것이 가장 좋습니다. <xref:System.Net.HttpWebRequest> 메서드 <xref:System.Net.HttpWebRequest.GetResponse%2A> 및 <xref:System.IO.Stream> 메서드 <xref:System.IO.Stream.CopyTo%2A> 호출은 애플리케이션이 웹에 액세스하는 위치이기 때문입니다. .NET Framework는 두 메서드의 비동기 버전을 제공하여 변환을 쉽게 만듭니다.  
   
@@ -329,8 +329,8 @@ async/await 기능을 사용하여 비동기 프로그램을 보다 쉽고 직�
   
      몇 가지 변경 작업을 통해 `GetURLContents`가 비동기 메서드로 변환되었습니다.  
   
-##  <a name="BKMK_ConvertSumPagSzs"></a>   
-###  <a name="SumPageSizes"></a> SumPageSizes를 비동기 메서드로 변환하려면  
+## <a name="BKMK_ConvertSumPagSzs"></a>   
+### <a name="SumPageSizes"></a> SumPageSizes를 비동기 메서드로 변환하려면  
   
 1.  `SumPageSizes`에 대한 이전 절차의 단계를 반복합니다. 먼저 `GetURLContents` 호출을 비동기 호출로 변경합니다.  
   
@@ -369,8 +369,8 @@ async/await 기능을 사용하여 비동기 프로그램을 보다 쉽고 직�
   
      `SumPageSizes`가 `SumPageSizesAsync`로 변환되었습니다.  
   
-##  <a name="BKMK_Cnvrtbttn1"></a>   
-###  <a name="startButton"></a> startButton_Click을 비동기 메서드로 변환하려면  
+## <a name="BKMK_Cnvrtbttn1"></a>   
+### <a name="startButton"></a> startButton_Click을 비동기 메서드로 변환하려면  
   
 1.  이벤트 처리기에서 호출된 메서드의 이름을 `SumPageSizes`에서 `SumPageSizesAsync`로 변경하지 않은 경우 지금 변경합니다.  
   
@@ -415,8 +415,8 @@ async/await 기능을 사용하여 비동기 프로그램을 보다 쉽고 직�
   
      동기에서 비동기 처리로 프로젝트 변환이 완료되었습니다.  
   
-##  <a name="BKMK_testAsynchSolution"></a>   
-###  <a name="testAsynch"></a> 비동기 솔루션을 테스트하려면  
+## <a name="BKMK_testAsynchSolution"></a>   
+### <a name="testAsynch"></a> 비동기 솔루션을 테스트하려면  
   
 1.  F5 키를 선택하여 프로그램을 실행한 다음 **시작** 단추를 선택합니다.  
   
@@ -426,8 +426,8 @@ async/await 기능을 사용하여 비동기 프로그램을 보다 쉽고 직�
   
     -   가장 중요한 점은 다운로드하는 동안 UI 스레드가 차단되지 않는다는 것입니다. 웹 리소스를 다운로드하고, 개수를 계산하고, 표시하는 동안 창을 이동하거나 크기를 조정할 수 있습니다. 웹 사이트 중 하나가 속도가 느리거나 응답하지 않는 경우 **닫기** 단추(오른쪽 위 모서리에 있는 빨간색 필드의 x)를 선택하여 작업을 취소할 수 있습니다.  
   
-##  <a name="BKMK_ReplaceGetByteArrayAsync"></a>   
-###  <a name="GetURLContentsAsync"></a> GetURLContentsAsync 메서드를 .NET Framework 메서드로 바꾸려면  
+## <a name="BKMK_ReplaceGetByteArrayAsync"></a>   
+### <a name="GetURLContentsAsync"></a> GetURLContentsAsync 메서드를 .NET Framework 메서드로 바꾸려면  
   
 1.  .NET Framework 4.5는 사용할 수 있는 다양한 비동기 메서드를 제공합니다. 그 중 하나인 <xref:System.Net.Http.HttpClient> 메서드 <xref:System.Net.Http.HttpClient.GetByteArrayAsync%28System.String%29>가 바로 이 연습에 필요한 기능을 수행합니다. 이전 절차에서 만든 `GetURLContentsAsync` 메서드 대신 사용할 수도 있습니다.  
   
@@ -452,7 +452,7 @@ async/await 기능을 사용하여 비동기 프로그램을 보다 쉽고 직�
   
      이 버전의 프로젝트 동작은 "비동기 솔루션을 테스트하려면" 절차에서 설명한 동작과 일치해야 하지만 사용자의 노력은 훨씬 줄어듭니다.  
   
-##  <a name="BKMK_CompleteCodeExamples"></a> 예제  
+## <a name="BKMK_CompleteCodeExamples"></a> 예제  
  다음 코드는 직접 작성한 `GetURLContentsAsync` 메서드를 사용하여 동기 솔루션에서 비동기 솔루션으로 변환하는 전체 예제입니다. 원래의 동기 솔루션과 매우 유사해야 합니다.  
   
 ```vb  

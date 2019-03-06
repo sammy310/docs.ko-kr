@@ -11,12 +11,12 @@ helpviewer_keywords:
 - dependency properties [WPF], callbacks
 - validation of dependency properties [WPF]
 ms.assetid: 48db5fb2-da7f-49a6-8e81-3540e7b25825
-ms.openlocfilehash: acc8fdeb495bf7a490752a91ec6943346efcb712
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ff7cbd995ba52f3cea712cb02b72f91d40422c33
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54576462"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57363932"
 ---
 # <a name="dependency-property-callbacks-and-validation"></a>종속성 속성 콜백 및 유효성 검사
 이 항목에서는 유효성 검사 확인, 속성의 유효 값이 변경될 때마다 호출되는 콜백, 값 결정에 대한 가능한 외부 영향 재정의 등 속성 관련 기능에 대체 사용자 지정 구현을 사용하여 종속성 속성을 만드는 방법에 대해 설명합니다. 또한 이 항목에서는 이러한 기술을 사용한 기본 속성 시스템 동작 확장이 적절한 시나리오에 대해서도 설명합니다.  
@@ -25,14 +25,14 @@ ms.locfileid: "54576462"
   
 <a name="prerequisites"></a>   
 ## <a name="prerequisites"></a>전제 조건  
- 이 항목에서는 종속성 속성을 구현하는 기본 시나리오와 메타데이터가 사용자 지정 종속성 속성에 적용되는 방법을 이해하고 있다고 가정합니다. 컨텍스트는 [사용자 지정 종속성 속성](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md) 및 [종속성 속성 메타데이터](../../../../docs/framework/wpf/advanced/dependency-property-metadata.md)를 참조하세요.  
+ 이 항목에서는 종속성 속성을 구현하는 기본 시나리오와 메타데이터가 사용자 지정 종속성 속성에 적용되는 방법을 이해하고 있다고 가정합니다. 컨텍스트는 [사용자 지정 종속성 속성](custom-dependency-properties.md) 및 [종속성 속성 메타데이터](dependency-property-metadata.md)를 참조하세요.  
   
 <a name="Validation_Callbacks"></a>   
 ## <a name="validation-callbacks"></a>유효성 검사 콜백  
  유효성 검사 콜백은 종속성 속성을 처음 등록할 때 이 속성에 할당할 수 있습니다. 유효성 검사 콜백은 속성 메타 데이터의 일부가 아닙니다. 직접 입력 한 것은 <xref:System.Windows.DependencyProperty.Register%2A> 메서드. 따라서 종속성 속성에 대해 유효성 검사 콜백을 만든 다음에는 새 구현으로 재정의할 수 없습니다.  
   
- [!code-csharp[DPCallbackOverride#CurrentDefinitionWithWrapper](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DPCallbackOverride/CSharp/SDKSampleLibrary/class1.cs#currentdefinitionwithwrapper)]
- [!code-vb[DPCallbackOverride#CurrentDefinitionWithWrapper](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DPCallbackOverride/visualbasic/sdksamplelibrary/class1.vb#currentdefinitionwithwrapper)]  
+ [!code-csharp[DPCallbackOverride#CurrentDefinitionWithWrapper](~/samples/snippets/csharp/VS_Snippets_Wpf/DPCallbackOverride/CSharp/SDKSampleLibrary/class1.cs#currentdefinitionwithwrapper)]
+ [!code-vb[DPCallbackOverride#CurrentDefinitionWithWrapper](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DPCallbackOverride/visualbasic/sdksamplelibrary/class1.vb#currentdefinitionwithwrapper)]  
   
  콜백은 개체 값이 제공되도록 구현됩니다. 제공된 값이 속성에 유효하면 `true`를 반환하고, 그러지 않으면 `false`를 반환합니다. 속성은 속성 시스템에 등록된 형식에 따라 올바른 형식이 되므로 콜백 내에서 형식 검사가 일반적으로 수행되지 않는다고 간주합니다. 콜백은 다양한 작업에서 속성 시스템에 의해 사용됩니다. 여기에 기본 값으로 초기 형식 초기화, 프로그래밍 방식 변경 호출 하 여 <xref:System.Windows.DependencyObject.SetValue%2A>, 또는 제공 된 새 기본값을 사용 하 여 메타 데이터를 재정의 하려고 합니다. 유효성 검사 콜백이 이러한 작업에 의해 호출되고 `false`를 반환하면 예외가 발생합니다. 애플리케이션 작성자는 이러한 예외를 처리할 수 있도록 준비해야 합니다. 유효성 검사 콜백의 일반적인 용도는 열거형 값의 유효성을 검사하거나 속성이 0 이상이어야 하는 측정값을 설정할 때 정수 또는 double 값을 제약하는 것입니다.  
   
@@ -40,8 +40,8 @@ ms.locfileid: "54576462"
   
  다음은 매우 간단한 유효성 검사 콜백 시나리오에 대 한 예제 코드: 유효성을 검사 하는으로 형식화 된 속성을 <xref:System.Double> 기본 아닙니다 <xref:System.Double.PositiveInfinity> 또는 <xref:System.Double.NegativeInfinity>합니다.  
   
- [!code-csharp[DPCallbackOverride#ValidateValueCallback](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DPCallbackOverride/CSharp/SDKSampleLibrary/class1.cs#validatevaluecallback)]
- [!code-vb[DPCallbackOverride#ValidateValueCallback](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DPCallbackOverride/visualbasic/sdksamplelibrary/class1.vb#validatevaluecallback)]  
+ [!code-csharp[DPCallbackOverride#ValidateValueCallback](~/samples/snippets/csharp/VS_Snippets_Wpf/DPCallbackOverride/CSharp/SDKSampleLibrary/class1.cs#validatevaluecallback)]
+ [!code-vb[DPCallbackOverride#ValidateValueCallback](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DPCallbackOverride/visualbasic/sdksamplelibrary/class1.vb#validatevaluecallback)]  
   
 <a name="Coerce_Value_Callbacks_and_Property_Changed_Events"></a>   
 ## <a name="coerce-value-callbacks-and-property-changed-events"></a>강제 값 콜백 및 속성 변경 이벤트  
@@ -51,18 +51,18 @@ ms.locfileid: "54576462"
   
  다음은 이 관계를 보여 주는 세 가지 종속성 속성 중 하나에 대한 매우 간단한 예제 코드입니다. 이 예제에서는 관련 *Reading 속성의 Min/Max/Current 집합 중 `CurrentReading` 속성이 등록되는 방법을 보여 주며, 이전 섹션에 표시된 유효성 검사를 사용합니다.  
   
- [!code-csharp[DPCallbackOverride#CurrentDefinitionWithWrapper](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DPCallbackOverride/CSharp/SDKSampleLibrary/class1.cs#currentdefinitionwithwrapper)]
- [!code-vb[DPCallbackOverride#CurrentDefinitionWithWrapper](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DPCallbackOverride/visualbasic/sdksamplelibrary/class1.vb#currentdefinitionwithwrapper)]  
+ [!code-csharp[DPCallbackOverride#CurrentDefinitionWithWrapper](~/samples/snippets/csharp/VS_Snippets_Wpf/DPCallbackOverride/CSharp/SDKSampleLibrary/class1.cs#currentdefinitionwithwrapper)]
+ [!code-vb[DPCallbackOverride#CurrentDefinitionWithWrapper](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DPCallbackOverride/visualbasic/sdksamplelibrary/class1.vb#currentdefinitionwithwrapper)]  
   
  Current에 대한 속성 변경 콜백은 다른 속성에 대해 등록된 강제 값 콜백을 명시적으로 호출하여 다른 종속 속성에 변경 내용을 전달하는 데 사용됩니다.  
   
- [!code-csharp[DPCallbackOverride#OnPCCurrent](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DPCallbackOverride/CSharp/SDKSampleLibrary/class1.cs#onpccurrent)]
- [!code-vb[DPCallbackOverride#OnPCCurrent](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DPCallbackOverride/visualbasic/sdksamplelibrary/class1.vb#onpccurrent)]  
+ [!code-csharp[DPCallbackOverride#OnPCCurrent](~/samples/snippets/csharp/VS_Snippets_Wpf/DPCallbackOverride/CSharp/SDKSampleLibrary/class1.cs#onpccurrent)]
+ [!code-vb[DPCallbackOverride#OnPCCurrent](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DPCallbackOverride/visualbasic/sdksamplelibrary/class1.vb#onpccurrent)]  
   
  강제 값 콜백은 현재 속성이 잠재적으로 종속되어 있는 속성의 값을 확인하고 필요한 경우 현재 값을 강제 변환합니다.  
   
- [!code-csharp[DPCallbackOverride#CoerceCurrent](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DPCallbackOverride/CSharp/SDKSampleLibrary/class1.cs#coercecurrent)]
- [!code-vb[DPCallbackOverride#CoerceCurrent](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DPCallbackOverride/visualbasic/sdksamplelibrary/class1.vb#coercecurrent)]  
+ [!code-csharp[DPCallbackOverride#CoerceCurrent](~/samples/snippets/csharp/VS_Snippets_Wpf/DPCallbackOverride/CSharp/SDKSampleLibrary/class1.cs#coercecurrent)]
+ [!code-vb[DPCallbackOverride#CoerceCurrent](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DPCallbackOverride/visualbasic/sdksamplelibrary/class1.vb#coercecurrent)]  
   
 > [!NOTE]
 >  속성의 기본값은 강제 변환되지 않습니다. 기본 값과 같은 속성 값을 속성 값에 있는 경우 여전히 초기 기본값이 또는 다른 값을 지우면 기본값과 발생할 <xref:System.Windows.DependencyObject.ClearValue%2A>합니다.  
@@ -81,6 +81,6 @@ ms.locfileid: "54576462"
  속성 시스템은 취급 <xref:System.Windows.CoerceValueCallback> 값을 반환 하는 <xref:System.Windows.DependencyProperty.UnsetValue> 특수 한 경우. 이 특별 한 경우 발생 하는 속성 변경 하는 의미는 <xref:System.Windows.CoerceValueCallback> 속성 시스템에서 거부 되 고 호출 하 고 속성 시스템 이전 속성 값을 대신 보고 해야 하는 합니다. 이 메커니즘은 비동기적으로 시작된 속성의 변경 내용이 현재 개체 상태에 여전히 유효한지 확인하고 유효하지 않을 경우 변경 내용을 무시하는 데 유용할 수 있습니다. 다른 가능한 시나리오에서는 보고할 값을 담당하는 속성 값 결정의 구성 요소에 따라 선택적으로 값을 무시할 수 있습니다. 이 위해 사용할 수 있습니다 합니다 <xref:System.Windows.DependencyProperty> 콜백 및 속성 식별자에 대 한 입력으로 전달 <xref:System.Windows.DependencyPropertyHelper.GetValueSource%2A>, 및 후 처리를 <xref:System.Windows.ValueSource>합니다.  
   
 ## <a name="see-also"></a>참고자료
-- [종속성 속성 개요](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)
-- [종속성 속성 메타데이터](../../../../docs/framework/wpf/advanced/dependency-property-metadata.md)
-- [사용자 지정 종속성 속성](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md)
+- [종속성 속성 개요](dependency-properties-overview.md)
+- [종속성 속성 메타데이터](dependency-property-metadata.md)
+- [사용자 지정 종속성 속성](custom-dependency-properties.md)

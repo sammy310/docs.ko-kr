@@ -5,12 +5,12 @@ helpviewer_keywords:
 - flow content elements [WPF]
 - documents [WPF], flow content elements
 ms.assetid: 70fa11cd-5fa7-4872-a1cc-04d80f1132be
-ms.openlocfilehash: 146a785ef4f6da650144ed6fc47633670304bde6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: df591304736adf1725b2b4235149bd426fe15216
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33544133"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57368113"
 ---
 # <a name="how-to-use-flow-content-elements"></a>방법: 유동 콘텐츠 요소 사용
 다음 예제에서는 다양한 유동 콘텐츠 요소 및 연결된 특성에 대한 선언적 사용을 보여 줍니다.  여기서 설명하는 요소와 특성은 다음과 같습니다.  
@@ -42,4 +42,4 @@ ms.locfileid: "33544133"
 -   <xref:System.Windows.Documents.Underline> 요소  
   
 ## <a name="example"></a>예제  
- [!code-xaml[FlowDocInlineSnippets#_InlineElementsXAML](../../../../samples/snippets/csharp/VS_Snippets_Wpf/FlowDocInlineSnippets/CS/document.xaml#_inlineelementsxaml)]
+ [!code-xaml[FlowDocInlineSnippets#_InlineElementsXAML](~/samples/snippets/csharp/VS_Snippets_Wpf/FlowDocInlineSnippets/CS/document.xaml#_inlineelementsxaml)]

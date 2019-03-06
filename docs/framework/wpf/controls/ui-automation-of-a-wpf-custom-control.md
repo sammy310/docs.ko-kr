@@ -10,12 +10,12 @@ helpviewer_keywords:
 - custom controls [WPF], improving accessibility
 - UI Automation [WPF], using with custom controls
 ms.assetid: 47b310fc-fbd5-4ce2-a606-22d04c6d4911
-ms.openlocfilehash: 96107c287003cc5fca2eb0eaa86f0f1f32b7d65e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2587a3b4e38aed507688cc86f0e179b3acbb1672
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54523699"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57358329"
 ---
 # <a name="ui-automation-of-a-wpf-custom-control"></a>WPF 사용자 지정 컨트롤의 UI 자동화
 [!INCLUDE[TLA#tla_uiautomation](../../../../includes/tlasharptla-uiautomation-md.md)]에서는 자동화 클라이언트가 다양한 플랫폼 및 프레임워크의 사용자 인터페이스를 검사하거나 운영하는 데 사용할 수 있는 일반화된 단일 인터페이스를 제공합니다. [!INCLUDE[TLA2#tla_uiautomation](../../../../includes/tla2sharptla-uiautomation-md.md)]를 통해 품질 보증(테스트) 코드 및 화면 읽기 프로그램과 같은 접근성 응용 프로그램은 사용자 인터페이스 요소를 검사하고 다른 코드에서 해당 요소에 대한 사용자 상호 작용을 시뮬레이트할 수 있습니다. 모든 플랫폼에서 [!INCLUDE[TLA2#tla_uiautomation](../../../../includes/tla2sharptla-uiautomation-md.md)]에 대한 자세한 내용은 접근성을 참조하세요.  
@@ -54,8 +54,8 @@ ms.locfileid: "54523699"
 ### <a name="override-getpattern"></a>GetPattern 재정의  
  자동화 피어는 서버 쪽 [!INCLUDE[TLA2#tla_uiautomation](../../../../includes/tla2sharptla-uiautomation-md.md)] 공급자의 몇 가지 구현 측면을 간소화하지만 사용자 지정 컨트롤 자동화 피어는 패턴 인터페이스를 계속 처리해야 합니다. 비 WPF 공급자 처럼 피어는에서 인터페이스의 구현을 제공 하 여 컨트롤 패턴을 지원 합니다 <xref:System.Windows.Automation.Provider?displayProperty=nameWithType> 네임 스페이스와 같은 <xref:System.Windows.Automation.Provider.IInvokeProvider>합니다. 컨트롤 패턴 인터페이스는 피어 자체 또는 다른 개체를 통해 구현할 수 있습니다. 피어의 구현의 <xref:System.Windows.Automation.Peers.AutomationPeer.GetPattern%2A> 지정한 패턴을 지 원하는 개체를 반환 합니다. [!INCLUDE[TLA2#tla_uiautomation](../../../../includes/tla2sharptla-uiautomation-md.md)] 호출 코드를 <xref:System.Windows.Automation.Peers.UIElementAutomationPeer.GetPattern%2A> 메서드를 지정 하 고는 <xref:System.Windows.Automation.Peers.PatternInterface> 열거형 값입니다. 재정의가 <xref:System.Windows.Automation.Peers.UIElementAutomationPeer.GetPattern%2A> 지정된 된 패턴을 구현 하는 개체를 반환 해야 합니다. 컨트롤 패턴의 사용자 지정 구현에 없는 경우의 기본 형식 구현을 호출할 수 있습니다 <xref:System.Windows.Automation.Peers.AutomationPeer.GetPattern%2A> 패턴이이 컨트롤 형식에 대해 지원 되지 않는 경우 검색할 해당 구현이 나 null입니다. 사용자 지정 NumericUpDown 컨트롤을 범위 내의 값으로 설정할 수 있습니다 예를 들어 있으므로 해당 [!INCLUDE[TLA2#tla_uiautomation](../../../../includes/tla2sharptla-uiautomation-md.md)] 피어를 구현 합니다 <xref:System.Windows.Automation.Provider.IRangeValueProvider> 인터페이스입니다. 다음 예제에서는 어떻게 피어의 <xref:System.Windows.Automation.Peers.UIElementAutomationPeer.GetPattern%2A> 응답할 메서드를 재정의 <xref:System.Windows.Automation.Peers.PatternInterface.RangeValue?displayProperty=nameWithType> 값입니다.  
   
- [!code-csharp[CustomControlNumericUpDown#GetPattern](../../../../samples/snippets/csharp/VS_Snippets_Wpf/CustomControlNumericUpDown/CSharp/CustomControlLibrary/NumericUpDown.cs#getpattern)]
- [!code-vb[CustomControlNumericUpDown#GetPattern](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/CustomControlNumericUpDown/visualbasic/customcontrollibrary/numericupdown.vb#getpattern)]  
+ [!code-csharp[CustomControlNumericUpDown#GetPattern](~/samples/snippets/csharp/VS_Snippets_Wpf/CustomControlNumericUpDown/CSharp/CustomControlLibrary/NumericUpDown.cs#getpattern)]
+ [!code-vb[CustomControlNumericUpDown#GetPattern](~/samples/snippets/visualbasic/VS_Snippets_Wpf/CustomControlNumericUpDown/visualbasic/customcontrollibrary/numericupdown.vb#getpattern)]  
   
  <xref:System.Windows.Automation.Peers.UIElementAutomationPeer.GetPattern%2A> 메서드는 하위 요소를 패턴 공급자로 지정할 수도 있습니다. 다음 코드에서는 어떻게 <xref:System.Windows.Controls.ItemsControl> 전송 스크롤 패턴 처리 내부의 피어를 <xref:System.Windows.Controls.ScrollViewer> 제어 합니다.  
   
@@ -106,8 +106,8 @@ End Class
 ### <a name="override-core-methods"></a>"Core" 메서드 재정의  
  자동화 코드는 피어 클래스의 public 메서드를 호출하여 컨트롤에 대한 정보를 가져옵니다. 컨트롤에 대한 정보를 제공하려면 컨트롤 구현이 기본 자동화 피어 클래스에서 제공하는 구현과 다른 경우 이름이 "Core"로 끝나는 각 메서드를 재정의합니다. 최소한 컨트롤 구현 해야 합니다 <xref:System.Windows.Automation.Peers.AutomationPeer.GetClassNameCore%2A> 및 <xref:System.Windows.Automation.Peers.AutomationPeer.GetAutomationControlTypeCore%2A> 메서드를 다음 예제에서와 같이 합니다.  
   
- [!code-csharp[CustomControlNumericUpDown#CoreOverrides](../../../../samples/snippets/csharp/VS_Snippets_Wpf/CustomControlNumericUpDown/CSharp/CustomControlLibrary/NumericUpDown.cs#coreoverrides)]
- [!code-vb[CustomControlNumericUpDown#CoreOverrides](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/CustomControlNumericUpDown/visualbasic/customcontrollibrary/numericupdown.vb#coreoverrides)]  
+ [!code-csharp[CustomControlNumericUpDown#CoreOverrides](~/samples/snippets/csharp/VS_Snippets_Wpf/CustomControlNumericUpDown/CSharp/CustomControlLibrary/NumericUpDown.cs#coreoverrides)]
+ [!code-vb[CustomControlNumericUpDown#CoreOverrides](~/samples/snippets/visualbasic/VS_Snippets_Wpf/CustomControlNumericUpDown/visualbasic/customcontrollibrary/numericupdown.vb#coreoverrides)]  
   
  구현의 <xref:System.Windows.Automation.Peers.AutomationPeer.GetAutomationControlTypeCore%2A> 를 반환 하 여 컨트롤을 설명 합니다.는 <xref:System.Windows.Automation.ControlType> 값입니다. 반환할 수 있지만 <xref:System.Windows.Automation.ControlType.Custom?displayProperty=nameWithType>를 정확 하 게 컨트롤을 설명 하는 경우 보다 구체적인 컨트롤 형식 중 하나를 반환 해야 합니다. 반환 값 <xref:System.Windows.Automation.ControlType.Custom?displayProperty=nameWithType> 를 구현 하는 공급자에 대 한 추가 작업이 필요 [!INCLUDE[TLA2#tla_uiautomation](../../../../includes/tla2sharptla-uiautomation-md.md)], 및 [!INCLUDE[TLA2#tla_uiautomation](../../../../includes/tla2sharptla-uiautomation-md.md)] 클라이언트 제품은 컨트롤 구조, 키보드 상호 작용 및 가능한 컨트롤 패턴을 예상할 수 없습니다.  
   
@@ -151,10 +151,10 @@ End Class
 ### <a name="raise-events"></a>이벤트 발생  
  자동화 클라이언트는 자동화 이벤트를 구독할 수 있습니다. 사용자 지정 컨트롤에는 호출 하 여 상태를 제어 하는 변경을 보고 해야 합니다 <xref:System.Windows.Automation.Peers.AutomationPeer.RaiseAutomationEvent%2A> 메서드. 속성 값이 변경 될 때 호출 되는 마찬가지로 <xref:System.Windows.Automation.Peers.AutomationPeer.RaisePropertyChangedEvent%2A> 메서드. 다음 코드에서는 컨트롤 코드 내에서 피어 개체를 가져오고 메서드를 호출하여 이벤트를 발생시키는 방법을 보여 줍니다. 최적화 방법으로 코드는 이 이벤트 유형에 대한 수신기가 있는지 확인합니다. 수신기가 있는 경우에만 이벤트가 발생되면 불필요한 오버헤드를 방지하고 컨트롤이 응답 가능한 상태를 유지하는 데 도움이 됩니다.  
   
- [!code-csharp[CustomControlNumericUpDown#RaiseEventFromControl](../../../../samples/snippets/csharp/VS_Snippets_Wpf/CustomControlNumericUpDown/CSharp/CustomControlLibrary/NumericUpDown.cs#raiseeventfromcontrol)]
- [!code-vb[CustomControlNumericUpDown#RaiseEventFromControl](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/CustomControlNumericUpDown/visualbasic/customcontrollibrary/numericupdown.vb#raiseeventfromcontrol)]  
+ [!code-csharp[CustomControlNumericUpDown#RaiseEventFromControl](~/samples/snippets/csharp/VS_Snippets_Wpf/CustomControlNumericUpDown/CSharp/CustomControlLibrary/NumericUpDown.cs#raiseeventfromcontrol)]
+ [!code-vb[CustomControlNumericUpDown#RaiseEventFromControl](~/samples/snippets/visualbasic/VS_Snippets_Wpf/CustomControlNumericUpDown/visualbasic/customcontrollibrary/numericupdown.vb#raiseeventfromcontrol)]  
   
 ## <a name="see-also"></a>참고자료
-- [UI 자동화 개요](../../../../docs/framework/ui-automation/ui-automation-overview.md)
+- [UI 자동화 개요](../../ui-automation/ui-automation-overview.md)
 - [테마 및 UI 자동화 지원 샘플이 있는 NumericUpDown 사용자 지정 컨트롤](https://go.microsoft.com/fwlink/?LinkID=160025)
-- [서버 쪽 UI 자동화 공급자 구현](../../../../docs/framework/ui-automation/server-side-ui-automation-provider-implementation.md)
+- [서버 쪽 UI 자동화 공급자 구현](../../ui-automation/server-side-ui-automation-provider-implementation.md)

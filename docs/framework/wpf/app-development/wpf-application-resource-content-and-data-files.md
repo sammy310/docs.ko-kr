@@ -17,12 +17,12 @@ helpviewer_keywords:
 - application development [WPF], files
 - application management [WPF]
 ms.assetid: 7ad2943b-3961-41d3-8fc6-1582d43f5d99
-ms.openlocfilehash: 3fed7127624714e67121c388e70b8b833d88d772
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
+ms.openlocfilehash: f9fd936c15454a81058d42825800a388c5c90a40
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56746538"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57379200"
 ---
 # <a name="wpf-application-resource-content-and-data-files"></a>WPF 애플리케이션 리소스, 콘텐츠 및 데이터 파일
 [!INCLUDE[TLA#tla_win](../../../../includes/tlasharptla-win-md.md)] 비실행 데이터와 같이 포함 된 파일에 응용 프로그램은 종종 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)], 이미지, 비디오 및 오디오 합니다. Windows Presentation Foundation (WPF) 구성, 식별 하 고 이러한 종류의 응용 프로그램 데이터 파일 이라고 하는 데이터 파일을 사용 하 여에 대 한 특별 한 지원을 제공 합니다. 이러한 지원에는 다음을 포함한 특정 애플리케이션 데이터 파일 형식 집합이 포함됩니다.  
@@ -35,7 +35,7 @@ ms.locfileid: "56746538"
   
  이 세 가지 파일 형식을 구분하는 한 가지 중요한 차이점은 리소스 파일과 콘텐츠 파일은 빌드할 때 인식된다는 점입니다. 어셈블리는 명시적으로 이 파일을 인식합니다. 그러나 원본 파일의 사이트에 대 한 어셈블리로 있을 지식이 없는 전혀 또는 팩을 통해 암시적으로 인식 [!INCLUDE[TLA#tla_uri](../../../../includes/tlasharptla-uri-md.md)] 참조; 후자의 경우 대/소문자는 원본 파일의 참조 사이트 실제로 존재 하는지 보장 되지 않습니다.  
   
- Windows Presentation Foundation (WPF) 응용 프로그램 데이터 파일을 참조 하려면 Pack을 사용 [!INCLUDE[TLA#tla_uri](../../../../includes/tlasharptla-uri-md.md)] 에서 자세히 설명 되어 있는 구성표 [WPF의 Pack Uri](../../../../docs/framework/wpf/app-development/pack-uris-in-wpf.md)).  
+ Windows Presentation Foundation (WPF) 응용 프로그램 데이터 파일을 참조 하려면 Pack을 사용 [!INCLUDE[TLA#tla_uri](../../../../includes/tlasharptla-uri-md.md)] 에서 자세히 설명 되어 있는 구성표 [WPF의 Pack Uri](pack-uris-in-wpf.md)).  
   
  이 항목에서는 애플리케이션 데이터 파일을 구성하고 사용하는 방법을 설명합니다.  
   
@@ -50,10 +50,10 @@ ms.locfileid: "56746538"
   
 -   파일 종속성의 수를 줄여 애플리케이션 배포의 복잡성을 줄이려는 경우.  
   
--   응용 프로그램 데이터 파일을 지역화 해야 (참조 [WPF 전역화 및 지역화 개요](../../../../docs/framework/wpf/advanced/wpf-globalization-and-localization-overview.md)).  
+-   응용 프로그램 데이터 파일을 지역화 해야 (참조 [WPF 전역화 및 지역화 개요](../advanced/wpf-globalization-and-localization-overview.md)).  
   
 > [!NOTE]
->  이 섹션에 설명 된 리소스 파일은 리소스 파일에 설명 된 다르지 [XAML 리소스](../../../../docs/framework/wpf/advanced/xaml-resources.md) 포함 또는 연결 된 리소스에 설명 된 것과 다르며 [응용 프로그램 리소스 관리 (.NET) ](/visualstudio/ide/managing-application-resources-dotnet).  
+>  이 섹션에 설명 된 리소스 파일은 리소스 파일에 설명 된 다르지 [XAML 리소스](../advanced/xaml-resources.md) 포함 또는 연결 된 리소스에 설명 된 것과 다르며 [응용 프로그램 리소스 관리 (.NET) ](/visualstudio/ide/managing-application-resources-dotnet).  
   
 ### <a name="configuring-resource-files"></a>리소스 파일 구성  
  [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)], 리소스 파일에 포함 된 파일은는 [!INCLUDE[TLA#tla_msbuild](../../../../includes/tlasharptla-msbuild-md.md)] 으로 프로젝트는 `Resource` 항목입니다.  
@@ -78,24 +78,24 @@ ms.locfileid: "56746538"
   
  예를 들어 다음 코드를 사용 하는 방법을 보여 줍니다 <xref:System.Windows.Application.GetResourceStream%2A> 로드 하는 <xref:System.Windows.Controls.Page> 리소스의 내용으로 설정 하 고 파일을 <xref:System.Windows.Controls.Frame> (`pageFrame`):  
   
- [!code-csharp[WPFAssemblyResourcesSnippets#LoadAPageResourceFileManuallyCODE](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WPFAssemblyResourcesSnippets/CSharp/ResourcesSample/ApplicationGetResourceStreamSnippetWindow.xaml.cs#loadapageresourcefilemanuallycode)]
- [!code-vb[WPFAssemblyResourcesSnippets#LoadAPageResourceFileManuallyCODE](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WPFAssemblyResourcesSnippets/VisualBasic/ResourcesSample/ApplicationGetResourceStreamSnippetWindow.xaml.vb#loadapageresourcefilemanuallycode)]  
+ [!code-csharp[WPFAssemblyResourcesSnippets#LoadAPageResourceFileManuallyCODE](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFAssemblyResourcesSnippets/CSharp/ResourcesSample/ApplicationGetResourceStreamSnippetWindow.xaml.cs#loadapageresourcefilemanuallycode)]
+ [!code-vb[WPFAssemblyResourcesSnippets#LoadAPageResourceFileManuallyCODE](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WPFAssemblyResourcesSnippets/VisualBasic/ResourcesSample/ApplicationGetResourceStreamSnippetWindow.xaml.vb#loadapageresourcefilemanuallycode)]  
   
  호출 하는 동안 <xref:System.Windows.Application.GetResourceStream%2A> 액세스 권한을 부여 합니다 <xref:System.IO.Stream>를 설정 하는 속성의 형식으로 변환 하는 추가 작업을 수행 해야 합니다. 대신 하도록 할 수 있습니다 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 열기와 변환을 처리 합니다 <xref:System.IO.Stream> 직접 코드를 사용 하는 형식의 속성에 리소스 파일을 로드 하 여 합니다.  
   
  다음 예제에서는 로드 하는 방법을 보여 줍니다는 <xref:System.Windows.Controls.Page> 에 직접를 <xref:System.Windows.Controls.Frame> (`pageFrame`) 코드를 사용 하 여 합니다.  
   
- [!code-csharp[WPFAssemblyResourcesSnippets#LoadPageResourceFileFromCODE](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WPFAssemblyResourcesSnippets/CSharp/ResourcesSample/ApplicationGetResourceStreamSnippetWindow.xaml.cs#loadpageresourcefilefromcode)]
- [!code-vb[WPFAssemblyResourcesSnippets#LoadPageResourceFileFromCODE](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WPFAssemblyResourcesSnippets/VisualBasic/ResourcesSample/ApplicationGetResourceStreamSnippetWindow.xaml.vb#loadpageresourcefilefromcode)]  
+ [!code-csharp[WPFAssemblyResourcesSnippets#LoadPageResourceFileFromCODE](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFAssemblyResourcesSnippets/CSharp/ResourcesSample/ApplicationGetResourceStreamSnippetWindow.xaml.cs#loadpageresourcefilefromcode)]
+ [!code-vb[WPFAssemblyResourcesSnippets#LoadPageResourceFileFromCODE](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WPFAssemblyResourcesSnippets/VisualBasic/ResourcesSample/ApplicationGetResourceStreamSnippetWindow.xaml.vb#loadpageresourcefilefromcode)]  
   
  다음 예제는 태그를 사용하여 앞의 예제를 구현한 것입니다.  
   
- [!code-xaml[WPFAssemblyResourcesSnippets#LoadPageResourceFileFromXAML](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WPFAssemblyResourcesSnippets/CSharp/ResourcesSample/ApplicationGetResourceStreamSnippetWindow.xaml#loadpageresourcefilefromxaml)]  
+ [!code-xaml[WPFAssemblyResourcesSnippets#LoadPageResourceFileFromXAML](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFAssemblyResourcesSnippets/CSharp/ResourcesSample/ApplicationGetResourceStreamSnippetWindow.xaml#loadpageresourcefilefromxaml)]  
   
 ### <a name="application-code-files-as-resource-files"></a>리소스 파일로 사용되는 애플리케이션 코드 파일  
  특별 한 집합이 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 팩을 사용 하 여 응용 프로그램 코드 파일을 참조할 수 있습니다 [!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)]windows, 페이지, 유동 문서 및 리소스 사전을 포함 합니다. 예를 들어, 설정할 수 있습니다 합니다 <xref:System.Windows.Application.StartupUri%2A?displayProperty=nameWithType> 팩을 사용 하 여 속성 [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] 창이 나 응용 프로그램이 시작 될 때 로드 하려는 페이지를 참조 하는 합니다.  
   
- [!code-xaml[WPFAssemblyResourcesSnippets#SetApplicationStartupURI](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WPFAssemblyResourcesSnippets/CSharp/ResourcesSample/App.xaml#setapplicationstartupuri)]  
+ [!code-xaml[WPFAssemblyResourcesSnippets#SetApplicationStartupURI](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFAssemblyResourcesSnippets/CSharp/ResourcesSample/App.xaml#setapplicationstartupuri)]  
   
  이 경우에 수행할 수 있습니다는 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 파일에 포함 되어는 [!INCLUDE[TLA#tla_msbuild](../../../../includes/tlasharptla-msbuild-md.md)] 으로 프로젝트를 `Page` 항목.  
   
@@ -158,19 +158,19 @@ ms.locfileid: "56746538"
   
  예를 들어 다음 코드를 사용 하는 방법을 보여 줍니다 <xref:System.Windows.Application.GetContentStream%2A> 로드 하는 <xref:System.Windows.Controls.Page> 의 콘텐츠로 설정 하 고 파일 콘텐츠를 <xref:System.Windows.Controls.Frame> (`pageFrame`).  
   
- [!code-csharp[WPFAssemblyResourcesSnippets#LoadAPageContentFileManuallyCODE](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WPFAssemblyResourcesSnippets/CSharp/ResourcesSample/ApplicationGetContentStreamSnippetWindow.xaml.cs#loadapagecontentfilemanuallycode)]
- [!code-vb[WPFAssemblyResourcesSnippets#LoadAPageContentFileManuallyCODE](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WPFAssemblyResourcesSnippets/VisualBasic/ResourcesSample/ApplicationGetContentStreamSnippetWindow.xaml.vb#loadapagecontentfilemanuallycode)]  
+ [!code-csharp[WPFAssemblyResourcesSnippets#LoadAPageContentFileManuallyCODE](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFAssemblyResourcesSnippets/CSharp/ResourcesSample/ApplicationGetContentStreamSnippetWindow.xaml.cs#loadapagecontentfilemanuallycode)]
+ [!code-vb[WPFAssemblyResourcesSnippets#LoadAPageContentFileManuallyCODE](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WPFAssemblyResourcesSnippets/VisualBasic/ResourcesSample/ApplicationGetContentStreamSnippetWindow.xaml.vb#loadapagecontentfilemanuallycode)]  
   
  호출 하는 동안 <xref:System.Windows.Application.GetContentStream%2A> 액세스 권한을 부여 합니다 <xref:System.IO.Stream>를 설정 하는 속성의 형식으로 변환 하는 추가 작업을 수행 해야 합니다. 대신 하도록 할 수 있습니다 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 열기와 변환을 처리 합니다 <xref:System.IO.Stream> 직접 코드를 사용 하는 형식의 속성에 리소스 파일을 로드 하 여 합니다.  
   
  다음 예제에서는 로드 하는 방법을 보여 줍니다는 <xref:System.Windows.Controls.Page> 에 직접를 <xref:System.Windows.Controls.Frame> (`pageFrame`) 코드를 사용 하 여 합니다.  
   
- [!code-csharp[WPFAssemblyResourcesSnippets#LoadPageContentFileFromCODE](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WPFAssemblyResourcesSnippets/CSharp/ResourcesSample/ApplicationGetContentStreamSnippetWindow.xaml.cs#loadpagecontentfilefromcode)]
- [!code-vb[WPFAssemblyResourcesSnippets#LoadPageContentFileFromCODE](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WPFAssemblyResourcesSnippets/VisualBasic/ResourcesSample/ApplicationGetContentStreamSnippetWindow.xaml.vb#loadpagecontentfilefromcode)]  
+ [!code-csharp[WPFAssemblyResourcesSnippets#LoadPageContentFileFromCODE](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFAssemblyResourcesSnippets/CSharp/ResourcesSample/ApplicationGetContentStreamSnippetWindow.xaml.cs#loadpagecontentfilefromcode)]
+ [!code-vb[WPFAssemblyResourcesSnippets#LoadPageContentFileFromCODE](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WPFAssemblyResourcesSnippets/VisualBasic/ResourcesSample/ApplicationGetContentStreamSnippetWindow.xaml.vb#loadpagecontentfilefromcode)]  
   
  다음 예제는 태그를 사용하여 앞의 예제를 구현한 것입니다.  
   
- [!code-xaml[WPFAssemblyResourcesSnippets#LoadPageContentFileFromXAML](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WPFAssemblyResourcesSnippets/CSharp/ResourcesSample/ApplicationGetContentStreamSnippetWindow.xaml#loadpagecontentfilefromxaml)]  
+ [!code-xaml[WPFAssemblyResourcesSnippets#LoadPageContentFileFromXAML](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFAssemblyResourcesSnippets/CSharp/ResourcesSample/ApplicationGetContentStreamSnippetWindow.xaml#loadpagecontentfilefromxaml)]  
   
 <a name="Site_of_Origin_Files"></a>   
 ## <a name="site-of-origin-files"></a>원본 사이트 파일  
@@ -186,7 +186,7 @@ ms.locfileid: "56746538"
   
  이러한 종류의 기존 사용 하 여 파일을 로드 하는 것이 불가능 [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] file:/// 및 http:// 스키마와 같은 스키마를 합니다.  
   
- [!code-xaml[WPFAssemblyResourcesSnippets#AbsolutePackUriFileHttpReferenceXAML](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WPFAssemblyResourcesSnippets/CSharp/ResourcesSample/AbsolutePackUriPage.xaml#absolutepackurifilehttpreferencexaml)]  
+ [!code-xaml[WPFAssemblyResourcesSnippets#AbsolutePackUriFileHttpReferenceXAML](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFAssemblyResourcesSnippets/CSharp/ResourcesSample/AbsolutePackUriPage.xaml#absolutepackurifilehttpreferencexaml)]  
   
  하지만 file:/// 및 http:// 스키마를 사용하려면 애플리케이션이 완전히 신뢰되어야 합니다. 응용 프로그램을 [!INCLUDE[TLA#tla_xbap](../../../../includes/tlasharptla-xbap-md.md)] 인터넷 또는 인트라넷에서 시작 된 및 느슨한 파일 원본 (응용 프로그램의 사이트에서 로드할 수 있습니다 이러한 위치에서 시작 된 응용 프로그램에 허용 되는 사용 권한의 하위 집합만 요청 시작 위치). 이러한 파일 이라고 *원본 사이트* 파일입니다.  
   
@@ -220,23 +220,23 @@ ms.locfileid: "56746538"
   
  예를 들어 다음 코드를 사용 하는 방법을 보여 줍니다 <xref:System.Windows.Application.GetRemoteStream%2A> 로드 하는 <xref:System.Windows.Controls.Page> 원본 사이트의 콘텐츠로 설정 하 고 파일을 <xref:System.Windows.Controls.Frame> (`pageFrame`).  
   
- [!code-csharp[WPFAssemblyResourcesSnippets#LoadAPageSOOFileManuallyCODE](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WPFAssemblyResourcesSnippets/CSharp/ResourcesSample/SOOPage.xaml.cs#loadapagesoofilemanuallycode)]
- [!code-vb[WPFAssemblyResourcesSnippets#LoadAPageSOOFileManuallyCODE](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WPFAssemblyResourcesSnippets/VisualBasic/ResourcesSample/SOOPage.xaml.vb#loadapagesoofilemanuallycode)]  
+ [!code-csharp[WPFAssemblyResourcesSnippets#LoadAPageSOOFileManuallyCODE](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFAssemblyResourcesSnippets/CSharp/ResourcesSample/SOOPage.xaml.cs#loadapagesoofilemanuallycode)]
+ [!code-vb[WPFAssemblyResourcesSnippets#LoadAPageSOOFileManuallyCODE](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WPFAssemblyResourcesSnippets/VisualBasic/ResourcesSample/SOOPage.xaml.vb#loadapagesoofilemanuallycode)]  
   
  호출 하는 동안 <xref:System.Windows.Application.GetRemoteStream%2A> 액세스 권한을 부여 합니다 <xref:System.IO.Stream>를 설정 하는 속성의 형식으로 변환 하는 추가 작업을 수행 해야 합니다. 대신 하도록 할 수 있습니다 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 열기와 변환을 처리 합니다 <xref:System.IO.Stream> 직접 코드를 사용 하는 형식의 속성에 리소스 파일을 로드 하 여 합니다.  
   
  다음 예제에서는 로드 하는 방법을 보여 줍니다는 <xref:System.Windows.Controls.Page> 에 직접를 <xref:System.Windows.Controls.Frame> (`pageFrame`) 코드를 사용 하 여 합니다.  
   
- [!code-csharp[WPFAssemblyResourcesSnippets#LoadPageSOOFileFromCODE](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WPFAssemblyResourcesSnippets/CSharp/ResourcesSample/SOOPage.xaml.cs#loadpagesoofilefromcode)]
- [!code-vb[WPFAssemblyResourcesSnippets#LoadPageSOOFileFromCODE](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WPFAssemblyResourcesSnippets/VisualBasic/ResourcesSample/SOOPage.xaml.vb#loadpagesoofilefromcode)]  
+ [!code-csharp[WPFAssemblyResourcesSnippets#LoadPageSOOFileFromCODE](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFAssemblyResourcesSnippets/CSharp/ResourcesSample/SOOPage.xaml.cs#loadpagesoofilefromcode)]
+ [!code-vb[WPFAssemblyResourcesSnippets#LoadPageSOOFileFromCODE](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WPFAssemblyResourcesSnippets/VisualBasic/ResourcesSample/SOOPage.xaml.vb#loadpagesoofilefromcode)]  
   
  다음 예제는 태그를 사용하여 앞의 예제를 구현한 것입니다.  
   
- [!code-xaml[WPFAssemblyResourcesSnippets#LoadPageSOOFileFromXAML](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WPFAssemblyResourcesSnippets/CSharp/ResourcesSample/SOOPage.xaml#loadpagesoofilefromxaml)]  
+ [!code-xaml[WPFAssemblyResourcesSnippets#LoadPageSOOFileFromXAML](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFAssemblyResourcesSnippets/CSharp/ResourcesSample/SOOPage.xaml#loadpagesoofilefromxaml)]  
   
 <a name="Rebuilding_after_Changing_Build_Type"></a>   
 ## <a name="rebuilding-after-changing-build-type"></a>빌드 형식 변경 후 다시 빌드  
  애플리케이션 데이터 파일의 빌드 형식을 변경한 뒤에는 변경 내용이 적용되도록 전체 애플리케이션을 다시 빌드해야 합니다. 애플리케이션만 빌드하면 변경 내용이 적용되지 않습니다.  
   
 ## <a name="see-also"></a>참고자료
-- [WPF의 Pack URI](../../../../docs/framework/wpf/app-development/pack-uris-in-wpf.md)
+- [WPF의 Pack URI](pack-uris-in-wpf.md)

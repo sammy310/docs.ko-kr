@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - classes [WPF], SystemParameters
 ms.assetid: 02e7a5de-94eb-4953-b91c-52e6c872ad5b
-ms.openlocfilehash: 00afc5c12ea9b83759361e9a3f175e91b4cbb10d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a05e2d08c989da70dd7763ad2df238aac03fded4
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54541666"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57375157"
 ---
 # <a name="how-to-use-systemparameters"></a>방법: SystemParameters 사용
 액세스 속성을 사용 하는 방법을 보여주는이 예제 <xref:System.Windows.SystemParameters> 스타일을 지정 하거나 단추를 사용자 지정 합니다.  
@@ -24,16 +24,16 @@ ms.locfileid: "54541666"
   
  다음 예제에서는 액세스 하 고 정적 값을 사용 하는 방법을 보여 줍니다 <xref:System.Windows.SystemParameters> 스타일을 지정 하거나 단추를 사용자 지정 합니다. 이 태그 예제에서는 단추의 크기를 조정 적용 하 여 <xref:System.Windows.SystemParameters> 단추에는 값입니다.  
   
- [!code-xaml[SystemRes_snip#ParameterStaticResources](../../../../samples/snippets/csharp/VS_Snippets_Wpf/SystemRes_snip/CSharp/Pane1.xaml#parameterstaticresources)]  
+ [!code-xaml[SystemRes_snip#ParameterStaticResources](~/samples/snippets/csharp/VS_Snippets_Wpf/SystemRes_snip/CSharp/Pane1.xaml#parameterstaticresources)]  
   
  값을 사용 하도록 <xref:System.Windows.SystemParameters> 코드에서 필요가 없습니다 정적 참조 또는 동적 리소스 참조를 사용 합니다. 대신 값을 사용 합니다 <xref:System.Windows.SystemParameters> 클래스입니다. 키가 아닌 속성이 정적 속성의 런타임 동작으로 정의 된 것 이지만 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 시스템에서 호스트 속성에서 실시간으로 다시 계산 하 고 적절 하 게 시스템 값을 사용자가 수행한 변경 작업에 대 한 고려 됩니다. 다음 예제를 사용 하 여 단추의 높이 너비를 설정 하는 방법을 보여 줍니다 <xref:System.Windows.SystemParameters> 값입니다.  
   
- [!code-csharp[SystemRes_snip#ParameterResourcesCode](../../../../samples/snippets/csharp/VS_Snippets_Wpf/SystemRes_snip/CSharp/Pane1.xaml.cs#parameterresourcescode)]
- [!code-vb[SystemRes_snip#ParameterResourcesCode](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/SystemRes_snip/VisualBasic/Pane1.xaml.vb#parameterresourcescode)]  
+ [!code-csharp[SystemRes_snip#ParameterResourcesCode](~/samples/snippets/csharp/VS_Snippets_Wpf/SystemRes_snip/CSharp/Pane1.xaml.cs#parameterresourcescode)]
+ [!code-vb[SystemRes_snip#ParameterResourcesCode](~/samples/snippets/visualbasic/VS_Snippets_Wpf/SystemRes_snip/VisualBasic/Pane1.xaml.vb#parameterresourcescode)]  
   
 ## <a name="see-also"></a>참고자료
 - <xref:System.Windows.SystemParameters>
-- [시스템 브러시로 영역 그리기](../../../../docs/framework/wpf/graphics-multimedia/how-to-paint-an-area-with-a-system-brush.md)
-- [SystemFonts 사용](../../../../docs/framework/wpf/advanced/how-to-use-systemfonts.md)
-- [시스템 매개 변수 키 사용](../../../../docs/framework/wpf/advanced/how-to-use-system-parameters-keys.md)
-- [방법 항목](../../../../docs/framework/wpf/advanced/resources-how-to-topics.md)
+- [시스템 브러시로 영역 그리기](../graphics-multimedia/how-to-paint-an-area-with-a-system-brush.md)
+- [SystemFonts 사용](how-to-use-systemfonts.md)
+- [시스템 매개 변수 키 사용](how-to-use-system-parameters-keys.md)
+- [방법 항목](resources-how-to-topics.md)

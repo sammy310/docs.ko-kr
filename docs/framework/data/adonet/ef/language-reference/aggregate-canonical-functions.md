@@ -2,18 +2,18 @@
 title: 집계 정식 함수
 ms.date: 03/30/2017
 ms.assetid: 3bcff826-ca90-41b3-a791-04d6ff0e5085
-ms.openlocfilehash: f65557703070a43f586a668903d049a374ef70d3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f5d3584c6e9d35c9eb69b4f54cad45187416ee59
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54708976"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57372804"
 ---
 # <a name="aggregate-canonical-functions"></a>집계 정식 함수
 
 집계는 일련의 입력 값을 단일 값으로 줄이는 식입니다. 집계는 일반적으로 SELECT 식의 GROUP BY 절과 함께 사용되며 사용할 수 있는 위치에 대한 제약 조건이 있습니다.
 
-## <a name="aggegate-entity-sql-canonical-functions"></a>Aggegate Entity SQL 정식 함수
+## <a name="aggregate-entity-sql-canonical-functions"></a>집계 Entity SQL 정식 함수
 
 집계 Entity SQL 정식 함수는 다음과 같습니다.
 
@@ -23,7 +23,8 @@ null이 아닌 값의 평균을 반환합니다.
 
 **인수**
 
-`Int32`, `Int64`, `Double` 및 `Decimal`입니다.
+
+  `Int32`, `Int64`, `Double` 및 `Decimal`입니다.
 
 **반환 값**
 
@@ -31,7 +32,7 @@ null이 아닌 값의 평균을 반환합니다.
 
 **예제**
 
-[!code-csharp[DP EntityServices Concepts#EDM_AVG](~/samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#edm_avg)] 
+[!code-csharp[DP EntityServices Concepts#EDM_AVG](~/samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#edm_avg)]
 [!code-sql[DP EntityServices Concepts#EDM_AVG](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#edm_avg)]
 
 ### <a name="bigcountexpression"></a>BigCount(expression)
@@ -48,10 +49,10 @@ null 값과 중복 값을 비롯한 집계의 크기를 반환합니다.
 
 **예제**
 
-[!code-csharp[DP EntityServices Concepts#EDM_BIGCOUNT](~/samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#edm_bigcount)] 
+[!code-csharp[DP EntityServices Concepts#EDM_BIGCOUNT](~/samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#edm_bigcount)]
 [!code-sql[DP EntityServices Concepts#EDM_BIGCOUNT](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#edm_bigcount)]
 
-### <a name="countexpression"></a>Count(expression) 
+### <a name="countexpression"></a>Count(expression)
 
 null 값과 중복 값을 비롯한 집계의 크기를 반환합니다.
 
@@ -74,7 +75,8 @@ null이 아닌 값의 최대값을 반환합니다.
 
 **인수**
 
-`Byte`, `Int16`, `Int32`, `Int64`, `Byte`, `Single`, `Double`, `Decimal`, `DateTime`, `DateTimeOffset`, `Time`, `String`, `Binary`입니다.
+
+  `Byte`, `Int16`, `Int32`, `Int64`, `Byte`, `Single`, `Double`, `Decimal`, `DateTime`, `DateTimeOffset`, `Time`, `String`, `Binary`입니다.
 
 **반환 값**
 
@@ -91,7 +93,8 @@ null이 아닌 값의 최소값을 반환합니다.
 
 **인수**
 
-`Byte`, `Int16`, `Int32`, `Int64`, `Byte`, `Single`, `Double`, `Decimal`, `DateTime`, `DateTimeOffset`, `Time`, `String`, `Binary`입니다.
+
+  `Byte`, `Int16`, `Int32`, `Int64`, `Byte`, `Single`, `Double`, `Decimal`, `DateTime`, `DateTimeOffset`, `Time`, `String`, `Binary`입니다.
 
 **반환 값**
 
@@ -108,7 +111,8 @@ null이 아닌 값의 표준 편차를 반환합니다.
 
 **인수**
 
-`Int32`, `Int64`, `Double`, `Decimal`입니다.
+
+  `Int32`, `Int64`, `Double`, `Decimal`입니다.
 
 **반환 값**
 
@@ -125,7 +129,8 @@ null이 아닌 값의 표준 편차를 반환합니다.
 
 **인수**
 
-`Int32`, `Int64`, `Double`, `Decimal`입니다.
+
+  `Int32`, `Int64`, `Double`, `Decimal`입니다.
 
 **반환 값**
 
@@ -142,7 +147,8 @@ null이 아닌 값의 합계를 반환합니다.
 
 **인수**
 
-`Int32`, `Int64`, `Double`, `Decimal`입니다.
+
+  `Int32`, `Int64`, `Double`, `Decimal`입니다.
 
 **반환 값**
 
@@ -159,7 +165,8 @@ null이 아닌 모든 값의 분산을 반환합니다.
 
 **인수**
 
-`Int32`, `Int64`, `Double`, `Decimal`입니다.
+
+  `Int32`, `Int64`, `Double`, `Decimal`입니다.
 
 **반환 값**
 
@@ -176,7 +183,8 @@ null이 아닌 모든 값의 모집단에 대한 분산을 반환합니다.
 
 **인수**
 
-`Int32`, `Int64`, `Double`, `Decimal`입니다.
+
+  `Int32`, `Int64`, `Double`, `Decimal`입니다.
 
 **반환 값**
 
@@ -185,7 +193,7 @@ A `Double`, 또는 `null` 모든 입력된 값이 `null` 값입니다.
 **예제**
 
 [!code-csharp[DP EntityServices Concepts#EDM_VARP](~/samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#edm_varp)]
-[!code-sql[DP EntityServices Concepts#EDM_VARP](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#edm_varp)] 
+[!code-sql[DP EntityServices Concepts#EDM_VARP](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#edm_varp)]
 
 동일한 기능을 Microsoft SQL 클라이언트 관리 공급자에서 사용할 수 있습니다. 자세한 내용은 [Entity Framework 함수에 대 한 SqlClient](../../../../../../docs/framework/data/adonet/ef/sqlclient-for-ef-functions.md)합니다.
 
@@ -206,7 +214,7 @@ min(select value o.ShipDate from LOB.Orders as o)
 다음 예제에서는 각 제품에 대해 주문된 평균 수량을 계산합니다.
 
 ```sql
-select p, avg(ol.Quantity) from LOB.OrderLines as ol 
+select p, avg(ol.Quantity) from LOB.OrderLines as ol
   group by ol.Product as p
 ```
 
@@ -222,9 +230,9 @@ select avg(ol.Quantity) from LOB.OrderLines as ol
 select avg(ol.Quantity) from LOB.OrderLines as ol group by 1
 ```
 
-그룹 기반 집계 내의 식은 WHERE 절 식에 표시되는 이름 결정 범위 내에서 계산됩니다.
+그룹 기반 집계 내의 식은 WHERE 절 식에 표시되는 이름 확인 범위 내에서 계산됩니다.
 
-와 같이 [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)], 그룹 기반 집계는 모두를 지정할 수도 있습니다 한정자 나 DISTINCT 한정자입니다. DISTINCT 한정자를 지정하면 집계가 계산되기 전에 집계 입력 컬렉션에서 중복 항목이 제거됩니다. ALL 한정자를 지정하거나 어떠한 한정자도 지정하지 않으면 중복 항목이 제거되지 않습니다.  
+와 같이 [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)], 그룹 기반 집계는 모두를 지정할 수도 있습니다 한정자 나 DISTINCT 한정자입니다. DISTINCT 한정자를 지정하면 집계가 계산되기 전에 집계 입력 컬렉션에서 중복 항목이 제거됩니다. ALL 한정자를 지정하거나 어떠한 한정자도 지정하지 않으면 중복 항목이 제거되지 않습니다.
 
 ## <a name="see-also"></a>참고자료
 

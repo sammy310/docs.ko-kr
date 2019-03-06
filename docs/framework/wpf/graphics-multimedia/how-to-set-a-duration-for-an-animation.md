@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Timelines [WPF], description
 - duration of animations [WPF]
 ms.assetid: 155034ef-7d00-4416-a73c-b1713992d2eb
-ms.openlocfilehash: 7a2edbd953f648d5555e5dc50469211a6da066de
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 83f87e911d9d5412eaba1eb88aea74b9325bc899
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54497933"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57351628"
 ---
 # <a name="how-to-set-a-duration-for-an-animation"></a>방법: 애니메이션의 지속 시간 설정
 A <xref:System.Windows.Media.Animation.Timeline> 시간의 세그먼트와 세그먼트의 길이 타임 라인의 의해 결정 됩니다 나타내는 <xref:System.Windows.Duration>합니다. 경우는 <xref:System.Windows.Media.Animation.Timeline> 끝에 도달 하면 해당 기간의 재생이 중지 합니다. 경우는 <xref:System.Windows.Media.Animation.Timeline> 자식 타임 라인에도 재생을 중지 합니다. 애니메이션의 경우는 <xref:System.Windows.Duration> 애니메이션 걸리는 전환에서 해당 시작 값 끝 값을 지정 합니다.  
@@ -21,8 +21,8 @@ A <xref:System.Windows.Media.Animation.Timeline> 시간의 세그먼트와 세�
  다음 예제에서는, 너비, 높이 및 채우기 색에서을 <xref:System.Windows.Shapes.Rectangle> 애니메이션 효과가 적용 됩니다. 애니메이션의 인지 된 속도 제어 하 고 컨테이너 타임 라인의 기간을 사용 하 여 자식 타임 라인이 기간 재정의 포함 하 여 애니메이션 효과 애니메이션 및 컨테이너 타임 라인의 기간 설정 됩니다.  
   
 ## <a name="example"></a>예제  
- [!code-xaml[timingbehaviors_snip#DurationExampleWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/timingbehaviors_snip/CSharp/DurationExample.xaml#durationexamplewholepage)]  
+ [!code-xaml[timingbehaviors_snip#DurationExampleWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/timingbehaviors_snip/CSharp/DurationExample.xaml#durationexamplewholepage)]  
   
 ## <a name="see-also"></a>참고자료
 - <xref:System.Windows.Duration>
-- [애니메이션 개요](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)
+- [애니메이션 개요](animation-overview.md)

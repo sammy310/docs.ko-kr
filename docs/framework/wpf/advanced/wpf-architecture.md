@@ -16,12 +16,12 @@ helpviewer_keywords:
 - data templates [WPF]
 - thread [WPF], affinity
 ms.assetid: 8579c10b-76ab-4c52-9691-195ce02333c8
-ms.openlocfilehash: 7214304d8575fb6ef8774d55eaf29ad714235123
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: dee88ceb82528955d8809214bff474b92233d28c
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54634586"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57362016"
 ---
 # <a name="wpf-architecture"></a>WPF 아키텍처
 이 항목에서는 Windows Presentation Foundation (WPF) 클래스 계층의 둘러보기를 제공합니다. 이 항목은 대부분의 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 주요 하위 시스템을 다루며 이들이 어떻게 상호 작용하는지를 설명하고, [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]의 설계자가 선택한 몇 가지 사항에 대해서 자세히 설명합니다.  
@@ -33,7 +33,7 @@ ms.locfileid: "54634586"
   
  [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]의 주요 구성 요소는 아래 그림에 설명되어 있습니다. 다이어그램의 빨간색 섹션(PresentationFramework, PresentationCore 및 milcore)은 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]의 주요 코드 부분입니다. 이 중에서 하나(milcore)만 관리되지 않는 구성 요소입니다. Milcore는 [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)]와의 긴밀한 통합을 위해 비관리 코드로 작성되어 있습니다. [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]에서의 모든 디스플레이는 [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)] 엔진을 통해 수행되므로 효율적인 하드웨어 및 소프트웨어 렌더링을 허용합니다. [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]에는 메모리 및 실행에 대한 세부적인 제어도 필요합니다. milcore에 있는 컴포지션 엔진은 성능의 영향을 크게 받으므로 성능을 높이기 위해 [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)]의 여러 이점을 포기해야 했습니다.  
   
- ![.NET Framework 내 WPF의 위치.](../../../../docs/framework/wpf/advanced/media/wpf-architect1.PNG "wpf_architect1")  
+ ![.NET Framework 내 WPF의 위치.](./media/wpf-architect1.PNG "wpf_architect1")  
   
  [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]의 관리되는 부분과 관리되지 않는 부분 간 통신에 대해서는 이 항목의 뒷부분에서 설명합니다. 관리되는 프로그래밍 모델의 나머지 부분은 아래에 설명되어 있습니다.  
   
@@ -71,7 +71,7 @@ ms.locfileid: "54634586"
   
  프로그래밍할 때 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]에서 만든 <xref:System.Windows.Media.Visual> 요소 및이 메시징 프로토콜을 통해 컴포지션 트리와 내부적으로 통신 하는 파생된 형식입니다. 각 <xref:System.Windows.Media.Visual> 에서 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 하나, none, 또는 여러 개의 컴포지션 노드를 만들 수 있습니다.  
   
- ![Windows Presentation Foundation 시각적 트리.](../../../../docs/framework/wpf/advanced/media/wpf-architecture2.PNG "wpf_architecture2")  
+ ![Windows Presentation Foundation 시각적 트리.](./media/wpf-architecture2.PNG "wpf_architecture2")  
   
  여기에서 알아 두어야 할 매우 중요한 아키텍처 정보가 있습니다. 그것은 바로 시각 요소 및 그리기 명령의 전체 트리가 캐시된다는 사실입니다. 그래픽 측면에서 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]는 유지된 렌더링 시스템을 사용합니다. 이로 인해 시스템은 사용자 코드에 대한 콜백을 차단하는 컴포지션 시스템 없이 높은 화면 주사율로 다시 그릴 수 있습니다. 따라서 응답하지 않는 애플리케이션이 나타나지 않게 됩니다.  
   
@@ -149,6 +149,6 @@ ms.locfileid: "54634586"
 - <xref:System.Windows.Threading.DispatcherObject>
 - <xref:System.Windows.Input.CommandBinding>
 - <xref:System.Windows.Controls.Control>
-- [데이터 바인딩 개요](../../../../docs/framework/wpf/data/data-binding-overview.md)
-- [레이아웃](../../../../docs/framework/wpf/advanced/layout.md)
-- [애니메이션 개요](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)
+- [데이터 바인딩 개요](../data/data-binding-overview.md)
+- [레이아웃](layout.md)
+- [애니메이션 개요](../graphics-multimedia/animation-overview.md)

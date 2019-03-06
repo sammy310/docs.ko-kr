@@ -6,12 +6,12 @@ helpviewer_keywords:
 - /moduleassemblyname compiler option [Visual Basic]
 - -moduleassemblyname compiler option [Visual Basic]
 ms.assetid: 013a57b6-f425-4dd3-b333-512d72c42f55
-ms.openlocfilehash: f88a0001bb2ba55c0a3eac3ed208f14292d86734
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
+ms.openlocfilehash: a16dd616c8a38dea4bd1779e4feea779b3a18e2d
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56745666"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57375300"
 ---
 # <a name="-moduleassemblyname"></a>-moduleassemblyname
 이 모듈이 속할 어셈블리의 이름을 지정합니다.  
@@ -26,7 +26,7 @@ ms.locfileid: "56745666"
   
 |용어|정의|  
 |---|---|  
-|`assembly_name`|이 모듈이 속하게 될 어셈블리의 이름입니다.|  
+|`assembly_name`|이 모듈에 포함 될 어셈블리의 이름입니다.|  
   
 ## <a name="remarks"></a>설명  
  컴파일러 프로세스를 `-moduleassemblyname` 경우에만 옵션을 `-target:module` 옵션이 지정 되었습니다. 이렇게 하면 컴파일러는 모듈을 만듭니다. 컴파일러에서 생성 된 모듈은 지정 된 어셈블리에만 유효 합니다 `-moduleassemblyname` 옵션입니다. 다른 어셈블리에 모듈을 배치 하는 경우 런타임 오류가 발생 합니다.  
@@ -37,7 +37,7 @@ ms.locfileid: "56745666"
   
 -   참조 된 어셈블리에 모듈을 빌드는 어셈블리를 friend 어셈블리 액세스 권한을 부여한 합니다.  
   
- 모듈을 만드는 방법에 대 한 자세한 내용은 참조 하세요. [/target (Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md)합니다. Friend 어셈블리에 대 한 자세한 내용은 참조 하세요. [Friend 어셈블리](../../programming-guide/concepts/assemblies-gac/friend-assemblies.md)합니다.  
+ 모듈을 만드는 방법에 대 한 자세한 내용은 참조 하세요. [/target (Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md)합니다. Friend 어셈블리에 대 한 자세한 내용은 참조 하세요. [Friend 어셈블리](../../../standard/assembly/friend-assemblies.md)합니다.  
   
 > [!NOTE]
 >  `-moduleassemblyname` 옵션은 Visual Studio 개발 환경 내에서 사용할 수 없는 경우 즉, 사용할 수 있는 명령 프롬프트에서 컴파일할 때만 합니다.  
@@ -51,4 +51,4 @@ ms.locfileid: "56745666"
 - [-addmodule](../../../visual-basic/reference/command-line-compiler/addmodule.md)
 - [.NET 어셈블리](../../../standard/assembly/index.md)
 - [샘플 컴파일 명령줄](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
-- [Friend 어셈블리](../../programming-guide/concepts/assemblies-gac/friend-assemblies.md)
+- [Friend 어셈블리](../../../standard/assembly/friend-assemblies.md)

@@ -15,19 +15,19 @@ helpviewer_keywords:
 - button set [WPF], grouped
 - bubbling [WPF]
 ms.assetid: 1a2189ae-13b4-45b0-b12c-8de2e49c29d2
-ms.openlocfilehash: 637cb6cfb343352561708a7d94e76e84e2ca7ca9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b0db690bfd1a0cabf3060067ea23cf01acf3251d
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54535818"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57379213"
 ---
 # <a name="routed-events-overview"></a>라우트된 이벤트 개요
 이 항목에서는 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]에서 라우트된 이벤트의 개념을 설명합니다. 이 항목에서는 라우트된 이벤트 용어를 정의하고, 라우트된 이벤트가 요소 트리를 통해 라우트되는 방식을 설명하고, 라우트된 이벤트를 처리하는 방법을 요약하고, 자체 사용자 지정 라우트된 이벤트를 만드는 방법을 소개합니다.
   
 <a name="prerequisites"></a>   
 ## <a name="prerequisites"></a>전제 조건  
- 이 항목에서는 [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] 및 개체 지향 프로그래밍뿐 아니라 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 요소 간의 관계를 트리로 개념화하는 방법에 대한 기본 지식이 있다고 가정합니다. 이 항목의 예제를 따르려면 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]을 이해하고 매우 기본적인 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 애플리케이션 또는 페이지를 작성하는 방법을 알아야 합니다. 자세한 내용은 [연습: 내 첫 WPF 데스크톱 응용 프로그램](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md) 하 고 [XAML 개요 (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)합니다.  
+ 이 항목에서는 [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] 및 개체 지향 프로그래밍뿐 아니라 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 요소 간의 관계를 트리로 개념화하는 방법에 대한 기본 지식이 있다고 가정합니다. 이 항목의 예제를 따르려면 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]을 이해하고 매우 기본적인 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 애플리케이션 또는 페이지를 작성하는 방법을 알아야 합니다. 자세한 내용은 [연습: 내 첫 WPF 데스크톱 응용 프로그램](../getting-started/walkthrough-my-first-wpf-desktop-application.md) 하 고 [XAML 개요 (WPF)](xaml-overview-wpf.md)합니다.  
   
 <a name="routing"></a>   
 ## <a name="what-is-a-routed-event"></a>라우트된 이벤트란?  
@@ -41,11 +41,11 @@ ms.locfileid: "54535818"
   
  다음 간단한 요소 트리를 살펴보세요.  
   
- [!code-xaml[EventOvwSupport#GroupButton](../../../../samples/snippets/csharp/VS_Snippets_Wpf/EventOvwSupport/CSharp/default.xaml#groupbutton)]  
+ [!code-xaml[EventOvwSupport#GroupButton](~/samples/snippets/csharp/VS_Snippets_Wpf/EventOvwSupport/CSharp/default.xaml#groupbutton)]  
   
  이 요소 트리는 다음과 같은 항목을 생성합니다.  
   
- ![예, 아니요 및 취소 단추](../../../../docs/framework/wpf/advanced/media/routedevent-ovw-1.gif "RoutedEvent_ovw_1")  
+ ![예, 아니요 및 취소 단추](./media/routedevent-ovw-1.gif "RoutedEvent_ovw_1")  
   
  이 간단한 요소 트리에서 소스를 <xref:System.Windows.Controls.Primitives.ButtonBase.Click> 이벤트는 합니다 <xref:System.Windows.Controls.Button> 요소 및 중 <xref:System.Windows.Controls.Button> 했 이벤트를 처리할 수 있는 첫 번째 요소입니다. 처리기에 연결 하는 경우는 <xref:System.Windows.Controls.Button> 이벤트로 이벤트가 버블링 됩니다 다음 이벤트에 작업을 수행 합니다 <xref:System.Windows.Controls.Button> 인 요소 트리에서 부모는 <xref:System.Windows.Controls.StackPanel>합니다. 잠재적으로 이벤트 거품을 <xref:System.Windows.Controls.Border>, 그 다음 이상 (표시 되지 않음) 요소 트리의 페이지 루트까지 합니다.  
   
@@ -60,8 +60,8 @@ ms.locfileid: "54535818"
   
  **단일 처리기 연결 지점:** [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)], 여러 요소에서 발생할 수 있는 이벤트를 처리 하려면 동일한 처리기를 여러 번 연결 해야 합니다. 라우트된 이벤트를 사용하면 이전 예제에서 살펴본 것처럼 해당 처리기를 한 번만 연결하고 처리기 논리를 사용하여 필요한 경우 이벤트가 발생한 위치를 확인할 수 있습니다. 예를 들어 이것은 이전에 표시된 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]에 대한 처리기일 수 있습니다.  
   
- [!code-csharp[EventOvwSupport#GroupButtonCodeBehind](../../../../samples/snippets/csharp/VS_Snippets_Wpf/EventOvwSupport/CSharp/default.xaml.cs#groupbuttoncodebehind)]
- [!code-vb[EventOvwSupport#GroupButtonCodeBehind](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/EventOvwSupport/visualbasic/default.xaml.vb#groupbuttoncodebehind)]  
+ [!code-csharp[EventOvwSupport#GroupButtonCodeBehind](~/samples/snippets/csharp/VS_Snippets_Wpf/EventOvwSupport/CSharp/default.xaml.cs#groupbuttoncodebehind)]
+ [!code-vb[EventOvwSupport#GroupButtonCodeBehind](~/samples/snippets/visualbasic/VS_Snippets_Wpf/EventOvwSupport/visualbasic/default.xaml.vb#groupbuttoncodebehind)]  
   
  **클래스 처리:** 라우트된 이벤트 클래스에 의해 정의 된 정적 처리기를 허용 합니다. 이 클래스 처리기는 연결된 인스턴스 처리기보다 먼저 이벤트를 처리할 수 있습니다.  
   
@@ -72,15 +72,15 @@ ms.locfileid: "54535818"
   
  다음 예제에서는 사용자 지정에 대 한 선언을 보여 줍니다 `Tap` 라우트된 이벤트에 노출 되 고 등록을 포함 하 여는 <xref:System.Windows.RoutedEvent> 식별자 필드와 `add` 및 `remove` 에 대 한 구현을 `Tap` [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] 이벤트입니다.  
   
- [!code-csharp[RoutedEventCustom#AddRemoveHandler](../../../../samples/snippets/csharp/VS_Snippets_Wpf/RoutedEventCustom/CSharp/SDKSampleLibrary/class1.cs#addremovehandler)]
- [!code-vb[RoutedEventCustom#AddRemoveHandler](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/RoutedEventCustom/VB/SDKSampleLibrary/Class1.vb#addremovehandler)]  
+ [!code-csharp[RoutedEventCustom#AddRemoveHandler](~/samples/snippets/csharp/VS_Snippets_Wpf/RoutedEventCustom/CSharp/SDKSampleLibrary/class1.cs#addremovehandler)]
+ [!code-vb[RoutedEventCustom#AddRemoveHandler](~/samples/snippets/visualbasic/VS_Snippets_Wpf/RoutedEventCustom/VB/SDKSampleLibrary/Class1.vb#addremovehandler)]  
   
 ### <a name="routed-event-handlers-and-xaml"></a>라우트된 이벤트 처리기 및 XAML  
  [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]을 사용하여 이벤트 처리기를 추가하려면 이벤트 이름을 이벤트 수신기인 요소의 특성으로 선언합니다. 특성 값은 구현된 처리기 메서드의 이름으로, 코드 숨김 파일의 partial 클래스에 있어야 합니다.  
   
- [!code-xaml[EventOvwSupport#SimplestSyntax](../../../../samples/snippets/csharp/VS_Snippets_Wpf/EventOvwSupport/CSharp/default.xaml#simplestsyntax)]  
+ [!code-xaml[EventOvwSupport#SimplestSyntax](~/samples/snippets/csharp/VS_Snippets_Wpf/EventOvwSupport/CSharp/default.xaml#simplestsyntax)]  
   
- 표준 [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] 이벤트 처리기를 추가하는 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 구문은 라우트된 이벤트 처리기를 추가하는 것과 같습니다. 실제로는 라우트된 이벤트 구현을 기반으로 하는 [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] 이벤트 래퍼에 처리기를 추가하기 때문입니다. [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]의 이벤트 처리기 추가에 대한 자세한 내용은 [XAML 개요(WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)를 참조하세요.  
+ 표준 [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] 이벤트 처리기를 추가하는 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 구문은 라우트된 이벤트 처리기를 추가하는 것과 같습니다. 실제로는 라우트된 이벤트 구현을 기반으로 하는 [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] 이벤트 래퍼에 처리기를 추가하기 때문입니다. [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]의 이벤트 처리기 추가에 대한 자세한 내용은 [XAML 개요(WPF)](xaml-overview-wpf.md)를 참조하세요.  
   
 <a name="routing_strategies"></a>   
 ## <a name="routing-strategies"></a>라우트 전략  
@@ -114,30 +114,30 @@ ms.locfileid: "54535818"
 ## <a name="adding-and-implementing-an-event-handler-for-a-routed-event"></a>라우트된 이벤트에 대한 이벤트 처리기 추가 및 구현  
  [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]에서 이벤트 처리기를 추가하려면 이벤트 이름을 요소에 특성으로 추가하고 특성 값을 다음 예제와 같이 적절한 대리자를 구현하는 이벤트 처리기의 이름으로 설정하면 됩니다.  
   
- [!code-xaml[EventOvwSupport#SimplestSyntax](../../../../samples/snippets/csharp/VS_Snippets_Wpf/EventOvwSupport/CSharp/default.xaml#simplestsyntax)]  
+ [!code-xaml[EventOvwSupport#SimplestSyntax](~/samples/snippets/csharp/VS_Snippets_Wpf/EventOvwSupport/CSharp/default.xaml#simplestsyntax)]  
   
  `b1SetColor` 처리 하는 코드를 포함 하는 구현된 된 처리기의 이름은 <xref:System.Windows.Controls.Primitives.ButtonBase.Click> 이벤트입니다. `b1SetColor` 동일한 시그니처가 있어야 합니다.는 <xref:System.Windows.RoutedEventHandler> 대리자를 이벤트 처리기 대리자에 대 한는 <xref:System.Windows.Controls.Primitives.ButtonBase.Click> 이벤트입니다. 모든 라우트된 이벤트 처리기 대리자의 첫 번째 매개 변수는 이벤트 처리기가 추가되는 요소를 지정하고 두 번째 매개 변수는 이벤트에 대한 데이터를 지정합니다.  
   
-[!code-csharp[EventOvwSupport#SimpleHandlerA](../../../../samples/snippets/csharp/VS_Snippets_Wpf/EventOvwSupport/CSharp/default.xaml.cs#simplehandlera)]
-[!code-vb[EventOvwSupport#SimpleHandlerA](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/EventOvwSupport/visualbasic/default.xaml.vb#simplehandlera)]  
+[!code-csharp[EventOvwSupport#SimpleHandlerA](~/samples/snippets/csharp/VS_Snippets_Wpf/EventOvwSupport/CSharp/default.xaml.cs#simplehandlera)]
+[!code-vb[EventOvwSupport#SimpleHandlerA](~/samples/snippets/visualbasic/VS_Snippets_Wpf/EventOvwSupport/visualbasic/default.xaml.vb#simplehandlera)]  
   
  <xref:System.Windows.RoutedEventHandler> 기본 라우트된 이벤트 처리기 대리자입니다. 특정 컨트롤 또는 시나리오에 특수화된 라우트된 이벤트의 경우 라우트된 이벤트 처리기에 사용할 대리자는 더 특수화되어 특수화된 이벤트 데이터를 전송할 수 있습니다. 예를 들어 일반 입력 시나리오에서는 처리 하는 <xref:System.Windows.UIElement.DragEnter> 라우트된 이벤트입니다. 처리기를 구현 해야 합니다 <xref:System.Windows.DragEventHandler> 위임 합니다. 가장 구체적인 대리자를 사용 하 여 처리할 수 있습니다 합니다 <xref:System.Windows.DragEventArgs> 처리기 및 읽기를 <xref:System.Windows.DragEventArgs.Data%2A> 끌기 작업의 클립보드 페이로드가 포함 된 속성입니다.  
   
- [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]을 사용하여 이벤트 처리기를 요소에 추가하는 방법의 전체 예제를 보려면 [라우트된 이벤트 처리](../../../../docs/framework/wpf/advanced/how-to-handle-a-routed-event.md)를 참조하세요.  
+ [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]을 사용하여 이벤트 처리기를 요소에 추가하는 방법의 전체 예제를 보려면 [라우트된 이벤트 처리](how-to-handle-a-routed-event.md)를 참조하세요.  
   
  코드로 만들어진 애플리케이션에 라우트된 이벤트에 대한 처리기를 추가하는 방법은 간단합니다. 도우미 메서드를 통해 라우트된 이벤트 처리기를 추가할 수 항상 <xref:System.Windows.UIElement.AddHandler%2A> (기존 백업에 대 한 호출 하는 동일한 메서드 인 `add`.) 하지만 기존 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 라우트된 이벤트에는 일반적으로 언어별 이벤트 구문(도우미 메서드보다 더 직관적인 구문)을 통해 라우트된 이벤트에 대한 처리기를 추가할 수 있는 `add` 및 `remove` 논리의 지원 구현이 포함됩니다. 도우미 메서드 사용 예제는 다음과 같습니다.  
   
- [!code-csharp[EventOvwSupport#AddHandlerCode](../../../../samples/snippets/csharp/VS_Snippets_Wpf/EventOvwSupport/CSharp/default.xaml.cs#addhandlercode)]
- [!code-vb[EventOvwSupport#AddHandlerCode](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/EventOvwSupport/visualbasic/default.xaml.vb#addhandlercode)]  
+ [!code-csharp[EventOvwSupport#AddHandlerCode](~/samples/snippets/csharp/VS_Snippets_Wpf/EventOvwSupport/CSharp/default.xaml.cs#addhandlercode)]
+ [!code-vb[EventOvwSupport#AddHandlerCode](~/samples/snippets/visualbasic/VS_Snippets_Wpf/EventOvwSupport/visualbasic/default.xaml.vb#addhandlercode)]  
   
  에서는 다음 예제는 C# 연산자 구문 (Visual Basic 연산자 구문은 약간 다름을 역참조 처리 때문에).  
   
- [!code-csharp[EventOvwSupport#AddHandlerPlusEquals](../../../../samples/snippets/csharp/VS_Snippets_Wpf/EventOvwSupport/CSharp/default.xaml.cs#addhandlerplusequals)]
- [!code-vb[EventOvwSupport#AddHandlerPlusEquals](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/EventOvwSupport/visualbasic/default.xaml.vb#addhandlerplusequals)]  
+ [!code-csharp[EventOvwSupport#AddHandlerPlusEquals](~/samples/snippets/csharp/VS_Snippets_Wpf/EventOvwSupport/CSharp/default.xaml.cs#addhandlerplusequals)]
+ [!code-vb[EventOvwSupport#AddHandlerPlusEquals](~/samples/snippets/visualbasic/VS_Snippets_Wpf/EventOvwSupport/visualbasic/default.xaml.vb#addhandlerplusequals)]  
   
- 이벤트 처리기를 코드에 추가하는 방법의 예제를 보려면 [코드를 사용하여 이벤트 처리기 추가](../../../../docs/framework/wpf/advanced/how-to-add-an-event-handler-using-code.md)를 참조하세요.  
+ 이벤트 처리기를 코드에 추가하는 방법의 예제를 보려면 [코드를 사용하여 이벤트 처리기 추가](how-to-add-an-event-handler-using-code.md)를 참조하세요.  
   
- Visual Basic을 사용 하는 경우 사용할 수도 있습니다는 `Handles` 키워드를 처리기 선언의 일부로 처리기를 추가 합니다. 자세한 내용은 [Visual Basic 및 WPF 이벤트 처리](../../../../docs/framework/wpf/advanced/visual-basic-and-wpf-event-handling.md)를 참조하세요.  
+ Visual Basic을 사용 하는 경우 사용할 수도 있습니다는 `Handles` 키워드를 처리기 선언의 일부로 처리기를 추가 합니다. 자세한 내용은 [Visual Basic 및 WPF 이벤트 처리](visual-basic-and-wpf-event-handling.md)를 참조하세요.  
   
 <a name="concept_handled"></a>   
 ### <a name="the-concept-of-handled"></a>Handled 개념  
@@ -165,7 +165,7 @@ ms.locfileid: "54535818"
   
  앞에서 언급 한 라우트 동작을 통해이 개념적 설명은: 하기가 더 어렵습니다 (하지만 코드 또는 스타일에서는 가능) 경로 따라 있는 이전 처리기가 이미 를설정하는경우에호출되는라우트된이벤트에대한처리기를연결<xref:System.Windows.RoutedEventArgs.Handled%2A>하려면 `true`합니다.  
   
- 에 대 한 자세한 내용은 <xref:System.Windows.RoutedEventArgs.Handled%2A>, 클래스 처리의 라우트된 이벤트를 및로 라우트된 이벤트를 표시 하기 위해 적절 한 때에 대 한 권장 <xref:System.Windows.RoutedEventArgs.Handled%2A>를 참조 하세요 [표시 라우트된 이벤트를 처리 및 클래스 처리](../../../../docs/framework/wpf/advanced/marking-routed-events-as-handled-and-class-handling.md)합니다.  
+ 에 대 한 자세한 내용은 <xref:System.Windows.RoutedEventArgs.Handled%2A>, 클래스 처리의 라우트된 이벤트를 및로 라우트된 이벤트를 표시 하기 위해 적절 한 때에 대 한 권장 <xref:System.Windows.RoutedEventArgs.Handled%2A>를 참조 하세요 [표시 라우트된 이벤트를 처리 및 클래스 처리](marking-routed-events-as-handled-and-class-handling.md)합니다.  
   
  애플리케이션에서는 일반적으로 버블링 라우트된 이벤트를 발생시킨 개체에서 이 이벤트를 처리하며 이벤트의 라우트 특징은 전혀 관련이 없습니다. 하지만 요소 트리에서 더 위쪽에 있는 요소에 같은 라우트된 이벤트에 대한 연결된 처리기가 있는 경우 예기치 않은 부작용을 방지하기 위해 이벤트 데이터에서는 라우트된 이벤트를 처리됨으로 표시하는 것이 좋습니다.  
   
@@ -173,7 +173,7 @@ ms.locfileid: "54535818"
 ## <a name="class-handlers"></a>클래스 처리기  
  에서 파생 된 클래스를 정의 하는 경우 <xref:System.Windows.DependencyObject>를 정의 하 고 클래스의 선언 되거나 상속 된 이벤트 멤버인 라우트된 이벤트에 대 한 클래스 처리기를 연결할 수도 있습니다. 라우트된 이벤트가 경로의 요소 인스턴스에 도달할 때마다 클래스 처리기는 해당 클래스의 인스턴스에 연결된 인스턴스 수신기 처리기보다 먼저 호출됩니다.  
   
- 일부 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 컨트롤에는 특정 라우트된 이벤트에 대한 고유 클래스 처리 기능이 있습니다. 이 기능을 사용하면 표면적으로는 라우트된 이벤트가 발생하지 않은 것처럼 보이지만 실제로는 클래스가 처리되는 것이고 특정 기술을 사용하면 라우트된 이벤트가 인스턴스 처리기에서 처리될 수 있습니다. 또한 많은 기본 클래스 및 컨트롤이 클래스 처리 동작을 재정의하는 데 사용될 수 있는 가상 메서드를 표시합니다. 원하지 않는 클래스 처리를 해결하는 방법 및 사용자 지정 클래스에서 자체 클래스 처리를 정의하는 방법에 대한 자세한 내용은 [라우트된 이벤트를 처리된 것으로 표시 및 클래스 처리](../../../../docs/framework/wpf/advanced/marking-routed-events-as-handled-and-class-handling.md)를 참조하세요.  
+ 일부 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 컨트롤에는 특정 라우트된 이벤트에 대한 고유 클래스 처리 기능이 있습니다. 이 기능을 사용하면 표면적으로는 라우트된 이벤트가 발생하지 않은 것처럼 보이지만 실제로는 클래스가 처리되는 것이고 특정 기술을 사용하면 라우트된 이벤트가 인스턴스 처리기에서 처리될 수 있습니다. 또한 많은 기본 클래스 및 컨트롤이 클래스 처리 동작을 재정의하는 데 사용될 수 있는 가상 메서드를 표시합니다. 원하지 않는 클래스 처리를 해결하는 방법 및 사용자 지정 클래스에서 자체 클래스 처리를 정의하는 방법에 대한 자세한 내용은 [라우트된 이벤트를 처리된 것으로 표시 및 클래스 처리](marking-routed-events-as-handled-and-class-handling.md)를 참조하세요.  
   
 <a name="attached_events"></a>   
 ## <a name="attached-events-in-wpf"></a>WPF의 연결된 이벤트  
@@ -181,15 +181,15 @@ ms.locfileid: "54535818"
   
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 입력 시스템은 연결된 이벤트를 광범위하게 사용합니다. 하지만 이러한 연결된 이벤트는 거의 모두 기본 요소를 통해 전달됩니다. 그 다음에 입력 이벤트는 기본 요소 클래스의 멤버인 해당하는 연결되지 않은 라우트된 이벤트로 표시됩니다. 예를 들어, 기본 연결 된 이벤트 <xref:System.Windows.Input.Mouse.MouseDown?displayProperty=nameWithType> 보다 쉽게 처리할 수 <xref:System.Windows.UIElement> 사용 하 여 <xref:System.Windows.UIElement.MouseDown> 에 <xref:System.Windows.UIElement> 하거나 연결 된 이벤트 구문을 사용 하 여 처리 하는 대신에 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 또는 코드입니다.  
   
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]의 연결된 이벤트에 대한 자세한 내용은 [연결된 이벤트 개요](../../../../docs/framework/wpf/advanced/attached-events-overview.md)를 참조하세요.  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]의 연결된 이벤트에 대한 자세한 내용은 [연결된 이벤트 개요](attached-events-overview.md)를 참조하세요.  
   
 <a name="Qualifying_Event_Names_in_XAML_for_Anticipated_Routing"></a>   
 ## <a name="qualified-event-names-in-xaml"></a>XAML의 정규화된 이벤트 이름  
  *typename*.*eventname* 연결된 이벤트 구문과 비슷하지만 엄격히 말하면 연결된 이벤트 사용이 아닌 또 다른 구문 사용은 자식 요소에서 발생한 라우트된 이벤트에 대한 처리기를 연결하는 경우입니다. 공통 부모에 관련 라우트된 이벤트가 멤버로 포함되지 않더라도 처리기를 공통 부모에 연결하면 이벤트 라우트를 이용할 수 있습니다. 이 예제를 다시 살펴보세요.  
   
- [!code-xaml[EventOvwSupport#GroupButton](../../../../samples/snippets/csharp/VS_Snippets_Wpf/EventOvwSupport/CSharp/default.xaml#groupbutton)]  
+ [!code-xaml[EventOvwSupport#GroupButton](~/samples/snippets/csharp/VS_Snippets_Wpf/EventOvwSupport/CSharp/default.xaml#groupbutton)]  
   
- 여기서는 처리기가 추가 되는 부모 요소 수신기는 <xref:System.Windows.Controls.StackPanel>합니다. 하지만 선언 된 하 여 발생 하는 라우트된 이벤트에 대 한 처리기를 추가 합니다 <xref:System.Windows.Controls.Button> 클래스 (<xref:System.Windows.Controls.Primitives.ButtonBase> 를 사용할 수 있지만 실제로 <xref:System.Windows.Controls.Button> 상속을 통해). <xref:System.Windows.Controls.Button> "소유" 이벤트 하지만 하나에 연결할 모든 라우트된 이벤트에 대 한 라우트된 이벤트 시스템 허용 처리기 <xref:System.Windows.UIElement> 또는 <xref:System.Windows.ContentElement> 인스턴스 수신기에 대 한 수신기를 연결할 수 있었습니다 그렇지 않은 경우에 [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] 이벤트입니다. 일반적으로 이러한 정규화된 이벤트 특성 이름에 대한 기본 xmlns 네임스페이스는 기본 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] xmlns 네임스페이스이지만 사용자 지정 라우트된 이벤트에 대한 접두사가 추가된 네임스페이스를 지정할 수도 있습니다. xmlns에 대한 자세한 내용은 [WPF XAML을 위한 XAML 네임스페이스 및 네임스페이스 매핑](../../../../docs/framework/wpf/advanced/xaml-namespaces-and-namespace-mapping-for-wpf-xaml.md)을 참조하세요.  
+ 여기서는 처리기가 추가 되는 부모 요소 수신기는 <xref:System.Windows.Controls.StackPanel>합니다. 하지만 선언 된 하 여 발생 하는 라우트된 이벤트에 대 한 처리기를 추가 합니다 <xref:System.Windows.Controls.Button> 클래스 (<xref:System.Windows.Controls.Primitives.ButtonBase> 를 사용할 수 있지만 실제로 <xref:System.Windows.Controls.Button> 상속을 통해). <xref:System.Windows.Controls.Button> "소유" 이벤트 하지만 하나에 연결할 모든 라우트된 이벤트에 대 한 라우트된 이벤트 시스템 허용 처리기 <xref:System.Windows.UIElement> 또는 <xref:System.Windows.ContentElement> 인스턴스 수신기에 대 한 수신기를 연결할 수 있었습니다 그렇지 않은 경우에 [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] 이벤트입니다. 일반적으로 이러한 정규화된 이벤트 특성 이름에 대한 기본 xmlns 네임스페이스는 기본 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] xmlns 네임스페이스이지만 사용자 지정 라우트된 이벤트에 대한 접두사가 추가된 네임스페이스를 지정할 수도 있습니다. xmlns에 대한 자세한 내용은 [WPF XAML을 위한 XAML 네임스페이스 및 네임스페이스 매핑](xaml-namespaces-and-namespace-mapping-for-wpf-xaml.md)을 참조하세요.  
   
 <a name="how_event_processing_works"></a>   
 ## <a name="wpf-input-events"></a>WPF 입력 이벤트  
@@ -199,7 +199,7 @@ ms.locfileid: "54535818"
   
  입력 이벤트 처리가 적용되는 방식에 대한 그림으로 다음 입력 이벤트 예제를 살펴보겠습니다. 다음 트리 그림에서 `leaf element #2`는 `PreviewMouseDown` 및 `MouseDown` 이벤트의 소스입니다.  
   
- ![이벤트 라우팅 다이어그램](../../../../docs/framework/wpf/advanced/media/wcsdkcoreinputevents.png "wcsdkCoreInputEvents")  
+ ![이벤트 라우팅 다이어그램](./media/wcsdkcoreinputevents.png "wcsdkCoreInputEvents")  
 입력 이벤트 버블링 및 터널링  
   
  이벤트 처리 순서는 다음과 같습니다.  
@@ -222,35 +222,35 @@ ms.locfileid: "54535818"
   
  일반적으로 입력된 이벤트가 표시 되 면 <xref:System.Windows.RoutedEventArgs.Handled%2A>, 추가 처리기가 호출 되지 않습니다. 보통은 입력 이벤트의 의미에 대한 애플리케이션별 논리 처리를 해결하는 처리기가 호출된 후 바로 입력 이벤트를 처리됨으로 표시해야 합니다.  
   
- 에 대 한이 일반적인 문의 예외 <xref:System.Windows.RoutedEventArgs.Handled%2A> 의도적으로 무시 하도록 등록 된 이벤트 처리기를 입력 하는 것이 상태가 <xref:System.Windows.RoutedEventArgs.Handled%2A> 상태 이벤트 데이터의 호출 되는 경우 경로 중 하나입니다. 자세한 내용은 [미리 보기 이벤트](../../../../docs/framework/wpf/advanced/preview-events.md) 또는 [라우트된 이벤트를 처리된 것으로 표시 및 클래스 처리](../../../../docs/framework/wpf/advanced/marking-routed-events-as-handled-and-class-handling.md)를 참조하세요.  
+ 에 대 한이 일반적인 문의 예외 <xref:System.Windows.RoutedEventArgs.Handled%2A> 의도적으로 무시 하도록 등록 된 이벤트 처리기를 입력 하는 것이 상태가 <xref:System.Windows.RoutedEventArgs.Handled%2A> 상태 이벤트 데이터의 호출 되는 경우 경로 중 하나입니다. 자세한 내용은 [미리 보기 이벤트](preview-events.md) 또는 [라우트된 이벤트를 처리된 것으로 표시 및 클래스 처리](marking-routed-events-as-handled-and-class-handling.md)를 참조하세요.  
   
  터널링 이벤트와 버블링 이벤트 간에 공유된 이벤트 데이터 모델과 터널링 이벤트 다음에 버블링 이벤트가 발생하는 순차적 발생은 일반적으로 모든 라우트된 이벤트에 적용되는 개념이 아닙니다. 이 동작은 특별히 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 입력 디바이스가 입력 이벤트 쌍을 발생시키고 연결하도록 선택하는 방법을 통해 구현됩니다. 자체 입력 이벤트를 구현하는 것은 고급 시나리오이지만 자체 입력 이벤트에 대해 해당 모델을 따르도록 선택할 수도 있습니다.  
   
- 특정 클래스는 대개 특정 사용자 기반 입력 이벤트가 해당 컨트롤 내에서 가지는 의미를 다시 정의하고 새 이벤트를 발생시키기 위해 특정 입력 이벤트를 클래스에서 처리하도록 선택합니다. 자세한 내용은 [라우트된 이벤트를 처리된 것으로 표시 및 클래스 처리](../../../../docs/framework/wpf/advanced/marking-routed-events-as-handled-and-class-handling.md)를 참조하세요.  
+ 특정 클래스는 대개 특정 사용자 기반 입력 이벤트가 해당 컨트롤 내에서 가지는 의미를 다시 정의하고 새 이벤트를 발생시키기 위해 특정 입력 이벤트를 클래스에서 처리하도록 선택합니다. 자세한 내용은 [라우트된 이벤트를 처리된 것으로 표시 및 클래스 처리](marking-routed-events-as-handled-and-class-handling.md)를 참조하세요.  
   
- 입력 및 입력과 이벤트가 일반적인 애플리케이션 시나리오에서 상호 작용하는 방식에 대한 자세한 내용은 [입력 개요](../../../../docs/framework/wpf/advanced/input-overview.md)를 참조하세요.  
+ 입력 및 입력과 이벤트가 일반적인 애플리케이션 시나리오에서 상호 작용하는 방식에 대한 자세한 내용은 [입력 개요](input-overview.md)를 참조하세요.  
   
 <a name="events_styles"></a>   
 ## <a name="eventsetters-and-eventtriggers"></a>EventSetter 및 EventTrigger  
  스타일에서 미리 선언 된 일부 포함할 수 있습니다 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 이벤트를 사용 하 여 태그 구문 처리는 <xref:System.Windows.EventSetter>합니다. 스타일이 적용되면 참조된 처리기가 스타일 지정된 인스턴스에 추가됩니다. 선언할 수는 <xref:System.Windows.EventSetter> 라우트된 이벤트에 대해서만 합니다. 다음은 예제입니다. 여기서 참조되는 `b1SetColor` 메서드는 코드 숨김 파일에 있습니다.  
   
- [!code-xaml[EventOvwSupport#XAML2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/EventOvwSupport/CSharp/page2.xaml#xaml2)]  
+ [!code-xaml[EventOvwSupport#XAML2](~/samples/snippets/csharp/VS_Snippets_Wpf/EventOvwSupport/CSharp/page2.xaml#xaml2)]  
   
  여기서 얻는 장점은 스타일을 다양 한 응용 프로그램에서 모든 단추에 적용할 수 있는 기타 정보를 포함할 가능성이 나누고는 <xref:System.Windows.EventSetter> 의 일부가 될 해당 스타일 태그 수준 에서도 코드 재사용을 승격 합니다. 또한는 <xref:System.Windows.EventSetter> 처리기에서 한 단계 더 일반적인 응용 프로그램 및 페이지 태그에 대 한 메서드 이름을 추출 합니다.  
   
- 라우트된 이벤트와 애니메이션 기능을 결합 하는 다른 특수 구문이 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 되는 <xref:System.Windows.EventTrigger>합니다. 와 마찬가지로 <xref:System.Windows.EventSetter>에 대 한 라우트된 이벤트에만 사용할 수 있습니다는 <xref:System.Windows.EventTrigger>합니다. 일반적으로 <xref:System.Windows.EventTrigger> 스타일의 일부로 선언 되어 있지만 <xref:System.Windows.EventTrigger> 의 일부로 페이지 수준 요소에서 선언할 수도 있습니다는 <xref:System.Windows.FrameworkElement.Triggers%2A> 컬렉션 또는 <xref:System.Windows.Controls.ControlTemplate>. <xref:System.Windows.EventTrigger> 지정할 수는 <xref:System.Windows.Media.Animation.Storyboard> 실행 라우트된 이벤트에 도달할 때마다 해당 경로에서 요소를 선언 하는 <xref:System.Windows.EventTrigger> 해당 이벤트에 대 한 합니다. 이점은 <xref:System.Windows.EventTrigger> 만 이벤트를 처리 및 시작 하는 기존 스토리 보드는는 <xref:System.Windows.EventTrigger> 보다 효과적으로 제어할 스토리 보드 및 해당 런타임 동작을 제공 합니다. 자세한 내용은 [Storyboard를 시작한 후 이벤트 트리거를 사용하여 제어](../../../../docs/framework/wpf/graphics-multimedia/how-to-use-event-triggers-to-control-a-storyboard-after-it-starts.md)를 참조하세요.  
+ 라우트된 이벤트와 애니메이션 기능을 결합 하는 다른 특수 구문이 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 되는 <xref:System.Windows.EventTrigger>합니다. 와 마찬가지로 <xref:System.Windows.EventSetter>에 대 한 라우트된 이벤트에만 사용할 수 있습니다는 <xref:System.Windows.EventTrigger>합니다. 일반적으로 <xref:System.Windows.EventTrigger> 스타일의 일부로 선언 되어 있지만 <xref:System.Windows.EventTrigger> 의 일부로 페이지 수준 요소에서 선언할 수도 있습니다는 <xref:System.Windows.FrameworkElement.Triggers%2A> 컬렉션 또는 <xref:System.Windows.Controls.ControlTemplate>. <xref:System.Windows.EventTrigger> 지정할 수는 <xref:System.Windows.Media.Animation.Storyboard> 실행 라우트된 이벤트에 도달할 때마다 해당 경로에서 요소를 선언 하는 <xref:System.Windows.EventTrigger> 해당 이벤트에 대 한 합니다. 이점은 <xref:System.Windows.EventTrigger> 만 이벤트를 처리 및 시작 하는 기존 스토리 보드는는 <xref:System.Windows.EventTrigger> 보다 효과적으로 제어할 스토리 보드 및 해당 런타임 동작을 제공 합니다. 자세한 내용은 [Storyboard를 시작한 후 이벤트 트리거를 사용하여 제어](../graphics-multimedia/how-to-use-event-triggers-to-control-a-storyboard-after-it-starts.md)를 참조하세요.  
   
 <a name="more_about"></a>   
 ## <a name="more-about-routed-events"></a>라우트된 이벤트에 대한 추가 정보  
- 이 항목에서는 기본 개념을 설명하고 다양한 기본 요소 및 컨트롤에 이미 있는 라우트된 이벤트에 응답하는 방법 및 시점에 대한 지침을 제공하는 관점에서 주로 라우트된 이벤트를 살펴봅니다. 하지만 특수화된 이벤트 데이터 클래스 및 대리자와 같은 모든 필요한 지원과 함께 사용자 지정 클래스에서 자체 라우트된 이벤트를 만들 수 있습니다. 라우트된 이벤트 소유자는 클래스일 수 있지만 라우트된 이벤트에 의해 발생 하 고 처리 해야 <xref:System.Windows.UIElement> 또는 <xref:System.Windows.ContentElement> 유용 하 게 파생 된 클래스입니다. 사용자 지정 이벤트에 대한 자세한 내용은 [사용자 지정 라우트된 이벤트 만들기](../../../../docs/framework/wpf/advanced/how-to-create-a-custom-routed-event.md)를 참조하세요.  
+ 이 항목에서는 기본 개념을 설명하고 다양한 기본 요소 및 컨트롤에 이미 있는 라우트된 이벤트에 응답하는 방법 및 시점에 대한 지침을 제공하는 관점에서 주로 라우트된 이벤트를 살펴봅니다. 하지만 특수화된 이벤트 데이터 클래스 및 대리자와 같은 모든 필요한 지원과 함께 사용자 지정 클래스에서 자체 라우트된 이벤트를 만들 수 있습니다. 라우트된 이벤트 소유자는 클래스일 수 있지만 라우트된 이벤트에 의해 발생 하 고 처리 해야 <xref:System.Windows.UIElement> 또는 <xref:System.Windows.ContentElement> 유용 하 게 파생 된 클래스입니다. 사용자 지정 이벤트에 대한 자세한 내용은 [사용자 지정 라우트된 이벤트 만들기](how-to-create-a-custom-routed-event.md)를 참조하세요.  
   
 ## <a name="see-also"></a>참고자료
 - <xref:System.Windows.EventManager>
 - <xref:System.Windows.RoutedEvent>
 - <xref:System.Windows.RoutedEventArgs>
-- [라우트된 이벤트를 처리된 것으로 표시 및 클래스 처리](../../../../docs/framework/wpf/advanced/marking-routed-events-as-handled-and-class-handling.md)
-- [입력 개요](../../../../docs/framework/wpf/advanced/input-overview.md)
-- [명령 개요](../../../../docs/framework/wpf/advanced/commanding-overview.md)
-- [사용자 지정 종속성 속성](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md)
-- [WPF의 트리](../../../../docs/framework/wpf/advanced/trees-in-wpf.md)
-- [약한 이벤트 패턴](../../../../docs/framework/wpf/advanced/weak-event-patterns.md)
+- [라우트된 이벤트를 처리된 것으로 표시 및 클래스 처리](marking-routed-events-as-handled-and-class-handling.md)
+- [입력 개요](input-overview.md)
+- [명령 개요](commanding-overview.md)
+- [사용자 지정 종속성 속성](custom-dependency-properties.md)
+- [WPF의 트리](trees-in-wpf.md)
+- [약한 이벤트 패턴](weak-event-patterns.md)

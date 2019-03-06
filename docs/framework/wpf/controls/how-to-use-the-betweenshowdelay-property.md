@@ -5,12 +5,12 @@ helpviewer_keywords:
 - ToolTip control [WPF], BetweenShowDelay time property
 - BetweenShowDelay time property [WPF]
 ms.assetid: 984ea76d-f2a2-4326-a02e-f97ec3d036d6
-ms.openlocfilehash: ee9c532f8b2eeddb2c798df53e1864e8f543638b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e0653fbcb8eb052b12be7344ffe239431b67a951
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54564060"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57370976"
 ---
 # <a name="how-to-use-the-betweenshowdelay-property"></a>방법: BetweenShowDelay 속성 사용
 사용 하는 방법을 보여 주는이 예제는 <xref:System.Windows.Controls.ToolTipService.BetweenShowDelay%2A> 도구 설명 신속 하 게 표시 되도록 속성을 시간-지연 시간을 거의 또는 전혀-사용자 이동 하면 포인터가 하나의 도구 설명에서 간 직접.  
@@ -24,11 +24,11 @@ ms.locfileid: "54564060"
   
 -   도구 설명은 첫 번째 타원은 시간 간격의 시작 부분에 표시 되지 않습니다.  
   
- [!code-xaml[ToolTipService#ToolTip](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ToolTipService/CSharp/Pane1.xaml#tooltip)]  
-[!code-xaml[ToolTipService#NoToolTip](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ToolTipService/CSharp/Pane1.xaml#notooltip)]  
+ [!code-xaml[ToolTipService#ToolTip](~/samples/snippets/csharp/VS_Snippets_Wpf/ToolTipService/CSharp/Pane1.xaml#tooltip)]  
+[!code-xaml[ToolTipService#NoToolTip](~/samples/snippets/csharp/VS_Snippets_Wpf/ToolTipService/CSharp/Pane1.xaml#notooltip)]  
   
 ## <a name="see-also"></a>참고자료
 - <xref:System.Windows.Controls.ToolTip>
 - <xref:System.Windows.Controls.ToolTipService>
-- [방법 항목](../../../../docs/framework/wpf/controls/tooltip-how-to-topics.md)
-- [도구 설명 개요](../../../../docs/framework/wpf/controls/tooltip-overview.md)
+- [방법 항목](tooltip-how-to-topics.md)
+- [도구 설명 개요](tooltip-overview.md)

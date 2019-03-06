@@ -9,12 +9,12 @@ helpviewer_keywords:
 - typography [WPF], OpenType font technology
 - OpenType font technology [WPF]
 ms.assetid: 4061a9d1-fe8b-4921-9e17-18ec7d2e3ea2
-ms.openlocfilehash: 5751efe0c6621425b8b54c642d51127118c0b6bf
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b96ad3266ce32a26af573a3a35392518055df37f
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54529788"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57376951"
 ---
 # <a name="opentype-font-features"></a>OpenType 글꼴 기능
 이 항목에서는 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]에 있는 [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] 글꼴 기술의 주요 기능 일부에 대한 개요를 제공합니다.  
@@ -38,7 +38,7 @@ ms.locfileid: "54529788"
 -   고급 입력 체계 컨트롤을 위한 폭넓은 지원  
   
 > [!NOTE]
->  Windows SDK에는 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 애플리케이션과 함께 사용할 수 있는 샘플 [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] 글꼴 집합이 포함되어 있습니다. 이 글꼴에서는 이 항목의 나머지 부분에서 보여 주는 대부분의 기능이 제공됩니다. 자세한 내용은 [샘플 OpenType 글꼴 팩](../../../../docs/framework/wpf/advanced/sample-opentype-font-pack.md)을 참조하세요.  
+>  Windows SDK에는 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 애플리케이션과 함께 사용할 수 있는 샘플 [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] 글꼴 집합이 포함되어 있습니다. 이 글꼴에서는 이 항목의 나머지 부분에서 보여 주는 대부분의 기능이 제공됩니다. 자세한 내용은 [샘플 OpenType 글꼴 팩](sample-opentype-font-pack.md)을 참조하세요.  
   
  [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] 글꼴 서식에 대한 자세한 내용은 [OpenType 사양](https://go.microsoft.com/fwlink/?LinkId=96731)을 참조하세요.  
   
@@ -64,31 +64,31 @@ ms.locfileid: "54529788"
   
  다음 텍스트는 Palatino Linotype 글꼴의 위 첨자를 표시합니다.  
   
- ![OpenType 위 첨자를 사용 하 여 텍스트](../../../../docs/framework/wpf/advanced/media/opentypefont14.gif "opentypefont14")  
+ ![OpenType 위 첨자를 사용 하 여 텍스트](./media/opentypefont14.gif "opentypefont14")  
 OpenType 위 첨자를 사용하는 텍스트  
   
  다음 태그 예제에서는 속성을 사용 하 여 Palatino Linotype 글꼴의 위 첨자를 정의 하는 방법을 보여 줍니다는 <xref:System.Windows.Documents.Typography> 개체입니다.  
   
- [!code-xaml[OpenTypeFontSamples#12](../../../../samples/snippets/csharp/VS_Snippets_Wpf/OpenTypeFontSamples/CS/PageOne.xaml#12)]  
+ [!code-xaml[OpenTypeFontSamples#12](~/samples/snippets/csharp/VS_Snippets_Wpf/OpenTypeFontSamples/CS/PageOne.xaml#12)]  
   
  다음 텍스트는 Palatino Linotype 글꼴의 아래 첨자를 표시합니다.  
   
- ![OpenType 아래 첨자를 사용 하 여 텍스트](../../../../docs/framework/wpf/advanced/media/opentypefont15.gif "opentypefont15")  
+ ![OpenType 아래 첨자를 사용 하 여 텍스트](./media/opentypefont15.gif "opentypefont15")  
 OpenType 아래 첨자를 사용하는 텍스트  
   
  다음 태그 예제에서는 속성을 사용 하 여 Palatino Linotype 글꼴의 아래 첨자를 정의 하는 방법을 보여 줍니다는 <xref:System.Windows.Documents.Typography> 개체입니다.  
   
- [!code-xaml[OpenTypeFontSamples#13](../../../../samples/snippets/csharp/VS_Snippets_Wpf/OpenTypeFontSamples/CS/PageOne.xaml#13)]  
+ [!code-xaml[OpenTypeFontSamples#13](~/samples/snippets/csharp/VS_Snippets_Wpf/OpenTypeFontSamples/CS/PageOne.xaml#13)]  
   
 ### <a name="decorative-uses-of-superscripts-and-subscripts"></a>위 첨자 및 아래 첨자의 장식 사용  
  위 첨자와 아래 첨자를 사용하여 대/소문자 혼용 텍스트의 장식 효과를 만들 수도 있습니다. 다음 텍스트는 Palatino Linotype 글꼴의 위 첨자 및 아래 첨자 텍스트를 표시합니다. 대문자는 영향을 받지 않습니다.  
   
- ![OpenType 위 첨자 및 아래 첨자를 사용 하 여 텍스트](../../../../docs/framework/wpf/advanced/media/opentypefont16.gif "opentypefont16")  
+ ![OpenType 위 첨자 및 아래 첨자를 사용 하 여 텍스트](./media/opentypefont16.gif "opentypefont16")  
 OpenType 위 첨자 및 아래 첨자를 사용하는 텍스트  
   
  다음 태그 예제에서는 위 첨자 및 아래 첨자의 속성을 사용 하 여 글꼴을 정의 하는 방법을 보여 줍니다는 <xref:System.Windows.Documents.Typography> 개체입니다.  
   
- [!code-xaml[OpenTypeFontSamples#14](../../../../samples/snippets/csharp/VS_Snippets_Wpf/OpenTypeFontSamples/CS/PageOne.xaml#14)]  
+ [!code-xaml[OpenTypeFontSamples#14](~/samples/snippets/csharp/VS_Snippets_Wpf/OpenTypeFontSamples/CS/PageOne.xaml#14)]  
   
 <a name="capitals"></a>   
 ## <a name="capitals"></a>대문자  
@@ -96,32 +96,32 @@ OpenType 위 첨자 및 아래 첨자를 사용하는 텍스트
   
  다음 텍스트는 “SmallCaps” 및 “AllSmallCaps”로 스타일이 지정된 문자 앞에 Pescadero 글꼴의 표준 대문자를 표시합니다. 이 경우 세 단어 모두 동일한 글꼴 크기가 사용됩니다.  
   
- ![OpenType 대문자를 사용 하 여 텍스트](../../../../docs/framework/wpf/advanced/media/opentypefont11.gif "opentypefont11")  
+ ![OpenType 대문자를 사용 하 여 텍스트](./media/opentypefont11.gif "opentypefont11")  
 OpenType 대문자를 사용하는 텍스트  
   
  다음 태그 예제에서는 속성을 사용 하 여 Pescadero 글꼴의 대문자를 정의 하는 방법을 보여 줍니다는 <xref:System.Windows.Documents.Typography> 개체입니다. “SmallCaps” 형식을 사용하는 경우 선행 대문자는 무시됩니다.  
   
- [!code-xaml[OpenTypeFontSamples#9](../../../../samples/snippets/csharp/VS_Snippets_Wpf/OpenTypeFontSamples/CS/PageOne.xaml#9)]  
+ [!code-xaml[OpenTypeFontSamples#9](~/samples/snippets/csharp/VS_Snippets_Wpf/OpenTypeFontSamples/CS/PageOne.xaml#9)]  
   
 ### <a name="titling-capitals"></a>제목 대문자  
  제목 대문자는 무게와 비율이 더 가볍고 일반 대문자보다 세련된 느낌을 주도록 디자인되었습니다. 제목 대문자는 일반적으로 큰 글꼴 크기의 머리글로 사용됩니다. 다음 텍스트는 Pescadero 글꼴의 일반 대문자 및 제목 대문자를 표시합니다. 두 번째 줄에 있는 텍스트의 획(stem) 너비가 더 좁은 것을 확인할 수 있습니다.  
   
- ![OpenType 제목 대문자를 사용 하 여 텍스트](../../../../docs/framework/wpf/advanced/media/opentypefont20.gif "OpenTypeFont20")  
+ ![OpenType 제목 대문자를 사용 하 여 텍스트](./media/opentypefont20.gif "OpenTypeFont20")  
 OpenType 제목 대문자를 사용하는 텍스트  
   
  다음 태그 예제에서는 속성을 사용 하 여 Pescadero 글꼴의 제목 대문자를 정의 하는 방법을 보여 줍니다는 <xref:System.Windows.Documents.Typography> 개체입니다.  
   
- [!code-xaml[OpenTypeFontSamples#OpenTypeFontSnippet17](../../../../samples/snippets/csharp/VS_Snippets_Wpf/OpenTypeFontSamples/CS/PageOne.xaml#opentypefontsnippet17)]  
+ [!code-xaml[OpenTypeFontSamples#OpenTypeFontSnippet17](~/samples/snippets/csharp/VS_Snippets_Wpf/OpenTypeFontSamples/CS/PageOne.xaml#opentypefontsnippet17)]  
   
 ### <a name="capital-spacing"></a>대문자 간격  
  대문자 간격은 텍스트에서 모두 대문자를 사용할 때 더 넓은 간격을 제공할 수 있도록 하는 기능입니다. 대문자는 대개 소문자와 함께 사용하도록 디자인되었습니다. 대문자와 소문자 사이에서는 적절해 보이는 간격이 모두 대문자를 사용할 때는 너무 좁게 보일 수 있습니다. 다음 텍스트는 Pescadero 글꼴의 일반 간격 및 대문자 간격을 표시합니다.  
   
- ![OpenType 대문자 간격을 사용 하 여 텍스트](../../../../docs/framework/wpf/advanced/media/opentypefont21.gif "OpenTypeFont21")  
+ ![OpenType 대문자 간격을 사용 하 여 텍스트](./media/opentypefont21.gif "OpenTypeFont21")  
 OpenType 대문자 간격을 사용하는 텍스트  
   
  다음 태그 예제에서는 속성을 사용 하 여 Pescadero 글꼴의 대문자 간격을 정의 하는 방법을 보여 줍니다는 <xref:System.Windows.Documents.Typography> 개체입니다.  
   
- [!code-xaml[OpenTypeFontSamples#OpenTypeFontSnippet18](../../../../samples/snippets/csharp/VS_Snippets_Wpf/OpenTypeFontSamples/CS/PageOne.xaml#opentypefontsnippet18)]  
+ [!code-xaml[OpenTypeFontSamples#OpenTypeFontSnippet18](~/samples/snippets/csharp/VS_Snippets_Wpf/OpenTypeFontSamples/CS/PageOne.xaml#opentypefontsnippet18)]  
   
 <a name="ligatures"></a>   
 ## <a name="ligatures"></a>합자  
@@ -137,106 +137,106 @@ OpenType 대문자 간격을 사용하는 텍스트
   
  다음 텍스트는 Pericles 글꼴에 대한 표준 합자 문자 모양을 표시합니다.  
   
- ![OpenType 표준 합자를 사용 하 여 텍스트](../../../../docs/framework/wpf/advanced/media/opentypefont04.gif "opentypefont04")  
+ ![OpenType 표준 합자를 사용 하 여 텍스트](./media/opentypefont04.gif "opentypefont04")  
 OpenType 표준 합자를 사용하는 텍스트  
   
  다음 태그 예제에서는 속성을 사용 하 여 Pericles 글꼴에 대 한 표준 합자 문자 모양을 정의 하는 방법을 보여 줍니다는 <xref:System.Windows.Documents.Typography> 개체입니다.  
   
- [!code-xaml[OpenTypeFontSamples#4](../../../../samples/snippets/csharp/VS_Snippets_Wpf/OpenTypeFontSamples/CS/PageOne.xaml#4)]  
+ [!code-xaml[OpenTypeFontSamples#4](~/samples/snippets/csharp/VS_Snippets_Wpf/OpenTypeFontSamples/CS/PageOne.xaml#4)]  
   
  다음 텍스트는 Pericles 글꼴의 임의 합자 문자 모양을 표시합니다.  
   
- ![OpenType 임의 합자를 사용 하 여 텍스트](../../../../docs/framework/wpf/advanced/media/opentypefont05.gif "opentypefont05")  
+ ![OpenType 임의 합자를 사용 하 여 텍스트](./media/opentypefont05.gif "opentypefont05")  
 OpenType 임의 합자를 사용하는 텍스트  
   
  다음 태그 예제에서는 속성을 사용 하 여 Pericles 글꼴에 대 한 임의 합자 문자 모양을 정의 하는 방법을 보여 줍니다는 <xref:System.Windows.Documents.Typography> 개체입니다.  
   
- [!code-xaml[OpenTypeFontSamples#5](../../../../samples/snippets/csharp/VS_Snippets_Wpf/OpenTypeFontSamples/CS/PageOne.xaml#5)]  
+ [!code-xaml[OpenTypeFontSamples#5](~/samples/snippets/csharp/VS_Snippets_Wpf/OpenTypeFontSamples/CS/PageOne.xaml#5)]  
   
  기본적으로 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]의 [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] 글꼴은 표준 합자를 사용합니다. 예를 들어 Palatino Linotype 글꼴을 사용하면 표준 합자 “fi”, “ff”및 “fl”이 결합된 문자 모양으로 나타납니다. 각 표준 합자의 문자 쌍이 서로 붙어 있음을 확인할 수 있습니다.  
   
- ![OpenType 표준 합자를 사용 하 여 텍스트](../../../../docs/framework/wpf/advanced/media/opentypefont06.gif "opentypefont06")  
+ ![OpenType 표준 합자를 사용 하 여 텍스트](./media/opentypefont06.gif "opentypefont06")  
 OpenType 표준 합자를 사용하는 텍스트  
   
  그러나 표준 합자 기능을 사용하지 않도록 설정하여 “ff”와 같이 표준 합자가 결합된 문자 모양이 아닌 두 개의 별도 문자 모양으로 표시되도록 할 수 있습니다.  
   
- ![비활성화 된 OpenType 표준 합자를 사용 하 여 텍스트](../../../../docs/framework/wpf/advanced/media/opentypefont07.gif "opentypefont07")  
+ ![비활성화 된 OpenType 표준 합자를 사용 하 여 텍스트](./media/opentypefont07.gif "opentypefont07")  
 비활성화된 OpenType 표준 합자를 사용하는 텍스트  
   
  다음 태그 예제에서는 속성을 사용 하 여 Palatino Linotype 글꼴에 대 한 표준 합자 문자 모양을 사용 하지 않도록 설정 하는 방법을 보여 줍니다는 <xref:System.Windows.Documents.Typography> 개체입니다.  
   
- [!code-xaml[OpenTypeFontSamples#6](../../../../samples/snippets/csharp/VS_Snippets_Wpf/OpenTypeFontSamples/CS/PageOne.xaml#6)]  
+ [!code-xaml[OpenTypeFontSamples#6](~/samples/snippets/csharp/VS_Snippets_Wpf/OpenTypeFontSamples/CS/PageOne.xaml#6)]  
   
 <a name="swashes"></a>   
 ## <a name="swashes"></a>선단 장식  
  선단 장식은 종종 붓글씨와 관련된 정교한 장식을 사용하는 장식용 문자 모양입니다. 다음 텍스트는 Pescadero 글꼴의 표준 및 선단 장식 문자 모양을 표시합니다.  
   
- ![OpenType 표준 및 선단 장식 문자 모양을 사용 하 여 텍스트](../../../../docs/framework/wpf/advanced/media/opentypefont08.gif "opentypefont08")  
+ ![OpenType 표준 및 선단 장식 문자 모양을 사용 하 여 텍스트](./media/opentypefont08.gif "opentypefont08")  
 OpenType 표준 및 선단 장식 문자 모양을 사용하는 텍스트  
   
  선단 장식은 종종 이벤트 발표와 같은 짧은 문장에서 장식 요소로 사용됩니다. 다음 텍스트는 선단 장식을 사용하여 이벤트 이름의 대문자를 강조합니다.  
   
- ![OpenType 선단 장식을 사용 하 여 텍스트](../../../../docs/framework/wpf/advanced/media/opentypefont09.gif "opentypefont09")  
+ ![OpenType 선단 장식을 사용 하 여 텍스트](./media/opentypefont09.gif "opentypefont09")  
 OpenType 선단 장식을 사용하는 텍스트  
   
  다음 태그 예제에서는 속성을 사용 하는 글꼴에 대 한 선단 장식을 정의 하는 방법을 보여 줍니다는 <xref:System.Windows.Documents.Typography> 개체입니다.  
   
- [!code-xaml[OpenTypeFontSamples#7](../../../../samples/snippets/csharp/VS_Snippets_Wpf/OpenTypeFontSamples/CS/PageOne.xaml#7)]  
+ [!code-xaml[OpenTypeFontSamples#7](~/samples/snippets/csharp/VS_Snippets_Wpf/OpenTypeFontSamples/CS/PageOne.xaml#7)]  
   
 ### <a name="contextual-swashes"></a>컨텍스트 선단 장식  
  특정 조합의 선단 장식 문자 모양은 인접 문자에 내림 영자가 겹치는 것과 같이 보기 좋지 않은 모양이 될 수 있습니다. 컨텍스트 선단 장식을 사용하면 더 좋은 모양을 만드는 대체 선단 장식 문자 모양을 사용할 수 있습니다. 다음 텍스트는 동일한 단어에 컨텍스트 선단 장식이 적용되기 전후의 모습을 보여 줍니다.  
   
- ![OpenType 컨텍스트 선단 장식을 사용 하 여 텍스트](../../../../docs/framework/wpf/advanced/media/opentypefont19.gif "OpenTypeFont19")  
+ ![OpenType 컨텍스트 선단 장식을 사용 하 여 텍스트](./media/opentypefont19.gif "OpenTypeFont19")  
 OpenType 컨텍스트 선단 장식을 사용하는 텍스트  
   
  다음 태그 예제에서는 속성을 사용 하 여 Pescadero 글꼴의 컨텍스트 선단 장식을 정의 하는 방법을 보여 줍니다는 <xref:System.Windows.Documents.Typography> 개체입니다.  
   
- [!code-xaml[OpenTypeFontSamples#OpenTypeFontSnippet16](../../../../samples/snippets/csharp/VS_Snippets_Wpf/OpenTypeFontSamples/CS/PageOne.xaml#opentypefontsnippet16)]  
+ [!code-xaml[OpenTypeFontSamples#OpenTypeFontSnippet16](~/samples/snippets/csharp/VS_Snippets_Wpf/OpenTypeFontSamples/CS/PageOne.xaml#opentypefontsnippet16)]  
   
 <a name="alternates"></a>   
 ## <a name="alternates"></a>대체 문자  
  대체 문자는 표준 문자 모양으로 대체될 수 있는 문자 모양입니다. 다음 예제에서 사용된 Pericles 글꼴과 같은 [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] 글꼴에는 텍스트의 다른 모양을 만드는 데 사용할 수 있는 대체 문자 모양이 포함될 수 있습니다. 다음 텍스트는 Pericles 글꼴의 표준 문자 모양을 표시합니다.  
   
- ![OpenType 표준 문자 모양을 사용 하 여 텍스트](../../../../docs/framework/wpf/advanced/media/opentypefont01.gif "opentypefont01")  
+ ![OpenType 표준 문자 모양을 사용 하 여 텍스트](./media/opentypefont01.gif "opentypefont01")  
 OpenType 표준 문자 모양을 사용하는 텍스트  
   
  Pericles [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] 글꼴에는 표준 문자 모양 집합에 스타일 대체 문자를 제공하는 추가 문자 모양이 포함되어 있습니다. 다음 텍스트는 스타일 대체 문자 모양을 표시합니다.  
   
- ![OpenType 스타일 대체 문자 모양을 사용 하 여 텍스트](../../../../docs/framework/wpf/advanced/media/opentypefont02.gif "opentypefont02")  
+ ![OpenType 스타일 대체 문자 모양을 사용 하 여 텍스트](./media/opentypefont02.gif "opentypefont02")  
 OpenType 스타일 대체 문자 모양을 사용하는 텍스트  
   
  다음 태그 예제에서는 속성을 사용 하 여 Pericles 글꼴에 대 한 스타일 대체 문자 모양을 정의 하는 방법을 보여 줍니다는 <xref:System.Windows.Documents.Typography> 개체입니다.  
   
- [!code-xaml[OpenTypeFontSamples#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/OpenTypeFontSamples/CS/PageOne.xaml#2)]  
+ [!code-xaml[OpenTypeFontSamples#2](~/samples/snippets/csharp/VS_Snippets_Wpf/OpenTypeFontSamples/CS/PageOne.xaml#2)]  
   
  다음 텍스트는 Pericles 글꼴에 대한 여러 가지 다른 스타일 대체 문자 모양을 표시합니다.  
   
- ![OpenType 스타일 대체 문자 모양을 사용 하 여 텍스트](../../../../docs/framework/wpf/advanced/media/opentypefont03.gif "opentypefont03")  
+ ![OpenType 스타일 대체 문자 모양을 사용 하 여 텍스트](./media/opentypefont03.gif "opentypefont03")  
 OpenType 스타일 대체 문자 모양을 사용하는 텍스트  
   
  다음 태그 예제에서는 이러한 다른 스타일 대체 문자 모양을 정의하는 방법을 보여 줍니다.  
   
- [!code-xaml[OpenTypeFontSamples#3](../../../../samples/snippets/csharp/VS_Snippets_Wpf/OpenTypeFontSamples/CS/PageOne.xaml#3)]  
+ [!code-xaml[OpenTypeFontSamples#3](~/samples/snippets/csharp/VS_Snippets_Wpf/OpenTypeFontSamples/CS/PageOne.xaml#3)]  
   
 ### <a name="random-contextual-alternates"></a>임의 컨텍스트 대체 문자  
  임의 컨텍스트 대체 문자는 단일 문자에 대해 여러 개의 대체 문자 모양을 제공합니다. 이 기능은 스크립트 유형의 글꼴로 구현될 때 임의로 선택한 외관상 약간 다른 문자 집합을 사용하여 필기를 시뮬레이트할 수 있습니다. 다음 텍스트는 Lindsey 글꼴에 대한 임의 컨텍스트 대체 문자를 사용합니다. 문자 “a”의 모양이 약간 다른 것을 확인할 수 있습니다.  
   
- ![OpenType 임의 컨텍스트 대체 문자를 사용 하 여 텍스트](../../../../docs/framework/wpf/advanced/media/opentypefont23.gif "OpenTypeFont23")  
+ ![OpenType 임의 컨텍스트 대체 문자를 사용 하 여 텍스트](./media/opentypefont23.gif "OpenTypeFont23")  
 OpenType 임의 컨텍스트 대체 항목을 사용한 텍스트  
   
  다음 태그 예제에서는 속성을 사용 하 여 Lindsey 글꼴에 대 한 임의 컨텍스트 대체 문자를 정의 하는 방법을 보여 줍니다는 <xref:System.Windows.Documents.Typography> 개체입니다.  
   
- [!code-xaml[OpenTypeFontSamples#OpenTypeFontSnippet20](../../../../samples/snippets/csharp/VS_Snippets_Wpf/OpenTypeFontSamples/CS/Window1.xaml#opentypefontsnippet20)]  
+ [!code-xaml[OpenTypeFontSamples#OpenTypeFontSnippet20](~/samples/snippets/csharp/VS_Snippets_Wpf/OpenTypeFontSamples/CS/Window1.xaml#opentypefontsnippet20)]  
   
 ### <a name="historical-forms"></a>기록 형식  
  기록 형식은 과거에는 일반적이었던 입력 체계 규칙입니다. 다음 텍스트는 Palatino Linotype 글꼴에 대한 기록 형식 문자 모양을 사용하여 “Boston, Massachusetts” 구문을 표시합니다.  
   
- ![OpenType 기록 폼을 사용 하 여 텍스트](../../../../docs/framework/wpf/advanced/media/opentypefont10.gif "opentypefont10")  
+ ![OpenType 기록 폼을 사용 하 여 텍스트](./media/opentypefont10.gif "opentypefont10")  
 OpenType 기록 폼을 사용하는 텍스트  
   
  다음 태그 예제에서는 속성을 사용 하 여 Palatino Linotype 글꼴에 대 한 기록 폼을 정의 하는 방법을 보여 줍니다는 <xref:System.Windows.Documents.Typography> 개체입니다.  
   
- [!code-xaml[OpenTypeFontSamples#8](../../../../samples/snippets/csharp/VS_Snippets_Wpf/OpenTypeFontSamples/CS/PageOne.xaml#8)]  
+ [!code-xaml[OpenTypeFontSamples#8](~/samples/snippets/csharp/VS_Snippets_Wpf/OpenTypeFontSamples/CS/PageOne.xaml#8)]  
   
 <a name="numerical_styles"></a>   
 ## <a name="numerical-styles"></a>숫자 스타일  
@@ -247,51 +247,51 @@ OpenType 기록 폼을 사용하는 텍스트
   
  다음 텍스트는 Palatino Linotype 글꼴의 분수 스타일을 표시합니다.  
   
- ![OpenType를 사용 하 여 텍스트 슬래시 및 상하 형 분수](../../../../docs/framework/wpf/advanced/media/opentypefont12.gif "opentypefont12")  
+ ![OpenType를 사용 하 여 텍스트 슬래시 및 상하 형 분수](./media/opentypefont12.gif "opentypefont12")  
 OpenType 슬래시 및 상하형 분수를 사용하는 텍스트  
   
  다음 태그 예제에서는 속성을 사용 하 여 Palatino Linotype 글꼴의 분수 스타일을 정의 하는 방법을 보여 줍니다는 <xref:System.Windows.Documents.Typography> 개체입니다.  
   
- [!code-xaml[OpenTypeFontSamples#10](../../../../samples/snippets/csharp/VS_Snippets_Wpf/OpenTypeFontSamples/CS/PageOne.xaml#10)]  
+ [!code-xaml[OpenTypeFontSamples#10](~/samples/snippets/csharp/VS_Snippets_Wpf/OpenTypeFontSamples/CS/PageOne.xaml#10)]  
   
 ### <a name="old-style-numerals"></a>이전 스타일 숫자  
  [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] 글꼴은 이전 스타일 숫자 형식을 지원합니다. 이 형식은 더 이상 표준이 아닌 스타일의 숫자를 표시할 때 유용합니다. 다음 텍스트는 Palatino Linotype 글꼴의 표준 및 이전 스타일 숫자 형식으로 된 18세기 날짜를 표시합니다.  
   
- ![OpenType 이전 스타일 숫자를 사용 하 여 텍스트](../../../../docs/framework/wpf/advanced/media/opentypefont24.gif "OpenTypeFont24")  
+ ![OpenType 이전 스타일 숫자를 사용 하 여 텍스트](./media/opentypefont24.gif "OpenTypeFont24")  
 OpenType 이전 스타일 숫자를 사용하는 텍스트  
   
  다음 텍스트는 Palatino Linotype 글꼴의 표준 숫자 뒤에 이전 스타일 숫자를 표시합니다.  
   
- ![OpenType 이전 스타일 숫자 집합을 사용 하 여 텍스트](../../../../docs/framework/wpf/advanced/media/opentypefont13.gif "opentypefont13")  
+ ![OpenType 이전 스타일 숫자 집합을 사용 하 여 텍스트](./media/opentypefont13.gif "opentypefont13")  
 OpenType의 이전 스타일 숫자 집합을 사용하는 텍스트  
   
  다음 태그 예제에서는 속성을 사용 하 여 Palatino Linotype 글꼴에 대 한 이전 스타일 숫자를 정의 하는 방법을 보여 줍니다는 <xref:System.Windows.Documents.Typography> 개체입니다.  
   
- [!code-xaml[OpenTypeFontSamples#11](../../../../samples/snippets/csharp/VS_Snippets_Wpf/OpenTypeFontSamples/CS/PageOne.xaml#11)]  
+ [!code-xaml[OpenTypeFontSamples#11](~/samples/snippets/csharp/VS_Snippets_Wpf/OpenTypeFontSamples/CS/PageOne.xaml#11)]  
   
 ### <a name="proportional-and-tabular-figures"></a>가변 폭 및 테이블 형식 숫자  
  [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] 글꼴은 숫자를 사용할 때 너비 정렬을 제어하기 위해 가변 폭 및 테이블 형식 숫자 기능을 지원합니다. 가변 폭 숫자는 각 숫자의 너비를 다르게 처리합니다. 예를 들어 “1”은 “5”보다 너비가 좁습니다. 테이블 형식 숫자는 같은 너비의 숫자로 처리되어 세로로 정렬되므로 금융 형식 정보의 가독성이 높아집니다.  
   
  다음 텍스트는 Miramonte 글꼴을 사용하여 첫 번째 열에 두 개의 가변 폭 숫자를 표시합니다. 숫자 “5”와 “1” 사이의 너비 차이를 확인할 수 있습니다. 두 번째 열은 테이블 형식 숫자 기능을 사용하여 너비가 조정된 동일한 두 개의 숫자 값을 보여 줍니다.  
   
- ![OpenType 가변 폭 및 테이블 형식 숫자를 사용 하 여 텍스트](../../../../docs/framework/wpf/advanced/media/opentypefont22.gif "OpenTypeFont22")  
+ ![OpenType 가변 폭 및 테이블 형식 숫자를 사용 하 여 텍스트](./media/opentypefont22.gif "OpenTypeFont22")  
 OpenType 가변 폭 및 테이블 형식 숫자를 사용하는 텍스트  
   
  다음 태그 예제에서는 속성을 사용 하 여 Miramonte 글꼴의 가변 폭 및 테이블 형식 숫자를 정의 하는 방법을 보여 줍니다는 <xref:System.Windows.Documents.Typography> 개체입니다.  
   
- [!code-xaml[OpenTypeFontSamples#OpenTypeFontSnippet19](../../../../samples/snippets/csharp/VS_Snippets_Wpf/OpenTypeFontSamples/CS/Window1.xaml#opentypefontsnippet19)]  
+ [!code-xaml[OpenTypeFontSamples#OpenTypeFontSnippet19](~/samples/snippets/csharp/VS_Snippets_Wpf/OpenTypeFontSamples/CS/Window1.xaml#opentypefontsnippet19)]  
   
 ### <a name="slashed-zero"></a>슬래시 0  
  [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] 글꼴은 문자 “O”와 숫자 “0”의 차이를 강조하기 위해 슬래시 0 숫자 형식을 지원합니다. 슬래시 0 숫자는 금융 정보 및 비즈니스 정보의 식별자에 주로 사용됩니다.  
   
  다음 텍스트는 Miramonte 글꼴을 사용하는 샘플 주문 식별자를 나타냅니다. 첫 번째 줄에는 표준 숫자가 사용됩니다. 두 번째 줄에서는 대문자 “O” 문자와의 대비를 높이기 위해 슬래시 0 숫자가 사용되었습니다.  
   
- ![OpenType를 사용 하 여 텍스트의 슬래시 0 숫자](../../../../docs/framework/wpf/advanced/media/opentypefont17.gif "OpenTypeFont17")  
+ ![OpenType를 사용 하 여 텍스트의 슬래시 0 숫자](./media/opentypefont17.gif "OpenTypeFont17")  
 OpenType 슬래시 0 숫자를 사용하는 텍스트  
   
  다음 태그 예제에서는 정의 하는 방법을 보여 줍니다 슬래시 0 숫자의 속성을 사용 하 여 Miramonte 글꼴의 <xref:System.Windows.Documents.Typography> 개체입니다.  
   
- [!code-xaml[OpenTypeFontSamples#OpenTypeFontSnippet15](../../../../samples/snippets/csharp/VS_Snippets_Wpf/OpenTypeFontSamples/CS/PageOne.xaml#opentypefontsnippet15)]  
+ [!code-xaml[OpenTypeFontSamples#OpenTypeFontSnippet15](~/samples/snippets/csharp/VS_Snippets_Wpf/OpenTypeFontSamples/CS/PageOne.xaml#opentypefontsnippet15)]  
   
 <a name="typography_class"></a>   
 ## <a name="typography-class"></a>입력 체계 클래스  
@@ -299,17 +299,17 @@ OpenType 슬래시 0 숫자를 사용하는 텍스트
   
  다음 텍스트는 “SmallCaps” 및 “AllSmallCaps”로 스타일이 지정된 문자 앞에 Pescadero 글꼴의 표준 대문자를 표시합니다. 이 경우 세 단어 모두 동일한 글꼴 크기가 사용됩니다.  
   
- ![OpenType 대문자를 사용 하 여 텍스트](../../../../docs/framework/wpf/advanced/media/opentypefont11.gif "opentypefont11")  
+ ![OpenType 대문자를 사용 하 여 텍스트](./media/opentypefont11.gif "opentypefont11")  
 OpenType 대문자를 사용하는 텍스트  
   
  다음 태그 예제에서는 속성을 사용 하 여 Pescadero 글꼴의 대문자를 정의 하는 방법을 보여 줍니다는 <xref:System.Windows.Documents.Typography> 개체입니다. “SmallCaps” 형식을 사용하는 경우 선행 대문자는 무시됩니다.  
   
- [!code-xaml[OpenTypeFontSamples#9](../../../../samples/snippets/csharp/VS_Snippets_Wpf/OpenTypeFontSamples/CS/PageOne.xaml#9)]  
+ [!code-xaml[OpenTypeFontSamples#9](~/samples/snippets/csharp/VS_Snippets_Wpf/OpenTypeFontSamples/CS/PageOne.xaml#9)]  
   
  다음 코드 예제에서는 이전 태그 예제와 동일한 작업을 수행합니다.  
   
- [!code-csharp[TypographyCodeSnippets#TypographyCodeSnippet1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TypographyCodeSnippets/CSharp/Page1.xaml.cs#typographycodesnippet1)]
- [!code-vb[TypographyCodeSnippets#TypographyCodeSnippet1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/TypographyCodeSnippets/visualbasic/page1.xaml.vb#typographycodesnippet1)]  
+ [!code-csharp[TypographyCodeSnippets#TypographyCodeSnippet1](~/samples/snippets/csharp/VS_Snippets_Wpf/TypographyCodeSnippets/CSharp/Page1.xaml.cs#typographycodesnippet1)]
+ [!code-vb[TypographyCodeSnippets#TypographyCodeSnippet1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/TypographyCodeSnippets/visualbasic/page1.xaml.vb#typographycodesnippet1)]  
   
 ### <a name="typography-class-properties"></a>입력 체계 클래스 속성  
  다음 표에서 속성, 값 및의 기본 설정을 합니다 <xref:System.Windows.Documents.Typography> 개체입니다.  
@@ -363,6 +363,6 @@ OpenType 대문자를 사용하는 텍스트
 ## <a name="see-also"></a>참고자료
 - <xref:System.Windows.Documents.Typography>
 - [OpenType 사양](https://go.microsoft.com/fwlink/?LinkId=96731)
-- [WPF의 입력 체계](../../../../docs/framework/wpf/advanced/typography-in-wpf.md)
-- [샘플 OpenType 글꼴 팩](../../../../docs/framework/wpf/advanced/sample-opentype-font-pack.md)
-- [응용 프로그램과 함께 글꼴 패키징](../../../../docs/framework/wpf/advanced/packaging-fonts-with-applications.md)
+- [WPF의 입력 체계](typography-in-wpf.md)
+- [샘플 OpenType 글꼴 팩](sample-opentype-font-pack.md)
+- [응용 프로그램과 함께 글꼴 패키징](packaging-fonts-with-applications.md)

@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b127c48a300af01c8e7b32d422e42fbc4796420d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 23b72856015d028e50c1e3bfd4a12e0f220291c3
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54716080"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57354611"
 ---
 # <a name="blessiwbemservices-function"></a>BlessIWbemServices 함수
 사용자 자격 증명을 지정 된 액세스를 허용 하는지 여부를 나타냅니다 [IWbemServices](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemservices) 클래스입니다.   
@@ -43,20 +43,23 @@ HRESULT BlessIWbemServices (
 
 ## <a name="parameters"></a>매개 변수
 
-`pIWbemServices`  
+`pIWbemServices`\
 [in] 에 대 한 포인터를 [IWbemServices](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemservices) 개체는 권한이 필요 합니다.
 
-`strUser`  
+`strUser`\
 [in] 사용자 이름입니다.
 
-`strPassword`  
+`strPassword`\
 [in] 연결 된 암호 `strUser`합니다.
 
-`strAuthority` [in] 사용자의 도메인 이름입니다. 참조 된 [ConnectServerWmi](connectserverwmi.md) 자세한 함수입니다.
+`strAuthority`\
+[in] 사용자의 도메인 이름입니다. 참조 된 [ConnectServerWmi](connectserverwmi.md) 자세한 함수입니다.
 
-`impLevel` [in] 가장 수준입니다.
+`impLevel`\
+[in] 가장 수준입니다.
 
-`authnLevel` [in] 권한 부여 수준입니다.
+`authnLevel`\
+[in] 권한 부여 수준입니다.
 
 ## <a name="return-value"></a>반환 값
 
@@ -71,6 +74,7 @@ HRESULT BlessIWbemServices (
 | `S_OK` | 0 | 함수 호출이 성공 했습니다. | 
 
 ## <a name="requirements"></a>요구 사항  
+
  **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
   
  **헤더:** WMINet_Utils.idl  
@@ -78,4 +82,5 @@ HRESULT BlessIWbemServices (
  **.NET Framework 버전:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>참고자료
+
 - [WMI 및 성능 카운터 (관리 되지 않는 API 참조)](index.md)

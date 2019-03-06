@@ -2,12 +2,12 @@
 title: 컬렉션 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 5f7749f3-aaf2-4319-b63c-bfa72e1e2b7a
-ms.openlocfilehash: d81af633222961dfd9db49722f25c46a549413f9
-ms.sourcegitcommit: facefcacd7ae2e5645e463bc841df213c505ffd4
+ms.openlocfilehash: 7fdafce071a77f344eb58e17c4be9d4f204e118d
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "55739009"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57359356"
 ---
 # <a name="collections-visual-basic"></a>컬렉션 (Visual Basic)
 대부분의 애플리케이션의 경우 관련 개체의 그룹을 만들고 관리하려고 합니다. 개체를 그룹화하는 방법에는 개체 배열을 만들거나 개체 컬렉션을 만드는 두 가지가 있습니다.  
@@ -227,7 +227,7 @@ End Class
  <xref:System.Collections.Specialized> 네임스페이스는 문자열 전용 컬렉션 및 연결된 목록과 하이브리드 사전 등의 특수한 강력한 형식의 컬렉션 클래스를 제공합니다.  
 
 <a name="BKMK_VisualBasic"></a> 
-###  <a name="visual-basic-collection-class"></a>Visual Basic 컬렉션 클래스  
+### <a name="visual-basic-collection-class"></a>Visual Basic 컬렉션 클래스  
  Visual Basic <xref:Microsoft.VisualBasic.Collection> 클래스를 사용하여 숫자 인덱스 또는 `String` 키를 통해 컬렉션 항목에 액세스할 수 있습니다. 키를 지정하거나 지정하지 않고 컬렉션 개체에 항목을 추가할 수 있습니다. 키 없이 항목을 추가하는 경우 숫자 인덱스를 사용해서 액세스해야 합니다.  
   
  Visual Basic `Collection` 클래스는 해당 요소를 모두 `Object` 형식으로 저장하므로 모든 데이터 형식의 항목을 추가할 수 있습니다. 부적절한 데이터 형식이 추가되지 않도록 하는 보호 수단은 없습니다.  
@@ -337,7 +337,7 @@ End Sub
 ```  
   
 <a name="BKMK_LINQ"></a> 
-##  <a name="using-linq-to-access-a-collection"></a>LINQ를 사용하여 컬렉션에 액세스  
+## <a name="using-linq-to-access-a-collection"></a>LINQ를 사용하여 컬렉션에 액세스  
  LINQ(통합 언어 쿼리)를 사용하여 컬렉션에 액세스할 수 있습니다. LINQ 쿼리는 필터링, 정렬 및 그룹화 기능을 제공합니다. 자세한 내용은 [Getting Started with Visual Basic의 LINQ](../../../visual-basic/programming-guide/concepts/linq/getting-started-with-linq.md)합니다.  
   
  다음 예제에서는 제네릭 `List`에 대해 LINQ 쿼리를 실행합니다. LINQ 쿼리는 결과를 포함하는 다른 컬렉션을 반환합니다.  
@@ -539,7 +539,7 @@ End Class
 ```  
   
 <a name="BKMK_Iterators"></a>
-##  <a name="iterators"></a>반복기  
+## <a name="iterators"></a>반복기  
  *반복기*는 컬렉션에 대해 사용자 지정 반복을 수행하는 데 사용됩니다. 반복기는 메서드 또는 `get` 접근자일 수 있습니다. 반복기를 사용 하는 [Yield](../../../visual-basic/language-reference/statements/yield-statement.md) 문을 한 번에 하나씩 컬렉션의 각 요소를 반환 합니다.  
   
  사용 하 여 반복기를 호출 하는 [각각에 대 한 중... 다음](../../../visual-basic/language-reference/statements/for-each-next-statement.md) 문입니다. 각각의 `For Each` 루프의 반복이 반복기를 호출합니다. `Yield` 문이 반복기 메서드에 도달하면 식이 반환되고 코드에서 현재 위치는 유지됩니다. 다음에 반복기가 호출되면 해당 위치에서 실행이 다시 시작됩니다.  

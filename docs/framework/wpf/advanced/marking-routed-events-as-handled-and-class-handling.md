@@ -17,12 +17,12 @@ helpviewer_keywords:
 - events [WPF], suppressing
 - bubbling events [WPF]
 ms.assetid: 5e745508-4861-4b48-b5f6-5fc7ce5289d2
-ms.openlocfilehash: 6e34347212a3dc9d8a64b48360af70366bab2083
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 34bb8c1cde71f6280ae2924a82ddb2efb0efbdf2
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54595112"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57378841"
 ---
 # <a name="marking-routed-events-as-handled-and-class-handling"></a>라우트된 이벤트를 처리된 것으로 표시 및 클래스 처리
 라우트된 이벤트의 처리기는 이벤트 데이터 내에서 이벤트를 처리된 것으로 표시할 수 있습니다. 이벤트를 처리하면 경로가 효과적으로 단축됩니다. 클래스 처리는 라우트된 이벤트를 통해 지원되는 프로그래밍 개념입니다. 클래스 처리기는 클래스의 모든 인스턴스에서 가장 먼저 호출되는 처리기를 사용하여 라우트된 특정 이벤트를 클래스 수준에서 처리할 수 있습니다.  
@@ -31,7 +31,7 @@ ms.locfileid: "54595112"
   
 <a name="prerequisites"></a>   
 ## <a name="prerequisites"></a>전제 조건  
- 이 항목에서는 [라우트된 이벤트 개요](../../../../docs/framework/wpf/advanced/routed-events-overview.md)에 소개된 개념에 대해 설명합니다.  
+ 이 항목에서는 [라우트된 이벤트 개요](routed-events-overview.md)에 소개된 개념에 대해 설명합니다.  
   
 <a name="When_to_Mark_Events_as_Handled"></a>   
 ## <a name="when-to-mark-events-as-handled"></a>이벤트를 처리된 것으로 표시하는 시점  
@@ -47,7 +47,7 @@ ms.locfileid: "54595112"
   
  라우트된 터널링 및 버블링 이벤트 간의 연결은 특정 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 클래스가 고유하게 선언된 라우트된 이벤트를 발생시키는 방식으로 내부적으로 구현되며 이는 쌍을 이루는 라우트된 입력 이벤트의 경우에도 해당됩니다. 하지만 이 클래스 수준 구현이 존재하지 않으면 라우트된 터널링 이벤트와 라우트된 버블링 이벤트 간에 이름 지정 체계를 공유하는 연결이 없습니다. 이와 같은 구현이 없으면 이 두 이벤트는 완전히 분리된 두 개의 라우트된 이벤트이며 차례로 발생하거나 이벤트 데이터를 공유하지 않습니다.  
   
- 사용자 지정 클래스에서 라우트된 터널링/버블링 입력 이벤트를 구현하는 방법에 대한 자세한 내용은 [사용자 지정 라우트된 이벤트 만들기](../../../../docs/framework/wpf/advanced/how-to-create-a-custom-routed-event.md)를 참조하세요.  
+ 사용자 지정 클래스에서 라우트된 터널링/버블링 입력 이벤트를 구현하는 방법에 대한 자세한 내용은 [사용자 지정 라우트된 이벤트 만들기](how-to-create-a-custom-routed-event.md)를 참조하세요.  
   
 <a name="Class_Handlers_and_Instance_Handlers"></a>   
 ## <a name="class-handlers-and-instance-handlers"></a>클래스 처리기 및 인스턴스 처리기  
@@ -100,6 +100,6 @@ ms.locfileid: "54595112"
   
 ## <a name="see-also"></a>참고자료
 - <xref:System.Windows.EventManager>
-- [미리 보기 이벤트](../../../../docs/framework/wpf/advanced/preview-events.md)
-- [사용자 지정 라우트된 이벤트 만들기](../../../../docs/framework/wpf/advanced/how-to-create-a-custom-routed-event.md)
-- [라우트된 이벤트 개요](../../../../docs/framework/wpf/advanced/routed-events-overview.md)
+- [미리 보기 이벤트](preview-events.md)
+- [사용자 지정 라우트된 이벤트 만들기](how-to-create-a-custom-routed-event.md)
+- [라우트된 이벤트 개요](routed-events-overview.md)

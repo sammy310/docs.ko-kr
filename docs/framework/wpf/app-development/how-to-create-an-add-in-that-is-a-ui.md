@@ -9,12 +9,12 @@ helpviewer_keywords:
 - implementing UI add-ins [WPF]
 - pipeline segments [WPF], creating add-ins
 ms.assetid: 86375525-282b-4039-8352-8680051a10ea
-ms.openlocfilehash: f3e1ba5fe58802e42bfaf60a98767591ec13e7c4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f81812b766242311ac29c43de68906d65ae52b32
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54510809"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57366389"
 ---
 # <a name="how-to-create-an-add-in-that-is-a-ui"></a>방법: UI인 추가 기능 만들기
 이 예제에서는 WPF 독립 실행형 응용 프로그램에서 호스팅되는 Windows Presentation Foundation (WPF)는 추가 기능을 만드는 방법을 보여 줍니다.  
@@ -27,7 +27,7 @@ ms.locfileid: "54510809"
   
 -   .NET Framework 추가 기능에서 모델, 파이프라인, 추가 기능 및 호스트 개발을 포함 하 여 알고 있어야 합니다. 이러한 개념을 잘 모르는 경우 [추가 기능 및 확장성](/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100))합니다. 파이프라인, 추가 기능 및 호스트 응용 프로그램의 구현을 설명 하는 자습서를 참조 하세요. [연습: 확장 가능한 응용 프로그램을 만드는](/previous-versions/dotnet/netframework-4.0/bb788290(v%3dvs.100))합니다.  
   
--   WPF 확장명.NET Framework 추가 기능 모델을 알고 있어야 합니다. 참조 [WPF 추가 기능 개요](../../../../docs/framework/wpf/app-development/wpf-add-ins-overview.md)합니다.  
+-   WPF 확장명.NET Framework 추가 기능 모델을 알고 있어야 합니다. 참조 [WPF 추가 기능 개요](wpf-add-ins-overview.md)합니다.  
   
 ## <a name="example"></a>예제  
  WPF UI 인 추가 기능을 만드는 각 파이프라인 세그먼트에 추가 하 고 호스트 응용 프로그램에 대 한 특정 코드가 필요 합니다.  
@@ -37,13 +37,13 @@ ms.locfileid: "54510809"
 ## <a name="implementing-the-contract-pipeline-segment"></a>계약 파이프라인 세그먼트 구현  
  추가 기능에 대 한 계약 구현 해야 경우의 추가 기능 UI <xref:System.AddIn.Contract.INativeHandleContract>합니다. 예에서 `IWPFAddInContract` 구현 <xref:System.AddIn.Contract.INativeHandleContract>다음 코드에 표시 된 것 처럼 합니다.  
   
- [!code-csharp[SimpleAddInIsAUISample#ContractCode](../../../../samples/snippets/csharp/VS_Snippets_Wpf/SimpleAddInIsAUISample/CSharp/Contracts/IWPFAddInContract.cs#contractcode)]  
+ [!code-csharp[SimpleAddInIsAUISample#ContractCode](~/samples/snippets/csharp/VS_Snippets_Wpf/SimpleAddInIsAUISample/CSharp/Contracts/IWPFAddInContract.cs#contractcode)]  
   
 <a name="AddInViewPipeline"></a>   
 ## <a name="implementing-the-add-in-view-pipeline-segment"></a>추가 기능 뷰 파이프라인 세그먼트 구현  
  추가 기능에서 서브 클래스로 구현 되기 때문에 합니다 <xref:System.Windows.FrameworkElement> 형식에는 추가 기능 뷰 서브 클래스 해야 <xref:System.Windows.FrameworkElement>합니다. 다음 코드에서는로 구현 된 계약의 추가 기능 뷰는 `WPFAddInView` 클래스입니다.  
   
- [!code-csharp[SimpleAddInIsAUISample#AddInViewCode](../../../../samples/snippets/csharp/VS_Snippets_Wpf/SimpleAddInIsAUISample/CSharp/AddInViews/WPFAddInView.cs#addinviewcode)]  
+ [!code-csharp[SimpleAddInIsAUISample#AddInViewCode](~/samples/snippets/csharp/VS_Snippets_Wpf/SimpleAddInIsAUISample/CSharp/AddInViews/WPFAddInView.cs#addinviewcode)]  
   
  추가 기능 뷰에서 파생 되는 여기서 <xref:System.Windows.Controls.UserControl>합니다. 따라서 추가 UI에서 파생도 되어야 <xref:System.Windows.Controls.UserControl>합니다.  
   
@@ -51,12 +51,12 @@ ms.locfileid: "54510809"
 ## <a name="implementing-the-add-in-side-adapter-pipeline-segment"></a>추가 기능 쪽 어댑터 파이프라인 세그먼트 구현  
  계약은 <xref:System.AddIn.Contract.INativeHandleContract>, 추가 되는 <xref:System.Windows.FrameworkElement> (추가 기능 뷰 파이프라인 세그먼트로 지정 된 대로). 따라서 합니다 <xref:System.Windows.FrameworkElement> 으로 변환 되어야 합니다는 <xref:System.AddIn.Contract.INativeHandleContract> 격리 경계를 통과 하기 전에 합니다. 추가 기능 쪽 어댑터에서 호출 하 여이 작업은 수행 <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A>다음 코드에 표시 된 것 처럼 합니다.  
   
- [!code-csharp[SimpleAddInIsAUISample#AddInSideAdapterCode](../../../../samples/snippets/csharp/VS_Snippets_Wpf/SimpleAddInIsAUISample/CSharp/AddInSideAdapters/WPFAddIn_ViewToContractAddInSideAdapter.cs#addinsideadaptercode)]  
+ [!code-csharp[SimpleAddInIsAUISample#AddInSideAdapterCode](~/samples/snippets/csharp/VS_Snippets_Wpf/SimpleAddInIsAUISample/CSharp/AddInSideAdapters/WPFAddIn_ViewToContractAddInSideAdapter.cs#addinsideadaptercode)]  
   
- 모델 추가에서의 추가 기능 UI를 반환 합니다 (참조 [UI는 추가 기능에서 반환 하는 만들기](../../../../docs/framework/wpf/app-development/how-to-create-an-add-in-that-returns-a-ui.md)), 추가 기능 어댑터 변환 합니다 <xref:System.Windows.FrameworkElement> 에 <xref:System.AddIn.Contract.INativeHandleContract> 호출 하 여 <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A>. <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A> 도 호출 해야이 모델에서는 호출 하도록 코드를 작성 하는 메서드를 구현 해야 합니다. 재정의 하 여이 작업을 수행 <xref:System.AddIn.Pipeline.ContractBase.QueryContract%2A> 를 호출 하는 코드를 구현 <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A> 경우 호출 하는 코드 <xref:System.AddIn.Pipeline.ContractBase.QueryContract%2A> 예상 하는 <xref:System.AddIn.Contract.INativeHandleContract>합니다. 이 경우 호출자가 호스트 쪽 어댑터가 됩니다. 이에 대해서는 이후의 하위 단원에서 설명합니다.  
+ 모델 추가에서의 추가 기능 UI를 반환 합니다 (참조 [UI는 추가 기능에서 반환 하는 만들기](how-to-create-an-add-in-that-returns-a-ui.md)), 추가 기능 어댑터 변환 합니다 <xref:System.Windows.FrameworkElement> 에 <xref:System.AddIn.Contract.INativeHandleContract> 호출 하 여 <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A>. <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A> 도 호출 해야이 모델에서는 호출 하도록 코드를 작성 하는 메서드를 구현 해야 합니다. 재정의 하 여이 작업을 수행 <xref:System.AddIn.Pipeline.ContractBase.QueryContract%2A> 를 호출 하는 코드를 구현 <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A> 경우 호출 하는 코드 <xref:System.AddIn.Pipeline.ContractBase.QueryContract%2A> 예상 하는 <xref:System.AddIn.Contract.INativeHandleContract>합니다. 이 경우 호출자가 호스트 쪽 어댑터가 됩니다. 이에 대해서는 이후의 하위 단원에서 설명합니다.  
   
 > [!NOTE]
->  재정의 해야 <xref:System.AddIn.Pipeline.ContractBase.QueryContract%2A> 호스트 응용 프로그램 UI 간 탭 이동 사용 및 UI 추가 기능에서이 모델에 있습니다. 자세한 내용은 "WPF 추가 기능에 제한 사항"를 참조 하세요 [WPF 추가 기능 개요](../../../../docs/framework/wpf/app-development/wpf-add-ins-overview.md)합니다.  
+>  재정의 해야 <xref:System.AddIn.Pipeline.ContractBase.QueryContract%2A> 호스트 응용 프로그램 UI 간 탭 이동 사용 및 UI 추가 기능에서이 모델에 있습니다. 자세한 내용은 "WPF 추가 기능에 제한 사항"를 참조 하세요 [WPF 추가 기능 개요](wpf-add-ins-overview.md)합니다.  
   
  추가 기능 쪽 어댑터에서 파생 되는 인터페이스를 구현 하므로 <xref:System.AddIn.Contract.INativeHandleContract>를 구현 해야 <xref:System.AddIn.Contract.INativeHandleContract.GetHandle%2A>이지만이 무시 됩니다 때 <xref:System.AddIn.Pipeline.ContractBase.QueryContract%2A> 재정의 됩니다.  
   
@@ -106,4 +106,4 @@ ms.locfileid: "54510809"
   
 ## <a name="see-also"></a>참고자료
 - [추가 기능 및 확장성](/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100))
-- [WPF 추가 기능 개요](../../../../docs/framework/wpf/app-development/wpf-add-ins-overview.md)
+- [WPF 추가 기능 개요](wpf-add-ins-overview.md)

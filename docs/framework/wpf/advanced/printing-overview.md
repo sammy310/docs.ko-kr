@@ -15,12 +15,12 @@ helpviewer_keywords:
 - XPSDrv-based printers
 - GDI print path [WPF]
 ms.assetid: 0de8ac41-9aa6-413d-a121-7aa6f41539b1
-ms.openlocfilehash: 7e35fd1753f7136d7be1e2190b4bed5116e46aba
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
+ms.openlocfilehash: 9e7cc41602e7e86d328767db257e6dbaa7e8fed1
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56746155"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57370503"
 ---
 # <a name="printing-overview"></a>인쇄 개요
 Microsoft.NET Framework를 사용 하 여 Windows Presentation Foundation (WPF)를 사용 하 여 응용 프로그램 개발자가 새로운 풍부한 인쇄 및 인쇄 시스템 관리 [!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)]합니다. [!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)]에서는 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 응용 프로그램을 만드는 개발자와 비관리 코드를 사용하는 개발자도 이러한 인쇄 시스템 향상 기능을 일부 사용할 수 있습니다. 이 새로운 기능의 핵심은 새 [!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)] 파일 형식과 [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] 인쇄 경로입니다.  
@@ -31,7 +31,7 @@ Microsoft.NET Framework를 사용 하 여 Windows Presentation Foundation (WPF)�
 ## <a name="about-xps"></a>XPS 정보  
  [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)]는 전자 문서 형식, 스풀 파일 형식 및 페이지 설명 언어입니다. [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)], [!INCLUDE[TLA#tla_opc](../../../../includes/tlasharptla-opc-md.md)] 및 기타 산업 표준을 사용하여 플랫폼 간 문서를 만드는 공개 문서 형식입니다. [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)]는 디지털 문서를 생성, 공유, 인쇄, 표시 및 보관하는 프로세스를 간소화합니다. 에 대 한 자세한 [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)]를 참조 하세요 [XPS 문서](/windows/desktop/printdocs/documents)합니다.  
   
- [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]를 사용하여 [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] 기반 콘텐츠를 인쇄하는 여러 가지 기술은 [프로그래밍 방식으로 XPS 파일 인쇄](../../../../docs/framework/wpf/advanced/how-to-programmatically-print-xps-files.md)에서 보여 줍니다. 이 항목에 포함된 내용을 검토하는 동안 이러한 예제를 참조하는 것이 유용할 수도 있습니다. (비관리 코드 개발자에 대 한 설명서를 참조 해야 합니다 [MXDC_ESCAPE 함수](/windows/desktop/printdocs/mxdc-escape)합니다. Windows Forms 개발자 사용 해야 합니다는 [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] 에 <xref:System.Drawing.Printing> 전체를 지원 하지 않는 네임 스페이스 [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] 하이브리드 GDI-XPS 인쇄 경로 지원 하지 않지만 인쇄 경로입니다. 아래의 **인쇄 경로 아키텍처**를 참조하세요.  
+ [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]를 사용하여 [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] 기반 콘텐츠를 인쇄하는 여러 가지 기술은 [프로그래밍 방식으로 XPS 파일 인쇄](how-to-programmatically-print-xps-files.md)에서 보여 줍니다. 이 항목에 포함된 내용을 검토하는 동안 이러한 예제를 참조하는 것이 유용할 수도 있습니다. (비관리 코드 개발자에 대 한 설명서를 참조 해야 합니다 [MXDC_ESCAPE 함수](/windows/desktop/printdocs/mxdc-escape)합니다. Windows Forms 개발자 사용 해야 합니다는 [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] 에 <xref:System.Drawing.Printing> 전체를 지원 하지 않는 네임 스페이스 [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] 하이브리드 GDI-XPS 인쇄 경로 지원 하지 않지만 인쇄 경로입니다. 아래의 **인쇄 경로 아키텍처**를 참조하세요.  
   
 <a name="XPS_print_path_intro"></a>   
 ## <a name="xps-print-path"></a>XPS 인쇄 경로  
@@ -66,13 +66,13 @@ Microsoft.NET Framework를 사용 하 여 Windows Presentation Foundation (WPF)�
   
  다음 그림에서는 인쇄 하위 시스템을 보여 주며 [!INCLUDE[TLA#tla_ms](../../../../includes/tlasharptla-ms-md.md)]에서 제공하는 부분과 소프트웨어 및 하드웨어 공급업체에서 정의되는 부분을 정의합니다.  
   
- ![XPS 인쇄 시스템](../../../../docs/framework/wpf/advanced/media/xpsprint.PNG "XPSPrint")  
+ ![XPS 인쇄 시스템](./media/xpsprint.PNG "XPSPrint")  
   
 ### <a name="basic-xps-printing"></a>기본 XPS 인쇄  
  [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]는 기본 및 고급 [!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)]를 둘 다 정의합니다. 광범위한 인쇄 사용자 지정이나 전체 [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] 기능 집합에 대한 액세스가 필요하지 않은 애플리케이션의 경우 기본 인쇄 지원을 사용할 수 있습니다. 기본 인쇄 지원은 최소한의 구성이 필요하며 익숙한 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]를 제공하는 인쇄 대화 상자 컨트롤을 통해 노출됩니다. 이 간소화된 인쇄 모델을 통해 많은 [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] 기능을 사용할 수 있습니다.  
   
 #### <a name="printdialog"></a>PrintDialog  
- <xref:System.Windows.Controls.PrintDialog?displayProperty=nameWithType> 컨트롤은 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)], 구성 및 [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] 작업 제출을 위한 단일 진입점을 제공합니다. 컨트롤을 인스턴스화하고 사용하는 방법에 대한 자세한 내용은 [인쇄 대화 상자 호출](../../../../docs/framework/wpf/advanced/how-to-invoke-a-print-dialog.md)을 참조하세요.  
+ <xref:System.Windows.Controls.PrintDialog?displayProperty=nameWithType> 컨트롤은 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)], 구성 및 [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] 작업 제출을 위한 단일 진입점을 제공합니다. 컨트롤을 인스턴스화하고 사용하는 방법에 대한 자세한 내용은 [인쇄 대화 상자 호출](how-to-invoke-a-print-dialog.md)을 참조하세요.  
   
 ### <a name="advanced-xps-printing"></a>고급 XPS 인쇄  
  [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] 기능의 전체 집합에 액세스하려면 고급 인쇄 [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)]를 사용해야 합니다. 아래에서는 여러 관련 [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)]에 대해 자세히 설명합니다. 전체 목록은 [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] 인쇄 경로 [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)]를 참조 합니다 <xref:System.Windows.Xps> 및 <xref:System.Printing> 네임 스페이스 참조 합니다.  
@@ -82,27 +82,27 @@ Microsoft.NET Framework를 사용 하 여 Windows Presentation Foundation (WPF)�
   
  다음 예제에서는 코드를 사용하여 프린터의 <xref:System.Printing.PrintCapabilities>를 쿼리하고 <xref:System.Printing.PrintTicket>을 만드는 방법을 보여 줍니다.  
   
- [!code-cpp[xpscreate#PrinterCapabilities](../../../../samples/snippets/cpp/VS_Snippets_Wpf/XpsCreate/CPP/XpsCreate.cpp#printercapabilities)]
- [!code-csharp[xpscreate#PrinterCapabilities](../../../../samples/snippets/csharp/VS_Snippets_Wpf/XpsCreate/CSharp/XpsCreate.cs#printercapabilities)]
- [!code-vb[xpscreate#PrinterCapabilities](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/XpsCreate/visualbasic/xpscreate.vb#printercapabilities)]  
+ [!code-cpp[xpscreate#PrinterCapabilities](~/samples/snippets/cpp/VS_Snippets_Wpf/XpsCreate/CPP/XpsCreate.cpp#printercapabilities)]
+ [!code-csharp[xpscreate#PrinterCapabilities](~/samples/snippets/csharp/VS_Snippets_Wpf/XpsCreate/CSharp/XpsCreate.cs#printercapabilities)]
+ [!code-vb[xpscreate#PrinterCapabilities](~/samples/snippets/visualbasic/VS_Snippets_Wpf/XpsCreate/visualbasic/xpscreate.vb#printercapabilities)]  
   
 #### <a name="printserver-and-printqueue"></a>PrintServer 및 PrintQueue  
  <xref:System.Printing.PrintServer> 클래스는 네트워크 인쇄 서버를 나타내고 <xref:System.Printing.PrintQueue> 클래스는 프린터 및 프린터와 연결된 출력 작업 큐를 나타냅니다. 이러한 [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)]를 함께 사용하여 서버 인쇄 작업의 고급 관리를 수행할 수 있습니다. <xref:System.Printing.PrintServer> 또는 해당 파생 클래스 중 하나는 <xref:System.Printing.PrintQueue>를 관리하는 데 사용됩니다. <xref:System.Printing.PrintQueue.AddJob%2A> 메서드는 새 인쇄 작업을 대기열에 삽입하는 데 사용됩니다.  
   
  다음 예제에서는 코드를 사용하여 <xref:System.Printing.LocalPrintServer>를 만들고 기본 <xref:System.Printing.PrintQueue>에 액세스하는 방법을 보여 줍니다.  
   
- [!code-csharp[xpsprint#PrintQueueSnip](../../../../samples/snippets/csharp/VS_Snippets_Wpf/XpsPrint/CSharp/XpsPrintHelper.cs#printqueuesnip)]
- [!code-vb[xpsprint#PrintQueueSnip](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/XpsPrint/visualbasic/xpsprinthelper.vb#printqueuesnip)]  
+ [!code-csharp[xpsprint#PrintQueueSnip](~/samples/snippets/csharp/VS_Snippets_Wpf/XpsPrint/CSharp/XpsPrintHelper.cs#printqueuesnip)]
+ [!code-vb[xpsprint#PrintQueueSnip](~/samples/snippets/visualbasic/VS_Snippets_Wpf/XpsPrint/visualbasic/xpsprinthelper.vb#printqueuesnip)]  
   
 #### <a name="xpsdocumentwriter"></a>XpsDocumentWriter  
  많은 <xref:System.Windows.Xps.XpsDocumentWriter> 및 <xref:System.Windows.Xps.XpsDocumentWriter.Write%2A> 메서드와 더불어 <xref:System.Windows.Xps.XpsDocumentWriter.WriteAsync%2A>는 [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] 문서를 <xref:System.Printing.PrintQueue>에 쓰는 데 사용됩니다. 예를 들어 <xref:System.Windows.Xps.XpsDocumentWriter.Write%28System.Windows.Documents.FixedPage%2CSystem.Printing.PrintTicket%29> 메서드는 [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] 문서와 <xref:System.Printing.PrintTicket>을 동기적으로 출력하는 데 사용됩니다. <xref:System.Windows.Xps.XpsDocumentWriter.WriteAsync%28System.Windows.Documents.FixedDocument%2CSystem.Printing.PrintTicket%29> 메서드는 [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] 문서와 <xref:System.Printing.PrintTicket>을 비동기적으로 출력하는 데 사용됩니다.  
   
  다음 예제에서는 코드를 사용하여 <xref:System.Windows.Xps.XpsDocumentWriter>를 만드는 방법을 보여 줍니다.  
   
- [!code-csharp[XpsPrint#PrintQueueSnip](../../../../samples/snippets/csharp/VS_Snippets_Wpf/XpsPrint/CSharp/XpsPrintHelper.cs#printqueuesnip)]
- [!code-vb[XpsPrint#PrintQueueSnip](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/XpsPrint/visualbasic/xpsprinthelper.vb#printqueuesnip)]  
+ [!code-csharp[XpsPrint#PrintQueueSnip](~/samples/snippets/csharp/VS_Snippets_Wpf/XpsPrint/CSharp/XpsPrintHelper.cs#printqueuesnip)]
+ [!code-vb[XpsPrint#PrintQueueSnip](~/samples/snippets/visualbasic/VS_Snippets_Wpf/XpsPrint/visualbasic/xpsprinthelper.vb#printqueuesnip)]  
   
- <xref:System.Printing.PrintQueue.AddJob%2A> 메서드는 다양한 인쇄 방법도 제공합니다. [프로그래밍 방식으로 XPS 파일 인쇄](../../../../docs/framework/wpf/advanced/how-to-programmatically-print-xps-files.md)를 참조하세요. 참조하세요.  
+ <xref:System.Printing.PrintQueue.AddJob%2A> 메서드는 다양한 인쇄 방법도 제공합니다. [프로그래밍 방식으로 XPS 파일 인쇄](how-to-programmatically-print-xps-files.md)를 참조하세요. 참조하세요.  
   
 <a name="GDI_Print_Path_intro"></a>   
 ## <a name="gdi-print-path"></a>GDI 인쇄 경로  
@@ -142,8 +142,8 @@ Microsoft.NET Framework를 사용 하 여 Windows Presentation Foundation (WPF)�
 - <xref:System.Printing.PrintCapabilities>
 - <xref:System.Printing.PrintServer>
 - <xref:System.Printing.PrintQueue>
-- [방법 항목](../../../../docs/framework/wpf/advanced/printing-how-to-topics.md)
-- [WPF의 문서](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)
+- [방법 항목](printing-how-to-topics.md)
+- [WPF의 문서](documents-in-wpf.md)
 - [XPS 문서](/windows/desktop/printdocs/documents)
-- [문서 serialization 및 저장소](../../../../docs/framework/wpf/advanced/document-serialization-and-storage.md)
+- [문서 serialization 및 저장소](document-serialization-and-storage.md)
 - [Microsoft XPS 문서 변환기 (MXDC)](/windows/desktop/printdocs/microsoft-xps-document-converter--mxdc-)

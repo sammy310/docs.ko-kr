@@ -13,19 +13,19 @@ helpviewer_keywords:
 - XBAP security [WPF]
 - Internet Explorer security settings [WPF]
 ms.assetid: ee1baea0-3611-4e36-9ad6-fcd5205376fb
-ms.openlocfilehash: 699c03d379d105806292a23b09a63d0634a7a2e4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: be9f1916722b493490541046906a38b9fac63a4e
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54592687"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57371985"
 ---
 # <a name="security-wpf"></a>보안(WPF)
-<a name="introduction"></a> Windows Presentation Foundation (WPF) 독립 실행형 및 브라우저에서 호스팅된 응용 프로그램을 개발할 때 보안 모델을 고려해 야 합니다. [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 독립 실행형 응용 프로그램 무제한 권한으로 실행 ( [!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)] **FullTrust** 권한 집합) Windows Installer (.msi), XCopy를 사용 하 여 배포한 여부에 관계 없이 또는 [!INCLUDE[TLA2#tla_clickonce](../../../includes/tla2sharptla-clickonce-md.md)]합니다. ClickOnce를 포함한 부분 신뢰, 독립 실행형 WPF 애플리케이션 배포가 지원되지 않습니다. 그러나 완전 신뢰 호스트 응용 프로그램을 부분 신뢰를 만들 수 <xref:System.AppDomain> .NET Framework 추가 기능 모델을 사용 합니다. 자세한 내용은 [WPF 추가 기능 개요](../../../docs/framework/wpf/app-development/wpf-add-ins-overview.md)합니다.  
+<a name="introduction"></a> Windows Presentation Foundation (WPF) 독립 실행형 및 브라우저에서 호스팅된 응용 프로그램을 개발할 때 보안 모델을 고려해 야 합니다. [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 독립 실행형 응용 프로그램 무제한 권한으로 실행 ( [!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)] **FullTrust** 권한 집합) Windows Installer (.msi), XCopy를 사용 하 여 배포한 여부에 관계 없이 또는 [!INCLUDE[TLA2#tla_clickonce](../../../includes/tla2sharptla-clickonce-md.md)]합니다. ClickOnce를 포함한 부분 신뢰, 독립 실행형 WPF 애플리케이션 배포가 지원되지 않습니다. 그러나 완전 신뢰 호스트 응용 프로그램을 부분 신뢰를 만들 수 <xref:System.AppDomain> .NET Framework 추가 기능 모델을 사용 합니다. 자세한 내용은 [WPF 추가 기능 개요](./app-development/wpf-add-ins-overview.md)합니다.  
   
- [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 브라우저에서 호스팅된 응용 프로그램에서 호스팅되는 [!INCLUDE[TLA#tla_iegeneric](../../../includes/tlasharptla-iegeneric-md.md)] 또는 Firefox에서 일 수 있습니다 및 [!INCLUDE[TLA#tla_xbap#plural](../../../includes/tlasharptla-xbapsharpplural-md.md)] 콘텐츠인지 느슨한 콘텐츠인지 [!INCLUDE[TLA#tla_xaml](../../../includes/tlasharptla-xaml-md.md)] 문서에 대 한 자세한 내용은 참조 [WPF XAML 브라우저 응용 프로그램 개요](../../../docs/framework/wpf/app-development/wpf-xaml-browser-applications-overview.md)합니다.  
+ [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 브라우저에서 호스팅된 응용 프로그램에서 호스팅되는 [!INCLUDE[TLA#tla_iegeneric](../../../includes/tlasharptla-iegeneric-md.md)] 또는 Firefox에서 일 수 있습니다 및 [!INCLUDE[TLA#tla_xbap#plural](../../../includes/tlasharptla-xbapsharpplural-md.md)] 콘텐츠인지 느슨한 콘텐츠인지 [!INCLUDE[TLA#tla_xaml](../../../includes/tlasharptla-xaml-md.md)] 문서에 대 한 자세한 내용은 참조 [WPF XAML 브라우저 응용 프로그램 개요](./app-development/wpf-xaml-browser-applications-overview.md)합니다.  
   
- [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 기본 제한 되는 기본적으로 부분 신뢰 보안 샌드박스 내 브라우저에서 호스팅된 응용 프로그램 실행 [!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)] **인터넷** 영역 권한 집합입니다. 이 실제로 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 일반적인 웹 응용 프로그램 격리를 예상할 수는 동일한 방식으로 클라이언트 컴퓨터에서 브라우저에서 호스팅된 응용 프로그램입니다. XBAP는 배포 URL 및 클라이언트의 보안 구성의 보안 영역에 따라 권한을 완전 신뢰까지 높일 수 있습니다. 자세한 내용은 [WPF 부분 신뢰 보안](../../../docs/framework/wpf/wpf-partial-trust-security.md)을 참조하세요.  
+ [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 기본 제한 되는 기본적으로 부분 신뢰 보안 샌드박스 내 브라우저에서 호스팅된 응용 프로그램 실행 [!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)] **인터넷** 영역 권한 집합입니다. 이 실제로 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 일반적인 웹 응용 프로그램 격리를 예상할 수는 동일한 방식으로 클라이언트 컴퓨터에서 브라우저에서 호스팅된 응용 프로그램입니다. XBAP는 배포 URL 및 클라이언트의 보안 구성의 보안 영역에 따라 권한을 완전 신뢰까지 높일 수 있습니다. 자세한 내용은 [WPF 부분 신뢰 보안](wpf-partial-trust-security.md)을 참조하세요.  
   
  이 항목에서는 Windows Presentation Foundation (WPF) 독립 실행형 및 브라우저에서 호스팅된 응용 프로그램에 대 한 보안 모델을 설명합니다.  
   
@@ -49,7 +49,7 @@ ms.locfileid: "54592687"
   
  *응용 프로그램 탐색*은 브라우저에서 호스트되는 응용 프로그램 내의 콘텐츠 항목 간을 탐색합니다. *브라우저 탐색*은 브라우저 자체의 콘텐츠 및 위치 URL을 변경하는 탐색입니다. 응용 프로그램 탐색 (일반적으로 XAML)과 브라우저 탐색 (일반적으로 HTML) 간의 관계는 다음 그림에 표시 됩니다.
   
- ![탐색 다이어그램](../../../docs/framework/wpf/media/safetoplevelnavigationfigure.png "SafeTopLevelNavigationFigure")  
+ ![탐색 다이어그램](./media/safetoplevelnavigationfigure.png "SafeTopLevelNavigationFigure")  
   
  안전 하다 고 간주 되는 콘텐츠 유형에 [!INCLUDE[TLA2#tla_xbap](../../../includes/tla2sharptla-xbap-md.md)] 이동할 주로 도달한 응용 프로그램 탐색 이나 브라우저 탐색이 사용 되는지 여부입니다.  
   
@@ -65,7 +65,7 @@ ms.locfileid: "54592687"
 |애플리케이션 코드|컴파일된 코드 숨김이 있는 XAML 리소스.<br /><br /> 또는<br /><br /> XAML 파일의 빌드 형식 사용 하 여 프로젝트에 추가 된 **페이지**합니다.|`pack://application:,,,/MyResourceFile` `.xaml`|  
   
 > [!NOTE]
->  응용 프로그램 데이터 파일 및 팩에 대 한 자세한 내용은 [!INCLUDE[TLA2#tla_uri#plural](../../../includes/tla2sharptla-urisharpplural-md.md)]를 참조 하세요 [WPF 응용 프로그램 리소스, 콘텐츠 및 데이터 파일](../../../docs/framework/wpf/app-development/wpf-application-resource-content-and-data-files.md)합니다.  
+>  응용 프로그램 데이터 파일 및 팩에 대 한 자세한 내용은 [!INCLUDE[TLA2#tla_uri#plural](../../../includes/tla2sharptla-urisharpplural-md.md)]를 참조 하세요 [WPF 응용 프로그램 리소스, 콘텐츠 및 데이터 파일](./app-development/wpf-application-resource-content-and-data-files.md)합니다.  
   
  이러한 콘텐츠 형식의 파일은 사용자 또는 프로그래밍 방식으로 탐색할 수 있습니다.  
   
@@ -115,7 +115,7 @@ ms.locfileid: "54592687"
   
      합니다 **보안 설정** 대화 상자가 표시 되며 선택한 영역에 대 한 보안 설정을 구성할 수 있습니다.  
   
-     ![보안 설정 대화 상자](../../../docs/framework/wpf/media/wpfsecurityfigure1.PNG "WPFSecurityFigure1")  
+     ![보안 설정 대화 상자](./media/wpfsecurityfigure1.PNG "WPFSecurityFigure1")  
   
 > [!NOTE]
 >  Internet Explorer에서 인터넷 옵션 대화 상자에 액세스할 수도 있습니다. 클릭 **도구가** 을 클릭 한 다음 **인터넷 옵션**합니다.  
@@ -153,7 +153,7 @@ ms.locfileid: "54592687"
 > [!NOTE]
 >  이 섹션에도 적용 됩니다는 <xref:System.Windows.Controls.Frame> 사용 하기 때문에 제어를 <xref:System.Windows.Controls.WebBrowser> HTML 콘텐츠를 이동할 수입니다.  
   
- 경우 WPF <xref:System.Windows.Controls.WebBrowser> 컨트롤은 신뢰할 수 없는 웹 콘텐츠를 호스트 하는 데 사용 됩니다, 응용 프로그램 부분 신뢰를 사용 해야 <xref:System.AppDomain> 잠재적으로 악의적인 HTML 스크립트 코드에서 응용 프로그램 코드를 분리 합니다. 응용 프로그램 호스트 된 스크립트를 사용 하 여 사용 하 여 상호 작용 하는 경우에 특히 그렇습니다 합니다 <xref:System.Windows.Controls.WebBrowser.InvokeScript%2A> 메서드 및 <xref:System.Windows.Controls.WebBrowser.ObjectForScripting%2A> 속성입니다. 자세한 내용은 [WPF 추가 기능 개요](../../../docs/framework/wpf/app-development/wpf-add-ins-overview.md)합니다.  
+ 경우 WPF <xref:System.Windows.Controls.WebBrowser> 컨트롤은 신뢰할 수 없는 웹 콘텐츠를 호스트 하는 데 사용 됩니다, 응용 프로그램 부분 신뢰를 사용 해야 <xref:System.AppDomain> 잠재적으로 악의적인 HTML 스크립트 코드에서 응용 프로그램 코드를 분리 합니다. 응용 프로그램 호스트 된 스크립트를 사용 하 여 사용 하 여 상호 작용 하는 경우에 특히 그렇습니다 합니다 <xref:System.Windows.Controls.WebBrowser.InvokeScript%2A> 메서드 및 <xref:System.Windows.Controls.WebBrowser.ObjectForScripting%2A> 속성입니다. 자세한 내용은 [WPF 추가 기능 개요](./app-development/wpf-add-ins-overview.md)합니다.  
   
  응용 프로그램에서 WPF를 사용 하는 경우 <xref:System.Windows.Controls.WebBrowser> 컨트롤 보안을 향상 시키고 공격을 완화 하는 다른 방법은 Internet Explorer 기능 컨트롤을 사용 하도록 설정 됩니다. 기능 컨트롤은 Internet Explorer에 대 한 관리자와 개발자가 Internet Explorer 및 WebBrowser ActiveX 컨트롤을 호스팅하는 응용 프로그램의 기능을 구성할 수 있도록 추가 하는 WPF <xref:System.Windows.Controls.WebBrowser> 래핑하고 제어 합니다. 기능 컨트롤을 사용 하 여 구성할 수 있습니다 합니다 [CoInternetSetFeatureEnabled](https://go.microsoft.com/fwlink/?LinkId=179394) 함수 또는 레지스트리에서 값을 변경 하 여 합니다. 기능 컨트롤에 대 한 자세한 내용은 참조 하세요. [기능 컨트롤 소개](https://go.microsoft.com/fwlink/?LinkId=179390) 하 고 [인터넷 기능 컨트롤](https://go.microsoft.com/fwlink/?LinkId=179392)합니다.  
   
@@ -251,9 +251,9 @@ ms.locfileid: "54592687"
   
  두 경우 모두, 느슨한 [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] 탐색 되는 파일에는 해당 호스트 응용 프로그램의 사용 권한을 상속 합니다. 그러나이 동작의 느슨한 경우에 특히 보안의 관점에서 적절 하지 않을 [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] 파일 신뢰할 수 있는 이거나 알 수 없는 엔터티에서 생성 되었습니다. 이 유형의 콘텐츠 이라고 *외부 콘텐츠*, 모두 <xref:System.Windows.Controls.Frame> 고 <xref:System.Windows.Navigation.NavigationWindow> 탐색할 때 격리 하도록 구성할 수 있습니다. 격리 설정 하 여 이루어집니다 합니다 **SandboxExternalContent** 속성을 true로, 다음 예에 표시 된 대로 <xref:System.Windows.Controls.Frame> 및 <xref:System.Windows.Navigation.NavigationWindow>:  
   
- [!code-xaml[SecurityOverviewSnippets#FrameMARKUP](../../../samples/snippets/csharp/VS_Snippets_Wpf/SecurityOverviewSnippets/CS/Window2.xaml#framemarkup)]  
+ [!code-xaml[SecurityOverviewSnippets#FrameMARKUP](~/samples/snippets/csharp/VS_Snippets_Wpf/SecurityOverviewSnippets/CS/Window2.xaml#framemarkup)]  
   
- [!code-xaml[SecurityOverviewSnippets#NavigationWindowMARKUP](../../../samples/snippets/csharp/VS_Snippets_Wpf/SecurityOverviewSnippets/CS/Window1.xaml#navigationwindowmarkup)]  
+ [!code-xaml[SecurityOverviewSnippets#NavigationWindowMARKUP](~/samples/snippets/csharp/VS_Snippets_Wpf/SecurityOverviewSnippets/CS/Window1.xaml#navigationwindowmarkup)]  
   
  이 설정을 통해 외부 콘텐츠가 애플리케이션을 호스팅하는 프로세스와 별개인 프로세스로 로드됩니다. 이 프로세스는 효과적으로 호스팅 애플리케이션과 클라이언트 컴퓨터에서 격리되어 기본 인터넷 영역 권한 집합으로 제한됩니다.  
   
@@ -267,15 +267,15 @@ ms.locfileid: "54592687"
 |영역|리소스|  
 |----------|--------------|  
 |관리 코드|[응용 프로그램에 대한 패턴 및 사례 보안 지침](https://go.microsoft.com/fwlink/?LinkId=117426)|  
-|[!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)]|[코드 액세스 보안](../../../docs/framework/misc/code-access-security.md)|  
+|[!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)]|[코드 액세스 보안](../misc/code-access-security.md)|  
 |[!INCLUDE[TLA2#tla_clickonce](../../../includes/tla2sharptla-clickonce-md.md)]|[ClickOnce 보안 및 배포](/visualstudio/deployment/clickonce-security-and-deployment)|  
-|[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]|[WPF 부분 신뢰 보안](../../../docs/framework/wpf/wpf-partial-trust-security.md)|  
+|[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]|[WPF 부분 신뢰 보안](wpf-partial-trust-security.md)|  
   
 ## <a name="see-also"></a>참고자료
-- [WPF 부분 신뢰 보안](../../../docs/framework/wpf/wpf-partial-trust-security.md)
-- [WPF 보안 전략 - 플랫폼 보안](../../../docs/framework/wpf/wpf-security-strategy-platform-security.md)
-- [WPF 보안 전략 - 보안 엔지니어링](../../../docs/framework/wpf/wpf-security-strategy-security-engineering.md)
+- [WPF 부분 신뢰 보안](wpf-partial-trust-security.md)
+- [WPF 보안 전략 - 플랫폼 보안](wpf-security-strategy-platform-security.md)
+- [WPF 보안 전략 - 보안 엔지니어링](wpf-security-strategy-security-engineering.md)
 - [응용 프로그램에 대한 패턴 및 사례 보안 지침](https://go.microsoft.com/fwlink/?LinkId=117426)
-- [코드 액세스 보안](../../../docs/framework/misc/code-access-security.md)
+- [코드 액세스 보안](../misc/code-access-security.md)
 - [ClickOnce 보안 및 배포](/visualstudio/deployment/clickonce-security-and-deployment)
-- [XAML 개요(WPF)](../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)
+- [XAML 개요(WPF)](./advanced/xaml-overview-wpf.md)

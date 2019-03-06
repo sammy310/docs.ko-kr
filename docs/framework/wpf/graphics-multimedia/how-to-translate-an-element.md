@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - graphics [WPF], translations
 ms.assetid: 461c8273-15df-42f6-8672-89ba22887cc0
-ms.openlocfilehash: 75b8f72647b1597396fde5d21f8378d3ce586a25
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6ff606e495eb37e0e74150bb5ad20f11744b74ec
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54672875"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57354910"
 ---
 # <a name="how-to-translate-an-element"></a>방법: 요소 변환
 이 예제에서는 변환 (이동) 요소를 사용 하 여를 <xref:System.Windows.Media.TranslateTransform>입니다.  
@@ -21,9 +21,9 @@ ms.locfileid: "54672875"
  다음 예제에서는 <xref:System.Windows.Media.TranslateTransform> 는 요소 50 픽셀을 오른쪽에서 50 픽셀을 아래로 이동 하려면.  
   
 ## <a name="example"></a>예제  
- [!code-xaml[transformsSample#53](../../../../samples/snippets/csharp/VS_Snippets_Wpf/transformsSample/CS/TranslateTransformExample.xaml#53)]  
+ [!code-xaml[transformsSample#53](~/samples/snippets/csharp/VS_Snippets_Wpf/transformsSample/CS/TranslateTransformExample.xaml#53)]  
   
  전체 샘플을 보려면 [2차원 변환 샘플](https://go.microsoft.com/fwlink/?LinkID=158252)을 참조하세요.  
   
 ## <a name="see-also"></a>참고자료
-- [Transform 개요](../../../../docs/framework/wpf/graphics-multimedia/transforms-overview.md)
+- [Transform 개요](transforms-overview.md)

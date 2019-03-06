@@ -2,18 +2,13 @@
 title: Visual Basic의 배열
 ms.date: 12/06/2017
 f1_keywords:
-- vb.Array
+  - vb.Array
 helpviewer_keywords:
-- arrays [Visual Basic]
-- Visual Basic, arrays
+  - 'arrays [Visual Basic]'
+  - 'Visual Basic, arrays'
 ms.assetid: dbf29737-b589-4443-bee6-a27588d9c67e
-ms.openlocfilehash: f8bd0f3eed8599f7f9e316df8274e8204a69c48f
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
-ms.translationtype: MT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53149902"
 ---
+
 # <a name="arrays-in-visual-basic"></a>Visual Basic의 배열
 
 배열 라고 하는 값의 집합이 *요소*, 서로 논리적으로 관련이 있는 합니다. 예를 들어, 배열; 초등학교에서 각 학년의 학생 수가 구성 될 수 있습니다. 배열의 각 요소에는 단일 학년의 학생 수입니다. 마찬가지로, 클래스에 대 한 학생의 성적 배열을 구성 될 수 있습니다. 배열의 각 요소에는 단일 등급입니다.
@@ -87,7 +82,7 @@ Dim sales()() As Double = New Double(11)() {}
 
   [!code-vb[creating2](~/samples/snippets/visualbasic/programming-guide/language-features/arrays/create-array.vb#2)]
 
-기존 배열에 있는 경우 사용 하 여 해당 크기를 재정의할 수 있습니다 합니다 [ `Redim` ](../../../language-reference/statements/redim-statement.md) 문입니다. 지정할 수 있습니다는 `Redim` 문이 배열에 있는 값을 유지 하거나 빈 배열을 만들도록 지정할 수 있습니다. 다음 예제에서는 `Redim` 문을 사용하여 기존 배열의 크기를 수정하는 여러 가지 방법을 보여 줍니다.
+기존 배열에 있는 경우 사용 하 여 해당 크기를 재정의할 수 있습니다 합니다 [ `ReDim` ](../../../language-reference/statements/redim-statement.md) 문입니다. 지정할 수 있습니다는 `ReDim` 문이 배열에 있는 값을 유지 하거나 빈 배열을 만들도록 지정할 수 있습니다. 다음 예제에서는 `ReDim` 문을 사용하여 기존 배열의 크기를 수정하는 여러 가지 방법을 보여 줍니다.
 
 [!code-vb[redimensioning](~/samples/snippets/visualbasic/programming-guide/language-features/arrays/create-array.vb#3)]
 
@@ -209,7 +204,7 @@ Dim sales()() As Double = New Double(11)() {}
 
 [!code-vb[jagged-arrays](~/samples/snippets/visualbasic/programming-guide/language-features/arrays/jagged.vb)]
 
-앞의 예제를 사용 하 여 요소 별로 단위로 가변된 배열에 값을 할당 한 `For...Next` 루프입니다. 또한 가변 배열의 요소에 중첩 된 배열 리터럴을 사용 하 여 값을 할당할 수 있습니다. 그러나 사용 하려고 중첩 배열 리터럴 (예를 들어 ```Dim valuesjagged = {{1, 2}, {2, 3, 4}}```) 컴파일러 오류가 [BC30568](../../../,,/../misc/bc30568.md)합니다. 오류를 해결 하려면 내부 배열 리터럴을 괄호로 묶어야 합니다. 괄호는 배열 리터럴 식이 평가 되 고, 강제 하 고 결과 값은 다음 예제와 같이 외부 배열 리터럴과 사용 하 여 사용 됩니다.
+앞의 예제를 사용 하 여 요소 별로 단위로 가변된 배열에 값을 할당 한 `For...Next` 루프입니다. 또한 가변 배열의 요소에 중첩 된 배열 리터럴을 사용 하 여 값을 할당할 수 있습니다. 그러나 사용 하려고 중첩 배열 리터럴 (예를 들어 `Dim valuesjagged = {{1, 2}, {2, 3, 4}}`) 컴파일러 오류가 [BC30568](../../../,,/../misc/bc30568.md)합니다. 오류를 해결 하려면 내부 배열 리터럴을 괄호로 묶어야 합니다. 괄호는 배열 리터럴 식이 평가 되 고, 강제 하 고 결과 값은 다음 예제와 같이 외부 배열 리터럴과 사용 하 여 사용 됩니다.
 
 [!code-vb[jagged-array-initialization](~/samples/snippets/visualbasic/programming-guide/language-features/arrays/jagged-assign.vb)]
 
@@ -269,7 +264,7 @@ Dim arrZ(-1) As String
 > [!NOTE]
 > 이 섹션에서는 문자열 배열을 단일 문자열로 조인 하는 것을 설명 하지 않습니다. 조인 하는 문자열 배열에 대 한 내용은 참조는 <xref:System.String.Join%2A?displayProperty=nameWithType> 메서드.
 
-각 배열의 요소를 새 배열에 복사 하기 전에 먼저 accompodate 새 배열에 충분히 큰 되도록 배열 초기화 확인 해야 합니다. 이 작업은 다음 두 가지 방법 중 하나로 수행할 수 있습니다.
+각 배열의 요소를 새 배열에 복사 하기 전에 먼저 새 배열에 맞게 충분히 큰 되도록 배열 초기화 확인 해야 합니다. 이 작업은 다음 두 가지 방법 중 하나로 수행할 수 있습니다.
 
 - 사용 된 [ `ReDim Preserve` ](../../../language-reference/statements/redim-statement.md) 문을 동적으로 배열에 새 요소를 추가 하기 전에 확장. 이것이 가장 쉬운 방법 이지만 대형 배열을 복사 하는 경우 성능 저하 및 과도 한 메모리 소비에서 발생할 수 있습니다.
 - 새 큰 배열에 대해 필요한 요소의 총 수를 계산 다음 원본 배열의 각 요소를 추가 합니다.
@@ -299,9 +294,9 @@ Dim arrZ(-1) As String
 |용어|정의|
 |----------|----------------|
 |[Array Dimensions in Visual Basic](../../language-features/arrays/array-dimensions.md)|배열의 차수 및 차원을 설명합니다.|
-|[어떻게: Visual Basic에서 배열 변수 초기화](../../language-features/arrays/how-to-initialize-an-array-variable.md)|배열에 초기 값을 채우는 방법을 설명합니다.|
-|[어떻게: Visual Basic에서 배열 정렬](../../language-features/arrays/how-to-sort-an-array.md)|배열의 요소를 사전순으로 정렬하는 방법을 보여 줍니다.|
-|[어떻게: 하나의 배열에 다른 배열 할당](../../language-features/arrays/how-to-assign-one-array-to-another-array.md)|다른 배열 변수에 배열을 할당하는 규칙 및 단계를 설명합니다.|
+|[방법: Visual Basic에서 배열 변수 초기화](../../language-features/arrays/how-to-initialize-an-array-variable.md)|배열에 초기 값을 채우는 방법을 설명합니다.|
+|[방법: Visual Basic에서 배열 정렬](../../language-features/arrays/how-to-sort-an-array.md)|배열의 요소를 사전순으로 정렬하는 방법을 보여 줍니다.|
+|[방법: 하나의 배열에 다른 배열 할당](../../language-features/arrays/how-to-assign-one-array-to-another-array.md)|다른 배열 변수에 배열을 할당하는 규칙 및 단계를 설명합니다.|
 |[배열 문제 해결](../../language-features/arrays/troubleshooting-arrays.md)|배열에서 작업할 때 발생할 수 있는 몇 가지 일반적인 문제를 설명합니다.|
 
 ## <a name="see-also"></a>참고 항목

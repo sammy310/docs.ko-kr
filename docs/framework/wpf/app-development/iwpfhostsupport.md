@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - IWpfHostSupport interface [WPF]
 ms.assetid: cc5a0281-de81-4cc1-87e4-0e46b1a811e9
-ms.openlocfilehash: 57d9ef87a078655a89a5869a48a1bd16f21b000f
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 074167111b78edc517dda019465260d0acd54737
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43500928"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57376015"
 ---
 # <a name="iwpfhostsupport"></a>IWpfHostSupport
 응용 프로그램을 호스팅할 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] PresentationHost.exe 통해 콘텐츠 호스트 사이의 PresentationHost.exe 통합 지점을 제공 하기 위해이 인터페이스를 구현 합니다.  
@@ -32,6 +32,6 @@ ms.locfileid: "43500928"
   
 |멤버|설명|  
 |------------|-----------------|  
-|[GetRawInputDevices](../../../../docs/framework/wpf/app-development/getrawinputdevices.md)|PresentationHost.exe가 호스트 응용 프로그램과 관련된 원시 입력 장치(휴먼 인터페이스 장치)를 검색할 수 있게 합니다.|  
-|[FilterInputMessage](../../../../docs/framework/wpf/app-development/filterinputmessage.md)|E_NOTIMPL이 반환되지 않는 한 메시지를 받을 때마다 PresentationHost.exe에서 호출됩니다.|  
-|[GetCustomUI](../../../../docs/framework/wpf/app-development/getcustomui.md)|기본적으로 PresentationHost.exe는 고유한 배포 진행률 및 배포 오류 사용자 인터페이스 제공 WPF 콘텐츠를 배포할 때 표시 되는 합니다.|
+|[GetRawInputDevices](getrawinputdevices.md)|PresentationHost.exe가 호스트 응용 프로그램과 관련된 원시 입력 장치(휴먼 인터페이스 장치)를 검색할 수 있게 합니다.|  
+|[FilterInputMessage](filterinputmessage.md)|E_NOTIMPL이 반환되지 않는 한 메시지를 받을 때마다 PresentationHost.exe에서 호출됩니다.|  
+|[GetCustomUI](getcustomui.md)|기본적으로 PresentationHost.exe는 고유한 배포 진행률 및 배포 오류 사용자 인터페이스 제공 WPF 콘텐츠를 배포할 때 표시 되는 합니다.|

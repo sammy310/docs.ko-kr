@@ -9,12 +9,12 @@ helpviewer_keywords:
 - TextBox control [WPF], positioning cursor
 - cursor [WPF], positioning
 ms.assetid: c771a0b8-c6b4-4240-aecd-a21d0ba51a2e
-ms.openlocfilehash: 2b280c6ea74a4b7a896f33a3552997a730d24a39
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e4058518e4eb56e1cd9d5fdafd792d8f8d3b77ab
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54497620"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57367845"
 ---
 # <a name="how-to-position-the-cursor-at-the-beginning-or-end-of-text-in-a-textbox-control"></a>방법: TextBox 컨트롤의 텍스트 시작 또는 끝 위치에 커서 놓기
 시작 또는 텍스트 내용의 끝에 커서를 배치 하는 방법을 보여 주는이 예제는 <xref:System.Windows.Controls.TextBox> 제어 합니다.  
@@ -22,20 +22,20 @@ ms.locfileid: "54497620"
 ## <a name="example"></a>예제  
  다음 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] 코드에 설명 된 <xref:System.Windows.Controls.TextBox> 제어 하 고 이름을 할당 합니다.  
   
- [!code-xaml[TextBox_MiscCode#_MoveCursorXAML](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TextBox_MiscCode/CSharp/Window1.xaml#_movecursorxaml)]  
+ [!code-xaml[TextBox_MiscCode#_MoveCursorXAML](~/samples/snippets/csharp/VS_Snippets_Wpf/TextBox_MiscCode/CSharp/Window1.xaml#_movecursorxaml)]  
   
 ## <a name="example"></a>예제  
  내용의 시작 부분에 커서를 배치 하는 <xref:System.Windows.Controls.TextBox> 제어를 호출는 <xref:System.Windows.Controls.TextBox.Select%2A> 메서드 선택 시작 위치 0의와 선택 길이를 0 지정 합니다.  
   
- [!code-csharp[TextBox_MiscCode#_CursorToStart](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TextBox_MiscCode/CSharp/Window1.xaml.cs#_cursortostart)]
- [!code-vb[TextBox_MiscCode#_CursorToStart](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/TextBox_MiscCode/VisualBasic/Window1.xaml.vb#_cursortostart)]  
+ [!code-csharp[TextBox_MiscCode#_CursorToStart](~/samples/snippets/csharp/VS_Snippets_Wpf/TextBox_MiscCode/CSharp/Window1.xaml.cs#_cursortostart)]
+ [!code-vb[TextBox_MiscCode#_CursorToStart](~/samples/snippets/visualbasic/VS_Snippets_Wpf/TextBox_MiscCode/VisualBasic/Window1.xaml.vb#_cursortostart)]  
   
 ## <a name="example"></a>예제  
  내용의 끝에 커서를 <xref:System.Windows.Controls.TextBox> 제어를 호출 합니다 <xref:System.Windows.Controls.TextBox.Select%2A> 메서드 콘텐츠를 텍스트의 길이 선택 길이를 0 선택 시작 위치를 지정 합니다.  
   
- [!code-csharp[TextBox_MiscCode#_CursorToEnd](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TextBox_MiscCode/CSharp/Window1.xaml.cs#_cursortoend)]
- [!code-vb[TextBox_MiscCode#_CursorToEnd](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/TextBox_MiscCode/VisualBasic/Window1.xaml.vb#_cursortoend)]  
+ [!code-csharp[TextBox_MiscCode#_CursorToEnd](~/samples/snippets/csharp/VS_Snippets_Wpf/TextBox_MiscCode/CSharp/Window1.xaml.cs#_cursortoend)]
+ [!code-vb[TextBox_MiscCode#_CursorToEnd](~/samples/snippets/visualbasic/VS_Snippets_Wpf/TextBox_MiscCode/VisualBasic/Window1.xaml.vb#_cursortoend)]  
   
 ## <a name="see-also"></a>참고자료
-- [TextBox 개요](../../../../docs/framework/wpf/controls/textbox-overview.md)
-- [RichTextBox 개요](../../../../docs/framework/wpf/controls/richtextbox-overview.md)
+- [TextBox 개요](textbox-overview.md)
+- [RichTextBox 개요](richtextbox-overview.md)

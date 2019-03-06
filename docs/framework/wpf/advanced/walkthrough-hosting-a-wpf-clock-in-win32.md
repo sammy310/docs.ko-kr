@@ -6,18 +6,18 @@ helpviewer_keywords:
 - Win32 code [WPF], WPF interoperation
 - interoperability [WPF], Win32
 ms.assetid: 555e55a7-0851-4ec8-b1c6-0acba7e9b648
-ms.openlocfilehash: 5cccc89c8346358bc4f719e1b089a181dd81f970
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a58d7e5848ccd62b889b8a7645c08a35822b3352
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54579773"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57352726"
 ---
 # <a name="walkthrough-hosting-a-wpf-clock-in-win32"></a>연습: Win32에서 WPF 시계 호스팅
 삽입할 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 내 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 응용 프로그램을 사용 하 여 <xref:System.Windows.Interop.HwndSource>를 포함 하는 HWND를 제공 하는 프로그램 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 콘텐츠. 먼저 만듭니다는 <xref:System.Windows.Interop.HwndSource>, CreateWindow와 유사한 매개 변수를 제공 합니다.  그런 합니다 <xref:System.Windows.Interop.HwndSource> 에 대 한는 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 내부에 넣으려는 콘텐츠입니다.  HWND를 마지막으로 표시 된 <xref:System.Windows.Interop.HwndSource>합니다. 이 연습에는 혼합을 만드는 방법을 보여 줍니다 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 안쪽 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 운영 체제를 다시 구현 하는 응용 프로그램 **날짜 및 시간 속성** 대화 합니다.  
   
 ## <a name="prerequisites"></a>전제 조건  
- 참조 [WPF 및 Win32 상호 운용성](../../../../docs/framework/wpf/advanced/wpf-and-win32-interoperation.md)합니다.  
+ 참조 [WPF 및 Win32 상호 운용성](wpf-and-win32-interoperation.md)합니다.  
   
 ## <a name="how-to-use-this-tutorial"></a>이 자습서를 사용하는 방법  
  이 자습서는 상호 운용 애플리케이션을 생성하는 중요한 단계에 대해 중점적으로 설명합니다. 자습서 샘플을 받으며 [Win32 시계 상호 운용 샘플](https://go.microsoft.com/fwlink/?LinkID=160051)하지만 샘플은 최종 제품의 반사 합니다. 기존 시작 된 것 처럼이 자습서의 단계를 설명 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 자신만의 프로젝트 및 아마도 기존 프로젝트를 추가 하는 호스팅된 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 응용 프로그램입니다. 최종 제품을 비교할 수 있습니다 [Win32 시계 상호 운용 샘플](https://go.microsoft.com/fwlink/?LinkID=160051)합니다.  
@@ -25,11 +25,11 @@ ms.locfileid: "54579773"
 ## <a name="a-walkthrough-of-windows-presentation-framework-inside-win32-hwndsource"></a>Win32 내에서 Windows Presentation Framework의 연습(HwndSource)  
  다음 그래픽에서는 이 자습서의 의도된 최종 제품을 보여 줍니다.  
   
- ![날짜 및 시간 속성 대화 상자](../../../../docs/framework/wpf/advanced/media/interoparch06.PNG "InteropArch06")  
+ ![날짜 및 시간 속성 대화 상자](./media/interoparch06.PNG "InteropArch06")  
   
  C + +를 만들어이 대화 상자를 다시 만들 수 있습니다 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 프로젝트에서 [!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)], 및 대화 상자 편집기를 사용 하 여 다음을 만들려면:  
   
- ![날짜 및 시간 속성 대화 상자](../../../../docs/framework/wpf/advanced/media/interoparch07.PNG "InteropArch07")  
+ ![날짜 및 시간 속성 대화 상자](./media/interoparch07.PNG "InteropArch07")  
   
  (사용할 필요가 없습니다 [!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)] 데 <xref:System.Windows.Interop.HwndSource>, 및 c + +를 사용 하 여 쓸 필요가 없습니다 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 프로그램 이지만이 수행 하는 일반적인 방식 이며 단계별 자습서 설명에 적합).  
   
@@ -213,19 +213,19 @@ HWND clock = ManagedCode::GetHwnd(hDlg, point.x, point.y, width, height);
   
  다음은 태그입니다.  
   
- [!code-xaml[Win32Clock#AllClockXAML](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Win32Clock/CS/Clock.xaml#allclockxaml)]  
+ [!code-xaml[Win32Clock#AllClockXAML](~/samples/snippets/csharp/VS_Snippets_Wpf/Win32Clock/CS/Clock.xaml#allclockxaml)]  
   
  다음은 함께 제공되는 코드 숨김입니다.  
   
- [!code-csharp[Win32Clock#AllClockCS](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Win32Clock/CS/Clock.xaml.cs#allclockcs)]  
+ [!code-csharp[Win32Clock#AllClockCS](~/samples/snippets/csharp/VS_Snippets_Wpf/Win32Clock/CS/Clock.xaml.cs#allclockcs)]  
   
  최종 결과는 다음과 같습니다.  
   
- ![날짜 및 시간 속성 대화 상자](../../../../docs/framework/wpf/advanced/media/interoparch08.PNG "InteropArch08")  
+ ![날짜 및 시간 속성 대화 상자](./media/interoparch08.PNG "InteropArch08")  
   
  이 스크린샷에서 생성 하는 코드를 최종 결과 비교 하려면 참조 [Win32 시계 상호 운용 샘플](https://go.microsoft.com/fwlink/?LinkID=160051)합니다.  
   
 ## <a name="see-also"></a>참고자료
 - <xref:System.Windows.Interop.HwndSource>
-- [WPF 및 Win32 상호 운용성](../../../../docs/framework/wpf/advanced/wpf-and-win32-interoperation.md)
+- [WPF 및 Win32 상호 운용성](wpf-and-win32-interoperation.md)
 - [Win32 시계 상호 운용 샘플](https://go.microsoft.com/fwlink/?LinkID=160051)
