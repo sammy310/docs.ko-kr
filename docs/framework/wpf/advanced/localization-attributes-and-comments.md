@@ -5,12 +5,12 @@ helpviewer_keywords:
 - localization [WPF], attributes
 - localization [WPF], comments
 ms.assetid: ead2d9ac-b709-4ec1-a924-39927a29d02f
-ms.openlocfilehash: 3032a0ca19f919344a3f73ea8689a222896093f1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 214d2cf369a62f5565ef4b89fd658f6bec4b2fdc
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54523719"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57377102"
 ---
 # <a name="localization-attributes-and-comments"></a>지역화 특성 및 주석
 [!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)] 소스 코드 내의 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 지역화 주석은 속성이며 개발자에 의해 제공되어 지역화에 대한 규칙과 힌트를 제공합니다. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 지역화 주석에는 두 가지 정보 집합(지역화 가능성 특성 및 자유 형식 지역화 주석)이 포함됩니다. 지역화 가능성 특성은 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 지역화 API가 사용하여 지역화할 리소스를 나타냅니다. 자유 형식 주석은 애플리케이션 작성자가 포함하려고 하는 정보입니다.  
@@ -100,7 +100,7 @@ ms.locfileid: "54523719"
  Localization.Comments에는 대상 값에 대한 자유 형식 문자열이 포함됩니다. 애플리케이션 개발자는 애플리케이션 텍스트를 번역하는 방법에 대한 힌트를 지역화 담당자에게 제공하는 정보를 추가할 수 있습니다. 주석 형식은 “()”로 묶인 문자열일 수 있습니다. 문자를 이스케이프하려면 ‘\\’를 사용합니다.  
   
 ## <a name="see-also"></a>참고자료
-- [WPF의 전역화](../../../../docs/framework/wpf/advanced/globalization-for-wpf.md)
-- [자동 레이아웃을 사용하여 단추 만들기](../../../../docs/framework/wpf/advanced/how-to-use-automatic-layout-to-create-a-button.md)
-- [자동 레이아웃에 그리드 사용](../../../../docs/framework/wpf/advanced/how-to-use-a-grid-for-automatic-layout.md)
-- [응용 프로그램 지역화](../../../../docs/framework/wpf/advanced/how-to-localize-an-application.md)
+- [WPF의 전역화](globalization-for-wpf.md)
+- [자동 레이아웃을 사용하여 단추 만들기](how-to-use-automatic-layout-to-create-a-button.md)
+- [자동 레이아웃에 그리드 사용](how-to-use-a-grid-for-automatic-layout.md)
+- [응용 프로그램 지역화](how-to-localize-an-application.md)

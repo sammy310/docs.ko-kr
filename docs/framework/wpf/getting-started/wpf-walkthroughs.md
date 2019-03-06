@@ -5,12 +5,12 @@ helpviewer_keywords:
 - walkthroughs [WPF]
 - WPF walkthroughs [WPF]
 ms.assetid: c29bde96-0389-4aff-a9fb-cd678f66b7f7
-ms.openlocfilehash: 1060e755ff5da3a3ef7f40417054cf0e23241652
-ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
+ms.openlocfilehash: 1ec147d4ec7b59a7ac8e01680266cbd24b644985
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56835267"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57352416"
 ---
 # <a name="wpf-walkthroughs"></a>WPF 연습
 연습에서는 일반적인 시나리오에 대 한 단계별 지침을 제공 합니다. 제품 또는 특정 기능 영역 파악을 효율적으로 시작할 수 있습니다.  
@@ -31,20 +31,20 @@ ms.locfileid: "56835267"
   
 |제목|설명|  
 |-----------|-----------------|  
-|[연습: 내 첫 WPF 데스크톱 애플리케이션](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md)|다양 한 컨트롤, 레이아웃 및 데이터 바인딩을 비롯 한 WPF의 일반적인 기능을 사용 하 여 WPF 응용 프로그램을 만드는 방법을 보여 줍니다.|  
-|[XAML을 사용하여 단추 만들기](../../../../docs/framework/wpf/controls/walkthrough-create-a-button-by-using-xaml.md)|애니메이션된 단추를 만드는 방법을 보여 줍니다.|  
-|[Microsoft Expression Blend를 사용하여 단추 만들기](../../../../docs/framework/wpf/controls/walkthrough-create-a-button-by-using-microsoft-expression-blend.md)|Microsoft Expression Blend를 사용 하 여 사용자 지정된 단추를 만드는 과정을 보여 줍니다.|  
-|[연습: DataGrid 컨트롤에는 SQL Server 데이터베이스에서 데이터를 표시 합니다.](../../../../docs/framework/wpf/controls/walkthrough-display-data-from-a-sql-server-database-in-a-datagrid-control.md)|SQL Server 데이터베이스에서 데이터를 검색 하 고 해당 데이터를 표시 하는 방법을 보여 줍니다는 <xref:System.Windows.Controls.DataGrid> 제어 합니다.|  
+|[연습: 내 첫 WPF 데스크톱 애플리케이션](walkthrough-my-first-wpf-desktop-application.md)|다양 한 컨트롤, 레이아웃 및 데이터 바인딩을 비롯 한 WPF의 일반적인 기능을 사용 하 여 WPF 응용 프로그램을 만드는 방법을 보여 줍니다.|  
+|[XAML을 사용하여 단추 만들기](../controls/walkthrough-create-a-button-by-using-xaml.md)|애니메이션된 단추를 만드는 방법을 보여 줍니다.|  
+|[Microsoft Expression Blend를 사용하여 단추 만들기](../controls/walkthrough-create-a-button-by-using-microsoft-expression-blend.md)|Microsoft Expression Blend를 사용 하 여 사용자 지정된 단추를 만드는 과정을 보여 줍니다.|  
+|[연습: DataGrid 컨트롤에는 SQL Server 데이터베이스에서 데이터를 표시 합니다.](../controls/walkthrough-display-data-from-a-sql-server-database-in-a-datagrid-control.md)|SQL Server 데이터베이스에서 데이터를 검색 하 고 해당 데이터를 표시 하는 방법을 보여 줍니다는 <xref:System.Windows.Controls.DataGrid> 제어 합니다.|  
   
 ## <a name="migration-and-interoperability-in-wpf"></a>마이그레이션 및 wpf에서 상호 운용성  
   
 |제목|설명|  
 |-----------|-----------------|  
-|[연습: WPF에서 Windows Forms 컨트롤 호스팅](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-windows-forms-control-in-wpf.md)|Windows Forms를 호스트 하는 방법을 보여 줍니다 <xref:System.Windows.Forms.MaskedTextBox?displayProperty=nameWithType> WPF 응용 프로그램에서 제어 합니다.|  
-|[연습: WPF에서 Windows Forms 복합 컨트롤 호스팅](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-windows-forms-composite-control-in-wpf.md)|Windows Forms 데이터-항목 복합 컨트롤을 호스트 하는 방법에 설명 된 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 응용 프로그램입니다.|  
-|[연습: Windows Forms에서 WPF 복합 컨트롤 호스팅](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-wpf-composite-control-in-windows-forms.md)|Windows Forms 응용 프로그램에서 WPF 데이터 입력 복합 컨트롤을 호스트 하는 방법을 보여 줍니다.|  
-|[연습: WPF에서 정렬 Windows Forms 컨트롤](../../../../docs/framework/wpf/advanced/walkthrough-arranging-windows-forms-controls-in-wpf.md)|하이브리드 응용 프로그램에서 Windows Forms 컨트롤을 정렬 하려면 WPF 레이아웃 기능을 사용 하는 방법을 보여 줍니다.|  
-|[연습: 하이브리드 응용 프로그램에서 데이터 바인딩](../../../../docs/framework/wpf/advanced/walkthrough-binding-to-data-in-hybrid-applications.md)|Windows Forms와 WPF 컨트롤을 포함 하는 하이브리드 응용 프로그램에서 데이터 바인딩을 사용 하는 방법을 보여 줍니다.|  
+|[연습: WPF에서 Windows Forms 컨트롤 호스팅](../advanced/walkthrough-hosting-a-windows-forms-control-in-wpf.md)|Windows Forms를 호스트 하는 방법을 보여 줍니다 <xref:System.Windows.Forms.MaskedTextBox?displayProperty=nameWithType> WPF 응용 프로그램에서 제어 합니다.|  
+|[연습: WPF에서 Windows Forms 복합 컨트롤 호스팅](../advanced/walkthrough-hosting-a-windows-forms-composite-control-in-wpf.md)|Windows Forms 데이터-항목 복합 컨트롤을 호스트 하는 방법에 설명 된 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 응용 프로그램입니다.|  
+|[연습: Windows Forms에서 WPF 복합 컨트롤 호스팅](../advanced/walkthrough-hosting-a-wpf-composite-control-in-windows-forms.md)|Windows Forms 응용 프로그램에서 WPF 데이터 입력 복합 컨트롤을 호스트 하는 방법을 보여 줍니다.|  
+|[연습: WPF에서 정렬 Windows Forms 컨트롤](../advanced/walkthrough-arranging-windows-forms-controls-in-wpf.md)|하이브리드 응용 프로그램에서 Windows Forms 컨트롤을 정렬 하려면 WPF 레이아웃 기능을 사용 하는 방법을 보여 줍니다.|  
+|[연습: 하이브리드 응용 프로그램에서 데이터 바인딩](../advanced/walkthrough-binding-to-data-in-hybrid-applications.md)|Windows Forms와 WPF 컨트롤을 포함 하는 하이브리드 응용 프로그램에서 데이터 바인딩을 사용 하는 방법을 보여 줍니다.|  
   
 ## <a name="related-sections"></a>관련 단원  
   

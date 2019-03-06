@@ -15,12 +15,12 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: 9afbf0665b114169661a74b60c744203d160fed3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8d0494e53705493de814ed4d4caa869e1e8a700f
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54662623"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57374572"
 ---
 # <a name="ixclrdataprocessstartenummethodinstancesbyaddress-method"></a>IXCLRDataProcess::StartEnumMethodInstancesByAddress 메서드
 
@@ -40,11 +40,14 @@ HRESULT StartEnumMethodInstancesByAddress(
 
 ### <a name="parameters"></a>매개 변수
 
-`address` [in] 첫 번째 메서드 인스턴스의 주소입니다.
+`address`\
+[in] 첫 번째 메서드 인스턴스의 주소입니다.
 
-`appDomain` [in] 메서드 인스턴스의 AppDomain 합니다.
+`appDomain`\
+[in] 메서드 인스턴스의 AppDomain 합니다.
 
-`handle` [out] 메서드 인스턴스를 열거 하는 것에 대 한 핸들입니다.
+`handle`\
+[out] 메서드 인스턴스를 열거 하는 것에 대 한 핸들입니다.
 
 ## <a name="remarks"></a>설명
 
@@ -59,6 +62,6 @@ HRESULT StartEnumMethodInstancesByAddress(
 
 ## <a name="see-also"></a>참고자료
 
-- [CLRDataSourceType 열거형](../../../../docs/framework/unmanaged-api/debugging/clrdatasourcetype-enumeration.md)
-- [디버깅](../../../../docs/framework/unmanaged-api/debugging/index.md)
-- [IXCLRDataProcess 인터페이스](../../../../docs/framework/unmanaged-api/debugging/ixclrdataprocess-interface.md)
+- [CLRDataSourceType 열거형](clrdatasourcetype-enumeration.md)
+- [디버깅](index.md)
+- [IXCLRDataProcess 인터페이스](ixclrdataprocess-interface.md)

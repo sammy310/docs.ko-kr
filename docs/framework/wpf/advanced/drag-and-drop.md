@@ -8,21 +8,21 @@ helpviewer_keywords:
 - drag and drop [WPF]
 - drag-and-drop [WPF]
 ms.assetid: 77c48920-8c8b-41eb-8fe8-b411962c8623
-ms.openlocfilehash: 084354f2c567716c2ca083dddb4cd6628334d603
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4a0e7cac9262908e4683aebeb653559c1513d4d9
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33542576"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57367468"
 ---
 # <a name="drag-and-drop"></a>끌어서 놓기
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 매우 유연한 끌어서 놓기 인프라를 끌어서 놓기를 데이터 둘 다 지 원하는 제공 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 응용 프로그램 뿐만 아니라 다른 [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] 응용 프로그램입니다.  
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 제공 하는 매우 유연 끌어서 놓기 인프라 내에서 모두 데이터 놓는 지 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 응용 프로그램 뿐만 아니라 다른 [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] 응용 프로그램입니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
- [끌어서 놓기 개요](../../../../docs/framework/wpf/advanced/drag-and-drop-overview.md)  
- [데이터 및 데이터 개체](../../../../docs/framework/wpf/advanced/data-and-data-objects.md)  
- [연습: 사용자 정의 컨트롤에서 끌어서 놓기 사용](../../../../docs/framework/wpf/advanced/walkthrough-enabling-drag-and-drop-on-a-user-control.md)  
- [방법 항목](../../../../docs/framework/wpf/advanced/drag-and-drop-how-to-topics.md)  
+ [끌어서 놓기 개요](drag-and-drop-overview.md)  
+ [데이터 및 데이터 개체](data-and-data-objects.md)  
+ [연습: 끌어서 놓기 사용자 컨트롤에서 사용](walkthrough-enabling-drag-and-drop-on-a-user-control.md)  
+ [방법 항목](drag-and-drop-how-to-topics.md)  
   
 ## <a name="reference"></a>참조  
  <xref:System.Windows.DataFormat>  

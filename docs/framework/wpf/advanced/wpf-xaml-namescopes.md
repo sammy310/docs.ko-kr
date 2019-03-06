@@ -10,12 +10,12 @@ helpviewer_keywords:
 - XAML [WPF], namescopes
 - classes [WPF], FrameworkContentElement
 ms.assetid: 52bbf4f2-15fc-40d4-837b-bb4c21ead7d4
-ms.openlocfilehash: 52fc542996f2fe691b62aeff5296e045643fcc7f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f5a49198d6f55c9a3aa3c7557a96ab791d54351b
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54498348"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57366753"
 ---
 # <a name="wpf-xaml-namescopes"></a>WPF XAML 이름 범위
 XAML 이름 범위는 XAML에 정의된 개체를 식별하는 개념입니다. XAML 이름 범위의 이름은 XAML로 정의된 개체 이름과 개체 트리에서 그에 해당하는 인스턴스 간의 관계를 설정하는 데 사용할 수 있습니다. 일반적으로 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 관리 코드의 XAML 이름 범위는 XAML 애플리케이션의 개별 XAML 페이지 루트를 로드할 때 만들어집니다. XAML 이름 범위를 프로그래밍 개체로 정의한 합니다 <xref:System.Windows.Markup.INameScope> 인터페이스 및 실제 클래스에 의해 구현 됩니다 <xref:System.Windows.NameScope>합니다.  
@@ -36,7 +36,7 @@ XAML 이름 범위는 XAML에 정의된 개체를 식별하는 개념입니다. 
 ### <a name="adding-objects-to-runtime-object-trees"></a>런타임 개체 트리에 개체 추가  
  XAML이 구문 분석되는 시점은 WPF XAML 이름 범위가 만들어지고 정의되는 시점입니다. 개체 트리를 생성한 XAML이 구문 분석된 후에 개체 트리에 개체를 추가할 경우에는 새 개체의 `Name` 또는 `x:Name` 값에 따라 XAML 이름 범위의 정보가 자동으로 업데이트되지 않습니다. 추가할 개체의 이름을 WPF XAML 이름 범위에 XAML 로드 된 후의 적절 한 구현을 호출 해야 <xref:System.Windows.Markup.INameScope.RegisterName%2A> XAML 이름 범위를 정의 하는 개체에는 일반적으로 XAML 페이지 루트입니다. 이름을 등록 하지 않은 경우 추가 된 개체 수 없습니다. 이름으로 참조할 수 메서드를 통해 같은 <xref:System.Windows.FrameworkElement.FindName%2A>를 애니메이션 대상 지정에 해당 이름을 사용할 수 없습니다.  
   
- 응용 프로그램 개발자를 위한 가장 일반적인 시나리오는 사용할 <xref:System.Windows.FrameworkElement.RegisterName%2A> 페이지의 현재 루트에 XAML 이름 범위에 이름을 등록할 수 있습니다. <xref:System.Windows.FrameworkElement.RegisterName%2A> 스토리 보드에 대 한 중요 한 시나리오인의 일부 개체를 애니메이션 대상입니다. 자세한 내용은 [스토리보드 개요](../../../../docs/framework/wpf/graphics-multimedia/storyboards-overview.md)를 참조하세요.  
+ 응용 프로그램 개발자를 위한 가장 일반적인 시나리오는 사용할 <xref:System.Windows.FrameworkElement.RegisterName%2A> 페이지의 현재 루트에 XAML 이름 범위에 이름을 등록할 수 있습니다. <xref:System.Windows.FrameworkElement.RegisterName%2A> 스토리 보드에 대 한 중요 한 시나리오인의 일부 개체를 애니메이션 대상입니다. 자세한 내용은 [스토리보드 개요](../graphics-multimedia/storyboards-overview.md)를 참조하세요.  
   
  호출 하는 경우 <xref:System.Windows.FrameworkElement.RegisterName%2A> XAML 이름 범위를 정의 하는 개체 이외의 개체에서 이름에 여전히 등록 되어 호출 하는 개체 내에서 보유 하는 XAML 이름 범위에 호출한 것 처럼 <xref:System.Windows.FrameworkElement.RegisterName%2A> 개체를 정의 하는 XAML 이름 범위에 있습니다.  
   
@@ -49,7 +49,7 @@ XAML 이름 범위는 XAML에 정의된 개체를 식별하는 개념입니다. 
   
  개체를 제공 하는 경우 `dependencyObject` 에 대 한 <xref:System.Windows.NameScope.SetNameScope%2A> 아닙니다를 <xref:System.Windows.Markup.INameScope> 구현 <xref:System.Windows.FrameworkElement> 또는 <xref:System.Windows.FrameworkContentElement>호출, <xref:System.Windows.FrameworkElement.RegisterName%2A> 요소의 모든 자식에 영향을 주지 것입니다. 새 XAML 이름 범위를 명시적으로 만들지 못한 경우, 다음 호출을 <xref:System.Windows.FrameworkElement.RegisterName%2A> 예외가 발생 합니다.  
   
- 코드에서 XAML 이름 범위 API를 사용하는 예제를 보려면 [이름 범위 정의](../../../../docs/framework/wpf/graphics-multimedia/how-to-define-a-name-scope.md)를 참조하세요.  
+ 코드에서 XAML 이름 범위 API를 사용하는 예제를 보려면 [이름 범위 정의](../graphics-multimedia/how-to-define-a-name-scope.md)를 참조하세요.  
   
 <a name="Namescopes_in_Styles_and_Templates"></a>   
 ## <a name="xaml-namescopes-in-styles-and-templates"></a>스타일 및 템플릿의 XAML 이름 범위  
@@ -57,7 +57,7 @@ XAML 이름 범위는 XAML에 정의된 개체를 식별하는 개념입니다. 
   
  다음 예제를 참조하세요.  
   
- [!code-xaml[XamlOvwSupport#NameScopeTemplates](../../../../samples/snippets/csharp/VS_Snippets_Wpf/XAMLOvwSupport/CSharp/page6.xaml#namescopetemplates)]  
+ [!code-xaml[XamlOvwSupport#NameScopeTemplates](~/samples/snippets/csharp/VS_Snippets_Wpf/XAMLOvwSupport/CSharp/page6.xaml#namescopetemplates)]  
   
  여기에서는 두 개의 단추에 동일한 템플릿이 적용됩니다. 템플릿에 개별 XAML 이름 범위가 없으면 템플릿에 사용된 `TheBorder` 이름 때문에 XAML 이름 범위에서 이름 충돌이 발생합니다. 템플릿의 각 인스턴스에는 고유한 XAML 이름 범위가 있으므로 이 예제에서 인스턴스화된 각 템플릿의 XAML 이름 범위에는 정확하게 하나의 이름만 포함됩니다.  
   
@@ -97,5 +97,5 @@ XAML 이름 범위는 XAML에 정의된 개체를 식별하는 개념입니다. 
 -   <xref:System.Windows.FrameworkContentElement>  
   
 ## <a name="see-also"></a>참고자료
-- [WPF XAML을 위한 XAML 네임스페이스 및 네임스페이스 매핑](../../../../docs/framework/wpf/advanced/xaml-namespaces-and-namespace-mapping-for-wpf-xaml.md)
-- [x:Name 지시문](../../../../docs/framework/xaml-services/x-name-directive.md)
+- [WPF XAML을 위한 XAML 네임스페이스 및 네임스페이스 매핑](xaml-namespaces-and-namespace-mapping-for-wpf-xaml.md)
+- [x:Name 지시문](../../xaml-services/x-name-directive.md)

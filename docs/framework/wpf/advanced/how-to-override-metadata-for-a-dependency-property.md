@@ -9,12 +9,12 @@ helpviewer_keywords:
 - dependency properties [WPF], overriding metadata for
 - overriding metadata for dependency properties [WPF]
 ms.assetid: f90f026e-60d8-428a-933d-edf0dba4441f
-ms.openlocfilehash: ba2f98d262f5c43dbd0c07d356556cdc3ec4b8dc
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5d2d692984bef34569b2c4bb80c3fb072e4c3f79
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54589755"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57365882"
 ---
 # <a name="how-to-override-metadata-for-a-dependency-property"></a>방법: 종속성 속성의 메타데이터 재정의
 호출 하 여 상속된 된 클래스에서 제공 되는 기본 종속성 속성 메타 데이터를 재정의 하는 방법을 보여 주는이 예제는 <xref:System.Windows.DependencyProperty.OverrideMetadata%2A> 메서드와 형식별 메타 데이터를 제공 합니다.  
@@ -26,13 +26,13 @@ ms.locfileid: "54589755"
   
  다음 예제에서는 사용자 정의 클래스 `MyAdvancedStateControl`은 `MyAdvancedStateControl`에 의해 `StateProperty`에 제공된 메타데이터를 새 속성 메타데이터로 재정의합니다. 예를 들어 새로 생성된 `MyAdvancedStateControl` 인스턴스에서 속성을 쿼리하면 `StateProperty`의 기본값이 `true`가 됩니다.  
   
- [!code-csharp[PropertySystemEsoterics#MyStateControl](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PropertySystemEsoterics/CSharp/SDKSampleLibrary/class1.cs#mystatecontrol)]
- [!code-vb[PropertySystemEsoterics#MyStateControl](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/PropertySystemEsoterics/visualbasic/sdksamplelibrary/class1.vb#mystatecontrol)]  
-[!code-csharp[PropertySystemEsoterics#MyAdvancedStateControl](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PropertySystemEsoterics/CSharp/SDKSampleLibrary/class1.cs#myadvancedstatecontrol)]
-[!code-vb[PropertySystemEsoterics#MyAdvancedStateControl](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/PropertySystemEsoterics/visualbasic/sdksamplelibrary/class1.vb#myadvancedstatecontrol)]  
+ [!code-csharp[PropertySystemEsoterics#MyStateControl](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertySystemEsoterics/CSharp/SDKSampleLibrary/class1.cs#mystatecontrol)]
+ [!code-vb[PropertySystemEsoterics#MyStateControl](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PropertySystemEsoterics/visualbasic/sdksamplelibrary/class1.vb#mystatecontrol)]  
+[!code-csharp[PropertySystemEsoterics#MyAdvancedStateControl](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertySystemEsoterics/CSharp/SDKSampleLibrary/class1.cs#myadvancedstatecontrol)]
+[!code-vb[PropertySystemEsoterics#MyAdvancedStateControl](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PropertySystemEsoterics/visualbasic/sdksamplelibrary/class1.vb#myadvancedstatecontrol)]  
   
 ## <a name="see-also"></a>참고자료
 - <xref:System.Windows.DependencyProperty>
-- [종속성 속성 개요](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)
-- [사용자 지정 종속성 속성](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md)
-- [방법 항목](../../../../docs/framework/wpf/advanced/properties-how-to-topics.md)
+- [종속성 속성 개요](dependency-properties-overview.md)
+- [사용자 지정 종속성 속성](custom-dependency-properties.md)
+- [방법 항목](properties-how-to-topics.md)

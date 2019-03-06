@@ -9,15 +9,15 @@ helpviewer_keywords:
 - styles [WPF], NavigationWindow
 - templates [WPF], NavigationWindow
 ms.assetid: 3656055e-3222-43c8-b868-fd0c90cc31a3
-ms.openlocfilehash: 469788cd172c8a695c6a7538f4b2fb7665a8e92f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 586af00dee64cdc9eae1a9c927d079502b0b009a
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54660998"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57363486"
 ---
 # <a name="navigationwindow-styles-and-templates"></a>NavigationWindow 스타일 및 템플릿
-이 항목에서는 스타일 및 템플릿에 대해 설명 합니다 <xref:System.Windows.Navigation.NavigationWindow> 제어 합니다. 기본값을 수정할 수 있습니다 <xref:System.Windows.Controls.ControlTemplate> 고유한 모양을 제어할 수 있습니다. 자세한 내용은 [ControlTemplate을 만들어 기존 컨트롤의 모양 사용자 지정](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md)을 참조하세요.  
+이 항목에서는 스타일 및 템플릿에 대해 설명 합니다 <xref:System.Windows.Navigation.NavigationWindow> 제어 합니다. 기본값을 수정할 수 있습니다 <xref:System.Windows.Controls.ControlTemplate> 고유한 모양을 제어할 수 있습니다. 자세한 내용은 [ControlTemplate을 만들어 기존 컨트롤의 모양 사용자 지정](customizing-the-appearance-of-an-existing-control.md)을 참조하세요.  
   
 ## <a name="navigationwindow-parts"></a>NavigationWindow 파트  
  다음 표에서 대 한 명명된 된 파트를 <xref:System.Windows.Navigation.NavigationWindow> 제어 합니다.  
@@ -38,19 +38,19 @@ ms.locfileid: "54660998"
 ## <a name="navigationwindow-controltemplate-example"></a>NavigationWindow ControlTemplate 예제  
  이 예제에서는 모든 요소에 정의 된 포함 하지만 합니다 <xref:System.Windows.Controls.ControlTemplate> 의 <xref:System.Windows.Navigation.NavigationWindow> 기본적으로 특정 값을 생각해 야 예제로 합니다.  
   
- [!code-xaml[ControlTemplateExamples#NavigationWindow](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/navigationwindow.xaml#navigationwindow)]  
+ [!code-xaml[ControlTemplateExamples#NavigationWindow](~/samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/navigationwindow.xaml#navigationwindow)]  
   
  앞의 예제에서는 다음 리소스를 하나 이상 사용합니다.  
   
- [!code-xaml[ControlTemplateExamples#ResizeGrip](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/resizegrip.xaml#resizegrip)]  
-[!code-xaml[ControlTemplateExamples#Resources](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/shared.xaml#resources)]  
+ [!code-xaml[ControlTemplateExamples#ResizeGrip](~/samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/resizegrip.xaml#resizegrip)]  
+[!code-xaml[ControlTemplateExamples#Resources](~/samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/shared.xaml#resources)]  
   
  전체 샘플을 보려면 [Styling with ControlTemplates Sample](https://github.com/Microsoft/WPF-Samples/tree/master/Styles%20&%20Templates/IntroToStylingAndTemplating)(ControlTemplate으로 스타일 지정 샘플)을 참조하세요.  
   
 ## <a name="see-also"></a>참고자료
 - <xref:System.Windows.FrameworkElement.Style%2A>
 - <xref:System.Windows.Controls.ControlTemplate>
-- [Control 스타일 및 템플릿](../../../../docs/framework/wpf/controls/control-styles-and-templates.md)
-- [컨트롤 사용자 지정](../../../../docs/framework/wpf/controls/control-customization.md)
-- [스타일 지정 및 템플릿](../../../../docs/framework/wpf/controls/styling-and-templating.md)
-- [ControlTemplate을 만들어 기존 컨트롤의 모양 사용자 지정](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md)
+- [Control 스타일 및 템플릿](control-styles-and-templates.md)
+- [컨트롤 사용자 지정](control-customization.md)
+- [스타일 지정 및 템플릿](styling-and-templating.md)
+- [ControlTemplate을 만들어 기존 컨트롤의 모양 사용자 지정](customizing-the-appearance-of-an-existing-control.md)

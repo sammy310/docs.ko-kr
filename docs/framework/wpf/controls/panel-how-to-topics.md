@@ -7,21 +7,21 @@ helpviewer_keywords:
 - Panel control [WPF], how-to topics
 - controls [WPF], Panel
 ms.assetid: 28d8faf2-490c-4e17-a447-df25a66f6679
-ms.openlocfilehash: 309a5df174a2366fda411678d95a9701dcebb9cc
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
+ms.openlocfilehash: a0cb1e0b569fb69adf1e474ca3666d5e387274ce
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56747920"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57366246"
 ---
 # <a name="panel-how-to-topics"></a>Panel 방법 항목
 이 섹션의에서 항목에서는 사용 하는 방법에 설명 합니다 <xref:System.Windows.Controls.Panel> 요소 및 관련 [!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)]합니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
- [사용자 지정 패널 요소 만들기](../../../../docs/framework/wpf/controls/how-to-create-a-custom-panel-element.md)  
- [Panel의 OnRender 메서드 재정의](../../../../docs/framework/wpf/controls/how-to-override-the-panel-onrender-method.md)  
- [요소의 높이 속성 설정](../../../../docs/framework/wpf/controls/how-to-set-the-height-properties-of-an-element.md)  
- [요소의 너비 속성 설정](../../../../docs/framework/wpf/controls/how-to-set-the-width-properties-of-an-element.md)  
+ [사용자 지정 패널 요소 만들기](how-to-create-a-custom-panel-element.md)  
+ [Panel의 OnRender 메서드 재정의](how-to-override-the-panel-onrender-method.md)  
+ [요소의 높이 속성 설정](how-to-set-the-height-properties-of-an-element.md)  
+ [요소의 너비 속성 설정](how-to-set-the-width-properties-of-an-element.md)  
   
 ## <a name="reference"></a>참조  
  <xref:System.Windows.Controls.Panel>  
@@ -39,8 +39,8 @@ ms.locfileid: "56747920"
  <xref:System.Windows.Controls.WrapPanel>  
   
 ## <a name="related-sections"></a>관련 단원  
- [레이아웃](../../../../docs/framework/wpf/advanced/layout.md)  
+ [레이아웃](../advanced/layout.md)  
   
- [연습: 내 첫 WPF 데스크톱 애플리케이션](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md)  
+ [연습: 내 첫 WPF 데스크톱 애플리케이션](../getting-started/walkthrough-my-first-wpf-desktop-application.md)  
   
- [ScrollViewer 개요](../../../../docs/framework/wpf/controls/scrollviewer-overview.md)
+ [ScrollViewer 개요](scrollviewer-overview.md)

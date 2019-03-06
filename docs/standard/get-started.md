@@ -28,8 +28,8 @@ ms.locfileid: "53765218"
 ## <a name="get-started-using-net-core"></a>.NET Core를 사용하여 시작
 
 * [.NET Core 시작](../core/get-started.md)문서에서는 다양한 운영 체제에서 여러 도구를 사용하여 .NET Core를 시작하는 방법을 대략적으로 설명합니다.
-* [.NET Core 자습서](../core/tutorials/index.md)에서는 다양한 운영 체제와 선택한 도구를 사용하여 .NET Core를 시작하는 여러 가지 방법을 자세히 설명합니다.
 
+* [.NET Core 자습서](../core/tutorials/index.md)에서는 다양한 운영 체제와 선택한 도구를 사용하여 .NET Core를 시작하는 여러 가지 방법을 자세히 설명합니다.
 
 ## <a name="get-started-using-docker-on-net-framework"></a>.NET Framework에서 Docker를 사용하여 시작
 

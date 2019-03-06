@@ -8,12 +8,12 @@ helpviewer_keywords:
 - interoperability [WPF], Windows Forms
 - WindowsFormsHost element property mapping [WPF]
 ms.assetid: 999d8298-9c04-467d-a453-86e41002057d
-ms.openlocfilehash: 9e2cd55d0d5eb453ad5d29b707a14b9894d40089
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1274724e1cd93f5788840978b583e4bf05c06bb2
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54493705"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57358563"
 ---
 # <a name="windows-forms-and-wpf-property-mapping"></a>Windows Forms 및 WPF 속성 매핑
 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 및 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 기술을 두 가지 서로 유사 하지만 다른 속성 모델이 포함 됩니다. *속성 매핑* 두 아키텍처 간의 상호 운용을 지원 하며 다음 기능을 제공 합니다.  
@@ -49,7 +49,7 @@ ms.locfileid: "54493705"
   
  컨테이너 요소에 연결 된 속성에서 완전히 지원 되는 <xref:System.Windows.Forms.Integration.WindowsFormsHost> 요소입니다.  
   
- 자세한 내용은 [연습: WindowsFormsHost 요소를 사용 하 여 속성 매핑](../../../../docs/framework/wpf/advanced/walkthrough-mapping-properties-using-the-windowsformshost-element.md)합니다.  
+ 자세한 내용은 [연습: WindowsFormsHost 요소를 사용 하 여 속성 매핑](walkthrough-mapping-properties-using-the-windowsformshost-element.md)합니다.  
   
 ## <a name="updates-to-parent-properties"></a>부모 속성에 대 한 업데이트  
  대부분의 부모 속성 변경으로 인해 호스팅된 자식 컨트롤에는 알림입니다. 다음은 해당 값 변경 알림이 발생 하지는 속성을 설명 합니다.  
@@ -117,7 +117,7 @@ ms.locfileid: "54493705"
   
  <xref:System.Windows.Forms.Integration.ElementHost> 컨트롤에 기본 변환 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 속성을 해당 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 다음 변환 표를 사용 하 여 해당 합니다.  
   
- 자세한 내용은 [연습: ElementHost 컨트롤을 사용 하 여 속성 매핑](../../../../docs/framework/wpf/advanced/walkthrough-mapping-properties-using-the-elementhost-control.md)합니다.  
+ 자세한 내용은 [연습: ElementHost 컨트롤을 사용 하 여 속성 매핑](walkthrough-mapping-properties-using-the-elementhost-control.md)합니다.  
   
 |Windows Forms 호스팅|Windows Presentation Foundation|상호 운용성 동작|  
 |---------------------------|-------------------------------------|-----------------------------|  
@@ -137,7 +137,7 @@ ms.locfileid: "54493705"
 ## <a name="see-also"></a>참고자료
 - <xref:System.Windows.Forms.Integration.ElementHost>
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost>
-- [WPF 및 Win32 상호 운용성](../../../../docs/framework/wpf/advanced/wpf-and-win32-interoperation.md)
-- [WPF 및 Windows Forms 상호 운용성](../../../../docs/framework/wpf/advanced/wpf-and-windows-forms-interoperation.md)
-- [연습: WindowsFormsHost 요소를 사용 하 여 속성 매핑](../../../../docs/framework/wpf/advanced/walkthrough-mapping-properties-using-the-windowsformshost-element.md)
-- [연습: ElementHost 컨트롤을 사용 하 여 속성 매핑](../../../../docs/framework/wpf/advanced/walkthrough-mapping-properties-using-the-elementhost-control.md)
+- [WPF 및 Win32 상호 운용성](wpf-and-win32-interoperation.md)
+- [WPF 및 Windows Forms 상호 운용성](wpf-and-windows-forms-interoperation.md)
+- [연습: WindowsFormsHost 요소를 사용 하 여 속성 매핑](walkthrough-mapping-properties-using-the-windowsformshost-element.md)
+- [연습: ElementHost 컨트롤을 사용 하 여 속성 매핑](walkthrough-mapping-properties-using-the-elementhost-control.md)

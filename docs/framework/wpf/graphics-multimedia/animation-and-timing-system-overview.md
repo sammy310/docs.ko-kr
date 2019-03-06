@@ -5,23 +5,23 @@ helpviewer_keywords:
 - timing system [WPF]
 - animation [WPF]
 ms.assetid: 172cd5a8-a333-4c81-9456-fafccc19f382
-ms.openlocfilehash: e50714e8cf50f42aad41ffa77fda34c55f9adb4a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 36a71213b2c96d2ea1aa7597216f420f47493f43
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54502989"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57360513"
 ---
 # <a name="animation-and-timing-system-overview"></a>애니메이션 및 타이밍 시스템 개요
 이 항목에서는 타이밍 시스템이 애니메이션을 사용 하는 방법에 대해 설명 합니다. <xref:System.Windows.Media.Animation.Timeline>, 및 <xref:System.Windows.Media.Animation.Clock> 클래스 속성에 애니메이션 효과를 합니다.  
   
 <a name="prerequisites"></a>   
 ## <a name="prerequisites"></a>전제 조건  
- 이 항목을 이해하려면 [애니메이션 개요](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)에 설명된 대로 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 애니메이션을 사용하여 속성에 애니메이션 효과를 줄 수 있어야 합니다. 종속성 속성에 익숙한 것도 도움이 됩니다. 자세한 내용은 [종속성 속성 개요](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)를 참조하세요.  
+ 이 항목을 이해하려면 [애니메이션 개요](animation-overview.md)에 설명된 대로 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 애니메이션을 사용하여 속성에 애니메이션 효과를 줄 수 있어야 합니다. 종속성 속성에 익숙한 것도 도움이 됩니다. 자세한 내용은 [종속성 속성 개요](../advanced/dependency-properties-overview.md)를 참조하세요.  
   
 <a name="timelinesandclocks"></a>   
 ## <a name="timelines-and-clocks"></a>타임라인 및 시계  
- [애니메이션 개요](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md) 하는 방법을 설명를 <xref:System.Windows.Media.Animation.Timeline> 나타냅니다 시간과 애니메이션의 세그먼트는 형식입니다 <xref:System.Windows.Media.Animation.Timeline> 출력 값을 생성 합니다. 자체적으로 <xref:System.Windows.Media.Animation.Timeline>, 이외의 아무 것도 수행 하지 시간의 세그먼트를 설명 하는 것입니다. 타임 라인의 <xref:System.Windows.Media.Animation.Clock> 실제 작업을 수행 하는 개체입니다. 마찬가지로 애니메이션 하지 실제로 속성 애니메이션 효과 주기: 애니메이션 클래스는 출력 값 계산 수 해야 하는 방법에 대해 설명 합니다. 이지만 <xref:System.Windows.Media.Animation.Clock> 애니메이션 속성에 적용 하는 애니메이션 출력 드라이브에 대해 생성 된 합니다.  
+ [애니메이션 개요](animation-overview.md) 하는 방법을 설명를 <xref:System.Windows.Media.Animation.Timeline> 나타냅니다 시간과 애니메이션의 세그먼트는 형식입니다 <xref:System.Windows.Media.Animation.Timeline> 출력 값을 생성 합니다. 자체적으로 <xref:System.Windows.Media.Animation.Timeline>, 이외의 아무 것도 수행 하지 시간의 세그먼트를 설명 하는 것입니다. 타임 라인의 <xref:System.Windows.Media.Animation.Clock> 실제 작업을 수행 하는 개체입니다. 마찬가지로 애니메이션 하지 실제로 속성 애니메이션 효과 주기: 애니메이션 클래스는 출력 값 계산 수 해야 하는 방법에 대해 설명 합니다. 이지만 <xref:System.Windows.Media.Animation.Clock> 애니메이션 속성에 적용 하는 애니메이션 출력 드라이브에 대해 생성 된 합니다.  
   
  A <xref:System.Windows.Media.Animation.Clock> 는 특수 유형의 개체에 대 한 타이밍 관련 런타임 상태를 유지 하는 <xref:System.Windows.Media.Animation.Timeline>합니다. 애니메이션 및 타이밍 시스템에 필수적인 3 개의 비트 정보를 제공 합니다. <xref:System.Windows.Media.Animation.Clock.CurrentTime%2A>, <xref:System.Windows.Media.Animation.Clock.CurrentProgress%2A>, 및 <xref:System.Windows.Media.Animation.Clock.CurrentState%2A>합니다. A <xref:System.Windows.Media.Animation.Clock> 에 설명 된 타이밍 동작을 사용 하 여 해당 현재 시간, 진행률 및 상태를 확인 해당 <xref:System.Windows.Media.Animation.Timeline>: <xref:System.Windows.Media.Animation.Timeline.Duration%2A>를 <xref:System.Windows.Media.Animation.Timeline.RepeatBehavior%2A>, <xref:System.Windows.Media.Animation.Timeline.AutoReverse%2A>등입니다.  
   
@@ -46,7 +46,7 @@ ms.locfileid: "54502989"
   
  다음 그림에서는 시간 관리자 간의 관계를 보여 줍니다. 및 <xref:System.Windows.Media.Animation.AnimationClock>, 및 애니메이션된 종속성 속성입니다.  
   
- ![타이밍 시스템 구성 요소](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-clocks-1clock1prop.png "graphicsmm_clocks_1clock1prop")  
+ ![타이밍 시스템 구성 요소](./media/graphicsmm-clocks-1clock1prop.png "graphicsmm_clocks_1clock1prop")  
 속성에 애니메이션 효과 주기  
   
  시간 관리자에서 틱의 시간 업데이트 마다 <xref:System.Windows.Media.Animation.ClockState.Active> <xref:System.Windows.Media.Animation.Clock> 응용 프로그램에서입니다. 경우는 <xref:System.Windows.Media.Animation.Clock> 는 <xref:System.Windows.Media.Animation.AnimationClock>를 사용 하 여는 <xref:System.Windows.Media.Animation.AnimationTimeline.GetCurrentValue%2A> 메서드의 <xref:System.Windows.Media.Animation.AnimationTimeline> 에서 생성 된 현재 계산 출력 값입니다. 합니다 <xref:System.Windows.Media.Animation.AnimationClock> 제공 된 <xref:System.Windows.Media.Animation.AnimationTimeline> 현재 현지 시간, 일반적으로 속성의 기준 값 이므로 입력된 값 및 기본 대상 값을 사용 하 여 합니다. 애니메이션의 값을 검색 하는 경우 속성을 사용 하 여 합니다 <xref:System.Windows.DependencyObject.GetValue%2A> 의 출력을 가져오려면 메서드 또는 해당 CLR 접근자에 해당 <xref:System.Windows.Media.Animation.AnimationClock>합니다.  
@@ -54,13 +54,13 @@ ms.locfileid: "54502989"
 #### <a name="clock-groups"></a>시계 그룹  
  이전 섹션의 다른 형식은 어떻게 설명 <xref:System.Windows.Media.Animation.Clock> 다양 한 유형의 타임 라인에 대 한 개체입니다. 다음 그림에서는 시간 관리자 간의 관계를 보여 줍니다.는 <xref:System.Windows.Media.Animation.ClockGroup>, <xref:System.Windows.Media.Animation.AnimationClock>, 및 애니메이션된 종속성 속성입니다. A <xref:System.Windows.Media.Animation.ClockGroup> 와 같은 다른 타임 라인을 그룹화 하는 타임 라인에 대해 생성 됩니다는 <xref:System.Windows.Media.Animation.Storyboard> 애니메이션 및 다른 타임 라인을 그룹화 하는 클래스입니다.  
   
- ![타이밍 시스템 구성 요소](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-clocks-2clock1clockgroup2prop.png "graphicsmm_clocks_2clock1clockgroup2prop")  
+ ![타이밍 시스템 구성 요소](./media/graphicsmm-clocks-2clock1clockgroup2prop.png "graphicsmm_clocks_2clock1clockgroup2prop")  
 ClockGroup  
   
 #### <a name="composition"></a>컴퍼지션  
  여러 시계를 단일 속성에 연결할 수 있습니다. 이 경우 각 시계에서 이전 시계의 출력 값을 기준 값으로 사용합니다. 다음 그림에서는 3 개의 <xref:System.Windows.Media.Animation.AnimationClock> 동일한 속성에 적용 하는 개체입니다. Clock1은 애니메이션 속성의 기준 값을 해당 입력으로 사용하고 이를 사용하여 출력을 생성합니다. Clock2는 Clock1의 출력을 입력으로 받고 이를 사용하여 출력을 생성합니다. Clock3은 Clock2의 출력을 입력으로 받고 이를 사용하여 출력을 생성합니다. 여러 시계가 같은 속성에 동시에 영향을 주는 경우 컴퍼지션 체인에 있다고 합니다.  
   
- ![타이밍 시스템 구성 요소](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-clocks-2clock1prop.png "graphicsmm_clocks_2clock1prop")  
+ ![타이밍 시스템 구성 요소](./media/graphicsmm-clocks-2clock1prop.png "graphicsmm_clocks_2clock1prop")  
 컴퍼지션 체인  
   
  입력과 출력 간의 관계가 만들어져 있지만 <xref:System.Windows.Media.Animation.AnimationClock> 개체 컴퍼지션 체인에 해당 타이밍 동작은 영향을 받지 않습니다. <xref:System.Windows.Media.Animation.Clock> 개체 (포함 <xref:System.Windows.Media.Animation.AnimationClock> 개체)는 부모에 대 한 계층적 종속성 <xref:System.Windows.Media.Animation.Clock> 개체입니다.  
@@ -74,7 +74,7 @@ ClockGroup
   
  경우는 <xref:System.Windows.Media.Animation.Clock> 상태를 전환 하 고 틱 간의 원래 상태로 반환 (에서 변경 하는 등 <xref:System.Windows.Media.Animation.ClockState.Active> 에 <xref:System.Windows.Media.Animation.ClockState.Stopped> 하 고 다시 <xref:System.Windows.Media.Animation.ClockState.Active>), 연결된 된 이벤트가 계속 발생 합니다.  
   
- 타이밍 이벤트에 대한 자세한 내용은 [타이밍 이벤트 개요](../../../../docs/framework/wpf/graphics-multimedia/timing-events-overview.md)를 참조하세요.  
+ 타이밍 이벤트에 대한 자세한 내용은 [타이밍 이벤트 개요](timing-events-overview.md)를 참조하세요.  
   
 <a name="currentvaluesbasevaluesofproperties"></a>   
 ## <a name="current-values-and-base-values-of-properties"></a>속성의 현재 값 및 기준 값  
@@ -83,6 +83,6 @@ ClockGroup
  속성에 애니메이션 효과 주는 경우 합니다 <xref:System.Windows.Media.Animation.AnimationClock> 속성의 설정 *현재* 값입니다. 해당 CLR 접근자를 통해 속성의 값을 검색 또는 <xref:System.Windows.DependencyObject.GetValue%2A> 의 출력을 반환 하는 메서드를 <xref:System.Windows.Media.Animation.AnimationClock> 때 합니다 <xref:System.Windows.Media.Animation.AnimationClock> 은 <xref:System.Windows.Media.Animation.ClockState.Active> 또는 <xref:System.Windows.Media.Animation.ClockState.Filling>합니다. 사용 하 여 속성의 기준 값을 검색할 수 있습니다는 <xref:System.Windows.Media.Animation.IAnimatable.GetAnimationBaseValue%2A> 메서드.  
   
 ## <a name="see-also"></a>참고자료
-- [애니메이션 개요](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)
-- [타이밍 이벤트 개요](../../../../docs/framework/wpf/graphics-multimedia/timing-events-overview.md)
-- [타이밍 동작 개요](../../../../docs/framework/wpf/graphics-multimedia/timing-behaviors-overview.md)
+- [애니메이션 개요](animation-overview.md)
+- [타이밍 이벤트 개요](timing-events-overview.md)
+- [타이밍 동작 개요](timing-behaviors-overview.md)

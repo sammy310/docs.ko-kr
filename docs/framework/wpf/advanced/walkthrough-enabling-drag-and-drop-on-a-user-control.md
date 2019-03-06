@@ -8,12 +8,12 @@ helpviewer_keywords:
 - walkthrough [WPF], drag-and-drop
 - drag-and-drop [WPF], walkthrough
 ms.assetid: cc844419-1a77-4906-95d9-060d79107fc7
-ms.openlocfilehash: a2aa1d09b922809f42fe14bd674c2a87b9e5a3f8
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
+ms.openlocfilehash: 7009f56c25ff63729f0b0170503c2f356dc91301
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56747797"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57352921"
 ---
 # <a name="walkthrough-enabling-drag-and-drop-on-a-user-control"></a>연습: 끌어서 놓기 사용자 컨트롤에서 사용
 
@@ -46,7 +46,7 @@ ms.locfileid: "56747797"
 
      이 태그는 테스트 애플리케이션에 대한 사용자 인터페이스를 만듭니다.
 
-     [!code-xaml[DragDropWalkthrough#PanelsStep1XAML](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DragDropWalkthrough/CS/SnippetWindow.xaml#panelsstep1xaml)]
+     [!code-xaml[DragDropWalkthrough#PanelsStep1XAML](~/samples/snippets/csharp/VS_Snippets_Wpf/DragDropWalkthrough/CS/SnippetWindow.xaml#panelsstep1xaml)]
 
 ## <a name="add-a-new-user-control-to-the-project"></a>프로젝트에 새 사용자 정의 컨트롤 추가
  이 섹션에서는 프로젝트에 새 사용자 정의 컨트롤을 추가합니다.
@@ -63,7 +63,7 @@ ms.locfileid: "56747797"
 
 4.  루트에 다음 태그를 추가 <xref:System.Windows.Controls.Grid> 파란색 원을 UI로 된 간단한 사용자 컨트롤을 만듭니다.
 
-     [!code-xaml[DragDropWalkthrough#EllipseXAML](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DragDropWalkthrough/CS/Circle.xaml#ellipsexaml)]
+     [!code-xaml[DragDropWalkthrough#EllipseXAML](~/samples/snippets/csharp/VS_Snippets_Wpf/DragDropWalkthrough/CS/Circle.xaml#ellipsexaml)]
 
 5.  Circle.xaml.cs 또는 Circle.xaml.vb를 엽니다.
 
@@ -71,8 +71,8 @@ ms.locfileid: "56747797"
 
      사용자 정의 컨트롤을 복사할 수 있도록 하려면 코드 숨김 파일에서 복사 생성자 메서드를 추가합니다. 간단한 원 사용자 정의 컨트롤에서 사용자 정의 컨트롤의 채우기와 크기만 복사합니다.
 
-     [!code-csharp[DragDropWalkthrough#CopyCtor](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DragDropWalkthrough/CS/Circle.xaml.cs#copyctor)]
-     [!code-vb[DragDropWalkthrough#CopyCtor](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DragDropWalkthrough/VB/Circle.xaml.vb#copyctor)]
+     [!code-csharp[DragDropWalkthrough#CopyCtor](~/samples/snippets/csharp/VS_Snippets_Wpf/DragDropWalkthrough/CS/Circle.xaml.cs#copyctor)]
+     [!code-vb[DragDropWalkthrough#CopyCtor](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DragDropWalkthrough/VB/Circle.xaml.vb#copyctor)]
 
 ## <a name="add-the-user-control-to-the-main-window"></a>주 창에 사용자 정의 컨트롤 추가
 
@@ -86,11 +86,11 @@ ms.locfileid: "56747797"
 
 3.  첫 번째에서 <xref:System.Windows.Controls.StackPanel>, 첫 번째 패널에서 원 사용자 정의 컨트롤의 두 인스턴스를 만들려면 다음 XAML을 추가 합니다.
 
-     [!code-xaml[DragDropWalkthrough#CirclesXAML](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DragDropWalkthrough/CS/SnippetWindow.xaml#circlesxaml)]
+     [!code-xaml[DragDropWalkthrough#CirclesXAML](~/samples/snippets/csharp/VS_Snippets_Wpf/DragDropWalkthrough/CS/SnippetWindow.xaml#circlesxaml)]
 
      패널에 대한 전체 XAML은 다음과 같습니다.
 
-     [!code-xaml[DragDropWalkthrough#PanelsStep2XAML](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DragDropWalkthrough/CS/SnippetWindow.xaml#panelsstep2xaml)]
+     [!code-xaml[DragDropWalkthrough#PanelsStep2XAML](~/samples/snippets/csharp/VS_Snippets_Wpf/DragDropWalkthrough/CS/SnippetWindow.xaml#panelsstep2xaml)]
 
 ## <a name="implement-drag-source-events-in-the-user-control"></a>사용자 정의 컨트롤에서 끌기 소스 이벤트 구현
  이 섹션에서는 재정의 <xref:System.Windows.UIElement.OnMouseMove%2A> 메서드 및 끌어서 놓기 작업을 시작 합니다.
@@ -103,8 +103,8 @@ ms.locfileid: "56747797"
 
 2.  다음을 추가 합니다 <xref:System.Windows.UIElement.OnMouseMove%2A> 클래스에 대 한 처리를 제공 하는 재정의 <xref:System.Windows.UIElement.MouseMove> 이벤트입니다.
 
-     [!code-csharp[DragDropWalkthrough#OnMouseMove](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DragDropWalkthrough/CS/Circle.xaml.cs#onmousemove)]
-     [!code-vb[DragDropWalkthrough#OnMouseMove](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DragDropWalkthrough/VB/Circle.xaml.vb#onmousemove)]
+     [!code-csharp[DragDropWalkthrough#OnMouseMove](~/samples/snippets/csharp/VS_Snippets_Wpf/DragDropWalkthrough/CS/Circle.xaml.cs#onmousemove)]
+     [!code-vb[DragDropWalkthrough#OnMouseMove](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DragDropWalkthrough/VB/Circle.xaml.vb#onmousemove)]
 
      이 <xref:System.Windows.UIElement.OnMouseMove%2A> 재정의 다음 작업을 수행 합니다.
 
@@ -128,7 +128,7 @@ ms.locfileid: "56747797"
 
 6.  끌어서 놓기에 원은 <xref:System.Windows.Controls.TextBox>합니다. 원 채우기 색의 문자열 표현에 추가 되는 <xref:System.Windows.Controls.TextBox>합니다.
 
-     ![원 채우기 색의 문자열 표현](../../../../docs/framework/wpf/advanced/media/dragdrop-colorstring.png "DragDrop_ColorString")
+     ![원 채우기 색의 문자열 표현](./media/dragdrop-colorstring.png "DragDrop_ColorString")
 
 기본적으로 커서는 끌어서 놓기 작업 중 데이터 놓기의 결과를 나타내도록 변경됩니다. 처리 하 여 사용자에 게 제공 되는 피드백을 사용자 지정할 수는 <xref:System.Windows.UIElement.GiveFeedback> 이벤트 및 다른 커서를 설정 합니다.
 
@@ -138,8 +138,8 @@ ms.locfileid: "56747797"
 
 2.  다음을 추가 합니다 <xref:System.Windows.UIElement.OnGiveFeedback%2A> 클래스에 대 한 처리를 제공 하는 재정의 <xref:System.Windows.UIElement.GiveFeedback> 이벤트입니다.
 
-     [!code-csharp[DragDropWalkthrough#OnGiveFeedback](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DragDropWalkthrough/CS/Circle.xaml.cs#ongivefeedback)]
-     [!code-vb[DragDropWalkthrough#OnGiveFeedback](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DragDropWalkthrough/VB/Circle.xaml.vb#ongivefeedback)]
+     [!code-csharp[DragDropWalkthrough#OnGiveFeedback](~/samples/snippets/csharp/VS_Snippets_Wpf/DragDropWalkthrough/CS/Circle.xaml.cs#ongivefeedback)]
+     [!code-vb[DragDropWalkthrough#OnGiveFeedback](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DragDropWalkthrough/VB/Circle.xaml.vb#ongivefeedback)]
 
      이 <xref:System.Windows.UIElement.OnGiveFeedback%2A> 재정의 다음 작업을 수행 합니다.
 
@@ -151,7 +151,7 @@ ms.locfileid: "56747797"
 
 4.  패널, 다른 원 제어할 원 중 하나는 끌어서 및 <xref:System.Windows.Controls.TextBox>합니다. 커서는에 지정 된 사용자 지정 커서 이제는 <xref:System.Windows.UIElement.OnGiveFeedback%2A> 재정의 합니다.
 
-     ![사용자 지정 커서로 끌어서 놓기](../../../../docs/framework/wpf/advanced/media/dragdrop-customcursor.png "DragDrop_CustomCursor")
+     ![사용자 지정 커서로 끌어서 놓기](./media/dragdrop-customcursor.png "DragDrop_CustomCursor")
 
 5.  텍스트 선택 `green` 에서 <xref:System.Windows.Controls.TextBox>합니다.
 
@@ -166,7 +166,7 @@ ms.locfileid: "56747797"
 
 2.  여에서 <xref:System.Windows.Controls.UserControl> 태그를 추가 합니다 <xref:System.Windows.UIElement.AllowDrop%2A> 속성으로 설정 하 고 `true`.
 
-     [!code-xaml[DragDropWalkthrough#UCTagXAML](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DragDropWalkthrough/CS/Circle.xaml#uctagxaml)]
+     [!code-xaml[DragDropWalkthrough#UCTagXAML](~/samples/snippets/csharp/VS_Snippets_Wpf/DragDropWalkthrough/CS/Circle.xaml#uctagxaml)]
 
 <xref:System.Windows.UIElement.OnDrop%2A> 메서드를 호출한 경우 합니다 <xref:System.Windows.UIElement.AllowDrop%2A> 속성이 `true` 끌기 원본에서 데이터를 원 사용자 정의 컨트롤에서 삭제 됩니다. 이 메서드에서는 끌어 놓은 데이터를 처리하고 해당 데이터를 원에 적용합니다.
 
@@ -176,8 +176,8 @@ ms.locfileid: "56747797"
 
 2.  다음을 추가 합니다 <xref:System.Windows.UIElement.OnDrop%2A> 클래스에 대 한 처리를 제공 하는 재정의 <xref:System.Windows.UIElement.Drop> 이벤트입니다.
 
-     [!code-csharp[DragDropWalkthrough#OnDrop](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DragDropWalkthrough/CS/Circle.xaml.cs#ondrop)]
-     [!code-vb[DragDropWalkthrough#OnDrop](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DragDropWalkthrough/VB/Circle.xaml.vb#ondrop)]
+     [!code-csharp[DragDropWalkthrough#OnDrop](~/samples/snippets/csharp/VS_Snippets_Wpf/DragDropWalkthrough/CS/Circle.xaml.cs#ondrop)]
+     [!code-vb[DragDropWalkthrough#OnDrop](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DragDropWalkthrough/VB/Circle.xaml.vb#ondrop)]
 
      이 <xref:System.Windows.UIElement.OnDrop%2A> 재정의 다음 작업을 수행 합니다.
 
@@ -197,7 +197,7 @@ ms.locfileid: "56747797"
 
 5.  텍스트를 원 컨트롤로 끌어서 놓습니다. 원이 파란색에서 녹색으로 바뀝니다.
 
-     ![문자열을 브러시로 변환](../../../../docs/framework/wpf/advanced/media/dragdrop-dropgreentext.png "DragDrop_DropGreenText")
+     ![문자열을 브러시로 변환](./media/dragdrop-dropgreentext.png "DragDrop_DropGreenText")
 
 6.  텍스트 입력 `green` 에 <xref:System.Windows.Controls.TextBox>합니다.
 
@@ -217,8 +217,8 @@ ms.locfileid: "56747797"
 
 2.  다음을 추가 합니다 <xref:System.Windows.UIElement.OnDragOver%2A> 클래스에 대 한 처리를 제공 하는 재정의 <xref:System.Windows.UIElement.DragOver> 이벤트입니다.
 
-     [!code-csharp[DragDropWalkthrough#OnDragOver](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DragDropWalkthrough/CS/Circle.xaml.cs#ondragover)]
-     [!code-vb[DragDropWalkthrough#OnDragOver](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DragDropWalkthrough/VB/Circle.xaml.vb#ondragover)]
+     [!code-csharp[DragDropWalkthrough#OnDragOver](~/samples/snippets/csharp/VS_Snippets_Wpf/DragDropWalkthrough/CS/Circle.xaml.cs#ondragover)]
+     [!code-vb[DragDropWalkthrough#OnDragOver](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DragDropWalkthrough/VB/Circle.xaml.vb#ondragover)]
 
      이 <xref:System.Windows.UIElement.OnDragOver%2A> 재정의 다음 작업을 수행 합니다.
 
@@ -242,13 +242,13 @@ ms.locfileid: "56747797"
 
 2.  Circle 클래스에서 private 선언 <xref:System.Windows.Media.Brush> 라는 변수에 `_previousFill` 로 초기화 `null`합니다.
 
-     [!code-csharp[DragDropWalkthrough#Brush](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DragDropWalkthrough/CS/Circle.xaml.cs#brush)]
-     [!code-vb[DragDropWalkthrough#Brush](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DragDropWalkthrough/VB/Circle.xaml.vb#brush)]
+     [!code-csharp[DragDropWalkthrough#Brush](~/samples/snippets/csharp/VS_Snippets_Wpf/DragDropWalkthrough/CS/Circle.xaml.cs#brush)]
+     [!code-vb[DragDropWalkthrough#Brush](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DragDropWalkthrough/VB/Circle.xaml.vb#brush)]
 
 3.  다음을 추가 합니다 <xref:System.Windows.UIElement.OnDragEnter%2A> 클래스에 대 한 처리를 제공 하는 재정의 <xref:System.Windows.UIElement.DragEnter> 이벤트입니다.
 
-     [!code-csharp[DragDropWalkthrough#OnDragEnter](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DragDropWalkthrough/CS/Circle.xaml.cs#ondragenter)]
-     [!code-vb[DragDropWalkthrough#OnDragEnter](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DragDropWalkthrough/VB/Circle.xaml.vb#ondragenter)]
+     [!code-csharp[DragDropWalkthrough#OnDragEnter](~/samples/snippets/csharp/VS_Snippets_Wpf/DragDropWalkthrough/CS/Circle.xaml.cs#ondragenter)]
+     [!code-vb[DragDropWalkthrough#OnDragEnter](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DragDropWalkthrough/VB/Circle.xaml.vb#ondragenter)]
 
      이 <xref:System.Windows.UIElement.OnDragEnter%2A> 재정의 다음 작업을 수행 합니다.
 
@@ -260,8 +260,8 @@ ms.locfileid: "56747797"
 
 4.  다음을 추가 합니다 <xref:System.Windows.UIElement.OnDragLeave%2A> 클래스에 대 한 처리를 제공 하는 재정의 <xref:System.Windows.UIElement.DragLeave> 이벤트입니다.
 
-     [!code-csharp[DragDropWalkthrough#OnDragLeave](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DragDropWalkthrough/CS/Circle.xaml.cs#ondragleave)]
-     [!code-vb[DragDropWalkthrough#OnDragLeave](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DragDropWalkthrough/VB/Circle.xaml.vb#ondragleave)]
+     [!code-csharp[DragDropWalkthrough#OnDragLeave](~/samples/snippets/csharp/VS_Snippets_Wpf/DragDropWalkthrough/CS/Circle.xaml.cs#ondragleave)]
+     [!code-vb[DragDropWalkthrough#OnDragLeave](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DragDropWalkthrough/VB/Circle.xaml.vb#ondragleave)]
 
      이 <xref:System.Windows.UIElement.OnDragLeave%2A> 재정의 다음 작업을 수행 합니다.
 
@@ -273,7 +273,7 @@ ms.locfileid: "56747797"
 
 7.  텍스트를 놓지 않고 원 컨트롤 위로 끕니다. 원이 파란색에서 녹색으로 바뀝니다.
 
-     ![끌어서 놓기 작업의 결과 미리 보기](../../../../docs/framework/wpf/advanced/media/dragdrop-previeweffects.png "DragDrop_PreviewEffects")
+     ![끌어서 놓기 작업의 결과 미리 보기](./media/dragdrop-previeweffects.png "DragDrop_PreviewEffects")
 
 8.  원 컨트롤에서 멀리 텍스트를 끕니다. 원이 녹색에서 다시 파란색으로 바뀝니다.
 
@@ -285,14 +285,14 @@ ms.locfileid: "56747797"
 
 2.  다음 XAML을 각 에서처럼 합니다 <xref:System.Windows.Controls.StackPanel> 컨트롤에 대 한 처리기를 추가 합니다 <xref:System.Windows.UIElement.DragOver> 및 <xref:System.Windows.UIElement.Drop> 이벤트. 이름 합니다 <xref:System.Windows.UIElement.DragOver> 이벤트 처리기 `panel_DragOver`, 이름을 <xref:System.Windows.UIElement.Drop> 이벤트 처리기 `panel_Drop`합니다.
 
-     [!code-xaml[DragDropWalkthrough#PanelsXAML](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DragDropWalkthrough/CS/MainWindow.xaml#panelsxaml)]
+     [!code-xaml[DragDropWalkthrough#PanelsXAML](~/samples/snippets/csharp/VS_Snippets_Wpf/DragDropWalkthrough/CS/MainWindow.xaml#panelsxaml)]
 
 3.  MainWindows.xaml.cs 또는 MainWindow.xaml.vb를 엽니다.
 
 4.  다음 코드를 추가 합니다 <xref:System.Windows.UIElement.DragOver> 이벤트 처리기입니다.
 
-     [!code-csharp[DragDropWalkthrough#PanelDragOver](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DragDropWalkthrough/CS/MainWindow.xaml.cs#paneldragover)]
-     [!code-vb[DragDropWalkthrough#PanelDragOver](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DragDropWalkthrough/VB/MainWindow.xaml.vb#paneldragover)]
+     [!code-csharp[DragDropWalkthrough#PanelDragOver](~/samples/snippets/csharp/VS_Snippets_Wpf/DragDropWalkthrough/CS/MainWindow.xaml.cs#paneldragover)]
+     [!code-vb[DragDropWalkthrough#PanelDragOver](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DragDropWalkthrough/VB/MainWindow.xaml.vb#paneldragover)]
 
      이 <xref:System.Windows.UIElement.DragOver> 이벤트 처리기는 다음 작업을 수행 합니다.
 
@@ -304,8 +304,8 @@ ms.locfileid: "56747797"
 
 5.  다음 코드를 추가 합니다 <xref:System.Windows.UIElement.Drop> 이벤트 처리기입니다.
 
-     [!code-csharp[DragDropWalkthrough#PanelDrop](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DragDropWalkthrough/CS/MainWindow.xaml.cs#paneldrop)]
-     [!code-vb[DragDropWalkthrough#PanelDrop](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DragDropWalkthrough/VB/MainWindow.xaml.vb#paneldrop)]
+     [!code-csharp[DragDropWalkthrough#PanelDrop](~/samples/snippets/csharp/VS_Snippets_Wpf/DragDropWalkthrough/CS/MainWindow.xaml.cs#paneldrop)]
+     [!code-vb[DragDropWalkthrough#PanelDrop](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DragDropWalkthrough/VB/MainWindow.xaml.vb#paneldrop)]
 
      이 <xref:System.Windows.UIElement.Drop> 이벤트 처리기는 다음 작업을 수행 합니다.
 
@@ -329,8 +329,8 @@ ms.locfileid: "56747797"
 
 10. 다른 패널에 있는 패널에서 원 컨트롤로 끌어서 누른 채 놓습니다 합니다 **Ctrl** 키입니다. 원이 복사 되 고 복사본에 추가 됩니다는 <xref:System.Windows.Controls.Panel.Children%2A> 수신 패널의 컬렉션입니다.
 
-     ![Ctrl 키를 누른 채 원 끌기](../../../../docs/framework/wpf/advanced/media/dragdrop-paneldrop.png "DragDrop_PanelDrop")
+     ![Ctrl 키를 누른 채 원 끌기](./media/dragdrop-paneldrop.png "DragDrop_PanelDrop")
 
 ## <a name="see-also"></a>참고자료
 
-- [끌어서 놓기 개요](../../../../docs/framework/wpf/advanced/drag-and-drop-overview.md)
+- [끌어서 놓기 개요](drag-and-drop-overview.md)

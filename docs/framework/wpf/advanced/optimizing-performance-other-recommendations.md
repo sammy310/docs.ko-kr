@@ -11,15 +11,15 @@ helpviewer_keywords:
 - ScrollBarVisibility enumeration [WPF]
 - brushes [WPF], performance
 ms.assetid: d028cc65-7e97-4a4f-9859-929734eaf40d
-ms.openlocfilehash: fecb16592f3b3af78e329e095684b9c726f056f4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 05fe4ba4e2125b01637bc9066d23b5738d81f98d
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54703681"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57358940"
 ---
 # <a name="optimizing-performance-other-recommendations"></a>성능 최적화: 기타 권장 사항
-<a name="introduction"></a> 이 항목에서는 [WPF 응용 프로그램 성능 최적화](../../../../docs/framework/wpf/advanced/optimizing-wpf-application-performance.md) 섹션의 항목 내용에 추가되는 성능 권장 사항을 제공합니다.  
+<a name="introduction"></a> 이 항목에서는 [WPF 응용 프로그램 성능 최적화](optimizing-wpf-application-performance.md) 섹션의 항목 내용에 추가되는 성능 권장 사항을 제공합니다.  
   
  이 항목에는 다음과 같은 단원이 포함되어 있습니다.  
   
@@ -43,8 +43,8 @@ ms.locfileid: "54703681"
 ## <a name="navigation-to-object"></a>개체 탐색  
  합니다 <xref:System.Windows.Navigation.NavigationWindow> 개체에서 파생 <xref:System.Windows.Window> 하 고 집계 하 여 주로 콘텐츠 탐색 지원을 통해 확장 <xref:System.Windows.Navigation.NavigationService> 및 저널입니다. 클라이언트 영역을 업데이트할 수 있습니다 <xref:System.Windows.Navigation.NavigationWindow> 중 하나를 지정 하 여를 [!INCLUDE[TLA#tla_uri](../../../../includes/tlasharptla-uri-md.md)] 또는 개체입니다. 다음 샘플에서는 이러한 두 가지 방법을 보여 줍니다.  
   
- [!code-csharp[Performance#PerformanceSnippet14](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Performance/CSharp/TestNavigation.xaml.cs#performancesnippet14)]
- [!code-vb[Performance#PerformanceSnippet14](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/Performance/visualbasic/testnavigation.xaml.vb#performancesnippet14)]  
+ [!code-csharp[Performance#PerformanceSnippet14](~/samples/snippets/csharp/VS_Snippets_Wpf/Performance/CSharp/TestNavigation.xaml.cs#performancesnippet14)]
+ [!code-vb[Performance#PerformanceSnippet14](~/samples/snippets/visualbasic/VS_Snippets_Wpf/Performance/visualbasic/testnavigation.xaml.vb#performancesnippet14)]  
   
  각 <xref:System.Windows.Navigation.NavigationWindow> 개체에 해당 창에서 사용자의 탐색 기록을 기록 하는 저널입니다. 저널의 목적 중 하나는 사용자가 단계를 다시 수행할 수 있도록 하는 것입니다.  
   
@@ -52,7 +52,7 @@ ms.locfileid: "54703681"
   
  개체를 사용하여 탐색하면 저널에서 개체의 전체 시각적 트리를 저장합니다. 즉, 페이지를 다시 방문할 때마다 페이지를 다시 구성하지 않고 바로 렌더링합니다. 이 경우 저널 스토리지 비용은 높지만 페이지를 다시 구성하는 시간이 줄어듭니다.  
   
- 사용 하는 경우는 <xref:System.Windows.Navigation.NavigationWindow> 개체에 저널링 지원이 사용자 응용 프로그램의 성능에 미치는 영향을 점을 염두 해야 합니다. 자세한 내용은 [탐색 개요](../../../../docs/framework/wpf/app-development/navigation-overview.md)를 참조하세요.  
+ 사용 하는 경우는 <xref:System.Windows.Navigation.NavigationWindow> 개체에 저널링 지원이 사용자 응용 프로그램의 성능에 미치는 영향을 점을 염두 해야 합니다. 자세한 내용은 [탐색 개요](../app-development/navigation-overview.md)를 참조하세요.  
   
 <a name="Hit_Testing"></a>   
 ## <a name="hit-testing-on-large-3d-surfaces"></a>대형 3D 화면에서의 적중 횟수 테스트  
@@ -73,12 +73,12 @@ ms.locfileid: "54703681"
  [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 글꼴 캐시 서비스는 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 응용 프로그램 간에 글꼴 데이터를 공유합니다. 서비스가 실행되고 있지 않은 경우 처음 실행하는 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 애플리케이션에서 이 서비스가 시작됩니다. 사용 중인 경우 [!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)]를 설정할 수 있습니다 "Windows Presentation Foundation (WPF) 글꼴 캐시 3.0.0.0" 서비스 "수동" (기본값)에서 "자동 (지연 된 시작)"의 초기 시작 시간을 줄이도록 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 응용 프로그램입니다.  
   
 ## <a name="see-also"></a>참고자료
-- [응용 프로그램 성능 계획](../../../../docs/framework/wpf/advanced/planning-for-application-performance.md)
-- [하드웨어 이용](../../../../docs/framework/wpf/advanced/optimizing-performance-taking-advantage-of-hardware.md)
-- [레이아웃 및 디자인](../../../../docs/framework/wpf/advanced/optimizing-performance-layout-and-design.md)
-- [2차원 그래픽 및 이미징](../../../../docs/framework/wpf/advanced/optimizing-performance-2d-graphics-and-imaging.md)
-- [개체 동작](../../../../docs/framework/wpf/advanced/optimizing-performance-object-behavior.md)
-- [응용 프로그램 리소스](../../../../docs/framework/wpf/advanced/optimizing-performance-application-resources.md)
-- [텍스트](../../../../docs/framework/wpf/advanced/optimizing-performance-text.md)
-- [데이터 바인딩](../../../../docs/framework/wpf/advanced/optimizing-performance-data-binding.md)
-- [애니메이션에 대한 유용한 정보](../../../../docs/framework/wpf/graphics-multimedia/animation-tips-and-tricks.md)
+- [응용 프로그램 성능 계획](planning-for-application-performance.md)
+- [하드웨어 이용](optimizing-performance-taking-advantage-of-hardware.md)
+- [레이아웃 및 디자인](optimizing-performance-layout-and-design.md)
+- [2차원 그래픽 및 이미징](optimizing-performance-2d-graphics-and-imaging.md)
+- [개체 동작](optimizing-performance-object-behavior.md)
+- [애플리케이션 리소스](optimizing-performance-application-resources.md)
+- [텍스트](optimizing-performance-text.md)
+- [데이터 바인딩](optimizing-performance-data-binding.md)
+- [애니메이션에 대한 유용한 정보](../graphics-multimedia/animation-tips-and-tricks.md)

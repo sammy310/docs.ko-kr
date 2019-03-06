@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Protected Friend keyword combination
 - Friend keyword [Visual Basic], and Protected
 ms.assetid: b664605e-1c79-4728-b996-aa59c50846bc
-ms.openlocfilehash: 52fdbfa3b0cd79cc9714a13a75716829163e45f6
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 1e6dbaa9201d5c9cd902412797b2427ec488d014
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56967375"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57371413"
 ---
 # <a name="friend-visual-basic"></a>Friend(Visual Basic)
 하나 이상의 선언 된 프로그래밍 요소를 해당 선언이 포함 된 어셈블리 내 에서만 액세스할 수 있도록 지정 합니다.  
@@ -35,7 +35,7 @@ ms.locfileid: "56967375"
  에 대 한 비교 `Friend` 및 다른 액세스 한정자를 참조 하십시오 [액세스 수준을 Visual Basic의](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)합니다.  
   
 > [!NOTE]
->  다른 어셈블리는 모든 형식 및 멤버 변수로 표시 되는 액세스할 수 있도록 하는 friend 어셈블리를 지정할 수 있습니다 `Friend`합니다. 자세한 내용은 [Friend Assemblies](../../programming-guide/concepts/assemblies-gac/friend-assemblies.md)(Friend 어셈블리)를 참조하세요.  
+>  다른 어셈블리는 모든 형식 및 멤버 변수로 표시 되는 액세스할 수 있도록 하는 friend 어셈블리를 지정할 수 있습니다 `Friend`합니다. 자세한 내용은 [Friend Assemblies](../../../standard/assembly/friend-assemblies.md)(Friend 어셈블리)를 참조하세요.  
   
 ## <a name="example"></a>예제  
  다음 클래스는 `Friend` 한정자를 특정 멤버에 액세스 하는 동일한 어셈블리 내의 다른 프로그래밍 요소를 허용 합니다.  

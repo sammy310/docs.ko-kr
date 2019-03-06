@@ -7,25 +7,25 @@ helpviewer_keywords:
 - WPF [WPF], creating Direct3D9 content
 - Direct3D9 [WPF interoperability], creating Direct3D9 content
 ms.assetid: 1b14b823-69c4-4e8d-99e4-f6dade58f89a
-ms.openlocfilehash: 9fd5cc270074a3a2845147bcad8baef8d1f8ba2a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e9d000ca2da9dd9b4c8a677e85bc9cca5b1b1b1d
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54529413"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57372687"
 ---
 # <a name="wpf-and-direct3d9-interoperation"></a>WPF 및 Direct3D9 상호 운용성
 Windows Presentation Foundation (WPF) 응용 프로그램에서 호스팅할 Direct3D9 콘텐츠를 포함할 수 있습니다. 이 항목에서는 WPF를 사용 하 여 효율적으로 상호 운용 되도록 Direct3D9 콘텐츠를 만드는 방법을 설명 합니다.  
   
 > [!NOTE]
->  WPF에서 Direct3D9 콘텐츠를 사용할 때 성능에 대해 고려해 야 하는 합니다. 성능을 최적화 하는 방법에 대 한 자세한 내용은 참조 하세요. [Direct3D9 및 WPF 상호 운용성을 위한 성능 고려 사항](../../../../docs/framework/wpf/advanced/performance-considerations-for-direct3d9-and-wpf-interoperability.md)합니다.  
+>  WPF에서 Direct3D9 콘텐츠를 사용할 때 성능에 대해 고려해 야 하는 합니다. 성능을 최적화 하는 방법에 대 한 자세한 내용은 참조 하세요. [Direct3D9 및 WPF 상호 운용성을 위한 성능 고려 사항](performance-considerations-for-direct3d9-and-wpf-interoperability.md)합니다.  
   
 ## <a name="display-buffers"></a>버퍼를 표시 합니다.  
  <xref:System.Windows.Interop.D3DImage> 클래스 라고 하는 두 디스플레이 버퍼를 관리 합니다 *백 버퍼* 하며 *프런트 버퍼가*. 백 버퍼는 프로그램 Direct3D9 화면입니다. 백 버퍼에 대 한 변경 내용에 복사 됩니다 프런트 버퍼가 호출 하는 경우는 <xref:System.Windows.Interop.D3DImage.Unlock%2A> 메서드.  
   
  다음 그림에서는 백 버퍼 및 프런트 버퍼가 간의 관계를 보여 줍니다.  
   
- ![D3DImage 디스플레이 버퍼](../../../../docs/framework/wpf/advanced/media/d3dimage-buffers.png "D3DImage_buffers")  
+ ![D3DImage 디스플레이 버퍼](./media/d3dimage-buffers.png "D3DImage_buffers")  
   
 ## <a name="direct3d9-device-creation"></a>Direct3D9 장치 만들기  
  Direct3D9 콘텐츠를 렌더링 하려면 Direct3D9 장치를 만들어야 합니다. 장치를 만드는 데 사용할 수 있는 Direct3D9 개체 두 개가 `IDirect3D9` 고 `IDirect3D9Ex`입니다. 이러한 개체를 만드는 데 `IDirect3DDevice9` 고 `IDirect3DDevice9Ex` 장치, 각각.  
@@ -39,14 +39,14 @@ Windows Presentation Foundation (WPF) 응용 프로그램에서 호스팅할 Dir
  Windows Vista 또는 이후 운영 체제에서 사용 된 `Direct3DCreate9Ex` Windows 표시 드라이버 모델 (WDDM)를 사용 하도록 구성 된 표시를 사용 하 여 메서드. 사용 된 `Direct3DCreate9` 다른 플랫폼에서 메서드.  
   
 ### <a name="availability-of-the-direct3dcreate9ex-method"></a>가용성 Direct3DCreate9Ex 메서드  
- d3d9.dll에는 `Direct3DCreate9Ex` Windows Vista 또는 이후 운영 체제 에서만 메서드. 이 기능을 Windows XP에서 직접 연결 하면 응용 프로그램이 로드 되지 않습니다. 결정할 여부는 `Direct3DCreate9Ex` 메서드는 지원 DLL을 로드 하 고 프로시저 주소를 찾습니다. 다음 코드를 테스트 하는 방법을 보여 줍니다는 `Direct3DCreate9Ex` 메서드. 전체 코드 예제를 참조 하세요. [연습: WPF에서 호스팅할 Direct3D9 콘텐츠 만들기](../../../../docs/framework/wpf/advanced/walkthrough-creating-direct3d9-content-for-hosting-in-wpf.md)합니다.  
+ d3d9.dll에는 `Direct3DCreate9Ex` Windows Vista 또는 이후 운영 체제 에서만 메서드. 이 기능을 Windows XP에서 직접 연결 하면 응용 프로그램이 로드 되지 않습니다. 결정할 여부는 `Direct3DCreate9Ex` 메서드는 지원 DLL을 로드 하 고 프로시저 주소를 찾습니다. 다음 코드를 테스트 하는 방법을 보여 줍니다는 `Direct3DCreate9Ex` 메서드. 전체 코드 예제를 참조 하세요. [연습: WPF에서 호스팅할 Direct3D9 콘텐츠 만들기](walkthrough-creating-direct3d9-content-for-hosting-in-wpf.md)합니다.  
   
- [!code-cpp[System.Windows.Interop.D3DImage#RendererManager_EnsureD3DObjects](../../../../samples/snippets/cpp/VS_Snippets_Wpf/System.Windows.Interop.D3DImage/cpp/renderermanager.cpp#renderermanager_ensured3dobjects)]  
+ [!code-cpp[System.Windows.Interop.D3DImage#RendererManager_EnsureD3DObjects](~/samples/snippets/cpp/VS_Snippets_Wpf/System.Windows.Interop.D3DImage/cpp/renderermanager.cpp#renderermanager_ensured3dobjects)]  
   
 ### <a name="hwnd-creation"></a>HWND 만들기  
  장치를 만드는 HWND 필요 합니다. 일반적으로 사용 하는 Direct3D9에 대 한 더미 HWND를 만듭니다. 다음 코드 예제에는 더미 HWND를 만드는 방법을 보여 줍니다.  
   
- [!code-cpp[System.Windows.Interop.D3DImage#RendererManager_EnsureHWND](../../../../samples/snippets/cpp/VS_Snippets_Wpf/System.Windows.Interop.D3DImage/cpp/renderermanager.cpp#renderermanager_ensurehwnd)]  
+ [!code-cpp[System.Windows.Interop.D3DImage#RendererManager_EnsureHWND](~/samples/snippets/cpp/VS_Snippets_Wpf/System.Windows.Interop.D3DImage/cpp/renderermanager.cpp#renderermanager_ensurehwnd)]  
   
 ### <a name="present-parameters"></a>현재 매개 변수  
  해야 장치를 만드는 `D3DPRESENT_PARAMETERS` 구조체 있지만 몇 가지 매개 변수만 중요 합니다. 이러한 매개 변수는 메모리 사용 공간을 최소화 하기 위해 선택 됩니다.  
@@ -57,7 +57,7 @@ Windows Presentation Foundation (WPF) 응용 프로그램에서 호스팅할 Dir
   
  다음 코드를 초기화 하는 방법을 보여 줍니다는 `D3DPRESENT_PARAMETERS` 구조체입니다.  
   
- [!code-cpp[System.Windows.Interop.D3DImage#Renderer_Init](../../../../samples/snippets/cpp/VS_Snippets_Wpf/System.Windows.Interop.D3DImage/cpp/renderer.cpp#renderer_init)]  
+ [!code-cpp[System.Windows.Interop.D3DImage#Renderer_Init](~/samples/snippets/cpp/VS_Snippets_Wpf/System.Windows.Interop.D3DImage/cpp/renderer.cpp#renderer_init)]  
   
 ## <a name="creating-the-back-buffer-render-target"></a>백 버퍼 렌더링 대상 만들기  
  호스팅할 Direct3D9 콘텐츠를 표시 하는 <xref:System.Windows.Interop.D3DImage>, Direct3D9 화면을 만들고 호출 하 여 할당을 <xref:System.Windows.Interop.D3DImage.SetBackBuffer%2A> 메서드.  
@@ -67,26 +67,26 @@ Windows Presentation Foundation (WPF) 응용 프로그램에서 호스팅할 Dir
   
  다음 코드 예제에서는 모든 어댑터가 Direct3D9 시스템에서 지 원하는 확인 하는 방법을 보여 줍니다.  
   
- [!code-cpp[System.Windows.Interop.D3DImage#RendererManager_TestSurfaceSettings](../../../../samples/snippets/cpp/VS_Snippets_Wpf/System.Windows.Interop.D3DImage/cpp/renderermanager.cpp#renderermanager_testsurfacesettings)]  
+ [!code-cpp[System.Windows.Interop.D3DImage#RendererManager_TestSurfaceSettings](~/samples/snippets/cpp/VS_Snippets_Wpf/System.Windows.Interop.D3DImage/cpp/renderermanager.cpp#renderermanager_testsurfacesettings)]  
   
 ### <a name="creating-the-surface"></a>화면 만들기  
- 화면을 만들기 전에 대상 운영 체제에서 장치 기능 좋은 성능을 지를 확인 합니다. 자세한 내용은 [Direct3D9 및 WPF 상호 운용성을 위한 성능 고려 사항](../../../../docs/framework/wpf/advanced/performance-considerations-for-direct3d9-and-wpf-interoperability.md)합니다.  
+ 화면을 만들기 전에 대상 운영 체제에서 장치 기능 좋은 성능을 지를 확인 합니다. 자세한 내용은 [Direct3D9 및 WPF 상호 운용성을 위한 성능 고려 사항](performance-considerations-for-direct3d9-and-wpf-interoperability.md)합니다.  
   
  장치 기능을 확인 하는 경우에 화면을 만들 수 있습니다. 다음 코드 예제에는 렌더링 대상을 만드는 방법을 보여 줍니다.  
   
- [!code-cpp[System.Windows.Interop.D3DImage#Renderer_CreateSurface](../../../../samples/snippets/cpp/VS_Snippets_Wpf/System.Windows.Interop.D3DImage/cpp/renderer.cpp#renderer_createsurface)]  
+ [!code-cpp[System.Windows.Interop.D3DImage#Renderer_CreateSurface](~/samples/snippets/cpp/VS_Snippets_Wpf/System.Windows.Interop.D3DImage/cpp/renderer.cpp#renderer_createsurface)]  
   
 ### <a name="wddm"></a>WDDM  
  Windows Vista 이상 운영 체제를 WDDM을 사용 하도록 구성 된 대상에 렌더링 대상 질감을 만들를 수준 0 화면을 전달 합니다 <xref:System.Windows.Interop.D3DImage.SetBackBuffer%2A> 메서드. 잠글 수 있는 렌더링 대상 질감을 만들 수 없습니다. 성능은 저하 됩니다 때문에 Windows xp에서는이 방법은 권장 되지 않습니다.  
   
 ## <a name="handling-device-state"></a>장치 상태 처리  
- <xref:System.Windows.Interop.D3DImage> 클래스 라고 하는 두 디스플레이 버퍼를 관리 합니다 *백 버퍼* 하며 *프런트 버퍼가*. 백 버퍼는 프로그램 Direct3D 화면입니다.  백 버퍼에 대 한 변경 내용에 복사 됩니다 프런트 버퍼가 호출할 때를 <xref:System.Windows.Interop.D3DImage.Unlock%2A> 메서드를 하드웨어에 표시 됩니다. 경우에 따라 프런트 버퍼가 수 없게 됩니다. 화면 잠금, Direct3D 애플리케이션을 제외 하는 전체 화면, 사용자 전환 또는 기타 시스템 활동과이 부족 한 가용성을 발생할 수 있습니다. WPF 애플리케이션을 처리 하 여 알려집니다 이런 경우는 <xref:System.Windows.Interop.D3DImage.IsFrontBufferAvailableChanged> 이벤트입니다.  애플리케이션이 사용할 수 없게 되는 프런트 버퍼가에 반응 하는 방법을 소프트웨어 렌더링으로 대체 WPF 사용 여부에 따라 달라 집니다. <xref:System.Windows.Interop.D3DImage.SetBackBuffer%2A> 메서드 소프트웨어 렌더링으로 WPF 다시 속하는지 여부를 지정 하는 매개 변수를 받아들이는 오버 로드가 있습니다.  
+ <xref:System.Windows.Interop.D3DImage> 클래스 라고 하는 두 디스플레이 버퍼를 관리 합니다 *백 버퍼* 하며 *프런트 버퍼가*. 백 버퍼는 프로그램 Direct3D 화면입니다.  백 버퍼에 대 한 변경 내용에 복사 됩니다 프런트 버퍼가 호출할 때를 <xref:System.Windows.Interop.D3DImage.Unlock%2A> 메서드를 하드웨어에 표시 됩니다. 경우에 따라 프런트 버퍼가 수 없게 됩니다. 화면 잠금, Direct3D 응용 프로그램을 제외 하는 전체 화면, 사용자 전환 또는 기타 시스템 활동과이 부족 한 가용성을 발생할 수 있습니다. WPF 응용 프로그램을 처리 하 여 알려집니다 이런 경우는 <xref:System.Windows.Interop.D3DImage.IsFrontBufferAvailableChanged> 이벤트입니다.  응용 프로그램이 사용할 수 없게 되는 프런트 버퍼가에 반응 하는 방법을 소프트웨어 렌더링으로 대체 WPF 사용 여부에 따라 달라 집니다. <xref:System.Windows.Interop.D3DImage.SetBackBuffer%2A> 메서드 소프트웨어 렌더링으로 WPF 다시 속하는지 여부를 지정 하는 매개 변수를 받아들이는 오버 로드가 있습니다.  
   
- 호출 하는 경우는 <xref:System.Windows.Interop.D3DImage.SetBackBuffer%28System.Windows.Interop.D3DResourceType%2CSystem.IntPtr%29> 오버 로드 하거나 호출 합니다 <xref:System.Windows.Interop.D3DImage.SetBackBuffer%28System.Windows.Interop.D3DResourceType%2CSystem.IntPtr%2CSystem.Boolean%29> 오버 로드는 `enableSoftwareFallback` 매개 변수 설정 `false`, 프런트 버퍼를 사용할 수 없게 하 고 아무 것도 렌더링 시스템 백 버퍼에 대 한 참조를 해제 표시 됩니다. 프런트 버퍼가 다시 제공 되 면 렌더링 발생을 <xref:System.Windows.Interop.D3DImage.IsFrontBufferAvailableChanged> WPF 애플리케이션에 알리는 이벤트입니다.  에 대 한 이벤트 처리기를 만들 수는 <xref:System.Windows.Interop.D3DImage.IsFrontBufferAvailableChanged> 유효한 Direct3D 화면을 사용 하 여 다시 렌더링을 다시 시작 하는 이벤트입니다. 렌더링을 다시 시작 하려면 <xref:System.Windows.Interop.D3DImage.SetBackBuffer%2A>합니다.  
+ 호출 하는 경우는 <xref:System.Windows.Interop.D3DImage.SetBackBuffer%28System.Windows.Interop.D3DResourceType%2CSystem.IntPtr%29> 오버 로드 하거나 호출 합니다 <xref:System.Windows.Interop.D3DImage.SetBackBuffer%28System.Windows.Interop.D3DResourceType%2CSystem.IntPtr%2CSystem.Boolean%29> 오버 로드는 `enableSoftwareFallback` 매개 변수 설정 `false`, 프런트 버퍼를 사용할 수 없게 하 고 아무 것도 렌더링 시스템 백 버퍼에 대 한 참조를 해제 표시 됩니다. 프런트 버퍼가 다시 제공 되 면 렌더링 발생을 <xref:System.Windows.Interop.D3DImage.IsFrontBufferAvailableChanged> WPF 응용 프로그램에 알리는 이벤트입니다.  에 대 한 이벤트 처리기를 만들 수는 <xref:System.Windows.Interop.D3DImage.IsFrontBufferAvailableChanged> 유효한 Direct3D 화면을 사용 하 여 다시 렌더링을 다시 시작 하는 이벤트입니다. 렌더링을 다시 시작 하려면 <xref:System.Windows.Interop.D3DImage.SetBackBuffer%2A>합니다.  
   
  호출 하는 경우는 <xref:System.Windows.Interop.D3DImage.SetBackBuffer%28System.Windows.Interop.D3DResourceType%2CSystem.IntPtr%2CSystem.Boolean%29> 오버 로드는 `enableSoftwareFallback` 매개 변수 설정 `true`를 호출 하지 않아도 되므로 프런트 버퍼를 사용할 수 없을 때 렌더링 시스템은 백 버퍼에 대 한 참조를 유지 <xref:System.Windows.Interop.D3DImage.SetBackBuffer%2A> 때 앞 버퍼를 다시 사용할 수 있습니다.  
   
- 소프트웨어 렌더링을 사용 하는 경우 여기서 사용자의 장치를 사용할 수 없지만 렌더링 시스템은 Direct3D 화면에 대 한 참조를 유지 하는 경우 있을 수 있습니다. Direct3D9 장치를 사용할 수 있는지를 확인 하려면 호출을 `TestCooperativeLevel` 메서드. Direct3D9Ex 장치 호출을 확인 하는 `CheckDeviceState` 메서드를 때문에 `TestCooperativeLevel` 메서드는 사용 되지 않으며 항상 성공 반환 합니다. 사용자 장치를 사용할 경우 호출 <xref:System.Windows.Interop.D3DImage.SetBackBuffer%2A> 백 버퍼에 대 한 WPF의 참조를 해제 합니다.  디바이스를 재설정 해야 할 경우 호출 <xref:System.Windows.Interop.D3DImage.SetBackBuffer%2A> 사용 하 여는 `backBuffer` 매개 변수 설정 `null`, 다음 호출 <xref:System.Windows.Interop.D3DImage.SetBackBuffer%2A> 사용 하 여 다시 `backBuffer` 유효한 Direct3D 화면을로 설정 합니다.  
+ 소프트웨어 렌더링을 사용 하는 경우 여기서 사용자의 장치를 사용할 수 없지만 렌더링 시스템은 Direct3D 화면에 대 한 참조를 유지 하는 경우 있을 수 있습니다. Direct3D9 장치를 사용할 수 있는지를 확인 하려면 호출을 `TestCooperativeLevel` 메서드. Direct3D9Ex 장치 호출을 확인 하는 `CheckDeviceState` 메서드를 때문에 `TestCooperativeLevel` 메서드는 사용 되지 않으며 항상 성공 반환 합니다. 사용자 장치를 사용할 경우 호출 <xref:System.Windows.Interop.D3DImage.SetBackBuffer%2A> 백 버퍼에 대 한 WPF의 참조를 해제 합니다.  장치를 재설정 해야 할 경우 호출 <xref:System.Windows.Interop.D3DImage.SetBackBuffer%2A> 사용 하 여는 `backBuffer` 매개 변수 설정 `null`, 다음 호출 <xref:System.Windows.Interop.D3DImage.SetBackBuffer%2A> 사용 하 여 다시 `backBuffer` 유효한 Direct3D 화면을로 설정 합니다.  
   
  호출 된 `Reset` 다중 어댑터 지원을 구현 하는 경우에 잘못 된 장치에서 복구 하는 방법입니다. 아니면 모든 Direct3D9 인터페이스를 해제 하 고 전체적으로 다시 만듭니다. 어댑터 레이아웃 변경 된 경우에 변경 전에 만들어진 Direct3D9 개체 업데이트 되지 않습니다.  
   
@@ -125,7 +125,7 @@ Windows Presentation Foundation (WPF) 응용 프로그램에서 호스팅할 Dir
   
  다음 코드 예제에는 현재 모니터를 찾는 방법을 보여 줍니다.  
   
- [!code-cpp[System.Windows.Interop.D3DImage#RendererManager_SetAdapter](../../../../samples/snippets/cpp/VS_Snippets_Wpf/System.Windows.Interop.D3DImage/cpp/renderermanager.cpp#renderermanager_setadapter)]  
+ [!code-cpp[System.Windows.Interop.D3DImage#RendererManager_SetAdapter](~/samples/snippets/cpp/VS_Snippets_Wpf/System.Windows.Interop.D3DImage/cpp/renderermanager.cpp#renderermanager_setadapter)]  
   
  모니터를 업데이트 때 합니다 <xref:System.Windows.Interop.D3DImage> 컨테이너의 크기 또는 위치 변경 또는 업데이트를 사용 하 여 모니터를 `DispatcherTimer` 초당 여러 번 업데이트 하는 합니다.  
   
@@ -149,6 +149,6 @@ Windows Presentation Foundation (WPF) 응용 프로그램에서 호스팅할 Dir
   
 ## <a name="see-also"></a>참고자료
 - <xref:System.Windows.Interop.D3DImage>
-- [Direct3D9 및 WPF 상호 운용성을 위한 성능 고려 사항](../../../../docs/framework/wpf/advanced/performance-considerations-for-direct3d9-and-wpf-interoperability.md)
-- [연습: WPF에서 호스팅할 Direct3D9 콘텐츠 만들기](../../../../docs/framework/wpf/advanced/walkthrough-creating-direct3d9-content-for-hosting-in-wpf.md)
-- [연습: WPF에서 Direct3D9 콘텐츠 호스팅](../../../../docs/framework/wpf/advanced/walkthrough-hosting-direct3d9-content-in-wpf.md)
+- [Direct3D9 및 WPF 상호 운용성을 위한 성능 고려 사항](performance-considerations-for-direct3d9-and-wpf-interoperability.md)
+- [연습: WPF에서 호스팅할 Direct3D9 콘텐츠 만들기](walkthrough-creating-direct3d9-content-for-hosting-in-wpf.md)
+- [연습: WPF에서 Direct3D9 콘텐츠 호스팅](walkthrough-hosting-direct3d9-content-in-wpf.md)

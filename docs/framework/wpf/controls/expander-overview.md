@@ -8,12 +8,12 @@ helpviewer_keywords:
 - controls [WPF], Expander
 - Expander control [WPF], about Expander control
 ms.assetid: 877bf425-0e54-49ec-8fd2-13a211377abb
-ms.openlocfilehash: 63fa061211e846a6b4d9c88cdf3c7c24e4aac3ad
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2eff66377a3ba9b0e30417cc7dd1e1413d9074d9
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54693758"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57369931"
 ---
 # <a name="expander-overview"></a>Expander 개요
 <xref:System.Windows.Controls.Expander> 컨트롤 창과 유사 하 고 헤더를 포함 하는 확장 가능한 영역에 콘텐츠를 제공할 수 있습니다.  
@@ -23,7 +23,7 @@ ms.locfileid: "54693758"
 ## <a name="creating-a-simple-expander"></a>단순 확장기 만들기  
  다음 예제에는 간단한을 만드는 방법을 보여 줍니다 <xref:System.Windows.Controls.Expander> 제어 합니다. 이 예제에서는 <xref:System.Windows.Controls.Expander> 앞의 그림 것 같습니다.  
   
- [!code-xaml[ExpanderExample#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ExpanderExample/CSharp/Page1.xaml#2)]  
+ [!code-xaml[ExpanderExample#2](~/samples/snippets/csharp/VS_Snippets_Wpf/ExpanderExample/CSharp/Page1.xaml#2)]  
   
  합니다 <xref:System.Windows.Controls.ContentControl.Content%2A> 하 고 <xref:System.Windows.Controls.HeaderedContentControl.Header%2A> 의 <xref:System.Windows.Controls.Expander> 와 같은 복잡 한 콘텐츠를 포함할 수도 있습니다 <xref:System.Windows.Controls.RadioButton> 및 <xref:System.Windows.Controls.Image> 개체입니다.  
   
@@ -45,15 +45,15 @@ ms.locfileid: "54693758"
   
  **ScrollViewer의 확장기**  
   
- ![ScrollBar가 있는 확장기](../../../../docs/framework/wpf/controls/media/expanderwithscrollbar.JPG "ExpanderWithScrollBar")  
+ ![ScrollBar가 있는 확장기](./media/expanderwithscrollbar.JPG "ExpanderWithScrollBar")  
   
  배치 하는 경우는 <xref:System.Windows.Controls.Expander> 에서 제어할를 <xref:System.Windows.Controls.ScrollViewer>설정는 <xref:System.Windows.Controls.ScrollViewer> 방향을에 해당 하는 속성을 차원를 <xref:System.Windows.Controls.Expander> 콘텐츠가 열리는 크기는 <xref:System.Windows.Controls.Expander> 콘텐츠 영역의. 예를 들어, 설정 하는 경우는 <xref:System.Windows.Controls.Expander.ExpandDirection%2A> 속성에는 <xref:System.Windows.Controls.Expander> 에 <xref:System.Windows.Controls.ExpandDirection.Down> (콘텐츠 영역이 아래로 열림), 설정를 <xref:System.Windows.FrameworkElement.Height%2A> 속성을는 <xref:System.Windows.Controls.ScrollViewer> 콘텐츠 영역의 필수 높이로 컨트롤. 대신 자체 콘텐츠 높이 치수를 설정 하는 경우 <xref:System.Windows.Controls.ScrollViewer> 이 설정을 인식 하지 못하고 따라서 스크롤 가능한 콘텐츠를 제공 하지 않습니다.  
   
  다음 예제에서는 만드는 방법을 보여 줍니다.는 <xref:System.Windows.Controls.Expander> 복합 콘텐츠가 포함 된 컨트롤을 <xref:System.Windows.Controls.ScrollViewer> 제어 합니다. 이 예제에서는 <xref:System.Windows.Controls.Expander> 이 섹션의 시작 부분에 있는 그림과 같은입니다.  
   
- [!code-csharp[ExpanderRichContent#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ExpanderRichContent/CSharp/Window1.xaml.cs#1)]
- [!code-vb[ExpanderRichContent#1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ExpanderRichContent/VisualBasic/Window1.xaml.vb#1)]
- [!code-xaml[ExpanderRichContent#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ExpanderRichContent/CSharp/Window1.xaml#1)]  
+ [!code-csharp[ExpanderRichContent#1](~/samples/snippets/csharp/VS_Snippets_Wpf/ExpanderRichContent/CSharp/Window1.xaml.cs#1)]
+ [!code-vb[ExpanderRichContent#1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ExpanderRichContent/VisualBasic/Window1.xaml.vb#1)]
+ [!code-xaml[ExpanderRichContent#1](~/samples/snippets/csharp/VS_Snippets_Wpf/ExpanderRichContent/CSharp/Window1.xaml#1)]  
   
 <a name="UsingtheAlignmentProperties"></a>   
 ## <a name="using-the-alignment-properties"></a>맞춤 속성 사용  
@@ -62,4 +62,4 @@ ms.locfileid: "54693758"
 ## <a name="see-also"></a>참고자료
 - <xref:System.Windows.Controls.Expander>
 - <xref:System.Windows.Controls.ExpandDirection>
-- [방법 항목](../../../../docs/framework/wpf/controls/expander-how-to-topics.md)
+- [방법 항목](expander-how-to-topics.md)

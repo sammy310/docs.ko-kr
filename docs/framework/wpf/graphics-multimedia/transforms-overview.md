@@ -12,12 +12,12 @@ helpviewer_keywords:
 - Transforms [WPF], about Transforms
 - FrameworkElement objects [WPF], scaling
 ms.assetid: 8f153d5e-ed61-4aa5-a7cd-286f0c427a13
-ms.openlocfilehash: 9e28f95b58481a5cb7b2fbf92fd20545a3f0fdc5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e3169a34f676d65a3af50bfc9177095c9996c1a2
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54503121"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57355651"
 ---
 # <a name="transforms-overview"></a>Transform 개요
 이 항목에서는 사용 하는 방법을 설명 합니다 [!INCLUDE[TLA#tla_2d](../../../../includes/tlasharptla-2d-md.md)] <xref:System.Windows.Media.Transform> 회전, 크기 조정, 이동 하는 클래스 (변환) 및 기울이기 <xref:System.Windows.FrameworkElement> 개체입니다.  
@@ -50,17 +50,17 @@ ms.locfileid: "54503121"
   
 |클래스|설명|예제|그림|  
 |-----------|-----------------|-------------|------------------|  
-|<xref:System.Windows.Media.RotateTransform>|지정 된 요소를 회전 <xref:System.Windows.Media.RotateTransform.Angle%2A>합니다.|[개체 회전](../../../../docs/framework/wpf/graphics-multimedia/how-to-rotate-an-object.md)|![회전 그림](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-thumbnails-rotate.png "graphicsmm_thumbnails_rotate")|  
-|<xref:System.Windows.Media.ScaleTransform>|지정 된 요소 크기를 조정 <xref:System.Windows.Media.ScaleTransform.ScaleX%2A> 고 <xref:System.Windows.Media.ScaleTransform.ScaleY%2A> 금액입니다.|[요소 배율 조정](../../../../docs/framework/wpf/graphics-multimedia/how-to-scale-an-element.md)|![배율 조정 그림](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-thumbnails-scale.png "graphicsmm_thumbnails_scale")|  
-|<xref:System.Windows.Media.SkewTransform>|지정 된 요소를 기울입니다 <xref:System.Windows.Media.SkewTransform.AngleX%2A> 고 <xref:System.Windows.Media.SkewTransform.AngleY%2A> 금액입니다.|[요소 기울이기](../../../../docs/framework/wpf/graphics-multimedia/how-to-skew-an-element.md)|![기울이기 그림](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-thumbnails-skew.png "graphicsmm_thumbnails_skew")|  
-|<xref:System.Windows.Media.TranslateTransform>|이동 (변환)에 지정 된 요소가 <xref:System.Windows.Media.TranslateTransform.X%2A> 및 <xref:System.Windows.Media.TranslateTransform.Y%2A> 금액입니다.|[요소 변환](../../../../docs/framework/wpf/graphics-multimedia/how-to-translate-an-element.md)|![변환 그림](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-thumbnails-translate.png "graphicsmm_thumbnails_translate")|  
+|<xref:System.Windows.Media.RotateTransform>|지정 된 요소를 회전 <xref:System.Windows.Media.RotateTransform.Angle%2A>합니다.|[개체 회전](how-to-rotate-an-object.md)|![회전 그림](./media/graphicsmm-thumbnails-rotate.png "graphicsmm_thumbnails_rotate")|  
+|<xref:System.Windows.Media.ScaleTransform>|지정 된 요소 크기를 조정 <xref:System.Windows.Media.ScaleTransform.ScaleX%2A> 고 <xref:System.Windows.Media.ScaleTransform.ScaleY%2A> 금액입니다.|[요소 배율 조정](how-to-scale-an-element.md)|![배율 조정 그림](./media/graphicsmm-thumbnails-scale.png "graphicsmm_thumbnails_scale")|  
+|<xref:System.Windows.Media.SkewTransform>|지정 된 요소를 기울입니다 <xref:System.Windows.Media.SkewTransform.AngleX%2A> 고 <xref:System.Windows.Media.SkewTransform.AngleY%2A> 금액입니다.|[요소 기울이기](how-to-skew-an-element.md)|![기울이기 그림](./media/graphicsmm-thumbnails-skew.png "graphicsmm_thumbnails_skew")|  
+|<xref:System.Windows.Media.TranslateTransform>|이동 (변환)에 지정 된 요소가 <xref:System.Windows.Media.TranslateTransform.X%2A> 및 <xref:System.Windows.Media.TranslateTransform.Y%2A> 금액입니다.|[요소 변환](how-to-translate-an-element.md)|![변환 그림](./media/graphicsmm-thumbnails-translate.png "graphicsmm_thumbnails_translate")|  
   
  더 복잡 한 변환을 만들기 위해 Windows Presentation Foundation (WPF)는 다음 두 클래스를 제공 합니다.  
   
 |클래스|설명|예제|  
 |-----------|-----------------|-------------|  
-|<xref:System.Windows.Media.TransformGroup>|여러 그룹화 <xref:System.Windows.Media.TransformGroup> 개체를 하나의 <xref:System.Windows.Media.Transform> 그런 다음 변환 속성에 적용할 수 있습니다.|[개체에 다중 변환 적용](../../../../docs/framework/wpf/graphics-multimedia/how-to-apply-multiple-transforms-to-an-object.md)|  
-|<xref:System.Windows.Media.MatrixTransform>|다른 사람이 제공 되지 않는 사용자 지정 변환을 만듭니다 <xref:System.Windows.Media.Transform> 클래스입니다. 사용 하는 경우는 <xref:System.Windows.Media.MatrixTransform>에 행렬을 직접 조작 합니다.|[MatrixTransform을 사용하여 사용자 지정 변환 만들기](../../../../docs/framework/wpf/graphics-multimedia/how-to-use-a-matrixtransform-to-create-custom-transforms.md)|  
+|<xref:System.Windows.Media.TransformGroup>|여러 그룹화 <xref:System.Windows.Media.TransformGroup> 개체를 하나의 <xref:System.Windows.Media.Transform> 그런 다음 변환 속성에 적용할 수 있습니다.|[개체에 다중 변환 적용](how-to-apply-multiple-transforms-to-an-object.md)|  
+|<xref:System.Windows.Media.MatrixTransform>|다른 사람이 제공 되지 않는 사용자 지정 변환을 만듭니다 <xref:System.Windows.Media.Transform> 클래스입니다. 사용 하는 경우는 <xref:System.Windows.Media.MatrixTransform>에 행렬을 직접 조작 합니다.|[MatrixTransform을 사용하여 사용자 지정 변환 만들기](how-to-use-a-matrixtransform-to-create-custom-transforms.md)|  
   
  Windows Presentation Foundation (WPF)에서는 [!INCLUDE[TLA#tla_3d](../../../../includes/tlasharptla-3d-md.md)] 변환 합니다. 자세한 내용은 <xref:System.Windows.Media.Media3D.Transform3D> 클래스를 참조하세요.  
   
@@ -84,19 +84,19 @@ ms.locfileid: "54503121"
   
  다음 예제에서는 <xref:System.Windows.Media.RotateTransform> 회전 하는 <xref:System.Windows.Shapes.Rectangle> 요소, 형식의 <xref:System.Windows.FrameworkElement>를 기본 중심에서 45도 각도로 (0, 0). 다음 그림에서는 회전의 결과를 보여 줍니다.  
   
- ![45도 회전 시킨 FrameworkElement &#40;0, 0&#41;](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-fe-rotated-about-upperleft-corner.png "graphicsmm_FE_rotated_about_upperleft_corner")  
+ ![45도 회전 시킨 FrameworkElement &#40;0, 0&#41;](./media/graphicsmm-fe-rotated-about-upperleft-corner.png "graphicsmm_FE_rotated_about_upperleft_corner")  
 점 (0,0)을 기준으로 45도 회전된 Rectangle 요소  
   
- [!code-xaml[Transforms_snip#TransformsFERotatedAboutTopLeft](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Transforms_snip/CS/CoordinateSystemExample.xaml#transformsferotatedabouttopleft)]  
+ [!code-xaml[Transforms_snip#TransformsFERotatedAboutTopLeft](~/samples/snippets/csharp/VS_Snippets_Wpf/Transforms_snip/CS/CoordinateSystemExample.xaml#transformsferotatedabouttopleft)]  
   
  기본적으로 요소는 왼쪽 위 구석 (0,0)을 기준으로 회전합니다. 합니다 <xref:System.Windows.Media.RotateTransform>, <xref:System.Windows.Media.ScaleTransform>, 및 <xref:System.Windows.Media.SkewTransform> 클래스는 변환이 적용 되는 시점을 지정할 수 있도록 하는 CenterX 및 CenterY 속성을 제공 합니다.  
   
  그러나 다음 예제에서는 또한 사용 하 여를 <xref:System.Windows.Media.RotateTransform> 회전 하는 <xref:System.Windows.Shapes.Rectangle> 45도 각도로; 요소이 이번을 <xref:System.Windows.Media.RotateTransform.CenterX%2A> 및 <xref:System.Windows.Media.RotateTransform.CenterY%2A> 속성이 설정 되어 있도록는 <xref:System.Windows.Media.RotateTransform> 의 가운데에 (25, 25). 다음 그림에서는 회전의 결과를 보여 줍니다.  
   
- ![45도 회전 시킨 기 하 도형 &#40;25, 25&#41;](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-fe-rotated-about-center.png "graphicsmm_FE_rotated_about_center")  
+ ![45도 회전 시킨 기 하 도형 &#40;25, 25&#41;](./media/graphicsmm-fe-rotated-about-center.png "graphicsmm_FE_rotated_about_center")  
 점 (25, 25)를 기준으로 45도 회전된 Rectangle 요소  
   
- [!code-xaml[Transforms_snip#TransformsFERotatedAboutCenter](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Transforms_snip/CS/CoordinateSystemExample.xaml#transformsferotatedaboutcenter)]  
+ [!code-xaml[Transforms_snip#TransformsFERotatedAboutCenter](~/samples/snippets/csharp/VS_Snippets_Wpf/Transforms_snip/CS/CoordinateSystemExample.xaml#transformsferotatedaboutcenter)]  
   
 <a name="layoutTransformsAndRenderTransformsSection"></a>   
 ## <a name="transforming-a-frameworkelement"></a>FrameworkElement 변환  
@@ -108,7 +108,7 @@ ms.locfileid: "54503121"
   
  어떤 속성을 사용해야 할까요? 제공 하는 성능상의 이점 때문에 사용할 합니다 <xref:System.Windows.UIElement.RenderTransform%2A> 가능 하면 사용 하는 경우에 특히 애니메이션 효과가 적용 될 때마다 속성 <xref:System.Windows.Media.Transform> 개체입니다. 사용 된 <xref:System.Windows.FrameworkElement.LayoutTransform%2A> 속성 크기 조정, 회전, 기울이기 해야 요소의 변환 된 크기로 조정 하는 요소의 부모입니다. 사용 될 때는 합니다 <xref:System.Windows.FrameworkElement.LayoutTransform%2A> 속성인 <xref:System.Windows.Media.TranslateTransform> 개체 요소에 아무 효과도 없는 것 같습니다. 레이아웃 시스템이 변환된 요소를 처리 과정의 일부로 원래 위치로 되돌리기 때문입니다.  
   
- [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]의 레이아웃에 대한 추가 정보를 보려면 [레이아웃](../../../../docs/framework/wpf/advanced/layout.md) 개요를 참조하세요.  
+ [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]의 레이아웃에 대한 추가 정보를 보려면 [레이아웃](../advanced/layout.md) 개요를 참조하세요.  
   
 <a name="exampleRotateAnElement45degSection"></a>   
 ## <a name="example-rotate-a-frameworkelement-45-degrees"></a>예제: FrameworkElement 회전 45도  
@@ -116,24 +116,24 @@ ms.locfileid: "54503121"
   
  기본적으로 <xref:System.Windows.Media.RotateTransform> 점 (0, 0)으로 회전 합니다. 이 예제에서는 중심 값을 지정하지 않으므로 단추는 왼쪽 위 구석에 해당하는 점 (0,0)에 대해 회전합니다. 합니다 <xref:System.Windows.Media.RotateTransform> 에 적용 되는 <xref:System.Windows.UIElement.RenderTransform%2A> 속성입니다. 다음 그림에서는 변환의 결과를 보여 줍니다.  
   
- ![RenderTransform을 사용 하 여 변형 된 단추](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-rendertransformwithdefaultcenter.png "graphicsmm_RenderTransformWithDefaultCenter")  
+ ![RenderTransform을 사용 하 여 변형 된 단추](./media/graphicsmm-rendertransformwithdefaultcenter.png "graphicsmm_RenderTransformWithDefaultCenter")  
 왼쪽 위 구석에서 시계 방향으로 45도 회전  
   
- [!code-xaml[Transforms_snip#GraphicsMMRotateButtonExample1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Transforms_snip/CS/ButtonRotateTransformExample.xaml#graphicsmmrotatebuttonexample1)]  
+ [!code-xaml[Transforms_snip#GraphicsMMRotateButtonExample1](~/samples/snippets/csharp/VS_Snippets_Wpf/Transforms_snip/CS/ButtonRotateTransformExample.xaml#graphicsmmrotatebuttonexample1)]  
   
  다음 예제에서는 또한 사용 하 여는 <xref:System.Windows.Media.RotateTransform> 설정도 하지만 단추를 시계 방향으로 45도 회전 하는 <xref:System.Windows.UIElement.RenderTransformOrigin%2A> 단추 (0.5, 0.5)입니다. 값을 <xref:System.Windows.UIElement.RenderTransformOrigin%2A> 속성은 단추의 크기를 기준으로 합니다. 결과적으로, 회전은 왼쪽 위 구석 대신 단추의 중심에 적용됩니다. 다음 그림에서는 변환의 결과를 보여 줍니다.  
   
- ![가운데를 중심으로 변형 된 단추](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-rendertransformrelativecenter.png "graphicsmm_RenderTransformRelativeCenter")  
+ ![가운데를 중심으로 변형 된 단추](./media/graphicsmm-rendertransformrelativecenter.png "graphicsmm_RenderTransformRelativeCenter")  
 중심을 기준으로 시계 방향으로 45도 회전  
   
- [!code-xaml[Transforms_snip#GraphicsMMRotateButtonExample2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Transforms_snip/CS/ButtonRotateTransformExample.xaml#graphicsmmrotatebuttonexample2)]  
+ [!code-xaml[Transforms_snip#GraphicsMMRotateButtonExample2](~/samples/snippets/csharp/VS_Snippets_Wpf/Transforms_snip/CS/ButtonRotateTransformExample.xaml#graphicsmmrotatebuttonexample2)]  
   
  다음 예제에서는 합니다 <xref:System.Windows.FrameworkElement.LayoutTransform%2A> 속성 대신는 <xref:System.Windows.UIElement.RenderTransform%2A> 속성 단추를 회전 합니다.  그러면 변환이 단추의 레이아웃에 영향을 미쳐 레이아웃 시스템의 전체 패스를 트리거합니다. 결과적으로 크기가 변경되었기 때문에 단추는 회전한 다음 재배치됩니다. 다음 그림에서는 변환의 결과를 보여 줍니다.  
   
- ![LayoutTransform을 사용 하 여 변형 된 단추](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-layouttransform.png "graphicsmm_LayoutTransform")  
+ ![LayoutTransform을 사용 하 여 변형 된 단추](./media/graphicsmm-layouttransform.png "graphicsmm_LayoutTransform")  
 단추 회전에 사용된 LayoutTransform  
   
- [!code-xaml[Transforms_snip#GraphicsMMRotateButtonExample3](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Transforms_snip/CS/ButtonRotateTransformExample.xaml#graphicsmmrotatebuttonexample3)]  
+ [!code-xaml[Transforms_snip#GraphicsMMRotateButtonExample3](~/samples/snippets/csharp/VS_Snippets_Wpf/Transforms_snip/CS/ButtonRotateTransformExample.xaml#graphicsmmrotatebuttonexample3)]  
   
 <a name="animate_transforms"></a>   
 ## <a name="animating-transformations"></a>변환에 애니메이션 효과 주기  
@@ -141,16 +141,16 @@ ms.locfileid: "54503121"
   
  다음 예제에서는 <xref:System.Windows.Media.Animation.Storyboard> 및 <xref:System.Windows.Media.Animation.DoubleAnimation> 사용 하 여를 <xref:System.Windows.Media.RotateTransform> 있도록를 <xref:System.Windows.Controls.Button> 클릭 했을 때 현재 위치에서 회전 합니다.  
   
- [!code-xaml[Transforms_snip#GraphicsMMAnimatedRotateButtonExampleWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Transforms_snip/CS/ButtonAnimatedRotateTransformExample.xaml#graphicsmmanimatedrotatebuttonexamplewholepage)]  
+ [!code-xaml[Transforms_snip#GraphicsMMAnimatedRotateButtonExampleWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/Transforms_snip/CS/ButtonAnimatedRotateTransformExample.xaml#graphicsmmanimatedrotatebuttonexamplewholepage)]  
   
- 전체 샘플을 보려면 [2차원 변환 샘플](https://go.microsoft.com/fwlink/?LinkID=158252)을 참조하세요. 애니메이션에 대한 자세한 내용은 [애니메이션 개요](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)를 참조하세요.  
+ 전체 샘플을 보려면 [2차원 변환 샘플](https://go.microsoft.com/fwlink/?LinkID=158252)을 참조하세요. 애니메이션에 대한 자세한 내용은 [애니메이션 개요](animation-overview.md)를 참조하세요.  
   
 <a name="freezable_features"></a>   
 ## <a name="freezable-features"></a>Freezable 기능  
- 상속 하므로 합니다 <xref:System.Windows.Freezable> 클래스를 <xref:System.Windows.Media.Transform> 몇 가지 특별 한 기능을 제공 하는 클래스: <xref:System.Windows.Media.Transform> 로 개체를 선언할 수 있습니다 [리소스](../../../../docs/framework/wpf/advanced/xaml-resources.md)개선 하기 위해 읽기 전용으로, 여러 개체 간에 공유 성능, 복제 하 고 스레드로부터 안전 합니다. 제공 하는 다양 한 기능에 대 한 자세한 내용은 <xref:System.Windows.Freezable> 개체를 참조 합니다 [Freezable 개체 개요](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md)합니다.  
+ 상속 하므로 합니다 <xref:System.Windows.Freezable> 클래스를 <xref:System.Windows.Media.Transform> 몇 가지 특별 한 기능을 제공 하는 클래스: <xref:System.Windows.Media.Transform> 로 개체를 선언할 수 있습니다 [리소스](../advanced/xaml-resources.md)개선 하기 위해 읽기 전용으로, 여러 개체 간에 공유 성능, 복제 하 고 스레드로부터 안전 합니다. 제공 하는 다양 한 기능에 대 한 자세한 내용은 <xref:System.Windows.Freezable> 개체를 참조 합니다 [Freezable 개체 개요](../advanced/freezable-objects-overview.md)합니다.  
   
 ## <a name="see-also"></a>참고자료
 - <xref:System.Windows.Media.Transform>
 - <xref:System.Windows.Media.Matrix>
-- [방법 항목](../../../../docs/framework/wpf/graphics-multimedia/transformations-how-to-topics.md)
+- [방법 항목](transformations-how-to-topics.md)
 - [2차원 변환 샘플](https://go.microsoft.com/fwlink/?LinkID=158252)

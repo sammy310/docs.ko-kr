@@ -9,12 +9,12 @@ helpviewer_keywords:
 - design considerations [WPF]
 - layout pass [WPF]
 ms.assetid: 005f4cda-a849-448b-916b-38d14d9a96fe
-ms.openlocfilehash: c5dd567fa9f5db69c52072a1cc67b5c574f8e1f5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e62b439926465aa1a61abd39c7c942acf26732c4
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54623874"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57367949"
 ---
 # <a name="optimizing-performance-layout-and-design"></a>성능 최적화: 레이아웃 및 디자인
 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 응용 프로그램의 디자인 작업은 레이아웃 계산과 개체 참조의 유효성 검사 과정에서 불필요한 오버헤드를 초래하여 성능에 영향을 줄 수 있습니다. 또한 개체 생성 작업은 특히 런타임에 애플리케이션의 성능 특성에 영향을 줄 수 있습니다.  
@@ -49,7 +49,7 @@ ms.locfileid: "54623874"
 ### <a name="use-the-most-efficient-panel-where-possible"></a>가능한 경우 가장 효율적인 패널 사용  
  레이아웃 프로세스의 복잡성은 직접 동작을 기반으로 레이아웃의는 <xref:System.Windows.Controls.Panel>-사용할 요소를 파생 합니다. 예를 들어를 <xref:System.Windows.Controls.Grid> 또는 <xref:System.Windows.Controls.StackPanel> 보다 훨씬 더 많은 기능을 제공 하는 컨트롤을 <xref:System.Windows.Controls.Canvas> 제어 합니다. 기능이 많이 제공될수록 성능 비용이 증가합니다. 그러나 기능이 필요 하지 않은 경우는 <xref:System.Windows.Controls.Grid> 컨트롤에서는 같은 비용이 덜 드는 대안을 사용 해야는 <xref:System.Windows.Controls.Canvas> 또는 사용자 지정 패널입니다.  
   
- 자세한 내용은 [패널 개요](../../../../docs/framework/wpf/controls/panels-overview.md)를 참조하세요.  
+ 자세한 내용은 [패널 개요](../controls/panels-overview.md)를 참조하세요.  
   
 ### <a name="update-rather-than-replace-a-rendertransform"></a>RenderTransform을 대체하는 대신 업데이트  
  업데이트 수를 <xref:System.Windows.Media.Transform> 값으로 대체 하는 대신는 <xref:System.Windows.UIElement.RenderTransform%2A> 속성입니다. 애니메이션과 관련된 시나리오가 특히 이러한 경우에 해당합니다. 기존 업데이트 하 여 <xref:System.Windows.Media.Transform>에 불필요 한 레이아웃 계산이 시작 되지 않습니다.  
@@ -64,19 +64,19 @@ ms.locfileid: "54623874"
   
  다음 코드 예제에서는 하향식 트리를 만드는 방법을 보여 줍니다.  
   
- [!code-csharp[Performance#PerformanceSnippet1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Performance/CSharp/Window1.xaml.cs#performancesnippet1)]
- [!code-vb[Performance#PerformanceSnippet1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/Performance/visualbasic/window1.xaml.vb#performancesnippet1)]  
+ [!code-csharp[Performance#PerformanceSnippet1](~/samples/snippets/csharp/VS_Snippets_Wpf/Performance/CSharp/Window1.xaml.cs#performancesnippet1)]
+ [!code-vb[Performance#PerformanceSnippet1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/Performance/visualbasic/window1.xaml.vb#performancesnippet1)]  
   
- 논리적 트리에 대한 자세한 내용은 [WPF의 트리](../../../../docs/framework/wpf/advanced/trees-in-wpf.md)를 참조하세요.  
+ 논리적 트리에 대한 자세한 내용은 [WPF의 트리](trees-in-wpf.md)를 참조하세요.  
   
 ## <a name="see-also"></a>참고자료
-- [WPF 응용 프로그램 성능 최적화](../../../../docs/framework/wpf/advanced/optimizing-wpf-application-performance.md)
-- [응용 프로그램 성능 계획](../../../../docs/framework/wpf/advanced/planning-for-application-performance.md)
-- [하드웨어 이용](../../../../docs/framework/wpf/advanced/optimizing-performance-taking-advantage-of-hardware.md)
-- [2차원 그래픽 및 이미징](../../../../docs/framework/wpf/advanced/optimizing-performance-2d-graphics-and-imaging.md)
-- [개체 동작](../../../../docs/framework/wpf/advanced/optimizing-performance-object-behavior.md)
-- [응용 프로그램 리소스](../../../../docs/framework/wpf/advanced/optimizing-performance-application-resources.md)
-- [텍스트](../../../../docs/framework/wpf/advanced/optimizing-performance-text.md)
-- [데이터 바인딩](../../../../docs/framework/wpf/advanced/optimizing-performance-data-binding.md)
-- [기타 성능 권장 사항](../../../../docs/framework/wpf/advanced/optimizing-performance-other-recommendations.md)
-- [레이아웃](../../../../docs/framework/wpf/advanced/layout.md)
+- [WPF 응용 프로그램 성능 최적화](optimizing-wpf-application-performance.md)
+- [애플리케이션 성능 계획](planning-for-application-performance.md)
+- [하드웨어 이용](optimizing-performance-taking-advantage-of-hardware.md)
+- [2차원 그래픽 및 이미징](optimizing-performance-2d-graphics-and-imaging.md)
+- [개체 동작](optimizing-performance-object-behavior.md)
+- [애플리케이션 리소스](optimizing-performance-application-resources.md)
+- [텍스트](optimizing-performance-text.md)
+- [데이터 바인딩](optimizing-performance-data-binding.md)
+- [기타 성능 권장 사항](optimizing-performance-other-recommendations.md)
+- [레이아웃](layout.md)

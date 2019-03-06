@@ -5,12 +5,12 @@ helpviewer_keywords:
 - controls [WPF], Popup
 - Popup control [WPF], about Popup control
 ms.assetid: 774f53ca-bff8-470e-9ce9-3928b4cf3d4c
-ms.openlocfilehash: 693c4d0cf0847b90379d409427b173b2c4740311
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4d480adbbd35084b30e2ca1c74d7392814b87783
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54616806"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57358472"
 ---
 # <a name="popup-overview"></a>Popup 개요
 <xref:System.Windows.Controls.Primitives.Popup> 컨트롤은 지정 된 요소 또는 화면 좌표를 기준으로 현재 응용 프로그램 창 위에 떠 있는 별도 창에서 콘텐츠를 표시 하는 방법을 제공 합니다. 이 항목에서는 소개를 <xref:System.Windows.Controls.Primitives.Popup> 제어 하 고 해당 사용에 대 한 정보를 제공 합니다.  
@@ -22,27 +22,27 @@ ms.locfileid: "54616806"
  <xref:System.Windows.Controls.Primitives.Popup> 컨트롤 요소 또는 화면에서 점을 기준으로 별도 창에서 콘텐츠를 표시 합니다. 경우는 <xref:System.Windows.Controls.Primitives.Popup> 표시 되는 <xref:System.Windows.Controls.Primitives.Popup.IsOpen%2A> 속성이 `true`.  
   
 > [!NOTE]
->  <xref:System.Windows.Controls.Primitives.Popup> 자동으로 열리지 않으면 부모 개체 위로 마우스 포인터를 움직이면 합니다. 하려는 경우는 <xref:System.Windows.Controls.Primitives.Popup> 자동으로 열도록 하려면 사용 합니다 <xref:System.Windows.Controls.ToolTip> 또는 <xref:System.Windows.Controls.ToolTipService> 클래스입니다. 자세한 내용은 [ToolTip 개요](../../../../docs/framework/wpf/controls/tooltip-overview.md)를 참조하세요.  
+>  <xref:System.Windows.Controls.Primitives.Popup> 자동으로 열리지 않으면 부모 개체 위로 마우스 포인터를 움직이면 합니다. 하려는 경우는 <xref:System.Windows.Controls.Primitives.Popup> 자동으로 열도록 하려면 사용 합니다 <xref:System.Windows.Controls.ToolTip> 또는 <xref:System.Windows.Controls.ToolTipService> 클래스입니다. 자세한 내용은 [ToolTip 개요](tooltip-overview.md)를 참조하세요.  
   
 <a name="APopupExample"></a>   
 ## <a name="creating-a-popup"></a>팝업 만들기  
  다음 예제에서는 정의 하는 방법을 보여 줍니다는 <xref:System.Windows.Controls.Primitives.Popup> 컨트롤의 자식 요소인은 <xref:System.Windows.Controls.Button> 제어 합니다. 때문에 <xref:System.Windows.Controls.Button> 자식 요소가 하나만 있을 수 있습니다에 대 한 텍스트를 저장 하는이 예제는 <xref:System.Windows.Controls.Button> 및 <xref:System.Windows.Controls.Primitives.Popup> 컨트롤을 <xref:System.Windows.Controls.StackPanel>입니다. 콘텐츠를 <xref:System.Windows.Controls.Primitives.Popup> 나타나는 <xref:System.Windows.Controls.TextBlock> 거의 관련 응용 프로그램 창 위에 떠 있는 별도 창에서 해당 텍스트를 표시 하는 컨트롤 <xref:System.Windows.Controls.Button> 컨트롤입니다.  
   
- [!code-xaml[PopupSimple#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PopupSimple/CSharp/Window1.xaml#1)]  
+ [!code-xaml[PopupSimple#1](~/samples/snippets/csharp/VS_Snippets_Wpf/PopupSimple/CSharp/Window1.xaml#1)]  
   
- [!code-xaml[PopupSimple#CreatePopupCodeXAML](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PopupSimple/CSharp/Window1.xaml#createpopupcodexaml)]  
+ [!code-xaml[PopupSimple#CreatePopupCodeXAML](~/samples/snippets/csharp/VS_Snippets_Wpf/PopupSimple/CSharp/Window1.xaml#createpopupcodexaml)]  
   
 <a name="PopupUses"></a>   
 ## <a name="controls-that-implement-a-popup"></a>Popup을 구현하는 컨트롤  
  빌드할 수 있습니다 <xref:System.Windows.Controls.Primitives.Popup> 다른 컨트롤에는 컨트롤입니다. 다음 컨트롤은 구현는 <xref:System.Windows.Controls.Primitives.Popup> 특정 용도 대 한 제어 합니다.  
   
--   <xref:System.Windows.Controls.ToolTip>. 요소에 대 한 도구 설명을 만들려면 하려는 경우 사용 합니다 <xref:System.Windows.Controls.ToolTip> 및 <xref:System.Windows.Controls.ToolTipService> 클래스입니다. 자세한 내용은 [ToolTip 개요](../../../../docs/framework/wpf/controls/tooltip-overview.md)를 참조하세요.  
+-   <xref:System.Windows.Controls.ToolTip>. 요소에 대 한 도구 설명을 만들려면 하려는 경우 사용 합니다 <xref:System.Windows.Controls.ToolTip> 및 <xref:System.Windows.Controls.ToolTipService> 클래스입니다. 자세한 내용은 [ToolTip 개요](tooltip-overview.md)를 참조하세요.  
   
--   <xref:System.Windows.Controls.ContextMenu>. 요소에 대 한 상황에 맞는 메뉴를 만들려는 경우 사용 된 <xref:System.Windows.Controls.ContextMenu> 제어 합니다. 자세한 내용은 [ContextMenu 개요](../../../../docs/framework/wpf/controls/contextmenu-overview.md)를 참조하세요.  
+-   <xref:System.Windows.Controls.ContextMenu>. 요소에 대 한 상황에 맞는 메뉴를 만들려는 경우 사용 된 <xref:System.Windows.Controls.ContextMenu> 제어 합니다. 자세한 내용은 [ContextMenu 개요](contextmenu-overview.md)를 참조하세요.  
   
 -   <xref:System.Windows.Controls.ComboBox>. 표시 되거나 숨겨진를 사용할 수 있는 드롭다운 목록 상자가 포함 된 선택 컨트롤을 만들려는 경우를 <xref:System.Windows.Controls.ComboBox> 제어 합니다.  
   
--   <xref:System.Windows.Controls.Expander>. 콘텐츠를 표시 하는 축소 가능한 영역을 사용 하 여 헤더를 표시 하는 컨트롤을 만들려는 경우, 사용 된 <xref:System.Windows.Controls.Expander> 제어 합니다. 자세한 내용은 [Expander 개요](../../../../docs/framework/wpf/controls/expander-overview.md)를 참조하세요.  
+-   <xref:System.Windows.Controls.Expander>. 콘텐츠를 표시 하는 축소 가능한 영역을 사용 하 여 헤더를 표시 하는 컨트롤을 만들려는 경우, 사용 된 <xref:System.Windows.Controls.Expander> 제어 합니다. 자세한 내용은 [Expander 개요](expander-overview.md)를 참조하세요.  
   
 <a name="PopupBehaviorandAppearance"></a>   
 ## <a name="popup-behavior-and-appearance"></a>Popup 동작 및 모양  
@@ -74,13 +74,13 @@ ms.locfileid: "54616806"
   
 <a name="DefiningPopupPosition"></a>   
 ## <a name="defining-the-popup-position"></a>Popup 위치 정의  
- 설정 하 여 팝업을 배치할 수는 <xref:System.Windows.Controls.Primitives.Popup.PlacementTarget%2A>, <xref:System.Windows.Controls.Primitives.Popup.PlacementRectangle%2A>, <xref:System.Windows.Controls.Primitives.Popup.Placement%2A>, <xref:System.Windows.Controls.Primitives.Popup.HorizontalOffset%2A>, 및 <xref:System.Windows.Controls.Primitives.Popup.VerticalOffsetProperty> 속성입니다. 자세한 내용은 [Popup 배치 동작](../../../../docs/framework/wpf/controls/popup-placement-behavior.md)을 참조하세요. 때 <xref:System.Windows.Controls.Primitives.Popup> 표시 되는 화면에서 이전 위치를 자체 나면 부모가 재배치 된 경우.  
+ 설정 하 여 팝업을 배치할 수는 <xref:System.Windows.Controls.Primitives.Popup.PlacementTarget%2A>, <xref:System.Windows.Controls.Primitives.Popup.PlacementRectangle%2A>, <xref:System.Windows.Controls.Primitives.Popup.Placement%2A>, <xref:System.Windows.Controls.Primitives.Popup.HorizontalOffset%2A>, 및 <xref:System.Windows.Controls.Primitives.Popup.VerticalOffsetProperty> 속성입니다. 자세한 내용은 [Popup 배치 동작](popup-placement-behavior.md)을 참조하세요. 때 <xref:System.Windows.Controls.Primitives.Popup> 표시 되는 화면에서 이전 위치를 자체 나면 부모가 재배치 된 경우.  
   
 <a name="CustomizingPopupPlacement"></a>   
 ### <a name="customizing-popup-placement"></a>Popup 배치 사용자 지정  
  배치를 사용자 지정할 수 있습니다는 <xref:System.Windows.Controls.Primitives.Popup> 기준으로 하는 좌표 집합을 지정 하 여 컨트롤을 <xref:System.Windows.Controls.Primitives.Popup.PlacementTarget%2A> 하려는 <xref:System.Windows.Controls.Primitives.Popup> 표시.  
   
- 배치를 사용자 지정을 설정 합니다 <xref:System.Windows.Controls.Primitives.Popup.Placement%2A> 속성을 <xref:System.Windows.Controls.Primitives.PlacementMode.Custom>입니다. 그런 다음 정의 <xref:System.Windows.Controls.Primitives.CustomPopupPlacementCallback> 에 대 한 가능한 배치 지점 및 기본 축을 (기본 설정의 순서로)의 집합을 반환 하는 대리자는 <xref:System.Windows.Controls.Primitives.Popup>합니다. 가장 큰 부분을 표시 하는 지점이 <xref:System.Windows.Controls.Primitives.Popup> 자동으로 선택 됩니다. 예제를 보려면 [사용자 지정 팝업 위치 지정](../../../../docs/framework/wpf/controls/how-to-specify-a-custom-popup-position.md)을 참조하세요.  
+ 배치를 사용자 지정을 설정 합니다 <xref:System.Windows.Controls.Primitives.Popup.Placement%2A> 속성을 <xref:System.Windows.Controls.Primitives.PlacementMode.Custom>입니다. 그런 다음 정의 <xref:System.Windows.Controls.Primitives.CustomPopupPlacementCallback> 에 대 한 가능한 배치 지점 및 기본 축을 (기본 설정의 순서로)의 집합을 반환 하는 대리자는 <xref:System.Windows.Controls.Primitives.Popup>합니다. 가장 큰 부분을 표시 하는 지점이 <xref:System.Windows.Controls.Primitives.Popup> 자동으로 선택 됩니다. 예제를 보려면 [사용자 지정 팝업 위치 지정](how-to-specify-a-custom-popup-position.md)을 참조하세요.  
   
 <a name="PopupandtheVisualTree"></a>   
 ## <a name="popup-and-the-visual-tree"></a>Popup 및 시각적 트리  
@@ -96,5 +96,5 @@ ms.locfileid: "54616806"
 - <xref:System.Windows.Controls.Primitives.CustomPopupPlacementCallback>
 - <xref:System.Windows.Controls.ToolTip>
 - <xref:System.Windows.Controls.ToolTipService>
-- [방법 항목](../../../../docs/framework/wpf/controls/popup-how-to-topics.md)
-- [방법 항목](../../../../docs/framework/wpf/controls/tooltip-how-to-topics.md)
+- [방법 항목](popup-how-to-topics.md)
+- [방법 항목](tooltip-how-to-topics.md)

@@ -7,23 +7,23 @@ helpviewer_keywords:
 - ListBox control [WPF]
 - controls [WPF], ListBox
 ms.assetid: b91bb352-4f51-44e0-9017-a041f216c852
-ms.openlocfilehash: 5363cc3a6939b829a7cde0a87b096932556fc5bc
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: fe458ea2ca4107b7d43b160ba90b57c10b88a7f6
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33551689"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57362229"
 ---
 # <a name="listbox"></a>ListBox
-A <xref:System.Windows.Controls.ListBox> 컨트롤은 선택 가능한 항목의 목록 사용 하 여 사용자가 제공 합니다.  
+<xref:System.Windows.Controls.ListBox> 컨트롤은 선택 가능한 항목 목록 사용 하 여 사용자를 제공 합니다.  
   
- 다음 그림은 일반적인 <xref:System.Windows.Controls.ListBox>합니다.  
+ 다음 그림에서는 일반적인 <xref:System.Windows.Controls.ListBox>합니다.  
   
- ![ListBox 스크린 샷](../../../../docs/framework/wpf/controls/media/ss-ctl-listbox.gif "SS_CTL_listbox")  
+ ![ListBox 스크린 샷](./media/ss-ctl-listbox.gif "SS_CTL_listbox")  
 일반적인 ListBox  
   
 ## <a name="in-this-section"></a>섹션 내용  
- [방법 항목](../../../../docs/framework/wpf/controls/listbox-how-to-topics.md)  
+ [방법 항목](listbox-how-to-topics.md)  
   
 ## <a name="reference"></a>참조  
  <xref:System.Windows.Controls.ListBox>  

@@ -12,12 +12,12 @@ helpviewer_keywords:
 - add-ins [WPF], architecture
 - add-ins [WPF], limitations
 ms.assetid: 00b4c776-29a8-4dba-b603-280a0cdc2ade
-ms.openlocfilehash: 47e76a1d08f8c85eafa7758ec9fdd80d8ae8afcf
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
+ms.openlocfilehash: 859e586d6cb0b334a7ad766de5d3aabb0e1864ac
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56746564"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57365843"
 ---
 # <a name="wpf-add-ins-overview"></a>WPF 추가 기능 개요
 <a name="Introduction"></a> .NET Framework 개발자가 추가 기능 확장성을 지 원하는 응용 프로그램을 만드는 데 사용할 추가 모델을 포함 합니다. 이 추가 기능 모델을 사용하면 애플리케이션 기능과 통합하고 이 기능을 확장하는 추가 기능을 만들 수 있습니다. 일부 시나리오에서는 응용 프로그램 에서도 추가 기능을 통해 제공 되는 사용자 인터페이스를 표시 해야 합니다. 이 항목에서는 WPF 이러한 시나리오, 해당 이점 및 제한 사항 기반이 되는 아키텍처를 사용 하도록 설정 하려면.NET Framework 추가 기능에서 모델을 보강 하는 방법을 보여 줍니다.  
@@ -56,7 +56,7 @@ ms.locfileid: "56746564"
   
 -   **통신**: 추가 기능을 허용 하 고 호스트 응용 프로그램이 메서드를 호출 하 고 데이터를 전달 하 여 격리 경계를 넘어 서로 통신할 수 있습니다.  
   
--   **수명 관리**: 로드 및 응용 프로그램 도메인 및 프로세스를 정리, 예측 가능한 방식으로 언로드 (참조 [응용 프로그램 도메인](../../../../docs/framework/app-domains/application-domains.md)).  
+-   **수명 관리**: 로드 및 응용 프로그램 도메인 및 프로세스를 정리, 예측 가능한 방식으로 언로드 (참조 [응용 프로그램 도메인](../../app-domains/application-domains.md)).  
   
 -   **버전 관리**: 호스트 응용 프로그램 및 기능 추가의 새 버전을 만들 때 여전히 통신할 수 있도록 합니다.  
   
@@ -130,7 +130,7 @@ ms.locfileid: "56746564"
   
 6.  호스트 응용 프로그램은 반환 된 표시 <xref:System.Windows.FrameworkElement>합니다.  
   
- UI를 반환 하는 추가 기능에서 구현 하는 방법을 보여 주는 예제를 참조 하세요 [UI는 추가 기능에서 반환 하는 만들기](../../../../docs/framework/wpf/app-development/how-to-create-an-add-in-that-returns-a-ui.md)합니다.  
+ UI를 반환 하는 추가 기능에서 구현 하는 방법을 보여 주는 예제를 참조 하세요 [UI는 추가 기능에서 반환 하는 만들기](how-to-create-an-add-in-that-returns-a-ui.md)합니다.  
   
 <a name="AddInIsAUI"></a>   
 ## <a name="add-in-is-a-user-interface"></a>추가 기능이 사용자 인터페이스임  
@@ -148,7 +148,7 @@ ms.locfileid: "56746564"
   
 6.  호스트 응용 프로그램은 반환 된 표시 <xref:System.Windows.FrameworkElement>합니다.  
   
- UI 인 추가 기능을 구현 하는 방법을 보여 주는 예제를 보려면 [는 추가 되는 UI를 만드는](../../../../docs/framework/wpf/app-development/how-to-create-an-add-in-that-is-a-ui.md)합니다.  
+ UI 인 추가 기능을 구현 하는 방법을 보여 주는 예제를 보려면 [는 추가 되는 UI를 만드는](how-to-create-an-add-in-that-is-a-ui.md)합니다.  
   
 <a name="ReturningMultipleUIsFromAnAddIn"></a>   
 ## <a name="returning-multiple-uis-from-an-add-in"></a>추가 기능에서 여러 UI 반환  
@@ -219,7 +219,7 @@ ms.locfileid: "56746564"
   
 -   WPF 호스트 응용 프로그램 쪽에서 가져오며 합니다 <xref:System.Windows.Interop.HwndSource> 에서 파생 되는 내부 WPF 클래스로 <xref:System.Windows.Interop.HwndHost> 들고 <xref:System.AddIn.Contract.INativeHandleContract>합니다. 이 클래스의 인스턴스 반환한 <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ContractToViewAdapter%2A> 호스트 응용 프로그램입니다.  
   
- <xref:System.Windows.Interop.HwndHost> WPF 사용자 인터페이스에서 창 핸들을 통해 식별 되는 사용자 인터페이스를 표시 하기 위해 존재 합니다. 자세한 내용은 [WPF 및 Win32 상호 운용성](../../../../docs/framework/wpf/advanced/wpf-and-win32-interoperation.md)을 참조하세요.  
+ <xref:System.Windows.Interop.HwndHost> WPF 사용자 인터페이스에서 창 핸들을 통해 식별 되는 사용자 인터페이스를 표시 하기 위해 존재 합니다. 자세한 내용은 [WPF 및 Win32 상호 운용성](../advanced/wpf-and-win32-interoperation.md)을 참조하세요.  
   
  요약 하자면, <xref:System.AddIn.Contract.INativeHandleContract>, <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A>, 및 <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ContractToViewAdapter%2A> 전달할 추가 기능에서 호스트 응용 프로그램에 의해 캡슐화 되는 WPF UI의 창 핸들을 허용 하기 위해 존재는 <xref:System.Windows.Interop.HwndHost> 호스트 응용 프로그램의 UI를 표시 합니다.  
   
@@ -252,11 +252,11 @@ ms.locfileid: "56746564"
   
 -   호스트 응용 프로그램에서 표시 하는 추가 기능 사용자 인터페이스는 호스트 응용 프로그램의 클리핑 동작을 미치지 않습니다.  
   
--   상호 운용성 시나리오의 *에어스페이스* 개념도 추가 기능에 적용됩니다([기술 영역 개요](../../../../docs/framework/wpf/advanced/technology-regions-overview.md) 참조).  
+-   상호 운용성 시나리오의 *에어스페이스* 개념도 추가 기능에 적용됩니다([기술 영역 개요](../advanced/technology-regions-overview.md) 참조).  
   
 -   리소스 상속, 데이터 바인딩 및 명령과 추가 기능에 자동으로 제공 됩니다. 같은 호스트 응용 프로그램의 UI 서비스 사용자 인터페이스입니다. 추가 기능에 이러한 서비스를 제공하려면 파이프라인을 업데이트해야 합니다.  
   
--   추가 UI를를 회전, 크기를 조정, 기울이기, 또는 그렇지 않은 경우 변환의 영향을 받는 수 없습니다 (참조 [변환 개요](../../../../docs/framework/wpf/graphics-multimedia/transforms-overview.md)).  
+-   추가 UI를를 회전, 크기를 조정, 기울이기, 또는 그렇지 않은 경우 변환의 영향을 받는 수 없습니다 (참조 [변환 개요](../graphics-multimedia/transforms-overview.md)).  
   
 -   작업을 그려 렌더링 되는 추가 기능 사용자 인터페이스 내의 콘텐츠는 <xref:System.Drawing> 알파 혼합 네임 스페이스를 포함할 수 있습니다. 그러나 포함 하는 UI의 호스트 응용 프로그램과 추가 기능에서 UI를 100% 여야 불투명 합니다. 즉,는 `Opacity` 둘 다에서 속성을 1로 설정 해야 합니다.  
   
@@ -280,12 +280,12 @@ ms.locfileid: "56746564"
   
 <a name="PerformanceOptimization"></a>   
 ## <a name="performance-optimization"></a>성능 최적화  
- 기본적으로 여러 응용 프로그램 도메인을 사용 하는 경우 각 응용 프로그램에 필요한 다양 한.NET Framework 어셈블리는 모든 도메인에 로드 해당 응용 프로그램. 결과적으로 새 애플리케이션 도메인을 만들고 이 도메인의 애플리케이션을 시작하는 데 필요한 시간이 성능에 영향을 미칠 수 있습니다. 그러나.NET Framework 응용 프로그램을 이미 로드 된 경우 응용 프로그램 도메인 간에 어셈블리를 공유 하도록 지시 하 여 시작 시간을 줄일 수 있는 방법을 제공 합니다. 사용 하 여이 작업을 수행 합니다 <xref:System.LoaderOptimizationAttribute> 진입점 메서드를 적용 해야 하는 특성 (`Main`). 이 경우, 애플리케이션 정의를 구현하는 코드만 사용해야 합니다([애플리케이션 관리 개요](../../../../docs/framework/wpf/app-development/application-management-overview.md) 참조).  
+ 기본적으로 여러 응용 프로그램 도메인을 사용 하는 경우 각 응용 프로그램에 필요한 다양 한.NET Framework 어셈블리는 모든 도메인에 로드 해당 응용 프로그램. 결과적으로 새 애플리케이션 도메인을 만들고 이 도메인의 애플리케이션을 시작하는 데 필요한 시간이 성능에 영향을 미칠 수 있습니다. 그러나.NET Framework 응용 프로그램을 이미 로드 된 경우 응용 프로그램 도메인 간에 어셈블리를 공유 하도록 지시 하 여 시작 시간을 줄일 수 있는 방법을 제공 합니다. 사용 하 여이 작업을 수행 합니다 <xref:System.LoaderOptimizationAttribute> 진입점 메서드를 적용 해야 하는 특성 (`Main`). 이 경우, 애플리케이션 정의를 구현하는 코드만 사용해야 합니다([애플리케이션 관리 개요](application-management-overview.md) 참조).  
   
 ## <a name="see-also"></a>참고자료
 - <xref:System.LoaderOptimizationAttribute>
 - [추가 기능 및 확장성](/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100))
-- [응용 프로그램 도메인](../../../../docs/framework/app-domains/application-domains.md)
+- [응용 프로그램 도메인](../../app-domains/application-domains.md)
 - [.NET framework Remoting 개요](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/kwdt6w2k(v=vs.100))
 - [개체 사용 가능](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/wcf3swha(v=vs.100))
-- [방법 항목](../../../../docs/framework/wpf/app-development/how-to-topics.md)
+- [방법 항목](how-to-topics.md)

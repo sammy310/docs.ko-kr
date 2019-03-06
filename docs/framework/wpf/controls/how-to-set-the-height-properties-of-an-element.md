@@ -8,12 +8,12 @@ helpviewer_keywords:
 - height properties [WPF]
 - Panel control [WPF], height properties of elements
 ms.assetid: 5ab9e781-dbb8-469a-a3c8-cf38ce312647
-ms.openlocfilehash: be3235d4bf7b5e108420b5ed030157067cacdb8a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 608f74afd95ce03b3ecf71819c2181a9728b25af
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54637052"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57356295"
 ---
 # <a name="how-to-set-the-height-properties-of-an-element"></a>방법: 요소의 높이 속성 설정
 ## <a name="example"></a>예제  
@@ -23,13 +23,13 @@ ms.locfileid: "54637052"
   
  다음 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] 예제 그리기는 <xref:System.Windows.Shapes.Rectangle> 요소 (`rect1`)의 자식으로 <xref:System.Windows.Controls.Canvas>입니다. 높이 속성을 변경할 수는 <xref:System.Windows.Shapes.Rectangle> 일련의를 사용 하 여 <xref:System.Windows.Controls.ListBox> 의 속성 값을 나타내는 요소 <xref:System.Windows.FrameworkElement.MinHeight%2A>, <xref:System.Windows.FrameworkElement.MaxHeight%2A>, 및 <xref:System.Windows.FrameworkElement.Height%2A>. 이런 방식으로 각 속성의 우선 순위를 시각적으로 표시 됩니다.  
   
- [!code-xaml[HeightMinHeightMaxHeight#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/HeightMinHeightMaxHeight/CSharp/Window1.xaml#1)]  
-[!code-xaml[HeightMinHeightMaxHeight#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/HeightMinHeightMaxHeight/CSharp/Window1.xaml#2)]  
+ [!code-xaml[HeightMinHeightMaxHeight#1](~/samples/snippets/csharp/VS_Snippets_Wpf/HeightMinHeightMaxHeight/CSharp/Window1.xaml#1)]  
+[!code-xaml[HeightMinHeightMaxHeight#2](~/samples/snippets/csharp/VS_Snippets_Wpf/HeightMinHeightMaxHeight/CSharp/Window1.xaml#2)]  
   
  다음 코드 숨김 예제에서는 이벤트를 처리 하는 <xref:System.Windows.Controls.Primitives.Selector.SelectionChanged> 이벤트를 발생 시킵니다. 각 처리기에서 입력을 가져와 합니다 <xref:System.Windows.Controls.ListBox>, 값을 구문 분석을 <xref:System.Double>, 지정한 높이 관련 된 속성에 값을 적용 하 고 합니다. 높이 값 또한 문자열로 변환 되 고 다양 한 쓸 <xref:System.Windows.Controls.TextBlock> 요소 (해당 요소의 정의 선택한 XAML에는 표시 되지 않습니다).  
   
- [!code-csharp[HeightMinHeightMaxHeight#3](../../../../samples/snippets/csharp/VS_Snippets_Wpf/HeightMinHeightMaxHeight/CSharp/Window1.xaml.cs#3)]
- [!code-vb[HeightMinHeightMaxHeight#3](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/HeightMinHeightMaxHeight/VisualBasic/Window1.xaml.vb#3)]  
+ [!code-csharp[HeightMinHeightMaxHeight#3](~/samples/snippets/csharp/VS_Snippets_Wpf/HeightMinHeightMaxHeight/CSharp/Window1.xaml.cs#3)]
+ [!code-vb[HeightMinHeightMaxHeight#3](~/samples/snippets/visualbasic/VS_Snippets_Wpf/HeightMinHeightMaxHeight/VisualBasic/Window1.xaml.vb#3)]  
   
  전체 샘플을 참조 하세요 [높이 속성 샘플](https://go.microsoft.com/fwlink/?LinkID=159993)합니다.  
   
@@ -40,6 +40,6 @@ ms.locfileid: "54637052"
 - <xref:System.Windows.FrameworkElement.MaxHeight%2A>
 - <xref:System.Windows.FrameworkElement.MinHeight%2A>
 - <xref:System.Windows.FrameworkElement.Height%2A>
-- [요소의 너비 속성 설정](../../../../docs/framework/wpf/controls/how-to-set-the-width-properties-of-an-element.md)
-- [패널 개요](../../../../docs/framework/wpf/controls/panels-overview.md)
+- [요소의 너비 속성 설정](how-to-set-the-width-properties-of-an-element.md)
+- [패널 개요](panels-overview.md)
 - [높이 속성 샘플](https://go.microsoft.com/fwlink/?LinkID=159993)

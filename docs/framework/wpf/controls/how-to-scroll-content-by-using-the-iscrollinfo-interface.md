@@ -9,12 +9,12 @@ helpviewer_keywords:
 - scrolling content [WPF]
 - IScrollInfo interface [WPF]
 ms.assetid: d8700bef-a3f8-4c12-9de2-fc3b79f32cd3
-ms.openlocfilehash: 49b3483750582aa51d1de418f745d931604d2786
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 145c58064b8557f9cb4730ec9272c354c7aa9c1b
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54637861"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57378980"
 ---
 # <a name="how-to-scroll-content-by-using-the-iscrollinfo-interface"></a>방법: IScrollInfo 인터페이스를 사용하여 콘텐츠 스크롤
 사용 하 여 콘텐츠 스크롤 하는 방법을 보여 주는이 예제는 <xref:System.Windows.Controls.Primitives.IScrollInfo> 인터페이스입니다.  
@@ -22,17 +22,17 @@ ms.locfileid: "54637861"
 ## <a name="example"></a>예제  
  다음 예제에서는 기능의 <xref:System.Windows.Controls.Primitives.IScrollInfo> 인터페이스입니다. 이 예에서는 만듭니다는 <xref:System.Windows.Controls.StackPanel> 요소에 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] 부모에 중첩 된 <xref:System.Windows.Controls.ScrollViewer>합니다. 자식 요소를 <xref:System.Windows.Controls.StackPanel> 정의한 메서드를 사용 하 여 논리적으로 스크롤할 수 합니다 <xref:System.Windows.Controls.Primitives.IScrollInfo> 인터페이스와의 인스턴스로 캐스트 <xref:System.Windows.Controls.StackPanel> (`sp1`) 코드에서.  
   
- [!code-xaml[IScrollInfoMethods#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/IScrollInfoMethods/CSharp/Window1.xaml#2)]  
+ [!code-xaml[IScrollInfoMethods#2](~/samples/snippets/csharp/VS_Snippets_Wpf/IScrollInfoMethods/CSharp/Window1.xaml#2)]  
   
  각 <xref:System.Windows.Controls.Button> 에 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 파일에서 스크롤 동작을 제어 하는 연결 된 사용자 지정 메서드를 트리거합니다 <xref:System.Windows.Controls.StackPanel>합니다. 다음 예제에서는 사용 하는 방법을 보여 줍니다는 <xref:System.Windows.Controls.Primitives.IScrollInfo.LineUp%2A> 및 <xref:System.Windows.Controls.Primitives.IScrollInfo.LineDown%2A> ; 메서드 또한 일반적으로 모든 위치 지정 메서드를 사용 하는 방법을 보여 줍니다는 <xref:System.Windows.Controls.Primitives.IScrollInfo> 클래스를 정의 합니다.  
   
- [!code-csharp[IScrollInfoMethods#3](../../../../samples/snippets/csharp/VS_Snippets_Wpf/IScrollInfoMethods/CSharp/Window1.xaml.cs#3)]
- [!code-vb[IScrollInfoMethods#3](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/IScrollInfoMethods/VisualBasic/Window1.xaml.vb#3)]  
+ [!code-csharp[IScrollInfoMethods#3](~/samples/snippets/csharp/VS_Snippets_Wpf/IScrollInfoMethods/CSharp/Window1.xaml.cs#3)]
+ [!code-vb[IScrollInfoMethods#3](~/samples/snippets/visualbasic/VS_Snippets_Wpf/IScrollInfoMethods/VisualBasic/Window1.xaml.vb#3)]  
   
 ## <a name="see-also"></a>참고자료
 - <xref:System.Windows.Controls.ScrollViewer>
 - <xref:System.Windows.Controls.Primitives.IScrollInfo>
 - <xref:System.Windows.Controls.StackPanel>
-- [ScrollViewer 개요](../../../../docs/framework/wpf/controls/scrollviewer-overview.md)
-- [방법 항목](../../../../docs/framework/wpf/controls/scrollviewer-how-to-topics.md)
-- [패널 개요](../../../../docs/framework/wpf/controls/panels-overview.md)
+- [ScrollViewer 개요](scrollviewer-overview.md)
+- [방법 항목](scrollviewer-how-to-topics.md)
+- [패널 개요](panels-overview.md)

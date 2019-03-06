@@ -11,12 +11,12 @@ helpviewer_keywords:
 - object performance considerations [WPF]
 - Freezable objects [WPF], performance
 ms.assetid: 73aa2f47-1d73-439a-be1f-78dc4ba2b5bd
-ms.openlocfilehash: 45e93e1ce7d4cca21019cd0be4547bdaa220c301
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5548292480f07fa192985800931f9d0262f2b791
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54631219"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57352687"
 ---
 # <a name="optimizing-performance-object-behavior"></a>성능 최적화: 개체 동작
 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 개체의 기본 동작을 이해하면 기능과 성능 간의 균형을 적절하게 조정할 수 있습니다.  
@@ -27,16 +27,16 @@ ms.locfileid: "54631219"
 ## <a name="not-removing-event-handlers-on-objects-may-keep-objects-alive"></a>개체에 대한 이벤트 처리기를 제거하지 않으면 개체가 활성 상태로 유지될 수 있음  
  개체가 해당 이벤트에 전달하는 대리자는 사실상 해당 개체에 대한 참조입니다. 따라서 이벤트 처리기는 예상보다 오래 개체의 활성 상태를 유지할 수 있습니다. 개체의 이벤트를 수신하도록 등록된 개체를 정리하려면 개체를 해제하기 전에 먼저 대리자를 제거해야 합니다. 불필요한 개체를 활성 상태로 유지하면 애플리케이션의 메모리 사용이 늘어납니다. 이러한 현상은 특히 개체가 논리적 트리 또는 시각적 트리의 루트인 경우 특히 그렇습니다.  
   
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]에는 소스와 수신기 간의 개체 수명 관계를 추적하기 어려운 경우에 유용할 수 있는 이벤트에 대한 약한 이벤트 수신기 패턴이 도입되었습니다. 일부 기존 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 이벤트에서 이 패턴을 사용하기도 합니다. 사용자 지정 이벤트를 사용하여 개체를 구현하는 경우 이 패턴이 유용할 수 있습니다. 자세한 내용은 [약한 이벤트 패턴](../../../../docs/framework/wpf/advanced/weak-event-patterns.md)을 참조하세요.  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]에는 소스와 수신기 간의 개체 수명 관계를 추적하기 어려운 경우에 유용할 수 있는 이벤트에 대한 약한 이벤트 수신기 패턴이 도입되었습니다. 일부 기존 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 이벤트에서 이 패턴을 사용하기도 합니다. 사용자 지정 이벤트를 사용하여 개체를 구현하는 경우 이 패턴이 유용할 수 있습니다. 자세한 내용은 [약한 이벤트 패턴](weak-event-patterns.md)을 참조하세요.  
   
  지정된 프로세스의 메모리 사용에 대한 정보를 제공할 수 있는 CLR 프로파일러 및 작업 집합 뷰어 등 여러 가지 도구가 있습니다. CLR 프로파일러에는 할당된 형식에 대한 히스토그램, 할당 및 호출 그래프, 다양한 세대의 가비지 수집을 보여 주는 시간 표시 막대, 이러한 수집 이후의 관리되는 힙에 대한 결과 상태, 메서드당 할당 및 어셈블리 로드를 보여 주는 호출 트리 등 할당 프로필에 대한 매우 유용한 여러 뷰가 포함되어 있습니다. 자세한 내용은 [.NET Framework 개발자 센터](https://go.microsoft.com/fwlink/?LinkId=117435)를 참조하세요.  
   
 <a name="DPs_and_Objects"></a>   
 ## <a name="dependency-properties-and-objects"></a>종속성 속성 및 개체  
- 일반적으로 종속성 속성에 액세스 하는 <xref:System.Windows.DependencyObject> 에 액세스 하는 보다 느리지 않습니다는 [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] 속성입니다. 속성 값을 설정하는 데 약간의 성능 오버헤드가 있지만 값을 가져오는 경우 [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] 속성에서 값을 가져올 때와 속도가 비슷합니다. 이러한 약간의 성능 오버헤드가 발생하지만 종속성 속성이 데이터 바인딩, 애니메이션, 상속 및 스타일 지정과 같은 강력한 기능을 지원합니다. 자세한 내용은 [종속성 속성 개요](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)를 참조하세요.  
+ 일반적으로 종속성 속성에 액세스 하는 <xref:System.Windows.DependencyObject> 에 액세스 하는 보다 느리지 않습니다는 [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] 속성입니다. 속성 값을 설정하는 데 약간의 성능 오버헤드가 있지만 값을 가져오는 경우 [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] 속성에서 값을 가져올 때와 속도가 비슷합니다. 이러한 약간의 성능 오버헤드가 발생하지만 종속성 속성이 데이터 바인딩, 애니메이션, 상속 및 스타일 지정과 같은 강력한 기능을 지원합니다. 자세한 내용은 [종속성 속성 개요](dependency-properties-overview.md)를 참조하세요.  
   
 ### <a name="dependencyproperty-optimizations"></a>DependencyProperty 최적화  
- 애플리케이션에서 종속성 속성을 정의할 때는 매우 신중해야 합니다. 경우에 <xref:System.Windows.DependencyProperty> 영향만 다른 메타 데이터 옵션이 아닌 형식 메타 데이터 옵션을 같은 렌더링 <xref:System.Windows.FrameworkPropertyMetadata.AffectsMeasure%2A>, 해당 메타 데이터를 재정의 하 여으로 표시 해야 합니다. 속성 메타데이터 재정의 또는 가져오기에 대한 자세한 내용은 [종속성 속성 메타데이터](../../../../docs/framework/wpf/advanced/dependency-property-metadata.md)를 참조하세요.  
+ 애플리케이션에서 종속성 속성을 정의할 때는 매우 신중해야 합니다. 경우에 <xref:System.Windows.DependencyProperty> 영향만 다른 메타 데이터 옵션이 아닌 형식 메타 데이터 옵션을 같은 렌더링 <xref:System.Windows.FrameworkPropertyMetadata.AffectsMeasure%2A>, 해당 메타 데이터를 재정의 하 여으로 표시 해야 합니다. 속성 메타데이터 재정의 또는 가져오기에 대한 자세한 내용은 [종속성 속성 메타데이터](dependency-property-metadata.md)를 참조하세요.  
   
  모든 속성 변경이 실제로 측정, 정렬 및 렌더링에 영향을 미치는 것이 아니라면 속성 변경 처리기가 측정, 정렬 및 렌더링 단계를 수동으로 무효화하도록 하는 것이 더 효율적일 수 있습니다. 예를 들어 값이 설정된 한계보다 클 경우에만 배경을 다시 렌더링하도록 결정한 경우 속성 변경 처리기는 값이 설정된 한계를 초과하는 경우에만 렌더링을 무효화합니다.  
   
@@ -54,14 +54,14 @@ ms.locfileid: "54631219"
   
 <a name="Freezable_Objects"></a>   
 ## <a name="freezable-objects"></a>Freezable 개체  
- <xref:System.Windows.Freezable> 는 특별 한 유형의 두 가지 상태에 있는 개체: 않음과 고정 합니다. 가능할 때마다 개체를 고정하면 애플리케이션 성능이 향상되며 해당 작업 집합을 줄일 수 있습니다. 자세한 내용은 [Freezable 개체 개요](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md)를 참조하세요.  
+ <xref:System.Windows.Freezable> 는 특별 한 유형의 두 가지 상태에 있는 개체: 않음과 고정 합니다. 가능할 때마다 개체를 고정하면 애플리케이션 성능이 향상되며 해당 작업 집합을 줄일 수 있습니다. 자세한 내용은 [Freezable 개체 개요](freezable-objects-overview.md)를 참조하세요.  
   
  각 <xref:System.Windows.Freezable> 에 <xref:System.Windows.Freezable.Changed> 변경 될 때마다 발생 하는 이벤트입니다. 그러나 변경 알림은 애플리케이션 성능을 저하시킵니다.  
   
  다음 예제에서는 각 <xref:System.Windows.Shapes.Rectangle> 에서는 동일한 <xref:System.Windows.Media.Brush> 개체:  
   
- [!code-csharp[Performance#PerformanceSnippet2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Performance/CSharp/Window1.xaml.cs#performancesnippet2)]
- [!code-vb[Performance#PerformanceSnippet2](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/Performance/visualbasic/window1.xaml.vb#performancesnippet2)]  
+ [!code-csharp[Performance#PerformanceSnippet2](~/samples/snippets/csharp/VS_Snippets_Wpf/Performance/CSharp/Window1.xaml.cs#performancesnippet2)]
+ [!code-vb[Performance#PerformanceSnippet2](~/samples/snippets/visualbasic/VS_Snippets_Wpf/Performance/visualbasic/window1.xaml.vb#performancesnippet2)]  
   
  기본적으로 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 에 대 한 이벤트 처리기를 제공 합니다 <xref:System.Windows.Media.SolidColorBrush> 개체의 <xref:System.Windows.Freezable.Changed> 무효화 하기 위해 이벤트를 <xref:System.Windows.Shapes.Rectangle> 개체의 <xref:System.Windows.Shapes.Shape.Fill%2A> 속성입니다. 때마다이 경우에 <xref:System.Windows.Media.SolidColorBrush> 실행에 해당 <xref:System.Windows.Freezable.Changed> 각각에 대 한 콜백 함수를 호출 하는 데 필요한 이벤트 <xref:System.Windows.Shapes.Rectangle>-이러한 콜백 함수 호출의 누적 적용 성능이 크게 저하. 또한 이 시점에서 처리기를 추가 및 제거하면 애플리케이션에서 이 작업을 위해 전체 목록을 통과해야 하므로 성능에 상당한 영향을 미칩니다. 응용 프로그램 시나리오는 변경 되지 않습니다 경우는 <xref:System.Windows.Media.SolidColorBrush>, 유지 관리 비용을 지불 하면 <xref:System.Windows.Freezable.Changed> 이벤트 처리기 불필요 하 게 합니다.  
   
@@ -74,28 +74,28 @@ ms.locfileid: "54631219"
   
  다음 코드 샘플에서는 이러한 개념을 보여 줍니다.  
   
- [!code-csharp[Performance#PerformanceSnippet3](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Performance/CSharp/Window1.xaml.cs#performancesnippet3)]
- [!code-vb[Performance#PerformanceSnippet3](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/Performance/visualbasic/window1.xaml.vb#performancesnippet3)]  
+ [!code-csharp[Performance#PerformanceSnippet3](~/samples/snippets/csharp/VS_Snippets_Wpf/Performance/CSharp/Window1.xaml.cs#performancesnippet3)]
+ [!code-vb[Performance#PerformanceSnippet3](~/samples/snippets/visualbasic/VS_Snippets_Wpf/Performance/visualbasic/window1.xaml.vb#performancesnippet3)]  
   
 ### <a name="changed-handlers-on-unfrozen-freezables-may-keep-objects-alive"></a>고정되지 않은 Freezable에 대한 처리기를 변경하면 개체가 활성 상태로 유지될 수 있음  
  개체에 전달 하는 대리자를 <xref:System.Windows.Freezable> 개체의 <xref:System.Windows.Freezable.Changed> 이벤트는 사실상 해당 개체에 대 한 참조입니다. 따라서 <xref:System.Windows.Freezable.Changed> 이벤트 처리기 수 유지 개체 예상 보다 더 이상. 수신 대기 하도록 등록 된 개체의 정리를 수행할 때를 <xref:System.Windows.Freezable> 개체의 <xref:System.Windows.Freezable.Changed> 이벤트 반드시 개체를 해제 하기 전에 해당 대리자를 제거 합니다.  
   
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 또한 후크 <xref:System.Windows.Freezable.Changed> 이벤트 내부적으로 합니다. 예를 들어, 모든 종속성 속성 걸릴 <xref:System.Windows.Freezable> 값에서 수신 대기 하는 대로 <xref:System.Windows.Freezable.Changed> 이벤트 자동으로 합니다. 합니다 <xref:System.Windows.Shapes.Shape.Fill%2A> 사용 하는 속성을 <xref:System.Windows.Media.Brush>,이 개념을 보여 줍니다.  
   
- [!code-csharp[Performance#PerformanceSnippet4](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Performance/CSharp/Window1.xaml.cs#performancesnippet4)]
- [!code-vb[Performance#PerformanceSnippet4](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/Performance/visualbasic/window1.xaml.vb#performancesnippet4)]  
+ [!code-csharp[Performance#PerformanceSnippet4](~/samples/snippets/csharp/VS_Snippets_Wpf/Performance/CSharp/Window1.xaml.cs#performancesnippet4)]
+ [!code-vb[Performance#PerformanceSnippet4](~/samples/snippets/visualbasic/VS_Snippets_Wpf/Performance/visualbasic/window1.xaml.vb#performancesnippet4)]  
   
  할당할 `myBrush` 를 `myRectangle.Fill`다시 가리키는 대리자는 <xref:System.Windows.Shapes.Rectangle> 에 추가할 개체를 <xref:System.Windows.Media.SolidColorBrush> 개체의 <xref:System.Windows.Freezable.Changed> 이벤트. 이는 다음 코드에서 실제로 `myRect`를 가비지 수집에 적합하게 만들지 않음을 의미합니다.  
   
- [!code-csharp[Performance#PerformanceSnippet5](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Performance/CSharp/Window1.xaml.cs#performancesnippet5)]
- [!code-vb[Performance#PerformanceSnippet5](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/Performance/visualbasic/window1.xaml.vb#performancesnippet5)]  
+ [!code-csharp[Performance#PerformanceSnippet5](~/samples/snippets/csharp/VS_Snippets_Wpf/Performance/CSharp/Window1.xaml.cs#performancesnippet5)]
+ [!code-vb[Performance#PerformanceSnippet5](~/samples/snippets/visualbasic/VS_Snippets_Wpf/Performance/visualbasic/window1.xaml.vb#performancesnippet5)]  
   
  이 예에서 `myBrush` 하 게 유지 하면서 `myRectangle` 활성 발생 하면을 다시 호출 합니다 해당 <xref:System.Windows.Freezable.Changed> 이벤트입니다. 할당 하는 것 `myBrush` 에 <xref:System.Windows.Shapes.Shape.Fill%2A> 새 속성 <xref:System.Windows.Shapes.Rectangle> 다른 이벤트 처리기를 추가 하기만 하면 `myBrush`합니다.  
   
  제거 하려면 이러한 유형의 개체를 정리 하는 방법이 권장된 됩니다는 <xref:System.Windows.Media.Brush> 에서 <xref:System.Windows.Shapes.Shape.Fill%2A> 가 제거 하는 속성을 <xref:System.Windows.Freezable.Changed> 이벤트 처리기.  
   
- [!code-csharp[Performance#PerformanceSnippet6](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Performance/CSharp/Window1.xaml.cs#performancesnippet6)]
- [!code-vb[Performance#PerformanceSnippet6](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/Performance/visualbasic/window1.xaml.vb#performancesnippet6)]  
+ [!code-csharp[Performance#PerformanceSnippet6](~/samples/snippets/csharp/VS_Snippets_Wpf/Performance/CSharp/Window1.xaml.cs#performancesnippet6)]
+ [!code-vb[Performance#PerformanceSnippet6](~/samples/snippets/visualbasic/VS_Snippets_Wpf/Performance/visualbasic/window1.xaml.vb#performancesnippet6)]  
   
 <a name="User_Interface_Virtualization"></a>   
 ## <a name="user-interface-virtualization"></a>사용자 인터페이스 가상화  
@@ -111,12 +111,12 @@ ms.locfileid: "54631219"
 |<xref:System.Windows.Controls.VirtualizingStackPanel>|46|  
   
 ## <a name="see-also"></a>참고자료
-- [WPF 응용 프로그램 성능 최적화](../../../../docs/framework/wpf/advanced/optimizing-wpf-application-performance.md)
-- [응용 프로그램 성능 계획](../../../../docs/framework/wpf/advanced/planning-for-application-performance.md)
-- [하드웨어 이용](../../../../docs/framework/wpf/advanced/optimizing-performance-taking-advantage-of-hardware.md)
-- [레이아웃 및 디자인](../../../../docs/framework/wpf/advanced/optimizing-performance-layout-and-design.md)
-- [2차원 그래픽 및 이미징](../../../../docs/framework/wpf/advanced/optimizing-performance-2d-graphics-and-imaging.md)
-- [응용 프로그램 리소스](../../../../docs/framework/wpf/advanced/optimizing-performance-application-resources.md)
-- [텍스트](../../../../docs/framework/wpf/advanced/optimizing-performance-text.md)
-- [데이터 바인딩](../../../../docs/framework/wpf/advanced/optimizing-performance-data-binding.md)
-- [기타 성능 권장 사항](../../../../docs/framework/wpf/advanced/optimizing-performance-other-recommendations.md)
+- [WPF 응용 프로그램 성능 최적화](optimizing-wpf-application-performance.md)
+- [애플리케이션 성능 계획](planning-for-application-performance.md)
+- [하드웨어 이용](optimizing-performance-taking-advantage-of-hardware.md)
+- [레이아웃 및 디자인](optimizing-performance-layout-and-design.md)
+- [2차원 그래픽 및 이미징](optimizing-performance-2d-graphics-and-imaging.md)
+- [응용 프로그램 리소스](optimizing-performance-application-resources.md)
+- [텍스트](optimizing-performance-text.md)
+- [데이터 바인딩](optimizing-performance-data-binding.md)
+- [기타 성능 권장 사항](optimizing-performance-other-recommendations.md)

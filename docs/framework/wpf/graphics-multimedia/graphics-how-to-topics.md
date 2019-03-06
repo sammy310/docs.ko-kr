@@ -8,23 +8,23 @@ helpviewer_keywords:
 - graphics [WPF], how-to topics
 - visual effects [WPF]
 ms.assetid: 959cb1cc-d26c-4bbc-b637-251091987288
-ms.openlocfilehash: 63f268692924db94710d4aa21ff6f03b00989f67
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 957040cd8202f2fa2bb1838718a49dbe028c02b1
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54688212"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57358793"
 ---
 # <a name="graphics-how-to-topics"></a>그래픽 방법 항목
 다음 항목에서는의 그래픽 기능을 사용 하는 방법을 설명 합니다 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]합니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
- [사각형에 애니메이션 효과 주기](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-rectangle.md)  
- [PointAnimation을 사용하여 개체 위치에 애니메이션 효과 주기](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-the-position-of-an-object-by-using-pointanimation.md)  
- [점 및 벡터 변환](../../../../docs/framework/wpf/graphics-multimedia/how-to-transform-points-and-vectors.md)  
- [투명 효과 프레임을 WPF 애플리케이션으로 확장](../../../../docs/framework/wpf/graphics-multimedia/extend-glass-frame-into-a-wpf-application.md)  
- [방법: 요소를 캐시 하 여 렌더링 성능 향상](../../../../docs/framework/wpf/graphics-multimedia/how-to-improve-rendering-performance-by-caching-an-element.md)  
- [방법: 캐시 된 요소를 브러시로 사용](../../../../docs/framework/wpf/graphics-multimedia/how-to-use-a-cached-element-as-a-brush.md)  
+ [사각형에 애니메이션 효과 주기](how-to-animate-a-rectangle.md)  
+ [PointAnimation을 사용하여 개체 위치에 애니메이션 효과 주기](how-to-animate-the-position-of-an-object-by-using-pointanimation.md)  
+ [점 및 벡터 변환](how-to-transform-points-and-vectors.md)  
+ [투명 효과 프레임을 WPF 애플리케이션으로 확장](extend-glass-frame-into-a-wpf-application.md)  
+ [방법: 요소를 캐시 하 여 렌더링 성능 향상](how-to-improve-rendering-performance-by-caching-an-element.md)  
+ [방법: 캐시 된 요소를 브러시로 사용](how-to-use-a-cached-element-as-a-brush.md)  
   
 ## <a name="see-also"></a>참고자료
 - <xref:System.Windows.Shapes.Shape>
@@ -34,5 +34,5 @@ ms.locfileid: "54688212"
 - <xref:System.Windows.Media.Drawing>
 - <xref:System.Windows.Media.Brush>
 - <xref:System.Windows.Media.Effects.BitmapEffect>
-- [그래픽 및 멀티미디어](../../../../docs/framework/wpf/graphics-multimedia/index.md)
-- [WPF 그래픽 렌더링 개요](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)
+- [그래픽 및 멀티미디어](index.md)
+- [WPF 그래픽 렌더링 개요](wpf-graphics-rendering-overview.md)

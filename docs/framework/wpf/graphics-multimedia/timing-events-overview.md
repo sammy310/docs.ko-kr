@@ -8,48 +8,48 @@ helpviewer_keywords:
 - timelines [WPF]
 - timing events [WPF]
 ms.assetid: 597e3280-0867-4359-a97b-5b2f4149e350
-ms.openlocfilehash: 58861a036d95fcef41da455b25ad71d6e6afaef5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2ce4794c5f0abfc31ae9d6f813bcfd7a9d375611
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54726821"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57379577"
 ---
 # <a name="timing-events-overview"></a>타이밍 이벤트 개요
 이 항목에서는에서 사용할 수 있는 5 가지 타이밍 이벤트를 사용 하는 방법 설명 <xref:System.Windows.Media.Animation.Timeline> 고 <xref:System.Windows.Media.Animation.Clock> 개체입니다.  
   
 ## <a name="prerequisites"></a>전제 조건  
- 이 항목을 이해하려면 애니메이션을 만들고 사용하는 방법을 이해해야 합니다. 애니메이션 사용을 시작 하려면 참조는 [애니메이션 개요](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)합니다.  
+ 이 항목을 이해하려면 애니메이션을 만들고 사용하는 방법을 이해해야 합니다. 애니메이션 사용을 시작 하려면 참조는 [애니메이션 개요](animation-overview.md)합니다.  
   
  속성에 애니메이션 효과를 주는 여러 가지 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]:  
   
--   **스토리 보드 개체를 사용 하 여** (태그 및 코드): 사용할 수 있습니다 <xref:System.Windows.Media.Animation.Storyboard> 개체를 정렬 하 고 하나 이상의 개체에 애니메이션을 배포 합니다. 예를 들어 참조 [Storyboard를 사용 하 여 속성에 애니메이션 효과](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-property-by-using-a-storyboard.md)합니다.  
+-   **스토리 보드 개체를 사용 하 여** (태그 및 코드): 사용할 수 있습니다 <xref:System.Windows.Media.Animation.Storyboard> 개체를 정렬 하 고 하나 이상의 개체에 애니메이션을 배포 합니다. 예를 들어 참조 [Storyboard를 사용 하 여 속성에 애니메이션 효과](how-to-animate-a-property-by-using-a-storyboard.md)합니다.  
   
--   **로컬 애니메이션을 사용 하 여** (코드만): 적용할 수 있습니다 <xref:System.Windows.Media.Animation.AnimationTimeline> 애니메이션 효과 주는 속성에 직접 개체입니다. 예제를 보려면 [Storyboard를 사용하지 않고 속성에 애니메이션 효과 주기](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-property-without-using-a-storyboard.md)를 참조하세요.  
+-   **로컬 애니메이션을 사용 하 여** (코드만): 적용할 수 있습니다 <xref:System.Windows.Media.Animation.AnimationTimeline> 애니메이션 효과 주는 속성에 직접 개체입니다. 예제를 보려면 [Storyboard를 사용하지 않고 속성에 애니메이션 효과 주기](how-to-animate-a-property-without-using-a-storyboard.md)를 참조하세요.  
   
--   **시계를 사용 하 여** (코드만): 명시적으로 클록 생성을 관리 하 고 애니메이션 클록을 직접 배포할 수 있습니다.  예를 들어 참조 [AnimationClock을 사용 하 여 속성에 애니메이션 효과](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-property-by-using-an-animationclock.md)합니다.  
+-   **시계를 사용 하 여** (코드만): 명시적으로 클록 생성을 관리 하 고 애니메이션 클록을 직접 배포할 수 있습니다.  예를 들어 참조 [AnimationClock을 사용 하 여 속성에 애니메이션 효과](how-to-animate-a-property-by-using-an-animationclock.md)합니다.  
   
  이 개요의 예제를 사용 하는 태그 및 코드에서 사용할 수 있습니다, 되므로 <xref:System.Windows.Media.Animation.Storyboard> 개체입니다. 그러나 설명된 개념을 속성에 애니메이션 효과를 주는 다른 방법에도 적용할 수 있습니다.  
   
 ### <a name="what-is-a-clock"></a>클록이란?  
- 타임라인 자체는 실제로 시간 세그먼트를 설명하는 것 이외의 어떤 작업도 수행하지 않습니다. 타임 라인의 <xref:System.Windows.Media.Animation.Clock> 실제 작업을 수행 하는 개체: 타임 라인에 대 한 타이밍 관련 런타임 상태를 유지 관리 합니다. Storyboard를 사용할 때와 같이 대부분의 경우에 타임라인에 대해 자동으로 클록이 생성됩니다. 만들 수도 있습니다는 <xref:System.Windows.Media.Animation.Clock> 를 사용 하 여 명시적으로 <xref:System.Windows.Media.Animation.Timeline.CreateClock%2A> 메서드. 에 대 한 자세한 내용은 <xref:System.Windows.Media.Animation.Clock> 개체를 참조 합니다 [애니메이션 및 타이밍 시스템 개요](../../../../docs/framework/wpf/graphics-multimedia/animation-and-timing-system-overview.md)합니다.  
+ 타임라인 자체는 실제로 시간 세그먼트를 설명하는 것 이외의 어떤 작업도 수행하지 않습니다. 타임 라인의 <xref:System.Windows.Media.Animation.Clock> 실제 작업을 수행 하는 개체: 타임 라인에 대 한 타이밍 관련 런타임 상태를 유지 관리 합니다. Storyboard를 사용할 때와 같이 대부분의 경우에 타임라인에 대해 자동으로 클록이 생성됩니다. 만들 수도 있습니다는 <xref:System.Windows.Media.Animation.Clock> 를 사용 하 여 명시적으로 <xref:System.Windows.Media.Animation.Timeline.CreateClock%2A> 메서드. 에 대 한 자세한 내용은 <xref:System.Windows.Media.Animation.Clock> 개체를 참조 합니다 [애니메이션 및 타이밍 시스템 개요](animation-and-timing-system-overview.md)합니다.  
   
 ## <a name="why-use-events"></a>이벤트를 사용하는 이유  
  하나(마지막 틱에 맞춰진 검색)를 제외한 모든 대화형 타이밍 작업은 비동기적입니다. 실행될 시기를 정확히 알 방법은 없습니다. 타이밍 작업에 의존하는 다른 코드가 있을 때는 문제가 될 수입니다. 사각형에 애니메이션 효과를 적용한 타임라인을 중지하려고 한다고 가정해 보겠습니다. 이 타임라인이 중지된 후에 사각형의 색을 변경합니다.  
   
- [!code-csharp[events_procedural#NeedForEventsFragment](../../../../samples/snippets/csharp/VS_Snippets_Wpf/events_procedural/CSharp/EventExample.cs#needforeventsfragment)]
- [!code-vb[events_procedural#NeedForEventsFragment](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/events_procedural/VisualBasic/EventExample.vb#needforeventsfragment)]  
+ [!code-csharp[events_procedural#NeedForEventsFragment](~/samples/snippets/csharp/VS_Snippets_Wpf/events_procedural/CSharp/EventExample.cs#needforeventsfragment)]
+ [!code-vb[events_procedural#NeedForEventsFragment](~/samples/snippets/visualbasic/VS_Snippets_Wpf/events_procedural/VisualBasic/EventExample.vb#needforeventsfragment)]  
   
  앞의 예제에서 두 번째 코드 줄은 Storyboard가 중지되기 전에 실행될 수 있습니다. 중지는 비동기 작업이기 때문입니다. 타임라인이나 클록에 중지하도록 지시하면 타이밍 엔진의 다음 틱까지는 처리되지 않는 일종의 “중지 요청”이 만들어집니다.  
   
  타임라인이 완료된 후에 명령을 실행하려면 타이밍 이벤트를 사용합니다. 다음 예제에서 이벤트 처리기는 Storyboard가 재생을 중지한 후에 사각형의 색을 변경하는 데 사용됩니다.  
   
- [!code-csharp[events_procedural#RegisterForStoryboardCurrentStateInvalidatedEvent](../../../../samples/snippets/csharp/VS_Snippets_Wpf/events_procedural/CSharp/EventExample.cs#registerforstoryboardcurrentstateinvalidatedevent)]
- [!code-vb[events_procedural#RegisterForStoryboardCurrentStateInvalidatedEvent](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/events_procedural/VisualBasic/EventExample.vb#registerforstoryboardcurrentstateinvalidatedevent)]  
-[!code-csharp[events_procedural#StoryboardCurrentStateInvalidatedEvent2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/events_procedural/CSharp/EventExample.cs#storyboardcurrentstateinvalidatedevent2)]
-[!code-vb[events_procedural#StoryboardCurrentStateInvalidatedEvent2](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/events_procedural/VisualBasic/EventExample.vb#storyboardcurrentstateinvalidatedevent2)]  
+ [!code-csharp[events_procedural#RegisterForStoryboardCurrentStateInvalidatedEvent](~/samples/snippets/csharp/VS_Snippets_Wpf/events_procedural/CSharp/EventExample.cs#registerforstoryboardcurrentstateinvalidatedevent)]
+ [!code-vb[events_procedural#RegisterForStoryboardCurrentStateInvalidatedEvent](~/samples/snippets/visualbasic/VS_Snippets_Wpf/events_procedural/VisualBasic/EventExample.vb#registerforstoryboardcurrentstateinvalidatedevent)]  
+[!code-csharp[events_procedural#StoryboardCurrentStateInvalidatedEvent2](~/samples/snippets/csharp/VS_Snippets_Wpf/events_procedural/CSharp/EventExample.cs#storyboardcurrentstateinvalidatedevent2)]
+[!code-vb[events_procedural#StoryboardCurrentStateInvalidatedEvent2](~/samples/snippets/visualbasic/VS_Snippets_Wpf/events_procedural/VisualBasic/EventExample.vb#storyboardcurrentstateinvalidatedevent2)]  
   
- 자세한 예제를 보려면 [수신 알림 경우 클록 상태가 변경](../../../../docs/framework/wpf/graphics-multimedia/how-to-receive-notification-when-clock-state-changes.md)합니다.  
+ 자세한 예제를 보려면 [수신 알림 경우 클록 상태가 변경](how-to-receive-notification-when-clock-state-changes.md)합니다.  
   
 ## <a name="public-events"></a>Public 이벤트  
  합니다 <xref:System.Windows.Media.Animation.Timeline> 고 <xref:System.Windows.Media.Animation.Clock> 클래스는 둘 다 5 가지 타이밍 이벤트를 제공 합니다. 다음 표에는 이러한 이벤트와 해당 이벤트를 트리거하는 조건이 나와 있습니다.  
@@ -77,6 +77,6 @@ ms.locfileid: "54726821"
  등록할 때 합니다 <xref:System.Windows.Media.Animation.Timeline.Completed> 타임 라인에서 이벤트, 예를 들어 실제로 못하도록 시스템에 대 한 등록을 <xref:System.Windows.Media.Animation.Clock.Completed> 타임 라인에 대해 만든 각 클록의 이벤트입니다. 코드에서이 이벤트 전에 등록 해야 합니다는 <xref:System.Windows.Media.Animation.Clock> ;이 타임 라인에 대해 만들어집니다 알림을 받을 수 없습니다이 고, 그렇지 합니다. 자동으로 이런 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]; 되기 전에 이벤트에 대 한 파서를 자동으로 등록 된 <xref:System.Windows.Media.Animation.Clock> 만들어집니다.  
   
 ## <a name="see-also"></a>참고자료
-- [애니메이션 및 타이밍 시스템 개요](../../../../docs/framework/wpf/graphics-multimedia/animation-and-timing-system-overview.md)
-- [애니메이션 개요](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)
-- [타이밍 동작 개요](../../../../docs/framework/wpf/graphics-multimedia/timing-behaviors-overview.md)
+- [애니메이션 및 타이밍 시스템 개요](animation-and-timing-system-overview.md)
+- [애니메이션 개요](animation-overview.md)
+- [타이밍 동작 개요](timing-behaviors-overview.md)

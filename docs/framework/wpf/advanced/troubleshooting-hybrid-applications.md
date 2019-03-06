@@ -9,12 +9,12 @@ helpviewer_keywords:
 - hybrid applications [WPF interoperability]
 - message loops [WPF]
 ms.assetid: f440c23f-fa5d-4d5a-852f-ba61150e6405
-ms.openlocfilehash: 005cd017ae7702169aefb61a746c8adaba8118db
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
+ms.openlocfilehash: dbc70f58fddfad6e7e7271802b8b01d2b52ab25a
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56748702"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57370100"
 ---
 # <a name="troubleshooting-hybrid-applications"></a>혼합 애플리케이션 문제 해결
 <a name="introduction"></a> 이 항목에서는 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 및 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 기술을 둘 다 사용하는 혼합 응용 프로그램을 작성할 때 발생할 수 있는 몇 가지 일반적인 문제에 대해 설명합니다.  
@@ -35,7 +35,7 @@ ms.locfileid: "56748702"
   
 <a name="scaling"></a>   
 ## <a name="scaling"></a>배율 조정  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 및 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]는 배율 조정 모델이 서로 다릅니다. 일부 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 배율 조정 변환은 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 컨트롤에서 의미가 있지만 일부는 그렇지 않습니다. 예를 들어 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 컨트롤의 배율을 0으로 조정할 수 있지만 동일한 컨트롤의 배율을 0이 아닌 값으로 다시 조정하려고 하면 컨트롤의 크기가 0으로 유지됩니다. 자세한 내용은 [WindowsFormsHost 요소에 대한 레이아웃 고려 사항](../../../../docs/framework/wpf/advanced/layout-considerations-for-the-windowsformshost-element.md)을 참조하세요.  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 및 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]는 배율 조정 모델이 서로 다릅니다. 일부 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 배율 조정 변환은 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 컨트롤에서 의미가 있지만 일부는 그렇지 않습니다. 예를 들어 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 컨트롤의 배율을 0으로 조정할 수 있지만 동일한 컨트롤의 배율을 0이 아닌 값으로 다시 조정하려고 하면 컨트롤의 크기가 0으로 유지됩니다. 자세한 내용은 [WindowsFormsHost 요소에 대한 레이아웃 고려 사항](layout-considerations-for-the-windowsformshost-element.md)을 참조하세요.  
   
 <a name="adapter"></a>   
 ## <a name="adapter"></a>어댑터  
@@ -53,7 +53,7 @@ ms.locfileid: "56748702"
   
 <a name="property_mapping"></a>   
 ## <a name="property-mapping"></a>속성 매핑  
- 일부 속성 매핑에서 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 및 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 기술 간의 다른 구현을 연결하려면 광범위한 해석이 필요합니다. 속성 매핑을 사용하면 코드가 글꼴, 색 및 기타 속성의 변경에 반응하도록 할 수 있습니다. 일반적으로 속성 매핑은 *Property*Changed 이벤트나 On*Property*Changed 호출을 수신 대기하고 자식 컨트롤이나 해당 어댑터에서 적절한 속성을 설정하여 작동합니다. 자세한 내용은 [Windows Forms 및 WPF 속성 매핑](../../../../docs/framework/wpf/advanced/windows-forms-and-wpf-property-mapping.md)을 참조하세요.  
+ 일부 속성 매핑에서 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 및 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 기술 간의 다른 구현을 연결하려면 광범위한 해석이 필요합니다. 속성 매핑을 사용하면 코드가 글꼴, 색 및 기타 속성의 변경에 반응하도록 할 수 있습니다. 일반적으로 속성 매핑은 *Property*Changed 이벤트나 On*Property*Changed 호출을 수신 대기하고 자식 컨트롤이나 해당 어댑터에서 적절한 속성을 설정하여 작동합니다. 자세한 내용은 [Windows Forms 및 WPF 속성 매핑](windows-forms-and-wpf-property-mapping.md)을 참조하세요.  
   
 <a name="layoutrelated_properties_on_hosted_content"></a>   
 ## <a name="layout-related-properties-on-hosted-content"></a>호스트된 콘텐츠의 레이아웃 관련 속성  
@@ -66,7 +66,7 @@ ms.locfileid: "56748702"
 |<xref:System.Windows.Forms.Integration.ElementHost>|<xref:System.Windows.FrameworkElement.Height%2A><br /><br /> <xref:System.Windows.FrameworkElement.Width%2A><br /><br /> <xref:System.Windows.FrameworkElement.Margin%2A><br /><br /> <xref:System.Windows.FrameworkElement.VerticalAlignment%2A><br /><br /> <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A>|  
 |<xref:System.Windows.Forms.Integration.WindowsFormsHost>|<xref:System.Windows.Forms.Control.Margin%2A><br /><br /> <xref:System.Windows.Forms.Control.Dock%2A><br /><br /> <xref:System.Windows.Forms.Control.AutoSize%2A><br /><br /> <xref:System.Windows.Forms.Control.Location%2A><br /><br /> <xref:System.Windows.Forms.Control.MaximumSize%2A>|  
   
- 호스트된 콘텐츠에서 직접 이러한 속성을 설정하지 마세요. 자세한 내용은 [WindowsFormsHost 요소에 대한 레이아웃 고려 사항](../../../../docs/framework/wpf/advanced/layout-considerations-for-the-windowsformshost-element.md)을 참조하세요.  
+ 호스트된 콘텐츠에서 직접 이러한 속성을 설정하지 마세요. 자세한 내용은 [WindowsFormsHost 요소에 대한 레이아웃 고려 사항](layout-considerations-for-the-windowsformshost-element.md)을 참조하세요.  
   
 <a name="navigation_applications"></a>   
 ## <a name="navigation-applications"></a>탐색 애플리케이션  
@@ -76,7 +76,7 @@ ms.locfileid: "56748702"
 ## <a name="message-loop-interoperation"></a>메시지 루프 상호 운용성  
  [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 메시지 루프로 작업할 때 메시지가 예상대로 처리되지 않을 수 있습니다. 합니다 <xref:System.Windows.Forms.Integration.WindowsFormsHost.EnableWindowsFormsInterop%2A> 메서드를 호출 합니다 <xref:System.Windows.Forms.Integration.WindowsFormsHost> 생성자입니다. 이 메서드는 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 메시지 루프에 메시지 필터를 추가합니다. 이 필터를 호출 합니다 <xref:System.Windows.Forms.Control.PreProcessMessage%2A?displayProperty=nameWithType> 메서드 경우는 <xref:System.Windows.Forms.Control?displayProperty=nameWithType> 메시지의 대상이 되 고 메시지를 변환/디스패치 됩니다.  
   
- 표시 하는 경우를 <xref:System.Windows.Window> 에 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 메시지 루프를 <xref:System.Windows.Forms.Application.Run%2A?displayProperty=nameWithType>를 호출 하지 않으면 아무 것도 입력할 수 없습니다는 <xref:System.Windows.Forms.Integration.ElementHost.EnableModelessKeyboardInterop%2A> 메서드. <xref:System.Windows.Forms.Integration.ElementHost.EnableModelessKeyboardInterop%2A> 메서드를 <xref:System.Windows.Window> 추가 <xref:System.Windows.Forms.IMessageFilter?displayProperty=nameWithType>, 키 관련 메시지를 다시 라우팅하는 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 메시지 루프입니다. 자세한 내용은 [Windows Forms 및 WPF 상호 운용성 입력 아키텍처](../../../../docs/framework/wpf/advanced/windows-forms-and-wpf-interoperability-input-architecture.md)를 참조하세요.  
+ 표시 하는 경우를 <xref:System.Windows.Window> 에 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 메시지 루프를 <xref:System.Windows.Forms.Application.Run%2A?displayProperty=nameWithType>를 호출 하지 않으면 아무 것도 입력할 수 없습니다는 <xref:System.Windows.Forms.Integration.ElementHost.EnableModelessKeyboardInterop%2A> 메서드. <xref:System.Windows.Forms.Integration.ElementHost.EnableModelessKeyboardInterop%2A> 메서드를 <xref:System.Windows.Window> 추가 <xref:System.Windows.Forms.IMessageFilter?displayProperty=nameWithType>, 키 관련 메시지를 다시 라우팅하는 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 메시지 루프입니다. 자세한 내용은 [Windows Forms 및 WPF 상호 운용성 입력 아키텍처](windows-forms-and-wpf-interoperability-input-architecture.md)를 참조하세요.  
   
 <a name="opacity_and_layering"></a>   
 ## <a name="opacity-and-layering"></a>불투명도 및 레이어  
@@ -88,7 +88,7 @@ ms.locfileid: "56748702"
   
 <a name="enabling_visual_styles"></a>   
 ## <a name="enabling-visual-styles"></a>비주얼 스타일 사용  
- [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 컨트롤에서 [!INCLUDE[TLA#tla_winxp](../../../../includes/tlasharptla-winxp-md.md)] 비주얼 스타일을 사용할 수 없습니다. 합니다 <xref:System.Windows.Forms.Application.EnableVisualStyles%2A?displayProperty=nameWithType> 에 대 한 템플릿에서 호출을 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 응용 프로그램입니다. 이 메서드는 기본적으로 호출되지 않지만 Comctl32.dll 버전 6.0을 사용할 수 있는 경우 [!INCLUDE[TLA2#tla_visualstu](../../../../includes/tla2sharptla-visualstu-md.md)]를 사용하여 프로젝트를 만들면 컨트롤에 대한 [!INCLUDE[TLA#tla_winxp](../../../../includes/tlasharptla-winxp-md.md)] 비주얼 스타일이 제공됩니다. 호출 해야 합니다 <xref:System.Windows.Forms.Application.EnableVisualStyles%2A> 메서드 핸들 스레드에서 생성 되기 전에 합니다. 자세한 내용은 [방법: 하이브리드 응용 프로그램에서 비주얼 스타일 사용](../../../../docs/framework/wpf/advanced/how-to-enable-visual-styles-in-a-hybrid-application.md)합니다.  
+ [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 컨트롤에서 [!INCLUDE[TLA#tla_winxp](../../../../includes/tlasharptla-winxp-md.md)] 비주얼 스타일을 사용할 수 없습니다. 합니다 <xref:System.Windows.Forms.Application.EnableVisualStyles%2A?displayProperty=nameWithType> 에 대 한 템플릿에서 호출을 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 응용 프로그램입니다. 이 메서드는 기본적으로 호출되지 않지만 Comctl32.dll 버전 6.0을 사용할 수 있는 경우 [!INCLUDE[TLA2#tla_visualstu](../../../../includes/tla2sharptla-visualstu-md.md)]를 사용하여 프로젝트를 만들면 컨트롤에 대한 [!INCLUDE[TLA#tla_winxp](../../../../includes/tlasharptla-winxp-md.md)] 비주얼 스타일이 제공됩니다. 호출 해야 합니다 <xref:System.Windows.Forms.Application.EnableVisualStyles%2A> 메서드 핸들 스레드에서 생성 되기 전에 합니다. 자세한 내용은 [방법: 하이브리드 응용 프로그램에서 비주얼 스타일 사용](how-to-enable-visual-styles-in-a-hybrid-application.md)합니다.  
   
 <a name="licensed_controls"></a>   
 ## <a name="licensed-controls"></a>사용이 허가된 컨트롤  
@@ -108,7 +108,7 @@ ms.locfileid: "56748702"
 ### <a name="design-time-error-list-appears-when-the-obj-folder-is-deleted"></a>obj 폴더를 삭제하면 디자인 타임 오류 목록이 나타남  
  obj 폴더를 삭제하면 디자인 타임 오류 목록이 나타납니다.  
   
- 사용 하 여 디자인할 때 <xref:System.Windows.Forms.Integration.ElementHost>, Windows Forms 디자이너는 프로젝트의 obj 폴더 내의 Debug 또는 Release 폴더에 생성 된 파일을 사용 합니다. 이러한 파일을 삭제하면 디자인 타임 오류 목록이 나타납니다. 이 문제를 해결하려면 프로젝트를 다시 빌드하세요. 자세한 내용은 [Windows Forms 디자이너의 디자인 타임 오류](../../../../docs/framework/winforms/controls/design-time-errors-in-the-windows-forms-designer.md)를 참조하세요.  
+ 사용 하 여 디자인할 때 <xref:System.Windows.Forms.Integration.ElementHost>, Windows Forms 디자이너는 프로젝트의 obj 폴더 내의 Debug 또는 Release 폴더에 생성 된 파일을 사용 합니다. 이러한 파일을 삭제하면 디자인 타임 오류 목록이 나타납니다. 이 문제를 해결하려면 프로젝트를 다시 빌드하세요. 자세한 내용은 [Windows Forms 디자이너의 디자인 타임 오류](../../winforms/controls/design-time-errors-in-the-windows-forms-designer.md)를 참조하세요.  
   
 <a name="elementhost_and_ime"></a>   
 ## <a name="elementhost-and-ime"></a>ElementHost 및 IME  
@@ -118,9 +118,9 @@ ms.locfileid: "56748702"
 - <xref:System.Windows.Forms.Integration.ElementHost>
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost>
 - [WPF Designer의 상호 운용성](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/bb628658(v=vs.100))
-- [Windows Forms 및 WPF 상호 운용성 입력 아키텍처](../../../../docs/framework/wpf/advanced/windows-forms-and-wpf-interoperability-input-architecture.md)
-- [방법: 하이브리드 응용 프로그램에서 비주얼 스타일 사용](../../../../docs/framework/wpf/advanced/how-to-enable-visual-styles-in-a-hybrid-application.md)
-- [WindowsFormsHost 요소에 대한 레이아웃 고려 사항](../../../../docs/framework/wpf/advanced/layout-considerations-for-the-windowsformshost-element.md)
-- [Windows Forms 및 WPF 속성 매핑](../../../../docs/framework/wpf/advanced/windows-forms-and-wpf-property-mapping.md)
-- [Windows Forms 디자이너의 디자인 타임 오류](../../../../docs/framework/winforms/controls/design-time-errors-in-the-windows-forms-designer.md)
-- [마이그레이션 및 상호 운용성](../../../../docs/framework/wpf/advanced/migration-and-interoperability.md)
+- [Windows Forms 및 WPF 상호 운용성 입력 아키텍처](windows-forms-and-wpf-interoperability-input-architecture.md)
+- [방법: 하이브리드 응용 프로그램에서 비주얼 스타일 사용](how-to-enable-visual-styles-in-a-hybrid-application.md)
+- [WindowsFormsHost 요소에 대한 레이아웃 고려 사항](layout-considerations-for-the-windowsformshost-element.md)
+- [Windows Forms 및 WPF 속성 매핑](windows-forms-and-wpf-property-mapping.md)
+- [Windows Forms 디자이너의 디자인 타임 오류](../../winforms/controls/design-time-errors-in-the-windows-forms-designer.md)
+- [마이그레이션 및 상호 운용성](migration-and-interoperability.md)

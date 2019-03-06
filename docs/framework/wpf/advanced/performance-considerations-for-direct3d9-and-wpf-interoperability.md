@@ -5,18 +5,18 @@ helpviewer_keywords:
 - WPF [WPF], Direct3D9 interop performance
 - Direct3D9 [WPF interoperability], performance
 ms.assetid: ea8baf91-12fe-4b44-ac4d-477110ab14dd
-ms.openlocfilehash: f595e75c90ebef480200e9210a57087eb4d20e87
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fd3c99f22a1d097c82494ba6eff344820162ed87
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54608864"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57356730"
 ---
 # <a name="performance-considerations-for-direct3d9-and-wpf-interoperability"></a>Direct3D9 및 WPF 상호 운용성을 위한 성능 고려 사항
 사용 하 여 호스팅할 Direct3D9 콘텐츠를 호스트할 수 있습니다는 <xref:System.Windows.Interop.D3DImage> 클래스입니다. Direct3D9 콘텐츠 호스팅 응용 프로그램의 성능 영향을 줄 수 있습니다. 이 항목에서는 Windows Presentation Foundation (WPF) 응용 프로그램에서 호스팅할 Direct3D9 콘텐츠 호스팅 때 성능을 최적화 하기 위한 모범 사례를 설명 합니다. 이러한 모범 사례를 사용 하는 방법을 포함 <xref:System.Windows.Interop.D3DImage> 및 Windows Vista, Windows XP를 사용 하 고 다중 모니터를 표시 하는 경우 모범 사례입니다.  
   
 > [!NOTE]
->  이러한 모범 사례를 보여 주는 코드 예제를 보려면 [WPF 및 Direct3D9 상호 운용성](../../../../docs/framework/wpf/advanced/wpf-and-direct3d9-interoperation.md)합니다.  
+>  이러한 모범 사례를 보여 주는 코드 예제를 보려면 [WPF 및 Direct3D9 상호 운용성](wpf-and-direct3d9-interoperation.md)합니다.  
   
 ## <a name="use-d3dimage-sparingly"></a>D3DImage를 제한적으로 사용  
  호스팅할 Direct3D9 콘텐츠 호스트는 <xref:System.Windows.Interop.D3DImage> 순수 Direct3D 응용 프로그램을 빠르지으로 인스턴스를 렌더링 하지 않습니다. 화면 복사 및 명령 버퍼를 플러시하는 비용이 많이 드는 작업을 수 있습니다. 수가 <xref:System.Windows.Interop.D3DImage> 인스턴스 증가 하는 경우 자세한 플러시 발생 하 고 성능이 저하 됩니다. 사용 해야 하므로 <xref:System.Windows.Interop.D3DImage> 제한적입니다.  
@@ -47,7 +47,7 @@ ms.locfileid: "54608864"
 ## <a name="best-practices-for-multi-monitor-displays"></a>다중 모니터 디스플레이 대 한 모범 사례  
  여러 모니터에 있는 컴퓨터를 사용 하는 경우에 앞에서 설명한 모범 사례를 따라야 합니다. 다중 모니터 구성에 대 한 몇 가지 추가 성능 고려 사항이 있습니다.  
   
- 백 버퍼를 만들 때 특정 장치에 어댑터를 만든 있지만 WPF 모든 어댑터에 프런트 버퍼를 표시할 수 있습니다. 프런트 버퍼가 업데이트 하기 위해 어댑터를 통해 복사 하는 것은 비용이 매우 많이 들 수 있습니다. 여러 비디오 카드와 WDDM을 사용 하도록 구성 된 Windows vista는 `IDirect3DDevice9Ex` 장치 성능 저하가 발생 하지 방법이 다른 어댑터 있지만 동일한 비디오 카드에 프런트 버퍼가 있으면 합니다. 그러나 Windows XP에 여러 개의 비디오 카드를 사용 하 여 XDDM 경우 성능이 크게 저하 프런트 버퍼가 백 버퍼 다른 어댑터에 표시 되 면 자세한 내용은 [WPF 및 Direct3D9 상호 운용성](../../../../docs/framework/wpf/advanced/wpf-and-direct3d9-interoperation.md)합니다.  
+ 백 버퍼를 만들 때 특정 장치에 어댑터를 만든 있지만 WPF 모든 어댑터에 프런트 버퍼를 표시할 수 있습니다. 프런트 버퍼가 업데이트 하기 위해 어댑터를 통해 복사 하는 것은 비용이 매우 많이 들 수 있습니다. 여러 비디오 카드와 WDDM을 사용 하도록 구성 된 Windows vista는 `IDirect3DDevice9Ex` 장치 성능 저하가 발생 하지 방법이 다른 어댑터 있지만 동일한 비디오 카드에 프런트 버퍼가 있으면 합니다. 그러나 Windows XP에 여러 개의 비디오 카드를 사용 하 여 XDDM 경우 성능이 크게 저하 프런트 버퍼가 백 버퍼 다른 어댑터에 표시 되 면 자세한 내용은 [WPF 및 Direct3D9 상호 운용성](wpf-and-direct3d9-interoperation.md)합니다.  
   
 ## <a name="performance-summary"></a>성능 요약  
  다음 표에서 운영 체제, 픽셀 형식 및 화면 잠금 가능성의 함수로 프런트 버퍼가 업데이트의 성능을 보여 줍니다. 프런트 버퍼가 및 백 버퍼 동일한 어댑터에 있는 것으로 간주 됩니다. 어댑터 구성에 따라 하드웨어 업데이트는 일반적으로 소프트웨어 업데이트 보다 훨씬 빠릅니다.  
@@ -61,6 +61,6 @@ ms.locfileid: "54608864"
   
 ## <a name="see-also"></a>참고자료
 - <xref:System.Windows.Interop.D3DImage>
-- [WPF 및 Direct3D9 상호 운용성](../../../../docs/framework/wpf/advanced/wpf-and-direct3d9-interoperation.md)
-- [연습: WPF에서 호스팅할 Direct3D9 콘텐츠 만들기](../../../../docs/framework/wpf/advanced/walkthrough-creating-direct3d9-content-for-hosting-in-wpf.md)
-- [연습: WPF에서 Direct3D9 콘텐츠 호스팅](../../../../docs/framework/wpf/advanced/walkthrough-hosting-direct3d9-content-in-wpf.md)
+- [WPF 및 Direct3D9 상호 운용성](wpf-and-direct3d9-interoperation.md)
+- [연습: WPF에서 호스팅할 Direct3D9 콘텐츠 만들기](walkthrough-creating-direct3d9-content-for-hosting-in-wpf.md)
+- [연습: WPF에서 Direct3D9 콘텐츠 호스팅](walkthrough-hosting-direct3d9-content-in-wpf.md)

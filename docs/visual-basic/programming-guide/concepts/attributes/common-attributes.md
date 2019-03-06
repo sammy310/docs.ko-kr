@@ -2,12 +2,12 @@
 title: 공통 특성 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 11fe4894-1bf9-4525-a36b-cddcd3a5d22b
-ms.openlocfilehash: 0bc51a37fa0ccbcb3a74e1796686f0d6a6ec4d84
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9c9e8ba886697b9306a89caed4944fd2752db835
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54690906"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57375404"
 ---
 # <a name="common-attributes-visual-basic"></a>공통 특성 (Visual Basic)
 이 항목에서는 Visual Basic 프로그램에서 가장 일반적으로 사용 되는 특성을 설명 합니다.  
@@ -22,7 +22,7 @@ ms.locfileid: "54690906"
   
 -   [Visual Basic 특성](#VB)  
   
-##  <a name="Global"></a> 전역 특성  
+## <a name="Global"></a> 전역 특성  
  대부분의 특성은 클래스나 메서드와 같은 특정 언어 요소에 적용되지만 일부 특성은 전체 어셈블리나 모듈에 적용되는 전역 특성입니다. 예를 들어 다음과 같이 <xref:System.Reflection.AssemblyVersionAttribute> 특성을 사용하여 버전 정보를 어셈블리에 포함할 수 있습니다.  
   
 ```vb  
@@ -74,7 +74,7 @@ ms.locfileid: "54690906"
 |<xref:System.Reflection.AssemblyConfigurationAttribute>|어셈블리 매니페스트에 대한 어셈블리 구성(예: 정품 또는 디버그)을 지정하는 사용자 지정 특성을 정의합니다.|  
 |<xref:System.Reflection.AssemblyDefaultAliasAttribute>|어셈블리 매니페스트에 대한 친숙한 기본 별칭을 정의합니다.|  
   
-##  <a name="Obsolete"></a> 사용되지 않는 특성  
+## <a name="Obsolete"></a> 사용되지 않는 특성  
  `Obsolete` 특성은 프로그램 엔터티를 더 이상 사용이 권장되지 않는 항목으로 표시합니다. 나중에 사용되지 않음으로 표시된 엔터티를 사용할 때마다 특성 구성 방법에 따라 경고나 오류가 생성됩니다. 예를 들어:  
   
 ```vb  
@@ -116,7 +116,7 @@ b.NewMethod()
   
  `Obsolete` 특성은 단일 사용 특성이고 특성을 허용하는 모든 엔터티에 적용할 수 있습니다. `Obsolete`는 <xref:System.ObsoleteAttribute>의 별칭입니다.  
   
-##  <a name="Conditional"></a> 조건부 특성  
+## <a name="Conditional"></a> 조건부 특성  
  `Conditional` 특성을 사용하면 메서드 실행이 전처리 식별자에 따라 달라집니다. `Conditional` 특성은 <xref:System.Diagnostics.ConditionalAttribute>의 별칭이고 메서드 또는 특성 클래스에 적용할 수 있습니다.  
   
  이 예제에서 `Conditional`은 프로그램 관련 진단 정보 표시를 사용하거나 사용하지 않도록 설정하는 메서드에 적용됩니다.  
@@ -209,7 +209,7 @@ Class SampleClass
 End Class  
 ```  
   
-##  <a name="CallerInfo"></a> 호출자 정보 특성  
+## <a name="CallerInfo"></a> 호출자 정보 특성  
  호출자 정보 특성을 사용하여 메서드 호출자에 대한 정보를 얻을 수 있습니다. 소스 코드 파일 경로, 소스 코드 줄 번호 및 호출자의 멤버 이름을 얻을 수 있습니다.  
   
  멤버 호출자 정보를 얻으려면 선택적 매개 변수에 적용되는 특성을 사용합니다. 각 선택적 매개 변수는 기본값을 지정합니다. 다음 표에서는 <xref:System.Runtime.CompilerServices?displayProperty=nameWithType> 네임스페이스에 정의된 호출자 정보 특성을 보여줍니다.  
@@ -222,7 +222,7 @@ End Class
   
  호출자 정보 특성에 대 한 자세한 내용은 참조 하세요. [호출자 정보 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/caller-information.md)합니다.  
   
-##  <a name="VB"></a> Visual Basic 특성  
+## <a name="VB"></a> Visual Basic 특성  
  다음 표에서 Visual Basic에 관련 된 특성을 나열 합니다.  
   
 |특성|용도|  

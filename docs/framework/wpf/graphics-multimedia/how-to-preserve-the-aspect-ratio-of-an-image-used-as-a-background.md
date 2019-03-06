@@ -6,12 +6,12 @@ helpviewer_keywords:
 - brushes [WPF], preserving aspect ratios of background images
 - background images [WPF], preserving aspect ratios
 ms.assetid: 28c39478-13d7-4011-80a3-8b9cc3e54478
-ms.openlocfilehash: f8133ac4fcd01e08f41861b7a441e9ff1325f6ad
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: df5632aa3d3c7dbc2442cabe1f4db7a850a1bd54
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54698325"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57353948"
 ---
 # <a name="how-to-preserve-the-aspect-ratio-of-an-image-used-as-a-background"></a>방법: 배경으로 사용된 이미지의 가로 세로 비율 유지
 사용 하는 방법을 보여 주는이 예제는 <xref:System.Windows.Media.TileBrush.Stretch%2A> 의 속성을 <xref:System.Windows.Media.ImageBrush> 이미지의 가로 세로 비율을 유지 하기 위해.  
@@ -23,17 +23,17 @@ ms.locfileid: "54698325"
 ## <a name="example"></a>예제  
  다음 예제에서는 두 개의 <xref:System.Windows.Media.ImageBrush> 두 개의 사각형을 그릴 개체입니다. 각 사각형은 300 × 150픽셀 크기이며 각각 300 x 300픽셀 이미지를 포함합니다. 합니다 <xref:System.Windows.Media.TileBrush.Stretch%2A> 첫 번째 브러시의 속성이로 설정 되어 <xref:System.Windows.Media.Stretch.Uniform>, 및 <xref:System.Windows.Media.TileBrush.Stretch%2A> 두 번째 브러시의 속성이 <xref:System.Windows.Media.Stretch.UniformToFill>합니다.  
   
- [!code-csharp[UsingImageBrush_snip#ImageBrushStretchModesExampleWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/UsingImageBrush_snip/CSharp/StretchModes.cs#imagebrushstretchmodesexamplewholepage)]  
+ [!code-csharp[UsingImageBrush_snip#ImageBrushStretchModesExampleWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/UsingImageBrush_snip/CSharp/StretchModes.cs#imagebrushstretchmodesexamplewholepage)]  
   
  다음 그림에 나와 있는 첫 번째 브러시의 출력을 <xref:System.Windows.Media.TileBrush.Stretch%2A> 설정은 <xref:System.Windows.Media.Stretch.Uniform>합니다.  
   
- ![Uniform 늘이기를 사용한 ImageBrush](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-imagebrushuniformstretch.jpg "graphicsmm_ImageBrushUniformStretch")  
+ ![Uniform 늘이기를 사용한 ImageBrush](./media/graphicsmm-imagebrushuniformstretch.jpg "graphicsmm_ImageBrushUniformStretch")  
   
  다음 그림에서는 있는 두 번째 브러시의 출력을 <xref:System.Windows.Media.TileBrush.Stretch%2A> 설정 <xref:System.Windows.Media.Stretch.UniformToFill>.  
   
- ![UniformToFill 늘이기를 사용한 ImageBrush](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-imagebrushuniformtofillstretch.jpg "graphicsmm_ImageBrushUniformToFillStretch")  
+ ![UniformToFill 늘이기를 사용한 ImageBrush](./media/graphicsmm-imagebrushuniformtofillstretch.jpg "graphicsmm_ImageBrushUniformToFillStretch")  
   
- 합니다 <xref:System.Windows.Media.TileBrush.Stretch%2A> 속성을 다른 동일 하 게 동작 <xref:System.Windows.Media.TileBrush> 개체, 즉,에 대 한 <xref:System.Windows.Media.DrawingBrush> 및 <xref:System.Windows.Media.VisualBrush>합니다. 에 대 한 자세한 내용은 <xref:System.Windows.Media.ImageBrush> 집합과 <xref:System.Windows.Media.TileBrush> 개체를 참조 하세요 [이미지, 그림 및 시각적 표시로 그리기](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md)합니다.  
+ 합니다 <xref:System.Windows.Media.TileBrush.Stretch%2A> 속성을 다른 동일 하 게 동작 <xref:System.Windows.Media.TileBrush> 개체, 즉,에 대 한 <xref:System.Windows.Media.DrawingBrush> 및 <xref:System.Windows.Media.VisualBrush>합니다. 에 대 한 자세한 내용은 <xref:System.Windows.Media.ImageBrush> 집합과 <xref:System.Windows.Media.TileBrush> 개체를 참조 하세요 [이미지, 그림 및 시각적 표시로 그리기](painting-with-images-drawings-and-visuals.md)합니다.  
   
  또한 있지만 합니다 <xref:System.Windows.Media.TileBrush.Stretch%2A> 속성이 표시 되도록 하는 방법을 <xref:System.Windows.Media.TileBrush> 콘텐츠가 출력 영역에 맞게 확장, 실제로 지정 하는 방법을 <xref:System.Windows.Media.TileBrush> 콘텐츠 기본 타일에 맞게 늘어납니다. 자세한 내용은 <xref:System.Windows.Media.TileBrush>을 참조하세요.  
   
@@ -41,4 +41,4 @@ ms.locfileid: "54698325"
   
 ## <a name="see-also"></a>참고자료
 - <xref:System.Windows.Media.TileBrush>
-- [이미지, 그림 및 시각적 표시로 그리기](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md)
+- [이미지, 그림 및 시각적 표시로 그리기](painting-with-images-drawings-and-visuals.md)

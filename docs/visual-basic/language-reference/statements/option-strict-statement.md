@@ -11,14 +11,14 @@ helpviewer_keywords:
 - late binding [Visual Basic]
 - implicit conversions [Visual Basic]
 ms.assetid: 5883e0c1-a920-4274-8e46-b0ff047eaee5
-ms.openlocfilehash: 1fce65b70c663ca56427122abb604d16fcd029d7
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: adfac0eebc0d50ed3c8c523c0442636b05901c18
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56981545"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57355131"
 ---
-# <a name="option-strict-statement"></a>Long
+# <a name="option-strict-statement"></a>Option Strict 문
 암시적 데이터 형식 변환을 확대 변환 으로만 제한 하 고 런타임에 바인딩을 허용 하지 않습니다.에 이어지는 암시적 형식 지정을 허용 하지 않습니다는 `Object` 형식입니다.  
   
 ## <a name="syntax"></a>구문  
@@ -115,7 +115,7 @@ Option Strict { On | Off }
   
 2.  에 **컴파일** 탭의 값을 설정 합니다 **Option Strict** 상자입니다.  
   
-###  <a name="conditions"></a> IDE에서 경고 구성을 설정 하려면  
+### <a name="conditions"></a> IDE에서 경고 구성을 설정 하려면  
  사용 하는 경우는 [컴파일 페이지, 프로젝트 디자이너 (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic) 대신는 `Option Strict` 문을 제어할 수 추가 오류를 생성 하는 조건입니다. **경고 구성** 섹션을 **컴파일 페이지** 컴파일 타임 오류가 발생 하는 세 가지 조건에 해당 하는 설정이 때 `Option Strict` 켜져 합니다. 이러한 설정은 다음과 같습니다.  
   
 -   **암시적 변환**  

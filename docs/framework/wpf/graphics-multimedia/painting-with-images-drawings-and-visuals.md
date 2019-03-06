@@ -12,12 +12,12 @@ helpviewer_keywords:
 - brushes [WPF], painting with images
 - brushes [WPF], painting with visuals
 ms.assetid: 779aac3f-8d41-49d8-8130-768244aa2240
-ms.openlocfilehash: d226ecb6e168a044cd9802b4278c25084d8c84fc
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: bb66c34a847f78f7921ae925d0c3d0640c11aeec
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54537753"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57361327"
 ---
 # <a name="painting-with-images-drawings-and-visuals"></a>이미지, 그림 및 시각적 표시로 그리기
 이 항목에서는 사용 하는 방법을 설명 <xref:System.Windows.Media.ImageBrush>, <xref:System.Windows.Media.DrawingBrush>, 및 <xref:System.Windows.Media.VisualBrush> 이미지를 사용 하 여 영역을 그릴 개체를 <xref:System.Windows.Media.Drawing>, 또는 <xref:System.Windows.Media.Visual>합니다.  
@@ -25,35 +25,35 @@ ms.locfileid: "54537753"
   
 <a name="prereqs"></a>   
 ## <a name="prerequisites"></a>전제 조건  
- 이 항목을 이해하려면 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]에서 제공하는 다양한 형식의 브러시와 해당 기본 기능에 대해 잘 알고 있어야 합니다. 소개 내용을 보려면 [WPF 브러시 개요](../../../../docs/framework/wpf/graphics-multimedia/wpf-brushes-overview.md)를 참조하세요.  
+ 이 항목을 이해하려면 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]에서 제공하는 다양한 형식의 브러시와 해당 기본 기능에 대해 잘 알고 있어야 합니다. 소개 내용을 보려면 [WPF 브러시 개요](wpf-brushes-overview.md)를 참조하세요.  
   
 <a name="image"></a>   
 ## <a name="paint-an-area-with-an-image"></a>이미지로 영역 그리기  
- <xref:System.Windows.Media.ImageBrush> 영역을 그립니다는 <xref:System.Windows.Media.ImageSource>합니다. 가장 일반적인 유형의 <xref:System.Windows.Media.ImageSource> 를 사용 하는 <xref:System.Windows.Media.ImageBrush> 는 <xref:System.Windows.Media.Imaging.BitmapImage>, 비트맵 그래픽을 설명 하는 합니다. 사용할 수는 <xref:System.Windows.Media.DrawingImage> 를 사용 하 여 그릴를 <xref:System.Windows.Media.Drawing> 개체 이며 간단 하 게 사용을 <xref:System.Windows.Media.DrawingBrush> 대신 합니다. 에 대 한 자세한 내용은 <xref:System.Windows.Media.ImageSource> 개체를 참조 합니다 [이미징 개요](../../../../docs/framework/wpf/graphics-multimedia/imaging-overview.md)합니다.  
+ <xref:System.Windows.Media.ImageBrush> 영역을 그립니다는 <xref:System.Windows.Media.ImageSource>합니다. 가장 일반적인 유형의 <xref:System.Windows.Media.ImageSource> 를 사용 하는 <xref:System.Windows.Media.ImageBrush> 는 <xref:System.Windows.Media.Imaging.BitmapImage>, 비트맵 그래픽을 설명 하는 합니다. 사용할 수는 <xref:System.Windows.Media.DrawingImage> 를 사용 하 여 그릴를 <xref:System.Windows.Media.Drawing> 개체 이며 간단 하 게 사용을 <xref:System.Windows.Media.DrawingBrush> 대신 합니다. 에 대 한 자세한 내용은 <xref:System.Windows.Media.ImageSource> 개체를 참조 합니다 [이미징 개요](imaging-overview.md)합니다.  
   
  그리는 데는 <xref:System.Windows.Media.ImageBrush>를 만들기는 <xref:System.Windows.Media.Imaging.BitmapImage> 비트맵 콘텐츠를 로드 하는 데 사용 합니다. 사용 하 여는 <xref:System.Windows.Media.Imaging.BitmapImage> 설정 하는 <xref:System.Windows.Media.ImageBrush.ImageSource%2A> 의 속성을 <xref:System.Windows.Media.ImageBrush>. 마지막으로 적용 된 <xref:System.Windows.Media.ImageBrush> 그리려는 개체입니다.  [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]를 설정할 수도 있습니다는 <xref:System.Windows.Media.ImageBrush.ImageSource%2A> 의 속성을 <xref:System.Windows.Media.ImageBrush> 로드할 이미지의 경로 사용 하 여.  
   
  모두 좋아합니다 <xref:System.Windows.Media.Brush> 개체는 <xref:System.Windows.Media.ImageBrush> 도형, 패널, 컨트롤 및 텍스트와 같은 개체를 그리는 데 사용할 수 있습니다. 다음 그림과 얻을 수 있는 몇 가지 효과 <xref:System.Windows.Media.ImageBrush>입니다.  
   
- ![ImageBrush 출력 예제](../../../../docs/framework/wpf/graphics-multimedia/media/wcpsdk-mmgraphics-imagebrushexamples.gif "wcpsdk_mmgraphics_imagebrushexamples")  
+ ![ImageBrush 출력 예제](./media/wcpsdk-mmgraphics-imagebrushexamples.gif "wcpsdk_mmgraphics_imagebrushexamples")  
 ImageBrush로 그린 개체  
   
- 기본적으로 <xref:System.Windows.Media.ImageBrush> 까지 확장 되 면 영역을 완전히 채우도록 이미지를 그리고, 그린된 영역이 이미지 보다 다른 가로 세로 비율을 있으면 이미지가 왜곡 될 수 있습니다. 변경 하 여이 동작을 변경할 수는 <xref:System.Windows.Media.TileBrush.Stretch%2A> 속성의 기본값을 <xref:System.Windows.Media.Stretch.Fill> 하 <xref:System.Windows.Media.Stretch.None>, <xref:System.Windows.Media.Stretch.Uniform>, 또는 <xref:System.Windows.Media.Stretch.UniformToFill>. 때문에 <xref:System.Windows.Media.ImageBrush> 유형의 <xref:System.Windows.Media.TileBrush>, 이미지 브러시를 출력 영역을 채우는 방식을 정확히 지정 하 고 패턴을 만들 수도 있습니다. 고급 항목에 대 한 자세한 내용은 <xref:System.Windows.Media.TileBrush> 기능을 참조 합니다 [TileBrush 개요](../../../../docs/framework/wpf/graphics-multimedia/tilebrush-overview.md)합니다.  
+ 기본적으로 <xref:System.Windows.Media.ImageBrush> 까지 확장 되 면 영역을 완전히 채우도록 이미지를 그리고, 그린된 영역이 이미지 보다 다른 가로 세로 비율을 있으면 이미지가 왜곡 될 수 있습니다. 변경 하 여이 동작을 변경할 수는 <xref:System.Windows.Media.TileBrush.Stretch%2A> 속성의 기본값을 <xref:System.Windows.Media.Stretch.Fill> 하 <xref:System.Windows.Media.Stretch.None>, <xref:System.Windows.Media.Stretch.Uniform>, 또는 <xref:System.Windows.Media.Stretch.UniformToFill>. 때문에 <xref:System.Windows.Media.ImageBrush> 유형의 <xref:System.Windows.Media.TileBrush>, 이미지 브러시를 출력 영역을 채우는 방식을 정확히 지정 하 고 패턴을 만들 수도 있습니다. 고급 항목에 대 한 자세한 내용은 <xref:System.Windows.Media.TileBrush> 기능을 참조 합니다 [TileBrush 개요](tilebrush-overview.md)합니다.  
   
 <a name="fillingpanelwithimage"></a>   
 ## <a name="example-paint-an-object-with-a-bitmap-image"></a>예제: 비트맵 이미지로 개체 그리기  
  다음 예제에서는 <xref:System.Windows.Media.ImageBrush> 그릴 합니다 <xref:System.Windows.Controls.Panel.Background%2A> 의 <xref:System.Windows.Controls.Canvas>합니다.  
   
- [!code-xaml[BrushOverviewExamples_snip#GraphicsMMImageBrushAsCanvasBackgroundExampleWholePage](../../../../samples/snippets/xaml/VS_Snippets_Wpf/BrushOverviewExamples_snip/XAML/ImageBrushExample.xaml#graphicsmmimagebrushascanvasbackgroundexamplewholepage)]  
+ [!code-xaml[BrushOverviewExamples_snip#GraphicsMMImageBrushAsCanvasBackgroundExampleWholePage](~/samples/snippets/xaml/VS_Snippets_Wpf/BrushOverviewExamples_snip/XAML/ImageBrushExample.xaml#graphicsmmimagebrushascanvasbackgroundexamplewholepage)]  
   
- [!code-csharp[BrushOverviewExamples_procedural_snip#GraphicsMMImageBrushAsCanvasBackgroundExampleWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/BrushOverviewExamples_procedural_snip/CSharp/ImageBrushExample.cs#graphicsmmimagebrushascanvasbackgroundexamplewholepage)]
- [!code-vb[BrushOverviewExamples_procedural_snip#GraphicsMMImageBrushAsCanvasBackgroundExampleWholePage](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/BrushOverviewExamples_procedural_snip/visualbasic/imagebrushexample.vb#graphicsmmimagebrushascanvasbackgroundexamplewholepage)]  
+ [!code-csharp[BrushOverviewExamples_procedural_snip#GraphicsMMImageBrushAsCanvasBackgroundExampleWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/BrushOverviewExamples_procedural_snip/CSharp/ImageBrushExample.cs#graphicsmmimagebrushascanvasbackgroundexamplewholepage)]
+ [!code-vb[BrushOverviewExamples_procedural_snip#GraphicsMMImageBrushAsCanvasBackgroundExampleWholePage](~/samples/snippets/visualbasic/VS_Snippets_Wpf/BrushOverviewExamples_procedural_snip/visualbasic/imagebrushexample.vb#graphicsmmimagebrushascanvasbackgroundexamplewholepage)]  
   
 <a name="drawingbrushintro"></a>   
 ## <a name="paint-an-area-with-a-drawing"></a>Drawing으로 영역 그리기  
  <xref:System.Windows.Media.DrawingBrush> 도형, 텍스트, 이미지 및 비디오로 영역을 그릴 수 있습니다. 그리기 브러시 내의 셰이프에 있습니다 자체로 그려질 단색, 그라데이션, 이미지 또는 다른 <xref:System.Windows.Media.DrawingBrush>합니다. 다음 그림에서는의 몇 가지 용도 <xref:System.Windows.Media.DrawingBrush>합니다.  
   
- ![DrawingBrush 출력 예제](../../../../docs/framework/wpf/graphics-multimedia/media/wcpsdk-mmgraphics-drawingbrushexamples.png "wcpsdk_mmgraphics_drawingbrushexamples")  
+ ![DrawingBrush 출력 예제](./media/wcpsdk-mmgraphics-drawingbrushexamples.png "wcpsdk_mmgraphics_drawingbrushexamples")  
 DrawingBrush로 그린 개체  
   
  A <xref:System.Windows.Media.DrawingBrush> 영역을 그립니다를 <xref:System.Windows.Media.Drawing> 개체입니다. <xref:System.Windows.Media.Drawing> 도형, 비트맵, 비디오 또는 텍스트 줄 같은 보이는 콘텐츠를 설명 하는 개체입니다. 그리기 형식마다 다른 콘텐츠 형식을 설명합니다. 다음은 여러 그리기 개체 형식을 보여 주는 목록입니다.  
@@ -68,7 +68,7 @@ DrawingBrush로 그린 개체
   
 -   <xref:System.Windows.Media.DrawingGroup> -다른 그리기를 그립니다. 다른 그리기를 단일 합성 그리기로 결합하려면 그리기 그룹을 사용합니다.  
   
- 에 대 한 자세한 내용은 <xref:System.Windows.Media.Drawing> 개체를 참조 합니다 [Drawing 개체 개요](../../../../docs/framework/wpf/graphics-multimedia/drawing-objects-overview.md)합니다.  
+ 에 대 한 자세한 내용은 <xref:System.Windows.Media.Drawing> 개체를 참조 합니다 [Drawing 개체 개요](drawing-objects-overview.md)합니다.  
   
  같은 <xref:System.Windows.Media.ImageBrush>, <xref:System.Windows.Media.DrawingBrush> 확장 해당 <xref:System.Windows.Media.DrawingBrush.Drawing%2A> 을 출력 영역을 채웁니다. 변경 하 여이 동작을 재정의할 수 있습니다 합니다 <xref:System.Windows.Media.TileBrush.Stretch%2A> 속성에서 기본 설정인 <xref:System.Windows.Media.Stretch.Fill>합니다. 자세한 내용은 <xref:System.Windows.Media.TileBrush.Stretch%2A> 속성을 참조하세요.  
   
@@ -76,10 +76,10 @@ DrawingBrush로 그린 개체
 ## <a name="example-paint-an-object-with-a-drawing"></a>예제: Drawing으로 개체 그리기  
  다음 예제에서는 3개의 타원 그림으로 개체를 그리는 방법을 보여 줍니다. <xref:System.Windows.Media.GeometryDrawing> 타원을 설명 하는 데 사용 됩니다.  
   
- [!code-xaml[BrushOverviewExamples_snip#GraphicsMMDrawingBrushAsButtonBackgroundExample](../../../../samples/snippets/xaml/VS_Snippets_Wpf/BrushOverviewExamples_snip/XAML/DrawingBrushExample.xaml#graphicsmmdrawingbrushasbuttonbackgroundexample)]  
+ [!code-xaml[BrushOverviewExamples_snip#GraphicsMMDrawingBrushAsButtonBackgroundExample](~/samples/snippets/xaml/VS_Snippets_Wpf/BrushOverviewExamples_snip/XAML/DrawingBrushExample.xaml#graphicsmmdrawingbrushasbuttonbackgroundexample)]  
   
- [!code-csharp[BrushOverviewExamples_procedural_snip#GraphicsMMDrawingBrushAsButtonBackgroundExample1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/BrushOverviewExamples_procedural_snip/CSharp/DrawingBrushExample.cs#graphicsmmdrawingbrushasbuttonbackgroundexample1)]
- [!code-vb[BrushOverviewExamples_procedural_snip#GraphicsMMDrawingBrushAsButtonBackgroundExample1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/BrushOverviewExamples_procedural_snip/visualbasic/drawingbrushexample.vb#graphicsmmdrawingbrushasbuttonbackgroundexample1)]  
+ [!code-csharp[BrushOverviewExamples_procedural_snip#GraphicsMMDrawingBrushAsButtonBackgroundExample1](~/samples/snippets/csharp/VS_Snippets_Wpf/BrushOverviewExamples_procedural_snip/CSharp/DrawingBrushExample.cs#graphicsmmdrawingbrushasbuttonbackgroundexample1)]
+ [!code-vb[BrushOverviewExamples_procedural_snip#GraphicsMMDrawingBrushAsButtonBackgroundExample1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/BrushOverviewExamples_procedural_snip/visualbasic/drawingbrushexample.vb#graphicsmmdrawingbrushasbuttonbackgroundexample1)]  
   
 <a name="visualbrushsection"></a>   
 ## <a name="paint-an-area-with-a-visual"></a>시각적 표시로 영역 그리기  
@@ -94,7 +94,7 @@ DrawingBrush로 그린 개체
   
 -   기존 항목 사용 <xref:System.Windows.Media.Visual>, 대상의 중복 이미지를 만드는 <xref:System.Windows.Media.Visual>합니다. 사용할 수 있습니다는 <xref:System.Windows.Media.VisualBrush> 리플렉션 및 확대와 같은 흥미로운 효과 만들 수 있습니다. 예를 들어 참조 된 [예제: 리플렉션 만들기](#examplevisualbrush2) 섹션입니다.  
   
- 정의 하는 경우 새 <xref:System.Windows.Media.VisualBrush.Visual%2A> 에 대 한는 <xref:System.Windows.Media.VisualBrush> 하 고 <xref:System.Windows.Media.Visual> 는 <xref:System.Windows.UIElement> (예: 패널 또는 컨트롤)에서 실행 되는 레이아웃 시스템을 <xref:System.Windows.UIElement> 와 해당 자식 요소 때를 <xref:System.Windows.Media.VisualBrush.AutoLayoutContent%2A> 속성이 `true`. 그러나 루트 <xref:System.Windows.UIElement> 기본적으로 시스템의 나머지 부분과에서 격리 됩니다: 스타일 및 외부 레이아웃에이 경계 낫다는 개념 수 없습니다. 루트의 크기를 명시적으로 지정 해야 하므로 <xref:System.Windows.UIElement>만 부모 이기 때문은 <xref:System.Windows.Media.VisualBrush> 하므로 해당 수 없습니다. 자동으로 크기가 조정 자체 그려지는 영역 및 합니다. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]의 레이아웃에 대한 자세한 내용은 [레이아웃](../../../../docs/framework/wpf/advanced/layout.md)을 참조하세요.  
+ 정의 하는 경우 새 <xref:System.Windows.Media.VisualBrush.Visual%2A> 에 대 한는 <xref:System.Windows.Media.VisualBrush> 하 고 <xref:System.Windows.Media.Visual> 는 <xref:System.Windows.UIElement> (예: 패널 또는 컨트롤)에서 실행 되는 레이아웃 시스템을 <xref:System.Windows.UIElement> 와 해당 자식 요소 때를 <xref:System.Windows.Media.VisualBrush.AutoLayoutContent%2A> 속성이 `true`. 그러나 루트 <xref:System.Windows.UIElement> 기본적으로 시스템의 나머지 부분과에서 격리 됩니다: 스타일 및 외부 레이아웃에이 경계 낫다는 개념 수 없습니다. 루트의 크기를 명시적으로 지정 해야 하므로 <xref:System.Windows.UIElement>만 부모 이기 때문은 <xref:System.Windows.Media.VisualBrush> 하므로 해당 수 없습니다. 자동으로 크기가 조정 자체 그려지는 영역 및 합니다. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]의 레이아웃에 대한 자세한 내용은 [레이아웃](../advanced/layout.md)을 참조하세요.  
   
  와 같은 <xref:System.Windows.Media.ImageBrush> 하 고 <xref:System.Windows.Media.DrawingBrush>, <xref:System.Windows.Media.VisualBrush> 확장 해당 콘텐츠를 출력 영역을 채웁니다. 변경 하 여이 동작을 재정의할 수 있습니다 합니다 <xref:System.Windows.Media.TileBrush.Stretch%2A> 속성에서 기본 설정인 <xref:System.Windows.Media.Stretch.Fill>합니다. 자세한 내용은 <xref:System.Windows.Media.TileBrush.Stretch%2A> 속성을 참조하세요.  
   
@@ -102,21 +102,21 @@ DrawingBrush로 그린 개체
 ## <a name="example-paint-an-object-with-a-visual"></a>예제: 시각적 개체로 개체 그리기  
  다음 예제에서는 여러 컨트롤과 패널을 사용해서 사각형을 그립니다.  
   
- [!code-xaml[BrushOverviewExamples_snip#GraphicsMMVisualBrushAsRectangleBackgroundExample](../../../../samples/snippets/xaml/VS_Snippets_Wpf/BrushOverviewExamples_snip/XAML/VisualBrushExample.xaml#graphicsmmvisualbrushasrectanglebackgroundexample)]  
+ [!code-xaml[BrushOverviewExamples_snip#GraphicsMMVisualBrushAsRectangleBackgroundExample](~/samples/snippets/xaml/VS_Snippets_Wpf/BrushOverviewExamples_snip/XAML/VisualBrushExample.xaml#graphicsmmvisualbrushasrectanglebackgroundexample)]  
   
- [!code-csharp[BrushOverviewExamples_procedural_snip#GraphicsMMVisualBrushAsRectangleBackgroundExample1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/BrushOverviewExamples_procedural_snip/CSharp/VisualBrushExample.cs#graphicsmmvisualbrushasrectanglebackgroundexample1)]
- [!code-vb[BrushOverviewExamples_procedural_snip#GraphicsMMVisualBrushAsRectangleBackgroundExample1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/BrushOverviewExamples_procedural_snip/visualbasic/visualbrushexample.vb#graphicsmmvisualbrushasrectanglebackgroundexample1)]  
+ [!code-csharp[BrushOverviewExamples_procedural_snip#GraphicsMMVisualBrushAsRectangleBackgroundExample1](~/samples/snippets/csharp/VS_Snippets_Wpf/BrushOverviewExamples_procedural_snip/CSharp/VisualBrushExample.cs#graphicsmmvisualbrushasrectanglebackgroundexample1)]
+ [!code-vb[BrushOverviewExamples_procedural_snip#GraphicsMMVisualBrushAsRectangleBackgroundExample1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/BrushOverviewExamples_procedural_snip/visualbasic/visualbrushexample.vb#graphicsmmvisualbrushasrectanglebackgroundexample1)]  
   
 <a name="examplevisualbrush2"></a>   
 ## <a name="example-create-a-reflection"></a>예제: 리플렉션 만들기  
  앞의 예제에는 새로 만드는 방법을 보여 주었습니다 <xref:System.Windows.Media.Visual> 배경으로 사용 합니다. 사용할 수도 있습니다는 <xref:System.Windows.Media.VisualBrush> ; 기존 시각적 개체를 표시 하려면이 기능을 사용 하면 리플렉션 및 확대와 같은 흥미로운 시각적 효과 만들 수 있습니다. 다음 예에서는 <xref:System.Windows.Media.VisualBrush> 의 반사 만들기에 <xref:System.Windows.Controls.Border> 여러 요소를 포함 하는 합니다. 다음 그림에서는 이 예제가 생성하는 출력을 보여 줍니다.  
   
- ![시각적 개체를 반영](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-visualbrush-reflection-small.jpg "graphicsmm_visualbrush_reflection_small")  
+ ![시각적 개체를 반영](./media/graphicsmm-visualbrush-reflection-small.jpg "graphicsmm_visualbrush_reflection_small")  
 반사된 표시 개체  
   
- [!code-csharp[visualbrush_markup_snip#GraphicsMMVisualBrushReflectionExampleWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/visualbrush_markup_snip/CSharp/ReflectionExample.cs#graphicsmmvisualbrushreflectionexamplewholepage)]
- [!code-vb[visualbrush_markup_snip#GraphicsMMVisualBrushReflectionExampleWholePage](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/visualbrush_markup_snip/visualbasic/reflectionexample.vb#graphicsmmvisualbrushreflectionexamplewholepage)]
- [!code-xaml[visualbrush_markup_snip#GraphicsMMVisualBrushReflectionExampleWholePage](../../../../samples/snippets/xaml/VS_Snippets_Wpf/visualbrush_markup_snip/XAML/ReflectionExample.xaml#graphicsmmvisualbrushreflectionexamplewholepage)]  
+ [!code-csharp[visualbrush_markup_snip#GraphicsMMVisualBrushReflectionExampleWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/visualbrush_markup_snip/CSharp/ReflectionExample.cs#graphicsmmvisualbrushreflectionexamplewholepage)]
+ [!code-vb[visualbrush_markup_snip#GraphicsMMVisualBrushReflectionExampleWholePage](~/samples/snippets/visualbasic/VS_Snippets_Wpf/visualbrush_markup_snip/visualbasic/reflectionexample.vb#graphicsmmvisualbrushreflectionexamplewholepage)]
+ [!code-xaml[visualbrush_markup_snip#GraphicsMMVisualBrushReflectionExampleWholePage](~/samples/snippets/xaml/VS_Snippets_Wpf/visualbrush_markup_snip/XAML/ReflectionExample.xaml#graphicsmmvisualbrushreflectionexamplewholepage)]  
   
  화면의 일부를 확대하는 방법 및 리플렉션을 만드는 방법을 보여 주는 추가 예제를 보려면 [VisualBrush 샘플](https://go.microsoft.com/fwlink/?LinkID=160049)을 참조하세요.  
   
@@ -126,24 +126,24 @@ DrawingBrush로 그린 개체
   
  <xref:System.Windows.Media.TileBrush> 에 세 가지 기본 구성 요소: 콘텐츠, 타일 및 출력 영역입니다.  
   
- ![TileBrush 구성 요소](../../../../docs/framework/wpf/graphics-multimedia/media/wcpsdk-mmgraphics-defaultcontentprojection2.png "wcpsdk_mmgraphics_defaultcontentprojection2")  
+ ![TileBrush 구성 요소](./media/wcpsdk-mmgraphics-defaultcontentprojection2.png "wcpsdk_mmgraphics_defaultcontentprojection2")  
 단일 타일이 있는 TileBrush의 구성 요소  
   
- ![바둑판식으로 배열 된 TileBrush의 구성 요소](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-tiledprojection.png "graphicsmm_tiledprojection")  
+ ![바둑판식으로 배열 된 TileBrush의 구성 요소](./media/graphicsmm-tiledprojection.png "graphicsmm_tiledprojection")  
 여러 타일이 있는 TileBrush의 구성 요소  
   
- 바둑판식 배열 기능에 대 한 자세한 내용은 <xref:System.Windows.Media.TileBrush> 개체를 참조 합니다 [TileBrush 개요](../../../../docs/framework/wpf/graphics-multimedia/tilebrush-overview.md)합니다.  
+ 바둑판식 배열 기능에 대 한 자세한 내용은 <xref:System.Windows.Media.TileBrush> 개체를 참조 합니다 [TileBrush 개요](tilebrush-overview.md)합니다.  
   
 ## <a name="see-also"></a>참고자료
 - <xref:System.Windows.Media.ImageBrush>
 - <xref:System.Windows.Media.DrawingBrush>
 - <xref:System.Windows.Media.VisualBrush>
 - <xref:System.Windows.Media.TileBrush>
-- [TileBrush 개요](../../../../docs/framework/wpf/graphics-multimedia/tilebrush-overview.md)
-- [WPF 브러시 개요](../../../../docs/framework/wpf/graphics-multimedia/wpf-brushes-overview.md)
-- [이미징 개요](../../../../docs/framework/wpf/graphics-multimedia/imaging-overview.md)
-- [Drawing 개체 개요](../../../../docs/framework/wpf/graphics-multimedia/drawing-objects-overview.md)
-- [불투명 마스크 개요](../../../../docs/framework/wpf/graphics-multimedia/opacity-masks-overview.md)
-- [WPF 그래픽 렌더링 개요](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)
+- [TileBrush 개요](tilebrush-overview.md)
+- [WPF 브러시 개요](wpf-brushes-overview.md)
+- [이미징 개요](imaging-overview.md)
+- [Drawing 개체 개요](drawing-objects-overview.md)
+- [불투명 마스크 개요](opacity-masks-overview.md)
+- [WPF 그래픽 렌더링 개요](wpf-graphics-rendering-overview.md)
 - [ImageBrush 샘플](https://go.microsoft.com/fwlink/?LinkID=160005)
 - [VisualBrush 샘플](https://go.microsoft.com/fwlink/?LinkID=160049)

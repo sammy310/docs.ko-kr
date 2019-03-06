@@ -8,12 +8,12 @@ helpviewer_keywords:
 - event handlers [WPF], adding
 - XAML [WPF], adding event handlers
 ms.assetid: 269c61e0-6bd9-4291-9bed-1c5ee66da486
-ms.openlocfilehash: 4e8344ebcb0406a7da29787c5a4377760f55597e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 05eaae0f5b893f42d421717ac73373d4c79004c4
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54499134"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57352193"
 ---
 # <a name="how-to-add-an-event-handler-using-code"></a>방법: 코드를 사용하여 이벤트 처리기 추가
 이 예제에서는 코드를 사용 하 여 요소에 이벤트 처리기를 추가 하는 방법을 보여 줍니다.  
@@ -27,16 +27,16 @@ ms.locfileid: "54499134"
   
 -   사용 하 여 합니다 <xref:System.Windows.UIElement.AddHandler%2A> 메서드를 함께 `AddressOf` 연산자, 이벤트 처리기 구현을 참조 합니다.  
   
--   사용 된 `Handles` 이벤트 처리기 정의의 일부로 키워드입니다. 이 기술은 여기서는 표시 되지 않습니다. 참조 [Visual Basic 및 WPF 이벤트 처리](../../../../docs/framework/wpf/advanced/visual-basic-and-wpf-event-handling.md)합니다.  
+-   사용 된 `Handles` 이벤트 처리기 정의의 일부로 키워드입니다. 이 기술은 여기서는 표시 되지 않습니다. 참조 [Visual Basic 및 WPF 이벤트 처리](visual-basic-and-wpf-event-handling.md)합니다.  
   
- [!code-xaml[RoutedEventAddRemoveHandler#XAML](../../../../samples/snippets/csharp/VS_Snippets_Wpf/RoutedEventAddRemoveHandler/CSharp/default.xaml#xaml)]  
+ [!code-xaml[RoutedEventAddRemoveHandler#XAML](~/samples/snippets/csharp/VS_Snippets_Wpf/RoutedEventAddRemoveHandler/CSharp/default.xaml#xaml)]  
   
- [!code-csharp[RoutedEventAddRemoveHandler#Handler](../../../../samples/snippets/csharp/VS_Snippets_Wpf/RoutedEventAddRemoveHandler/CSharp/default.xaml.cs#handler)]
- [!code-vb[RoutedEventAddRemoveHandler#Handler](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/RoutedEventAddRemoveHandler/VisualBasic/default.xaml.vb#handler)]  
+ [!code-csharp[RoutedEventAddRemoveHandler#Handler](~/samples/snippets/csharp/VS_Snippets_Wpf/RoutedEventAddRemoveHandler/CSharp/default.xaml.cs#handler)]
+ [!code-vb[RoutedEventAddRemoveHandler#Handler](~/samples/snippets/visualbasic/VS_Snippets_Wpf/RoutedEventAddRemoveHandler/VisualBasic/default.xaml.vb#handler)]  
   
 > [!NOTE]
->  에 처음으로 구문 분석 된 이벤트 처리기를 추가 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 페이지는 훨씬 더 간단 합니다. 이벤트 처리기를 추가 하려는 개체 요소 내에서 처리 하려는 이벤트의 이름과 일치 하는 특성을 추가 합니다. 다음의 코드 숨김 파일에 정의 된 이벤트 처리기 메서드의 이름으로 해당 특성의 값을 지정 합니다 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 페이지입니다. 자세한 내용은 [XAML 개요 (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md) 하거나 [라우트된 이벤트 개요](../../../../docs/framework/wpf/advanced/routed-events-overview.md)합니다.  
+>  에 처음으로 구문 분석 된 이벤트 처리기를 추가 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 페이지는 훨씬 더 간단 합니다. 이벤트 처리기를 추가 하려는 개체 요소 내에서 처리 하려는 이벤트의 이름과 일치 하는 특성을 추가 합니다. 다음의 코드 숨김 파일에 정의 된 이벤트 처리기 메서드의 이름으로 해당 특성의 값을 지정 합니다 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 페이지입니다. 자세한 내용은 [XAML 개요 (WPF)](xaml-overview-wpf.md) 하거나 [라우트된 이벤트 개요](routed-events-overview.md)합니다.  
   
 ## <a name="see-also"></a>참고자료
-- [라우트된 이벤트 개요](../../../../docs/framework/wpf/advanced/routed-events-overview.md)
-- [방법 항목](../../../../docs/framework/wpf/advanced/events-how-to-topics.md)
+- [라우트된 이벤트 개요](routed-events-overview.md)
+- [방법 항목](events-how-to-topics.md)

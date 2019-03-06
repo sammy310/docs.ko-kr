@@ -6,23 +6,23 @@ f1_keywords:
 helpviewer_keywords:
 - drag-and-drop [WPF], how-to topics
 ms.assetid: 559c0804-c62a-4640-b6b9-cbd2aa9fb99c
-ms.openlocfilehash: 48f846329d8463f9519a2a7654f9a42f6bca5384
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: dd7bccdd28f433893a988f95c5e1d804f6e138de
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54721928"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57358810"
 ---
 # <a name="drag-and-drop-how-to-topics"></a>끌어서 놓기 방법 항목
 다음 예제를 사용 하 여 일반적인 작업을 수행 하는 방법을 보여 줍니다는 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 끌어서 놓기 프레임 워크입니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
- [RichTextBox 컨트롤에 끌어 놓은 파일 열기](../../../../docs/framework/wpf/advanced/how-to-open-a-file-that-is-dropped-on-a-richtextbox-control.md)  
- [데이터 개체 만들기](../../../../docs/framework/wpf/advanced/how-to-create-a-data-object.md)  
- [데이터 개체에 데이터 형식이 있는지 확인](../../../../docs/framework/wpf/advanced/how-to-determine-if-a-data-format-is-present-in-a-data-object.md)  
- [데이터 개체의 데이터 형식 나열](../../../../docs/framework/wpf/advanced/how-to-list-the-data-formats-in-a-data-object.md)  
- [특정 데이터 형식의 데이터 검색](../../../../docs/framework/wpf/advanced/how-to-retrieve-data-in-a-particular-data-format.md)  
- [데이터 개체에 여러 데이터 형식 저장](../../../../docs/framework/wpf/advanced/how-to-store-multiple-data-formats-in-a-data-object.md)  
+ [RichTextBox 컨트롤에 끌어 놓은 파일 열기](how-to-open-a-file-that-is-dropped-on-a-richtextbox-control.md)  
+ [데이터 개체 만들기](how-to-create-a-data-object.md)  
+ [데이터 개체에 데이터 형식이 있는지 확인](how-to-determine-if-a-data-format-is-present-in-a-data-object.md)  
+ [데이터 개체의 데이터 형식 나열](how-to-list-the-data-formats-in-a-data-object.md)  
+ [특정 데이터 형식의 데이터 검색](how-to-retrieve-data-in-a-particular-data-format.md)  
+ [데이터 개체에 여러 데이터 형식 저장](how-to-store-multiple-data-formats-in-a-data-object.md)  
   
 ## <a name="see-also"></a>참고자료
-- [끌어서 놓기 개요](../../../../docs/framework/wpf/advanced/drag-and-drop-overview.md)
+- [끌어서 놓기 개요](drag-and-drop-overview.md)

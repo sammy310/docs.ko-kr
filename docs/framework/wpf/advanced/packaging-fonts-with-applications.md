@@ -10,12 +10,12 @@ helpviewer_keywords:
 - typography [WPF], packaging fonts with applications
 - packaging fonts with applications [WPF]
 ms.assetid: db15ee48-4d24-49f5-8b9d-a64460865286
-ms.openlocfilehash: a822167ae5b2758a889c61eed5270e5abb01f961
-ms.sourcegitcommit: 07c4368273b446555cb2c85397ea266b39d5fe50
+ms.openlocfilehash: e66841fe72281bf0562b2ce50925a5c3a6bb9b54
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/21/2019
-ms.locfileid: "56583422"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57378875"
 ---
 # <a name="packaging-fonts-with-applications"></a>애플리케이션과 함께 글꼴 패키징
 이 항목에서는 글꼴을 패키지 하는 방법에 대 한 개요를 제공 하면 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 응용 프로그램입니다.  
@@ -64,7 +64,7 @@ ms.locfileid: "56583422"
   
  다음 코드 예제에서는 애플리케이션의 글꼴을 콘텐츠 항목으로 참조하는 방법을 보여 줍니다. 참조되는 콘텐츠 항목은 애플리케이션의 어셈블리 파일과 동일한 디렉터리에 있어야 합니다.  
   
- [!code-xaml[FontSnippets#FontPackageSnippet8](../../../../samples/snippets/csharp/VS_Snippets_Wpf/FontSnippets/CSharp/FontPackageSnippets.xaml#fontpackagesnippet8)]  
+ [!code-xaml[FontSnippets#FontPackageSnippet8](~/samples/snippets/csharp/VS_Snippets_Wpf/FontSnippets/CSharp/FontPackageSnippets.xaml#fontpackagesnippet8)]  
   
 <a name="adding_fonts_as_resource_items"></a>   
 ## <a name="adding-fonts-as-resource-items"></a>리소스 항목으로 글꼴 추가  
@@ -87,18 +87,18 @@ ms.locfileid: "56583422"
   
  다음 태그 예제에서는 애플리케이션의 글꼴 리소스를 참조하는 방법을 보여 줍니다.  
   
- [!code-xaml[FontSnippets#FontPackageSnippet1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/FontSnippets/CSharp/FontPackageSnippets.xaml#fontpackagesnippet1)]  
+ [!code-xaml[FontSnippets#FontPackageSnippet1](~/samples/snippets/csharp/VS_Snippets_Wpf/FontSnippets/CSharp/FontPackageSnippets.xaml#fontpackagesnippet1)]  
   
 ### <a name="referencing-font-resource-items-from-code"></a>코드에서 글꼴 리소스 항목 참조  
  을 코드에서 글꼴 리소스 항목을 참조 하기 위해 두 부분으로 구성 글꼴 리소스 참조를 제공 해야 합니다: 기본 [!INCLUDE[TLA#tla_uri](../../../../includes/tlasharptla-uri-md.md)]; 및 글꼴 위치 참조입니다. 이러한 값에 대 한 매개 변수로 사용 되는 <xref:System.Windows.Media.FontFamily.%23ctor%2A> 메서드. 다음 코드 예제에서는 라는 프로젝트 하위 디렉터리에 응용 프로그램의 글꼴 리소스를 참조 하는 방법을 보여 줍니다. `resources`합니다.  
   
- [!code-csharp[FontSnippets#FontPackageSnippet2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/FontSnippets/CSharp/FontPackageSnippets.xaml.cs#fontpackagesnippet2)]
- [!code-vb[FontSnippets#FontPackageSnippet2](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/FontSnippets/visualbasic/fontpackagesnippets.xaml.vb#fontpackagesnippet2)]  
+ [!code-csharp[FontSnippets#FontPackageSnippet2](~/samples/snippets/csharp/VS_Snippets_Wpf/FontSnippets/CSharp/FontPackageSnippets.xaml.cs#fontpackagesnippet2)]
+ [!code-vb[FontSnippets#FontPackageSnippet2](~/samples/snippets/visualbasic/VS_Snippets_Wpf/FontSnippets/visualbasic/fontpackagesnippets.xaml.vb#fontpackagesnippet2)]  
   
  기본 [!INCLUDE[TLA#tla_uri](../../../../includes/tlasharptla-uri-md.md)] 글꼴 리소스가 있는 응용 프로그램 하위 디렉터리가 포함 될 수 있습니다. 이 경우 글꼴 위치 참조에서 디렉터리를 지정할 필요가 없습니다만 앞에 포함 "`./`"를 기본으로 지정 된 동일한 디렉터리에는 글꼴 리소스를 나타내는 [!INCLUDE[TLA#tla_uri](../../../../includes/tlasharptla-uri-md.md)]합니다. 다음 코드 예제에서는 위의 코드 예제에 나오는 것과 동일한 글꼴 리소스 항목을 참조하는 다른 방법을 보여 줍니다.  
   
- [!code-csharp[FontSnippets#FontPackageSnippet5](../../../../samples/snippets/csharp/VS_Snippets_Wpf/FontSnippets/CSharp/FontPackageSnippets.xaml.cs#fontpackagesnippet5)]
- [!code-vb[FontSnippets#FontPackageSnippet5](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/FontSnippets/visualbasic/fontpackagesnippets.xaml.vb#fontpackagesnippet5)]  
+ [!code-csharp[FontSnippets#FontPackageSnippet5](~/samples/snippets/csharp/VS_Snippets_Wpf/FontSnippets/CSharp/FontPackageSnippets.xaml.cs#fontpackagesnippet5)]
+ [!code-vb[FontSnippets#FontPackageSnippet5](~/samples/snippets/visualbasic/VS_Snippets_Wpf/FontSnippets/visualbasic/fontpackagesnippets.xaml.vb#fontpackagesnippet5)]  
   
 ### <a name="referencing-fonts-from-the-same-application-subdirectory"></a>동일한 애플리케이션 하위 디렉터리에서 글꼴 참조  
  애플리케이션 콘텐츠와 리소스 파일을 모두 애플리케이션 프로젝트의 동일한 사용자 정의 하위 디렉터리에 배치할 수 있습니다. 다음 프로젝트 파일 예제에서는 동일한 하위 디렉터리에 정의된 콘텐츠 페이지와 글꼴 리소스를 보여 줍니다.  
@@ -115,21 +115,21 @@ ms.locfileid: "56583422"
   
  애플리케이션 콘텐츠와 글꼴이 동일한 하위 디렉터리에 있으므로 글꼴 참조가 애플리케이션 콘텐츠를 기준으로 합니다. 다음 예제에서는 글꼴이 애플리케이션과 동일한 디렉터리에 있는 경우 애플리케이션의 글꼴 리소스를 참조하는 방법을 보여 줍니다.  
   
- [!code-xaml[FontSnippets#FontPackageSnippet3](../../../../samples/snippets/csharp/VS_Snippets_Wpf/FontSnippets/CSharp/pages/HomePage.xaml#fontpackagesnippet3)]  
+ [!code-xaml[FontSnippets#FontPackageSnippet3](~/samples/snippets/csharp/VS_Snippets_Wpf/FontSnippets/CSharp/pages/HomePage.xaml#fontpackagesnippet3)]  
   
- [!code-csharp[FontSnippets#FontPackageSnippet4](../../../../samples/snippets/csharp/VS_Snippets_Wpf/FontSnippets/CSharp/pages/HomePage.xaml.cs#fontpackagesnippet4)]
- [!code-vb[FontSnippets#FontPackageSnippet4](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/FontSnippets/visualbasic/pages/homepage.xaml.vb#fontpackagesnippet4)]  
+ [!code-csharp[FontSnippets#FontPackageSnippet4](~/samples/snippets/csharp/VS_Snippets_Wpf/FontSnippets/CSharp/pages/HomePage.xaml.cs#fontpackagesnippet4)]
+ [!code-vb[FontSnippets#FontPackageSnippet4](~/samples/snippets/visualbasic/VS_Snippets_Wpf/FontSnippets/visualbasic/pages/homepage.xaml.vb#fontpackagesnippet4)]  
   
 ### <a name="enumerating-fonts-in-an-application"></a>애플리케이션의 글꼴 열거  
  응용 프로그램에서 리소스 항목으로 글꼴을 열거할 하나를 사용 합니다 <xref:System.Windows.Media.Fonts.GetFontFamilies%2A> 또는 <xref:System.Windows.Media.Fonts.GetTypefaces%2A> 메서드. 다음 예제에서는 사용 하는 방법을 보여 줍니다 합니다 <xref:System.Windows.Media.Fonts.GetFontFamilies%2A> 의 컬렉션을 반환 하는 방법 <xref:System.Windows.Media.FontFamily> 응용 프로그램 글꼴 위치에서 개체입니다. 이 경우에는 애플리케이션에 “resources”라는 하위 디렉터리가 있습니다.  
   
- [!code-csharp[FontSnippets#FontsSnippet3](../../../../samples/snippets/csharp/VS_Snippets_Wpf/FontSnippets/CSharp/FontFamilySnippets.xaml.cs#fontssnippet3)]
- [!code-vb[FontSnippets#FontsSnippet3](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/FontSnippets/visualbasic/fontfamilysnippets.xaml.vb#fontssnippet3)]  
+ [!code-csharp[FontSnippets#FontsSnippet3](~/samples/snippets/csharp/VS_Snippets_Wpf/FontSnippets/CSharp/FontFamilySnippets.xaml.cs#fontssnippet3)]
+ [!code-vb[FontSnippets#FontsSnippet3](~/samples/snippets/visualbasic/VS_Snippets_Wpf/FontSnippets/visualbasic/fontfamilysnippets.xaml.vb#fontssnippet3)]  
   
  다음 예제에서는 사용 하는 방법을 보여 줍니다 합니다 <xref:System.Windows.Media.Fonts.GetTypefaces%2A> 의 컬렉션을 반환 하는 방법 <xref:System.Windows.Media.Typeface> 응용 프로그램 글꼴 위치에서 개체입니다. 이 경우에는 애플리케이션에 “resources”라는 하위 디렉터리가 있습니다.  
   
- [!code-csharp[FontSnippets#FontsSnippet7](../../../../samples/snippets/csharp/VS_Snippets_Wpf/FontSnippets/CSharp/FontFamilySnippets.xaml.cs#fontssnippet7)]
- [!code-vb[FontSnippets#FontsSnippet7](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/FontSnippets/visualbasic/fontfamilysnippets.xaml.vb#fontssnippet7)]  
+ [!code-csharp[FontSnippets#FontsSnippet7](~/samples/snippets/csharp/VS_Snippets_Wpf/FontSnippets/CSharp/FontFamilySnippets.xaml.cs#fontssnippet7)]
+ [!code-vb[FontSnippets#FontsSnippet7](~/samples/snippets/visualbasic/VS_Snippets_Wpf/FontSnippets/visualbasic/fontfamilysnippets.xaml.vb#fontssnippet7)]  
   
 <a name="creating_a_font_resource_library"></a>   
 ## <a name="creating-a-font-resource-library"></a>글꼴 리소스 라이브러리 만들기  
@@ -151,10 +151,10 @@ ms.locfileid: "56583422"
 ### <a name="referencing-a-font-in-a-resource-library"></a>리소스 라이브러리의 글꼴 참조  
  애플리케이션에서 리소스 라이브러리의 글꼴을 참조하려면 라이브러리 어셈블리의 이름을 글꼴 참조의 접두사로 지정해야 합니다. 이 경우 글꼴 리소스 어셈블리는 “FontLibrary”입니다. 어셈블리 이름을 어셈블리 내의 참조와 구분하려면 ‘;’ 문자를 사용합니다. 글꼴 이름에 “Component” 키워드와 참조를 차례로 추가하면 글꼴 라이브러리의 리소스에 대한 전체 참조가 완성됩니다. 다음 코드 예제에서는 리소스 라이브러리 어셈블리의 글꼴을 참조하는 방법을 보여 줍니다.  
   
- [!code-xaml[OpenTypeFontsSample#OpenTypeFontsSample1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/OpenTypeFontsSample/CS/Kootenay.xaml#opentypefontssample1)]  
+ [!code-xaml[OpenTypeFontsSample#OpenTypeFontsSample1](~/samples/snippets/csharp/VS_Snippets_Wpf/OpenTypeFontsSample/CS/Kootenay.xaml#opentypefontssample1)]  
   
 > [!NOTE]
->  이 SDK 샘플의 집합을 포함 [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] 사용 하 여 사용할 수 있는 글꼴 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 응용 프로그램입니다. 글꼴은 리소스 전용 라이브러리에 정의되어 있습니다. 자세한 내용은 [샘플 OpenType 글꼴 팩](../../../../docs/framework/wpf/advanced/sample-opentype-font-pack.md)을 참조하세요.  
+>  이 SDK 샘플의 집합을 포함 [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] 사용 하 여 사용할 수 있는 글꼴 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 응용 프로그램입니다. 글꼴은 리소스 전용 라이브러리에 정의되어 있습니다. 자세한 내용은 [샘플 OpenType 글꼴 팩](sample-opentype-font-pack.md)을 참조하세요.  
   
 <a name="limitations_on_font_usage"></a>   
 ## <a name="limitations-on-font-usage"></a>글꼴 사용의 제한 사항  
@@ -177,5 +177,5 @@ ms.locfileid: "56583422"
 - <xref:System.Windows.Media.FontFamily>
 - [Microsoft 입력 체계: 링크, 뉴스 및 연락처](https://docs.microsoft.com/typography/)
 - [OpenType 사양](https://www.microsoft.com/typography/otspec/)
-- [OpenType 글꼴 기능](../../../../docs/framework/wpf/advanced/opentype-font-features.md)
-- [샘플 OpenType 글꼴 팩](../../../../docs/framework/wpf/advanced/sample-opentype-font-pack.md)
+- [OpenType 글꼴 기능](opentype-font-features.md)
+- [샘플 OpenType 글꼴 팩](sample-opentype-font-pack.md)

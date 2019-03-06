@@ -9,12 +9,12 @@ helpviewer_keywords:
 - visual objects [WPF], hit tests on
 - Geometry objects [WPF], visual objects comprising
 ms.assetid: 8bf2643f-d7f9-4cb4-9ea6-5b893c23200d
-ms.openlocfilehash: 4faf7a131b688fd245c0e207c8bac0f077b06ed5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e51dd73a65666ffee5958325079e8f06f13ac61b
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54709054"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57363802"
 ---
 # <a name="how-to-hit-test-geometry-in-a-visual"></a>방법: 시각적 요소의 기하 도형 적중 테스트
 하나 이상의 구성 된 시각적 개체에 대해 적중된 테스트를 수행 하는 방법을 보여 주는이 예제 <xref:System.Windows.Media.Geometry> 개체입니다.  
@@ -25,8 +25,8 @@ ms.locfileid: "54709054"
 > [!NOTE]
 >  대부분의 경우에 사용 된 <xref:System.Windows.Media.VisualTreeHelper.HitTest%2A> 점을 시각적 개체의 렌더링된 된 콘텐츠 중 하나를 교차 하는지 여부를 결정 하는 방법입니다.  
   
- [!code-csharp[VisualsOverview#VisualsOverviewSnippet4](../../../../samples/snippets/csharp/VS_Snippets_Wpf/VisualsOverview/CSharp/Window1.xaml.cs#visualsoverviewsnippet4)]
- [!code-vb[VisualsOverview#VisualsOverviewSnippet4](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/VisualsOverview/visualbasic/window1.xaml.vb#visualsoverviewsnippet4)]  
+ [!code-csharp[VisualsOverview#VisualsOverviewSnippet4](~/samples/snippets/csharp/VS_Snippets_Wpf/VisualsOverview/CSharp/Window1.xaml.cs#visualsoverviewsnippet4)]
+ [!code-vb[VisualsOverview#VisualsOverviewSnippet4](~/samples/snippets/visualbasic/VS_Snippets_Wpf/VisualsOverview/visualbasic/window1.xaml.vb#visualsoverviewsnippet4)]  
   
  합니다 <xref:System.Windows.Media.Geometry.FillContains%2A> 메서드는 지정 된 사용 하 여 적중 테스트를 할 수 있는 오버 로드 된 메서드입니다 <xref:System.Windows.Point> 또는 <xref:System.Windows.Media.Geometry>합니다. 기하 도형에 스트로크를 적용할 경우 스트로크가 채우기 경계 밖으로 확장될 수 있습니다. 호출 하려는 경우에 <xref:System.Windows.Media.Geometry.StrokeContains%2A> 외에 <xref:System.Windows.Media.Geometry.FillContains%2A>합니다.  
   
@@ -36,5 +36,5 @@ ms.locfileid: "54709054"
 >  이 샘플에서는 기하 도형에 적용될 수 있는 변환 또는 클리핑을 고려하지 않습니다. 또한 이 샘플은 직접 연결된 그림이 없으므로 스타일이 적용된 컨트롤에서 작동하지 않습니다.  
   
 ## <a name="see-also"></a>참고자료
-- [시각적 계층에서 적중 테스트](../../../../docs/framework/wpf/graphics-multimedia/hit-testing-in-the-visual-layer.md)
-- [기하 도형을 매개 변수로 사용하여 적중 테스트](../../../../docs/framework/wpf/graphics-multimedia/how-to-hit-test-using-geometry-as-a-parameter.md)
+- [시각적 계층에서 적중 테스트](hit-testing-in-the-visual-layer.md)
+- [기하 도형을 매개 변수로 사용하여 적중 테스트](how-to-hit-test-using-geometry-as-a-parameter.md)

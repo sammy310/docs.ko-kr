@@ -12,12 +12,12 @@ helpviewer_keywords:
 - syntax [WPF], object elements
 - binding declarations [WPF]
 ms.assetid: b97fd626-4c0d-4761-872a-2bca5820da2c
-ms.openlocfilehash: f31a13096d8bd3a788e530b480fece448bfe1e6e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2ef632ee1335d1ee0e94eaa1a7f25cbe34ed4e6f
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54704019"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57363418"
 ---
 # <a name="binding-declarations-overview"></a>바인딩 선언 개요
 이 항목에서는 바인딩을 선언할 수 있는 여러 가지 방법을 설명합니다.  
@@ -26,9 +26,9 @@ ms.locfileid: "54704019"
   
 <a name="Prereq"></a>   
 ## <a name="prerequisites"></a>전제 조건  
- 이 항목은 태그 확장의 개념 및 사용 방법에 익숙하다는 것을 전제로 합니다. 태그 확장에 대한 자세한 내용은 [XAML 태그 확장 및 WPF XAML](../../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md)을 참조하세요.  
+ 이 항목은 태그 확장의 개념 및 사용 방법에 익숙하다는 것을 전제로 합니다. 태그 확장에 대한 자세한 내용은 [XAML 태그 확장 및 WPF XAML](../advanced/markup-extensions-and-wpf-xaml.md)을 참조하세요.  
   
- 이 항목에서는 데이터 바인딩 개념에 대해 다루지 않습니다. 데이터 바인딩 개념에 대한 자세한 내용은 [데이터 바인딩 개요](../../../../docs/framework/wpf/data/data-binding-overview.md)를 참조하세요.  
+ 이 항목에서는 데이터 바인딩 개념에 대해 다루지 않습니다. 데이터 바인딩 개념에 대한 자세한 내용은 [데이터 바인딩 개요](data-binding-overview.md)를 참조하세요.  
   
 <a name="BindinginXAML"></a>   
 ## <a name="declaring-a-binding-in-xaml"></a>XAML에서 바인딩 선언  
@@ -40,9 +40,9 @@ ms.locfileid: "54704019"
   
  태그에서 바인딩 선언 문자열을 만들 때는 대상 개체의 특정 종속성 속성에 연결해야 합니다. 다음 예제에서는 바인딩하는 방법을 보여줍니다 합니다 <xref:System.Windows.Controls.TextBox.Text%2A?displayProperty=nameWithType> 속성 바인딩 확장을 사용 하 여, 지정 하는 <xref:System.Windows.Data.Binding.Source%2A> 및 <xref:System.Windows.Data.Binding.Path%2A> 속성.  
   
- [!code-xaml[SimpleBinding](../../../../samples/snippets/csharp/VS_Snippets_Wpf/SimpleBinding/CSharp/Page1.xaml#L37-L37)]  
+ [!code-xaml[SimpleBinding](~/samples/snippets/csharp/VS_Snippets_Wpf/SimpleBinding/CSharp/Page1.xaml#L37-L37)]  
   
- 대부분의 속성을 지정할 수 있습니다는 <xref:System.Windows.Data.Binding> 이 이런 클래스입니다. 목록은 물론 바인딩 확장에 대 한 자세한 내용은 <xref:System.Windows.Data.Binding> 바인딩 확장을 사용 하 여 설정할 수 없는 속성 참조를 [바인딩 태그 확장](../../../../docs/framework/wpf/advanced/binding-markup-extension.md) 개요.  
+ 대부분의 속성을 지정할 수 있습니다는 <xref:System.Windows.Data.Binding> 이 이런 클래스입니다. 목록은 물론 바인딩 확장에 대 한 자세한 내용은 <xref:System.Windows.Data.Binding> 바인딩 확장을 사용 하 여 설정할 수 없는 속성 참조를 [바인딩 태그 확장](../advanced/binding-markup-extension.md) 개요.  
   
 <a name="ObjectElementSyntax"></a>   
 ### <a name="object-element-syntax"></a>개체 요소 구문  
@@ -50,11 +50,11 @@ ms.locfileid: "54704019"
   
  다음은 개체 요소 구문 및 태그 확장 사용의 예제입니다.  
   
- [!code-xaml[BindConversionMarkup#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/BindConversionMarkup/CSharp/Page1.xaml#1)]  
+ [!code-xaml[BindConversionMarkup#1](~/samples/snippets/csharp/VS_Snippets_Wpf/BindConversionMarkup/CSharp/Page1.xaml#1)]  
   
  이 예제에서는 바인딩하는 <xref:System.Windows.Controls.TextBlock.Foreground%2A> 확장 구문을 사용 하 여 바인딩을 선언 하 여 속성. 바인딩 선언은 <xref:System.Windows.Controls.TextBlock.Text%2A> 속성 개체 요소 구문을 사용 합니다.  
   
- 다양한 용어에 대한 자세한 내용은 [XAML 구문 정보](../../../../docs/framework/wpf/advanced/xaml-syntax-in-detail.md)를 참조하세요.  
+ 다양한 용어에 대한 자세한 내용은 [XAML 구문 정보](../advanced/xaml-syntax-in-detail.md)를 참조하세요.  
   
 <a name="MBandPB"></a>   
 ### <a name="multibinding-and-prioritybinding"></a>MultiBinding 및 PriorityBinding  
@@ -64,10 +64,10 @@ ms.locfileid: "54704019"
 ## <a name="creating-a-binding-in-code"></a>코드에서 바인딩 만들기  
  바인딩을 지정 하는 또 다른 방법은 속성을 직접 설정 하는 것을 <xref:System.Windows.Data.Binding> 코드의 개체입니다. 다음 예제에서는 만드는 방법을 보여 줍니다는 <xref:System.Windows.Data.Binding> 개체 및 코드에서 속성을 지정 합니다.  이 예에서 `TheConverter` 를 구현 하는 개체는 <xref:System.Windows.Data.IValueConverter> 인터페이스입니다.  
   
- [!code-csharp[BindConversion#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/BindConversion/CSharp/Window1.xaml.cs#1)]
- [!code-vb[BindConversion#1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/BindConversion/visualbasic/window1.xaml.vb#1)]  
+ [!code-csharp[BindConversion#1](~/samples/snippets/csharp/VS_Snippets_Wpf/BindConversion/CSharp/Window1.xaml.cs#1)]
+ [!code-vb[BindConversion#1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/BindConversion/visualbasic/window1.xaml.vb#1)]  
   
- 바인딩하는 개체가 <xref:System.Windows.FrameworkElement> 또는 <xref:System.Windows.FrameworkContentElement> 호출할 수 있습니다 합니다 `SetBinding` 메서드를 사용 하는 대신 직접 개체 <xref:System.Windows.Data.BindingOperations.SetBinding%2A?displayProperty=nameWithType>합니다. 예제는 [코드에서 바인딩 만들기](../../../../docs/framework/wpf/data/how-to-create-a-binding-in-code.md)를 참조하세요.  
+ 바인딩하는 개체가 <xref:System.Windows.FrameworkElement> 또는 <xref:System.Windows.FrameworkContentElement> 호출할 수 있습니다 합니다 `SetBinding` 메서드를 사용 하는 대신 직접 개체 <xref:System.Windows.Data.BindingOperations.SetBinding%2A?displayProperty=nameWithType>합니다. 예제는 [코드에서 바인딩 만들기](how-to-create-a-binding-in-code.md)를 참조하세요.  
   
 <a name="Path_Syntax"></a>   
 ## <a name="binding-path-syntax"></a>바인딩 경로 구문  
@@ -119,14 +119,14 @@ ms.locfileid: "54704019"
   
 -   설정 하지 않은 경우 <xref:System.Windows.Data.Binding.ConverterCulture%2A>, 바인딩 엔진은는 `Language` 바인딩 대상 개체의 속성입니다. XAML에서 이 값을 명시적으로 설정하지 않은 경우 기본적으로 "en-US"로 설정되거나 페이지 루트 요소(또는 임의의 요소)에서 값이 상속됩니다.  
   
--   바인딩으로 있다면 이미 데이터 컨텍스트가 (예를 들어의 데이터 컨텍스트가 상속 된 부모 요소에서), 및 항목 또는 해당 컨텍스트에 의해 반환 되는 컬렉션에 적합 한 바인딩을 추가 경로 수정 없이 바인딩 선언의 절을 사용 하지를 전혀 가질 수 있습니다. `{Binding}` 이것이 종종 데이터 스타일링에 바인딩이 컬렉션에 대해 작동 하는 위치에 대 한 바인딩이 지정 되는 방법입니다. 자세한 내용은 [바인딩 소스 개요](../../../../docs/framework/wpf/data/binding-sources-overview.md)의 "전체 개체를 바인딩 소스로 사용" 섹션을 참조하세요.  
+-   바인딩으로 있다면 이미 데이터 컨텍스트가 (예를 들어의 데이터 컨텍스트가 상속 된 부모 요소에서), 및 항목 또는 해당 컨텍스트에 의해 반환 되는 컬렉션에 적합 한 바인딩을 추가 경로 수정 없이 바인딩 선언의 절을 사용 하지를 전혀 가질 수 있습니다. `{Binding}` 이것이 종종 데이터 스타일링에 바인딩이 컬렉션에 대해 작동 하는 위치에 대 한 바인딩이 지정 되는 방법입니다. 자세한 내용은 [바인딩 소스 개요](binding-sources-overview.md)의 "전체 개체를 바인딩 소스로 사용" 섹션을 참조하세요.  
   
 -   기본 <xref:System.Windows.Data.Binding.Mode%2A> 간의 단방향 및 양방향 바인딩되는 종속성 속성에 따라 달라 집니다. 바인딩이 원하는 대로 동작하도록 항상 바인딩 모드를 명시적으로 선언할 수 있습니다. 일반적으로 사용자가 편집 가능한 컨트롤 속성에서와 같은 <xref:System.Windows.Controls.TextBox.Text%2A?displayProperty=nameWithType> 및 <xref:System.Windows.Controls.Primitives.RangeBase.Value%2A?displayProperty=nameWithType>, 기본값 양방향 바인딩으로 설정 되지만 대부분의 다른 속성 기본값은 단방향 바인딩으로 합니다.  
   
 -   기본값 <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A> 값에 따라 다릅니다 <xref:System.Windows.Data.UpdateSourceTrigger.PropertyChanged> 고 <xref:System.Windows.Data.UpdateSourceTrigger.LostFocus> 도 바인딩된 종속성 속성에 따라 합니다. 대부분의 종속성 속성에 대한 기본값이 <xref:System.Windows.Data.UpdateSourceTrigger.PropertyChanged>인 반면 <xref:System.Windows.Controls.TextBox.Text%2A?displayProperty=nameWithType> 속성의 기본값은 <xref:System.Windows.Data.UpdateSourceTrigger.LostFocus>입니다.  
   
 ## <a name="see-also"></a>참고자료
-- [데이터 바인딩 개요](../../../../docs/framework/wpf/data/data-binding-overview.md)
-- [방법 항목](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)
-- [데이터 바인딩](../../../../docs/framework/wpf/advanced/optimizing-performance-data-binding.md)
-- [PropertyPath XAML 구문](../../../../docs/framework/wpf/advanced/propertypath-xaml-syntax.md)
+- [데이터 바인딩 개요](data-binding-overview.md)
+- [방법 항목](data-binding-how-to-topics.md)
+- [데이터 바인딩](../advanced/optimizing-performance-data-binding.md)
+- [PropertyPath XAML 구문](../advanced/propertypath-xaml-syntax.md)

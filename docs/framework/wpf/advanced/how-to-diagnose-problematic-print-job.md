@@ -10,12 +10,12 @@ helpviewer_keywords:
 - print jobs [WPF], troubleshooting
 - print jobs [WPF], diagnosing problems
 ms.assetid: b081a170-84c6-48f9-a487-5766a8d58a82
-ms.openlocfilehash: 7a2f6cd76cf44a3a6bd431e53ba0c10d3438037e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: babd601bb29fc2aa9c906921082a18942f6649c0
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54665801"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57369710"
 ---
 # <a name="how-to-diagnose-problematic-print-job"></a>방법: 인쇄 작업 문제 진단
 네트워크 관리자는 사용자로부터 인쇄 작업이 인쇄되지 않거나 느리게 인쇄되는 문제에 대한 불만을 흔히 처리합니다. 다양 한 인쇄 작업 속성에서 노출 된 [!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)] Microsoft.NET Framework의 인쇄 작업의 신속한 원격 진단을 수행 하기 위한 수단을 제공 합니다.  
@@ -41,9 +41,9 @@ ms.locfileid: "54665801"
   
  그런 다음, 응용 프로그램을 반복 합니다 <xref:System.Printing.PrintSystemJobInfo> 수집 및 비교 하 여 각 <xref:System.Printing.PrintSystemJobInfo.Submitter%2A> 불평 하는 사용자의 별칭을 사용 하 여 속성. 일치하는 경우 애플리케이션은 표시될 문자열 작업에 대한 식별 정보를 추가합니다. (`userName` 및 `jobList` 변수는 애플리케이션의 앞부분에서 초기화됩니다.)  
   
- [!code-cpp[DiagnoseProblematicPrintJob#EnumerateJobsInQueues](../../../../samples/snippets/cpp/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/CPP/Program.cpp#enumeratejobsinqueues)]
- [!code-csharp[DiagnoseProblematicPrintJob#EnumerateJobsInQueues](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/CSharp/Program.cs#enumeratejobsinqueues)]
- [!code-vb[DiagnoseProblematicPrintJob#EnumerateJobsInQueues](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/visualbasic/program.vb#enumeratejobsinqueues)]  
+ [!code-cpp[DiagnoseProblematicPrintJob#EnumerateJobsInQueues](~/samples/snippets/cpp/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/CPP/Program.cpp#enumeratejobsinqueues)]
+ [!code-csharp[DiagnoseProblematicPrintJob#EnumerateJobsInQueues](~/samples/snippets/csharp/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/CSharp/Program.cs#enumeratejobsinqueues)]
+ [!code-vb[DiagnoseProblematicPrintJob#EnumerateJobsInQueues](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/visualbasic/program.vb#enumeratejobsinqueues)]  
   
  다음 코드 예제에서는 2단계의 애플리케이션을 선택합니다. (위를 참조) 문제가 있는 작업이 식별되고 애플리케이션이 식별되는 정보를 묻는 메시지를 표시합니다. 이 정보를 만듭니다 <xref:System.Printing.PrintServer>, <xref:System.Printing.PrintQueue>, 및 <xref:System.Printing.PrintSystemJobInfo> 개체입니다.  
   
@@ -53,33 +53,33 @@ ms.locfileid: "54665801"
   
 -   와 같은 각 관련 속성을 읽으려면 <xref:System.Printing.PrintSystemJobInfo.IsBlocked%2A> 고 <xref:System.Printing.PrintSystemJobInfo.IsInError%2A>입니다.  
   
- 이 예제에서는 모든 방법을 보여 주어 사용자가 이전에 사용할 방법에 대 한를 받고의 플래그를 사용 하려는 경우 "Y"를 사용 하 여 응답을 <xref:System.Printing.PrintSystemJobInfo.JobStatus%2A> 속성입니다. 두 가지 방법에 대한 자세한 내용은 아래를 참조하세요. 마지막으로 애플리케이션이 **ReportQueueAndJobAvailability**라는 메서드를 사용하여 이 시간에 작업을 인쇄할 수 있는지 여부를 보고합니다. [인쇄 작업을 현재 인쇄할 수 있는지 확인](../../../../docs/framework/wpf/advanced/how-to-discover-whether-a-print-job-can-be-printed-at-this-time-of-day.md)에서 이 메서드를 설명합니다.  
+ 이 예제에서는 모든 방법을 보여 주어 사용자가 이전에 사용할 방법에 대 한를 받고의 플래그를 사용 하려는 경우 "Y"를 사용 하 여 응답을 <xref:System.Printing.PrintSystemJobInfo.JobStatus%2A> 속성입니다. 두 가지 방법에 대한 자세한 내용은 아래를 참조하세요. 마지막으로 애플리케이션이 **ReportQueueAndJobAvailability**라는 메서드를 사용하여 이 시간에 작업을 인쇄할 수 있는지 여부를 보고합니다. [인쇄 작업을 현재 인쇄할 수 있는지 확인](how-to-discover-whether-a-print-job-can-be-printed-at-this-time-of-day.md)에서 이 메서드를 설명합니다.  
   
- [!code-cpp[DiagnoseProblematicPrintJob#IdentifyAndDiagnoseProblematicJob](../../../../samples/snippets/cpp/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/CPP/Program.cpp#identifyanddiagnoseproblematicjob)]
- [!code-csharp[DiagnoseProblematicPrintJob#IdentifyAndDiagnoseProblematicJob](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/CSharp/Program.cs#identifyanddiagnoseproblematicjob)]
- [!code-vb[DiagnoseProblematicPrintJob#IdentifyAndDiagnoseProblematicJob](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/visualbasic/program.vb#identifyanddiagnoseproblematicjob)]  
+ [!code-cpp[DiagnoseProblematicPrintJob#IdentifyAndDiagnoseProblematicJob](~/samples/snippets/cpp/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/CPP/Program.cpp#identifyanddiagnoseproblematicjob)]
+ [!code-csharp[DiagnoseProblematicPrintJob#IdentifyAndDiagnoseProblematicJob](~/samples/snippets/csharp/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/CSharp/Program.cs#identifyanddiagnoseproblematicjob)]
+ [!code-vb[DiagnoseProblematicPrintJob#IdentifyAndDiagnoseProblematicJob](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/visualbasic/program.vb#identifyanddiagnoseproblematicjob)]  
   
  플래그를 사용 하 여 인쇄 작업 상태를 확인 하는 <xref:System.Printing.PrintSystemJobInfo.JobStatus%2A> 설정 되어 있는지 확인 하려면 관련 플래그를 검사 속성입니다. 일련의 비트 플래그에 하나의 비트가 설정되었는지 확인하는 표준 방법은 일련의 플래그가 있는 논리적 AND 연산을 하나의 피연산자로 수행하고 플래그 자체를 다른 피연산자로 수행하는 것입니다. 플래그 자체가 하나의 비트만 설정하므로 논리적 AND의 결과는 비트가 설정되는 것과 거의 동일합니다. 여부를 확인하려면 플래그 자체와 논리적 AND의 결과를 비교합니다. 자세한 내용은 참조 하세요. <xref:System.Printing.PrintJobStatus>서 [& 연산자 (C# 참조)](~/docs/csharp/language-reference/operators/and-operator.md), 및 <xref:System.FlagsAttribute>합니다.  
   
  비트가 설정된 각 특성의 경우 코드는 콘솔 화면에 이를 보고하고 경우에 따라 응답하는 방법을 제안합니다. 작업 또는 큐가 일시 중지되는 경우 호출되는 **HandlePausedJob** 메서드는 아래에 설명됩니다.  
   
- [!code-cpp[DiagnoseProblematicPrintJob#SpotTroubleUsingJobAttributes](../../../../samples/snippets/cpp/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/CPP/Program.cpp#spottroubleusingjobattributes)]
- [!code-csharp[DiagnoseProblematicPrintJob#SpotTroubleUsingJobAttributes](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/CSharp/Program.cs#spottroubleusingjobattributes)]
- [!code-vb[DiagnoseProblematicPrintJob#SpotTroubleUsingJobAttributes](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/visualbasic/program.vb#spottroubleusingjobattributes)]  
+ [!code-cpp[DiagnoseProblematicPrintJob#SpotTroubleUsingJobAttributes](~/samples/snippets/cpp/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/CPP/Program.cpp#spottroubleusingjobattributes)]
+ [!code-csharp[DiagnoseProblematicPrintJob#SpotTroubleUsingJobAttributes](~/samples/snippets/csharp/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/CSharp/Program.cs#spottroubleusingjobattributes)]
+ [!code-vb[DiagnoseProblematicPrintJob#SpotTroubleUsingJobAttributes](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/visualbasic/program.vb#spottroubleusingjobattributes)]  
   
  별도 속성을 사용하여 인쇄 작업 상태를 확인하려면 단순히 각 속성을 읽고 속성이 `true`인 경우 콘솔 화면에 보고하고 응답하는 방법을 제안할 수 있습니다. 작업 또는 큐가 일시 중지되는 경우 호출되는 **HandlePausedJob** 메서드는 아래에 설명됩니다.  
   
- [!code-cpp[DiagnoseProblematicPrintJob#SpotTroubleUsingJobProperties](../../../../samples/snippets/cpp/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/CPP/Program.cpp#spottroubleusingjobproperties)]
- [!code-csharp[DiagnoseProblematicPrintJob#SpotTroubleUsingJobProperties](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/CSharp/Program.cs#spottroubleusingjobproperties)]
- [!code-vb[DiagnoseProblematicPrintJob#SpotTroubleUsingJobProperties](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/visualbasic/program.vb#spottroubleusingjobproperties)]  
+ [!code-cpp[DiagnoseProblematicPrintJob#SpotTroubleUsingJobProperties](~/samples/snippets/cpp/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/CPP/Program.cpp#spottroubleusingjobproperties)]
+ [!code-csharp[DiagnoseProblematicPrintJob#SpotTroubleUsingJobProperties](~/samples/snippets/csharp/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/CSharp/Program.cs#spottroubleusingjobproperties)]
+ [!code-vb[DiagnoseProblematicPrintJob#SpotTroubleUsingJobProperties](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/visualbasic/program.vb#spottroubleusingjobproperties)]  
   
  **HandlePausedJob** 메서드를 사용하면 응용 프로그램의 사용자가 원격으로 일시 중지된 작업을 다시 시작할 수 있습니다. 인쇄 대기열이 일시 중지된 이유가 있을 수 있기 때문에 다시 시작할지 여부에 대한 사용자 결정을 묻는 메시지를 표시하여 메서드를 시작합니다. 대답이 "Y" 하는 경우 해당 <xref:System.Printing.PrintQueue.Resume%2A?displayProperty=nameWithType> 메서드가 호출 됩니다.  
   
  다음으로 작업이 인쇄 대기열에서 독립적으로 일시 중지된 경우 사용자에게 작업 자체를 다시 시작할지를 결정하라는 메시지가 표시됩니다. (비교 <xref:System.Printing.PrintQueue.IsPaused%2A?displayProperty=nameWithType> 고 <xref:System.Printing.PrintSystemJobInfo.IsPaused%2A?displayProperty=nameWithType>.) 대답이 "Y" 하는 경우 <xref:System.Printing.PrintSystemJobInfo.Resume%2A?displayProperty=nameWithType> 이 고 그렇지 않으면 호출 <xref:System.Printing.PrintSystemJobInfo.Cancel%2A> 라고 합니다.  
   
- [!code-cpp[DiagnoseProblematicPrintJob#HandlePausedJob](../../../../samples/snippets/cpp/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/CPP/Program.cpp#handlepausedjob)]
- [!code-csharp[DiagnoseProblematicPrintJob#HandlePausedJob](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/CSharp/Program.cs#handlepausedjob)]
- [!code-vb[DiagnoseProblematicPrintJob#HandlePausedJob](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/visualbasic/program.vb#handlepausedjob)]  
+ [!code-cpp[DiagnoseProblematicPrintJob#HandlePausedJob](~/samples/snippets/cpp/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/CPP/Program.cpp#handlepausedjob)]
+ [!code-csharp[DiagnoseProblematicPrintJob#HandlePausedJob](~/samples/snippets/csharp/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/CSharp/Program.cs#handlepausedjob)]
+ [!code-vb[DiagnoseProblematicPrintJob#HandlePausedJob](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/visualbasic/program.vb#handlepausedjob)]  
   
 ## <a name="see-also"></a>참고자료
 - <xref:System.Printing.PrintJobStatus>
@@ -87,5 +87,5 @@ ms.locfileid: "54665801"
 - <xref:System.FlagsAttribute>
 - <xref:System.Printing.PrintQueue>
 - [& 연산자 (C# 참조)](~/docs/csharp/language-reference/operators/and-operator.md)
-- [WPF의 문서](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)
-- [인쇄 개요](../../../../docs/framework/wpf/advanced/printing-overview.md)
+- [WPF의 문서](documents-in-wpf.md)
+- [인쇄 개요](printing-overview.md)

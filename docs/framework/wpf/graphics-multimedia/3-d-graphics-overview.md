@@ -8,12 +8,12 @@ helpviewer_keywords:
 - 3-D graphics [WPF]
 - graphics [WPF], 3-D
 ms.assetid: 67f31ed4-e36b-4b02-9889-dcce245d7afc
-ms.openlocfilehash: 237c354d1a5207d4d038097f7e1348379c44382d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7f9f3d21d14a8eac862186a41bd8771cffb7375c
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54653252"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57352869"
 ---
 # <a name="3-d-graphics-overview"></a>3차원 그래픽 개요
 <a name="introduction"></a> [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]의 [!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)] 기능을 사용하여 개발자는 태그 및 프로시저 코드로 3차원 그래픽을 그리고 변환하며 이러한 그래픽에 애니메이션 효과를 줄 수 있습니다. 개발자는 [!INCLUDE[TLA#tla_2d](../../../../includes/tlasharptla-2d-md.md)] 및 [!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)] 그래픽을 결합하여 다양한 컨트롤을 만들거나, 복잡한 데이터 표시를 제공하거나, 애플리케이션 인터페이스의 사용자 환경을 개선할 수 있습니다. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]의 [!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)] 지원은 모든 기능을 갖춘 게임 개발 플랫폼을 제공하기 위한 것은 아닙니다. 이 항목에서는 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 그래픽 시스템의 [!INCLUDE[TLA#tla_3d](../../../../includes/tlasharptla-3d-md.md)] 기능에 대해 간략하게 설명합니다.  
@@ -29,7 +29,7 @@ ms.locfileid: "54653252"
 ## <a name="3-d-coordinate-space"></a>3차원 좌표 공간  
  [!INCLUDE[TLA2#tla_2d](../../../../includes/tla2sharptla-2d-md.md)] 그래픽의 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 좌표계는 렌더링 영역(일반적으로 화면)의 왼쪽 위에서 원점을 찾습니다. [!INCLUDE[TLA2#tla_2d](../../../../includes/tla2sharptla-2d-md.md)] 시스템에서 양의 x-축 값은 오른쪽으로 진행되고 양의 y-축 값은 아래로 진행됩니다.  그러나 [!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)] 좌표계에서는 원점이 렌더링 영역의 중앙에 있습니다. 여기서 양의 x-축 값은 오른쪽으로 진행되고 양의 y-축 값은 위로 진행되며 양의 z-축 값은 원점에서 뷰어를 향해 바깥쪽으로 진행됩니다.  
   
- ![좌표계](../../../../docs/framework/wpf/graphics-multimedia/media/coordsystem-1.png "CoordSystem-1")  
+ ![좌표계](./media/coordsystem-1.png "CoordSystem-1")  
 기존의 2차원 및 3차원 좌표계 표현  
   
  이러한 축으로 정의되는 공간은 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]의 [!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)] 개체에 대한 고정 참조 프레임입니다. 이 공간에서 모델을 빌드하고 이를 보기 위한 광원과 카메라를 만들 때는 변환 적용 시 각 모델에 대해 만드는 로컬 참조 프레임을 이 고정 참조 프레임 또는 "월드 공간"과 구분하면 유용합니다. 또한 월드 공간의 개체는 광원 및 카메라 설정에 따라 완전히 다르게 보이거나 전혀 보이지 않을 수 있지만 카메라의 위치는 월드 공간에서 개체의 위치를 변경하지 않습니다.  
@@ -42,18 +42,18 @@ ms.locfileid: "54653252"
   
  <xref:System.Windows.Media.Media3D.ProjectionCamera.NearPlaneDistance%2A> 하 고 <xref:System.Windows.Media.Media3D.ProjectionCamera.FarPlaneDistance%2A> 의 속성 <xref:System.Windows.Media.Media3D.ProjectionCamera> 카메라 프로젝션의 범위를 제한 합니다. 카메라는 장면의 어느 위치에나 배치될 수 있으므로 카메라가 실제로 모델 내 또는 모델에 매우 가깝게 배치될 수 있으며 이로 인해 개체를 제대로 구별하기가 어려워집니다.  <xref:System.Windows.Media.Media3D.ProjectionCamera.NearPlaneDistance%2A> 초과 하는 개체를 그릴 수 없는 최소 거리를 지정할 수 있습니다.  반대로, <xref:System.Windows.Media.Media3D.ProjectionCamera.FarPlaneDistance%2A> 지나면 개체를 그릴 수 없는, 장면에서 인식할 수 없는 너무 멀리 떨어진 곳에 개체를 포함 하지 않도록 보장 하는 카메라의 거리를 지정할 수 있습니다.  
   
- ![카메라 설정](../../../../docs/framework/wpf/graphics-multimedia/media/coordsystem-6.png "CoordSystem 6")  
+ ![카메라 설정](./media/coordsystem-6.png "CoordSystem 6")  
 카메라 위치  
   
  <xref:System.Windows.Media.Media3D.OrthographicCamera> 직교 프로젝션을 지정는 [!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)] 모델을 [!INCLUDE[TLA2#tla_2d](../../../../includes/tla2sharptla-2d-md.md)] 비주얼 화면입니다. 다른 카메라와 마찬가지로 이는 위치, 보기 방향 및 "위쪽" 방향을 지정합니다. 와 달리 <xref:System.Windows.Media.Media3D.PerspectiveCamera>그러나 <xref:System.Windows.Media.Media3D.OrthographicCamera> 원근 단축법을 포함 하지 않는 프로젝션을 설명 합니다. 즉, <xref:System.Windows.Media.Media3D.OrthographicCamera> 는 카메라에서 지점에서 만나는 것이 아니라 평행한 보기 상자를 설명 합니다. 다음 이미지를 사용 하 여 표시 된 대로 동일한 모델을 보여 줍니다 <xref:System.Windows.Media.Media3D.PerspectiveCamera> 고 <xref:System.Windows.Media.Media3D.OrthographicCamera>입니다.  
   
- ![직교 및 원근 프로젝션](../../../../docs/framework/wpf/graphics-multimedia/media/camera-projections4.png "Camera_projections4")  
+ ![직교 및 원근 프로젝션](./media/camera-projections4.png "Camera_projections4")  
 원근 및 직교 프로젝션  
   
  다음 코드에서는 일반적인 카메라 설정을 보여 줍니다.  
   
- [!code-csharp[3dgallery_procedural_snip#Basic3DShapeCodeExampleInline1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/3DGallery_procedural_snip/CSharp/Basic3DShapeExample.cs#basic3dshapecodeexampleinline1)]
- [!code-vb[3dgallery_procedural_snip#Basic3DShapeCodeExampleInline1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/3DGallery_procedural_snip/visualbasic/basic3dshapeexample.vb#basic3dshapecodeexampleinline1)]  
+ [!code-csharp[3dgallery_procedural_snip#Basic3DShapeCodeExampleInline1](~/samples/snippets/csharp/VS_Snippets_Wpf/3DGallery_procedural_snip/CSharp/Basic3DShapeExample.cs#basic3dshapecodeexampleinline1)]
+ [!code-vb[3dgallery_procedural_snip#Basic3DShapeCodeExampleInline1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/3DGallery_procedural_snip/visualbasic/basic3dshapeexample.vb#basic3dshapecodeexampleinline1)]  
   
 <a name="models_meshes"></a>   
 ## <a name="model-and-mesh-primitives"></a>모델 및 메시 기본 형식  
@@ -64,7 +64,7 @@ ms.locfileid: "54653252"
   
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)] 시스템에서 현재 제공 합니다 <xref:System.Windows.Media.Media3D.MeshGeometry3D> 클래스, 모든 기 하 도형을 지정할 수 있는, 현재 지원 하지 않습니다 미리 정의 된 [!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)] 기본형 및 입방 형과 같은 합니다. 만들기를 시작을 <xref:System.Windows.Media.Media3D.MeshGeometry3D> 으로 삼각형 꼭 짓 점 목록을 지정 하 여 해당 <xref:System.Windows.Media.Media3D.MeshGeometry3D.Positions%2A> 속성입니다. 로 지정 된 각 꼭 짓 점에 <xref:System.Windows.Media.Media3D.Point3D>합니다.  [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]에서는 이 속성을 각 꼭짓점의 좌표를 나타내는 세 숫자가 그룹화된 목록으로 지정합니다. 해당 기하 도형에 따라 메시는 여러 개의 삼각형으로 구성될 수 있고 그 중 일부는 같은 모퉁이(꼭짓점)를 공유할 수 있습니다. 메시를 올바르게 그리려면 어떤 삼각형에 어떤 꼭짓점이 공유되는지에 대한 정보를 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]에 제공해야 합니다. 통해 삼각형 인덱스 목록을 지정 하 여이 정보를 제공 하는 <xref:System.Windows.Media.Media3D.MeshGeometry3D.TriangleIndices%2A> 속성입니다. 이 목록에 지정 된 요소는 순서를 지정 된 <xref:System.Windows.Media.Media3D.MeshGeometry3D.Positions%2A> 목록 삼각형을 결정 합니다.  
   
- [!code-xaml[basic3d#Basic3DXAML3DN3](../../../../samples/snippets/xaml/VS_Snippets_Wpf/Basic3D/XAML/Window1.xaml#basic3dxaml3dn3)]  
+ [!code-xaml[basic3d#Basic3DXAML3DN3](~/samples/snippets/xaml/VS_Snippets_Wpf/Basic3D/XAML/Window1.xaml#basic3dxaml3dn3)]  
   
  앞의 예제에는 <xref:System.Windows.Media.Media3D.MeshGeometry3D.Positions%2A> 목록은 큐브 모양의 메시를 정의 하는 8 개 꼭지점을 지정 합니다. <xref:System.Windows.Media.Media3D.MeshGeometry3D.TriangleIndices%2A> 속성에는 3 개의 인덱스를 12 개 그룹의 목록을 지정 합니다.  목록의 각 숫자에 오프셋을 나타냅니다는 <xref:System.Windows.Media.Media3D.MeshGeometry3D.Positions%2A> 목록입니다.  예를 들어, 처음 세 개의 꼭 짓 점을 지정 된는 <xref:System.Windows.Media.Media3D.MeshGeometry3D.Positions%2A> 목록 됩니다 (1,1,0) (0,1,0) 및 (0,0,0). 지정 된 첫 3 개의 인덱스를 <xref:System.Windows.Media.Media3D.MeshGeometry3D.TriangleIndices%2A> 목록에는 0, 2 및 1, 첫 번째에 해당 하는 세 번째, 두 번째 점에는 <xref:System.Windows.Media.Media3D.MeshGeometry3D.Positions%2A> 목록. 그 결과 큐브 모델을 구성하는 첫 번째 삼각형은 (1,1,0)에서 (0,1,0) 및 (0,0,0)으로 이어지고 나머지 11개의 삼각형도 이와 비슷하게 결정됩니다.  
   
@@ -74,11 +74,11 @@ ms.locfileid: "54653252"
   
  다음 예제에서는 프로시저 코드로 큐브 모델의 한 면을 만드는 방법을 보여 줍니다. 큐브 전체를 단일 GeometryModel3D로 그릴 수 있지만 이 예제에서는 나중에 각 면에 별도의 질감을 적용하기 위해 큐브 면을 고유한 모델로 그립니다.  
   
- [!code-csharp[3doverview#3DOverview3DN6](../../../../samples/snippets/csharp/VS_Snippets_Wpf/3DOverview/CSharp/Window1.xaml.cs#3doverview3dn6)]
- [!code-vb[3doverview#3DOverview3DN6](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/3DOverview/visualbasic/window1.xaml.vb#3doverview3dn6)]  
+ [!code-csharp[3doverview#3DOverview3DN6](~/samples/snippets/csharp/VS_Snippets_Wpf/3DOverview/CSharp/Window1.xaml.cs#3doverview3dn6)]
+ [!code-vb[3doverview#3DOverview3DN6](~/samples/snippets/visualbasic/VS_Snippets_Wpf/3DOverview/visualbasic/window1.xaml.vb#3doverview3dn6)]  
   
- [!code-csharp[3doverview#3DOverview3DN7](../../../../samples/snippets/csharp/VS_Snippets_Wpf/3DOverview/CSharp/Window1.xaml.cs#3doverview3dn7)]
- [!code-vb[3doverview#3DOverview3DN7](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/3DOverview/visualbasic/window1.xaml.vb#3doverview3dn7)]  
+ [!code-csharp[3doverview#3DOverview3DN7](~/samples/snippets/csharp/VS_Snippets_Wpf/3DOverview/CSharp/Window1.xaml.cs#3doverview3dn7)]
+ [!code-vb[3doverview#3DOverview3DN7](~/samples/snippets/visualbasic/VS_Snippets_Wpf/3DOverview/visualbasic/window1.xaml.vb#3doverview3dn7)]  
   
 <a name="materials"></a>   
 ## <a name="applying-materials-to-the-model"></a>모델에 재질 적용  
@@ -99,12 +99,12 @@ ms.locfileid: "54653252"
   
  다음 코드 예제에서는 브러시로 그리기 및 단색을 [!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)] 모델에 적용하는 방법을 보여 줍니다.  
   
- [!code-xaml[basic3d#Basic3DXAML3DN5](../../../../samples/snippets/xaml/VS_Snippets_Wpf/Basic3D/XAML/Window1.xaml#basic3dxaml3dn5)]  
+ [!code-xaml[basic3d#Basic3DXAML3DN5](~/samples/snippets/xaml/VS_Snippets_Wpf/Basic3D/XAML/Window1.xaml#basic3dxaml3dn5)]  
   
- [!code-xaml[3doverview#3DOverview3DN9](../../../../samples/snippets/csharp/VS_Snippets_Wpf/3DOverview/CSharp/app.xaml#3doverview3dn9)]  
+ [!code-xaml[3doverview#3DOverview3DN9](~/samples/snippets/csharp/VS_Snippets_Wpf/3DOverview/CSharp/app.xaml#3doverview3dn9)]  
   
- [!code-csharp[3doverview#3DOverview3DN8](../../../../samples/snippets/csharp/VS_Snippets_Wpf/3DOverview/CSharp/Window1.xaml.cs#3doverview3dn8)]
- [!code-vb[3doverview#3DOverview3DN8](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/3DOverview/visualbasic/window1.xaml.vb#3doverview3dn8)]  
+ [!code-csharp[3doverview#3DOverview3DN8](~/samples/snippets/csharp/VS_Snippets_Wpf/3DOverview/CSharp/Window1.xaml.cs#3doverview3dn8)]
+ [!code-vb[3doverview#3DOverview3DN8](~/samples/snippets/visualbasic/VS_Snippets_Wpf/3DOverview/visualbasic/window1.xaml.vb#3doverview3dn8)]  
   
 <a name="lights"></a>   
 ## <a name="illuminating-the-scene"></a>장면 비추기  
@@ -122,16 +122,16 @@ ms.locfileid: "54653252"
   
  광원은 <xref:System.Windows.Media.Media3D.Model3D> 개체를 변환 및 조명 속성, 위치, 색, 방향 및 범위를 포함 하 여 애니메이션을 적용할 수 있도록 합니다.  
   
- [!code-xaml[hittest3d#HitTest3D3DN6](../../../../samples/snippets/csharp/VS_Snippets_Wpf/HitTest3D/CSharp/Window1.xaml#hittest3d3dn6)]  
+ [!code-xaml[hittest3d#HitTest3D3DN6](~/samples/snippets/csharp/VS_Snippets_Wpf/HitTest3D/CSharp/Window1.xaml#hittest3d3dn6)]  
   
- [!code-csharp[basic3d#Basic3D3DN11](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Basic3D/CSharp/Window1.xaml.cs#basic3d3dn11)]
- [!code-vb[basic3d#Basic3D3DN11](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/Basic3D/visualbasic/window1.xaml.vb#basic3d3dn11)]  
+ [!code-csharp[basic3d#Basic3D3DN11](~/samples/snippets/csharp/VS_Snippets_Wpf/Basic3D/CSharp/Window1.xaml.cs#basic3d3dn11)]
+ [!code-vb[basic3d#Basic3D3DN11](~/samples/snippets/visualbasic/VS_Snippets_Wpf/Basic3D/visualbasic/window1.xaml.vb#basic3d3dn11)]  
   
- [!code-csharp[basic3d#Basic3D3DN12](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Basic3D/CSharp/Window1.xaml.cs#basic3d3dn12)]
- [!code-vb[basic3d#Basic3D3DN12](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/Basic3D/visualbasic/window1.xaml.vb#basic3d3dn12)]  
+ [!code-csharp[basic3d#Basic3D3DN12](~/samples/snippets/csharp/VS_Snippets_Wpf/Basic3D/CSharp/Window1.xaml.cs#basic3d3dn12)]
+ [!code-vb[basic3d#Basic3D3DN12](~/samples/snippets/visualbasic/VS_Snippets_Wpf/Basic3D/visualbasic/window1.xaml.vb#basic3d3dn12)]  
   
- [!code-csharp[basic3d#Basic3D3DN13](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Basic3D/CSharp/Window1.xaml.cs#basic3d3dn13)]
- [!code-vb[basic3d#Basic3D3DN13](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/Basic3D/visualbasic/window1.xaml.vb#basic3d3dn13)]  
+ [!code-csharp[basic3d#Basic3D3DN13](~/samples/snippets/csharp/VS_Snippets_Wpf/Basic3D/CSharp/Window1.xaml.cs#basic3d3dn13)]
+ [!code-vb[basic3d#Basic3D3DN13](~/samples/snippets/visualbasic/VS_Snippets_Wpf/Basic3D/visualbasic/window1.xaml.vb#basic3d3dn13)]  
   
 <a name="transforms"></a>   
 ## <a name="transforming-models"></a>모델 변환  
@@ -139,27 +139,27 @@ ms.locfileid: "54653252"
   
  각 모델 개체에는 <xref:System.Windows.Media.Media3D.Model3D.Transform%2A> 속성이 있는 이동, 방향을 다시 지정 하거나 모델의 크기를 조정 합니다.  변환을 적용할 때는 변환에 의해 지정된 벡터 또는 값이 무엇이든 실제적으로 모델의 모든 점을 오프셋합니다. 즉, 모델이 정의된 좌표 공간("모델 공간")은 변환하지만 장면 전체("월드 공간")의 좌표계에서 모델의 기하 도형을 구성하는 값은 변경하지 않습니다.  
   
- 모델 변환에 대한 자세한 내용은 [3차원 변환 개요](../../../../docs/framework/wpf/graphics-multimedia/3-d-transformations-overview.md)를 참조하세요.  
+ 모델 변환에 대한 자세한 내용은 [3차원 변환 개요](3-d-transformations-overview.md)를 참조하세요.  
   
 <a name="animations"></a>   
 ## <a name="animating-models"></a>모델에 애니메이션 효과 주기  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)] 구현은 [!INCLUDE[TLA2#tla_2d](../../../../includes/tla2sharptla-2d-md.md)] 그래픽과 동일한 타이밍 및 애니메이션 시스템에 참여합니다. 즉, 3차원 장면에 애니메이션 효과를 주려면 해당 모델의 속성에 애니메이션 효과를 줍니다. 기본 형식의 속성에 직접 애니메이션 효과를 줄 수도 있지만 일반적으로 모델의 위치나 모양을 변경하는 변환에 애니메이션 효과를 주는 것이 보다 쉽습니다. 변환을 적용할 수 있으므로 <xref:System.Windows.Media.Media3D.Model3DGroup> 개별 모델 뿐만 아니라 개체 Model3DGroup의 자식 및 다른 애니메이션 집합을 자식 개체의 그룹에 한 애니메이션 집합을 적용할 수 있습니다. 장면의 조명 속성에 애니메이션 효과를 주어 다양한 시각적 효과를 얻을 수도 있습니다. 마지막으로 카메라 위치 또는 시야에 애니메이션 효과를 주어 프로젝션 자체에 애니메이션 효과를 주도록 선택할 수 있습니다. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 타이밍 및 애니메이션 시스템에 대한 배경 정보는 [애니메이션 개요](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md), [Storyboard 개요](../../../../docs/framework/wpf/graphics-multimedia/storyboards-overview.md) 및 [Freezable 개체 개요](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md) 항목을 참조하세요.  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)] 구현은 [!INCLUDE[TLA2#tla_2d](../../../../includes/tla2sharptla-2d-md.md)] 그래픽과 동일한 타이밍 및 애니메이션 시스템에 참여합니다. 즉, 3차원 장면에 애니메이션 효과를 주려면 해당 모델의 속성에 애니메이션 효과를 줍니다. 기본 형식의 속성에 직접 애니메이션 효과를 줄 수도 있지만 일반적으로 모델의 위치나 모양을 변경하는 변환에 애니메이션 효과를 주는 것이 보다 쉽습니다. 변환을 적용할 수 있으므로 <xref:System.Windows.Media.Media3D.Model3DGroup> 개별 모델 뿐만 아니라 개체 Model3DGroup의 자식 및 다른 애니메이션 집합을 자식 개체의 그룹에 한 애니메이션 집합을 적용할 수 있습니다. 장면의 조명 속성에 애니메이션 효과를 주어 다양한 시각적 효과를 얻을 수도 있습니다. 마지막으로 카메라 위치 또는 시야에 애니메이션 효과를 주어 프로젝션 자체에 애니메이션 효과를 주도록 선택할 수 있습니다. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 타이밍 및 애니메이션 시스템에 대한 배경 정보는 [애니메이션 개요](animation-overview.md), [Storyboard 개요](storyboards-overview.md) 및 [Freezable 개체 개요](../advanced/freezable-objects-overview.md) 항목을 참조하세요.  
   
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]에서 개체에 애니메이션 효과를 주려면 타임라인을 만들고 애니메이션(시간이 지남에 따른 일부 속성 값의 변경)을 정의한 다음 애니메이션을 적용할 속성을 지정합니다. 때문에 모든 개체를 [!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)] 장면의 자식인 <xref:System.Windows.Controls.Viewport3D>, 장면에 적용 하려는 모든 애니메이션의 대상 속성은 Viewport3D의 속성입니다.  
   
  모델이 제자리에서 비틀거리는 것처럼 보이게 만든다고 가정합니다. 적용 하도록 선택할 수 있습니다는 <xref:System.Windows.Media.Media3D.RotateTransform3D> 모델에의 한 벡터에서 다른 벡터로 회전 축에 애니메이션을 적용 합니다. 다음 코드 예제에서는 RotateTransform3D가 TransformGroup이 있는 모델에 적용된 여러 변환 중 하나라는 가정 하에 변환의 Rotation3D에 대한 Axis 속성에 Vector3DAnimation을 적용하는 방법을 보여 줍니다.  
   
- [!code-csharp[3doverview#3DOverview3DN1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/3DOverview/CSharp/Window1.xaml.cs#3doverview3dn1)]
- [!code-vb[3doverview#3DOverview3DN1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/3DOverview/visualbasic/window1.xaml.vb#3doverview3dn1)]  
+ [!code-csharp[3doverview#3DOverview3DN1](~/samples/snippets/csharp/VS_Snippets_Wpf/3DOverview/CSharp/Window1.xaml.cs#3doverview3dn1)]
+ [!code-vb[3doverview#3DOverview3DN1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/3DOverview/visualbasic/window1.xaml.vb#3doverview3dn1)]  
   
- [!code-csharp[3doverview#3DOverview3DN3](../../../../samples/snippets/csharp/VS_Snippets_Wpf/3DOverview/CSharp/Window1.xaml.cs#3doverview3dn3)]
- [!code-vb[3doverview#3DOverview3DN3](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/3DOverview/visualbasic/window1.xaml.vb#3doverview3dn3)]  
+ [!code-csharp[3doverview#3DOverview3DN3](~/samples/snippets/csharp/VS_Snippets_Wpf/3DOverview/CSharp/Window1.xaml.cs#3doverview3dn3)]
+ [!code-vb[3doverview#3DOverview3DN3](~/samples/snippets/visualbasic/VS_Snippets_Wpf/3DOverview/visualbasic/window1.xaml.vb#3doverview3dn3)]  
   
- [!code-csharp[3doverview#3DOverview3DN4](../../../../samples/snippets/csharp/VS_Snippets_Wpf/3DOverview/CSharp/Window1.xaml.cs#3doverview3dn4)]
- [!code-vb[3doverview#3DOverview3DN4](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/3DOverview/visualbasic/window1.xaml.vb#3doverview3dn4)]  
+ [!code-csharp[3doverview#3DOverview3DN4](~/samples/snippets/csharp/VS_Snippets_Wpf/3DOverview/CSharp/Window1.xaml.cs#3doverview3dn4)]
+ [!code-vb[3doverview#3DOverview3DN4](~/samples/snippets/visualbasic/VS_Snippets_Wpf/3DOverview/visualbasic/window1.xaml.vb#3doverview3dn4)]  
   
- [!code-csharp[3doverview#3DOverview3DN5](../../../../samples/snippets/csharp/VS_Snippets_Wpf/3DOverview/CSharp/Window1.xaml.cs#3doverview3dn5)]
- [!code-vb[3doverview#3DOverview3DN5](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/3DOverview/visualbasic/window1.xaml.vb#3doverview3dn5)]  
+ [!code-csharp[3doverview#3DOverview3DN5](~/samples/snippets/csharp/VS_Snippets_Wpf/3DOverview/CSharp/Window1.xaml.cs#3doverview3dn5)]
+ [!code-vb[3doverview#3DOverview3DN5](~/samples/snippets/visualbasic/VS_Snippets_Wpf/3DOverview/visualbasic/window1.xaml.vb#3doverview3dn5)]  
   
 <a name="animations1"></a>   
 ## <a name="add-3-d-content-to-the-window"></a>창에 3차원 콘텐츠 추가  
@@ -167,15 +167,15 @@ ms.locfileid: "54653252"
   
  마지막으로 추가 된 <xref:System.Windows.Controls.Viewport3D> 창에 있습니다. 경우는 <xref:System.Windows.Controls.Viewport3D> 설정 하 여 Viewport3D의 크기를 지정 하는 캔버스와 같은 레이아웃 요소의 내용으로 포함 되어 해당 <xref:System.Windows.FrameworkElement.Height%2A> 및 <xref:System.Windows.FrameworkElement.Width%2A> 속성 (에서 상속 되며, <xref:System.Windows.FrameworkElement>).  
   
- [!code-xaml[hostingwpfusercontrolinwf#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/HostingWpfUserControlInWf/CSharp/HostingWpfUserControlInWf/ConeControl.xaml#1)]  
+ [!code-xaml[hostingwpfusercontrolinwf#1](~/samples/snippets/csharp/VS_Snippets_Wpf/HostingWpfUserControlInWf/CSharp/HostingWpfUserControlInWf/ConeControl.xaml#1)]  
   
 ## <a name="see-also"></a>참고자료
 - <xref:System.Windows.Controls.Viewport3D>
 - <xref:System.Windows.Media.Media3D.PerspectiveCamera>
 - <xref:System.Windows.Media.Media3D.DirectionalLight>
 - <xref:System.Windows.Media.Media3D.Material>
-- [3차원 변환 개요](../../../../docs/framework/wpf/graphics-multimedia/3-d-transformations-overview.md)
-- [WPF 3D 성능 최대화](../../../../docs/framework/wpf/graphics-multimedia/maximize-wpf-3d-performance.md)
-- [방법 항목](../../../../docs/framework/wpf/graphics-multimedia/3-d-graphics-how-to-topics.md)
-- [WPF에서 Shape 및 기본 그리기 개요](../../../../docs/framework/wpf/graphics-multimedia/shapes-and-basic-drawing-in-wpf-overview.md)
-- [이미지, 그림 및 시각적 표시로 그리기](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md)
+- [3차원 변환 개요](3-d-transformations-overview.md)
+- [WPF 3D 성능 최대화](maximize-wpf-3d-performance.md)
+- [방법 항목](3-d-graphics-how-to-topics.md)
+- [WPF에서 Shape 및 기본 그리기 개요](shapes-and-basic-drawing-in-wpf-overview.md)
+- [이미지, 그림 및 시각적 표시로 그리기](painting-with-images-drawings-and-visuals.md)

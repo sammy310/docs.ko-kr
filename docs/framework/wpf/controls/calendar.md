@@ -5,12 +5,12 @@ helpviewer_keywords:
 - controls [WPF], Calendar
 - Calendar control [WPF]
 ms.assetid: ee844e4a-eefe-48e2-bd0d-1d82cc5e960b
-ms.openlocfilehash: d8e2306a2a63e567b156449caa9741e1028f017f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d2332f5d11e60a45e4da5d62ef7beed7aa14dfa7
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54545227"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57359408"
 ---
 # <a name="calendar"></a>일정
 일정에는 사용자를 시각적 일정 표시를 사용 하 여 날짜를 선택할 수 있습니다.  
@@ -19,7 +19,7 @@ ms.locfileid: "54545227"
   
  다음 그림에서는 두 개의 <xref:System.Windows.Controls.Calendar> 보여 개 및 없는 제어 합니다.  
   
- ![달력 컨트롤](../../../../docs/framework/wpf/controls/media/ndp-calendarcontrols.png "NDP_CalendarControls")  
+ ![달력 컨트롤](./media/ndp-calendarcontrols.png "NDP_CalendarControls")  
 달력 컨트롤  
   
  다음 표에서 일반적으로 연결 된 작업에 대 한 정보는 <xref:System.Windows.Controls.Calendar>합니다.  
@@ -52,5 +52,5 @@ ms.locfileid: "54545227"
 |스페이스바 또는 ENTER|<xref:System.Windows.Controls.CalendarMode.Year> 또는 <xref:System.Windows.Controls.CalendarMode.Decade>|스위치 <xref:System.Windows.Controls.Calendar.DisplayMode%2A> 에 <xref:System.Windows.Controls.CalendarMode.Month> 또는 <xref:System.Windows.Controls.CalendarMode.Year> 포커스가 있는 항목으로 표시 합니다.|  
   
 ## <a name="see-also"></a>참고자료
-- [컨트롤](../../../../docs/framework/wpf/controls/index.md)
-- [스타일 지정 및 템플릿](../../../../docs/framework/wpf/controls/styling-and-templating.md)
+- [컨트롤](index.md)
+- [스타일 지정 및 템플릿](styling-and-templating.md)

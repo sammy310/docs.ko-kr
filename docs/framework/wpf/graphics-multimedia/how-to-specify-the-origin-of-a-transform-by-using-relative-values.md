@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Transforms [WPF], origins of
 - graphics [WPF], origins of Transforms
 ms.assetid: f4dbc29d-93c7-41cd-96d8-5cfd8624b470
-ms.openlocfilehash: 55007575435ada809b8fba43d08abdd2ce9ddd73
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: bdcc17e2d9bf68170c10dd8e35670f3e072a527c
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54570618"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57352570"
 ---
 # <a name="how-to-specify-the-origin-of-a-transform-by-using-relative-values"></a>방법: 상대 값을 사용하여 변환 원점 지정
 이 예제에서는 상대 값의 출처를 지정 하는 데는 <xref:System.Windows.UIElement.RenderTransform%2A> 에 적용 되는 한 <xref:System.Windows.FrameworkElement>합니다.  
@@ -23,23 +23,23 @@ ms.locfileid: "54570618"
   
  다음 그림에서는 이어지는 예제의 변환 결과를 보여 줍니다.  
   
- ![RenderTransform을 사용 하 여 변형 된 단추](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-rendertransformwithdefaultcenter.png "graphicsmm_RenderTransformWithDefaultCenter")  
+ ![RenderTransform을 사용 하 여 변형 된 단추](./media/graphicsmm-rendertransformwithdefaultcenter.png "graphicsmm_RenderTransformWithDefaultCenter")  
 RenderTransform 속성을 사용한 45도 시계 방향 회전  
   
- [!code-xaml[Transforms_snip#GraphicsMMRotateButtonExample1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Transforms_snip/CS/ButtonRotateTransformExample.xaml#graphicsmmrotatebuttonexample1)]  
+ [!code-xaml[Transforms_snip#GraphicsMMRotateButtonExample1](~/samples/snippets/csharp/VS_Snippets_Wpf/Transforms_snip/CS/ButtonRotateTransformExample.xaml#graphicsmmrotatebuttonexample1)]  
   
  다음 예제에서는 또한 사용 하 여는 <xref:System.Windows.Media.RotateTransform> 회전 하는 <xref:System.Windows.Controls.Button> 45도 시계 방향으로, 단,이 예제에서는 설정는 <xref:System.Windows.UIElement.RenderTransformOrigin%2A> 단추 (0.5, 0.5). 결과적으로, 회전은 왼쪽 위 구석 대신 단추의 중심에 적용됩니다.  
   
  다음 그림에서는 이어지는 예제의 변환 결과를 보여 줍니다.  
   
- ![가운데를 중심으로 변형 된 단추](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-rendertransformrelativecenter.png "graphicsmm_RenderTransformRelativeCenter")  
+ ![가운데를 중심으로 변형 된 단추](./media/graphicsmm-rendertransformrelativecenter.png "graphicsmm_RenderTransformRelativeCenter")  
 RenderTransformOrigin (0.5, 0.5)의 RenderTransform 속성을 사용하여 45도 회전  
   
- [!code-xaml[Transforms_snip#GraphicsMMRotateButtonExample2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Transforms_snip/CS/ButtonRotateTransformExample.xaml#graphicsmmrotatebuttonexample2)]  
+ [!code-xaml[Transforms_snip#GraphicsMMRotateButtonExample2](~/samples/snippets/csharp/VS_Snippets_Wpf/Transforms_snip/CS/ButtonRotateTransformExample.xaml#graphicsmmrotatebuttonexample2)]  
   
- 변환 하는 방법에 대 한 자세한 내용은 <xref:System.Windows.FrameworkElement> 개체를 참조 합니다 [변환 개요](../../../../docs/framework/wpf/graphics-multimedia/transforms-overview.md)합니다.  
+ 변환 하는 방법에 대 한 자세한 내용은 <xref:System.Windows.FrameworkElement> 개체를 참조 합니다 [변환 개요](transforms-overview.md)합니다.  
   
 ## <a name="see-also"></a>참고자료
 - <xref:System.Windows.Media.Transform>
-- [Transform 개요](../../../../docs/framework/wpf/graphics-multimedia/transforms-overview.md)
-- [방법 항목](../../../../docs/framework/wpf/graphics-multimedia/transformations-how-to-topics.md)
+- [Transform 개요](transforms-overview.md)
+- [방법 항목](transformations-how-to-topics.md)

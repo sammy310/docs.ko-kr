@@ -9,12 +9,12 @@ helpviewer_keywords:
 - ink [WPF], custom-rendering
 - classes [WPF], InkCanvas
 ms.assetid: 65c978a7-0ee0-454f-ac7f-b1bd2efecac5
-ms.openlocfilehash: 4aa646ab27044bc26f3787d3edb5f0f15a15bd2f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ce4c2bd48e819541d942c795307df36629ec05b9
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54635588"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57362632"
 ---
 # <a name="custom-rendering-ink"></a>잉크 렌더링 사용자 지정
 합니다 <xref:System.Windows.Ink.Stroke.DrawingAttributes%2A> 스트로크의 속성을 사용 하면 해당 크기, 색 및 셰이프 등 스트로크의 모양을 지정할 수 있습니다 하지만 어떤 모양을 사용자 지정 하려는 경우가 있을 수 있습니다 <xref:System.Windows.Ink.Stroke.DrawingAttributes%2A> 허용 합니다. 에어브러시, 오일 페인트 및 다른 많은 효과가 있는 모양을 렌더링하여 잉크 모양을 사용자 지정하려는 경우도 있을 수 있습니다. 사용자 지정을 구현 하 여 잉크 렌더링 사용자 지정 하는 Windows Presentation Foundation (WPF) 허용 <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> 고 <xref:System.Windows.Ink.Stroke> 개체입니다.  
@@ -37,7 +37,7 @@ ms.locfileid: "54635588"
   
  동적으로 잉크를 렌더링하는 경우 세 가지 클래스를 구현해야 합니다.  
   
-1.  **DynamicRenderer**: <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer>에서 파생되는 클래스를 구현합니다. 이 클래스는 특수화 된 <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> 렌더링 하는 스트로크를 그릴 때. <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> 잉크 화면 처럼 응용 프로그램 사용자 인터페이스 (UI) 스레드가 차단 되는 경우에 잉크를 수집 하는 별도 스레드에서 렌더링을 수행 합니다. 스레딩 모델에 대한 자세한 내용은 [잉크 스레딩 모델](../../../../docs/framework/wpf/advanced/the-ink-threading-model.md)을 참조하세요. 스트로크 렌더링을 동적으로 사용자 지정 하려면 재정의 <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer.OnDraw%2A> 메서드.  
+1.  **DynamicRenderer**: <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer>에서 파생되는 클래스를 구현합니다. 이 클래스는 특수화 된 <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> 렌더링 하는 스트로크를 그릴 때. <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> 잉크 화면 처럼 응용 프로그램 사용자 인터페이스 (UI) 스레드가 차단 되는 경우에 잉크를 수집 하는 별도 스레드에서 렌더링을 수행 합니다. 스레딩 모델에 대한 자세한 내용은 [잉크 스레딩 모델](the-ink-threading-model.md)을 참조하세요. 스트로크 렌더링을 동적으로 사용자 지정 하려면 재정의 <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer.OnDraw%2A> 메서드.  
   
 2.  **스트로크**: <xref:System.Windows.Ink.Stroke>에서 파생되는 클래스를 구현합니다. 이 클래스는 정적으로 렌더링 합니다 <xref:System.Windows.Input.StylusPoint> 으로 변환한 후 데이터는 <xref:System.Windows.Ink.Stroke> 개체입니다. 재정의 <xref:System.Windows.Ink.Stroke.DrawCore%2A> 스트로크의 정적 렌더링과 해당 메서드는 동적 렌더링와 일치 합니다.  
   
@@ -49,10 +49,10 @@ ms.locfileid: "54635588"
   
  다음 예제에서는 사용자 지정 <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> 는 선형 그라데이션 브러시 효과 사용 하 여 잉크를 그립니다.  
   
- [!code-csharp[AdvancedInkTopicsSamples#19](../../../../samples/snippets/csharp/VS_Snippets_Wpf/AdvancedInkTopicsSamples/CSharp/DynamicRenderer.cs#19)]
- [!code-vb[AdvancedInkTopicsSamples#19](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/AdvancedInkTopicsSamples/VisualBasic/DynamicRenderer.vb#19)]  
-[!code-csharp[AdvancedInkTopicsSamples#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/AdvancedInkTopicsSamples/CSharp/DynamicRenderer.cs#1)]
-[!code-vb[AdvancedInkTopicsSamples#1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/AdvancedInkTopicsSamples/VisualBasic/DynamicRenderer.vb#1)]  
+ [!code-csharp[AdvancedInkTopicsSamples#19](~/samples/snippets/csharp/VS_Snippets_Wpf/AdvancedInkTopicsSamples/CSharp/DynamicRenderer.cs#19)]
+ [!code-vb[AdvancedInkTopicsSamples#19](~/samples/snippets/visualbasic/VS_Snippets_Wpf/AdvancedInkTopicsSamples/VisualBasic/DynamicRenderer.vb#19)]  
+[!code-csharp[AdvancedInkTopicsSamples#1](~/samples/snippets/csharp/VS_Snippets_Wpf/AdvancedInkTopicsSamples/CSharp/DynamicRenderer.cs#1)]
+[!code-vb[AdvancedInkTopicsSamples#1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/AdvancedInkTopicsSamples/VisualBasic/DynamicRenderer.vb#1)]  
   
 <a name="ImplementingCustomStrokes"></a>   
 ## <a name="implementing-custom-strokes"></a>사용자 지정 스트로크 구현  
@@ -64,10 +64,10 @@ ms.locfileid: "54635588"
   
  다음 C# 코드에 사용자 지정 방법을 보여 줍니다 <xref:System.Windows.Ink.Stroke> 렌더링 하는 클래스 <xref:System.Windows.Input.StylusPoint> 데이터를 3 차원 스트로크로 합니다.  
   
- [!code-csharp[AdvancedInkTopicsSamples#19](../../../../samples/snippets/csharp/VS_Snippets_Wpf/AdvancedInkTopicsSamples/CSharp/DynamicRenderer.cs#19)]
- [!code-vb[AdvancedInkTopicsSamples#19](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/AdvancedInkTopicsSamples/VisualBasic/DynamicRenderer.vb#19)]  
-[!code-csharp[AdvancedInkTopicsSamples#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/AdvancedInkTopicsSamples/CSharp/DynamicRenderer.cs#2)]
-[!code-vb[AdvancedInkTopicsSamples#2](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/AdvancedInkTopicsSamples/VisualBasic/DynamicRenderer.vb#2)]  
+ [!code-csharp[AdvancedInkTopicsSamples#19](~/samples/snippets/csharp/VS_Snippets_Wpf/AdvancedInkTopicsSamples/CSharp/DynamicRenderer.cs#19)]
+ [!code-vb[AdvancedInkTopicsSamples#19](~/samples/snippets/visualbasic/VS_Snippets_Wpf/AdvancedInkTopicsSamples/VisualBasic/DynamicRenderer.vb#19)]  
+[!code-csharp[AdvancedInkTopicsSamples#2](~/samples/snippets/csharp/VS_Snippets_Wpf/AdvancedInkTopicsSamples/CSharp/DynamicRenderer.cs#2)]
+[!code-vb[AdvancedInkTopicsSamples#2](~/samples/snippets/visualbasic/VS_Snippets_Wpf/AdvancedInkTopicsSamples/VisualBasic/DynamicRenderer.vb#2)]  
   
 <a name="ImplementingACustomInkCanvas"></a>   
 ## <a name="implementing-a-custom-inkcanvas"></a>사용자 지정 InkCanvas 구현  
@@ -83,7 +83,7 @@ ms.locfileid: "54635588"
   
  다음 C# 코드에 사용자 지정 방법을 보여 줍니다 <xref:System.Windows.Controls.InkCanvas> 사용자 지정을 사용 하는 클래스 <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> 하 고 사용자 지정 스트로크를 수집 합니다.  
   
- [!code-csharp[AdvancedInkTopicsSamples#9](../../../../samples/snippets/csharp/VS_Snippets_Wpf/AdvancedInkTopicsSamples/CSharp/Window1.xaml.cs#9)]  
+ [!code-csharp[AdvancedInkTopicsSamples#9](~/samples/snippets/csharp/VS_Snippets_Wpf/AdvancedInkTopicsSamples/CSharp/Window1.xaml.cs#9)]  
   
  <xref:System.Windows.Controls.InkCanvas> 둘 이상의 <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer>합니다. 여러 개 추가할 수 있습니다 <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> 개체를 <xref:System.Windows.Controls.InkCanvas> 추가 하 여는 <xref:System.Windows.UIElement.StylusPlugIns%2A> 속성입니다.  
   
@@ -92,4 +92,4 @@ ms.locfileid: "54635588"
  직접 파생 시켜 잉크 모양을 사용자 지정할 수 있습니다 <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer>하십시오 <xref:System.Windows.Ink.Stroke>, 및 <xref:System.Windows.Controls.InkCanvas> 클래스입니다. 이와 함께 이러한 클래스는 사용자가 스트로크를 그릴 때와 스트로크가 수집된 후의 모양이 일관되도록 합니다.  
   
 ## <a name="see-also"></a>참고자료
-- [고급 잉크 처리](../../../../docs/framework/wpf/advanced/advanced-ink-handling.md)
+- [고급 잉크 처리](advanced-ink-handling.md)

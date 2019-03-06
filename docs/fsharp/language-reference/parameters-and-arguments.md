@@ -2,12 +2,12 @@
 title: 매개 변수 및 인수
 description: 에 대해 알아봅니다 F# 매개 변수를 정의 하 고 함수, 메서드 및 속성에 인수를 전달 하기 위한 언어 지원 합니다.
 ms.date: 05/16/2016
-ms.openlocfilehash: 65e3b4f8ffb03e81104c963c5e2da7aba2e2b220
-ms.sourcegitcommit: 07c4368273b446555cb2c85397ea266b39d5fe50
+ms.openlocfilehash: b68b3fdd14a66a7312efa5adb709adaeceaae282
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/21/2019
-ms.locfileid: "56583500"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57352285"
 ---
 # <a name="parameters-and-arguments"></a>매개 변수 및 인수
 
@@ -135,17 +135,17 @@ Baud Rate: 4800 Duplex: Half Parity: false
 ```fsharp
 open System
 open System.Runtime.InteropServices
-type C = 
+type C =
     static member Foo([<Optional; DefaultParameterValue("Hello world")>] message) =
         printfn "%s" message
 ```
 
-또한 기본 매개 변수 값으로 새 개체를 지정할 수 있습니다. 예를 들어 합니다 `Foo` 멤버는 선택적인 있을 수 있습니다 `CanceallationToken` 대신 입력으로:
+또한 기본 매개 변수 값으로 새 개체를 지정할 수 있습니다. 예를 들어 합니다 `Foo` 멤버는 선택적인 있을 수 있습니다 `CancellationToken` 대신 입력으로:
 
 ```fsharp
 open System.Threading
 open System.Runtime.InteropServices
-type C = 
+type C =
     static member Foo([<Optional; DefaultParameterValue(CancellationToken())>] ct: CancellationToken) =
         printfn "%A" ct
 ```

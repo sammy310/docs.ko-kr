@@ -13,12 +13,12 @@ helpviewer_keywords:
 - commanding [WPF]
 - CommandManager [WPF]
 ms.assetid: bc208dfe-367d-426a-99de-52b7e7511e81
-ms.openlocfilehash: 5273850c9fec731c5f11e101d218532d06632263
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
+ms.openlocfilehash: 1e756aa633ddf87267baa1fc52343a0b7570f753
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56748429"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57379083"
 ---
 # <a name="commanding-overview"></a>명령 개요
 <a name="introduction"></a> 명령은 장치 입력보다 더 의미 있는 수준의 입력 처리를 제공하는 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]의 입력 메커니즘입니다. 이러한 명령의 예로는 많은 애플리케이션의 **복사**, **잘라내기** 및 **붙여넣기** 작업을 들 수 있습니다.  
@@ -51,10 +51,10 @@ ms.locfileid: "56748429"
   
  다음 예제에서는 <xref:System.Windows.Controls.MenuItem>을 설정하는 방법을 보여줘 클릭하는 경우 <xref:System.Windows.Controls.TextBox>에 키보드 포커스가 있다는 가정 하에 <xref:System.Windows.Controls.TextBox>에서 <xref:System.Windows.Input.ApplicationCommands.Paste%2A> 명령을 호출합니다.  
   
- [!code-xaml[CommandingOverviewSnippets#CommandingOverviewSimpleCommand](../../../../samples/snippets/csharp/VS_Snippets_Wpf/CommandingOverviewSnippets/CSharp/Window1.xaml#commandingoverviewsimplecommand)]  
+ [!code-xaml[CommandingOverviewSnippets#CommandingOverviewSimpleCommand](~/samples/snippets/csharp/VS_Snippets_Wpf/CommandingOverviewSnippets/CSharp/Window1.xaml#commandingoverviewsimplecommand)]  
   
- [!code-csharp[CommandingOverviewSnippets#CommandingOverviewCommandTargetCodeBehind](../../../../samples/snippets/csharp/VS_Snippets_Wpf/CommandingOverviewSnippets/CSharp/Window1.xaml.cs#commandingoverviewcommandtargetcodebehind)]
- [!code-vb[CommandingOverviewSnippets#CommandingOverviewCommandTargetCodeBehind](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/CommandingOverviewSnippets/visualbasic/window1.xaml.vb#commandingoverviewcommandtargetcodebehind)]  
+ [!code-csharp[CommandingOverviewSnippets#CommandingOverviewCommandTargetCodeBehind](~/samples/snippets/csharp/VS_Snippets_Wpf/CommandingOverviewSnippets/CSharp/Window1.xaml.cs#commandingoverviewcommandtargetcodebehind)]
+ [!code-vb[CommandingOverviewSnippets#CommandingOverviewCommandTargetCodeBehind](~/samples/snippets/visualbasic/VS_Snippets_Wpf/CommandingOverviewSnippets/visualbasic/window1.xaml.vb#commandingoverviewcommandtargetcodebehind)]  
   
 <a name="Four_main_Concepts"></a>   
 ## <a name="four-main-concepts-in-wpf-commanding"></a>WPF 명령의 네 가지 주요 개념  
@@ -74,7 +74,7 @@ ms.locfileid: "56748429"
 ### <a name="commands"></a>명령  
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]에서 명령은 <xref:System.Windows.Input.ICommand> 인터페이스를 구현하여 만듭니다.  <xref:System.Windows.Input.ICommand>는 두 개의 메서드 <xref:System.Windows.Input.ICommand.Execute%2A>, <xref:System.Windows.Input.ICommand.CanExecute%2A> 및 하나의 이벤트 <xref:System.Windows.Input.ICommand.CanExecuteChanged>를 노출합니다. <xref:System.Windows.Input.ICommand.Execute%2A>는 명령과 연결되는 작업을 수행합니다. <xref:System.Windows.Input.ICommand.CanExecute%2A>는 현재 명령 대상에서 명령을 실행할 수 있는지 여부를 결정합니다. 명령 작업을 중앙 집중식으로 관리하는 명령 관리자가, 발생했지만 명령 바인딩에서 아직 실행하지 않은 명령을 무효화할 수 있는 변경 사항을 명령 소스에서 감지한 경우 <xref:System.Windows.Input.ICommand.CanExecuteChanged>가 발생합니다.  <xref:System.Windows.Input.ICommand>의 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 구현은 <xref:System.Windows.Input.RoutedCommand> 클래스이며 이 개요의 포커스입니다.  
   
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]의 주 입력 소스는 마우스, 키보드, 잉크 및 라우트된 명령입니다.  더 많은 디바이스 지향 입력이 <xref:System.Windows.RoutedEvent>를 사용하여 응용 프로그램 페이지의 개체에 입력 이벤트가 발생했음을 알립니다.  <xref:System.Windows.Input.RoutedCommand>도 마찬가지입니다.  <xref:System.Windows.Input.RoutedCommand>의 <xref:System.Windows.Input.RoutedCommand.Execute%2A> 및 <xref:System.Windows.Input.RoutedCommand.CanExecute%2A> 메서드는 명령에 대한 응용 프로그램 논리를 포함하지 않지만 <xref:System.Windows.Input.CommandBinding>이 있는 개체를 찾을 때까지 요소 트리를 통해 터널링 및 버블링하는 라우팅된 이벤트를 발생시킵니다.  <xref:System.Windows.Input.CommandBinding>에는 이러한 이벤트에 대한 처리기가 포함되어 있으며 이는 명령을 수행하는 처리기입니다.  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]의 이벤트 라우팅에 대한 자세한 내용은 [라우트된 이벤트 개요](../../../../docs/framework/wpf/advanced/routed-events-overview.md)를 참조하세요.  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]의 주 입력 소스는 마우스, 키보드, 잉크 및 라우트된 명령입니다.  더 많은 디바이스 지향 입력이 <xref:System.Windows.RoutedEvent>를 사용하여 응용 프로그램 페이지의 개체에 입력 이벤트가 발생했음을 알립니다.  <xref:System.Windows.Input.RoutedCommand>도 마찬가지입니다.  <xref:System.Windows.Input.RoutedCommand>의 <xref:System.Windows.Input.RoutedCommand.Execute%2A> 및 <xref:System.Windows.Input.RoutedCommand.CanExecute%2A> 메서드는 명령에 대한 응용 프로그램 논리를 포함하지 않지만 <xref:System.Windows.Input.CommandBinding>이 있는 개체를 찾을 때까지 요소 트리를 통해 터널링 및 버블링하는 라우팅된 이벤트를 발생시킵니다.  <xref:System.Windows.Input.CommandBinding>에는 이러한 이벤트에 대한 처리기가 포함되어 있으며 이는 명령을 수행하는 처리기입니다.  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]의 이벤트 라우팅에 대한 자세한 내용은 [라우트된 이벤트 개요](routed-events-overview.md)를 참조하세요.  
   
  <xref:System.Windows.Input.RoutedCommand>의 <xref:System.Windows.Input.RoutedCommand.Execute%2A> 메서드는 명령 대상에서 <xref:System.Windows.Input.CommandManager.PreviewExecuted> 및 <xref:System.Windows.Input.CommandManager.Executed> 이벤트를 발생시킵니다.  <xref:System.Windows.Input.RoutedCommand>의 <xref:System.Windows.Input.RoutedCommand.CanExecute%2A> 메서드는 명령 대상에서 <xref:System.Windows.Input.CommandManager.CanExecute> 및 <xref:System.Windows.Input.CommandManager.PreviewCanExecute> 이벤트를 발생시킵니다.  이러한 이벤트는 특정 명령에 대한 <xref:System.Windows.Input.CommandBinding>이 있는 개체를 찾을 때까지 요소 트리를 통해 터널링 및 버블링합니다.  
   
@@ -98,10 +98,10 @@ ms.locfileid: "56748429"
   
  다음 예제에서는 <xref:System.Windows.Input.ApplicationCommands.Properties%2A> 명령에 대한 명령 소스로 <xref:System.Windows.Controls.ContextMenu>에서 <xref:System.Windows.Controls.MenuItem>을 사용하는 방법을 표시합니다.  
   
- [!code-xaml[CommandingOverviewSnippets#CommandingOverviewCmdSourceXAML](../../../../samples/snippets/csharp/VS_Snippets_Wpf/CommandingOverviewSnippets/CSharp/Window1.xaml#commandingoverviewcmdsourcexaml)]  
+ [!code-xaml[CommandingOverviewSnippets#CommandingOverviewCmdSourceXAML](~/samples/snippets/csharp/VS_Snippets_Wpf/CommandingOverviewSnippets/CSharp/Window1.xaml#commandingoverviewcmdsourcexaml)]  
   
- [!code-csharp[CommandingOverviewSnippets#CommandingOverviewCmdSource](../../../../samples/snippets/csharp/VS_Snippets_Wpf/CommandingOverviewSnippets/CSharp/Window1.xaml.cs#commandingoverviewcmdsource)]
- [!code-vb[CommandingOverviewSnippets#CommandingOverviewCmdSource](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/CommandingOverviewSnippets/visualbasic/window1.xaml.vb#commandingoverviewcmdsource)]  
+ [!code-csharp[CommandingOverviewSnippets#CommandingOverviewCmdSource](~/samples/snippets/csharp/VS_Snippets_Wpf/CommandingOverviewSnippets/CSharp/Window1.xaml.cs#commandingoverviewcmdsource)]
+ [!code-vb[CommandingOverviewSnippets#CommandingOverviewCmdSource](~/samples/snippets/visualbasic/VS_Snippets_Wpf/CommandingOverviewSnippets/visualbasic/window1.xaml.vb#commandingoverviewcmdsource)]  
   
  일반적으로 명령 소스는 <xref:System.Windows.Input.RoutedCommand.CanExecuteChanged> 이벤트에 수신됩니다.  이 이벤트는 현재 명령 대상에서 명령을 실행할 수 있는 기능이 변경되었을 수 있음을 명령 소스에 알립니다.  명령 소스는 <xref:System.Windows.Input.RoutedCommand.CanExecute%2A> 메서드를 사용하여 <xref:System.Windows.Input.RoutedCommand>의 현재 상태를 쿼리할 수 있습니다.  명령을 실행할 수 없는 경우 명령 소스는 자체적으로 사용하지 않도록 설정될 수 있습니다.  예를 들어 명령을 실행할 수 없는 경우 <xref:System.Windows.Controls.MenuItem>은 자체적으로 회색으로 표시됩니다.  
   
@@ -111,17 +111,17 @@ ms.locfileid: "56748429"
   
  다음 예제에서는 <xref:System.Windows.Input.KeyGesture> 및 <xref:System.Windows.Input.RoutedCommand> 간에 <xref:System.Windows.Input.KeyBinding>을 만드는 방법을 보여 줍니다.  
   
- [!code-xaml[CommandingOverviewSnippets#CommandingOverviewXAMLKeyBinding](../../../../samples/snippets/csharp/VS_Snippets_Wpf/CommandingOverviewSnippets/CSharp/Window1.xaml#commandingoverviewxamlkeybinding)]  
+ [!code-xaml[CommandingOverviewSnippets#CommandingOverviewXAMLKeyBinding](~/samples/snippets/csharp/VS_Snippets_Wpf/CommandingOverviewSnippets/CSharp/Window1.xaml#commandingoverviewxamlkeybinding)]  
   
- [!code-csharp[CommandingOverviewSnippets#CommandingOverviewKeyBinding](../../../../samples/snippets/csharp/VS_Snippets_Wpf/CommandingOverviewSnippets/CSharp/Window1.xaml.cs#commandingoverviewkeybinding)]
- [!code-vb[CommandingOverviewSnippets#CommandingOverviewKeyBinding](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/CommandingOverviewSnippets/visualbasic/window1.xaml.vb#commandingoverviewkeybinding)]  
+ [!code-csharp[CommandingOverviewSnippets#CommandingOverviewKeyBinding](~/samples/snippets/csharp/VS_Snippets_Wpf/CommandingOverviewSnippets/CSharp/Window1.xaml.cs#commandingoverviewkeybinding)]
+ [!code-vb[CommandingOverviewSnippets#CommandingOverviewKeyBinding](~/samples/snippets/visualbasic/VS_Snippets_Wpf/CommandingOverviewSnippets/visualbasic/window1.xaml.vb#commandingoverviewkeybinding)]  
   
  <xref:System.Windows.Input.InputGesture>를 <xref:System.Windows.Input.RoutedCommand>에 연결하는 다른 방법은 <xref:System.Windows.Input.RoutedCommand>에서 <xref:System.Windows.Input.InputGesture>를 <xref:System.Windows.Input.InputGestureCollection>에 추가하는 것입니다.  
   
  다음 예제에서는 <xref:System.Windows.Input.RoutedCommand>의 <xref:System.Windows.Input.InputGestureCollection>에 <xref:System.Windows.Input.KeyGesture>를 추가하는 방법을 보여 줍니다.  
   
- [!code-csharp[CommandingOverviewSnippets#CommandingOverviewKeyGestureOnCmd](../../../../samples/snippets/csharp/VS_Snippets_Wpf/CommandingOverviewSnippets/CSharp/Window1.xaml.cs#commandingoverviewkeygestureoncmd)]
- [!code-vb[CommandingOverviewSnippets#CommandingOverviewKeyGestureOnCmd](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/CommandingOverviewSnippets/visualbasic/window1.xaml.vb#commandingoverviewkeygestureoncmd)]  
+ [!code-csharp[CommandingOverviewSnippets#CommandingOverviewKeyGestureOnCmd](~/samples/snippets/csharp/VS_Snippets_Wpf/CommandingOverviewSnippets/CSharp/Window1.xaml.cs#commandingoverviewkeygestureoncmd)]
+ [!code-vb[CommandingOverviewSnippets#CommandingOverviewKeyGestureOnCmd](~/samples/snippets/visualbasic/VS_Snippets_Wpf/CommandingOverviewSnippets/visualbasic/window1.xaml.vb#commandingoverviewkeygestureoncmd)]  
   
 <a name="Command_Binding"></a>   
 ### <a name="commandbinding"></a>CommandBinding  
@@ -133,18 +133,18 @@ ms.locfileid: "56748429"
   
  다음 예제에서는 애플리케이션의 루트 <xref:System.Windows.Window>에서 <xref:System.Windows.Input.CommandBinding>을 만드는 방법을 보여 줍니다.  <xref:System.Windows.Input.CommandBinding>은 <xref:System.Windows.Input.ApplicationCommands.Open%2A> 명령을 <xref:System.Windows.Input.CommandManager.Executed> 및 <xref:System.Windows.Input.CommandBinding.CanExecute> 처리기와 연결합니다.  
   
- [!code-xaml[commandwithhandler#CommandHandlerCommandBinding](../../../../samples/snippets/csharp/VS_Snippets_Wpf/commandWithHandler/CSharp/Window1.xaml#commandhandlercommandbinding)]  
+ [!code-xaml[commandwithhandler#CommandHandlerCommandBinding](~/samples/snippets/csharp/VS_Snippets_Wpf/commandWithHandler/CSharp/Window1.xaml#commandhandlercommandbinding)]  
   
- [!code-csharp[CommandHandlerProcedural#CommandHandlerBindingInit](../../../../samples/snippets/csharp/VS_Snippets_Wpf/CommandHandlerProcedural/CSharp/Window1.xaml.cs#commandhandlerbindinginit)]
- [!code-vb[CommandHandlerProcedural#CommandHandlerBindingInit](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/CommandHandlerProcedural/visualbasic/window1.xaml.vb#commandhandlerbindinginit)]  
+ [!code-csharp[CommandHandlerProcedural#CommandHandlerBindingInit](~/samples/snippets/csharp/VS_Snippets_Wpf/CommandHandlerProcedural/CSharp/Window1.xaml.cs#commandhandlerbindinginit)]
+ [!code-vb[CommandHandlerProcedural#CommandHandlerBindingInit](~/samples/snippets/visualbasic/VS_Snippets_Wpf/CommandHandlerProcedural/visualbasic/window1.xaml.vb#commandhandlerbindinginit)]  
   
  다음으로, <xref:System.Windows.Input.ExecutedRoutedEventHandler> 및 <xref:System.Windows.Input.CanExecuteRoutedEventHandler>를 만듭니다.  <xref:System.Windows.Input.ExecutedRoutedEventHandler>는 <xref:System.Windows.MessageBox>를 열어 명령이 실행됐다는 문자열을 표시합니다.  <xref:System.Windows.Input.CanExecuteRoutedEventHandler>는 <xref:System.Windows.Input.CanExecuteRoutedEventArgs.CanExecute%2A> 속성을 `true`로 설정합니다.  
   
- [!code-csharp[commandwithhandler#CommandHandlerExecutedHandler](../../../../samples/snippets/csharp/VS_Snippets_Wpf/commandWithHandler/CSharp/Window1.xaml.cs#commandhandlerexecutedhandler)]
- [!code-vb[commandwithhandler#CommandHandlerExecutedHandler](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/commandWithHandler/VisualBasic/Window1.xaml.vb#commandhandlerexecutedhandler)]  
+ [!code-csharp[commandwithhandler#CommandHandlerExecutedHandler](~/samples/snippets/csharp/VS_Snippets_Wpf/commandWithHandler/CSharp/Window1.xaml.cs#commandhandlerexecutedhandler)]
+ [!code-vb[commandwithhandler#CommandHandlerExecutedHandler](~/samples/snippets/visualbasic/VS_Snippets_Wpf/commandWithHandler/VisualBasic/Window1.xaml.vb#commandhandlerexecutedhandler)]  
   
- [!code-csharp[commandwithhandler#CommandHandlerCanExecuteHandler](../../../../samples/snippets/csharp/VS_Snippets_Wpf/commandWithHandler/CSharp/Window1.xaml.cs#commandhandlercanexecutehandler)]
- [!code-vb[commandwithhandler#CommandHandlerCanExecuteHandler](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/commandWithHandler/VisualBasic/Window1.xaml.vb#commandhandlercanexecutehandler)]  
+ [!code-csharp[commandwithhandler#CommandHandlerCanExecuteHandler](~/samples/snippets/csharp/VS_Snippets_Wpf/commandWithHandler/CSharp/Window1.xaml.cs#commandhandlercanexecutehandler)]
+ [!code-vb[commandwithhandler#CommandHandlerCanExecuteHandler](~/samples/snippets/visualbasic/VS_Snippets_Wpf/commandWithHandler/VisualBasic/Window1.xaml.vb#commandhandlercanexecutehandler)]  
   
  <xref:System.Windows.Input.CommandBinding>은 응용 프로그램 또는 컨트롤의 루트 <xref:System.Windows.Window> 같은 특정 개체에 연결됩니다.  <xref:System.Windows.Input.CommandBinding>이 연결된 개체는 바인딩의 범위를 정의합니다.  예를 들어 명령 대상의 상위 항목에 연결된 <xref:System.Windows.Input.CommandBinding>은 <xref:System.Windows.Input.CommandBinding.Executed> 이벤트로 연결할 수 있지만 명령 대상의 하위 항목에 연결된 <xref:System.Windows.Input.CommandBinding>은 연결할 수 없습니다.  이는 이벤트를 발생시키는 개체에서 <xref:System.Windows.RoutedEvent>를 터널링 및 버블링할 때 발생하는 직접적인 결과입니다.  
   
@@ -158,10 +158,10 @@ ms.locfileid: "56748429"
   
  다음 예제에서는 태그 및 코드 숨김에서 명령 대상을 명시적으로 설정하는 방법을 보여 줍니다.  
   
- [!code-xaml[CommandingOverviewSnippets#CommandingOverviewXAMLCommandTarget](../../../../samples/snippets/csharp/VS_Snippets_Wpf/CommandingOverviewSnippets/CSharp/Window1.xaml#commandingoverviewxamlcommandtarget)]  
+ [!code-xaml[CommandingOverviewSnippets#CommandingOverviewXAMLCommandTarget](~/samples/snippets/csharp/VS_Snippets_Wpf/CommandingOverviewSnippets/CSharp/Window1.xaml#commandingoverviewxamlcommandtarget)]  
   
- [!code-csharp[CommandingOverviewSnippets#CommandingOverviewCommandTargetCodeBehind](../../../../samples/snippets/csharp/VS_Snippets_Wpf/CommandingOverviewSnippets/CSharp/Window1.xaml.cs#commandingoverviewcommandtargetcodebehind)]
- [!code-vb[CommandingOverviewSnippets#CommandingOverviewCommandTargetCodeBehind](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/CommandingOverviewSnippets/visualbasic/window1.xaml.vb#commandingoverviewcommandtargetcodebehind)]  
+ [!code-csharp[CommandingOverviewSnippets#CommandingOverviewCommandTargetCodeBehind](~/samples/snippets/csharp/VS_Snippets_Wpf/CommandingOverviewSnippets/CSharp/Window1.xaml.cs#commandingoverviewcommandtargetcodebehind)]
+ [!code-vb[CommandingOverviewSnippets#CommandingOverviewCommandTargetCodeBehind](~/samples/snippets/visualbasic/VS_Snippets_Wpf/CommandingOverviewSnippets/visualbasic/window1.xaml.vb#commandingoverviewcommandtargetcodebehind)]  
   
 <a name="Command_Manager"></a>   
 ### <a name="the-commandmanager"></a>CommandManager  
@@ -188,8 +188,8 @@ ms.locfileid: "56748429"
 - <xref:System.Windows.Input.CommandBinding>
 - <xref:System.Windows.Input.InputBinding>
 - <xref:System.Windows.Input.CommandManager>
-- [입력 개요](../../../../docs/framework/wpf/advanced/input-overview.md)
-- [라우트된 이벤트 개요](../../../../docs/framework/wpf/advanced/routed-events-overview.md)
-- [ICommandSource 구현](../../../../docs/framework/wpf/advanced/how-to-implement-icommandsource.md)
+- [입력 개요](input-overview.md)
+- [라우트된 이벤트 개요](routed-events-overview.md)
+- [ICommandSource 구현](how-to-implement-icommandsource.md)
 - [방법: MenuItem에 명령 추가](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms741839(v=vs.90))
 - [Create a Custom RoutedCommand Sample](https://github.com/Microsoft/WPF-Samples/tree/master/Input%20and%20Commands/CustomRoutedCommand)(사용자 지정 RoutedCommand 샘플 만들기)

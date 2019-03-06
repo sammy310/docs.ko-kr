@@ -10,12 +10,12 @@ helpviewer_keywords:
 - data binding [WPF], selecting data for views
 - data binding [WPF], binding to collections
 ms.assetid: 952a7d76-dd29-49e5-86f5-32c4530e70eb
-ms.openlocfilehash: 549f4e7af1a9aa623c7f8ff12b528f771a8ff806
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5ceda723ad982fc788e8d0b81e6cf92975790682
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54504781"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57360396"
 ---
 # <a name="how-to-bind-to-a-collection-and-display-information-based-on-selection"></a>방법: 선택에 따라 수집 및 표시 정보에 바인딩
 간단한 마스터-세부 시나리오에 데이터 바인딩된 <xref:System.Windows.Controls.ItemsControl> 와 같은 <xref:System.Windows.Controls.ListBox>합니다. 선택한 항목에 대 한 자세한 정보를 표시할 사용자 선택에 따라 있습니다. 이 예제에서는이 시나리오를 구현 하는 방법을 보여 줍니다.  
@@ -23,16 +23,16 @@ ms.locfileid: "54504781"
 ## <a name="example"></a>예제  
  이 예에서 `People` 되는 <xref:System.Collections.ObjectModel.ObservableCollection%601> 의 `Person` 클래스입니다. 이 `Person` 클래스에는 세 가지 속성이 포함: `FirstName`, `LastName`, 및 `HomeTown`, 모든 형식의 `string`합니다.  
   
- [!code-xaml[CollectionBinding#Source](../../../../samples/snippets/csharp/VS_Snippets_Wpf/CollectionBinding/CSharp/Window1.xaml#source)]  
-[!code-xaml[CollectionBinding#UI](../../../../samples/snippets/csharp/VS_Snippets_Wpf/CollectionBinding/CSharp/Window1.xaml#ui)]  
+ [!code-xaml[CollectionBinding#Source](~/samples/snippets/csharp/VS_Snippets_Wpf/CollectionBinding/CSharp/Window1.xaml#source)]  
+[!code-xaml[CollectionBinding#UI](~/samples/snippets/csharp/VS_Snippets_Wpf/CollectionBinding/CSharp/Window1.xaml#ui)]  
   
  합니다 <xref:System.Windows.Controls.ContentControl> 다음을 사용 하 여 <xref:System.Windows.DataTemplate> 정의 하는 방법의 정보를는 `Person` 표시 됩니다:  
   
- [!code-xaml[CollectionBinding#DetailTemplate](../../../../samples/snippets/csharp/VS_Snippets_Wpf/CollectionBinding/CSharp/Window1.xaml#detailtemplate)]  
+ [!code-xaml[CollectionBinding#DetailTemplate](~/samples/snippets/csharp/VS_Snippets_Wpf/CollectionBinding/CSharp/Window1.xaml#detailtemplate)]  
   
  다음은 예제에서 생성 하는 스크린샷입니다. <xref:System.Windows.Controls.ContentControl> 선택한 사용자의 다른 속성을 보여 줍니다.  
   
- ![컬렉션에 바인딩](../../../../docs/framework/wpf/data/media/databinding-collectionbindingsample.png "DataBinding_CollectionBindingSample")  
+ ![컬렉션에 바인딩](./media/databinding-collectionbindingsample.png "DataBinding_CollectionBindingSample")  
   
  이 예제에서 주의 해야 할 두 가지 사항은 다음과 같습니다.  
   
@@ -42,12 +42,12 @@ ms.locfileid: "54504781"
   
  합니다 `Person` 재정의 클래스를 `ToString` 메서드는 다음과 같이 합니다. 기본적으로 <xref:System.Windows.Controls.ListBox> 호출 `ToString` 바인딩된 컬렉션에 있는 각 개체의 문자열 표현을 표시 합니다. 이유는 각 `Person` 첫 번째 이름으로 표시 되는 <xref:System.Windows.Controls.ListBox>합니다.  
   
- [!code-csharp[CollectionBinding#ToString](../../../../samples/snippets/csharp/VS_Snippets_Wpf/CollectionBinding/CSharp/Data.cs#tostring)]
- [!code-vb[CollectionBinding#ToString](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/CollectionBinding/VisualBasic/Person.vb#tostring)]  
+ [!code-csharp[CollectionBinding#ToString](~/samples/snippets/csharp/VS_Snippets_Wpf/CollectionBinding/CSharp/Data.cs#tostring)]
+ [!code-vb[CollectionBinding#ToString](~/samples/snippets/visualbasic/VS_Snippets_Wpf/CollectionBinding/VisualBasic/Person.vb#tostring)]  
   
 ## <a name="see-also"></a>참고자료
-- [계층적 데이터에 마스터-세부 패턴 사용](../../../../docs/framework/wpf/data/how-to-use-the-master-detail-pattern-with-hierarchical-data.md)
-- [계층적 XML 데이터에 마스터-세부 패턴 사용](../../../../docs/framework/wpf/data/how-to-use-the-master-detail-pattern-with-hierarchical-xml-data.md)
-- [데이터 바인딩 개요](../../../../docs/framework/wpf/data/data-binding-overview.md)
-- [데이터 템플릿 개요](../../../../docs/framework/wpf/data/data-templating-overview.md)
-- [방법 항목](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)
+- [계층적 데이터에 마스터-세부 패턴 사용](how-to-use-the-master-detail-pattern-with-hierarchical-data.md)
+- [계층적 XML 데이터에 마스터-세부 패턴 사용](how-to-use-the-master-detail-pattern-with-hierarchical-xml-data.md)
+- [데이터 바인딩 개요](data-binding-overview.md)
+- [데이터 템플릿 개요](data-templating-overview.md)
+- [방법 항목](data-binding-how-to-topics.md)
