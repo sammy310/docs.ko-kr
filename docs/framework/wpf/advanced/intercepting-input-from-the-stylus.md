@@ -10,12 +10,12 @@ helpviewer_keywords:
 - ', '
 - ', '
 ms.assetid: 791bb2f0-4e5c-4569-ac3c-211996808d44
-ms.openlocfilehash: 5384a49461886ba184a0a128467c864b37c0efc9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0568e72e6d686ce08e6bd802f273e45dd623524b
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54667035"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57374312"
 ---
 # <a name="intercepting-input-from-the-stylus"></a>스타일러스에서 입력 가로채기
 합니다 <xref:System.Windows.Input.StylusPlugIns> 아키텍처를 통해 하위 수준 제어를 구현 하기 위한 메커니즘을 제공 <xref:System.Windows.Input.Stylus> 입력과 디지털 잉크 생성 <xref:System.Windows.Ink.Stroke> 개체입니다. <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> 클래스는 사용자 지정 동작을 구현 하 고 최적의 성능을 위해 스타일러스 장치에서 가져온 데이터의 스트림으로 적용 메커니즘을 제공 합니다.  
@@ -47,10 +47,10 @@ ms.locfileid: "54667035"
   
  다음 예제에서는 수정 하 여 스타일러스 입력을 제한 하는 플러그 인을 <xref:System.Windows.Input.StylusPoint.X%2A> 및 <xref:System.Windows.Input.StylusPoint.Y%2A> 값을 <xref:System.Windows.Input.StylusPoint> 에서 나오는 데이터를는 <xref:System.Windows.Input.Stylus> 장치.  
   
- [!code-csharp[AdvancedInkTopicsSamples#19](../../../../samples/snippets/csharp/VS_Snippets_Wpf/AdvancedInkTopicsSamples/CSharp/DynamicRenderer.cs#19)]
- [!code-vb[AdvancedInkTopicsSamples#19](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/AdvancedInkTopicsSamples/VisualBasic/DynamicRenderer.vb#19)]  
-[!code-csharp[AdvancedInkTopicsSamples#3](../../../../samples/snippets/csharp/VS_Snippets_Wpf/AdvancedInkTopicsSamples/CSharp/DynamicRenderer.cs#3)]
-[!code-vb[AdvancedInkTopicsSamples#3](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/AdvancedInkTopicsSamples/VisualBasic/DynamicRenderer.vb#3)]  
+ [!code-csharp[AdvancedInkTopicsSamples#19](~/samples/snippets/csharp/VS_Snippets_Wpf/AdvancedInkTopicsSamples/CSharp/DynamicRenderer.cs#19)]
+ [!code-vb[AdvancedInkTopicsSamples#19](~/samples/snippets/visualbasic/VS_Snippets_Wpf/AdvancedInkTopicsSamples/VisualBasic/DynamicRenderer.vb#19)]  
+[!code-csharp[AdvancedInkTopicsSamples#3](~/samples/snippets/csharp/VS_Snippets_Wpf/AdvancedInkTopicsSamples/CSharp/DynamicRenderer.cs#3)]
+[!code-vb[AdvancedInkTopicsSamples#3](~/samples/snippets/visualbasic/VS_Snippets_Wpf/AdvancedInkTopicsSamples/VisualBasic/DynamicRenderer.vb#3)]  
   
 <a name="AddingYourPluginToAnInkCanvas"></a>   
 ## <a name="adding-your-plug-in-to-an-inkcanvas"></a>InkCanvas에 플러그 인 추가  
@@ -58,18 +58,18 @@ ms.locfileid: "54667035"
   
  다음 예제에서는 사용자 지정 <xref:System.Windows.Controls.InkCanvas> 잉크를 필터링 하는 합니다.  
   
- [!code-csharp[AdvancedInkTopicsSamples#4](../../../../samples/snippets/csharp/VS_Snippets_Wpf/AdvancedInkTopicsSamples/CSharp/Window1.xaml.cs#4)]  
+ [!code-csharp[AdvancedInkTopicsSamples#4](~/samples/snippets/csharp/VS_Snippets_Wpf/AdvancedInkTopicsSamples/CSharp/Window1.xaml.cs#4)]  
   
  추가 하는 경우는 `FilterInkCanvas` 응용 프로그램을 실행, 알 수 있습니다 잉크 되지까지 지역으로 제한 된 사용자가 스트로크를 완료 합니다. 때문에 이것이 <xref:System.Windows.Controls.InkCanvas> 에 <xref:System.Windows.Controls.InkCanvas.DynamicRenderer%2A> 속성을 <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> 멤버인 이미를 <xref:System.Windows.UIElement.StylusPlugIns%2A> 컬렉션. 사용자 지정 <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> 추가한 합니다 <xref:System.Windows.UIElement.StylusPlugIns%2A> 컬렉션 수신 합니다 <xref:System.Windows.Input.StylusPoint> 후 데이터 <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> 데이터를 수신 합니다. 결과적으로 <xref:System.Windows.Input.StylusPoint> 데이터 후 사용자가 스트로크를 종료 하려면 펜을 뗄 때까지 필터링 되지 것입니다. 사용자가 그리는으로 잉크를 필터링 하려면 삽입 해야 합니다 `FilterPlugin` 하기 전에 <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer>.  
   
  다음 C# 코드에서는 사용자 지정 <xref:System.Windows.Controls.InkCanvas> 필터링 하는 잉크를 그릴 때.  
   
- [!code-csharp[AdvancedInkTopicsSamples#5](../../../../samples/snippets/csharp/VS_Snippets_Wpf/AdvancedInkTopicsSamples/CSharp/Window1.xaml.cs#5)]  
+ [!code-csharp[AdvancedInkTopicsSamples#5](~/samples/snippets/csharp/VS_Snippets_Wpf/AdvancedInkTopicsSamples/CSharp/Window1.xaml.cs#5)]  
   
 <a name="Conclusion"></a>   
 ## <a name="conclusion"></a>결론  
  직접 파생 시켜 <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> 클래스에 삽입 하 <xref:System.Windows.Input.StylusPlugIns.StylusPlugInCollection> 컬렉션 디지털 잉크의 동작을 크게 향상 시킬 수 있습니다. 에 액세스할 수는 <xref:System.Windows.Input.StylusPoint> 데이터를 사용자 지정할 수 있으므로 생성 되는 <xref:System.Windows.Input.Stylus> 입력 합니다. 이러한 하위 수준 액세스를 갖고 있으므로 <xref:System.Windows.Input.StylusPoint> 데이터 잉크 모음 및 렌더링 최적의 성능으로 응용 프로그램을 구현할 수 있습니다.  
   
 ## <a name="see-also"></a>참고자료
-- [고급 잉크 처리](../../../../docs/framework/wpf/advanced/advanced-ink-handling.md)
+- [고급 잉크 처리](advanced-ink-handling.md)
 - [액세스 및 조작을 펜 입력](https://go.microsoft.com/fwlink/?LinkId=50752&clcid=0x409)
