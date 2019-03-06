@@ -8,12 +8,12 @@ helpviewer_keywords:
 - DataGrid [WPF], displaying data from SQL Server
 - controls [WPF], DataGrid
 ms.assetid: 6810b048-0a23-4f86-bfa5-97f92b3cfab4
-ms.openlocfilehash: 6cf56a853377a9c062009fb8a4082cd5380905c6
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
+ms.openlocfilehash: 022be17c946529583694afc0fe1c61b832aa03e4
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56748416"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57351323"
 ---
 # <a name="walkthrough-display-data-from-a-sql-server-database-in-a-datagrid-control"></a>연습: DataGrid 컨트롤에는 SQL Server 데이터베이스에서 데이터를 표시 합니다.
 
@@ -37,7 +37,7 @@ ms.locfileid: "56748416"
 
 3.  설치 된 템플릿 창에서 선택 **데이터** 템플릿의 목록에서 선택 하 고 **ADO.NET Entity Data Model**합니다.
 
-     ![ADO.NET 엔터티 데이터 모델 항목 템플릿](../../wcf/feature-details/media/ado-net-entity-data-model-item-template.png)
+     ![ADO.NET 엔터티 데이터 모델 항목 템플릿](../../wcf/feature-details/./media/ado-net-entity-data-model-item-template.png)
 
 4.  파일 이름을 `AdventureWorksModel.edmx` 을 클릭 한 다음 **추가**합니다.
 
@@ -53,13 +53,13 @@ ms.locfileid: "56748416"
 
      모든 테이블;에 대 한 엔터티 클래스를 생성할 수 있습니다. 그러나이 예제의에서 데이터를 검색할 테이블입니다.
 
-     ![Product 및 ProductCategory 테이블에서 선택](../../../../docs/framework/wpf/controls/media/datagrid-sql-ef-step4.png "DataGrid_SQL_EF_Step4")
+     ![Product 및 ProductCategory 테이블에서 선택](./media/datagrid-sql-ef-step4.png "DataGrid_SQL_EF_Step4")
 
 8. **마침**을 클릭합니다.
 
      Product 및 ProductCategory 엔터티는 Entity Designer에 표시 됩니다.
 
-     ![Product 및 ProductCategory 엔터티 모델](../../../../docs/framework/wpf/controls/media/datagrid-sql-ef-step5.png "DataGrid_SQL_EF_Step5")
+     ![Product 및 ProductCategory 엔터티 모델](./media/datagrid-sql-ef-step5.png "DataGrid_SQL_EF_Step5")
 
 ## <a name="retrieve-and-present-the-data"></a>검색 및 데이터를 표시 합니다.
 
@@ -69,9 +69,9 @@ ms.locfileid: "56748416"
 
 3.  XAML 편집기에서 다음을 추가 <xref:System.Windows.Controls.DataGrid> 간의 태그를 `<Grid>` 및 `</Grid>` 추가할 태그를 <xref:System.Windows.Controls.DataGrid> 라는 `dataGrid1`.
 
-     [!code-xaml[DataGrid_SQL_EF_Walkthrough#3](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DataGrid_SQL_EF_Walkthrough/CS/MainWindow.xaml#3)]
+     [!code-xaml[DataGrid_SQL_EF_Walkthrough#3](~/samples/snippets/csharp/VS_Snippets_Wpf/DataGrid_SQL_EF_Walkthrough/CS/MainWindow.xaml#3)]
 
-     ![DataGrid가 있는 창](../../../../docs/framework/wpf/controls/media/datagrid-sql-ef-step6.png "DataGrid_SQL_EF_Step6")
+     ![DataGrid가 있는 창](./media/datagrid-sql-ef-step6.png "DataGrid_SQL_EF_Step6")
 
 4.  <xref:System.Windows.Window>를 선택합니다.
 
@@ -82,20 +82,20 @@ ms.locfileid: "56748416"
     > [!NOTE]
     > Visual Basic의 경우 MainWindow.xaml의 첫 번째 줄을 사용 하는 경우 대체 `x:Class="DataGridSQLExample.MainWindow"` 사용 하 여 `x:Class="MainWindow"`입니다.
 
-     [!code-xaml[DataGrid_SQL_EF_Walkthrough#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DataGrid_SQL_EF_Walkthrough/CS/MainWindow.xaml#1)]
+     [!code-xaml[DataGrid_SQL_EF_Walkthrough#1](~/samples/snippets/csharp/VS_Snippets_Wpf/DataGrid_SQL_EF_Walkthrough/CS/MainWindow.xaml#1)]
 
 6.  (MainWindow.xaml.vb 또는 MainWindow.xaml.cs)의 코드 숨김 파일을 엽니다는 <xref:System.Windows.Window>합니다.
 
 7.  조인된 된 테이블의 특정 값만 검색 하 고 설정에 다음 코드를 추가 합니다 <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A> 의 속성을 <xref:System.Windows.Controls.DataGrid> 쿼리의 결과에.
 
-     [!code-csharp[DataGrid_SQL_EF_Walkthrough#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DataGrid_SQL_EF_Walkthrough/CS/MainWindow.xaml.cs#2)]
-     [!code-vb[DataGrid_SQL_EF_Walkthrough#2](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DataGrid_SQL_EF_Walkthrough/VB/MainWindow.xaml.vb#2)]
+     [!code-csharp[DataGrid_SQL_EF_Walkthrough#2](~/samples/snippets/csharp/VS_Snippets_Wpf/DataGrid_SQL_EF_Walkthrough/CS/MainWindow.xaml.cs#2)]
+     [!code-vb[DataGrid_SQL_EF_Walkthrough#2](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DataGrid_SQL_EF_Walkthrough/VB/MainWindow.xaml.vb#2)]
 
 8.  예제를 실행합니다.
 
      표시 된 <xref:System.Windows.Controls.DataGrid> 데이터를 표시 하는 합니다.
 
-     ![SQL database에서 데이터를 사용 하 여 DataGrid](../../../../docs/framework/wpf/controls/media/datagrid-sql-ef-step7.png "DataGrid_SQL_EF_Step7")
+     ![SQL database에서 데이터를 사용 하 여 DataGrid](./media/datagrid-sql-ef-step7.png "DataGrid_SQL_EF_Step7")
 
 ## <a name="see-also"></a>참고자료
 

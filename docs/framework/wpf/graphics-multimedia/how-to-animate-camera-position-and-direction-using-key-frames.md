@@ -9,12 +9,12 @@ helpviewer_keywords:
 - key frames [WPF], animating camera position
 - camera direction [WPF], animating with key frames
 ms.assetid: 5753024e-0057-454d-947f-43ea686879c7
-ms.openlocfilehash: 3284b11939b6f0bb921a4cfeb7fd0d4172b46f69
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5df3a201eaae4ddcf2e5d5aac3de6e0d5013947c
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54663559"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57353402"
 ---
 # <a name="how-to-animate-camera-position-and-direction-using-key-frames"></a>방법: 키 프레임을 사용하여 카메라 위치 및 방향에 애니메이션 효과 주기
 다음 예에서 <xref:System.Windows.Media.Animation.Point3DAnimationUsingKeyFrames> 위치에 애니메이션을 적용 하는 데 사용 되는 <xref:System.Windows.Media.Media3D.PerspectiveCamera> 3D 장면에서. 또한 <xref:System.Windows.Media.Animation.Vector3DAnimationUsingKeyFrames> 3D 장면에서 카메라 가리키고 방향에 애니메이션을 적용 하는 데 사용 됩니다. 이러한 애니메이션은 둘 다 다양 한 애니메이션 효과 만드는 몇 가지 키 프레임을 사용 합니다.  
@@ -26,8 +26,8 @@ ms.locfileid: "54663559"
 3.  <xref:System.Windows.Media.Animation.SplinePoint3DKeyFrame> 및 <xref:System.Windows.Media.Animation.SplineVector3DKeyFrame> 에 따라 값 사이 가변 전환을 만드는 데 사용 되는 <xref:System.Windows.Media.Animation.SplinePoint3DKeyFrame.KeySpline%2A> 속성입니다. 아래 예제에서는 애니메이션이 서서히 하지만 시간 세그먼트의 끝에 다가가 시작, 면 기하급수적으로 빨라집니다.  
   
 ## <a name="example"></a>예제  
- [!code-xaml[Animation3DGallery_snip#PointVector3DAnimationUsingKeyFramesExampleWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Animation3DGallery_snip/CS/PointVector3DAnimationUsingKeyFramesExample.xaml#pointvector3danimationusingkeyframesexamplewholepage)]  
+ [!code-xaml[Animation3DGallery_snip#PointVector3DAnimationUsingKeyFramesExampleWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/Animation3DGallery_snip/CS/PointVector3DAnimationUsingKeyFramesExample.xaml#pointvector3danimationusingkeyframesexamplewholepage)]  
   
 ## <a name="see-also"></a>참고자료
-- [3차원 장면에서 카메라 위치 및 방향에 애니메이션 효과 주기](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-camera-position-and-direction-in-a-3d-scene.md)
-- [3차원 그래픽 개요](../../../../docs/framework/wpf/graphics-multimedia/3-d-graphics-overview.md)
+- [3차원 장면에서 카메라 위치 및 방향에 애니메이션 효과 주기](how-to-animate-camera-position-and-direction-in-a-3d-scene.md)
+- [3차원 그래픽 개요](3-d-graphics-overview.md)

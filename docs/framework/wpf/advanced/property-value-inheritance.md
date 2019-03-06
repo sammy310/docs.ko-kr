@@ -6,12 +6,12 @@ helpviewer_keywords:
 - value inheritance [WPF]
 - properties [WPF], value inheritance
 ms.assetid: d7c338f9-f2bf-48ed-832c-7be58ac390e4
-ms.openlocfilehash: e6b16bc3fc482e0f640f8b2d083392e6f94de618
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 64cafbe2f6044c83600ef227608dee24b29e3943
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54520585"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57359884"
 ---
 # <a name="property-value-inheritance"></a>속성 값 상속
 속성 값 상속은 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 속성 시스템의 기능입니다. 속성 값 상속을 통해 요소 트리의 자식 요소가 부모 요소에서 특정 속성 값을 얻어 가장 근접한 부모 요소의 아무 곳에서나 설정되었을 때 해당 값을 상속합니다. 부모 요소는 속성 값 상속을 통해 값을 얻었을 수 있으므로 시스템이 완전히 페이지 루트로 되돌아갈 수 있습니다. 속성 값 상속은 기본 속성 시스템 동작이 아닙니다. 속성이 자식 요소에서 속성 값 상속을 시작하게 하려면 특정 메타데이터 설정을 사용하여 속성을 설정해야 합니다.  
@@ -30,7 +30,7 @@ ms.locfileid: "54520585"
 ## <a name="making-a-custom-property-inheritable"></a>사용자 지정 속성을 상속 가능으로 설정  
  사용자 지정 속성의 메타데이터를 변경하여 자체 사용자 지정 속성을 상속 가능으로 설정할 수도 있습니다. 하지만 속성을 상속 가능으로 지정할 경우 성능상 몇 가지 사항을 고려해야 합니다. 속성에 설정된 로컬 값이 없거나 스타일, 템플릿 또는 데이터 바인딩을 통해 얻은 값이 없는 경우 상속 가능 속성은 논리 트리에서 모든 자식 요소에 할당된 속성 값을 제공합니다.  
   
- 속성을 값 상속에 참여하도록 설정하려면 [연결된 속성 등록](../../../../docs/framework/wpf/advanced/how-to-register-an-attached-property.md)에 설명된 대로 사용자 지정 연결된 속성을 만듭니다. 메타 데이터를 사용 하 여 속성을 등록 (<xref:System.Windows.FrameworkPropertyMetadata>) 하 고 해당 메타 데이터 내의 옵션 설정에서 "Inherits" 옵션을 지정 합니다. 또한 속성에 설정된 기본값이 있는지 확인합니다. 이제 이 값이 상속되기 때문입니다. 속성을 연결된 속성으로 등록하더라도 "연결되지 않은" 종속성 속성의 경우처럼 소유자 형식에서 get/set 액세스에 대한 속성 “래퍼”를 만들어야 할 수 있습니다. 이렇게 하면 상속 가능한 속성을 설정할 수 있습니다 소유자 형식 또는 파생된 형식에서 직접 속성 래퍼를 사용 하 여에 연결된 된 속성 구문을 사용 하 여 설정할 수 있습니다 또는 <xref:System.Windows.DependencyObject>합니다.  
+ 속성을 값 상속에 참여하도록 설정하려면 [연결된 속성 등록](how-to-register-an-attached-property.md)에 설명된 대로 사용자 지정 연결된 속성을 만듭니다. 메타 데이터를 사용 하 여 속성을 등록 (<xref:System.Windows.FrameworkPropertyMetadata>) 하 고 해당 메타 데이터 내의 옵션 설정에서 "Inherits" 옵션을 지정 합니다. 또한 속성에 설정된 기본값이 있는지 확인합니다. 이제 이 값이 상속되기 때문입니다. 속성을 연결된 속성으로 등록하더라도 "연결되지 않은" 종속성 속성의 경우처럼 소유자 형식에서 get/set 액세스에 대한 속성 “래퍼”를 만들어야 할 수 있습니다. 이렇게 하면 상속 가능한 속성을 설정할 수 있습니다 소유자 형식 또는 파생된 형식에서 직접 속성 래퍼를 사용 하 여에 연결된 된 속성 구문을 사용 하 여 설정할 수 있습니다 또는 <xref:System.Windows.DependencyObject>합니다.  
   
  연결 된 속성은 전역 속성을 개념적으로 비슷합니다. 모든 값을 확인할 수 있습니다 <xref:System.Windows.DependencyObject> 유효한 결과 받고 있습니다. 연결 된 속성에 대 한 일반적인 시나리오는 자식 요소에 속성 값을 설정 및 해당 시나리오가 해당 속성에 연결된 된 속성은 항상 각 요소에 대해 연결된 된 속성으로 암시적으로 존재 하는 경우에 더 효과적입니다 (<xref:System.Windows.DependencyObject>) 트리에서 합니다.  
   
@@ -42,6 +42,6 @@ ms.locfileid: "54520585"
  속성 상속은 요소 트리를 통과하는 방식으로 수행됩니다. 이 트리는 일반적으로 논리 트리와 비슷합니다. 그러나 포함 하는 경우 WPF 핵심 수준 개체와 같은 요소 트리를 정의 하는 태그에는 <xref:System.Windows.Media.Brush>, 불연속적인 논리 트리를 만들었습니다. 실제 논리적 트리를 통해 개념적으로 확장 되지 않습니다는 <xref:System.Windows.Media.Brush>논리적 트리는 WPF 프레임 워크 수준 개념 이기 때문입니다. 메서드를 사용 하는 경우 결과에 반영이 나타나면 <xref:System.Windows.LogicalTreeHelper>합니다. 그러나 속성 값 상속 논리 트리에서 이러한 차이 극복 하는 수 고으로 상속 가능한 속성이 연결된 된 속성 없습니다 의도적인 상속 차단 경계와 등록 된 상속 된 값을 전달할 수 있습니다 ( 는같은<xref:System.Windows.Controls.Frame>)가 발생 했습니다.  
   
 ## <a name="see-also"></a>참고자료
-- [종속성 속성 메타데이터](../../../../docs/framework/wpf/advanced/dependency-property-metadata.md)
-- [연결된 속성 개요](../../../../docs/framework/wpf/advanced/attached-properties-overview.md)
-- [종속성 속성 값 우선 순위](../../../../docs/framework/wpf/advanced/dependency-property-value-precedence.md)
+- [종속성 속성 메타데이터](dependency-property-metadata.md)
+- [연결된 속성 개요](attached-properties-overview.md)
+- [종속성 속성 값 우선 순위](dependency-property-value-precedence.md)

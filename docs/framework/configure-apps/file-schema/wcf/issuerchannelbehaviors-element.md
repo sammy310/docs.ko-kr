@@ -2,55 +2,61 @@
 title: <issuerChannelBehaviors> 요소
 ms.date: 03/30/2017
 ms.assetid: f7378673-8e9b-45b2-98d1-cf5dccdd8c40
-ms.openlocfilehash: 624848db4cead14e46c97bba7404adcb65e43d4d
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 3386a287d577681b67bd3ad54a75b0276e29da1f
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55274143"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57357250"
 ---
 # <a name="issuerchannelbehaviors-element"></a>\<issuerChannelBehaviors > 요소
-지정한 서비스 토큰 서비스와 통신할 때 사용 되는 Windows Communication Foundation (WCF) 클라이언트 끝점 동작 (구성에 정의 됨)의 컬렉션을 포함 합니다. 정의 된 동작을 포함할 수 없습니다 [ \<clientCredentials >](../../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md) 요소입니다.  
-  
- \<system.ServiceModel>  
-\<behaviors>  
-endpointBehaviors 섹션  
-\<behavior>  
-\<clientCredentials>  
-\<issuedToken>  
-\<issuerChannelBehaviors>  
-  
-## <a name="syntax"></a>구문  
-  
-```xml  
+
+지정한 서비스 토큰 서비스와 통신할 때 사용 되는 Windows Communication Foundation (WCF) 클라이언트 끝점 동작 (구성에 정의 됨)의 컬렉션을 포함 합니다. 정의 된 동작을 포함할 수 없습니다 [ \<clientCredentials >](../../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md) 요소입니다.
+
+\<system.ServiceModel>\
+\<behaviors>\
+endpointBehaviors section\
+\<behavior>\
+\<clientCredentials>\
+\<issuedToken>\
+\<issuerChannelBehaviors>
+
+## <a name="syntax"></a>구문
+
+```xml
 <issuerChannelBehaviors>
-  <add behaviorConfiguraton="string"
+  <add behaviorConfiguration="string"
        issuerAddress="string" />
 </issuerChannelBehaviors>
-```  
-  
-## <a name="attributes-and-elements"></a>특성 및 요소  
- 다음 섹션에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
-  
-### <a name="attributes"></a>특성  
- 없음  
-  
-### <a name="child-elements"></a>자식 요소  
-  
-|요소|설명|  
-|-------------|-----------------|  
-|[\<add>](../../../../../docs/framework/configure-apps/file-schema/wcf/add-of-issuerchannelbehaviors.md)|동작을 컬렉션에 추가합니다.|  
-  
-### <a name="parent-elements"></a>부모 요소  
-  
-|요소|설명|  
-|-------------|-----------------|  
-|[\<issuedToken>](../../../../../docs/framework/configure-apps/file-schema/wcf/issuedtoken.md)|서비스에 대해 클라이언트를 인증할 때 사용되는 사용자 지정 토큰을 지정합니다.|  
-  
-## <a name="remarks"></a>설명  
- `<clientCredentials>` 요소를 포함하는 동작을 제외한 동작을 서비스와 통신하는 데 사용하는 경우 이 요소를 사용합니다. 예를 들어 경우는 [ \<dataContractSerializer >](../../../../../docs/framework/configure-apps/file-schema/wcf/datacontractserializer-element.md) 동작 요소가 포함 되어야 합니다.  
-  
+```
+
+## <a name="attributes-and-elements"></a>특성 및 요소
+
+다음 섹션에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.
+
+### <a name="attributes"></a>특성
+
+없음
+
+### <a name="child-elements"></a>자식 요소
+
+|요소|설명|
+|-------------|-----------------|
+|[\<add>](../../../../../docs/framework/configure-apps/file-schema/wcf/add-of-issuerchannelbehaviors.md)|동작을 컬렉션에 추가합니다.|
+
+### <a name="parent-elements"></a>부모 요소
+
+|요소|설명|
+|-------------|-----------------|
+|[\<issuedToken>](../../../../../docs/framework/configure-apps/file-schema/wcf/issuedtoken.md)|서비스에 대해 클라이언트를 인증할 때 사용되는 사용자 지정 토큰을 지정합니다.|
+
+## <a name="remarks"></a>설명
+
+
+  `<clientCredentials>` 요소를 포함하는 동작을 제외한 동작을 서비스와 통신하는 데 사용하는 경우 이 요소를 사용합니다. 예를 들어 경우는 [ \<dataContractSerializer >](../../../../../docs/framework/configure-apps/file-schema/wcf/datacontractserializer-element.md) 동작 요소가 포함 되어야 합니다.
+
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.ServiceModel.Configuration.IssuedTokenClientElement.IssuerChannelBehaviors%2A>
 - <xref:System.ServiceModel.Configuration.IssuedTokenClientBehaviorsElement>
 - <xref:System.ServiceModel.Configuration.IssuedTokenClientBehaviorsElementCollection>

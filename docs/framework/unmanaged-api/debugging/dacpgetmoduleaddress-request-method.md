@@ -15,12 +15,12 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: 1b69a3385743e948dd52dee75be2f975066c5f85
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3cc3b0258381b10c27dd58bee66dbb6b2cf5b2c8
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54542602"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57351088"
 ---
 # <a name="dacpgetmoduleaddressrequest-method"></a>DacpGetModuleAddress::Request 메서드
 
@@ -36,9 +36,10 @@ HRESULT Request(
 );
 ```
 
-### <a name="parameters"></a>매개 변수
+## <a name="parameters"></a>매개 변수
 
-`pDataModule` [in] 초기값 데이터 모듈에 대 한 포인터입니다.
+`pDataModule`\
+[in] 초기값 데이터 모듈에 대 한 포인터입니다.
 
 ## <a name="remarks"></a>설명
 
@@ -56,5 +57,5 @@ HRESULT Request(
 
 ## <a name="see-also"></a>참고자료
 
-- [디버깅](../../../../docs/framework/unmanaged-api/debugging/index.md)
-- [DacpGetModuleAddress 인터페이스](../../../../docs/framework/unmanaged-api/debugging/dacpgetmoduleaddress-structure.md)
+- [디버깅](index.md)
+- [DacpGetModuleAddress 인터페이스](dacpgetmoduleaddress-structure.md)

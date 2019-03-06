@@ -15,12 +15,12 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: 0fbb246f8c4bf791dd705aedf8eab6ef8bfeae56
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: dacf76582916ad50f51ae7c8818b496f31f9553e
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54680268"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57353116"
 ---
 # <a name="ixclrdatamethoddefinitionenuminstance-method"></a>IXCLRDataMethodDefinition::EnumInstance 메서드
 
@@ -37,11 +37,13 @@ HRESULT EnumInstance(
 );
 ```
 
-### <a name="parameters"></a>매개 변수
+## <a name="parameters"></a>매개 변수
 
-`handle` [out에서] 인스턴스를 열거 하는 것에 대 한 핸들입니다.
+`handle`\
+[out에서] 인스턴스를 열거 하는 것에 대 한 핸들입니다.
 
-`instance` [out] 열거 된 인스턴스입니다.
+`instance`\
+[out] 열거 된 인스턴스입니다.
 
 ## <a name="remarks"></a>설명
 

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - strings [WPF], animating with key frames
 - key frames [WPF], animating strings with
 ms.assetid: c62bc9fd-c09a-4227-bce0-0a1ab82049dd
-ms.openlocfilehash: 4cadc1e7e4b7ee70e3a71ddaf433327a7561125d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 70c5766da2ea91f519756cb47b20d688b33253e0
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54670836"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57356236"
 ---
 # <a name="how-to-animate-a-string-by-using-key-frames"></a>방법: 키 프레임을 사용하여 문자열에 애니메이션 효과 주기
 이 예제는 문자열에 애니메이션을 적용 하는 방법을 보여 주는이 예제는 <xref:System.Windows.Controls.ContentControl.Content%2A> 의 속성을 <xref:System.Windows.Controls.Button> 키 프레임을 사용 하 여 컨트롤을 합니다.  
@@ -21,7 +21,7 @@ ms.locfileid: "54670836"
   
  이 예제에서 모든 키 프레임의 인스턴스를 사용 합니다 <xref:System.Windows.Media.Animation.DiscreteStringKeyFrame> 키 프레임을 사용 하 여 만든 문자열 애니메이션을 불연속 키 프레임에만 사용할 수 있으므로 클래스. 과 같은 불연속 키 프레임 <xref:System.Windows.Media.Animation.DiscreteStringKeyFrame> 애니메이션에 변경 내용을 신속 하 게 발생 한, 즉 값 간에 갑작스러운 이동을 만듭니다.  
   
- [!code-xaml[keyframes_snip#StringAnimationUsingKeyFramesWholePage](../../../../samples/snippets/xaml/VS_Snippets_Wpf/keyframes_snip/XAML/StringAnimationUsingKeyFramesExample.xaml#stringanimationusingkeyframeswholepage)]  
+ [!code-xaml[keyframes_snip#StringAnimationUsingKeyFramesWholePage](~/samples/snippets/xaml/VS_Snippets_Wpf/keyframes_snip/XAML/StringAnimationUsingKeyFramesExample.xaml#stringanimationusingkeyframeswholepage)]  
   
  전체 샘플을 보려면 [키 프레임 애니메이션 샘플](https://go.microsoft.com/fwlink/?LinkID=160012)을 참조하세요.  
   
@@ -30,5 +30,5 @@ ms.locfileid: "54670836"
 - <xref:System.Windows.Controls.ContentControl.Content%2A>
 - <xref:System.Windows.Controls.Button>
 - <xref:System.Windows.Media.Animation.DiscreteStringKeyFrame>
-- [키 프레임 애니메이션 개요](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md)
-- [키 프레임 방법 항목](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animation-how-to-topics.md)
+- [키 프레임 애니메이션 개요](key-frame-animations-overview.md)
+- [키 프레임 방법 항목](key-frame-animation-how-to-topics.md)

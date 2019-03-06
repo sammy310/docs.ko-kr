@@ -15,12 +15,12 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: 47cea4810b764005e87d00966c15cf138f5913a7
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.openlocfilehash: 4e32facc65162c4deb853cd507a00126e5f786e7
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55825955"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57352596"
 ---
 # <a name="isosdacinterfacegetmethoddescdata-method"></a>ISOSDacInterface::GetMethodDescData 메서드
 
@@ -41,19 +41,25 @@ HRESULT GetMethodDescData(
 );
 ```
 
-### <a name="parameters"></a>매개 변수
+## <a name="parameters"></a>매개 변수
 
-`methodDesc` [in] 주소는 MethodDesc입니다.
+`methodDesc`\
+[in] 주소는 MethodDesc입니다.
 
-`ip` [in] 메서드의 IP 주소입니다.
+`ip`\
+[in] 메서드의 IP 주소입니다.
 
-`data` [out] 내부 Api에서 반환 되는 MethodDesc와 연결 된 데이터입니다.
+`data`\
+[out] 내부 Api에서 반환 되는 MethodDesc와 연결 된 데이터입니다.
 
-`cRevertedRejitVersions` [out] 되돌린된 rejit 버전 수입니다.
+`cRevertedRejitVersions`\
+[out] 되돌린된 rejit 버전 수입니다.
 
-`rgRevertedRejitData` [out] 내부 Api에서 반환 된 되돌린된 rejit 버전과 연결 된 데이터입니다.
+`rgRevertedRejitData`\
+[out] 내부 Api에서 반환 된 되돌린된 rejit 버전과 연결 된 데이터입니다.
 
-`pcNeededRevertedRejitData` [out] 되돌린된 ReJit 버전과 연결 된 데이터를 저장 하는 데 필요한 바이트 수입니다.
+`pcNeededRevertedRejitData`\
+[out] 되돌린된 ReJit 버전과 연결 된 데이터를 저장 하는 데 필요한 바이트 수입니다.
 
 ## <a name="remarks"></a>설명
 
@@ -68,5 +74,5 @@ HRESULT GetMethodDescData(
 
 ## <a name="see-also"></a>참고자료
 
-- [디버깅](../../../../docs/framework/unmanaged-api/debugging/index.md)
-- [ISOSDacInterface 인터페이스](../../../../docs/framework/unmanaged-api/debugging/isosdacinterface-interface.md)
+- [디버깅](index.md)
+- [ISOSDacInterface 인터페이스](isosdacinterface-interface.md)

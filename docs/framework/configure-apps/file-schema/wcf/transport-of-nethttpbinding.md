@@ -3,11 +3,11 @@ title: <transport>의 <netHttpBinding>
 ms.date: 03/30/2017
 ms.assetid: 3b180006-1661-43bf-a699-96fd3da469af
 ms.openlocfilehash: 4d84d99660e4804a5eff2e343ba01c2983520b8f
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55280997"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57379733"
 ---
 # <a name="transport-of-nethttpbinding"></a>\<전송 >의 \<netHttpBinding >
 HTTP 전송의 인증 매개 변수를 제어하는 속성을 정의합니다.  

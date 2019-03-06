@@ -8,12 +8,12 @@ helpviewer_keywords:
 - controls [WPF], ListView
 - ListView controls [WPF], about ListView control
 ms.assetid: 989e12b0-260e-4570-95c6-489284003ce2
-ms.openlocfilehash: 42573304d6f3d6d145887fa7289f9b5ec019f521
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 07328a83e431bab02a72c3f252299e4b6b919b82
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54701549"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57379148"
 ---
 # <a name="listview-overview"></a>ListView 개요
 <xref:System.Windows.Controls.ListView> 컨트롤은 데이터 항목 집합을 다른 레이아웃 보기에 표시 하기 위한 인프라를 제공 합니다. 예를 들어 사용자가 데이터 항목을 표에 표시하고 해당 열을 정렬해야 할 수도 있습니다.  
@@ -29,31 +29,31 @@ ms.locfileid: "54701549"
   
  다음 예제에서는 정의 하는 방법을 보여 줍니다는 <xref:System.Windows.Controls.GridView> 에 대 한는 <xref:System.Windows.Controls.ListView> 직원 정보를 표시 하는 컨트롤입니다.  
   
- [!code-xaml[ListViewCode#ListViewEmployee](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ListViewCode/CSharp/Window1.xaml#listviewemployee)]  
+ [!code-xaml[ListViewCode#ListViewEmployee](~/samples/snippets/csharp/VS_Snippets_Wpf/ListViewCode/CSharp/Window1.xaml#listviewemployee)]  
   
  다음 그림에서는 이전 예제의 데이터가 표시되는 방법을 보여 줍니다.  
   
- ![GridView 출력이 있는 ListView](../../../../docs/framework/wpf/controls/media/listviewgridview.JPG "ListViewGridView")  
+ ![GridView 출력이 있는 ListView](./media/listviewgridview.JPG "ListViewGridView")  
   
- 상속 되는 클래스를 정의 하 여 사용자 지정 뷰 모드를 만들 수는 <xref:System.Windows.Controls.ViewBase> 클래스입니다. <xref:System.Windows.Controls.ViewBase> 클래스는 사용자 지정 보기를 생성 해야 하는 인프라를 제공 합니다. 사용자 지정 뷰를 만드는 방법에 대한 자세한 내용은 [ListView의 사용자 지정 뷰 모드 만들기](../../../../docs/framework/wpf/controls/how-to-create-a-custom-view-mode-for-a-listview.md)를 참조하세요.  
+ 상속 되는 클래스를 정의 하 여 사용자 지정 뷰 모드를 만들 수는 <xref:System.Windows.Controls.ViewBase> 클래스입니다. <xref:System.Windows.Controls.ViewBase> 클래스는 사용자 지정 보기를 생성 해야 하는 인프라를 제공 합니다. 사용자 지정 뷰를 만드는 방법에 대한 자세한 내용은 [ListView의 사용자 지정 뷰 모드 만들기](how-to-create-a-custom-view-mode-for-a-listview.md)를 참조하세요.  
   
 <a name="BindingDatatoaListView"></a>   
 ## <a name="binding-data-to-a-listview"></a>ListView에 데이터 바인딩  
  사용 합니다 <xref:System.Windows.Controls.ItemsControl.Items%2A> 및 <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A> 에 대 한 항목을 지정 하는 속성을 <xref:System.Windows.Controls.ListView> 제어 합니다. 다음 예제에서는 합니다 <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A> 속성 이라고 하는 데이터 컬렉션을 `EmployeeInfoDataSource`입니다.  
   
- [!code-xaml[ListViewCode#ItemsSource](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ListViewCode/CSharp/Window1.xaml#itemssource)]  
+ [!code-xaml[ListViewCode#ItemsSource](~/samples/snippets/csharp/VS_Snippets_Wpf/ListViewCode/CSharp/Window1.xaml#itemssource)]  
   
  에 <xref:System.Windows.Controls.GridView>, <xref:System.Windows.Controls.GridViewColumn> 개체는 지정 된 데이터 필드에 바인딩합니다. 다음 예제에서는 <xref:System.Windows.Controls.GridViewColumn> 개체를 지정 하 여 데이터 필드를 <xref:System.Windows.Data.Binding> 에 대 한는 <xref:System.Windows.Controls.GridViewColumn.DisplayMemberBinding%2A> 속성입니다.  
   
- [!code-csharp[ListViewCode#GridViewColumnProperties](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ListViewCode/CSharp/Window1.xaml.cs#gridviewcolumnproperties)]
- [!code-vb[ListViewCode#GridViewColumnProperties](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ListViewCode/visualbasic/window1.xaml.vb#gridviewcolumnproperties)]
- [!code-xaml[ListViewCode#GridViewColumnProperties](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ListViewCode/CSharp/Window1.xaml#gridviewcolumnproperties)]  
+ [!code-csharp[ListViewCode#GridViewColumnProperties](~/samples/snippets/csharp/VS_Snippets_Wpf/ListViewCode/CSharp/Window1.xaml.cs#gridviewcolumnproperties)]
+ [!code-vb[ListViewCode#GridViewColumnProperties](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ListViewCode/visualbasic/window1.xaml.vb#gridviewcolumnproperties)]
+ [!code-xaml[ListViewCode#GridViewColumnProperties](~/samples/snippets/csharp/VS_Snippets_Wpf/ListViewCode/CSharp/Window1.xaml#gridviewcolumnproperties)]  
   
  지정할 수도 있습니다는 <xref:System.Windows.Data.Binding> 의 일부로 <xref:System.Windows.DataTemplate> 열의 셀 스타일을 사용 하는 정의 합니다. 다음 예에서 <xref:System.Windows.DataTemplate> 로 식별 되는 <xref:System.Windows.ResourceKey> 설정 합니다 <xref:System.Windows.Data.Binding> 에 대 한를 <xref:System.Windows.Controls.GridViewColumn>입니다. 이 예제에서는 정의 하지 않는 참고 합니다 <xref:System.Windows.Controls.GridViewColumn.DisplayMemberBinding%2A> 수행 하므로 지정 된 바인딩 보다 우선 하므로 <xref:System.Windows.DataTemplate>합니다.  
   
- [!code-xaml[ListViewTemplate#GridViewCellTemplate](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ListViewTemplate/CS/window1.xaml#gridviewcelltemplate)]  
+ [!code-xaml[ListViewTemplate#GridViewCellTemplate](~/samples/snippets/csharp/VS_Snippets_Wpf/ListViewTemplate/CS/window1.xaml#gridviewcelltemplate)]  
   
- [!code-xaml[ListViewTemplate#CellTemplateProperty](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ListViewTemplate/CS/window1.xaml#celltemplateproperty)]  
+ [!code-xaml[ListViewTemplate#CellTemplateProperty](~/samples/snippets/csharp/VS_Snippets_Wpf/ListViewTemplate/CS/window1.xaml#celltemplateproperty)]  
   
 <a name="StylingaListView"></a>   
 ## <a name="styling-a-listview-that-implements-a-gridview"></a>GridView를 구현하는 ListView에 스타일 지정  
@@ -65,7 +65,7 @@ ms.locfileid: "54701549"
   
  에 있는 셀 사이의 맞춤 문제를 방지 하려면를 <xref:System.Windows.Controls.GridView>를 사용 하지 마십시오는 <xref:System.Windows.Controls.ItemsControl.ItemContainerStyle%2A> 에 있는 항목의 너비에 영향을 주는 콘텐츠를 추가 하거나 속성을 설정 하는 <xref:System.Windows.Controls.ListView>. 설정 하면 정렬 문제가 발생할 수 있습니다 예를 들어 합니다 <xref:System.Windows.FrameworkElement.Margin%2A> 속성에는 <xref:System.Windows.Controls.ItemsControl.ItemContainerStyle%2A>합니다. 항목 너비에 영향을 주는 콘텐츠를 정의 하거나 속성을 지정 하는 <xref:System.Windows.Controls.GridView>의 속성을 사용 합니다 <xref:System.Windows.Controls.GridView> 클래스 및 관련된 클래스를 같은 <xref:System.Windows.Controls.GridViewColumn>합니다.  
   
- 사용 하는 방법에 대 한 자세한 내용은 <xref:System.Windows.Controls.GridView> 지원 클래스를 살펴보고 [GridView 개요](../../../../docs/framework/wpf/controls/gridview-overview.md)합니다.  
+ 사용 하는 방법에 대 한 자세한 내용은 <xref:System.Windows.Controls.GridView> 지원 클래스를 살펴보고 [GridView 개요](gridview-overview.md)합니다.  
   
  정의 하는 경우는 <xref:System.Windows.Controls.ItemsControl.ItemContainerStyle%2A> 에 대 한를 <xref:System.Windows.Controls.ListView> 제어 하 고도 정의 <xref:System.Windows.Controls.ItemsControl.ItemTemplate%2A>를 포함 해야 합니다는 <xref:System.Windows.Controls.ContentPresenter> 되려면에서 스타일에서를 <xref:System.Windows.Controls.ItemsControl.ItemTemplate%2A> 제대로 작동 하려면.  
   
@@ -86,6 +86,6 @@ ms.locfileid: "54701549"
 - <xref:System.Windows.Controls.ListView>
 - <xref:System.Windows.Controls.ListViewItem>
 - <xref:System.Windows.Data.Binding>
-- [GridView 개요](../../../../docs/framework/wpf/controls/gridview-overview.md)
-- [방법 항목](../../../../docs/framework/wpf/controls/listview-how-to-topics.md)
-- [컨트롤](../../../../docs/framework/wpf/advanced/optimizing-performance-controls.md)
+- [GridView 개요](gridview-overview.md)
+- [방법 항목](listview-how-to-topics.md)
+- [컨트롤](../advanced/optimizing-performance-controls.md)

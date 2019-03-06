@@ -5,12 +5,12 @@ helpviewer_keywords:
 - typography [WPF], ClearType technology
 - ClearType [WPF], technology
 ms.assetid: 7e2392e0-75dc-463d-a716-908772782431
-ms.openlocfilehash: 08fb3b7a6d2af4ede27ebeb1454b040d2bd3eb43
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d5aee9eccad7075ca9f05e08a02ba008bab9a7e7
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54719224"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57355157"
 ---
 # <a name="cleartype-overview"></a>ClearType 개요
 이 항목에서는 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]에 있는 [!INCLUDE[TLA#tla_ct](../../../../includes/tlasharptla-ct-md.md)] 기술에 대해 간략하게 설명합니다.  
@@ -28,12 +28,12 @@ ms.locfileid: "54719224"
   
  다음 두 예에서는 하위 픽셀 위치 지정을 사용할 때 문자 모양이 모든 하위 픽셀 경계에서 시작할 수 있는 방법을 보여 줍니다. 왼쪽의 예는 하위 픽셀 위치 지정을 지원하지 않는 이전 버전의 [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] 렌더러를 사용하여 렌더링됩니다. 오른쪽의 예는 하위 픽셀 위치 지정을 지원하는 새 버전의 [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] 렌더러를 사용하여 렌더링됩니다. 오른쪽 이미지의 **e**와 **l**은 각각 서로 다른 하위 픽셀에서 시작하기 때문에 약간 다르게 렌더링됩니다. 화면에서 텍스트를 정상 크기로 볼 때는 문자 모양 이미지의 고대비로 인해 이 차이가 눈에 띄지 않습니다. 이는 [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)]에 통합된 정교한 색 필터링 때문에 가능합니다.  
   
- ![두 버전의 ClearType로 표시 된 텍스트](../../../../docs/framework/wpf/advanced/media/wcpsdk-mmgraphics-text-cleartype-overview-01.png "wcpsdk_mmgraphics_text_cleartype_overview_01")  
+ ![두 버전의 ClearType로 표시 된 텍스트](./media/wcpsdk-mmgraphics-text-cleartype-overview-01.png "wcpsdk_mmgraphics_text_cleartype_overview_01")  
 이전 버전 및 최신 버전의 ClearType으로 표시된 텍스트  
   
  다음 두 예에서는 이전 버전의 [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] 렌더러와 새 버전의 [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] 렌더러에서 만든 출력을 비교합니다. 오른쪽의 하위 픽셀 위치 지정은 화면의 글자 간격 조정을 크게 향상시키며, 특히 하위 픽셀과 전체 픽셀 사이의 차이가 문자 모양 너비의 많은 부분을 차지하는 작은 크기의 경우에는 더욱 그렇습니다. 두 번째 이미지에서는 글자 사이의 간격 조정이 더 균일합니다. 텍스트 화면의 전체적인 모양에서 하위 픽셀 위치 지정에 따른 이점이 크게 증가하여 [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] 기술의 중요한 발전을 보여 줍니다.  
   
- ![이전 버전의 ClearType로 표시 된 텍스트](../../../../docs/framework/wpf/advanced/media/wcpsdk-mmgraphics-text-cleartype-overview-02.png "wcpsdk_mmgraphics_text_cleartype_overview_02")  
+ ![이전 버전의 ClearType로 표시 된 텍스트](./media/wcpsdk-mmgraphics-text-cleartype-overview-02.png "wcpsdk_mmgraphics_text_cleartype_overview_02")  
 이전 버전 및 이후 버전의 ClearType을 통한 텍스트  
   
 <a name="y-direction_antialiasing"></a>   
@@ -42,14 +42,14 @@ ms.locfileid: "54719224"
   
  다음 예는 y 방향 앤티 앨리어싱을 사용하지 않는 경우의 효과를 보여 줍니다. 이 경우 글자의 위쪽과 아래쪽의 들쭉날쭉한 가장자리가 분명하게 눈에 띕니다.  
   
- ![얇은 곡선의 가장자리가 들쭉날쭉한 텍스트](../../../../docs/framework/wpf/advanced/media/wcpsdk-mmgraphics-text-cleartype-overview-03.png "wcpsdk_mmgraphics_text_cleartype_overview_03")  
+ ![얇은 곡선의 가장자리가 들쭉날쭉한 텍스트](./media/wcpsdk-mmgraphics-text-cleartype-overview-03.png "wcpsdk_mmgraphics_text_cleartype_overview_03")  
 얇은 곡선의 가장자리가 들쭉날쭉한 텍스트  
   
  [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]의 [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)]은 y 방향 수준에서 앤티 앨리어싱을 제공하여 들쭉날쭉한 가장자리를 매끄럽게 합니다. 이는 얇은 곡선의 가로와 세로 양이 거의 같은 표의 문자를 사용하는 동아시아 언어의 가독성을 향상시키는 데 특히 중요합니다.  
   
  다음 예는 y 방향 앤티 앨리어싱을 사용하는 경우의 효과를 보여 줍니다. 이 경우 글자의 위쪽과 아래쪽이 매끄러운 곡선을 나타냅니다.  
   
- ![ClearType y 사용 하 여 텍스트&#45;방향&#45;별칭](../../../../docs/framework/wpf/advanced/media/wcpsdk-mmgraphics-text-cleartype-overview-04.png "wcpsdk_mmgraphics_text_cleartype_overview_04")  
+ ![ClearType y 사용 하 여 텍스트&#45;방향&#45;별칭](./media/wcpsdk-mmgraphics-text-cleartype-overview-04.png "wcpsdk_mmgraphics_text_cleartype_overview_04")  
 ClearType y 방향 앤티앨리어싱으로 표시된 텍스트  
   
 <a name="hardware_acceleration"></a>   
@@ -67,4 +67,4 @@ ClearType y 방향 앤티앨리어싱으로 표시된 텍스트
  [ClearType Tuner PowerToy](https://www.microsoft.com/typography/ClearTypePowerToy.mspx)  
   
 ## <a name="see-also"></a>참고자료
-- [ClearType 레지스트리 설정](../../../../docs/framework/wpf/advanced/cleartype-registry-settings.md)
+- [ClearType 레지스트리 설정](cleartype-registry-settings.md)

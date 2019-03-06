@@ -17,17 +17,17 @@ helpviewer_keywords:
 - Windows Presentation Foundation [WPF], about security model
 - security model [WPF], operating system
 ms.assetid: 2a39a054-3e2a-4659-bcb7-8bcea490ba31
-ms.openlocfilehash: 2363042ace7440ee74e4590a2271e87c1389ebcc
-ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
+ms.openlocfilehash: 01d17b39e89b764871c1c70512eae6929cc98554
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56836346"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57353064"
 ---
 # <a name="wpf-security-strategy---platform-security"></a>WPF 보안 전략 - 플랫폼 보안
 운영 체제를 포함 하는 기본 플랫폼의 보안 기능도 활용 다양 한 보안 서비스를 제공 하는 Windows Presentation Foundation (WPF), 합니다 [!INCLUDE[TLA2#tla_clr](../../../includes/tla2sharptla-clr-md.md)], 및 [!INCLUDE[TLA2#tla_ie](../../../includes/tla2sharptla-ie-md.md)]합니다. 이러한 계층이 결합되어 다음 그림과 같이 단일 실패 지점을 방지하는 강력한 심층 방어 보안 모델인 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]를 제공합니다.  
   
- ![WPF 보안 설명](../../../docs/framework/wpf/media/windowplatformsecurity.PNG "windowplatformsecurity")  
+ ![WPF 보안 설명](./media/windowplatformsecurity.PNG "windowplatformsecurity")  
   
  이 항목의 나머지 부분에서는 특히 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]와 관련된 각 계층의 기능을 설명합니다.  
   
@@ -140,14 +140,14 @@ ms.locfileid: "56836346"
   
  다음 그림에서는 영역, 권한 집합, 권한 및 리소스 간의 관계를 보여 줍니다.  
   
- ![CAS 권한 집합](../../../docs/framework/wpf/media/caspermissionsets.png "CASPermissionSets")  
+ ![CAS 권한 집합](./media/caspermissionsets.png "CASPermissionSets")  
   
  인터넷 영역 보안 샌드박스의 제한 사항은 [!INCLUDE[TLA2#tla_winfxwebapp](../../../includes/tla2sharptla-winfxwebapp-md.md)]이 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 비롯한 시스템 라이브러리에서 가져오는 모든 코드에 똑같이 적용됩니다. 이렇게 하면 코드의 모든 비트가 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]에서도 잠깁니다. 실행할 수 있으려면 [!INCLUDE[TLA2#tla_winfxwebapp](../../../includes/tla2sharptla-winfxwebapp-md.md)]에서 인터넷 영역 보안 샌드박스를 통해 사용할 수 있는 것보다 더 많은 권한이 필요한 기능을 실행해야 합니다.  
   
  다음 페이지를 포함하는 [!INCLUDE[TLA2#tla_winfxwebapp](../../../includes/tla2sharptla-winfxwebapp-md.md)] 응용 프로그램을 고려해 보세요.  
   
- [!code-csharp[WPFPlatformSecuritySnippets#Permission](../../../samples/snippets/csharp/VS_Snippets_Wpf/WPFPlatformSecuritySnippets/CSharp/Page1.xaml.cs#permission)]
- [!code-vb[WPFPlatformSecuritySnippets#Permission](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WPFPlatformSecuritySnippets/VisualBasic/Page1.xaml.vb#permission)]  
+ [!code-csharp[WPFPlatformSecuritySnippets#Permission](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFPlatformSecuritySnippets/CSharp/Page1.xaml.cs#permission)]
+ [!code-vb[WPFPlatformSecuritySnippets#Permission](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WPFPlatformSecuritySnippets/VisualBasic/Page1.xaml.vb#permission)]  
   
  이 [!INCLUDE[TLA2#tla_winfxwebapp](../../../includes/tla2sharptla-winfxwebapp-md.md)]을 실행하려면 다음을 포함하여 내부 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 코드에서 호출하는 [!INCLUDE[TLA2#tla_winfxwebapp](../../../includes/tla2sharptla-winfxwebapp-md.md)]이 사용할 수 있는 것보다 많은 기능을 실행해야 합니다.  
   
@@ -165,8 +165,8 @@ ms.locfileid: "56836346"
   
  [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 사용 하 여이 작업을 수행 합니다 **Assert** 권한의 메서드. 다음 코드에서는 이렇게 되는 방식을 보여 줍니다.  
   
- [!code-csharp[WPFPlatformSecuritySnippets#Permission](../../../samples/snippets/csharp/VS_Snippets_Wpf/WPFPlatformSecuritySnippets/CSharp/Page1.xaml.cs#permission)]
- [!code-vb[WPFPlatformSecuritySnippets#Permission](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WPFPlatformSecuritySnippets/VisualBasic/Page1.xaml.vb#permission)]  
+ [!code-csharp[WPFPlatformSecuritySnippets#Permission](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFPlatformSecuritySnippets/CSharp/Page1.xaml.cs#permission)]
+ [!code-vb[WPFPlatformSecuritySnippets#Permission](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WPFPlatformSecuritySnippets/VisualBasic/Page1.xaml.vb#permission)]  
   
  합니다 **Assert** 에 필요한 무제한 권한이 기본적으로 방지 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 영역 권한에서 인터넷으로 제한 되는 [!INCLUDE[TLA2#tla_winfxwebapp](../../../includes/tla2sharptla-winfxwebapp-md.md)]합니다.  
   
@@ -182,7 +182,7 @@ ms.locfileid: "56836346"
 ### <a name="security-critical-methodology"></a>보안에 중요한 방법론  
  권한을 통해 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 응용 프로그램에 대한 인터넷 영역 샌드박스를 사용할 수 있게 하는 [!INCLUDE[TLA2#tla_winfxwebapp](../../../includes/tla2sharptla-winfxwebapp-md.md)] 코드를 가능한 최고 수준의 보안 감사 및 제어로 유지해야 합니다. 이를 위해서,.NET Framework 권한을 상승 시키는 코드를 관리 하는 것에 대 한 새 지원의 제공 합니다. 특히를 [!INCLUDE[TLA2#tla_clr](../../../includes/tla2sharptla-clr-md.md)] 권한을 상승 시키는 코드를 식별 하 고 사용 하 여 표시할 수 있습니다 합니다 <xref:System.Security.SecurityCriticalAttribute>;으로 표시 되지 않은 코드 <xref:System.Security.SecurityCriticalAttribute> 됩니다 *투명 한* 이 방법론을 사용 하 여 합니다. 반대로, <xref:System.Security.SecurityCriticalAttribute>로 표시되지 않은 관리 코드는 권한을 높일 수 있습니다.  
   
- 보안에 중요 한 방법론 하면 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 코드에 대 한 권한을 상승 시키는 *보안에 중요 한 커널*를 투명 하 게 되 고 나머지입니다. 보안에 중요 한 코드를 격리 시키면 합니다 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 엔지니어링 팀이 집중할 보안에 중요 한 커널 표준 보안 방법 이상의 추가적인 보안 분석 및 소스 제어 (참조 [WPF 보안 전략 -보안 엔지니어링](../../../docs/framework/wpf/wpf-security-strategy-security-engineering.md)).  
+ 보안에 중요 한 방법론 하면 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 코드에 대 한 권한을 상승 시키는 *보안에 중요 한 커널*를 투명 하 게 되 고 나머지입니다. 보안에 중요 한 코드를 격리 시키면 합니다 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 엔지니어링 팀이 집중할 보안에 중요 한 커널 표준 보안 방법 이상의 추가적인 보안 분석 및 소스 제어 (참조 [WPF 보안 전략 -보안 엔지니어링](wpf-security-strategy-security-engineering.md)).  
   
  .NET Framework 신뢰할 수 있는 코드를 확장할 수 있는지 확인 합니다 [!INCLUDE[TLA2#tla_winfxwebapp](../../../includes/tla2sharptla-winfxwebapp-md.md)] 개발자로 표시 되는 관리 되는 어셈블리를 작성 함으로써 인터넷 영역 샌드박스 <xref:System.Security.AllowPartiallyTrustedCallersAttribute> (APTCA)를 사용자의 전역 어셈블리 캐시 (gac에 배포 된). 어셈블리에 APTCA로 표시하는 경우 인터넷의 악성 코드를 비롯한 모든 코드에서 해당 어셈블리를 호출할 수 있으므로 중요한 보안 작업입니다. 이 작업을 수행할 때는 주의해서 최선의 방법을 사용해야 하며, 사용자가 해당 소프트웨어를 신뢰해야 설치됩니다.  
   
@@ -210,7 +210,7 @@ ms.locfileid: "56836346"
   
 ## <a name="see-also"></a>참고자료
 - [Windows XP SP2의 Microsoft Internet Explorer 6 보안 이해](https://www.microsoft.com/downloads/details.aspx?FamilyId=E550F940-37A0-4541-B5E2-704AB386C3ED&displaylang=en)
-- [코드 액세스 보안](../../../docs/framework/misc/code-access-security.md)
-- [보안](../../../docs/framework/wpf/security-wpf.md)
-- [WPF 부분 신뢰 보안](../../../docs/framework/wpf/wpf-partial-trust-security.md)
-- [WPF 보안 전략 - 보안 엔지니어링](../../../docs/framework/wpf/wpf-security-strategy-security-engineering.md)
+- [코드 액세스 보안](../misc/code-access-security.md)
+- [보안](security-wpf.md)
+- [WPF 부분 신뢰 보안](wpf-partial-trust-security.md)
+- [WPF 보안 전략 - 보안 엔지니어링](wpf-security-strategy-security-engineering.md)

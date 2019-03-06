@@ -6,11 +6,11 @@ helpviewer_keywords:
 - Windows Communication Foundation [WCF], what's new
 ms.assetid: 7e93fe73-af93-46b5-9f63-32f761ee40cf
 ms.openlocfilehash: 8d079613d1970d2a50ddb3449c2a3072010b2c55
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55280009"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57358317"
 ---
 # <a name="whats-new-in-windows-communication-foundation-45"></a>Windows Communication Foundation 4.5의 새로운 기능
 
@@ -19,8 +19,8 @@ ms.locfileid: "55280009"
 ## <a name="wcf-simplification-features"></a>WCF 단순화 기능
  WCF 4.5 응용 프로그램을 더 쉽게 개발하고 유지할 수 있도록 많은 작업이 이루어졌습니다. 자세한 내용은 [WCF 단순화 기능](../../../docs/framework/wcf/wcf-simplification-features.md)합니다.
 
-### <a name="task-based-async-support"></a>작업 기반 비동기 지원
- 기본적으로 서비스 참조를 추가하면 태스크 반환 비동기 서비스 작업 메서드가 생성됩니다. 이는 동기 및 비동기 메서드에 대해 수행됩니다. 따라서 새로운 작업 기반 비동기 프로그래밍 모델을 사용하여 비동기적으로 서비스 작업을 호출할 수 있습니다. 생성된 프록시 메서드를 호출하면 WCF는 비동기 작업을 나타내는 작업 개체를 생성하고 해당 작업를 사용자에게 반환합니다. 작업이 완료 될 때 작업을 완료 합니다.  비동기 작업을 구현 하는 경우에 작업 기반 비동기 작업으로 구현할 수 있습니다. 자세한 내용은 참조 하십시오 [동기 및 비동기 작업](../../../docs/framework/wcf/synchronous-and-asynchronous-operations.md)합니다.
+### <a name="task-based-async-support"></a>태스크 기반 비동기 지원
+ 기본적으로 서비스 참조를 추가하면 작업 반환 비동기 서비스 작업 메서드가 생성됩니다. 이는 동기 및 비동기 메서드에 대해 수행됩니다. 따라서 새로운 작업 기반 비동기 프로그래밍 모델을 사용하여 비동기적으로 서비스 작업을 호출할 수 있습니다. 생성된 프록시 메서드를 호출하면 WCF는 비동기 작업을 나타내는 작업 개체를 생성하고 해당 작업를 사용자에게 반환합니다. 작업이 완료 될 때 작업을 완료 합니다.  비동기 작업을 구현 하는 경우에 작업 기반 비동기 작업으로 구현할 수 있습니다. 자세한 내용은 참조 하십시오 [동기 및 비동기 작업](../../../docs/framework/wcf/synchronous-and-asynchronous-operations.md)합니다.
 
 ### <a name="simplified-generated-configuration-files"></a>단순화되어 생성된 구성 파일
  Visual Studio에 서비스 참조를 추가하거나 SvcUtil.exe 도구를 사용하면 클라이언트 구성 파일이 생성됩니다. 이전 버전의 WCF에서는 바인딩 속성 값이 기본값인 경우를 포함하여 모든 바인딩 속성 값이 이러한 구성 파일에 포함되었습니다. WCF 4.5에서는 생성된 구성 파일에 기본값이 아닌 값으로 설정된 바인딩 속성만 포함됩니다.
@@ -58,7 +58,7 @@ ms.locfileid: "55280009"
  일부 타사 WSDL 처리 스택은 xsd:import를 통해 다른 문서에 종속된 WSDL 문서를 처리할 수 없습니다.  WCF에서는 이제 모든 WSDL 정보가 단일 문서로 반환되도록 지정할 수 있습니다. 단일 WSDL 문서에서 추가 요청 하려면 "? singleWSDL" 서비스에서 메타 데이터를 요청할 때 uri입니다.
 
 ## <a name="websocket-support"></a>WebSocket 지원
- WebSocket은 TCP와 유사한 성능 특성으로 포트 80 및 443에서 진정한 의미의 양방향 통신을 제공하는 기술입니다. WebSocket 전송에서 통신을 지원하기 위해 <xref:System.ServiceModel.NetHttpBinding>와 <xref:System.ServiceModel.NetHttpsBinding>을 참조하세요. 자세한 내용은 다음을 참조하십시오. [시스템 제공 바인딩](../../../docs/framework/wcf/system-provided-bindings.md)합니다.
+ WebSocket은 TCP와 유사한 성능 특성으로 포트 80 및 443에서 진정한 의미의 양방향 통신을 제공하는 기술입니다. WebSocket 전송에서 통신을 지원하기 위해 새로운 바인딩 두 개가 추가되었습니다. <xref:System.ServiceModel.NetHttpBinding>와 <xref:System.ServiceModel.NetHttpsBinding>을 참조하세요. 자세한 내용은 다음을 참조하십시오. [시스템 제공 바인딩](../../../docs/framework/wcf/system-provided-bindings.md)합니다.
 
 ## <a name="new-transport-default-values"></a>새 전송 기본값
  다음 표에는 변경된 설정과 추가 정보를 찾을 수 있는 위치가 나와 있습니다.
@@ -78,9 +78,11 @@ ms.locfileid: "55280009"
  Windows Communication Foundation (WCF) 서비스 구성 파일 또는 코드를 사용 하 여를 구성 하는 개발자를 수 있습니다.  구성 파일은 배포 후 서비스를 구성해야 하는 경우에 유용합니다. 구성 파일을 사용할 경우 IT 전문가가 구성 파일을 업데이트하기만 하면 되고 다시 컴파일할 필요가 없습니다. 하지만 구성 파일은 관리하기가 복잡하고 어려울 수 있습니다. 구성 파일 디버깅은 지원되지 않으며 구성 요소는 이름으로 참조되므로 구성 파일을 작성하기가 어렵고 오류가 발생하기 쉽습니다. WCF를 사용 하면 코드에서 서비스를 구성할 수 있습니다. 이전 버전의 코드에서 WCF (4.0 및 이전 버전) 서비스를 구성 된 자체 호스팅된 시나리오에서 쉽게는 <xref:System.ServiceModel.ServiceHost> 클래스 허용 끝점 및 ServiceHost.Open을 호출 하기 전에 동작을 구성할 수 있습니다. 그러나 웹 호스팅 시나리오에서는 <xref:System.ServiceModel.ServiceHost> 클래스에 액세스할 수 없습니다. 웹 호스팅 서비스를 구성하려면 `System.ServiceModel.ServiceHostFactory`를 만들고 필요한 구성을 수행하는 <xref:System.ServiceModel.Activation.ServiceHostFactory>를 만들어야 했습니다. .NET 4.5 부터는 WCF 둘 다 구성 하는 간단한 방법인 자체 호스팅 및 웹 호스팅 코드에서 서비스를 제공 합니다. 자세한 내용은 [코드에서 WCF 서비스 구성](../../../docs/framework/wcf/configuring-wcf-services-in-code.md)합니다.
 
 ## <a name="channelfactory-caching"></a>ChannelFactory 캐싱
- WCF 클라이언트 응용 프로그램에서는 <xref:System.ServiceModel.ChannelFactory%601> 클래스를 사용하여 WCF 서비스와의 통신 채널을 만듭니다.  <xref:System.ServiceModel.ChannelFactory%601> 인스턴스를 만들 때는 다음 작업이 필요하기 때문에 약간의 오버헤드가 발생합니다.
+ WCF 클라이언트 응용 프로그램에서는 <xref:System.ServiceModel.ChannelFactory%601> 클래스를 사용하여 WCF 서비스와의 통신 채널을 만듭니다.  
+  <xref:System.ServiceModel.ChannelFactory%601> 인스턴스를 만들 때는 다음 작업이 필요하기 때문에 약간의 오버헤드가 발생합니다.
 
-1.  <xref:System.ServiceModel.Description.ContractDescription> 트리 생성
+1.  
+  <xref:System.ServiceModel.Description.ContractDescription> 트리 생성
 
 2.  필요한 모든 CLR 형식 반영
 
@@ -103,7 +105,8 @@ ms.locfileid: "55280009"
  IDN(Internationalized Domain Name)을 사용하는 WCF 서비스에 대한 지원이 추가되었습니다. 자세한 내용은 참조 [WCF 및 다국어 도메인 이름](../../../docs/framework/wcf/feature-details/wcf-and-internationalized-domain-names.md)합니다.
 
 ## <a name="httpclient"></a>HttpClient
- <xref:System.Net.Http.HttpClient>라는 새 클래스가 추가되어 HTTP 요청 작업을 더 쉽게 수행할 수 있습니다. 자세한 내용은 참조 하세요. [소셜 및 HTTP 서비스를 사용 하 여 연결 된 앱을 만드는](https://go.microsoft.com/fwlink/?LinkId=231886) 하며 [HTTP 클라이언트 샘플](https://code.msdn.microsoft.com/windowsapps/HttpClient-sample-55700664)합니다.
+ 
+  <xref:System.Net.Http.HttpClient>라는 새 클래스가 추가되어 HTTP 요청 작업을 더 쉽게 수행할 수 있습니다. 자세한 내용은 참조 하세요. [소셜 및 HTTP 서비스를 사용 하 여 연결 된 앱을 만드는](https://go.microsoft.com/fwlink/?LinkId=231886) 하며 [HTTP 클라이언트 샘플](https://code.msdn.microsoft.com/windowsapps/HttpClient-sample-55700664)합니다.
 
 ## <a name="configuration-intellisense"></a>구성 Intellisense
  프로젝트에 정의된 사용자 지정 특성의 경우 이제 구성 파일의 특성 값에서 intellisense를 지원하므로 구성 작업을 쉽고 빠르고 정확하게 수행할 수 있습니다.

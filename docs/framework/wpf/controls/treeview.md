@@ -8,28 +8,28 @@ helpviewer_keywords:
 - controls [WPF], TreeView
 - hierarchical structure [WPF], TreeView control
 ms.assetid: 805c235c-0a0e-4e34-8d96-9dc3865cf2df
-ms.openlocfilehash: 392e59ca7bfa4c0fe8eb85b085a27b7c03df1c44
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d041c287fe88a2d44920848bc14cae97a70b3f0d
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33556255"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57355118"
 ---
 # <a name="treeview"></a>TreeView
 <xref:System.Windows.Controls.TreeView> 컨트롤 계층 구조에서 축소 가능한 노드를 사용 하 여 정보를 표시 합니다.  
   
- 다음 그림은의 예는 <xref:System.Windows.Controls.TreeView> 에 중첩 된 컨트롤 <xref:System.Windows.Controls.TreeViewItem> 컨트롤입니다.  
+ 다음 그림은 예가 <xref:System.Windows.Controls.TreeView> 중첩 된 컨트롤 <xref:System.Windows.Controls.TreeViewItem> 컨트롤입니다.  
   
- ![TreeView 설명](../../../../docs/framework/wpf/controls/media/treeviewillustration.JPG "TreeViewIllustration")  
+ ![TreeView 설명](./media/treeviewillustration.JPG "TreeViewIllustration")  
   
 ## <a name="in-this-section"></a>섹션 내용  
- [TreeView 개요](../../../../docs/framework/wpf/controls/treeview-overview.md)  
- [방법 항목](../../../../docs/framework/wpf/controls/treeview-how-to-topics.md)  
+ [TreeView 개요](treeview-overview.md)  
+ [방법 항목](treeview-how-to-topics.md)  
   
 ## <a name="reference"></a>참조  
  <xref:System.Windows.Controls.TreeView>  
   <xref:System.Windows.Controls.TreeViewItem>  
   
 ## <a name="related-sections"></a>관련 단원  
- [데이터 바인딩 개요](../../../../docs/framework/wpf/data/data-binding-overview.md)  
-  [데이터 템플릿 개요](../../../../docs/framework/wpf/data/data-templating-overview.md)
+ [데이터 바인딩 개요](../data/data-binding-overview.md)  
+  [데이터 템플릿 개요](../data/data-templating-overview.md)

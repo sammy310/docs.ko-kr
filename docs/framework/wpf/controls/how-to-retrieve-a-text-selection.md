@@ -9,12 +9,12 @@ helpviewer_keywords:
 - TextBox control [WPF], retrieving text
 - retrieving text [WPF]
 ms.assetid: d5793172-1e11-4a39-9be0-73f336ed858d
-ms.openlocfilehash: 3e2a4d9938f73cb306e8fd8b0e6b25b5abfa3b4a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fdd0e3974964e141c4b65e1c8851f3c371a4d501
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54517775"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57357614"
 ---
 # <a name="how-to-retrieve-a-text-selection"></a>방법: 텍스트 선택 검색
 이 예제에 사용 하는 방법을 보여 줍니다 합니다 <xref:System.Windows.Controls.TextBox.SelectedText%2A> 에서 사용자가 선택한 텍스트를 검색할 속성을 <xref:System.Windows.Controls.TextBox> 컨트롤입니다.  
@@ -24,14 +24,14 @@ ms.locfileid: "54517775"
   
  이 예제에서는 연결 된 단추 <xref:System.Windows.Controls.Primitives.ButtonBase.Click> 선택한 텍스트를 검색할 이벤트 처리기를 사용 합니다. 사용자가 단추를 클릭 합니다 <xref:System.Windows.Controls.Button.OnClick%2A> 메서드 문자열에 텍스트 상자에 선택한 텍스트를 복사 합니다. 특정 상황 텍스트 선택은 검색 하는 (단추 클릭) 뿐만 아니라 해당 선택 (문자열로 텍스트 선택 영역 복사)를 사용 하 여 수행 되는 동작 다양 한 시나리오에 맞게 쉽게 수정할 수 있습니다.  
   
- [!code-xaml[TextBox_MiscCode#_TextBoxSelectTextXAML](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TextBox_MiscCode/CSharp/Window1.xaml#_textboxselecttextxaml)]  
+ [!code-xaml[TextBox_MiscCode#_TextBoxSelectTextXAML](~/samples/snippets/csharp/VS_Snippets_Wpf/TextBox_MiscCode/CSharp/Window1.xaml#_textboxselecttextxaml)]  
   
 ## <a name="example"></a>예제  
  다음 C# 예제는 <xref:System.Windows.Controls.Button.OnClick%2A> 에 정의 된 단추에 대 한 이벤트 처리기를 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 예입니다.  
   
- [!code-csharp[TextBox_MiscCode#_SelectText](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TextBox_MiscCode/CSharp/Window1.xaml.cs#_selecttext)]
- [!code-vb[TextBox_MiscCode#_SelectText](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/TextBox_MiscCode/VisualBasic/Window1.xaml.vb#_selecttext)]  
+ [!code-csharp[TextBox_MiscCode#_SelectText](~/samples/snippets/csharp/VS_Snippets_Wpf/TextBox_MiscCode/CSharp/Window1.xaml.cs#_selecttext)]
+ [!code-vb[TextBox_MiscCode#_SelectText](~/samples/snippets/visualbasic/VS_Snippets_Wpf/TextBox_MiscCode/VisualBasic/Window1.xaml.vb#_selecttext)]  
   
 ## <a name="see-also"></a>참고자료
-- [TextBox 개요](../../../../docs/framework/wpf/controls/textbox-overview.md)
-- [RichTextBox 개요](../../../../docs/framework/wpf/controls/richtextbox-overview.md)
+- [TextBox 개요](textbox-overview.md)
+- [RichTextBox 개요](richtextbox-overview.md)

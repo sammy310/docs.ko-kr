@@ -6,12 +6,12 @@ helpviewer_keywords:
 - documents [WPF], storage
 - documents [WPF], serialization
 ms.assetid: 4839cd87-e206-4571-803f-0200098ad37b
-ms.openlocfilehash: 028f7e8f2be2aa0718eebc133ebd9d35717c824d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fbdd04f40c1d4a29ff1807b8a2760802b0338cb3
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54630855"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57379694"
 ---
 # <a name="document-serialization-and-storage"></a>문서 serialization 및 스토리지
 Microsoft.NET Framework는 만들고 고품질 문서를 표시 하기 위한 강력한 환경을 제공 합니다.  고정 문서 및 유동 문서를 고급 모두 지 원하는 향상 된 기능은 강력한 2D 함께 보기 컨트롤을 및 3D 그래픽 기능과.NET Framework 응용 프로그램의 품질과 사용자 환경 향상할 수 있습니다.  문서의 메모리 내 표현을 유연 하 게 관리할 수.NET Framework의 핵심 기능은 이며을 효율적으로 저장 하 고 데이터 저장소에서 문서를 로드할 수 있는 거의 모든 응용 프로그램의 필요 합니다.  내부 메모리 내 표현에서 외부 데이터 저장소로 문서를 변환하는 프로세스를 serialization이라고 합니다.  데이터 저장소를 읽고 원래 메모리 내 인스턴스를 다시 만드는 역프로세스는 deserialization이라고 합니다.  
@@ -41,7 +41,7 @@ Microsoft.NET Framework는 만들고 고품질 문서를 표시 하기 위한 �
     -   사용자 지정 런타임 설정 및 옵션에 맞는 사용자 인터페이스 지원.  
   
 ### <a name="xps-print-path"></a>XPS 인쇄 경로  
- Microsoft.NET Framework [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] 인쇄 경로 인쇄 출력을 통해 문서를 작성 하기 위한 확장 가능한 메커니즘을 제공 합니다.  [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)]는 문서 파일 형식으로 사용되며 [!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)]의 기본 인쇄 스풀 형식이기도 합니다.  중간 형식으로 변환하지 않아도 [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] 문서를 [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] 호환 프린터로 직접 보낼 수 있습니다.  인쇄 경로 출력 옵션과 기능에 대한 추가 정보는 [인쇄 개요](../../../../docs/framework/wpf/advanced/printing-overview.md)를 참조하세요.  
+ Microsoft.NET Framework [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] 인쇄 경로 인쇄 출력을 통해 문서를 작성 하기 위한 확장 가능한 메커니즘을 제공 합니다.  [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)]는 문서 파일 형식으로 사용되며 [!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)]의 기본 인쇄 스풀 형식이기도 합니다.  중간 형식으로 변환하지 않아도 [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] 문서를 [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] 호환 프린터로 직접 보낼 수 있습니다.  인쇄 경로 출력 옵션과 기능에 대한 추가 정보는 [인쇄 개요](printing-overview.md)를 참조하세요.  
   
 <a name="PluginSerializers"></a>   
 ## <a name="plug-in-serializers"></a>플러그 인 Serializer  
@@ -54,11 +54,11 @@ Microsoft.NET Framework는 만들고 고품질 문서를 표시 하기 위한 �
   
  다음 예제를 사용 하는 응용 프로그램을 <xref:System.Windows.Documents.Serialization.SerializerProvider> "PlugInFileFilter" 속성에는 메서드.  Pluginfilefilter에서는 설치 된 플러그 인을 열거 하 고 사용 가능한 파일 옵션을 사용 하 여 필터 문자열을 작성 한 <xref:Microsoft.Win32.SaveFileDialog>합니다.  
   
- [!code-csharp[DocumentSerialize#DocSerializeFileFilter](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DocumentSerialize/CSharp/ThumbViewer.cs#docserializefilefilter)]  
+ [!code-csharp[DocumentSerialize#DocSerializeFileFilter](~/samples/snippets/csharp/VS_Snippets_Wpf/DocumentSerialize/CSharp/ThumbViewer.cs#docserializefilefilter)]  
   
  출력 파일 이름을 선택한 후에 사용자를 다음 예제에 사용 된 <xref:System.Windows.Documents.Serialization.SerializerProvider.CreateSerializerWriter%2A> 지정 된 형식으로 지정된 된 문서를 저장 하는 방법입니다.  
   
- [!code-csharp[DocumentSerialize#DocSerializePlugIn](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DocumentSerialize/CSharp/ThumbViewer.cs#docserializeplugin)]  
+ [!code-csharp[DocumentSerialize#DocSerializePlugIn](~/samples/snippets/csharp/VS_Snippets_Wpf/DocumentSerialize/CSharp/ThumbViewer.cs#docserializeplugin)]  
   
 <a name="InstallingPluginSerializers"></a>   
 ### <a name="installing-plug-in-serializers"></a>플러그 인 Serializer 설치  
@@ -77,6 +77,6 @@ Microsoft.NET Framework는 만들고 고품질 문서를 표시 하기 위한 �
 - <xref:System.Windows.Documents.Serialization>
 - <xref:System.Windows.Xps.XpsDocumentWriter>
 - <xref:System.Windows.Xps.Packaging.XpsDocument>
-- [WPF의 문서](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)
-- [인쇄 개요](../../../../docs/framework/wpf/advanced/printing-overview.md)
+- [WPF의 문서](documents-in-wpf.md)
+- [인쇄 개요](printing-overview.md)
 - [XML Paper Specification: 개요](https://go.microsoft.com/fwlink?LinkID=106246)
