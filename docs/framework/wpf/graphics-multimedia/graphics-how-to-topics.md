@@ -8,25 +8,25 @@ helpviewer_keywords:
 - graphics [WPF], how-to topics
 - visual effects [WPF]
 ms.assetid: 959cb1cc-d26c-4bbc-b637-251091987288
-ms.openlocfilehash: 63f268692924db94710d4aa21ff6f03b00989f67
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 957040cd8202f2fa2bb1838718a49dbe028c02b1
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54688212"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57358793"
 ---
-# <a name="graphics-how-to-topics"></a><span data-ttu-id="df6f8-102">그래픽 방법 항목</span><span class="sxs-lookup"><span data-stu-id="df6f8-102">Graphics How-to Topics</span></span>
-<span data-ttu-id="df6f8-103">다음 항목에서는의 그래픽 기능을 사용 하는 방법을 설명 합니다 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]합니다.</span><span class="sxs-lookup"><span data-stu-id="df6f8-103">The following topics demonstrate how to use the graphic capabilities of the [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)].</span></span>  
+# <a name="graphics-how-to-topics"></a><span data-ttu-id="c76f6-102">그래픽 방법 항목</span><span class="sxs-lookup"><span data-stu-id="c76f6-102">Graphics How-to Topics</span></span>
+<span data-ttu-id="c76f6-103">다음 항목에서는의 그래픽 기능을 사용 하는 방법을 설명 합니다 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]합니다.</span><span class="sxs-lookup"><span data-stu-id="c76f6-103">The following topics demonstrate how to use the graphic capabilities of the [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)].</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="df6f8-104">섹션 내용</span><span class="sxs-lookup"><span data-stu-id="df6f8-104">In This Section</span></span>  
- [<span data-ttu-id="df6f8-105">사각형에 애니메이션 효과 주기</span><span class="sxs-lookup"><span data-stu-id="df6f8-105">Animate a Rectangle</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-rectangle.md)  
- [<span data-ttu-id="df6f8-106">PointAnimation을 사용하여 개체 위치에 애니메이션 효과 주기</span><span class="sxs-lookup"><span data-stu-id="df6f8-106">Animate the Position of an Object by Using PointAnimation</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-the-position-of-an-object-by-using-pointanimation.md)  
- [<span data-ttu-id="df6f8-107">점 및 벡터 변환</span><span class="sxs-lookup"><span data-stu-id="df6f8-107">Transform Points and Vectors</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-transform-points-and-vectors.md)  
- [<span data-ttu-id="df6f8-108">투명 효과 프레임을 WPF 애플리케이션으로 확장</span><span class="sxs-lookup"><span data-stu-id="df6f8-108">Extend Glass Frame Into a WPF Application</span></span>](../../../../docs/framework/wpf/graphics-multimedia/extend-glass-frame-into-a-wpf-application.md)  
- [<span data-ttu-id="df6f8-109">방법: 요소를 캐시 하 여 렌더링 성능 향상</span><span class="sxs-lookup"><span data-stu-id="df6f8-109">How to: Improve Rendering Performance by Caching an Element</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-improve-rendering-performance-by-caching-an-element.md)  
- [<span data-ttu-id="df6f8-110">방법: 캐시 된 요소를 브러시로 사용</span><span class="sxs-lookup"><span data-stu-id="df6f8-110">How to: Use a Cached Element as a Brush</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-use-a-cached-element-as-a-brush.md)  
+## <a name="in-this-section"></a><span data-ttu-id="c76f6-104">섹션 내용</span><span class="sxs-lookup"><span data-stu-id="c76f6-104">In This Section</span></span>  
+ [<span data-ttu-id="c76f6-105">사각형에 애니메이션 효과 주기</span><span class="sxs-lookup"><span data-stu-id="c76f6-105">Animate a Rectangle</span></span>](how-to-animate-a-rectangle.md)  
+ [<span data-ttu-id="c76f6-106">PointAnimation을 사용하여 개체 위치에 애니메이션 효과 주기</span><span class="sxs-lookup"><span data-stu-id="c76f6-106">Animate the Position of an Object by Using PointAnimation</span></span>](how-to-animate-the-position-of-an-object-by-using-pointanimation.md)  
+ [<span data-ttu-id="c76f6-107">점 및 벡터 변환</span><span class="sxs-lookup"><span data-stu-id="c76f6-107">Transform Points and Vectors</span></span>](how-to-transform-points-and-vectors.md)  
+ [<span data-ttu-id="c76f6-108">투명 효과 프레임을 WPF 애플리케이션으로 확장</span><span class="sxs-lookup"><span data-stu-id="c76f6-108">Extend Glass Frame Into a WPF Application</span></span>](extend-glass-frame-into-a-wpf-application.md)  
+ [<span data-ttu-id="c76f6-109">방법: 요소를 캐시 하 여 렌더링 성능 향상</span><span class="sxs-lookup"><span data-stu-id="c76f6-109">How to: Improve Rendering Performance by Caching an Element</span></span>](how-to-improve-rendering-performance-by-caching-an-element.md)  
+ [<span data-ttu-id="c76f6-110">방법: 캐시 된 요소를 브러시로 사용</span><span class="sxs-lookup"><span data-stu-id="c76f6-110">How to: Use a Cached Element as a Brush</span></span>](how-to-use-a-cached-element-as-a-brush.md)  
   
-## <a name="see-also"></a><span data-ttu-id="df6f8-111">참고자료</span><span class="sxs-lookup"><span data-stu-id="df6f8-111">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="c76f6-111">참고자료</span><span class="sxs-lookup"><span data-stu-id="c76f6-111">See also</span></span>
 - <xref:System.Windows.Shapes.Shape>
 - <xref:System.Windows.Media.Transform>
 - <xref:System.Windows.Media.Imaging.BitmapImage>
@@ -34,5 +34,5 @@ ms.locfileid: "54688212"
 - <xref:System.Windows.Media.Drawing>
 - <xref:System.Windows.Media.Brush>
 - <xref:System.Windows.Media.Effects.BitmapEffect>
-- [<span data-ttu-id="df6f8-112">그래픽 및 멀티미디어</span><span class="sxs-lookup"><span data-stu-id="df6f8-112">Graphics and Multimedia</span></span>](../../../../docs/framework/wpf/graphics-multimedia/index.md)
-- [<span data-ttu-id="df6f8-113">WPF 그래픽 렌더링 개요</span><span class="sxs-lookup"><span data-stu-id="df6f8-113">WPF Graphics Rendering Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)
+- [<span data-ttu-id="c76f6-112">그래픽 및 멀티미디어</span><span class="sxs-lookup"><span data-stu-id="c76f6-112">Graphics and Multimedia</span></span>](index.md)
+- [<span data-ttu-id="c76f6-113">WPF 그래픽 렌더링 개요</span><span class="sxs-lookup"><span data-stu-id="c76f6-113">WPF Graphics Rendering Overview</span></span>](wpf-graphics-rendering-overview.md)

@@ -8,21 +8,21 @@ helpviewer_keywords:
 - properties [WPF], how-to topics
 - dependency properties [WPF]
 ms.assetid: e16dd710-1530-4462-81a2-43719b973970
-ms.openlocfilehash: b2b9dffe1837df0e8daaf5526a59609db8efb7fc
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 78bf1dbe9c9c95a3ae1afe2515adbd8bc65a7d44
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33544487"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57368495"
 ---
-# <a name="properties-how-to-topics"></a><span data-ttu-id="4ccdf-102">속성 방법 항목</span><span class="sxs-lookup"><span data-stu-id="4ccdf-102">Properties How-to Topics</span></span>
-## <a name="in-this-section"></a><span data-ttu-id="4ccdf-103">섹션 내용</span><span class="sxs-lookup"><span data-stu-id="4ccdf-103">In This Section</span></span>  
- [<span data-ttu-id="4ccdf-104">종속성 속성 구현</span><span class="sxs-lookup"><span data-stu-id="4ccdf-104">Implement a Dependency Property</span></span>](../../../../docs/framework/wpf/advanced/how-to-implement-a-dependency-property.md)  
- [<span data-ttu-id="4ccdf-105">종속성 속성의 소유자 형식 추가</span><span class="sxs-lookup"><span data-stu-id="4ccdf-105">Add an Owner Type for a Dependency Property</span></span>](../../../../docs/framework/wpf/advanced/how-to-add-an-owner-type-for-a-dependency-property.md)  
- [<span data-ttu-id="4ccdf-106">연결된 속성 등록</span><span class="sxs-lookup"><span data-stu-id="4ccdf-106">Register an Attached Property</span></span>](../../../../docs/framework/wpf/advanced/how-to-register-an-attached-property.md)  
- [<span data-ttu-id="4ccdf-107">종속성 속성의 메타데이터 재정의</span><span class="sxs-lookup"><span data-stu-id="4ccdf-107">Override Metadata for a Dependency Property</span></span>](../../../../docs/framework/wpf/advanced/how-to-override-metadata-for-a-dependency-property.md)  
+# <a name="properties-how-to-topics"></a><span data-ttu-id="a45ce-102">속성 방법 항목</span><span class="sxs-lookup"><span data-stu-id="a45ce-102">Properties How-to Topics</span></span>
+## <a name="in-this-section"></a><span data-ttu-id="a45ce-103">섹션 내용</span><span class="sxs-lookup"><span data-stu-id="a45ce-103">In This Section</span></span>  
+ [<span data-ttu-id="a45ce-104">종속성 속성 구현</span><span class="sxs-lookup"><span data-stu-id="a45ce-104">Implement a Dependency Property</span></span>](how-to-implement-a-dependency-property.md)  
+ [<span data-ttu-id="a45ce-105">종속성 속성의 소유자 형식 추가</span><span class="sxs-lookup"><span data-stu-id="a45ce-105">Add an Owner Type for a Dependency Property</span></span>](how-to-add-an-owner-type-for-a-dependency-property.md)  
+ [<span data-ttu-id="a45ce-106">연결된 속성 등록</span><span class="sxs-lookup"><span data-stu-id="a45ce-106">Register an Attached Property</span></span>](how-to-register-an-attached-property.md)  
+ [<span data-ttu-id="a45ce-107">종속성 속성의 메타데이터 재정의</span><span class="sxs-lookup"><span data-stu-id="a45ce-107">Override Metadata for a Dependency Property</span></span>](how-to-override-metadata-for-a-dependency-property.md)  
   
-## <a name="reference"></a><span data-ttu-id="4ccdf-108">참조</span><span class="sxs-lookup"><span data-stu-id="4ccdf-108">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="a45ce-108">참조</span><span class="sxs-lookup"><span data-stu-id="a45ce-108">Reference</span></span>  
  <xref:System.Windows.DependencyProperty>  
   
  <xref:System.Windows.PropertyMetadata>  
@@ -31,5 +31,5 @@ ms.locfileid: "33544487"
   
  <xref:System.Windows.DependencyObject>  
   
-## <a name="related-sections"></a><span data-ttu-id="4ccdf-109">관련 단원</span><span class="sxs-lookup"><span data-stu-id="4ccdf-109">Related Sections</span></span>  
- [<span data-ttu-id="4ccdf-110">속성</span><span class="sxs-lookup"><span data-stu-id="4ccdf-110">Properties</span></span>](../../../../docs/framework/wpf/advanced/properties-wpf.md)
+## <a name="related-sections"></a><span data-ttu-id="a45ce-109">관련 단원</span><span class="sxs-lookup"><span data-stu-id="a45ce-109">Related Sections</span></span>  
+ [<span data-ttu-id="a45ce-110">속성</span><span class="sxs-lookup"><span data-stu-id="a45ce-110">Properties</span></span>](properties-wpf.md)

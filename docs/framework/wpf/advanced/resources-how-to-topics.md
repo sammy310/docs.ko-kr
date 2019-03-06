@@ -7,25 +7,25 @@ helpviewer_keywords:
 - reusing resources [WPF]
 - 'resources [WPF], '
 ms.assetid: 9f986a6d-7cc8-45ac-bb0f-43177a57649d
-ms.openlocfilehash: e0dc707419e975fa57a47e6c51a40c295b8e62ec
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8ad776b8ed18d74a6804b0efd8853c7af6efee0e
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33546165"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57356229"
 ---
-# <a name="resources-how-to-topics"></a><span data-ttu-id="d7c05-102">리소스 방법 항목</span><span class="sxs-lookup"><span data-stu-id="d7c05-102">Resources How-to Topics</span></span>
-<span data-ttu-id="d7c05-103">이 섹션의 항목에는 Windows Presentation Foundation (WPF) 리소스를 사용 하는 방법을 설명 합니다.</span><span class="sxs-lookup"><span data-stu-id="d7c05-103">The topics in this section describe how to use Windows Presentation Foundation (WPF) resources.</span></span>  
+# <a name="resources-how-to-topics"></a><span data-ttu-id="427c3-102">리소스 방법 항목</span><span class="sxs-lookup"><span data-stu-id="427c3-102">Resources How-to Topics</span></span>
+<span data-ttu-id="427c3-103">이 섹션의에서 항목에서는 Windows Presentation Foundation (WPF) 리소스를 사용 하는 방법에 설명 합니다.</span><span class="sxs-lookup"><span data-stu-id="427c3-103">The topics in this section describe how to use Windows Presentation Foundation (WPF) resources.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="d7c05-104">섹션 내용</span><span class="sxs-lookup"><span data-stu-id="d7c05-104">In This Section</span></span>  
- [<span data-ttu-id="d7c05-105">리소스 정의 및 참조</span><span class="sxs-lookup"><span data-stu-id="d7c05-105">Define and Reference a Resource</span></span>](../../../../docs/framework/wpf/advanced/how-to-define-and-reference-a-resource.md)  
- [<span data-ttu-id="d7c05-106">응용 프로그램 리소스 사용</span><span class="sxs-lookup"><span data-stu-id="d7c05-106">Use Application Resources</span></span>](../../../../docs/framework/wpf/advanced/how-to-use-application-resources.md)  
- [<span data-ttu-id="d7c05-107">SystemFonts 사용</span><span class="sxs-lookup"><span data-stu-id="d7c05-107">Use SystemFonts</span></span>](../../../../docs/framework/wpf/advanced/how-to-use-systemfonts.md)  
- [<span data-ttu-id="d7c05-108">시스템 글꼴 키 사용</span><span class="sxs-lookup"><span data-stu-id="d7c05-108">Use System Fonts Keys</span></span>](../../../../docs/framework/wpf/advanced/how-to-use-system-fonts-keys.md)  
- [<span data-ttu-id="d7c05-109">SystemParameters 사용</span><span class="sxs-lookup"><span data-stu-id="d7c05-109">Use SystemParameters</span></span>](../../../../docs/framework/wpf/advanced/how-to-use-systemparameters.md)  
- [<span data-ttu-id="d7c05-110">시스템 매개 변수 키 사용</span><span class="sxs-lookup"><span data-stu-id="d7c05-110">Use System Parameters Keys</span></span>](../../../../docs/framework/wpf/advanced/how-to-use-system-parameters-keys.md)  
+## <a name="in-this-section"></a><span data-ttu-id="427c3-104">섹션 내용</span><span class="sxs-lookup"><span data-stu-id="427c3-104">In This Section</span></span>  
+ [<span data-ttu-id="427c3-105">리소스 정의 및 참조</span><span class="sxs-lookup"><span data-stu-id="427c3-105">Define and Reference a Resource</span></span>](how-to-define-and-reference-a-resource.md)  
+ [<span data-ttu-id="427c3-106">애플리케이션 리소스 사용</span><span class="sxs-lookup"><span data-stu-id="427c3-106">Use Application Resources</span></span>](how-to-use-application-resources.md)  
+ [<span data-ttu-id="427c3-107">SystemFonts 사용</span><span class="sxs-lookup"><span data-stu-id="427c3-107">Use SystemFonts</span></span>](how-to-use-systemfonts.md)  
+ [<span data-ttu-id="427c3-108">시스템 글꼴 키 사용</span><span class="sxs-lookup"><span data-stu-id="427c3-108">Use System Fonts Keys</span></span>](how-to-use-system-fonts-keys.md)  
+ [<span data-ttu-id="427c3-109">SystemParameters 사용</span><span class="sxs-lookup"><span data-stu-id="427c3-109">Use SystemParameters</span></span>](how-to-use-systemparameters.md)  
+ [<span data-ttu-id="427c3-110">시스템 매개 변수 키 사용</span><span class="sxs-lookup"><span data-stu-id="427c3-110">Use System Parameters Keys</span></span>](how-to-use-system-parameters-keys.md)  
   
-## <a name="reference"></a><span data-ttu-id="d7c05-111">참조</span><span class="sxs-lookup"><span data-stu-id="d7c05-111">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="427c3-111">참조</span><span class="sxs-lookup"><span data-stu-id="427c3-111">Reference</span></span>  
  <xref:System.Windows.FrameworkTemplate.Resources%2A>  
   
  <xref:System.Windows.SystemColors>  
@@ -34,5 +34,5 @@ ms.locfileid: "33546165"
   
  <xref:System.Windows.SystemFonts>  
   
-## <a name="related-sections"></a><span data-ttu-id="d7c05-112">관련 단원</span><span class="sxs-lookup"><span data-stu-id="d7c05-112">Related Sections</span></span>  
- [<span data-ttu-id="d7c05-113">XAML 리소스</span><span class="sxs-lookup"><span data-stu-id="d7c05-113">XAML Resources</span></span>](../../../../docs/framework/wpf/advanced/xaml-resources.md)
+## <a name="related-sections"></a><span data-ttu-id="427c3-112">관련 단원</span><span class="sxs-lookup"><span data-stu-id="427c3-112">Related Sections</span></span>  
+ [<span data-ttu-id="427c3-113">XAML 리소스</span><span class="sxs-lookup"><span data-stu-id="427c3-113">XAML Resources</span></span>](xaml-resources.md)

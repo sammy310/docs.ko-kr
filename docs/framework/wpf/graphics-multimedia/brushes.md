@@ -8,26 +8,26 @@ helpviewer_keywords:
 - painting [WPF]
 - brushes [WPF]
 ms.assetid: 26710879-12ad-4c63-9bc6-a1834bb4243b
-ms.openlocfilehash: 2ebb4553ed55e89cb0b7acf6336f21b422d4753f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f52834a652f3f88a526f359a558e192c5f34839c
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33557266"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57366727"
 ---
-# <a name="brushes"></a><span data-ttu-id="2000b-102">브러시</span><span class="sxs-lookup"><span data-stu-id="2000b-102">Brushes</span></span>
-<span data-ttu-id="2000b-103">다음 항목을 사용 하는 방법을 설명 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 브러시를 화면에 콘텐츠를 "색"</span><span class="sxs-lookup"><span data-stu-id="2000b-103">The following topics describe how to use [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] brushes to "paint" content to the screen</span></span>  
+# <a name="brushes"></a><span data-ttu-id="ae519-102">브러시</span><span class="sxs-lookup"><span data-stu-id="ae519-102">Brushes</span></span>
+<span data-ttu-id="ae519-103">다음 항목을 사용 하는 방법에 설명 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 브러시 콘텐츠 화면에 "그리기"를</span><span class="sxs-lookup"><span data-stu-id="ae519-103">The following topics describe how to use [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] brushes to "paint" content to the screen</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="2000b-104">섹션 내용</span><span class="sxs-lookup"><span data-stu-id="2000b-104">In This Section</span></span>  
- [<span data-ttu-id="2000b-105">WPF 브러시 개요</span><span class="sxs-lookup"><span data-stu-id="2000b-105">WPF Brushes Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/wpf-brushes-overview.md)  
- [<span data-ttu-id="2000b-106">브러시 변환 개요</span><span class="sxs-lookup"><span data-stu-id="2000b-106">Brush Transformation Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/brush-transformation-overview.md)  
- [<span data-ttu-id="2000b-107">불투명 마스크 개요</span><span class="sxs-lookup"><span data-stu-id="2000b-107">Opacity Masks Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/opacity-masks-overview.md)  
- [<span data-ttu-id="2000b-108">단색 및 그라데이션을 사용한 그리기 개요</span><span class="sxs-lookup"><span data-stu-id="2000b-108">Painting with Solid Colors and Gradients Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/painting-with-solid-colors-and-gradients-overview.md)  
- [<span data-ttu-id="2000b-109">이미지, 그림 및 시각적 표시로 그리기</span><span class="sxs-lookup"><span data-stu-id="2000b-109">Painting with Images, Drawings, and Visuals</span></span>](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md)  
- [<span data-ttu-id="2000b-110">TileBrush 개요</span><span class="sxs-lookup"><span data-stu-id="2000b-110">TileBrush Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/tilebrush-overview.md)  
- [<span data-ttu-id="2000b-111">방법 항목</span><span class="sxs-lookup"><span data-stu-id="2000b-111">How-to Topics</span></span>](../../../../docs/framework/wpf/graphics-multimedia/brushes-how-to-topics.md)  
+## <a name="in-this-section"></a><span data-ttu-id="ae519-104">섹션 내용</span><span class="sxs-lookup"><span data-stu-id="ae519-104">In This Section</span></span>  
+ [<span data-ttu-id="ae519-105">WPF 브러시 개요</span><span class="sxs-lookup"><span data-stu-id="ae519-105">WPF Brushes Overview</span></span>](wpf-brushes-overview.md)  
+ [<span data-ttu-id="ae519-106">브러시 변환 개요</span><span class="sxs-lookup"><span data-stu-id="ae519-106">Brush Transformation Overview</span></span>](brush-transformation-overview.md)  
+ [<span data-ttu-id="ae519-107">불투명 마스크 개요</span><span class="sxs-lookup"><span data-stu-id="ae519-107">Opacity Masks Overview</span></span>](opacity-masks-overview.md)  
+ [<span data-ttu-id="ae519-108">단색 및 그라데이션을 사용한 그리기 개요</span><span class="sxs-lookup"><span data-stu-id="ae519-108">Painting with Solid Colors and Gradients Overview</span></span>](painting-with-solid-colors-and-gradients-overview.md)  
+ [<span data-ttu-id="ae519-109">이미지, 그림 및 시각적 표시로 그리기</span><span class="sxs-lookup"><span data-stu-id="ae519-109">Painting with Images, Drawings, and Visuals</span></span>](painting-with-images-drawings-and-visuals.md)  
+ [<span data-ttu-id="ae519-110">TileBrush 개요</span><span class="sxs-lookup"><span data-stu-id="ae519-110">TileBrush Overview</span></span>](tilebrush-overview.md)  
+ [<span data-ttu-id="ae519-111">방법 항목</span><span class="sxs-lookup"><span data-stu-id="ae519-111">How-to Topics</span></span>](brushes-how-to-topics.md)  
   
-## <a name="reference"></a><span data-ttu-id="2000b-112">참조</span><span class="sxs-lookup"><span data-stu-id="2000b-112">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="ae519-112">참조</span><span class="sxs-lookup"><span data-stu-id="ae519-112">Reference</span></span>  
  <xref:System.Windows.Media.Brush>  
   
  <xref:System.Windows.Media.SolidColorBrush>  
@@ -40,7 +40,7 @@ ms.locfileid: "33557266"
   
  <xref:System.Windows.Media.VisualBrush>  
   
-## <a name="related-sections"></a><span data-ttu-id="2000b-113">관련 단원</span><span class="sxs-lookup"><span data-stu-id="2000b-113">Related Sections</span></span>  
- [<span data-ttu-id="2000b-114">그래픽 및 멀티미디어</span><span class="sxs-lookup"><span data-stu-id="2000b-114">Graphics and Multimedia</span></span>](../../../../docs/framework/wpf/graphics-multimedia/index.md)  
+## <a name="related-sections"></a><span data-ttu-id="ae519-113">관련 단원</span><span class="sxs-lookup"><span data-stu-id="ae519-113">Related Sections</span></span>  
+ [<span data-ttu-id="ae519-114">그래픽 및 멀티미디어</span><span class="sxs-lookup"><span data-stu-id="ae519-114">Graphics and Multimedia</span></span>](index.md)  
   
- [<span data-ttu-id="2000b-115">WPF 그래픽 렌더링 개요</span><span class="sxs-lookup"><span data-stu-id="2000b-115">WPF Graphics Rendering Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)
+ [<span data-ttu-id="ae519-115">WPF 그래픽 렌더링 개요</span><span class="sxs-lookup"><span data-stu-id="ae519-115">WPF Graphics Rendering Overview</span></span>](wpf-graphics-rendering-overview.md)

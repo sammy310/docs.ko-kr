@@ -15,20 +15,20 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: 4a7cd8850778e9bbbc7d8d67f464c7787e40bc13
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 28cd15a793d303e1d6e64c52c1d0095e8d619c7b
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54566099"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57378935"
 ---
-# <a name="ixclrdatamethoddefinitionendenuminstances-method"></a><span data-ttu-id="bb35a-102">IXCLRDataMethodDefinition::EndEnumInstances 메서드</span><span class="sxs-lookup"><span data-stu-id="bb35a-102">IXCLRDataMethodDefinition::EndEnumInstances Method</span></span>
+# <a name="ixclrdatamethoddefinitionendenuminstances-method"></a><span data-ttu-id="0a65b-102">IXCLRDataMethodDefinition::EndEnumInstances 메서드</span><span class="sxs-lookup"><span data-stu-id="0a65b-102">IXCLRDataMethodDefinition::EndEnumInstances Method</span></span>
 
-<span data-ttu-id="bb35a-103">인스턴스 열거 하는 동안 사용 되는 내부 반복기 사용 하는 리소스를 해제 합니다.</span><span class="sxs-lookup"><span data-stu-id="bb35a-103">Releases the resources used by internal iterators used during instance enumeration.</span></span>
+<span data-ttu-id="0a65b-103">인스턴스 열거 하는 동안 사용 되는 내부 반복기 사용 하는 리소스를 해제 합니다.</span><span class="sxs-lookup"><span data-stu-id="0a65b-103">Releases the resources used by internal iterators used during instance enumeration.</span></span>
 
 [!INCLUDE[debugging-api-recommended-note](../../../../includes/debugging-api-recommended-note.md)]
 
-## <a name="syntax"></a><span data-ttu-id="bb35a-104">구문</span><span class="sxs-lookup"><span data-stu-id="bb35a-104">Syntax</span></span>
+## <a name="syntax"></a><span data-ttu-id="0a65b-104">구문</span><span class="sxs-lookup"><span data-stu-id="0a65b-104">Syntax</span></span>
 
 ```
 HRESULT EndEnumInstances(
@@ -36,22 +36,23 @@ HRESULT EndEnumInstances(
 );
 ```
 
-### <a name="parameters"></a><span data-ttu-id="bb35a-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="bb35a-105">Parameters</span></span>
+## <a name="parameters"></a><span data-ttu-id="0a65b-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="0a65b-105">Parameters</span></span>
 
-<span data-ttu-id="bb35a-106">`handle` [out] 인스턴스를 열거 하는 것에 대 한 핸들입니다.</span><span class="sxs-lookup"><span data-stu-id="bb35a-106">`handle` [out] A handle for enumerating the instances.</span></span>
+`handle`\
+<span data-ttu-id="0a65b-106">[out] 인스턴스를 열거 하는 것에 대 한 핸들입니다.</span><span class="sxs-lookup"><span data-stu-id="0a65b-106">[out] A handle for enumerating the instances.</span></span>
 
-## <a name="remarks"></a><span data-ttu-id="bb35a-107">설명</span><span class="sxs-lookup"><span data-stu-id="bb35a-107">Remarks</span></span>
+## <a name="remarks"></a><span data-ttu-id="0a65b-107">설명</span><span class="sxs-lookup"><span data-stu-id="0a65b-107">Remarks</span></span>
 
-<span data-ttu-id="bb35a-108">제공 된 메서드는의 일부는 `IXCLRDataMethodDefinition` 인터페이스 및 가상 메서드 테이블의 다섯 번째 슬롯에 해당 합니다.</span><span class="sxs-lookup"><span data-stu-id="bb35a-108">The provided method is part of the `IXCLRDataMethodDefinition` interface and corresponds to the fifth slot of the virtual method table.</span></span>
+<span data-ttu-id="0a65b-108">제공 된 메서드는의 일부는 `IXCLRDataMethodDefinition` 인터페이스 및 가상 메서드 테이블의 다섯 번째 슬롯에 해당 합니다.</span><span class="sxs-lookup"><span data-stu-id="0a65b-108">The provided method is part of the `IXCLRDataMethodDefinition` interface and corresponds to the fifth slot of the virtual method table.</span></span>
 
-## <a name="requirements"></a><span data-ttu-id="bb35a-109">요구 사항</span><span class="sxs-lookup"><span data-stu-id="bb35a-109">Requirements</span></span>
+## <a name="requirements"></a><span data-ttu-id="0a65b-109">요구 사항</span><span class="sxs-lookup"><span data-stu-id="0a65b-109">Requirements</span></span>
 
-<span data-ttu-id="bb35a-110">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="bb35a-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
-<span data-ttu-id="bb35a-111">**헤더:** 없음</span><span class="sxs-lookup"><span data-stu-id="bb35a-111">**Header:** None</span></span>  
-<span data-ttu-id="bb35a-112">**라이브러리:** 없음</span><span class="sxs-lookup"><span data-stu-id="bb35a-112">**Library:** None</span></span>  
-<span data-ttu-id="bb35a-113">**.NET Framework 버전:** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]</span><span class="sxs-lookup"><span data-stu-id="bb35a-113">**.NET Framework Versions:** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]</span></span>  
+<span data-ttu-id="0a65b-110">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="0a65b-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+<span data-ttu-id="0a65b-111">**헤더:** 없음</span><span class="sxs-lookup"><span data-stu-id="0a65b-111">**Header:** None</span></span>  
+<span data-ttu-id="0a65b-112">**라이브러리:** 없음</span><span class="sxs-lookup"><span data-stu-id="0a65b-112">**Library:** None</span></span>  
+<span data-ttu-id="0a65b-113">**.NET Framework 버전:** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]</span><span class="sxs-lookup"><span data-stu-id="0a65b-113">**.NET Framework Versions:** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]</span></span>  
 
-## <a name="see-also"></a><span data-ttu-id="bb35a-114">참고자료</span><span class="sxs-lookup"><span data-stu-id="bb35a-114">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="0a65b-114">참고자료</span><span class="sxs-lookup"><span data-stu-id="0a65b-114">See also</span></span>
 
-- [<span data-ttu-id="bb35a-115">디버깅</span><span class="sxs-lookup"><span data-stu-id="bb35a-115">Debugging</span></span>](../../../../docs/framework/unmanaged-api/debugging/index.md)
-- [<span data-ttu-id="bb35a-116">IXCLRDataMethodDefinition 인터페이스</span><span class="sxs-lookup"><span data-stu-id="bb35a-116">IXCLRDataMethodDefinition Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/ixclrdatamethoddefinition-interface.md)
+- [<span data-ttu-id="0a65b-115">디버깅</span><span class="sxs-lookup"><span data-stu-id="0a65b-115">Debugging</span></span>](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [<span data-ttu-id="0a65b-116">IXCLRDataMethodDefinition 인터페이스</span><span class="sxs-lookup"><span data-stu-id="0a65b-116">IXCLRDataMethodDefinition Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/ixclrdatamethoddefinition-interface.md)

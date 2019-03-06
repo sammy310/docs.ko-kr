@@ -7,43 +7,43 @@ helpviewer_keywords:
 - timing system [WPF]
 - animation [WPF]
 ms.assetid: 587e36f6-1957-424e-9d89-c43724f26d84
-ms.openlocfilehash: 7c61e1bbd3b9c93785393c729f2af27f29d1dc40
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 4936ba7bcd78c4867dae99df8bad11776cf655db
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "45994275"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57358498"
 ---
-# <a name="animation-and-timing-how-to-topics"></a><span data-ttu-id="bb3b9-102">애니메이션 및 타이밍 방법 항목</span><span class="sxs-lookup"><span data-stu-id="bb3b9-102">Animation and Timing How-to Topics</span></span>
-<span data-ttu-id="bb3b9-103">다음 항목에서는 사용 하는 방법을 설명 합니다 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 애니메이션 및 타이밍 시스템 응용 프로그램에서 합니다.</span><span class="sxs-lookup"><span data-stu-id="bb3b9-103">The following topics demonstrate how to use the [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] animation and timing system in your applications.</span></span>  
+# <a name="animation-and-timing-how-to-topics"></a><span data-ttu-id="086ce-102">애니메이션 및 타이밍 방법 항목</span><span class="sxs-lookup"><span data-stu-id="086ce-102">Animation and Timing How-to Topics</span></span>
+<span data-ttu-id="086ce-103">다음 항목에서는 사용 하는 방법을 설명 합니다 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 애니메이션 및 타이밍 시스템 응용 프로그램에서 합니다.</span><span class="sxs-lookup"><span data-stu-id="086ce-103">The following topics demonstrate how to use the [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] animation and timing system in your applications.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="bb3b9-104">섹션 내용</span><span class="sxs-lookup"><span data-stu-id="bb3b9-104">In This Section</span></span>  
- [<span data-ttu-id="bb3b9-105">애니메이션 가속 또는 감속</span><span class="sxs-lookup"><span data-stu-id="bb3b9-105">Accelerate or Decelerate an Animation</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-accelerate-or-decelerate-an-animation.md)  
- [<span data-ttu-id="bb3b9-106">주기가 반복되는 동안 애니메이션 값 누적</span><span class="sxs-lookup"><span data-stu-id="bb3b9-106">Accumulate Animation Values During Repeat Cycles</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-accumulate-animation-values-during-repeat-cycles.md)  
- [<span data-ttu-id="bb3b9-107">애니메이션 시작 값에 애니메이션 출력 값 추가</span><span class="sxs-lookup"><span data-stu-id="bb3b9-107">Add an Animation Output Value to an Animation Starting Value</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-add-an-animation-output-value-to-an-animation-starting-value.md)  
- [<span data-ttu-id="bb3b9-108">Storyboard를 사용하여 속성에 애니메이션 효과 주기</span><span class="sxs-lookup"><span data-stu-id="bb3b9-108">Animate a Property by Using a Storyboard</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-property-by-using-a-storyboard.md)  
- [<span data-ttu-id="bb3b9-109">Storyboard를 사용하지 않고 속성에 애니메이션 효과 주기</span><span class="sxs-lookup"><span data-stu-id="bb3b9-109">Animate a Property Without Using a Storyboard</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-property-without-using-a-storyboard.md)  
- [<span data-ttu-id="bb3b9-110">ControlTemplate에서 애니메이션 효과 적용</span><span class="sxs-lookup"><span data-stu-id="bb3b9-110">Animate in a ControlTemplate</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-in-a-controltemplate.md)  
- [<span data-ttu-id="bb3b9-111">스타일에서 애니메이션 효과 주기</span><span class="sxs-lookup"><span data-stu-id="bb3b9-111">Animate in a Style</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-in-a-style.md)  
- [<span data-ttu-id="bb3b9-112">요소 또는 브러시의 불투명도에 애니메이션 효과 적용</span><span class="sxs-lookup"><span data-stu-id="bb3b9-112">Animate the Opacity of an Element or Brush</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-the-opacity-of-an-element-or-brush.md)  
- [<span data-ttu-id="bb3b9-113">해당 타임라인의 속도를 변경하지 않고 클록의 속도 변경</span><span class="sxs-lookup"><span data-stu-id="bb3b9-113">Change the Speed of a Clock Without Changing the Speed of Its Timeline</span></span>](../../../../docs/framework/wpf/graphics-multimedia/change-the-speed-of-a-clock.md)  
- [<span data-ttu-id="bb3b9-114">대화형 메서드를 사용하여 이미 시작된 Storyboard 제어</span><span class="sxs-lookup"><span data-stu-id="bb3b9-114">Control a Storyboard After It Starts Using Its Interactive Methods</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-control-a-storyboard-after-it-starts.md)  
- [<span data-ttu-id="bb3b9-115">From, To 및 By를 사용하여 애니메이션 제어</span><span class="sxs-lookup"><span data-stu-id="bb3b9-115">Control an Animation using From, To, and By</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-control-an-animation-using-from-to-and-by.md)  
- [<span data-ttu-id="bb3b9-116">이름 범위 정의</span><span class="sxs-lookup"><span data-stu-id="bb3b9-116">Define a Name Scope</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-define-a-name-scope.md)  
- [<span data-ttu-id="bb3b9-117">클록 상태가 변경될 때 알림 받기</span><span class="sxs-lookup"><span data-stu-id="bb3b9-117">Receive Notification When a Clock's State Changes</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-receive-notification-when-clock-state-changes.md)  
- [<span data-ttu-id="bb3b9-118">애니메이션 반복</span><span class="sxs-lookup"><span data-stu-id="bb3b9-118">Repeat an Animation</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-repeat-an-animation.md)  
- [<span data-ttu-id="bb3b9-119">Storyboard 검색</span><span class="sxs-lookup"><span data-stu-id="bb3b9-119">Seek a Storyboard</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-seek-a-storyboard.md)  
- [<span data-ttu-id="bb3b9-120">동기적으로 Storyboard 검색</span><span class="sxs-lookup"><span data-stu-id="bb3b9-120">Seek a Storyboard Synchronously</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-seek-a-storyboard-synchronously.md)  
- [<span data-ttu-id="bb3b9-121">애니메이션의 지속 시간 설정</span><span class="sxs-lookup"><span data-stu-id="bb3b9-121">Set a Duration for an Animation</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-set-a-duration-for-an-animation.md)  
- [<span data-ttu-id="bb3b9-122">Storyboard로 애니메이션 효과를 적용한 후 속성 설정</span><span class="sxs-lookup"><span data-stu-id="bb3b9-122">Set a Property After Animating It with a Storyboard</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-set-a-property-after-animating-it-with-a-storyboard.md)  
- [<span data-ttu-id="bb3b9-123">자식 타임라인을 사용하여 애니메이션 단순화</span><span class="sxs-lookup"><span data-stu-id="bb3b9-123">Simplify Animations by Using Child Timelines</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-simplify-animations-by-using-child-timelines.md)  
- [<span data-ttu-id="bb3b9-124">Storyboard 애니메이션 간의 HandoffBehavior 지정</span><span class="sxs-lookup"><span data-stu-id="bb3b9-124">Specify HandoffBehavior Between Storyboard Animations</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-specify-handoffbehavior-between-storyboard-animations.md)  
- [<span data-ttu-id="bb3b9-125">활성 기간 끝에 도달한 타임라인의 FillBehavior 지정</span><span class="sxs-lookup"><span data-stu-id="bb3b9-125">Specify the FillBehavior for a Timeline that has Reached the End of Its Active Period</span></span>](../../../../docs/framework/wpf/graphics-multimedia/specify-the-fillbehavior-for-a-timeline.md)  
- [<span data-ttu-id="bb3b9-126">타임라인을 자동으로 뒤집을지 여부 지정</span><span class="sxs-lookup"><span data-stu-id="bb3b9-126">Specify Whether a Timeline Automatically Reverses</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-specify-whether-a-timeline-automatically-reverses.md)  
- [<span data-ttu-id="bb3b9-127">속성 값이 변경될 때 애니메이션 트리거</span><span class="sxs-lookup"><span data-stu-id="bb3b9-127">Trigger an Animation When a Property Value Changes</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-trigger-an-animation-when-a-property-value-changes.md)  
- [<span data-ttu-id="bb3b9-128">Storyboard를 시작한 후 이벤트 트리거를 사용하여 제어</span><span class="sxs-lookup"><span data-stu-id="bb3b9-128">Use Event Triggers to Control a Storyboard After It Starts</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-use-event-triggers-to-control-a-storyboard-after-it-starts.md)  
+## <a name="in-this-section"></a><span data-ttu-id="086ce-104">섹션 내용</span><span class="sxs-lookup"><span data-stu-id="086ce-104">In This Section</span></span>  
+ [<span data-ttu-id="086ce-105">애니메이션 가속 또는 감속</span><span class="sxs-lookup"><span data-stu-id="086ce-105">Accelerate or Decelerate an Animation</span></span>](how-to-accelerate-or-decelerate-an-animation.md)  
+ [<span data-ttu-id="086ce-106">주기가 반복되는 동안 애니메이션 값 누적</span><span class="sxs-lookup"><span data-stu-id="086ce-106">Accumulate Animation Values During Repeat Cycles</span></span>](how-to-accumulate-animation-values-during-repeat-cycles.md)  
+ [<span data-ttu-id="086ce-107">애니메이션 시작 값에 애니메이션 출력 값 추가</span><span class="sxs-lookup"><span data-stu-id="086ce-107">Add an Animation Output Value to an Animation Starting Value</span></span>](how-to-add-an-animation-output-value-to-an-animation-starting-value.md)  
+ [<span data-ttu-id="086ce-108">Storyboard를 사용하여 속성에 애니메이션 효과 주기</span><span class="sxs-lookup"><span data-stu-id="086ce-108">Animate a Property by Using a Storyboard</span></span>](how-to-animate-a-property-by-using-a-storyboard.md)  
+ [<span data-ttu-id="086ce-109">Storyboard를 사용하지 않고 속성에 애니메이션 효과 주기</span><span class="sxs-lookup"><span data-stu-id="086ce-109">Animate a Property Without Using a Storyboard</span></span>](how-to-animate-a-property-without-using-a-storyboard.md)  
+ [<span data-ttu-id="086ce-110">ControlTemplate에서 애니메이션 효과 적용</span><span class="sxs-lookup"><span data-stu-id="086ce-110">Animate in a ControlTemplate</span></span>](how-to-animate-in-a-controltemplate.md)  
+ [<span data-ttu-id="086ce-111">스타일에서 애니메이션 효과 주기</span><span class="sxs-lookup"><span data-stu-id="086ce-111">Animate in a Style</span></span>](how-to-animate-in-a-style.md)  
+ [<span data-ttu-id="086ce-112">요소 또는 브러시의 불투명도에 애니메이션 효과 적용</span><span class="sxs-lookup"><span data-stu-id="086ce-112">Animate the Opacity of an Element or Brush</span></span>](how-to-animate-the-opacity-of-an-element-or-brush.md)  
+ [<span data-ttu-id="086ce-113">해당 타임라인의 속도를 변경하지 않고 클록의 속도 변경</span><span class="sxs-lookup"><span data-stu-id="086ce-113">Change the Speed of a Clock Without Changing the Speed of Its Timeline</span></span>](change-the-speed-of-a-clock.md)  
+ [<span data-ttu-id="086ce-114">대화형 메서드를 사용하여 이미 시작된 Storyboard 제어</span><span class="sxs-lookup"><span data-stu-id="086ce-114">Control a Storyboard After It Starts Using Its Interactive Methods</span></span>](how-to-control-a-storyboard-after-it-starts.md)  
+ [<span data-ttu-id="086ce-115">From, To 및 By를 사용하여 애니메이션 제어</span><span class="sxs-lookup"><span data-stu-id="086ce-115">Control an Animation using From, To, and By</span></span>](how-to-control-an-animation-using-from-to-and-by.md)  
+ [<span data-ttu-id="086ce-116">이름 범위 정의</span><span class="sxs-lookup"><span data-stu-id="086ce-116">Define a Name Scope</span></span>](how-to-define-a-name-scope.md)  
+ [<span data-ttu-id="086ce-117">클록 상태가 변경될 때 알림 받기</span><span class="sxs-lookup"><span data-stu-id="086ce-117">Receive Notification When a Clock's State Changes</span></span>](how-to-receive-notification-when-clock-state-changes.md)  
+ [<span data-ttu-id="086ce-118">애니메이션 반복</span><span class="sxs-lookup"><span data-stu-id="086ce-118">Repeat an Animation</span></span>](how-to-repeat-an-animation.md)  
+ [<span data-ttu-id="086ce-119">Storyboard 검색</span><span class="sxs-lookup"><span data-stu-id="086ce-119">Seek a Storyboard</span></span>](how-to-seek-a-storyboard.md)  
+ [<span data-ttu-id="086ce-120">동기적으로 Storyboard 검색</span><span class="sxs-lookup"><span data-stu-id="086ce-120">Seek a Storyboard Synchronously</span></span>](how-to-seek-a-storyboard-synchronously.md)  
+ [<span data-ttu-id="086ce-121">애니메이션의 지속 시간 설정</span><span class="sxs-lookup"><span data-stu-id="086ce-121">Set a Duration for an Animation</span></span>](how-to-set-a-duration-for-an-animation.md)  
+ [<span data-ttu-id="086ce-122">Storyboard로 애니메이션 효과를 적용한 후 속성 설정</span><span class="sxs-lookup"><span data-stu-id="086ce-122">Set a Property After Animating It with a Storyboard</span></span>](how-to-set-a-property-after-animating-it-with-a-storyboard.md)  
+ [<span data-ttu-id="086ce-123">자식 타임라인을 사용하여 애니메이션 단순화</span><span class="sxs-lookup"><span data-stu-id="086ce-123">Simplify Animations by Using Child Timelines</span></span>](how-to-simplify-animations-by-using-child-timelines.md)  
+ [<span data-ttu-id="086ce-124">Storyboard 애니메이션 간의 HandoffBehavior 지정</span><span class="sxs-lookup"><span data-stu-id="086ce-124">Specify HandoffBehavior Between Storyboard Animations</span></span>](how-to-specify-handoffbehavior-between-storyboard-animations.md)  
+ [<span data-ttu-id="086ce-125">활성 기간 끝에 도달한 타임라인의 FillBehavior 지정</span><span class="sxs-lookup"><span data-stu-id="086ce-125">Specify the FillBehavior for a Timeline that has Reached the End of Its Active Period</span></span>](specify-the-fillbehavior-for-a-timeline.md)  
+ [<span data-ttu-id="086ce-126">타임라인을 자동으로 뒤집을지 여부 지정</span><span class="sxs-lookup"><span data-stu-id="086ce-126">Specify Whether a Timeline Automatically Reverses</span></span>](how-to-specify-whether-a-timeline-automatically-reverses.md)  
+ [<span data-ttu-id="086ce-127">속성 값이 변경될 때 애니메이션 트리거</span><span class="sxs-lookup"><span data-stu-id="086ce-127">Trigger an Animation When a Property Value Changes</span></span>](how-to-trigger-an-animation-when-a-property-value-changes.md)  
+ [<span data-ttu-id="086ce-128">Storyboard를 시작한 후 이벤트 트리거를 사용하여 제어</span><span class="sxs-lookup"><span data-stu-id="086ce-128">Use Event Triggers to Control a Storyboard After It Starts</span></span>](how-to-use-event-triggers-to-control-a-storyboard-after-it-starts.md)  
   
-## <a name="reference"></a><span data-ttu-id="bb3b9-129">참조</span><span class="sxs-lookup"><span data-stu-id="bb3b9-129">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="086ce-129">참조</span><span class="sxs-lookup"><span data-stu-id="086ce-129">Reference</span></span>  
  <xref:System.Windows.Media.Animation.Timeline>  
   
  <xref:System.Windows.Media.Animation.Storyboard>  
@@ -54,5 +54,5 @@ ms.locfileid: "45994275"
   
  <xref:System.Windows.Media.Animation>  
   
-## <a name="related-sections"></a><span data-ttu-id="bb3b9-130">관련 단원</span><span class="sxs-lookup"><span data-stu-id="bb3b9-130">Related Sections</span></span>  
- [<span data-ttu-id="bb3b9-131">그래픽 및 멀티미디어</span><span class="sxs-lookup"><span data-stu-id="bb3b9-131">Graphics and Multimedia</span></span>](../../../../docs/framework/wpf/graphics-multimedia/index.md)
+## <a name="related-sections"></a><span data-ttu-id="086ce-130">관련 단원</span><span class="sxs-lookup"><span data-stu-id="086ce-130">Related Sections</span></span>  
+ [<span data-ttu-id="086ce-131">그래픽 및 멀티미디어</span><span class="sxs-lookup"><span data-stu-id="086ce-131">Graphics and Multimedia</span></span>](index.md)

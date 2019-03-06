@@ -8,27 +8,27 @@ helpviewer_keywords:
 - displaying a background image inside a text box to aid user input [WPF]
 - aid usability of a TextBox using a background image [WPF]
 ms.assetid: df89bdd8-a0fb-45e0-b312-dd53332d01a8
-ms.openlocfilehash: 1ab8c0f9274f4d461c9c2be04ec0aaca5e753c7d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5a2b48c6f580def98a47913c4909d0c57aca0974
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54531134"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57359422"
 ---
-# <a name="how-to-add-a-watermark-to-a-textbox"></a><span data-ttu-id="a97ac-102">방법: TextBox에 워터마크 추가</span><span class="sxs-lookup"><span data-stu-id="a97ac-102">How to: Add a Watermark to a TextBox</span></span>
-<span data-ttu-id="a97ac-103">다음 예제에서는의 유용성을 <xref:System.Windows.Controls.TextBox> 내부의 설명 배경 이미지를 표시 하 여는 <xref:System.Windows.Controls.TextBox> 이미지 제거 되는 시점까지 사용자가 텍스트를 입력 합니다.</span><span class="sxs-lookup"><span data-stu-id="a97ac-103">The following example shows how to aid usability of a <xref:System.Windows.Controls.TextBox> by displaying an explanatory background image inside of the <xref:System.Windows.Controls.TextBox> until the user inputs text, at which point the image is removed.</span></span> <span data-ttu-id="a97ac-104">또한 사용자가 입력을 제거 하는 경우 배경 이미지가 다시 복원 됩니다.</span><span class="sxs-lookup"><span data-stu-id="a97ac-104">In addition, the background image is restored again if the user removes their input.</span></span> <span data-ttu-id="a97ac-105">아래 그림을 참조 하세요.</span><span class="sxs-lookup"><span data-stu-id="a97ac-105">See illustration below.</span></span>  
+# <a name="how-to-add-a-watermark-to-a-textbox"></a><span data-ttu-id="4c376-102">방법: TextBox에 워터마크 추가</span><span class="sxs-lookup"><span data-stu-id="4c376-102">How to: Add a Watermark to a TextBox</span></span>
+<span data-ttu-id="4c376-103">다음 예제에서는의 유용성을 <xref:System.Windows.Controls.TextBox> 내부의 설명 배경 이미지를 표시 하 여는 <xref:System.Windows.Controls.TextBox> 이미지 제거 되는 시점까지 사용자가 텍스트를 입력 합니다.</span><span class="sxs-lookup"><span data-stu-id="4c376-103">The following example shows how to aid usability of a <xref:System.Windows.Controls.TextBox> by displaying an explanatory background image inside of the <xref:System.Windows.Controls.TextBox> until the user inputs text, at which point the image is removed.</span></span> <span data-ttu-id="4c376-104">또한 사용자가 입력을 제거 하는 경우 배경 이미지가 다시 복원 됩니다.</span><span class="sxs-lookup"><span data-stu-id="4c376-104">In addition, the background image is restored again if the user removes their input.</span></span> <span data-ttu-id="4c376-105">아래 그림을 참조 하세요.</span><span class="sxs-lookup"><span data-stu-id="4c376-105">See illustration below.</span></span>  
   
- <span data-ttu-id="a97ac-106">![배경 이미지가 있는 TextBox](../../../../docs/framework/wpf/controls/media/editing-textbox-using-background-image.png "Editing_TextBox_using_background_image")</span><span class="sxs-lookup"><span data-stu-id="a97ac-106">![A TextBox with a background image](../../../../docs/framework/wpf/controls/media/editing-textbox-using-background-image.png "Editing_TextBox_using_background_image")</span></span>  
+ <span data-ttu-id="4c376-106">![배경 이미지가 있는 TextBox](./media/editing-textbox-using-background-image.png "Editing_TextBox_using_background_image")</span><span class="sxs-lookup"><span data-stu-id="4c376-106">![A TextBox with a background image](./media/editing-textbox-using-background-image.png "Editing_TextBox_using_background_image")</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="a97ac-107">배경 이미지 조작 대신 다음 단순히이 예에서 사용 되는 이유는 <xref:System.Windows.Controls.TextBox.Text%2A> 속성의 <xref:System.Windows.Controls.TextBox>는 배경 이미지를 데이터 바인딩에 방해 하지 것입니다.</span><span class="sxs-lookup"><span data-stu-id="a97ac-107">The reason a background image is used in this example rather then simply manipulating the <xref:System.Windows.Controls.TextBox.Text%2A> property of <xref:System.Windows.Controls.TextBox>, is that a background image will not interfere with data binding.</span></span>  
+>  <span data-ttu-id="4c376-107">배경 이미지 조작 대신 다음 단순히이 예에서 사용 되는 이유는 <xref:System.Windows.Controls.TextBox.Text%2A> 속성의 <xref:System.Windows.Controls.TextBox>는 배경 이미지를 데이터 바인딩에 방해 하지 것입니다.</span><span class="sxs-lookup"><span data-stu-id="4c376-107">The reason a background image is used in this example rather then simply manipulating the <xref:System.Windows.Controls.TextBox.Text%2A> property of <xref:System.Windows.Controls.TextBox>, is that a background image will not interfere with data binding.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="a97ac-108">예제</span><span class="sxs-lookup"><span data-stu-id="a97ac-108">Example</span></span>  
- [!code-xaml[TextBoxMiscSnippets_snip#TextBoxBackgroundExampleWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TextBoxMiscSnippets_snip/csharp/textbox_with_background_image.xaml#textboxbackgroundexamplewholepage)]  
+## <a name="example"></a><span data-ttu-id="4c376-108">예제</span><span class="sxs-lookup"><span data-stu-id="4c376-108">Example</span></span>  
+ [!code-xaml[TextBoxMiscSnippets_snip#TextBoxBackgroundExampleWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/TextBoxMiscSnippets_snip/csharp/textbox_with_background_image.xaml#textboxbackgroundexamplewholepage)]  
   
- [!code-csharp[TextBoxMiscSnippets_snip#TextBoxBackgroundCodeExampleWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TextBoxMiscSnippets_snip/csharp/textbox_with_background_image.xaml.cs#textboxbackgroundcodeexamplewholepage)]
- [!code-vb[TextBoxMiscSnippets_snip#TextBoxBackgroundCodeExampleWholePage](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/TextBoxMiscSnippets_snip/visualbasic/textbox_with_background_image.xaml.vb#textboxbackgroundcodeexamplewholepage)]  
+ [!code-csharp[TextBoxMiscSnippets_snip#TextBoxBackgroundCodeExampleWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/TextBoxMiscSnippets_snip/csharp/textbox_with_background_image.xaml.cs#textboxbackgroundcodeexamplewholepage)]
+ [!code-vb[TextBoxMiscSnippets_snip#TextBoxBackgroundCodeExampleWholePage](~/samples/snippets/visualbasic/VS_Snippets_Wpf/TextBoxMiscSnippets_snip/visualbasic/textbox_with_background_image.xaml.vb#textboxbackgroundcodeexamplewholepage)]  
   
-## <a name="see-also"></a><span data-ttu-id="a97ac-109">참고자료</span><span class="sxs-lookup"><span data-stu-id="a97ac-109">See also</span></span>
-- [<span data-ttu-id="a97ac-110">TextBox 개요</span><span class="sxs-lookup"><span data-stu-id="a97ac-110">TextBox Overview</span></span>](../../../../docs/framework/wpf/controls/textbox-overview.md)
-- [<span data-ttu-id="a97ac-111">RichTextBox 개요</span><span class="sxs-lookup"><span data-stu-id="a97ac-111">RichTextBox Overview</span></span>](../../../../docs/framework/wpf/controls/richtextbox-overview.md)
+## <a name="see-also"></a><span data-ttu-id="4c376-109">참고자료</span><span class="sxs-lookup"><span data-stu-id="4c376-109">See also</span></span>
+- [<span data-ttu-id="4c376-110">TextBox 개요</span><span class="sxs-lookup"><span data-stu-id="4c376-110">TextBox Overview</span></span>](textbox-overview.md)
+- [<span data-ttu-id="4c376-111">RichTextBox 개요</span><span class="sxs-lookup"><span data-stu-id="4c376-111">RichTextBox Overview</span></span>](richtextbox-overview.md)
