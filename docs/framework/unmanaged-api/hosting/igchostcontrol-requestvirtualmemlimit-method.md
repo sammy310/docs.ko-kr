@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: db1572c035242a4a143ee435957409e5d16fca1f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d163de5f2407d5b541573afe070db812d5980229
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54607175"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57474360"
 ---
 # <a name="igchostcontrolrequestvirtualmemlimit-method"></a>IGCHostControl::RequestVirtualMemLimit 메서드
 가상 메모리의 한계를 변경 하려면 호스트를 요청 합니다.  
@@ -36,7 +36,7 @@ HRESULT RequestVirtualMemLimit (
 );  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `sztMaxVirtualMemMB`  
  [in] 할당할 메모리의 요청 된 크기입니다.  
   

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b07d75b6a8839f9a223ef2c0be52830e107e4088
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4a6f2e428366d2fe96313879ef1256d7b86ddd29
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54527603"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57490413"
 ---
 # <a name="imetadataimportfindfield-method"></a>IMetaDataImport::FindField 메서드
 에 포인터를 가져옵니다 FieldDef 토큰 포함 되는 필드에 대 한 지정 된 <xref:System.Type> 지정 된 이름 및 메타 데이터 서명을 하 고 있습니다.  
@@ -39,7 +39,7 @@ HRESULT FindField (
 );  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `td`  
  [in] 클래스 또는 검색할 필드를 포함 하는 인터페이스에 대 한 TypeDef 토큰입니다. 이 값이 `mdTokenNil`, 전역 변수에 대 한 조회가 수행 됩니다.  
   

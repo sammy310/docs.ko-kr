@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: dbd7cd2d5ec515c529905ad524cedf257155b7e1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 88516a5ab7fa6ce3cd27422b32cb467a94f50f92
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54569364"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57492779"
 ---
 # <a name="gettypelibinfo-function"></a>GetTypeLibInfo 함수
 검사 하 여 지정된 된 형식 라이브러리에 대 한 정보를 반환 합니다. 해당 [>TLIBATTR](https://docs.microsoft.com/previous-versions/windows/desktop/api/oaidl/ns-oaidl-tagtlibattr) 구조입니다.  
@@ -39,7 +39,7 @@ HRESULT GetTypeLibInfo(
 );  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `szFile`  
  [in] 형식 라이브러리의 파일 이름입니다.  
   

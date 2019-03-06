@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d6dc245a53c9ec7cbe56e20313abc4269e33f45c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f7532c34dca070b07bd3124002eaf72a2f939238
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54582320"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57493065"
 ---
 # <a name="icordebugclassgettoken-method"></a>ICorDebugClass::GetToken 메서드
 가져옵니다는 `TypeDef` 이 클래스의 정의 참조 하는 메타 데이터 토큰입니다.  
@@ -35,7 +35,7 @@ HRESULT GetToken (
 );  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `pTypeDef`  
  [out] 에 대 한 포인터는 `mdTypeDef` 이 클래스의 정의 참조 하는 토큰입니다.  
   

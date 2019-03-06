@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0d18ccc18afa3bb3b7079139886c308882b2efc8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4a93efc0701248f8e4ef930261b31b3ce948647a
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54616652"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57484929"
 ---
 # <a name="ihosttaskmanagersetclrtaskmanager-method"></a>IHostTaskManager::SetCLRTaskManager 메서드
 호스트에 대 한 인터페이스 포인터를 제공는 [ICLRTaskManager](../../../../docs/framework/unmanaged-api/hosting/iclrtaskmanager-interface.md) 인스턴스는 CLR (공용 언어 런타임)에 의해 구현 됩니다.  
@@ -35,7 +35,7 @@ HRESULT SetCLRTaskManager (
 );  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `pManager`  
  [in] 에 대 한 포인터는 `ICLRTaskManager` 공용 언어 런타임에서 구현 되는 인스턴스.  
   

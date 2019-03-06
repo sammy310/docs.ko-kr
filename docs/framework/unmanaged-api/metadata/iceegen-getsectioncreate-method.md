@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 93e96e7804a3b5ecc64e9e50ce700435be83b77a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 03de69d51b520ae2d8be6c7f450f0541c52c36a2
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54643366"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57472436"
 ---
 # <a name="iceegengetsectioncreate-method"></a>ICeeGen::GetSectionCreate 메서드
 생성 하 고 지정한 이름 및 플래그 값을 사용 하 여 코드 섹션을 가져옵니다.  
@@ -39,7 +39,7 @@ HRESULT GetSectionCreate (
 );  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `name`  
  [in] 만들 섹션의 이름을 지정 하는 문자열에 대 한 포인터입니다.  
   

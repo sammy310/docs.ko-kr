@@ -1,5 +1,5 @@
 ---
-title: IAssemblyCacheItem::커밋 메서드
+title: IAssemblyCacheItem::Commit 메서드
 ms.date: 03/30/2017
 api_name:
 - IAssemblyCacheItem.Commit
@@ -17,14 +17,14 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9b39cdec6d5cc10256c2911c98f94b7565295408
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d234910429961a8a0add1d88d0c0eed96ed12a58
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54538000"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57496211"
 ---
-# <a name="iassemblycacheitemcommit-method"></a>IAssemblyCacheItem::커밋 메서드
+# <a name="iassemblycacheitemcommit-method"></a>IAssemblyCacheItem::Commit 메서드
 메모리에 캐시 된 어셈블리 참조를 커밋합니다.  
   
 ## <a name="syntax"></a>구문  
@@ -36,7 +36,7 @@ HRESULT Commit (
 );  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `dwFlags`  
  [in] 같은 값이 지원에 정의 된 플래그입니다.  
   

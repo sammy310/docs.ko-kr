@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 11ab93e9cb4449ab77e5e9c4da81073aaf432382
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1a9eb51643271fd27a6d4795fc1729766b44b239
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54669694"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57468795"
 ---
 # <a name="imetadatatablesgetcodedtokeninfo-method"></a>IMetaDataTables::GetCodedTokenInfo 메서드
 지정된 된 행 인덱스와 연결 된 토큰의 배열에 대 한 포인터를 가져옵니다.  
@@ -38,7 +38,7 @@ HRESULT GetCodedTokenInfo (
 );  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `ixCdTkn`  
  [in] 반환할 코딩 된 토큰의 종류입니다.  
   

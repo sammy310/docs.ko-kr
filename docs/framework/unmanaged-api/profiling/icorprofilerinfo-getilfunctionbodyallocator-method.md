@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 0ae8b209ad03594cb77029193b0e9dec773a6e02
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 432ebff36f3b4ee0362e01fc5ecd1bfdb35bc493
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54603328"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57493013"
 ---
 # <a name="icorprofilerinfogetilfunctionbodyallocator-method"></a>ICorProfilerInfo::GetILFunctionBodyAllocator 메서드
 Microsoft MSIL (intermediate language) 코드에서 메서드 본문을 바꾸는 데 사용 하는 메모리를 할당 하기 위한 메서드를 제공 하는 인터페이스를 가져옵니다.  
@@ -35,7 +35,7 @@ HRESULT GetILFunctionBodyAllocator(
     [out] IMethodMalloc **ppMalloc);  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `moduleId`  
  [in] 메서드가 상주 하는 모듈의 ID입니다.  
   

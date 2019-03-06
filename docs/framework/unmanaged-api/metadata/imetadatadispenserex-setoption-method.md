@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 59d0b040a45b4d56234028778ccc78afd84d098f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f9e9d7a66f37759e6f62ddae2c5af989cee57e3b
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54524405"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57470652"
 ---
 # <a name="imetadatadispenserexsetoption-method"></a>IMetaDataDispenserEx::SetOption 메서드
 현재 메타 데이터 범위에 대 한 지정 된 값으로 지정된 된 옵션을 설정합니다. 현재 메타 데이터 범위에 대 한 호출을 처리 하는 방법을 제어 하는 옵션입니다.  
@@ -36,7 +36,7 @@ HRESULT SetOption (
 );  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `optionId`  
  [in] 설정할 옵션을 지정 하는 GUID에 대 한 포인터입니다.  
   

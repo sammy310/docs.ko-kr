@@ -18,12 +18,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 330501e67e3f19fbdb24c200deacad68de1b6c03
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1d186c29c409bd6f85a764e3632e2e8e4998b168
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54710292"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57490114"
 ---
 # <a name="iclrdebugmanagersetsymbolreadingpolicy-method"></a>ICLRDebugManager::SetSymbolReadingPolicy 메서드
 프로그램 데이터베이스 (PDB) 파일을 읽기 위한 정책을 설정 합니다. 정책은 호출 스택의 줄 번호 및 파일에 대 한 정보 포함 되는지 여부를 결정 합니다.  
@@ -36,7 +36,7 @@ HRESULT SetSymbolReadingPolicy (
 );  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `policy`  
  [in] 멤버는 [ESymbolReadingPolicy](../../../../docs/framework/unmanaged-api/hosting/esymbolreadingpolicy-enumeration.md) 열거형입니다.  
   

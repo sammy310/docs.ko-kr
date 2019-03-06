@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b9d775d5c386abeb100604250008ebf1bf377e8b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c2943a70f563b82d3578ed7fbd98b981282a1dd5
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54550814"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57472605"
 ---
 # <a name="icorprofilerinfo2getboxclasslayout-method"></a>ICorProfilerInfo2::GetBoxClassLayout 메서드
 지정 된 값 형식 위치한 boxed 형식이 됩니다 하는 경우에 대 한 정보를 가져옵니다.  
@@ -35,7 +35,7 @@ HRESULT GetBoxClassLayout(
     [out] ULONG32 *pBufferOffset);  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `classId`  
  [in] Boxed 값 형식을 설명 하는 클래스의 ID입니다.  
   

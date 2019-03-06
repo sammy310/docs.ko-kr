@@ -10,12 +10,12 @@ api_type:
 ms.assetid: 8029633c-b6e4-4665-a7c2-89607c3247ef
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4282be8e57c965e14398a9284002b1191c5169fa
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: cbed2ece8b10c6385341c0af44a81dfa16b6f60c
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54708040"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57497485"
 ---
 # <a name="certfreeauthenticodesignerinfo-function"></a>CertFreeAuthenticodeSignerInfo 함수
 에 할당 된 리소스를 해제 합니다 [AXL_AUTHENTICODE_SIGNER_INFO](../../../../docs/framework/unmanaged-api/authenticode/axl-authenticode-signer-info-structure.md) 구조입니다.  
@@ -27,7 +27,7 @@ HRESULT CertFreeAuthenticodeSignerInfo (
     [in, out]  PAXL_AUTHENTICODE_SIGNER_INFO   pSignerInfo);  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `pSignerInfo`  
  [in, out] 해제할 서명자 정보입니다. 참조 된 [AXL_AUTHENTICODE_SIGNER_INFO](../../../../docs/framework/unmanaged-api/authenticode/axl-authenticode-signer-info-structure.md) 구조입니다.  
   

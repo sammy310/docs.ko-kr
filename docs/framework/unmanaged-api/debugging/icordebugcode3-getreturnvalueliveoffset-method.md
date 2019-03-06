@@ -19,12 +19,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: df50a4f5b0bdd0c1e70d7c47fe115f4a28b9bbc2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4f1f4734b6cb5b214b219742a6cac1c50220b96e
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54526446"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57492857"
 ---
 # <a name="icordebugcode3getreturnvalueliveoffset-method"></a>ICorDebugCode3::GetReturnValueLiveOffset 메서드
 지정된 된 IL 오프셋에 대 한 디버거 함수에서 반환 값을 얻을 수 있도록 중단점을 배치할 위치 네이티브 오프셋을 가져옵니다.  
@@ -40,7 +40,7 @@ HRESULT GetReturnValueLiveOffset(
 );  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `ILoffset`  
  IL 오프셋입니다. 함수 호출 사이트 여야 합니다 또는 함수 호출이 실패 합니다.  
   

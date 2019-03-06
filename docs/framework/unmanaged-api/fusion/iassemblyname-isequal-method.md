@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 70784106798748eeaabd8e6b6c3787e27b0ece74
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: cae8f326a293a40164120dc17c13e451c4e93f1f
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54746676"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57489438"
 ---
 # <a name="iassemblynameisequal-method"></a>IAssemblyName::IsEqual 메서드
 지정 된 결정 [IAssemblyName](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md) 개체와 같으면이 `IAssemblyName`지정된 된 비교 플래그에 따라 합니다.  
@@ -36,7 +36,7 @@ HRESULT IsEqual (
 );  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `pName`  
  [in] 합니다 `IAssemblyName` 비교 하는 개체 `IAssemblyName`합니다.  
   

@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: af8f1c9f5d5500dad675edf14ff2e89506530631
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2cda3230c652efeffa4a599849ba13dca1e5039b
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54621239"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57472293"
 ---
 # <a name="icorprofilercallback4survivingreferences2-method"></a>ICorProfilerCallback4::SurvivingReferences2 메서드
-비압축 가비지 컬렉션의 결과로 힙에 있는 개체의 레이아웃을 보고합니다. 이 메서드는 프로파일러 구현에 [ICorProfilerCallback4](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-interface.md) 인터페이스입니다. 이 콜백은 대체 합니다 [ICorProfilerCallback2::SurvivingReferences](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-survivingreferences-method.md) 메서드를 더 큰 범위의 길이가 ulong에서으로 표현 될 수 있습니다 어떤 초과 하는 개체를 보고할 수 있어.  
+비압축 가비지 수집의 결과로 힙에 있는 개체의 레이아웃을 보고합니다. 이 메서드는 프로파일러 구현에 [ICorProfilerCallback4](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-interface.md) 인터페이스입니다. 이 콜백은 대체 합니다 [ICorProfilerCallback2::SurvivingReferences](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-survivingreferences-method.md) 메서드를 더 큰 범위의 길이가 ulong에서으로 표현 될 수 있습니다 어떤 초과 하는 개체를 보고할 수 있어.  
   
 ## <a name="syntax"></a>구문  
   
@@ -38,9 +38,9 @@ HRESULT SurvivingReferences2(
                 cObjectIDRangeLength[] );  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `cSurvivingObjectIDRanges`  
- [in] 비압축 가비지 컬렉션 후에 유지된 연속 개체 블록 수입니다. 즉, `cSurvivingObjectIDRanges` 값은 각 개체 블록의 `ObjectID` 및 길이를 각각 저장하는 `objectIDRangeStart` 및 `cObjectIDRangeLength` 배열의 크기입니다.  
+ [in] 비압축 가비지 수집 후에 유지된 연속 개체 블록 수입니다. 즉, `cSurvivingObjectIDRanges` 값은 각 개체 블록의 `ObjectID` 및 길이를 각각 저장하는 `objectIDRangeStart` 및 `cObjectIDRangeLength` 배열의 크기입니다.  
   
  `SurvivingReferences2`의 다음 두 인수는 병렬 배열입니다. 즉, `objectIDRangeStart` 및 `cObjectIDRangeLength`는 동일한 연속 개체 블록과 관련이 있습니다.  
   
@@ -53,19 +53,21 @@ HRESULT SurvivingReferences2(
  크기는 `objectIDRangeStart` 배열에서 참조된 각 블록에 대해 지정됩니다.  
   
 ## <a name="remarks"></a>설명  
- 개체가 가비지 컬렉션 후에 유지되었는지 여부를 확인하려면 `objectIDRangeStart` 및 `cObjectIDRangeLength` 배열의 요소를 다음과 같이 해석해야 합니다. `ObjectID` 값(`ObjectID`)이 다음 범위 내에 있다고 가정합니다.  
+ 개체가 가비지 수집 후에 유지되었는지 여부를 확인하려면 `objectIDRangeStart` 및 `cObjectIDRangeLength` 배열의 요소를 다음과 같이 해석해야 합니다. 
+  `ObjectID` 값(`ObjectID`)이 다음 범위 내에 있다고 가정합니다.  
   
  `ObjectIDRangeStart[i]` <= `ObjectID` < `ObjectIDRangeStart[i]` + `cObjectIDRangeLength[i]`  
   
- `i` 값이 다음 범위에 있는 경우 개체가 가비지 컬렉션 후에 유지되었습니다.  
+ 
+  `i` 값이 다음 범위에 있는 경우 개체가 가비지 수집 후에 유지되었습니다.  
   
  0 <= `i` < `cSurvivingObjectIDRanges`  
   
  비압축 가비지 컬렉션은 "데드" 개체가 사용한 메모리를 회수하지만 확보된 공간을 압축하지는 않습니다. 따라서 메모리가 힙에 반환되지만 "라이브" 개체는 이동되지 않습니다.  
   
- CLR(공용 언어 런타임)은 비압축 가비지 컬렉션을 위해 `SurvivingReferences2`를 호출합니다. 압축 가비지 컬렉션 [MovedReferences2](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-movedreferences2-method.md) 대신 호출 됩니다. 한 세대는 단일 가비지 컬렉션을 압축하고 다른 세대는 압축하지 않을 수 있습니다. 특정 세대의 가비지 컬렉션에 대 한 프로파일러 중 하나를 받게를 `SurvivingReferences2` 콜백 또는 [MovedReferences2](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-movedreferences2-method.md) 콜백, 하지만 둘 다.  
+ CLR(공용 언어 런타임)은 비압축 가비지 수집을 위해 `SurvivingReferences2`를 호출합니다. 압축 가비지 컬렉션 [MovedReferences2](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-movedreferences2-method.md) 대신 호출 됩니다. 한 세대는 단일 가비지 수집을 압축하고 다른 세대는 압축하지 않을 수 있습니다. 특정 세대의 가비지 컬렉션에 대 한 프로파일러 중 하나를 받게를 `SurvivingReferences2` 콜백 또는 [MovedReferences2](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-movedreferences2-method.md) 콜백, 하지만 둘 다.  
   
- 제한된 내부 버퍼링, 서버 가비지 컬렉션 중 여러 콜백 발생 및 기타 이유로 인해 특정 가비지 컬렉션 중 `SurvivingReferences2` 콜백을 여러 개 받을 수도 있습니다. 가비지 컬렉션 중 여러 콜백이 발생하는 경우 정보가 누적됩니다. `SurvivingReferences2` 콜백에 보고된 모든 참조가 가비지 컬렉션 후에 유지됩니다.  
+ 제한된 내부 버퍼링, 서버 가비지 컬렉션 중 여러 콜백 발생 및 기타 이유로 인해 특정 가비지 컬렉션 중 `SurvivingReferences2` 콜백을 여러 개 받을 수도 있습니다. 가비지 수집 중 여러 콜백이 발생하는 경우 정보가 누적됩니다. `SurvivingReferences2` 콜백에 보고된 모든 참조가 가비지 수집 후에 유지됩니다.  
   
  프로파일러 둘 다 구현 하는 경우는 [ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md) 하며 [ICorProfilerCallback4](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-interface.md) 인터페이스는 `SurvivingReferences2` 메서드 전에 호출 됩니다는 [ICorProfilerCallback2:: SurvivingReferences](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-survivingreferences-method.md) 방법 이지만 경우에만 `SurvivingReferences2` 성공적으로 반환 합니다. 프로파일러는 두 번째 메서드 호출을 방지하기 위해 `SurvivingReferences2` 메서드에서 실패를 나타내는 HRESULT를 반환할 수 있습니다.  
   

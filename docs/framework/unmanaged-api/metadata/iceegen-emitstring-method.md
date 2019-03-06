@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f51ce9a4b45bd674f53cf7b4c4d6cedb8d46858d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 63ddd3b5cc79cedba6d6acc6a9b6b70c00d917fc
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54586425"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57476232"
 ---
 # <a name="iceegenemitstring-method"></a>ICeeGen::EmitString 메서드
 코드 베이스에 지정된 된 문자열을 내보냅니다.  
@@ -38,7 +38,7 @@ HRESULT EmitString (
 );  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `lpString`  
  [in] 내보낼 문자열입니다.  
   

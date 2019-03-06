@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d860a6518014e0232f9372a7ccbf34604096adfd
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: bf6e0c1de9bfb920932e5c22adb4eb8573125506
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54747884"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57489960"
 ---
 # <a name="imetadataassemblyemitdefineassembly-method"></a>IMetaDataAssemblyEmit::DefineAssembly 메서드
 만듭니다는 `Assembly` 지정된 된 어셈블리의 포함 된 메타 데이터 구조 및 관련된 메타 데이터 토큰을 반환 합니다.  
@@ -41,7 +41,7 @@ HRESULT DefineAssembly (
 );  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `pbPublicKey`  
  [in] 어셈블리가 강력한 이름이 어셈블리 또는 NULL의 게시자를 식별 하는 공개 키입니다.  
   

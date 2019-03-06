@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9c7bf550985b5177348541aaa148c88c7c205258
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7e2d5c299814202d0a3a8ff1da577fdfd17801e4
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54490719"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57472003"
 ---
 # <a name="ihosttaskmanagerswitchtotask-method"></a>IHostTaskManager::SwitchToTask 메서드
 현재 작업 전환 해야 함을 호스트에 알립니다.  
@@ -35,7 +35,7 @@ HRESULT SwitchToTask (
 );  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `option`  
  [in] 중 하나는 [WAIT_OPTION](../../../../docs/framework/unmanaged-api/hosting/wait-option-enumeration.md) 호스트 하는 경우 수행 해야 하는 작업을 나타내는 열거형 값을 요청 된 작업이 차단 합니다.  
   

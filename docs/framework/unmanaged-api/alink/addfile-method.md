@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c04bc008d0279601e90d13e6a57c52a458fca1d7
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: ec16776550765924e17de35674c5774212427e1a
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56967882"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57498460"
 ---
 # <a name="addfile-method"></a>AddFile 메서드
 어셈블리 파일을 추가합니다. 바인딩되지 않은 모듈을 만드는 데 사용할 수도 있습니다.  
@@ -39,7 +39,7 @@ HRESULT AddFile(
 ) PURE;  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `AssemblyID`  
  확대 하 여 어셈블리의 고유 ID입니다.  
   

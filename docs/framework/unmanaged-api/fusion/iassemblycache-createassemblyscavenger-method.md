@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 29ccbe5ef89440c9f8c953ce47b4e351f6ca329b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 139ade26c8e55feae6e655e51f9d5cd3a167f67e
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54493129"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57492376"
 ---
 # <a name="iassemblycachecreateassemblyscavenger-method"></a>IAssemblyCache::CreateAssemblyScavenger 메서드
 Fusion 기술에서 내부 용도로 예약 되어 있습니다.  
@@ -35,7 +35,7 @@ HRESULT CreateAssemblyScavenger (
 );  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `ppUnkReserved`  
  [out] 반환 된 `IUnknown` 포인터입니다.  
   

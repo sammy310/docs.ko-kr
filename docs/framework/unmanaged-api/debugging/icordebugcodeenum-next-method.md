@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 45caad20ef7d2dbe35e0381fb8cd697fc526398f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a3aeae294d92a6dc9effc7f3baa51a35e4f2b544
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54529806"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57476635"
 ---
 # <a name="icordebugcodeenumnext-method"></a>ICorDebugCodeEnum::Next 메서드
 현재 위치부터 시작 하는 열거형에서 "ICorDebugCode" 인스턴스의 지정 된 수를 가져옵니다.  
@@ -38,7 +38,7 @@ HRESULT Next (
 );  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `celt`  
  [in] 수가 `ICorDebugCode` 인스턴스를 검색할 수 있습니다.  
   

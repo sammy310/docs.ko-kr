@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 90c805a5f1f1da990564034fc292562d5f933d71
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 15addd0b35c43945f643386f8983fc14c9312bae
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54608091"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57492337"
 ---
 # <a name="icordebugmanagedcallback2mdanotification-method"></a>ICorDebugManagedCallback2::MDANotification 메서드
 코드 실행을 MDA (관리 디버깅 도우미) 디버깅 중인 응용 프로그램에서 발생 하는 알림을 제공 합니다.  
@@ -37,7 +37,7 @@ HRESULT MDANotification(
 );  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `pController`  
  [in] ICorDebugController 인터페이스 프로세스를 노출 하는 또는 mda가 발생 한 응용 프로그램 도메인에 대 한 포인터입니다.  
   

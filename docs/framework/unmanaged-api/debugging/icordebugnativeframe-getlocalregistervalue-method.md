@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9794a44bfb0bd1b4739689359832ba8500c6e2ee
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8e6512871bf9a5cb0219a470267d1be4ecd403b3
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54539612"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57478364"
 ---
 # <a name="icordebugnativeframegetlocalregistervalue-method"></a>ICorDebugNativeFrame::GetLocalRegisterValue 메서드
 네이티브 프레임에 대 한 지정된 된 레지스터에 저장 된 로컬 변수 또는 인수의 값을 가져옵니다.  
@@ -38,7 +38,7 @@ HRESULT GetLocalRegisterValue (
 );  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `reg`  
  [in] 값을 포함 하는 레지스터를 지정 하는 "CorDebugRegister" 열거형의 값입니다.  
   

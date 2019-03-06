@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cd54792e37523ea5bf0c2e7a4082ee00c30d00ea
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7eef04dfb305978c81f465ecb37eda75a52f25e4
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54496298"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57502954"
 ---
 # <a name="icordebugcontrollerisrunning-method"></a>ICorDebugController::IsRunning 메서드
 프로세스의 스레드는 자유롭게 실행 현재 여부를 나타내는 값을 가져옵니다.  
@@ -35,7 +35,7 @@ HRESULT IsRunning (
 );  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `pbRunning`  
  [out] 값에 대 한 포인터 `true` 자유롭게 그렇지 않은 경우 프로세스의 스레드가 실행 중인 경우 `false`합니다.  
   

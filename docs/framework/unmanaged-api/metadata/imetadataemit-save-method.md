@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1a2be03e82d5be9bae64d7169709d16c40b66e37
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 90ddc540115a60154953ac6e8cb931103a650752
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54511880"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57492415"
 ---
 # <a name="imetadataemitsave-method"></a>IMetaDataEmit::Save 메서드
 지정된 된 주소에서 파일을 현재 범위에서 모든 메타 데이터를 저장합니다.  
@@ -36,12 +36,12 @@ HRESULT Save (
 );  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `wzFile`  
  [in] 저장할 파일의 이름입니다. 이 값이 null 이면 위치는 데 사용 된 메모리 내 복사본 마지막 저장 됩니다.  
   
  `dwSaveFlags`  
- [in] 예약되어 있습니다. 0이어야 합니다.  
+ [in] 예약되어 있습니다. 0 이어야 합니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  

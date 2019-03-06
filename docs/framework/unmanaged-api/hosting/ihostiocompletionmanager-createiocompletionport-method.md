@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4fc7bda648dd19f614eb27ff514da653dcd347fb
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d91791517350137c71937b4e1b02e070d62efd38
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54619419"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57472592"
 ---
 # <a name="ihostiocompletionmanagercreateiocompletionport-method"></a>IHostIoCompletionManager::CreateIoCompletionPort 메서드
 호스트에 새 I/O 완료 포트를 만든 요청 합니다.  
@@ -35,7 +35,7 @@ HRESULT CreateIoCompletionPort (
 );  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `phPort`  
  [out] 새로 만든된 I/O 완료 포트 또는 0 (영)을 포트를 만들 수 없는 경우에 대 한 핸들에 대 한 포인터입니다.  
   

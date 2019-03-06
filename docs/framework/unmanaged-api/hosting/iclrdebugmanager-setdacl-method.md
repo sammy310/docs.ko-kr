@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7d1c3edd15ce1994c43a5c9419f7c0edb9421fca
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 943c119ae32a45034a53fae4ee08c4e23c2abd15
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54509222"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57503010"
 ---
 # <a name="iclrdebugmanagersetdacl-method"></a>ICLRDebugManager::SetDacl 메서드
 이 메서드가 구현되지 않았습니다.  
@@ -35,7 +35,7 @@ HRESULT SetDacl (
 );  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `pacl`  
  [in] 액세스 제어 목록 (ACL)를 포인터입니다.  
   

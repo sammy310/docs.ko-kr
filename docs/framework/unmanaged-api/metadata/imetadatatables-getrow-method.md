@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a6f6f3018d5e9a1b49191d8e82f91ac8e5c21b77
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7216e2aacf344a5e606e34451cde01eca4a1e175
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54681952"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57472189"
 ---
 # <a name="imetadatatablesgetrow-method"></a>IMetaDataTables::GetRow 메서드
 지정된 된 테이블 인덱스에 있는 표에 지정 된 행 인덱스에 행을 가져옵니다.  
@@ -37,7 +37,7 @@ HRESULT GetRow (
 );  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `ixTbl`  
  [in] 행을 검색할 테이블의 인덱스입니다.  
   

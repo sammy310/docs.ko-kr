@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b768c8f7880a2317d1b72878657158e839b731f3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7c29859a54b89956e017f06b8eeb97a6171eabbb
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54569731"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57476219"
 ---
 # <a name="icordebugcanlaunchorattach-method"></a>ICorDebug::CanLaunchOrAttach 메서드
 새 프로세스를 시작 하거나 지정한 기존 프로세스에 연결 하는 현재 컴퓨터 및 런타임 구성 컨텍스트 내에서 가능한 지 여부를 나타내는 HRESULT를 반환 합니다.  
@@ -36,7 +36,7 @@ HRESULT CanLaunchOrAttach (
 );  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `dwProcessId`  
  [in] 기존 프로세스의 ID입니다.  
   

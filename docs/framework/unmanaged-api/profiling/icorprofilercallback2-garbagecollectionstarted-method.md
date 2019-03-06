@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6c610445d5467a49b8a50b279d8f7fe706e21f73
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d3c95bbf946cd208a1cc01463aaae76e3842c8fa
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54555663"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57471266"
 ---
 # <a name="icorprofilercallback2garbagecollectionstarted-method"></a>ICorProfilerCallback2::GarbageCollectionStarted 메서드
 가비지 수집이 시작 되었습니다 코드 프로파일러에 알립니다.  
@@ -36,7 +36,7 @@ HRESULT GarbageCollectionStarted(
     [in] COR_PRF_GC_REASON reason);  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `cGenerations`  
  [in] 에 있는 항목의 총 수를 `generationCollected` 배열입니다.  
   
