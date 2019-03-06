@@ -17,42 +17,42 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 12f5930fb6d4e149653bc29d2f36b0df72c71447
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6b05ad4bddc6d82c486d0b460cd946df8299bf3e
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54498832"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57466325"
 ---
-# <a name="icorprofilerinfo3enumjitedfunctions-method"></a><span data-ttu-id="57d80-102">ICorProfilerInfo3::EnumJITedFunctions 메서드</span><span class="sxs-lookup"><span data-stu-id="57d80-102">ICorProfilerInfo3::EnumJITedFunctions Method</span></span>
-<span data-ttu-id="57d80-103">이전에 JIT 컴파일된 모든 함수에 대 한 열거자를 반환 합니다.</span><span class="sxs-lookup"><span data-stu-id="57d80-103">Returns an enumerator for all functions that were previously JIT-compiled.</span></span>  
+# <a name="icorprofilerinfo3enumjitedfunctions-method"></a><span data-ttu-id="ed6fb-102">ICorProfilerInfo3::EnumJITedFunctions 메서드</span><span class="sxs-lookup"><span data-stu-id="ed6fb-102">ICorProfilerInfo3::EnumJITedFunctions Method</span></span>
+<span data-ttu-id="ed6fb-103">이전에 JIT 컴파일된 모든 함수에 대 한 열거자를 반환 합니다.</span><span class="sxs-lookup"><span data-stu-id="ed6fb-103">Returns an enumerator for all functions that were previously JIT-compiled.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="57d80-104">구문</span><span class="sxs-lookup"><span data-stu-id="57d80-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="ed6fb-104">구문</span><span class="sxs-lookup"><span data-stu-id="ed6fb-104">Syntax</span></span>  
   
 ```  
 HRESULT EnumJITedFunctions([out] ICorProfilerFunctionEnum** ppEnum);  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="57d80-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="57d80-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="ed6fb-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="ed6fb-105">Parameters</span></span>  
  `ppEnum`  
- <span data-ttu-id="57d80-106">[out] 에 대 한 포인터를 [ICorProfilerFunctionEnum](../../../../docs/framework/unmanaged-api/profiling/icorprofilerfunctionenum-interface.md) 열거자입니다.</span><span class="sxs-lookup"><span data-stu-id="57d80-106">[out] A pointer to the [ICorProfilerFunctionEnum](../../../../docs/framework/unmanaged-api/profiling/icorprofilerfunctionenum-interface.md) enumerator.</span></span>  
+ <span data-ttu-id="ed6fb-106">[out] 에 대 한 포인터를 [ICorProfilerFunctionEnum](../../../../docs/framework/unmanaged-api/profiling/icorprofilerfunctionenum-interface.md) 열거자입니다.</span><span class="sxs-lookup"><span data-stu-id="ed6fb-106">[out] A pointer to the [ICorProfilerFunctionEnum](../../../../docs/framework/unmanaged-api/profiling/icorprofilerfunctionenum-interface.md) enumerator.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="57d80-107">설명</span><span class="sxs-lookup"><span data-stu-id="57d80-107">Remarks</span></span>  
- <span data-ttu-id="57d80-108">이 메서드를 사용 하 여 겹치면 `JITCompilation` 와 같이 콜백 합니다 [icorprofilercallback:: Jitcompilationstarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-jitcompilationstarted-method.md) 메서드.</span><span class="sxs-lookup"><span data-stu-id="57d80-108">This method may overlap with `JITCompilation` callbacks such as the [ICorProfilerCallback::JITCompilationStarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-jitcompilationstarted-method.md) method.</span></span> <span data-ttu-id="57d80-109">이 메서드에서 반환 되는 열거자에서 Ngen.exe로 생성 된 네이티브 이미지에서 로드 된 함수를 포함 하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="57d80-109">The enumerator returned by this method does not include functions that are loaded from native images generated with Ngen.exe.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="ed6fb-107">설명</span><span class="sxs-lookup"><span data-stu-id="ed6fb-107">Remarks</span></span>  
+ <span data-ttu-id="ed6fb-108">이 메서드를 사용 하 여 겹치면 `JITCompilation` 와 같이 콜백 합니다 [icorprofilercallback:: Jitcompilationstarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-jitcompilationstarted-method.md) 메서드.</span><span class="sxs-lookup"><span data-stu-id="ed6fb-108">This method may overlap with `JITCompilation` callbacks such as the [ICorProfilerCallback::JITCompilationStarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-jitcompilationstarted-method.md) method.</span></span> <span data-ttu-id="ed6fb-109">이 메서드에서 반환 되는 열거자에서 Ngen.exe로 생성 된 네이티브 이미지에서 로드 된 함수를 포함 하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="ed6fb-109">The enumerator returned by this method does not include functions that are loaded from native images generated with Ngen.exe.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="57d80-110">반환된 된 열거형의 값 "0"만 포함 된 `COR_PRF_FUNCTION::reJitId` 필드입니다.</span><span class="sxs-lookup"><span data-stu-id="57d80-110">The returned enumeration includes only "0" for the value of the `COR_PRF_FUNCTION::reJitId` field.</span></span>  <span data-ttu-id="57d80-111">유효 해야 하는 경우 `COR_PRF_FUNCTION::reJitId` 값을 사용 합니다 [ICorProfilerInfo4::EnumJITedFunctions2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo4-enumjitedfunctions2-method.md) 메서드.</span><span class="sxs-lookup"><span data-stu-id="57d80-111">If you require valid `COR_PRF_FUNCTION::reJitId` values, use the [ICorProfilerInfo4::EnumJITedFunctions2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo4-enumjitedfunctions2-method.md) method.</span></span>  
+>  <span data-ttu-id="ed6fb-110">반환된 된 열거형의 값 "0"만 포함 된 `COR_PRF_FUNCTION::reJitId` 필드입니다.</span><span class="sxs-lookup"><span data-stu-id="ed6fb-110">The returned enumeration includes only "0" for the value of the `COR_PRF_FUNCTION::reJitId` field.</span></span>  <span data-ttu-id="ed6fb-111">유효 해야 하는 경우 `COR_PRF_FUNCTION::reJitId` 값을 사용 합니다 [ICorProfilerInfo4::EnumJITedFunctions2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo4-enumjitedfunctions2-method.md) 메서드.</span><span class="sxs-lookup"><span data-stu-id="ed6fb-111">If you require valid `COR_PRF_FUNCTION::reJitId` values, use the [ICorProfilerInfo4::EnumJITedFunctions2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo4-enumjitedfunctions2-method.md) method.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="57d80-112">요구 사항</span><span class="sxs-lookup"><span data-stu-id="57d80-112">Requirements</span></span>  
- <span data-ttu-id="57d80-113">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="57d80-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="ed6fb-112">요구 사항</span><span class="sxs-lookup"><span data-stu-id="ed6fb-112">Requirements</span></span>  
+ <span data-ttu-id="ed6fb-113">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="ed6fb-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="57d80-114">**헤더:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="57d80-114">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="ed6fb-114">**헤더:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="ed6fb-114">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="57d80-115">**라이브러리:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="57d80-115">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="ed6fb-115">**라이브러리:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="ed6fb-115">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="57d80-116">**.NET Framework 버전:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="57d80-116">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
+ <span data-ttu-id="ed6fb-116">**.NET Framework 버전:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="ed6fb-116">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="57d80-117">참고자료</span><span class="sxs-lookup"><span data-stu-id="57d80-117">See also</span></span>
-- [<span data-ttu-id="57d80-118">ICorProfilerInfo3 인터페이스</span><span class="sxs-lookup"><span data-stu-id="57d80-118">ICorProfilerInfo3 Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-interface.md)
-- [<span data-ttu-id="57d80-119">프로파일링 인터페이스</span><span class="sxs-lookup"><span data-stu-id="57d80-119">Profiling Interfaces</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
-- [<span data-ttu-id="57d80-120">프로파일링</span><span class="sxs-lookup"><span data-stu-id="57d80-120">Profiling</span></span>](../../../../docs/framework/unmanaged-api/profiling/index.md)
+## <a name="see-also"></a><span data-ttu-id="ed6fb-117">참고자료</span><span class="sxs-lookup"><span data-stu-id="ed6fb-117">See also</span></span>
+- [<span data-ttu-id="ed6fb-118">ICorProfilerInfo3 인터페이스</span><span class="sxs-lookup"><span data-stu-id="ed6fb-118">ICorProfilerInfo3 Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-interface.md)
+- [<span data-ttu-id="ed6fb-119">프로파일링 인터페이스</span><span class="sxs-lookup"><span data-stu-id="ed6fb-119">Profiling Interfaces</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
+- [<span data-ttu-id="ed6fb-120">프로파일링</span><span class="sxs-lookup"><span data-stu-id="ed6fb-120">Profiling</span></span>](../../../../docs/framework/unmanaged-api/profiling/index.md)
