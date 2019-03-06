@@ -7,24 +7,24 @@ helpviewer_keywords:
 - controls [WPF], ProgressBar
 - ProgressBar control [WPF]
 ms.assetid: 4545b358-b93c-47df-88e4-9946d7db9e3f
-ms.openlocfilehash: eb446cf47bcfc3d97a6435c00ef24ab3d112c8fb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 27a2f54edac2add67b938300dc342744475466cc
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33552898"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57371335"
 ---
-# <a name="progressbar"></a><span data-ttu-id="9fa5d-102">ProgressBar</span><span class="sxs-lookup"><span data-stu-id="9fa5d-102">ProgressBar</span></span>
-<span data-ttu-id="9fa5d-103">A <xref:System.Windows.Controls.ProgressBar> 작업의 진행률을 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="9fa5d-103">A <xref:System.Windows.Controls.ProgressBar> indicates the progress of an operation.</span></span> <span data-ttu-id="9fa5d-104"><xref:System.Windows.Controls.ProgressBar> 제어 작업이 진행 됨에 따라 시스템 강조 색으로 채워진 창 구성 됩니다.</span><span class="sxs-lookup"><span data-stu-id="9fa5d-104">The <xref:System.Windows.Controls.ProgressBar> control consists of a window that is filled with the system highlight color as an operation progresses.</span></span>  
+# <a name="progressbar"></a><span data-ttu-id="0922f-102">ProgressBar</span><span class="sxs-lookup"><span data-stu-id="0922f-102">ProgressBar</span></span>
+<span data-ttu-id="0922f-103"><xref:System.Windows.Controls.ProgressBar> 작업의 진행률을 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="0922f-103">A <xref:System.Windows.Controls.ProgressBar> indicates the progress of an operation.</span></span> <span data-ttu-id="0922f-104"><xref:System.Windows.Controls.ProgressBar> 제어는 작업이 진행 됨에 따라 시스템 강조 색으로 채워진 창으로 구성 됩니다.</span><span class="sxs-lookup"><span data-stu-id="0922f-104">The <xref:System.Windows.Controls.ProgressBar> control consists of a window that is filled with the system highlight color as an operation progresses.</span></span>  
   
- <span data-ttu-id="9fa5d-105">다음 그림에는 일반적인 나와 <xref:System.Windows.Controls.ProgressBar>합니다.</span><span class="sxs-lookup"><span data-stu-id="9fa5d-105">The following illustration shows a typical <xref:System.Windows.Controls.ProgressBar>.</span></span>  
+ <span data-ttu-id="0922f-105">다음 그림에서는 일반적인 <xref:System.Windows.Controls.ProgressBar>합니다.</span><span class="sxs-lookup"><span data-stu-id="0922f-105">The following illustration shows a typical <xref:System.Windows.Controls.ProgressBar>.</span></span>  
   
- <span data-ttu-id="9fa5d-106">![진행률 표시줄](../../../../docs/framework/wpf/controls/media/ss-ctl-progressbar.GIF "SS_CTL_progressbar")</span><span class="sxs-lookup"><span data-stu-id="9fa5d-106">![Progress bar](../../../../docs/framework/wpf/controls/media/ss-ctl-progressbar.GIF "SS_CTL_progressbar")</span></span>  
+ <span data-ttu-id="0922f-106">![진행률 표시줄](./media/ss-ctl-progressbar.GIF "SS_CTL_progressbar")</span><span class="sxs-lookup"><span data-stu-id="0922f-106">![Progress bar](./media/ss-ctl-progressbar.GIF "SS_CTL_progressbar")</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="9fa5d-107">섹션 내용</span><span class="sxs-lookup"><span data-stu-id="9fa5d-107">In This Section</span></span>  
+## <a name="in-this-section"></a><span data-ttu-id="0922f-107">섹션 내용</span><span class="sxs-lookup"><span data-stu-id="0922f-107">In This Section</span></span>  
   
-## <a name="reference"></a><span data-ttu-id="9fa5d-108">참조</span><span class="sxs-lookup"><span data-stu-id="9fa5d-108">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="0922f-108">참조</span><span class="sxs-lookup"><span data-stu-id="0922f-108">Reference</span></span>  
  <xref:System.Windows.Controls.ProgressBar>  
   <xref:System.Windows.Controls.Primitives.StatusBar>  
   
-## <a name="related-sections"></a><span data-ttu-id="9fa5d-109">관련 단원</span><span class="sxs-lookup"><span data-stu-id="9fa5d-109">Related Sections</span></span>
+## <a name="related-sections"></a><span data-ttu-id="0922f-109">관련 단원</span><span class="sxs-lookup"><span data-stu-id="0922f-109">Related Sections</span></span>

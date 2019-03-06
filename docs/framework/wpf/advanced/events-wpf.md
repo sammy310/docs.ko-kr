@@ -8,42 +8,42 @@ helpviewer_keywords:
 - events [WPF], windows
 - WPF [WPF], events
 ms.assetid: d3b93c6f-aa6b-486d-a010-d097ea8a516b
-ms.openlocfilehash: b5a3b71758fea9c98c04377b910ba07b49617696
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e6aa6fea3c19d452013e4e77d7ef4773a2f45343
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33542589"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57361215"
 ---
-# <a name="events-wpf"></a><span data-ttu-id="4f41d-102">이벤트(WPF)</span><span class="sxs-lookup"><span data-stu-id="4f41d-102">Events (WPF)</span></span>
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]<span data-ttu-id="4f41d-103">에서는 응용 프로그램의 요소 트리에 있는 다양한 리스너의 처리기를 호출할 수 있는 라우트된 이벤트를 소개합니다.</span><span class="sxs-lookup"><span data-stu-id="4f41d-103"> introduces routed events that can invoke handlers that exist on various listeners in the element tree of an application.</span></span>  
+# <a name="events-wpf"></a><span data-ttu-id="8ea9e-102">이벤트(WPF)</span><span class="sxs-lookup"><span data-stu-id="8ea9e-102">Events (WPF)</span></span>
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]<span data-ttu-id="8ea9e-103">에서는 애플리케이션의 요소 트리에 있는 다양한 리스너의 처리기를 호출할 수 있는 라우트된 이벤트를 소개합니다.</span><span class="sxs-lookup"><span data-stu-id="8ea9e-103">introduces routed events that can invoke handlers that exist on various listeners in the element tree of an application.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="4f41d-104">섹션 내용</span><span class="sxs-lookup"><span data-stu-id="4f41d-104">In This Section</span></span>  
- [<span data-ttu-id="4f41d-105">라우트된 이벤트 개요</span><span class="sxs-lookup"><span data-stu-id="4f41d-105">Routed Events Overview</span></span>](../../../../docs/framework/wpf/advanced/routed-events-overview.md)  
- [<span data-ttu-id="4f41d-106">연결된 이벤트 개요</span><span class="sxs-lookup"><span data-stu-id="4f41d-106">Attached Events Overview</span></span>](../../../../docs/framework/wpf/advanced/attached-events-overview.md)  
- [<span data-ttu-id="4f41d-107">개체 수명 이벤트</span><span class="sxs-lookup"><span data-stu-id="4f41d-107">Object Lifetime Events</span></span>](../../../../docs/framework/wpf/advanced/object-lifetime-events.md)  
- [<span data-ttu-id="4f41d-108">라우트된 이벤트를 처리된 것으로 표시 및 클래스 처리</span><span class="sxs-lookup"><span data-stu-id="4f41d-108">Marking Routed Events as Handled, and Class Handling</span></span>](../../../../docs/framework/wpf/advanced/marking-routed-events-as-handled-and-class-handling.md)  
- [<span data-ttu-id="4f41d-109">미리 보기 이벤트</span><span class="sxs-lookup"><span data-stu-id="4f41d-109">Preview Events</span></span>](../../../../docs/framework/wpf/advanced/preview-events.md)  
- [<span data-ttu-id="4f41d-110">속성 변경 이벤트</span><span class="sxs-lookup"><span data-stu-id="4f41d-110">Property Change Events</span></span>](../../../../docs/framework/wpf/advanced/property-change-events.md)  
- [<span data-ttu-id="4f41d-111">Visual Basic 및 WPF 이벤트 처리</span><span class="sxs-lookup"><span data-stu-id="4f41d-111">Visual Basic and WPF Event Handling</span></span>](../../../../docs/framework/wpf/advanced/visual-basic-and-wpf-event-handling.md)  
- [<span data-ttu-id="4f41d-112">약한 이벤트 패턴</span><span class="sxs-lookup"><span data-stu-id="4f41d-112">Weak Event Patterns</span></span>](../../../../docs/framework/wpf/advanced/weak-event-patterns.md)  
- [<span data-ttu-id="4f41d-113">방법 항목</span><span class="sxs-lookup"><span data-stu-id="4f41d-113">How-to Topics</span></span>](../../../../docs/framework/wpf/advanced/events-how-to-topics.md)  
+## <a name="in-this-section"></a><span data-ttu-id="8ea9e-104">섹션 내용</span><span class="sxs-lookup"><span data-stu-id="8ea9e-104">In This Section</span></span>  
+ [<span data-ttu-id="8ea9e-105">라우트된 이벤트 개요</span><span class="sxs-lookup"><span data-stu-id="8ea9e-105">Routed Events Overview</span></span>](routed-events-overview.md)  
+ [<span data-ttu-id="8ea9e-106">연결된 이벤트 개요</span><span class="sxs-lookup"><span data-stu-id="8ea9e-106">Attached Events Overview</span></span>](attached-events-overview.md)  
+ [<span data-ttu-id="8ea9e-107">개체 수명 이벤트</span><span class="sxs-lookup"><span data-stu-id="8ea9e-107">Object Lifetime Events</span></span>](object-lifetime-events.md)  
+ [<span data-ttu-id="8ea9e-108">라우트된 이벤트를 처리된 것으로 표시 및 클래스 처리</span><span class="sxs-lookup"><span data-stu-id="8ea9e-108">Marking Routed Events as Handled, and Class Handling</span></span>](marking-routed-events-as-handled-and-class-handling.md)  
+ [<span data-ttu-id="8ea9e-109">미리 보기 이벤트</span><span class="sxs-lookup"><span data-stu-id="8ea9e-109">Preview Events</span></span>](preview-events.md)  
+ [<span data-ttu-id="8ea9e-110">속성 변경 이벤트</span><span class="sxs-lookup"><span data-stu-id="8ea9e-110">Property Change Events</span></span>](property-change-events.md)  
+ [<span data-ttu-id="8ea9e-111">Visual Basic 및 WPF 이벤트 처리</span><span class="sxs-lookup"><span data-stu-id="8ea9e-111">Visual Basic and WPF Event Handling</span></span>](visual-basic-and-wpf-event-handling.md)  
+ [<span data-ttu-id="8ea9e-112">약한 이벤트 패턴</span><span class="sxs-lookup"><span data-stu-id="8ea9e-112">Weak Event Patterns</span></span>](weak-event-patterns.md)  
+ [<span data-ttu-id="8ea9e-113">방법 항목</span><span class="sxs-lookup"><span data-stu-id="8ea9e-113">How-to Topics</span></span>](events-how-to-topics.md)  
   
-## <a name="reference"></a><span data-ttu-id="4f41d-114">참조</span><span class="sxs-lookup"><span data-stu-id="4f41d-114">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="8ea9e-114">참조</span><span class="sxs-lookup"><span data-stu-id="8ea9e-114">Reference</span></span>  
  <xref:System.Windows.RoutedEvent>  
   
  <xref:System.Windows.EventManager>  
   
  <xref:System.Windows.RoutingStrategy>  
   
-## <a name="related-sections"></a><span data-ttu-id="4f41d-115">관련 단원</span><span class="sxs-lookup"><span data-stu-id="4f41d-115">Related Sections</span></span>  
- [<span data-ttu-id="4f41d-116">WPF 아키텍처</span><span class="sxs-lookup"><span data-stu-id="4f41d-116">WPF Architecture</span></span>](../../../../docs/framework/wpf/advanced/wpf-architecture.md)  
-  [<span data-ttu-id="4f41d-117">WPF의 XAML</span><span class="sxs-lookup"><span data-stu-id="4f41d-117">XAML in WPF</span></span>](../../../../docs/framework/wpf/advanced/xaml-in-wpf.md)  
-  [<span data-ttu-id="4f41d-118">기본 요소</span><span class="sxs-lookup"><span data-stu-id="4f41d-118">Base Elements</span></span>](../../../../docs/framework/wpf/advanced/base-elements.md)  
-  [<span data-ttu-id="4f41d-119">요소 트리 및 Serialization</span><span class="sxs-lookup"><span data-stu-id="4f41d-119">Element Tree and Serialization</span></span>](../../../../docs/framework/wpf/advanced/element-tree-and-serialization.md)  
-  [<span data-ttu-id="4f41d-120">속성</span><span class="sxs-lookup"><span data-stu-id="4f41d-120">Properties</span></span>](../../../../docs/framework/wpf/advanced/properties-wpf.md)  
-  [<span data-ttu-id="4f41d-121">입력</span><span class="sxs-lookup"><span data-stu-id="4f41d-121">Input</span></span>](../../../../docs/framework/wpf/advanced/input-wpf.md)  
-  [<span data-ttu-id="4f41d-122">리소스</span><span class="sxs-lookup"><span data-stu-id="4f41d-122">Resources</span></span>](../../../../docs/framework/wpf/advanced/resources-wpf.md)  
-  [<span data-ttu-id="4f41d-123">스타일 지정 및 템플릿</span><span class="sxs-lookup"><span data-stu-id="4f41d-123">Styling and Templating</span></span>](../../../../docs/framework/wpf/controls/styling-and-templating.md)  
-  [<span data-ttu-id="4f41d-124">WPF 콘텐츠 모델</span><span class="sxs-lookup"><span data-stu-id="4f41d-124">WPF Content Model</span></span>](../../../../docs/framework/wpf/controls/wpf-content-model.md)  
-  [<span data-ttu-id="4f41d-125">스레딩 모델</span><span class="sxs-lookup"><span data-stu-id="4f41d-125">Threading Model</span></span>](../../../../docs/framework/wpf/advanced/threading-model.md)
+## <a name="related-sections"></a><span data-ttu-id="8ea9e-115">관련 단원</span><span class="sxs-lookup"><span data-stu-id="8ea9e-115">Related Sections</span></span>  
+ [<span data-ttu-id="8ea9e-116">WPF 아키텍처</span><span class="sxs-lookup"><span data-stu-id="8ea9e-116">WPF Architecture</span></span>](wpf-architecture.md)  
+  [<span data-ttu-id="8ea9e-117">WPF의 XAML</span><span class="sxs-lookup"><span data-stu-id="8ea9e-117">XAML in WPF</span></span>](xaml-in-wpf.md)  
+  [<span data-ttu-id="8ea9e-118">기본 요소</span><span class="sxs-lookup"><span data-stu-id="8ea9e-118">Base Elements</span></span>](base-elements.md)  
+  [<span data-ttu-id="8ea9e-119">요소 트리 및 Serialization</span><span class="sxs-lookup"><span data-stu-id="8ea9e-119">Element Tree and Serialization</span></span>](element-tree-and-serialization.md)  
+  [<span data-ttu-id="8ea9e-120">속성</span><span class="sxs-lookup"><span data-stu-id="8ea9e-120">Properties</span></span>](properties-wpf.md)  
+  [<span data-ttu-id="8ea9e-121">입력</span><span class="sxs-lookup"><span data-stu-id="8ea9e-121">Input</span></span>](input-wpf.md)  
+  [<span data-ttu-id="8ea9e-122">리소스</span><span class="sxs-lookup"><span data-stu-id="8ea9e-122">Resources</span></span>](resources-wpf.md)  
+  [<span data-ttu-id="8ea9e-123">스타일 지정 및 템플릿</span><span class="sxs-lookup"><span data-stu-id="8ea9e-123">Styling and Templating</span></span>](../controls/styling-and-templating.md)  
+  [<span data-ttu-id="8ea9e-124">WPF 콘텐츠 모델</span><span class="sxs-lookup"><span data-stu-id="8ea9e-124">WPF Content Model</span></span>](../controls/wpf-content-model.md)  
+  [<span data-ttu-id="8ea9e-125">스레딩 모델</span><span class="sxs-lookup"><span data-stu-id="8ea9e-125">Threading Model</span></span>](threading-model.md)

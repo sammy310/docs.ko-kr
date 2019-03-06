@@ -5,22 +5,22 @@ helpviewer_keywords:
 - data binding [WPF], Master-Detail data paradigm
 - Master-Detail data paradigm
 ms.assetid: eb8dbdd8-5871-42bb-a16b-04e655fea677
-ms.openlocfilehash: 4beb2377fa9740e5103df0a82cfda9bd5f6f4769
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2b1ed34fe363f44a3a9eb80dc56d721868329717
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54550073"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57378108"
 ---
-# <a name="how-to-use-the-master-detail-pattern-with-hierarchical-xml-data"></a><span data-ttu-id="dde1c-102">방법: 계층적 XML 데이터에 마스터-세부 패턴 사용</span><span class="sxs-lookup"><span data-stu-id="dde1c-102">How to: Use the Master-Detail Pattern with Hierarchical XML Data</span></span>
-<span data-ttu-id="dde1c-103">이 예제에 사용 하 여 마스터-세부 시나리오를 구현 하는 방법을 보여 줍니다 [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] 데이터입니다.</span><span class="sxs-lookup"><span data-stu-id="dde1c-103">This example shows how to implement the master-detail scenario with [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] data.</span></span>  
+# <a name="how-to-use-the-master-detail-pattern-with-hierarchical-xml-data"></a><span data-ttu-id="30c28-102">방법: 계층적 XML 데이터에 마스터-세부 패턴 사용</span><span class="sxs-lookup"><span data-stu-id="30c28-102">How to: Use the Master-Detail Pattern with Hierarchical XML Data</span></span>
+<span data-ttu-id="30c28-103">이 예제에 사용 하 여 마스터-세부 시나리오를 구현 하는 방법을 보여 줍니다 [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] 데이터입니다.</span><span class="sxs-lookup"><span data-stu-id="30c28-103">This example shows how to implement the master-detail scenario with [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] data.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="dde1c-104">예제</span><span class="sxs-lookup"><span data-stu-id="dde1c-104">Example</span></span>  
- <span data-ttu-id="dde1c-105">이 예제는 [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] 에서 설명 하는 예제 데이터 버전이 [계층적 데이터에 마스터-세부 패턴 사용](../../../../docs/framework/wpf/data/how-to-use-the-master-detail-pattern-with-hierarchical-data.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="dde1c-105">This example is the [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] data version of the example discussed in [Use the Master-Detail Pattern with Hierarchical Data](../../../../docs/framework/wpf/data/how-to-use-the-master-detail-pattern-with-hierarchical-data.md).</span></span> <span data-ttu-id="dde1c-106">이 예제에서는 데이터가 파일에서 `League.xml`합니다.</span><span class="sxs-lookup"><span data-stu-id="dde1c-106">In this example, the data is from the file `League.xml`.</span></span> <span data-ttu-id="dde1c-107">참고 하는 방법 세 번째 <xref:System.Windows.Controls.ListBox> 컨트롤의 두 번째에서 선택 변경을 추적 <xref:System.Windows.Controls.ListBox> 바인딩하여 해당 <xref:System.Windows.Controls.Primitives.Selector.SelectedValue%2A> 속성입니다.</span><span class="sxs-lookup"><span data-stu-id="dde1c-107">Note how the third <xref:System.Windows.Controls.ListBox> control tracks selection changes in the second <xref:System.Windows.Controls.ListBox> by binding to its <xref:System.Windows.Controls.Primitives.Selector.SelectedValue%2A> property.</span></span>  
+## <a name="example"></a><span data-ttu-id="30c28-104">예제</span><span class="sxs-lookup"><span data-stu-id="30c28-104">Example</span></span>  
+ <span data-ttu-id="30c28-105">이 예제는 [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] 에서 설명 하는 예제 데이터 버전이 [계층적 데이터에 마스터-세부 패턴 사용](how-to-use-the-master-detail-pattern-with-hierarchical-data.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="30c28-105">This example is the [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] data version of the example discussed in [Use the Master-Detail Pattern with Hierarchical Data](how-to-use-the-master-detail-pattern-with-hierarchical-data.md).</span></span> <span data-ttu-id="30c28-106">이 예제에서는 데이터가 파일에서 `League.xml`합니다.</span><span class="sxs-lookup"><span data-stu-id="30c28-106">In this example, the data is from the file `League.xml`.</span></span> <span data-ttu-id="30c28-107">참고 하는 방법 세 번째 <xref:System.Windows.Controls.ListBox> 컨트롤의 두 번째에서 선택 변경을 추적 <xref:System.Windows.Controls.ListBox> 바인딩하여 해당 <xref:System.Windows.Controls.Primitives.Selector.SelectedValue%2A> 속성입니다.</span><span class="sxs-lookup"><span data-stu-id="30c28-107">Note how the third <xref:System.Windows.Controls.ListBox> control tracks selection changes in the second <xref:System.Windows.Controls.ListBox> by binding to its <xref:System.Windows.Controls.Primitives.Selector.SelectedValue%2A> property.</span></span>  
   
- [!code-xaml[MasterDetailXml#HowTo1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/MasterDetailXml/CS/Window1.xaml#howto1)]  
-[!code-xaml[MasterDetailXml#HowTo2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/MasterDetailXml/CS/Window1.xaml#howto2)]  
+ [!code-xaml[MasterDetailXml#HowTo1](~/samples/snippets/csharp/VS_Snippets_Wpf/MasterDetailXml/CS/Window1.xaml#howto1)]  
+[!code-xaml[MasterDetailXml#HowTo2](~/samples/snippets/csharp/VS_Snippets_Wpf/MasterDetailXml/CS/Window1.xaml#howto2)]  
   
-## <a name="see-also"></a><span data-ttu-id="dde1c-108">참고자료</span><span class="sxs-lookup"><span data-stu-id="dde1c-108">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="30c28-108">참고자료</span><span class="sxs-lookup"><span data-stu-id="30c28-108">See also</span></span>
 - <xref:System.Windows.HierarchicalDataTemplate>
-- [<span data-ttu-id="dde1c-109">방법 항목</span><span class="sxs-lookup"><span data-stu-id="dde1c-109">How-to Topics</span></span>](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)
+- [<span data-ttu-id="30c28-109">방법 항목</span><span class="sxs-lookup"><span data-stu-id="30c28-109">How-to Topics</span></span>](data-binding-how-to-topics.md)

@@ -7,21 +7,21 @@ helpviewer_keywords:
 - controls [WPF], TextBox
 - TextBox control [WPF]
 ms.assetid: 2512a277-e9d8-4de8-a12f-2bd95e8e7b60
-ms.openlocfilehash: 18f5b6b826d1c5c7ff6fe3087b839eb6947dc695
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f2a261b72fe3205c9a03292f1f6bbcebdcf8649b
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54649351"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57356977"
 ---
-# <a name="textbox"></a><span data-ttu-id="9087f-102">TextBox</span><span class="sxs-lookup"><span data-stu-id="9087f-102">TextBox</span></span>
-<span data-ttu-id="9087f-103"><xref:System.Windows.Controls.TextBox> 컨트롤은 WPF 응용 프로그램에서 기본 텍스트 입력에 대 한 지원을 제공 합니다.</span><span class="sxs-lookup"><span data-stu-id="9087f-103">The <xref:System.Windows.Controls.TextBox> control provides support for basic text input in WPF applications.</span></span>  
+# <a name="textbox"></a><span data-ttu-id="2d686-102">TextBox</span><span class="sxs-lookup"><span data-stu-id="2d686-102">TextBox</span></span>
+<span data-ttu-id="2d686-103"><xref:System.Windows.Controls.TextBox> 컨트롤은 WPF 응용 프로그램에서 기본 텍스트 입력에 대 한 지원을 제공 합니다.</span><span class="sxs-lookup"><span data-stu-id="2d686-103">The <xref:System.Windows.Controls.TextBox> control provides support for basic text input in WPF applications.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="9087f-104">섹션 내용</span><span class="sxs-lookup"><span data-stu-id="9087f-104">In This Section</span></span>  
- [<span data-ttu-id="9087f-105">TextBox 개요</span><span class="sxs-lookup"><span data-stu-id="9087f-105">TextBox Overview</span></span>](../../../../docs/framework/wpf/controls/textbox-overview.md)  
- [<span data-ttu-id="9087f-106">방법 항목</span><span class="sxs-lookup"><span data-stu-id="9087f-106">How-to Topics</span></span>](../../../../docs/framework/wpf/controls/textbox-how-to-topics.md)  
+## <a name="in-this-section"></a><span data-ttu-id="2d686-104">섹션 내용</span><span class="sxs-lookup"><span data-stu-id="2d686-104">In This Section</span></span>  
+ [<span data-ttu-id="2d686-105">TextBox 개요</span><span class="sxs-lookup"><span data-stu-id="2d686-105">TextBox Overview</span></span>](textbox-overview.md)  
+ [<span data-ttu-id="2d686-106">방법 항목</span><span class="sxs-lookup"><span data-stu-id="2d686-106">How-to Topics</span></span>](textbox-how-to-topics.md)  
   
-## <a name="reference"></a><span data-ttu-id="9087f-107">참조</span><span class="sxs-lookup"><span data-stu-id="9087f-107">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="2d686-107">참조</span><span class="sxs-lookup"><span data-stu-id="2d686-107">Reference</span></span>  
  <xref:System.Windows.Controls.TextBox>  
   
  <xref:System.Windows.Controls.RichTextBox>  
@@ -30,6 +30,6 @@ ms.locfileid: "54649351"
   
  <xref:System.Windows.Controls.PasswordBox>  
   
-## <a name="see-also"></a><span data-ttu-id="9087f-108">참고자료</span><span class="sxs-lookup"><span data-stu-id="9087f-108">See also</span></span>
-- <span data-ttu-id="9087f-109">[WPF Controls Gallery Sample](https://go.microsoft.com/fwlink/?LinkID=160053)(WPF 컨트롤 갤러리 샘플)</span><span class="sxs-lookup"><span data-stu-id="9087f-109">[WPF Controls Gallery Sample](https://go.microsoft.com/fwlink/?LinkID=160053)</span></span>
-- [<span data-ttu-id="9087f-110">TextBox 스타일 및 템플릿</span><span class="sxs-lookup"><span data-stu-id="9087f-110">TextBox Styles and Templates</span></span>](../../../../docs/framework/wpf/controls/textbox-styles-and-templates.md)
+## <a name="see-also"></a><span data-ttu-id="2d686-108">참고자료</span><span class="sxs-lookup"><span data-stu-id="2d686-108">See also</span></span>
+- <span data-ttu-id="2d686-109">[WPF Controls Gallery Sample](https://go.microsoft.com/fwlink/?LinkID=160053)(WPF 컨트롤 갤러리 샘플)</span><span class="sxs-lookup"><span data-stu-id="2d686-109">[WPF Controls Gallery Sample](https://go.microsoft.com/fwlink/?LinkID=160053)</span></span>
+- [<span data-ttu-id="2d686-110">TextBox 스타일 및 템플릿</span><span class="sxs-lookup"><span data-stu-id="2d686-110">TextBox Styles and Templates</span></span>](textbox-styles-and-templates.md)

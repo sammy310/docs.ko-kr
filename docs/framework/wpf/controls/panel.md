@@ -8,21 +8,21 @@ helpviewer_keywords:
 - layout [WPF], Panel control
 - Panel control [WPF]
 ms.assetid: 792943c5-335d-49dd-aa5b-ec1582a10088
-ms.openlocfilehash: 0d76883621b07a3049895e4577516e9362720896
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6471aebf4a510c63084f8da733fb3dfe2300c1aa
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33554926"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57367598"
 ---
-# <a name="panel"></a><span data-ttu-id="aee85-102">패널</span><span class="sxs-lookup"><span data-stu-id="aee85-102">Panel</span></span>
-<span data-ttu-id="aee85-103"><xref:System.Windows.Controls.Panel> 지 원하는 응용 프로그램 레이아웃에서 모든 요소에 대 한 기본 클래스 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]합니다.</span><span class="sxs-lookup"><span data-stu-id="aee85-103"><xref:System.Windows.Controls.Panel> is the base class for all elements that support application layout in [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)].</span></span>  
+# <a name="panel"></a><span data-ttu-id="00f1c-102">패널</span><span class="sxs-lookup"><span data-stu-id="00f1c-102">Panel</span></span>
+<span data-ttu-id="00f1c-103"><xref:System.Windows.Controls.Panel> 응용 프로그램 레이아웃을 지 원하는 모든 요소에 대 한 기본 클래스인 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]합니다.</span><span class="sxs-lookup"><span data-stu-id="00f1c-103"><xref:System.Windows.Controls.Panel> is the base class for all elements that support application layout in [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)].</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="aee85-104">섹션 내용</span><span class="sxs-lookup"><span data-stu-id="aee85-104">In This Section</span></span>  
- [<span data-ttu-id="aee85-105">패널 개요</span><span class="sxs-lookup"><span data-stu-id="aee85-105">Panels Overview</span></span>](../../../../docs/framework/wpf/controls/panels-overview.md)  
- [<span data-ttu-id="aee85-106">방법 항목</span><span class="sxs-lookup"><span data-stu-id="aee85-106">How-to Topics</span></span>](../../../../docs/framework/wpf/controls/panel-how-to-topics.md)  
+## <a name="in-this-section"></a><span data-ttu-id="00f1c-104">섹션 내용</span><span class="sxs-lookup"><span data-stu-id="00f1c-104">In This Section</span></span>  
+ [<span data-ttu-id="00f1c-105">패널 개요</span><span class="sxs-lookup"><span data-stu-id="00f1c-105">Panels Overview</span></span>](panels-overview.md)  
+ [<span data-ttu-id="00f1c-106">방법 항목</span><span class="sxs-lookup"><span data-stu-id="00f1c-106">How-to Topics</span></span>](panel-how-to-topics.md)  
   
-## <a name="reference"></a><span data-ttu-id="aee85-107">참조</span><span class="sxs-lookup"><span data-stu-id="aee85-107">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="00f1c-107">참조</span><span class="sxs-lookup"><span data-stu-id="00f1c-107">Reference</span></span>  
  <xref:System.Windows.Controls.Panel>  
   
  <xref:System.Windows.Controls.Canvas>  
@@ -37,9 +37,9 @@ ms.locfileid: "33554926"
   
  <xref:System.Windows.Controls.WrapPanel>  
   
-## <a name="related-sections"></a><span data-ttu-id="aee85-108">관련 단원</span><span class="sxs-lookup"><span data-stu-id="aee85-108">Related Sections</span></span>  
- [<span data-ttu-id="aee85-109">레이아웃</span><span class="sxs-lookup"><span data-stu-id="aee85-109">Layout</span></span>](../../../../docs/framework/wpf/advanced/layout.md)  
+## <a name="related-sections"></a><span data-ttu-id="00f1c-108">관련 단원</span><span class="sxs-lookup"><span data-stu-id="00f1c-108">Related Sections</span></span>  
+ [<span data-ttu-id="00f1c-109">레이아웃</span><span class="sxs-lookup"><span data-stu-id="00f1c-109">Layout</span></span>](../advanced/layout.md)  
   
- [<span data-ttu-id="aee85-110">연습: 내 첫 WPF 데스크톱 응용 프로그램</span><span class="sxs-lookup"><span data-stu-id="aee85-110">Walkthrough: My first WPF desktop application</span></span>](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md)  
+ [<span data-ttu-id="00f1c-110">연습: 내 첫 WPF 데스크톱 애플리케이션</span><span class="sxs-lookup"><span data-stu-id="00f1c-110">Walkthrough: My first WPF desktop application</span></span>](../getting-started/walkthrough-my-first-wpf-desktop-application.md)  
   
- [<span data-ttu-id="aee85-111">ScrollViewer 개요</span><span class="sxs-lookup"><span data-stu-id="aee85-111">ScrollViewer Overview</span></span>](../../../../docs/framework/wpf/controls/scrollviewer-overview.md)
+ [<span data-ttu-id="00f1c-111">ScrollViewer 개요</span><span class="sxs-lookup"><span data-stu-id="00f1c-111">ScrollViewer Overview</span></span>](scrollviewer-overview.md)

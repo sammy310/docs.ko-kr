@@ -6,23 +6,23 @@ f1_keywords:
 helpviewer_keywords:
 - navigation [WPF]
 ms.assetid: f804648e-558c-4f60-8e48-d11f4a23c436
-ms.openlocfilehash: d6b767e68f8d3217ffacd787137a2d4b91c3761d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4d1cfd1388e68ff6a5f8c6a6b209dc38dd2f80d3
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33550113"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57379746"
 ---
-# <a name="navigation-how-to-topics"></a><span data-ttu-id="da1eb-102">탐색 방법 항목</span><span class="sxs-lookup"><span data-stu-id="da1eb-102">Navigation How-to Topics</span></span>
-<span data-ttu-id="da1eb-103">다음 항목에서는 사용 하는 방법을 보여 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 탐색 합니다.</span><span class="sxs-lookup"><span data-stu-id="da1eb-103">The following topics show how to use [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] navigation.</span></span>  
+# <a name="navigation-how-to-topics"></a><span data-ttu-id="2f01b-102">탐색 방법 항목</span><span class="sxs-lookup"><span data-stu-id="2f01b-102">Navigation How-to Topics</span></span>
+<span data-ttu-id="2f01b-103">다음 항목에서는 사용 하는 방법을 보여 줍니다 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 탐색 합니다.</span><span class="sxs-lookup"><span data-stu-id="2f01b-103">The following topics show how to use [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] navigation.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="da1eb-104">섹션 내용</span><span class="sxs-lookup"><span data-stu-id="da1eb-104">In This Section</span></span>  
- [<span data-ttu-id="da1eb-105">페이지 함수 호출</span><span class="sxs-lookup"><span data-stu-id="da1eb-105">Call a Page Function</span></span>](../../../../docs/framework/wpf/app-development/how-to-call-a-page-function.md)  
-  [<span data-ttu-id="da1eb-106">Page 함수의 반환 값 가져오기</span><span class="sxs-lookup"><span data-stu-id="da1eb-106">Get the Return Value of a Page Function</span></span>](../../../../docs/framework/wpf/app-development/how-to-get-the-return-value-of-a-page-function.md)  
-  [<span data-ttu-id="da1eb-107">탐색 기록을 앞으로 또는 뒤로 탐색</span><span class="sxs-lookup"><span data-stu-id="da1eb-107">Navigate Forward or Back Through Navigation History</span></span>](../../../../docs/framework/wpf/app-development/how-to-navigate-forward-or-back-through-navigation-history.md)  
-  [<span data-ttu-id="da1eb-108">Page 함수에서 반환</span><span class="sxs-lookup"><span data-stu-id="da1eb-108">Return from a Page Function</span></span>](../../../../docs/framework/wpf/app-development/how-to-return-from-a-page-function.md)  
+## <a name="in-this-section"></a><span data-ttu-id="2f01b-104">섹션 내용</span><span class="sxs-lookup"><span data-stu-id="2f01b-104">In This Section</span></span>  
+ [<span data-ttu-id="2f01b-105">페이지 함수 호출</span><span class="sxs-lookup"><span data-stu-id="2f01b-105">Call a Page Function</span></span>](how-to-call-a-page-function.md)  
+  [<span data-ttu-id="2f01b-106">Page 함수의 반환 값 가져오기</span><span class="sxs-lookup"><span data-stu-id="2f01b-106">Get the Return Value of a Page Function</span></span>](how-to-get-the-return-value-of-a-page-function.md)  
+  [<span data-ttu-id="2f01b-107">탐색 기록을 앞으로 또는 뒤로 탐색</span><span class="sxs-lookup"><span data-stu-id="2f01b-107">Navigate Forward or Back Through Navigation History</span></span>](how-to-navigate-forward-or-back-through-navigation-history.md)  
+  [<span data-ttu-id="2f01b-108">Page 함수에서 반환</span><span class="sxs-lookup"><span data-stu-id="2f01b-108">Return from a Page Function</span></span>](how-to-return-from-a-page-function.md)  
   
-## <a name="related-sections"></a><span data-ttu-id="da1eb-109">관련 단원</span><span class="sxs-lookup"><span data-stu-id="da1eb-109">Related Sections</span></span>  
- [<span data-ttu-id="da1eb-110">탐색 개요</span><span class="sxs-lookup"><span data-stu-id="da1eb-110">Navigation Overview</span></span>](../../../../docs/framework/wpf/app-development/navigation-overview.md)  
+## <a name="related-sections"></a><span data-ttu-id="2f01b-109">관련 단원</span><span class="sxs-lookup"><span data-stu-id="2f01b-109">Related Sections</span></span>  
+ [<span data-ttu-id="2f01b-110">탐색 개요</span><span class="sxs-lookup"><span data-stu-id="2f01b-110">Navigation Overview</span></span>](navigation-overview.md)  
   
- [<span data-ttu-id="da1eb-111">구조적 탐색 개요</span><span class="sxs-lookup"><span data-stu-id="da1eb-111">Structured Navigation Overview</span></span>](../../../../docs/framework/wpf/app-development/structured-navigation-overview.md)
+ [<span data-ttu-id="2f01b-111">구조적 탐색 개요</span><span class="sxs-lookup"><span data-stu-id="2f01b-111">Structured Navigation Overview</span></span>](structured-navigation-overview.md)
