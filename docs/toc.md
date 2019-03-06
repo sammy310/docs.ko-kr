@@ -505,15 +505,6 @@
 ### [데이터 액세스](visual-basic/developing-apps/accessing-data.md)
 ### [구성요소 만들기 및 사용](visual-basic/developing-apps/creating-and-using-components.md)
 
-### [인쇄 및 보고](visual-basic/developing-apps/printing/index.md)
-#### [PrintForm 구성 요소](visual-basic/developing-apps/printing/printform-component.md)
-#### [방법: 스크롤 가능 폼 인쇄](visual-basic/developing-apps/printing/how-to-print-a-scrollable-form.md)
-#### [방법: 폼의 클라이언트 영역 및 비클라이언트 영역 인쇄](visual-basic/developing-apps/printing/how-to-print-client-and-non-client-areas-of-a-form.md)
-#### [방법: 폼의 클라이언트 영역 인쇄](visual-basic/developing-apps/printing/how-to-print-the-client-area-of-a-form.md)
-#### [방법: PrintForm 구성 요소를 사용하여 폼 인쇄](visual-basic/developing-apps/printing/how-to-print-a-form-by-using-the-printform-component.md)
-#### [PrintForm 구성 요소를 참조하는 애플리케이션 배포](visual-basic/developing-apps/printing/deploying-applications-that-reference-the-printform-component.md)
-#### [Visual Studio 애플리케이션에 인쇄 가능한 보고서 추가](visual-basic/developing-apps/printing/adding-printable-reports-to-visual-studio-applications.md)
-
 ### [Windows Forms 애플리케이션의 기본 사항](visual-basic/developing-apps/windows-forms/index.md)
 
 ### [Visual Basic에서 프로젝트 사용자 지정 및 My 확장](visual-basic/developing-apps/customizing-extending-my/index.md)
