@@ -7,20 +7,20 @@ helpviewer_keywords:
 - controls [WPF], ComboBox
 - ComboBox control [WPF]
 ms.assetid: fe0c2f62-fec2-4c41-a37e-5773d284170c
-ms.openlocfilehash: e3ca368f8b7b2b3cd956bdaac498874a806dd876
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
+ms.openlocfilehash: d8684ac382fefa308b671d5459125bd755960142
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56747034"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57374845"
 ---
-# <a name="combobox"></a><span data-ttu-id="e6a7e-102">ComboBox</span><span class="sxs-lookup"><span data-stu-id="e6a7e-102">ComboBox</span></span>
-<span data-ttu-id="e6a7e-103"><xref:System.Windows.Controls.ComboBox> 제어 옵션의 목록을 사용 하 여 사용자를 표시 합니다.</span><span class="sxs-lookup"><span data-stu-id="e6a7e-103">The <xref:System.Windows.Controls.ComboBox> control presents users with a list of options.</span></span> <span data-ttu-id="e6a7e-104">목록 표시 하거나 숨길 컨트롤이 확장 되 고 축소 합니다.</span><span class="sxs-lookup"><span data-stu-id="e6a7e-104">The list is shown and hidden as the control expands and collapses.</span></span> <span data-ttu-id="e6a7e-105">해당 기본 상태인 하나 밖에 표시 목록 축소 됩니다.</span><span class="sxs-lookup"><span data-stu-id="e6a7e-105">In its default state, the list is collapsed, displaying only one choice.</span></span> <span data-ttu-id="e6a7e-106">옵션의 전체 목록을 보려면 단추를 클릭 합니다.</span><span class="sxs-lookup"><span data-stu-id="e6a7e-106">The user clicks a button to see the complete list of options.</span></span>  
+# <a name="combobox"></a><span data-ttu-id="a17dd-102">ComboBox</span><span class="sxs-lookup"><span data-stu-id="a17dd-102">ComboBox</span></span>
+<span data-ttu-id="a17dd-103"><xref:System.Windows.Controls.ComboBox> 제어 옵션의 목록을 사용 하 여 사용자를 표시 합니다.</span><span class="sxs-lookup"><span data-stu-id="a17dd-103">The <xref:System.Windows.Controls.ComboBox> control presents users with a list of options.</span></span> <span data-ttu-id="a17dd-104">목록 표시 하거나 숨길 컨트롤이 확장 되 고 축소 합니다.</span><span class="sxs-lookup"><span data-stu-id="a17dd-104">The list is shown and hidden as the control expands and collapses.</span></span> <span data-ttu-id="a17dd-105">해당 기본 상태인 하나 밖에 표시 목록 축소 됩니다.</span><span class="sxs-lookup"><span data-stu-id="a17dd-105">In its default state, the list is collapsed, displaying only one choice.</span></span> <span data-ttu-id="a17dd-106">옵션의 전체 목록을 보려면 단추를 클릭 합니다.</span><span class="sxs-lookup"><span data-stu-id="a17dd-106">The user clicks a button to see the complete list of options.</span></span>  
   
- <span data-ttu-id="e6a7e-107">다음 그림에 표시 된 <xref:System.Windows.Controls.ComboBox> 다양 한 상태의 합니다.</span><span class="sxs-lookup"><span data-stu-id="e6a7e-107">The following illustration shows a <xref:System.Windows.Controls.ComboBox> in different states.</span></span>  
+ <span data-ttu-id="a17dd-107">다음 그림에 표시 된 <xref:System.Windows.Controls.ComboBox> 다양 한 상태의 합니다.</span><span class="sxs-lookup"><span data-stu-id="a17dd-107">The following illustration shows a <xref:System.Windows.Controls.ComboBox> in different states.</span></span>  
   
- <span data-ttu-id="e6a7e-108">![콤보 상자에서 기본 및 눌린 상태의](../../../../docs/framework/wpf/controls/media/ss-ctl-combobox.gif "SS_CTL_combobox")</span><span class="sxs-lookup"><span data-stu-id="e6a7e-108">![Combo boxes in default and pressed states](../../../../docs/framework/wpf/controls/media/ss-ctl-combobox.gif "SS_CTL_combobox")</span></span>  
-<span data-ttu-id="e6a7e-109">축소 및 확장</span><span class="sxs-lookup"><span data-stu-id="e6a7e-109">Collapsed and expanded</span></span>  
+ <span data-ttu-id="a17dd-108">![콤보 상자에서 기본 및 눌린 상태의](./media/ss-ctl-combobox.gif "SS_CTL_combobox")</span><span class="sxs-lookup"><span data-stu-id="a17dd-108">![Combo boxes in default and pressed states](./media/ss-ctl-combobox.gif "SS_CTL_combobox")</span></span>  
+<span data-ttu-id="a17dd-109">축소 및 확장</span><span class="sxs-lookup"><span data-stu-id="a17dd-109">Collapsed and expanded</span></span>  
   
-## <a name="reference"></a><span data-ttu-id="e6a7e-110">참조</span><span class="sxs-lookup"><span data-stu-id="e6a7e-110">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="a17dd-110">참조</span><span class="sxs-lookup"><span data-stu-id="a17dd-110">Reference</span></span>  
  <xref:System.Windows.Controls.ComboBox>

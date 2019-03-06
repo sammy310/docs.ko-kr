@@ -8,20 +8,20 @@ helpviewer_keywords:
 - controls [WPF], Canvas
 - Canvas control [WPF]
 ms.assetid: fdb390e9-1bba-4b5f-87fe-c3bc246fa7e9
-ms.openlocfilehash: 41b1315f03c55c290959e8871df2630802882a75
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7b3e1c942308aa90887b6370ed402a1a87364415
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33553276"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57351050"
 ---
-# <a name="canvas"></a><span data-ttu-id="1911a-102">Canvas</span><span class="sxs-lookup"><span data-stu-id="1911a-102">Canvas</span></span>
-<span data-ttu-id="1911a-103"><xref:System.Windows.Controls.Canvas> 자식 요소의 절대 배치를 설정 하는 레이아웃 컨트롤이입니다.</span><span class="sxs-lookup"><span data-stu-id="1911a-103"><xref:System.Windows.Controls.Canvas> is a layout control that enables absolute positioning of child elements.</span></span>  
+# <a name="canvas"></a><span data-ttu-id="44ee5-102">Canvas</span><span class="sxs-lookup"><span data-stu-id="44ee5-102">Canvas</span></span>
+<span data-ttu-id="44ee5-103"><xref:System.Windows.Controls.Canvas> 자식 요소의 절대 위치 설정을 사용 하도록 설정 하는 레이아웃 컨트롤이입니다.</span><span class="sxs-lookup"><span data-stu-id="44ee5-103"><xref:System.Windows.Controls.Canvas> is a layout control that enables absolute positioning of child elements.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="1911a-104">섹션 내용</span><span class="sxs-lookup"><span data-stu-id="1911a-104">In This Section</span></span>  
- [<span data-ttu-id="1911a-105">방법 항목</span><span class="sxs-lookup"><span data-stu-id="1911a-105">How-to Topics</span></span>](../../../../docs/framework/wpf/controls/canvas-how-to-topics.md)  
+## <a name="in-this-section"></a><span data-ttu-id="44ee5-104">섹션 내용</span><span class="sxs-lookup"><span data-stu-id="44ee5-104">In This Section</span></span>  
+ [<span data-ttu-id="44ee5-105">방법 항목</span><span class="sxs-lookup"><span data-stu-id="44ee5-105">How-to Topics</span></span>](canvas-how-to-topics.md)  
   
-## <a name="reference"></a><span data-ttu-id="1911a-106">참조</span><span class="sxs-lookup"><span data-stu-id="1911a-106">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="44ee5-106">참조</span><span class="sxs-lookup"><span data-stu-id="44ee5-106">Reference</span></span>  
  <xref:System.Windows.Controls.Panel>  
   
  <xref:System.Windows.Controls.Canvas>  
@@ -36,9 +36,9 @@ ms.locfileid: "33553276"
   
  <xref:System.Windows.Controls.WrapPanel>  
   
-## <a name="related-sections"></a><span data-ttu-id="1911a-107">관련 단원</span><span class="sxs-lookup"><span data-stu-id="1911a-107">Related Sections</span></span>  
- [<span data-ttu-id="1911a-108">레이아웃</span><span class="sxs-lookup"><span data-stu-id="1911a-108">Layout</span></span>](../../../../docs/framework/wpf/advanced/layout.md)  
+## <a name="related-sections"></a><span data-ttu-id="44ee5-107">관련 단원</span><span class="sxs-lookup"><span data-stu-id="44ee5-107">Related Sections</span></span>  
+ [<span data-ttu-id="44ee5-108">레이아웃</span><span class="sxs-lookup"><span data-stu-id="44ee5-108">Layout</span></span>](../advanced/layout.md)  
   
- [<span data-ttu-id="1911a-109">연습: 내 첫 WPF 데스크톱 응용 프로그램</span><span class="sxs-lookup"><span data-stu-id="1911a-109">Walkthrough: My first WPF desktop application</span></span>](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md)  
+ [<span data-ttu-id="44ee5-109">연습: 내 첫 WPF 데스크톱 애플리케이션</span><span class="sxs-lookup"><span data-stu-id="44ee5-109">Walkthrough: My first WPF desktop application</span></span>](../getting-started/walkthrough-my-first-wpf-desktop-application.md)  
   
- [<span data-ttu-id="1911a-110">ScrollViewer 개요</span><span class="sxs-lookup"><span data-stu-id="1911a-110">ScrollViewer Overview</span></span>](../../../../docs/framework/wpf/controls/scrollviewer-overview.md)
+ [<span data-ttu-id="44ee5-110">ScrollViewer 개요</span><span class="sxs-lookup"><span data-stu-id="44ee5-110">ScrollViewer Overview</span></span>](scrollviewer-overview.md)

@@ -17,40 +17,44 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 44a6596807b98e6c8b8624b5df18f78dbf8d0711
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: fd899422287d34407778f67e5b4dfd2f33ffd00c
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33417780"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57359694"
 ---
-# <a name="icordebugmodule2resolveassembly-method"></a><span data-ttu-id="d7207-102">ICorDebugModule2::ResolveAssembly 메서드</span><span class="sxs-lookup"><span data-stu-id="d7207-102">ICorDebugModule2::ResolveAssembly Method</span></span>
-<span data-ttu-id="d7207-103">지정한 메타 데이터 토큰에서 참조 하는 어셈블리를 확인 합니다.</span><span class="sxs-lookup"><span data-stu-id="d7207-103">Resolves the assembly referenced by the specified metadata token.</span></span>  
-  
-## <a name="syntax"></a><span data-ttu-id="d7207-104">구문</span><span class="sxs-lookup"><span data-stu-id="d7207-104">Syntax</span></span>  
-  
-```  
-HRESULT ResolveAssembly (  
-    [in]  mdToken             tkAssemblyRef,  
-    [out] ICorDebugAssembly   **ppAssembly  
-);  
-```  
-  
-#### <a name="parameters"></a><span data-ttu-id="d7207-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="d7207-105">Parameters</span></span>  
- `tkAsemblyRef`  
- <span data-ttu-id="d7207-106">[in] `mdToken` 어셈블리를 참조 하는 값입니다.</span><span class="sxs-lookup"><span data-stu-id="d7207-106">[in] An `mdToken` value that references the assembly.</span></span>  
-  
- `ppAssembly`  
- <span data-ttu-id="d7207-107">[out] 어셈블리를 나타내는 ICorDebugAssembly 개체의 주소에 대 한 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="d7207-107">[out] A pointer to the address of an ICorDebugAssembly object that represents the assembly.</span></span>  
-  
-## <a name="remarks"></a><span data-ttu-id="d7207-108">설명</span><span class="sxs-lookup"><span data-stu-id="d7207-108">Remarks</span></span>  
- <span data-ttu-id="d7207-109">어셈블리가 아직 로드 되지 않은 경우 경우 `ResolveAssembly` 호출 되는 HRESULT CORDBG_E_CANNOT_RESOLVE_ASSEMBLY의 값이 반환 됩니다.</span><span class="sxs-lookup"><span data-stu-id="d7207-109">If the assembly is not already loaded when `ResolveAssembly` is called, an HRESULT value of CORDBG_E_CANNOT_RESOLVE_ASSEMBLY is returned.</span></span>  
-  
-## <a name="requirements"></a><span data-ttu-id="d7207-110">요구 사항</span><span class="sxs-lookup"><span data-stu-id="d7207-110">Requirements</span></span>  
- <span data-ttu-id="d7207-111">**플랫폼:** 참조 [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="d7207-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
-  
- <span data-ttu-id="d7207-112">**헤더:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="d7207-112">**Header:** CorDebug.idl, CorDebug.h</span></span>  
-  
- <span data-ttu-id="d7207-113">**라이브러리:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="d7207-113">**Library:** CorGuids.lib</span></span>  
-  
- <span data-ttu-id="d7207-114">**.NET framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="d7207-114">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>
+# <a name="icordebugmodule2resolveassembly-method"></a><span data-ttu-id="839dd-102">ICorDebugModule2::ResolveAssembly 메서드</span><span class="sxs-lookup"><span data-stu-id="839dd-102">ICorDebugModule2::ResolveAssembly Method</span></span>
+
+<span data-ttu-id="839dd-103">지정 된 메타 데이터 토큰이 참조 되는 어셈블리를 확인 합니다.</span><span class="sxs-lookup"><span data-stu-id="839dd-103">Resolves the assembly referenced by the specified metadata token.</span></span>
+
+## <a name="syntax"></a><span data-ttu-id="839dd-104">구문</span><span class="sxs-lookup"><span data-stu-id="839dd-104">Syntax</span></span>
+
+```cpp
+HRESULT ResolveAssembly (
+    [in]  mdToken             tkAssemblyRef,
+    [out] ICorDebugAssembly   **ppAssembly
+);
+```
+
+## <a name="parameters"></a><span data-ttu-id="839dd-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="839dd-105">Parameters</span></span>
+
+`tkAssemblyRef`\
+<span data-ttu-id="839dd-106">[in] `mdToken` 어셈블리를 참조 하는 값입니다.</span><span class="sxs-lookup"><span data-stu-id="839dd-106">[in] An `mdToken` value that references the assembly.</span></span>
+
+`ppAssembly`\
+<span data-ttu-id="839dd-107">[out] 어셈블리를 나타내는 ICorDebugAssembly 개체의 주소에 대 한 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="839dd-107">[out] A pointer to the address of an ICorDebugAssembly object that represents the assembly.</span></span>
+
+## <a name="remarks"></a><span data-ttu-id="839dd-108">설명</span><span class="sxs-lookup"><span data-stu-id="839dd-108">Remarks</span></span>
+
+<span data-ttu-id="839dd-109">어셈블리는 로드 되지 않았으면 때 `ResolveAssembly` 호출 되는 HRESULT CORDBG_E_CANNOT_RESOLVE_ASSEMBLY의 값이 반환 됩니다.</span><span class="sxs-lookup"><span data-stu-id="839dd-109">If the assembly is not already loaded when `ResolveAssembly` is called, an HRESULT value of CORDBG_E_CANNOT_RESOLVE_ASSEMBLY is returned.</span></span>
+
+## <a name="requirements"></a><span data-ttu-id="839dd-110">요구 사항</span><span class="sxs-lookup"><span data-stu-id="839dd-110">Requirements</span></span>
+
+<span data-ttu-id="839dd-111">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="839dd-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>
+
+<span data-ttu-id="839dd-112">**헤더:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="839dd-112">**Header:** CorDebug.idl, CorDebug.h</span></span>
+
+<span data-ttu-id="839dd-113">**라이브러리:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="839dd-113">**Library:** CorGuids.lib</span></span>
+
+<span data-ttu-id="839dd-114">**.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="839dd-114">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>
