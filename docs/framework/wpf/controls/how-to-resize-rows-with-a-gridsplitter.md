@@ -6,12 +6,12 @@ helpviewer_keywords:
 - grid rows [WPF], resizing
 - GridSplitter control [WPF], resizing grid rows
 ms.assetid: 2413a9f2-1d81-46ed-95cb-95ec8233eea2
-ms.openlocfilehash: 93a04ce55a10f54a6770c279f1773491d7aa463f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b05bda6cd33d3cdd0dda6288f30821d290c60cfc
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54740140"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57370048"
 ---
 # <a name="how-to-resize-rows-with-a-gridsplitter"></a>방법: GridSplitter로 행 크기 조정
 이 예제에서는 가로 사용 하는 방법을 보여 줍니다 <xref:System.Windows.Controls.GridSplitter> 에 있는 두 행 사이의 간격을 재배포 하는 <xref:System.Windows.Controls.Grid> 의 크기를 변경 하지 않고는 <xref:System.Windows.Controls.Grid>.  
@@ -23,9 +23,9 @@ ms.locfileid: "54740140"
   
  다음 예제에서는 가로 정의 하는 방법을 보여 줍니다 <xref:System.Windows.Controls.GridSplitter> 인접 한 행의 크기를 조정 하 합니다.  
   
- [!code-xaml[GridSplitterRowColumn#GridSplitterRowOverlay](../../../../samples/snippets/csharp/VS_Snippets_Wpf/GridSplitterRowColumn/CS/Window1.xaml#gridsplitterrowoverlay)]  
+ [!code-xaml[GridSplitterRowColumn#GridSplitterRowOverlay](~/samples/snippets/csharp/VS_Snippets_Wpf/GridSplitterRowColumn/CS/Window1.xaml#gridsplitterrowoverlay)]  
   
- A <xref:System.Windows.Controls.GridSplitter> 자체 행을 차지 하지 않습니다 다른 컨트롤에 의해 가려질 수 있습니다는 <xref:System.Windows.Controls.Grid>합니다. 이 문제를 방지하는 방법에 대한 자세한 내용은 [Make Sure That a GridSplitter Is Visible](../../../../docs/framework/wpf/controls/how-to-make-sure-that-a-gridsplitter-is-visible.md)(GridSplitter가 표시되는지 확인)을 참조하세요.  
+ A <xref:System.Windows.Controls.GridSplitter> 자체 행을 차지 하지 않습니다 다른 컨트롤에 의해 가려질 수 있습니다는 <xref:System.Windows.Controls.Grid>합니다. 이 문제를 방지하는 방법에 대한 자세한 내용은 [Make Sure That a GridSplitter Is Visible](how-to-make-sure-that-a-gridsplitter-is-visible.md)(GridSplitter가 표시되는지 확인)을 참조하세요.  
   
  **행을 차지하는 GridSplitter를 만드는 방법**  
   
@@ -33,9 +33,9 @@ ms.locfileid: "54740140"
   
  다음 예제에서는 가로 정의 하는 방법을 보여 줍니다 <xref:System.Windows.Controls.GridSplitter> 행을 차지 하 고 양쪽에서 행의 크기를 조정 합니다.  
   
- [!code-xaml[GridSplitterRowColumn#GridSplitterEntireRowPart1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/GridSplitterRowColumn/CS/Window1.xaml#gridsplitterentirerowpart1)]  
-[!code-xaml[GridSplitterRowColumn#GridSplitterEntireRowPart2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/GridSplitterRowColumn/CS/Window1.xaml#gridsplitterentirerowpart2)]  
+ [!code-xaml[GridSplitterRowColumn#GridSplitterEntireRowPart1](~/samples/snippets/csharp/VS_Snippets_Wpf/GridSplitterRowColumn/CS/Window1.xaml#gridsplitterentirerowpart1)]  
+[!code-xaml[GridSplitterRowColumn#GridSplitterEntireRowPart2](~/samples/snippets/csharp/VS_Snippets_Wpf/GridSplitterRowColumn/CS/Window1.xaml#gridsplitterentirerowpart2)]  
   
 ## <a name="see-also"></a>참고자료
 - <xref:System.Windows.Controls.GridSplitter>
-- [방법 항목](../../../../docs/framework/wpf/controls/gridsplitter-how-to-topics.md)
+- [방법 항목](gridsplitter-how-to-topics.md)

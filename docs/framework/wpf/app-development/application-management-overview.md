@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - application management [WPF]
 ms.assetid: 32b1c054-5aca-423b-b4b5-ed8dc4dc637d
-ms.openlocfilehash: 83291e82b15f4006ada95d00f6f4981fb7d6b552
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
+ms.openlocfilehash: ef9771f44ce5bc61787f2060469d7a0b244e96b7
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56748104"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57356509"
 ---
 # <a name="application-management-overview"></a>애플리케이션 관리 개요
 모든 애플리케이션은 애플리케이션 구현 및 관리에 적용하는 일반적인 기능 집합을 공유하는 경향이 있습니다. 이 항목에서는의 기능 개요를 제공 합니다 <xref:System.Windows.Application> 만들고 응용 프로그램을 관리 하기 위한 클래스입니다.  
@@ -40,19 +40,19 @@ ms.locfileid: "56748104"
 |작업|방식|  
 |----------|--------------|  
 |현재 애플리케이션을 나타내는 개체 가져오기|<xref:System.Windows.Application.Current%2A?displayProperty=nameWithType> 속성을 사용합니다.|  
-|애플리케이션에 시작 화면 추가|참조 [WPF 응용 프로그램에 시작 화면 추가](../../../../docs/framework/wpf/app-development/how-to-add-a-splash-screen-to-a-wpf-application.md)합니다.|  
+|애플리케이션에 시작 화면 추가|참조 [WPF 응용 프로그램에 시작 화면 추가](how-to-add-a-splash-screen-to-a-wpf-application.md)합니다.|  
 |애플리케이션 시작|<xref:System.Windows.Application.Run%2A?displayProperty=nameWithType> 메서드를 사용하세요.|  
 |애플리케이션 중지|사용 된 <xref:System.Windows.Application.Shutdown%2A> 메서드를 <xref:System.Windows.Application.Current%2A?displayProperty=nameWithType> 개체.|  
 |명령줄에서 인수 가져오기|처리를 <xref:System.Windows.Application.Startup?displayProperty=nameWithType> 이벤트를 사용 하 여는 <xref:System.Windows.StartupEventArgs.Args%2A?displayProperty=nameWithType> 속성입니다. 예를 들어 참조 된 <xref:System.Windows.Application.Startup?displayProperty=nameWithType> 이벤트입니다.|  
 |애플리케이션 종료 코드 가져오기 및 설정|설정 합니다 <xref:System.Windows.ExitEventArgs.ApplicationExitCode%2A?displayProperty=nameWithType> 속성에는 <xref:System.Windows.Application.Exit?displayProperty=nameWithType> 이벤트 처리기 또는 호출은 <xref:System.Windows.Application.Shutdown%2A> 메서드와 정수를 전달 합니다.|  
 |처리되지 않은 예외의 검색 및 응답|처리는 <xref:System.Windows.Application.DispatcherUnhandledException> 이벤트입니다.|  
 |애플리케이션 범위 리소스 가져오기 및 설정|<xref:System.Windows.Application.Resources%2A?displayProperty=nameWithType> 속성을 사용합니다.|  
-|애플리케이션 범위 리소스 사전 사용|참조 [는 응용 프로그램 범위 리소스 사전 사용](../../../../docs/framework/wpf/app-development/how-to-use-an-application-scope-resource-dictionary.md)합니다.|  
+|애플리케이션 범위 리소스 사전 사용|참조 [는 응용 프로그램 범위 리소스 사전 사용](how-to-use-an-application-scope-resource-dictionary.md)합니다.|  
 |애플리케이션 범위 속성 가져오기 및 설정|<xref:System.Windows.Application.Properties%2A?displayProperty=nameWithType> 속성을 사용합니다.|  
-|애플리케이션 상태 가져오기 및 저장|참조 [유지 및 응용 프로그램 세션 간의 응용 프로그램 범위 속성 복원](../../../../docs/framework/wpf/app-development/persist-and-restore-application-scope-properties.md)합니다.|  
-|리소스 파일, 콘텐츠 파일 및 원본 사이트 파일을 포함하여 비코드 데이터 파일 관리|참조 [WPF 응용 프로그램 리소스, 콘텐츠 및 데이터 파일](../../../../docs/framework/wpf/app-development/wpf-application-resource-content-and-data-files.md)합니다.|  
-|독립 실행형 애플리케이션의 창 관리|[WPF 창 개요](../../../../docs/framework/wpf/app-development/wpf-windows-overview.md)를 참조하세요.|  
-|탐색 추적 및 관리|참조 [탐색 개요](../../../../docs/framework/wpf/app-development/navigation-overview.md)합니다.|  
+|애플리케이션 상태 가져오기 및 저장|참조 [유지 및 응용 프로그램 세션 간의 응용 프로그램 범위 속성 복원](persist-and-restore-application-scope-properties.md)합니다.|  
+|리소스 파일, 콘텐츠 파일 및 원본 사이트 파일을 포함하여 비코드 데이터 파일 관리|참조 [WPF 응용 프로그램 리소스, 콘텐츠 및 데이터 파일](wpf-application-resource-content-and-data-files.md)합니다.|  
+|독립 실행형 애플리케이션의 창 관리|[WPF 창 개요](wpf-windows-overview.md)를 참조하세요.|  
+|탐색 추적 및 관리|참조 [탐색 개요](navigation-overview.md)합니다.|  
   
 <a name="The_Application_Definition"></a>   
 ## <a name="the-application-definition"></a>애플리케이션 정의  
@@ -63,16 +63,16 @@ ms.locfileid: "56748104"
   
  다음 예제에서는 태그 및 코드 숨김을 모두 사용하여 애플리케이션 정의를 구현하는 방법을 보여 줍니다.  
   
- [!code-xaml[ApplicationSnippets#ApplicationXAML](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ApplicationSnippets/CSharp/App.xaml#applicationxaml)]  
+ [!code-xaml[ApplicationSnippets#ApplicationXAML](~/samples/snippets/csharp/VS_Snippets_Wpf/ApplicationSnippets/CSharp/App.xaml#applicationxaml)]  
   
- [!code-csharp[ApplicationSnippets#ApplicationCODEBEHIND](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ApplicationSnippets/CSharp/App.xaml.cs#applicationcodebehind)]
- [!code-vb[ApplicationSnippets#ApplicationCODEBEHIND](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ApplicationSnippets/visualbasic/application.xaml.vb#applicationcodebehind)]  
+ [!code-csharp[ApplicationSnippets#ApplicationCODEBEHIND](~/samples/snippets/csharp/VS_Snippets_Wpf/ApplicationSnippets/CSharp/App.xaml.cs#applicationcodebehind)]
+ [!code-vb[ApplicationSnippets#ApplicationCODEBEHIND](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ApplicationSnippets/visualbasic/application.xaml.vb#applicationcodebehind)]  
   
  태그 파일과 코드 숨김 파일이 함께 작동하도록 하려면 다음이 필요합니다.  
   
 - 태그에는 `Application` 요소에 포함 해야 합니다는 `x:Class` 특성입니다. 응용 프로그램을 빌드할 때 `x:Class` 파일 태그를 만들려면 MSBuild이로 인해를 `partial` 에서 파생 된 클래스 <xref:System.Windows.Application> 에 지정 된 이름을 가진는 `x:Class` 특성입니다. XAML 스키마에 대 한 XML 네임 스페이스 선언 추가 해야이 (`xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"`).
   
--   코드 숨김 클래스 여야 합니다는 `partial` 에 지정 된 된 동일한 이름 가진 클래스를 `x:Class` 태그의 특성 및에서 파생 되어야 합니다 <xref:System.Windows.Application>합니다. 이렇게 하면 코드 숨김 파일을 사용 하 여 연결할 수는 `partial` 응용 프로그램을 빌드할 때 태그 파일에 대해 생성 된 클래스 (참조 [WPF 응용 프로그램 빌드](../../../../docs/framework/wpf/app-development/building-a-wpf-application-wpf.md)).  
+-   코드 숨김 클래스 여야 합니다는 `partial` 에 지정 된 된 동일한 이름 가진 클래스를 `x:Class` 태그의 특성 및에서 파생 되어야 합니다 <xref:System.Windows.Application>합니다. 이렇게 하면 코드 숨김 파일을 사용 하 여 연결할 수는 `partial` 응용 프로그램을 빌드할 때 태그 파일에 대해 생성 된 클래스 (참조 [WPF 응용 프로그램 빌드](building-a-wpf-application-wpf.md)).  
   
 > [!NOTE]
 >  새 WPF 응용 프로그램 프로젝트 또는 Visual Studio를 사용 하 여 WPF 브라우저 응용 프로그램 프로젝트를 만들면 응용 프로그램 정의 기본으로 포함 되 고 태그와 코드 숨김을 모두 사용 하 여 정의 됩니다.  
@@ -110,13 +110,13 @@ ms.locfileid: "56748104"
   
  다음 코드에 대 한 참조를 확보 하는 방법을 보여 줍니다 합니다 <xref:System.Windows.Application> 현재 <xref:System.AppDomain>합니다.  
   
- [!code-csharp[ApplicationManagementOverviewSnippets#GetCurrentAppCODE](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ApplicationManagementOverviewSnippets/CSharp/MainWindow.xaml.cs#getcurrentappcode)]
- [!code-vb[ApplicationManagementOverviewSnippets#GetCurrentAppCODE](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ApplicationManagementOverviewSnippets/VisualBasic/MainWindow.xaml.vb#getcurrentappcode)]  
+ [!code-csharp[ApplicationManagementOverviewSnippets#GetCurrentAppCODE](~/samples/snippets/csharp/VS_Snippets_Wpf/ApplicationManagementOverviewSnippets/CSharp/MainWindow.xaml.cs#getcurrentappcode)]
+ [!code-vb[ApplicationManagementOverviewSnippets#GetCurrentAppCODE](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ApplicationManagementOverviewSnippets/VisualBasic/MainWindow.xaml.vb#getcurrentappcode)]  
   
  <xref:System.Windows.Application.Current%2A> 인스턴스에 대 한 참조를 반환 합니다 <xref:System.Windows.Application> 클래스입니다. 에 대 한 참조를 원하는 경우 프로그램 <xref:System.Windows.Application> 파생 클래스의 값을 캐스팅 해야 합니다 <xref:System.Windows.Application.Current%2A> 속성을 다음 예와에서 같이 합니다.  
   
- [!code-csharp[ApplicationManagementOverviewSnippets#GetSTCurrentAppCODE](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ApplicationManagementOverviewSnippets/CSharp/MainWindow.xaml.cs#getstcurrentappcode)]
- [!code-vb[ApplicationManagementOverviewSnippets#GetSTCurrentAppCODE](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ApplicationManagementOverviewSnippets/VisualBasic/MainWindow.xaml.vb#getstcurrentappcode)]  
+ [!code-csharp[ApplicationManagementOverviewSnippets#GetSTCurrentAppCODE](~/samples/snippets/csharp/VS_Snippets_Wpf/ApplicationManagementOverviewSnippets/CSharp/MainWindow.xaml.cs#getstcurrentappcode)]
+ [!code-vb[ApplicationManagementOverviewSnippets#GetSTCurrentAppCODE](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ApplicationManagementOverviewSnippets/VisualBasic/MainWindow.xaml.vb#getstcurrentappcode)]  
   
  값을 검사할 수 있습니다 <xref:System.Windows.Application.Current%2A> 기간에 언제 든 지는 <xref:System.Windows.Application> 개체입니다. 하지만 이러한 검사를 수행할 때는 주의해야 합니다. 후 합니다 <xref:System.Windows.Application> 클래스가 인스턴스화되면는 기간입니다. 상태는 <xref:System.Windows.Application> 개체가 일치 하지 않습니다. 이 기간 동안 <xref:System.Windows.Application> 응용 프로그램 인프라를 설정, 속성, 설정, 이벤트 등록 등을 실행 하려면 코드에 필요한 다양 한 초기화 작업을 수행 됩니다. 사용 하려는 경우는 <xref:System.Windows.Application> 코드가 있을 수 있습니다이 기간 동안 개체 예기치 않은 결과 다양 한 종속 된 경우에 특히 <xref:System.Windows.Application> 설정할 속성입니다.  
   
@@ -129,7 +129,7 @@ ms.locfileid: "56748104"
   
 <a name="Splash_Screen"></a>   
 ### <a name="splash-screen"></a>시작 화면  
- 시작 합니다 [!INCLUDE[net_v35SP1_short](../../../../includes/net-v35sp1-short-md.md)], 시작 창에서 사용할 이미지를 지정할 수 있습니다 또는 *시작 화면*합니다. <xref:System.Windows.SplashScreen> 클래스를 사용 하면 쉽게 응용 프로그램을 로드 하는 동안 시작 창을 표시할 수 있습니다. 합니다 <xref:System.Windows.SplashScreen> 창을 만들고 앞에서 나온 <xref:System.Windows.Application.Run%2A> 라고 합니다. 자세한 내용은 [응용 프로그램 시작 시간](../../../../docs/framework/wpf/advanced/application-startup-time.md) 하 고 [WPF 응용 프로그램 시작 화면에 추가](../../../../docs/framework/wpf/app-development/how-to-add-a-splash-screen-to-a-wpf-application.md)합니다.  
+ 시작 합니다 [!INCLUDE[net_v35SP1_short](../../../../includes/net-v35sp1-short-md.md)], 시작 창에서 사용할 이미지를 지정할 수 있습니다 또는 *시작 화면*합니다. <xref:System.Windows.SplashScreen> 클래스를 사용 하면 쉽게 응용 프로그램을 로드 하는 동안 시작 창을 표시할 수 있습니다. 합니다 <xref:System.Windows.SplashScreen> 창을 만들고 앞에서 나온 <xref:System.Windows.Application.Run%2A> 라고 합니다. 자세한 내용은 [응용 프로그램 시작 시간](../advanced/application-startup-time.md) 하 고 [WPF 응용 프로그램 시작 화면에 추가](how-to-add-a-splash-screen-to-a-wpf-application.md)합니다.  
   
 <a name="Starting_an_Application"></a>   
 ### <a name="starting-an-application"></a>애플리케이션 시작  
@@ -144,35 +144,35 @@ ms.locfileid: "56748104"
 ### <a name="showing-a-user-interface"></a>사용자 인터페이스 표시  
  대부분의 독립 실행형 Windows 응용 프로그램 열기를 <xref:System.Windows.Window> 시작할 때 실행 합니다. <xref:System.Windows.Application.Startup> 다음 코드 에서처럼 이벤트 처리기가이 수행할 수 있는 곳입니다.  
   
- [!code-xaml[AppShowWindowHardSnippets#StartupEventMARKUP](../../../../samples/snippets/csharp/VS_Snippets_Wpf/AppShowWindowHardSnippets/CSharp/App.xaml#startupeventmarkup)]  
+ [!code-xaml[AppShowWindowHardSnippets#StartupEventMARKUP](~/samples/snippets/csharp/VS_Snippets_Wpf/AppShowWindowHardSnippets/CSharp/App.xaml#startupeventmarkup)]  
   
- [!code-csharp[AppShowWindowHardSnippets#StartupEventCODEBEHIND](../../../../samples/snippets/csharp/VS_Snippets_Wpf/AppShowWindowHardSnippets/CSharp/App.xaml.cs#startupeventcodebehind)]
- [!code-vb[AppShowWindowHardSnippets#StartupEventCODEBEHIND](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/AppShowWindowHardSnippets/VisualBasic/Application.xaml.vb#startupeventcodebehind)]  
+ [!code-csharp[AppShowWindowHardSnippets#StartupEventCODEBEHIND](~/samples/snippets/csharp/VS_Snippets_Wpf/AppShowWindowHardSnippets/CSharp/App.xaml.cs#startupeventcodebehind)]
+ [!code-vb[AppShowWindowHardSnippets#StartupEventCODEBEHIND](~/samples/snippets/visualbasic/VS_Snippets_Wpf/AppShowWindowHardSnippets/VisualBasic/Application.xaml.vb#startupeventcodebehind)]  
   
 > [!NOTE]
 >  첫 번째 <xref:System.Windows.Window> 주 응용 프로그램 창이 기본적으로 응용 프로그램을 독립 실행형에서 인스턴스화할 수 됩니다. 이렇게 <xref:System.Windows.Window> 개체를 참조 하는 <xref:System.Windows.Application.MainWindow%2A?displayProperty=nameWithType> 속성입니다. 값을 <xref:System.Windows.Application.MainWindow%2A> 속성 경우 첫 번째 보다 다른 창을 프로그래밍 방식으로 변경할 수 있습니다 인스턴스화할 <xref:System.Windows.Window> 주 창 이어야 합니다.  
   
  XBAP 처음 시작 하는 경우 대부분 검색을 시작 합니다는 <xref:System.Windows.Controls.Page>합니다. 다음 코드에서 이를 확인할 수 있습니다.  
   
- [!code-xaml[XBAPAppStartupSnippets#StartupXBAPMARKUP](../../../../samples/snippets/csharp/VS_Snippets_Wpf/XBAPAppStartupSnippets/CSharp/App.xaml#startupxbapmarkup)]  
+ [!code-xaml[XBAPAppStartupSnippets#StartupXBAPMARKUP](~/samples/snippets/csharp/VS_Snippets_Wpf/XBAPAppStartupSnippets/CSharp/App.xaml#startupxbapmarkup)]  
   
- [!code-csharp[XBAPAppStartupSnippets#StartupXBAPCODEBEHIND](../../../../samples/snippets/csharp/VS_Snippets_Wpf/XBAPAppStartupSnippets/CSharp/App.xaml.cs#startupxbapcodebehind)]
- [!code-vb[XBAPAppStartupSnippets#StartupXBAPCODEBEHIND](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/XBAPAppStartupSnippets/VisualBasic/Application.xaml.vb#startupxbapcodebehind)]  
+ [!code-csharp[XBAPAppStartupSnippets#StartupXBAPCODEBEHIND](~/samples/snippets/csharp/VS_Snippets_Wpf/XBAPAppStartupSnippets/CSharp/App.xaml.cs#startupxbapcodebehind)]
+ [!code-vb[XBAPAppStartupSnippets#StartupXBAPCODEBEHIND](~/samples/snippets/visualbasic/VS_Snippets_Wpf/XBAPAppStartupSnippets/VisualBasic/Application.xaml.vb#startupxbapcodebehind)]  
   
  처리 하는 경우 <xref:System.Windows.Application.Startup> 만 <xref:System.Windows.Window> 하거나 이동 하는 <xref:System.Windows.Controls.Page>, 설정할 수 있습니다는 `StartupUri` 태그에서 특성을 대신 합니다.  
   
  다음 예제에서는 사용 하는 방법을 보여 줍니다 합니다 <xref:System.Windows.Application.StartupUri%2A> 열려는 독립 실행형 응용 프로그램에서는 <xref:System.Windows.Window>합니다.  
   
- [!code-xaml[ApplicationManagementOverviewSnippets#OverviewStartupUriMARKUP](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ApplicationManagementOverviewSnippets/CSharp/App.xaml#overviewstartupurimarkup)]  
+ [!code-xaml[ApplicationManagementOverviewSnippets#OverviewStartupUriMARKUP](~/samples/snippets/csharp/VS_Snippets_Wpf/ApplicationManagementOverviewSnippets/CSharp/App.xaml#overviewstartupurimarkup)]  
   
  다음 예제에서는 사용 하는 방법을 보여 줍니다 <xref:System.Windows.Application.StartupUri%2A> 에서 이동할 XBAP는 <xref:System.Windows.Controls.Page>합니다.  
   
- [!code-xaml[PageSnippets#XBAPStartupUriMARKUP](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PageSnippets/CSharp/App.xaml#xbapstartupurimarkup)]  
+ [!code-xaml[PageSnippets#XBAPStartupUriMARKUP](~/samples/snippets/csharp/VS_Snippets_Wpf/PageSnippets/CSharp/App.xaml#xbapstartupurimarkup)]  
   
  이 태그는 창을 여는 이전 코드와 같은 효과를 갖습니다.  
   
 > [!NOTE]
->  탐색 모음에 대 한 자세한 내용은 참조 하세요. [탐색 개요](../../../../docs/framework/wpf/app-development/navigation-overview.md)합니다.  
+>  탐색 모음에 대 한 자세한 내용은 참조 하세요. [탐색 개요](navigation-overview.md)합니다.  
   
  처리 해야 합니다 <xref:System.Windows.Application.Startup> 이벤트를를 <xref:System.Windows.Window> 기본이 아닌 생성자를 사용 하 여 인스턴스화해야 하 또는 해당 속성을 설정 하거나, 표시 하기 전에 해당 이벤트를 구독 해야 하거나 명령줄 인수를 처리 해야 할 경우는 응용 프로그램을 시작할 때 제공 되었습니다.  
   
@@ -184,14 +184,14 @@ ms.locfileid: "56748104"
   
  응용 프로그램 초기화 하는 동안 WPF 운영 체제에서 명령줄 인수를 검색 하 고 전달 합니다는 <xref:System.Windows.Application.Startup> 를 통해 이벤트 처리기를 <xref:System.Windows.StartupEventArgs.Args%2A> 의 속성을 <xref:System.Windows.StartupEventArgs> 매개 변수입니다. 다음과 같은 코드를 사용하여 명령줄 인수를 검색하고 저장할 수 있습니다.  
   
- [!code-xaml[ApplicationStartupSnippets#HandleStartupXAML](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ApplicationStartupSnippets/CSharp/App.xaml#handlestartupxaml)]  
+ [!code-xaml[ApplicationStartupSnippets#HandleStartupXAML](~/samples/snippets/csharp/VS_Snippets_Wpf/ApplicationStartupSnippets/CSharp/App.xaml#handlestartupxaml)]  
   
- [!code-csharp[ApplicationStartupSnippets#HandleStartupCODEBEHIND](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ApplicationStartupSnippets/CSharp/App.xaml.cs#handlestartupcodebehind)]
- [!code-vb[ApplicationStartupSnippets#HandleStartupCODEBEHIND](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ApplicationStartupSnippets/visualbasic/application.xaml.vb#handlestartupcodebehind)]  
+ [!code-csharp[ApplicationStartupSnippets#HandleStartupCODEBEHIND](~/samples/snippets/csharp/VS_Snippets_Wpf/ApplicationStartupSnippets/CSharp/App.xaml.cs#handlestartupcodebehind)]
+ [!code-vb[ApplicationStartupSnippets#HandleStartupCODEBEHIND](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ApplicationStartupSnippets/visualbasic/application.xaml.vb#handlestartupcodebehind)]  
   
  코드 핸들 <xref:System.Windows.Application.Startup> 검사할 여부를 합니다 **/StartMinimized** 명령줄 인수가 제공 되었습니다; 주 창으로 열릴 경우를 <xref:System.Windows.WindowState> 의 <xref:System.Windows.WindowState.Minimized>. 때문에 유의 합니다 <xref:System.Windows.Window.WindowState%2A> 속성을 설정 해야 프로그래밍 방식으로 기본 <xref:System.Windows.Window> 코드에서 명시적으로 열어야 합니다.  
   
- Xbap에서 검색 하 고 ClickOnce 배포를 사용 하 여 시작 되기 때문에 명령줄 인수를 처리할 수 없습니다 (참조 [WPF 응용 프로그램 배포](../../../../docs/framework/wpf/app-development/deploying-a-wpf-application-wpf.md)). 그러나 XBAP를 시작하는 데 사용되는 URL에서 쿼리 문자열 매개 변수를 검색하고 처리할 수 있습니다.  
+ Xbap에서 검색 하 고 ClickOnce 배포를 사용 하 여 시작 되기 때문에 명령줄 인수를 처리할 수 없습니다 (참조 [WPF 응용 프로그램 배포](deploying-a-wpf-application-wpf.md)). 그러나 XBAP를 시작하는 데 사용되는 URL에서 쿼리 문자열 매개 변수를 검색하고 처리할 수 있습니다.  
   
 <a name="Application_Activation_and_Deactivation"></a>   
 ### <a name="application-activation-and-deactivation"></a>애플리케이션 활성화 및 비활성화  
@@ -213,10 +213,10 @@ ms.locfileid: "56748104"
   
  다음 코드를 처리 하는 방법을 보여 줍니다 합니다 <xref:System.Windows.Application.Activated> 및 <xref:System.Windows.Application.Deactivated> 응용 프로그램이 활성 상태 인지 여부를 결정 하는 이벤트입니다.  
   
- [!code-xaml[ApplicationActivationSnippets#DetectActivationStateXAML](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ApplicationActivationSnippets/CSharp/App.xaml#detectactivationstatexaml)]  
+ [!code-xaml[ApplicationActivationSnippets#DetectActivationStateXAML](~/samples/snippets/csharp/VS_Snippets_Wpf/ApplicationActivationSnippets/CSharp/App.xaml#detectactivationstatexaml)]  
   
- [!code-csharp[ApplicationActivationSnippets#DetectActivationStateCODEBEHIND](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ApplicationActivationSnippets/CSharp/App.xaml.cs#detectactivationstatecodebehind)]
- [!code-vb[ApplicationActivationSnippets#DetectActivationStateCODEBEHIND](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ApplicationActivationSnippets/visualbasic/application.xaml.vb#detectactivationstatecodebehind)]  
+ [!code-csharp[ApplicationActivationSnippets#DetectActivationStateCODEBEHIND](~/samples/snippets/csharp/VS_Snippets_Wpf/ApplicationActivationSnippets/CSharp/App.xaml.cs#detectactivationstatecodebehind)]
+ [!code-vb[ApplicationActivationSnippets#DetectActivationStateCODEBEHIND](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ApplicationActivationSnippets/visualbasic/application.xaml.vb#detectactivationstatecodebehind)]  
   
  <xref:System.Windows.Window> 수도 활성화 및 비활성화 합니다. 자세한 내용은 <xref:System.Windows.Window.Activated?displayProperty=nameWithType> 및 <xref:System.Windows.Window.Deactivated?displayProperty=nameWithType>를 참조하세요.  
   
@@ -251,12 +251,12 @@ ms.locfileid: "56748104"
   
  기본값인 <xref:System.Windows.Application.ShutdownMode%2A> 는 <xref:System.Windows.ShutdownMode.OnLastWindowClose>는 응용 프로그램을 사용자가 응용 프로그램의 마지막 창이 닫힐 때 자동으로 종료 되었음을 의미 합니다. 그러나 응용 프로그램을 종료 해야 주 창의 닫을 때, 경우 WPF를 자동으로 수행 하는 설정 하는 경우 <xref:System.Windows.Application.ShutdownMode%2A> 에 <xref:System.Windows.ShutdownMode.OnMainWindowClose>입니다. 다음 예제에서 이를 확인할 수 있습니다.  
   
- [!code-xaml[ApplicationShutdownModeSnippets#OnMainWindowCloseMARKUP](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ApplicationShutdownModeSnippets/CS/Page1.xaml#onmainwindowclosemarkup)]  
+ [!code-xaml[ApplicationShutdownModeSnippets#OnMainWindowCloseMARKUP](~/samples/snippets/csharp/VS_Snippets_Wpf/ApplicationShutdownModeSnippets/CS/Page1.xaml#onmainwindowclosemarkup)]  
   
  응용 프로그램별 종료 조건이 있는 경우 설정한 <xref:System.Windows.Application.ShutdownMode%2A> 에 <xref:System.Windows.ShutdownMode.OnExplicitShutdown>입니다. 명시적으로 호출 하 여 응용 프로그램을 종료 해야 하는 것이 예제의 경우를 <xref:System.Windows.Application.Shutdown%2A> 메서드;이 고, 그렇지 응용 프로그램이 실행 된 모든 창을 닫은 경우에 계속 됩니다. 유의 <xref:System.Windows.Application.Shutdown%2A> 때 암시적으로 호출 됩니다 합니다 <xref:System.Windows.Application.ShutdownMode%2A> 는 <xref:System.Windows.ShutdownMode.OnLastWindowClose> 또는 <xref:System.Windows.ShutdownMode.OnMainWindowClose>합니다.  
   
 > [!NOTE]
->  <xref:System.Windows.Application.ShutdownMode%2A> XBAP를 설정할 수 있지만 무시 됩니다. XBAP가 항상 종료 XBAP를 호스트 하는 브라우저를 닫을 때 또는 브라우저에서에서 탐색 합니다. 자세한 내용은 [탐색 개요](../../../../docs/framework/wpf/app-development/navigation-overview.md)를 참조하세요.  
+>  <xref:System.Windows.Application.ShutdownMode%2A> XBAP를 설정할 수 있지만 무시 됩니다. XBAP가 항상 종료 XBAP를 호스트 하는 브라우저를 닫을 때 또는 브라우저에서에서 탐색 합니다. 자세한 내용은 [탐색 개요](navigation-overview.md)를 참조하세요.  
   
 #### <a name="session-ending"></a>세션 종료  
  설명 하는 종료 조건은 <xref:System.Windows.Application.ShutdownMode%2A> 속성 응용 프로그램에 따라 다릅니다. 하지만 외부 조건에 따라 애플리케이션이 종료되는 경우도 있습니다. 가장 일반적인 외부 조건은는 다음 작업을 통해 Windows 세션을 종료할 때 발생 합니다.  
@@ -271,10 +271,10 @@ ms.locfileid: "56748104"
   
  Windows 세션이 종료 될 때 감지 하기 위해 처리할 수 있습니다는 <xref:System.Windows.Application.SessionEnding> 다음 예제의 그림과 같이 이벤트입니다.  
   
- [!code-xaml[ApplicationSessionEndingSnippets#HandlingSessionEndingXAML](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ApplicationSessionEndingSnippets/CSharp/App.xaml#handlingsessionendingxaml)]  
+ [!code-xaml[ApplicationSessionEndingSnippets#HandlingSessionEndingXAML](~/samples/snippets/csharp/VS_Snippets_Wpf/ApplicationSessionEndingSnippets/CSharp/App.xaml#handlingsessionendingxaml)]  
   
- [!code-csharp[ApplicationSessionEndingSnippets#HandlingSessionEndingCODEBEHIND](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ApplicationSessionEndingSnippets/CSharp/App.xaml.cs#handlingsessionendingcodebehind)]
- [!code-vb[ApplicationSessionEndingSnippets#HandlingSessionEndingCODEBEHIND](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ApplicationSessionEndingSnippets/visualbasic/application.xaml.vb#handlingsessionendingcodebehind)]  
+ [!code-csharp[ApplicationSessionEndingSnippets#HandlingSessionEndingCODEBEHIND](~/samples/snippets/csharp/VS_Snippets_Wpf/ApplicationSessionEndingSnippets/CSharp/App.xaml.cs#handlingsessionendingcodebehind)]
+ [!code-vb[ApplicationSessionEndingSnippets#HandlingSessionEndingCODEBEHIND](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ApplicationSessionEndingSnippets/visualbasic/application.xaml.vb#handlingsessionendingcodebehind)]  
   
  이 예제에서는 코드 검사는 <xref:System.Windows.SessionEndingCancelEventArgs.ReasonSessionEnding%2A> Windows 세션이 종료 되는 방식을 결정 하는 속성입니다. 또한 이 값을 사용하여 사용자에게 확인 메시지를 표시합니다. 코드를 설정 하는 사용자 세션이 종료을 원하지 않을 경우 <xref:System.ComponentModel.CancelEventArgs.Cancel%2A> 에 `true` Windows 세션을 종료 하지 못하도록 합니다.  
   
@@ -289,7 +289,7 @@ ms.locfileid: "56748104"
  [!code-csharp[Handling-the-Exit-event](~/samples/snippets/csharp/VS_Snippets_Wpf/HOWTOApplicationModelSnippets/CSharp/App.xaml.cs?highlight=42-55)]
  [!code-vb[Handling-the-Exit-event](~/samples/snippets/visualbasic/VS_Snippets_Wpf/HOWTOApplicationModelSnippets/visualbasic/application.xaml.vb?highlight=34-45)]  
   
- 전체 예제를 참조 하세요 [유지 및 응용 프로그램 세션 간에 응용 프로그램 범위 속성 복원](../../../../docs/framework/wpf/app-development/persist-and-restore-application-scope-properties.md)합니다.  
+ 전체 예제를 참조 하세요 [유지 및 응용 프로그램 세션 간에 응용 프로그램 범위 속성 복원](persist-and-restore-application-scope-properties.md)합니다.  
   
  <xref:System.Windows.Application.Exit> 독립 실행형 응용 프로그램과 Xbap에서 처리할 수 있습니다. Xbap에 대 한 <xref:System.Windows.Application.Exit> 다음과 같은 상황에서 작업 하는 경우 발생 합니다.  
   
@@ -311,8 +311,8 @@ ms.locfileid: "56748104"
   
  종료 코드를 변경 하려면 호출할 수 있습니다는 <xref:System.Windows.Application.Shutdown%28System.Int32%29> 종료 코드는 정수 인수를 받아들이는 오버 로드 합니다.  
   
- [!code-csharp[ApplicationExitSnippets#AppExitCODE](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ApplicationExitSnippets/CSharp/MainWindow.xaml.cs#appexitcode)]
- [!code-vb[ApplicationExitSnippets#AppExitCODE](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ApplicationExitSnippets/visualbasic/mainwindow.xaml.vb#appexitcode)]  
+ [!code-csharp[ApplicationExitSnippets#AppExitCODE](~/samples/snippets/csharp/VS_Snippets_Wpf/ApplicationExitSnippets/CSharp/MainWindow.xaml.cs#appexitcode)]
+ [!code-vb[ApplicationExitSnippets#AppExitCODE](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ApplicationExitSnippets/visualbasic/mainwindow.xaml.vb#appexitcode)]  
   
  종료 코드의 값을 감지 하 고, 처리 하 여 변경할 수 있습니다는 <xref:System.Windows.Application.Exit> 이벤트입니다. <xref:System.Windows.Application.Exit> 이벤트 처리기에 전달 되는 <xref:System.Windows.ExitEventArgs> 종료 코드에 대 한 액세스를 제공 하는 <xref:System.Windows.ExitEventArgs.ApplicationExitCode%2A> 속성입니다. 자세한 내용은 <xref:System.Windows.Application.Exit>을 참조하세요.  
   
@@ -323,7 +323,7 @@ ms.locfileid: "56748104"
 ### <a name="unhandled-exceptions"></a>처리되지 않은 예외  
  원하지 않는 예외를 throw하는 경우와 같이 애플리케이션이 비정상적인 상황에서 종료되는 경우가 있습니다. 이런 경우에는 애플리케이션에 예외를 검색하고 처리할 코드가 없을 수 있습니다. 이런 형식의 예외가 처리되지 않은 예외이며, 애플리케이션이 닫히기 전에 다음 그림에 표시된 것과 비슷한 알림으로 표시됩니다.  
   
- ![처리되지 않은 예외 알림](../../../../docs/framework/wpf/app-development/media/applicationmanagementoverviewfigure2.png "ApplicationManagementOverviewFigure2")  
+ ![처리되지 않은 예외 알림](./media/applicationmanagementoverviewfigure2.png "ApplicationManagementOverviewFigure2")  
   
  사용자 환경의 관점에서는 애플리케이션에서 다음과 같은 작업의 일부 또는 전부를 수행하여 이러한 기본 동작을 방지하는 것이 바람직합니다.  
   
@@ -337,8 +337,8 @@ ms.locfileid: "56748104"
   
 [!code-xaml[detecting-unhandled-exceptions](~/samples/snippets/csharp/VS_Snippets_Wpf/ApplicationDispatcherUnhandledExceptionSnippets/CSharp/App.xaml#handledispatcherunhandledexceptionxaml)]  
   
-[!code-csharp[code-to-detect-unhandled-exceptions](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ApplicationDispatcherUnhandledExceptionSnippets/CSharp/App.xaml.cs)]
-[!code-vb[code-to-detect-unhandled-exceptions](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ApplicationDispatcherUnhandledExceptionSnippets/visualbasic/application.xaml.vb)]  
+[!code-csharp[code-to-detect-unhandled-exceptions](~/samples/snippets/csharp/VS_Snippets_Wpf/ApplicationDispatcherUnhandledExceptionSnippets/CSharp/App.xaml.cs)]
+[!code-vb[code-to-detect-unhandled-exceptions](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ApplicationDispatcherUnhandledExceptionSnippets/visualbasic/application.xaml.vb)]  
   
  합니다 <xref:System.Windows.Application.DispatcherUnhandledException> 이벤트 처리기에 전달 되는 <xref:System.Windows.Threading.DispatcherUnhandledExceptionEventArgs> 자체 예외를 포함 하 여 처리 되지 않은 예외에 대 한 컨텍스트 정보를 포함 하는 매개 변수 (<xref:System.Windows.Threading.DispatcherUnhandledExceptionEventArgs.Exception%2A?displayProperty=nameWithType>). 이 정보를 사용하여 예외를 처리하는 방법을 결정할 수 있습니다.  
   
@@ -350,17 +350,17 @@ ms.locfileid: "56748104"
 ### <a name="application-lifetime-events"></a>애플리케이션 수명 이벤트  
  독립 실행형 응용 프로그램 및 Xbap 수명이 동일 필요가 없습니다. 다음 그림에서는 독립 실행형 애플리케이션 수명에서의 주요 이벤트와 이러한 이벤트가 발생하는 순서를 보여 줍니다.  
   
- ![독립 실행형 응용 프로그램 &#45; 응용 프로그램 개체 이벤트](../../../../docs/framework/wpf/app-development/media/applicationmodeloverview-applicationobjectevents.png "ApplicationModelOverview_ApplicationObjectEvents")  
+ ![독립 실행형 응용 프로그램 &#45; 응용 프로그램 개체 이벤트](./media/applicationmodeloverview-applicationobjectevents.png "ApplicationModelOverview_ApplicationObjectEvents")  
   
  마찬가지로, 다음 그림 수명에서 XBAP의 주요 이벤트를 보여 줍니다.와 이러한 이벤트가 발생 하는 순서를 보여 줍니다.  
   
- ![XBAP &#45; 응용 프로그램 개체 이벤트](../../../../docs/framework/wpf/app-development/media/applicationmodeloverview-applicationobjectevents-xbap.png "ApplicationModelOverview_ApplicationObjectEvents_xbap")  
+ ![XBAP &#45; 응용 프로그램 개체 이벤트](./media/applicationmodeloverview-applicationobjectevents-xbap.png "ApplicationModelOverview_ApplicationObjectEvents_xbap")  
   
 ## <a name="see-also"></a>참고자료
 - <xref:System.Windows.Application>
-- [WPF 창 개요](../../../../docs/framework/wpf/app-development/wpf-windows-overview.md)
-- [탐색 개요](../../../../docs/framework/wpf/app-development/navigation-overview.md)
-- [WPF 응용 프로그램 리소스, 콘텐츠 및 데이터 파일](../../../../docs/framework/wpf/app-development/wpf-application-resource-content-and-data-files.md)
-- [WPF의 Pack URI](../../../../docs/framework/wpf/app-development/pack-uris-in-wpf.md)
+- [WPF 창 개요](wpf-windows-overview.md)
+- [탐색 개요](navigation-overview.md)
+- [WPF 응용 프로그램 리소스, 콘텐츠 및 데이터 파일](wpf-application-resource-content-and-data-files.md)
+- [WPF의 Pack URI](pack-uris-in-wpf.md)
 - [응용 프로그램 모델: 방법 도움말 항목](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms749013(v=vs.100))
-- [응용 프로그램 개발](../../../../docs/framework/wpf/app-development/index.md)
+- [응용 프로그램 개발](index.md)

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - dependency properties [WPF], access
 - security [WPF], dependency properties
 ms.assetid: d10150ec-90c5-4571-8d35-84bafa2429a4
-ms.openlocfilehash: eb27f3c902a0fb783d26d14d1ce494eebcffb999
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d51f8f5fd704b0c95b8e6f841b9b0ff8567899cb
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54532151"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57364816"
 ---
 # <a name="dependency-property-security"></a>종속성 속성 보안
 종속성 속성은 일반적으로 public 속성으로 간주됩니다. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 속성 시스템의 특성으로 인해 종속성 속성 값에 대한 보안을 보장할 수 없습니다.  
@@ -27,7 +27,7 @@ ms.locfileid: "54532151"
   
  고유한 종속성 속성을 작성 하는 경우 래퍼를 선언 해야 하며 <xref:System.Windows.DependencyProperty> 호출자가 수행 되지 올바른 정보를 가져올 속성의 액세스 수준에 대 한 (때문에 되 고 해당 저장소를 public 멤버로 식별자 필드 구현 된 종속성 속성으로).  
   
- 사용자 지정 종속성 속성에 대 한 읽기 전용 종속성 속성으로 속성을 등록할 수 있습니다 하 고이 속성에 대 한 참조를 보유 하지 않는 모든 사용자에 의해 설정 되는 효과적인 수단을 제공 합니다 <xref:System.Windows.DependencyPropertyKey> 해당 속성에 대 한 합니다. 자세한 내용은 [읽기 전용 종속성 속성](../../../../docs/framework/wpf/advanced/read-only-dependency-properties.md)을 참조하세요.  
+ 사용자 지정 종속성 속성에 대 한 읽기 전용 종속성 속성으로 속성을 등록할 수 있습니다 하 고이 속성에 대 한 참조를 보유 하지 않는 모든 사용자에 의해 설정 되는 효과적인 수단을 제공 합니다 <xref:System.Windows.DependencyPropertyKey> 해당 속성에 대 한 합니다. 자세한 내용은 [읽기 전용 종속성 속성](read-only-dependency-properties.md)을 참조하세요.  
   
 > [!NOTE]
 >  선언 된 <xref:System.Windows.DependencyProperty> 식별자 필드를 private을 사용할 수 및 사용자 지정 클래스의 바로 노출 되는 네임 스페이스를 줄이는 데 사용할 수 있다고 볼 수 있지만 이러한 속성을 고려 하지 않아야와 동일한 의미에서 "개인"는 [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] 언어 정의는 다음 섹션에 설명 된 이유로 해당 액세스 수준을 정의 합니다.  
@@ -40,4 +40,4 @@ ms.locfileid: "54532151"
  요청을 적용 한 <xref:System.Windows.DependencyProperty.ValidateValueCallback%2A> 는 적절 한 보안 메커니즘이 아닙니다 속성을 설정 하지 않도록 요청 실패 시 유효성 검사 오류를 예상 합니다. 값 설정 무효화를 통해 적용 <xref:System.Windows.DependencyProperty.ValidateValueCallback%2A> 해당 호출자에 게 응용 프로그램 도메인 내에서 작동 하는 경우 악의적인 호출자가 표시도 수 있습니다.  
   
 ## <a name="see-also"></a>참고자료
-- [사용자 지정 종속성 속성](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md)
+- [사용자 지정 종속성 속성](custom-dependency-properties.md)

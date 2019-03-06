@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Storyboards [WPF], animations
 - animations [WPF], overview
 ms.assetid: bd9ce563-725d-4385-87c9-d7ee38cf79ea
-ms.openlocfilehash: 7a783f687dd8c9c21f796f2a8da7e0471a1f0d2b
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: cf95abc6780b1182582e567f78783388f1d377cb
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44189477"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57373740"
 ---
 # <a name="animation-overview"></a>애니메이션 개요
 <a name="introduction"></a>
@@ -49,26 +49,26 @@ ms.locfileid: "44189477"
   
 -   상속 된 클래스에 속해 있어야 <xref:System.Windows.DependencyObject> 하 고 구현 합니다 <xref:System.Windows.Media.Animation.IAnimatable> 인터페이스입니다.  
   
--   사용 가능한 호환되는 애니메이션 형식이어야 합니다. (경우 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 제공 하지 않으면, 직접 만들 수 있습니다. 참조 된 [사용자 지정 애니메이션 개요](../../../../docs/framework/wpf/graphics-multimedia/custom-animations-overview.md).)  
+-   사용 가능한 호환되는 애니메이션 형식이어야 합니다. (경우 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 제공 하지 않으면, 직접 만들 수 있습니다. 참조 된 [사용자 지정 애니메이션 개요](custom-animations-overview.md).)  
   
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 갖는 많은 개체가 포함 <xref:System.Windows.Media.Animation.IAnimatable> 속성입니다. 와 같은 컨트롤 <xref:System.Windows.Controls.Button> 하 고 <xref:System.Windows.Controls.TabControl>, 그리고 <xref:System.Windows.Controls.Panel> 및 <xref:System.Windows.Shapes.Shape> 개체에서 상속 <xref:System.Windows.DependencyObject>합니다. 해당 속성 대부분은 종속성 속성입니다.  
   
  스타일 및 템플릿 컨트롤을 비롯한 거의 모든 위치에서 애니메이션을 사용할 수 있습니다. 애니메이션은 시각적일 필요가 없습니다. 이 섹션에 설명된 조건을 충족하지 않을 경우 사용자 인터페이스에 속하지 않는 개체에 애니메이션 효과를 줄 수 있습니다.  
   
 <a name="storyboardwalkthrough"></a>   
-## <a name="example-make-an-element-fade-in-and-out-of-view"></a>예제: 보기에서 요소 페이드 인 및 페이드 아웃  
+## <a name="example-make-an-element-fade-in-and-out-of-view"></a>예제: 보기 내부 및 외부 요소 페이드 인  
  사용 하는 방법을 보여 주는이 예제는 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 종속성 속성의 값에 애니메이션 효과를 애니메이션 합니다. 사용 하 여를 <xref:System.Windows.Media.Animation.DoubleAnimation>를 생성 하는 애니메이션의 형식인 <xref:System.Double> 값에 애니메이션 효과 주기를 <xref:System.Windows.UIElement.Opacity%2A> 의 속성을 <xref:System.Windows.Shapes.Rectangle>. 결과적으로 <xref:System.Windows.Shapes.Rectangle> 보기 내부 및 외부 사라집니다.  
   
  예제의 첫 번째 부분은 만듭니다는 <xref:System.Windows.Shapes.Rectangle> 요소입니다. 다음 단계는 애니메이션을 만들고 사각형의에 적용 하는 방법을 보여 줍니다 <xref:System.Windows.UIElement.Opacity%2A> 속성입니다.
   
  다음 만드는 방법을 보여 줍니다.는 <xref:System.Windows.Shapes.Rectangle> 요소에는 <xref:System.Windows.Controls.StackPanel> XAML에서.  
   
- [!code-xaml[animation_ovws2#RectangleOpacityFadeExampleXaml_1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/animation_ovws2/CSharp/Window1.xaml#rectangleopacityfadeexamplexaml_1)]  
+ [!code-xaml[animation_ovws2#RectangleOpacityFadeExampleXaml_1](~/samples/snippets/csharp/VS_Snippets_Wpf/animation_ovws2/CSharp/Window1.xaml#rectangleopacityfadeexamplexaml_1)]  
   
  다음 만드는 방법을 보여 줍니다.는 <xref:System.Windows.Shapes.Rectangle> 요소에는 <xref:System.Windows.Controls.StackPanel> 코드에서입니다.  
   
- [!code-csharp[animation_ovws2#RectangleOpacityFadeExampleCode_1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/animation_ovws2/CSharp/Class1.cs#rectangleopacityfadeexamplecode_1)]
- [!code-vb[animation_ovws2#RectangleOpacityFadeExampleCode_1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/animation_ovws2/VisualBasic/Class1.vb#rectangleopacityfadeexamplecode_1)]  
+ [!code-csharp[animation_ovws2#RectangleOpacityFadeExampleCode_1](~/samples/snippets/csharp/VS_Snippets_Wpf/animation_ovws2/CSharp/Class1.cs#rectangleopacityfadeexamplecode_1)]
+ [!code-vb[animation_ovws2#RectangleOpacityFadeExampleCode_1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/animation_ovws2/VisualBasic/Class1.vb#rectangleopacityfadeexamplecode_1)]  
   
 <a name="opacity_animation_step1"></a>   
 ### <a name="part-1-create-a-doubleanimation"></a>1부: DoubleAnimation 만들기  
@@ -76,108 +76,108 @@ ms.locfileid: "44189477"
   
 1.  불투명도 값 `1.0` 완전히 불투명 개체와의 불투명도 값을 사용 하면 `0.0` 설정 하면 완전히 보이지 않습니다. 애니메이션 전환 하기로 `1.0` 에 `0.0` 설정한 해당 <xref:System.Windows.Media.Animation.DoubleAnimation.From%2A> 속성을 `1.0` 및 해당 <xref:System.Windows.Media.Animation.DoubleAnimation.To%2A> 속성을 `0.0`입니다. 다음 만드는 방법을 보여 줍니다는 <xref:System.Windows.Media.Animation.DoubleAnimation> XAML에서.  
   
-     [!code-xaml[animation_ovws2#RectangleOpacityFadeExampleXaml_2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/animation_ovws2/CSharp/Window1.xaml#rectangleopacityfadeexamplexaml_2)]  
+     [!code-xaml[animation_ovws2#RectangleOpacityFadeExampleXaml_2](~/samples/snippets/csharp/VS_Snippets_Wpf/animation_ovws2/CSharp/Window1.xaml#rectangleopacityfadeexamplexaml_2)]  
   
      다음 만드는 방법을 보여 줍니다는 <xref:System.Windows.Media.Animation.DoubleAnimation> 코드에서입니다.  
   
-     [!code-csharp[animation_ovws2#RectangleOpacityFadeExampleCode_2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/animation_ovws2/CSharp/Class1.cs#rectangleopacityfadeexamplecode_2)]
-     [!code-vb[animation_ovws2#RectangleOpacityFadeExampleCode_2](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/animation_ovws2/VisualBasic/Class1.vb#rectangleopacityfadeexamplecode_2)]  
+     [!code-csharp[animation_ovws2#RectangleOpacityFadeExampleCode_2](~/samples/snippets/csharp/VS_Snippets_Wpf/animation_ovws2/CSharp/Class1.cs#rectangleopacityfadeexamplecode_2)]
+     [!code-vb[animation_ovws2#RectangleOpacityFadeExampleCode_2](~/samples/snippets/visualbasic/VS_Snippets_Wpf/animation_ovws2/VisualBasic/Class1.vb#rectangleopacityfadeexamplecode_2)]  
   
 2.  다음으로 지정 해야 합니다는 <xref:System.Windows.Media.Animation.Timeline.Duration%2A>합니다. <xref:System.Windows.Media.Animation.Timeline.Duration%2A> 애니메이션의 시작 값에서 해당 대상 값으로 이동 하는 기간을 지정 합니다. 다음을 설정 하는 방법을 보여 줍니다는 <xref:System.Windows.Media.Animation.Timeline.Duration%2A> XAML에서 5 초입니다.  
   
-     [!code-xaml[animation_ovws2#RectangleOpacityFadeExampleXaml_3](../../../../samples/snippets/csharp/VS_Snippets_Wpf/animation_ovws2/CSharp/Window1.xaml#rectangleopacityfadeexamplexaml_3)]  
+     [!code-xaml[animation_ovws2#RectangleOpacityFadeExampleXaml_3](~/samples/snippets/csharp/VS_Snippets_Wpf/animation_ovws2/CSharp/Window1.xaml#rectangleopacityfadeexamplexaml_3)]  
   
      다음을 설정 하는 방법을 보여 줍니다는 <xref:System.Windows.Media.Animation.Timeline.Duration%2A> 코드에서 5 초입니다.  
   
-     [!code-csharp[animation_ovws2#RectangleOpacityFadeExampleCode_3](../../../../samples/snippets/csharp/VS_Snippets_Wpf/animation_ovws2/CSharp/Class1.cs#rectangleopacityfadeexamplecode_3)]
-     [!code-vb[animation_ovws2#RectangleOpacityFadeExampleCode_3](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/animation_ovws2/VisualBasic/Class1.vb#rectangleopacityfadeexamplecode_3)]  
+     [!code-csharp[animation_ovws2#RectangleOpacityFadeExampleCode_3](~/samples/snippets/csharp/VS_Snippets_Wpf/animation_ovws2/CSharp/Class1.cs#rectangleopacityfadeexamplecode_3)]
+     [!code-vb[animation_ovws2#RectangleOpacityFadeExampleCode_3](~/samples/snippets/visualbasic/VS_Snippets_Wpf/animation_ovws2/VisualBasic/Class1.vb#rectangleopacityfadeexamplecode_3)]  
   
 3.  이전 코드에서 전환 되는 애니메이션을 보여 주었습니다 `1.0` 에 `0.0`는으로 인해 대상 요소가 완전 불투명 상태에서 완전히 보이지 않는 페이드 인 합니다. 완전히 사라진 후 보기로 다시 페이드 인 요소를 설정 합니다 <xref:System.Windows.Media.Animation.Timeline.AutoReverse%2A> 애니메이션의 속성 `true`합니다. 애니메이션 반복 무기한 설정를 해당 <xref:System.Windows.Media.Animation.Timeline.RepeatBehavior%2A> 속성을 <xref:System.Windows.Media.Animation.RepeatBehavior.Forever%2A>입니다. 다음을 설정 하는 방법을 보여 줍니다 합니다 <xref:System.Windows.Media.Animation.Timeline.AutoReverse%2A> 및 <xref:System.Windows.Media.Animation.Timeline.RepeatBehavior%2A> XAML의 속성입니다.  
   
-     [!code-xaml[animation_ovws2#RectangleOpacityFadeExampleXaml_4](../../../../samples/snippets/csharp/VS_Snippets_Wpf/animation_ovws2/CSharp/Window1.xaml#rectangleopacityfadeexamplexaml_4)]  
+     [!code-xaml[animation_ovws2#RectangleOpacityFadeExampleXaml_4](~/samples/snippets/csharp/VS_Snippets_Wpf/animation_ovws2/CSharp/Window1.xaml#rectangleopacityfadeexamplexaml_4)]  
   
      다음을 설정 하는 방법을 보여 줍니다 합니다 <xref:System.Windows.Media.Animation.Timeline.AutoReverse%2A> 및 <xref:System.Windows.Media.Animation.Timeline.RepeatBehavior%2A> 코드에서 속성입니다.  
   
-     [!code-csharp[animation_ovws2#RectangleOpacityFadeExampleCode_4](../../../../samples/snippets/csharp/VS_Snippets_Wpf/animation_ovws2/CSharp/Class1.cs#rectangleopacityfadeexamplecode_4)]
-     [!code-vb[animation_ovws2#RectangleOpacityFadeExampleCode_4](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/animation_ovws2/VisualBasic/Class1.vb#rectangleopacityfadeexamplecode_4)]  
+     [!code-csharp[animation_ovws2#RectangleOpacityFadeExampleCode_4](~/samples/snippets/csharp/VS_Snippets_Wpf/animation_ovws2/CSharp/Class1.cs#rectangleopacityfadeexamplecode_4)]
+     [!code-vb[animation_ovws2#RectangleOpacityFadeExampleCode_4](~/samples/snippets/visualbasic/VS_Snippets_Wpf/animation_ovws2/VisualBasic/Class1.vb#rectangleopacityfadeexamplecode_4)]  
   
 <a name="opacity_animation_step2"></a>   
-### <a name="part-2-create-a-storyboard"></a>2부: Storyboard 만들기  
- 만든 개체에 애니메이션을 적용할를 <xref:System.Windows.Media.Animation.Storyboard> 사용 하 여는 <xref:System.Windows.Media.Animation.Storyboard.TargetName%2A> 및 <xref:System.Windows.Media.Animation.Storyboard.TargetProperty%2A> 개체를 지정 하는 속성 및 속성에 애니메이션 효과를 연결 합니다.  
+### <a name="part-2-create-a-storyboard"></a>2부: 스토리 보드 만들기  
+ 만든 개체에 애니메이션을 적용할를 <xref:System.Windows.Media.Animation.Storyboard> 사용 하 여는 <xref:System.Windows.Media.Animation.Storyboard.TargetName%2A> 및 <xref:System.Windows.Media.Animation.Storyboard.TargetProperty> 개체를 지정 하는 속성 및 속성에 애니메이션 효과를 연결 합니다.  
   
 1.  만들기는 <xref:System.Windows.Media.Animation.Storyboard> 애니메이션을 자식으로 추가 합니다. 다음 만드는 방법을 보여 줍니다는 <xref:System.Windows.Media.Animation.Storyboard> XAML에서.  
   
-     [!code-xaml[animation_ovws2#RectangleOpacityFadeExampleXaml_5](../../../../samples/snippets/csharp/VS_Snippets_Wpf/animation_ovws2/CSharp/Window1.xaml#rectangleopacityfadeexamplexaml_5)]    
+     [!code-xaml[animation_ovws2#RectangleOpacityFadeExampleXaml_5](~/samples/snippets/csharp/VS_Snippets_Wpf/animation_ovws2/CSharp/Window1.xaml#rectangleopacityfadeexamplexaml_5)]    
   
      만들려는 합니다 <xref:System.Windows.Media.Animation.Storyboard> 코드에서 선언를 <xref:System.Windows.Media.Animation.Storyboard> 클래스 수준 변수입니다.  
   
-     [!code-csharp[animation_ovws2#RectangleOpacityFadeExampleCode_100](../../../../samples/snippets/csharp/VS_Snippets_Wpf/animation_ovws2/CSharp/MainWindow.xaml.cs#rectangleopacityfadeexamplecode_100)]
-     [!code-vb[animation_ovws2#RectangleOpacityFadeExampleCode_100](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/animation_ovws2/VisualBasic/MainWindow.xaml.vb#rectangleopacityfadeexamplecode_100)]  
+     [!code-csharp[animation_ovws2#RectangleOpacityFadeExampleCode_100](~/samples/snippets/csharp/VS_Snippets_Wpf/animation_ovws2/CSharp/MainWindow.xaml.cs#rectangleopacityfadeexamplecode_100)]
+     [!code-vb[animation_ovws2#RectangleOpacityFadeExampleCode_100](~/samples/snippets/visualbasic/VS_Snippets_Wpf/animation_ovws2/VisualBasic/MainWindow.xaml.vb#rectangleopacityfadeexamplecode_100)]  
   
      초기화는 <xref:System.Windows.Media.Animation.Storyboard> 애니메이션을 자식으로 추가 합니다.  
   
-     [!code-csharp[animation_ovws2#RectangleOpacityFadeExampleCode_101](../../../../samples/snippets/csharp/VS_Snippets_Wpf/animation_ovws2/CSharp/MainWindow.xaml.cs#rectangleopacityfadeexamplecode_101)]
-     [!code-vb[animation_ovws2#RectangleOpacityFadeExampleCode_101](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/animation_ovws2/VisualBasic/MainWindow.xaml.vb#rectangleopacityfadeexamplecode_101)]  
+     [!code-csharp[animation_ovws2#RectangleOpacityFadeExampleCode_101](~/samples/snippets/csharp/VS_Snippets_Wpf/animation_ovws2/CSharp/MainWindow.xaml.cs#rectangleopacityfadeexamplecode_101)]
+     [!code-vb[animation_ovws2#RectangleOpacityFadeExampleCode_101](~/samples/snippets/visualbasic/VS_Snippets_Wpf/animation_ovws2/VisualBasic/MainWindow.xaml.vb#rectangleopacityfadeexamplecode_101)]  
   
 2.  <xref:System.Windows.Media.Animation.Storyboard> 애니메이션 효과 적용할 위치를 알아야 합니다. 사용 된 <xref:System.Windows.Media.Animation.Storyboard.TargetName%2A?displayProperty=nameWithType> 연결 된 속성을 개체에 애니메이션 효과를 지정 합니다. 다음의 대상 이름을 설정 하는 방법을 보여 줍니다 합니다 <xref:System.Windows.Media.Animation.DoubleAnimation> 에 `MyRectangle` XAML에서.  
   
-     [!code-xaml[animation_ovws2#RectangleOpacityFadeExampleXaml_6](../../../../samples/snippets/csharp/VS_Snippets_Wpf/animation_ovws2/CSharp/Window1.xaml#rectangleopacityfadeexamplexaml_6)]  
+     [!code-xaml[animation_ovws2#RectangleOpacityFadeExampleXaml_6](~/samples/snippets/csharp/VS_Snippets_Wpf/animation_ovws2/CSharp/Window1.xaml#rectangleopacityfadeexamplexaml_6)]  
   
      다음의 대상 이름을 설정 하는 방법을 보여 줍니다 합니다 <xref:System.Windows.Media.Animation.DoubleAnimation> 에 `MyRectangle` 코드에서입니다.  
   
-     [!code-csharp[animation_ovws2#RectangleOpacityFadeExampleCode_102](../../../../samples/snippets/csharp/VS_Snippets_Wpf/animation_ovws2/CSharp/MainWindow.xaml.cs#rectangleopacityfadeexamplecode_102)]
-     [!code-vb[animation_ovws2#RectangleOpacityFadeExampleCode_102](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/animation_ovws2/VisualBasic/MainWindow.xaml.vb#rectangleopacityfadeexamplecode_102)]  
+     [!code-csharp[animation_ovws2#RectangleOpacityFadeExampleCode_102](~/samples/snippets/csharp/VS_Snippets_Wpf/animation_ovws2/CSharp/MainWindow.xaml.cs#rectangleopacityfadeexamplecode_102)]
+     [!code-vb[animation_ovws2#RectangleOpacityFadeExampleCode_102](~/samples/snippets/visualbasic/VS_Snippets_Wpf/animation_ovws2/VisualBasic/MainWindow.xaml.vb#rectangleopacityfadeexamplecode_102)]  
   
-3.  사용 된 <xref:System.Windows.Media.Animation.Storyboard.TargetProperty%2A> 연결 된 속성에 애니메이션 효과를 주는 속성을 지정 합니다. 다음 애니메이션을 구성 하는 방법을 보여 줍니다. 대상에는 <xref:System.Windows.UIElement.Opacity%2A> 의 속성을 <xref:System.Windows.Shapes.Rectangle> XAML에서.
+3.  사용 된 <xref:System.Windows.Media.Animation.Storyboard.TargetProperty> 연결 된 속성에 애니메이션 효과를 주는 속성을 지정 합니다. 다음 애니메이션을 구성 하는 방법을 보여 줍니다. 대상에는 <xref:System.Windows.UIElement.Opacity%2A> 의 속성을 <xref:System.Windows.Shapes.Rectangle> XAML에서.
   
-     [!code-xaml[animation_ovws2#RectangleOpacityFadeExampleXaml_7](../../../../samples/snippets/csharp/VS_Snippets_Wpf/animation_ovws2/CSharp/Window1.xaml#rectangleopacityfadeexamplexaml_7)]  
+     [!code-xaml[animation_ovws2#RectangleOpacityFadeExampleXaml_7](~/samples/snippets/csharp/VS_Snippets_Wpf/animation_ovws2/CSharp/Window1.xaml#rectangleopacityfadeexamplexaml_7)]  
   
      다음 애니메이션을 구성 하는 방법을 보여 줍니다. 대상에는 <xref:System.Windows.UIElement.Opacity%2A> 의 속성을 <xref:System.Windows.Shapes.Rectangle> 코드에서.  
   
-     [!code-csharp[animation_ovws2#RectangleOpacityFadeExampleCode_103](../../../../samples/snippets/csharp/VS_Snippets_Wpf/animation_ovws2/CSharp/MainWindow.xaml.cs#rectangleopacityfadeexamplecode_103)]
-     [!code-vb[animation_ovws2#RectangleOpacityFadeExampleCode_103](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/animation_ovws2/VisualBasic/MainWindow.xaml.vb#rectangleopacityfadeexamplecode_103)]  
+     [!code-csharp[animation_ovws2#RectangleOpacityFadeExampleCode_103](~/samples/snippets/csharp/VS_Snippets_Wpf/animation_ovws2/CSharp/MainWindow.xaml.cs#rectangleopacityfadeexamplecode_103)]
+     [!code-vb[animation_ovws2#RectangleOpacityFadeExampleCode_103](~/samples/snippets/visualbasic/VS_Snippets_Wpf/animation_ovws2/VisualBasic/MainWindow.xaml.vb#rectangleopacityfadeexamplecode_103)]  
   
- 에 대 한 자세한 내용은 <xref:System.Windows.Media.Animation.Storyboard.TargetProperty%2A> 구문 및 추가 예제를 참조 하세요. 합니다 [Storyboard 개요](../../../../docs/framework/wpf/graphics-multimedia/storyboards-overview.md)합니다.  
+ 에 대 한 자세한 내용은 <xref:System.Windows.Media.Animation.Storyboard.TargetProperty> 구문 및 추가 예제를 참조 하세요. 합니다 [Storyboard 개요](storyboards-overview.md)합니다.  
   
 <a name="opacity_animation_step3"></a>   
-### <a name="part-3-xaml-associate-the-storyboard-with-a-trigger"></a>3부: Storyboard를 트리거에 연결  
+### <a name="part-3-xaml-associate-the-storyboard-with-a-trigger"></a>(XAML) 3 부: 트리거를 사용 하 여 스토리 보드 연결  
  적용 하 고 시작 하는 가장 쉬운 방법은 <xref:System.Windows.Media.Animation.Storyboard> 에서 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 이벤트 트리거를 사용 하는 것입니다. 이 섹션에 연결 하는 방법을 보여 줍니다는 <xref:System.Windows.Media.Animation.Storyboard> XAML의 트리거를 사용 하 여 합니다.  
   
 1.  만들기는 <xref:System.Windows.Media.Animation.BeginStoryboard> 개체 및 스토리 보드를 연결 합니다. A <xref:System.Windows.Media.Animation.BeginStoryboard> 의 형식인 <xref:System.Windows.TriggerAction> 를 적용 하 고 시작을 <xref:System.Windows.Media.Animation.Storyboard>입니다.  
   
-     [!code-xaml[animation_ovws_snippet#RectangleOpacityFadeExampleInline_3](../../../../samples/snippets/csharp/VS_Snippets_Wpf/animation_ovws_snippet/CS/RectangleOpacityFadeExample.xaml#rectangleopacityfadeexampleinline_3)]  
+     [!code-xaml[animation_ovws_snippet#RectangleOpacityFadeExampleInline_3](~/samples/snippets/csharp/VS_Snippets_Wpf/animation_ovws_snippet/CS/RectangleOpacityFadeExample.xaml#rectangleopacityfadeexampleinline_3)]  
   
-2.  만들기는 <xref:System.Windows.EventTrigger> 추가한 합니다 <xref:System.Windows.Media.Animation.BeginStoryboard> 에 해당 <xref:System.Windows.EventTrigger.Actions%2A> 컬렉션입니다. 설정를 <xref:System.Windows.EventTrigger.RoutedEvent%2A> 의 속성을 <xref:System.Windows.EventTrigger> 시작 하려는 라우트된 이벤트에는 <xref:System.Windows.Media.Animation.Storyboard>합니다. (라우트된 이벤트에 대 한 자세한 내용은 참조는 [라우트된 이벤트 개요](../../../../docs/framework/wpf/advanced/routed-events-overview.md).)  
+2.  만들기는 <xref:System.Windows.EventTrigger> 추가한 합니다 <xref:System.Windows.Media.Animation.BeginStoryboard> 에 해당 <xref:System.Windows.EventTrigger.Actions%2A> 컬렉션입니다. 설정를 <xref:System.Windows.EventTrigger.RoutedEvent%2A> 의 속성을 <xref:System.Windows.EventTrigger> 시작 하려는 라우트된 이벤트에는 <xref:System.Windows.Media.Animation.Storyboard>합니다. (라우트된 이벤트에 대 한 자세한 내용은 참조는 [라우트된 이벤트 개요](../advanced/routed-events-overview.md).)  
   
-     [!code-xaml[animation_ovws_snippet#RectangleOpacityFadeExampleInline_2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/animation_ovws_snippet/CS/RectangleOpacityFadeExample.xaml#rectangleopacityfadeexampleinline_2)]  
+     [!code-xaml[animation_ovws_snippet#RectangleOpacityFadeExampleInline_2](~/samples/snippets/csharp/VS_Snippets_Wpf/animation_ovws_snippet/CS/RectangleOpacityFadeExample.xaml#rectangleopacityfadeexampleinline_2)]  
   
 3.  추가 된 <xref:System.Windows.EventTrigger> 에 <xref:System.Windows.FrameworkElement.Triggers%2A> 사각형의 컬렉션입니다.  
   
-     [!code-xaml[animation_ovws_snippet#RectangleOpacityFadeExampleInline_1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/animation_ovws_snippet/CS/RectangleOpacityFadeExample.xaml#rectangleopacityfadeexampleinline_1)]  
+     [!code-xaml[animation_ovws_snippet#RectangleOpacityFadeExampleInline_1](~/samples/snippets/csharp/VS_Snippets_Wpf/animation_ovws_snippet/CS/RectangleOpacityFadeExample.xaml#rectangleopacityfadeexampleinline_1)]  
   
 <a name="opacity_animation_step3code"></a>   
-### <a name="part-3-code-associate-the-storyboard-with-an-event-handler"></a>3부(코드): Storyboard를 이벤트 처리기에 연결  
+### <a name="part-3-code-associate-the-storyboard-with-an-event-handler"></a>(코드) 3 부: 이벤트 처리기를 사용 하 여 스토리 보드 연결  
  적용 하 고 시작 하는 가장 쉬운 방법은 <xref:System.Windows.Media.Animation.Storyboard> 이벤트 처리기를 사용 하는 코드입니다. 이 섹션에 연결 하는 방법을 보여 줍니다는 <xref:System.Windows.Media.Animation.Storyboard> 코드에서 이벤트 처리기를 사용 하 여 합니다.  
   
 1.  등록 된 <xref:System.Windows.FrameworkElement.Loaded> 사각형의 이벤트입니다.  
   
-     [!code-csharp[animation_ovws2#RectangleOpacityFadeExampleCode_104](../../../../samples/snippets/csharp/VS_Snippets_Wpf/animation_ovws2/CSharp/MainWindow.xaml.cs#rectangleopacityfadeexamplecode_104)]
-     [!code-vb[animation_ovws2#RectangleOpacityFadeExampleCode_104](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/animation_ovws2/VisualBasic/MainWindow.xaml.vb#rectangleopacityfadeexamplecode_104)]  
+     [!code-csharp[animation_ovws2#RectangleOpacityFadeExampleCode_104](~/samples/snippets/csharp/VS_Snippets_Wpf/animation_ovws2/CSharp/MainWindow.xaml.cs#rectangleopacityfadeexamplecode_104)]
+     [!code-vb[animation_ovws2#RectangleOpacityFadeExampleCode_104](~/samples/snippets/visualbasic/VS_Snippets_Wpf/animation_ovws2/VisualBasic/MainWindow.xaml.vb#rectangleopacityfadeexamplecode_104)]  
   
 2.  이벤트 처리기를 선언합니다. 이벤트 처리기에서 사용 된 <xref:System.Windows.Media.Animation.Storyboard.Begin%2A> storyboard를 적용 하는 방법입니다.  
   
-     [!code-csharp[animation_ovws2#RectangleOpacityFadeExampleCode_105](../../../../samples/snippets/csharp/VS_Snippets_Wpf/animation_ovws2/CSharp/MainWindow.xaml.cs#rectangleopacityfadeexamplecode_105)]
-     [!code-vb[animation_ovws2#RectangleOpacityFadeExampleCode_105](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/animation_ovws2/VisualBasic/MainWindow.xaml.vb#rectangleopacityfadeexamplecode_105)]  
+     [!code-csharp[animation_ovws2#RectangleOpacityFadeExampleCode_105](~/samples/snippets/csharp/VS_Snippets_Wpf/animation_ovws2/CSharp/MainWindow.xaml.cs#rectangleopacityfadeexamplecode_105)]
+     [!code-vb[animation_ovws2#RectangleOpacityFadeExampleCode_105](~/samples/snippets/visualbasic/VS_Snippets_Wpf/animation_ovws2/VisualBasic/MainWindow.xaml.vb#rectangleopacityfadeexamplecode_105)]  
   
 ### <a name="complete-example"></a>완성된 예제  
  다음은 XAML에서 뷰 페이드 인 되는 사각형을 만드는 방법.  
   
- [!code-xaml[animation_ovws2#RectangleOpacityFadeExampleXaml](../../../../samples/snippets/csharp/VS_Snippets_Wpf/animation_ovws2/CSharp/MainWindow.xaml#rectangleopacityfadeexamplexaml)]  
+ [!code-xaml[animation_ovws2#RectangleOpacityFadeExampleXaml](~/samples/snippets/csharp/VS_Snippets_Wpf/animation_ovws2/CSharp/MainWindow.xaml#rectangleopacityfadeexamplexaml)]  
   
  다음에서는 코드에서 보기로부터 페이드 인 및 페이드 아웃되는 사각형을 만드는 방법을 보여 줍니다.  
   
- [!code-csharp[animation_ovws2#RectangleOpacityFadeExampleCode](../../../../samples/snippets/csharp/VS_Snippets_Wpf/animation_ovws2/CSharp/MainWindow.xaml.cs#rectangleopacityfadeexamplecode)]
- [!code-vb[animation_ovws2#RectangleOpacityFadeExampleCode](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/animation_ovws2/VisualBasic/MainWindow.xaml.vb#rectangleopacityfadeexamplecode)]  
+ [!code-csharp[animation_ovws2#RectangleOpacityFadeExampleCode](~/samples/snippets/csharp/VS_Snippets_Wpf/animation_ovws2/CSharp/MainWindow.xaml.cs#rectangleopacityfadeexamplecode)]
+ [!code-vb[animation_ovws2#RectangleOpacityFadeExampleCode](~/samples/snippets/visualbasic/VS_Snippets_Wpf/animation_ovws2/VisualBasic/MainWindow.xaml.vb#rectangleopacityfadeexamplecode)]  
   
 <a name="animationtypes"></a>   
 ## <a name="animation-types"></a>애니메이션 형식  
@@ -195,15 +195,15 @@ ms.locfileid: "44189477"
   
      이러한 애니메이션이 가장 사용하기 쉬우므로 이 개요의 예제에서도 사용됩니다. From/To/By 애니메이션 From/To/By 애니메이션 개요에서 자세히 설명 되어 있습니다.  
   
--   \<*형식*> AnimationUsingKeyFrames  
+-   \<*Type*>AnimationUsingKeyFrames  
   
-     키 프레임 애니메이션은 원하는 수의 대상 값을 지정하고 보간 방법을 제어할 수 있으므로 From/To/By 애니메이션보다 훨씬 더 강력합니다. 일부 형식은 키 프레임 애니메이션으로만 애니메이션 효과를 줄 수 있습니다. 키 프레임 애니메이션에 자세히 설명 합니다 [키 프레임 애니메이션 개요](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md)합니다.  
+     키 프레임 애니메이션은 원하는 수의 대상 값을 지정하고 보간 방법을 제어할 수 있으므로 From/To/By 애니메이션보다 훨씬 더 강력합니다. 일부 형식은 키 프레임 애니메이션으로만 애니메이션 효과를 줄 수 있습니다. 키 프레임 애니메이션에 자세히 설명 합니다 [키 프레임 애니메이션 개요](key-frame-animations-overview.md)합니다.  
   
--   \<*형식*> AnimationUsingPath  
+-   \<*Type*>AnimationUsingPath  
   
      경로 애니메이션에서는 기하학적 경로를 사용하여 애니메이션 사용 값을 생성할 수 있습니다.  
   
--   \<*형식*> AnimationBase  
+-   \<*Type*>AnimationBase  
   
      구현 하는 경우 애니메이션을 적용 하는 추상 클래스는 \< *형식*> 값입니다. 이 클래스에 대 한 기본 클래스로 사용 됩니다 \< *형식을*> 애니메이션 및 \< *형식*> AnimationUsingKeyFrames 클래스입니다. 사용자 고유의 사용자 지정 애니메이션을 만들려는 경우에만 이러한 클래스를 직접 처리해야 합니다. 그렇지 않은 경우 사용을 \< *형식*> 또는 KeyFrame\<*형식*> 애니메이션 합니다.  
   
@@ -253,31 +253,31 @@ ms.locfileid: "44189477"
 #### <a name="repeatbehavior"></a>RepeatBehavior  
  <xref:System.Windows.Media.Animation.Timeline.RepeatBehavior%2A> 속성 타임 라인이 재생 되는 횟수를 지정 합니다. 기본적으로 타임 라인의 반복 횟수를는 `1.0`, 재생 되 고 전혀 반복 되지 않습니다.  
   
- 이러한 속성 및 다른 사용자에 대 한 자세한 내용은 참조는 [타이밍 동작 개요](../../../../docs/framework/wpf/graphics-multimedia/timing-behaviors-overview.md)합니다.  
+ 이러한 속성 및 다른 사용자에 대 한 자세한 내용은 참조는 [타이밍 동작 개요](timing-behaviors-overview.md)합니다.  
   
 <a name="applyanimationstoproperty"></a>   
 ## <a name="applying-an-animation-to-a-property"></a>속성에 애니메이션 적용  
  이전 섹션에서는 다양한 애니메이션 유형 및 타이밍 속성에 대해 설명합니다. 이 섹션에서는 애니메이션 효과를 주려는 속성에 애니메이션을 적용하는 방법을 보여 줍니다. <xref:System.Windows.Media.Animation.Storyboard> 개체 속성에 애니메이션을 적용 하는 방법을 제공 합니다. A <xref:System.Windows.Media.Animation.Storyboard> 되는 *컨테이너 타임 라인* 포함 된 애니메이션에 대 한 대상 지정 정보를 제공 하는 합니다.  
   
 ### <a name="targeting-objects-and-properties"></a>개체 및 속성을 대상으로 지정  
- 합니다 <xref:System.Windows.Media.Animation.Storyboard> 클래스를 제공 합니다 <xref:System.Windows.Media.Animation.Storyboard.TargetName%2A> 및 <xref:System.Windows.Media.Animation.Storyboard.TargetProperty%2A> 연결 된 속성입니다. 애니메이션에 이러한 속성을 설정하여 적용할 애니메이션을 지정합니다. 그러나 애니메이션이 개체를 대상으로 지정하려면 먼저 해당 개체에 이름을 지정해야 합니다.  
+ 합니다 <xref:System.Windows.Media.Animation.Storyboard> 클래스를 제공 합니다 <xref:System.Windows.Media.Animation.Storyboard.TargetName%2A> 및 <xref:System.Windows.Media.Animation.Storyboard.TargetProperty> 연결 된 속성입니다. 애니메이션에 이러한 속성을 설정하여 적용할 애니메이션을 지정합니다. 그러나 애니메이션이 개체를 대상으로 지정하려면 먼저 해당 개체에 이름을 지정해야 합니다.  
   
  에 이름을 할당 한 <xref:System.Windows.FrameworkElement> 에 이름을 할당에서 다른는 <xref:System.Windows.Freezable> 개체. 대부분의 컨트롤 및 패널은 프레임워크 요소입니다. 그러나 브러시, 변환, 기 하 도형 등의 순수한 그래픽 개체 대부분은 Freezable 개체입니다. 형식 인지 확실 하지 않은 경우는 <xref:System.Windows.FrameworkElement> 또는 <xref:System.Windows.Freezable>를 참조 합니다 **상속 계층 구조** 해당 참조 설명서의 섹션입니다.  
   
 -   확인 하는 <xref:System.Windows.FrameworkElement> 애니메이션 대상으로 사용자 이름을 설정 하 여 해당 <xref:System.Windows.FrameworkElement.Name%2A> 속성입니다. 코드에서 사용 해야는 <xref:System.Windows.FrameworkElement.RegisterName%2A> 속해 있는 페이지를 사용 하 여 요소 이름을 등록 하는 방법입니다.  
   
--   있도록를 <xref:System.Windows.Freezable> 개체를 애니메이션 대상에 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], 사용할 합니다 [X:name 지시문](../../../../docs/framework/xaml-services/x-name-directive.md) 이름을 할당할 합니다. 코드에서 바로 사용을 <xref:System.Windows.FrameworkElement.RegisterName%2A> 속해 있는 페이지를 사용 하 여 개체를 등록 하는 방법입니다.  
+-   있도록를 <xref:System.Windows.Freezable> 개체를 애니메이션 대상에 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], 사용할 합니다 [X:name 지시문](../../xaml-services/x-name-directive.md) 이름을 할당할 합니다. 코드에서 바로 사용을 <xref:System.Windows.FrameworkElement.RegisterName%2A> 속해 있는 페이지를 사용 하 여 개체를 등록 하는 방법입니다.  
   
- 요소 이름 지정의 예제를 제공 하는 이어지는 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 및 코드입니다. 이름 및 대상 지정에 대 한 자세한 내용은 참조는 [스토리 보드 개요](../../../../docs/framework/wpf/graphics-multimedia/storyboards-overview.md)합니다.  
+ 요소 이름 지정의 예제를 제공 하는 이어지는 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 및 코드입니다. 이름 및 대상 지정에 대 한 자세한 내용은 참조는 [스토리 보드 개요](storyboards-overview.md)합니다.  
   
 ### <a name="applying-and-starting-storyboards"></a>Storyboard 적용 및 시작  
- Storyboard를 시작 하려면 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]를 사용 하 여 연결을 <xref:System.Windows.EventTrigger>합니다. <xref:System.Windows.EventTrigger> 는 지정된 된 이벤트가 발생할 때 수행할 작업을 설명 하는 개체입니다. 수 이러한 동작 중 하나는 <xref:System.Windows.Media.Animation.BeginStoryboard> 스토리 보드를 시작 하는 데 사용할 수 있는 작업입니다. 이벤트 트리거는 응용 프로그램이 특정 이벤트에 응답하는 방법을 지정할 수 있도록 하므로 개념적으로 이벤트 처리기와 비슷합니다. 이벤트 처리기 달리 이벤트 트리거에서 완벽 하 게 설명할 수 있는 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]; 다른 코드가 필요 하지 않습니다.  
+ Storyboard를 시작 하려면 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]를 사용 하 여 연결을 <xref:System.Windows.EventTrigger>합니다. <xref:System.Windows.EventTrigger> 는 지정된 된 이벤트가 발생할 때 수행할 작업을 설명 하는 개체입니다. 수 이러한 동작 중 하나는 <xref:System.Windows.Media.Animation.BeginStoryboard> 스토리 보드를 시작 하는 데 사용할 수 있는 작업입니다. 이벤트 트리거는 애플리케이션이 특정 이벤트에 응답하는 방법을 지정할 수 있도록 하므로 개념적으로 이벤트 처리기와 비슷합니다. 이벤트 처리기 달리 이벤트 트리거에서 완벽 하 게 설명할 수 있는 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]; 다른 코드가 필요 하지 않습니다.  
   
  시작 하는 <xref:System.Windows.Media.Animation.Storyboard> 코드에서 사용할 수 있습니다는 <xref:System.Windows.EventTrigger> 사용할지를 <xref:System.Windows.Media.Animation.Storyboard.Begin%2A> 메서드의 <xref:System.Windows.Media.Animation.Storyboard> 클래스.  
   
 <a name="controllingstoryboards"></a>   
 ## <a name="interactively-control-a-storyboard"></a>대화식으로 Storyboard 제어  
- 이전 예제에서는 시작 하는 방법을 보여 주었습니다.는 <xref:System.Windows.Media.Animation.Storyboard> 이벤트가 발생 합니다. 대화형으로 제어할 수 있습니다.는 <xref:System.Windows.Media.Animation.Storyboard> 시작 된 후: 일시 중지, 다시 시작, 중지, 채우기 기간으로 이동, 찾기 및 제거할 수는 <xref:System.Windows.Media.Animation.Storyboard>합니다. 자세한 내용 및 대화형으로 제어 하는 방법을 보여 주는 예제는 <xref:System.Windows.Media.Animation.Storyboard>, 참조는 [Storyboard 개요](../../../../docs/framework/wpf/graphics-multimedia/storyboards-overview.md)합니다.  
+ 이전 예제에서는 시작 하는 방법을 보여 주었습니다.는 <xref:System.Windows.Media.Animation.Storyboard> 이벤트가 발생 합니다. 대화형으로 제어할 수 있습니다.는 <xref:System.Windows.Media.Animation.Storyboard> 시작 된 후: 일시 중지, 다시 시작, 중지, 채우기 기간으로 이동, 찾기 및 제거할 수는 <xref:System.Windows.Media.Animation.Storyboard>합니다. 자세한 내용 및 대화형으로 제어 하는 방법을 보여 주는 예제는 <xref:System.Windows.Media.Animation.Storyboard>, 참조는 [Storyboard 개요](storyboards-overview.md)합니다.  
   
 <a name="fillbehaviorsection"></a>   
 ## <a name="what-happens-after-an-animation-ends"></a>애니메이션이 끝난 후에 발생하는 결과  
@@ -285,16 +285,16 @@ ms.locfileid: "44189477"
   
  합니다 <xref:System.Windows.Media.Animation.DoubleAnimation> 앞의 예제에서 끝나지 때문에 해당 <xref:System.Windows.Media.Animation.Timeline.RepeatBehavior%2A> 속성이 <xref:System.Windows.Media.Animation.RepeatBehavior.Forever%2A>합니다. 다음 예제에서는 유사한 애니메이션을 사용하여 사각형에 애니메이션 효과를 줍니다. 이전 예와 달리 합니다 <xref:System.Windows.Media.Animation.Timeline.RepeatBehavior%2A> 고 <xref:System.Windows.Media.Animation.Timeline.AutoReverse%2A> 이 애니메이션의 속성은 기본값으로 남겨져 있습니다. 따라서 애니메이션은 5초 넘게 1에서 0으로 진행된 후 중지합니다.  
   
- [!code-xaml[animation_ovws_snippet#FillBehaviorExampleRectangleInline](../../../../samples/snippets/csharp/VS_Snippets_Wpf/animation_ovws_snippet/CS/FillBehaviorExample.xaml#fillbehaviorexamplerectangleinline)]  
+ [!code-xaml[animation_ovws_snippet#FillBehaviorExampleRectangleInline](~/samples/snippets/csharp/VS_Snippets_Wpf/animation_ovws_snippet/CS/FillBehaviorExample.xaml#fillbehaviorexamplerectangleinline)]  
   
- [!code-csharp[animation_ovws_procedural_snip#FillBehaviorExampleRectangleInline](../../../../samples/snippets/csharp/VS_Snippets_Wpf/animation_ovws_procedural_snip/CSharp/FillBehaviorExample.cs#fillbehaviorexamplerectangleinline)]
- [!code-vb[animation_ovws_procedural_snip#FillBehaviorExampleRectangleInline](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/animation_ovws_procedural_snip/visualbasic/fillbehaviorexample.vb#fillbehaviorexamplerectangleinline)]  
+ [!code-csharp[animation_ovws_procedural_snip#FillBehaviorExampleRectangleInline](~/samples/snippets/csharp/VS_Snippets_Wpf/animation_ovws_procedural_snip/CSharp/FillBehaviorExample.cs#fillbehaviorexamplerectangleinline)]
+ [!code-vb[animation_ovws_procedural_snip#FillBehaviorExampleRectangleInline](~/samples/snippets/visualbasic/VS_Snippets_Wpf/animation_ovws_procedural_snip/visualbasic/fillbehaviorexample.vb#fillbehaviorexamplerectangleinline)]  
   
  때문에 해당 <xref:System.Windows.Media.Animation.Timeline.FillBehavior%2A> 는 해당 기본값에서 변경 되지 않았습니다 <xref:System.Windows.Media.Animation.FillBehavior.HoldEnd>, 애니메이션 보유 한 최종 값을 0으로 종료 될 때입니다. 따라서는 <xref:System.Windows.UIElement.Opacity%2A> 애니메이션 후 0으로 사각형 유지의 종료 합니다. 설정 하는 경우는 <xref:System.Windows.UIElement.Opacity%2A> 사각형을 다른 값의 코드가 아무런 효과가 없으며, 애니메이션에 여전히 영향 때문에 <xref:System.Windows.UIElement.Opacity%2A> 속성입니다.  
   
- 다시 코드에서 애니메이션된 속성을 제어 하는 방법을 사용 하는 것은 <xref:System.Windows.Media.Animation.Animatable.BeginAnimation%2A> 메서드 null을 지정 하는 <xref:System.Windows.Media.Animation.AnimationTimeline> 매개 변수입니다. 자세한 내용 및 예제를 참조 하세요 [속성 설정 후 애니메이션 스토리 보드를 사용 하 여](../../../../docs/framework/wpf/graphics-multimedia/how-to-set-a-property-after-animating-it-with-a-storyboard.md)입니다.  
+ 다시 코드에서 애니메이션된 속성을 제어 하는 방법을 사용 하는 것은 <xref:System.Windows.Media.Animation.Animatable.BeginAnimation%2A> 메서드 null을 지정 하는 <xref:System.Windows.Media.Animation.AnimationTimeline> 매개 변수입니다. 자세한 내용 및 예제를 참조 하세요 [속성 설정 후 애니메이션 스토리 보드를 사용 하 여](how-to-set-a-property-after-animating-it-with-a-storyboard.md)입니다.  
   
- 에 속성 값을 설정 하는 없지만 <xref:System.Windows.Media.Animation.ClockState.Active> 또는 <xref:System.Windows.Media.Animation.ClockState.Filling> 애니메이션을 주지 않는 표시, 속성 값은 변경 합니다. 자세한 내용은 참조는 [애니메이션 및 타이밍 시스템 개요](../../../../docs/framework/wpf/graphics-multimedia/animation-and-timing-system-overview.md)합니다.  
+ 에 속성 값을 설정 하는 없지만 <xref:System.Windows.Media.Animation.ClockState.Active> 또는 <xref:System.Windows.Media.Animation.ClockState.Filling> 애니메이션을 주지 않는 표시, 속성 값은 변경 합니다. 자세한 내용은 참조는 [애니메이션 및 타이밍 시스템 개요](animation-and-timing-system-overview.md)합니다.  
   
 <a name="databindingAndAnimatingAnimationsSection"></a>   
 ## <a name="data-binding-and-animating-animations"></a>데이터 바인딩 및 애니메이션 효과 적용  
@@ -302,21 +302,21 @@ ms.locfileid: "44189477"
   
  애니메이션 효과를 주는 방법을 보여 주는 이전 섹션에서 예제를 참조 하십시오는 <xref:System.Windows.UIElement.Opacity%2A> 사각형입니다. 이전 예제의 사각형이 로드 되 면 해당 이벤트 트리거가 적용 되는 <xref:System.Windows.Media.Animation.Storyboard>합니다. 타이밍 시스템의 복사본을 만듭니다는 <xref:System.Windows.Media.Animation.Storyboard> 및 애니메이션 합니다. 이러한 복사본은 고정 (읽기 전용 됨) 및 <xref:System.Windows.Media.Animation.Clock> 개체에서 생성 됩니다. 이러한 클록은 대상 속성에 애니메이션 효과를 주는 실제 작업을 수행합니다.  
   
- 타이밍 시스템에 대 한 clock을 만듭니다는 <xref:System.Windows.Media.Animation.DoubleAnimation> 개체 및 지정 된 속성에 적용 하는 <xref:System.Windows.Media.Animation.Storyboard.TargetName%2A> 및 <xref:System.Windows.Media.Animation.Storyboard.TargetProperty%2A> 의 <xref:System.Windows.Media.Animation.DoubleAnimation>. 타이밍 시스템 시계를 적용 하는 경우에 <xref:System.Windows.UIElement.Opacity%2A> "MyRectangle." 라고 하는 개체의 속성  
+ 타이밍 시스템에 대 한 clock을 만듭니다는 <xref:System.Windows.Media.Animation.DoubleAnimation> 개체 및 지정 된 속성에 적용 하는 <xref:System.Windows.Media.Animation.Storyboard.TargetName%2A> 및 <xref:System.Windows.Media.Animation.Storyboard.TargetProperty> 의 <xref:System.Windows.Media.Animation.DoubleAnimation>. 타이밍 시스템 시계를 적용 하는 경우에 <xref:System.Windows.UIElement.Opacity%2A> "MyRectangle." 라고 하는 개체의 속성  
   
  클록이 한도 생성 됩니다. 하지만 <xref:System.Windows.Media.Animation.Storyboard>, 시계 속성에 적용 되지 않습니다. 해당 자식 클록에 대해 만든 제어 하기 위한 것은 <xref:System.Windows.Media.Animation.DoubleAnimation>합니다.  
   
  애니메이션에 데이터 바인딩 또는 애니메이션 변경 내용을 반영하려면 해당 클록이 다시 생성되어야 합니다. 클록은 자동으로 다시 생성되지 않습니다. 변경 내용을 반영 하는 애니메이션을 만들려면 해당 스토리 보드를 사용 하 여 다시 적용을 <xref:System.Windows.Media.Animation.BeginStoryboard> 또는 <xref:System.Windows.Media.Animation.Storyboard.Begin%2A> 메서드. 이러한 메서드 중 하나를 사용하면 애니메이션이 다시 시작됩니다. 코드에서 사용할 수는 <xref:System.Windows.Media.Animation.Storyboard.Seek%2A> 메서드 storyboard를 이전 위치로 돌아갑니다.  
   
- 애니메이션을 바인딩된 데이터의 예제를 참조 하세요 [키 스플라인 애니메이션 샘플](https://go.microsoft.com/fwlink/?LinkID=160011)합니다. 애니메이션 및 타이밍 시스템 작동 방식에 대 한 자세한 내용은 참조 하십시오 [애니메이션 및 타이밍 시스템 개요](../../../../docs/framework/wpf/graphics-multimedia/animation-and-timing-system-overview.md)합니다.  
+ 애니메이션을 바인딩된 데이터의 예제를 참조 하세요 [키 스플라인 애니메이션 샘플](https://go.microsoft.com/fwlink/?LinkID=160011)합니다. 애니메이션 및 타이밍 시스템 작동 방식에 대 한 자세한 내용은 참조 하십시오 [애니메이션 및 타이밍 시스템 개요](animation-and-timing-system-overview.md)합니다.  
   
 <a name="otherWaysToAnimateSection"></a>   
 ## <a name="other-ways-to-animate"></a>애니메이션 효과를 주는 다른 방법  
- 이 개요의 예제에서는 Storyboard를 사용하여 애니메이션 효과를 주는 방법을 보여 줍니다. 코드를 사용하면 여러 가지 방법으로 애니메이션 효과를 줄 수 있습니다. 자세한 내용은 참조는 [속성 애니메이션 기술 개요](../../../../docs/framework/wpf/graphics-multimedia/property-animation-techniques-overview.md)합니다.  
+ 이 개요의 예제에서는 Storyboard를 사용하여 애니메이션 효과를 주는 방법을 보여 줍니다. 코드를 사용하면 여러 가지 방법으로 애니메이션 효과를 줄 수 있습니다. 자세한 내용은 참조는 [속성 애니메이션 기술 개요](property-animation-techniques-overview.md)합니다.  
   
 <a name="animation_samples"></a>   
 ## <a name="animation-samples"></a>애니메이션 샘플  
- 다음 샘플은 응용 프로그램에 애니메이션을 추가하는 데 도움이 될 수 있습니다.  
+ 다음 샘플은 애플리케이션에 애니메이션을 추가하는 데 도움이 될 수 있습니다.  
   
 -   [From, To 및 By 애니메이션 대상 값 샘플](https://go.microsoft.com/fwlink/?LinkID=159988)  
   
@@ -331,21 +331,21 @@ ms.locfileid: "44189477"
   
 |제목|설명|  
 |-----------|-----------------|  
-|[애니메이션 및 타이밍 시스템 개요](../../../../docs/framework/wpf/graphics-multimedia/animation-and-timing-system-overview.md)|타이밍 시스템을 사용 하는 방법에 대해 설명 합니다 <xref:System.Windows.Media.Animation.Timeline> 및 <xref:System.Windows.Media.Animation.Clock> 클래스가 애니메이션을 만들 수 있습니다.|  
-|[애니메이션에 대한 유용한 정보](../../../../docs/framework/wpf/graphics-multimedia/animation-tips-and-tricks.md)|성능 같은 애니메이션 문제 해결에 도움이 되는 유용한 정보를 나열합니다.|  
-|[사용자 지정 애니메이션 개요](../../../../docs/framework/wpf/graphics-multimedia/custom-animations-overview.md)|키 프레임, 애니메이션 클래스 또는 프레임당 콜백으로 애니메이션 시스템을 확장하는 방법을 설명합니다.|  
+|[애니메이션 및 타이밍 시스템 개요](animation-and-timing-system-overview.md)|타이밍 시스템을 사용 하는 방법에 대해 설명 합니다 <xref:System.Windows.Media.Animation.Timeline> 및 <xref:System.Windows.Media.Animation.Clock> 클래스가 애니메이션을 만들 수 있습니다.|  
+|[애니메이션에 대한 유용한 정보](animation-tips-and-tricks.md)|성능 같은 애니메이션 문제 해결에 도움이 되는 유용한 정보를 나열합니다.|  
+|[사용자 지정 애니메이션 개요](custom-animations-overview.md)|키 프레임, 애니메이션 클래스 또는 프레임당 콜백으로 애니메이션 시스템을 확장하는 방법을 설명합니다.|  
 |From/To/By 애니메이션 개요|두 값 사이를 전환하는 애니메이션을 만드는 방법을 설명합니다.|  
-|[키 프레임 애니메이션 개요](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md)|보간 방법을 제어하는 기능을 포함하여 여러 대상 값을 사용하여 애니메이션을 만드는 방법을 설명합니다.|  
-|[감속/가속 함수](../../../../docs/framework/wpf/graphics-multimedia/easing-functions.md)|반송 같은 실질적인 동작을 얻기 위해 애니메이션에 수학 수식을 적용하는 방법을 설명합니다.|  
-|[경로 애니메이션 개요](../../../../docs/framework/wpf/graphics-multimedia/path-animations-overview.md)|복잡한 경로를 따라 개체를 이동하거나 회전하는 방법을 설명합니다.|  
-|[속성 애니메이션 기술 개요](../../../../docs/framework/wpf/graphics-multimedia/property-animation-techniques-overview.md)|Storyboard, 로컬 애니메이션, 시계 및 프레임당 애니메이션을 사용하는 속성 애니메이션에 대해 설명합니다.|  
-|[Storyboard 개요](../../../../docs/framework/wpf/graphics-multimedia/storyboards-overview.md)|여러 개의 타임라인을 갖는 Storyboard를 사용하여 복잡한 애니메이션을 만드는 방법을 설명 합니다.|  
-|[타이밍 동작 개요](../../../../docs/framework/wpf/graphics-multimedia/timing-behaviors-overview.md)|에 대해 설명 합니다 <xref:System.Windows.Media.Animation.Timeline> 형식 및 애니메이션에 사용 되는 속성입니다.|  
-|[타이밍 이벤트 개요](../../../../docs/framework/wpf/graphics-multimedia/timing-events-overview.md)|사용할 수 있는 이벤트에 설명 합니다 <xref:System.Windows.Media.Animation.Timeline> 및 <xref:System.Windows.Media.Animation.Clock> 개체와 같은 타임 라인의 시점에서 코드를 실행 하는 것에 대 한 시작, 일시 중지, 다시 시작, 건너뛰기, 또는 중지 합니다.|  
-|[방법 항목](../../../../docs/framework/wpf/graphics-multimedia/animation-and-timing-how-to-topics.md)|응용 프로그램에서 애니메이션 및 타임라인을 사용하기 위한 코드 예제가 포함되어 있습니다.|  
-|[Clock 방법 항목](../../../../docs/framework/wpf/graphics-multimedia/clocks-how-to-topics.md)|사용 하기 위한 코드 예제가 포함 된 <xref:System.Windows.Media.Animation.Clock> 응용 프로그램의 개체입니다.|  
-|[키 프레임 방법 항목](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animation-how-to-topics.md)|응용 프로그램에서 키 프레임 애니메이션을 사용하기 위한 코드 예제가 포함되어 있습니다.|  
-|[경로 애니메이션 방법 항목](../../../../docs/framework/wpf/graphics-multimedia/path-animation-how-to-topics.md)|응용 프로그램에서 경로 애니메이션을 사용하기 위한 코드 예제가 포함되어 있습니다.|  
+|[키 프레임 애니메이션 개요](key-frame-animations-overview.md)|보간 방법을 제어하는 기능을 포함하여 여러 대상 값을 사용하여 애니메이션을 만드는 방법을 설명합니다.|  
+|[감속/가속 함수](easing-functions.md)|반송 같은 실질적인 동작을 얻기 위해 애니메이션에 수학 수식을 적용하는 방법을 설명합니다.|  
+|[경로 애니메이션 개요](path-animations-overview.md)|복잡한 경로를 따라 개체를 이동하거나 회전하는 방법을 설명합니다.|  
+|[속성 애니메이션 기술 개요](property-animation-techniques-overview.md)|Storyboard, 로컬 애니메이션, 시계 및 프레임당 애니메이션을 사용하는 속성 애니메이션에 대해 설명합니다.|  
+|[Storyboard 개요](storyboards-overview.md)|여러 개의 타임라인을 갖는 Storyboard를 사용하여 복잡한 애니메이션을 만드는 방법을 설명 합니다.|  
+|[타이밍 동작 개요](timing-behaviors-overview.md)|에 대해 설명 합니다 <xref:System.Windows.Media.Animation.Timeline> 형식 및 애니메이션에 사용 되는 속성입니다.|  
+|[타이밍 이벤트 개요](timing-events-overview.md)|사용할 수 있는 이벤트에 설명 합니다 <xref:System.Windows.Media.Animation.Timeline> 및 <xref:System.Windows.Media.Animation.Clock> 개체와 같은 타임 라인의 시점에서 코드를 실행 하는 것에 대 한 시작, 일시 중지, 다시 시작, 건너뛰기, 또는 중지 합니다.|  
+|[방법 항목](animation-and-timing-how-to-topics.md)|애플리케이션에서 애니메이션 및 타임라인을 사용하기 위한 코드 예제가 포함되어 있습니다.|  
+|[Clock 방법 항목](clocks-how-to-topics.md)|사용 하기 위한 코드 예제가 포함 된 <xref:System.Windows.Media.Animation.Clock> 응용 프로그램의 개체입니다.|  
+|[키 프레임 방법 항목](key-frame-animation-how-to-topics.md)|애플리케이션에서 키 프레임 애니메이션을 사용하기 위한 코드 예제가 포함되어 있습니다.|  
+|[경로 애니메이션 방법 항목](path-animation-how-to-topics.md)|애플리케이션에서 경로 애니메이션을 사용하기 위한 코드 예제가 포함되어 있습니다.|  
   
 <a name="reference"></a>   
 ## <a name="reference"></a>참조  

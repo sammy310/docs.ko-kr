@@ -13,12 +13,12 @@ helpviewer_keywords:
 - identifying changed property events [WPF]
 - property triggers [WPF], definition of
 ms.assetid: 0a7989df-9674-4cc1-bc50-5d8ef5d9c055
-ms.openlocfilehash: cd7c9c514c90a94e3329bec9614624ee399481ed
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2997696a6617bb9c17bb98bba0b352cb27c07896
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54524002"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57351998"
 ---
 # <a name="property-change-events"></a>속성 변경 이벤트
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]는 속성 값 변경에 대한 응답으로 발생하는 여러 이벤트를 정의합니다. 일반적으로 속성은 종속성 속성입니다. 이벤트 자체는 라우트된 이벤트인 경우도 있고 표준 [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] 이벤트인 경우도 있습니다. 이벤트 정의는 시나리오에 따라 달라집니다. 일부 속성 변경은 요소 트리를 통해 더 적절하게 라우트되지만 다른 속성 변경은 일반적으로 해당 속성이 변경한 개체에만 영향을 미치기 때문입니다.  
@@ -33,7 +33,7 @@ ms.locfileid: "54524002"
   
  이전 값과 새 값이 있으므로 이 이벤트 처리기를 속성 값에 대한 유효성 검사기로 사용하려고 할 수 있습니다. 하지만 이 방법은 대부분 속성 변경 이벤트의 디자인 의도가 아닙니다. 일반적으로 코드의 다른 논리 영역에서 값에 대한 작업을 수행할 수 있도록 해당 값이 제공되지만, 실제로 이벤트 처리기 내의 값을 변경하는 것은 좋지 않고 이로 인해 처리기 구현 방식에 따라 의도치 않은 재귀가 발생할 수 있습니다.  
   
- 속성이 사용자 지정 종속성 속성을 하거나 작업 하는 경우 파생된 클래스를 사용 하 여 인스턴스화 코드를 정의한, 하는 경우에 기본 제공 하는 속성 변경 내용을 추적 하기 위한 훨씬 더 나은 메커니즘은 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 속성 시스템:는 속성 시스템 콜백과 <xref:System.Windows.CoerceValueCallback> 고 <xref:System.Windows.PropertyChangedCallback>입니다. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 속성 시스템을 유효성 검사 및 강제 변환에 사용하는 방법에 대한 자세한 내용은 [종속성 속성 콜백 및 유효성 검사](../../../../docs/framework/wpf/advanced/dependency-property-callbacks-and-validation.md) 및 [사용자 지정 종속성 속성](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md)을 참조하세요.  
+ 속성이 사용자 지정 종속성 속성을 하거나 작업 하는 경우 파생된 클래스를 사용 하 여 인스턴스화 코드를 정의한, 하는 경우에 기본 제공 하는 속성 변경 내용을 추적 하기 위한 훨씬 더 나은 메커니즘은 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 속성 시스템:는 속성 시스템 콜백과 <xref:System.Windows.CoerceValueCallback> 고 <xref:System.Windows.PropertyChangedCallback>입니다. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 속성 시스템을 유효성 검사 및 강제 변환에 사용하는 방법에 대한 자세한 내용은 [종속성 속성 콜백 및 유효성 검사](dependency-property-callbacks-and-validation.md) 및 [사용자 지정 종속성 속성](custom-dependency-properties.md)을 참조하세요.  
   
 ### <a name="dependencypropertychanged-events"></a>DependencyPropertyChanged 이벤트  
  속성 변경된 이벤트 시나리오에 포함 된 형식의 다른 쌍이 <xref:System.Windows.DependencyPropertyChangedEventArgs> 고 <xref:System.Windows.DependencyPropertyChangedEventHandler>입니다. 이러한 속성 변경에 대한 이벤트는 라우트되지 않습니다. 이러한 이벤트는 표준 [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] 이벤트입니다. <xref:System.Windows.DependencyPropertyChangedEventArgs> 보고 형식에서 파생 되지 않은 비정상적인 이벤트 데이터가 <xref:System.EventArgs>; <xref:System.Windows.DependencyPropertyChangedEventArgs> 클래스가 아닌 구조체입니다.  
@@ -59,8 +59,8 @@ ms.locfileid: "54524002"
   
  일반적으로 속성 트리거는 같은 요소에서 또 다른 속성 상태에 따라 하나 이상의 모양 속성을 변경해야 하는 시나리오에 적합합니다.  
   
- 속성 트리거에 대한 자세한 내용은 [스타일 지정 및 템플릿](../../../../docs/framework/wpf/controls/styling-and-templating.md)을 참조하세요.  
+ 속성 트리거에 대한 자세한 내용은 [스타일 지정 및 템플릿](../controls/styling-and-templating.md)을 참조하세요.  
   
 ## <a name="see-also"></a>참고자료
-- [라우트된 이벤트 개요](../../../../docs/framework/wpf/advanced/routed-events-overview.md)
-- [종속성 속성 개요](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)
+- [라우트된 이벤트 개요](routed-events-overview.md)
+- [종속성 속성 개요](dependency-properties-overview.md)

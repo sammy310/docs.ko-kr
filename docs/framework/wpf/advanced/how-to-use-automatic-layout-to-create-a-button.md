@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Button controls [WPF], creating with automatic layout
 - automatic layout [WPF], creating buttons
 ms.assetid: 96c206d0-9e77-4784-9d2d-5045aed2021c
-ms.openlocfilehash: 501341f0e71e6e5a224c51e4ae01c68ce6b845cb
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2172aba80fe963be33036a7245f228e8d5bfedda
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54543489"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57370347"
 ---
 # <a name="how-to-use-automatic-layout-to-create-a-button"></a>방법: 자동 레이아웃을 사용하여 단추 만들기
 이 예제는 자동 레이아웃 방식을 사용하여 지역화 가능한 애플리케이션에 단추를 만드는 방법을 설명합니다.  
@@ -20,15 +20,15 @@ ms.locfileid: "54543489"
  다음 두 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] 예제에서는 단추; 하나는 영어 텍스트를 스페인어 텍스트를 사용 하 여 하나를 인스턴스화하는 응용 프로그램을 만듭니다. 코드는 텍스트를 제외하고 동일합니다. 단추는 텍스트에 맞게 조정됩니다.  
   
 ## <a name="example"></a>예제  
- [!code-xaml[LocalizationBtn_snip#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/LocalizationBtn_snip/CS/Pane1.xaml#1)]  
+ [!code-xaml[LocalizationBtn_snip#1](~/samples/snippets/csharp/VS_Snippets_Wpf/LocalizationBtn_snip/CS/Pane1.xaml#1)]  
   
- [!code-xaml[LocalizationBtn#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/LocalizationBtn/CS/Pane1.xaml#1)]  
+ [!code-xaml[LocalizationBtn#1](~/samples/snippets/csharp/VS_Snippets_Wpf/LocalizationBtn/CS/Pane1.xaml#1)]  
   
  다음 그림에서는 코드 샘플의 출력을 보여 줍니다.  
   
- ![서로 다른 언어로 텍스트는 동일한 단추](../../../../docs/framework/wpf/advanced/media/globalizationbutton.png "GlobalizationButton")  
+ ![서로 다른 언어로 텍스트는 동일한 단추](./media/globalizationbutton.png "GlobalizationButton")  
 자동 크기 조정 단추  
   
 ## <a name="see-also"></a>참고자료
-- [자동 레이아웃 사용 개요](../../../../docs/framework/wpf/advanced/use-automatic-layout-overview.md)
-- [자동 레이아웃에 그리드 사용](../../../../docs/framework/wpf/advanced/how-to-use-a-grid-for-automatic-layout.md)
+- [자동 레이아웃 사용 개요](use-automatic-layout-overview.md)
+- [자동 레이아웃에 그리드 사용](how-to-use-a-grid-for-automatic-layout.md)
