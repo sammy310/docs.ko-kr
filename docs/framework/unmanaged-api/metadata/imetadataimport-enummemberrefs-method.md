@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 34a6762618780b22bcd8be376209912390524578
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d73607fc600bf6fbcc2cf831d57a5b4aa740bb09
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54592018"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57498070"
 ---
-# <a name="imetadataimportenummemberrefs-method"></a><span data-ttu-id="5cad8-102">IMetaDataImport::EnumMemberRefs 메서드</span><span class="sxs-lookup"><span data-stu-id="5cad8-102">IMetaDataImport::EnumMemberRefs Method</span></span>
-<span data-ttu-id="5cad8-103">지정한 형식의 멤버를 나타내는 MemberRef 토큰을 열거합니다.</span><span class="sxs-lookup"><span data-stu-id="5cad8-103">Enumerates MemberRef tokens representing members of the specified type.</span></span>  
+# <a name="imetadataimportenummemberrefs-method"></a><span data-ttu-id="8f24e-102">IMetaDataImport::EnumMemberRefs 메서드</span><span class="sxs-lookup"><span data-stu-id="8f24e-102">IMetaDataImport::EnumMemberRefs Method</span></span>
+<span data-ttu-id="8f24e-103">지정한 형식의 멤버를 나타내는 MemberRef 토큰을 열거합니다.</span><span class="sxs-lookup"><span data-stu-id="8f24e-103">Enumerates MemberRef tokens representing members of the specified type.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="5cad8-104">구문</span><span class="sxs-lookup"><span data-stu-id="5cad8-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="8f24e-104">구문</span><span class="sxs-lookup"><span data-stu-id="8f24e-104">Syntax</span></span>  
   
 ```  
 HRESULT EnumMemberRefs (  
@@ -39,38 +39,38 @@ HRESULT EnumMemberRefs (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="5cad8-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="5cad8-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="8f24e-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="8f24e-105">Parameters</span></span>  
  `phEnum`  
- <span data-ttu-id="5cad8-106">[out에서] 열거자에 대 한 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="5cad8-106">[in, out] A pointer to the enumerator.</span></span>  
+ <span data-ttu-id="8f24e-106">[out에서] 열거자에 대 한 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="8f24e-106">[in, out] A pointer to the enumerator.</span></span>  
   
  `tkParent`  
- <span data-ttu-id="5cad8-107">[in] 멤버를 열거할 수 형식에 대 한 형식 정의 TypeRef, MethodDef, 또는 ModuleRef 토큰입니다.</span><span class="sxs-lookup"><span data-stu-id="5cad8-107">[in] A TypeDef, TypeRef, MethodDef, or ModuleRef token for the type whose members are to be enumerated.</span></span>  
+ <span data-ttu-id="8f24e-107">[in] 멤버를 열거할 수 형식에 대 한 형식 정의 TypeRef, MethodDef, 또는 ModuleRef 토큰입니다.</span><span class="sxs-lookup"><span data-stu-id="8f24e-107">[in] A TypeDef, TypeRef, MethodDef, or ModuleRef token for the type whose members are to be enumerated.</span></span>  
   
  `rMemberRefs`  
- <span data-ttu-id="5cad8-108">[out] MemberRef 토큰을 저장 하는 데 사용 되는 배열입니다.</span><span class="sxs-lookup"><span data-stu-id="5cad8-108">[out] The array used to store MemberRef tokens.</span></span>  
+ <span data-ttu-id="8f24e-108">[out] MemberRef 토큰을 저장 하는 데 사용 되는 배열입니다.</span><span class="sxs-lookup"><span data-stu-id="8f24e-108">[out] The array used to store MemberRef tokens.</span></span>  
   
  `cMax`  
- <span data-ttu-id="5cad8-109">[in] `rMemberRefs` 배열의 최대 크기입니다.</span><span class="sxs-lookup"><span data-stu-id="5cad8-109">[in] The maximum size of the `rMemberRefs` array.</span></span>  
+ <span data-ttu-id="8f24e-109">[in] `rMemberRefs` 배열의 최대 크기입니다.</span><span class="sxs-lookup"><span data-stu-id="8f24e-109">[in] The maximum size of the `rMemberRefs` array.</span></span>  
   
  `pcTokens`  
- <span data-ttu-id="5cad8-110">[out] MemberRef 토큰에서 반환 된 수가 실제 `rMemberRefs`합니다.</span><span class="sxs-lookup"><span data-stu-id="5cad8-110">[out] The actual number of MemberRef tokens returned in `rMemberRefs`.</span></span>  
+ <span data-ttu-id="8f24e-110">[out] MemberRef 토큰에서 반환 된 수가 실제 `rMemberRefs`합니다.</span><span class="sxs-lookup"><span data-stu-id="8f24e-110">[out] The actual number of MemberRef tokens returned in `rMemberRefs`.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="5cad8-111">반환 값</span><span class="sxs-lookup"><span data-stu-id="5cad8-111">Return Value</span></span>  
+## <a name="return-value"></a><span data-ttu-id="8f24e-111">반환 값</span><span class="sxs-lookup"><span data-stu-id="8f24e-111">Return Value</span></span>  
   
-|<span data-ttu-id="5cad8-112">HRESULT</span><span class="sxs-lookup"><span data-stu-id="5cad8-112">HRESULT</span></span>|<span data-ttu-id="5cad8-113">설명</span><span class="sxs-lookup"><span data-stu-id="5cad8-113">Description</span></span>|  
+|<span data-ttu-id="8f24e-112">HRESULT</span><span class="sxs-lookup"><span data-stu-id="8f24e-112">HRESULT</span></span>|<span data-ttu-id="8f24e-113">설명</span><span class="sxs-lookup"><span data-stu-id="8f24e-113">Description</span></span>|  
 |-------------|-----------------|  
-|`S_OK`|<span data-ttu-id="5cad8-114">`EnumMemberRefs` 성공적으로 반환 합니다.</span><span class="sxs-lookup"><span data-stu-id="5cad8-114">`EnumMemberRefs` returned successfully.</span></span>|  
-|`S_FALSE`|<span data-ttu-id="5cad8-115">열거할 MemberRef 토큰이 있습니다.</span><span class="sxs-lookup"><span data-stu-id="5cad8-115">There are no MemberRef tokens to enumerate.</span></span> <span data-ttu-id="5cad8-116">이런 경우 `pcTokens` 는 0입니다.</span><span class="sxs-lookup"><span data-stu-id="5cad8-116">In that case, `pcTokens` is to zero.</span></span>|  
+|`S_OK`|<span data-ttu-id="8f24e-114">`EnumMemberRefs` 성공적으로 반환 합니다.</span><span class="sxs-lookup"><span data-stu-id="8f24e-114">`EnumMemberRefs` returned successfully.</span></span>|  
+|`S_FALSE`|<span data-ttu-id="8f24e-115">열거할 MemberRef 토큰이 있습니다.</span><span class="sxs-lookup"><span data-stu-id="8f24e-115">There are no MemberRef tokens to enumerate.</span></span> <span data-ttu-id="8f24e-116">이런 경우 `pcTokens` 는 0입니다.</span><span class="sxs-lookup"><span data-stu-id="8f24e-116">In that case, `pcTokens` is to zero.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="5cad8-117">요구 사항</span><span class="sxs-lookup"><span data-stu-id="5cad8-117">Requirements</span></span>  
- <span data-ttu-id="5cad8-118">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="5cad8-118">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="8f24e-117">요구 사항</span><span class="sxs-lookup"><span data-stu-id="8f24e-117">Requirements</span></span>  
+ <span data-ttu-id="8f24e-118">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="8f24e-118">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="5cad8-119">**헤더:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="5cad8-119">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="8f24e-119">**헤더:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="8f24e-119">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="5cad8-120">**라이브러리:** MsCorEE.dll에 리소스로 포함</span><span class="sxs-lookup"><span data-stu-id="5cad8-120">**Library:** Included as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="8f24e-120">**라이브러리:** MsCorEE.dll에 리소스로 포함</span><span class="sxs-lookup"><span data-stu-id="8f24e-120">**Library:** Included as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="5cad8-121">**.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="5cad8-121">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="8f24e-121">**.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="8f24e-121">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="5cad8-122">참고자료</span><span class="sxs-lookup"><span data-stu-id="5cad8-122">See also</span></span>
-- [<span data-ttu-id="5cad8-123">IMetaDataImport 인터페이스</span><span class="sxs-lookup"><span data-stu-id="5cad8-123">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
-- [<span data-ttu-id="5cad8-124">IMetaDataImport2 인터페이스</span><span class="sxs-lookup"><span data-stu-id="5cad8-124">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+## <a name="see-also"></a><span data-ttu-id="8f24e-122">참고자료</span><span class="sxs-lookup"><span data-stu-id="8f24e-122">See also</span></span>
+- [<span data-ttu-id="8f24e-123">IMetaDataImport 인터페이스</span><span class="sxs-lookup"><span data-stu-id="8f24e-123">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [<span data-ttu-id="8f24e-124">IMetaDataImport2 인터페이스</span><span class="sxs-lookup"><span data-stu-id="8f24e-124">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

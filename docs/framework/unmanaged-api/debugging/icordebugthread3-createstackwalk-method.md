@@ -17,48 +17,48 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e0089502519a5a5530b7ed2a5896f7c445ccb128
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3fbd07638050b3861cd3cbfd45171ade5c19acb3
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54722645"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57480652"
 ---
-# <a name="icordebugthread3createstackwalk-method"></a><span data-ttu-id="d37cc-102">ICorDebugThread3::CreateStackWalk 메서드</span><span class="sxs-lookup"><span data-stu-id="d37cc-102">ICorDebugThread3::CreateStackWalk Method</span></span>
-<span data-ttu-id="d37cc-103">만듭니다는 [ICorDebugStackWalk](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-interface.md) 해제 하려는 해당 스택 스레드에 대 한 개체입니다.</span><span class="sxs-lookup"><span data-stu-id="d37cc-103">Creates an [ICorDebugStackWalk](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-interface.md) object for the thread whose stack you want to unwind.</span></span>  
+# <a name="icordebugthread3createstackwalk-method"></a><span data-ttu-id="27aa7-102">ICorDebugThread3::CreateStackWalk 메서드</span><span class="sxs-lookup"><span data-stu-id="27aa7-102">ICorDebugThread3::CreateStackWalk Method</span></span>
+<span data-ttu-id="27aa7-103">만듭니다는 [ICorDebugStackWalk](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-interface.md) 해제 하려는 해당 스택 스레드에 대 한 개체입니다.</span><span class="sxs-lookup"><span data-stu-id="27aa7-103">Creates an [ICorDebugStackWalk](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-interface.md) object for the thread whose stack you want to unwind.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="d37cc-104">구문</span><span class="sxs-lookup"><span data-stu-id="d37cc-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="27aa7-104">구문</span><span class="sxs-lookup"><span data-stu-id="27aa7-104">Syntax</span></span>  
   
 ```  
 HRESULT CreateStackWalk([out] ICorDebugStackWalk **ppStackWalk);  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="d37cc-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="d37cc-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="27aa7-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="27aa7-105">Parameters</span></span>  
  `ppStackWalk`  
- <span data-ttu-id="d37cc-106">[out] 주소에 대 한 포인터를 [ICorDebugStackWalk](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-interface.md) 해제 하려는 해당 스택 스레드에 대 한 개체입니다.</span><span class="sxs-lookup"><span data-stu-id="d37cc-106">[out] A pointer to address of the [ICorDebugStackWalk](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-interface.md) object for the thread whose stack you want to unwind.</span></span>  
+ <span data-ttu-id="27aa7-106">[out] 주소에 대 한 포인터를 [ICorDebugStackWalk](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-interface.md) 해제 하려는 해당 스택 스레드에 대 한 개체입니다.</span><span class="sxs-lookup"><span data-stu-id="27aa7-106">[out] A pointer to address of the [ICorDebugStackWalk](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-interface.md) object for the thread whose stack you want to unwind.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="d37cc-107">반환 값</span><span class="sxs-lookup"><span data-stu-id="d37cc-107">Return Value</span></span>  
- <span data-ttu-id="d37cc-108">이 메서드는 다음과 같은 특정 HRESULT뿐만 아니라 메서드 오류를 나타내는 HRESULT 오류도 반환합니다.</span><span class="sxs-lookup"><span data-stu-id="d37cc-108">This method returns the following specific HRESULTs as well as HRESULT errors that indicate method failure.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="27aa7-107">반환 값</span><span class="sxs-lookup"><span data-stu-id="27aa7-107">Return Value</span></span>  
+ <span data-ttu-id="27aa7-108">이 메서드는 다음과 같은 특정 HRESULT뿐만 아니라 메서드 오류를 나타내는 HRESULT 오류도 반환합니다.</span><span class="sxs-lookup"><span data-stu-id="27aa7-108">This method returns the following specific HRESULTs as well as HRESULT errors that indicate method failure.</span></span>  
   
-|<span data-ttu-id="d37cc-109">HRESULT</span><span class="sxs-lookup"><span data-stu-id="d37cc-109">HRESULT</span></span>|<span data-ttu-id="d37cc-110">설명</span><span class="sxs-lookup"><span data-stu-id="d37cc-110">Description</span></span>|  
+|<span data-ttu-id="27aa7-109">HRESULT</span><span class="sxs-lookup"><span data-stu-id="27aa7-109">HRESULT</span></span>|<span data-ttu-id="27aa7-110">설명</span><span class="sxs-lookup"><span data-stu-id="27aa7-110">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="d37cc-111">S_OK</span><span class="sxs-lookup"><span data-stu-id="d37cc-111">S_OK</span></span>|<span data-ttu-id="d37cc-112">`ICorDebugStackWalk` 개체를 만들었습니다.</span><span class="sxs-lookup"><span data-stu-id="d37cc-112">The `ICorDebugStackWalk` object was successfully created.</span></span>|  
-|<span data-ttu-id="d37cc-113">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="d37cc-113">E_FAIL</span></span>|<span data-ttu-id="d37cc-114">`ICorDebugStackWalk` 개체가 생성 되지 않았습니다.</span><span class="sxs-lookup"><span data-stu-id="d37cc-114">The `ICorDebugStackWalk` object was not created.</span></span>|  
+|<span data-ttu-id="27aa7-111">S_OK</span><span class="sxs-lookup"><span data-stu-id="27aa7-111">S_OK</span></span>|<span data-ttu-id="27aa7-112">`ICorDebugStackWalk` 개체를 만들었습니다.</span><span class="sxs-lookup"><span data-stu-id="27aa7-112">The `ICorDebugStackWalk` object was successfully created.</span></span>|  
+|<span data-ttu-id="27aa7-113">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="27aa7-113">E_FAIL</span></span>|<span data-ttu-id="27aa7-114">`ICorDebugStackWalk` 개체가 생성 되지 않았습니다.</span><span class="sxs-lookup"><span data-stu-id="27aa7-114">The `ICorDebugStackWalk` object was not created.</span></span>|  
   
-## <a name="exceptions"></a><span data-ttu-id="d37cc-115">예외</span><span class="sxs-lookup"><span data-stu-id="d37cc-115">Exceptions</span></span>  
+## <a name="exceptions"></a><span data-ttu-id="27aa7-115">예외</span><span class="sxs-lookup"><span data-stu-id="27aa7-115">Exceptions</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="d37cc-116">설명</span><span class="sxs-lookup"><span data-stu-id="d37cc-116">Remarks</span></span>  
- <span data-ttu-id="d37cc-117">경우는 `CreateStackWalk` 메서드가 성공 하면 반환 된 `ICorDebugStackWalk` 개체의 컨텍스트에 스레드의 현재 컨텍스트로 설정 되어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="d37cc-117">If the `CreateStackWalk` method succeeds, the returned `ICorDebugStackWalk` object's context is set to the thread's current context.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="27aa7-116">설명</span><span class="sxs-lookup"><span data-stu-id="27aa7-116">Remarks</span></span>  
+ <span data-ttu-id="27aa7-117">경우는 `CreateStackWalk` 메서드가 성공 하면 반환 된 `ICorDebugStackWalk` 개체의 컨텍스트에 스레드의 현재 컨텍스트로 설정 되어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="27aa7-117">If the `CreateStackWalk` method succeeds, the returned `ICorDebugStackWalk` object's context is set to the thread's current context.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="d37cc-118">요구 사항</span><span class="sxs-lookup"><span data-stu-id="d37cc-118">Requirements</span></span>  
- <span data-ttu-id="d37cc-119">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="d37cc-119">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="27aa7-118">요구 사항</span><span class="sxs-lookup"><span data-stu-id="27aa7-118">Requirements</span></span>  
+ <span data-ttu-id="27aa7-119">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="27aa7-119">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="d37cc-120">**헤더:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="d37cc-120">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="27aa7-120">**헤더:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="27aa7-120">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="d37cc-121">**라이브러리:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="d37cc-121">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="27aa7-121">**라이브러리:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="27aa7-121">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="d37cc-122">**.NET Framework 버전:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="d37cc-122">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
+ <span data-ttu-id="27aa7-122">**.NET Framework 버전:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="27aa7-122">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="d37cc-123">참고자료</span><span class="sxs-lookup"><span data-stu-id="d37cc-123">See also</span></span>
-- [<span data-ttu-id="d37cc-124">디버깅 인터페이스</span><span class="sxs-lookup"><span data-stu-id="d37cc-124">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
-- [<span data-ttu-id="d37cc-125">디버깅</span><span class="sxs-lookup"><span data-stu-id="d37cc-125">Debugging</span></span>](../../../../docs/framework/unmanaged-api/debugging/index.md)
+## <a name="see-also"></a><span data-ttu-id="27aa7-123">참고자료</span><span class="sxs-lookup"><span data-stu-id="27aa7-123">See also</span></span>
+- [<span data-ttu-id="27aa7-124">디버깅 인터페이스</span><span class="sxs-lookup"><span data-stu-id="27aa7-124">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [<span data-ttu-id="27aa7-125">디버깅</span><span class="sxs-lookup"><span data-stu-id="27aa7-125">Debugging</span></span>](../../../../docs/framework/unmanaged-api/debugging/index.md)

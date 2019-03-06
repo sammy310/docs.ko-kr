@@ -5,38 +5,38 @@ helpviewer_keywords:
 - <permission> XML tag
 - permission XML tag
 ms.assetid: 0edf0500-5cd7-49c0-9255-64c48f972b77
-ms.openlocfilehash: 6c684a674e8d6e3bf218e0131e5fac2821855456
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: d8fe70445b2a2500f99a0156604238665b7bbd1c
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56966374"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57473502"
 ---
-# <a name="permission-visual-basic"></a><span data-ttu-id="d28b4-102">\<사용 권한 > (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="d28b4-102">\<permission> (Visual Basic)</span></span>
-<span data-ttu-id="d28b4-103">멤버에 대 한 필요한 사용 권한을 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="d28b4-103">Specifies a required permission for the member.</span></span>  
+# <a name="permission-visual-basic"></a><span data-ttu-id="c8bd6-102">\<사용 권한 > (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="c8bd6-102">\<permission> (Visual Basic)</span></span>
+<span data-ttu-id="c8bd6-103">멤버에 대 한 필요한 사용 권한을 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="c8bd6-103">Specifies a required permission for the member.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="d28b4-104">구문</span><span class="sxs-lookup"><span data-stu-id="d28b4-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="c8bd6-104">구문</span><span class="sxs-lookup"><span data-stu-id="c8bd6-104">Syntax</span></span>  
   
 ```xml  
 <permission cref="member">description</permission>  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="d28b4-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="d28b4-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="c8bd6-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="c8bd6-105">Parameters</span></span>  
  `member`  
- <span data-ttu-id="d28b4-106">현재 컴파일 환경에서 호출할 수 있는 멤버 또는 필드에 대한 참조입니다.</span><span class="sxs-lookup"><span data-stu-id="d28b4-106">A reference to a member or field that is available to be called from the current compilation environment.</span></span> <span data-ttu-id="d28b4-107">컴파일러는 지정된 코드 요소가 있으며 `member`를 출력 XML의 정식 요소 이름으로 변환하는지 확인합니다.</span><span class="sxs-lookup"><span data-stu-id="d28b4-107">The compiler checks that the given code element exists and translates `member` to the canonical element name in the output XML.</span></span> <span data-ttu-id="d28b4-108">묶습니다 `member` 큰따옴표에서 ("").</span><span class="sxs-lookup"><span data-stu-id="d28b4-108">Enclose `member` in quotation marks (" ").</span></span>  
+ <span data-ttu-id="c8bd6-106">현재 컴파일 환경에서 호출할 수 있는 멤버 또는 필드에 대한 참조입니다.</span><span class="sxs-lookup"><span data-stu-id="c8bd6-106">A reference to a member or field that is available to be called from the current compilation environment.</span></span> <span data-ttu-id="c8bd6-107">컴파일러는 지정된 코드 요소가 있으며 `member`를 출력 XML의 정식 요소 이름으로 변환하는지 확인합니다.</span><span class="sxs-lookup"><span data-stu-id="c8bd6-107">The compiler checks that the given code element exists and translates `member` to the canonical element name in the output XML.</span></span> <span data-ttu-id="c8bd6-108">묶습니다 `member` 큰따옴표에서 ("").</span><span class="sxs-lookup"><span data-stu-id="c8bd6-108">Enclose `member` in quotation marks (" ").</span></span>  
   
  `description`  
- <span data-ttu-id="d28b4-109">멤버 액세스 권한에 대한 설명입니다.</span><span class="sxs-lookup"><span data-stu-id="d28b4-109">A description of the access to the member.</span></span>  
+ <span data-ttu-id="c8bd6-109">멤버 액세스 권한에 대한 설명입니다.</span><span class="sxs-lookup"><span data-stu-id="c8bd6-109">A description of the access to the member.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="d28b4-110">설명</span><span class="sxs-lookup"><span data-stu-id="d28b4-110">Remarks</span></span>  
- <span data-ttu-id="d28b4-111">사용 된 `<permission>` 멤버에 대 한 액세스를 문서화 하는 태그입니다.</span><span class="sxs-lookup"><span data-stu-id="d28b4-111">Use the `<permission>` tag to document the access of a member.</span></span> <span data-ttu-id="d28b4-112">사용 된 <xref:System.Security.PermissionSet> 멤버에 대 한 액세스를 지정 하는 클래스입니다.</span><span class="sxs-lookup"><span data-stu-id="d28b4-112">Use the <xref:System.Security.PermissionSet> class to specify access to a member.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="c8bd6-110">설명</span><span class="sxs-lookup"><span data-stu-id="c8bd6-110">Remarks</span></span>  
+ <span data-ttu-id="c8bd6-111">사용 된 `<permission>` 멤버에 대 한 액세스를 문서화 하는 태그입니다.</span><span class="sxs-lookup"><span data-stu-id="c8bd6-111">Use the `<permission>` tag to document the access of a member.</span></span> <span data-ttu-id="c8bd6-112">사용 된 <xref:System.Security.PermissionSet> 멤버에 대 한 액세스를 지정 하는 클래스입니다.</span><span class="sxs-lookup"><span data-stu-id="c8bd6-112">Use the <xref:System.Security.PermissionSet> class to specify access to a member.</span></span>  
   
- <span data-ttu-id="d28b4-113">[/doc](../../../visual-basic/reference/command-line-compiler/doc.md)로 컴파일하여 문서 주석을 파일로 처리합니다.</span><span class="sxs-lookup"><span data-stu-id="d28b4-113">Compile with [/doc](../../../visual-basic/reference/command-line-compiler/doc.md) to process documentation comments to a file.</span></span>  
+ <span data-ttu-id="c8bd6-113">[/doc](../../../visual-basic/reference/command-line-compiler/doc.md)로 컴파일하여 문서 주석을 파일로 처리합니다.</span><span class="sxs-lookup"><span data-stu-id="c8bd6-113">Compile with [/doc](../../../visual-basic/reference/command-line-compiler/doc.md) to process documentation comments to a file.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="d28b4-114">예제</span><span class="sxs-lookup"><span data-stu-id="d28b4-114">Example</span></span>  
- <span data-ttu-id="d28b4-115">이 예에서는 `<permission>` 태그를 설명 하는 <xref:System.Security.Permissions.FileIOPermission> 에 필요한는 `ReadFile` 메서드.</span><span class="sxs-lookup"><span data-stu-id="d28b4-115">This example uses the `<permission>` tag to describe that the <xref:System.Security.Permissions.FileIOPermission> is required by the `ReadFile` method.</span></span>  
+## <a name="example"></a><span data-ttu-id="c8bd6-114">예제</span><span class="sxs-lookup"><span data-stu-id="c8bd6-114">Example</span></span>  
+ <span data-ttu-id="c8bd6-115">이 예에서는 `<permission>` 태그를 설명 하는 <xref:System.Security.Permissions.FileIOPermission> 에 필요한는 `ReadFile` 메서드.</span><span class="sxs-lookup"><span data-stu-id="c8bd6-115">This example uses the `<permission>` tag to describe that the <xref:System.Security.Permissions.FileIOPermission> is required by the `ReadFile` method.</span></span>  
   
  [!code-vb[VbVbcnXmlDocComments#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnXmlDocComments/VB/Class1.vb#7)]  
   
-## <a name="see-also"></a><span data-ttu-id="d28b4-116">참고자료</span><span class="sxs-lookup"><span data-stu-id="d28b4-116">See also</span></span>
-- [<span data-ttu-id="d28b4-117">XML 주석 태그</span><span class="sxs-lookup"><span data-stu-id="d28b4-117">XML Comment Tags</span></span>](../../../visual-basic/language-reference/xmldoc/index.md)
+## <a name="see-also"></a><span data-ttu-id="c8bd6-116">참고자료</span><span class="sxs-lookup"><span data-stu-id="c8bd6-116">See also</span></span>
+- [<span data-ttu-id="c8bd6-117">XML 주석 태그</span><span class="sxs-lookup"><span data-stu-id="c8bd6-117">XML Comment Tags</span></span>](../../../visual-basic/language-reference/xmldoc/index.md)

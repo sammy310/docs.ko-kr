@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b25eb71d78797b5f764cfe4de7abd45f0143fde4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 292ab8684f20c7ec5dcb87784c0ffff7416e8880
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54717638"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57476349"
 ---
-# <a name="imetadataimportgetsigfromtoken-method"></a><span data-ttu-id="97910-102">IMetaDataImport::GetSigFromToken 메서드</span><span class="sxs-lookup"><span data-stu-id="97910-102">IMetaDataImport::GetSigFromToken Method</span></span>
-<span data-ttu-id="97910-103">지정한 토큰과 연결된 이진 메타데이터 서명을 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="97910-103">Gets the binary metadata signature associated with the specified token.</span></span>  
+# <a name="imetadataimportgetsigfromtoken-method"></a><span data-ttu-id="70d30-102">IMetaDataImport::GetSigFromToken 메서드</span><span class="sxs-lookup"><span data-stu-id="70d30-102">IMetaDataImport::GetSigFromToken Method</span></span>
+<span data-ttu-id="70d30-103">지정한 토큰과 연결된 이진 메타데이터 서명을 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="70d30-103">Gets the binary metadata signature associated with the specified token.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="97910-104">구문</span><span class="sxs-lookup"><span data-stu-id="97910-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="70d30-104">구문</span><span class="sxs-lookup"><span data-stu-id="70d30-104">Syntax</span></span>  
   
 ```  
 HRESULT GetSigFromToken (   
@@ -37,25 +37,25 @@ HRESULT GetSigFromToken (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="97910-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="97910-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="70d30-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="70d30-105">Parameters</span></span>  
  `mdSig`  
- <span data-ttu-id="97910-106">[in] 토큰에 대 한 이진 메타 데이터 서명을 반환입니다.</span><span class="sxs-lookup"><span data-stu-id="97910-106">[in] The token to return the binary metadata signature for.</span></span>  
+ <span data-ttu-id="70d30-106">[in] 토큰에 대 한 이진 메타 데이터 서명을 반환입니다.</span><span class="sxs-lookup"><span data-stu-id="70d30-106">[in] The token to return the binary metadata signature for.</span></span>  
   
  `ppvSig`  
- <span data-ttu-id="97910-107">[out] 반환 된 메타 데이터 서명에 대 한 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="97910-107">[out] A pointer to the returned metadata signature.</span></span>  
+ <span data-ttu-id="70d30-107">[out] 반환 된 메타 데이터 서명에 대 한 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="70d30-107">[out] A pointer to the returned metadata signature.</span></span>  
   
  `pcbSig`  
- <span data-ttu-id="97910-108">[out] 이진 메타 데이터 서명의 바이트 크기입니다.</span><span class="sxs-lookup"><span data-stu-id="97910-108">[out] The size in bytes of the binary metadata signature.</span></span>  
+ <span data-ttu-id="70d30-108">[out] 이진 메타 데이터 서명의 바이트 크기입니다.</span><span class="sxs-lookup"><span data-stu-id="70d30-108">[out] The size in bytes of the binary metadata signature.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="97910-109">요구 사항</span><span class="sxs-lookup"><span data-stu-id="97910-109">Requirements</span></span>  
- <span data-ttu-id="97910-110">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="97910-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="70d30-109">요구 사항</span><span class="sxs-lookup"><span data-stu-id="70d30-109">Requirements</span></span>  
+ <span data-ttu-id="70d30-110">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="70d30-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="97910-111">**헤더:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="97910-111">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="70d30-111">**헤더:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="70d30-111">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="97910-112">**라이브러리:** MsCorEE.dll에 리소스로 포함</span><span class="sxs-lookup"><span data-stu-id="97910-112">**Library:** Included as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="70d30-112">**라이브러리:** MsCorEE.dll에 리소스로 포함</span><span class="sxs-lookup"><span data-stu-id="70d30-112">**Library:** Included as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="97910-113">**.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="97910-113">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="70d30-113">**.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="70d30-113">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="97910-114">참고자료</span><span class="sxs-lookup"><span data-stu-id="97910-114">See also</span></span>
-- [<span data-ttu-id="97910-115">IMetaDataImport 인터페이스</span><span class="sxs-lookup"><span data-stu-id="97910-115">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
-- [<span data-ttu-id="97910-116">IMetaDataImport2 인터페이스</span><span class="sxs-lookup"><span data-stu-id="97910-116">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+## <a name="see-also"></a><span data-ttu-id="70d30-114">참고자료</span><span class="sxs-lookup"><span data-stu-id="70d30-114">See also</span></span>
+- [<span data-ttu-id="70d30-115">IMetaDataImport 인터페이스</span><span class="sxs-lookup"><span data-stu-id="70d30-115">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [<span data-ttu-id="70d30-116">IMetaDataImport2 인터페이스</span><span class="sxs-lookup"><span data-stu-id="70d30-116">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

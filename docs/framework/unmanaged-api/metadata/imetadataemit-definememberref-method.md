@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 578f79136f6ccc8a6b7eac644b2a5084d30d2ba0
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ad2b3e5c452a5fc79e7a1cc0342cfc1d119a5fbd
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54722831"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57481991"
 ---
-# <a name="imetadataemitdefinememberref-method"></a><span data-ttu-id="af421-102">IMetaDataEmit::DefineMemberRef 메서드</span><span class="sxs-lookup"><span data-stu-id="af421-102">IMetaDataEmit::DefineMemberRef Method</span></span>
-<span data-ttu-id="af421-103">현재 범위를 벗어난 모듈의 멤버에 대 한 참조를 정의 하 고 해당 참조 정의에 토큰을 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="af421-103">Defines a reference to a member of a module outside the current scope, and gets a token to that reference definition.</span></span>  
+# <a name="imetadataemitdefinememberref-method"></a><span data-ttu-id="4c54a-102">IMetaDataEmit::DefineMemberRef 메서드</span><span class="sxs-lookup"><span data-stu-id="4c54a-102">IMetaDataEmit::DefineMemberRef Method</span></span>
+<span data-ttu-id="4c54a-103">현재 범위를 벗어난 모듈의 멤버에 대 한 참조를 정의 하 고 해당 참조 정의에 토큰을 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="4c54a-103">Defines a reference to a member of a module outside the current scope, and gets a token to that reference definition.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="af421-104">구문</span><span class="sxs-lookup"><span data-stu-id="af421-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="4c54a-104">구문</span><span class="sxs-lookup"><span data-stu-id="4c54a-104">Syntax</span></span>  
   
 ```  
 HRESULT DefineMemberRef (   
@@ -39,31 +39,31 @@ HRESULT DefineMemberRef (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="af421-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="af421-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="4c54a-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="4c54a-105">Parameters</span></span>  
  `tkImport`  
- <span data-ttu-id="af421-106">[in] 멤버가 전역; 이면 대상 멤버의 클래스 또는 인터페이스에 대 한 토큰 멤버가 전역,이 경우에 `mdModuleRef` 다른 파일에 대 한 토큰입니다.</span><span class="sxs-lookup"><span data-stu-id="af421-106">[in] Token for the target member's class or interface, if the member is not global; if the member is global, the `mdModuleRef` token for that other file.</span></span>  
+ <span data-ttu-id="4c54a-106">[in] 멤버가 전역; 이면 대상 멤버의 클래스 또는 인터페이스에 대 한 토큰 멤버가 전역,이 경우에 `mdModuleRef` 다른 파일에 대 한 토큰입니다.</span><span class="sxs-lookup"><span data-stu-id="4c54a-106">[in] Token for the target member's class or interface, if the member is not global; if the member is global, the `mdModuleRef` token for that other file.</span></span>  
   
  `szName`  
- <span data-ttu-id="af421-107">[in] 대상 멤버의 이름입니다.</span><span class="sxs-lookup"><span data-stu-id="af421-107">[in] The name of the target member.</span></span>  
+ <span data-ttu-id="4c54a-107">[in] 대상 멤버의 이름입니다.</span><span class="sxs-lookup"><span data-stu-id="4c54a-107">[in] The name of the target member.</span></span>  
   
  `pvSigBlob`  
- <span data-ttu-id="af421-108">[in] 대상 멤버의 서명입니다.</span><span class="sxs-lookup"><span data-stu-id="af421-108">[in] The signature of the target member.</span></span>  
+ <span data-ttu-id="4c54a-108">[in] 대상 멤버의 서명입니다.</span><span class="sxs-lookup"><span data-stu-id="4c54a-108">[in] The signature of the target member.</span></span>  
   
  `cbSigBlob`  
- <span data-ttu-id="af421-109">[in] 바이트 수가 `pvSigBlob`합니다.</span><span class="sxs-lookup"><span data-stu-id="af421-109">[in] The count of bytes in `pvSigBlob`.</span></span>  
+ <span data-ttu-id="4c54a-109">[in] 바이트 수가 `pvSigBlob`합니다.</span><span class="sxs-lookup"><span data-stu-id="4c54a-109">[in] The count of bytes in `pvSigBlob`.</span></span>  
   
  `pmr`  
- <span data-ttu-id="af421-110">[out] `mdMemberRef` 할당 된 토큰입니다.</span><span class="sxs-lookup"><span data-stu-id="af421-110">[out] The `mdMemberRef` token assigned.</span></span>  
+ <span data-ttu-id="4c54a-110">[out] `mdMemberRef` 할당 된 토큰입니다.</span><span class="sxs-lookup"><span data-stu-id="4c54a-110">[out] The `mdMemberRef` token assigned.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="af421-111">요구 사항</span><span class="sxs-lookup"><span data-stu-id="af421-111">Requirements</span></span>  
- <span data-ttu-id="af421-112">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="af421-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="4c54a-111">요구 사항</span><span class="sxs-lookup"><span data-stu-id="4c54a-111">Requirements</span></span>  
+ <span data-ttu-id="4c54a-112">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="4c54a-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="af421-113">**헤더:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="af421-113">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="4c54a-113">**헤더:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="4c54a-113">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="af421-114">**라이브러리:** MSCorEE.dll에서 리소스로 사용</span><span class="sxs-lookup"><span data-stu-id="af421-114">**Library:** Used as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="4c54a-114">**라이브러리:** MSCorEE.dll에서 리소스로 사용</span><span class="sxs-lookup"><span data-stu-id="4c54a-114">**Library:** Used as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="af421-115">**.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="af421-115">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="4c54a-115">**.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="4c54a-115">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="af421-116">참고자료</span><span class="sxs-lookup"><span data-stu-id="af421-116">See also</span></span>
-- [<span data-ttu-id="af421-117">IMetaDataEmit 인터페이스</span><span class="sxs-lookup"><span data-stu-id="af421-117">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
-- [<span data-ttu-id="af421-118">IMetaDataEmit2 인터페이스</span><span class="sxs-lookup"><span data-stu-id="af421-118">IMetaDataEmit2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+## <a name="see-also"></a><span data-ttu-id="4c54a-116">참고자료</span><span class="sxs-lookup"><span data-stu-id="4c54a-116">See also</span></span>
+- [<span data-ttu-id="4c54a-117">IMetaDataEmit 인터페이스</span><span class="sxs-lookup"><span data-stu-id="4c54a-117">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
+- [<span data-ttu-id="4c54a-118">IMetaDataEmit2 인터페이스</span><span class="sxs-lookup"><span data-stu-id="4c54a-118">IMetaDataEmit2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

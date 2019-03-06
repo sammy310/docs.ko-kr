@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4d2e75d357b1f56df676163744015a1a3f77c17b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c5556fecb6251a2dd6a131332dbff1b5ca2f5d95
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54530754"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57493338"
 ---
-# <a name="icorprofilercallbackjitcompilationfinished-method"></a><span data-ttu-id="252c2-102">ICorProfilerCallback::JITCompilationFinished 메서드</span><span class="sxs-lookup"><span data-stu-id="252c2-102">ICorProfilerCallback::JITCompilationFinished Method</span></span>
-<span data-ttu-id="252c2-103">Just-in-time (JIT) 컴파일러가 함수 컴파일이 되었음을 프로파일러에 알립니다.</span><span class="sxs-lookup"><span data-stu-id="252c2-103">Notifies the profiler that the just-in-time (JIT) compiler has finished compiling a function.</span></span>  
+# <a name="icorprofilercallbackjitcompilationfinished-method"></a><span data-ttu-id="a1d48-102">ICorProfilerCallback::JITCompilationFinished 메서드</span><span class="sxs-lookup"><span data-stu-id="a1d48-102">ICorProfilerCallback::JITCompilationFinished Method</span></span>
+<span data-ttu-id="a1d48-103">Just-in-time (JIT) 컴파일러가 함수 컴파일이 되었음을 프로파일러에 알립니다.</span><span class="sxs-lookup"><span data-stu-id="a1d48-103">Notifies the profiler that the just-in-time (JIT) compiler has finished compiling a function.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="252c2-104">구문</span><span class="sxs-lookup"><span data-stu-id="252c2-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="a1d48-104">구문</span><span class="sxs-lookup"><span data-stu-id="a1d48-104">Syntax</span></span>  
   
 ```  
 HRESULT JITCompilationFinished(  
@@ -36,27 +36,27 @@ HRESULT JITCompilationFinished(
     [in] BOOL       fIsSafeToBlock);  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="252c2-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="252c2-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="a1d48-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="a1d48-105">Parameters</span></span>  
  `functionId`  
- <span data-ttu-id="252c2-106">[in] 컴파일된 함수의 ID입니다.</span><span class="sxs-lookup"><span data-stu-id="252c2-106">[in] The ID of the function that was compiled.</span></span>  
+ <span data-ttu-id="a1d48-106">[in] 컴파일된 함수의 ID입니다.</span><span class="sxs-lookup"><span data-stu-id="a1d48-106">[in] The ID of the function that was compiled.</span></span>  
   
  `hrStatus`  
- <span data-ttu-id="252c2-107">[in] 컴파일 성공 했는지 여부를 나타내는 값입니다.</span><span class="sxs-lookup"><span data-stu-id="252c2-107">[in] A value indicating whether compilation was successful.</span></span>  
+ <span data-ttu-id="a1d48-107">[in] 컴파일 성공 했는지 여부를 나타내는 값입니다.</span><span class="sxs-lookup"><span data-stu-id="a1d48-107">[in] A value indicating whether compilation was successful.</span></span>  
   
  `fIsSafeToBlock`  
- <span data-ttu-id="252c2-108">[in] 프로파일러 차단 여부를 나타내는 값을 런타임 작업에 영향을 줍니다.</span><span class="sxs-lookup"><span data-stu-id="252c2-108">[in] A value indicating to the profiler whether blocking will affect the operation of the runtime.</span></span> <span data-ttu-id="252c2-109">값이 `true` 런타임에서이 콜백에서; 반환할 호출 스레드에 대 한 대기를 차단 않을 경우이 고, 그렇지 `false`합니다.</span><span class="sxs-lookup"><span data-stu-id="252c2-109">The value is `true` if blocking may cause the runtime to wait for the calling thread to return from this callback; otherwise, `false`.</span></span>  
+ <span data-ttu-id="a1d48-108">[in] 프로파일러 차단 여부를 나타내는 값을 런타임 작업에 영향을 줍니다.</span><span class="sxs-lookup"><span data-stu-id="a1d48-108">[in] A value indicating to the profiler whether blocking will affect the operation of the runtime.</span></span> <span data-ttu-id="a1d48-109">값이 `true` 런타임에서이 콜백에서; 반환할 호출 스레드에 대 한 대기를 차단 않을 경우이 고, 그렇지 `false`합니다.</span><span class="sxs-lookup"><span data-stu-id="a1d48-109">The value is `true` if blocking may cause the runtime to wait for the calling thread to return from this callback; otherwise, `false`.</span></span>  
   
- <span data-ttu-id="252c2-110">하지만 값 `true` 런타임 나쁜 영향을 주지, 프로 파일링 결과 기울일 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="252c2-110">Although a value of `true` will not harm the runtime, it can skew the profiling results.</span></span>  
+ <span data-ttu-id="a1d48-110">하지만 값 `true` 런타임 나쁜 영향을 주지, 프로 파일링 결과 기울일 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="a1d48-110">Although a value of `true` will not harm the runtime, it can skew the profiling results.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="252c2-111">요구 사항</span><span class="sxs-lookup"><span data-stu-id="252c2-111">Requirements</span></span>  
- <span data-ttu-id="252c2-112">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="252c2-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="a1d48-111">요구 사항</span><span class="sxs-lookup"><span data-stu-id="a1d48-111">Requirements</span></span>  
+ <span data-ttu-id="a1d48-112">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="a1d48-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="252c2-113">**헤더:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="252c2-113">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="a1d48-113">**헤더:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="a1d48-113">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="252c2-114">**라이브러리:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="252c2-114">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="a1d48-114">**라이브러리:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="a1d48-114">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="252c2-115">**.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="252c2-115">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="a1d48-115">**.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="a1d48-115">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="252c2-116">참고자료</span><span class="sxs-lookup"><span data-stu-id="252c2-116">See also</span></span>
-- [<span data-ttu-id="252c2-117">ICorProfilerCallback 인터페이스</span><span class="sxs-lookup"><span data-stu-id="252c2-117">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
-- [<span data-ttu-id="252c2-118">JITCompilationStarted 메서드</span><span class="sxs-lookup"><span data-stu-id="252c2-118">JITCompilationStarted Method</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-jitcompilationstarted-method.md)
+## <a name="see-also"></a><span data-ttu-id="a1d48-116">참고자료</span><span class="sxs-lookup"><span data-stu-id="a1d48-116">See also</span></span>
+- [<span data-ttu-id="a1d48-117">ICorProfilerCallback 인터페이스</span><span class="sxs-lookup"><span data-stu-id="a1d48-117">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+- [<span data-ttu-id="a1d48-118">JITCompilationStarted 메서드</span><span class="sxs-lookup"><span data-stu-id="a1d48-118">JITCompilationStarted Method</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-jitcompilationstarted-method.md)

@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 45aaceb2c39703cb1369941ce801c9cff1935ad6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 364742957d16f12508d2df6f4cd7f50d7956d4cb
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54555845"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57479456"
 ---
-# <a name="isymunmanagedreadergetmethodversion-method"></a><span data-ttu-id="15c47-102">ISymUnmanagedReader::GetMethodVersion 메서드</span><span class="sxs-lookup"><span data-stu-id="15c47-102">ISymUnmanagedReader::GetMethodVersion Method</span></span>
-<span data-ttu-id="15c47-103">메서드 버전을 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="15c47-103">Gets the method version.</span></span> <span data-ttu-id="15c47-104">메서드 버전 1에서 시작 하 고 메서드가 다시 컴파일될 때마다 증분됩니다.</span><span class="sxs-lookup"><span data-stu-id="15c47-104">The method version starts at 1 and is incremented each time the method is recompiled.</span></span> <span data-ttu-id="15c47-105">메서드를 변경 하지 않고 컴파일할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="15c47-105">Recompilation can happen without changes to the method.</span></span>  
+# <a name="isymunmanagedreadergetmethodversion-method"></a><span data-ttu-id="501ed-102">ISymUnmanagedReader::GetMethodVersion 메서드</span><span class="sxs-lookup"><span data-stu-id="501ed-102">ISymUnmanagedReader::GetMethodVersion Method</span></span>
+<span data-ttu-id="501ed-103">메서드 버전을 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="501ed-103">Gets the method version.</span></span> <span data-ttu-id="501ed-104">메서드 버전 1에서 시작 하 고 메서드가 다시 컴파일될 때마다 증분됩니다.</span><span class="sxs-lookup"><span data-stu-id="501ed-104">The method version starts at 1 and is incremented each time the method is recompiled.</span></span> <span data-ttu-id="501ed-105">메서드를 변경 하지 않고 컴파일할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="501ed-105">Recompilation can happen without changes to the method.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="15c47-106">구문</span><span class="sxs-lookup"><span data-stu-id="15c47-106">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="501ed-106">구문</span><span class="sxs-lookup"><span data-stu-id="501ed-106">Syntax</span></span>  
   
 ```  
 HRESULT GetMethodVersion (  
@@ -35,18 +35,18 @@ HRESULT GetMethodVersion (
     [out] int* version);  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="15c47-107">매개 변수</span><span class="sxs-lookup"><span data-stu-id="15c47-107">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="501ed-107">매개 변수</span><span class="sxs-lookup"><span data-stu-id="501ed-107">Parameters</span></span>  
  `pMethod`  
- <span data-ttu-id="15c47-108">[in] 버전을 가져올 메서드입니다.</span><span class="sxs-lookup"><span data-stu-id="15c47-108">[in] The method for which to get the version.</span></span>  
+ <span data-ttu-id="501ed-108">[in] 버전을 가져올 메서드입니다.</span><span class="sxs-lookup"><span data-stu-id="501ed-108">[in] The method for which to get the version.</span></span>  
   
  `version`  
- <span data-ttu-id="15c47-109">[out] 메서드 버전을 수신 하는 변수에 대 한 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="15c47-109">[out] A pointer to a variable that receives the method version.</span></span>  
+ <span data-ttu-id="501ed-109">[out] 메서드 버전을 수신 하는 변수에 대 한 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="501ed-109">[out] A pointer to a variable that receives the method version.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="15c47-110">반환 값</span><span class="sxs-lookup"><span data-stu-id="15c47-110">Return Value</span></span>  
- <span data-ttu-id="15c47-111">메서드가 성공 하면 s_ok이 고 그렇지 않으면 E_FAIL 또는 일부 다른 오류 코드입니다.</span><span class="sxs-lookup"><span data-stu-id="15c47-111">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="501ed-110">반환 값</span><span class="sxs-lookup"><span data-stu-id="501ed-110">Return Value</span></span>  
+ <span data-ttu-id="501ed-111">메서드가 성공 하면 s_ok이 고 그렇지 않으면 E_FAIL 또는 일부 다른 오류 코드입니다.</span><span class="sxs-lookup"><span data-stu-id="501ed-111">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="15c47-112">요구 사항</span><span class="sxs-lookup"><span data-stu-id="15c47-112">Requirements</span></span>  
- <span data-ttu-id="15c47-113">**헤더:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="15c47-113">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="501ed-112">요구 사항</span><span class="sxs-lookup"><span data-stu-id="501ed-112">Requirements</span></span>  
+ <span data-ttu-id="501ed-113">**헤더:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="501ed-113">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="15c47-114">참고자료</span><span class="sxs-lookup"><span data-stu-id="15c47-114">See also</span></span>
-- [<span data-ttu-id="15c47-115">ISymUnmanagedReader 인터페이스</span><span class="sxs-lookup"><span data-stu-id="15c47-115">ISymUnmanagedReader Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)
+## <a name="see-also"></a><span data-ttu-id="501ed-114">참고자료</span><span class="sxs-lookup"><span data-stu-id="501ed-114">See also</span></span>
+- [<span data-ttu-id="501ed-115">ISymUnmanagedReader 인터페이스</span><span class="sxs-lookup"><span data-stu-id="501ed-115">ISymUnmanagedReader Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)

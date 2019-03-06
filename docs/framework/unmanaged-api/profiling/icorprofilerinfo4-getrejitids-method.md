@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6cb3a2235325533d5bd943a530a0a8e5b77100e3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0361a4cd048f0b3be6bce47e52dd44ba3cea3475
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54519946"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57482758"
 ---
-# <a name="icorprofilerinfo4getrejitids-method"></a><span data-ttu-id="db304-102">ICorProfilerInfo4::GetReJITIDs 메서드</span><span class="sxs-lookup"><span data-stu-id="db304-102">ICorProfilerInfo4::GetReJITIDs Method</span></span>
-<span data-ttu-id="db304-103">모든 JIT 다시 컴파일된 버전의 지정 된 함수가 여전히 할당 되는 식별 하는 Id의 배열을 반환 합니다.</span><span class="sxs-lookup"><span data-stu-id="db304-103">Returns an array of IDs that identify all JIT-recompiled versions of the specified function that are still allocated.</span></span> <span data-ttu-id="db304-104">이 이후에 되돌릴 되었지만 아직 서비스 되지 않음 (예를 들어 되돌려 진된 함수를 포함 하는 응용 프로그램 도메인 사용 중인 경우 계속)를 해제 하는 함수의 JIT 다시 컴파일된 버전을 포함 합니다.</span><span class="sxs-lookup"><span data-stu-id="db304-104">This includes JIT-recompiled versions of functions that have been subsequently reverted but not yet freed (for example, when the application domain that contains the reverted function is still in use).</span></span>  
+# <a name="icorprofilerinfo4getrejitids-method"></a><span data-ttu-id="0b1d3-102">ICorProfilerInfo4::GetReJITIDs 메서드</span><span class="sxs-lookup"><span data-stu-id="0b1d3-102">ICorProfilerInfo4::GetReJITIDs Method</span></span>
+<span data-ttu-id="0b1d3-103">모든 JIT 다시 컴파일된 버전의 지정 된 함수가 여전히 할당 되는 식별 하는 Id의 배열을 반환 합니다.</span><span class="sxs-lookup"><span data-stu-id="0b1d3-103">Returns an array of IDs that identify all JIT-recompiled versions of the specified function that are still allocated.</span></span> <span data-ttu-id="0b1d3-104">이 이후에 되돌릴 되었지만 아직 서비스 되지 않음 (예를 들어 되돌려 진된 함수를 포함 하는 응용 프로그램 도메인 사용 중인 경우 계속)를 해제 하는 함수의 JIT 다시 컴파일된 버전을 포함 합니다.</span><span class="sxs-lookup"><span data-stu-id="0b1d3-104">This includes JIT-recompiled versions of functions that have been subsequently reverted but not yet freed (for example, when the application domain that contains the reverted function is still in use).</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="db304-105">구문</span><span class="sxs-lookup"><span data-stu-id="db304-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="0b1d3-105">구문</span><span class="sxs-lookup"><span data-stu-id="0b1d3-105">Syntax</span></span>  
   
 ```  
 HRESULT GetReJITIDs (  
@@ -37,32 +37,32 @@ HRESULT GetReJITIDs (
      [out, size_is(cReJitIds), length_is(*pcReJitIds)]   ReJITID        reJitIds[]);  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="db304-106">매개 변수</span><span class="sxs-lookup"><span data-stu-id="db304-106">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="0b1d3-106">매개 변수</span><span class="sxs-lookup"><span data-stu-id="0b1d3-106">Parameters</span></span>  
  `functionId`  
- <span data-ttu-id="db304-107">[in] `FunctionID` 열거할 버전에 대 한 함수 인스턴스.</span><span class="sxs-lookup"><span data-stu-id="db304-107">[in] The `FunctionID` of the function instance for which to enumerate versions.</span></span>  
+ <span data-ttu-id="0b1d3-107">[in] `FunctionID` 열거할 버전에 대 한 함수 인스턴스.</span><span class="sxs-lookup"><span data-stu-id="0b1d3-107">[in] The `FunctionID` of the function instance for which to enumerate versions.</span></span>  
   
  `cReJitIds`  
- <span data-ttu-id="db304-108">[in] JIT 다시 컴파일된 Id에 할당 된 수의 `reJitIds` 배열입니다.</span><span class="sxs-lookup"><span data-stu-id="db304-108">[in] The number of JIT-recompiled IDs allocated in the `reJitIds` array.</span></span>  
+ <span data-ttu-id="0b1d3-108">[in] JIT 다시 컴파일된 Id에 할당 된 수의 `reJitIds` 배열입니다.</span><span class="sxs-lookup"><span data-stu-id="0b1d3-108">[in] The number of JIT-recompiled IDs allocated in the `reJitIds` array.</span></span>  
   
  `pcReJitIds`  
- <span data-ttu-id="db304-109">[out] JIT 다시 컴파일된 Id의 실제 수입니다.</span><span class="sxs-lookup"><span data-stu-id="db304-109">[out] The actual number of JIT-recompiled IDs.</span></span>  
+ <span data-ttu-id="0b1d3-109">[out] JIT 다시 컴파일된 Id의 실제 수입니다.</span><span class="sxs-lookup"><span data-stu-id="0b1d3-109">[out] The actual number of JIT-recompiled IDs.</span></span>  
   
  `reJitIds`  
- <span data-ttu-id="db304-110">[out] 지정 된 함수의 JIT 다시 컴파일된 Id를 포함 하는 호출자에 게 할당 된 배열입니다.</span><span class="sxs-lookup"><span data-stu-id="db304-110">[out] A caller-allocated array that will contain the JIT-recompiled IDs for the specified function.</span></span>  
+ <span data-ttu-id="0b1d3-110">[out] 지정 된 함수의 JIT 다시 컴파일된 Id를 포함 하는 호출자에 게 할당 된 배열입니다.</span><span class="sxs-lookup"><span data-stu-id="0b1d3-110">[out] A caller-allocated array that will contain the JIT-recompiled IDs for the specified function.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="db304-111">설명</span><span class="sxs-lookup"><span data-stu-id="db304-111">Remarks</span></span>  
- <span data-ttu-id="db304-112">`GetReJITIDs` 지정 된 함수 인스턴스에 대 한 활성 JIT 다시 컴파일된 Id를 열거합니다.</span><span class="sxs-lookup"><span data-stu-id="db304-112">`GetReJITIDs` enumerates the active JIT-recompiled IDs for a given function instance.</span></span> <span data-ttu-id="db304-113">다른 것과 동일한 사용 패턴을 따릅니다 `ICorProfilerInfo` 호출자 할당 버퍼를 허용 하는 함수입니다.</span><span class="sxs-lookup"><span data-stu-id="db304-113">It follows the same usage pattern as other `ICorProfilerInfo` functions that accept caller-allocated buffers.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="0b1d3-111">설명</span><span class="sxs-lookup"><span data-stu-id="0b1d3-111">Remarks</span></span>  
+ <span data-ttu-id="0b1d3-112">`GetReJITIDs` 지정 된 함수 인스턴스에 대 한 활성 JIT 다시 컴파일된 Id를 열거합니다.</span><span class="sxs-lookup"><span data-stu-id="0b1d3-112">`GetReJITIDs` enumerates the active JIT-recompiled IDs for a given function instance.</span></span> <span data-ttu-id="0b1d3-113">다른 것과 동일한 사용 패턴을 따릅니다 `ICorProfilerInfo` 호출자 할당 버퍼를 허용 하는 함수입니다.</span><span class="sxs-lookup"><span data-stu-id="0b1d3-113">It follows the same usage pattern as other `ICorProfilerInfo` functions that accept caller-allocated buffers.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="db304-114">요구 사항</span><span class="sxs-lookup"><span data-stu-id="db304-114">Requirements</span></span>  
- <span data-ttu-id="db304-115">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="db304-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="0b1d3-114">요구 사항</span><span class="sxs-lookup"><span data-stu-id="0b1d3-114">Requirements</span></span>  
+ <span data-ttu-id="0b1d3-115">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="0b1d3-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="db304-116">**헤더:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="db304-116">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="0b1d3-116">**헤더:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="0b1d3-116">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="db304-117">**라이브러리:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="db304-117">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="0b1d3-117">**라이브러리:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="0b1d3-117">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="db304-118">**.NET Framework 버전:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="db304-118">**.NET Framework Versions:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span></span>  
+ <span data-ttu-id="0b1d3-118">**.NET Framework 버전:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="0b1d3-118">**.NET Framework Versions:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="db304-119">참고자료</span><span class="sxs-lookup"><span data-stu-id="db304-119">See also</span></span>
-- [<span data-ttu-id="db304-120">ICorProfilerInfo4 인터페이스</span><span class="sxs-lookup"><span data-stu-id="db304-120">ICorProfilerInfo4 Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo4-interface.md)
-- [<span data-ttu-id="db304-121">프로파일링 인터페이스</span><span class="sxs-lookup"><span data-stu-id="db304-121">Profiling Interfaces</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
-- [<span data-ttu-id="db304-122">프로파일링</span><span class="sxs-lookup"><span data-stu-id="db304-122">Profiling</span></span>](../../../../docs/framework/unmanaged-api/profiling/index.md)
+## <a name="see-also"></a><span data-ttu-id="0b1d3-119">참고자료</span><span class="sxs-lookup"><span data-stu-id="0b1d3-119">See also</span></span>
+- [<span data-ttu-id="0b1d3-120">ICorProfilerInfo4 인터페이스</span><span class="sxs-lookup"><span data-stu-id="0b1d3-120">ICorProfilerInfo4 Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo4-interface.md)
+- [<span data-ttu-id="0b1d3-121">프로파일링 인터페이스</span><span class="sxs-lookup"><span data-stu-id="0b1d3-121">Profiling Interfaces</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
+- [<span data-ttu-id="0b1d3-122">프로파일링</span><span class="sxs-lookup"><span data-stu-id="0b1d3-122">Profiling</span></span>](../../../../docs/framework/unmanaged-api/profiling/index.md)

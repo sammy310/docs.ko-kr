@@ -17,23 +17,23 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5ce0a543b44bad4e3ae615d06e38c04cd0fb1207
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a565c19285b00c807ef6fbfc018a40467139638e
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54523664"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57466351"
 ---
-# <a name="iclrruntimeinfoloaderrorstring-method"></a><span data-ttu-id="2cb97-102">ICLRRuntimeInfo::LoadErrorString 메서드</span><span class="sxs-lookup"><span data-stu-id="2cb97-102">ICLRRuntimeInfo::LoadErrorString Method</span></span>
-<span data-ttu-id="2cb97-103">HRESULT 값을 지정된 된 문화권에 대 한 적절 한 오류 메시지를 변환 합니다.</span><span class="sxs-lookup"><span data-stu-id="2cb97-103">Translates an HRESULT value into an appropriate error message for the specified culture.</span></span>  
+# <a name="iclrruntimeinfoloaderrorstring-method"></a><span data-ttu-id="de6d9-102">ICLRRuntimeInfo::LoadErrorString 메서드</span><span class="sxs-lookup"><span data-stu-id="de6d9-102">ICLRRuntimeInfo::LoadErrorString Method</span></span>
+<span data-ttu-id="de6d9-103">HRESULT 값을 지정된 된 문화권에 대 한 적절 한 오류 메시지를 변환 합니다.</span><span class="sxs-lookup"><span data-stu-id="de6d9-103">Translates an HRESULT value into an appropriate error message for the specified culture.</span></span>  
   
- <span data-ttu-id="2cb97-104">이 메서드는 다음 함수를 대체합니다.</span><span class="sxs-lookup"><span data-stu-id="2cb97-104">This method supersedes the following functions:</span></span>  
+ <span data-ttu-id="de6d9-104">이 메서드는 다음 함수를 대체합니다.</span><span class="sxs-lookup"><span data-stu-id="de6d9-104">This method supersedes the following functions:</span></span>  
   
--   [<span data-ttu-id="2cb97-105">LoadStringRC</span><span class="sxs-lookup"><span data-stu-id="2cb97-105">LoadStringRC</span></span>](../../../../docs/framework/unmanaged-api/hosting/loadstringrc-function.md)  
+-   [<span data-ttu-id="de6d9-105">LoadStringRC</span><span class="sxs-lookup"><span data-stu-id="de6d9-105">LoadStringRC</span></span>](../../../../docs/framework/unmanaged-api/hosting/loadstringrc-function.md)  
   
--   [<span data-ttu-id="2cb97-106">LoadStringRCEx</span><span class="sxs-lookup"><span data-stu-id="2cb97-106">LoadStringRCEx</span></span>](../../../../docs/framework/unmanaged-api/hosting/loadstringrcex-function.md)  
+-   [<span data-ttu-id="de6d9-106">LoadStringRCEx</span><span class="sxs-lookup"><span data-stu-id="de6d9-106">LoadStringRCEx</span></span>](../../../../docs/framework/unmanaged-api/hosting/loadstringrcex-function.md)  
   
-## <a name="syntax"></a><span data-ttu-id="2cb97-107">구문</span><span class="sxs-lookup"><span data-stu-id="2cb97-107">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="de6d9-107">구문</span><span class="sxs-lookup"><span data-stu-id="de6d9-107">Syntax</span></span>  
   
 ```  
 HRESULT LoadErrorString(  
@@ -43,38 +43,38 @@ HRESULT LoadErrorString(
      [in, lcid] LONG iLocaleID);  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="2cb97-108">매개 변수</span><span class="sxs-lookup"><span data-stu-id="2cb97-108">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="de6d9-108">매개 변수</span><span class="sxs-lookup"><span data-stu-id="de6d9-108">Parameters</span></span>  
  `iResourceID`  
- <span data-ttu-id="2cb97-109">[in] 변환할 HRESULT입니다.</span><span class="sxs-lookup"><span data-stu-id="2cb97-109">[in] The HRESULT to translate.</span></span>  
+ <span data-ttu-id="de6d9-109">[in] 변환할 HRESULT입니다.</span><span class="sxs-lookup"><span data-stu-id="de6d9-109">[in] The HRESULT to translate.</span></span>  
   
  `pwzBuffer`  
- <span data-ttu-id="2cb97-110">[out] 지정 된 HRESULT와 사용 하 여 연결 된 메시지 문자열입니다.</span><span class="sxs-lookup"><span data-stu-id="2cb97-110">[out] The message string associated with the given HRESULT.</span></span>  
+ <span data-ttu-id="de6d9-110">[out] 지정 된 HRESULT와 사용 하 여 연결 된 메시지 문자열입니다.</span><span class="sxs-lookup"><span data-stu-id="de6d9-110">[out] The message string associated with the given HRESULT.</span></span>  
   
  `pcchBuffer`  
- <span data-ttu-id="2cb97-111">[out에서] 크기 `pwzbuffer` 버퍼 오버런을 방지 합니다.</span><span class="sxs-lookup"><span data-stu-id="2cb97-111">[in, out] The size of `pwzbuffer` to avoid buffer overruns.</span></span> <span data-ttu-id="2cb97-112">하는 경우 `pwzbuffer` 이 null 이면 `pcchBuffer` 의 예상된 크기를 제공 `pwzbuffer` 미리 수 있도록 합니다.</span><span class="sxs-lookup"><span data-stu-id="2cb97-112">If `pwzbuffer` is null, `pcchBuffer` provides the expected size of `pwzbuffer` to allow preallocation.</span></span>  
+ <span data-ttu-id="de6d9-111">[out에서] 크기 `pwzbuffer` 버퍼 오버런을 방지 합니다.</span><span class="sxs-lookup"><span data-stu-id="de6d9-111">[in, out] The size of `pwzbuffer` to avoid buffer overruns.</span></span> <span data-ttu-id="de6d9-112">하는 경우 `pwzbuffer` 이 null 이면 `pcchBuffer` 의 예상된 크기를 제공 `pwzbuffer` 미리 수 있도록 합니다.</span><span class="sxs-lookup"><span data-stu-id="de6d9-112">If `pwzbuffer` is null, `pcchBuffer` provides the expected size of `pwzbuffer` to allow preallocation.</span></span>  
   
  `iLocaleID`  
- <span data-ttu-id="2cb97-113">[in] 문화권 식별자입니다.</span><span class="sxs-lookup"><span data-stu-id="2cb97-113">[in] The culture identifier.</span></span> <span data-ttu-id="2cb97-114">기본 문화권을 사용 하려면-1을 지정 해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="2cb97-114">To use the default culture, you must specify -1.</span></span>  
+ <span data-ttu-id="de6d9-113">[in] 문화권 식별자입니다.</span><span class="sxs-lookup"><span data-stu-id="de6d9-113">[in] The culture identifier.</span></span> <span data-ttu-id="de6d9-114">기본 문화권을 사용 하려면-1을 지정 해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="de6d9-114">To use the default culture, you must specify -1.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="2cb97-115">반환 값</span><span class="sxs-lookup"><span data-stu-id="2cb97-115">Return Value</span></span>  
- <span data-ttu-id="2cb97-116">이 메서드는 다음과 같은 특정 HRESULT뿐만 아니라 메서드 오류를 나타내는 HRESULT 오류도 반환합니다.</span><span class="sxs-lookup"><span data-stu-id="2cb97-116">This method returns the following specific HRESULTs as well as HRESULT errors that indicate method failure.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="de6d9-115">반환 값</span><span class="sxs-lookup"><span data-stu-id="de6d9-115">Return Value</span></span>  
+ <span data-ttu-id="de6d9-116">이 메서드는 다음과 같은 특정 HRESULT뿐만 아니라 메서드 오류를 나타내는 HRESULT 오류도 반환합니다.</span><span class="sxs-lookup"><span data-stu-id="de6d9-116">This method returns the following specific HRESULTs as well as HRESULT errors that indicate method failure.</span></span>  
   
-|<span data-ttu-id="2cb97-117">HRESULT</span><span class="sxs-lookup"><span data-stu-id="2cb97-117">HRESULT</span></span>|<span data-ttu-id="2cb97-118">설명</span><span class="sxs-lookup"><span data-stu-id="2cb97-118">Description</span></span>|  
+|<span data-ttu-id="de6d9-117">HRESULT</span><span class="sxs-lookup"><span data-stu-id="de6d9-117">HRESULT</span></span>|<span data-ttu-id="de6d9-118">설명</span><span class="sxs-lookup"><span data-stu-id="de6d9-118">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="2cb97-119">S_OK</span><span class="sxs-lookup"><span data-stu-id="2cb97-119">S_OK</span></span>|<span data-ttu-id="2cb97-120">메서드가 완료되었습니다.</span><span class="sxs-lookup"><span data-stu-id="2cb97-120">The method completed successfully.</span></span>|  
-|<span data-ttu-id="2cb97-121">E_POINTER</span><span class="sxs-lookup"><span data-stu-id="2cb97-121">E_POINTER</span></span>|<span data-ttu-id="2cb97-122">`pcchBuffer`가 null인 경우</span><span class="sxs-lookup"><span data-stu-id="2cb97-122">`pcchBuffer` is null.</span></span>|  
-|<span data-ttu-id="2cb97-123">E_INVALIDARG</span><span class="sxs-lookup"><span data-stu-id="2cb97-123">E_INVALIDARG</span></span>|<span data-ttu-id="2cb97-124">`pwzBuffer`가 null인 경우</span><span class="sxs-lookup"><span data-stu-id="2cb97-124">`pwzBuffer` is null.</span></span>|  
+|<span data-ttu-id="de6d9-119">S_OK</span><span class="sxs-lookup"><span data-stu-id="de6d9-119">S_OK</span></span>|<span data-ttu-id="de6d9-120">메서드가 완료되었습니다.</span><span class="sxs-lookup"><span data-stu-id="de6d9-120">The method completed successfully.</span></span>|  
+|<span data-ttu-id="de6d9-121">E_POINTER</span><span class="sxs-lookup"><span data-stu-id="de6d9-121">E_POINTER</span></span>|<span data-ttu-id="de6d9-122">`pcchBuffer`가 null입니다.</span><span class="sxs-lookup"><span data-stu-id="de6d9-122">`pcchBuffer` is null.</span></span>|  
+|<span data-ttu-id="de6d9-123">E_INVALIDARG</span><span class="sxs-lookup"><span data-stu-id="de6d9-123">E_INVALIDARG</span></span>|<span data-ttu-id="de6d9-124">`pwzBuffer`가 null입니다.</span><span class="sxs-lookup"><span data-stu-id="de6d9-124">`pwzBuffer` is null.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="2cb97-125">요구 사항</span><span class="sxs-lookup"><span data-stu-id="2cb97-125">Requirements</span></span>  
- <span data-ttu-id="2cb97-126">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="2cb97-126">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="de6d9-125">요구 사항</span><span class="sxs-lookup"><span data-stu-id="de6d9-125">Requirements</span></span>  
+ <span data-ttu-id="de6d9-126">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="de6d9-126">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="2cb97-127">**헤더:** MetaHost.h</span><span class="sxs-lookup"><span data-stu-id="2cb97-127">**Header:** MetaHost.h</span></span>  
+ <span data-ttu-id="de6d9-127">**헤더:** MetaHost.h</span><span class="sxs-lookup"><span data-stu-id="de6d9-127">**Header:** MetaHost.h</span></span>  
   
- <span data-ttu-id="2cb97-128">**라이브러리:** MSCorEE.dll에 리소스로 포함</span><span class="sxs-lookup"><span data-stu-id="2cb97-128">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="de6d9-128">**라이브러리:** MSCorEE.dll에 리소스로 포함</span><span class="sxs-lookup"><span data-stu-id="de6d9-128">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="2cb97-129">**.NET Framework 버전:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="2cb97-129">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
+ <span data-ttu-id="de6d9-129">**.NET Framework 버전:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="de6d9-129">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="2cb97-130">참고자료</span><span class="sxs-lookup"><span data-stu-id="2cb97-130">See also</span></span>
-- [<span data-ttu-id="2cb97-131">ICLRRuntimeInfo 인터페이스</span><span class="sxs-lookup"><span data-stu-id="2cb97-131">ICLRRuntimeInfo Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md)
-- [<span data-ttu-id="2cb97-132">호스팅 인터페이스</span><span class="sxs-lookup"><span data-stu-id="2cb97-132">Hosting Interfaces</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
-- [<span data-ttu-id="2cb97-133">호스팅</span><span class="sxs-lookup"><span data-stu-id="2cb97-133">Hosting</span></span>](../../../../docs/framework/unmanaged-api/hosting/index.md)
+## <a name="see-also"></a><span data-ttu-id="de6d9-130">참고자료</span><span class="sxs-lookup"><span data-stu-id="de6d9-130">See also</span></span>
+- [<span data-ttu-id="de6d9-131">ICLRRuntimeInfo 인터페이스</span><span class="sxs-lookup"><span data-stu-id="de6d9-131">ICLRRuntimeInfo Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md)
+- [<span data-ttu-id="de6d9-132">호스팅 인터페이스</span><span class="sxs-lookup"><span data-stu-id="de6d9-132">Hosting Interfaces</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
+- [<span data-ttu-id="de6d9-133">호스팅</span><span class="sxs-lookup"><span data-stu-id="de6d9-133">Hosting</span></span>](../../../../docs/framework/unmanaged-api/hosting/index.md)

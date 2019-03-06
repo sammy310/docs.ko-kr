@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7ae0838dd5f4dcfe95cd516b23fef3d5ca429031
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0baecc56df18a8ce346f5c4a9f52dd4006583867
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54586369"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57476401"
 ---
-# <a name="icordebugmanagedcallbackbreakpointseterror-method"></a><span data-ttu-id="542d0-102">ICorDebugManagedCallback::BreakpointSetError 메서드</span><span class="sxs-lookup"><span data-stu-id="542d0-102">ICorDebugManagedCallback::BreakpointSetError Method</span></span>
-<span data-ttu-id="542d0-103">공용 언어 런타임에서 함수를 just-in-time (JIT) 컴파일 전에 설정 된 중단점을 정확 하 게 바인딩할 수 있음을 디버거에 알립니다.</span><span class="sxs-lookup"><span data-stu-id="542d0-103">Notifies the debugger that the common language runtime was unable to accurately bind a breakpoint that was set before a function was just-in-time (JIT) compiled.</span></span>  
+# <a name="icordebugmanagedcallbackbreakpointseterror-method"></a><span data-ttu-id="13a51-102">ICorDebugManagedCallback::BreakpointSetError 메서드</span><span class="sxs-lookup"><span data-stu-id="13a51-102">ICorDebugManagedCallback::BreakpointSetError Method</span></span>
+<span data-ttu-id="13a51-103">공용 언어 런타임에서 함수를 just-in-time (JIT) 컴파일 전에 설정 된 중단점을 정확 하 게 바인딩할 수 있음을 디버거에 알립니다.</span><span class="sxs-lookup"><span data-stu-id="13a51-103">Notifies the debugger that the common language runtime was unable to accurately bind a breakpoint that was set before a function was just-in-time (JIT) compiled.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="542d0-104">구문</span><span class="sxs-lookup"><span data-stu-id="542d0-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="13a51-104">구문</span><span class="sxs-lookup"><span data-stu-id="13a51-104">Syntax</span></span>  
   
 ```  
 HRESULT BreakpointSetError (  
@@ -38,30 +38,30 @@ HRESULT BreakpointSetError (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="542d0-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="542d0-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="13a51-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="13a51-105">Parameters</span></span>  
  `pAppDomain`  
- <span data-ttu-id="542d0-106">[in] 바인딩되지 않은 중단점을 포함 하는 응용 프로그램 도메인을 나타내는 ICorDebugAppDomain 개체에 대 한 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="542d0-106">[in] A pointer to an ICorDebugAppDomain object that represents the application domain that contains the unbound breakpoint.</span></span>  
+ <span data-ttu-id="13a51-106">[in] 바인딩되지 않은 중단점을 포함 하는 응용 프로그램 도메인을 나타내는 ICorDebugAppDomain 개체에 대 한 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="13a51-106">[in] A pointer to an ICorDebugAppDomain object that represents the application domain that contains the unbound breakpoint.</span></span>  
   
  `pThread`  
- <span data-ttu-id="542d0-107">[in] 바인딩되지 않은 중단점을 포함 하는 스레드를 나타내는 ICorDebugThread 개체에 대 한 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="542d0-107">[in] A pointer to an ICorDebugThread object that represents the thread that contains the unbound breakpoint.</span></span>  
+ <span data-ttu-id="13a51-107">[in] 바인딩되지 않은 중단점을 포함 하는 스레드를 나타내는 ICorDebugThread 개체에 대 한 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="13a51-107">[in] A pointer to an ICorDebugThread object that represents the thread that contains the unbound breakpoint.</span></span>  
   
  `pBreakpoint`  
- <span data-ttu-id="542d0-108">[in] 바인딩되지 않은 중단점을 나타내는 ICorDebugBreakpoint 개체에 대 한 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="542d0-108">[in] A pointer to an ICorDebugBreakpoint object that represents the unbound breakpoint.</span></span>  
+ <span data-ttu-id="13a51-108">[in] 바인딩되지 않은 중단점을 나타내는 ICorDebugBreakpoint 개체에 대 한 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="13a51-108">[in] A pointer to an ICorDebugBreakpoint object that represents the unbound breakpoint.</span></span>  
   
  `dwError`  
- <span data-ttu-id="542d0-109">[in] 오류를 나타내는 정수입니다.</span><span class="sxs-lookup"><span data-stu-id="542d0-109">[in] An integer that indicates the error.</span></span>  
+ <span data-ttu-id="13a51-109">[in] 오류를 나타내는 정수입니다.</span><span class="sxs-lookup"><span data-stu-id="13a51-109">[in] An integer that indicates the error.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="542d0-110">설명</span><span class="sxs-lookup"><span data-stu-id="542d0-110">Remarks</span></span>  
- <span data-ttu-id="542d0-111">지정 된 중단점을 적중 되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="542d0-111">The given breakpoint will never be hit.</span></span> <span data-ttu-id="542d0-112">디버거는 비활성화 하 고 다시 바인딩해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="542d0-112">The debugger should deactivate and rebind it.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="13a51-110">설명</span><span class="sxs-lookup"><span data-stu-id="13a51-110">Remarks</span></span>  
+ <span data-ttu-id="13a51-111">지정 된 중단점을 적중 되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="13a51-111">The given breakpoint will never be hit.</span></span> <span data-ttu-id="13a51-112">디버거는 비활성화 하 고 다시 바인딩해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="13a51-112">The debugger should deactivate and rebind it.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="542d0-113">요구 사항</span><span class="sxs-lookup"><span data-stu-id="542d0-113">Requirements</span></span>  
- <span data-ttu-id="542d0-114">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="542d0-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="13a51-113">요구 사항</span><span class="sxs-lookup"><span data-stu-id="13a51-113">Requirements</span></span>  
+ <span data-ttu-id="13a51-114">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="13a51-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="542d0-115">**헤더:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="542d0-115">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="13a51-115">**헤더:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="13a51-115">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="542d0-116">**라이브러리:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="542d0-116">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="13a51-116">**라이브러리:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="13a51-116">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="542d0-117">**.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="542d0-117">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="13a51-117">**.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="13a51-117">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="542d0-118">참고자료</span><span class="sxs-lookup"><span data-stu-id="542d0-118">See also</span></span>
-- [<span data-ttu-id="542d0-119">ICorDebugManagedCallback 인터페이스</span><span class="sxs-lookup"><span data-stu-id="542d0-119">ICorDebugManagedCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)
+## <a name="see-also"></a><span data-ttu-id="13a51-118">참고자료</span><span class="sxs-lookup"><span data-stu-id="13a51-118">See also</span></span>
+- [<span data-ttu-id="13a51-119">ICorDebugManagedCallback 인터페이스</span><span class="sxs-lookup"><span data-stu-id="13a51-119">ICorDebugManagedCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)

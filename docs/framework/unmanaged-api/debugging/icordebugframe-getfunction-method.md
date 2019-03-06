@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1b622d1bd82e53d5fa232e07b1f49e6fbba3ccba
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: a48396f8ef668cfe7755b2718180317b465793b6
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33414845"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57475285"
 ---
-# <a name="icordebugframegetfunction-method"></a><span data-ttu-id="6de93-102">ICorDebugFrame::GetFunction 메서드</span><span class="sxs-lookup"><span data-stu-id="6de93-102">ICorDebugFrame::GetFunction Method</span></span>
-<span data-ttu-id="6de93-103">이 스택 프레임과 연결 된 코드를 포함 하는 함수를 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="6de93-103">Gets the function that contains the code associated with this stack frame.</span></span>  
+# <a name="icordebugframegetfunction-method"></a><span data-ttu-id="8f1a8-102">ICorDebugFrame::GetFunction 메서드</span><span class="sxs-lookup"><span data-stu-id="8f1a8-102">ICorDebugFrame::GetFunction Method</span></span>
+<span data-ttu-id="8f1a8-103">이 스택 프레임을 사용 하 여 연결 된 코드를 포함 하는 함수를 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="8f1a8-103">Gets the function that contains the code associated with this stack frame.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="6de93-104">구문</span><span class="sxs-lookup"><span data-stu-id="6de93-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="8f1a8-104">구문</span><span class="sxs-lookup"><span data-stu-id="8f1a8-104">Syntax</span></span>  
   
 ```  
 HRESULT GetFunction (  
@@ -35,18 +35,18 @@ HRESULT GetFunction (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="6de93-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="6de93-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="8f1a8-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="8f1a8-105">Parameters</span></span>  
  `ppFunction`  
- <span data-ttu-id="6de93-106">[out] 이 스택 프레임과 연결 된 코드를 포함 하는 기능을 나타내는 ICorDebugFunction 개체의 주소에 대 한 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="6de93-106">[out] A pointer to the address of an ICorDebugFunction object that represents the function containing the code associated with this stack frame.</span></span>  
+ <span data-ttu-id="8f1a8-106">[out] 이 스택 프레임과 연결 된 코드가 포함 된 함수를 나타내는 ICorDebugFunction 개체의 주소에 대 한 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="8f1a8-106">[out] A pointer to the address of an ICorDebugFunction object that represents the function containing the code associated with this stack frame.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="6de93-107">설명</span><span class="sxs-lookup"><span data-stu-id="6de93-107">Remarks</span></span>  
- <span data-ttu-id="6de93-108">`GetFunction` 프레임 특정 함수에 연결 되지 않은 경우 메서드가 실패할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="6de93-108">The `GetFunction` method may fail if the frame is not associated with any particular function.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="8f1a8-107">설명</span><span class="sxs-lookup"><span data-stu-id="8f1a8-107">Remarks</span></span>  
+ <span data-ttu-id="8f1a8-108">`GetFunction` 프레임 특정 함수에 연결 되어 있지 않으면 메서드가 실패할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="8f1a8-108">The `GetFunction` method may fail if the frame is not associated with any particular function.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="6de93-109">요구 사항</span><span class="sxs-lookup"><span data-stu-id="6de93-109">Requirements</span></span>  
- <span data-ttu-id="6de93-110">**플랫폼:** 참조 [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="6de93-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="8f1a8-109">요구 사항</span><span class="sxs-lookup"><span data-stu-id="8f1a8-109">Requirements</span></span>  
+ <span data-ttu-id="8f1a8-110">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="8f1a8-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="6de93-111">**헤더:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="6de93-111">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="8f1a8-111">**헤더:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="8f1a8-111">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="6de93-112">**라이브러리:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="6de93-112">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="8f1a8-112">**라이브러리:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="8f1a8-112">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="6de93-113">**.NET framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="6de93-113">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
+ <span data-ttu-id="8f1a8-113">**.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="8f1a8-113">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
