@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3a27a50e6fb120e537d28759a79a2b90c6d437e4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3cac53ba77f04141d8d36b270226e97c292399eb
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54600455"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57482732"
 ---
-# <a name="icordebugnativeframegetip-method"></a><span data-ttu-id="ddd05-102">ICorDebugNativeFrame::GetIP 메서드</span><span class="sxs-lookup"><span data-stu-id="ddd05-102">ICorDebugNativeFrame::GetIP Method</span></span>
-<span data-ttu-id="ddd05-103">가져옵니다 네이티브 코드 명령 포인터를 현재 설정 된 위치를 오프셋입니다.</span><span class="sxs-lookup"><span data-stu-id="ddd05-103">Gets the native code offset location to which the instruction pointer is currently set.</span></span>  
+# <a name="icordebugnativeframegetip-method"></a><span data-ttu-id="91f79-102">ICorDebugNativeFrame::GetIP 메서드</span><span class="sxs-lookup"><span data-stu-id="91f79-102">ICorDebugNativeFrame::GetIP Method</span></span>
+<span data-ttu-id="91f79-103">가져옵니다 네이티브 코드 명령 포인터를 현재 설정 된 위치를 오프셋입니다.</span><span class="sxs-lookup"><span data-stu-id="91f79-103">Gets the native code offset location to which the instruction pointer is currently set.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="ddd05-104">구문</span><span class="sxs-lookup"><span data-stu-id="ddd05-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="91f79-104">구문</span><span class="sxs-lookup"><span data-stu-id="91f79-104">Syntax</span></span>  
   
 ```  
 HRESULT GetIP (  
@@ -35,21 +35,21 @@ HRESULT GetIP (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="ddd05-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="ddd05-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="91f79-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="91f79-105">Parameters</span></span>  
  `pnOffset`  
- <span data-ttu-id="ddd05-106">[out] 네이티브 코드 내의 오프셋된 위치에 대 한 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="ddd05-106">[out] A pointer to the offset location in the native code.</span></span>  
+ <span data-ttu-id="91f79-106">[out] 네이티브 코드 내의 오프셋된 위치에 대 한 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="91f79-106">[out] A pointer to the offset location in the native code.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="ddd05-107">설명</span><span class="sxs-lookup"><span data-stu-id="ddd05-107">Remarks</span></span>  
- <span data-ttu-id="ddd05-108">이 "ICorDebugNativeFrame"으로 표시 되는 스택 프레임을 활성 상태인 경우 오프셋 실행할 다음 명령의 주소입니다.</span><span class="sxs-lookup"><span data-stu-id="ddd05-108">If the stack frame that is represented by this "ICorDebugNativeFrame" is active, the offset is the address of the next instruction to be executed.</span></span> <span data-ttu-id="ddd05-109">이 스택 프레임이 활성 상태인 경우 오프셋은 스택 프레임을 다시 활성화 될 때 실행할 다음 명령의 주소입니다.</span><span class="sxs-lookup"><span data-stu-id="ddd05-109">If this stack frame is not active, the offset is the address of the next instruction to be executed when the stack frame is reactivated.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="91f79-107">설명</span><span class="sxs-lookup"><span data-stu-id="91f79-107">Remarks</span></span>  
+ <span data-ttu-id="91f79-108">이 "ICorDebugNativeFrame"으로 표시 되는 스택 프레임을 활성 상태인 경우 오프셋 실행할 다음 명령의 주소입니다.</span><span class="sxs-lookup"><span data-stu-id="91f79-108">If the stack frame that is represented by this "ICorDebugNativeFrame" is active, the offset is the address of the next instruction to be executed.</span></span> <span data-ttu-id="91f79-109">이 스택 프레임이 활성 상태인 경우 오프셋은 스택 프레임을 다시 활성화 될 때 실행할 다음 명령의 주소입니다.</span><span class="sxs-lookup"><span data-stu-id="91f79-109">If this stack frame is not active, the offset is the address of the next instruction to be executed when the stack frame is reactivated.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="ddd05-110">요구 사항</span><span class="sxs-lookup"><span data-stu-id="ddd05-110">Requirements</span></span>  
- <span data-ttu-id="ddd05-111">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="ddd05-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="91f79-110">요구 사항</span><span class="sxs-lookup"><span data-stu-id="91f79-110">Requirements</span></span>  
+ <span data-ttu-id="91f79-111">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="91f79-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="ddd05-112">**헤더:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="ddd05-112">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="91f79-112">**헤더:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="91f79-112">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="ddd05-113">**라이브러리:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="ddd05-113">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="91f79-113">**라이브러리:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="91f79-113">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="ddd05-114">**.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="ddd05-114">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="91f79-114">**.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="91f79-114">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="ddd05-115">참고자료</span><span class="sxs-lookup"><span data-stu-id="ddd05-115">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="91f79-115">참고자료</span><span class="sxs-lookup"><span data-stu-id="91f79-115">See also</span></span>
 

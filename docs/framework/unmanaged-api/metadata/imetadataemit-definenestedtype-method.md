@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ee8e0dec469c7389a69c70567d7b2cb98d3404e6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: da52d540266e2c5f9bfc7f1a83d2683fa765914b
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54603913"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57478754"
 ---
-# <a name="imetadataemitdefinenestedtype-method"></a><span data-ttu-id="a165b-102">IMetaDataEmit::DefineNestedType 메서드</span><span class="sxs-lookup"><span data-stu-id="a165b-102">IMetaDataEmit::DefineNestedType Method</span></span>
-<span data-ttu-id="a165b-103">메타 데이터 서명의 형식 정의 만들고, 반환 합니다는 `mdTypeDef` 해당 형식에 대 한 토큰 및 형식 정의에서 참조 형식의 멤버를 지정 합니다 `tdEncloser` 매개 변수입니다.</span><span class="sxs-lookup"><span data-stu-id="a165b-103">Creates the metadata signature of a type definition, returns an `mdTypeDef` token for that type, and specifies that the defined type is a member of the type referenced by the `tdEncloser` parameter.</span></span>  
+# <a name="imetadataemitdefinenestedtype-method"></a><span data-ttu-id="edbb6-102">IMetaDataEmit::DefineNestedType 메서드</span><span class="sxs-lookup"><span data-stu-id="edbb6-102">IMetaDataEmit::DefineNestedType Method</span></span>
+<span data-ttu-id="edbb6-103">메타 데이터 서명의 형식 정의 만들고, 반환 합니다는 `mdTypeDef` 해당 형식에 대 한 토큰 및 형식 정의에서 참조 형식의 멤버를 지정 합니다 `tdEncloser` 매개 변수입니다.</span><span class="sxs-lookup"><span data-stu-id="edbb6-103">Creates the metadata signature of a type definition, returns an `mdTypeDef` token for that type, and specifies that the defined type is a member of the type referenced by the `tdEncloser` parameter.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="a165b-104">구문</span><span class="sxs-lookup"><span data-stu-id="a165b-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="edbb6-104">구문</span><span class="sxs-lookup"><span data-stu-id="edbb6-104">Syntax</span></span>  
   
 ```  
 HRESULT DefineNestedType (   
@@ -40,34 +40,34 @@ HRESULT DefineNestedType (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="a165b-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="a165b-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="edbb6-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="edbb6-105">Parameters</span></span>  
  `szTypeDef`  
- <span data-ttu-id="a165b-106">[in] 유니코드 형식의 이름입니다.</span><span class="sxs-lookup"><span data-stu-id="a165b-106">[in] The name of the type in Unicode.</span></span>  
+ <span data-ttu-id="edbb6-106">[in] 유니코드 형식의 이름입니다.</span><span class="sxs-lookup"><span data-stu-id="edbb6-106">[in] The name of the type in Unicode.</span></span>  
   
  `dwTypeDefFlags`  
- <span data-ttu-id="a165b-107">[in] `TypeDef` 특성입니다.</span><span class="sxs-lookup"><span data-stu-id="a165b-107">[in] `TypeDef` attributes.</span></span> <span data-ttu-id="a165b-108">이 비트 마스크의 `CorTypeAttr` 값입니다.</span><span class="sxs-lookup"><span data-stu-id="a165b-108">This is a bitmask of `CorTypeAttr` values.</span></span>  
+ <span data-ttu-id="edbb6-107">[in] `TypeDef` 특성입니다.</span><span class="sxs-lookup"><span data-stu-id="edbb6-107">[in] `TypeDef` attributes.</span></span> <span data-ttu-id="edbb6-108">이 비트 마스크의 `CorTypeAttr` 값입니다.</span><span class="sxs-lookup"><span data-stu-id="edbb6-108">This is a bitmask of `CorTypeAttr` values.</span></span>  
   
  `tkExtends`  
- <span data-ttu-id="a165b-109">[in] 토큰의 기본 클래스입니다.</span><span class="sxs-lookup"><span data-stu-id="a165b-109">[in] The token of the base class.</span></span> <span data-ttu-id="a165b-110">이 값은 `mdTypeDef` 또는 `mdTypeRef` 토큰입니다.</span><span class="sxs-lookup"><span data-stu-id="a165b-110">This is either a `mdTypeDef` or a `mdTypeRef` token.</span></span>  
+ <span data-ttu-id="edbb6-109">[in] 토큰의 기본 클래스입니다.</span><span class="sxs-lookup"><span data-stu-id="edbb6-109">[in] The token of the base class.</span></span> <span data-ttu-id="edbb6-110">이 값은 `mdTypeDef` 또는 `mdTypeRef` 토큰입니다.</span><span class="sxs-lookup"><span data-stu-id="edbb6-110">This is either a `mdTypeDef` or a `mdTypeRef` token.</span></span>  
   
- <span data-ttu-id="a165b-111">`rtkImplements`[]</span><span class="sxs-lookup"><span data-stu-id="a165b-111">`rtkImplements`[]</span></span>  
- <span data-ttu-id="a165b-112">[in] 이 클래스 또는 인터페이스를 구현 하는 인터페이스를 지정 하는 토큰의 배열입니다.</span><span class="sxs-lookup"><span data-stu-id="a165b-112">[in] An array of tokens that specify the interfaces that this class or interface implements.</span></span>  
+ <span data-ttu-id="edbb6-111">`rtkImplements`[]</span><span class="sxs-lookup"><span data-stu-id="edbb6-111">`rtkImplements`[]</span></span>  
+ <span data-ttu-id="edbb6-112">[in] 이 클래스 또는 인터페이스를 구현 하는 인터페이스를 지정 하는 토큰의 배열입니다.</span><span class="sxs-lookup"><span data-stu-id="edbb6-112">[in] An array of tokens that specify the interfaces that this class or interface implements.</span></span>  
   
  `tdEncloser`  
- <span data-ttu-id="a165b-113">[in] 바깥쪽 형식의 토큰입니다.</span><span class="sxs-lookup"><span data-stu-id="a165b-113">[in] The token of the enclosing type.</span></span> <span data-ttu-id="a165b-114">배열의 마지막 요소 여야 합니다 `mdTokenNil`합니다.</span><span class="sxs-lookup"><span data-stu-id="a165b-114">The last element of the array must be `mdTokenNil`.</span></span>  
+ <span data-ttu-id="edbb6-113">[in] 바깥쪽 형식의 토큰입니다.</span><span class="sxs-lookup"><span data-stu-id="edbb6-113">[in] The token of the enclosing type.</span></span> <span data-ttu-id="edbb6-114">배열의 마지막 요소 여야 합니다 `mdTokenNil`합니다.</span><span class="sxs-lookup"><span data-stu-id="edbb6-114">The last element of the array must be `mdTokenNil`.</span></span>  
   
  `ptd`  
- <span data-ttu-id="a165b-115">[out] `mdTypeDef` 할당 된 토큰입니다.</span><span class="sxs-lookup"><span data-stu-id="a165b-115">[out] The `mdTypeDef` token assigned.</span></span>  
+ <span data-ttu-id="edbb6-115">[out] `mdTypeDef` 할당 된 토큰입니다.</span><span class="sxs-lookup"><span data-stu-id="edbb6-115">[out] The `mdTypeDef` token assigned.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="a165b-116">요구 사항</span><span class="sxs-lookup"><span data-stu-id="a165b-116">Requirements</span></span>  
- <span data-ttu-id="a165b-117">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="a165b-117">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="edbb6-116">요구 사항</span><span class="sxs-lookup"><span data-stu-id="edbb6-116">Requirements</span></span>  
+ <span data-ttu-id="edbb6-117">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="edbb6-117">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="a165b-118">**헤더:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="a165b-118">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="edbb6-118">**헤더:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="edbb6-118">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="a165b-119">**라이브러리:** MSCorEE.dll에서 리소스로 사용</span><span class="sxs-lookup"><span data-stu-id="a165b-119">**Library:** Used as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="edbb6-119">**라이브러리:** MSCorEE.dll에서 리소스로 사용</span><span class="sxs-lookup"><span data-stu-id="edbb6-119">**Library:** Used as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="a165b-120">**.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="a165b-120">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="edbb6-120">**.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="edbb6-120">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="a165b-121">참고자료</span><span class="sxs-lookup"><span data-stu-id="a165b-121">See also</span></span>
-- [<span data-ttu-id="a165b-122">IMetaDataEmit 인터페이스</span><span class="sxs-lookup"><span data-stu-id="a165b-122">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
-- [<span data-ttu-id="a165b-123">IMetaDataEmit2 인터페이스</span><span class="sxs-lookup"><span data-stu-id="a165b-123">IMetaDataEmit2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+## <a name="see-also"></a><span data-ttu-id="edbb6-121">참고자료</span><span class="sxs-lookup"><span data-stu-id="edbb6-121">See also</span></span>
+- [<span data-ttu-id="edbb6-122">IMetaDataEmit 인터페이스</span><span class="sxs-lookup"><span data-stu-id="edbb6-122">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
+- [<span data-ttu-id="edbb6-123">IMetaDataEmit2 인터페이스</span><span class="sxs-lookup"><span data-stu-id="edbb6-123">IMetaDataEmit2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

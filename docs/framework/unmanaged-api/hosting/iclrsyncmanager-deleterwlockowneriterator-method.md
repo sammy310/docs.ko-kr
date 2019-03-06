@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 008e76b57ed0925eaae29cf7d2b451fc9ddd08a1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ba0cabfe9e96ace255235f1aa7d2b80452c4d72e
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54730102"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57482888"
 ---
-# <a name="iclrsyncmanagerdeleterwlockowneriterator-method"></a><span data-ttu-id="6435e-102">ICLRSyncManager::DeleteRWLockOwnerIterator 메서드</span><span class="sxs-lookup"><span data-stu-id="6435e-102">ICLRSyncManager::DeleteRWLockOwnerIterator Method</span></span>
-<span data-ttu-id="6435e-103">CLR (공용 언어 런타임)를 호출 하 여 생성 된 반복기 삭제를 요청 [iclrsyncmanager:: Createrwlockowneriterator](../../../../docs/framework/unmanaged-api/hosting/iclrsyncmanager-createrwlockowneriterator-method.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="6435e-103">Requests that the common language runtime (CLR) destroy an iterator that was created by a call to [ICLRSyncManager::CreateRWLockOwnerIterator](../../../../docs/framework/unmanaged-api/hosting/iclrsyncmanager-createrwlockowneriterator-method.md).</span></span>  
+# <a name="iclrsyncmanagerdeleterwlockowneriterator-method"></a><span data-ttu-id="2479f-102">ICLRSyncManager::DeleteRWLockOwnerIterator 메서드</span><span class="sxs-lookup"><span data-stu-id="2479f-102">ICLRSyncManager::DeleteRWLockOwnerIterator Method</span></span>
+<span data-ttu-id="2479f-103">CLR (공용 언어 런타임)를 호출 하 여 생성 된 반복기 삭제를 요청 [iclrsyncmanager:: Createrwlockowneriterator](../../../../docs/framework/unmanaged-api/hosting/iclrsyncmanager-createrwlockowneriterator-method.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="2479f-103">Requests that the common language runtime (CLR) destroy an iterator that was created by a call to [ICLRSyncManager::CreateRWLockOwnerIterator](../../../../docs/framework/unmanaged-api/hosting/iclrsyncmanager-createrwlockowneriterator-method.md).</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="6435e-104">구문</span><span class="sxs-lookup"><span data-stu-id="6435e-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="2479f-104">구문</span><span class="sxs-lookup"><span data-stu-id="2479f-104">Syntax</span></span>  
   
 ```  
 HRESULT DeleteRWLockOwnerIterator (  
@@ -35,33 +35,33 @@ HRESULT DeleteRWLockOwnerIterator (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="6435e-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="6435e-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="2479f-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="2479f-105">Parameters</span></span>  
  `Iterator`  
- <span data-ttu-id="6435e-106">[in] 에 대 한 호출을 사용 하 여 생성 된 반복기 `CreateRWLockOwnerIterator`합니다.</span><span class="sxs-lookup"><span data-stu-id="6435e-106">[in] The iterator that was created by using a call to `CreateRWLockOwnerIterator`.</span></span>  
+ <span data-ttu-id="2479f-106">[in] 에 대 한 호출을 사용 하 여 생성 된 반복기 `CreateRWLockOwnerIterator`합니다.</span><span class="sxs-lookup"><span data-stu-id="2479f-106">[in] The iterator that was created by using a call to `CreateRWLockOwnerIterator`.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="6435e-107">반환 값</span><span class="sxs-lookup"><span data-stu-id="6435e-107">Return Value</span></span>  
+## <a name="return-value"></a><span data-ttu-id="2479f-107">반환 값</span><span class="sxs-lookup"><span data-stu-id="2479f-107">Return Value</span></span>  
   
-|<span data-ttu-id="6435e-108">HRESULT</span><span class="sxs-lookup"><span data-stu-id="6435e-108">HRESULT</span></span>|<span data-ttu-id="6435e-109">설명</span><span class="sxs-lookup"><span data-stu-id="6435e-109">Description</span></span>|  
+|<span data-ttu-id="2479f-108">HRESULT</span><span class="sxs-lookup"><span data-stu-id="2479f-108">HRESULT</span></span>|<span data-ttu-id="2479f-109">설명</span><span class="sxs-lookup"><span data-stu-id="2479f-109">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="6435e-110">S_OK</span><span class="sxs-lookup"><span data-stu-id="6435e-110">S_OK</span></span>|<span data-ttu-id="6435e-111">`DeleteRWLockOwnerIterator` 성공적으로 반환 합니다.</span><span class="sxs-lookup"><span data-stu-id="6435e-111">`DeleteRWLockOwnerIterator` returned successfully.</span></span>|  
-|<span data-ttu-id="6435e-112">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="6435e-112">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="6435e-113">CLR을 프로세스로 로드 되지 않았습니다 또는 상태는 관리 코드를 실행 하거나 호출을 처리할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="6435e-113">The CLR has not been loaded into a process, or is in a state in which it cannot run managed code or successfully process the call.</span></span>|  
-|<span data-ttu-id="6435e-114">HOST_E_TIMEOUT</span><span class="sxs-lookup"><span data-stu-id="6435e-114">HOST_E_TIMEOUT</span></span>|<span data-ttu-id="6435e-115">호출 시간이 초과 되었습니다.</span><span class="sxs-lookup"><span data-stu-id="6435e-115">The call timed out.</span></span>|  
-|<span data-ttu-id="6435e-116">HOST_E_NOT_OWNER</span><span class="sxs-lookup"><span data-stu-id="6435e-116">HOST_E_NOT_OWNER</span></span>|<span data-ttu-id="6435e-117">호출자가 잠금을 소유 하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="6435e-117">The caller does not own the lock.</span></span>|  
-|<span data-ttu-id="6435e-118">HOST_E_ABANDONED</span><span class="sxs-lookup"><span data-stu-id="6435e-118">HOST_E_ABANDONED</span></span>|<span data-ttu-id="6435e-119">이벤트가 차단 된 스레드가 취소 된 또는 파이버를 대기 하 고 있습니다.</span><span class="sxs-lookup"><span data-stu-id="6435e-119">An event was canceled while a blocked thread or fiber was waiting on it.</span></span>|  
-|<span data-ttu-id="6435e-120">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="6435e-120">E_FAIL</span></span>|<span data-ttu-id="6435e-121">알 수 없는 치명적인 오류가 발생 했습니다.</span><span class="sxs-lookup"><span data-stu-id="6435e-121">An unknown catastrophic failure occurred.</span></span> <span data-ttu-id="6435e-122">메서드 E_FAIL을 반환 하는 경우 CLR은 프로세스 내에서 사용할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="6435e-122">When a method returns E_FAIL, the CLR is no longer usable within the process.</span></span> <span data-ttu-id="6435e-123">메서드를 호스트 하는 데 대 한 후속 호출 HOST_E_CLRNOTAVAILABLE를 반환 합니다.</span><span class="sxs-lookup"><span data-stu-id="6435e-123">Subsequent calls to hosting methods return HOST_E_CLRNOTAVAILABLE.</span></span>|  
+|<span data-ttu-id="2479f-110">S_OK</span><span class="sxs-lookup"><span data-stu-id="2479f-110">S_OK</span></span>|<span data-ttu-id="2479f-111">`DeleteRWLockOwnerIterator` 성공적으로 반환 합니다.</span><span class="sxs-lookup"><span data-stu-id="2479f-111">`DeleteRWLockOwnerIterator` returned successfully.</span></span>|  
+|<span data-ttu-id="2479f-112">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="2479f-112">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="2479f-113">CLR을 프로세스로 로드 되지 않았습니다 또는 상태는 관리 코드를 실행 하거나 호출을 처리할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="2479f-113">The CLR has not been loaded into a process, or is in a state in which it cannot run managed code or successfully process the call.</span></span>|  
+|<span data-ttu-id="2479f-114">HOST_E_TIMEOUT</span><span class="sxs-lookup"><span data-stu-id="2479f-114">HOST_E_TIMEOUT</span></span>|<span data-ttu-id="2479f-115">호출 시간이 초과 되었습니다.</span><span class="sxs-lookup"><span data-stu-id="2479f-115">The call timed out.</span></span>|  
+|<span data-ttu-id="2479f-116">HOST_E_NOT_OWNER</span><span class="sxs-lookup"><span data-stu-id="2479f-116">HOST_E_NOT_OWNER</span></span>|<span data-ttu-id="2479f-117">호출자가 잠금을 소유 하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="2479f-117">The caller does not own the lock.</span></span>|  
+|<span data-ttu-id="2479f-118">HOST_E_ABANDONED</span><span class="sxs-lookup"><span data-stu-id="2479f-118">HOST_E_ABANDONED</span></span>|<span data-ttu-id="2479f-119">이벤트가 차단 된 스레드가 취소 된 또는 파이버를 대기 하 고 있습니다.</span><span class="sxs-lookup"><span data-stu-id="2479f-119">An event was canceled while a blocked thread or fiber was waiting on it.</span></span>|  
+|<span data-ttu-id="2479f-120">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="2479f-120">E_FAIL</span></span>|<span data-ttu-id="2479f-121">알 수 없는 치명적인 오류가 발생 했습니다.</span><span class="sxs-lookup"><span data-stu-id="2479f-121">An unknown catastrophic failure occurred.</span></span> <span data-ttu-id="2479f-122">메서드 E_FAIL을 반환 하는 경우 CLR은 프로세스 내에서 사용할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="2479f-122">When a method returns E_FAIL, the CLR is no longer usable within the process.</span></span> <span data-ttu-id="2479f-123">메서드를 호스트 하는 데 대 한 후속 호출 HOST_E_CLRNOTAVAILABLE를 반환 합니다.</span><span class="sxs-lookup"><span data-stu-id="2479f-123">Subsequent calls to hosting methods return HOST_E_CLRNOTAVAILABLE.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="6435e-124">설명</span><span class="sxs-lookup"><span data-stu-id="6435e-124">Remarks</span></span>  
- <span data-ttu-id="6435e-125">호스트에서이 메서드를 호출할 수 및 `CreateRWLockOwnerIterator` 스레딩 구현이 동기화 유지 되도록 합니다.</span><span class="sxs-lookup"><span data-stu-id="6435e-125">The host can call this method and `CreateRWLockOwnerIterator` to ensure that its threading implementation remains synchronized.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="2479f-124">설명</span><span class="sxs-lookup"><span data-stu-id="2479f-124">Remarks</span></span>  
+ <span data-ttu-id="2479f-125">호스트에서이 메서드를 호출할 수 및 `CreateRWLockOwnerIterator` 스레딩 구현이 동기화 유지 되도록 합니다.</span><span class="sxs-lookup"><span data-stu-id="2479f-125">The host can call this method and `CreateRWLockOwnerIterator` to ensure that its threading implementation remains synchronized.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="6435e-126">요구 사항</span><span class="sxs-lookup"><span data-stu-id="6435e-126">Requirements</span></span>  
- <span data-ttu-id="6435e-127">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="6435e-127">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="2479f-126">요구 사항</span><span class="sxs-lookup"><span data-stu-id="2479f-126">Requirements</span></span>  
+ <span data-ttu-id="2479f-127">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="2479f-127">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="6435e-128">**헤더:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="6435e-128">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="2479f-128">**헤더:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="2479f-128">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="6435e-129">**라이브러리:** MSCorEE.dll에 리소스로 포함</span><span class="sxs-lookup"><span data-stu-id="6435e-129">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="2479f-129">**라이브러리:** MSCorEE.dll에 리소스로 포함</span><span class="sxs-lookup"><span data-stu-id="2479f-129">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="6435e-130">**.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="6435e-130">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="2479f-130">**.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="2479f-130">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="6435e-131">참고자료</span><span class="sxs-lookup"><span data-stu-id="6435e-131">See also</span></span>
-- [<span data-ttu-id="6435e-132">ICLRSyncManager 인터페이스</span><span class="sxs-lookup"><span data-stu-id="6435e-132">ICLRSyncManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrsyncmanager-interface.md)
-- [<span data-ttu-id="6435e-133">IHostSyncManager 인터페이스</span><span class="sxs-lookup"><span data-stu-id="6435e-133">IHostSyncManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostsyncmanager-interface.md)
+## <a name="see-also"></a><span data-ttu-id="2479f-131">참고자료</span><span class="sxs-lookup"><span data-stu-id="2479f-131">See also</span></span>
+- [<span data-ttu-id="2479f-132">ICLRSyncManager 인터페이스</span><span class="sxs-lookup"><span data-stu-id="2479f-132">ICLRSyncManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrsyncmanager-interface.md)
+- [<span data-ttu-id="2479f-133">IHostSyncManager 인터페이스</span><span class="sxs-lookup"><span data-stu-id="2479f-133">IHostSyncManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostsyncmanager-interface.md)

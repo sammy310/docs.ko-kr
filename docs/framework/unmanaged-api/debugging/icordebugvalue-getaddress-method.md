@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b88c49ba93ff3c4cc3f5c7a656dfa5da6e82109e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d6f8a9c62a1be682d3f0259c27f311e2dcbb2f11
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54559844"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57492727"
 ---
-# <a name="icordebugvaluegetaddress-method"></a><span data-ttu-id="59f26-102">ICorDebugValue::GetAddress 메서드</span><span class="sxs-lookup"><span data-stu-id="59f26-102">ICorDebugValue::GetAddress Method</span></span>
-<span data-ttu-id="59f26-103">디버깅 중인 프로세스에 있는이 "ICorDebugValue" 개체의 주소를 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="59f26-103">Gets the address of this "ICorDebugValue" object, which is in the process of being debugged.</span></span>  
+# <a name="icordebugvaluegetaddress-method"></a><span data-ttu-id="86690-102">ICorDebugValue::GetAddress 메서드</span><span class="sxs-lookup"><span data-stu-id="86690-102">ICorDebugValue::GetAddress Method</span></span>
+<span data-ttu-id="86690-103">디버깅 중인 프로세스에 있는이 "ICorDebugValue" 개체의 주소를 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="86690-103">Gets the address of this "ICorDebugValue" object, which is in the process of being debugged.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="59f26-104">구문</span><span class="sxs-lookup"><span data-stu-id="59f26-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="86690-104">구문</span><span class="sxs-lookup"><span data-stu-id="86690-104">Syntax</span></span>  
   
 ```  
 HRESULT GetAddress (  
@@ -35,21 +35,21 @@ HRESULT GetAddress (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="59f26-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="59f26-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="86690-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="86690-105">Parameters</span></span>  
  `pAddress`  
- <span data-ttu-id="59f26-106">[out] 에 대 한 포인터를 `CORDB_ADDRESS` 이 값 개체의 주소를 지정 하는 개체입니다.</span><span class="sxs-lookup"><span data-stu-id="59f26-106">[out] Pointer to a `CORDB_ADDRESS` object that specifies the address of this value object.</span></span>  
+ <span data-ttu-id="86690-106">[out] 에 대 한 포인터를 `CORDB_ADDRESS` 이 값 개체의 주소를 지정 하는 개체입니다.</span><span class="sxs-lookup"><span data-stu-id="86690-106">[out] Pointer to a `CORDB_ADDRESS` object that specifies the address of this value object.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="59f26-107">설명</span><span class="sxs-lookup"><span data-stu-id="59f26-107">Remarks</span></span>  
- <span data-ttu-id="59f26-108">값을 사용할 수 없는 경우 0 (영)이 반환 됩니다.</span><span class="sxs-lookup"><span data-stu-id="59f26-108">If the value is unavailable, 0 (zero) is returned.</span></span> <span data-ttu-id="59f26-109">이 값은 적어도 부분적으로 등록 하는 경우 발생할 수 있습니다 또는 가비지 수집기 핸들에 저장 (`GCHandle`).</span><span class="sxs-lookup"><span data-stu-id="59f26-109">This could happen if the value is at least partly in registers or stored in a garbage collector handle (`GCHandle`).</span></span>  
+## <a name="remarks"></a><span data-ttu-id="86690-107">설명</span><span class="sxs-lookup"><span data-stu-id="86690-107">Remarks</span></span>  
+ <span data-ttu-id="86690-108">값을 사용할 수 없는 경우 0 (영)이 반환 됩니다.</span><span class="sxs-lookup"><span data-stu-id="86690-108">If the value is unavailable, 0 (zero) is returned.</span></span> <span data-ttu-id="86690-109">이 값은 적어도 부분적으로 등록 하는 경우 발생할 수 있습니다 또는 가비지 수집기 핸들에 저장 (`GCHandle`).</span><span class="sxs-lookup"><span data-stu-id="86690-109">This could happen if the value is at least partly in registers or stored in a garbage collector handle (`GCHandle`).</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="59f26-110">요구 사항</span><span class="sxs-lookup"><span data-stu-id="59f26-110">Requirements</span></span>  
- <span data-ttu-id="59f26-111">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="59f26-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="86690-110">요구 사항</span><span class="sxs-lookup"><span data-stu-id="86690-110">Requirements</span></span>  
+ <span data-ttu-id="86690-111">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="86690-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="59f26-112">**헤더:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="59f26-112">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="86690-112">**헤더:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="86690-112">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="59f26-113">**라이브러리:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="59f26-113">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="86690-113">**라이브러리:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="86690-113">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="59f26-114">**.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="59f26-114">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="86690-114">**.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="86690-114">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="59f26-115">참고자료</span><span class="sxs-lookup"><span data-stu-id="59f26-115">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="86690-115">참고자료</span><span class="sxs-lookup"><span data-stu-id="86690-115">See also</span></span>
 

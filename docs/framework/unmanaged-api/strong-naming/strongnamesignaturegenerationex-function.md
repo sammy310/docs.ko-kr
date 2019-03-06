@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 60825cb82097e6ec9c202efebe04a50b0f5a3771
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c63a586473128281843ec100905e63d381f1a3f7
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54508614"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57500938"
 ---
-# <a name="strongnamesignaturegenerationex-function"></a><span data-ttu-id="cb13b-102">StrongNameSignatureGenerationEx 함수</span><span class="sxs-lookup"><span data-stu-id="cb13b-102">StrongNameSignatureGenerationEx Function</span></span>
-<span data-ttu-id="cb13b-103">지정된 된 플래그에 따라 지정된 된 어셈블리의 강력한 이름 시그니처를 생성합니다.</span><span class="sxs-lookup"><span data-stu-id="cb13b-103">Generates a strong name signature for the specified assembly, according to the specified flags.</span></span>  
+# <a name="strongnamesignaturegenerationex-function"></a><span data-ttu-id="cb522-102">StrongNameSignatureGenerationEx 함수</span><span class="sxs-lookup"><span data-stu-id="cb522-102">StrongNameSignatureGenerationEx Function</span></span>
+<span data-ttu-id="cb522-103">지정된 된 플래그에 따라 지정된 된 어셈블리의 강력한 이름 시그니처를 생성합니다.</span><span class="sxs-lookup"><span data-stu-id="cb522-103">Generates a strong name signature for the specified assembly, according to the specified flags.</span></span>  
   
- <span data-ttu-id="cb13b-104">이 함수는 더 이상 사용 되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="cb13b-104">This function has been deprecated.</span></span> <span data-ttu-id="cb13b-105">사용 된 [iclrstrongname:: Strongnamesignaturegenerationex](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamesignaturegenerationex-method.md) 메서드 대신 합니다.</span><span class="sxs-lookup"><span data-stu-id="cb13b-105">Use the [ICLRStrongName::StrongNameSignatureGenerationEx](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamesignaturegenerationex-method.md) method instead.</span></span>  
+ <span data-ttu-id="cb522-104">이 함수는 더 이상 사용 되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="cb522-104">This function has been deprecated.</span></span> <span data-ttu-id="cb522-105">사용 된 [iclrstrongname:: Strongnamesignaturegenerationex](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamesignaturegenerationex-method.md) 메서드 대신 합니다.</span><span class="sxs-lookup"><span data-stu-id="cb522-105">Use the [ICLRStrongName::StrongNameSignatureGenerationEx](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamesignaturegenerationex-method.md) method instead.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="cb13b-106">구문</span><span class="sxs-lookup"><span data-stu-id="cb13b-106">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="cb522-106">구문</span><span class="sxs-lookup"><span data-stu-id="cb522-106">Syntax</span></span>  
   
 ```  
 BOOLEAN StrongNameSignatureGenerationEx (  
@@ -42,62 +42,62 @@ BOOLEAN StrongNameSignatureGenerationEx (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="cb13b-107">매개 변수</span><span class="sxs-lookup"><span data-stu-id="cb13b-107">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="cb522-107">매개 변수</span><span class="sxs-lookup"><span data-stu-id="cb522-107">Parameters</span></span>  
  `wszFilePath`  
- <span data-ttu-id="cb13b-108">[in] 강력한 이름 시그니처를 생성 하는 어셈블리의 매니페스트가 포함 된 파일 경로입니다.</span><span class="sxs-lookup"><span data-stu-id="cb13b-108">[in] The path to the file that contains the manifest of the assembly for which the strong name signature will be generated.</span></span>  
+ <span data-ttu-id="cb522-108">[in] 강력한 이름 시그니처를 생성 하는 어셈블리의 매니페스트가 포함 된 파일 경로입니다.</span><span class="sxs-lookup"><span data-stu-id="cb522-108">[in] The path to the file that contains the manifest of the assembly for which the strong name signature will be generated.</span></span>  
   
  `wszKeyContainer`  
- <span data-ttu-id="cb13b-109">[in] 공개/개인 키 쌍을 포함 하는 키 컨테이너의 이름입니다.</span><span class="sxs-lookup"><span data-stu-id="cb13b-109">[in] The name of the key container that contains the public/private key pair.</span></span>  
+ <span data-ttu-id="cb522-109">[in] 공개/개인 키 쌍을 포함 하는 키 컨테이너의 이름입니다.</span><span class="sxs-lookup"><span data-stu-id="cb522-109">[in] The name of the key container that contains the public/private key pair.</span></span>  
   
- <span data-ttu-id="cb13b-110">하는 경우 `pbKeyBlob` 이 null 이면 `wszKeyContainer` 암호화 서비스 공급자 (CSP) 내에서 유효한 컨테이너를 지정 해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="cb13b-110">If `pbKeyBlob` is null, `wszKeyContainer` must specify a valid container within the cryptographic service provider (CSP).</span></span> <span data-ttu-id="cb13b-111">이 경우 컨테이너에 저장 된 키 쌍 파일에 서명 사용 됩니다.</span><span class="sxs-lookup"><span data-stu-id="cb13b-111">In this case, the key pair stored in the container is used to sign the file.</span></span>  
+ <span data-ttu-id="cb522-110">하는 경우 `pbKeyBlob` 이 null 이면 `wszKeyContainer` 암호화 서비스 공급자 (CSP) 내에서 유효한 컨테이너를 지정 해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="cb522-110">If `pbKeyBlob` is null, `wszKeyContainer` must specify a valid container within the cryptographic service provider (CSP).</span></span> <span data-ttu-id="cb522-111">이 경우 컨테이너에 저장 된 키 쌍 파일에 서명 사용 됩니다.</span><span class="sxs-lookup"><span data-stu-id="cb522-111">In this case, the key pair stored in the container is used to sign the file.</span></span>  
   
- <span data-ttu-id="cb13b-112">경우 `pbKeyBlob` null이 아니면 키 쌍 가정 키 binary large object (BLOB)에 포함 되어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="cb13b-112">If `pbKeyBlob` is not null, the key pair is assumed to be contained in the key binary large object (BLOB).</span></span>  
+ <span data-ttu-id="cb522-112">경우 `pbKeyBlob` null이 아니면 키 쌍 가정 키 binary large object (BLOB)에 포함 되어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="cb522-112">If `pbKeyBlob` is not null, the key pair is assumed to be contained in the key binary large object (BLOB).</span></span>  
   
  `pbKeyBlob`  
- <span data-ttu-id="cb13b-113">[in] 공개/개인 키 쌍에 대 한 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="cb13b-113">[in] A pointer to the public/private key pair.</span></span> <span data-ttu-id="cb13b-114">이 쌍이 win32 만들어진 형식을 `CryptExportKey` 함수입니다.</span><span class="sxs-lookup"><span data-stu-id="cb13b-114">This pair is in the format created by the Win32 `CryptExportKey` function.</span></span> <span data-ttu-id="cb13b-115">하는 경우 `pbKeyBlob` 가 null 이면 지정 된 키 컨테이너 `wszKeyContainer` 키 쌍을 포함 하도록 간주 됩니다.</span><span class="sxs-lookup"><span data-stu-id="cb13b-115">If `pbKeyBlob` is null, the key container specified by `wszKeyContainer` is assumed to contain the key pair.</span></span>  
+ <span data-ttu-id="cb522-113">[in] 공개/개인 키 쌍에 대 한 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="cb522-113">[in] A pointer to the public/private key pair.</span></span> <span data-ttu-id="cb522-114">이 쌍이 win32 만들어진 형식을 `CryptExportKey` 함수입니다.</span><span class="sxs-lookup"><span data-stu-id="cb522-114">This pair is in the format created by the Win32 `CryptExportKey` function.</span></span> <span data-ttu-id="cb522-115">하는 경우 `pbKeyBlob` 가 null 이면 지정 된 키 컨테이너 `wszKeyContainer` 키 쌍을 포함 하도록 간주 됩니다.</span><span class="sxs-lookup"><span data-stu-id="cb522-115">If `pbKeyBlob` is null, the key container specified by `wszKeyContainer` is assumed to contain the key pair.</span></span>  
   
  `cbKeyBlob`  
- <span data-ttu-id="cb13b-116">[in] 크기 (바이트)의 `pbKeyBlob`합니다.</span><span class="sxs-lookup"><span data-stu-id="cb13b-116">[in] The size, in bytes, of `pbKeyBlob`.</span></span>  
+ <span data-ttu-id="cb522-116">[in] 크기 (바이트)의 `pbKeyBlob`합니다.</span><span class="sxs-lookup"><span data-stu-id="cb522-116">[in] The size, in bytes, of `pbKeyBlob`.</span></span>  
   
  `ppbSignatureBlob`  
- <span data-ttu-id="cb13b-117">[out] 공용 언어 런타임 시그니처를 반환 하는 위치에 대 한 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="cb13b-117">[out] A pointer to the location to which the common language runtime returns the signature.</span></span> <span data-ttu-id="cb13b-118">하는 경우 `ppbSignatureBlob` 가 null 이면 런타임에서 서명을 저장 하 여 지정한 파일에 `wszFilePath`입니다.</span><span class="sxs-lookup"><span data-stu-id="cb13b-118">If `ppbSignatureBlob` is null, the runtime stores the signature in the file specified by `wszFilePath`.</span></span>  
+ <span data-ttu-id="cb522-117">[out] 공용 언어 런타임 시그니처를 반환 하는 위치에 대 한 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="cb522-117">[out] A pointer to the location to which the common language runtime returns the signature.</span></span> <span data-ttu-id="cb522-118">하는 경우 `ppbSignatureBlob` 가 null 이면 런타임에서 서명을 저장 하 여 지정한 파일에 `wszFilePath`입니다.</span><span class="sxs-lookup"><span data-stu-id="cb522-118">If `ppbSignatureBlob` is null, the runtime stores the signature in the file specified by `wszFilePath`.</span></span>  
   
- <span data-ttu-id="cb13b-119">경우 `ppbSignatureBlob` 는 null이 아닌 공용 언어 런타임 시그니처를 반환 하는 공간을 할당 합니다.</span><span class="sxs-lookup"><span data-stu-id="cb13b-119">If `ppbSignatureBlob` is not null, the common language runtime allocates space in which to return the signature.</span></span> <span data-ttu-id="cb13b-120">호출자에 게 사용 하 여이 공간을 해제 해야 합니다 [StrongNameFreeBuffer](../../../../docs/framework/unmanaged-api/strong-naming/strongnamefreebuffer-function.md) 함수입니다.</span><span class="sxs-lookup"><span data-stu-id="cb13b-120">The caller must free this space using the [StrongNameFreeBuffer](../../../../docs/framework/unmanaged-api/strong-naming/strongnamefreebuffer-function.md) function.</span></span>  
+ <span data-ttu-id="cb522-119">경우 `ppbSignatureBlob` 는 null이 아닌 공용 언어 런타임 시그니처를 반환 하는 공간을 할당 합니다.</span><span class="sxs-lookup"><span data-stu-id="cb522-119">If `ppbSignatureBlob` is not null, the common language runtime allocates space in which to return the signature.</span></span> <span data-ttu-id="cb522-120">호출자에 게 사용 하 여이 공간을 해제 해야 합니다 [StrongNameFreeBuffer](../../../../docs/framework/unmanaged-api/strong-naming/strongnamefreebuffer-function.md) 함수입니다.</span><span class="sxs-lookup"><span data-stu-id="cb522-120">The caller must free this space using the [StrongNameFreeBuffer](../../../../docs/framework/unmanaged-api/strong-naming/strongnamefreebuffer-function.md) function.</span></span>  
   
  `pcbSignatureBlob`  
- <span data-ttu-id="cb13b-121">[out] 반환 된 서명의 바이트 크기입니다.</span><span class="sxs-lookup"><span data-stu-id="cb13b-121">[out] The size, in bytes, of the returned signature.</span></span>  
+ <span data-ttu-id="cb522-121">[out] 반환 된 서명의 바이트 크기입니다.</span><span class="sxs-lookup"><span data-stu-id="cb522-121">[out] The size, in bytes, of the returned signature.</span></span>  
   
  `dwFlags`  
- <span data-ttu-id="cb13b-122">[in] 하나 이상의 다음 값 중:</span><span class="sxs-lookup"><span data-stu-id="cb13b-122">[in] One or more of the following values:</span></span>  
+ <span data-ttu-id="cb522-122">[in] 하나 이상의 다음 값 중:</span><span class="sxs-lookup"><span data-stu-id="cb522-122">[in] One or more of the following values:</span></span>  
   
--   <span data-ttu-id="cb13b-123">`SN_SIGN_ALL_FILES` (0x00000001)-연결 된 모듈에 대 한 모든 해시를 다시 계산 합니다.</span><span class="sxs-lookup"><span data-stu-id="cb13b-123">`SN_SIGN_ALL_FILES` (0x00000001) - Recompute all hashes for linked modules.</span></span>  
+-   <span data-ttu-id="cb522-123">`SN_SIGN_ALL_FILES` (0x00000001)-연결 된 모듈에 대 한 모든 해시를 다시 계산 합니다.</span><span class="sxs-lookup"><span data-stu-id="cb522-123">`SN_SIGN_ALL_FILES` (0x00000001) - Recompute all hashes for linked modules.</span></span>  
   
--   <span data-ttu-id="cb13b-124">`SN_TEST_SIGN` (0x00000002)-테스트-어셈블리를 서명 합니다.</span><span class="sxs-lookup"><span data-stu-id="cb13b-124">`SN_TEST_SIGN` (0x00000002) - Test-sign the assembly.</span></span>  
+-   <span data-ttu-id="cb522-124">`SN_TEST_SIGN` (0x00000002)-테스트-어셈블리를 서명 합니다.</span><span class="sxs-lookup"><span data-stu-id="cb522-124">`SN_TEST_SIGN` (0x00000002) - Test-sign the assembly.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="cb13b-125">반환 값</span><span class="sxs-lookup"><span data-stu-id="cb13b-125">Return Value</span></span>  
- <span data-ttu-id="cb13b-126">`true` 성공적으로 완료 됩니다. 그렇지 않으면 `false`합니다.</span><span class="sxs-lookup"><span data-stu-id="cb13b-126">`true` on successful completion; otherwise, `false`.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="cb522-125">반환 값</span><span class="sxs-lookup"><span data-stu-id="cb522-125">Return Value</span></span>  
+ <span data-ttu-id="cb522-126">`true` 성공적으로 완료 됩니다. 그렇지 않으면 `false`합니다.</span><span class="sxs-lookup"><span data-stu-id="cb522-126">`true` on successful completion; otherwise, `false`.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="cb13b-127">설명</span><span class="sxs-lookup"><span data-stu-id="cb13b-127">Remarks</span></span>  
- <span data-ttu-id="cb13b-128">Null을 지정 `wszFilePath` 시그니처를 만들지 않고 서명의 크기를 계산 합니다.</span><span class="sxs-lookup"><span data-stu-id="cb13b-128">Specify null for `wszFilePath` to calculate the size of the signature without creating the signature.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="cb522-127">설명</span><span class="sxs-lookup"><span data-stu-id="cb522-127">Remarks</span></span>  
+ <span data-ttu-id="cb522-128">Null을 지정 `wszFilePath` 시그니처를 만들지 않고 서명의 크기를 계산 합니다.</span><span class="sxs-lookup"><span data-stu-id="cb522-128">Specify null for `wszFilePath` to calculate the size of the signature without creating the signature.</span></span>  
   
- <span data-ttu-id="cb13b-129">서명 될 파일에 직접 저장 하거나 호출자에 게 반환 합니다.</span><span class="sxs-lookup"><span data-stu-id="cb13b-129">The signature can be either stored directly in the file, or returned to the caller.</span></span>  
+ <span data-ttu-id="cb522-129">서명 될 파일에 직접 저장 하거나 호출자에 게 반환 합니다.</span><span class="sxs-lookup"><span data-stu-id="cb522-129">The signature can be either stored directly in the file, or returned to the caller.</span></span>  
   
- <span data-ttu-id="cb13b-130">경우 `SN_SIGN_ALL_FILES` 지정 된 공개 키 포함 되지 않습니다. 하지만 (둘 다 `pbKeyBlob` 및 `wszFilePath` null), 연결 된 모듈에 대 한 해시를 다시 계산할지를 아닌 어셈블리 다시 서명 합니다.</span><span class="sxs-lookup"><span data-stu-id="cb13b-130">If `SN_SIGN_ALL_FILES` is specified but a public key is not included (both `pbKeyBlob` and `wszFilePath` are null), hashes for linked modules are recomputed, but the assembly is not re-signed.</span></span>  
+ <span data-ttu-id="cb522-130">경우 `SN_SIGN_ALL_FILES` 지정 된 공개 키 포함 되지 않습니다. 하지만 (둘 다 `pbKeyBlob` 및 `wszFilePath` null), 연결 된 모듈에 대 한 해시를 다시 계산할지를 아닌 어셈블리 다시 서명 합니다.</span><span class="sxs-lookup"><span data-stu-id="cb522-130">If `SN_SIGN_ALL_FILES` is specified but a public key is not included (both `pbKeyBlob` and `wszFilePath` are null), hashes for linked modules are recomputed, but the assembly is not re-signed.</span></span>  
   
- <span data-ttu-id="cb13b-131">경우 `SN_TEST_SIGN` 지정 된 경우 공용 언어 런타임 헤더는 강력한 이름으로 어셈블리 서명 되었음을 나타내도록 수정 되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="cb13b-131">If `SN_TEST_SIGN` is specified, the common language runtime header is not modified to indicate that the assembly is signed with a strong name.</span></span>  
+ <span data-ttu-id="cb522-131">경우 `SN_TEST_SIGN` 지정 된 경우 공용 언어 런타임 헤더는 강력한 이름으로 어셈블리 서명 되었음을 나타내도록 수정 되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="cb522-131">If `SN_TEST_SIGN` is specified, the common language runtime header is not modified to indicate that the assembly is signed with a strong name.</span></span>  
   
- <span data-ttu-id="cb13b-132">경우는 `StrongNameSignatureGenerationEx` 함수가 성공적으로 완료으로 호출 되지 않으면 합니다 [StrongNameErrorInfo](../../../../docs/framework/unmanaged-api/strong-naming/strongnameerrorinfo-function.md) 마지막 생성 된 오류를 검색 하는 함수입니다.</span><span class="sxs-lookup"><span data-stu-id="cb13b-132">If the `StrongNameSignatureGenerationEx` function does not complete successfully, call the [StrongNameErrorInfo](../../../../docs/framework/unmanaged-api/strong-naming/strongnameerrorinfo-function.md) function to retrieve the last generated error.</span></span>  
+ <span data-ttu-id="cb522-132">경우는 `StrongNameSignatureGenerationEx` 함수가 성공적으로 완료으로 호출 되지 않으면 합니다 [StrongNameErrorInfo](../../../../docs/framework/unmanaged-api/strong-naming/strongnameerrorinfo-function.md) 마지막 생성 된 오류를 검색 하는 함수입니다.</span><span class="sxs-lookup"><span data-stu-id="cb522-132">If the `StrongNameSignatureGenerationEx` function does not complete successfully, call the [StrongNameErrorInfo](../../../../docs/framework/unmanaged-api/strong-naming/strongnameerrorinfo-function.md) function to retrieve the last generated error.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="cb13b-133">요구 사항</span><span class="sxs-lookup"><span data-stu-id="cb13b-133">Requirements</span></span>  
- <span data-ttu-id="cb13b-134">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="cb13b-134">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="cb522-133">요구 사항</span><span class="sxs-lookup"><span data-stu-id="cb522-133">Requirements</span></span>  
+ <span data-ttu-id="cb522-134">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="cb522-134">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="cb13b-135">**헤더:** StrongName.h</span><span class="sxs-lookup"><span data-stu-id="cb13b-135">**Header:** StrongName.h</span></span>  
+ <span data-ttu-id="cb522-135">**헤더:** StrongName.h</span><span class="sxs-lookup"><span data-stu-id="cb522-135">**Header:** StrongName.h</span></span>  
   
- <span data-ttu-id="cb13b-136">**라이브러리:** MsCorEE.dll에 리소스로 포함</span><span class="sxs-lookup"><span data-stu-id="cb13b-136">**Library:** Included as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="cb522-136">**라이브러리:** MsCorEE.dll에 리소스로 포함</span><span class="sxs-lookup"><span data-stu-id="cb522-136">**Library:** Included as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="cb13b-137">**.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="cb13b-137">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="cb522-137">**.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="cb522-137">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="cb13b-138">참고자료</span><span class="sxs-lookup"><span data-stu-id="cb13b-138">See also</span></span>
-- [<span data-ttu-id="cb13b-139">StrongNameSignatureGenerationEx 메서드</span><span class="sxs-lookup"><span data-stu-id="cb13b-139">StrongNameSignatureGenerationEx Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamesignaturegenerationex-method.md)
-- [<span data-ttu-id="cb13b-140">StrongNameSignatureGeneration 메서드</span><span class="sxs-lookup"><span data-stu-id="cb13b-140">StrongNameSignatureGeneration Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamesignaturegeneration-method.md)
-- [<span data-ttu-id="cb13b-141">ICLRStrongName 인터페이스</span><span class="sxs-lookup"><span data-stu-id="cb13b-141">ICLRStrongName Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)
+## <a name="see-also"></a><span data-ttu-id="cb522-138">참고자료</span><span class="sxs-lookup"><span data-stu-id="cb522-138">See also</span></span>
+- [<span data-ttu-id="cb522-139">StrongNameSignatureGenerationEx 메서드</span><span class="sxs-lookup"><span data-stu-id="cb522-139">StrongNameSignatureGenerationEx Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamesignaturegenerationex-method.md)
+- [<span data-ttu-id="cb522-140">StrongNameSignatureGeneration 메서드</span><span class="sxs-lookup"><span data-stu-id="cb522-140">StrongNameSignatureGeneration Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamesignaturegeneration-method.md)
+- [<span data-ttu-id="cb522-141">ICLRStrongName 인터페이스</span><span class="sxs-lookup"><span data-stu-id="cb522-141">ICLRStrongName Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)
