@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 8e03572a4eaa0251866e8bfc6ae2d01d955d7b8f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1243a5ed1a3b741f1691cc4f0847ddcf17ac9669
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54516189"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57478390"
 ---
 # <a name="imetadataemittranslatesigwithscope-method"></a>IMetaDataEmit::TranslateSigWithScope 메서드
 현재 범위에 어셈블리를 가져오고 병합 된 범위에 대 한 새 메타 데이터 서명을 가져옵니다.  
@@ -45,7 +45,7 @@ HRESULT TranslateSigWithScope (
 );  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `pAssemImport`  
  [in] \(서명을 정의 됨) 가져오기 어셈블리에 대 한 인터페이스입니다.  
   

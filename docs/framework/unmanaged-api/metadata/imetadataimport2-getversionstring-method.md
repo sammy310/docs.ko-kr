@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5e041efed929255d4ce3af2d051a391bc4179cda
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3b4c7ef2beca06713c04c7e0f8e30a47b884bf5c
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54630920"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57486292"
 ---
 # <a name="imetadataimport2getversionstring-method"></a>IMetaDataImport2::GetVersionString 메서드
 어셈블리를 빌드하는 런타임의 버전 번호를 가져옵니다.  
@@ -37,7 +37,7 @@ HRESULT GetVersionString (
 );  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `pwzBuf`  
  [out] 버전을 지정 하는 문자열을 저장할 배열입니다.  
   

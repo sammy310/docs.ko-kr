@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c2c3040adddabee716976d778c29d1f6729efc39
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f957ff6949ea2335c6606eb112352a5180e2c1c8
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54576930"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57500319"
 ---
 # <a name="lpoverlappedcompletionroutine-function-pointer"></a>LPOVERLAPPED_COMPLETION_ROUTINE 함수 포인터
 Overlapped는 호스트에 알리는 함수를 가리키는 (즉, 비동기) 장치에는 I/O 완료 합니다.  
@@ -38,7 +38,7 @@ typedef VOID (*LPOVERLAPPED_COMPLETION_ROUTINE) (
 );  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `dwErrorCode`  
  [in] 장치; 닫힌 경우 오류 코드 값 그렇지 않은 경우이 값은 0입니다.  
   

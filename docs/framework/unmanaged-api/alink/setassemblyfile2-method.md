@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 3882998d3155b49251fbe091b72ef11022ebfd2b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 41e10855a7254da4124ac0bf9aa247b90311632b
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54540210"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57479081"
 ---
 # <a name="setassemblyfile2-method"></a>SetAssemblyFile2 메서드
 이름 및 새 어셈블리에 대 한 옵션을 설정합니다. 바인딩되지 않은 모듈을 생성 하는 경우에이 메서드를 호출 하지 마세요.  
@@ -37,7 +37,7 @@ HRESULT SetAssemblyFile2(
 ) PURE;  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `pszFilename`  
  매니페스트 파일의 이름입니다.  
   

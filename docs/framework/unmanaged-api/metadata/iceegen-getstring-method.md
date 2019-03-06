@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 3d8d6a0ebecb4fbb9ba277844710c775d80648e5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: bf3f781e23d0787d01a1ef04b41b2c38eaaa9e0d
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54716819"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57479339"
 ---
 # <a name="iceegengetstring-method"></a>ICeeGen::GetString 메서드
 지정된 된 상대 가상 주소에 저장 된 문자열을 가져옵니다.  
@@ -38,7 +38,7 @@ HRESULT GetString (
 );  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `RVA`  
  [in] 반환할 문자열의 상대 가상 주소입니다.  
   

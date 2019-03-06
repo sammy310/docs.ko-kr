@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 2b6dd32d63fc856b67f8e7d64be31dcbf107b10b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9878252fb61dabe3154df90265229f160bb80d10
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54531030"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57484422"
 ---
 # <a name="icorprofilercallback4movedreferences2-method"></a>ICorProfilerCallback4::MovedReferences2 메서드
-압축 가비지 컬렉션의 결과로 힙에 있는 개체의 새 레이아웃을 보고하려고 호출됩니다. 이 메서드는 프로파일러 구현에 [ICorProfilerCallback4](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-interface.md) 인터페이스입니다. 이 콜백은 대체 합니다 [icorprofilercallback:: Movedreferences](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-movedreferences-method.md) 메서드를 더 큰 범위의 길이가 ulong에서으로 표현 될 수 있습니다 어떤 초과 하는 개체를 보고할 수 있어.  
+압축 가비지 수집의 결과로 힙에 있는 개체의 새 레이아웃을 보고하려고 호출됩니다. 이 메서드는 프로파일러 구현에 [ICorProfilerCallback4](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-interface.md) 인터페이스입니다. 이 콜백은 대체 합니다 [icorprofilercallback:: Movedreferences](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-movedreferences-method.md) 메서드를 더 큰 범위의 길이가 ulong에서으로 표현 될 수 있습니다 어떤 초과 하는 개체를 보고할 수 있어.  
   
 ## <a name="syntax"></a>구문  
   
@@ -37,14 +37,14 @@ HRESULT MovedReferences2(
     [in, size_is(cMovedObjectIDRanges)] SIZE_T    cObjectIDRangeLength[] );  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `cMovedObjectIDRanges`  
  [in] 압축 가비지 컬렉션 후에 이동된 연속 개체 블록 수입니다. 즉, `cMovedObjectIDRanges` 값은 `oldObjectIDRangeStart`, `newObjectIDRangeStart` 및 `cObjectIDRangeLength` 배열의 총 크기입니다.  
   
  `MovedReferences2`의 다음 세 인수는 병렬 배열입니다. 즉, `oldObjectIDRangeStart[i]`, `newObjectIDRangeStart[i]` 및 `cObjectIDRangeLength[i]`는 모두 단일 연속 개체 블록과 관련이 있습니다.  
   
  `oldObjectIDRangeStart`  
- [in] 메모리에서 연속 라이브 개체 블록의 이전(가비지 컬렉션 전) 시작 주소를 각각 나타내는 `ObjectID` 값의 배열입니다.  
+ [in] 메모리에서 연속 라이브 개체 블록의 이전(가비지 수집 전) 시작 주소를 각각 나타내는 `ObjectID` 값의 배열입니다.  
   
  `newObjectIDRangeStart`  
  [in] 메모리에서 연속 라이브 개체 블록의 새(가비지 컬렉션 후) 시작 주소를 각각 나타내는 `ObjectID` 값의 배열입니다.  

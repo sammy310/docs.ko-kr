@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0c57ac26fd08f585af7ff92f700c6cdd60815675
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 58a010def407751a49cbb1de51c59a3df85cfb18
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54734303"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57487770"
 ---
 # <a name="iclrtasksettaskidentifier-method"></a>ICLRTask::SetTaskIdentifier 메서드
 공용 언어 런타임 (CLR) 현재 나타내는 작업을 사용 하 여 지정 된 식별자 값을 연결할 지시 [ICLRTask](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md) 인스턴스.  
@@ -35,7 +35,7 @@ HRESULT SetTaskIdentifier (
 );  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `Asked`  
  [in] 현재 작업과 연결할 공용 언어 런타임에 대 한 고유 식별자 `ICLRTask` 인스턴스.  
   

@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: add0cd9d-9a29-49b1-ae07-d9d3786b4ccd
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8a41ec4a556ca26404b5f76ddb35d9f73d7307a7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 800c19574b24a4ab6135b53567515b23eae4dc8a
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54659058"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57494898"
 ---
 # <a name="icordebugvariablesymbolgetsize-method"></a>ICorDebugVariableSymbol::GetSize 메서드
 변수의 크기(바이트)를 가져옵니다.  
@@ -22,7 +22,7 @@ HRESULT GetSize(
 );  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `pcbValue`  
  변수의 크기를 포함하는 32비트 부호 없는 정수에 대한 포인터입니다.  
   

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b65f3476da69249f449090e1f2d67c58ed5a427a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9842108e9a26d7cca621c06b8ae1713e17c97ebe
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54737298"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57476362"
 ---
 # <a name="imetadataemitsetfieldmarshal-method"></a>IMetaDataEmit::SetFieldMarshal 메서드
 지정 된 토큰에서 참조 필드, 메서드 반환 되는 경우 또는 메서드 매개 변수에 대 한 마샬링 정보는 PInvoke를 설정 합니다.  
@@ -37,7 +37,7 @@ HRESULT SetFieldMarshal (
 );  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `tk`  
  [in] 대상 데이터 항목에 대 한 토큰입니다. 이 값은 `mdFieldDef` 또는 `mdParamDef` 토큰입니다.  
   

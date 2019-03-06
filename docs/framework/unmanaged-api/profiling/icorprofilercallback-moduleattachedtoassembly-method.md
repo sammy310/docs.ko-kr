@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ff819ab67b258dbc7b5cec937863753852b1fcc1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6a8902df01e296c93bfbd94a1d90b0e3a40e81f0
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54629321"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57480353"
 ---
 # <a name="icorprofilercallbackmoduleattachedtoassembly-method"></a>ICorProfilerCallback::ModuleAttachedToAssembly 메서드
 모듈 부모 어셈블리에 연결 되는 프로파일러에 알립니다.  
@@ -35,7 +35,7 @@ HRESULT ModuleAttachedToAssembly(
     [in] AssemblyID AssemblyId);  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `moduleId`  
  [in] ID는 연결 되는 모듈입니다.  
   

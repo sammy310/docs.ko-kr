@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1ed8b6f047f26235e984fb514381a9b1d85543ec
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7ad1f015f04b3829090417c26e8d58892ee15af4
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54675134"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57487436"
 ---
 # <a name="strongnamehashsize-function"></a>StrongNameHashSize 함수
 지정된 해시 알고리즘을 사용하여 해시에 필요한 버퍼 크기를 가져옵니다.  
@@ -37,7 +37,7 @@ BOOLEAN StrongNameHashSize (
 );  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `ulHashAlg`  
  [in] 버퍼 크기를 계산 하는 데 사용 된 해시 알고리즘입니다.  
   

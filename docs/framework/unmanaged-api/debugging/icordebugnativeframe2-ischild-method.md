@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b330f628256f9d8b21bfb483500c878b7b90d2b9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: abae0e25f506b930fdb257cea7afab87a630ee0a
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54652056"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57466714"
 ---
 # <a name="icordebugnativeframe2ischild-method"></a>ICorDebugNativeFrame2::IsChild 메서드
 현재 프레임 자식 프레임 인지 확인 합니다.  
@@ -33,7 +33,7 @@ ms.locfileid: "54652056"
 HRESULT IsChild([out] BOOL * pIsChild);  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `pIsChild`  
  [out] 현재 프레임 자식 프레임을 여부를 지정 하는 부울 값입니다.  
   
@@ -44,7 +44,7 @@ HRESULT IsChild([out] BOOL * pIsChild);
 |-------------|-----------------|  
 |S_OK|자식 상태가 반환 되었습니다.|  
 |E_FAIL|자식 상태를 반환 하지 못했습니다.|  
-|E_INVALIDARG|`pIsChild`가 null인 경우|  
+|E_INVALIDARG|`pIsChild`가 null입니다.|  
   
 ## <a name="exceptions"></a>예외  
   

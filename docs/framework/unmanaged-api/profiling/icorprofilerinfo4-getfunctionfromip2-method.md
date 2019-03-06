@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: bded97c23013e60bf2d3c32c4eb25285870977e1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 51f8768fc3cd73f0fd5bdb84842af03b900fafdf
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54554194"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57495353"
 ---
 # <a name="icorprofilerinfo4getfunctionfromip2-method"></a>ICorProfilerInfo4::GetFunctionFromIP2 메서드
 관리 코드 명령 포인터는 함수의 JIT 다시 컴파일된 버전에 매핑됩니다.  
@@ -36,7 +36,7 @@ HRESULT GetFunctionFromIP2(
     [out] ReJITID *pReJitId);  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `ip`  
  [in] 관리 코드에서 명령 포인터입니다.  
   

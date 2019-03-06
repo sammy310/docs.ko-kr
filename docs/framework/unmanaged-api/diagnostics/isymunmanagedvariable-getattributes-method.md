@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d418a1088f9ee23a088ab4c8246810d2c9bee4fa
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d1585ccfa560d31fc32dce2f39dd525c51711797
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54574341"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57466338"
 ---
 # <a name="isymunmanagedvariablegetattributes-method"></a>ISymUnmanagedVariable::GetAttributes 메서드
 이 변수에 대 한 특성 플래그를 가져옵니다.  
@@ -34,7 +34,7 @@ HRESULT GetAttributes(
     [out, retval] ULONG32* pRetVal);  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `pRetVal`  
  [out] 에 대 한 포인터를 `ULONG32` 특성을 받는입니다. 반환된 된 값에 정의 된 값 중 하나로 설정 됩니다는 [CorSymVarFlag](../../../../docs/framework/unmanaged-api/diagnostics/corsymvarflag-enumeration.md) 열거형입니다.  
   

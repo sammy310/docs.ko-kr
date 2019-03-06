@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0f3ac053f12cb4bc37ab0bd16036fb561f8f176c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 18a2156b87fb4bf72e8de7c32c7e20d2a017c900
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54519127"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57479275"
 ---
 # <a name="iclrmetahostrequestruntimeloadednotification-method"></a>ICLRMetaHost::RequestRuntimeLoadedNotification 메서드
 공용 언어 런타임 (CLR) 버전을 처음 로드 되었지만 아직 시작 하지 않은 경우 호출할 보장 되는 콜백 함수를 제공 합니다. 이 메서드를 대체 합니다 [LockClrVersion](../../../../docs/framework/unmanaged-api/hosting/lockclrversion-function.md) 함수입니다.  
@@ -34,7 +34,7 @@ HRESULT RequestRuntimeLoadedNotification (
     [in] RuntimeLoadedCallbackFnPtr pCallbackFunction);  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `pCallbackFunction`  
  [in] 새 런타임을 로드 되었을 때 호출 되는 콜백 함수입니다.  
   
@@ -44,7 +44,7 @@ HRESULT RequestRuntimeLoadedNotification (
 |HRESULT|설명|  
 |-------------|-----------------|  
 |S_OK|메서드가 완료되었습니다.|  
-|E_POINTER|`pCallbackFunction`가 null인 경우|  
+|E_POINTER|`pCallbackFunction`가 null입니다.|  
   
 ## <a name="remarks"></a>설명  
  콜백은 다음과 같이 작동합니다.  

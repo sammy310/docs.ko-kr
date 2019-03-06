@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bc0dde4f2455ed45ddf8ca1efefa7ab67ba04f6f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e1cab24f949ddae55d5e699e6ad82851007504dd
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54660777"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57475699"
 ---
 # <a name="icordebugprocess2setdesiredngencompilerflags-method"></a>ICorDebugProcess2::SetDesiredNGENCompilerFlags 메서드
 미리 컴파일된 이미지를 현재 프로세스에 해당 이미지를 로드 하려면 런타임에 대 한 순서 대로 포함 되어야 하는 플래그를 설정 합니다.  
@@ -35,7 +35,7 @@ HRESULT SetDesiredNGENCompilerFlags (
 );  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `pdwFlags`  
  [in] 값을 [CorDebugJITCompilerFlags](../../../../docs/framework/unmanaged-api/debugging/cordebugjitcompilerflags-enumeration.md) 컴파일러 플래그를 지정 하는 열거형 올바른 미리 컴파일된 이미지를 선택 하는 데 사용 합니다.  
   

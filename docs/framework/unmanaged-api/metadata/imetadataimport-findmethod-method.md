@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4c0f25b50bf2948bb6f096db70fff208cef799bc
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 857ea06ad8aba2a6de87bdf670ad0462a2f7dde1
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54587309"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57487289"
 ---
 # <a name="imetadataimportfindmethod-method"></a>IMetaDataImport::FindMethod 메서드
 토큰을 가져옵니다 methoddef 묶여 있는 메서드에 대 한 지정 된 <xref:System.Type> 지정 된 이름 및 메타 데이터 서명을 하 고 있습니다.  
@@ -39,7 +39,7 @@ HRESULT FindMethod (
 );  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `td`  
  [in] `mdTypeDef` 검색할 멤버를 포함 하는 형식 (클래스 또는 인터페이스)에 대 한 토큰입니다. 이 값이 `mdTokenNil`, 다음 전역 함수에 대 한 조회가 수행 됩니다.  
   

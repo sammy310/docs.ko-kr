@@ -18,12 +18,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 12898f75d2575e539b018ea367bc870a3dc738a9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: f546d7707c40f7f26a46177ae972a988e54e1e45
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33406333"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57487865"
 ---
 # <a name="createcordbobject-function"></a>CreateCordbObject 함수
 디버거 인터페이스를 만듭니다 ([ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)) 원격 프로세스에서 관리 되는 디버깅 세션을 인스턴스화하기 위한 기능을 제공 하는 합니다.  
@@ -37,12 +37,12 @@ HRESULT CordbCreateObject (
 );  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `iDebuggerVersion`  
  [in] 대상 프로세스의 디버거 버전입니다. 원격 디버깅의 경우 이 매개 변수는 CorDebugVersion_2_0이어야 합니다.  
   
  `ppCordb`  
- [out] 으로 캐스팅 될 개체에 대 한 포인터에 대 한 포인터는 [ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md) 인터페이스를 반환 합니다.  
+ [out] 캐스트할 수 있는 개체에 대 한 포인터에 대 한 포인터를 [ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md) 인터페이스를 반환 합니다.  
   
 ## <a name="return-value"></a>반환 값  
  S_OK  
@@ -58,10 +58,10 @@ HRESULT CordbCreateObject (
  기타 실패  
   
 ## <a name="remarks"></a>설명  
- [ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md) 에서 반환 되는 인터페이스 `ppCordb` 디버깅 서비스를 관리 되는 모든 최상위 디버깅 인터페이스입니다.  
+ 합니다 [ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md) 인터페이스에서 반환 되는 `ppCordb` 관리 되는 모든 디버깅 서비스에 대 한 최상위 디버깅 인터페이스입니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** 참조 [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)합니다.  
+ **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
   
  **헤더:** CoreClrRemoteDebuggingInterfaces.h  
   

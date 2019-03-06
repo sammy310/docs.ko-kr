@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9a91684ea3712c8fe20d1902f86e3880bf0ad340
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b3d5d3808f51f921bd3e0c94942a1fb07a35d876
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54660283"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57487813"
 ---
 # <a name="icorprofilerinfo3getfunctiontailcall3info-method"></a>ICorProfilerInfo3::GetFunctionTailcall3Info 메서드
 프로파일러에 보고 되는 함수의 스택 프레임을 제공 합니다 [FunctionTailcall3WithInfo](../../../../docs/framework/unmanaged-api/profiling/functiontailcall3withinfo-function.md) 함수입니다. 이 함수는 `FunctionTailcall3WithInfo` 콜백 중에만 호출할 수 있습니다.  
@@ -36,7 +36,7 @@ HRESULT GetFunctionTailcall3Info(
             [out] COR_PRF_FRAME_INFO *pFrameInfo);  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `functionId`  
  [in] `FunctionID` 를 반환 하는 함수입니다.  
   

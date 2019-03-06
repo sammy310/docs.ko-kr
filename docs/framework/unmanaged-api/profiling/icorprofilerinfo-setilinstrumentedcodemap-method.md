@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d4780242dc34f31ecd0ff0dc2c339cdaa30278a3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: bc13dc1348a6d397c86b03976c86c3595f749cf6
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54721164"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57480067"
 ---
 # <a name="icorprofilerinfosetilinstrumentedcodemap-method"></a>ICorProfilerInfo::SetILInstrumentedCodeMap 메서드
 지정한 Microsoft 중간 언어 (MSIL) 맵 항목을 사용 하 여 지정된 된 함수에 대 한 코드 맵을 설정 합니다.  
@@ -40,7 +40,7 @@ HRESULT SetILInstrumentedCodeMap(
     [in, size_is(cILMapEntries)] COR_IL_MAP rgILMapEntries[]);  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `functionId`  
  [in] 코드 맵 설정 하려는 함수의 ID입니다.  
   

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 2b81ac93c67d59c294f22eb825527fa9982d9124
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 189e72e513a06bfa545007fc9a8612a61314a520
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54721099"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57492667"
 ---
 # <a name="isymunmanagedscopegetstartoffset-method"></a>ISymUnmanagedScope::GetStartOffset 메서드
 이 범위에 대 한 시작 오프셋을 가져옵니다.  
@@ -34,7 +34,7 @@ HRESULT GetStartOffset(
     [out, retval] ULONG32* pRetVal);  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `pRetVal`  
  [out] 에 대 한 포인터를 `ULONG32` 시작 오프셋을 포함 하는 합니다.  
   

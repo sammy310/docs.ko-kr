@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7844ca5aefad94542146dc5eba6a966143ff8327
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 46462362e959b6af9d9b0d311f813e183dfb04df
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54612855"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57474477"
 ---
 # <a name="iclrpolicymanagersetactionontimeout-method"></a>ICLRPolicyManager::SetActionOnTimeout 메서드
 지정 된 작업 시간이 초과 되 면 공용 언어 런타임 (CLR)를 수행 해야 정책 동작을 지정 합니다.  
@@ -36,7 +36,7 @@ HRESULT SetActionOnTimeout (
 );  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `operation`  
  [in] 중 하나는 [EClrOperation](../../../../docs/framework/unmanaged-api/hosting/eclroperation-enumeration.md) 제한 시간 동작을 지정 하는 작업을 나타내는 값입니다. 다음 값이 지원 됩니다.  
   

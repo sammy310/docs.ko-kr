@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 00b20134c0134aa30d2056b634c8525f66ed8cf5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8db6912700b199c64d2ebf0f7bd2ccd8939af9b6
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54602458"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57484708"
 ---
 # <a name="icorprofilerinfogetfunctioninfo-method"></a>ICorProfilerInfo::GetFunctionInfo 메서드
 부모 클래스 및 메타 데이터를 지정된 된 함수에 대 한 토큰 가져옵니다.  
@@ -37,7 +37,7 @@ HRESULT GetFunctionInfo(
     [out] mdToken    *pToken);  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `functionId`  
  [in] ID를 가져올 부모 클래스 및 메타 데이터 토큰에 대 한 함수입니다.  
   
@@ -51,7 +51,8 @@ HRESULT GetFunctionInfo(
  [out] 함수의 메타데이터 토큰에 대한 포인터입니다.  
   
 ## <a name="remarks"></a>설명  
- 프로파일러 코드를 호출할 수 있습니다 [icorprofilerinfo:: Getmodulemetadata](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getmodulemetadata-method.md) 지정 된 모듈에 대 한 메타 데이터 인터페이스를 가져오려고 합니다. `pToken`에서 참조하는 위치로 반환되는 메타데이터 토큰을 사용하여 함수에 대한 메타데이터에 액세스할 수 있습니다.  
+ 프로파일러 코드를 호출할 수 있습니다 [icorprofilerinfo:: Getmodulemetadata](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getmodulemetadata-method.md) 지정 된 모듈에 대 한 메타 데이터 인터페이스를 가져오려고 합니다. 
+  `pToken`에서 참조하는 위치로 반환되는 메타데이터 토큰을 사용하여 함수에 대한 메타데이터에 액세스할 수 있습니다.  
   
  `ClassID` 함수의 제네릭 클래스에서 가져올 수 없습니다 함수를 사용 하는 방법에 대 한 자세한 컨텍스트 정보 없이. 이 경우 `pClassId` 0이 됩니다. Profiler 코드 사용할지 [ICorProfilerInfo2::GetFunctionInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getfunctioninfo2-method.md) COR_PRF_FRAME_INFO 값으로 더 많은 컨텍스트를 제공 합니다.  
   

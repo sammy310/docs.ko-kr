@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9036746fcf0150875ab534fdb774ed3633cf96ae
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 526059e0895604d18025e8ad2fd037690243ff59
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54698349"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57503075"
 ---
 # <a name="icorprofilercallbackjitcachedfunctionsearchstarted-method"></a>ICorProfilerCallback::JITCachedFunctionSearchStarted 메서드
 네이티브 이미지 생성기 (NGen.exe)를 사용 하 여 이전에 컴파일된 함수에 대 한 검색이 시작는 프로파일러에 알립니다.  
@@ -35,7 +35,7 @@ HRESULT JITCachedFunctionSearchStarted(
     [out] BOOL *pbUseCachedFunction);  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `functionId`  
  [in] 검색이 수행 되는 함수의 ID입니다.  
   

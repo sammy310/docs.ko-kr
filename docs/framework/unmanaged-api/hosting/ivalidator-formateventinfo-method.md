@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 17217146d8e5ed53feb8305ca4ac16c8f96ddeb7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 084b80e90ea3950245606c56de7ed3e18fd27662
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54653862"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57486435"
 ---
 # <a name="ivalidatorformateventinfo-method"></a>IValidator::FormatEventInfo 메서드
 지정 된 유효성 검사 오류에 해당 하는 오류 메시지를 가져옵니다.  
@@ -39,7 +39,7 @@ HRESULT FormatEventInfo(
 );  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `hVECode`  
  [in] 유효성 검사 오류 처리기로 전달 된 HRESULT 값입니다.  
   

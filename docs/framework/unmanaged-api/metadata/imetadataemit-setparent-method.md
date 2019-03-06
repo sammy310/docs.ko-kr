@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1a37edd38cd8dc6971ee9185f73d6c6d8ab5332b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f025bf8f6e71192ca128f8c9908780a159700757
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54657133"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57482199"
 ---
 # <a name="imetadataemitsetparent-method"></a>IMetaDataEmit::SetParent 메서드
 설정에 대 한 이전 호출에 의해 정의 된 지정된 된 멤버 [imetadataemit:: Definememberref](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definememberref-method.md)에 대 한 이전 호출에서 정의 된 대로 지정 된 형식의 멤버는 [imetadataemit:: Definetypedef](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definetypedef-method.md)합니다.  
@@ -36,7 +36,7 @@ HRESULT SetParent (
 );  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `mr`  
  [in] `mdMemberRef` 토큰을 새 부모를 수신 합니다.  
   

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 0ccc36231a2a554e523dbbef67996b7ad220cf2e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f5995eac780241b5d0a01b99b23ec91c2f325e2a
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54602470"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57478806"
 ---
 # <a name="icorprofilerinfo2getclasslayout-method"></a>ICorProfilerInfo2::GetClassLayout 메서드
 지정된 클래스에서 정의된 필드의 레이아웃(메모리)에 대한 정보를 가져옵니다. 즉, 이 메서드는 클래스의 필드 오프셋을 가져옵니다.  
@@ -38,7 +38,7 @@ HRESULT GetClassLayout(
     [out] ULONG *pulClassSize);  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `classID`  
  [in] 레이아웃이 검색되는 클래스의 ID입니다.  
   
@@ -49,13 +49,15 @@ HRESULT GetClassLayout(
  [in] `rFieldOffset` 배열의 크기입니다.  
   
  `pcFieldOffset`  
- [out] 사용 가능한 요소의 총수에 대한 포인터입니다. `cFieldOffset`이 0인 경우 이 값은 필요한 요소 수를 나타냅니다.  
+ [out] 사용 가능한 요소의 총수에 대한 포인터입니다. 
+  `cFieldOffset`이 0인 경우 이 값은 필요한 요소 수를 나타냅니다.  
   
  `pulClassSize`  
  [out] 클래스의 크기(바이트)를 포함하는 위치에 대한 포인터입니다.  
   
 ## <a name="remarks"></a>설명  
- `GetClassLayout` 메서드는 클래스 자체에서 정의된 필드만 반환합니다. 클래스의 부모 클래스에도 정의된 필드가 있는 경우 프로파일러가 부모 클래스에 대해 `GetClassLayout`을 호출하여 해당 필드를 가져와야 합니다.  
+ 
+  `GetClassLayout` 메서드는 클래스 자체에서 정의된 필드만 반환합니다. 클래스의 부모 클래스에도 정의된 필드가 있는 경우 프로파일러가 부모 클래스에 대해 `GetClassLayout`을 호출하여 해당 필드를 가져와야 합니다.  
   
  문자열 클래스와 함께 `GetClassLayout`을 사용하는 경우 메서드가 E_INVALIDARG 오류 코드로 실패합니다. 사용 하 여 [ICorProfilerInfo2::GetStringLayout](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getstringlayout-method.md) 문자열의 레이아웃 정보를 가져옵니다. 배열 클래스를 사용하여 호출된 경우 `GetClassLayout`도 실패합니다.  
   

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9e5ba0fac05bcab12abccd224b14e504a33b64a8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 287f08c4ce5108ac9ae871135976cb45917fa861
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54746236"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57476715"
 ---
 # <a name="icorprofilerinfo3setenterleavefunctionhooks3withinfo-method"></a>ICorProfilerInfo3::SetEnterLeaveFunctionHooks3WithInfo 메서드
 호출 되는 프로파일러 구현 함수를 지정 합니다 [FunctionEnter3WithInfo](../../../../docs/framework/unmanaged-api/profiling/functionenter3withinfo-function.md)를 [FunctionLeave3WithInfo](../../../../docs/framework/unmanaged-api/profiling/functionleave3withinfo-function.md), 및 [FunctionTailcall3WithInfo](../../../../docs/framework/unmanaged-api/profiling/functiontailcall3withinfo-function.md) 관리 되는 함수의 후크입니다.  
@@ -36,7 +36,7 @@ HRESULT SetEnterLeaveFunctionHooks3WithInfo(
             [in] FunctionTailcall3WithInfo *pFuncTailcall3);  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `pFuncEnter3`  
  [in] 로 사용할 구현에 대 한 포인터를 `FunctionEnter3WithInfo` 콜백 합니다.  
   

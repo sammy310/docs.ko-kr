@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 12dd485f2b89dc76076410e76a132ff547681597
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0a18689563cb3d5fb8460893f9a429507cf93b8f
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54616825"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57486968"
 ---
 # <a name="isymunmanagedscopegetmethod-method"></a>ISymUnmanagedScope::GetMethod 메서드
 이 범위를 포함 하는 메서드를 가져옵니다.  
@@ -34,7 +34,7 @@ HRESULT GetMethod(
     [out, retval] ISymUnmanagedMethod** pRetVal);  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `pRetVal`  
  [out] 반환 된 포인터 [ISymUnmanagedMethod](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md) 인터페이스입니다.  
   

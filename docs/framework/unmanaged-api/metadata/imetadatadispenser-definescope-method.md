@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9f9cac2b59f783a81663af0c5eb148367d54e8aa
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8df46a3c6beed26e885e7dc13f97a7c68d2abcdc
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54605176"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57487982"
 ---
 # <a name="imetadatadispenserdefinescope-method"></a>IMetaDataDispenser::DefineScope 메서드
 새 메타 데이터를 만들 수 있는 메모리에 새 영역을 만듭니다.  
@@ -38,7 +38,7 @@ HRESULT DefineScope (
 );  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `rclsid`  
  [in] 만들 메타 데이터 구조 버전의 CLSID입니다. 이 값은.NET Framework 버전 2.0에 대 한 CLSID_CorMetaDataRuntime 여야 합니다.  
   

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 02665d2a00a779ac73a19ec5513790f3862833b5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c1a81c816915eda6a90b5dac9cc6e044575076f7
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54735018"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57502984"
 ---
 # <a name="iceegengetimaptokeniface-method"></a>ICeeGen::GetIMapTokenIface 메서드
 지정한 토큰이 참조 되는 인터페이스를 가져옵니다.  
@@ -37,7 +37,7 @@ HRESULT GetIMapTokenIface (
 );  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `pIMapToken`  
  [out에서] 반환할 인터페이스에 대 한 메타 데이터 토큰입니다.  
   

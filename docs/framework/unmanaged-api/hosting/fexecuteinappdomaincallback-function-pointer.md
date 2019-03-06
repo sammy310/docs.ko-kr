@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e3031ce0eb6f23fdf5e5366d33ff075ea7816b0b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 16608980505ffc03ef8ecc19cacddabaefaba6ca
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54649546"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57471747"
 ---
 # <a name="fexecuteinappdomaincallback-function-pointer"></a>FExecuteInAppDomainCallback 함수 포인터
 CLR (공용 언어 런타임) 관리 되는 코드를 실행 하 여 호출 되는 함수를 가리킵니다.  
@@ -36,7 +36,7 @@ typedef HRESULT (__stdcall *FExecuteInAppDomainCallback) (
 );  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `cookie`  
  [in] 관리 되는 코드를 실행할 수 있는 불투명 호출자에 게 할당 된 메모리에 대 한 포인터입니다.  
   

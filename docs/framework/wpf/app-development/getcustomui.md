@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - custom error messages [WPF]
 ms.assetid: e55180fc-35bb-4f80-a136-772b5eb3e4e5
-ms.openlocfilehash: 623ff5d14db6ae9cc5999aa184b81d6b22f4b201
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: af51a0d76ac080017f58ac8fc3acca86c23fb480
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57365011"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57474867"
 ---
 # <a name="getcustomui"></a>GetCustomUI
 구현 하는 경우 호스트에서 사용자 지정 진행률 및 오류 메시지를 가져오려는 PresentationHost.exe에서 호출 됩니다.  
@@ -20,7 +20,7 @@ ms.locfileid: "57365011"
 HRESULT GetCustomUI( [out] BSTR* pwzProgressAssemblyName, [out] BSTR* pwzProgressClassName, [out] BSTR* pwzErrorAssemblyName, [out] BSTR* pwzErrorClassName );  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `pwzProgressAssemblyName`  
   
  [out] 호스트 제공 진행률 사용자 인터페이스를 포함 하는 어셈블리에 대 한 포인터입니다.  

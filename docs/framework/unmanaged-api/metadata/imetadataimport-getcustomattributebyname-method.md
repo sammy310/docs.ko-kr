@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 68cac76a83164e24c0810c9d19fa845c8580b1d2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 26a4ed5bc406645e662ded54374f0594d1e97524
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54637241"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57485423"
 ---
 # <a name="imetadataimportgetcustomattributebyname-method"></a>IMetaDataImport::GetCustomAttributeByName 메서드
 지정 된 이름과 소유자를 사용자 지정 특성을 가져옵니다.  
@@ -38,7 +38,7 @@ HRESULT GetCustomAttributeByName (
 );  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `tkObj`  
  [in] 사용자 지정 특성을 소유 하는 개체를 나타내는 메타 데이터 토큰입니다.  
   

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5f1d62c55df410d284fe050b805cf465718ab112
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 343f4f3cb88f98d1952e2910255d6cceb0cf0cc6
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54576153"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57483369"
 ---
 # <a name="imetadataemitdefinepinvokemap-method"></a>IMetaDataEmit::DefinePinvokeMap 메서드
 지정한 토큰이 참조 하는 메서드 서명의 PInvoke의 기능을 설정 합니다.  
@@ -38,7 +38,7 @@ HRESULT DefinePinvokeMap (
 );  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `tk`  
  [in] 대상 메서드에 대 한 토큰입니다.  
   

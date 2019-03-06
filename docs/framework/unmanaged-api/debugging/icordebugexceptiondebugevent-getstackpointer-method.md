@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: d8f66a1c-16be-4264-afc5-bc2dfbb4a682
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 89802de31ed6db4ef6532a2b4a90a82c4e9a5c72
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9f5ea632ad8a7dd2e24e71742223936b01298f31
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54590853"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57485158"
 ---
 # <a name="icordebugexceptiondebugeventgetstackpointer-method"></a>ICorDebugExceptionDebugEvent::GetStackPointer 메서드
 이 예외 디버그 이벤트에 대한 스택 포인터를 가져옵니다.  
@@ -22,14 +22,15 @@ HRESULT GetStackPointer(
 );  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `pStackPointer`  
  [out] 이 예외 디버그 이벤트의 스택 포인터에 대한 포인터입니다. 자세한 내용은 설명 부분을 참조하세요.  
   
 ## <a name="remarks"></a>설명  
  이 스택 포인터의 의미는 다음 표와 같이 이벤트 유형에 따라 달라집니다.  
   
-|이벤트 유형|`pStackPointer` 값의 의미|  
+|이벤트 유형|
+  `pStackPointer` 값의 의미|  
 |----------------|--------------------------------------|  
 |[MANAGED_EXCEPTION_FIRST_CHANCE](../../../../docs/framework/unmanaged-api/debugging/cordebugrecordformat-enumeration.md)|예외를 throw한 프레임에 대한 스택 포인터입니다.|  
 |[MANAGED_EXCEPTION_USER_FIRST_CHANCE](../../../../docs/framework/unmanaged-api/debugging/cordebugrecordformat-enumeration.md)|예외가 throw된 지점과 가장 가까운 사용자 코드 프레임에 대한 스택 포인터입니다.|  

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - globalization [WPF], about globalization
 - localization [WPF], about localization
 ms.assetid: 56e5a5c8-6c96-4d19-b8e1-a5be1dc564af
-ms.openlocfilehash: e31bea225a699f19e57e5a94f84c1a9f1727a3b6
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 55a60a74c246e0eefb854bed3d22cfb97eff15b1
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57364422"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57492671"
 ---
 # <a name="wpf-globalization-and-localization-overview"></a>WPF 전역화 및 지역화 개요
 
@@ -74,7 +74,7 @@ ms.locfileid: "57364422"
   
 -   구성한 후에 지역화할 수 있습니다.  
   
--   이전 버전의 BAML 양식의 XAML을 지역화된 새 버전의 BAML 양식의 XAML로 업데이트할 수 있으므로 개발과 동시에 지역화를 수행할 수 있습니다.  
+-   개발 하는 동시에 지역화할 수 있도록 이전 버전의 BAML 양식의 XAML에서 지역화 된 BAML 양식의 XAML의 최신 버전으로도 업데이트할 수 있습니다.  
   
 -   확인할 수 있습니다 원래 소스 요소와 의미 체계 컴파일 타임에 BAML 양식의 XAML의 컴파일된 형태 이므로 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]합니다.  
   

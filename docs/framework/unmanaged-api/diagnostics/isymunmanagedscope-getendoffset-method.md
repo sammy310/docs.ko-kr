@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 739398d8c20f58d8b5e458e2de4cbb6f56c50fd8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 47db4313354b00514084ec1110710cbd174a3788
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54624171"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57492623"
 ---
 # <a name="isymunmanagedscopegetendoffset-method"></a>ISymUnmanagedScope::GetEndOffset 메서드
 이 범위의 끝 오프셋을 가져옵니다.  
@@ -34,7 +34,7 @@ HRESULT GetEndOffset(
     [out, retval] ULONG32* pRetVal);  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `pRetVal`  
  [out] 에 대 한 포인터를 `ULONG32` 를 받는 끝 오프셋입니다.  
   

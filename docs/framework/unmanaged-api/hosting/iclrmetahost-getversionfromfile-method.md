@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 83bd2f3b0c1d58528624ac730756fb3bcdf4ba47
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e1c8f5ea20d00d692e0eea0cba93ec4e73038e8a
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54744845"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57497446"
 ---
 # <a name="iclrmetahostgetversionfromfile-method"></a>ICLRMetaHost::GetVersionFromFile 메서드
 파일 경로가 지정 된 어셈블리의 원래.net 컴파일 버전을 (메타 데이터에 저장 됨)을 가져옵니다. 이 메서드를 대체 합니다 [GetFileVersion](../../../../docs/framework/unmanaged-api/hosting/getfileversion-function.md) 함수입니다.  
@@ -37,7 +37,7 @@ HRESULT GetVersionFromFile (
 );  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `pwzFilePath`  
  [in] 전체 어셈블리 파일 경로입니다.  
   

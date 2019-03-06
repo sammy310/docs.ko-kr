@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 01d8821cdcb27ed44491db41da22309147da8a36
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 92b593248a7a196247a5b4c71a90cd8944665bbe
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54706737"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57485280"
 ---
 # <a name="ihostsecuritycontextcapture-method"></a>IHostSecurityContext::Capture 메서드
 복제본을 가져옵니다 합니다 [IHostSecurityContext](../../../../docs/framework/unmanaged-api/hosting/ihostsecuritycontext-interface.md) 호출에서 반환 되는 인스턴스 [ihostsecuritymanager:: Getsecuritycontext](../../../../docs/framework/unmanaged-api/hosting/ihostsecuritymanager-getsecuritycontext-method.md)합니다.  
@@ -35,7 +35,7 @@ HRESULT Capture (
 );  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `ppClonedContext`  
  [out] 복제본 주소에 대 한 포인터를 `IHostSecurityContext` 캡처할 개체입니다.  
   

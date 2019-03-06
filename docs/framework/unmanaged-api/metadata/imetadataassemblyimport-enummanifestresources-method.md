@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 0cffafe9c8eac03d31c2b0b45dd65ed2c5b28861
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a13e750029fed2f2261064dd69d6c1d800d59989
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54722643"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57473905"
 ---
 # <a name="imetadataassemblyimportenummanifestresources-method"></a>IMetaDataAssemblyImport::EnumManifestResources 메서드
 현재 어셈블리 매니페스트에서 참조 하는 리소스에 대 한 열거자에 대 한 포인터를 가져옵니다.  
@@ -38,7 +38,7 @@ HRESULT EnumManifestResources (
 );   
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `phEnum`  
  [out에서] 열거자에 대 한 포인터입니다. Null 이어야 합니다 경우이 값은 `EnumManifestResources` 처음으로 호출 됩니다.  
   

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6287b7adf0ef6f6269a51f608657444f5fa7f74e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5512c503d8b4048c613ab88c2b4d9d19cdbb9dca
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54580228"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57479030"
 ---
 # <a name="imetadatadispenserexgetoption-method"></a>IMetaDataDispenserEx::GetOption 메서드
 현재 메타 데이터 범위에 대 한 지정된 된 옵션의 값을 가져옵니다. 현재 메타 데이터 범위에 대 한 호출을 처리 하는 방법을 제어 하는 옵션입니다.  
@@ -36,7 +36,7 @@ HRESULT GetOption (
 );  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `optionId`  
  [in] 검색할 옵션을 지정 하는 GUID에 대 한 포인터입니다. 지원 되는 Guid의 목록은 설명 섹션을 참조 하세요.  
   

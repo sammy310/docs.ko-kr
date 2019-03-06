@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7f8e9c91ddddd0e0b14c79bef86c7665ff4e3dcc
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 101e1c83d040f2f6db4585e76e4b353270dd1de1
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54723323"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57484981"
 ---
 # <a name="icorruntimehostnextdomain-method"></a>ICorRuntimeHost::NextDomain 메서드
 열거형에서 다음 도메인에 대 한 인터페이스 포인터를 가져옵니다.  
@@ -36,7 +36,7 @@ HRESULT NextDomain (
 );  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `hEnum`  
  [in] 호출을 통해 얻은 열거자 [EnumDomains](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-enumdomains-method.md)합니다.  
   
@@ -47,7 +47,7 @@ HRESULT NextDomain (
   
 |HRESULT|설명|  
 |-------------|-----------------|  
-|S_OK|작업이 완료되었습니다.|  
+|S_OK|작업에 성공 합니다.|  
 |S_FALSE|작업을 완료 하지 못했습니다 또는 열거형에 도메인이 더 있습니다.|  
 |E_FAIL|알 수 없는 치명적인 오류가 발생 했습니다. E_FAIL을 반환 하는 메서드는 CLR (공용 언어 런타임) 더 이상 사용할 수 진행에서 합니다. 호스팅 Api에 대 한 후속 호출 HOST_E_CLRNOTAVAILABLE를 반환합니다.|  
 |HOST_E_CLRNOTAVAILABLE|CLR이 로드 된 프로세스에 또는 CLR 상태인는 관리 코드를 실행 하거나 호출을 처리할 수 없습니다.|  

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 23d5e2f586f63cbd21dcb6e5da3445153f4a9db3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: de4e55c8e1a13daf07a8a75a19a44127779d5c05
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54683392"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57481614"
 ---
 # <a name="iclrstrongnamestrongnamecompareassemblies-method"></a>ICLRStrongName::StrongNameCompareAssemblies 메서드
 두 어셈블리가 강력한 이름 서명에 의해서만 다른지 여부를 결정합니다.  
@@ -37,7 +37,7 @@ HRESULT StrongNameCompareAssemblies (
 );  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `wszAssembly1`  
  [in] 첫 번째 어셈블리에 대 한 경로입니다.  
   

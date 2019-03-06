@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: bc1eed1b129c9fc7efdce6703b3c396633b3436a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 714514d5b6a36d028da442bcc05accc0686417cf
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54622418"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57500618"
 ---
 # <a name="functionleave3withinfo-function"></a>FunctionLeave3WithInfo 함수
 컨트롤은 함수에서 반환 되는 프로파일러에 알립니다. 및 전달할 수 있는 핸들을 제공 합니다 [ICorProfilerInfo3::GetFunctionLeave3Info 메서드](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-getfunctionleave3info-method.md) 스택 프레임 및 반환 값을 검색할 합니다.  
@@ -34,7 +34,7 @@ void __stdcall FunctionLeave3WithInfo(
                [in] COR_PRF_ELT_INFO eltInfo);  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `functionIDOrClientID`  
  [in] 컨트롤이 반환 된 함수의 식별자입니다.  
   

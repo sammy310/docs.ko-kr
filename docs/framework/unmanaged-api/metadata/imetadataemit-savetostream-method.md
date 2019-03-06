@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 515e925c9b086823450b73cfbb558d0409b4948a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d2b7f0925946435bd69596f47e956f1f96eec7b2
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54576001"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57502932"
 ---
 # <a name="imetadataemitsavetostream-method"></a>IMetaDataEmit::SaveToStream 메서드
 지정 된 현재 범위에서 모든 메타 데이터를 저장 `IStream`합니다.  
@@ -36,12 +36,12 @@ HRESULT SaveToStream (
 );  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `pIStream`  
  [in] 에 저장 하는 쓰기 가능한 스트림.  
   
  `dwSaveFlags`  
- [in] 예약되어 있습니다. 0이어야 합니다.  
+ [in] 예약되어 있습니다. 0 이어야 합니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  

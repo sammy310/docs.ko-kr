@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0f56e9fef64a08be311d66845e42887a6aa821f6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c016c9dbe27f77b48c65fcd24ac9e13a9d07ed3f
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54720004"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57485457"
 ---
 # <a name="icordebugvalue3getsize64-method"></a>ICorDebugValue3::GetSize64 메서드
 이 바이트 단위로 크기를 가져옵니다 [ICorDebugValue3](../../../../docs/framework/unmanaged-api/debugging/icordebugvalue3-interface.md) 개체입니다.  
@@ -35,7 +35,7 @@ HRESULT GetSize64(
 );  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  pSize  
  [out] 이 개체를 바이트 단위로 크기에 대 한 포인터입니다.  
   

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2951b408efa39e1ac2afbd7d8ebcb5ea139a8a71
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 97d2959a27bb848d05dc44492152866b2d535b68
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54582451"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57503166"
 ---
 # <a name="ihostiocompletionmanagerinitializehostoverlapped-method"></a>IHostIoCompletionManager::InitializeHostOverlapped 메서드
 호스트 Win32에 추가할 사용자 지정 데이터를 초기화할 수 있도록 제공 `OVERLAPPED` 비동기 I/O 요청에 사용 되는 구조입니다.  
@@ -35,7 +35,7 @@ HRESULT InitializeHostOverlapped (
 );  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `pvOverlapped`  
  [in] Win32에 대 한 포인터 `OVERLAPPED` I/O 요청에 포함 되어야 하는 구조입니다.  
   

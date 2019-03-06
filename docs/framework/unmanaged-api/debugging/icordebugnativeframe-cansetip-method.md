@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 204cfc110ec6c8a11ec37505f8cf0c70d619e4b2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 93a8c8650822c5d986e21a456d58b2dc0327f05b
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54660816"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57479524"
 ---
 # <a name="icordebugnativeframecansetip-method"></a>ICorDebugNativeFrame::CanSetIP 메서드
 네이티브 코드에서 지정된 된 오프셋된 위치에는 IP (명령 포인터)를 설정할 수 인지 여부를 나타내는 HRESULT를 가져옵니다.  
@@ -35,7 +35,7 @@ HRESULT CanSetIP (
 );  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `nOffset`  
  [in] 명령 포인터에 대 한 원하는 설정입니다.  
   

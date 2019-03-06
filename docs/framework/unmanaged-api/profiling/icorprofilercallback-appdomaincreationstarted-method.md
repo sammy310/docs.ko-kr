@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 98fac8630403107f96f2fa86e5bcc9b0e60d0d08
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2bffa383734a96a32595b018fd6d9b3dc62d5526
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54737165"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57484760"
 ---
 # <a name="icorprofilercallbackappdomaincreationstarted-method"></a>ICorProfilerCallback::AppDomainCreationStarted 메서드
 응용 프로그램 도메인은 생성 되 고 있음을 프로파일러에 알립니다.  
@@ -34,7 +34,7 @@ HRESULT AppDomainCreationStarted(
     [in] AppDomainID appDomainId);  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `appDomainId`  
  [in] 생성 되는 도메인을 식별 합니다.  
   

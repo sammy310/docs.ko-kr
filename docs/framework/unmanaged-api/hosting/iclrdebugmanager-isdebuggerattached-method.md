@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e4e6ad42c442d535e10432af099e51ca0d536729
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 404d60bf0dfb8de1d7effae01b22b15e8931757c
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54572801"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57473944"
 ---
 # <a name="iclrdebugmanagerisdebuggerattached-method"></a>ICLRDebugManager::IsDebuggerAttached 메서드
 디버거가 프로세스에 연결되어 있는지 여부를 나타내는 값을 가져옵니다.  
@@ -35,7 +35,7 @@ HRESULT IsDebuggerAttached (
 );  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `pbAttached`  
  [out] `true` 디버거 고, 그렇지 않으면 프로세스에 연결 된 경우 `false`합니다.  
   

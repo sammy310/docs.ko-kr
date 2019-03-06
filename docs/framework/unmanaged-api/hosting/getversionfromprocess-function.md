@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 843236243563ce3dff82726aaab05845fa295b9d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fad069a15cb4079dac2b4ee65ca3d9669a53cac0
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54518139"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57479261"
 ---
 # <a name="getversionfromprocess-function"></a>GetVersionFromProcess 함수
 지정 된 프로세스 핸들을 사용 하 여 연결 된 공용 언어 런타임 (CLR)의 버전 번호를 가져옵니다.  
@@ -40,7 +40,7 @@ HRESULT GetVersionFromProcess (
 );  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `hProcess`  
  [in] 프로세스 핸들입니다.  
   

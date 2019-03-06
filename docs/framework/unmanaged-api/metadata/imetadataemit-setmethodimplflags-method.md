@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: cffbf01cb8098f30fb026491e0153ac9a651756a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 98df83569681dab5a7aa15651181373ee5d559dc
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54692395"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57479209"
 ---
 # <a name="imetadataemitsetmethodimplflags-method"></a>IMetaDataEmit::SetMethodImplFlags 메서드
 설정 하거나 지정된 된 토큰에서 참조 되는 상속 된 메서드 구현의 메타 데이터 서명을 업데이트 합니다.  
@@ -36,7 +36,7 @@ HRESULT SetMethodImplFlags (
 );  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `md`  
  [in] 변경 방법에 대 한 토큰입니다.  
   

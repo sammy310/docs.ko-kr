@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 71d267eedf621a11f8ad21cc7148e1810955521c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c0d579ffe6bf0722365e789ba3a43ce1dce06fac
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54713433"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57502997"
 ---
 # <a name="icordebugdatatargetgetthreadcontext-method"></a>ICorDebugDataTarget::GetThreadContext 메서드
 지정 된 스레드에 대 한 현재 스레드 컨텍스트를 반환합니다.  
@@ -37,7 +37,7 @@ HRESULT GetThreadContext(
        [out, size_is(contextSize)] BYTE * pContext);  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `dwThreadID`  
  [in] 해당 컨텍스트를 검색할는 스레드의 식별자입니다. 식별자는 운영 체제에 의해 정의 됩니다.  
   

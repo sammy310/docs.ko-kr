@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4f87724bda78c1948ae7e1ddfa3d586fe5b7e14e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5bfeb9bf282f8b6fc076cf3a5ae71b2375b8a90d
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54575738"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57487213"
 ---
 # <a name="icordebugmodulegettoken-method"></a>ICorDebugModule::GetToken 메서드
 이 모듈에 대 한 테이블 항목에 대 한 토큰을 가져옵니다.  
@@ -35,7 +35,7 @@ HRESULT GetToken(
 );  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `pToken`  
  [out] 에 대 한 포인터를 `mdModule` 모듈의 메타 데이터를 참조 하는 토큰입니다.  
   

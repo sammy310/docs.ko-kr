@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 89475ebc5ef04c8693adb7a83bd1dd07f5774fb9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c1a9df30ae11b13c052c75b05b0850d9f4754620
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54544696"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57470096"
 ---
 # <a name="imetadataemitsetrva-method"></a>IMetaDataEmit::SetRVA 메서드
 지정 된 메서드의 상대 가상 주소를 설정합니다.  
@@ -36,7 +36,7 @@ HRESULT SetRVA (
 );  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `md`  
  [in] 대상 메서드 또는 메서드 구현에 대 한 토큰입니다.  
   

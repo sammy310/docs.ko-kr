@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: f5fddeb6-b82e-4ebb-b432-849ce8513c77
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9c01898bcbd76f7e6de9445d5d1f511203c100ed
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4ddae1da8b07afff6ade28fb6dcae942cddd8c2e
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54585187"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57471617"
 ---
 # <a name="icordebugassembly3getcontainerassembly-method"></a>ICorDebugAssembly3::GetContainerAssembly 메서드
 이 `ICorDebugAssembly3` 개체의 컨테이너 어셈블리를 반환합니다.  
@@ -22,7 +22,7 @@ HRESULT GetContainerAssembly(
 );  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `ppAssembly`  
  컨테이너 어셈블리를 나타내는 ICorDebugAssembly 개체의 주소에 대 한 포인터 또는 **null** 메서드 호출이 실패 한 경우.  
   

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e03a618144ca322d51337e84486a8f5051a3d2a7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 42e86b1eac788b709432d39e320ebea49c696c14
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54568883"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57481706"
 ---
 # <a name="icorprofilerinfogetobjectsize-method"></a>ICorProfilerInfo::GetObjectSize 메서드
 지정된 된 개체의 크기를 가져옵니다.  
@@ -35,7 +35,7 @@ HRESULT GetObjectSize(
     [out] ULONG  *pcSize);  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `objectId`  
  [in] 개체의 ID입니다.  
   

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3a324dc07d450a7ca8992ab3a16f064233692581
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e5d28118ea1cc26f80ecc67ccedd160447aa69a4
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54711631"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57479036"
 ---
 # <a name="icordebugmodulegetmetadatainterface-method"></a>ICorDebugModule::GetMetaDataInterface 메서드
 모듈에 대 한 메타 데이터를 검사 하는 메타 데이터 인터페이스 개체를 가져옵니다.  
@@ -36,7 +36,7 @@ HRESULT GetMetaDataInterface (
 );  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `riid`  
  [in] 메타 데이터 인터페이스를 지정 하는 참조 ID입니다.  
   

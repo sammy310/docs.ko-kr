@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 886e47028ec445b0a96af367afccd09c0759d0d4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2e3cd977b7709f48ddf9938b9882a4ecb55cd6f0
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54727601"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57484500"
 ---
 # <a name="ihostsecuritymanageropenthreadtoken-method"></a>IHostSecurityManager::OpenThreadToken 메서드
 현재 실행 중인 스레드와 연결 된 임의 액세스 토큰을 엽니다.  
@@ -37,7 +37,7 @@ HRESULT OpenThreadToken (
 );  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `dwDesiredAccess`  
  [in] 스레드 토큰에 대 한 액세스 요청된 유형을 지정 하는 액세스 값의 마스크입니다. 이러한 값은 win32에서 정의 `OpenThreadToken` 함수입니다. 요청 된 액세스 형식은 토큰의 임의 액세스 제어 목록 (DACL) 액세스 권한 부여 또는 거부의 서식을 결정할 수에 대 한 조정 됩니다.  
   

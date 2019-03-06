@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a4c474b2ea9bc80be156c8e1424eabe3d2384666
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 68e3074252786d0339184ad3e1586337db9f368a
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54585273"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57469250"
 ---
 # <a name="isymunmanagedvariablegetendoffset-method"></a>ISymUnmanagedVariable::GetEndOffset 메서드
 부모 내에서이 변수의 끝 오프셋을 가져옵니다. 범위 내에서 로컬 변수 이면 끝 오프셋 범위에 대해 정의 된 오프셋 대체 됩니다.  
@@ -34,7 +34,7 @@ HRESULT GetEndOffset(
     [out, retval] ULONG32* pRetVal);  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `pRetVal`  
  [out] 에 대 한 포인터를 `ULONG32` 를 받는 끝 오프셋입니다.  
   

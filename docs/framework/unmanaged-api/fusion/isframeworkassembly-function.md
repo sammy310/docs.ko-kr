@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3e231c4fa51e6e66cba6227233cf73dd1cd4ebbe
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d0fb4c98ff2c8b071f05b42aefed61485001e97f
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54733924"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57480327"
 ---
 # <a name="isframeworkassembly-function"></a>IsFrameworkAssembly 함수
 지정된 된 어셈블리 관리 되는지 여부를 나타내는 값을 가져옵니다.  
@@ -37,7 +37,7 @@ HRESULT IsFrameworkAssembly (
  );  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `pwzAssemblyReference`  
  [in] 확인할 어셈블리의 이름입니다.  
   

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ad40087ca61f1b07c0e0e36e785d89b84132962a
-ms.sourcegitcommit: 01ea420eaa4bf76d5fc47673294c8881379b3369
+ms.openlocfilehash: 2c16f6d1334888fc389a7c39cf0a3865afca2085
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/06/2019
-ms.locfileid: "55759550"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57471047"
 ---
 # <a name="icordebugevalcreatevalue-method"></a>ICorDebugEval::CreateValue 메서드
 초기 값이 0 또는 null을 사용 하 여 지정 된 형식의 값을 만듭니다.  
@@ -39,7 +39,7 @@ HRESULT CreateValue (
 );  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `elementType`  
  [in] 값을 [CorElementType](../../../../docs/framework/unmanaged-api/metadata/corelementtype-enumeration.md) 값의 형식을 지정 하는 열거형입니다.  
   

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 15890bb4052905ef448501ae759669f8a1dfd444
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5727142f55e143cf144dae842f95a36effb33c68
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54735599"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57482238"
 ---
 # <a name="iclrdatatargetgetmachinetype-method"></a>ICLRDataTarget::GetMachineType 메서드
 대상 프로세스에서 사용 되는 명령 집합의 종류에 대 한 식별자를 가져옵니다.  
@@ -35,7 +35,7 @@ HRESULT GetMachineType (
 );  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `machineType`  
  [out] 대상 프로세스는 명령 집합을 지정 하는 값에 대 한 포인터 사용 중입니다. 반환 된 `machineType` WinNT.h 헤더 파일에 정의 된 IMAGE_FILE_MACHINE 상수 중 하나입니다.  
   

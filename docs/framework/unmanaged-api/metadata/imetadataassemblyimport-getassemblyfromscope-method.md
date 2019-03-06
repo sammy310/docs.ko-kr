@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 7914257d167d0f54d3625d252076576e5e40296b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0fc82ad87721c31337002dcfc5bbfdb9300afb31
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54634950"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57479742"
 ---
 # <a name="imetadataassemblyimportgetassemblyfromscope-method"></a>IMetaDataAssemblyImport::GetAssemblyFromScope 메서드
 현재 범위에서 어셈블리에 대 한 포인터를 가져옵니다.  
@@ -35,7 +35,7 @@ HRESULT GetAssemblyFromScope (
 );  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `ptkAssembly`  
  [out] 검색에 대 한 포인터 `mdAssembly` 어셈블리를 식별 하는 토큰입니다.  
   

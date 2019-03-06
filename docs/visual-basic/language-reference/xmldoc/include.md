@@ -5,12 +5,12 @@ helpviewer_keywords:
 - include XML tag
 - <include> XML tag
 ms.assetid: ba8e9173-82cd-460b-8938-a075a2dfb36d
-ms.openlocfilehash: bf7a434569bf82066c79962ae24741759b97e5ce
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 8159613036942d6c79f50b59a9b24ede02b6e4d8
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56973693"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57483590"
 ---
 # <a name="include-visual-basic"></a>\<포함 > (Visual Basic)
 형식 및 소스 코드에서 멤버를 설명 하는 다른 파일을 가리킵니다.  
@@ -21,7 +21,7 @@ ms.locfileid: "56973693"
 <include file="filename" path="tagpath[@name='id']" />  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `filename`  
  필수 요소. 문서가 포함된 파일의 이름입니다. 경로를 사용하여 파일 이름을 정규화할 수 있습니다. 묶습니다 `filename` 큰따옴표에서 ("").  
   

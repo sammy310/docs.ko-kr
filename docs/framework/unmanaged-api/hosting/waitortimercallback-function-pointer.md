@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1d36ae3ef63c1324f77786ad55674bbdc257d984
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 24a2c3baec0d958302101c295966f945ae98fa78
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54607136"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57490712"
 ---
 # <a name="waitortimercallback-function-pointer"></a>WAITORTIMERCALLBACK 함수 포인터
 호스트는 대기 핸들에 알리는 함수를 가리키는 (<xref:System.Threading.WaitHandle>) 하거나 신호가 전달 되거나 시간이 초과 되었습니다.  
@@ -37,7 +37,7 @@ typedef VOID (__stdcall *WAITORTIMERCALLBACK) (
 );  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `lpParameter`  
  [in] 호스트에 의해 정의 된 정보를 포함 하는 개체에 대 한 포인터입니다.  
   

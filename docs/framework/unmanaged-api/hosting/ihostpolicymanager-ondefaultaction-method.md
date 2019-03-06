@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1497f1e08ab514c20fa82602f523aadb425303d9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b6372f5b29f5b592123c4030f676b754a0c573ed
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54556472"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57489737"
 ---
 # <a name="ihostpolicymanagerondefaultaction-method"></a>IHostPolicyManager::OnDefaultAction 메서드
 CLR (공용 언어 런타임)를 호출 하 여 설정 된 기본 작업을 수행 하는 호스트에 알립니다 합니다 [iclrpolicymanager:: Setdefaultaction](../../../../docs/framework/unmanaged-api/hosting/iclrpolicymanager-setdefaultaction-method.md) 스레드 중단에 대 한 응답에서 메서드 또는 <xref:System.AppDomain> 언로드합니다.  
@@ -36,7 +36,7 @@ HRESULT OnDefaultAction (
 );  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `operation`  
  [in] 중 하나는 [EClrOperation](../../../../docs/framework/unmanaged-api/hosting/eclroperation-enumeration.md) CLR가 응답 하는 이벤트의 종류를 나타내는 값입니다.  
   

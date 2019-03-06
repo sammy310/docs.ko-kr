@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 91d21f51312eb812d253ba218eeeb99e5df1ff8e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 471f4837ff8aee725020f52c09a57d8f3652013c
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54730232"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57489867"
 ---
 # <a name="imetadataassemblyimportgetassemblyrefprops-method"></a>IMetaDataAssemblyImport::GetAssemblyRefProps 메서드
 지정 된 메타 데이터 서명 사용 하 여 어셈블리 참조에 대 한 속성 집합을 가져옵니다.  
@@ -44,7 +44,7 @@ HRESULT GetAssemblyRefProps (
 );  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `mdar`  
  [in] `mdAssemblyRef` 메타 데이터 토큰을 가져올 속성에 대 한 어셈블리 참조를 나타내는입니다.  
   

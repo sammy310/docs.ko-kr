@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f06c416d3443b350a172fab1a93a5d72bf40c197
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1b863816bfb7ed1a5db1fa2234db224b01cb6c9e
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54740361"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57481549"
 ---
 # <a name="isymunmanagedreaderreplacesymbolstore-method"></a>ISymUnmanagedReader::ReplaceSymbolStore 메서드
 기존 기호 저장소를 델타 기호 저장소로 바꿉니다. 이 메서드는 비슷합니다는 [UpdateSymbolStore](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-updatesymbolstore-method.md) 메서드를 제외 하 고 지정 된 델타 역할 업데이트 보다 완전 한 대체 합니다.  
@@ -38,7 +38,7 @@ HRESULT ReplaceSymbolStore (
     [in] IStream *pIStream);  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `filename`  
  [in] 기호 저장소를 포함 하는 파일의 이름입니다.  
   
