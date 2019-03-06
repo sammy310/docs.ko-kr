@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fb1e0aec9ce746c3082ad9cc57b572cbca0fd7e0
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: cc4ba4f87cd53e12baa0a7cf8b853db0e948201f
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54552266"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57500390"
 ---
-# <a name="iclrdatatargetgetcurrentthreadid-method"></a><span data-ttu-id="62b0e-102">ICLRDataTarget::GetCurrentThreadID 메서드</span><span class="sxs-lookup"><span data-stu-id="62b0e-102">ICLRDataTarget::GetCurrentThreadID Method</span></span>
-<span data-ttu-id="62b0e-103">현재 스레드에 대 한 운영 체제 식별자를 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="62b0e-103">Gets the operating system identifier for the current thread.</span></span>  
+# <a name="iclrdatatargetgetcurrentthreadid-method"></a><span data-ttu-id="c93cb-102">ICLRDataTarget::GetCurrentThreadID 메서드</span><span class="sxs-lookup"><span data-stu-id="c93cb-102">ICLRDataTarget::GetCurrentThreadID Method</span></span>
+<span data-ttu-id="c93cb-103">현재 스레드에 대 한 운영 체제 식별자를 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="c93cb-103">Gets the operating system identifier for the current thread.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="62b0e-104">구문</span><span class="sxs-lookup"><span data-stu-id="62b0e-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="c93cb-104">구문</span><span class="sxs-lookup"><span data-stu-id="c93cb-104">Syntax</span></span>  
   
 ```  
 HRESULT GetCurrentThreadID (  
@@ -35,21 +35,21 @@ HRESULT GetCurrentThreadID (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="62b0e-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="62b0e-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="c93cb-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="c93cb-105">Parameters</span></span>  
  `threadID`  
- <span data-ttu-id="62b0e-106">[out] 대상 프로세스에 대 한 현재 스레드의 운영 체제 식별자에 대 한 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="62b0e-106">[out] A pointer to the operating system identifier of the current thread for the target process.</span></span>  
+ <span data-ttu-id="c93cb-106">[out] 대상 프로세스에 대 한 현재 스레드의 운영 체제 식별자에 대 한 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="c93cb-106">[out] A pointer to the operating system identifier of the current thread for the target process.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="62b0e-107">설명</span><span class="sxs-lookup"><span data-stu-id="62b0e-107">Remarks</span></span>  
- <span data-ttu-id="62b0e-108">대상 프로세스에 대 한 현재 스레드가 없는 경우는 `GetCurrentThreadID` 메서드가 실패할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="62b0e-108">If there is no current thread for the target process, the `GetCurrentThreadID` method may fail.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="c93cb-107">설명</span><span class="sxs-lookup"><span data-stu-id="c93cb-107">Remarks</span></span>  
+ <span data-ttu-id="c93cb-108">대상 프로세스에 대 한 현재 스레드가 없는 경우는 `GetCurrentThreadID` 메서드가 실패할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="c93cb-108">If there is no current thread for the target process, the `GetCurrentThreadID` method may fail.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="62b0e-109">요구 사항</span><span class="sxs-lookup"><span data-stu-id="62b0e-109">Requirements</span></span>  
- <span data-ttu-id="62b0e-110">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="62b0e-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="c93cb-109">요구 사항</span><span class="sxs-lookup"><span data-stu-id="c93cb-109">Requirements</span></span>  
+ <span data-ttu-id="c93cb-110">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="c93cb-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="62b0e-111">**헤더:** ClrData.idl, ClrData.h</span><span class="sxs-lookup"><span data-stu-id="62b0e-111">**Header:** ClrData.idl, ClrData.h</span></span>  
+ <span data-ttu-id="c93cb-111">**헤더:** ClrData.idl, ClrData.h</span><span class="sxs-lookup"><span data-stu-id="c93cb-111">**Header:** ClrData.idl, ClrData.h</span></span>  
   
- <span data-ttu-id="62b0e-112">**라이브러리:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="62b0e-112">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="c93cb-112">**라이브러리:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="c93cb-112">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="62b0e-113">**.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="62b0e-113">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="c93cb-113">**.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="c93cb-113">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="62b0e-114">참고자료</span><span class="sxs-lookup"><span data-stu-id="62b0e-114">See also</span></span>
-- [<span data-ttu-id="62b0e-115">ICLRDataTarget 인터페이스</span><span class="sxs-lookup"><span data-stu-id="62b0e-115">ICLRDataTarget Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget-interface.md)
+## <a name="see-also"></a><span data-ttu-id="c93cb-114">참고자료</span><span class="sxs-lookup"><span data-stu-id="c93cb-114">See also</span></span>
+- [<span data-ttu-id="c93cb-115">ICLRDataTarget 인터페이스</span><span class="sxs-lookup"><span data-stu-id="c93cb-115">ICLRDataTarget Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget-interface.md)

@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d8d931b2f96045c53b895d7de5204e2d971b1c64
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c1c6c3b9dda990d6eb7d33239fedf35e2236f998
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54561038"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57479404"
 ---
-# <a name="imetadataconvertergetmetadatafromtypelib-method"></a><span data-ttu-id="eae1f-102">IMetaDataConverter::GetMetaDataFromTypeLib 메서드</span><span class="sxs-lookup"><span data-stu-id="eae1f-102">IMetaDataConverter::GetMetaDataFromTypeLib Method</span></span>
-<span data-ttu-id="eae1f-103">한 인터페이스 포인터를 가져옵니다는 [IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md) 지정 된 형식 라이브러리의 메타 데이터 시그니처를 나타내는 인스턴스 `ITypeLib` 인스턴스.</span><span class="sxs-lookup"><span data-stu-id="eae1f-103">Gets an interface pointer to an [IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md) instance that represents the metadata signature of the type library represented by the specified `ITypeLib` instance.</span></span>  
+# <a name="imetadataconvertergetmetadatafromtypelib-method"></a><span data-ttu-id="dcdfe-102">IMetaDataConverter::GetMetaDataFromTypeLib 메서드</span><span class="sxs-lookup"><span data-stu-id="dcdfe-102">IMetaDataConverter::GetMetaDataFromTypeLib Method</span></span>
+<span data-ttu-id="dcdfe-103">한 인터페이스 포인터를 가져옵니다는 [IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md) 지정 된 형식 라이브러리의 메타 데이터 시그니처를 나타내는 인스턴스 `ITypeLib` 인스턴스.</span><span class="sxs-lookup"><span data-stu-id="dcdfe-103">Gets an interface pointer to an [IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md) instance that represents the metadata signature of the type library represented by the specified `ITypeLib` instance.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="eae1f-104">구문</span><span class="sxs-lookup"><span data-stu-id="eae1f-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="dcdfe-104">구문</span><span class="sxs-lookup"><span data-stu-id="dcdfe-104">Syntax</span></span>  
   
 ```  
 HRESULT GetMetaDataFromTypeLib (  
@@ -36,22 +36,22 @@ HRESULT GetMetaDataFromTypeLib (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="eae1f-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="eae1f-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="dcdfe-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="dcdfe-105">Parameters</span></span>  
  `pITL`  
- <span data-ttu-id="eae1f-106">[in] 에 대 한 포인터를 `ITypeLib` 형식 라이브러리를 나타내는 개체입니다.</span><span class="sxs-lookup"><span data-stu-id="eae1f-106">[in] Pointer to an `ITypeLib` object that represents the type library.</span></span>  
+ <span data-ttu-id="dcdfe-106">[in] 에 대 한 포인터를 `ITypeLib` 형식 라이브러리를 나타내는 개체입니다.</span><span class="sxs-lookup"><span data-stu-id="dcdfe-106">[in] Pointer to an `ITypeLib` object that represents the type library.</span></span>  
   
  `ppMDI`  
- <span data-ttu-id="eae1f-107">[out] 주소를 수신 하는 위치에 대 한 포인터를 `IMetaDataImport` 메타 데이터 시그니처를 나타내는 인스턴스입니다.</span><span class="sxs-lookup"><span data-stu-id="eae1f-107">[out] Pointer to a location that receives the address of the `IMetaDataImport` instance that represents the metadata signature.</span></span>  
+ <span data-ttu-id="dcdfe-107">[out] 주소를 수신 하는 위치에 대 한 포인터를 `IMetaDataImport` 메타 데이터 시그니처를 나타내는 인스턴스입니다.</span><span class="sxs-lookup"><span data-stu-id="dcdfe-107">[out] Pointer to a location that receives the address of the `IMetaDataImport` instance that represents the metadata signature.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="eae1f-108">요구 사항</span><span class="sxs-lookup"><span data-stu-id="eae1f-108">Requirements</span></span>  
- <span data-ttu-id="eae1f-109">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="eae1f-109">**Platform:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="dcdfe-108">요구 사항</span><span class="sxs-lookup"><span data-stu-id="dcdfe-108">Requirements</span></span>  
+ <span data-ttu-id="dcdfe-109">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="dcdfe-109">**Platform:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="eae1f-110">**헤더:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="eae1f-110">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="dcdfe-110">**헤더:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="dcdfe-110">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="eae1f-111">**라이브러리:** MsCorEE.dll에서 리소스로 사용</span><span class="sxs-lookup"><span data-stu-id="eae1f-111">**Library:** Used as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="dcdfe-111">**라이브러리:** MsCorEE.dll에서 리소스로 사용</span><span class="sxs-lookup"><span data-stu-id="dcdfe-111">**Library:** Used as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="eae1f-112">**.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="eae1f-112">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="dcdfe-112">**.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="dcdfe-112">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="eae1f-113">참고자료</span><span class="sxs-lookup"><span data-stu-id="eae1f-113">See also</span></span>
-- [<span data-ttu-id="eae1f-114">IMetaDataEmit 인터페이스</span><span class="sxs-lookup"><span data-stu-id="eae1f-114">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
-- [<span data-ttu-id="eae1f-115">IMetaDataImport 인터페이스</span><span class="sxs-lookup"><span data-stu-id="eae1f-115">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+## <a name="see-also"></a><span data-ttu-id="dcdfe-113">참고자료</span><span class="sxs-lookup"><span data-stu-id="dcdfe-113">See also</span></span>
+- [<span data-ttu-id="dcdfe-114">IMetaDataEmit 인터페이스</span><span class="sxs-lookup"><span data-stu-id="dcdfe-114">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
+- [<span data-ttu-id="dcdfe-115">IMetaDataImport 인터페이스</span><span class="sxs-lookup"><span data-stu-id="dcdfe-115">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)

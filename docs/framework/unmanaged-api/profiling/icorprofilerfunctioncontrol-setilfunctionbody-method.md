@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 2d3b01deedd5cd7225c9e54b59ed82a708bad937
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e87d466e463cad2d9cd57c341812a0b57e025256
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54513184"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57479430"
 ---
-# <a name="icorprofilerfunctioncontrolsetilfunctionbody-method"></a><span data-ttu-id="9c125-102">ICorProfilerFunctionControl::SetILFunctionBody 메서드</span><span class="sxs-lookup"><span data-stu-id="9c125-102">ICorProfilerFunctionControl::SetILFunctionBody Method</span></span>
-<span data-ttu-id="9c125-103">메서드의 공용 중간 언어(CIL) 본문을 바꿉니다.</span><span class="sxs-lookup"><span data-stu-id="9c125-103">Replaces the Common Intermediate Language (CIL) body of the method.</span></span>  
+# <a name="icorprofilerfunctioncontrolsetilfunctionbody-method"></a><span data-ttu-id="a5b78-102">ICorProfilerFunctionControl::SetILFunctionBody 메서드</span><span class="sxs-lookup"><span data-stu-id="a5b78-102">ICorProfilerFunctionControl::SetILFunctionBody Method</span></span>
+<span data-ttu-id="a5b78-103">메서드의 공용 중간 언어(CIL) 본문을 바꿉니다.</span><span class="sxs-lookup"><span data-stu-id="a5b78-103">Replaces the Common Intermediate Language (CIL) body of the method.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="9c125-104">구문</span><span class="sxs-lookup"><span data-stu-id="9c125-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="a5b78-104">구문</span><span class="sxs-lookup"><span data-stu-id="a5b78-104">Syntax</span></span>  
   
 ```  
 HRESULT SetILFunctionBody(  
@@ -35,31 +35,31 @@ HRESULT SetILFunctionBody(
     [in, size_is(cbNewILMethodHeader)] LPCBYTE pbNewILMethodHeader);  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="9c125-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="9c125-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="a5b78-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="a5b78-105">Parameters</span></span>  
  `cbNewILMethodHeader`  
- <span data-ttu-id="9c125-106">[in] 헤더와 본문 다음에 오는 모든 구조를 포함한 새 CIL의 총 크기입니다.</span><span class="sxs-lookup"><span data-stu-id="9c125-106">[in] The total size of the new CIL, including the header and any structures that come after the body.</span></span>  
+ <span data-ttu-id="a5b78-106">[in] 헤더와 본문 다음에 오는 모든 구조를 포함한 새 CIL의 총 크기입니다.</span><span class="sxs-lookup"><span data-stu-id="a5b78-106">[in] The total size of the new CIL, including the header and any structures that come after the body.</span></span>  
   
  `pbNewILMethodHeader`  
- <span data-ttu-id="9c125-107">[in] 새 CIL 헤더에 대한 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="9c125-107">[in] A pointer to the new CIL header.</span></span>  
+ <span data-ttu-id="a5b78-107">[in] 새 CIL 헤더에 대한 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="a5b78-107">[in] A pointer to the new CIL header.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="9c125-108">반환 값</span><span class="sxs-lookup"><span data-stu-id="9c125-108">Return Value</span></span>  
- <span data-ttu-id="9c125-109">이 메서드는 다음과 같은 특정 HRESULT를 반환합니다.</span><span class="sxs-lookup"><span data-stu-id="9c125-109">This method returns the following specific HRESULTs.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="a5b78-108">반환 값</span><span class="sxs-lookup"><span data-stu-id="a5b78-108">Return Value</span></span>  
+ <span data-ttu-id="a5b78-109">이 메서드는 다음과 같은 특정 HRESULT를 반환합니다.</span><span class="sxs-lookup"><span data-stu-id="a5b78-109">This method returns the following specific HRESULTs.</span></span>  
   
-|<span data-ttu-id="9c125-110">HRESULT</span><span class="sxs-lookup"><span data-stu-id="9c125-110">HRESULT</span></span>|<span data-ttu-id="9c125-111">설명</span><span class="sxs-lookup"><span data-stu-id="9c125-111">Description</span></span>|  
+|<span data-ttu-id="a5b78-110">HRESULT</span><span class="sxs-lookup"><span data-stu-id="a5b78-110">HRESULT</span></span>|<span data-ttu-id="a5b78-111">설명</span><span class="sxs-lookup"><span data-stu-id="a5b78-111">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="9c125-112">S_OK</span><span class="sxs-lookup"><span data-stu-id="9c125-112">S_OK</span></span>|<span data-ttu-id="9c125-113">바꾸기에 성공했습니다.</span><span class="sxs-lookup"><span data-stu-id="9c125-113">The replacement was successful.</span></span>|  
+|<span data-ttu-id="a5b78-112">S_OK</span><span class="sxs-lookup"><span data-stu-id="a5b78-112">S_OK</span></span>|<span data-ttu-id="a5b78-113">바꾸기에 성공했습니다.</span><span class="sxs-lookup"><span data-stu-id="a5b78-113">The replacement was successful.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="9c125-114">설명</span><span class="sxs-lookup"><span data-stu-id="9c125-114">Remarks</span></span>  
- <span data-ttu-id="9c125-115">달리 합니다 [icorprofilerinfo:: Setilfunctionbody](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-setilfunctionbody-method.md) 메서드를 `SetILFunctionBody` 메서드는 새 CIL 본문에 필요한 메모리를 관리 합니다.</span><span class="sxs-lookup"><span data-stu-id="9c125-115">Unlike the [ICorProfilerInfo::SetILFunctionBody](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-setilfunctionbody-method.md) method, the `SetILFunctionBody` method manages the memory required for the new CIL body.</span></span> <span data-ttu-id="9c125-116">즉, 프로파일러에서 제공 하는 CIL 본문에 없는지를 사용 하 여 할당 되는 [IMethodMalloc](../../../../docs/framework/unmanaged-api/profiling/imethodmalloc-interface.md) 인터페이스 또는 특정 범위 내에 할당 합니다.</span><span class="sxs-lookup"><span data-stu-id="9c125-116">This means that the CIL body provided by the profiler does not have to be allocated by using the [IMethodMalloc](../../../../docs/framework/unmanaged-api/profiling/imethodmalloc-interface.md) interface or allocated within a particular range.</span></span> <span data-ttu-id="9c125-117">어떤 힙에든 할당할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="9c125-117">It can be allocated on any heap.</span></span> <span data-ttu-id="9c125-118">프로파일러 후 CIL 본문에 사용 된 메모리를 확보할 수 `SetILFunctionBody` 반환 합니다.</span><span class="sxs-lookup"><span data-stu-id="9c125-118">The profiler can free the memory used for its CIL body after `SetILFunctionBody` returns.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="a5b78-114">설명</span><span class="sxs-lookup"><span data-stu-id="a5b78-114">Remarks</span></span>  
+ <span data-ttu-id="a5b78-115">달리 합니다 [icorprofilerinfo:: Setilfunctionbody](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-setilfunctionbody-method.md) 메서드를 `SetILFunctionBody` 메서드는 새 CIL 본문에 필요한 메모리를 관리 합니다.</span><span class="sxs-lookup"><span data-stu-id="a5b78-115">Unlike the [ICorProfilerInfo::SetILFunctionBody](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-setilfunctionbody-method.md) method, the `SetILFunctionBody` method manages the memory required for the new CIL body.</span></span> <span data-ttu-id="a5b78-116">즉, 프로파일러에서 제공 하는 CIL 본문에 없는지를 사용 하 여 할당 되는 [IMethodMalloc](../../../../docs/framework/unmanaged-api/profiling/imethodmalloc-interface.md) 인터페이스 또는 특정 범위 내에 할당 합니다.</span><span class="sxs-lookup"><span data-stu-id="a5b78-116">This means that the CIL body provided by the profiler does not have to be allocated by using the [IMethodMalloc](../../../../docs/framework/unmanaged-api/profiling/imethodmalloc-interface.md) interface or allocated within a particular range.</span></span> <span data-ttu-id="a5b78-117">어떤 힙에든 할당할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="a5b78-117">It can be allocated on any heap.</span></span> <span data-ttu-id="a5b78-118">프로파일러 후 CIL 본문에 사용 된 메모리를 확보할 수 `SetILFunctionBody` 반환 합니다.</span><span class="sxs-lookup"><span data-stu-id="a5b78-118">The profiler can free the memory used for its CIL body after `SetILFunctionBody` returns.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="9c125-119">요구 사항</span><span class="sxs-lookup"><span data-stu-id="9c125-119">Requirements</span></span>  
- <span data-ttu-id="9c125-120">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="9c125-120">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="a5b78-119">요구 사항</span><span class="sxs-lookup"><span data-stu-id="a5b78-119">Requirements</span></span>  
+ <span data-ttu-id="a5b78-120">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="a5b78-120">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="9c125-121">**헤더:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="9c125-121">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="a5b78-121">**헤더:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="a5b78-121">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="9c125-122">**라이브러리:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="9c125-122">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="a5b78-122">**라이브러리:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="a5b78-122">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="9c125-123">**.NET Framework 버전:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="9c125-123">**.NET Framework Versions:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span></span>  
+ <span data-ttu-id="a5b78-123">**.NET Framework 버전:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="a5b78-123">**.NET Framework Versions:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="9c125-124">참고자료</span><span class="sxs-lookup"><span data-stu-id="9c125-124">See also</span></span>
-- [<span data-ttu-id="9c125-125">ICorProfilerFunctionControl 인터페이스</span><span class="sxs-lookup"><span data-stu-id="9c125-125">ICorProfilerFunctionControl Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerfunctioncontrol-interface.md)
+## <a name="see-also"></a><span data-ttu-id="a5b78-124">참고자료</span><span class="sxs-lookup"><span data-stu-id="a5b78-124">See also</span></span>
+- [<span data-ttu-id="a5b78-125">ICorProfilerFunctionControl 인터페이스</span><span class="sxs-lookup"><span data-stu-id="a5b78-125">ICorProfilerFunctionControl Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerfunctioncontrol-interface.md)

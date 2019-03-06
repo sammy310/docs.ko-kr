@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4b6640e42328fdf840fb0f6d0672b1fdc2c0bc12
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5651415b9565f71e7c899996708c0b263bf0154a
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54694505"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57487995"
 ---
-# <a name="strongnamegetpublickeyex-method"></a><span data-ttu-id="04377-102">StrongNameGetPublicKeyEx 메서드</span><span class="sxs-lookup"><span data-stu-id="04377-102">StrongNameGetPublicKeyEx Method</span></span>
-<span data-ttu-id="04377-103">공개/개인 키 쌍에서 공개 키를 가져옵니다 하 고 해시 알고리즘 및 서명 알고리즘을 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="04377-103">Gets the public key from a public/private key pair, and specifies a hash algorithm and a signature algorithm.</span></span>  
+# <a name="strongnamegetpublickeyex-method"></a><span data-ttu-id="20639-102">StrongNameGetPublicKeyEx 메서드</span><span class="sxs-lookup"><span data-stu-id="20639-102">StrongNameGetPublicKeyEx Method</span></span>
+<span data-ttu-id="20639-103">공개/개인 키 쌍에서 공개 키를 가져옵니다 하 고 해시 알고리즘 및 서명 알고리즘을 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="20639-103">Gets the public key from a public/private key pair, and specifies a hash algorithm and a signature algorithm.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="04377-104">구문</span><span class="sxs-lookup"><span data-stu-id="04377-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="20639-104">구문</span><span class="sxs-lookup"><span data-stu-id="20639-104">Syntax</span></span>  
   
 ```  
 HRESULT StrongNameGetPublicKey (   
@@ -41,60 +41,60 @@ HRESULT StrongNameGetPublicKey (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="04377-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="04377-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="20639-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="20639-105">Parameters</span></span>  
  `pwzKeyContainer`  
- <span data-ttu-id="04377-106">[in] 공개/개인 키 쌍을 포함 하는 키 컨테이너의 이름입니다.</span><span class="sxs-lookup"><span data-stu-id="04377-106">[in] The name of the key container that contains the public/private key pair.</span></span> <span data-ttu-id="04377-107">하는 경우 `pbKeyBlob` 이 null 이면 `szKeyContainer` 암호화 서비스 공급자 (CSP) 내에서 유효한 컨테이너를 지정 해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="04377-107">If `pbKeyBlob` is null, `szKeyContainer` must specify a valid container within the cryptographic service provider (CSP).</span></span> <span data-ttu-id="04377-108">이 경우에 `StrongNameGetPublicKeyEx` 메서드 컨테이너에 저장 된 키 쌍에서 공개 키를 추출 합니다.</span><span class="sxs-lookup"><span data-stu-id="04377-108">In this case, the `StrongNameGetPublicKeyEx` method extracts the public key from the key pair stored in the container.</span></span>  
+ <span data-ttu-id="20639-106">[in] 공개/개인 키 쌍을 포함 하는 키 컨테이너의 이름입니다.</span><span class="sxs-lookup"><span data-stu-id="20639-106">[in] The name of the key container that contains the public/private key pair.</span></span> <span data-ttu-id="20639-107">하는 경우 `pbKeyBlob` 이 null 이면 `szKeyContainer` 암호화 서비스 공급자 (CSP) 내에서 유효한 컨테이너를 지정 해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="20639-107">If `pbKeyBlob` is null, `szKeyContainer` must specify a valid container within the cryptographic service provider (CSP).</span></span> <span data-ttu-id="20639-108">이 경우에 `StrongNameGetPublicKeyEx` 메서드 컨테이너에 저장 된 키 쌍에서 공개 키를 추출 합니다.</span><span class="sxs-lookup"><span data-stu-id="20639-108">In this case, the `StrongNameGetPublicKeyEx` method extracts the public key from the key pair stored in the container.</span></span>  
   
- <span data-ttu-id="04377-109">경우 `pbKeyBlob` null이 아니면 키 쌍 가정 키 binary large object (BLOB)에 포함 되어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="04377-109">If `pbKeyBlob` is not null, the key pair is assumed to be contained in the key binary large object (BLOB).</span></span>  
+ <span data-ttu-id="20639-109">경우 `pbKeyBlob` null이 아니면 키 쌍 가정 키 binary large object (BLOB)에 포함 되어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="20639-109">If `pbKeyBlob` is not null, the key pair is assumed to be contained in the key binary large object (BLOB).</span></span>  
   
- <span data-ttu-id="04377-110">키에는 1024 비트 adleman의 Rivest-Shamir (RSA) 키를 서명 해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="04377-110">The keys must be 1024-bit Rivest-Shamir-Adleman (RSA) signing keys.</span></span> <span data-ttu-id="04377-111">다른 종류의 키이 이번에 지원 됩니다.</span><span class="sxs-lookup"><span data-stu-id="04377-111">No other types of keys are supported at this time.</span></span>  
+ <span data-ttu-id="20639-110">키에는 1024 비트 adleman의 Rivest-Shamir (RSA) 키를 서명 해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="20639-110">The keys must be 1024-bit Rivest-Shamir-Adleman (RSA) signing keys.</span></span> <span data-ttu-id="20639-111">다른 종류의 키이 이번에 지원 됩니다.</span><span class="sxs-lookup"><span data-stu-id="20639-111">No other types of keys are supported at this time.</span></span>  
   
  `pbKeyBlob`  
- <span data-ttu-id="04377-112">[in] 공개/개인 키 쌍에 대 한 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="04377-112">[in] A pointer to the public/private key pair.</span></span> <span data-ttu-id="04377-113">이 쌍이 win32 만들어진 형식을 `CryptExportKey` 함수입니다.</span><span class="sxs-lookup"><span data-stu-id="04377-113">This pair is in the format created by the Win32 `CryptExportKey` function.</span></span> <span data-ttu-id="04377-114">하는 경우 `pbKeyBlob` 가 null 이면 지정 된 키 컨테이너 `szKeyContainer` 키 쌍을 포함 하도록 간주 됩니다.</span><span class="sxs-lookup"><span data-stu-id="04377-114">If `pbKeyBlob` is null, the key container specified by `szKeyContainer` is assumed to contain the key pair.</span></span>  
+ <span data-ttu-id="20639-112">[in] 공개/개인 키 쌍에 대 한 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="20639-112">[in] A pointer to the public/private key pair.</span></span> <span data-ttu-id="20639-113">이 쌍이 win32 만들어진 형식을 `CryptExportKey` 함수입니다.</span><span class="sxs-lookup"><span data-stu-id="20639-113">This pair is in the format created by the Win32 `CryptExportKey` function.</span></span> <span data-ttu-id="20639-114">하는 경우 `pbKeyBlob` 가 null 이면 지정 된 키 컨테이너 `szKeyContainer` 키 쌍을 포함 하도록 간주 됩니다.</span><span class="sxs-lookup"><span data-stu-id="20639-114">If `pbKeyBlob` is null, the key container specified by `szKeyContainer` is assumed to contain the key pair.</span></span>  
   
  `cbKeyBlob`  
- <span data-ttu-id="04377-115">[in] 크기 (바이트)의 `pbKeyBlob`합니다.</span><span class="sxs-lookup"><span data-stu-id="04377-115">[in] The size, in bytes, of `pbKeyBlob`.</span></span>  
+ <span data-ttu-id="20639-115">[in] 크기 (바이트)의 `pbKeyBlob`합니다.</span><span class="sxs-lookup"><span data-stu-id="20639-115">[in] The size, in bytes, of `pbKeyBlob`.</span></span>  
   
  `ppbPublicKeyBlob`  
- <span data-ttu-id="04377-116">[out] 반환 된 공개 키 BLOB입니다.</span><span class="sxs-lookup"><span data-stu-id="04377-116">[out] The returned public key BLOB.</span></span> <span data-ttu-id="04377-117">`ppbPublicKeyBlob` 매개 변수는 공용 언어 런타임에 의해 할당 되 고 호출자에 게 반환 합니다.</span><span class="sxs-lookup"><span data-stu-id="04377-117">The `ppbPublicKeyBlob` parameter is allocated by the common language runtime and returned to the caller.</span></span> <span data-ttu-id="04377-118">호출자에 게 사용 하 여 메모리를 해제 해야 합니다 [iclrstrongname:: Strongnamefreebuffer](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamefreebuffer-method.md) 메서드.</span><span class="sxs-lookup"><span data-stu-id="04377-118">The caller must free the memory by using the [ICLRStrongName::StrongNameFreeBuffer](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamefreebuffer-method.md) method.</span></span>  
+ <span data-ttu-id="20639-116">[out] 반환 된 공개 키 BLOB입니다.</span><span class="sxs-lookup"><span data-stu-id="20639-116">[out] The returned public key BLOB.</span></span> <span data-ttu-id="20639-117">`ppbPublicKeyBlob` 매개 변수는 공용 언어 런타임에 의해 할당 되 고 호출자에 게 반환 합니다.</span><span class="sxs-lookup"><span data-stu-id="20639-117">The `ppbPublicKeyBlob` parameter is allocated by the common language runtime and returned to the caller.</span></span> <span data-ttu-id="20639-118">호출자에 게 사용 하 여 메모리를 해제 해야 합니다 [iclrstrongname:: Strongnamefreebuffer](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamefreebuffer-method.md) 메서드.</span><span class="sxs-lookup"><span data-stu-id="20639-118">The caller must free the memory by using the [ICLRStrongName::StrongNameFreeBuffer](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamefreebuffer-method.md) method.</span></span>  
   
  `pcbPublicKeyBlob`  
- <span data-ttu-id="04377-119">[out] 반환 된 공개 키 BLOB의 크기입니다.</span><span class="sxs-lookup"><span data-stu-id="04377-119">[out] The size of the returned public key BLOB.</span></span>  
+ <span data-ttu-id="20639-119">[out] 반환 된 공개 키 BLOB의 크기입니다.</span><span class="sxs-lookup"><span data-stu-id="20639-119">[out] The size of the returned public key BLOB.</span></span>  
   
  `uHashAlgId`  
- <span data-ttu-id="04377-120">[in] 어셈블리 해시 알고리즘입니다.</span><span class="sxs-lookup"><span data-stu-id="04377-120">[in] The assembly hash algorithm.</span></span> <span data-ttu-id="04377-121">허용 되는 값의 목록은 설명 섹션을 참조 하세요.</span><span class="sxs-lookup"><span data-stu-id="04377-121">See the Remarks section for a list of accepted values.</span></span>  
+ <span data-ttu-id="20639-120">[in] 어셈블리 해시 알고리즘입니다.</span><span class="sxs-lookup"><span data-stu-id="20639-120">[in] The assembly hash algorithm.</span></span> <span data-ttu-id="20639-121">허용 되는 값의 목록은 설명 섹션을 참조 하세요.</span><span class="sxs-lookup"><span data-stu-id="20639-121">See the Remarks section for a list of accepted values.</span></span>  
   
  `uReserved`  
- <span data-ttu-id="04377-122">[in] 사용 하도록 예약 됩니다. 기본값은 null입니다.</span><span class="sxs-lookup"><span data-stu-id="04377-122">[in] Reserved for future use; defaults to null.</span></span>  
+ <span data-ttu-id="20639-122">[in] 사용 하도록 예약 됩니다. 기본값은 null입니다.</span><span class="sxs-lookup"><span data-stu-id="20639-122">[in] Reserved for future use; defaults to null.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="04377-123">반환 값</span><span class="sxs-lookup"><span data-stu-id="04377-123">Return Value</span></span>  
- <span data-ttu-id="04377-124">`S_OK` 메서드가 성공적으로 완료 하는 경우 그렇지 않으면 실패를 나타내는 HRESULT 값을 (참조 [일반적인 HRESULT 값](https://go.microsoft.com/fwlink/?LinkId=213878) 목록에 대 한).</span><span class="sxs-lookup"><span data-stu-id="04377-124">`S_OK` if the method completed successfully; otherwise, an HRESULT value that indicates failure (see [Common HRESULT Values](https://go.microsoft.com/fwlink/?LinkId=213878) for a list).</span></span>  
+## <a name="return-value"></a><span data-ttu-id="20639-123">반환 값</span><span class="sxs-lookup"><span data-stu-id="20639-123">Return Value</span></span>  
+ <span data-ttu-id="20639-124">`S_OK` 메서드가 성공적으로 완료 하는 경우 그렇지 않으면 실패를 나타내는 HRESULT 값을 (참조 [일반적인 HRESULT 값](https://go.microsoft.com/fwlink/?LinkId=213878) 목록에 대 한).</span><span class="sxs-lookup"><span data-stu-id="20639-124">`S_OK` if the method completed successfully; otherwise, an HRESULT value that indicates failure (see [Common HRESULT Values](https://go.microsoft.com/fwlink/?LinkId=213878) for a list).</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="04377-125">설명</span><span class="sxs-lookup"><span data-stu-id="04377-125">Remarks</span></span>  
- <span data-ttu-id="04377-126">공개 키에 포함 된 [PublicKeyBlob](../../../../docs/framework/unmanaged-api/strong-naming/publickeyblob-structure.md) 구조입니다.</span><span class="sxs-lookup"><span data-stu-id="04377-126">The public key is contained in a [PublicKeyBlob](../../../../docs/framework/unmanaged-api/strong-naming/publickeyblob-structure.md) structure.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="20639-125">설명</span><span class="sxs-lookup"><span data-stu-id="20639-125">Remarks</span></span>  
+ <span data-ttu-id="20639-126">공개 키에 포함 된 [PublicKeyBlob](../../../../docs/framework/unmanaged-api/strong-naming/publickeyblob-structure.md) 구조입니다.</span><span class="sxs-lookup"><span data-stu-id="20639-126">The public key is contained in a [PublicKeyBlob](../../../../docs/framework/unmanaged-api/strong-naming/publickeyblob-structure.md) structure.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="04377-127">설명</span><span class="sxs-lookup"><span data-stu-id="04377-127">Remarks</span></span>  
- <span data-ttu-id="04377-128">다음 테이블에 대 한 허용 되는 값 집합을 보여 줍니다.는 `uHashAlgId` 매개 변수입니다.</span><span class="sxs-lookup"><span data-stu-id="04377-128">The following table shows the set of accepted values for the `uHashAlgId` parameter.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="20639-127">설명</span><span class="sxs-lookup"><span data-stu-id="20639-127">Remarks</span></span>  
+ <span data-ttu-id="20639-128">다음 테이블에 대 한 허용 되는 값 집합을 보여 줍니다.는 `uHashAlgId` 매개 변수입니다.</span><span class="sxs-lookup"><span data-stu-id="20639-128">The following table shows the set of accepted values for the `uHashAlgId` parameter.</span></span>  
   
-|<span data-ttu-id="04377-129">이름</span><span class="sxs-lookup"><span data-stu-id="04377-129">Name</span></span>|<span data-ttu-id="04377-130">값</span><span class="sxs-lookup"><span data-stu-id="04377-130">Value</span></span>|  
+|<span data-ttu-id="20639-129">이름</span><span class="sxs-lookup"><span data-stu-id="20639-129">Name</span></span>|<span data-ttu-id="20639-130">값</span><span class="sxs-lookup"><span data-stu-id="20639-130">Value</span></span>|  
 |----------|-----------|  
-|<span data-ttu-id="04377-131">없음</span><span class="sxs-lookup"><span data-stu-id="04377-131">None</span></span>|<span data-ttu-id="04377-132">0</span><span class="sxs-lookup"><span data-stu-id="04377-132">0</span></span>|  
-|<span data-ttu-id="04377-133">SHA-1</span><span class="sxs-lookup"><span data-stu-id="04377-133">SHA-1</span></span>|<span data-ttu-id="04377-134">0x8004</span><span class="sxs-lookup"><span data-stu-id="04377-134">0x8004</span></span>|  
-|<span data-ttu-id="04377-135">SHA-256</span><span class="sxs-lookup"><span data-stu-id="04377-135">SHA-256</span></span>|<span data-ttu-id="04377-136">0x800c</span><span class="sxs-lookup"><span data-stu-id="04377-136">0x800c</span></span>|  
-|<span data-ttu-id="04377-137">SHA-384</span><span class="sxs-lookup"><span data-stu-id="04377-137">SHA-384</span></span>|<span data-ttu-id="04377-138">0x800d</span><span class="sxs-lookup"><span data-stu-id="04377-138">0x800d</span></span>|  
-|<span data-ttu-id="04377-139">SHA-512</span><span class="sxs-lookup"><span data-stu-id="04377-139">SHA-512</span></span>|<span data-ttu-id="04377-140">0x800e</span><span class="sxs-lookup"><span data-stu-id="04377-140">0x800e</span></span>|  
+|<span data-ttu-id="20639-131">없음</span><span class="sxs-lookup"><span data-stu-id="20639-131">None</span></span>|<span data-ttu-id="20639-132">0</span><span class="sxs-lookup"><span data-stu-id="20639-132">0</span></span>|  
+|<span data-ttu-id="20639-133">SHA-1</span><span class="sxs-lookup"><span data-stu-id="20639-133">SHA-1</span></span>|<span data-ttu-id="20639-134">0x8004</span><span class="sxs-lookup"><span data-stu-id="20639-134">0x8004</span></span>|  
+|<span data-ttu-id="20639-135">SHA-256</span><span class="sxs-lookup"><span data-stu-id="20639-135">SHA-256</span></span>|<span data-ttu-id="20639-136">0x800c</span><span class="sxs-lookup"><span data-stu-id="20639-136">0x800c</span></span>|  
+|<span data-ttu-id="20639-137">SHA-384</span><span class="sxs-lookup"><span data-stu-id="20639-137">SHA-384</span></span>|<span data-ttu-id="20639-138">0x800d</span><span class="sxs-lookup"><span data-stu-id="20639-138">0x800d</span></span>|  
+|<span data-ttu-id="20639-139">SHA-512</span><span class="sxs-lookup"><span data-stu-id="20639-139">SHA-512</span></span>|<span data-ttu-id="20639-140">0x800e</span><span class="sxs-lookup"><span data-stu-id="20639-140">0x800e</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="04377-141">요구 사항</span><span class="sxs-lookup"><span data-stu-id="04377-141">Requirements</span></span>  
- <span data-ttu-id="04377-142">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="04377-142">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="20639-141">요구 사항</span><span class="sxs-lookup"><span data-stu-id="20639-141">Requirements</span></span>  
+ <span data-ttu-id="20639-142">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="20639-142">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="04377-143">**헤더:** MetaHost.h</span><span class="sxs-lookup"><span data-stu-id="04377-143">**Header:** MetaHost.h</span></span>  
+ <span data-ttu-id="20639-143">**헤더:** MetaHost.h</span><span class="sxs-lookup"><span data-stu-id="20639-143">**Header:** MetaHost.h</span></span>  
   
- <span data-ttu-id="04377-144">**라이브러리:** MSCorEE.dll에 리소스로 포함</span><span class="sxs-lookup"><span data-stu-id="04377-144">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="20639-144">**라이브러리:** MSCorEE.dll에 리소스로 포함</span><span class="sxs-lookup"><span data-stu-id="20639-144">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="04377-145">**.NET Framework 버전:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="04377-145">**.NET Framework Versions:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span></span>  
+ <span data-ttu-id="20639-145">**.NET Framework 버전:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="20639-145">**.NET Framework Versions:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="04377-146">참고자료</span><span class="sxs-lookup"><span data-stu-id="04377-146">See also</span></span>
-- [<span data-ttu-id="04377-147">StrongNameTokenFromPublicKey 메서드</span><span class="sxs-lookup"><span data-stu-id="04377-147">StrongNameTokenFromPublicKey Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnametokenfrompublickey-method.md)
-- [<span data-ttu-id="04377-148">PublicKeyBlob 구조체</span><span class="sxs-lookup"><span data-stu-id="04377-148">PublicKeyBlob Structure</span></span>](../../../../docs/framework/unmanaged-api/strong-naming/publickeyblob-structure.md)
-- [<span data-ttu-id="04377-149">ICLRStrongName 인터페이스</span><span class="sxs-lookup"><span data-stu-id="04377-149">ICLRStrongName Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)
-- [<span data-ttu-id="04377-150">StrongNameGetPublicKey 메서드</span><span class="sxs-lookup"><span data-stu-id="04377-150">StrongNameGetPublicKey Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamegetpublickey-method.md)
+## <a name="see-also"></a><span data-ttu-id="20639-146">참고자료</span><span class="sxs-lookup"><span data-stu-id="20639-146">See also</span></span>
+- [<span data-ttu-id="20639-147">StrongNameTokenFromPublicKey 메서드</span><span class="sxs-lookup"><span data-stu-id="20639-147">StrongNameTokenFromPublicKey Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnametokenfrompublickey-method.md)
+- [<span data-ttu-id="20639-148">PublicKeyBlob 구조체</span><span class="sxs-lookup"><span data-stu-id="20639-148">PublicKeyBlob Structure</span></span>](../../../../docs/framework/unmanaged-api/strong-naming/publickeyblob-structure.md)
+- [<span data-ttu-id="20639-149">ICLRStrongName 인터페이스</span><span class="sxs-lookup"><span data-stu-id="20639-149">ICLRStrongName Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)
+- [<span data-ttu-id="20639-150">StrongNameGetPublicKey 메서드</span><span class="sxs-lookup"><span data-stu-id="20639-150">StrongNameGetPublicKey Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamegetpublickey-method.md)

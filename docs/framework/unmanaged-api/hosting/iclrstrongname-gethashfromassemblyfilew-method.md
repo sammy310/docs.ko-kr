@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 819801cd9ecce9f3d71f4454f4c65e8f3f8391a0
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f580d795485c5e306b4eb892c5d717346ce0c48c
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54714765"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57477507"
 ---
-# <a name="iclrstrongnamegethashfromassemblyfilew-method"></a><span data-ttu-id="83e4a-102">ICLRStrongName::GetHashFromAssemblyFileW 메서드</span><span class="sxs-lookup"><span data-stu-id="83e4a-102">ICLRStrongName::GetHashFromAssemblyFileW Method</span></span>
-<span data-ttu-id="83e4a-103">유니코드 문자열로 지정된 파일 내용에 대해 해시를 생성합니다.</span><span class="sxs-lookup"><span data-stu-id="83e4a-103">Generates a hash over the contents of the file specified by a Unicode string.</span></span>  
+# <a name="iclrstrongnamegethashfromassemblyfilew-method"></a><span data-ttu-id="2c4f9-102">ICLRStrongName::GetHashFromAssemblyFileW 메서드</span><span class="sxs-lookup"><span data-stu-id="2c4f9-102">ICLRStrongName::GetHashFromAssemblyFileW Method</span></span>
+<span data-ttu-id="2c4f9-103">유니코드 문자열로 지정된 파일 내용에 대해 해시를 생성합니다.</span><span class="sxs-lookup"><span data-stu-id="2c4f9-103">Generates a hash over the contents of the file specified by a Unicode string.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="83e4a-104">구문</span><span class="sxs-lookup"><span data-stu-id="83e4a-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="2c4f9-104">구문</span><span class="sxs-lookup"><span data-stu-id="2c4f9-104">Syntax</span></span>  
   
 ```  
 HRESULT GetHashFromAssemblyFileW (  
@@ -39,34 +39,34 @@ HRESULT GetHashFromAssemblyFileW (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="83e4a-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="83e4a-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="2c4f9-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="2c4f9-105">Parameters</span></span>  
  `wszFilePath`  
- <span data-ttu-id="83e4a-106">[in] 해시할 파일 경로입니다.</span><span class="sxs-lookup"><span data-stu-id="83e4a-106">[in] The path to the file to be hashed.</span></span> <span data-ttu-id="83e4a-107">이 매개 변수는 유니코드 문자열 이어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="83e4a-107">This parameter must be a Unicode string.</span></span>  
+ <span data-ttu-id="2c4f9-106">[in] 해시할 파일 경로입니다.</span><span class="sxs-lookup"><span data-stu-id="2c4f9-106">[in] The path to the file to be hashed.</span></span> <span data-ttu-id="2c4f9-107">이 매개 변수는 유니코드 문자열 이어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="2c4f9-107">This parameter must be a Unicode string.</span></span>  
   
  `piHashAlg`  
- <span data-ttu-id="83e4a-108">[out에서] 해시 알고리즘을 지정 하는 상수입니다.</span><span class="sxs-lookup"><span data-stu-id="83e4a-108">[in, out] A constant that specifies the hash algorithm.</span></span> <span data-ttu-id="83e4a-109">기본 해시 알고리즘에 0을 사용 합니다.</span><span class="sxs-lookup"><span data-stu-id="83e4a-109">Use zero for the default hash algorithm.</span></span>  
+ <span data-ttu-id="2c4f9-108">[out에서] 해시 알고리즘을 지정 하는 상수입니다.</span><span class="sxs-lookup"><span data-stu-id="2c4f9-108">[in, out] A constant that specifies the hash algorithm.</span></span> <span data-ttu-id="2c4f9-109">기본 해시 알고리즘에 0을 사용 합니다.</span><span class="sxs-lookup"><span data-stu-id="2c4f9-109">Use zero for the default hash algorithm.</span></span>  
   
  `pbHash`  
- <span data-ttu-id="83e4a-110">[out] 반환 된 해시 버퍼입니다.</span><span class="sxs-lookup"><span data-stu-id="83e4a-110">[out] The returned hash buffer.</span></span>  
+ <span data-ttu-id="2c4f9-110">[out] 반환 된 해시 버퍼입니다.</span><span class="sxs-lookup"><span data-stu-id="2c4f9-110">[out] The returned hash buffer.</span></span>  
   
  `cchHash`  
- <span data-ttu-id="83e4a-111">[in] 요청 된 최대 크기인 `pbHash`합니다.</span><span class="sxs-lookup"><span data-stu-id="83e4a-111">[in] The requested maximum size of `pbHash`.</span></span>  
+ <span data-ttu-id="2c4f9-111">[in] 요청 된 최대 크기인 `pbHash`합니다.</span><span class="sxs-lookup"><span data-stu-id="2c4f9-111">[in] The requested maximum size of `pbHash`.</span></span>  
   
  `pchHash`  
- <span data-ttu-id="83e4a-112">[out] 크기 (바이트)를 반환 `pbHash`합니다.</span><span class="sxs-lookup"><span data-stu-id="83e4a-112">[out] The returned size, in bytes, of `pbHash`.</span></span>  
+ <span data-ttu-id="2c4f9-112">[out] 크기 (바이트)를 반환 `pbHash`합니다.</span><span class="sxs-lookup"><span data-stu-id="2c4f9-112">[out] The returned size, in bytes, of `pbHash`.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="83e4a-113">반환 값</span><span class="sxs-lookup"><span data-stu-id="83e4a-113">Return Value</span></span>  
- <span data-ttu-id="83e4a-114">`S_OK` 메서드가 성공적으로 완료 하는 경우 그렇지 않으면 실패를 나타내는 HRESULT 값을 (참조 [일반적인 HRESULT 값](https://go.microsoft.com/fwlink/?LinkId=213878) 목록에 대 한).</span><span class="sxs-lookup"><span data-stu-id="83e4a-114">`S_OK` if the method completed successfully; otherwise, an HRESULT value that indicates failure (see [Common HRESULT Values](https://go.microsoft.com/fwlink/?LinkId=213878) for a list).</span></span>  
+## <a name="return-value"></a><span data-ttu-id="2c4f9-113">반환 값</span><span class="sxs-lookup"><span data-stu-id="2c4f9-113">Return Value</span></span>  
+ <span data-ttu-id="2c4f9-114">`S_OK` 메서드가 성공적으로 완료 하는 경우 그렇지 않으면 실패를 나타내는 HRESULT 값을 (참조 [일반적인 HRESULT 값](https://go.microsoft.com/fwlink/?LinkId=213878) 목록에 대 한).</span><span class="sxs-lookup"><span data-stu-id="2c4f9-114">`S_OK` if the method completed successfully; otherwise, an HRESULT value that indicates failure (see [Common HRESULT Values](https://go.microsoft.com/fwlink/?LinkId=213878) for a list).</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="83e4a-115">요구 사항</span><span class="sxs-lookup"><span data-stu-id="83e4a-115">Requirements</span></span>  
- <span data-ttu-id="83e4a-116">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="83e4a-116">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="2c4f9-115">요구 사항</span><span class="sxs-lookup"><span data-stu-id="2c4f9-115">Requirements</span></span>  
+ <span data-ttu-id="2c4f9-116">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="2c4f9-116">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="83e4a-117">**헤더:** MetaHost.h</span><span class="sxs-lookup"><span data-stu-id="83e4a-117">**Header:** MetaHost.h</span></span>  
+ <span data-ttu-id="2c4f9-117">**헤더:** MetaHost.h</span><span class="sxs-lookup"><span data-stu-id="2c4f9-117">**Header:** MetaHost.h</span></span>  
   
- <span data-ttu-id="83e4a-118">**라이브러리:** MSCorEE.dll에 리소스로 포함</span><span class="sxs-lookup"><span data-stu-id="83e4a-118">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="2c4f9-118">**라이브러리:** MSCorEE.dll에 리소스로 포함</span><span class="sxs-lookup"><span data-stu-id="2c4f9-118">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="83e4a-119">**.NET Framework 버전:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="83e4a-119">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
+ <span data-ttu-id="2c4f9-119">**.NET Framework 버전:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="2c4f9-119">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="83e4a-120">참고자료</span><span class="sxs-lookup"><span data-stu-id="83e4a-120">See also</span></span>
-- [<span data-ttu-id="83e4a-121">GetHashFromAssemblyFile 메서드</span><span class="sxs-lookup"><span data-stu-id="83e4a-121">GetHashFromAssemblyFile Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-gethashfromassemblyfile-method.md)
-- [<span data-ttu-id="83e4a-122">ICLRStrongName 인터페이스</span><span class="sxs-lookup"><span data-stu-id="83e4a-122">ICLRStrongName Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)
+## <a name="see-also"></a><span data-ttu-id="2c4f9-120">참고자료</span><span class="sxs-lookup"><span data-stu-id="2c4f9-120">See also</span></span>
+- [<span data-ttu-id="2c4f9-121">GetHashFromAssemblyFile 메서드</span><span class="sxs-lookup"><span data-stu-id="2c4f9-121">GetHashFromAssemblyFile Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-gethashfromassemblyfile-method.md)
+- [<span data-ttu-id="2c4f9-122">ICLRStrongName 인터페이스</span><span class="sxs-lookup"><span data-stu-id="2c4f9-122">ICLRStrongName Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)

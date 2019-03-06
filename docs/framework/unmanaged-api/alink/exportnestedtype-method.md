@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5c7ea671af5c6c725df136810bb8cf6610a6f83f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 49dc456df684d6905370ee6ab8c8883449bea990
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54710341"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57498044"
 ---
-# <a name="exportnestedtype-method"></a><span data-ttu-id="5afc6-102">ExportNestedType 메서드</span><span class="sxs-lookup"><span data-stu-id="5afc6-102">ExportNestedType Method</span></span>
-<span data-ttu-id="5afc6-103">내보낼 수 있도록 중첩 된 형식을 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="5afc6-103">Specifies nested types as exportable.</span></span> <span data-ttu-id="5afc6-104">합니다 [ExportType 메서드](../../../../docs/framework/unmanaged-api/alink/exporttype-method.md) 내보내기 중첩 형식 수도 있지만이 메서드는 더 빠릅니다.</span><span class="sxs-lookup"><span data-stu-id="5afc6-104">The [ExportType Method](../../../../docs/framework/unmanaged-api/alink/exporttype-method.md) can also export nested types, but this method is faster.</span></span>  
+# <a name="exportnestedtype-method"></a><span data-ttu-id="ed8f3-102">ExportNestedType 메서드</span><span class="sxs-lookup"><span data-stu-id="ed8f3-102">ExportNestedType Method</span></span>
+<span data-ttu-id="ed8f3-103">내보낼 수 있도록 중첩 된 형식을 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="ed8f3-103">Specifies nested types as exportable.</span></span> <span data-ttu-id="ed8f3-104">합니다 [ExportType 메서드](../../../../docs/framework/unmanaged-api/alink/exporttype-method.md) 내보내기 중첩 형식 수도 있지만이 메서드는 더 빠릅니다.</span><span class="sxs-lookup"><span data-stu-id="ed8f3-104">The [ExportType Method](../../../../docs/framework/unmanaged-api/alink/exporttype-method.md) can also export nested types, but this method is faster.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="5afc6-105">구문</span><span class="sxs-lookup"><span data-stu-id="5afc6-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="ed8f3-105">구문</span><span class="sxs-lookup"><span data-stu-id="ed8f3-105">Syntax</span></span>  
   
 ```  
 HRESULT ExportNestedType(  
@@ -41,35 +41,35 @@ HRESULT ExportNestedType(
 ) PURE;   
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="5afc6-106">매개 변수</span><span class="sxs-lookup"><span data-stu-id="5afc6-106">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="ed8f3-106">매개 변수</span><span class="sxs-lookup"><span data-stu-id="ed8f3-106">Parameters</span></span>  
  `AssemblyID`  
- <span data-ttu-id="5afc6-107">내보낼 어셈블리의 ID입니다.</span><span class="sxs-lookup"><span data-stu-id="5afc6-107">ID of assembly to export from.</span></span>  
+ <span data-ttu-id="ed8f3-107">내보낼 어셈블리의 ID입니다.</span><span class="sxs-lookup"><span data-stu-id="ed8f3-107">ID of assembly to export from.</span></span>  
   
  `FileToken`  
- <span data-ttu-id="5afc6-108">파일 토큰 또는 내보낼 수 있도록 지정할 형식을 정의 하는 파일의 어셈블리입니다.</span><span class="sxs-lookup"><span data-stu-id="5afc6-108">File token or Assembly of file that defines the type to be made exportable.</span></span>  
+ <span data-ttu-id="ed8f3-108">파일 토큰 또는 내보낼 수 있도록 지정할 형식을 정의 하는 파일의 어셈블리입니다.</span><span class="sxs-lookup"><span data-stu-id="ed8f3-108">File token or Assembly of file that defines the type to be made exportable.</span></span>  
   
  `TypeToken`  
- <span data-ttu-id="5afc6-109">내보낼 수 있도록 지정할 형식의 토큰을 입력 합니다.</span><span class="sxs-lookup"><span data-stu-id="5afc6-109">Type token of type to be made exportable.</span></span>  
+ <span data-ttu-id="ed8f3-109">내보낼 수 있도록 지정할 형식의 토큰을 입력 합니다.</span><span class="sxs-lookup"><span data-stu-id="ed8f3-109">Type token of type to be made exportable.</span></span>  
   
  `ParentType`  
- <span data-ttu-id="5afc6-110">부모 형식의 토큰입니다.</span><span class="sxs-lookup"><span data-stu-id="5afc6-110">Token of parent type.</span></span>  
+ <span data-ttu-id="ed8f3-110">부모 형식의 토큰입니다.</span><span class="sxs-lookup"><span data-stu-id="ed8f3-110">Token of parent type.</span></span>  
   
  `pszTypename`  
- <span data-ttu-id="5afc6-111">내보낼 정규화 된 형식 이름입니다.</span><span class="sxs-lookup"><span data-stu-id="5afc6-111">Fully qualified type name to export.</span></span>  
+ <span data-ttu-id="ed8f3-111">내보낼 정규화 된 형식 이름입니다.</span><span class="sxs-lookup"><span data-stu-id="ed8f3-111">Fully qualified type name to export.</span></span>  
   
  `dwFlags`  
- <span data-ttu-id="5afc6-112">`ComType` 와 같은 플래그 `tdPublic` 또는 `tdNested`합니다.</span><span class="sxs-lookup"><span data-stu-id="5afc6-112">`ComType` flags such as `tdPublic` or `tdNested`.</span></span> <span data-ttu-id="5afc6-113">이 값을 전달할 수 있습니다 [DefineExportedType 메서드](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-defineexportedtype-method.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="5afc6-113">This value may be passed to [DefineExportedType Method](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-defineexportedtype-method.md).</span></span>  
+ <span data-ttu-id="ed8f3-112">`ComType` 와 같은 플래그 `tdPublic` 또는 `tdNested`합니다.</span><span class="sxs-lookup"><span data-stu-id="ed8f3-112">`ComType` flags such as `tdPublic` or `tdNested`.</span></span> <span data-ttu-id="ed8f3-113">이 값을 전달할 수 있습니다 [DefineExportedType 메서드](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-defineexportedtype-method.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="ed8f3-113">This value may be passed to [DefineExportedType Method](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-defineexportedtype-method.md).</span></span>  
   
  `pType`  
- <span data-ttu-id="5afc6-114">내보낸된 형식에 대 한 토큰을 받습니다.</span><span class="sxs-lookup"><span data-stu-id="5afc6-114">Receives token for exported type.</span></span>  
+ <span data-ttu-id="ed8f3-114">내보낸된 형식에 대 한 토큰을 받습니다.</span><span class="sxs-lookup"><span data-stu-id="ed8f3-114">Receives token for exported type.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="5afc6-115">반환 값</span><span class="sxs-lookup"><span data-stu-id="5afc6-115">Return Value</span></span>  
- <span data-ttu-id="5afc6-116">메서드가 성공 하면 S_OK를 반환 합니다.</span><span class="sxs-lookup"><span data-stu-id="5afc6-116">Returns S_OK if the method succeeds.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="ed8f3-115">반환 값</span><span class="sxs-lookup"><span data-stu-id="ed8f3-115">Return Value</span></span>  
+ <span data-ttu-id="ed8f3-116">메서드가 성공 하면 S_OK를 반환 합니다.</span><span class="sxs-lookup"><span data-stu-id="ed8f3-116">Returns S_OK if the method succeeds.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="5afc6-117">요구 사항</span><span class="sxs-lookup"><span data-stu-id="5afc6-117">Requirements</span></span>  
- <span data-ttu-id="5afc6-118">Alink.h 필요</span><span class="sxs-lookup"><span data-stu-id="5afc6-118">Requires alink.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="ed8f3-117">요구 사항</span><span class="sxs-lookup"><span data-stu-id="ed8f3-117">Requirements</span></span>  
+ <span data-ttu-id="ed8f3-118">Alink.h 필요</span><span class="sxs-lookup"><span data-stu-id="ed8f3-118">Requires alink.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="5afc6-119">참고자료</span><span class="sxs-lookup"><span data-stu-id="5afc6-119">See also</span></span>
-- [<span data-ttu-id="5afc6-120">IALink 인터페이스</span><span class="sxs-lookup"><span data-stu-id="5afc6-120">IALink Interface</span></span>](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
-- [<span data-ttu-id="5afc6-121">IALink2 인터페이스</span><span class="sxs-lookup"><span data-stu-id="5afc6-121">IALink2 Interface</span></span>](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
-- [<span data-ttu-id="5afc6-122">ALink API</span><span class="sxs-lookup"><span data-stu-id="5afc6-122">ALink API</span></span>](../../../../docs/framework/unmanaged-api/alink/index.md)
+## <a name="see-also"></a><span data-ttu-id="ed8f3-119">참고자료</span><span class="sxs-lookup"><span data-stu-id="ed8f3-119">See also</span></span>
+- [<span data-ttu-id="ed8f3-120">IALink 인터페이스</span><span class="sxs-lookup"><span data-stu-id="ed8f3-120">IALink Interface</span></span>](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
+- [<span data-ttu-id="ed8f3-121">IALink2 인터페이스</span><span class="sxs-lookup"><span data-stu-id="ed8f3-121">IALink2 Interface</span></span>](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
+- [<span data-ttu-id="ed8f3-122">ALink API</span><span class="sxs-lookup"><span data-stu-id="ed8f3-122">ALink API</span></span>](../../../../docs/framework/unmanaged-api/alink/index.md)

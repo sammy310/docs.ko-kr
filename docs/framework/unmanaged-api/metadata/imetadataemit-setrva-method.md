@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 89475ebc5ef04c8693adb7a83bd1dd07f5774fb9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c1a9df30ae11b13c052c75b05b0850d9f4754620
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54544696"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57470096"
 ---
-# <a name="imetadataemitsetrva-method"></a><span data-ttu-id="bdeb2-102">IMetaDataEmit::SetRVA 메서드</span><span class="sxs-lookup"><span data-stu-id="bdeb2-102">IMetaDataEmit::SetRVA Method</span></span>
-<span data-ttu-id="bdeb2-103">지정 된 메서드의 상대 가상 주소를 설정합니다.</span><span class="sxs-lookup"><span data-stu-id="bdeb2-103">Sets the relative virtual address of the specified method.</span></span>  
+# <a name="imetadataemitsetrva-method"></a><span data-ttu-id="9f474-102">IMetaDataEmit::SetRVA 메서드</span><span class="sxs-lookup"><span data-stu-id="9f474-102">IMetaDataEmit::SetRVA Method</span></span>
+<span data-ttu-id="9f474-103">지정 된 메서드의 상대 가상 주소를 설정합니다.</span><span class="sxs-lookup"><span data-stu-id="9f474-103">Sets the relative virtual address of the specified method.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="bdeb2-104">구문</span><span class="sxs-lookup"><span data-stu-id="bdeb2-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="9f474-104">구문</span><span class="sxs-lookup"><span data-stu-id="9f474-104">Syntax</span></span>  
   
 ```  
 HRESULT SetRVA (  
@@ -36,22 +36,22 @@ HRESULT SetRVA (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="bdeb2-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="bdeb2-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="9f474-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="9f474-105">Parameters</span></span>  
  `md`  
- <span data-ttu-id="bdeb2-106">[in] 대상 메서드 또는 메서드 구현에 대 한 토큰입니다.</span><span class="sxs-lookup"><span data-stu-id="bdeb2-106">[in] The token for the target method or method implementation.</span></span>  
+ <span data-ttu-id="9f474-106">[in] 대상 메서드 또는 메서드 구현에 대 한 토큰입니다.</span><span class="sxs-lookup"><span data-stu-id="9f474-106">[in] The token for the target method or method implementation.</span></span>  
   
  `ulRVA`  
- <span data-ttu-id="bdeb2-107">[in] 주소는 코드 또는 데이터 영역입니다.</span><span class="sxs-lookup"><span data-stu-id="bdeb2-107">[in] The address of the code or data area.</span></span>  
+ <span data-ttu-id="9f474-107">[in] 주소는 코드 또는 데이터 영역입니다.</span><span class="sxs-lookup"><span data-stu-id="9f474-107">[in] The address of the code or data area.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="bdeb2-108">요구 사항</span><span class="sxs-lookup"><span data-stu-id="bdeb2-108">Requirements</span></span>  
- <span data-ttu-id="bdeb2-109">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="bdeb2-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="9f474-108">요구 사항</span><span class="sxs-lookup"><span data-stu-id="9f474-108">Requirements</span></span>  
+ <span data-ttu-id="9f474-109">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="9f474-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="bdeb2-110">**헤더:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="bdeb2-110">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="9f474-110">**헤더:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="9f474-110">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="bdeb2-111">**라이브러리:** MSCorEE.dll에서 리소스로 사용</span><span class="sxs-lookup"><span data-stu-id="bdeb2-111">**Library:** Used as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="9f474-111">**라이브러리:** MSCorEE.dll에서 리소스로 사용</span><span class="sxs-lookup"><span data-stu-id="9f474-111">**Library:** Used as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="bdeb2-112">**.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="bdeb2-112">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="9f474-112">**.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="9f474-112">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="bdeb2-113">참고자료</span><span class="sxs-lookup"><span data-stu-id="bdeb2-113">See also</span></span>
-- [<span data-ttu-id="bdeb2-114">IMetaDataEmit 인터페이스</span><span class="sxs-lookup"><span data-stu-id="bdeb2-114">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
-- [<span data-ttu-id="bdeb2-115">IMetaDataEmit2 인터페이스</span><span class="sxs-lookup"><span data-stu-id="bdeb2-115">IMetaDataEmit2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+## <a name="see-also"></a><span data-ttu-id="9f474-113">참고자료</span><span class="sxs-lookup"><span data-stu-id="9f474-113">See also</span></span>
+- [<span data-ttu-id="9f474-114">IMetaDataEmit 인터페이스</span><span class="sxs-lookup"><span data-stu-id="9f474-114">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
+- [<span data-ttu-id="9f474-115">IMetaDataEmit2 인터페이스</span><span class="sxs-lookup"><span data-stu-id="9f474-115">IMetaDataEmit2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

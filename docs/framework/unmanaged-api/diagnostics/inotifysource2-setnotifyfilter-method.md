@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 2c46f2636d397f7f71cf3c119b177f721c6fc091
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e5e2d0ed5ba5411f637c8370d366a96f0e028838
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54620947"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57484625"
 ---
-# <a name="inotifysource2setnotifyfilter-method"></a><span data-ttu-id="af5df-102">INotifySource2::SetNotifyFilter 메서드</span><span class="sxs-lookup"><span data-stu-id="af5df-102">INotifySource2::SetNotifyFilter Method</span></span>
-<span data-ttu-id="af5df-103">이 원본 사용에 대 한 알림 필터를 할당합니다.</span><span class="sxs-lookup"><span data-stu-id="af5df-103">Assigns a notification filter for use with this source.</span></span>  
+# <a name="inotifysource2setnotifyfilter-method"></a><span data-ttu-id="576d9-102">INotifySource2::SetNotifyFilter 메서드</span><span class="sxs-lookup"><span data-stu-id="576d9-102">INotifySource2::SetNotifyFilter Method</span></span>
+<span data-ttu-id="576d9-103">이 원본 사용에 대 한 알림 필터를 할당합니다.</span><span class="sxs-lookup"><span data-stu-id="576d9-103">Assigns a notification filter for use with this source.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="af5df-104">구문</span><span class="sxs-lookup"><span data-stu-id="af5df-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="576d9-104">구문</span><span class="sxs-lookup"><span data-stu-id="576d9-104">Syntax</span></span>  
   
 ```  
 HRESULT SetNotifyFilter  
@@ -37,20 +37,20 @@ HRESULT SetNotifyFilter
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="af5df-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="af5df-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="576d9-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="576d9-105">Parameters</span></span>  
  `in_NotifyFilter`  
- <span data-ttu-id="af5df-106">[in] 비트 조합 합니다 [NOTIFY_FILTER](../../../../docs/framework/unmanaged-api/diagnostics/notify-filter-enumeration.md) 디버거 API에 대 한 콜백을 식별 하는 열거형 값입니다.</span><span class="sxs-lookup"><span data-stu-id="af5df-106">[in] A bitwise combination of the [NOTIFY_FILTER](../../../../docs/framework/unmanaged-api/diagnostics/notify-filter-enumeration.md) enumeration values that identify callbacks for the debugger API.</span></span>  
+ <span data-ttu-id="576d9-106">[in] 비트 조합 합니다 [NOTIFY_FILTER](../../../../docs/framework/unmanaged-api/diagnostics/notify-filter-enumeration.md) 디버거 API에 대 한 콜백을 식별 하는 열거형 값입니다.</span><span class="sxs-lookup"><span data-stu-id="576d9-106">[in] A bitwise combination of the [NOTIFY_FILTER](../../../../docs/framework/unmanaged-api/diagnostics/notify-filter-enumeration.md) enumeration values that identify callbacks for the debugger API.</span></span>  
   
  `in_pUserThreadFilter`  
- <span data-ttu-id="af5df-107">[in] 에 대 한 포인터를 [USER_THREAD](../../../../docs/framework/unmanaged-api/diagnostics/user-thread-structure.md) 디버거 API에 대 한 스레드를 식별 하는 구조입니다.</span><span class="sxs-lookup"><span data-stu-id="af5df-107">[in] A pointer to a [USER_THREAD](../../../../docs/framework/unmanaged-api/diagnostics/user-thread-structure.md) structure that identifies threads for the debugger API.</span></span>  
+ <span data-ttu-id="576d9-107">[in] 에 대 한 포인터를 [USER_THREAD](../../../../docs/framework/unmanaged-api/diagnostics/user-thread-structure.md) 디버거 API에 대 한 스레드를 식별 하는 구조입니다.</span><span class="sxs-lookup"><span data-stu-id="576d9-107">[in] A pointer to a [USER_THREAD](../../../../docs/framework/unmanaged-api/diagnostics/user-thread-structure.md) structure that identifies threads for the debugger API.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="af5df-108">반환 값</span><span class="sxs-lookup"><span data-stu-id="af5df-108">Return Value</span></span>  
- <span data-ttu-id="af5df-109">메서드가 성공 하면 S_OK입니다.</span><span class="sxs-lookup"><span data-stu-id="af5df-109">S_OK if the method succeeds.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="576d9-108">반환 값</span><span class="sxs-lookup"><span data-stu-id="576d9-108">Return Value</span></span>  
+ <span data-ttu-id="576d9-109">메서드가 성공 하면 S_OK입니다.</span><span class="sxs-lookup"><span data-stu-id="576d9-109">S_OK if the method succeeds.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="af5df-110">요구 사항</span><span class="sxs-lookup"><span data-stu-id="af5df-110">Requirements</span></span>  
- <span data-ttu-id="af5df-111">**헤더:** ProtocolNotify2.idl</span><span class="sxs-lookup"><span data-stu-id="af5df-111">**Header:** ProtocolNotify2.idl</span></span>  
+## <a name="requirements"></a><span data-ttu-id="576d9-110">요구 사항</span><span class="sxs-lookup"><span data-stu-id="576d9-110">Requirements</span></span>  
+ <span data-ttu-id="576d9-111">**헤더:** ProtocolNotify2.idl</span><span class="sxs-lookup"><span data-stu-id="576d9-111">**Header:** ProtocolNotify2.idl</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="af5df-112">참고자료</span><span class="sxs-lookup"><span data-stu-id="af5df-112">See also</span></span>
-- [<span data-ttu-id="af5df-113">INotifySource2 인터페이스</span><span class="sxs-lookup"><span data-stu-id="af5df-113">INotifySource2 Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/inotifysource2-interface.md)
-- [<span data-ttu-id="af5df-114">INotifyConnection2 인터페이스</span><span class="sxs-lookup"><span data-stu-id="af5df-114">INotifyConnection2 Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/inotifyconnection2-interface.md)
-- [<span data-ttu-id="af5df-115">INotifySink2 인터페이스</span><span class="sxs-lookup"><span data-stu-id="af5df-115">INotifySink2 Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-interface.md)
+## <a name="see-also"></a><span data-ttu-id="576d9-112">참고자료</span><span class="sxs-lookup"><span data-stu-id="576d9-112">See also</span></span>
+- [<span data-ttu-id="576d9-113">INotifySource2 인터페이스</span><span class="sxs-lookup"><span data-stu-id="576d9-113">INotifySource2 Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/inotifysource2-interface.md)
+- [<span data-ttu-id="576d9-114">INotifyConnection2 인터페이스</span><span class="sxs-lookup"><span data-stu-id="576d9-114">INotifyConnection2 Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/inotifyconnection2-interface.md)
+- [<span data-ttu-id="576d9-115">INotifySink2 인터페이스</span><span class="sxs-lookup"><span data-stu-id="576d9-115">INotifySink2 Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-interface.md)

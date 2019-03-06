@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ff819ab67b258dbc7b5cec937863753852b1fcc1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6a8902df01e296c93bfbd94a1d90b0e3a40e81f0
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54629321"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57480353"
 ---
-# <a name="icorprofilercallbackmoduleattachedtoassembly-method"></a><span data-ttu-id="d57d8-102">ICorProfilerCallback::ModuleAttachedToAssembly 메서드</span><span class="sxs-lookup"><span data-stu-id="d57d8-102">ICorProfilerCallback::ModuleAttachedToAssembly Method</span></span>
-<span data-ttu-id="d57d8-103">모듈 부모 어셈블리에 연결 되는 프로파일러에 알립니다.</span><span class="sxs-lookup"><span data-stu-id="d57d8-103">Notifies the profiler that a module is being attached to its parent assembly.</span></span>  
+# <a name="icorprofilercallbackmoduleattachedtoassembly-method"></a><span data-ttu-id="b2bd2-102">ICorProfilerCallback::ModuleAttachedToAssembly 메서드</span><span class="sxs-lookup"><span data-stu-id="b2bd2-102">ICorProfilerCallback::ModuleAttachedToAssembly Method</span></span>
+<span data-ttu-id="b2bd2-103">모듈 부모 어셈블리에 연결 되는 프로파일러에 알립니다.</span><span class="sxs-lookup"><span data-stu-id="b2bd2-103">Notifies the profiler that a module is being attached to its parent assembly.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="d57d8-104">구문</span><span class="sxs-lookup"><span data-stu-id="d57d8-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="b2bd2-104">구문</span><span class="sxs-lookup"><span data-stu-id="b2bd2-104">Syntax</span></span>  
   
 ```  
 HRESULT ModuleAttachedToAssembly(  
@@ -35,24 +35,24 @@ HRESULT ModuleAttachedToAssembly(
     [in] AssemblyID AssemblyId);  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="d57d8-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="d57d8-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="b2bd2-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="b2bd2-105">Parameters</span></span>  
  `moduleId`  
- <span data-ttu-id="d57d8-106">[in] ID는 연결 되는 모듈입니다.</span><span class="sxs-lookup"><span data-stu-id="d57d8-106">[in] The ID of the module that is being attached.</span></span>  
+ <span data-ttu-id="b2bd2-106">[in] ID는 연결 되는 모듈입니다.</span><span class="sxs-lookup"><span data-stu-id="b2bd2-106">[in] The ID of the module that is being attached.</span></span>  
   
  `AssemblyId`  
- <span data-ttu-id="d57d8-107">[in] 모듈을 연결할 부모 어셈블리의 ID입니다.</span><span class="sxs-lookup"><span data-stu-id="d57d8-107">[in] The ID of the parent assembly to which the module is attached.</span></span>  
+ <span data-ttu-id="b2bd2-107">[in] 모듈을 연결할 부모 어셈블리의 ID입니다.</span><span class="sxs-lookup"><span data-stu-id="b2bd2-107">[in] The ID of the parent assembly to which the module is attached.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="d57d8-108">설명</span><span class="sxs-lookup"><span data-stu-id="d57d8-108">Remarks</span></span>  
- <span data-ttu-id="d57d8-109">호출 하 여 가져오기 주소 테이블 (IAT)을 통해 모듈을 로드할 수 있습니다 `LoadLibrary`, 또는 메타 데이터 참조를 통해.</span><span class="sxs-lookup"><span data-stu-id="d57d8-109">A module can be loaded through an import address table (IAT), through a call to `LoadLibrary`, or through a metadata reference.</span></span> <span data-ttu-id="d57d8-110">결과적으로, 공용 언어 런타임 (CLR) 로더 모듈 거주 하는 어셈블리를 확인 하기 위한 여러 코드 경로 있습니다.</span><span class="sxs-lookup"><span data-stu-id="d57d8-110">As a result, the common language runtime (CLR) loader has multiple code paths for determining the assembly in which a module lives.</span></span> <span data-ttu-id="d57d8-111">따라서 것이 가능 후 [icorprofilercallback:: Moduleloadfinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-moduleloadfinished-method.md) 가 호출 모듈에 어셈블리를 알 수 없습니다 것 이며 수 없는 부모 어셈블리 ID를 가져오는 중입니다.</span><span class="sxs-lookup"><span data-stu-id="d57d8-111">Therefore, it is possible that after [ICorProfilerCallback::ModuleLoadFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-moduleloadfinished-method.md) is called, the module does not know what assembly it is in and getting the parent assembly ID is not possible.</span></span> <span data-ttu-id="d57d8-112">`ModuleAttachedToAssembly` 메서드 모듈은 부모 어셈블리 및 해당 부모 어셈블리 ID를 가져올 수 있습니다를 연결할 때 호출 됩니다.</span><span class="sxs-lookup"><span data-stu-id="d57d8-112">The `ModuleAttachedToAssembly` method is called when the module is attached to its parent assembly and its parent assembly ID can be obtained.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="b2bd2-108">설명</span><span class="sxs-lookup"><span data-stu-id="b2bd2-108">Remarks</span></span>  
+ <span data-ttu-id="b2bd2-109">호출 하 여 가져오기 주소 테이블 (IAT)을 통해 모듈을 로드할 수 있습니다 `LoadLibrary`, 또는 메타 데이터 참조를 통해.</span><span class="sxs-lookup"><span data-stu-id="b2bd2-109">A module can be loaded through an import address table (IAT), through a call to `LoadLibrary`, or through a metadata reference.</span></span> <span data-ttu-id="b2bd2-110">결과적으로, 공용 언어 런타임 (CLR) 로더 모듈 거주 하는 어셈블리를 확인 하기 위한 여러 코드 경로 있습니다.</span><span class="sxs-lookup"><span data-stu-id="b2bd2-110">As a result, the common language runtime (CLR) loader has multiple code paths for determining the assembly in which a module lives.</span></span> <span data-ttu-id="b2bd2-111">따라서 것이 가능 후 [icorprofilercallback:: Moduleloadfinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-moduleloadfinished-method.md) 가 호출 모듈에 어셈블리를 알 수 없습니다 것 이며 수 없는 부모 어셈블리 ID를 가져오는 중입니다.</span><span class="sxs-lookup"><span data-stu-id="b2bd2-111">Therefore, it is possible that after [ICorProfilerCallback::ModuleLoadFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-moduleloadfinished-method.md) is called, the module does not know what assembly it is in and getting the parent assembly ID is not possible.</span></span> <span data-ttu-id="b2bd2-112">`ModuleAttachedToAssembly` 메서드 모듈은 부모 어셈블리 및 해당 부모 어셈블리 ID를 가져올 수 있습니다를 연결할 때 호출 됩니다.</span><span class="sxs-lookup"><span data-stu-id="b2bd2-112">The `ModuleAttachedToAssembly` method is called when the module is attached to its parent assembly and its parent assembly ID can be obtained.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="d57d8-113">요구 사항</span><span class="sxs-lookup"><span data-stu-id="d57d8-113">Requirements</span></span>  
- <span data-ttu-id="d57d8-114">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="d57d8-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="b2bd2-113">요구 사항</span><span class="sxs-lookup"><span data-stu-id="b2bd2-113">Requirements</span></span>  
+ <span data-ttu-id="b2bd2-114">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="b2bd2-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="d57d8-115">**헤더:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="d57d8-115">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="b2bd2-115">**헤더:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="b2bd2-115">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="d57d8-116">**라이브러리:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="d57d8-116">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="b2bd2-116">**라이브러리:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="b2bd2-116">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="d57d8-117">**.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="d57d8-117">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="b2bd2-117">**.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="b2bd2-117">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="d57d8-118">참고자료</span><span class="sxs-lookup"><span data-stu-id="d57d8-118">See also</span></span>
-- [<span data-ttu-id="d57d8-119">ICorProfilerCallback 인터페이스</span><span class="sxs-lookup"><span data-stu-id="d57d8-119">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+## <a name="see-also"></a><span data-ttu-id="b2bd2-118">참고자료</span><span class="sxs-lookup"><span data-stu-id="b2bd2-118">See also</span></span>
+- [<span data-ttu-id="b2bd2-119">ICorProfilerCallback 인터페이스</span><span class="sxs-lookup"><span data-stu-id="b2bd2-119">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)

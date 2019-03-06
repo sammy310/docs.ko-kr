@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2c82c72350931bf3aed8ec6699cd0af834798e92
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 972df4613255dc1b71801e02d387a735dfc632c0
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33417217"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57477259"
 ---
-# <a name="icordebugreferencevalueisnull-method"></a><span data-ttu-id="4bd28-102">ICorDebugReferenceValue::IsNull 메서드</span><span class="sxs-lookup"><span data-stu-id="4bd28-102">ICorDebugReferenceValue::IsNull Method</span></span>
-<span data-ttu-id="4bd28-103">이 ICorDebugReferenceValue이 null 값이 경우 인지 여부를 나타내는 값을 가져옵니다는 `ICorDebugReferenceValue` 개체를 가리키지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="4bd28-103">Gets a value that indicates whether this ICorDebugReferenceValue is a null value, in which case the `ICorDebugReferenceValue` does not point to an object.</span></span>  
+# <a name="icordebugreferencevalueisnull-method"></a><span data-ttu-id="57d1e-102">ICorDebugReferenceValue::IsNull 메서드</span><span class="sxs-lookup"><span data-stu-id="57d1e-102">ICorDebugReferenceValue::IsNull Method</span></span>
+<span data-ttu-id="57d1e-103">이 ICorDebugReferenceValue 경우 null 값을 인지 여부를 나타내는 값을 가져옵니다는 `ICorDebugReferenceValue` 개체를 가리키지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="57d1e-103">Gets a value that indicates whether this ICorDebugReferenceValue is a null value, in which case the `ICorDebugReferenceValue` does not point to an object.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="4bd28-104">구문</span><span class="sxs-lookup"><span data-stu-id="4bd28-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="57d1e-104">구문</span><span class="sxs-lookup"><span data-stu-id="57d1e-104">Syntax</span></span>  
   
 ```  
 HRESULT IsNull (  
@@ -35,15 +35,15 @@ HRESULT IsNull (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="4bd28-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="4bd28-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="57d1e-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="57d1e-105">Parameters</span></span>  
  `pbNull`  
- <span data-ttu-id="4bd28-106">[out] 부울 값이에 대 한 포인터 `true` 이 `ICorDebugReferenceValue` 개체는 null이 고, 그렇지 않으면 `pbNull` 은 `false`합니다.</span><span class="sxs-lookup"><span data-stu-id="4bd28-106">[out] A pointer to a Boolean value that is `true` if this `ICorDebugReferenceValue` object is null; otherwise, `pbNull` is `false`.</span></span>  
+ <span data-ttu-id="57d1e-106">[out] 부울 값에 대 한 포인터 `true` 이 `ICorDebugReferenceValue` 고, 그렇지 않으면 null 개체가 `pbNull` 는 `false`합니다.</span><span class="sxs-lookup"><span data-stu-id="57d1e-106">[out] A pointer to a Boolean value that is `true` if this `ICorDebugReferenceValue` object is null; otherwise, `pbNull` is `false`.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="4bd28-107">요구 사항</span><span class="sxs-lookup"><span data-stu-id="4bd28-107">Requirements</span></span>  
- <span data-ttu-id="4bd28-108">**플랫폼:** 참조 [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="4bd28-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="57d1e-107">요구 사항</span><span class="sxs-lookup"><span data-stu-id="57d1e-107">Requirements</span></span>  
+ <span data-ttu-id="57d1e-108">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="57d1e-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="4bd28-109">**헤더:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="4bd28-109">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="57d1e-109">**헤더:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="57d1e-109">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="4bd28-110">**라이브러리:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="4bd28-110">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="57d1e-110">**라이브러리:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="57d1e-110">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="4bd28-111">**.NET framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="4bd28-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
+ <span data-ttu-id="57d1e-111">**.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="57d1e-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>

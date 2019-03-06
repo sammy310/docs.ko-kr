@@ -17,20 +17,20 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f06c416d3443b350a172fab1a93a5d72bf40c197
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1b863816bfb7ed1a5db1fa2234db224b01cb6c9e
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54740361"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57481549"
 ---
-# <a name="isymunmanagedreaderreplacesymbolstore-method"></a><span data-ttu-id="4317d-102">ISymUnmanagedReader::ReplaceSymbolStore 메서드</span><span class="sxs-lookup"><span data-stu-id="4317d-102">ISymUnmanagedReader::ReplaceSymbolStore Method</span></span>
-<span data-ttu-id="4317d-103">기존 기호 저장소를 델타 기호 저장소로 바꿉니다.</span><span class="sxs-lookup"><span data-stu-id="4317d-103">Replaces the existing symbol store with a delta symbol store.</span></span> <span data-ttu-id="4317d-104">이 메서드는 비슷합니다는 [UpdateSymbolStore](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-updatesymbolstore-method.md) 메서드를 제외 하 고 지정 된 델타 역할 업데이트 보다 완전 한 대체 합니다.</span><span class="sxs-lookup"><span data-stu-id="4317d-104">This method is similar to the [UpdateSymbolStore](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-updatesymbolstore-method.md) method, except that the given delta acts as a complete replacement rather than an update.</span></span>  
+# <a name="isymunmanagedreaderreplacesymbolstore-method"></a><span data-ttu-id="a0d49-102">ISymUnmanagedReader::ReplaceSymbolStore 메서드</span><span class="sxs-lookup"><span data-stu-id="a0d49-102">ISymUnmanagedReader::ReplaceSymbolStore Method</span></span>
+<span data-ttu-id="a0d49-103">기존 기호 저장소를 델타 기호 저장소로 바꿉니다.</span><span class="sxs-lookup"><span data-stu-id="a0d49-103">Replaces the existing symbol store with a delta symbol store.</span></span> <span data-ttu-id="a0d49-104">이 메서드는 비슷합니다는 [UpdateSymbolStore](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-updatesymbolstore-method.md) 메서드를 제외 하 고 지정 된 델타 역할 업데이트 보다 완전 한 대체 합니다.</span><span class="sxs-lookup"><span data-stu-id="a0d49-104">This method is similar to the [UpdateSymbolStore](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-updatesymbolstore-method.md) method, except that the given delta acts as a complete replacement rather than an update.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="4317d-105">중 하나만 지정 해야 합니다 `filename` 또는 `pIStream` 매개 변수를 둘 다.</span><span class="sxs-lookup"><span data-stu-id="4317d-105">You need specify only one of the `filename` or `pIStream` parameters, not both.</span></span> <span data-ttu-id="4317d-106">경우 `filename` 를 지정 하면 해당 파일에서 기호를 사용 하 여 기호 저장소 업데이트 됩니다.</span><span class="sxs-lookup"><span data-stu-id="4317d-106">If `filename` is specified, the symbol store will be updated with the symbols in that file.</span></span> <span data-ttu-id="4317d-107">하는 경우 `pIStream` 를 지정 하면 저장소의 데이터로 업데이트 됩니다는 <xref:System.Runtime.InteropServices.ComTypes.IStream>합니다.</span><span class="sxs-lookup"><span data-stu-id="4317d-107">If `pIStream` is specified, the store will be updated with the data from the <xref:System.Runtime.InteropServices.ComTypes.IStream>.</span></span>  
+>  <span data-ttu-id="a0d49-105">중 하나만 지정 해야 합니다 `filename` 또는 `pIStream` 매개 변수를 둘 다.</span><span class="sxs-lookup"><span data-stu-id="a0d49-105">You need specify only one of the `filename` or `pIStream` parameters, not both.</span></span> <span data-ttu-id="a0d49-106">경우 `filename` 를 지정 하면 해당 파일에서 기호를 사용 하 여 기호 저장소 업데이트 됩니다.</span><span class="sxs-lookup"><span data-stu-id="a0d49-106">If `filename` is specified, the symbol store will be updated with the symbols in that file.</span></span> <span data-ttu-id="a0d49-107">하는 경우 `pIStream` 를 지정 하면 저장소의 데이터로 업데이트 됩니다는 <xref:System.Runtime.InteropServices.ComTypes.IStream>합니다.</span><span class="sxs-lookup"><span data-stu-id="a0d49-107">If `pIStream` is specified, the store will be updated with the data from the <xref:System.Runtime.InteropServices.ComTypes.IStream>.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="4317d-108">구문</span><span class="sxs-lookup"><span data-stu-id="4317d-108">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="a0d49-108">구문</span><span class="sxs-lookup"><span data-stu-id="a0d49-108">Syntax</span></span>  
   
 ```  
 HRESULT ReplaceSymbolStore (  
@@ -38,18 +38,18 @@ HRESULT ReplaceSymbolStore (
     [in] IStream *pIStream);  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="4317d-109">매개 변수</span><span class="sxs-lookup"><span data-stu-id="4317d-109">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="a0d49-109">매개 변수</span><span class="sxs-lookup"><span data-stu-id="a0d49-109">Parameters</span></span>  
  `filename`  
- <span data-ttu-id="4317d-110">[in] 기호 저장소를 포함 하는 파일의 이름입니다.</span><span class="sxs-lookup"><span data-stu-id="4317d-110">[in] The name of the file containing the symbol store.</span></span>  
+ <span data-ttu-id="a0d49-110">[in] 기호 저장소를 포함 하는 파일의 이름입니다.</span><span class="sxs-lookup"><span data-stu-id="a0d49-110">[in] The name of the file containing the symbol store.</span></span>  
   
  `pIStream`  
- <span data-ttu-id="4317d-111">[in] 대 안으로 사용 되는 파일 스트림을 `filename` 매개 변수입니다.</span><span class="sxs-lookup"><span data-stu-id="4317d-111">[in] The file stream, used as an alternative to the `filename` parameter.</span></span>  
+ <span data-ttu-id="a0d49-111">[in] 대 안으로 사용 되는 파일 스트림을 `filename` 매개 변수입니다.</span><span class="sxs-lookup"><span data-stu-id="a0d49-111">[in] The file stream, used as an alternative to the `filename` parameter.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="4317d-112">반환 값</span><span class="sxs-lookup"><span data-stu-id="4317d-112">Return Value</span></span>  
- <span data-ttu-id="4317d-113">메서드가 성공 하면 s_ok이 고 그렇지 않으면 E_FAIL 또는 일부 다른 오류 코드입니다.</span><span class="sxs-lookup"><span data-stu-id="4317d-113">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="a0d49-112">반환 값</span><span class="sxs-lookup"><span data-stu-id="a0d49-112">Return Value</span></span>  
+ <span data-ttu-id="a0d49-113">메서드가 성공 하면 s_ok이 고 그렇지 않으면 E_FAIL 또는 일부 다른 오류 코드입니다.</span><span class="sxs-lookup"><span data-stu-id="a0d49-113">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="4317d-114">요구 사항</span><span class="sxs-lookup"><span data-stu-id="4317d-114">Requirements</span></span>  
- <span data-ttu-id="4317d-115">**헤더:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="4317d-115">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="a0d49-114">요구 사항</span><span class="sxs-lookup"><span data-stu-id="a0d49-114">Requirements</span></span>  
+ <span data-ttu-id="a0d49-115">**헤더:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="a0d49-115">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="4317d-116">참고자료</span><span class="sxs-lookup"><span data-stu-id="4317d-116">See also</span></span>
-- [<span data-ttu-id="4317d-117">ISymUnmanagedReader 인터페이스</span><span class="sxs-lookup"><span data-stu-id="4317d-117">ISymUnmanagedReader Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)
+## <a name="see-also"></a><span data-ttu-id="a0d49-116">참고자료</span><span class="sxs-lookup"><span data-stu-id="a0d49-116">See also</span></span>
+- [<span data-ttu-id="a0d49-117">ISymUnmanagedReader 인터페이스</span><span class="sxs-lookup"><span data-stu-id="a0d49-117">ISymUnmanagedReader Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)

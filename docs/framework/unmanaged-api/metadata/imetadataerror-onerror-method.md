@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 7ebb7fdbcf8c17991928df2dc621ec651b9cd4f5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 011183d2f60e4abb967e5381d30a4c28e619e34c
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54678722"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57479781"
 ---
-# <a name="imetadataerroronerror-method"></a><span data-ttu-id="a2e05-102">IMetaDataError::OnError 메서드</span><span class="sxs-lookup"><span data-stu-id="a2e05-102">IMetaDataError::OnError Method</span></span>
-<span data-ttu-id="a2e05-103">메타 데이터를 병합 하는 동안 발생 하는 오류에 대 한 알림을 제공 합니다.</span><span class="sxs-lookup"><span data-stu-id="a2e05-103">Provides notification of errors that occur during the metadata merge.</span></span>  
+# <a name="imetadataerroronerror-method"></a><span data-ttu-id="e3a35-102">IMetaDataError::OnError 메서드</span><span class="sxs-lookup"><span data-stu-id="e3a35-102">IMetaDataError::OnError Method</span></span>
+<span data-ttu-id="e3a35-103">메타 데이터를 병합 하는 동안 발생 하는 오류에 대 한 알림을 제공 합니다.</span><span class="sxs-lookup"><span data-stu-id="e3a35-103">Provides notification of errors that occur during the metadata merge.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="a2e05-104">구문</span><span class="sxs-lookup"><span data-stu-id="a2e05-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="e3a35-104">구문</span><span class="sxs-lookup"><span data-stu-id="e3a35-104">Syntax</span></span>  
   
 ```  
 HRESULT OnError (  
@@ -36,21 +36,21 @@ HRESULT OnError (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="a2e05-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="a2e05-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="e3a35-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="e3a35-105">Parameters</span></span>  
  `hrError`  
- <span data-ttu-id="a2e05-106">[in] HRESULT 오류 값을 호출 하는 메서드로 반환 합니다.</span><span class="sxs-lookup"><span data-stu-id="a2e05-106">[in] The HRESULT error value returned to the calling method.</span></span>  
+ <span data-ttu-id="e3a35-106">[in] HRESULT 오류 값을 호출 하는 메서드로 반환 합니다.</span><span class="sxs-lookup"><span data-stu-id="e3a35-106">[in] The HRESULT error value returned to the calling method.</span></span>  
   
  `token`  
- <span data-ttu-id="a2e05-107">[in] 오류가 발생 했을 때를 병합 하는 코드 개체의 메타 데이터 토큰입니다.</span><span class="sxs-lookup"><span data-stu-id="a2e05-107">[in] The metadata token of the code object that was being merged when the error occurred.</span></span>  
+ <span data-ttu-id="e3a35-107">[in] 오류가 발생 했을 때를 병합 하는 코드 개체의 메타 데이터 토큰입니다.</span><span class="sxs-lookup"><span data-stu-id="e3a35-107">[in] The metadata token of the code object that was being merged when the error occurred.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="a2e05-108">요구 사항</span><span class="sxs-lookup"><span data-stu-id="a2e05-108">Requirements</span></span>  
- <span data-ttu-id="a2e05-109">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="a2e05-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="e3a35-108">요구 사항</span><span class="sxs-lookup"><span data-stu-id="e3a35-108">Requirements</span></span>  
+ <span data-ttu-id="e3a35-109">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="e3a35-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="a2e05-110">**헤더:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="a2e05-110">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="e3a35-110">**헤더:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="e3a35-110">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="a2e05-111">**라이브러리:** MsCorEE.dll에서 리소스로 사용</span><span class="sxs-lookup"><span data-stu-id="a2e05-111">**Library:** Used as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="e3a35-111">**라이브러리:** MsCorEE.dll에서 리소스로 사용</span><span class="sxs-lookup"><span data-stu-id="e3a35-111">**Library:** Used as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="a2e05-112">**.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="a2e05-112">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="e3a35-112">**.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="e3a35-112">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="a2e05-113">참고자료</span><span class="sxs-lookup"><span data-stu-id="a2e05-113">See also</span></span>
-- [<span data-ttu-id="a2e05-114">IMetaDataError 인터페이스</span><span class="sxs-lookup"><span data-stu-id="a2e05-114">IMetaDataError Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataerror-interface.md)
+## <a name="see-also"></a><span data-ttu-id="e3a35-113">참고자료</span><span class="sxs-lookup"><span data-stu-id="e3a35-113">See also</span></span>
+- [<span data-ttu-id="e3a35-114">IMetaDataError 인터페이스</span><span class="sxs-lookup"><span data-stu-id="e3a35-114">IMetaDataError Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataerror-interface.md)
