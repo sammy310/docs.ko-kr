@@ -17,46 +17,46 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 14c0da3192bb5488c71527a70ed47b03933c0ae1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7aae292daefe9333585a50d1d8c9ce49b1008cd9
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54721219"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57470785"
 ---
-# <a name="icorprofilercallback4getrejitparameters-method"></a><span data-ttu-id="16f06-102">ICorProfilerCallback4::GetReJITParameters 메서드</span><span class="sxs-lookup"><span data-stu-id="16f06-102">ICorProfilerCallback4::GetReJITParameters Method</span></span>
-<span data-ttu-id="16f06-103">코드 프로파일러를 새 다시 컴파일된 메서드 본문에 대 한 대체 코드 생성 플래그를 설정할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="16f06-103">Allows the code profiler to set alternate code generation flags for a new recompiled method body.</span></span>  
+# <a name="icorprofilercallback4getrejitparameters-method"></a><span data-ttu-id="f160e-102">ICorProfilerCallback4::GetReJITParameters 메서드</span><span class="sxs-lookup"><span data-stu-id="f160e-102">ICorProfilerCallback4::GetReJITParameters Method</span></span>
+<span data-ttu-id="f160e-103">코드 프로파일러를 새 다시 컴파일된 메서드 본문에 대 한 대체 코드 생성 플래그를 설정할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="f160e-103">Allows the code profiler to set alternate code generation flags for a new recompiled method body.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="16f06-104">구문</span><span class="sxs-lookup"><span data-stu-id="16f06-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="f160e-104">구문</span><span class="sxs-lookup"><span data-stu-id="f160e-104">Syntax</span></span>  
   
 ```  
 HRESULT GetReJITParameters(     [in] ModuleID moduleId,     [in] mdMethodDef methodId,     [in] ICorProfilerFunctionControl *pFunctionControl);  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="16f06-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="16f06-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="f160e-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="f160e-105">Parameters</span></span>  
  `moduleID`  
- <span data-ttu-id="16f06-106">[in] CLR 필요 JIT 다시 컴파일을 매개 변수는 메서드가 포함 된 모듈입니다.</span><span class="sxs-lookup"><span data-stu-id="16f06-106">[in] The module that contains the method for which the CLR needs JIT recompilation parameters.</span></span>  
+ <span data-ttu-id="f160e-106">[in] CLR 필요 JIT 다시 컴파일을 매개 변수는 메서드가 포함 된 모듈입니다.</span><span class="sxs-lookup"><span data-stu-id="f160e-106">[in] The module that contains the method for which the CLR needs JIT recompilation parameters.</span></span>  
   
  `methodId`  
- <span data-ttu-id="16f06-107">[in] `MethodDef` 메서드의 CLR JIT 다시 컴파일을 매개 변수는 필요 합니다.</span><span class="sxs-lookup"><span data-stu-id="16f06-107">[in] The `MethodDef` of the method for which the CLR needs JIT recompilation parameters.</span></span>  
+ <span data-ttu-id="f160e-107">[in] `MethodDef` 메서드의 CLR JIT 다시 컴파일을 매개 변수는 필요 합니다.</span><span class="sxs-lookup"><span data-stu-id="f160e-107">[in] The `MethodDef` of the method for which the CLR needs JIT recompilation parameters.</span></span>  
   
  `pFunctionControl`  
- <span data-ttu-id="16f06-108">[in] 에 대 한 포인터를 [ICorProfilerFunctionControl](../../../../docs/framework/unmanaged-api/profiling/icorprofilerfunctioncontrol-interface.md) 프로파일러 컴파일되는 메서드에 대 한 JIT 다시 컴파일을 정보를 제공 하는 데 사용할 수 있는 인터페이스입니다.</span><span class="sxs-lookup"><span data-stu-id="16f06-108">[in] A pointer to an [ICorProfilerFunctionControl](../../../../docs/framework/unmanaged-api/profiling/icorprofilerfunctioncontrol-interface.md) interface that the profiler can use to provide JIT recompilation information for the method being recompiled.</span></span>  
+ <span data-ttu-id="f160e-108">[in] 에 대 한 포인터를 [ICorProfilerFunctionControl](../../../../docs/framework/unmanaged-api/profiling/icorprofilerfunctioncontrol-interface.md) 프로파일러 컴파일되는 메서드에 대 한 JIT 다시 컴파일을 정보를 제공 하는 데 사용할 수 있는 인터페이스입니다.</span><span class="sxs-lookup"><span data-stu-id="f160e-108">[in] A pointer to an [ICorProfilerFunctionControl](../../../../docs/framework/unmanaged-api/profiling/icorprofilerfunctioncontrol-interface.md) interface that the profiler can use to provide JIT recompilation information for the method being recompiled.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="16f06-109">설명</span><span class="sxs-lookup"><span data-stu-id="16f06-109">Remarks</span></span>  
- <span data-ttu-id="16f06-110">CLR 문제는 `GetReJITParameters` 콜백 프로파일러는 지정 된 메서드를 다시 컴파일할 매개 변수를 지정할 수 있도록 합니다.</span><span class="sxs-lookup"><span data-stu-id="16f06-110">The CLR issues a `GetReJITParameters` callback so that the profiler can specify the parameters for recompiling a given method.</span></span> <span data-ttu-id="16f06-111">`GetReJITParameters` 콜백 함수 당 한 번만 발생; 프로파일러에서 제공 하는 매개 변수를 해당 함수의 모든 인스턴스에 적용 합니다.</span><span class="sxs-lookup"><span data-stu-id="16f06-111">The `GetReJITParameters` callback is issued only once per function; the parameters supplied by the profiler apply to all instances of that function.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="f160e-109">설명</span><span class="sxs-lookup"><span data-stu-id="f160e-109">Remarks</span></span>  
+ <span data-ttu-id="f160e-110">CLR 문제는 `GetReJITParameters` 콜백 프로파일러는 지정 된 메서드를 다시 컴파일할 매개 변수를 지정할 수 있도록 합니다.</span><span class="sxs-lookup"><span data-stu-id="f160e-110">The CLR issues a `GetReJITParameters` callback so that the profiler can specify the parameters for recompiling a given method.</span></span> <span data-ttu-id="f160e-111">`GetReJITParameters` 콜백 함수 당 한 번만 발생; 프로파일러에서 제공 하는 매개 변수를 해당 함수의 모든 인스턴스에 적용 합니다.</span><span class="sxs-lookup"><span data-stu-id="f160e-111">The `GetReJITParameters` callback is issued only once per function; the parameters supplied by the profiler apply to all instances of that function.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="16f06-112">요구 사항</span><span class="sxs-lookup"><span data-stu-id="16f06-112">Requirements</span></span>  
- <span data-ttu-id="16f06-113">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="16f06-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="f160e-112">요구 사항</span><span class="sxs-lookup"><span data-stu-id="f160e-112">Requirements</span></span>  
+ <span data-ttu-id="f160e-113">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="f160e-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="16f06-114">**헤더:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="16f06-114">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="f160e-114">**헤더:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="f160e-114">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="16f06-115">**라이브러리:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="16f06-115">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="f160e-115">**라이브러리:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="f160e-115">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="16f06-116">**.NET Framework 버전:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="16f06-116">**.NET Framework Versions:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span></span>  
+ <span data-ttu-id="f160e-116">**.NET Framework 버전:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="f160e-116">**.NET Framework Versions:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="16f06-117">참고자료</span><span class="sxs-lookup"><span data-stu-id="16f06-117">See also</span></span>
-- [<span data-ttu-id="16f06-118">ICorProfilerCallback 인터페이스</span><span class="sxs-lookup"><span data-stu-id="16f06-118">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
-- [<span data-ttu-id="16f06-119">ICorProfilerCallback4 인터페이스</span><span class="sxs-lookup"><span data-stu-id="16f06-119">ICorProfilerCallback4 Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-interface.md)
-- [<span data-ttu-id="16f06-120">JITCompilationStarted 메서드</span><span class="sxs-lookup"><span data-stu-id="16f06-120">JITCompilationStarted Method</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-jitcompilationstarted-method.md)
-- [<span data-ttu-id="16f06-121">ReJITCompilationStarted 메서드</span><span class="sxs-lookup"><span data-stu-id="16f06-121">ReJITCompilationStarted Method</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-rejitcompilationstarted-method.md)
+## <a name="see-also"></a><span data-ttu-id="f160e-117">참고자료</span><span class="sxs-lookup"><span data-stu-id="f160e-117">See also</span></span>
+- [<span data-ttu-id="f160e-118">ICorProfilerCallback 인터페이스</span><span class="sxs-lookup"><span data-stu-id="f160e-118">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+- [<span data-ttu-id="f160e-119">ICorProfilerCallback4 인터페이스</span><span class="sxs-lookup"><span data-stu-id="f160e-119">ICorProfilerCallback4 Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-interface.md)
+- [<span data-ttu-id="f160e-120">JITCompilationStarted 메서드</span><span class="sxs-lookup"><span data-stu-id="f160e-120">JITCompilationStarted Method</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-jitcompilationstarted-method.md)
+- [<span data-ttu-id="f160e-121">ReJITCompilationStarted 메서드</span><span class="sxs-lookup"><span data-stu-id="f160e-121">ReJITCompilationStarted Method</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-rejitcompilationstarted-method.md)

@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 694fc95a1ad16b61e25a897b778b15ec41af2a01
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fc2d64a97d02d6f6036646634113cf485119eba7
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54714271"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57490361"
 ---
-# <a name="imetadataimport2getgenericparamprops-method"></a><span data-ttu-id="e317f-102">IMetaDataImport2::GetGenericParamProps 메서드</span><span class="sxs-lookup"><span data-stu-id="e317f-102">IMetaDataImport2::GetGenericParamProps Method</span></span>
-<span data-ttu-id="e317f-103">지정된 된 토큰을 나타내는 제네릭 매개 변수를 사용 하 여 연결 된 메타 데이터를 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="e317f-103">Gets the metadata associated with the generic parameter represented by the specified token.</span></span>  
+# <a name="imetadataimport2getgenericparamprops-method"></a><span data-ttu-id="f6f14-102">IMetaDataImport2::GetGenericParamProps 메서드</span><span class="sxs-lookup"><span data-stu-id="f6f14-102">IMetaDataImport2::GetGenericParamProps Method</span></span>
+<span data-ttu-id="f6f14-103">지정된 된 토큰을 나타내는 제네릭 매개 변수를 사용 하 여 연결 된 메타 데이터를 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="f6f14-103">Gets the metadata associated with the generic parameter represented by the specified token.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="e317f-104">구문</span><span class="sxs-lookup"><span data-stu-id="e317f-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="f6f14-104">구문</span><span class="sxs-lookup"><span data-stu-id="f6f14-104">Syntax</span></span>  
   
 ```  
 HRESULT GetGenericParamProps (  
@@ -42,40 +42,40 @@ HRESULT GetGenericParamProps (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="e317f-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="e317f-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="f6f14-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="f6f14-105">Parameters</span></span>  
  `gp`  
- <span data-ttu-id="e317f-106">[in] 메타 데이터를 반환 하는 제네릭 매개 변수를 나타내는 토큰입니다.</span><span class="sxs-lookup"><span data-stu-id="e317f-106">[in] The token that represents the generic parameter for which to return metadata.</span></span>  
+ <span data-ttu-id="f6f14-106">[in] 메타 데이터를 반환 하는 제네릭 매개 변수를 나타내는 토큰입니다.</span><span class="sxs-lookup"><span data-stu-id="f6f14-106">[in] The token that represents the generic parameter for which to return metadata.</span></span>  
   
  `pulParamSeq`  
- <span data-ttu-id="e317f-107">[out] 서 수 위치는 `Type` 부모 생성자 또는 메서드 매개 변수입니다.</span><span class="sxs-lookup"><span data-stu-id="e317f-107">[out] The ordinal position of the `Type` parameter in the parent constructor or method.</span></span>  
+ <span data-ttu-id="f6f14-107">[out] 서 수 위치는 `Type` 부모 생성자 또는 메서드 매개 변수입니다.</span><span class="sxs-lookup"><span data-stu-id="f6f14-107">[out] The ordinal position of the `Type` parameter in the parent constructor or method.</span></span>  
   
  `pdwParamFlags`  
- <span data-ttu-id="e317f-108">[out] 값을 [CorGenericParamAttr](../../../../docs/framework/unmanaged-api/metadata/corgenericparamattr-enumeration.md) 설명 하는 열거형은 `Type` 제네릭 매개 변수입니다.</span><span class="sxs-lookup"><span data-stu-id="e317f-108">[out] A value of the [CorGenericParamAttr](../../../../docs/framework/unmanaged-api/metadata/corgenericparamattr-enumeration.md) enumeration that describes the `Type` for the generic parameter.</span></span>  
+ <span data-ttu-id="f6f14-108">[out] 값을 [CorGenericParamAttr](../../../../docs/framework/unmanaged-api/metadata/corgenericparamattr-enumeration.md) 설명 하는 열거형은 `Type` 제네릭 매개 변수입니다.</span><span class="sxs-lookup"><span data-stu-id="f6f14-108">[out] A value of the [CorGenericParamAttr](../../../../docs/framework/unmanaged-api/metadata/corgenericparamattr-enumeration.md) enumeration that describes the `Type` for the generic parameter.</span></span>  
   
  `ptOwner`  
- <span data-ttu-id="e317f-109">[out] 형식 정의 또는 MethodDef 토큰 매개 변수의 소유자를 나타내는입니다.</span><span class="sxs-lookup"><span data-stu-id="e317f-109">[out] A TypeDef or MethodDef token that represents the owner of the parameter.</span></span>  
+ <span data-ttu-id="f6f14-109">[out] 형식 정의 또는 MethodDef 토큰 매개 변수의 소유자를 나타내는입니다.</span><span class="sxs-lookup"><span data-stu-id="f6f14-109">[out] A TypeDef or MethodDef token that represents the owner of the parameter.</span></span>  
   
  `reserved`  
- <span data-ttu-id="e317f-110">[out] 향후 확장성을 위해 예약 되어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="e317f-110">[out] Reserved for future extensibility.</span></span>  
+ <span data-ttu-id="f6f14-110">[out] 향후 확장성을 위해 예약 되어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="f6f14-110">[out] Reserved for future extensibility.</span></span>  
   
  `wzName`  
- <span data-ttu-id="e317f-111">[out] 제네릭 매개 변수의 이름입니다.</span><span class="sxs-lookup"><span data-stu-id="e317f-111">[out] The name of the generic parameter.</span></span>  
+ <span data-ttu-id="f6f14-111">[out] 제네릭 매개 변수의 이름입니다.</span><span class="sxs-lookup"><span data-stu-id="f6f14-111">[out] The name of the generic parameter.</span></span>  
   
  `cchName`  
- <span data-ttu-id="e317f-112">[in] 크기는 `wzName` 버퍼입니다.</span><span class="sxs-lookup"><span data-stu-id="e317f-112">[in] The size of the `wzName` buffer.</span></span>  
+ <span data-ttu-id="f6f14-112">[in] 크기는 `wzName` 버퍼입니다.</span><span class="sxs-lookup"><span data-stu-id="f6f14-112">[in] The size of the `wzName` buffer.</span></span>  
   
  `pchName`  
- <span data-ttu-id="e317f-113">[out] 반환 된 크기의 와이드 문자 이름입니다.</span><span class="sxs-lookup"><span data-stu-id="e317f-113">[out] The returned size of the name, in wide characters.</span></span>  
+ <span data-ttu-id="f6f14-113">[out] 반환 된 크기의 와이드 문자 이름입니다.</span><span class="sxs-lookup"><span data-stu-id="f6f14-113">[out] The returned size of the name, in wide characters.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="e317f-114">요구 사항</span><span class="sxs-lookup"><span data-stu-id="e317f-114">Requirements</span></span>  
- <span data-ttu-id="e317f-115">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="e317f-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="f6f14-114">요구 사항</span><span class="sxs-lookup"><span data-stu-id="f6f14-114">Requirements</span></span>  
+ <span data-ttu-id="f6f14-115">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="f6f14-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="e317f-116">**헤더:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="e317f-116">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="f6f14-116">**헤더:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="f6f14-116">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="e317f-117">**라이브러리:** MsCorEE.dll에서 리소스로 사용</span><span class="sxs-lookup"><span data-stu-id="e317f-117">**Library:** Used as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="f6f14-117">**라이브러리:** MsCorEE.dll에서 리소스로 사용</span><span class="sxs-lookup"><span data-stu-id="f6f14-117">**Library:** Used as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="e317f-118">**.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="e317f-118">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="f6f14-118">**.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="f6f14-118">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="e317f-119">참고자료</span><span class="sxs-lookup"><span data-stu-id="e317f-119">See also</span></span>
-- [<span data-ttu-id="e317f-120">IMetaDataImport2 인터페이스</span><span class="sxs-lookup"><span data-stu-id="e317f-120">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
-- [<span data-ttu-id="e317f-121">IMetaDataImport 인터페이스</span><span class="sxs-lookup"><span data-stu-id="e317f-121">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+## <a name="see-also"></a><span data-ttu-id="f6f14-119">참고자료</span><span class="sxs-lookup"><span data-stu-id="f6f14-119">See also</span></span>
+- [<span data-ttu-id="f6f14-120">IMetaDataImport2 인터페이스</span><span class="sxs-lookup"><span data-stu-id="f6f14-120">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+- [<span data-ttu-id="f6f14-121">IMetaDataImport 인터페이스</span><span class="sxs-lookup"><span data-stu-id="f6f14-121">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
