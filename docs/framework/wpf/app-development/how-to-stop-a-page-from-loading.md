@@ -1,5 +1,5 @@
 ---
-title: '방법: 페이지 로드를 중지 합니다.'
+title: '방법: 페이지 로드 중지'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,18 +12,18 @@ helpviewer_keywords:
 - stopping pages from loading [WPF]
 - loading [WPF], stopping
 ms.assetid: e2b695b0-517e-462c-8ccf-90cc8d6ba864
-ms.openlocfilehash: e5cd7d1b881b816636c3acdd4d33565304ca9b63
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c5694bb2cb6c618cd84bad3dc893ae3855e44892
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33545547"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57357848"
 ---
-# <a name="how-to-stop-a-page-from-loading"></a><span data-ttu-id="f9746-102">방법: 페이지 로드를 중지 합니다.</span><span class="sxs-lookup"><span data-stu-id="f9746-102">How to: Stop a Page from Loading</span></span>
-<span data-ttu-id="f9746-103">호출 하는 방법을 보여 주는이 예제는 <xref:System.Windows.Navigation.NavigationWindow.StopLoading%2A> 메서드 다운로드를 마치기 전에 콘텐츠를 탐색을 중지할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="f9746-103">This example shows how to call the <xref:System.Windows.Navigation.NavigationWindow.StopLoading%2A> method to stop navigation to content before it has finished being downloaded.</span></span>  
+# <a name="how-to-stop-a-page-from-loading"></a><span data-ttu-id="e8d54-102">방법: 페이지 로드 중지</span><span class="sxs-lookup"><span data-stu-id="e8d54-102">How to: Stop a Page from Loading</span></span>
+<span data-ttu-id="e8d54-103">호출 하는 방법을 보여 주는이 예제는 <xref:System.Windows.Navigation.NavigationWindow.StopLoading%2A> 다운로드 마치기 전에 콘텐츠 탐색을 중지 하는 방법입니다.</span><span class="sxs-lookup"><span data-stu-id="e8d54-103">This example shows how to call the <xref:System.Windows.Navigation.NavigationWindow.StopLoading%2A> method to stop navigation to content before it has finished being downloaded.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="f9746-104">예제</span><span class="sxs-lookup"><span data-stu-id="f9746-104">Example</span></span>  
- <span data-ttu-id="f9746-105"><xref:System.Windows.Navigation.NavigationWindow.StopLoading%2A> 요청 된 콘텐츠의 다운로드를 중지 하 고 발생 된 <xref:System.Windows.Navigation.NavigationWindow.NavigationStopped> 이벤트를 발생 합니다.</span><span class="sxs-lookup"><span data-stu-id="f9746-105"><xref:System.Windows.Navigation.NavigationWindow.StopLoading%2A> stops the download of the requested content, and causes the <xref:System.Windows.Navigation.NavigationWindow.NavigationStopped> event to be raised.</span></span>  
+## <a name="example"></a><span data-ttu-id="e8d54-104">예제</span><span class="sxs-lookup"><span data-stu-id="e8d54-104">Example</span></span>  
+ <span data-ttu-id="e8d54-105"><xref:System.Windows.Navigation.NavigationWindow.StopLoading%2A> 요청 된 콘텐츠의 다운로드를 중지 하 고 하면는 <xref:System.Windows.Navigation.NavigationWindow.NavigationStopped> 이벤트가 발생 합니다.</span><span class="sxs-lookup"><span data-stu-id="e8d54-105"><xref:System.Windows.Navigation.NavigationWindow.StopLoading%2A> stops the download of the requested content, and causes the <xref:System.Windows.Navigation.NavigationWindow.NavigationStopped> event to be raised.</span></span>  
   
- [!code-csharp[HOWTONavigationSnippets#NavigateStopLoadingCODE](../../../../samples/snippets/csharp/VS_Snippets_Wpf/HOWTONavigationSnippets/CSharp/MainWindow.xaml.cs#navigatestoploadingcode)]
- [!code-vb[HOWTONavigationSnippets#NavigateStopLoadingCODE](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/HOWTONavigationSnippets/visualbasic/mainwindow.xaml.vb#navigatestoploadingcode)]
+ [!code-csharp[HOWTONavigationSnippets#NavigateStopLoadingCODE](~/samples/snippets/csharp/VS_Snippets_Wpf/HOWTONavigationSnippets/CSharp/MainWindow.xaml.cs#navigatestoploadingcode)]
+ [!code-vb[HOWTONavigationSnippets#NavigateStopLoadingCODE](~/samples/snippets/visualbasic/VS_Snippets_Wpf/HOWTONavigationSnippets/visualbasic/mainwindow.xaml.vb#navigatestoploadingcode)]

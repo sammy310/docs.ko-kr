@@ -7,21 +7,21 @@ helpviewer_keywords:
 - ink [WPF], digital
 - digital ink [WPF]
 ms.assetid: c29f8728-bfcb-4af7-9fbc-8169e180109f
-ms.openlocfilehash: 3af90c33d6b4e993cc9599b5eefa5ac492c28e04
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f67642342777a4b5b26b902161c83dc98893c63f
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33538876"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57355604"
 ---
-# <a name="digital-ink-how-to-topics"></a><span data-ttu-id="23652-102">디지털 잉크 방법 항목</span><span class="sxs-lookup"><span data-stu-id="23652-102">Digital Ink How-to Topics</span></span>
-## <a name="in-this-section"></a><span data-ttu-id="23652-103">섹션 내용</span><span class="sxs-lookup"><span data-stu-id="23652-103">In This Section</span></span>  
- [<span data-ttu-id="23652-104">사용자 지정 컨트롤에서 잉크 선택</span><span class="sxs-lookup"><span data-stu-id="23652-104">Select Ink from a Custom Control</span></span>](../../../../docs/framework/wpf/advanced/how-to-select-ink-from-a-custom-control.md)  
-  [<span data-ttu-id="23652-105">잉크 데이터에 사용자 지정 데이터 추가</span><span class="sxs-lookup"><span data-stu-id="23652-105">Add Custom Data to Ink Data</span></span>](../../../../docs/framework/wpf/advanced/how-to-add-custom-data-to-ink-data.md)  
-  [<span data-ttu-id="23652-106">사용자 지정 컨트롤에서 잉크 지우기</span><span class="sxs-lookup"><span data-stu-id="23652-106">Erase Ink on a Custom Control</span></span>](../../../../docs/framework/wpf/advanced/how-to-erase-ink-on-a-custom-control.md)  
-  [<span data-ttu-id="23652-107">응용 프로그램 제스처 인식</span><span class="sxs-lookup"><span data-stu-id="23652-107">Recognize Application Gestures</span></span>](../../../../docs/framework/wpf/advanced/how-to-recognize-application-gestures.md)  
-  [<span data-ttu-id="23652-108">잉크 끌어서 놓기</span><span class="sxs-lookup"><span data-stu-id="23652-108">Drag and Drop Ink</span></span>](../../../../docs/framework/wpf/advanced/how-to-drag-and-drop-ink.md)  
-  [<span data-ttu-id="23652-109">InkCanvas에 데이터 바인딩</span><span class="sxs-lookup"><span data-stu-id="23652-109">Data Bind to an InkCanvas</span></span>](../../../../docs/framework/wpf/advanced/how-to-data-bind-to-an-inkcanvas.md)  
-  [<span data-ttu-id="23652-110">분석 힌트를 사용하여 잉크 분석</span><span class="sxs-lookup"><span data-stu-id="23652-110">Analyze Ink with Analysis Hints</span></span>](../../../../docs/framework/wpf/advanced/how-to-analyze-ink-with-analysis-hints.md)  
-  [<span data-ttu-id="23652-111">잉크 회전</span><span class="sxs-lookup"><span data-stu-id="23652-111">Rotate Ink</span></span>](../../../../docs/framework/wpf/advanced/how-to-rotate-ink.md)  
-  [<span data-ttu-id="23652-112">WPF 응용 프로그램에 대해 RealTimeStylus를 사용하지 않도록 설정</span><span class="sxs-lookup"><span data-stu-id="23652-112">Disable the RealTimeStylus for WPF Applications</span></span>](../../../../docs/framework/wpf/advanced/disable-the-realtimestylus-for-wpf-applications.md)
+# <a name="digital-ink-how-to-topics"></a><span data-ttu-id="dd026-102">디지털 잉크 방법 항목</span><span class="sxs-lookup"><span data-stu-id="dd026-102">Digital Ink How-to Topics</span></span>
+## <a name="in-this-section"></a><span data-ttu-id="dd026-103">섹션 내용</span><span class="sxs-lookup"><span data-stu-id="dd026-103">In This Section</span></span>  
+ [<span data-ttu-id="dd026-104">사용자 지정 컨트롤에서 잉크 선택</span><span class="sxs-lookup"><span data-stu-id="dd026-104">Select Ink from a Custom Control</span></span>](how-to-select-ink-from-a-custom-control.md)  
+  [<span data-ttu-id="dd026-105">잉크 데이터에 사용자 지정 데이터 추가</span><span class="sxs-lookup"><span data-stu-id="dd026-105">Add Custom Data to Ink Data</span></span>](how-to-add-custom-data-to-ink-data.md)  
+  [<span data-ttu-id="dd026-106">사용자 지정 컨트롤에서 잉크 지우기</span><span class="sxs-lookup"><span data-stu-id="dd026-106">Erase Ink on a Custom Control</span></span>](how-to-erase-ink-on-a-custom-control.md)  
+  [<span data-ttu-id="dd026-107">애플리케이션 제스처 인식</span><span class="sxs-lookup"><span data-stu-id="dd026-107">Recognize Application Gestures</span></span>](how-to-recognize-application-gestures.md)  
+  [<span data-ttu-id="dd026-108">잉크 끌어서 놓기</span><span class="sxs-lookup"><span data-stu-id="dd026-108">Drag and Drop Ink</span></span>](how-to-drag-and-drop-ink.md)  
+  [<span data-ttu-id="dd026-109">InkCanvas에 데이터 바인딩</span><span class="sxs-lookup"><span data-stu-id="dd026-109">Data Bind to an InkCanvas</span></span>](how-to-data-bind-to-an-inkcanvas.md)  
+  [<span data-ttu-id="dd026-110">분석 힌트를 사용하여 잉크 분석</span><span class="sxs-lookup"><span data-stu-id="dd026-110">Analyze Ink with Analysis Hints</span></span>](how-to-analyze-ink-with-analysis-hints.md)  
+  [<span data-ttu-id="dd026-111">잉크 회전</span><span class="sxs-lookup"><span data-stu-id="dd026-111">Rotate Ink</span></span>](how-to-rotate-ink.md)  
+  [<span data-ttu-id="dd026-112">WPF 애플리케이션에 대해 RealTimeStylus를 사용하지 않도록 설정</span><span class="sxs-lookup"><span data-stu-id="dd026-112">Disable the RealTimeStylus for WPF Applications</span></span>](disable-the-realtimestylus-for-wpf-applications.md)

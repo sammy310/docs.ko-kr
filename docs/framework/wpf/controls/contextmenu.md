@@ -8,25 +8,25 @@ helpviewer_keywords:
 - menus [WPF], context
 - controls [WPF], ContextMenu
 ms.assetid: 2f40b2bb-b702-4706-9fc4-10bcfd7cc35d
-ms.openlocfilehash: fc2fe332916b4edd89025f8cf77f8a45034a4ce9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 17b2df1e3712dc0755130a9ac979c05fadcf53a3
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33550126"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57354637"
 ---
-# <a name="contextmenu"></a><span data-ttu-id="ad902-102">ContextMenu</span><span class="sxs-lookup"><span data-stu-id="ad902-102">ContextMenu</span></span>
-<span data-ttu-id="ad902-103"><xref:System.Windows.Controls.ContextMenu> 표시 하는 컨트롤을 사용 하면 한 <xref:System.Windows.Controls.Menu> 컨트롤의 컨텍스트에 고유 합니다.</span><span class="sxs-lookup"><span data-stu-id="ad902-103">The <xref:System.Windows.Controls.ContextMenu> allows a control to display a <xref:System.Windows.Controls.Menu> that is specific to the context of the control.</span></span> <span data-ttu-id="ad902-104">일반적으로 <xref:System.Windows.Controls.ContextMenu> 에 노출 되는 [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] 또는 키보드의 메뉴 단추를 마우스 오른쪽 단추를 통해 합니다.</span><span class="sxs-lookup"><span data-stu-id="ad902-104">Typically, the <xref:System.Windows.Controls.ContextMenu> is exposed in the [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] through the right mouse button or through the keyboard’s menu button.</span></span>  
+# <a name="contextmenu"></a><span data-ttu-id="f7519-102">ContextMenu</span><span class="sxs-lookup"><span data-stu-id="f7519-102">ContextMenu</span></span>
+<span data-ttu-id="f7519-103">합니다 <xref:System.Windows.Controls.ContextMenu> 표시를 제어할 수 있습니다는 <xref:System.Windows.Controls.Menu> 컨트롤의 컨텍스트에 관련 된 합니다.</span><span class="sxs-lookup"><span data-stu-id="f7519-103">The <xref:System.Windows.Controls.ContextMenu> allows a control to display a <xref:System.Windows.Controls.Menu> that is specific to the context of the control.</span></span> <span data-ttu-id="f7519-104">일반적으로 <xref:System.Windows.Controls.ContextMenu> 노출 되는 [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] 또는 키보드의 메뉴 단추를 마우스 오른쪽 단추를 통해.</span><span class="sxs-lookup"><span data-stu-id="f7519-104">Typically, the <xref:System.Windows.Controls.ContextMenu> is exposed in the [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] through the right mouse button or through the keyboard’s menu button.</span></span>  
   
- <span data-ttu-id="ad902-105">다음 그림은 한 <xref:System.Windows.Controls.ContextMenu> 두 개의 서로 다른 상태에: 기본 상태와 열려 있는 상태입니다.</span><span class="sxs-lookup"><span data-stu-id="ad902-105">The following figure illustrates a <xref:System.Windows.Controls.ContextMenu> in two different states: the default state and the open state.</span></span> <span data-ttu-id="ad902-106">기본 상태에서 컨트롤 축소 됩니다.</span><span class="sxs-lookup"><span data-stu-id="ad902-106">In the default state, the control is collapsed.</span></span> <span data-ttu-id="ad902-107">부모 메뉴의 위에 마우스 오른쪽 단추를 누르면 컨트롤을 확장 하 고 메뉴 항목이 표시 됩니다.</span><span class="sxs-lookup"><span data-stu-id="ad902-107">When the right mouse button is pressed over the parent of the menu, the control expands and displays the menu items.</span></span>  
+ <span data-ttu-id="f7519-105">다음 그림에 나와 <xref:System.Windows.Controls.ContextMenu> 의 두 가지 상태: 기본 상태 및 열려 있는 상태입니다.</span><span class="sxs-lookup"><span data-stu-id="f7519-105">The following figure illustrates a <xref:System.Windows.Controls.ContextMenu> in two different states: the default state and the open state.</span></span> <span data-ttu-id="f7519-106">기본 상태의 컨트롤 축소 됩니다.</span><span class="sxs-lookup"><span data-stu-id="f7519-106">In the default state, the control is collapsed.</span></span> <span data-ttu-id="f7519-107">부모 메뉴의 위에 마우스 오른쪽 단추를 누르면 컨트롤 확장 하 고 메뉴 항목을 표시 합니다.</span><span class="sxs-lookup"><span data-stu-id="f7519-107">When the right mouse button is pressed over the parent of the menu, the control expands and displays the menu items.</span></span>  
   
- <span data-ttu-id="ad902-108">![ContextMenu 상태](../../../../docs/framework/wpf/controls/media/ss-ctl-contextmenu.png "SS_CTL_contextmenu")</span><span class="sxs-lookup"><span data-stu-id="ad902-108">![ContextMenu states](../../../../docs/framework/wpf/controls/media/ss-ctl-contextmenu.png "SS_CTL_contextmenu")</span></span>  
-<span data-ttu-id="ad902-109">다양 한 상태의 ContextMenu</span><span class="sxs-lookup"><span data-stu-id="ad902-109">ContextMenu in different states</span></span>  
+ <span data-ttu-id="f7519-108">![ContextMenu 상태](./media/ss-ctl-contextmenu.png "SS_CTL_contextmenu")</span><span class="sxs-lookup"><span data-stu-id="f7519-108">![ContextMenu states](./media/ss-ctl-contextmenu.png "SS_CTL_contextmenu")</span></span>  
+<span data-ttu-id="f7519-109">다양 한 상태의 ContextMenu</span><span class="sxs-lookup"><span data-stu-id="f7519-109">ContextMenu in different states</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="ad902-110">섹션 내용</span><span class="sxs-lookup"><span data-stu-id="ad902-110">In This Section</span></span>  
- [<span data-ttu-id="ad902-111">ContextMenu 개요</span><span class="sxs-lookup"><span data-stu-id="ad902-111">ContextMenu Overview</span></span>](../../../../docs/framework/wpf/controls/contextmenu-overview.md)  
+## <a name="in-this-section"></a><span data-ttu-id="f7519-110">섹션 내용</span><span class="sxs-lookup"><span data-stu-id="f7519-110">In This Section</span></span>  
+ [<span data-ttu-id="f7519-111">ContextMenu 개요</span><span class="sxs-lookup"><span data-stu-id="f7519-111">ContextMenu Overview</span></span>](contextmenu-overview.md)  
   
-## <a name="reference"></a><span data-ttu-id="ad902-112">참조</span><span class="sxs-lookup"><span data-stu-id="ad902-112">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="f7519-112">참조</span><span class="sxs-lookup"><span data-stu-id="f7519-112">Reference</span></span>  
  <xref:System.Windows.Controls.ContextMenu>  
   
-## <a name="related-sections"></a><span data-ttu-id="ad902-113">관련 단원</span><span class="sxs-lookup"><span data-stu-id="ad902-113">Related Sections</span></span>
+## <a name="related-sections"></a><span data-ttu-id="f7519-113">관련 단원</span><span class="sxs-lookup"><span data-stu-id="f7519-113">Related Sections</span></span>

@@ -7,26 +7,26 @@ helpviewer_keywords:
 - input API [WPF]
 - commanding [WPF]
 ms.assetid: 9a7ccd30-095b-4f34-b284-8fb7e8f95a9b
-ms.openlocfilehash: 1510c037dcb3d5e386e1d4c4dd3a3fe002f13c59
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c72aa41aeb4c2da5577f1581a8f65afbefb222c6
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33544234"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57350750"
 ---
-# <a name="input-wpf"></a><span data-ttu-id="53268-102">입력 (WPF)</span><span class="sxs-lookup"><span data-stu-id="53268-102">Input (WPF)</span></span>
-<span data-ttu-id="53268-103">Windows Presentation Foundation (WPF)에 여러 유형의 입력에 대 한 지원이 포함 되어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="53268-103">Windows Presentation Foundation (WPF) includes support for several types of input.</span></span> <span data-ttu-id="53268-104">이 입력에는 텍스트, 터치, 마우스, 명령, 포커스, 터치, 끌어서 놓기, 및 디지털 잉크 포함 됩니다.</span><span class="sxs-lookup"><span data-stu-id="53268-104">This input includes text, touch, mouse, commands, focus, touch, drag-and-drop, and digital ink.</span></span> <span data-ttu-id="53268-105">이 섹션에서는 WPF의 입력에 관련 된 항목을 설명 합니다.</span><span class="sxs-lookup"><span data-stu-id="53268-105">This section describes topics related to input in WPF.</span></span>  
+# <a name="input-wpf"></a><span data-ttu-id="a79e4-102">입력 (WPF)</span><span class="sxs-lookup"><span data-stu-id="a79e4-102">Input (WPF)</span></span>
+<span data-ttu-id="a79e4-103">Windows Presentation Foundation (WPF)에 여러 유형의 입력에 대 한 지원이 포함 됩니다.</span><span class="sxs-lookup"><span data-stu-id="a79e4-103">Windows Presentation Foundation (WPF) includes support for several types of input.</span></span> <span data-ttu-id="a79e4-104">이 입력 텍스트, 터치, 마우스, 명령, 포커스, 터치, 끌어서 놓기, 및 디지털 잉크를 포함합니다.</span><span class="sxs-lookup"><span data-stu-id="a79e4-104">This input includes text, touch, mouse, commands, focus, touch, drag-and-drop, and digital ink.</span></span> <span data-ttu-id="a79e4-105">이 섹션에서는 WPF의 입력에 관련 된 항목을 설명 합니다.</span><span class="sxs-lookup"><span data-stu-id="a79e4-105">This section describes topics related to input in WPF.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="53268-106">섹션 내용</span><span class="sxs-lookup"><span data-stu-id="53268-106">In This Section</span></span>  
- [<span data-ttu-id="53268-107">입력 개요</span><span class="sxs-lookup"><span data-stu-id="53268-107">Input Overview</span></span>](../../../../docs/framework/wpf/advanced/input-overview.md)  
- [<span data-ttu-id="53268-108">명령 개요</span><span class="sxs-lookup"><span data-stu-id="53268-108">Commanding Overview</span></span>](../../../../docs/framework/wpf/advanced/commanding-overview.md)  
- [<span data-ttu-id="53268-109">포커스 개요</span><span class="sxs-lookup"><span data-stu-id="53268-109">Focus Overview</span></span>](../../../../docs/framework/wpf/advanced/focus-overview.md)  
- [<span data-ttu-id="53268-110">컨트롤의 포커스 스타일 지정 및 FocusVisualStyle</span><span class="sxs-lookup"><span data-stu-id="53268-110">Styling for Focus in Controls, and FocusVisualStyle</span></span>](../../../../docs/framework/wpf/advanced/styling-for-focus-in-controls-and-focusvisualstyle.md)  
- [<span data-ttu-id="53268-111">연습: 첫 응용 프로그램 만들기</span><span class="sxs-lookup"><span data-stu-id="53268-111">Walkthrough: Creating Your First Touch Application</span></span>](../../../../docs/framework/wpf/advanced/walkthrough-creating-your-first-touch-application.md)  
- [<span data-ttu-id="53268-112">방법 항목</span><span class="sxs-lookup"><span data-stu-id="53268-112">How-to Topics</span></span>](../../../../docs/framework/wpf/advanced/input-and-commands-how-to-topics.md)  
- [<span data-ttu-id="53268-113">디지털 잉크</span><span class="sxs-lookup"><span data-stu-id="53268-113">Digital Ink</span></span>](../../../../docs/framework/wpf/advanced/digital-ink.md)  
+## <a name="in-this-section"></a><span data-ttu-id="a79e4-106">섹션 내용</span><span class="sxs-lookup"><span data-stu-id="a79e4-106">In This Section</span></span>  
+ [<span data-ttu-id="a79e4-107">입력 개요</span><span class="sxs-lookup"><span data-stu-id="a79e4-107">Input Overview</span></span>](input-overview.md)  
+ [<span data-ttu-id="a79e4-108">명령 개요</span><span class="sxs-lookup"><span data-stu-id="a79e4-108">Commanding Overview</span></span>](commanding-overview.md)  
+ [<span data-ttu-id="a79e4-109">포커스 개요</span><span class="sxs-lookup"><span data-stu-id="a79e4-109">Focus Overview</span></span>](focus-overview.md)  
+ [<span data-ttu-id="a79e4-110">컨트롤의 포커스 스타일 지정 및 FocusVisualStyle</span><span class="sxs-lookup"><span data-stu-id="a79e4-110">Styling for Focus in Controls, and FocusVisualStyle</span></span>](styling-for-focus-in-controls-and-focusvisualstyle.md)  
+ [<span data-ttu-id="a79e4-111">연습: 첫 번째 터치 응용 프로그램 만들기</span><span class="sxs-lookup"><span data-stu-id="a79e4-111">Walkthrough: Creating Your First Touch Application</span></span>](walkthrough-creating-your-first-touch-application.md)  
+ [<span data-ttu-id="a79e4-112">방법 항목</span><span class="sxs-lookup"><span data-stu-id="a79e4-112">How-to Topics</span></span>](input-and-commands-how-to-topics.md)  
+ [<span data-ttu-id="a79e4-113">디지털 잉크</span><span class="sxs-lookup"><span data-stu-id="a79e4-113">Digital Ink</span></span>](digital-ink.md)  
   
-## <a name="reference"></a><span data-ttu-id="53268-114">참조</span><span class="sxs-lookup"><span data-stu-id="53268-114">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="a79e4-114">참조</span><span class="sxs-lookup"><span data-stu-id="a79e4-114">Reference</span></span>  
  <xref:System.Windows.UIElement>  
   
  <xref:System.Windows.FrameworkElement>  
@@ -41,6 +41,6 @@ ms.locfileid: "33544234"
   
  <xref:System.Windows.Input.FocusManager>  
   
-## <a name="related-sections"></a><span data-ttu-id="53268-115">관련 단원</span><span class="sxs-lookup"><span data-stu-id="53268-115">Related Sections</span></span>  
- [<span data-ttu-id="53268-116">컨트롤</span><span class="sxs-lookup"><span data-stu-id="53268-116">Controls</span></span>](../../../../docs/framework/wpf/controls/index.md)  
-  [<span data-ttu-id="53268-117">이벤트</span><span class="sxs-lookup"><span data-stu-id="53268-117">Events</span></span>](../../../../docs/framework/wpf/advanced/events-wpf.md)
+## <a name="related-sections"></a><span data-ttu-id="a79e4-115">관련 단원</span><span class="sxs-lookup"><span data-stu-id="a79e4-115">Related Sections</span></span>  
+ [<span data-ttu-id="a79e4-116">컨트롤</span><span class="sxs-lookup"><span data-stu-id="a79e4-116">Controls</span></span>](../controls/index.md)  
+  [<span data-ttu-id="a79e4-117">이벤트</span><span class="sxs-lookup"><span data-stu-id="a79e4-117">Events</span></span>](events-wpf.md)

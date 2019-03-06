@@ -6,30 +6,30 @@ f1_keywords:
 helpviewer_keywords:
 - windows [WPF], managing
 ms.assetid: 3090b408-94e4-446a-92ca-50f1fd36e5d8
-ms.openlocfilehash: df22dcbc64bff95e2263ba11195146622b9d58cf
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8de810843ea7de9bb7f27c6582a0254661dbf643
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33550139"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57351660"
 ---
-# <a name="window-management-how-to-topics"></a><span data-ttu-id="b2d5c-102">창 관리 방법 도움말 항목</span><span class="sxs-lookup"><span data-stu-id="b2d5c-102">Window Management How-to Topics</span></span>
-<span data-ttu-id="b2d5c-103">다음 항목에서는 관리 하는 방법을 보여 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] windows 합니다.</span><span class="sxs-lookup"><span data-stu-id="b2d5c-103">The following topics show how to manage [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] windows.</span></span>  
+# <a name="window-management-how-to-topics"></a><span data-ttu-id="e13ce-102">창 관리 방법 도움말 항목</span><span class="sxs-lookup"><span data-stu-id="e13ce-102">Window Management How-to Topics</span></span>
+<span data-ttu-id="e13ce-103">다음 항목에서는 관리 하는 방법을 보여 줍니다 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] windows.</span><span class="sxs-lookup"><span data-stu-id="e13ce-103">The following topics show how to manage [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] windows.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="b2d5c-104">섹션 내용</span><span class="sxs-lookup"><span data-stu-id="b2d5c-104">In This Section</span></span>  
- [<span data-ttu-id="b2d5c-105">콘텐츠에 맞게 자동으로 창 크기 조정</span><span class="sxs-lookup"><span data-stu-id="b2d5c-105">Automatically Size a Window to Fit Its Content</span></span>](../../../../docs/framework/wpf/app-development/how-to-automatically-size-a-window-to-fit-its-content.md)  
-  [<span data-ttu-id="b2d5c-106">응용 프로그램의 모든 창 가져오기</span><span class="sxs-lookup"><span data-stu-id="b2d5c-106">Get all Windows in an Application</span></span>](../../../../docs/framework/wpf/app-development/how-to-get-all-windows-in-an-application.md)  
-  [<span data-ttu-id="b2d5c-107">기본 응용 프로그램 창 가져오기 및 설정</span><span class="sxs-lookup"><span data-stu-id="b2d5c-107">Get and Set the Main Application Window</span></span>](../../../../docs/framework/wpf/app-development/how-to-get-and-set-the-main-application-window.md)  
-  [<span data-ttu-id="b2d5c-108">대화 상자 열기</span><span class="sxs-lookup"><span data-stu-id="b2d5c-108">Open a Dialog Box</span></span>](../../../../docs/framework/wpf/app-development/how-to-open-a-dialog-box.md)  
-  [<span data-ttu-id="b2d5c-109">메시지 상자 열기</span><span class="sxs-lookup"><span data-stu-id="b2d5c-109">Open a Message Box</span></span>](../../../../docs/framework/wpf/app-development/how-to-open-a-message-box.md)  
-  [<span data-ttu-id="b2d5c-110">창 열기</span><span class="sxs-lookup"><span data-stu-id="b2d5c-110">Open a Window</span></span>](../../../../docs/framework/wpf/app-development/how-to-open-a-window.md)  
-  [<span data-ttu-id="b2d5c-111">대화 상자 결과 반환</span><span class="sxs-lookup"><span data-stu-id="b2d5c-111">Return a Dialog Box Result</span></span>](../../../../docs/framework/wpf/app-development/how-to-return-a-dialog-box-result.md)  
+## <a name="in-this-section"></a><span data-ttu-id="e13ce-104">섹션 내용</span><span class="sxs-lookup"><span data-stu-id="e13ce-104">In This Section</span></span>  
+ [<span data-ttu-id="e13ce-105">콘텐츠에 맞게 자동으로 창 크기 조정</span><span class="sxs-lookup"><span data-stu-id="e13ce-105">Automatically Size a Window to Fit Its Content</span></span>](how-to-automatically-size-a-window-to-fit-its-content.md)  
+  [<span data-ttu-id="e13ce-106">애플리케이션의 모든 창 가져오기</span><span class="sxs-lookup"><span data-stu-id="e13ce-106">Get all Windows in an Application</span></span>](how-to-get-all-windows-in-an-application.md)  
+  [<span data-ttu-id="e13ce-107">기본 애플리케이션 창 가져오기 및 설정</span><span class="sxs-lookup"><span data-stu-id="e13ce-107">Get and Set the Main Application Window</span></span>](how-to-get-and-set-the-main-application-window.md)  
+  [<span data-ttu-id="e13ce-108">대화 상자 열기</span><span class="sxs-lookup"><span data-stu-id="e13ce-108">Open a Dialog Box</span></span>](how-to-open-a-dialog-box.md)  
+  [<span data-ttu-id="e13ce-109">메시지 상자 열기</span><span class="sxs-lookup"><span data-stu-id="e13ce-109">Open a Message Box</span></span>](how-to-open-a-message-box.md)  
+  [<span data-ttu-id="e13ce-110">창 열기</span><span class="sxs-lookup"><span data-stu-id="e13ce-110">Open a Window</span></span>](how-to-open-a-window.md)  
+  [<span data-ttu-id="e13ce-111">대화 상자 결과 반환</span><span class="sxs-lookup"><span data-stu-id="e13ce-111">Return a Dialog Box Result</span></span>](how-to-return-a-dialog-box-result.md)  
   
-## <a name="related-sections"></a><span data-ttu-id="b2d5c-112">관련 단원</span><span class="sxs-lookup"><span data-stu-id="b2d5c-112">Related Sections</span></span>  
- [<span data-ttu-id="b2d5c-113">응용 프로그램 관리 개요</span><span class="sxs-lookup"><span data-stu-id="b2d5c-113">Application Management Overview</span></span>](../../../../docs/framework/wpf/app-development/application-management-overview.md)  
+## <a name="related-sections"></a><span data-ttu-id="e13ce-112">관련 단원</span><span class="sxs-lookup"><span data-stu-id="e13ce-112">Related Sections</span></span>  
+ [<span data-ttu-id="e13ce-113">응용 프로그램 관리 개요</span><span class="sxs-lookup"><span data-stu-id="e13ce-113">Application Management Overview</span></span>](application-management-overview.md)  
   
- [<span data-ttu-id="b2d5c-114">탐색 개요</span><span class="sxs-lookup"><span data-stu-id="b2d5c-114">Navigation Overview</span></span>](../../../../docs/framework/wpf/app-development/navigation-overview.md)  
+ [<span data-ttu-id="e13ce-114">탐색 개요</span><span class="sxs-lookup"><span data-stu-id="e13ce-114">Navigation Overview</span></span>](navigation-overview.md)  
   
- [<span data-ttu-id="b2d5c-115">호스팅</span><span class="sxs-lookup"><span data-stu-id="b2d5c-115">Hosting</span></span>](../../../../docs/framework/wpf/app-development/hosting-wpf-applications.md)  
+ [<span data-ttu-id="e13ce-115">호스팅</span><span class="sxs-lookup"><span data-stu-id="e13ce-115">Hosting</span></span>](hosting-wpf-applications.md)  
   
- [<span data-ttu-id="b2d5c-116">빌드 및 배포</span><span class="sxs-lookup"><span data-stu-id="b2d5c-116">Build and Deploy</span></span>](../../../../docs/framework/wpf/app-development/building-and-deploying-wpf-applications.md)
+ [<span data-ttu-id="e13ce-116">빌드 및 배포</span><span class="sxs-lookup"><span data-stu-id="e13ce-116">Build and Deploy</span></span>](building-and-deploying-wpf-applications.md)
