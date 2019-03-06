@@ -7,26 +7,26 @@ helpviewer_keywords:
 - controls [WPF], ScrollViewer
 - ScrollViewer control [WPF], how-to topics
 ms.assetid: 1e20804b-1d80-4b54-af41-76b3e10a6f89
-ms.openlocfilehash: 2b5bea779888342062c6ff2ab3d258ee84cb97b7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0bd8925e2449df7d86502ed3b12385eb6f786063
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54672100"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57367144"
 ---
-# <a name="scrollviewer-how-to-topics"></a><span data-ttu-id="8abcb-102">ScrollViewer 방법 항목</span><span class="sxs-lookup"><span data-stu-id="8abcb-102">ScrollViewer How-to Topics</span></span>
-<span data-ttu-id="8abcb-103">이 섹션의에서 항목에서는 사용 하는 방법을 보여 줍니다는 <xref:System.Windows.Controls.ScrollViewer> 응용 프로그램에서 스크롤 가능한 영역을 만드는 요소입니다.</span><span class="sxs-lookup"><span data-stu-id="8abcb-103">The topics in this section demonstrate how to use the <xref:System.Windows.Controls.ScrollViewer> element to create scrollable regions in your applications.</span></span>  
+# <a name="scrollviewer-how-to-topics"></a><span data-ttu-id="aa381-102">ScrollViewer 방법 항목</span><span class="sxs-lookup"><span data-stu-id="aa381-102">ScrollViewer How-to Topics</span></span>
+<span data-ttu-id="aa381-103">이 섹션의에서 항목에서는 사용 하는 방법을 보여 줍니다는 <xref:System.Windows.Controls.ScrollViewer> 응용 프로그램에서 스크롤 가능한 영역을 만드는 요소입니다.</span><span class="sxs-lookup"><span data-stu-id="aa381-103">The topics in this section demonstrate how to use the <xref:System.Windows.Controls.ScrollViewer> element to create scrollable regions in your applications.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="8abcb-104">섹션 내용</span><span class="sxs-lookup"><span data-stu-id="8abcb-104">In This Section</span></span>  
- [<span data-ttu-id="8abcb-105">ScrollChanged 이벤트 처리</span><span class="sxs-lookup"><span data-stu-id="8abcb-105">Handle the ScrollChanged Event</span></span>](../../../../docs/framework/wpf/controls/how-to-handle-the-scrollchanged-event.md)  
- [<span data-ttu-id="8abcb-106">IScrollInfo 인터페이스를 사용하여 콘텐츠 스크롤</span><span class="sxs-lookup"><span data-stu-id="8abcb-106">Scroll Content by Using the IScrollInfo Interface</span></span>](../../../../docs/framework/wpf/controls/how-to-scroll-content-by-using-the-iscrollinfo-interface.md)  
- [<span data-ttu-id="8abcb-107">ScrollViewer의 콘텐츠 스크롤 메서드 사용</span><span class="sxs-lookup"><span data-stu-id="8abcb-107">Use the Content-Scrolling Methods of ScrollViewer</span></span>](../../../../docs/framework/wpf/controls/how-to-use-the-content-scrolling-methods-of-scrollviewer.md)  
+## <a name="in-this-section"></a><span data-ttu-id="aa381-104">섹션 내용</span><span class="sxs-lookup"><span data-stu-id="aa381-104">In This Section</span></span>  
+ [<span data-ttu-id="aa381-105">ScrollChanged 이벤트 처리</span><span class="sxs-lookup"><span data-stu-id="aa381-105">Handle the ScrollChanged Event</span></span>](how-to-handle-the-scrollchanged-event.md)  
+ [<span data-ttu-id="aa381-106">IScrollInfo 인터페이스를 사용하여 콘텐츠 스크롤</span><span class="sxs-lookup"><span data-stu-id="aa381-106">Scroll Content by Using the IScrollInfo Interface</span></span>](how-to-scroll-content-by-using-the-iscrollinfo-interface.md)  
+ [<span data-ttu-id="aa381-107">ScrollViewer의 콘텐츠 스크롤 메서드 사용</span><span class="sxs-lookup"><span data-stu-id="aa381-107">Use the Content-Scrolling Methods of ScrollViewer</span></span>](how-to-use-the-content-scrolling-methods-of-scrollviewer.md)  
   
-## <a name="reference"></a><span data-ttu-id="8abcb-108">참조</span><span class="sxs-lookup"><span data-stu-id="8abcb-108">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="aa381-108">참조</span><span class="sxs-lookup"><span data-stu-id="aa381-108">Reference</span></span>  
  <xref:System.Windows.Controls.Primitives.ScrollBar>  
   
  <xref:System.Windows.Controls.ScrollViewer>  
   
-## <a name="see-also"></a><span data-ttu-id="8abcb-109">참고자료</span><span class="sxs-lookup"><span data-stu-id="8abcb-109">See also</span></span>
-- [<span data-ttu-id="8abcb-110">패널 개요</span><span class="sxs-lookup"><span data-stu-id="8abcb-110">Panels Overview</span></span>](../../../../docs/framework/wpf/controls/panels-overview.md)
-- [<span data-ttu-id="8abcb-111">레이아웃</span><span class="sxs-lookup"><span data-stu-id="8abcb-111">Layout</span></span>](../../../../docs/framework/wpf/advanced/layout.md)
+## <a name="see-also"></a><span data-ttu-id="aa381-109">참고자료</span><span class="sxs-lookup"><span data-stu-id="aa381-109">See also</span></span>
+- [<span data-ttu-id="aa381-110">패널 개요</span><span class="sxs-lookup"><span data-stu-id="aa381-110">Panels Overview</span></span>](panels-overview.md)
+- [<span data-ttu-id="aa381-111">레이아웃</span><span class="sxs-lookup"><span data-stu-id="aa381-111">Layout</span></span>](../advanced/layout.md)

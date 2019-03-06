@@ -7,30 +7,30 @@ helpviewer_keywords:
 - animation [WPF], paths
 - path animations [WPF]
 ms.assetid: e9b71017-bac4-40d7-858b-326939442cb1
-ms.openlocfilehash: d3904d4bedd1e73619b7918fa1519af492182de2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6004dad448b965d51be6543478cbd059fb7f4d87
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54665853"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57373480"
 ---
-# <a name="path-animation-how-to-topics"></a><span data-ttu-id="aa89e-102">경로 애니메이션 방법 항목</span><span class="sxs-lookup"><span data-stu-id="aa89e-102">Path Animation How-to Topics</span></span>
-<span data-ttu-id="aa89e-103">이 섹션의 항목 경로 따라 개체에 애니메이션을 적용 하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="aa89e-103">The topics in this section demonstrate how to animate an object along a path.</span></span>  
+# <a name="path-animation-how-to-topics"></a><span data-ttu-id="07287-102">경로 애니메이션 방법 항목</span><span class="sxs-lookup"><span data-stu-id="07287-102">Path Animation How-to Topics</span></span>
+<span data-ttu-id="07287-103">이 섹션의 항목 경로 따라 개체에 애니메이션을 적용 하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="07287-103">The topics in this section demonstrate how to animate an object along a path.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="aa89e-104">섹션 내용</span><span class="sxs-lookup"><span data-stu-id="aa89e-104">In This Section</span></span>  
- [<span data-ttu-id="aa89e-105">경로를 따라 개체에 애니메이션 효과 주기(Double 애니메이션)</span><span class="sxs-lookup"><span data-stu-id="aa89e-105">Animate an Object Along a Path (Double Animation)</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-an-object-along-a-path-double-animation.md)  
- [<span data-ttu-id="aa89e-106">경로를 따라 개체에 애니메이션 효과 주기(포인트 애니메이션)</span><span class="sxs-lookup"><span data-stu-id="aa89e-106">Animate an Object Along a Path (Point Animation)</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-an-object-along-a-path-point-animation.md)  
- [<span data-ttu-id="aa89e-107">경로를 따라 개체에 애니메이션 효과 주기(Matrix 애니메이션)</span><span class="sxs-lookup"><span data-stu-id="aa89e-107">Animate an Object Along a Path (Matrix Animation)</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-an-object-along-a-path-matrix-animation.md)  
- [<span data-ttu-id="aa89e-108">경로를 따라 개체에 애니메이션 효과 주기(오프셋이 누적된 매트릭스 애니메이션)</span><span class="sxs-lookup"><span data-stu-id="aa89e-108">Animate an Object Along a Path (Matrix Animation with Offset Accumulation)</span></span>](../../../../docs/framework/wpf/graphics-multimedia/animate-an-object-along-a-path-matrix-animation-with-offset.md)  
- [<span data-ttu-id="aa89e-109">기하학적 경로를 사용하여 개체 회전(매트릭스 애니메이션)</span><span class="sxs-lookup"><span data-stu-id="aa89e-109">Rotate an Object by Using a Geometric Path (Matrix Animation)</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-rotate-an-object-by-using-a-geometric-path-matrix-animation.md)  
- [<span data-ttu-id="aa89e-110">기하학적 경로를 사용하여 개체 회전</span><span class="sxs-lookup"><span data-stu-id="aa89e-110">Rotate an Object by Using a Geometric Path</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-rotate-an-object-by-using-a-geometric-path.md)  
+## <a name="in-this-section"></a><span data-ttu-id="07287-104">섹션 내용</span><span class="sxs-lookup"><span data-stu-id="07287-104">In This Section</span></span>  
+ [<span data-ttu-id="07287-105">경로를 따라 개체에 애니메이션 효과 주기(Double 애니메이션)</span><span class="sxs-lookup"><span data-stu-id="07287-105">Animate an Object Along a Path (Double Animation)</span></span>](how-to-animate-an-object-along-a-path-double-animation.md)  
+ [<span data-ttu-id="07287-106">경로를 따라 개체에 애니메이션 효과 주기(포인트 애니메이션)</span><span class="sxs-lookup"><span data-stu-id="07287-106">Animate an Object Along a Path (Point Animation)</span></span>](how-to-animate-an-object-along-a-path-point-animation.md)  
+ [<span data-ttu-id="07287-107">경로를 따라 개체에 애니메이션 효과 주기(Matrix 애니메이션)</span><span class="sxs-lookup"><span data-stu-id="07287-107">Animate an Object Along a Path (Matrix Animation)</span></span>](how-to-animate-an-object-along-a-path-matrix-animation.md)  
+ [<span data-ttu-id="07287-108">경로를 따라 개체에 애니메이션 효과 주기(오프셋이 누적된 매트릭스 애니메이션)</span><span class="sxs-lookup"><span data-stu-id="07287-108">Animate an Object Along a Path (Matrix Animation with Offset Accumulation)</span></span>](animate-an-object-along-a-path-matrix-animation-with-offset.md)  
+ [<span data-ttu-id="07287-109">기하학적 경로를 사용하여 개체 회전(매트릭스 애니메이션)</span><span class="sxs-lookup"><span data-stu-id="07287-109">Rotate an Object by Using a Geometric Path (Matrix Animation)</span></span>](how-to-rotate-an-object-by-using-a-geometric-path-matrix-animation.md)  
+ [<span data-ttu-id="07287-110">기하학적 경로를 사용하여 개체 회전</span><span class="sxs-lookup"><span data-stu-id="07287-110">Rotate an Object by Using a Geometric Path</span></span>](how-to-rotate-an-object-by-using-a-geometric-path.md)  
   
-## <a name="reference"></a><span data-ttu-id="aa89e-111">참조</span><span class="sxs-lookup"><span data-stu-id="aa89e-111">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="07287-111">참조</span><span class="sxs-lookup"><span data-stu-id="07287-111">Reference</span></span>  
  <xref:System.Windows.Media.Animation.PathAnimationSource>  
   
  <xref:System.Windows.Media.Animation.Storyboard>  
   
-## <a name="see-also"></a><span data-ttu-id="aa89e-112">참고자료</span><span class="sxs-lookup"><span data-stu-id="aa89e-112">See also</span></span>
-- [<span data-ttu-id="aa89e-113">그래픽 및 멀티미디어</span><span class="sxs-lookup"><span data-stu-id="aa89e-113">Graphics and Multimedia</span></span>](../../../../docs/framework/wpf/graphics-multimedia/index.md)
-- [<span data-ttu-id="aa89e-114">애니메이션 개요</span><span class="sxs-lookup"><span data-stu-id="aa89e-114">Animation Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)
-- [<span data-ttu-id="aa89e-115">키 프레임 애니메이션 개요</span><span class="sxs-lookup"><span data-stu-id="aa89e-115">Key-Frame Animations Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md)
+## <a name="see-also"></a><span data-ttu-id="07287-112">참고자료</span><span class="sxs-lookup"><span data-stu-id="07287-112">See also</span></span>
+- [<span data-ttu-id="07287-113">그래픽 및 멀티미디어</span><span class="sxs-lookup"><span data-stu-id="07287-113">Graphics and Multimedia</span></span>](index.md)
+- [<span data-ttu-id="07287-114">애니메이션 개요</span><span class="sxs-lookup"><span data-stu-id="07287-114">Animation Overview</span></span>](animation-overview.md)
+- [<span data-ttu-id="07287-115">키 프레임 애니메이션 개요</span><span class="sxs-lookup"><span data-stu-id="07287-115">Key-Frame Animations Overview</span></span>](key-frame-animations-overview.md)

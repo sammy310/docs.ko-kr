@@ -16,21 +16,21 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 420a02d2f7757c52d6e8ff92a9ca30e44938cd18
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8bef18468ef02e37b857316cd9fa2bf4cf5f9e9b
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54546441"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57369338"
 ---
-# <a name="formatfromrawvalue-function"></a><span data-ttu-id="ff968-103">FormatFromRawValue 함수</span><span class="sxs-lookup"><span data-stu-id="ff968-103">FormatFromRawValue function</span></span>
-<span data-ttu-id="ff968-104">형식 변환이 시간 기반인 경우 하나의 원시 성능 데이터 값을 지정된 형식으로 변화하거나 두 개의 원시 성능 데이터 값으로 변환합니다.</span><span class="sxs-lookup"><span data-stu-id="ff968-104">Converts one raw performance data value to the specified format, or two raw performance data values if the format conversion is time-based.</span></span>   
-  
+# <a name="formatfromrawvalue-function"></a><span data-ttu-id="3c736-103">FormatFromRawValue 함수</span><span class="sxs-lookup"><span data-stu-id="3c736-103">FormatFromRawValue function</span></span>
+<span data-ttu-id="3c736-104">형식 변환이 시간 기반인 경우 하나의 원시 성능 데이터 값을 지정된 형식으로 변화하거나 두 개의 원시 성능 데이터 값으로 변환합니다.</span><span class="sxs-lookup"><span data-stu-id="3c736-104">Converts one raw performance data value to the specified format, or two raw performance data values if the format conversion is time-based.</span></span> 
+
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
-  
-## <a name="syntax"></a><span data-ttu-id="ff968-105">구문</span><span class="sxs-lookup"><span data-stu-id="ff968-105">Syntax</span></span>  
-  
-```  
+
+## <a name="syntax"></a><span data-ttu-id="3c736-105">구문</span><span class="sxs-lookup"><span data-stu-id="3c736-105">Syntax</span></span>
+
+```
 int FormatFromRawValue (
    [in] uint                    dwCounterType, 
    [in] uint                    dwFormat, 
@@ -39,58 +39,62 @@ int FormatFromRawValue (
    [in] PDH_RAW_COUNTER*        pRawValue2,
    [out] PDH_FMT_COUNTERVALUE*  pFmtValue
 ); 
-```  
+```
 
-## <a name="parameters"></a><span data-ttu-id="ff968-106">매개 변수</span><span class="sxs-lookup"><span data-stu-id="ff968-106">Parameters</span></span>
+## <a name="parameters"></a><span data-ttu-id="3c736-106">매개 변수</span><span class="sxs-lookup"><span data-stu-id="3c736-106">Parameters</span></span>
 
-`dwCounterType`  
-<span data-ttu-id="ff968-107">[in] 카운터 형식입니다.</span><span class="sxs-lookup"><span data-stu-id="ff968-107">[in] The counter type.</span></span> <span data-ttu-id="ff968-108">카운터 형식 목록을 참조 하세요 [WMI 성능 카운터 형식](/windows/desktop/WmiSdk/wmi-performance-counter-types)합니다.</span><span class="sxs-lookup"><span data-stu-id="ff968-108">For a list of counter types, see [WMI Performance Counter Types](/windows/desktop/WmiSdk/wmi-performance-counter-types).</span></span> <span data-ttu-id="ff968-109">`dwCounterType` 제외 하 고 카운터 형식일 수 있습니다 `PERF_LARGE_RAW_FRACTION` 고 `PERF_LARGE_RAW_BASE`입니다.</span><span class="sxs-lookup"><span data-stu-id="ff968-109">`dwCounterType` can be any counter type except for `PERF_LARGE_RAW_FRACTION` and `PERF_LARGE_RAW_BASE`.</span></span> 
+`dwCounterType`\
+<span data-ttu-id="3c736-107">[in] 카운터 형식입니다.</span><span class="sxs-lookup"><span data-stu-id="3c736-107">[in] The counter type.</span></span> <span data-ttu-id="3c736-108">카운터 형식 목록을 참조 하세요 [WMI 성능 카운터 형식](/windows/desktop/WmiSdk/wmi-performance-counter-types)합니다.</span><span class="sxs-lookup"><span data-stu-id="3c736-108">For a list of counter types, see [WMI Performance Counter Types](/windows/desktop/WmiSdk/wmi-performance-counter-types).</span></span> <span data-ttu-id="3c736-109">`dwCounterType` 제외 하 고 카운터 형식일 수 있습니다 `PERF_LARGE_RAW_FRACTION` 고 `PERF_LARGE_RAW_BASE`입니다.</span><span class="sxs-lookup"><span data-stu-id="3c736-109">`dwCounterType` can be any counter type except for `PERF_LARGE_RAW_FRACTION` and `PERF_LARGE_RAW_BASE`.</span></span> 
 
-`dwFormat`  
-<span data-ttu-id="ff968-110">[in] 원시 성능 데이터를 변환할 대상 형식입니다.</span><span class="sxs-lookup"><span data-stu-id="ff968-110">[in] The format to which to convert the raw performance data.</span></span> <span data-ttu-id="ff968-111">다음 값 중 하나일 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="ff968-111">It can be one of the following values:</span></span>
+`dwFormat`\
+<span data-ttu-id="3c736-110">[in] 원시 성능 데이터를 변환할 대상 형식입니다.</span><span class="sxs-lookup"><span data-stu-id="3c736-110">[in] The format to which to convert the raw performance data.</span></span> <span data-ttu-id="3c736-111">다음 값 중 하나일 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="3c736-111">It can be one of the following values:</span></span>
 
-|<span data-ttu-id="ff968-112">상수</span><span class="sxs-lookup"><span data-stu-id="ff968-112">Constant</span></span>  |<span data-ttu-id="ff968-113">값</span><span class="sxs-lookup"><span data-stu-id="ff968-113">Value</span></span>  |<span data-ttu-id="ff968-114">설명</span><span class="sxs-lookup"><span data-stu-id="ff968-114">Description</span></span> |
+|<span data-ttu-id="3c736-112">상수</span><span class="sxs-lookup"><span data-stu-id="3c736-112">Constant</span></span>  |<span data-ttu-id="3c736-113">값</span><span class="sxs-lookup"><span data-stu-id="3c736-113">Value</span></span>  |<span data-ttu-id="3c736-114">설명</span><span class="sxs-lookup"><span data-stu-id="3c736-114">Description</span></span> |
 |---------|---------|---------|
-| `PDH_FMT_DOUBLE` |<span data-ttu-id="ff968-115">0x00000200</span><span class="sxs-lookup"><span data-stu-id="ff968-115">0x00000200</span></span> | <span data-ttu-id="ff968-116">배정밀도 부동 소수점 값으로 계산된 된 값을 반환 합니다.</span><span class="sxs-lookup"><span data-stu-id="ff968-116">Return the calculated value as a double-precision floating point value.</span></span> | 
-| `PDH_FMT_LARGE` | <span data-ttu-id="ff968-117">0x00000400</span><span class="sxs-lookup"><span data-stu-id="ff968-117">0x00000400</span></span> | <span data-ttu-id="ff968-118">64 비트 정수로 계산된 된 값을 반환 합니다.</span><span class="sxs-lookup"><span data-stu-id="ff968-118">Return the calculated value as a 64-bit integer.</span></span> |
-| `PDH_FMT_LONG` | <span data-ttu-id="ff968-119">0x00000100</span><span class="sxs-lookup"><span data-stu-id="ff968-119">0x00000100</span></span> | <span data-ttu-id="ff968-120">32 비트 정수로 계산된 된 값을 반환 합니다.</span><span class="sxs-lookup"><span data-stu-id="ff968-120">Return the calculated value as a 32-bit integer.</span></span> |
+| `PDH_FMT_DOUBLE` |<span data-ttu-id="3c736-115">0x00000200</span><span class="sxs-lookup"><span data-stu-id="3c736-115">0x00000200</span></span> | <span data-ttu-id="3c736-116">배정밀도 부동 소수점 값으로 계산된 된 값을 반환 합니다.</span><span class="sxs-lookup"><span data-stu-id="3c736-116">Return the calculated value as a double-precision floating point value.</span></span> | 
+| `PDH_FMT_LARGE` | <span data-ttu-id="3c736-117">0x00000400</span><span class="sxs-lookup"><span data-stu-id="3c736-117">0x00000400</span></span> | <span data-ttu-id="3c736-118">64 비트 정수로 계산된 된 값을 반환 합니다.</span><span class="sxs-lookup"><span data-stu-id="3c736-118">Return the calculated value as a 64-bit integer.</span></span> |
+| `PDH_FMT_LONG` | <span data-ttu-id="3c736-119">0x00000100</span><span class="sxs-lookup"><span data-stu-id="3c736-119">0x00000100</span></span> | <span data-ttu-id="3c736-120">32 비트 정수로 계산된 된 값을 반환 합니다.</span><span class="sxs-lookup"><span data-stu-id="3c736-120">Return the calculated value as a 32-bit integer.</span></span> |
 
-<span data-ttu-id="ff968-121">다음 크기 조정 플래그 중 하나를 사용 하 여 or 처리 될 수 있습니다 이전 값 중 하나:</span><span class="sxs-lookup"><span data-stu-id="ff968-121">One of the previous values can be ORed with one of the following scaling flags:</span></span>
+<span data-ttu-id="3c736-121">다음 크기 조정 플래그 중 하나를 사용 하 여 or 처리 될 수 있습니다 이전 값 중 하나:</span><span class="sxs-lookup"><span data-stu-id="3c736-121">One of the previous values can be ORed with one of the following scaling flags:</span></span>
 
-|<span data-ttu-id="ff968-122">상수</span><span class="sxs-lookup"><span data-stu-id="ff968-122">Constant</span></span>  |<span data-ttu-id="ff968-123">값</span><span class="sxs-lookup"><span data-stu-id="ff968-123">Value</span></span>  |<span data-ttu-id="ff968-124">설명</span><span class="sxs-lookup"><span data-stu-id="ff968-124">Description</span></span> |
+|<span data-ttu-id="3c736-122">상수</span><span class="sxs-lookup"><span data-stu-id="3c736-122">Constant</span></span>  |<span data-ttu-id="3c736-123">값</span><span class="sxs-lookup"><span data-stu-id="3c736-123">Value</span></span>  |<span data-ttu-id="3c736-124">설명</span><span class="sxs-lookup"><span data-stu-id="3c736-124">Description</span></span> |
 |---------|---------|---------|
-| `PDH_FMT_NOSCALE` | <span data-ttu-id="ff968-125">0x00001000</span><span class="sxs-lookup"><span data-stu-id="ff968-125">0x00001000</span></span> | <span data-ttu-id="ff968-126">카운터의 배율 적용 되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="ff968-126">Do not apply the counter's scaling factors.</span></span> |
-| `PDH_FMT_1000` | <span data-ttu-id="ff968-127">0x00002000</span><span class="sxs-lookup"><span data-stu-id="ff968-127">0x00002000</span></span> | <span data-ttu-id="ff968-128">1,000 최종 값을 곱하십시오.</span><span class="sxs-lookup"><span data-stu-id="ff968-128">Multiply the final value by 1,000.</span></span> | 
+| `PDH_FMT_NOSCALE` | <span data-ttu-id="3c736-125">0x00001000</span><span class="sxs-lookup"><span data-stu-id="3c736-125">0x00001000</span></span> | <span data-ttu-id="3c736-126">카운터의 배율 적용 되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="3c736-126">Do not apply the counter's scaling factors.</span></span> |
+| `PDH_FMT_1000` | <span data-ttu-id="3c736-127">0x00002000</span><span class="sxs-lookup"><span data-stu-id="3c736-127">0x00002000</span></span> | <span data-ttu-id="3c736-128">1,000 최종 값을 곱하십시오.</span><span class="sxs-lookup"><span data-stu-id="3c736-128">Multiply the final value by 1,000.</span></span> | 
 
-`pTimeBase`  
-<span data-ttu-id="ff968-129">[in] 기본 시간을 형식으로 변환 하는 데 필요한 경우에 대 한 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="ff968-129">[in] A pointer to the time base, if necessary for the format conversion.</span></span> <span data-ttu-id="ff968-130">시간 기본 정보, 형식 변환에 대 한 필요가 없는 경우이 매개 변수의 값은 무시 됩니다.</span><span class="sxs-lookup"><span data-stu-id="ff968-130">If time base information is not necessary for the format conversion, the value of this parameter is ignored.</span></span>
+`pTimeBase`\
+<span data-ttu-id="3c736-129">[in] 기본 시간을 형식으로 변환 하는 데 필요한 경우에 대 한 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="3c736-129">[in] A pointer to the time base, if necessary for the format conversion.</span></span> <span data-ttu-id="3c736-130">시간 기본 정보, 형식 변환에 대 한 필요가 없는 경우이 매개 변수의 값은 무시 됩니다.</span><span class="sxs-lookup"><span data-stu-id="3c736-130">If time base information is not necessary for the format conversion, the value of this parameter is ignored.</span></span>
 
-<span data-ttu-id="ff968-131">`pRawValue1` [in] 에 대 한 포인터를 [ `PDH_RAW_COUNTER` ](/windows/desktop/api/pdh/ns-pdh-_pdh_raw_counter) 원시 성능 값을 나타내는 구조체입니다.</span><span class="sxs-lookup"><span data-stu-id="ff968-131">`pRawValue1` [in] A pointer to a [`PDH_RAW_COUNTER`](/windows/desktop/api/pdh/ns-pdh-_pdh_raw_counter) structure that represents a raw performance value.</span></span>
+<span data-ttu-id="3c736-131">`pRawValue1`\ [in]에 대 한 포인터를 [ `PDH_RAW_COUNTER` ](/windows/desktop/api/pdh/ns-pdh-_pdh_raw_counter) 원시 성능 값을 나타내는 구조체입니다.</span><span class="sxs-lookup"><span data-stu-id="3c736-131">`pRawValue1`\ [in] A pointer to a [`PDH_RAW_COUNTER`](/windows/desktop/api/pdh/ns-pdh-_pdh_raw_counter) structure that represents a raw performance value.</span></span>
 
-<span data-ttu-id="ff968-132">`pRawValue2` [in] 에 대 한 포인터를 [ `PDH_RAW_COUNTER` ](/windows/desktop/api/pdh/ns-pdh-_pdh_raw_counter) 두 번째 원시 성능 값을 나타내는 구조체입니다.</span><span class="sxs-lookup"><span data-stu-id="ff968-132">`pRawValue2` [in] A pointer to a [`PDH_RAW_COUNTER`](/windows/desktop/api/pdh/ns-pdh-_pdh_raw_counter) structure that represents a second raw performance value.</span></span> <span data-ttu-id="ff968-133">두 번째 원시 성능 값이 필요한 경우이 매개 변수 여야 합니다 `null`합니다.</span><span class="sxs-lookup"><span data-stu-id="ff968-133">If a second raw performance value is not necessary, this parameter should be `null`.</span></span>
+`pRawValue2`\
+<span data-ttu-id="3c736-132">[in] 에 대 한 포인터를 [ `PDH_RAW_COUNTER` ](/windows/desktop/api/pdh/ns-pdh-_pdh_raw_counter) 두 번째 원시 성능 값을 나타내는 구조체입니다.</span><span class="sxs-lookup"><span data-stu-id="3c736-132">[in] A pointer to a [`PDH_RAW_COUNTER`](/windows/desktop/api/pdh/ns-pdh-_pdh_raw_counter) structure that represents a second raw performance value.</span></span> <span data-ttu-id="3c736-133">두 번째 원시 성능 값이 필요한 경우이 매개 변수 여야 합니다 `null`합니다.</span><span class="sxs-lookup"><span data-stu-id="3c736-133">If a second raw performance value is not necessary, this parameter should be `null`.</span></span>
 
-<span data-ttu-id="ff968-134">`pFmtValue` [out] 에 대 한 포인터를 [ `PDH_FMT_COUNTERVALUE` ](/windows/desktop/api/pdh/ns-pdh-_pdh_fmt_countervalue) 구조체 형식이 지정 된 성능 값입니다.</span><span class="sxs-lookup"><span data-stu-id="ff968-134">`pFmtValue` [out] A pointer to a [`PDH_FMT_COUNTERVALUE`](/windows/desktop/api/pdh/ns-pdh-_pdh_fmt_countervalue) structure that receives the formatted performance value.</span></span>
+`pFmtValue`\
+<span data-ttu-id="3c736-134">[out] 에 대 한 포인터를 [ `PDH_FMT_COUNTERVALUE` ](/windows/desktop/api/pdh/ns-pdh-_pdh_fmt_countervalue) 구조체 형식이 지정 된 성능 값입니다.</span><span class="sxs-lookup"><span data-stu-id="3c736-134">[out] A pointer to a [`PDH_FMT_COUNTERVALUE`](/windows/desktop/api/pdh/ns-pdh-_pdh_fmt_countervalue) structure that receives the formatted performance value.</span></span>
 
-## <a name="return-value"></a><span data-ttu-id="ff968-135">반환 값</span><span class="sxs-lookup"><span data-stu-id="ff968-135">Return value</span></span>
+## <a name="return-value"></a><span data-ttu-id="3c736-135">반환 값</span><span class="sxs-lookup"><span data-stu-id="3c736-135">Return value</span></span>
 
-<span data-ttu-id="ff968-136">다음 값이이 함수에 의해 반환 됩니다.</span><span class="sxs-lookup"><span data-stu-id="ff968-136">The following values are returned by this function:</span></span>
+<span data-ttu-id="3c736-136">다음 값이이 함수에 의해 반환 됩니다.</span><span class="sxs-lookup"><span data-stu-id="3c736-136">The following values are returned by this function:</span></span>
 
-|<span data-ttu-id="ff968-137">상수</span><span class="sxs-lookup"><span data-stu-id="ff968-137">Constant</span></span>  |<span data-ttu-id="ff968-138">값</span><span class="sxs-lookup"><span data-stu-id="ff968-138">Value</span></span>  |<span data-ttu-id="ff968-139">설명</span><span class="sxs-lookup"><span data-stu-id="ff968-139">Description</span></span>  |
+|<span data-ttu-id="3c736-137">상수</span><span class="sxs-lookup"><span data-stu-id="3c736-137">Constant</span></span>  |<span data-ttu-id="3c736-138">값</span><span class="sxs-lookup"><span data-stu-id="3c736-138">Value</span></span>  |<span data-ttu-id="3c736-139">설명</span><span class="sxs-lookup"><span data-stu-id="3c736-139">Description</span></span>  |
 |---------|---------|---------|
-| `ERROR_SUCCESS` | <span data-ttu-id="ff968-140">0</span><span class="sxs-lookup"><span data-stu-id="ff968-140">0</span></span> | <span data-ttu-id="ff968-141">함수 호출에 성공 했습니다.</span><span class="sxs-lookup"><span data-stu-id="ff968-141">The function call is successful.</span></span> |
-| `PDH_INVALID_ARGUMENT` | <span data-ttu-id="ff968-142">0xC0000BBD</span><span class="sxs-lookup"><span data-stu-id="ff968-142">0xC0000BBD</span></span> | <span data-ttu-id="ff968-143">필수 인수가 누락 되었거나 잘못 되었습니다.</span><span class="sxs-lookup"><span data-stu-id="ff968-143">A required argument is missing or incorrect.</span></span> | 
-| `PDH_INVALID_HANDLE` | <span data-ttu-id="ff968-144">0xC0000BBC</span><span class="sxs-lookup"><span data-stu-id="ff968-144">0xC0000BBC</span></span> | <span data-ttu-id="ff968-145">핸들이 올바른 PDH 개체가 아닙니다.</span><span class="sxs-lookup"><span data-stu-id="ff968-145">The handle is not a valid PDH object.</span></span> |
-  
-## <a name="remarks"></a><span data-ttu-id="ff968-146">설명</span><span class="sxs-lookup"><span data-stu-id="ff968-146">Remarks</span></span>
+| `ERROR_SUCCESS` | <span data-ttu-id="3c736-140">0</span><span class="sxs-lookup"><span data-stu-id="3c736-140">0</span></span> | <span data-ttu-id="3c736-141">함수 호출에 성공 했습니다.</span><span class="sxs-lookup"><span data-stu-id="3c736-141">The function call is successful.</span></span> |
+| `PDH_INVALID_ARGUMENT` | <span data-ttu-id="3c736-142">0xC0000BBD</span><span class="sxs-lookup"><span data-stu-id="3c736-142">0xC0000BBD</span></span> | <span data-ttu-id="3c736-143">필수 인수가 누락 되었거나 잘못 되었습니다.</span><span class="sxs-lookup"><span data-stu-id="3c736-143">A required argument is missing or incorrect.</span></span> | 
+| `PDH_INVALID_HANDLE` | <span data-ttu-id="3c736-144">0xC0000BBC</span><span class="sxs-lookup"><span data-stu-id="3c736-144">0xC0000BBC</span></span> | <span data-ttu-id="3c736-145">핸들이 올바른 PDH 개체가 아닙니다.</span><span class="sxs-lookup"><span data-stu-id="3c736-145">The handle is not a valid PDH object.</span></span> |
 
-<span data-ttu-id="ff968-147">이 함수에 대 한 호출을 래핑하는 [FormatFromRawValue](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.0/ms231047%28v=vs.85%29) 함수입니다.</span><span class="sxs-lookup"><span data-stu-id="ff968-147">This function wraps a call to the [FormatFromRawValue](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.0/ms231047%28v=vs.85%29) function.</span></span>
+## <a name="remarks"></a><span data-ttu-id="3c736-146">설명</span><span class="sxs-lookup"><span data-stu-id="3c736-146">Remarks</span></span>
 
-## <a name="requirements"></a><span data-ttu-id="ff968-148">요구 사항</span><span class="sxs-lookup"><span data-stu-id="ff968-148">Requirements</span></span>  
- <span data-ttu-id="ff968-149">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="ff968-149">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
-  
- <span data-ttu-id="ff968-150">**라이브러리:** PerfCounter.dll</span><span class="sxs-lookup"><span data-stu-id="ff968-150">**Library:** PerfCounter.dll</span></span>  
-  
- <span data-ttu-id="ff968-151">**.NET Framework 버전:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span><span class="sxs-lookup"><span data-stu-id="ff968-151">**.NET Framework Versions:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span></span>  
-  
-## <a name="see-also"></a><span data-ttu-id="ff968-152">참고자료</span><span class="sxs-lookup"><span data-stu-id="ff968-152">See also</span></span>
-- [<span data-ttu-id="ff968-153">WMI 및 성능 카운터 (관리 되지 않는 API 참조)</span><span class="sxs-lookup"><span data-stu-id="ff968-153">WMI and Performance Counters (Unmanaged API Reference)</span></span>](index.md)
+<span data-ttu-id="3c736-147">이 함수에 대 한 호출을 래핑하는 [FormatFromRawValue](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.0/ms231047%28v=vs.85%29) 함수입니다.</span><span class="sxs-lookup"><span data-stu-id="3c736-147">This function wraps a call to the [FormatFromRawValue](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.0/ms231047%28v=vs.85%29) function.</span></span>
+
+## <a name="requirements"></a><span data-ttu-id="3c736-148">요구 사항</span><span class="sxs-lookup"><span data-stu-id="3c736-148">Requirements</span></span>
+
+ <span data-ttu-id="3c736-149">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="3c736-149">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>
+
+ <span data-ttu-id="3c736-150">**라이브러리:** PerfCounter.dll</span><span class="sxs-lookup"><span data-stu-id="3c736-150">**Library:** PerfCounter.dll</span></span>
+
+ <span data-ttu-id="3c736-151">**.NET Framework 버전:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span><span class="sxs-lookup"><span data-stu-id="3c736-151">**.NET Framework Versions:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span></span>
+
+## <a name="see-also"></a><span data-ttu-id="3c736-152">참고자료</span><span class="sxs-lookup"><span data-stu-id="3c736-152">See also</span></span>
+
+- [<span data-ttu-id="3c736-153">WMI 및 성능 카운터 (관리 되지 않는 API 참조)</span><span class="sxs-lookup"><span data-stu-id="3c736-153">WMI and Performance Counters (Unmanaged API Reference)</span></span>](index.md)

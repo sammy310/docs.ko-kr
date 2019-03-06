@@ -9,22 +9,22 @@ helpviewer_keywords:
 - clocks [WPF], animation
 - animation [WPF], clocks
 ms.assetid: c687b2a5-b151-41e2-9ade-df2fc1a16b04
-ms.openlocfilehash: f2888f28ad7723b7390d0e2339c2117e64e84ecd
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: bb625c116b1c58071ec0f51729df07f43600f36f
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33554809"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57361449"
 ---
-# <a name="clocks-how-to-topics"></a><span data-ttu-id="410db-102">Clock 방법 항목</span><span class="sxs-lookup"><span data-stu-id="410db-102">Clocks How-to Topics</span></span>
-<span data-ttu-id="410db-103">다음 항목을 사용 하는 방법을 설명는 <xref:System.Windows.Media.Animation.Clock> 타이밍 상태 정보에 대 한 유지 관리 하는 개체는 <xref:System.Windows.Media.Animation.Timeline>합니다.</span><span class="sxs-lookup"><span data-stu-id="410db-103">The following topics describe how to use a <xref:System.Windows.Media.Animation.Clock> object to maintain timing state information for a <xref:System.Windows.Media.Animation.Timeline>.</span></span>  
+# <a name="clocks-how-to-topics"></a><span data-ttu-id="cde49-102">Clock 방법 항목</span><span class="sxs-lookup"><span data-stu-id="cde49-102">Clocks How-to Topics</span></span>
+<span data-ttu-id="cde49-103">다음 항목을 사용 하는 방법에 설명 된 <xref:System.Windows.Media.Animation.Clock> 개체에 대 한 타이밍 상태 정보를 유지 관리를 <xref:System.Windows.Media.Animation.Timeline>입니다.</span><span class="sxs-lookup"><span data-stu-id="cde49-103">The following topics describe how to use a <xref:System.Windows.Media.Animation.Clock> object to maintain timing state information for a <xref:System.Windows.Media.Animation.Timeline>.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="410db-104">섹션 내용</span><span class="sxs-lookup"><span data-stu-id="410db-104">In This Section</span></span>  
- [<span data-ttu-id="410db-105">AnimationClock을 사용하여 속성에 애니메이션 효과 적용</span><span class="sxs-lookup"><span data-stu-id="410db-105">Animate a Property by Using an AnimationClock</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-property-by-using-an-animationclock.md)  
- [<span data-ttu-id="410db-106">대화식으로 클록 제어</span><span class="sxs-lookup"><span data-stu-id="410db-106">Interactively Control a Clock</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-interactively-control-a-clock.md)  
- [<span data-ttu-id="410db-107">동기적으로 클록 검색</span><span class="sxs-lookup"><span data-stu-id="410db-107">Seek a Clock Synchronously</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-seek-a-clock-synchronously.md)  
+## <a name="in-this-section"></a><span data-ttu-id="cde49-104">섹션 내용</span><span class="sxs-lookup"><span data-stu-id="cde49-104">In This Section</span></span>  
+ [<span data-ttu-id="cde49-105">AnimationClock을 사용하여 속성에 애니메이션 효과 적용</span><span class="sxs-lookup"><span data-stu-id="cde49-105">Animate a Property by Using an AnimationClock</span></span>](how-to-animate-a-property-by-using-an-animationclock.md)  
+ [<span data-ttu-id="cde49-106">대화식으로 클록 제어</span><span class="sxs-lookup"><span data-stu-id="cde49-106">Interactively Control a Clock</span></span>](how-to-interactively-control-a-clock.md)  
+ [<span data-ttu-id="cde49-107">동기적으로 클록 검색</span><span class="sxs-lookup"><span data-stu-id="cde49-107">Seek a Clock Synchronously</span></span>](how-to-seek-a-clock-synchronously.md)  
   
-## <a name="reference"></a><span data-ttu-id="410db-108">참조</span><span class="sxs-lookup"><span data-stu-id="410db-108">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="cde49-108">참조</span><span class="sxs-lookup"><span data-stu-id="cde49-108">Reference</span></span>  
  <xref:System.Windows.Media.Animation.Clock>  
   
  <xref:System.Windows.Media.Animation.Storyboard>  
@@ -33,7 +33,7 @@ ms.locfileid: "33554809"
   
  <xref:System.Windows.Media.Animation.Timeline>  
   
-## <a name="related-sections"></a><span data-ttu-id="410db-109">관련 단원</span><span class="sxs-lookup"><span data-stu-id="410db-109">Related Sections</span></span>  
- [<span data-ttu-id="410db-110">애니메이션 개요</span><span class="sxs-lookup"><span data-stu-id="410db-110">Animation Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)  
+## <a name="related-sections"></a><span data-ttu-id="cde49-109">관련 단원</span><span class="sxs-lookup"><span data-stu-id="cde49-109">Related Sections</span></span>  
+ [<span data-ttu-id="cde49-110">애니메이션 개요</span><span class="sxs-lookup"><span data-stu-id="cde49-110">Animation Overview</span></span>](animation-overview.md)  
   
- [<span data-ttu-id="410db-111">Storyboard 개요</span><span class="sxs-lookup"><span data-stu-id="410db-111">Storyboards Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/storyboards-overview.md)
+ [<span data-ttu-id="cde49-111">Storyboard 개요</span><span class="sxs-lookup"><span data-stu-id="cde49-111">Storyboards Overview</span></span>](storyboards-overview.md)

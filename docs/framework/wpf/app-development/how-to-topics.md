@@ -8,19 +8,19 @@ helpviewer_keywords:
 - creating add-ins [WPF]
 - add-ins [WPF], returns a UI
 ms.assetid: c33980e8-36e7-45ce-a485-8c826dd29009
-ms.openlocfilehash: 2dcddc42ec1f9f3b16e5b4465be2e4194819a736
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 27eb7acbab7d9c90f0c0c311ef6331a16b7896e8
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33546005"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57358589"
 ---
-# <a name="how-to-topics"></a><span data-ttu-id="1b4e3-102">방법 항목</span><span class="sxs-lookup"><span data-stu-id="1b4e3-102">How-to Topics</span></span>
-<span data-ttu-id="1b4e3-103">다음 항목에서는 Windows Presentation Foundation (WPF) 추가 기능을 만드는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="1b4e3-103">The following topics show how to create Windows Presentation Foundation (WPF) add-ins.</span></span>  
+# <a name="how-to-topics"></a><span data-ttu-id="b4b6d-102">방법 항목</span><span class="sxs-lookup"><span data-stu-id="b4b6d-102">How-to Topics</span></span>
+<span data-ttu-id="b4b6d-103">다음 항목에는 Windows Presentation Foundation (WPF) 추가 기능을 만드는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="b4b6d-103">The following topics show how to create Windows Presentation Foundation (WPF) add-ins.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="1b4e3-104">섹션 내용</span><span class="sxs-lookup"><span data-stu-id="1b4e3-104">In This Section</span></span>  
- [<span data-ttu-id="1b4e3-105">UI를 반환하는 추가 기능 만들기</span><span class="sxs-lookup"><span data-stu-id="1b4e3-105">Create an Add-In That Returns a UI</span></span>](../../../../docs/framework/wpf/app-development/how-to-create-an-add-in-that-returns-a-ui.md)  
- [<span data-ttu-id="1b4e3-106">UI인 추가 기능 만들기</span><span class="sxs-lookup"><span data-stu-id="1b4e3-106">Create an Add-In That Is a UI</span></span>](../../../../docs/framework/wpf/app-development/how-to-create-an-add-in-that-is-a-ui.md)  
+## <a name="in-this-section"></a><span data-ttu-id="b4b6d-104">섹션 내용</span><span class="sxs-lookup"><span data-stu-id="b4b6d-104">In This Section</span></span>  
+ [<span data-ttu-id="b4b6d-105">UI를 반환하는 추가 기능 만들기</span><span class="sxs-lookup"><span data-stu-id="b4b6d-105">Create an Add-In That Returns a UI</span></span>](how-to-create-an-add-in-that-returns-a-ui.md)  
+ [<span data-ttu-id="b4b6d-106">UI인 추가 기능 만들기</span><span class="sxs-lookup"><span data-stu-id="b4b6d-106">Create an Add-In That Is a UI</span></span>](how-to-create-an-add-in-that-is-a-ui.md)  
   
-## <a name="related-sections"></a><span data-ttu-id="1b4e3-107">관련 단원</span><span class="sxs-lookup"><span data-stu-id="1b4e3-107">Related Sections</span></span>  
- [<span data-ttu-id="1b4e3-108">WPF 추가 기능 개요</span><span class="sxs-lookup"><span data-stu-id="1b4e3-108">WPF Add-Ins Overview</span></span>](../../../../docs/framework/wpf/app-development/wpf-add-ins-overview.md)
+## <a name="related-sections"></a><span data-ttu-id="b4b6d-107">관련 단원</span><span class="sxs-lookup"><span data-stu-id="b4b6d-107">Related Sections</span></span>  
+ [<span data-ttu-id="b4b6d-108">WPF 추가 기능 개요</span><span class="sxs-lookup"><span data-stu-id="b4b6d-108">WPF Add-Ins Overview</span></span>](wpf-add-ins-overview.md)

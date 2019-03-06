@@ -7,22 +7,22 @@ helpviewer_keywords:
 - RadioButton control [WPF]
 - controls [WPF], RadioButton
 ms.assetid: 6c9ba847-eab7-4bba-9c74-6b56ef72067b
-ms.openlocfilehash: 936b2d72a73a6937bd0c0415cb86ead89062da7a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 32db3436b536cd1a27dd79e0e98cdc3e6f21c4c9
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33553925"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57365271"
 ---
-# <a name="radiobutton"></a><span data-ttu-id="c5e0b-102">RadioButton</span><span class="sxs-lookup"><span data-stu-id="c5e0b-102">RadioButton</span></span>
-<span data-ttu-id="c5e0b-103"><xref:System.Windows.Controls.RadioButton> 컨트롤은 일반적으로 함께 그룹화 되어 사용자에 게 단일; 여러 옵션 중 한 번에 하나만 단추를 선택할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="c5e0b-103"><xref:System.Windows.Controls.RadioButton> controls are usually grouped together to offer users a single choice among several options; only one button at a time can be selected.</span></span>  
+# <a name="radiobutton"></a><span data-ttu-id="9c9e7-102">RadioButton</span><span class="sxs-lookup"><span data-stu-id="9c9e7-102">RadioButton</span></span>
+<span data-ttu-id="9c9e7-103"><xref:System.Windows.Controls.RadioButton> 컨트롤은 일반적으로 그룹화 사용자에 게 몇 가지 옵션 중 단일 선택 항목을 제공 하려면 한 번에 하나의 단추를 선택할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="9c9e7-103"><xref:System.Windows.Controls.RadioButton> controls are usually grouped together to offer users a single choice among several options; only one button at a time can be selected.</span></span>  
   
- <span data-ttu-id="c5e0b-104">다음 그림의 예가 나와 <xref:System.Windows.Controls.RadioButton> 제어 합니다.</span><span class="sxs-lookup"><span data-stu-id="c5e0b-104">The following illustration shows an example of a <xref:System.Windows.Controls.RadioButton> control.</span></span>  
+ <span data-ttu-id="9c9e7-104">다음 그림의 예를 보여 줍니다.는 <xref:System.Windows.Controls.RadioButton> 제어 합니다.</span><span class="sxs-lookup"><span data-stu-id="9c9e7-104">The following illustration shows an example of a <xref:System.Windows.Controls.RadioButton> control.</span></span>  
   
- <span data-ttu-id="c5e0b-105">![라디오 단추 상태](../../../../docs/framework/wpf/controls/media/ss-ctl-radiobuttons.gif "SS_CTL_radiobuttons")</span><span class="sxs-lookup"><span data-stu-id="c5e0b-105">![Radio button states](../../../../docs/framework/wpf/controls/media/ss-ctl-radiobuttons.gif "SS_CTL_radiobuttons")</span></span>  
-<span data-ttu-id="c5e0b-106">일반적인 RadioButton</span><span class="sxs-lookup"><span data-stu-id="c5e0b-106">Typical RadioButton</span></span>  
+ <span data-ttu-id="9c9e7-105">![라디오 단추 상태](./media/ss-ctl-radiobuttons.gif "SS_CTL_radiobuttons")</span><span class="sxs-lookup"><span data-stu-id="9c9e7-105">![Radio button states](./media/ss-ctl-radiobuttons.gif "SS_CTL_radiobuttons")</span></span>  
+<span data-ttu-id="9c9e7-106">일반적인 RadioButton</span><span class="sxs-lookup"><span data-stu-id="9c9e7-106">Typical RadioButton</span></span>  
   
-## <a name="reference"></a><span data-ttu-id="c5e0b-107">참조</span><span class="sxs-lookup"><span data-stu-id="c5e0b-107">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="9c9e7-107">참조</span><span class="sxs-lookup"><span data-stu-id="9c9e7-107">Reference</span></span>  
  <xref:System.Windows.Controls.Primitives.ToggleButton>  
   
-## <a name="related-sections"></a><span data-ttu-id="c5e0b-108">관련 단원</span><span class="sxs-lookup"><span data-stu-id="c5e0b-108">Related Sections</span></span>
+## <a name="related-sections"></a><span data-ttu-id="9c9e7-108">관련 단원</span><span class="sxs-lookup"><span data-stu-id="9c9e7-108">Related Sections</span></span>

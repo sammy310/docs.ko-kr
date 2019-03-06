@@ -7,39 +7,39 @@ helpviewer_keywords:
 - XAML [WPF]
 - Extensible Application Markup Language [WPF]
 ms.assetid: 5d858575-a83b-42df-ad3f-047ed2d6e3c8
-ms.openlocfilehash: 5a1db973be51d98ad6e55062fac23e31926f2bb1
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.openlocfilehash: 0d04b656492dd934199164920e35bdaaa0663032
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "46710771"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57362905"
 ---
-# <a name="xaml-in-wpf"></a><span data-ttu-id="abce0-102">WPF의 XAML</span><span class="sxs-lookup"><span data-stu-id="abce0-102">XAML in WPF</span></span>
-[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]<span data-ttu-id="abce0-103"> 선언적 응용 프로그램을 위한 태그 언어 프로그래밍 합니다.</span><span class="sxs-lookup"><span data-stu-id="abce0-103"> is a markup language for declarative application programming.</span></span> [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]<span data-ttu-id="abce0-104"> aXAML 프로세서 구현에서 구현 하 고 XAML 언어 지원을 제공 합니다.</span><span class="sxs-lookup"><span data-stu-id="abce0-104"> implements aXAML processor implementation, and provides XAML language support.</span></span> <span data-ttu-id="abce0-105">[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 형식을 필요한 형식 XAML 표현의 지원을 제공할 수 있도록 구현 됩니다.</span><span class="sxs-lookup"><span data-stu-id="abce0-105">The [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] types are implemented such that they can provide the required type backing for a XAML representation.</span></span> <span data-ttu-id="abce0-106">일반적으로 대부분의를 만들 수 있습니다 프로그램 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] XAML 태그에서 응용 프로그램 UI입니다.</span><span class="sxs-lookup"><span data-stu-id="abce0-106">In general, you can create the majority of your [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] application UI in XAML markup.</span></span>  
+# <a name="xaml-in-wpf"></a><span data-ttu-id="3db09-102">WPF의 XAML</span><span class="sxs-lookup"><span data-stu-id="3db09-102">XAML in WPF</span></span>
+[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] <span data-ttu-id="3db09-103">선언적 응용 프로그램을 위한 태그 언어 프로그래밍 합니다.</span><span class="sxs-lookup"><span data-stu-id="3db09-103">is a markup language for declarative application programming.</span></span> [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] <span data-ttu-id="3db09-104">aXAML 프로세서 구현에서 구현 하 고 XAML 언어 지원을 제공 합니다.</span><span class="sxs-lookup"><span data-stu-id="3db09-104">implements aXAML processor implementation, and provides XAML language support.</span></span> <span data-ttu-id="3db09-105">[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 형식을 필요한 형식 XAML 표현의 지원을 제공할 수 있도록 구현 됩니다.</span><span class="sxs-lookup"><span data-stu-id="3db09-105">The [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] types are implemented such that they can provide the required type backing for a XAML representation.</span></span> <span data-ttu-id="3db09-106">일반적으로 대부분의를 만들 수 있습니다 프로그램 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] XAML 태그에서 응용 프로그램 UI입니다.</span><span class="sxs-lookup"><span data-stu-id="3db09-106">In general, you can create the majority of your [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] application UI in XAML markup.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="abce0-107">섹션 내용</span><span class="sxs-lookup"><span data-stu-id="abce0-107">In This Section</span></span>  
- [<span data-ttu-id="abce0-108">XAML 개요(WPF)</span><span class="sxs-lookup"><span data-stu-id="abce0-108">XAML Overview (WPF)</span></span>](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)  
- [<span data-ttu-id="abce0-109">XAML 구문 정보</span><span class="sxs-lookup"><span data-stu-id="abce0-109">XAML Syntax In Detail</span></span>](../../../../docs/framework/wpf/advanced/xaml-syntax-in-detail.md)  
- [<span data-ttu-id="abce0-110">WPF의 코드 숨김 및 XAML</span><span class="sxs-lookup"><span data-stu-id="abce0-110">Code-Behind and XAML in WPF</span></span>](../../../../docs/framework/wpf/advanced/code-behind-and-xaml-in-wpf.md)  
- [<span data-ttu-id="abce0-111">WPF에 대한 XAML 및 사용자 지정 클래스</span><span class="sxs-lookup"><span data-stu-id="abce0-111">XAML and Custom Classes for WPF</span></span>](../../../../docs/framework/wpf/advanced/xaml-and-custom-classes-for-wpf.md)  
- [<span data-ttu-id="abce0-112">태그 확장 및 WPF XAML</span><span class="sxs-lookup"><span data-stu-id="abce0-112">Markup Extensions and WPF XAML</span></span>](../../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md)  
- [<span data-ttu-id="abce0-113">WPF XAML을 위한 XAML 네임스페이스 및 네임스페이스 매핑</span><span class="sxs-lookup"><span data-stu-id="abce0-113">XAML Namespaces and Namespace Mapping for WPF XAML</span></span>](../../../../docs/framework/wpf/advanced/xaml-namespaces-and-namespace-mapping-for-wpf-xaml.md)  
- [<span data-ttu-id="abce0-114">WPF XAML 이름 범위</span><span class="sxs-lookup"><span data-stu-id="abce0-114">WPF XAML Namescopes</span></span>](../../../../docs/framework/wpf/advanced/wpf-xaml-namescopes.md)  
- [<span data-ttu-id="abce0-115">인라인 스타일 및 템플릿</span><span class="sxs-lookup"><span data-stu-id="abce0-115">Inline Styles and Templates</span></span>](../../../../docs/framework/wpf/advanced/inline-styles-and-templates.md)  
- [<span data-ttu-id="abce0-116">공백에서 XAML 처리</span><span class="sxs-lookup"><span data-stu-id="abce0-116">White-space Processing in XAML</span></span>](../../../../docs/framework/xaml-services/whitespace-processing-in-xaml.md)  
- [<span data-ttu-id="abce0-117">TypeConverter 및 XAML</span><span class="sxs-lookup"><span data-stu-id="abce0-117">TypeConverters and XAML</span></span>](../../../../docs/framework/wpf/advanced/typeconverters-and-xaml.md)  
- [<span data-ttu-id="abce0-118">XML 문자 엔터티 및 XAML</span><span class="sxs-lookup"><span data-stu-id="abce0-118">XML Character Entities and XAML</span></span>](../../../../docs/framework/xaml-services/xml-character-entities-and-xaml.md)  
- [<span data-ttu-id="abce0-119">XAML 네임스페이스(x:) 언어 기능</span><span class="sxs-lookup"><span data-stu-id="abce0-119">XAML Namespace (x:) Language Features</span></span>](../../../../docs/framework/xaml-services/xaml-namespace-x-language-features.md)  
- [<span data-ttu-id="abce0-120">WPF XAML 확장</span><span class="sxs-lookup"><span data-stu-id="abce0-120">WPF XAML Extensions</span></span>](../../../../docs/framework/wpf/advanced/wpf-xaml-extensions.md)  
- [<span data-ttu-id="abce0-121">태그 호환성(mc:) 언어 기능</span><span class="sxs-lookup"><span data-stu-id="abce0-121">Markup Compatibility (mc:) Language Features</span></span>](../../../../docs/framework/wpf/advanced/markup-compatibility-mc-language-features.md)  
+## <a name="in-this-section"></a><span data-ttu-id="3db09-107">섹션 내용</span><span class="sxs-lookup"><span data-stu-id="3db09-107">In This Section</span></span>  
+ [<span data-ttu-id="3db09-108">XAML 개요(WPF)</span><span class="sxs-lookup"><span data-stu-id="3db09-108">XAML Overview (WPF)</span></span>](xaml-overview-wpf.md)  
+ [<span data-ttu-id="3db09-109">XAML 구문 정보</span><span class="sxs-lookup"><span data-stu-id="3db09-109">XAML Syntax In Detail</span></span>](xaml-syntax-in-detail.md)  
+ [<span data-ttu-id="3db09-110">WPF의 코드 숨김 및 XAML</span><span class="sxs-lookup"><span data-stu-id="3db09-110">Code-Behind and XAML in WPF</span></span>](code-behind-and-xaml-in-wpf.md)  
+ [<span data-ttu-id="3db09-111">WPF에 대한 XAML 및 사용자 지정 클래스</span><span class="sxs-lookup"><span data-stu-id="3db09-111">XAML and Custom Classes for WPF</span></span>](xaml-and-custom-classes-for-wpf.md)  
+ [<span data-ttu-id="3db09-112">태그 확장 및 WPF XAML</span><span class="sxs-lookup"><span data-stu-id="3db09-112">Markup Extensions and WPF XAML</span></span>](markup-extensions-and-wpf-xaml.md)  
+ [<span data-ttu-id="3db09-113">WPF XAML을 위한 XAML 네임스페이스 및 네임스페이스 매핑</span><span class="sxs-lookup"><span data-stu-id="3db09-113">XAML Namespaces and Namespace Mapping for WPF XAML</span></span>](xaml-namespaces-and-namespace-mapping-for-wpf-xaml.md)  
+ [<span data-ttu-id="3db09-114">WPF XAML 이름 범위</span><span class="sxs-lookup"><span data-stu-id="3db09-114">WPF XAML Namescopes</span></span>](wpf-xaml-namescopes.md)  
+ [<span data-ttu-id="3db09-115">인라인 스타일 및 템플릿</span><span class="sxs-lookup"><span data-stu-id="3db09-115">Inline Styles and Templates</span></span>](inline-styles-and-templates.md)  
+ [<span data-ttu-id="3db09-116">공백에서 XAML 처리</span><span class="sxs-lookup"><span data-stu-id="3db09-116">White-space Processing in XAML</span></span>](../../xaml-services/whitespace-processing-in-xaml.md)  
+ [<span data-ttu-id="3db09-117">TypeConverter 및 XAML</span><span class="sxs-lookup"><span data-stu-id="3db09-117">TypeConverters and XAML</span></span>](typeconverters-and-xaml.md)  
+ [<span data-ttu-id="3db09-118">XML 문자 엔터티 및 XAML</span><span class="sxs-lookup"><span data-stu-id="3db09-118">XML Character Entities and XAML</span></span>](../../xaml-services/xml-character-entities-and-xaml.md)  
+ [<span data-ttu-id="3db09-119">XAML Namespace (x:) 언어 기능</span><span class="sxs-lookup"><span data-stu-id="3db09-119">XAML Namespace (x:) Language Features</span></span>](../../xaml-services/xaml-namespace-x-language-features.md)  
+ [<span data-ttu-id="3db09-120">WPF XAML 확장</span><span class="sxs-lookup"><span data-stu-id="3db09-120">WPF XAML Extensions</span></span>](wpf-xaml-extensions.md)  
+ [<span data-ttu-id="3db09-121">태그 호환성 (mc:) 언어 기능</span><span class="sxs-lookup"><span data-stu-id="3db09-121">Markup Compatibility (mc:) Language Features</span></span>](markup-compatibility-mc-language-features.md)  
   
-## <a name="related-sections"></a><span data-ttu-id="abce0-122">관련 단원</span><span class="sxs-lookup"><span data-stu-id="abce0-122">Related Sections</span></span>  
- [<span data-ttu-id="abce0-123">WPF 아키텍처</span><span class="sxs-lookup"><span data-stu-id="abce0-123">WPF Architecture</span></span>](../../../../docs/framework/wpf/advanced/wpf-architecture.md)  
-  [<span data-ttu-id="abce0-124">기본 요소</span><span class="sxs-lookup"><span data-stu-id="abce0-124">Base Elements</span></span>](../../../../docs/framework/wpf/advanced/base-elements.md)  
-  [<span data-ttu-id="abce0-125">요소 트리 및 Serialization</span><span class="sxs-lookup"><span data-stu-id="abce0-125">Element Tree and Serialization</span></span>](../../../../docs/framework/wpf/advanced/element-tree-and-serialization.md)  
-  [<span data-ttu-id="abce0-126">속성</span><span class="sxs-lookup"><span data-stu-id="abce0-126">Properties</span></span>](../../../../docs/framework/wpf/advanced/properties-wpf.md)  
-  [<span data-ttu-id="abce0-127">이벤트</span><span class="sxs-lookup"><span data-stu-id="abce0-127">Events</span></span>](../../../../docs/framework/wpf/advanced/events-wpf.md)  
-  [<span data-ttu-id="abce0-128">입력</span><span class="sxs-lookup"><span data-stu-id="abce0-128">Input</span></span>](../../../../docs/framework/wpf/advanced/input-wpf.md)  
-  [<span data-ttu-id="abce0-129">리소스</span><span class="sxs-lookup"><span data-stu-id="abce0-129">Resources</span></span>](../../../../docs/framework/wpf/advanced/resources-wpf.md)  
-  [<span data-ttu-id="abce0-130">스타일 지정 및 템플릿</span><span class="sxs-lookup"><span data-stu-id="abce0-130">Styling and Templating</span></span>](../../../../docs/framework/wpf/controls/styling-and-templating.md)  
-  [<span data-ttu-id="abce0-131">스레딩 모델</span><span class="sxs-lookup"><span data-stu-id="abce0-131">Threading Model</span></span>](../../../../docs/framework/wpf/advanced/threading-model.md)
+## <a name="related-sections"></a><span data-ttu-id="3db09-122">관련 단원</span><span class="sxs-lookup"><span data-stu-id="3db09-122">Related Sections</span></span>  
+ [<span data-ttu-id="3db09-123">WPF 아키텍처</span><span class="sxs-lookup"><span data-stu-id="3db09-123">WPF Architecture</span></span>](wpf-architecture.md)  
+  [<span data-ttu-id="3db09-124">기본 요소</span><span class="sxs-lookup"><span data-stu-id="3db09-124">Base Elements</span></span>](base-elements.md)  
+  [<span data-ttu-id="3db09-125">요소 트리 및 Serialization</span><span class="sxs-lookup"><span data-stu-id="3db09-125">Element Tree and Serialization</span></span>](element-tree-and-serialization.md)  
+  [<span data-ttu-id="3db09-126">속성</span><span class="sxs-lookup"><span data-stu-id="3db09-126">Properties</span></span>](properties-wpf.md)  
+  [<span data-ttu-id="3db09-127">이벤트</span><span class="sxs-lookup"><span data-stu-id="3db09-127">Events</span></span>](events-wpf.md)  
+  [<span data-ttu-id="3db09-128">입력</span><span class="sxs-lookup"><span data-stu-id="3db09-128">Input</span></span>](input-wpf.md)  
+  [<span data-ttu-id="3db09-129">리소스</span><span class="sxs-lookup"><span data-stu-id="3db09-129">Resources</span></span>](resources-wpf.md)  
+  [<span data-ttu-id="3db09-130">스타일 지정 및 템플릿</span><span class="sxs-lookup"><span data-stu-id="3db09-130">Styling and Templating</span></span>](../controls/styling-and-templating.md)  
+  [<span data-ttu-id="3db09-131">스레딩 모델</span><span class="sxs-lookup"><span data-stu-id="3db09-131">Threading Model</span></span>](threading-model.md)

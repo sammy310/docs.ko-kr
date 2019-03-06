@@ -8,21 +8,21 @@ helpviewer_keywords:
 - Firefox [WPF], detecting installation
 - detecting whether the WPF plug-in for Firefox is installed [WPF]
 ms.assetid: 5f839373-e3fb-44f1-88ad-4a0761f02189
-ms.openlocfilehash: f017aec8788d9ed38476262bba457f4621217519
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3cc2f95627bc35fa4cb6c486d3b8ad61f69d7fea
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54677981"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57372895"
 ---
-# <a name="how-to-detect-whether-the-wpf-plug-in-for-firefox-is-installed"></a><span data-ttu-id="9e6eb-102">방법: Firefox용 WPF 플러그 인 설치 여부 확인</span><span class="sxs-lookup"><span data-stu-id="9e6eb-102">How to: Detect Whether the WPF Plug-In for Firefox Is Installed</span></span>
-<span data-ttu-id="9e6eb-103">Windows Presentation Foundation (WPF) Firefox 플러그 인을 사용 하면 [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)] 및 느슨한 XAML 파일에서 Mozilla Firefox 브라우저를 실행 합니다.</span><span class="sxs-lookup"><span data-stu-id="9e6eb-103">The Windows Presentation Foundation (WPF) plug-in for Firefox enables [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)] and loose XAML files to run in the Mozilla Firefox browser.</span></span> <span data-ttu-id="9e6eb-104">이 항목에서는 관리자 Firefox 용 WPF 플러그 설치 되어 있는지 확인 하는 데 사용할 수 있는 JavaScript 및 HTML로 작성 된 스크립트를 제공 합니다.</span><span class="sxs-lookup"><span data-stu-id="9e6eb-104">This topic provides a script written in HTML and JavaScript that administrators can use to determine whether the WPF plug-in for Firefox is installed.</span></span>  
+# <a name="how-to-detect-whether-the-wpf-plug-in-for-firefox-is-installed"></a><span data-ttu-id="bb9e5-102">방법: Firefox용 WPF 플러그 인 설치 여부 확인</span><span class="sxs-lookup"><span data-stu-id="bb9e5-102">How to: Detect Whether the WPF Plug-In for Firefox Is Installed</span></span>
+<span data-ttu-id="bb9e5-103">Windows Presentation Foundation (WPF) Firefox 플러그 인을 사용 하면 [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)] 및 느슨한 XAML 파일에서 Mozilla Firefox 브라우저를 실행 합니다.</span><span class="sxs-lookup"><span data-stu-id="bb9e5-103">The Windows Presentation Foundation (WPF) plug-in for Firefox enables [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)] and loose XAML files to run in the Mozilla Firefox browser.</span></span> <span data-ttu-id="bb9e5-104">이 항목에서는 관리자 Firefox 용 WPF 플러그 설치 되어 있는지 확인 하는 데 사용할 수 있는 JavaScript 및 HTML로 작성 된 스크립트를 제공 합니다.</span><span class="sxs-lookup"><span data-stu-id="bb9e5-104">This topic provides a script written in HTML and JavaScript that administrators can use to determine whether the WPF plug-in for Firefox is installed.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="9e6eb-105">설치, 배포 및 검색 하는 방법에 대 한 자세한 내용은 합니다 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]를 참조 하세요 [개발자 용.NET Framework를 설치](../../../../docs/framework/install/guide-for-developers.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="9e6eb-105">For more information about installing, deploying, and detecting the [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)], see [Install the .NET Framework for developers](../../../../docs/framework/install/guide-for-developers.md).</span></span>  
+>  <span data-ttu-id="bb9e5-105">설치, 배포 및 검색 하는 방법에 대 한 자세한 내용은 합니다 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]를 참조 하세요 [개발자 용.NET Framework를 설치](../../install/guide-for-developers.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="bb9e5-105">For more information about installing, deploying, and detecting the [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)], see [Install the .NET Framework for developers](../../install/guide-for-developers.md).</span></span>  
   
-## <a name="example"></a><span data-ttu-id="9e6eb-106">예제</span><span class="sxs-lookup"><span data-stu-id="9e6eb-106">Example</span></span>  
- <span data-ttu-id="9e6eb-107">경우는 [!INCLUDE[net_v35_short](../../../../includes/net-v35-short-md.md)] 가 설치 된 클라이언트 컴퓨터가 구성 된 WPF 플러그 인을 사용 하 여 Firefox에 대 한 합니다.</span><span class="sxs-lookup"><span data-stu-id="9e6eb-107">When the [!INCLUDE[net_v35_short](../../../../includes/net-v35-short-md.md)] is installed, the client computer is configured with a WPF plug-in for Firefox.</span></span> <span data-ttu-id="9e6eb-108">다음 예제 스크립트 Firefox 용 WPF 플러그 인에 대해 확인 하 고는 적절 한 상태 메시지를 표시 합니다.</span><span class="sxs-lookup"><span data-stu-id="9e6eb-108">The following example script checks for the WPF plug-in for Firefox and then displays an appropriate status message.</span></span>  
+## <a name="example"></a><span data-ttu-id="bb9e5-106">예제</span><span class="sxs-lookup"><span data-stu-id="bb9e5-106">Example</span></span>  
+ <span data-ttu-id="bb9e5-107">경우는 [!INCLUDE[net_v35_short](../../../../includes/net-v35-short-md.md)] 가 설치 된 클라이언트 컴퓨터가 구성 된 WPF 플러그 인을 사용 하 여 Firefox에 대 한 합니다.</span><span class="sxs-lookup"><span data-stu-id="bb9e5-107">When the [!INCLUDE[net_v35_short](../../../../includes/net-v35-short-md.md)] is installed, the client computer is configured with a WPF plug-in for Firefox.</span></span> <span data-ttu-id="bb9e5-108">다음 예제 스크립트 Firefox 용 WPF 플러그 인에 대해 확인 하 고는 적절 한 상태 메시지를 표시 합니다.</span><span class="sxs-lookup"><span data-stu-id="bb9e5-108">The following example script checks for the WPF plug-in for Firefox and then displays an appropriate status message.</span></span>  
   
 ```  
 <HTML>  
@@ -54,15 +54,15 @@ ms.locfileid: "54677981"
 </HTML>  
 ```  
   
- <span data-ttu-id="9e6eb-109">Firefox 용 WPF 플러그 인에 대 한 검사를 성공한 경우에 다음과 같은 상태 메시지가 표시 됩니다.</span><span class="sxs-lookup"><span data-stu-id="9e6eb-109">If the check for the WPF plug-in for Firefox is successful, the following status message is displayed:</span></span>  
+ <span data-ttu-id="bb9e5-109">Firefox 용 WPF 플러그 인에 대 한 검사를 성공한 경우에 다음과 같은 상태 메시지가 표시 됩니다.</span><span class="sxs-lookup"><span data-stu-id="bb9e5-109">If the check for the WPF plug-in for Firefox is successful, the following status message is displayed:</span></span>  
   
  `The WPF plug-in for Firefox is installed.`  
   
- <span data-ttu-id="9e6eb-110">그렇지 않은 경우 다음과 같은 상태 메시지가 표시 됩니다.</span><span class="sxs-lookup"><span data-stu-id="9e6eb-110">Otherwise, the following status message is displayed:</span></span>  
+ <span data-ttu-id="bb9e5-110">그렇지 않은 경우 다음과 같은 상태 메시지가 표시 됩니다.</span><span class="sxs-lookup"><span data-stu-id="bb9e5-110">Otherwise, the following status message is displayed:</span></span>  
   
  `The WPF plug-in for Firefox is not installed. Please install or reinstall the .NET Framework 3.5.`  
   
-## <a name="see-also"></a><span data-ttu-id="9e6eb-111">참고자료</span><span class="sxs-lookup"><span data-stu-id="9e6eb-111">See also</span></span>
-- [<span data-ttu-id="9e6eb-112">.NET Framework 3.0 설치 여부 확인</span><span class="sxs-lookup"><span data-stu-id="9e6eb-112">Detect Whether the .NET Framework 3.0 Is Installed</span></span>](../../../../docs/framework/wpf/app-development/how-to-detect-whether-the-net-framework-3-0-is-installed.md)
-- [<span data-ttu-id="9e6eb-113">.NET Framework 3.5 설치 여부 확인</span><span class="sxs-lookup"><span data-stu-id="9e6eb-113">Detect Whether the .NET Framework 3.5 Is Installed</span></span>](../../../../docs/framework/wpf/app-development/how-to-detect-whether-the-net-framework-3-5-is-installed.md)
-- [<span data-ttu-id="9e6eb-114">WPF XAML 브라우저 응용 프로그램 개요</span><span class="sxs-lookup"><span data-stu-id="9e6eb-114">WPF XAML Browser Applications Overview</span></span>](../../../../docs/framework/wpf/app-development/wpf-xaml-browser-applications-overview.md)
+## <a name="see-also"></a><span data-ttu-id="bb9e5-111">참고자료</span><span class="sxs-lookup"><span data-stu-id="bb9e5-111">See also</span></span>
+- [<span data-ttu-id="bb9e5-112">.NET Framework 3.0 설치 여부 확인</span><span class="sxs-lookup"><span data-stu-id="bb9e5-112">Detect Whether the .NET Framework 3.0 Is Installed</span></span>](how-to-detect-whether-the-net-framework-3-0-is-installed.md)
+- [<span data-ttu-id="bb9e5-113">.NET Framework 3.5 설치 여부 확인</span><span class="sxs-lookup"><span data-stu-id="bb9e5-113">Detect Whether the .NET Framework 3.5 Is Installed</span></span>](how-to-detect-whether-the-net-framework-3-5-is-installed.md)
+- [<span data-ttu-id="bb9e5-114">WPF XAML 브라우저 응용 프로그램 개요</span><span class="sxs-lookup"><span data-stu-id="bb9e5-114">WPF XAML Browser Applications Overview</span></span>](wpf-xaml-browser-applications-overview.md)
