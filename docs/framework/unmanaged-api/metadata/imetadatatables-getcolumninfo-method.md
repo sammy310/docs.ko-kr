@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 245933b23028e2baf8a09ca07595f394b65c0ec3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: bcab5adf30648f6b5a614a407478977bc37c7062
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54698299"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57480704"
 ---
 # <a name="imetadatatablesgetcolumninfo-method"></a>IMetaDataTables::GetColumnInfo 메서드
 지정된 된 테이블의 지정한 열에 대 한 데이터를 가져옵니다.  
@@ -40,7 +40,7 @@ HRESULT GetColumnInfo (
 );  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `ixTbl`  
  [in] 원하는 테이블의 인덱스입니다.  
   

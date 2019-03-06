@@ -20,12 +20,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5e0afe278b22e54b326ef17dc416b4632a853eda
-ms.sourcegitcommit: 79066169e93d9d65203028b21983574ad9dcf6b4
+ms.openlocfilehash: a93e73fa8345b48e604d6f63d16170d850ead451
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57212341"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57484578"
 ---
 # <a name="corexitprocess-function"></a>CorExitProcess 함수
 현재 관리 되지 않는 프로세스를 종료합니다.  
@@ -40,7 +40,7 @@ void STDMETHODCALLTYPE CorExitProcess (
 );  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `exitCode`  
  프로세스 종료 코드를 지정 하는 정수입니다.  
   

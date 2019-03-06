@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e806bae1911ea6ffc5bb6e9af76d99524636d39e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7d610385cfbfcb6a625e0e1893f97525f6f5430c
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54491152"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57500605"
 ---
 # <a name="imetadataimportgetuserstring-method"></a>IMetaDataImport::GetUserString 메서드
 지정한 메타데이터 토큰이 나타내는 리터럴 문자열을 가져옵니다.  
@@ -38,7 +38,7 @@ HRESULT GetUserString (
 );  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `stk`  
  [in] 에 대 한 연결된 문자열을 반환할 문자열 토큰입니다.  
   

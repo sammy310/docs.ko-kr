@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 724660cd5703ee9b893493df5d583d97b5bdfb3e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: dda94acc2ec5da456cdc41ba0902cdc414b11524
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54720524"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57486383"
 ---
 # <a name="imetadataimportcloseenum-method"></a>IMetaDataImport::CloseEnum 메서드
 지정 된 핸들에 의해 식별 되는 열거자를 닫습니다.  
@@ -35,7 +35,7 @@ void CloseEnum (
 );  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `hEnum`  
  [in] 닫으려면 열거자에 대 한 핸들입니다.  
   

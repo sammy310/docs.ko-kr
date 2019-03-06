@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b832ad489c051c3422dc881c5dff31e1726ce9a5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 45597f6bb5e050f4afc00bd8f2db8116b29b8d4b
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54531280"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57482225"
 ---
 # <a name="ihosttaskgetpriority-method"></a>IHostTask::GetPriority 메서드
 현재 태스크의 스레드 우선 순위 수준을 가져옵니다 [IHostTask](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md) 인스턴스.  
@@ -35,7 +35,7 @@ HRESULT GetPriority (
 );  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `pPriority`  
  [out] 현재 태스크의 스레드 우선 순위 수준을 나타내는 정수에 대 한 포인터 `IHostTask` 인스턴스.  
   

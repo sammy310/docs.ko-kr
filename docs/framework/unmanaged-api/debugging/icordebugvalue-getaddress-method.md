@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b88c49ba93ff3c4cc3f5c7a656dfa5da6e82109e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d6f8a9c62a1be682d3f0259c27f311e2dcbb2f11
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54559844"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57492727"
 ---
 # <a name="icordebugvaluegetaddress-method"></a>ICorDebugValue::GetAddress 메서드
 디버깅 중인 프로세스에 있는이 "ICorDebugValue" 개체의 주소를 가져옵니다.  
@@ -35,7 +35,7 @@ HRESULT GetAddress (
 );  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `pAddress`  
  [out] 에 대 한 포인터를 `CORDB_ADDRESS` 이 값 개체의 주소를 지정 하는 개체입니다.  
   

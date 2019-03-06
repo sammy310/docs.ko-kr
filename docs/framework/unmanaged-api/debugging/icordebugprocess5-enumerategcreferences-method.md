@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 44093f84ea644757a5f5c73da54ce5bcfa717a4e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 54e2648765d896c189cc2deb5590a0a2a9b3f410
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54728092"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57476488"
 ---
 # <a name="icordebugprocess5enumerategcreferences-method"></a>ICorDebugProcess5::EnumerateGCReferences 메서드
 프로세스에서 가비지 수집 되도록 모든 개체에 대 한 열거자를 가져옵니다.  
@@ -36,7 +36,7 @@ HRESULT EnumerateGCReferences(
 );  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `enumerateWeakReferences`  
  [in] Weak references는 또한을 열거할 수 있는지 여부를 나타내는 부울 값입니다. 하는 경우 `enumerateWeakReferences` 됩니다 `true`는 `ppEnum` 열거자는 강력한 참조와 약한 참조를 모두 포함 됩니다. 하는 경우 `enumerateWeakReferences` 는 `false`, 열거자에 대 한 강력한 참조만 포함 되어 있습니다.  
   

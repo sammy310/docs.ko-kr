@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0ef25267f6af5d1f8503825e2784383a0eb241e7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 27922c1b1b576ae34bfbe363f3d46e10d0f2551c
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54535539"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57485176"
 ---
 # <a name="ihostiocompletionmanagergetavailablethreads-method"></a>IHostIoCompletionManager::GetAvailableThreads 메서드
 호스트에서 관리 하는 스레드의 현재 요청을 처리 하지는 총 I/O 완료 스레드 수를 가져옵니다.  
@@ -35,7 +35,7 @@ HRESULT GetAvailableThreads (
 );  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `pdwAvailableIoCompletionThreads`  
  [out] I/O 완료 스레드 수가 호스트에서 관리 되는 현재 서비스 요청에 사용할 수 있는 포인터입니다.  
   

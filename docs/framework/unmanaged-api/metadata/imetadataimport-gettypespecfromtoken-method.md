@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 53d0f3bd991d502e4ddcad7df1e24d18af367e7a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a8ecb529534f4ed1a1d12d9613ebd46f8b99fdb8
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54598396"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57487507"
 ---
 # <a name="imetadataimportgettypespecfromtoken-method"></a>IMetaDataImport::GetTypeSpecFromToken 메서드
 지정한 토큰이 나타내는 형식 사양의 이진 메타데이터 서명을 가져옵니다.  
@@ -37,7 +37,7 @@ HRESULT GetTypeSpecFromToken (
 );  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `typespec`  
  [in] 요청 된 메타 데이터 서명과 연결 된 TypeSpec 토큰입니다.  
   

@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 78a7dab69e716e1662a277a69c008474d97f9bc4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d6c07a6679326548535985e4c938c3fddbb2a0cf
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54619651"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57500215"
 ---
 # <a name="setnonassemblyflags-method"></a>SetNonAssemblyFlags 메서드
 어셈블리와 관련 되지 않는 플래그를 설정 합니다.  
@@ -34,7 +34,7 @@ HRESULT SetNonAssemblyFlags(
 ) PURE;  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `afFlags`  
  ALink 플래그입니다.  
   

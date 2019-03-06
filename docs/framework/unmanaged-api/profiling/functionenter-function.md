@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: be144ac8250adf803ddb1f20ea55be09cb3e81d9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 886e2a81bab9fbf64668159b501a1d20180b9462
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54687390"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57503101"
 ---
 # <a name="functionenter-function"></a>FunctionEnter 함수
 컨트롤이 함수에 전달 되 고 있음을 프로파일러에 알립니다.  
@@ -37,7 +37,7 @@ void __stdcall FunctionEnter (
 );  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `funcID`  
  [in] 컨트롤이 전달 함수의 식별자입니다.  
   

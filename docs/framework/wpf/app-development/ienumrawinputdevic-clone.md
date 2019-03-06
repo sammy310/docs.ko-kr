@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Clone method [WPF]
 ms.assetid: 2a6a1900-aa55-45fa-9382-241d569a2dc4
-ms.openlocfilehash: a4c5e7db813089d1dd138416ac54dd4be467b87b
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: abc8a6e4780c8fe50afcf1b04f7e14aeb6452704
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57355021"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57485410"
 ---
 # <a name="ienumrawinputdevicclone"></a>IEnumRAWINPUTDEVIC:Clone
 현재 열거자와 동일한 상태인 다른 원시 입력 장치 열거자를 만들어 동일한 목록을 반복합니다.  
@@ -20,7 +20,7 @@ ms.locfileid: "57355021"
 HRESULT Clone( [out] IEnumRAWINPUTDEVICE **ppenum);  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `ppenum`  
   
  [out] 수신 하는 출력 변수의 주소는 [IEnumRAWINPUTDEVICE](ienumrawinputdevice.md) 인터페이스 포인터입니다. 메서드가 성공 하면이 출력 변수 값 정의 되지 않습니다.  

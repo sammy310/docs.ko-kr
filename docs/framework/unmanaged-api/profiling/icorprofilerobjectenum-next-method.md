@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4db788755febab9b21adb26caf74c8ea154c1493
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: dc5d36267dcadcfafd4b715127ebbe2bcb9832b2
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54653816"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57487887"
 ---
 # <a name="icorprofilerobjectenumnext-method"></a>ICorProfilerObjectEnum::Next 메서드
 시퀀스에서 열거자의 현재 위치부터 시작 하는 개체의 순차적 컬렉션에서 지정 된 개수의 연속 개체를 가져옵니다.  
@@ -38,7 +38,7 @@ HRESULT Next (
 );  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `celt`  
  [in] 검색할 개체 수입니다.  
   

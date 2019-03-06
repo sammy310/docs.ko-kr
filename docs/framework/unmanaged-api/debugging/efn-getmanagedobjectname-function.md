@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c4eddb1461ad448a1a1718db8a11173e5e2e4a17
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5a9bef248d00cb62de7c93ba837ebc9f135490cc
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54527785"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57479911"
 ---
 # <a name="efngetmanagedobjectname-function"></a>_EFN_GetManagedObjectName 함수
 제공 된 관리 되는 개체 포인터를 사용 하는 형식의 이름을 가져옵니다.  
@@ -37,7 +37,7 @@ HRESULT _EFN_GetManagedObjectName(
 );  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `Client`  
  [in] 디버그 클라이언트에 대 한 포인터입니다.  
   

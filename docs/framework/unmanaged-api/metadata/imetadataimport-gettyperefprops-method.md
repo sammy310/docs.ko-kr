@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 191a6e4fcfe340ed43e85a9aa90f8a2ec0931730
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0e6f76750f82655922f00c9d9fa71e87ab3c05df
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54671657"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57487137"
 ---
 # <a name="imetadataimportgettyperefprops-method"></a>IMetaDataImport::GetTypeRefProps 메서드
 연관 된 메타 데이터를 가져옵니다는 <xref:System.Type> 지정한 TypeRef 토큰이 참조 합니다.  
@@ -39,7 +39,7 @@ HRESULT GetTypeRefProps (
 );  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `tr`  
  [in] TypeRef 토큰에 대 한 메타 데이터를 반환할 형식을 나타내는입니다.  
   

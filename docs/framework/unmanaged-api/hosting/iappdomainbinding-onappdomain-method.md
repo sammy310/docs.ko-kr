@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c1c22ee61769fdcbb92a73ca0dd55299ebbcf934
-ms.sourcegitcommit: bef803e2025642df39f2f1e046767d89031e0304
+ms.openlocfilehash: 798ef6a9b058d9d49019554feba63627360e6a0e
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56305768"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57480041"
 ---
 # <a name="iappdomainbindingonappdomain-method"></a>IAppDomainBinding::OnAppDomain 메서드
 CLR (공용 언어 런타임) 응용 프로그램 도메인이 만들어졌는지 호스트에 알리기 위해 호출 됩니다.  
@@ -35,7 +35,7 @@ HRESULT OnAppDomain (
 );  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `pAppdomain`  
  [in] 에 대 한 포인터를 [IUnknown](/cpp/atl/iunknown) 새 응용 프로그램 도메인을 나타내는 인터페이스 개체입니다.  
   

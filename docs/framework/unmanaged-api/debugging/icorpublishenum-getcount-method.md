@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4355300d302e51a777d11855a023c1b56bf04a86
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c353edf9db0a7bc7ec0a25f712527dc3c9d8cc28
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54495320"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57484656"
 ---
 # <a name="icorpublishenumgetcount-method"></a>ICorPublishEnum::GetCount 메서드
 열거형의 항목 수를 가져옵니다.  
@@ -35,7 +35,7 @@ HRESULT GetCount (
 );  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `pcelt`  
  [out] 열거형에는 항목 수에 대 한 포인터입니다.  
   

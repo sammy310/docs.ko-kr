@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d65d918147423396a18d2ea5c3edf7ff60c26a11
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0320c831648c15dfec42c1b693be2f13e6888ae9
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54556131"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57475166"
 ---
 # <a name="functionidmapper-function"></a>FunctionIDMapper 함수
 함수는 지정 된 식별자에 사용할 대체 ID를 다시 매핑할 수는 프로파일러에 알립니다. 합니다 [FunctionEnter2](../../../../docs/framework/unmanaged-api/profiling/functionenter2-function.md)를 [FunctionLeave2](../../../../docs/framework/unmanaged-api/profiling/functionleave2-function.md), 및 [FunctionTailcall2](../../../../docs/framework/unmanaged-api/profiling/functiontailcall2-function.md) 함수에 대 한 콜백 합니다. `FunctionIDMapper`를 통해 프로파일러는 해당 함수에 대한 콜백을 받을지 여부를 나타낼 수도 있습니다.  
@@ -35,7 +35,7 @@ UINT_PTR __stdcall FunctionIDMapper (
 );  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `funcId`  
  [in] 다시 매핑할 함수 식별자입니다.  
   
@@ -43,7 +43,8 @@ UINT_PTR __stdcall FunctionIDMapper (
  [out] 프로파일러를 설정 하는 값에 대 한 포인터 `true` 수신 하려는 경우 `FunctionEnter2`를 `FunctionLeave2`, 및 `FunctionTailcall2` 콜백을;이 값을 설정 하는 고, 그렇지 `false`합니다.  
   
 ## <a name="return-value"></a>반환 값  
- 프로파일러는 실행 엔진이 대체 함수 식별자로 사용하는 값을 반환합니다. `false`가 `pbHookFunction`에 반환되지 않는 한 반환 값은 null일 수 없습니다. 이 고, 그렇지 null 반환 값에는 프로세스 중지를 포함 한 예기치 않은 결과가 생성 됩니다.  
+ 프로파일러는 실행 엔진이 대체 함수 식별자로 사용하는 값을 반환합니다. 
+  `false`가 `pbHookFunction`에 반환되지 않는 한 반환 값은 null일 수 없습니다. 이 고, 그렇지 null 반환 값에는 프로세스 중지를 포함 한 예기치 않은 결과가 생성 됩니다.  
   
 ## <a name="remarks"></a>설명  
  `FunctionIDMapper` 는 콜백 함수입니다. 프로파일러에 대 한 더 유용한 다른 식별자 함수 ID를 매핑할 프로파일러에 의해 구현 됩니다. `FunctionIDMapper` 지정된 된 함수에 사용할 대체 ID를 반환 합니다. 다음 실행 엔진에서 프로파일러를 다시 기존 함수 ID 외에도이 대체 ID를 전달 하 여 프로파일러 요청을 적용 합니다 `clientData` 의 매개 변수를 `FunctionEnter2`를 `FunctionLeave2`, 및 `FunctionTailcall2` 후크를 식별 하 후크 호출 되는 함수입니다.  

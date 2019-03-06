@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9166d7934c56a897ef766bc3a4962041e6d19f5c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f60d0d8480dcbe697b9ae76abd210120fc6b6955
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54658639"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57485514"
 ---
 # <a name="ihostsyncmanagercreateautoevent-method"></a>IHostSyncManager::CreateAutoEvent 메서드
 자동 재설정 이벤트 개체를 만듭니다.  
@@ -35,7 +35,7 @@ HRESULT CreateAutoEvent (
 );  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `ppEvent`  
  [out] 주소에 대 한 포인터를 [IHostAutoEvent](../../../../docs/framework/unmanaged-api/hosting/ihostautoevent-interface.md) 인스턴스 호스트에 의해 구현 되거나 이벤트 개체를 만들 수 없는 경우 null입니다.  
   

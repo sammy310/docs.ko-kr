@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d058c1ad070e2ffacdf2129c6d9657d0fc1d01e9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9c9f53c1d0c06498c6c9cede938d115f38a47569
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54737285"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57478793"
 ---
 # <a name="strongnamegetblobfromimage-function"></a>StrongNameGetBlobFromImage 함수
 지정된 메모리 주소에 있는 어셈블리 이미지의 이진 표현을 가져옵니다.  
@@ -39,7 +39,7 @@ BOOLEAN StrongNameGetBlobFromImage (
 );  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `pbBase`  
  [in] 매핑된 어셈블리 매니페스트에 대 한 메모리 주소입니다.  
   

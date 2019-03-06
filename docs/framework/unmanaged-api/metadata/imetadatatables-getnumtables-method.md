@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 2dc7d8c339e5f77bad44960092198035e13735b9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2b627a09db595cfbeb38aa605259eb42bdb77cc0
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54621294"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57477064"
 ---
 # <a name="imetadatatablesgetnumtables-method"></a>IMetaDataTables::GetNumTables 메서드
 현재 범위에서 테이블의 수를 가져옵니다 `IMetaDataTables` 인스턴스.  
@@ -35,7 +35,7 @@ HRESULT GetNumTables (
 );  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `pcTables`  
  [out] 현재 인스턴스 범위에 있는 테이블의 수에 대 한 포인터입니다.  
   

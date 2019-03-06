@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ea34c4087014091b92d6227177a2f08209cc2e10
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 07b3b3a32796b5805dbf86449921518a77e95d6b
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54570881"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57480535"
 ---
 # <a name="prebindassemblyex-function"></a>PreBindAssemblyEx 함수
 어셈블리에 대 한 사후 정책 표시 이름을 가져옵니다.  
@@ -41,7 +41,7 @@ HRESULT PreBindAssemblyEx (
  );  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `pAppCtx`  
  [in] 응용 프로그램 컨텍스트를 식별합니다.  
   

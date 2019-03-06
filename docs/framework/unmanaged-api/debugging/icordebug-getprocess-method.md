@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6020950a7ee742f09af67fe856692e19c066e288
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e04bef30d4a9edf9898b27e15a79b2b70e3a7f31
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54658047"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57477859"
 ---
 # <a name="icordebuggetprocess-method"></a>ICorDebug::GetProcess 메서드
 지정된 된 프로세스에 대 한 "ICorDebugProcess" 인스턴스에 대 한 포인터를 가져옵니다.  
@@ -36,7 +36,7 @@ HRESULT GetProcess (
 );  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `dwProcessId`  
  [in] 프로세스의 ID입니다.  
   

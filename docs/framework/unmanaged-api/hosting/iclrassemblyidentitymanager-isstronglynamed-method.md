@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a958e38857d2407930cb8c03a08eabdf6574cda9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a1c1b2d8274baf5fd43991979bc65cd2c2299b46
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54563891"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57484695"
 ---
 # <a name="iclrassemblyidentitymanagerisstronglynamed-method"></a>ICLRAssemblyIdentityManager::IsStronglyNamed 메서드
 지정된 된 어셈블리에 강력한 이름을 지정 하는지 여부를 나타내는 값을 가져옵니다.  
@@ -36,7 +36,7 @@ RESULT IsStronglyNamed (
 );  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `pwzAssemblyIdentity`  
  [in] 불투명 정식 어셈블리 identity 데이터 계산할 어셈블리입니다.  
   

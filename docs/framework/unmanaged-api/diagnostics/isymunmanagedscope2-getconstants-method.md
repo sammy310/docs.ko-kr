@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 24fd642b8eaba19a8bfb32d2dc61a87595cb3c61
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c343810db3d714367f84f5394c0251b9ade0e18e
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54643730"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57487423"
 ---
 # <a name="isymunmanagedscope2getconstants-method"></a>ISymUnmanagedScope2::GetConstants 메서드
 이 범위 내에 정의 된 지역 상수를 가져옵니다.  
@@ -38,7 +38,7 @@ HRESULT GetConstants(
              constants[]);  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `cConstants`  
  [in] 버퍼의 길이는 `pcConstants` 매개 변수를 가리킵니다.  
   

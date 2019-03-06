@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4dd08afba664a491b3ba398f3da4c6a73cda5378
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1725f637e5050afecd142be5574e4cb01517f909
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54517138"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57481584"
 ---
 # <a name="imetadataemitdefinetyperefbyname-method"></a>IMetaDataEmit::DefineTypeRefByName 메서드
 현재 범위 외부에 지정된 된 범위에 정의 된 형식에 대 한 메타 데이터를 토큰을 가져옵니다.  
@@ -37,7 +37,7 @@ HRESULT DefineTypeRefByName (
 );  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `tkResolutionScope`  
  [in] 결정 범위를 지정 하는 토큰입니다. 유효한 토큰 형식은 같습니다.  
   

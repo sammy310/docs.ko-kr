@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 64382f0d405e84b2be78aac982b085fec35cb37b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e0467bd9cbb645d876f88c1da6c8e8e75510f04e
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54675101"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57481407"
 ---
 # <a name="icorprofilerinfo4getcodeinfo3-method"></a>ICorProfilerInfo4::GetCodeInfo3 메서드
 지정된 함수의 JIT 다시 컴파일된 버전과 연결된 네이티브 코드의 범위를 가져옵니다.  
@@ -39,7 +39,7 @@ HRESULT GetCodeInfo3(
     COR_PRF_CODE_INFO codeInfos[]);  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `functionID`  
  [in] 네이티브 코드가 연결된 함수의 ID입니다.  
   
@@ -65,7 +65,7 @@ HRESULT GetCodeInfo3(
   
  후 `GetCodeInfo3` 반환 되어 있는지 확인 해야 합니다는 `codeInfos` 버퍼가 모두 포함 하기에 충분 합니다 [COR_PRF_CODE_INFO](../../../../docs/framework/unmanaged-api/profiling/cor-prf-code-info-structure.md) 구조입니다. 이렇게 하려면 `cCodeInfos` 값을 `cchName` 매개 변수의 값과 비교합니다. 하는 경우 `cCodeInfos` 의 크기로 나눈를 [COR_PRF_CODE_INFO](../../../../docs/framework/unmanaged-api/profiling/cor-prf-code-info-structure.md) 구조 보다 작습니다 `pcCodeInfos`, 더 큰 할당 `codeInfos` 버퍼, 업데이트 `cCodeInfos` 호출이 고 큰 새 크기로 사용 하 여 `GetCodeInfo3` 다시 실행 합니다.  
   
- 또는 길이가 0인 `codeInfos` 버퍼로 `GetCodeInfo3`을 먼저 호출하여 올바른 버퍼 크기를 구합니다. 설정할 수 있습니다 합니다 `codeInfos` 버퍼 크기에서 반환 된 값 `pcCodeInfos`의 크기를 곱한 값을 [COR_PRF_CODE_INFO](../../../../docs/framework/unmanaged-api/profiling/cor-prf-code-info-structure.md) 구조 및 호출 `GetCodeInfo3` 다시 합니다.  
+ 또는 길이가 0인 `codeInfos` 버퍼로 `GetCodeInfo3`를 먼저 호출하여 올바른 버퍼 크기를 구합니다. 설정할 수 있습니다 합니다 `codeInfos` 버퍼 크기에서 반환 된 값 `pcCodeInfos`의 크기를 곱한 값을 [COR_PRF_CODE_INFO](../../../../docs/framework/unmanaged-api/profiling/cor-prf-code-info-structure.md) 구조 및 호출 `GetCodeInfo3` 다시 합니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  

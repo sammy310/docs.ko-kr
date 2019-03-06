@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: c3c9de67-b865-4ecf-b887-1f1d0719a0c0
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 02ea905443a01f504c1f303f726382b441ae039b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2cb255330937b00a987ee0d07f0332d04fe1746d
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54568558"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57489984"
 ---
 # <a name="icordebugsymbolprovidergetassemblyimagemetadata-method"></a>ICorDebugSymbolProvider::GetAssemblyImageMetadata 메서드
 병합된 어셈블리에서 메타데이터를 반환합니다.  
@@ -22,7 +22,7 @@ HRESULT GetAssemblyImageMetadata(
 );  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `ppMemoryBuffer`  
  [out] 주소에 대 한 포인터를 [ICorDebugMemoryBuffer](../../../../docs/framework/unmanaged-api/debugging/icordebugmemorybuffer-interface.md) 크기와 병합된 된 어셈블리의 메타 데이터의 주소에 대 한 정보를 포함 하는 개체입니다.  
   

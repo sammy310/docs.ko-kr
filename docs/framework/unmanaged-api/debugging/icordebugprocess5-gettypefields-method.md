@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3f688993bfd8e6bef66451b075a49f31efe641cb
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0aef54b1ddab9b2ccc0bfcfe8974a65831f70450
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54497107"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57478000"
 ---
 # <a name="icordebugprocess5gettypefields-method"></a>ICorDebugProcess5::GetTypeFields 메서드
 형식에 속하는 필드에 대 한 정보를 제공 합니다.  
@@ -38,7 +38,7 @@ HRESULT GetTypeFields(
 );  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `id`  
  [in] 식별자 인 필드 정보를 검색할 형식입니다.  
   

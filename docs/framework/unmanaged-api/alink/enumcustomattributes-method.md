@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: bba34b7f0956e602de690b8aa30d955acc526e8f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e351c61f7e8bfc254a6fc8ea12c8a94fc393e3fc
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54529491"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57478156"
 ---
 # <a name="enumcustomattributes-method"></a>EnumCustomAttributes 메서드
 어셈블리 수준 사용자 지정 특성을 검색합니다.  
@@ -39,7 +39,7 @@ HRESULT EnumCustomAttributes(
 ) PURE;  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `hEnum`  
  열거자의 핸들입니다.  
   

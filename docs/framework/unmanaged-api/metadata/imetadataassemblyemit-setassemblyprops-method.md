@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 37d91ca7935e114504864683075f4809de7270fd
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 738789ee6b21b190302d5e5a204538bd14851b24
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54599116"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57484669"
 ---
 # <a name="imetadataassemblyemitsetassemblyprops-method"></a>IMetaDataAssemblyEmit::SetAssemblyProps 메서드
 지정된 `Assembly` 메타데이터 구조를 수정합니다.  
@@ -41,7 +41,7 @@ HRESULT SetAssemblyProps (
 );  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `pma`  
  [in] 지정 된 메타 데이터 토큰을 `Assembly` 수정할 메타 데이터 구조입니다.  
   

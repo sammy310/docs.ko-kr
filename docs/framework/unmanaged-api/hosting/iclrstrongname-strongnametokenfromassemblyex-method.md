@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 48d7b70b8ad014845a60fd66759c96419c46139b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5abc09f06bfd2aec270e5ef91fd4778d6aa9a3b4
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54698638"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57487371"
 ---
 # <a name="iclrstrongnamestrongnametokenfromassemblyex-method"></a>ICLRStrongName::StrongNameTokenFromAssemblyEx 메서드
 지정 된 어셈블리 파일에서 강력한 이름 토큰을 만들고 공개 키 토큰이 나타내는 반환 합니다.  
@@ -39,7 +39,7 @@ HRESULT StrongNameTokenFromAssemblyEx (
 );  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `wszFilePath`  
  [in] 어셈블리의 pe (이식 가능) 파일 경로입니다.  
   

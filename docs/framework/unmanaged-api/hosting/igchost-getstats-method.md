@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d9a3775f453cb432ce6b92d067f93ca54c329c06
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1b8af1de3daf08a8389a5b0e6ebb278646345f9b
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54674182"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57482615"
 ---
 # <a name="igchostgetstats-method"></a>IGCHost::GetStats 메서드
 가비지 컬렉션 시스템의 현재 상태에 대 한 통계를 가져옵니다.  
@@ -35,7 +35,7 @@ HRESULT GetStats (
 );  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `pStats`  
  [out에서] 에 대 한 포인터를 [COR_GC_STATS](../../../../docs/framework/unmanaged-api/hosting/cor-gc-stats-structure.md) 가비지 컬렉션 시스템의 현재 상태에 대 한 통계를 포함 하는 구조입니다.  
   

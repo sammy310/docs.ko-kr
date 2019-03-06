@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 009f7d20dfd6efc279b3187af8f5c95132ae51e7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 145f92badf39b6456a82df8f7de23f1784d2ce50
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54525237"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57495743"
 ---
 # <a name="closeenum-method"></a>CloseEnum 메서드
 표시 된 열거형을 닫고 연결 된 리소스를 해제 합니다.  
@@ -35,7 +35,7 @@ HRESULT CloseEnum(
 ) PURE;  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `hEnum`  
  핸들을 닫아야 하는 열거형입니다.  
   

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a2a26e32040f705fd46f9d9d8909fd47e963baa8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4c5d061227e4094c96f14bd8f4f3e80e869b838a
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54510783"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57487163"
 ---
 # <a name="iclrtaskneedspriorityscheduling-method"></a>ICLRTask::NeedsPriorityScheduling 메서드
 Out 전환 되 고는 현재 작업의 디스플레이 창에 대 한 우선 순위가 높은로 표시 되어야 하는지 여부를 나타내는 값을 가져옵니다.  
@@ -35,7 +35,7 @@ HRESULT NeedsPriorityScheduling (
 );  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `pbNeedsPriorityRescheduling`  
  [out] `true`호스트가 고, 그렇지 않으면 가능한 한 빨리 현재 작업 인스턴스를 다시 예약 하려고 해야 하는 경우 `false`합니다.  
   

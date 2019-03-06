@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 9ffd5482-268e-4680-9fd1-bfb0b7d66450
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c5984addb41c33468068f7ad24a15533f75dc367
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6fdf5e6e52b0c650e56368493074ea7db8e5bac9
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54714726"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57485436"
 ---
 # <a name="icordebugmemorybuffergetsize-method"></a>ICorDebugMemoryBuffer::GetSize 메서드
 메모리 버퍼의 크기(바이트)를 가져옵니다.  
@@ -22,7 +22,7 @@ HRESULT GetSize(
 );  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `pcbBufferLength`  
  [out] 메모리 버퍼 크기에 대한 포인터입니다.  
   

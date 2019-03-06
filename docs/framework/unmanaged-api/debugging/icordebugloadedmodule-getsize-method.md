@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: aaa0e5c0-be9d-4fe1-8418-5295b9b184d6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e4c4888419bb13db43a4a15d98965cc8d3cb8e77
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ce937b28d705fc35165368fa81a376facce18a30
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54515581"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57476505"
 ---
 # <a name="icordebugloadedmodulegetsize-method"></a>ICorDebugLoadedModule::GetSize 메서드
 로드된 모듈의 크기(바이트)를 가져옵니다.  
@@ -22,7 +22,7 @@ HRESULT GetSize(
 );  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `pcBytes`  
  [out] 로드된 모듈의 바이트 수에 대한 포인터입니다.  
   
