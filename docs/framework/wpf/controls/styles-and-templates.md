@@ -7,26 +7,26 @@ helpviewer_keywords:
 - styles [WPF]
 - templates [WPF]
 ms.assetid: 7fd571fd-d54a-40fc-b332-4c4015a5b6ff
-ms.openlocfilehash: e310d9800f4ee2274221e8461838ed8ee3d66ac7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d7a5e9515e78dd9c762973ca9854e04b44c1e18d
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33553370"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57372076"
 ---
-# <a name="styles-and-templates"></a><span data-ttu-id="cf86d-102">스타일 및 템플릿</span><span class="sxs-lookup"><span data-stu-id="cf86d-102">Styles and Templates</span></span>
-<span data-ttu-id="cf86d-103">Windows Presentation Foundation (WPF) 스타일 및 템플릿 참조는 응용 프로그램, 문서 또는 사용자 인터페이스 (UI) 디자이너 시각적으로 뛰어난 응용 프로그램을 만들 수 있는 기능 (스타일, 템플릿, 트리거 및 스토리 보드)의 도구 모음 해당 제품에 대 한 특정 모양의 표준화 합니다.</span><span class="sxs-lookup"><span data-stu-id="cf86d-103">Windows Presentation Foundation (WPF) styling and templating refer to a suite of features (styles, templates, triggers, and storyboards) that allow an application, document, or user interface (UI) designer to create visually compelling applications and to standardize on a particular look for their product.</span></span>  
+# <a name="styles-and-templates"></a><span data-ttu-id="74808-102">스타일 및 템플릿</span><span class="sxs-lookup"><span data-stu-id="74808-102">Styles and Templates</span></span>
+<span data-ttu-id="74808-103">응용 프로그램, 문서 또는 사용자 인터페이스 (UI) 디자이너 시각적으로 뛰어난 응용 프로그램을 만들 수 있는 기능 (스타일, 템플릿, 트리거 및 스토리 보드)의 도구 모음에 Windows Presentation Foundation (WPF) 스타일 및 템플릿 참조 해당 제품에 대 한 특정 모양을 표준화할 합니다.</span><span class="sxs-lookup"><span data-stu-id="74808-103">Windows Presentation Foundation (WPF) styling and templating refer to a suite of features (styles, templates, triggers, and storyboards) that allow an application, document, or user interface (UI) designer to create visually compelling applications and to standardize on a particular look for their product.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="cf86d-104">섹션 내용</span><span class="sxs-lookup"><span data-stu-id="cf86d-104">In This Section</span></span>  
- [<span data-ttu-id="cf86d-105">스타일 지정 및 템플릿</span><span class="sxs-lookup"><span data-stu-id="cf86d-105">Styling and Templating</span></span>](../../../../docs/framework/wpf/controls/styling-and-templating.md)  
-  [<span data-ttu-id="cf86d-106">방법: ControlTemplate에서 생성된 요소 찾기</span><span class="sxs-lookup"><span data-stu-id="cf86d-106">How to: Find ControlTemplate-Generated Elements</span></span>](../../../../docs/framework/wpf/controls/how-to-find-controltemplate-generated-elements.md)  
+## <a name="in-this-section"></a><span data-ttu-id="74808-104">섹션 내용</span><span class="sxs-lookup"><span data-stu-id="74808-104">In This Section</span></span>  
+ [<span data-ttu-id="74808-105">스타일 지정 및 템플릿</span><span class="sxs-lookup"><span data-stu-id="74808-105">Styling and Templating</span></span>](styling-and-templating.md)  
+  [<span data-ttu-id="74808-106">방법: ControlTemplate에서 생성 된 요소 찾기</span><span class="sxs-lookup"><span data-stu-id="74808-106">How to: Find ControlTemplate-Generated Elements</span></span>](how-to-find-controltemplate-generated-elements.md)  
   
-## <a name="reference"></a><span data-ttu-id="cf86d-107">참조</span><span class="sxs-lookup"><span data-stu-id="cf86d-107">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="74808-107">참조</span><span class="sxs-lookup"><span data-stu-id="74808-107">Reference</span></span>  
  <xref:System.Windows.Style>  
   <xref:System.Windows.Controls.ControlTemplate>  
   <xref:System.Windows.DataTemplate>  
   
-## <a name="related-sections"></a><span data-ttu-id="cf86d-108">관련 단원</span><span class="sxs-lookup"><span data-stu-id="cf86d-108">Related Sections</span></span>  
- [<span data-ttu-id="cf86d-109">고급</span><span class="sxs-lookup"><span data-stu-id="cf86d-109">Advanced</span></span>](../../../../docs/framework/wpf/advanced/index.md)  
-  [<span data-ttu-id="cf86d-110">컨트롤 사용자 지정</span><span class="sxs-lookup"><span data-stu-id="cf86d-110">Control Customization</span></span>](../../../../docs/framework/wpf/controls/control-customization.md)  
-  [<span data-ttu-id="cf86d-111">그래픽 및 멀티미디어</span><span class="sxs-lookup"><span data-stu-id="cf86d-111">Graphics and Multimedia</span></span>](../../../../docs/framework/wpf/graphics-multimedia/index.md)
+## <a name="related-sections"></a><span data-ttu-id="74808-108">관련 단원</span><span class="sxs-lookup"><span data-stu-id="74808-108">Related Sections</span></span>  
+ [<span data-ttu-id="74808-109">고급</span><span class="sxs-lookup"><span data-stu-id="74808-109">Advanced</span></span>](../advanced/index.md)  
+  [<span data-ttu-id="74808-110">컨트롤 사용자 지정</span><span class="sxs-lookup"><span data-stu-id="74808-110">Control Customization</span></span>](control-customization.md)  
+  [<span data-ttu-id="74808-111">그래픽 및 멀티미디어</span><span class="sxs-lookup"><span data-stu-id="74808-111">Graphics and Multimedia</span></span>](../graphics-multimedia/index.md)

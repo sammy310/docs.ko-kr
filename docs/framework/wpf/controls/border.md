@@ -8,25 +8,25 @@ helpviewer_keywords:
 - controls [WPF], Border
 - Border control [WPF]
 ms.assetid: 51739f83-b5a2-489b-854b-30607e74a502
-ms.openlocfilehash: 0ee7ae6598feacee282cc283b82e20390418b4c9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 922b4b90f3f8bc74d0465691386fa1a2422c6573
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33551069"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57368079"
 ---
-# <a name="border"></a><span data-ttu-id="1057b-102">테두리</span><span class="sxs-lookup"><span data-stu-id="1057b-102">Border</span></span>
-<span data-ttu-id="1057b-103">다음 예제에서는 속성을 동적으로 변경 하는 <xref:System.Windows.Controls.Border> 요소입니다.</span><span class="sxs-lookup"><span data-stu-id="1057b-103">The following sample demonstrates how to dynamically change properties of the <xref:System.Windows.Controls.Border> element.</span></span>  
+# <a name="border"></a><span data-ttu-id="7207e-102">테두리</span><span class="sxs-lookup"><span data-stu-id="7207e-102">Border</span></span>
+<span data-ttu-id="7207e-103">다음 샘플의 속성을 동적으로 변경 하는 방법에 설명 합니다 <xref:System.Windows.Controls.Border> 요소입니다.</span><span class="sxs-lookup"><span data-stu-id="7207e-103">The following sample demonstrates how to dynamically change properties of the <xref:System.Windows.Controls.Border> element.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="1057b-104">섹션 내용</span><span class="sxs-lookup"><span data-stu-id="1057b-104">In This Section</span></span>  
- [<span data-ttu-id="1057b-105">BorderThickness 값에 애니메이션 효과 주기</span><span class="sxs-lookup"><span data-stu-id="1057b-105">Animate a BorderThickness Value</span></span>](../../../../docs/framework/wpf/controls/how-to-animate-a-borderthickness-value.md)  
+## <a name="in-this-section"></a><span data-ttu-id="7207e-104">섹션 내용</span><span class="sxs-lookup"><span data-stu-id="7207e-104">In This Section</span></span>  
+ [<span data-ttu-id="7207e-105">BorderThickness 값에 애니메이션 효과 주기</span><span class="sxs-lookup"><span data-stu-id="7207e-105">Animate a BorderThickness Value</span></span>](how-to-animate-a-borderthickness-value.md)  
   
-## <a name="reference"></a><span data-ttu-id="1057b-106">참조</span><span class="sxs-lookup"><span data-stu-id="1057b-106">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="7207e-106">참조</span><span class="sxs-lookup"><span data-stu-id="7207e-106">Reference</span></span>  
  <xref:System.Windows.Controls.Decorator>  
   
  <xref:System.Windows.Controls.Border>  
   
-## <a name="related-sections"></a><span data-ttu-id="1057b-107">관련 단원</span><span class="sxs-lookup"><span data-stu-id="1057b-107">Related Sections</span></span>  
- [<span data-ttu-id="1057b-108">패널 개요</span><span class="sxs-lookup"><span data-stu-id="1057b-108">Panels Overview</span></span>](../../../../docs/framework/wpf/controls/panels-overview.md)  
+## <a name="related-sections"></a><span data-ttu-id="7207e-107">관련 단원</span><span class="sxs-lookup"><span data-stu-id="7207e-107">Related Sections</span></span>  
+ [<span data-ttu-id="7207e-108">패널 개요</span><span class="sxs-lookup"><span data-stu-id="7207e-108">Panels Overview</span></span>](panels-overview.md)  
   
- [<span data-ttu-id="1057b-109">맞춤, 여백 및 안쪽 여백 개요</span><span class="sxs-lookup"><span data-stu-id="1057b-109">Alignment, Margins, and Padding Overview</span></span>](../../../../docs/framework/wpf/advanced/alignment-margins-and-padding-overview.md)
+ [<span data-ttu-id="7207e-109">맞춤, 여백 및 안쪽 여백 개요</span><span class="sxs-lookup"><span data-stu-id="7207e-109">Alignment, Margins, and Padding Overview</span></span>](../advanced/alignment-margins-and-padding-overview.md)

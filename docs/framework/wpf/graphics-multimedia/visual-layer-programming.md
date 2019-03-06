@@ -9,25 +9,25 @@ helpviewer_keywords:
 - rendering support with Visual objects [WPF]
 - visual layer [WPF]
 ms.assetid: d82c89db-077f-4c3c-a4f8-310ebfbe0fe2
-ms.openlocfilehash: 3bf3e718b1253348030c0ddf3ac52ed8aa79b37d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b49ba43a163db9e6e94b531aa99123dde9f09b4e
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54580787"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57376860"
 ---
-# <a name="visual-layer-programming"></a><span data-ttu-id="30112-102">시각적 계층 프로그래밍</span><span class="sxs-lookup"><span data-stu-id="30112-102">Visual Layer Programming</span></span>
-<span data-ttu-id="30112-103">합니다 <xref:System.Windows.Media.Visual> 개체는 핵심 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 개체를 렌더링 지원을 제공 하는 역할입니다.</span><span class="sxs-lookup"><span data-stu-id="30112-103">The <xref:System.Windows.Media.Visual> object is a core [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] object, whose primary role is to provide rendering support.</span></span> <span data-ttu-id="30112-104">와 같은 사용자 인터페이스 컨트롤 <xref:System.Windows.Controls.Button> 및 <xref:System.Windows.Controls.TextBox>에서 파생 되는 <xref:System.Windows.Media.Visual> 클래스 및 해당 렌더링 데이터를 유지 하는 데 사용 합니다.</span><span class="sxs-lookup"><span data-stu-id="30112-104">User interface controls, such as <xref:System.Windows.Controls.Button> and <xref:System.Windows.Controls.TextBox>, derive from the <xref:System.Windows.Media.Visual> class, and use it for persisting their rendering data.</span></span>  
+# <a name="visual-layer-programming"></a><span data-ttu-id="306f1-102">시각적 계층 프로그래밍</span><span class="sxs-lookup"><span data-stu-id="306f1-102">Visual Layer Programming</span></span>
+<span data-ttu-id="306f1-103">합니다 <xref:System.Windows.Media.Visual> 개체는 핵심 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 개체를 렌더링 지원을 제공 하는 역할입니다.</span><span class="sxs-lookup"><span data-stu-id="306f1-103">The <xref:System.Windows.Media.Visual> object is a core [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] object, whose primary role is to provide rendering support.</span></span> <span data-ttu-id="306f1-104">와 같은 사용자 인터페이스 컨트롤 <xref:System.Windows.Controls.Button> 및 <xref:System.Windows.Controls.TextBox>에서 파생 되는 <xref:System.Windows.Media.Visual> 클래스 및 해당 렌더링 데이터를 유지 하는 데 사용 합니다.</span><span class="sxs-lookup"><span data-stu-id="306f1-104">User interface controls, such as <xref:System.Windows.Controls.Button> and <xref:System.Windows.Controls.TextBox>, derive from the <xref:System.Windows.Media.Visual> class, and use it for persisting their rendering data.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="30112-105">섹션 내용</span><span class="sxs-lookup"><span data-stu-id="30112-105">In This Section</span></span>  
- [<span data-ttu-id="30112-106">시각적 계층에서 적중 테스트</span><span class="sxs-lookup"><span data-stu-id="30112-106">Hit Testing in the Visual Layer</span></span>](../../../../docs/framework/wpf/graphics-multimedia/hit-testing-in-the-visual-layer.md)  
- [<span data-ttu-id="30112-107">DrawingVisual 개체 사용</span><span class="sxs-lookup"><span data-stu-id="30112-107">Using DrawingVisual Objects</span></span>](../../../../docs/framework/wpf/graphics-multimedia/using-drawingvisual-objects.md)  
- [<span data-ttu-id="30112-108">자습서: Win32 응용 프로그램에서 시각적 개체 호스팅</span><span class="sxs-lookup"><span data-stu-id="30112-108">Tutorial: Hosting Visual Objects in a Win32 Application</span></span>](../../../../docs/framework/wpf/graphics-multimedia/tutorial-hosting-visual-objects-in-a-win32-application.md)  
- [<span data-ttu-id="30112-109">방법 항목</span><span class="sxs-lookup"><span data-stu-id="30112-109">How-to Topics</span></span>](../../../../docs/framework/wpf/graphics-multimedia/visual-layer-programming-how-to-topics.md)  
+## <a name="in-this-section"></a><span data-ttu-id="306f1-105">섹션 내용</span><span class="sxs-lookup"><span data-stu-id="306f1-105">In This Section</span></span>  
+ [<span data-ttu-id="306f1-106">시각적 계층에서 적중 테스트</span><span class="sxs-lookup"><span data-stu-id="306f1-106">Hit Testing in the Visual Layer</span></span>](hit-testing-in-the-visual-layer.md)  
+ [<span data-ttu-id="306f1-107">DrawingVisual 개체 사용</span><span class="sxs-lookup"><span data-stu-id="306f1-107">Using DrawingVisual Objects</span></span>](using-drawingvisual-objects.md)  
+ [<span data-ttu-id="306f1-108">자습서: Win32 응용 프로그램에서 시각적 개체 호스팅</span><span class="sxs-lookup"><span data-stu-id="306f1-108">Tutorial: Hosting Visual Objects in a Win32 Application</span></span>](tutorial-hosting-visual-objects-in-a-win32-application.md)  
+ [<span data-ttu-id="306f1-109">방법 항목</span><span class="sxs-lookup"><span data-stu-id="306f1-109">How-to Topics</span></span>](visual-layer-programming-how-to-topics.md)  
   
-## <a name="see-also"></a><span data-ttu-id="30112-110">참고자료</span><span class="sxs-lookup"><span data-stu-id="30112-110">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="306f1-110">참고자료</span><span class="sxs-lookup"><span data-stu-id="306f1-110">See also</span></span>
 - <xref:System.Windows.Media.Visual>
 - <xref:System.Windows.Media.VisualTreeHelper>
 - <xref:System.Windows.Media.DrawingVisual>
-- [<span data-ttu-id="30112-111">WPF 그래픽 렌더링 개요</span><span class="sxs-lookup"><span data-stu-id="30112-111">WPF Graphics Rendering Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)
-- [<span data-ttu-id="30112-112">그래픽 및 멀티미디어</span><span class="sxs-lookup"><span data-stu-id="30112-112">Graphics and Multimedia</span></span>](../../../../docs/framework/wpf/graphics-multimedia/index.md)
+- [<span data-ttu-id="306f1-111">WPF 그래픽 렌더링 개요</span><span class="sxs-lookup"><span data-stu-id="306f1-111">WPF Graphics Rendering Overview</span></span>](wpf-graphics-rendering-overview.md)
+- [<span data-ttu-id="306f1-112">그래픽 및 멀티미디어</span><span class="sxs-lookup"><span data-stu-id="306f1-112">Graphics and Multimedia</span></span>](index.md)

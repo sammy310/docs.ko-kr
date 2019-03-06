@@ -7,28 +7,28 @@ helpviewer_keywords:
 - visual effects [WPF]
 - graphics [WPF], effects
 ms.assetid: 3bfc652e-91b7-4697-a4f4-83ff0e98327e
-ms.openlocfilehash: 9a8dcc98b6d201825e4880edc2ad77f9e0406586
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 20051b176be4372643855441ee5f6c3b62a27780
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54662389"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57361163"
 ---
-# <a name="graphics"></a><span data-ttu-id="1f02f-102">그래픽</span><span class="sxs-lookup"><span data-stu-id="1f02f-102">Graphics</span></span>
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] <span data-ttu-id="1f02f-103">제품 통합 멀티미디어, 벡터 그래픽, 애니메이션 및 콘텐츠 컴퍼지션을, 개발자가 쉽게 흥미로운 사용자 인터페이스 및 콘텐츠를 작성할 수 있도록 지원 합니다.</span><span class="sxs-lookup"><span data-stu-id="1f02f-103">offers integrated support for multimedia, vector graphics, animation, and content composition, making it easy for developers to build interesting user interfaces and content.</span></span>  
+# <a name="graphics"></a><span data-ttu-id="8d731-102">그래픽</span><span class="sxs-lookup"><span data-stu-id="8d731-102">Graphics</span></span>
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] <span data-ttu-id="8d731-103">제품 통합 멀티미디어, 벡터 그래픽, 애니메이션 및 콘텐츠 컴퍼지션을, 개발자가 쉽게 흥미로운 사용자 인터페이스 및 콘텐츠를 작성할 수 있도록 지원 합니다.</span><span class="sxs-lookup"><span data-stu-id="8d731-103">offers integrated support for multimedia, vector graphics, animation, and content composition, making it easy for developers to build interesting user interfaces and content.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="1f02f-104">섹션 내용</span><span class="sxs-lookup"><span data-stu-id="1f02f-104">In This Section</span></span>  
- [<span data-ttu-id="1f02f-105">비트맵 효과</span><span class="sxs-lookup"><span data-stu-id="1f02f-105">Bitmap Effects</span></span>](../../../../docs/framework/wpf/graphics-multimedia/bitmap-effects.md)  
- [<span data-ttu-id="1f02f-106">브러시</span><span class="sxs-lookup"><span data-stu-id="1f02f-106">Brushes</span></span>](../../../../docs/framework/wpf/graphics-multimedia/brushes.md)  
- [<span data-ttu-id="1f02f-107">그리기</span><span class="sxs-lookup"><span data-stu-id="1f02f-107">Drawings</span></span>](../../../../docs/framework/wpf/graphics-multimedia/drawings.md)  
- [<span data-ttu-id="1f02f-108">기하 도형</span><span class="sxs-lookup"><span data-stu-id="1f02f-108">Geometries</span></span>](../../../../docs/framework/wpf/graphics-multimedia/geometries.md)  
- [<span data-ttu-id="1f02f-109">이미지</span><span class="sxs-lookup"><span data-stu-id="1f02f-109">Images</span></span>](../../../../docs/framework/wpf/graphics-multimedia/images.md)  
- [<span data-ttu-id="1f02f-110">도형</span><span class="sxs-lookup"><span data-stu-id="1f02f-110">Shapes</span></span>](../../../../docs/framework/wpf/graphics-multimedia/shapes.md)  
- [<span data-ttu-id="1f02f-111">변환</span><span class="sxs-lookup"><span data-stu-id="1f02f-111">Transformations</span></span>](../../../../docs/framework/wpf/graphics-multimedia/transformations.md)  
- [<span data-ttu-id="1f02f-112">그래픽 렌더링 레지스트리 설정</span><span class="sxs-lookup"><span data-stu-id="1f02f-112">Graphics Rendering Registry Settings</span></span>](../../../../docs/framework/wpf/graphics-multimedia/graphics-rendering-registry-settings.md)  
- [<span data-ttu-id="1f02f-113">방법 항목</span><span class="sxs-lookup"><span data-stu-id="1f02f-113">How-to Topics</span></span>](../../../../docs/framework/wpf/graphics-multimedia/graphics-how-to-topics.md)  
+## <a name="in-this-section"></a><span data-ttu-id="8d731-104">섹션 내용</span><span class="sxs-lookup"><span data-stu-id="8d731-104">In This Section</span></span>  
+ [<span data-ttu-id="8d731-105">비트맵 효과</span><span class="sxs-lookup"><span data-stu-id="8d731-105">Bitmap Effects</span></span>](bitmap-effects.md)  
+ [<span data-ttu-id="8d731-106">브러시</span><span class="sxs-lookup"><span data-stu-id="8d731-106">Brushes</span></span>](brushes.md)  
+ [<span data-ttu-id="8d731-107">그리기</span><span class="sxs-lookup"><span data-stu-id="8d731-107">Drawings</span></span>](drawings.md)  
+ [<span data-ttu-id="8d731-108">기하 도형</span><span class="sxs-lookup"><span data-stu-id="8d731-108">Geometries</span></span>](geometries.md)  
+ [<span data-ttu-id="8d731-109">이미지</span><span class="sxs-lookup"><span data-stu-id="8d731-109">Images</span></span>](images.md)  
+ [<span data-ttu-id="8d731-110">도형</span><span class="sxs-lookup"><span data-stu-id="8d731-110">Shapes</span></span>](shapes.md)  
+ [<span data-ttu-id="8d731-111">변환</span><span class="sxs-lookup"><span data-stu-id="8d731-111">Transformations</span></span>](transformations.md)  
+ [<span data-ttu-id="8d731-112">그래픽 렌더링 레지스트리 설정</span><span class="sxs-lookup"><span data-stu-id="8d731-112">Graphics Rendering Registry Settings</span></span>](graphics-rendering-registry-settings.md)  
+ [<span data-ttu-id="8d731-113">방법 항목</span><span class="sxs-lookup"><span data-stu-id="8d731-113">How-to Topics</span></span>](graphics-how-to-topics.md)  
   
-## <a name="see-also"></a><span data-ttu-id="1f02f-114">참고자료</span><span class="sxs-lookup"><span data-stu-id="1f02f-114">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="8d731-114">참고자료</span><span class="sxs-lookup"><span data-stu-id="8d731-114">See also</span></span>
 - <xref:System.Windows.Shapes.Shape>
 - <xref:System.Windows.Media.Transform>
 - <xref:System.Windows.Media.Imaging.BitmapImage>
@@ -36,6 +36,6 @@ ms.locfileid: "54662389"
 - <xref:System.Windows.Media.Drawing>
 - <xref:System.Windows.Media.Brush>
 - <xref:System.Windows.Media.Effects.BitmapEffect>
-- [<span data-ttu-id="1f02f-115">2차원 그래픽 및 이미징</span><span class="sxs-lookup"><span data-stu-id="1f02f-115">2D Graphics and Imaging</span></span>](../../../../docs/framework/wpf/advanced/optimizing-performance-2d-graphics-and-imaging.md)
-- [<span data-ttu-id="1f02f-116">그래픽 및 멀티미디어</span><span class="sxs-lookup"><span data-stu-id="1f02f-116">Graphics and Multimedia</span></span>](../../../../docs/framework/wpf/graphics-multimedia/index.md)
-- [<span data-ttu-id="1f02f-117">WPF 그래픽 렌더링 개요</span><span class="sxs-lookup"><span data-stu-id="1f02f-117">WPF Graphics Rendering Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)
+- [<span data-ttu-id="8d731-115">2차원 그래픽 및 이미징</span><span class="sxs-lookup"><span data-stu-id="8d731-115">2D Graphics and Imaging</span></span>](../advanced/optimizing-performance-2d-graphics-and-imaging.md)
+- [<span data-ttu-id="8d731-116">그래픽 및 멀티미디어</span><span class="sxs-lookup"><span data-stu-id="8d731-116">Graphics and Multimedia</span></span>](index.md)
+- [<span data-ttu-id="8d731-117">WPF 그래픽 렌더링 개요</span><span class="sxs-lookup"><span data-stu-id="8d731-117">WPF Graphics Rendering Overview</span></span>](wpf-graphics-rendering-overview.md)
