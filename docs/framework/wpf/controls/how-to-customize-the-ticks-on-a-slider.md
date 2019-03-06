@@ -5,12 +5,12 @@ helpviewer_keywords:
 - TickBar [WPF]
 - Slider control [WPF], creating with TickBar
 ms.assetid: 4fa694f2-a620-4b15-be78-5f4286f89361
-ms.openlocfilehash: 0317668bf4f6721af698e1a8b966493b2c127012
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
+ms.openlocfilehash: 438bd8aca4b44bc449415dc2b9a0ff2036d14eb5
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56746651"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57368114"
 ---
 # <a name="how-to-customize-the-ticks-on-a-slider"></a>방법: 슬라이더의 틱 사용자 지정
 만드는 방법을 보여 주는이 예제는 <xref:System.Windows.Controls.Slider> 눈금이 있는 컨트롤입니다.  
@@ -22,7 +22,7 @@ ms.locfileid: "56746651"
   
  다음 예제에서는 사용 하는 방법을 보여 줍니다 합니다 <xref:System.Windows.Controls.Slider.Ticks%2A> 속성을 따라 눈금을 만드는 <xref:System.Windows.Controls.Slider> 불규칙 한 간격입니다.  
   
- [!code-xaml[Slider#4](../../../../samples/snippets/xaml/VS_Snippets_Wpf/Slider/xaml/window1.xaml#4)]  
+ [!code-xaml[Slider#4](~/samples/snippets/xaml/VS_Snippets_Wpf/Slider/xaml/window1.xaml#4)]  
   
 ## <a name="see-also"></a>참고자료
 - <xref:System.Windows.Controls.Slider>

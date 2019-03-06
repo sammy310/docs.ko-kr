@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 1c8eb2e7-f20a-42f9-a795-71503486a0f5
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e4dedc6b527706fc9f22add903feb30ad2884eab
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 93344e1c5aa62e86d29a0110a9d8cffc3cea66ff
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50188822"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57358550"
 ---
 # <a name="clr-profilers-and-windows-store-apps"></a>CLR 프로파일러 및 Windows 스토어 앱
 
@@ -49,7 +49,7 @@ CLR 프로 파일링 API를 처음 접하는 경우이 항목의 끝에 리소�
 
 다음 용어는이 항목 전체에서 사용 됩니다.
 
-**응용 프로그램**
+**애플리케이션**
 
 이것이 프로파일러 분석 하는 응용 프로그램입니다. 일반적으로이 응용 프로그램의 개발자는 이제 응용 프로그램을 사용 하 여 문제를 진단 하는 데, 프로파일러를 사용 합니다. 일반적으로이 응용 프로그램을 Windows 데스크톱 응용 프로그램을 수 있지만이 항목에서 검토 하 고 Windows 스토어 앱.
 
@@ -126,7 +126,7 @@ NET Runtime version 4.0.30319.17929 - Loading profiler failed during CoCreateIns
 
 사용할 수는 <xref:Windows.Management.Deployment.PackageManager> 이 목록을 생성 하는 클래스입니다. `PackageManager` 데스크톱 앱에 사용할 수 있는 Windows 런타임 클래스 이며 실제로 *만* 데스크톱 앱에 사용할 수 있습니다.
 
-C# yses에서 데스크톱 앱을 작성 하는 가상 Profiler UI에서 다음 코드 예제는 `PackageManager` Windows 앱의 목록을 생성 하려면:
+데스크톱 앱을 작성 하는 가상 Profiler UI에서 다음 코드 예제에서는 C# 를 사용 합니다 `PackageManager` Windows 앱의 목록을 생성 하려면:
 
 ```csharp
 string currentUserSID = WindowsIdentity.GetCurrent().User.ToString();
@@ -143,7 +143,7 @@ IEnumerable<Package> packages = packageManager.FindPackagesForUser(currentUserSI
 
 ```csharp
 IPackageDebugSettings pkgDebugSettings = new PackageDebugSettings();
-pkgDebugSettings.EnableDebugging(packgeFullName, debuggerCommandLine, 
+pkgDebugSettings.EnableDebugging(packageFullName, debuggerCommandLine,
                                                                  (IntPtr)fixedEnvironmentPzz);
 ```
 
@@ -168,7 +168,7 @@ pkgDebugSettings.EnableDebugging(packgeFullName, debuggerCommandLine,
         // Parse command line here
         // …
 
-        HANDLE hThread = OpenThread(THREAD_SUSPEND_RESUME, 
+        HANDLE hThread = OpenThread(THREAD_SUSPEND_RESUME,
                                                                   FALSE /* bInheritHandle */, nThreadID);
         ResumeThread(hThread);
         CloseHandle(hThread);
@@ -235,7 +235,7 @@ appActivationMgr.ActivateApplication(appUserModelId, appArgs, ACTIVATEOPTIONS.AO
 
 ```csharp
 IPackageDebugSettings pkgDebugSettings = new PackageDebugSettings();
-pkgDebugSettings.EnableDebugging(packgeFullName, null /* debuggerCommandLine */, 
+pkgDebugSettings.EnableDebugging(packageFullName, null /* debuggerCommandLine */,
                                                                  IntPtr.Zero /* environment */);
 ```
 
@@ -384,7 +384,7 @@ Profiler DLL에서 일반적으로 호출 하는 별도 스레드를 만드는 �
 
 관련 된 중요 한 점은 프로파일러를 만든 스레드에서 호출 항상 간주 됩니다 동기적으로 호출 Profiler DLL의 하나의 구현 외부에서 만들어진 경우에 [ICorProfilerCallback](icorprofilercallback-interface.md) 메서드. 적어도 사용 되는 경우. CLR에 전환 프로파일러의 스레드 관리 되는 스레드를 호출 하 여 인해 했으므로 [ForceGC 메서드](icorprofilerinfo-forcegc-method.md), 스레드 프로파일러의 스레드도 인정 되지 않습니다. CLR로 해당 스레드에 대 한 동기의 요건은 무엇입니까 좀 더 엄격한 정의가 적용 하는 이와 같이-즉 호출에서 발생 해야 하는 Profiler DLL 중 하나의 내부 [ICorProfilerCallback](icorprofilercallback-interface.md) 메서드를 동기로 한정 합니다.
 
-실제로 무슨 뜻인가요? 대부분 [ICorProfilerInfo](icorprofilerinfo-interface.md) 메서드 동기적으로 호출 되는 안전한 전용 이며 그렇지 않은 경우 즉시 실패 합니다. Profiler DLL을 다시 사용 하는 경우에 [ForceGC 메서드](icorprofilerinfo-forcegc-method.md) 프로파일러에서 생성 된 스레드의 일반적으로 한 다른 호출에 대 한 스레드 (예를 들어 [RequestProfilerDetach](icorprofilerinfo3-requestprofilerdetach-method.md), [RequestReJIT](icorprofilerinfo4-requestrejit-method.md), 또는 [RequestRevert](icorprofilerinfo4-requestrevert-method.md)), 문제가 하려고 합니다. 와 같은 비동기 스레드로부터 안전한 함수 에서도 [DoStackSnapshot](icorprofilerinfo2-dostacksnapshot-method.md) 에 관리 되는 스레드에서 호출 될 때 특별 한 규칙이 있습니다. (블로그 게시물을 참조 하세요 [Profiler stack walking: 기본 사항 이상](https://blogs.msdn.microsoft.com/davbr/2005/10/06/profiler-stack-walking-basics-and-beyond/) 자세한.)
+실제로 무슨 뜻인가요? 대부분 [ICorProfilerInfo](icorprofilerinfo-interface.md) 메서드 동기적으로 호출 되는 안전한 전용 이며 그렇지 않은 경우 즉시 실패 합니다. Profiler DLL을 다시 사용 하는 경우에 [ForceGC 메서드](icorprofilerinfo-forcegc-method.md) 프로파일러에서 생성 된 스레드의 일반적으로 한 다른 호출에 대 한 스레드 (예를 들어 [RequestProfilerDetach](icorprofilerinfo3-requestprofilerdetach-method.md), [RequestReJIT](icorprofilerinfo4-requestrejit-method.md), 또는 [RequestRevert](icorprofilerinfo4-requestrevert-method.md)), 문제가 하려고 합니다. 와 같은 비동기 스레드로부터 안전한 함수 에서도 [DoStackSnapshot](icorprofilerinfo2-dostacksnapshot-method.md) 에 관리 되는 스레드에서 호출 될 때 특별 한 규칙이 있습니다. (블로그 게시물을 참조 [Profiler stack walking: 기본 사항 이상](https://blogs.msdn.microsoft.com/davbr/2005/10/06/profiler-stack-walking-basics-and-beyond/) 자세한.)
 
 따라서 좋습니다 Profiler DLL에서 호출 하기 위해 만드는 스레드 [ForceGC 메서드](icorprofilerinfo-forcegc-method.md) 사용할지 *만* Gc 트리거 하 고 다음 GC 콜백에 응답 하기 위해. 스택 샘플링 또는 분리와 같은 다른 작업을 수행 하는 프로 파일링 API를 호출 하지 않습니다.
 

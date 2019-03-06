@@ -11,12 +11,12 @@ helpviewer_keywords:
 - print queues [WPF], cloning
 - cloning print queues [WPF]
 ms.assetid: dd6997c9-fe04-40f8-88a6-92e3ac0889eb
-ms.openlocfilehash: d7a73c6590ca2df00c77a3a7255f2064a8676c42
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b3d05c3165e54735cfe739c3c0e227ec4b974c7b
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54677227"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57378809"
 ---
 # <a name="how-to-clone-a-printer"></a>방법: 프린터 복제
 대부분의 비즈니스, 어느 시점에서 구입 동일한 모델의 여러 프린터입니다. 일반적으로 이러한 모든 설치 되며 실제로 동일한 구성 설정을 사용 하 여. 각 프린터 설치 시간이 오래 걸릴 수 및 오류가 발생 하기 쉽습니다. 합니다 <xref:System.Printing.IndexedProperties?displayProperty=nameWithType> 네임 스페이스 및 <xref:System.Printing.PrintServer.InstallPrintQueue%2A> Microsoft.NET Framework를 사용 하 여 노출 되는 클래스를 사용 하면 기존 인쇄 큐에서 개수에 관계 없이 복제 되는 추가 인쇄 대기열을 즉시 설치할 수 있습니다.  
@@ -52,8 +52,8 @@ ms.locfileid: "54677227"
   
  예제는 다음과 같습니다.  
   
- [!code-csharp[ClonePrinter#ClonePrinter](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ClonePrinter/CSharp/Program.cs#cloneprinter)]
- [!code-vb[ClonePrinter#ClonePrinter](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ClonePrinter/visualbasic/program.vb#cloneprinter)]  
+ [!code-csharp[ClonePrinter#ClonePrinter](~/samples/snippets/csharp/VS_Snippets_Wpf/ClonePrinter/CSharp/Program.cs#cloneprinter)]
+ [!code-vb[ClonePrinter#ClonePrinter](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ClonePrinter/visualbasic/program.vb#cloneprinter)]  
   
 ## <a name="see-also"></a>참고자료
 - <xref:System.Printing.IndexedProperties>
@@ -61,5 +61,5 @@ ms.locfileid: "54677227"
 - <xref:System.Printing.LocalPrintServer>
 - <xref:System.Printing.PrintQueue>
 - <xref:System.Collections.DictionaryEntry>
-- [WPF의 문서](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)
-- [인쇄 개요](../../../../docs/framework/wpf/advanced/printing-overview.md)
+- [WPF의 문서](documents-in-wpf.md)
+- [인쇄 개요](printing-overview.md)

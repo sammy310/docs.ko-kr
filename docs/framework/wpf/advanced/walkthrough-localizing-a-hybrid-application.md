@@ -5,12 +5,12 @@ helpviewer_keywords:
 - localization [WPF interoperability]
 - hybrid applications [WPF interoperability]
 ms.assetid: fbc0c54e-930a-4c13-8e9c-27b83665010a
-ms.openlocfilehash: b2f771f124cee6ad52ea841006a6749408540048
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
+ms.openlocfilehash: 116a847d4f7b0591e823416cf5744e68d689c6ee
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56746074"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57378082"
 ---
 # <a name="walkthrough-localizing-a-hybrid-application"></a>연습: 하이브리드 응용 프로그램 지역화
 
@@ -48,7 +48,7 @@ ms.locfileid: "56746074"
 
 2.  추가 된 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.Controls.UserControl> 라는 요소가 `SimpleControl` 프로젝트에.
 
-3.  사용 된 <xref:System.Windows.Forms.Integration.ElementHost> 컨트롤을는 `SimpleControl` 요소를 폼에 합니다. 자세한 내용은 [연습: Windows Forms에서 3-D WPF 복합 컨트롤 호스팅](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-3-d-wpf-composite-control-in-windows-forms.md)합니다.
+3.  사용 된 <xref:System.Windows.Forms.Integration.ElementHost> 컨트롤을는 `SimpleControl` 요소를 폼에 합니다. 자세한 내용은 [연습: Windows Forms에서 3-D WPF 복합 컨트롤 호스팅](walkthrough-hosting-a-3-d-wpf-composite-control-in-windows-forms.md)합니다.
 
 ## <a name="adding-localizable-content"></a>지역화 가능한 콘텐츠 추가
 
@@ -60,7 +60,7 @@ ms.locfileid: "56746074"
 
 2.  내용을 설정 합니다 <xref:System.Windows.Controls.Button> 다음 코드를 사용 하 여 제어 합니다.
 
-     [!code-xaml[LocalizingWpfInWf#10](../../../../samples/snippets/csharp/VS_Snippets_Wpf/LocalizingWpfInWf/CSharp/SimpleControl0.xaml#10)]
+     [!code-xaml[LocalizingWpfInWf#10](~/samples/snippets/csharp/VS_Snippets_Wpf/LocalizingWpfInWf/CSharp/SimpleControl0.xaml#10)]
 
 3.  **솔루션 탐색기**를 두 번 클릭 **Form1** Windows Forms 디자이너에서 엽니다.
 
@@ -92,7 +92,7 @@ Windows Forms 디자이너에서는 위성 어셈블리에서 지역화를 사�
 
 7.  다음 코드를 복사 합니다 `Form1` 생성자를 호출 하기 전에 `InitializeComponent`입니다.
 
-     [!code-csharp[LocalizingWpfInWf#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/LocalizingWpfInWf/CSharp/Form1.cs#2)]
+     [!code-csharp[LocalizingWpfInWf#2](~/samples/snippets/csharp/VS_Snippets_Wpf/LocalizingWpfInWf/CSharp/Form1.cs#2)]
 
 8.  **솔루션 탐색기**를 마우스 오른쪽 단추로 클릭 **LocalizingWpfInWf** 누릅니다 **프로젝트 언로드**합니다.
 
@@ -128,7 +128,7 @@ Windows Forms 디자이너에서는 위성 어셈블리에서 지역화를 사�
 
 3.  **솔루션 탐색기**를 두 번 클릭 **SimpleControl.xaml** 하 여 코드 편집기에서 엽니다. 확인할 수 있습니다는 `msbuild` 명령에 추가 된 `Uid` 모든 요소에 특성입니다. 따라서 리소스 식별자 할당을 통해 지역화가 용이해집니다.
 
-     [!code-xaml[LocalizingWpfInWf#20](../../../../samples/snippets/csharp/VS_Snippets_Wpf/LocalizingWpfInWf/CSharp/SimpleControl.xaml#20)]
+     [!code-xaml[LocalizingWpfInWf#20](~/samples/snippets/csharp/VS_Snippets_Wpf/LocalizingWpfInWf/CSharp/SimpleControl.xaml#20)]
 
 4.  키를 눌러 **F6** 솔루션을 빌드합니다.
 
@@ -138,7 +138,7 @@ Windows Forms 디자이너에서는 위성 어셈블리에서 지역화를 사�
 
 ### <a name="to-produce-a-satellite-assembly"></a>위성 어셈블리를 생성하려면
 
-1.  LocBaml.exe를 프로젝트의 obj\Debug 폴더에 복사합니다. 자세한 내용은 [응용 프로그램 지역화](../../../../docs/framework/wpf/advanced/how-to-localize-an-application.md)합니다.
+1.  LocBaml.exe를 프로젝트의 obj\Debug 폴더에 복사합니다. 자세한 내용은 [응용 프로그램 지역화](how-to-localize-an-application.md)합니다.
 
 2.  [명령 프롬프트] 창에서 다음 명령을 사용하여 리소스 문자열을 임시 파일로 추출합니다.
 
@@ -176,6 +176,6 @@ Windows Forms 디자이너에서는 위성 어셈블리에서 지역화를 사�
 
 - <xref:System.Windows.Forms.Integration.ElementHost>
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost>
-- [응용 프로그램 지역화](../../../../docs/framework/wpf/advanced/how-to-localize-an-application.md)
+- [응용 프로그램 지역화](how-to-localize-an-application.md)
 - [연습: Windows Forms 지역화](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/y99d1cd3(v=vs.100))
 - [Visual Studio에서 XAML 디자인](/visualstudio/designers/designing-xaml-in-visual-studio)

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: f814ff82-fe2b-4614-aebb-b768c3e61179
-ms.openlocfilehash: e609c2b1a24ba01bf23226187b6d87e56395ff99
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4a5836c60d5f0ea21b1373b2d9bbbb29e0b6cb9f
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54530404"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57360037"
 ---
 # <a name="how-to-run-a-workflow"></a>방법: 워크플로 실행
 이 항목에서는 Windows Workflow Foundation 초보자 자습서의 계속 이며 워크플로 호스트를 만들고 이전에 정의 된 워크플로 실행 하는 방법을 설명 [방법: 워크플로 만드는](../../../docs/framework/windows-workflow-foundation/how-to-create-a-workflow.md) 항목입니다.
@@ -137,7 +137,7 @@ ms.locfileid: "54530404"
      [!code-csharp[CFX_WF_GettingStarted#11](../../../samples/snippets/csharp/VS_Snippets_CFX/cfx_wf_gettingstarted/cs/program.cs#11)]
      [!code-vb[CFX_WF_GettingStarted#11](../../../samples/snippets/visualbasic/VS_Snippets_CFX/cfx_wf_gettingstarted/vb/module1.vb#11)]
 
-##  <a name="BKMK_ToRunTheApplication"></a> 응용 프로그램을 빌드하고 실행하려면
+## <a name="BKMK_ToRunTheApplication"></a> 응용 프로그램을 빌드하고 실행하려면
 
 1.  **솔루션 탐색기** 에서 **NumberGuessWorkflowHost** 를 마우스 오른쪽 단추로 클릭하고 **시작 프로젝트로 설정**을 선택합니다.
 

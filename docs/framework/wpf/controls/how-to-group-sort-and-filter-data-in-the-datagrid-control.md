@@ -9,12 +9,12 @@ helpviewer_keywords:
 - DataGrid [WPF], group
 - DataGrid [WPF], filter
 ms.assetid: 03345e85-89e3-4aec-9ed0-3b80759df770
-ms.openlocfilehash: f0f80afd982092248bc52590e072c92784dbcbce
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 81fdb0a6d5602f612c55d7e790ca9a0fe56c144e
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54650459"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57365050"
 ---
 # <a name="how-to-group-sort-and-filter-data-in-the-datagrid-control"></a>방법: 그룹, 정렬 및 DataGrid 컨트롤에서 데이터 필터링
 
@@ -24,7 +24,7 @@ ms.locfileid: "54650459"
 
 이 예의 컬렉션인 `Task` 개체에 바인딩되는 <xref:System.Windows.Data.CollectionViewSource>. <xref:System.Windows.Data.CollectionViewSource> 으로 사용 되는 <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A> 에 대 한는 <xref:System.Windows.Controls.DataGrid>합니다. 그룹화, 정렬 및 필터링에 수행 되는 <xref:System.Windows.Data.CollectionViewSource> 에 표시 됩니다는 <xref:System.Windows.Controls.DataGrid> UI입니다.
 
-![DataGrid의 데이터 그룹화](./media/wpf-datagridgroups.png "WPF_DataGridGroups") DataGrid의 데이터를 그룹화 합니다.
+![DataGrid의 데이터 그룹화](././media/wpf-datagridgroups.png "WPF_DataGridGroups") DataGrid의 데이터를 그룹화 합니다.
 
 ## <a name="using-a-collectionviewsource-as-an-itemssource"></a>ItemsSource collectionviewsource에 바인딩하면 사용 하 여
 
@@ -42,9 +42,9 @@ ms.locfileid: "54650459"
     [!code-csharp[DataGrid_GroupSortFilter#101](~/samples/snippets/csharp/VS_Snippets_Wpf/DataGrid_GroupSortFilter/CS/MainWindow.xaml.cs#101)]
     [!code-vb[DataGrid_GroupSortFilter#101](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DataGrid_GroupSortFilter/VB/MainWindow.xaml.vb#101)]
 
-2. XAML, 컬렉션 클래스의 인스턴스를 만들에 설정 된 [X:key 지시문](../../../../docs/framework/xaml-services/x-key-directive.md)합니다.
+2. XAML, 컬렉션 클래스의 인스턴스를 만들에 설정 된 [X:key 지시문](../../xaml-services/x-key-directive.md)합니다.
 
-3. XAML의 인스턴스를 만들고 합니다 <xref:System.Windows.Data.CollectionViewSource> 클래스에서 [X:key 지시문](../../../../docs/framework/xaml-services/x-key-directive.md),으로 컬렉션 클래스의 인스턴스를 설정 하 고는 <xref:System.Windows.Data.CollectionViewSource.Source%2A>.
+3. XAML의 인스턴스를 만들고 합니다 <xref:System.Windows.Data.CollectionViewSource> 클래스에서 [X:key 지시문](../../xaml-services/x-key-directive.md),으로 컬렉션 클래스의 인스턴스를 설정 하 고는 <xref:System.Windows.Data.CollectionViewSource.Source%2A>.
 
     [!code-xaml[DataGrid_GroupSortFilter#201](~/samples/snippets/csharp/VS_Snippets_Wpf/DataGrid_GroupSortFilter/CS/WindowSnips1.xaml#201)]
 

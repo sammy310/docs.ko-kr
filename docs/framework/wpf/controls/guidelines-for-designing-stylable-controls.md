@@ -5,12 +5,12 @@ helpviewer_keywords:
 - style design for controls [WPF]
 - controls [WPF], style design
 ms.assetid: c52dde45-a311-4531-af4c-853371c4d5f4
-ms.openlocfilehash: 02333d05bc1c0f9804caa36af1a1842cba22908c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 88f03b8084b0160e5c61bfdc4dc6984fbd1cddde
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54545032"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57352986"
 ---
 # <a name="guidelines-for-designing-stylable-controls"></a>스타일을 지정할 수 있는 컨트롤을 디자인하기 위한 지침
 이 문서에서는 쉽게 스타일을 지정하고 템플릿을 지정할 수 있는 컨트롤을 디자인할 때 고려해야 하는 모범 사례 집합을 요약합니다. 기본 제공 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 컨트롤 집합의 테마 컨트롤 스타일에 대해 작업하는 동안 많은 시행착오를 거쳐 이 모범 사례 집합을 얻게 되었습니다. 성공적으로 스타일을 지정하려면 스타일 자체만큼이나 잘 설계된 개체 모델이 필요함을 알게 되었습니다. 이 문서의 독자는 스타일 작성자가 아니라 컨트롤 작성자입니다.  
@@ -27,7 +27,7 @@ ms.locfileid: "54545032"
   
 -   데이터 템플릿.  
   
- 스타일 지정과 템플릿 지정에 대한 소개는 [스타일 지정 및 템플릿 지정](../../../../docs/framework/wpf/controls/styling-and-templating.md)을 참조하세요.  
+ 스타일 지정과 템플릿 지정에 대한 소개는 [스타일 지정 및 템플릿 지정](styling-and-templating.md)을 참조하세요.  
   
 <a name="Before_You_Start__Understanding_Your_Control"></a>   
 ## <a name="before-you-start-understanding-your-control"></a>시작 하기 전에: 컨트롤 이해  
@@ -119,5 +119,5 @@ ms.locfileid: "54545032"
 -   **모든 테마에서 테마 스타일의 “레이아웃”의미 체계는 일관되지 않아도 됩니다**. 예를 들어, 기본 스타일에서는 모든 테마에서 컨트롤이 반드시 동일한 크기를 차지하거나 컨트롤이 모든 테마에서 반드시 동일한 콘텐츠 여백 / 안쪽 여백을 유지하지 않아도 됩니다.  
   
 ## <a name="see-also"></a>참고자료
-- [스타일 지정 및 템플릿](../../../../docs/framework/wpf/controls/styling-and-templating.md)
-- [컨트롤 제작 개요](../../../../docs/framework/wpf/controls/control-authoring-overview.md)
+- [스타일 지정 및 템플릿](styling-and-templating.md)
+- [컨트롤 제작 개요](control-authoring-overview.md)

@@ -7,21 +7,21 @@ helpviewer_keywords:
 - ListBox control [WPF], how-to topics
 - controls [WPF], ListBox
 ms.assetid: 15d58f1d-3db6-4cb5-88c7-8c45f19301e2
-ms.openlocfilehash: f4d6b8d9ac3b092e18b87dbf9e8965bfdb064ae0
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
+ms.openlocfilehash: 0895b80f230d2c67ab0723c7935ae20443327a41
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56746982"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57363438"
 ---
 # <a name="listbox-how-to-topics"></a>ListBox 방법 항목
 이 섹션의에서 항목에서는 사용 하는 방법에 설명 합니다 <xref:System.Windows.Controls.ListBox> 컨트롤을 선택할 수 있는 항목 목록을 표시 합니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
- [데이터에 ListBox 바인딩](../../../../docs/framework/wpf/controls/how-to-bind-a-listbox-to-data.md)  
- [ListBoxItem 가져오기](../../../../docs/framework/wpf/controls/how-to-get-a-listboxitem.md)  
+ [데이터에 ListBox 바인딩](how-to-bind-a-listbox-to-data.md)  
+ [ListBoxItem 가져오기](how-to-get-a-listboxitem.md)  
  [방법: ItemsControl에 데이터 추가](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms743602(v=vs.90))  
- [ListBox의 스크롤 성능 개선](../../../../docs/framework/wpf/controls/how-to-improve-the-scrolling-performance-of-a-listbox.md)  
+ [ListBox의 스크롤 성능 개선](how-to-improve-the-scrolling-performance-of-a-listbox.md)  
   
 ## <a name="reference"></a>참조  
  <xref:System.Windows.Controls.ListBox>  

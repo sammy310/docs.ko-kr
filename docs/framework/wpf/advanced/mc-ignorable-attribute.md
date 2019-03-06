@@ -9,12 +9,12 @@ helpviewer_keywords:
 - mc:ProcessContent attribute
 - XAML [WPF], mc:ProcessContent attribute
 ms.assetid: acd9a6ef-b7ca-4146-abb6-60f3b366e9ec
-ms.openlocfilehash: 25f5fb254ec6f952d7cafa2cb893e35daa0e9029
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 432df80fca58311d1c0931d9ba3b224fc9e271ff
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54573938"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57375391"
 ---
 # <a name="mcignorable-attribute"></a>mc:Ignorable 특성
 지정 [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] 여는 태그 파일에서 발생 하는 네임 스페이스 접두사를 무시할 수 있습니다는 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 프로세서. 합니다 `mc:Ignorable` 특성에 대 한 및 사용자 지정 네임 스페이스 매핑에 대 한 태그 호환성 지원 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 버전 관리 합니다.  
@@ -59,7 +59,7 @@ ms.locfileid: "54573938"
   
  구현 하는 경우는 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 프로세서, 프로세서 구현 해야 발생 시 키 지 구문 분석 또는 임의의 요소 또는 특성으로 식별 되는 접두사는 대 한 형식 변환 오류를 처리 `mc:Ignorable`합니다. 하지만 프로세서 구현 보조 로드 또는 위의 하나 자식 요소가 예제와 같은 처리에 실패 하는 요소의 되는 예외를 발생 시킬 수 있습니다.  
   
- 기본적으로 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 프로세서 무시 된 요소 내에서 콘텐츠를 무시 합니다. 그러나 추가 특성을 지정할 수 있습니다 [mc: processcontent 특성](../../../../docs/framework/wpf/advanced/mc-processcontent-attribute.md), 다음 사용 가능한 부모 요소에서 무시 된 요소 내의 콘텐츠는 계속된 처리 해야 합니다.  
+ 기본적으로 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 프로세서 무시 된 요소 내에서 콘텐츠를 무시 합니다. 그러나 추가 특성을 지정할 수 있습니다 [mc: processcontent 특성](mc-processcontent-attribute.md), 다음 사용 가능한 부모 요소에서 무시 된 요소 내의 콘텐츠는 계속된 처리 해야 합니다.  
   
  예를 들어 구분 기호로, 하나 이상의 공백 문자를 사용 하는 특성에 여러 개의 접두사를 지정할 수 있습니다: `mc:Ignorable="ignore1 ignore2"`합니다.  
 
@@ -67,6 +67,6 @@ ms.locfileid: "54573938"
   
 ## <a name="see-also"></a>참고자료
 - <xref:System.Windows.Markup.XamlReader>
-- [PresentationOptions:Freeze 특성](../../../../docs/framework/wpf/advanced/presentationoptions-freeze-attribute.md)
-- [XAML 개요(WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)
-- [WPF의 문서](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)
+- [PresentationOptions:Freeze 특성](presentationoptions-freeze-attribute.md)
+- [XAML 개요(WPF)](xaml-overview-wpf.md)
+- [WPF의 문서](documents-in-wpf.md)

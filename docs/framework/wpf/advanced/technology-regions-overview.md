@@ -9,12 +9,12 @@ helpviewer_keywords:
 - interoperability [WPF], airspace
 - Win32 code [WPF], window regions
 ms.assetid: b7cc350f-b9e2-48b1-be14-60f3d853222e
-ms.openlocfilehash: 978cd428989aa76f82f01711ccfa566b57352f48
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3fc325f1b4bb4eca73e051732810c9d9853ff4d7
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54695743"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57352488"
 ---
 # <a name="technology-regions-overview"></a>기술 영역 개요
 애플리케이션에 WPF, Win32 또는 DirectX와 같은 여러 프레젠테이션 기술이 사용되는 경우 이러한 기술은 공통 최상위 창에서 렌더링 영역을 공유해야 합니다. 이 항목에서는 WPF 상호 운용 애플리케이션에 대한 프레젠테이션과 입력에 영향을 미칠 수 있는 문제를 설명합니다.  
@@ -25,23 +25,23 @@ ms.locfileid: "54695743"
 ### <a name="region-examples"></a>영역 예제  
  다음 그림에서는 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)], [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)] 및 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]를 혼합하는 애플리케이션을 보여 줍니다. 각 기술은 자체적인 별도의 겹치지 않는 픽셀 집합을 사용하고 영역 문제가 없습니다.  
   
- ![에어스페이스 문제가 없는 창](../../../../docs/framework/wpf/advanced/media/migrationinteroparchitectarticle01.png "MigrationInteropArchitectArticle01")  
+ ![에어스페이스 문제가 없는 창](./media/migrationinteroparchitectarticle01.png "MigrationInteropArchitectArticle01")  
   
  이 애플리케이션이 마우스 포인터 위치를 사용하여 이러한 세 개의 영역 위에 렌더링할 애니메이션을 만든다고 가정해 봅니다. 애니메이션 자체에 응답 가능한 기술이 무엇이든 관계없이 해당 기술은 다른 두 기술의 영역을 침해합니다. 다음 그림에서는 Win32 영역 위에 WPF 원을 렌더링하는 시도를 보여 줍니다.  
   
- ![Interop 다이어그램](../../../../docs/framework/wpf/advanced/media/migrationinteroparchitectarticle02.png "MigrationInteropArchitectArticle02")  
+ ![Interop 다이어그램](./media/migrationinteroparchitectarticle02.png "MigrationInteropArchitectArticle02")  
   
  또 다른 침해는 서로 다른 기술 사이에 투명도/알파 블렌딩을 사용하려는 경우입니다.  다음 그림에서 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 상자는 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 및 [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)] 영역을 침해합니다. 해당 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 상자의 픽셀은 반투명하므로 [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)] 및 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]가 둘 다 공동으로 이러한 픽셀을 소유해야 하지만 이는 불가능합니다.  따라서 이는 또 다른 침해이며 빌드될 수 없습니다.  
   
- ![Interop 다이어그램](../../../../docs/framework/wpf/advanced/media/migrationinteroparchitectarticle03.png "MigrationInteropArchitectArticle03")  
+ ![Interop 다이어그램](./media/migrationinteroparchitectarticle03.png "MigrationInteropArchitectArticle03")  
   
  이전 세 개의 예제에서는 사각형 영역을 사용했으나 다른 모양이 가능합니다.  예를 들어 영역에 구멍이 있을 수 있습니다. 다음 그림에서는 사각형 구멍이 있는 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 영역을 보여 줍니다. 구멍의 크기는 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 및 [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)] 영역이 결합된 크기입니다.  
   
- ![Interop 다이어그램](../../../../docs/framework/wpf/advanced/media/migrationinteroparchitectarticle04.png "MigrationInteropArchitectArticle04")  
+ ![Interop 다이어그램](./media/migrationinteroparchitectarticle04.png "MigrationInteropArchitectArticle04")  
   
  영역은 완전히 사각형이 아니거나 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] HRGN(영역)으로 설명 가능한 모양일 수도 있습니다.  
   
- ![Interop 다이어그램](../../../../docs/framework/wpf/advanced/media/migrationinteroparchitectarticle05.png "MigrationInteropArchitectArticle05")  
+ ![Interop 다이어그램](./media/migrationinteroparchitectarticle05.png "MigrationInteropArchitectArticle05")  
   
 ## <a name="transparency-and-top-level-windows"></a>투명도 및 최상위 창  
  Windows의 창 관리자는 실제로 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] HWND만 처리합니다. 따라서 모든 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.Window> 는 HWND입니다. <xref:System.Windows.Window> HWND는 HWND에 대 한 일반 규칙을 준수 해야 합니다. 해당 HWND 내에서 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 코드는 전체 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)]가 지원하는 모든 작업을 수행할 수 있습니다. 하지만 데스크톱에 있는 다른 HWND에 대한 상호 작용의 경우 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]는 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 처리 및 렌더링 규칙을 따라야 합니다.  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]는 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)]를 사용하여 사각형이 아닌 창을 지원합니다(사각형이 아닌 창인 경우 HRGN 및 픽셀별 알파인 경우 겹쳐진 창).  
@@ -61,6 +61,6 @@ ms.locfileid: "54695743"
 -   애플리케이션이 [!INCLUDE[TLA2#tla_winxp](../../../../includes/tla2sharptla-winxp-md.md)]에서 실행될 경우 [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)] 애플리케이션이 렌더링될 때 [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)] 화면 위의 겹쳐진 창이 깜박입니다.  실제 렌더링 시퀀스는 [!INCLUDE[TLA#tla_gdi](../../../../includes/tlasharptla-gdi-md.md)]가 겹쳐진 창을 숨기고 나서, [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)]가 그린 다음, [!INCLUDE[TLA#tla_gdi](../../../../includes/tlasharptla-gdi-md.md)]가 겹쳐진 창을 되돌리는 것입니다.  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]가 아닌 겹쳐진 창에는 이 제한 사항이 없습니다.  
   
 ## <a name="see-also"></a>참고자료
-- [WPF 및 Win32 상호 운용성](../../../../docs/framework/wpf/advanced/wpf-and-win32-interoperation.md)
-- [연습: Win32에서 WPF 시계 호스팅](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-wpf-clock-in-win32.md)
-- [WPF에서 Win32 콘텐츠 호스트](../../../../docs/framework/wpf/advanced/hosting-win32-content-in-wpf.md)
+- [WPF 및 Win32 상호 운용성](wpf-and-win32-interoperation.md)
+- [연습: Win32에서 WPF 시계 호스팅](walkthrough-hosting-a-wpf-clock-in-win32.md)
+- [WPF에서 Win32 콘텐츠 호스트](hosting-win32-content-in-wpf.md)

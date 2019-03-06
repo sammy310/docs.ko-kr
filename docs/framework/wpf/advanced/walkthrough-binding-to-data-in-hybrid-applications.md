@@ -8,12 +8,12 @@ helpviewer_keywords:
 - hybrid applications [WPF interoperability]
 - data binding [WPF interoperability]
 ms.assetid: 18997e71-745a-4425-9c69-2cbce1d8669e
-ms.openlocfilehash: 2a20dc95467df4baedce2f4acc63f0c029f178c6
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
+ms.openlocfilehash: 378ebd5a402006d7e7a88029ced62f812f620aeb
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56748494"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57377744"
 ---
 # <a name="walkthrough-binding-to-data-in-hybrid-applications"></a>연습: 하이브리드 응용 프로그램에서 데이터 바인딩
 사용 하 여 기본 데이터에 대 한 액세스를 사용 하 여 사용자에 게 제공 하는 데 필수적입니다 데이터 소스 컨트롤에 바인딩 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 또는 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]합니다. 이 연습에서는 모두 포함 하는 하이브리드 응용 프로그램에서 데이터 바인딩을 사용 하는 방법을 보여 줍니다 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 고 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 컨트롤입니다.  
@@ -67,7 +67,7 @@ ms.locfileid: "56748494"
   
 5.  기본 이름을 <xref:System.Windows.Controls.Grid> 요소 `mainGrid` 할당 하 여는 <xref:System.Windows.FrameworkElement.Name%2A> 속성입니다.  
   
-     [!code-xaml[WPFWithWFAndDatabinding#8](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WPFWithWFAndDatabinding/CSharp/WPFWithWFAndDatabinding/Window1.xaml#8)]  
+     [!code-xaml[WPFWithWFAndDatabinding#8](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFWithWFAndDatabinding/CSharp/WPFWithWFAndDatabinding/Window1.xaml#8)]  
   
 ## <a name="defining-the-data-template"></a>데이터 템플릿 정의  
  고객의 마스터 목록에 표시 됩니다는 <xref:System.Windows.Controls.ListBox> 제어 합니다. 다음 코드 예제에서는 정의 <xref:System.Windows.DataTemplate> 개체인 `ListItemsTemplate` 의 시각적 트리를 제어 하는 <xref:System.Windows.Controls.ListBox> 제어 합니다. 이렇게 <xref:System.Windows.DataTemplate> 에 할당 되는 <xref:System.Windows.Controls.ListBox> 컨트롤의 <xref:System.Windows.Controls.ItemsControl.ItemTemplate%2A> 속성.  
@@ -76,7 +76,7 @@ ms.locfileid: "56748494"
   
 -   에 다음 XAML을 복사 합니다 <xref:System.Windows.Controls.Grid> 요소의 선언 합니다.  
   
-     [!code-xaml[WPFWithWFAndDatabinding#3](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WPFWithWFAndDatabinding/CSharp/WPFWithWFAndDatabinding/Window1.xaml#3)]  
+     [!code-xaml[WPFWithWFAndDatabinding#3](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFWithWFAndDatabinding/CSharp/WPFWithWFAndDatabinding/Window1.xaml#3)]  
   
 ## <a name="specifying-the-form-layout"></a>폼 레이아웃 지정  
  폼의 레이아웃은 세 개의 행과 세 개의 열이 있는 그리드로 정의됩니다. <xref:System.Windows.Controls.Label> Customers 테이블의 각 열을 식별 하는 컨트롤이 제공 됩니다.  
@@ -85,13 +85,13 @@ ms.locfileid: "56748494"
   
 -   에 다음 XAML을 복사 합니다 <xref:System.Windows.Controls.Grid> 요소의 선언 합니다.  
   
-     [!code-xaml[WPFWithWFAndDatabinding#4](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WPFWithWFAndDatabinding/CSharp/WPFWithWFAndDatabinding/Window1.xaml#4)]  
+     [!code-xaml[WPFWithWFAndDatabinding#4](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFWithWFAndDatabinding/CSharp/WPFWithWFAndDatabinding/Window1.xaml#4)]  
   
 #### <a name="to-set-up-the-label-controls"></a>레이블 컨트롤을 설정하려면  
   
 -   에 다음 XAML을 복사 합니다 <xref:System.Windows.Controls.Grid> 요소의 선언 합니다.  
   
-     [!code-xaml[WPFWithWFAndDatabinding#5](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WPFWithWFAndDatabinding/CSharp/WPFWithWFAndDatabinding/Window1.xaml#5)]  
+     [!code-xaml[WPFWithWFAndDatabinding#5](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFWithWFAndDatabinding/CSharp/WPFWithWFAndDatabinding/Window1.xaml#5)]  
   
 ## <a name="specifying-data-bindings"></a>데이터 바인딩 지정  
  고객의 마스터 목록에 표시 됩니다는 <xref:System.Windows.Controls.ListBox> 제어 합니다. 연결 된 `ListItemsTemplate` 바인딩하는 <xref:System.Windows.Controls.TextBlock> 컨트롤을 `ContactName` 데이터베이스에서 필드입니다.  
@@ -104,7 +104,7 @@ ms.locfileid: "56748494"
   
      합니다 <xref:System.Windows.Data.Binding> 바인딩합니다 클래스는 <xref:System.Windows.Controls.TextBox> 컨트롤을 데이터베이스에서 적절 한 필드입니다.  
   
-     [!code-xaml[WPFWithWFAndDatabinding#6](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WPFWithWFAndDatabinding/CSharp/WPFWithWFAndDatabinding/Window1.xaml#6)]  
+     [!code-xaml[WPFWithWFAndDatabinding#6](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFWithWFAndDatabinding/CSharp/WPFWithWFAndDatabinding/Window1.xaml#6)]  
   
 ## <a name="displaying-data-by-using-interoperation"></a>상호 운용성을 사용하여 데이터 표시  
  에 선택한 고객과 해당 주문을 표시 되는 <xref:System.Windows.Forms.DataGridView?displayProperty=nameWithType> 라는 컨트롤 `dataGridView1`합니다. `dataGridView1` 코드 숨김 파일에서 데이터 원본에 바인딩된 컨트롤입니다. A <xref:System.Windows.Forms.Integration.WindowsFormsHost> 컨트롤의 부모인 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 제어 합니다.  
@@ -113,7 +113,7 @@ ms.locfileid: "56748494"
   
 -   에 다음 XAML을 복사 합니다 <xref:System.Windows.Controls.Grid> 요소의 선언 합니다.  
   
-     [!code-xaml[WPFWithWFAndDatabinding#7](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WPFWithWFAndDatabinding/CSharp/WPFWithWFAndDatabinding/Window1.xaml#7)]  
+     [!code-xaml[WPFWithWFAndDatabinding#7](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFWithWFAndDatabinding/CSharp/WPFWithWFAndDatabinding/Window1.xaml#7)]  
   
 ## <a name="adding-the-data-source-to-the-project"></a>프로젝트에 데이터 소스 추가  
  Visual Studio를 사용 하 여 프로젝트에 데이터 소스를 쉽게 추가할 수 있습니다. 이 절차에서는 강력한 형식의 데이터 집합을 프로젝트에 추가합니다. 선택한 각 테이블에 대한 테이블 어댑터 같은 여러 가지 다른 지원 클래스도 추가됩니다.  
@@ -139,15 +139,15 @@ ms.locfileid: "56748494"
   
      이 코드는 선언 된 <xref:System.Windows.Forms.BindingSource> 구성 요소 및 데이터베이스에 연결 하는 연관 된 도우미 클래스입니다.  
   
-     [!code-csharp[WPFWithWFAndDatabinding#11](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WPFWithWFAndDatabinding/CSharp/WPFWithWFAndDatabinding/Window1.xaml.cs#11)]
-     [!code-vb[WPFWithWFAndDatabinding#11](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WPFWithWFAndDatabinding/VisualBasic/WPFWithWFAndDatabinding/Window1.xaml.vb#11)]
+     [!code-csharp[WPFWithWFAndDatabinding#11](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFWithWFAndDatabinding/CSharp/WPFWithWFAndDatabinding/Window1.xaml.cs#11)]
+     [!code-vb[WPFWithWFAndDatabinding#11](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WPFWithWFAndDatabinding/VisualBasic/WPFWithWFAndDatabinding/Window1.xaml.vb#11)]
 
 3.  다음 코드를 생성자에 복사합니다.
 
      이 코드를 만들고 초기화 된 <xref:System.Windows.Forms.BindingSource> 구성 요소입니다.
 
-     [!code-csharp[WPFWithWFAndDatabinding#12](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WPFWithWFAndDatabinding/CSharp/WPFWithWFAndDatabinding/Window1.xaml.cs#12)]
-     [!code-vb[WPFWithWFAndDatabinding#12](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WPFWithWFAndDatabinding/VisualBasic/WPFWithWFAndDatabinding/Window1.xaml.vb#12)]
+     [!code-csharp[WPFWithWFAndDatabinding#12](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFWithWFAndDatabinding/CSharp/WPFWithWFAndDatabinding/Window1.xaml.cs#12)]
+     [!code-vb[WPFWithWFAndDatabinding#12](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WPFWithWFAndDatabinding/VisualBasic/WPFWithWFAndDatabinding/Window1.xaml.vb#12)]
 
 4.  MainWindow.xaml을 엽니다.
 
@@ -161,15 +161,15 @@ ms.locfileid: "56748494"
 
      이 코드에서는 할당 합니다 <xref:System.Windows.Forms.BindingSource> 데이터 컨텍스트로 서 구성 요소 채웁니다 합니다 `Customers` 및 `Orders` 어댑터 개체입니다.
 
-     [!code-csharp[WPFWithWFAndDatabinding#13](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WPFWithWFAndDatabinding/CSharp/WPFWithWFAndDatabinding/Window1.xaml.cs#13)]
-     [!code-vb[WPFWithWFAndDatabinding#13](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WPFWithWFAndDatabinding/VisualBasic/WPFWithWFAndDatabinding/Window1.xaml.vb#13)]
+     [!code-csharp[WPFWithWFAndDatabinding#13](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFWithWFAndDatabinding/CSharp/WPFWithWFAndDatabinding/Window1.xaml.cs#13)]
+     [!code-vb[WPFWithWFAndDatabinding#13](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WPFWithWFAndDatabinding/VisualBasic/WPFWithWFAndDatabinding/Window1.xaml.vb#13)]
 
 9. 다음 코드를 복사 합니다 `MainWindow` 클래스 정의 합니다.
 
      이 메서드를 처리 합니다 <xref:System.Windows.Data.CollectionView.CurrentChanged> 이벤트 및 데이터 바인딩의 현재 항목을 업데이트 합니다.
 
-     [!code-csharp[WPFWithWFAndDatabinding#14](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WPFWithWFAndDatabinding/CSharp/WPFWithWFAndDatabinding/Window1.xaml.cs#14)]
-     [!code-vb[WPFWithWFAndDatabinding#14](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WPFWithWFAndDatabinding/VisualBasic/WPFWithWFAndDatabinding/Window1.xaml.vb#14)]  
+     [!code-csharp[WPFWithWFAndDatabinding#14](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFWithWFAndDatabinding/CSharp/WPFWithWFAndDatabinding/Window1.xaml.cs#14)]
+     [!code-vb[WPFWithWFAndDatabinding#14](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WPFWithWFAndDatabinding/VisualBasic/WPFWithWFAndDatabinding/Window1.xaml.vb#14)]  
   
 10. F5 키를 눌러 애플리케이션을 빌드하고 실행합니다.  
   
@@ -178,5 +178,5 @@ ms.locfileid: "56748494"
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost>
 - [Visual Studio에서 XAML 디자인](/visualstudio/designers/designing-xaml-in-visual-studio)
 - [하이브리드 응용 프로그램 샘플에서 데이터 바인딩](https://go.microsoft.com/fwlink/?LinkID=159983)
-- [연습: WPF에서 Windows Forms 복합 컨트롤 호스팅](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-windows-forms-composite-control-in-wpf.md)
-- [연습: Windows Forms에서 WPF 복합 컨트롤 호스팅](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-wpf-composite-control-in-windows-forms.md)
+- [연습: WPF에서 Windows Forms 복합 컨트롤 호스팅](walkthrough-hosting-a-windows-forms-composite-control-in-wpf.md)
+- [연습: Windows Forms에서 WPF 복합 컨트롤 호스팅](walkthrough-hosting-a-wpf-composite-control-in-windows-forms.md)

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - LocBaml tool [WPF]
 - applications [WPF], localizing
 ms.assetid: 5001227e-9326-48a4-9dcd-ba1b89ee6653
-ms.openlocfilehash: 1761fbf1cb8ec337ea5733e3ab693031b1934179
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 777d0fa9217b647b9ee9bd952addaa83b5f825fc
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54725546"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57374117"
 ---
 # <a name="how-to-localize-an-application"></a>방법: 응용 프로그램 지역화
 이 자습서에서는 LocBaml 도구를 사용하여 지역화된 애플리케이션을 만드는 방법을 설명합니다.  
@@ -30,7 +30,7 @@ ms.locfileid: "54725546"
 ## <a name="requirements"></a>요구 사항  
  이 설명에서는 명령줄에서 실행되는 컴파일러인 [!INCLUDE[TLA#tla_msbuild](../../../../includes/tlasharptla-msbuild-md.md)]를 사용합니다.  
   
- 또한 프로젝트 파일을 사용하도록 지시됩니다. 사용 하는 방법에 대 한 지침은 [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] 프로젝트 파일을 참조 하세요 [빌드 및 배포](../../../../docs/framework/wpf/app-development/building-and-deploying-wpf-applications.md)합니다.  
+ 또한 프로젝트 파일을 사용하도록 지시됩니다. 사용 하는 방법에 대 한 지침은 [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] 프로젝트 파일을 참조 하세요 [빌드 및 배포](../app-development/building-and-deploying-wpf-applications.md)합니다.  
   
  이 설명의 모든 예제에서는 문화권으로 en-US(영어-미국)를 사용합니다. 이렇게 하면 다른 언어를 설치하지 않고 예제의 단계를 수행할 수 있습니다.  
   
@@ -137,13 +137,13 @@ ms.locfileid: "54725546"
   
    2.  **리소스 키**. 지역화된 리소스 식별자입니다.  
   
-   3.  **범주**. 값 형식입니다. 참조 [지역화 특성과 주석을](../../../../docs/framework/wpf/advanced/localization-attributes-and-comments.md)합니다.  
+   3.  **범주**. 값 형식입니다. 참조 [지역화 특성과 주석을](localization-attributes-and-comments.md)합니다.  
   
-   4.  **가독성**. 로컬라이저가 값을 읽을 수 있는지 여부입니다. 참조 [지역화 특성과 주석을](../../../../docs/framework/wpf/advanced/localization-attributes-and-comments.md)합니다.  
+   4.  **가독성**. 로컬라이저가 값을 읽을 수 있는지 여부입니다. 참조 [지역화 특성과 주석을](localization-attributes-and-comments.md)합니다.  
   
-   5.  **수정 가능성**. 로컬라이저가 값을 수정할 수 있는지 여부입니다. 참조 [지역화 특성과 주석을](../../../../docs/framework/wpf/advanced/localization-attributes-and-comments.md)합니다.  
+   5.  **수정 가능성**. 로컬라이저가 값을 수정할 수 있는지 여부입니다. 참조 [지역화 특성과 주석을](localization-attributes-and-comments.md)합니다.  
   
-   6.  **설명**. 값은 지역화하는 방법을 확인하는 데 도움이 되는 값에 대한 추가 설명입니다. 참조 [지역화 특성과 주석을](../../../../docs/framework/wpf/advanced/localization-attributes-and-comments.md)합니다.  
+   6.  **설명**. 값은 지역화하는 방법을 확인하는 데 도움이 되는 값에 대한 추가 설명입니다. 참조 [지역화 특성과 주석을](localization-attributes-and-comments.md)합니다.  
   
    7.  **값**. 원하는 문화권으로 번역할 텍스트 값입니다.  
   
@@ -192,9 +192,9 @@ ms.locfileid: "54725546"
   
     -   애플리케이션에서 다음 코드를 App.xaml.cs에 추가합니다.  
   
-   [!code-xaml[LocBamlChangeCultureSnippets#LocBamlChangeCultureMARKUP](../../../../samples/snippets/csharp/VS_Snippets_Wpf/LocBamlChangeCultureSnippets/CSharp/App.xaml#locbamlchangeculturemarkup)]
-   [!code-csharp[LocBamlChangeCultureSnippets#LocBamlChangeCultureCODEBEHIND](../../../../samples/snippets/csharp/VS_Snippets_Wpf/LocBamlChangeCultureSnippets/CSharp/App.xaml.cs#locbamlchangeculturecodebehind)]
-   [!code-vb[LocBamlChangeCultureSnippets#LocBamlChangeCultureCODEBEHIND](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/LocBamlChangeCultureSnippets/VisualBasic/Application.xaml.vb#locbamlchangeculturecodebehind)]  
+   [!code-xaml[LocBamlChangeCultureSnippets#LocBamlChangeCultureMARKUP](~/samples/snippets/csharp/VS_Snippets_Wpf/LocBamlChangeCultureSnippets/CSharp/App.xaml#locbamlchangeculturemarkup)]
+   [!code-csharp[LocBamlChangeCultureSnippets#LocBamlChangeCultureCODEBEHIND](~/samples/snippets/csharp/VS_Snippets_Wpf/LocBamlChangeCultureSnippets/CSharp/App.xaml.cs#locbamlchangeculturecodebehind)]
+   [!code-vb[LocBamlChangeCultureSnippets#LocBamlChangeCultureCODEBEHIND](~/samples/snippets/visualbasic/VS_Snippets_Wpf/LocBamlChangeCultureSnippets/VisualBasic/Application.xaml.vb#locbamlchangeculturecodebehind)]  
   
 <a name="Some_Tips_for_Using_LocBaml"></a>   
 ## <a name="some-tips-for-using-locbaml"></a>LocBaml 사용과 관련된 몇 가지 팁  
@@ -210,5 +210,5 @@ ms.locfileid: "54725546"
  지금까지 LocBaml 도구를 사용하는 방법에 대한 기본 사항을 알아보았습니다.  Uid를 포함하는 파일을 만들 수 있어야 합니다. LocBaml 도구를 통해 파일을 구문 분석하여 지역화할 수 있는 콘텐츠를 추출할 수 있어야 하며, 콘텐츠가 번역된 후 번역된 콘텐츠를 병합하는 .resources.dll 파일을 생성할 수 있어야 합니다. 이 항목에 가능한 모든 세부 정보가 포함되어 있지는 않지만 이제 LocBaml를 애플리케이션 지역화에 사용하는 데 필요한 지식을 습득했습니다.  
   
 ## <a name="see-also"></a>참고자료
-- [WPF의 전역화](../../../../docs/framework/wpf/advanced/globalization-for-wpf.md)
-- [자동 레이아웃 사용 개요](../../../../docs/framework/wpf/advanced/use-automatic-layout-overview.md)
+- [WPF의 전역화](globalization-for-wpf.md)
+- [자동 레이아웃 사용 개요](use-automatic-layout-overview.md)

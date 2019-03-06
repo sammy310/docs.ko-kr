@@ -6,12 +6,12 @@ dev_langs:
 helpviewer_keywords:
 - hosting WPF content in Win32 window [WPF]
 ms.assetid: 38ce284a-4303-46dd-b699-c9365b22a7dc
-ms.openlocfilehash: c56ef33d1a44b263466a293b06aa988885b2008d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1f1ac68e49b5f84a41e3091b1a81010e7aa7cc0b
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54725599"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57363165"
 ---
 # <a name="walkthrough-hosting-wpf-content-in-win32"></a>연습: Win32에서 WPF 콘텐츠 호스팅
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]에서는 응용 프로그램을 만들기 위한 다양한 환경을 제공합니다. 그러나 [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] 코드에 상당한 투자를 한 경우 원본 코드를 다시 작성하는 대신 응용 프로그램에 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 기능을 추가하는 것이 더 효과적일 수 있습니다. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 호스팅에 대 한 간단한 메커니즘을 제공 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 에서 콘텐츠를 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 창입니다.  
@@ -22,7 +22,7 @@ ms.locfileid: "54725599"
   
 <a name="requirements"></a>   
 ## <a name="requirements"></a>요구 사항  
- 이 자습서에서는 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 및 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 프로그래밍에 대한 기본 지식이 있다고 가정합니다. 에 대 한 기본적인 소개 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 프로그래밍 참조 [Getting Started](../../../../docs/framework/wpf/getting-started/index.md)합니다. 에 대 한 소개 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 프로그래밍 참조 해야 제목, 서적 중 특히 *Windows 프로그래밍* Charles petzold가 저술한 합니다.  
+ 이 자습서에서는 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 및 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 프로그래밍에 대한 기본 지식이 있다고 가정합니다. 에 대 한 기본적인 소개 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 프로그래밍 참조 [Getting Started](../getting-started/index.md)합니다. 에 대 한 소개 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 프로그래밍 참조 해야 제목, 서적 중 특히 *Windows 프로그래밍* Charles petzold가 저술한 합니다.  
   
  이 자습서와 함께 제공 되는 샘플에서 구현 되기 때문에 [!INCLUDE[TLA#tla_cppcli](../../../../includes/tlasharptla-cppcli-md.md)],이 자습서에는 사용 하 여 지식이 있다고 가정 [!INCLUDE[TLA#tla_cpp](../../../../includes/tlasharptla-cpp-md.md)] 프로그램에는 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] 관리 코드 프로그래밍의 기본적인 합니다. [!INCLUDE[TLA#tla_cppcli](../../../../includes/tlasharptla-cppcli-md.md)]에 대한 지식이 있으면 도움이 되지만 필수 사항은 아닙니다.  
   
@@ -112,7 +112,7 @@ ms.locfileid: "54725599"
 
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]는 STA(단일 스레드 아파트) 스레딩 모델을 사용합니다. 제대로 작동 하려면는 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 콘텐츠 코드에서 설정 해야 응용 프로그램의 스레딩 모델을 STA 진입점에 특성을 적용 합니다.
 
- [!code-cpp[Win32HostingWPFPage#WinMain](../../../../samples/snippets/cpp/VS_Snippets_Wpf/Win32HostingWPFPage/CPP/Win32HostingWPFPage.cpp#winmain)]
+ [!code-cpp[Win32HostingWPFPage#WinMain](~/samples/snippets/cpp/VS_Snippets_Wpf/Win32HostingWPFPage/CPP/Win32HostingWPFPage.cpp#winmain)]
 
 <a name="hosting_the_wpf_page"></a>
 ### <a name="hosting-the-wpf-content"></a>WPF 콘텐츠 호스트
@@ -120,14 +120,14 @@ ms.locfileid: "54725599"
 
  호스트 하는 코드를 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 내용에 대 한 처리기에서 구현 되는 [WM_CREATE](/windows/desktop/winmsg/wm-create) 호스트 창에는 알림입니다.
 
- [!code-cpp[Win32HostingWPFPage#WMCreate](../../../../samples/snippets/cpp/VS_Snippets_Wpf/Win32HostingWPFPage/CPP/Win32HostingWPFPage.cpp#wmcreate)]
+ [!code-cpp[Win32HostingWPFPage#WMCreate](~/samples/snippets/cpp/VS_Snippets_Wpf/Win32HostingWPFPage/CPP/Win32HostingWPFPage.cpp#wmcreate)]
 
  합니다 `GetHwnd` 메서드는 크기 및 위치 정보와 부모 창 핸들을 사용 하 고 호스트 된 창 핸들을 반환 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 콘텐츠입니다.
 
 > [!NOTE]
 >  `#using` 네임스페이스에는 `System::Windows::Interop` 지시문을 사용할 수 없습니다. 사용할 경우 해당 네임스페이스의 <xref:System.Windows.Interop.MSG> 구조와 winuser.h에 선언된 MSG 구조 간에 이름 충돌이 생깁니다. 대신 정규화된 이름을 사용하여 해당 네임스페이스의 내용에 액세스해야 합니다.
 
- [!code-cpp[Win32HostingWPFPage#GetHwnd](../../../../samples/snippets/cpp/VS_Snippets_Wpf/Win32HostingWPFPage/CPP/Win32HostingWPFPage.cpp#gethwnd)]
+ [!code-cpp[Win32HostingWPFPage#GetHwnd](~/samples/snippets/cpp/VS_Snippets_Wpf/Win32HostingWPFPage/CPP/Win32HostingWPFPage.cpp#gethwnd)]
 
  호스트할 수 없습니다는 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 응용 프로그램 창에서 직접 콘텐츠입니다. <xref:System.Windows.Interop.HwndSource> 콘텐츠를 래핑할 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 개체를 먼저 만듭니다. 이 개체는 기본적으로 호스트 하도록 설계 된 창은 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 콘텐츠입니다. 호스트를 <xref:System.Windows.Interop.HwndSource> 의 자식으로 만들어 부모 창에서 개체를 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 창 응용 프로그램의 일부입니다. <xref:System.Windows.Interop.HwndSource> 생성자 매개 변수에는 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 자식 창을 만들 때 CreateWindow에 전달하는 것과 동일한 정보가 포함됩니다.
 
@@ -145,7 +145,7 @@ ms.locfileid: "54725599"
 
  이 문제에 대한 가장 간단한 해결 방법은 액세스해야 하는 관리되는 개체에 대한 참조를 보유할 정적 필드 집합이 포함된 관리되는 클래스를 구현하는 것입니다. 샘플에서는 `WPFPageHost` 클래스를 사용하여 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 콘텐츠에 대한 참조 및 나중에 사용자가 변경할 수 있는 여러 해당 속성의 초기 값을 보유합니다. 이는 헤더에서 정의됩니다.
 
- [!code-cpp[Win32HostingWPFPage#WPFPageHost](../../../../samples/snippets/cpp/VS_Snippets_Wpf/Win32HostingWPFPage/CPP/Win32HostingWPFPage.h#wpfpagehost)]
+ [!code-cpp[Win32HostingWPFPage#WPFPageHost](~/samples/snippets/cpp/VS_Snippets_Wpf/Win32HostingWPFPage/CPP/Win32HostingWPFPage.h#wpfpagehost)]
 
  `GetHwnd` 함수의 뒷부분에서는 나중에 `myPage`가 범위 내에 있는 동안 사용하기 위해 해당 필드에 값을 할당합니다.
 
@@ -155,7 +155,7 @@ ms.locfileid: "54725599"
 
  위에서 설명했듯이 사용자가 단추 중 하나를 클릭하면 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 콘텐츠에서 `OnButtonClicked` 이벤트를 발생시킵니다. 애플리케이션은 이 이벤트에 처리기를 연결하여 이러한 알림을 수신합니다. 경우는 **확인** 단추를 클릭 했는지, 처리기에서 사용자 정보를 가져옵니다는 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 콘텐츠 및 정적 컨트롤 집합에 표시 합니다.
 
- [!code-cpp[Win32HostingWPFPage#WPFButtonClicked](../../../../samples/snippets/cpp/VS_Snippets_Wpf/Win32HostingWPFPage/CPP/Win32HostingWPFPage.cpp#wpfbuttonclicked)]
+ [!code-cpp[Win32HostingWPFPage#WPFButtonClicked](~/samples/snippets/cpp/VS_Snippets_Wpf/Win32HostingWPFPage/CPP/Win32HostingWPFPage.cpp#wpfbuttonclicked)]
 
  처리기는 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 콘텐츠로부터 사용자 지정 이벤트 인수 개체 `MyPageEventArgs`를 받습니다. 개체의 `IsOK` 속성이 `true` 경우는 **확인** 단추가 클릭 되었으며, 및 `false` 경우를 **취소** 단추를 클릭 한 합니다.
 
@@ -163,7 +163,7 @@ ms.locfileid: "54725599"
 
  [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 응용 프로그램은 사용자가 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 콘텐츠의 배경색 및 여러 글꼴 관련 속성을 수정할 수 있게 해주는 라디오 단추 집합을 제공합니다. 다음 예제는 애플리케이션의 창 프로시저(WndProc) 및 각 메시지에서 배경색을 비롯한 다양한 속성을 설정하는 해당 메시지 처리에서 발췌한 내용입니다. 다른 예제도 비슷하며 표시되지는 않습니다. 자세한 내용과 컨텍스트는 전체 샘플을 참조하세요.
 
- [!code-cpp[Win32HostingWPFPage#WMCommandToBG](../../../../samples/snippets/cpp/VS_Snippets_Wpf/Win32HostingWPFPage/CPP/Win32HostingWPFPage.cpp#wmcommandtobg)]
+ [!code-cpp[Win32HostingWPFPage#WMCommandToBG](~/samples/snippets/cpp/VS_Snippets_Wpf/Win32HostingWPFPage/CPP/Win32HostingWPFPage.cpp#wmcommandtobg)]
 
  배경색을 설정하려면 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]에서 `hostedPage` 콘텐츠(`WPFPageHost`)에 대한 참조를 가져오고 배경색 속성을 적절한 색으로 설정합니다. 샘플에서는 세 가지 색 옵션(원래 색, 연한 녹색 또는 연한 연어살색)을 사용합니다. 원래 배경색은 `WPFPageHost` 클래스에 정적 필드로 저장되어 있습니다. 다른 두 색을 설정하기 위해 <xref:System.Windows.Media.SolidColorBrush> 개체를 새로 만들고 생성자에 <xref:System.Windows.Media.Colors> 개체의 정적 색 값을 전달합니다.
 
@@ -186,23 +186,23 @@ ms.locfileid: "54725599"
 
  합니다 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 콘텐츠 생성자는 필요한 너비 및 높이 및 크기는 <xref:System.Windows.Controls.Grid> 적절 하 게 합니다. 집합을 만들면 기본 레이아웃을 정의 합니다 <xref:System.Windows.Controls.ColumnDefinition> 하 고 <xref:System.Windows.Controls.RowDefinition> 개체에 추가 하는 <xref:System.Windows.Controls.Grid> 개체의 기본 <xref:System.Windows.Controls.Grid.ColumnDefinitions%2A> 및 <xref:System.Windows.Controls.Grid.RowDefinitions%2A> 컬렉션, 각각. 그러면 크기가 셀의 내용에 따라 결정되는 5개의 행과 7개의 열로 구성된 표가 정의됩니다.
 
- [!code-cpp[Win32HostingWPFPage#WPFPageCtorToGridDef](../../../../samples/snippets/cpp/VS_Snippets_Wpf/Win32HostingWPFPage/CPP/WPFPage.cpp#wpfpagectortogriddef)]
+ [!code-cpp[Win32HostingWPFPage#WPFPageCtorToGridDef](~/samples/snippets/cpp/VS_Snippets_Wpf/Win32HostingWPFPage/CPP/WPFPage.cpp#wpfpagectortogriddef)]
 
  다음에는 생성자가 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]에 <xref:System.Windows.Controls.Grid> 요소를 추가합니다. 첫 번째 요소는 표의 첫 번째 행 가운데에 표시되는 <xref:System.Windows.Controls.Label> 컨트롤인 제목 텍스트입니다.
 
- [!code-cpp[Win32HostingWPFPage#WPFPageCtorTitle](../../../../samples/snippets/cpp/VS_Snippets_Wpf/Win32HostingWPFPage/CPP/WPFPage.cpp#wpfpagectortitle)]
+ [!code-cpp[Win32HostingWPFPage#WPFPageCtorTitle](~/samples/snippets/cpp/VS_Snippets_Wpf/Win32HostingWPFPage/CPP/WPFPage.cpp#wpfpagectortitle)]
 
  다음 행에는 Name <xref:System.Windows.Controls.Label> 컨트롤 및 연결된 <xref:System.Windows.Controls.TextBox> 컨트롤이 포함됩니다. 동일한 코드가 각 레이블/텍스트 상자 쌍에 사용되므로 private 메서드 쌍에 배치되고 레이블/텍스트 상자 쌍 5개에 모두 사용됩니다. 메서드는 적절한 컨트롤을 만들고 <xref:System.Windows.Controls.Grid> 클래스의 정적 <xref:System.Windows.Controls.Grid.SetColumn%2A> 및 <xref:System.Windows.Controls.Grid.SetRow%2A> 메서드를 호출하여 컨트롤을 적절한 셀에 배치합니다. 컨트롤이 만들어진 후 샘플에서는 <xref:System.Windows.Controls.UIElementCollection.Add%2A>의 <xref:System.Windows.Controls.Panel.Children%2A> 속성에 대해 <xref:System.Windows.Controls.Grid> 메서드를 호출하여 표에 컨트롤을 추가합니다. 나머지 레이블/텍스트 상자 쌍을 추가하는 코드도 비슷합니다. 자세한 내용은 샘플 코드를 참조하세요.
 
- [!code-cpp[Win32HostingWPFPage#WPFPageCtorName](../../../../samples/snippets/cpp/VS_Snippets_Wpf/Win32HostingWPFPage/CPP/WPFPage.cpp#wpfpagectorname)]
+ [!code-cpp[Win32HostingWPFPage#WPFPageCtorName](~/samples/snippets/cpp/VS_Snippets_Wpf/Win32HostingWPFPage/CPP/WPFPage.cpp#wpfpagectorname)]
 
  두 메서드의 구현은 다음과 같습니다.
 
- [!code-cpp[Win32HostingWPFPage#WPFPageCreateHelpers](../../../../samples/snippets/cpp/VS_Snippets_Wpf/Win32HostingWPFPage/CPP/WPFPage.cpp#wpfpagecreatehelpers)]
+ [!code-cpp[Win32HostingWPFPage#WPFPageCreateHelpers](~/samples/snippets/cpp/VS_Snippets_Wpf/Win32HostingWPFPage/CPP/WPFPage.cpp#wpfpagecreatehelpers)]
 
  마지막으로 샘플 추가 합니다 **확인** 및 **취소** 단추 이벤트 처리기를 연결 및 해당 <xref:System.Windows.Controls.Primitives.ButtonBase.Click> 이벤트.
 
- [!code-cpp[Win32HostingWPFPage#WPFPageCtorButtonsEvents](../../../../samples/snippets/cpp/VS_Snippets_Wpf/Win32HostingWPFPage/CPP/WPFPage.cpp#wpfpagectorbuttonsevents)]
+ [!code-cpp[Win32HostingWPFPage#WPFPageCtorButtonsEvents](~/samples/snippets/cpp/VS_Snippets_Wpf/Win32HostingWPFPage/CPP/WPFPage.cpp#wpfpagectorbuttonsevents)]
 
 <a name="returning_data_to_window"></a>
 ### <a name="returning-the-data-to-the-host-window"></a>호스트 창에 데이터 반환
@@ -210,11 +210,11 @@ ms.locfileid: "54725599"
 
  WPFPage.h의 이벤트 선언:
 
- [!code-cpp[Win32HostingWPFPage#WPFPageEventDecl](../../../../samples/snippets/cpp/VS_Snippets_Wpf/Win32HostingWPFPage/CPP/WPFPage.h#wpfpageeventdecl)]
+ [!code-cpp[Win32HostingWPFPage#WPFPageEventDecl](~/samples/snippets/cpp/VS_Snippets_Wpf/Win32HostingWPFPage/CPP/WPFPage.h#wpfpageeventdecl)]
 
  WPFPage.cpp의 <xref:System.Windows.Controls.Primitives.ButtonBase.Click> 이벤트 처리기:
 
- [!code-cpp[Win32HostingWPFPage#WPFPageButtonClicked](../../../../samples/snippets/cpp/VS_Snippets_Wpf/Win32HostingWPFPage/CPP/WPFPage.cpp#wpfpagebuttonclicked)]
+ [!code-cpp[Win32HostingWPFPage#WPFPageButtonClicked](~/samples/snippets/cpp/VS_Snippets_Wpf/Win32HostingWPFPage/CPP/WPFPage.cpp#wpfpagebuttonclicked)]
 
 <a name="set_page_properties"></a>
 ### <a name="setting-the-wpf-properties"></a>WPF 속성 설정
@@ -222,13 +222,13 @@ ms.locfileid: "54725599"
 
  WPFPage.h에서:
 
- [!code-cpp[Win32HostingWPFPage#WPFPageFontFamilyProperty](../../../../samples/snippets/cpp/VS_Snippets_Wpf/Win32HostingWPFPage/CPP/WPFPage.h#wpfpagefontfamilyproperty)]
+ [!code-cpp[Win32HostingWPFPage#WPFPageFontFamilyProperty](~/samples/snippets/cpp/VS_Snippets_Wpf/Win32HostingWPFPage/CPP/WPFPage.h#wpfpagefontfamilyproperty)]
 
  WPFPage.cpp에서:
 
- [!code-cpp[Win32HostingWPFPage#WPFPageSetFontFamily](../../../../samples/snippets/cpp/VS_Snippets_Wpf/Win32HostingWPFPage/CPP/WPFPage.cpp#wpfpagesetfontfamily)]
+ [!code-cpp[Win32HostingWPFPage#WPFPageSetFontFamily](~/samples/snippets/cpp/VS_Snippets_Wpf/Win32HostingWPFPage/CPP/WPFPage.cpp#wpfpagesetfontfamily)]
 
 ## <a name="see-also"></a>참고자료
 
 - <xref:System.Windows.Interop.HwndSource>
-- [WPF 및 Win32 상호 운용성](../../../../docs/framework/wpf/advanced/wpf-and-win32-interoperation.md)
+- [WPF 및 Win32 상호 운용성](wpf-and-win32-interoperation.md)

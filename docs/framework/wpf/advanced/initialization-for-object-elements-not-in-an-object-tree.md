@@ -10,12 +10,12 @@ helpviewer_keywords:
 - elements [WPF], initializing
 - initializing elements [WPF]
 ms.assetid: 7b8dfc9b-46ac-4ce8-b7bb-035734d688b7
-ms.openlocfilehash: ed1f7781453503682648d740b57dd7af0a1715c6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f1d31a5916f0c2a1763d8f24076ae7c1000a8296
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54524132"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57376375"
 ---
 # <a name="initialization-for-object-elements-not-in-an-object-tree"></a>개체 트리에 없는 개체 요소 초기화
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 초기화의 몇 가지 측면은 일반적으로 논리적 트리 또는 시각적 트리에 연결되는 요소에 의존하는 프로세스로 지연됩니다. 이 항목에서는 두 트리에 연결되지 않는 요소를 초기화하기 위해 필요할 수 있는 단계를 설명합니다.  
@@ -39,10 +39,10 @@ ms.locfileid: "54524132"
   
  이 예제는 main 함수만 보여 줍니다. 함수 `Rasterize` 및 `Save`(표시되지 않음)는 이미지 처리 및 IO를 처리하는 유틸리티 함수입니다.  
   
- [!code-csharp[InitializeElements#Main](../../../../samples/snippets/csharp/VS_Snippets_Wpf/InitializeElements/CSharp/initializeelements.cs#main)]
- [!code-vb[InitializeElements#Main](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/InitializeElements/VisualBasic/initializeelements.vb#main)]  
+ [!code-csharp[InitializeElements#Main](~/samples/snippets/csharp/VS_Snippets_Wpf/InitializeElements/CSharp/initializeelements.cs#main)]
+ [!code-vb[InitializeElements#Main](~/samples/snippets/visualbasic/VS_Snippets_Wpf/InitializeElements/VisualBasic/initializeelements.vb#main)]  
   
 ## <a name="see-also"></a>참고자료
-- [WPF의 트리](../../../../docs/framework/wpf/advanced/trees-in-wpf.md)
-- [WPF 그래픽 렌더링 개요](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)
-- [XAML 개요(WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)
+- [WPF의 트리](trees-in-wpf.md)
+- [WPF 그래픽 렌더링 개요](../graphics-multimedia/wpf-graphics-rendering-overview.md)
+- [XAML 개요(WPF)](xaml-overview-wpf.md)

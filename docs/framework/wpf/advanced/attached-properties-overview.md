@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - attached properties [WPF Designer]
 ms.assetid: 75928354-dc01-47e8-a018-8409aec1f32d
-ms.openlocfilehash: e4f2b88b075a7806d2ca4c4a1e2cf3f027e71f51
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: de17fb30358bdf1a8e2a1d6cfc4f5f80fefa1268
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54706234"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57370126"
 ---
 # <a name="attached-properties-overview"></a>연결된 속성 개요
 
@@ -20,7 +20,7 @@ ms.locfileid: "54706234"
 
 ## 필수 구성 요소 <a name="prerequisites"></a>
 
-이 항목에서는 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 클래스에서 기존 종속성 속성의 소비자 관점에서 종속성 속성을 이해하고 [종속성 속성 개요](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)를 읽었다고 가정합니다. 이 항목의 예제를 따르려면 XAML을 이해 하 고 WPF 응용 프로그램을 작성 하는 방법을 알고도 해야 합니다.
+이 항목에서는 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 클래스에서 기존 종속성 속성의 소비자 관점에서 종속성 속성을 이해하고 [종속성 속성 개요](dependency-properties-overview.md)를 읽었다고 가정합니다. 이 항목의 예제를 따르려면 XAML을 이해 하 고 WPF 응용 프로그램을 작성 하는 방법을 알고도 해야 합니다.
 
 ## 연결 된 속성을 사용 하는 이유 <a name="attached_properties_usage"></a>
 
@@ -32,11 +32,11 @@ XAML에서 구문 *AttachedPropertyProvider*. *PropertyName*을 사용하여 연
 
 다음은 설정 하는 방법의 예가 <xref:System.Windows.Controls.DockPanel.Dock%2A?displayProperty=nameWithType> XAML에서:
 
-[!code-xaml[PropertiesOvwSupport#APBasicUsage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PropertiesOvwSupport/CSharp/page4.xaml#apbasicusage)]
+[!code-xaml[PropertiesOvwSupport#APBasicUsage](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertiesOvwSupport/CSharp/page4.xaml#apbasicusage)]
 
 사용법은 정적 속성;와 비슷한 참고 유형을 항상 참조 <xref:System.Windows.Controls.DockPanel> 소유 하 고 연결된 된 속성을 등록 하는 이름별로 지정 된 모든 인스턴스를 참조 하는 대신 합니다.
 
-또한 XAML에서 연결된 속성은 표시로 설정한 특성이므로 집합 작업만 관련됩니다. 스타일의 트리거와 같은 값을 비교하기 위한 일부 간접 메커니즘이 있더라도 XAML에서 속성을 직접 가져올 수 없습니다(자세한 내용은 [스타일 및 템플릿](../../../../docs/framework/wpf/controls/styling-and-templating.md) 참조).
+또한 XAML에서 연결된 속성은 표시로 설정한 특성이므로 집합 작업만 관련됩니다. 스타일의 트리거와 같은 값을 비교하기 위한 일부 간접 메커니즘이 있더라도 XAML에서 속성을 직접 가져올 수 없습니다(자세한 내용은 [스타일 및 템플릿](../controls/styling-and-templating.md) 참조).
 
 ### <a name="attached-property-implementation-in-wpf"></a>WPF에서 연결된 속성 구현
 
@@ -64,8 +64,8 @@ WPF에서 연결 된 속성 일반적인 없는 [!INCLUDE[TLA2#tla_clr](../../..
 
 다음 예제에서는 코드에서 연결된 속성을 설정하는 방법을 보여 줍니다. 이 예에서 `myCheckBox` 의 인스턴스는 <xref:System.Windows.Controls.CheckBox> 클래스입니다.
 
-[!code-csharp[PropertiesOvwSupport#APCode](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PropertiesOvwSupport/CSharp/page4.xaml.cs#apcode)]
-[!code-vb[PropertiesOvwSupport#APCode](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/PropertiesOvwSupport/visualbasic/page4.xaml.vb#apcode)]
+[!code-csharp[PropertiesOvwSupport#APCode](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertiesOvwSupport/CSharp/page4.xaml.cs#apcode)]
+[!code-vb[PropertiesOvwSupport#APCode](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PropertiesOvwSupport/visualbasic/page4.xaml.vb#apcode)]
 
 경우는 XAML 비슷하게 경우 `myCheckBox` 이미 자식 요소로 추가 하지 않았다면 `myDockPanel` 코드의 세 번째 줄에서 코드의 네 번째 줄에서 예외가 발생 하지는 않지만 속성 값을 상호 작용 하지는 <xref:System.Windows.Controls.DockPanel> 부모 이므로 아무 작업도 하지 않습니다. 만 <xref:System.Windows.Controls.DockPanel.Dock%2A?displayProperty=nameWithType> 의 존재와 결합 하는 자식 요소에 설정 된 값을 <xref:System.Windows.Controls.DockPanel> 부모 요소는 렌더링된 된 응용 프로그램의 동작이 효과적일 하면 합니다. (이 경우 연결된 속성을 설정한 다음 트리에 연결할 수 있습니다. 또는 트리에 연결한 다음 연결된 속성을 설정할 수 있습니다. 또는 동작 순서가 동일한 결과를 제공합니다.)
 
@@ -73,7 +73,7 @@ WPF에서 연결 된 속성 일반적인 없는 [!INCLUDE[TLA2#tla_clr](../../..
 
 속성을 등록할 때 <xref:System.Windows.FrameworkPropertyMetadata> 에 렌더링, 측정 등에 영향에 속성을 같은 속성의 특성을 지정 하도록 설정 됩니다. 연결된 속성에 대한 메타데이터는 일반적으로 종속성 속성과 차이가 없습니다. 연결된 속성 메타데이터 재정의에서 기본값을 지정하는 경우, 해당 값은 재정의 클래스의 인스턴스에서 암시적 연결된 속성의 기본값이 됩니다. 특히, 일부 프로세스가 해당 속성에 대한 `Get` 메서드 접근자를 통해 연결된 속성의 값을 쿼리하는 경우 기본값이 보고되어, 메타데이터를 지정한 클래스의 인스턴스 및 연결된 속성이 설정되지 않은 값을 지정합니다.
 
-속성에 속성 값 상속을 사용하도록 설정하려는 경우, 연결되지 않은 종속성 속성이 아니라 연결된 속성을 사용해야 합니다. 자세한 내용은 [속성 값 상속](../../../../docs/framework/wpf/advanced/property-value-inheritance.md)을 참조하십시오.
+속성에 속성 값 상속을 사용하도록 설정하려는 경우, 연결되지 않은 종속성 속성이 아니라 연결된 속성을 사용해야 합니다. 자세한 내용은 [속성 값 상속](property-value-inheritance.md)을 참조하십시오.
 
 ## 사용자 지정 연결 된 속성 <a name="custom"></a>
 
@@ -83,7 +83,7 @@ WPF에서 연결 된 속성 일반적인 없는 [!INCLUDE[TLA2#tla_clr](../../..
 
 연결된 속성을 사용하기 위한 다른 시나리오는 클래스가 서비스를 나타내는 경우이며, 클래스는 서비스를 더 투명하게 통합할 수 있습니다.
 
-Visual Studio WPF 디자이너 지원을 받을 수와 같은 다른 시나리오는 아직 **속성** 창 편집 합니다. 자세한 내용은 [컨트롤 제작 개요](../../../../docs/framework/wpf/controls/control-authoring-overview.md)를 참조하십시오.
+Visual Studio WPF 디자이너 지원을 받을 수와 같은 다른 시나리오는 아직 **속성** 창 편집 합니다. 자세한 내용은 [컨트롤 제작 개요](../controls/control-authoring-overview.md)를 참조하십시오.
 
 앞서 언급했듯이, 속성 값 상속을 사용하려는 경우 연결된 속성으로 등록해야 합니다.
 
@@ -118,8 +118,8 @@ Visual Studio WPF 디자이너 지원을 받을 수와 같은 다른 시나리�
 
 다음 예제에서는 종속성 속성 등록 (사용 하는 <xref:System.Windows.DependencyProperty.RegisterAttached%2A> 메서드), 뿐만 **Get_PropertyName_** 및 **Set_PropertyName_** 접근자입니다. 예제에서 연결된 속성 이름은 `IsBubbleSource`입니다. 따라서 접근자의 이름은 `GetIsBubbleSource` 및 `SetIsBubbleSource`입니다.
 
-[!code-csharp[WPFAquariumSln#RegisterAttachedBubbler](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WPFAquariumSln/CSharp/WPFAquariumObjects/Class1.cs#registerattachedbubbler)]
-[!code-vb[WPFAquariumSln#RegisterAttachedBubbler](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WPFAquariumSln/visualbasic/wpfaquariumobjects/class1.vb#registerattachedbubbler)]
+[!code-csharp[WPFAquariumSln#RegisterAttachedBubbler](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFAquariumSln/CSharp/WPFAquariumObjects/Class1.cs#registerattachedbubbler)]
+[!code-vb[WPFAquariumSln#RegisterAttachedBubbler](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WPFAquariumSln/visualbasic/wpfaquariumobjects/class1.vb#registerattachedbubbler)]
 
 #### <a name="attached-property-attributes"></a>연결된 속성 특성
 
@@ -135,16 +135,16 @@ WPF는 여러 정의 [!INCLUDE[TLA2#tla_netframewkattr#plural](../../../../inclu
 
 ## 연결 된 속성에 대해 자세히 알아보기 <a name="more"></a>
 
--   연결된 속성을 만드는 방법에 대한 자세한 내용은 [연결된 속성 등록](../../../../docs/framework/wpf/advanced/how-to-register-an-attached-property.md)을 참조하십시오.
+-   연결된 속성을 만드는 방법에 대한 자세한 내용은 [연결된 속성 등록](how-to-register-an-attached-property.md)을 참조하십시오.
 
--   종속성 속성 및 연결된 속성에 대한 고급 사용 시나리오는 [사용자 지정 종속성 속성](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md)을 참조하십시오.
+-   종속성 속성 및 연결된 속성에 대한 고급 사용 시나리오는 [사용자 지정 종속성 속성](custom-dependency-properties.md)을 참조하십시오.
 
 -   연결된 속성 및 종속성 속성으로 속성을 등록할 수도 있지만 "래퍼" 구현이 여전히 표시됩니다. 이 경우 속성은 해당 요소 또는 XAML 연결된 속성 구문을 통해 모든 요소에 설정될 수 있습니다. 표준 및 연결 된 사용에 대 한 적절 한 시나리오를 포함 하는 속성의 예로 <xref:System.Windows.FrameworkElement.FlowDirection%2A?displayProperty=nameWithType>합니다.
 
 ## <a name="see-also"></a>참고자료
 
 - <xref:System.Windows.DependencyProperty>
-- [종속성 속성 개요](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)
-- [사용자 지정 종속성 속성](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md)
-- [XAML 개요(WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)
-- [연결된 속성 등록](../../../../docs/framework/wpf/advanced/how-to-register-an-attached-property.md)
+- [종속성 속성 개요](dependency-properties-overview.md)
+- [사용자 지정 종속성 속성](custom-dependency-properties.md)
+- [XAML 개요(WPF)](xaml-overview-wpf.md)
+- [연결된 속성 등록](how-to-register-an-attached-property.md)

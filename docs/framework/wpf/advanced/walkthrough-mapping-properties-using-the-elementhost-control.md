@@ -8,12 +8,12 @@ helpviewer_keywords:
 - mapping properties [WPF]
 - ElementHost control [WPF], mapping properties
 ms.assetid: bccd6e0d-2272-4924-9107-ff8ed58b88aa
-ms.openlocfilehash: 29356f171506ece0fe35418f682681b19830d71c
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
+ms.openlocfilehash: 3fe3f00950fdfdf92c3f95dc42b27cc9110e0c95
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56746340"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57371686"
 ---
 # <a name="walkthrough-mapping-properties-using-the-elementhost-control"></a>연습: ElementHost 컨트롤을 사용 하 여 속성 매핑
 
@@ -57,8 +57,8 @@ ms.locfileid: "56746340"
 
 3.  맨 위에 다음 코드를 복사 합니다 `Form1` 코드 파일.
 
-     [!code-csharp[PropertyMappingWithElementHost#10](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PropertyMappingWithElementHost/CSharp/PropertyMappingWithElementHost/Form1.cs#10)]
-     [!code-vb[PropertyMappingWithElementHost#10](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/PropertyMappingWithElementHost/VisualBasic/PropertyMappingWithElementHost/Form1.vb#10)]
+     [!code-csharp[PropertyMappingWithElementHost#10](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertyMappingWithElementHost/CSharp/PropertyMappingWithElementHost/Form1.cs#10)]
+     [!code-vb[PropertyMappingWithElementHost#10](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PropertyMappingWithElementHost/VisualBasic/PropertyMappingWithElementHost/Form1.vb#10)]
 
 4.  Windows Forms 디자이너에서 `Form1`을 엽니다. 에 대 한 이벤트 처리기를 추가 하려면 폼을 두 번 클릭 합니다 <xref:System.Windows.Forms.Form.Load> 이벤트입니다.
 
@@ -66,8 +66,8 @@ ms.locfileid: "56746340"
 
 6.  선언를 <xref:System.Windows.Forms.Integration.ElementHost> 필드에 `Form1` 클래스입니다.
 
-     [!code-csharp[PropertyMappingWithElementHost#16](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PropertyMappingWithElementHost/CSharp/PropertyMappingWithElementHost/Form1.cs#16)]
-     [!code-vb[PropertyMappingWithElementHost#16](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/PropertyMappingWithElementHost/VisualBasic/PropertyMappingWithElementHost/Form1.vb#16)]
+     [!code-csharp[PropertyMappingWithElementHost#16](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertyMappingWithElementHost/CSharp/PropertyMappingWithElementHost/Form1.cs#16)]
+     [!code-vb[PropertyMappingWithElementHost#16](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PropertyMappingWithElementHost/VisualBasic/PropertyMappingWithElementHost/Form1.vb#16)]
 
 ## <a name="defining-new-property-mappings"></a>새 속성 매핑 정의
 
@@ -77,8 +77,8 @@ ms.locfileid: "56746340"
 
 1.  다음 코드에 대 한 정의를 복사 합니다 `Form1` 클래스입니다.
 
-     [!code-csharp[PropertyMappingWithElementHost#12](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PropertyMappingWithElementHost/CSharp/PropertyMappingWithElementHost/Form1.cs#12)]
-     [!code-vb[PropertyMappingWithElementHost#12](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/PropertyMappingWithElementHost/VisualBasic/PropertyMappingWithElementHost/Form1.vb#12)]
+     [!code-csharp[PropertyMappingWithElementHost#12](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertyMappingWithElementHost/CSharp/PropertyMappingWithElementHost/Form1.cs#12)]
+     [!code-vb[PropertyMappingWithElementHost#12](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PropertyMappingWithElementHost/VisualBasic/PropertyMappingWithElementHost/Form1.vb#12)]
 
      합니다 `AddMarginMapping` 에 대 한 새 매핑을 추가 하는 메서드는 <xref:System.Windows.Forms.Control.Margin%2A> 속성입니다.
 
@@ -86,8 +86,8 @@ ms.locfileid: "56746340"
 
 2.  다음 코드에 대 한 정의를 복사 합니다 `Form1` 클래스입니다.
 
-     [!code-csharp[PropertyMappingWithElementHost#14](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PropertyMappingWithElementHost/CSharp/PropertyMappingWithElementHost/Form1.cs#14)]
-     [!code-vb[PropertyMappingWithElementHost#14](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/PropertyMappingWithElementHost/VisualBasic/PropertyMappingWithElementHost/Form1.vb#14)]
+     [!code-csharp[PropertyMappingWithElementHost#14](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertyMappingWithElementHost/CSharp/PropertyMappingWithElementHost/Form1.cs#14)]
+     [!code-vb[PropertyMappingWithElementHost#14](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PropertyMappingWithElementHost/VisualBasic/PropertyMappingWithElementHost/Form1.vb#14)]
 
      합니다 `AddRegionMapping` 에 대 한 새 매핑을 추가 하는 메서드는 <xref:System.Windows.Forms.Control.Region%2A> 속성입니다.
 
@@ -103,8 +103,8 @@ ms.locfileid: "56746340"
 
 -   다음 코드에 대 한 정의를 복사 합니다 `Form1` 클래스입니다.
 
-     [!code-csharp[PropertyMappingWithElementHost#13](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PropertyMappingWithElementHost/CSharp/PropertyMappingWithElementHost/Form1.cs#13)]
-     [!code-vb[PropertyMappingWithElementHost#13](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/PropertyMappingWithElementHost/VisualBasic/PropertyMappingWithElementHost/Form1.vb#13)]
+     [!code-csharp[PropertyMappingWithElementHost#13](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertyMappingWithElementHost/CSharp/PropertyMappingWithElementHost/Form1.cs#13)]
+     [!code-vb[PropertyMappingWithElementHost#13](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PropertyMappingWithElementHost/VisualBasic/PropertyMappingWithElementHost/Form1.vb#13)]
 
      합니다 `RemoveCursorMapping` 에 대 한 기본 매핑을 삭제 하는 메서드를 <xref:System.Windows.Forms.Control.Cursor%2A> 속성입니다.
 
@@ -116,8 +116,8 @@ ms.locfileid: "56746340"
 
 -   다음 코드에 대 한 정의를 복사 합니다 `Form1` 클래스입니다.
 
-     [!code-csharp[PropertyMappingWithElementHost#15](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PropertyMappingWithElementHost/CSharp/PropertyMappingWithElementHost/Form1.cs#15)]
-     [!code-vb[PropertyMappingWithElementHost#15](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/PropertyMappingWithElementHost/VisualBasic/PropertyMappingWithElementHost/Form1.vb#15)]
+     [!code-csharp[PropertyMappingWithElementHost#15](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertyMappingWithElementHost/CSharp/PropertyMappingWithElementHost/Form1.cs#15)]
+     [!code-vb[PropertyMappingWithElementHost#15](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PropertyMappingWithElementHost/VisualBasic/PropertyMappingWithElementHost/Form1.vb#15)]
 
      합니다 `ExtendBackColorMapping` 메서드를 기존 사용자 지정 속성 변환기를 추가 <xref:System.Windows.Forms.Control.BackColor%2A> 속성 매핑.
 
@@ -127,8 +127,8 @@ ms.locfileid: "56746340"
 
 1.  다음 코드에 대 한 정의를 복사 합니다 `Form1` 클래스입니다.
 
-     [!code-csharp[PropertyMappingWithElementHost#11](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PropertyMappingWithElementHost/CSharp/PropertyMappingWithElementHost/Form1.cs#11)]
-     [!code-vb[PropertyMappingWithElementHost#11](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/PropertyMappingWithElementHost/VisualBasic/PropertyMappingWithElementHost/Form1.vb#11)]
+     [!code-csharp[PropertyMappingWithElementHost#11](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertyMappingWithElementHost/CSharp/PropertyMappingWithElementHost/Form1.cs#11)]
+     [!code-vb[PropertyMappingWithElementHost#11](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PropertyMappingWithElementHost/VisualBasic/PropertyMappingWithElementHost/Form1.vb#11)]
 
      `Form1_Load` 메서드 핸들을 <xref:System.Windows.Forms.Form.Load> 이벤트 하 고 다음과 같은 초기화를 수행 합니다.
 
@@ -145,6 +145,6 @@ ms.locfileid: "56746340"
 - <xref:System.Windows.Forms.Integration.ElementHost.PropertyMap%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost.PropertyMap%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost>
-- [Windows Forms 및 WPF 속성 매핑](../../../../docs/framework/wpf/advanced/windows-forms-and-wpf-property-mapping.md)
+- [Windows Forms 및 WPF 속성 매핑](windows-forms-and-wpf-property-mapping.md)
 - [Visual Studio에서 XAML 디자인](/visualstudio/designers/designing-xaml-in-visual-studio)
-- [연습: Windows Forms에서 WPF 복합 컨트롤 호스팅](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-wpf-composite-control-in-windows-forms.md)
+- [연습: Windows Forms에서 WPF 복합 컨트롤 호스팅](walkthrough-hosting-a-wpf-composite-control-in-windows-forms.md)

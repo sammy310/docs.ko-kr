@@ -7,20 +7,20 @@ helpviewer_keywords:
 - GridSplitter control [WPF], how-to topics
 - controls [WPF], GridSplitter
 ms.assetid: db0da67a-954f-42e6-bbf7-4e16b8cbb210
-ms.openlocfilehash: 5f9616f92d6b2dcaf2d8681572c45e379069a26c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 800898a4b6fc655785c7db0d9463c34e5eeaa0b7
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33552820"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57354416"
 ---
 # <a name="gridsplitter-how-to-topics"></a>GridSplitter 방법 항목
-이 섹션의 항목 사용 하는 방법에 설명 된 <xref:System.Windows.Controls.GridSplitter> 제어 합니다.  
+이 섹션의에서 항목에서는 사용 하는 방법에 설명 합니다 <xref:System.Windows.Controls.GridSplitter> 제어 합니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
- [GridSplitter로 행 크기 조정](../../../../docs/framework/wpf/controls/how-to-resize-rows-with-a-gridsplitter.md)  
- [GridSplitter로 열 크기 조정](../../../../docs/framework/wpf/controls/how-to-resize-columns-with-a-gridsplitter.md)  
- [GridSplitter 표시](../../../../docs/framework/wpf/controls/how-to-make-sure-that-a-gridsplitter-is-visible.md)  
+ [GridSplitter로 행 크기 조정](how-to-resize-rows-with-a-gridsplitter.md)  
+ [GridSplitter로 열 크기 조정](how-to-resize-columns-with-a-gridsplitter.md)  
+ [GridSplitter 표시](how-to-make-sure-that-a-gridsplitter-is-visible.md)  
   
 ## <a name="reference"></a>참조  
  <xref:System.Windows.Controls.GridSplitter>  

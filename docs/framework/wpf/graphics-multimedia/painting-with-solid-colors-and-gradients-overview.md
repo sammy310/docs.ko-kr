@@ -9,12 +9,12 @@ helpviewer_keywords:
 - brushes [WPF], painting with gradients
 - painting with solid colors [WPF]
 ms.assetid: f5b182f3-c5c7-4cbe-9f2f-65e690d08255
-ms.openlocfilehash: 72131780744e08d820f0aa05fdedd36b5458fa84
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 18a08c9bec8436399cd3acbf27198e0912e32d09
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54733937"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57362385"
 ---
 # <a name="painting-with-solid-colors-and-gradients-overview"></a>단색 및 그라데이션을 사용한 그리기 개요
 이 항목에서는 사용 하는 방법을 설명 <xref:System.Windows.Media.SolidColorBrush>, <xref:System.Windows.Media.LinearGradientBrush>, 및 <xref:System.Windows.Media.RadialGradientBrush> 단색, 선형 그라데이션 및 방사형 그라데이션을 그릴 개체입니다.  
@@ -31,15 +31,15 @@ ms.locfileid: "54733937"
   
 -   미리 정의된 단색 브러시를 이름으로 선택합니다.  예를 들어, 단추를 설정할 수 있습니다 <xref:System.Windows.Controls.Control.Background%2A> "Red" 또는 "mediumblue 로" 합니다.  단색 브러시 목록을 다른 미리 정의의 정적 속성 참조는 <xref:System.Windows.Media.Brushes> 클래스입니다. 다음은 예제입니다.  
   
-     [!code-xaml[BrushOverviewExamples_snip#SolidColorBrushNamedColor1XAML](../../../../samples/snippets/xaml/VS_Snippets_Wpf/BrushOverviewExamples_snip/XAML/SolidColorBrushExample.xaml#solidcolorbrushnamedcolor1xaml)]  
+     [!code-xaml[BrushOverviewExamples_snip#SolidColorBrushNamedColor1XAML](~/samples/snippets/xaml/VS_Snippets_Wpf/BrushOverviewExamples_snip/XAML/SolidColorBrushExample.xaml#solidcolorbrushnamedcolor1xaml)]  
   
 -   단색으로 조합할 빨강, 녹색 및 파랑의 양을 지정하여 32비트 색상표에서 색을 선택합니다.  32비트 색상표에서 색을 지정하기 위한 형식은 "*#rrggbb*"입니다. 여기서 *rr*은 빨강의 상대적 양을 지정하는 2자리 16진수 숫자이고 *gg*는 녹색의 양을 지정하고, *bb*는 파랑의 양을 지정합니다.  또한 "#*aarrggbb*"로 색을 지정할 수도 있습니다. 여기서 *aa*는 색의 *알파* 값 또는 투명도를 지정합니다. 이 방법은 사용하면 부분적으로 투명한 색을 만들 수 있습니다.  다음 예제에서는 <xref:System.Windows.Controls.Control.Background%2A> 의 <xref:System.Windows.Controls.Button> 16 진수 표기법을 사용 하는 완전히 불투명 한 빨강으로 설정 됩니다.  
   
-     [!code-xaml[BrushOverviewExamples_snip#SolidColorBrushHex1XAML](../../../../samples/snippets/xaml/VS_Snippets_Wpf/BrushOverviewExamples_snip/XAML/SolidColorBrushExample.xaml#solidcolorbrushhex1xaml)]  
+     [!code-xaml[BrushOverviewExamples_snip#SolidColorBrushHex1XAML](~/samples/snippets/xaml/VS_Snippets_Wpf/BrushOverviewExamples_snip/XAML/SolidColorBrushExample.xaml#solidcolorbrushhex1xaml)]  
   
 -   속성 태그 구문을 설명 하는 데는 <xref:System.Windows.Media.SolidColorBrush>합니다. 이 구문은 좀 더 복잡하지만 브러시의 불투명도 등의 추가 설정을 지정할 수 있습니다. 다음 예제에서는 <xref:System.Windows.Controls.Control.Background%2A> 의 두 속성 <xref:System.Windows.Controls.Button> 요소는 완전히 불투명 한 빨강으로 설정 됩니다. 첫 번째 브러시 색은 미리 정의된 색 이름을 사용하여 설명됩니다. 두 번째 브러시 색은 16진수 표기법을 사용하여 설명됩니다.  
   
-     [!code-xaml[BrushOverviewExamples_snip#SolidColorBrushPropertyTag1XAML](../../../../samples/snippets/xaml/VS_Snippets_Wpf/BrushOverviewExamples_snip/XAML/SolidColorBrushExample.xaml#solidcolorbrushpropertytag1xaml)]  
+     [!code-xaml[BrushOverviewExamples_snip#SolidColorBrushPropertyTag1XAML](~/samples/snippets/xaml/VS_Snippets_Wpf/BrushOverviewExamples_snip/XAML/SolidColorBrushExample.xaml#solidcolorbrushpropertytag1xaml)]  
   
 <a name="solidcolorsincode"></a>   
 ### <a name="painting-with-a-solidcolorbrush-in-code"></a>코드에서 SolidColorBrush를 사용하여 그리기  
@@ -47,17 +47,17 @@ ms.locfileid: "54733937"
   
 -   제공한 미리 정의 된 브러시 중 하나를 사용 하 여 <xref:System.Windows.Media.Brushes> 클래스입니다. 다음 예제에서는 <xref:System.Windows.Controls.Control.Background%2A> 의 <xref:System.Windows.Controls.Button> 로 설정 된 <xref:System.Windows.Media.Brushes.Red%2A>합니다.  
   
-     [!code-csharp[BrushOverviewExamples_snip#SolidColorBrushPredefinedBrush1CSharp](../../../../samples/snippets/csharp/VS_Snippets_Wpf/BrushOverviewExamples_snip/CSharp/SolidColorBrushExample.cs#solidcolorbrushpredefinedbrush1csharp)]  
+     [!code-csharp[BrushOverviewExamples_snip#SolidColorBrushPredefinedBrush1CSharp](~/samples/snippets/csharp/VS_Snippets_Wpf/BrushOverviewExamples_snip/CSharp/SolidColorBrushExample.cs#solidcolorbrushpredefinedbrush1csharp)]  
   
 -   만들기는 <xref:System.Windows.Media.SolidColorBrush> 설정 및 해당 <xref:System.Windows.Media.SolidColorBrush.Color%2A> 사용 하 여 속성을 <xref:System.Windows.Media.Color> 구조입니다. 미리 정의 된 색을 사용할 수는 <xref:System.Windows.Media.Colors> 클래스 만들 수 있습니다를 <xref:System.Windows.Media.Color> 정적을 사용 하 여 <xref:System.Windows.Media.Color.FromArgb%2A> 메서드.  
   
      다음 예제에서는 설정 하는 방법을 보여 줍니다 합니다 <xref:System.Windows.Media.SolidColorBrush.Color%2A> 의 속성을 <xref:System.Windows.Media.SolidColorBrush> 미리 정의 된 색을 사용 하 여 합니다.  
   
-     [!code-csharp[BrushOverviewExamples_snip#SolidColorBrushPredefinedColor1CSharp](../../../../samples/snippets/csharp/VS_Snippets_Wpf/BrushOverviewExamples_snip/CSharp/SolidColorBrushExample.cs#solidcolorbrushpredefinedcolor1csharp)]  
+     [!code-csharp[BrushOverviewExamples_snip#SolidColorBrushPredefinedColor1CSharp](~/samples/snippets/csharp/VS_Snippets_Wpf/BrushOverviewExamples_snip/CSharp/SolidColorBrushExample.cs#solidcolorbrushpredefinedcolor1csharp)]  
   
  정적 <xref:System.Windows.Media.Color.FromArgb%2A> 색의 알파, 빨강, 녹색 및 파랑 값을 지정할 수 있습니다. 이러한 각 값의 일반적인 범위는 0-255입니다. 예를 들어 알파 값이 0이면 색이 완전히 투명하고, 값이 255이면 색이 완전히 불투명합니다. 마찬가지로 빨강 값이 0이면 색에 빨강이 전혀 없는 것이지만 255이면 최대의 빨강이 포함되어 있는 것입니다.  다음 예제에서 브러시의 색은 알파, 빨강, 녹색 및 파랑 값을 지정하여 설명됩니다.  
   
- [!code-csharp[BrushOverviewExamples_snip#SolidColorBrushfromArgbExample1CSharp](../../../../samples/snippets/csharp/VS_Snippets_Wpf/BrushOverviewExamples_snip/CSharp/SolidColorBrushExample.cs#solidcolorbrushfromargbexample1csharp)]  
+ [!code-csharp[BrushOverviewExamples_snip#SolidColorBrushfromArgbExample1CSharp](~/samples/snippets/csharp/VS_Snippets_Wpf/BrushOverviewExamples_snip/CSharp/SolidColorBrushExample.cs#solidcolorbrushfromargbexample1csharp)]  
   
  색을 지정 하는 다른 방법에 대해서는 <xref:System.Windows.Media.Color> 참조 항목입니다.  
   
@@ -71,13 +71,13 @@ ms.locfileid: "54733937"
   
  다음 예제에서는 네 가지 색으로 선형 그라데이션을 만드는 코드를 보여 줍니다.  
   
- [!code-xaml[GradientBrushExamples_snip#DiagonalGradient1XAML](../../../../samples/snippets/xaml/VS_Snippets_Wpf/GradientBrushExamples_snip/XAML/LinearGradientBrushExample.xaml#diagonalgradient1xaml)]  
+ [!code-xaml[GradientBrushExamples_snip#DiagonalGradient1XAML](~/samples/snippets/xaml/VS_Snippets_Wpf/GradientBrushExamples_snip/XAML/LinearGradientBrushExample.xaml#diagonalgradient1xaml)]  
   
- [!code-csharp[GradientBrushExamples_snip#DiagonalGradient1CSharp](../../../../samples/snippets/csharp/VS_Snippets_Wpf/GradientBrushExamples_snip/CSharp/LinearGradientBrushExample.cs#diagonalgradient1csharp)]  
+ [!code-csharp[GradientBrushExamples_snip#DiagonalGradient1CSharp](~/samples/snippets/csharp/VS_Snippets_Wpf/GradientBrushExamples_snip/CSharp/LinearGradientBrushExample.cs#diagonalgradient1csharp)]  
   
  이 코드는 다음 그라데이션을 생성합니다.  
   
- ![대각선 선형 그라데이션](../../../../docs/framework/wpf/graphics-multimedia/media/wcpsdk-graphicsmm-diaglgradient-nolabel.jpg "wcpsdk_graphicsmm_diaglgradient_nolabel")  
+ ![대각선 선형 그라데이션](./media/wcpsdk-graphicsmm-diaglgradient-nolabel.jpg "wcpsdk_graphicsmm_diaglgradient_nolabel")  
   
  **참고:** 이 항목의 그라데이션 예제는 시작점 및 끝점 설정에 대 한 기본 좌표계를 사용 합니다. 기본 좌표계는 경계 상자를 기준으로 합니다. 0의 경계 상자 및 1 0% 나타냅니다 경계 상자의 100%를 나타냅니다. 설정 하 여이 좌표계를 변경할 수 있습니다 합니다 <xref:System.Windows.Media.GradientBrush.MappingMode%2A> 속성 값을 <xref:System.Windows.Media.BrushMappingMode.Absolute>입니다. 절대 좌표계는 경계 상자를 기준으로 하지 않습니다. 값은 로컬 공간에서 직접 해석됩니다.  
   
@@ -89,7 +89,7 @@ ms.locfileid: "54733937"
   
  그라데이션 중지점 사이에 있는 각 점의 색은 두 경계 그라데이션 중지점으로 지정되는 색 조합으로 선형 보간됩니다. 다음 그림에서는 이전 예제의 그라데이션 중지점을 강조해서 보여 줍니다. 그라데이션 중지점에는 동그라미가 그려져 있고 그라데이션 축은 점선으로 표시됩니다.  
   
- ![선형 그라데이션의 그라데이션 중지점](../../../../docs/framework/wpf/graphics-multimedia/media/wcpsdk-graphicsmm-4gradientstops.png "wcpsdk_graphicsmm_4gradientstops")  
+ ![선형 그라데이션의 그라데이션 중지점](./media/wcpsdk-graphicsmm-4gradientstops.png "wcpsdk_graphicsmm_4gradientstops")  
   
  첫 번째 그라데이션 중지점은 오프셋 `0.0`에서 노란색을 지정합니다.  두 번째 그라데이션 중지점은 오프셋 `0.25`에서 빨간색을 지정합니다.  이러한 두 중지점 사이에 있는 점들은 그라데이션 축을 따라 왼쪽에서 오른쪽으로 이동할 때 노란색에서 빨간색으로 서서히 변경됩니다.  세 번째 그라데이션 중지점은 오프셋 `0.75`에서 파란색을 지정합니다.  두 번째 및 세 번째 그라데이션 중지점 사이에 있는 점들은 빨간색에서 파란색으로 서서히 변경됩니다. 네 번째 그라데이션 중지점은 오프셋 `1.0`에서 라임 녹색을 지정합니다. 세 번째 및 네 번째 그라데이션 중지점 사이에 있는 점들은 파란색에서 라임 녹색으로 서서히 변경됩니다.  
   
@@ -99,27 +99,27 @@ ms.locfileid: "54733937"
   
  기본적으로 선형 그라데이션 브러시의 <xref:System.Windows.Media.LinearGradientBrush.StartPoint%2A> 고 <xref:System.Windows.Media.LinearGradientBrush.EndPoint%2A> 그려지는 영역을 기준으로 합니다. 점 (0,0)은 그리는 영역의 왼쪽 위 구석을 나타내고 (1,1)은 그리는 영역의 오른쪽 아래 구석을 나타냅니다. 기본값 <xref:System.Windows.Media.LinearGradientBrush.StartPoint%2A> 의 <xref:System.Windows.Media.LinearGradientBrush> 은 (0, 0) 및 해당 기본 <xref:System.Windows.Media.LinearGradientBrush.EndPoint%2A> (1, 1) 왼쪽 위 모퉁이에서 시작 하 고 그리는 영역의 오른쪽 아래 모서리에 확장 대각선 그라데이션을 만듭니다. 다음 그림에서는 기본값을 사용 하 여 선형 그라데이션 브러시의 그라데이션 축은 <xref:System.Windows.Media.LinearGradientBrush.StartPoint%2A> 고 <xref:System.Windows.Media.LinearGradientBrush.EndPoint%2A>입니다.  
   
- ![대각선 선형 그라데이션의 그라데이션 축](../../../../docs/framework/wpf/graphics-multimedia/media/wcpsdk-graphicsmm-diagonalgradientaxis.png "wcpsdk_graphicsmm_diagonalgradientaxis")  
+ ![대각선 선형 그라데이션의 그라데이션 축](./media/wcpsdk-graphicsmm-diagonalgradientaxis.png "wcpsdk_graphicsmm_diagonalgradientaxis")  
   
  다음 예제에서는 만드는 방법을 보여 줍니다 가로 그라데이션 브러시를 지정 하 여 <xref:System.Windows.Media.LinearGradientBrush.StartPoint%2A> 고 <xref:System.Windows.Media.LinearGradientBrush.EndPoint%2A>입니다. 그라데이션 중지점의 이전 예와 동일한 지 확인할 수 있습니다. 단순히 변경 하 여는 <xref:System.Windows.Media.LinearGradientBrush.StartPoint%2A> 고 <xref:System.Windows.Media.LinearGradientBrush.EndPoint%2A>, 그라데이션 대각선에서 가로로 변경 되었습니다.  
   
- [!code-xaml[GradientBrushExamples_snip#HorizontalGradient1XAML](../../../../samples/snippets/xaml/VS_Snippets_Wpf/GradientBrushExamples_snip/XAML/LinearGradientBrushExample.xaml#horizontalgradient1xaml)]  
+ [!code-xaml[GradientBrushExamples_snip#HorizontalGradient1XAML](~/samples/snippets/xaml/VS_Snippets_Wpf/GradientBrushExamples_snip/XAML/LinearGradientBrushExample.xaml#horizontalgradient1xaml)]  
   
- [!code-csharp[GradientBrushExamples_snip#HorizontalGradient1CSharp](../../../../samples/snippets/csharp/VS_Snippets_Wpf/GradientBrushExamples_snip/CSharp/LinearGradientBrushExample.cs#horizontalgradient1csharp)]  
+ [!code-csharp[GradientBrushExamples_snip#HorizontalGradient1CSharp](~/samples/snippets/csharp/VS_Snippets_Wpf/GradientBrushExamples_snip/CSharp/LinearGradientBrushExample.cs#horizontalgradient1csharp)]  
   
  다음 그림은 만들어진 그라데이션을 보여 줍니다. 그라데이션 축은 점선으로 표시되고 그라데이션 중지점은 동그라미로 표시됩니다.  
   
- ![가로 선형 그라데이션의 그라데이션 축](../../../../docs/framework/wpf/graphics-multimedia/media/wcpsdk-graphicsmm-horizontalgradient.jpg "wcpsdk_graphicsmm_horizontalgradient")  
+ ![가로 선형 그라데이션의 그라데이션 축](./media/wcpsdk-graphicsmm-horizontalgradient.jpg "wcpsdk_graphicsmm_horizontalgradient")  
   
  다음 예제에서는 세로 그라데이션을 만드는 방법을 보여 줍니다.  
   
- [!code-xaml[GradientBrushExamples_snip#VerticalGradient1XAML](../../../../samples/snippets/xaml/VS_Snippets_Wpf/GradientBrushExamples_snip/XAML/LinearGradientBrushExample.xaml#verticalgradient1xaml)]  
+ [!code-xaml[GradientBrushExamples_snip#VerticalGradient1XAML](~/samples/snippets/xaml/VS_Snippets_Wpf/GradientBrushExamples_snip/XAML/LinearGradientBrushExample.xaml#verticalgradient1xaml)]  
   
- [!code-csharp[GradientBrushExamples_snip#VerticalGradient1CSharp](../../../../samples/snippets/csharp/VS_Snippets_Wpf/GradientBrushExamples_snip/CSharp/LinearGradientBrushExample.cs#verticalgradient1csharp)]  
+ [!code-csharp[GradientBrushExamples_snip#VerticalGradient1CSharp](~/samples/snippets/csharp/VS_Snippets_Wpf/GradientBrushExamples_snip/CSharp/LinearGradientBrushExample.cs#verticalgradient1csharp)]  
   
  다음 그림은 만들어진 그라데이션을 보여 줍니다. 그라데이션 축은 점선으로 표시되고 그라데이션 중지점은 동그라미로 표시됩니다.  
   
- ![세로 그라데이션의 그라데이션 축](../../../../docs/framework/wpf/graphics-multimedia/media/wcpsdk-graphicsmm-verticalgradient.jpg "wcpsdk_graphicsmm_verticalgradient")  
+ ![세로 그라데이션의 그라데이션 축](./media/wcpsdk-graphicsmm-verticalgradient.jpg "wcpsdk_graphicsmm_verticalgradient")  
   
 <a name="radialgradients"></a>   
 ## <a name="radial-gradients"></a>방사형 그라데이션  
@@ -127,19 +127,19 @@ ms.locfileid: "54733937"
   
  다음 예제에서는 방사형 그라데이션 브러시를 사용하여 사각형의 내부를 그립니다.  
   
- [!code-xaml[GradientBrushExamples_snip#RadialGradient1XAML](../../../../samples/snippets/xaml/VS_Snippets_Wpf/GradientBrushExamples_snip/XAML/RadialGradientBrushExample.xaml#radialgradient1xaml)]  
+ [!code-xaml[GradientBrushExamples_snip#RadialGradient1XAML](~/samples/snippets/xaml/VS_Snippets_Wpf/GradientBrushExamples_snip/XAML/RadialGradientBrushExample.xaml#radialgradient1xaml)]  
   
- [!code-csharp[GradientBrushExamples_snip#RadialGradient1CSharp](../../../../samples/snippets/csharp/VS_Snippets_Wpf/GradientBrushExamples_snip/CSharp/RadialGradientBrushExample.cs#radialgradient1csharp)]  
+ [!code-csharp[GradientBrushExamples_snip#RadialGradient1CSharp](~/samples/snippets/csharp/VS_Snippets_Wpf/GradientBrushExamples_snip/CSharp/RadialGradientBrushExample.cs#radialgradient1csharp)]  
   
  다음 그림은 이전 예제에서 만든 그라데이션을 보여 줍니다. 브러시의 그라데이션 중지점은 강조 표시되어 있습니다. 결과는 다르지만 이 예제의 그라데이션 중지점은 이전 선형 그라데이션 브러시 예제의 그라데이션 중지점과 동일합니다.  
   
- ![방사형 그라데이션의 그라데이션 중지점](../../../../docs/framework/wpf/graphics-multimedia/media/wcpsdk-graphicsmm-4gradientstops-rg.png "wcpsdk_graphicsmm_4gradientstops")  
+ ![방사형 그라데이션의 그라데이션 중지점](./media/wcpsdk-graphicsmm-4gradientstops-rg.png "wcpsdk_graphicsmm_4gradientstops")  
   
  <xref:System.Windows.Media.RadialGradientBrush.GradientOrigin%2A> 방사형 그라데이션 브러시의 그라데이션 축의 시작점을 지정 합니다. 그라데이션 축은 그라데이션 원점에서 그라데이션 원으로 방사됩니다. 브러시의 그라데이션 원은 정의한 해당 <xref:System.Windows.Media.RadialGradientBrush.Center%2A>, <xref:System.Windows.Media.RadialGradientBrush.RadiusX%2A>, 및 <xref:System.Windows.Media.RadialGradientBrush.RadiusY%2A> 속성입니다.  
   
  다음 그림에서는 다른 몇 개의 방사형 그라데이션을 <xref:System.Windows.Media.RadialGradientBrush.GradientOrigin%2A>, <xref:System.Windows.Media.RadialGradientBrush.Center%2A>를 <xref:System.Windows.Media.RadialGradientBrush.RadiusX%2A>, 및 <xref:System.Windows.Media.RadialGradientBrush.RadiusY%2A> 설정 합니다.  
   
- ![RadialGradientBrush 설정](../../../../docs/framework/wpf/graphics-multimedia/media/wcpsdk-graphicsmm-originscirclesandradii.gif "wcpsdk_graphicsmm_originscirclesandradii")  
+ ![RadialGradientBrush 설정](./media/wcpsdk-graphicsmm-originscirclesandradii.gif "wcpsdk_graphicsmm_originscirclesandradii")  
 다른 GradientOrigin, Center, RadiusX 및 RadiusY 설정을 갖는 RadialGradientBrushes입니다.  
   
 <a name="specifyinggradientcolors"></a>   
@@ -154,25 +154,25 @@ ms.locfileid: "54733937"
   
  이전 줄의 *aa*는 색의 불투명도 지정하는 데 사용되는 2자리 16진수 값을 나타냅니다. *rr*, *gg* 및 *bb* 각각은 색에서 빨강, 녹색 및 파랑의 양을 지정하는 데 사용되는 2자리 16진수 값을 나타냅니다. 각 16진수 숫자는 0-9 또는 A-F의 값을 가질 수 있습니다. 0이 가장 작은 값이고 F가 가장 큰 값입니다. 알파 값 00은 완전히 투명한 색을 지정하지만 알파 값 FF는 완전히 불투명한 색을 만듭니다.  다음 예제에서는 16진수 [!INCLUDE[TLA2#tla_argb](../../../../includes/tla2sharptla-argb-md.md)] 표기법이 두 색을 지정하는 데 사용됩니다. 첫 번째는 부분적으로 투명하지만(알파 값 x20), 두 번째는 완전히 불투명합니다.  
   
- [!code-xaml[GradientBrushExamples_snip#TransparentGradientStopExample1XAML](../../../../samples/snippets/xaml/VS_Snippets_Wpf/GradientBrushExamples_snip/XAML/GradientStopsExample.xaml#transparentgradientstopexample1xaml)]  
+ [!code-xaml[GradientBrushExamples_snip#TransparentGradientStopExample1XAML](~/samples/snippets/xaml/VS_Snippets_Wpf/GradientBrushExamples_snip/XAML/GradientStopsExample.xaml#transparentgradientstopexample1xaml)]  
   
 <a name="fromscrgbsyntax"></a>   
 ### <a name="specifying-color-opacity-in-code"></a>코드에서 색 불투명도 지정  
  정적 코드를 사용 하는 경우 <xref:System.Windows.Media.Color.FromArgb%2A> 메서드를 사용 하면 색을 만들 때 알파 값을 지정할 수 있습니다. 메서드는 4 개의 매개 변수 형식의 <xref:System.Byte>합니다. 첫 번째 매개 변수는 색의 알파 채널을 지정하고, 나머지 매개 변수 3개는 색의 빨강, 녹색 및 파랑 값을 지정합니다. 각 값은 0에서 255 이하여야 합니다. 알파 값이 0이면 색이 완전히 투명하고, 알파 값이 255이면 색이 완전히 불투명한 것입니다. 다음 예에서 <xref:System.Windows.Media.Color.FromArgb%2A> 메서드는 두 가지 색을 만드는 데 사용 됩니다. 첫 번째 색은 부분적으로 투명하지만(알파 값 32), 두 번째 색은 완전히 불투명합니다.  
   
- [!code-csharp[GradientBrushExamples_snip#TransparentGradientStopExample1CSharp](../../../../samples/snippets/csharp/VS_Snippets_Wpf/GradientBrushExamples_snip/CSharp/GradientStopsExample.cs#transparentgradientstopexample1csharp)]  
+ [!code-csharp[GradientBrushExamples_snip#TransparentGradientStopExample1CSharp](~/samples/snippets/csharp/VS_Snippets_Wpf/GradientBrushExamples_snip/CSharp/GradientStopsExample.cs#transparentgradientstopexample1csharp)]  
   
  사용할 수 있습니다는 <xref:System.Windows.Media.Color.FromScRgb%2A> 메서드 ScRGB 값을 사용 하 여 색을 만들 수 있습니다.  
   
 <a name="otherbrushes"></a>   
 ## <a name="painting-with-images-drawings-visuals-and-patterns"></a>이미지, 그림, 시각적 표시 및 패턴으로 그리기  
- <xref:System.Windows.Media.ImageBrush>를 <xref:System.Windows.Media.DrawingBrush>, 및 <xref:System.Windows.Media.VisualBrush> 클래스를 사용 하면 이미지, 그림 및 시각적 개체를 사용 하 여 영역을 그릴 수 있습니다. 이미지, 그림 및 패턴으로 그리기에 대한 자세한 내용은 [이미지, 그림 및 시각적 표시로 그리기](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md)를 참조하세요.  
+ <xref:System.Windows.Media.ImageBrush>를 <xref:System.Windows.Media.DrawingBrush>, 및 <xref:System.Windows.Media.VisualBrush> 클래스를 사용 하면 이미지, 그림 및 시각적 개체를 사용 하 여 영역을 그릴 수 있습니다. 이미지, 그림 및 패턴으로 그리기에 대한 자세한 내용은 [이미지, 그림 및 시각적 표시로 그리기](painting-with-images-drawings-and-visuals.md)를 참조하세요.  
   
 ## <a name="see-also"></a>참고자료
 - <xref:System.Windows.Media.Brush>
 - <xref:System.Windows.Media.SolidColorBrush>
 - <xref:System.Windows.Media.LinearGradientBrush>
 - <xref:System.Windows.Media.RadialGradientBrush>
-- [이미지, 그림 및 시각적 표시로 그리기](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md)
-- [브러시 변환 개요](../../../../docs/framework/wpf/graphics-multimedia/brush-transformation-overview.md)
-- [그래픽 렌더링 계층](../../../../docs/framework/wpf/advanced/graphics-rendering-tiers.md)
+- [이미지, 그림 및 시각적 표시로 그리기](painting-with-images-drawings-and-visuals.md)
+- [브러시 변환 개요](brush-transformation-overview.md)
+- [그래픽 렌더링 계층](../advanced/graphics-rendering-tiers.md)

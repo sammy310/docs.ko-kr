@@ -6,12 +6,12 @@ helpviewer_keywords:
 - TreeView control [WPF], about TreeView control
 - Control class [WPF], TreeView
 ms.assetid: 62212512-5a5c-4864-949e-b6a6a3a52c02
-ms.openlocfilehash: 42e6601ecc65ec3534b82154bffc1076e10db665
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5758aead9811cdbaf7f61bbd710092f6b4474ad8
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54504290"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57369632"
 ---
 # <a name="treeview-overview"></a>TreeView 개요
 <xref:System.Windows.Controls.TreeView> 컨트롤은 축소 가능한 노드를 사용 하 여 계층 구조에서 정보를 표시 하는 방법을 제공 합니다. 이 항목에서는 소개 합니다 <xref:System.Windows.Controls.TreeView> 고 <xref:System.Windows.Controls.TreeViewItem> 컨트롤 및 사용 하는 간단한 예제를 제공 합니다.  
@@ -21,7 +21,7 @@ ms.locfileid: "54504290"
 ## <a name="what-is-a-treeview"></a>TreeView란?  
  <xref:System.Windows.Controls.TreeView> <xref:System.Windows.Controls.ItemsControl> 를 사용 하 여 항목을 중첩 하 <xref:System.Windows.Controls.TreeViewItem> 컨트롤입니다. 다음 예제에서는 <xref:System.Windows.Controls.TreeView>합니다.  
   
- [!code-xaml[TreeViewSnips#EmbeddedTVIs](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TreeViewSnips/CSharp/Window1.xaml#embeddedtvis)]  
+ [!code-xaml[TreeViewSnips#EmbeddedTVIs](~/samples/snippets/csharp/VS_Snippets_Wpf/TreeViewSnips/CSharp/Window1.xaml#embeddedtvis)]  
   
 <a name="Creating_a_TreeView"></a>   
 ## <a name="creating-a-treeview"></a>TreeView 만들기  
@@ -31,7 +31,7 @@ ms.locfileid: "54504290"
   
  지정할 수도 있습니다는 <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A> 데이터 원본 및 다음 지정을 <xref:System.Windows.Controls.HeaderedItemsControl.HeaderTemplate%2A> 및 <xref:System.Windows.Controls.ItemsControl.ItemTemplate%2A> 정의 하는 <xref:System.Windows.Controls.TreeViewItem> 콘텐츠.  
   
- 레이아웃을 정의 하는 <xref:System.Windows.Controls.TreeViewItem> 컨트롤을 사용할 수도 있습니다 <xref:System.Windows.HierarchicalDataTemplate> 개체입니다. 자세한 내용 및 예제는 [SelectedValue, SelectedValuePath 및 SelectedItem 사용](../../../../docs/framework/wpf/controls/how-to-use-selectedvalue-selectedvaluepath-and-selecteditem.md)을 참조하세요.  
+ 레이아웃을 정의 하는 <xref:System.Windows.Controls.TreeViewItem> 컨트롤을 사용할 수도 있습니다 <xref:System.Windows.HierarchicalDataTemplate> 개체입니다. 자세한 내용 및 예제는 [SelectedValue, SelectedValuePath 및 SelectedItem 사용](how-to-use-selectedvalue-selectedvaluepath-and-selecteditem.md)을 참조하세요.  
   
  항목이 없는 경우는 <xref:System.Windows.Controls.TreeViewItem> 컨트롤을 자동으로 묶어야 하 여를 <xref:System.Windows.Controls.TreeViewItem> 제어를 <xref:System.Windows.Controls.TreeView> 컨트롤이 표시 됩니다.  
   
@@ -47,7 +47,7 @@ ms.locfileid: "54504290"
   
  합니다 <xref:System.Windows.Controls.TreeView.SelectedItem%2A> 속성에는 <xref:System.Windows.Controls.TreeView> 제어는 읽기 전용 속성은 명시적으로 설정할 수 없습니다 따라서 합니다. <xref:System.Windows.Controls.TreeView.SelectedItem%2A> 클릭할 경우 속성이 설정 되어를 <xref:System.Windows.Controls.TreeViewItem> 컨트롤 때나를 <xref:System.Windows.Controls.TreeViewItem.IsSelected%2A> 속성이로 설정 되어 `true` 에 <xref:System.Windows.Controls.TreeViewItem> 컨트롤입니다.  
   
- 사용 하 여는 <xref:System.Windows.Controls.TreeView.SelectedValuePath%2A> 지정 하는 속성을 <xref:System.Windows.Controls.TreeView.SelectedValue%2A> 의 <xref:System.Windows.Controls.TreeView.SelectedItem%2A>. 자세한 내용은 [SelectedValue, SelectedValuePath 및 SelectedItem 사용](../../../../docs/framework/wpf/controls/how-to-use-selectedvalue-selectedvaluepath-and-selecteditem.md)을 참조하세요.  
+ 사용 하 여는 <xref:System.Windows.Controls.TreeView.SelectedValuePath%2A> 지정 하는 속성을 <xref:System.Windows.Controls.TreeView.SelectedValue%2A> 의 <xref:System.Windows.Controls.TreeView.SelectedItem%2A>. 자세한 내용은 [SelectedValue, SelectedValuePath 및 SelectedItem 사용](how-to-use-selectedvalue-selectedvaluepath-and-selecteditem.md)을 참조하세요.  
   
  이벤트 처리기를 등록할 수 있습니다 합니다 <xref:System.Windows.Controls.TreeView.SelectedItemChanged> 선택 된 시기를 확인 하려면 이벤트 <xref:System.Windows.Controls.TreeViewItem> 변경 합니다. 합니다 <xref:System.Windows.RoutedPropertyChangedEventArgs%601> 이벤트 처리기는 다음과 같이 지정 됩니다. 제공 되는 합니다 <xref:System.Windows.RoutedPropertyChangedEventArgs%601.OldValue%2A>, 이전 선택 항목인 및 <xref:System.Windows.RoutedPropertyChangedEventArgs%601.NewValue%2A>, 현재 선택 항목인 합니다. 애플리케이션 또는 사용자가 이전 또는 현재에 선택한 항목이 없는 경우 두 값은 `null`이 될 수 있습니다.  
   
@@ -59,7 +59,7 @@ ms.locfileid: "54504290"
   
  다음 예제에서는 설정 하는 방법을 보여 줍니다를 <xref:System.Windows.Controls.Control.Foreground%2A> 및 <xref:System.Windows.Controls.Control.FontSize%2A> 속성에 대 한 값을 <xref:System.Windows.Controls.TreeViewItem> 사용 하 여 컨트롤을 <xref:System.Windows.FrameworkElement.Style%2A>합니다.  
   
- [!code-xaml[TreeViewSimple#8](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TreeViewSimple/CS/Window1.xaml#8)]  
+ [!code-xaml[TreeViewSimple#8](~/samples/snippets/csharp/VS_Snippets_Wpf/TreeViewSimple/CS/Window1.xaml#8)]  
   
 <a name="Adding_Images_and_oOther_Content_to_TreeView_Items"></a>   
 ## <a name="adding-images-and-other-content-to-treeview-items"></a>TreeView 항목에 이미지 및 기타 콘텐츠 추가  
@@ -67,14 +67,14 @@ ms.locfileid: "54504290"
   
  다음 예제에서는 정의 하는 방법을 보여 줍니다 합니다 <xref:System.Windows.Controls.HeaderedItemsControl.Header%2A> 의 <xref:System.Windows.Controls.TreeViewItem> 으로 <xref:System.Windows.Controls.CheckBox> 및 <xref:System.Windows.Controls.TextBlock> 는에 포함 된를 <xref:System.Windows.Controls.DockPanel> 컨트롤입니다.  
   
- [!code-xaml[TreeViewSnips#TVIHeader](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TreeViewSnips/CSharp/Window1.xaml#tviheader)]  
+ [!code-xaml[TreeViewSnips#TVIHeader](~/samples/snippets/csharp/VS_Snippets_Wpf/TreeViewSnips/CSharp/Window1.xaml#tviheader)]  
   
  다음 예제에서는 정의 하는 방법을 보여 줍니다를 <xref:System.Windows.DataTemplate> 를 포함 하는 <xref:System.Windows.Controls.Image> 및 <xref:System.Windows.Controls.TextBlock> 에 포함 된를 <xref:System.Windows.Controls.DockPanel> 컨트롤입니다. 사용할 수는 <xref:System.Windows.DataTemplate> 설정 하는 <xref:System.Windows.Controls.HeaderedItemsControl.HeaderTemplate%2A> 또는 <xref:System.Windows.Controls.ItemsControl.ItemTemplate%2A> 에 대 한는 <xref:System.Windows.Controls.TreeViewItem>합니다.  
   
- [!code-xaml[TreeViewDataBinding#6](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TreeViewDataBinding/CSharp/Window1.xaml#6)]  
+ [!code-xaml[TreeViewDataBinding#6](~/samples/snippets/csharp/VS_Snippets_Wpf/TreeViewDataBinding/CSharp/Window1.xaml#6)]  
   
 ## <a name="see-also"></a>참고자료
 - <xref:System.Windows.Controls.TreeView>
 - <xref:System.Windows.Controls.TreeViewItem>
-- [방법 항목](../../../../docs/framework/wpf/controls/treeview-how-to-topics.md)
-- [WPF 콘텐츠 모델](../../../../docs/framework/wpf/controls/wpf-content-model.md)
+- [방법 항목](treeview-how-to-topics.md)
+- [WPF 콘텐츠 모델](wpf-content-model.md)

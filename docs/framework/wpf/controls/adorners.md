@@ -6,19 +6,19 @@ f1_keywords:
 helpviewer_keywords:
 - adorners [WPF]
 ms.assetid: 5d5f656b-8e05-4839-9d53-b0324d902aa9
-ms.openlocfilehash: 4b23287abebafd6583d77362c4b4ef12f504f7df
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b422294095425d163665f59f2bfb451da3158c8a
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33551767"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57378915"
 ---
 # <a name="adorners"></a>표시기(Adorner)
-이 섹션에서는 표시기 (adorner)에 대 한 정보를 제공 및 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 표시기 프레임 워크입니다.  
+이 섹션에서는 표시기 (adorner)에 대 한 정보를 제공 하며 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 표시기 프레임 워크입니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
- [표시기 개요](../../../../docs/framework/wpf/controls/adorners-overview.md)  
- [방법 항목](../../../../docs/framework/wpf/controls/adorners-how-to-topics.md)  
+ [표시기 개요](adorners-overview.md)  
+ [방법 항목](adorners-how-to-topics.md)  
   
 ## <a name="reference"></a>참조  
  <xref:System.Windows.Controls.AdornedElementPlaceholder>  

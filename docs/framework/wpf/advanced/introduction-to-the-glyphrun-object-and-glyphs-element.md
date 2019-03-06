@@ -9,12 +9,12 @@ helpviewer_keywords:
 - glyphs [WPF]
 - typography [WPF], GlyphRun object
 ms.assetid: 746ca769-a331-4435-9b95-f72a883b67c1
-ms.openlocfilehash: 27cecf3c50737e8d6c18f8505d8ec1d8393dbe33
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 24ffffc959891b6dab45350c6cda02adcc4f619a
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54619686"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57362892"
 ---
 # <a name="introduction-to-the-glyphrun-object-and-glyphs-element"></a>GlyphRun 개체 및 Glyphs 요소 소개
 이 항목에 설명 합니다 <xref:System.Windows.Media.GlyphRun> 개체 및 <xref:System.Windows.Documents.Glyphs> 요소입니다.  
@@ -39,7 +39,7 @@ ms.locfileid: "54619686"
 3.  이전 버전의 [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] 및 기타 컴퓨팅 디바이스에 대한 클라이언트를 포함하는 고정된 형식 문서 표시  
   
 > [!NOTE]
->  <xref:System.Windows.Documents.Glyphs> 및 <xref:System.Windows.Media.GlyphRun> 고정 형식 문서 프레젠테이션과 인쇄 시나리오에 대 한 설계 되었습니다. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 일반 레이아웃에 대 한 몇 가지 요소를 제공 하 고 [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] 와 같은 시나리오 <xref:System.Windows.Controls.Label> 및 <xref:System.Windows.Controls.TextBlock>합니다. 레이아웃 및 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 시나리오에 대한 자세한 내용은 [WPF의 입력 체계](../../../../docs/framework/wpf/advanced/typography-in-wpf.md)를 참조하세요.  
+>  <xref:System.Windows.Documents.Glyphs> 및 <xref:System.Windows.Media.GlyphRun> 고정 형식 문서 프레젠테이션과 인쇄 시나리오에 대 한 설계 되었습니다. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 일반 레이아웃에 대 한 몇 가지 요소를 제공 하 고 [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] 와 같은 시나리오 <xref:System.Windows.Controls.Label> 및 <xref:System.Windows.Controls.TextBlock>합니다. 레이아웃 및 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 시나리오에 대한 자세한 내용은 [WPF의 입력 체계](typography-in-wpf.md)를 참조하세요.  
   
 <a name="text_glyphrunovw_glyphrunobject"></a>   
 ## <a name="the-glyphrun-object"></a>GlyphRun 개체  
@@ -53,7 +53,7 @@ ms.locfileid: "54619686"
 ## <a name="the-glyphs-element"></a>문자 모양 요소  
  합니다 <xref:System.Windows.Documents.Glyphs> 요소 출력을 나타냅니다는 <xref:System.Windows.Media.GlyphRun> 에서 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]합니다. 다음 태그 구문을 설명 되는 <xref:System.Windows.Documents.Glyphs> 요소입니다.  
   
- [!code-xaml[GlyphsOvwSample1#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/GlyphsOvwSample1/CS/default.xaml#1)]  
+ [!code-xaml[GlyphsOvwSample1#1](~/samples/snippets/csharp/VS_Snippets_Wpf/GlyphsOvwSample1/CS/default.xaml#1)]  
   
  다음 속성 정의는 샘플 태그의 처음 네 특성에 해당합니다.  
   
@@ -86,15 +86,15 @@ ms.locfileid: "54619686"
 ## <a name="glyph-metrics"></a>문자 모양 메트릭  
  각 문자 모양을 서로 맞추는 방법을 지정 하는 메트릭을 정의 <xref:System.Windows.Documents.Glyphs>합니다. 다음 그래픽에서는 서로 다른 두 문자 모양 문자의 다양한 입력 체계의 품질을 정의합니다.  
   
- ![문자 모양 측정값의 다이어그래프](../../../../docs/framework/wpf/advanced/media/glyph-example.png "glyph_example")  
+ ![문자 모양 측정값의 다이어그래프](./media/glyph-example.png "glyph_example")  
   
 <a name="text_glyphrunovw_glyphsmarkup"></a>   
 ## <a name="glyphs-markup"></a>문자 모양 태그  
  다음 코드 예제에는 다양 한 속성을 사용 하는 방법을 보여 줍니다 합니다 <xref:System.Windows.Documents.Glyphs> 요소에서 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]합니다.  
   
- [!code-xaml[GlyphsOvwSamp2#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/GlyphsOvwSamp2/CS/default.xaml#1)]  
+ [!code-xaml[GlyphsOvwSamp2#1](~/samples/snippets/csharp/VS_Snippets_Wpf/GlyphsOvwSamp2/CS/default.xaml#1)]  
   
 ## <a name="see-also"></a>참고자료
-- [WPF의 입력 체계](../../../../docs/framework/wpf/advanced/typography-in-wpf.md)
-- [WPF의 문서](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)
-- [텍스트](../../../../docs/framework/wpf/advanced/optimizing-performance-text.md)
+- [WPF의 입력 체계](typography-in-wpf.md)
+- [WPF의 문서](documents-in-wpf.md)
+- [텍스트](optimizing-performance-text.md)

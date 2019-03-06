@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - PrintSystemObject [WPF], getting properties
 ms.assetid: 43560f28-183d-41c1-b9d1-de7c2552273e
-ms.openlocfilehash: b081586d201bed537c086447c4ddb116f179fbca
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b03be30422a93980ecdbcdbd428600fd41abd824
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54693255"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57367585"
 ---
 # <a name="how-to-get-print-system-object-properties-without-reflection"></a>방법: 리플렉션을 사용하지 않고 인쇄 시스템 개체 속성 가져오기
 개체의 속성 (및 해당 속성의 형식)를 항목별로 정리 하는 데 리플렉션을 사용 하면 응용 프로그램 성능이 느려질 수 있습니다. <xref:System.Printing.IndexedProperties> 네임 스페이스는 리플렉션을 사용 하 여이 정보를 가져올 수 있는 방법을 제공 합니다.  
@@ -30,8 +30,8 @@ ms.locfileid: "54693255"
   
 5.  형식을 가져오는 합니다 <xref:System.Printing.IndexedProperties.PrintProperty.Value%2A> 각를 <xref:System.Printing.IndexedProperties.PrintProperty> 개체입니다.  
   
- [!code-csharp[GetPrintObjectPropertyTypesWithoutReflection#ShowPropertyTypesWithoutReflection](../../../../samples/snippets/csharp/VS_Snippets_Wpf/GetPrintObjectPropertyTypesWithoutReflection/CSharp/Program.cs#showpropertytypeswithoutreflection)]
- [!code-vb[GetPrintObjectPropertyTypesWithoutReflection#ShowPropertyTypesWithoutReflection](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/GetPrintObjectPropertyTypesWithoutReflection/visualbasic/program.vb#showpropertytypeswithoutreflection)]  
+ [!code-csharp[GetPrintObjectPropertyTypesWithoutReflection#ShowPropertyTypesWithoutReflection](~/samples/snippets/csharp/VS_Snippets_Wpf/GetPrintObjectPropertyTypesWithoutReflection/CSharp/Program.cs#showpropertytypeswithoutreflection)]
+ [!code-vb[GetPrintObjectPropertyTypesWithoutReflection#ShowPropertyTypesWithoutReflection](~/samples/snippets/visualbasic/VS_Snippets_Wpf/GetPrintObjectPropertyTypesWithoutReflection/visualbasic/program.vb#showpropertytypeswithoutreflection)]  
   
 ## <a name="see-also"></a>참고자료
 - <xref:System.Printing.IndexedProperties.PrintProperty>
@@ -41,5 +41,5 @@ ms.locfileid: "54693255"
 - <xref:System.Printing.LocalPrintServer>
 - <xref:System.Printing.PrintQueue>
 - <xref:System.Collections.DictionaryEntry>
-- [WPF의 문서](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)
-- [인쇄 개요](../../../../docs/framework/wpf/advanced/printing-overview.md)
+- [WPF의 문서](documents-in-wpf.md)
+- [인쇄 개요](printing-overview.md)

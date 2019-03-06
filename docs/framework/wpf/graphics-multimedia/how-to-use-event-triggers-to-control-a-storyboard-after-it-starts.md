@@ -6,12 +6,12 @@ helpviewer_keywords:
 - event triggers [WPF], controlling Storyboards
 - Storyboards [WPF], controlling after start
 ms.assetid: 3b115594-6a93-4972-b24d-61aa16f1c15f
-ms.openlocfilehash: e4cfaf2352c3cca2b67a8e6a5d4c933399583e5a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d0b25f56caf3f25b6e649c05ecf1cbe50046dd93
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54663650"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57362372"
 ---
 # <a name="how-to-use-event-triggers-to-control-a-storyboard-after-it-starts"></a>방법: Storyboard를 시작한 후 이벤트 트리거를 사용하여 제어
 제어 하는 방법을 보여 주는이 예제는 <xref:System.Windows.Media.Animation.Storyboard> 시작 합니다. 시작 하는 <xref:System.Windows.Media.Animation.Storyboard> 를 사용 하 여 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]를 사용 하 여 <xref:System.Windows.Media.Animation.BeginStoryboard>, 개체 및 속성에 애니메이션을 적용 하 고 시작한 다음 스토리 보드에 애니메이션을 배포 하는 합니다. 제공 하는 경우 <xref:System.Windows.Media.Animation.BeginStoryboard> 이름을 지정 하 여 해당 <xref:System.Windows.Media.Animation.BeginStoryboard.Name%2A> 속성을 만들면 제어 가능한 storyboard입니다. 제어할 수 있습니다 다음 대화형으로 스토리 보드 시작 된 후.  
@@ -33,9 +33,9 @@ ms.locfileid: "54663650"
 ## <a name="example"></a>예제  
  다음 예제에서는 제어 가능한 storyboard 작업이 storyboard를 대화형으로 제어 하려면  
   
- **참고:** 코드를 사용 하 여 스토리 보드 제어의 예제를 보려면 [컨트롤을 스토리 보드 후 해당 시작를 사용 하 여 해당 대화형 메서드](../../../../docs/framework/wpf/graphics-multimedia/how-to-control-a-storyboard-after-it-starts.md)합니다.  
+ **참고:** 코드를 사용 하 여 스토리 보드 제어의 예제를 보려면 [컨트롤을 스토리 보드 후 해당 시작를 사용 하 여 해당 대화형 메서드](how-to-control-a-storyboard-after-it-starts.md)합니다.  
   
- [!code-xaml[timingbehaviors_snip#ControlStoryboardExampleUsingWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/timingbehaviors_snip/CSharp/ControlStoryboardExample.xaml#controlstoryboardexampleusingwholepage)]  
+ [!code-xaml[timingbehaviors_snip#ControlStoryboardExampleUsingWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/timingbehaviors_snip/CSharp/ControlStoryboardExample.xaml#controlstoryboardexampleusingwholepage)]  
   
  추가 예제를 보려면 합니다 [애니메이션 예제 갤러리](https://go.microsoft.com/fwlink/?LinkID=159969)합니다.  
   
@@ -46,6 +46,6 @@ ms.locfileid: "54663650"
 - <xref:System.Windows.Media.Animation.PauseStoryboard>
 - <xref:System.Windows.Media.Animation.StopStoryboard>
 - <xref:System.Windows.Media.Animation.SeekStoryboard>
-- [대화형 메서드를 사용하여 이미 시작된 Storyboard 제어](../../../../docs/framework/wpf/graphics-multimedia/how-to-control-a-storyboard-after-it-starts.md)
-- [애니메이션 개요](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)
-- [Storyboard 개요](../../../../docs/framework/wpf/graphics-multimedia/storyboards-overview.md)
+- [대화형 메서드를 사용하여 이미 시작된 Storyboard 제어](how-to-control-a-storyboard-after-it-starts.md)
+- [애니메이션 개요](animation-overview.md)
+- [Storyboard 개요](storyboards-overview.md)

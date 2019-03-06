@@ -2,17 +2,11 @@
 title: .NET Framework 성능
 ms.date: 03/30/2017
 helpviewer_keywords:
-- performance [.NET Framework]
-- reliability [.NET Framework]
+  - 'performance [.NET Framework]'
+  - 'reliability [.NET Framework]'
 ms.assetid: c1676cca-3f1a-41ec-b469-9029566074fc
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f5667d55b8a49ba7b32570ad6a230b220ac8953b
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
-ms.translationtype: MT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56221175"
 ---
 # <a name="net-framework-performance"></a>.NET Framework 성능
 성능이 우수한 앱을 만들려면 앱의 다른 모든 기능을 디자인하는 것처럼 성능을 디자인하고 계획해야 합니다. 앱의 성능을 측정할 수 있도록 Microsoft에서 제공하는 도구를 사용하고 필요한 경우 메모리 사용, 코드 처리량 및 응답성을 향상시킬 수 있습니다. 이 항목에는 Microsoft에서 제공하는 성능 분석 도구가 나열되어 있으며, 앱 개발의 특정 영역에 대한 성능을 설명하는 다른 항목의 링크가 제공되어 있습니다.  
@@ -49,7 +43,6 @@ ms.locfileid: "56221175"
 |C++, C# 및 Visual Basic으로 작성된 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] 앱|[C++, C# 및 Visual Basic을 사용하는 Windows 스토어 앱의 성능 모범 사례](https://docs.microsoft.com/previous-versions/windows/apps/hh750313%28v=win.10%29)|  
 |WPF(Windows Presentation Foundation)|[WPF 성능 제품군](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/aa969767(v=vs.100))|  
 |ASP.NET|[ASP.NET 성능 개요](https://docs.microsoft.com/previous-versions/aspnet/cc668225(v=vs.100))|  
-|Windows Forms|[Practical Tips for Boosting the Performance of Windows Forms Apps](https://msdn.microsoft.com/magazine/cc163630.aspx)(Windows Forms 앱의 성능을 향상시키기 위한 실제 팁)|  
   
 ## <a name="related-topics"></a>관련 항목  
   

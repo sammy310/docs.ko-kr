@@ -7,19 +7,19 @@ helpviewer_keywords:
 - controls [WPF], TextBox
 - TextBox control [WPF]
 ms.assetid: 2512a277-e9d8-4de8-a12f-2bd95e8e7b60
-ms.openlocfilehash: 18f5b6b826d1c5c7ff6fe3087b839eb6947dc695
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f2a261b72fe3205c9a03292f1f6bbcebdcf8649b
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54649351"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57356977"
 ---
 # <a name="textbox"></a>TextBox
 <xref:System.Windows.Controls.TextBox> 컨트롤은 WPF 응용 프로그램에서 기본 텍스트 입력에 대 한 지원을 제공 합니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
- [TextBox 개요](../../../../docs/framework/wpf/controls/textbox-overview.md)  
- [방법 항목](../../../../docs/framework/wpf/controls/textbox-how-to-topics.md)  
+ [TextBox 개요](textbox-overview.md)  
+ [방법 항목](textbox-how-to-topics.md)  
   
 ## <a name="reference"></a>참조  
  <xref:System.Windows.Controls.TextBox>  
@@ -32,4 +32,4 @@ ms.locfileid: "54649351"
   
 ## <a name="see-also"></a>참고자료
 - [WPF Controls Gallery Sample](https://go.microsoft.com/fwlink/?LinkID=160053)(WPF 컨트롤 갤러리 샘플)
-- [TextBox 스타일 및 템플릿](../../../../docs/framework/wpf/controls/textbox-styles-and-templates.md)
+- [TextBox 스타일 및 템플릿](textbox-styles-and-templates.md)

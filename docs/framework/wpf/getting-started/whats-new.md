@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Windows Presentation Foundation [WPF], what's new
 - WPF [WPF], what's new
 ms.assetid: db086ae4-70bb-4862-95db-2eaca5216bc3
-ms.openlocfilehash: 6dc833ce3dc88b61ed6966c7b5ca2756f5012308
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 92f69d0f9ad962dff231308ed3f5d59a0d406792
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55265352"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57368170"
 ---
 # <a name="whats-new-in-wpf-version-45"></a>WPF 버전 4.5의 새로운 기능
 <a name="introduction"></a> 이 항목에서는의 새로운 기능과 향상 된 기능에 대 한 정보가 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 4.5 버전입니다.  
@@ -111,19 +111,19 @@ ms.locfileid: "55265352"
   
 <a name="live_shaping"></a>   
 ## <a name="repositioning-data-as-the-datas-values-change-live-shaping"></a>데이터 값이 변경될 때 데이터의 위치 변경(라이브 셰이핑)  
- 데이터의 컬렉션을 그룹화, 정렬 또는 필터링할 수 있습니다. WPF 4.5에서는 데이터가 수정되면 데이터를 다시 배열할 수 있습니다. 예를 들어, 애플리케이션에서 사용 하는 <xref:System.Windows.Controls.DataGrid> 따라 주식 시장에 주식, 주식을 나열 하려면 정렬 합니다. 주식에서 실시간 정렬을 사용 하도록 설정 하는 경우 <xref:System.Windows.Data.CollectionView>에서 주식의 위치는 <xref:System.Windows.Controls.DataGrid> 재고 값이 큰 이동 또는 보다 작은 다른 주식의 값입니다.   자세한 내용은 참조는 <xref:System.ComponentModel.ICollectionViewLiveShaping> 인터페이스입니다.  
+ 데이터의 컬렉션을 그룹화, 정렬 또는 필터링할 수 있습니다. WPF 4.5에서는 데이터가 수정되면 데이터를 다시 배열할 수 있습니다. 예를 들어, 응용 프로그램에서 사용 하는 <xref:System.Windows.Controls.DataGrid> 따라 주식 시장에 주식, 주식을 나열 하려면 정렬 합니다. 주식에서 실시간 정렬을 사용 하도록 설정 하는 경우 <xref:System.Windows.Data.CollectionView>에서 주식의 위치는 <xref:System.Windows.Controls.DataGrid> 재고 값이 큰 이동 또는 보다 작은 다른 주식의 값입니다.   자세한 내용은 참조는 <xref:System.ComponentModel.ICollectionViewLiveShaping> 인터페이스입니다.  
   
 <a name="weak_event_pattern"></a>   
 ## <a name="improved-support-for-establishing-a-weak-reference-to-an-event"></a>이벤트에 대한 약한 참조 설정을 위한 지원 개선  
- 이벤트 구독자가 추가 인터페이스 구현 없이 참여할 수 있으므로 약한 이벤트 패턴을 구현하기가 더 쉬워졌습니다.  제네릭 <xref:System.Windows.WeakEventManager> 클래스에 있습니다 경우 전용 약한 이벤트 패턴에 참여 하려면 구독자 <xref:System.Windows.WeakEventManager> 특정 이벤트에 대해 존재 하지 않습니다.  자세한 내용은 [약한 이벤트 패턴](../../../../docs/framework/wpf/advanced/weak-event-patterns.md)을 참조하세요.  
+ 이벤트 구독자가 추가 인터페이스 구현 없이 참여할 수 있으므로 약한 이벤트 패턴을 구현하기가 더 쉬워졌습니다.  제네릭 <xref:System.Windows.WeakEventManager> 클래스에 있습니다 경우 전용 약한 이벤트 패턴에 참여 하려면 구독자 <xref:System.Windows.WeakEventManager> 특정 이벤트에 대해 존재 하지 않습니다.  자세한 내용은 [약한 이벤트 패턴](../advanced/weak-event-patterns.md)을 참조하세요.  
   
 <a name="async"></a>   
 ## <a name="new-methods-for-the-dispatcher-class"></a>Dispatcher 클래스에 대한 새로운 메서드  
- Dispatcher 클래스는 동기 및 비동기 작업에 대해 새로운 메서드를 정의합니다.  동기 <xref:System.Windows.Threading.Dispatcher.Invoke%2A> 오버 로드를 정의 하는 메서드를 <xref:System.Action> 또는 <xref:System.Func%601> 매개 변수입니다. 새 비동기 메서드를 <xref:System.Windows.Threading.Dispatcher.InvokeAsync%2A>, 또한를 <xref:System.Action> 또는 <xref:System.Func%601> 콜백 매개 변수 및 반환을 <xref:System.Windows.Threading.DispatcherOperation> 또는 <xref:System.Windows.Threading.DispatcherOperation%601>합니다.   합니다 <xref:System.Windows.Threading.DispatcherOperation> 하 고 <xref:System.Windows.Threading.DispatcherOperation%601> 클래스 정의 <xref:System.Threading.Tasks.Task> 속성입니다.  호출 하는 경우 <xref:System.Windows.Threading.Dispatcher.InvokeAsync%2A>를 사용할 수는 `await` 키워드 중 하나를 사용 하 여 합니다 <xref:System.Windows.Threading.DispatcherOperation> 또는 연결 된 <xref:System.Threading.Tasks.Task>합니다. 동기적으로 대기 해야 하는 경우는 <xref:System.Threading.Tasks.Task> 에서 반환 하는 <xref:System.Windows.Threading.DispatcherOperation> 또는 <xref:System.Windows.Threading.DispatcherOperation%601>를 호출 합니다 <xref:System.Windows.Threading.TaskExtensions.DispatcherOperationWait%2A> 확장 메서드. 호출 <xref:System.Threading.Tasks.Task.Wait%2A?displayProperty=nameWithType> 작업이 호출 스레드에서 큐 대기는 경우 교착 상태가 발생 합니다. 사용에 대 한 자세한 내용은 <xref:System.Threading.Tasks.Task> 비동기 작업을 수행 하려면 참조 [작업 병렬 처리 (작업 병렬 라이브러리)](../../../../docs/standard/parallel-programming/task-based-asynchronous-programming.md)합니다.  
+ Dispatcher 클래스는 동기 및 비동기 작업에 대해 새로운 메서드를 정의합니다.  동기 <xref:System.Windows.Threading.Dispatcher.Invoke%2A> 오버 로드를 정의 하는 메서드를 <xref:System.Action> 또는 <xref:System.Func%601> 매개 변수입니다. 새 비동기 메서드를 <xref:System.Windows.Threading.Dispatcher.InvokeAsync%2A>, 또한를 <xref:System.Action> 또는 <xref:System.Func%601> 콜백 매개 변수 및 반환을 <xref:System.Windows.Threading.DispatcherOperation> 또는 <xref:System.Windows.Threading.DispatcherOperation%601>합니다.   합니다 <xref:System.Windows.Threading.DispatcherOperation> 하 고 <xref:System.Windows.Threading.DispatcherOperation%601> 클래스 정의 <xref:System.Threading.Tasks.Task> 속성입니다.  호출 하는 경우 <xref:System.Windows.Threading.Dispatcher.InvokeAsync%2A>를 사용할 수는 `await` 키워드 중 하나를 사용 하 여 합니다 <xref:System.Windows.Threading.DispatcherOperation> 또는 연결 된 <xref:System.Threading.Tasks.Task>합니다. 동기적으로 대기 해야 하는 경우는 <xref:System.Threading.Tasks.Task> 에서 반환 하는 <xref:System.Windows.Threading.DispatcherOperation> 또는 <xref:System.Windows.Threading.DispatcherOperation%601>를 호출 합니다 <xref:System.Windows.Threading.TaskExtensions.DispatcherOperationWait%2A> 확장 메서드. 호출 <xref:System.Threading.Tasks.Task.Wait%2A?displayProperty=nameWithType> 작업이 호출 스레드에서 큐 대기는 경우 교착 상태가 발생 합니다. 사용에 대 한 자세한 내용은 <xref:System.Threading.Tasks.Task> 비동기 작업을 수행 하려면 참조 [작업 병렬 처리 (작업 병렬 라이브러리)](../../../standard/parallel-programming/task-based-asynchronous-programming.md)합니다.  
   
 <a name="events_markup_extenions"></a>   
 ## <a name="markup-extensions-for-events"></a>이벤트에 대한 태그 확장  
  WPF 4.5에서는 이벤트에 대한 태그 확장을 지원합니다.  WPF는 이벤트에 사용될 태그 확장을 정의하지 않지만 타사에서 이벤트에 사용할 수 있는 태그 확장을 만들 수 있습니다.  
   
 ## <a name="see-also"></a>참고자료
-- [.NET Framework의 새로운 기능](../../../../docs/framework/whats-new/index.md)
+- [.NET Framework의 새로운 기능](../../whats-new/index.md)

@@ -23,12 +23,12 @@ helpviewer_keywords:
 - Exit statement [Visual Basic], For...Next statements
 - For statement [Visual Basic]
 ms.assetid: f5fc0d51-67ce-4c36-9f09-31c9a91c94e9
-ms.openlocfilehash: 5048d48cc22ebe405ef54dc207ac96b6c274078a
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.openlocfilehash: bcadcdfb2cb15bc6012ebe1964a4fc4379ba649d
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57202628"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57370308"
 ---
 # <a name="fornext-statement-visual-basic"></a>For...Next 문(Visual Basic)
 문 그룹을 지정한 횟수 만큼을 반복합니다.  
@@ -125,7 +125,7 @@ Next [ counter ]
   
  기본값은 `step` 1입니다.  
   
-###  <a name="BKMK_Counter"></a> 카운터 인수  
+### <a name="BKMK_Counter"></a> 카운터 인수  
  다음 표에서 여부 `counter` 전체 범위가 지정 된 새 로컬 변수를 정의 `For…Next` 루프입니다. 이 확인 여부에 따라 달라 집니다 `datatype` 있는지 여부에 관계 없이 `counter` 이미 정의 되어 있습니다.  
   
 |`datatype` 있는?|`counter` 이미 정의 되어 있습니까?|결과 (여부 `counter` 전체 범위가 지정 된 새 로컬 변수를 정의 `For...Next` 루프)|  

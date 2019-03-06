@@ -15,12 +15,12 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: 4a086157b27b7426cb6d5f17f13426c0f26d2b2d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0de622e96b9138b86cfc77c51d1a215c1868accf
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54658223"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57375924"
 ---
 # <a name="ixclrdataprocessstartenummodules-method"></a>IXCLRDataProcess::StartEnumModules 메서드
 
@@ -38,7 +38,8 @@ HRESULT StartEnumModules(
 
 ### <a name="parameters"></a>매개 변수
 
-`handle` [out] 모듈을 열거 하는 것에 대 한 핸들입니다.
+`handle`\
+[out] 모듈을 열거 하는 것에 대 한 핸들입니다.
 
 ## <a name="remarks"></a>설명
 
@@ -53,6 +54,6 @@ HRESULT StartEnumModules(
 
 ## <a name="see-also"></a>참고자료
 
-- [CLRDataSourceType 열거형](../../../../docs/framework/unmanaged-api/debugging/clrdatasourcetype-enumeration.md)
-- [디버깅](../../../../docs/framework/unmanaged-api/debugging/index.md)
-- [IXCLRDataProcess 인터페이스](../../../../docs/framework/unmanaged-api/debugging/ixclrdataprocess-interface.md)
+- [CLRDataSourceType 열거형](clrdatasourcetype-enumeration.md)
+- [디버깅](index.md)
+- [IXCLRDataProcess 인터페이스](ixclrdataprocess-interface.md)

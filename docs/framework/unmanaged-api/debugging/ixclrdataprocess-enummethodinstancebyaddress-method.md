@@ -15,12 +15,12 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: 825cb8ea94bee980f9e10b90cddf04db32c1a33f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d19a4b8116573f2ff6469fe612e7b7736651ff03
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54491911"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57354533"
 ---
 # <a name="ixclrdataprocessenummethodinstancebyaddress-method"></a>IXCLRDataProcess::EnumMethodInstanceByAddress 메서드
 
@@ -39,9 +39,11 @@ HRESULT EnumMethodInstanceByAddress(
 
 ### <a name="parameters"></a>매개 변수
 
-`handle` [in] 메서드 인스턴스를 열거 하는 것에 대 한 핸들입니다.
+`handle`\
+[in] 메서드 인스턴스를 열거 하는 것에 대 한 핸들입니다.
 
-`mod` [out] 열거형된 메서드 인스턴스입니다.
+`mod`\
+[out] 열거형된 메서드 인스턴스입니다.
 
 ## <a name="remarks"></a>설명
 
@@ -55,6 +57,6 @@ HRESULT EnumMethodInstanceByAddress(
 **.NET Framework 버전:** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]   
  
 ## <a name="see-also"></a>참고자료
-- [CLRDataSourceType 열거형](../../../../docs/framework/unmanaged-api/debugging/clrdatasourcetype-enumeration.md)
-- [디버깅](../../../../docs/framework/unmanaged-api/debugging/index.md)
-- [IXCLRDataProcess 인터페이스](../../../../docs/framework/unmanaged-api/debugging/ixclrdataprocess-interface.md)
+- [CLRDataSourceType 열거형](clrdatasourcetype-enumeration.md)
+- [디버깅](index.md)
+- [IXCLRDataProcess 인터페이스](ixclrdataprocess-interface.md)

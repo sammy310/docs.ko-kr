@@ -5,12 +5,12 @@ helpviewer_keywords:
 - TreeView control [WPF], creating
 - Control class [WPF], TreeView [WPF], creating
 ms.assetid: 1defbb78-b8e7-4c0e-b650-576453ac828d
-ms.openlocfilehash: d6f9653304b67948d8a8995d1582cb10b012ee06
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9b19443c80818809122b0bbfc7c7dae7b4b40da5
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54609137"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57368919"
 ---
 # <a name="how-to-create-simple-or-complex-treeviews"></a>방법: 간단하거나 복잡한 TreeView 만들기
 이 예제에는 간단 하거나 복잡 한를 만드는 방법을 보여 줍니다 <xref:System.Windows.Controls.TreeView> 컨트롤입니다.  
@@ -22,26 +22,26 @@ ms.locfileid: "54609137"
   
  다음 예제에서는 명시적으로 정의 하는 방법을 보여 줍니다 <xref:System.Windows.Controls.TreeViewItem> 설정 하 여 콘텐츠를 <xref:System.Windows.Controls.HeaderedItemsControl.Header%2A> 속성을 텍스트 문자열입니다.  
   
- [!code-xaml[TreeViewSimple#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TreeViewSimple/CS/Window1.xaml#1)]  
+ [!code-xaml[TreeViewSimple#1](~/samples/snippets/csharp/VS_Snippets_Wpf/TreeViewSimple/CS/Window1.xaml#1)]  
   
  다음 예제에서는 자식 요소를 정의 하는 방법을 보여 줍니다는 <xref:System.Windows.Controls.TreeViewItem> 정의한 <xref:System.Windows.Controls.ItemsControl.Items%2A> 된 <xref:System.Windows.Controls.Button> 컨트롤입니다.  
   
- [!code-xaml[TreeViewSimple#3](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TreeViewSimple/CS/Window1.xaml#3)]  
+ [!code-xaml[TreeViewSimple#3](~/samples/snippets/csharp/VS_Snippets_Wpf/TreeViewSimple/CS/Window1.xaml#3)]  
   
  다음 예제에서는 만드는 방법을 보여 줍니다.는 <xref:System.Windows.Controls.TreeView> 여기서는 <xref:System.Windows.Data.XmlDataProvider> 제공 <xref:System.Windows.Controls.TreeViewItem> 콘텐츠 및 <xref:System.Windows.HierarchicalDataTemplate> 콘텐츠의 모양을 정의 합니다.  
   
- [!code-xaml[TreeViewSimple#6](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TreeViewSimple/CS/Window1.xaml#6)]  
+ [!code-xaml[TreeViewSimple#6](~/samples/snippets/csharp/VS_Snippets_Wpf/TreeViewSimple/CS/Window1.xaml#6)]  
   
- [!code-xaml[TreeViewSimple#7](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TreeViewSimple/CS/Window1.xaml#7)]  
+ [!code-xaml[TreeViewSimple#7](~/samples/snippets/csharp/VS_Snippets_Wpf/TreeViewSimple/CS/Window1.xaml#7)]  
   
- [!code-xaml[TreeViewSimple#5](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TreeViewSimple/CS/Window1.xaml#5)]  
+ [!code-xaml[TreeViewSimple#5](~/samples/snippets/csharp/VS_Snippets_Wpf/TreeViewSimple/CS/Window1.xaml#5)]  
   
  다음 예제에서는 만드는 방법을 보여 줍니다.는 <xref:System.Windows.Controls.TreeView> 여기서는 <xref:System.Windows.Controls.TreeViewItem> 콘텐츠에 포함 된 <xref:System.Windows.Controls.DockPanel> 콘텐츠를 포함 하는 컨트롤입니다.  
   
- [!code-xaml[TreeViewSimple#9](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TreeViewSimple/CS/Window1.xaml#9)]  
+ [!code-xaml[TreeViewSimple#9](~/samples/snippets/csharp/VS_Snippets_Wpf/TreeViewSimple/CS/Window1.xaml#9)]  
   
 ## <a name="see-also"></a>참고자료
 - <xref:System.Windows.Controls.TreeView>
 - <xref:System.Windows.Controls.TreeViewItem>
-- [TreeView 개요](../../../../docs/framework/wpf/controls/treeview-overview.md)
-- [방법 항목](../../../../docs/framework/wpf/controls/treeview-how-to-topics.md)
+- [TreeView 개요](treeview-overview.md)
+- [방법 항목](treeview-how-to-topics.md)

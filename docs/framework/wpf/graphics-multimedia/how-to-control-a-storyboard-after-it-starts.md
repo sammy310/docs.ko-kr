@@ -7,15 +7,15 @@ dev_langs:
 helpviewer_keywords:
 - Storyboards [WPF], controlling after start
 ms.assetid: 040f13f0-69f9-4ab5-be2b-079f4f80c7c0
-ms.openlocfilehash: 2fd9f34cdd6aac56ee5a29d972f18979292c69e0
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 98eba600f64c8b656e3597b429cc69766f398f7b
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54570150"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57361059"
 ---
 # <a name="how-to-control-a-storyboard-after-it-starts"></a>방법: 시작 된 Storyboard 제어
-컨트롤에 코드를 사용 하는 방법을 보여 주는이 예제는 <xref:System.Windows.Media.Animation.Storyboard> 시작 된 후입니다. 스토리 보드 제어 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]를 사용 하 여 <xref:System.Windows.Trigger> 및 <xref:System.Windows.TriggerAction> 개체, 참조 예를 들어 [이벤트 트리거는 Storyboard를 시작한 후 제어를 사용 하 여](../../../../docs/framework/wpf/graphics-multimedia/how-to-use-event-triggers-to-control-a-storyboard-after-it-starts.md)합니다.  
+컨트롤에 코드를 사용 하는 방법을 보여 주는이 예제는 <xref:System.Windows.Media.Animation.Storyboard> 시작 된 후입니다. 스토리 보드 제어 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]를 사용 하 여 <xref:System.Windows.Trigger> 및 <xref:System.Windows.TriggerAction> 개체, 참조 예를 들어 [이벤트 트리거는 Storyboard를 시작한 후 제어를 사용 하 여](how-to-use-event-triggers-to-control-a-storyboard-after-it-starts.md)합니다.  
   
  Storyboard를 시작 하려면 해당 <xref:System.Windows.Media.Animation.Storyboard.Begin%2A> 분산 스토리 보드의 애니메이션 속성에 애니메이션을 적용 하며 storyboard를 시작 하는 메서드.  
   
@@ -37,11 +37,11 @@ ms.locfileid: "54570150"
   
  다음 예제에서는 여러 스토리 보드 메서드는 스토리 보드를 대화형으로 제어 사용 됩니다.  
   
- **참고:** 트리거를 사용 하 여 storyboard 제어의 예제를 보려면 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]를 참조 하세요 [제어는 Storyboard를 시작한 후 이벤트 트리거를 사용 하 여](../../../../docs/framework/wpf/graphics-multimedia/how-to-use-event-triggers-to-control-a-storyboard-after-it-starts.md)입니다.  
+ **참고:** 트리거를 사용 하 여 storyboard 제어의 예제를 보려면 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]를 참조 하세요 [제어는 Storyboard를 시작한 후 이벤트 트리거를 사용 하 여](how-to-use-event-triggers-to-control-a-storyboard-after-it-starts.md)입니다.  
   
 ## <a name="example"></a>예제  
- [!code-csharp[timingbehaviors_procedural_snip#ControlStoryboardExampleUsingWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/timingbehaviors_procedural_snip/CSharp/ControlStoryboardExample.cs#controlstoryboardexampleusingwholepage)]
- [!code-vb[timingbehaviors_procedural_snip#ControlStoryboardExampleUsingWholePage](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/timingbehaviors_procedural_snip/visualbasic/controlstoryboardexample.vb#controlstoryboardexampleusingwholepage)]  
+ [!code-csharp[timingbehaviors_procedural_snip#ControlStoryboardExampleUsingWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/timingbehaviors_procedural_snip/CSharp/ControlStoryboardExample.cs#controlstoryboardexampleusingwholepage)]
+ [!code-vb[timingbehaviors_procedural_snip#ControlStoryboardExampleUsingWholePage](~/samples/snippets/visualbasic/VS_Snippets_Wpf/timingbehaviors_procedural_snip/visualbasic/controlstoryboardexample.vb#controlstoryboardexampleusingwholepage)]  
   
 ## <a name="see-also"></a>참고자료
-- [Storyboard를 시작한 후 이벤트 트리거를 사용하여 제어](../../../../docs/framework/wpf/graphics-multimedia/how-to-use-event-triggers-to-control-a-storyboard-after-it-starts.md)
+- [Storyboard를 시작한 후 이벤트 트리거를 사용하여 제어](how-to-use-event-triggers-to-control-a-storyboard-after-it-starts.md)

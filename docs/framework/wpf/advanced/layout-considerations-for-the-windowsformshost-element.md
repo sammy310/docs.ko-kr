@@ -9,12 +9,12 @@ helpviewer_keywords:
 - dynamic layout [WPF interoperability]
 - device-independent pixels
 ms.assetid: 3c574597-bbde-440f-95cc-01371f1a5d9d
-ms.openlocfilehash: a399cc9742ff9b19aabd6dcee558f94147c88356
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 891254ff44926a719bb0c124e5dc098fd3f3e82e
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54625629"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57366545"
 ---
 # <a name="layout-considerations-for-the-windowsformshost-element"></a>WindowsFormsHost 요소에 대한 레이아웃 고려 사항
 이 항목에 설명 하는 방법을 <xref:System.Windows.Forms.Integration.WindowsFormsHost> 요소와 상호 작용 하는 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 레이아웃 시스템입니다.  
@@ -30,9 +30,9 @@ ms.locfileid: "54625629"
   
 |레이아웃 기능|설명|  
 |--------------------|-----------------|  
-|자동 크기 조정|일부 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 컨트롤의 콘텐츠를 올바르게 표시 하는 자체 크기를 조정 합니다. 자세한 내용은 [AutoSize 속성 개요](../../../../docs/framework/winforms/controls/autosize-property-overview.md)합니다.|  
+|자동 크기 조정|일부 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 컨트롤의 콘텐츠를 올바르게 표시 하는 자체 크기를 조정 합니다. 자세한 내용은 [AutoSize 속성 개요](../../winforms/controls/autosize-property-overview.md)합니다.|  
 |고정 및 도킹|[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 컨트롤 위치 및 크기 조정 기준으로 부모 컨테이너를 지원 합니다. 자세한 내용은 <xref:System.Windows.Forms.Control.Anchor%2A?displayProperty=nameWithType> 및 <xref:System.Windows.Forms.Control.Dock%2A?displayProperty=nameWithType>를 참조하세요.|  
-|자동 크기 조정|컨테이너 컨트롤의 자체 및 출력 장치 또는 기본 컨테이너 글꼴의 픽셀에서 크기, 해상도에 따라 해당 자식 항목 크기를 조정 합니다. 자세한 내용은 [Windows Forms의 자동 크기 조정을](../../../../docs/framework/winforms/automatic-scaling-in-windows-forms.md)합니다.|  
+|자동 크기 조정|컨테이너 컨트롤의 자체 및 출력 장치 또는 기본 컨테이너 글꼴의 픽셀에서 크기, 해상도에 따라 해당 자식 항목 크기를 조정 합니다. 자세한 내용은 [Windows Forms의 자동 크기 조정을](../../winforms/automatic-scaling-in-windows-forms.md)합니다.|  
 |레이아웃 컨테이너|합니다 <xref:System.Windows.Forms.FlowLayoutPanel> 고 <xref:System.Windows.Forms.TableLayoutPanel> 컨트롤 해당 자식 컨트롤을 정렬 하 고 해당 내용에 따라 자체 크기입니다.|  
   
 ## <a name="layout-limitations"></a>레이아웃 제한 사항  
@@ -73,7 +73,7 @@ ms.locfileid: "54625629"
 |오버플로|경우는 <xref:System.Windows.Forms.Integration.WindowsFormsHost> 요소에서 변환 `double` 값을 `int` 값 오버플로가 발생 가능성이 있습니다. 합니다. 보다 큰 값은 <xref:System.Int32.MaxValue> 로 설정 되어 <xref:System.Int32.MaxValue>입니다.|  
   
 ### <a name="layout-related-properties"></a>레이아웃 관련 속성  
- 레이아웃 동작을 제어 하는 속성 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 컨트롤 및 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 요소에서 적절 하 게 매핑되는 <xref:System.Windows.Forms.Integration.WindowsFormsHost> 요소입니다. 자세한 내용은 [Windows Forms 및 WPF 속성 매핑](../../../../docs/framework/wpf/advanced/windows-forms-and-wpf-property-mapping.md)을 참조하세요.  
+ 레이아웃 동작을 제어 하는 속성 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 컨트롤 및 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 요소에서 적절 하 게 매핑되는 <xref:System.Windows.Forms.Integration.WindowsFormsHost> 요소입니다. 자세한 내용은 [Windows Forms 및 WPF 속성 매핑](windows-forms-and-wpf-property-mapping.md)을 참조하세요.  
   
 ### <a name="layout-changes-in-the-hosted-control"></a>호스팅된 컨트롤에서 레이아웃 변경  
  레이아웃 변경에서 호스팅된 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 컨트롤에 전파 됩니다 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 레이아웃 업데이트를 트리거합니다. <xref:System.Windows.UIElement.InvalidateMeasure%2A> 메서드를 <xref:System.Windows.Forms.Integration.WindowsFormsHost> 호스팅된 컨트롤에서 레이아웃 변경으로 인해 하면는 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 레이아웃 엔진이 실행 되도록 합니다.  
@@ -101,7 +101,7 @@ ms.locfileid: "54625629"
 ## <a name="see-also"></a>참고자료
 - <xref:System.Windows.Forms.Integration.ElementHost>
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost>
-- [연습: WPF에서 정렬 Windows Forms 컨트롤](../../../../docs/framework/wpf/advanced/walkthrough-arranging-windows-forms-controls-in-wpf.md)
+- [연습: WPF에서 정렬 Windows Forms 컨트롤](walkthrough-arranging-windows-forms-controls-in-wpf.md)
 - [WPF 샘플에서 정렬 Windows Forms 컨트롤](https://go.microsoft.com/fwlink/?LinkID=159971)
-- [Windows Forms 및 WPF 속성 매핑](../../../../docs/framework/wpf/advanced/windows-forms-and-wpf-property-mapping.md)
-- [마이그레이션 및 상호 운용성](../../../../docs/framework/wpf/advanced/migration-and-interoperability.md)
+- [Windows Forms 및 WPF 속성 매핑](windows-forms-and-wpf-property-mapping.md)
+- [마이그레이션 및 상호 운용성](migration-and-interoperability.md)

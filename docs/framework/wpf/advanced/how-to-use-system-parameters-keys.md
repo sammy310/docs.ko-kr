@@ -5,12 +5,12 @@ helpviewer_keywords:
 - resource keys [WPF], SystemParameters class
 - classes [WPF], SystemParameters
 ms.assetid: 77571283-d16c-45bb-9f69-cafbbf72b21e
-ms.openlocfilehash: 13658b0bb97d842eecc8679ee64db68ae780a917
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a71551c5d539d7009fb9a052c81928a009fc4c35
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54728361"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57357198"
 ---
 # <a name="how-to-use-system-parameters-keys"></a>방법: 시스템 매개 변수 키 사용
 시스템 리소스는 개발자가 시스템 설정과 일관된 시각적 효과를 만들 수 있도록 몇 가지 시스템 메트릭을 리소스로 노출합니다. <xref:System.Windows.SystemParameters> 시스템 매개 변수 값과 값에 바인딩되는 리소스 키를 포함 하는 클래스인-예를 들어 <xref:System.Windows.SystemParameters.FullPrimaryScreenHeight%2A> 고 <xref:System.Windows.SystemParameters.FullPrimaryScreenHeightKey%2A>입니다. 시스템 매개 변수 메트릭은 정적 리소스나 동적 리소스로 사용될 수 있습니다. 애플리케이션이 실행되는 동안 매개 변수 메트릭을 자동으로 업데이트하려면 동적 리소스를 사용하고 자동으로 업데이트하지 않으려면 정적 리소스를 사용합니다.  
@@ -21,9 +21,9 @@ ms.locfileid: "54728361"
  다음 예제에서는 시스템 매개 변수 동적 리소스에 액세스한 후 사용하여 단추에 스타일을 지정하거나 단추를 사용자 지정하는 방법을 보여 줍니다. 이렇게 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 예제에서는 단추의 크기를 조정 할당 하 여 <xref:System.Windows.SystemParameters> 단추의 너비와 높이 값입니다.  
   
 ## <a name="example"></a>예제  
- [!code-xaml[SystemRes_snip#ParameterDynamicResources](../../../../samples/snippets/csharp/VS_Snippets_Wpf/SystemRes_snip/CSharp/MyApp.xaml#parameterdynamicresources)]  
+ [!code-xaml[SystemRes_snip#ParameterDynamicResources](~/samples/snippets/csharp/VS_Snippets_Wpf/SystemRes_snip/CSharp/MyApp.xaml#parameterdynamicresources)]  
   
 ## <a name="see-also"></a>참고자료
-- [시스템 브러시로 영역 그리기](../../../../docs/framework/wpf/graphics-multimedia/how-to-paint-an-area-with-a-system-brush.md)
-- [SystemFonts 사용](../../../../docs/framework/wpf/advanced/how-to-use-systemfonts.md)
-- [SystemParameters 사용](../../../../docs/framework/wpf/advanced/how-to-use-systemparameters.md)
+- [시스템 브러시로 영역 그리기](../graphics-multimedia/how-to-paint-an-area-with-a-system-brush.md)
+- [SystemFonts 사용](how-to-use-systemfonts.md)
+- [SystemParameters 사용](how-to-use-systemparameters.md)

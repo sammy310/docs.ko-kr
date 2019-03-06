@@ -9,12 +9,12 @@ helpviewer_keywords:
 - fonts [WPF], system fonts
 - classes [WPF], SystemFonts
 ms.assetid: 3f46a4ec-2225-408a-8123-8838a8f7057a
-ms.openlocfilehash: bf99d716c5c41b7604244022d2e58423594a9cf3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5ed44da316ddee5ea3a83262f913da571bf75276
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54674874"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57378966"
 ---
 # <a name="how-to-use-systemfonts"></a>방법: SystemFonts 사용
 정적 리소스를 사용 하는 방법을 보여 주는이 예제는 <xref:System.Windows.SystemFonts> 스타일 또는 단추를 사용자 지정 하기 위해 클래스입니다.  
@@ -29,19 +29,19 @@ ms.locfileid: "54674874"
   
  다음 예제에서는 액세스의 속성을 사용 하는 방법 <xref:System.Windows.SystemFonts> 스타일을 지정 하거나 단추를 사용자 지정 하기 위해 정적 값으로. 이 태그 예제에서는 할당 <xref:System.Windows.SystemFonts> 단추에는 값입니다.  
   
- [!code-xaml[SystemRes_snip#FontStaticResources](../../../../samples/snippets/csharp/VS_Snippets_Wpf/SystemRes_snip/CSharp/Pane1.xaml#fontstaticresources)]  
+ [!code-xaml[SystemRes_snip#FontStaticResources](~/samples/snippets/csharp/VS_Snippets_Wpf/SystemRes_snip/CSharp/Pane1.xaml#fontstaticresources)]  
   
  값을 사용 하도록 <xref:System.Windows.SystemFonts> 코드에서 필요가 없습니다 정적 값 또는 동적 리소스 참조를 사용 합니다. 대신 키가 아닌 속성을 사용 합니다 <xref:System.Windows.SystemFonts> 클래스입니다. 키가 아닌 속성이 정적 속성의 런타임 동작으로 정의 된 것 이지만 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 에서 호스팅될 때 시스템 속성에서 실시간으로 다시 평가 하 고 시스템 값을 사용자가 수행한 변경 작업을 제대로 고려 합니다. 다음 예제에서는 단추의 글꼴 설정을 지정하는 방법을 보여 줍니다.  
   
- [!code-csharp[SystemRes_snip#FontResourcesCode](../../../../samples/snippets/csharp/VS_Snippets_Wpf/SystemRes_snip/CSharp/Pane1.xaml.cs#fontresourcescode)]
- [!code-vb[SystemRes_snip#FontResourcesCode](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/SystemRes_snip/VisualBasic/Pane1.xaml.vb#fontresourcescode)]  
+ [!code-csharp[SystemRes_snip#FontResourcesCode](~/samples/snippets/csharp/VS_Snippets_Wpf/SystemRes_snip/CSharp/Pane1.xaml.cs#fontresourcescode)]
+ [!code-vb[SystemRes_snip#FontResourcesCode](~/samples/snippets/visualbasic/VS_Snippets_Wpf/SystemRes_snip/VisualBasic/Pane1.xaml.vb#fontresourcescode)]  
   
 ## <a name="see-also"></a>참고자료
 - <xref:System.Windows.SystemFonts>
-- [시스템 브러시로 영역 그리기](../../../../docs/framework/wpf/graphics-multimedia/how-to-paint-an-area-with-a-system-brush.md)
-- [SystemParameters 사용](../../../../docs/framework/wpf/advanced/how-to-use-systemparameters.md)
-- [시스템 글꼴 키 사용](../../../../docs/framework/wpf/advanced/how-to-use-system-fonts-keys.md)
-- [방법 항목](../../../../docs/framework/wpf/advanced/resources-how-to-topics.md)
-- [x:Static 태그 확장](../../../../docs/framework/xaml-services/x-static-markup-extension.md)
-- [XAML 리소스](../../../../docs/framework/wpf/advanced/xaml-resources.md)
-- [DynamicResource 태그 확장](../../../../docs/framework/wpf/advanced/dynamicresource-markup-extension.md)
+- [시스템 브러시로 영역 그리기](../graphics-multimedia/how-to-paint-an-area-with-a-system-brush.md)
+- [SystemParameters 사용](how-to-use-systemparameters.md)
+- [시스템 글꼴 키 사용](how-to-use-system-fonts-keys.md)
+- [방법 항목](resources-how-to-topics.md)
+- [x:Static 태그 확장](../../xaml-services/x-static-markup-extension.md)
+- [XAML 리소스](xaml-resources.md)
+- [DynamicResource 태그 확장](dynamicresource-markup-extension.md)

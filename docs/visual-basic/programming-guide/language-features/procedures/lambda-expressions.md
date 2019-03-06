@@ -9,12 +9,12 @@ helpviewer_keywords:
 - expressions [Visual Basic], lambda
 - inline functions [Visual Basic]
 ms.assetid: 137064b0-3928-4bfa-ba71-c3f9cbd951e2
-ms.openlocfilehash: de09612ee978ee809ee07f0db2e37b14533760da
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 02377b0765144064df8d51fa63768412ca4b606a
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56974811"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57363483"
 ---
 # <a name="lambda-expressions-visual-basic"></a>람다 식(Visual Basic)
 A *람다 식* 은 함수 또는 서브루틴 대리자 유효한 모든 곳에서 사용할 수 있는 이름이 없는 합니다. 람다 식은 함수 또는 서브루틴 수 있으며 한 줄 또는 여러 줄 수 있습니다. 람다 식에는 현재 범위에서 값을 전달할 수 있습니다.  
@@ -109,7 +109,7 @@ End Class
   
  만들기 및 비동기 메서드를 사용 하는 방법에 대 한 자세한 내용은 참조 하세요. [Async 및 Await를 사용한 비동기 프로그래밍](../../../../visual-basic/programming-guide/concepts/async/index.md)합니다.  
   
-##  <a name="context"></a> 컨텍스트  
+## <a name="context"></a> 컨텍스트  
  람다 식 정의 된 범위와 해당 컨텍스트를 공유 합니다. 동일한 액세스 권한을 포함 하는 범위에 작성 된 모든 코드에 여기에 대 한 멤버 변수, 함수 및 sub의 `Me`를 포함 하는 범위에서 지역 변수 및 매개 변수입니다.  
   
  지역 변수 및 매개 변수를 포함 하는 범위에 대 한 액세스는 해당 범위의 수명을 넘어서는 확장할 수 있습니다. 으로 참조 하는 람다 식을 대리자를 가비지 컬렉션에 사용할 수 없는 원본 환경에서 변수에 대 한 보존 됩니다. 다음 예에서 변수 `target` 로컬인 `makeTheGame`, 메서드는 람다 식 `playTheGame` 정의 됩니다. 반환 된 람다 식에 할당 하는 참고 `takeAGuess` 에서 `Main`, 여전히 로컬 변수에 대 한 액세스를 권한이 `target`합니다.  

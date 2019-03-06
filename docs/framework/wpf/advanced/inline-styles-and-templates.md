@@ -7,12 +7,12 @@ helpviewer_keywords:
 - templates [WPF], inline
 - inline styles [WPF]
 ms.assetid: 69a1a3f9-acb5-4e2c-9c43-2e376c055ac4
-ms.openlocfilehash: 7f619985e909b772d8c7b86d8393341999288cba
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6225e1abd2b6bb8c3598b08bb2a717340c435e77
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54496915"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57373389"
 ---
 # <a name="inline-styles-and-templates"></a>인라인 스타일 및 템플릿
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 제공 <xref:System.Windows.Style> 개체 및 템플릿은 개체 (<xref:System.Windows.FrameworkTemplate> 서브 클래스) 리소스에서 요소의 시각적 모양을 정의 하는 방법,으로 사용할 수 있도록 여러 번입니다. 따라서 특성 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 형식을 사용 하 <xref:System.Windows.Style> 고 <xref:System.Windows.FrameworkTemplate> 거의 항상 리소스 참조를 기존 스타일 및 템플릿 사용 하지 않고 새로 인라인을 정의 합니다.  
@@ -34,7 +34,7 @@ ms.locfileid: "54496915"
   
  일반적으로 해당 위치에 해당 스타일이 나 템플릿을 사용 하려는 경우에 스타일 또는 템플릿이 인라인을 설정할 필요가 없습니다 있습니다. 스타일이 나 템플릿을 사용할 수 있는 대부분의 요소는 또한 콘텐츠 속성 및 콘텐츠 모델을 지원 합니다. 어떤 논리 트리만 사용 하는 경우 만든 스타일이 나 템플릿을 통해 한 번,는 것이 더욱 쉽게 직접 태그에서 해당 자식 요소를 사용 하 여 해당 콘텐츠 속성을 채우는 것입니다. 이 스타일 및 템플릿 메커니즘은 완전히 바이패스 됩니다.  
   
- 개체를 반환 하는 태그 확장으로 사용 하도록 설정 하는 다른 구문 스타일 및 템플릿을 사용할 수도 있습니다. 이러한 두 확장 가능한 시나리오에 포함할 [TemplateBinding](../../../../docs/framework/wpf/advanced/templatebinding-markup-extension.md) 고 <xref:System.Windows.Data.Binding>입니다.  
+ 개체를 반환 하는 태그 확장으로 사용 하도록 설정 하는 다른 구문 스타일 및 템플릿을 사용할 수도 있습니다. 이러한 두 확장 가능한 시나리오에 포함할 [TemplateBinding](templatebinding-markup-extension.md) 고 <xref:System.Windows.Data.Binding>입니다.  
   
 ## <a name="see-also"></a>참고자료
-- [스타일 지정 및 템플릿](../../../../docs/framework/wpf/controls/styling-and-templating.md)
+- [스타일 지정 및 템플릿](../controls/styling-and-templating.md)

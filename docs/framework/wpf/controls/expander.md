@@ -10,24 +10,24 @@ helpviewer_keywords:
 - Expander control [WPF]
 - collapsing headers [WPF]
 ms.assetid: e9dfc8d6-4555-47b9-a4de-0acd64f8770a
-ms.openlocfilehash: c235381af36fd6c99d10f27a8a543f836d7af108
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ba034dfceb4a42e1f88d15379b482e47a0700b8d
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33551969"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57371946"
 ---
 # <a name="expander"></a>Expander
-<xref:System.Windows.Controls.Expander> 헤더 보기 및 확장 하 여 헤더만 섹션을 축소 또는 추가 정보를 볼 수 있습니다.  
+<xref:System.Windows.Controls.Expander> 헤더를 확인 및 확장 하 여 최대 헤더 섹션을 축소 또는 추가 정보를 볼 수 있습니다.  
   
- 다음 그림의 확장 된 상태에서이 컨트롤의 예제를 제공합니다.  
+ 다음 그림의 확장 된 상태에서이 컨트롤의 예를 제공 합니다.  
   
- ![확장기 예제](../../../../docs/framework/wpf/controls/media/expanderexample.JPG "ExpanderExample")  
+ ![확장기 예제](./media/expanderexample.JPG "ExpanderExample")  
 Expander 컨트롤  
   
 ## <a name="in-this-section"></a>섹션 내용  
- [Expander 개요](../../../../docs/framework/wpf/controls/expander-overview.md)  
- [방법 항목](../../../../docs/framework/wpf/controls/expander-how-to-topics.md)  
+ [Expander 개요](expander-overview.md)  
+ [방법 항목](expander-how-to-topics.md)  
   
 ## <a name="reference"></a>참조  
  <xref:System.Windows.Controls.Expander>  

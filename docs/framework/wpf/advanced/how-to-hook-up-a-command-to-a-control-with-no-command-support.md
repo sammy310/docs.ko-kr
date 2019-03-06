@@ -10,12 +10,12 @@ helpviewer_keywords:
 - RoutedCommand class [WPF], attaching to a Control
 - classes [WPF], RoutedCommand [WPF], attaching to a Control
 ms.assetid: dad08f64-700b-46fb-ad3f-fbfee95f0dfe
-ms.openlocfilehash: 5f963c871ed9b600586c32403a288eadd6e9daec
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 66b371f4d67c1102ddf341dd4b70aac66aa41605
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54725378"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57352674"
 ---
 # <a name="how-to-hook-up-a-command-to-a-control-with-no-command-support"></a>방법: 명령을 지원하지 않는 컨트롤에 명령 후크
 다음 예제는 <xref:System.Windows.Input.RoutedCommand>를 명령에 대한 지원을 기본 제공하지 않는 <xref:System.Windows.Controls.Control>에 후크하는 방법을 보여줍니다.  여러 소스에 명령을 후크하는 전체 샘플은 [Create a Custom RoutedCommand Sample](https://github.com/Microsoft/WPF-Samples/tree/master/Input%20and%20Commands/CustomRoutedCommand)(사용자 지정 RoutedCommand 만들기 샘플)을 참조하세요.  
@@ -29,23 +29,23 @@ ms.locfileid: "54725378"
   
  먼저, 명령 소스를 만듭니다.  <xref:System.Windows.Controls.Button>은 명령 소스로 사용됩니다.  
   
- [!code-xaml[commandWithHandler#CommandHandlerCommandSource](../../../../samples/snippets/csharp/VS_Snippets_Wpf/commandWithHandler/CSharp/Window1.xaml#commandhandlercommandsource)]  
+ [!code-xaml[commandWithHandler#CommandHandlerCommandSource](~/samples/snippets/csharp/VS_Snippets_Wpf/commandWithHandler/CSharp/Window1.xaml#commandhandlercommandsource)]  
   
- [!code-csharp[CommandHandlerProcedural#CommandHandlerButtonCommandSource](../../../../samples/snippets/csharp/VS_Snippets_Wpf/CommandHandlerProcedural/CSharp/Window1.xaml.cs#commandhandlerbuttoncommandsource)]
- [!code-vb[CommandHandlerProcedural#CommandHandlerButtonCommandSource](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/CommandHandlerProcedural/visualbasic/window1.xaml.vb#commandhandlerbuttoncommandsource)]  
+ [!code-csharp[CommandHandlerProcedural#CommandHandlerButtonCommandSource](~/samples/snippets/csharp/VS_Snippets_Wpf/CommandHandlerProcedural/CSharp/Window1.xaml.cs#commandhandlerbuttoncommandsource)]
+ [!code-vb[CommandHandlerProcedural#CommandHandlerButtonCommandSource](~/samples/snippets/visualbasic/VS_Snippets_Wpf/CommandHandlerProcedural/visualbasic/window1.xaml.vb#commandhandlerbuttoncommandsource)]  
   
  다음으로, <xref:System.Windows.Input.ExecutedRoutedEventHandler> 및 <xref:System.Windows.Input.CanExecuteRoutedEventHandler>를 만듭니다.  <xref:System.Windows.Input.ExecutedRoutedEventHandler>는 단순히 <xref:System.Windows.MessageBox>를 열어 명령이 실행되었음을 나타냅니다.  <xref:System.Windows.Input.CanExecuteRoutedEventHandler>는 <xref:System.Windows.Input.CanExecuteRoutedEventArgs.CanExecute%2A> 속성을 `true`로 설정합니다.  일반적으로 실행 가능 처리기는 현재 명령 대상에서 명령을 실행할 수 있는지 확인하려면 보다 강력한 확인 작업을 수행합니다.  
   
- [!code-csharp[commandWithHandler#CommandHandlerBothHandlers](../../../../samples/snippets/csharp/VS_Snippets_Wpf/commandWithHandler/CSharp/Window1.xaml.cs#commandhandlerbothhandlers)]
- [!code-vb[commandWithHandler#CommandHandlerBothHandlers](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/commandWithHandler/VisualBasic/Window1.xaml.vb#commandhandlerbothhandlers)]  
+ [!code-csharp[commandWithHandler#CommandHandlerBothHandlers](~/samples/snippets/csharp/VS_Snippets_Wpf/commandWithHandler/CSharp/Window1.xaml.cs#commandhandlerbothhandlers)]
+ [!code-vb[commandWithHandler#CommandHandlerBothHandlers](~/samples/snippets/visualbasic/VS_Snippets_Wpf/commandWithHandler/VisualBasic/Window1.xaml.vb#commandhandlerbothhandlers)]  
   
  마지막으로, <xref:System.Windows.Input.CommandBinding>은 라우팅된 이벤트 처리기를 <xref:System.Windows.Input.ApplicationCommands.Open%2A> 명령에 연결하는 애플리케이션의 <xref:System.Windows.Window> 루트에 만들어집니다.  
   
- [!code-xaml[commandWithHandler#CommandHandlerCommandBinding](../../../../samples/snippets/csharp/VS_Snippets_Wpf/commandWithHandler/CSharp/Window1.xaml#commandhandlercommandbinding)]  
+ [!code-xaml[commandWithHandler#CommandHandlerCommandBinding](~/samples/snippets/csharp/VS_Snippets_Wpf/commandWithHandler/CSharp/Window1.xaml#commandhandlercommandbinding)]  
   
- [!code-csharp[CommandHandlerProcedural#CommandHandlerBindingInit](../../../../samples/snippets/csharp/VS_Snippets_Wpf/CommandHandlerProcedural/CSharp/Window1.xaml.cs#commandhandlerbindinginit)]
- [!code-vb[CommandHandlerProcedural#CommandHandlerBindingInit](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/CommandHandlerProcedural/visualbasic/window1.xaml.vb#commandhandlerbindinginit)]  
+ [!code-csharp[CommandHandlerProcedural#CommandHandlerBindingInit](~/samples/snippets/csharp/VS_Snippets_Wpf/CommandHandlerProcedural/CSharp/Window1.xaml.cs#commandhandlerbindinginit)]
+ [!code-vb[CommandHandlerProcedural#CommandHandlerBindingInit](~/samples/snippets/visualbasic/VS_Snippets_Wpf/CommandHandlerProcedural/visualbasic/window1.xaml.vb#commandhandlerbindinginit)]  
   
 ## <a name="see-also"></a>참고자료
-- [명령 개요](../../../../docs/framework/wpf/advanced/commanding-overview.md)
-- [명령을 지원하는 컨트롤에 명령 후크](../../../../docs/framework/wpf/advanced/how-to-hook-up-a-command-to-a-control-with-command-support.md)
+- [명령 개요](commanding-overview.md)
+- [명령을 지원하는 컨트롤에 명령 후크](how-to-hook-up-a-command-to-a-control-with-command-support.md)

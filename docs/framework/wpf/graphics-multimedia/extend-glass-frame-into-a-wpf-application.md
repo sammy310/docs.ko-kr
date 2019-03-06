@@ -10,12 +10,12 @@ helpviewer_keywords:
 - extending glass frames into applications [WPF]
 - glass frames [WPF], extending into applications
 ms.assetid: 74388a3a-4b69-4a9d-ba1f-e107636bd660
-ms.openlocfilehash: 9df6adbf9208ee58044b0ba6ef606d693c9dca7a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 326cf683c05eae342646efca962cfe9b87ccab79
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54705825"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57364686"
 ---
 # <a name="extend-glass-frame-into-a-wpf-application"></a>투명 효과 프레임을 WPF 애플리케이션으로 확장
 이 항목을 확장 하는 방법에 설명 합니다 [!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)] Windows Presentation Foundation (WPF) 응용 프로그램의 클라이언트 영역에 투명 효과 프레임입니다.  
@@ -28,7 +28,7 @@ ms.locfileid: "54705825"
   
  **주소 표시줄 뒤로 투명 효과 프레임이 확장된 Internet Explorer**  
   
- ![주소 표시줄 뒤로 투명 효과 프레임이 확장된 IE7](../../../../docs/framework/wpf/graphics-multimedia/media/ie7glasstopbar.PNG "IE7glasstopbar")  
+ ![주소 표시줄 뒤로 투명 효과 프레임이 확장된 IE7](./media/ie7glasstopbar.PNG "IE7glasstopbar")  
   
  [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 응용 프로그램에서 투명 효과 프레임을 확장하려면 관리되지 않는 [!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)]에 액세스해야 합니다. 다음 코드 예제에서는 프레임을 클라이언트 영역으로 확장하는 데 필요한 두 개의 [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)]에 대해 플랫폼 호출(pinvoke)을 수행합니다. 이러한 각 [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)]는 **NonClientRegionAPI**라는 클래스에 선언됩니다.  
   
@@ -147,7 +147,7 @@ void OnLoaded(object sender, RoutedEventArgs e)
   
  **투명 효과 프레임이 확장 된는**[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]**응용 프로그램입니다.**  
   
- ![WPF 응용 프로그램으로 확장된 투명 효과 프레임](../../../../docs/framework/wpf/graphics-multimedia/media/wpfextendedglassintoclient.PNG "WPFextendedGlassIntoClient")  
+ ![WPF 응용 프로그램으로 확장된 투명 효과 프레임](./media/wpfextendedglassintoclient.PNG "WPFextendedGlassIntoClient")  
   
 ## <a name="see-also"></a>참고자료
 - [바탕 화면 창 관리자 개요](/windows/desktop/dwm/dwm-overview)

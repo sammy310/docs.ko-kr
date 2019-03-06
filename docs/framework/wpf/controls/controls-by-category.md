@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - controls [WPF], listed by category
 ms.assetid: f8a1f78e-d9fa-4367-9ec6-f084577e83bb
-ms.openlocfilehash: b056f52879c4309db0cbb33ecc789d25439a8c68
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: cf9a06c4604ee71e3e98de22c6729cc4a874e741
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54576852"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57375573"
 ---
 # <a name="controls-by-category"></a>컨트롤 범주
 Windows Presentation Foundation (WPF) 컨트롤은 논리적으로 여러 범주로 그룹화 할 수 있습니다. 이러한 범주를 사용하면 유사한 사용 패턴 또는 기능이 있는 컨트롤을 볼 수 있으므로 시나리오에 적절한 컨트롤을 선택할 수 있습니다.  
@@ -178,4 +178,4 @@ Windows Presentation Foundation (WPF) 컨트롤은 논리적으로 여러 범주
 -   <xref:System.Windows.Controls.InkPresenter>  
   
 ## <a name="see-also"></a>참고자료
-- [컨트롤 라이브러리](../../../../docs/framework/wpf/controls/control-library.md)
+- [컨트롤 라이브러리](control-library.md)

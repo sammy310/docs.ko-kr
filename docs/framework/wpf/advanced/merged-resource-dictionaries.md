@@ -5,12 +5,12 @@ helpviewer_keywords:
 - merged resource dictionaries [WPF]
 - dictionaries [WPF], merged resources
 ms.assetid: d159531f-05d4-49fd-b951-c332de51e5bc
-ms.openlocfilehash: f8549dedc9c6f37fb8a06a376351ed96b808bfd4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ae6c8dc3669ed46165f3d78e78735187ebbc3776
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54572924"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57377049"
 ---
 # <a name="merged-resource-dictionaries"></a>병합된 리소스 사전
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 리소스에서는 병합된 리소스 사전 기능을 지원합니다. 이 기능을 사용하면 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 애플리케이션의 리소스 부분을 컴파일된 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 애플리케이션 외부에서 정의할 수 있습니다. 그런 다음 리소스를 애플리케이션 간에 공유하고 지역화를 위해 더욱 간편하게 격리할 수도 있습니다.  
@@ -18,9 +18,9 @@ ms.locfileid: "54572924"
 ## <a name="introducing-a-merged-resource-dictionary"></a>병합된 리소스 사전 도입  
  태그에서 다음 구문을 사용하여 병합된 리소스 사전을 페이지에 도입할 수 있습니다.  
   
- [!code-xaml[ResourceMergeDictionary#MergedXAML](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ResourceMergeDictionary/CS/default.xaml#mergedxaml)]  
+ [!code-xaml[ResourceMergeDictionary#MergedXAML](~/samples/snippets/csharp/VS_Snippets_Wpf/ResourceMergeDictionary/CS/default.xaml#mergedxaml)]  
   
- 합니다 <xref:System.Windows.ResourceDictionary> 요소에 없는 [X:key 지시문](../../../../docs/framework/xaml-services/x-key-directive.md), 일반적으로 필요한 리소스 컬렉션의 모든 항목에 대 한 합니다. 하지만 다른 <xref:System.Windows.ResourceDictionary> 내에서 참조 된 <xref:System.Windows.ResourceDictionary.MergedDictionaries%2A> 수집은이 병합 된 리소스 사전 시나리오에 대 한 예약 된 특별 한 경우. 합니다 <xref:System.Windows.ResourceDictionary> 도입 하는 병합 된 리소스 사전을 사용할 수 없습니다는 [X:key 지시문](../../../../docs/framework/xaml-services/x-key-directive.md)합니다. 일반적으로 각 <xref:System.Windows.ResourceDictionary> 내 합니다 <xref:System.Windows.ResourceDictionary.MergedDictionaries%2A> 컬렉션 지정을 <xref:System.Windows.ResourceDictionary.Source%2A> 특성입니다. 변수의 <xref:System.Windows.ResourceDictionary.Source%2A> 이어야 합니다는 [!INCLUDE[TLA#tla_uri](../../../../includes/tlasharptla-uri-md.md)] 병합할 리소스 파일의 위치를 확인 하는 합니다. 대상 [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] 다른 해야 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 파일을 사용 하 여 <xref:System.Windows.ResourceDictionary> 해당 루트 요소로.  
+ 합니다 <xref:System.Windows.ResourceDictionary> 요소에 없는 [X:key 지시문](../../xaml-services/x-key-directive.md), 일반적으로 필요한 리소스 컬렉션의 모든 항목에 대 한 합니다. 하지만 다른 <xref:System.Windows.ResourceDictionary> 내에서 참조 된 <xref:System.Windows.ResourceDictionary.MergedDictionaries%2A> 수집은이 병합 된 리소스 사전 시나리오에 대 한 예약 된 특별 한 경우. 합니다 <xref:System.Windows.ResourceDictionary> 도입 하는 병합 된 리소스 사전을 사용할 수 없습니다는 [X:key 지시문](../../xaml-services/x-key-directive.md)합니다. 일반적으로 각 <xref:System.Windows.ResourceDictionary> 내 합니다 <xref:System.Windows.ResourceDictionary.MergedDictionaries%2A> 컬렉션 지정을 <xref:System.Windows.ResourceDictionary.Source%2A> 특성입니다. 변수의 <xref:System.Windows.ResourceDictionary.Source%2A> 이어야 합니다는 [!INCLUDE[TLA#tla_uri](../../../../includes/tlasharptla-uri-md.md)] 병합할 리소스 파일의 위치를 확인 하는 합니다. 대상 [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] 다른 해야 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 파일을 사용 하 여 <xref:System.Windows.ResourceDictionary> 해당 루트 요소로.  
   
 > [!NOTE]
 >  내에서 리소스를 정의할 수는 것을 <xref:System.Windows.ResourceDictionary> 병합된 된 사전으로 지정 하는 대신 지정 된 <xref:System.Windows.ResourceDictionary.Source%2A>, 또는 지정된 된 소스에서 포함 된 리소스 외에도 합니다. 그러나 이는 일반적인 시나리오가 아닙니다. 병합된 사전의 기본 시나리오는 외부 파일 위치에서 리소스를 병합하는 것입니다. 페이지의 태그 내에 리소스를 지정 하려는 경우 일반적으로 정의 해야 기본에서 이러한 <xref:System.Windows.ResourceDictionary> 및 병합된 된 사전에 없는 합니다.  
@@ -39,7 +39,7 @@ ms.locfileid: "54572924"
 > [!NOTE]
 >  포함 리소스 빌드 작업은 사용하지 않습니다. 빌드 작업 자체에 대 한 지원 됩니다 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 있지만의 해상도 <xref:System.Windows.ResourceDictionary.Source%2A> 통합 하지 <xref:System.Resources.ResourceManager>, 개별 리소스를 스트림에서 분리할 수 없습니다. 다른 용도로 사용에 대 한 포함 리소스를 계속 사용할 수 있습니다 <xref:System.Resources.ResourceManager> 리소스에 액세스할 수 있습니다.  
   
- 관련 기술로는 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 파일에 대한 Pack URI를 소스로 참조하는 방법이 있습니다. Pack URI를 사용하면 참조된 어셈블리 및 다른 기술의 구성 요소를 참조할 수 있습니다. Pack URI에 대한 자세한 내용은 [WPF 애플리케이션 리소스, 콘텐츠 및 데이터 파일](../../../../docs/framework/wpf/app-development/wpf-application-resource-content-and-data-files.md)을 참조하세요.  
+ 관련 기술로는 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 파일에 대한 Pack URI를 소스로 참조하는 방법이 있습니다. Pack URI를 사용하면 참조된 어셈블리 및 다른 기술의 구성 요소를 참조할 수 있습니다. Pack URI에 대한 자세한 내용은 [WPF 애플리케이션 리소스, 콘텐츠 및 데이터 파일](../app-development/wpf-application-resource-content-and-data-files.md)을 참조하세요.  
   
  프로젝트의 일부로 컴파일되지 않는 리소스의 경우 URI가 런타임에 평가됩니다. file: 또는 http:와 같은 일반 URI 전송을 사용하여 리소스 파일을 참조할 수 있습니다. 컴파일되지 않은 리소스 방법을 사용하는 경우 file: 액세스에 추가 배포 단계가 필요하고 http: 액세스에 인터넷 보안 영역이 수반된다는 단점이 있습니다.  
   
@@ -49,10 +49,10 @@ ms.locfileid: "54572924"
  병합된 사전을 로컬 애플리케이션 파일로 작성하거나 로컬 공유 저장소에 기록하는 것도 병합된 사전/애플리케이션 배포의 사용 가능한 시나리오입니다.  
   
 ### <a name="localization"></a>지역화  
- 지역화해야 하는 리소스를 기본 사전에 병합된 사전으로 격리하고 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 사용 완화로 보관하는 경우 이러한 파일을 별도로 지역화할 수 있습니다. 이 기술은 위성 리소스 어셈블리를 지역화하는 것에 비해 간단합니다. 자세한 내용은 [WPF 세계화 및 지역화 개요](../../../../docs/framework/wpf/advanced/wpf-globalization-and-localization-overview.md)를 참조하세요.  
+ 지역화해야 하는 리소스를 기본 사전에 병합된 사전으로 격리하고 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 사용 완화로 보관하는 경우 이러한 파일을 별도로 지역화할 수 있습니다. 이 기술은 위성 리소스 어셈블리를 지역화하는 것에 비해 간단합니다. 자세한 내용은 [WPF 세계화 및 지역화 개요](wpf-globalization-and-localization-overview.md)를 참조하세요.  
   
 ## <a name="see-also"></a>참고자료
 - <xref:System.Windows.ResourceDictionary>
-- [XAML 리소스](../../../../docs/framework/wpf/advanced/xaml-resources.md)
-- [리소스 및 코드](../../../../docs/framework/wpf/advanced/resources-and-code.md)
-- [WPF 응용 프로그램 리소스, 콘텐츠 및 데이터 파일](../../../../docs/framework/wpf/app-development/wpf-application-resource-content-and-data-files.md)
+- [XAML 리소스](xaml-resources.md)
+- [리소스 및 코드](resources-and-code.md)
+- [WPF 응용 프로그램 리소스, 콘텐츠 및 데이터 파일](../app-development/wpf-application-resource-content-and-data-files.md)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - dependency properties [WPF], backing properties with
 - properties [WPF], backing with dependency properties
 ms.assetid: 855fd6d7-19ac-493c-bf5e-2f40b57cdc92
-ms.openlocfilehash: 90eb15d3cc0d9a6c1d07879b0166da4d45d786be
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8ee944c521b7e4ec75394c821e8bd509dd4eca74
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54727328"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57374416"
 ---
 # <a name="how-to-implement-a-dependency-property"></a>방법: 종속성 속성 구현
 백업 하는 방법을 보여 주는이 예제는 [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] 속성을 <xref:System.Windows.DependencyProperty> 필드, 따라서 종속성 속성을 정의 합니다. 고유 속성을 정의하고 스타일, 데이터 바인딩, 상속, 애니메이션 및 기본값을 포함한 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 기능의 여러 측면을 지원하려면 해당 속성을 종속성 속성으로 구현해야 합니다.  
@@ -27,11 +27,11 @@ ms.locfileid: "54727328"
   
  종속성 속성에 대한 기본 메타데이터를 지정할 수도 있습니다. 이 예제에서는 `State` 종속성 속성의 기본값이 `false`로 등록됩니다.  
   
- [!code-csharp[PropertySystemEsoterics#MyStateControl](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PropertySystemEsoterics/CSharp/SDKSampleLibrary/class1.cs#mystatecontrol)]
- [!code-vb[PropertySystemEsoterics#MyStateControl](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/PropertySystemEsoterics/visualbasic/sdksamplelibrary/class1.vb#mystatecontrol)]  
+ [!code-csharp[PropertySystemEsoterics#MyStateControl](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertySystemEsoterics/CSharp/SDKSampleLibrary/class1.cs#mystatecontrol)]
+ [!code-vb[PropertySystemEsoterics#MyStateControl](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PropertySystemEsoterics/visualbasic/sdksamplelibrary/class1.vb#mystatecontrol)]  
   
- 개인 필드가 있는 [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] 속성을 단지 백업하는 것과는 반대로 종속성 속성을 구현하는 방법과 이유에 대한 자세한 내용은 [종속성 속성 개요](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)를 참조하세요.  
+ 개인 필드가 있는 [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] 속성을 단지 백업하는 것과는 반대로 종속성 속성을 구현하는 방법과 이유에 대한 자세한 내용은 [종속성 속성 개요](dependency-properties-overview.md)를 참조하세요.  
   
 ## <a name="see-also"></a>참고자료
-- [종속성 속성 개요](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)
-- [방법 항목](../../../../docs/framework/wpf/advanced/properties-how-to-topics.md)
+- [종속성 속성 개요](dependency-properties-overview.md)
+- [방법 항목](properties-how-to-topics.md)

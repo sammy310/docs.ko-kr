@@ -14,13 +14,13 @@ WPF(Windows Presentation Foundation)는 데스크톱 클라이언트 애플리�
   
 |||  
 |-|-|  
-|바로 시작|[연습: 내 첫 WPF 데스크톱 애플리케이션](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md)|  
+|바로 시작|[연습: 내 첫 WPF 데스크톱 애플리케이션](walkthrough-my-first-wpf-desktop-application.md)|  
 |애플리케이션 UI를 디자인하려면 어떻게 해야 하나요?|[Visual Studio에서 XAML 디자인](/visualstudio/designers/designing-xaml-in-visual-studio)|  
-|.NET을 처음 사용하세요?|[.NET Framework의 개요](../../get-started/overview.md)<br /><br /> [.NET Framework 응용 프로그램 주요 사항](../../../../docs/standard/application-essentials.md)<br /><br /> [Visual C# 및 Visual Basic 시작](/visualstudio/ide/getting-started-with-visual-csharp-and-visual-basic)|  
-|WPF에 대한 자세한 설명...|[Visual Studio에서의 WPF 소개](../../../../docs/framework/wpf/getting-started/introduction-to-wpf-in-vs.md)<br /><br /> [XAML 개요(WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)<br /><br /> [컨트롤](../../../../docs/framework/wpf/controls/index.md)<br /><br /> [데이터 바인딩 개요](../../../../docs/framework/wpf/data/data-binding-overview.md)|  
-|Windows Forms 개발자인가요?|[Windows Forms 컨트롤 및 해당 WPF 컨트롤](../../../../docs/framework/wpf/advanced/windows-forms-controls-and-equivalent-wpf-controls.md)<br /><br /> [WPF 및 Windows Forms 상호 운용성](../../../../docs/framework/wpf/advanced/wpf-and-windows-forms-interoperation.md)|  
+|.NET을 처음 사용하세요?|[.NET Framework의 개요](../../get-started/overview.md)<br /><br /> [.NET Framework 애플리케이션 주요 사항](../../../standard/application-essentials.md)<br /><br /> [Visual C# 및 Visual Basic 시작](/visualstudio/ide/getting-started-with-visual-csharp-and-visual-basic)|  
+|WPF에 대한 자세한 설명...|[Visual Studio에서의 WPF 소개](introduction-to-wpf-in-vs.md)<br /><br /> [XAML 개요(WPF)](../advanced/xaml-overview-wpf.md)<br /><br /> [컨트롤](../controls/index.md)<br /><br /> [데이터 바인딩 개요](../data/data-binding-overview.md)|  
+|Windows Forms 개발자인가요?|[Windows Forms 컨트롤 및 해당 WPF 컨트롤](../advanced/windows-forms-controls-and-equivalent-wpf-controls.md)<br /><br /> [WPF 및 Windows Forms 상호 운용성](../advanced/wpf-and-windows-forms-interoperation.md)|  
   
 ## <a name="see-also"></a>참고자료
-- [클래스 라이브러리](../../../../docs/framework/wpf/class-library-wpf.md)
-- [응용 프로그램 개발](../../../../docs/framework/wpf/app-development/index.md)
+- [클래스 라이브러리](../class-library-wpf.md)
+- [응용 프로그램 개발](../app-development/index.md)
 - [.NET Framework 개발자 센터](https://www.microsoft.com/net)

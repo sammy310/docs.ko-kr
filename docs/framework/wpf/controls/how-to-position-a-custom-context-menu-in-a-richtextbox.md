@@ -10,12 +10,12 @@ helpviewer_keywords:
 - RichTextBox control [WPF], positioning custom context menus
 - context menus [WPF], positioning
 ms.assetid: bf77c930-a546-4573-9a56-9af345ba189a
-ms.openlocfilehash: 1f6e7255286d065eb26773d524a3147801933406
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: abb5bbb5d5a537b14f334782e87fa7caf0c7976f
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54727900"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57367880"
 ---
 # <a name="how-to-position-a-custom-context-menu-in-a-richtextbox"></a>방법: RichTextBox에서 사용자 지정 상황에 맞는 메뉴의 위치 지정
 에 대 한 사용자 지정 상황에 맞는 메뉴를 배치 하는 방법을 보여 주는이 예제는 <xref:System.Windows.Controls.RichTextBox>합니다.  
@@ -25,15 +25,15 @@ ms.locfileid: "54727900"
 ## <a name="example"></a>예제  
  기본 배치 동작을 재정의 하려면에 대 한 수신기를 추가 합니다 <xref:System.Windows.FrameworkContentElement.ContextMenuOpening> 이벤트입니다.  다음 예제에서는 이를 프로그래밍 방식으로 수행하는 방법을 보여 줍니다.  
   
- [!code-csharp[RichTextBox_ContextMenu#_AddListener](../../../../samples/snippets/csharp/VS_Snippets_Wpf/RichTextBox_ContextMenu/CSharp/app.xaml.cs#_addlistener)]
- [!code-vb[RichTextBox_ContextMenu#_AddListener](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/RichTextBox_ContextMenu/VisualBasic/app.xaml.vb#_addlistener)]  
+ [!code-csharp[RichTextBox_ContextMenu#_AddListener](~/samples/snippets/csharp/VS_Snippets_Wpf/RichTextBox_ContextMenu/CSharp/app.xaml.cs#_addlistener)]
+ [!code-vb[RichTextBox_ContextMenu#_AddListener](~/samples/snippets/visualbasic/VS_Snippets_Wpf/RichTextBox_ContextMenu/VisualBasic/app.xaml.vb#_addlistener)]  
   
 ## <a name="example"></a>예제  
  다음 예제에서는 해당 구현을 <xref:System.Windows.FrameworkContentElement.ContextMenuOpening> 이벤트 수신기입니다.  
   
- [!code-csharp[RichTextBox_ContextMenu#_ListenerBody](../../../../samples/snippets/csharp/VS_Snippets_Wpf/RichTextBox_ContextMenu/CSharp/app.xaml.cs#_listenerbody)]
- [!code-vb[RichTextBox_ContextMenu#_ListenerBody](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/RichTextBox_ContextMenu/VisualBasic/app.xaml.vb#_listenerbody)]  
+ [!code-csharp[RichTextBox_ContextMenu#_ListenerBody](~/samples/snippets/csharp/VS_Snippets_Wpf/RichTextBox_ContextMenu/CSharp/app.xaml.cs#_listenerbody)]
+ [!code-vb[RichTextBox_ContextMenu#_ListenerBody](~/samples/snippets/visualbasic/VS_Snippets_Wpf/RichTextBox_ContextMenu/VisualBasic/app.xaml.vb#_listenerbody)]  
   
 ## <a name="see-also"></a>참고자료
-- [RichTextBox 개요](../../../../docs/framework/wpf/controls/richtextbox-overview.md)
-- [TextBox 개요](../../../../docs/framework/wpf/controls/textbox-overview.md)
+- [RichTextBox 개요](richtextbox-overview.md)
+- [TextBox 개요](textbox-overview.md)

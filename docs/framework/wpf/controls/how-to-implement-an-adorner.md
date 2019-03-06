@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - adorners [WPF], implementing
 ms.assetid: 56ae32b6-0599-455c-b52f-2ff97e6f1ec2
-ms.openlocfilehash: f34bdeb87d0bf34a998f9b2e2fb6c42aedec5063
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 53a25396ba5d8a5c78e850e636b7c882c03d5152
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54591684"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57362645"
 ---
 # <a name="how-to-implement-an-adorner"></a>방법: 표시기 구현
 이 예제에서는 최소 표시기 구현을 보여 줍니다.  
@@ -26,8 +26,8 @@ ms.locfileid: "54591684"
  추상에서 상속 되는 클래스를 구현 하 여 사용자 지정 표시기 만들어집니다 <xref:System.Windows.Documents.Adorner> 클래스입니다.  표시기 예제에서는의 모서리를 원으로 간단히 표시를 <xref:System.Windows.UIElement> 재정의 하 여 원으로 <xref:System.Windows.UIElement.OnRender%2A> 메서드.  
   
 ### <a name="code"></a>코드  
- [!code-csharp[Adorners_SimpleCircleAdorner#_SimpleCircleAdornerBody](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Adorners_SimpleCircleAdorner/CSharp/Window1.xaml.cs#_simplecircleadornerbody)]
- [!code-vb[Adorners_SimpleCircleAdorner#_SimpleCircleAdornerBody](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/Adorners_SimpleCircleAdorner/VisualBasic/Window1.xaml.vb#_simplecircleadornerbody)]  
+ [!code-csharp[Adorners_SimpleCircleAdorner#_SimpleCircleAdornerBody](~/samples/snippets/csharp/VS_Snippets_Wpf/Adorners_SimpleCircleAdorner/CSharp/Window1.xaml.cs#_simplecircleadornerbody)]
+ [!code-vb[Adorners_SimpleCircleAdorner#_SimpleCircleAdornerBody](~/samples/snippets/visualbasic/VS_Snippets_Wpf/Adorners_SimpleCircleAdorner/VisualBasic/Window1.xaml.vb#_simplecircleadornerbody)]  
   
 ## <a name="see-also"></a>참고자료
-- [표시기 개요](../../../../docs/framework/wpf/controls/adorners-overview.md)
+- [표시기 개요](adorners-overview.md)

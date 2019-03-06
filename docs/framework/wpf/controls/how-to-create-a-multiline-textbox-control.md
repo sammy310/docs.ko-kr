@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - TextBox control [WPF], multiple lines of text
 ms.assetid: 05914a93-d0ea-4a9a-b693-09df7d4e2ac2
-ms.openlocfilehash: ca1b499b2acdfd9fd2ff0f57f2b0c07d7da10789
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 75bbee806b2b7039656d6c8e7c9a64359e77d16f
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54517827"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57352349"
 ---
 # <a name="how-to-create-a-multiline-textbox-control"></a>방법: 여러 줄 TextBox 컨트롤 만들기
 이 예제에 사용 하는 방법을 보여 줍니다 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] 정의 하는 <xref:System.Windows.Controls.TextBox> 컨트롤을 여러 줄의 텍스트에 맞게 자동으로 확장 됩니다.  
@@ -21,9 +21,9 @@ ms.locfileid: "54517827"
   
  <xref:System.Windows.Controls.Primitives.TextBoxBase.VerticalScrollBarVisibility%2A> 특성에 있는 스크롤 막대를 추가 합니다 <xref:System.Windows.Controls.TextBox>되도록 내용의 <xref:System.Windows.Controls.TextBox> 경우 스크롤할 수를 <xref:System.Windows.Controls.TextBox> 포함 하는 창 프레임의 크기 이상으로 확장.  
   
- [!code-xaml[TextBox_MiscCode#_MultilineTextBoxXAML](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TextBox_MiscCode/CSharp/Window1.xaml#_multilinetextboxxaml)]  
+ [!code-xaml[TextBox_MiscCode#_MultilineTextBoxXAML](~/samples/snippets/csharp/VS_Snippets_Wpf/TextBox_MiscCode/CSharp/Window1.xaml#_multilinetextboxxaml)]  
   
 ## <a name="see-also"></a>참고자료
 - <xref:System.Windows.TextWrapping>
-- [TextBox 개요](../../../../docs/framework/wpf/controls/textbox-overview.md)
-- [RichTextBox 개요](../../../../docs/framework/wpf/controls/richtextbox-overview.md)
+- [TextBox 개요](textbox-overview.md)
+- [RichTextBox 개요](richtextbox-overview.md)

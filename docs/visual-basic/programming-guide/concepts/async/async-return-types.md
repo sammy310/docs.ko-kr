@@ -2,12 +2,12 @@
 title: 비동기 반환 형식 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 07890291-ee72-42d3-932a-fa4d312f2c60
-ms.openlocfilehash: 6fffd94a4b9ca531af58138b7613e0b3c5364c56
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 87ddab62543fae5442a15fc5f200ef914ab8d859
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54498413"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57352583"
 ---
 # <a name="async-return-types-visual-basic"></a>비동기 반환 형식 (Visual Basic)
 비동기 메서드에는 세 가지 가능한 반환 형식, 즉 <xref:System.Threading.Tasks.Task%601>, <xref:System.Threading.Tasks.Task> 및 void가 있습니다. Visual Basic에서 void 반환 형식은 [Sub](../../../../visual-basic/programming-guide/language-features/procedures/sub-procedures.md) 프로시저로 작성합니다. 비동기 메서드에 대 한 자세한 내용은 참조 하세요. [Async 및 Await (Visual Basic)를 사용한 비동기 프로그래밍](../../../../visual-basic/programming-guide/concepts/async/index.md)합니다.  
@@ -17,7 +17,7 @@ ms.locfileid: "54498413"
 > [!NOTE]
 >  예제를 실행하려면 Visual Studio 2012 이상 및 .NET Framework 4.5 이상이 컴퓨터에 설치되어 있어야 합니다.  
   
-##  <a name="BKMK_TaskTReturnType"></a> Task(T) 반환 형식  
+## <a name="BKMK_TaskTReturnType"></a> Task(T) 반환 형식  
  <xref:System.Threading.Tasks.Task%601> 형식을 포함 하는 비동기 메서드는 반환을 [반환](../../../../visual-basic/language-reference/statements/return-statement.md) 피연산자의 형식이 문을 `TResult`합니다.  
   
  다음 예제에서 `TaskOfT_MethodAsync` 비동기 메서드는 정수를 반환하는 return 문을 포함합니다. 따라서 메서드 선언은 `Task(Of Integer)`의 반환 형식을 지정해야 합니다.  
@@ -79,7 +79,7 @@ textBox1.Text &= String.Format("Value of result2 variable:   {0}" & vbCrLf, resu
 textBox1.Text &= String.Format("Value of resultTask.Result:  {0}" & vbCrLf, integerTask.Result)  
 ```  
   
-##  <a name="BKMK_TaskReturnType"></a> Task 반환 형식  
+## <a name="BKMK_TaskReturnType"></a> Task 반환 형식  
  return 문을 포함하지 않거나 피연산자를 반환하지 않는 return 문을 포함하는 비동기 메서드에는 일반적으로 <xref:System.Threading.Tasks.Task>의 반환 형식이 있습니다. 이러한 메서드는 것 [Sub](../../../../visual-basic/programming-guide/language-features/procedures/sub-procedures.md) 프로시저 동기적으로 실행 되도록 작성 된 경우. 비동기 메서드에 대해 `Task` 반환 형식을 사용하는 경우 호출된 비동기 메서드가 완료될 때까지 호출 메서드는 `Await` 연산자를 사용하여 호출자의 완료를 일시 중단할 수 있습니다.  
   
  다음 예제에서는 `Task_MethodAsync` 비동기 메서드가 return 문을 포함하지 않습니다. 따라서 이 메서드에 대해 `Task_MethodAsync`가 대기할 수 있도록 `Task`의 반환 형식을 지정합니다. `Task` 형식의 정의는 반환 값을 저장하기 위한 `Result` 속성을 포함하지 않습니다.  
@@ -121,10 +121,11 @@ textBox1.Text &= String.Format(vbCrLf & "Application can continue working while 
 Await simpleTask  
 ```  
   
-##  <a name="BKMK_VoidReturnType"></a> Void 반환 형식  
+## <a name="BKMK_VoidReturnType"></a> Void 반환 형식  
  주된 용도 `Sub` 프로시저는 이벤트 처리기에서 (다른 언어로 void 반환 형식이 라고도 함) 반환 형식이 없는 경우. void 반환은 또한 "실행 후 제거"로 분류할 수 있는 작업을 수행하는 메서드 또는 viod를 반환하는 메서드를 재정의하는 데 사용할 수 있습니다. 하지만 void를 반환하는 비동기 메서드는 대기할 수가 없기 때문에 가능할 때마다 `Task`를 반환하는 것이 좋습니다. 이러한 메서드의 호출자는 호출된 비동기 메서드가 마치는 것을 기다리지 않고 완료될 때까지 계속 진행할 수 있어야 하므로, 해당 호출자는 비동기 메서드가 생성하는 모든 값 또는 예외와 독립되어 있어야 합니다.  
   
- void를 반환하는 비동기 메서드의 호출자는 메서드에서 throw되는 예외를 catch할 수 없으므로 이러한 처리되지 않은 예외를 사용하면 애플리케이션이 실패할 수 있습니다. <xref:System.Threading.Tasks.Task> 또는 <xref:System.Threading.Tasks.Task%601>를 반환하는 비동기 메서드에서 예외가 발생하는 경우 이 예외는 반환된 작업에 저장되고 작업이 대기 상태일 때 다시 throw됩니다. 따라서 예외를 생성할 수 있는 모든 비동기 메서드에 <xref:System.Threading.Tasks.Task> 또는 <xref:System.Threading.Tasks.Task%601>의 반환 형식이 있고 메서드 호출이 대기 상태인지 확인해야 합니다.  
+ void를 반환하는 비동기 메서드의 호출자는 메서드에서 throw되는 예외를 catch할 수 없으므로 이러한 처리되지 않은 예외를 사용하면 애플리케이션이 실패할 수 있습니다. 
+  <xref:System.Threading.Tasks.Task> 또는 <xref:System.Threading.Tasks.Task%601>를 반환하는 비동기 메서드에서 예외가 발생하는 경우 이 예외는 반환된 작업에 저장되고 작업이 대기 상태일 때 다시 throw됩니다. 따라서 예외를 생성할 수 있는 모든 비동기 메서드에 <xref:System.Threading.Tasks.Task> 또는 <xref:System.Threading.Tasks.Task%601>의 반환 형식이 있고 메서드 호출이 대기 상태인지 확인해야 합니다.  
   
  비동기 메서드에서 예외를 catch하는 방법에 대한 자세한 내용은 [Try...Catch...Finally 문](../../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)을 참조하세요.  
   
@@ -145,7 +146,7 @@ Async Sub button1_Click(sender As Object, e As RoutedEventArgs) Handles button1.
 End Sub  
 ```  
   
-##  <a name="BKMK_Example"></a> 전체 예제  
+## <a name="BKMK_Example"></a> 전체 예제  
  다음 WPF(Windows Presentation Foundation) 프로젝트는 이 항목의 코드 예제를 포함합니다.  
   
  프로젝트를 실행하려면 다음 단계를 수행합니다.  

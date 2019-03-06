@@ -9,12 +9,12 @@ helpviewer_keywords:
 - animation [WPF], colors with key frames
 - key frames [WPF], animating colors with
 ms.assetid: ab04ffa6-4de9-4d5b-a3b4-4e35d5b2ef35
-ms.openlocfilehash: 8d7dbe70f25b4712d1384a751a02053fb7f287ee
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ca669cee0fa978ca45efc57b4807b83df5c9086c
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54645095"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57354338"
 ---
 # <a name="how-to-animate-color-by-using-key-frames"></a>방법: 키 프레임을 사용하여 색에 애니메이션 효과 주기
 애니메이션을 적용 하는 방법을 보여 주는이 예제는 <xref:System.Windows.Media.SolidColorBrush.Color%2A> 의 한 <xref:System.Windows.Media.SolidColorBrush> 키 프레임을 사용 하 여 합니다.  
@@ -28,9 +28,9 @@ ms.locfileid: "54645095"
   
 3.  마지막 2 초 동안의 인스턴스를 사용 하 여는 <xref:System.Windows.Media.Animation.SplineColorKeyFrame> 다시 색을 변경 하는 클래스-이 시간 노란색에서 녹색입니다. 과 같은 스플라인 키 프레임 <xref:System.Windows.Media.Animation.SplineColorKeyFrame> 의 값에 따라 값 사이 가변 전환을 만듭니다는 <xref:System.Windows.Media.Animation.SplineColorKeyFrame.KeySpline%2A> 속성입니다. 이 예제에서 색 변화는 느리게 시작하다가 시간 세그먼트의 끝에 다가가면 기하급수적으로 빨라집니다.  
   
- [!code-csharp[keyframes_snip#ColorAnimationUsingKeyFramesWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/keyframes_snip/CSharp/ColorAnimationUsingKeyFramesExample.cs#coloranimationusingkeyframeswholepage)]
- [!code-vb[keyframes_snip#ColorAnimationUsingKeyFramesWholePage](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/keyframes_snip/visualbasic/coloranimationusingkeyframesexample.vb#coloranimationusingkeyframeswholepage)]
- [!code-xaml[keyframes_snip#ColorAnimationUsingKeyFramesWholePage](../../../../samples/snippets/xaml/VS_Snippets_Wpf/keyframes_snip/XAML/ColorAnimationUsingKeyFramesExample.xaml#coloranimationusingkeyframeswholepage)]  
+ [!code-csharp[keyframes_snip#ColorAnimationUsingKeyFramesWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/keyframes_snip/CSharp/ColorAnimationUsingKeyFramesExample.cs#coloranimationusingkeyframeswholepage)]
+ [!code-vb[keyframes_snip#ColorAnimationUsingKeyFramesWholePage](~/samples/snippets/visualbasic/VS_Snippets_Wpf/keyframes_snip/visualbasic/coloranimationusingkeyframesexample.vb#coloranimationusingkeyframeswholepage)]
+ [!code-xaml[keyframes_snip#ColorAnimationUsingKeyFramesWholePage](~/samples/snippets/xaml/VS_Snippets_Wpf/keyframes_snip/XAML/ColorAnimationUsingKeyFramesExample.xaml#coloranimationusingkeyframeswholepage)]  
   
  전체 샘플을 보려면 [키 프레임 애니메이션 샘플](https://go.microsoft.com/fwlink/?LinkID=160012)을 참조하세요.  
   
@@ -38,5 +38,5 @@ ms.locfileid: "54645095"
 - <xref:System.Windows.Media.SolidColorBrush.Color%2A>
 - <xref:System.Windows.Media.SolidColorBrush>
 - <xref:System.Windows.Media.Animation.ColorAnimationUsingKeyFrames>
-- [키 프레임 애니메이션 개요](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md)
-- [키 프레임 방법 항목](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animation-how-to-topics.md)
+- [키 프레임 애니메이션 개요](key-frame-animations-overview.md)
+- [키 프레임 방법 항목](key-frame-animation-how-to-topics.md)

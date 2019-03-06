@@ -9,12 +9,12 @@ helpviewer_keywords:
 - documents [WPF], tables
 - tables [WPF]
 ms.assetid: 5e1105f4-8fc4-473a-ba55-88c8e71386e6
-ms.openlocfilehash: 0888bc213be6b8037d0574bb5f9ac76e7651491a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e202fe839de547145c36a5664b62c350f40bfce6
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54745365"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57379014"
 ---
 # <a name="table-overview"></a>테이블 개요
 <xref:System.Windows.Documents.Table> 유동 문서 콘텐츠의 그리드 기반 프레젠테이션을 지 원하는 블록 수준 요소가입니다. 이 요소의 유연성 덕분에 이 요소는 매우 유용하지만 이해하고 제대로 사용하기가 더 복잡합니다.  
@@ -44,7 +44,7 @@ ms.locfileid: "54745365"
   
 <a name="table_vs_Grid"></a>   
 ### <a name="how-is-table-different-then-grid"></a>Table은 Grid와 어떻게 다를까요?  
- <xref:System.Windows.Documents.Table> 및 <xref:System.Windows.Controls.Grid> 일부 공통 기능을 공유 하지만 각각은 다양 한 시나리오에 가장 적합 합니다. A <xref:System.Windows.Documents.Table> 유동 콘텐츠 내에서 사용 하도록 설계 되었습니다 (참조 [유동 문서 개요](../../../../docs/framework/wpf/advanced/flow-document-overview.md) 유동 콘텐츠에 대 한 자세한 내용은). 그리드는 폼 내부에서 사용하는 것이 적합합니다(기본적으로 유동 콘텐츠 외부의 모든 위치). 내를 <xref:System.Windows.Documents.FlowDocument>, <xref:System.Windows.Documents.Table> 지원 유동 콘텐츠 동작 하는 동안 콘텐츠 선택, 페이지 매김 및 열 흐름 변경 등을 <xref:System.Windows.Controls.Grid> 하지 않습니다. A <xref:System.Windows.Controls.Grid> 반면에 가장 적합 외부를 <xref:System.Windows.Documents.FlowDocument> 비롯 한 여러 가지 이유로 <xref:System.Windows.Controls.Grid> 행 및 열 인덱스를 기준으로 요소를 추가 <xref:System.Windows.Documents.Table> 하지 않습니다. <xref:System.Windows.Controls.Grid> 요소를 사용 하면 계층의 자식 콘텐츠를 단일 "셀입니다." 내에 있는 둘 이상의 요소 허용 <xref:System.Windows.Documents.Table> 레이어를 지원 하지 않습니다. 자식 요소는 <xref:System.Windows.Controls.Grid> 해당 "셀" 경계 영역을 기준으로 절대적으로 배치 될 수 있습니다. <xref:System.Windows.Documents.Table> 이 기능을 지원 하지 않습니다. 마지막으로 <xref:System.Windows.Controls.Grid> 더 적은 리소스로 <xref:System.Windows.Documents.Table> 사용 하 여 것이 좋습니다는 <xref:System.Windows.Controls.Grid> 성능 향상을 위해.  
+ <xref:System.Windows.Documents.Table> 및 <xref:System.Windows.Controls.Grid> 일부 공통 기능을 공유 하지만 각각은 다양 한 시나리오에 가장 적합 합니다. A <xref:System.Windows.Documents.Table> 유동 콘텐츠 내에서 사용 하도록 설계 되었습니다 (참조 [유동 문서 개요](flow-document-overview.md) 유동 콘텐츠에 대 한 자세한 내용은). 그리드는 폼 내부에서 사용하는 것이 적합합니다(기본적으로 유동 콘텐츠 외부의 모든 위치). 내를 <xref:System.Windows.Documents.FlowDocument>, <xref:System.Windows.Documents.Table> 지원 유동 콘텐츠 동작 하는 동안 콘텐츠 선택, 페이지 매김 및 열 흐름 변경 등을 <xref:System.Windows.Controls.Grid> 하지 않습니다. A <xref:System.Windows.Controls.Grid> 반면에 가장 적합 외부를 <xref:System.Windows.Documents.FlowDocument> 비롯 한 여러 가지 이유로 <xref:System.Windows.Controls.Grid> 행 및 열 인덱스를 기준으로 요소를 추가 <xref:System.Windows.Documents.Table> 하지 않습니다. <xref:System.Windows.Controls.Grid> 요소를 사용 하면 계층의 자식 콘텐츠를 단일 "셀입니다." 내에 있는 둘 이상의 요소 허용 <xref:System.Windows.Documents.Table> 레이어를 지원 하지 않습니다. 자식 요소는 <xref:System.Windows.Controls.Grid> 해당 "셀" 경계 영역을 기준으로 절대적으로 배치 될 수 있습니다. <xref:System.Windows.Documents.Table> 이 기능을 지원 하지 않습니다. 마지막으로 <xref:System.Windows.Controls.Grid> 더 적은 리소스로 <xref:System.Windows.Documents.Table> 사용 하 여 것이 좋습니다는 <xref:System.Windows.Controls.Grid> 성능 향상을 위해.  
   
 <a name="basic_table_structure"></a>   
 ### <a name="basic-table-structure"></a>기본 테이블 구조  
@@ -61,18 +61,18 @@ ms.locfileid: "54745365"
 -   <xref:System.Windows.Documents.Table>  
   
 > [!NOTE]
->  <xref:System.Windows.Documents.TableCell> 요소 직접 텍스트 콘텐츠를 호스팅하지 않을 수도 있습니다. 콘텐츠 요소와 같은 흐름에 대 한 포함 규칙에 대 한 자세한 내용은 <xref:System.Windows.Documents.TableCell>를 참조 하세요 [유동 문서 개요](../../../../docs/framework/wpf/advanced/flow-document-overview.md)합니다.  
+>  <xref:System.Windows.Documents.TableCell> 요소 직접 텍스트 콘텐츠를 호스팅하지 않을 수도 있습니다. 콘텐츠 요소와 같은 흐름에 대 한 포함 규칙에 대 한 자세한 내용은 <xref:System.Windows.Documents.TableCell>를 참조 하세요 [유동 문서 개요](flow-document-overview.md)합니다.  
   
 > [!NOTE]
 >  <xref:System.Windows.Documents.Table> 비슷합니다는 <xref:System.Windows.Controls.Grid> 요소 하지만 더 많은 기능을 큰 리소스 오버 헤드가 필요 합니다.  
   
  다음 예제에서는 간단한 2 x 3 테이블에 정의 [!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)]합니다.  
   
- [!code-xaml[TableSnippets2#_Table_BasicLayout](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TableSnippets2/CSharp/Window1.xaml#_table_basiclayout)]  
+ [!code-xaml[TableSnippets2#_Table_BasicLayout](~/samples/snippets/csharp/VS_Snippets_Wpf/TableSnippets2/CSharp/Window1.xaml#_table_basiclayout)]  
   
  다음 그림은 이 예제에서 렌더링하는 방법을 보여줍니다.  
   
- ![스크린 샷: 기본 테이블 렌더링](../../../../docs/framework/wpf/advanced/media/basictablerrender.png "BasicTablerRender")  
+ ![스크린 샷: 기본 테이블 렌더링](./media/basictablerrender.png "BasicTablerRender")  
   
 <a name="table_containment"></a>   
 ### <a name="table-containment"></a>테이블 포함  
@@ -98,11 +98,11 @@ ms.locfileid: "54745365"
   
  다음 예제에서는 [!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)] 스타일의 머리글 및 바닥글 행이 있는 테이블을 정의 합니다.  
   
- [!code-xaml[TableSnippets2#_Table_RowGroups](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TableSnippets2/CSharp/Window1.xaml#_table_rowgroups)]  
+ [!code-xaml[TableSnippets2#_Table_RowGroups](~/samples/snippets/csharp/VS_Snippets_Wpf/TableSnippets2/CSharp/Window1.xaml#_table_rowgroups)]  
   
  다음 그림은 이 예제에서 렌더링하는 방법을 보여줍니다.  
   
- ![스크린 샷: 테이블 행 그룹](../../../../docs/framework/wpf/advanced/media/table-rowgroups.png "Table_RowGroups")  
+ ![스크린 샷: 테이블 행 그룹](./media/table-rowgroups.png "Table_RowGroups")  
   
 <a name="rendering_precedence"></a>   
 ### <a name="background-rendering-precedence"></a>백그라운드 렌더링 우선 순위  
@@ -120,11 +120,11 @@ ms.locfileid: "54745365"
   
  테이블에서 이러한 각 요소의 배경색을 정의하는 다음 예제를 살펴보겠습니다.  
   
- [!code-xaml[TableSnippets2#_Table_ZOrder](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TableSnippets2/CSharp/Window1.xaml#_table_zorder)]  
+ [!code-xaml[TableSnippets2#_Table_ZOrder](~/samples/snippets/csharp/VS_Snippets_Wpf/TableSnippets2/CSharp/Window1.xaml#_table_zorder)]  
   
  다음 그림은 이 예제가 렌더링되는 방법을 보여 줍니다(배경색만 표시).  
   
- ![스크린 샷: 테이블 z&#45;order](../../../../docs/framework/wpf/advanced/media/table-zorder.png "Table_ZOrder")  
+ ![스크린 샷: 테이블 z&#45;order](./media/table-zorder.png "Table_ZOrder")  
   
 <a name="spanning_rows_or_columns"></a>   
 ### <a name="spanning-rows-or-columns"></a>행 및 열 확장  
@@ -132,11 +132,11 @@ ms.locfileid: "54745365"
   
  셀이 세 개의 열에 걸쳐 있는 다음 예제를 살펴보겠습니다.  
   
- [!code-xaml[TableSnippets2#_Table_ColumnSpan](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TableSnippets2/CSharp/Window1.xaml#_table_columnspan)]  
+ [!code-xaml[TableSnippets2#_Table_ColumnSpan](~/samples/snippets/csharp/VS_Snippets_Wpf/TableSnippets2/CSharp/Window1.xaml#_table_columnspan)]  
   
  다음 그림은 이 예제에서 렌더링하는 방법을 보여줍니다.  
   
- ![스크린 샷: 세 열에 걸친 셀](../../../../docs/framework/wpf/advanced/media/table-columnspan.png "Table_ColumnSpan")  
+ ![스크린 샷: 세 열에 걸친 셀](./media/table-columnspan.png "Table_ColumnSpan")  
   
 <a name="building_a_table_with_code"></a>   
 ## <a name="building-a-table-with-code"></a>코드로 테이블 빌드  
@@ -144,39 +144,39 @@ ms.locfileid: "54745365"
   
  먼저를 <xref:System.Windows.Documents.FlowDocument> 만들어집니다 호스트에는 <xref:System.Windows.Documents.Table>, 및 새 <xref:System.Windows.Documents.Table> 만들어지고의 콘텐츠에 추가 <xref:System.Windows.Documents.FlowDocument>합니다.  
   
- [!code-csharp[TableSnippets#_TableCreate](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TableSnippets/CSharp/Table.cs#_tablecreate)]
- [!code-vb[TableSnippets#_TableCreate](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/TableSnippets/VisualBasic/Table.vb#_tablecreate)]  
+ [!code-csharp[TableSnippets#_TableCreate](~/samples/snippets/csharp/VS_Snippets_Wpf/TableSnippets/CSharp/Table.cs#_tablecreate)]
+ [!code-vb[TableSnippets#_TableCreate](~/samples/snippets/visualbasic/VS_Snippets_Wpf/TableSnippets/VisualBasic/Table.vb#_tablecreate)]  
   
  다음으로 6 <xref:System.Windows.Documents.TableColumn> 개체를 만들어 테이블의 추가 <xref:System.Windows.Documents.Table.Columns%2A> 서식이 적용 된 컬렉션입니다.  
   
 > [!NOTE]
 >  테이블의 <xref:System.Windows.Documents.Table.Columns%2A> 컬렉션 표준 인덱스를 사용 합니다.  
   
- [!code-csharp[TableSnippets#_TableCreateColumns](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TableSnippets/CSharp/Table.cs#_tablecreatecolumns)]
- [!code-vb[TableSnippets#_TableCreateColumns](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/TableSnippets/VisualBasic/Table.vb#_tablecreatecolumns)]  
+ [!code-csharp[TableSnippets#_TableCreateColumns](~/samples/snippets/csharp/VS_Snippets_Wpf/TableSnippets/CSharp/Table.cs#_tablecreatecolumns)]
+ [!code-vb[TableSnippets#_TableCreateColumns](~/samples/snippets/visualbasic/VS_Snippets_Wpf/TableSnippets/VisualBasic/Table.vb#_tablecreatecolumns)]  
   
  다음으로 제목 행을 만들어 서식이 적용된 테이블에 추가합니다.  제목 행은 테이블의 6개 열에 모두 걸친 단일 셀을 포함하게 됩니다.  
   
- [!code-csharp[TableSnippets#_TableAddTitleRow](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TableSnippets/CSharp/Table.cs#_tableaddtitlerow)]
- [!code-vb[TableSnippets#_TableAddTitleRow](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/TableSnippets/VisualBasic/Table.vb#_tableaddtitlerow)]  
+ [!code-csharp[TableSnippets#_TableAddTitleRow](~/samples/snippets/csharp/VS_Snippets_Wpf/TableSnippets/CSharp/Table.cs#_tableaddtitlerow)]
+ [!code-vb[TableSnippets#_TableAddTitleRow](~/samples/snippets/visualbasic/VS_Snippets_Wpf/TableSnippets/VisualBasic/Table.vb#_tableaddtitlerow)]  
   
  다음으로 헤더 행을 만들어 테이블에 추가하고, 헤더 행의 셀을 만들어 콘텐츠로 채웁니다.  
   
- [!code-csharp[TableSnippets#_TableAddHeaderRow](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TableSnippets/CSharp/Table.cs#_tableaddheaderrow)]
- [!code-vb[TableSnippets#_TableAddHeaderRow](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/TableSnippets/VisualBasic/Table.vb#_tableaddheaderrow)]  
+ [!code-csharp[TableSnippets#_TableAddHeaderRow](~/samples/snippets/csharp/VS_Snippets_Wpf/TableSnippets/CSharp/Table.cs#_tableaddheaderrow)]
+ [!code-vb[TableSnippets#_TableAddHeaderRow](~/samples/snippets/visualbasic/VS_Snippets_Wpf/TableSnippets/VisualBasic/Table.vb#_tableaddheaderrow)]  
   
  다음으로 데이터 행을 만들어 테이블에 추가하고, 이 행의 셀을 만들어 콘텐츠로 채웁니다.  이 행을 작성하는 것은 헤더 행을 작성하는 것과 비슷합니다. 단, 약간 다른 서식이 지정됩니다.  
   
- [!code-csharp[TableSnippets#_TableAddDataRow](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TableSnippets/CSharp/Table.cs#_tableadddatarow)]
- [!code-vb[TableSnippets#_TableAddDataRow](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/TableSnippets/VisualBasic/Table.vb#_tableadddatarow)]  
+ [!code-csharp[TableSnippets#_TableAddDataRow](~/samples/snippets/csharp/VS_Snippets_Wpf/TableSnippets/CSharp/Table.cs#_tableadddatarow)]
+ [!code-vb[TableSnippets#_TableAddDataRow](~/samples/snippets/visualbasic/VS_Snippets_Wpf/TableSnippets/VisualBasic/Table.vb#_tableadddatarow)]  
   
  마지막으로 바닥글 행을 만들어 추가하고 서식을 지정합니다.  제목 행과 마찬가지로 바닥글에는 테이블의 6개 열에 모두 걸친 단일 셀이 포함됩니다.  
   
- [!code-csharp[TableSnippets#_TableAddFooterRow](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TableSnippets/CSharp/Table.cs#_tableaddfooterrow)]
- [!code-vb[TableSnippets#_TableAddFooterRow](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/TableSnippets/VisualBasic/Table.vb#_tableaddfooterrow)]  
+ [!code-csharp[TableSnippets#_TableAddFooterRow](~/samples/snippets/csharp/VS_Snippets_Wpf/TableSnippets/CSharp/Table.cs#_tableaddfooterrow)]
+ [!code-vb[TableSnippets#_TableAddFooterRow](~/samples/snippets/visualbasic/VS_Snippets_Wpf/TableSnippets/VisualBasic/Table.vb#_tableaddfooterrow)]  
   
 ## <a name="see-also"></a>참고자료
-- [유동 문서 개요](../../../../docs/framework/wpf/advanced/flow-document-overview.md)
-- [XAML로 테이블 정의](../../../../docs/framework/wpf/advanced/how-to-define-a-table-with-xaml.md)
-- [WPF의 문서](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)
-- [유동 콘텐츠 요소 사용](../../../../docs/framework/wpf/advanced/how-to-use-flow-content-elements.md)
+- [유동 문서 개요](flow-document-overview.md)
+- [XAML로 테이블 정의](how-to-define-a-table-with-xaml.md)
+- [WPF의 문서](documents-in-wpf.md)
+- [유동 콘텐츠 요소 사용](how-to-use-flow-content-elements.md)
