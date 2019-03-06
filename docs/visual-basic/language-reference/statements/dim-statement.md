@@ -29,12 +29,12 @@ helpviewer_keywords:
 - Dim statement [Visual Basic], syntax
 - variables [Visual Basic], member and local
 ms.assetid: fae3eca1-f0b2-4400-994b-7aa58a848448
-ms.openlocfilehash: 9e2370c1b17bfdf103072ff33bf42c4c77706550
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 7bee6bffcfe0660d1661cd2c8e2ddf0528e98620
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56975202"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57360266"
 ---
 # <a name="dim-statement-visual-basic"></a>Dim 문(Visual Basic)
 선언 하 고 하나 이상의 변수에 대 한 저장소 공간을 할당 합니다.  
@@ -246,7 +246,7 @@ Dim twoDimensions(,) As Integer = {{0, 1, 2}, {10, 11, 12}}
   
  배열 리터럴에 대 한 자세한 내용은 참조 하세요. [배열](../../../visual-basic/programming-guide/language-features/arrays/index.md)합니다.  
   
-##  <a name="default"></a> 기본 데이터 형식 및 값  
+## <a name="default"></a> 기본 데이터 형식 및 값  
  다음 테이블에는 `Dim` 문에서 데이터 형식과 이니셜라이저를 지정하는 다양한 조합의 결과에 대한 설명이 나와 있습니다.  
   
 |데이터 형식 지정 여부|이니셜라이저 지정 여부|예제|결과|  

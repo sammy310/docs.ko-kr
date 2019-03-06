@@ -2,12 +2,12 @@
 title: 반복기 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: f26b5c1e-fe9d-4004-b287-da7919d717ae
-ms.openlocfilehash: 6c03292155057ad9e202fb728cebab9e8a373640
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0e090106dbedbeb9fb0d6c272deb0299ca5fac56
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54587754"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57359122"
 ---
 # <a name="iterators-visual-basic"></a>반복기 (Visual Basic)
 *반복기*는 목록 및 배열과 같은 컬렉션을 단계별로 실행하는 데 사용할 수 있습니다.  
@@ -63,7 +63,7 @@ End Function
 > [!NOTE]
 >  단순 반복기 예제를 제외 하 고 항목의 모든 예제를 포함 [Imports](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md) 에 대 한 문을 합니다 `System.Collections` 및 `System.Collections.Generic` 네임 스페이스입니다.  
   
-##  <a name="BKMK_SimpleIterator"></a> 단순 반복기  
+## <a name="BKMK_SimpleIterator"></a> 단순 반복기  
  다음 예제에는 단일 `Yield` 문 내에 있는 한 [에 대 한 중... 다음](../../../visual-basic/language-reference/statements/for-next-statement.md) 루프입니다. `Main`에서 `For Each` 문 본문을 반복할 때마다 다음 `Yield` 문으로 진행하는 반복기 함수에 대한 호출이 생성됩니다.  
   
 ```vb  
@@ -88,7 +88,7 @@ As System.Collections.Generic.IEnumerable(Of Integer)
 End Function  
 ```  
   
-##  <a name="BKMK_CollectionClass"></a> 컬렉션 클래스 만들기  
+## <a name="BKMK_CollectionClass"></a> 컬렉션 클래스 만들기  
  다음 예제에서 `DaysOfTheWeek` 클래스는 <xref:System.Collections.IEnumerable> 인터페이스를 구현하며, <xref:System.Collections.IEnumerable.GetEnumerator%2A> 메서드가 필요합니다. 컴파일러는 `GetEnumerator` 메서드를 암시적으로 호출하며, <xref:System.Collections.IEnumerator>가 반환됩니다.  
   
  `GetEnumerator` 메서드를 사용 하 여 한 번에 하나의 각 문자열을 반환 합니다 `Yield` 문 및 `Iterator` 함수 선언에서 한정자가 합니다.  
@@ -213,7 +213,7 @@ Public Class Zoo
 End Class  
 ```  
   
-##  <a name="BKMK_TryBlocks"></a> Try 블록  
+## <a name="BKMK_TryBlocks"></a> Try 블록  
  Visual Basic을 사용 하면를 `Yield` 문에서 `Try` 블록을 [시도 하는 중... Catch 하는 중... Finally 문](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)합니다. A `Try` 있는 블록을 `Yield` 문의 `Catch` 블록을 가질 수 있습니다를 `Finally` 블록.  
   
  다음 예제를 포함 `Try`, `Catch`, 및 `Finally` 반복기 함수에서 차단 합니다. 합니다 `Finally` 반복기 함수에는 블록이 실행 하기 전에 `For Each` 반복 완료 합니다.  
@@ -253,7 +253,7 @@ End Function
   
  경우는 `For Each` 본문 (반복기 메서드) 하는 대신 예외를 throw를 `Catch` 반복기 함수에는 블록이 실행 되지 않습니다 하지만 `Finally` 반복기 함수에는 블록이 실행 됩니다. `Catch` 블록은 반복기 함수 내에서 반복기 함수 내에서 발생 하는 예외만 catch 합니다.  
   
-##  <a name="BKMK_AnonymousMethods"></a> 무명 메서드  
+## <a name="BKMK_AnonymousMethods"></a> 무명 메서드  
  Visual basic에서는 익명 함수는 반복기 함수를 수 있습니다. 다음은 이에 대한 예입니다.  
   
 ```vb  
@@ -303,7 +303,7 @@ End Function
   
  이면 유효성 검사 대신 반복기 함수 내에서 첫 번째 반복이 시작 될 때까지 유효성 검사를 수행할 수 없습니다는 `For Each` 본문입니다.  
   
-##  <a name="BKMK_GenericList"></a> 제네릭 목록과 함께 반복기 사용  
+## <a name="BKMK_GenericList"></a> 제네릭 목록과 함께 반복기 사용  
  다음 예제에서 `Stack(Of T)` 제네릭 클래스는 <xref:System.Collections.Generic.IEnumerable%601> 제네릭 인터페이스를 구현합니다. `Push` 메서드는 `T` 형식의 배열에 값을 할당합니다. <xref:System.Collections.Generic.IEnumerable%601.GetEnumerator%2A> 메서드는 `Yield` 문을 사용하여 배열 값을 반환합니다.  
   
  제네릭 <xref:System.Collections.Generic.IEnumerable%601.GetEnumerator%2A> 메서드뿐 아니라 제네릭이 아닌 <xref:System.Collections.IEnumerable.GetEnumerator%2A> 메서드도 구현해야 합니다. <xref:System.Collections.Generic.IEnumerable%601>이 <xref:System.Collections.IEnumerable>에서 상속하기 때문입니다. 제네릭이 아닌 구현은 제네릭 구현을 따릅니다.  
@@ -413,7 +413,7 @@ Public Class Stack(Of T)
 End Class  
 ```  
   
-##  <a name="BKMK_SyntaxInformation"></a> 구문 정보  
+## <a name="BKMK_SyntaxInformation"></a> 구문 정보  
  반복기는 메서드 또는 `get` 접근자로 발생할 수 있습니다. 반복기는 이벤트, 인스턴스 생성자, 정적 생성자 또는 정적 소멸자에서 발생할 수 없습니다.  
   
  `Yield` 문의 식 형식에서 반복기의 반환 형식으로 암시적 변환이 있어야 합니다.  
@@ -422,7 +422,7 @@ End Class
   
  Visual basic의 경우 "Yield"는 예약어 아니며에서 사용 하는 경우에 특별 한 의미가 있는 `Iterator` 메서드 또는 `get` 접근자입니다.  
   
-##  <a name="BKMK_Technical"></a> 기술 구현  
+## <a name="BKMK_Technical"></a> 기술 구현  
  반복기를 메서드로 작성하는 경우에도 컴파일러는 실제로 상태 시스템인 중첩 클래스로 변환합니다. 이 클래스는 클라이언트 코드의 `For Each...Next` 루프가 계속되는 한 반복기의 위치를 추적합니다.  
   
  컴파일러의 용도를 확인하려면 Ildasm.exe 도구를 사용하여 반복기 메서드에 대해 생성되는 Microsoft Intermediate Language 코드를 확인할 수 있습니다.  
@@ -435,7 +435,7 @@ End Class
   
  자세한 내용은 참조는 [Visual Basic 언어 사양](../../../visual-basic/reference/language-specification/index.md)합니다.  
   
-##  <a name="BKMK_UseOfIterators"></a> 반복기 사용  
+## <a name="BKMK_UseOfIterators"></a> 반복기 사용  
  반복기를 사용하면 복잡한 코드를 사용하여 목록 시퀀스를 채워야 하는 경우 `For Each` 루프의 단순성을 유지할 수 있습니다. 이 기능은 다음을 수행하려는 경우에 유용할 수 있습니다.  
   
 -   첫 번째 `For Each` 루프 반복 후 목록 시퀀스를 수정합니다.  

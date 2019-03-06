@@ -14,12 +14,12 @@ helpviewer_keywords:
 - classes [WPF], mapping namespaces to
 - namespaces [WPF]
 ms.assetid: 5c0854e3-7470-435d-9fe2-93eec9d3634e
-ms.openlocfilehash: a484ba1e5d0c7a51e7e4c3edbf341bf40345fd2d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5921824ddbd52c264affd4822ed626d5d38b80a1
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54633917"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57366610"
 ---
 # <a name="xaml-namespaces-and-namespace-mapping-for-wpf-xaml"></a>WPF XAML을 위한 XAML 네임스페이스 및 네임스페이스 매핑
 이 항목에서는 WPF XAML 파일의 루트 태그에서 주로 찾을 수 있는 두 XAML 네임스페이스 매핑과 그 용도에 대해 자세하게 설명합니다. 또한 고유한 코드나 별도의 어셈블리에 정의된 요소에 사용할 수 있도록 유사한 매핑을 생성하는 방법에 대해서도 설명합니다.  
@@ -40,7 +40,7 @@ ms.locfileid: "54633917"
   
  이러한 선언 간의 관계에서 `x:` 접두사 매핑은 XAML 언어 정의의 일부인 내장 항목을 지원하며, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]는 XAML을 언어로 사용하고 XAML에 대한 해당 개체의 어휘를 정의하는 하나의 구현입니다. WPF 어휘의 사용이 XAML 내장 항목 사용보다 훨씬 더 일반적일 것이므로 WPF 어휘가 기본값으로 매핑됩니다.  
   
- 이 [!INCLUDE[TLA2#tla_sdk](../../../../includes/tla2sharptla-sdk-md.md)] 내에서 XAML 언어 내장 항목 지원을 매핑하기 위한 `x:` 접두사 규칙 뒤에는 프로젝트 템플릿, 샘플 코드 및 언어 기능의 설명서가 있습니다. XAML 네임스페이스는 기본적인 WPF 애플리케이션에도 필요한 여러 가지 일반적인 기능을 정의합니다. 예를 들어 partial 클래스를 통해 코드 숨김을 XAML 파일에 결합하려면 관련 XAML 파일의 루트 요소에서 해당 클래스를 `x:Class` 특성으로 명명해야 합니다. 또는 XAML 페이지에 정의된 요소 중 키가 지정된 리소스로 액세스하려는 요소에는 `x:Key` 특성을 설정해야 합니다. XAML의 이러한 특징과 기타 특징에 대한 자세한 내용은 [XAML 개요(WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md) 또는 [XAML 구문 정보](../../../../docs/framework/wpf/advanced/xaml-syntax-in-detail.md)를 참조하세요.  
+ 이 [!INCLUDE[TLA2#tla_sdk](../../../../includes/tla2sharptla-sdk-md.md)] 내에서 XAML 언어 내장 항목 지원을 매핑하기 위한 `x:` 접두사 규칙 뒤에는 프로젝트 템플릿, 샘플 코드 및 언어 기능의 설명서가 있습니다. XAML 네임스페이스는 기본적인 WPF 애플리케이션에도 필요한 여러 가지 일반적인 기능을 정의합니다. 예를 들어 partial 클래스를 통해 코드 숨김을 XAML 파일에 결합하려면 관련 XAML 파일의 루트 요소에서 해당 클래스를 `x:Class` 특성으로 명명해야 합니다. 또는 XAML 페이지에 정의된 요소 중 키가 지정된 리소스로 액세스하려는 요소에는 `x:Key` 특성을 설정해야 합니다. XAML의 이러한 특징과 기타 특징에 대한 자세한 내용은 [XAML 개요(WPF)](xaml-overview-wpf.md) 또는 [XAML 구문 정보](xaml-syntax-in-detail.md)를 참조하세요.  
   
 <a name="Mapping_To_Custom_Classes_and_Assemblies"></a>   
 ## <a name="mapping-to-custom-classes-and-assemblies"></a>사용자 지정 클래스 및 어셈블리 매핑  
@@ -115,7 +115,7 @@ End Namespace
   
  [!INCLUDE[wpfdesigner_current_long](../../../../includes/wpfdesigner-current-long-md.md)]에서는 일반적으로 접두사 `d:`에 매핑되는 디자이너 네임스페이스를 사용합니다. 최신 WPF용 프로젝트 템플릿의 경우 [!INCLUDE[wpfdesigner_current_long](../../../../includes/wpfdesigner-current-long-md.md)]와 다른 디자인 환경 간의 XAML 교환을 지원하기 위해 이 XAML 네임스페이스가 미리 매핑되어 있을 수 있습니다. 이 디자인 XAML 네임스페이스는 디자이너에서 XAML 기반 UI를 왕복하는 동안 디자인 상태를 계속 유지하는 데 사용됩니다. 또한 디자이너에서 런타임 데이터 소스를 사용할 수 있게 하는 `d:IsDataSource` 등의 기능에도 사용됩니다.  
   
- 매핑되는 또 다른 접두사로 `mc:`이 있을 수 있습니다. `mc:`은 태그 호환성을 위해 사용되며, XAML에 반드시 필요하지는 않은 태그 호환성 패턴을 활용합니다. 일정 범위 내에서 태그 호환성 기능은 프레임워크 간 또는 지원 구현의 여러 경계를 넘어 XAML을 교환하는 데 사용될 수 있으며, XAML 스키마 컨텍스트 간에 작업하고 디자이너에서 제한된 모드에 대해 호환성을 제공하는 데 사용될 수 있습니다. 태그 호환성 개념 및 관련성 WPF에 대 한 자세한 내용은 참조 하세요. [태그 호환성 (mc:) 언어 기능](../../../../docs/framework/wpf/advanced/markup-compatibility-mc-language-features.md)합니다.  
+ 매핑되는 또 다른 접두사로 `mc:`이 있을 수 있습니다. `mc:`은 태그 호환성을 위해 사용되며, XAML에 반드시 필요하지는 않은 태그 호환성 패턴을 활용합니다. 일정 범위 내에서 태그 호환성 기능은 프레임워크 간 또는 지원 구현의 여러 경계를 넘어 XAML을 교환하는 데 사용될 수 있으며, XAML 스키마 컨텍스트 간에 작업하고 디자이너에서 제한된 모드에 대해 호환성을 제공하는 데 사용될 수 있습니다. 태그 호환성 개념 및 관련성 WPF에 대 한 자세한 내용은 참조 하세요. [태그 호환성 (mc:) 언어 기능](markup-compatibility-mc-language-features.md)합니다.  
   
 ## <a name="wpf-and-assembly-loading"></a>WPF 및 어셈블리 로딩  
  WPF의 XAML 스키마 컨텍스트를 CLR 정의 개념을 사용 하는 WPF 응용 프로그램 모델을 사용 하 여 통합 <xref:System.AppDomain>합니다. 다음 순서 대로 XAML 스키마 컨텍스트 어셈블리를 로드 하거나 요소의 WPF 사용법에 따라 런타임 또는 디자인 타임에 형식을 찾을 방법을 해석 하는 방법에 대해 설명 합니다. <xref:System.AppDomain> 및 기타 요인입니다.  
@@ -138,4 +138,4 @@ End Namespace
   
 ## <a name="see-also"></a>참고자료
 - [XML 네임 스페이스 이해](https://go.microsoft.com/fwlink/?LinkId=98069)
-- [XAML 개요(WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)
+- [XAML 개요(WPF)](xaml-overview-wpf.md)

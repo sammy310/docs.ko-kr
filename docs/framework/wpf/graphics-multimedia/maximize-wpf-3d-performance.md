@@ -4,17 +4,17 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - 3-D graphics [WPF]
 ms.assetid: 4bcf949d-d92f-4d8d-8a9b-1e4c61b25bf6
-ms.openlocfilehash: aab9759bcadd52c0af03034cc18512ced01046ce
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 48e8310e003dcd3ebca579654b81363efaac9068
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54508657"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57364010"
 ---
 # <a name="maximize-wpf-3d-performance"></a>WPF 3D 성능 최대화
 사용 된 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 3D 컨트롤을 빌드하고 응용 프로그램에서 3D 장면을 포함 하려면 성능 최적화를 고려해 야 할 중요 한 것입니다. 이 항목에서는 사용 하는 경우 성능을 최적화 하기 위한 권장 사항과 함께 응용 프로그램에 대 한 성능 영향을 미칠는 3D 클래스 및 속성의 목록을 제공 합니다.  
   
- 이 항목에서는 고급 이해가 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 3D 기능입니다. 이 문서의 제안 "렌더링 계층 2"에 적용할-픽셀 셰이더 버전 2.0 및 꼭 짓 점 셰이더 버전 2.0 지 원하는 하드웨어에 대략적으로 정의 합니다. 자세한 내용은 참조 하세요. [그래픽 렌더링 계층](../../../../docs/framework/wpf/advanced/graphics-rendering-tiers.md)합니다.  
+ 이 항목에서는 고급 이해가 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 3D 기능입니다. 이 문서의 제안 "렌더링 계층 2"에 적용할-픽셀 셰이더 버전 2.0 및 꼭 짓 점 셰이더 버전 2.0 지 원하는 하드웨어에 대략적으로 정의 합니다. 자세한 내용은 참조 하세요. [그래픽 렌더링 계층](../advanced/graphics-rendering-tiers.md)합니다.  
   
 ## <a name="performance-impact-high"></a>성능 영향을 미침 높음  
   
@@ -36,7 +36,7 @@ ms.locfileid: "54508657"
 |-|-|  
 |<xref:System.Windows.Media.Media3D.MeshGeometry3D>|메시 인접 꼭 짓 점을 공유 삼각형으로 정의 됩니다 하 고 이러한 꼭 짓 점은 동일한 위치, 정규 및 텍스처 좌표를 각 공유 꼭 짓 점을 한 번만 정의 하 고 다음 사용 하 여 인덱스 여 삼각형을 정의 <xref:System.Windows.Media.Media3D.MeshGeometry3D.TriangleIndices%2A>합니다.|  
 |<xref:System.Windows.Media.ImageBrush>|크기를 명시적으로 제어 해야 하는 경우 질감 크기를 최소화 하려고 합니다. (사용 하는 경우는 <xref:System.Windows.Media.Imaging.RenderTargetBitmap> 및/또는 <xref:System.Windows.Media.ImageBrush>).  낮은 해상도 질감 시각적 품질이 저하, 품질 및 성능 간에 적절 한 균형을 찾으려고 시도 하므로 수는 note 합니다.|  
-|Opacity|반투명 3D 콘텐츠 (예: 리플렉션) 렌더링 하는 경우 불투명도 속성을 사용 하 여 브러시 또는 자료 (통해 <xref:System.Windows.Media.Brush.Opacity%2A> 또는 <xref:System.Windows.Media.Media3D.DiffuseMaterial.Color%2A>) 별도 반투명 만드는 대신 <xref:System.Windows.Controls.Viewport3D> 설정 하 여 `Viewport3D.Opacity` 1 보다 작은 값으로.|  
+|불투명도|반투명 3D 콘텐츠 (예: 리플렉션) 렌더링 하는 경우 불투명도 속성을 사용 하 여 브러시 또는 자료 (통해 <xref:System.Windows.Media.Brush.Opacity%2A> 또는 <xref:System.Windows.Media.Media3D.DiffuseMaterial.Color%2A>) 별도 반투명 만드는 대신 <xref:System.Windows.Controls.Viewport3D> 설정 하 여 `Viewport3D.Opacity` 1 보다 작은 값으로.|  
 |<xref:System.Windows.Controls.Viewport3D>|수를 최소화 <xref:System.Windows.Controls.Viewport3D> 장면에서 사용 하는 개체입니다.  각 모델에 대 한 별도 Viewport3D 인스턴스를 만드는 것이 아니라 동일한 Viewport3D 많은 3D 모델을 배치 합니다.|  
 |<xref:System.Windows.Freezable>|일반적으로는 다시 사용 하는 데 유용한 <xref:System.Windows.Media.Media3D.MeshGeometry3D>, <xref:System.Windows.Media.Media3D.GeometryModel3D>, 브러시 및 자료입니다.  파생 되었기 때문 multiparentable 모두 `Freezable`입니다.|  
 |<xref:System.Windows.Freezable>|호출을 <xref:System.Windows.Freezable.Freeze%2A> 메서드 Freezable 해당 속성은 유지 하는 경우에 응용 프로그램에서 변경 되지 않습니다.  고정 작업 집합을 감소 하 고 속도 높일 수 있습니다.|  
@@ -60,4 +60,4 @@ ms.locfileid: "54508657"
 |<xref:System.Windows.Media.Media3D.MeshGeometry3D>|큰 컬렉션의 생성 시간을 최소화 하 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)], MeshGeometry3D의 같은 <xref:System.Windows.Media.Media3D.MeshGeometry3D.Positions%2A>, <xref:System.Windows.Media.Media3D.MeshGeometry3D.Normals%2A>, <xref:System.Windows.Media.Media3D.MeshGeometry3D.TextureCoordinates%2A>, 및 <xref:System.Windows.Media.Media3D.MeshGeometry3D.TriangleIndices%2A>, 사전 값 채우기 전에 컬렉션 크기 조정 합니다. 가능 하면 배열 또는 목록 같은 컬렉션의 생성자 미리 채워진된 데이터 구조를 전달 합니다.|  
   
 ## <a name="see-also"></a>참고자료
-- [3차원 그래픽 개요](../../../../docs/framework/wpf/graphics-multimedia/3-d-graphics-overview.md)
+- [3차원 그래픽 개요](3-d-graphics-overview.md)

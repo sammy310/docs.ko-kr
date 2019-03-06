@@ -7,12 +7,12 @@ helpviewer_keywords:
 - BitmapCacheBrush [WPF], using
 - CacheMode [WPF], using
 ms.assetid: d36e944a-866e-4baf-98c4-fd6a75f6fdd0
-ms.openlocfilehash: 7ff0e9eb131faaed3874995ee137126eac31f43d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 008bec87390a807ae2b4797af8b86aaf59c92ef5
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54597933"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57372492"
 ---
 # <a name="how-to-use-a-cached-element-as-a-brush"></a>방법: 캐시 된 요소를 브러시로 사용
 사용 하 여는 <xref:System.Windows.Media.BitmapCacheBrush> 클래스를 효율적으로 캐시 된 요소를 다시 사용 합니다. 새 인스턴스를 만들고 요소를 캐시 하려면 합니다 <xref:System.Windows.Media.BitmapCache> 클래스 및 요소에 할당할 <xref:System.Windows.UIElement.CacheMode%2A> 속성입니다.  
@@ -20,10 +20,10 @@ ms.locfileid: "54597933"
 ## <a name="example"></a>예제  
  다음 코드 예제에서는 캐시 된 요소를 다시 사용 하는 방법을 보여 줍니다. 캐시 된 요소는 <xref:System.Windows.Controls.Image> 큰 이미지를 표시 하는 컨트롤입니다. <xref:System.Windows.Controls.Image> 컨트롤이 사용 하 여 비트맵으로 캐시 되는 <xref:System.Windows.Media.BitmapCache> 할당 하 여 클래스 및 캐시를 다시 사용을 <xref:System.Windows.Media.BitmapCacheBrush>입니다. 브러시는 효율적인 재사용을 표시할 25 단추의 배경을에 할당 됩니다.  
   
- [!code-xaml[System.Windows.Media.BitmapCacheBrush#_BitmapCacheBrushXAML](../../../../samples/snippets/csharp/VS_Snippets_Wpf/system.windows.media.bitmapcachebrush/cs/window1.xaml#_bitmapcachebrushxaml)]  
+ [!code-xaml[System.Windows.Media.BitmapCacheBrush#_BitmapCacheBrushXAML](~/samples/snippets/csharp/VS_Snippets_Wpf/system.windows.media.bitmapcachebrush/cs/window1.xaml#_bitmapcachebrushxaml)]  
   
 ## <a name="see-also"></a>참고자료
 - <xref:System.Windows.Media.BitmapCache>
 - <xref:System.Windows.Media.BitmapCacheBrush>
 - <xref:System.Windows.UIElement.CacheMode%2A>
-- [방법: 요소를 캐시 하 여 렌더링 성능 향상](../../../../docs/framework/wpf/graphics-multimedia/how-to-improve-rendering-performance-by-caching-an-element.md)
+- [방법: 요소를 캐시 하 여 렌더링 성능 향상](how-to-improve-rendering-performance-by-caching-an-element.md)

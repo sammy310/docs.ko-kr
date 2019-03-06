@@ -7,12 +7,12 @@ helpviewer_keywords:
 - controls [WPF], Label
 - Label control [WPF]
 ms.assetid: 241c1ce2-60f8-4613-a0ec-9b9bb25fb6af
-ms.openlocfilehash: 0ff63027777cd0637238512f01663fe0d81d47ed
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
+ms.openlocfilehash: 131eb251493b77f13b5dc59a3a03504be8868e8a
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56746904"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57376167"
 ---
 # <a name="label"></a>레이블
 <xref:System.Windows.Controls.Label> 컨트롤은 일반적으로에 정보를 제공 합니다 [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]합니다.  지금까지 <xref:System.Windows.Controls.Label> 텍스트만 포함 되어 있는 때문 합니다 <xref:System.Windows.Controls.Label> 함께 제공 되는 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 는 <xref:System.Windows.Controls.ContentControl>, 텍스트를 포함할 수 있습니다 또는 <xref:System.Windows.UIElement>.  
@@ -21,7 +21,7 @@ ms.locfileid: "56746904"
   
  다음 이미지는 <xref:System.Windows.Controls.Label> 대상으로 하는 "테마"는 <xref:System.Windows.Controls.ComboBox>합니다.  사용자가 누르면는 <xref:System.Windows.Controls.ComboBox> 포커스를 받습니다.  자세한 내용은 [방법: 레이블의 대상 속성 설정](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms752101(v=vs.90))합니다.  
   
- ![표시 속성을 사용 하 여 레이블이 지정 된 보여 줍니다](../../../../docs/framework/wpf/controls/media/labeledby.JPG "LabeledBy")  
+ ![표시 속성을 사용 하 여 레이블이 지정 된 보여 줍니다](./media/labeledby.JPG "LabeledBy")  
   
 ## <a name="in-this-section"></a>섹션 내용  
  [방법: 선택키가 있고 텍스트 줄 바꿈 하는 컨트롤 만들기](how-to-create-a-control-that-has-an-access-key-and-text-wrapping.md)  

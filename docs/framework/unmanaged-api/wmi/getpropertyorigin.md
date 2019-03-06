@@ -1,5 +1,5 @@
 ---
-title: GetPropertyOrigin 함수 (Unmnaged API 참조)
+title: GetPropertyOrigin 함수 (관리 되지 않는 API 참조)
 description: GetPropertyOrigin 함수 속성 선언 되는 클래스를 결정 합니다.
 ms.date: 11/06/2017
 api_name:
@@ -16,41 +16,42 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b61c0359b8b18cb5082b1739defc65371476af25
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 42e5cd6ee438b33fd07fd7c3242cc3c2a6513dd9
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54529923"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57368875"
 ---
 # <a name="getpropertyorigin-function"></a>GetPropertyOrigin 함수
+
 속성이 선언되는 클래스를 결정합니다.
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
-    
-## <a name="syntax"></a>구문  
-  
-```  
+
+## <a name="syntax"></a>구문
+
+```cpp
 HRESULT GetPropertyOrigin (
-   [in] int                 vFunc, 
-   [in] IWbemClassObject*   ptr, 
+   [in] int                 vFunc,
+   [in] IWbemClassObject*   ptr,
    [in] LPCWSTR             wszMethodName,
    [out] BSTR*              pstrClassName
-); 
-```  
+);
+```
 
 ## <a name="parameters"></a>매개 변수
 
-`vFunc`  
+`vFunc`\
 [in] 이 매개 변수 사용 되지 않습니다.
 
-`ptr`  
+`ptr`\
 [in] 에 대 한 포인터를 [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) 인스턴스.
 
-`wszMethodName`  
-[in] 소유 하는 클래스를 요청 하는 개체에 대 한 속성의 이름입니다. 
+`wszMethodName`\
+[in] 소유 하는 클래스를 요청 하는 개체에 대 한 속성의 이름입니다.
 
-`pstrClassName`  
+`pstrClassName`\
 [out] 속성을 소유 하는 클래스의 이름을 받습니다.
 
 ## <a name="return-value"></a>반환 값
@@ -61,10 +62,10 @@ HRESULT GetPropertyOrigin (
 |---------|---------|---------|
 |`WBEM_E_FAILED` | 0x80041001 | 일반 오류가 발생이 했습니다. |
 |`WBEM_E_NOT_FOUND` | 0x80041002 | 지정된 된 속성을 찾을 수 없습니다. |
-|`WBEM_E_INVALID_PARAMETER` | 0x80041008 | 매개 변수가 잘못된 경우 |
-|`WBEM_E_OUT_OF_MEMORY` | 0x80041006 | 메모리가 부족하여 작업을 완료할 수 없는 경우 |
+|`WBEM_E_INVALID_PARAMETER` | 0x80041008 | 매개 변수가 잘못 되었습니다. |
+|`WBEM_E_OUT_OF_MEMORY` | 0x80041006 | 메모리가 부족 하 여 작업을 완료할 수 없습니다. |
 |`WBEM_S_NO_ERROR` | 0 | 함수 호출이 성공 했습니다.  |
-  
+
 ## <a name="remarks"></a>설명
 
 이 함수에 대 한 호출을 래핑하는 [IWbemClassObject::GetPropertyOrigin](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-getpropertyorigin) 메서드.
@@ -73,12 +74,14 @@ HRESULT GetPropertyOrigin (
 
 `pstrClassName` 유효한 매개 변수를 가리키지 해야 `BSTR` 이기 때문에 함수를 호출 하기 전에 `out` 매개 변수;이 함수에서 반환 된 후 포인터 할당이 해제 되지 않습니다.
 
-## <a name="requirements"></a>요구 사항  
-**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
-  
- **헤더:** WMINet_Utils.idl  
-  
- **.NET Framework 버전:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
-  
+## <a name="requirements"></a>요구 사항
+
+**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.
+
+**헤더:** WMINet_Utils.idl
+
+**.NET Framework 버전:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
+
 ## <a name="see-also"></a>참고자료
+
 - [WMI 및 성능 카운터 (관리 되지 않는 API 참조)](index.md)

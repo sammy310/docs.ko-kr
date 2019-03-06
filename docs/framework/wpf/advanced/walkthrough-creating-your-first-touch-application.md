@@ -10,12 +10,12 @@ helpviewer_keywords:
 - touch-sensitive applications [WPF], creating
 - creating a touchscreen application [WPF]
 ms.assetid: d69e602e-9a25-4e24-950b-e89eaa2a906b
-ms.openlocfilehash: d6a59d3e80e8eb3810b04e1535b72bc4b133b7df
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
+ms.openlocfilehash: 2ebf22775ab9308bc896829be0b4e8cc147a3b4c
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56747679"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57374156"
 ---
 # <a name="walkthrough-creating-your-first-touch-application"></a>연습: 첫 번째 터치 응용 프로그램 만들기
 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 응용 프로그램이 터치에 응답할 수 있습니다. 예를 들어, 하나를 사용 하 여 응용 프로그램을 조작할 수 있습니다 또는이 연습에서는 사용자가 이동할 수 있는 응용 프로그램을 만듭니다 원하는 터치 스크린과 같은 터치 감지 장치에서 손가락을 크기를 조정 하거나 터치를 사용 하 여 단일 개체를 회전 합니다.  
@@ -27,7 +27,7 @@ ms.locfileid: "56747679"
   
 -   Windows Touch를 지 원하는 터치 스크린과 같은 터치식 입력을 허용 하는 장치입니다.  
   
- 또한 응용 프로그램을 만드는 방법의 기본적인 이해를 해야 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], 특히 구독 하 고 이벤트를 처리 하는 방법입니다. 자세한 내용은 [연습: 내 첫 WPF 데스크톱 응용 프로그램](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md)합니다.  
+ 또한 응용 프로그램을 만드는 방법의 기본적인 이해를 해야 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], 특히 구독 하 고 이벤트를 처리 하는 방법입니다. 자세한 내용은 [연습: 내 첫 WPF 데스크톱 응용 프로그램](../getting-started/walkthrough-my-first-wpf-desktop-application.md)합니다.  
   
 ## <a name="creating-the-application"></a>애플리케이션 작성  
   
@@ -39,7 +39,7 @@ ms.locfileid: "56747679"
   
      이 태그는 빨간색을 포함 하는 간단한 응용 프로그램을 만듭니다 <xref:System.Windows.Shapes.Rectangle> 에 <xref:System.Windows.Controls.Canvas>합니다. 합니다 <xref:System.Windows.UIElement.IsManipulationEnabled%2A> 의 속성을 <xref:System.Windows.Shapes.Rectangle> 조작 이벤트를 받을 수 있도록 true로 설정 됩니다. 응용 프로그램을 등록 합니다 <xref:System.Windows.UIElement.ManipulationStarting>, <xref:System.Windows.UIElement.ManipulationDelta>, 및 <xref:System.Windows.UIElement.ManipulationInertiaStarting> 이벤트입니다. 이동 논리를 포함 하는 이러한 이벤트는 <xref:System.Windows.Shapes.Rectangle> 사용자 조작 경우.  
   
-     [!code-xaml[BasicManipulation#UI](../../../../samples/snippets/csharp/VS_Snippets_Wpf/basicmanipulation/csharp/mainwindow.xaml#ui)]  
+     [!code-xaml[BasicManipulation#UI](~/samples/snippets/csharp/VS_Snippets_Wpf/basicmanipulation/csharp/mainwindow.xaml#ui)]  
   
 3.  Visual Basic의 경우 MainWindow.xaml의 첫 번째 줄을 사용 하는 경우 대체 `x:Class="BasicManipulation.MainWindow"` 사용 하 여 `x:Class="MainWindow"`입니다.  
   
@@ -47,8 +47,8 @@ ms.locfileid: "56747679"
   
      합니다 <xref:System.Windows.UIElement.ManipulationStarting> 이벤트가 발생할 때 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 터치 감지 입력 개체를 조작 하기 시작 합니다. 코드는 조작의 위치를 기준으로 하도록 지정 합니다 <xref:System.Windows.Window> 설정 하 여는 <xref:System.Windows.Input.ManipulationStartingEventArgs.ManipulationContainer%2A> 속성입니다.  
   
-     [!code-csharp[BasicManipulation#ManipulationStarting](../../../../samples/snippets/csharp/VS_Snippets_Wpf/basicmanipulation/csharp/mainwindow.xaml.cs#manipulationstarting)]
-     [!code-vb[BasicManipulation#ManipulationStarting](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/basicmanipulation/visualbasic/mainwindow.xaml.vb#manipulationstarting)]
+     [!code-csharp[BasicManipulation#ManipulationStarting](~/samples/snippets/csharp/VS_Snippets_Wpf/basicmanipulation/csharp/mainwindow.xaml.cs#manipulationstarting)]
+     [!code-vb[BasicManipulation#ManipulationStarting](~/samples/snippets/visualbasic/VS_Snippets_Wpf/basicmanipulation/visualbasic/mainwindow.xaml.vb#manipulationstarting)]
 
 5.  에 `MainWindow` 클래스를 다음 추가 <xref:System.Windows.Input.ManipulationDelta> 이벤트 처리기입니다.
 
@@ -56,15 +56,15 @@ ms.locfileid: "56747679"
 
      적용 되는 코드를 <xref:System.Windows.Input.ManipulationDeltaEventArgs.DeltaManipulation%2A> 에 <xref:System.Windows.UIElement.RenderTransform%2A> 의 <xref:System.Windows.Shapes.Rectangle> 는 사용자가 터치 이동 하려면 다음을 입력 합니다. 또한 확인 여부를 <xref:System.Windows.Shapes.Rectangle> 의 범위를 벗어납니다를 <xref:System.Windows.Window> 관성 도중 이벤트가 발생 합니다. 따라서 응용 프로그램 호출 하는 경우는 <xref:System.Windows.Input.ManipulationDeltaEventArgs.Complete%2A?displayProperty=nameWithType> 조작을 종료 하는 방법입니다.
 
-     [!code-csharp[BasicManipulation#ManipulationDelta](../../../../samples/snippets/csharp/VS_Snippets_Wpf/basicmanipulation/csharp/mainwindow.xaml.cs#manipulationdelta)]
-     [!code-vb[BasicManipulation#ManipulationDelta](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/basicmanipulation/visualbasic/mainwindow.xaml.vb#manipulationdelta)]
+     [!code-csharp[BasicManipulation#ManipulationDelta](~/samples/snippets/csharp/VS_Snippets_Wpf/basicmanipulation/csharp/mainwindow.xaml.cs#manipulationdelta)]
+     [!code-vb[BasicManipulation#ManipulationDelta](~/samples/snippets/visualbasic/VS_Snippets_Wpf/basicmanipulation/visualbasic/mainwindow.xaml.vb#manipulationdelta)]
 
 6.  에 `MainWindow` 클래스를 다음 추가 <xref:System.Windows.UIElement.ManipulationInertiaStarting> 이벤트 처리기입니다.
 
      <xref:System.Windows.UIElement.ManipulationInertiaStarting> 사용자 화면에서 손가락을 모두 발생 하면 오류가 발생 합니다. 코드에는 초기 속도 및 이동, 확장 및 회전 사각형의 감속을 설정합니다.
 
-     [!code-csharp[BasicManipulation#ManipulationInertiaStarting](../../../../samples/snippets/csharp/VS_Snippets_Wpf/basicmanipulation/csharp/mainwindow.xaml.cs#manipulationinertiastarting)]
-     [!code-vb[BasicManipulation#ManipulationInertiaStarting](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/basicmanipulation/visualbasic/mainwindow.xaml.vb#manipulationinertiastarting)]
+     [!code-csharp[BasicManipulation#ManipulationInertiaStarting](~/samples/snippets/csharp/VS_Snippets_Wpf/basicmanipulation/csharp/mainwindow.xaml.cs#manipulationinertiastarting)]
+     [!code-vb[BasicManipulation#ManipulationInertiaStarting](~/samples/snippets/visualbasic/VS_Snippets_Wpf/basicmanipulation/visualbasic/mainwindow.xaml.vb#manipulationinertiastarting)]
 
 7.  프로젝트를 빌드하고 실행합니다.
 

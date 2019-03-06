@@ -5,12 +5,12 @@ helpviewer_keywords:
 - PropertyPath object [WPF]
 - XAML [WPF], PropertyPath object
 ms.assetid: 0e3cdf07-abe6-460a-a9af-3764b4fd707f
-ms.openlocfilehash: 7c6f658558618e0812ea2537837577cbf011edd4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 25214a3c177975505713a444b69a7006c0fd523f
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54648759"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57363516"
 ---
 # <a name="propertypath-xaml-syntax"></a>PropertyPath XAML 구문
 합니다 <xref:System.Windows.PropertyPath> 개체가 지원 복잡 한 인라인 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 구문을 사용 하는 다양 한 속성을 설정 하기 위한는 <xref:System.Windows.PropertyPath> 형식을 값으로. 이 항목 문서는 <xref:System.Windows.PropertyPath> 구문 바인딩 및 애니메이션 구문에 적용 합니다.  
@@ -28,7 +28,7 @@ ms.locfileid: "54648759"
 ## <a name="propertypath-for-objects-in-data-binding"></a>데이터 바인딩의 개체에 대한 PropertyPath  
  데이터 바인딩은 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 기능으로 이를 통해 종속성 속성의 대상 값에 바인딩할 수 있습니다. 하지만 해당 데이터 바인딩의 소스는 종속성 속성이어야 하며 적용 가능한 데이터 공급자가 인식하는 모든 속성 형식일 수 있습니다. 속성 경로 특히 사용 합니다 <xref:System.Windows.Data.ObjectDataProvider>에서 바인딩 소스를 가져오는 데 사용 되는 [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] 개체 및 해당 속성입니다.  
   
- 해당 데이터 바인딩을 확인 [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)] 를 사용 하지 않습니다 <xref:System.Windows.PropertyPath>사용 하지 않으므로, <xref:System.Windows.Data.Binding.Path%2A> 에 <xref:System.Windows.Data.Binding>합니다. 사용 하는 대신 <xref:System.Windows.Data.Binding.XPath%2A> 를 유효한 XPath 구문을 지정 하 고는 [!INCLUDE[TLA#tla_xmldom](../../../../includes/tlasharptla-xmldom-md.md)] 데이터. <xref:System.Windows.Data.Binding.XPath%2A> 또한 문자열로 지정 되었지만 여기서는 설명 하지 않습니다. 참조 [XMLDataProvider 및 XPath 쿼리를 사용 하 여 XML 데이터에 바인딩](../../../../docs/framework/wpf/data/how-to-bind-to-xml-data-using-an-xmldataprovider-and-xpath-queries.md)합니다.  
+ 해당 데이터 바인딩을 확인 [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)] 를 사용 하지 않습니다 <xref:System.Windows.PropertyPath>사용 하지 않으므로, <xref:System.Windows.Data.Binding.Path%2A> 에 <xref:System.Windows.Data.Binding>합니다. 사용 하는 대신 <xref:System.Windows.Data.Binding.XPath%2A> 를 유효한 XPath 구문을 지정 하 고는 [!INCLUDE[TLA#tla_xmldom](../../../../includes/tlasharptla-xmldom-md.md)] 데이터. <xref:System.Windows.Data.Binding.XPath%2A> 또한 문자열로 지정 되었지만 여기서는 설명 하지 않습니다. 참조 [XMLDataProvider 및 XPath 쿼리를 사용 하 여 XML 데이터에 바인딩](../data/how-to-bind-to-xml-data-using-an-xmldataprovider-and-xpath-queries.md)합니다.  
   
  데이터 바인딩의 속성 경로를 이해하는 열쇠는 개별 속성 값에 대한 바인딩을 대상으로 지정할 수 있거나 목록이나 컬렉션을 사용하는 대상 속성에 바인딩할 수 있다는 점입니다. 예를 들어 바인딩 컬렉션에 바인딩하는 경우는 <xref:System.Windows.Controls.ListBox> 컬렉션에 있는 개수 데이터 항목에 따라 확장 되는 다음 속성 경로 컬렉션 개체를 개별 컬렉션 항목이 아닌 참조 해야 합니다. 데이터 바인딩 엔진은 데이터 원본 바인딩 대상의 형식으로 자동으로 채우는 것과 같은 동작이 사용 되는 컬렉션과 일치는 <xref:System.Windows.Controls.ListBox> 항목 배열을 사용 하 여 합니다.  
   
@@ -85,7 +85,7 @@ ms.locfileid: "54648759"
 <object Path="propertyName/propertyNameX" .../>  
 ```  
   
- 이 구문의 /는 계층적 데이터 소스 개체 내에서 탐색하는 데 사용되고 연속 / 문자가 있는 계층 구조에 대한 여러 단계는 지원되지 않습니다. 소스 순회는 데이터를 뷰의 UI와 동기화할 때 결정되는 현재 레코드 포인터 위치를 처리합니다. 계층적 데이터 소스 개체를 사용한 바인딩 및 데이터 바인딩의 현재 레코드 포인터 개념에 대한 자세한 내용은 [계층적 데이터에 마스터-세부 패턴 사용](../../../../docs/framework/wpf/data/how-to-use-the-master-detail-pattern-with-hierarchical-data.md) 또는 [데이터 바인딩 개요](../../../../docs/framework/wpf/data/data-binding-overview.md)를 참조하세요.  
+ 이 구문의 /는 계층적 데이터 소스 개체 내에서 탐색하는 데 사용되고 연속 / 문자가 있는 계층 구조에 대한 여러 단계는 지원되지 않습니다. 소스 순회는 데이터를 뷰의 UI와 동기화할 때 결정되는 현재 레코드 포인터 위치를 처리합니다. 계층적 데이터 소스 개체를 사용한 바인딩 및 데이터 바인딩의 현재 레코드 포인터 개념에 대한 자세한 내용은 [계층적 데이터에 마스터-세부 패턴 사용](../data/how-to-use-the-master-detail-pattern-with-hierarchical-data.md) 또는 [데이터 바인딩 개요](../data/data-binding-overview.md)를 참조하세요.  
   
 > [!NOTE]
 >  표면적으로 이 구문은 [!INCLUDE[TLA2#tla_xpath](../../../../includes/tla2sharptla-xpath-md.md)]와 비슷합니다. 진정한 [!INCLUDE[TLA2#tla_xpath](../../../../includes/tla2sharptla-xpath-md.md)] 식에 대 한 바인딩에 [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] 데이터 원본으로 사용 되지 않는 <xref:System.Windows.Data.Binding.Path%2A> 값 및 상호 배타적인에 대신 사용할 <xref:System.Windows.Data.Binding.XPath%2A> 속성입니다.  
@@ -142,7 +142,7 @@ or
   
 <a name="general"></a>   
 ### <a name="general-object-property-considerations-for-animations"></a>애니메이션에 대한 일반 개체 속성 고려 사항  
- 일반적인 애니메이션 개념에 대한 자세한 내용은 [Storyboard 개요](../../../../docs/framework/wpf/graphics-multimedia/storyboards-overview.md) 및 [애니메이션 개요](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)를 참조하세요.  
+ 일반적인 애니메이션 개념에 대한 자세한 내용은 [Storyboard 개요](../graphics-multimedia/storyboards-overview.md) 및 [애니메이션 개요](../graphics-multimedia/animation-overview.md)를 참조하세요.  
   
  값 형식 또는 애니메이션이 적용 되는 속성 중 하나 여야 합니다는 <xref:System.Windows.Freezable> 형식 이거나 기본 형식입니다. 속성 경로 시작 하는 지정 된 존재 하는 종속성 속성의 이름으로 확인 되어야 <xref:System.Windows.Media.Animation.Storyboard.TargetName%2A> 형식입니다.  
   
@@ -168,7 +168,7 @@ or
   
  `propertyName2`는 `propertyName` 값인 개체에 있는 종속성 속성의 이름이어야 합니다. 즉, `propertyName2` 되는 형식에 종속성 속성으로 존재 해야 합니다 `propertyName` <xref:System.Windows.DependencyProperty.PropertyType%2A>합니다.  
   
- 적용된 스타일 및 템플릿 때문에 애니메이션의 간접 대상 지정이 필요합니다. 애니메이션을 대상으로 하려면를 <xref:System.Windows.Media.Animation.Storyboard.TargetName%2A> 는 대상 개체에서 이름으로 설정 됩니다 [X:name](../../../../docs/framework/xaml-services/x-name-directive.md) 또는 <xref:System.Windows.FrameworkElement.Name%2A>합니다. 템플릿 및 스타일 요소에 이름이 있을 수 있지만 해당 이름은 스타일 및 템플릿의 네임스페이스 내에서만 유효합니다. 템플릿 및 스타일이 네임스페이스를 애플리케이션 태그와 공유한 경우 이름이 고유하지 않습니다. 스타일 및 템플릿은 문자 그대로 인스턴스 간에 공유되고 중복 이름을 영구화합니다. 따라서 애니메이션 효과를 줄 요소의 개별 속성이 스타일이나 템플릿을 기반으로 한 경우 스타일 템플릿을 기반으로 하지 않은 명명된 요소 인스턴스로 시작한 다음 애니메이션 효과를 줄 속성에 도착할 스타일 또는 템플릿 시각적 트리를 대상으로 지정해야 합니다.  
+ 적용된 스타일 및 템플릿 때문에 애니메이션의 간접 대상 지정이 필요합니다. 애니메이션을 대상으로 하려면를 <xref:System.Windows.Media.Animation.Storyboard.TargetName%2A> 는 대상 개체에서 이름으로 설정 됩니다 [X:name](../../xaml-services/x-name-directive.md) 또는 <xref:System.Windows.FrameworkElement.Name%2A>합니다. 템플릿 및 스타일 요소에 이름이 있을 수 있지만 해당 이름은 스타일 및 템플릿의 네임스페이스 내에서만 유효합니다. 템플릿 및 스타일이 네임스페이스를 애플리케이션 태그와 공유한 경우 이름이 고유하지 않습니다. 스타일 및 템플릿은 문자 그대로 인스턴스 간에 공유되고 중복 이름을 영구화합니다. 따라서 애니메이션 효과를 줄 요소의 개별 속성이 스타일이나 템플릿을 기반으로 한 경우 스타일 템플릿을 기반으로 하지 않은 명명된 요소 인스턴스로 시작한 다음 애니메이션 효과를 줄 속성에 도착할 스타일 또는 템플릿 시각적 트리를 대상으로 지정해야 합니다.  
   
  예를 들어를 <xref:System.Windows.Controls.Panel.Background%2A> 의 속성을 <xref:System.Windows.Controls.Panel> 된 완전 <xref:System.Windows.Media.Brush> (실제로 <xref:System.Windows.Media.SolidColorBrush>) 테마 템플릿에서 생성 하는. 애니메이션 효과를 주는 <xref:System.Windows.Media.Brush> 완전히 있습니다 해야는 BrushAnimation (아마도 하나에 대 한 모든 <xref:System.Windows.Media.Brush> 형식) 있고 형식이 없습니다. 브러시에 애니메이션 효과를 주는 대신 애니메이션 효과 줄 속성의 특정 <xref:System.Windows.Media.Brush> 형식입니다. 가져올 필요가 <xref:System.Windows.Media.SolidColorBrush> 에 해당 <xref:System.Windows.Media.SolidColorBrush.Color%2A> 적용 하는 <xref:System.Windows.Media.Animation.ColorAnimation> 있습니다. 이 예제의 속성 경로는 `Background.Color`입니다.  
   
@@ -198,5 +198,5 @@ or
   
 ## <a name="see-also"></a>참고자료
 - <xref:System.Windows.PropertyPath>
-- [데이터 바인딩 개요](../../../../docs/framework/wpf/data/data-binding-overview.md)
-- [Storyboard 개요](../../../../docs/framework/wpf/graphics-multimedia/storyboards-overview.md)
+- [데이터 바인딩 개요](../data/data-binding-overview.md)
+- [Storyboard 개요](../graphics-multimedia/storyboards-overview.md)

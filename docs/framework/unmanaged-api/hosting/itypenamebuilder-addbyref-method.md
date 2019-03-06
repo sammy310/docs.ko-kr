@@ -17,30 +17,33 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6a4335bf477f0eeb8c48a50b9f11fb1f32d21448
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 93b3ae8c83973c4d981fc42d4a8f616c62b1b28a
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54690061"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57371101"
 ---
 # <a name="itypenamebuilderaddbyref-method"></a>ITypeNameBuilder::AddByRef 메서드
-이 메서드는 .NET Framework 인프라를 지원하며 사용자 코드에서 직접 사용할 수 없습니다.  
-  
-## <a name="syntax"></a>구문  
-  
-```  
-HRESULT AddByRef ( );  
-```  
-  
-## <a name="requirements"></a>요구 사항  
- **플랫폼:** WindoSee [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)합니다.  
-  
- **헤더:** MSCorEE.h  
-  
- **라이브러리:** MSCorEE.dll에 리소스로 포함  
-  
- **.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
-  
+
+이 메서드는 .NET Framework 인프라를 지원하며 사용자 코드에서 직접 사용할 수 없습니다.
+
+## <a name="syntax"></a>구문
+
+```cpp
+HRESULT AddByRef ( );
+```
+
+## <a name="requirements"></a>요구 사항
+
+**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.
+
+**헤더:** MSCorEE.h
+
+**라이브러리:** MSCorEE.dll에 리소스로 포함
+
+**.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
+
 ## <a name="see-also"></a>참고자료
+
 - [호스팅 인터페이스](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)

@@ -8,18 +8,18 @@ helpviewer_keywords:
 - history [WPF], navigating forward
 - navigation [WPF], through navigation history (forward)
 ms.assetid: 5939d574-5f53-469e-85f5-1f2b13607caa
-ms.openlocfilehash: ac3b8b71b6adf04d71cf35edbb042b82c57d8e1f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4c20ebfab45a24cf34b1476fb94dae6913fb4d99
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33546268"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57366662"
 ---
 # <a name="how-to-navigate-forward-or-back-through-navigation-history"></a>방법: 탐색 기록을 앞으로 또는 뒤로 탐색
-이 예제에는 앞으로 또는 뒤로 탐색 기록의 항목을 탐색 하는 방법을 보여 줍니다.  
+이 예제에서는 앞으로 또는 뒤로 탐색 기록에 항목을 탐색 하는 방법을 보여 줍니다.  
   
 ## <a name="example"></a>예제  
- 내용을 사용 하 여 다음과 같은 호스트에서 실행 되는 코드 탐색 기록, 한 번에 하나의 항목을 통해 앞 이나 뒤로 탐색할 수 있습니다.  
+ 콘텐츠에서 다음 호스트에서 실행 되는 코드 탐색 기록에서 한 번에 하나의 항목을 통해 앞뒤로 이동 수 있습니다.  
   
 -   <xref:System.Windows.Navigation.NavigationWindow> 사용 하 여 <xref:System.Windows.Navigation.NavigationService>  
   
@@ -27,17 +27,17 @@ ms.locfileid: "33546268"
   
 -   [!INCLUDE[TLA#tla_iegeneric](../../../../includes/tlasharptla-iegeneric-md.md)]  
   
- 한 항목 앞으로 탐색 하려면 먼저 체크 해야를 검사 하 여 앞으로 탐색 기록에서 항목이 있는지는 **CanGoForward** 속성입니다. 한 항목 앞으로 탐색 하려면 호출는 **GoForward** 메서드. 이 다음 예에서 확인할 수 있습니다.  
+ 한 항목 앞으로 탐색할 수 있습니다, 전에 먼저 체크 해야 검사 하 여 전방 탐색 기록에 항목이 있는지 합니다 **CanGoForward** 속성입니다. 한 항목 앞으로 탐색 하려면 호출을 **GoForward** 메서드. 이 다음 예제에 나와 있습니다.  
   
- [!code-csharp[HOWTONavigationSnippets#NavigateForwardCODE](../../../../samples/snippets/csharp/VS_Snippets_Wpf/HOWTONavigationSnippets/CSharp/HomePage.xaml.cs#navigateforwardcode)]
- [!code-vb[HOWTONavigationSnippets#NavigateForwardCODE](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/HOWTONavigationSnippets/visualbasic/homepage.xaml.vb#navigateforwardcode)]  
+ [!code-csharp[HOWTONavigationSnippets#NavigateForwardCODE](~/samples/snippets/csharp/VS_Snippets_Wpf/HOWTONavigationSnippets/CSharp/HomePage.xaml.cs#navigateforwardcode)]
+ [!code-vb[HOWTONavigationSnippets#NavigateForwardCODE](~/samples/snippets/visualbasic/VS_Snippets_Wpf/HOWTONavigationSnippets/visualbasic/homepage.xaml.vb#navigateforwardcode)]  
   
- 한 항목 뒤로 탐색 하려면, 검사 하 여 뒤로 탐색 기록의 항목이 있는지를 먼저 확인 해야 합니다는 **CanGoBack** 속성입니다. 한 항목 뒤로 탐색 하려면 호출는 **GoBack** 메서드. 이 다음 예에서 확인할 수 있습니다.  
+ 탐색 하려면 하나의 항목을 다시, 검사 하 여 후방 탐색 기록에 항목이 있는지를 먼저 확인 해야 합니다 **CanGoBack** 속성입니다. 한 항목 뒤로 탐색 하려면 호출을 **GoBack** 메서드. 이 다음 예제에 나와 있습니다.  
   
- [!code-csharp[HOWTONavigationSnippets#NavigateBackCODE](../../../../samples/snippets/csharp/VS_Snippets_Wpf/HOWTONavigationSnippets/CSharp/HomePage.xaml.cs#navigatebackcode)]
- [!code-vb[HOWTONavigationSnippets#NavigateBackCODE](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/HOWTONavigationSnippets/visualbasic/homepage.xaml.vb#navigatebackcode)]  
+ [!code-csharp[HOWTONavigationSnippets#NavigateBackCODE](~/samples/snippets/csharp/VS_Snippets_Wpf/HOWTONavigationSnippets/CSharp/HomePage.xaml.cs#navigatebackcode)]
+ [!code-vb[HOWTONavigationSnippets#NavigateBackCODE](~/samples/snippets/visualbasic/VS_Snippets_Wpf/HOWTONavigationSnippets/visualbasic/homepage.xaml.vb#navigatebackcode)]  
   
- **CanGoForward**, **GoForward**, **CanGoBack**, 및 **GoBack** 구현 <xref:System.Windows.Navigation.NavigationWindow>, <xref:System.Windows.Controls.Frame>, 및 <xref:System.Windows.Navigation.NavigationService>합니다.  
+ **CanGoForward**, **GoForward**를 **CanGoBack**, 및 **GoBack** 하 여 구현 됩니다 <xref:System.Windows.Navigation.NavigationWindow>를 <xref:System.Windows.Controls.Frame>, 및 <xref:System.Windows.Navigation.NavigationService>합니다.  
   
 > [!NOTE]
->  호출 하는 경우 **GoForward**, 앞으로 탐색 기록의 항목이 고 호출 하는 경우 또는 **GoBack**를 뒤로 탐색 기록의 항목이 고는 <xref:System.InvalidOperationException> throw 됩니다.
+>  호출 하는 경우 **GoForward**, 전방 탐색 기록에 항목이 없음 및 호출 하는 경우 또는 **GoBack**, 후방 탐색 기록에 항목이 없음 및는 <xref:System.InvalidOperationException> throw 됩니다.

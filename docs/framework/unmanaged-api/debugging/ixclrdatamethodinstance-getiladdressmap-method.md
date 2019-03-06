@@ -15,12 +15,12 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: 8442d1373ede241d262ab41928fd5d9924ec9c80
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5e6fde6e4e5bf006da00b62b035cee112efae1d7
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54567193"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57373493"
 ---
 # <a name="ixclrdatamethodinstancegetiladdressmap-method"></a>IXCLRDataMethodInstance::GetILAddressMap 메서드
 
@@ -40,11 +40,14 @@ HRESULT GetILAddressMap(
 
 ### <a name="parameters"></a>매개 변수
 
-`mapLen` [in] 제공 된 맵 배열의 길이입니다.
+`mapLen`\
+[in] 제공 된 맵 배열의 길이입니다.
 
-`mapNeeded` [out] 메서드는 맵 항목의 수입니다.
+`mapNeeded`\
+[out] 메서드는 맵 항목의 수입니다.
 
-`maps` [out, size_is(mapLen)] 맵 항목을 저장 하기 위한 배열입니다.
+`maps`\
+[out, size_is(mapLen)] 맵 항목을 저장 하기 위한 배열입니다.
 
 ## <a name="remarks"></a>설명
 
@@ -59,5 +62,5 @@ HRESULT GetILAddressMap(
 
 ## <a name="see-also"></a>참고자료
 
-- [디버깅](../../../../docs/framework/unmanaged-api/debugging/index.md)
-- [IXCLRDataMethodInstance 인터페이스](../../../../docs/framework/unmanaged-api/debugging/ixclrdatamethodinstance-interface.md)
+- [디버깅](index.md)
+- [IXCLRDataMethodInstance 인터페이스](ixclrdatamethodinstance-interface.md)

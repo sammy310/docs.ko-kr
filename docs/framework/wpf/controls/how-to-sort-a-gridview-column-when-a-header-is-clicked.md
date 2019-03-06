@@ -10,12 +10,12 @@ helpviewer_keywords:
 - ListView controls [WPF], sorting GridView columns
 - GridView controls [WPF], ListView control
 ms.assetid: 4865d720-d147-40ed-83a7-af7587f8aad8
-ms.openlocfilehash: 2d0cca89d906a60a3f7072de27bc54b7a869a01e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b636842b1d41e17b09f02b7b9a6f7aa47eb4cdd1
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54694089"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57365414"
 ---
 # <a name="how-to-sort-a-gridview-column-when-a-header-is-clicked"></a>방법: 머리글을 클릭할 때 GridView 열 정렬
 만드는 방법을 보여 주는이 예제는 <xref:System.Windows.Controls.ListView> 구현 하는 컨트롤을 <xref:System.Windows.Controls.GridView> 모드 및 사용자가 열 머리글을 클릭할 때 데이터 콘텐츠 정렬 보기.  
@@ -226,6 +226,6 @@ End Sub
 ## <a name="see-also"></a>참고자료
 - <xref:System.Windows.Controls.ListView>
 - <xref:System.Windows.Controls.GridView>
-- [ListView 개요](../../../../docs/framework/wpf/controls/listview-overview.md)
-- [GridView 개요](../../../../docs/framework/wpf/controls/gridview-overview.md)
-- [방법 항목](../../../../docs/framework/wpf/controls/listview-how-to-topics.md)
+- [ListView 개요](listview-overview.md)
+- [GridView 개요](gridview-overview.md)
+- [방법 항목](listview-how-to-topics.md)

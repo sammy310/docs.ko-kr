@@ -7,26 +7,26 @@ helpviewer_keywords:
 - visual effects [WPF]
 - graphics [WPF], effects
 ms.assetid: 3bfc652e-91b7-4697-a4f4-83ff0e98327e
-ms.openlocfilehash: 9a8dcc98b6d201825e4880edc2ad77f9e0406586
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 20051b176be4372643855441ee5f6c3b62a27780
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54662389"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57361163"
 ---
 # <a name="graphics"></a>그래픽
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 제품 통합 멀티미디어, 벡터 그래픽, 애니메이션 및 콘텐츠 컴퍼지션을, 개발자가 쉽게 흥미로운 사용자 인터페이스 및 콘텐츠를 작성할 수 있도록 지원 합니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
- [비트맵 효과](../../../../docs/framework/wpf/graphics-multimedia/bitmap-effects.md)  
- [브러시](../../../../docs/framework/wpf/graphics-multimedia/brushes.md)  
- [그리기](../../../../docs/framework/wpf/graphics-multimedia/drawings.md)  
- [기하 도형](../../../../docs/framework/wpf/graphics-multimedia/geometries.md)  
- [이미지](../../../../docs/framework/wpf/graphics-multimedia/images.md)  
- [도형](../../../../docs/framework/wpf/graphics-multimedia/shapes.md)  
- [변환](../../../../docs/framework/wpf/graphics-multimedia/transformations.md)  
- [그래픽 렌더링 레지스트리 설정](../../../../docs/framework/wpf/graphics-multimedia/graphics-rendering-registry-settings.md)  
- [방법 항목](../../../../docs/framework/wpf/graphics-multimedia/graphics-how-to-topics.md)  
+ [비트맵 효과](bitmap-effects.md)  
+ [브러시](brushes.md)  
+ [그리기](drawings.md)  
+ [기하 도형](geometries.md)  
+ [이미지](images.md)  
+ [도형](shapes.md)  
+ [변환](transformations.md)  
+ [그래픽 렌더링 레지스트리 설정](graphics-rendering-registry-settings.md)  
+ [방법 항목](graphics-how-to-topics.md)  
   
 ## <a name="see-also"></a>참고자료
 - <xref:System.Windows.Shapes.Shape>
@@ -36,6 +36,6 @@ ms.locfileid: "54662389"
 - <xref:System.Windows.Media.Drawing>
 - <xref:System.Windows.Media.Brush>
 - <xref:System.Windows.Media.Effects.BitmapEffect>
-- [2차원 그래픽 및 이미징](../../../../docs/framework/wpf/advanced/optimizing-performance-2d-graphics-and-imaging.md)
-- [그래픽 및 멀티미디어](../../../../docs/framework/wpf/graphics-multimedia/index.md)
-- [WPF 그래픽 렌더링 개요](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)
+- [2차원 그래픽 및 이미징](../advanced/optimizing-performance-2d-graphics-and-imaging.md)
+- [그래픽 및 멀티미디어](index.md)
+- [WPF 그래픽 렌더링 개요](wpf-graphics-rendering-overview.md)

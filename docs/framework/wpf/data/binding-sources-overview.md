@@ -6,12 +6,12 @@ helpviewer_keywords:
 - data binding [WPF], binding source
 - binding sources [WPF]
 ms.assetid: 2df2cd11-6aac-4bdf-ab7b-ea5f464cd5ca
-ms.openlocfilehash: c5c89f388d90fbcbd02342514def52a8960b99fb
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 857175c65c62d8abad07a93baf72aa3709e5cb6b
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54694375"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57375638"
 ---
 # <a name="binding-sources-overview"></a>바인딩 소스 개요
 데이터 바인딩에서 바인딩 소스 개체는 데이터를 가져오는 개체를 의미합니다. 이 항목에서는 바인딩 소스로 사용할 수 있는 개체 형식에 대해 설명합니다.  
@@ -27,15 +27,15 @@ ms.locfileid: "54694375"
 |[!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] 개체|모든 [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] 개체의 공용 속성, 하위 속성 및 인덱서에 바인딩할 수 있습니다. 바인딩 엔진은 [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] 리플렉션을 사용하여 속성의 값을 가져옵니다. 구현 하는 개체 또는 <xref:System.ComponentModel.ICustomTypeDescriptor> 등록 되어 있거나 <xref:System.ComponentModel.TypeDescriptionProvider> 도 바인딩 엔진과 함께 작동 합니다.<br /><br /> 바인딩 소스로 사용할 수 있는 클래스를 구현하는 방법은 이 항목 뒷부분의 [바인딩 소스에 대한 클래스 구현](#classes)을 참조하세요.|  
 |동적 개체|사용 가능한 속성 및 인덱서를 구현 하는 개체에 바인딩할 수 있습니다는 <xref:System.Dynamic.IDynamicMetaObjectProvider> 인터페이스입니다. 코드의 멤버에 액세스할 수 있는 경우 바인딩할 수 있습니다. 예를 들어 동적 개체를 사용하여 `someObjet.AProperty`를 통해 코드의 멤버에 액세스할 수 있는 경우 바인딩 경로를 `AProperty`로 설정하여 바인딩할 수 있습니다.|  
 |[!INCLUDE[TLA#tla_adonet](../../../../includes/tlasharptla-adonet-md.md)] 개체|바인딩할 수 있습니다 [!INCLUDE[TLA2#tla_adonet](../../../../includes/tla2sharptla-adonet-md.md)] 같은 개체 <xref:System.Data.DataTable>합니다. 합니다 [!INCLUDE[TLA2#tla_adonet](../../../../includes/tla2sharptla-adonet-md.md)] <xref:System.Data.DataView> 구현 하는 <xref:System.ComponentModel.IBindingList> 바인딩 엔진이 수신 하는 변경 알림을 제공 하는 인터페이스입니다.|  
-|[!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)] 개체|바인딩할 하 고 실행할 수 있습니다 `XPath` 대 한 쿼리는 <xref:System.Xml.XmlNode>를 <xref:System.Xml.XmlDocument>, 또는 <xref:System.Xml.XmlElement>합니다. 에 액세스 하는 편리한 방법을 [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] 태그의 바인딩 소스인 데이터 사용 하는 것을 <xref:System.Windows.Data.XmlDataProvider> 개체입니다. 자세한 내용은 [XMLDataProvider 및 XPath 쿼리를 사용하여 XML 데이터에 바인딩](../../../../docs/framework/wpf/data/how-to-bind-to-xml-data-using-an-xmldataprovider-and-xpath-queries.md)을 참조하세요.<br /><br /> 에 바인딩할 수도 있습니다는 <xref:System.Xml.Linq.XElement> 또는 <xref:System.Xml.Linq.XDocument>, LINQ to XML 사용 하 여 이러한 형식의 개체에서 실행 되는 쿼리의 결과에 바인딩 또는 합니다. LINQ to XML 사용 하 여 태그의 바인딩 소스인 XML 데이터에 액세스 하는 편리한 방법을 사용 하는 것을 <xref:System.Windows.Data.ObjectDataProvider> 개체입니다. 자세한 내용은 [XDocument, XElement 또는 LINQ for XML 쿼리 결과에 바인딩](../../../../docs/framework/wpf/data/how-to-bind-to-xdocument-xelement-or-linq-for-xml-query-results.md)을 참조하세요.|  
-|<xref:System.Windows.DependencyObject> 개체|모든 종속성 속성에 바인딩할 수 있습니다 <xref:System.Windows.DependencyObject>합니다. 예제는 [두 컨트롤의 속성 바인딩](../../../../docs/framework/wpf/data/how-to-bind-the-properties-of-two-controls.md)을 참조하세요.|  
+|[!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)] 개체|바인딩할 하 고 실행할 수 있습니다 `XPath` 대 한 쿼리는 <xref:System.Xml.XmlNode>를 <xref:System.Xml.XmlDocument>, 또는 <xref:System.Xml.XmlElement>합니다. 에 액세스 하는 편리한 방법을 [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] 태그의 바인딩 소스인 데이터 사용 하는 것을 <xref:System.Windows.Data.XmlDataProvider> 개체입니다. 자세한 내용은 [XMLDataProvider 및 XPath 쿼리를 사용하여 XML 데이터에 바인딩](how-to-bind-to-xml-data-using-an-xmldataprovider-and-xpath-queries.md)을 참조하세요.<br /><br /> 에 바인딩할 수도 있습니다는 <xref:System.Xml.Linq.XElement> 또는 <xref:System.Xml.Linq.XDocument>, LINQ to XML 사용 하 여 이러한 형식의 개체에서 실행 되는 쿼리의 결과에 바인딩 또는 합니다. LINQ to XML 사용 하 여 태그의 바인딩 소스인 XML 데이터에 액세스 하는 편리한 방법을 사용 하는 것을 <xref:System.Windows.Data.ObjectDataProvider> 개체입니다. 자세한 내용은 [XDocument, XElement 또는 LINQ for XML 쿼리 결과에 바인딩](how-to-bind-to-xdocument-xelement-or-linq-for-xml-query-results.md)을 참조하세요.|  
+|<xref:System.Windows.DependencyObject> 개체|모든 종속성 속성에 바인딩할 수 있습니다 <xref:System.Windows.DependencyObject>합니다. 예제는 [두 컨트롤의 속성 바인딩](how-to-bind-the-properties-of-two-controls.md)을 참조하세요.|  
   
 <a name="classes"></a>   
 ## <a name="implementing-a-class-for-the-binding-source"></a>바인딩 소스에 대한 클래스 구현  
  고유한 바인딩 소스를 만들 수 있습니다. 이 섹션에서는 바인딩 소스로 사용할 클래스를 구현하는 경우 알아야 할 내용을 설명합니다.  
   
 ### <a name="providing-change-notifications"></a>변경 알림 제공  
- 중 하나를 사용 하는 경우 <xref:System.Windows.Data.BindingMode.OneWay> 또는 <xref:System.Windows.Data.BindingMode.TwoWay> 바인딩 (필요 하기 때문에 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 바인딩 소스 속성이 동적으로 변경 하는 경우 업데이트)를 적절 한 속성 변경 알림 메커니즘을 구현 해야 합니다. 에 대 한 권장 되는 메커니즘은는 [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] 또는 동적 클래스를 구현 하는 <xref:System.ComponentModel.INotifyPropertyChanged> 인터페이스입니다. 자세한 내용은 [속성 변경 알림 구현](../../../../docs/framework/wpf/data/how-to-implement-property-change-notification.md)을 참조하세요.  
+ 중 하나를 사용 하는 경우 <xref:System.Windows.Data.BindingMode.OneWay> 또는 <xref:System.Windows.Data.BindingMode.TwoWay> 바인딩 (필요 하기 때문에 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 바인딩 소스 속성이 동적으로 변경 하는 경우 업데이트)를 적절 한 속성 변경 알림 메커니즘을 구현 해야 합니다. 에 대 한 권장 되는 메커니즘은는 [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] 또는 동적 클래스를 구현 하는 <xref:System.ComponentModel.INotifyPropertyChanged> 인터페이스입니다. 자세한 내용은 [속성 변경 알림 구현](how-to-implement-property-change-notification.md)을 참조하세요.  
   
  만드는 경우는 [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] 구현 하지 않는 개체 <xref:System.ComponentModel.INotifyPropertyChanged>는 바인딩에 사용 되는 데이터가 최신 상태를 유지 해야 하도록 고유한 알림 시스템에 대 한 정렬 해야 합니다. 변경 알림의 각 속성에 대해 `PropertyChanged` 패턴을 지원하여 변경 알림을 제공할 수 있습니다. 이 패턴을 지원하려면 각 속성에 대해 *PropertyName*Changed 이벤트를 정의합니다. 여기서 *PropertyName*은 속성의 이름입니다. 속성이 변경될 때마다 이 이벤트를 발생시킵니다.  
   
@@ -54,9 +54,9 @@ ms.locfileid: "54694375"
   
 <a name="objects"></a>   
 ## <a name="using-entire-objects-as-a-binding-source"></a>전체 개체를 바인딩 소스로 사용  
- 전체 개체를 바인딩 소스로 사용할 수 있습니다. 사용 하 여 바인딩 소스를 지정할 수 있습니다는 <xref:System.Windows.Data.Binding.Source%2A> 또는 <xref:System.Windows.FrameworkElement.DataContext%2A> 속성을 선택한 다음 빈 바인딩 선언 제공: `{Binding}`합니다. 이 방법이 유용한 시나리오의 예로는 문자열 형식 개체에 대한 바인딩, 관심 있는 속성이 여러 개 포함된 개체에 대한 바인딩 또는 컬렉션 개체에 대한 바인딩이 있습니다. 전체 컬렉션 개체에 대한 바인딩의 예제는 [계층적 데이터에 마스터-세부 패턴 사용](../../../../docs/framework/wpf/data/how-to-use-the-master-detail-pattern-with-hierarchical-data.md)을 참조하세요.  
+ 전체 개체를 바인딩 소스로 사용할 수 있습니다. 사용 하 여 바인딩 소스를 지정할 수 있습니다는 <xref:System.Windows.Data.Binding.Source%2A> 또는 <xref:System.Windows.FrameworkElement.DataContext%2A> 속성을 선택한 다음 빈 바인딩 선언 제공: `{Binding}`합니다. 이 방법이 유용한 시나리오의 예로는 문자열 형식 개체에 대한 바인딩, 관심 있는 속성이 여러 개 포함된 개체에 대한 바인딩 또는 컬렉션 개체에 대한 바인딩이 있습니다. 전체 컬렉션 개체에 대한 바인딩의 예제는 [계층적 데이터에 마스터-세부 패턴 사용](how-to-use-the-master-detail-pattern-with-hierarchical-data.md)을 참조하세요.  
   
- 바인딩된 대상 속성에서 데이터가 의미를 가지려면 사용자 지정 논리를 적용해야 할 수 있습니다. (기본 형식 변환이 없는 경우) 사용자 지정 논리는 사용자 지정 변환기 형식의 수 또는 <xref:System.Windows.DataTemplate>합니다. 변환기에 대한 자세한 내용은 [데이터 바인딩 개요](../../../../docs/framework/wpf/data/data-binding-overview.md)의 데이터 변환 섹션을 참조하세요. 데이터 템플릿에 대한 자세한 내용은 [데이터 템플릿 개요](../../../../docs/framework/wpf/data/data-templating-overview.md)를 참조하세요.  
+ 바인딩된 대상 속성에서 데이터가 의미를 가지려면 사용자 지정 논리를 적용해야 할 수 있습니다. (기본 형식 변환이 없는 경우) 사용자 지정 논리는 사용자 지정 변환기 형식의 수 또는 <xref:System.Windows.DataTemplate>합니다. 변환기에 대한 자세한 내용은 [데이터 바인딩 개요](data-binding-overview.md)의 데이터 변환 섹션을 참조하세요. 데이터 템플릿에 대한 자세한 내용은 [데이터 템플릿 개요](data-templating-overview.md)를 참조하세요.  
   
 <a name="collections"></a>   
 ## <a name="using-collection-objects-as-a-binding-source"></a>컬렉션 개체를 바인딩 소스로 사용  
@@ -64,9 +64,9 @@ ms.locfileid: "54694375"
   
  구현 하는 컬렉션을 열거할 수 있습니다는 <xref:System.Collections.IEnumerable> 인터페이스입니다. 그러나 컬렉션에서 삽입 또는 삭제가 업데이트 되도록 동적 바인딩을 설정 하는 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 자동으로 구현 해야 합니다 <xref:System.Collections.Specialized.INotifyCollectionChanged> 인터페이스. 이 인터페이스는 기본 컬렉션이 변경될 때마다 발생해야 하는 이벤트를 노출합니다.  
   
- 합니다 <xref:System.Collections.ObjectModel.ObservableCollection%601> 클래스를 노출 하는 데이터 컬렉션의 기본 제공 구현은 <xref:System.Collections.Specialized.INotifyCollectionChanged> 인터페이스입니다. 컬렉션 내의 개별 데이터 개체는 이전 섹션에 설명된 요구 사항을 충족해야 합니다. 예제는 [ObservableCollection 만들기 및 바인딩](../../../../docs/framework/wpf/data/how-to-create-and-bind-to-an-observablecollection.md)을 참조하세요. 고유한 컬렉션을 구현 하기 전에 사용해 <xref:System.Collections.ObjectModel.ObservableCollection%601> 또는 같은 기존 컬렉션 중 하나가 클래스 <xref:System.Collections.Generic.List%601>를 <xref:System.Collections.ObjectModel.Collection%601>, 및 <xref:System.ComponentModel.BindingList%601>, 다양 한 기타.  
+ 합니다 <xref:System.Collections.ObjectModel.ObservableCollection%601> 클래스를 노출 하는 데이터 컬렉션의 기본 제공 구현은 <xref:System.Collections.Specialized.INotifyCollectionChanged> 인터페이스입니다. 컬렉션 내의 개별 데이터 개체는 이전 섹션에 설명된 요구 사항을 충족해야 합니다. 예제는 [ObservableCollection 만들기 및 바인딩](how-to-create-and-bind-to-an-observablecollection.md)을 참조하세요. 고유한 컬렉션을 구현 하기 전에 사용해 <xref:System.Collections.ObjectModel.ObservableCollection%601> 또는 같은 기존 컬렉션 중 하나가 클래스 <xref:System.Collections.Generic.List%601>를 <xref:System.Collections.ObjectModel.Collection%601>, 및 <xref:System.ComponentModel.BindingList%601>, 다양 한 기타.  
   
- WPF는 컬렉션에 직접 바인딩되지 않습니다. 바인딩 소스로 컬렉션을 지정하면 WPF가 실제로 컬렉션의 기본 뷰에 바인딩됩니다. 기본 뷰에 대한 자세한 내용은 [데이터 바인딩 개요](../../../../docs/framework/wpf/data/data-binding-overview.md)를 참조하세요.  
+ WPF는 컬렉션에 직접 바인딩되지 않습니다. 바인딩 소스로 컬렉션을 지정하면 WPF가 실제로 컬렉션의 기본 뷰에 바인딩됩니다. 기본 뷰에 대한 자세한 내용은 [데이터 바인딩 개요](data-binding-overview.md)를 참조하세요.  
   
  고급 시나리오에서 있고 컬렉션을 직접 구현 하려는 경우 사용을 고려 합니다 <xref:System.Collections.IList> 인터페이스입니다. <xref:System.Collections.IList> 성능을 향상 시킬 수는 인덱스에서 개별적으로 액세스할 수 있는 개체의 제네릭이 아닌 컬렉션을 제공 합니다.  
   
@@ -92,13 +92,13 @@ ms.locfileid: "54694375"
   
  익명 형식 개체는 내부 개체입니다. 완전 신뢰 상태에서 실행 중인 경우에만 익명 형식의 속성에 바인딩할 수 있습니다. 익명 형식에 대한 자세한 내용은 [익명 형식(C# 프로그래밍 가이드)](~/docs/csharp/programming-guide/classes-and-structs/anonymous-types.md) 또는 [익명 형식(Visual Basic)](~/docs/visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)(Visual Basic)을 참조하세요.  
   
- 부분 신뢰 보안에 대한 자세한 내용은 [WPF 부분 신뢰 보안](../../../../docs/framework/wpf/wpf-partial-trust-security.md)을 참조하세요.  
+ 부분 신뢰 보안에 대한 자세한 내용은 [WPF 부분 신뢰 보안](../wpf-partial-trust-security.md)을 참조하세요.  
   
 ## <a name="see-also"></a>참고자료
 - <xref:System.Windows.Data.ObjectDataProvider>
 - <xref:System.Windows.Data.XmlDataProvider>
-- [바인딩 소스 지정](../../../../docs/framework/wpf/data/how-to-specify-the-binding-source.md)
-- [데이터 바인딩 개요](../../../../docs/framework/wpf/data/data-binding-overview.md)
-- [방법 항목](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)
+- [바인딩 소스 지정](how-to-specify-the-binding-source.md)
+- [데이터 바인딩 개요](data-binding-overview.md)
+- [방법 항목](data-binding-how-to-topics.md)
 - [LINQ to XML로 WPF 데이터 바인딩 개요](/visualstudio/designers/wpf-data-binding-with-linq-to-xml-overview)
-- [데이터 바인딩](../../../../docs/framework/wpf/advanced/optimizing-performance-data-binding.md)
+- [데이터 바인딩](../advanced/optimizing-performance-data-binding.md)

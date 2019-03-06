@@ -6,12 +6,12 @@ helpviewer_keywords:
 - composite drawings [WPF]
 - graphics [WPF], composite drawings
 ms.assetid: 066eb0ab-5f0e-439d-85c6-dca60af269fc
-ms.openlocfilehash: 886956b03bd3e17360283cee1bc0e4db1d2a4731
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ec71fb3e2f92444d33e15da38f0c88acc715c46d
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54491417"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57374143"
 ---
 # <a name="how-to-create-a-composite-drawing"></a>방법: 합성 그리기 만들기
 사용 하는 방법을 보여 주는이 예제는 <xref:System.Windows.Media.DrawingGroup> 여러 결합 하 여 복잡 한 그리기를 만들려면 <xref:System.Windows.Media.Drawing> 를 단일 합성 그리기로 개체입니다.  
@@ -19,27 +19,27 @@ ms.locfileid: "54491417"
 ## <a name="example"></a>예제  
  다음 예제에서는 <xref:System.Windows.Media.DrawingGroup> 합성 그리기를 만들려고 합니다 <xref:System.Windows.Media.GeometryDrawing> 및 <xref:System.Windows.Media.ImageDrawing> 개체입니다. 다음 그림에서는 이 예제가 생성하는 출력을 보여 줍니다.  
   
- ![여러 있는 DrawingGroup](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-simple.jpg "graphicsmm_simple")  
+ ![여러 있는 DrawingGroup](./media/graphicsmm-simple.jpg "graphicsmm_simple")  
 DrawingGroup를 사용 하 여 만든 합성 그리기  
   
  그리기의 범위를 보여 주는 회색 테두리를 note 합니다.  
   
- [!code-csharp[DrawingMiscSnippets_snip#GraphicsMMSimpleDrawingGroupExample](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DrawingMiscSnippets_snip/CSharp/DrawingGroupExample.cs#graphicsmmsimpledrawinggroupexample)]
- [!code-xaml[DrawingMiscSnippets_snip#GraphicsMMSimpleDrawingGroupExample](../../../../samples/snippets/xaml/VS_Snippets_Wpf/DrawingMiscSnippets_snip/XAML/DrawingGroupExample.xaml#graphicsmmsimpledrawinggroupexample)]  
+ [!code-csharp[DrawingMiscSnippets_snip#GraphicsMMSimpleDrawingGroupExample](~/samples/snippets/csharp/VS_Snippets_Wpf/DrawingMiscSnippets_snip/CSharp/DrawingGroupExample.cs#graphicsmmsimpledrawinggroupexample)]
+ [!code-xaml[DrawingMiscSnippets_snip#GraphicsMMSimpleDrawingGroupExample](~/samples/snippets/xaml/VS_Snippets_Wpf/DrawingMiscSnippets_snip/XAML/DrawingGroupExample.xaml#graphicsmmsimpledrawinggroupexample)]  
   
  사용할 수는 <xref:System.Windows.Media.DrawingGroup> 적용할를 <xref:System.Windows.Media.DrawingGroup.Transform%2A>, <xref:System.Windows.Media.DrawingGroup.Opacity%2A> 설정을 <xref:System.Windows.Media.DrawingGroup.OpacityMask%2A>, <xref:System.Windows.Media.DrawingGroup.BitmapEffect%2A>를 <xref:System.Windows.Media.DrawingGroup.ClipGeometry%2A>, 또는 <xref:System.Windows.Media.DrawingGroup.GuidelineSet%2A> 포함 그리기에. 때문에 <xref:System.Windows.Media.DrawingGroup> 이기도 <xref:System.Windows.Media.Drawing>, 기타를 포함할 수 있습니다 <xref:System.Windows.Media.DrawingGroup> 개체입니다.  
   
  다음 예제에서는 추가 사용 하 여에 앞의 예제에 비슷합니다. <xref:System.Windows.Media.DrawingGroup> 일부 그리기를 불투명 마스크 및 비트맵 효과 적용 하는 개체입니다. 다음 그림에서는 이 예제가 생성하는 출력을 보여 줍니다.  
   
- ![여러 있는 DrawingGroup](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-multiple.jpg "graphicsmm_multiple")  
+ ![여러 있는 DrawingGroup](./media/graphicsmm-multiple.jpg "graphicsmm_multiple")  
 합성 그리기는 여러 DrawingGroup 개체는  
   
  그리기의 범위를 보여 주는 회색 테두리를 note 합니다.  
   
- [!code-csharp[DrawingMiscSnippets_snip#GraphicsMMMultipleDrawingGroupsExample](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DrawingMiscSnippets_snip/CSharp/DrawingGroupExample.cs#graphicsmmmultipledrawinggroupsexample)]
- [!code-xaml[DrawingMiscSnippets_snip#GraphicsMMMultipleDrawingGroupsExample](../../../../samples/snippets/xaml/VS_Snippets_Wpf/DrawingMiscSnippets_snip/XAML/DrawingGroupExample.xaml#graphicsmmmultipledrawinggroupsexample)]  
+ [!code-csharp[DrawingMiscSnippets_snip#GraphicsMMMultipleDrawingGroupsExample](~/samples/snippets/csharp/VS_Snippets_Wpf/DrawingMiscSnippets_snip/CSharp/DrawingGroupExample.cs#graphicsmmmultipledrawinggroupsexample)]
+ [!code-xaml[DrawingMiscSnippets_snip#GraphicsMMMultipleDrawingGroupsExample](~/samples/snippets/xaml/VS_Snippets_Wpf/DrawingMiscSnippets_snip/XAML/DrawingGroupExample.xaml#graphicsmmmultipledrawinggroupsexample)]  
   
- 에 대 한 자세한 내용은 <xref:System.Windows.Media.Drawing> 개체를 참조 하세요 [Drawing 개체 개요](../../../../docs/framework/wpf/graphics-multimedia/drawing-objects-overview.md)합니다.  
+ 에 대 한 자세한 내용은 <xref:System.Windows.Media.Drawing> 개체를 참조 하세요 [Drawing 개체 개요](drawing-objects-overview.md)합니다.  
   
 ## <a name="see-also"></a>참고자료
 - <xref:System.Windows.Media.DrawingGroup.BitmapEffect%2A>
@@ -48,4 +48,4 @@ DrawingGroup를 사용 하 여 만든 합성 그리기
 - <xref:System.Windows.Media.DrawingGroup.Opacity%2A>
 - <xref:System.Windows.Media.DrawingGroup.ClipGeometry%2A>
 - <xref:System.Windows.Media.DrawingGroup.GuidelineSet%2A>
-- [Drawing 개체 개요](../../../../docs/framework/wpf/graphics-multimedia/drawing-objects-overview.md)
+- [Drawing 개체 개요](drawing-objects-overview.md)

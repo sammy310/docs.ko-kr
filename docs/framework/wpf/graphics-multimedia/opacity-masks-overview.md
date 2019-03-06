@@ -6,19 +6,19 @@ helpviewer_keywords:
 - masks [WPF], opacity
 - opacity [WPF], masks
 ms.assetid: 22367fab-5f59-4583-abfd-db2bf86eaef7
-ms.openlocfilehash: da8ffb77391129814e64613e17ea9f4d10cdca98
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7b6afebbf6ac2dda0f8eb9932630da9a273f972e
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54746210"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57376808"
 ---
 # <a name="opacity-masks-overview"></a>불투명 마스크 개요
 불투명 마스크를 사용하여 요소 또는 시각적 개체의 부분을 투명하게 또는 부분적으로 투명하게 만들 수 있습니다. 적용할 불투명 마스크를 만들려면를 <xref:System.Windows.Media.Brush> 에 <xref:System.Windows.UIElement.OpacityMask%2A> 요소의 속성 또는 <xref:System.Windows.Media.Visual>합니다.  브러시가 요소 또는 시각적 개체에 매핑되고, 각 브러시 픽셀의 불투명도 값을 사용하여 요소 또는 시각적 개체의 각 해당 픽셀에 대한 결과 불투명도가 결정됩니다.  
   
 <a name="prereqs"></a>   
 ## <a name="prerequisites"></a>전제 조건  
- 이 개요에 잘 알고 있다고 가정 <xref:System.Windows.Media.Brush> 개체입니다. 브러시 사용에 대한 지침을 보려면 [단색 및 그라데이션을 사용한 그리기 개요](../../../../docs/framework/wpf/graphics-multimedia/painting-with-solid-colors-and-gradients-overview.md)를 참조하세요. 에 대 한 자세한 <xref:System.Windows.Media.ImageBrush> 하 고 <xref:System.Windows.Media.DrawingBrush>를 참조 하십시오 [이미지, 그림 및 시각적 표시로 그리기](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md)합니다.  
+ 이 개요에 잘 알고 있다고 가정 <xref:System.Windows.Media.Brush> 개체입니다. 브러시 사용에 대한 지침을 보려면 [단색 및 그라데이션을 사용한 그리기 개요](painting-with-solid-colors-and-gradients-overview.md)를 참조하세요. 에 대 한 자세한 <xref:System.Windows.Media.ImageBrush> 하 고 <xref:System.Windows.Media.DrawingBrush>를 참조 하십시오 [이미지, 그림 및 시각적 표시로 그리기](painting-with-images-drawings-and-visuals.md)합니다.  
   
 <a name="opacitymasks"></a>   
 ## <a name="creating-visual-effects-with-opacity-masks"></a>불투명 마스크를 사용하여 시각 효과 만들기  
@@ -29,7 +29,7 @@ ms.locfileid: "54746210"
   
  불투명 마스크는 보기에서 페이드되는 이미지나 단추를 만들거나, 요소에 질감을 추가하거나, 그라데이션을 조합하여 유리같은 표면을 생성하는 등의 흥미로운 시각 효과를 만드는 데 사용됩니다. 다음 그림에서는 불투명 마스크의 사용을 보여 줍니다. 마스크의 투명한 부분을 표시하는 데 바둑판 배경이 사용됩니다.  
   
- ![LinearGradientBrush 불투명도 마스크가 있는 개체](../../../../docs/framework/wpf/graphics-multimedia/media/wcpsdk-graphicsmm-opacitymask-imageexample.png "wcpsdk_graphicsmm_opacitymask_imageexample")  
+ ![LinearGradientBrush 불투명도 마스크가 있는 개체](./media/wcpsdk-graphicsmm-opacitymask-imageexample.png "wcpsdk_graphicsmm_opacitymask_imageexample")  
 불투명 마스크 예제  
   
 <a name="creatingopacitymasks"></a>   
@@ -40,30 +40,30 @@ ms.locfileid: "54746210"
   
      다음 이미지는 <xref:System.Windows.Media.LinearGradientBrush> 불투명 마스크로 사용 합니다.  
   
-     ![LinearGradientBrush 불투명도 마스크가 있는 개체](../../../../docs/framework/wpf/graphics-multimedia/media/wcpsdk-graphicsmm-brushes-lineagradientopacitymasksingle.jpg "wcpsdk_graphicsmm_brushes_lineagradientopacitymasksingle")  
+     ![LinearGradientBrush 불투명도 마스크가 있는 개체](./media/wcpsdk-graphicsmm-brushes-lineagradientopacitymasksingle.jpg "wcpsdk_graphicsmm_brushes_lineagradientopacitymasksingle")  
 LinearGradientBrush 불투명 마스크 예제  
   
 -   <xref:System.Windows.Media.ImageBrush>: 소프트 또는 찢어진 가장자리 효과 및 질감을 만들려면 사용 합니다.  
   
      다음 이미지는 <xref:System.Windows.Media.ImageBrush> 불투명 마스크로 사용 합니다.  
   
-     ![ImageBrush 불투명도 마스크가 있는 개체](../../../../docs/framework/wpf/graphics-multimedia/media/wcpsdk-graphicsmm-brushes-imageasopacitymasksingle.jpg "wcpsdk_graphicsmm_brushes_imageasopacitymasksingle")  
+     ![ImageBrush 불투명도 마스크가 있는 개체](./media/wcpsdk-graphicsmm-brushes-imageasopacitymasksingle.jpg "wcpsdk_graphicsmm_brushes_imageasopacitymasksingle")  
 LinearGradientBrush 불투명 마스크 예제  
   
 -   <xref:System.Windows.Media.DrawingBrush>: 도형, 이미지 및 그라데이션 패턴에서 복잡 한 불투명 마스크를 만들려면 사용 합니다.  
   
      다음 이미지는 <xref:System.Windows.Media.DrawingBrush> 불투명 마스크로 사용 합니다.  
   
-     ![DrawingBrush 불투명도 마스크가 있는 개체](../../../../docs/framework/wpf/graphics-multimedia/media/wcpsdk-drawingbrushasopacitymask-single.jpg "wcpsdk_drawingbrushasopacitymask_single")  
+     ![DrawingBrush 불투명도 마스크가 있는 개체](./media/wcpsdk-drawingbrushasopacitymask-single.jpg "wcpsdk_drawingbrushasopacitymask_single")  
 DrawingBrush 불투명 마스크 예제  
   
  그라데이션 브러시 (<xref:System.Windows.Media.LinearGradientBrush> 고 <xref:System.Windows.Media.RadialGradientBrush>)는 불투명 마스크로 사용 하기에 특히 적합 합니다. 때문에 <xref:System.Windows.Media.SolidColorBrush> 저하 불투명도 할 영역이 균일 한 색으로 채우기, 마스크;를 사용 하 여는 <xref:System.Windows.Media.SolidColorBrush> 요소나 시각적 개체를 설정 하는 것과 같습니다 <xref:System.Windows.UIElement.OpacityMask%2A> 속성입니다.  
   
 <a name="creatingopacitymaskswithgradients"></a>   
 ## <a name="using-a-gradient-as-an-opacity-mask"></a>그라데이션을 불투명 마스크로 사용  
- 그라데이션 채우기를 만들려면 두 개 이상의 그라데이션 중지점을 지정합니다. 각 그라데이션 중지점은 색과 위치에 대한 설명을 포함합니다(그라데이션 만들기 및 사용에 대한 자세한 내용은 [단색 및 그라데이션 개요 그리기](../../../../docs/framework/wpf/graphics-multimedia/painting-with-solid-colors-and-gradients-overview.md) 참조). 해당 프로세스는 불투명 마스크 그라데이션이 색을 혼합하는 대신, 알파 채널 값을 혼합한다는 점을 제외한다면 그라데이션을 불투명 마스크로 사용할 때와 같습니다. 따라서 그라데이션의 콘텐츠의 실제 색은 중요하지 않으며 각 색의 알파 채널 또는 불투명도만 중요합니다. 다음은 예제입니다.  
+ 그라데이션 채우기를 만들려면 두 개 이상의 그라데이션 중지점을 지정합니다. 각 그라데이션 중지점은 색과 위치에 대한 설명을 포함합니다(그라데이션 만들기 및 사용에 대한 자세한 내용은 [단색 및 그라데이션 개요 그리기](painting-with-solid-colors-and-gradients-overview.md) 참조). 해당 프로세스는 불투명 마스크 그라데이션이 색을 혼합하는 대신, 알파 채널 값을 혼합한다는 점을 제외한다면 그라데이션을 불투명 마스크로 사용할 때와 같습니다. 따라서 그라데이션의 콘텐츠의 실제 색은 중요하지 않으며 각 색의 알파 채널 또는 불투명도만 중요합니다. 다음은 예제입니다.  
   
- [!code-xaml[OpacityMasksSnippet#LinearGradientOpacityMaskonImage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/OpacityMasksSnippet/CS/GradientBrushExample.xaml#lineargradientopacitymaskonimage)]  
+ [!code-xaml[OpacityMasksSnippet#LinearGradientOpacityMaskonImage](~/samples/snippets/csharp/VS_Snippets_Wpf/OpacityMasksSnippet/CS/GradientBrushExample.xaml#lineargradientopacitymaskonimage)]  
   
 <a name="specifyinggradientcolors"></a>   
 ## <a name="specifying-gradient-stops-for-an-opacity-mask"></a>불투명 마스크에 대한 그라데이션 중지점 지정  
@@ -79,42 +79,42 @@ DrawingBrush 불투명 마스크 예제
   
  이전 줄의 *aa*는 색의 불투명도 지정하는 데 사용되는 2자리 16진수 값을 나타냅니다. *rr*, *gg* 및 *bb* 각각은 색에서 빨강, 녹색 및 파랑의 양을 지정하는 데 사용되는 2자리 16진수 값을 나타냅니다. 각 16진수 숫자는 0-9 또는 A-F의 값을 가질 수 있습니다. 0이 가장 작은 값이고 F가 가장 큰 값입니다. 알파 값 00은 완전히 투명한 색을 지정하지만 알파 값 FF는 완전히 불투명한 색을 만듭니다.  다음 예제에서는 16진수 [!INCLUDE[TLA2#tla_argb](../../../../includes/tla2sharptla-argb-md.md)] 표기법이 두 색을 지정하는 데 사용됩니다. 첫 번째는 완전히 불투명하고 두 번째는 완전히 투명합니다.  
   
- [!code-xaml[OpacityMasksSnippet#AARRGGBBValueonOpacityMask](../../../../samples/snippets/csharp/VS_Snippets_Wpf/OpacityMasksSnippet/CS/GradientBrushExample.xaml#aarrggbbvalueonopacitymask)]  
+ [!code-xaml[OpacityMasksSnippet#AARRGGBBValueonOpacityMask](~/samples/snippets/csharp/VS_Snippets_Wpf/OpacityMasksSnippet/CS/GradientBrushExample.xaml#aarrggbbvalueonopacitymask)]  
   
 <a name="usingimageasopacitymask"></a>   
 ## <a name="using-an-image-as-an-opacity-mask"></a>이미지를 불투명 마스크로 사용  
  이미지를 불투명 마스크로 사용할 수도 있습니다. 다음 그림은 예제를 보여 줍니다. 마스크의 투명한 부분을 표시하는 데 바둑판 배경이 사용됩니다.  
   
- ![ImageBrush 불투명도 마스크가 있는 개체](../../../../docs/framework/wpf/graphics-multimedia/media/wcpsdk-graphicsmm-imageasopacitymask.png "wcpsdk_graphicsmm_imageasopacitymask")  
+ ![ImageBrush 불투명도 마스크가 있는 개체](./media/wcpsdk-graphicsmm-imageasopacitymask.png "wcpsdk_graphicsmm_imageasopacitymask")  
 불투명 마스크 예제  
   
  이미지를 불투명 마스크로 사용 하려면 사용는 <xref:System.Windows.Media.ImageBrush> 이미지를 포함 합니다. 불투명 마스크로 사용할 이미지를 만들 때는 이미지를 여러 수준의 투명도를 지원하는 형식(예: [!INCLUDE[TLA#tla_png](../../../../includes/tlasharptla-png-md.md)])으로 저장합니다. 다음 예제에서는 이전 그림을 만드는 데 사용된 코드를 보여 줍니다.  
   
- [!code-xaml[OpacityMasksSnippet#UIElementOpacityMask](../../../../samples/snippets/csharp/VS_Snippets_Wpf/OpacityMasksSnippet/CS/ImageBrushExample.xaml#uielementopacitymask)]  
+ [!code-xaml[OpacityMasksSnippet#UIElementOpacityMask](~/samples/snippets/csharp/VS_Snippets_Wpf/OpacityMasksSnippet/CS/ImageBrushExample.xaml#uielementopacitymask)]  
   
 <a name="tilingimageopacitymask"></a>   
 ### <a name="using-a-tiled-image-as-an-opacity-mask"></a>바둑판식 배열 이미지를 불투명 마스크로 사용  
  다음 예제에서는 동일한 이미지를 다른 사용 <xref:System.Windows.Media.ImageBrush>, 하지만 브러시의 바둑판식 배열 기능 이미지 50 픽셀 정사각형의 타일을 생성 하기 위해 사용 됩니다.  
   
- [!code-xaml[OpacityMasksSnippet#TiledImageasOpacityMask](../../../../samples/snippets/csharp/VS_Snippets_Wpf/OpacityMasksSnippet/CS/ImageBrushExample.xaml#tiledimageasopacitymask)]  
+ [!code-xaml[OpacityMasksSnippet#TiledImageasOpacityMask](~/samples/snippets/csharp/VS_Snippets_Wpf/OpacityMasksSnippet/CS/ImageBrushExample.xaml#tiledimageasopacitymask)]  
   
 <a name="drawingbrushasopacitymask"></a>   
 ## <a name="creating-an-opacity-mask-from-a-drawing"></a>그리기에서 불투명 마스크 만들기  
  그리기를 불투명 마스크로 사용할 수 있습니다. 그리기 내에 포함된 도형 자체를 그라데이션, 단색, 이미지, 심지어 다른 그리기로 채울 수 있습니다. 다음 그림에서는 불투명 마스크로 사용되는 그리기 예제를 보여 줍니다. 마스크의 투명한 부분을 표시하는 데 바둑판 배경이 사용됩니다.  
   
- ![DrawingBrush 불투명도 마스크가 있는 개체](../../../../docs/framework/wpf/graphics-multimedia/media/wcpsdk-drawingbrushasopacitymask.png "wcpsdk_drawingbrushasopacitymask")  
+ ![DrawingBrush 불투명도 마스크가 있는 개체](./media/wcpsdk-drawingbrushasopacitymask.png "wcpsdk_drawingbrushasopacitymask")  
 DrawingBrush 불투명 마스크 예제  
   
  그리기를 불투명 마스크로 사용 하려면를 <xref:System.Windows.Media.DrawingBrush> 그리기를 포함 합니다. 다음 예제에서는 이전 그림을 만드는 데 사용된 코드를 보여 줍니다.  
   
- [!code-xaml[OpacityMasksSnippet#OpacityMaskfromDrawing](../../../../samples/snippets/csharp/VS_Snippets_Wpf/OpacityMasksSnippet/CS/DrawingBrushExample.xaml#opacitymaskfromdrawing)]  
+ [!code-xaml[OpacityMasksSnippet#OpacityMaskfromDrawing](~/samples/snippets/csharp/VS_Snippets_Wpf/OpacityMasksSnippet/CS/DrawingBrushExample.xaml#opacitymaskfromdrawing)]  
   
 <a name="tileddrawingbrush"></a>   
 ### <a name="using-a-tiled-drawing-as-an-opacity-mask"></a>바둑판식 배열 그리기를 불투명 마스크로 사용  
  같은 합니다 <xref:System.Windows.Media.ImageBrush>, <xref:System.Windows.Media.DrawingBrush> 해당 그리기를 바둑판식으로 배열 하도록 만들 수 있습니다. 다음 예제에서는 그리기 브러시를 사용하여 바둑판식으로 배열된 불투명 마스크를 만듭니다.  
   
- [!code-xaml[OpacityMasksSnippet#TiledDrawingasOpacityMask](../../../../samples/snippets/csharp/VS_Snippets_Wpf/OpacityMasksSnippet/CS/DrawingBrushExample.xaml#tileddrawingasopacitymask)]  
+ [!code-xaml[OpacityMasksSnippet#TiledDrawingasOpacityMask](~/samples/snippets/csharp/VS_Snippets_Wpf/OpacityMasksSnippet/CS/DrawingBrushExample.xaml#tileddrawingasopacitymask)]  
   
 ## <a name="see-also"></a>참고자료
-- [이미지, 그림 및 시각적 표시로 그리기](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md)
-- [단색 및 그라데이션을 사용한 그리기 개요](../../../../docs/framework/wpf/graphics-multimedia/painting-with-solid-colors-and-gradients-overview.md)
+- [이미지, 그림 및 시각적 표시로 그리기](painting-with-images-drawings-and-visuals.md)
+- [단색 및 그라데이션을 사용한 그리기 개요](painting-with-solid-colors-and-gradients-overview.md)

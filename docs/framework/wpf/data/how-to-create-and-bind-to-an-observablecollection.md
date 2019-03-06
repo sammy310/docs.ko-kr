@@ -8,12 +8,12 @@ helpviewer_keywords:
 - data binding [WPF], ObservableCollection class
 - notifications [WPF]
 ms.assetid: 6cf7e275-df76-41c6-a611-53b889b8fd5a
-ms.openlocfilehash: cf9f714878cd1b0b179dc1ced44e3dcfe7c2f9bd
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 10cea133651739df8bb8e27c58221b34067782f5
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54517593"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57376119"
 ---
 # <a name="how-to-create-and-bind-to-an-observablecollection"></a>방법: ObservableCollection 만들기 및 바인딩
 만들고에서 파생 되는 컬렉션에 바인딩하는 방법을 보여 주는이 예제는 <xref:System.Collections.ObjectModel.ObservableCollection%601> 항목이 추가 되거나 제거 될 때 알림을 제공 하는 컬렉션 클래스 클래스.  
@@ -104,7 +104,7 @@ Public Class PersonName
 End Class  
 ```  
   
- [XAML의 바인딩에 사용할 수 있는 데이터 만들기](../../../../docs/framework/wpf/data/how-to-make-data-available-for-binding-in-xaml.md)에 설명되어 있는 것처럼 다른 [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] 개체의 경우와 마찬가지 방식으로 해당 컬렉션을 바인딩에 사용할 수 있게 만들 수 있습니다. 예를 들어 다음과 같이 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]에서 컬렉션을 인스턴스화하고 컬렉션을 리소스로 지정할 수 있습니다.  
+ [XAML의 바인딩에 사용할 수 있는 데이터 만들기](how-to-make-data-available-for-binding-in-xaml.md)에 설명되어 있는 것처럼 다른 [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] 개체의 경우와 마찬가지 방식으로 해당 컬렉션을 바인딩에 사용할 수 있게 만들 수 있습니다. 예를 들어 다음과 같이 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]에서 컬렉션을 인스턴스화하고 컬렉션을 리소스로 지정할 수 있습니다.  
   
 ```xaml  
 <Window  
@@ -136,13 +136,13 @@ End Class
  `NameItemTemplate`의 정의는 여기에 나와 있지 않습니다.  
   
 > [!NOTE]
->  컬렉션의 개체는 [바인딩 소스 개요](../../../../docs/framework/wpf/data/binding-sources-overview.md)에 설명된 요구 사항을 충족해야 합니다. 특히 사용 중인 경우 <xref:System.Windows.Data.BindingMode.OneWay> 또는 <xref:System.Windows.Data.BindingMode.TwoWay> (예를 들어 원하는 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 소스 속성이 동적으로 변경 하는 경우 업데이트), 합니다 와같은적절한속성변경알림메커니즘을구현해야합니다<xref:System.ComponentModel.INotifyPropertyChanged>인터페이스입니다.  
+>  컬렉션의 개체는 [바인딩 소스 개요](binding-sources-overview.md)에 설명된 요구 사항을 충족해야 합니다. 특히 사용 중인 경우 <xref:System.Windows.Data.BindingMode.OneWay> 또는 <xref:System.Windows.Data.BindingMode.TwoWay> (예를 들어 원하는 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 소스 속성이 동적으로 변경 하는 경우 업데이트), 합니다 와같은적절한속성변경알림메커니즘을구현해야합니다<xref:System.ComponentModel.INotifyPropertyChanged>인터페이스입니다.  
   
- 자세한 내용은 [데이터 바인딩 개요](../../../../docs/framework/wpf/data/data-binding-overview.md)에서 컬렉션에 바인딩 단원을 참조하세요.  
+ 자세한 내용은 [데이터 바인딩 개요](data-binding-overview.md)에서 컬렉션에 바인딩 단원을 참조하세요.  
   
 ## <a name="see-also"></a>참고자료
-- [뷰의 데이터 정렬](../../../../docs/framework/wpf/data/how-to-sort-data-in-a-view.md)
-- [뷰에서 데이터 필터링](../../../../docs/framework/wpf/data/how-to-filter-data-in-a-view.md)
-- [XAML 데이터 정렬 및 그룹화](../../../../docs/framework/wpf/data/how-to-sort-and-group-data-using-a-view-in-xaml.md)
-- [데이터 바인딩 개요](../../../../docs/framework/wpf/data/data-binding-overview.md)
-- [방법 항목](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)
+- [뷰의 데이터 정렬](how-to-sort-data-in-a-view.md)
+- [뷰에서 데이터 필터링](how-to-filter-data-in-a-view.md)
+- [XAML 데이터 정렬 및 그룹화](how-to-sort-and-group-data-using-a-view-in-xaml.md)
+- [데이터 바인딩 개요](data-binding-overview.md)
+- [방법 항목](data-binding-how-to-topics.md)

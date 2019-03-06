@@ -7,12 +7,12 @@ helpviewer_keywords:
 - international user interface [WPF], XAML
 - globalization [WPF]
 ms.assetid: 4571ccfe-8a60-4f06-9b37-7ac0b1c2d10f
-ms.openlocfilehash: d7b544fcb308960ff86b83655d60cb1453b6571a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: dee1df1e122e47ea67618da5a1e4349e28d90447
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54543817"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57377367"
 ---
 # <a name="globalization-for-wpf"></a>WPF의 전역화
 이 항목에서는 소개를 작성할 때 알고 있어야 하는 문제 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 글로벌 시장 용 응용 프로그램입니다. 전역화 프로그래밍 요소에 정의 된 [!INCLUDE[TLA#tla_net](../../../../includes/tlasharptla-net-md.md)] 에서 `System.Globalization`합니다.
@@ -47,7 +47,7 @@ ms.locfileid: "54543817"
 
 <a name="lang_attrib"></a>
 ### <a name="language-attribute"></a>언어 특성
- [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 사용 하 여 [xml: lang](../../../../docs/framework/xaml-services/xml-lang-handling-in-xaml.md) 를 요소의 언어 특성을 나타냅니다.  활용 하기 위해 합니다 <xref:System.Globalization.CultureInfo> 클래스의 미리 정의 된 문화권 이름 중 하나일 언어 특성 값을 해야 <xref:System.Globalization.CultureInfo>합니다. [xml:lang](../../../../docs/framework/xaml-services/xml-lang-handling-in-xaml.md)은 요소 트리에서 상속 가능하며(반드시 종속성 속성 상속성때문이 아니라 XML 규칙에 따름), 명시적으로 할당되지 않은 경우 기본값은 비어 있습니다.
+ [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 사용 하 여 [xml: lang](../../xaml-services/xml-lang-handling-in-xaml.md) 를 요소의 언어 특성을 나타냅니다.  활용 하기 위해 합니다 <xref:System.Globalization.CultureInfo> 클래스의 미리 정의 된 문화권 이름 중 하나일 언어 특성 값을 해야 <xref:System.Globalization.CultureInfo>합니다. [xml:lang](../../xaml-services/xml-lang-handling-in-xaml.md)은 요소 트리에서 상속 가능하며(반드시 종속성 속성 상속성때문이 아니라 XML 규칙에 따름), 명시적으로 할당되지 않은 경우 기본값은 비어 있습니다.
 
  언어를 지정할 때 언어 특성이 매우 유용합니다. 예를 들어, 프랑스, 퀘벡, 벨기에 및 스위스의 프랑스어에는 다른 철자, 어휘 및 발음이 있습니다. 중국어, 일본어 및 한국어에서 코드 포인트 공유할 수도 [!INCLUDE[TLA2#tla_unicode](../../../../includes/tla2sharptla-unicode-md.md)], 하지만 표의 문자 모양은 서로 다르고 완전히 다른 글꼴을 사용 합니다.
 
@@ -151,7 +151,7 @@ ms.locfileid: "54543817"
 ### <a name="localizable-user-interface"></a>지역화할 수 있는 사용자 인터페이스
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 응용 프로그램 사용 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 정의에 해당 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]합니다. [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]를 사용하면 개발자가 속성 및 논리 집합이 포함된 개체의 계층 구조를 지정할 수 있습니다. 주된 용도 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 개발 하는 데 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 하지만 응용 프로그램의 계층을 지정 하려면 사용할 수 [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] 개체입니다. 대부분의 개발자가 사용할 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 는 응용 프로그램을 지정 하려면 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] C#과 같은 프로그래밍 언어를 사용 하 여 사용자 상호 작용에 반응 하 고 있습니다.
 
- 리소스의 관점에서을 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 파일을 언어별 설명 하도록 설계 된 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 리소스 요소 이며 따라서, 최종 배포 형식은 국가별 언어를 지원 하도록 지역화 해야 합니다. 때문에 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 없습니다 이벤트를 처리할 여러 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 응용 프로그램에이 작업을 수행 하는 코드 블록을 포함 합니다. 자세한 내용은 [XAML 개요 (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)합니다. 코드를 제거 하 고 다른 이진 파일로 컴파일할 때를 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 파일은 XAML의 BAML 양식으로 토큰화 됩니다. XAML 파일의 BAML 양식, 이미지 및 기타 형식의 관리 리소스 개체는 위성 리소스 어셈블리에 포함되어 다른 언어로 지역화되거나, 지역화가 필요하지 않은 경우 기본 어셈블리에 포함됩니다.
+ 리소스의 관점에서을 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 파일을 언어별 설명 하도록 설계 된 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 리소스 요소 이며 따라서, 최종 배포 형식은 국가별 언어를 지원 하도록 지역화 해야 합니다. 때문에 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 없습니다 이벤트를 처리할 여러 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 응용 프로그램에이 작업을 수행 하는 코드 블록을 포함 합니다. 자세한 내용은 [XAML 개요 (WPF)](xaml-overview-wpf.md)합니다. 코드를 제거 하 고 다른 이진 파일로 컴파일할 때를 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 파일은 XAML의 BAML 양식으로 토큰화 됩니다. XAML 파일의 BAML 양식, 이미지 및 기타 형식의 관리 리소스 개체는 위성 리소스 어셈블리에 포함되어 다른 언어로 지역화되거나, 지역화가 필요하지 않은 경우 기본 어셈블리에 포함됩니다.
 
 > [!NOTE]
 >  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 응용 프로그램 일부를 지원 합니다 [!INCLUDE[TLA2#tla_netframewk](../../../../includes/tla2sharptla-netframewk-md.md)] [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] 문자열 테이블, 이미지 등을 비롯 한 리소스입니다.
@@ -167,7 +167,7 @@ ms.locfileid: "54543817"
 
  응용 프로그램에서 리소스 인스턴스화하는 데는 <xref:System.Resources.ResourceManager> 하 고 사용 하려는 리소스를 로드 합니다. 다음 예제에서는 이 작업을 수행하는 방법을 보여 줍니다.
 
- [!code-csharp[LocalizationResources#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/LocalizationResources/CSharp/page1.xaml.cs#2)]
+ [!code-csharp[LocalizationResources#2](~/samples/snippets/csharp/VS_Snippets_Wpf/LocalizationResources/CSharp/page1.xaml.cs#2)]
 
 <a name="using_clickonce"></a>
 ## <a name="using-clickonce-with-localized-applications"></a>지역화된 애플리케이션에서 ClickOnce 사용
@@ -181,4 +181,4 @@ ms.locfileid: "54543817"
 ```
 
 ## <a name="see-also"></a>참고자료
-- [WPF 전역화 및 지역화 개요](../../../../docs/framework/wpf/advanced/wpf-globalization-and-localization-overview.md)
+- [WPF 전역화 및 지역화 개요](wpf-globalization-and-localization-overview.md)

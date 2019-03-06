@@ -8,17 +8,17 @@ helpviewer_keywords:
 - applications [WPF], focus
 - focus in applications [WPF]
 ms.assetid: 0230c4eb-0c8a-462b-ac4b-ae3e511659f4
-ms.openlocfilehash: 0a9aabdb4ddb508e9d53523192db27708c5b7713
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5853c48ad77131d33cd0ab767c4a58ba56aaa39f
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54582152"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57369918"
 ---
 # <a name="focus-overview"></a>포커스 개요
 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]에는 포커스에 관한 두 가지 주요 개념이 있습니다. 즉, 키보드 포커스와 논리 포커스입니다.  키보드 포커스는 키보드 입력을 수신하는 요소를 나타내고 논리 포커스는 포커스가 있는 포커스 범위의 요소를 나타냅니다.  이러한 개념은 이 개요에서 자세히 설명합니다.  포커스를 얻을 수 있는 여러 영역이 있는 복잡한 애플리케이션을 작성할 때 이 개념의 차이를 이해하는 것이 중요합니다.  
   
- 포커스 관리에 참여 하는 주요 클래스는 <xref:System.Windows.Input.Keyboard> 클래스를 <xref:System.Windows.Input.FocusManager> 클래스 및 기본 요소 클래스와 같은 <xref:System.Windows.UIElement> 및 <xref:System.Windows.ContentElement>합니다.  기본 요소에 대한 자세한 내용은 [기본 요소 개요](../../../../docs/framework/wpf/advanced/base-elements-overview.md)를 참조하세요.  
+ 포커스 관리에 참여 하는 주요 클래스는 <xref:System.Windows.Input.Keyboard> 클래스를 <xref:System.Windows.Input.FocusManager> 클래스 및 기본 요소 클래스와 같은 <xref:System.Windows.UIElement> 및 <xref:System.Windows.ContentElement>합니다.  기본 요소에 대한 자세한 내용은 [기본 요소 개요](base-elements-overview.md)를 참조하세요.  
   
  합니다 <xref:System.Windows.Input.Keyboard> 클래스는 주로 키보드 포커스와 관련 및 <xref:System.Windows.Input.FocusManager> 주로 논리 포커스와 관련 됩니다 있지만 구분 하는 것은 아닙니다.  키보드 포커스가 있는 요소에는 논리 포커스도 있지만, 논리 포커스가 있는 요소에는 키보드 포커스가 없을 수도 있습니다.  사용 하는 경우이 점이 명확해는 <xref:System.Windows.Input.Keyboard> 도 대 한 키보드 포커스가 있는 요소를 설정 하는 클래스 요소에 논리적 포커스를 설정 합니다.  
   
@@ -34,8 +34,8 @@ ms.locfileid: "54582152"
   
  다음 예제에서는 합니다 <xref:System.Windows.Input.Keyboard.Focus%2A> 에 키보드 포커스를 설정 하는 메서드를 <xref:System.Windows.Controls.Button>.  
   
- [!code-csharp[focussample#FocusSampleSetFocus](../../../../samples/snippets/csharp/VS_Snippets_Wpf/FocusSample/CSharp/Window1.xaml.cs#focussamplesetfocus)]
- [!code-vb[focussample#FocusSampleSetFocus](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/FocusSample/visualbasic/window1.xaml.vb#focussamplesetfocus)]  
+ [!code-csharp[focussample#FocusSampleSetFocus](~/samples/snippets/csharp/VS_Snippets_Wpf/FocusSample/CSharp/Window1.xaml.cs#focussamplesetfocus)]
+ [!code-vb[focussample#FocusSampleSetFocus](~/samples/snippets/visualbasic/VS_Snippets_Wpf/FocusSample/visualbasic/window1.xaml.vb#focussamplesetfocus)]  
   
  <xref:System.Windows.UIElement.IsKeyboardFocused%2A> 기본 요소 클래스의 속성 요소에 키보드 포커스가 있는지 여부를 나타내는 값을 가져옵니다.  <xref:System.Windows.UIElement.IsKeyboardFocusWithin%2A> 기본 요소 클래스의 속성 요소 또는 시각적 자식 요소 중 하나에 키보드 포커스가 있는지 여부를 나타내는 값을 가져옵니다.  
   
@@ -53,10 +53,10 @@ ms.locfileid: "54582152"
   
  다음 예에서는 <xref:System.Windows.Controls.StackPanel> 설정 하 여 포커스 범위로 <xref:System.Windows.Input.FocusManager.IsFocusScope%2A> 연결 된 속성입니다.  
   
- [!code-xaml[MarkupSnippets#MarkupIsFocusScopeXAML](../../../../samples/snippets/csharp/VS_Snippets_Wpf/MarkupSnippets/CSharp/Window1.xaml#markupisfocusscopexaml)]  
+ [!code-xaml[MarkupSnippets#MarkupIsFocusScopeXAML](~/samples/snippets/csharp/VS_Snippets_Wpf/MarkupSnippets/CSharp/Window1.xaml#markupisfocusscopexaml)]  
   
- [!code-csharp[FocusSnippets#FocusSetIsFocusScope](../../../../samples/snippets/csharp/VS_Snippets_Wpf/FocusSnippets/CSharp/Window1.xaml.cs#focussetisfocusscope)]
- [!code-vb[FocusSnippets#FocusSetIsFocusScope](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/FocusSnippets/visualbasic/window1.xaml.vb#focussetisfocusscope)]  
+ [!code-csharp[FocusSnippets#FocusSetIsFocusScope](~/samples/snippets/csharp/VS_Snippets_Wpf/FocusSnippets/CSharp/Window1.xaml.cs#focussetisfocusscope)]
+ [!code-vb[FocusSnippets#FocusSetIsFocusScope](~/samples/snippets/visualbasic/VS_Snippets_Wpf/FocusSnippets/visualbasic/window1.xaml.vb#focussetisfocusscope)]  
   
  <xref:System.Windows.Input.FocusManager.GetFocusScope%2A> 지정 된 요소의 포커스 범위를 반환합니다.  
   
@@ -66,8 +66,8 @@ ms.locfileid: "54582152"
   
  다음 예에서는 포커스 범위에서 포커스된 요소를 설정하고 포커스 범위의 포커스된 요소를 가져옵니다.  
   
- [!code-csharp[FocusSnippets#FocusGetSetFocusedElement](../../../../samples/snippets/csharp/VS_Snippets_Wpf/FocusSnippets/CSharp/Window1.xaml.cs#focusgetsetfocusedelement)]
- [!code-vb[FocusSnippets#FocusGetSetFocusedElement](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/FocusSnippets/visualbasic/window1.xaml.vb#focusgetsetfocusedelement)]  
+ [!code-csharp[FocusSnippets#FocusGetSetFocusedElement](~/samples/snippets/csharp/VS_Snippets_Wpf/FocusSnippets/CSharp/Window1.xaml.cs#focusgetsetfocusedelement)]
+ [!code-vb[FocusSnippets#FocusGetSetFocusedElement](~/samples/snippets/visualbasic/VS_Snippets_Wpf/FocusSnippets/visualbasic/window1.xaml.vb#focusgetsetfocusedelement)]  
   
 <a name="Keyboard_Navigation"></a>   
 ## <a name="keyboard-navigation"></a>키보드 탐색  
@@ -77,10 +77,10 @@ ms.locfileid: "54582152"
   
  다음 예제는 <xref:System.Windows.Controls.Menu> 수가 <xref:System.Windows.Controls.MenuItem> 개체입니다.  합니다 <xref:System.Windows.Input.KeyboardNavigation.TabNavigation%2A> 연결된 속성이로 설정 된 <xref:System.Windows.Input.KeyboardNavigationMode.Cycle> 에 <xref:System.Windows.Controls.Menu>합니다.  내에서 tab 키를 사용 하 여 포커스를 변경 하는 경우는 <xref:System.Windows.Controls.Menu>, 각 요소에서 포커스 이동 돌아가서 마지막 요소에 도달 하면 포커스가 첫 번째 요소입니다.  
   
- [!code-xaml[MarkupSnippets#MarkupKeyboardNavigationTabNavigationXAML](../../../../samples/snippets/csharp/VS_Snippets_Wpf/MarkupSnippets/CSharp/Window1.xaml#markupkeyboardnavigationtabnavigationxaml)]  
+ [!code-xaml[MarkupSnippets#MarkupKeyboardNavigationTabNavigationXAML](~/samples/snippets/csharp/VS_Snippets_Wpf/MarkupSnippets/CSharp/Window1.xaml#markupkeyboardnavigationtabnavigationxaml)]  
   
- [!code-csharp[MarkupSnippets#MarkupKeyboardNavigationTabNavigationCODE](../../../../samples/snippets/csharp/VS_Snippets_Wpf/MarkupSnippets/CSharp/Window1.xaml.cs#markupkeyboardnavigationtabnavigationcode)]
- [!code-vb[MarkupSnippets#MarkupKeyboardNavigationTabNavigationCODE](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/MarkupSnippets/visualbasic/window1.xaml.vb#markupkeyboardnavigationtabnavigationcode)]  
+ [!code-csharp[MarkupSnippets#MarkupKeyboardNavigationTabNavigationCODE](~/samples/snippets/csharp/VS_Snippets_Wpf/MarkupSnippets/CSharp/Window1.xaml.cs#markupkeyboardnavigationtabnavigationcode)]
+ [!code-vb[MarkupSnippets#MarkupKeyboardNavigationTabNavigationCODE](~/samples/snippets/visualbasic/VS_Snippets_Wpf/MarkupSnippets/visualbasic/window1.xaml.vb#markupkeyboardnavigationtabnavigationcode)]  
   
 <a name="Manipulating_Focus_Programmatically"></a>   
 ## <a name="navigating-focus-programmatically"></a>포커스를 프로그래밍 방식으로 탐색  
@@ -90,30 +90,30 @@ ms.locfileid: "54582152"
   
  다음 예제에서는 <xref:System.Windows.FrameworkElement.MoveFocus%2A> 포커스가 있는 요소를 변경 합니다.  
   
- [!code-csharp[focussample#FocusSampleMoveFocus](../../../../samples/snippets/csharp/VS_Snippets_Wpf/FocusSample/CSharp/Window1.xaml.cs#focussamplemovefocus)]
- [!code-vb[focussample#FocusSampleMoveFocus](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/FocusSample/visualbasic/window1.xaml.vb#focussamplemovefocus)]  
+ [!code-csharp[focussample#FocusSampleMoveFocus](~/samples/snippets/csharp/VS_Snippets_Wpf/FocusSample/CSharp/Window1.xaml.cs#focussamplemovefocus)]
+ [!code-vb[focussample#FocusSampleMoveFocus](~/samples/snippets/visualbasic/VS_Snippets_Wpf/FocusSample/visualbasic/window1.xaml.vb#focussamplemovefocus)]  
   
  <xref:System.Windows.FrameworkElement.PredictFocus%2A> 포커스가 변경 될 경우 포커스를 받을 개체를 반환 합니다.  현재만 <xref:System.Windows.Input.FocusNavigationDirection.Up>, <xref:System.Windows.Input.FocusNavigationDirection.Down>를 <xref:System.Windows.Input.FocusNavigationDirection.Left>, 및 <xref:System.Windows.Input.FocusNavigationDirection.Right> 지 <xref:System.Windows.FrameworkElement.PredictFocus%2A>합니다.  
   
 <a name="Focus_Events"></a>   
 ## <a name="focus-events"></a>포커스 이벤트  
- 키보드 포커스와 관련 된 이벤트 <xref:System.Windows.Input.Keyboard.PreviewGotKeyboardFocus>, <xref:System.Windows.Input.Keyboard.GotKeyboardFocus> 하 고 <xref:System.Windows.Input.Keyboard.PreviewLostKeyboardFocus>, <xref:System.Windows.Input.Keyboard.LostKeyboardFocus>합니다.  이벤트에 연결 된 이벤트로 정의 된는 <xref:System.Windows.Input.Keyboard> 클래스 되지만 기본 요소 클래스에서 라우트된 해당 이벤트로 더 쉽게 액세스할 수 있습니다.  이벤트에 대한 자세한 내용은 [라우트된 이벤트 개요](../../../../docs/framework/wpf/advanced/routed-events-overview.md)를 참조하세요.  
+ 키보드 포커스와 관련 된 이벤트 <xref:System.Windows.Input.Keyboard.PreviewGotKeyboardFocus>, <xref:System.Windows.Input.Keyboard.GotKeyboardFocus> 하 고 <xref:System.Windows.Input.Keyboard.PreviewLostKeyboardFocus>, <xref:System.Windows.Input.Keyboard.LostKeyboardFocus>합니다.  이벤트에 연결 된 이벤트로 정의 된는 <xref:System.Windows.Input.Keyboard> 클래스 되지만 기본 요소 클래스에서 라우트된 해당 이벤트로 더 쉽게 액세스할 수 있습니다.  이벤트에 대한 자세한 내용은 [라우트된 이벤트 개요](routed-events-overview.md)를 참조하세요.  
   
  <xref:System.Windows.Input.Keyboard.GotKeyboardFocus> 요소가 키보드 포커스를 받을 때 발생 합니다.  <xref:System.Windows.Input.Keyboard.LostKeyboardFocus> 요소가 키보드 포커스를 잃을 때 발생 합니다.  경우는 <xref:System.Windows.Input.Keyboard.PreviewGotKeyboardFocus> 이벤트 또는 <xref:System.Windows.Input.Keyboard.PreviewLostKeyboardFocusEvent> 이벤트를 처리 하 고 <xref:System.Windows.RoutedEventArgs.Handled%2A> 로 설정 되어 `true`, 다음 포커스 변경 되지 것입니다.  
   
  다음 예제에서는 연결 <xref:System.Windows.UIElement.GotKeyboardFocus> 하 고 <xref:System.Windows.UIElement.LostKeyboardFocus> 이벤트 처리기에는 <xref:System.Windows.Controls.TextBox>합니다.  
   
- [!code-xaml[keyboardsample#KeyboardSampleXAMLHandlerHookup](../../../../samples/snippets/csharp/VS_Snippets_Wpf/KeyboardSample/CSharp/Window1.xaml#keyboardsamplexamlhandlerhookup)]  
+ [!code-xaml[keyboardsample#KeyboardSampleXAMLHandlerHookup](~/samples/snippets/csharp/VS_Snippets_Wpf/KeyboardSample/CSharp/Window1.xaml#keyboardsamplexamlhandlerhookup)]  
   
  때를 <xref:System.Windows.Controls.TextBox> 키보드 포커스를 <xref:System.Windows.Controls.Control.Background%2A> 의 속성을 <xref:System.Windows.Controls.TextBox> 로 변경 됩니다 <xref:System.Windows.Media.Brushes.LightBlue%2A>합니다.  
   
- [!code-csharp[keyboardsample#KeyboardSampleGotFocus](../../../../samples/snippets/csharp/VS_Snippets_Wpf/KeyboardSample/CSharp/Window1.xaml.cs#keyboardsamplegotfocus)]
- [!code-vb[keyboardsample#KeyboardSampleGotFocus](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/KeyboardSample/visualbasic/window1.xaml.vb#keyboardsamplegotfocus)]  
+ [!code-csharp[keyboardsample#KeyboardSampleGotFocus](~/samples/snippets/csharp/VS_Snippets_Wpf/KeyboardSample/CSharp/Window1.xaml.cs#keyboardsamplegotfocus)]
+ [!code-vb[keyboardsample#KeyboardSampleGotFocus](~/samples/snippets/visualbasic/VS_Snippets_Wpf/KeyboardSample/visualbasic/window1.xaml.vb#keyboardsamplegotfocus)]  
   
  경우는 <xref:System.Windows.Controls.TextBox> 키보드 포커스를 잃을 <xref:System.Windows.Controls.Control.Background%2A> 의 속성을 <xref:System.Windows.Controls.TextBox> 흰색으로 다시 변경 됩니다.  
   
- [!code-csharp[keyboardsample#KeyboardSampleLostFocus](../../../../samples/snippets/csharp/VS_Snippets_Wpf/KeyboardSample/CSharp/Window1.xaml.cs#keyboardsamplelostfocus)]
- [!code-vb[keyboardsample#KeyboardSampleLostFocus](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/KeyboardSample/visualbasic/window1.xaml.vb#keyboardsamplelostfocus)]  
+ [!code-csharp[keyboardsample#KeyboardSampleLostFocus](~/samples/snippets/csharp/VS_Snippets_Wpf/KeyboardSample/CSharp/Window1.xaml.cs#keyboardsamplelostfocus)]
+ [!code-vb[keyboardsample#KeyboardSampleLostFocus](~/samples/snippets/visualbasic/VS_Snippets_Wpf/KeyboardSample/visualbasic/window1.xaml.vb#keyboardsamplelostfocus)]  
   
  논리 포커스와 관련 된 이벤트 <xref:System.Windows.UIElement.GotFocus> 고 <xref:System.Windows.UIElement.LostFocus>입니다.  이러한 이벤트에 정의 된 합니다 <xref:System.Windows.Input.FocusManager> 연결 된 이벤트로 하지만 <xref:System.Windows.Input.FocusManager> CLR 이벤트 래퍼를 노출 하지 않습니다.  <xref:System.Windows.UIElement> 및 <xref:System.Windows.ContentElement> 더 편리 하 게 이러한 이벤트를 노출 합니다.  
   
@@ -121,5 +121,5 @@ ms.locfileid: "54582152"
 - <xref:System.Windows.Input.FocusManager>
 - <xref:System.Windows.UIElement>
 - <xref:System.Windows.ContentElement>
-- [입력 개요](../../../../docs/framework/wpf/advanced/input-overview.md)
-- [기본 요소 개요](../../../../docs/framework/wpf/advanced/base-elements-overview.md)
+- [입력 개요](input-overview.md)
+- [기본 요소 개요](base-elements-overview.md)

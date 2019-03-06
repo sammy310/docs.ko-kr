@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 7d90ea7a-150f-4f97-98a7-f9c26541b9a3
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 7f25eaaa17d4c4bd2e9522591bb0fd66445cdb6f
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 5bab707afb059d4fcbd46a9ee54edead991be523
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48036028"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57362017"
 ---
 # <a name="making-an-image-easier-to-debug-in-net"></a>이미지를 보다 쉽게.NET에서 디버그
 
@@ -34,7 +34,7 @@ JIT 구성에는 두 가지 요소가 있습니다.
 
 예를 들어, 디버깅 하려는 어셈블리 라고 *MyApp.exe*, 라는 텍스트 파일을 만들 수 있습니다 *MyApp.ini*를 동일한 폴더에 *MyApp.exe*를 포함 하는 이러한 세 줄:
 
-```txt
+```ini
 [.NET Framework Debugging Control]
 GenerateTrackingInfo=1
 AllowOptimize=0
@@ -51,7 +51,7 @@ AllowOptimize=0
 **DebuggableAttribute**는 어셈블리에 있는 개별 모듈이 아니라 한 번에 전체 어셈블리에 적용됩니다. 따라서 개발 도구에서 사용자 지정 특성을 어셈블리 메타데이터 토큰에 연결하거나, 어셈블리가 이미 생성된 경우 **System.Runtime.CompilerServices.AssemblyAttributesGoHere**라는 클래스에 연결해야 합니다. ALink 도구가 이러한 것도 승격 됩니다 **DebuggableAttribute** 어셈블리에 각 모듈에서 특성은의 일부가 됩니다. 충돌 하는 경우 ALink 작업이 실패 합니다.
 
 > [!NOTE]
-> .NET Framework 버전 1.0에서 **/clr** 및 **/Zi** 컴파일러 옵션이 지정된 경우 Microsoft Visual C++ Compiler에서 **DebuggableAttribute**를 추가합니다. .NET Framework의 버전 1.1에서는 **DebugabbleAttribute**를 코드에 직접 추가하거나 **/ASSEMBLYDEBUG** 링커 옵션을 사용해야 합니다.
+> .NET Framework 버전 1.0에서 **/clr** 및 **/Zi** 컴파일러 옵션이 지정된 경우 Microsoft Visual C++ Compiler에서 **DebuggableAttribute**를 추가합니다. .NET Framework 버전 1.1에서에서 추가 하거나 합니다 **DebuggableAttribute** 코드나 사용 하 여 프로그램에서 수동으로 합니다 **/ASSEMBLYDEBUG** 링커 옵션.
 
 ## <a name="see-also"></a>참고자료
 

@@ -10,54 +10,60 @@ api_type:
 f1_keywords:
 - ICorDebugVariableHome::GetArgumentIndex
 helpviewer_keywords:
-- ICorDebugVariableHome::GetArgumentiIndex method [.NET Framework debugging]
+- ICorDebugVariableHome::GetArgumentIndex method [.NET Framework debugging]
 - GetArgumentIndex method, ICorDebugVariableHome interface [.NET Framework debugging]
 ms.assetid: e86fcc72-388d-4009-ab21-8f9c3323e9a3
 topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 163704bf9a71ceda04bdfd73f9ca676c19d8a62c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2457dff3063e47f1fb9d040caac1bc08441e1739
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54526642"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57366831"
 ---
 # <a name="icordebugvariablehomegetargumentindex-method"></a>ICorDebugVariableHome::GetArgumentIndex 메서드
-함수 인수의 인덱스를 가져옵니다.  
-  
-## <a name="syntax"></a>구문  
-  
-```  
-HRESULT GetArgumentIndex(  
-    [out] ULONG32* pArgumentIndex  
-);  
-```  
-  
-#### <a name="parameters"></a>매개 변수  
- `pArgumentIndex`  
- [out] 인수 인덱스에 대 한 포인터입니다.  
-  
-## <a name="return-value"></a>반환 값  
- 메서드는 다음 값을 반환 합니다.  
-  
-|값|설명|  
-|-----------|-----------------|  
-|`S_OK`|메서드 호출에 유효한 인수가 인덱스를 반환 했습니다.|  
-|`E_FAIL`|현재 [ICorDebugVariableHome](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-interface.md) 인스턴스는 로컬 변수를 나타냅니다.|  
-  
-## <a name="remarks"></a>설명  
- 이 인수에 대 한 메타 데이터를 검색 인수 인덱스를 사용할 수 있습니다.  
-  
-## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
-  
- **헤더:** CorDebug.idl, CorDebug.h  
-  
- **라이브러리:** CorGuids.lib  
-  
- **.NET Framework 버전:** [!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]  
-  
+
+함수 인수의 인덱스를 가져옵니다.
+
+## <a name="syntax"></a>구문
+
+```cpp
+HRESULT GetArgumentIndex(
+    [out] ULONG32* pArgumentIndex
+);
+```
+
+## <a name="parameters"></a>매개 변수
+
+`pArgumentIndex`\
+[out] 인수 인덱스에 대 한 포인터입니다.
+
+## <a name="return-value"></a>반환 값
+
+메서드는 다음 값을 반환 합니다.
+
+|값|설명|
+|-----------|-----------------|
+|`S_OK`|메서드 호출에 유효한 인수가 인덱스를 반환 했습니다.|
+|`E_FAIL`|현재 [ICorDebugVariableHome](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-interface.md) 인스턴스는 로컬 변수를 나타냅니다.|
+
+## <a name="remarks"></a>설명
+
+이 인수에 대 한 메타 데이터를 검색 인수 인덱스를 사용할 수 있습니다.
+
+## <a name="requirements"></a>요구 사항
+
+**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.
+
+**헤더:** CorDebug.idl, CorDebug.h
+
+**라이브러리:** CorGuids.lib
+
+**.NET Framework 버전:** [!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]
+
 ## <a name="see-also"></a>참고자료
+
 - [ICorDebugVariableHome 인터페이스](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-interface.md)

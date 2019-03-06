@@ -24,12 +24,12 @@ helpviewer_keywords:
 - startup events [WPF]
 - lifetime events of objects [WPF]
 ms.assetid: face6fc7-465b-4502-bfe5-e88d2e729a78
-ms.openlocfilehash: 8b42104522be854fe4e49d08e110497469d64980
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b5f38492fff9aa87094542b174becc54ee324a78
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54555364"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57371491"
 ---
 # <a name="object-lifetime-events"></a>개체 수명 이벤트
 이 항목에서는 생성, 사용 및 소멸 등의 개체 수명 단계를 나타내는 특정 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 이벤트에 대해 설명합니다.  
@@ -38,7 +38,7 @@ ms.locfileid: "54555364"
   
 <a name="prerequisites"></a>   
 ## <a name="prerequisites"></a>전제 조건  
- 이 항목에서는 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 클래스의 기존 종속성 속성의 소비자 관점에서 종속성 속성을 이해하고 [종속성 속성 개요](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md) 항목을 읽었다고 가정합니다. 이 항목의 예제를 따르려면 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] ([XAML 개요(WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md) 참조)과 함께 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 응용 프로그램을 작성하는 방법을 알아야 합니다.  
+ 이 항목에서는 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 클래스의 기존 종속성 속성의 소비자 관점에서 종속성 속성을 이해하고 [종속성 속성 개요](dependency-properties-overview.md) 항목을 읽었다고 가정합니다. 이 항목의 예제를 따르려면 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]([XAML 개요(WPF)](xaml-overview-wpf.md) 참조)과 함께 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 애플리케이션을 작성하는 방법을 알아야 합니다.  
   
 <a name="intro"></a>   
 ## <a name="object-lifetime-events"></a>개체 수명 이벤트  
@@ -68,12 +68,12 @@ ms.locfileid: "54555364"
 ## <a name="lifetime-events-application-model-elements"></a>수명 이벤트 애플리케이션 모델 요소  
  요소는 다음 응용 프로그램 모델 요소에 대 한 공통 수명 이벤트를 토대로: <xref:System.Windows.Application>, <xref:System.Windows.Window>, <xref:System.Windows.Controls.Page>합니다 <xref:System.Windows.Navigation.NavigationWindow>, 및 <xref:System.Windows.Controls.Frame>합니다. 이러한 요소는 특정 목적과 관련된 추가 이벤트를 사용하여 공통 개체 수명 이벤트를 확장합니다. 다음 항목에서 이에 대해 자세히 설명합니다.  
   
--   <xref:System.Windows.Application>: [응용 프로그램 관리 개요](../../../../docs/framework/wpf/app-development/application-management-overview.md)합니다.  
+-   <xref:System.Windows.Application>: [응용 프로그램 관리 개요](../app-development/application-management-overview.md)합니다.  
   
--   <xref:System.Windows.Window>: [WPF Windows 개요](../../../../docs/framework/wpf/app-development/wpf-windows-overview.md)합니다.  
+-   <xref:System.Windows.Window>: [WPF Windows 개요](../app-development/wpf-windows-overview.md)합니다.  
   
--   <xref:System.Windows.Controls.Page>하십시오 <xref:System.Windows.Navigation.NavigationWindow>, 및 <xref:System.Windows.Controls.Frame>: [탐색 개요](../../../../docs/framework/wpf/app-development/navigation-overview.md)합니다.  
+-   <xref:System.Windows.Controls.Page>하십시오 <xref:System.Windows.Navigation.NavigationWindow>, 및 <xref:System.Windows.Controls.Frame>: [탐색 개요](../app-development/navigation-overview.md)합니다.  
   
 ## <a name="see-also"></a>참고자료
-- [종속성 속성 값 우선 순위](../../../../docs/framework/wpf/advanced/dependency-property-value-precedence.md)
-- [라우트된 이벤트 개요](../../../../docs/framework/wpf/advanced/routed-events-overview.md)
+- [종속성 속성 값 우선 순위](dependency-property-value-precedence.md)
+- [라우트된 이벤트 개요](routed-events-overview.md)

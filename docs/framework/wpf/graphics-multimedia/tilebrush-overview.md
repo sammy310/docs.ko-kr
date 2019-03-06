@@ -8,12 +8,12 @@ helpviewer_keywords:
 - TileBrush [WPF]
 - brushes [WPF], TileBrush
 ms.assetid: aa4a7b7e-d09d-44c2-8d61-310c50e08d68
-ms.openlocfilehash: 9058c6c3256efad15e0811fcc1f21f440e13edbf
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8013bacf6c4d33ce89fc287e625ce8c8fb6c3ef0
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54683023"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57369944"
 ---
 # <a name="tilebrush-overview"></a>TileBrush 개요
 <xref:System.Windows.Media.TileBrush> 개체를 사용 하면 다양 한 이미지를 사용 하 여 영역을 그리는 방법에 대 한 제어를 사용 하 여 얻게 <xref:System.Windows.Media.Drawing>, 또는 <xref:System.Windows.Media.Visual>합니다. 이 항목에서는 사용 하는 방법에 설명 합니다 <xref:System.Windows.Media.TileBrush> 더 잘 제어 하는 방법에 대 한 기능을 <xref:System.Windows.Media.ImageBrush>, <xref:System.Windows.Media.DrawingBrush>, 또는 <xref:System.Windows.Media.VisualBrush> 영역을 그립니다.  
@@ -21,7 +21,7 @@ ms.locfileid: "54683023"
   
 <a name="prerequisite"></a>   
 ## <a name="prerequisites"></a>전제 조건  
- 이 항목을 이해 하려면의 기본 기능을 사용 하는 방법을 이해 하는 데 도움이 되는 <xref:System.Windows.Media.ImageBrush>, <xref:System.Windows.Media.DrawingBrush>, 또는 <xref:System.Windows.Media.VisualBrush> 클래스입니다. 이러한 형식에 대 한 소개를 참조 하세요. 합니다 [이미지, 그림 및 시각적 표시로 그리기](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md)합니다.  
+ 이 항목을 이해 하려면의 기본 기능을 사용 하는 방법을 이해 하는 데 도움이 되는 <xref:System.Windows.Media.ImageBrush>, <xref:System.Windows.Media.DrawingBrush>, 또는 <xref:System.Windows.Media.VisualBrush> 클래스입니다. 이러한 형식에 대 한 소개를 참조 하세요. 합니다 [이미지, 그림 및 시각적 표시로 그리기](painting-with-images-drawings-and-visuals.md)합니다.  
   
 <a name="tilebrush"></a>   
 ## <a name="painting-an-area-with-tiles"></a>타일로 영역 그리기  
@@ -29,10 +29,10 @@ ms.locfileid: "54683023"
   
  타일 브러시로 영역을 그리려면 세 가지 구성 요소인, 콘텐츠, 기본 타일 및 출력 영역이 필요합니다.  
   
- ![TileBrush 구성 요소](../../../../docs/framework/wpf/graphics-multimedia/media/wcpsdk-mmgraphics-defaultcontentprojection2.png "wcpsdk_mmgraphics_defaultcontentprojection2")  
+ ![TileBrush 구성 요소](./media/wcpsdk-mmgraphics-defaultcontentprojection2.png "wcpsdk_mmgraphics_defaultcontentprojection2")  
 단일 타일이 있는 TileBrush의 구성 요소  
   
- ![바둑판식으로 배열 된 TileBrush의 구성 요소](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-tiledprojection.png "graphicsmm_tiledprojection")  
+ ![바둑판식으로 배열 된 TileBrush의 구성 요소](./media/graphicsmm-tiledprojection.png "graphicsmm_tiledprojection")  
 TileMode가 Tile인 TileBrush의 구성 요소  
   
  출력 영역은 그리는 영역을 같은 합니다 <xref:System.Windows.Shapes.Shape.Fill%2A> 의 <xref:System.Windows.Shapes.Ellipse> 또는 <xref:System.Windows.Controls.Control.Background%2A> 의 <xref:System.Windows.Controls.Button>합니다. 다음 섹션에서는 설명의 다른 두 구성 요소는 <xref:System.Windows.Media.TileBrush>합니다.  
@@ -63,14 +63,14 @@ TileMode가 Tile인 TileBrush의 구성 요소
   
  다음 이미지는 다양 한 보여줍니다 <xref:System.Windows.Media.TileBrush.Stretch%2A> 설정 합니다.  
   
- ![여러 TileBrush Stretch 설정](../../../../docs/framework/wpf/graphics-multimedia/media/img-mmgraphics-stretchenum.jpg "img_mmgraphics_stretchenum")  
+ ![여러 TileBrush Stretch 설정](./media/img-mmgraphics-stretchenum.jpg "img_mmgraphics_stretchenum")  
   
  다음 예에서 콘텐츠는 <xref:System.Windows.Media.ImageBrush> 출력 영역을 채우도록 늘어나지 않도록 설정 됩니다.  
   
- [!code-xaml[BrushOverviewExamples_snip#GraphicsMMNoStretchExample](../../../../samples/snippets/xaml/VS_Snippets_Wpf/BrushOverviewExamples_snip/XAML/StretchExample.xaml#graphicsmmnostretchexample)]  
+ [!code-xaml[BrushOverviewExamples_snip#GraphicsMMNoStretchExample](~/samples/snippets/xaml/VS_Snippets_Wpf/BrushOverviewExamples_snip/XAML/StretchExample.xaml#graphicsmmnostretchexample)]  
   
- [!code-csharp[BrushOverviewExamples_procedural_snip#GraphicsMMNoStretchExample](../../../../samples/snippets/csharp/VS_Snippets_Wpf/BrushOverviewExamples_procedural_snip/CSharp/StretchExample.cs#graphicsmmnostretchexample)]
- [!code-vb[BrushOverviewExamples_procedural_snip#GraphicsMMNoStretchExample](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/BrushOverviewExamples_procedural_snip/visualbasic/stretchexample.vb#graphicsmmnostretchexample)]  
+ [!code-csharp[BrushOverviewExamples_procedural_snip#GraphicsMMNoStretchExample](~/samples/snippets/csharp/VS_Snippets_Wpf/BrushOverviewExamples_procedural_snip/CSharp/StretchExample.cs#graphicsmmnostretchexample)]
+ [!code-vb[BrushOverviewExamples_procedural_snip#GraphicsMMNoStretchExample](~/samples/snippets/visualbasic/VS_Snippets_Wpf/BrushOverviewExamples_procedural_snip/visualbasic/stretchexample.vb#graphicsmmnostretchexample)]  
   
  기본적으로 <xref:System.Windows.Media.TileBrush> 단일 타일 (기본 타일)를 생성 하 고을 출력 영역을 완전히 채우도록 해당 타일을 확장 합니다. 설정 하 여 기본 타일의 위치와 크기를 변경할 수 있습니다 합니다 <xref:System.Windows.Media.TileBrush.Viewport%2A> 고 <xref:System.Windows.Media.TileBrush.ViewportUnits%2A> 속성입니다.  
   
@@ -80,21 +80,21 @@ TileMode가 Tile인 TileBrush의 구성 요소
   
  다음 그림에서는 간 출력 차이 보여 줍니다.는 <xref:System.Windows.Media.TileBrush> 절대 및 상대 <xref:System.Windows.Media.TileBrush.ViewportUnits%2A>합니다. 각 그림은 바둑판식 배열 패턴을 보여 줍니다. 다음 섹션에서는 바둑판식 배열 패턴을 지정하는 방법을 설명합니다.  
   
- ![절대 및 상대 뷰포트 단위](../../../../docs/framework/wpf/graphics-multimedia/media/absolute-and-relative-viewports.png "absolute_and_relative_viewports")  
+ ![절대 및 상대 뷰포트 단위](./media/absolute-and-relative-viewports.png "absolute_and_relative_viewports")  
   
  다음 예제에서는 이미지를 사용하여 너비 및 높이가 50%인 타일을 만듭니다. 기본 타일은 출력 영역의 (0,0) 위치에 있습니다.  
   
- [!code-xaml[BrushOverviewExamples_snip#GraphicsMMRelativeViewportUnitsExample1](../../../../samples/snippets/xaml/VS_Snippets_Wpf/BrushOverviewExamples_snip/XAML/TileSizeExample.xaml#graphicsmmrelativeviewportunitsexample1)]  
+ [!code-xaml[BrushOverviewExamples_snip#GraphicsMMRelativeViewportUnitsExample1](~/samples/snippets/xaml/VS_Snippets_Wpf/BrushOverviewExamples_snip/XAML/TileSizeExample.xaml#graphicsmmrelativeviewportunitsexample1)]  
   
- [!code-csharp[BrushOverviewExamples_procedural_snip#GraphicsMMRelativeViewportUnitsExample1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/BrushOverviewExamples_procedural_snip/CSharp/TileSizeExample.cs#graphicsmmrelativeviewportunitsexample1)]
- [!code-vb[BrushOverviewExamples_procedural_snip#GraphicsMMRelativeViewportUnitsExample1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/BrushOverviewExamples_procedural_snip/visualbasic/tilesizeexample.vb#graphicsmmrelativeviewportunitsexample1)]  
+ [!code-csharp[BrushOverviewExamples_procedural_snip#GraphicsMMRelativeViewportUnitsExample1](~/samples/snippets/csharp/VS_Snippets_Wpf/BrushOverviewExamples_procedural_snip/CSharp/TileSizeExample.cs#graphicsmmrelativeviewportunitsexample1)]
+ [!code-vb[BrushOverviewExamples_procedural_snip#GraphicsMMRelativeViewportUnitsExample1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/BrushOverviewExamples_procedural_snip/visualbasic/tilesizeexample.vb#graphicsmmrelativeviewportunitsexample1)]  
   
  다음 예제에서는 설정의 타일을 <xref:System.Windows.Media.ImageBrush> 25x25 장치 독립적 픽셀을 합니다. 때문에 합니다 <xref:System.Windows.Media.TileBrush.ViewportUnits%2A> 은 절대는 <xref:System.Windows.Media.ImageBrush> 타일은 항상 25 x 25 픽셀 그려지는 영역의 크기에 관계 없이 합니다.  
   
- [!code-xaml[BrushOverviewExamples_snip#GraphicsMMAbsoluteViewportUnitsExample1](../../../../samples/snippets/xaml/VS_Snippets_Wpf/BrushOverviewExamples_snip/XAML/TileSizeExample.xaml#graphicsmmabsoluteviewportunitsexample1)]  
+ [!code-xaml[BrushOverviewExamples_snip#GraphicsMMAbsoluteViewportUnitsExample1](~/samples/snippets/xaml/VS_Snippets_Wpf/BrushOverviewExamples_snip/XAML/TileSizeExample.xaml#graphicsmmabsoluteviewportunitsexample1)]  
   
- [!code-csharp[BrushOverviewExamples_procedural_snip#GraphicsMMAbsoluteViewportUnitsExample1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/BrushOverviewExamples_procedural_snip/CSharp/TileSizeExample.cs#graphicsmmabsoluteviewportunitsexample1)]
- [!code-vb[BrushOverviewExamples_procedural_snip#GraphicsMMAbsoluteViewportUnitsExample1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/BrushOverviewExamples_procedural_snip/visualbasic/tilesizeexample.vb#graphicsmmabsoluteviewportunitsexample1)]  
+ [!code-csharp[BrushOverviewExamples_procedural_snip#GraphicsMMAbsoluteViewportUnitsExample1](~/samples/snippets/csharp/VS_Snippets_Wpf/BrushOverviewExamples_procedural_snip/CSharp/TileSizeExample.cs#graphicsmmabsoluteviewportunitsexample1)]
+ [!code-vb[BrushOverviewExamples_procedural_snip#GraphicsMMAbsoluteViewportUnitsExample1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/BrushOverviewExamples_procedural_snip/visualbasic/tilesizeexample.vb#graphicsmmabsoluteviewportunitsexample1)]  
   
 <a name="tilingbehavior"></a>   
 ### <a name="tiling-behavior"></a>바둑판식 배열 동작  
@@ -112,22 +112,22 @@ TileMode가 Tile인 TileBrush의 구성 요소
   
  다음 이미지는 여러 다른 바둑판식 배열 모드를 보여 줍니다.  
   
- ![여러 TileBrush TileMode 설정](../../../../docs/framework/wpf/graphics-multimedia/media/img-mmgraphics-tilemodes.gif "img_mmgraphics_tilemodes")  
+ ![여러 TileBrush TileMode 설정](./media/img-mmgraphics-tilemodes.gif "img_mmgraphics_tilemodes")  
   
  다음 예제에서는 이미지를 사용하여 너비 및 높이가 100x100픽셀인 사각형을 그립니다. 브러시의을 설정 하 여 <xref:System.Windows.Media.TileBrush.Viewport%2A> 설정한 브러시의 기본 타일이 출력 영역의 1/4로 수행 되 0,0,0.25,0.25, 하 합니다. 브러시 <xref:System.Windows.Media.TileBrush.TileMode%2A> 로 설정 된 <xref:System.Windows.Media.TileMode.FlipXY>합니다. 이를 통해 타일 행으로 사각형이 채워집니다.  
   
- [!code-xaml[BrushOverviewExamples_snip#GraphicsMMFlipXYExample](../../../../samples/snippets/xaml/VS_Snippets_Wpf/BrushOverviewExamples_snip/XAML/TilingExample.xaml#graphicsmmflipxyexample)]  
+ [!code-xaml[BrushOverviewExamples_snip#GraphicsMMFlipXYExample](~/samples/snippets/xaml/VS_Snippets_Wpf/BrushOverviewExamples_snip/XAML/TilingExample.xaml#graphicsmmflipxyexample)]  
   
- [!code-csharp[BrushOverviewExamples_procedural_snip#GraphicsMMFlipXYExample](../../../../samples/snippets/csharp/VS_Snippets_Wpf/BrushOverviewExamples_procedural_snip/CSharp/TilingExample.cs#graphicsmmflipxyexample)]
- [!code-vb[BrushOverviewExamples_procedural_snip#GraphicsMMFlipXYExample](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/BrushOverviewExamples_procedural_snip/visualbasic/tilingexample.vb#graphicsmmflipxyexample)]  
+ [!code-csharp[BrushOverviewExamples_procedural_snip#GraphicsMMFlipXYExample](~/samples/snippets/csharp/VS_Snippets_Wpf/BrushOverviewExamples_procedural_snip/CSharp/TilingExample.cs#graphicsmmflipxyexample)]
+ [!code-vb[BrushOverviewExamples_procedural_snip#GraphicsMMFlipXYExample](~/samples/snippets/visualbasic/VS_Snippets_Wpf/BrushOverviewExamples_procedural_snip/visualbasic/tilingexample.vb#graphicsmmflipxyexample)]  
   
 ## <a name="see-also"></a>참고자료
 - <xref:System.Windows.Media.ImageBrush>
 - <xref:System.Windows.Media.DrawingBrush>
 - <xref:System.Windows.Media.VisualBrush>
 - <xref:System.Windows.Media.TileBrush>
-- [이미지, 그림 및 시각적 표시로 그리기](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md)
-- [방법 항목](../../../../docs/framework/wpf/graphics-multimedia/brushes-how-to-topics.md)
-- [Freezable 개체 개요](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md)
+- [이미지, 그림 및 시각적 표시로 그리기](painting-with-images-drawings-and-visuals.md)
+- [방법 항목](brushes-how-to-topics.md)
+- [Freezable 개체 개요](../advanced/freezable-objects-overview.md)
 - [ImageBrush 샘플](https://go.microsoft.com/fwlink/?LinkID=160005)
 - [VisualBrush 샘플](https://go.microsoft.com/fwlink/?LinkID=160049)
