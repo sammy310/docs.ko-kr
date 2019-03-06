@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 81680825daff2cd2358da7b3956782020edf4791
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e1b065ecb9a715601e617e288c1dfc0de8dd323d
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54672060"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57466572"
 ---
 # <a name="imetadataimportgetpropertyprops-method"></a>IMetaDataImport::GetPropertyProps 메서드
 지정 된 토큰에 의해 표현 되는 속성에 대 한 메타 데이터를 가져옵니다.  
@@ -50,7 +50,7 @@ HRESULT GetPropertyProps (
 );  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `prop`  
  [in] 에 대 한 메타 데이터를 반환할 속성을 나타내는 토큰입니다.  
   

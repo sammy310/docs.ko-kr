@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2d518d5149e43718ae14dcdde96febe63fed7709
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b0adee689949b4e3303d8921a826cdec56cc1b3f
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54744604"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57484890"
 ---
 # <a name="iclrtaskswitchin-method"></a>ICLRTask::SwitchIn 메서드
 CLR (공용 언어 런타임)에 게 알리는 태스크는 현재 [ICLRTask](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md) 인스턴스가 나타내는 작동 가능한 상태가 됩니다.  
@@ -35,7 +35,7 @@ HRESULT SwitchIn (
 );  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `threadHandle`  
  [in] 현재 태스크를 표시 하는 실제 스레드 핸들을 `ICLRTask` 인스턴스가 실행 됩니다.  
   

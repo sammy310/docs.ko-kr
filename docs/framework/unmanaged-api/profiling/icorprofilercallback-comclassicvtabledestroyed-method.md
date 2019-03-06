@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f60c4373410c46c5d1ea284b2cacd4b5c070ed9d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fffe8059a3be42a05d564773766023c6bbe4d56d
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54682825"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57467001"
 ---
 # <a name="icorprofilercallbackcomclassicvtabledestroyed-method"></a>ICorProfilerCallback::COMClassicVTableDestroyed 메서드
 COM interop vtable 소멸 되 고 프로파일러에 알립니다.  
@@ -39,7 +39,7 @@ HRESULT COMClassicVTableDestroyed(
     [in] void    *pVTable);  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `wrappedClasId`  
  [in] 이 vtable 생성 된 클래스의 ID입니다.  
   

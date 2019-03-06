@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9018ccc27d0afc35b9dfa2d2ebad323c9150ae60
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b4ab183bbe82c8e64b833c8fcdbc1e05ceb18e1f
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54580696"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57482251"
 ---
 # <a name="iclrdatatargetsetthreadcontext-method"></a>ICLRDataTarget::SetThreadContext 메서드
 대상 프로세스에서 지정 된 스레드의 현재 컨텍스트를 설정합니다. 이 메서드는 공용 언어 런타임 (CLR) 데이터 액세스 서비스에 의해 호출 됩니다.  
@@ -38,7 +38,7 @@ HRESULT SetThreadContext (
 );  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `threadID`  
  [in] 대상 프로세스에서 스레드의 운영 체제 식별자입니다.  
   

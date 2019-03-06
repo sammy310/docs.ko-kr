@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bce823bd6a9ad26a705649a666aeb97dcfa0cdbc
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 239a73bac205f111f7ba299af7613c0fd78ab060
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54636549"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57466909"
 ---
 # <a name="ihosttasksetclrtask-method"></a>IHostTask::SetCLRTask 메서드
 연결 프로그램 `ICLRTask` 현재 인스턴스와 [IHostTask](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md) 인스턴스.  
@@ -35,7 +35,7 @@ HRESULT SetCLRTask (
 );  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `pCLRTask`  
  [in] 에 대 한 인터페이스 포인터를 `ICLRTask` 인스턴스가 현재 연관된 `IHostTask` 인스턴스.  
   

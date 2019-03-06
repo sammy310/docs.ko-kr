@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a46ea398672d44585706be093a080a4bedba7f1e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9ed527aadce68e82bee5809aab7c4229a95b5d3f
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54535569"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57478856"
 ---
 # <a name="iclrassemblyreferencelistisstringassemblyreferenceinlist-method"></a>ICLRAssemblyReferenceList::IsStringAssemblyReferenceInList 메서드
 제공 된 이름 목록에 있는 어셈블리의 이름을 일치 하는지 여부를 나타내는 값을 가져옵니다.  
@@ -35,7 +35,7 @@ HRESULT IsStringAssemblyReferenceInList (
 );  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `pwzAssemblyName`  
  [in] 검색할 어셈블리의 이름입니다.  
   

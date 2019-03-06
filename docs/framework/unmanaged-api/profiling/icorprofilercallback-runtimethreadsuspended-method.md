@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: bb93dbf35501d44bb21d3d689aebeba3acd19f79
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 54d297f6915af59ad5a24dfdad9dca9397489edb
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54616808"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57468171"
 ---
 # <a name="icorprofilercallbackruntimethreadsuspended-method"></a>ICorProfilerCallback::RuntimeThreadSuspended 메서드
 지정된 된 스레드가 일시 중단 됨 또는 일시 중단 하려고 합니다.는 프로파일러에 알립니다.  
@@ -34,7 +34,7 @@ HRESULT RuntimeThreadSuspended(
     [in] ThreadID threadId);  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `threadId`  
  [in] 일시 중단 된 스레드의 ID입니다.  
   

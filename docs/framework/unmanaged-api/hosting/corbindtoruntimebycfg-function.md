@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2d59506b522e1c225912da4bc3bd62ca19d32eb8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e5c382b3841aa0d36e7b326da27be4b371c9a51c
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54556082"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57474786"
 ---
 # <a name="corbindtoruntimebycfg-function"></a>CorBindToRuntimeByCfg 함수
 XML 파일에서 읽은 버전 정보를 사용 하 여 프로세스에는 CLR (공용 언어 런타임)을 로드 합니다.  
@@ -41,7 +41,7 @@ HRESULT CorBindToRuntimeByCfg (
 );  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `pCfgStream`  
  [in] 에 대 한 포인터는 `IStream` XML 파일을 읽는 개체입니다.  
   

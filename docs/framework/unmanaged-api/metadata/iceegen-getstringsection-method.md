@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c4ccbff4a4967e7525ee4e51650a4f53e5458666
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0e306ccc824910226e522bc664f8f87f828a0d52
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54605520"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57477051"
 ---
 # <a name="iceegengetstringsection-method"></a>ICeeGen::GetStringSection 메서드
 지정된 된 핸들에서 참조 하는 코드 섹션의 문자열 표현을 가져옵니다.  
@@ -37,7 +37,7 @@ HRESULT GetStringSection (
 );  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `section`  
  [out에서] 코드 섹션에 대 한 핸들입니다.  
   

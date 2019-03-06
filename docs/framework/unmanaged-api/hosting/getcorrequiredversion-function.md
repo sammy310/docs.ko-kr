@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 92ee0570a1a9bcc48cea744d5cc707750742d51a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b73d966e91480a13b03610dae452b04f9d6b9b4f
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54534084"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57471981"
 ---
 # <a name="getcorrequiredversion-function"></a>GetCORRequiredVersion 함수
 필요한 공용 언어 런타임 (CLR) 버전 번호를 가져옵니다.  
@@ -38,7 +38,7 @@ HRESULT GetCORRequiredVersion (
 );  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `pbuffer`  
  [out] 버전 번호를 지정 하는 문자열을 포함 하는 버퍼입니다.  
   

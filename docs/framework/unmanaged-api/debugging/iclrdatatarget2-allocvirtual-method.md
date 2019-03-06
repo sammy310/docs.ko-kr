@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d9fc894cdd12e58689fb6b010820bb24d14a9541
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b1e63b6a015bd1ffa86d8fd04b0154dbade85a35
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54543749"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57465922"
 ---
 # <a name="iclrdatatarget2allocvirtual-method"></a>ICLRDataTarget2::AllocVirtual 메서드
 이 대상 프로세스의 주소 공간에 메모리를 할당 하는 공용 언어 런타임 (CLR) 데이터 액세스 서비스에서 호출 됩니다.  
@@ -39,7 +39,7 @@ HRESULT AllocVirtual(
 );  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `addr`  
  [in] `CLRDATA_ADDRESS` 할당할 메모리의 요청된 된 시작 주소를 지정 하는 값입니다.  
   

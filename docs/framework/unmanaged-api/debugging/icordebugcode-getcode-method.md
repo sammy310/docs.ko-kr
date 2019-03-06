@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d057032f2a46ef29a903ae21ab13af02f9d657f1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7b69970d50652da203ecf1ae6fe8d604ccee06cf
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54728767"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57483577"
 ---
 # <a name="icordebugcodegetcode-method"></a>ICorDebugCode::GetCode 메서드
 디스어셈블리에 대 한 형식이 지정된 된 함수에 대 한 모든 코드를 가져옵니다. 이 메서드는.NET Framework 버전 2.0에서에서 더 이상 사용 되지 되었습니다. 사용 하 여 [ICorDebugCode2::GetCodeChunks](../../../../docs/framework/unmanaged-api/debugging/icordebugcode2-getcodechunks-method.md) 대신 합니다.  
@@ -40,7 +40,7 @@ HRESULT GetCode (
 );  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `startOffset`  
  [in] 오프셋은 함수의 시작 부분입니다.  
   

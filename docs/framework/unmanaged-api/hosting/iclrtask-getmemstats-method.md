@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6a6383761b878c7e916064f9a046641d00a1c6ba
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 86aa020b2fac6d1405d8f24488184f3f7dd618a1
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54734269"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57471565"
 ---
 # <a name="iclrtaskgetmemstats-method"></a>ICLRTask::GetMemStats 메서드
 태스크와 관련 된 통계 메모리 사용 정보를 가져옵니다는 현재 [ICLRTask](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md) 인스턴스가 나타내는입니다.  
@@ -35,7 +35,7 @@ HRESULT GetMemStats (
 );  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `pMemUsage`  
  [out] 에 대 한 포인터를 [COR_GC_THREAD_STATS](../../../../docs/framework/unmanaged-api/hosting/cor-gc-thread-stats-structure.md) 할당 된 바이트 수를 포함 하 여 작업의 메모리 사용량에 대 한 세부 정보가 포함 된 인스턴스.  
   

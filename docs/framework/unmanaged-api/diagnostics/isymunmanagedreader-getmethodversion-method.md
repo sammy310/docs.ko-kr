@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 45aaceb2c39703cb1369941ce801c9cff1935ad6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 364742957d16f12508d2df6f4cd7f50d7956d4cb
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54555845"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57479456"
 ---
 # <a name="isymunmanagedreadergetmethodversion-method"></a>ISymUnmanagedReader::GetMethodVersion 메서드
 메서드 버전을 가져옵니다. 메서드 버전 1에서 시작 하 고 메서드가 다시 컴파일될 때마다 증분됩니다. 메서드를 변경 하지 않고 컴파일할 수 있습니다.  
@@ -35,7 +35,7 @@ HRESULT GetMethodVersion (
     [out] int* version);  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `pMethod`  
  [in] 버전을 가져올 메서드입니다.  
   

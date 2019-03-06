@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4ab00a93b0bedb8f7ea1425c65c4940b57f11219
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2758deaabf9db1cbc5465eb9b5976add534e87b4
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54591593"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57469667"
 ---
 # <a name="icorruntimehostcreatedomainsetup-method"></a>ICorRuntimeHost::CreateDomainSetup 메서드
 인터페이스 포인터의 형식에 IAppDomainSetup 가져옵니다는 <xref:System.AppDomainSetup?displayProperty=nameWithType> 인스턴스. `IAppDomainSetup` 만들어지기 전에 응용 프로그램 도메인의 측면을 구성 하는 방법을 제공 합니다.  
@@ -35,7 +35,7 @@ HRESULT CreateDomainSetup (
 );  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `pAppDomainSetup`  
  [out] 에 대 한 인터페이스 포인터를 <xref:System.AppDomainSetup?displayProperty=nameWithType> 인스턴스. 형식의이 매개 변수를 `IUnknown`호출자에 게 일반적으로 호출 해야 하므로 `QueryInterface` 형식의 인터페이스 포인터를 가져오려면이 포인터에 대 한 `IAppDomainSetup`합니다.  
   
@@ -43,7 +43,7 @@ HRESULT CreateDomainSetup (
   
 |HRESULT|설명|  
 |-------------|-----------------|  
-|S_OK|작업이 완료되었습니다.|  
+|S_OK|작업에 성공 합니다.|  
 |S_FALSE|작업을 완료 하지 못했습니다.|  
 |E_FAIL|알 수 없는 치명적인 오류가 발생 했습니다. E_FAIL을 반환 하는 메서드는 CLR (공용 언어 런타임) 더 이상 사용할 수 진행에서 합니다. 호스팅 Api에 대 한 후속 호출 HOST_E_CLRNOTAVAILABLE를 반환합니다.|  
 |HOST_E_CLRNOTAVAILABLE|CLR이 로드 된 프로세스에 또는 CLR 상태인는 관리 코드를 실행 하거나 호출을 처리할 수 없습니다.|  

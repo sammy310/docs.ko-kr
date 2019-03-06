@@ -18,12 +18,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ac0b6ac09db452eb06c633027e9596bda6627005
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: dc29c5f975424e3dbe91e206f6a05f830d760398
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54509391"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57472653"
 ---
 # <a name="getcachepath-function"></a>GetCachePath 함수
 지정된 된 플래그를 사용 하 여 캐시 된 어셈블리에 경로 가져옵니다.  
@@ -38,7 +38,7 @@ HRESULT GetCachePath (
  );  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `dwCacheFlags`  
  [in] [ASM_CACHE_FLAGS](../../../../docs/framework/unmanaged-api/fusion/asm-cache-flags-enumeration.md) 캐시 된 어셈블리의 소스를 나타내는 값입니다.  
   

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6cb3a2235325533d5bd943a530a0a8e5b77100e3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0361a4cd048f0b3be6bce47e52dd44ba3cea3475
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54519946"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57482758"
 ---
 # <a name="icorprofilerinfo4getrejitids-method"></a>ICorProfilerInfo4::GetReJITIDs 메서드
 모든 JIT 다시 컴파일된 버전의 지정 된 함수가 여전히 할당 되는 식별 하는 Id의 배열을 반환 합니다. 이 이후에 되돌릴 되었지만 아직 서비스 되지 않음 (예를 들어 되돌려 진된 함수를 포함 하는 응용 프로그램 도메인 사용 중인 경우 계속)를 해제 하는 함수의 JIT 다시 컴파일된 버전을 포함 합니다.  
@@ -37,7 +37,7 @@ HRESULT GetReJITIDs (
      [out, size_is(cReJitIds), length_is(*pcReJitIds)]   ReJITID        reJitIds[]);  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `functionId`  
  [in] `FunctionID` 열거할 버전에 대 한 함수 인스턴스.  
   

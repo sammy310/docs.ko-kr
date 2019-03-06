@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8beb5e64b05f50ba61ced72fcdb7700d4b9f30e2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5e9c9866ee5ee3076d144dc732286ee008cd78c4
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54505044"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57487254"
 ---
 # <a name="createhistoryreader-function"></a>CreateHistoryReader 함수
 지정된 된 파일에 대 한 기록 판독기를 만듭니다.  
@@ -35,7 +35,7 @@ HRESULT CreateHistoryReader (
  );  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `wzFilePath`  
  [in] 파일 경로입니다.  
   

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 071c9c9cbdb47372903ef418a4f21450d8071f8c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5ffa862ebe631471030e1e87a28645e278062d18
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54614067"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57469120"
 ---
 # <a name="icordebugregisterset2getregistersavailable-method"></a>ICorDebugRegisterSet2::GetRegistersAvailable 메서드
 사용 가능한 레지스터의 비트맵을 제공 하는 바이트 배열을 가져옵니다.  
@@ -36,7 +36,7 @@ HRESULT GetRegistersAvailable (
 );  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `numChunks`  
  [in] `availableRegChunks` 배열의 크기입니다.  
   

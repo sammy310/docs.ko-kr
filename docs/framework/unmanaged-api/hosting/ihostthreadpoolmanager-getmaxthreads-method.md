@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 887197af49a402df73005906e539791f6d7f7be4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8758bd416b721a95f48b8c8edb933cf617e13455
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54623861"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57466497"
 ---
 # <a name="ihostthreadpoolmanagergetmaxthreads-method"></a>IHostThreadPoolManager::GetMaxThreads 메서드
 스레드 풀에 동시에 호스트를 유지 하는 스레드의 최대 수를 가져옵니다.  
@@ -35,7 +35,7 @@ HRESULT GetMaxThreads (
 );  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `pdwMaxWorkerThreads`  
  [out] 스레드 풀에서 호스트를 유지 하는 스레드의 최대 수에 대 한 포인터입니다.  
   

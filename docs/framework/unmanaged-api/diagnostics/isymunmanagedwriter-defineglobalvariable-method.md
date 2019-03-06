@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 920c768523e422220862b04fa069fc8cbea8960a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: bba8d887bc516149135aae61c4f9bdb9a9e0c9d9
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54677708"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57470538"
 ---
 # <a name="isymunmanagedwriterdefineglobalvariable-method"></a>ISymUnmanagedWriter::DefineGlobalVariable 메서드
 단일 전역 변수를 정의합니다.  
@@ -41,7 +41,7 @@ HRESULT DefineGlobalVariable(
     [in] ULONG32      addr3);  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `name`  
  [in] 에 대 한 포인터를 `WCHAR` 전역 변수 이름을 정의 하는 합니다.  
   

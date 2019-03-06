@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ece5173ce2a80ceb46d535eb8cbc6eb18e18fd1a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5347d25f3fe1d5136917564b1fed24df5df0449c
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54621882"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57468080"
 ---
 # <a name="iassemblycacheuninstallassembly-method"></a>IAssemblyCache::UninstallAssembly 메서드
 전역 어셈블리 캐시에서 지정된 된 어셈블리를 제거합니다.  
@@ -38,7 +38,7 @@ HRESULT UninstallAssembly (
 );  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `dwFlags`  
  [in] 같은 값이 지원에 정의 된 플래그입니다.  
   

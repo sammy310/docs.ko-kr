@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6323b7d94ca32646d3aa63af6d3efc4de95e67fb
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5aa6f01f161ce7c497cc103493e3bf4506fa3394
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54534527"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57475023"
 ---
 # <a name="isymunmanagedvariablegetname-method"></a>ISymUnmanagedVariable::GetName 메서드
 이 변수의 이름을 가져옵니다.  
@@ -37,7 +37,7 @@ HRESULT GetName(
         length_is(*pcchName)] WCHAR szName[]);  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `cchName`  
  [in] 버퍼의 길이는 `pcchName` 매개 변수를 가리킵니다.  
   

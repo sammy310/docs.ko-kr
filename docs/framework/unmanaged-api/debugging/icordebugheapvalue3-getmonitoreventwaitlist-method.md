@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 27815cf8cb7fdcd1c01f26391c317d52bbb388ca
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 06e88e7b3f8e4541c8c7058e27cddb41c78076bc
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54628515"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57477844"
 ---
 # <a name="icordebugheapvalue3getmonitoreventwaitlist-method"></a>ICorDebugHeapValue3::GetMonitorEventWaitList 메서드
 모니터 잠금과 사용 하 여 연결 된 이벤트에 대 한 큐에 대기 중인 스레드는 정렬 된 목록을 제공 합니다.  
@@ -35,7 +35,7 @@ HRESULT GetMonitorEventWaitList (
 );  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `ppThreadEnum`  
  [out] 스레드 순서 있는 목록을 제공 하는 ICorDebugThreadEnum 열거자입니다.  
   

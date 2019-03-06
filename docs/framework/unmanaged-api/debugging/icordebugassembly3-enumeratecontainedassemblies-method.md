@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 98f15b05-afad-4616-9e2a-1a9af31948b6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: aa99e7289e0e86032f7bb85bbe209932f5c50d16
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1032227a539fb0f1a670a2c1a7a0f4f7df05a82b
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54627579"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57466860"
 ---
 # <a name="icordebugassembly3enumeratecontainedassemblies-method"></a>ICorDebugAssembly3::EnumerateContainedAssemblies 메서드
 이 어셈블리에 포함된 어셈블리에 대한 열거자를 가져옵니다.  
@@ -22,7 +22,7 @@ HRESULT EnumerateContainedAssemblies(
 );  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `ppAssemblies`  
  [out] 열거자는 ICorDebugAssemblyEnum 인터페이스 개체의 주소에 대 한 포인터입니다.  
   

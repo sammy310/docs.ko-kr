@@ -18,12 +18,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d809bbfa17ed9e9ae16505852740e874ca11248c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5d9671354edfeb4a320a451f355c2125dc8e9dc5
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54621788"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57470039"
 ---
 # <a name="createassemblyenum-function"></a>CreateAssemblyEnum 함수
 포인터를 가져는 [IAssemblyEnum](../../../../docs/framework/unmanaged-api/fusion/iassemblyenum-interface.md) 지정 된 어셈블리의 개체를 열거할 수 있는 인스턴스 [IAssemblyName](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md)합니다.  
@@ -40,7 +40,7 @@ HRESULT CreateAssemblyEnum (
  );  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `pEnum`  
  [out] 요청 된 요소가 있는 메모리 위치에 대 한 포인터 `IAssemblyEnum` 포인터입니다.  
   

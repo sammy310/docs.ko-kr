@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 940d913b2b04a510e2ae0e33eaa78b07ba4237c2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2f94c12654626e149b0f75327e8fdfa55aefe697
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54676798"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57467120"
 ---
 # <a name="imetadataemitgettokenfromsig-method"></a>IMetaDataEmit::GetTokenFromSig 메서드
 지정 된 메타 데이터 서명에 대 한 토큰을 가져옵니다.  
@@ -37,7 +37,7 @@ HRESULT GetTokenFromSig (
 );  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `pvSig`  
  [in] 유지 되 고 저장 된 서명입니다.  
   

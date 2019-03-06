@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7859beae572f05863fb24f0257aae8b0ec16bbcf
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fe0b465d0e15fadde48c2278aa367632bda3f9ef
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54640877"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57473831"
 ---
 # <a name="iassemblynamegetname-method"></a>IAssemblyName::GetName 메서드
 이 참조 되는 어셈블리의 간단 하 고 암호화 되지 않은 이름을 가져옵니다 [IAssemblyName](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md) 개체입니다.  
@@ -36,7 +36,7 @@ HRESULT GetName (
 );  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `lpcwBuffer`  
  [out에서] 크기 `pwzName` 와이드 문자에서 null 종결자 문자를 포함 합니다.  
   

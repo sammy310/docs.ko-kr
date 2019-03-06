@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: a9ce105c-6495-49ab-b0e5-903a48ebadb3
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5a2033264a7df0adb3263604c5b8c3d5d48fe242
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 95b1f39ca3504b64df45c47330c6fe3946b2b384
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54539079"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57473580"
 ---
 # <a name="isymunmanagedasyncmethodhascatchhandleriloffset-method"></a>ISymUnmanagedAsyncMethod::HasCatchHandlerILOffset 메서드
 참조 [DefineCatchHandlerILOffset 메서드](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedasyncmethodpropertieswriter-definecatchhandleriloffset-method.md)합니다.  
@@ -20,7 +20,7 @@ ms.locfileid: "54539079"
 HRESULT HasCatchHandlerILOffset(    [out, retval] BOOL* pRetVal);  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
   
 |매개 변수|설명|  
 |---------------|-----------------|  

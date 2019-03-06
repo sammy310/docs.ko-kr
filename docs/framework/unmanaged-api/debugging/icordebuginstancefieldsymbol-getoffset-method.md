@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 7e470150-2b92-4425-989c-315f48964fd2
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b8e78a7358f62ab83c7ecba63eac9f021fc4932d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a88de396d946c37b30688ab614d2bcc549c86873
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54636376"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57468132"
 ---
 # <a name="icordebuginstancefieldsymbolgetoffset-method"></a>ICorDebugInstanceFieldSymbol::GetOffset 메서드
 부모 클래스에서 이 인스턴스 필드의 오프셋(바이트)을 가져옵니다.  
@@ -22,7 +22,7 @@ HRESULT GetOffset(
 );  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `pcbOffset`  
  부모 클래스에서 이 인스턴스 필드가 오프셋되는 바이트 수에 대한 포인터입니다.  
   

@@ -15,12 +15,12 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: 8d0494e53705493de814ed4d4caa869e1e8a700f
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 41b6ff0a3c44d3ad997c54b1c82590cc3583fe52
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57374572"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57474607"
 ---
 # <a name="ixclrdataprocessstartenummethodinstancesbyaddress-method"></a>IXCLRDataProcess::StartEnumMethodInstancesByAddress 메서드
 
@@ -38,7 +38,7 @@ HRESULT StartEnumMethodInstancesByAddress(
 );
 ```
 
-### <a name="parameters"></a>매개 변수
+## <a name="parameters"></a>매개 변수
 
 `address`\
 [in] 첫 번째 메서드 인스턴스의 주소입니다.

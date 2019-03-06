@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5ce0a543b44bad4e3ae615d06e38c04cd0fb1207
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a565c19285b00c807ef6fbfc018a40467139638e
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54523664"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57466351"
 ---
 # <a name="iclrruntimeinfoloaderrorstring-method"></a>ICLRRuntimeInfo::LoadErrorString 메서드
 HRESULT 값을 지정된 된 문화권에 대 한 적절 한 오류 메시지를 변환 합니다.  
@@ -43,7 +43,7 @@ HRESULT LoadErrorString(
      [in, lcid] LONG iLocaleID);  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `iResourceID`  
  [in] 변환할 HRESULT입니다.  
   
@@ -62,8 +62,8 @@ HRESULT LoadErrorString(
 |HRESULT|설명|  
 |-------------|-----------------|  
 |S_OK|메서드가 완료되었습니다.|  
-|E_POINTER|`pcchBuffer`가 null인 경우|  
-|E_INVALIDARG|`pwzBuffer`가 null인 경우|  
+|E_POINTER|`pcchBuffer`가 null입니다.|  
+|E_INVALIDARG|`pwzBuffer`가 null입니다.|  
   
 ## <a name="requirements"></a>요구 사항  
  **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  

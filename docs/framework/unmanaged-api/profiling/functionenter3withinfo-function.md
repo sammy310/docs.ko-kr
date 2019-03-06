@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 35b77e282fd23ee01ea5e7d65bec64f8fb2ecc31
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c9e94c1904d8675af59e6ed5b49c2229e1214e8b
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54533103"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57469224"
 ---
 # <a name="functionenter3withinfo-function"></a>FunctionEnter3WithInfo 함수
 컨트롤이 함수에 전달 되 고 있음을 프로파일러에 알립니다. 및 전달할 수 있는 핸들을 제공 합니다 [ICorProfilerInfo3::GetFunctionEnter3Info 메서드](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-getfunctionenter3info-method.md) 스택 프레임 및 함수 인수를 검색 하도록 합니다.  
@@ -34,7 +34,7 @@ void __stdcall FunctionEnter3WithInfo(
                [in] COR_PRF_ELT_INFO eltInfo);  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `functionIDOrClientID`  
  [in] 컨트롤이 전달 함수의 식별자입니다.  
   

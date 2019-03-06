@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c2f27eccc506ce7145b383132260ad4e470f8906
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0615f37d97359f73eb1277da174b7e6401bfc313
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54519231"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57500345"
 ---
 # <a name="icorprofilercallbackexceptionsearchfunctionenter-method"></a>ICorProfilerCallback::ExceptionSearchFunctionEnter 메서드
 예외 처리의 검색 단계는 현재 예외에 대 한 처리기를 찾아야 하는 함수를 검색 시작 되었음을 프로파일러에 알립니다.  
@@ -34,7 +34,7 @@ HRESULT ExceptionSearchFunctionEnter(
     [in] FunctionID functionId);  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `functionId`  
  [in] 입력 된 함수의 ID입니다.  
   

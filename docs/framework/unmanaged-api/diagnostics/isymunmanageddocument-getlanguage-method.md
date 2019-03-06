@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 186ea5fd46ca5c6205ff1f98d8964e656655a2ad
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7fe5686f516f967ffd182788add643387cb8af9a
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54666035"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57473970"
 ---
 # <a name="isymunmanageddocumentgetlanguage-method"></a>ISymUnmanagedDocument::GetLanguage 메서드
 이 문서의 언어 식별자를 가져옵니다.  
@@ -34,7 +34,7 @@ HRESULT GetLanguage(
     [out, retval]  GUID*  pRetVal);  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `pRetVal`  
  [out] 언어 식별자를 수신 하는 변수에 대 한 포인터입니다.  
   

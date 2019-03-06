@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 95f61170d401161dcf217f139dbe6e4c6d3a0e0c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f3b263efa95936190ed771e811a84886b11be75b
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54735041"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57465754"
 ---
 # <a name="lockclrversion-function"></a>LockClrVersion 함수
 호스트가 명시적으로 CLR을 초기화 하기 전에 프로세스 내에서 사용할는 버전의 CLR (공용 언어 런타임)을 결정할 수 있습니다.  
@@ -39,7 +39,7 @@ HRESULT LockClrVersion (
 );  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `hostCallback`  
  [in] 초기화 시 CLR에서 호출 되는 함수입니다.  
   

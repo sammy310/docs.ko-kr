@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 69a3b0921528ed09ee4ab3a1ede6b9efe565e02a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fd1d97d9f3a44e2237cfc7a9e054a5ecfa2ebb01
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54619228"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57470759"
 ---
 # <a name="iclrruntimeinfoisloaded-method"></a>ICLRRuntimeInfo::IsLoaded 메서드
 CLR (공용 언어 런타임)에 연결 된 여부를 나타내는 합니다 [ICLRRuntimeInfo](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md) 인터페이스는 프로세스에 로드 됩니다. 시작 하지 않고 런타임에 로드할 수 있습니다.  
@@ -35,7 +35,7 @@ HRESULT IsLoaded(
 [out, retval] BOOL *pbLoaded);  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `hndProcess`  
  [in] 프로세스 핸들입니다.  
   
@@ -48,7 +48,7 @@ HRESULT IsLoaded(
 |HRESULT|설명|  
 |-------------|-----------------|  
 |S_OK|메서드가 완료되었습니다.|  
-|E_POINTER|`pbLoaded`가 null인 경우|  
+|E_POINTER|`pbLoaded`가 null입니다.|  
   
 ## <a name="remarks"></a>설명  
  이 메서드는 이전 버전과 호환성이 다음 함수 및 인터페이스를 사용 하 여:  

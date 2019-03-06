@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4cdcee35f92fb79177caf7d00a99027fa179334e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 87728ea52bc257920041acc2e2ecfc040cdbbfb0
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54651530"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57471799"
 ---
 # <a name="getrequestedruntimeversion-function"></a>GetRequestedRuntimeVersion 함수
 지정된 된 응용 프로그램에서 요청한 공용 언어 런타임 (CLR)의 버전 번호를 가져옵니다. 해당 버전이 설치 되지 않은 경우 요청 된 버전 보다 먼저 설치 되는 최신 버전을 가져옵니다.  
@@ -40,7 +40,7 @@ HRESULT GetRequestedRuntimeVersion (
 );  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `pExe`  
  [in] 응용 프로그램의 이름입니다.  
   
@@ -60,7 +60,7 @@ HRESULT GetRequestedRuntimeVersion (
 |-----------------|-----------------|  
 |S_OK|메서드가 완료되었습니다.|  
 |ERROR_INSUFFICIENT_BUFFER|버전 버퍼의 버전 문자열을 저장할 만큼 크지 않습니다.|  
-|E_POINTER|`pdwLength`가 null인 경우|  
+|E_POINTER|`pdwLength`가 null입니다.|  
   
 ## <a name="requirements"></a>요구 사항  
  **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  

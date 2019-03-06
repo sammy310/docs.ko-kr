@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 736fde9de1a7d4fa50d6a07bf17eacd742a6b86d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b90c78d1d0b515c725cb2ebba8ad77630234b225
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54683887"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57468678"
 ---
 # <a name="icorprofilerinfo2getnotifiedexceptionclauseinfo-method"></a>ICorProfilerInfo2::GetNotifiedExceptionClauseInfo 메서드
 예외 절에 대 한 기본 주소 및 프레임 정보를 가져옵니다 (`catch`/`finally`/`filter`) 방금 실행 되거나 실행 될는 합니다.  
@@ -34,7 +34,7 @@ HRESULT GetNotifiedExceptionClauseInfo(
     [out] COR_PRF_EX_CLAUSE_INFO *pinfo);  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `pinfo`  
  [out] 에 대 한 포인터를 [COR_PRF_EX_CLAUSE_INFO](../../../../docs/framework/unmanaged-api/profiling/cor-prf-ex-clause-info-structure.md) 현재 예외 절 인스턴스 및 관련된 프레임을 설명 하는 구조입니다.  
   

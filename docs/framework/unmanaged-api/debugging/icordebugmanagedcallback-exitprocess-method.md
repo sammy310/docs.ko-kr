@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b4e7b62b7eb038d553b28fbd6422175d511df88d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b33b38b85bd5b8cfb3502e3fadcd739aac37b2dc
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54540548"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57476375"
 ---
 # <a name="icordebugmanagedcallbackexitprocess-method"></a>ICorDebugManagedCallback::ExitProcess 메서드
 프로세스가 종료 되었는지 디버거에 알립니다.  
@@ -35,7 +35,7 @@ HRESULT ExitProcess (
 );  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `pProcess`  
  [in] 프로세스를 나타내는 ICorDebugProcess 개체에 대 한 포인터입니다.  
   

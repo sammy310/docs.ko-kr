@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5ac0d77b1d8d35a7753d3a501f147bd5ac53750c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: bbc297ce129ba223d85b5e13da1f046b3010f4d3
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54583732"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57466026"
 ---
 # <a name="imetadataimportgetmemberrefprops-method"></a>IMetaDataImport::GetMemberRefProps 메서드
 지정한 토큰이 참조하는 멤버와 연결된 메타데이터를 가져옵니다.  
@@ -41,7 +41,7 @@ HRESULT GetMemberRefProps (
 );  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `mr`  
  [in] 에 대 한 연결 된 메타 데이터를 반환할 MemberRef 토큰입니다.  
   

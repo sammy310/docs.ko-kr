@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 019a85d6d58c99adb7c16be5cc3b31b029b0312d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1bcf52a3745b22df58e67e892bf3a2b77c542d43
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54513146"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57479002"
 ---
 # <a name="icorprofilerinfogetinprocinspectionithisthread-method"></a>ICorProfilerInfo::GetInprocInspectionIThisThread 메서드
 ICorDebugThread 인터페이스에 대해 쿼리할 수 있는 개체를 가져옵니다. 이 메서드는.NET Framework 버전 2.0에서에서 사용 되지 않습니다.  
@@ -34,7 +34,7 @@ HRESULT GetInprocInspectionIThisThread(
     [out] IUnknown **ppicd);  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `ppicd`  
  [out](/cpp/atl/iunknown) 에 대해 쿼리할 수 있는 개체는 `ICorDebugThread` 인터페이스입니다.  
   

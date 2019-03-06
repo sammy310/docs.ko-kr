@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 156b2274aa442d9efb129d51ccf5939a09ac7408
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 647ddb742c080b7205a6f27ba36d58c010e3d510
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54710133"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57490023"
 ---
 # <a name="imetadataassemblyimportcloseenum-method"></a>IMetaDataAssemblyImport::CloseEnum 메서드
 지정 된 열거형 인스턴스에 대 한 참조를 해제합니다.  
@@ -35,7 +35,7 @@ void CloseEnum (
 );  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `hEnum`  
  [in] 닫아야 열거형 인스턴스입니다.  
   

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: dce8a11b68cc2a7f03060265956c9355dd1a05ba
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 03972ac38a5259443f43a4f91002bf8dc717509f
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54609306"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57466299"
 ---
 # <a name="corbindtoruntimeex-function"></a>CorBindToRuntimeEx 함수
 관리 되지 않는 호스트의 CLR (공용 언어 런타임)을 프로세스로 로드할 수 있도록 합니다. 합니다 [CorBindToRuntime](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntime-function.md) 하 고 `CorBindToRuntimeEx` 함수는 동일한 작업을 수행 하지만 `CorBindToRuntimeEx` 함수를 사용 하면 CLR의 동작을 지정 하는 플래그를 설정할 수 있습니다.  
@@ -57,7 +57,7 @@ HRESULT CorBindToRuntimeEx (
 );  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `pwszVersion`  
  [in] 로드 하려는 CLR의 버전을 설명 하는 문자열입니다.  
   

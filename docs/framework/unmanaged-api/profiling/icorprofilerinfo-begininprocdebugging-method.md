@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 330a159e056018d702eec7e4fef80c3d8e041212
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3e23f39f8e7a1812366e15ffec9589f756c73f94
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54630803"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57481692"
 ---
 # <a name="icorprofilerinfobegininprocdebugging-method"></a>ICorProfilerInfo::BeginInprocDebugging 메서드
 초기화는 프로세스 디버깅을 지원 합니다. 이 메서드는.NET Framework 버전 2.0에서에서 사용 되지 않습니다.  
@@ -35,7 +35,7 @@ HRESULT BeginInprocDebugging(
     [out] DWORD *pdwProfilerContext);  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `fThisThreadOnly`  
  [in] 이 값을 설정 `true` 만 현재 스레드의;에 대 한 디버깅 지원을 초기화할 수로 설정 `false` 모든 스레드에 대 한 디버깅 지원을 초기화할 수 있습니다.  
   

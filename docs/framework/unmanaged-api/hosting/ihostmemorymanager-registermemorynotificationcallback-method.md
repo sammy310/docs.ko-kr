@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cacf2990fd63120e02d897646ab84376db0d5e36
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8e5a0af2d2f3db5b1d44def3af067bc1c3a9e1aa
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54659204"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57485293"
 ---
 # <a name="ihostmemorymanagerregistermemorynotificationcallback-method"></a>IHostMemoryManager::RegisterMemoryNotificationCallback 메서드
 컴퓨터의 현재 메모리 로드를 호스트에는 CLR (공용 언어 런타임)을 알리기 위해 호출 하는 콜백 함수에 대 한 포인터를 등록 합니다.  
@@ -35,7 +35,7 @@ HRESULT RegisterMemoryNotificationCallback (
 );  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `pCallback`  
  [in] 에 대 한 인터페이스 포인터를 [ICLRMemoryNotificationCallback](../../../../docs/framework/unmanaged-api/hosting/iclrmemorynotificationcallback-interface.md) CLR에서 구현 되는 인스턴스.  
   

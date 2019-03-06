@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bf70d8665d3984c379da9d9058cd97315def7b76
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 43349dd3562b4480746948a0e65cc52580e377b3
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54677682"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57470694"
 ---
 # <a name="icordebugtypeenumnext-method"></a>ICorDebugTypeEnum::Next 메서드
 지정 된 "ICorDebugType" 인스턴스 수를 가져옵니다 `celt` 를 열거형에서 현재 위치에서 시작 합니다.  
@@ -38,7 +38,7 @@ HRESULT Next (
 );  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `celt`  
  [in] 수가 `ICorDebugType` 인스턴스를 검색할 수 있습니다.  
   

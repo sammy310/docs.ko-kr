@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c131c5531d52f5ee81c70bddb67e8bc6071f39e3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: bf8e74094b15163fe86e18c397f4637557df8329
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54599665"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57468236"
 ---
 # <a name="icorprofilerinfoisarrayclass-method"></a>ICorProfilerInfo::IsArrayClass 메서드
 지정된 된 클래스 배열 클래스 인지 확인 합니다.  
@@ -37,7 +37,7 @@ HRESULT IsArrayClass(
     [out] ULONG          *pcRank);  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `classId`  
  [in] 검사할 클래스의 ID입니다.  
   

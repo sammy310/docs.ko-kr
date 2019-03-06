@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 2b0859d2f6d4ea2abf72867f2a803132cbd04225
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9fec1d1effbf900974327247078b65f60fef7e21
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54568649"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57466429"
 ---
 # <a name="icorprofilerinfogetfunctionfromip-method"></a>ICorProfilerInfo::GetFunctionFromIP 메서드
 에 대 한 관리 되는 코드 명령 포인터를 매핑하는 `FunctionID`합니다.  
@@ -35,7 +35,7 @@ HRESULT GetFunctionFromIP(
     [out] FunctionID *pFunctionId);  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `ip`  
  [in] 관리 코드에서 명령 포인터입니다.  
   

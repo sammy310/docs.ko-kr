@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: bc3410f6-ebca-4bca-9b45-fc38c74fa9cb
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0919f0cfd0ae1617d140eadd12aa8874c73d8bb0
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0914c09fbbef5efb64fb253a4ea36d5b6c97ba97
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54491652"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57479105"
 ---
 # <a name="icordebugmergedassemblyrecordgetsimplename-method"></a>ICorDebugMergedAssemblyRecord::GetSimpleName 메서드
 어셈블리의 단순한 이름을 가져옵니다.  
@@ -24,7 +24,7 @@ HRESULT GetSimpleName(
 );  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `cchName`  
  [in] `szName` 버퍼의 문자 수입니다.  
   

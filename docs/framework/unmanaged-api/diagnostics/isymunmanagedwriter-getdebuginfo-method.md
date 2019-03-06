@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 87dd256bfe8a067ad798bff77a172b936f2d6aab
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ce74b043db67fa1086724dd76001935f9c1c0498
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54649936"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57470950"
 ---
 # <a name="isymunmanagedwritergetdebuginfo-method"></a>ISymUnmanagedWriter::GetDebugInfo 메서드
 컴파일러가 이식 가능한 실행 파일 (PE) 파일 헤더의 디버그 디렉터리 항목을 작성 하는 데 필요한 정보를 반환 합니다. 기호 작성기를 제외한 모든 필드를 채워 `TimeDateStamp` 고 `PointerToRawData`입니다. (컴파일러는 이러한 두 필드를 적절 하 게 설정 하는 일을 담당 합니다.)  
@@ -40,7 +40,7 @@ HRESULT GetDebugInfo(
         length_is(*pcData)] BYTE data[]);  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `pIDD`  
  [out에서] 기호 작성기가 데이터를 입력 하는 IMAGE_DEBUG_DIRECTORY 포인터입니다.  
   

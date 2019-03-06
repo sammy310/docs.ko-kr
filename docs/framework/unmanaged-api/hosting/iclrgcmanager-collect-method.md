@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9b448892a58dd120fd0f30f2b61be59e579b629a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2da0b3b7a8a7ae46050345aaf5fcfa65fa349ae5
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54651411"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57477987"
 ---
 # <a name="iclrgcmanagercollect-method"></a>ICLRGCManager::Collect 메서드
 지정된 된 세대의 가비지 수집을 강제로 수행 합니다.  
@@ -35,7 +35,7 @@ HRESULT Collect (
 );  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `Generation`  
  [in] 수집을 생성 합니다. 모든 세대의 수집을 수행 하는 값이-1입니다.  
   

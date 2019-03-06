@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a60d3bfc734480733f621c71a0141bb58a0eb71e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e3a6f98dca1c6665b312384721a8fb590f914175
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54745312"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57468899"
 ---
 # <a name="imetadataemitdefinemethodimpl-method"></a>IMetaDataEmit::DefineMethodImpl 메서드
 인터페이스에서 상속 된 메서드 구현에 대 한 정의 만들고 해당 메서드 구현을 정의에 토큰을 반환 합니다.  
@@ -37,7 +37,7 @@ HRESULT DefineMethodImpl (
 );  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `td`  
  [in] `mdTypedef` 토큰 구현 하는 클래스입니다.  
   

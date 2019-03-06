@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6190d867e86ae7e77f701b8b0bdad9caee4421a2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 734bd51131ea922f00362e7306d34e5241231c13
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54561012"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57466841"
 ---
 # <a name="iclrpolicymanagersetunhandledexceptionpolicy-method"></a>ICLRPolicyManager::SetUnhandledExceptionPolicy 메서드
 처리 되지 않은 예외가 발생 하는 경우는 CLR (공용 언어 런타임)의 동작을 지정 합니다.  
@@ -35,7 +35,7 @@ HRESULT SetUnhandledExceptionPolicy (
 );  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `policy`  
  [in] 중 하나는 [EClrUnhandledException](../../../../docs/framework/unmanaged-api/hosting/eclrunhandledexception-enumeration.md) CLR 또는 호스트 동작 설정 되었는지 여부를 나타내는 값입니다.  
   
