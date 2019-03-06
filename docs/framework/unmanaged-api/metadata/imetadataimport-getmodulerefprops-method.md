@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 501c554f6e2e4ddd8abd21fe81b81d1898ea070b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3b00fdaa6dacaf9a7eefa1a1ac1192f7c18fde95
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54583619"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57465909"
 ---
 # <a name="imetadataimportgetmodulerefprops-method"></a>IMetaDataImport::GetModuleRefProps 메서드
 지정한 메타데이터 토큰에서 참조된 모듈의 이름을 가져옵니다.  
@@ -38,7 +38,7 @@ HRESULT GetModuleRefProps (
 );  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `mur`  
  [in] ModuleRef 메타 데이터 토큰에 대 한 메타 데이터 정보를 가져오려는 모듈 참조입니다.  
   

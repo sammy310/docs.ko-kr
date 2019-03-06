@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: faa538c2-60c9-4064-b996-1b4c24ebd751
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 30464956adf09ee4cc55db183c34396beacf070e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1ec631c6b5c6d8ffdb74589c00e899b689b5e788
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54720460"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57468119"
 ---
 # <a name="icordebugprocess6getcode-method"></a>ICorDebugProcess6::GetCode 메서드
 특정 코드 주소에서 관리 코드에 대한 정보를 가져옵니다.  
@@ -22,7 +22,7 @@ HRESULT GetCode(
     [out] ICorDebugCode **ppCode);  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `codeAddress`  
  [in] A [CORDB_ADDRESS](../../../../docs/framework/unmanaged-api/common-data-types-unmanaged-api-reference.md) 관리 코드 세그먼트의 시작 주소를 지정 하는 값입니다.  
   

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 126cc9d407e2653fdb3f4ea7b03fa05c24a572d0
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8832d6c19108459ffe261a5cf66f921ff521ddf9
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54629122"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57465831"
 ---
 # <a name="imetadataimportgetrva-method"></a>IMetaDataImport::GetRVA 메서드
 상대 가상 주소 (RVA) 및 메서드 또는 지정한 토큰이 나타내는 필드의 구현 플래그를 가져옵니다.  
@@ -37,7 +37,7 @@ HRESULT GetRVA (
 );  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `tk`  
  [in] MethodDef 또는 FieldDef 메타 데이터 토큰에 대 한 RVA 반환할 코드 개체를 나타내는입니다. 한 FieldDef 토큰을 사용 하는 경우 필드에는 전역 변수 여야 합니다.  
   

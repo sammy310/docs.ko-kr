@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 64634f961064feb3d2db11d421fea920f1e2d16b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1215da0816c1fc7cdfaee0da167118909f8e5eb3
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54669057"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57466104"
 ---
 # <a name="imetadatatablesgetuserstringheapsize-method"></a>IMetaDataTables::GetUserStringHeapSize 메서드
 사용자 문자열 힙 바이트의 크기를 가져옵니다.  
@@ -35,7 +35,7 @@ HRESULT GetUserStringHeapSize (
 );  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `pcbBlobs`  
  [out] 사용자 문자열 힙 바이트의 크기에 대 한 포인터입니다.  
   

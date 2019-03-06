@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f404fef10f83dac8938953e29b233d3a01135559
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6406e280cd9fd86e32169a77dbb5ef468b8cf564
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54547347"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57473734"
 ---
 # <a name="ihosttaskjoin-method"></a>IHostTask::Join 메서드
 현재 작업까지 호출 작업을 차단 [IHostTask](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md) 인스턴스가 완료 되 면 지정 된 시간 간격이 경과 하면 또는 [ihosttask:: Alert](../../../../docs/framework/unmanaged-api/hosting/ihosttask-alert-method.md) 라고 합니다.  
@@ -36,7 +36,7 @@ HRESULT Join (
 );  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `milliseconds`  
  [in] 시간 간격을 밀리초 작업이 종료 될 때까지 기다립니다. 이 간격이 경과할 때까지 태스크를 종료 하는 경우에 호출 작업 차단 해제 합니다.  
   

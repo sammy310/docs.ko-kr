@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 68f2cc471a33d2c0ea92ceab59d5ba9ecb86e7f6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 629f9a62364729984a7eec86090876c3eaebb881
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54509588"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57464557"
 ---
 # <a name="isymunmanagedreadergetdocuments-method"></a>ISymUnmanagedReader::GetDocuments 메서드
 기호 저장소에 정의 된 모든 문서의 배열을 반환 합니다.  
@@ -37,7 +37,7 @@ HRESULT GetDocuments (
         length_is (*pcDocs)] ISymUnmanagedDocument *pDocs[]);  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `cDocs`  
  [in] `pDocs` 배열의 크기입니다.  
   

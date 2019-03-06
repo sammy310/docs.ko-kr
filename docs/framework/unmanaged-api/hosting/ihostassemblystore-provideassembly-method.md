@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fe8491852ea1fd9791de761d848b774480f4b461
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 778664dea16c5183945e25e0261f4a65bb646ac0
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54550294"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57467976"
 ---
 # <a name="ihostassemblystoreprovideassembly-method"></a>IHostAssemblyStore::ProvideAssembly 메서드
 참조 되지 않은 어셈블리에 대 한 참조를 가져옵니다 합니다 [ICLRAssemblyReferenceList](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyreferencelist-interface.md) 에서 반환 되는 [ihostassemblymanager:: Getnonhoststoreassemblies](../../../../docs/framework/unmanaged-api/hosting/ihostassemblymanager-getnonhoststoreassemblies-method.md)합니다. 호출 하는 CLR (공용 언어 런타임) `ProvideAssembly` 목록에 나타나지 않는 각 어셈블리에 대 한 합니다.  
@@ -39,7 +39,7 @@ HRESULT ProvideAssembly (
 );  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `pBindInfo`  
  [in] 에 대 한 포인터를 [AssemblyBindInfo](../../../../docs/framework/unmanaged-api/hosting/assemblybindinfo-structure.md) 버전 관리 정책의 유무를 포함 하 여 특정 바인딩 특성을 결정 하는 호스트 인스턴스 및 바인딩할 어셈블리입니다.  
   

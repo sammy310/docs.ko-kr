@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 3eccb42caa6fdc62b090cd60ff86ad102511883c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: bb61dbcee1851ebe70c1dc0138e14aaa7a08d901
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54629165"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57468691"
 ---
 # <a name="imetadatadispenserexgetcorsystemdirectory-method"></a>IMetaDataDispenserEx::GetCORSystemDirectory 메서드
 현재 CLR (공용 언어 런타임) 저장 하는 디렉터리를 가져옵니다. 이 메서드는 out-of-process-디버거에서 사용에 대해서만 지원 됩니다. 다른 구성 요소에서 호출 하는 경우 E_NOTIMPL이 반환 됩니다.  
@@ -37,7 +37,7 @@ HRESULT GetCORSystemDirectory (
 );  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `szBuffer`  
  [out] 디렉터리 이름을 받기 위한 버퍼입니다.  
   

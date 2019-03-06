@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f6a862f0861416ebc80c7b6107267bcbb5ec51f4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ccaaee614b1ec4d03271e70338fff82d629a7c28
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54657365"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57468466"
 ---
 # <a name="isymunmanagedwriteropenscope-method"></a>ISymUnmanagedWriter::OpenScope 메서드
 현재 메서드에서 새 어휘 범위를 엽니다. 범위는 현재 범위가 새 하 고 범위 스택에 푸시됩니다. 범위 계층 구조를 형성 해야 합니다. 형제 겹칠 수 없습니다.  
@@ -35,7 +35,7 @@ HRESULT OpenScope(
     [out, retval] ULONG32* pRetVal);  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `startOffset`  
  [in] 오프셋 (바이트)를 메서드의 시작 부분에서 어휘 범위에서 첫 번째 명령입니다.  
   

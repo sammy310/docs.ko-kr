@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c45da047d384e56440ca5f883a4cfd755a7d0299
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 162341ee8cb27e5edc455207bbe094356c5167e7
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54719716"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57466078"
 ---
 # <a name="getappidauthority-function"></a>GetAppIdAuthority 함수
 포인터를 가져는 [IAppIdAuthority](../../../../docs/framework/unmanaged-api/fusion/iappidauthority-interface.md) 응용 프로그램 id 및 참조에 대 한 키를 관리 하는 인스턴스.  
@@ -35,7 +35,7 @@ HRESULT GetAppIdAuthority (
  );  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `ppIAppIdAuthority`  
  [out] 반환 된 `IAppIdAuthority` 포인터입니다.  
   

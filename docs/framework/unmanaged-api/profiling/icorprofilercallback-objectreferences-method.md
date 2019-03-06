@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9fc10344757d4dd9f9df7d4931eb339b652303f9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e9659f37f0ae9297837dbc4b1602cb00b8eff2fd
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54683731"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57471454"
 ---
 # <a name="icorprofilercallbackobjectreferences-method"></a>ICorProfilerCallback::ObjectReferences 메서드
 지정된 된 개체에서 참조 되지 않는 메모리에서 개체에 대 한 프로파일러를 알립니다.  
@@ -37,7 +37,7 @@ HRESULT ObjectReferences(
     [in, size_is(cObjectRefs)] ObjectID objectRefIds[] );  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `objectId`  
  [in] 개체를 참조 하는 개체의 ID입니다.  
   

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: deb8475ab338c6ce733f1700e509dff982bd697f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fbb9a48fc4795f2e5f074369318fec6d4152d9d5
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54611178"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57468756"
 ---
 # <a name="icorprofilercallbackassemblyloadstarted-method"></a>ICorProfilerCallback::AssemblyLoadStarted 메서드
 어셈블리 로드 되는 프로파일러에 알립니다.  
@@ -34,7 +34,7 @@ HRESULT AssemblyLoadStarted(
     [in] AssemblyID assemblyId);  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `assemblyId`  
  [in] 로드 되는 어셈블리를 식별 합니다.  
   

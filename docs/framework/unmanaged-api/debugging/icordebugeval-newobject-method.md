@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9ff4f86105fd1dfbd12360c01046492f3a6dbdcd
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 97217421d30ee4065aa1b2500e9486405e438902
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54589910"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57471370"
 ---
 # <a name="icordebugevalnewobject-method"></a>ICorDebugEval::NewObject 메서드
 새 개체 인스턴스를 할당 하 고 지정된 된 생성자 메서드를 호출 합니다.  
@@ -39,7 +39,7 @@ HRESULT NewObject (
 );  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `pConstructor`  
  [in] 생성자가 호출 됩니다.  
   

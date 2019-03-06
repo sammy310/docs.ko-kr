@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 52a00496c3b4d5ccd96adaf569c25c64a5709a9a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7032e55d52804d559d1faed810ca7cccd6a9e628
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54717595"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57475643"
 ---
 # <a name="imetadataimportisglobal-method"></a>IMetaDataImport::IsGlobal 메서드
 지정한 메타데이터 토큰이 나타내는 필드, 메서드 또는 형식에 전역 범위가 있는지 여부를 나타내는 값을 가져옵니다.  
@@ -36,7 +36,7 @@ HRESULT IsGlobal (
 );  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `pd`  
  [in] 형식, 필드 또는 메서드를 나타내는 메타 데이터 토큰입니다.  
   

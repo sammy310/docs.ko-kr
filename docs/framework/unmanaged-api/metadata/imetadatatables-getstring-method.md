@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c457d8a6b3ab187b7d02c9c9be800c4ef1f0f58c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c71efb9156c503ac88ba558ad7a9f757b608bf40
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54537987"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57466156"
 ---
 # <a name="imetadatatablesgetstring-method"></a>IMetaDataTables::GetString 메서드
 현재 참조 범위에 있는 테이블 열에서 지정된 된 인덱스에 문자열을 가져옵니다.  
@@ -36,7 +36,7 @@ HRESULT GetString (
 );  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `ixString`  
  [in] 다음 값에 대 한 검색을 시작 하는 인덱스입니다.  
   
