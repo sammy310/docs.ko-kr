@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e5698e5555e82fd8f64fd029f78cda361a367ca7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b2597cf14f4f1fc9a99740b4a07502246f80087d
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54585226"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57466598"
 ---
 # <a name="getassemblyrefhash-method"></a>GetAssemblyRefHash 메서드
 지정된 된 어셈블리에 대 한 해시 blob를 검색합니다.  
@@ -36,7 +36,7 @@ HRESULT GetAssemblyRefHash(
 ) PURE;  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `FileToken`  
  해시는 참조 어셈블리의 ID입니다.  
   

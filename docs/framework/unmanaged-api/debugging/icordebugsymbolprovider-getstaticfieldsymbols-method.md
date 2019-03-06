@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: b178367f-a6e4-413c-b06f-daf3804b456b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a72e9911adf5b48638c2323adcbbb76e721618a5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 69ad0878daf57c379a5958dbeacddac8510c6eba
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54553752"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57476154"
 ---
 # <a name="icordebugsymbolprovidergetstaticfieldsymbols-method"></a>ICorDebugSymbolProvider::GetStaticFieldSymbols 메서드
 typespec 서명에 해당하는 정적 필드 기호를 가져옵니다.  
@@ -26,7 +26,7 @@ HRESULT GetStaticFieldSymbols(
 );  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `cbSignature`  
  [in] `typeSig` 배열의 바이트 수입니다.  
   

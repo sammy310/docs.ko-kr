@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 496082bbf89ceb93ba3dceef9a9222425db71784
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5fb63d4fe1e736ca1ff0c729d8d83cfe092eaaf5
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54522416"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57465532"
 ---
 # <a name="iceegencomputepointer-method"></a>ICeeGen::ComputePointer 메서드
 지정 된 코드 섹션에 대 한 버퍼를 결정합니다.  
@@ -39,7 +39,7 @@ HRESULT ComputePointer (
 );  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `section`  
  [in] 버퍼를 반환 하는 코드 섹션입니다.  
   

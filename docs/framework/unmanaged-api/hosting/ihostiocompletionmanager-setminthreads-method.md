@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1a966c1827f868c51b0a4dce93e9f536e8ae0e51
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d127aa1cfa8784f51fcff4eaa774361a2cbbdbc9
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54659243"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57503023"
 ---
 # <a name="ihostiocompletionmanagersetminthreads-method"></a>IHostIoCompletionManager::SetMinThreads 메서드
 I/O 완료 될 때까지 호스트를 할당 해야 하는 스레드의 최소 수를 설정 합니다.  
@@ -35,7 +35,7 @@ HRESULT SetMinThreads (
 );  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `dwMinIoCompletionThreads`  
  [in] 호스트를 만들어야 하는 I/O 완료 스레드의 최소 수입니다.  
   

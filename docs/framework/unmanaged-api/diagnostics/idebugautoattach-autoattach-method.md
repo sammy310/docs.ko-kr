@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6b45b5e1a7589329b788160df3ac4493efa48197
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 16ccc56579a1ebe45ada61a9565cc8ade335333d
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54663520"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57469680"
 ---
 # <a name="idebugautoattachautoattach-method"></a>IDebugAutoAttach::AutoAttach 메서드
 서버에서 호출한 디버거 자동 수행 연결 합니다.  
@@ -40,7 +40,7 @@ HRESULT AutoAttach
 );  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `guidPort`  
  [in] 항상로 `GUID_NULL`합니다.  
   

@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f40100be3ab05c0c8e8a55d48494569424e88371
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ea711cc03716f4cd0a06a96208da942a69f36d66
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54637270"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57471682"
 ---
 # <a name="getclridentitymanager-function"></a>GetCLRIdentityManager 함수
 CLR (공용 언어 런타임) id를 관리할 수 있도록 하는 인터페이스에 대 한 포인터를 가져옵니다.  
@@ -37,7 +37,7 @@ STDAPI GetCLRIdentityManager(
 );  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `riid`  
  [in] `REFIID` 가져오려는 인터페이스를 지정 하는 (인터페이스 식별자)입니다. 이 값은 IID_ICLRAssemblyIdentityManager 또는 IID_ICLRHostBindingPolicyManager 여야 합니다.  
   

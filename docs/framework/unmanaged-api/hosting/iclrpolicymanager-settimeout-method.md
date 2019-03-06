@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8edb16de4c02d2589ecfb9ae5becba22e10e6be6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1e367fc772c5b673795c8229f9084fac850d53a8
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54609332"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57474798"
 ---
 # <a name="iclrpolicymanagersettimeout-method"></a>ICLRPolicyManager::SetTimeout 메서드
 지정 된 작업에 대 한 제한 시간 값을 설정합니다.  
@@ -36,7 +36,7 @@ HRESULT SetTimeout (
 );  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `operation`  
  [in] 중 하나는 [EClrOperation](../../../../docs/framework/unmanaged-api/hosting/eclroperation-enumeration.md) 시간 제한을 설정 하는 공용 언어 런타임 (CLR) 작업을 나타내는 값입니다. 다음 값이 지원 됩니다.  
   

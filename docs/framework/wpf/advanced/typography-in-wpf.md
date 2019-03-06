@@ -4,17 +4,15 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - typography [WPF], about typography
 ms.assetid: 06cbf17b-6eff-4fe5-949d-2dd533e4e1f4
-ms.openlocfilehash: 086e02601e527229eed7dc3e2fab73df1f918a8c
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 16897413c31e39be5c1d45b43d6ef816d3f80aad
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57359551"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57482693"
 ---
 # <a name="typography-in-wpf"></a>WPF의 입력 체계
 이 항목에서는 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]의 주요 입력 체계 기능을 소개합니다. 이러한 기능에는 텍스트 렌더링의 향상된 품질 및 성능, [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] 입력 체계 지원, 향상된 국가별 텍스트, 향상된 글꼴 지원 및 새 텍스트 API(응용 프로그래밍 인터페이스)가 포함됩니다.  
-  
-
   
 <a name="Improved_Quality_and_Performance_of_Text"></a>   
 ## <a name="improved-quality-and-performance-of-text"></a>텍스트의 향상된 품질 및 성능  
@@ -36,13 +34,11 @@ ClearType y 방향 앤티앨리어싱으로 표시된 텍스트
   
  Pericles [!INCLUDE[TLA2#tla_opentype](../../../../includes/tla2sharptla-opentype-md.md)] 글꼴에는 표준 문자 모양 집합에 스타일 대체 문자를 제공하는 추가 문자 모양이 포함되어 있습니다. 다음 텍스트는 스타일 대체 문자 모양을 표시합니다.  
   
- ![OpenType 스타일 대체 문자 모양을 사용 하 여 텍스트](./media/opentypefont02.gif "opentypefont02")  
-OpenType 스타일 대체 문자 모양을 사용하는 텍스트  
+ ![OpenType 스타일 대체 문자 모양을 사용 하 여 텍스트](./media/typography-in-wpf/opentype-stylistic-alternate-glyphs.gif "OpenType 스타일 대체 문자 모양을 사용 하는 텍스트")  
   
  선단 장식은 종종 붓글씨와 관련된 정교한 장식을 사용하는 장식용 문자 모양입니다. 다음 텍스트는 Pescadero 글꼴의 표준 및 선단 장식 문자 모양을 표시합니다.  
   
- ![OpenType 표준 및 선단 장식 문자 모양을 사용 하 여 텍스트](./media/opentypefont08.gif "opentypefont08")  
-OpenType 표준 및 선단 장식 문자 모양을 사용하는 텍스트  
+ ![OpenType 표준 및 선단 장식 문자 모양을 사용 하 여 텍스트](./media/typography-in-wpf/opentype-standard-swash-glyphs.gif "OpenType 표준 및 선단 장식 문자 모양을 사용 하는 텍스트")  
   
  [!INCLUDE[TLA2#tla_opentype](../../../../includes/tla2sharptla-opentype-md.md)] 기능에 대한 자세한 내용은 [OpenType 글꼴 기능](opentype-font-features.md)을 참조하세요.  
   
@@ -175,4 +171,4 @@ FormattedText 개체를 사용하여 표시한 텍스트
 - [서식 있는 텍스트 그리기](drawing-formatted-text.md)
 - [고급 텍스트 서식 지정](advanced-text-formatting.md)
 - [텍스트](optimizing-performance-text.md)
-- [Microsoft 입력 체계](https://www.microsoft.com/typography/default.mspx)
+- [Microsoft 입력 체계](https://docs.microsoft.com/typography/)

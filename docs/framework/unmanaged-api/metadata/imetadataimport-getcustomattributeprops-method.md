@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4619d5a1444d42c6f3ac43306fbd979a6a70f12b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 422ff5d5a2924bf66fee9dad99d57fed9477d0f1
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54672177"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57484435"
 ---
 # <a name="imetadataimportgetcustomattributeprops-method"></a>IMetaDataImport::GetCustomAttributeProps 메서드
 해당 메타데이터 토큰이 지정된 경우 사용자 지정 특성의 값을 가져옵니다.  
@@ -39,7 +39,7 @@ HRESULT GetCustomAttributeProps (
 );  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `cv`  
  [in] 검색할 사용자 지정 특성을 나타내는 메타데이터 토큰입니다.  
   

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1b0f4b184a11e769291c64d83d11d57b5b3d19c7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6590b455717dfdb3ea43e3622b494e2169047337
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54498806"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57469615"
 ---
 # <a name="iclrassemblyidentitymanagergetbindingidentityfromstream-method"></a>ICLRAssemblyIdentityManager::GetBindingIdentityFromStream 메서드
 지정한 스트림에서 어셈블리에 대 한 정식 어셈블리 id 데이터를 가져옵니다.  
@@ -38,7 +38,7 @@ HRESULT GetBindingIdentityFromStream (
 );  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `pStream`  
  [in] 계산할 어셈블리 스트림입니다.  
   

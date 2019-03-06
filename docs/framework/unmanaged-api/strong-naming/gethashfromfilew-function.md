@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 611da2dcb5686f79207e5099661fbbf5e7981421
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6fc69ab8b2d3565c49eeee09d8860c81ec8818fe
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54681926"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57473861"
 ---
 # <a name="gethashfromfilew-function"></a>GetHashFromFileW 함수
 유니코드 문자열로 지정된 파일 내용에 대해 해시를 생성합니다.  
@@ -40,7 +40,7 @@ HRESULT GetHashFromFileW (
 );   
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `wszFilePath`  
  [in] 유니코드 해시 파일의 이름입니다.  
   

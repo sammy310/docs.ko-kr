@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1663a36ab36980af709a861b3fb0666be6fecdfb
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 45795d4f3c0d043a46a750312484b93407ae8434
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54607477"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57471552"
 ---
 # <a name="icorprofilerinfogetmodulemetadata-method"></a>ICorProfilerInfo::GetModuleMetaData 메서드
 지정된 된 모듈에 매핑되는 메타 데이터 인터페이스 인스턴스를 가져옵니다.  
@@ -37,7 +37,7 @@ HRESULT GetModuleMetaData(
     [out] IUnknown **ppOut);  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `moduleId`  
  [in] 인터페이스 인스턴스를 매핑할 수 있는 모듈의 ID입니다.  
   

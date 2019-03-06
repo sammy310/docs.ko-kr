@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b3c145bae61922894f4893d532923319ccf16f85
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 88006703ba4a491ae458868a1431be618d37252a
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54499014"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57471201"
 ---
 # <a name="importfile2-method"></a>ImportFile2 메서드
 어셈블리 및 바인딩되지 않은 모듈을 가져옵니다. 이 메서드는 [ImportFile 메서드](../../../../docs/framework/unmanaged-api/alink/importfile-method.md), 되지만 가져올 파일 디스크에 없는 경우 경우에 작동 합니다.  
@@ -40,7 +40,7 @@ HRESULT ImportFile2(
 ) PURE;  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `pszFilename`  
  가져올 파일의 이름입니다.  
   

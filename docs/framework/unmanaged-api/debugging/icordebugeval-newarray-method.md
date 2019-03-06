@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 38b00d903fdd7301415a8df7642e12366178fd10
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: d1abe307e3b9fa607912f98e456a11176eb17c56
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33413942"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57471513"
 ---
 # <a name="icordebugevalnewarray-method"></a>ICorDebugEval::NewArray 메서드
-지정한 요소 형식 및 차원에 대 한 새 배열을 할당합니다.  
+지정 된 요소 형식 및 차원에는 새 배열을 할당합니다.  
   
- 이 메서드는.NET Framework 버전 2.0에서에서 사용 되지 않습니다. 사용 하 여 [icordebugeval2:: Newparameterizedarray](../../../../docs/framework/unmanaged-api/debugging/icordebugeval2-newparameterizedarray-method.md) 대신 합니다.  
+ 이 메서드는.NET Framework 버전 2.0에서에서 사용 되지 않습니다. 사용 하 여 [ICorDebugEval2::NewParameterizedArray](../../../../docs/framework/unmanaged-api/debugging/icordebugeval2-newparameterizedarray-method.md) 대신 합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -41,30 +41,30 @@ HRESULT NewArray (
 );  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `elementType`  
  [in] 배열의 요소 형식을 지정 하는 CorElementType 열거형의 값입니다.  
   
  `pElementClass`  
- [in] 요소 클래스를 지정 하는 ICorDebugClass 개체에 대 한 포인터입니다. 이 값은 요소 형식은 기본 형식인 경우에 null 일 수 있습니다.  
+ [in] 요소의 클래스를 지정 하는 ICorDebugClass 개체에 대 한 포인터입니다. 이 값 요소 형식이 기본 형식인 경우에 null 일 수 있습니다.  
   
  `rank`  
- [in] 배열의 차원 수입니다. .NET Framework 2.0에서이 값에는 1 이어야 합니다.  
+ [in] 배열의 차원 수입니다. .NET Framework 2.0에서는이 값에는 1 이어야 합니다.  
   
  `dims`  
  [in] 바이트 배열의 각 차원 크기입니다.  
   
  `lowBounds`  
- [in] 선택적 항목으로, 배열의 각 차원 하 한입니다. 이 값을 생략 하면 각 차원에 대 한 하한값 0으로 가정 합니다.  
+ [in] 선택적 항목으로, 배열의 각 차원 하 한. 이 값을 생략 하는 경우에 각 차원에 대 한 하한값 0으로 간주 됩니다.  
   
 ## <a name="remarks"></a>설명  
- 배열의는 스레드가 현재 실행 중인 응용 프로그램 도메인에서 항상 만들어집니다.  
+ 스레드가 현재 실행 중인 응용 프로그램 도메인에서 배열 항상 만들어집니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** 참조 [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)합니다.  
+ **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
   
  **헤더:** CorDebug.idl, CorDebug.h  
   
  **라이브러리:** CorGuids.lib  
   
- **.NET framework 버전:** 1.0, 1.1
+ **.NET framework 버전:** 1.1, 1.0

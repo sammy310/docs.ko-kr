@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e22ed258390f7adc9bbf8cd425afe208b2f9b12c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2059657a6f4543ee29d795ecae7b93b72876fdf4
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54607045"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57474633"
 ---
 # <a name="ihosttaskmanagerleaveruntime-method"></a>IHostTaskManager::LeaveRuntime 메서드
 현재 실행 중인 작업의 CLR (공용 언어 런타임)을 유지 하 고 비관리 코드는 호스트에 알립니다.  
@@ -38,7 +38,7 @@ HRESULT LeaveRuntime (
 );  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `target`  
  [in] 관리 되지 않는 함수를 호출할 수의 매핑된 이식 가능한 실행 파일 내 주소입니다.  
   

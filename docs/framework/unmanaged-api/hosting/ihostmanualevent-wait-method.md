@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 242c13a381445d5fe9551553cd1e3febc81cb2fc
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a70d5daf6626a26842d91ff6a35d0abf26d79ad1
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54638225"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57492571"
 ---
 # <a name="ihostmanualeventwait-method"></a>IHostManualEvent::Wait 메서드
 현재 [IHostManualEvent](../../../../docs/framework/unmanaged-api/hosting/ihostmanualevent-interface.md) 을 소유 하는 때까지 대기 하는 인스턴스 또는 지정된 된 시간 간격이 경과 시간입니다.  
@@ -36,7 +36,7 @@ HRESULT Wait (
 );  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `dwMilliseconds`  
  [in] 하는 경우 반환 되기 전에 대기할 시간을 밀리초 단위로 현재 `IHostManualEvent` 인스턴스를 소유 하지 않습니다.  
   

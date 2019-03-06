@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 970e57e3caee7631c8e85aef428df52ec293b9cf
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3310f584475a4d6a6f0e3e790db13875faf60cf2
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54648812"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57466689"
 ---
 # <a name="iclrhostbindingpolicymanagerevaluatepolicy-method"></a>ICLRHostBindingPolicyManager::EvaluatePolicy 메서드
 호스트를 대신 하 여 바인딩 정책을 평가합니다.  
@@ -40,7 +40,7 @@ HRESULT EvaluatePolicy (
 );  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `pwzReferenceIdentity`  
  [in] 정책 평가 하기 전에 어셈블리에 대 한 참조입니다.  
   
@@ -65,7 +65,7 @@ HRESULT EvaluatePolicy (
 |-------------|-----------------|  
 |S_OK|평가 완료 합니다.|  
 |E_INVALIDARG|중 하나 `pwzReferenceIdentity` 또는 `pbApplicationPolicy` 가 null 참조입니다.|  
-|ERROR_INSUFFICIENT_BUFFER|`cbAppPolicySize`가 너무 작습니다.|  
+|ERROR_INSUFFICIENT_BUFFER|`cbAppPolicySize` 너무 작습니다.|  
 |HOST_E_CLRNOTAVAILABLE|프로세스에는 CLR (공용 언어 런타임)에 로드 되지 또는 CLR 상태인는 관리 코드를 실행 하거나 호출을 처리할 수 없습니다.|  
 |HOST_E_TIMEOUT|호출 시간이 초과 되었습니다.|  
 |HOST_E_NOT_OWNER|호출자가 잠금을 소유 하지 않습니다.|  

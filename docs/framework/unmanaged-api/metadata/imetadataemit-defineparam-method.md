@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 33bff2b72f2381fea461bb043506ee78f757dea8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5384dd69578dbd912690b9490bd4bfa762ccd56d
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54504905"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57475309"
 ---
 # <a name="imetadataemitdefineparam-method"></a>IMetaDataEmit::DefineParam 메서드
 지정한 시그니처를 지정된 된 토큰에서 참조 하는 메서드를 사용 하 여 매개 변수 정의 만들고 해당 매개 변수 정의 대 한 토큰을 가져옵니다.  
@@ -42,7 +42,7 @@ HRESULT DefineParam (
 );  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `md`  
  [in] 매개 변수를 정의 하는 메서드에 대 한 토큰입니다.  
   

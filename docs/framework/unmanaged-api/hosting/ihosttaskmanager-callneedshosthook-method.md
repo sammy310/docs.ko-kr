@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bb91c5dfbe5c83e08d786043d7e4732fa19e53db
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4fa5807a52565a5444334b313dc8dfa315a15c13
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54566790"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57480561"
 ---
 # <a name="ihosttaskmanagercallneedshosthook-method"></a>IHostTaskManager::CallNeedsHostHook 메서드
 호스트를에서 CLR (공용 언어 런타임) 관리 되지 않는 함수에 지정된 된 호출을 인라인 할 수 있는지 여부를 지정할 수 있습니다.  
@@ -36,7 +36,7 @@ HRESULT CallNeedsHostHook (
 );  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `target`  
  [in] 관리 되지 않는 함수를 호출 하는 매핑된 pe (이식 가능) 파일 내 주소입니다.  
   

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - <seealso> XML tag
 - seealso XML tag
 ms.assetid: 36050c95-1af2-4284-b9b6-1a70691ed978
-ms.openlocfilehash: 9f857be6d0bd46233a49c7d2ff0931670baa95a6
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: dc205ee2bf85d4903037d4e8da529636f3dc388e
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56965304"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57494742"
 ---
 # <a name="seealso-visual-basic"></a>\<seealso > (Visual Basic)
 참고 항목 섹션에 표시 되는 링크를 지정 합니다.  
@@ -21,7 +21,7 @@ ms.locfileid: "56965304"
 <seealso cref="member"/>  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `member`  
  현재 컴파일 환경에서 호출할 수 있는 멤버 또는 필드에 대한 참조입니다. 컴파일러는 지정된 코드 요소가 있으며 `member`를 출력 XML의 요소 이름에 전달하는지 확인합니다. `member`는 큰따옴표(" ")로 묶어야 합니다.  
   

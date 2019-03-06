@@ -5,12 +5,12 @@ helpviewer_keywords:
 - raw input [WPF]
 - FilterInputMessage method [WPF]
 ms.assetid: 4d74c6cf-7d1d-49ff-96c1-231340ce54f5
-ms.openlocfilehash: 1b255c342416bd8ee01b858af3b6c8e5b6ee787b
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 65d7795b6c4d8f1386ac9a74772fe8b76bb47622
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57368248"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57466901"
 ---
 # <a name="filterinputmessage"></a>FilterInputMessage
 E_NOTIMPL이 반환되지 않는 한 메시지를 받을 때마다 PresentationHost.exe에서 호출됩니다.  
@@ -21,7 +21,7 @@ E_NOTIMPL이 반환되지 않는 한 메시지를 받을 때마다 PresentationH
 HRESULT FilterInputMessage( [in] MSG* pMsg ) ;  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `pMsg`  
   
  [in] 원시 입력을 가져오는 창으로 전송되는 WM_INPUT 메시지입니다.  

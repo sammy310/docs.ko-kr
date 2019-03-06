@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5262ba6ef0d2d36372326df24b519072e2aa6fc6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: da116de6bde01ea7fd17f7ab27605501ae723f30
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54587517"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57473009"
 ---
 # <a name="icorprofilerinfo3getruntimeinformation-method"></a>ICorProfilerInfo3::GetRuntimeInformation 메서드
 CLR (공용 언어 런타임) 프로 파일링 되는 버전 정보를 제공 합니다.  
@@ -43,7 +43,7 @@ HRESULT GetRuntimeInformation(
                    WCHAR  szVersionString[]);  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `pClrInstanceId`  
  [out] 프로세스에서 실행 중인 CLR 인스턴스의 담당자 ID입니다. 이 동일 합니다 `ClrInstanceID` Windows (ETW) 시작 이벤트에 대 한 이벤트 추적을 보고 하는 합니다.  
   

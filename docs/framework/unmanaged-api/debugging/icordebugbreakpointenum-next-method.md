@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 11c08e59813014bf9a474e92d06c6bd2576dd7d5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 18b65eb3e733fa7970e4c0e7de09755598eaf149
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33404874"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57474984"
 ---
 # <a name="icordebugbreakpointenumnext-method"></a>ICorDebugBreakpointEnum::Next 메서드
-현재 위치부터 시작 하는 열거형에서 지정 된 ICorDebugBreakpoint 인스턴스 수를 가져옵니다.  
+ICorDebugBreakpoint 인스턴스 수가 지정 된 현재 위치부터 시작 하는 열거형에서 가져옵니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -38,21 +38,21 @@ HRESULT Next (
 );  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `celt`  
  [in] 수가 `ICorDebugBreakpoint` 인스턴스를 검색할 수 있습니다.  
   
  `breakpoints`  
- [out] 각각 가리키는 포인터의 배열은 `ICorDebugBreakpoint` 중단점을 나타내는 개체입니다.  
+ [out] 각각 가리키는 포인터 배열을 `ICorDebugBreakpoint` 중단점을 나타내는 개체입니다.  
   
  `pceltFetched`  
- [out] 수에 대 한 포인터 `ICorDebugBreakpoint` 실제로 반환 된 인스턴스. 이 값은 null 일 수 있으면 `celt` 하나입니다.  
+ [out] 개수에 대 한 포인터 `ICorDebugBreakpoint` 실제로 반환 된 인스턴스. 이 값은 null 일 수 있으면 `celt` 하나입니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** 참조 [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)합니다.  
+ **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
   
  **헤더:** CorDebug.idl, CorDebug.h  
   
  **라이브러리:** CorGuids.lib  
   
- **.NET framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

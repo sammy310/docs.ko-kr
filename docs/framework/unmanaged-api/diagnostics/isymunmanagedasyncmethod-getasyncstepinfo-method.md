@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 3ef5b4b8-4ac7-4906-849b-f932c5e3db07
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fa87188765450e84fc2417be8530ff43c88c237c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 34792ddc7d32c89f6572a48e4636a63881611b88
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54666230"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57473554"
 ---
 # <a name="isymunmanagedasyncmethodgetasyncstepinfo-method"></a>ISymUnmanagedAsyncMethod::GetAsyncStepInfo 메서드
 참조 [DefineAsyncStepInfo 메서드](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedasyncmethodpropertieswriter-defineasyncstepinfo-method.md)합니다.  
@@ -20,7 +20,7 @@ ms.locfileid: "54666230"
 HRESULT GetAsyncStepInfo(    [in] ULONG32 cStepInfo,    [out] ULONG32 *pcStepInfo,    [in, size_is(cStepInfo)] ULONG32 yieldOffsets[],    [in, size_is(cStepInfo)] ULONG32 breakpointOffset[],    [in, size_is(cStepInfo)] mdToken breakpointMethod[]);  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
   
 |매개 변수|설명|  
 |---------------|-----------------|  

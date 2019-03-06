@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 54d0f4582805b140aafd5825e34c429992e9bbcc
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 909e18fe9086fa954ffc389ffe1c6fe49217d2f5
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54707741"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57492454"
 ---
 # <a name="iclrprobingassemblyenumget-method"></a>ICLRProbingAssemblyEnum::Get 메서드
 지정된 된 인덱스에서 어셈블리 id를 가져옵니다.  
@@ -37,7 +37,7 @@ HRESULT Get (
 );  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `dwIndex`  
  [in] 반환할 어셈블리 id의 0부터 시작 하는 인덱스입니다.  
   
@@ -52,7 +52,7 @@ HRESULT Get (
 |HRESULT|설명|  
 |-------------|-----------------|  
 |S_OK|`Get` 성공적으로 반환 합니다.|  
-|ERROR_INSUFFICIENT_BUFFER|`pwzBuffer`가 너무 작습니다.|  
+|ERROR_INSUFFICIENT_BUFFER|`pwzBuffer` 너무 작습니다.|  
 |ERROR_NO_MORE_ITEMS|열거형에는 더 이상 항목이 포함 됩니다.|  
 |HOST_E_CLRNOTAVAILABLE|프로세스에는 CLR (공용 언어 런타임)에 로드 되지 또는 CLR 상태인는 관리 코드를 실행 하거나 호출을 처리할 수 없습니다.|  
 |HOST_E_TIMEOUT|호출 시간이 초과 되었습니다.|  

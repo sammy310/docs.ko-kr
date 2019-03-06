@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 95a434cc365e12aa19d164951726ddad8945f60d
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 261d80caa43ec478d3a3a33acdebcc1bfcfde8cf
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56974135"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57500709"
 ---
 # <a name="addimport-method"></a>AddImport 메서드
 어셈블리에 가져오기를 추가합니다.  
@@ -38,7 +38,7 @@ HRESULT AddImport(
 ) PURE;  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `AssemblyID`  
  확대 하 여 어셈블리의 고유 ID입니다.  
   

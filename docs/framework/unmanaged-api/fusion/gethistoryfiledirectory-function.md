@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: defe69e8d205a0c66f806e4ffacb09d5a9f63309
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 21742881c5aef7384be318297aa3432411c3d57c
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54552114"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57479283"
 ---
 # <a name="gethistoryfiledirectory-function"></a>GetHistoryFileDirectory 함수
 응용 프로그램 기록 디렉터리의 경로 검색합니다.  
@@ -35,7 +35,7 @@ HRESULT GetHistoryFileDirectory (
 );  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `wzDir`  
  [out] 응용 프로그램 기록 디렉터리 경로 저장할 버퍼입니다.  
   

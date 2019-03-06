@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 73225303-8852-487e-9a0e-9f0cb95e99d9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 739b2412d6b75df0921f778c95cc2fe65fef9b79
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c38c3399c95d40acd6fafb05f51eb934647827e3
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54636042"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57471761"
 ---
 # <a name="icordebugexceptiondebugeventgetflags-method"></a>ICorDebugExceptionDebugEvent::GetFlags 메서드
 예외를 가로챌 수 있는지 여부를 나타내는 플래그를 가져옵니다.  
@@ -22,7 +22,7 @@ HRESULT GetFlags(
 );  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `pdwFlags`  
  [out] 에 대 한 포인터를 [CorDebugExceptionFlags](../../../../docs/framework/unmanaged-api/debugging/cordebugexceptionflags-enumeration.md) 예외를 가로챌 수 있는지 여부를 나타내는 값입니다.  
   

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: aa5ca8871ab284d2a46e6777b226f5a9b155e566
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7bc4b1a58bba592cfff408f034fb19c0c27616c3
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54502471"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57480548"
 ---
 # <a name="icorprofilercallbackmoduleloadstarted-method"></a>ICorProfilerCallback::ModuleLoadStarted 메서드
 모듈 로드 되는 프로파일러에 알립니다.  
@@ -34,7 +34,7 @@ HRESULT ModuleLoadStarted(
     [in] ModuleID moduleId);  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `moduleId`  
  [in] 로드 되는 모듈의 ID입니다.  
   

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d2b4285cf667bfb929956f23e9dc051e0070fff9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8cabf9d059a14411af48c165ab9c913156e696a4
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54560995"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57500748"
 ---
 # <a name="iclrassemblyidentitymanagergetprobingassembliesfromreference-method"></a>ICLRAssemblyIdentityManager::GetProbingAssembliesFromReference 메서드
 가져옵니다는 [ICLRProbingAssemblyEnum](../../../../docs/framework/unmanaged-api/hosting/iclrprobingassemblyenum-interface.md) 지정 된 id 형식 사용 하 여 어셈블리에서 참조 된 어셈블리 id에 대 한 열거자입니다.  
@@ -38,7 +38,7 @@ HRESULT GetProbingAssembliesFromReference (
 );  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `dwMachineType`  
  [in] WinNT.h에 정의 된 대로 프로세서 아키텍처를 지정 하는 유효한 값입니다.  
   

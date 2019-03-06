@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 905ce9183d295568977eb7e216e5327d6b4ee8bb
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0afd3b187b0424be939146f02f4baed837be444c
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54636094"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57466819"
 ---
 # <a name="ihostthreadpoolmanagersetmaxthreads-method"></a>IHostThreadPoolManager::SetMaxThreads 메서드
 스레드 풀에서 호스트를 유지할 수 있는 스레드의 최대 수를 설정 합니다.  
@@ -35,7 +35,7 @@ HRESULT SetMaxThreads (
 );  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `MaxThreads`  
  스레드 풀에 있는 최대 작업자 스레드 수입니다.  
   

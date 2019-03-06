@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 217e0942e523b533656f4d194d2b3e3ec63c6db7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f55ccf3c7937e9b54f841d7ecaebaa6155bfc615
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54683351"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57475218"
 ---
 # <a name="icorprofilercallbackclassunloadstarted-method"></a>ICorProfilerCallback::ClassUnloadStarted 메서드
 클래스를 언로드되고 있음을 프로파일러에 알립니다.  
@@ -34,7 +34,7 @@ HRESULT ClassUnloadStarted(
     [in] ClassID classId);  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `classId`  
  [in] 언로드되고는 클래스를 식별 합니다.  
   

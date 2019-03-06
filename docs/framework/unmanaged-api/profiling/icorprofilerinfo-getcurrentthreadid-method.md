@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 8be698d27ce69f955e5c1f17f5258602880c4021
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 32b44cb3a96205e8a784c81a05324370fb5ac67e
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54618700"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57478546"
 ---
 # <a name="icorprofilerinfogetcurrentthreadid-method"></a>ICorProfilerInfo::GetCurrentThreadID 메서드
 관리 되는 스레드 이면 현재 스레드의 ID를 가져옵니다.  
@@ -34,7 +34,7 @@ HRESULT GetCurrentThreadID(
     [out] ThreadID *pThreadId);  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `pThreadId`  
  [out] 관리 되는 스레드의 반환된 된 ID에 대 한 포인터입니다.  
   

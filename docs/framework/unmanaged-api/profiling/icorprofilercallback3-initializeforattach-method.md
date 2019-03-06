@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4ebdd76655124922008667898e38f873ad93598e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a8590a40ca74296bab618d6c0ba95f1683cf33cd
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54555598"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57466260"
 ---
 # <a name="icorprofilercallback3initializeforattach-method"></a>ICorProfilerCallback3::InitializeForAttach 메서드
 프로파일러가 연결 작업 후 상태를 초기화할 수 있도록 CLR(공용 언어 런타임)에 의해 호출됩니다.  
@@ -36,7 +36,7 @@ HRESULT InitializeForAttach(
             [in] UINT cbClientData);  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `pCorProfilerInfoUnk`  
  [in] `ICorProfilerInfo*` 인터페이스에 대한 인터페이스 포인터입니다.  
   
