@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 932d4ecbf34a636d37a60af0ba11f3fc149ffcea
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 12ba95eca2a103cffa07247a6ce474263e42e5ad
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54649650"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57487527"
 ---
-# <a name="icordebugobjectvalueisvalueclass-method"></a><span data-ttu-id="3b728-102">ICorDebugObjectValue::IsValueClass 메서드</span><span class="sxs-lookup"><span data-stu-id="3b728-102">ICorDebugObjectValue::IsValueClass Method</span></span>
-<span data-ttu-id="3b728-103">이 개체 값을 값 형식 인지 여부를 나타내는 값을 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="3b728-103">Gets a value that indicates whether this object value is a value type.</span></span>  
+# <a name="icordebugobjectvalueisvalueclass-method"></a><span data-ttu-id="d9718-102">ICorDebugObjectValue::IsValueClass 메서드</span><span class="sxs-lookup"><span data-stu-id="d9718-102">ICorDebugObjectValue::IsValueClass Method</span></span>
+<span data-ttu-id="d9718-103">이 개체 값을 값 형식 인지 여부를 나타내는 값을 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="d9718-103">Gets a value that indicates whether this object value is a value type.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="3b728-104">구문</span><span class="sxs-lookup"><span data-stu-id="3b728-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="d9718-104">구문</span><span class="sxs-lookup"><span data-stu-id="d9718-104">Syntax</span></span>  
   
 ```  
 HRESULT IsValueClass (  
@@ -35,19 +35,19 @@ HRESULT IsValueClass (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="3b728-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="3b728-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="d9718-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="d9718-105">Parameters</span></span>  
  `pbIsValueClass`  
- <span data-ttu-id="3b728-106">[out] 부울 값에 대 한 포인터 `true` 는 참조 형식 보다는 값 형식 개체 값이 "ICorDebugObjectValue"를 나타내는 경우이 고, 그렇지 `pbIsValueClass` 는 `false`합니다.</span><span class="sxs-lookup"><span data-stu-id="3b728-106">[out] A pointer to a Boolean value that is `true` if the object value, represented by this "ICorDebugObjectValue", is a value type rather than a reference type; otherwise, `pbIsValueClass` is `false`.</span></span>  
+ <span data-ttu-id="d9718-106">[out] 부울 값에 대 한 포인터 `true` 는 참조 형식 보다는 값 형식 개체 값이 "ICorDebugObjectValue"를 나타내는 경우이 고, 그렇지 `pbIsValueClass` 는 `false`합니다.</span><span class="sxs-lookup"><span data-stu-id="d9718-106">[out] A pointer to a Boolean value that is `true` if the object value, represented by this "ICorDebugObjectValue", is a value type rather than a reference type; otherwise, `pbIsValueClass` is `false`.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="3b728-107">요구 사항</span><span class="sxs-lookup"><span data-stu-id="3b728-107">Requirements</span></span>  
- <span data-ttu-id="3b728-108">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="3b728-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="d9718-107">요구 사항</span><span class="sxs-lookup"><span data-stu-id="d9718-107">Requirements</span></span>  
+ <span data-ttu-id="d9718-108">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="d9718-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="3b728-109">**헤더:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="3b728-109">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="d9718-109">**헤더:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="d9718-109">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="3b728-110">**라이브러리:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="3b728-110">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="d9718-110">**라이브러리:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="d9718-110">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="3b728-111">**.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="3b728-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="d9718-111">**.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="d9718-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="3b728-112">참고자료</span><span class="sxs-lookup"><span data-stu-id="3b728-112">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="d9718-112">참고자료</span><span class="sxs-lookup"><span data-stu-id="d9718-112">See also</span></span>
 
 

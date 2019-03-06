@@ -16,17 +16,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b3c145bae61922894f4893d532923319ccf16f85
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 88006703ba4a491ae458868a1431be618d37252a
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54499014"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57471201"
 ---
-# <a name="importfile2-method"></a><span data-ttu-id="85439-102">ImportFile2 메서드</span><span class="sxs-lookup"><span data-stu-id="85439-102">ImportFile2 Method</span></span>
-<span data-ttu-id="85439-103">어셈블리 및 바인딩되지 않은 모듈을 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="85439-103">Imports assemblies and unbound modules.</span></span> <span data-ttu-id="85439-104">이 메서드는 [ImportFile 메서드](../../../../docs/framework/unmanaged-api/alink/importfile-method.md), 되지만 가져올 파일 디스크에 없는 경우 경우에 작동 합니다.</span><span class="sxs-lookup"><span data-stu-id="85439-104">This method is like [ImportFile Method](../../../../docs/framework/unmanaged-api/alink/importfile-method.md), but works even if the file being imported does not exist on disk.</span></span>  
+# <a name="importfile2-method"></a><span data-ttu-id="8ded9-102">ImportFile2 메서드</span><span class="sxs-lookup"><span data-stu-id="8ded9-102">ImportFile2 Method</span></span>
+<span data-ttu-id="8ded9-103">어셈블리 및 바인딩되지 않은 모듈을 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="8ded9-103">Imports assemblies and unbound modules.</span></span> <span data-ttu-id="8ded9-104">이 메서드는 [ImportFile 메서드](../../../../docs/framework/unmanaged-api/alink/importfile-method.md), 되지만 가져올 파일 디스크에 없는 경우 경우에 작동 합니다.</span><span class="sxs-lookup"><span data-stu-id="8ded9-104">This method is like [ImportFile Method](../../../../docs/framework/unmanaged-api/alink/importfile-method.md), but works even if the file being imported does not exist on disk.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="85439-105">구문</span><span class="sxs-lookup"><span data-stu-id="85439-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="8ded9-105">구문</span><span class="sxs-lookup"><span data-stu-id="8ded9-105">Syntax</span></span>  
   
 ```  
 HRESULT ImportFile2(  
@@ -40,35 +40,35 @@ HRESULT ImportFile2(
 ) PURE;  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="85439-106">매개 변수</span><span class="sxs-lookup"><span data-stu-id="85439-106">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="8ded9-106">매개 변수</span><span class="sxs-lookup"><span data-stu-id="8ded9-106">Parameters</span></span>  
  `pszFilename`  
- <span data-ttu-id="85439-107">가져올 파일의 이름입니다.</span><span class="sxs-lookup"><span data-stu-id="85439-107">Name of file to be imported.</span></span>  
+ <span data-ttu-id="8ded9-107">가져올 파일의 이름입니다.</span><span class="sxs-lookup"><span data-stu-id="8ded9-107">Name of file to be imported.</span></span>  
   
  `pszTargetName`  
- <span data-ttu-id="85439-108">어셈블리에 링크 되어 파일의 이름을 사용할 수 있는 선택적 출력 파일 이름입니다.</span><span class="sxs-lookup"><span data-stu-id="85439-108">Optional output file name that can be used to rename the file as it is linked into the assembly.</span></span>  
+ <span data-ttu-id="8ded9-108">어셈블리에 링크 되어 파일의 이름을 사용할 수 있는 선택적 출력 파일 이름입니다.</span><span class="sxs-lookup"><span data-stu-id="8ded9-108">Optional output file name that can be used to rename the file as it is linked into the assembly.</span></span>  
   
  `pAssemblyScopeIn`  
- <span data-ttu-id="85439-109">선택적 범위 [IMetaDataAssemblyImport 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md) 인터페이스입니다.</span><span class="sxs-lookup"><span data-stu-id="85439-109">Optional scope [IMetaDataAssemblyImport Interface](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md) interface.</span></span>  
+ <span data-ttu-id="8ded9-109">선택적 범위 [IMetaDataAssemblyImport 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md) 인터페이스입니다.</span><span class="sxs-lookup"><span data-stu-id="8ded9-109">Optional scope [IMetaDataAssemblyImport Interface](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md) interface.</span></span>  
   
  `fSmartImport`  
- <span data-ttu-id="85439-110">TRUE 이면 ImportTypes 되, 그렇지 않으면 가져오기는 수동으로 수행 해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="85439-110">If TRUE, ImportTypes is used, otherwise importing must be performed manually.</span></span>  
+ <span data-ttu-id="8ded9-110">TRUE 이면 ImportTypes 되, 그렇지 않으면 가져오기는 수동으로 수행 해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="8ded9-110">If TRUE, ImportTypes is used, otherwise importing must be performed manually.</span></span>  
   
  `pImportToken`  
- <span data-ttu-id="85439-111">파일 또는 어셈블리에 대 한 ID를 받습니다.</span><span class="sxs-lookup"><span data-stu-id="85439-111">Receives the ID for the file or assembly.</span></span>  
+ <span data-ttu-id="8ded9-111">파일 또는 어셈블리에 대 한 ID를 받습니다.</span><span class="sxs-lookup"><span data-stu-id="8ded9-111">Receives the ID for the file or assembly.</span></span>  
   
  `ppAssemblyScope`  
- <span data-ttu-id="85439-112">수신 된 [IMetaDataAssemblyImport 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md) 인터페이스입니다.</span><span class="sxs-lookup"><span data-stu-id="85439-112">Receives the [IMetaDataAssemblyImport Interface](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md) interface.</span></span> <span data-ttu-id="85439-113">파일 어셈블리가 아닌 경우 NULL입니다.</span><span class="sxs-lookup"><span data-stu-id="85439-113">NULL if the file is not an assembly.</span></span>  
+ <span data-ttu-id="8ded9-112">수신 된 [IMetaDataAssemblyImport 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md) 인터페이스입니다.</span><span class="sxs-lookup"><span data-stu-id="8ded9-112">Receives the [IMetaDataAssemblyImport Interface](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md) interface.</span></span> <span data-ttu-id="8ded9-113">파일 어셈블리가 아닌 경우 NULL입니다.</span><span class="sxs-lookup"><span data-stu-id="8ded9-113">NULL if the file is not an assembly.</span></span>  
   
  `pdwCountOfScopes`  
- <span data-ttu-id="85439-114">파일 및/또는 가져온 범위 발견을 받습니다.</span><span class="sxs-lookup"><span data-stu-id="85439-114">Receives the found of files and/or scopes imported.</span></span>  
+ <span data-ttu-id="8ded9-114">파일 및/또는 가져온 범위 발견을 받습니다.</span><span class="sxs-lookup"><span data-stu-id="8ded9-114">Receives the found of files and/or scopes imported.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="85439-115">반환 값</span><span class="sxs-lookup"><span data-stu-id="85439-115">Return Value</span></span>  
- <span data-ttu-id="85439-116">메서드가 성공 하면 S_OK를 반환 합니다.</span><span class="sxs-lookup"><span data-stu-id="85439-116">Returns S_OK if the method succeeds.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="8ded9-115">반환 값</span><span class="sxs-lookup"><span data-stu-id="8ded9-115">Return Value</span></span>  
+ <span data-ttu-id="8ded9-116">메서드가 성공 하면 S_OK를 반환 합니다.</span><span class="sxs-lookup"><span data-stu-id="8ded9-116">Returns S_OK if the method succeeds.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="85439-117">요구 사항</span><span class="sxs-lookup"><span data-stu-id="85439-117">Requirements</span></span>  
- <span data-ttu-id="85439-118">Alink.h가 필요합니다.</span><span class="sxs-lookup"><span data-stu-id="85439-118">Requires alink.h.</span></span>  
+## <a name="requirements"></a><span data-ttu-id="8ded9-117">요구 사항</span><span class="sxs-lookup"><span data-stu-id="8ded9-117">Requirements</span></span>  
+ <span data-ttu-id="8ded9-118">Alink.h가 필요합니다.</span><span class="sxs-lookup"><span data-stu-id="8ded9-118">Requires alink.h.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="85439-119">참고자료</span><span class="sxs-lookup"><span data-stu-id="85439-119">See also</span></span>
-- [<span data-ttu-id="85439-120">IALink 인터페이스</span><span class="sxs-lookup"><span data-stu-id="85439-120">IALink Interface</span></span>](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
-- [<span data-ttu-id="85439-121">IALink2 인터페이스</span><span class="sxs-lookup"><span data-stu-id="85439-121">IALink2 Interface</span></span>](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
-- [<span data-ttu-id="85439-122">ALink API</span><span class="sxs-lookup"><span data-stu-id="85439-122">ALink API</span></span>](../../../../docs/framework/unmanaged-api/alink/index.md)
+## <a name="see-also"></a><span data-ttu-id="8ded9-119">참고자료</span><span class="sxs-lookup"><span data-stu-id="8ded9-119">See also</span></span>
+- [<span data-ttu-id="8ded9-120">IALink 인터페이스</span><span class="sxs-lookup"><span data-stu-id="8ded9-120">IALink Interface</span></span>](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
+- [<span data-ttu-id="8ded9-121">IALink2 인터페이스</span><span class="sxs-lookup"><span data-stu-id="8ded9-121">IALink2 Interface</span></span>](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
+- [<span data-ttu-id="8ded9-122">ALink API</span><span class="sxs-lookup"><span data-stu-id="8ded9-122">ALink API</span></span>](../../../../docs/framework/unmanaged-api/alink/index.md)

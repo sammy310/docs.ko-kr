@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 395ba0eb2c47b52192d8058cc5020e45c00148e5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8f111736f1a8115614cbeb13402f0ef75cf6038f
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54689931"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57479326"
 ---
-# <a name="lpthreadstartroutine-function-pointer"></a><span data-ttu-id="62a40-102">LPTHREAD_START_ROUTINE 함수 포인터</span><span class="sxs-lookup"><span data-stu-id="62a40-102">LPTHREAD_START_ROUTINE Function Pointer</span></span>
-<span data-ttu-id="62a40-103">스레드 실행을 시작 했음을 호스트에 알리는 함수를 가리킵니다.</span><span class="sxs-lookup"><span data-stu-id="62a40-103">Points to a function that notifies the host that a thread has started to execute.</span></span>  
+# <a name="lpthreadstartroutine-function-pointer"></a><span data-ttu-id="755c8-102">LPTHREAD_START_ROUTINE 함수 포인터</span><span class="sxs-lookup"><span data-stu-id="755c8-102">LPTHREAD_START_ROUTINE Function Pointer</span></span>
+<span data-ttu-id="755c8-103">스레드 실행을 시작 했음을 호스트에 알리는 함수를 가리킵니다.</span><span class="sxs-lookup"><span data-stu-id="755c8-103">Points to a function that notifies the host that a thread has started to execute.</span></span>  
   
- <span data-ttu-id="62a40-104">이 함수 포인터에서 사용 중단에 [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)]합니다.</span><span class="sxs-lookup"><span data-stu-id="62a40-104">This function pointer has been deprecated in the [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)].</span></span>  
+ <span data-ttu-id="755c8-104">이 함수 포인터에서 사용 중단에 [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)]합니다.</span><span class="sxs-lookup"><span data-stu-id="755c8-104">This function pointer has been deprecated in the [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)].</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="62a40-105">구문</span><span class="sxs-lookup"><span data-stu-id="62a40-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="755c8-105">구문</span><span class="sxs-lookup"><span data-stu-id="755c8-105">Syntax</span></span>  
   
 ```  
 typedef DWORD (__stdcall *LPTHREAD_START_ROUTINE) (  
@@ -36,21 +36,21 @@ typedef DWORD (__stdcall *LPTHREAD_START_ROUTINE) (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="62a40-106">매개 변수</span><span class="sxs-lookup"><span data-stu-id="62a40-106">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="755c8-106">매개 변수</span><span class="sxs-lookup"><span data-stu-id="755c8-106">Parameters</span></span>  
  `lpThreadParameter`  
- <span data-ttu-id="62a40-107">[in] 실행 시작 된 코드에 대 한 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="62a40-107">[in] A pointer to the code that has started executing.</span></span>  
+ <span data-ttu-id="755c8-107">[in] 실행 시작 된 코드에 대 한 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="755c8-107">[in] A pointer to the code that has started executing.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="62a40-108">설명</span><span class="sxs-lookup"><span data-stu-id="62a40-108">Remarks</span></span>  
- <span data-ttu-id="62a40-109">함수는 `LPTHREAD_START_ROUTINE` 지점은 콜백 함수 및 호스팅 응용 프로그램의 작성기에 의해 구현 되어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="62a40-109">The function to which `LPTHREAD_START_ROUTINE` points is a callback function and must be implemented by the writer of the hosting application.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="755c8-108">설명</span><span class="sxs-lookup"><span data-stu-id="755c8-108">Remarks</span></span>  
+ <span data-ttu-id="755c8-109">함수는 `LPTHREAD_START_ROUTINE` 지점은 콜백 함수 및 호스팅 응용 프로그램의 작성기에 의해 구현 되어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="755c8-109">The function to which `LPTHREAD_START_ROUTINE` points is a callback function and must be implemented by the writer of the hosting application.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="62a40-110">요구 사항</span><span class="sxs-lookup"><span data-stu-id="62a40-110">Requirements</span></span>  
- <span data-ttu-id="62a40-111">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="62a40-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="755c8-110">요구 사항</span><span class="sxs-lookup"><span data-stu-id="755c8-110">Requirements</span></span>  
+ <span data-ttu-id="755c8-111">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="755c8-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="62a40-112">**헤더:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="62a40-112">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="755c8-112">**헤더:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="755c8-112">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="62a40-113">**라이브러리:** MSCorWks.dll</span><span class="sxs-lookup"><span data-stu-id="62a40-113">**Library:** MSCorWks.dll</span></span>  
+ <span data-ttu-id="755c8-113">**라이브러리:** MSCorWks.dll</span><span class="sxs-lookup"><span data-stu-id="755c8-113">**Library:** MSCorWks.dll</span></span>  
   
- <span data-ttu-id="62a40-114">**.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="62a40-114">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="755c8-114">**.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="755c8-114">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="62a40-115">참고자료</span><span class="sxs-lookup"><span data-stu-id="62a40-115">See also</span></span>
-- [<span data-ttu-id="62a40-116">사용되지 않는 CLR 호스팅 함수</span><span class="sxs-lookup"><span data-stu-id="62a40-116">Deprecated CLR Hosting Functions</span></span>](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)
+## <a name="see-also"></a><span data-ttu-id="755c8-115">참고자료</span><span class="sxs-lookup"><span data-stu-id="755c8-115">See also</span></span>
+- [<span data-ttu-id="755c8-116">사용되지 않는 CLR 호스팅 함수</span><span class="sxs-lookup"><span data-stu-id="755c8-116">Deprecated CLR Hosting Functions</span></span>](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)

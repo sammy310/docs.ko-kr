@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4b8e0807cd03c7abfee0856d52cae0454b9f1a29
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 040c7dea7f751accb801f8fda190e9387c7aede1
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54587793"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57466169"
 ---
-# <a name="icordebugmanagedcallbacklogswitch-method"></a><span data-ttu-id="68eae-102">ICorDebugManagedCallback::LogSwitch 메서드</span><span class="sxs-lookup"><span data-stu-id="68eae-102">ICorDebugManagedCallback::LogSwitch Method</span></span>
-<span data-ttu-id="68eae-103">공용 언어 런타임 (CLR) 관리 되는 스레드에서의 메서드를 호출에 디버거에 알립니다는 <xref:System.Diagnostics.Switch> 클래스를 만들기, 수정 또는 디버깅/추적 스위치를 삭제 합니다.</span><span class="sxs-lookup"><span data-stu-id="68eae-103">Notifies the debugger that a common language runtime (CLR) managed thread has called a method in the <xref:System.Diagnostics.Switch> class to create, modify, or delete a debugging/tracing switch.</span></span>  
+# <a name="icordebugmanagedcallbacklogswitch-method"></a><span data-ttu-id="c6e6a-102">ICorDebugManagedCallback::LogSwitch 메서드</span><span class="sxs-lookup"><span data-stu-id="c6e6a-102">ICorDebugManagedCallback::LogSwitch Method</span></span>
+<span data-ttu-id="c6e6a-103">공용 언어 런타임 (CLR) 관리 되는 스레드에서의 메서드를 호출에 디버거에 알립니다는 <xref:System.Diagnostics.Switch> 클래스를 만들기, 수정 또는 디버깅/추적 스위치를 삭제 합니다.</span><span class="sxs-lookup"><span data-stu-id="c6e6a-103">Notifies the debugger that a common language runtime (CLR) managed thread has called a method in the <xref:System.Diagnostics.Switch> class to create, modify, or delete a debugging/tracing switch.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="68eae-104">구문</span><span class="sxs-lookup"><span data-stu-id="68eae-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="c6e6a-104">구문</span><span class="sxs-lookup"><span data-stu-id="c6e6a-104">Syntax</span></span>  
   
 ```  
 HRESULT LogSwitch (  
@@ -39,33 +39,33 @@ HRESULT LogSwitch (
     [in] WCHAR               *pParentName);  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="68eae-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="68eae-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="c6e6a-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="c6e6a-105">Parameters</span></span>  
  `PAppDomain`  
- <span data-ttu-id="68eae-106">[in] ICorDebugAppDomain 개체 생성, 수정 또는 디버깅/추적 스위치를 삭제 하는 관리 되는 스레드를 포함 하는 응용 프로그램 도메인을 나타내는 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="68eae-106">[in] A pointer to an ICorDebugAppDomain object that represents the application domain containing the managed thread that created, modified, or deleted a debugging/tracing switch.</span></span>  
+ <span data-ttu-id="c6e6a-106">[in] ICorDebugAppDomain 개체 생성, 수정 또는 디버깅/추적 스위치를 삭제 하는 관리 되는 스레드를 포함 하는 응용 프로그램 도메인을 나타내는 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="c6e6a-106">[in] A pointer to an ICorDebugAppDomain object that represents the application domain containing the managed thread that created, modified, or deleted a debugging/tracing switch.</span></span>  
   
  `pThread`  
- <span data-ttu-id="68eae-107">[in] 관리 되는 스레드를 나타내는 ICorDebugThread 개체에 대 한 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="68eae-107">[in] A pointer to an ICorDebugThread object that represents the managed thread.</span></span>  
+ <span data-ttu-id="c6e6a-107">[in] 관리 되는 스레드를 나타내는 ICorDebugThread 개체에 대 한 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="c6e6a-107">[in] A pointer to an ICorDebugThread object that represents the managed thread.</span></span>  
   
  `lLevel`  
- <span data-ttu-id="68eae-108">[in] 이벤트 로그에 기록 된 설명이 포함 된 메시지의 심각도 나타내는 값입니다.</span><span class="sxs-lookup"><span data-stu-id="68eae-108">[in] A value that indicates the severity level of the descriptive message that was written to the event log.</span></span>  
+ <span data-ttu-id="c6e6a-108">[in] 이벤트 로그에 기록 된 설명이 포함 된 메시지의 심각도 나타내는 값입니다.</span><span class="sxs-lookup"><span data-stu-id="c6e6a-108">[in] A value that indicates the severity level of the descriptive message that was written to the event log.</span></span>  
   
  `ulReason`  
- <span data-ttu-id="68eae-109">[in] 값을 [LogSwitchCallReason](../../../../docs/framework/unmanaged-api/debugging/logswitchcallreason-enumeration.md) 디버깅/추적 스위치에서 수행할 작업을 나타내는 열거형입니다.</span><span class="sxs-lookup"><span data-stu-id="68eae-109">[in] A value of the [LogSwitchCallReason](../../../../docs/framework/unmanaged-api/debugging/logswitchcallreason-enumeration.md) enumeration that indicates the operation performed on the debugging/tracing switch.</span></span>  
+ <span data-ttu-id="c6e6a-109">[in] 값을 [LogSwitchCallReason](../../../../docs/framework/unmanaged-api/debugging/logswitchcallreason-enumeration.md) 디버깅/추적 스위치에서 수행할 작업을 나타내는 열거형입니다.</span><span class="sxs-lookup"><span data-stu-id="c6e6a-109">[in] A value of the [LogSwitchCallReason](../../../../docs/framework/unmanaged-api/debugging/logswitchcallreason-enumeration.md) enumeration that indicates the operation performed on the debugging/tracing switch.</span></span>  
   
  `pLogSwitchName`  
- <span data-ttu-id="68eae-110">[in] 디버깅/추적 스위치의 이름에 대 한 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="68eae-110">[in] A pointer to the name of the debugging/tracing switch.</span></span>  
+ <span data-ttu-id="c6e6a-110">[in] 디버깅/추적 스위치의 이름에 대 한 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="c6e6a-110">[in] A pointer to the name of the debugging/tracing switch.</span></span>  
   
  `pParentName`  
- <span data-ttu-id="68eae-111">[in] 디버깅/추적 스위치의 부모 이름에 대 한 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="68eae-111">[in] A pointer to the name of the parent of the debugging/tracing switch.</span></span>  
+ <span data-ttu-id="c6e6a-111">[in] 디버깅/추적 스위치의 부모 이름에 대 한 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="c6e6a-111">[in] A pointer to the name of the parent of the debugging/tracing switch.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="68eae-112">요구 사항</span><span class="sxs-lookup"><span data-stu-id="68eae-112">Requirements</span></span>  
- <span data-ttu-id="68eae-113">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="68eae-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="c6e6a-112">요구 사항</span><span class="sxs-lookup"><span data-stu-id="c6e6a-112">Requirements</span></span>  
+ <span data-ttu-id="c6e6a-113">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="c6e6a-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="68eae-114">**헤더:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="68eae-114">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="c6e6a-114">**헤더:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="c6e6a-114">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="68eae-115">**라이브러리:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="68eae-115">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="c6e6a-115">**라이브러리:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="c6e6a-115">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="68eae-116">**.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="68eae-116">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="c6e6a-116">**.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="c6e6a-116">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="68eae-117">참고자료</span><span class="sxs-lookup"><span data-stu-id="68eae-117">See also</span></span>
-- [<span data-ttu-id="68eae-118">ICorDebugManagedCallback 인터페이스</span><span class="sxs-lookup"><span data-stu-id="68eae-118">ICorDebugManagedCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)
+## <a name="see-also"></a><span data-ttu-id="c6e6a-117">참고자료</span><span class="sxs-lookup"><span data-stu-id="c6e6a-117">See also</span></span>
+- [<span data-ttu-id="c6e6a-118">ICorDebugManagedCallback 인터페이스</span><span class="sxs-lookup"><span data-stu-id="c6e6a-118">ICorDebugManagedCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)

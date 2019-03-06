@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: da22570441324a01fea307116bc23601e62919a4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: a1da93ea073d6ae9f2e79f251014b2db5282a22c
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33411366"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57496016"
 ---
-# <a name="icordebugfunctionbreakpointgetfunction-method"></a><span data-ttu-id="f0f30-102">ICorDebugFunctionBreakpoint::GetFunction 메서드</span><span class="sxs-lookup"><span data-stu-id="f0f30-102">ICorDebugFunctionBreakpoint::GetFunction Method</span></span>
-<span data-ttu-id="f0f30-103">중단점이 설정 함수를 참조 하는 ICorDebugFunction에 대 한 인터페이스 포인터를 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="f0f30-103">Gets an interface pointer to an ICorDebugFunction that references the function in which the breakpoint is set.</span></span>  
+# <a name="icordebugfunctionbreakpointgetfunction-method"></a><span data-ttu-id="99054-102">ICorDebugFunctionBreakpoint::GetFunction 메서드</span><span class="sxs-lookup"><span data-stu-id="99054-102">ICorDebugFunctionBreakpoint::GetFunction Method</span></span>
+<span data-ttu-id="99054-103">중단점이 설정 된 함수를 참조 하는 ICorDebugFunction에 대 한 인터페이스 포인터를 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="99054-103">Gets an interface pointer to an ICorDebugFunction that references the function in which the breakpoint is set.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="f0f30-104">구문</span><span class="sxs-lookup"><span data-stu-id="f0f30-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="99054-104">구문</span><span class="sxs-lookup"><span data-stu-id="99054-104">Syntax</span></span>  
   
 ```  
 HRESULT GetFunction (  
@@ -35,15 +35,15 @@ HRESULT GetFunction (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="f0f30-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="f0f30-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="99054-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="99054-105">Parameters</span></span>  
  `ppFunction`  
- <span data-ttu-id="f0f30-106">[out] 중단점이 설정 된 함수의 주소에 대 한 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="f0f30-106">[out] A pointer to the address of the function in which the breakpoint is set.</span></span>  
+ <span data-ttu-id="99054-106">[out] 중단점이 설정 된 함수의 주소에 대 한 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="99054-106">[out] A pointer to the address of the function in which the breakpoint is set.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="f0f30-107">요구 사항</span><span class="sxs-lookup"><span data-stu-id="f0f30-107">Requirements</span></span>  
- <span data-ttu-id="f0f30-108">**플랫폼:** 참조 [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="f0f30-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="99054-107">요구 사항</span><span class="sxs-lookup"><span data-stu-id="99054-107">Requirements</span></span>  
+ <span data-ttu-id="99054-108">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="99054-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="f0f30-109">**헤더:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="f0f30-109">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="99054-109">**헤더:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="99054-109">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="f0f30-110">**라이브러리:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="f0f30-110">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="99054-110">**라이브러리:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="99054-110">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="f0f30-111">**.NET framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="f0f30-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
+ <span data-ttu-id="99054-111">**.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="99054-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>

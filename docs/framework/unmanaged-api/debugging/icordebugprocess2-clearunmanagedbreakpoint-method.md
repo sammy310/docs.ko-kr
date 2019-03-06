@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bc34ab9c8dbfe10282f36a241a4e433debef7dd0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: f4dcfb977f5ca87f2219fd3ed8ef87d16c2defd2
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33420497"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57472646"
 ---
-# <a name="icordebugprocess2clearunmanagedbreakpoint-method"></a><span data-ttu-id="88d4f-102">ICorDebugProcess2::ClearUnmanagedBreakpoint 메서드</span><span class="sxs-lookup"><span data-stu-id="88d4f-102">ICorDebugProcess2::ClearUnmanagedBreakpoint Method</span></span>
-<span data-ttu-id="88d4f-103">이전에 설정한 제거 주어진된 주소에 중단점.</span><span class="sxs-lookup"><span data-stu-id="88d4f-103">Removes a previously set breakpoint at the given address.</span></span>  
+# <a name="icordebugprocess2clearunmanagedbreakpoint-method"></a><span data-ttu-id="5760c-102">ICorDebugProcess2::ClearUnmanagedBreakpoint 메서드</span><span class="sxs-lookup"><span data-stu-id="5760c-102">ICorDebugProcess2::ClearUnmanagedBreakpoint Method</span></span>
+<span data-ttu-id="5760c-103">제거 이전에 설정한 중단점이 지정된 된 주소에서 합니다.</span><span class="sxs-lookup"><span data-stu-id="5760c-103">Removes a previously set breakpoint at the given address.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="88d4f-104">구문</span><span class="sxs-lookup"><span data-stu-id="88d4f-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="5760c-104">구문</span><span class="sxs-lookup"><span data-stu-id="5760c-104">Syntax</span></span>  
   
 ```  
 HRESULT ClearUnmanagedBreakpoint (  
@@ -35,22 +35,22 @@ HRESULT ClearUnmanagedBreakpoint (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="88d4f-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="88d4f-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="5760c-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="5760c-105">Parameters</span></span>  
  `address`  
- <span data-ttu-id="88d4f-106">[in] A `CORDB_ADDRESS` 중단점을 설정한 주소 지정 하는 값입니다.</span><span class="sxs-lookup"><span data-stu-id="88d4f-106">[in] A `CORDB_ADDRESS` value that specifies the address at which the breakpoint was set.</span></span>  
+ <span data-ttu-id="5760c-106">[in] `CORDB_ADDRESS` 중단점을 설정한 주소를 지정 하는 값입니다.</span><span class="sxs-lookup"><span data-stu-id="5760c-106">[in] A `CORDB_ADDRESS` value that specifies the address at which the breakpoint was set.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="88d4f-107">설명</span><span class="sxs-lookup"><span data-stu-id="88d4f-107">Remarks</span></span>  
- <span data-ttu-id="88d4f-108">지정 된 중단점 이전에 설정 된 한 이전 호출에서 [icordebugprocess2:: Setunmanagedbreakpoint](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess2-setunmanagedbreakpoint-method.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="88d4f-108">The specified breakpoint would have been previously set by an earlier call to [ICorDebugProcess2::SetUnmanagedBreakpoint](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess2-setunmanagedbreakpoint-method.md).</span></span>  
+## <a name="remarks"></a><span data-ttu-id="5760c-107">설명</span><span class="sxs-lookup"><span data-stu-id="5760c-107">Remarks</span></span>  
+ <span data-ttu-id="5760c-108">지정 된 중단점은 이전에 설정한 이전 호출에 의해 [ICorDebugProcess2::SetUnmanagedBreakpoint](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess2-setunmanagedbreakpoint-method.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="5760c-108">The specified breakpoint would have been previously set by an earlier call to [ICorDebugProcess2::SetUnmanagedBreakpoint](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess2-setunmanagedbreakpoint-method.md).</span></span>  
   
- <span data-ttu-id="88d4f-109">`ClearUnmanagedBreakpoint` 디버깅 중인 프로세스에서 실행 되는 동안에 메서드를 호출할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="88d4f-109">The `ClearUnmanagedBreakpoint` method can be called while the process being debugged is running.</span></span>  
+ <span data-ttu-id="5760c-109">`ClearUnmanagedBreakpoint` 디버깅 중인 프로세스에서 실행 되는 동안에 메서드를 호출할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="5760c-109">The `ClearUnmanagedBreakpoint` method can be called while the process being debugged is running.</span></span>  
   
- <span data-ttu-id="88d4f-110">`ClearUnmanagedBreakpoint` 관리 전용 모드에서 디버거가 연결 된 경우 또는 지정된 된 주소에서 중단점이 없는 경우 메서드가 오류 코드를 반환 합니다.</span><span class="sxs-lookup"><span data-stu-id="88d4f-110">The `ClearUnmanagedBreakpoint` method returns a failure code if the debugger is attached in managed-only mode or if no breakpoint exists at the specified address.</span></span>  
+ <span data-ttu-id="5760c-110">`ClearUnmanagedBreakpoint` 메서드가 디버거가 연결 되어 있는 관리 되는 전용 모드에서 또는 지정된 된 주소에서 중단점이 없는 경우 오류 코드를 반환 합니다.</span><span class="sxs-lookup"><span data-stu-id="5760c-110">The `ClearUnmanagedBreakpoint` method returns a failure code if the debugger is attached in managed-only mode or if no breakpoint exists at the specified address.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="88d4f-111">요구 사항</span><span class="sxs-lookup"><span data-stu-id="88d4f-111">Requirements</span></span>  
- <span data-ttu-id="88d4f-112">**플랫폼:** 참조 [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="88d4f-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="5760c-111">요구 사항</span><span class="sxs-lookup"><span data-stu-id="5760c-111">Requirements</span></span>  
+ <span data-ttu-id="5760c-112">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="5760c-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="88d4f-113">**헤더:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="88d4f-113">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="5760c-113">**헤더:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="5760c-113">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="88d4f-114">**라이브러리:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="88d4f-114">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="5760c-114">**라이브러리:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="5760c-114">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="88d4f-115">**.NET framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="88d4f-115">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>
+ <span data-ttu-id="5760c-115">**.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="5760c-115">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>

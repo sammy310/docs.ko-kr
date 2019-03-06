@@ -14,19 +14,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5e5a706b3e60bb9460434425ab82125811862ba0
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7ee067faddf7300512387c26ae4ce4fda2b73353
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54740582"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57475803"
 ---
-# <a name="icordebugilcode2getlocalvarsigtoken-method"></a><span data-ttu-id="9805b-102">ICorDebugILCode2::GetLocalVarSigToken 메서드</span><span class="sxs-lookup"><span data-stu-id="9805b-102">ICorDebugILCode2::GetLocalVarSigToken Method</span></span>
-<span data-ttu-id="9805b-103">[.NET Framework 4.5.2 이상 버전에서 지원됨]</span><span class="sxs-lookup"><span data-stu-id="9805b-103">[Supported in the .NET Framework 4.5.2 and later versions]</span></span>  
+# <a name="icordebugilcode2getlocalvarsigtoken-method"></a><span data-ttu-id="3a7ef-102">ICorDebugILCode2::GetLocalVarSigToken 메서드</span><span class="sxs-lookup"><span data-stu-id="3a7ef-102">ICorDebugILCode2::GetLocalVarSigToken Method</span></span>
+<span data-ttu-id="3a7ef-103">[.NET Framework 4.5.2 이상 버전에서 지원됨]</span><span class="sxs-lookup"><span data-stu-id="3a7ef-103">[Supported in the .NET Framework 4.5.2 and later versions]</span></span>  
   
- <span data-ttu-id="9805b-104">이 인스턴스로 표시되는 함수의 로컬 변수 서명에 대한 메타데이터 토큰을 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="9805b-104">Gets the metadata token for the local variable signature for the function that is represented by this instance.</span></span>  
+ <span data-ttu-id="3a7ef-104">이 인스턴스로 표시되는 함수의 로컬 변수 서명에 대한 메타데이터 토큰을 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="3a7ef-104">Gets the metadata token for the local variable signature for the function that is represented by this instance.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="9805b-105">구문</span><span class="sxs-lookup"><span data-stu-id="9805b-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="3a7ef-105">구문</span><span class="sxs-lookup"><span data-stu-id="3a7ef-105">Syntax</span></span>  
   
 ```cpp
 HRESULT GetLocalVarSigToken(  
@@ -34,21 +34,21 @@ HRESULT GetLocalVarSigToken(
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="9805b-106">매개 변수</span><span class="sxs-lookup"><span data-stu-id="9805b-106">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="3a7ef-106">매개 변수</span><span class="sxs-lookup"><span data-stu-id="3a7ef-106">Parameters</span></span>  
  `pmdSig`  
- <span data-ttu-id="9805b-107">[out] 이 함수 로컬 변수 서명의 `mdSignature` 토큰에 대한 포인터이거나, 서명이 없으면(함수에 로컬 변수가 없으면) `mdSignatureNil`입니다.</span><span class="sxs-lookup"><span data-stu-id="9805b-107">[out] A pointer to the `mdSignature` token for the local variable signature for this function, or `mdSignatureNil` if there is no signature (that is, if the function doesn't have any local variables).</span></span>  
+ <span data-ttu-id="3a7ef-107">[out] 이 함수 로컬 변수 서명의 `mdSignature` 토큰에 대한 포인터이거나, 서명이 없으면(함수에 로컬 변수가 없으면) `mdSignatureNil`입니다.</span><span class="sxs-lookup"><span data-stu-id="3a7ef-107">[out] A pointer to the `mdSignature` token for the local variable signature for this function, or `mdSignatureNil` if there is no signature (that is, if the function doesn't have any local variables).</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="9805b-108">설명</span><span class="sxs-lookup"><span data-stu-id="9805b-108">Remarks</span></span>  
+## <a name="remarks"></a><span data-ttu-id="3a7ef-108">설명</span><span class="sxs-lookup"><span data-stu-id="3a7ef-108">Remarks</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="9805b-109">요구 사항</span><span class="sxs-lookup"><span data-stu-id="9805b-109">Requirements</span></span>  
- <span data-ttu-id="9805b-110">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="9805b-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="3a7ef-109">요구 사항</span><span class="sxs-lookup"><span data-stu-id="3a7ef-109">Requirements</span></span>  
+ <span data-ttu-id="3a7ef-110">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="3a7ef-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="9805b-111">**헤더:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="9805b-111">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="3a7ef-111">**헤더:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="3a7ef-111">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="9805b-112">**라이브러리:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="9805b-112">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="3a7ef-112">**라이브러리:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="3a7ef-112">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="9805b-113">**.NET Framework 버전:** [!INCLUDE[net_current_v452plus](../../../../includes/net-current-v452plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="9805b-113">**.NET Framework Versions:** [!INCLUDE[net_current_v452plus](../../../../includes/net-current-v452plus-md.md)]</span></span>  
+ <span data-ttu-id="3a7ef-113">**.NET Framework 버전:** [!INCLUDE[net_current_v452plus](../../../../includes/net-current-v452plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="3a7ef-113">**.NET Framework Versions:** [!INCLUDE[net_current_v452plus](../../../../includes/net-current-v452plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="9805b-114">참고자료</span><span class="sxs-lookup"><span data-stu-id="9805b-114">See also</span></span>
-- [<span data-ttu-id="9805b-115">ICorDebugILCode2 인터페이스</span><span class="sxs-lookup"><span data-stu-id="9805b-115">ICorDebugILCode2 Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugilcode2-interface.md)
-- [<span data-ttu-id="9805b-116">디버깅 인터페이스</span><span class="sxs-lookup"><span data-stu-id="9805b-116">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+## <a name="see-also"></a><span data-ttu-id="3a7ef-114">참고자료</span><span class="sxs-lookup"><span data-stu-id="3a7ef-114">See also</span></span>
+- [<span data-ttu-id="3a7ef-115">ICorDebugILCode2 인터페이스</span><span class="sxs-lookup"><span data-stu-id="3a7ef-115">ICorDebugILCode2 Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugilcode2-interface.md)
+- [<span data-ttu-id="3a7ef-116">디버깅 인터페이스</span><span class="sxs-lookup"><span data-stu-id="3a7ef-116">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

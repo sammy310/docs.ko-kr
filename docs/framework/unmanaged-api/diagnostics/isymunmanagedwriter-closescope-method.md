@@ -17,37 +17,37 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e33d69e319d7817a54dca76526b6c3ee9bb6384f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 250e58e4153edbee5c327ad46ecde73e94b83584
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54729972"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57468717"
 ---
-# <a name="isymunmanagedwriterclosescope-method"></a><span data-ttu-id="46f4c-102">ISymUnmanagedWriter::CloseScope 메서드</span><span class="sxs-lookup"><span data-stu-id="46f4c-102">ISymUnmanagedWriter::CloseScope Method</span></span>
-<span data-ttu-id="46f4c-103">현재 어휘 범위를 닫습니다.</span><span class="sxs-lookup"><span data-stu-id="46f4c-103">Closes the current lexical scope.</span></span>  
+# <a name="isymunmanagedwriterclosescope-method"></a><span data-ttu-id="4f926-102">ISymUnmanagedWriter::CloseScope 메서드</span><span class="sxs-lookup"><span data-stu-id="4f926-102">ISymUnmanagedWriter::CloseScope Method</span></span>
+<span data-ttu-id="4f926-103">현재 어휘 범위를 닫습니다.</span><span class="sxs-lookup"><span data-stu-id="4f926-103">Closes the current lexical scope.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="46f4c-104">구문</span><span class="sxs-lookup"><span data-stu-id="46f4c-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="4f926-104">구문</span><span class="sxs-lookup"><span data-stu-id="4f926-104">Syntax</span></span>  
   
 ```  
 HRESULT CloseScope(  
     [in] ULONG32 endOffset);  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="46f4c-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="46f4c-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="4f926-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="4f926-105">Parameters</span></span>  
  `endOffset`  
- <span data-ttu-id="46f4c-106">[in] 바이트의 어휘 범위에서 마지막 명령의 끝에 있는 점의 메서드 시작 부분 으로부터의 오프셋입니다.</span><span class="sxs-lookup"><span data-stu-id="46f4c-106">[in] The offset from the beginning of the method of the point at the end of the last instruction in the lexical scope, in bytes.</span></span>  
+ <span data-ttu-id="4f926-106">[in] 바이트의 어휘 범위에서 마지막 명령의 끝에 있는 점의 메서드 시작 부분 으로부터의 오프셋입니다.</span><span class="sxs-lookup"><span data-stu-id="4f926-106">[in] The offset from the beginning of the method of the point at the end of the last instruction in the lexical scope, in bytes.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="46f4c-107">반환 값</span><span class="sxs-lookup"><span data-stu-id="46f4c-107">Return Value</span></span>  
- <span data-ttu-id="46f4c-108">메서드가 성공 하면 s_ok이 고 그렇지 않으면 E_FAIL 또는 일부 다른 오류 코드입니다.</span><span class="sxs-lookup"><span data-stu-id="46f4c-108">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="4f926-107">반환 값</span><span class="sxs-lookup"><span data-stu-id="4f926-107">Return Value</span></span>  
+ <span data-ttu-id="4f926-108">메서드가 성공 하면 s_ok이 고 그렇지 않으면 E_FAIL 또는 일부 다른 오류 코드입니다.</span><span class="sxs-lookup"><span data-stu-id="4f926-108">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="46f4c-109">설명</span><span class="sxs-lookup"><span data-stu-id="46f4c-109">Remarks</span></span>  
- <span data-ttu-id="46f4c-110">범위 닫히면 그 이상의 없는 변수를 정의할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="46f4c-110">Once a scope is closed, no more variables can be defined within it.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="4f926-109">설명</span><span class="sxs-lookup"><span data-stu-id="4f926-109">Remarks</span></span>  
+ <span data-ttu-id="4f926-110">범위 닫히면 그 이상의 없는 변수를 정의할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="4f926-110">Once a scope is closed, no more variables can be defined within it.</span></span>  
   
- <span data-ttu-id="46f4c-111">[Isymunmanagedwriter:: Openscope](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-openscope-method.md) 사용 하 여 사용할 수 있는 불투명 한 범위 식별자를 반환 합니다 [isymunmanagedwriter:: Setscoperange](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-setscoperange-method.md) 나중에 범위를 정의 하의 시작과 끝 오프셋입니다.</span><span class="sxs-lookup"><span data-stu-id="46f4c-111">[ISymUnmanagedWriter::OpenScope](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-openscope-method.md) returns an opaque scope identifier that can be used with [ISymUnmanagedWriter::SetScopeRange](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-setscoperange-method.md) to later define a scope's starting and ending offset.</span></span> <span data-ttu-id="46f4c-112">이 경우 `ISymUnmanagedWriter::OpenScope` 및 `ISymUnmanagedWriter::CloseScope`에 전달된 오프셋은 무시됩니다.</span><span class="sxs-lookup"><span data-stu-id="46f4c-112">In this case, the offsets passed to `ISymUnmanagedWriter::OpenScope` and `ISymUnmanagedWriter::CloseScope` are ignored.</span></span> <span data-ttu-id="46f4c-113">범위 식별자는 현재 메서드에서만에서 유효 합니다.</span><span class="sxs-lookup"><span data-stu-id="46f4c-113">Scope identifiers are valid only in the current method.</span></span>  
+ <span data-ttu-id="4f926-111">[Isymunmanagedwriter:: Openscope](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-openscope-method.md) 사용 하 여 사용할 수 있는 불투명 한 범위 식별자를 반환 합니다 [isymunmanagedwriter:: Setscoperange](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-setscoperange-method.md) 나중에 범위를 정의 하의 시작과 끝 오프셋입니다.</span><span class="sxs-lookup"><span data-stu-id="4f926-111">[ISymUnmanagedWriter::OpenScope](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-openscope-method.md) returns an opaque scope identifier that can be used with [ISymUnmanagedWriter::SetScopeRange](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-setscoperange-method.md) to later define a scope's starting and ending offset.</span></span> <span data-ttu-id="4f926-112">이 경우 `ISymUnmanagedWriter::OpenScope` 및 `ISymUnmanagedWriter::CloseScope`에 전달된 오프셋은 무시됩니다.</span><span class="sxs-lookup"><span data-stu-id="4f926-112">In this case, the offsets passed to `ISymUnmanagedWriter::OpenScope` and `ISymUnmanagedWriter::CloseScope` are ignored.</span></span> <span data-ttu-id="4f926-113">범위 식별자는 현재 메서드에서만에서 유효 합니다.</span><span class="sxs-lookup"><span data-stu-id="4f926-113">Scope identifiers are valid only in the current method.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="46f4c-114">요구 사항</span><span class="sxs-lookup"><span data-stu-id="46f4c-114">Requirements</span></span>  
- <span data-ttu-id="46f4c-115">**헤더:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="46f4c-115">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="4f926-114">요구 사항</span><span class="sxs-lookup"><span data-stu-id="4f926-114">Requirements</span></span>  
+ <span data-ttu-id="4f926-115">**헤더:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="4f926-115">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="46f4c-116">참고자료</span><span class="sxs-lookup"><span data-stu-id="46f4c-116">See also</span></span>
-- [<span data-ttu-id="46f4c-117">ISymUnmanagedWriter 인터페이스</span><span class="sxs-lookup"><span data-stu-id="46f4c-117">ISymUnmanagedWriter Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)
+## <a name="see-also"></a><span data-ttu-id="4f926-116">참고자료</span><span class="sxs-lookup"><span data-stu-id="4f926-116">See also</span></span>
+- [<span data-ttu-id="4f926-117">ISymUnmanagedWriter 인터페이스</span><span class="sxs-lookup"><span data-stu-id="4f926-117">ISymUnmanagedWriter Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)

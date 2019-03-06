@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0a0c23c066a6f704c4dfcfbe254e91ab3bc5817e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 7454b551edc546fecbd9d091f7c821e0a07b16df
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33416243"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57497823"
 ---
-# <a name="icordebugilframe2enumeratetypeparameters-method"></a><span data-ttu-id="39f53-102">ICorDebugILFrame2::EnumerateTypeParameters 메서드</span><span class="sxs-lookup"><span data-stu-id="39f53-102">ICorDebugILFrame2::EnumerateTypeParameters Method</span></span>
-<span data-ttu-id="39f53-103">포함 된 ICorDebugTypeEnum 개체를 가져옵니다는 <xref:System.Type> 이 프레임에서 매개 변수입니다.</span><span class="sxs-lookup"><span data-stu-id="39f53-103">Gets an ICorDebugTypeEnum object that contains the <xref:System.Type> parameters in this frame.</span></span>  
+# <a name="icordebugilframe2enumeratetypeparameters-method"></a><span data-ttu-id="f82f0-102">ICorDebugILFrame2::EnumerateTypeParameters 메서드</span><span class="sxs-lookup"><span data-stu-id="f82f0-102">ICorDebugILFrame2::EnumerateTypeParameters Method</span></span>
+<span data-ttu-id="f82f0-103">포함 된 ICorDebugTypeEnum 개체를 가져옵니다는 <xref:System.Type> 이 프레임에서 매개 변수입니다.</span><span class="sxs-lookup"><span data-stu-id="f82f0-103">Gets an ICorDebugTypeEnum object that contains the <xref:System.Type> parameters in this frame.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="39f53-104">구문</span><span class="sxs-lookup"><span data-stu-id="39f53-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="f82f0-104">구문</span><span class="sxs-lookup"><span data-stu-id="f82f0-104">Syntax</span></span>  
   
 ```  
 HRESULT EnumerateTypeParameters (  
@@ -35,22 +35,22 @@ HRESULT EnumerateTypeParameters (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="39f53-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="39f53-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="f82f0-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="f82f0-105">Parameters</span></span>  
  `ppTyParEnum`  
- <span data-ttu-id="39f53-106">열거형의 형식 매개 변수를 허용 하는 ICorDebugTypeEnum 인터페이스 개체의 주소에 대 한 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="39f53-106">A pointer to the address of a ICorDebugTypeEnum interface object that allows enumeration of type parameters.</span></span>  
+ <span data-ttu-id="f82f0-106">열거형 형식 매개 변수를 허용 하는 ICorDebugTypeEnum 인터페이스 개체의 주소에 대 한 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="f82f0-106">A pointer to the address of a ICorDebugTypeEnum interface object that allows enumeration of type parameters.</span></span>  
   
- <span data-ttu-id="39f53-107">형식 매개 변수 목록 클래스 형식 매개 변수 (있는 경우) 메서드 형식 매개 변수 뒤에 (있는 경우)를 포함 합니다.</span><span class="sxs-lookup"><span data-stu-id="39f53-107">The list of type parameters include the class type parameters (if any) followed by the method type parameters (if any).</span></span>  
+ <span data-ttu-id="f82f0-107">형식 매개 변수 목록 클래스 형식 매개 변수 (있는 경우) 메서드 형식 매개 변수 뒤에 (있는 경우)를 포함 합니다.</span><span class="sxs-lookup"><span data-stu-id="f82f0-107">The list of type parameters include the class type parameters (if any) followed by the method type parameters (if any).</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="39f53-108">설명</span><span class="sxs-lookup"><span data-stu-id="39f53-108">Remarks</span></span>  
- <span data-ttu-id="39f53-109">사용 하 여는 [imetadataimport2:: Enumgenericparams](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-enumgenericparams-method.md) 수 클래스 형식 매개 변수 및 메서드 입력이 목록에 포함 하는 매개 변수를 확인할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="39f53-109">Use the [IMetaDataImport2::EnumGenericParams](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-enumgenericparams-method.md) method to determine how many class type parameters and method type parameters this list contains.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="f82f0-108">설명</span><span class="sxs-lookup"><span data-stu-id="f82f0-108">Remarks</span></span>  
+ <span data-ttu-id="f82f0-109">사용 된 [IMetaDataImport2::EnumGenericParams](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-enumgenericparams-method.md) 얼마나 많은 클래스 형식 매개 변수 및 메서드 입력이 목록에 포함 하는 매개 변수를 확인 하는 방법입니다.</span><span class="sxs-lookup"><span data-stu-id="f82f0-109">Use the [IMetaDataImport2::EnumGenericParams](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-enumgenericparams-method.md) method to determine how many class type parameters and method type parameters this list contains.</span></span>  
   
- <span data-ttu-id="39f53-110">형식 매개 변수는 항상 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="39f53-110">The type parameters are not always available.</span></span>  
+ <span data-ttu-id="f82f0-110">형식 매개 변수를 항상 사용 가능한 것은 아닙니다.</span><span class="sxs-lookup"><span data-stu-id="f82f0-110">The type parameters are not always available.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="39f53-111">요구 사항</span><span class="sxs-lookup"><span data-stu-id="39f53-111">Requirements</span></span>  
- <span data-ttu-id="39f53-112">**플랫폼:** 참조 [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="39f53-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="f82f0-111">요구 사항</span><span class="sxs-lookup"><span data-stu-id="f82f0-111">Requirements</span></span>  
+ <span data-ttu-id="f82f0-112">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="f82f0-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="39f53-113">**헤더:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="39f53-113">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="f82f0-113">**헤더:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="f82f0-113">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="39f53-114">**라이브러리:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="39f53-114">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="f82f0-114">**라이브러리:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="f82f0-114">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="39f53-115">**.NET framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="39f53-115">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
+ <span data-ttu-id="f82f0-115">**.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="f82f0-115">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>

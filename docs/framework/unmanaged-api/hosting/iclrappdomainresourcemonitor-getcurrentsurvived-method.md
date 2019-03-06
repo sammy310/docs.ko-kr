@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 648a2c044920b7524ad96ff656e83268ffd55652
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3a24f51884b5dc55e45d22f33735fe07db770d06
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54612218"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57466919"
 ---
-# <a name="iclrappdomainresourcemonitorgetcurrentsurvived-method"></a><span data-ttu-id="d69db-102">ICLRAppDomainResourceMonitor::GetCurrentSurvived 메서드</span><span class="sxs-lookup"><span data-stu-id="d69db-102">ICLRAppDomainResourceMonitor::GetCurrentSurvived Method</span></span>
-<span data-ttu-id="d69db-103">마지막 전체 차단 가비지 수집에도 유지 되 고 현재 응용 프로그램 도메인에서 참조 되는 바이트 수를 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="d69db-103">Gets the number of bytes that survived the last full, blocking garbage collection and that are referenced by the current application domain.</span></span>  
+# <a name="iclrappdomainresourcemonitorgetcurrentsurvived-method"></a><span data-ttu-id="78a1d-102">ICLRAppDomainResourceMonitor::GetCurrentSurvived 메서드</span><span class="sxs-lookup"><span data-stu-id="78a1d-102">ICLRAppDomainResourceMonitor::GetCurrentSurvived Method</span></span>
+<span data-ttu-id="78a1d-103">마지막 전체 차단 가비지 수집에도 유지 되 고 현재 응용 프로그램 도메인에서 참조 되는 바이트 수를 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="78a1d-103">Gets the number of bytes that survived the last full, blocking garbage collection and that are referenced by the current application domain.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="d69db-104">구문</span><span class="sxs-lookup"><span data-stu-id="d69db-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="78a1d-104">구문</span><span class="sxs-lookup"><span data-stu-id="78a1d-104">Syntax</span></span>  
   
 ```  
 HRESULT STDMETHODCALLTYPE GetCurrentSurvived(  
@@ -36,40 +36,40 @@ HRESULT STDMETHODCALLTYPE GetCurrentSurvived(
              [out] ULONGLONG *pTotalBytesSurvived);  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="d69db-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="d69db-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="78a1d-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="78a1d-105">Parameters</span></span>  
  `dwAppDomainId`  
- <span data-ttu-id="d69db-106">[in] 요청 된 응용 프로그램 도메인의 ID입니다.</span><span class="sxs-lookup"><span data-stu-id="d69db-106">[in] The ID of the requested application domain.</span></span>  
+ <span data-ttu-id="78a1d-106">[in] 요청 된 응용 프로그램 도메인의 ID입니다.</span><span class="sxs-lookup"><span data-stu-id="78a1d-106">[in] The ID of the requested application domain.</span></span>  
   
  `pAppDomainBytesSurvived`  
- <span data-ttu-id="d69db-107">[out] 이 응용 프로그램 도메인에서 보유 하는 마지막 가비지 컬렉션 후 남아 있는 바이트 수에 대 한 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="d69db-107">[out] A pointer to the number of bytes that survived after the last garbage collection that are held by this application domain.</span></span> <span data-ttu-id="d69db-108">전체 수집 후이 번호는 정확 하 고 완료 합니다.</span><span class="sxs-lookup"><span data-stu-id="d69db-108">After a full collection, this number is accurate and complete.</span></span> <span data-ttu-id="d69db-109">임시 수집 후이 수가 잠재적으로 완전 하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="d69db-109">After an ephemeral collection, this number is potentially incomplete.</span></span> <span data-ttu-id="d69db-110">이 매개 변수는 `null`일 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="d69db-110">This parameter can be `null`.</span></span>  
+ <span data-ttu-id="78a1d-107">[out] 이 응용 프로그램 도메인에서 보유 하는 마지막 가비지 컬렉션 후 남아 있는 바이트 수에 대 한 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="78a1d-107">[out] A pointer to the number of bytes that survived after the last garbage collection that are held by this application domain.</span></span> <span data-ttu-id="78a1d-108">전체 수집 후이 번호는 정확 하 고 완료 합니다.</span><span class="sxs-lookup"><span data-stu-id="78a1d-108">After a full collection, this number is accurate and complete.</span></span> <span data-ttu-id="78a1d-109">임시 수집 후이 수가 잠재적으로 완전 하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="78a1d-109">After an ephemeral collection, this number is potentially incomplete.</span></span> <span data-ttu-id="78a1d-110">이 매개 변수는 `null`일 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="78a1d-110">This parameter can be `null`.</span></span>  
   
  `pRuntimeBytesSurvived`  
- <span data-ttu-id="d69db-111">[out] 마지막 가비지 수집에서 남아 있는 바이트의 총 수에 대 한 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="d69db-111">[out] A pointer to the total number of bytes that survived from the last garbage collection.</span></span> <span data-ttu-id="d69db-112">이 숫자를 전체 수집 후 관리 되는 힙이에 저장 된 바이트 수를 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="d69db-112">After a full collection, this number represents the number of the bytes that are held in managed heaps.</span></span> <span data-ttu-id="d69db-113">이 숫자를 임시 수집 후 임시 세대에서 실시간으로 저장 된 바이트 수를 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="d69db-113">After an ephemeral collection, this number represents the number of bytes that are held live in ephemeral generations.</span></span> <span data-ttu-id="d69db-114">이 매개 변수는 `null`일 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="d69db-114">This parameter can be `null`.</span></span>  
+ <span data-ttu-id="78a1d-111">[out] 마지막 가비지 수집에서 남아 있는 바이트의 총 수에 대 한 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="78a1d-111">[out] A pointer to the total number of bytes that survived from the last garbage collection.</span></span> <span data-ttu-id="78a1d-112">이 숫자를 전체 수집 후 관리 되는 힙이에 저장 된 바이트 수를 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="78a1d-112">After a full collection, this number represents the number of the bytes that are held in managed heaps.</span></span> <span data-ttu-id="78a1d-113">이 숫자를 임시 수집 후 임시 세대에서 실시간으로 저장 된 바이트 수를 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="78a1d-113">After an ephemeral collection, this number represents the number of bytes that are held live in ephemeral generations.</span></span> <span data-ttu-id="78a1d-114">이 매개 변수는 `null`일 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="78a1d-114">This parameter can be `null`.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="d69db-115">반환 값</span><span class="sxs-lookup"><span data-stu-id="d69db-115">Return Value</span></span>  
- <span data-ttu-id="d69db-116">이 메서드는 다음과 같은 특정 HRESULT뿐만 아니라 메서드 오류를 나타내는 HRESULT 오류도 반환합니다.</span><span class="sxs-lookup"><span data-stu-id="d69db-116">This method returns the following specific HRESULTs as well as HRESULT errors that indicate method failure.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="78a1d-115">반환 값</span><span class="sxs-lookup"><span data-stu-id="78a1d-115">Return Value</span></span>  
+ <span data-ttu-id="78a1d-116">이 메서드는 다음과 같은 특정 HRESULT뿐만 아니라 메서드 오류를 나타내는 HRESULT 오류도 반환합니다.</span><span class="sxs-lookup"><span data-stu-id="78a1d-116">This method returns the following specific HRESULTs as well as HRESULT errors that indicate method failure.</span></span>  
   
-|<span data-ttu-id="d69db-117">HRESULT</span><span class="sxs-lookup"><span data-stu-id="d69db-117">HRESULT</span></span>|<span data-ttu-id="d69db-118">설명</span><span class="sxs-lookup"><span data-stu-id="d69db-118">Description</span></span>|  
+|<span data-ttu-id="78a1d-117">HRESULT</span><span class="sxs-lookup"><span data-stu-id="78a1d-117">HRESULT</span></span>|<span data-ttu-id="78a1d-118">설명</span><span class="sxs-lookup"><span data-stu-id="78a1d-118">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="d69db-119">S_OK</span><span class="sxs-lookup"><span data-stu-id="d69db-119">S_OK</span></span>|<span data-ttu-id="d69db-120">메서드가 완료되었습니다.</span><span class="sxs-lookup"><span data-stu-id="d69db-120">The method completed successfully.</span></span>|  
-|<span data-ttu-id="d69db-121">COR_E_APPDOMAINUNLOADED</span><span class="sxs-lookup"><span data-stu-id="d69db-121">COR_E_APPDOMAINUNLOADED</span></span>|<span data-ttu-id="d69db-122">응용 프로그램 도메인 언로드 되었습니다 또는 존재 하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="d69db-122">The application domain has been unloaded or does not exist.</span></span>|  
+|<span data-ttu-id="78a1d-119">S_OK</span><span class="sxs-lookup"><span data-stu-id="78a1d-119">S_OK</span></span>|<span data-ttu-id="78a1d-120">메서드가 완료되었습니다.</span><span class="sxs-lookup"><span data-stu-id="78a1d-120">The method completed successfully.</span></span>|  
+|<span data-ttu-id="78a1d-121">COR_E_APPDOMAINUNLOADED</span><span class="sxs-lookup"><span data-stu-id="78a1d-121">COR_E_APPDOMAINUNLOADED</span></span>|<span data-ttu-id="78a1d-122">응용 프로그램 도메인 언로드 되었습니다 또는 존재 하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="78a1d-122">The application domain has been unloaded or does not exist.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="d69db-123">설명</span><span class="sxs-lookup"><span data-stu-id="d69db-123">Remarks</span></span>  
- <span data-ttu-id="d69db-124">전체 차단 가비지 컬렉션 후에 통계가 업데이트 즉, 수집 하는 동안 응용 프로그램을 중지 하는 모든 세대를 포함 하는 컬렉션에 발생 합니다.</span><span class="sxs-lookup"><span data-stu-id="d69db-124">Statistics are updated only after a full, blocking garbage collection; that is, a collection that includes all generations and that stops the application while collection occurs.</span></span> <span data-ttu-id="d69db-125">예를 들어를 <xref:System.GC.Collect?displayProperty=nameWithType> 메서드 오버 로드는 전체 차단 컬렉션을 수행 합니다.</span><span class="sxs-lookup"><span data-stu-id="d69db-125">For example, the <xref:System.GC.Collect?displayProperty=nameWithType> method overload performs a full, blocking collection.</span></span> <span data-ttu-id="d69db-126">동시 가비지 컬렉션이 백그라운드에서 발생 하 고 응용 프로그램을 차단 하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="d69db-126">Concurrent garbage collection occurs in the background and does not block the application.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="78a1d-123">설명</span><span class="sxs-lookup"><span data-stu-id="78a1d-123">Remarks</span></span>  
+ <span data-ttu-id="78a1d-124">전체 차단 가비지 컬렉션 후에 통계가 업데이트 즉, 수집 하는 동안 응용 프로그램을 중지 하는 모든 세대를 포함 하는 컬렉션에 발생 합니다.</span><span class="sxs-lookup"><span data-stu-id="78a1d-124">Statistics are updated only after a full, blocking garbage collection; that is, a collection that includes all generations and that stops the application while collection occurs.</span></span> <span data-ttu-id="78a1d-125">예를 들어를 <xref:System.GC.Collect?displayProperty=nameWithType> 메서드 오버 로드는 전체 차단 컬렉션을 수행 합니다.</span><span class="sxs-lookup"><span data-stu-id="78a1d-125">For example, the <xref:System.GC.Collect?displayProperty=nameWithType> method overload performs a full, blocking collection.</span></span> <span data-ttu-id="78a1d-126">동시 가비지 컬렉션이 백그라운드에서 발생 하 고 응용 프로그램을 차단 하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="78a1d-126">Concurrent garbage collection occurs in the background and does not block the application.</span></span>  
   
- <span data-ttu-id="d69db-127">합니다 `GetCurrentSurvived` 메서드는 관리 되는 관리 되지 않는 해당 <xref:System.AppDomain.MonitoringSurvivedMemorySize%2A?displayProperty=nameWithType> 속성입니다.</span><span class="sxs-lookup"><span data-stu-id="d69db-127">The `GetCurrentSurvived` method is the unmanaged equivalent of the managed <xref:System.AppDomain.MonitoringSurvivedMemorySize%2A?displayProperty=nameWithType> property.</span></span>  
+ <span data-ttu-id="78a1d-127">합니다 `GetCurrentSurvived` 메서드는 관리 되는 관리 되지 않는 해당 <xref:System.AppDomain.MonitoringSurvivedMemorySize%2A?displayProperty=nameWithType> 속성입니다.</span><span class="sxs-lookup"><span data-stu-id="78a1d-127">The `GetCurrentSurvived` method is the unmanaged equivalent of the managed <xref:System.AppDomain.MonitoringSurvivedMemorySize%2A?displayProperty=nameWithType> property.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="d69db-128">요구 사항</span><span class="sxs-lookup"><span data-stu-id="d69db-128">Requirements</span></span>  
- <span data-ttu-id="d69db-129">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="d69db-129">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="78a1d-128">요구 사항</span><span class="sxs-lookup"><span data-stu-id="78a1d-128">Requirements</span></span>  
+ <span data-ttu-id="78a1d-129">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="78a1d-129">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="d69db-130">**헤더:** MetaHost.h</span><span class="sxs-lookup"><span data-stu-id="d69db-130">**Header:** MetaHost.h</span></span>  
+ <span data-ttu-id="78a1d-130">**헤더:** MetaHost.h</span><span class="sxs-lookup"><span data-stu-id="78a1d-130">**Header:** MetaHost.h</span></span>  
   
- <span data-ttu-id="d69db-131">**라이브러리:** MSCorEE.dll에 리소스로 포함</span><span class="sxs-lookup"><span data-stu-id="d69db-131">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="78a1d-131">**라이브러리:** MSCorEE.dll에 리소스로 포함</span><span class="sxs-lookup"><span data-stu-id="78a1d-131">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="d69db-132">**.NET Framework 버전:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="d69db-132">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
+ <span data-ttu-id="78a1d-132">**.NET Framework 버전:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="78a1d-132">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="d69db-133">참고자료</span><span class="sxs-lookup"><span data-stu-id="d69db-133">See also</span></span>
-- [<span data-ttu-id="d69db-134">ICLRAppDomainResourceMonitor 인터페이스</span><span class="sxs-lookup"><span data-stu-id="d69db-134">ICLRAppDomainResourceMonitor Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrappdomainresourcemonitor-interface.md)
-- [<span data-ttu-id="d69db-135">애플리케이션 도메인 리소스 모니터링</span><span class="sxs-lookup"><span data-stu-id="d69db-135">Application Domain Resource Monitoring</span></span>](../../../../docs/standard/garbage-collection/app-domain-resource-monitoring.md)
-- [<span data-ttu-id="d69db-136">호스팅 인터페이스</span><span class="sxs-lookup"><span data-stu-id="d69db-136">Hosting Interfaces</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
-- [<span data-ttu-id="d69db-137">호스팅</span><span class="sxs-lookup"><span data-stu-id="d69db-137">Hosting</span></span>](../../../../docs/framework/unmanaged-api/hosting/index.md)
+## <a name="see-also"></a><span data-ttu-id="78a1d-133">참고자료</span><span class="sxs-lookup"><span data-stu-id="78a1d-133">See also</span></span>
+- [<span data-ttu-id="78a1d-134">ICLRAppDomainResourceMonitor 인터페이스</span><span class="sxs-lookup"><span data-stu-id="78a1d-134">ICLRAppDomainResourceMonitor Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrappdomainresourcemonitor-interface.md)
+- [<span data-ttu-id="78a1d-135">애플리케이션 도메인 리소스 모니터링</span><span class="sxs-lookup"><span data-stu-id="78a1d-135">Application Domain Resource Monitoring</span></span>](../../../../docs/standard/garbage-collection/app-domain-resource-monitoring.md)
+- [<span data-ttu-id="78a1d-136">호스팅 인터페이스</span><span class="sxs-lookup"><span data-stu-id="78a1d-136">Hosting Interfaces</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
+- [<span data-ttu-id="78a1d-137">호스팅</span><span class="sxs-lookup"><span data-stu-id="78a1d-137">Hosting</span></span>](../../../../docs/framework/unmanaged-api/hosting/index.md)

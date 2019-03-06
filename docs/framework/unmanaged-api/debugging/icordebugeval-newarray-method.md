@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 38b00d903fdd7301415a8df7642e12366178fd10
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: d1abe307e3b9fa607912f98e456a11176eb17c56
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33413942"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57471513"
 ---
-# <a name="icordebugevalnewarray-method"></a><span data-ttu-id="9a6fc-102">ICorDebugEval::NewArray 메서드</span><span class="sxs-lookup"><span data-stu-id="9a6fc-102">ICorDebugEval::NewArray Method</span></span>
-<span data-ttu-id="9a6fc-103">지정한 요소 형식 및 차원에 대 한 새 배열을 할당합니다.</span><span class="sxs-lookup"><span data-stu-id="9a6fc-103">Allocates a new array of the specified element type and dimensions.</span></span>  
+# <a name="icordebugevalnewarray-method"></a><span data-ttu-id="2ccdd-102">ICorDebugEval::NewArray 메서드</span><span class="sxs-lookup"><span data-stu-id="2ccdd-102">ICorDebugEval::NewArray Method</span></span>
+<span data-ttu-id="2ccdd-103">지정 된 요소 형식 및 차원에는 새 배열을 할당합니다.</span><span class="sxs-lookup"><span data-stu-id="2ccdd-103">Allocates a new array of the specified element type and dimensions.</span></span>  
   
- <span data-ttu-id="9a6fc-104">이 메서드는.NET Framework 버전 2.0에서에서 사용 되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="9a6fc-104">This method is obsolete in the .NET Framework version 2.0.</span></span> <span data-ttu-id="9a6fc-105">사용 하 여 [icordebugeval2:: Newparameterizedarray](../../../../docs/framework/unmanaged-api/debugging/icordebugeval2-newparameterizedarray-method.md) 대신 합니다.</span><span class="sxs-lookup"><span data-stu-id="9a6fc-105">Use [ICorDebugEval2::NewParameterizedArray](../../../../docs/framework/unmanaged-api/debugging/icordebugeval2-newparameterizedarray-method.md) instead.</span></span>  
+ <span data-ttu-id="2ccdd-104">이 메서드는.NET Framework 버전 2.0에서에서 사용 되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="2ccdd-104">This method is obsolete in the .NET Framework version 2.0.</span></span> <span data-ttu-id="2ccdd-105">사용 하 여 [ICorDebugEval2::NewParameterizedArray](../../../../docs/framework/unmanaged-api/debugging/icordebugeval2-newparameterizedarray-method.md) 대신 합니다.</span><span class="sxs-lookup"><span data-stu-id="2ccdd-105">Use [ICorDebugEval2::NewParameterizedArray](../../../../docs/framework/unmanaged-api/debugging/icordebugeval2-newparameterizedarray-method.md) instead.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="9a6fc-106">구문</span><span class="sxs-lookup"><span data-stu-id="9a6fc-106">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="2ccdd-106">구문</span><span class="sxs-lookup"><span data-stu-id="2ccdd-106">Syntax</span></span>  
   
 ```  
 HRESULT NewArray (  
@@ -41,30 +41,30 @@ HRESULT NewArray (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="9a6fc-107">매개 변수</span><span class="sxs-lookup"><span data-stu-id="9a6fc-107">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="2ccdd-107">매개 변수</span><span class="sxs-lookup"><span data-stu-id="2ccdd-107">Parameters</span></span>  
  `elementType`  
- <span data-ttu-id="9a6fc-108">[in] 배열의 요소 형식을 지정 하는 CorElementType 열거형의 값입니다.</span><span class="sxs-lookup"><span data-stu-id="9a6fc-108">[in] A value of the CorElementType enumeration that specifies the element type of the array.</span></span>  
+ <span data-ttu-id="2ccdd-108">[in] 배열의 요소 형식을 지정 하는 CorElementType 열거형의 값입니다.</span><span class="sxs-lookup"><span data-stu-id="2ccdd-108">[in] A value of the CorElementType enumeration that specifies the element type of the array.</span></span>  
   
  `pElementClass`  
- <span data-ttu-id="9a6fc-109">[in] 요소 클래스를 지정 하는 ICorDebugClass 개체에 대 한 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="9a6fc-109">[in] A pointer to a ICorDebugClass object that specifies the class of the element.</span></span> <span data-ttu-id="9a6fc-110">이 값은 요소 형식은 기본 형식인 경우에 null 일 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="9a6fc-110">This value may be null if the element type is a primitive type.</span></span>  
+ <span data-ttu-id="2ccdd-109">[in] 요소의 클래스를 지정 하는 ICorDebugClass 개체에 대 한 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="2ccdd-109">[in] A pointer to a ICorDebugClass object that specifies the class of the element.</span></span> <span data-ttu-id="2ccdd-110">이 값 요소 형식이 기본 형식인 경우에 null 일 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="2ccdd-110">This value may be null if the element type is a primitive type.</span></span>  
   
  `rank`  
- <span data-ttu-id="9a6fc-111">[in] 배열의 차원 수입니다.</span><span class="sxs-lookup"><span data-stu-id="9a6fc-111">[in] The number of dimensions of the array.</span></span> <span data-ttu-id="9a6fc-112">.NET Framework 2.0에서이 값에는 1 이어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="9a6fc-112">In the .NET Framework 2.0, this value must be 1.</span></span>  
+ <span data-ttu-id="2ccdd-111">[in] 배열의 차원 수입니다.</span><span class="sxs-lookup"><span data-stu-id="2ccdd-111">[in] The number of dimensions of the array.</span></span> <span data-ttu-id="2ccdd-112">.NET Framework 2.0에서는이 값에는 1 이어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="2ccdd-112">In the .NET Framework 2.0, this value must be 1.</span></span>  
   
  `dims`  
- <span data-ttu-id="9a6fc-113">[in] 바이트 배열의 각 차원 크기입니다.</span><span class="sxs-lookup"><span data-stu-id="9a6fc-113">[in] The size, in bytes, of each dimension of the array.</span></span>  
+ <span data-ttu-id="2ccdd-113">[in] 바이트 배열의 각 차원 크기입니다.</span><span class="sxs-lookup"><span data-stu-id="2ccdd-113">[in] The size, in bytes, of each dimension of the array.</span></span>  
   
  `lowBounds`  
- <span data-ttu-id="9a6fc-114">[in] 선택적 항목으로,</span><span class="sxs-lookup"><span data-stu-id="9a6fc-114">[in] Optional.</span></span> <span data-ttu-id="9a6fc-115">배열의 각 차원 하 한입니다.</span><span class="sxs-lookup"><span data-stu-id="9a6fc-115">The lower bound of each dimension of the array.</span></span> <span data-ttu-id="9a6fc-116">이 값을 생략 하면 각 차원에 대 한 하한값 0으로 가정 합니다.</span><span class="sxs-lookup"><span data-stu-id="9a6fc-116">If this value is omitted, a lower bound of zero is assumed for each dimension.</span></span>  
+ <span data-ttu-id="2ccdd-114">[in] 선택적 항목으로,</span><span class="sxs-lookup"><span data-stu-id="2ccdd-114">[in] Optional.</span></span> <span data-ttu-id="2ccdd-115">배열의 각 차원 하 한.</span><span class="sxs-lookup"><span data-stu-id="2ccdd-115">The lower bound of each dimension of the array.</span></span> <span data-ttu-id="2ccdd-116">이 값을 생략 하는 경우에 각 차원에 대 한 하한값 0으로 간주 됩니다.</span><span class="sxs-lookup"><span data-stu-id="2ccdd-116">If this value is omitted, a lower bound of zero is assumed for each dimension.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="9a6fc-117">설명</span><span class="sxs-lookup"><span data-stu-id="9a6fc-117">Remarks</span></span>  
- <span data-ttu-id="9a6fc-118">배열의는 스레드가 현재 실행 중인 응용 프로그램 도메인에서 항상 만들어집니다.</span><span class="sxs-lookup"><span data-stu-id="9a6fc-118">The array is always created in the application domain in which the thread is currently executing.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="2ccdd-117">설명</span><span class="sxs-lookup"><span data-stu-id="2ccdd-117">Remarks</span></span>  
+ <span data-ttu-id="2ccdd-118">스레드가 현재 실행 중인 응용 프로그램 도메인에서 배열 항상 만들어집니다.</span><span class="sxs-lookup"><span data-stu-id="2ccdd-118">The array is always created in the application domain in which the thread is currently executing.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="9a6fc-119">요구 사항</span><span class="sxs-lookup"><span data-stu-id="9a6fc-119">Requirements</span></span>  
- <span data-ttu-id="9a6fc-120">**플랫폼:** 참조 [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="9a6fc-120">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="2ccdd-119">요구 사항</span><span class="sxs-lookup"><span data-stu-id="2ccdd-119">Requirements</span></span>  
+ <span data-ttu-id="2ccdd-120">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="2ccdd-120">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="9a6fc-121">**헤더:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="9a6fc-121">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="2ccdd-121">**헤더:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="2ccdd-121">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="9a6fc-122">**라이브러리:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="9a6fc-122">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="2ccdd-122">**라이브러리:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="2ccdd-122">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="9a6fc-123">**.NET framework 버전:** 1.0, 1.1</span><span class="sxs-lookup"><span data-stu-id="9a6fc-123">**.NET Framework Versions:** 1.1, 1.0</span></span>
+ <span data-ttu-id="2ccdd-123">**.NET framework 버전:** 1.1, 1.0</span><span class="sxs-lookup"><span data-stu-id="2ccdd-123">**.NET Framework Versions:** 1.1, 1.0</span></span>
