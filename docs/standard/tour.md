@@ -27,7 +27,7 @@ ms.locfileid: "54415925"
 
 .NET은 여러 프로그래밍 언어를 지원합니다. .NET 구현은 무엇보다 언어와 관련이 없는 런타임과 언어 상호 운용성을 지정하는 [CLI(공용 언어 인프라)](https://visualstudio.microsoft.com/license-terms/ecma-c-common-language-infrastructure-standards/)를 구현합니다. 즉 어떤 .NET 언어를 선택해도 .NET에서 앱과 서비스를 빌드할 수 있습니다.
 
-Microsoft는 C#, F# 및 VB(Visual Basic)라는 세 가지 .NET 언어를 적극적으로 개발하고 지원합니다. 
+Microsoft에서는 C#과 F#, VB(Visual Basic) 이 세 가지 .NET 언어를 적극적으로 개발하고 지원합니다. 
 
 * C#은 C 스타일 언어의 표현력과 우아함은 그대로 유지하면서 간단하고 형식이 안전한 개체 지향 언어입니다. C나 이와 비슷한 언어에 익숙한 사용자라면 누구나 거의 문제 없이 C#을 사용할 수 있을 것입니다. C#에 대한 자세한 내용은 [C# 가이드](../csharp/index.md)를 참조하세요.
 

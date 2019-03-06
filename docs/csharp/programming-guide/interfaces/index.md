@@ -62,7 +62,7 @@ ms.assetid: 2feda177-ce11-432d-81b4-d50f5f35fd37
  [방법: 두 인터페이스의 멤버를 명시적으로 구현](how-to-explicitly-implement-members-of-two-interfaces.md)  
  상속을 포함하는 인터페이스 멤버를 명시적으로 구현하는 방법에 대한 예제를 제공합니다.  
   
-##  <a name="BKMK_RelatedSections"></a>관련 단원
+## <a name="BKMK_RelatedSections"></a>관련 단원
 
 - [인터페이스 속성](../classes-and-structs/interface-properties.md)  
 - [인터페이스의 인덱서](../indexers/indexers-in-interfaces.md)  

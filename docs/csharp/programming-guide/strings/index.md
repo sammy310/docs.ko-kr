@@ -113,7 +113,7 @@ string s = String.Empty;
   
  이 예제에서 <xref:System.Text.StringBuilder> 개체는 숫자 형식 집합에서 문자열을 만드는 데 사용됩니다.  
   
- [!code-csharp[csProgGuideStrings#15](../../../csharp/programming-guide/strings/codesnippet/CSharp/index_12.cs)]  
+ [!code-csharp[TestStringBuilder#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStrings/CS/TestStringBuilder.cs)]
   
 ## <a name="strings-extension-methods-and-linq"></a>문자열, 확장 메서드 및 LINQ  
  <xref:System.String> 형식이 <xref:System.Collections.Generic.IEnumerable%601>을 구현하므로 문자열에서 <xref:System.Linq.Enumerable> 클래스에 정의된 확장 메서드를 사용할 수 있습니다. 시각적인 혼란을 방지하기 위해 <xref:System.String> 형식의 경우 이러한 메서드가 IntelliSense에서 제외되지만, 제외되더라도 사용할 수는 있습니다. 문자열에서 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 쿼리 식을 사용할 수도 있습니다. 자세한 내용은 [LINQ 및 문자열](../../../csharp/programming-guide/concepts/linq/linq-and-strings.md)을 참조하세요.  

@@ -50,8 +50,7 @@ ms.assetid: 149f5ca5-5b34-4746-9542-1ae43b2d0256
 
  - [.NET 어셈블리 파일 형식](file-format.md)
  - [공용 언어 런타임의 어셈블리](../../framework/app-domains/assemblies-in-the-common-language-runtime.md)  
- - [Friend 어셈블리(C#)](../../csharp/programming-guide/concepts/assemblies-gac/friend-assemblies.md)  
- - [Friend 어셈블리(Visual Basic)](../../visual-basic/programming-guide/concepts/assemblies-gac/friend-assemblies.md)  
+ - [Friend 어셈블리](friend-assemblies.md)  
  - [방법: 어셈블리 로드 및 언로드(C#)](../../csharp/programming-guide/concepts/assemblies-gac/how-to-load-and-unload-assemblies.md)  
  - [방법: 어셈블리 로드 및 언로드(Visual Basic)](../../visual-basic/programming-guide/concepts/assemblies-gac/how-to-load-and-unload-assemblies.md)  
  - [방법: .NET Core에서 어셈블리 언로드 기능 사용 및 디버그](unloadability-howto.md)
