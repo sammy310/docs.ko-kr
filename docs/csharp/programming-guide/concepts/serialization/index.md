@@ -1,12 +1,6 @@
 ---
-title: Serialization(C#)
+title: 'Serialization(C#)'
 ms.date: 04/26/2018
-ms.openlocfilehash: 7d72be92e5568037264438e3fde1e7565366c962
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
-ms.translationtype: HT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43858319"
 ---
 # <a name="serialization-c"></a>Serialization(C#)
 
@@ -68,7 +62,7 @@ serialization은 기본 및 사용자 지정의 두 가지 방법으로 수행�
 
 디자이너 Serialization은 개발 도구와 관련해서 개체 지속성이 적용되는 특수한 형태의 Serialization입니다. 디자이너 serialization은 개체 그래프를 소스 파일로 변환하여 나중에 개체 그래프를 복구하는 데 사용할 수 있도록 하는 프로세스입니다. 소스 파일에는 코드, 태그 또는 심지어 SQL 테이블 정보도 포함될 수 있습니다.
 
-##  <a name="BKMK_RelatedTopics"></a> 관련 항목 및 예제  
+## <a name="BKMK_RelatedTopics"></a> 관련 항목 및 예제  
 [연습: Visual Studio에서 개체 유지(C#)](walkthrough-persisting-an-object-in-visual-studio.md)  
 serialization을 사용하여 인스턴스 간에 개체의 데이터를 유지함으로써 다음에 개체를 인스턴스화할 때 값을 저장하고 검색하는 방식을 보여 줍니다.
 
