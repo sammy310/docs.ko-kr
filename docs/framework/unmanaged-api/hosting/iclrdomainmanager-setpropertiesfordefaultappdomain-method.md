@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 43e61c4b-c435-45ec-9ef6-c68403aa4200
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f107847ddd48805f4779ff94c4e436a176688030
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: cd725f7468b26f9d8af3d7928b9df6fbefd93b6f
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54699027"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57502503"
 ---
 # <a name="iclrdomainmanagersetpropertiesfordefaultappdomain-method"></a>ICLRDomainManager::SetPropertiesForDefaultAppDomain 메서드
 기본 응용 프로그램 도메인을 초기화 하는 데 사용할 수 있는 속성을 설정 합니다.  
@@ -35,7 +35,7 @@ HRESULT SetPropertiesForDefaultAppDomain(
 );  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `nProperties`  
  [in] 항목 수가 `pwszPropertyNames` 고 `pwszPropertyValues`입니다.  
   

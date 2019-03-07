@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: c6858b06-ae26-4312-b325-ea6025016675
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4895610ba3a8e8e8eb1a1c360ecb2b707f9cee4d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 762ac20c376f4161aa9c053f6e5213ba24c792ba
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54622093"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57499777"
 ---
 # <a name="icordebugmergedassemblyrecordgetversion-method"></a>ICorDebugMergedAssemblyRecord::GetVersion 메서드
 어셈블리의 버전 정보를 가져옵니다.  
@@ -25,7 +25,7 @@ HRESULT GetVersion(
 );  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `pMajor`  
  [out] 주 버전 번호에 대한 포인터입니다.  
   

@@ -2,12 +2,12 @@
 title: WCF 테스트 클라이언트(WcfTestClient.exe)
 ms.date: 03/30/2017
 ms.assetid: d4302855-677f-4640-aa90-c5d785d72fb7
-ms.openlocfilehash: edce9d2eb2d0bcd915beae0c75d3474d93d8fd51
-ms.sourcegitcommit: c6f69b0cf149f6b54483a6d5c2ece222913f43ce
+ms.openlocfilehash: 9b693aea362d5f16604fb68f4fabbc9bed3602b8
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2019
-ms.locfileid: "55903994"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57499292"
 ---
 # <a name="wcf-test-client-wcftestclientexe"></a>WCF 테스트 클라이언트(WcfTestClient.exe)
 Windows Communication Foundation (WCF) 테스트 클라이언트 (WcfTestClient.exe)는 테스트 매개 변수를 입력 하 여 해당 서비스에 입력을 사용 하면 서비스가 다시 보낸 응답을 확인 하는 GUI 도구입니다. 서비스를 매끄럽게 테스트할 WCF 서비스 호스트를 함께 사용 하면 환경을 제공 합니다.  
@@ -125,7 +125,7 @@ Windows Communication Foundation (WCF) 테스트 클라이언트 (WcfTestClient.
  프록시 생성, 이진 컴파일 또는 서비스 호출 도중에는 서비스 새로 고침을 지원하는 메뉴 항목을 사용할 수 없습니다. 서비스 호출도 비활성화됩니다.  
   
 ## <a name="location-of-files-generated-by-the-test-client"></a>테스트 클라이언트에서 생성한 파일의 위치  
- 기본적으로 WCF 테스트 클라이언트 저장소 "%appdata%\Local\temp\Test Client Projects" 폴더에서 클라이언트 코드 및 구성 파일을 생성 합니다. WCF 테스트 클라이언트 종료 된 후이 폴더는 삭제 됩니다. WCF 테스트 클라이언트에서 구성 파일을 수정할 경우와 **다시 생성 구성 서비스 시작 시 항상** 옵션 기능을 해제 하면 수정된 된 파일은 "My Documents\Test Client Projects" 아래의 "Cached Config" 폴더에 복사 인덱스로 매핑 (메타 데이터 주소-에-파일 이름 간) XML 파일입니다.  
+ 기본적으로 WCF 테스트 클라이언트 저장소 "%appdata%\Local\temp\Test Client Projects" 폴더에서 클라이언트 코드 및 구성 파일을 생성 합니다. WCF 테스트 클라이언트 종료 된 후이 폴더는 삭제 됩니다. WCF 테스트 클라이언트에서 구성 파일을 수정할 경우와 **다시 생성 구성 서비스 시작 시 항상** 옵션 기능을 해제 하면 수정된 된 파일은 "My Documents\Test Client Projects" 아래의 "CachedConfig" 폴더에 복사 인덱스로 매핑 (메타 데이터 주소-에-파일 이름 간) XML 파일입니다.  
   
  명령줄에서 사용 하 여 WCF 테스트 클라이언트를 시작할 수도 있습니다는 `/ProjectPath` 생성 된 파일을 저장 하는 것에 대 한 새 경로 지정으로 전환 하거나 사용 하 여는 `/RestoreProjectPath` 기본 위치를 복원 하는 스위치입니다. 구문은 다음과 같습니다.  
   

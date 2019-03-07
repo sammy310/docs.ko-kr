@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d79d3651bb949899681eac2e7d2ac49d9233ccc7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: bb1632b5d9379eb35d4188a218f3184acf8d0ed3
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54531777"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57497108"
 ---
 # <a name="iclrcontrolsetappdomainmanagertype-method"></a>ICLRControl::SetAppDomainManagerType 메서드
 파생 된 형식을 설정 <xref:System.AppDomainManager> 응용 프로그램 도메인 관리자에 대 한 형식으로 합니다.  
@@ -36,7 +36,7 @@ HRESULT SetAppDomainManagerType (
 );  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `pwzAppDomainManagerAssembly`  
  [in] 요청된 된 형식에서 파생 된 어셈블리의 이름을 <xref:System.AppDomainManager> 구현 됩니다.  
   

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 45e0099ea60a338f0ea1ef414f4d2fa1c33c9d70
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: da21cda0872080272e6b2c2fda32bef2bf9f1f7d
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54726886"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57494534"
 ---
 # <a name="iclrhostbindingpolicymanagermodifyapplicationpolicy-method"></a>ICLRHostBindingPolicyManager::ModifyApplicationPolicy 메서드
 지정된 된 어셈블리에 대 한 바인딩 정책 수정 하 고 정책의 새 버전을 만듭니다.  
@@ -41,7 +41,7 @@ HRESULT  ModifyApplicationPolicy (
 );  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `pwzSourceAssemblyIdentity`  
  [in] 수정할 어셈블리의 id입니다.  
   
@@ -69,7 +69,7 @@ HRESULT  ModifyApplicationPolicy (
 |-------------|-----------------|  
 |S_OK|정책을 수정 했습니다.|  
 |E_INVALIDARG|`pwzSourceAssemblyIdentity` 또는 `pwzTargetAssemblyIdentity` null 참조 되었습니다.|  
-|ERROR_INSUFFICIENT_BUFFER|`pbNewApplicationPolicy`가 너무 작습니다.|  
+|ERROR_INSUFFICIENT_BUFFER|`pbNewApplicationPolicy` 너무 작습니다.|  
 |HOST_E_CLRNOTAVAILABLE|프로세스에는 CLR (공용 언어 런타임)에 로드 되지 또는 CLR 상태인는 관리 코드를 실행 하거나 호출을 처리할 수 없습니다.|  
 |HOST_E_TIMEOUT|호출 시간이 초과 되었습니다.|  
 |HOST_E_NOT_OWNER|호출자가 잠금을 소유 하지 않습니다.|  

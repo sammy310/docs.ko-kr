@@ -15,12 +15,12 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: d19a4b8116573f2ff6469fe612e7b7736651ff03
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 23b567e4119578fba2f8cd4ba47f66dcf56a3878
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57354533"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57496848"
 ---
 # <a name="ixclrdataprocessenummethodinstancebyaddress-method"></a>IXCLRDataProcess::EnumMethodInstanceByAddress 메서드
 
@@ -37,7 +37,7 @@ HRESULT EnumMethodInstanceByAddress(
 );
 ```
 
-### <a name="parameters"></a>매개 변수
+## <a name="parameters"></a>매개 변수
 
 `handle`\
 [in] 메서드 인스턴스를 열거 하는 것에 대 한 핸들입니다.

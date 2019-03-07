@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 0651609e6d2597336ee42ceae752df7e561cd252
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5ece4041f7fe4f9080db32a7edc2271b7f3beb95
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54692654"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57498941"
 ---
 # <a name="icorprofilerinfo2getclassfromtokenandtypeargs-method"></a>ICorProfilerInfo2::GetClassFromTokenAndTypeArgs 메서드
 가져옵니다 합니다 `ClassID` 지정 된 메타 데이터 토큰을 사용 하 여 형식 및 `ClassID` 값의 형식 인수입니다.  
@@ -38,7 +38,7 @@ HRESULT GetClassFromTokenAndTypeArgs(
     [out] ClassID* pClassID);  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `moduleID`  
  [in] ID 형식 상주 하는 모듈입니다.  
   

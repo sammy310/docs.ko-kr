@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 540f9d1a765ff46235f3c3d62f5da4a00b8ab85a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a1d9fdef9d183a03fd7f335a13683e1d1a3f95c8
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54745482"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57485722"
 ---
 # <a name="iclrdatatargetwritevirtual-method"></a>ICLRDataTarget::WriteVirtual 메서드
 지정 된 가상 메모리 주소를 지정된 된 버퍼에서 데이터를 씁니다.  
@@ -39,7 +39,7 @@ HRESULT WriteVirtual (
 );  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `address`  
  [in] 가상 메모리 주소를 저장 하는 CLRDATA_ADDRESS 합니다.  
   

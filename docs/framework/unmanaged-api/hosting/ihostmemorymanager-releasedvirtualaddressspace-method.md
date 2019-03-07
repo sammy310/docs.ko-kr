@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1b7bf2a3e359ca05a147553d89a1d2bb3d235209
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f337ece4e68c1685f7474df4b96074597e16271a
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54571051"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57501420"
 ---
 # <a name="ihostmemorymanagerreleasedvirtualaddressspace-method"></a>IHostMemoryManager::ReleasedVirtualAddressSpace 메서드
 지정 된 메모리를 사용 하는 CLR (공용 언어 런타임)가 완료 했음을 호스트에 알립니다.  
@@ -35,7 +35,7 @@ HRESULT ReleasedVirtualAddressSpace(
 );  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `startAddress`  
  [in] 해제할 메모리의 시작 주소에 대 한 포인터입니다.  
   

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3080196076aefbee6bb484063994abe54eb3f53b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ba0387b84f8d32831b79dd6c361bcdbb78f8bbba
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54716994"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57499492"
 ---
 # <a name="icordebugvariablehomegetlocationtype-method"></a>ICorDebugVariableHome::GetLocationType 메서드
 변수의 네이티브 위치 유형을 가져옵니다.  
@@ -35,7 +35,7 @@ HRESULT GetLocationType(
 );  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `pLocationType`  
  [out] 변수의 기본 위치의 형식에 대 한 포인터입니다.  참조 된 [VariableLocationType](../../../../docs/framework/unmanaged-api/debugging/variablelocationtype-enumeration.md) 자세한 정보에 대 한 열거형입니다.  
   

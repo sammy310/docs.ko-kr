@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: aa631721965123c4427a5d1ff2e0cec2a1ab2395
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: be7e375f2683ef7f37f2e1e141e1c8a3b00da09a
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54637688"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57497043"
 ---
 # <a name="imetadatatablesgetblob-method"></a>IMetaDataTables::GetBlob 메서드
 Binary large object (BLOB)를 지정 된 열 인덱스에 대 한 포인터를 가져옵니다.  
@@ -37,7 +37,7 @@ HRESULT GetBlob (
 );  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `ixBlob`  
  [in] 메모리 주소를 가져올 `ppData`합니다.  
   

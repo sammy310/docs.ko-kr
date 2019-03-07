@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 281284ca432efc86964a2e3e37fa89d1506aa350
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d6c9a6bf69b8f1728f9dfa6c19bc04670d96a6d8
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54698676"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57494347"
 ---
 # <a name="ihostiocompletionmanagercloseiocompletionport-method"></a>IHostIoCompletionManager::CloseIoCompletionPort 메서드
 호스트에 대 한 이전 호출을 통해 연 포트를 닫도록 요청 [CreateIoCompletionPort](../../../../docs/framework/unmanaged-api/hosting/ihostiocompletionmanager-createiocompletionport-method.md)합니다.  
@@ -35,7 +35,7 @@ HRESULT CloseIoCompletionPort (
 );  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `hPort`  
  [in] 포트 닫기의 핸들입니다.  
   
