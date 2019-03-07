@@ -14,19 +14,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 455b8f5434974f2bb424faf23bb2a49e91214e7e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 60d9ae1abc97d348dced9e4a21236c70658a9141
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54731090"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57488138"
 ---
-# <a name="icordebugilcodegetehclauses-method"></a><span data-ttu-id="56cba-102">ICorDebugILCode::GetEHClauses 메서드</span><span class="sxs-lookup"><span data-stu-id="56cba-102">ICorDebugILCode::GetEHClauses Method</span></span>
-<span data-ttu-id="56cba-103">[.NET Framework 4.5.2 이상 버전에서 지원됨]</span><span class="sxs-lookup"><span data-stu-id="56cba-103">[Supported in the .NET Framework 4.5.2 and later versions]</span></span>  
+# <a name="icordebugilcodegetehclauses-method"></a><span data-ttu-id="98eb3-102">ICorDebugILCode::GetEHClauses 메서드</span><span class="sxs-lookup"><span data-stu-id="98eb3-102">ICorDebugILCode::GetEHClauses Method</span></span>
+<span data-ttu-id="98eb3-103">[.NET Framework 4.5.2 이상 버전에서 지원됨]</span><span class="sxs-lookup"><span data-stu-id="98eb3-103">[Supported in the .NET Framework 4.5.2 and later versions]</span></span>  
   
- <span data-ttu-id="56cba-104">이 IL(중간 언어)에 대해 정의된 EH(예외 처리) 절 목록에 대한 포인터를 반환합니다.</span><span class="sxs-lookup"><span data-stu-id="56cba-104">Returns a pointer to a list of exception handling (EH) clauses that are defined for this intermediate language (IL).</span></span>  
+ <span data-ttu-id="98eb3-104">이 IL(중간 언어)에 대해 정의된 EH(예외 처리) 절 목록에 대한 포인터를 반환합니다.</span><span class="sxs-lookup"><span data-stu-id="98eb3-104">Returns a pointer to a list of exception handling (EH) clauses that are defined for this intermediate language (IL).</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="56cba-105">구문</span><span class="sxs-lookup"><span data-stu-id="56cba-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="98eb3-105">구문</span><span class="sxs-lookup"><span data-stu-id="98eb3-105">Syntax</span></span>  
   
 ```cpp
 HRESULT GetEHClauses(  
@@ -35,29 +35,30 @@ HRESULT GetEHClauses(
    [out, size_is(cClauses), length_is(*pcClauses)] CorDebugEHClause clauses[]);  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="56cba-106">매개 변수</span><span class="sxs-lookup"><span data-stu-id="56cba-106">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="98eb3-106">매개 변수</span><span class="sxs-lookup"><span data-stu-id="98eb3-106">Parameters</span></span>  
  `cClauses`  
- <span data-ttu-id="56cba-107">[in] `clauses` 배열의 저장소 용량입니다.</span><span class="sxs-lookup"><span data-stu-id="56cba-107">[in] The storage capacity of the `clauses` array.</span></span> <span data-ttu-id="56cba-108">자세한 내용은 설명 부분을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="56cba-108">See the Remarks section for more information.</span></span>  
+ <span data-ttu-id="98eb3-107">[in] `clauses` 배열의 저장소 용량입니다.</span><span class="sxs-lookup"><span data-stu-id="98eb3-107">[in] The storage capacity of the `clauses` array.</span></span> <span data-ttu-id="98eb3-108">자세한 내용은 설명 부분을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="98eb3-108">See the Remarks section for more information.</span></span>  
   
  `pcClauses`  
- <span data-ttu-id="56cba-109">[out] `clauses` 배열에 관련 정보가 기록되는 절의 수입니다.</span><span class="sxs-lookup"><span data-stu-id="56cba-109">[out] The number of clauses about which information is written to the `clauses` array.</span></span>  
+ <span data-ttu-id="98eb3-109">[out] `clauses` 배열에 관련 정보가 기록되는 절의 수입니다.</span><span class="sxs-lookup"><span data-stu-id="98eb3-109">[out] The number of clauses about which information is written to the `clauses` array.</span></span>  
   
- <span data-ttu-id="56cba-110">clauses</span><span class="sxs-lookup"><span data-stu-id="56cba-110">clauses</span></span>  
- <span data-ttu-id="56cba-111">[out] 배열을 [CorDebugEHClause](../../../../docs/framework/unmanaged-api/debugging/cordebugehclause-structure.md) 예외 처리 절이이 IL에 대 한 정의 대 한 정보를 포함 하는 개체입니다.</span><span class="sxs-lookup"><span data-stu-id="56cba-111">[out] An array of [CorDebugEHClause](../../../../docs/framework/unmanaged-api/debugging/cordebugehclause-structure.md) objects that contain information on exception handling clauses defined for this IL.</span></span>  
+ <span data-ttu-id="98eb3-110">clauses</span><span class="sxs-lookup"><span data-stu-id="98eb3-110">clauses</span></span>  
+ <span data-ttu-id="98eb3-111">[out] 배열을 [CorDebugEHClause](../../../../docs/framework/unmanaged-api/debugging/cordebugehclause-structure.md) 예외 처리 절이이 IL에 대 한 정의 대 한 정보를 포함 하는 개체입니다.</span><span class="sxs-lookup"><span data-stu-id="98eb3-111">[out] An array of [CorDebugEHClause](../../../../docs/framework/unmanaged-api/debugging/cordebugehclause-structure.md) objects that contain information on exception handling clauses defined for this IL.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="56cba-112">설명</span><span class="sxs-lookup"><span data-stu-id="56cba-112">Remarks</span></span>  
- <span data-ttu-id="56cba-113">하는 경우 `cClauses` 가 0 및 `pcClauses` 이 아닌**null**, `pcClauses` 사용 가능한 예외 처리 절의 수로 설정 됩니다.</span><span class="sxs-lookup"><span data-stu-id="56cba-113">If `cClauses` is 0 and `pcClauses` is non-**null**, `pcClauses` is set to the number of available exception handling clauses.</span></span> <span data-ttu-id="56cba-114">`cClauses`는 값이 0이 아닌 경우 `clauses` 배열의 저장소 용량을 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="56cba-114">If `cClauses` is non-zero, it represents the storage capacity of the `clauses` array.</span></span> <span data-ttu-id="56cba-115">메서드가 반환될 때 `clauses`는 `cClauses` 항목의 최대값을 포함하며 `pcClauses`는 `clauses` 배열에 실제로 기록된 절의 수로 설정됩니다.</span><span class="sxs-lookup"><span data-stu-id="56cba-115">When the method returns, `clauses` contains a maximum of `cClauses` items, and `pcClauses` is set to the number of clauses actually written to the `clauses` array.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="98eb3-112">설명</span><span class="sxs-lookup"><span data-stu-id="98eb3-112">Remarks</span></span>  
+ <span data-ttu-id="98eb3-113">하는 경우 `cClauses` 가 0 및 `pcClauses` 이 아닌**null**, `pcClauses` 사용 가능한 예외 처리 절의 수로 설정 됩니다.</span><span class="sxs-lookup"><span data-stu-id="98eb3-113">If `cClauses` is 0 and `pcClauses` is non-**null**, `pcClauses` is set to the number of available exception handling clauses.</span></span> <span data-ttu-id="98eb3-114">
+  `cClauses\`은 값이 0이 아닌 경우 `clauses\` 배열의 저장소 용량을 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="98eb3-114">If `cClauses` is non-zero, it represents the storage capacity of the `clauses` array.</span></span> <span data-ttu-id="98eb3-115">메서드가 반환될 때 `clauses`는 `cClauses` 항목의 최대값을 포함하며 `pcClauses`는 `clauses` 배열에 실제로 기록된 절의 수로 설정됩니다.</span><span class="sxs-lookup"><span data-stu-id="98eb3-115">When the method returns, `clauses` contains a maximum of `cClauses` items, and `pcClauses` is set to the number of clauses actually written to the `clauses` array.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="56cba-116">요구 사항</span><span class="sxs-lookup"><span data-stu-id="56cba-116">Requirements</span></span>  
- <span data-ttu-id="56cba-117">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="56cba-117">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="98eb3-116">요구 사항</span><span class="sxs-lookup"><span data-stu-id="98eb3-116">Requirements</span></span>  
+ <span data-ttu-id="98eb3-117">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="98eb3-117">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="56cba-118">**헤더:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="56cba-118">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="98eb3-118">**헤더:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="98eb3-118">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="56cba-119">**라이브러리:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="56cba-119">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="98eb3-119">**라이브러리:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="98eb3-119">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="56cba-120">**.NET Framework 버전:** [!INCLUDE[net_current_v452plus](../../../../includes/net-current-v452plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="56cba-120">**.NET Framework Versions:** [!INCLUDE[net_current_v452plus](../../../../includes/net-current-v452plus-md.md)]</span></span>  
+ <span data-ttu-id="98eb3-120">**.NET Framework 버전:** [!INCLUDE[net_current_v452plus](../../../../includes/net-current-v452plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="98eb3-120">**.NET Framework Versions:** [!INCLUDE[net_current_v452plus](../../../../includes/net-current-v452plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="56cba-121">참고자료</span><span class="sxs-lookup"><span data-stu-id="56cba-121">See also</span></span>
-- [<span data-ttu-id="56cba-122">ICorDebugILCode 인터페이스</span><span class="sxs-lookup"><span data-stu-id="56cba-122">ICorDebugILCode Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugilcode-interface.md)
-- [<span data-ttu-id="56cba-123">CorDebugEHClause 구조체</span><span class="sxs-lookup"><span data-stu-id="56cba-123">CorDebugEHClause Structure</span></span>](../../../../docs/framework/unmanaged-api/debugging/cordebugehclause-structure.md)
-- [<span data-ttu-id="56cba-124">디버깅 인터페이스</span><span class="sxs-lookup"><span data-stu-id="56cba-124">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+## <a name="see-also"></a><span data-ttu-id="98eb3-121">참고자료</span><span class="sxs-lookup"><span data-stu-id="98eb3-121">See also</span></span>
+- [<span data-ttu-id="98eb3-122">ICorDebugILCode 인터페이스</span><span class="sxs-lookup"><span data-stu-id="98eb3-122">ICorDebugILCode Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugilcode-interface.md)
+- [<span data-ttu-id="98eb3-123">CorDebugEHClause 구조체</span><span class="sxs-lookup"><span data-stu-id="98eb3-123">CorDebugEHClause Structure</span></span>](../../../../docs/framework/unmanaged-api/debugging/cordebugehclause-structure.md)
+- [<span data-ttu-id="98eb3-124">디버깅 인터페이스</span><span class="sxs-lookup"><span data-stu-id="98eb3-124">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

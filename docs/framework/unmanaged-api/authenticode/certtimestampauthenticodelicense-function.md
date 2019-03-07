@@ -10,17 +10,17 @@ api_type:
 ms.assetid: d468325a-21c5-43ce-8567-84e342b22308
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9987640f988f2239a01d2dfdbcd6b1684579d8bc
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c7b336d1372bdbe0d6dbdcf79d94e14c30ad2ebe
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54601509"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57497342"
 ---
-# <a name="certtimestampauthenticodelicense-function"></a><span data-ttu-id="f85e7-102">CertTimestampAuthenticodeLicense 함수</span><span class="sxs-lookup"><span data-stu-id="f85e7-102">CertTimestampAuthenticodeLicense Function</span></span>
-<span data-ttu-id="f85e7-103">Authenticode XrML 라이선스에 타임스탬프를 적용합니다.</span><span class="sxs-lookup"><span data-stu-id="f85e7-103">Time-stamps an Authenticode XrML license.</span></span>  
+# <a name="certtimestampauthenticodelicense-function"></a><span data-ttu-id="90213-102">CertTimestampAuthenticodeLicense 함수</span><span class="sxs-lookup"><span data-stu-id="90213-102">CertTimestampAuthenticodeLicense Function</span></span>
+<span data-ttu-id="90213-103">Authenticode XrML 라이선스에 타임스탬프를 적용합니다.</span><span class="sxs-lookup"><span data-stu-id="90213-103">Time-stamps an Authenticode XrML license.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="f85e7-104">구문</span><span class="sxs-lookup"><span data-stu-id="f85e7-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="90213-104">구문</span><span class="sxs-lookup"><span data-stu-id="90213-104">Syntax</span></span>  
   
 ```  
 HRESULT CertTimestampAuthenticodeLicense (  
@@ -30,21 +30,21 @@ HRESULT CertTimestampAuthenticodeLicense (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="f85e7-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="f85e7-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="90213-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="90213-105">Parameters</span></span>  
  `pSignedLicenseBlob`  
- <span data-ttu-id="f85e7-106">[in] 타임스탬프를 적용할 서명된 Authenticode XrML 라이선스입니다.</span><span class="sxs-lookup"><span data-stu-id="f85e7-106">[in] The signed Authenticode XrML license to be time-stamped.</span></span> <span data-ttu-id="f85e7-107">참조 된 [CRYPTOAPI_BLOB](/windows/desktop/api/dpapi/ns-dpapi-_cryptoapi_blob) 구조입니다.</span><span class="sxs-lookup"><span data-stu-id="f85e7-107">See the [CRYPTOAPI_BLOB](/windows/desktop/api/dpapi/ns-dpapi-_cryptoapi_blob) structure.</span></span>  
+ <span data-ttu-id="90213-106">[in] 타임스탬프를 적용할 서명된 Authenticode XrML 라이선스입니다.</span><span class="sxs-lookup"><span data-stu-id="90213-106">[in] The signed Authenticode XrML license to be time-stamped.</span></span> <span data-ttu-id="90213-107">참조 된 [CRYPTOAPI_BLOB](/windows/desktop/api/dpapi/ns-dpapi-_cryptoapi_blob) 구조입니다.</span><span class="sxs-lookup"><span data-stu-id="90213-107">See the [CRYPTOAPI_BLOB](/windows/desktop/api/dpapi/ns-dpapi-_cryptoapi_blob) structure.</span></span>  
   
  `pwszTimestampURI`  
- <span data-ttu-id="f85e7-108">[in] 타임스탬프 서버의 URI입니다.</span><span class="sxs-lookup"><span data-stu-id="f85e7-108">[in] The time-stamp server's URI.</span></span>  
+ <span data-ttu-id="90213-108">[in] 타임스탬프 서버의 URI입니다.</span><span class="sxs-lookup"><span data-stu-id="90213-108">[in] The time-stamp server's URI.</span></span>  
   
  `pTimestampSignatureBlob`  
- <span data-ttu-id="f85e7-109">[out] base64로 인코딩된 타임스탬프 서명을 받을 CRYPT_DATA_BLOB에 대한 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="f85e7-109">[out] A pointer to CRYPT_DATA_BLOB to receive the base64-encoded time-stamp signature.</span></span> <span data-ttu-id="f85e7-110">무료 호출자의 책임 `pTimestampSignatureBlob` -> `pbData` 사용 하 여 `HepFree()` 후 사용 합니다.</span><span class="sxs-lookup"><span data-stu-id="f85e7-110">It is the caller's responsibility to free `pTimestampSignatureBlob`->`pbData` with `HepFree()` after use.</span></span> <span data-ttu-id="f85e7-111">참조 된 [CRYPTOAPI_BLOB](/windows/desktop/api/dpapi/ns-dpapi-_cryptoapi_blob) 구조입니다.</span><span class="sxs-lookup"><span data-stu-id="f85e7-111">See the [CRYPTOAPI_BLOB](/windows/desktop/api/dpapi/ns-dpapi-_cryptoapi_blob) structure.</span></span>  
+ <span data-ttu-id="90213-109">[out] base64로 인코딩된 타임스탬프 서명을 받을 CRYPT_DATA_BLOB에 대한 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="90213-109">[out] A pointer to CRYPT_DATA_BLOB to receive the base64-encoded time-stamp signature.</span></span> <span data-ttu-id="90213-110">무료 호출자의 책임 `pTimestampSignatureBlob` -> `pbData` 사용 하 여 `HepFree()` 후 사용 합니다.</span><span class="sxs-lookup"><span data-stu-id="90213-110">It is the caller's responsibility to free `pTimestampSignatureBlob`->`pbData` with `HepFree()` after use.</span></span> <span data-ttu-id="90213-111">참조 된 [CRYPTOAPI_BLOB](/windows/desktop/api/dpapi/ns-dpapi-_cryptoapi_blob) 구조입니다.</span><span class="sxs-lookup"><span data-stu-id="90213-111">See the [CRYPTOAPI_BLOB](/windows/desktop/api/dpapi/ns-dpapi-_cryptoapi_blob) structure.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="f85e7-112">설명</span><span class="sxs-lookup"><span data-stu-id="f85e7-112">Remarks</span></span>  
- <span data-ttu-id="f85e7-113">타임스탬프 서명은 실제로는 해당 콘텐츠가 라이선스 서명에 있는 SignatureValue의 이진 형식인 PKCS #7 SignedData 메시지이며,</span><span class="sxs-lookup"><span data-stu-id="f85e7-113">The time-stamp signature is actually a PKCS #7 SignedData message whose content is the binary form of the SignatureValue from the license's signature.</span></span> <span data-ttu-id="f85e7-114">기본적으로 라이선스의 연대 서명으로 작동합니다.</span><span class="sxs-lookup"><span data-stu-id="f85e7-114">Basically, this acts as a counter-signature of the license.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="90213-112">설명</span><span class="sxs-lookup"><span data-stu-id="90213-112">Remarks</span></span>  
+ <span data-ttu-id="90213-113">타임스탬프 서명은 실제로는 해당 콘텐츠가 라이선스 서명에 있는 SignatureValue의 이진 형식인 PKCS #7 SignedData 메시지이며,</span><span class="sxs-lookup"><span data-stu-id="90213-113">The time-stamp signature is actually a PKCS #7 SignedData message whose content is the binary form of the SignatureValue from the license's signature.</span></span> <span data-ttu-id="90213-114">기본적으로 라이선스의 연대 서명으로 작동합니다.</span><span class="sxs-lookup"><span data-stu-id="90213-114">Basically, this acts as a counter-signature of the license.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="f85e7-115">반환 값</span><span class="sxs-lookup"><span data-stu-id="f85e7-115">Return Value</span></span>  
- <span data-ttu-id="f85e7-116">함수가 정상적으로 실행되는 경우 `S_OK`입니다.</span><span class="sxs-lookup"><span data-stu-id="f85e7-116">`S_OK` if the function succeeds.</span></span> <span data-ttu-id="f85e7-117">그러지 않으면 오류 코드가 반환됩니다.</span><span class="sxs-lookup"><span data-stu-id="f85e7-117">Otherwise, returns an error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="90213-115">반환 값</span><span class="sxs-lookup"><span data-stu-id="90213-115">Return Value</span></span>  
+ <span data-ttu-id="90213-116">함수가 정상적으로 실행되는 경우 `S_OK`입니다.</span><span class="sxs-lookup"><span data-stu-id="90213-116">`S_OK` if the function succeeds.</span></span> <span data-ttu-id="90213-117">그러지 않으면 오류 코드가 반환됩니다.</span><span class="sxs-lookup"><span data-stu-id="90213-117">Otherwise, returns an error code.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="f85e7-118">참고자료</span><span class="sxs-lookup"><span data-stu-id="f85e7-118">See also</span></span>
-- [<span data-ttu-id="f85e7-119">Authenticode</span><span class="sxs-lookup"><span data-stu-id="f85e7-119">Authenticode</span></span>](../../../../docs/framework/unmanaged-api/authenticode/index.md)
+## <a name="see-also"></a><span data-ttu-id="90213-118">참고자료</span><span class="sxs-lookup"><span data-stu-id="90213-118">See also</span></span>
+- [<span data-ttu-id="90213-119">Authenticode</span><span class="sxs-lookup"><span data-stu-id="90213-119">Authenticode</span></span>](../../../../docs/framework/unmanaged-api/authenticode/index.md)
