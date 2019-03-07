@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5e73afa7ef33e12d6bc658c944c79ce1bc4f94f4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 43e71696282a3c9e6d25793b583ee19f306e167b
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54572421"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57486240"
 ---
 # <a name="stacksnapshotcallback-function"></a>StackSnapshotCallback 함수
 프로파일러가 시작 되는 스택 워크 중 스택의 각 관리 되는 프레임 및 관리 되지 않는 프레임의 각 실행에 대 한 정보를 제공 합니다 [ICorProfilerInfo2::DoStackSnapshot](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-dostacksnapshot-method.md) 메서드.  
@@ -39,7 +39,7 @@ HRESULT __stdcall StackSnapshotCallback (
 );  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `funcId`  
  [in] 이 콜백을 실행 하는 관리 되지 않는 프레임입니다이 값이 0 인 경우 이 고, 그렇지 관리 되는 함수의 식별자 이며이 콜백은 관리 되는 프레임입니다.  
   

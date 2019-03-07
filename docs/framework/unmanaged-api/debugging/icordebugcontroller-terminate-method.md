@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 362ae813846ab31f170ae49288735996eb1e9555
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 65a374f942697ee670507987c4a97a7977970b69
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54531761"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57481095"
 ---
 # <a name="icordebugcontrollerterminate-method"></a>ICorDebugController::Terminate 메서드
 지정된 된 종료 코드를 사용 하 여 프로세스를 종료합니다.  
@@ -38,7 +38,7 @@ HRESULT Terminate (
 );  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `exitCode`  
  [in] 종료 코드는 숫자 값입니다. 유효한 숫자 값 Winbase.h에 정의 됩니다.  
   

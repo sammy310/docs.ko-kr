@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4b48ff81fad397adcd5b2d0caae961484bfea5e2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0c5e1cc3b47c6752017db19f7981a3810d19aca4
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54706393"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57492142"
 ---
 # <a name="imetadataimportcountenum-method"></a>IMetaDataImport::CountEnum 메서드
 지정된 된 열거자에서 검색 된 열거형의 요소 수를 가져옵니다.  
@@ -36,7 +36,7 @@ HRESULT CountEnum (
 );  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `hEnum`  
  [in] 열거자에 대 한 핸들입니다.  
   

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a8e270f45300bd5f8c2e6cd87f9b84f31ec42320
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5e74d625cadb2febe45aa4c000e5b63f96aada55
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54722194"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57494105"
 ---
 # <a name="iceegenaddsectionreloc-method"></a>ICeeGen::AddSectionReloc 메서드
 코드 베이스.reloc 명령을 추가합니다.  
@@ -40,7 +40,7 @@ HRESULT AddSectionReloc (
 );  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `section`  
  [in] .Reloc 명령을 추가 하는 메모리 내 코드의 섹션입니다.  
   

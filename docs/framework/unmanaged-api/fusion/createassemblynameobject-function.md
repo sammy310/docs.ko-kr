@@ -18,12 +18,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1412231b53763ce8e6c2400497396d2f178d8e7a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2f7192b97b4fe1013c6ad4268f50288d6231e7f1
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54666295"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57485592"
 ---
 # <a name="createassemblynameobject-function"></a>CreateAssemblyNameObject 함수
 한 인터페이스 포인터를 가져옵니다는 [IAssemblyName](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md) 지정한 이름 가진 어셈블리의 고유 id를 나타내는 인스턴스입니다.  
@@ -39,7 +39,7 @@ HRESULT CreateAssemblyNameObject (
  );  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `ppAssemblyNameObj`  
  [out] 반환 된 `IAssemblyName`합니다.  
   

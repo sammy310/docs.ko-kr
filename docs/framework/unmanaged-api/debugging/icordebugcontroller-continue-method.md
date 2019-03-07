@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 115a998f8be233c38efac1a301b4b24b7d861662
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4f448a0383d3ad121cbddb59e13acef46a336261
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54540184"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57485735"
 ---
 # <a name="icordebugcontrollercontinue-method"></a>ICorDebugController::Continue 메서드
 호출한 후 관리 되는 스레드의 실행을 다시 시작 [Stop 메서드](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-stop-method.md)합니다.  
@@ -35,7 +35,7 @@ HRESULT Continue (
 );  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `fIsOutOfBand`  
  [in] 로 `true` 대역의 이벤트;에서 계속 실행 하는 경우이 고, 그렇지로 `false`합니다.  
   

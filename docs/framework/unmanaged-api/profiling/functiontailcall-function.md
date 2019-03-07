@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a38d4858d248ef4eefbcb9d97c13e68d9507fb12
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 03b49f4da8c9dd9ad02549f3836a841535bf1f74
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54665034"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57502425"
 ---
 # <a name="functiontailcall-function"></a>FunctionTailcall 함수
 현재 실행 중인 함수에 대 한 다른 함수에 대 한 마무리 호출이 수행 하는 프로파일러에 알립니다.  
@@ -37,7 +37,7 @@ void __stdcall FunctionTailcall (
 );  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `funcID`  
  [in] 마무리 호출을 수행 하려고 하는 현재 실행 중인 함수의 식별자입니다.  
   

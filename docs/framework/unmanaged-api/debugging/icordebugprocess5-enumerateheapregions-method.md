@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c05ebc819d5fdd40ec20e62ece9f556244d914c0
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5632e6a68b5fcaf77885d67c64915fca5f8cf519
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54661037"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57502540"
 ---
 # <a name="icordebugprocess5enumerateheapregions-method"></a>ICorDebugProcess5::EnumerateHeapRegions 메서드
 관리 되는 힙의 메모리 범위에 대 한 열거자를 가져옵니다.  
@@ -35,7 +35,7 @@ HRESULT EnumerateHeapRegions(
 );  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `ppRegions`  
  [out] 주소에 대 한 포인터를 [ICorDebugHeapSegmentEnum](../../../../docs/framework/unmanaged-api/debugging/icordebugheapsegmentenum-interface.md) 인터페이스 개체는 개체에 관리 되는 힙 메모리의 범위에 대 한 열거자입니다.  
   

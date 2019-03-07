@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5895dc3cb64b72380dead1e048c012b586c4f48e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0c08cac6fd6b467fe365989cb4d6780325bdaa90
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54550723"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57501619"
 ---
 # <a name="inotifyconnection2registernotifysource-method"></a>INotifyConnection2::RegisterNotifySource 메서드
 지정 된 알림 소스를 설치합니다.  
@@ -37,7 +37,7 @@ HRESULT RegisterNotifySource
 );  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `in_pNotifySource`  
  [in] 알림 소스로 사용할 개체를 지정 합니다.  
   

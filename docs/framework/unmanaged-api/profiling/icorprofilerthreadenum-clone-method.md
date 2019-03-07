@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5b9d3224370dac0f8a52affef9201e5cbec43de0
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e05bd4d6044654df0d0821762f219ab7720a3eef
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54547438"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57494313"
 ---
 # <a name="icorprofilerthreadenumclone-method"></a>ICorProfilerThreadEnum::Clone 메서드
 이 복사본에 인터페이스 포인터를 가져옵니다 [ICorProfilerThreadEnum](../../../../docs/framework/unmanaged-api/profiling/icorprofilerthreadenum-interface.md) 인터페이스입니다.  
@@ -34,7 +34,7 @@ HRESULT Clone (    [out] ICorProfilerThreadEnum **ppEnum
 );  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `ppEnum`  
  [out] 이 복사본을 가리키는 하는 인터페이스 포인터에 대 한 포인터 [ICorProfilerThreadEnum](../../../../docs/framework/unmanaged-api/profiling/icorprofilerthreadenum-interface.md) 인터페이스입니다. 열거자의 복사본을이 열거자는 별도로 자체 열거형의 상태를 유지 관리합니다. 그러나 복사본의 초기 커서 위치 열거자의 현재 커서 위치와 같습니다.  
   

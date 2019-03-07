@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6f64d554ee0bcd93d30dd617177c4e1e33e57aa3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 80aa64a8867a84100996ae88c5e65233d6b15782
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54648867"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57481068"
 ---
 # <a name="iapartmentcallbackdocallback-method"></a>IApartmentCallback::DoCallback 메서드
 아파트 내의 지정된 된 함수를 실행합니다.  
@@ -36,7 +36,7 @@ HRESULT _stdcall DoCallback(
 );  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `pFunc`  
  [in] 아파트 내에서 실행 되는 함수에 대 한 포인터입니다.  
   

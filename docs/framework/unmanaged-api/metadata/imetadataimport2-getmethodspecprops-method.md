@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 69af794d5405894d24f0d7545613a0e85ca3ec6a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 68bca30e2079e6a41852aa953e43f8b2eba9487e
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54574016"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57489087"
 ---
 # <a name="imetadataimport2getmethodspecprops-method"></a>IMetaDataImport2::GetMethodSpecProps 메서드
 지정 된 MethodSpec에서 참조 하는 메서드 메타 데이터 서명의 토큰을 가져옵니다.  
@@ -38,7 +38,7 @@ HRESULT GetMethodSpecProps (
 );   
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `mi`  
  [in] 메서드의 인스턴스화를 나타내는 MethodSpec 토큰입니다.  
   

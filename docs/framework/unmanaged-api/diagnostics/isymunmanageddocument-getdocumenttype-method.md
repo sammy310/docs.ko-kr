@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: adad8854052d76476076e5e1357f6d3e2dec1052
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 107039643e097ada1756054b2d14fcf0cbb71c00
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54629477"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57493377"
 ---
 # <a name="isymunmanageddocumentgetdocumenttype-method"></a>ISymUnmanagedDocument::GetDocumentType 메서드
 이 문서의 문서 유형을 가져옵니다.  
@@ -34,7 +34,7 @@ HRESULT GetDocumentType(
     [out, retval] GUID*  pRetVal);  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `pRetVal`  
  [out] 문서 유형을 수신 하는 변수에 대 한 포인터입니다.  
   

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 44862b96d882686bef0cc37e37252d0b7b1551e5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6b70bc4bd570829e3490f2171edd064437c263eb
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54737821"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57496900"
 ---
 # <a name="iceegengenerateceememoryimage-method"></a>ICeeGen::GenerateCeeMemoryImage 메서드
 코드 베이스에 대 한 메모리에 이미지를 생성합니다.  
@@ -37,7 +37,7 @@ HRESULT GenerateCeeMemoryImage (
 );  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `ppImage`  
  [out] 생성 되는 이미지에 대 한 포인터입니다.  
   

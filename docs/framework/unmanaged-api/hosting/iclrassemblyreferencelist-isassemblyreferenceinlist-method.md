@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d52f38412366880389e963b5ec6af63dcf5d768f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 557b15fe2bd04a3362532f190a88ee2ad52ed366
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54555052"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57499834"
 ---
 # <a name="iclrassemblyreferencelistisassemblyreferenceinlist-method"></a>ICLRAssemblyReferenceList::IsAssemblyReferenceInList 메서드
 제공 된 포인터 목록에 있는 어셈블리를 참조 하는지 여부를 나타내는 값을 가져옵니다.  
@@ -35,7 +35,7 @@ HRESULT IsAssemblyReferenceInList (
 );  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `pName`  
  [in] 검색할 어셈블리에 대 한 인터페이스 포인터입니다. 유효한 값은 형식의 `IAssemblyName` 또는 `IReferenceIdentity`합니다.  
   

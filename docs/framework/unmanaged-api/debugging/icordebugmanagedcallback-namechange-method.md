@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c33f287cf7ccadeb75ba0bbccf9118aeedc1f942
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b8bc4eb1895fe67c25354b42fe3ae1ffe80bca58
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54607434"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57491323"
 ---
 # <a name="icordebugmanagedcallbacknamechange-method"></a>ICorDebugManagedCallback::NameChange 메서드
 응용 프로그램 도메인 또는 스레드 이름이 변경 되었습니다 디버거에 알립니다.  
@@ -36,7 +36,7 @@ HRESULT NameChange (
 );  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `pAppDomain`  
  [in] 응용 프로그램 도메인 또는 이름 변경 하거나 있던 나타내는 ICorDebugAppDomain 개체에 대 한 포인터 이름을 변경 하는 스레드를 포함 합니다.  
   

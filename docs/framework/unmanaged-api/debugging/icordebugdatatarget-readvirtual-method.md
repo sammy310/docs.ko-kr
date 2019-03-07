@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8bc807906af67350f309a4fc9439899cea328be8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b401a70e34a1686f3a69c657f6417cf8e1d0d938
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54575491"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57499903"
 ---
 # <a name="icordebugdatatargetreadvirtual-method"></a>ICorDebugDataTarget::ReadVirtual 메서드
 지정된 된 주소에서 시작 하는 인접 한 메모리 블록을 가져옵니다 제공된 된 버퍼에 반환 합니다.  
@@ -38,7 +38,7 @@ HRESULT ReadVirtual(
     [out] ULONG32 *  pBytesRead);  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `address`  
  [in] 요청 된 메모리의 시작 주소입니다.  
   

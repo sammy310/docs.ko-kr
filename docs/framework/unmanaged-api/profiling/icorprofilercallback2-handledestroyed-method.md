@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 57b814f01d7da8d5b3f9e5bda7d0cf517bb870ed
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d666b01ae202831df38e0537221e238b9e2bf35e
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54592317"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57484409"
 ---
 # <a name="icorprofilercallback2handledestroyed-method"></a>ICorProfilerCallback2::HandleDestroyed 메서드
 가비지 컬렉션 핸들을 소멸 된 코드 프로파일러에 알립니다.  
@@ -34,7 +34,7 @@ HRESULT HandleDestroyed(
     [in] GCHandleID handleId);  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `handleId`  
  [in] ID는 가비지 수집에 대 한 핸들입니다.  
   

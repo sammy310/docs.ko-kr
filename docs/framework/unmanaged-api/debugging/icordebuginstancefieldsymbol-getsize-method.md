@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: a4af1e3b-6a9f-4855-95ba-5317565c8e2b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 04d866888c15585ff5058f870257b317ac888be7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: be2119b1ce43d5969c8d083e955210c69af69b44
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54696986"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57491440"
 ---
 # <a name="icordebuginstancefieldsymbolgetsize-method"></a>ICorDebugInstanceFieldSymbol::GetSize 메서드
 인스턴스 필드의 크기(바이트)를 가져옵니다.  
@@ -22,7 +22,7 @@ HRESULT GetSize(
 );  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `pcbSize`  
  [out] 필드 길이에 대한 포인터입니다.  
   

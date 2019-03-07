@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 25a6baea0cdd92d6d214ab8a697b0c00c44c42bf
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8a014a4e06464f461af25103037b349b2f18a2a5
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54664579"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57488710"
 ---
 # <a name="icorprofilerthreadenumnext-method"></a>ICorProfilerThreadEnum::Next 메서드
 시퀀스에서 열거자의 현재 위치부터 시작하여 순차적 스레드 컬렉션에서 지정된 개수의 연속 스레드를 가져옵니다.  
@@ -37,7 +37,7 @@ HRESULT Next (    [in]  ULONG      celt,
 );  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `celt`  
  [in] 검색할 스레드 개수입니다.  
   
@@ -53,7 +53,8 @@ HRESULT Next (    [in]  ULONG      celt,
 |HRESULT|설명|  
 |-------------|-----------------|  
 |S_OK|`celt` 요소가 반환되었습니다.|  
-|S_FALSE|`celt`개 미만의 요소가 반환되었으며 이는 열거형이 완료되었음을 나타냅니다.|  
+|S_FALSE|
+  `celt`개 미만의 요소가 반환되었으며 이는 열거형이 완료되었음을 나타냅니다.|  
   
 ## <a name="requirements"></a>요구 사항  
  **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  

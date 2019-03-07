@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 885871f3e6b3f10bfb7d660e2d6889e243ef751b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8e18c035060b8d5b38649011597d35d75fa2d8ef
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54734366"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57497186"
 ---
 # <a name="ihostmemorymanagervirtualquery-method"></a>IHostMemoryManager::VirtualQuery 메서드
 역할을 해당 하는 Win32 함수에 대 한 논리적 래퍼입니다. Win32 구현의 `VirtualQuery` 호출 프로세스의 가상 주소 공간에서 페이지 범위에 대 한 정보를 검색 합니다.  
@@ -38,7 +38,7 @@ HRESULT VirtualQuery (
 );  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `lpAddress`  
  [in] 쿼리할 수 있는 가상 메모리 주소에 대 한 포인터입니다.  
   

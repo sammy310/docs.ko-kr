@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8270a1ececccea8581b65f51f563e42016d0432a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c54c21008e5922a5357f503821d87e297f0d00e9
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54650696"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57499253"
 ---
 # <a name="icorruntimehostcreateevidence-method"></a>ICorRuntimeHost::CreateEvidence 메서드
 형식의 인터페이스 포인터를 가져옵니다 <xref:System.Security.Principal.IIdentity?displayProperty=nameWithType>에 전달할 보안 증명을 만들려면 호스트를 허용 하는 합니다 [CreateDomain](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-createdomain-method.md) 또는 [CreateDomainEx](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-createdomainex-method.md) 메서드.  
@@ -35,7 +35,7 @@ HRESULT CreateEvidence (
 );  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `pEvidence`  
  [out] 에 대 한 인터페이스 포인터를 <xref:System.Security.Principal.IIdentity?displayProperty=nameWithType> 인스턴스 보안 증명을 만드는 데 사용 합니다. 이 포인터를 입력 `IUnknown`호출자에 게 일반적으로 호출 해야 하므로 `QueryInterface` 에 대 한 포인터를 얻기 위해이 인터페이스에는 <xref:System.Security.Principal.IIdentity?displayProperty=nameWithType>합니다.  
   
@@ -43,7 +43,7 @@ HRESULT CreateEvidence (
   
 |HRESULT|설명|  
 |-------------|-----------------|  
-|S_OK|작업이 완료되었습니다.|  
+|S_OK|작업에 성공 합니다.|  
 |S_FALSE|작업을 완료 하지 못했습니다.|  
 |E_FAIL|알 수 없는 치명적인 오류가 발생 했습니다. E_FAIL을 반환 하는 메서드는 CLR (공용 언어 런타임) 더 이상 사용할 수 진행에서 합니다. 호스팅 Api에 대 한 후속 호출 HOST_E_CLRNOTAVAILABLE를 반환합니다.|  
 |HOST_E_CLRNOTAVAILABLE|CLR이 로드 된 프로세스에 또는 CLR 상태인는 관리 코드를 실행 하거나 호출을 처리할 수 없습니다.|  

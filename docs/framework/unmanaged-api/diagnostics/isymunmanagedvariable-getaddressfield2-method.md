@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 2a283915f8326a19c7d2c9b45851b9879fe0ec17
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6ee4e18d34cfc2836bd0017dd01e700662ffe7c2
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54634989"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57484227"
 ---
 # <a name="isymunmanagedvariablegetaddressfield2-method"></a>ISymUnmanagedVariable::GetAddressField2 메서드
 이 변수에 대 한 두 번째 주소 필드를 가져옵니다. 해당 의미는 주소에 따라 달라 집니다.  
@@ -34,7 +34,7 @@ HRESULT GetAddressField2(
     [out, retval] ULONG32* pRetVal);  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `pRetVal`  
  [out] 에 대 한 포인터를 `ULONG32` 를 받는 두 번째 주소 필드입니다.  
   

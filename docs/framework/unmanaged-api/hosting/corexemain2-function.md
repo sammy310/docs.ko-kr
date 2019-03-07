@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 70405d774d665e3add03c510f3b99a3280da4860
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ef51ad511d1b7d8064d4bd141e2952bf723afff7
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54625148"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57501684"
 ---
 # <a name="corexemain2-function"></a>_CorExeMain2 함수
 지정된 된 메모리 매핑된 코드에서 진입점을 실행합니다. 이 함수는 운영 체제 로더에 의해 호출 됩니다.  
@@ -38,7 +38,7 @@ __int32 STDMETHODCALLTYPE _CorExeMain2 (
 );  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `pUnmappedPE`  
  [in] 메모리 매핑된 코드에 대 한 포인터입니다.  
   

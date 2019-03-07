@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 770901d5461d2092ce5f2862624a038caf03e1f7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 81f27489d554b59101f1eb181ea64f6b68da979c
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54678665"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57491908"
 ---
 # <a name="iclrruntimeinfogetinterface-method"></a>ICLRRuntimeInfo::GetInterface 메서드
 현재 프로세스에 CLR을 로드 하 고 같은 런타임 인터페이스 포인터를 반환 [ICLRRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-interface.md)하십시오 [ICLRStrongName](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md), 및 [IMetaDataDispenserEx](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-interface.md)합니다.  
@@ -38,7 +38,7 @@ HRESULT GetInterface(
 [out, iid_is(riid), retval] LPVOID *ppUnk);  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `rclsid`  
  [in] Coclass의 CLSID 인터페이스입니다.  
   
@@ -54,7 +54,7 @@ HRESULT GetInterface(
 |HRESULT|설명|  
 |-------------|-----------------|  
 |S_OK|메서드가 완료되었습니다.|  
-|E_POINTER|`ppUnk`가 null인 경우|  
+|E_POINTER|`ppUnk`가 null입니다.|  
 |E_OUTOFMEMORY|요청을 처리할 수 있는 메모리가 부족 합니다.|  
 |CLR_E_SHIM_LEGACYRUNTIMEALREADYBOUND|다양 한 런타임 이미 레거시 CLR 버전 2 정품 인증 정책에 바인딩 되었습니다.|  
   

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: fc33936735c40e2f30189066d80444b9fcb075ad
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8b16a351897b06db74602f1d5b097acd7e03425e
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54671891"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57494248"
 ---
 # <a name="icorprofilermoduleenumnext-method"></a>ICorProfilerModuleEnum::Next 메서드
 시퀀스에서 열거자의 현재 위치부터 시작하여 순차적 모듈 컬렉션에서 지정된 개수의 연속 모듈을 가져옵니다.  
@@ -36,7 +36,7 @@ HRESULT Next([in]  ULONG      celt,
              [out] ULONG *   pceltFetched);  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `celt`  
  [in] 검색할 모듈 수입니다.  
   
@@ -52,7 +52,8 @@ HRESULT Next([in]  ULONG      celt,
 |HRESULT|설명|  
 |-------------|-----------------|  
 |S_OK|`celt` 요소가 반환되었습니다.|  
-|S_FALSE|`celt`개 미만의 요소가 반환되었으며 이는 열거형이 완료되었음을 나타냅니다.|  
+|S_FALSE|
+  `celt`개 미만의 요소가 반환되었으며 이는 열거형이 완료되었음을 나타냅니다.|  
   
 ## <a name="requirements"></a>요구 사항  
  **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a68c210c8c87597e2f3e664ff67ff4ba3557323d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3c2a56d153fcd7238f58c9650b8db08b3f39edaa
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54656364"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57496276"
 ---
 # <a name="iclrruntimehostexecuteapplication-method"></a>ICLRRuntimeHost::ExecuteApplication 메서드
 ClickOnce 배포 매니페스트 기반 시나리오에서 새 도메인에서 활성화 될 응용 프로그램을 지정 하는 데 사용 합니다. 이러한 시나리오에 대 한 자세한 내용은 참조 하세요. [ClickOnce 보안 및 배포](/visualstudio/deployment/clickonce-security-and-deployment)합니다.  
@@ -40,7 +40,7 @@ HRESULT ExecuteApplication(
 );  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `pwzAppFullName`  
  [in] 에 대해 정의 된 응용 프로그램의 전체 이름을 <xref:System.ApplicationIdentity>입니다.  
   

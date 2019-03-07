@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 606b9b496380a00ab9615ab7fe7febdc749b3ee2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 634f30186c552f0e5330dd94f78c585da7d450c9
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54663533"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57493832"
 ---
 # <a name="isymunmanagedscopegetparent-method"></a>ISymUnmanagedScope::GetParent 메서드
 이 범위의 상위 범위를 가져옵니다.  
@@ -34,7 +34,7 @@ HRESULT GetParent(
     [out, retval] ISymUnmanagedScope** pRetVal);  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `pRetVal`  
  [out] 반환 된 포인터 [ISymUnmanagedScope](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope-interface.md) 인터페이스입니다.  
   

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: da50542d9f57e008b31ce2e6ed9698df1275d5eb
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3657ef40fce3d9d29e0cf6c27e8eb527be0f150e
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54618810"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57489022"
 ---
 # <a name="isymunmanagedwritersetscoperange-method"></a>ISymUnmanagedWriter::SetScopeRange 메서드
 지정된 어휘 범위에 대한 오프셋 범위를 정의합니다. 범위는 현재 범위가 새 하 고 범위 스택에 푸시됩니다. 범위 계층 구조를 형성 해야 합니다. 형제 겹칠 수 없습니다.  
@@ -36,7 +36,7 @@ HRESULT OpenScope(
     [in] ULONG32  endOffset);  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `scopeId`  
  [in] 범위에 대 한 범위 식별자입니다.  
   

@@ -8,12 +8,12 @@ api_name:
 api_location:
 - PresentationHost_v0400.dll
 ms.assetid: 6dd101a3-44ad-4143-b228-772156f9b8ff
-ms.openlocfilehash: c146b03fa3e687027eeab3de864d9403f9b01fc7
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 853931b7b968f8103af8bf9c33c07d40ac653069
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57351673"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57489100"
 ---
 # <a name="savetohistory-function-wpf-unmanaged-api-reference"></a>SaveToHistory 함수 (F 관리 되지 않는 API 참조)
 이 API는 Windows Presentation Foundation (WPF) 인프라를 지원 하며 코드에서 직접 사용할 수 없습니다.  
@@ -28,7 +28,7 @@ HRESULT SaveToHistory(
 )  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  pHistoryStream  
  기록 스트림에 대 한 포인터입니다.  
   

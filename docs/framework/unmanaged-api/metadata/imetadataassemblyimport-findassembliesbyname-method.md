@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 454391eb7a5f1821438837c8fb7e5f8bad6b5723
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 39d9b4e69080e759a5a7d930f61abb3ba6160801
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54651659"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57486149"
 ---
 # <a name="imetadataassemblyimportfindassembliesbyname-method"></a>IMetaDataAssemblyImport::FindAssembliesByName 메서드
 지정 된 어셈블리의 배열을 가져옵니다 `szAssemblyName` 는 CLR (공용 언어 런타임) 참조를 확인 하 여는 표준 규칙을 사용 하 여 매개 변수입니다.  
@@ -40,7 +40,7 @@ HRESULT FindAssembliesByName (
 );  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `szAppBase`  
  [in] 지정된 된 어셈블리에 대 한 검색 하는 루트 디렉터리입니다. 이 값 설정 하는 경우 `null`, `FindAssembliesByName` 어셈블리에 대 한 전역 어셈블리 캐시에만 표시 됩니다.  
   

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b77dcbb1acffe47524aee3cd7761e342175dcd34
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e0cd68f5a15bbd8942f0dc889ecb74b7fde00d30
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54733699"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57502330"
 ---
 # <a name="icorprofilercallback4rejiterror-method"></a>ICorProfilerCallback4::ReJITError 메서드
 Just-in-time (JIT) 컴파일러 오류가 발생 했음을 다시 컴파일 프로세스에 프로파일러에 알립니다.  
@@ -37,7 +37,7 @@ HRESULT ReJITError(
     [in] HRESULT     hrStatus);  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `moduleID`  
  [in] `ModuleID` 에서 실패 한 다시 컴파일을 시도 수행 되었습니다.  
   

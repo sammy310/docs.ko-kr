@@ -10,12 +10,12 @@ helpviewer_keywords:
 - states [WPF]
 - templates [WPF]
 ms.assetid: c19049bb-5ceb-492d-afd2-751dca0ed8e3
-ms.openlocfilehash: 36589b13fc336b78ec87cccba0a2790d8242f5d6
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: c5c33327c5a80a4e275d1eaa505c1d20d3d7ba4c
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57373203"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57488840"
 ---
 # <a name="control-styles-and-templates"></a>Control 스타일 및 템플릿
 Windows Presentation Foundation (WPF)에서 컨트롤을 <xref:System.Windows.Controls.ControlTemplate> 해당 컨트롤의 시각적 트리를 포함 하는 합니다. 컨트롤의 모양과 구조를 수정 하 여 변경할 수 있습니다는 <xref:System.Windows.Controls.ControlTemplate> 해당 컨트롤의 합니다. 컨트롤의 시각적 트리의 일부만 교체할 수 없으므로 설정 해야 하는 컨트롤의 시각적 트리를 변경 하는 <xref:System.Windows.Controls.Control.Template%2A> 새롭고 완전 컨트롤의 속성 <xref:System.Windows.Controls.ControlTemplate>합니다.  
@@ -50,18 +50,18 @@ Windows Presentation Foundation (WPF)에서 컨트롤을 <xref:System.Windows.Co
  [ListView 스타일 및 템플릿](listview-styles-and-templates.md)  
  [Menu 스타일 및 템플릿](menu-styles-and-templates.md)  
  [NavigationWindow 스타일 및 템플릿](navigationwindow-styles-and-templates.md)  
- [PasswordBox 스타일 및 템플릿](passwordbox-syles-and-templates.md)  
+ [PasswordBox 스타일 및 템플릿](passwordbox-styles-and-templates.md)  
  [ProgressBar 스타일 및 템플릿](progressbar-styles-and-templates.md)  
  [RadioButton 스타일 및 템플릿](radiobutton-styles-and-templates.md)  
- [RepeatButton 스타일 및 템플릿](repeatbutton-syles-and-templates.md)  
+ [RepeatButton 스타일 및 템플릿](repeatbutton-styles-and-templates.md)  
  [ScrollBar 스타일 및 템플릿](scrollbar-styles-and-templates.md)  
  [ScrollViewer 스타일 및 템플릿](scrollviewer-styles-and-templates.md)  
  [Slider 스타일 및 템플릿](slider-styles-and-templates.md)  
  [StatusBar 스타일 및 템플릿](statusbar-styles-and-templates.md)  
  [TabControl 스타일 및 템플릿](tabcontrol-styles-and-templates.md)  
  [TextBox 스타일 및 템플릿](textbox-styles-and-templates.md)  
- [Thumb 스타일 및 템플릿](thumb-syles-and-templates.md)  
- [ToggleButton 스타일 및 템플릿](togglebutton-syles-and-templates.md)  
+ [Thumb 스타일 및 템플릿](thumb-styles-and-templates.md)  
+ [ToggleButton 스타일 및 템플릿](togglebutton-styles-and-templates.md)  
  [ToolBar 스타일 및 템플릿](toolbar-styles-and-templates.md)  
  [ToolTip 스타일 및 템플릿](tooltip-styles-and-templates.md)  
  [TreeView스타일 및 템플릿s](treeview-styles-and-templates.md)  

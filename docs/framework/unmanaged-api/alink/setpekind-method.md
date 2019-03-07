@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5fe770ffc5a9c187e9069e8a66553976f9a53b2f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e568050a5cc94da865d656adc8a775024dab836c
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54709886"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57500046"
 ---
 # <a name="setpekind-method"></a>SetPEKind 메서드
 이식 가능한 실행 파일 형식에 시스템별 또는 알 수 없는 컴퓨터를 결정합니다.  
@@ -37,7 +37,7 @@ HRESULT SetPEKind(
 ) PURE;   
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `AssemblyID`  
  어셈블리의 ID입니다.  
   

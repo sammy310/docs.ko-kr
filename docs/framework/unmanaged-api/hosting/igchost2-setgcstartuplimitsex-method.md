@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f61f6ed5712f3c98f06f5fa76657f3fa7b70fe84
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 69976110a227f95cf157b19b270f25cc3808246e
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54666334"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57484110"
 ---
 # <a name="igchost2setgcstartuplimitsex-method"></a>IGCHost2::SetGCStartupLimitsEx 메서드
 0 세대에 대 한 세그먼트 크기 및 최대 크기를 설정합니다.  
@@ -36,7 +36,7 @@ HRESULT SetGCStartupLimitsEx (
 );  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `SegmentSize`  
  [in] 가비지 컬렉션 시스템에서 사용 하는 세그먼트의 크기입니다.  
   

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 905de2745be085391bef8ea32b8f82a5da78f3a3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e4ffbd2bc3042f7e37e90dceeb28ec50b3c73cef
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54681198"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57491973"
 ---
 # <a name="imetadatadispenseropenscope-method"></a>IMetaDataDispenser::OpenScope 메서드
 기존의 디스크에 파일을 열고 해당 메타 데이터를 메모리에 매핑합니다.  
@@ -38,7 +38,7 @@ HRESULT OpenScope (
 );  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `szScope`  
  [in] 열려는 파일의 이름입니다. 파일에는 공용 언어 런타임 (CLR) 메타 데이터가 있어야 합니다.  
   

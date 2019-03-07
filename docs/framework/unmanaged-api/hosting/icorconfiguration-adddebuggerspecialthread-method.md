@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ca33c8eb5e214cdaaa49905c311fd62042285d4f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 067765fbf500b2d20d84273d8df70c8e05a6ddc4
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54569291"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57485902"
 ---
 # <a name="icorconfigurationadddebuggerspecialthread-method"></a>ICorConfiguration::AddDebuggerSpecialThread 메서드
 디버깅 서비스에 특정 스레드를 계속 디버거가 응용 프로그램을 중지 하는 동안 관리 되거나 관리 되지 않는 디버깅 시나리오는 동시 실행 수 있어야 함을 나타냅니다.  
@@ -35,7 +35,7 @@ HRESULT AddDebuggerSpecialThread (
 );  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `dwSpecialThreadId`  
  [in] 계속 실행 되도록 허용 되어야 하는 스레드의 ID입니다.  
   

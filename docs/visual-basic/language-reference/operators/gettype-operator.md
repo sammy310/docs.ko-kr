@@ -7,12 +7,12 @@ helpviewer_keywords:
 - GetType operator [Visual Basic]
 - GetType keyword [Visual Basic]
 ms.assetid: 4f733297-2503-4607-850c-15eba65fff90
-ms.openlocfilehash: e3b4ee9a1bfcc2132d3e9e1239ff2c8f7158e513
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: de80feecda1268f3899f73c52727372452a2d366
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56966766"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57502633"
 ---
 # <a name="gettype-operator-visual-basic"></a>GetType 연산자(Visual Basic)
 반환 된 <xref:System.Type> 지정 된 형식의 개체입니다. <xref:System.Type> 개체는 해당 속성, 메서드 및 이벤트와 같은 유형에 대 한 정보를 제공 합니다.  
@@ -23,7 +23,7 @@ ms.locfileid: "56966766"
 GetType(typename)  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
   
 |매개 변수|설명|  
 |---|---|  

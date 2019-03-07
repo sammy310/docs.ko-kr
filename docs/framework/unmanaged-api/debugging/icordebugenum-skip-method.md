@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fb651aa394022182b6730d57942199f570508436
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 8e9e13c8acf4f60a7b43a9b4181bb03da8f0aa45
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56965909"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57497017"
 ---
 # <a name="icordebugenumskip-method"></a>ICorDebugEnum::Skip 메서드
 열거형에서 항목의 지정된 된 수 만큼 앞으로 커서를 이동합니다.  
@@ -35,7 +35,7 @@ HRESULT Skip (
 );  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `celt`  
  [in] 커서를 앞으로 이동에 사용 되는 항목의 수입니다.  
   

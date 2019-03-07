@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6f7ffef0af68bee3e7184fe8bde9264f570230be
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e52984e12f22486212f0a2ec02d452a77242400e
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54573638"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57491830"
 ---
 # <a name="freewin32resblob-method"></a>FreeWin32ResBlob 메서드
 Win32 리소스 blob와 연결 된 리소스를 해제합니다.  
@@ -34,7 +34,7 @@ HRESULT FreeWin32ResBlob(
 ) PURE;  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `ppResBlob`  
  출시 될 리소스 blob입니다. 이 메서드는 NULL로 blob 포인터를 할당합니다.  
   

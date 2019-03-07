@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e7b9602f490900fd5c923abf195b3b0707959832
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a64922e1fe069d682f7ebc51040d06231a8b49c3
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54554039"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57484357"
 ---
 # <a name="icorconfigurationsetgchostcontrol-method"></a>ICorConfiguration::SetGCHostControl 메서드
 가비지 수집기에 의해 가상 메모리의 한계를 변경 하도록 호스트에 요청에 사용할 콜백 인터페이스를 설정 합니다.  
@@ -35,7 +35,7 @@ HRESULT SetGCHostControl (
 );  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `pGCHostControl`  
  [in] 에 대 한 포인터를 [IGCHostControl](../../../../docs/framework/unmanaged-api/hosting/igchostcontrol-interface.md) 가비지 수집기가 호스트의 가상 메모리 한계를 변경 하려면 요청할 수 있는 개체입니다.  
   
