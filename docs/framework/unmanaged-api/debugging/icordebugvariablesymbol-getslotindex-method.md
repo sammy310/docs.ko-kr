@@ -4,17 +4,17 @@ ms.date: 03/30/2017
 ms.assetid: 09c19f5f-afc4-4e0c-bffe-cd7147bc7a43
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 09b50af49f8379539773d2000a6c1f8222fee875
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8c7b70638b963968fb3ed7e294f1767718f9bc34
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54563836"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57501294"
 ---
-# <a name="icordebugvariablesymbolgetslotindex-method"></a><span data-ttu-id="0917f-102">ICorDebugVariableSymbol::GetSlotIndex 메서드</span><span class="sxs-lookup"><span data-stu-id="0917f-102">ICorDebugVariableSymbol::GetSlotIndex Method</span></span>
-<span data-ttu-id="0917f-103">지역 변수의 관리되는 슬롯 인덱스를 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="0917f-103">Gets the managed slot index of a local variable.</span></span>  
+# <a name="icordebugvariablesymbolgetslotindex-method"></a><span data-ttu-id="9fa32-102">ICorDebugVariableSymbol::GetSlotIndex 메서드</span><span class="sxs-lookup"><span data-stu-id="9fa32-102">ICorDebugVariableSymbol::GetSlotIndex Method</span></span>
+<span data-ttu-id="9fa32-103">지역 변수의 관리되는 슬롯 인덱스를 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="9fa32-103">Gets the managed slot index of a local variable.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="0917f-104">구문</span><span class="sxs-lookup"><span data-stu-id="0917f-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="9fa32-104">구문</span><span class="sxs-lookup"><span data-stu-id="9fa32-104">Syntax</span></span>  
   
 ```  
 HRESULT GetSlotIndex(  
@@ -22,28 +22,28 @@ HRESULT GetSlotIndex(
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="0917f-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="0917f-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="9fa32-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="9fa32-105">Parameters</span></span>  
  `pSlotIndex`  
- <span data-ttu-id="0917f-106">[out] 지역 변수의 슬롯 인덱스에 대한 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="0917f-106">[out] A pointer to the local variable's slot index.</span></span>  
+ <span data-ttu-id="9fa32-106">[out] 지역 변수의 슬롯 인덱스에 대한 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="9fa32-106">[out] A pointer to the local variable's slot index.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="0917f-107">반환 값</span><span class="sxs-lookup"><span data-stu-id="0917f-107">Return Value</span></span>  
- <span data-ttu-id="0917f-108">성공하는 경우 `S_OK`입니다.</span><span class="sxs-lookup"><span data-stu-id="0917f-108">`S_OK` if successful.</span></span> <span data-ttu-id="0917f-109">변수가 함수 인수인 경우 `E_FAIL`입니다.</span><span class="sxs-lookup"><span data-stu-id="0917f-109">`E_FAIL` if the variable is a function argument.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="9fa32-107">반환 값</span><span class="sxs-lookup"><span data-stu-id="9fa32-107">Return Value</span></span>  
+ <span data-ttu-id="9fa32-108">성공하는 경우 `S_OK`입니다.</span><span class="sxs-lookup"><span data-stu-id="9fa32-108">`S_OK` if successful.</span></span> <span data-ttu-id="9fa32-109">변수가 함수 인수인 경우 `E_FAIL`입니다.</span><span class="sxs-lookup"><span data-stu-id="9fa32-109">`E_FAIL` if the variable is a function argument.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="0917f-110">설명</span><span class="sxs-lookup"><span data-stu-id="0917f-110">Remarks</span></span>  
- <span data-ttu-id="0917f-111">지역 변수의 관리되는 슬롯 인덱스를 사용하여 변수의 메타데이터 정보를 검색할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="0917f-111">The managed slot index of a local variable can be used to retrieve the variable's metadata information</span></span>  
+## <a name="remarks"></a><span data-ttu-id="9fa32-110">설명</span><span class="sxs-lookup"><span data-stu-id="9fa32-110">Remarks</span></span>  
+ <span data-ttu-id="9fa32-111">지역 변수의 관리되는 슬롯 인덱스를 사용하여 변수의 메타데이터 정보를 검색할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="9fa32-111">The managed slot index of a local variable can be used to retrieve the variable's metadata information</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="0917f-112">이 메서드는 .NET 네이티브에서만 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="0917f-112">This method is available with .NET Native only.</span></span>  
+>  <span data-ttu-id="9fa32-112">이 메서드는 .NET 네이티브에서만 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="9fa32-112">This method is available with .NET Native only.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="0917f-113">요구 사항</span><span class="sxs-lookup"><span data-stu-id="0917f-113">Requirements</span></span>  
- <span data-ttu-id="0917f-114">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="0917f-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="9fa32-113">요구 사항</span><span class="sxs-lookup"><span data-stu-id="9fa32-113">Requirements</span></span>  
+ <span data-ttu-id="9fa32-114">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="9fa32-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="0917f-115">**헤더:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="0917f-115">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="9fa32-115">**헤더:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="9fa32-115">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="0917f-116">**라이브러리:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="0917f-116">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="9fa32-116">**라이브러리:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="9fa32-116">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="0917f-117">**.NET Framework 버전:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]</span><span class="sxs-lookup"><span data-stu-id="0917f-117">**.NET Framework Versions:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]</span></span>  
+ <span data-ttu-id="9fa32-117">**.NET Framework 버전:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]</span><span class="sxs-lookup"><span data-stu-id="9fa32-117">**.NET Framework Versions:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="0917f-118">참고자료</span><span class="sxs-lookup"><span data-stu-id="0917f-118">See also</span></span>
-- [<span data-ttu-id="0917f-119">ICorDebugVariableSymbol 인터페이스</span><span class="sxs-lookup"><span data-stu-id="0917f-119">ICorDebugVariableSymbol Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablesymbol-interface.md)
-- [<span data-ttu-id="0917f-120">디버깅 인터페이스</span><span class="sxs-lookup"><span data-stu-id="0917f-120">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+## <a name="see-also"></a><span data-ttu-id="9fa32-118">참고자료</span><span class="sxs-lookup"><span data-stu-id="9fa32-118">See also</span></span>
+- [<span data-ttu-id="9fa32-119">ICorDebugVariableSymbol 인터페이스</span><span class="sxs-lookup"><span data-stu-id="9fa32-119">ICorDebugVariableSymbol Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablesymbol-interface.md)
+- [<span data-ttu-id="9fa32-120">디버깅 인터페이스</span><span class="sxs-lookup"><span data-stu-id="9fa32-120">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 12cce87f7c92224dd83e4a51faedda616f0bbc39
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 97af133aa573e3b9c74f6bdbb4410f4d12214d67
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54676811"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57491416"
 ---
-# <a name="icorconfigurationsetgcthreadcontrol-method"></a><span data-ttu-id="de57f-102">ICorConfiguration::SetGCThreadControl 메서드</span><span class="sxs-lookup"><span data-stu-id="de57f-102">ICorConfiguration::SetGCThreadControl Method</span></span>
-<span data-ttu-id="de57f-103">가비지 컬렉션에 대해 차단 될 수 있는 런타임 이외의 작업에 대 한 스레드를 예약 하는 것에 대 한 콜백 인터페이스를 설정 합니다.</span><span class="sxs-lookup"><span data-stu-id="de57f-103">Sets the callback interface for scheduling threads for non-runtime tasks that would otherwise be blocked for a garbage collection.</span></span>  
+# <a name="icorconfigurationsetgcthreadcontrol-method"></a><span data-ttu-id="8921f-102">ICorConfiguration::SetGCThreadControl 메서드</span><span class="sxs-lookup"><span data-stu-id="8921f-102">ICorConfiguration::SetGCThreadControl Method</span></span>
+<span data-ttu-id="8921f-103">가비지 컬렉션에 대해 차단 될 수 있는 런타임 이외의 작업에 대 한 스레드를 예약 하는 것에 대 한 콜백 인터페이스를 설정 합니다.</span><span class="sxs-lookup"><span data-stu-id="8921f-103">Sets the callback interface for scheduling threads for non-runtime tasks that would otherwise be blocked for a garbage collection.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="de57f-104">구문</span><span class="sxs-lookup"><span data-stu-id="de57f-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="8921f-104">구문</span><span class="sxs-lookup"><span data-stu-id="8921f-104">Syntax</span></span>  
   
 ```  
 HRESULT SetGCThreadControl (  
@@ -35,21 +35,21 @@ HRESULT SetGCThreadControl (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="de57f-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="de57f-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="8921f-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="8921f-105">Parameters</span></span>  
  `pGCThreadControl`  
- <span data-ttu-id="de57f-106">[in] 에 대 한 포인터를 [IGCThreadControl](../../../../docs/framework/unmanaged-api/hosting/igcthreadcontrol-interface.md) 개체는 런타임 이외의 작업에 대 한 스레드의 일시 중단 하는 방법에 대 한 호스트에 알립니다.</span><span class="sxs-lookup"><span data-stu-id="de57f-106">[in] A pointer to an [IGCThreadControl](../../../../docs/framework/unmanaged-api/hosting/igcthreadcontrol-interface.md) object that notifies the host about the suspension of threads for non-runtime tasks.</span></span>  
+ <span data-ttu-id="8921f-106">[in] 에 대 한 포인터를 [IGCThreadControl](../../../../docs/framework/unmanaged-api/hosting/igcthreadcontrol-interface.md) 개체는 런타임 이외의 작업에 대 한 스레드의 일시 중단 하는 방법에 대 한 호스트에 알립니다.</span><span class="sxs-lookup"><span data-stu-id="8921f-106">[in] A pointer to an [IGCThreadControl](../../../../docs/framework/unmanaged-api/hosting/igcthreadcontrol-interface.md) object that notifies the host about the suspension of threads for non-runtime tasks.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="de57f-107">설명</span><span class="sxs-lookup"><span data-stu-id="de57f-107">Remarks</span></span>  
- <span data-ttu-id="de57f-108">호스트 내에서 선택할 수는 [igcthreadcontrol:: Threadisblockingforsuspension](../../../../docs/framework/unmanaged-api/hosting/igcthreadcontrol-threadisblockingforsuspension-method.md) 콜백 스레드를 예약 하기 위한 여부.</span><span class="sxs-lookup"><span data-stu-id="de57f-108">The host may choose within the [IGCThreadControl::ThreadIsBlockingForSuspension](../../../../docs/framework/unmanaged-api/hosting/igcthreadcontrol-threadisblockingforsuspension-method.md) callback whether to reschedule a thread.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="8921f-107">설명</span><span class="sxs-lookup"><span data-stu-id="8921f-107">Remarks</span></span>  
+ <span data-ttu-id="8921f-108">호스트 내에서 선택할 수는 [igcthreadcontrol:: Threadisblockingforsuspension](../../../../docs/framework/unmanaged-api/hosting/igcthreadcontrol-threadisblockingforsuspension-method.md) 콜백 스레드를 예약 하기 위한 여부.</span><span class="sxs-lookup"><span data-stu-id="8921f-108">The host may choose within the [IGCThreadControl::ThreadIsBlockingForSuspension](../../../../docs/framework/unmanaged-api/hosting/igcthreadcontrol-threadisblockingforsuspension-method.md) callback whether to reschedule a thread.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="de57f-109">요구 사항</span><span class="sxs-lookup"><span data-stu-id="de57f-109">Requirements</span></span>  
- <span data-ttu-id="de57f-110">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="de57f-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="8921f-109">요구 사항</span><span class="sxs-lookup"><span data-stu-id="8921f-109">Requirements</span></span>  
+ <span data-ttu-id="8921f-110">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="8921f-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="de57f-111">**헤더:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="de57f-111">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="8921f-111">**헤더:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="8921f-111">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="de57f-112">**라이브러리:** MSCorEE.dll에 리소스로 포함</span><span class="sxs-lookup"><span data-stu-id="de57f-112">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="8921f-112">**라이브러리:** MSCorEE.dll에 리소스로 포함</span><span class="sxs-lookup"><span data-stu-id="8921f-112">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="de57f-113">**.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="de57f-113">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="8921f-113">**.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="8921f-113">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="de57f-114">참고자료</span><span class="sxs-lookup"><span data-stu-id="de57f-114">See also</span></span>
-- [<span data-ttu-id="de57f-115">ICorConfiguration 인터페이스</span><span class="sxs-lookup"><span data-stu-id="de57f-115">ICorConfiguration Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/icorconfiguration-interface.md)
+## <a name="see-also"></a><span data-ttu-id="8921f-114">참고자료</span><span class="sxs-lookup"><span data-stu-id="8921f-114">See also</span></span>
+- [<span data-ttu-id="8921f-115">ICorConfiguration 인터페이스</span><span class="sxs-lookup"><span data-stu-id="8921f-115">ICorConfiguration Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/icorconfiguration-interface.md)

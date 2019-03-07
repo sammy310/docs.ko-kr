@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ccd6dbe63f02fa7e28c6aec1be815f1f1967a90a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7ace11aa2cc3c24a6582b227f9a7ff8816ea0668
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54718730"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57492116"
 ---
-# <a name="iclrvalidatorvalidate-method"></a><span data-ttu-id="139bd-102">ICLRValidator::Validate 메서드</span><span class="sxs-lookup"><span data-stu-id="139bd-102">ICLRValidator::Validate Method</span></span>
-<span data-ttu-id="139bd-103">Pe (이식 가능) 또는 MSIL (Microsoft intermediate language) 지정된 된 파일의 유효성을 검사 합니다.</span><span class="sxs-lookup"><span data-stu-id="139bd-103">Validates the portable executable (PE) or Microsoft intermediate language (MSIL) in the specified file.</span></span>  
+# <a name="iclrvalidatorvalidate-method"></a><span data-ttu-id="4da7f-102">ICLRValidator::Validate 메서드</span><span class="sxs-lookup"><span data-stu-id="4da7f-102">ICLRValidator::Validate Method</span></span>
+<span data-ttu-id="4da7f-103">Pe (이식 가능) 또는 MSIL (Microsoft intermediate language) 지정된 된 파일의 유효성을 검사 합니다.</span><span class="sxs-lookup"><span data-stu-id="4da7f-103">Validates the portable executable (PE) or Microsoft intermediate language (MSIL) in the specified file.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="139bd-104">구문</span><span class="sxs-lookup"><span data-stu-id="139bd-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="4da7f-104">구문</span><span class="sxs-lookup"><span data-stu-id="4da7f-104">Syntax</span></span>  
   
 ```  
 HRESULT Validate (  
@@ -42,50 +42,50 @@ HRESULT Validate (
 );      
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="139bd-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="139bd-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="4da7f-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="4da7f-105">Parameters</span></span>  
  `veh`  
- <span data-ttu-id="139bd-106">[in] 에 대 한 포인터는 `IVEHandler` 유효성 검사 오류를 처리 하는 인스턴스.</span><span class="sxs-lookup"><span data-stu-id="139bd-106">[in] A pointer to an `IVEHandler` instance that handles validation errors.</span></span>  
+ <span data-ttu-id="4da7f-106">[in] 에 대 한 포인터는 `IVEHandler` 유효성 검사 오류를 처리 하는 인스턴스.</span><span class="sxs-lookup"><span data-stu-id="4da7f-106">[in] A pointer to an `IVEHandler` instance that handles validation errors.</span></span>  
   
  `ulAppDomainId`  
- <span data-ttu-id="139bd-107">[in] 현재 식별자 <xref:System.AppDomain>합니다.</span><span class="sxs-lookup"><span data-stu-id="139bd-107">[in] The identifier for the current <xref:System.AppDomain>.</span></span>  
+ <span data-ttu-id="4da7f-107">[in] 현재 식별자 <xref:System.AppDomain>합니다.</span><span class="sxs-lookup"><span data-stu-id="4da7f-107">[in] The identifier for the current <xref:System.AppDomain>.</span></span>  
   
  `ulFlags`  
- <span data-ttu-id="139bd-108">[in] 조합을 [ValidatorFlags](../../../../docs/framework/unmanaged-api/hosting/validatorflags-enumeration.md) 수행 해야 하는 유효성 검사의 종류를 나타내는 값입니다.</span><span class="sxs-lookup"><span data-stu-id="139bd-108">[in] A combination of [ValidatorFlags](../../../../docs/framework/unmanaged-api/hosting/validatorflags-enumeration.md) values, indicating the kind of validation that should be performed.</span></span>  
+ <span data-ttu-id="4da7f-108">[in] 조합을 [ValidatorFlags](../../../../docs/framework/unmanaged-api/hosting/validatorflags-enumeration.md) 수행 해야 하는 유효성 검사의 종류를 나타내는 값입니다.</span><span class="sxs-lookup"><span data-stu-id="4da7f-108">[in] A combination of [ValidatorFlags](../../../../docs/framework/unmanaged-api/hosting/validatorflags-enumeration.md) values, indicating the kind of validation that should be performed.</span></span>  
   
  `ulMaxError`  
- <span data-ttu-id="139bd-109">[in] 유효성 검사를 종료 하기 전까지 허용 오류의 최대 수입니다.</span><span class="sxs-lookup"><span data-stu-id="139bd-109">[in] The maximum number of errors to allow before exiting the validation.</span></span>  
+ <span data-ttu-id="4da7f-109">[in] 유효성 검사를 종료 하기 전까지 허용 오류의 최대 수입니다.</span><span class="sxs-lookup"><span data-stu-id="4da7f-109">[in] The maximum number of errors to allow before exiting the validation.</span></span>  
   
  `token`  
- <span data-ttu-id="139bd-110">[in] 사용 되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="139bd-110">[in] Unused.</span></span>  
+ <span data-ttu-id="4da7f-110">[in] 사용 되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="4da7f-110">[in] Unused.</span></span>  
   
  `fileName`  
- <span data-ttu-id="139bd-111">[in] 유효성을 검사할 파일의 이름입니다.</span><span class="sxs-lookup"><span data-stu-id="139bd-111">[in] The name of the file to be validated.</span></span>  
+ <span data-ttu-id="4da7f-111">[in] 유효성을 검사할 파일의 이름입니다.</span><span class="sxs-lookup"><span data-stu-id="4da7f-111">[in] The name of the file to be validated.</span></span>  
   
  `pe`  
- <span data-ttu-id="139bd-112">[in] 파일 버퍼에 대 한 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="139bd-112">[in] A pointer to the file buffer.</span></span>  
+ <span data-ttu-id="4da7f-112">[in] 파일 버퍼에 대 한 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="4da7f-112">[in] A pointer to the file buffer.</span></span>  
   
  `ulSize`  
- <span data-ttu-id="139bd-113">[in] 유효성을 검사할 파일의 바이트 크기입니다.</span><span class="sxs-lookup"><span data-stu-id="139bd-113">[in] The size, in bytes, of the file to be validated.</span></span>  
+ <span data-ttu-id="4da7f-113">[in] 유효성을 검사할 파일의 바이트 크기입니다.</span><span class="sxs-lookup"><span data-stu-id="4da7f-113">[in] The size, in bytes, of the file to be validated.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="139bd-114">반환 값</span><span class="sxs-lookup"><span data-stu-id="139bd-114">Return Value</span></span>  
+## <a name="return-value"></a><span data-ttu-id="4da7f-114">반환 값</span><span class="sxs-lookup"><span data-stu-id="4da7f-114">Return Value</span></span>  
   
-|<span data-ttu-id="139bd-115">HRESULT</span><span class="sxs-lookup"><span data-stu-id="139bd-115">HRESULT</span></span>|<span data-ttu-id="139bd-116">설명</span><span class="sxs-lookup"><span data-stu-id="139bd-116">Description</span></span>|  
+|<span data-ttu-id="4da7f-115">HRESULT</span><span class="sxs-lookup"><span data-stu-id="4da7f-115">HRESULT</span></span>|<span data-ttu-id="4da7f-116">설명</span><span class="sxs-lookup"><span data-stu-id="4da7f-116">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="139bd-117">S_OK</span><span class="sxs-lookup"><span data-stu-id="139bd-117">S_OK</span></span>|<span data-ttu-id="139bd-118">`Validate` 성공적으로 반환 합니다.</span><span class="sxs-lookup"><span data-stu-id="139bd-118">`Validate` returned successfully.</span></span>|  
-|<span data-ttu-id="139bd-119">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="139bd-119">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="139bd-120">프로세스에는 CLR (공용 언어 런타임)에 로드 되지 또는 CLR 상태인는 관리 코드를 실행 하거나 호출을 처리할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="139bd-120">The common language runtime (CLR) has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
-|<span data-ttu-id="139bd-121">HOST_E_TIMEOUT</span><span class="sxs-lookup"><span data-stu-id="139bd-121">HOST_E_TIMEOUT</span></span>|<span data-ttu-id="139bd-122">호출 시간이 초과 되었습니다.</span><span class="sxs-lookup"><span data-stu-id="139bd-122">The call timed out.</span></span>|  
-|<span data-ttu-id="139bd-123">HOST_E_NOT_OWNER</span><span class="sxs-lookup"><span data-stu-id="139bd-123">HOST_E_NOT_OWNER</span></span>|<span data-ttu-id="139bd-124">호출자가 잠금을 소유 하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="139bd-124">The caller does not own the lock.</span></span>|  
-|<span data-ttu-id="139bd-125">HOST_E_ABANDONED</span><span class="sxs-lookup"><span data-stu-id="139bd-125">HOST_E_ABANDONED</span></span>|<span data-ttu-id="139bd-126">이벤트가 차단 된 스레드가 취소 된 또는 파이버를 대기 하 고 있습니다.</span><span class="sxs-lookup"><span data-stu-id="139bd-126">An event was canceled while a blocked thread or fiber was waiting on it.</span></span>|  
-|<span data-ttu-id="139bd-127">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="139bd-127">E_FAIL</span></span>|<span data-ttu-id="139bd-128">알 수 없는 치명적인 오류가 발생 했습니다.</span><span class="sxs-lookup"><span data-stu-id="139bd-128">An unknown catastrophic failure occurred.</span></span> <span data-ttu-id="139bd-129">메서드 E_FAIL을 반환 하는 경우 CLR은 프로세스 내에서 사용할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="139bd-129">When a method returns E_FAIL, the CLR is no longer usable within the process.</span></span> <span data-ttu-id="139bd-130">메서드를 호스트 하는 데 대 한 후속 호출 HOST_E_CLRNOTAVAILABLE를 반환 합니다.</span><span class="sxs-lookup"><span data-stu-id="139bd-130">Subsequent calls to hosting methods return HOST_E_CLRNOTAVAILABLE.</span></span>|  
+|<span data-ttu-id="4da7f-117">S_OK</span><span class="sxs-lookup"><span data-stu-id="4da7f-117">S_OK</span></span>|<span data-ttu-id="4da7f-118">`Validate` 성공적으로 반환 합니다.</span><span class="sxs-lookup"><span data-stu-id="4da7f-118">`Validate` returned successfully.</span></span>|  
+|<span data-ttu-id="4da7f-119">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="4da7f-119">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="4da7f-120">프로세스에는 CLR (공용 언어 런타임)에 로드 되지 또는 CLR 상태인는 관리 코드를 실행 하거나 호출을 처리할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="4da7f-120">The common language runtime (CLR) has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
+|<span data-ttu-id="4da7f-121">HOST_E_TIMEOUT</span><span class="sxs-lookup"><span data-stu-id="4da7f-121">HOST_E_TIMEOUT</span></span>|<span data-ttu-id="4da7f-122">호출 시간이 초과 되었습니다.</span><span class="sxs-lookup"><span data-stu-id="4da7f-122">The call timed out.</span></span>|  
+|<span data-ttu-id="4da7f-123">HOST_E_NOT_OWNER</span><span class="sxs-lookup"><span data-stu-id="4da7f-123">HOST_E_NOT_OWNER</span></span>|<span data-ttu-id="4da7f-124">호출자가 잠금을 소유 하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="4da7f-124">The caller does not own the lock.</span></span>|  
+|<span data-ttu-id="4da7f-125">HOST_E_ABANDONED</span><span class="sxs-lookup"><span data-stu-id="4da7f-125">HOST_E_ABANDONED</span></span>|<span data-ttu-id="4da7f-126">이벤트가 차단 된 스레드가 취소 된 또는 파이버를 대기 하 고 있습니다.</span><span class="sxs-lookup"><span data-stu-id="4da7f-126">An event was canceled while a blocked thread or fiber was waiting on it.</span></span>|  
+|<span data-ttu-id="4da7f-127">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="4da7f-127">E_FAIL</span></span>|<span data-ttu-id="4da7f-128">알 수 없는 치명적인 오류가 발생 했습니다.</span><span class="sxs-lookup"><span data-stu-id="4da7f-128">An unknown catastrophic failure occurred.</span></span> <span data-ttu-id="4da7f-129">메서드 E_FAIL을 반환 하는 경우 CLR은 프로세스 내에서 사용할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="4da7f-129">When a method returns E_FAIL, the CLR is no longer usable within the process.</span></span> <span data-ttu-id="4da7f-130">메서드를 호스트 하는 데 대 한 후속 호출 HOST_E_CLRNOTAVAILABLE를 반환 합니다.</span><span class="sxs-lookup"><span data-stu-id="4da7f-130">Subsequent calls to hosting methods return HOST_E_CLRNOTAVAILABLE.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="139bd-131">요구 사항</span><span class="sxs-lookup"><span data-stu-id="139bd-131">Requirements</span></span>  
- <span data-ttu-id="139bd-132">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="139bd-132">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="4da7f-131">요구 사항</span><span class="sxs-lookup"><span data-stu-id="4da7f-131">Requirements</span></span>  
+ <span data-ttu-id="4da7f-132">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="4da7f-132">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="139bd-133">**헤더:** IValidator.idl, IValidator.h</span><span class="sxs-lookup"><span data-stu-id="139bd-133">**Header:** IValidator.idl, IValidator.h</span></span>  
+ <span data-ttu-id="4da7f-133">**헤더:** IValidator.idl, IValidator.h</span><span class="sxs-lookup"><span data-stu-id="4da7f-133">**Header:** IValidator.idl, IValidator.h</span></span>  
   
- <span data-ttu-id="139bd-134">**라이브러리:** MSCorEE.dll에 리소스로 포함</span><span class="sxs-lookup"><span data-stu-id="139bd-134">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="4da7f-134">**라이브러리:** MSCorEE.dll에 리소스로 포함</span><span class="sxs-lookup"><span data-stu-id="4da7f-134">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="139bd-135">**.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="139bd-135">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="4da7f-135">**.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="4da7f-135">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="139bd-136">참고자료</span><span class="sxs-lookup"><span data-stu-id="139bd-136">See also</span></span>
-- [<span data-ttu-id="139bd-137">ICLRValidator 인터페이스</span><span class="sxs-lookup"><span data-stu-id="139bd-137">ICLRValidator Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrvalidator-interface.md)
+## <a name="see-also"></a><span data-ttu-id="4da7f-136">참고자료</span><span class="sxs-lookup"><span data-stu-id="4da7f-136">See also</span></span>
+- [<span data-ttu-id="4da7f-137">ICLRValidator 인터페이스</span><span class="sxs-lookup"><span data-stu-id="4da7f-137">ICLRValidator Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrvalidator-interface.md)

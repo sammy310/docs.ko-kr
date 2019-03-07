@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9ca40a0a172563368f971a83035c5dead66c70a5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1542573cbba2ffe407dd78eeb34e0a6e43c4d9a7
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54552010"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57496697"
 ---
-# <a name="icorprofilerinfo3getstringlayout2-method"></a><span data-ttu-id="6a8d6-102">ICorProfilerInfo3::GetStringLayout2 메서드</span><span class="sxs-lookup"><span data-stu-id="6a8d6-102">ICorProfilerInfo3::GetStringLayout2 Method</span></span>
-<span data-ttu-id="6a8d6-103">문자열 개체의 레이아웃 정보를 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="6a8d6-103">Gets information about the layout of a string object.</span></span> <span data-ttu-id="6a8d6-104">이 메서드를 대체 합니다 [ICorProfilerInfo2::GetStringLayout](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getstringlayout-method.md) 메서드.</span><span class="sxs-lookup"><span data-stu-id="6a8d6-104">This method supersedes the [ICorProfilerInfo2::GetStringLayout](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getstringlayout-method.md) method.</span></span>  
+# <a name="icorprofilerinfo3getstringlayout2-method"></a><span data-ttu-id="87f50-102">ICorProfilerInfo3::GetStringLayout2 메서드</span><span class="sxs-lookup"><span data-stu-id="87f50-102">ICorProfilerInfo3::GetStringLayout2 Method</span></span>
+<span data-ttu-id="87f50-103">문자열 개체의 레이아웃 정보를 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="87f50-103">Gets information about the layout of a string object.</span></span> <span data-ttu-id="87f50-104">이 메서드를 대체 합니다 [ICorProfilerInfo2::GetStringLayout](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getstringlayout-method.md) 메서드.</span><span class="sxs-lookup"><span data-stu-id="87f50-104">This method supersedes the [ICorProfilerInfo2::GetStringLayout](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getstringlayout-method.md) method.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="6a8d6-105">구문</span><span class="sxs-lookup"><span data-stu-id="6a8d6-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="87f50-105">구문</span><span class="sxs-lookup"><span data-stu-id="87f50-105">Syntax</span></span>  
   
 ```  
 HRESULT GetStringLayout2(  
@@ -35,25 +35,25 @@ HRESULT GetStringLayout2(
     [out] ULONG *pBufferOffset);  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="6a8d6-106">매개 변수</span><span class="sxs-lookup"><span data-stu-id="6a8d6-106">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="87f50-106">매개 변수</span><span class="sxs-lookup"><span data-stu-id="87f50-106">Parameters</span></span>  
  `pStringLengthOffset`  
- <span data-ttu-id="6a8d6-107">[out] 에 상대적인 위치 오프셋에 대 한 포인터를 `ObjectID` 자체 문자열의 길이 저장 하는 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="6a8d6-107">[out] A pointer to the offset of the location, relative to the `ObjectID` pointer, that stores the length of the string itself.</span></span> <span data-ttu-id="6a8d6-108">로 저장 되는 `DWORD`합니다.</span><span class="sxs-lookup"><span data-stu-id="6a8d6-108">The length is stored as a `DWORD`.</span></span>  
+ <span data-ttu-id="87f50-107">[out] 에 상대적인 위치 오프셋에 대 한 포인터를 `ObjectID` 자체 문자열의 길이 저장 하는 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="87f50-107">[out] A pointer to the offset of the location, relative to the `ObjectID` pointer, that stores the length of the string itself.</span></span> <span data-ttu-id="87f50-108">로 저장 되는 `DWORD`합니다.</span><span class="sxs-lookup"><span data-stu-id="87f50-108">The length is stored as a `DWORD`.</span></span>  
   
  `pBufferOffset`  
- <span data-ttu-id="6a8d6-109">[out] 기준으로 버퍼의 오프셋에 대 한 포인터를 `ObjectID` 와이드 문자 문자열을 저장 하는 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="6a8d6-109">[out] A pointer to the offset of the buffer, relative to the `ObjectID` pointer, which stores the string of wide characters.</span></span>  
+ <span data-ttu-id="87f50-109">[out] 기준으로 버퍼의 오프셋에 대 한 포인터를 `ObjectID` 와이드 문자 문자열을 저장 하는 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="87f50-109">[out] A pointer to the offset of the buffer, relative to the `ObjectID` pointer, which stores the string of wide characters.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="6a8d6-110">설명</span><span class="sxs-lookup"><span data-stu-id="6a8d6-110">Remarks</span></span>  
- <span data-ttu-id="6a8d6-111">문자열 수 또는 null로 종료 되지 않을 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="6a8d6-111">Strings may or may not be null-terminated.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="87f50-110">설명</span><span class="sxs-lookup"><span data-stu-id="87f50-110">Remarks</span></span>  
+ <span data-ttu-id="87f50-111">문자열 수 또는 null로 종료 되지 않을 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="87f50-111">Strings may or may not be null-terminated.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="6a8d6-112">요구 사항</span><span class="sxs-lookup"><span data-stu-id="6a8d6-112">Requirements</span></span>  
- <span data-ttu-id="6a8d6-113">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="6a8d6-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="87f50-112">요구 사항</span><span class="sxs-lookup"><span data-stu-id="87f50-112">Requirements</span></span>  
+ <span data-ttu-id="87f50-113">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="87f50-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="6a8d6-114">**헤더:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="6a8d6-114">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="87f50-114">**헤더:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="87f50-114">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="6a8d6-115">**라이브러리:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="6a8d6-115">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="87f50-115">**라이브러리:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="87f50-115">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="6a8d6-116">**.NET Framework 버전:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="6a8d6-116">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
+ <span data-ttu-id="87f50-116">**.NET Framework 버전:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="87f50-116">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="6a8d6-117">참고자료</span><span class="sxs-lookup"><span data-stu-id="6a8d6-117">See also</span></span>
-- [<span data-ttu-id="6a8d6-118">ICorProfilerInfo3 인터페이스</span><span class="sxs-lookup"><span data-stu-id="6a8d6-118">ICorProfilerInfo3 Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-interface.md)
-- [<span data-ttu-id="6a8d6-119">프로파일링 인터페이스</span><span class="sxs-lookup"><span data-stu-id="6a8d6-119">Profiling Interfaces</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
+## <a name="see-also"></a><span data-ttu-id="87f50-117">참고자료</span><span class="sxs-lookup"><span data-stu-id="87f50-117">See also</span></span>
+- [<span data-ttu-id="87f50-118">ICorProfilerInfo3 인터페이스</span><span class="sxs-lookup"><span data-stu-id="87f50-118">ICorProfilerInfo3 Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-interface.md)
+- [<span data-ttu-id="87f50-119">프로파일링 인터페이스</span><span class="sxs-lookup"><span data-stu-id="87f50-119">Profiling Interfaces</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)

@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 290b44b2fa506aee8454400d4fb40493f530e3a2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a9b4e9149fa50a951f2a56c83412e42fe86b9563
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54535660"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57501203"
 ---
-# <a name="clrcreateinstance-function"></a><span data-ttu-id="ad92c-102">CLRCreateInstance 함수</span><span class="sxs-lookup"><span data-stu-id="ad92c-102">CLRCreateInstance Function</span></span>
-<span data-ttu-id="ad92c-103">세 가지 인터페이스 중 하나를 제공 합니다. [ICLRMetaHost](../../../../docs/framework/unmanaged-api/hosting/iclrmetahost-interface.md)하십시오 [ICLRMetaHostPolicy](../../../../docs/framework/unmanaged-api/hosting/iclrmetahostpolicy-interface.md), 또는 [ICLRDebugging](../../../../docs/framework/unmanaged-api/debugging/iclrdebugging-interface.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="ad92c-103">Provides one of three interfaces: [ICLRMetaHost](../../../../docs/framework/unmanaged-api/hosting/iclrmetahost-interface.md), [ICLRMetaHostPolicy](../../../../docs/framework/unmanaged-api/hosting/iclrmetahostpolicy-interface.md), or [ICLRDebugging](../../../../docs/framework/unmanaged-api/debugging/iclrdebugging-interface.md).</span></span>  
+# <a name="clrcreateinstance-function"></a><span data-ttu-id="376b1-102">CLRCreateInstance 함수</span><span class="sxs-lookup"><span data-stu-id="376b1-102">CLRCreateInstance Function</span></span>
+<span data-ttu-id="376b1-103">세 가지 인터페이스 중 하나를 제공 합니다. [ICLRMetaHost](../../../../docs/framework/unmanaged-api/hosting/iclrmetahost-interface.md)하십시오 [ICLRMetaHostPolicy](../../../../docs/framework/unmanaged-api/hosting/iclrmetahostpolicy-interface.md), 또는 [ICLRDebugging](../../../../docs/framework/unmanaged-api/debugging/iclrdebugging-interface.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="376b1-103">Provides one of three interfaces: [ICLRMetaHost](../../../../docs/framework/unmanaged-api/hosting/iclrmetahost-interface.md), [ICLRMetaHostPolicy](../../../../docs/framework/unmanaged-api/hosting/iclrmetahostpolicy-interface.md), or [ICLRDebugging](../../../../docs/framework/unmanaged-api/debugging/iclrdebugging-interface.md).</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="ad92c-104">구문</span><span class="sxs-lookup"><span data-stu-id="ad92c-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="376b1-104">구문</span><span class="sxs-lookup"><span data-stu-id="376b1-104">Syntax</span></span>  
   
 ```  
 HRESULT CLRCreateInstance(  
@@ -37,34 +37,34 @@ HRESULT CLRCreateInstance(
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="ad92c-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="ad92c-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="376b1-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="376b1-105">Parameters</span></span>  
  `clsid`  
- <span data-ttu-id="ad92c-106">[in] 세 가지 클래스 식별자 중 하나입니다. CLSID_CLRMetaHost, CLSID_CLRMetaHostPolicy, 또는 CLSID_CLRDebugging 합니다.</span><span class="sxs-lookup"><span data-stu-id="ad92c-106">[in] One of three class identifiers: CLSID_CLRMetaHost, CLSID_CLRMetaHostPolicy, or CLSID_CLRDebugging.</span></span>  
+ <span data-ttu-id="376b1-106">[in] 세 가지 클래스 식별자 중 하나입니다. CLSID_CLRMetaHost, CLSID_CLRMetaHostPolicy, 또는 CLSID_CLRDebugging 합니다.</span><span class="sxs-lookup"><span data-stu-id="376b1-106">[in] One of three class identifiers: CLSID_CLRMetaHost, CLSID_CLRMetaHostPolicy, or CLSID_CLRDebugging.</span></span>  
   
  `riid`  
- <span data-ttu-id="ad92c-107">[in] 세 가지 인터페이스 식별자 (Iid) 중 하나입니다. IID_ICLRMetaHost, IID_ICLRMetaHostPolicy, 또는 IID_ICLRDebugging 합니다.</span><span class="sxs-lookup"><span data-stu-id="ad92c-107">[in] One of three interface identifiers (IIDs): IID_ICLRMetaHost, IID_ICLRMetaHostPolicy, or IID_ICLRDebugging.</span></span>  
+ <span data-ttu-id="376b1-107">[in] 세 가지 인터페이스 식별자 (Iid) 중 하나입니다. IID_ICLRMetaHost, IID_ICLRMetaHostPolicy, 또는 IID_ICLRDebugging 합니다.</span><span class="sxs-lookup"><span data-stu-id="376b1-107">[in] One of three interface identifiers (IIDs): IID_ICLRMetaHost, IID_ICLRMetaHostPolicy, or IID_ICLRDebugging.</span></span>  
   
  `ppInterface`  
- <span data-ttu-id="ad92c-108">[out] 세 가지 인터페이스 중 하나입니다. [ICLRMetaHost](../../../../docs/framework/unmanaged-api/hosting/iclrmetahost-interface.md)하십시오 [ICLRMetaHostPolicy](../../../../docs/framework/unmanaged-api/hosting/iclrmetahostpolicy-interface.md), 또는 [ICLRDebugging](../../../../docs/framework/unmanaged-api/debugging/iclrdebugging-interface.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="ad92c-108">[out] One of three interfaces: [ICLRMetaHost](../../../../docs/framework/unmanaged-api/hosting/iclrmetahost-interface.md), [ICLRMetaHostPolicy](../../../../docs/framework/unmanaged-api/hosting/iclrmetahostpolicy-interface.md), or [ICLRDebugging](../../../../docs/framework/unmanaged-api/debugging/iclrdebugging-interface.md).</span></span>  
+ <span data-ttu-id="376b1-108">[out] 세 가지 인터페이스 중 하나입니다. [ICLRMetaHost](../../../../docs/framework/unmanaged-api/hosting/iclrmetahost-interface.md)하십시오 [ICLRMetaHostPolicy](../../../../docs/framework/unmanaged-api/hosting/iclrmetahostpolicy-interface.md), 또는 [ICLRDebugging](../../../../docs/framework/unmanaged-api/debugging/iclrdebugging-interface.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="376b1-108">[out] One of three interfaces: [ICLRMetaHost](../../../../docs/framework/unmanaged-api/hosting/iclrmetahost-interface.md), [ICLRMetaHostPolicy](../../../../docs/framework/unmanaged-api/hosting/iclrmetahostpolicy-interface.md), or [ICLRDebugging](../../../../docs/framework/unmanaged-api/debugging/iclrdebugging-interface.md).</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="ad92c-109">반환 값</span><span class="sxs-lookup"><span data-stu-id="ad92c-109">Return Value</span></span>  
- <span data-ttu-id="ad92c-110">이 메서드는 다음과 같은 특정 HRESULT뿐만 아니라 메서드 오류를 나타내는 HRESULT 오류도 반환합니다.</span><span class="sxs-lookup"><span data-stu-id="ad92c-110">This method returns the following specific HRESULTs as well as HRESULT errors that indicate method failure.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="376b1-109">반환 값</span><span class="sxs-lookup"><span data-stu-id="376b1-109">Return Value</span></span>  
+ <span data-ttu-id="376b1-110">이 메서드는 다음과 같은 특정 HRESULT뿐만 아니라 메서드 오류를 나타내는 HRESULT 오류도 반환합니다.</span><span class="sxs-lookup"><span data-stu-id="376b1-110">This method returns the following specific HRESULTs as well as HRESULT errors that indicate method failure.</span></span>  
   
-|<span data-ttu-id="ad92c-111">HRESULT</span><span class="sxs-lookup"><span data-stu-id="ad92c-111">HRESULT</span></span>|<span data-ttu-id="ad92c-112">설명</span><span class="sxs-lookup"><span data-stu-id="ad92c-112">Description</span></span>|  
+|<span data-ttu-id="376b1-111">HRESULT</span><span class="sxs-lookup"><span data-stu-id="376b1-111">HRESULT</span></span>|<span data-ttu-id="376b1-112">설명</span><span class="sxs-lookup"><span data-stu-id="376b1-112">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="ad92c-113">S_OK</span><span class="sxs-lookup"><span data-stu-id="ad92c-113">S_OK</span></span>|<span data-ttu-id="ad92c-114">메서드가 완료되었습니다.</span><span class="sxs-lookup"><span data-stu-id="ad92c-114">The method completed successfully.</span></span>|  
-|<span data-ttu-id="ad92c-115">E_POINTER</span><span class="sxs-lookup"><span data-stu-id="ad92c-115">E_POINTER</span></span>|<span data-ttu-id="ad92c-116">`ppInterface`가 null인 경우</span><span class="sxs-lookup"><span data-stu-id="ad92c-116">`ppInterface` is null.</span></span>|  
+|<span data-ttu-id="376b1-113">S_OK</span><span class="sxs-lookup"><span data-stu-id="376b1-113">S_OK</span></span>|<span data-ttu-id="376b1-114">메서드가 완료되었습니다.</span><span class="sxs-lookup"><span data-stu-id="376b1-114">The method completed successfully.</span></span>|  
+|<span data-ttu-id="376b1-115">E_POINTER</span><span class="sxs-lookup"><span data-stu-id="376b1-115">E_POINTER</span></span>|<span data-ttu-id="376b1-116">`ppInterface`가 null입니다.</span><span class="sxs-lookup"><span data-stu-id="376b1-116">`ppInterface` is null.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="ad92c-117">설명</span><span class="sxs-lookup"><span data-stu-id="ad92c-117">Remarks</span></span>  
- <span data-ttu-id="ad92c-118">다음 테이블에 대 한 지원 되는 조합을 보여 줍니다 `clsid` 고 `riid`입니다.</span><span class="sxs-lookup"><span data-stu-id="ad92c-118">The following table shows the supported combinations for `clsid` and `riid`.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="376b1-117">설명</span><span class="sxs-lookup"><span data-stu-id="376b1-117">Remarks</span></span>  
+ <span data-ttu-id="376b1-118">다음 테이블에 대 한 지원 되는 조합을 보여 줍니다 `clsid` 고 `riid`입니다.</span><span class="sxs-lookup"><span data-stu-id="376b1-118">The following table shows the supported combinations for `clsid` and `riid`.</span></span>  
   
 |`clsid`|`riid`|  
 |--------------|------------|  
-|<span data-ttu-id="ad92c-119">CLSID_CLRMetaHost</span><span class="sxs-lookup"><span data-stu-id="ad92c-119">CLSID_CLRMetaHost</span></span>|<span data-ttu-id="ad92c-120">IID_ICLRMetaHost</span><span class="sxs-lookup"><span data-stu-id="ad92c-120">IID_ICLRMetaHost</span></span>|  
-|<span data-ttu-id="ad92c-121">CLSID_CLRMetaHostPolicy</span><span class="sxs-lookup"><span data-stu-id="ad92c-121">CLSID_CLRMetaHostPolicy</span></span>|<span data-ttu-id="ad92c-122">IID_ICLRMetaHostPolicy</span><span class="sxs-lookup"><span data-stu-id="ad92c-122">IID_ICLRMetaHostPolicy</span></span>|  
-|<span data-ttu-id="ad92c-123">CLSID_CLRDebugging</span><span class="sxs-lookup"><span data-stu-id="ad92c-123">CLSID_CLRDebugging</span></span>|<span data-ttu-id="ad92c-124">IID_ICLRDebugging</span><span class="sxs-lookup"><span data-stu-id="ad92c-124">IID_ICLRDebugging</span></span>|  
+|<span data-ttu-id="376b1-119">CLSID_CLRMetaHost</span><span class="sxs-lookup"><span data-stu-id="376b1-119">CLSID_CLRMetaHost</span></span>|<span data-ttu-id="376b1-120">IID_ICLRMetaHost</span><span class="sxs-lookup"><span data-stu-id="376b1-120">IID_ICLRMetaHost</span></span>|  
+|<span data-ttu-id="376b1-121">CLSID_CLRMetaHostPolicy</span><span class="sxs-lookup"><span data-stu-id="376b1-121">CLSID_CLRMetaHostPolicy</span></span>|<span data-ttu-id="376b1-122">IID_ICLRMetaHostPolicy</span><span class="sxs-lookup"><span data-stu-id="376b1-122">IID_ICLRMetaHostPolicy</span></span>|  
+|<span data-ttu-id="376b1-123">CLSID_CLRDebugging</span><span class="sxs-lookup"><span data-stu-id="376b1-123">CLSID_CLRDebugging</span></span>|<span data-ttu-id="376b1-124">IID_ICLRDebugging</span><span class="sxs-lookup"><span data-stu-id="376b1-124">IID_ICLRDebugging</span></span>|  
   
- <span data-ttu-id="ad92c-125">다음 코드를 사용 하는 방법을 보여 줍니다 `CLRCreateInstance` 모든 세 가지 인터페이스를 가져오려면:</span><span class="sxs-lookup"><span data-stu-id="ad92c-125">The following code shows how to use `CLRCreateInstance` to get all three interfaces:</span></span>  
+ <span data-ttu-id="376b1-125">다음 코드를 사용 하는 방법을 보여 줍니다 `CLRCreateInstance` 모든 세 가지 인터페이스를 가져오려면:</span><span class="sxs-lookup"><span data-stu-id="376b1-125">The following code shows how to use `CLRCreateInstance` to get all three interfaces:</span></span>  
   
 ```  
 #include <metahost.h>  
@@ -82,14 +82,14 @@ hr = CLRCreateInstance (CLSID_CLRDebugging, IID_ICLRDebugging,
                     (LPVOID*)&pCLRDebugging);  
 ```  
   
-## <a name="requirements"></a><span data-ttu-id="ad92c-126">요구 사항</span><span class="sxs-lookup"><span data-stu-id="ad92c-126">Requirements</span></span>  
- <span data-ttu-id="ad92c-127">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="ad92c-127">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="376b1-126">요구 사항</span><span class="sxs-lookup"><span data-stu-id="376b1-126">Requirements</span></span>  
+ <span data-ttu-id="376b1-127">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="376b1-127">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="ad92c-128">**헤더:** MetaHost.h</span><span class="sxs-lookup"><span data-stu-id="ad92c-128">**Header:** MetaHost.h</span></span>  
+ <span data-ttu-id="376b1-128">**헤더:** MetaHost.h</span><span class="sxs-lookup"><span data-stu-id="376b1-128">**Header:** MetaHost.h</span></span>  
   
- <span data-ttu-id="ad92c-129">**라이브러리:** MSCorEE.dll에 리소스로 포함</span><span class="sxs-lookup"><span data-stu-id="ad92c-129">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="376b1-129">**라이브러리:** MSCorEE.dll에 리소스로 포함</span><span class="sxs-lookup"><span data-stu-id="376b1-129">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="ad92c-130">**.NET Framework 버전:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="ad92c-130">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
+ <span data-ttu-id="376b1-130">**.NET Framework 버전:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="376b1-130">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="ad92c-131">참고자료</span><span class="sxs-lookup"><span data-stu-id="ad92c-131">See also</span></span>
-- [<span data-ttu-id="ad92c-132">호스팅</span><span class="sxs-lookup"><span data-stu-id="ad92c-132">Hosting</span></span>](../../../../docs/framework/unmanaged-api/hosting/index.md)
+## <a name="see-also"></a><span data-ttu-id="376b1-131">참고자료</span><span class="sxs-lookup"><span data-stu-id="376b1-131">See also</span></span>
+- [<span data-ttu-id="376b1-132">호스팅</span><span class="sxs-lookup"><span data-stu-id="376b1-132">Hosting</span></span>](../../../../docs/framework/unmanaged-api/hosting/index.md)

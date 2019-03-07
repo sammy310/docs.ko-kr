@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 676f3fe9aa9ad7de1499bb42ff23d446b1cb73d8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9fbea1350c7749f67b7e0cc62378a8a520923ae8
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54535491"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57502331"
 ---
-# <a name="iclrdatatargetgettlsvalue-method"></a><span data-ttu-id="ad92d-102">ICLRDataTarget::GetTLSValue 메서드</span><span class="sxs-lookup"><span data-stu-id="ad92d-102">ICLRDataTarget::GetTLSValue Method</span></span>
-<span data-ttu-id="ad92d-103">대상 프로세스에서 지정 된 스레드의 스레드 로컬 저장소 (TLS)에서 값을 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="ad92d-103">Gets a value from the thread local storage (TLS) of the specified thread in the target process.</span></span> <span data-ttu-id="ad92d-104">이 메서드는 공용 언어 런타임 (CLR) 데이터 액세스 서비스에 의해 호출 됩니다.</span><span class="sxs-lookup"><span data-stu-id="ad92d-104">This method is called by the common language runtime (CLR) data access services.</span></span>  
+# <a name="iclrdatatargetgettlsvalue-method"></a><span data-ttu-id="594ea-102">ICLRDataTarget::GetTLSValue 메서드</span><span class="sxs-lookup"><span data-stu-id="594ea-102">ICLRDataTarget::GetTLSValue Method</span></span>
+<span data-ttu-id="594ea-103">대상 프로세스에서 지정 된 스레드의 스레드 로컬 저장소 (TLS)에서 값을 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="594ea-103">Gets a value from the thread local storage (TLS) of the specified thread in the target process.</span></span> <span data-ttu-id="594ea-104">이 메서드는 공용 언어 런타임 (CLR) 데이터 액세스 서비스에 의해 호출 됩니다.</span><span class="sxs-lookup"><span data-stu-id="594ea-104">This method is called by the common language runtime (CLR) data access services.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="ad92d-105">구문</span><span class="sxs-lookup"><span data-stu-id="ad92d-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="594ea-105">구문</span><span class="sxs-lookup"><span data-stu-id="594ea-105">Syntax</span></span>  
   
 ```  
 HRESULT GetTLSValue (  
@@ -37,27 +37,27 @@ HRESULT GetTLSValue (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="ad92d-106">매개 변수</span><span class="sxs-lookup"><span data-stu-id="ad92d-106">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="594ea-106">매개 변수</span><span class="sxs-lookup"><span data-stu-id="594ea-106">Parameters</span></span>  
  `threadID`  
- <span data-ttu-id="ad92d-107">[in] 대상 프로세스에서 스레드의 운영 체제 식별자입니다.</span><span class="sxs-lookup"><span data-stu-id="ad92d-107">[in] The operating system identifier of a thread in the target process.</span></span>  
+ <span data-ttu-id="594ea-107">[in] 대상 프로세스에서 스레드의 운영 체제 식별자입니다.</span><span class="sxs-lookup"><span data-stu-id="594ea-107">[in] The operating system identifier of a thread in the target process.</span></span>  
   
  `index`  
- <span data-ttu-id="ad92d-108">[in] 인덱스 위치입니다.</span><span class="sxs-lookup"><span data-stu-id="ad92d-108">[in] The index of the location.</span></span> <span data-ttu-id="ad92d-109">이 값은 지정 된 스레드 로컬 저장소에 유효한 인덱스 여야 합니다.</span><span class="sxs-lookup"><span data-stu-id="ad92d-109">This value must be a valid index in the local store of the specified thread.</span></span>  
+ <span data-ttu-id="594ea-108">[in] 인덱스 위치입니다.</span><span class="sxs-lookup"><span data-stu-id="594ea-108">[in] The index of the location.</span></span> <span data-ttu-id="594ea-109">이 값은 지정 된 스레드 로컬 저장소에 유효한 인덱스 여야 합니다.</span><span class="sxs-lookup"><span data-stu-id="594ea-109">This value must be a valid index in the local store of the specified thread.</span></span>  
   
  `value`  
- <span data-ttu-id="ad92d-110">[out] 에 대 한 포인터를 `CLRDATA_ADDRESS` 지정된 TLS 위치에서 반환 된 값을 지정 하는 값입니다.</span><span class="sxs-lookup"><span data-stu-id="ad92d-110">[out] A pointer to a `CLRDATA_ADDRESS` value that specifies the value returned from the given TLS location.</span></span>  
+ <span data-ttu-id="594ea-110">[out] 에 대 한 포인터를 `CLRDATA_ADDRESS` 지정된 TLS 위치에서 반환 된 값을 지정 하는 값입니다.</span><span class="sxs-lookup"><span data-stu-id="594ea-110">[out] A pointer to a `CLRDATA_ADDRESS` value that specifies the value returned from the given TLS location.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="ad92d-111">설명</span><span class="sxs-lookup"><span data-stu-id="ad92d-111">Remarks</span></span>  
- <span data-ttu-id="ad92d-112">이 메서드는 디버깅 응용 프로그램의 작성자가 구현합니다.</span><span class="sxs-lookup"><span data-stu-id="ad92d-112">This method is implemented by the writer of the debugging application.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="594ea-111">설명</span><span class="sxs-lookup"><span data-stu-id="594ea-111">Remarks</span></span>  
+ <span data-ttu-id="594ea-112">이 메서드는 디버깅 응용 프로그램의 작성자가 구현합니다.</span><span class="sxs-lookup"><span data-stu-id="594ea-112">This method is implemented by the writer of the debugging application.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="ad92d-113">요구 사항</span><span class="sxs-lookup"><span data-stu-id="ad92d-113">Requirements</span></span>  
- <span data-ttu-id="ad92d-114">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="ad92d-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="594ea-113">요구 사항</span><span class="sxs-lookup"><span data-stu-id="594ea-113">Requirements</span></span>  
+ <span data-ttu-id="594ea-114">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="594ea-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="ad92d-115">**헤더:** ClrData.idl, ClrData.h</span><span class="sxs-lookup"><span data-stu-id="ad92d-115">**Header:** ClrData.idl, ClrData.h</span></span>  
+ <span data-ttu-id="594ea-115">**헤더:** ClrData.idl, ClrData.h</span><span class="sxs-lookup"><span data-stu-id="594ea-115">**Header:** ClrData.idl, ClrData.h</span></span>  
   
- <span data-ttu-id="ad92d-116">**라이브러리:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="ad92d-116">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="594ea-116">**라이브러리:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="594ea-116">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="ad92d-117">**.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="ad92d-117">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="594ea-117">**.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="594ea-117">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="ad92d-118">참고자료</span><span class="sxs-lookup"><span data-stu-id="ad92d-118">See also</span></span>
-- [<span data-ttu-id="ad92d-119">ICLRDataTarget 인터페이스</span><span class="sxs-lookup"><span data-stu-id="ad92d-119">ICLRDataTarget Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget-interface.md)
+## <a name="see-also"></a><span data-ttu-id="594ea-118">참고자료</span><span class="sxs-lookup"><span data-stu-id="594ea-118">See also</span></span>
+- [<span data-ttu-id="594ea-119">ICLRDataTarget 인터페이스</span><span class="sxs-lookup"><span data-stu-id="594ea-119">ICLRDataTarget Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget-interface.md)

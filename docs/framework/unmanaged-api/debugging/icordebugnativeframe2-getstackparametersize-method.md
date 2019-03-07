@@ -17,51 +17,51 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 60d1fafc1d5e718467b944276fc708ab34ddd782
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7f4baa58159760af12afca5b84cb6b1b66e46093
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54727835"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57485540"
 ---
-# <a name="icordebugnativeframe2getstackparametersize-method"></a><span data-ttu-id="ac19c-102">ICorDebugNativeFrame2::GetStackParameterSize 메서드</span><span class="sxs-lookup"><span data-stu-id="ac19c-102">ICorDebugNativeFrame2::GetStackParameterSize Method</span></span>
-<span data-ttu-id="ac19c-103">X86 운영 체제의 스택에 누적 크기 매개 변수를 반환 합니다.</span><span class="sxs-lookup"><span data-stu-id="ac19c-103">Returns the cumulative size of the parameters on the stack on x86 operating systems.</span></span>  
+# <a name="icordebugnativeframe2getstackparametersize-method"></a><span data-ttu-id="65792-102">ICorDebugNativeFrame2::GetStackParameterSize 메서드</span><span class="sxs-lookup"><span data-stu-id="65792-102">ICorDebugNativeFrame2::GetStackParameterSize Method</span></span>
+<span data-ttu-id="65792-103">X86 운영 체제의 스택에 누적 크기 매개 변수를 반환 합니다.</span><span class="sxs-lookup"><span data-stu-id="65792-103">Returns the cumulative size of the parameters on the stack on x86 operating systems.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="ac19c-104">구문</span><span class="sxs-lookup"><span data-stu-id="ac19c-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="65792-104">구문</span><span class="sxs-lookup"><span data-stu-id="65792-104">Syntax</span></span>  
   
 ```  
 HRESULT GetStackParameterSize([out] ULONG32 * pSize)  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="ac19c-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="ac19c-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="65792-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="65792-105">Parameters</span></span>  
  `pSize`  
- <span data-ttu-id="ac19c-106">[out] 스택에 매개 변수의 누적 크기에 대 한 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="ac19c-106">[out] A pointer to the cumulative size of the parameters on the stack.</span></span>  
+ <span data-ttu-id="65792-106">[out] 스택에 매개 변수의 누적 크기에 대 한 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="65792-106">[out] A pointer to the cumulative size of the parameters on the stack.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="ac19c-107">반환 값</span><span class="sxs-lookup"><span data-stu-id="ac19c-107">Return Value</span></span>  
- <span data-ttu-id="ac19c-108">이 메서드는 다음과 같은 특정 HRESULT뿐만 아니라 메서드 오류를 나타내는 HRESULT 오류도 반환합니다.</span><span class="sxs-lookup"><span data-stu-id="ac19c-108">This method returns the following specific HRESULTs as well as HRESULT errors that indicate method failure.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="65792-107">반환 값</span><span class="sxs-lookup"><span data-stu-id="65792-107">Return Value</span></span>  
+ <span data-ttu-id="65792-108">이 메서드는 다음과 같은 특정 HRESULT뿐만 아니라 메서드 오류를 나타내는 HRESULT 오류도 반환합니다.</span><span class="sxs-lookup"><span data-stu-id="65792-108">This method returns the following specific HRESULTs as well as HRESULT errors that indicate method failure.</span></span>  
   
-|<span data-ttu-id="ac19c-109">HRESULT</span><span class="sxs-lookup"><span data-stu-id="ac19c-109">HRESULT</span></span>|<span data-ttu-id="ac19c-110">설명</span><span class="sxs-lookup"><span data-stu-id="ac19c-110">Description</span></span>|  
+|<span data-ttu-id="65792-109">HRESULT</span><span class="sxs-lookup"><span data-stu-id="65792-109">HRESULT</span></span>|<span data-ttu-id="65792-110">설명</span><span class="sxs-lookup"><span data-stu-id="65792-110">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="ac19c-111">S_OK</span><span class="sxs-lookup"><span data-stu-id="ac19c-111">S_OK</span></span>|<span data-ttu-id="ac19c-112">스택 크기를 성공적으로 반환 되었습니다.</span><span class="sxs-lookup"><span data-stu-id="ac19c-112">The stack size was successfully returned.</span></span>|  
-|<span data-ttu-id="ac19c-113">S_FALSE</span><span class="sxs-lookup"><span data-stu-id="ac19c-113">S_FALSE</span></span>|<span data-ttu-id="ac19c-114">`GetStackParameterSize` 비 x86 플랫폼에서 호출 되었습니다.</span><span class="sxs-lookup"><span data-stu-id="ac19c-114">`GetStackParameterSize` was called on a non-x86 platform.</span></span>|  
-|<span data-ttu-id="ac19c-115">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="ac19c-115">E_FAIL</span></span>|<span data-ttu-id="ac19c-116">`The size of the parameters could not be returned`.</span><span class="sxs-lookup"><span data-stu-id="ac19c-116">`The size of the parameters could not be returned`.</span></span>|  
-|<span data-ttu-id="ac19c-117">E_INVALIDARG</span><span class="sxs-lookup"><span data-stu-id="ac19c-117">E_INVALIDARG</span></span>|<span data-ttu-id="ac19c-118">`pSize` `null`합니다.</span><span class="sxs-lookup"><span data-stu-id="ac19c-118">`pSize` Is `null`.</span></span>|  
+|<span data-ttu-id="65792-111">S_OK</span><span class="sxs-lookup"><span data-stu-id="65792-111">S_OK</span></span>|<span data-ttu-id="65792-112">스택 크기를 성공적으로 반환 되었습니다.</span><span class="sxs-lookup"><span data-stu-id="65792-112">The stack size was successfully returned.</span></span>|  
+|<span data-ttu-id="65792-113">S_FALSE</span><span class="sxs-lookup"><span data-stu-id="65792-113">S_FALSE</span></span>|<span data-ttu-id="65792-114">`GetStackParameterSize` 비 x86 플랫폼에서 호출 되었습니다.</span><span class="sxs-lookup"><span data-stu-id="65792-114">`GetStackParameterSize` was called on a non-x86 platform.</span></span>|  
+|<span data-ttu-id="65792-115">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="65792-115">E_FAIL</span></span>|<span data-ttu-id="65792-116">`The size of the parameters could not be returned`.</span><span class="sxs-lookup"><span data-stu-id="65792-116">`The size of the parameters could not be returned`.</span></span>|  
+|<span data-ttu-id="65792-117">E_INVALIDARG</span><span class="sxs-lookup"><span data-stu-id="65792-117">E_INVALIDARG</span></span>|<span data-ttu-id="65792-118">`pSize` `null`합니다.</span><span class="sxs-lookup"><span data-stu-id="65792-118">`pSize` Is `null`.</span></span>|  
   
-## <a name="exceptions"></a><span data-ttu-id="ac19c-119">예외</span><span class="sxs-lookup"><span data-stu-id="ac19c-119">Exceptions</span></span>  
+## <a name="exceptions"></a><span data-ttu-id="65792-119">예외</span><span class="sxs-lookup"><span data-stu-id="65792-119">Exceptions</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="ac19c-120">설명</span><span class="sxs-lookup"><span data-stu-id="ac19c-120">Remarks</span></span>  
- <span data-ttu-id="ac19c-121">합니다 [ICorDebugStackWalk](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-interface.md) 메서드 스택에 푸시된 매개 변수에 대 한 스택 포인터를 조정 하지 마십시오.</span><span class="sxs-lookup"><span data-stu-id="ac19c-121">The [ICorDebugStackWalk](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-interface.md) methods do not adjust the stack pointer for parameters that are pushed on the stack.</span></span> <span data-ttu-id="ac19c-122">반환 된 값을 대신 사용할 수 `GetStackParameterSize` 스택 포인터 매개 변수를 조정 하는 네이티브 언를 조정 합니다.</span><span class="sxs-lookup"><span data-stu-id="ac19c-122">Instead, you can use the value returned by `GetStackParameterSize` to adjust the stack pointer to seed a native unwinder, which does adjust for the parameters.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="65792-120">설명</span><span class="sxs-lookup"><span data-stu-id="65792-120">Remarks</span></span>  
+ <span data-ttu-id="65792-121">합니다 [ICorDebugStackWalk](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-interface.md) 메서드 스택에 푸시된 매개 변수에 대 한 스택 포인터를 조정 하지 마십시오.</span><span class="sxs-lookup"><span data-stu-id="65792-121">The [ICorDebugStackWalk](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-interface.md) methods do not adjust the stack pointer for parameters that are pushed on the stack.</span></span> <span data-ttu-id="65792-122">반환 된 값을 대신 사용할 수 `GetStackParameterSize` 스택 포인터 매개 변수를 조정 하는 네이티브 언를 조정 합니다.</span><span class="sxs-lookup"><span data-stu-id="65792-122">Instead, you can use the value returned by `GetStackParameterSize` to adjust the stack pointer to seed a native unwinder, which does adjust for the parameters.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="ac19c-123">요구 사항</span><span class="sxs-lookup"><span data-stu-id="ac19c-123">Requirements</span></span>  
- <span data-ttu-id="ac19c-124">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="ac19c-124">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="65792-123">요구 사항</span><span class="sxs-lookup"><span data-stu-id="65792-123">Requirements</span></span>  
+ <span data-ttu-id="65792-124">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="65792-124">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="ac19c-125">**헤더:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="ac19c-125">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="65792-125">**헤더:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="65792-125">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="ac19c-126">**라이브러리:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="ac19c-126">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="65792-126">**라이브러리:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="65792-126">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="ac19c-127">**.NET Framework 버전:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="ac19c-127">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
+ <span data-ttu-id="65792-127">**.NET Framework 버전:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="65792-127">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="ac19c-128">참고자료</span><span class="sxs-lookup"><span data-stu-id="ac19c-128">See also</span></span>
-- [<span data-ttu-id="ac19c-129">ICorDebugNativeFrame2 인터페이스</span><span class="sxs-lookup"><span data-stu-id="ac19c-129">ICorDebugNativeFrame2 Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugnativeframe2-interface.md)
-- [<span data-ttu-id="ac19c-130">디버깅 인터페이스</span><span class="sxs-lookup"><span data-stu-id="ac19c-130">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
-- [<span data-ttu-id="ac19c-131">디버깅</span><span class="sxs-lookup"><span data-stu-id="ac19c-131">Debugging</span></span>](../../../../docs/framework/unmanaged-api/debugging/index.md)
+## <a name="see-also"></a><span data-ttu-id="65792-128">참고자료</span><span class="sxs-lookup"><span data-stu-id="65792-128">See also</span></span>
+- [<span data-ttu-id="65792-129">ICorDebugNativeFrame2 인터페이스</span><span class="sxs-lookup"><span data-stu-id="65792-129">ICorDebugNativeFrame2 Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugnativeframe2-interface.md)
+- [<span data-ttu-id="65792-130">디버깅 인터페이스</span><span class="sxs-lookup"><span data-stu-id="65792-130">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [<span data-ttu-id="65792-131">디버깅</span><span class="sxs-lookup"><span data-stu-id="65792-131">Debugging</span></span>](../../../../docs/framework/unmanaged-api/debugging/index.md)
