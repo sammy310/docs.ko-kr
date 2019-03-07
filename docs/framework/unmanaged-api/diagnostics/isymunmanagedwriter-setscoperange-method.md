@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: da50542d9f57e008b31ce2e6ed9698df1275d5eb
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3657ef40fce3d9d29e0cf6c27e8eb527be0f150e
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54618810"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57489022"
 ---
-# <a name="isymunmanagedwritersetscoperange-method"></a><span data-ttu-id="f1c8f-102">ISymUnmanagedWriter::SetScopeRange 메서드</span><span class="sxs-lookup"><span data-stu-id="f1c8f-102">ISymUnmanagedWriter::SetScopeRange Method</span></span>
-<span data-ttu-id="f1c8f-103">지정된 어휘 범위에 대한 오프셋 범위를 정의합니다.</span><span class="sxs-lookup"><span data-stu-id="f1c8f-103">Defines the offset range for the specified lexical scope.</span></span> <span data-ttu-id="f1c8f-104">범위는 현재 범위가 새 하 고 범위 스택에 푸시됩니다.</span><span class="sxs-lookup"><span data-stu-id="f1c8f-104">The scope becomes the new current scope and is pushed onto a stack of scopes.</span></span> <span data-ttu-id="f1c8f-105">범위 계층 구조를 형성 해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="f1c8f-105">Scopes must form a hierarchy.</span></span> <span data-ttu-id="f1c8f-106">형제 겹칠 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="f1c8f-106">Siblings are not allowed to overlap.</span></span>  
+# <a name="isymunmanagedwritersetscoperange-method"></a><span data-ttu-id="e9788-102">ISymUnmanagedWriter::SetScopeRange 메서드</span><span class="sxs-lookup"><span data-stu-id="e9788-102">ISymUnmanagedWriter::SetScopeRange Method</span></span>
+<span data-ttu-id="e9788-103">지정된 어휘 범위에 대한 오프셋 범위를 정의합니다.</span><span class="sxs-lookup"><span data-stu-id="e9788-103">Defines the offset range for the specified lexical scope.</span></span> <span data-ttu-id="e9788-104">범위는 현재 범위가 새 하 고 범위 스택에 푸시됩니다.</span><span class="sxs-lookup"><span data-stu-id="e9788-104">The scope becomes the new current scope and is pushed onto a stack of scopes.</span></span> <span data-ttu-id="e9788-105">범위 계층 구조를 형성 해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="e9788-105">Scopes must form a hierarchy.</span></span> <span data-ttu-id="e9788-106">형제 겹칠 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="e9788-106">Siblings are not allowed to overlap.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="f1c8f-107">구문</span><span class="sxs-lookup"><span data-stu-id="f1c8f-107">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="e9788-107">구문</span><span class="sxs-lookup"><span data-stu-id="e9788-107">Syntax</span></span>  
   
 ```  
 HRESULT OpenScope(  
@@ -36,24 +36,24 @@ HRESULT OpenScope(
     [in] ULONG32  endOffset);  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="f1c8f-108">매개 변수</span><span class="sxs-lookup"><span data-stu-id="f1c8f-108">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="e9788-108">매개 변수</span><span class="sxs-lookup"><span data-stu-id="e9788-108">Parameters</span></span>  
  `scopeId`  
- <span data-ttu-id="f1c8f-109">[in] 범위에 대 한 범위 식별자입니다.</span><span class="sxs-lookup"><span data-stu-id="f1c8f-109">[in] The scope identifier for the scope.</span></span>  
+ <span data-ttu-id="e9788-109">[in] 범위에 대 한 범위 식별자입니다.</span><span class="sxs-lookup"><span data-stu-id="e9788-109">[in] The scope identifier for the scope.</span></span>  
   
  `startOffset`  
- <span data-ttu-id="f1c8f-110">[in] 메서드의 시작 부분에서 어휘 범위에서 첫 번째 명령의 바이트 오프셋입니다.</span><span class="sxs-lookup"><span data-stu-id="f1c8f-110">[in] The offset, in bytes, of the first instruction in the lexical scope from the beginning of the method.</span></span>  
+ <span data-ttu-id="e9788-110">[in] 메서드의 시작 부분에서 어휘 범위에서 첫 번째 명령의 바이트 오프셋입니다.</span><span class="sxs-lookup"><span data-stu-id="e9788-110">[in] The offset, in bytes, of the first instruction in the lexical scope from the beginning of the method.</span></span>  
   
  `endOffset`  
- <span data-ttu-id="f1c8f-111">[in] 메서드의 시작 부분에서 어휘 범위에서 마지막 명령의 바이트 오프셋입니다.</span><span class="sxs-lookup"><span data-stu-id="f1c8f-111">[in] The offset, in bytes, of the last instruction in the lexical scope from the beginning of the method.</span></span>  
+ <span data-ttu-id="e9788-111">[in] 메서드의 시작 부분에서 어휘 범위에서 마지막 명령의 바이트 오프셋입니다.</span><span class="sxs-lookup"><span data-stu-id="e9788-111">[in] The offset, in bytes, of the last instruction in the lexical scope from the beginning of the method.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="f1c8f-112">반환 값</span><span class="sxs-lookup"><span data-stu-id="f1c8f-112">Return Value</span></span>  
- <span data-ttu-id="f1c8f-113">메서드가 성공 하면 s_ok이 고 그렇지 않으면 E_FAIL 또는 일부 다른 오류 코드입니다.</span><span class="sxs-lookup"><span data-stu-id="f1c8f-113">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="e9788-112">반환 값</span><span class="sxs-lookup"><span data-stu-id="e9788-112">Return Value</span></span>  
+ <span data-ttu-id="e9788-113">메서드가 성공 하면 s_ok이 고 그렇지 않으면 E_FAIL 또는 일부 다른 오류 코드입니다.</span><span class="sxs-lookup"><span data-stu-id="e9788-113">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="f1c8f-114">설명</span><span class="sxs-lookup"><span data-stu-id="f1c8f-114">Remarks</span></span>  
- <span data-ttu-id="f1c8f-115">[Isymunmanagedwriter:: Openscope](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-openscope-method.md) 사용 하 여 사용할 수 있는 불투명 한 범위 식별자를 반환 합니다 `ISymUnmanagedWriter::SetScopeRange` 범위를 정의 하의 시작과 끝 이후에 오프셋입니다.</span><span class="sxs-lookup"><span data-stu-id="f1c8f-115">[ISymUnmanagedWriter::OpenScope](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-openscope-method.md) returns an opaque scope identifier that can be used with `ISymUnmanagedWriter::SetScopeRange` to define a scope's starting and ending offset at a later time.</span></span> <span data-ttu-id="f1c8f-116">이 경우에 전달 된 오프셋 `ISymUnmanagedWriter::OpenScope` 하 고 [isymunmanagedwriter:: Closescope](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-closescope-method.md) 무시 됩니다.</span><span class="sxs-lookup"><span data-stu-id="f1c8f-116">In this case, the offsets passed to `ISymUnmanagedWriter::OpenScope` and [ISymUnmanagedWriter::CloseScope](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-closescope-method.md) are ignored.</span></span> <span data-ttu-id="f1c8f-117">범위 식별자 현재 메서드에서만에서 유효합니다.</span><span class="sxs-lookup"><span data-stu-id="f1c8f-117">Scope identifiers are only valid in the current method.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="e9788-114">설명</span><span class="sxs-lookup"><span data-stu-id="e9788-114">Remarks</span></span>  
+ <span data-ttu-id="e9788-115">[Isymunmanagedwriter:: Openscope](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-openscope-method.md) 사용 하 여 사용할 수 있는 불투명 한 범위 식별자를 반환 합니다 `ISymUnmanagedWriter::SetScopeRange` 범위를 정의 하의 시작과 끝 이후에 오프셋입니다.</span><span class="sxs-lookup"><span data-stu-id="e9788-115">[ISymUnmanagedWriter::OpenScope](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-openscope-method.md) returns an opaque scope identifier that can be used with `ISymUnmanagedWriter::SetScopeRange` to define a scope's starting and ending offset at a later time.</span></span> <span data-ttu-id="e9788-116">이 경우에 전달 된 오프셋 `ISymUnmanagedWriter::OpenScope` 하 고 [isymunmanagedwriter:: Closescope](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-closescope-method.md) 무시 됩니다.</span><span class="sxs-lookup"><span data-stu-id="e9788-116">In this case, the offsets passed to `ISymUnmanagedWriter::OpenScope` and [ISymUnmanagedWriter::CloseScope](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-closescope-method.md) are ignored.</span></span> <span data-ttu-id="e9788-117">범위 식별자 현재 메서드에서만에서 유효합니다.</span><span class="sxs-lookup"><span data-stu-id="e9788-117">Scope identifiers are only valid in the current method.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="f1c8f-118">요구 사항</span><span class="sxs-lookup"><span data-stu-id="f1c8f-118">Requirements</span></span>  
- <span data-ttu-id="f1c8f-119">**헤더:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="f1c8f-119">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="e9788-118">요구 사항</span><span class="sxs-lookup"><span data-stu-id="e9788-118">Requirements</span></span>  
+ <span data-ttu-id="e9788-119">**헤더:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="e9788-119">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="f1c8f-120">참고자료</span><span class="sxs-lookup"><span data-stu-id="f1c8f-120">See also</span></span>
-- [<span data-ttu-id="f1c8f-121">ISymUnmanagedWriter 인터페이스</span><span class="sxs-lookup"><span data-stu-id="f1c8f-121">ISymUnmanagedWriter Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)
+## <a name="see-also"></a><span data-ttu-id="e9788-120">참고자료</span><span class="sxs-lookup"><span data-stu-id="e9788-120">See also</span></span>
+- [<span data-ttu-id="e9788-121">ISymUnmanagedWriter 인터페이스</span><span class="sxs-lookup"><span data-stu-id="e9788-121">ISymUnmanagedWriter Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)

@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e67e3bc3477e078a4f1d963cdd768676503dc953
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c38aa9cc891514a7f37dba47402c168060ec3727
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54607665"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57486097"
 ---
-# <a name="icordebugmdagetosthreadid-method"></a><span data-ttu-id="49a70-102">ICorDebugMDA::GetOSThreadId 메서드</span><span class="sxs-lookup"><span data-stu-id="49a70-102">ICorDebugMDA::GetOSThreadId Method</span></span>
-<span data-ttu-id="49a70-103">가 나타내는 MDA (관리 디버깅 도우미)는 운영 체제 (OS) 스레드 식별자를 가져옵니다 [ICorDebugMDA](../../../../docs/framework/unmanaged-api/debugging/icordebugmda-interface.md) 실행 됩니다.</span><span class="sxs-lookup"><span data-stu-id="49a70-103">Gets the operating system (OS) thread identifier upon which the managed debugging assistant (MDA) represented by [ICorDebugMDA](../../../../docs/framework/unmanaged-api/debugging/icordebugmda-interface.md) is executing.</span></span>  
+# <a name="icordebugmdagetosthreadid-method"></a><span data-ttu-id="386bd-102">ICorDebugMDA::GetOSThreadId 메서드</span><span class="sxs-lookup"><span data-stu-id="386bd-102">ICorDebugMDA::GetOSThreadId Method</span></span>
+<span data-ttu-id="386bd-103">가 나타내는 MDA (관리 디버깅 도우미)는 운영 체제 (OS) 스레드 식별자를 가져옵니다 [ICorDebugMDA](../../../../docs/framework/unmanaged-api/debugging/icordebugmda-interface.md) 실행 됩니다.</span><span class="sxs-lookup"><span data-stu-id="386bd-103">Gets the operating system (OS) thread identifier upon which the managed debugging assistant (MDA) represented by [ICorDebugMDA](../../../../docs/framework/unmanaged-api/debugging/icordebugmda-interface.md) is executing.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="49a70-104">구문</span><span class="sxs-lookup"><span data-stu-id="49a70-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="386bd-104">구문</span><span class="sxs-lookup"><span data-stu-id="386bd-104">Syntax</span></span>  
   
 ```  
 HRESULT GetOSThreadId (  
@@ -35,22 +35,22 @@ HRESULT GetOSThreadId (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="49a70-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="49a70-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="386bd-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="386bd-105">Parameters</span></span>  
  `pOsTid`  
- <span data-ttu-id="49a70-106">[out] OS 스레드 식별자에 대 한 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="49a70-106">[out] A pointer to the OS thread identifier.</span></span>  
+ <span data-ttu-id="386bd-106">[out] OS 스레드 식별자에 대 한 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="386bd-106">[out] A pointer to the OS thread identifier.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="49a70-107">설명</span><span class="sxs-lookup"><span data-stu-id="49a70-107">Remarks</span></span>  
- <span data-ttu-id="49a70-108">OS 스레드는 네이티브 스레드 또는 관리 되는 코드를 아직 시작 되지 않은 관리 되는 스레드는 MDA는 발생 하는 경우는 ICorDebugThread 대신 사용 됩니다.</span><span class="sxs-lookup"><span data-stu-id="49a70-108">The OS thread is used instead of an ICorDebugThread to allow for situations in which an MDA is fired either on a native thread or on a managed thread that has not yet entered managed code.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="386bd-107">설명</span><span class="sxs-lookup"><span data-stu-id="386bd-107">Remarks</span></span>  
+ <span data-ttu-id="386bd-108">OS 스레드는 네이티브 스레드 또는 관리 되는 코드를 아직 시작 되지 않은 관리 되는 스레드는 MDA는 발생 하는 경우는 ICorDebugThread 대신 사용 됩니다.</span><span class="sxs-lookup"><span data-stu-id="386bd-108">The OS thread is used instead of an ICorDebugThread to allow for situations in which an MDA is fired either on a native thread or on a managed thread that has not yet entered managed code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="49a70-109">요구 사항</span><span class="sxs-lookup"><span data-stu-id="49a70-109">Requirements</span></span>  
- <span data-ttu-id="49a70-110">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="49a70-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="386bd-109">요구 사항</span><span class="sxs-lookup"><span data-stu-id="386bd-109">Requirements</span></span>  
+ <span data-ttu-id="386bd-110">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="386bd-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="49a70-111">**헤더:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="49a70-111">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="386bd-111">**헤더:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="386bd-111">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="49a70-112">**라이브러리:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="49a70-112">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="386bd-112">**라이브러리:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="386bd-112">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="49a70-113">**.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="49a70-113">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="386bd-113">**.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="386bd-113">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="49a70-114">참고자료</span><span class="sxs-lookup"><span data-stu-id="49a70-114">See also</span></span>
-- [<span data-ttu-id="49a70-115">ICorDebugMDA 인터페이스</span><span class="sxs-lookup"><span data-stu-id="49a70-115">ICorDebugMDA Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugmda-interface.md)
-- [<span data-ttu-id="49a70-116">관리 디버깅 도우미를 사용하여 오류 진단</span><span class="sxs-lookup"><span data-stu-id="49a70-116">Diagnosing Errors with Managed Debugging Assistants</span></span>](../../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
+## <a name="see-also"></a><span data-ttu-id="386bd-114">참고자료</span><span class="sxs-lookup"><span data-stu-id="386bd-114">See also</span></span>
+- [<span data-ttu-id="386bd-115">ICorDebugMDA 인터페이스</span><span class="sxs-lookup"><span data-stu-id="386bd-115">ICorDebugMDA Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugmda-interface.md)
+- [<span data-ttu-id="386bd-116">관리 디버깅 도우미를 사용하여 오류 진단</span><span class="sxs-lookup"><span data-stu-id="386bd-116">Diagnosing Errors with Managed Debugging Assistants</span></span>](../../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)

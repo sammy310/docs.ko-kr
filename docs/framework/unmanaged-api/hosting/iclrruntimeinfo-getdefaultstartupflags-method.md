@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a4615200bce3aa11401abc9e9c264ab8d8e797b6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b7ef61c8ae1d8c2e5cf1fee80d8900a0e0e7f73b
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54720017"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57493429"
 ---
-# <a name="iclrruntimeinfogetdefaultstartupflags-method"></a><span data-ttu-id="f2518-102">ICLRRuntimeInfo::GetDefaultStartupFlags 메서드</span><span class="sxs-lookup"><span data-stu-id="f2518-102">ICLRRuntimeInfo::GetDefaultStartupFlags Method</span></span>
-<span data-ttu-id="f2518-103">시작 플래그 및 런타임을 시작 하는 데 사용할 호스트 구성 파일을 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="f2518-103">Gets the startup flags and host configuration file that will be used to start the runtime.</span></span>  
+# <a name="iclrruntimeinfogetdefaultstartupflags-method"></a><span data-ttu-id="114b2-102">ICLRRuntimeInfo::GetDefaultStartupFlags 메서드</span><span class="sxs-lookup"><span data-stu-id="114b2-102">ICLRRuntimeInfo::GetDefaultStartupFlags Method</span></span>
+<span data-ttu-id="114b2-103">시작 플래그 및 런타임을 시작 하는 데 사용할 호스트 구성 파일을 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="114b2-103">Gets the startup flags and host configuration file that will be used to start the runtime.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="f2518-104">구문</span><span class="sxs-lookup"><span data-stu-id="f2518-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="114b2-104">구문</span><span class="sxs-lookup"><span data-stu-id="114b2-104">Syntax</span></span>  
   
 ```  
 HRESULT GetDefaultStartupFlags(  
@@ -36,36 +36,36 @@ HRESULT GetDefaultStartupFlags(
      [in, out]  DWORD *pcchHostConfigFile);  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="f2518-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="f2518-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="114b2-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="114b2-105">Parameters</span></span>  
  `pdwStartupFlags`  
- <span data-ttu-id="f2518-106">[out] 현재 설정 되어 있는 호스트 시작 플래그에 대 한 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="f2518-106">[out] A pointer to the host startup flags that are currently set.</span></span>  
+ <span data-ttu-id="114b2-106">[out] 현재 설정 되어 있는 호스트 시작 플래그에 대 한 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="114b2-106">[out] A pointer to the host startup flags that are currently set.</span></span>  
   
  `pwzHostConfigFile`  
- <span data-ttu-id="f2518-107">[out] 현재 호스트 구성 파일의 디렉터리 경로에 대 한 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="f2518-107">[out] A pointer to the directory path of the current host configuration file.</span></span>  
+ <span data-ttu-id="114b2-107">[out] 현재 호스트 구성 파일의 디렉터리 경로에 대 한 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="114b2-107">[out] A pointer to the directory path of the current host configuration file.</span></span>  
   
  `pcchHostConfigFile`  
- <span data-ttu-id="f2518-108">[out에서] 입력에 크기 `pwzHostConfigFile`, 버퍼 오버런을 방지 합니다.</span><span class="sxs-lookup"><span data-stu-id="f2518-108">[in, out] On input, the size of `pwzHostConfigFile`, to avoid buffer overruns.</span></span> <span data-ttu-id="f2518-109">하는 경우 `pwzHostConfigFile` 가 null 인 메서드를 필요한 크기를 반환 `pwzHostConfigFile` 사전 할당에 대 한 합니다.</span><span class="sxs-lookup"><span data-stu-id="f2518-109">If `pwzHostConfigFile` is null, the method returns the required size of `pwzHostConfigFile` for pre-allocation.</span></span>  
+ <span data-ttu-id="114b2-108">[out에서] 입력에 크기 `pwzHostConfigFile`, 버퍼 오버런을 방지 합니다.</span><span class="sxs-lookup"><span data-stu-id="114b2-108">[in, out] On input, the size of `pwzHostConfigFile`, to avoid buffer overruns.</span></span> <span data-ttu-id="114b2-109">하는 경우 `pwzHostConfigFile` 가 null 인 메서드를 필요한 크기를 반환 `pwzHostConfigFile` 사전 할당에 대 한 합니다.</span><span class="sxs-lookup"><span data-stu-id="114b2-109">If `pwzHostConfigFile` is null, the method returns the required size of `pwzHostConfigFile` for pre-allocation.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="f2518-110">반환 값</span><span class="sxs-lookup"><span data-stu-id="f2518-110">Return Value</span></span>  
- <span data-ttu-id="f2518-111">이 메서드는 다음과 같은 특정 HRESULT를 반환 합니다. 메서드 오류를 나타내는 HRESULT 오류 뿐만 아니라 합니다.</span><span class="sxs-lookup"><span data-stu-id="f2518-111">This method returns the following specific HRESULT as well as HRESULT errors that indicate method failure.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="114b2-110">반환 값</span><span class="sxs-lookup"><span data-stu-id="114b2-110">Return Value</span></span>  
+ <span data-ttu-id="114b2-111">이 메서드는 다음과 같은 특정 HRESULT를 반환 합니다. 메서드 오류를 나타내는 HRESULT 오류 뿐만 아니라 합니다.</span><span class="sxs-lookup"><span data-stu-id="114b2-111">This method returns the following specific HRESULT as well as HRESULT errors that indicate method failure.</span></span>  
   
-|<span data-ttu-id="f2518-112">HRESULT</span><span class="sxs-lookup"><span data-stu-id="f2518-112">HRESULT</span></span>|<span data-ttu-id="f2518-113">설명</span><span class="sxs-lookup"><span data-stu-id="f2518-113">Description</span></span>|  
+|<span data-ttu-id="114b2-112">HRESULT</span><span class="sxs-lookup"><span data-stu-id="114b2-112">HRESULT</span></span>|<span data-ttu-id="114b2-113">설명</span><span class="sxs-lookup"><span data-stu-id="114b2-113">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="f2518-114">S_OK</span><span class="sxs-lookup"><span data-stu-id="f2518-114">S_OK</span></span>|<span data-ttu-id="f2518-115">메서드가 완료되었습니다.</span><span class="sxs-lookup"><span data-stu-id="f2518-115">The method completed successfully.</span></span>|  
+|<span data-ttu-id="114b2-114">S_OK</span><span class="sxs-lookup"><span data-stu-id="114b2-114">S_OK</span></span>|<span data-ttu-id="114b2-115">메서드가 완료되었습니다.</span><span class="sxs-lookup"><span data-stu-id="114b2-115">The method completed successfully.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="f2518-116">설명</span><span class="sxs-lookup"><span data-stu-id="f2518-116">Remarks</span></span>  
- <span data-ttu-id="f2518-117">이 메서드는 기본 플래그 값을 반환 합니다. (`STARTUP_CONCURRENT_GC` 및 `NULL`), 또는 하 한 이전 호출에서 제공 되는 값을 [iclrruntimeinfo:: Setdefaultstartupflags 메서드](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-setdefaultstartupflags-method.md), 또는 중 하나에서 설정 된 값은 `CorBind*` 이 런타임에 바인딩된 경우 메서드입니다.</span><span class="sxs-lookup"><span data-stu-id="f2518-117">This method returns the default flag values (`STARTUP_CONCURRENT_GC` and `NULL`), or the values provided by a previous call to the [ICLRRuntimeInfo::SetDefaultStartupFlags method](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-setdefaultstartupflags-method.md), or the values set by any of the `CorBind*` methods if they are bound to this runtime.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="114b2-116">설명</span><span class="sxs-lookup"><span data-stu-id="114b2-116">Remarks</span></span>  
+ <span data-ttu-id="114b2-117">이 메서드는 기본 플래그 값을 반환 합니다. (`STARTUP_CONCURRENT_GC` 및 `NULL`), 또는 하 한 이전 호출에서 제공 되는 값을 [iclrruntimeinfo:: Setdefaultstartupflags 메서드](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-setdefaultstartupflags-method.md), 또는 중 하나에서 설정 된 값은 `CorBind*` 이 런타임에 바인딩된 경우 메서드입니다.</span><span class="sxs-lookup"><span data-stu-id="114b2-117">This method returns the default flag values (`STARTUP_CONCURRENT_GC` and `NULL`), or the values provided by a previous call to the [ICLRRuntimeInfo::SetDefaultStartupFlags method](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-setdefaultstartupflags-method.md), or the values set by any of the `CorBind*` methods if they are bound to this runtime.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="f2518-118">요구 사항</span><span class="sxs-lookup"><span data-stu-id="f2518-118">Requirements</span></span>  
- <span data-ttu-id="f2518-119">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="f2518-119">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="114b2-118">요구 사항</span><span class="sxs-lookup"><span data-stu-id="114b2-118">Requirements</span></span>  
+ <span data-ttu-id="114b2-119">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="114b2-119">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="f2518-120">**헤더:** MetaHost.h</span><span class="sxs-lookup"><span data-stu-id="f2518-120">**Header:** MetaHost.h</span></span>  
+ <span data-ttu-id="114b2-120">**헤더:** MetaHost.h</span><span class="sxs-lookup"><span data-stu-id="114b2-120">**Header:** MetaHost.h</span></span>  
   
- <span data-ttu-id="f2518-121">**라이브러리:** MSCorEE.dll에 리소스로 포함</span><span class="sxs-lookup"><span data-stu-id="f2518-121">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="114b2-121">**라이브러리:** MSCorEE.dll에 리소스로 포함</span><span class="sxs-lookup"><span data-stu-id="114b2-121">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="f2518-122">**.NET Framework 버전:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="f2518-122">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
+ <span data-ttu-id="114b2-122">**.NET Framework 버전:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="114b2-122">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="f2518-123">참고자료</span><span class="sxs-lookup"><span data-stu-id="f2518-123">See also</span></span>
-- [<span data-ttu-id="f2518-124">ICLRRuntimeInfo 인터페이스</span><span class="sxs-lookup"><span data-stu-id="f2518-124">ICLRRuntimeInfo Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md)
-- [<span data-ttu-id="f2518-125">호스팅 인터페이스</span><span class="sxs-lookup"><span data-stu-id="f2518-125">Hosting Interfaces</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
-- [<span data-ttu-id="f2518-126">호스팅</span><span class="sxs-lookup"><span data-stu-id="f2518-126">Hosting</span></span>](../../../../docs/framework/unmanaged-api/hosting/index.md)
+## <a name="see-also"></a><span data-ttu-id="114b2-123">참고자료</span><span class="sxs-lookup"><span data-stu-id="114b2-123">See also</span></span>
+- [<span data-ttu-id="114b2-124">ICLRRuntimeInfo 인터페이스</span><span class="sxs-lookup"><span data-stu-id="114b2-124">ICLRRuntimeInfo Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md)
+- [<span data-ttu-id="114b2-125">호스팅 인터페이스</span><span class="sxs-lookup"><span data-stu-id="114b2-125">Hosting Interfaces</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
+- [<span data-ttu-id="114b2-126">호스팅</span><span class="sxs-lookup"><span data-stu-id="114b2-126">Hosting</span></span>](../../../../docs/framework/unmanaged-api/hosting/index.md)
