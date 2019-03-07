@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ae7bbc41d0e2cca1cf25a5ec34535b20fc9163d1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 41ece0f8ca804acb1614ceaa651ce2ec199c11c0
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54498257"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57499084"
 ---
 # <a name="iclrruntimehostexecuteindefaultappdomain-method"></a>ICLRRuntimeHost::ExecuteInDefaultAppDomain 메서드
 지정된 된 관리 되는 어셈블리에서 지정 된 형식의 지정된 된 메서드를 호출합니다.  
@@ -39,7 +39,7 @@ HRESULT ExecuteInDefaultAppDomain (
 );  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `pwzAssemblyPath`  
  [in] 에 대 한 경로 <xref:System.Reflection.Assembly> 정의 하는 <xref:System.Type> 해당 메서드는 호출할 합니다.  
   

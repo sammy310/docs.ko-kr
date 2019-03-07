@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: cc986dc27deb08f779a9654324e6832d8420554a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e3c11eeeb4eece495a7ccbe51c7e04d077e497ce
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54587137"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57494573"
 ---
 # <a name="getscope2-method"></a>GetScope2 메서드
 가져오기 범위를 가져옵니다.  
@@ -37,7 +37,7 @@ HRESULT GetScope2(
 ) PURE;   
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `AssemblyID`  
  대상 어셈블리의 ID입니다.  
   

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 76d3be88065d4f29020a794db30c616774db1f4f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4210dedd77c6ab041189fa287e192bb7038080b2
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54580852"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57491417"
 ---
 # <a name="isymunmanagedwriterdefinesequencepoints-method"></a>ISymUnmanagedWriter::DefineSequencePoints 메서드
 현재 메서드 내에서 시퀀스 위치 그룹을 정의합니다. 각 시작 줄 및 시작 열 메서드 내에서 문의 시작을 정의 합니다. 각 끝 줄과 끝 열 메서드 내에서 문의 끝을 정의 합니다. 배열은 오프셋의 오름차순으로 정렬 되어야 합니다. 오프셋은 항상 메서드 바이트의 시작 부분에서 측정 됩니다.  
@@ -40,7 +40,7 @@ HRESULT DefineSequencePoints(
     [in, size_is(spCount)] ULONG32     endColumns[]);  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `document`  
  [in] 시퀀스 위치를 정의 하는 문서 개체입니다.  
   

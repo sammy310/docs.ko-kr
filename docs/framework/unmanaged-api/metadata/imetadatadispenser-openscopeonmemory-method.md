@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6233e5ecb479db43f35c9d95c42c66c02c81122f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8462f0d518307ad271c31e712b46c784c67974a3
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54648932"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57498486"
 ---
 # <a name="imetadatadispenseropenscopeonmemory-method"></a>IMetaDataDispenser::OpenScopeOnMemory 메서드
 기존 메타 데이터를 포함 하는 메모리 영역을 엽니다. 즉,이 메서드는 메타 데이터로 기존 데이터가 처리 되는 메모리의 지정된 된 영역을 엽니다.  
@@ -39,7 +39,7 @@ HRESULT OpenScopeOnMemory (
 );  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `pData`  
  [in] 메모리 영역의 시작 주소를 지정 하는 포인터입니다.  
   

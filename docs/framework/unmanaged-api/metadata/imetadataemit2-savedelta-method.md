@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 27d9b891475d0fb45c9ec34f3363b0d76fe394c4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9a1963221942134d148d5417ebafea97a26aead5
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54493206"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57494287"
 ---
 # <a name="imetadataemit2savedelta-method"></a>IMetaDataEmit2::SaveDelta 메서드
 편집 하며 계속 하기는 현재 세션에서 지정된 된 파일 변경 내용을 저장 합니다.  
@@ -36,12 +36,12 @@ HRESULT SaveDelta (
 );  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `szFile`  
  [in] 변경 내용을 저장 하는 파일 이름입니다.  
   
  `dwSaveFlags`  
- [in] 예약되어 있습니다. 0이어야 합니다.  
+ [in] 예약되어 있습니다. 0 이어야 합니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  

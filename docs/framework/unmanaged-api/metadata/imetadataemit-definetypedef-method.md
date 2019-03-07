@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4a1da4015a202debe1d864f3c0135cc296ce6fce
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: bf2ca9719cdf62637292bdb39437d36f4b3fcd49
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54605478"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57494409"
 ---
 # <a name="imetadataemitdefinetypedef-method"></a>IMetaDataEmit::DefineTypeDef 메서드
 공용 언어 런타임 형식에 대 한 형식 정의 만들고 해당 형식 정의 대 한 메타 데이터 토큰을 가져옵니다.  
@@ -39,7 +39,7 @@ HRESULT DefineTypeDef (
 );  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `szTypeDef`  
  [in] 유니코드 형식의 이름입니다.  
   

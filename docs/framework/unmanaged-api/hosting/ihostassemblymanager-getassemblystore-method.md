@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 257c6856b54d77c4df0012880c9eac59884b52d9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fd4b538bc7090f07511273808afa039be0ef558e
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54571002"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57497121"
 ---
 # <a name="ihostassemblymanagergetassemblystore-method"></a>IHostAssemblyManager::GetAssemblyStore 메서드
 한 인터페이스 포인터를 가져옵니다는 [IHostAssemblyStore](../../../../docs/framework/unmanaged-api/hosting/ihostassemblystore-interface.md) 호스트에 의해 로드 된 어셈블리의 목록을 나타내는입니다.  
@@ -35,7 +35,7 @@ HRESULT GetAssemblyStore (
 );  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `ppAssemblyStore`  
  [out] 에 대 한 함수 포인터를 `IHostAssemblyStore` 인스턴스이거나, null, 호스트를 구현 하지 않는 경우 `IHostAssemblyStore`합니다.  
   

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5484f8bd5515d3a4a3cd08110cc5d48c4356a9f0
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 55bebdd87c43f674973b2e47783fa6f2a604b620
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54590148"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57501554"
 ---
 # <a name="iclrdatatargetreadvirtual-method"></a>ICLRDataTarget::ReadVirtual 메서드
 지정된 된 버퍼에 지정 된 가상 메모리 주소에서 데이터를 읽습니다.  
@@ -39,7 +39,7 @@ HRESULT ReadVirtual (
 );  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `address`  
  [in] 가상 메모리 주소를 저장 하는 CLRDATA_ADDRESS 합니다.  
   

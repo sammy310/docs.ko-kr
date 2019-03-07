@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 839b765c-3e41-44ce-bf1b-dc10453db18e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2a33c2240a0e3f3a09ff5ce93c34db9bba03ab83
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a55ff59d698a1ced689e23d9908ce6e273d8a9c1
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54665073"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57494547"
 ---
 # <a name="strongnamesignaturegeneration-function"></a>StrongNameSignatureGeneration 함수
 지정된 어셈블리에 대한 강력한 이름 서명을 생성합니다.  
@@ -40,7 +40,7 @@ BOOLEAN StrongNameSignatureGeneration (
 );  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `wszFilePath`  
  [in] 강력한 이름 시그니처를 생성 하는 어셈블리의 매니페스트가 포함 된 파일 경로입니다.  
   

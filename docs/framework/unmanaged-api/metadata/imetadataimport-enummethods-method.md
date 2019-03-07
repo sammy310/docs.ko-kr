@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 668c7298a9543cce93cce324672334c9ec1e8cd2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c6237951b7fab013a32a7e717215cacdbe1125b1
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54732819"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57493708"
 ---
 # <a name="imetadataimportenummethods-method"></a>IMetaDataImport::EnumMethods 메서드
 지정한 형식의 메서드를 나타내는 MethodDef 토큰을 열거합니다.  
@@ -39,7 +39,7 @@ HRESULT EnumMethods (
 );  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `phEnum`  
  [out에서] 열거자에 대 한 포인터입니다. 이 메서드의 첫 번째 호출에 대 한 NULL 이어야 합니다.  
   

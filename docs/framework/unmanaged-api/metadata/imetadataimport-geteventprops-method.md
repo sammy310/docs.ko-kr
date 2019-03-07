@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a9d156d7c7ada8309e501ba44720dfa285ce50d2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6f2eec9fce1909f6a83190f5ba3e99162461bbc4
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54552361"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57492155"
 ---
 # <a name="imetadataimportgeteventprops-method"></a>IMetaDataImport::GetEventProps 메서드
 선언 형식, 추가 및 제거 메서드를 대리자에 대해 플래그 및 기타 관련된 데이터를 포함 하 여, 지정한 이벤트 토큰이 나타내는 이벤트에 대 한 메타 데이터 정보를 가져옵니다.  
@@ -47,7 +47,7 @@ HRESULT GetEventProps (
 );  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `ev`  
  [in] 이벤트 메타 데이터에 대 한 메타 데이터를 가져올 이벤트를 나타내는 토큰입니다.  
   

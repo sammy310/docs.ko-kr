@@ -18,12 +18,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: feb8e5c56ee6ea766cd5f1d10af42699777db453
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 20ea800b86a169eff984b6068db3e9887235a034
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54654891"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57496978"
 ---
 # <a name="getassemblyidentityfromfile-function"></a>GetAssemblyIdentityFromFile 함수
 포인터를 가져는 `IUnknown` 지정 된 개체 `IID` 지정된 된 파일 경로에 있는 어셈블리에서.  
@@ -38,7 +38,7 @@ HRESULT GetAssemblyIdentityFromFile (
  );  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `pwzFilePath`  
  [in] 요청된 된 어셈블리에 대 한 유효한 경로입니다.  
   

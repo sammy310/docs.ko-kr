@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4cb5b091aadbdd503dd7988f713f40a00876a2dc
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fbe0459824499aba86c908012f038256f9923513
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54608324"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57496695"
 ---
 # <a name="icordebugcontrollerstop-method"></a>ICorDebugController::Stop 메서드
 프로세스에서 관리 되는 코드를 실행 하는 모든 스레드에서 동시에 중지를 수행 합니다.  
@@ -35,7 +35,7 @@ HRESULT Stop (
 );  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `dwTimeoutIgnored`  
  사용되지 않습니다.  
   

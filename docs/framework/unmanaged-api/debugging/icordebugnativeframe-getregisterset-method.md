@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8714cecb343d21fd119a925d2fc7c23abbaebbe1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 18db366bde4211afa0f65052affa0ab9639df122
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54664449"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57498928"
 ---
 # <a name="icordebugnativeframegetregisterset-method"></a>ICorDebugNativeFrame::GetRegisterSet 메서드
 이 스택 프레임에 대해 설정 하는 레지스터를 가져옵니다.  
@@ -35,7 +35,7 @@ HRESULT GetRegisterSet (
 );  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `ppRegisters`  
  [out] 주소에 대 한 포인터를 [ICorDebugRegisterSet](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset-interface.md) 이 스택 프레임에 대 한 레지스터를 나타내는 개체를 설정 합니다.  
   

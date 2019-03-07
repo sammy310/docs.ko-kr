@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: eab43bce4dbd4ea8f88a9137ce5574252dae8a61
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 06c74509a0435fe54f754c6e47603bd74b5b09fe
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54743857"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57493598"
 ---
 # <a name="icordebugregisterset2getregisters-method"></a>ICorDebugRegisterSet2::GetRegisters 메서드
 (코드를 현재 실행 중인 플랫폼)에 대 한 각 레지스터의 값을 가져옵니다 지정 된 비트 마스크에 의해 지정 된 합니다.  
@@ -38,7 +38,7 @@ HRESULT GetRegisters (
 );  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `maskCount`  
  [in] 크기 (바이트)의는 `mask` 배열입니다.  
   

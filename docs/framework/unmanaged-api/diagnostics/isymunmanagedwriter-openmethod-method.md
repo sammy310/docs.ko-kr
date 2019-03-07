@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1a5e50327e74e0b893bd5f8e6f716827f2168e37
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3e6ee68fe3ffed0ae19c2f528a49a863b99fa7f7
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54557957"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57499552"
 ---
 # <a name="isymunmanagedwriteropenmethod-method"></a>ISymUnmanagedWriter::OpenMethod 메서드
 정보는 기호를 내보내는 메서드를 엽니다. 지정된 된 메서드 호출 시퀀스 위치, 매개 변수 및 어휘 범위를 정의 하는 최신 방법이 됩니다. 전체 메서드 주위에 암시적 어휘 범위가 있습니다. 이전에 닫힌 하는 메서드를 다시 열 때 해당 메서드에 대 한 모든 이전에 정의 된 기호를 지웁니다. 한 번에 하나만 open 메서드가 있을 수 있습니다.  
@@ -34,7 +34,7 @@ HRESULT OpenMethod(
     [in] mdMethodDef method);  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `method`  
  [in] 열려는 메서드에 대 한 메타 데이터 토큰입니다.  
   

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 8d0e1b764691fd2582e1225cb90003e2a644061f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d6c48a7ae62155dc558fb4a62b3e2573bea77594
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54643691"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57499175"
 ---
 # <a name="isymunmanagedscopegetlocals-method"></a>ISymUnmanagedScope::GetLocals 메서드
 이 범위 내에 정의 된 로컬 변수를 가져옵니다.  
@@ -37,7 +37,7 @@ HRESULT GetLocals(
         length_is(*pcLocals)] ISymUnmanagedVariable* locals[]);  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `cLocals`  
  [in] A `ULONG32` 의 크기를 나타내는 `locals` 배열입니다.  
   

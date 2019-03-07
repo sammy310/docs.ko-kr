@@ -5,12 +5,12 @@ helpviewer_keywords:
 - <exception> XML tag
 - exception XML tag
 ms.assetid: c0517549-171e-4dae-ab88-a9c1700b6eee
-ms.openlocfilehash: 157287ce5c85ec51f1711934cf9a5e4f568957ef
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 84cadad8f6e4dfcf276400cf8831520b89728cdc
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56977190"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57498715"
 ---
 # <a name="exception-visual-basic"></a>\<예외 > (Visual Basic)
 예외를 throw 할 수를 지정 합니다.  
@@ -21,7 +21,7 @@ ms.locfileid: "56977190"
 <exception cref="member">description</exception>  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `member`  
  현재 컴파일 환경에서 사용할 수 있는 예외에 대한 참조입니다. 컴파일러는 지정된 예외가 있으며 `member`를 출력 XML의 정식 요소 이름으로 변환하는지 확인합니다. `member`는 큰따옴표(" ")로 묶어야 합니다.  
   

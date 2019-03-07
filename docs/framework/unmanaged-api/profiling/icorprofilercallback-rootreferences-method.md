@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 94b736a8e3250f4d208d4a9a46a022140b676318
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: cfab1d716b5a8b530561e2dc72442591eb0d8e42
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54631355"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57499032"
 ---
 # <a name="icorprofilercallbackrootreferences-method"></a>ICorProfilerCallback::RootReferences 메서드
 가비지 컬렉션 후 루트 참조에 대 한 정보를 사용 하 여 프로파일러를 알립니다.  
@@ -35,7 +35,7 @@ HRESULT RootReferences(
     [in, size_is(cRootRefs)] ObjectID rootRefIds[] );  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `cRootRefs`  
  [in] 에 대 한 참조 횟수를 `rootRefIds` 배열입니다.  
   

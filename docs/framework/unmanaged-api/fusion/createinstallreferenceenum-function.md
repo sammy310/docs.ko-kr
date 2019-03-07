@@ -18,12 +18,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5ec212bd999fe32e56a272c9bc3f39e19617a250
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6296a5c80587a6fd1a7b03e20ffdf7fd1316e9d2
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54547772"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57502269"
 ---
 # <a name="createinstallreferenceenum-function"></a>CreateInstallReferenceEnum 함수
 포인터를 가져는 [IInstallReferenceEnum](../../../../docs/framework/unmanaged-api/fusion/iinstallreferenceenum-interface.md) 인스턴스는 지정된 된 어셈블리에 대 한 응용 프로그램의 참조 목록을 나타냅니다.  
@@ -39,7 +39,7 @@ HRESULT CreateInstallReferenceEnum (
  );  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `ppRefEnum`  
  [out] 반환 된 `IInstallReferenceEnum` 포인터입니다.  
   

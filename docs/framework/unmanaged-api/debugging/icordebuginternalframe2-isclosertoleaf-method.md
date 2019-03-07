@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a3a5dca321470b3fda8490ca5ae809045d724150
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 96deee943f6a4c636a52b41c8f4c2fda86c6bd18
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54552166"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57493721"
 ---
 # <a name="icordebuginternalframe2isclosertoleaf-method"></a>ICorDebugInternalFrame2::IsCloserToLeaf 메서드
 확인 여부는 `this` 내부 프레임에 더 가까운 리프 지정된 ICorDebugFrame 개체 보다 합니다.  
@@ -34,7 +34,7 @@ HRESULT IsCloserToLeaf([in] ICorDebugFrame * pFrameToCompare,
                        [out] BOOL * pIsCloser);  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `pFrameToCompare`  
  [in] 비교에 대 한 포인터 `ICorDebugFrame` 개체입니다.  
   

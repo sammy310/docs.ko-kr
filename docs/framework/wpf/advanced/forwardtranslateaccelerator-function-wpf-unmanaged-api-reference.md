@@ -8,12 +8,12 @@ api_name:
 api_location:
 - PresentationHost_v0400.dll
 ms.assetid: fff47a86-9d9f-4176-9530-10e1876e393f
-ms.openlocfilehash: 02d5d23ec44d9fb7a244fc635ac174cf81ead173
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 2b1914b9a0e478c7ab15fca77b7df952123153ac
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57362190"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57502291"
 ---
 # <a name="forwardtranslateaccelerator-function-wpf-unmanaged-api-reference"></a>ForwardTranslateAccelerator 함수 (F 관리 되지 않는 API 참조)
 이 API는 Windows Presentation Foundation (WPF) 인프라를 지원 하며 코드에서 직접 사용할 수 없습니다.  
@@ -29,7 +29,7 @@ HRESULT ForwardTranslateAccelerator(
 )  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  pMsg  
  메시지에 대 한 포인터입니다.  
   

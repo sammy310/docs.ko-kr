@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 6f4e78ba-082b-489d-8b58-4c35fbcc7a5b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c2b7c2f70b4776c5448d23f37c520bb5b07c051e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: eb14cd3812a632970acec353e05cbd190cb40081
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54541653"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57497056"
 ---
 # <a name="icordebugmergedassemblyrecordgetpublickey-method"></a>ICorDebugMergedAssemblyRecord::GetPublicKey 메서드
 어셈블리의 공개 키를 가져옵니다.  
@@ -23,7 +23,7 @@ HRESULT GetPublicKey(
    [out, size_is(cbPublicKey), length_is(*pcbPublicKey)] BYTE pbPublicKey[]);  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `cbPublicKey`  
  [in] `pbPublicKey` 배열의 최대 바이트 수입니다.  
   

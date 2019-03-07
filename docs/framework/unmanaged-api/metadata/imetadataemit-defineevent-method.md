@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e7d42fe17af5b10d718d0e2b6a7ae33644fa4813
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 26fd4c89838912e4e07c1d9a8b84aa22f54adeff
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54730297"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57501632"
 ---
 # <a name="imetadataemitdefineevent-method"></a>IMetaDataEmit::DefineEvent 메서드
 지정 된 메타 데이터 서명을 사용 하 여 이벤트에 대 한 정의 만들고 해당 이벤트 정의 하는 토큰을 가져옵니다.  
@@ -43,7 +43,7 @@ HRESULT DefineEvent (
 );  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `td`  
  [in] 대상 클래스 또는 인터페이스에 대 한 토큰입니다. 이 값은 `mdTypeDef` 또는 `mdTypeDefNil` 토큰입니다.  
   

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5bad338777db2097ed72ce327f42fde0f0db58e3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8786005921d671d873151a4f2e2f5a38d6df21c1
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54693719"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57501455"
 ---
 # <a name="imetadataassemblyimportgetmanifestresourceprops-method"></a>IMetaDataAssemblyImport::GetManifestResourceProps 메서드
 지정 된 메타 데이터 서명 사용 하 여 매니페스트 리소스의 속성 집합을 가져옵니다.  
@@ -41,7 +41,7 @@ HRESULT GetManifestResourceProps (
 );  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `mdmr`  
  [in] `mdManifestResource` 속성을 검색할 원본에 대 한 리소스를 나타내는 토큰입니다.  
   

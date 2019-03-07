@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5e9f5af0a79b36f879b75e331d614edfed7476eb
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: cf7480eaa0fa38651d139a2fa9d533b43dbdce1b
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54509976"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57496471"
 ---
 # <a name="icordebugcreateprocess-method"></a>ICorDebug::CreateProcess 메서드
 디버거의 제어 기본 스레드 및 프로세스를 시작합니다.  
@@ -46,7 +46,7 @@ HRESULT CreateProcess (
 );  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `lpApplicationName`  
  [in] 시작된 프로세스에서 실행 될 모듈을 지정 하는 null로 끝나는 문자열에 대 한 포인터입니다. 모듈 호출 프로세스의 보안 컨텍스트에서 실행 됩니다.  
   

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ccd6dbe63f02fa7e28c6aec1be815f1f1967a90a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7ace11aa2cc3c24a6582b227f9a7ff8816ea0668
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54718730"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57492116"
 ---
 # <a name="iclrvalidatorvalidate-method"></a>ICLRValidator::Validate 메서드
 Pe (이식 가능) 또는 MSIL (Microsoft intermediate language) 지정된 된 파일의 유효성을 검사 합니다.  
@@ -42,7 +42,7 @@ HRESULT Validate (
 );      
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `veh`  
  [in] 에 대 한 포인터는 `IVEHandler` 유효성 검사 오류를 처리 하는 인스턴스.  
   

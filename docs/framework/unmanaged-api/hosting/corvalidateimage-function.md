@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a84869281ec27aface96d722603186382c6e15e7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6c6d3b50cb3589dcd98c53e1abf0ce2be144d8f9
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54730778"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57501996"
 ---
 # <a name="corvalidateimage-function"></a>_CorValidateImage 함수
 관리 되는 모듈 이미지의 유효성을 검사 하 고 로드 된 후 운영 체제 로더에 알립니다.  
@@ -35,7 +35,7 @@ STDAPI _CorValidateImage (
 );  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `ImageBase`  
  [in] 관리 되는 코드를 유효성을 검사할 이미지의 시작 위치에 대 한 포인터입니다. 이미지는 이미 메모리에 로드 되어야 합니다.  
   

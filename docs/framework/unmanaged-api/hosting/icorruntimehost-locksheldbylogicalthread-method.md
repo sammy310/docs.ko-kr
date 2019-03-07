@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8897eda39a0ff5f1a11a95aeea4e2887912592ec
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 262895d64b80ca5f382aad66d6cc6a4ca95b53c3
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54519257"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57499227"
 ---
 # <a name="icorruntimehostlocksheldbylogicalthread-method"></a>ICorRuntimeHost::LocksHeldByLogicalThread 메서드
 현재 스레드에 있는 잠금 수를 검색 합니다.  
@@ -37,7 +37,7 @@ HRESULT LocksHeldByLogicalThread(
 );  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `pCount`  
  [out] 현재 스레드에 있는 잠금 수에 대 한 포인터입니다.  
   

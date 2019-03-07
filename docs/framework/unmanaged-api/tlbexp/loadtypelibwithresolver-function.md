@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9086cff38e0232d6054d6b1f590be6d8d76ed1af
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a7187076eb338d5a57388d19f62e79af041ee774
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54527374"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57501047"
 ---
 # <a name="loadtypelibwithresolver-function"></a>LoadTypeLibWithResolver 함수
 형식 라이브러리를 로드 하 고 제공 된 사용 [ITypeLibResolver 인터페이스](../../../../docs/framework/unmanaged-api/tlbexp/itypelibresolver-interface.md) 내부적으로 참조 된 형식 라이브러리를 해결 하려면.  
@@ -36,7 +36,7 @@ HRESULT LoadTypeLibWithResolver(
     [out] ITypeLib          **pptlib);  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `szFile`  
  [in] 형식 라이브러리의 파일 경로입니다.  
   
@@ -63,7 +63,7 @@ HRESULT LoadTypeLibWithResolver(
 |`S_OK`|명령 실행 성공|  
 |`E_OUTOFMEMORY`|메모리가 부족합니다.|  
 |`E_POINTER`|포인터 중 하나 이상이 올바르지 않습니다.|  
-|`E_INVALIDARG`|하나 이상의 인수가 잘못되었습니다.|  
+|`E_INVALIDARG`|인수 중 하나 이상이 올바르지 않습니다.|  
 |`TYPE_E_IOERROR`|함수는 파일에 쓰지 못했습니다.|  
 |`TYPE_E_REGISTRYACCESS`|시스템 등록 데이터베이스를 열 수 없습니다.|  
 |`TYPE_E_INVALIDSTATE`|형식 라이브러리를 열 수 없습니다.|  

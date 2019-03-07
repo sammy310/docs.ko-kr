@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 4609418d-71fa-44bc-9618-4d529d25cabb
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 427c885dc1d7cbf535656a7db3f40da28c55a9b2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b83efca5a8b175d5dc83c03de473262ca033354c
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54630772"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57491310"
 ---
 # <a name="icordebugvariablesymbolsetvalue-method"></a>ICorDebugVariableSymbol::SetValue 메서드
 바이트 배열의 값을 변수에 할당합니다.  
@@ -27,7 +27,7 @@ HRESULT SetValue(
 );  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `offset`  
  [in] 값을 설정할 변수의 시작 오프셋입니다. 이 매개 변수는 개체의 멤버 필드에 쓸 때 사용됩니다.  
   

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5e9661d1cd6994acf2c622350593ede502929f3a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5e4be8681cd32b91a9084cda14651ac253507356
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54510652"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57498759"
 ---
 # <a name="ihosttaskmanagersleep-method"></a>IHostTaskManager::Sleep 메서드
 현재 태스크 절전 모드로 전환 됨 호스트에 알립니다.  
@@ -36,7 +36,7 @@ HRESULT Sleep (
 );  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `dwMilliseconds`  
  [in] 스레드가 대기 하는 밀리초 단위의 시간 간격입니다.  
   

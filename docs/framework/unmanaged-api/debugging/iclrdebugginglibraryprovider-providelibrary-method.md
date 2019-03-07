@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5f66d91434fd92ff80bb17e04bf38bb0b631e819
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.openlocfilehash: 3dd1038fdc8b22b99e1c8c7b753b46b9ce877355
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55825501"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57496445"
 ---
 # <a name="iclrdebugginglibraryproviderprovidelibrary-method"></a>ICLRDebuggingLibraryProvider::ProvideLibrary 메서드
 라이브러리 공급자 콜백 인터페이스를 공용 언어 런타임 (CLR) 버전별 디버깅 라이브러리 있고에 로드 된 요청 수를 가져옵니다.  
@@ -37,7 +37,7 @@ HRESULT ProvideLibrary(
      [out] HMODULE* hModule);  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `pwszFilename`  
  [in] 요청 되는 모듈의 이름입니다.  
   

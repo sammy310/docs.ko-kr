@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7415e7b5ee03353e8e0e45cf46aa47c4266109af
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8ef4049ee8b1a4881128047b4d7e50fd0a28ea31
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54704305"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57499201"
 ---
 # <a name="icordebugthread4hadunhandledexception-method"></a>ICorDebugThread4::HadUnhandledException 메서드
 스레드 처리 되지 않은 예외가 한 적이 있는지 여부를 나타냅니다.  
@@ -35,7 +35,7 @@ HRESULT GetBlockingObjects (
     );  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `ppBlockingObjectEnum`  
  [out] 순서가 지정 된 열거형의 주소에 대 한 포인터 [CorDebugBlockingObject](../../../../docs/framework/unmanaged-api/debugging/cordebugblockingobject-structure.md) 구조입니다.  
   

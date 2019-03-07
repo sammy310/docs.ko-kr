@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8f4e25cfabbf18a9f0733d245259d9bb8f9c7757
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ae0a2a3af532b81d7b346cdd17da1712dfa3cba8
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54715547"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57499929"
 ---
 # <a name="iclrtaskreset-method"></a>ICLRTask::Reset 메서드
 호스트 작업을 완료 하 고 현재 다시 사용 하려면 CLR을 사용 하도록 설정 된 CLR (공용 언어 런타임)에 게 알립니다 [ICLRTask](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md) 인스턴스를 다른 작업을 나타냅니다.  
@@ -35,7 +35,7 @@ HRESULT Reset (
 );  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `fFull`  
  [in] `true`런타임은 현재와 관련 된 보안 및 로캘 정보 외에도 모든 스레드 관련 정적 값을 다시 설정 해야 하는 경우 `ICLRTask` 인스턴스이면이 고, 그렇지 `false`합니다.  
   

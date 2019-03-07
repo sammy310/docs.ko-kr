@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 7d10fb391953e924feb553ae4516fb7674345ed3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ba85ec920777189940a05864d19e4c24a65b4564
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54592016"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57499488"
 ---
 # <a name="imetadataassemblyimportenumassemblyrefs-method"></a>IMetaDataAssemblyImport::EnumAssemblyRefs 메서드
 열거는 `mdAssemblyRef` 어셈블리 매니페스트에 정의 된 인스턴스.  
@@ -38,7 +38,7 @@ HRESULT EnumAssemblyRefs (
 );  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `phEnum`  
  [out에서] 열거자에 대 한 포인터입니다. Null 이어야 합니다 경우이 값은 `EnumAssemblyRefs` 처음으로 호출 됩니다.  
   

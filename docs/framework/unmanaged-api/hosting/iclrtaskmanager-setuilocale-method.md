@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e544d251d7a1140e8604dcf27e049e49f91541fa
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8ef939f915062368d74a0c48bdaee47cbec7b56f
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54708560"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57491466"
 ---
 # <a name="iclrtaskmanagersetuilocale-method"></a>ICLRTaskManager::SetUILocale 메서드
 현재 실행 중인 작업에는 CLR (공용 언어 런타임을) 사용자 인터페이스 (UI) 로캘 또는 문화권에 호스트가 수정에 알립니다.  
@@ -35,7 +35,7 @@ HRESULT SetUILocale (
 );  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `lcid`  
  [in] 새로 할당 된 지리적 문화권 및 사용자 인터페이스 언어에 매핑하는 로캘 식별자 값입니다.  
   

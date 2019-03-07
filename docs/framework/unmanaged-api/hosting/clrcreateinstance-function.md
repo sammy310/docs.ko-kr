@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 290b44b2fa506aee8454400d4fb40493f530e3a2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a9b4e9149fa50a951f2a56c83412e42fe86b9563
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54535660"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57501203"
 ---
 # <a name="clrcreateinstance-function"></a>CLRCreateInstance 함수
 세 가지 인터페이스 중 하나를 제공 합니다. [ICLRMetaHost](../../../../docs/framework/unmanaged-api/hosting/iclrmetahost-interface.md)하십시오 [ICLRMetaHostPolicy](../../../../docs/framework/unmanaged-api/hosting/iclrmetahostpolicy-interface.md), 또는 [ICLRDebugging](../../../../docs/framework/unmanaged-api/debugging/iclrdebugging-interface.md)합니다.  
@@ -37,7 +37,7 @@ HRESULT CLRCreateInstance(
 );  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `clsid`  
  [in] 세 가지 클래스 식별자 중 하나입니다. CLSID_CLRMetaHost, CLSID_CLRMetaHostPolicy, 또는 CLSID_CLRDebugging 합니다.  
   
@@ -53,7 +53,7 @@ HRESULT CLRCreateInstance(
 |HRESULT|설명|  
 |-------------|-----------------|  
 |S_OK|메서드가 완료되었습니다.|  
-|E_POINTER|`ppInterface`가 null인 경우|  
+|E_POINTER|`ppInterface`가 null입니다.|  
   
 ## <a name="remarks"></a>설명  
  다음 테이블에 대 한 지원 되는 조합을 보여 줍니다 `clsid` 고 `riid`입니다.  

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3fbc4abe55d59c3140c5c180d5844404e357e3a2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4d825a0c67f88e1f37023feb96a217b115653056
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54586310"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57496939"
 ---
 # <a name="imanagedobjectgetobjectidentity-method"></a>IManagedObject::GetObjectIdentity 메서드
 이 관리 되는 개체의 id를 가져옵니다.  
@@ -37,7 +37,7 @@ HRESULT GetObjectIdentity (
 );  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `pBSTRGUID`  
  [out] 개체가 상주 하는 프로세스의 GUID에 대 한 포인터입니다.  
   

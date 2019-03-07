@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c96c0a9819012c680a67a22d10d173c83d2f6da3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: aaec45018261cd9318f65c26eec6ab89b437c3fa
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54536231"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57499006"
 ---
 # <a name="icorprofilerthreadenumgetcount-method"></a>ICorProfilerThreadEnum::GetCount 메서드
 응용 프로그램에서 사용하는 스레드 수를 가져옵니다.  
@@ -34,7 +34,7 @@ HRESULT GetCount (    [out] ULONG * pcelt
 );  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `celt`  
  [out] 응용 프로그램에서 사용 되는 스레드 수입니다.  
   

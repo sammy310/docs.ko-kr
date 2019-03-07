@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 517a731815286130e2451ffdafc4c67181ec0d68
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0f28d6ec882afb21c3c204e141b1b6d883793004
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54647285"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57499058"
 ---
 # <a name="isymunmanagedvariablegetsignature-method"></a>ISymUnmanagedVariable::GetSignature 메서드
 이 변수 시그니처를 가져옵니다.  
@@ -37,7 +37,7 @@ HRESULT GetSignature(
         length_is(*pcSig)] BYTE sig[]);  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `cSig`  
  [in] 가리키는 버퍼의 길이 `sig` 매개 변수입니다.  
   

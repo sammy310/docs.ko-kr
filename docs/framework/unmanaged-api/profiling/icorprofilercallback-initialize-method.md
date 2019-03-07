@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5aa1025d3f24126c6f8b8585e39dda0201fad3d7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0ecea5911771d12df74b260845523dd2b7a012aa
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54623315"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57494521"
 ---
 # <a name="icorprofilercallbackinitialize-method"></a>ICorProfilerCallback::Initialize 메서드
 새 공용 언어 런타임 (CLR) 응용 프로그램을 시작할 때마다 코드 프로파일러를 초기화 하기 위해 호출 됩니다.  
@@ -34,7 +34,7 @@ HRESULT Initialize(
     [in] IUnknown     *pICorProfilerInfoUnk);  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `pICorProfilerInfoUnk`  
  [에](/cpp/atl/iunknown) 프로파일러에 대해 쿼리해야 하는 인터페이스는 [ICorProfilerInfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md) 인터페이스 포인터입니다.  
   

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9ba7c2d0c5ea29d5db429139f1831e8d71dd23f3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7d4b102485db0199f748f6c5b6c4ab40d21429e9
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54739143"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57494413"
 ---
 # <a name="endmerge-method"></a>EndMerge 메서드
 내보내기 범위에 모든 사용자 지정 특성 집합이 병합 된 나타냅니다.  
@@ -35,7 +35,7 @@ HRESULT EndMerge(
 ) PURE;  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `AssemblyID`  
  어셈블리의 ID입니다.  
   

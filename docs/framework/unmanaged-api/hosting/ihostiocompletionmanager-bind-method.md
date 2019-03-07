@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c03cdb9f9205676d17d6e18b9b2e074132ee26f1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 826543a224c4d6850f345b187d3aaafc8e1de8cf
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54594774"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57491492"
 ---
 # <a name="ihostiocompletionmanagerbind-method"></a>IHostIoCompletionManager::Bind 메서드
 지정된 된 핸들에 대 한 이전 호출에서 생성 된 I/O 완료 포트에 바인딩합니다 [CreateIoCompletionPort](../../../../docs/framework/unmanaged-api/hosting/ihostiocompletionmanager-createiocompletionport-method.md)합니다.  
@@ -36,7 +36,7 @@ HRESULT Bind (
 );  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `hPort`  
  [in] I/O 완료 포트를 바인딩할 `hHandle`합니다. 경우 값 `hPort` 이 null 이면 `hHandle` 기본 I/O 완료 포트에 바인딩되어 있습니다.  
   

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3faa3762612e4d1fc608291a393e9eb2e79fe67e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 03185f3f554c5454b23b0c72c42d68714488e6be
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54616851"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57501710"
 ---
 # <a name="ihostthreadpoolmanagerqueueuserworkitem-method"></a>IHostThreadPoolManager::QueueUserWorkItem 메서드
 실행에 대 한 함수에 대기 시키고 해당 함수에서 사용할 데이터가 포함 된 개체를 지정 합니다. 함수는 스레드 사용 가능 해지면를 실행 합니다.  
@@ -37,7 +37,7 @@ HRESULT QueueUserWorkItem (
 );  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `Function`  
  [in] 실행 하는 함수를 나타내는 함수 포인터입니다.  
   

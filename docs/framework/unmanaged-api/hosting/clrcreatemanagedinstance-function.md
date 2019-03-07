@@ -20,12 +20,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5103490da7f3056cf95f7986b46837e059f8212f
-ms.sourcegitcommit: 79066169e93d9d65203028b21983574ad9dcf6b4
+ms.openlocfilehash: c1c576bd4a7bc29be2647a858a680b91e602d2c4
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57211834"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57488879"
 ---
 # <a name="clrcreatemanagedinstance-function"></a>ClrCreateManagedInstance 함수
 지정 된 관리 되는 형식의 인스턴스를 만듭니다.  
@@ -42,7 +42,7 @@ STDAPI ClrCreateManagedInstance (
 );  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `pTypeName`  
  [in] 요청 된 인스턴스의 형식 이름에 대 한 포인터입니다.  
   

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6e8baa73594823c6b2f19b2af87e6a681ad71e3b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 56d2c28529d3f3ee87fe3fdedd91634133ebf864
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54713303"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57492207"
 ---
 # <a name="icordebugnativeframe2ismatchingparentframe-method"></a>ICorDebugNativeFrame2::IsMatchingParentFrame 메서드
 지정된 된 프레임에 현재 프레임의 부모 인지 여부를 결정 합니다.  
@@ -35,7 +35,7 @@ HRESULT IsMatchingParentFrame([in] ICorDebugNativeFrame2
                               [out] BOOL *pIsParent);  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `pPotentialParentFrame`  
  [in] 부모 상태에 대 한 평가 하려는 프레임 개체에 대 한 포인터입니다.  
   
