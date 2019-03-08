@@ -28,7 +28,7 @@ ms.locfileid: "54570725"
 
 .NET의 각 구현체에는 다음 구성 요소가 포함됩니다.
 
-- 하나 이상의 런타임. 예: .NET Framework용 CLR과 CoreCLR, .NET Core용 CoreRT.
+- 하나 이상의 런타임. 예: .NET Framework용 CLR과 .NET Core용 CoreCLR, CoreRT.
 - .NET Standard와 추가 API를 구현할 수 있는 클래스 라이브러리. 예: .NET Framework 기본 클래스 라이브러리, .NET Core 기본 클래스 라이브러리.
 - 필요에 따라 하나 이상의 애플리케이션 프레임워크. 예: [ASP.NET](https://www.asp.net/) [Windows Forms](../framework/winforms/windows-forms-overview.md) 및 [WPF(Windows Presentation Foundation)](../framework/wpf/index.md)가 .NET Framework에 포함됨.
 - 필요에 따라 개발 도구. 일부 개발 도구는 여러 구현체에서 공통적으로 사용할 수 있음.
