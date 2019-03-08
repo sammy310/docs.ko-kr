@@ -10,12 +10,12 @@ helpviewer_keywords:
 - signatures [Visual Basic], procedure
 - overloads [Visual Basic], resolution
 ms.assetid: 766115d1-4352-45fb-859f-6063e0de0ec0
-ms.openlocfilehash: c55b1c001ae1c74b0c34d716b9fa3f90dade3e28
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 435ba13b6d0b2a7d272c7f2bbea7ec410dd3d5e7
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56966231"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57678826"
 ---
 # <a name="overload-resolution-visual-basic"></a>오버로드 확인(Visual Basic)
 Visual Basic 컴파일러는 여러 오버 로드 된 버전에 정의 된 프로시저 호출을 발견 하면, 오버 로드를 호출 하는 결정 해야 합니다. 다음 단계를 수행 하 여 수행 합니다.  
@@ -36,8 +36,7 @@ Visual Basic 컴파일러는 여러 오버 로드 된 버전에 정의 된 프�
   
  다음 그림에서는 호출 오버 로드 된 버전 집합을 결정 하는 프로세스를 보여 줍니다.  
   
- ![오버 로드 확인 프로세스의 흐름도](./media/overloadres.gif "OverloadRes")  
-오버 로드 버전에서 해결  
+ ![오버 로드 확인 프로세스의 흐름도](./media/overload-resolution/determine-overloaded-version.gif "오버 로드 버전에서 해결")    
   
  다음 예제에서는이 오버 로드 확인 프로세스를 보여 줍니다.  
   

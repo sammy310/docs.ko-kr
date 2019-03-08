@@ -2,53 +2,57 @@
 title: <serviceActivations>
 ms.date: 03/30/2017
 ms.assetid: 97e665b6-1c51-410b-928a-9bb42c954ddb
-ms.openlocfilehash: 7a091ecfbc0f4773ece620f93a9f21c219fcccb6
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 7506cce61966a4a4650ff591cd6106dfd4a33b67
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55256706"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57680414"
 ---
 # <a name="serviceactivations"></a>\<serviceActivations>
-Windows Communication Foundation (WCF) 서비스 형식에 매핑되는 가상 서비스 활성화 설정을 정의 하는 설정을 추가할 수 있는 구성 요소입니다. .svc 파일 없이도 WAS/IIS에서 호스트되는 서비스를 활성화할 수 있습니다.  
-  
- \<system.ServiceModel>  
-\<serviceHostingEnvironment>  
-\<serviceActivations>  
-  
-## <a name="syntax"></a>구문  
-  
-```xml  
+
+Windows Communication Foundation (WCF) 서비스 형식에 매핑되는 가상 서비스 활성화 설정을 정의 하는 설정을 추가할 수 있는 구성 요소입니다. .svc 파일 없이도 WAS/IIS에서 호스트되는 서비스를 활성화할 수 있습니다.
+
+\<system.ServiceModel>\
+\<serviceHostingEnvironment>\
+\<serviceActivations>
+
+## <a name="syntax"></a>구문
+
+```xml
 <serviceHostingEnvironment>
   <serviceActivations>
     <add factory="String"
          service="String" />
   </serviceActivations>
 </serviceHostingEnvironment>
-```  
-  
-## <a name="attributes-and-elements"></a>특성 및 요소  
- 다음 섹션에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
-  
-### <a name="attributes"></a>특성  
- 없음  
-  
-### <a name="child-elements"></a>자식 요소  
-  
-|요소|설명|  
-|-------------|-----------------|  
-|[\<add>](../../../../../docs/framework/configure-apps/file-schema/wcf/add-of-serviceactivations.md)|서비스 응용 프로그램의 활성화를 지정하는 구성 요소를 추가합니다.|  
-  
-### <a name="parent-elements"></a>부모 요소  
-  
-|요소|설명|  
-|-------------|-----------------|  
-|[\<serviceHostingEnvironment>](../../../../../docs/framework/configure-apps/file-schema/wcf/servicehostingenvironment.md)|특정 전송을 위해 서비스 호스팅 환경에서 인스턴스화하는 형식을 정의합니다.|  
-  
-## <a name="remarks"></a>설명  
- 다음 예제에서는 web.config 파일 내에서 활성화 설정을 구성하는 방법을 보여 줍니다.  
-  
-```xml  
+```
+
+## <a name="attributes-and-elements"></a>특성 및 요소
+
+다음 섹션에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.
+
+### <a name="attributes"></a>특성
+
+없음
+
+### <a name="child-elements"></a>자식 요소
+
+|요소|설명|
+|-------------|-----------------|
+|[\<add>](../../../../../docs/framework/configure-apps/file-schema/wcf/add-of-serviceactivations.md)|서비스 응용 프로그램의 활성화를 지정하는 구성 요소를 추가합니다.|
+
+### <a name="parent-elements"></a>부모 요소
+
+|요소|설명|
+|-------------|-----------------|
+|[\<serviceHostingEnvironment>](../../../../../docs/framework/configure-apps/file-schema/wcf/servicehostingenvironment.md)|특정 전송을 위해 서비스 호스팅 환경에서 인스턴스화하는 형식을 정의합니다.|
+
+## <a name="remarks"></a>설명
+
+다음 예제에서는 web.config 파일 내에서 활성화 설정을 구성하는 방법을 보여 줍니다.
+
+```xml
 <configuration>
   <system.serviceModel>
     <serviceHostingEnvironment>
@@ -58,15 +62,16 @@ Windows Communication Foundation (WCF) 서비스 형식에 매핑되는 가상 �
     </serviceHostingEnvironment>
   </system.serviceModel>
 </configuration>
-```  
-  
- 이 구성을 사용하여 .svc 파일을 사용하지 않고도 GreetingService를 활성화할 수 있습니다.  
-  
- `<serviceHostingEnvironment>`는 응용 프로그램 수준 구성입니다. 구성을 포함하는 `web.config`를 가상 응용 프로그램의 루트 아래에 배치해야 합니다. 또한 `serviceHostingEnvironment`는 machinetoApplication 상속 가능 섹션입니다. 컴퓨터의 루트에 단일 서비스를 등록하는 경우 응용 프로그램의 모든 서비스가 이 서비스를 상속합니다.  
-  
- 구성 기반 활성화는 http 및 http가 아닌 프로토콜을 통한 활성화를 모두 지원합니다. 이를 위해 relatativeAddress의 확장 즉 .svc, .xoml 또는 .xamlx가 필요합니다. 직접 작성한 확장을 알려진 buildProviders에 매핑할 수 있으며, 이렇게 하면 모든 확장에서 서비스를 활성화할 수 있습니다. 충돌이 발생하면 `<serviceActivations>` 섹션이 .svc 등록을 재정의합니다.  
-  
+```
+
+이 구성을 사용하여 .svc 파일을 사용하지 않고도 GreetingService를 활성화할 수 있습니다.
+
+`<serviceHostingEnvironment>`는 응용 프로그램 수준 구성입니다. 구성을 포함하는 `web.config`를 가상 응용 프로그램의 루트 아래에 배치해야 합니다. 또한 `serviceHostingEnvironment` 는 machineToApplication 상속 가능 섹션입니다. 컴퓨터의 루트에 단일 서비스를 등록하는 경우 응용 프로그램의 모든 서비스가 이 서비스를 상속합니다.
+
+구성 기반 활성화는 http 및 http가 아닌 프로토콜을 통한 활성화를 모두 지원합니다. 확장 즉.svc,.xoml 또는.xamlx relativeAddress에 필요합니다. 직접 작성한 확장을 알려진 buildProviders에 매핑할 수 있으며, 이렇게 하면 모든 확장에서 서비스를 활성화할 수 있습니다. 충돌이 발생하면 `<serviceActivations>` 섹션이 .svc 등록을 재정의합니다.
+
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.ServiceModel.Configuration.ServiceActivationElementCollection>
 - <xref:System.ServiceModel.Configuration.ServiceHostingEnvironmentSection>
 - <xref:System.ServiceModel.ServiceHostingEnvironment>

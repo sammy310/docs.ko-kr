@@ -7,14 +7,12 @@ helpviewer_keywords:
 - UI Automation, clients for managed code
 - managed code, UI Automation clients
 ms.assetid: 665b01b5-25f5-47a1-ab11-cffe8ebbf2a7
-author: Xansky
-ms.author: mhopkins
-ms.openlocfilehash: ebd8feb00f397faab4a231005ef90a55895c6f67
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 158c116aa54602a4311dfa8165dba7546369c53c
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47424378"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57674044"
 ---
 # <a name="ui-automation-clients-for-managed-code-how-to-topics"></a>관리 코드 방법 항목의 UI 자동화 클라이언트
 > [!NOTE]

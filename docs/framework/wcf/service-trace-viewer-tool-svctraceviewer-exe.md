@@ -2,12 +2,12 @@
 title: Service Trace Viewer 도구(SvcTraceViewer.exe)
 ms.date: 03/30/2017
 ms.assetid: 9027efd3-df8d-47ed-8bcd-f53d55ed803c
-ms.openlocfilehash: be6879810bde30a81ee9fb23e5cf031c4ff1976e
-ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
+ms.openlocfilehash: 723b1c6858f0c56d4834dc937b9f4883e22156e6
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "56442895"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57680388"
 ---
 # <a name="service-trace-viewer-tool-svctraceviewerexe"></a>Service Trace Viewer 도구(SvcTraceViewer.exe)
 Windows Communication Foundation (WCF) Service Trace Viewer 도구를 사용 하면 WCF에 의해 생성 되는 진단 추적을 분석할 수 있습니다. Service Trace Viewer는 쉽게 병합, 보기 및 진단, 복구 및 WCF 서비스 문제를 확인할 수 있도록 로그에 추적 메시지를 필터링 하는 방법을 제공 합니다.  
@@ -52,7 +52,13 @@ Windows Communication Foundation (WCF) Service Trace Viewer 도구를 사용 하
  
   `add`를 사용하여 사용할 추적 수신기의 이름과 형식을 지정할 수 있습니다. 예제 구성에서 수신기 이름은 `sdt`로 지정되고 표준 .NET Framework 추적 수신기(`System.Diagnostics.XmlWriterTraceListener`)는 형식으로 추가됩니다. 
   `initializeData`를 사용하여 해당 수신기의 로그 파일 이름을 설정합니다. 또한 단순한 파일 이름 대신 정규화된 경로를 사용할 수 있습니다.  
-  
+
+.NET Framework 4.8부터 일부 고대비 테마에서 ComboBox 컨트롤 올바른 색상으로 표시 됩니다. 다음 설정을 제거 하 여이 변경을 사용 하지 않도록 설정 수는 *svcTraceViewer.exe.config* 파일:
+
+```xml
+<AppContextSwitchOverrides value="Switch.UseLegacyAccessibilityFeatures=false;Switch.UseLegacyAccessibilityFeatures.2=false" />
+```
+
 ## <a name="using-the-service-trace-viewer-tool"></a>Service Trace Viewer 도구 사용  
   
 ### <a name="opening-and-viewing-wcf-trace-files"></a>WCF 추적 파일 열기 및 보기  

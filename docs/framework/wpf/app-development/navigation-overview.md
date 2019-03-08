@@ -24,12 +24,12 @@ helpviewer_keywords:
 - programmatic navigation [WPF]
 - hyperlinks [WPF]
 ms.assetid: 86ad2143-606a-4e34-bf7e-51a2594248b8
-ms.openlocfilehash: 75d891052abffe3362c13aa09fe880404564639a
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 7636a7d9a100d0df95f7d5462672819624ba52a4
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57377186"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57679972"
 ---
 # <a name="navigation-overview"></a>탐색 개요
 Windows Presentation Foundation (WPF)는 두 가지 유형의 응용 프로그램에서 사용할 수 있는 브라우저 스타일 탐색을 지 원하는: 독립 실행형 응용 프로그램 및 [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)]합니다. 탐색을 위한 패키지 콘텐츠에 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 제공 된 <xref:System.Windows.Controls.Page> 클래스. 간에 이동할 수 있습니다 <xref:System.Windows.Controls.Page> 간에 선언적으로 사용 하 여는 <xref:System.Windows.Documents.Hyperlink>, 또는 사용 하 여 프로그래밍 방식으로 <xref:System.Windows.Navigation.NavigationService>합니다. [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]는 저널을 사용하여 탐색했던 페이지를 기억했다가 다시 해당 페이지로 돌아옵니다.  
@@ -136,7 +136,7 @@ Windows Presentation Foundation (WPF)는 두 가지 유형의 응용 프로그�
   
  이 예제는 `StartupUri` 특성이 상대 pack으로 설정 된 [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] HomePage.xaml을 식별 하는 합니다. 경우는 [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] 은 시작 부분으로 구성 되어 자동으로 탐색 되 고 표시 합니다. 보여 주는 다음 그림에서 보여를 [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] 웹 서버에서 실행 된 합니다.  
   
- ![XBAP 페이지](./media/navigationoverviewfigure9.png "NavigationOverviewFigure9")  
+ ![XBAP 페이지](./media/navigation-overview/xbap-launched-from-a-web-server.png "웹 서버에서 시작 된 XBAP 보여 줍니다.")  
   
 > [!NOTE]
 >  개발 및 배포에 대 한 자세한 내용은 [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)]를 참조 하세요 [WPF XAML 브라우저 응용 프로그램 개요](wpf-xaml-browser-applications-overview.md) 하 고 [WPF 응용 프로그램 배포](deploying-a-wpf-application-wpf.md)합니다.  
@@ -151,7 +151,7 @@ Windows Presentation Foundation (WPF)는 두 가지 유형의 응용 프로그�
   
  결과는 다음 그림에 나와 있습니다.  
   
- ![창 제목, 높이, 너비](./media/navigationoverviewfigure2.png "NavigationOverviewFigure2")  
+ ![창 제목, 높이, 너비](./media/navigation-overview/window-title-width-height.png "표시 창 제목, 높이 및 너비를 구성할 수 있습니다.")  
   
 <a name="NavigatingBetweenXAMLPages"></a>   
 ### <a name="hyperlink-navigation"></a>하이퍼링크 탐색  
@@ -169,11 +169,11 @@ Windows Presentation Foundation (WPF)는 두 가지 유형의 응용 프로그�
   
  다음 그림에서는 [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] 사용 하 여는 <xref:System.Windows.Controls.Page> 있는 <xref:System.Windows.Documents.Hyperlink>입니다.  
   
- ![하이퍼링크가 있는 페이지](./media/navigationoverviewfigure3.png "NavigationOverviewFigure3")  
+ ![하이퍼링크가 있는 페이지](./media/navigation-overview/xbap-with-a-page-with-a-hyperlink.png "하이퍼링크를 사용 하 여 페이지와 XBAP 보여 줍니다.")  
   
  짐작할 수를 클릭 하는 <xref:System.Windows.Documents.Hyperlink> 하면를 [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] 이동할 합니다 <xref:System.Windows.Controls.Page> 으로 식별 되는 `NavigateUri` 특성. 또한 합니다 [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] 이전에 대 한 항목을 추가 <xref:System.Windows.Controls.Page> 최근 페이지 목록에 [!INCLUDE[TLA2#tla_ie](../../../../includes/tla2sharptla-ie-md.md)]입니다. 다음 그림에서 이를 확인할 수 있습니다.  
   
- ![[뒤로] 및 [앞으로] 단추](./media/navigationoverviewfigure4.png "NavigationOverviewFigure4")  
+ ![뒤로 및 앞으로 단추](./media/navigation-overview/back-and-forward-navigation.png "뒤로 및 앞으로 단추를 사용 하 여 탐색 합니다.")  
   
  탐색을 지원할 뿐만 아니라 <xref:System.Windows.Controls.Page> 간에 <xref:System.Windows.Documents.Hyperlink> 조각 탐색도 지원 합니다.  
   
@@ -309,7 +309,7 @@ Windows Presentation Foundation (WPF)는 두 가지 유형의 응용 프로그�
   
  탐색 이벤트는 다음 그림과 같이 순서대로 발생합니다.  
   
- ![페이지 탐색 흐름 차트](./media/navigationoverviewfigure11.png "NavigationOverviewFigure11")  
+ ![페이지 탐색 흐름 차트](./media/navigation-overview/order-of-navigation-events.png "페이지 탐색 이벤트 흐름 차트")  
   
  일반적으로 <xref:System.Windows.Controls.Page> 이러한 이벤트는 관련이 없습니다. 응용 프로그램은 관련를 따라서 이러한도에서이 이벤트가 발생 가능성이 높습니다는 <xref:System.Windows.Application> 클래스:  
   
@@ -345,7 +345,7 @@ Windows Presentation Foundation (WPF)는 두 가지 유형의 응용 프로그�
 #### <a name="navigating-the-journal-from-internet-explorer"></a>Internet Explorer에서 저널 탐색  
  개념적으로 저널 작동 동일한 방식으로 **다시** 및 **전달** 단추의 [!INCLUDE[TLA2#tla_ie](../../../../includes/tla2sharptla-ie-md.md)] 수행 합니다. 다음 그림을 참조하세요.  
   
- ![[뒤로] 및 [앞으로] 단추](./media/navigationoverviewfigure4.png "NavigationOverviewFigure4")  
+ ![뒤로 및 앞으로 단추](./media/navigation-overview/back-and-forward-navigation.png "뒤로 및 앞으로 단추를 사용 하 여 탐색 합니다.")  
   
  에 대 한 [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] 에서 호스팅되고 [!INCLUDE[TLA2#tla_ie](../../../../includes/tla2sharptla-ie-md.md)]를 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 저널 탐색 통합 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 의 [!INCLUDE[TLA2#tla_ie](../../../../includes/tla2sharptla-ie-md.md)]합니다. 따라서 사용자 페이지를 탐색할 수 있습니다는 [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] 를 사용 하 여는 **다시**, **앞으로**, 및 **최근 페이지** 단추의 [!INCLUDE[TLA2#tla_ie](../../../../includes/tla2sharptla-ie-md.md)]합니다. 저널에 통합 되어 있지 [!INCLUDE[TLA2#tla_ie6](../../../../includes/tla2sharptla-ie6-md.md)] 는 동일한 방식으로 [!INCLUDE[TLA2#tla_ie7](../../../../includes/tla2sharptla-ie7-md.md)] 또는 Internet Explorer 8입니다. 대신 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 는 대체 탐색 렌더링 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]합니다.  
   
@@ -402,7 +402,7 @@ Windows Presentation Foundation (WPF)는 두 가지 유형의 응용 프로그�
   
  이 이유로 저널의 기본 동작을 저장 하는 <xref:System.Windows.Controls.Page> 메타 데이터에 대 한 참조가 아니라 각 저널 항목에는 <xref:System.Windows.Controls.Page> 개체입니다. 저널 항목을 탐색 하는 경우 해당 <xref:System.Windows.Controls.Page> 메타 데이터는 지정 된 새 인스턴스를 만드는 데 <xref:System.Windows.Controls.Page>합니다. 결과적으로 각 <xref:System.Windows.Controls.Page> 를 탐색 하는 다음 그림에 나와 있는 수명이 있습니다.  
   
- ![페이지 수명](./media/navigationoverviewfigure10.PNG "NavigationOverviewFigure10")  
+ ![페이지 수명](./media/navigation-overview/navigated-page-lifetime.png "페이지를 탐색 하는 경우 수명은 보여 줍니다.")  
   
  기본 저널링 동작을 사용 하 여 메모리 사용량에 대해 저장할 수, 있지만 페이지당 렌더링 성능이 저하 될 수 있습니다. 재초기화를 <xref:System.Windows.Controls.Page> 시간이 많이, 특히 콘텐츠가 많은 경우를 수 있습니다. 유지 해야 하는 경우는 <xref:System.Windows.Controls.Page> 인스턴스 저널, 이렇게 두 가지 기술을 그릴 수 있습니다. 먼저, 프로그래밍 방식으로 이동할 수는 <xref:System.Windows.Controls.Page> 를 호출 하 여 개체를 <xref:System.Windows.Navigation.NavigationService.Navigate%2A?displayProperty=nameWithType> 메서드.  
   
@@ -412,7 +412,7 @@ Windows Presentation Foundation (WPF)는 두 가지 유형의 응용 프로그�
   
  기간을 <xref:System.Windows.Controls.Page> 즉 활성 상태로 유지 하는 경우이 없는 약간 다릅니다. 처음으로 <xref:System.Windows.Controls.Page> 유지 되는 연결 유지가 탐색, 마찬가지로 인스턴스화될는 <xref:System.Windows.Controls.Page> 활성 상태로 유지 되지 않는 합니다. 그러나 때문에 인스턴스에 <xref:System.Windows.Controls.Page> 유지 됩니다 저널에 인스턴스화되지 않습니다 다시에 대 한 업무 일지에 보관으로 합니다. 결과적으로 경우는 <xref:System.Windows.Controls.Page> 때마다 호출 해야 하는 초기화 논리가 합니다 <xref:System.Windows.Controls.Page> 탐색할 해야에서 이동 하 고 생성자에 대 한 처리기를는 <xref:System.Windows.FrameworkElement.Loaded> 이벤트. 다음 그림에 표시 된 대로 합니다 <xref:System.Windows.FrameworkElement.Loaded> 및 <xref:System.Windows.FrameworkElement.Unloaded> 이벤트는 여전히 될 때마다 발생을 <xref:System.Windows.Controls.Page> 탐색할 각각.  
   
- ![Loaded 및 Unloaded 이벤트 발생 시](./media/navigationoverviewfigure17.png "NavigationOverviewFigure17")  
+ ![Loaded 및 Unloaded 이벤트 발생 시기](./media/navigation-overview/loaded-and-unloaded-events.png "Loaded 및 unloaded 이벤트 페이지를 탐색할 때 발생 합니다.")  
   
  경우는 <xref:System.Windows.Controls.Page> 은 활성 상태로 유지 되지 해야 다음 중 하나:  
   
@@ -474,7 +474,7 @@ Windows Presentation Foundation (WPF)는 두 가지 유형의 응용 프로그�
   
  경우는 <xref:System.Windows.Controls.Page> 사용 하 여 이러한 컨트롤을 해당 입력 데이터에서 기억 됩니다 <xref:System.Windows.Controls.Page> 탐색에 나타난 것 처럼 합니다 **좋아하는 색** <xref:System.Windows.Controls.ListBox> 다음 그림에 합니다.  
   
- ![상태를 기억하는 컨트롤이 있는 페이지](./media/navigationoverviewfigure13.png "NavigationOverviewFigure13")  
+ ![페이지 상태를 기억 하는 컨트롤로](./media/navigation-overview/data-remembered-across-page-navigations.png "입력 된 데이터 페이지 탐색 간에 기억 됩니다.")  
   
  경우는 <xref:System.Windows.Controls.Page> 위의 목록 이외의 컨트롤이 했거나 저널에서 상태를 기억 하도록 코드를 작성 해야 하는 상태는 사용자 지정 개체에 저장 하는 경우 <xref:System.Windows.Controls.Page> 탐색 합니다.  
   
@@ -549,7 +549,7 @@ Windows Presentation Foundation (WPF)는 두 가지 유형의 응용 프로그�
   
  다음 그림에서는 <xref:System.Windows.Navigation.NavigationWindow> 독립 실행형 응용 프로그램의 주 창으로 합니다.  
   
- ![주 창](./media/navigationoverviewfigure18.png "NavigationOverviewFigure18")  
+ ![주 창이](./media/navigation-overview/navigation-window-as-main-window.png "주 창으로 탐색 창")  
   
  그림에서 볼 수 있습니다 합니다 <xref:System.Windows.Navigation.NavigationWindow> 에 설정 되지 않은 경우에 제목에는 <xref:System.Windows.Navigation.NavigationWindow> 앞의 예제에서 구현 코드. 대신 제목을 사용 하 여 설정 됩니다는 <xref:System.Windows.Controls.Page.WindowTitle%2A> 속성을 다음 코드에 표시 됩니다.  
   
@@ -569,11 +569,11 @@ Windows Presentation Foundation (WPF)는 두 가지 유형의 응용 프로그�
   
  다음 그림에서는 결과를 보여 줍니다.  
   
- ![대화 상자](./media/navigationoverviewfigure19.png "NavigationOverviewFigure19")  
+ ![대화 상자가](./media/navigation-overview/navigation-window-as-dialog-box.png "대화 상자로 탐색 창")  
   
  알 수 있듯이 <xref:System.Windows.Navigation.NavigationWindow> 표시 [!INCLUDE[TLA2#tla_ie](../../../../includes/tla2sharptla-ie-md.md)]-스타일 **다시** 하 고 **앞으로** 저널을 탐색할 수 있도록 하는 단추입니다. 이러한 단추는 다음 그림에 나와 있는 것처럼 동일한 사용자 환경을 제공합니다.  
   
- ![NavigationWindow의 뒤로 및 앞으로 단추](./media/navigationoverviewfigure20.png "NavigationOverviewFigure20")  
+ ![뒤로 및 앞으로 단추 NavigationWindow](./media/navigation-overview/back-and-forward-buttons-in-navigation-window.png "뒤로 및 앞으로 탐색 창에서 단추")  
   
  페이지 자체 저널 탐색 지원 및 UI를 제공 하는 경우 숨길 수 있습니다는 **다시** 하 고 **앞으로** 표시 하는 단추 <xref:System.Windows.Navigation.NavigationWindow> 의 값을 설정 하 여는 <xref:System.Windows.Navigation.NavigationWindow.ShowsNavigationUI%2A> 속성`false`.  
   
@@ -591,13 +591,13 @@ Windows Presentation Foundation (WPF)는 두 가지 유형의 응용 프로그�
   
  이 태그를 설정 합니다 `Source` 특성을 `Frame` 팩을 사용 하 여 요소 [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] 에 대 한를 <xref:System.Windows.Controls.Page> 는 <xref:System.Windows.Controls.Frame> 로 처음 이동 해야 합니다. 다음 그림에서는 [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] 사용 하 여는 <xref:System.Windows.Controls.Page> 있는 <xref:System.Windows.Controls.Frame> 여러 페이지 사이 탐색 하는 합니다.  
   
- ![여러 페이지 사이를 탐색한 프레임](./media/navigationoverviewfigure5.png "NavigationOverviewFigure5")  
+ ![여러 페이지 간에 탐색 된 프레임](./media/navigation-overview/frame-navigation-between-multiple-pages.png "여러 페이지 간에 프레임 탐색을 보여 줍니다.")  
   
  사용 하 여만 필요가 <xref:System.Windows.Controls.Frame> 콘텐츠 내에서 <xref:System.Windows.Controls.Page>합니다. 호스트에 공통적으로 적용 이기도 한 <xref:System.Windows.Controls.Frame> 콘텐츠 내에서 <xref:System.Windows.Window>합니다.  
   
  기본적으로 <xref:System.Windows.Controls.Frame> 다른 저널이 없는 경우에만 자체 저널을 사용 합니다. 경우는 <xref:System.Windows.Controls.Frame> 중 어디에 호스트 되는 콘텐츠의 일부인를 <xref:System.Windows.Navigation.NavigationWindow> 또는 [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)], <xref:System.Windows.Controls.Frame> 속한 저널을 사용 합니다 <xref:System.Windows.Navigation.NavigationWindow> 또는 [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)]합니다. 경우에 따라 그러나는 <xref:System.Windows.Controls.Frame> 자체 저널을 담당 해야 할 수 있습니다. 이렇게 하려면 이유 중 하나에서 호스팅되는 페이지 내에서 저널 탐색을 허용 하는 것을 <xref:System.Windows.Controls.Frame>입니다. 다음 그림에서 이를 확인할 수 있습니다.  
   
- ![프레임 및 페이지 다이어그램](./media/navigationoverviewfigure7.png "NavigationOverviewFigure7")  
+ ![프레임 및 페이지 다이어그램](./media/navigation-overview/journal-navigation-within-pages-hosted-by-a-frame.png "프레임에서 호스팅되는 페이지 내에서 저널 탐색 보여 줍니다.")  
   
  여기서 구성할 수 있습니다는 <xref:System.Windows.Controls.Frame> 설정 하 여 자체 저널을 사용 하는 <xref:System.Windows.Controls.Frame.JournalOwnership%2A> 의 속성을 <xref:System.Windows.Controls.Frame> 를 <xref:System.Windows.Navigation.JournalOwnership.OwnsJournal>. 다음 태그에서 이를 확인할 수 있습니다.  
   
@@ -607,7 +607,7 @@ Windows Presentation Foundation (WPF)는 두 가지 유형의 응용 프로그�
   
  다음 그림에서는 내에서 탐색할 때의 영향을 <xref:System.Windows.Controls.Frame> 자체 저널을 사용 하는 합니다.  
   
- ![자체 저널을 사용하는 프레임](./media/navigationoverviewfigure8.png "NavigationOverviewFigure8")  
+ ![자체 저널을 사용 하는 프레임](./media/navigation-overview/frame-uses-its-own-journal.png "이 자체 저널을 사용 하는 프레임 내에서 탐색의 결과 보여 줍니다.")  
   
  저널 항목을 탐색 하 여 표시 되는 통지 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 에 <xref:System.Windows.Controls.Frame>, 보다는 [!INCLUDE[TLA2#tla_ie](../../../../includes/tla2sharptla-ie-md.md)].  
   
@@ -624,19 +624,19 @@ Windows Presentation Foundation (WPF)는 두 가지 유형의 응용 프로그�
 ## <a name="navigation-hosts"></a>탐색 호스트  
  <xref:System.Windows.Controls.Frame> 및 <xref:System.Windows.Navigation.NavigationWindow> 은 탐색 호스트 라고 하는 클래스입니다. A *탐색 호스트* 로 이동 하 고 콘텐츠를 표시할 수 있는 클래스입니다. 이를 위해 각 탐색 호스트는 자체 <xref:System.Windows.Navigation.NavigationService> 및 저널입니다. 다음 그림은 탐색 호스트의 기본 구성을 보여 줍니다.  
   
- ![탐색기 다이어그램](./media/navigationoverviewfigure15.png "NavigationOverviewFigure15")  
+ ![탐색기 다이어그램](./media/navigation-overview/navigation-host-construction.png "탐색 호스트의 기본 생성")  
   
  따라서 기본적 <xref:System.Windows.Navigation.NavigationWindow> 및 <xref:System.Windows.Controls.Frame> 에서도 동일한를 탐색 하는 지원는 [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] 브라우저에서 호스트 되는 경우 제공 합니다.  
   
  사용 하는 것 외에도 <xref:System.Windows.Navigation.NavigationService> 와 저널을 동일한 멤버를 구현 하는 탐색 호스트는 <xref:System.Windows.Navigation.NavigationService> 구현 합니다. 다음 그림에서 이를 확인할 수 있습니다.  
   
- ![Frame 및 NavigationWindow의 저널](./media/naivgationoverviewfigure24.png "NaivgationOverviewFigure24")  
+ ![Frame 및 NavigationWindow의 저널](./media/navigation-overview/navigation-window-and-frame.png "탐색 창과 프레임")  
   
  이를 통해 직접 탐색 지원을 프로그래밍할 수 있습니다. 사용자 지정 탐색을 제공 하는 경우이 고려할 수 있습니다 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 에 대 한는 <xref:System.Windows.Controls.Frame> 에서 호스팅되는 <xref:System.Windows.Window>합니다. 두 형식 모두를 추가로 탐색 관련 멤버를 포함 하 여 구현 하는 또한 `BackStack` (<xref:System.Windows.Navigation.NavigationWindow.BackStack%2A?displayProperty=nameWithType>를 <xref:System.Windows.Controls.Frame.BackStack%2A?displayProperty=nameWithType>) 및 `ForwardStack` (<xref:System.Windows.Navigation.NavigationWindow.ForwardStack%2A?displayProperty=nameWithType>, <xref:System.Windows.Controls.Frame.ForwardStack%2A?displayProperty=nameWithType>), 복구에서 저널 항목을 열거할 수 있는 스택 및 앞으로 스택, 각각.  
   
  앞서 언급했듯이 애플리케이션에는 둘 이상의 저널이 있을 수 있습니다. 다음 그림은 이러한 상황이 발생할 수 있는 예제를 제공합니다.  
   
- ![한 애플리케이션 내의 여러 저널](./media/naivgationoverviewfigure25.png "NaivgationOverviewFigure25")  
+ ![한 응용 프로그램 내의 여러 저널](./media/navigation-overview/multiple-journals-in-one-application.png "응용 프로그램에서 둘 이상의 저널이의 예제입니다.")  
   
 <a name="Navigating_to_Content_Other_than_Pages"></a>   
 ## <a name="navigating-to-content-other-than-xaml-pages"></a>XAML 페이지 이외의 콘텐츠 탐색  
@@ -660,7 +660,7 @@ Windows Presentation Foundation (WPF)는 두 가지 유형의 응용 프로그�
   
  파일을 두 번 클릭하면 브라우저가 열리고 콘텐츠를 탐색 및 표시합니다. 다음 그림에서 이를 확인할 수 있습니다.  
   
- ![Person.XAML 파일의 콘텐츠 표시](./media/navigationoverviewfigure21.png "NavigationOverviewFigure21")  
+ ![Person.XAML 파일의 콘텐츠 표시](./media/navigation-overview/contents-of-person-xaml-file.png "Person.XAML 파일의 내용을 보여 줍니다.")  
   
  느슨한 표시할 수 있습니다 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 다음에서 파일:  
   
@@ -711,7 +711,7 @@ Windows Presentation Foundation (WPF)는 두 가지 유형의 응용 프로그�
   
  다음 그림에서는 결과를 보여 줍니다.  
   
- ![클래스를 탐색하는 페이지](./media/navigationoverviewfigure22.png "NavigationOverviewFigure22")  
+ ![클래스에 탐색 하는 페이지](./media/navigation-overview/page-navigates-to-an-object.png "개체로 이동 하는 페이지의 예제입니다.")  
   
  이 그림에서 유용한 콘텐츠가 표시되지 않는 것을 볼 수 있습니다. 사실, 표시 되는 값은 반환 값을 `ToString` 에 대 한 메서드를 **사용자** 개체는 기본적으로이 경우에 값 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 개체를 나타내는 데 사용할 수. 재정의할 수 있습니다는 `ToString` 이지만 보다 의미 있는 정보를 반환 하는 메서드는 문자열 값 이어야 합니다. 프레젠테이션 기능을 활용 하는 사용할 수 있는 한 가지 방법은 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 데이터 템플릿을 사용 하는 것입니다. 데이터 템플릿을 구현할 수 있습니다는 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 특정 형식의 개체를 사용 하 여 연결할 수 있습니다. 다음 코드에 대 한 데이터 템플릿을 보여 줍니다는 `Person` 개체입니다.  
   
@@ -719,7 +719,7 @@ Windows Presentation Foundation (WPF)는 두 가지 유형의 응용 프로그�
   
  데이터 템플릿을 연관 여기에 `Person` 형식을 사용 하 여는 `x:Type` 에서 태그 확장을 `DataType` 특성입니다. 데이터 템플릿을 바인딩합니다 `TextBlock` 요소 (참조 <xref:System.Windows.Controls.TextBlock>)의 속성에는 `Person` 클래스입니다. 다음 그림에서는 업데이트 된 모양의 `Person` 개체입니다.  
   
- ![데이터 템플릿이 있는 클래스 탐색](./media/navigationoverviewfigure23.png "NavigationOverviewFigure23")  
+ ![데이터 템플릿이 있는 클래스로 탐색](./media/navigation-overview/navigating-to-a-class.png "데이터 템플릿이 있는 클래스를 탐색 합니다.")  
   
  이 기술의 장점은 데이터 템플릿을 다시 사용하여 애플리케이션의 어디에서든 일관적으로 개체를 표시할 수 있다는 점입니다.  
   

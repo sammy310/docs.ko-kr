@@ -7,12 +7,12 @@ helpviewer_keywords:
 - placing popups [WPF]
 - positioning popups [WPF]
 ms.assetid: fbf642e9-f670-4efd-a7af-a67468a1c8e1
-ms.openlocfilehash: 0f02fcef5c905e81808d76b71b45e0d010084268
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 449ec3ff30bb4650c32d3f6b9743b5d1a31ad0de
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57360560"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57679517"
 ---
 # <a name="popup-placement-behavior"></a>Popup 배치 동작
 <xref:System.Windows.Controls.Primitives.Popup> 컨트롤 응용 프로그램 위에 떠 있는 별도 창에서 콘텐츠를 표시 합니다. 위치를 지정할 수 있습니다는 <xref:System.Windows.Controls.Primitives.Popup> 컨트롤, 마우스를 또는 사용 하 여 화면을 기준으로 합니다 <xref:System.Windows.Controls.Primitives.Popup.PlacementTarget%2A>, <xref:System.Windows.Controls.Primitives.Popup.Placement%2A>, <xref:System.Windows.Controls.Primitives.Popup.PlacementRectangle%2A>, <xref:System.Windows.Controls.Primitives.Popup.HorizontalOffset%2A>, 및 <xref:System.Windows.Controls.Primitives.Popup.VerticalOffset%2A> 속성입니다.  이러한 속성의 위치를 지정 하는 유연성을 제공 하기 위해 함께 작동 합니다 <xref:System.Windows.Controls.Primitives.Popup>합니다.  
@@ -30,8 +30,7 @@ ms.locfileid: "57360560"
   
  다음 그림에서는 이미지를 보여 줍니다. 및 <xref:System.Windows.Controls.Primitives.Popup> 컨트롤  
   
- ![네 개의 팝업 컨트롤이 있는 이미지](./media/popupplacementintro.png "PopupPlacementIntro")  
-네 개의 Popup이 있는 이미지  
+ ![네 개의 팝업 컨트롤이 있는 이미지](./media/popup-placement-behavior/popup-placement-intro.png "네 개의 popup이 사용 하 여 이미지")    
   
  이 간단한 예제에는 설정 하는 방법을 보여 줍니다.는 <xref:System.Windows.Controls.Primitives.Popup.PlacementTarget%2A> 및 <xref:System.Windows.Controls.Primitives.Popup.Placement%2A> 속성을 사용 하 여는 <xref:System.Windows.Controls.Primitives.Popup.PlacementRectangle%2A>, <xref:System.Windows.Controls.Primitives.Popup.HorizontalOffset%2A>, 및 <xref:System.Windows.Controls.Primitives.Popup.VerticalOffset%2A> 속성 위치 보다 더 많은 제어할 수는 <xref:System.Windows.Controls.Primitives.Popup> 배치 됩니다.  
   
@@ -58,8 +57,8 @@ ms.locfileid: "57360560"
   
  다음 그림에서는 합니다 <xref:System.Windows.Controls.Primitives.Popup> 기준으로 배치 된는 <xref:System.Windows.Controls.Canvas>합니다.  
   
- ![Placementtarget이 없는 popup 컨트롤](./media/popupplacementnoplacementtarget.PNG "PopupPlacementNoPlacementTarget")  
-PlacementTarget이 없는 Popup 컨트롤  
+ ![Placementtarget이 없는 popup 컨트롤](./media/popup-placement-behavior/popup-placement-no-placement-target.png "placementtarget이 없는 팝업 합니다.")  
+  
   
  다음 예제에서는 <xref:System.Windows.Controls.Primitives.Popup> 의 자식인을 <xref:System.Windows.Controls.Canvas>, 이번 합니다 <xref:System.Windows.Controls.Primitives.Popup.PlacementTarget%2A> 로 설정 되어 `ellipse1`이므로 아래 팝업이 표시 되는 <xref:System.Windows.Shapes.Ellipse>합니다.  
   
@@ -67,8 +66,7 @@ PlacementTarget이 없는 Popup 컨트롤
   
  다음 그림에서는 합니다 <xref:System.Windows.Controls.Primitives.Popup> 기준으로 배치 된는 <xref:System.Windows.Shapes.Ellipse>합니다.  
   
- ![타원에 상대적으로 배치 되는 팝업](./media/popupplacementwithplacementtarget.PNG "PopupPlacementWithPlacementTarget")  
-PlacementTarget이 있는 Popup 컨트롤  
+ ![타원에 상대적으로 배치 되는 팝업](./media/popup-placement-behavior/popup-placement-with-placement-target.png "placementtarget 팝업")    
   
 > [!NOTE]
 >  에 대 한 <xref:System.Windows.Controls.ToolTip>을 기본값인 <xref:System.Windows.Controls.Primitives.Popup.Placement%2A> 는 <xref:System.Windows.Controls.Primitives.PlacementMode.Mouse>합니다.  에 대 한 <xref:System.Windows.Controls.ContextMenu>을 기본값인 <xref:System.Windows.Controls.Primitives.Popup.Placement%2A> 는 <xref:System.Windows.Controls.Primitives.PlacementMode.MousePoint>합니다. 이러한 값은 나중에 "속성을 함께 사용하는 방법"에서 설명합니다.  
@@ -82,8 +80,8 @@ PlacementTarget이 있는 Popup 컨트롤
   
  다음 그림에서는 이전 예제의 결과를 보여 줍니다.  
   
- ![팝업 및 placementrectangle](./media/popupplacementplacementrectangle.PNG "PopupPlacementPlacementRectangle")  
-PlacementRectangle이 있을 때와 없을 때의 팝업  
+ ![팝업 및 placementrectangle](./media/popup-placement-behavior/popup-placement-placement-rectangle.png "와 placementrectangle 팝업 합니다.")  
+  
   
 ### <a name="target-origin-and-popup-alignment-point"></a>대상 원점 및 Popup 맞춤 지점  
  *대상 원점* 및 *Popup 맞춤 지점*은 각각 대상 영역 및 Popup에서 위치 지정에 사용되는 참조 지점입니다. 사용할 수는 <xref:System.Windows.Controls.Primitives.Popup.HorizontalOffset%2A> 고 <xref:System.Windows.Controls.Primitives.Popup.VerticalOffset%2A> 대상 영역에서 popup을 오프셋할 속성입니다.  합니다 <xref:System.Windows.Controls.Primitives.Popup.HorizontalOffset%2A> 고 <xref:System.Windows.Controls.Primitives.Popup.VerticalOffset%2A> 대상 원점 및 popup 맞춤 지점을 기준으로 합니다. 값을 <xref:System.Windows.Controls.Primitives.Popup.Placement%2A> 속성 대상 원점 및 popup 맞춤 지점이 있는 위치를 결정 합니다.  
@@ -94,8 +92,7 @@ PlacementRectangle이 있을 때와 없을 때의 팝업
   
  다음 그림에서는 이전 예제의 결과를 보여 줍니다.  
   
- ![대상 원점 맞춤 지점 사용한 popup 배치](./media/popupplacementtargetoriginalignmentpoint.PNG "PopupPlacementTargetOriginAlignmentPoint")  
-HorizontalOffset 및 VerticalOffset을 사용한 Popup  
+ ![대상 원점 맞춤 지점 사용한 popup 배치](./media/popup-placement-behavior/popup-placement-target-origin-alignment-point.png "HorizontalOffset 및 VerticalOffset을 사용 하 여 팝업 합니다.")    
   
 <a name="How"></a>   
 ## <a name="how-the-properties-work-together"></a>속성을 함께 사용하는 방법  
@@ -120,32 +117,23 @@ HorizontalOffset 및 VerticalOffset을 사용한 Popup
   
  다음 그림에 나온 합니다 <xref:System.Windows.Controls.Primitives.Popup>, 각각에 대 한 대상 영역, 대상 원점 및 popup 맞춤 지점 <xref:System.Windows.Controls.Primitives.PlacementMode> 값입니다. 각 그림에서 대상 영역은 노란색이 고 <xref:System.Windows.Controls.Primitives.Popup> 파란색입니다.  
   
- ![Absolute 또는 AbsolutePoint 배치의 popup](./media/popupplacementabsolute.png "PopupPlacementAbsolute")  
-Placement가 Absolute 또는 AbsolutePoint임  
+ ![Absolute 또는 AbsolutePoint 배치의 popup](./media/popup-placement-behavior/popup-placement-absolute.png "Placement가 Absolute 또는 absolutepoint 임.")    
   
- ![Bottom 배치의 popup](./media/popupplacementbottom.png "PopupPlacementBottom")  
-Placement가 Bottom임  
+ ![Bottom 배치의 popup](./media/popup-placement-behavior/popup-placement-bottom.png "Placement가 Bottom 임.")   
   
- ![Center 배치의 popup](./media/popupplacementcenter.png "PopupPlacementCenter")  
-Placement가 Center임  
+ ![Center 배치의 popup](./media/popup-placement-behavior/popup-placement-center.png "Placement가 Center 임.")    
   
- ![Left 배치의 popup](./media/popupplacementleft.png "PopupPlacementLeft")  
-Placement가 Left임  
+ ![Left 배치의 popup](./media/popup-placement-behavior/popup-placement-left.png "Placement가 Left 임.")   
   
- ![Mouse 배치의 popup](./media/popupplacementmouse.png "PopupPlacementMouse")  
-Placement가 Mouse임  
+ ![Mouse 배치의 popup](./media/popup-placement-behavior/popup-placement-mouse.png "Placement가 Mouse 임.")  
   
- ![MousePoint 배치의 popup](./media/popupplacementmousepoint.png "PopupPlacementMousePoint")  
-Placement가 MousePoint임  
+ ![MousePoint 배치의 popup](./media/popup-placement-behavior/popup-placement-mousepoint.png "Placement가 mousepoint 임.")  
   
- ![Relative 또는 RelativePoint 배치의 popup](./media/popupplacementrelative.png "PopupPlacementRelative")  
-Placement가 Relative 또는 RelativePoint임  
+ ![Relative 또는 RelativePoint 배치의 popup](./media/popup-placement-behavior/popup-placement-relative.png "Placement가 Relative 또는 relativepoint 임.")    
   
- ![Right 배치의 popup](./media/popupplacementright.png "PopupPlacementRight")  
-Placement가 Right임  
+ ![Right 배치의 popup](./media/popup-placement-behavior/popup-placement-right.png "Placement가 Right 임.")    
   
- ![Top 배치의 popup](./media/popupplacementtop.png "PopupPlacementTop")  
-Placement가 Top임  
+ ![Top 배치의 popup](./media/popup-placement-behavior/popup-placement-top.png "Placement가 Top 임.")    
   
 <a name="When"></a>   
 ## <a name="when-the-popup-encounters-the-edge-of-the-screen"></a>Popup이 화면 가장자리와 만나는 경우  
@@ -178,21 +166,19 @@ Placement가 Top임
 ### <a name="aligning-to-the-screen-edge"></a>화면 가장자리에 맞춤  
  A <xref:System.Windows.Controls.Primitives.Popup> 맞출 수 화면 가장자리에 따라서 자체 위치에서 전체 <xref:System.Windows.Controls.Primitives.Popup> 화면에 표시 됩니다.  대상 원점 및 popup 맞춤 지점 간의 거리 값에서 다를 수 있습니다이 문제가 발생 하면 <xref:System.Windows.Controls.Primitives.Popup.HorizontalOffset%2A> 고 <xref:System.Windows.Controls.Primitives.Popup.VerticalOffset%2A>입니다. 때 <xref:System.Windows.Controls.Primitives.Popup.Placement%2A> 됩니다 <xref:System.Windows.Controls.Primitives.PlacementMode.Absolute>, <xref:System.Windows.Controls.Primitives.PlacementMode.Center>, 또는 <xref:System.Windows.Controls.Primitives.PlacementMode.Relative>는 <xref:System.Windows.Controls.Primitives.Popup> 모든 화면 가장자리에 맞춰 정렬 합니다.  예를 들어, 가정를 <xref:System.Windows.Controls.Primitives.Popup> 했습니다 <xref:System.Windows.Controls.Primitives.Popup.Placement%2A> 로 설정 <xref:System.Windows.Controls.Primitives.PlacementMode.Relative> 및 <xref:System.Windows.Controls.Primitives.Popup.VerticalOffset%2A> 100으로 설정 합니다.  화면의 아래쪽 가장자리의 일부나 전부를 숨긴 경우 합니다 <xref:System.Windows.Controls.Primitives.Popup>, <xref:System.Windows.Controls.Primitives.Popup> 자체적 화면과 대상 원점 및 popup 사이의 세로 거리의 아래쪽 가장자리 맞춤 지점이 100 미만입니다. 다음 그림에서 이 경우를 보여 줍니다.  
   
- ![화면 가장자리에 맞춰진 popup](./media/popupplacementrelativescreenedge.png "PopupPlacementRelativeScreenEdge")  
-화면 가장자리에 맞춰진 Popup  
+ ![화면 가장자리에 맞춰진 popup](./media/popup-placement-behavior/popup-placement-relative-screen-edge.png "팝업 화면 가장자리에 맞춥니다.")    
   
 ### <a name="changing-the-popup-alignment-point"></a>Popup 맞춤 지점 변경  
  경우 <xref:System.Windows.Controls.Primitives.Popup.Placement%2A> 은 <xref:System.Windows.Controls.Primitives.PlacementMode.AbsolutePoint>, <xref:System.Windows.Controls.Primitives.PlacementMode.RelativePoint>, 또는 <xref:System.Windows.Controls.Primitives.PlacementMode.MousePoint>, 아래쪽 또는 오른쪽 화면 가장자리 popup 때 popup 맞춤 지점을 변경 합니다.  
   
  다음 그림에서는 아래쪽 화면 가장자리의 일부나 전부를 숨기는 경우는 <xref:System.Windows.Controls.Primitives.Popup>, 팝업 맞춤 지점은의 왼쪽 아래 모서리를 <xref:System.Windows.Controls.Primitives.Popup>합니다.  
   
- ![아래쪽 화면 가장자리로 인 한 새로운 맞춤 지점](./media/popupplacementrelativepointscreenedge.png "PopupPlacementRelativePointScreenEdge")  
-Popup이 화면의 아래쪽 가장자리와 만나고 Popup 맞춤 지점을 변경함  
+ ![아래쪽 화면 가장자리로 인 한 새로운 맞춤 지점](./media/popup-placement-behavior/popup-placement-relative-point-screen-edge.png "Popup이 화면의 아래쪽 가장자리와 만나고 popup 맞춤 지점을 변경 합니다.")  
+ 
   
  다음 그림에서는 때 합니다 <xref:System.Windows.Controls.Primitives.Popup> 숨겨져 오른쪽 화면 가장자리와 만나고 popup 맞춤 지점을의 오른쪽 위 모서리를 <xref:System.Windows.Controls.Primitives.Popup>합니다.  
   
- ![화면 가장자리로 인 한 새로운 팝업 맞춤 지점](./media/popupplacementrelativepointrightscreenedge.png "PopupPlacementRelativePointRightScreenEdge")  
-Popup이 화면의 오른쪽 가장자리와 만나고 Popup 맞춤 지점을 변경함  
+ ![화면 가장자리로 인 한 새로운 팝업 맞춤 지점](./media/popup-placement-behavior/popup-placement-relative-point-right-screen-edge.png "Popup이 화면의 오른쪽 가장자리와 만나고 popup 맞춤 지점을 변경 합니다.")    
   
  경우는 <xref:System.Windows.Controls.Primitives.Popup> 아래쪽과 오른쪽 화면 가장자리를 발견 하면 팝업 맞춤 지점은 오른쪽 아래 모퉁이의 <xref:System.Windows.Controls.Primitives.Popup>합니다.  
   
@@ -201,28 +187,24 @@ Popup이 화면의 오른쪽 가장자리와 만나고 Popup 맞춤 지점을 �
   
  다음 그림을 보여 줍니다 <xref:System.Windows.Controls.Primitives.Popup.Placement%2A> 됩니다 <xref:System.Windows.Controls.Primitives.PlacementMode.Bottom> 및 <xref:System.Windows.Controls.Primitives.Popup> 아래쪽 화면 가장자리와 만나는 대상 원점은 대상 영역의 왼쪽 위 모퉁이 이며 팝업 맞춤 지점의 왼쪽 아래 모서리를 <xref:System.Windows.Controls.Primitives.Popup>.  
   
- ![아래쪽 화면 가장자리로 인 한 새로운 맞춤 지점](./media/popupplacementbottomscreenedge.png "PopupPlacementBottomScreenEdge")  
-Placement가 Bottom이고 Popup이 화면의 아래쪽 가장자리와 만남  
+ ![아래쪽 화면 가장자리로 인 한 새로운 맞춤 지점](./media/popup-placement-behavior/popup-placement-bottom-screen-edge.png "Placement가 Bottom이 고 popup 화면의 아래쪽 가장자리와 합니다.")    
   
  다음 그림을 보여 줍니다 <xref:System.Windows.Controls.Primitives.Popup.Placement%2A> 됩니다 <xref:System.Windows.Controls.Primitives.PlacementMode.Left> 하며 <xref:System.Windows.Controls.Primitives.Popup> 왼쪽된 화면 가장자리와 만나는 대상 원점은 대상 영역의 오른쪽 위 모서리 및 popup 맞춤 지점은 합니다 의왼쪽위모퉁이<xref:System.Windows.Controls.Primitives.Popup>.  
   
- ![왼쪽된 화면 가장자리로 인 한 새로운 맞춤 지점](./media/popupplacementleftscreenedge.png "PopupPlacementLeftScreenEdge")  
-Placement가 Left이고 Popup이 화면의 왼쪽 가장자리와 만남  
+ ![왼쪽된 화면 가장자리로 인 한 새로운 맞춤 지점](./media/popup-placement-behavior/popup-placement-left-screen-edge.png "Placement가 Left이 고 popup 화면의 왼쪽된 가장자리와 합니다.")  
   
  다음 그림을 보여 줍니다 <xref:System.Windows.Controls.Primitives.Popup.Placement%2A> 됩니다 <xref:System.Windows.Controls.Primitives.PlacementMode.Right> 및 <xref:System.Windows.Controls.Primitives.Popup> 오른쪽 화면 가장자리와 만나는 대상 원점은 대상 영역의 왼쪽 위 모퉁이 이며 팝업 맞춤 지점의 오른쪽 위 모서리를 <xref:System.Windows.Controls.Primitives.Popup>.  
   
- ![오른쪽 화면 가장자리로 인 한 새로운 맞춤 지점](./media/popupplacementrightscreenedge.png "PopupPlacementRightScreenEdge")  
-Placement가 Right이고 Popup이 화면의 오른쪽 가장자리와 만남  
+ ![오른쪽 화면 가장자리로 인 한 새로운 맞춤 지점](./media/popup-placement-behavior/popup-placement-right-screen-edge.png "Placement가 Right이 고 popup 화면의 오른쪽 가장자리와 합니다.")  
+  
   
  다음 그림을 보여 줍니다 <xref:System.Windows.Controls.Primitives.Popup.Placement%2A> 됩니다 <xref:System.Windows.Controls.Primitives.PlacementMode.Top> 및 <xref:System.Windows.Controls.Primitives.Popup> 위쪽 화면 가장자리와 만나는 대상 원점은 대상 영역의 왼쪽 아래 모서리 이며 팝업 맞춤 지점의 왼쪽 위 모퉁이 <xref:System.Windows.Controls.Primitives.Popup>.  
   
- ![위쪽 화면 가장자리로 인 한 새로운 맞춤 지점](./media/popupplacementtopscreenedge.png "PopupPlacementTopScreenEdge")  
-Placement가 Top이고 Popup이 화면의 위쪽 가장자리와 만남  
+ ![위쪽 화면 가장자리로 인 한 새로운 맞춤 지점](./media/popup-placement-behavior/popup-placement-top-screen-edge.png "Placement가 Top 임 및 popup 화면의 위쪽 가장자리입니다.")  
   
  다음 그림을 보여 줍니다 <xref:System.Windows.Controls.Primitives.Popup.Placement%2A> 됩니다 <xref:System.Windows.Controls.Primitives.PlacementMode.Mouse> 고 <xref:System.Windows.Controls.Primitives.Popup> 아래쪽 화면 가장자리와 만나는 대상 원점은 대상 영역 (마우스 포인터의 경계) 및 popup 맞춤의 왼쪽 위 모퉁이 점은의 왼쪽 아래 모서리를 <xref:System.Windows.Controls.Primitives.Popup>입니다.  
   
- ![화면 가장자리 근처의 마우스로 인 한 새로운 맞춤 지점](./media/popupplacementmousescreenedge.png "PopupPlacementMouseScreenEdge")  
-Placement가 Mouse이고 Popup이 화면의 아래쪽 가장자리와 만남  
+ ![화면 가장자리 근처의 마우스로 인 한 새로운 맞춤 지점](./media/popup-placement-behavior/popup-placement-mouse-screen-edge.png "Placement가 Mouse이 고 popup 화면의 아래쪽 가장자리와 합니다.")    
   
 ### <a name="customizing-popup-placement"></a>Popup 배치 사용자 지정  
  대상 원점 및 popup 맞춤 지점을 설정 하 여 사용자 지정할 수 있습니다 합니다 <xref:System.Windows.Controls.Primitives.Popup.Placement%2A> 속성을 <xref:System.Windows.Controls.Primitives.PlacementMode.Custom>입니다. 그런 다음 정의 <xref:System.Windows.Controls.Primitives.CustomPopupPlacementCallback> 에 대 한 가능한 배치 지점 및 기본 축을 (기본 설정의 순서로)의 집합을 반환 하는 대리자는 <xref:System.Windows.Controls.Primitives.Popup>합니다. 가장 큰 부분을 표시 하는 지점이 <xref:System.Windows.Controls.Primitives.Popup> 을 선택 합니다.  위치를 <xref:System.Windows.Controls.Primitives.Popup> 하는 경우 자동으로 조정 됩니다는 <xref:System.Windows.Controls.Primitives.Popup> 화면의 가장자리에 의해 숨겨집니다. 예제를 보려면 [사용자 지정 팝업 위치 지정](how-to-specify-a-custom-popup-position.md)을 참조하세요.  

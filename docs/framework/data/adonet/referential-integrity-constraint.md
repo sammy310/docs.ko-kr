@@ -2,12 +2,12 @@
 title: 참조 무결성 제약 조건
 ms.date: 03/30/2017
 ms.assetid: 3d3ba44b-4302-40d8-a7a9-62932e0395e5
-ms.openlocfilehash: 1b6c5bb6e04b72f32f8c905526176a649257abeb
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7d3304393ef4e97887d9b8afec94ed265e38eaf0
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54637244"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57679114"
 ---
 # <a name="referential-integrity-constraint"></a>참조 무결성 제약 조건
 A *참조 무결성 제약 조건* 엔터티 데이터 모델 (EDM)의 관계형 데이터베이스의 참조 무결성 제약 조건과 비슷합니다. 데이터베이스 테이블에서 열 (또는 열) 다른 테이블의 기본 키를 참조할 수 있도록 동일한 방식으로 [속성](../../../../docs/framework/data/adonet/property.md) (또는 속성)의 [엔터티 형식](../../../../docs/framework/data/adonet/entity-type.md) 참조할 수는 [엔터티 키 ](../../../../docs/framework/data/adonet/entity-key.md) 다른 엔터티 형식입니다. 참조 되는 엔터티 형식 이라고 합니다 *주 끝* 제약 조건입니다. 주 끝을 참조 하는 엔터티 형식 이라고 합니다 *종속 끝* 제약 조건입니다.  
@@ -25,9 +25,10 @@ A *참조 무결성 제약 조건* 엔터티 데이터 모델 (EDM)의 관계형
  EDM의 참조 무결성 제약 조건은 항상 올바른 연결이 존재하도록 보장하는 데 사용됩니다. 자세한 내용은 [외래 키 속성](../../../../docs/framework/data/adonet/foreign-key-property.md)합니다.  
   
 ## <a name="example"></a>예제  
- 다음 다이어그램에서는 두 연결 `WrittenBy` 및 `PublishedBy`의 개념적 모델을 보여 줍니다. `Book` 엔터티 형식에는 `PublisherId` 연결에 참조 무결성 제약 조건을 정의할 때 `Publisher` 엔터티 형식의 엔터티 키를 참조하는 `PublishedBy` 속성이 있습니다.  
+ 다음 다이어그램에서는 두 연결 `WrittenBy` 및 `PublishedBy`의 개념적 모델을 보여 줍니다. 
+  `Book` 엔터티 형식에는 `PublisherId` 연결에 참조 무결성 제약 조건을 정의할 때 `Publisher` 엔터티 형식의 엔터티 키를 참조하는 `PublishedBy` 속성이 있습니다.  
   
- ![RefConstraintModel](../../../../docs/framework/data/adonet/media/refconstraintmodel.gif "RefConstraintModel")  
+ ![RefConstraintModel](./media/referential-integrity-constraint/reference-constraint-model.gif "참조 제약 조건이 모델의 예")  
   
  합니다 [ADO.NET Entity Framework](../../../../docs/framework/data/adonet/ef/index.md) 개념 스키마 정의 언어를 호출 하는 도메인 특정 언어 (DSL)를 사용 하 여 ([CSDL](../../../../docs/framework/data/adonet/ef/language-reference/csdl-specification.md)) 개념적 모델을 정의 합니다. 다음 CSDL에서는 위의 개념적 모델에 표시된 `PublishedBy` 연결에 참조 무결성 제약 조건을 정의합니다.  
   

@@ -1,7 +1,7 @@
 ---
 title: <AppContextSwitchOverrides> 요소
 ms.custom: updateeachrelease
-ms.date: 09/19/2018
+ms.date: 03/07/2019
 helpviewer_keywords:
 - AppContextSwitchOverrides
 - compatibility switches
@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 4ce07f47-7ddb-4d91-b067-501bd8b88752
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b11452e34a802e84a12eb1832234ae5ab60aa992
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.openlocfilehash: 084837a87d878982ad4138ab508d24100e183b64
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57203550"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57679348"
 ---
 # <a name="appcontextswitchoverrides-element"></a>\<AppContextSwitchOverrides > 요소
 <xref:System.AppContext> 클래스에 사용되는 스위치를 하나 이상 정의하여 새 기능의 옵트아웃 메커니즘을 제공합니다.  
@@ -68,10 +68,14 @@ ms.locfileid: "57203550"
 |`Switch.MS.Internal.`<br/>`UseSha1AsDefaultHashAlgorithmForDigitalSignatures`|한 PackageDigitalSignatureManager 서명 패키지 부분에 사용 되는 기본 알고리즘은 SHA1 또는 SHA256 여부를 제어 합니다.|.NET Framework 4.7.1|
 |`Switch.System.Activities.`<br/>`UseMD5CryptoServiceProviderForWFDebugger`|로 설정 하면 `false`, FIPS가 활성화 하는 경우 Visual Studio를 사용 하 여 XAML 기반 워크플로 프로젝트를 디버깅할 수 있습니다. 없으면를 <xref:System.NullReferenceException> System.Activities 어셈블리의 메서드 호출에서 throw 됩니다.|.NET Framework 4.7|
 |`Switch.System.Activities.`<br/>`UseMD5ForWFDebugger`|디버거에서 워크플로 인스턴스에 대 한 체크섬 MD5 또는 SHA1 사용 하는지 여부를 제어 합니다. | .NET Framework 4.7|
+|`Switch.System.Activities.`<br/>`UseSHA1HashForDebuggerSymbols`|워크플로 체크섬 해시.NET Framework 4.7의 기본값으로 도입 SHA1 알고리즘을 사용 하는지 여부를 제어 (`true`)를 사용 하는지 여부 또는.NET Framework 4.8에서 기본적으로 도입 된 기본 SHA256 알고리즘 (`false`).|.NET Framework 4.8|
 |`Switch.System.Diagnostics.`<br/>`IgnorePortablePDBsInStackTraces`|원본 파일 및 줄 정보를 포함할 수 이식 가능한 Pdb를 사용 하는 경우 스택 추적 가져오기 하는 여부를 제어 합니다. `false` 소스 파일 및 줄 정보를 포함 하려면 그렇지 않으면 `true`합니다.|.NET Framework 4.7.2|
-|`Switch.System.Drawing.`<br/>`DontSupportPngFramesInIcons`|컨트롤 여부를 <xref:System.Drawing.Icon.ToBitmap%2A?displayProperty=nameWithType> 메서드에서 예외를 throw 때는 <xref:System.Drawing.Icon> 개체에 PNG 프레임이 있는 합니다. 자세한 내용은 [완화: 아이콘 개체의 PNG 프레임](../../../migration-guide/mitigation-png-frames-in-icon-objects.md)합니다.|.NET Framework 4.6|  
+|`Switch.System.Drawing.`<br/>`DontSupportPngFramesInIcons`|컨트롤 여부를 <xref:System.Drawing.Icon.ToBitmap%2A?displayProperty=nameWithType> 메서드에서 예외를 throw 때는 <xref:System.Drawing.Icon> 개체에 PNG 프레임이 있는 합니다. 자세한 내용은 [완화: 아이콘 개체의 PNG 프레임](../../../migration-guide/mitigation-png-frames-in-icon-objects.md)합니다.|.NET Framework 4.6|
 |`Switch.System.Drawing.Text.`<br/>`DoNotRemoveGdiFontsResourcesFromFontCollection`|결정 여부 <xref:System.Drawing.Text.PrivateFontCollection?displayProperty=nameWithType> 사용 하 여 컬렉션에 추가 될 때 개체가 제대로 삭제 됩니다는 <xref:System.Drawing.Text.PrivateFontCollection.AddFontFile(System.String)?displayProperty=nameWithType> 메서드. `true` 레거시 동작을 유지 하려면 `false` 모든 개인 글꼴 개체의 삭제 합니다. |.NET Framework 4.7.2|
 |`Switch.System.Drawing.Printing.`<br>`OptimizePrintPreview`|컨트롤 여부를 성능을 <xref:System.Windows.Forms.PrintPreviewDialog> 네트워크 프린터에 대해 최적화 됩니다. 자세한 내용은 [PrintPreviewDialog 컨트롤 개요](../../../winforms/controls/printpreviewdialog-control-overview-windows-forms.md)합니다.|.NET Framework 4.6|
+|`Switch.System.Globalization.EnforceJapaneseEraYearRanges`|연대 적용 되는 일본식 달력에 대 한 연도 범위를 확인 하는지 여부를 제어 합니다. `true` 연도 범위를 적용 하려면 확인 및 `false` 하 (기본 동작)를 사용 하지 않도록 설정 합니다. 자세한 내용은 [달력을 사용 하 여 작업](../../../../standard/datetime/working-with-calendars.md)합니다.|.NET Framework 4.6|
+|`Switch.System.Globalization.EnforceLegacyJapaneseDateParsing`|"1" 에서만 인식 되는지 여부를 구문 분석 작업에는 일본식 달력 연대에 있는 첫 번째 연도의으로 제어 합니다. `true` 만 "1"을 인식할 수 `false` "1" 또는 넨 (기본 동작)를 인식 하도록 합니다. 자세한 내용은 [달력을 사용 하 여 작업](../../../../standard/datetime/working-with-calendars.md)합니다.|.NET Framework 4.6| 
+|`Switch.System.Globalization.FormatJapaneseFirstYearAsANumber`|서식 지정 작업에서 "1" 또는 넨 일본식 달력 연대 첫 해를 나타낼지 여부를 제어 합니다. `true` "1";로 연대의 첫 해에 서식을 지정 하려면 `false` 형식 넨 (기본 동작)으로 지정 합니다. 자세한 내용은 [달력을 사용 하 여 작업](../../../../standard/datetime/working-with-calendars.md)합니다.|.NET Framework 4.6|
 |`Switch.System.Globalization.NoAsyncCurrentCulture`|비동기 작업 호출 스레드의 컨텍스트에서 이동 하지 않는 있는지 여부를 제어 합니다. 자세한 내용은 [CurrentCulture 및 CurrentUICulture가 작업에 걸쳐 전달](../../../migration-guide/retargeting/4.5.2-4.6.md#currentculture-and-currentuiculture-flow-across-tasks)합니다.|.NET Framework 4.6|  
 |`Switch.System.IdentityModel.`<br/>`DisableMultipleDNSEntriesInSANCertificate`|컨트롤 여부는 <xref:System.IdentityModel.Claims.X509CertificateClaimSet.FindClaims%2A?displayProperty=nameWithType> 메서드를 마지막 DNS 항목에만 클레임 유형과 일치 하도록 시도 합니다. 자세한 내용은 [완화: X509CertificateClaimSet.FindClaims 메서드](../../../migration-guide/mitigation-x509certificateclaimset-findclaims-method.md)합니다.|.NET Framework 4.6.1|  
 |`Switch.System.IdentityModel.`<br/>`EnableCachedEmptyDefaultAuthorizationContext`|AuthorizationContext.Empty 변경할 수 있는 개체를 반환할 수 있도록 할지 여부를 제어 합니다.|.NET Framework 4.6|  
@@ -79,7 +83,7 @@ ms.locfileid: "57203550"
 |`Switch.System.IO.Compression.`<br/>`DoNotUseNativeZipLibraryForDecompression`|압축 풀기에 네이티브 OS 루틴을 사용할지 여부를 제어 합니다 <xref:System.IO.Compression.DeflateStream> 클래스입니다. `false` 네이티브 Api를 사용 하려면 `true` 사용 하 여 <xref:System.IO.Compression.DeflateStream> 구현 합니다.|.NET Framework 4.7.2|
 |`Switch.System.IO.Compression.ZipFile.`<br/>`UseBackslash`|백슬래시를 사용 하 여 ("\\") 대신 슬래시 ("/")에서 경로 구분 기호로 <xref:System.IO.Compression.ZipArchiveEntry.FullName%2A?displayProperty=nameWithType> 속성입니다. 자세한 내용은 참조 하세요. [완화 합니다. ZipArchiveEntry.FullName 경로 구분 기호](../../../migration-guide/mitigation-ziparchiveentry-fullname-path-separator.md)합니다.|.NET Framework 4.6.1|  
 |`Switch.System.IO.Ports.`<br/>`DoNotCatchSerialStreamThreadExceptions`|사용 하 여 만든 백그라운드 스레드에서 throw 되는 시스템 예외를 운영 하 고 있는지 여부를 제어 <xref:System.IO.Ports.SerialPort> 스트림을 프로세스를 종료 합니다.|.NET Framework 4.7.1| 
-|`Switch.System.IO.`<br/>`UseLegacyPathHandling`|레거시 경로 정규화 사용 되 고 URI 경로 지 여부를 제어 합니다 <xref:System.IO.Path.GetDirectoryName%2A?displayProperty=nameWithType> 고 <xref:System.IO.Path.GetPathRoot%2A?displayProperty=nameWithType> 메서드. 자세한 내용은 [완화: 경로 정규화](../../../migration-guide/mitigation-path-normalization.md) 및 [완화 합니다. 경로 콜론 검사](../../../migration-guide/mitigation-path-colon-checks.md)합니다.|.NET Framework 4.6.2|  
+|`Switch.System.IO.`<br/>`UseLegacyPathHandling`|레거시 경로 정규화 사용 되 고 URI 경로 지 여부를 제어 합니다 <xref:System.IO.Path.GetDirectoryName%2A?displayProperty=nameWithType> 고 <xref:System.IO.Path.GetPathRoot%2A?displayProperty=nameWithType> 메서드. 자세한 내용은 [완화: 경로 정규화](../../../migration-guide/mitigation-path-normalization.md) 및 [완화 합니다. 경로 콜론 검사](../../../migration-guide/mitigation-path-colon-checks.md)합니다.|.NET Framework 4.6.2|
 |`Switch.System.`<br/>`MemberDescriptorEqualsReturnsFalseIfEquivalent`|같음 비교에 대 한 테스트가 있는지 여부를 제어 합니다 <xref:System.ComponentModel.MemberDescriptor.Category%2A?displayProperty=nameWithType> 개체의 속성을 <xref:System.ComponentModel.MemberDescriptor.Description%2A?displayProperty=nameWithType> 두 번째 개체의 속성입니다. 자세한 내용은 [MemberDescriptor.Equals의 잘못 된 구현](../../../migration-guide/retargeting/4.6.1-4.6.2.md#incorrect-implementation-of-memberdescriptorequals)합니다.|.NET Framework 4.6.2|  
  `Switch.System.Net.`<br/>`DontCheckCertificateEKUs`|사용 하지 않도록 설정 된 키 사용 (EKU) 개체 식별자 (OID) 유효성 검사를 인증서입니다. EKU(향상된 키 사용) 확장은 키를 사용하는 애플리케이션을 나타내는 OID(개체 식별자)의 모음입니다.|.NET Framework 4.6|
 |`Switch.System.Net.`<br/>`DontEnableSchSendAuxRecord`|SCH_SEND_AUX_RECORD 사용을 사용 하지 않도록 설정 하 여 완화 방법은 TLS1.0 브라우저 악용에 대해 SSL/TLS (비스 트)를 사용 하지 않도록 설정 합니다.|.NET Framework 4.6|
@@ -110,15 +114,23 @@ ms.locfileid: "57203550"
 |`Switch.System.Windows.Controls.Grid.`<br/>`StarDefinitionsCanExceedAvailableSpace` |Windows Presentation Foundation 이전 알고리즘을 적용 하는지 여부를 결정 (`true`) 또는 새 알고리즘 (`false`)에서 공간을 할당 \*-열입니다. 자세한 내용은 [완화: Grid 컨트롤의 별 열 공간 할당](../../../migration-guide/retargeting/4.6.2-4.7.md#wpf-grid-allocation-of-space-to-star-columns)합니다. |.NET Framework 4.7 |
 |`Switch.System.Windows.Controls.TabControl.`<br/>`SelectionPropertiesCanLagBehindSelectionChangedEvent`|컨트롤 선택 발생 하기 전에 선택한 값 속성의 값을 업데이트 여부 선택기 또는 탭 컨트롤에서 항상 변경 이벤트입니다.|.NET Framework 4.7.1|
 |`Switch.System.Windows.Controls.Text.`<br/>`UseAdornerForTextboxSelectionRendering`|비 표시기 기반된 선택 렌더링에 사용할 수 있는 인지 여부를 확인 합니다 <xref:System.Windows.Controls.TextBox> 및 <xref:System.Windows.Controls.PasswordBox> 폐색 텍스트를 방지 하기 위한 컨트롤 (`false`), 아니면 텍스트 표시기 계층에만 렌더링 됩니다 (`true`).|.NET Framework 4.7.2|
+|`Switch.System.Windows.Data.Binding.`<br/>`IListIndexerHidesCustomIndexer`|여부를 사용자 지정 IList 인덱서 잘못 사용할 제어 (`false`) 또는 올바르게 (`true`) 여는 <xref:System.Windows.Data.Binding?displayProperty=nameWithtype> 클래스.|.NET Framework 4.8|
 |`Switch.System.Windows.DoNotScaleForDpiChanges`|DPI 변경 당 시스템에서 발생할 지 여부를 결정 (값 `false`) 또는 모니터별 (값 `true`).|.NET Framework 4.6.2|
+|`Switch.System.Windows.`<br/>`DoNotUsePresentationDpiCapabilityTier2OrGreater`|컨트롤 여부를에서 컨트롤의 크기 조정의 향상 된 기능을 <xref:System.Windows.Interop.HwndHost?displayProperty=nameWithType> WPF 모니터별 인식 모드에서 실행 되는 경우 사용할 수 없습니다 (`true`) 사용 하도록 설정 하거나 (`false`).|.NET Framework 4.8|
 |`Switch.System.Windows.Forms.`<br/>`DomainUpDown.UseLegacyScrolling`|개발자를 특별히 처리 해야 하는지 여부를 결정 합니다 <xref:System.Windows.Forms.DomainUpDown.UpButton?displayProperty=nameWithType> 작업은 컨트롤 텍스트가 존재 하는 경우. `true` 처리 하는 <xref:System.Windows.Forms.DomainUpDown.UpButton> 작업; `false` 에 대 한는 <xref:System.Windows.Forms.DomainUpDown.UpButton?displayProperty=nameWithType> 고 <xref:System.Windows.Forms.DomainUpDown.DownButton?displayProperty=nameWithType> 제대로 동기화 되어야 하는 작업입니다.|.NET Framework 4.7.2|
 |`Switch.System.Windows.Forms.`<br />`DontSupportReentrantFilterMessage`|사용자 지정을 허용 하는 코드에서 옵트아웃 <xref:System.Windows.Forms.IMessageFilter.PreFilterMessage%2A?displayProperty=nameWithType> 구현 안전 하 게 예외를 throw 하지 않고 메시지를 필터링 할 때를 <xref:System.Windows.Forms.Application.FilterMessage%2A?displayProperty=nameWithType> 메서드가 호출 됩니다. 자세한 내용은 [완화: 사용자 지정 IMessageFilter.PreFilterMessage 구현](../../../migration-guide/mitigation-custom-imessagefilter-prefiltermessage-implementations.md)합니다.|.NET Framework 4.6.1|  
 |`Switch.System.Windows.Forms.`<br/>`UseLegacyContextMenuStripSourceControlValue`|결정 여부는 <xref:System.Windows.Forms.ContextMenuStrip.SourceControl?displayProperty=nameWithType> 속성에서 중첩 된 메뉴를 열면 원본 제어를 반환 합니다 <xref:System.Windows.Forms.ToolStripMenuItem> 컨트롤입니다. `true` 반환할 `null`, 레거시 동작입니다. `false` 소스 제어를 반환 합니다.|.NET Framework 4.7.2|
+|`Switch.System.Windows.Forms.UseLegacyToolTipDisplay`|도구 설명 호출 지원 비활성화 되었는지 여부를 제어 (`true`) 또는 설정 (`false`). 도구 설명 호출 지원을 사용 하도록 설정 하 여 정의 하는 레거시 접근성 기능 있어야 `Switch.UseLegacyAccessibilityFeatures`, `Switch.UseLegacyAccessibilityFeatures.2`, 및 `Switch.UseLegacyAccessibilityFeatures.3` 모두 사용할 수 없게 (로 `false`).|.NET Framework 4.8|
 |`Switch.System.Windows.Input.Stylus.`<br/>`EnablePointerSupport`|선택적인 지 여부를 결정 `WM_POINTER`-기반된 터치/스타일러스 스택 WPF 응용 프로그램에서 사용 가능 합니다. 자세한 내용은 [완화: 포인터 기반 터치 및 스타일러스 지원](../../../migration-guide/mitigation-pointer-based-touch-and-stylus-support.md)|.NET Framework 4.7|
 |`Switch.System.Windows.Markup.`<br/>`DoNotUseSha256ForMarkupCompilerChecksumAlgorithm`|SHA256 체크섬에 사용 되는 기본 해시 알고리즘 인지 확인 (`false`) 또는 SHA1 (`true`).|.NET Framework 4.7.2|
 |`Switch.System.Windows.Media.ImageSourceConverter.`<br/>`OverrideExceptionWithNullReferenceException`|레거시 있는지 여부를 제어 [NullReferenceException](xref:System.NullReferenceException) 대신 예외의 원인을 더 구체적으로 나타내는 예외가 throw 됩니다 (같은 [DirectoryNotFoundException](xref:System.IO.DirectoryNotFoundException) 또는 [ FileNotFoundException](xref:System.IO.FileNotFoundException)합니다. 처리에 의존 하는 코드에서 사용 하 여 위한 것은 [NullReferenceException](xref:System.NullReferenceException)합니다. | .NET Framework 4.7 |
+|`Switch.System.Workflow.ComponentModel.`<br/>`UseLegacyHashForXomlFileChecksum`|MD5 알고리즘을 사용할 수 빌드 워크플로 프로젝트의에서 XOML 파일의 체크섬 해시 있는지 여부를 제어 (`true`),.NET Framework 4.8에 기본값으로 도입 SHA256 알고리즘을 사용 하는지 또는 합니다.|.NET Framework 4.8|
+|`Switch.System.Workflow.Runtime.`<br/>`UseLegacyHashForSqlTrackingCacheKey`|체크섬 해시 SqlTrackingService에 의해 MD5 알고리즘을 사용 하는지 여부를 제어 (`true`) 캐시 된 문자열에 대 한.NET Framework 4.8에 기본값으로 도입 SHA256 알고리즘을 사용 하는지 여부 또는 합니다.|.NET Framework 4.8|
+|`Switch.System.Workflow.Runtime.`<br/>`UseLegacyHashForWorkflowDefinitionDispenserCacheKey`|체크섬 해시 워크플로 런타임에 의해 MD5 알고리즘을 사용 하는지 여부를 제어 (`true`) 캐시 된 워크플로 정의 대 한.NET Framework 4.8에 기본값으로 도입 SHA256 알고리즘을 사용 하는지 여부 또는 합니다.|.NET Framework 4.8|
 |`Switch.UseLegacyAccessibilityFeatures`|컨트롤이 내게 필요한 옵션 기능을 사용할 수 있는.NET Framework 4.7.1부터 여부를 설정 또는 해제 합니다. | .NET Framework 4.7.1 |
 |`Switch.UseLegacyAccessibilityFeatures.2`|내게 필요한 옵션 기능은.NET Framework 4.7.2에서에서 사용할 수 있는지 여부는 사용 하도록 설정 하는 컨트롤 (`false`) 또는 사용 안 함 (`true`). 하는 경우 `true`, `Switch.UseLegacyAccessibilityFeatures` 수도 있어야 `true` .NET Framework 4.7.1 내게 필요한 옵션 기능을 사용 하도록 설정 합니다.|.NET Framework 4.7.2|
+|`Switch.UseLegacyAccessibilityFeatures.3`|.NET Framework 4.8에서 내게 필요한 옵션 기능을 도입 하는 여부는 사용 하도록 설정 하는 컨트롤 (`false`) 또는 사용 안 함 (`true`). 하는 경우 `true`, `Switch.UseLegacyAccessibilityFeatures` 하 고 `Switch.UseLegacyAccessibilityFeatures.2` 수도 있어야 `true`합니다.|.NET Framework 4.8|
+|`Switch.UseLegacyToolTipDisplay`|컨트롤 도구 설명 사용자 displaed 인지 가리킬 마우스 커서를 WPF 컨트롤 (`true`), 키보드 포커스와 키보드 바로 가기 키를 통해 표시 됩니다 여부 또는 (`false`, 기본 동작). .NET Framework 4.8 실행 되지만 이전 버전의.NET Framework를 대상으로 응용 프로그램, 키보드 포커스를 둘 다를 사용 하도록 설정 하 고 바로 가기 키 지원 해야 `Switch.UseLegacyAccessibilityFeatures`, `Switch.UseLegacyAccessibilityFeatures.2`, 및 `Switch.UseLegacyAccessibilityFeatures.3` 설정할 모든 `false`합니다.|.NET Framework 4.8|
 |`System.Xml.`<br /><br /> `IgnoreEmptyKeySequences`|XSD 스키마 유효성 검사 하 여 복합 키에 빈 키 시퀀스가 무시할지 여부를 제어 합니다. 자세한 내용은 [완화: XML 스키마 유효성 검사](../../../migration-guide/mitigation-xml-schema-validation.md)합니다.|.NET Framework 4.6|  
   
 > [!NOTE]

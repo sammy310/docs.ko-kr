@@ -4,16 +4,16 @@ description: Docker 응용 프로그램의 개발에 대 한 "내부 루프" 워
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 02/15/2019
-ms.openlocfilehash: 1134ff439235609db840c85a1e67bc9fe4ccec84
-ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
+ms.openlocfilehash: 1ed0feeec682f5a79bc38db6a101b751ea4dbc3a
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56835683"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57676670"
 ---
 # <a name="inner-loop-development-workflow-for-docker-apps"></a>Docker 앱에 대 한 내부 루프 개발 워크플로
 
-전체 DevOps에 걸쳐 루프 외부 워크플로 트리거하기 전에 주기, 각 개발자의 컴퓨터에서 해당 앱을 코딩, 해당 기본 설정된 언어 또는 플랫폼을 사용 하 여 및 로컬로 테스트 하 고 (그림 4-21) 시작 하는 것입니다. 하지만 모든 경우에서 수는 중요 한 공통적으로 선택 하는 언어, 프레임 워크 또는 플랫폼에 관계 없이 합니다. 이 특정 워크플로에서 항상 개발 하 고 Docker 컨테이너를 로컬로 테스트 합니다.
+전체 DevOps에 걸쳐 루프 외부 워크플로 트리거하기 전에 주기, 각 개발자의 컴퓨터에서 해당 앱을 코딩, 해당 기본 설정된 언어 또는 플랫폼을 사용 하 여 및 로컬로 테스트 하 고 (그림 4-21) 시작 하는 것입니다. 있지만 모든 경우에서 해야는 중요 한 점은 공통적으로 선택 하는 언어, 프레임 워크 또는 플랫폼에 관계 없이 합니다. 이 특정 워크플로에서 항상을 개발 하 고 Docker 컨테이너를 로컬로 테스트 합니다.
 
 ![1 단계-코드/실행/디버그](./media/image18.png)
 
@@ -43,7 +43,7 @@ Docker 이미지의 인스턴스를 컨테이너에 이러한 구성 요소를 �
 
 ### <a name="step-1-start-coding-in-visual-studio-code-and-create-your-initial-appservice-baseline"></a>1단계: Visual Studio Code에서 코딩을 시작 하 고 초기 앱/서비스 기준 만들기
 
-응용 프로그램을 개발 하는 방법은 Docker 없이 이렇게 하는 방법은 비슷합니다. 개발 중에만 배포 및 테스트 중인 응용 프로그램 또는 서비스 (예: Linux VM 또는 Windows) 로컬 환경에 배치 하는 Docker 컨테이너 내에서 실행 되는 점이 다릅니다.
+응용 프로그램을 개발 하는 방법은 Docker 없이 이렇게 하는 방법은 비슷합니다. 개발 중에만 배포 및 테스트 하 여 응용 프로그램 또는 서비스 (예: Linux VM 또는 Windows) 로컬 환경에 배치 하는 Docker 컨테이너 내에서 실행 되는 점이 다릅니다.
 
 **로컬 환경 설정**
 
@@ -91,9 +91,9 @@ Docker 확장을 설치 하려면 Ctrl + Shift + P를 눌러 입력 `ext install
 
 ### <a name="step-2-create-a-dockerfile-related-to-an-existing-image-plain-os-or-dev-environments-like-net-core-nodejs-and-ruby"></a>2단계: 기존 이미지 (일반 OS 또는.NET Core, Node.js 및 Ruby와 같은 개발 환경)와 관련 된 DockerFile 만들기
 
-필요는 `DockerFile` 만들려는 사용자 지정 이미지 및 컨테이너 배포 당 합니다. 단일 사용자 지정 서비스의 앱 옵션을 구성 된 경우 단일 해야 `DockerFile`합니다. 앱은 여러 서비스 (예: 마이크로 서비스 아키텍처)으로 구성 해야 하나 있지만 `Dockerfile` 서비스 당 합니다.
+필요는 `DockerFile` 만들려는 사용자 지정 이미지 및 컨테이너 배포 당 합니다. 앱 구성 된 단일 사용자 지정 서비스를 단일 필요 `DockerFile`합니다. 앱은 여러 서비스 (예: 마이크로 서비스 아키텍처)으로 구성 해야 하나 있지만 `Dockerfile` 서비스 당 합니다.
 
-`DockerFile` 일반적으로 앱 또는 서비스의 루트 폴더에 배치 되 고 Docker 설정 하 고 해당 앱 또는 서비스를 실행 하는 방법을 알 수 있도록 필요한 명령을 포함 합니다. 만들 수 있습니다 프로그램 `DockerFile` 코드와 함께 프로젝트에 추가 (.NET Core, node.js 등), 또는 환경에 새로운 인 경우 다음 팁을 살펴봅니다.
+`DockerFile` 일반적으로 앱 또는 서비스의 루트 폴더에 배치 되 고 Docker 설정 하 고 해당 앱 또는 서비스를 실행 하는 방법을 알 수 있도록 필요한 명령을 포함 합니다. 만들 수 있습니다 프로그램 `DockerFile` 코드와 함께 프로젝트에 추가 (.NET Core, node.js 등), 또는 환경에 새로운 인 경우 다음 팁을 살펴보시기 바랍니다.
 
 > [!TIP]
 >
@@ -105,7 +105,7 @@ Docker 확장을 설치 하려면 Ctrl + Shift + P를 눌러 입력 `ext install
 
 **그림 4-24** Docker 파일을 사용 하 여 추가 된 **작업 영역 명령에 Docker 추가 파일**
 
-사용할 기본 Docker 이미지를 지정 하는 DockerFile에 추가 하면 (사용 하 여 같은 `FROM microsoft/aspnetcore`). 일반적으로 사용자 지정 이미지에서 공식 리포지토리에서 얻을 수 있는 기본 이미지를 기반으로 빌드됩니다 합니다 [Docker Hub 레지스트리에서](https://hub.docker.com/) (같은 [.NET Core에 대 한 이미지](https://hub.docker.com/r/microsoft/dotnet/) 나 [Node.js용](https://hub.docker.com/_/node/)).
+사용할 기본 Docker 이미지를 지정 하는 DockerFile에 추가 하면 (사용 하 여 같은 `FROM microsoft/aspnetcore`). 일반적으로 사용자 지정 이미지에서 공식 리포지토리에서 얻을 수 있는 기본 이미지를 기반으로 빌드할 합니다 [Docker Hub 레지스트리에서](https://hub.docker.com/) (같은 [.NET Core에 대 한 이미지](https://hub.docker.com/r/microsoft/dotnet/) 나 [Node.js용](https://hub.docker.com/_/node/)).
 
 ***기존 공식 Docker 이미지를 사용 하 여***
 
@@ -149,7 +149,7 @@ DockerFile에서 Docker (예: 포트 80) 런타임 시 사용 하는 TCP 포트�
 
 ***기본 이미지를 처음부터 만들기***
 
-이 항목에 설명 된 대로 처음부터 사용자 고유의 Docker 기본 이미지를 만들 수 있습니다 [문서](https://docs.docker.com/engine/userguide/eng-image/baseimages/) Docker에서. 이 시나리오는 Docker로 시작 하지만 고유한 기본 이미지의 특정 비트를 설정 하려는 경우 수행할 수 있습니다 하는 경우 가장 적절 한 되지 않을 수 있습니다.
+이 항목에 설명 된 대로 처음부터 사용자 고유의 Docker 기본 이미지를 만들 수 있습니다 [문서](https://docs.docker.com/engine/userguide/eng-image/baseimages/) Docker에서. 이 시나리오는 Docker를 사용 하 여 잘 모르는 경우 기본 이미지의 특정 비트를 설정 하려는 경우 수행할 수 있습니다 적합 되지 않을 수 있습니다.
 
 ### <a name="step-3-create-your-custom-docker-images-embedding-your-service-in-it"></a>3단계: 에 서비스를 포함 하 여 사용자 지정 Docker 이미지 만들기
 

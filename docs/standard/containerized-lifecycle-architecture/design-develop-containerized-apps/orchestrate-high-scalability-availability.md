@@ -4,12 +4,12 @@ description: 실제 프로덕션 응용 프로그램 배포 및 상태, 작업 �
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 02/15/2019
-ms.openlocfilehash: e1ff3282c1fdf952177a1faa957398c33045a01c
-ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
+ms.openlocfilehash: b8c947ffc34b62204b6a370f1133111a3e2d3198
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56836164"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57679049"
 ---
 # <a name="orchestrating-microservices-and-multi-container-applications-for-high-scalability-and-availability"></a>높은 확장성 및 가용성을 위한 마이크로 서비스 및 다중 컨테이너 애플리케이션 오케스트레이션
 
@@ -27,7 +27,7 @@ Docker 명령줄 인터페이스 (CLI)를 하나의 호스트에서 하나의 �
 
 개별 컨테이너 또는 간단한 구성 된 앱을 마이크로 서비스를 사용 하 여 더 큰 엔터프라이즈 응용 프로그램의 이동의 관리를 넘어서 오케스트레이션 및 클러스터링 플랫폼을 설정 해야 합니다.
 
-아키텍처 및 개발 관점에서 빌드, 대기업, 마이크로 서비스 기반 있다면 응용 프로그램의 경우 것은 다음 플랫폼과 고급 시나리오를 지 원하는 제품을 이해 해야:
+아키텍처 및 개발 관점에서 빌드, 대기업, 마이크로 서비스 기반 경우 응용 프로그램의 경우 것은 다음 플랫폼과 고급 시나리오를 지 원하는 제품을 이해 해야:
 
 - **클러스터 및 오케스트레이터.** 많은 Docker 호스트에서 응용 프로그램을 확장 해야 할 때와 같은 대규모 마이크로 서비스 기반 응용 프로그램을 사용 하 여 반드시 해야 기본 플랫폼의 복잡성을 추상화 하 여 모든 해당 호스트를 단일 클러스터로 관리할 수 있습니다. 이는 컨테이너 클러스터 및 오케스트레이터에서 제공하는 것입니다. 오케스트레이터의 예로는 Azure Service Fabric 및 Kubernetes가 있습니다. Kubernetes는 Azure Kubernetes Service를 통해 Azure에서 제공됩니다.
 
@@ -41,7 +41,7 @@ Docker 명령줄 인터페이스 (CLI)를 하나의 호스트에서 하나의 �
 |:---:|:---|
 | **Kubernetes** <br/> ![Kubernetes 로고](./media/kubernetes-logo.png) | [*Kubernetes*](https://kubernetes.io/)는 클러스터 인프라와 컨테이너 예약에서 기능 오케스트레이션에 이르기까지 다양한 기능을 제공하는 오픈 소스 제품입니다. 이를 통해 호스트 클러스터 전체에서 애플리케이션 컨테이너의 배포, 확장 및 작업을 자동화할 수 있습니다. <br/> <br/> *Kubernetes*는 쉽게 관리하고 검색할 수 있도록 애플리케이션 컨테이너를 논리 단위로 그룹화하는 컨테이너 중심 인프라를 제공합니다. <br/> <br/> *Kubernetes*의 완성도는 Linux에서 높았지만, Windows에서는 그렇지 못했습니다. |
 | **AKS (azure Kubernetes Service)** <br/> ![Azure Kubernetes Service Logo](./media/aks-logo.png) | [AKS(Azure Kubernetes Service)](https://azure.microsoft.com/services/kubernetes-service/)는 Kubernetes 클러스터의 관리, 배포 및 운영을 간소화하는 Azure에서 관리되는 Kubernetes 컨테이너 오케스트레이션 서비스입니다. |
-| **Azure Service Fabric** <br/> ![Azure Service Fabric Logo](./media/service-fabric-logo.png) | [Service Fabric](https://docs.microsoft.com/azure/service-fabric/service-fabric-overview)은 응용 프로그램을 빌드하기 위한 Microsoft 마이크로 서비스 플랫폼입니다. 서비스의 [오케스트레이터](https://docs.microsoft.com/azure/service-fabric/service-fabric-cluster-resource-manager-introduction)이며, 컴퓨터로 구성된 클러스터를 만듭니다. Service Fabric은 서비스를 컨테이너 또는 일반 프로세스로 배포할 수 있습니다. 또한 동일한 애플리케이션 및 클러스터 내의 컨테이너에 있는 서비스와 프로세스에 있는 서비스를 혼합할 수도 있습니다. <br/> <br/> *Service Fabric* 클러스터는 Azure, 온-프레미스 또는 모든 클라우드에 배포할 수 있습니다. 그러나 Azure에서의 배포는 관리 방식으로 간소화됩니다. <br/> <br/> *Service Fabric*은 [상태 저장 서비스](https://azure.microsoft.com/documentation/articles/service-fabric-reliable-services-introduction/) 및[ Reliable Actors](https://azure.microsoft.com/documentation/articles/service-fabric-reliable-actors-introduction/)와 같이 규범적 [Service Fabric 프로그래밍 모델](https://azure.microsoft.com/documentation/articles/service-fabric-choose-framework/)(추가 및 선택 사양)을 제공합니다. <br/> <br/> *Service Fabric*의 완성도는 Windows에서 높았지만(Windows에서 진화), Linux에서는 그렇지 못했습니다. <br/> <br/> 2017년 이후 Service Fabric에서 Linux 및 Windows 컨테이너를 모두 지원합니다. |
+| **Azure Service Fabric** <br/> ![Azure Service Fabric Logo](./media/service-fabric-logo.png) | [Service Fabric](https://docs.microsoft.com/azure/service-fabric/service-fabric-overview)은 응용 프로그램을 빌드하기 위한 Microsoft 마이크로 서비스 플랫폼입니다. 서비스의 [오케스트레이터](https://docs.microsoft.com/azure/service-fabric/service-fabric-cluster-resource-manager-introduction)이며, 머신의 클러스터를 만듭니다. Service Fabric은 서비스를 컨테이너 또는 일반 프로세스로 배포할 수 있습니다. 또한 동일한 애플리케이션 및 클러스터 내의 컨테이너에 있는 서비스와 프로세스에 있는 서비스를 혼합할 수도 있습니다. <br/> <br/> *Service Fabric* 클러스터는 Azure, 온-프레미스 또는 모든 클라우드에 배포할 수 있습니다. 그러나 Azure에서의 배포는 관리 방식으로 간소화됩니다. <br/> <br/> *Service Fabric*은 [상태 저장 서비스](https://azure.microsoft.com/documentation/articles/service-fabric-reliable-services-introduction/) 및[ Reliable Actors](https://azure.microsoft.com/documentation/articles/service-fabric-reliable-actors-introduction/)와 같이 규범적 [Service Fabric 프로그래밍 모델](https://azure.microsoft.com/documentation/articles/service-fabric-choose-framework/)(추가 및 선택 사양)을 제공합니다. <br/> <br/> *Service Fabric*의 완성도는 Windows에서 높았지만(Windows에서 진화), Linux에서는 그렇지 못했습니다. <br/> <br/> 2017년 이후 Service Fabric에서 Linux 및 Windows 컨테이너를 모두 지원합니다. |
 | **Azure Service Fabric 메시** <br/> ![Azure Service Fabric Mesh Logo](./media/azure-service-fabric-mesh-logo.png) | [*Azure Service Fabric 메시* ](https://docs.microsoft.com/azure/service-fabric-mesh/service-fabric-mesh-overview) 동일한 안정성, 업무상 중요 한 성능 및 Service Fabric로 규모를 제공 하지만, 또한 완전히 관리 되 고 서버 리스 플랫폼을 제공 합니다. 클러스터, VM, 스토리지 또는 네트워킹 구성을 관리할 필요가 없습니다. 애플리케이션의 개발에만 주력할 수 있습니다. <br/> <br/> *Service Fabric 메시* 모든 프로그래밍 언어 및 원하는 프레임 워크를 사용 하 여 개발할 수 있도록 Windows와 Linux 컨테이너를 지원 합니다.
 
 ## <a name="using-container-based-orchestrators-in-azure"></a>Azure에서 컨테이너 기반 오 케 스트레이 터를 사용 하 여
@@ -56,7 +56,7 @@ AKS는 컨테이너화된 애플리케이션을 실행하도록 미리 구성된
 
 Azure Kubernetes Service는 Azure용으로 특별히 인기 있는 Docker 클러스터링 오픈 소스 도구 및 기술의 구성을 최적화합니다. 컨테이너와 애플리케이션 구성 모두에 이식성을 제공하는 개방형 솔루션을 얻을 수 있습니다. 사용자가 크기, 호스트 수, 오케스트레이터 도구를 선택하고, AKS에서 다른 모든 작업을 처리합니다.
 
-![Kubernetes 클러스터 구조: DNS, 스케줄러, 프록시 등을 처리 하는 1 개의 마스터 노드 및 컨테이너를 호스트 하는 여러 작업자 노드에 있습니다.](media/image36.png)
+![Kubernetes 클러스터 구조: DNS, 스케줄러, 프록시 등을 처리하는 하나의 마스터 노드와 컨테이너를 호스트하는 여러 작업자 노드가 있습니다.](media/image36.png)
 
 **그림 4-7**. Kubernetes 클러스터의 단순화된 구조 및 토폴로지
 
@@ -74,13 +74,13 @@ Azure Kubernetes Service는 Azure용으로 특별히 인기 있는 Docker 클러
 
 AKS를 사용 하 여 시작 하려면 Azure portal 또는 CLI를 사용 하 여 AKS 클러스터를 배포할 수 있습니다. Azure Container Service 클러스터 배포에 대한 자세한 내용은 [AKS(Azure Kubernetes Service) 클러스터 배포](https://docs.microsoft.com/azure/aks/kubernetes-walkthrough-portal)를 참조하세요.
 
-기본적으로 AKS의 일부로 설치된 소프트웨어에 대해서는 추가 비용이 없습니다. 모든 기본 옵션은 오픈 소스 소프트웨어로 구현됩니다. AKS는 Azure의 여러 가상 머신에서 사용할 수 있습니다. 선택한 계산 인스턴스 및 사용되는 다른 기본 인프라 리소스(예: 스토리지 및 네트워킹)에 대해서만 요금이 청구됩니다. AKS 자체에 대한 추가 비용은 없습니다.
+기본적으로 AKS의 일부로 설치된 소프트웨어에 대해서는 추가 비용이 없습니다. 모든 기본 옵션은 오픈 소스 소프트웨어로 구현됩니다. AKS는 Azure의 여러 가상 머신에서 사용할 수 있습니다. 선택한 컴퓨팅 인스턴스 및 사용되는 다른 기본 인프라 리소스(예: 스토리지 및 네트워킹)에 대해서만 요금이 청구됩니다. AKS 자체에 대한 추가 비용은 없습니다.
 
 추가 구현에 대 한 Kubernetes에 배포에 대 한 정보에 따라 `kubectl` 버전과 원래 `.yaml` 게시물을 참조 하는 파일을 [AKS (Azure Kubernetes Service)에서 eShopOnContainers 설정](https://github.com/dotnet-architecture/eShopOnContainers/wiki/10.-Setting-the-solution-up-in-AKS-(Azure-Kubernetes-Service))합니다.
 
 ## <a name="deploy-with-helm-charts-into-kubernetes-clusters"></a>Kubernetes 클러스터에 Helm 차트를 사용 하 여 배포
 
-원래 Kubernetes 클러스터에 응용 프로그램을 배포할 때 사용할 수 있습니다 `kubectl.exe` CLI 도구 배포 파일을 사용 하 여 네이티브 형식에 따라 (`.yaml` 파일), 이전 섹션에서 이미 언급 합니다. 그러나 더 복잡 한 Kubernetes 응용 프로그램에 대 한 데 권장 되는 복잡 한 마이크로 서비스 기반 응용 프로그램을 배포할 때와 같은 [Helm](https://helm.sh/)합니다.
+원래 Kubernetes 클러스터에 응용 프로그램을 배포할 때 사용할 수 있습니다 `kubectl.exe` CLI 도구 배포 파일을 사용 하 여 네이티브 형식에 따라 (`.yaml` 파일), 이전 섹션에서 이미 언급 합니다. 그러나 복잡한 마이크로 서비스 기반 애플리케이션을 배포할 때와 같이 더 복잡한 Kubernetes 애플리케이션의 경우 [Helm](https://helm.sh/)을 사용하는 것이 좋습니다.
 
 Helm 차트를 사용 하면 버전 "," 설치 "," 공유 "," 업그레이드 "또는" 롤백 가장 복잡 한 Kubernetes 응용 프로그램도 정의할 수 있습니다.
 
@@ -149,7 +149,7 @@ Azure Service Fabric에서 컨테이너 지원에 대한 최신 정보는 [Servi
 
 Service Fabric은 다른 논리적 아키텍처 (비즈니스 마이크로 서비스 또는 바인딩된 컨텍스트) 물리적 구현과 정의할 수 있는 플랫폼의 좋은 예입니다. 예를 들어, 구현 하는 경우 [상태 저장 Reliable Services](https://docs.microsoft.com/azure/service-fabric/service-fabric-reliable-services-introduction) 에 [Azure Service Fabric](https://docs.microsoft.com/azure/service-fabric/service-fabric-overview)에 다음 섹션에 도입 된 "[상태 비저장 및 상태 저장 마이크로](#stateless-versus-stateful-microservices), "비즈니스 마이크로 서비스 개념을 여러 물리적 서비스를 사용 해야 합니다.
 
-그림 4-10에서 Service Fabric 상태 저장 신뢰할 수 있는 서비스를 구현 하는 경우 논리적/비즈니스 마이크로 서비스 관점에서 생각에 표시 된 것 처럼 일반적으로 해야 두 가지 서비스 계층을 구현 합니다. 첫 번째는 여러 개의 파티션(각 파티션은 상태 저장 서비스)을 처리하는 백 엔드 상태 저장 신뢰할 수 있는 서비스입니다. 두 번째는 다중 파티션 또는 상태 저장 서비스 인스턴스에서 라우팅 및 데이터 집계를 담당하는 프런트 엔드 서비스 또는 Gateway 서비스입니다. 또한 이 Gateway 서비스는 백 엔드 서비스에 액세스하는 재시도 루프로 클라이언트 쪽 통신을 처리합니다. 사용자 지정 서비스를 구현 하거나 또는 기본 제공 Service Fabric도 사용할 수는 게이트웨이 서비스 라고 [역방향 프록시](https://docs.microsoft.com/azure/service-fabric/service-fabric-reverseproxy)합니다.
+그림 4-10에서 Service Fabric 상태 저장 신뢰할 수 있는 서비스를 구현 하는 경우 논리적/비즈니스 마이크로 서비스 관점에서 생각에 표시 된 것 처럼 일반적으로 해야 두 가지 서비스 계층을 구현 합니다. 첫 번째는 여러 개의 파티션(각 파티션은 상태 저장 서비스)을 처리하는 백 엔드 상태 저장 신뢰할 수 있는 서비스입니다. 두 번째는 다중 파티션 또는 상태 저장 서비스 인스턴스에서 라우팅 및 데이터 집계를 담당하는 프런트 엔드 서비스 또는 Gateway 서비스입니다. 또한 이 Gateway 서비스는 백 엔드 서비스에 액세스하는 재시도 루프로 클라이언트 쪽 통신을 처리합니다. 사용자 지정 서비스를 구현하거나, 기본 제공 Service Fabric [역방향 프록시](https://docs.microsoft.com/azure/service-fabric/service-fabric-reverseproxy)를 사용할 수 있는 경우 Gateway 서비스라고 합니다.
 
 ![Service Fabric에 컨테이너의 여러 상태 저장 reliable services를 지 원하는 처방이 있습니다.](./media/service-fabric-stateful-business-microservice.png)
 
@@ -189,7 +189,7 @@ Azure Service Fabric에서 컨테이너 지원에 대한 자세한 내용은 [Se
 
 상태 비저장 방식은 완벽하게 유효하며 기존의 잘 알려진 패턴과 유사하기 때문에 상태 저장 마이크로 서비스보다 쉽게 구현할 수 있습니다. 그러나 상태 비저장 마이크로 서비스는 프로세스와 데이터 원본 간에 대기 시간을 둡니다. 또한 캐시 및 대기열을 추가하여 성능을 향상시키려는 경우 더욱 복잡해집니다. 결과적으로 너무 많은 계층을 가진 복잡한 아키텍처로 끝날 수 있습니다.
 
-반대로 [상태 기반 마이크로 서비스](https://docs.microsoft.com/azure/service-fabric/service-fabric-reliable-services-introduction#when-to-use-reliable-services-apis)는 도메인 논리와 데이터 간에 대기 시간이 없기 때문에 고급 시나리오에서 뛰어납니다. 대량의 데이터 처리, 게임 백 엔드, 서비스 형태의 데이터베이스 및 기타 대기 시간이 적은 시나리오는 모두 상태 저장 서비스를 활용하여 로컬 상태에서 더 빠르게 액세스할 수 있습니다.
+반대로 [상태 저장 마이크로 서비스](https://docs.microsoft.com/azure/service-fabric/service-fabric-reliable-services-introduction#when-to-use-reliable-services-apis)는 도메인 논리와 데이터 간에 대기 시간이 없기 때문에 고급 시나리오에서 뛰어납니다. 대량의 데이터 처리, 게임 백 엔드, 서비스 형태의 데이터베이스 및 기타 대기 시간이 적은 시나리오는 모두 상태 저장 서비스를 활용하여 로컬 상태에서 더 빠르게 액세스할 수 있습니다.
 
 상태 비저장 및 상태 저장 서비스는 보완적입니다. 예를 들어 그림 4-31에서 오른쪽 다이어그램에서 보듯이 상태 저장 서비스를 여러 파티션으로 분할할 수 있습니다. 이러한 파티션에 액세스하려면 파티션 키를 기반으로 각 파티션의 주소를 지정하는 방법을 알고 있는 게이트웨이 서비스로 작동하는 상태 비저장 서비스가 필요할 수 있습니다.
 

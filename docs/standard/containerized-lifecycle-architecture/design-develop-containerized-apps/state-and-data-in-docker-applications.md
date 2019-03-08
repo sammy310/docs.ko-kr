@@ -4,12 +4,12 @@ description: 컨테이너 화 된 응용 프로그램의 상태를 저장 하는
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 02/15/2019
-ms.openlocfilehash: 1e30a545ba0003acb8b85dee9896d54934f0d737
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
+ms.openlocfilehash: 30dde3ce44aa61fff3fad1841ae4a8b941573877
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56746000"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57678083"
 ---
 # <a name="state-and-data-in-docker-applications"></a>Docker 애플리케이션의 상태 및 데이터
 
@@ -19,7 +19,7 @@ ms.locfileid: "56746000"
 
 Docker 호스트에서 [Docker 볼륨](https://docs.docker.com/engine/admin/volumes/)으로:
 
-- **볼륨** Docker에서 관리 되는 호스트 파일 시스템의 영역에 저장 됩니다.
+- **볼륨**은 Docker에서 관리되는 호스트 파일 시스템의 영역에 저장됩니다.
 
 - **탑재 바인딩** 액세스는 Docker 프로세스에서 제어할 수 없습니다 및 컨테이너를 중요 한 OS 폴더에 액세스할 수 없습니다 보안상 위험할 수 있으므로 호스트 파일 시스템의 폴더를 매핑할 수 있습니다.
 
@@ -47,7 +47,7 @@ Docker 컨테이너에서:
 
 **`tmpfs` 탑재** 는 가상 폴더는 호스트의 메모리에만 라이브 및 파일 시스템에 기록 되지 않습니다. 이들은 빠르고 안전하지만 메모리를 사용하며 비영구적 데이터에만 사용됩니다.
 
-그림 4-5와 같이 일반 Docker 볼륨은 호스트 서버 또는 VM의 물리적 장벽 내부가 아닌 컨테이너 외부에 저장될 수 있습니다. 그러나 Docker 컨테이너는 호스트 서버 또는 VM 간의 볼륨에 액세스할 수 없습니다. 즉, 이러한 볼륨 이므로 없이 원격 호스트를 지 원하는 볼륨 드라이버를 사용 하 여 설정할 수 있지만 여러 Docker 호스트에서 실행 되는 컨테이너 간에 공유 된 데이터를 관리할 수 있습니다.
+그림 4-5와 같이 일반 Docker 볼륨은 호스트 서버 또는 VM의 물리적 장벽 내부가 아닌 컨테이너 외부에 저장될 수 있습니다. 그러나 Docker 컨테이너는 호스트 서버 또는 VM 간의 볼륨에 액세스할 수 없습니다. 즉, 이러한 볼륨을 사용하면 여러 Docker 호스트에서 실행되는 컨테이너 간에 공유되는 데이터를 관리할 수 없지만 원격 호스트를 지원하는 볼륨 드라이버를 사용하여 수행할 수 있습니다.
 
 ![볼륨을 컨테이너 간에 공유할 수 있지만 원격 호스트를 지원하는 원격 드라이버를 사용하지 않는 한 동일한 호스트에서만 공유할 수 있습니다. ](./media/image5.png)
 

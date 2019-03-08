@@ -2,12 +2,12 @@
 title: 집합 작업 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 2b06e822-e030-438f-9db7-ee402bd3a706
-ms.openlocfilehash: 3aaccd2b91e842bb433fe97e59314860c631341e
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.openlocfilehash: 8ec7f2785617c354a1aa506ac0df9eef7d051b59
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57200761"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57679296"
 ---
 # <a name="set-operations-visual-basic"></a>집합 작업 (Visual Basic)
 LINQ의 집합 작업은 동일 컬렉션이나 별개 컬렉션(또는 집합)에 동등한 요소가 있는지 여부에 따라 결과 집합을 생성하는 쿼리 작업을 가리킵니다.  
@@ -33,7 +33,7 @@ LINQ의 집합 작업은 동일 컬렉션이나 별개 컬렉션(또는 집합)�
 ### <a name="except"></a>Except  
  다음 그림에서는 <xref:System.Linq.Enumerable.Except%2A?displayProperty=nameWithType>의 동작을 보여 줍니다. 반환된 시퀀스에는 두 번째 입력 시퀀스에 없는 첫 번째 입력 시퀀스의 요소만 포함됩니다.  
   
- ![Except&#40;&#41;의 작업을 보여 주는 그래픽](../../../../csharp/programming-guide/concepts/linq/media/except.png "Except")  
+ ![동작을 보여주는 그래픽 제외 하 고&#40;&#41;합니다. ](./media/set-operations/except-behavior-graphic.png "의 동작을 보여 줍니다 제외 하 고 있습니다.")  
   
 ### <a name="intersect"></a>Intersect  
  다음 그림에서는 <xref:System.Linq.Enumerable.Intersect%2A?displayProperty=nameWithType>의 동작을 보여 줍니다. 반환된 시퀀스에는 입력 시퀀스 둘 다에 공통적으로 있는 요소가 포함됩니다.  
