@@ -4,12 +4,12 @@ description: Docker를 사용 하 여 작업할 때 매일 사용에 몇 가지 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 02/15/2019
-ms.openlocfilehash: a7f0106eed81c28634a079ce61f48d7d56f6ffd2
-ms.sourcegitcommit: 07c4368273b446555cb2c85397ea266b39d5fe50
+ms.openlocfilehash: 07371bee6881b1fa7edf64b9bb50d387dcbf9dde
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/21/2019
-ms.locfileid: "56584202"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57677182"
 ---
 # <a name="docker-terminology"></a>Docker 용어
 
@@ -23,7 +23,7 @@ ms.locfileid: "56584202"
 
 **컨테이너**: Docker 이미지의 인스턴스입니다. 컨테이너는 단일 애플리케이션, 프로세스 또는 서비스의 실행을 나타냅니다. Docker 이미지의 콘텐츠, 실행 환경 및 명령의 표준 집합으로 구성됩니다. 서비스의 크기를 조정하는 경우 동일한 이미지에서 컨테이너의 여러 인스턴스를 만듭니다. 일괄 작업은 동일한 이미지에서 다중 컨테이너를 만들 수 있고 각 인스턴스에 다른 매개 변수를 전달합니다.
 
-**볼륨**: 컨테이너가 사용할 수 있는 쓰기 가능한 파일 시스템을 제공합니다. 이미지는 읽기 전용이지만 대부분의 프로그램이 파일 시스템에 써야 하기 때문에 볼륨은 컨테이너 이미지의 맨 위에 쓰기 가능한 계층을 추가하여 프로그램이 쓰기 가능한 파일 시스템에 액세스할 수 있도록 합니다. 프로그램은 계층화된 파일 시스템에 액세스하는 것을 알지 못하며, 단순히 일반적인 파일 시스템입니다. 볼륨은 호스트 시스템에 있으며 Docker에 의해 관리됩니다.
+**볼륨**: 컨테이너가 사용할 수 있는 쓰기 가능한 파일 시스템을 제공합니다. 이미지는 읽기 전용이지만 대부분의 프로그램이 파일 시스템에 써야 하기 때문에 볼륨은 컨테이너 이미지의 맨 위에 쓰기 가능한 계층을 추가하여 프로그램이 쓰기 가능한 파일 시스템에 액세스할 수 있도록 합니다. 프로그램에는 계층화 된 파일 시스템에 액세스 하는 것 이므로 파일 시스템만 정상적으로 알 수 없습니다. 볼륨은 호스트 시스템에 있으며 Docker에 의해 관리됩니다.
 
 **태그**: (버전 번호 또는 대상 환경에 따라) 다양한 이미지 또는 동일한 이미지의 버전을 식별할 수 있도록 표시 또는 레이블은 이미지에 적용할 수 있습니다.
 
@@ -37,15 +37,15 @@ ms.locfileid: "56584202"
 
 **Docker 허브**: 이미지를 업로드하고 여기에서 작업하는 공개 레지스트리입니다. Docker 허브는 Docker 이미지 호스팅, 공개 또는 개인 레지스트리, 빌드 트리거 및 웹후크, GitHub 및 Bitbucket과 통합을 제공합니다.
 
-**Azure Container Registry**: Docker 이미지로 작업하는 공용 리소스 및 Azure의 해당 구성 요소입니다. 여기서는 Azure에서 배포에 가깝고, 액세스에 대한 제어를 제공하는 레지스트리를 제공하여 Azure Active Directory 그룹 및 권한을 사용할 수 있도록 합니다.
+**Azure Container Registry**: Docker 이미지로 작업하는 공용 리소스 및 Azure의 해당 구성 요소입니다. Azure에서 배포에 가깝고 이며 수 있도록 액세스에 대 한 제어를 제공 하는 레지스트리를 제공 하는이 Azure Active Directory 그룹 및 권한을 사용 합니다.
 
-**DTR(Docker Trusted Registry)**: 조직의 데이터 센터 및 네트워크 내에서 유지되도록 온-프레미스에 설치될 수 있는 Docker의 Docker 레지스트리 서비스입니다. 엔터프라이즈 내에서 관리되어야 하는 개인 이미지에 유용합니다. Docker Trusted Registry는 Docker 데이터 센터 제품의 일부로 포함됩니다. 자세한 내용은 [DTR(Docker Trusted Registry)](https://docs.docker.com/docker-trusted-registry/overview/)를 참조하세요.
+**DTR(Docker Trusted Registry)**: 조직의 데이터 센터 및 네트워크 내에서 유지되도록 온-프레미스에 설치될 수 있는 Docker의 Docker 레지스트리 서비스입니다. 기업 내 관리 해야 하는 개인 이미지에는 것이 유용 합니다. Docker Trusted Registry는 Docker 데이터 센터 제품의 일부로 포함됩니다. 자세한 내용은 [DTR(Docker Trusted Registry)](https://docs.docker.com/docker-trusted-registry/overview/)를 참조하세요.
 
 **Docker CE(Community Edition)**: 로컬로 컨테이너를 빌드하고, 실행하고, 테스트하는 Windows 및 macOS용 개발 도구입니다. Windows용 Docker CE는 Linux 및 Windows 컨테이너에 개발 환경을 제공합니다. Windows의 Linux Docker 호스트는 [Hyper-V](https://www.microsoft.com/cloud-platform/server-virtualization) 가상 머신을 기반으로 합니다. Windows 컨테이너에 대한 호스트는 Windows를 직접 기반으로 합니다. Mac용 Docker CE는 Apple 하이퍼바이저 및 [xhyve 하이퍼바이저](https://github.com/mist64/xhyve) 프레임워크를 기반으로 합니다. 여기서는 Mac OS X에서 Linux Docker 가상 머신을 제공합니다. Windows 및 Mac용 Docker CE는 Oracle VirtualBox를 기반으로 하는 Docker 도구 상자를 대체합니다.
 
 **Docker EE(Enterprise Edition)**: Linux 및 Windows 개발을 위한 엔터프라이즈급 버전의 Docker 도구입니다.
 
-**작성**: 다중 컨테이너 애플리케이션을 정의하고 실행하는 데 메타데이터를 사용하는 명령줄 도구 및 YAML 파일 형식입니다. 환경에 따라 값을 재정의할 수 있는 하나 이상의 .yml 파일을 사용하여 여러 이미지를 기반으로 하는 단일 애플리케이션을 정의합니다. 정의를 만든 후에 Docker 호스트에 이미지당 컨테이너를 만드는 단일 명령(docker-compose up)을 사용하여 전체 다중 컨테이너 애플리케이션을 배포할 수 있습니다.
+**작성**: 다중 컨테이너 애플리케이션을 정의하고 실행하는 데 메타데이터를 사용하는 명령줄 도구 및 YAML 파일 형식입니다. 환경에 따라 값을 재정의할 수 있는 하나 이상의 .yml 파일을 사용하여 여러 이미지를 기반으로 하는 단일 애플리케이션을 정의합니다. 정의 만든 후에 단일 명령 사용 하 여 전체 다중 컨테이너 응용 프로그램을 배포할 수 있습니다 (docker-등록 구성)는 Docker 호스트에 이미지당 컨테이너를 만듭니다.
 
 **클러스터**: 애플리케이션이 클러스터 내의 여러 호스트에 걸쳐 분산된 서비스의 여러 인스턴스 크기를 조정할 수 있도록 단일 가상 Docker 호스트인 것처럼 노출된 Docker 호스트 컬렉션입니다. Docker 클러스터는 Kubernetes, Azure Service Fabric, Docker Swarm 및 Mesosphere DC/OS를 사용하여 만들 수 있습니다.
 

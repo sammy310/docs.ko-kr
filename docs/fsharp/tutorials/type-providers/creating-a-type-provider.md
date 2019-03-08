@@ -2,12 +2,12 @@
 title: '자습서: 형식 공급자 만들기'
 description: 나만의 사이트 생성 하는 방법을 알아봅니다 F# 형식 공급자에서 F# 기본 개념을 보여 주는 몇 가지 간단한 형식 공급자를 검사 하 여 3.0.
 ms.date: 02/02/2019
-ms.openlocfilehash: ec26f25ad39ca432d6ef11238268e1704bd9638b
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 14e3035d03438aaaa2f6e64210f99e1f149db274
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57371565"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57678425"
 ---
 # <a name="tutorial-create-a-type-provider"></a>자습서: 형식 공급자 만들기
 
@@ -469,7 +469,7 @@ let r = reg.Match("425-123-2345").Groups.["AreaCode"].Value //r equals "425"
 
 - 각 명명 된 그룹에 제공 된 속성을 결과 일치할 경우 인덱서를 사용 하는 결과 속성에 액세스 `Groups` 컬렉션입니다.
 
-다음 코드는 이러한 공급자를 구현 하는 논리의 핵심 하 고이 예제에서는 모든 제공된 된 형식 멤버의 추가 생략 합니다. 각 구성원을 추가 하는 방법에 대 한 내용은이 항목 뒷부분의 적절 한 섹션을 참조 합니다. 전체 코드에서 샘플을 다운로드 합니다 [ F# 3.0 샘플 팩](https://fsharp3sample.codeplex.com) Codeplex 웹 사이트입니다.
+다음 코드는 이러한 공급자를 구현 하는 논리의 핵심 하 고이 예제에서는 모든 제공된 된 형식 멤버의 추가 생략 합니다. 각 구성원을 추가 하는 방법에 대 한 내용은이 항목 뒷부분의 적절 한 섹션을 참조 합니다. 전체 코드에서 샘플을 다운로드 합니다 [ F# 3.0 샘플 팩](https://archive.codeplex.com/?p=fsharp3sample) CodePlex 웹 사이트입니다.
 
 ```fsharp
 namespace Samples.FSharp.RegexTypeProvider

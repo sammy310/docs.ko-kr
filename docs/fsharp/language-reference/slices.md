@@ -2,12 +2,12 @@
 title: 조각 (F#)
 description: 기존 분할 영역을 사용 하는 방법에 알아봅니다 F# 데이터 형식 및 다른 데이터 형식에 대 한 사용자 고유의 조각을 정의 하는 방법입니다.
 ms.date: 01/22/2019
-ms.openlocfilehash: 60b57d4eea40bb26dc43d8255dd933b63ac6303c
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 1d8bb029ad18c8853ab58888959967ed279fb368
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56970113"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57675279"
 ---
 # <a name="slices"></a>조각
 
@@ -86,7 +86,7 @@ printfn "%A" subA'
 
 // Slice a 2x2 matrix out of the full 3x3 matrix
 let twoByTwo = A.[0..1,0..1]
-printfn "%A" twobyTwo
+printfn "%A" twoByTwo
 ```
 
 F# 핵심 라이브러리를 정의 하지 않습니다 `GetSlice`3D 배열에 대 한 합니다. 정의 해야 합니다 또는 다른 배열을 한 차원 조각화 하려는 경우는 `GetSlice` 멤버 직접.

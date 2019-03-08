@@ -4,12 +4,12 @@ description: Docker 개발 수명 주기를 지 원하는 가장 중요 한 개�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 02/15/2019
-ms.openlocfilehash: 09d15d4221d948b654912a8890df66052e68f6eb
-ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
+ms.openlocfilehash: 38a9f8209200635c752f60af90e22ef916796525
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56836177"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57677242"
 ---
 # <a name="development-environment-for-docker-apps"></a>Docker 앱을 위한 개발 환경
 
@@ -37,7 +37,7 @@ Visual Studio 2017 (이상)를 사용 하는 것이 좋습니다 설정 하는 �
 
 ## <a name="language-and-framework-choices"></a>언어 및 프레임 워크 선택
 
-Microsoft 도구를 사용 하 여 가장 최신 언어를 사용 하 여 Docker 응용 프로그램을 개발할 수 있습니다. 다음은 초기 목록을, 하지만에 제한 되지 않습니다.
+Microsoft 도구를 사용 하 여 가장 최신 언어를 사용 하 여 Docker 응용 프로그램을 개발할 수 있습니다. 다음은 초기 목록에 있지만를 제한 합니다.
 
 - .NET Core 및 ASP.NET Core
 - Node.js

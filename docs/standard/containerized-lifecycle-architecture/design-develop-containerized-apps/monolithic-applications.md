@@ -4,16 +4,16 @@ description: 컨테이너 화 된 모놀리식 응용 프로그램에 대 한 �
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 02/15/2019
-ms.openlocfilehash: eff764472b4a9fc5b699545fc9629cc12d0186ca
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
+ms.openlocfilehash: 76e1db8886fe75b79cea2e28ef05e62ca519ae58
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56747264"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57676839"
 ---
 # <a name="monolithic-applications"></a>모놀리식 응용 프로그램
 
-이 시나리오에서는 단일 모놀리식 웹 응용 프로그램 또는 서비스를 작성 하 고 컨테이너로 배포 합니다. 응용 프로그램 내에서 구조 아닐 모놀리식; 이 여러 라이브러리, 구성 요소 또는 계층 (응용 프로그램 계층, 도메인 계층, 데이터 액세스 계층 등)으로 이루어질 수 있습니다. 외부에서 단일 프로세스, 단일 웹 응용 프로그램 또는 단일 서비스 같은 단일 컨테이너를입니다.
+이 시나리오에서는 단일 모놀리식 웹 응용 프로그램 또는 서비스를 구축 하 고 컨테이너로 배포 키를 누릅니다. 응용 프로그램 내에서 구조 아닐 모놀리식; 이 여러 라이브러리, 구성 요소 또는 계층 (응용 프로그램 계층, 도메인 계층, 데이터 액세스 계층 등)으로 이루어질 수 있습니다. 외부에서 단일 프로세스, 단일 웹 응용 프로그램 또는 단일 서비스 같은 단일 컨테이너를입니다.
 
 이 모델을 관리하려면 애플리케이션을 나타내는 단일 컨테이너를 배포합니다. 이 크기를 조정 하려면 앞에 부하 분산 장치를 사용 하 여 몇 가지 여러 복사본을 추가 합니다. 단일 컨테이너 또는 가상 머신 (VM)에서 단일 배포를 관리 하면 단순성을 제공 합니다.
 
@@ -71,7 +71,7 @@ Docker 이미지로 업데이트를 배포하는 것이 훨씬 더 빠르고 네
 
 Azure App Service를 사용 하는 것은 직관적인 수 있습니다 및 유용한 Git을 제공 하기 때문에 신속 하 게 실행 코드를 사용 하는 통합 Microsoft Visual studio에서 빌드 및 직접 Azure에 배포 합니다. 있지만, 일반적으로 (Docker를 통한 없음), 다른 기능, 프레임 워크 또는 App Services에서 지원 되지 않는 종속성을 필요한 경우 Azure 팀 App Service에서 해당 종속성이 업데이트 될 때까지 대기 하는 데 필요한 하거나 같은 다른 서비스도 전환 Service Fabric, Cloud Services 또는 일반 Vm을 추가로 제어할를 응용 프로그램에 대 한 필수 구성 요소 또는 프레임 워크를 설치할 수 있습니다.
 
-그림 4-4에 나와 있는 것 처럼 이제 Visual Studio 2017을 사용 하는 경우에 Azure App Service에서 컨테이너 지원 앱 환경에서 원하는 항목을 포함할 수 있습니다 제공 합니다. 종속성에 추가한 앱을 컨테이너에서 실행 되므로, Dockerfile 또는 Docker 이미지에 해당 종속성을 포함 하는 기능을 얻을 수 있습니다.
+그림 4-4에 나와 있는 것 처럼 이제 Visual Studio 2017을 사용 하는 경우에 Azure App Service에서 컨테이너 지원 앱 환경에서 원하는 항목을 포함할 수 있습니다 제공 합니다. 종속성에 추가한 앱을 컨테이너에서 실행 중인 때문에, Dockerfile 또는 Docker 이미지에 해당 종속성을 포함 하는 기능을 얻을 수 있습니다.
 
 ![컨테이너 레지스트리에 대 한 선택기를 강조 표시 하는 Azure app service에 게시 하려면 Visual Studio 마법사의 보기입니다.](./media/image4.png)
 

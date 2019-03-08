@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 55fd6e6eec0c5107398bd0a7dda0281f69eb471b
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: a9889ddf1c03f14835101f31d0a3b264f0016267
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57492519"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57676553"
 ---
 # <a name="iclrmetahostgetruntime-method"></a>ICLRMetaHost::GetRuntime 메서드
 가져옵니다 합니다 [ICLRRuntimeInfo](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md) 는 CLR (공용 언어 런타임)의 특정 버전에 해당 하는 인터페이스입니다. 이 메서드를 대체 합니다 [CorBindToRuntimeEx](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md) 함수를 사용 합니다 [STARTUP_LOADER_SAFEMODE](../../../../docs/framework/unmanaged-api/hosting/startup-flags-enumeration.md) 플래그입니다.  
@@ -61,7 +61,7 @@ HRESULT GetRuntime (
 |E_POINTER|`pwzVersion` 또는 `ppRuntime`이 null입니다.|  
   
 ## <a name="remarks"></a>설명  
- 이 메서드가 상호 작용 하는 일관 되 게 레거시 인터페이스를 사용 하 여 같은 합니다 [ICorRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md) 사용 되지 않는 등의 인터페이스 및 레거시 기능 `CorBindTo*` 함수 (참조 [사용 되지 않는 CLR 호스팅 함수](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md) 호스팅 API는.NET Framework 2.0에서). 즉, 기존 API를 사용 하 여 로드 된 런타임을 새 API에 표시 되며 새 API를 사용 하 여 로드 된 런타임을 레거시 API에 표시 됩니다. .  
+ 이 메서드가 상호 작용 하는 일관 되 게 레거시 인터페이스를 사용 하 여 같은 합니다 [ICorRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md) 사용 되지 않는 등의 인터페이스 및 레거시 기능 `CorBindTo*` 함수 (참조 [사용 되지 않는 CLR 호스팅 함수](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md) 호스팅 API는.NET Framework 2.0에서). 즉, 기존 API를 사용 하 여 로드 된 런타임을 새 API에 표시 되며 새 API를 사용 하 여 로드 된 런타임을 레거시 API에 표시 됩니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  

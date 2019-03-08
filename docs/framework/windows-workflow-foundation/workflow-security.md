@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - programming [WF], workflow security
 ms.assetid: d712a566-f435-44c0-b8c0-49298e84b114
-ms.openlocfilehash: 25cdd90250f256588d8ac72c0f98464eeae35938
-ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
+ms.openlocfilehash: 62564823338ee071f09036929a3a11cd5f3bbbe1
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "56441761"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57676566"
 ---
 # <a name="workflow-security"></a>워크플로 보안
 Windows WF (Workflow Foundation)는 Microsoft SQL Server 및 Windows Communication Foundation (WCF)와 같은 몇 가지 다른 기술과 통합 되어 있습니다. 이러한 기술과 잘못 상호 작용하면 워크플로에 보안 문제가 발생할 수 있습니다.
@@ -57,4 +57,4 @@ Windows WF (Workflow Foundation)는 Microsoft SQL Server 및 Windows Communicati
 
 4.  WS-Trust ActAs를 사용하여 클라이언트 보안 토큰이 백엔드 서비스로 이동(클레임 기반 위임)
 
-에 대 한 자세한 내용은 및 WF Security Pack CTP 다운로드를 참조 하세요. [WF Security Pack CTP](https://wf.codeplex.com/releases/view/48114)
+에 대 한 자세한 내용은 및 WF Security Pack CTP 다운로드를 참조 하세요. [WF Security Pack CTP](https://archive.codeplex.com/?p=wf)

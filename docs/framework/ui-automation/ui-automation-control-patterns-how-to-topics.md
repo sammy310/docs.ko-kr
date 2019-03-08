@@ -7,14 +7,12 @@ helpviewer_keywords:
 - control patterns, UI Automation
 - UI Automation, control patterns
 ms.assetid: 72c80262-8ca9-4624-9bd6-96984c5b7c5c
-author: Xansky
-ms.author: mhopkins
-ms.openlocfilehash: 44f4befc03c886e51a19a44f45f7cbdc20f60fe3
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: dc77d3798c9a79b5becf28e55c9f7e3be23eb352
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47209920"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57677827"
 ---
 # <a name="ui-automation-control-patterns-how-to-topics"></a>UI 자동화 컨트롤 패턴 방법 항목
 > [!NOTE]
@@ -27,4 +25,4 @@ ms.locfileid: "47209920"
  [지원되는 UI 자동화 컨트롤 패턴 가져오기](../../../docs/framework/ui-automation/get-supported-ui-automation-control-patterns.md)  
  [UI 자동화를 사용하여 확인란의 전환 상태 가져오기](../../../docs/framework/ui-automation/get-the-toggle-state-of-a-check-box-using-ui-automation.md)  
  [UI 자동화를 사용하여 컨트롤 호출](../../../docs/framework/ui-automation/invoke-a-control-using-ui-automation.md)  
- [UI 자동화 요소 이동](../../../docs/framework/ui-automation/move-a-ui-automation-element.md)
+ [Move a UI Automation Element](../../../docs/framework/ui-automation/move-a-ui-automation-element.md)

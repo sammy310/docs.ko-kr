@@ -6,12 +6,12 @@ helpviewer_keywords:
 - cells [Windows Forms], styles
 - data grids [Windows Forms], cell styles
 ms.assetid: dbb75ed6-8804-4232-8382-f9920c2e380c
-ms.openlocfilehash: 7ff8f8b0c047601e092b8ccb347095d9d1d0a1d1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3cb46ec5b203451cb2f9fd1c87457ad52552359c
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54575163"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57674681"
 ---
 # <a name="cell-styles-in-the-windows-forms-datagridview-control"></a>Windows Forms DataGridView 컨트롤의 셀 스타일
 내에 있는 각 셀은 <xref:System.Windows.Forms.DataGridView> 컨트롤 고유한 스타일을 텍스트 형식으로, 배경색, 전경색, 글꼴 등을 가질 수 있습니다. 하지만 일반적으로 여러 셀은 특징이 있습니다. 특정 스타일입니다.  
@@ -87,7 +87,7 @@ ms.locfileid: "54575163"
   
  다음 다이어그램에서는이 프로세스를 보여 줍니다.  
   
- ![DataGridViewCellStyle 형식의](../../../../docs/framework/winforms/controls/media/datagridviewcells1.gif "DataGridViewCells1")  
+ ![DataGridViewCellStyle 형식의](./media/cell-styles-in-the-windows-forms-datagridview-control/datagridviewcells-inheritance-diagram.gif "DataGridViewCells 상속 다이어그램")  
   
  또한 특정 행과 열으로 상속 된 스타일을 액세스할 수 있습니다. 열 <xref:System.Windows.Forms.DataGridViewColumn.InheritedStyle%2A> 속성은 다음 속성에서 값을 상속 합니다.  
   
@@ -122,7 +122,7 @@ ms.locfileid: "54575163"
   
  다음 다이어그램에서는 다양 한 <xref:System.Windows.Forms.DataGridViewCellStyle> 속성 다른 위치에서 해당 값을 상속할 수 있습니다.  
   
- ![DataGridView 속성&#45;값이 상속](../../../../docs/framework/winforms/controls/media/datagridviewcells2.gif "DataGridViewCells2")  
+ ![DataGridView 속성&#45;값이 상속](./media/cell-styles-in-the-windows-forms-datagridview-control/datagridviewcells-value-inheritance-diagram.gif "DataGridViewCells 값 상속 다이어그램")  
   
  스타일 상속을 활용 하 여 여러 위치에서 동일한 정보를 지정 하지 않고 전체 컨트롤에 대 한 적절 한 스타일을 제공할 수 있습니다.  
   

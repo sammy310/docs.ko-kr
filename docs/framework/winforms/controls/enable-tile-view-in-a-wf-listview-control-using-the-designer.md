@@ -6,19 +6,19 @@ helpviewer_keywords:
 - ListView control [Windows Forms], tile view
 - tiling [Windows Forms], Windows Forms, controls
 ms.assetid: 12f0816a-52b8-41ee-a6d9-ded3a8a5817a
-ms.openlocfilehash: 0acd235fe015b3f93364482b83008b388c1b86d9
-ms.sourcegitcommit: bef803e2025642df39f2f1e046767d89031e0304
+ms.openlocfilehash: b365ada2d38f8fca97b66bb3d46b2c8e93d7cb1d
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56303974"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57676241"
 ---
 # <a name="how-to-enable-tile-view-in-a-windows-forms-listview-control-using-the-designer"></a>방법: 디자이너를 사용 하 여 Windows Forms ListView 컨트롤에서 Tile 보기 사용
 바둑판식 뷰 기능을 <xref:System.Windows.Forms.ListView> 컨트롤을 사용 하면 그래픽 및 텍스트 정보 간의 시각적 균형을 제공할 수 있습니다. 바둑판식 뷰에서 항목에 대해 표시되는 텍스트 정보는 세부 정보 뷰에 대해 정의된 열 정보와 같습니다. 타일 보기 함수에 함께 그룹화 또는 삽입 표시 기능에는 <xref:System.Windows.Forms.ListView> 제어 합니다.  
   
  바둑판식 뷰는 다음 이미지에 나와 있는 것 처럼 32x32 아이콘과 여러 줄 텍스트의를 사용 합니다.  
   
- ![ListView 컨트롤의 tile 보기](../../../../docs/framework/winforms/controls/media/listviewtile.gif "ListViewTile")  
+ ![ListView 컨트롤의 tile 보기](./media/enable-tile-view-in-a-wf-listview-control-using-the-designer/tile-view-in-listview-control.gif "뷰 아이콘 및 텍스트 타일")  
   
  타일 보기 속성 및 메서드를 사용 하면 각 항목에 대해 표시 하 고 전체적으로 타일 보기 창 내에서 모든 항목의 모양과 크기를 제어 하는 열 필드를 지정할 수 있습니다. 이해를 돕기 위해 타일에서 텍스트의 첫 번째 줄은 항상 항목의 이름입니다. 변경할 수 없습니다.  
   

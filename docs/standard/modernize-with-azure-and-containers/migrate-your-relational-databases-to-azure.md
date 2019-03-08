@@ -4,16 +4,16 @@ description: Azure 클라우드 및 Windows 컨테이너를 사용 하 여 기�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 04/28/2018
-ms.openlocfilehash: a2aedc9729c674a7b4958506b90c285e54d8d724
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 8cadfc99a4c3d32e24d4a44e8cf4ce17a2ba7a07
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53153763"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57677554"
 ---
 # <a name="migrate-your-relational-databases-to-azure"></a>관계형 데이터베이스를 azure로 마이그레이션
 
-비전: Azure는 가장 포괄적인 데이터베이스 마이그레이션은 제공합니다.
+Vision: Azure는 가장 포괄적인 데이터베이스 마이그레이션은 제공합니다.
 
 Azure에서 IaaS Vm (순수한 리프트 앤 시프트)에 직접 데이터베이스 서버를 마이그레이션할 수 있습니다 또는 추가 혜택에 대 한 Azure SQL Database로 마이그레이션할 수 있습니다. Azure SQL Database 관리 되는 인스턴스 및 전체 데이터베이스-as a service (DBaaS) 옵션을 제공 합니다. 그림 3-1에서는 마이그레이션 경로가 Azure에서 사용할 수 있는 여러 관계형 데이터베이스를 보여 줍니다.
 
@@ -49,7 +49,7 @@ Azure SQL Database에서 관리 되는 인스턴스에는 다음과 같은 특�
 
   - 기본 백업 및 복원, 로그 전달
 
-이러한 기능을 사용 하 여 Azure SQL Database에 기존 응용 프로그램 데이터베이스를 마이그레이션하는 경우 관리 되는 인스턴스 모델 제공 Paas의 이점 중 거의 100% SQL Server에 대 한 합니다. 관리 되는 인스턴스는 인스턴스 수준 기능을 사용 하 여 응용 프로그램 디자인을 변경 하지 않고 계속 하면 SQL Server 환경입니다.
+이러한 기능을 사용 하 여 Azure SQL Database에 기존 응용 프로그램 데이터베이스를 마이그레이션하는 경우 관리 되는 인스턴스 모델 제공 PaaS의 이점 중 거의 100% SQL Server에 대 한 합니다. 관리 되는 인스턴스는 인스턴스 수준 기능을 사용 하 여 응용 프로그램 디자인을 변경 하지 않고 계속 하면 SQL Server 환경입니다.
 
 관리 되는 인스턴스는 현재 SQL Server를 사용 중인 및 클라우드에서 네트워크 보안에 유연성이 필요한는 기업에 가장 적합 한 것입니다. SQL database에 대 한 개인 가상 네트워크를 것과 같습니다.
 
@@ -126,6 +126,6 @@ Azure Database Migration Service를 사용 하 여 데이터베이스를 마이�
 
     [https://azure.microsoft.com/services/virtual-machines/sql-server/](https://azure.microsoft.com/services/virtual-machines/sql-server/)
 
->[!div class="step-by-step"]
->[이전](lift-and-shift-existing-apps-azure-iaas.md)
->[다음](modernize-existing-apps-to-cloud-optimized/index.md)
+> [!div class="step-by-step"]
+> [이전](lift-and-shift-existing-apps-azure-iaas.md)
+> [다음](modernize-existing-apps-to-cloud-optimized/index.md)

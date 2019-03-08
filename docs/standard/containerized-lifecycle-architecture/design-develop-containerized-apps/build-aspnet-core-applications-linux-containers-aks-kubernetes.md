@@ -4,12 +4,12 @@ description: Microsoft 플랫폼 및 도구를 사용하여 컨테이너화된 D
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 02/25/2019
-ms.openlocfilehash: cb84f4ebb0681792a820f8ed7bc32c5d1d8c08b5
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: c6d778d345466b1b852d06bc01ce40ccfdebf964
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56967167"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57676657"
 ---
 # <a name="build-aspnet-core-21-applications-deployed-as-linux-containers-into-an-akskubernetes-orchestrator"></a>Linux 컨테이너와 AKS/Kubernetes 오 케 스트레이 터에 배포 하는 ASP.NET Core 2.1 응용 프로그램 빌드
 
@@ -27,7 +27,7 @@ Linux에서 실행 되 고 개발은 수행 하는 동안 Azure에서 AKS 클러
 
 ## <a name="creating-the-aspnet-core-21-project-using-visual-studio-2017"></a>Visual Studio 2017을 사용 하 여 ASP.NET Core 2.1 프로젝트 만들기
 
-ASP.NET Core는 Microsoft 및 GitHub의.NET 커뮤니티에서 유지 관리 하는 범용 개발 플랫폼입니다. 플랫폼 간으로 Windows, macOS 및 Linux를 지원하며 디바이스, 클라우드 및 포함/IoT 시나리오에서 사용할 수 있습니다.
+ASP.NET Core는 Microsoft 및 GitHub의.NET 커뮤니티에서 유지 관리 하는 범용 개발 플랫폼입니다. 플랫폼 간, Windows, macOS 및 Linux를 지원 하며 장치, 클라우드 및 포함 된 IoT 시나리오에서 사용할 수 있습니다.
 
 이 예제에서는 샘플을 만드는 모든 추가 정보를 표시 하지 않아도 되므로 Visual Studio Web API 템플릿을 기반으로 하는 간단한 프로젝트를 사용 합니다. ASP.NET Core 2.1 기술을 사용 하 여 REST API를 사용 하 여 작은 프로젝트를 실행 하려면 모든 요소를 포함 하는 표준 템플릿을 사용 하 여 프로젝트를 만들려면 해야 합니다.
 

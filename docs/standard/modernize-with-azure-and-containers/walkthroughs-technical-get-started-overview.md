@@ -4,12 +4,12 @@ description: Azure 클라우드 및 Windows 컨테이너를 사용 하 여 기�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 04/28/2018
-ms.openlocfilehash: f5a9d0c7c1c45a6afca390e93384af4c8386fe09
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 15ea074693a75aa04b4f3a03e6e5e3d7f748cea1
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53150592"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57674941"
 ---
 # <a name="walkthroughs-and-technical-get-started-overview"></a>연습 및 기술 시작된 개요 가져오기
 
@@ -35,7 +35,6 @@ ms.locfileid: "53150592"
 
 - **Azure Service Fabric에 Windows 컨테이너 기반 앱을 배포 합니다.**
 
-
 ## <a name="walkthrough-1-tour-of-eshop-legacy-apps"></a>연습 1: 레거시 앱 eShop 둘러보기
 
 ### <a name="technical-walkthrough-availability"></a>기술 연습 가용성
@@ -44,10 +43,10 @@ ms.locfileid: "53150592"
 
 [eShopModernizing wiki 연습](https://github.com/dotnet-architecture/eShopModernizing/wiki)
 
-
 ### <a name="overview"></a>개요
 
-이 연습에서는 세 개의 샘플 레거시 응용 프로그램의 초기 구현을 탐색할 수 있습니다. 처음 두 개의 샘플 웹 앱 모놀리식 아키텍처에 있고 클래식 ASP.NET을 사용 하 여 만든 합니다. 하나의 응용 프로그램은 ASP.NET을 기반 4.x MVC; 두 번째 응용 프로그램은 ASP.NET 4.x Web Forms를 기반으로 합니다. 세 번째 응용 프로그램이 클라이언트 WinForms 앱 및 서버 쪽에서 구성 된 3 계층 앱 [Windows Communication Foundation (WCF)](../../framework/wcf/whats-wcf.md) 서비스입니다.
+이 연습에서는 세 개의 샘플 레거시 응용 프로그램의 초기 구현을 탐색할 수 있습니다. 처음 두 개의 샘플 웹 앱 모놀리식 아키텍처에 있고 클래식 ASP.NET을 사용 하 여 만든 합니다. 하나의 응용 프로그램은 ASP.NET을 기반 4.x MVC; 두 번째 응용 프로그램은 ASP.NET 4.x Web Forms를 기반으로 합니다.
+세 번째 응용 프로그램이 클라이언트 WinForms 앱 및 서버 쪽에서 구성 된 3 계층 앱 [Windows Communication Foundation (WCF)](../../framework/wcf/whats-wcf.md) 서비스입니다.
 
 이러한 모든 응용이 프로그램에서 사용할 수는 [eShopModernizing GitHub 리포지토리](https://github.com/dotnet-architecture/eShopModernizing)합니다.
 
@@ -59,23 +58,21 @@ ms.locfileid: "53150592"
 
 아래 그림에는 원래 레거시 ASP.NET 웹 응용 프로그램의 간단한 시나리오를 보여 줍니다.
 
-> ![원래 레거시 ASP.NET 웹 응용 프로그램의 간단한 아키텍처 시나리오](./media/image5-1.png)
->
+![원래 레거시 ASP.NET 웹 응용 프로그램의 간단한 아키텍처 시나리오](./media/image5-1.png)
 
-비즈니스 도메인 관점에서 두 앱 모두 동일한 카탈로그 관리 기능을 제공합니다. EShop 엔터프라이즈 팀의 멤버 보기 및 편집 제품 카탈로그를 앱을 사용 합니다. 
+비즈니스 도메인 관점에서 두 앱 모두 동일한 카탈로그 관리 기능을 제공합니다. EShop 엔터프라이즈 팀의 멤버 보기 및 편집 제품 카탈로그를 앱을 사용 합니다.
 
 다음 그림에는 초기 앱 스크린 샷을 보여 줍니다.
 
 ![ASP.NET MVC 및 ASP.NET Web Forms 응용 프로그램 (기존/레거시 기술)](./media/image5-2.png)
 
-종속성 ASP.NET 4.x 또는 이전 버전 (또는 MVC Web Forms) 의미 이러한 응용 프로그램 코드는 ASP.NET Core MVC를 사용 하 여 완전히 다시 작성 하지 않는 한.NET Core에서 실행 되지 않습니다. 
+종속성 ASP.NET 4.x 또는 이전 버전 (또는 MVC Web Forms) 의미 이러한 응용 프로그램 코드는 ASP.NET Core MVC를 사용 하 여 완전히 다시 작성 하지 않는 한.NET Core에서 실행 되지 않습니다.
 
 ### <a name="scenario-2-wcf-service-and-winforms-client-app-3-tier-app"></a>시나리오 2: WCF 서비스 및 WinForms 클라이언트 앱 (3 계층 앱)
 
 아래 그림에는 원래 3 계층 레거시 응용 프로그램의 간단한 시나리오를 보여 줍니다.
 
-> ![WCF 서비스를 사용 하 여 원래 레거시 3 계층 응용 프로그램 및 WinForms 클라이언트 앱의 간단한 아키텍처 시나리오](./media/image5-1.5.png)
->
+![WCF 서비스를 사용 하 여 원래 레거시 3 계층 응용 프로그램 및 WinForms 클라이언트 앱의 간단한 아키텍처 시나리오](./media/image5-1.5.png)
 
 ### <a name="benefits"></a>이점
 
@@ -85,9 +82,8 @@ ms.locfileid: "53150592"
 
 GitHub wiki의이 콘텐츠를 더 자세히 살펴보기
 
-  - [둘러보기 기준을 설정한 ASP.NET MVC 및 Web Forms "레거시" 앱](https://github.com/dotnet-architecture/eShopModernizing/wiki/01.-Tour-on-the-ASP.NET-MVC-and-WebForms-apps-implementation-code)
-  - [기본 WCF 서비스 및 WinForms (3 계층) "레거시" 앱에 대 한 둘러보기](https://github.com/dotnet-architecture/eShopModernizing/wiki/21.-Tour-on-the-WCF-service-and-WinForms-apps)
-
+- [둘러보기 기준을 설정한 ASP.NET MVC 및 Web Forms "레거시" 앱](https://github.com/dotnet-architecture/eShopModernizing/wiki/01.-Tour-on-the-ASP.NET-MVC-and-WebForms-apps-implementation-code)
+-   [기본 WCF 서비스 및 WinForms (3 계층) "레거시" 앱에 대 한 둘러보기](https://github.com/dotnet-architecture/eShopModernizing/wiki/21.-Tour-on-the-WCF-service-and-WinForms-apps)
 
 ## <a name="walkthrough-2-containerize-your-existing-net-applications-with-windows-containers"></a>연습 2: Windows 컨테이너를 사용 하 여 기존.NET 응용 프로그램을 컨테이너 화
 
@@ -111,16 +107,13 @@ Windows 컨테이너를 사용 하 여 MVC, Web Forms, WCF, 프로덕션, 개발
 
 아래 그림에는 컨테이너 화 된 eShop 레거시 웹 앱 응용 프로그램에 대 한 시나리오를 보여 줍니다.
 
-> ![개발 환경에서 ASP.NET 응용 프로그램을 컨테이너 화 된 간소화 된 아키텍처 다이어그램](./media/image5-3.png)
->
-
+![개발 환경에서 ASP.NET 응용 프로그램을 컨테이너 화 된 간소화 된 아키텍처 다이어그램](./media/image5-3.png)
 
 ### <a name="scenario-2-containerized-wcf-service"></a>시나리오 2: 컨테이너 화 된 WCF 서비스
 
-아래 그림에는 컨테이너 화 된 WCF 서비스를 사용 하 여 3 계층 응용 프로그램 시나리오를 보여 줍니다. 
+아래 그림에는 컨테이너 화 된 WCF 서비스를 사용 하 여 3 계층 응용 프로그램 시나리오를 보여 줍니다.
 
-> ![간소화 된 개발 환경에서 컨테이너 화 된 WCF 서비스의 아키텍처 다이어그램](./media/image5-3.5.png)
->
+![간소화 된 개발 환경에서 컨테이너 화 된 WCF 서비스의 아키텍처 다이어그램](./media/image5-3.5.png)
 
 ### <a name="benefits"></a>이점
 
@@ -136,10 +129,8 @@ Windows 컨테이너를 사용 하 여 MVC, Web Forms, WCF, 프로덕션, 개발
 
 GitHub wiki의이 콘텐츠를 더 자세히 살펴보기
 
-  - [Windows 컨테이너 및 Docker를 사용 하 여.NET Framework 웹 앱 컨테이너 화 하는 방법](https://github.com/dotnet-architecture/eShopModernizing/wiki/02.-How-to-containerize-the-.NET-Framework-web-apps-with-Windows-Containers-and-Docker)
-  - [WCF 서비스에 Docker 지원 추가](https://github.com/dotnet-architecture/eShopModernizing/wiki/22.-Adding-Docker-Support)
-
-
+- [Windows 컨테이너 및 Docker를 사용 하 여.NET Framework 웹 앱 컨테이너 화 하는 방법](https://github.com/dotnet-architecture/eShopModernizing/wiki/02.-How-to-containerize-the-.NET-Framework-web-apps-with-Windows-Containers-and-Docker)
+- [WCF 서비스에 Docker 지원 추가](https://github.com/dotnet-architecture/eShopModernizing/wiki/22.-Adding-Docker-Support)
 
 ## <a name="walkthrough-3-deploy-your-windows-containers-based-app-to-azure-vms"></a>연습 3: Azure Vm에 Windows 컨테이너 기반 앱 배포
 
@@ -149,7 +140,7 @@ GitHub wiki의이 콘텐츠를 더 자세히 살펴보기
 
 ### <a name="overview"></a>개요
 
-Windows Server 2016 가상 머신 (VM) Azure에서 Docker 호스트에 배포할 개발/테스트/스테이징 환경에 신속 하 게 설정할 수 있습니다. 또한, 테스터 또는 비즈니스 사용자가 앱의 유효성을 검사 하는 일반적인 위치를 제공 합니다. 또한 Vm 서비스 (IaaS) 프로덕션 환경으로 유효 하 부 구조를 수 있습니다.
+Windows Server 2016 가상 머신 (VM) Azure에서 Docker 호스트에 배포할 개발/테스트/스테이징 환경에 신속 하 게 설정할 수 있습니다. 또한, 테스터 또는 비즈니스 사용자가 앱의 유효성을 검사 하는 일반적인 위치를 제공 합니다. 또한 Vm 서비스 (IaaS) 프로덕션 환경으로 유효한 인프라를 수 있습니다.
 
 ### <a name="goals"></a>목표
 
@@ -163,19 +154,19 @@ Windows Server 2016 가상 머신 (VM) Azure에서 Docker 호스트에 배포할
 
 ![Docker 엔진 연결을 통해 개발 PC에서에서 Azure VM에 배포](./media/image5-4.png)
 
-> **그림 5-4.** Docker 엔진 연결을 통해 개발 PC에서에서 Azure VM에 배포
+**그림 5-4.** Docker 엔진 연결을 통해 개발 PC에서에서 Azure VM에 배포
 
 #### <a name="scenario-b-deploy-to-an-azure-vm-through-a-docker-registry"></a>시나리오 b: Docker 레지스트리를 통해 Azure VM에 배포
 
 ![Docker 레지스트리를 통해 Azure VM에 배포](./media/image5-5.png)
 
-> **그림 5-5.** Docker 레지스트리를 통해 Azure VM에 배포
+**그림 5-5.** Docker 레지스트리를 통해 Azure VM에 배포
 
 #### <a name="scenario-c-deploy-to-an-azure-vm-from-cicd-pipelines-in-azure-devops-services"></a>시나리오: c: Azure DevOps 서비스의 CI/CD 파이프라인에서 Azure VM에 배포
 
 ![Azure DevOps 서비스의 CI/CD 파이프라인에서 Azure VM에 배포](./media/image5-6.png)
 
-> **그림 5-6.** Azure DevOps 서비스의 CI/CD 파이프라인에서 Azure VM에 배포
+**그림 5-6.** Azure DevOps 서비스의 CI/CD 파이프라인에서 Azure VM에 배포
 
 ### <a name="azure-vms-for-windows-containers"></a>Windows 컨테이너에 대 한 azure Vm
 
@@ -227,10 +218,9 @@ Azure Container Instances를 사용 하면 쉽게 만들고 가상 머신을 프
 
 ## <a name="next-steps"></a>다음 단계
 
-GitHub wiki의이 콘텐츠를 더 자세히 살펴보기 
+GitHub wiki의이 콘텐츠를 더 자세히 살펴보기
 
 [https://github.com/dotnet-architecture/eShopModernizing/wiki/05.-Deploying-the-Apps-to-ACI-(Azure-Container-Instances)](https://github.com/dotnet-architecture/eShopModernizing/wiki/05.-Deploying-the-Apps-to-ACI-(Azure-Container-Instances)TBD)
-
 
 ## <a name="walkthrough-5-deploy-your-windows-containers-based-apps-to-kubernetes-in-azure-container-service"></a>연습 5: Azure Container Service에서 Kubernetes에 Windows 컨테이너 기반 앱을 배포 합니다.
 
@@ -248,9 +238,9 @@ Windows 컨테이너를 기반으로 하는 응용 프로그램 플랫폼에서 
 
 Kubernetes에 Windows 컨테이너 기반 응용 프로그램을 배포 하는 방법을 알아보려면이 연습의 목적은 (라고도 *K8s*) Azure Container Service에서. 부터 Kubernetes에 배포 하는 2 단계 프로세스입니다.
 
-1.  Azure Container Service에 Kubernetes 클러스터를 배포 합니다.
+1. Azure Container Service에 Kubernetes 클러스터를 배포 합니다.
 
-2.  Kubernetes 클러스터에 응용 프로그램 및 관련된 리소스를 배포 합니다.
+2. Kubernetes 클러스터에 응용 프로그램 및 관련된 리소스를 배포 합니다.
 
 ### <a name="scenarios"></a>시나리오
 
@@ -258,13 +248,13 @@ Kubernetes에 Windows 컨테이너 기반 응용 프로그램을 배포 하는 �
 
 ![개발 환경에서 Kubernetes 클러스터에 직접 배포](./media/image5-7.png)
 
-> **그림 5-7.** 개발 환경에서 Kubernetes 클러스터에 직접 배포
+**그림 5-7.** 개발 환경에서 Kubernetes 클러스터에 직접 배포
 
 #### <a name="scenario-b-deploy-to-a-kubernetes-cluster-from-cicd-pipelines-in-azure-devops-services"></a>시나리오 b: Azure DevOps 서비스의 CI/CD 파이프라인에서 Kubernetes 클러스터에 배포
 
 ![Azure DevOps 서비스의 CI/CD 파이프라인에서 Kubernetes 클러스터에 배포](./media/image5-8.png)
 
-> **그림 5-8.** Azure DevOps 서비스의 CI/CD 파이프라인에서 Kubernetes 클러스터에 배포
+**그림 5-8.** Azure DevOps 서비스의 CI/CD 파이프라인에서 Kubernetes 클러스터에 배포
 
 ### <a name="benefits"></a>이점
 
@@ -308,9 +298,9 @@ Windows 컨테이너를 신속 하 게 기반 응용 프로그램 플랫폼에�
 
 이 연습의 목표는 Azure에서 Service Fabric 클러스터에 Windows 컨테이너 기반 응용 프로그램을 배포 하는 방법을 알아보려면입니다. 부터 Service Fabric에 배포 하는 2 단계 프로세스입니다.
 
-1.  Azure로 (또는 다른 환경으로) Service Fabric 클러스터를 배포 합니다.
+1. Azure로 (또는 다른 환경으로) Service Fabric 클러스터를 배포 합니다.
 
-2.  Service Fabric 클러스터에 응용 프로그램 및 관련된 리소스를 배포 합니다.
+2. Service Fabric 클러스터에 응용 프로그램 및 관련된 리소스를 배포 합니다.
 
 ### <a name="scenarios"></a>시나리오
 
@@ -324,7 +314,7 @@ Windows 컨테이너를 신속 하 게 기반 응용 프로그램 플랫폼에�
 
 ![Azure DevOps 서비스의 CI/CD 파이프라인에서 Service Fabric 클러스터에 배포](./media/image5-10.png)
 
-> **그림 5-10.** Azure DevOps 서비스의 CI/CD 파이프라인에서 Service Fabric 클러스터에 배포
+**그림 5-10.** Azure DevOps 서비스의 CI/CD 파이프라인에서 Service Fabric 클러스터에 배포
 
 ## <a name="benefits"></a>이점
 
@@ -366,6 +356,6 @@ GitHub wiki의이 콘텐츠를 더 자세히 살펴보기
 
 [https://github.com/dotnet-architecture/eShopModernizing/wiki/05.-How-to-deploy-your-Windows-Containers-based-apps-into-Azure-Service-Fabric-(Including-CI-CD)](https://github.com/dotnet-architecture/eShopModernizing/wiki/05.-How-to-deploy-your-Windows-Containers-based-apps-into-Azure-Service-Fabric-(Including-CI-CD))
 
->[!div class="step-by-step"]
->[이전](lift-and-shift-existing-apps-devops/migrate-to-hybrid-cloud-scenarios.md)
->[다음](conclusions.md)
+> [!div class="step-by-step"]
+> [이전](lift-and-shift-existing-apps-devops/migrate-to-hybrid-cloud-scenarios.md)
+> [다음](conclusions.md)
