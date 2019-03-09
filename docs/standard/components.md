@@ -14,11 +14,11 @@ ms.locfileid: "54570725"
 ---
 # <a name="net-architectural-components"></a>.NET 아키텍처 구성 요소
 
-.NET 앱은 하나 이상의 *.NET 구현체*로 개발하고 이 구현체에서 동작합니다. .NET 구현체에는 .NET Framework과 .NET Core, Mono가 있습니다. 모든 .NET 구현체에는 공통적으로 .NET Standard API 규격이 존재합니다. 이 문서에서는 이러한 개념들을 간략하게 소개합니다.
+.NET 앱은 하나 이상의 *.NET 구현체*로 개발하고 이 구현체에서 동작합니다.  .NET 구현체에는 .NET Framework과 .NET Core, Mono가 있습니다. 모든 .NET 구현체에는 공통적으로 .NET Standard API 규격이 존재합니다. 이 문서에서는 이러한 개념들을 간략하게 소개합니다.
 
 ## <a name="net-standard"></a>.NET Standard
 
-.NET Standard는 .NET 구현체의 기본 클래스 라이브러리(Base Class Library)로 구현한 API 집합입니다. 보다 공식적으로는, 코드를 컴파일 할 수 있는 일정한 약속을 구성하는 .NET API 규격입니다. 이러한 약속은 모든 .NET 구현체에서 구현됩니다. 그러면 다양한 .NET 구현체 간에 코드를 효과적으로 이식하고 실행할 수 있게 됩니다. 
+.NET Standard는 .NET 구현체의 기본 클래스 라이브러리(Base Class Library)로 구현한 API 집합입니다. 보다 공식적으로는, 코드를 컴파일할 수 있는 일정한 약속을 구성하는 .NET API 규격입니다. 이러한 약속은 모든 .NET 구현체에서 구현됩니다. 그러면 다양한 .NET 구현체 간에 코드를 효과적으로 이식하고 실행할 수 있게 됩니다.
 
 또한 .NET Standard는 [대상 프레임워크](glossary.md#target-framework)입니다. .NET Standard 버전을 대상으로 하는 코드는 해당 .NET Standard 버전을 지원하는 모든 .NET 구현체에서 실행할 수 있습니다.
 
@@ -28,9 +28,9 @@ ms.locfileid: "54570725"
 
 .NET의 각 구현체에는 다음 구성 요소가 포함됩니다.
 
-- 하나 이상의 런타임. 예: .NET Framework용 CLR과 .NET Core용 CoreCLR, CoreRT.
+- 하나 이상의 런타임. 예를 들면 다음과 같습니다. .NET Framework용 CLR, CoreCLR 및 .NET Core용 CoreRT.
 - .NET Standard와 추가 API를 구현할 수 있는 클래스 라이브러리. 예: .NET Framework 기본 클래스 라이브러리, .NET Core 기본 클래스 라이브러리.
-- 필요에 따라 하나 이상의 애플리케이션 프레임워크. 예: [ASP.NET](https://www.asp.net/) [Windows Forms](../framework/winforms/windows-forms-overview.md) 및 [WPF(Windows Presentation Foundation)](../framework/wpf/index.md)가 .NET Framework에 포함됨.
+- 필요에 따라 하나 이상의 애플리케이션 프레임워크. 예를 들면 다음과 같습니다. [ASP.NET](https://www.asp.net/), [Windows Forms](../framework/winforms/windows-forms-overview.md) 및 [WPF(Windows Presentation Foundation)](../framework/wpf/index.md)가 .NET Framework에 포함됩니다.
 - 필요에 따라 개발 도구. 일부 개발 도구는 여러 구현체에서 공통적으로 사용할 수 있음.
 
 Microsoft에서 적극적으로 개발 및 유지 보수하는 네 가지 기본 .NET 구현체는 .NET Core와 .NET Framework, Mono, UWP입니다.
