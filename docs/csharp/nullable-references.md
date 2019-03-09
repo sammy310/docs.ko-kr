@@ -2,12 +2,12 @@
 title: nullable 참조 형식
 description: 이 문서에서는 C# 8에 추가된 nullable 참조 형식에 대해 간략하게 설명합니다. 이 기능이 신규 및 기존의 프로젝트의 null 참조 예외에 대해 어떻게 안전성을 제공하는지 알아봅니다.
 ms.date: 02/19/2019
-ms.openlocfilehash: 1eb4ccb5ec4397cb81aab37c13a31c41533238e9
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.openlocfilehash: 9ce9efb890f0eff5a6c6747f96c143a4d093dbfb
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57411548"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57725027"
 ---
 # <a name="nullable-reference-types"></a>nullable 참조 형식
 
@@ -41,7 +41,7 @@ string? name;
 name!.Length;
 ```
 
-이 연산자에 대한 자세한 내용은 GitHub의 [nullable 참조 형식 사양 제안 초안](https://github.com/dotnet/csharplang/blob/master/proposals/csharp-8.0/nullable-reference-types-specification.md#the-null-forgiving-operator)에서 확인할 수 있습니다.
+이 연산자에 대한 자세한 내용은 GitHub의 [nullable 참조 형식 사양 제안 초안](../../_csharplang/proposals/csharp-8.0/nullable-reference-types-specification.md#the-null-forgiving-operator)에서 확인할 수 있습니다.
 
 ## <a name="nullability-of-types"></a>형식의 Null 허용 여부
 
