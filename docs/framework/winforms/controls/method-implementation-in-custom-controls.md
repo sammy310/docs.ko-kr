@@ -11,17 +11,17 @@ helpviewer_keywords:
 - methods [Windows Forms]
 - methods [Windows Forms], custom controls
 ms.assetid: 35d14fca-4bb4-4a27-8211-1f7a98ea27de
-ms.openlocfilehash: f65c34c965ddf19c7a287eeeaafe2583c97583ef
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5bcc6441ab1a615c31a5a028fc7f8f09cbdd4c10
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54506072"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57710370"
 ---
-# <a name="method-implementation-in-custom-controls"></a><span data-ttu-id="5067b-102">사용자 지정 컨트롤에서 메서드 구현</span><span class="sxs-lookup"><span data-stu-id="5067b-102">Method Implementation in Custom Controls</span></span>
-<span data-ttu-id="5067b-103">메서드는 다른 구성 요소에서 구현되는 것과 같은 방식으로 컨트롤에서 구현됩니다.</span><span class="sxs-lookup"><span data-stu-id="5067b-103">A method is implemented in a control in the same manner a method would be implemented in any other component.</span></span>  
+# <a name="method-implementation-in-custom-controls"></a><span data-ttu-id="5f141-102">사용자 지정 컨트롤에서 메서드 구현</span><span class="sxs-lookup"><span data-stu-id="5f141-102">Method Implementation in Custom Controls</span></span>
+<span data-ttu-id="5f141-103">메서드는 다른 구성 요소에서 구현되는 것과 같은 방식으로 컨트롤에서 구현됩니다.</span><span class="sxs-lookup"><span data-stu-id="5f141-103">A method is implemented in a control in the same manner a method would be implemented in any other component.</span></span>  
   
- <span data-ttu-id="5067b-104">Visual Basic에서 값을 반환해야 하는 메서드는 `Public Function`으로 구현됩니다.</span><span class="sxs-lookup"><span data-stu-id="5067b-104">In Visual Basic, if a method is required to return a value, it is implemented as a `Public Function`.</span></span> <span data-ttu-id="5067b-105">값이 반환되지 않는 경우 메서드는 `Public Sub`로 구현됩니다.</span><span class="sxs-lookup"><span data-stu-id="5067b-105">If no value is returned, it is implemented as a `Public Sub`.</span></span> <span data-ttu-id="5067b-106">메서드는 다음 구문을 사용하여 선언됩니다.</span><span class="sxs-lookup"><span data-stu-id="5067b-106">Methods are declared using the following syntax:</span></span>  
+ <span data-ttu-id="5f141-104">Visual Basic에서 값을 반환해야 하는 메서드는 `Public Function`으로 구현됩니다.</span><span class="sxs-lookup"><span data-stu-id="5f141-104">In Visual Basic, if a method is required to return a value, it is implemented as a `Public Function`.</span></span> <span data-ttu-id="5f141-105">값이 반환되지 않는 경우 메서드는 `Public Sub`로 구현됩니다.</span><span class="sxs-lookup"><span data-stu-id="5f141-105">If no value is returned, it is implemented as a `Public Sub`.</span></span> <span data-ttu-id="5f141-106">메서드는 다음 구문을 사용하여 선언됩니다.</span><span class="sxs-lookup"><span data-stu-id="5f141-106">Methods are declared using the following syntax:</span></span>  
   
 ```vb  
 Public Function ConvertMatterToEnergy(Matter as Integer) As Integer  
@@ -29,9 +29,9 @@ Public Function ConvertMatterToEnergy(Matter as Integer) As Integer
 End Function  
 ```  
   
- <span data-ttu-id="5067b-107">함수는 값을 반환하므로 정수, 문자열, 개체 등의 반환 형식을 지정해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="5067b-107">Because functions return a value, they must specify a return type, such as integer, string, object, and so on.</span></span> <span data-ttu-id="5067b-108">`Function` 또는 `Sub` 프로시저에서 사용하는 인수도 지정해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="5067b-108">The arguments `Function` or `Sub` procedures take, if any, must also be specified.</span></span>  
+ <span data-ttu-id="5f141-107">함수는 값을 반환하므로 정수, 문자열, 개체 등의 반환 형식을 지정해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="5f141-107">Because functions return a value, they must specify a return type, such as integer, string, object, and so on.</span></span> <span data-ttu-id="5f141-108">`Function` 또는 `Sub` 프로시저에서 사용하는 인수도 지정해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="5f141-108">The arguments `Function` or `Sub` procedures take, if any, must also be specified.</span></span>  
   
- <span data-ttu-id="5067b-109">C#에서는 Visual Basic에서처럼 함수와 프로시저를 구분하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="5067b-109">C# makes no distinction between functions and procedures, as Visual Basic does.</span></span> <span data-ttu-id="5067b-110">메서드는 값이나 `void`를 반환합니다.</span><span class="sxs-lookup"><span data-stu-id="5067b-110">A method either returns a value or returns `void`.</span></span> <span data-ttu-id="5067b-111">C# 공용 메서드를 선언하는 구문은 다음과 같습니다.</span><span class="sxs-lookup"><span data-stu-id="5067b-111">The syntax for declaring a C# public method is:</span></span>  
+ <span data-ttu-id="5f141-109">C#에서는 Visual Basic에서처럼 함수와 프로시저를 구분하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="5f141-109">C# makes no distinction between functions and procedures, as Visual Basic does.</span></span> <span data-ttu-id="5f141-110">메서드는 값이나 `void`를 반환합니다.</span><span class="sxs-lookup"><span data-stu-id="5f141-110">A method either returns a value or returns `void`.</span></span> <span data-ttu-id="5f141-111">C# 공용 메서드를 선언하는 구문은 다음과 같습니다.</span><span class="sxs-lookup"><span data-stu-id="5f141-111">The syntax for declaring a C# public method is:</span></span>  
   
 ```csharp  
 public int ConvertMatterToEnergy(int matter)  
@@ -40,17 +40,17 @@ public int ConvertMatterToEnergy(int matter)
 }  
 ```  
   
- <span data-ttu-id="5067b-112">메서드를 선언할 때는 가능하면 항상 모든 인수를 명시적 데이터 형식으로 선언합니다.</span><span class="sxs-lookup"><span data-stu-id="5067b-112">When you declare a method, declare all of its arguments as explicit data types whenever possible.</span></span> <span data-ttu-id="5067b-113">개체 참조를 사용하는 인수는 `As Widget`가 아닌 `As Object`과 같이 특정 클래스 형식으로 선언해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="5067b-113">Arguments that take object references should be declared as specific class types — for example, `As Widget` instead of `As Object`.</span></span> <span data-ttu-id="5067b-114">Visual Basic에서 기본 설정인 `Option Strict`는 이 규칙을 자동으로 적용합니다.</span><span class="sxs-lookup"><span data-stu-id="5067b-114">In Visual Basic, the default setting `Option Strict` automatically enforces this rule.</span></span>  
+ <span data-ttu-id="5f141-112">메서드를 선언할 때는 가능하면 항상 모든 인수를 명시적 데이터 형식으로 선언합니다.</span><span class="sxs-lookup"><span data-stu-id="5f141-112">When you declare a method, declare all of its arguments as explicit data types whenever possible.</span></span> <span data-ttu-id="5f141-113">개체 참조를 사용하는 인수는 `As Widget`가 아닌 `As Object`과 같이 특정 클래스 형식으로 선언해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="5f141-113">Arguments that take object references should be declared as specific class types — for example, `As Widget` instead of `As Object`.</span></span> <span data-ttu-id="5f141-114">Visual Basic에서 기본 설정인 `Option Strict`는 이 규칙을 자동으로 적용합니다.</span><span class="sxs-lookup"><span data-stu-id="5f141-114">In Visual Basic, the default setting `Option Strict` automatically enforces this rule.</span></span>  
   
- <span data-ttu-id="5067b-115">형식이 지정된 인수를 사용하면 런타임이 아닌 컴파일러에서 대부분의 개발자 오류를 찾아낼 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="5067b-115">Typed arguments allow many developer errors to be caught by the compiler, rather than at run time.</span></span> <span data-ttu-id="5067b-116">컴파일러는 항상 오류를 찾아내는 반면 런타임 테스트에서는 테스트 가능한 오류만 찾아낼 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="5067b-116">The compiler always catches errors, whereas run-time testing is only as good as the test suite.</span></span>  
+ <span data-ttu-id="5f141-115">형식이 지정된 인수를 사용하면 런타임이 아닌 컴파일러에서 대부분의 개발자 오류를 찾아낼 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="5f141-115">Typed arguments allow many developer errors to be caught by the compiler, rather than at run time.</span></span> <span data-ttu-id="5f141-116">컴파일러는 항상 오류를 찾아내는 반면 런타임 테스트에서는 테스트 가능한 오류만 찾아낼 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="5f141-116">The compiler always catches errors, whereas run-time testing is only as good as the test suite.</span></span>  
   
-## <a name="overloaded-methods"></a><span data-ttu-id="5067b-117">오버로드된 메서드</span><span class="sxs-lookup"><span data-stu-id="5067b-117">Overloaded Methods</span></span>  
- <span data-ttu-id="5067b-118">컨트롤 사용자가 메서드에 서로 다른 매개 변수 조합을 제공할 수 있도록 하려면 명시적 데이터 형식을 사용하여 메서드의 여러 오버로드를 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="5067b-118">If you want to allow users of your control to supply different combinations of parameters to a method, provide multiple overloads of the method, using explicit data types.</span></span> <span data-ttu-id="5067b-119">모든 데이터 형식을 포함할 수 있는 `As Object`로 선언된 매개 변수는 만들지 않아야 합니다. 이러한 매개 변수를 만들면 오류가 발생해도 테스트에서 확인되지 않을 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="5067b-119">Avoid creating parameters declared `As Object` that can contain any data type, as this can lead to errors that might not be caught in testing.</span></span>  
+## <a name="overloaded-methods"></a><span data-ttu-id="5f141-117">오버로드된 메서드</span><span class="sxs-lookup"><span data-stu-id="5f141-117">Overloaded Methods</span></span>  
+ <span data-ttu-id="5f141-118">컨트롤 사용자가 메서드에 서로 다른 매개 변수 조합을 제공할 수 있도록 하려면 명시적 데이터 형식을 사용하여 메서드의 여러 오버로드를 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="5f141-118">If you want to allow users of your control to supply different combinations of parameters to a method, provide multiple overloads of the method, using explicit data types.</span></span> <span data-ttu-id="5f141-119">모든 데이터 형식을 포함할 수 있는 `As Object`로 선언된 매개 변수는 만들지 않아야 합니다. 이러한 매개 변수를 만들면 오류가 발생해도 테스트에서 확인되지 않을 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="5f141-119">Avoid creating parameters declared `As Object` that can contain any data type, as this can lead to errors that might not be caught in testing.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="5067b-120">공용 언어 런타임의 유니버설 데이터 형식은 `Object`가 아닌 `Variant`입니다.</span><span class="sxs-lookup"><span data-stu-id="5067b-120">The universal data type in the common language runtime is `Object` rather than `Variant`.</span></span> <span data-ttu-id="5067b-121">`Variant`는 언어에서 제거되었습니다.</span><span class="sxs-lookup"><span data-stu-id="5067b-121">`Variant` has been removed from the language.</span></span>  
+>  <span data-ttu-id="5f141-120">공용 언어 런타임의 유니버설 데이터 형식은 `Object`가 아닌 `Variant`입니다.</span><span class="sxs-lookup"><span data-stu-id="5f141-120">The universal data type in the common language runtime is `Object` rather than `Variant`.</span></span> <span data-ttu-id="5f141-121">`Variant`는 언어에서 제거되었습니다.</span><span class="sxs-lookup"><span data-stu-id="5f141-121">`Variant` has been removed from the language.</span></span>  
   
- <span data-ttu-id="5067b-122">예를 들어 가상 `Spin` 컨트롤의 `Widget` 메서드에서는 회전 방향과 속도를 직접 지정할 수도 있고 각운동량을 가져올 다른 `Widget` 개체를 지정할 수도 있습니다.</span><span class="sxs-lookup"><span data-stu-id="5067b-122">For example, the `Spin` method of a hypothetical `Widget` control might allow either direct specification of spin direction and speed, or specification of another `Widget` object from which angular momentum is to be absorbed:</span></span>  
+ <span data-ttu-id="5f141-122">예를 들어 가상 `Spin` 컨트롤의 `Widget` 메서드에서는 회전 방향과 속도를 직접 지정할 수도 있고 각운동량을 가져올 다른 `Widget` 개체를 지정할 수도 있습니다.</span><span class="sxs-lookup"><span data-stu-id="5f141-122">For example, the `Spin` method of a hypothetical `Widget` control might allow either direct specification of spin direction and speed, or specification of another `Widget` object from which angular momentum is to be absorbed:</span></span>  
   
 ```vb  
 Overloads Public Sub Spin( _  
@@ -75,6 +75,6 @@ public void Spin(Widget driver)
 }  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="5067b-123">참고자료</span><span class="sxs-lookup"><span data-stu-id="5067b-123">See also</span></span>
-- [<span data-ttu-id="5067b-124">이벤트</span><span class="sxs-lookup"><span data-stu-id="5067b-124">Events</span></span>](../../../../docs/standard/events/index.md)
-- [<span data-ttu-id="5067b-125">Windows Forms 컨트롤의 속성</span><span class="sxs-lookup"><span data-stu-id="5067b-125">Properties in Windows Forms Controls</span></span>](../../../../docs/framework/winforms/controls/properties-in-windows-forms-controls.md)
+## <a name="see-also"></a><span data-ttu-id="5f141-123">참고자료</span><span class="sxs-lookup"><span data-stu-id="5f141-123">See also</span></span>
+- [<span data-ttu-id="5f141-124">이벤트</span><span class="sxs-lookup"><span data-stu-id="5f141-124">Events</span></span>](../../../standard/events/index.md)
+- [<span data-ttu-id="5f141-125">Windows Forms 컨트롤의 속성</span><span class="sxs-lookup"><span data-stu-id="5f141-125">Properties in Windows Forms Controls</span></span>](properties-in-windows-forms-controls.md)

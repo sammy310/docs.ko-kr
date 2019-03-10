@@ -11,76 +11,76 @@ helpviewer_keywords:
 - ListView control [Windows Forms]
 - list controls [Windows Forms], List view
 ms.assetid: 9f71cf5c-82da-488a-a04e-ef52c0817187
-ms.openlocfilehash: 207b5fcd8bb1242be180898a22ffacf6e5ac9ab1
-ms.sourcegitcommit: 2b986afe4ce9e13bbeec929c9737757eb61de60e
+ms.openlocfilehash: a1689af75eab6a327c657b5c4da3e649056d56ca
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "56664889"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57717780"
 ---
-# <a name="listview-control-windows-forms"></a><span data-ttu-id="78e15-102">ListView 컨트롤(Windows Forms)</span><span class="sxs-lookup"><span data-stu-id="78e15-102">ListView Control (Windows Forms)</span></span>
-<span data-ttu-id="78e15-103">Windows Forms `ListView` 컨트롤은 아이콘이 포함된 항목 목록을 표시합니다.</span><span class="sxs-lookup"><span data-stu-id="78e15-103">The Windows Forms `ListView` control displays a list of items with icons.</span></span> <span data-ttu-id="78e15-104">목록 뷰를 사용하여 Windows 탐색기의 오른쪽 창과 같은 사용자 인터페이스를 만들 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="78e15-104">You can use a list view to create a user interface like the right pane of Windows Explorer.</span></span>  
+# <a name="listview-control-windows-forms"></a><span data-ttu-id="5fa15-102">ListView 컨트롤(Windows Forms)</span><span class="sxs-lookup"><span data-stu-id="5fa15-102">ListView Control (Windows Forms)</span></span>
+<span data-ttu-id="5fa15-103">Windows Forms `ListView` 컨트롤은 아이콘이 포함된 항목 목록을 표시합니다.</span><span class="sxs-lookup"><span data-stu-id="5fa15-103">The Windows Forms `ListView` control displays a list of items with icons.</span></span> <span data-ttu-id="5fa15-104">목록 뷰를 사용하여 Windows 탐색기의 오른쪽 창과 같은 사용자 인터페이스를 만들 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="5fa15-104">You can use a list view to create a user interface like the right pane of Windows Explorer.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="78e15-105">섹션 내용</span><span class="sxs-lookup"><span data-stu-id="78e15-105">In This Section</span></span>  
- [<span data-ttu-id="78e15-106">ListView 컨트롤 개요</span><span class="sxs-lookup"><span data-stu-id="78e15-106">ListView Control Overview</span></span>](../../../../docs/framework/winforms/controls/listview-control-overview-windows-forms.md)  
- <span data-ttu-id="78e15-107">이 컨트롤과 주요 기능 및 속성을 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="78e15-107">Describes this control and its key features and properties.</span></span>  
+## <a name="in-this-section"></a><span data-ttu-id="5fa15-105">섹션 내용</span><span class="sxs-lookup"><span data-stu-id="5fa15-105">In This Section</span></span>  
+ [<span data-ttu-id="5fa15-106">ListView 컨트롤 개요</span><span class="sxs-lookup"><span data-stu-id="5fa15-106">ListView Control Overview</span></span>](listview-control-overview-windows-forms.md)  
+ <span data-ttu-id="5fa15-107">이 컨트롤과 주요 기능 및 속성을 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="5fa15-107">Describes this control and its key features and properties.</span></span>  
   
- [<span data-ttu-id="78e15-108">방법: Windows Forms ListView 컨트롤을 사용 하 여 항목 추가 및 제거</span><span class="sxs-lookup"><span data-stu-id="78e15-108">How to: Add and Remove Items with the Windows Forms ListView Control</span></span>](../../../../docs/framework/winforms/controls/how-to-add-and-remove-items-with-the-windows-forms-listview-control.md)  
- <span data-ttu-id="78e15-109">목록 뷰에서 항목을 추가하거나 제거하는 방법을 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="78e15-109">Describes how to add or remove items from a list view.</span></span>  
+ [<span data-ttu-id="5fa15-108">방법: Windows Forms ListView 컨트롤을 사용 하 여 항목 추가 및 제거</span><span class="sxs-lookup"><span data-stu-id="5fa15-108">How to: Add and Remove Items with the Windows Forms ListView Control</span></span>](how-to-add-and-remove-items-with-the-windows-forms-listview-control.md)  
+ <span data-ttu-id="5fa15-109">목록 뷰에서 항목을 추가하거나 제거하는 방법을 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="5fa15-109">Describes how to add or remove items from a list view.</span></span>  
   
- [<span data-ttu-id="78e15-110">방법: Windows Forms ListView 컨트롤에 열 추가</span><span class="sxs-lookup"><span data-stu-id="78e15-110">How to: Add Columns to the Windows Forms ListView Control</span></span>](../../../../docs/framework/winforms/controls/how-to-add-columns-to-the-windows-forms-listview-control.md)  
- <span data-ttu-id="78e15-111">각 목록 항목에 대한 정보를 표시하기 위해 열을 만드는 방법을 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="78e15-111">Describes how to create columns in order to display information about each list item.</span></span>  
+ [<span data-ttu-id="5fa15-110">방법: Windows Forms ListView 컨트롤에 열 추가</span><span class="sxs-lookup"><span data-stu-id="5fa15-110">How to: Add Columns to the Windows Forms ListView Control</span></span>](how-to-add-columns-to-the-windows-forms-listview-control.md)  
+ <span data-ttu-id="5fa15-111">각 목록 항목에 대한 정보를 표시하기 위해 열을 만드는 방법을 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="5fa15-111">Describes how to create columns in order to display information about each list item.</span></span>  
   
- [<span data-ttu-id="78e15-112">방법: Windows Forms ListView 컨트롤에 대 한 아이콘을 표시 합니다.</span><span class="sxs-lookup"><span data-stu-id="78e15-112">How to: Display Icons for the Windows Forms ListView Control</span></span>](../../../../docs/framework/winforms/controls/how-to-display-icons-for-the-windows-forms-listview-control.md)  
- <span data-ttu-id="78e15-113">큰 아이콘 또는 작은 아이콘을 표시하기에 적절한 이미지 목록에 목록 뷰를 연결하는 방법을 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="78e15-113">Describes how to associate a list view with an appropriate image list for displaying large or small icons.</span></span>  
+ [<span data-ttu-id="5fa15-112">방법: Windows Forms ListView 컨트롤에 대 한 아이콘을 표시 합니다.</span><span class="sxs-lookup"><span data-stu-id="5fa15-112">How to: Display Icons for the Windows Forms ListView Control</span></span>](how-to-display-icons-for-the-windows-forms-listview-control.md)  
+ <span data-ttu-id="5fa15-113">큰 아이콘 또는 작은 아이콘을 표시하기에 적절한 이미지 목록에 목록 뷰를 연결하는 방법을 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="5fa15-113">Describes how to associate a list view with an appropriate image list for displaying large or small icons.</span></span>  
   
- [<span data-ttu-id="78e15-114">방법: Windows Forms ListView 컨트롤을 사용 하 여 열에 하위 항목 표시</span><span class="sxs-lookup"><span data-stu-id="78e15-114">How to: Display Subitems in Columns with the Windows Forms ListView Control</span></span>](../../../../docs/framework/winforms/controls/how-to-display-subitems-in-columns-with-the-windows-forms-listview-control.md)  
- <span data-ttu-id="78e15-115">열에 각 목록 항목에 대한 정보를 표시하는 방법을 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="78e15-115">Describes how to display information about each list item in columns.</span></span>  
+ [<span data-ttu-id="5fa15-114">방법: Windows Forms ListView 컨트롤을 사용 하 여 열에 하위 항목 표시</span><span class="sxs-lookup"><span data-stu-id="5fa15-114">How to: Display Subitems in Columns with the Windows Forms ListView Control</span></span>](how-to-display-subitems-in-columns-with-the-windows-forms-listview-control.md)  
+ <span data-ttu-id="5fa15-115">열에 각 목록 항목에 대한 정보를 표시하는 방법을 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="5fa15-115">Describes how to display information about each list item in columns.</span></span>  
   
- [<span data-ttu-id="78e15-116">방법: Windows Forms ListView 컨트롤에서 항목을 선택 합니다.</span><span class="sxs-lookup"><span data-stu-id="78e15-116">How to: Select an Item in the Windows Forms ListView Control</span></span>](../../../../docs/framework/winforms/controls/how-to-select-an-item-in-the-windows-forms-listview-control.md)  
- <span data-ttu-id="78e15-117">프로그래밍 방식으로 항목을 선택하는 방법을 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="78e15-117">Describes how to programmatically select an item.</span></span>  
+ [<span data-ttu-id="5fa15-116">방법: Windows Forms ListView 컨트롤에서 항목을 선택 합니다.</span><span class="sxs-lookup"><span data-stu-id="5fa15-116">How to: Select an Item in the Windows Forms ListView Control</span></span>](how-to-select-an-item-in-the-windows-forms-listview-control.md)  
+ <span data-ttu-id="5fa15-117">프로그래밍 방식으로 항목을 선택하는 방법을 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="5fa15-117">Describes how to programmatically select an item.</span></span>  
   
- [<span data-ttu-id="78e15-118">방법: Windows Forms ListView 컨트롤에서 항목 그룹화</span><span class="sxs-lookup"><span data-stu-id="78e15-118">How to: Group Items in a Windows Forms ListView Control</span></span>](../../../../docs/framework/winforms/controls/how-to-group-items-in-a-windows-forms-listview-control.md)  
- <span data-ttu-id="78e15-119">분류된 표시를 위해 그룹을 만드는 방법 및 각 그룹에 항목을 할당하는 방법을 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="78e15-119">Describes how to create groups for categorized display and how to assign items to each group.</span></span>  
+ [<span data-ttu-id="5fa15-118">방법: Windows Forms ListView 컨트롤에서 항목 그룹화</span><span class="sxs-lookup"><span data-stu-id="5fa15-118">How to: Group Items in a Windows Forms ListView Control</span></span>](how-to-group-items-in-a-windows-forms-listview-control.md)  
+ <span data-ttu-id="5fa15-119">분류된 표시를 위해 그룹을 만드는 방법 및 각 그룹에 항목을 할당하는 방법을 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="5fa15-119">Describes how to create groups for categorized display and how to assign items to each group.</span></span>  
   
- <span data-ttu-id="78e15-120">이 기능은 [!INCLUDE[WinXpFamily](../../../../includes/winxpfamily-md.md)]에서만 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="78e15-120">This feature is available only for [!INCLUDE[WinXpFamily](../../../../includes/winxpfamily-md.md)].</span></span>  
+ <span data-ttu-id="5fa15-120">이 기능은 [!INCLUDE[WinXpFamily](../../../../includes/winxpfamily-md.md)]에서만 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="5fa15-120">This feature is available only for [!INCLUDE[WinXpFamily](../../../../includes/winxpfamily-md.md)].</span></span>  
   
- [<span data-ttu-id="78e15-121">방법: Windows Forms ListView 컨트롤에서 Tile 보기 사용</span><span class="sxs-lookup"><span data-stu-id="78e15-121">How to: Enable Tile View in a Windows Forms ListView Control</span></span>](../../../../docs/framework/winforms/controls/how-to-enable-tile-view-in-a-windows-forms-listview-control.md)  
- <span data-ttu-id="78e15-122">각각 큰 아이콘과 여러 줄의 텍스트로 구성된 타일로 항목을 표시하는 방법을 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="78e15-122">Describes how to display items as tiles, each of which is comprised of a large icon and multiple lines of text.</span></span>  
+ [<span data-ttu-id="5fa15-121">방법: Windows Forms ListView 컨트롤에서 Tile 보기 사용</span><span class="sxs-lookup"><span data-stu-id="5fa15-121">How to: Enable Tile View in a Windows Forms ListView Control</span></span>](how-to-enable-tile-view-in-a-windows-forms-listview-control.md)  
+ <span data-ttu-id="5fa15-122">각각 큰 아이콘과 여러 줄의 텍스트로 구성된 타일로 항목을 표시하는 방법을 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="5fa15-122">Describes how to display items as tiles, each of which is comprised of a large icon and multiple lines of text.</span></span>  
   
- <span data-ttu-id="78e15-123">이 기능은 [!INCLUDE[WinXpFamily](../../../../includes/winxpfamily-md.md)]에서만 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="78e15-123">This feature is available only for [!INCLUDE[WinXpFamily](../../../../includes/winxpfamily-md.md)].</span></span>  
+ <span data-ttu-id="5fa15-123">이 기능은 [!INCLUDE[WinXpFamily](../../../../includes/winxpfamily-md.md)]에서만 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="5fa15-123">This feature is available only for [!INCLUDE[WinXpFamily](../../../../includes/winxpfamily-md.md)].</span></span>  
   
- [<span data-ttu-id="78e15-124">방법: Windows Forms ListView 컨트롤에 삽입 표시</span><span class="sxs-lookup"><span data-stu-id="78e15-124">How to: Display an Insertion Mark in a Windows Forms ListView Control</span></span>](../../../../docs/framework/winforms/controls/how-to-display-an-insertion-mark-in-a-windows-forms-listview-control.md)  
- <span data-ttu-id="78e15-125">삽입 표시가 각 마우스 포인터 위치에 대한 저장 위치를 나타내는 끌어서 놓기 작업에 대한 사용자 피드백을 구현하는 방법을 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="78e15-125">Describes how to implement user-feedback for drag-and-drop operations in which an insertion mark indicates the drop location for each mouse-pointer position.</span></span>  
+ [<span data-ttu-id="5fa15-124">방법: Windows Forms ListView 컨트롤에 삽입 표시</span><span class="sxs-lookup"><span data-stu-id="5fa15-124">How to: Display an Insertion Mark in a Windows Forms ListView Control</span></span>](how-to-display-an-insertion-mark-in-a-windows-forms-listview-control.md)  
+ <span data-ttu-id="5fa15-125">삽입 표시가 각 마우스 포인터 위치에 대한 저장 위치를 나타내는 끌어서 놓기 작업에 대한 사용자 피드백을 구현하는 방법을 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="5fa15-125">Describes how to implement user-feedback for drag-and-drop operations in which an insertion mark indicates the drop location for each mouse-pointer position.</span></span>  
   
- <span data-ttu-id="78e15-126">이 기능은 [!INCLUDE[WinXpFamily](../../../../includes/winxpfamily-md.md)]에서만 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="78e15-126">This feature is available only for [!INCLUDE[WinXpFamily](../../../../includes/winxpfamily-md.md)].</span></span>  
+ <span data-ttu-id="5fa15-126">이 기능은 [!INCLUDE[WinXpFamily](../../../../includes/winxpfamily-md.md)]에서만 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="5fa15-126">This feature is available only for [!INCLUDE[WinXpFamily](../../../../includes/winxpfamily-md.md)].</span></span>  
   
- [<span data-ttu-id="78e15-127">방법: ListView 컨트롤에 검색 기능 추가</span><span class="sxs-lookup"><span data-stu-id="78e15-127">How to: Add Search Capabilities to a ListView Control</span></span>](../../../../docs/framework/winforms/controls/how-to-add-search-capabilities-to-a-listview-control.md)  
- <span data-ttu-id="78e15-128">텍스트 검색 또는 화면 좌표 중 하나를 사용하여 프로그래밍 방식으로 항목을 찾는 방법을 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="78e15-128">Describes how to programmatically find an item using either text search or screen coordinates.</span></span>  
+ [<span data-ttu-id="5fa15-127">방법: ListView 컨트롤에 검색 기능 추가</span><span class="sxs-lookup"><span data-stu-id="5fa15-127">How to: Add Search Capabilities to a ListView Control</span></span>](how-to-add-search-capabilities-to-a-listview-control.md)  
+ <span data-ttu-id="5fa15-128">텍스트 검색 또는 화면 좌표 중 하나를 사용하여 프로그래밍 방식으로 항목을 찾는 방법을 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="5fa15-128">Describes how to programmatically find an item using either text search or screen coordinates.</span></span>  
   
--   [<span data-ttu-id="78e15-129">방법: 디자이너를 사용 하 여 Windows Forms ListView 컨트롤에서 Tile 보기 사용</span><span class="sxs-lookup"><span data-stu-id="78e15-129">How to: Enable Tile View in a Windows Forms ListView Control Using the Designer</span></span>](enable-tile-view-in-a-wf-listview-control-using-the-designer.md)  
+-   [<span data-ttu-id="5fa15-129">방법: 디자이너를 사용 하 여 Windows Forms ListView 컨트롤에서 Tile 보기 사용</span><span class="sxs-lookup"><span data-stu-id="5fa15-129">How to: Enable Tile View in a Windows Forms ListView Control Using the Designer</span></span>](enable-tile-view-in-a-wf-listview-control-using-the-designer.md)  
   
--   [<span data-ttu-id="78e15-130">방법: 디자이너를 사용 하 여 Windows Forms ListView 컨트롤을 사용 하 여 항목 추가 및 제거</span><span class="sxs-lookup"><span data-stu-id="78e15-130">How to: Add and Remove Items with the Windows Forms ListView Control Using the Designer</span></span>](add-and-remove-items-with-wf-listview-control-using-the-designer.md)  
+-   [<span data-ttu-id="5fa15-130">방법: 디자이너를 사용 하 여 Windows Forms ListView 컨트롤을 사용 하 여 항목 추가 및 제거</span><span class="sxs-lookup"><span data-stu-id="5fa15-130">How to: Add and Remove Items with the Windows Forms ListView Control Using the Designer</span></span>](add-and-remove-items-with-wf-listview-control-using-the-designer.md)  
   
--   [<span data-ttu-id="78e15-131">방법: 디자이너를 사용 하 여 Windows Forms ListView 컨트롤에 열 추가</span><span class="sxs-lookup"><span data-stu-id="78e15-131">How to: Add Columns to the Windows Forms ListView Control Using the Designer</span></span>](how-to-add-columns-to-the-windows-forms-listview-control-using-the-designer.md)  
+-   [<span data-ttu-id="5fa15-131">방법: 디자이너를 사용 하 여 Windows Forms ListView 컨트롤에 열 추가</span><span class="sxs-lookup"><span data-stu-id="5fa15-131">How to: Add Columns to the Windows Forms ListView Control Using the Designer</span></span>](how-to-add-columns-to-the-windows-forms-listview-control-using-the-designer.md)  
   
--   [<span data-ttu-id="78e15-132">방법: 디자이너를 사용 하 여 Windows Forms ListView 컨트롤에서 항목 그룹화</span><span class="sxs-lookup"><span data-stu-id="78e15-132">How to: Group Items in a Windows Forms ListView Control Using the Designer</span></span>](how-to-group-items-in-a-windows-forms-listview-control-using-the-designer.md)  
+-   [<span data-ttu-id="5fa15-132">방법: 디자이너를 사용 하 여 Windows Forms ListView 컨트롤에서 항목 그룹화</span><span class="sxs-lookup"><span data-stu-id="5fa15-132">How to: Group Items in a Windows Forms ListView Control Using the Designer</span></span>](how-to-group-items-in-a-windows-forms-listview-control-using-the-designer.md)  
   
--   [<span data-ttu-id="78e15-133">연습: ListView 및 TreeView 컨트롤이 디자이너를 사용 하 여 된 탐색기 스타일 인터페이스 만들기</span><span class="sxs-lookup"><span data-stu-id="78e15-133">Walkthrough: Creating an Explorer Style Interface with the ListView and TreeView Controls Using the Designer</span></span>](creating-an-explorer-style-interface-with-the-listview-and-treeview.md)  
+-   [<span data-ttu-id="5fa15-133">연습: ListView 및 TreeView 컨트롤이 디자이너를 사용 하 여 된 탐색기 스타일 인터페이스 만들기</span><span class="sxs-lookup"><span data-stu-id="5fa15-133">Walkthrough: Creating an Explorer Style Interface with the ListView and TreeView Controls Using the Designer</span></span>](creating-an-explorer-style-interface-with-the-listview-and-treeview.md)  
   
-## <a name="reference"></a><span data-ttu-id="78e15-134">참조</span><span class="sxs-lookup"><span data-stu-id="78e15-134">Reference</span></span>  
- <span data-ttu-id="78e15-135"><xref:System.Windows.Forms.ListView> 클래스</span><span class="sxs-lookup"><span data-stu-id="78e15-135"><xref:System.Windows.Forms.ListView> class</span></span>  
- <span data-ttu-id="78e15-136">이 클래스를 설명하고 모든 해당 멤버의 링크를 포함합니다.</span><span class="sxs-lookup"><span data-stu-id="78e15-136">Describes this class and has links to all its members.</span></span>  
+## <a name="reference"></a><span data-ttu-id="5fa15-134">참조</span><span class="sxs-lookup"><span data-stu-id="5fa15-134">Reference</span></span>  
+ <span data-ttu-id="5fa15-135"><xref:System.Windows.Forms.ListView> 클래스</span><span class="sxs-lookup"><span data-stu-id="5fa15-135"><xref:System.Windows.Forms.ListView> class</span></span>  
+ <span data-ttu-id="5fa15-136">이 클래스를 설명하고 모든 해당 멤버의 링크를 포함합니다.</span><span class="sxs-lookup"><span data-stu-id="5fa15-136">Describes this class and has links to all its members.</span></span>  
   
-## <a name="related-sections"></a><span data-ttu-id="78e15-137">관련 단원</span><span class="sxs-lookup"><span data-stu-id="78e15-137">Related Sections</span></span>  
- [<span data-ttu-id="78e15-138">방법: TreeView 또는 ListView 컨트롤 (Windows Forms)에 사용자 지정 정보 추가</span><span class="sxs-lookup"><span data-stu-id="78e15-138">How to: Add Custom Information to a TreeView or ListView Control (Windows Forms)</span></span>](../../../../docs/framework/winforms/controls/add-custom-information-to-a-treeview-or-listview-control-wf.md)  
- <span data-ttu-id="78e15-139">필요한 필드, 메서드 또는 생성자를 추가하기 위해 목록 뷰의 항목이나 트리 뷰의 노드에서 상속하는 방법을 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="78e15-139">Describes how to inherit from an item in a list view or a node in a tree view in order to add any fields, methods, or constructors you need.</span></span>  
+## <a name="related-sections"></a><span data-ttu-id="5fa15-137">관련 단원</span><span class="sxs-lookup"><span data-stu-id="5fa15-137">Related Sections</span></span>  
+ [<span data-ttu-id="5fa15-138">방법: TreeView 또는 ListView 컨트롤 (Windows Forms)에 사용자 지정 정보 추가</span><span class="sxs-lookup"><span data-stu-id="5fa15-138">How to: Add Custom Information to a TreeView or ListView Control (Windows Forms)</span></span>](add-custom-information-to-a-treeview-or-listview-control-wf.md)  
+ <span data-ttu-id="5fa15-139">필요한 필드, 메서드 또는 생성자를 추가하기 위해 목록 뷰의 항목이나 트리 뷰의 노드에서 상속하는 방법을 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="5fa15-139">Describes how to inherit from an item in a list view or a node in a tree view in order to add any fields, methods, or constructors you need.</span></span>  
   
- [<span data-ttu-id="78e15-140">ImageList 구성 요소</span><span class="sxs-lookup"><span data-stu-id="78e15-140">ImageList Component</span></span>](../../../../docs/framework/winforms/controls/imagelist-component-windows-forms.md)  
- <span data-ttu-id="78e15-141">이미지 목록의 정의와 주요 기능 및 속성을 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="78e15-141">Explains what an image list is and its key features and properties.</span></span>  
+ [<span data-ttu-id="5fa15-140">ImageList 구성 요소</span><span class="sxs-lookup"><span data-stu-id="5fa15-140">ImageList Component</span></span>](imagelist-component-windows-forms.md)  
+ <span data-ttu-id="5fa15-141">이미지 목록의 정의와 주요 기능 및 속성을 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="5fa15-141">Explains what an image list is and its key features and properties.</span></span>  
   
- [<span data-ttu-id="78e15-142">방법: Windows Forms로 다중 창 사용자 인터페이스 만들기</span><span class="sxs-lookup"><span data-stu-id="78e15-142">How to: Create a Multipane User Interface with Windows Forms</span></span>](../../../../docs/framework/winforms/controls/how-to-create-a-multipane-user-interface-with-windows-forms.md)  
- <span data-ttu-id="78e15-143">여러 창으로 Windows Form의 레이아웃을 작성하기 위한 지침을 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="78e15-143">Gives instructions for laying out a Windows Form with multiple panes.</span></span>  
+ [<span data-ttu-id="5fa15-142">방법: Windows Forms로 다중 창 사용자 인터페이스 만들기</span><span class="sxs-lookup"><span data-stu-id="5fa15-142">How to: Create a Multipane User Interface with Windows Forms</span></span>](how-to-create-a-multipane-user-interface-with-windows-forms.md)  
+ <span data-ttu-id="5fa15-143">여러 창으로 Windows Form의 레이아웃을 작성하기 위한 지침을 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="5fa15-143">Gives instructions for laying out a Windows Form with multiple panes.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="78e15-144">참고자료</span><span class="sxs-lookup"><span data-stu-id="78e15-144">See also</span></span>
-- [<span data-ttu-id="78e15-145">Windows Forms에 사용할 수 있는 컨트롤</span><span class="sxs-lookup"><span data-stu-id="78e15-145">Controls to Use on Windows Forms</span></span>](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)
+## <a name="see-also"></a><span data-ttu-id="5fa15-144">참고자료</span><span class="sxs-lookup"><span data-stu-id="5fa15-144">See also</span></span>
+- [<span data-ttu-id="5fa15-145">Windows Forms에 사용할 수 있는 컨트롤</span><span class="sxs-lookup"><span data-stu-id="5fa15-145">Controls to Use on Windows Forms</span></span>](controls-to-use-on-windows-forms.md)
