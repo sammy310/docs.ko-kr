@@ -7,35 +7,35 @@ helpviewer_keywords:
 - flicker [Windows Forms], reducing in Windows Forms
 - buffering [Windows Forms], double buffering
 ms.assetid: dc484e33-7101-4e4b-ada5-d3c96155fbcd
-ms.openlocfilehash: 9b09210eba0ac3a141219a7cdbff15f22c6ed003
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ac6c9b7f2cc1fea86a75eaaf4a2dde1ea60e4f40
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33523912"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57716285"
 ---
-# <a name="using-double-buffering"></a><span data-ttu-id="d10ac-102">이중 버퍼링 사용</span><span class="sxs-lookup"><span data-stu-id="d10ac-102">Using Double Buffering</span></span>
-<span data-ttu-id="d10ac-103">복잡 한 그리기 작업을 포함 하는 응용 프로그램에서 깜빡임을 줄이기 위해 이중 버퍼링 된 그래픽을 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="d10ac-103">You can use double-buffered graphics to reduce flicker in your applications that contain complex painting operations.</span></span> <span data-ttu-id="d10ac-104">.NET Framework에는 이중 버퍼링에 대 한 기본 제공 지원이 포함 되어 있고 관리 그래픽을 수동으로 렌더링 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="d10ac-104">The .NET Framework contains built-in support for double-buffering or you can manage and render graphics manually.</span></span>  
+# <a name="using-double-buffering"></a><span data-ttu-id="0efdf-102">이중 버퍼링 사용</span><span class="sxs-lookup"><span data-stu-id="0efdf-102">Using Double Buffering</span></span>
+<span data-ttu-id="0efdf-103">복잡 한 그리기 작업을 포함 하는 응용 프로그램에서 깜빡임을 줄이기 위해 이중 버퍼링 된 그래픽을 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="0efdf-103">You can use double-buffered graphics to reduce flicker in your applications that contain complex painting operations.</span></span> <span data-ttu-id="0efdf-104">.NET Framework에는 이중 버퍼링에 대 한 기본 제공 지원이 포함 되어 있습니다. 또는 그래픽을 수동으로 렌더링 및 관리할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="0efdf-104">The .NET Framework contains built-in support for double-buffering or you can manage and render graphics manually.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="d10ac-105">섹션 내용</span><span class="sxs-lookup"><span data-stu-id="d10ac-105">In This Section</span></span>  
- [<span data-ttu-id="d10ac-106">이중 버퍼링 그래픽</span><span class="sxs-lookup"><span data-stu-id="d10ac-106">Double Buffered Graphics</span></span>](../../../../docs/framework/winforms/advanced/double-buffered-graphics.md)  
- <span data-ttu-id="d10ac-107">에서는 이중 버퍼링 개념 윤곽선과.NET Framework 지원 합니다.</span><span class="sxs-lookup"><span data-stu-id="d10ac-107">Introduces double buffering concept and outlines .NET Framework support.</span></span>  
+## <a name="in-this-section"></a><span data-ttu-id="0efdf-105">섹션 내용</span><span class="sxs-lookup"><span data-stu-id="0efdf-105">In This Section</span></span>  
+ [<span data-ttu-id="0efdf-106">이중 버퍼링 그래픽</span><span class="sxs-lookup"><span data-stu-id="0efdf-106">Double Buffered Graphics</span></span>](double-buffered-graphics.md)  
+ <span data-ttu-id="0efdf-107">이중 버퍼링 개념을 간략하게 설명 하며.NET Framework 지원이 도입 되었습니다.</span><span class="sxs-lookup"><span data-stu-id="0efdf-107">Introduces double buffering concept and outlines .NET Framework support.</span></span>  
   
- [<span data-ttu-id="d10ac-108">방법: 양식과 컨트롤에 이중 버퍼링을 사용하여 그래픽 깜빡임 줄이기</span><span class="sxs-lookup"><span data-stu-id="d10ac-108">How to: Reduce Graphics Flicker with Double Buffering for Forms and Controls</span></span>](../../../../docs/framework/winforms/advanced/how-to-reduce-graphics-flicker-with-double-buffering-for-forms-and-controls.md)  
- <span data-ttu-id="d10ac-109">기본 이중 지원.NET Framework의 버퍼링을 사용 하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="d10ac-109">Demonstrates how to use the default double buffering support in the .NET Framework.</span></span>  
+ [<span data-ttu-id="0efdf-108">방법: 폼 및 컨트롤에 이중 버퍼링 사용 하 여 그래픽 깜빡임 줄이기</span><span class="sxs-lookup"><span data-stu-id="0efdf-108">How to: Reduce Graphics Flicker with Double Buffering for Forms and Controls</span></span>](how-to-reduce-graphics-flicker-with-double-buffering-for-forms-and-controls.md)  
+ <span data-ttu-id="0efdf-109">기본 이중 지원.NET Framework의 버퍼링을 사용 하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="0efdf-109">Demonstrates how to use the default double buffering support in the .NET Framework.</span></span>  
   
- [<span data-ttu-id="d10ac-110">방법: 버퍼링된 그래픽 수동 관리</span><span class="sxs-lookup"><span data-stu-id="d10ac-110">How to: Manually Manage Buffered Graphics</span></span>](../../../../docs/framework/winforms/advanced/how-to-manually-manage-buffered-graphics.md)  
- <span data-ttu-id="d10ac-111">응용 프로그램의 이중 버퍼링을 관리 하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="d10ac-111">Shows how to manage double buffering in applications.</span></span>  
+ [<span data-ttu-id="0efdf-110">방법: 버퍼링 된 그래픽 수동 관리</span><span class="sxs-lookup"><span data-stu-id="0efdf-110">How to: Manually Manage Buffered Graphics</span></span>](how-to-manually-manage-buffered-graphics.md)  
+ <span data-ttu-id="0efdf-111">응용 프로그램에서 이중 버퍼링을 관리 하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="0efdf-111">Shows how to manage double buffering in applications.</span></span>  
   
- [<span data-ttu-id="d10ac-112">방법: 버퍼링된 그래픽 수동 렌더링</span><span class="sxs-lookup"><span data-stu-id="d10ac-112">How to: Manually Render Buffered Graphics</span></span>](../../../../docs/framework/winforms/advanced/how-to-manually-render-buffered-graphics.md)  
- <span data-ttu-id="d10ac-113">이중 버퍼링 된 그래픽을 렌더링 하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="d10ac-113">Demonstrates how to render double-buffered graphics.</span></span>  
+ [<span data-ttu-id="0efdf-112">방법: 버퍼링 된 그래픽 수동 렌더링</span><span class="sxs-lookup"><span data-stu-id="0efdf-112">How to: Manually Render Buffered Graphics</span></span>](how-to-manually-render-buffered-graphics.md)  
+ <span data-ttu-id="0efdf-113">이중 버퍼링 된 그래픽을 렌더링 하는 방법에 설명 합니다.</span><span class="sxs-lookup"><span data-stu-id="0efdf-113">Demonstrates how to render double-buffered graphics.</span></span>  
   
-## <a name="reference"></a><span data-ttu-id="d10ac-114">참조</span><span class="sxs-lookup"><span data-stu-id="d10ac-114">Reference</span></span>  
- <span data-ttu-id="d10ac-115"><xref:System.Windows.Forms.Control.SetStyle%2A> ,</span><span class="sxs-lookup"><span data-stu-id="d10ac-115"><xref:System.Windows.Forms.Control.SetStyle%2A> ,</span></span>  
- <span data-ttu-id="d10ac-116">이중 버퍼링을 사용 하도록 설정 하는 제어 메서드.</span><span class="sxs-lookup"><span data-stu-id="d10ac-116">Control method that enables double buffering.</span></span>  
+## <a name="reference"></a><span data-ttu-id="0efdf-114">참조</span><span class="sxs-lookup"><span data-stu-id="0efdf-114">Reference</span></span>  
+ <span data-ttu-id="0efdf-115"><xref:System.Windows.Forms.Control.SetStyle%2A> ,</span><span class="sxs-lookup"><span data-stu-id="0efdf-115"><xref:System.Windows.Forms.Control.SetStyle%2A> ,</span></span>  
+ <span data-ttu-id="0efdf-116">이중 버퍼링을 사용 하도록 설정 하는 컨트롤의 메서드.</span><span class="sxs-lookup"><span data-stu-id="0efdf-116">Control method that enables double buffering.</span></span>  
   
- <span data-ttu-id="d10ac-117"><xref:System.Drawing.BufferedGraphicsContext> ,</span><span class="sxs-lookup"><span data-stu-id="d10ac-117"><xref:System.Drawing.BufferedGraphicsContext> ,</span></span>  
- <span data-ttu-id="d10ac-118">그래픽 버퍼를 만드는 방법을 제공 합니다.</span><span class="sxs-lookup"><span data-stu-id="d10ac-118">Provides methods for creating graphics buffers.</span></span>  
+ <span data-ttu-id="0efdf-117"><xref:System.Drawing.BufferedGraphicsContext> ,</span><span class="sxs-lookup"><span data-stu-id="0efdf-117"><xref:System.Drawing.BufferedGraphicsContext> ,</span></span>  
+ <span data-ttu-id="0efdf-118">그래픽 버퍼를 만드는 방법을 제공 합니다.</span><span class="sxs-lookup"><span data-stu-id="0efdf-118">Provides methods for creating graphics buffers.</span></span>  
   
  <xref:System.Drawing.BufferedGraphicsManager>  
- <span data-ttu-id="d10ac-119">버퍼링 된 그래픽 컨텍스트에 응용 프로그램 도메인에 대 한 액세스를 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="d10ac-119">Provides access to the buffered graphics context for a application domain.</span></span>
+ <span data-ttu-id="0efdf-119">응용 프로그램 도메인에 대 한 버퍼링 된 그래픽 컨텍스트에 대 한 액세스를 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="0efdf-119">Provides access to the buffered graphics context for a application domain.</span></span>

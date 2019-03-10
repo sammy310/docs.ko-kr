@@ -12,19 +12,19 @@ helpviewer_keywords:
 - menu items [Windows Forms], hiding
 - hiding menu items
 ms.assetid: 418a768f-808a-44cd-8cef-f4e161883621
-ms.openlocfilehash: 73e49c96c20f145490a2d494177e21bc957605b8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a82df42240ae045f0d6f355f642acfb8082c87a5
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54727627"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57715258"
 ---
-# <a name="how-to-hide-toolstripmenuitems"></a><span data-ttu-id="d259f-102">방법: ToolStripMenuItems 숨기기</span><span class="sxs-lookup"><span data-stu-id="d259f-102">How to: Hide ToolStripMenuItems</span></span>
-<span data-ttu-id="d259f-103">메뉴 항목 숨기기는 응용 프로그램의 사용자 인터페이스를 제어 하 고 사용자 명령을 제한 하는 방법입니다.</span><span class="sxs-lookup"><span data-stu-id="d259f-103">Hiding menu items is a way to control the user interface of your application and restrict user commands.</span></span> <span data-ttu-id="d259f-104">종종 전체 메뉴에 메뉴 항목을 모두 사용할 수 없는 경우 숨기려면 해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="d259f-104">Often, you will want to hide an entire menu when all of the menu items on it are unavailable.</span></span> <span data-ttu-id="d259f-105">이 사용자에 대해 더 적은 방해 요소를 표시합니다.</span><span class="sxs-lookup"><span data-stu-id="d259f-105">This presents fewer distractions for the user.</span></span> <span data-ttu-id="d259f-106">또한 하려는 숨기고 메뉴 또는 메뉴 항목을 사용 하지 않도록 설정으로 숨기는 것 만으로도 사용자 바로 가기 키를 사용 하 여 메뉴 명령에 액세스 하는 것을 금지 하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="d259f-106">Furthermore, you might want to both hide and disable the menu or menu item, as hiding alone does not prevent the user from accessing a menu command by using a shortcut key.</span></span>  
+# <a name="how-to-hide-toolstripmenuitems"></a><span data-ttu-id="b4dc6-102">방법: ToolStripMenuItems 숨기기</span><span class="sxs-lookup"><span data-stu-id="b4dc6-102">How to: Hide ToolStripMenuItems</span></span>
+<span data-ttu-id="b4dc6-103">메뉴 항목 숨기기는 응용 프로그램의 사용자 인터페이스를 제어 하 고 사용자 명령을 제한 하는 방법입니다.</span><span class="sxs-lookup"><span data-stu-id="b4dc6-103">Hiding menu items is a way to control the user interface of your application and restrict user commands.</span></span> <span data-ttu-id="b4dc6-104">종종 전체 메뉴에 메뉴 항목을 모두 사용할 수 없는 경우 숨기려면 해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="b4dc6-104">Often, you will want to hide an entire menu when all of the menu items on it are unavailable.</span></span> <span data-ttu-id="b4dc6-105">이 사용자에 대해 더 적은 방해 요소를 표시합니다.</span><span class="sxs-lookup"><span data-stu-id="b4dc6-105">This presents fewer distractions for the user.</span></span> <span data-ttu-id="b4dc6-106">또한 하려는 숨기고 메뉴 또는 메뉴 항목을 사용 하지 않도록 설정으로 숨기는 것 만으로도 사용자 바로 가기 키를 사용 하 여 메뉴 명령에 액세스 하는 것을 금지 하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="b4dc6-106">Furthermore, you might want to both hide and disable the menu or menu item, as hiding alone does not prevent the user from accessing a menu command by using a shortcut key.</span></span>  
   
-### <a name="to-hide-any-menu-item-programmatically"></a><span data-ttu-id="d259f-107">프로그래밍 방식으로 모든 메뉴 항목을 숨기려면</span><span class="sxs-lookup"><span data-stu-id="d259f-107">To hide any menu item programmatically</span></span>  
+### <a name="to-hide-any-menu-item-programmatically"></a><span data-ttu-id="b4dc6-107">프로그래밍 방식으로 모든 메뉴 항목을 숨기려면</span><span class="sxs-lookup"><span data-stu-id="b4dc6-107">To hide any menu item programmatically</span></span>  
   
--   <span data-ttu-id="d259f-108">메뉴 항목의 속성을 설정한 메서드 내에서 설정 하는 코드를 추가 합니다 <xref:System.Windows.Forms.ToolStripItem.Visible%2A> 속성을 `false`입니다.</span><span class="sxs-lookup"><span data-stu-id="d259f-108">Within the method where you set the properties of the menu item, add code to set the <xref:System.Windows.Forms.ToolStripItem.Visible%2A> property to `false`.</span></span>  
+-   <span data-ttu-id="b4dc6-108">메뉴 항목의 속성을 설정한 메서드 내에서 설정 하는 코드를 추가 합니다 <xref:System.Windows.Forms.ToolStripItem.Visible%2A> 속성을 `false`입니다.</span><span class="sxs-lookup"><span data-stu-id="b4dc6-108">Within the method where you set the properties of the menu item, add code to set the <xref:System.Windows.Forms.ToolStripItem.Visible%2A> property to `false`.</span></span>  
   
     ```vb  
     MenuItem3.Visible = False  
@@ -38,8 +38,8 @@ ms.locfileid: "54727627"
     menuItem3->Visible = false;  
     ```  
   
-## <a name="see-also"></a><span data-ttu-id="d259f-109">참고자료</span><span class="sxs-lookup"><span data-stu-id="d259f-109">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="b4dc6-109">참고자료</span><span class="sxs-lookup"><span data-stu-id="b4dc6-109">See also</span></span>
 - <xref:System.Windows.Forms.ToolStripItem.Visible%2A>
 - <xref:System.Windows.Forms.MenuStrip>
-- [<span data-ttu-id="d259f-110">MenuStrip 컨트롤 개요</span><span class="sxs-lookup"><span data-stu-id="d259f-110">MenuStrip Control Overview</span></span>](../../../../docs/framework/winforms/controls/menustrip-control-overview-windows-forms.md)
-- [<span data-ttu-id="d259f-111">방법: ToolStripMenuItems 사용 안 함</span><span class="sxs-lookup"><span data-stu-id="d259f-111">How to: Disable ToolStripMenuItems</span></span>](../../../../docs/framework/winforms/controls/how-to-disable-toolstripmenuitems.md)
+- [<span data-ttu-id="b4dc6-110">MenuStrip 컨트롤 개요</span><span class="sxs-lookup"><span data-stu-id="b4dc6-110">MenuStrip Control Overview</span></span>](menustrip-control-overview-windows-forms.md)
+- [<span data-ttu-id="b4dc6-111">방법: ToolStripMenuItems 사용 안 함</span><span class="sxs-lookup"><span data-stu-id="b4dc6-111">How to: Disable ToolStripMenuItems</span></span>](how-to-disable-toolstripmenuitems.md)
