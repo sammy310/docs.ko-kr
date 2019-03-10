@@ -12,12 +12,12 @@ helpviewer_keywords:
 - examples [Windows Forms], LinkLabel control
 - LinkLabel control [Windows Forms], examples
 ms.assetid: fdc5854f-5162-4457-8cbe-1042feb2d132
-ms.openlocfilehash: 2e36bdc051ec83985bd508499640c9f97bdefc91
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 451faf04e3a51e7dbcb992feb3f38025894be631
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54632129"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57717728"
 ---
 # <a name="how-to-change-the-appearance-of-the-windows-forms-linklabel-control"></a>방법: Windows Forms LinkLabel 컨트롤의 모양 변경
 표시 되는 텍스트를 변경할 수는 <xref:System.Windows.Forms.LinkLabel> 다양 한 목적에 맞게 컨트롤을 합니다. 예를 들어, 것이 일반적으로 사용자에 게 나타내기 위해 텍스트에 밑줄을 특정 색으로 표시를 설정 하 여 텍스트를 클릭할 수 있습니다. 사용자가 텍스트 색을 다른 색으로 변경 됩니다. 이 동작을 제어 하려면 5 개의 서로 다른 속성을 설정할 수 있습니다: 합니다 <xref:System.Windows.Forms.LinkLabel.LinkBehavior%2A>, <xref:System.Windows.Forms.LinkLabel.LinkArea%2A>를 <xref:System.Windows.Forms.LinkLabel.LinkColor%2A>, <xref:System.Windows.Forms.LinkLabel.VisitedLinkColor%2A>, 및 <xref:System.Windows.Forms.LinkLabel.LinkVisited%2A> 속성입니다.  
@@ -126,6 +126,6 @@ ms.locfileid: "54632129"
 - <xref:System.Windows.Forms.LinkLabel.LinkColor%2A>
 - <xref:System.Windows.Forms.LinkLabel.VisitedLinkColor%2A>
 - <xref:System.Windows.Forms.LinkLabel.LinkVisited%2A>
-- [LinkLabel 컨트롤 개요](../../../../docs/framework/winforms/controls/linklabel-control-overview-windows-forms.md)
-- [방법: Windows Forms LinkLabel 컨트롤을 사용 하 여 페이지를 웹 또는 개체에 연결](../../../../docs/framework/winforms/controls/link-to-an-object-or-web-page-with-wf-linklabel-control.md)
-- [LinkLabel 컨트롤](../../../../docs/framework/winforms/controls/linklabel-control-windows-forms.md)
+- [LinkLabel 컨트롤 개요](linklabel-control-overview-windows-forms.md)
+- [방법: Windows Forms LinkLabel 컨트롤을 사용 하 여 페이지를 웹 또는 개체에 연결](link-to-an-object-or-web-page-with-wf-linklabel-control.md)
+- [LinkLabel 컨트롤](linklabel-control-windows-forms.md)

@@ -18,20 +18,20 @@ helpviewer_keywords:
 - Windows Forms, circular
 - forms [Windows Forms], custom shapes
 ms.assetid: 6e6041e0-8e67-4487-b1e9-e410dbd1ef6c
-ms.openlocfilehash: 937b785078e58026a5360155805f9cf37031cec6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a130614b0977aab6191f195c93454c527e6be9b8
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54527278"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57710071"
 ---
 # <a name="how-to-create-a-shaped-windows-form"></a>방법: 모양이 가진된 Windows Form 만들기
 이 예제에서는 폼을 타원 양식을 사용 하 여 크기를 조정 합니다.  
   
 ## <a name="example"></a>예제  
- [!code-cpp[System.Drawing.ConceptualHowTos#10](../../../../samples/snippets/cpp/VS_Snippets_Winforms/System.Drawing.ConceptualHowTos/cpp/form1.cpp#10)]
- [!code-csharp[System.Drawing.ConceptualHowTos#10](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.ConceptualHowTos/CS/form1.cs#10)]
- [!code-vb[System.Drawing.ConceptualHowTos#10](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.ConceptualHowTos/VB/form1.vb#10)]  
+ [!code-cpp[System.Drawing.ConceptualHowTos#10](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Drawing.ConceptualHowTos/cpp/form1.cpp#10)]
+ [!code-csharp[System.Drawing.ConceptualHowTos#10](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.ConceptualHowTos/CS/form1.cs#10)]
+ [!code-vb[System.Drawing.ConceptualHowTos#10](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.ConceptualHowTos/VB/form1.vb#10)]  
   
 ## <a name="compiling-the-code"></a>코드 컴파일  
  이 예제에는 다음 사항이 필요합니다.  
@@ -46,4 +46,4 @@ ms.locfileid: "54527278"
 - <xref:System.Drawing>
 - <xref:System.Drawing.Drawing2D.GraphicsPath.AddEllipse%2A>
 - <xref:System.Windows.Forms.Control.Region%2A>
-- [그래픽 프로그래밍 시작](../../../../docs/framework/winforms/advanced/getting-started-with-graphics-programming.md)
+- [그래픽 프로그래밍 시작](getting-started-with-graphics-programming.md)

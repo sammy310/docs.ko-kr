@@ -15,12 +15,12 @@ helpviewer_keywords:
 - access keys [Windows Forms], Windows Forms
 - ALT key
 ms.assetid: 4c374c4c-4ca9-4a68-ac96-9dc3ab0f518a
-ms.openlocfilehash: e9524449b457fc276678ecaadd1d137e7280156a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3d4112d87dbd448c7e34d2b84d11b49f56e1dc44
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54527473"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57713347"
 ---
 # <a name="how-to-create-access-keys-for-windows-forms-controls-using-the-designer"></a>방법: 디자이너를 사용 하 여 Windows Forms 컨트롤에 대 한 액세스 키 만들기
 *선택키가* 은 메뉴, 메뉴 항목 또는 예: 단추 컨트롤의 레이블 텍스트에 밑줄이 그어진된 문자입니다. 사용자를가 단추를 미리 정의 된 액세스 키를 사용 하 여 함께에서 ALT 키를 눌러 "클릭" 수 있습니다. 예를 들어, 단추 폼을 인쇄 하는 프로시저를 실행 하는 경우 및 해당 `Text` "Print" 추가 앰퍼샌드 (&) "P" 하면 문자에 밑줄을 표시 "P" 단추 텍스트의 런타임 시 문자 앞에 속성을 설정 합니다. ALT + P를 눌러 단추와 연결 된 명령을 실행할 수 있습니다. 포커스를 받을 수 있는 컨트롤에 대 한 액세스 키를 사용할 수 없습니다.  
@@ -34,6 +34,6 @@ ms.locfileid: "54527473"
   
 ## <a name="see-also"></a>참고자료
 - <xref:System.Windows.Forms.Button>
-- [방법: Windows Forms 단추 클릭에 응답](../../../../docs/framework/winforms/controls/how-to-respond-to-windows-forms-button-clicks.md)
-- [방법: 설정 하 여 표시 되는 텍스트는 Windows Forms 컨트롤](../../../../docs/framework/winforms/controls/how-to-set-the-text-displayed-by-a-windows-forms-control.md)
-- [개별 Windows Forms 컨트롤 레이블 지정 및 바로 가기 제공](../../../../docs/framework/winforms/controls/labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md)
+- [방법: Windows Forms 단추 클릭에 응답](how-to-respond-to-windows-forms-button-clicks.md)
+- [방법: 설정 하 여 표시 되는 텍스트는 Windows Forms 컨트롤](how-to-set-the-text-displayed-by-a-windows-forms-control.md)
+- [개별 Windows Forms 컨트롤 레이블 지정 및 바로 가기 제공](labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md)

@@ -11,12 +11,12 @@ helpviewer_keywords:
 - StatusBar control [Windows Forms], refreshing panels
 - panels [Windows Forms], refreshing status bar
 ms.assetid: cc2abb06-c082-49f7-a5a3-2fd1bbcb58d1
-ms.openlocfilehash: 88aacd77742baea5ebf04ddca311100bd44edb3e
-ms.sourcegitcommit: 2b986afe4ce9e13bbeec929c9737757eb61de60e
+ms.openlocfilehash: 3ad76899f86013e3395b5b7859538c4c59c9b1ee
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "56665149"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57716467"
 ---
 # <a name="walkthrough-updating-status-bar-information-at-run-time"></a>연습: 런타임에 상태 표시줄 정보 업데이트
 > [!IMPORTANT]
@@ -30,9 +30,9 @@ ms.locfileid: "56665149"
   
 1.  새 Windows Form을 만듭니다.  
   
-2.  폼에 <xref:System.Windows.Forms.StatusBar> 컨트롤을 추가합니다. 자세한 내용은 [방법: Windows Forms에 컨트롤 추가](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md)합니다.  
+2.  폼에 <xref:System.Windows.Forms.StatusBar> 컨트롤을 추가합니다. 자세한 내용은 [방법: Windows Forms에 컨트롤 추가](how-to-add-controls-to-windows-forms.md)합니다.  
   
-3.  상태 표시줄 패널을 추가 하면 <xref:System.Windows.Forms.StatusBar> 제어 합니다. 자세한 내용은 [방법: StatusBar 컨트롤에 패널 추가](../../../../docs/framework/winforms/controls/how-to-add-panels-to-a-statusbar-control.md)합니다.  
+3.  상태 표시줄 패널을 추가 하면 <xref:System.Windows.Forms.StatusBar> 제어 합니다. 자세한 내용은 [방법: StatusBar 컨트롤에 패널 추가](how-to-add-panels-to-a-statusbar-control.md)합니다.  
   
 4.  에 대 한는 <xref:System.Windows.Forms.StatusBar> 폼에 추가 된 컨트롤을 설정 합니다 <xref:System.Windows.Forms.StatusBar.ShowPanels%2A> 속성을 `true`입니다.  
   
@@ -87,6 +87,6 @@ ms.locfileid: "56665149"
 ## <a name="see-also"></a>참고자료
 - <xref:System.Windows.Forms.StatusBar>
 - <xref:System.Windows.Forms.ToolStripStatusLabel>
-- [방법: StatusBar 컨트롤에 패널 추가](../../../../docs/framework/winforms/controls/how-to-add-panels-to-a-statusbar-control.md)
-- [방법: Windows Forms StatusBar 컨트롤에서 패널 클릭 확인](../../../../docs/framework/winforms/controls/determine-which-panel-wf-statusbar-control-was-clicked.md)
-- [StatusBar 컨트롤 개요](../../../../docs/framework/winforms/controls/statusbar-control-overview-windows-forms.md)
+- [방법: StatusBar 컨트롤에 패널 추가](how-to-add-panels-to-a-statusbar-control.md)
+- [방법: Windows Forms StatusBar 컨트롤에서 패널 클릭 확인](determine-which-panel-wf-statusbar-control-was-clicked.md)
+- [StatusBar 컨트롤 개요](statusbar-control-overview-windows-forms.md)

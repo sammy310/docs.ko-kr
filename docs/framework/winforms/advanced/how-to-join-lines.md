@@ -14,28 +14,28 @@ helpviewer_keywords:
 - lines [Windows Forms], joining
 - graphics [Windows Forms], joining lines
 ms.assetid: 9fc480c2-3c75-4fd1-8ab5-296a99e820e2
-ms.openlocfilehash: 55551a78f37a5179b24eda28a9fc5d0a0c640a9b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a95ccddd89c85c5439c4d73f77a6ed67198dc7ba
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54543385"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57709867"
 ---
 # <a name="how-to-join-lines"></a>방법: 선 조인
 선 조인에 끝 부분이 만나거나 겹치는 두 줄으로 구성 되는 일반적인 영역입니다. [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 세 선 조인 스타일을 제공 합니다: 마이터, 빗면 및 반올림 합니다. 선 조인 스타일의 속성인는 <xref:System.Drawing.Pen> 클래스입니다. 선 조인 스타일을 지정 하는 경우는 <xref:System.Drawing.Pen> 개체에 연결 된 모든 줄에 조인 스타일을 적용할 <xref:System.Drawing.Drawing2D.GraphicsPath> 개체는 펜을 사용 하 여 그려집니다.  
   
  다음 그림에서는 빗면된 선 조인 예제 결과 보여 줍니다.  
   
- ![펜](../../../../docs/framework/winforms/advanced/media/pens5.gif "pens5")  
+ ![펜](./media/pens5.gif "pens5")  
   
 ## <a name="example"></a>예제  
  사용 하 여 선 조인 스타일을 지정할 수 있습니다는 <xref:System.Drawing.Pen.LineJoin%2A> 의 속성을 <xref:System.Drawing.Pen> 클래스입니다. 이 예제에서는 빗면된 선 조인을 가로 줄 사이의 세로 줄을 보여 줍니다. 다음 코드에서 값 <xref:System.Drawing.Drawing2D.LineJoin.Bevel> 에 할당 합니다 <xref:System.Drawing.Pen.LineJoin%2A> 속성이 멤버인은 <xref:System.Drawing.Drawing2D.LineJoin> 열거형. 다른 멤버를 <xref:System.Drawing.Drawing2D.LineJoin> 열거 <xref:System.Drawing.Drawing2D.LineJoin.Miter> 고 <xref:System.Drawing.Drawing2D.LineJoin.Round>입니다.  
   
- [!code-csharp[System.Drawing.UsingAPen#31](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingAPen/CS/Class1.cs#31)]
- [!code-vb[System.Drawing.UsingAPen#31](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingAPen/VB/Class1.vb#31)]  
+ [!code-csharp[System.Drawing.UsingAPen#31](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingAPen/CS/Class1.cs#31)]
+ [!code-vb[System.Drawing.UsingAPen#31](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingAPen/VB/Class1.vb#31)]  
   
 ## <a name="compiling-the-code"></a>코드 컴파일  
  앞의 예제는 Windows forms에서 사용하도록 설계되었으며 <xref:System.Windows.Forms.Control.Paint> 이벤트 처리기의 매개 변수인 <xref:System.Windows.Forms.PaintEventArgs> `e`가 필요합니다.  
   
 ## <a name="see-also"></a>참고자료
-- [펜을 사용하여 선과 도형 그리기](../../../../docs/framework/winforms/advanced/using-a-pen-to-draw-lines-and-shapes.md)
+- [펜을 사용하여 선과 도형 그리기](using-a-pen-to-draw-lines-and-shapes.md)

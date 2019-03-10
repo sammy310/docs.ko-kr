@@ -10,12 +10,12 @@ helpviewer_keywords:
 - examples [Windows Forms], text boxes
 - RichTextBox control [Windows Forms], linking to Web pages
 ms.assetid: 95089a37-a202-4f7a-94ee-6ee312908851
-ms.openlocfilehash: e32dfc394f91ed44b702136d3177f6307f3991ba
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 64a2c8d9a9f6b8a7271a659b80ca2a63c423b3bc
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54727588"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57718525"
 ---
 # <a name="how-to-display-web-style-links-with-the-windows-forms-richtextbox-control"></a>방법: Windows Forms RichTextBox 컨트롤을 사용 하 여 웹 스타일 링크 표시
 Windows Forms <xref:System.Windows.Forms.RichTextBox> 제어와 색이 지정 된 밑줄 웹 링크를 표시할 수 있습니다. 브라우저 창에 링크를 클릭할 때 링크 텍스트에 지정 된 웹 사이트를 표시 하는 코드를 작성할 수 있습니다.  
@@ -33,7 +33,7 @@ Windows Forms <xref:System.Windows.Forms.RichTextBox> 제어와 색이 지정 �
      아래 예제에서는 <xref:System.Windows.Forms.RichTextBox.LinkClicked> 이벤트에 지정 된 URL Internet Explorer의 인스턴스를 열고는 <xref:System.Windows.Forms.RichTextBox.Text%2A> 의 속성은 <xref:System.Windows.Forms.RichTextBox> 컨트롤. 이 예에서는 가정 된 폼을 <xref:System.Windows.Forms.RichTextBox> 제어 합니다.  
   
     > [!IMPORTANT]
-    >  호출에는 <xref:System.Diagnostics.Process.Start%2A?displayProperty=nameWithType> 메서드를 접하게 되는 <xref:System.Security.SecurityException> 권한 부족으로 인해 부분 신뢰 컨텍스트에서 코드를 실행 하는 경우 예외. 자세한 내용은 [코드 액세스 보안 기본 사항](../../../../docs/framework/misc/code-access-security-basics.md)을 참조하세요.  
+    >  호출에는 <xref:System.Diagnostics.Process.Start%2A?displayProperty=nameWithType> 메서드를 접하게 되는 <xref:System.Security.SecurityException> 권한 부족으로 인해 부분 신뢰 컨텍스트에서 코드를 실행 하는 경우 예외. 자세한 내용은 [코드 액세스 보안 기본 사항](../../misc/code-access-security-basics.md)을 참조하세요.  
   
     ```vb  
     Public p As New System.Diagnostics.Process  
@@ -120,5 +120,5 @@ Windows Forms <xref:System.Windows.Forms.RichTextBox> 제어와 색이 지정 �
 - <xref:System.Windows.Forms.RichTextBox.DetectUrls%2A>
 - <xref:System.Windows.Forms.RichTextBox.LinkClicked>
 - <xref:System.Windows.Forms.RichTextBox>
-- [RichTextBox 컨트롤](../../../../docs/framework/winforms/controls/richtextbox-control-windows-forms.md)
-- [Windows Forms에 사용할 수 있는 컨트롤](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)
+- [RichTextBox 컨트롤](richtextbox-control-windows-forms.md)
+- [Windows Forms에 사용할 수 있는 컨트롤](controls-to-use-on-windows-forms.md)

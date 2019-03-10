@@ -5,12 +5,12 @@ helpviewer_keywords:
 - selection [Windows Forms], modes in DataGridView control
 - DataGridView control [Windows Forms], selection mode
 ms.assetid: a3ebfd3d-0525-479d-9d96-d9e017289b36
-ms.openlocfilehash: c512a296f618ab32781dd8718a47c4b20fd7f54a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 931df04bbe6b8448030e26cd2cc2c904865ac0d3
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54745911"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57717300"
 ---
 # <a name="selection-modes-in-the-windows-forms-datagridview-control"></a>Windows Forms DataGridView 컨트롤의 선택 모드
 응용 프로그램 내에서 사용자 선택에 따라 작업을 수행 하려는 경우에 따라는 <xref:System.Windows.Forms.DataGridView> 제어 합니다. 작업에 따라 사용할 수 있는 선택 항목의 종류를 제한 하는 것이 좋습니다. 예를 들어, 응용 프로그램에서 현재 선택된 된 레코드에 대 한 보고서를 인쇄할 수 있습니다. 구성 하려는 경우에 <xref:System.Windows.Forms.DataGridView> 컨트롤 항상 행 내에서 아무 곳 이나 클릭 하 여 전체 행을 선택한 다음 이므로 한 번에 하나의 행을 선택할 수 있습니다.  
@@ -49,5 +49,5 @@ ms.locfileid: "54745911"
 - <xref:System.Windows.Forms.DataGridView.MultiSelect%2A>
 - <xref:System.Windows.Forms.DataGridView.SelectionMode%2A>
 - <xref:System.Windows.Forms.DataGridViewSelectionMode>
-- [Windows Forms DataGridView 컨트롤에서 선택 및 클립보드 사용](../../../../docs/framework/winforms/controls/selection-and-clipboard-use-with-the-windows-forms-datagridview-control.md)
-- [방법: Windows Forms DataGridView 컨트롤의 선택 모드 설정](../../../../docs/framework/winforms/controls/how-to-set-the-selection-mode-of-the-windows-forms-datagridview-control.md)
+- [Windows Forms DataGridView 컨트롤에서 선택 및 클립보드 사용](selection-and-clipboard-use-with-the-windows-forms-datagridview-control.md)
+- [방법: Windows Forms DataGridView 컨트롤의 선택 모드 설정](how-to-set-the-selection-mode-of-the-windows-forms-datagridview-control.md)

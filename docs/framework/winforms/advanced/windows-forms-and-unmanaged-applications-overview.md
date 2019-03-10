@@ -8,12 +8,12 @@ helpviewer_keywords:
 - ActiveX controls [Windows Forms], about ActiveX controls
 - Windows Forms, interop
 ms.assetid: 0a26d99d-8135-4895-8760-c9a2b5f67f14
-ms.openlocfilehash: 964597f2e47cee8f61111a684375e73e8a13107d
-ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
+ms.openlocfilehash: cb7df844458be083adefa16421a7088bd1e74893
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "56442349"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57717936"
 ---
 # <a name="windows-forms-and-unmanaged-applications-overview"></a>Windows Forms 및 관리되지 않는 애플리케이션 개요
 Windows Forms 애플리케이션과 컨트롤은 관리되지 않는 애플리케이션과 상호 운용될 수 있지만 몇 가지 주의할 사항이 있습니다. 다음 섹션에서는 Windows Forms 애플리케이션과 컨트롤이 지원하는 시나리오 및 구성과 지원하지 않는 시나리오 및 구성을 설명합니다.  
@@ -51,18 +51,18 @@ Windows Forms 애플리케이션과 컨트롤은 관리되지 않는 애플리�
   
  Windows Form이 COM 클라이언트 애플리케이션에서 제대로 작동하게 하려면 Windows Forms 메시지 루프에서 실행해야 합니다. 이렇게 하려면 다음 접근 방식 중 하나를 사용합니다.  
   
--   <xref:System.Windows.Forms.Form.ShowDialog%2A?displayProperty=nameWithType> 메서드를 사용하여 Windows Form을 표시합니다. 자세한 내용은 [방법: ShowDialog 메서드로 Windows Form을 표시 하 여 COM Interop 지원](../../../../docs/framework/winforms/advanced/com-interop-by-displaying-a-windows-form-shadow.md)합니다.  
+-   <xref:System.Windows.Forms.Form.ShowDialog%2A?displayProperty=nameWithType> 메서드를 사용하여 Windows Form을 표시합니다. 자세한 내용은 [방법: ShowDialog 메서드로 Windows Form을 표시 하 여 COM Interop 지원](com-interop-by-displaying-a-windows-form-shadow.md)합니다.  
   
--   각 Windows Form을 새 스레드에 표시합니다. 자세한 내용은 [방법: 각 Windows Form을 별개의 스레드에서 표시 하 여 COM Interop 지원](../../../../docs/framework/winforms/advanced/how-to-support-com-interop-by-displaying-each-windows-form-on-its-own-thread.md)합니다.  
+-   각 Windows Form을 새 스레드에 표시합니다. 자세한 내용은 [방법: 각 Windows Form을 별개의 스레드에서 표시 하 여 COM Interop 지원](how-to-support-com-interop-by-displaying-each-windows-form-on-its-own-thread.md)합니다.  
   
 ## <a name="see-also"></a>참고자료
-- [Windows Forms 및 관리되지 않는 응용 프로그램](../../../../docs/framework/winforms/advanced/windows-forms-and-unmanaged-applications.md)
+- [Windows Forms 및 관리되지 않는 응용 프로그램](windows-forms-and-unmanaged-applications.md)
 - [COM Interop](../../../visual-basic/programming-guide/com-interop/index.md)
 - [.NET Framework 응용 프로그램의 COM 상호 운용성](../../../visual-basic/programming-guide/com-interop/com-interoperability-in-net-framework-applications.md)
 - [COM 상호 운용성 샘플](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/cxcz83xf(v=vs.90))
-- [Aximp.exe(Windows Forms ActiveX 컨트롤 가져오기)](../../../../docs/framework/tools/aximp-exe-windows-forms-activex-control-importer.md)
-- [.NET Framework 구성 요소를 COM에 노출](../../../../docs/framework/interop/exposing-dotnet-components-to-com.md)
-- [COM에서 사용할 어셈블리의 패키징](../../../../docs/framework/interop/packaging-an-assembly-for-com.md)
-- [COM에 어셈블리 등록](../../../../docs/framework/interop/registering-assemblies-with-com.md)
-- [방법: ShowDialog 메서드로 Windows Form을 표시 하 여 COM Interop 지원](../../../../docs/framework/winforms/advanced/com-interop-by-displaying-a-windows-form-shadow.md)
-- [방법: 각 Windows Form을 별개의 스레드에서 표시 하 여 COM Interop 지원](../../../../docs/framework/winforms/advanced/how-to-support-com-interop-by-displaying-each-windows-form-on-its-own-thread.md)
+- [Aximp.exe(Windows Forms ActiveX 컨트롤 가져오기)](../../tools/aximp-exe-windows-forms-activex-control-importer.md)
+- [.NET Framework 구성 요소를 COM에 노출](../../interop/exposing-dotnet-components-to-com.md)
+- [COM에서 사용할 어셈블리의 패키징](../../interop/packaging-an-assembly-for-com.md)
+- [COM에 어셈블리 등록](../../interop/registering-assemblies-with-com.md)
+- [방법: ShowDialog 메서드로 Windows Form을 표시 하 여 COM Interop 지원](com-interop-by-displaying-a-windows-form-shadow.md)
+- [방법: 각 Windows Form을 별개의 스레드에서 표시 하 여 COM Interop 지원](how-to-support-com-interop-by-displaying-each-windows-form-on-its-own-thread.md)

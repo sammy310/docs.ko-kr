@@ -2,12 +2,12 @@
 title: 변수 및 인수
 ms.date: 03/30/2017
 ms.assetid: d03dbe34-5b2e-4f21-8b57-693ee49611b8
-ms.openlocfilehash: 7d4bcbb28ffac0ea0f2f6d4aa238523855570f7c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6e534a54802228d6d001838008fc9d8f36fc0827
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33520109"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57717819"
 ---
 # <a name="variables-and-arguments"></a>변수 및 인수
 Windows WF (Workflow Foundation), 변수 데이터 저장소를 나타내고 인수 및 작업 외부로 데이터 흐름을 나타냅니다. 활동에는 인수 집합이 있으며 인수는 활동의 시그니처를 구성합니다. 또한 활동은 개발자가 워크플로 디자인 중에 변수를 추가하거나 제거할 수 있는 변수 목록을 유지할 수 있습니다. 인수는 값을 반환하는 식을 사용하여 바인딩됩니다.  
@@ -67,7 +67,7 @@ Variable<string> var = new Variable<string>
   
 2.  <xref:System.Activities.InOutArgument%601.Set%2A>이 호출되면 런타임은 값을 즉시 설정합니다.  
   
-3.  인수는 선택적으로 <xref:System.Activities.Argument.EvaluationOrder%2A>를 지정할 수 있습니다. <xref:System.Activities.Argument.EvaluationOrder%2A>는 인수를 평가하는 순서를 지정하는 0부터 시작하는 값입니다. 기본적으로 인수의 평가 순서는 지정되지 않으며 <xref:System.Activities.Argument.UnspecifiedEvaluationOrder> 값과 같습니다. <xref:System.Activities.Argument.EvaluationOrder%2A>를 0보다 크거나 같은 값으로 설정하여 이 인수의 평가 순서를 지정합니다. Windows Workflow Foundation 오름차순에서 지정한 평가 순서의 인수를 평가합니다. 평가 순서가 지정되지 않은 인수는 평가 순서가 지정된 인수 이전에 평가됩니다.  
+3.  인수는 선택적으로 <xref:System.Activities.Argument.EvaluationOrder%2A>를 지정할 수 있습니다. <xref:System.Activities.Argument.EvaluationOrder%2A>는 인수를 평가하는 순서를 지정하는 0부터 시작하는 값입니다. 기본적으로 인수의 평가 순서는 지정되지 않으며 <xref:System.Activities.Argument.UnspecifiedEvaluationOrder> 값과 같습니다. <xref:System.Activities.Argument.EvaluationOrder%2A>를 0보다 크거나 같은 값으로 설정하여 이 인수의 평가 순서를 지정합니다. Windows Workflow Foundation에는 오름차순에서 지정한 평가 순서의 인수를 평가합니다. 평가 순서가 지정되지 않은 인수는 평가 순서가 지정된 인수 이전에 평가됩니다.  
   
  활동 작성자는 강력한 형식의 메커니즘을 사용하여 인수를 노출합니다. 이 작업은 <xref:System.Activities.InArgument%601>, <xref:System.Activities.OutArgument%601> 및 <xref:System.Activities.InOutArgument%601> 형식의 속성을 선언하여 수행됩니다. 이렇게 하면 활동 작성자가 활동 내부 및 외부로 이동하는 데이터에 대한 특정 계약을 설정할 수 있습니다.  
   
@@ -141,4 +141,4 @@ public sealed class Add : CodeActivity<int>
 }  
 ```  
   
- 작업 인수, 변수 및 코드의 식에 대 한 자세한 내용은 참조 [제작 워크플로, 활동 및 식을 사용 하 여 명령적 코드](../../../docs/framework/windows-workflow-foundation/authoring-workflows-activities-and-expressions-using-imperative-code.md) 및 [필요한 인수 및 오버 로드 그룹](../../../docs/framework/windows-workflow-foundation/required-arguments-and-overload-groups.md).
+ 작업 인수, 변수 및 코드의 식에 대 한 자세한 내용은 참조 하세요. [제작 워크플로, 활동 및 식을 사용 하 여 명령적 코드](authoring-workflows-activities-and-expressions-using-imperative-code.md) 고 [필수 인수 및 오버 로드 그룹](required-arguments-and-overload-groups.md).

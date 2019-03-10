@@ -5,12 +5,12 @@ helpviewer_keywords:
 - data grids [Windows Forms], sort modes
 - DataGridView control [Windows Forms], sort mode
 ms.assetid: 43715887-2df9-4da7-bcf1-b9c7c842b2bf
-ms.openlocfilehash: b2b73d36230d12f4e1075dde201e941cbe9d228d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 935251c783bbe74903cee6afd5e14eed4483d69d
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54615053"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57717858"
 ---
 # <a name="column-sort-modes-in-the-windows-forms-datagridview-control"></a>Windows Forms DataGridView 컨트롤의 열 정렬 모드
 <xref:System.Windows.Forms.DataGridView> 열의 경우 세 가지 정렬 모드 각 열에 대 한 정렬 모드를 통해 지정 됩니다 합니다 <xref:System.Windows.Forms.DataGridViewColumn.SortMode%2A> 속성을 다음 중 하나로 설정할 수 있는 열의 <xref:System.Windows.Forms.DataGridViewColumnSortMode> 열거형 값입니다.  
@@ -31,7 +31,7 @@ ms.locfileid: "54615053"
   
  경우는 <xref:System.Windows.Forms.DataGridView> 는 정렬 확인할 수 있습니다 정렬 열 및 정렬 순서 값을 확인 하 여 합니다 <xref:System.Windows.Forms.DataGridView.SortedColumn%2A> 및 <xref:System.Windows.Forms.DataGridView.SortOrder%2A> 속성입니다. 사용자 지정 정렬 작업을 수행한 후에 이러한 값은 의미가 없습니다. 사용자 지정 정렬 하는 방법에 대 한 자세한 내용은이 항목의 뒷부분에 사용자 지정 정렬 섹션을 참조 합니다.  
   
- 경우는 <xref:System.Windows.Forms.DataGridView> 바인딩된 및 바인딩되지 않은 열이 포함 된 컨트롤은 정렬 된, 바인딩되지 않은 열에서 값을 자동으로 유지 될 수 없습니다. 이러한 값을 유지 하려면 설정 하 여 가상 모드 구현 해야 합니다는 <xref:System.Windows.Forms.DataGridView.VirtualMode%2A> 속성을 `true` 하 고 처리를 <xref:System.Windows.Forms.DataGridView.CellValueNeeded> 및 <xref:System.Windows.Forms.DataGridView.CellValuePushed> 이벤트. 자세한 내용은 [방법: Windows에서 가상 모드 구현 Forms DataGridView 컨트롤](../../../../docs/framework/winforms/controls/how-to-implement-virtual-mode-in-the-windows-forms-datagridview-control.md)합니다. 바인딩된 모드로 바인딩되지 않은 열을 기준으로 정렬 하는 것은 지원 되지 않습니다.  
+ 경우는 <xref:System.Windows.Forms.DataGridView> 바인딩된 및 바인딩되지 않은 열이 포함 된 컨트롤은 정렬 된, 바인딩되지 않은 열에서 값을 자동으로 유지 될 수 없습니다. 이러한 값을 유지 하려면 설정 하 여 가상 모드 구현 해야 합니다는 <xref:System.Windows.Forms.DataGridView.VirtualMode%2A> 속성을 `true` 하 고 처리를 <xref:System.Windows.Forms.DataGridView.CellValueNeeded> 및 <xref:System.Windows.Forms.DataGridView.CellValuePushed> 이벤트. 자세한 내용은 [방법: Windows에서 가상 모드 구현 Forms DataGridView 컨트롤](how-to-implement-virtual-mode-in-the-windows-forms-datagridview-control.md)합니다. 바인딩된 모드로 바인딩되지 않은 열을 기준으로 정렬 하는 것은 지원 되지 않습니다.  
   
 ## <a name="programmatic-sorting"></a>프로그래밍 방식 정렬  
  정렬할 수 있습니다는 <xref:System.Windows.Forms.DataGridView> 를 호출 하 여 프로그래밍 방식으로 해당 <xref:System.Windows.Forms.DataGridView.Sort%2A> 메서드.  
@@ -65,6 +65,6 @@ ms.locfileid: "54615053"
 - <xref:System.Windows.Forms.DataGridView.SortOrder%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.DataGridViewColumn.SortMode%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.DataGridViewColumnHeaderCell.SortGlyphDirection%2A?displayProperty=nameWithType>
-- [Windows Forms DataGridView 컨트롤의 데이터 정렬](../../../../docs/framework/winforms/controls/sorting-data-in-the-windows-forms-datagridview-control.md)
-- [방법: Windows Forms DataGridView 컨트롤의 열 정렬 모드 설정](../../../../docs/framework/winforms/controls/set-the-sort-modes-for-columns-wf-datagridview-control.md)
-- [방법: Windows Forms DataGridView 컨트롤에서 정렬 사용자 지정](../../../../docs/framework/winforms/controls/how-to-customize-sorting-in-the-windows-forms-datagridview-control.md)
+- [Windows Forms DataGridView 컨트롤의 데이터 정렬](sorting-data-in-the-windows-forms-datagridview-control.md)
+- [방법: Windows Forms DataGridView 컨트롤의 열 정렬 모드 설정](set-the-sort-modes-for-columns-wf-datagridview-control.md)
+- [방법: Windows Forms DataGridView 컨트롤에서 정렬 사용자 지정](how-to-customize-sorting-in-the-windows-forms-datagridview-control.md)

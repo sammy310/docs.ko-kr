@@ -2,12 +2,12 @@
 title: External RuleSet Toolkit
 ms.date: 03/30/2017
 ms.assetid: a306d283-a031-475e-aa01-9ae86e7adcb0
-ms.openlocfilehash: 7a331f139fd7d3127892e6a103b370ec50dc9c99
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 510b70f7ebeda784dce4731bb4a08896ac2e8361
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57482368"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57710045"
 ---
 # <a name="external-ruleset-toolkit"></a>External RuleSet Toolkit
 
@@ -30,7 +30,7 @@ Visual Studio는 Windows Workflow Foundation (WF)의 일부로 규칙 집합 편
 
 그림 1에서는 구성 요소가 어떻게 상호 작용하는지 보여 줍니다. 그 뒤에 나오는 단원에서는 각 구성 요소에 대해 설명합니다.
 
-![External RuleSet 샘플의 개념적 개요](../../../../docs/framework/windows-workflow-foundation/samples/media/rulesettoolkitsampleoverview.gif "RuleSetToolkitSampleOverview")
+![External RuleSet 샘플의 개념적 개요](./media/rulesettoolkitsampleoverview.gif "RuleSetToolkitSampleOverview")
 
 그림 1: 샘플 개요
 
@@ -47,7 +47,7 @@ Visual Studio는 Windows Workflow Foundation (WF)의 일부로 규칙 집합 편
 
 그림 2에는 RuleSet 도구의 스크린 샷이 나와 있습니다. **규칙 저장소** 메뉴, 데이터베이스에서 사용 가능한 Ruleset을 로드 하 고 수정 된 Ruleset을 저장소에 다시 저장 합니다. 응용 프로그램 구성 파일에서는 RuleSet 데이터베이스에 대한 데이터베이스 연결 문자열을 제공합니다. 도구를 시작하면 구성된 데이터베이스에서 RuleSet이 자동으로 로드됩니다.
 
-![External RuleSet Toolkit 샘플 출력](../../../../docs/framework/windows-workflow-foundation/samples/media/rulesetbrowser.gif "RuleSetBrowser")
+![External RuleSet Toolkit 샘플 출력](./media/rulesetbrowser.gif "RuleSetBrowser")
 
 그림 2: 규칙 집합 브라우저
 
@@ -55,13 +55,13 @@ RuleSet 도구에서는 RuleSet에 주 버전 및 부 버전 번호를 적용하
 
 클릭 하면 **규칙 편집**, 그림 3 에서처럼에 규칙 집합 편집기가 시작 됩니다.
 
-![External RuleSet Toolkit 샘플 출력](../../../../docs/framework/windows-workflow-foundation/samples/media/ruleseteditor.gif "RuleSetEditor")
+![External RuleSet Toolkit 샘플 출력](./media/ruleseteditor.gif "RuleSetEditor")
 
 그림 3: 규칙 집합 편집기
 
 Windows Workflow Foundation에 대 한 Visual Studio 추가 기능의 일부인 편집기 대화 상자를 다시 호스트입니다. Intellisense 지원을 비롯하여 편집기 대화 상자와 동일한 기능을 제공합니다. 도구; RuleSet과 연결 된 대상 형식 (예: 워크플로)에 대해 작성 된 규칙 클릭 하면 **찾아보기** 주 도구 대화 상자에는 **워크플로/형식 선택기** 그림 4 에서처럼 대화 상자가 나타납니다.
 
-![워크플로 &#47;입력 선택](../../../../docs/framework/windows-workflow-foundation/samples/media/71f08d57-e8f2-499e-8151-ece2cbdcabfd.gif "71f08d57-e8f2-499e-8151-ece2cbdcabfd")
+![워크플로 &#47;입력 선택](./media/71f08d57-e8f2-499e-8151-ece2cbdcabfd.gif "71f08d57-e8f2-499e-8151-ece2cbdcabfd")
 
 그림 4: 워크플로/형식 선택기
 
@@ -71,7 +71,7 @@ Windows Workflow Foundation에 대 한 Visual Studio 추가 기능의 일부인 
 
 클릭 하면 **확인** 에 **워크플로/형식 선택기** 대화 상자에서 대상 형식에 규칙에서 참조 하는 모든 멤버가 있는지 확인 하는 규칙 집합에 대해 선택한 형식 검사 합니다. 에 오류가 표시 됩니다는 **유효성 검사 오류** 대화 상자 (그림 5 참조). 오류에도 불구 하 고 변경 내용을 사용 하 여 계속 하도록 선택할 수 있습니다 **취소**합니다. **도구** 주 도구 대화 상자에서 메뉴를 클릭 **유효성 검사** 다시 대상 활동에 대해 RuleSet 버전 유효성 검사를 합니다.
 
-![External RuleSet 샘플의 유효성 검사 오류](../../../../docs/framework/windows-workflow-foundation/samples/media/validationerrorsruleset.png "ValidationErrorsRuleSet")
+![External RuleSet 샘플의 유효성 검사 오류](./media/validationerrorsruleset.png "ValidationErrorsRuleSet")
 
 그림 5: 유효성 검사 오류
 
@@ -81,7 +81,7 @@ Windows Workflow Foundation에 대 한 Visual Studio 추가 기능의 일부인 
 
 도구는 가져오는 각 RuleSet에 대해 RuleSet에 사용된 멤버를 기반으로 .rules 파일(있는 경우)의 위치 아래에 있는 bin\Debug 폴더에서 연결된 형식을 찾으려고 합니다. RuleSet 도구에서 일치하는 형식을 여러 개 찾으면 .rules 파일 이름과 형식 이름이 일치하는 형식을 선택하려고 합니다. 예를 들어 `Workflow1` 형식은 Workflow1.rules에 대응합니다. 일치하는 항목이 여러 개 있으면 형식을 선택하라는 메시지가 표시됩니다. 이 자동 식별 메커니즘을 일치 하는 어셈블리나 형식을 찾지 못하는 경우 가져온 후 클릭할 수 **찾아보기** 연결된 된 형식에 이동 주 도구 대화 상자에서.
 
-![Ruleset 선택기](../../../../docs/framework/windows-workflow-foundation/samples/media/rulesetselector.gif "RuleSetSelector")
+![Ruleset 선택기](./media/rulesetselector.gif "RuleSetSelector")
 
 그림 6: 규칙 집합 선택기
 

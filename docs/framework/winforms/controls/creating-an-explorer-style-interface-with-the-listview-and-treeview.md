@@ -13,12 +13,12 @@ helpviewer_keywords:
 - ListView control [Windows Forms], explorer style interface
 - ListView control [Windows Forms], explorer-style interface
 ms.assetid: 9e5e7721-19e2-4890-b273-a43589fe99ff
-ms.openlocfilehash: e62f2a9831a4a88a67c5fea1f24432c508c66eae
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a849eae086c3507bbaf7050afd2e0496ab5a970e
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54517099"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57716987"
 ---
 # <a name="walkthrough-creating-an-explorer-style-interface-with-the-listview-and-treeview-controls-using-the-designer"></a>연습: ListView 및 TreeView 컨트롤이 디자이너를 사용 하 여 된 탐색기 스타일 인터페이스 만들기
 Visual Studio의 이점 중 하나는 짧은 시간 안에 전문적으로 보이는 Windows Forms 응용 프로그램을 만들 수 있습니다. 일반적인 시나리오를 사용 하 여 사용자 인터페이스 (UI)를 만드는 것 <xref:System.Windows.Forms.ListView> 및 <xref:System.Windows.Forms.TreeView> 와 비슷한 Windows 운영 체제의 Windows 탐색기 기능을 제어 합니다. Windows 탐색기는 사용자의 컴퓨터에서 파일 및 폴더의 계층 구조를 표시합니다.  
@@ -54,33 +54,33 @@ Visual Studio의 이점 중 하나는 짧은 시간 안에 전문적으로 보�
   
     2.  <xref:System.Windows.Forms.ListView.View%2A> 속성을 <xref:System.Windows.Forms.View.Details>으로 설정합니다.  
   
-    3.  줄임표를 클릭 하 여 ColumnHeader 컬렉션 편집기를 엽니다 (![VisualStudioEllipsesButton 스크린 샷](../../../../docs/framework/winforms/media/vbellipsesbutton.png "vbEllipsesButton"))에 <xref:System.Windows.Forms.ListView.Columns%2A> 속성**합니다.** 세 개의 열을 추가 하 고 설정 자신의 <xref:System.Windows.Forms.ColumnHeader.Text%2A> 속성을 `Name`를 `Type`, 및 `Last Modified`, 각각. **확인** 을 클릭하여 대화 상자를 닫습니다.  
+    3.  줄임표를 클릭 하 여 ColumnHeader 컬렉션 편집기를 엽니다 (![VisualStudioEllipsesButton 스크린 샷](../media/vbellipsesbutton.png "vbEllipsesButton"))에 <xref:System.Windows.Forms.ListView.Columns%2A> 속성**합니다.** 세 개의 열을 추가 하 고 설정 자신의 <xref:System.Windows.Forms.ColumnHeader.Text%2A> 속성을 `Name`를 `Type`, 및 `Last Modified`, 각각. **확인** 을 클릭하여 대화 상자를 닫습니다.  
   
     4.  <xref:System.Windows.Forms.ListView.SmallImageList%2A> 속성을 `imageList1.`로 설정합니다.  
   
 8.  채우는 코드를 구현 합니다 <xref:System.Windows.Forms.TreeView> 노드 및 하위 노드를 사용 하 여 합니다. 이 코드를 추가 하 여 `Form1` 클래스입니다.  
   
-     [!code-csharp[System.Windows.Forms.ExplorerStyleInterface#1](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ExplorerStyleInterface/CS/Form1.cs#1)]
-     [!code-vb[System.Windows.Forms.ExplorerStyleInterface#1](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ExplorerStyleInterface/VB/Form1.vb#1)]  
+     [!code-csharp[System.Windows.Forms.ExplorerStyleInterface#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ExplorerStyleInterface/CS/Form1.cs#1)]
+     [!code-vb[System.Windows.Forms.ExplorerStyleInterface#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ExplorerStyleInterface/VB/Form1.vb#1)]  
   
 9. System.IO 네임 스페이스를 사용 하는 이전 코드를 적절 한 사용 하 여 추가 되거나 폼의 맨 위에 있는 문을 가져옵니다.  
   
-     [!code-csharp[System.Windows.Forms.ExplorerStyleInterface#4](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ExplorerStyleInterface/CS/Form1.cs#4)]
-     [!code-vb[System.Windows.Forms.ExplorerStyleInterface#4](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ExplorerStyleInterface/VB/Form1.vb#4)]  
+     [!code-csharp[System.Windows.Forms.ExplorerStyleInterface#4](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ExplorerStyleInterface/CS/Form1.cs#4)]
+     [!code-vb[System.Windows.Forms.ExplorerStyleInterface#4](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ExplorerStyleInterface/VB/Form1.vb#4)]  
   
 10. 폼의 생성자에서 이전 단계에서 설정 메서드를 호출 하거나 <xref:System.Windows.Forms.Form.Load> 이벤트 처리 메서드. 폼 생성자에이 코드를 추가 합니다.  
   
-     [!code-csharp[System.Windows.Forms.ExplorerStyleInterface#2](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ExplorerStyleInterface/CS/Form1.cs#2)]
-     [!code-vb[System.Windows.Forms.ExplorerStyleInterface#2](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ExplorerStyleInterface/VB/Form1.vb#2)]  
+     [!code-csharp[System.Windows.Forms.ExplorerStyleInterface#2](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ExplorerStyleInterface/CS/Form1.cs#2)]
+     [!code-vb[System.Windows.Forms.ExplorerStyleInterface#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ExplorerStyleInterface/VB/Form1.vb#2)]  
   
 11. 처리를 <xref:System.Windows.Forms.TreeView.NodeMouseClick> 이벤트에 대 한 `treeview1` **를** 채우는 코드를 구현 하 고 `listview1` 노드를 클릭할 때 노드 콘텐츠를 사용 하 여 합니다. 이 코드를 추가 하 여 `Form1` 클래스입니다.  
   
-     [!code-csharp[System.Windows.Forms.ExplorerStyleInterface#3](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ExplorerStyleInterface/CS/Form1.cs#3)]
-     [!code-vb[System.Windows.Forms.ExplorerStyleInterface#3](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ExplorerStyleInterface/VB/Form1.vb#3)]  
+     [!code-csharp[System.Windows.Forms.ExplorerStyleInterface#3](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ExplorerStyleInterface/CS/Form1.cs#3)]
+     [!code-vb[System.Windows.Forms.ExplorerStyleInterface#3](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ExplorerStyleInterface/VB/Form1.vb#3)]  
   
      C#을 사용 하는 경우 했는지 확인 합니다 <xref:System.Windows.Forms.TreeView.NodeMouseClick> 해당 이벤트 처리 메서드를 사용 하 여 연결 된 이벤트입니다. 폼 생성자에이 코드를 추가 합니다.  
   
-     [!code-csharp[System.Windows.Forms.ExplorerStyleInterface#5](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ExplorerStyleInterface/CS/Form1.cs#5)]  
+     [!code-csharp[System.Windows.Forms.ExplorerStyleInterface#5](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ExplorerStyleInterface/CS/Form1.cs#5)]  
   
 ## <a name="testing-the-application"></a>애플리케이션 테스트  
  이제 예상 대로 작동 되도록 폼을 테스트할 수 있습니다.  
@@ -94,16 +94,16 @@ Visual Studio의 이점 중 하나는 짧은 시간 안에 전문적으로 보�
 ## <a name="next-steps"></a>다음 단계  
  이 응용 프로그램 사용할 수 있습니다 하는 방법의 예를 제공 <xref:System.Windows.Forms.TreeView> 고 <xref:System.Windows.Forms.ListView> 함께 제어 합니다. 이러한 컨트롤에 대 한 자세한 내용은 다음 항목을 참조 하세요.  
   
--   [방법: TreeView 또는 ListView 컨트롤 (Windows Forms)에 사용자 지정 정보 추가](../../../../docs/framework/winforms/controls/add-custom-information-to-a-treeview-or-listview-control-wf.md)  
+-   [방법: TreeView 또는 ListView 컨트롤 (Windows Forms)에 사용자 지정 정보 추가](add-custom-information-to-a-treeview-or-listview-control-wf.md)  
   
--   [방법: ListView 컨트롤에 검색 기능 추가](../../../../docs/framework/winforms/controls/how-to-add-search-capabilities-to-a-listview-control.md)  
+-   [방법: ListView 컨트롤에 검색 기능 추가](how-to-add-search-capabilities-to-a-listview-control.md)  
   
--   [방법: TreeView 노드에 바로 가기 메뉴 연결](../../../../docs/framework/winforms/controls/how-to-attach-a-shortcut-menu-to-a-treeview-node.md)  
+-   [방법: TreeView 노드에 바로 가기 메뉴 연결](how-to-attach-a-shortcut-menu-to-a-treeview-node.md)  
   
 ## <a name="see-also"></a>참고자료
 - <xref:System.Windows.Forms.ListView>
 - <xref:System.Windows.Forms.TreeView>
-- [ListView 컨트롤](../../../../docs/framework/winforms/controls/listview-control-windows-forms.md)
-- [방법: 추가 하 고 Windows Forms TreeView 컨트롤을 사용 하 여 노드를 제거 합니다.](../../../../docs/framework/winforms/controls/how-to-add-and-remove-nodes-with-the-windows-forms-treeview-control.md)
-- [방법: Windows Forms ListView 컨트롤을 사용 하 여 항목 추가 및 제거](../../../../docs/framework/winforms/controls/how-to-add-and-remove-items-with-the-windows-forms-listview-control.md)
-- [방법: Windows Forms ListView 컨트롤에 열 추가](../../../../docs/framework/winforms/controls/how-to-add-columns-to-the-windows-forms-listview-control.md)
+- [ListView 컨트롤](listview-control-windows-forms.md)
+- [방법: 추가 하 고 Windows Forms TreeView 컨트롤을 사용 하 여 노드를 제거 합니다.](how-to-add-and-remove-nodes-with-the-windows-forms-treeview-control.md)
+- [방법: Windows Forms ListView 컨트롤을 사용 하 여 항목 추가 및 제거](how-to-add-and-remove-items-with-the-windows-forms-listview-control.md)
+- [방법: Windows Forms ListView 컨트롤에 열 추가](how-to-add-columns-to-the-windows-forms-listview-control.md)

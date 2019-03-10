@@ -6,12 +6,12 @@ helpviewer_keywords:
 - data sources [Windows Forms], binding to Windows Forms controls
 - DataGridView control [Windows Forms], data binding
 ms.assetid: f4f46009-cec2-441b-8668-6b5af057558b
-ms.openlocfilehash: 428f558c125bb11e5cbd4f794713440c22c89d7e
-ms.sourcegitcommit: 0069cb3de8eed4e92b2195d29e5769a76111acdd
+ms.openlocfilehash: 8c90366111957f27a6bd86035013eba00426f46b
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/16/2019
-ms.locfileid: "56333367"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57718508"
 ---
 # <a name="how-to-bind-data-to-the-windows-forms-datagridview-control-using-the-designer"></a>방법: 디자이너를 사용 하 여 Windows Forms DataGridView 컨트롤에 데이터 바인딩
 디자이너를 사용 하 여 연결할 수는 <xref:System.Windows.Forms.DataGridView> 데이터베이스, 비즈니스 개체 또는 웹 서비스를 포함 하는 여러 다른 종류의 데이터 소스 컨트롤입니다. 컨트롤에 자동으로 바인딩되어 컨트롤에 디자이너를 사용 하 여 데이터 원본에 바인딩하는 경우는 <xref:System.Windows.Forms.BindingSource> 데이터 소스를 나타내는 구성 요소입니다. 또한 열은 데이터 소스에서 제공하는 스키마 정보와 일치하는 컨트롤에 자동으로 생성됩니다.  
@@ -20,14 +20,14 @@ ms.locfileid: "56333367"
   
  여러 바인딩할 수도 있으며 <xref:System.Windows.Forms.DataGridView> 마스터/세부 관계를 만들기 위해 관련된 테이블에는 컨트롤입니다. 이 구성에서 하나의 컨트롤은 부모 테이블을 표시하고 다른 컨트롤은 부모 테이블에 있는 현재 행에 관련된 자식 테이블의 해당 행만을 표시합니다. 자세한 내용은 [방법: 관련 데이터에는 Windows Forms 응용 프로그램 표시](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/57tx3hhe(v=vs.120))합니다.  
   
- 다음 절차를 수행 하려면을 **Windows 응용 프로그램** 포함 된 폼을 사용 하 여 프로젝트를 <xref:System.Windows.Forms.DataGridView> 컨트롤 또는 마스터/세부 관계에 대 한 두 개의 컨트롤입니다. 이러한 프로젝트를 시작 하는 방법에 대 한 내용은 [방법: Windows Forms 응용 프로그램 프로젝트를 만듭니다](/visualstudio/ide/step-1-create-a-windows-forms-application-project) 고 [방법: Windows Forms에 컨트롤 추가](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md)합니다.  
+ 다음 절차를 수행 하려면을 **Windows 응용 프로그램** 포함 된 폼을 사용 하 여 프로젝트를 <xref:System.Windows.Forms.DataGridView> 컨트롤 또는 마스터/세부 관계에 대 한 두 개의 컨트롤입니다. 이러한 프로젝트를 시작 하는 방법에 대 한 내용은 [방법: Windows Forms 응용 프로그램 프로젝트를 만듭니다](/visualstudio/ide/step-1-create-a-windows-forms-application-project) 고 [방법: Windows Forms에 컨트롤 추가](how-to-add-controls-to-windows-forms.md)합니다.  
   
 > [!NOTE]
 >  표시되는 대화 상자와 메뉴 명령은 활성 설정이나 버전에 따라 도움말에서 설명하는 것과 다를 수 있습니다. 설정을 변경하려면 **도구** 메뉴에서 **설정 가져오기 및 내보내기** 를 선택합니다. 자세한 내용은 [Visual Studio IDE 개인 설정](/visualstudio/ide/personalizing-the-visual-studio-ide)을 참조하세요.  
   
 ### <a name="to-bind-the-control-to-a-data-source"></a>데이터 소스에 컨트롤을 바인딩하려면  
   
-1.  스마트 태그 문자 모양을 클릭 (![스마트 태그 문자 모양](../../../../docs/framework/winforms/controls/media/vs-winformsmttagglyph.gif "VS_WinFormSmtTagGlyph"))의 오른쪽 위 모서리에는 <xref:System.Windows.Forms.DataGridView> 제어 합니다.  
+1.  스마트 태그 문자 모양을 클릭 (![스마트 태그 문자 모양](./media/vs-winformsmttagglyph.gif "VS_WinFormSmtTagGlyph"))의 오른쪽 위 모서리에는 <xref:System.Windows.Forms.DataGridView> 제어 합니다.  
   
 2.  **데이터 소스 선택** 옵션에서 드롭다운 화살표를 클릭합니다.  
   
@@ -50,13 +50,13 @@ ms.locfileid: "56333367"
 - <xref:System.Windows.Forms.DataGridView.DataMember%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.DataGridView.DataSource%2A?displayProperty=nameWithType>
 - [방법: 데이터베이스의 데이터에 연결](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/fxk9yw1t(v=vs.120))
-- [방법: 추가 하 고 디자이너를 사용 하 여 Windows Forms DataGridView 컨트롤에서 열을 제거 합니다.](../../../../docs/framework/winforms/controls/add-and-remove-columns-in-the-datagrid-using-the-designer.md)
-- [방법: 디자이너를 사용 하 여 Windows Forms DataGridView 컨트롤에서 열 순서 변경](../../../../docs/framework/winforms/controls/change-the-order-of-columns-in-the-datagrid-using-the-designer.md)
-- [방법: 디자이너를 사용 하 여 Windows Forms Datagridview 컨트롤의 형식 변경](../../../../docs/framework/winforms/controls/change-the-type-of-a-wf-datagridview-column-using-the-designer.md)
-- [방법: 디자이너를 사용 하 여 Windows Forms DataGridView 컨트롤에서 열 고정](../../../../docs/framework/winforms/controls/freeze-columns-in-the-datagrid-using-the-designer.md)
-- [방법: 디자이너를 사용 하 여 Windows Forms DataGridView 컨트롤에서 열 숨기기](../../../../docs/framework/winforms/controls/hide-columns-in-the-datagrid-using-the-designer.md)
-- [방법: 디자이너를 사용 하 여 Windows Forms DataGridView 컨트롤의 읽기 전용으로 열 만들기](../../../../docs/framework/winforms/controls/make-columns-read-only-in-the-datagrid-using-the-designer.md)
+- [방법: 추가 하 고 디자이너를 사용 하 여 Windows Forms DataGridView 컨트롤에서 열을 제거 합니다.](add-and-remove-columns-in-the-datagrid-using-the-designer.md)
+- [방법: 디자이너를 사용 하 여 Windows Forms DataGridView 컨트롤에서 열 순서 변경](change-the-order-of-columns-in-the-datagrid-using-the-designer.md)
+- [방법: 디자이너를 사용 하 여 Windows Forms Datagridview 컨트롤의 형식 변경](change-the-type-of-a-wf-datagridview-column-using-the-designer.md)
+- [방법: 디자이너를 사용 하 여 Windows Forms DataGridView 컨트롤에서 열 고정](freeze-columns-in-the-datagrid-using-the-designer.md)
+- [방법: 디자이너를 사용 하 여 Windows Forms DataGridView 컨트롤에서 열 숨기기](hide-columns-in-the-datagrid-using-the-designer.md)
+- [방법: 디자이너를 사용 하 여 Windows Forms DataGridView 컨트롤의 읽기 전용으로 열 만들기](make-columns-read-only-in-the-datagrid-using-the-designer.md)
 - [방법: Windows Forms 애플리케이션 프로젝트 만들기](/visualstudio/ide/step-1-create-a-windows-forms-application-project)
-- [방법: Windows Forms에 컨트롤 추가](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md)
+- [방법: Windows Forms에 컨트롤 추가](how-to-add-controls-to-windows-forms.md)
 - [데이터 소스 창](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/6ckyxa83(v=vs.120))
 - [방법: Windows Forms 응용 프로그램에서 관련된 데이터 표시](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/57tx3hhe(v=vs.120))

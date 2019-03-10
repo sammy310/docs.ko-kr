@@ -20,12 +20,12 @@ helpviewer_keywords:
 - bitmaps [Windows Forms], file format
 - Exchangeable Image File
 ms.assetid: 6be085a2-2c13-47c8-b80a-c18b32777d8d
-ms.openlocfilehash: 3083c075bfbbd21a26f7442f9bbccbe800d73cf1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a78c84e82ac8507ad40cf3a9fdb44d58858a38d2
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54674770"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57713217"
 ---
 # <a name="types-of-bitmaps"></a>비트맵의 유형
 비트맵은 픽셀의 사각형 배열에서 각 픽셀의 색을 지정 하는 비트의 배열입니다. 각 픽셀에 사용 되는 비트 수가 해당 픽셀에 할당할 수 있는 색 수를 결정 합니다. 예를 들어, 각 픽셀을 4 비트로 표현할 경우 다음 지정된 된 픽셀 할당할 수 있습니다 다른 16 색 중 하나로 (2 ^4 = 16). 다음 표에서 지정 된 비트 수를 나타내는 픽셀에 할당할 수 있는 색 수가 몇 가지 예를 보여 줍니다.  
@@ -41,7 +41,7 @@ ms.locfileid: "54674770"
   
  일반적으로 비트맵을 저장 하는 디스크 파일 배열에 있는 행의 수, 각 행에는 픽셀 수 및 픽셀당 비트 수와 같은 정보를 저장 하는 하나 이상의 정보 블록을 포함 합니다. 이러한 파일 (색상표) 색 테이블을 포함할 수도 있습니다. 색 테이블에서는 특정 색 비트맵의 번호를 매핑합니다. 다음 그림에서는 해당 비트맵 및 색 테이블 함께 확대 된 이미지를 보여 줍니다. 2 가지 픽셀당 4 비트 수를 나타내는 ^4 = 16 색상표의 색입니다. 테이블의 각 색은 24 비트 숫자로 표현 됩니다. 빨강의 8 비트, 8 비트, 초록 및 파랑 8 비트입니다. 숫자가 16 진수 (기 수 16) 폼에 표시 됩니다. A = 10, B = 11, C = 12, D = 13, E = 14, F = 15.  
   
- ![비트맵 샘플](../../../../docs/framework/winforms/advanced/media/aboutgdip03-art01.gif "AboutGdip03_Art01")  
+ ![비트맵 샘플](./media/aboutgdip03-art01.gif "AboutGdip03_Art01")  
   
  3 행, 열 5 이미지의 픽셀을 살펴봅니다. 비트맵의 해당 번호가 1입니다. 색상표는 1은 빨강 픽셀은 빨간색을 알려줍니다. 비트맵의 맨 위 행의 모든 항목은 3입니다. 색상표는 이미지의 맨 위 행의 모든 픽셀은 파란색으로 표시 되므로 3은 파랑을 알려줍니다.  
   
@@ -50,7 +50,7 @@ ms.locfileid: "54674770"
   
  색 테이블에 인덱스를 저장 하는 비트맵 색상표 인덱싱된 비트맵을 라고 합니다. 일부 비트맵 색 테이블에 대 한 필요가 없습니다. 예를 들어 비트맵이 픽셀당 24 비트를 사용 하면 해당 비트맵 저장할 수 있습니다 인덱스 대신 자체 색 색상표에. 다음 그림에서는 색 테이블을 사용 하는 대신 직접 색 (픽셀당 24 비트)를 저장 하는 비트맵을 보여 줍니다. 그림에는 해당 이미지의 확대 된 뷰를 보여 줍니다. 비트맵 FFFFFF은 흰색을 나타냅니다, 그리고 f f 0000 red, 00FF00 나타내는 녹색을 나타내고 0000ff은 파란색을 나타냅니다.  
   
- ![비트맵 샘플](../../../../docs/framework/winforms/advanced/media/aboutgdip03-art02.gif "AboutGdip03_Art02")  
+ ![비트맵 샘플](./media/aboutgdip03-art02.gif "AboutGdip03_Art02")  
   
 ## <a name="graphics-file-formats"></a>그래픽 파일 형식  
  디스크 파일에 비트맵을 저장 하기 위한 다양 한 표준 형식 있습니다. [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 그래픽 파일 형식 다음 단락에서 설명한 지원 합니다.  
@@ -66,11 +66,11 @@ ms.locfileid: "54674770"
   
  JPEG 이미지의 압축 수준을 구성할 수는 있지만 자세한 정보가 손실의 높은 압축 수준 (더 작은 파일). 종종 20:1 압축 비율을 다듬는 기법인 찾는 원래 구분 하기 어려운 이미지를 생성 합니다. 다음 그림에서는 BMP 이미지 및 BMP 이미지에서 압축 된 JPEG 이미지를 두 개를 보여 줍니다. 첫 번째 JPEG 압축 4:1 비율로 있고 두 번째 JPEG 압축 비율이 8:1.  
   
- ![Filetype 샘플](../../../../docs/framework/winforms/advanced/media/aboutgdip03-art03.gif "AboutGdip03_Art03")  
+ ![Filetype 샘플](./media/aboutgdip03-art03.gif "AboutGdip03_Art03")  
   
  JPEG 압축 선 그리기 단색 블록에서 잘 작동 하지 않으며 경계 뾰족한 합니다. 다음 그림에서는 두 개의 Jpeg, GIF 함께 BMP를 보여 줍니다. Jpeg, GIF BMP에서 압축 되었습니다. 압축률은 더 작은 JPEG, 고 큰 JPEG 8:3 4:1 GIF, 4:1입니다. GIF 유지 하면 선 따라 날카로운 경계는 경계를 흐리게 표시 하는 jpeg로 경향이 있습니다 note 합니다.  
   
- ![Filetypes](../../../../docs/framework/winforms/advanced/media/aboutgdip03-art03a.gif "AboutGdip03_Art03A")  
+ ![Filetypes](./media/aboutgdip03-art03a.gif "AboutGdip03_Art03A")  
   
  JPEG 압축 체계를 파일 형식이 아니라는입니다. JPEG 파일 교환 형식 (JFIF)에 저장 하 고 JPEG 체계에 따라 압축 된 이미지 전송에 대 한 일반적으로 사용 되는 파일 형식입니다. 웹 브라우저에서 표시 되는 JFIF 파일.jpg 확장을 사용 합니다.  
   
@@ -89,5 +89,5 @@ ms.locfileid: "54674770"
 - <xref:System.Drawing.Image?displayProperty=nameWithType>
 - <xref:System.Drawing.Bitmap?displayProperty=nameWithType>
 - <xref:System.Drawing.Imaging.PixelFormat?displayProperty=nameWithType>
-- [이미지, 비트맵 및 메타파일](../../../../docs/framework/winforms/advanced/images-bitmaps-and-metafiles.md)
-- [이미지, 비트맵, 아이콘 및 메타파일 사용](../../../../docs/framework/winforms/advanced/working-with-images-bitmaps-icons-and-metafiles.md)
+- [이미지, 비트맵 및 메타파일](images-bitmaps-and-metafiles.md)
+- [이미지, 비트맵, 아이콘 및 메타파일 사용](working-with-images-bitmaps-icons-and-metafiles.md)

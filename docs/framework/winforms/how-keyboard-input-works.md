@@ -6,15 +6,15 @@ helpviewer_keywords:
 - keyboards [Windows Forms], keyboard input
 - Windows Forms, keyboard input
 ms.assetid: 9a29433c-a180-49bb-b74c-d187786584c8
-ms.openlocfilehash: 540388e316a761df3c32842cbe626e9e52f7e3f5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a7965c1dcf36e956abd7930b8ff0154b13173b76
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54645485"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57718027"
 ---
 # <a name="how-keyboard-input-works"></a>키보드 입력 작동 방식
-Windows Forms에서는 Windows 메시지에 대한 응답으로 키보드 이벤트를 발생시켜 키보드 입력을 처리합니다. 대부분의 Windows Forms 애플리케이션에서는 키보드 이벤트를 처리하여 키보드 입력을 단독으로 처리합니다. 그러나 키가 컨트롤에 도달하기 전에 키를 가로채는 등의 고급 키보드 입력 시나리오를 구현하려면 키보드 메시지가 작동하는 방식을 알아야 합니다. 이 항목에서는 Windows Forms에서 인식하는 키 데이터 형식을 설명하고 키보드 메시지가 라우팅되는 방법에 대한 개요를 설명합니다. 키보드 이벤트에 대한 자세한 내용은 [키보드 이벤트 사용](../../../docs/framework/winforms/using-keyboard-events.md)을 참조하세요.  
+Windows Forms에서는 Windows 메시지에 대한 응답으로 키보드 이벤트를 발생시켜 키보드 입력을 처리합니다. 대부분의 Windows Forms 애플리케이션에서는 키보드 이벤트를 처리하여 키보드 입력을 단독으로 처리합니다. 그러나 키가 컨트롤에 도달하기 전에 키를 가로채는 등의 고급 키보드 입력 시나리오를 구현하려면 키보드 메시지가 작동하는 방식을 알아야 합니다. 이 항목에서는 Windows Forms에서 인식하는 키 데이터 형식을 설명하고 키보드 메시지가 라우팅되는 방법에 대한 개요를 설명합니다. 키보드 이벤트에 대한 자세한 내용은 [키보드 이벤트 사용](using-keyboard-events.md)을 참조하세요.  
   
 ## <a name="types-of-keys"></a>키 형식  
  Windows Forms는 키보드 입력 비트으로 표현 되는 가상 키 코드로 식별 <xref:System.Windows.Forms.Keys> 열거형입니다. 사용 하 여는 <xref:System.Windows.Forms.Keys> 열거형 일련의 단일 값 키 누름된을 결합할 수 있습니다. 이러한 값은 WM_KEYDOWN 및 WM_SYSKEYDOWN Windows 메시지와 함께 제공되는 값에 해당합니다. 처리 하 여 대부분의 실제 키 누름을 감지할 수 있습니다 합니다 <xref:System.Windows.Forms.Control.KeyDown> 또는 <xref:System.Windows.Forms.Control.KeyUp> 이벤트입니다. 문자 키는의 하위 집합을 <xref:System.Windows.Forms.Keys> 열거형 WM_CHAR 및 WM_SYSCHAR Windows 메시지와 함께 제공 되는 값에 해당 합니다. 눌려진된 키 조합 문자에 결과가 처리 하 여 문자를 검색할 수 있습니다는 <xref:System.Windows.Forms.Control.KeyPress> 이벤트입니다. 사용할 수 있습니다 <xref:Microsoft.VisualBasic.Devices.Keyboard>, 눌려진 키를 검색 하 고 키를 보낼 Visual Basic의 프로그래밍 인터페이스에 의해 노출 됩니다. 자세한 내용은 [키보드에 액세스](~/docs/visual-basic/developing-apps/programming/computer-resources/accessing-the-keyboard.md)를 참조하세요.  
@@ -74,4 +74,4 @@ Windows Forms에서는 Windows 메시지에 대한 응답으로 키보드 이벤
 - <xref:System.Windows.Forms.Control.PreProcessMessage%2A>
 - [My.Computer.Keyboard 개체](~/docs/visual-basic/language-reference/objects/my-computer-keyboard-object.md)
 - [키보드에 액세스](~/docs/visual-basic/developing-apps/programming/computer-resources/accessing-the-keyboard.md)
-- [키보드 이벤트 사용](../../../docs/framework/winforms/using-keyboard-events.md)
+- [키보드 이벤트 사용](using-keyboard-events.md)

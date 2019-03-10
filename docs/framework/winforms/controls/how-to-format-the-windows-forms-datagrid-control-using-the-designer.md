@@ -9,17 +9,17 @@ helpviewer_keywords:
 - tables [Windows Forms], formatting in DataGrid control
 - formatting [Windows Forms]
 ms.assetid: 533b9814-6124-49dc-9fda-085f1502609f
-ms.openlocfilehash: 1a35aa630bd939c72aeaf59b86ff0b7cff48141b
-ms.sourcegitcommit: bef803e2025642df39f2f1e046767d89031e0304
+ms.openlocfilehash: 92939f1bdddaca1d743116a4ae4ee9da657abf19
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56305397"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57725365"
 ---
 # <a name="how-to-format-the-windows-forms-datagrid-control-using-the-designer"></a>방법: 디자이너를 사용 하 여 Windows Forms DataGrid 컨트롤 서식 지정
 
 > [!NOTE]
->  <xref:System.Windows.Forms.DataGridView> 컨트롤은 <xref:System.Windows.Forms.DataGrid> 컨트롤을 대체하고 여기에 다른 기능을 추가하여 새로 도입된 컨트롤이지만 이전 버전과의 호환성 및 이후 사용 가능성을 고려하여 <xref:System.Windows.Forms.DataGrid> 컨트롤을 계속 유지하도록 선택할 수 있습니다. 자세한 내용은 [Windows Forms DataGridView 및 DataGrid 컨트롤의 차이점](../../../../docs/framework/winforms/controls/differences-between-the-windows-forms-datagridview-and-datagrid-controls.md)을 참조하십시오.  
+>  <xref:System.Windows.Forms.DataGridView> 컨트롤은 <xref:System.Windows.Forms.DataGrid> 컨트롤을 대체하고 여기에 다른 기능을 추가하여 새로 도입된 컨트롤이지만 이전 버전과의 호환성 및 이후 사용 가능성을 고려하여 <xref:System.Windows.Forms.DataGrid> 컨트롤을 계속 유지하도록 선택할 수 있습니다. 자세한 내용은 [Windows Forms DataGridView 및 DataGrid 컨트롤의 차이점](differences-between-the-windows-forms-datagridview-and-datagrid-controls.md)을 참조하십시오.  
   
  다양 한 부분에 서로 다른 색을 적용 한 <xref:System.Windows.Forms.DataGrid> 컨트롤에서 정보를 더 쉽게 읽고 해석 하기 시킬 수 있습니다. 색 행 및 열에 적용할 수 있습니다. 행 및 열 수 또한 숨겨지거나 표시 되려고 판단에 따라 합니다.  
   
@@ -33,7 +33,7 @@ ms.locfileid: "56305397"
   
  데이터 표 서식 지정에 사용 되는 첫 단계로,의 속성을 설정할 수는 <xref:System.Windows.Forms.DataGrid> 자체입니다. 이러한 색 및 형식을 선택할 수는 변경할 수 있습니다 다음 데이터 테이블 및 열 표시에 따라 기본을 형성 합니다.  
   
- 다음 절차를 수행 하려면을 **Windows 응용 프로그램** 포함 하는 양식을 사용 하 여 프로젝트를 <xref:System.Windows.Forms.DataGrid> 제어 합니다. 이러한 프로젝트 설정에 대 한 자세한 내용은 [방법: Windows Forms 응용 프로그램 프로젝트를 만듭니다](/visualstudio/ide/step-1-create-a-windows-forms-application-project) 고 [방법: Windows Forms에 컨트롤 추가](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md)합니다. Visual Studio 2005에는 <xref:System.Windows.Forms.DataGrid> 컨트롤에 없는 경우는 **도구 상자** 기본적으로. 자세한 내용은 [방법: 도구 상자 항목 추가](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms165355(v=vs.100))합니다.  
+ 다음 절차를 수행 하려면을 **Windows 응용 프로그램** 포함 하는 양식을 사용 하 여 프로젝트를 <xref:System.Windows.Forms.DataGrid> 제어 합니다. 이러한 프로젝트 설정에 대 한 자세한 내용은 [방법: Windows Forms 응용 프로그램 프로젝트를 만듭니다](/visualstudio/ide/step-1-create-a-windows-forms-application-project) 고 [방법: Windows Forms에 컨트롤 추가](how-to-add-controls-to-windows-forms.md)합니다. Visual Studio 2005에는 <xref:System.Windows.Forms.DataGrid> 컨트롤에 없는 경우는 **도구 상자** 기본적으로. 자세한 내용은 [방법: 도구 상자 항목 추가](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms165355(v=vs.100))합니다.  
   
 > [!NOTE]
 >  표시되는 대화 상자와 메뉴 명령은 활성 설정이나 버전에 따라 도움말에서 설명하는 것과 다를 수 있습니다. 설정을 변경하려면 **도구** 메뉴에서 **설정 가져오기 및 내보내기** 를 선택합니다. 자세한 내용은 [Visual Studio IDE 개인 설정](/visualstudio/ide/personalizing-the-visual-studio-ide)을 참조하세요.  
@@ -73,13 +73,13 @@ ms.locfileid: "56305397"
     > [!NOTE]
     >  컨트롤의 색 사용자 지정 하는 경우에 컨트롤을 저하 색 선택 (예를 들어, 빨강 및 녹색)에 액세스할 수 없게 만들 수 있습니다. 에 있는 색을 사용 합니다 **시스템 색** 이 문제를 방지 하려면 색상표입니다.
 
-     다음 절차를 수행 하려면을 <xref:System.Windows.Forms.DataGrid> 컨트롤이 데이터 테이블에 바인딩되어 있습니다. 자세한 내용은 [방법: 데이터 소스에 Windows Forms DataGrid 컨트롤 바인딩](../../../../docs/framework/winforms/controls/how-to-bind-the-windows-forms-datagrid-control-to-a-data-source.md)합니다.
+     다음 절차를 수행 하려면을 <xref:System.Windows.Forms.DataGrid> 컨트롤이 데이터 테이블에 바인딩되어 있습니다. 자세한 내용은 [방법: 데이터 소스에 Windows Forms DataGrid 컨트롤 바인딩](how-to-bind-the-windows-forms-datagrid-control-to-a-data-source.md)합니다.
 
 ### <a name="to-set-the-table-and-column-style-of-a-data-table-at-design-time"></a>디자인 타임에 데이터 테이블의 테이블 및 열 스타일을 설정 하려면
 
 1.  선택 된 <xref:System.Windows.Forms.DataGrid> 양식에 컨트롤입니다.
 
-2.  에 **속성** 창에서 합니다 <xref:System.Windows.Forms.DataGrid.TableStyles%2A> 속성을 클릭 합니다 **줄임표** (![VisualStudioEllipsesButton 스크린 샷](../../../../docs/framework/winforms/media/vbellipsesbutton.png " vbEllipsesButton")) 단추입니다.
+2.  에 **속성** 창에서 합니다 <xref:System.Windows.Forms.DataGrid.TableStyles%2A> 속성을 클릭 합니다 **줄임표** (![VisualStudioEllipsesButton 스크린 샷](../media/vbellipsesbutton.png " vbEllipsesButton")) 단추입니다.
 
 3.  에 **DataGridTableStyle 컬렉션 편집기** 대화 상자, 클릭 **추가** 테이블 스타일 컬렉션에 추가 하려면.
 
@@ -89,19 +89,19 @@ ms.locfileid: "56305397"
 
      매핑 이름 테이블을 사용 하 여 사용 되는 테이블 스타일 지정에 사용 됩니다.
 
-5.  에 **DataGridTableStyle 컬렉션 편집기**를 선택 합니다 <xref:System.Windows.Forms.DataGridTableStyle.GridColumnStyles%2A> 속성 줄임표 단추를 클릭 하 고 (![VisualStudioEllipsesButton 스크린 샷](../../../../docs/framework/winforms/media/vbellipsesbutton.png "vbEllipsesButton ")).
+5.  에 **DataGridTableStyle 컬렉션 편집기**를 선택 합니다 <xref:System.Windows.Forms.DataGridTableStyle.GridColumnStyles%2A> 속성 줄임표 단추를 클릭 하 고 (![VisualStudioEllipsesButton 스크린 샷](../media/vbellipsesbutton.png "vbEllipsesButton ")).
 
 6.  에 **DataGridColumnStyle 컬렉션 편집기** 대화 상자에서 만든 테이블 스타일을 열 스타일을 추가 합니다.
 
      사용 하 여 합니다 **DataGridColumnStyle 컬렉션 편집기**, 추가 및 열 스타일을 제거, 표시 및 레이아웃 속성을 설정 하 고 설정할 수는 매핑 이름 및 열 데이터에 대 한 문자열 서식 지정 합니다.
 
     > [!NOTE]
-    >  형식 문자열에 대 한 자세한 내용은 참조 하세요. [형식](../../../../docs/standard/base-types/formatting-types.md)합니다.
+    >  형식 문자열에 대 한 자세한 내용은 참조 하세요. [형식](../../../standard/base-types/formatting-types.md)합니다.
 
 ## <a name="see-also"></a>참고자료
 
 - <xref:System.Windows.Forms.GridTableStylesCollection>
 - <xref:System.Windows.Forms.GridColumnStylesCollection>
 - <xref:System.Windows.Forms.DataGrid>
-- [방법: Windows Forms DataGrid 컨트롤에서 열 숨기기 또는 삭제](../../../../docs/framework/winforms/controls/how-to-delete-or-hide-columns-in-the-windows-forms-datagrid-control.md)
-- [DataGrid 컨트롤](../../../../docs/framework/winforms/controls/datagrid-control-windows-forms.md)
+- [방법: Windows Forms DataGrid 컨트롤에서 열 숨기기 또는 삭제](how-to-delete-or-hide-columns-in-the-windows-forms-datagrid-control.md)
+- [DataGrid 컨트롤](datagrid-control-windows-forms.md)

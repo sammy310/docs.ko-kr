@@ -6,12 +6,12 @@ helpviewer_keywords:
 - interoperability [WDF]
 - styles [Windows Forms], WPF content
 ms.assetid: e574aac7-7ea4-4cdb-8034-bab541f000df
-ms.openlocfilehash: ef81d9272acdddfc7d547de6f44725481e55dc3e
-ms.sourcegitcommit: bef803e2025642df39f2f1e046767d89031e0304
+ms.openlocfilehash: 6329f25b8ead128c32ae0c7aca1f0bceaac8474c
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56303727"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57712398"
 ---
 # <a name="walkthrough-styling-wpf-content"></a>연습: WPF 콘텐츠 스타일 지정
 이 연습에서는 Windows Forms에 호스트되는 WPF(Windows Presentation Foundation) 컨트롤에 스타일을 적용하는 방법을 보여 줍니다.
@@ -47,7 +47,7 @@ ms.locfileid: "56303727"
   
 #### <a name="to-create-wpf-control-types"></a>WPF 컨트롤 형식을 만들려면 다음을 수행합니다.  
   
-1.  새 WPF <xref:System.Windows.Controls.UserControl> 프로젝트를 솔루션에 추가합니다. 컨트롤 형식의 기본 이름인 `UserControl1.xaml`을 사용합니다. 자세한 내용은 [연습: 디자인 타임에 Windows Forms에서 새 WPF 콘텐츠 만들기](../../../../docs/framework/winforms/advanced/walkthrough-creating-new-wpf-content-on-windows-forms-at-design-time.md)합니다.  
+1.  새 WPF <xref:System.Windows.Controls.UserControl> 프로젝트를 솔루션에 추가합니다. 컨트롤 형식의 기본 이름인 `UserControl1.xaml`을 사용합니다. 자세한 내용은 [연습: 디자인 타임에 Windows Forms에서 새 WPF 콘텐츠 만들기](walkthrough-creating-new-wpf-content-on-windows-forms-at-design-time.md)합니다.  
   
 2.  디자인 뷰에서 `UserControl1`이 선택되었는지 확인합니다. 자세한 내용은 [방법: 선택 하 고 디자인 화면에서 요소를 이동](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/bb514527(v=vs.100))합니다.  
   
@@ -77,7 +77,7 @@ ms.locfileid: "56303727"
   
 4.  XAML 뷰에서 `<UserControl>` 여는 태그 뒤에 다음 XAML을 삽입합니다.  
   
-     이 XAML은 대비되는 그라데이션 테두리가 있는 그라데이션을 만듭니다. 컨트롤을 클릭하면 그라데이션이 변경되어 눌린 단추 모양을 생성합니다. 자세한 내용은 [스타일 지정 및 템플릿](../../../../docs/framework/wpf/controls/styling-and-templating.md)을 참조하세요.  
+     이 XAML은 대비되는 그라데이션 테두리가 있는 그라데이션을 만듭니다. 컨트롤을 클릭하면 그라데이션이 변경되어 눌린 단추 모양을 생성합니다. 자세한 내용은 [스타일 지정 및 템플릿](../../wpf/controls/styling-and-templating.md)을 참조하세요.  
   
 ```xaml  
 <UserControl.Resources>  
@@ -153,8 +153,8 @@ ms.locfileid: "56303727"
 ## <a name="see-also"></a>참고자료
 - <xref:System.Windows.Forms.Integration.ElementHost>
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost>
-- [마이그레이션 및 상호 운용성](../../../../docs/framework/wpf/advanced/migration-and-interoperability.md)
-- [WPF 컨트롤 사용](../../../../docs/framework/winforms/advanced/using-wpf-controls.md)
+- [마이그레이션 및 상호 운용성](../../wpf/advanced/migration-and-interoperability.md)
+- [WPF 컨트롤 사용](using-wpf-controls.md)
 - [Visual Studio에서 XAML 디자인](/visualstudio/designers/designing-xaml-in-visual-studio)
-- [XAML 개요(WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)
-- [스타일 지정 및 템플릿](../../../../docs/framework/wpf/controls/styling-and-templating.md)
+- [XAML 개요(WPF)](../../wpf/advanced/xaml-overview-wpf.md)
+- [스타일 지정 및 템플릿](../../wpf/controls/styling-and-templating.md)

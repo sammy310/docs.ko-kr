@@ -8,12 +8,12 @@ helpviewer_keywords:
 - properties [Windows Forms], defining in code
 - custom controls [Windows Forms], defining properties in code
 ms.assetid: c2eb8277-a842-4d99-89a9-647b901a0434
-ms.openlocfilehash: 8d040d4de566ea750b9a9d14531061a63524e668
-ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
+ms.openlocfilehash: 84273d2fab36df287eaca70f5f32fd8024a9204d
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "56441894"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57712203"
 ---
 # <a name="defining-a-property-in-windows-forms-controls"></a>Windows Forms 컨트롤에서 속성 정의
 속성의 개요는 [속성 개요](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/65zdfbdt(v=vs.120))를 참조하세요. 속성을 정의할 때 다음과 같은 몇 가지 주요 고려 사항이 있습니다.  
@@ -121,7 +121,7 @@ public int Value {
 ```  
   
 ## <a name="see-also"></a>참고자료
-- [Windows Forms 컨트롤의 속성](../../../../docs/framework/winforms/controls/properties-in-windows-forms-controls.md)
-- [ShouldSerialize 및 Reset 메서드를 사용하여 기본값 정의](../../../../docs/framework/winforms/controls/defining-default-values-with-the-shouldserialize-and-reset-methods.md)
-- [속성 변경 이벤트](../../../../docs/framework/winforms/controls/property-changed-events.md)
-- [Windows Forms 컨트롤의 특성](../../../../docs/framework/winforms/controls/attributes-in-windows-forms-controls.md)
+- [Windows Forms 컨트롤의 속성](properties-in-windows-forms-controls.md)
+- [ShouldSerialize 및 Reset 메서드를 사용하여 기본값 정의](defining-default-values-with-the-shouldserialize-and-reset-methods.md)
+- [속성 변경 이벤트](property-changed-events.md)
+- [Windows Forms 컨트롤의 특성](attributes-in-windows-forms-controls.md)

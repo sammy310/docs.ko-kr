@@ -13,12 +13,12 @@ helpviewer_keywords:
 - RichTextBox control [Windows Forms], setting indents and bullets
 - text boxes [Windows Forms], bullets
 ms.assetid: abfb40e6-5642-4691-8ec1-9d9ae91688dc
-ms.openlocfilehash: ad5dd1cc3839fbe29d39f6ab38b0e865e7b0a335
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b2173769634ddc4b7b42c822c3f60212eb8d8886
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54492425"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57713034"
 ---
 # <a name="how-to-set-indents-hanging-indents-and-bulleted-paragraphs-with-the-windows-forms-richtextbox-control"></a>방법: 들여쓰기, 내어쓰기 및 Windows Forms RichTextBox 컨트롤을 사용 하 여 글머리 기호 단락 설정
 Windows Forms <xref:System.Windows.Forms.RichTextBox> 컨트롤에 표시 되는 텍스트 서식 지정에 대 한 다양 한 옵션이 있습니다. 설정 하 여 선택한 단락의 글머리 기호 목록으로 서식을 지정할 수 있습니다는 <xref:System.Windows.Forms.RichTextBox.SelectionBullet%2A> 속성입니다. 사용할 수도 있습니다는 <xref:System.Windows.Forms.RichTextBox.SelectionIndent%2A>, <xref:System.Windows.Forms.RichTextBox.SelectionRightIndent%2A>, 및 <xref:System.Windows.Forms.RichTextBox.SelectionHangingIndent%2A> 왼쪽 및 오른쪽 가장자리 컨트롤의 다른 텍스트 줄의 왼쪽된 가장자리를 기준으로 단락 들여쓰기를 설정 하는 속성입니다.  
@@ -70,5 +70,5 @@ Windows Forms <xref:System.Windows.Forms.RichTextBox> 컨트롤에 표시 되는
   
 ## <a name="see-also"></a>참고자료
 - <xref:System.Windows.Forms.RichTextBox>
-- [RichTextBox 컨트롤](../../../../docs/framework/winforms/controls/richtextbox-control-windows-forms.md)
-- [Windows Forms에 사용할 수 있는 컨트롤](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)
+- [RichTextBox 컨트롤](richtextbox-control-windows-forms.md)
+- [Windows Forms에 사용할 수 있는 컨트롤](controls-to-use-on-windows-forms.md)

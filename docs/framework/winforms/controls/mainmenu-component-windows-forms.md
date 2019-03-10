@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - MainMenu control [Windows Forms]
 ms.assetid: 7cd22f29-828b-42e8-9c88-f08aa4533850
-ms.openlocfilehash: 03de5911baf2a26ff5fc0d3a4e7ed3f9400db8b8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 245193498478e24b2f0be102ecbbd6f5051167c4
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54656767"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57713009"
 ---
 # <a name="mainmenu-component-windows-forms"></a>MainMenu 구성 요소(Windows Forms)
 > [!NOTE]
@@ -18,7 +18,7 @@ ms.locfileid: "54656767"
  Windows Forms `MainMenu` 구성 요소는 런타임에 메뉴를 표시 합니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
- [MainMenu 구성 요소 개요](../../../../docs/framework/winforms/controls/mainmenu-component-overview-windows-forms.md)  
+ [MainMenu 구성 요소 개요](mainmenu-component-overview-windows-forms.md)  
  이 구성 요소는 새로운 주요 기능 및 속성에 설명 합니다.  
   
 ## <a name="reference"></a>참조  

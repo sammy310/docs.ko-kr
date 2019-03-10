@@ -9,12 +9,12 @@ helpviewer_keywords:
 - lines [Windows Forms], texture
 - drawing lines [Windows Forms], texture
 ms.assetid: dc9118cc-f3c2-42e5-8173-f46d41d18fd5
-ms.openlocfilehash: 65d830ca2d01c63288ef73b6b3a3a94f328fe32b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fd7a2aa2f6d930b0de29d8b8cbd3feacdb7a81e3
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54676243"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57718599"
 ---
 # <a name="how-to-draw-a-line-filled-with-a-texture"></a>방법: 질감으로 채워진 선 그리기
 대신 단색을 사용 하 여 줄을 그릴 텍스처를 사용 하 여 줄을 그릴 수 있습니다. 선 및 곡선 질감으로 그릴 만들기를 <xref:System.Drawing.TextureBrush> 개체를 전달 <xref:System.Drawing.TextureBrush> 개체를 <xref:System.Drawing.Pen.%23ctor%2A> 생성자. 질감 브러시와 연결 된 비트맵은 평면 (눈에 보이지 않게) 타일을 사용 하 고 스트로크 펜의 바둑판식으로 배열 된 질감의 특정 픽셀을 얻는 펜은 직선이 나 곡선을 그릴 때 키를 누릅니다.  
@@ -24,14 +24,14 @@ ms.locfileid: "54676243"
   
  다음 그림에서는 비트맵 및 질감된 타원을 보여 줍니다.  
   
- ![펜](../../../../docs/framework/winforms/advanced/media/pens7.png "pens7")  
+ ![펜](./media/pens7.png "pens7")  
   
- [!code-csharp[System.Drawing.UsingAPen#61](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingAPen/CS/Class1.cs#61)]
- [!code-vb[System.Drawing.UsingAPen#61](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingAPen/VB/Class1.vb#61)]  
+ [!code-csharp[System.Drawing.UsingAPen#61](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingAPen/CS/Class1.cs#61)]
+ [!code-vb[System.Drawing.UsingAPen#61](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingAPen/VB/Class1.vb#61)]  
   
 ## <a name="compiling-the-code"></a>코드 컴파일  
  Windows Form 만들기 및 폼의 처리 <xref:System.Windows.Forms.Control.Paint> 이벤트입니다. 앞의 코드를 붙여를 <xref:System.Windows.Forms.Control.Paint> 이벤트 처리기입니다. 대체 `Texture.jpg` 를 시스템에서 사용할 이미지를 사용 하 여 합니다.  
   
 ## <a name="see-also"></a>참고자료
-- [펜을 사용하여 선과 도형 그리기](../../../../docs/framework/winforms/advanced/using-a-pen-to-draw-lines-and-shapes.md)
-- [Windows Forms의 그래픽 및 그리기](../../../../docs/framework/winforms/advanced/graphics-and-drawing-in-windows-forms.md)
+- [펜을 사용하여 선과 도형 그리기](using-a-pen-to-draw-lines-and-shapes.md)
+- [Windows Forms의 그래픽 및 그리기](graphics-and-drawing-in-windows-forms.md)

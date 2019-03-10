@@ -6,12 +6,12 @@ ms.prod: visual-studio-dev15
 ms.technology: vs-ide-designers
 author: gewarren
 ms.author: gewarren
-ms.openlocfilehash: 0820450fb9ae257cba87b3055ea1dde91112b19e
-ms.sourcegitcommit: 3d0c29b878f00caec288dfecb3a5c959de5aa629
+ms.openlocfilehash: 92096663032b85058dc8c918d1f90153820f6f71
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53656000"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57710539"
 ---
 # <a name="disable-dpi-awareness-in-visual-studio"></a>Visual Studio에서 인식 되는 DPI를 사용 하지 않도록 설정
 
@@ -21,11 +21,11 @@ Visual Studio는 dpi 인식 응용 프로그램에 자동으로 표시 배율을
 
 합니다 **Windows Forms 디자이너** Visual Studio에 없는 확장 지원 합니다. 이 인해 표시 문제에서 몇 가지 형태를 열면 합니다 **Windows Forms 디자이너** hdpi 모니터 인치당 높은에서. 예를 들어 다음 그림에 나와 있는 것 처럼 중복 컨트롤 나타날 수 있습니다.
 
-![HDPI 모니터에서 Windows Forms 디자이너](media/disable-dpi-awareness-visual-studio/win-forms-designer-hdpi.png)
+![HDPI 모니터에서 Windows Forms 디자이너](./media/disable-dpi-awareness-visual-studio/win-forms-designer-hdpi.png)
 
 Visual Studio 2017 버전 15.8 및 나중에 폼을 여는 경우에 **Windows Forms 디자이너** HDPI 모니터를에서 Visual Studio 디자이너의 맨 위에 있는 노란색 표시줄 정보를 표시 합니다.
 
-![DPI를 인식 하지 못하는 모드에서 다시 시작 하려면 Visual Studio의 정보 표시줄](media/disable-dpi-awareness-visual-studio/scaling-gold-bar.png)
+![DPI를 인식 하지 못하는 모드에서 다시 시작 하려면 Visual Studio의 정보 표시줄](./media/disable-dpi-awareness-visual-studio/scaling-gold-bar.png)
 
 메시지 읽고 **기본 디스플레이에 크기 조정 (192dpi) 200%로 설정 됩니다. 디자이너 창에서 렌더링 문제를 발생할 수 있습니다이 있습니다.**
 
@@ -51,12 +51,12 @@ Visual Studio DPI를 인식 하지 못하는 프로세스로 실행 되 면 디�
 
 레지스트리를 수정 하 여 DPI를 인식 하지 못하는으로 Visual Studio를 표시할 수 있습니다. 열기 **레지스트리 편집기** 항목을 추가 합니다 **실행 NT\CurrentVersion\AppCompatFlags\Layers** 하위 키:
 
-**항목**: C:\Program 파일 (x86) \Microsoft Visual Studio\2017\Community\Common7\IDE\devenv.exe
+**항목**: C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\devenv.exe
 
    > [!NOTE]
    > Visual Studio 2017 Professional 또는 Enterprise edition을 사용 하는 경우 교체 **커뮤니티** 사용 하 여 **Professional** 또는 **Enterprise** 항목의 합니다. 또한 필요에 따라 드라이브 문자를 대체 합니다.
 
-**형식**: REG_SZ
+**Type**: REG_SZ
 
 **값**: DPIUNAWARE
 
@@ -75,7 +75,7 @@ Visual Studio에서 문제를 크기 조정의 DPI 알릴 필요가 선택할 �
 
 알림 사용 안 함, 선택 **도구** > **옵션** 열려는 합니다 **옵션** 대화 합니다. 그런 다음, 선택 **Windows Forms 디자이너** > **일반**, 설정 **DPI 크기 조정 알림** 에 **False**합니다.
 
-![Visual Studio에서 알림 옵션을 확장 하는 DPI](media/disable-dpi-awareness-visual-studio/notifications-option.png)
+![Visual Studio에서 알림 옵션을 확장 하는 DPI](./media/disable-dpi-awareness-visual-studio/notifications-option.png)
 
 나중에 다시 크기 조정 알림을 사용 하도록 설정 하려는 경우 속성을 설정 **True**합니다.
 
@@ -83,6 +83,6 @@ Visual Studio에서 문제를 크기 조정의 DPI 알릴 필요가 선택할 �
 
 DPI 인식 전환 Visual Studio에서 예상 대로 작동 하지 않는 경우 확인 해야 합니다 `dpiAwareness` 값을 **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image 파일 실행 Options\devenv.exe**  레지스트리 편집기에서 하위 키입니다. 있는 경우 값을 삭제 합니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참고자료
 
 - [Windows Forms의 자동 크기 조정](automatic-scaling-in-windows-forms.md)

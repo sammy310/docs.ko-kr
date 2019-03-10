@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Windows Forms, drag and drop operations
 - drag and drop [Windows Forms], Windows Forms
 ms.assetid: eb66f6bf-4a7d-4c2d-b276-40fefb2d3b6c
-ms.openlocfilehash: b582043b3b576b3750b897b17a5f6e0cbdeb84f8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 664c78ce3fff9651acf6ad720360cdb077f23108
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54647636"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57715245"
 ---
 # <a name="walkthrough-performing-a-drag-and-drop-operation-in-windows-forms"></a>연습: Windows Forms에서 끌어서 놓기 작업 수행
 Windows 기반 응용 프로그램 내에서 끌어서 놓기 작업을 수행 하는 일련의 이벤트를 가장 주목할 만한 처리 해야 합니다 <xref:System.Windows.Forms.Control.DragEnter>, <xref:System.Windows.Forms.Control.DragLeave>, 및 <xref:System.Windows.Forms.Control.DragDrop> 이벤트입니다. 이러한 이벤트의 이벤트 인수에서 제공하는 정보를 사용하면 끌어서 놓기 작업을 쉽게 구현할 수 있습니다.  
@@ -107,6 +107,6 @@ Windows 기반 응용 프로그램 내에서 끌어서 놓기 작업을 수행 �
     >  또한 작업할 수 있습니다는 <xref:System.Windows.Forms.DragEventArgs.KeyState%2A> 속성인을 끌어서 놓기 작업 중에 누른 키에 따라 특정 효과가 발생 (예를 들어, 것이 표준 CTRL 키를 누를 때 끌어온된 데이터를 복사 하려면).  
   
 ## <a name="see-also"></a>참고자료
-- [방법: 클립보드에 데이터 추가](../../../../docs/framework/winforms/advanced/how-to-add-data-to-the-clipboard.md)
-- [방법: 클립보드에서 데이터 검색](../../../../docs/framework/winforms/advanced/how-to-retrieve-data-from-the-clipboard.md)
-- [끌어서 놓기 작업 및 클립보드 지원](../../../../docs/framework/winforms/advanced/drag-and-drop-operations-and-clipboard-support.md)
+- [방법: 클립보드에 데이터 추가](how-to-add-data-to-the-clipboard.md)
+- [방법: 클립보드에서 데이터 검색](how-to-retrieve-data-from-the-clipboard.md)
+- [끌어서 놓기 작업 및 클립보드 지원](drag-and-drop-operations-and-clipboard-support.md)

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - WebBrowser control [Windows Forms], about
 - Web pages [Windows Forms], displaying in applications
 ms.assetid: 6e3e1cc2-9c48-4136-9659-e99e4e60b7e9
-ms.openlocfilehash: 919098fd5eb6578b91a7b44cf99ba3aef9076081
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: cc998fd88f3487aa20f6cef73aacb6c07f92c7ad
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54610983"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57710097"
 ---
 # <a name="webbrowser-control-overview"></a>WebBrowser 컨트롤 개요
 <xref:System.Windows.Forms.WebBrowser> 컨트롤은 WebBrowser ActiveX 컨트롤에 대 한 관리 되는 래퍼를 제공 합니다. 관리 되는 래퍼를 사용 하면 Windows Forms 클라이언트 응용 프로그램에서 웹 페이지를 표시할 수 있습니다. 사용할 수는 <xref:System.Windows.Forms.WebBrowser> Internet Explorer 웹 응용 프로그램에 검색 기능을 복제 하는 컨트롤 수 기본 Internet Explorer 기능을 사용 하지 않도록 설정 하 고 간단한 HTML 문서 뷰어 컨트롤을 사용 합니다. DHTML 기반 사용자 인터페이스 요소를 폼에 추가 하 여에서 호스팅되는 된다는 사실이 드러나지 않습니다 컨트롤을 사용할 수도 있습니다는 <xref:System.Windows.Forms.WebBrowser> 제어 합니다. 이 방법을 사용 하면 단일 응용 프로그램에서 Windows Forms 컨트롤을 사용 하 여 웹 컨트롤을 원활 하 게 결합 수 있습니다.  
@@ -52,9 +52,9 @@ ms.locfileid: "54610983"
 - <xref:System.Windows.Forms.WebBrowserProgressChangedEventArgs>
 - <xref:System.Windows.Forms.WebBrowserReadyState>
 - <xref:System.Windows.Forms.WebBrowserRefreshOption>
-- [방법: WebBrowser 컨트롤을 사용 하 여 URL로 이동](../../../../docs/framework/winforms/controls/how-to-navigate-to-a-url-with-the-webbrowser-control.md)
-- [방법: WebBrowser 컨트롤을 사용 하 여 인쇄](../../../../docs/framework/winforms/controls/how-to-print-with-a-webbrowser-control.md)
-- [방법: Windows Forms 응용 프로그램에 웹 브라우저 기능 추가](../../../../docs/framework/winforms/controls/how-to-add-web-browser-capabilities-to-a-windows-forms-application.md)
-- [방법: Windows Forms 응용 프로그램에서 HTML 문서 뷰어 만들기](../../../../docs/framework/winforms/controls/how-to-create-an-html-document-viewer-in-a-windows-forms-application.md)
-- [방법: DHTML 코드와 클라이언트 응용 프로그램 코드 간의 양방향 통신 구현](../../../../docs/framework/winforms/controls/implement-two-way-com-between-dhtml-and-client.md)
-- [WebBrowser 보안](../../../../docs/framework/winforms/controls/webbrowser-security.md)
+- [방법: WebBrowser 컨트롤을 사용 하 여 URL로 이동](how-to-navigate-to-a-url-with-the-webbrowser-control.md)
+- [방법: WebBrowser 컨트롤을 사용 하 여 인쇄](how-to-print-with-a-webbrowser-control.md)
+- [방법: Windows Forms 응용 프로그램에 웹 브라우저 기능 추가](how-to-add-web-browser-capabilities-to-a-windows-forms-application.md)
+- [방법: Windows Forms 응용 프로그램에서 HTML 문서 뷰어 만들기](how-to-create-an-html-document-viewer-in-a-windows-forms-application.md)
+- [방법: DHTML 코드와 클라이언트 응용 프로그램 코드 간의 양방향 통신 구현](implement-two-way-com-between-dhtml-and-client.md)
+- [WebBrowser 보안](webbrowser-security.md)

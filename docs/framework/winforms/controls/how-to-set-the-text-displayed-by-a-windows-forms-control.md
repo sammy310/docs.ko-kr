@@ -21,12 +21,12 @@ helpviewer_keywords:
 - controls [Windows Forms], captions
 - forms [Windows Forms], captions
 ms.assetid: 36b95bff-8780-479d-b86a-f1a0673653aa
-ms.openlocfilehash: 30cf71aa2a87ff99ccb965844b620ef08a20b69c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8ebb39e4e9337ede0dc8c7f5569ea27d8cfafd26
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54636449"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57716909"
 ---
 # <a name="how-to-set-the-text-displayed-by-a-windows-forms-control"></a>방법: 설정 하 여 표시 되는 텍스트는 Windows Forms 컨트롤
 Windows Forms 컨트롤은 일반적으로 컨트롤의 기본 기능과 관련된 일부 텍스트를 표시합니다. 예를 들어 <xref:System.Windows.Forms.Button> 컨트롤은 일반적으로 단추를 클릭할 때 수행되는 동작을 나타내는 캡션을 표시합니다. 모든 컨트롤에 대해 <xref:System.Windows.Forms.Control.Text%2A> 속성을 사용하여 텍스트를 설정하거나 반환할 수 있습니다. <xref:System.Windows.Forms.Control.Font%2A> 속성을 사용하여 글꼴을 변경할 수 있습니다. 디자이너를 사용하여 텍스트를 설정할 수도 있습니다.  또한 참조 [방법: Windows Forms 디자이너를 사용 하 여 컨트롤에 대 한 액세스 키를 만듭니다](how-to-create-access-keys-for-windows-forms-controls-using-the-designer.md), [방법: 설정 하 여 표시 되는 텍스트는 Windows Forms 디자이너를 사용 하 여 컨트롤](how-to-set-the-text-displayed-by-a-windows-forms-control-using-the-designer.md), [방법: 설정 하 여 표시 되는 이미지를 Windows Forms 디자이너를 사용 하 여 컨트롤](how-to-set-the-image-displayed-by-a-windows-forms-control-using-the-designer.md)합니다.  
@@ -73,5 +73,5 @@ Windows Forms 컨트롤은 일반적으로 컨트롤의 기본 기능과 관련�
   
 ## <a name="see-also"></a>참고자료
 - <xref:System.Windows.Forms.Control.Text%2A?displayProperty=nameWithType>
-- [방법: Windows Forms 컨트롤에 대 한 액세스 키 만들기](../../../../docs/framework/winforms/controls/how-to-create-access-keys-for-windows-forms-controls.md)
-- [방법: Windows Forms 단추 클릭에 응답](../../../../docs/framework/winforms/controls/how-to-respond-to-windows-forms-button-clicks.md)
+- [방법: Windows Forms 컨트롤에 대 한 액세스 키 만들기](how-to-create-access-keys-for-windows-forms-controls.md)
+- [방법: Windows Forms 단추 클릭에 응답](how-to-respond-to-windows-forms-button-clicks.md)

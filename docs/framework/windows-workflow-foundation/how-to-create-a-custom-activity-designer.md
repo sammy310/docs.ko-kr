@@ -2,12 +2,12 @@
 title: '방법: 사용자 지정 활동 디자이너 만들기'
 ms.date: 03/30/2017
 ms.assetid: 2f3aade6-facc-44ef-9657-a407ef8b9b31
-ms.openlocfilehash: 755aea092d5906d7313234d7ddd1c99d87a7e54d
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: e455d00ebd128c37eacb19df0e7f864505df04e0
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57466884"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57716831"
 ---
 # <a name="how-to-create-a-custom-activity-designer"></a>방법: 사용자 지정 활동 디자이너 만들기
 
@@ -21,9 +21,9 @@ ms.locfileid: "57466884"
 
 이 항목에서는 두 가지 절차에 대해 간략하게 설명합니다.
 
-1. 첫 번째 절차는 <xref:System.Activities.Presentation.WorkflowItemPresenter>를 사용하여 다른 활동을 받는 끌어 놓기 영역을 제공하는 사용자 지정 활동 디자이너를 만드는 방법에 대해 설명하며, 이 절차에 기반 합니다 [사용자 지정 복합 디자이너-워크플로 항목 프레 젠 터](../../../docs/framework/windows-workflow-foundation/samples/custom-composite-designers-workflow-item-presenter.md) 샘플입니다.
+1. 첫 번째 절차는 <xref:System.Activities.Presentation.WorkflowItemPresenter>를 사용하여 다른 활동을 받는 끌어 놓기 영역을 제공하는 사용자 지정 활동 디자이너를 만드는 방법에 대해 설명하며, 이 절차에 기반 합니다 [사용자 지정 복합 디자이너-워크플로 항목 프레 젠 터](./samples/custom-composite-designers-workflow-item-presenter.md) 샘플입니다.
 
-2. 두 번째 절차는 <xref:System.Activities.Presentation.WorkflowItemsPresenter>를 사용하여 포함된 요소 컬렉션을 편집하는 데 필요한 기능을 제공하는 사용자 지정 활동 디자이너를 만드는 방법에 대해 설명하며, 이 절차에 기반 합니다 [사용자 지정 복합 디자이너-워크플로 항목 프레 젠 터](../../../docs/framework/windows-workflow-foundation/samples/custom-composite-designers-workflow-items-presenter.md) 샘플입니다.
+2. 두 번째 절차는 <xref:System.Activities.Presentation.WorkflowItemsPresenter>를 사용하여 포함된 요소 컬렉션을 편집하는 데 필요한 기능을 제공하는 사용자 지정 활동 디자이너를 만드는 방법에 대해 설명하며, 이 절차에 기반 합니다 [사용자 지정 복합 디자이너-워크플로 항목 프레 젠 터](./samples/custom-composite-designers-workflow-items-presenter.md) 샘플입니다.
 
 ## <a name="to-create-a-custom-activity-designer-with-a-drop-zone-using-workflowitempresenter"></a>WorkflowItemPresenter를 사용하여 끌어 놓기 영역이 있는 사용자 지정 활동 디자이너를 만들려면
 
@@ -351,4 +351,4 @@ ms.locfileid: "57466884"
 - <xref:System.Activities.Presentation.WorkflowItemsPresenter>
 - <xref:System.Activities.Presentation.WorkflowViewElement>
 - <xref:System.Activities.Presentation.Model.ModelItem>
-- [워크플로 디자인 환경 사용자 지정](../../../docs/framework/windows-workflow-foundation/customizing-the-workflow-design-experience.md)
+- [워크플로 디자인 환경 사용자 지정](customizing-the-workflow-design-experience.md)

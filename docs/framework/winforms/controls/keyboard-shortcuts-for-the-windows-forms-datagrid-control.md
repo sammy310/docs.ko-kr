@@ -5,23 +5,23 @@ helpviewer_keywords:
 - keyboard shortcuts [Windows Forms], DataGrid control
 - DataGrid control [Windows Forms], navigation keys
 ms.assetid: a01780f9-20d5-4f5f-808f-c790c9a007a5
-ms.openlocfilehash: cf79fb5594410fc479b0e2dd6f1663715e09af86
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c04340cf2d2c8e318ea7348c978ef943563c24da
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54509534"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57711774"
 ---
 # <a name="keyboard-shortcuts-for-the-windows-forms-datagrid-control"></a>Windows Forms DataGrid 컨트롤을 위한 바로 가기 키
 > [!NOTE]
->  <xref:System.Windows.Forms.DataGridView> 컨트롤은 <xref:System.Windows.Forms.DataGrid> 컨트롤을 대체하고 여기에 다른 기능을 추가하여 새로 도입된 컨트롤이지만 이전 버전과의 호환성 및 이후 사용 가능성을 고려하여 <xref:System.Windows.Forms.DataGrid> 컨트롤을 계속 유지하도록 선택할 수 있습니다. 자세한 내용은 [Windows Forms DataGridView 및 DataGrid 컨트롤의 차이점](../../../../docs/framework/winforms/controls/differences-between-the-windows-forms-datagridview-and-datagrid-controls.md)을 참조하십시오.  
+>  <xref:System.Windows.Forms.DataGridView> 컨트롤은 <xref:System.Windows.Forms.DataGrid> 컨트롤을 대체하고 여기에 다른 기능을 추가하여 새로 도입된 컨트롤이지만 이전 버전과의 호환성 및 이후 사용 가능성을 고려하여 <xref:System.Windows.Forms.DataGrid> 컨트롤을 계속 유지하도록 선택할 수 있습니다. 자세한 내용은 [Windows Forms DataGridView 및 DataGrid 컨트롤의 차이점](differences-between-the-windows-forms-datagridview-and-datagrid-controls.md)을 참조하십시오.  
   
  다음 표에서 Windows 양식 내 탐색을 위해 사용할 수 있는 바로 가기 키 <xref:System.Windows.Forms.DataGrid> 제어 합니다.  
   
 |작업|바로 가기|  
 |------------|--------------|  
 |셀 항목을 완료 하 고 셀으로 아래로 이동 합니다.<br /><br /> 자식 테이블 링크에 포커스가 있으면 해당 테이블로 이동 합니다.|Enter 키|  
-|셀 편집 모드에 있는 경우 셀 편집을 취소 합니다.<br /><br /> 움직이는 텍스트 선택에 있는 경우 행에서 편집을 취소 합니다.|Esc 키|  
+|셀 편집 모드에 있는 경우 셀 편집을 취소 합니다.<br /><br /> 움직이는 텍스트 선택에 있는 경우 행에서 편집을 취소 합니다.|Esc|  
 |셀을 편집할 때에 삽입 지점 앞에 있는 문자를 삭제 합니다.|백스페이스|  
 |셀을 편집할 때에 삽입 지점 다음 문자를 삭제 합니다.|Delete|  
 |현재 행에서 첫 번째 셀으로 이동 합니다.|홈|  
@@ -51,5 +51,5 @@ ms.locfileid: "54509534"
 |입력을 <xref:System.DBNull.Value?displayProperty=nameWithType> 편집 모드에 있을 때 셀에는 값입니다.|Ctrl+0|  
   
 ## <a name="see-also"></a>참고자료
-- [DataGrid 컨트롤 개요](../../../../docs/framework/winforms/controls/datagrid-control-overview-windows-forms.md)
-- [DataGrid 컨트롤](../../../../docs/framework/winforms/controls/datagrid-control-windows-forms.md)
+- [DataGrid 컨트롤 개요](datagrid-control-overview-windows-forms.md)
+- [DataGrid 컨트롤](datagrid-control-windows-forms.md)

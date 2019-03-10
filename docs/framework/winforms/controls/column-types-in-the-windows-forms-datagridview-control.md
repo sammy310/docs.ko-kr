@@ -6,12 +6,12 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], column types
 - data grids [Windows Forms], columns
 ms.assetid: f0a0a9f1-8757-4bfd-891f-d7d12870dbed
-ms.openlocfilehash: d4331d5f502165a73c7f322358b2d6ee88d92977
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8fd3ad0da369702c2a5e27c0b8b9a39a71c372ac
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54591591"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57724572"
 ---
 # <a name="column-types-in-the-windows-forms-datagridview-control"></a>Windows Forms DataGridView 컨트롤의 열 형식
 <xref:System.Windows.Forms.DataGridView> 컨트롤에서 해당 정보를 표시 하 여 사용자가 정보를 수정 하거나 추가할 수 있도록 여러 열 유형에 사용 합니다.  
@@ -30,7 +30,7 @@ ms.locfileid: "54591591"
 |<xref:System.Windows.Forms.DataGridViewButtonColumn>|셀의 단추를 표시 하는 데 사용 합니다. 바인딩할 때를 자동으로 생성 합니다. 일반적으로 바인딩되지 않은 열으로 사용 합니다.|  
 |<xref:System.Windows.Forms.DataGridViewComboBoxColumn>|셀의 드롭다운 목록을 표시 하는 데 사용 합니다. 바인딩할 때를 자동으로 생성 합니다. 일반적으로 수동으로 데이터 바인딩됩니다.|  
 |<xref:System.Windows.Forms.DataGridViewLinkColumn>|셀에 대 한 링크를 표시 하는 데 사용 합니다. 바인딩할 때를 자동으로 생성 합니다. 일반적으로 수동으로 데이터 바인딩됩니다.|  
-|사용자 지정 열 형식|상속 하 여 고유한 열 클래스를 만들 수는 <xref:System.Windows.Forms.DataGridViewColumn> 클래스 또는 해당 파생된 클래스는 사용자 지정 모양, 동작 또는 호스트 된 컨트롤을 제공 합니다. 자세한 내용은 [방법: Windows Forms DataGridView 컨트롤에서 셀 및 열은 동작과 모양을 확장 하 여 사용자 지정](../../../../docs/framework/winforms/controls/customize-cells-and-columns-in-the-datagrid-by-extending-behavior.md)|  
+|사용자 지정 열 형식|상속 하 여 고유한 열 클래스를 만들 수는 <xref:System.Windows.Forms.DataGridViewColumn> 클래스 또는 해당 파생된 클래스는 사용자 지정 모양, 동작 또는 호스트 된 컨트롤을 제공 합니다. 자세한 내용은 [방법: Windows Forms DataGridView 컨트롤에서 셀 및 열은 동작과 모양을 확장 하 여 사용자 지정](customize-cells-and-columns-in-the-datagrid-by-extending-behavior.md)|  
   
  이러한 열 유형에 다음 섹션에서 자세히 설명 되어 있습니다.  
   
@@ -44,7 +44,7 @@ ms.locfileid: "54591591"
 ## <a name="datagridviewcheckboxcolumn"></a>DataGridViewCheckBoxColumn  
  합니다 <xref:System.Windows.Forms.DataGridViewCheckBoxColumn> 와 함께 사용 됩니다 <xref:System.Boolean> 고 <xref:System.Windows.Forms.CheckState> 값입니다. <xref:System.Boolean> 2 단계 또는 3 상 확인란으로, 값에 따라 값이 표시는 <xref:System.Windows.Forms.DataGridViewCheckBoxColumn.ThreeState%2A> 속성입니다. 열에 바인딩된 경우 <xref:System.Windows.Forms.CheckState> 값을 <xref:System.Windows.Forms.DataGridViewCheckBoxColumn.ThreeState%2A> 속성 값이 `true` 기본적으로 합니다.  
   
- 일반적으로 확인란 셀 값은 스토리지용이거나 다른 데이터와 같거나 대량 작업 수행용입니다. 사용자가 확인란 셀을 클릭 하는 경우를 처리할 수 있습니다 하는 즉시 응답 하려는 경우는 <xref:System.Windows.Forms.DataGridView.CellClick> 이벤트 하지만이 이벤트는 셀 값이 업데이트 되기 전에 발생 합니다. 클릭 시 새 값을 해야 하는 경우 한 가지 방법은 될 예상 값을 계산 하려면 현재 값을 기반으로 합니다. 또 다른 방법은 즉시 변경 내용 커밋 및 처리 하는 <xref:System.Windows.Forms.DataGridView.CellValueChanged> 이벤트에 응답 하려면. 셀을 클릭할 때 변경 내용을 커밋하려면를 처리 해야 합니다는 <xref:System.Windows.Forms.DataGridView.CurrentCellDirtyStateChanged> 이벤트입니다. 처리기에서 현재 셀의 확인란 셀 인 경우 호출 합니다 <xref:System.Windows.Forms.DataGridView.CommitEdit%2A> 메서드를 전달 합니다 <xref:System.Windows.Forms.DataGridViewDataErrorContexts.Commit> 값.  
+ 일반적으로 확인란 셀 값 또는 다른 데이터와 같이 저장소에 대 한 대량 작업을 수행 하는 것에 대 한 것입니다. 사용자가 확인란 셀을 클릭 하는 경우를 처리할 수 있습니다 하는 즉시 응답 하려는 경우는 <xref:System.Windows.Forms.DataGridView.CellClick> 이벤트 하지만이 이벤트는 셀 값이 업데이트 되기 전에 발생 합니다. 클릭 시 새 값을 해야 하는 경우 한 가지 방법은 될 예상 값을 계산 하려면 현재 값을 기반으로 합니다. 또 다른 방법은 즉시 변경 내용 커밋 및 처리 하는 <xref:System.Windows.Forms.DataGridView.CellValueChanged> 이벤트에 응답 하려면. 셀을 클릭할 때 변경 내용을 커밋하려면를 처리 해야 합니다는 <xref:System.Windows.Forms.DataGridView.CurrentCellDirtyStateChanged> 이벤트입니다. 처리기에서 현재 셀의 확인란 셀 인 경우 호출 합니다 <xref:System.Windows.Forms.DataGridView.CommitEdit%2A> 메서드를 전달 합니다 <xref:System.Windows.Forms.DataGridViewDataErrorContexts.Commit> 값.  
   
 ## <a name="datagridviewimagecolumn"></a>DataGridViewImageColumn  
  <xref:System.Windows.Forms.DataGridViewImageColumn> 이미지를 표시 하는 데 사용 됩니다. 이미지 열 이거나 수 있는 데이터 원본에서 자동으로 채워진, 바인딩되지 않은 열에 대해 수동으로 채우거 처리기에서 동적으로 채울는 <xref:System.Windows.Forms.DataGridView.CellFormatting> 이벤트입니다.  
@@ -65,7 +65,7 @@ ms.locfileid: "54591591"
 ## <a name="datagridviewcomboboxcolumn"></a>DataGridViewComboBoxColumn  
  사용 하 여는 <xref:System.Windows.Forms.DataGridViewComboBoxColumn>, 드롭다운 목록 상자를 포함 하는 셀의 열을 표시할 수 있습니다. Northwind 샘플 데이터베이스의 Products 테이블의 범주 열과 같이 특정 값만 포함할 수 있는 필드에 데이터를 입력할 때 유용 합니다.  
   
- 채우는 같은 방식으로 모든 셀에 대해 사용 되는 드롭다운 목록을 채울 수는 <xref:System.Windows.Forms.ComboBox> 드롭 다운 목록에서 반환 된 컬렉션을 통해 수동으로 <xref:System.Windows.Forms.DataGridViewComboBoxColumn.Items%2A> 속성을 통해 데이터 원본에 바인딩하는 <xref:System.Windows.Forms.DataGridViewComboBoxColumn.DataSource%2A>, <xref:System.Windows.Forms.DataGridViewComboBoxColumn.DisplayMember%2A>, 및 <xref:System.Windows.Forms.DataGridViewComboBoxColumn.ValueMember%2A> 속성입니다. 자세한 내용은 [ComboBox 컨트롤](../../../../docs/framework/winforms/controls/combobox-control-windows-forms.md)합니다.  
+ 채우는 같은 방식으로 모든 셀에 대해 사용 되는 드롭다운 목록을 채울 수는 <xref:System.Windows.Forms.ComboBox> 드롭 다운 목록에서 반환 된 컬렉션을 통해 수동으로 <xref:System.Windows.Forms.DataGridViewComboBoxColumn.Items%2A> 속성을 통해 데이터 원본에 바인딩하는 <xref:System.Windows.Forms.DataGridViewComboBoxColumn.DataSource%2A>, <xref:System.Windows.Forms.DataGridViewComboBoxColumn.DisplayMember%2A>, 및 <xref:System.Windows.Forms.DataGridViewComboBoxColumn.ValueMember%2A> 속성입니다. 자세한 내용은 [ComboBox 컨트롤](combobox-control-windows-forms.md)합니다.  
   
  실제 셀 값에 사용 되는 데이터 소스에 바인딩할 수 있습니다는 <xref:System.Windows.Forms.DataGridView> 설정 하 여 컨트롤을 <xref:System.Windows.Forms.DataGridViewColumn.DataPropertyName%2A> 의 속성은 <xref:System.Windows.Forms.DataGridViewComboBoxColumn?displayProperty=nameWithType>합니다.  
   
@@ -89,7 +89,7 @@ ms.locfileid: "54591591"
 - <xref:System.Windows.Forms.DataGridViewImageColumn>
 - <xref:System.Windows.Forms.DataGridViewTextBoxColumn>
 - <xref:System.Windows.Forms.DataGridViewLinkColumn>
-- [DataGridView 컨트롤](../../../../docs/framework/winforms/controls/datagridview-control-windows-forms.md)
-- [방법: Windows Forms DataGridView 컨트롤의 셀에 이미지 표시](../../../../docs/framework/winforms/controls/how-to-display-images-in-cells-of-the-windows-forms-datagridview-control.md)
-- [방법: Windows Forms DataGridView 컨트롤에서 이미지 열 작업](../../../../docs/framework/winforms/controls/how-to-work-with-image-columns-in-the-windows-forms-datagridview-control.md)
-- [Windows Forms DataGridView 컨트롤 사용자 지정](../../../../docs/framework/winforms/controls/customizing-the-windows-forms-datagridview-control.md)
+- [DataGridView 컨트롤](datagridview-control-windows-forms.md)
+- [방법: Windows Forms DataGridView 컨트롤의 셀에 이미지 표시](how-to-display-images-in-cells-of-the-windows-forms-datagridview-control.md)
+- [방법: Windows Forms DataGridView 컨트롤에서 이미지 열 작업](how-to-work-with-image-columns-in-the-windows-forms-datagridview-control.md)
+- [Windows Forms DataGridView 컨트롤 사용자 지정](customizing-the-windows-forms-datagridview-control.md)

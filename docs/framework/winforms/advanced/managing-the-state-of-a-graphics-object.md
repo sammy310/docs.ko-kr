@@ -8,12 +8,12 @@ helpviewer_keywords:
 - graphics [Windows Forms], managing state
 - graphics [Windows Forms], clipping
 ms.assetid: 6207cad1-7a34-4bd6-bfc1-db823ca7a73e
-ms.openlocfilehash: 5e9e75876862a73be7ace08c09610923d007de4b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fc961b59dabc2f7f123b792e7e45a4ff3b535fc1
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54540860"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57717624"
 ---
 # <a name="managing-the-state-of-a-graphics-object"></a>Graphics 개체의 상태 관리
 합니다 <xref:System.Drawing.Graphics> 클래스의 핵심은 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]합니다. 가져올 항목을 그리려면를 <xref:System.Drawing.Graphics> 개체 속성을 설정 하 고 해당 메서드를 호출할 <xref:System.Drawing.Graphics.DrawLine%2A>, <xref:System.Drawing.Graphics.DrawImage%2A>, <xref:System.Drawing.Graphics.DrawString%2A>, 등).  
@@ -67,7 +67,7 @@ graphics.DrawEllipse(pen, 0, 150, 200, 100);
 ```  
   
 ### <a name="transformations"></a>변형  
- A <xref:System.Drawing.Graphics> 개체를 유지 관리 하 여 그리는 모든 항목에 적용 되는 두 개의 변환 (월드 및 페이지) <xref:System.Drawing.Graphics> 개체입니다. 모든 3x3 유사 변형 월드에 저장할 수 있습니다. 관계 변형 크기 조정, 회전, 반사, 기울이기 및 번역을 포함 합니다. 크기를 조정 하 고 단위 (예를 들어 인치로 픽셀)를 변경 하는 것에 대 한 페이지 변환은 사용할 수 있습니다. 자세한 내용은 [좌표계 및 변형](../../../../docs/framework/winforms/advanced/coordinate-systems-and-transformations.md)합니다.  
+ A <xref:System.Drawing.Graphics> 개체를 유지 관리 하 여 그리는 모든 항목에 적용 되는 두 개의 변환 (월드 및 페이지) <xref:System.Drawing.Graphics> 개체입니다. 모든 3x3 유사 변형 월드에 저장할 수 있습니다. 관계 변형 크기 조정, 회전, 반사, 기울이기 및 번역을 포함 합니다. 크기를 조정 하 고 단위 (예를 들어 인치로 픽셀)를 변경 하는 것에 대 한 페이지 변환은 사용할 수 있습니다. 자세한 내용은 [좌표계 및 변형](coordinate-systems-and-transformations.md)합니다.  
   
  다음 예제에서는 설정의 월드 및 페이지 변형을 <xref:System.Drawing.Graphics> 개체입니다. 월드 30도 회전을로 설정 됩니다. 페이지 변환은 두 번째 좌표 전달 되도록 설정 되어 <xref:System.Drawing.Graphics.DrawEllipse%2A> 픽셀 대신 (밀리미터 단위)로 간주 됩니다. 코드에서는 두 개의 동일한 호출을 <xref:System.Drawing.Graphics.DrawEllipse%2A> 메서드. 첫 번째 적용할 월드 <xref:System.Drawing.Graphics.DrawEllipse%2A> 두 번째 호출 및 (월드 및 페이지) 둘 다 적용 됩니다 <xref:System.Drawing.Graphics.DrawEllipse%2A> 호출 합니다.  
   
@@ -95,7 +95,7 @@ graphics.DrawEllipse(pen, 0, 0, 100, 50);
   
  다음 그림에서는 두 타원을 보여 줍니다. 30도 회전 (클라이언트 영역의 왼쪽 위 모퉁이) 좌표계의 원점을, 타원의 중앙에 대 한 하지는 note 합니다. 두 번째 타원에 대 한 1의 펜 너비 첫 번째 타원은 및 1 밀리미터 1 픽셀씩 의미는 note도 합니다.  
   
- ![타원](../../../../docs/framework/winforms/advanced/media/csgraphicsascon1.png "csgraphicsascon1")  
+ ![타원](./media/csgraphicsascon1.png "csgraphicsascon1")  
   
 ### <a name="clipping-region"></a>클리핑 영역  
  A <xref:System.Drawing.Graphics> 개체를 유지 관리 하 여 그리는 모든 항목에 적용 되는 클리핑 영역 <xref:System.Drawing.Graphics> 개체입니다. 호출 하 여 클리핑 영역을 설정할 수 있습니다는 <xref:System.Drawing.Graphics.SetClip%2A> 메서드.  
@@ -148,8 +148,8 @@ graphics.DrawLine(pen, 40, 20, 190, 150);
   
  다음 그림에서는 잘린된 줄을 보여 줍니다.  
   
- ![제한 된 클립 영역](../../../../docs/framework/winforms/advanced/media/graphicsascon2.png "graphicsascon2")  
+ ![제한 된 클립 영역](./media/graphicsascon2.png "graphicsascon2")  
   
 ## <a name="see-also"></a>참고자료
-- [Windows Forms의 그래픽 및 그리기](../../../../docs/framework/winforms/advanced/graphics-and-drawing-in-windows-forms.md)
-- [중첩된 Graphics 컨테이너 사용](../../../../docs/framework/winforms/advanced/using-nested-graphics-containers.md)
+- [Windows Forms의 그래픽 및 그리기](graphics-and-drawing-in-windows-forms.md)
+- [중첩된 Graphics 컨테이너 사용](using-nested-graphics-containers.md)

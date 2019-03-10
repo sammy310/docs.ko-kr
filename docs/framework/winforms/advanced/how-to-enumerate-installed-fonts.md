@@ -8,12 +8,12 @@ helpviewer_keywords:
 - fonts [Windows Forms], enumerating installed
 - examples [Windows Forms], fonts
 ms.assetid: 26d74ef5-0f39-4eeb-8d20-00e66e014abe
-ms.openlocfilehash: 0124d2bdd8b9c60dc2bf2508348044d76a2c7eb4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 34234ee0400e1d2ca36f2f559b63d282f590ca0d
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54602236"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57709888"
 ---
 # <a name="how-to-enumerate-installed-fonts"></a>방법: 설치 된 글꼴 열거
 합니다 <xref:System.Drawing.Text.InstalledFontCollection> 클래스에서 상속 된 <xref:System.Drawing.Text.FontCollection> 추상 기본 클래스입니다. 사용할 수는 <xref:System.Drawing.Text.InstalledFontCollection> 컴퓨터에 설치 된 글꼴을 열거 하는 개체입니다. 합니다 <xref:System.Drawing.Text.FontCollection.Families%2A> 의 속성을 <xref:System.Drawing.Text.InstalledFontCollection> 개체의 배열이 <xref:System.Drawing.FontFamily> 개체입니다.  
@@ -23,13 +23,13 @@ ms.locfileid: "54602236"
   
  예제 코드를 실행 하는 경우 다음 그림에 나와 있는 것과 비슷한 출력이 됩니다.  
   
- ![설치 된 글꼴](../../../../docs/framework/winforms/advanced/media/csfontstext6.png "csfontstext6")  
+ ![설치 된 글꼴](./media/csfontstext6.png "csfontstext6")  
   
- [!code-csharp[System.Drawing.FontsAndText#11](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.FontsAndText/CS/Class1.cs#11)]
- [!code-vb[System.Drawing.FontsAndText#11](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.FontsAndText/VB/Class1.vb#11)]  
+ [!code-csharp[System.Drawing.FontsAndText#11](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.FontsAndText/CS/Class1.cs#11)]
+ [!code-vb[System.Drawing.FontsAndText#11](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.FontsAndText/VB/Class1.vb#11)]  
   
 ## <a name="compiling-the-code"></a>코드 컴파일  
  앞의 예제는 Windows forms에서 사용하도록 설계되었으며 <xref:System.Windows.Forms.PaintEventHandler>의 매개 변수인 <xref:System.Windows.Forms.PaintEventArgs> `e`가 필요합니다. 또한 가져와야는 <xref:System.Drawing.Text> 네임 스페이스입니다.  
   
 ## <a name="see-also"></a>참고자료
-- [글꼴 및 텍스트 사용](../../../../docs/framework/winforms/advanced/using-fonts-and-text.md)
+- [글꼴 및 텍스트 사용](using-fonts-and-text.md)

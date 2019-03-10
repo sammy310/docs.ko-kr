@@ -8,12 +8,12 @@ helpviewer_keywords:
 - icon list control
 - ImageList component [Windows Forms], about ImageList component
 ms.assetid: 7e25d89b-5633-40c1-afc3-82e0e301ffa2
-ms.openlocfilehash: 49da971975deecfde8e299a46dd59d469da63802
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9869e647613ccf009954a5d65445947fbced40e7
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54521038"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57709846"
 ---
 # <a name="imagelist-component-overview-windows-forms"></a>ImageList 구성 요소 개요(Windows Forms)
 
@@ -30,4 +30,4 @@ Windows Forms <xref:System.Windows.Forms.ImageList> 구성 요소는 컨트롤�
 ## <a name="see-also"></a>참고자료
 
 - <xref:System.Windows.Forms.ImageList>
-- [방법: Windows Forms ImageList 구성 요소를 사용 하 여 이미지 추가 또는 제거](../../../../docs/framework/winforms/controls/how-to-add-or-remove-images-with-the-windows-forms-imagelist-component.md)
+- [방법: Windows Forms ImageList 구성 요소를 사용 하 여 이미지 추가 또는 제거](how-to-add-or-remove-images-with-the-windows-forms-imagelist-component.md)

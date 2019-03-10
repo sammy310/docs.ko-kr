@@ -2,17 +2,17 @@
 title: .NET 4.5에서 Windows Workflow Foundation의 새로운 기능
 ms.date: 03/30/2017
 ms.assetid: 195c43a8-e0a8-43d9-aead-d65a9e6751ec
-ms.openlocfilehash: b907a592bd644bc7a9c4aa19cef78a49bf729561
-ms.sourcegitcommit: 79066169e93d9d65203028b21983574ad9dcf6b4
+ms.openlocfilehash: a76ec56cf6ac5260f00031bc815b32b1e10804a4
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57212406"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57718924"
 ---
 # <a name="whats-new-in-windows-workflow-foundation-in-net-45"></a>.NET 4.5에서 Windows Workflow Foundation의 새로운 기능
 
 Windows WF (Workflow Foundation)에서 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 새 활동, 디자이너 기능 및 워크플로 개발 모델과 같은 많은 새로운 기능이 도입 되었습니다. 
-  [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]에서 새로 추가된 워크플로 기능 중 다수는 재호스트된 워크플로 디자이너에서 지원됩니다. 지원 되는 새로운 기능에 대 한 자세한 내용은 참조 하세요. [다시 호스트 된 워크플로 디자이너에서 새 Workflow Foundation 4.5 기능에 대 한 지원을](../../../docs/framework/windows-workflow-foundation/wf-features-in-the-rehosted-workflow-designer.md)합니다. 마이그레이션.NET 3.0 및.NET 3.5 워크플로 응용 프로그램을 최신 버전을 사용 하는 방법에 대 한 자세한 내용은 참조 하세요. [마이그레이션 지침](../../../docs/framework/windows-workflow-foundation/migration-guidance.md)합니다. 이 항목에서는 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]에 새로 추가된 워크플로 기능에 대해 간략하게 설명합니다.
+  [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]에서 새로 추가된 워크플로 기능 중 다수는 재호스트된 워크플로 디자이너에서 지원됩니다. 지원 되는 새로운 기능에 대 한 자세한 내용은 참조 하세요. [다시 호스트 된 워크플로 디자이너에서 새 Workflow Foundation 4.5 기능에 대 한 지원을](wf-features-in-the-rehosted-workflow-designer.md)합니다. 마이그레이션.NET 3.0 및.NET 3.5 워크플로 응용 프로그램을 최신 버전을 사용 하는 방법에 대 한 자세한 내용은 참조 하세요. [마이그레이션 지침](migration-guidance.md)합니다. 이 항목에서는 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]에 새로 추가된 워크플로 기능에 대해 간략하게 설명합니다.
 
 > [!WARNING]
 > 에 도입 된 새로운 Windows Workflow Foundation 기능 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 는 이전 버전의 framework 대상으로 하는 프로젝트에 사용할 수 없습니다. 
@@ -27,14 +27,14 @@ Windows WF (Workflow Foundation)에서 [!INCLUDE[net_v45](../../../includes/net-
 
 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]에는 새로운 <xref:System.Activities.WorkflowIdentity> 클래스를 기반으로 하는 여러 가지 새로운 버전 관리 기능이 추가되었습니다. <xref:System.Activities.WorkflowIdentity>는 워크플로 응용 프로그램 작성자에게 지속형 워크플로 인스턴스를 해당 정의와 매핑하는 메커니즘을 제공합니다.
 
-- <xref:System.Activities.WorkflowApplication> 호스팅을 사용하는 개발자는 <xref:System.Activities.WorkflowIdentity>를 사용하여 여러 버전의 워크플로를 함께 호스트할 수 있습니다. 새로운 <xref:System.Activities.WorkflowApplicationInstance> 클래스를 사용하여 지속형 워크플로 인스턴스를 로드할 수 있으며, 그런 다음 호스트에서는 <xref:System.Activities.WorkflowApplicationInstance.DefinitionIdentity%2A>를 사용하여 <xref:System.Activities.WorkflowApplication>을 인스턴스화할 때 올바른 버전의 워크플로 정의를 제공할 수 있습니다. 자세한 내용은 [를 사용 하 여 WorkflowIdentity 및 버전 관리](../../../docs/framework/windows-workflow-foundation/using-workflowidentity-and-versioning.md) 고 [방법: 여러 버전을 워크플로-Side-by-side의 호스트](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md)합니다.
+- <xref:System.Activities.WorkflowApplication> 호스팅을 사용하는 개발자는 <xref:System.Activities.WorkflowIdentity>를 사용하여 여러 버전의 워크플로를 함께 호스트할 수 있습니다. 새로운 <xref:System.Activities.WorkflowApplicationInstance> 클래스를 사용하여 지속형 워크플로 인스턴스를 로드할 수 있으며, 그런 다음 호스트에서는 <xref:System.Activities.WorkflowApplicationInstance.DefinitionIdentity%2A>를 사용하여 <xref:System.Activities.WorkflowApplication>을 인스턴스화할 때 올바른 버전의 워크플로 정의를 제공할 수 있습니다. 자세한 내용은 [를 사용 하 여 WorkflowIdentity 및 버전 관리](using-workflowidentity-and-versioning.md) 고 [방법: 여러 버전을 워크플로-Side-by-side의 호스트](how-to-host-multiple-versions-of-a-workflow-side-by-side.md)합니다.
 
-- <xref:System.ServiceModel.WorkflowServiceHost>는 이제 다중 버전 호스트입니다. 워크플로 서비스의 새 버전을 배포할 경우 새 인스턴스는 새 서비스를 사용하여 만들어지지만 기존 인스턴스는 이전 버전을 사용하여 완료됩니다. 자세한 내용은 [WorkflowServiceHost에서 Side-by-side 버전 관리](../../../docs/framework/wcf/feature-details/side-by-side-versioning-in-workflowservicehost.md)합니다.
+- <xref:System.ServiceModel.WorkflowServiceHost>는 이제 다중 버전 호스트입니다. 워크플로 서비스의 새 버전을 배포할 경우 새 인스턴스는 새 서비스를 사용하여 만들어지지만 기존 인스턴스는 이전 버전을 사용하여 완료됩니다. 자세한 내용은 [WorkflowServiceHost에서 Side-by-side 버전 관리](../wcf/feature-details/side-by-side-versioning-in-workflowservicehost.md)합니다.
 
-- 지속형 워크플로 인스턴스의 정의를 업데이트하는 메커니즘을 제공하는 동적 업데이트가 도입되었습니다. 자세한 내용은 [동적 업데이트](../../../docs/framework/windows-workflow-foundation/dynamic-update.md) 고 [방법: 실행 중인 워크플로 인스턴스의 정의 업데이트](../../../docs/framework/windows-workflow-foundation/how-to-update-the-definition-of-a-running-workflow-instance.md)합니다.
+- 지속형 워크플로 인스턴스의 정의를 업데이트하는 메커니즘을 제공하는 동적 업데이트가 도입되었습니다. 자세한 내용은 [동적 업데이트](dynamic-update.md) 고 [방법: 실행 중인 워크플로 인스턴스의 정의 업데이트](how-to-update-the-definition-of-a-running-workflow-instance.md)합니다.
 
 - 
-  [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] 데이터베이스 스크립트를 사용하여 만들어진 지속성 데이터베이스를 업그레이드하기 위해 SqlWorkflowInstanceStoreSchemaUpgrade.sql 데이터베이스 스크립트가 제공됩니다. 이 스크립트는 [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)]에 도입된 새 버전 관리 기능을 지원하도록 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 지속성 데이터베이스를 업데이트합니다. 데이터베이스의 지속형 워크플로 인스턴스는 기본 버전 관리 값을 제공 받으며, side-by-side 실행 및 동적 업데이트에 참여할 수 있습니다. 자세한 내용은 [.NET Framework 4 지 속성 데이터베이스 업그레이드 워크플로 버전 관리 지원](../../../docs/framework/windows-workflow-foundation/using-workflowidentity-and-versioning.md#UpdatingWF4PersistenceDatabases)합니다.
+  [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] 데이터베이스 스크립트를 사용하여 만들어진 지속성 데이터베이스를 업그레이드하기 위해 SqlWorkflowInstanceStoreSchemaUpgrade.sql 데이터베이스 스크립트가 제공됩니다. 이 스크립트는 [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)]에 도입된 새 버전 관리 기능을 지원하도록 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 지속성 데이터베이스를 업데이트합니다. 데이터베이스의 지속형 워크플로 인스턴스는 기본 버전 관리 값을 제공 받으며, side-by-side 실행 및 동적 업데이트에 참여할 수 있습니다. 자세한 내용은 [.NET Framework 4 지 속성 데이터베이스 업그레이드 워크플로 버전 관리 지원](using-workflowidentity-and-versioning.md#UpdatingWF4PersistenceDatabases)합니다.
 
 ## <a name="BKMK_NewActivities"></a> 활동
 
@@ -75,7 +75,7 @@ Windows WF (Workflow Foundation)에서 [!INCLUDE[net_v45](../../../includes/net-
 
      예외가 serialize되지 않는 경우에는 예외가 <xref:System.Activities.Statements.NoPersistScope> 내에서 사용되도록 합니다.
 
-4. 활동 작성자는 <xref:System.Activities.Activity.CacheMetadata%2A>를 재정의하여 워크플로 런타임이 자동으로 해당 형식에 대해 리플렉션을 실행하지 않도록 해야 합니다. 인수 및 자식 활동은 null이 아니어야 하며, <xref:System.Activities.ActivityMetadata.Bind%2A>는 명시적으로 호출되어 합니다. 재정의 하는 방법은 <xref:System.Activities.Activity.CacheMetadata%2A>를 참조 하세요 [CacheMetadata 사용 하 여 데이터를 노출](../../../docs/framework/windows-workflow-foundation/exposing-data-with-cachemetadata.md)합니다. 인수는 형식의 인스턴스 또한 `internal` 또는 **사설** 에 명시적으로 만들어야 <xref:System.Activities.Activity.CacheMetadata%2A> 리플렉션에 의해 만들어지지 않도록 합니다.
+4. 활동 작성자는 <xref:System.Activities.Activity.CacheMetadata%2A>를 재정의하여 워크플로 런타임이 자동으로 해당 형식에 대해 리플렉션을 실행하지 않도록 해야 합니다. 인수 및 자식 활동은 null이 아니어야 하며, <xref:System.Activities.ActivityMetadata.Bind%2A>는 명시적으로 호출되어 합니다. 재정의 하는 방법은 <xref:System.Activities.Activity.CacheMetadata%2A>를 참조 하세요 [CacheMetadata 사용 하 여 데이터를 노출](exposing-data-with-cachemetadata.md)합니다. 인수는 형식의 인스턴스 또한 `internal` 또는 **사설** 에 명시적으로 만들어야 <xref:System.Activities.Activity.CacheMetadata%2A> 리플렉션에 의해 만들어지지 않도록 합니다.
 
 5. 형식은 serialization에 <xref:System.Runtime.Serialization.ISerializable> 또는 <xref:System.SerializableAttribute>를 사용하지 않으며, serialize되는 형식은 <xref:System.Runtime.Serialization.DataContractSerializer>를 지원해야 합니다.
 
@@ -122,7 +122,7 @@ Windows WF (Workflow Foundation)에서 [!INCLUDE[net_v45](../../../includes/net-
 
 다음 스크린 샷에서는 변수 및 인수 디자이너의 상황에 맞는 메뉴를 보여 줍니다.
 
-![변수 및 인수 디자이너 상황에 맞는 메뉴](../../../docs/framework/windows-workflow-foundation/media/designercontextmenu.png "DesignerContextMenu")
+![변수 및 인수 디자이너 상황에 맞는 메뉴](./media/designercontextmenu.png "DesignerContextMenu")
 
 ### <a name="BKMK_AutoSurround"></a> 자동 감싸기 시퀀스
 
@@ -130,11 +130,11 @@ Windows WF (Workflow Foundation)에서 [!INCLUDE[net_v45](../../../includes/net-
 
 다음 스크린 샷에서는 `WriteLine`의 `Body`에 있는 `NoPersistScope` 활동을 보여 줍니다.
 
-![자동&#45;저장 위치를 둘러싸고](../../../docs/framework/windows-workflow-foundation/media/autosurround1.png "AutoSurround1")
+![자동&#45;저장 위치를 둘러싸고](./media/autosurround1.png "AutoSurround1")
 
 다음 스크린 샷에서는 두 번째 `Sequence`이 첫 번째 항목 아래에 놓였을 때 `Body`에 자동으로 만들어진 `WriteLine` 활동을 보여 줍니다.
 
-![자동으로 만들어진 sequence 활동](../../../docs/framework/windows-workflow-foundation/media/autosurround2.png "AutoSurround2")
+![자동으로 만들어진 sequence 활동](./media/autosurround2.png "AutoSurround2")
 
 ### <a name="BKMK_PanMode"></a> 이동 모드
 
@@ -142,7 +142,7 @@ Windows WF (Workflow Foundation)에서 [!INCLUDE[net_v45](../../../includes/net-
 
 다음 스크린 샷에서는 Workflow Designer의 오른쪽 아래 모퉁이에 있는 이동 단추를 보여 줍니다.
 
-![워크플로 디자이너의 이동 단추](../../../docs/framework/windows-workflow-foundation/media/panbutton.png "PanButton")
+![워크플로 디자이너의 이동 단추](./media/panbutton.png "PanButton")
 
 마우스 가운데 단추 또는 스페이스바를 사용하여 워크플로 디자이너를 이동할 수도 있습니다.
 
@@ -156,9 +156,9 @@ Windows WF (Workflow Foundation)에서 [!INCLUDE[net_v45](../../../includes/net-
 
 계층적 워크플로를 쉽게 탐색할 수 있도록 워크플로의 구성 요소는 트리 스타일 개요 뷰로 표시됩니다. 개요 보기에 표시 되는 **문서 개요** 보기. 위쪽 메뉴에서이 보기를 열려면 선택 **뷰**, **기타 Windows**를 **문서 개요**를 누르거나 ctrl + W, u입니다. 개요 뷰의 노드를 클릭하면 워크플로 디자이너의 해당 활동으로 이동되고 개요 뷰가 업데이트되어 디자이너에서 선택된 활동이 표시됩니다.
 
-완료 된 워크플로의 다음 스크린 샷에서 [초보자를 위한 자습서](../../../docs/framework/windows-workflow-foundation/getting-started-tutorial.md) 순차 워크플로 사용 하 여 개요 보기를 보여 줍니다.
+완료 된 워크플로의 다음 스크린 샷에서 [초보자를 위한 자습서](getting-started-tutorial.md) 순차 워크플로 사용 하 여 개요 보기를 보여 줍니다.
 
-![개요 보기에서 Workflow Designer](../../../docs/framework/windows-workflow-foundation/media/outlineviewinworkflowdesigner.jpg "OutlineViewinWorkflowDesigner")
+![개요 보기에서 Workflow Designer](./media/outlineviewinworkflowdesigner.jpg "OutlineViewinWorkflowDesigner")
 
 ### <a name="BKMK_CSharpExpressions"></a> C# 식
 
@@ -167,7 +167,7 @@ Windows WF (Workflow Foundation)에서 [!INCLUDE[net_v45](../../../includes/net-
 
 디자인 타임에 C# 식의 유효성이 검사됩니다. C# 식의 오류는 빨간색 물결선으로 표시됩니다.
 
-C# 식에 대 한 자세한 내용은 참조 하십시오 [C# 식을](../../../docs/framework/windows-workflow-foundation/csharp-expressions.md)합니다.
+C# 식에 대 한 자세한 내용은 참조 하십시오 [C# 식을](csharp-expressions.md)합니다.
 
 ### <a name="BKMK_Visibility"></a> 셸 표시줄 및 헤더의 표시 방식 제어 향상 항목
 
@@ -181,17 +181,17 @@ C# 식에 대 한 자세한 내용은 참조 하십시오 [C# 식을](../../../d
 
 다음 스크린 샷에서는 도구 상자에서 디자이너 화면으로 활동을 끌어 올 때 표시되는 연결 지점을 보여 줍니다.
 
-![자동 연결 지점을 보여 주는 순서도 시작 노드](../../../docs/framework/windows-workflow-foundation/media/autoconnect1.png "Autoconnect1")
+![자동 연결 지점을 보여 주는 순서도 시작 노드](./media/autoconnect1.png "Autoconnect1")
 
 활동을 순서도 노드와 상태 간 연결로 끌어 와 다른 두 노드 사이에 노드를 자동으로 삽입할 수도 있습니다. 다음 스크린 샷에서는 도구 상자의 활동을 끌어다 놓을 수 있는 강조 표시된 연결선을 보여 줍니다.
 
-![자동&#45;활동을 삭제 하는 것에 대 한 핸들을 삽입할](../../../docs/framework/windows-workflow-foundation/media/autoinsert.png "Autoinsert")
+![자동&#45;활동을 삭제 하는 것에 대 한 핸들을 삽입할](./media/autoinsert.png "Autoinsert")
 
 ### <a name="BKMK_Annotations"></a> 디자이너 주석
 
 이제 대규모 워크플로를 손쉽게 개발할 수 있도록 디자이너에서 주석을 추가하여 디자인 프로세스를 추적할 수 있습니다. 주석은 활동, 상태, 순서도 노드, 변수 및 인수에 추가할 수 있습니다. 다음 스크린 샷에서는 디자이너에 주석을 추가하는 데 사용되는 상황에 맞는 메뉴를 보여 줍니다.
 
-![주석 상황에 맞는 메뉴](../../../docs/framework/windows-workflow-foundation/media/annotationdialog.png "annotationdialog")
+![주석 상황에 맞는 메뉴](./media/annotationdialog.png "annotationdialog")
 
 ### <a name="debugging-states"></a>상태 디버깅
 
@@ -245,12 +245,12 @@ C# 식에 대 한 자세한 내용은 참조 하십시오 [C# 식을](../../../d
 4. 
   <xref:System.Activities.Statements.StateMachine>, <xref:System.Activities.Statements.State> 및 <xref:System.Activities.Statements.Transition>을 포함하여 상태 시스템 워크플로를 만드는 데 사용되는 활동
 
-다음 스크린샷은에서 완료 된 상태 시스템 워크플로 [초보자를 위한 자습서](../../../docs/framework/windows-workflow-foundation/getting-started-tutorial.md) 단계 [방법: 상태 시스템 워크플로 만드는](../../../docs/framework/windows-workflow-foundation/how-to-create-a-state-machine-workflow.md)합니다.
+다음 스크린샷은에서 완료 된 상태 시스템 워크플로 [초보자를 위한 자습서](getting-started-tutorial.md) 단계 [방법: 상태 시스템 워크플로 만드는](how-to-create-a-state-machine-workflow.md)합니다.
 
-![완료 된 상태 시스템 워크플로](../../../docs/framework/windows-workflow-foundation/media/wfstatemachinegettingstartedtutorialcomplete.JPG "WFStateMachineGettingStartedTutorialComplete")
+![완료 된 상태 시스템 워크플로](./media/wfstatemachinegettingstartedtutorialcomplete.JPG "WFStateMachineGettingStartedTutorialComplete")
 
-상태 시스템 워크플로 만드는 방법에 대 한 자세한 내용은 참조 하세요. [상태 시스템 워크플로](../../../docs/framework/windows-workflow-foundation/state-machine-workflows.md)합니다.
+상태 시스템 워크플로 만드는 방법에 대 한 자세한 내용은 참조 하세요. [상태 시스템 워크플로](state-machine-workflows.md)합니다.
 
 ### <a name="BKMK_ContractFirst"></a> 계약 중심 워크플로 개발
 
-계약 중심 워크플로 개발 도구를 사용 하면 코드에서 계약을 먼저 디자인 한 다음, Visual Studio에서 몇 번의 클릭으로 자동으로 생성 활동 템플릿을 각 작업을 나타내는 도구 상자에서 개발자. 그런 다음 이러한 활동은 계약에서 정의한 작업을 구현하는 워크플로를 만드는 데 사용됩니다. Workflow Designer는 워크플로 서비스의 유효성을 검사하여 이러한 작업을 구현하고 워크플로의 서명이 계약 서명과 일치하도록 합니다. 개발자는 워크플로 서비스와 구현된 계약 컬렉션을 연결할 수도 있습니다. 계약 중심 워크플로 서비스 개발에 대 한 자세한 내용은 참조 하세요. [방법: 기존 서비스 계약을 사용 하는 워크플로 서비스 만들기](../../../docs/framework/windows-workflow-foundation/how-to-create-a-workflow-service-that-consumes-an-existing-service-contract.md)합니다.
+계약 중심 워크플로 개발 도구를 사용 하면 코드에서 계약을 먼저 디자인 한 다음, Visual Studio에서 몇 번의 클릭으로 자동으로 생성 활동 템플릿을 각 작업을 나타내는 도구 상자에서 개발자. 그런 다음 이러한 활동은 계약에서 정의한 작업을 구현하는 워크플로를 만드는 데 사용됩니다. Workflow Designer는 워크플로 서비스의 유효성을 검사하여 이러한 작업을 구현하고 워크플로의 서명이 계약 서명과 일치하도록 합니다. 개발자는 워크플로 서비스와 구현된 계약 컬렉션을 연결할 수도 있습니다. 계약 중심 워크플로 서비스 개발에 대 한 자세한 내용은 참조 하세요. [방법: 기존 서비스 계약을 사용 하는 워크플로 서비스 만들기](how-to-create-a-workflow-service-that-consumes-an-existing-service-contract.md)합니다.
