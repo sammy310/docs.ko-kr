@@ -9,12 +9,12 @@ helpviewer_keywords:
 - application settings [Windows Forms], Windows Forms
 - application settings [Windows Forms], validating
 ms.assetid: 9f145ada-4267-436a-aa4c-c4dcffd0afb7
-ms.openlocfilehash: 6ebdf1ee74e3ed41b02fdeb545ffc57aaa2d6d7d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 96323e0edd643e20338bd10a9eb1744c3b0aef2f
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54496286"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57705833"
 ---
 # <a name="how-to-validate-application-settings"></a>방법: 응용 프로그램 설정 유효성 검사
 이 항목에서는 애플리케이션 설정이 유지되기 전에 유효성을 검사하는 방법을 설명합니다.  
@@ -40,9 +40,9 @@ ms.locfileid: "54496286"
   
 -   와 같은 관련된 된 작업 전에 발생 하는 이벤트에 대 한 <xref:System.Configuration.ApplicationSettingsBase.SettingChanging> 하 고 <xref:System.Configuration.ApplicationSettingsBase.SettingsSaving>를 사용 하 여는 <xref:System.ComponentModel.CancelEventArgs> 작업을 취소 하는 인수.  
   
- 이벤트를 처리하는 방법에 대한 자세한 내용은 [이벤트 처리기 개요](../../../../docs/framework/winforms/event-handlers-overview-windows-forms.md)를 참조하세요.  
+ 이벤트를 처리하는 방법에 대한 자세한 내용은 [이벤트 처리기 개요](../event-handlers-overview-windows-forms.md)를 참조하세요.  
   
- 다음 절차 중 하나를 사용 하 여 올바른 생년월일을 테스트 하는 방법을 표시 합니다 <xref:System.Configuration.ApplicationSettingsBase.SettingChanging> 또는 <xref:System.Configuration.ApplicationSettingsBase.SettingsSaving> 이벤트입니다. 프로시저는 애플리케이션 설정을 이미 만들었다는 가정 하에서 작성되었습니다. 이 예제에서는 `DateOfBirth`라는 설정에 대한 범위 검사를 수행합니다. 설정을 만드는 방법에 대 한 자세한 내용은 참조 하세요. [방법: 응용 프로그램 설정 만들기](../../../../docs/framework/winforms/advanced/how-to-create-application-settings.md)합니다.  
+ 다음 절차 중 하나를 사용 하 여 올바른 생년월일을 테스트 하는 방법을 표시 합니다 <xref:System.Configuration.ApplicationSettingsBase.SettingChanging> 또는 <xref:System.Configuration.ApplicationSettingsBase.SettingsSaving> 이벤트입니다. 프로시저는 애플리케이션 설정을 이미 만들었다는 가정 하에서 작성되었습니다. 이 예제에서는 `DateOfBirth`라는 설정에 대한 범위 검사를 수행합니다. 설정을 만드는 방법에 대 한 자세한 내용은 참조 하세요. [방법: 응용 프로그램 설정 만들기](how-to-create-application-settings.md)합니다.  
   
 ### <a name="to-obtain-the-application-settings-object"></a>애플리케이션 설정 개체를 가져오려면  
   
@@ -161,5 +161,5 @@ ms.locfileid: "54496286"
     ```  
   
 ## <a name="see-also"></a>참고자료
-- [Windows Forms에서 이벤트 처리기 만들기](../../../../docs/framework/winforms/creating-event-handlers-in-windows-forms.md)
-- [방법: 응용 프로그램 설정 만들기](../../../../docs/framework/winforms/advanced/how-to-create-application-settings.md)
+- [Windows Forms에서 이벤트 처리기 만들기](../creating-event-handlers-in-windows-forms.md)
+- [방법: 응용 프로그램 설정 만들기](how-to-create-application-settings.md)

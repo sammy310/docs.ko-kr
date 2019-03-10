@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Windows Forms, bi-directional support
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ecd167b46a3d600852b5b12a7f18d0013502523d
-ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
+ms.openlocfilehash: f494d3176d72563a82b50fd5e077917e46045b91
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "56442973"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57712286"
 ---
 # <a name="bi-directional-support-for-windows-forms-applications"></a>Windows Forms 애플리케이션에 대한 양방향 지원
 Visual Studio를 사용 하 여 아랍어 및 히브리어와 같은 양방향 (오른쪽에서 왼쪽) 언어를 지 원하는 Windows 기반 응용 프로그램을 만들 수 있습니다. 여기에는 표준 폼, 대화 상자, MDI 폼 및 이러한 폼에서 사용할 수 있는 모든 컨트롤(즉, <xref:System.Windows.Forms.Control> 네임스페이스의 모든 개체)이 포함됩니다.  
@@ -79,7 +79,7 @@ Visual Studio를 사용 하 여 아랍어 및 히브리어와 같은 양방향 (
 |<xref:System.Windows.Forms.VScrollBar>|스크롤 가능한 컨트롤의 오른쪽이 아닌 왼쪽에 표시됩니다.|효과 없음|아니요|  
   
 ## <a name="encoding"></a>인코딩  
- Windows Forms는 유니코드를 지원하므로 양방향 애플리케이션을 만들 때 모든 문자 집합을 포함할 수 있습니다. 그러나 모든 Windows Forms 컨트롤이 모든 플랫폼에서 유니코드를 지원하는 것은 아닙니다. 자세한 내용은 [인코딩 및 Windows Forms 전역화](../../../../docs/framework/winforms/advanced/encoding-and-windows-forms-globalization.md)를 참조하세요.  
+ Windows Forms는 유니코드를 지원하므로 양방향 애플리케이션을 만들 때 모든 문자 집합을 포함할 수 있습니다. 그러나 모든 Windows Forms 컨트롤이 모든 플랫폼에서 유니코드를 지원하는 것은 아닙니다. 자세한 내용은 [인코딩 및 Windows Forms 전역화](encoding-and-windows-forms-globalization.md)를 참조하세요.  
   
 ## <a name="gdi"></a>GDI+  
  [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]를 사용하여 오른쪽에서 왼쪽 읽기 순서로 텍스트를 그릴 수 있습니다. 텍스트를 그리는 데 사용되는 <xref:System.Drawing.Graphics.DrawString%2A> 메서드는 텍스트의 원점을 반대로 바꾸기 위해 <xref:System.Drawing.StringFormatFlags> 열거형의 <xref:System.Drawing.StringFormatFlags.DirectionRightToLeft> 멤버로 설정할 수 있는 `StringFormat` 매개 변수를 지원합니다.  

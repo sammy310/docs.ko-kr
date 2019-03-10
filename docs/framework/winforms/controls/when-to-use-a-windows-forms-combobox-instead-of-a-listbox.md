@@ -11,12 +11,12 @@ helpviewer_keywords:
 - ListBox control [Windows Forms], accessing items
 - ListCount property
 ms.assetid: 7bcaea58-1cfa-46db-9baf-b75a69d8f9ec
-ms.openlocfilehash: e6cdc7f0d54d54448a7b9ed42603b07c93eba719
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5dc7778f43c01fd28a14489a7b4179dd851568b2
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54668342"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57702999"
 ---
 # <a name="when-to-use-a-windows-forms-combobox-instead-of-a-listbox"></a>ListBox 대신 Windows Forms ComboBox를 사용해야 하는 경우
 <xref:System.Windows.Forms.ComboBox> 하며 <xref:System.Windows.Forms.ListBox> 컨트롤 유사 하 게 동작에 있으며 일부 경우 않을 서로 바꿔 사용할 수 있습니다. 그러나 하나 또는 다른 작업에 더 적절 한 경우 경우가 있습니다.  
@@ -28,6 +28,6 @@ ms.locfileid: "54668342"
 ## <a name="see-also"></a>참고자료
 - <xref:System.Windows.Forms.ComboBox>
 - <xref:System.Windows.Forms.ListBox>
-- [방법: 추가 및 제거할 항목을 Windows Forms ComboBox, ListBox 또는 CheckedListBox 컨트롤](../../../../docs/framework/winforms/controls/add-and-remove-items-from-a-wf-combobox.md)
-- [방법: Windows의 내용을 정렬할 Forms ComboBox, ListBox 또는 CheckedListBox 컨트롤](../../../../docs/framework/winforms/controls/sort-the-contents-of-a-wf-combobox-listbox-or-checkedlistbox-control.md)
-- [옵션 목록 표시에 사용된 Windows Forms 컨트롤](../../../../docs/framework/winforms/controls/windows-forms-controls-used-to-list-options.md)
+- [방법: 추가 및 제거할 항목을 Windows Forms ComboBox, ListBox 또는 CheckedListBox 컨트롤](add-and-remove-items-from-a-wf-combobox.md)
+- [방법: Windows의 내용을 정렬할 Forms ComboBox, ListBox 또는 CheckedListBox 컨트롤](sort-the-contents-of-a-wf-combobox-listbox-or-checkedlistbox-control.md)
+- [옵션 목록 표시에 사용된 Windows Forms 컨트롤](windows-forms-controls-used-to-list-options.md)

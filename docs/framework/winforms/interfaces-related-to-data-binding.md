@@ -12,12 +12,12 @@ helpviewer_keywords:
 - data binding [Windows Forms], interfaces
 - IDataErrorInfo interface [Windows Forms], Windows Forms data binding
 ms.assetid: 14e49a2e-3e46-47ca-b491-70d546333277
-ms.openlocfilehash: 5a83198a665563c3d283cac042c9fec95c60f8e2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ec72b67da72bde9392d523787e8c0d4d0981ad7b
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54547133"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57703533"
 ---
 # <a name="interfaces-related-to-data-binding"></a>데이터 바인딩과 관련된 인터페이스
 [!INCLUDE[vstecado](../../../includes/vstecado-md.md)]을 사용하면 애플리케이션과 처리할 데이터의 바인딩 요구를 충족시킬 다양한 데이터 구조를 만들 수 있습니다. Windows Forms에서 데이터를 제공하거나 사용하는 고유 클래스를 만들고 싶을 수도 있습니다. 이러한 개체는 기본 데이터 바인딩부터 디자인 타임 지원, 오류 확인, 변경 사항 알림, 심지어 데이터 자체에 적용된 변경 내용의 구조화된 롤백 지원에 이르기까지 다양한 수준의 복합 기능을 제공할 수 있습니다.  
@@ -150,6 +150,6 @@ ms.locfileid: "54547133"
     >  상속 된 클래스 <xref:System.Windows.Forms.Control> 바인딩을 통해 자동으로 관리 해당 <xref:System.Windows.Forms.Control.BindingContext%2A> 속성을 구현 해야 하므로 사례는 <xref:System.Windows.Forms.ICurrencyManagerProvider> 모두 아주 드문 경우입니다.  
   
 ## <a name="see-also"></a>참고자료
-- [데이터 바인딩 및 Windows Forms](../../../docs/framework/winforms/data-binding-and-windows-forms.md)
-- [방법: Windows Form에 단순 바인딩된 컨트롤 만들기](../../../docs/framework/winforms/how-to-create-a-simple-bound-control-on-a-windows-form.md)
-- [Windows Forms 데이터 바인딩](../../../docs/framework/winforms/windows-forms-data-binding.md)
+- [데이터 바인딩 및 Windows Forms](data-binding-and-windows-forms.md)
+- [방법: Windows Form에 단순 바인딩된 컨트롤 만들기](how-to-create-a-simple-bound-control-on-a-windows-form.md)
+- [Windows Forms 데이터 바인딩](windows-forms-data-binding.md)

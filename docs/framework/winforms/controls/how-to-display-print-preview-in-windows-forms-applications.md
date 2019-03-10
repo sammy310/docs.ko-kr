@@ -10,17 +10,17 @@ helpviewer_keywords:
 - printing [Windows Forms], print preview
 - examples [Windows Forms], print preview
 ms.assetid: e394134c-0886-4517-bd8d-edc4a3749eb5
-ms.openlocfilehash: d348c89e3334543cf935e5faec29e546d848a984
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 13510086edb13ff54f5551296c1b64c51873f649
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54526732"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57715362"
 ---
 # <a name="how-to-display-print-preview-in-windows-forms-applications"></a>방법: Windows에서 인쇄 미리 보기 표시 Forms 응용 프로그램
 사용할 수는 <xref:System.Windows.Forms.PrintPreviewDialog> 컨트롤 사용자가 인쇄 되기 전에 문서를 자주 표시할 수 있도록 합니다.  
   
- 이 작업을 수행 하려면 인스턴스를 지정 해야 합니다 <xref:System.Drawing.Printing.PrintDocument> 클래스 인쇄할 문서입니다. 사용 하 여 인쇄 미리 보기를 사용 하는 방법에 대 한 자세한 내용은 합니다 <xref:System.Drawing.Printing.PrintDocument> 구성 요소 참조 [방법: 인쇄 미리 보기를 사용 하 여 Windows Forms의 인쇄](../../../../docs/framework/winforms/advanced/how-to-print-in-windows-forms-using-print-preview.md)합니다.  
+ 이 작업을 수행 하려면 인스턴스를 지정 해야 합니다 <xref:System.Drawing.Printing.PrintDocument> 클래스 인쇄할 문서입니다. 사용 하 여 인쇄 미리 보기를 사용 하는 방법에 대 한 자세한 내용은 합니다 <xref:System.Drawing.Printing.PrintDocument> 구성 요소 참조 [방법: 인쇄 미리 보기를 사용 하 여 Windows Forms의 인쇄](../advanced/how-to-print-in-windows-forms-using-print-preview.md)합니다.  
   
 > [!NOTE]
 >  사용 하는 <xref:System.Windows.Forms.PrintPreviewDialog> 컨트롤 런타임 시 사용자가 프린터가 있어야 로컬 또는 네트워크를 통해 해당 컴퓨터에 설치 되어 방법을 <xref:System.Windows.Forms.PrintPreviewDialog> 인쇄 된 문서 모양을 구성 요소를 결정 합니다.  
@@ -82,7 +82,7 @@ ms.locfileid: "54526732"
     ```  
   
 ## <a name="see-also"></a>참고자료
-- [PrintDocument 구성 요소](../../../../docs/framework/winforms/controls/printdocument-component-windows-forms.md)
-- [PrintPreviewDialog 컨트롤](../../../../docs/framework/winforms/controls/printpreviewdialog-control-windows-forms.md)
-- [Windows Forms 인쇄 지원](../../../../docs/framework/winforms/advanced/windows-forms-print-support.md)
-- [Windows Forms](../../../../docs/framework/winforms/index.md)
+- [PrintDocument 구성 요소](printdocument-component-windows-forms.md)
+- [PrintPreviewDialog 컨트롤](printpreviewdialog-control-windows-forms.md)
+- [Windows Forms 인쇄 지원](../advanced/windows-forms-print-support.md)
+- [Windows Forms](../index.md)

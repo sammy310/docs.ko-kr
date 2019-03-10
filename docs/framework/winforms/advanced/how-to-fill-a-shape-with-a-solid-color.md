@@ -8,12 +8,12 @@ helpviewer_keywords:
 - colors [Windows Forms], adding to shapes
 - shapes [Windows Forms], filling
 ms.assetid: 06088b31-bac9-4ef3-9ebe-06c2c764d6df
-ms.openlocfilehash: 576042d9d8e7a7f77d5375b7dfafafdc63b3e824
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8bc782f9496a9c1562bad2df1ba196fb39572e68
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54601963"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57704439"
 ---
 # <a name="how-to-fill-a-shape-with-a-solid-color"></a>방법: 단색으로 도형 채우기
 단색으로 도형 채우기를 만들려면를 <xref:System.Drawing.SolidBrush> 개체를 전달 하는 <xref:System.Drawing.SolidBrush> 개체의 채우기 메서드 중 하나에 대 한 인수로 <xref:System.Drawing.Graphics> 클래스입니다. 다음 예제에서는 빨간색으로 타원을 채우는 방법을 보여 줍니다.  
@@ -23,11 +23,11 @@ ms.locfileid: "54601963"
   
  4 개의 숫자 (0, 0, 100, 60)에 전달 된 <xref:System.Drawing.Graphics.FillEllipse%2A> 메서드는 타원의 경계 사각형의 크기와 위치를 지정 합니다. 사각형의 왼쪽 위 모퉁이가 (0, 0), 100의 너비 및 높이는 60입니다.  
   
- [!code-csharp[System.Drawing.UsingABrush#11](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingABrush/CS/Class1.cs#11)]
- [!code-vb[System.Drawing.UsingABrush#11](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingABrush/VB/Class1.vb#11)]  
+ [!code-csharp[System.Drawing.UsingABrush#11](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingABrush/CS/Class1.cs#11)]
+ [!code-vb[System.Drawing.UsingABrush#11](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingABrush/VB/Class1.vb#11)]  
   
 ## <a name="compiling-the-code"></a>코드 컴파일  
  앞의 예제는 Windows forms에서 사용하도록 설계되었으며 <xref:System.Windows.Forms.Control.Paint> 이벤트 처리기의 매개 변수인 <xref:System.Windows.Forms.PaintEventArgs> `e`가 필요합니다.  
   
 ## <a name="see-also"></a>참고자료
-- [브러시를 사용하여 도형 채우기](../../../../docs/framework/winforms/advanced/using-a-brush-to-fill-shapes.md)
+- [브러시를 사용하여 도형 채우기](using-a-brush-to-fill-shapes.md)

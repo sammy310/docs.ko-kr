@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - Splitter control [Windows Forms], about Splitter control
 ms.assetid: e2b6ab83-dfdd-40ec-9762-850702c82dcb
-ms.openlocfilehash: 583596ec44dd5318c199d6cfc33901dbd952b115
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2e3e46c9d4cf118bb846e5d9efefeb0d57fea567
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54522611"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57703195"
 ---
 # <a name="splitter-control-overview-windows-forms"></a>Splitter 컨트롤 개요(Windows Forms)
 > [!IMPORTANT]
->  <xref:System.Windows.Forms.SplitContainer>은 이전 버전의 <xref:System.Windows.Forms.Splitter> 컨트롤을 대체하고 확장한 컨트롤이지만 이전 버전과의 호환성 및 앞으로의 사용 가능성을 고려하여 <xref:System.Windows.Forms.Splitter>를 유지하도록 선택할 수 있습니다.  
+>  하지만 <xref:System.Windows.Forms.SplitContainer> 대체 하 고 기능을 추가 합니다 <xref:System.Windows.Forms.Splitter> 이전 버전의 컨트롤 <xref:System.Windows.Forms.Splitter> 선택 하면 이전 버전과 호환성 및 향후 사용을 위해 유지 됩니다.  
   
  Windows Forms <xref:System.Windows.Forms.Splitter> 컨트롤은 런타임에 도킹 된 컨트롤의 크기를 조정 하는 데 사용 됩니다. <xref:System.Windows.Forms.Splitter> 컨트롤은 Windows 탐색기와 데이터 창에는 서로 다른 시간에 다양 한 너비의 정보가 포함 되어 있는 데이터의 길이 다양 한 컨트롤과 폼에 자주 사용 됩니다.  
   
@@ -24,5 +24,5 @@ ms.locfileid: "54522611"
   
 ## <a name="see-also"></a>참고자료
 - <xref:System.Windows.Forms.SplitContainer>
-- [방법: Windows Forms에 컨트롤 도킹](../../../../docs/framework/winforms/controls/how-to-dock-controls-on-windows-forms.md)
-- [Windows Forms에 사용할 수 있는 컨트롤](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)
+- [방법: Windows Forms에 컨트롤 도킹](how-to-dock-controls-on-windows-forms.md)
+- [Windows Forms에 사용할 수 있는 컨트롤](controls-to-use-on-windows-forms.md)

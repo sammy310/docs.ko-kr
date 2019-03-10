@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Custom Places [Windows Forms], Known Folder GUIDs
 - Windows Vista Known Folder GUIDs [Windows Forms], Custom Places
 ms.assetid: d8d8b544-8b4d-4da5-ba3a-b05e93244778
-ms.openlocfilehash: 97d516e1c3ae99d639dea676f3f6798b6e7a849f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0ffd0b78e37b663b197620694d9459cd4e0129d9
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54679398"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57703454"
 ---
 # <a name="known-folder-guids-for-file-dialog-custom-places"></a>파일 대화 상자의 사용자 지정 위치에 대한 알려진 폴더 GUID
 사용할를 <xref:System.Guid> 지정 하는 [!INCLUDE[wiprlhext](../../../../includes/wiprlhext-md.md)] 알려진 폴더에 폴더를 추가 하는 경우는 <xref:System.Windows.Forms.FileDialog.CustomPlaces%2A> 컬렉션입니다. 알려진 폴더 Guid 대/소문자 구분 없는 및의 KnownFolders.h 파일에 정의 된 [!INCLUDE[winSDK](../../../../includes/winsdk-md.md)]합니다.  
@@ -288,4 +288,4 @@ ms.locfileid: "54679398"
   
 ## <a name="see-also"></a>참고자료
 - <xref:System.Windows.Forms.FileDialogCustomPlace>
-- [방법: 파일 대화 상자에 사용자 지정 위치 추가](../../../../docs/framework/winforms/controls/how-to-add-a-custom-place-to-a-file-dialog-box.md)
+- [방법: 파일 대화 상자에 사용자 지정 위치 추가](how-to-add-a-custom-place-to-a-file-dialog-box.md)

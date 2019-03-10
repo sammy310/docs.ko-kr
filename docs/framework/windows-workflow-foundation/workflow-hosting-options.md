@@ -2,15 +2,15 @@
 title: 워크플로 호스팅 옵션
 ms.date: 03/30/2017
 ms.assetid: 37bcd668-9c5c-4e7c-81da-a1f1b3a16514
-ms.openlocfilehash: 7713044e40532c431d090b1cb1795876ead2a899
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2a03c7b5e15b76eabc714f44624f04d3385720d4
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33516554"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57713321"
 ---
 # <a name="workflow-hosting-options"></a>워크플로 호스팅 옵션
-대부분의 Windows WF (Workflow Foundation) 샘플 콘솔 응용 프로그램에서 호스트 되는 워크플로 사용 하지만이 실제 워크플로에 실질적으로 시나리오는 아닙니다. 실제 비즈니스 응용 프로그램의 워크플로는 영구 프로세스, 즉 개발자가 작성한 Windows 서비스나 [!INCLUDE[iisver](../../../includes/iisver-md.md)] 또는 AppFabric 같은 서버 응용 프로그램에서 호스트됩니다. 이러한 방법에는 다음과 같은 차이가 있습니다.  
+대부분의 Windows WF (Workflow Foundation) 샘플 콘솔 응용 프로그램에서 호스팅되는 워크플로 사용 하지만이 실제 워크플로에 대 한 현실적인 시나리오는 아닙니다. 실제 비즈니스 응용 프로그램의 워크플로는 영구 프로세스, 즉 개발자가 작성한 Windows 서비스나 [!INCLUDE[iisver](../../../includes/iisver-md.md)] 또는 AppFabric 같은 서버 응용 프로그램에서 호스트됩니다. 이러한 방법에는 다음과 같은 차이가 있습니다.  
   
 ## <a name="hosting-workflows-in-iis-with-windows-appfabric"></a>IIS에서 Windows AppFabric을 사용하여 워크플로 호스팅  
  IIS와 AppFabric을 함께 사용하는 것은 기본적인 워크플로 호스팅 방법입니다. AppFabric을 사용하는 워크플로용 호스트 응용 프로그램은 Windows Activation Service로, 이 응용 프로그램에서는 IIS만을 통해 HTTP에 대한 종속성을 제거합니다.  
@@ -19,7 +19,7 @@ ms.locfileid: "33516554"
  AppFabric에서는 실행 중인 응용 프로그램의 유지 관리를 용이하게 해 주는 관리 및 모니터링 도구가 제공되므로 [!INCLUDE[iisver](../../../includes/iisver-md.md)]만 사용하는 것은 권장되지 않습니다. AppFabric으로 이동하는 데 관련된 인프라 문제가 있는 경우에만 [!INCLUDE[iisver](../../../includes/iisver-md.md)]을 단독으로 사용하여 워크플로를 호스트해야 합니다.  
   
 > [!WARNING]
->  [!INCLUDE[iisver](../../../includes/iisver-md.md)]에서는 다양한 이유로 응용 프로그램 풀을 정기적으로 재활용합니다. 응용 프로그램 풀이 재활용될 때 IIS는 이전 풀에서 메시지 수락을 중지하고 새 요청을 수락하는 새 응용 프로그램 풀을 인스턴스화합니다. 응답을 보낸 후 워크플로에서 작업을 계속하는 경우 [!INCLUDE[iisver](../../../includes/iisver-md.md)]에서는 수행 중인 작업을 인식하지 못하고 호스팅 응용 프로그램 풀을 재활용할 수 있습니다. 이런 경우가 발생 하 고 워크플로가 중단 됩니다 추적 서비스를 기록 하는 [1004-WorkflowInstanceAborted](../../../docs/framework/windows-workflow-foundation/1004-workflowinstanceaborted.md) 빈 이유 필드는 메시지입니다.  
+>  [!INCLUDE[iisver](../../../includes/iisver-md.md)]에서는 다양한 이유로 응용 프로그램 풀을 정기적으로 재활용합니다. 응용 프로그램 풀이 재활용될 때 IIS는 이전 풀에서 메시지 수락을 중지하고 새 요청을 수락하는 새 응용 프로그램 풀을 인스턴스화합니다. 응답을 보낸 후 워크플로에서 작업을 계속하는 경우 [!INCLUDE[iisver](../../../includes/iisver-md.md)]에서는 수행 중인 작업을 인식하지 못하고 호스팅 응용 프로그램 풀을 재활용할 수 있습니다. 이런 경우 워크플로가 중단 되 고 추적 서비스는 기록 된 [1004-WorkflowInstanceAborted](1004-workflowinstanceaborted.md) 빈 이유 필드를 사용 하 여 메시지입니다.  
 >   
 >  지속성이 사용되는 경우 호스트는 마지막 지속성 지점에서 중단된 인스턴스를 명시적으로 다시 시작해야 합니다.  
 >   

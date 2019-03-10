@@ -10,12 +10,12 @@ helpviewer_keywords:
 - examples [Windows Forms], DateTimePicker control
 - dates [Windows Forms], displaying in DateTimePicker control
 ms.assetid: 39767691-2d2b-46b6-a663-b7901e581a6e
-ms.openlocfilehash: 489a31474b8ae3e56ba69e59f6d613ecf892a93c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c201455acaa9bde521afd623424d0cfc403b1bff
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54531293"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57705877"
 ---
 # <a name="how-to-display-a-date-in-a-custom-format-with-the-windows-forms-datetimepicker-control"></a>방법: Windows Forms DateTimePicker 컨트롤을 사용 하는 사용자 지정 형식에서 날짜를 표시 합니다.
 Windows Forms <xref:System.Windows.Forms.DateTimePicker> 컨트롤의 컨트롤에서 날짜와 시간 표시를 서식 지정에 유연성을 제공 합니다. 합니다 <xref:System.Windows.Forms.DateTimePicker.Format%2A> 속성에 나열 된 미리 정의 된 형식에서 선택할 수는 <xref:System.Windows.Forms.DateTimePickerFormat>합니다. 이러한 용도 맞게 적절 한 인 경우에 나열 된 형식 문자를 사용 하 여 사용자 고유의 형식 스타일을 만들 수 있습니다 <xref:System.Windows.Forms.DateTimePicker.CustomFormat%2A>합니다.  
@@ -64,5 +64,5 @@ Windows Forms <xref:System.Windows.Forms.DateTimePicker> 컨트롤의 컨트롤�
      문화권 설정에 따라 단일 따옴표로 묶이지 않은 문자를 변경할 수 있습니다. 위의 형식 문자열은 형식으로 현재 날짜를 표시 하는 예를 들어, "임: 05시 30분: 31 년 3 월 금요일 02, 2012"영어 (미국) 문화권의 합니다. 참고 "ss" 이므로 구분 문자가 되도록 것이 아니므로 첫 번째 콜론을 하나의 따옴표로 묶입니다. 다른 문화권의 형식으로 나타날 수 있습니다 "임: 05.30.31 금요일 년 3 월 02 2012"입니다.  
   
 ## <a name="see-also"></a>참고자료
-- [DateTimePicker 컨트롤](../../../../docs/framework/winforms/controls/datetimepicker-control-windows-forms.md)
-- [방법: Windows Forms DateTimePicker 컨트롤을 포함 하는 설정 및 반환 날짜](../../../../docs/framework/winforms/controls/how-to-set-and-return-dates-with-the-windows-forms-datetimepicker-control.md)
+- [DateTimePicker 컨트롤](datetimepicker-control-windows-forms.md)
+- [방법: Windows Forms DateTimePicker 컨트롤을 포함 하는 설정 및 반환 날짜](how-to-set-and-return-dates-with-the-windows-forms-datetimepicker-control.md)

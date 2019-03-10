@@ -9,12 +9,12 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], detecting changes in cells
 - data grids [Windows Forms], detecting changes in cells
 ms.assetid: 7fa44d01-97f4-4ccb-a149-bc72628d2c36
-ms.openlocfilehash: 125da277c2db44f01e6cad8cea08fbd927234f09
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ad1c60c34fc5461de21e2ad5d4d02f5b2abd6dfd
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54686857"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57705586"
 ---
 # <a name="how-to-perform-a-custom-action-based-on-changes-in-a-cell-of-a-windows-forms-datagridview-control"></a>방법: Windows Forms DataGridView 컨트롤의 셀 변경 내용에 따라 사용자 지정 작업을 수행 합니다.
 합니다 <xref:System.Windows.Forms.DataGridView> 컨트롤의 상태 변경 내용을 검색 하 여 이벤트의 개수가 <xref:System.Windows.Forms.DataGridView> 셀입니다. 가장 자주 사용 되는 두 가지는 <xref:System.Windows.Forms.DataGridView.CellValueChanged> 고 <xref:System.Windows.Forms.DataGridView.CellStateChanged> 이벤트입니다.  
@@ -23,26 +23,28 @@ ms.locfileid: "54686857"
   
 -   에 대 한 처리기를 작성 합니다 <xref:System.Windows.Forms.DataGridView.CellValueChanged> 이벤트입니다.  
   
-     [!code-csharp[System.Windows.Forms.DataGridViewMisc#130](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/CS/datagridviewmisc.cs#130)]
-     [!code-vb[System.Windows.Forms.DataGridViewMisc#130](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/VB/datagridviewmisc.vb#130)]  
+     [!code-csharp[System.Windows.Forms.DataGridViewMisc#130](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/CS/datagridviewmisc.cs#130)]
+     [!code-vb[System.Windows.Forms.DataGridViewMisc#130](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/VB/datagridviewmisc.vb#130)]  
   
 ### <a name="to-detect-changes-in-the-states-of-datagridview-cells"></a>DataGridView 셀의 상태 변경을 감지 하려면  
   
 -   에 대 한 처리기를 작성 합니다 <xref:System.Windows.Forms.DataGridView.CellStateChanged> 이벤트입니다.  
   
-     [!code-csharp[System.Windows.Forms.DataGridViewMisc#135](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/CS/datagridviewmisc.cs#135)]
-     [!code-vb[System.Windows.Forms.DataGridViewMisc#135](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/VB/datagridviewmisc.vb#135)]  
+     [!code-csharp[System.Windows.Forms.DataGridViewMisc#135](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/CS/datagridviewmisc.cs#135)]
+     [!code-vb[System.Windows.Forms.DataGridViewMisc#135](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/VB/datagridviewmisc.vb#135)]  
   
 ## <a name="compiling-the-code"></a>코드 컴파일  
  이 예제에는 다음 사항이 필요합니다.  
   
--   `dataGridView1`이라는 <xref:System.Windows.Forms.DataGridView> 컨트롤 에 대 한 C#를 해당 이벤트에 이벤트 처리기를 연결 해야 합니다.  
+-   
+  `dataGridView1`이라는 <xref:System.Windows.Forms.DataGridView> 컨트롤 에 대 한 C#를 해당 이벤트에 이벤트 처리기를 연결 해야 합니다.  
   
--   <xref:System?displayProperty=nameWithType> 및 <xref:System.Windows.Forms?displayProperty=nameWithType> 어셈블리에 대한 참조  
+-   
+  <xref:System?displayProperty=nameWithType> 및 <xref:System.Windows.Forms?displayProperty=nameWithType> 어셈블리에 대한 참조  
   
 ## <a name="see-also"></a>참고자료
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridView.CellValueChanged?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.DataGridView.CellStateChanged?displayProperty=nameWithType>
-- [Windows Forms DataGridView 컨트롤에서 셀, 행 및 열 프로그래밍](../../../../docs/framework/winforms/controls/programming-with-cells-rows-and-columns-in-the-datagrid.md)
-- [연습: Windows Forms DataGridView 컨트롤의 데이터 유효성 검사](../../../../docs/framework/winforms/controls/walkthrough-validating-data-in-the-windows-forms-datagridview-control.md)
+- [Windows Forms DataGridView 컨트롤에서 셀, 행 및 열 프로그래밍](programming-with-cells-rows-and-columns-in-the-datagrid.md)
+- [연습: Windows Forms DataGridView 컨트롤의 데이터 유효성 검사](walkthrough-validating-data-in-the-windows-forms-datagridview-control.md)

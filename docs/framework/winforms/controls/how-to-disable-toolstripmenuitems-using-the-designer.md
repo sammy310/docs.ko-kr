@@ -7,15 +7,15 @@ helpviewer_keywords:
 - menu items [Windows Forms], disabling
 - menus [Windows Forms], disabling items
 ms.assetid: 985e311e-7d67-4205-b5a3-d045b68a4a03
-ms.openlocfilehash: e4506da2fd41a78ff8f8643a630abc4992fc5a87
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a185fe4421b5b5d7846c7d8cacbfc1cae5f805eb
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54644991"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57704437"
 ---
 # <a name="how-to-disable-toolstripmenuitems-using-the-designer"></a>방법: 디자이너를 사용 하 여 ToolStripMenuItems를 사용 하지 않도록 설정
-제한 하거나 설정 및 사용자 활동에 대 한 응답에서 메뉴 항목을 사용 하지 않도록 설정 하 여 사용자가 수행 하는 명령을 확장할 수 있습니다. 메뉴 항목은 생성 하지만이 통해 조정할 수 있습니다 때 기본적으로 활성화 된 <xref:System.Windows.Forms.ToolStripMenuItem.Enabled%2A> 속성입니다. 디자인 타임에이 속성을 조작할 수 있습니다 합니다 **속성** 창 또는 코드에서 설정 하 여 프로그래밍 방식으로 합니다. 자세한 내용은 [방법: ToolStripMenuItems 사용 안 함](../../../../docs/framework/winforms/controls/how-to-disable-toolstripmenuitems.md)합니다.  
+제한 하거나 설정 및 사용자 활동에 대 한 응답에서 메뉴 항목을 사용 하지 않도록 설정 하 여 사용자가 수행 하는 명령을 확장할 수 있습니다. 메뉴 항목은 생성 하지만이 통해 조정할 수 있습니다 때 기본적으로 활성화 된 <xref:System.Windows.Forms.ToolStripMenuItem.Enabled%2A> 속성입니다. 디자인 타임에이 속성을 조작할 수 있습니다 합니다 **속성** 창 또는 코드에서 설정 하 여 프로그래밍 방식으로 합니다. 자세한 내용은 [방법: ToolStripMenuItems 사용 안 함](how-to-disable-toolstripmenuitems.md)합니다.  
   
 > [!NOTE]
 >  표시되는 대화 상자와 메뉴 명령은 활성 설정이나 버전에 따라 도움말에서 설명하는 것과 다를 수 있습니다. 설정을 변경하려면 **도구** 메뉴에서 **설정 가져오기 및 내보내기** 를 선택합니다. 자세한 내용은 [Visual Studio IDE 개인 설정](/visualstudio/ide/personalizing-the-visual-studio-ide)을 참조하세요.  
@@ -30,5 +30,5 @@ ms.locfileid: "54644991"
 ## <a name="see-also"></a>참고자료
 - <xref:System.Windows.Forms.MenuStrip>
 - <xref:System.Windows.Forms.ToolStripMenuItem>
-- [방법: ToolStripMenuItems 숨기기](../../../../docs/framework/winforms/controls/how-to-hide-toolstripmenuitems.md)
-- [MenuStrip 컨트롤 개요](../../../../docs/framework/winforms/controls/menustrip-control-overview-windows-forms.md)
+- [방법: ToolStripMenuItems 숨기기](how-to-hide-toolstripmenuitems.md)
+- [MenuStrip 컨트롤 개요](menustrip-control-overview-windows-forms.md)

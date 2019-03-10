@@ -10,19 +10,19 @@ helpviewer_keywords:
 - printing a form
 - printing [Windows Forms], printing a form
 ms.assetid: c8dff5f8-f56a-4c07-ae31-64643b31f8fc
-ms.openlocfilehash: 5e672f40797a90111daefed0be74c941d4cc37b8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 80bf88ad048e55a381d034d2a796de6f77f8691c
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54628138"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57714153"
 ---
 # <a name="how-to-print-a-windows-form"></a>방법: Windows Form 인쇄
 개발 프로세스의 일환으로, 일반적으로 하려는 Windows Form의 복사본을 인쇄 합니다. 다음 코드 예제를 사용 하 여 현재 폼의 복사본을 인쇄 하는 방법을 보여 줍니다는 <xref:System.Drawing.Graphics.CopyFromScreen%2A> 메서드.  
   
 ## <a name="example"></a>예제  
- [!code-csharp[System.Drawing.Graphics.CopyFromScreen#1](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.Graphics.CopyFromScreen/CS/Form1.cs#1)]
- [!code-vb[System.Drawing.Graphics.CopyFromScreen#1](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.Graphics.CopyFromScreen/VB/Form1.vb#1)]  
+ [!code-csharp[System.Drawing.Graphics.CopyFromScreen#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.Graphics.CopyFromScreen/CS/Form1.cs#1)]
+ [!code-vb[System.Drawing.Graphics.CopyFromScreen#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.Graphics.CopyFromScreen/VB/Form1.vb#1)]  
   
 ## <a name="compiling-the-code"></a>코드 컴파일  
  이 포함 하는 전체 코드 예제는 `Main` 메서드.  
@@ -39,5 +39,5 @@ ms.locfileid: "54628138"
   
 ## <a name="see-also"></a>참고자료
 - <xref:System.Drawing.Printing.PrintDocument>
-- [방법: GDI +를 사용 하 여 이미지를 렌더링 합니다.](../../../../docs/framework/winforms/advanced/how-to-render-images-with-gdi.md)
-- [방법: Windows Forms의 그래픽 인쇄](../../../../docs/framework/winforms/advanced/how-to-print-graphics-in-windows-forms.md)
+- [방법: GDI +를 사용 하 여 이미지를 렌더링 합니다.](how-to-render-images-with-gdi.md)
+- [방법: Windows Forms의 그래픽 인쇄](how-to-print-graphics-in-windows-forms.md)

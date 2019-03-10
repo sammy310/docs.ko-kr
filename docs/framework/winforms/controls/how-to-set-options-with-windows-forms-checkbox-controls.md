@@ -12,12 +12,12 @@ helpviewer_keywords:
 - check boxes [Windows Forms], using to set options
 - CheckBox control [Windows Forms], using to set options
 ms.assetid: 2ac70498-7e3e-4e07-8901-ccabaeb5fd3e
-ms.openlocfilehash: a8159e9e9a2484b95399aba67b1a10b1252a4357
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3eb68d76d936f13e78d13629455c6ac7fb537b40
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54525562"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57714790"
 ---
 # <a name="how-to-set-options-with-windows-forms-checkbox-controls"></a>방법: Windows Forms CheckBox 컨트롤을 사용 하 여 옵션 설정
 Windows Forms <xref:System.Windows.Forms.CheckBox> 컨트롤 True/False 사용자에 게 제공 하는 데 사용 됩니다 또는 예/아니요 옵션입니다. 컨트롤이 선택 될 때 확인 표시를 표시 합니다.  
@@ -67,6 +67,6 @@ Windows Forms <xref:System.Windows.Forms.CheckBox> 컨트롤 True/False 사용�
   
 ## <a name="see-also"></a>참고자료
 - <xref:System.Windows.Forms.CheckBox>
-- [CheckBox 컨트롤 개요](../../../../docs/framework/winforms/controls/checkbox-control-overview-windows-forms.md)
-- [방법: Windows Forms CheckBox 클릭에 응답](../../../../docs/framework/winforms/controls/how-to-respond-to-windows-forms-checkbox-clicks.md)
-- [CheckBox 컨트롤](../../../../docs/framework/winforms/controls/checkbox-control-windows-forms.md)
+- [CheckBox 컨트롤 개요](checkbox-control-overview-windows-forms.md)
+- [방법: Windows Forms CheckBox 클릭에 응답](how-to-respond-to-windows-forms-checkbox-clicks.md)
+- [CheckBox 컨트롤](checkbox-control-windows-forms.md)

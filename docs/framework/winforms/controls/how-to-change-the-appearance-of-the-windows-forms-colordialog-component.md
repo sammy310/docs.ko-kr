@@ -10,12 +10,12 @@ helpviewer_keywords:
 - ColorDialog component [Windows Forms], formatting appearance
 - color dialog box [Windows Forms], configuring appearance
 ms.assetid: bba4e262-1cd7-4f63-89cf-330a36f7b539
-ms.openlocfilehash: b516a88b4830c5ed1bccfc5ecb76ebc97c6e3b56
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6bc59f08d811ef542206b5788f251f30f89af301
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54530292"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57702791"
 ---
 # <a name="how-to-change-the-appearance-of-the-windows-forms-colordialog-component"></a>방법: Windows Forms ColorDialog 구성 요소의 모양 변경
 Windows Forms의 모양에 구성한 <xref:System.Windows.Forms.ColorDialog> 다양 한 해당 속성을 사용 하 여 구성 요소입니다. 대화 상자에는 두 섹션이 있습니다.-기본 색을 사용자 지정 색을 정의할 수 있도록 표시 하는 것입니다.  
@@ -51,5 +51,5 @@ Windows Forms의 모양에 구성한 <xref:System.Windows.Forms.ColorDialog> 다
   
 ## <a name="see-also"></a>참고자료
 - <xref:System.Windows.Forms.ColorDialog>
-- [ColorDialog 구성 요소](../../../../docs/framework/winforms/controls/colordialog-component-windows-forms.md)
-- [ColorDialog 구성 요소 개요](../../../../docs/framework/winforms/controls/colordialog-component-overview-windows-forms.md)
+- [ColorDialog 구성 요소](colordialog-component-windows-forms.md)
+- [ColorDialog 구성 요소 개요](colordialog-component-overview-windows-forms.md)

@@ -15,16 +15,16 @@ helpviewer_keywords:
 - threading [Windows Forms], cross-thread calls
 - controls [Windows Forms], multithreading
 ms.assetid: 138f38b6-1099-4fd5-910c-390b41cbad35
-ms.openlocfilehash: ef7836721df6c090a4d09c38c176641331c3e8a4
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 3211df1f0e585780039471b80b5b913613ad9bbd
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57362567"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57714010"
 ---
 # <a name="how-to-make-thread-safe-calls-to-windows-forms-controls"></a>방법: 스레드로부터 안전한 Windows Forms 컨트롤 호출
 
-다중 스레딩에는 Windows Forms 앱의 성능을 향상 시킬 수 있습니다 하지만 Windows Forms 컨트롤에 대 한 액세스 본질적으로 스레드로부터 안전 하지 않습니다. 다중 스레딩 코드 매우 심각 하 고 복잡 한 버그를 노출할 수 있습니다. 컨트롤을 조작 하는 두 개 이상의 스레드가 컨트롤 일관성 없는 상태로 강제 적용 하 고 경합, 교착 상태 및 중지 또는 중단을 발생 시킬 수 있습니다. 구현 하는 경우 다중 스레드 앱에서는 해야 스레드로부터 안전한 방식으로 크로스 스레드 컨트롤을 호출 합니다. 자세한 내용은 [관리 되는 모범 사례 스레딩](../../../../docs/standard/threading/managed-threading-best-practices.md)합니다. 
+다중 스레딩에는 Windows Forms 앱의 성능을 향상 시킬 수 있습니다 하지만 Windows Forms 컨트롤에 대 한 액세스 본질적으로 스레드로부터 안전 하지 않습니다. 다중 스레딩 코드 매우 심각 하 고 복잡 한 버그를 노출할 수 있습니다. 컨트롤을 조작 하는 두 개 이상의 스레드가 컨트롤 일관성 없는 상태로 강제 적용 하 고 경합, 교착 상태 및 중지 또는 중단을 발생 시킬 수 있습니다. 구현 하는 경우 다중 스레드 앱에서는 해야 스레드로부터 안전한 방식으로 크로스 스레드 컨트롤을 호출 합니다. 자세한 내용은 [관리 되는 모범 사례 스레딩](../../../standard/threading/managed-threading-best-practices.md)합니다. 
 
 안전 하 게 해당 컨트롤을 만들지 않은 스레드에서 Windows Forms 컨트롤을 호출 하는 방법은 두 가지입니다. 사용할 수는 <xref:System.Windows.Forms.Control.Invoke%2A?displayProperty=fullName> 생성에서 컨트롤을 호출 하는 주 스레드에서 대리자를 호출 하는 방법입니다. 구현할 수 있습니다 또는 <xref:System.ComponentModel.BackgroundWorker?displayProperty=nameWithType>, 결과 대 한 보고에서 백그라운드 스레드에서 수행 된 작업을 구분 하는 이벤트 구동 모델을 사용 하는 합니다. 
 
@@ -75,8 +75,8 @@ Visual Studio 디버거를 발생 시켜 이러한 안전 하지 않은 스레�
 
 합니다 `SafeCallDelegate` 설정을 사용 합니다 <xref:System.Windows.Forms.TextBox> 컨트롤의 <xref:System.Windows.Forms.TextBox.Text%2A> 속성입니다. 합니다 `WriteTextSafe` 메서드 쿼리 <xref:System.Windows.Forms.Control.InvokeRequired%2A>합니다. 경우 <xref:System.Windows.Forms.Control.InvokeRequired%2A> 반환 `true`, `WriteTextSafe` 전달 합니다 `SafeCallDelegate` 에 <xref:System.Windows.Forms.Control.Invoke%2A> 실제 컨트롤 호출 하는 방법입니다. 하는 경우 <xref:System.Windows.Forms.Control.InvokeRequired%2A> 반환 `false`를 `WriteTextSafe` 설정의 <xref:System.Windows.Forms.TextBox.Text%2A?displayProperty=nameWithType> 직접. 합니다 `Button1_Click` 이벤트 처리기가 새 스레드를 만들고 실행 합니다 `WriteTextSafe` 메서드. 
 
- [!code-csharp[ThreadSafeCalls#1](../../../../samples/snippets/winforms/thread-safe/example1/cs/Form1.cs)]
- [!code-vb[ThreadSafeCalls#1](../../../../samples/snippets/winforms/thread-safe/example1/vb/Form1.vb)]  
+ [!code-csharp[ThreadSafeCalls#1](~/samples/snippets/winforms/thread-safe/example1/cs/Form1.cs)]
+ [!code-vb[ThreadSafeCalls#1](~/samples/snippets/winforms/thread-safe/example1/vb/Form1.vb)]  
 
 ## <a name="example-use-a-backgroundworker-event-handler"></a>예제: BackgroundWorker 이벤트 처리기를 사용 하 여
 
@@ -86,12 +86,12 @@ Visual Studio 디버거를 발생 시켜 이러한 안전 하지 않은 스레�
 
 이 예제에서는 사용 합니다 <xref:System.ComponentModel.BackgroundWorker.RunWorkerCompleted> 이벤트 처리기를 설정 합니다 <xref:System.Windows.Forms.TextBox> 컨트롤의 <xref:System.Windows.Forms.TextBox.Text%2A> 속성. 사용 하는 예제는 <xref:System.ComponentModel.BackgroundWorker.ProgressChanged> 이벤트 참조 <xref:System.ComponentModel.BackgroundWorker>합니다. 
 
- [!code-csharp[ThreadSafeCalls#2](../../../../samples/snippets/winforms/thread-safe/example2/cs/Form1.cs)]
- [!code-vb[ThreadSafeCalls#2](../../../../samples/snippets/winforms/thread-safe/example2/vb/Form1.vb)]  
+ [!code-csharp[ThreadSafeCalls#2](~/samples/snippets/winforms/thread-safe/example2/cs/Form1.cs)]
+ [!code-vb[ThreadSafeCalls#2](~/samples/snippets/winforms/thread-safe/example2/vb/Form1.vb)]  
 
 ## <a name="see-also"></a>참고자료
 
 - <xref:System.ComponentModel.BackgroundWorker>
-- [방법: 백그라운드에서 작업 실행](../../../../docs/framework/winforms/controls/how-to-run-an-operation-in-the-background.md)
-- [방법: 백그라운드 작업을 사용 하는 폼 구현](../../../../docs/framework/winforms/controls/how-to-implement-a-form-that-uses-a-background-operation.md)
-- [.NET Framework를 사용 하 여 사용자 지정 Windows Forms 컨트롤 개발](../../../../docs/framework/winforms/controls/developing-custom-windows-forms-controls.md)
+- [방법: 백그라운드에서 작업 실행](how-to-run-an-operation-in-the-background.md)
+- [방법: 백그라운드 작업을 사용 하는 폼 구현](how-to-implement-a-form-that-uses-a-background-operation.md)
+- [.NET Framework를 사용 하 여 사용자 지정 Windows Forms 컨트롤 개발](developing-custom-windows-forms-controls.md)

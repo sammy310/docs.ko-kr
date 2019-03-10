@@ -8,12 +8,12 @@ helpviewer_keywords:
 - ActiveX controls [Windows Forms], COM interop
 - Windows Forms, interop
 ms.assetid: 87aac8ad-3c04-43b3-9b0c-d0b00df9ee74
-ms.openlocfilehash: 4ae48a824f69c417daa38fb4b5f88fc5d980c47b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 56ded3118d0961f38c77d3db4fc879eb241a7520
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54724384"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57715440"
 ---
 # <a name="how-to-support-com-interop-by-displaying-a-windows-form-with-the-showdialog-method"></a>방법: ShowDialog 메서드로 Windows Form을 표시 하 여 COM Interop 지원
 <xref:System.Windows.Forms.Application.Run%2A?displayProperty=nameWithType> 메서드를 사용하여 만드는 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 메시지 루프에 Windows Form에 표시하여 COM(구성 요소 개체 모델) 상호 운용성 문제를 해결할 수 있습니다.  
@@ -22,7 +22,7 @@ ms.locfileid: "54724384"
   
 -   <xref:System.Windows.Forms.Form.ShowDialog%2A?displayProperty=nameWithType> 메서드를 사용하여 Windows Form을 표시합니다.  
   
--   각 Windows Form을 별도 스레드에 표시합니다. 자세한 내용은 [방법: 각 Windows Form을 별개의 스레드에서 표시 하 여 COM Interop 지원](../../../../docs/framework/winforms/advanced/how-to-support-com-interop-by-displaying-each-windows-form-on-its-own-thread.md)합니다.  
+-   각 Windows Form을 별도 스레드에 표시합니다. 자세한 내용은 [방법: 각 Windows Form을 별개의 스레드에서 표시 하 여 COM Interop 지원](how-to-support-com-interop-by-displaying-each-windows-form-on-its-own-thread.md)합니다.  
   
 ## <a name="procedure"></a>프로시저  
  <xref:System.Windows.Forms.Form.ShowDialog%2A?displayProperty=nameWithType> 메서드를 사용하는 것이 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 메시지 루프에 폼을 표시하는 가장 쉬운 방법일 수 있습니다. 모든 방법 중에서 이 방법이 코드 구현을 가장 적게 요구하기 때문입니다.  
@@ -38,6 +38,6 @@ ms.locfileid: "54724384"
 -   <xref:System.Windows.Forms.Form.Show%2A?displayProperty=nameWithType> 메서드에 대한 모든 호출을 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 구성 요소의 <xref:System.Windows.Forms.Form.ShowDialog%2A?displayProperty=nameWithType> 메서드에 대한 호출로 바꿉니다.  
   
 ## <a name="see-also"></a>참고자료
-- [.NET Framework 구성 요소를 COM에 노출](../../../../docs/framework/interop/exposing-dotnet-components-to-com.md)
-- [방법: 각 Windows Form을 별개의 스레드에서 표시 하 여 COM Interop 지원](../../../../docs/framework/winforms/advanced/how-to-support-com-interop-by-displaying-each-windows-form-on-its-own-thread.md)
-- [Windows Forms 및 관리되지 않는 응용 프로그램](../../../../docs/framework/winforms/advanced/windows-forms-and-unmanaged-applications.md)
+- [.NET Framework 구성 요소를 COM에 노출](../../interop/exposing-dotnet-components-to-com.md)
+- [방법: 각 Windows Form을 별개의 스레드에서 표시 하 여 COM Interop 지원](how-to-support-com-interop-by-displaying-each-windows-form-on-its-own-thread.md)
+- [Windows Forms 및 관리되지 않는 응용 프로그램](windows-forms-and-unmanaged-applications.md)

@@ -12,12 +12,12 @@ helpviewer_keywords:
 - menu items [Windows Forms], hiding
 - hiding menu items
 ms.assetid: 418a768f-808a-44cd-8cef-f4e161883621
-ms.openlocfilehash: 73e49c96c20f145490a2d494177e21bc957605b8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a82df42240ae045f0d6f355f642acfb8082c87a5
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54727627"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57715258"
 ---
 # <a name="how-to-hide-toolstripmenuitems"></a>방법: ToolStripMenuItems 숨기기
 메뉴 항목 숨기기는 응용 프로그램의 사용자 인터페이스를 제어 하 고 사용자 명령을 제한 하는 방법입니다. 종종 전체 메뉴에 메뉴 항목을 모두 사용할 수 없는 경우 숨기려면 해야 합니다. 이 사용자에 대해 더 적은 방해 요소를 표시합니다. 또한 하려는 숨기고 메뉴 또는 메뉴 항목을 사용 하지 않도록 설정으로 숨기는 것 만으로도 사용자 바로 가기 키를 사용 하 여 메뉴 명령에 액세스 하는 것을 금지 하지 않습니다.  
@@ -41,5 +41,5 @@ ms.locfileid: "54727627"
 ## <a name="see-also"></a>참고자료
 - <xref:System.Windows.Forms.ToolStripItem.Visible%2A>
 - <xref:System.Windows.Forms.MenuStrip>
-- [MenuStrip 컨트롤 개요](../../../../docs/framework/winforms/controls/menustrip-control-overview-windows-forms.md)
-- [방법: ToolStripMenuItems 사용 안 함](../../../../docs/framework/winforms/controls/how-to-disable-toolstripmenuitems.md)
+- [MenuStrip 컨트롤 개요](menustrip-control-overview-windows-forms.md)
+- [방법: ToolStripMenuItems 사용 안 함](how-to-disable-toolstripmenuitems.md)

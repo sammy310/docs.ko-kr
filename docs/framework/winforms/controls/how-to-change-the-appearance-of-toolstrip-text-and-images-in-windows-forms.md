@@ -13,12 +13,12 @@ helpviewer_keywords:
 - ToolStrip control [Windows Forms], text
 - toolbars [Windows Forms], text
 ms.assetid: d62dc9d1-2edd-4dfa-aed7-1335d6e13d86
-ms.openlocfilehash: 05e44da390f3fe668890d8c093729cb0ebfd1642
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: cd15e581e646f53ed56af654917c7543bf18617e
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54631076"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57705404"
 ---
 # <a name="how-to-change-the-appearance-of-toolstrip-text-and-images-in-windows-forms"></a>방법: Windows Forms에서 ToolStrip 텍스트 및 이미지의 모양 변경
 텍스트 및 이미지에 표시 되는지 여부를 제어할 수 있습니다는 <xref:System.Windows.Forms.ToolStripItem> 서로 기준으로 정렬 되는 방법 및 및 <xref:System.Windows.Forms.ToolStrip>합니다.  
@@ -64,7 +64,7 @@ ms.locfileid: "54631076"
   
 ### <a name="to-define-how-toolstripitem-text-and-images-are-displayed-relative-to-each-other"></a>Toolstripitem을 가리키는 텍스트 및 이미지 서로 기준으로 표시 되는 방법을 정의 하려면  
   
--   설정 된 <xref:System.Windows.Forms.ToolStripItem.TextImageRelation%2A> 속성을 원하는 값입니다. 가능한 값으로는 `ImageAboveText`, `ImageBeforeText`, `Overlay`, `TextAboveImage` 및 `TextBeforeImage`가 있습니다. 기본값은 `ImageBeforeText`입니다.  
+-   설정 된 <xref:System.Windows.Forms.ToolStripItem.TextImageRelation%2A> 속성을 원하는 값입니다. 가능성은 `ImageAboveText`, `ImageBeforeText`를 `Overlay`합니다 `TextAboveImage`, 및 `TextBeforeImage`합니다. 기본값은 `ImageBeforeText`입니다.  
   
     ```vb  
     ToolStripButton1.TextImageRelation = _  
@@ -77,6 +77,6 @@ ms.locfileid: "54631076"
   
 ## <a name="see-also"></a>참고자료
 - <xref:System.Windows.Forms.ToolStrip>
-- [ToolStrip 컨트롤 개요](../../../../docs/framework/winforms/controls/toolstrip-control-overview-windows-forms.md)
-- [ToolStrip 컨트롤 아키텍처](../../../../docs/framework/winforms/controls/toolstrip-control-architecture.md)
-- [ToolStrip 기술 요약](../../../../docs/framework/winforms/controls/toolstrip-technology-summary.md)
+- [ToolStrip 컨트롤 개요](toolstrip-control-overview-windows-forms.md)
+- [ToolStrip 컨트롤 아키텍처](toolstrip-control-architecture.md)
+- [ToolStrip 기술 요약](toolstrip-technology-summary.md)

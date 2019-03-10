@@ -9,12 +9,12 @@ helpviewer_keywords:
 - controls [Windows Forms]
 - custom controls [Windows Forms]
 ms.assetid: fddbe951-4485-459d-a5fd-665ea346dbc1
-ms.openlocfilehash: 8ab1fa9ccbffc7ca9621e32e00455a9b75a91126
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e8ae5ec00ee488f0b7400bfa99483c4efc29e016
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54533090"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57703246"
 ---
 # <a name="overview-of-using-controls-in-windows-forms"></a>Windows Forms에서 컨트롤 사용 개요
 이 항목에서는 Windows Forms 응용 프로그램의 필수 요소에 설명 하 고 컨트롤을 사용 하 여 Windows Forms 응용 프로그램에서 이벤트를 처리 하는 간단한 예제를 제공 합니다.  
@@ -224,5 +224,5 @@ public class MyForm : Form {
 ```  
   
 ## <a name="see-also"></a>참고자료
-- [.NET Framework에서 사용자 지정 Windows Forms 컨트롤 개발](../../../../docs/framework/winforms/controls/developing-custom-windows-forms-controls.md)
-- [Windows Forms 컨트롤 개발 기본 사항](../../../../docs/framework/winforms/controls/windows-forms-control-development-basics.md)
+- [.NET Framework에서 사용자 지정 Windows Forms 컨트롤 개발](developing-custom-windows-forms-controls.md)
+- [Windows Forms 컨트롤 개발 기본 사항](windows-forms-control-development-basics.md)

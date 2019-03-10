@@ -6,12 +6,12 @@ helpviewer_keywords:
 - attributes [Windows Forms], application settings
 - wrapper classes [Windows Forms], application settings
 ms.assetid: 53caa66c-a9fb-43a5-953c-ad092590098d
-ms.openlocfilehash: a46f1fd14400995fef91c117502df24eae613fac
-ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
+ms.openlocfilehash: cfbaac8ad9a8576d076ed34059fb62e9e0a91ebc
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "56442557"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57714660"
 ---
 # <a name="application-settings-attributes"></a>애플리케이션 설정 특성
 응용 프로그램 설정 아키텍처는 응용 프로그램 설정 래퍼 클래스 또는 해당 개별 속성에 적용할 수 있는 여러 특성을 제공 합니다. 이러한 특성은 맞게 사용자 지정 래퍼 명시 된 요구 사항에 기능을 조절 하기 위해 종종 특별히 설정 공급자를 응용 프로그램 설정 인프라에서 런타임에 검사 합니다.  
@@ -40,5 +40,5 @@ ms.locfileid: "56442557"
 ## <a name="see-also"></a>참고자료
 - <xref:System.Configuration.ApplicationSettingsBase>
 - <xref:System.Configuration.SettingsProvider>
-- [응용 프로그램 설정 아키텍처](../../../../docs/framework/winforms/advanced/application-settings-architecture.md)
+- [응용 프로그램 설정 아키텍처](application-settings-architecture.md)
 - [방법: 응용 프로그램 설정 만들기](how-to-create-application-settings.md)

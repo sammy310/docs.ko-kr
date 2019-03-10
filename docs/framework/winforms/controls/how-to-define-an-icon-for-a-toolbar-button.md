@@ -13,18 +13,18 @@ helpviewer_keywords:
 - icons [Windows Forms], toolbar buttons
 - ToolBar control [Windows Forms], adding icons to buttons
 ms.assetid: 84db98b4-8566-49ce-b2c8-1fd66a5eb3a0
-ms.openlocfilehash: fa622245155a1e7bdeb0184b0cd5ff07f651bfbc
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fb4a492b081cd9f9e3ccc1d47a4120c705058dd0
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54644796"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57712749"
 ---
 # <a name="how-to-define-an-icon-for-a-toolbar-button"></a>방법: 도구 모음 단추의 아이콘 정의
 > [!NOTE]
 >  <xref:System.Windows.Forms.ToolStrip> 컨트롤은 <xref:System.Windows.Forms.ToolBar> 컨트롤을 대체하고 여기에 다른 기능을 추가하여 새로 도입된 컨트롤이지만 이전 버전과의 호환성 및 이후 사용 가능성을 고려하여 <xref:System.Windows.Forms.ToolBar> 컨트롤을 계속 유지하도록 선택할 수 있습니다.  
   
- <xref:System.Windows.Forms.ToolBar> 단추는 사용자가 쉽게 식별할 수 있도록 내에 아이콘을 표시할 수 있습니다. 추가 이미지를 통해 얻을 수는 [ImageList 구성 요소](../../../../docs/framework/winforms/controls/imagelist-component-windows-forms.md) 구성 요소와 연결 하는 방법의 <xref:System.Windows.Forms.ImageList> 구성 요소는 <xref:System.Windows.Forms.ToolBar> 컨트롤입니다.  
+ <xref:System.Windows.Forms.ToolBar> 단추는 사용자가 쉽게 식별할 수 있도록 내에 아이콘을 표시할 수 있습니다. 추가 이미지를 통해 얻을 수는 [ImageList 구성 요소](imagelist-component-windows-forms.md) 구성 요소와 연결 하는 방법의 <xref:System.Windows.Forms.ImageList> 구성 요소는 <xref:System.Windows.Forms.ToolBar> 컨트롤입니다.  
   
 ### <a name="to-set-an-icon-for-a-toolbar-button-programmatically"></a>도구 모음 단추의 아이콘을 프로그래밍 방식으로 설정 하려면  
   
@@ -117,6 +117,6 @@ ms.locfileid: "54644796"
   
 ## <a name="see-also"></a>참고자료
 - <xref:System.Windows.Forms.ToolBar>
-- [방법: Toolbar 단추의 메뉴 이벤트 트리거](../../../../docs/framework/winforms/controls/how-to-trigger-menu-events-for-toolbar-buttons.md)
-- [ToolBar 컨트롤](../../../../docs/framework/winforms/controls/toolbar-control-windows-forms.md)
-- [ImageList 구성 요소](../../../../docs/framework/winforms/controls/imagelist-component-windows-forms.md)
+- [방법: Toolbar 단추의 메뉴 이벤트 트리거](how-to-trigger-menu-events-for-toolbar-buttons.md)
+- [ToolBar 컨트롤](toolbar-control-windows-forms.md)
+- [ImageList 구성 요소](imagelist-component-windows-forms.md)

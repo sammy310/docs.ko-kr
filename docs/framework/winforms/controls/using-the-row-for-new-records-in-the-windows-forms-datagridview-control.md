@@ -6,12 +6,12 @@ helpviewer_keywords:
 - rows [Windows Forms], new records
 - DataGridView control [Windows Forms], data entry
 ms.assetid: 6110f1ea-9794-442c-a98a-f104a1feeaf4
-ms.openlocfilehash: 86e61afd0882fea9015cdfe3b40e6d3cd329391b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 041738ba375022be7c80526f25e5761314dffbf1
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54734960"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57703922"
 ---
 # <a name="using-the-row-for-new-records-in-the-windows-forms-datagridview-control"></a>Windows Forms DataGridView 컨트롤에서 새 레코드에 행 사용
 사용 하는 경우는 <xref:System.Windows.Forms.DataGridView> 응용 프로그램에서 데이터 편집을 위해 종종 하려는 사용자에 게 데이터 저장소에 새 데이터 행을 추가 하는 기능을 제공 합니다. <xref:System.Windows.Forms.DataGridView> 컨트롤은 항상 마지막 행으로 표시 된 새 레코드에 대 한 행을 제공 하 여이 기능을 지원 합니다. 행 헤더에 별표 (*) 기호로 표시 됩니다. 다음 섹션에서는 설명 하는 몇 가지 새 레코드에 대 한 행을 사용 하 여 프로그램 사용 하도록 설정 하는 것이 좋습니다.  
@@ -24,7 +24,7 @@ ms.locfileid: "54734960"
 ## <a name="populating-the-row-for-new-records-with-default-data"></a>기본 데이터를 사용 하 여 새 레코드에 대 한 행을 채우는  
  사용자가 현재 행으로 새 레코드에 대 한 행을 선택 합니다 <xref:System.Windows.Forms.DataGridView> 를 발생 시킵니다는 <xref:System.Windows.Forms.DataGridView.DefaultValuesNeeded> 이벤트입니다.  
   
- 이 이벤트는 새에 대 한 액세스를 제공 <xref:System.Windows.Forms.DataGridViewRow> 기본 데이터를 사용 하 여 새 행을 채울 수 있습니다. 자세한 내용은 [방법: Windows Forms DataGridView 컨트롤에서 새 행에 기본값을 지정 합니다.](../../../../docs/framework/winforms/controls/specify-default-values-for-new-rows-in-the-datagrid.md)  
+ 이 이벤트는 새에 대 한 액세스를 제공 <xref:System.Windows.Forms.DataGridViewRow> 기본 데이터를 사용 하 여 새 행을 채울 수 있습니다. 자세한 내용은 [방법: Windows Forms DataGridView 컨트롤에서 새 행에 기본값을 지정 합니다.](specify-default-values-for-new-rows-in-the-datagrid.md)  
   
 ## <a name="the-rows-collection"></a>행 컬렉션  
  새 레코드에 대 한 행에 포함 된 <xref:System.Windows.Forms.DataGridView> 컨트롤의 <xref:System.Windows.Forms.DataGridView.Rows%2A> 컬렉션 두 가지 측면에서 다르게 하지만 동작:  
@@ -34,7 +34,7 @@ ms.locfileid: "54734960"
 -   새 레코드의 행을 한 후 행을 추가할 수 있습니다. <xref:System.InvalidOperationException> 이 시도 하는 경우 발생 합니다. 결과적으로, 새 레코드에 대 한 행은 항상 마지막 행에는 <xref:System.Windows.Forms.DataGridView> 제어 합니다. 메서드에 <xref:System.Windows.Forms.DataGridViewRowCollection> 행을 추가 하는-<xref:System.Windows.Forms.DataGridViewRowCollection.Add%2A>를 <xref:System.Windows.Forms.DataGridViewRowCollection.AddCopy%2A>, 및 <xref:System.Windows.Forms.DataGridViewRowCollection.AddCopies%2A>-모든 메서드를 호출 삽입 내부적으로 새 레코드에 대 한 행이 있는 경우.  
   
 ## <a name="visual-customization-of-the-row-for-new-records"></a>새 레코드에 대 한 행의 시각적 사용자 지정  
- 새 레코드에 대 한 행 만들어질 때 지정 된 행에 기반을 <xref:System.Windows.Forms.DataGridView.RowTemplate%2A> 속성입니다. 이 행에 대해 지정 되지 않은 모든 셀 스타일은 다른 속성에서 상속 됩니다. 셀 스타일 상속에 대 한 자세한 내용은 참조 하세요. [Windows Forms DataGridView 컨트롤의 셀 스타일](../../../../docs/framework/winforms/controls/cell-styles-in-the-windows-forms-datagridview-control.md)합니다.  
+ 새 레코드에 대 한 행 만들어질 때 지정 된 행에 기반을 <xref:System.Windows.Forms.DataGridView.RowTemplate%2A> 속성입니다. 이 행에 대해 지정 되지 않은 모든 셀 스타일은 다른 속성에서 상속 됩니다. 셀 스타일 상속에 대 한 자세한 내용은 참조 하세요. [Windows Forms DataGridView 컨트롤의 셀 스타일](cell-styles-in-the-windows-forms-datagridview-control.md)합니다.  
   
  각 셀에서 새 레코드를 검색에 대 한 행의 셀에서 표시 되는 초기 값 <xref:System.Windows.Forms.DataGridViewCell.DefaultNewRowValue%2A> 속성입니다. 셀 형식에 대 한 <xref:System.Windows.Forms.DataGridViewImageCell>,이 속성에는 자리 표시자 이미지를 반환 합니다. 그렇지 않은 경우 `null`을 반환합니다. 사용자 지정 값을 반환 하도록이 속성을 재정의할 수 있습니다. 하지만 이러한 초기 값으로 바꿀 수 있습니다는 <xref:System.Windows.Forms.DataGridView.DefaultValuesNeeded> 새 레코드에 대 한 행으로 포커스가 이벤트 처리기입니다.  
   
@@ -55,10 +55,10 @@ ms.locfileid: "54734960"
  새 레코드의 행을 선택 하지 않은 상태에서 항상 만들어집니다.  
   
 ## <a name="virtual-mode"></a>가상 모드  
- 가상 모드 구현 하는 경우에 행의 추가 롤백할 시점 및 데이터 모델에 새 레코드에 대 한 행을 필요로 하는 시기를 추적 해야 합니다. 이 기능은 구현에 따라 달라 집니다 데이터 모델 및 해당 트랜잭션 의미 체계를 구현 예를 들어, 셀 또는 행 수준에서 커밋 범위 인지 합니다. 자세한 내용은 [Windows Forms DataGridView 컨트롤에서 가상 모드](../../../../docs/framework/winforms/controls/virtual-mode-in-the-windows-forms-datagridview-control.md)합니다.  
+ 가상 모드 구현 하는 경우에 행의 추가 롤백할 시점 및 데이터 모델에 새 레코드에 대 한 행을 필요로 하는 시기를 추적 해야 합니다. 이 기능은 구현에 따라 달라 집니다 데이터 모델 및 해당 트랜잭션 의미 체계를 구현 예를 들어, 셀 또는 행 수준에서 커밋 범위 인지 합니다. 자세한 내용은 [Windows Forms DataGridView 컨트롤에서 가상 모드](virtual-mode-in-the-windows-forms-datagridview-control.md)합니다.  
   
 ## <a name="see-also"></a>참고자료
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridView.DefaultValuesNeeded?displayProperty=nameWithType>
-- [Windows Forms DataGridView 컨트롤의 데이터 입력](../../../../docs/framework/winforms/controls/data-entry-in-the-windows-forms-datagridview-control.md)
-- [방법: Windows Forms DataGridView 컨트롤에서 새 행에 기본값을 지정 합니다.](../../../../docs/framework/winforms/controls/specify-default-values-for-new-rows-in-the-datagrid.md)
+- [Windows Forms DataGridView 컨트롤의 데이터 입력](data-entry-in-the-windows-forms-datagridview-control.md)
+- [방법: Windows Forms DataGridView 컨트롤에서 새 행에 기본값을 지정 합니다.](specify-default-values-for-new-rows-in-the-datagrid.md)

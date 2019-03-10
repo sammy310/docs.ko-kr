@@ -7,15 +7,15 @@ helpviewer_keywords:
 - composite controls [Windows Forms], Windows Forms
 - controls [Windows Forms], composite
 ms.assetid: d086f2a3-baa3-4e09-b40c-a5bb3cfc51a6
-ms.openlocfilehash: 1d2c6419e19aee73717bed6cfc17782d2a3f5a4a
-ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
+ms.openlocfilehash: 3b829b1eea68eed7ff8ded80496620af628d3510
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "56442744"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57707363"
 ---
 # <a name="developing-a-composite-windows-forms-control"></a>Windows Forms 복합 컨트롤 개발
-다른 Windows Forms 컨트롤을 결합하여 복합 Windows Forms 컨트롤을 개발할 수 있습니다. 파생 된 복합 컨트롤 <xref:System.Web.UI.UserControl> 사용자 컨트롤 이라고 합니다. 기본 클래스 <xref:System.Windows.Forms.UserControl>은 자식 컨트롤에 대한 키보드 라우팅을 제공하므로 자식 컨트롤이 포커스를 받을 수 있습니다. 사용자 정의 컨트롤의 예제를 참조 합니다 <xref:System.Windows.Forms.UserControl> 샘플 [방법: Windows Forms 컨트롤에서 특성 적용](../../../../docs/framework/winforms/controls/how-to-apply-attributes-in-windows-forms-controls.md)합니다.  
+다른 Windows Forms 컨트롤을 결합하여 복합 Windows Forms 컨트롤을 개발할 수 있습니다. 파생 된 복합 컨트롤 <xref:System.Web.UI.UserControl> 사용자 컨트롤 이라고 합니다. 기본 클래스 <xref:System.Windows.Forms.UserControl>은 자식 컨트롤에 대한 키보드 라우팅을 제공하므로 자식 컨트롤이 포커스를 받을 수 있습니다. 사용자 정의 컨트롤의 예제를 참조 합니다 <xref:System.Windows.Forms.UserControl> 샘플 [방법: Windows Forms 컨트롤에서 특성 적용](how-to-apply-attributes-in-windows-forms-controls.md)합니다.  
   
  Visual Studio에서 Windows Forms 디자이너는 사용자 컨트롤 작성에 대 한 다양 한 디자인 타임 지원을 제공 합니다.  
   
@@ -54,6 +54,6 @@ ms.locfileid: "56442744"
 -   [방법: 디자인 타임 기능을 활용 하는 Windows Forms 컨트롤 만들기](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/307hck25(v=vs.120))  
   
 ## <a name="see-also"></a>참고자료
-- [방법: Windows Forms 컨트롤에서 특성 적용](../../../../docs/framework/winforms/controls/how-to-apply-attributes-in-windows-forms-controls.md)
-- [.NET Framework에서 사용자 지정 Windows Forms 컨트롤 개발](../../../../docs/framework/winforms/controls/developing-custom-windows-forms-controls.md)
-- [사용자 지정 컨트롤의 종류](../../../../docs/framework/winforms/controls/varieties-of-custom-controls.md)
+- [방법: Windows Forms 컨트롤에서 특성 적용](how-to-apply-attributes-in-windows-forms-controls.md)
+- [.NET Framework에서 사용자 지정 Windows Forms 컨트롤 개발](developing-custom-windows-forms-controls.md)
+- [사용자 지정 컨트롤의 종류](varieties-of-custom-controls.md)

@@ -6,19 +6,19 @@ helpviewer_keywords:
 - grouping
 - groups [Windows Forms], in Windows Forms controls
 ms.assetid: 8b615000-69d9-4c64-acaf-b54fa09b69e3
-ms.openlocfilehash: 964f2130c650d486bf8a20af96b74122b1450e05
-ms.sourcegitcommit: bef803e2025642df39f2f1e046767d89031e0304
+ms.openlocfilehash: 4c3e20ad7a09cc21e6c1d2a6d8fbbc47d11c903d
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56304429"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57703558"
 ---
 # <a name="how-to-group-items-in-a-windows-forms-listview-control-using-the-designer"></a>방법: 디자이너를 사용 하 여 Windows Forms ListView 컨트롤에서 항목 그룹화
 그룹화 기능을 <xref:System.Windows.Forms.ListView> 컨트롤을 사용 하면 그룹의 관련된 항목 집합을 표시할 수 있습니다. 이러한 그룹은 화면에서 그룹 제목을 포함 하는 행 그룹 머리글에 의해 구분 됩니다. 사용할 수 있습니다 <xref:System.Windows.Forms.ListView> 그룹 날짜 또는 기타 논리 그룹으로 항목을 사전순으로 그룹화 하 여 보다 쉽게 긴 목록 이동 되도록 합니다. 다음 이미지에서는 일부 그룹화 된 항목을 보여 줍니다.  
   
- ![ListView 그룹](../../../../docs/framework/winforms/controls/media/listviewgroups.gif "ListViewGroups")  
+ ![ListView 그룹](./media/listviewgroups.gif "ListViewGroups")  
   
- 다음 절차를 수행 하려면을 **Windows 응용 프로그램** 포함 하는 양식을 사용 하 여 프로젝트를 <xref:System.Windows.Forms.ListView> 제어 합니다. 이러한 프로젝트 설정에 대 한 자세한 내용은 [방법: Windows Forms 응용 프로그램 프로젝트를 만듭니다](/visualstudio/ide/step-1-create-a-windows-forms-application-project) 고 [방법: Windows Forms에 컨트롤 추가](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md)합니다.  
+ 다음 절차를 수행 하려면을 **Windows 응용 프로그램** 포함 하는 양식을 사용 하 여 프로젝트를 <xref:System.Windows.Forms.ListView> 제어 합니다. 이러한 프로젝트 설정에 대 한 자세한 내용은 [방법: Windows Forms 응용 프로그램 프로젝트를 만듭니다](/visualstudio/ide/step-1-create-a-windows-forms-application-project) 고 [방법: Windows Forms에 컨트롤 추가](how-to-add-controls-to-windows-forms.md)합니다.  
   
  그룹화를 사용 하려면 먼저 만들어야 이상의 <xref:System.Windows.Forms.ListViewGroup> 디자이너에서 또는 프로그래밍 방식으로 개체입니다. 그룹을 정의한 후에 항목을 할당할 수 있습니다.  
   
@@ -29,7 +29,7 @@ ms.locfileid: "56304429"
   
 ### <a name="to-add-or-remove-groups-in-the-designer"></a>추가 하거나 디자이너에서 그룹을 제거 하려면  
   
-1.  에 **속성** 창에서 클릭 합니다 **줄임표** (![VisualStudioEllipsesButton 스크린 샷](../../../../docs/framework/winforms/media/vbellipsesbutton.png "vbEllipsesButton")) 단추 옆에 <xref:System.Windows.Forms.ListView.Groups%2A> 속성입니다.  
+1.  에 **속성** 창에서 클릭 합니다 **줄임표** (![VisualStudioEllipsesButton 스크린 샷](../media/vbellipsesbutton.png "vbEllipsesButton")) 단추 옆에 <xref:System.Windows.Forms.ListView.Groups%2A> 속성입니다.  
   
      합니다 **ListViewGroup 컬렉션 편집기** 나타납니다.  
   
@@ -37,7 +37,7 @@ ms.locfileid: "56304429"
   
 ### <a name="to-assign-items-to-groups-in-the-designer"></a>디자이너에서 그룹에 항목을 할당 하려면  
   
-1.  에 **속성** 창에서 클릭 합니다 **줄임표** (![VisualStudioEllipsesButton 스크린 샷](../../../../docs/framework/winforms/media/vbellipsesbutton.png "vbEllipsesButton")) 단추 옆에 <xref:System.Windows.Forms.ListView.Items%2A> 속성입니다.  
+1.  에 **속성** 창에서 클릭 합니다 **줄임표** (![VisualStudioEllipsesButton 스크린 샷](../media/vbellipsesbutton.png "vbEllipsesButton")) 단추 옆에 <xref:System.Windows.Forms.ListView.Items%2A> 속성입니다.  
   
      합니다 **ListViewItem 컬렉션 편집기** 나타납니다.  
   
@@ -49,6 +49,6 @@ ms.locfileid: "56304429"
 - <xref:System.Windows.Forms.ListView>
 - <xref:System.Windows.Forms.ListView.Groups%2A>
 - <xref:System.Windows.Forms.ListViewGroup>
-- [ListView 컨트롤](../../../../docs/framework/winforms/controls/listview-control-windows-forms.md)
-- [ListView 컨트롤 개요](../../../../docs/framework/winforms/controls/listview-control-overview-windows-forms.md)
-- [방법: Windows Forms ListView 컨트롤을 사용 하 여 항목 추가 및 제거](../../../../docs/framework/winforms/controls/how-to-add-and-remove-items-with-the-windows-forms-listview-control.md)
+- [ListView 컨트롤](listview-control-windows-forms.md)
+- [ListView 컨트롤 개요](listview-control-overview-windows-forms.md)
+- [방법: Windows Forms ListView 컨트롤을 사용 하 여 항목 추가 및 제거](how-to-add-and-remove-items-with-the-windows-forms-listview-control.md)

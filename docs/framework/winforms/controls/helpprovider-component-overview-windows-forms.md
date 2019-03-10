@@ -10,15 +10,15 @@ helpviewer_keywords:
 - dialog boxes [Windows Forms], context-sensitive Help
 - Windows Forms, context-sensitive Help
 ms.assetid: 6b10c2cc-c577-4cb5-9669-e37b33416af9
-ms.openlocfilehash: 5fc447e00ca46f251a895f0de82118a11310a8d9
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: f9cf0c165c6c64186eff53676c8b1b06f74361fc
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56972653"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57708381"
 ---
 # <a name="helpprovider-component-overview-windows-forms"></a>HelpProvider 구성 요소 개요(Windows Forms)
-Windows Forms [HelpProvider](../../../../docs/framework/winforms/controls/helpprovider-component-windows-forms.md) 구성 요소는 Windows 응용 프로그램을 사용 하 여 HTML 도움말 1.x 도움말 파일 (HTML Help Workshop으로 생성 된.chm 파일 또는.htm 파일)를 연결할 때 사용 됩니다. 다양 한 방법에에서 대 한 도움말을 제공할 수 있습니다.  
+Windows Forms [HelpProvider](helpprovider-component-windows-forms.md) 구성 요소는 Windows 응용 프로그램을 사용 하 여 HTML 도움말 1.x 도움말 파일 (HTML Help Workshop으로 생성 된.chm 파일 또는.htm 파일)를 연결할 때 사용 됩니다. 다양 한 방법에에서 대 한 도움말을 제공할 수 있습니다.  
   
 -   Windows Forms에서 컨트롤에 대 한 상황에 맞는 도움말을 제공 합니다.  
   
@@ -37,4 +37,4 @@ Windows Forms [HelpProvider](../../../../docs/framework/winforms/controls/helppr
 >  도움말 파일의 경로를 지정 하는 경우에 상대 경로 사용 하 여 문제를 발생할 수 있습니다는 <xref:System.Windows.Forms.Help.ShowHelp%2A> 메서드 또는 <xref:System.Windows.Forms.HelpProvider.HelpNamespace%2A> 의 속성을 <xref:System.Windows.Forms.HelpProvider> 컨트롤입니다. 이와 같이 절대 파일 경로 사용 하 여 도움말 파일을 지정 해야 합니다.  
   
 ## <a name="see-also"></a>참고자료
-- [Windows Forms 응용 프로그램의 도움말 시스템](../../../../docs/framework/winforms/advanced/help-systems-in-windows-forms-applications.md)
+- [Windows Forms 응용 프로그램의 도움말 시스템](../advanced/help-systems-in-windows-forms-applications.md)

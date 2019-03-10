@@ -12,12 +12,12 @@ helpviewer_keywords:
 - mouse clicks [Windows Forms], simulating
 - mouse [Windows Forms], event simulation
 ms.assetid: 6abcb67e-3766-4af2-9590-bf5dabd17e41
-ms.openlocfilehash: 43641b89ae405caf9807b00b4b3c84f25c4e5e67
-ms.sourcegitcommit: 0069cb3de8eed4e92b2195d29e5769a76111acdd
+ms.openlocfilehash: bb51cd5ac3c4961381ceff89054d79dc52531627
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/16/2019
-ms.locfileid: "56332197"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57713763"
 ---
 # <a name="how-to-simulate-mouse-and-keyboard-events-in-code"></a>방법: 마우스 및 코드에서 키보드 이벤트 시뮬레이션
 Windows Forms는 프로그래밍 방식으로 마우스 및 키보드 입력을 시뮬레이션하기 위한 여러 가지 옵션을 제공합니다. 이 항목에서는 이러한 옵션에 대해 간략하게 설명합니다.  
@@ -31,7 +31,7 @@ Windows Forms는 프로그래밍 방식으로 마우스 및 키보드 입력을 
   
 2.  이 <xref:System.Windows.Forms.Control.OnMouseClick%2A> 를 인수로 사용하여 <xref:System.Windows.Forms.MouseEventArgs> 메서드를 호출합니다.  
   
- 사용자 지정 컨트롤에 대한 자세한 내용은 [디자인 타임에 Windows Forms 컨트롤 개발](../../../docs/framework/winforms/controls/developing-windows-forms-controls-at-design-time.md)을 참조하세요.  
+ 사용자 지정 컨트롤에 대한 자세한 내용은 [디자인 타임에 Windows Forms 컨트롤 개발](./controls/developing-windows-forms-controls-at-design-time.md)을 참조하세요.  
   
  마우스 입력을 시뮬레이션하는 다른 방법이 있습니다. 예를 들어 일반적으로 마우스 입력을 통해 설정되는 상태를 나타내는 컨트롤 속성(예: <xref:System.Windows.Forms.CheckBox.Checked%2A> 컨트롤의 <xref:System.Windows.Forms.CheckBox> 속성)을 프로그래밍 방식으로 설정하거나 시뮬레이션하려는 이벤트에 연결된 대리자를 직접 호출할 수 있습니다.  
   
@@ -60,9 +60,9 @@ Windows Forms는 프로그래밍 방식으로 마우스 및 키보드 입력을 
   
 1.  <xref:System.Windows.Forms.SendKeys.Send%2A> 클래스의 <xref:System.Windows.Forms.SendKeys.SendWait%2A> 또는 <xref:System.Windows.Forms.SendKeys> 메서드를 호출합니다. 애플리케이션의 활성 컨트롤이 지정된 키 입력을 받습니다. 다음 코드 예제에서는 <xref:System.Windows.Forms.SendKeys.Send%2A> 를 사용하여 사용자가 폼의 화면을 두 번 클릭할 때 Enter 키 누름을 시뮬레이션합니다. 이 예제에서는 탭 인덱스가 0인 단일 <xref:System.Windows.Forms.Form> 컨트롤이 있는 <xref:System.Windows.Forms.Button> 을 가정합니다.  
   
-     [!code-cpp[System.Windows.Forms.SimulateKeyPress#10](../../../samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.SimulateKeyPress/cpp/form1.cpp#10)]
-     [!code-csharp[System.Windows.Forms.SimulateKeyPress#10](../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.SimulateKeyPress/CS/form1.cs#10)]
-     [!code-vb[System.Windows.Forms.SimulateKeyPress#10](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.SimulateKeyPress/VB/form1.vb#10)]  
+     [!code-cpp[System.Windows.Forms.SimulateKeyPress#10](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.SimulateKeyPress/cpp/form1.cpp#10)]
+     [!code-csharp[System.Windows.Forms.SimulateKeyPress#10](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.SimulateKeyPress/CS/form1.cs#10)]
+     [!code-vb[System.Windows.Forms.SimulateKeyPress#10](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.SimulateKeyPress/VB/form1.vb#10)]  
   
 #### <a name="to-send-a-keystroke-to-a-different-application"></a>다른 애플리케이션에 키 입력을 보내려면  
   
@@ -71,16 +71,16 @@ Windows Forms는 프로그래밍 방식으로 마우스 및 키보드 입력을 
     > [!NOTE]
     >  계산기 애플리케이션을 찾는 `FindWindow` 호출의 올바른 매개 변수는 Windows 버전에 따라 달라집니다.  다음 코드에서는 [!INCLUDE[win7](../../../includes/win7-md.md)]에서 계산기 애플리케이션을 찾습니다. [!INCLUDE[windowsver](../../../includes/windowsver-md.md)]에서 첫 번째 매개 변수를 "SciCalc"로 변경합니다. Visual Studio에 포함된 Spy++ 도구를 사용하여 올바른 매개 변수를 확인할 수 있습니다.  
   
-     [!code-cpp[System.Windows.Forms.SimulateKeyPress#5](../../../samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.SimulateKeyPress/cpp/form1.cpp#5)]
-     [!code-csharp[System.Windows.Forms.SimulateKeyPress#5](../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.SimulateKeyPress/CS/form1.cs#5)]
-     [!code-vb[System.Windows.Forms.SimulateKeyPress#5](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.SimulateKeyPress/VB/form1.vb#5)]  
+     [!code-cpp[System.Windows.Forms.SimulateKeyPress#5](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.SimulateKeyPress/cpp/form1.cpp#5)]
+     [!code-csharp[System.Windows.Forms.SimulateKeyPress#5](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.SimulateKeyPress/CS/form1.cs#5)]
+     [!code-vb[System.Windows.Forms.SimulateKeyPress#5](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.SimulateKeyPress/VB/form1.vb#5)]  
   
 ## <a name="example"></a>예제  
  다음 코드 예제는 이전 코드 예제에 대한 전체 애플리케이션입니다.  
   
- [!code-cpp[System.Windows.Forms.SimulateKeyPress#0](../../../samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.SimulateKeyPress/cpp/form1.cpp#0)]
- [!code-csharp[System.Windows.Forms.SimulateKeyPress#0](../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.SimulateKeyPress/CS/form1.cs#0)]
- [!code-vb[System.Windows.Forms.SimulateKeyPress#0](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.SimulateKeyPress/VB/form1.vb#0)]  
+ [!code-cpp[System.Windows.Forms.SimulateKeyPress#0](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.SimulateKeyPress/cpp/form1.cpp#0)]
+ [!code-csharp[System.Windows.Forms.SimulateKeyPress#0](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.SimulateKeyPress/CS/form1.cs#0)]
+ [!code-vb[System.Windows.Forms.SimulateKeyPress#0](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.SimulateKeyPress/VB/form1.vb#0)]  
   
 ## <a name="compiling-the-code"></a>코드 컴파일  
  이 예제에는 다음 사항이 필요합니다.  
@@ -90,4 +90,4 @@ Windows Forms는 프로그래밍 방식으로 마우스 및 키보드 입력을 
  Visual Basic 또는 Visual C#에 대 한 명령줄에서이 예제를 빌드하는 방법에 대 한 내용은 [명령줄에서 빌드](../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) 하거나 [csc.exe를 사용한 명령줄 빌드](../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)합니다. 또한 새 프로젝트에 코드를 붙여 넣어 Visual Studio에서이 예제를 빌드할 수 있습니다.  
   
 ## <a name="see-also"></a>참고자료
-- [Windows Forms에 사용자 입력](../../../docs/framework/winforms/user-input-in-windows-forms.md)
+- [Windows Forms에 사용자 입력](user-input-in-windows-forms.md)

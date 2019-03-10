@@ -8,12 +8,12 @@ helpviewer_keywords:
 - thumbnail images [Windows Forms], creating
 - images [Windows Forms], creating thumbnails
 ms.assetid: e956242a-1e5b-4217-a3cf-5f3fb45d00ba
-ms.openlocfilehash: fd5e0b5341a712f25f9d41670f9b3ede5414dda4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3ed1fb6a9a7fc8e7ded6ae0e124ca7dcbf0f3c98
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54497044"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57716961"
 ---
 # <a name="how-to-create-thumbnail-images"></a>방법: 축소판 이미지 만들기
 축소판 그림 이미지를 이미지의 작은 버전이 있습니다. 호출 하 여 썸네일 이미지를 만들 수 있습니다 합니다 <xref:System.Drawing.Image.GetThumbnailImage%2A> 메서드는 <xref:System.Drawing.Image> 개체입니다.  
@@ -23,13 +23,13 @@ ms.locfileid: "54497044"
   
  다음 그림에서는 미리 보기 이미지를 보여 줍니다.  
   
- ![축소판 그림 이미지](../../../../docs/framework/winforms/advanced/media/thumbnail1.png "Thumbnail1")  
+ ![축소판 그림 이미지](./media/thumbnail1.png "Thumbnail1")  
   
 > [!NOTE]
 >  이 예제에서는 콜백 메서드를 선언 되었지만 사용 되지 않습니다. 이 GDI +의 모든 버전을 지원합니다.  
   
- [!code-csharp[System.Drawing.WorkingWithImages#71](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.WorkingWithImages/CS/Class1.cs#71)]
- [!code-vb[System.Drawing.WorkingWithImages#71](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.WorkingWithImages/VB/Class1.vb#71)]  
+ [!code-csharp[System.Drawing.WorkingWithImages#71](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.WorkingWithImages/CS/Class1.cs#71)]
+ [!code-vb[System.Drawing.WorkingWithImages#71](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.WorkingWithImages/VB/Class1.vb#71)]  
   
 ## <a name="compiling-the-code"></a>코드 컴파일  
  앞의 예제는 Windows forms에서 사용하도록 설계되었으며 <xref:System.Windows.Forms.Control.Paint> 이벤트 처리기의 매개 변수인 <xref:System.Windows.Forms.PaintEventArgs> `e`가 필요합니다. 예제를 실행 하려면 다음이 단계를 수행 합니다.  
@@ -51,5 +51,5 @@ ms.locfileid: "54497044"
      100 여 100 축소판 그림 이미지를 폼에 표시 됩니다.  
   
 ## <a name="see-also"></a>참고자료
-- [이미지, 비트맵 및 메타파일](../../../../docs/framework/winforms/advanced/images-bitmaps-and-metafiles.md)
-- [이미지, 비트맵, 아이콘 및 메타파일 사용](../../../../docs/framework/winforms/advanced/working-with-images-bitmaps-icons-and-metafiles.md)
+- [이미지, 비트맵 및 메타파일](images-bitmaps-and-metafiles.md)
+- [이미지, 비트맵, 아이콘 및 메타파일 사용](working-with-images-bitmaps-icons-and-metafiles.md)

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - application settings [Windows Forms], design time
 - application settings [Windows Forms], creating
 ms.assetid: c5d60a66-6507-462f-a81f-e3bc0a804e16
-ms.openlocfilehash: c936adb6d4d80032b862994c21178a505da6789b
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 54f64de8cdd47b7fd451d266cca3b7577e9e1d78
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56964255"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57702778"
 ---
 # <a name="how-to-create-a-new-setting-at-design-time"></a>방법: 디자인 타임에 새 설정 만들기
 설정 디자이너를 사용 하 여 디자인 타임에 새 설정을 만들 수 있습니다. 설정 디자이너에 새 설정 만들기 및 해당 설정에 대 한 속성을 지정할 수 있는 모눈 스타일 인터페이스입니다. 이름, 값, 형식 및 새로운 설정에 대 한 범위를 지정 해야 합니다. 설정의 만든 후 코드에서 액세스할 수 있는 것입니다.  
@@ -32,6 +32,6 @@ ms.locfileid: "56964255"
 3.  설정 디자이너에서 이름, 값, 형식 및 설정에 대 한 범위를 설정 합니다. 각 행에는 단일 설정을 나타냅니다.  
   
 ## <a name="see-also"></a>참고자료
-- [응용 프로그램 설정 및 사용자 설정 사용](../../../../docs/framework/winforms/advanced/using-application-settings-and-user-settings.md)
-- [응용 프로그램 설정 개요](../../../../docs/framework/winforms/advanced/application-settings-overview.md)
-- [방법: 디자인 타임에 기존 설정 값 변경](../../../../docs/framework/winforms/advanced/how-to-change-the-value-of-an-existing-setting-at-design-time.md)
+- [응용 프로그램 설정 및 사용자 설정 사용](using-application-settings-and-user-settings.md)
+- [응용 프로그램 설정 개요](application-settings-overview.md)
+- [방법: 디자인 타임에 기존 설정 값 변경](how-to-change-the-value-of-an-existing-setting-at-design-time.md)

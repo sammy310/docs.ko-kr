@@ -11,12 +11,12 @@ helpviewer_keywords:
 - TextBox control [Windows Forms], viewing multiple lines
 - carriage return
 ms.assetid: 43173201-0b74-4067-a472-605029ca5f35
-ms.openlocfilehash: 11047b9308905b153662c5449abeeae8c23af26c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d80a0262455b9b5e0e8535d88eb6292ab60e3ea8
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54565633"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57716012"
 ---
 # <a name="how-to-view-multiple-lines-in-the-windows-forms-textbox-control"></a>방법: Windows Forms TextBox 컨트롤에서 여러 줄 보기
 기본적으로 Windows Forms <xref:System.Windows.Forms.TextBox> 컨트롤을 한 줄 텍스트를 표시 하 고 스크롤 막대를 표시 하지 않습니다. 텍스트가 사용 가능한 공간 보다 긴 경우 텍스트의 일부만 표시 됩니다. 설정 하 여이 기본 동작을 변경할 수는 <xref:System.Windows.Forms.TextBox.Multiline%2A>, <xref:System.Windows.Forms.TextBoxBase.WordWrap%2A>, 및 <xref:System.Windows.Forms.TextBox.ScrollBars%2A> 속성을 적절 한 값입니다.  
@@ -31,7 +31,8 @@ ms.locfileid: "54565633"
   
 1.  <xref:System.Windows.Forms.TextBox.Multiline%2A> 속성을 `true`으로 설정합니다. 하는 경우 <xref:System.Windows.Forms.TextBoxBase.WordWrap%2A> 는 `true` (기본값) 다음 컨트롤의 텍스트를 하나 이상의 단락 표시 되지만 그렇지 않은 경우 일부 줄 컨트롤의 가장자리에 클리핑 되는 목록으로 표시 됩니다.  
   
-2.  <xref:System.Windows.Forms.TextBox.ScrollBars%2A> 속성을 적절한 값으로 설정합니다.  
+2.  
+  <xref:System.Windows.Forms.TextBox.ScrollBars%2A> 속성을 적절한 값으로 설정합니다.  
   
     |값|설명|  
     |-----------|-----------------|  
@@ -39,7 +40,8 @@ ms.locfileid: "54565633"
     |<xref:System.Windows.Forms.ScrollBars.Horizontal>|줄의 너비 보다 길 수 중 일부는 목록을 표시 하려면이 값을 사용 합니다 <xref:System.Windows.Forms.TextBox> 제어 합니다.|  
     |<xref:System.Windows.Forms.ScrollBars.Both>|목록 컨트롤의 높이 보다 길 수 있으면이 값을 사용 합니다.|  
   
-3.  <xref:System.Windows.Forms.TextBoxBase.WordWrap%2A> 속성을 적절한 값으로 설정합니다.  
+3.  
+  <xref:System.Windows.Forms.TextBoxBase.WordWrap%2A> 속성을 적절한 값으로 설정합니다.  
   
     |값|설명|  
     |-----------|-----------------|  
@@ -48,10 +50,10 @@ ms.locfileid: "54565633"
   
 ## <a name="see-also"></a>참고자료
 - <xref:System.Windows.Forms.TextBox>
-- [TextBox 컨트롤 개요](../../../../docs/framework/winforms/controls/textbox-control-overview-windows-forms.md)
-- [방법: Windows Forms TextBox 컨트롤의 삽입 지점 제어](../../../../docs/framework/winforms/controls/how-to-control-the-insertion-point-in-a-windows-forms-textbox-control.md)
-- [방법: Windows Forms TextBox 컨트롤을 사용 하 여 암호 텍스트 상자 만들기](../../../../docs/framework/winforms/controls/how-to-create-a-password-text-box-with-the-windows-forms-textbox-control.md)
-- [방법: 읽기 전용 텍스트 상자 만들기](../../../../docs/framework/winforms/controls/how-to-create-a-read-only-text-box-windows-forms.md)
-- [방법: 문자열에 인용 부호 넣기](../../../../docs/framework/winforms/controls/how-to-put-quotation-marks-in-a-string-windows-forms.md)
-- [방법: Windows Forms TextBox 컨트롤에서 텍스트를 선택 합니다.](../../../../docs/framework/winforms/controls/how-to-select-text-in-the-windows-forms-textbox-control.md)
-- [TextBox 컨트롤](../../../../docs/framework/winforms/controls/textbox-control-windows-forms.md)
+- [TextBox 컨트롤 개요](textbox-control-overview-windows-forms.md)
+- [방법: Windows Forms TextBox 컨트롤의 삽입 지점 제어](how-to-control-the-insertion-point-in-a-windows-forms-textbox-control.md)
+- [방법: Windows Forms TextBox 컨트롤을 사용 하 여 암호 텍스트 상자 만들기](how-to-create-a-password-text-box-with-the-windows-forms-textbox-control.md)
+- [방법: 읽기 전용 텍스트 상자 만들기](how-to-create-a-read-only-text-box-windows-forms.md)
+- [방법: 문자열에 인용 부호 넣기](how-to-put-quotation-marks-in-a-string-windows-forms.md)
+- [방법: Windows Forms TextBox 컨트롤에서 텍스트를 선택 합니다.](how-to-select-text-in-the-windows-forms-textbox-control.md)
+- [TextBox 컨트롤](textbox-control-windows-forms.md)
