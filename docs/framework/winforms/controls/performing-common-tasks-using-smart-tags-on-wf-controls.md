@@ -6,12 +6,12 @@ helpviewer_keywords:
 - smart tags
 - designer actions
 ms.assetid: cac337e6-00f6-4584-80f4-75728f5ea113
-ms.openlocfilehash: 93a477bcaed8ebdc2c7cb4daaa1dce1651cccd12
-ms.sourcegitcommit: 2b986afe4ce9e13bbeec929c9737757eb61de60e
+ms.openlocfilehash: 2805ebc66be5908c333e9a5db41076518ad77c1a
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "56664317"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57705859"
 ---
 # <a name="walkthrough-performing-common-tasks-using-smart-tags-on-windows-forms-controls"></a>연습: Windows Forms 컨트롤에서 스마트 태그를 사용하여 일반 작업 수행
 Windows Forms 응용 프로그램에 대 한 폼 및 컨트롤을 구성할 때에 반복적으로 수행 하는 많은 작업이 있습니다. 다음은 발생 하는 일반적으로 수행된 하는 작업의 일부입니다.  
@@ -53,7 +53,7 @@ Windows Forms 응용 프로그램에 대 한 폼 및 컨트롤을 구성할 때�
   
 #### <a name="to-use-smart-tags"></a>스마트 태그를 사용 하려면  
   
-1.  끌어서를 <xref:System.Windows.Forms.TabControl> 에서 합니다 **도구 상자** 폼입니다. 스마트 태그 문자 모양을 확인 (![스마트 태그 문자 모양](../../../../docs/framework/winforms/controls/media/vs-winformsmttagglyph.gif "VS_WinFormSmtTagGlyph"))의 측면에 표시 되는 <xref:System.Windows.Forms.TabControl>합니다.  
+1.  끌어서를 <xref:System.Windows.Forms.TabControl> 에서 합니다 **도구 상자** 폼입니다. 스마트 태그 문자 모양을 확인 (![스마트 태그 문자 모양](./media/vs-winformsmttagglyph.gif "VS_WinFormSmtTagGlyph"))의 측면에 표시 되는 <xref:System.Windows.Forms.TabControl>합니다.  
   
 2.  스마트 태그 문자 모양을 클릭 합니다. 문자 모양이 옆에 나타나는 바로 가기 메뉴에서 선택 합니다 **추가 탭** 항목입니다. 탭 페이지를 새로 추가할 관찰 된 <xref:System.Windows.Forms.TabControl>합니다.  
   

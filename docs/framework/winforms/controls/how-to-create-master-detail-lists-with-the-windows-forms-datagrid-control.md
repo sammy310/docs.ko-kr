@@ -10,16 +10,16 @@ helpviewer_keywords:
 - DataGrid control [Windows Forms], master-details lists
 - related tables [Windows Forms], displaying in DataGrid control
 ms.assetid: 20388c6a-94f9-4d96-be18-8c200491247f
-ms.openlocfilehash: 6ff13264709c4557d698435ac05b7759be58f1e8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8f247fb3e61abe46b3bb9c74a3b984310d2b99b3
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54712894"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57715466"
 ---
 # <a name="how-to-create-masterdetail-lists-with-the-windows-forms-datagrid-control"></a>방법: Windows Forms DataGrid 컨트롤을 사용 하 여 마스터/세부 목록 만들기
 > [!NOTE]
->  <xref:System.Windows.Forms.DataGridView> 컨트롤은 <xref:System.Windows.Forms.DataGrid> 컨트롤을 대체하고 여기에 다른 기능을 추가하여 새로 도입된 컨트롤이지만 이전 버전과의 호환성 및 이후 사용 가능성을 고려하여 <xref:System.Windows.Forms.DataGrid> 컨트롤을 계속 유지하도록 선택할 수 있습니다. 자세한 내용은 [Windows Forms DataGridView 및 DataGrid 컨트롤의 차이점](../../../../docs/framework/winforms/controls/differences-between-the-windows-forms-datagridview-and-datagrid-controls.md)을 참조하십시오.  
+>  <xref:System.Windows.Forms.DataGridView> 컨트롤은 <xref:System.Windows.Forms.DataGrid> 컨트롤을 대체하고 여기에 다른 기능을 추가하여 새로 도입된 컨트롤이지만 이전 버전과의 호환성 및 이후 사용 가능성을 고려하여 <xref:System.Windows.Forms.DataGrid> 컨트롤을 계속 유지하도록 선택할 수 있습니다. 자세한 내용은 [Windows Forms DataGridView 및 DataGrid 컨트롤의 차이점](differences-between-the-windows-forms-datagridview-and-datagrid-controls.md)을 참조하십시오.  
   
  경우에 <xref:System.Data.DataSet> 계열이 관련된 테이블의 두 사용할 수 있습니다 <xref:System.Windows.Forms.DataGrid> 마스터/세부 정보 형식으로 데이터를 표시 하는 컨트롤입니다. 하나의 <xref:System.Windows.Forms.DataGrid> 는 마스터 데이터에 지정 된 두 번째 지정 된 세부 정보 표 및 합니다. 목록에 항목을 선택 하면 관련된 자식 항목의 모든 세부 정보 목록에 표시 됩니다. 예를 들어, 경우에 <xref:System.Data.DataSet> 고객 테이블 및 관련된 Orders 테이블에 포함 되어는 마스터 데이터를 Customers 테이블과 Orders 테이블 세부 정보 표에서을 지정 합니다. 마스터 그리드에서 고객을 선택 하면 모든 주문을 Orders 테이블의 해당 고객과 관련 된 세부 정보 창에 표시 됩니다.  
   
@@ -71,6 +71,6 @@ ms.locfileid: "54712894"
     ```  
   
 ## <a name="see-also"></a>참고자료
-- [DataGrid 컨트롤](../../../../docs/framework/winforms/controls/datagrid-control-windows-forms.md)
-- [DataGrid 컨트롤 개요](../../../../docs/framework/winforms/controls/datagrid-control-overview-windows-forms.md)
-- [방법: 데이터 소스에 Windows Forms DataGrid 컨트롤 바인딩](../../../../docs/framework/winforms/controls/how-to-bind-the-windows-forms-datagrid-control-to-a-data-source.md)
+- [DataGrid 컨트롤](datagrid-control-windows-forms.md)
+- [DataGrid 컨트롤 개요](datagrid-control-overview-windows-forms.md)
+- [방법: 데이터 소스에 Windows Forms DataGrid 컨트롤 바인딩](how-to-bind-the-windows-forms-datagrid-control-to-a-data-source.md)

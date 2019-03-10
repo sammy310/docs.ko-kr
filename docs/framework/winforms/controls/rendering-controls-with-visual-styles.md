@@ -10,12 +10,12 @@ helpviewer_keywords:
 - user controls [Windows Forms], painting
 - visual styles [Windows Forms], rendering Windows Forms controls
 ms.assetid: a5b178ba-610e-46c4-a6c0-509c0886a744
-ms.openlocfilehash: 9ee357e343c5e060393359f0666886bef6b87b50
-ms.sourcegitcommit: 2b986afe4ce9e13bbeec929c9737757eb61de60e
+ms.openlocfilehash: caef9590e57503171ab295f6e99b62d860bc0a81
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "56664356"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57708056"
 ---
 # <a name="rendering-controls-with-visual-styles"></a>비주얼 스타일을 사용하여 컨트롤 렌더링
 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 는 지원되는 운영 체제에서 비주얼 스타일을 사용하여 컨트롤 및 기타 Windows UI(사용자 인터페이스) 요소를 렌더링하는 것을 지원합니다. 이 항목에서는 운영 체제의 현재 비주얼 스타일로 컨트롤 및 기타 UI 요소를 렌더링하는 작업에 대한 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 의 몇 가지 지원 수준에 대해 설명합니다.  
@@ -49,7 +49,7 @@ ms.locfileid: "56664356"
   
 -   <xref:System.Windows.Forms.TrackBarRenderer>  
   
- 이러한 클래스를 사용 하 여 컨트롤 그리기에 대 한 자세한 내용은 참조 하세요. [방법: 컨트롤 렌더링 클래스를 사용 하 여](../../../../docs/framework/winforms/controls/how-to-use-a-control-rendering-class.md)입니다.  
+ 이러한 클래스를 사용 하 여 컨트롤 그리기에 대 한 자세한 내용은 참조 하세요. [방법: 컨트롤 렌더링 클래스를 사용 하 여](how-to-use-a-control-rendering-class.md)입니다.  
   
 ## <a name="visual-style-element-and-rendering-classes"></a>비주얼 스타일 요소 및 렌더링 클래스  
  <xref:System.Windows.Forms.VisualStyles?displayProperty=nameWithType> 네임스페이스에는 그리기에 사용할 수 있고 비주얼 스타일에서 지원되는 컨트롤이나 UI 요소에 대한 정보를 가져올 수 있는 클래스가 포함되어 있습니다. 지원되는 컨트롤에는 <xref:System.Windows.Forms?displayProperty=nameWithType> 네임스페이스에 렌더링 클래스가 있는 공용 컨트롤(이전 섹션 참조) 및 탭 컨트롤과 rebar 컨트롤 같은 기타 컨트롤이 포함됩니다. 기타 지원되는 UI 요소에는 **시작** 메뉴의 일부, 작업 표시줄 및 창의 비클라이언트 영역이 있습니다.  
@@ -58,7 +58,7 @@ ms.locfileid: "56664356"
   
  <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer> 는 그리기를 수행하고 운영 체제의 현재 비주얼 스타일에 의해 정의된 각 <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> 에 대한 정보를 가져오는 메서드를 제공합니다. 요소에 대해 검색할 수 있는 정보에는 기본 크기, 배경 유형 및 색상 정의가 포함됩니다. <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer> 는 Windows Platform SDK의 Windows 셸 부분에서 비주얼 스타일(UxTheme) API의 기능을 래핑합니다. 자세한 내용은 [비주얼 스타일이 활성화](/windows/desktop/controls/cookbook-overview)합니다.  
   
- 사용에 대 한 자세한 내용은 <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer> 하 고 <xref:System.Windows.Forms.VisualStyles.VisualStyleElement>를 참조 하세요 [방법: 비주얼 스타일 요소 렌더링](../../../../docs/framework/winforms/controls/how-to-render-a-visual-style-element.md)합니다.  
+ 사용에 대 한 자세한 내용은 <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer> 하 고 <xref:System.Windows.Forms.VisualStyles.VisualStyleElement>를 참조 하세요 [방법: 비주얼 스타일 요소 렌더링](how-to-render-a-visual-style-element.md)합니다.  
   
 ## <a name="enabling-visual-styles"></a>비주얼 스타일 사용  
  [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 버전 1.0용으로 작성된 응용 프로그램에 대해 비주얼 스타일을 사용하도록 설정하려면 프로그래머는 컨트롤 그리기에 ComCtl32.dll 버전 6 이상을 사용하도록 지정하는 응용 프로그램 매니페스트를 포함해야 합니다. [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 버전 1.1 이상으로 빌드된 응용 프로그램은 <xref:System.Windows.Forms.Application> 클래스의 <xref:System.Windows.Forms.Application.EnableVisualStyles%2A?displayProperty=nameWithType> 메서드를 사용할 수 있습니다.  
@@ -79,4 +79,4 @@ ms.locfileid: "56664356"
 >  사용자가 비주얼 스타일을 사용할 때 또는 비주얼 스타일을 전환할 때 컨트롤 또는 UI 요소를 렌더링하기 위해 <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer> 를 사용하려는 경우, <xref:Microsoft.Win32.SystemEvents.UserPreferenceChanged> 이벤트 대신 <xref:Microsoft.Win32.SystemEvents.UserPreferenceChanging> 이벤트를 처리할 때 이를 수행해야 합니다. <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer> 을 처리할 때 <xref:Microsoft.Win32.SystemEvents.UserPreferenceChanging>클래스를 사용하는 경우 예외가 throw됩니다.  
   
 ## <a name="see-also"></a>참고자료
-- [사용자 지정 컨트롤 그리기 및 렌더링](../../../../docs/framework/winforms/controls/custom-control-painting-and-rendering.md)
+- [사용자 지정 컨트롤 그리기 및 렌더링](custom-control-painting-and-rendering.md)

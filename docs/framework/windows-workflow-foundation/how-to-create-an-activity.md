@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: c09b1e99-21b5-4d96-9c04-ec31db3f4436
-ms.openlocfilehash: 8aa6900b26bbe9f77fe0802a7929febe5af61269
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: 271f26888e8b140b64464f5c9c4eabb7170afe05
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48872959"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57709018"
 ---
 # <a name="how-to-create-an-activity"></a>방법: 활동 만들기
 
@@ -42,8 +42,8 @@ ms.locfileid: "48872959"
 
 4.  기존 `ReadInt` 정의를 다음 정의로 바꿉니다.
 
-     [!code-csharp[CFX_WF_GettingStarted#1](../../../samples/snippets/csharp/VS_Snippets_CFX/cfx_wf_gettingstarted/cs/readint.cs#1)]
-     [!code-vb[CFX_WF_GettingStarted#1](../../../samples/snippets/visualbasic/VS_Snippets_CFX/cfx_wf_gettingstarted/vb/readint.vb#1)]
+     [!code-csharp[CFX_WF_GettingStarted#1](~/samples/snippets/csharp/VS_Snippets_CFX/cfx_wf_gettingstarted/cs/readint.cs#1)]
+     [!code-vb[CFX_WF_GettingStarted#1](~/samples/snippets/visualbasic/VS_Snippets_CFX/cfx_wf_gettingstarted/vb/readint.vb#1)]
 
     > [!NOTE]
     > `ReadInt` 활동은 코드 활동 템플릿의 기본값인 <xref:System.Activities.NativeActivity%601> 대신 <xref:System.Activities.CodeActivity>에서 파생됩니다. 활동이 <xref:System.Activities.CodeActivity%601> 인수를 통해 노출되는 단일 결과를 제공하는 경우 <xref:System.Activities.Activity%601.Result%2A>를 사용할 수 있지만 <xref:System.Activities.CodeActivity%601>는 책갈피 사용을 지원하지 않으므로 <xref:System.Activities.NativeActivity%601>가 사용됩니다.
@@ -100,13 +100,13 @@ ms.locfileid: "48872959"
 
 ## <a name="next-steps"></a>다음 단계
 
-이러한 활동을 사용 하 여 워크플로 만드는 방법에 대 한 지침 자습서에서 다음 단계를 참조 하세요 [방법: 워크플로 만들기](../../../docs/framework/windows-workflow-foundation/how-to-create-a-workflow.md)합니다.
+이러한 활동을 사용 하 여 워크플로 만드는 방법에 대 한 지침은 자습서의 다음 단계를 참조 하세요. [방법: 워크플로 만드는](how-to-create-a-workflow.md)합니다.
 
 ## <a name="see-also"></a>참고자료
 
 - <xref:System.Activities.CodeActivity>
 - <xref:System.Activities.NativeActivity%601>
-- [사용자 지정 활동 디자인 및 구현](../../../docs/framework/windows-workflow-foundation/designing-and-implementing-custom-activities.md)
-- [초보자를 위한 자습서](../../../docs/framework/windows-workflow-foundation/getting-started-tutorial.md)
-- [방법: 워크플로 만들기](../../../docs/framework/windows-workflow-foundation/how-to-create-a-workflow.md)
-- [사용자 지정 작업 디자이너에서 ExpressionTextBox 사용](../../../docs/framework/windows-workflow-foundation/samples/using-the-expressiontextbox-in-a-custom-activity-designer.md)
+- [사용자 지정 활동 디자인 및 구현](designing-and-implementing-custom-activities.md)
+- [초보자를 위한 자습서](getting-started-tutorial.md)
+- [방법: 워크플로 만들기](how-to-create-a-workflow.md)
+- [사용자 지정 작업 디자이너에서 ExpressionTextBox 사용](./samples/using-the-expressiontextbox-in-a-custom-activity-designer.md)

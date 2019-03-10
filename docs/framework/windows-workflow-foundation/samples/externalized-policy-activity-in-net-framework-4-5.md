@@ -2,24 +2,25 @@
 title: .NET Framework 4.5의에서 구체화 된 정책 활동
 ms.date: 03/30/2017
 ms.assetid: 92fd6f92-23a1-4adf-b96a-2754ea93ad3e
-ms.openlocfilehash: 1c2f66caeb9932422681ba7176346a5e5e084c11
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: 2ec358dbe2ba2b60df707d1ce580bb88e4c4ba1b
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48850239"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57706375"
 ---
 # <a name="externalized-policy-activity-in-net-framework-45"></a>.NET Framework 4.5의에서 구체화 된 정책 활동
 
-이 샘플에서는 ExternalizedPolicy4 활동을 통해 기존 실행 하는 방법을 보여 줍니다. [!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)] Windows Workflow Foundation (WF 3.5) <xref:System.Workflow.Activities.Rules.RuleSet> 개체 [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] 규칙 엔진을 사용 하 여 직접 Windows Workflow Foundation (WF 4.5) WF 3.5에서 제공 됩니다. 이 활동을 사용하여 기존 WF 3.5 <xref:System.Workflow.Activities.Rules.RuleSet>을 열고 실행할 수 있습니다. Windows Workflow Foundation의 일부로 포함 된 WF 3.5 규칙 엔진에 대 한 자세한 내용은 읽어보세요 [Windows Workflow Foundation 규칙 엔진 소개](https://go.microsoft.com/fwlink/?LinkId=166079)합니다. 마이그레이션에 대 한 자세한 규칙을 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 에 [!INCLUDE[netfx_current_short](../../../../includes/netfx-current-short-md.md)]에서 마이그레이션 지침을 참조 하세요 [마이그레이션 지침](../../../../docs/framework/windows-workflow-foundation/migration-guidance.md)합니다.
+이 샘플에서는 ExternalizedPolicy4 활동을 통해 기존 실행 하는 방법을 보여 줍니다. [!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)] Windows Workflow Foundation (WF 3.5) <xref:System.Workflow.Activities.Rules.RuleSet> 개체 [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] 규칙 엔진을 사용 하 여 직접 Windows Workflow Foundation (WF 4.5) WF 3.5에서 제공 됩니다. 이 활동을 사용하여 기존 WF 3.5 <xref:System.Workflow.Activities.Rules.RuleSet>을 열고 실행할 수 있습니다. Windows Workflow Foundation의 일부로 포함 된 WF 3.5 규칙 엔진에 대 한 자세한 내용은 읽어보세요 [Windows Workflow Foundation 규칙 엔진 소개](https://go.microsoft.com/fwlink/?LinkId=166079)합니다. 마이그레이션에 대 한 자세한 규칙을 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 에 [!INCLUDE[netfx_current_short](../../../../includes/netfx-current-short-md.md)]에서 마이그레이션 지침을 참조 하세요 [마이그레이션 지침](../migration-guidance.md)합니다.
 
 ## <a name="projects-in-this-sample"></a>이 샘플의 프로젝트
 
 |프로젝트 이름|설명|기본 파일|
 |-|-|-|
 |ExternalizedPolicy4|ExternalizedPolicy4 활동과 이 활동의 WF 4.5 디자이너가 들어 있습니다.|**ExternalizedPolicy4.cs**: 활동 정의 합니다.<br /><br /> **ExternalizedPolicy4Designer.xaml**: ExternalizedPolicy4 활동에 대 한 사용자 지정 디자이너입니다. 이 디자이너는 WF 3.5 규칙 엔진의 규칙 편집기(<xref:System.Workflow.Activities.Rules.Design.RuleSetDialog>)를 사용합니다.|
-|ImperativeCodeClientSample|명령적 C# 코드를 사용하는 ExternalizedPolicy4 응용 프로그램을 사용하여 워크플로를 구성하고 실행하는 샘플 클라이언트 응용 프로그램입니다(디자이너가 사용되지 않음).|**ApplyDiscount.rules**: 파일 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 규칙을 정의 합니다.<br /><br /> **Order.cs**: 고객 주문을 나타내는 형식입니다. 이 형식의 개체에 규칙이 적용됩니다.<br /><br /> **Program.cs**: 구성 하 고 Order 개체의 인스턴스에 대 한 ApplyDiscount.rules에 정의 된 규칙을 적용 하는 Policy4 활동에는 워크플로 실행 합니다.<br /><br /> App.config: 규칙 파일의 경로가 있는 구성 파일입니다.|
-|DesignerClientSample|[!INCLUDE[wf1](../../../../includes/wf1-md.md)] 디자이너에서 ExternalPolicy4 응용 프로그램을 사용하여 워크플로를 구성하고 실행하는 샘플 클라이언트 응용 프로그램입니다.|**Sequence1.xaml**: Policy4 활동을 사용 하 여 규칙 평가 수행 하는 순차 워크플로입니다.<br /><br /> **Program.cs**: Sequence1.xaml에 정의 된 워크플로의 인스턴스를 실행 합니다.|
+|ImperativeCodeClientSample|명령적 C# 코드를 사용하는 ExternalizedPolicy4 응용 프로그램을 사용하여 워크플로를 구성하고 실행하는 샘플 클라이언트 응용 프로그램입니다(디자이너가 사용되지 않음).|**ApplyDiscount.rules**: 파일을 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 규칙을 정의 합니다.<br /><br /> **Order.cs**: 고객 주문을 나타내는 형식입니다. 이 형식의 개체에 규칙이 적용됩니다.<br /><br /> **Program.cs**: 구성 하 고 Order 개체의 인스턴스에 대 한 ApplyDiscount.rules에 정의 된 규칙을 적용 하는 Policy4 활동에는 워크플로 실행 합니다.<br /><br /> App.config: 규칙 파일의 경로 사용 하 여 구성 파일입니다.|
+|DesignerClientSample|
+  [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 디자이너에서 ExternalPolicy4 응용 프로그램을 사용하여 워크플로를 구성하고 실행하는 샘플 클라이언트 응용 프로그램입니다.|**Sequence1.xaml**: Policy4 활동을 사용 하 여 규칙 평가 수행 하는 순차 워크플로.<br /><br /> **Program.cs**: Sequence1.xaml에 정의된 워크플로의 인스턴스를 실행합니다.|
 
 ## <a name="the-externalizedpolicy4-activity"></a>ExternalizedPolicy4 활동
 
@@ -56,13 +57,14 @@ ExternalizedPolicy4 디자이너를 사용하면 코드를 작성하지 않고 �
 
 ## <a name="policy4-and-externalpolicy4"></a>Policy4 및 ExternalPolicy4
 
-정책 작업을 만들고 WF 4.5 워크플로에.NET Framework 3.5 RuleSet을 실행할 수 있습니다. <xref:System.Workflow.Activities.Rules.RuleSet>은 Policy4 활동 XAML 정의에 serialize된 인라인입니다. ExternalizedPolicy4 샘플에서는 .rules 파일에 포함된 기존 외부 <xref:System.Workflow.Activities.Rules.RuleSet>을 사용하는 방법을 보여 줍니다.
+정책 작업을 만들고 WF 4.5 워크플로에.NET Framework 3.5 RuleSet을 실행할 수 있습니다. 
+  <xref:System.Workflow.Activities.Rules.RuleSet>은 Policy4 활동 XAML 정의에 serialize된 인라인입니다. ExternalizedPolicy4 샘플에서는 .rules 파일에 포함된 기존 외부 <xref:System.Workflow.Activities.Rules.RuleSet>을 사용하는 방법을 보여 줍니다.
 
 ## <a name="use-this-sample"></a>이 샘플 사용
 
 이 샘플을 실행하기 위한 특별한 설정 작업은 필요하지 않습니다. Visual Studio에서 솔루션을 열고 다음 키를 누릅니다 **F5** 응용 프로그램을 실행 합니다.
 
-이 샘플에는 두 개의 클라이언트 응용 프로그램인 ImperativeCodeClientSample과 DesignerClientSample이 포함되어 있습니다. ImperativeCodeClientSample 클라이언트에서는 C# 명령적 코드를 사용하여 ExternalizedPolicy4 활동을 구성 및 실행하는 방법을 보여 주고, DesignerClientSample에서는 디자이너를 사용하여 ExternalizedPolicy4 활동을 구성 및 실행하는 방법을 보여 줍니다.
+이 샘플에 두 개의 클라이언트 응용 프로그램: ImperativeCodeClientSample과 DesignerClientSample 합니다. ImperativeCodeClientSample 클라이언트에서는 C# 명령적 코드를 사용하여 ExternalizedPolicy4 활동을 구성 및 실행하는 방법을 보여 주고, DesignerClientSample에서는 디자이너를 사용하여 ExternalizedPolicy4 활동을 구성 및 실행하는 방법을 보여 줍니다.
 
 ### <a name="run-the-imperativecodeclientsample-application"></a>ImperativeCodeClientSample 응용 프로그램을 실행 합니다.
 

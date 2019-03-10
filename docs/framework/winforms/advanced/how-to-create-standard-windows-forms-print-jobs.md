@@ -10,12 +10,12 @@ helpviewer_keywords:
 - printing [Windows Forms], creating print jobs
 - printing [Visual Basic], in Windows applications
 ms.assetid: 03342b90-9cfe-40b2-838b-b479a13c5dea
-ms.openlocfilehash: 18078c5e6bf518487707a8dc5639b3d6aa8a5783
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b0568472dadceb46257a8d35211034a718aef74c
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54723344"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57705225"
 ---
 # <a name="how-to-create-standard-windows-forms-print-jobs"></a>방법: 표준 Windows Forms 인쇄 작업 만들기
 Windows Forms의 인쇄의 기반은는 <xref:System.Drawing.Printing.PrintDocument> 구성 요소-구체적으로 <xref:System.Drawing.Printing.PrintDocument.PrintPage> 이벤트입니다. 처리 하는 코드를 작성 하 여는 <xref:System.Drawing.Printing.PrintDocument.PrintPage> 이벤트 인쇄 대상 및 인쇄 하는 방법을 지정할 수 있습니다.  
@@ -72,10 +72,10 @@ Windows Forms의 인쇄의 기반은는 <xref:System.Drawing.Printing.PrintDocum
      에 대 한 코드를 작성할 수도 있습니다는 <xref:System.Drawing.Printing.PrintDocument.BeginPrint> 및 <xref:System.Drawing.Printing.PrintDocument.EndPrint> 이벤트를 포함 하 여 페이지의 총 수를 나타내는 인쇄를 정수는 각 페이지 출력으로 감소 합니다.  
   
     > [!NOTE]
-    >  추가할 수 있습니다는 <xref:System.Windows.Forms.PrintDialog> 구성 요소를 폼을 명확 하 고 효율적인 사용자 인터페이스 (UI) 사용자에 게 제공 합니다. 설정 합니다 <xref:System.Windows.Forms.PrintDialog.Document%2A> 의 속성을 <xref:System.Windows.Forms.PrintDialog> 폼의 구성 요소 사용 하도록 설정 하면 문서 인쇄와 관련 된 속성을 설정 하는 데 사용 중인. 에 대 한 자세한 내용은 합니다 <xref:System.Windows.Forms.PrintDialog> 구성 요소를 참조 하세요 [PrintDialog 구성 요소](../../../../docs/framework/winforms/controls/printdialog-component-windows-forms.md)합니다.  
+    >  추가할 수 있습니다는 <xref:System.Windows.Forms.PrintDialog> 구성 요소를 폼을 명확 하 고 효율적인 사용자 인터페이스 (UI) 사용자에 게 제공 합니다. 설정 합니다 <xref:System.Windows.Forms.PrintDialog.Document%2A> 의 속성을 <xref:System.Windows.Forms.PrintDialog> 폼의 구성 요소 사용 하도록 설정 하면 문서 인쇄와 관련 된 속성을 설정 하는 데 사용 중인. 에 대 한 자세한 내용은 합니다 <xref:System.Windows.Forms.PrintDialog> 구성 요소를 참조 하세요 [PrintDialog 구성 요소](../controls/printdialog-component-windows-forms.md)합니다.  
   
      세부 정보에 대 한 자세한 내용은 Windows Forms의 인쇄 작업을 프로그래밍 방식으로 인쇄 작업을 만드는 방법을 포함 하 여 참조 <xref:System.Drawing.Printing.PrintPageEventArgs>합니다.  
   
 ## <a name="see-also"></a>참고자료
 - <xref:System.Drawing.Printing.PrintDocument>
-- [Windows Forms 인쇄 지원](../../../../docs/framework/winforms/advanced/windows-forms-print-support.md)
+- [Windows Forms 인쇄 지원](windows-forms-print-support.md)

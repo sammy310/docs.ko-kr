@@ -2,21 +2,21 @@
 title: 재호스팅된 워크플로 디자이너에서 새 Workflow Foundation 4.5 기능에 대한 지원
 ms.date: 03/30/2017
 ms.assetid: 1a4a4038-d8e6-41dd-99ea-93bd76286772
-ms.openlocfilehash: c6f6c6baedba0c932472a087d378ccce90b60db7
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: bed49e4a62e597c9cffd113b24551872ee1053d5
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48836987"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57714946"
 ---
 # <a name="support-for-new-workflow-foundation-45-features-in-the-rehosted-workflow-designer"></a>재호스팅된 워크플로 디자이너에서 새 Workflow Foundation 4.5 기능에 대한 지원
 Windows WF (Workflow Foundation)에서 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 는 workflow designer 환경의 몇 가지 향상 된 기능을 비롯 한 많은 새로운 기능이 도입 되었습니다. 이 항목에서는 이러한 기능 중 재호스트된 디자이너에서 지원되는 기능과 현재 지원되지 않는 기능을 자세히 설명합니다.
 
 > [!NOTE]
->  에 도입 된 새 Windows WF (Workflow Foundation) 기능의 일부 목록은 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]를 포함 하 여 디자이너 재호스팅 관련이 없는 참조 하세요. [.NET 4.5에서 Windows Workflow Foundation의 새로운](../../../docs/framework/windows-workflow-foundation/whats-new-in-wf-in-dotnet.md)합니다.
+>  에 도입 된 새 Windows WF (Workflow Foundation) 기능의 일부 목록은 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]를 포함 하 여 디자이너 재호스팅 관련이 없는 참조 하세요. [.NET 4.5에서 Windows Workflow Foundation의 새로운](whats-new-in-wf-in-dotnet.md)합니다.
 
 ## <a name="activities"></a>활동
- 기본 제공 활동 라이브러리에는 새로운 활동과 기존 활동의 새로운 기능이 들어 있습니다. 이러한 모든 새 활동은 재호스트된 디자이너에서 지원됩니다. 이러한 새 활동에 대 한 자세한 내용은 참조는 [활동](../../../docs/framework/windows-workflow-foundation/whats-new-in-wf-in-dotnet.md#BKMK_NewActivities) 부분 [.NET 4.5에서 Windows Workflow Foundation의 새로운 기능](../../../docs/framework/windows-workflow-foundation/whats-new-in-wf-in-dotnet.md).
+ 기본 제공 활동 라이브러리에는 새로운 활동과 기존 활동의 새로운 기능이 들어 있습니다. 이러한 모든 새 활동은 재호스트된 디자이너에서 지원됩니다. 이러한 새 활동에 대 한 자세한 내용은 참조는 [활동](whats-new-in-wf-in-dotnet.md#BKMK_NewActivities) 부분 [.NET 4.5에서 Windows Workflow Foundation의 새로운 기능](whats-new-in-wf-in-dotnet.md).
 
 ## <a name="c-expressions"></a>C# 식
  [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 이전에는 워크플로의 모든 식을 Visual Basic으로만 작성할 수 있었습니다. [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]에서 Visual Basic 식은 Visual Basic을 사용하여 만든 프로젝트에만 사용됩니다. Visual C# 프로젝트는 이제 식에 C#을 사용합니다. Visual Studio 2012에서 워크플로 작성할 때는 문법 강조 표시 및 intellisense와 같은 기능이 포함 된 완전 한 기능의 C# 식 편집기에 제공 됩니다. 이전 버전에서 만들어졌으며 Visual Basic 식을 사용하는 C# 워크플로 프로젝트는 계속 작동합니다.
@@ -27,35 +27,36 @@ Windows WF (Workflow Foundation)에서 [!INCLUDE[net_v45](../../../includes/net-
 ## <a name="new-designer-capabilities"></a>새로운 디자이너 기능
 
 ### <a name="designer-search"></a>디자이너 검색
- 합니다 [빠른 찾기](../../../docs/framework/windows-workflow-foundation/whats-new-in-wf-in-dotnet.md#BKMK_QuickFind) 하 고 [파일에서 찾기](../../../docs/framework/windows-workflow-foundation/whats-new-in-wf-in-dotnet.md#BKMK_FindInFiles) 도입 된 기능 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 재 호스트 된 디자이너에서 지원 되지 않습니다. `Toolbox` 검색은 재호스트된 디자이너에서 지원됩니다. 이러한 기능에 대 한 자세한 내용은 참조 하세요. [디자이너 검색](../../../docs/framework/windows-workflow-foundation/whats-new-in-wf-in-dotnet.md#BKMK_DesignerSearch)합니다.
+ 합니다 [빠른 찾기](whats-new-in-wf-in-dotnet.md#BKMK_QuickFind) 하 고 [파일에서 찾기](whats-new-in-wf-in-dotnet.md#BKMK_FindInFiles) 도입 된 기능 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 재 호스트 된 디자이너에서 지원 되지 않습니다. 
+  `Toolbox` 검색은 재호스트된 디자이너에서 지원됩니다. 이러한 기능에 대 한 자세한 내용은 참조 하세요. [디자이너 검색](whats-new-in-wf-in-dotnet.md#BKMK_DesignerSearch)합니다.
 
 > [!WARNING]
->  [빠른 찾기](../../../docs/framework/windows-workflow-foundation/whats-new-in-wf-in-dotnet.md#BKMK_QuickFind) 하 고 [파일에서 찾기](../../../docs/framework/windows-workflow-foundation/whats-new-in-wf-in-dotnet.md#BKMK_FindInFiles) 재 호스트 된 디자이너에서 지원 되지 않습니다.
+>  [빠른 찾기](whats-new-in-wf-in-dotnet.md#BKMK_QuickFind) 하 고 [파일에서 찾기](whats-new-in-wf-in-dotnet.md#BKMK_FindInFiles) 재 호스트 된 디자이너에서 지원 되지 않습니다.
 
 ### <a name="delete-context-menu-item-in-variable-and-argument-designer"></a>변수 및 인수 디자이너에서 상황에 맞는 메뉴에 표시되는 삭제 항목
  [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)]에서는 디자이너에서 키보드로만 변수 및 인수를 삭제할 수 있었습니다. [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]부터는 상황에 맞는 메뉴를 사용하여 변수 및 인수를 삭제할 수 있습니다. 이 기능은 재호스트된 디자이너에서 지원됩니다.
 
  다음 스크린 샷에서는 변수 및 인수 디자이너의 상황에 맞는 메뉴를 보여 줍니다.
 
- ![변수 및 인수 디자이너 상황에 맞는 메뉴](../../../docs/framework/windows-workflow-foundation/media/designercontextmenu.png "DesignerContextMenu")
+ ![변수 및 인수 디자이너 상황에 맞는 메뉴](./media/designercontextmenu.png "DesignerContextMenu")
 
 ### <a name="auto-surround-with-sequence"></a>시퀀스로 자동 감싸기
  워크플로 또는 특정 컨테이너 활동(예: <xref:System.Activities.Statements.NoPersistScope>)에는 단일 본문 활동만 포함할 수 있으므로 두 번째 활동을 추가하려면 개발자가 첫 번째 활동을 삭제하고 <xref:System.Activities.Statements.Sequence> 활동을 추가한 후 두 활동을 모두 시퀀스 활동에 추가해야 했습니다. [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]부터는 디자이너 화면에 두 번째 활동을 추가하면 `Sequence` 활동이 자동으로 만들어져 두 활동을 래핑합니다. 이 기능은 재호스트된 디자이너에서 지원됩니다.
 
  다음 스크린 샷에서는 `WriteLine`의 `Body`에 있는 `NoPersistScope` 활동을 보여 줍니다.
 
- ![자동&#45;저장 위치를 둘러싸고](../../../docs/framework/windows-workflow-foundation/media/autosurround1.png "AutoSurround1")
+ ![자동&#45;저장 위치를 둘러싸고](./media/autosurround1.png "AutoSurround1")
 
  다음 스크린 샷에서는 두 번째 `Sequence`이 첫 번째 항목 아래에 놓였을 때 `Body`에 자동으로 만들어진 `WriteLine` 활동을 보여 줍니다.
 
- ![자동으로 만들어진 sequence 활동](../../../docs/framework/windows-workflow-foundation/media/autosurround2.png "AutoSurround2")
+ ![자동으로 만들어진 sequence 활동](./media/autosurround2.png "AutoSurround2")
 
 ### <a name="pan-mode"></a>이동 모드
  디자이너에서 큰 워크플로를 더욱 쉽게 이동하기 위해 이동 모드를 사용할 수 있습니다. 이동 모드에서 개발자는 스크롤 바를 사용할 필요 없이 워크플로의 보이는 부분을 클릭하여 끌 수 있습니다. 이동 모드를 활성화하는 단추는 디자이너의 오른쪽 아래 모퉁이에 있습니다. 이 기능은 재호스트된 디자이너에서 지원됩니다.
 
- 다음 스크린 샷에서는 워크플로 디자이너의 오른쪽 아래 모퉁이에 있는 이동 단추를 보여 줍니다.
+ 다음 스크린 샷에서는 Workflow Designer의 오른쪽 아래 모퉁이에 있는 이동 단추를 보여 줍니다.
 
- ![워크플로 디자이너의 이동 단추](../../../docs/framework/windows-workflow-foundation/media/panbutton.png "PanButton")
+ ![워크플로 디자이너의 이동 단추](./media/panbutton.png "PanButton")
 
  마우스 가운데 단추 또는 스페이스바를 사용하여 워크플로 디자이너를 이동할 수도 있습니다.
 
@@ -67,9 +68,9 @@ Windows WF (Workflow Foundation)에서 [!INCLUDE[net_v45](../../../includes/net-
 ### <a name="outline-view-of-workflow-items"></a>워크플로 항목 개요 뷰
  계층적 워크플로를 쉽게 탐색할 수 있도록 워크플로의 구성 요소는 트리 스타일 개요 뷰로 표시됩니다. 개요 보기에 표시 되는 **문서 개요** 보기. 위쪽 메뉴에서 Visual Studio에서이 보기를 열려면 선택 **뷰**, **기타 Windows**를 **문서 개요**를 누르거나 ctrl + W, u입니다. 개요 뷰의 노드를 클릭하면 워크플로 디자이너의 해당 활동으로 이동되고 개요 뷰가 업데이트되어 디자이너에서 선택된 활동이 표시됩니다. 이 기능은 재호스트된 디자이너에서 지원됩니다.
 
- 완료 된 워크플로의 다음 스크린 샷에서 [초보자를 위한 자습서](../../../docs/framework/windows-workflow-foundation/getting-started-tutorial.md) 순차 워크플로 사용 하 여 개요 보기를 보여 줍니다.
+ 완료 된 워크플로의 다음 스크린 샷에서 [초보자를 위한 자습서](getting-started-tutorial.md) 순차 워크플로 사용 하 여 개요 보기를 보여 줍니다.
 
- ![개요 보기에서 Workflow Designer](../../../docs/framework/windows-workflow-foundation/media/outlineviewinworkflowdesigner.jpg "OutlineViewinWorkflowDesigner")
+ ![개요 보기에서 Workflow Designer](./media/outlineviewinworkflowdesigner.jpg "OutlineViewinWorkflowDesigner")
 
 ### <a name="more-control-of-visibility-of-shell-bar-and-header-items"></a>셸 표시줄 및 헤더 항목의 표시 방식 제어 향상
  재호스트된 디자이너에서 특정 워크플로에 대해 의미가 없는 일부 표준 UI 컨트롤은 해제할 수 있습니다. [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)]에서는 디자이너의 맨 아래에 있는 셸 표시줄을 통해서만 이를 사용자 지정할 수 있었습니다. [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]에서는 <xref:System.Activities.Presentation.View.DesignerView.WorkflowShellHeaderItemsVisibility%2A>를 적절한 <xref:System.Activities.Presentation.View.ShellHeaderItemsVisibility> 값으로 설정하여 디자이너의 맨 위에 있는 셸 헤더 항목의 표시 유형을 조정할 수 있습니다.
@@ -79,18 +80,18 @@ Windows WF (Workflow Foundation)에서 [!INCLUDE[net_v45](../../../includes/net-
 
  다음 스크린 샷에서는 도구 상자에서 디자이너 화면으로 활동을 끌어 올 때 표시되는 연결 지점을 보여 줍니다.
 
- ![자동 연결 지점을 보여 주는 순서도 시작 노드](../../../docs/framework/windows-workflow-foundation/media/autoconnect1.png "Autoconnect1")
+ ![자동 연결 지점을 보여 주는 순서도 시작 노드](./media/autoconnect1.png "Autoconnect1")
 
  활동을 순서도 노드와 상태 간 연결로 끌어 와 다른 두 노드 사이에 노드를 자동으로 삽입할 수도 있습니다. 다음 스크린 샷에서는 도구 상자의 활동을 끌어다 놓을 수 있는 강조 표시된 연결선을 보여 줍니다.
 
- ![자동&#45;활동을 삭제 하는 것에 대 한 핸들을 삽입할](../../../docs/framework/windows-workflow-foundation/media/autoinsert.png "Autoinsert")
+ ![자동&#45;활동을 삭제 하는 것에 대 한 핸들을 삽입할](./media/autoinsert.png "Autoinsert")
 
  자동 연결 및 자동 삽입은 재호스트된 디자이너에서 지원됩니다.
 
 ### <a name="designer-annotations"></a>디자이너 주석
  이제 대규모 워크플로를 손쉽게 개발할 수 있도록 디자이너에서 주석을 추가하여 디자인 프로세스를 추적할 수 있습니다. 주석은 활동, 상태, 순서도 노드, 변수 및 인수에 추가할 수 있습니다. 다음 스크린 샷에서는 디자이너에 주석을 추가하는 데 사용되는 상황에 맞는 메뉴를 보여 줍니다.
 
- ![주석 상황에 맞는 메뉴](../../../docs/framework/windows-workflow-foundation/media/annotationdialog.png "annotationdialog")
+ ![주석 상황에 맞는 메뉴](./media/annotationdialog.png "annotationdialog")
 
  디자이너 주석은 재호스트된 디자이너에서 지원됩니다.
 
@@ -113,7 +114,7 @@ Windows WF (Workflow Foundation)에서 [!INCLUDE[net_v45](../../../includes/net-
 ### <a name="view-state-located-in-a-separate-location-in-xaml-files"></a>XAML 파일의 별도 위치에 있는 뷰 상태  
  [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)]에서는 워크플로의 뷰 상태 정보가 XAML 파일을 통해 여러 다른 위치에 저장되었습니다. 따라서 개발자가 XAML을 직접 읽거나 뷰 상태 정보를 제거하는 코드를 작성하기에 불편했습니다. [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], XAML 파일의 뷰 상태 정보가 XAML 파일에서 별도 요소로 serialize 됩니다.  개발자가 쉽게 찾습니다 및 활동의 뷰 상태 정보를 편집 하거나 제거할 수 있습니다 뷰 상태를 완전히 합니다.  
   
- 이 기능은 재호스트된 워크플로 디자이너에서 지원됩니다.  
+ 이 기능은 재호스트된 Workflow Designer에서 지원됩니다.  
   
 ### <a name="opt-in-for-workflow-45-features-in-rehosted-designer"></a>재호스트된 디자이너에서 Workflow 4.5 기능 사용  
  이전 버전과의 호환성을 유지하기 위해 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]에 포함된 새로운 기능 중 일부는 재호스트된 디자이너에서 기본적으로 사용되지 않도록 설정됩니다. 따라서 재호스트된 디자이너를 사용하는 기존 응용 프로그램은 최신 버전으로 업데이트해도 차단되지 않습니다. 재호스트된 디자이너에서 새로운 기능을 사용하려면 <xref:System.Activities.Presentation.DesignerConfigurationService.TargetFrameworkName%2A>을 ".Net Framework 4.5"로 설정하거나 <xref:System.Activities.Presentation.DesignerConfigurationService>의 개별 멤버를 설정하여 개별 기능을 사용하도록 설정합니다.  
@@ -130,16 +131,17 @@ Windows WF (Workflow Foundation)에서 [!INCLUDE[net_v45](../../../includes/net-
   
 3.  공유 트리거 전환 작성을 위한 디자이너 지원  
   
-4.  <xref:System.Activities.Statements.StateMachine>, <xref:System.Activities.Statements.State> 및 <xref:System.Activities.Statements.Transition>을 포함하여 상태 시스템 워크플로를 만드는 데 사용되는 활동  
+4.  
+  <xref:System.Activities.Statements.StateMachine>, <xref:System.Activities.Statements.State> 및 <xref:System.Activities.Statements.Transition>을 포함하여 상태 시스템 워크플로를 만드는 데 사용되는 활동  
   
- 다음 스크린샷은에서 완료 된 상태 시스템 워크플로 [초보자를 위한 자습서](../../../docs/framework/windows-workflow-foundation/getting-started-tutorial.md) 단계 [방법: 상태 시스템 워크플로 만드는](../../../docs/framework/windows-workflow-foundation/how-to-create-a-state-machine-workflow.md)합니다.  
+ 다음 스크린샷은에서 완료 된 상태 시스템 워크플로 [초보자를 위한 자습서](getting-started-tutorial.md) 단계 [방법: 상태 시스템 워크플로 만드는](how-to-create-a-state-machine-workflow.md)합니다.  
   
- ![완료 된 상태 시스템 워크플로](../../../docs/framework/windows-workflow-foundation/media/wfstatemachinegettingstartedtutorialcomplete.JPG "WFStateMachineGettingStartedTutorialComplete")  
+ ![완료 된 상태 시스템 워크플로](./media/wfstatemachinegettingstartedtutorialcomplete.JPG "WFStateMachineGettingStartedTutorialComplete")  
   
- 상태 시스템 워크플로 만드는 방법에 대 한 자세한 내용은 참조 하세요. [상태 시스템 워크플로](../../../docs/framework/windows-workflow-foundation/state-machine-workflows.md)합니다. 상태 시스템 워크플로는 재호스트된 디자이너에서 지원됩니다.  
+ 상태 시스템 워크플로 만드는 방법에 대 한 자세한 내용은 참조 하세요. [상태 시스템 워크플로](state-machine-workflows.md)합니다. 상태 시스템 워크플로는 재호스트된 디자이너에서 지원됩니다.  
   
 ### <a name="contract-first-workflow-development"></a>계약 중심 워크플로 개발  
- 계약 중심 워크플로 개발 도구를 사용 하면 코드에서 계약을 먼저 디자인 한 다음, Visual Studio에서 몇 번의 클릭으로 자동으로 생성 활동 템플릿을 각 작업을 나타내는 도구 상자에서 개발자. 그런 다음 이러한 활동은 계약에서 정의한 작업을 구현하는 워크플로를 만드는 데 사용됩니다. Workflow Designer는 워크플로 서비스의 유효성을 검사하여 이러한 작업을 구현하고 워크플로의 서명이 계약 서명과 일치하도록 합니다. 개발자는 워크플로 서비스와 구현된 계약 컬렉션을 연결할 수도 있습니다. 계약 중심 워크플로 서비스 개발에 대 한 자세한 내용은 [방법: 기존 서비스 계약을 사용 하는 워크플로 서비스 만들기](../../../docs/framework/windows-workflow-foundation/how-to-create-a-workflow-service-that-consumes-an-existing-service-contract.md)합니다.  
+ 계약 중심 워크플로 개발 도구를 사용 하면 코드에서 계약을 먼저 디자인 한 다음, Visual Studio에서 몇 번의 클릭으로 자동으로 생성 활동 템플릿을 각 작업을 나타내는 도구 상자에서 개발자. 그런 다음 이러한 활동은 계약에서 정의한 작업을 구현하는 워크플로를 만드는 데 사용됩니다. Workflow Designer는 워크플로 서비스의 유효성을 검사하여 이러한 작업을 구현하고 워크플로의 서명이 계약 서명과 일치하도록 합니다. 개발자는 워크플로 서비스와 구현된 계약 컬렉션을 연결할 수도 있습니다. 계약 중심 워크플로 서비스 개발에 대 한 자세한 내용은 참조 하세요. [방법: 기존 서비스 계약을 사용 하는 워크플로 서비스 만들기](how-to-create-a-workflow-service-that-consumes-an-existing-service-contract.md)합니다.  
   
 > [!WARNING]
 >  계약 중심 워크플로 개발은 워크플로 디자이너에서 지원되지 않습니다.

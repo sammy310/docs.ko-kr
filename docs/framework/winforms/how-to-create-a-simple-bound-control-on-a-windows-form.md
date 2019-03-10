@@ -5,12 +5,12 @@ helpviewer_keywords:
 - data binding [Windows Forms], simple data binding
 - Windows Forms controls, data binding
 ms.assetid: 3bcaded8-0f1a-4cc0-8830-f59be253bf4e
-ms.openlocfilehash: 129301354c67d43783e997bcf42f848c5c39ab3c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f481b85c07a107b10d88d47c4873b555191bac7f
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54643574"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57708342"
 ---
 # <a name="how-to-create-a-simple-bound-control-on-a-windows-form"></a>방법: Windows Form에 단순 바인딩된 컨트롤 만들기
 사용 하 여 *단순 바인딩*, 컨트롤에서 데이터 집합 테이블에서 열 값과 같은 단일 데이터 요소를 표시할 수 있습니다. 컨트롤의 모든 속성을 데이터 값에 간단한 바인딩할 수 있습니다.  
@@ -20,7 +20,7 @@ ms.locfileid: "54643574"
   
 ### <a name="to-simple-bind-a-control"></a>단순 컨트롤을 바인딩  
   
-1.  데이터 소스에 연결합니다. 자세한 내용은 [데이터 원본에 연결할](../../../docs/framework/data/adonet/connecting-to-a-data-source.md)합니다.  
+1.  데이터 소스에 연결합니다. 자세한 내용은 [데이터 원본에 연결할](../data/adonet/connecting-to-a-data-source.md)합니다.  
   
 2.  폼에서 컨트롤을 선택 하 고 표시 합니다 **속성** 창입니다.  
   
@@ -28,7 +28,7 @@ ms.locfileid: "54643574"
   
      아래에 있는 대부분의 바인딩된 속성이 표시 됩니다는 **(DataBindings)** 속성입니다. 예를 들어, 대부분의 컨트롤에서에서의 **텍스트** 속성은 가장 자주 바인딩됩니다.  
   
-4.  속성을 원하는 경우 바인딩이 아닙니다. 일반적으로 바인딩된 속성 중 하나를 클릭 합니다 **줄임표** 단추 (![VisualStudioEllipsesButton 스크린 샷](../../../docs/framework/winforms/media/vbellipsesbutton.png "vbEllipsesButton") )에 **(고급)** 상자를 표시 합니다 **서식 지정 및 고급 바인딩** 해당 컨트롤에 대 한 속성의 전체 목록 사용 하 여 대화 상자.  
+4.  속성을 원하는 경우 바인딩이 아닙니다. 일반적으로 바인딩된 속성 중 하나를 클릭 합니다 **줄임표** 단추 (![VisualStudioEllipsesButton 스크린 샷](./media/vbellipsesbutton.png "vbEllipsesButton") )에 **(고급)** 상자를 표시 합니다 **서식 지정 및 고급 바인딩** 해당 컨트롤에 대 한 속성의 전체 목록 사용 하 여 대화 상자.  
   
 5.  아래의 드롭다운 화살표를 클릭 하 고 바인딩 속성을 선택 **바인딩**합니다.  
   
@@ -47,5 +47,5 @@ ms.locfileid: "54643574"
   
 ## <a name="see-also"></a>참고자료
 - <xref:System.Windows.Forms.Binding>
-- [Windows Forms 데이터 바인딩](../../../docs/framework/winforms/windows-forms-data-binding.md)
-- [데이터 바인딩 및 Windows Forms](../../../docs/framework/winforms/data-binding-and-windows-forms.md)
+- [Windows Forms 데이터 바인딩](windows-forms-data-binding.md)
+- [데이터 바인딩 및 Windows Forms](data-binding-and-windows-forms.md)

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Windows Forms, dynamic layout
 - FlowLayoutPanel control [Windows Forms], about FlowLayoutPanel control
 ms.assetid: 3883e024-f5a0-456d-9c27-b4dfa1cc9045
-ms.openlocfilehash: 2b08566f4b13ed54bfc0bb83c39777410251dafa
-ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
+ms.openlocfilehash: 02d111a630459344efbc5d1e45b53daffcde427f
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "56441781"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57702611"
 ---
 # <a name="flowlayoutpanel-control-overview"></a>FlowLayoutPanel 컨트롤 개요
 <xref:System.Windows.Forms.FlowLayoutPanel> 컨트롤은 수평 또는 수직 방향으로 내용을 정렬합니다. 컨트롤의 내용을 한 행에서 다음 행으로 또는 한 열에서 다음 열로 줄 바꿈할 수 있습니다. 또는 해당 내용을 줄 바꿈하는 대신 잘라낼 수 있습니다.  
@@ -31,4 +31,4 @@ ms.locfileid: "56441781"
 ## <a name="see-also"></a>참고자료
 - <xref:System.Windows.Forms.FlowLayoutPanel.FlowDirection%2A>
 - <xref:System.Windows.Forms.TableLayoutPanel>
-- [FlowLayoutPanel 컨트롤](../../../../docs/framework/winforms/controls/flowlayoutpanel-control-windows-forms.md)
+- [FlowLayoutPanel 컨트롤](flowlayoutpanel-control-windows-forms.md)

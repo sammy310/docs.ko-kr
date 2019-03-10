@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 09c575df-e0a3-4f3b-9e01-a7ac59d65287
-ms.openlocfilehash: 06d75abe814ed25fbb9d729705a6afd3bc03baed
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 6cb552752c1693ce8008eb57e0703882b7281830
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57366709"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57705989"
 ---
 # <a name="how-to-host-multiple-versions-of-a-workflow-side-by-side"></a>방법: 여러 버전의는 워크플로-Side-by-side 호스트
 `WorkflowIdentity`는 워크플로 응용 프로그램 개발자에게 이름 및 버전을 워크플로 정의에 연결하는 방법을 제공하며, 이러한 정보는 지속형 워크플로 인스턴스와 연결됩니다. 이 ID 정보는 워크플로 응용 프로그램 개발자가 여러 버전의 워크플로 정의를 side-by-side로 실행하는 경우와 같은 시나리오를 가능하도록 하는 데 사용될 수 있으며 동적 업데이트와 같은 다른 기능의 토대를 제공합니다. 자습서의 이 단계에서는 `WorkflowIdentity`를 사용하여 여러 버전의 워크플로를 동시에 호스트하는 방법을 보여 줍니다.
@@ -21,22 +21,22 @@ ms.locfileid: "57366709"
 ## <a name="in-this-topic"></a>항목 내용  
  자습서의 이 단계에서는 추가 정보를 제공하도록 워크플로의 `WriteLine` 활동을 수정하고 새 `WriteLine` 활동을 추가합니다. 원래 워크플로와 업데이트된 워크플로를 모두 동시에 실행할 수 있도록 원래 워크플로 어셈블리의 복사본을 저장하고 호스트 응용 프로그램을 업데이트합니다.  
   
--   [NumberGuessWorkflowActivities 프로젝트의 복사본을 만들려면](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md#BKMK_BackupCopy)  
+-   [NumberGuessWorkflowActivities 프로젝트의 복사본을 만들려면](how-to-host-multiple-versions-of-a-workflow-side-by-side.md#BKMK_BackupCopy)  
   
--   [워크플로 업데이트 하려면](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md#BKMK_UpdateWorkflows)  
+-   [워크플로 업데이트 하려면](how-to-host-multiple-versions-of-a-workflow-side-by-side.md#BKMK_UpdateWorkflows)  
   
-    -   [StateMachine 워크플로 업데이트 하려면](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md#BKMK_UpdateStateMachine)  
+    -   [StateMachine 워크플로 업데이트 하려면](how-to-host-multiple-versions-of-a-workflow-side-by-side.md#BKMK_UpdateStateMachine)  
   
-    -   [순서도 워크플로 업데이트 하려면](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md#BKMK_UpdateFlowchart)  
+    -   [순서도 워크플로 업데이트 하려면](how-to-host-multiple-versions-of-a-workflow-side-by-side.md#BKMK_UpdateFlowchart)  
   
-    -   [순차 워크플로 업데이트 하려면](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md#BKMK_UpdateSequential)  
+    -   [순차 워크플로 업데이트 하려면](how-to-host-multiple-versions-of-a-workflow-side-by-side.md#BKMK_UpdateSequential)  
   
--   [이전 워크플로 버전을 포함 하도록 WorkflowVersionMap을 업데이트.](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md#BKMK_UpdateWorkflowVersionMap)  
+-   [이전 워크플로 버전을 포함 하도록 WorkflowVersionMap을 업데이트.](how-to-host-multiple-versions-of-a-workflow-side-by-side.md#BKMK_UpdateWorkflowVersionMap)  
   
--   [빌드 및 응용 프로그램을 실행 하려면](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md#BKMK_BuildAndRun)  
+-   [빌드 및 응용 프로그램을 실행 하려면](how-to-host-multiple-versions-of-a-workflow-side-by-side.md#BKMK_BuildAndRun)  
   
 > [!NOTE]
->  이 항목의 단계를 수행하기 전에 응용 프로그램을 실행하고 각 유형의 여러 워크플로를 시작한 후 각 워크플로마다 한두 개의 숫자를 추측하세요. 이 단계에서 다음 단계에 이러한 지속형된 워크플로 사용 하는 [방법: 실행 중인 워크플로 인스턴스의 정의 업데이트](../../../docs/framework/windows-workflow-foundation/how-to-update-the-definition-of-a-running-workflow-instance.md)합니다.
+>  이 항목의 단계를 수행하기 전에 응용 프로그램을 실행하고 각 유형의 여러 워크플로를 시작한 후 각 워크플로마다 한두 개의 숫자를 추측하세요. 이 단계에서 다음 단계에 이러한 지속형된 워크플로 사용 하는 [방법: 실행 중인 워크플로 인스턴스의 정의 업데이트](how-to-update-the-definition-of-a-running-workflow-instance.md)합니다.
 
 > [!NOTE]
 >  초보자를 위한 자습서의 각 단계는 이전 단계를 바탕으로 합니다. 이전 단계를 완료 하지 않은 경우에에서 자습서의 완성된 된 버전을 다운로드할 수 있습니다 [Windows Workflow Foundation(wf45 ()-초보자를 위한 자습서](https://go.microsoft.com/fwlink/?LinkID=248976)합니다.  
@@ -60,7 +60,7 @@ ms.locfileid: "57366709"
     > [!NOTE]
     >  이 항목의 단계에서는 여러 버전의 워크플로를 포함하는 데 사용되는 어셈블리를 관리하는 한 가지 방법을 보여 줍니다. 어셈블리에 강력한 이름을 지정하거나 어셈블리를 전역 어셈블리 캐시에 등록하는 등의 다른 방법을 사용할 수도 있습니다.
 
-8.  라는 새 폴더를 만듭니다 **NumberGuessWorkflowActivities_du** 와 같은 폴더에 **NumberGuessWorkflowHost**하십시오 **NumberGuessWorkflowActivities**, 및 새로 추가 **PreviousVersions** 폴더를 모든 파일 및 하위 폴더를 복사 합니다 **NumberGuessWorkflowActivities** 폴더를 새  **NumberGuessWorkflowActivities_du** 폴더입니다. 이 백업 복사본에서 활동의 초기 버전에 대 한 프로젝트는 [방법: 실행 중인 워크플로 인스턴스의 정의 업데이트](../../../docs/framework/windows-workflow-foundation/how-to-update-the-definition-of-a-running-workflow-instance.md)합니다.
+8.  라는 새 폴더를 만듭니다 **NumberGuessWorkflowActivities_du** 와 같은 폴더에 **NumberGuessWorkflowHost**하십시오 **NumberGuessWorkflowActivities**, 및 새로 추가 **PreviousVersions** 폴더를 모든 파일 및 하위 폴더를 복사 합니다 **NumberGuessWorkflowActivities** 폴더를 새  **NumberGuessWorkflowActivities_du** 폴더입니다. 이 백업 복사본에서 활동의 초기 버전에 대 한 프로젝트는 [방법: 실행 중인 워크플로 인스턴스의 정의 업데이트](how-to-update-the-definition-of-a-running-workflow-instance.md)합니다.
 
 9. 다시 엽니다는 **WF45GettingStartedTutorial** Visual Studio 2012의 솔루션입니다.
 
@@ -589,4 +589,4 @@ ms.locfileid: "57366709"
 
 4.  다시 숫자 추측 응용 프로그램으로 전환하고 업데이트를 수행하기 전에 시작된 워크플로 중 하나를 선택합니다. 상태 창 아래에 표시된 버전 정보를 확인하여 현재 선택된 워크플로의 버전을 식별할 수 있습니다. 몇 개의 추측 값을 입력한 후, 상태 업데이트가 이전 버전의 `WriteLine` 활동 출력과 일치하며 사용자의 추측 값을 포함하지 않음을 확인할 수 있습니다. 이는 이러한 워크플로가 `WriteLine` 업데이트가 없는 이전 워크플로 정의를 사용하기 때문입니다.
 
-     다음 단계에서는 [방법: 실행 중인 워크플로 인스턴스의 정의 업데이트](../../../docs/framework/windows-workflow-foundation/how-to-update-the-definition-of-a-running-workflow-instance.md)를 실행 중인 `v1` 워크플로 인스턴스를 새 기능을 포함 하도록 업데이트를 `v2` 인스턴스.
+     다음 단계에서는 [방법: 실행 중인 워크플로 인스턴스의 정의 업데이트](how-to-update-the-definition-of-a-running-workflow-instance.md)를 실행 중인 `v1` 워크플로 인스턴스를 새 기능을 포함 하도록 업데이트를 `v2` 인스턴스.

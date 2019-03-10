@@ -7,12 +7,12 @@ helpviewer_keywords:
 - SnapLine class [Windows Forms], walkthroughs
 - Windows Forms controls, arranging
 ms.assetid: d5c9edc7-cf30-4a97-8ebe-201d569340f8
-ms.openlocfilehash: 136a655064fc0c955cadd2f15e5900579e90187a
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
+ms.openlocfilehash: f898a15fd2157c625767d53d8b53c5469fb9a957
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56748036"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57703597"
 ---
 # <a name="walkthrough-arranging-controls-on-windows-forms-using-snaplines"></a>연습: 맞춤선을 사용 하 여 Windows Forms에서 컨트롤 정렬
 폼의 정확한 컨트롤 배치는 많은 응용 프로그램에서 우선 순위가 높습니다. Windows Forms 디자이너를 이렇게 하려면 여러 레이아웃 도구를 제공 합니다. 가장 중요 한 것은 <xref:System.Windows.Forms.Design.Behavior.SnapLine> 기능입니다.  
@@ -92,7 +92,7 @@ ms.locfileid: "56748036"
 > [!NOTE]
 >  경우 양식의 <xref:System.Windows.Forms.Control.Padding%2A> 0,0,0,0 속성, Windows Forms 디자이너는 숨겨진 폼 제공 <xref:System.Windows.Forms.Control.Padding%2A> 9,9,9,9 값입니다. 이 동작을 재정의 하려면 0,0,0,0 이외의 값을 할당 합니다.  
   
-1.  값을 변경 합니다 <xref:System.Windows.Forms.Button> 컨트롤의 <xref:System.Windows.Forms.Control.Margin%2A> 속성을 확장 하 여를 <xref:System.Windows.Forms.Control.Margin%2A> 에서 항목을 **속성** 창과 설정을 <xref:System.Windows.Forms.Padding.All%2A> 속성을 0. 세부 정보를 참조 하세요. [연습: 레이아웃 Windows Forms 컨트롤 Padding, Margins 및 AutoSize 속성을 사용 하 여](../../../../docs/framework/winforms/controls/windows-forms-controls-padding-autosize.md)입니다.  
+1.  값을 변경 합니다 <xref:System.Windows.Forms.Button> 컨트롤의 <xref:System.Windows.Forms.Control.Margin%2A> 속성을 확장 하 여를 <xref:System.Windows.Forms.Control.Margin%2A> 에서 항목을 **속성** 창과 설정을 <xref:System.Windows.Forms.Padding.All%2A> 속성을 0. 세부 정보를 참조 하세요. [연습: 레이아웃 Windows Forms 컨트롤 Padding, Margins 및 AutoSize 속성을 사용 하 여](windows-forms-controls-padding-autosize.md)입니다.  
   
 2.  이동 된 <xref:System.Windows.Forms.Button> 맞춤선 나타날 때까지 폼의 오른쪽 테두리에 가까운 제어 합니다. 이 거리는 이제 폼의 값을 제공한 경우 <xref:System.Windows.Forms.Control.Padding%2A> 속성입니다.  
   
@@ -154,7 +154,7 @@ ms.locfileid: "56748036"
   
 1.  <xref:System.Windows.Forms.Button> 도구 상자 **에서** 컨트롤을 폼으로 끌어다 놓습니다.  
   
-2.  크기를 조정 합니다 <xref:System.Windows.Forms.Button> 끌어서 크기 조정 핸들의 모서리 중 하나를 선택 하 여 제어 합니다. 자세한 내용은 [방법: Windows Forms에서 컨트롤 크기 조정](../../../../docs/framework/winforms/controls/how-to-resize-controls-on-windows-forms.md)합니다.  
+2.  크기를 조정 합니다 <xref:System.Windows.Forms.Button> 끌어서 크기 조정 핸들의 모서리 중 하나를 선택 하 여 제어 합니다. 자세한 내용은 [방법: Windows Forms에서 컨트롤 크기 조정](how-to-resize-controls-on-windows-forms.md)합니다.  
   
 3.  중 하나가 될 때까지 크기 조정 핸들을 끌어는 <xref:System.Windows.Forms.Button> 컨트롤의 테두리 다른 컨트롤에 맞춥니다. 맞춤선에 표시 되는 참고 합니다. 또한 이때 크기 조정 핸들을 맞춤선이 가리키는 위치에 맞춰집니다.  
   
@@ -165,7 +165,7 @@ ms.locfileid: "56748036"
   
 #### <a name="to-align-a-label-to-a-controls-text"></a>컨트롤의 텍스트 레이블을 맞출  
   
-1.  <xref:System.Windows.Forms.TextBox> 도구 상자 **에서** 컨트롤을 폼으로 끌어다 놓습니다. 삭제할 경우는 <xref:System.Windows.Forms.TextBox> 폼에 컨트롤, 스마트 태그 문자 모양을 클릭 및 선택 합니다 **textBox1에 텍스트를 설정** 옵션. 세부 정보를 참조 하세요. [연습: Windows에서 스마트 태그를 사용 하 여 일반적인 작업을 수행 Forms 컨트롤](../../../../docs/framework/winforms/controls/performing-common-tasks-using-smart-tags-on-wf-controls.md)합니다.  
+1.  <xref:System.Windows.Forms.TextBox> 도구 상자 **에서** 컨트롤을 폼으로 끌어다 놓습니다. 삭제할 경우는 <xref:System.Windows.Forms.TextBox> 폼에 컨트롤, 스마트 태그 문자 모양을 클릭 및 선택 합니다 **textBox1에 텍스트를 설정** 옵션. 세부 정보를 참조 하세요. [연습: Windows에서 스마트 태그를 사용 하 여 일반적인 작업을 수행 Forms 컨트롤](performing-common-tasks-using-smart-tags-on-wf-controls.md)합니다.  
   
 2.  <xref:System.Windows.Forms.Label> 도구 상자 **에서** 컨트롤을 폼으로 끌어다 놓습니다.  
   
@@ -241,7 +241,7 @@ ms.locfileid: "56748036"
   
 ## <a name="see-also"></a>참고자료
 - <xref:System.Windows.Forms.Design.Behavior.SnapLine>
-- [연습: FlowLayoutPanel을 사용 하 여 Windows Forms에서 컨트롤 정렬](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel.md)
-- [연습: TableLayoutPanel을 사용 하 여 Windows Forms에서 컨트롤 정렬](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)
-- [연습: Windows Forms 컨트롤 Padding, Margins 및 AutoSize 속성을 사용 하 여 레이아웃](../../../../docs/framework/winforms/controls/windows-forms-controls-padding-autosize.md)
-- [Windows Forms에서 컨트롤 정렬](../../../../docs/framework/winforms/controls/arranging-controls-on-windows-forms.md)
+- [연습: FlowLayoutPanel을 사용 하 여 Windows Forms에서 컨트롤 정렬](walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel.md)
+- [연습: TableLayoutPanel을 사용 하 여 Windows Forms에서 컨트롤 정렬](walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)
+- [연습: Windows Forms 컨트롤 Padding, Margins 및 AutoSize 속성을 사용 하 여 레이아웃](windows-forms-controls-padding-autosize.md)
+- [Windows Forms에서 컨트롤 정렬](arranging-controls-on-windows-forms.md)

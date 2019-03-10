@@ -7,12 +7,12 @@ helpviewer_keywords:
 - toolbars [Windows Forms], about toolbars
 - ToolBar control [Windows Forms], about ToolBar controls
 ms.assetid: d426b203-0216-4dbe-b834-1641e50a9c29
-ms.openlocfilehash: 42c3d9c681da9ca87125a274fa12af623269bd70
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 249c5854b83a62878ecef0350e08ba4b00523aff
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54745250"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57708849"
 ---
 # <a name="toolbar-control-overview-windows-forms"></a>ToolBar 컨트롤 개요(Windows Forms)
 > [!NOTE]
@@ -28,11 +28,11 @@ ms.locfileid: "54745250"
   
  경우는 <xref:System.Windows.Forms.ToolBar.Appearance%2A> 속성이 <xref:System.Windows.Forms.ToolBarAppearance>, 도구 모음 단추 볼록하게 표시 합니다. 설정할 수 있습니다 합니다 <xref:System.Windows.Forms.ToolBar.Appearance%2A> 도구 모음의 속성 <xref:System.Windows.Forms.ToolBarAppearance> 평면 모양으로 표시 하려면 도구 모음 및 단추를 제공 합니다. 마우스 포인터를 평면 모양의 단추 위로 움직이면 단추 모양이 3차원 모양으로 바뀝니다. 도구 모음 단추는 구분 기호를 사용하여 논리 그룹으로 나눌 수 있습니다. 구분 기호는 도구 모음 단추를 <xref:System.Windows.Forms.ToolBarButton.Style%2A> 속성이 설정 <xref:System.Windows.Forms.ToolBarButtonStyle>합니다. 도구 모음에서 빈 공간으로 나타납니다. 도구 모음이 평면 모양이면 단추 구분 기호는 단추 사이의 공간이 아니라 선으로 나타납니다.  
   
- 합니다 <xref:System.Windows.Forms.ToolBar> 컨트롤을 사용 하면 추가 하 여 도구 모음을 만들 수 있습니다 <xref:System.Windows.Forms.Button> 개체를 <xref:System.Windows.Forms.ToolBar.Buttons%2A> 컬렉션입니다. 컬렉션 편집기를 사용 하 여 단추를 추가 하는 <xref:System.Windows.Forms.ToolBar> ; 각 <xref:System.Windows.Forms.Button> 둘 다 할당할 수 있지만 개체는 텍스트 또는 할당 된 이미지에 있어야 합니다. 이미지는 연결된 [ImageList](../../../../docs/framework/winforms/controls/imagelist-component-windows-forms.md) 구성 요소에서 제공됩니다. 런타임에 추가 하거나에서 단추를 제거할 수 있습니다 합니다 <xref:System.Windows.Forms.ToolBar.ToolBarButtonCollection> 를 사용 하는 <xref:System.Windows.Forms.ToolBar.ToolBarButtonCollection.Add%2A> 및 <xref:System.Windows.Forms.ToolBar.ToolBarButtonCollection.Remove%2A> 메서드. 단추를 프로그래밍 하는 <xref:System.Windows.Forms.ToolBar>, 코드를 추가 하는 <xref:System.Windows.Forms.ToolBar.ButtonClick> 의 이벤트를 <xref:System.Windows.Forms.ToolBar>를 사용 하 여를 <xref:System.Windows.Forms.ToolBarButtonClickEventArgs.Button%2A> 의 속성을 <xref:System.Windows.Forms.ToolBarButtonClickEventArgs> 어떤 단추가 클릭 되었는지 확인 하려면 클래스.  
+ 합니다 <xref:System.Windows.Forms.ToolBar> 컨트롤을 사용 하면 추가 하 여 도구 모음을 만들 수 있습니다 <xref:System.Windows.Forms.Button> 개체를 <xref:System.Windows.Forms.ToolBar.Buttons%2A> 컬렉션입니다. 컬렉션 편집기를 사용 하 여 단추를 추가 하는 <xref:System.Windows.Forms.ToolBar> ; 각 <xref:System.Windows.Forms.Button> 둘 다 할당할 수 있지만 개체는 텍스트 또는 할당 된 이미지에 있어야 합니다. 이미지는 연결된 [ImageList](imagelist-component-windows-forms.md) 구성 요소에서 제공됩니다. 런타임에 추가 하거나에서 단추를 제거할 수 있습니다 합니다 <xref:System.Windows.Forms.ToolBar.ToolBarButtonCollection> 를 사용 하는 <xref:System.Windows.Forms.ToolBar.ToolBarButtonCollection.Add%2A> 및 <xref:System.Windows.Forms.ToolBar.ToolBarButtonCollection.Remove%2A> 메서드. 단추를 프로그래밍 하는 <xref:System.Windows.Forms.ToolBar>, 코드를 추가 하는 <xref:System.Windows.Forms.ToolBar.ButtonClick> 의 이벤트를 <xref:System.Windows.Forms.ToolBar>를 사용 하 여를 <xref:System.Windows.Forms.ToolBarButtonClickEventArgs.Button%2A> 의 속성을 <xref:System.Windows.Forms.ToolBarButtonClickEventArgs> 어떤 단추가 클릭 되었는지 확인 하려면 클래스.  
   
 ## <a name="see-also"></a>참고자료
 - <xref:System.Windows.Forms.ToolBar>
-- [ToolBar 컨트롤](../../../../docs/framework/winforms/controls/toolbar-control-windows-forms.md)
-- [방법: ToolBar 컨트롤에 단추 추가](../../../../docs/framework/winforms/controls/how-to-add-buttons-to-a-toolbar-control.md)
-- [방법: 도구 모음 단추의 아이콘 정의](../../../../docs/framework/winforms/controls/how-to-define-an-icon-for-a-toolbar-button.md)
-- [방법: Toolbar 단추의 메뉴 이벤트 트리거](../../../../docs/framework/winforms/controls/how-to-trigger-menu-events-for-toolbar-buttons.md)
+- [ToolBar 컨트롤](toolbar-control-windows-forms.md)
+- [방법: ToolBar 컨트롤에 단추 추가](how-to-add-buttons-to-a-toolbar-control.md)
+- [방법: 도구 모음 단추의 아이콘 정의](how-to-define-an-icon-for-a-toolbar-button.md)
+- [방법: Toolbar 단추의 메뉴 이벤트 트리거](how-to-trigger-menu-events-for-toolbar-buttons.md)

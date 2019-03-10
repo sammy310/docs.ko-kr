@@ -10,12 +10,12 @@ helpviewer_keywords:
 - pens [Windows Forms], drawing lines
 - drawing lines [Windows Forms], line caps
 ms.assetid: eb68c3e1-c400-4886-8a04-76978a429cb6
-ms.openlocfilehash: a0d4d92d7201c4ac09eadd11d8f2e38a3c80c287
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 05c678b25563eb7a4e2e5ce0e49138b5445b4764
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54713140"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57707601"
 ---
 # <a name="how-to-draw-a-line-with-line-caps"></a>방법: 선 끝이 있는 선 그리기
 선 끝이 호출 하는 여러 도형 중 하나에서 시작 또는 줄의 끝에 그릴 수 있습니다. [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 여러 선 끝 모양을 화살촉 라운드, 사각형, 다이아몬드 등을 지원합니다.  
@@ -25,10 +25,10 @@ ms.locfileid: "54713140"
   
  다음 예제에는 한쪽 end에 있는 화살촉이와 다른 끝에 있는 둥근 단면 선을 그립니다. 그림 결과 줄을 보여 줍니다.  
   
- ![펜](../../../../docs/framework/winforms/advanced/media/pens4.gif "pens4")  
+ ![펜](./media/pens4.gif "pens4")  
   
- [!code-csharp[System.Drawing.UsingAPen#71](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingAPen/CS/Class1.cs#71)]
- [!code-vb[System.Drawing.UsingAPen#71](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingAPen/VB/Class1.vb#71)]  
+ [!code-csharp[System.Drawing.UsingAPen#71](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingAPen/CS/Class1.cs#71)]
+ [!code-vb[System.Drawing.UsingAPen#71](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingAPen/VB/Class1.vb#71)]  
   
 ## <a name="compiling-the-code"></a>코드 컴파일  
   
@@ -37,5 +37,5 @@ ms.locfileid: "54713140"
 ## <a name="see-also"></a>참고자료
 - <xref:System.Drawing.Pen?displayProperty=nameWithType>
 - <xref:System.Drawing.Drawing2D.LineCap?displayProperty=nameWithType>
-- [Windows Forms의 그래픽 및 그리기](../../../../docs/framework/winforms/advanced/graphics-and-drawing-in-windows-forms.md)
-- [펜을 사용하여 선과 도형 그리기](../../../../docs/framework/winforms/advanced/using-a-pen-to-draw-lines-and-shapes.md)
+- [Windows Forms의 그래픽 및 그리기](graphics-and-drawing-in-windows-forms.md)
+- [펜을 사용하여 선과 도형 그리기](using-a-pen-to-draw-lines-and-shapes.md)

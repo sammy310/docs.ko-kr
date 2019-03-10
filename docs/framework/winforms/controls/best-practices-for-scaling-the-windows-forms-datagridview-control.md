@@ -9,12 +9,12 @@ helpviewer_keywords:
 - best practices [Windows Forms], dataGridView control
 - DataGridView control [Windows Forms], scaling
 ms.assetid: 8321a8a6-6340-4fd1-b475-fa090b905aaf
-ms.openlocfilehash: 5adbcdb4aa34b3878e278d47337defe4388dd892
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 895dd132c070157355c28a935e43240f2750159e
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54710874"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57706419"
 ---
 # <a name="best-practices-for-scaling-the-windows-forms-datagridview-control"></a>Windows Forms DataGridView 컨트롤의 크기를 조정하는 최선의 방법
 <xref:System.Windows.Forms.DataGridView> 컨트롤은 최대 확장성을 제공 하도록 설계 되었습니다. 많은 양의 데이터를 표시 해야 할 경우 많은 양의 메모리를 소비 하거나 (UI) 사용자 인터페이스의 응답성을 저하 시 키 지 않으려면이 항목에 설명 된 지침을 따라야 합니다. 이 항목에서는 다음과 같은 문제를 설명합니다.  
@@ -31,16 +31,16 @@ ms.locfileid: "54710874"
   
 -   행의 공유가 해제 차단  
   
- 특별 한 성능 요구 사항에 있는 경우에 가상 모드 구현 하 고 고유한 데이터 관리 작업을 제공할 수 있습니다. 자세한 내용은 [Windows Forms DataGridView 컨트롤의 데이터 디스플레이 모드](../../../../docs/framework/winforms/controls/data-display-modes-in-the-windows-forms-datagridview-control.md)합니다.  
+ 특별 한 성능 요구 사항에 있는 경우에 가상 모드 구현 하 고 고유한 데이터 관리 작업을 제공할 수 있습니다. 자세한 내용은 [Windows Forms DataGridView 컨트롤의 데이터 디스플레이 모드](data-display-modes-in-the-windows-forms-datagridview-control.md)합니다.  
   
 ## <a name="using-cell-styles-efficiently"></a>셀 스타일을 효율적으로 사용  
  각 셀, 행 및 열에는 자체 스타일 정보를 가질 수 있습니다. 스타일 정보에 저장 됩니다 <xref:System.Windows.Forms.DataGridViewCellStyle> 개체입니다. 여러 개인에 대 한 셀 스타일 개체를 만드는 <xref:System.Windows.Forms.DataGridView> 많은 양의 데이터를 사용 하는 경우에 특히 요소 비효율적일 수 있습니다. 성능에 영향을 방지 하려면 다음 지침을 따르십시오.  
   
 -   개별 셀 스타일 속성을 설정 하지 마세요 <xref:System.Windows.Forms.DataGridViewCell> 또는 <xref:System.Windows.Forms.DataGridViewRow> 개체입니다. 여기에 지정 된 행 개체를 <xref:System.Windows.Forms.DataGridView.RowTemplate%2A> 속성입니다. 행 템플릿을 복제는 각 새 행 템플릿의 셀 스타일 개체의 자체 복사본을 받게 됩니다. 최대 확장성을 위해 아래에 있는 셀 스타일 속성을 설정 합니다 <xref:System.Windows.Forms.DataGridView> 수준입니다. 예를 들어 설정 된 <xref:System.Windows.Forms.DataGridView.DefaultCellStyle%2A?displayProperty=nameWithType> 속성 대신 <xref:System.Windows.Forms.DataGridViewCell.Style%2A?displayProperty=nameWithType> 속성입니다.  
   
--   일부 셀에 기본 서식 이외의 형식에 필요한 경우 사용 하 여 동일한 <xref:System.Windows.Forms.DataGridViewCellStyle> 셀, 행 또는 열 그룹에서 인스턴스. 직접 형식의 속성을 설정 하지 마십시오 <xref:System.Windows.Forms.DataGridViewCellStyle> 개별 셀, 행 및 열에 있습니다. 셀 스타일 공유의 예제를 참조 하세요. [방법: Windows Forms DataGridView 컨트롤에 기본 셀 스타일 설정](../../../../docs/framework/winforms/controls/how-to-set-default-cell-styles-for-the-windows-forms-datagridview-control.md)합니다. 셀 스타일을 개별적으로 처리 하 여 설정 하는 경우 성능 저하를 방지할 수도 있습니다는 <xref:System.Windows.Forms.DataGridView.CellFormatting> 이벤트 처리기입니다. 예는 [방법: Windows Forms DataGridView 컨트롤에서 데이터 형식 사용자 지정](../../../../docs/framework/winforms/controls/how-to-customize-data-formatting-in-the-windows-forms-datagridview-control.md)합니다.  
+-   일부 셀에 기본 서식 이외의 형식에 필요한 경우 사용 하 여 동일한 <xref:System.Windows.Forms.DataGridViewCellStyle> 셀, 행 또는 열 그룹에서 인스턴스. 직접 형식의 속성을 설정 하지 마십시오 <xref:System.Windows.Forms.DataGridViewCellStyle> 개별 셀, 행 및 열에 있습니다. 셀 스타일 공유의 예제를 참조 하세요. [방법: Windows Forms DataGridView 컨트롤에 기본 셀 스타일 설정](how-to-set-default-cell-styles-for-the-windows-forms-datagridview-control.md)합니다. 셀 스타일을 개별적으로 처리 하 여 설정 하는 경우 성능 저하를 방지할 수도 있습니다는 <xref:System.Windows.Forms.DataGridView.CellFormatting> 이벤트 처리기입니다. 예는 [방법: Windows Forms DataGridView 컨트롤에서 데이터 형식 사용자 지정](how-to-customize-data-formatting-in-the-windows-forms-datagridview-control.md)합니다.  
   
--   셀의 스타일을 결정 하는 경우 사용 합니다 <xref:System.Windows.Forms.DataGridViewCell.InheritedStyle%2A?displayProperty=nameWithType> 속성 대신 <xref:System.Windows.Forms.DataGridViewCell.Style%2A?displayProperty=nameWithType> 속성입니다. 에 액세스 하는 <xref:System.Windows.Forms.DataGridViewCell.Style%2A> 속성의 새 인스턴스를 만듭니다는 <xref:System.Windows.Forms.DataGridViewCellStyle> 클래스 속성에 이미 사용 하지 않은 경우. 또한이 개체 일부 스타일은 행, 열 또는 컨트롤에서 상속 하는 경우에 하지 셀에 대 한 전체 스타일 정보를 포함할 수 있습니다. 셀 스타일 상속에 대 한 자세한 내용은 참조 하세요. [Windows Forms DataGridView 컨트롤의 셀 스타일](../../../../docs/framework/winforms/controls/cell-styles-in-the-windows-forms-datagridview-control.md)합니다.  
+-   셀의 스타일을 결정 하는 경우 사용 합니다 <xref:System.Windows.Forms.DataGridViewCell.InheritedStyle%2A?displayProperty=nameWithType> 속성 대신 <xref:System.Windows.Forms.DataGridViewCell.Style%2A?displayProperty=nameWithType> 속성입니다. 에 액세스 하는 <xref:System.Windows.Forms.DataGridViewCell.Style%2A> 속성의 새 인스턴스를 만듭니다는 <xref:System.Windows.Forms.DataGridViewCellStyle> 클래스 속성에 이미 사용 하지 않은 경우. 또한이 개체 일부 스타일은 행, 열 또는 컨트롤에서 상속 하는 경우에 하지 셀에 대 한 전체 스타일 정보를 포함할 수 있습니다. 셀 스타일 상속에 대 한 자세한 내용은 참조 하세요. [Windows Forms DataGridView 컨트롤의 셀 스타일](cell-styles-in-the-windows-forms-datagridview-control.md)합니다.  
   
 ## <a name="using-shortcut-menus-efficiently"></a>바로 가기 메뉴를 효율적으로 사용  
  각 셀, 행 및 열에는 자체 바로 가기 메뉴를 가질 수 있습니다. 바로 가기 메뉴에는 <xref:System.Windows.Forms.DataGridView> 컨트롤이 표시 됩니다 <xref:System.Windows.Forms.ContextMenuStrip> 컨트롤입니다. 셀 스타일 개체의 경우와 마찬가지로 여러 개인에 대 한 바로 가기 메뉴를 만드는 <xref:System.Windows.Forms.DataGridView> 요소 성능이 저하 됩니다. 이러한 성능 저하를 방지 하려면 다음 지침을 따르십시오.  
@@ -60,7 +60,7 @@ ms.locfileid: "54710874"
   
 -   최대 확장성을 위해 자동 크기 조정 전원을 끄고 프로그래밍 방식으로 크기 조정을 사용 합니다.  
   
- 자세한 내용은 [Windows Forms DataGridView 컨트롤의 크기 조정 옵션](../../../../docs/framework/winforms/controls/sizing-options-in-the-windows-forms-datagridview-control.md)합니다.  
+ 자세한 내용은 [Windows Forms DataGridView 컨트롤의 크기 조정 옵션](sizing-options-in-the-windows-forms-datagridview-control.md)합니다.  
   
 ## <a name="using-the-selected-cells-rows-and-columns-collections-efficiently"></a>선택한 셀, 행 및 열 컬렉션의 효율적인 사용  
  <xref:System.Windows.Forms.DataGridView.SelectedCells%2A> 큰 선택 항목을 사용 하 여 컬렉션을 효율적으로 수행 하지 않습니다. <xref:System.Windows.Forms.DataGridView.SelectedRows%2A> 하 고 <xref:System.Windows.Forms.DataGridView.SelectedColumns%2A> 컬렉션도 비효율적일 수 있습니다, 낮은 수준에 있지만 일반적인 셀 보다 더 적은 행 수 있기 때문에 <xref:System.Windows.Forms.DataGridView> 컨트롤과 행 보다 더 적은 열이 많습니다. 이러한 컬렉션을 사용 하 여 작업할 때 성능 저하를 방지 하려면 다음 지침을 사용 합니다.  
@@ -137,9 +137,9 @@ ms.locfileid: "54710874"
   
 ## <a name="see-also"></a>참고자료
 - <xref:System.Windows.Forms.DataGridView>
-- [Windows Forms DataGridView 컨트롤의 성능 조정](../../../../docs/framework/winforms/controls/performance-tuning-in-the-windows-forms-datagridview-control.md)
-- [Windows Forms DataGridView 컨트롤의 가상 모드](../../../../docs/framework/winforms/controls/virtual-mode-in-the-windows-forms-datagridview-control.md)
-- [Windows Forms DataGridView 컨트롤의 데이터 디스플레이 모드](../../../../docs/framework/winforms/controls/data-display-modes-in-the-windows-forms-datagridview-control.md)
-- [Windows Forms DataGridView 컨트롤의 셀 스타일](../../../../docs/framework/winforms/controls/cell-styles-in-the-windows-forms-datagridview-control.md)
-- [방법: Windows Forms DataGridView 컨트롤에 대 한 기본 셀 스타일 설정](../../../../docs/framework/winforms/controls/how-to-set-default-cell-styles-for-the-windows-forms-datagridview-control.md)
-- [Windows Forms DataGridView 컨트롤의 크기 조정 옵션](../../../../docs/framework/winforms/controls/sizing-options-in-the-windows-forms-datagridview-control.md)
+- [Windows Forms DataGridView 컨트롤의 성능 조정](performance-tuning-in-the-windows-forms-datagridview-control.md)
+- [Windows Forms DataGridView 컨트롤의 가상 모드](virtual-mode-in-the-windows-forms-datagridview-control.md)
+- [Windows Forms DataGridView 컨트롤의 데이터 디스플레이 모드](data-display-modes-in-the-windows-forms-datagridview-control.md)
+- [Windows Forms DataGridView 컨트롤의 셀 스타일](cell-styles-in-the-windows-forms-datagridview-control.md)
+- [방법: Windows Forms DataGridView 컨트롤에 대 한 기본 셀 스타일 설정](how-to-set-default-cell-styles-for-the-windows-forms-datagridview-control.md)
+- [Windows Forms DataGridView 컨트롤의 크기 조정 옵션](sizing-options-in-the-windows-forms-datagridview-control.md)

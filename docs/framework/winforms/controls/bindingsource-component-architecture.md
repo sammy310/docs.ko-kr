@@ -7,12 +7,12 @@ helpviewer_keywords:
 - BindingSource component [Windows Forms], about BindingSource component
 - data binding [Windows Forms], BindingSource component
 ms.assetid: 7bc69c90-8a11-48b1-9336-3adab5b41591
-ms.openlocfilehash: 9fb343cd7ca3f17509353ddd088ab6d945118903
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9348d44697b2c617481b55242faa83ab517e6226
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54514181"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57707822"
 ---
 # <a name="bindingsource-component-architecture"></a>BindingSource 구성 요소 아키텍처
 사용 하 여는 <xref:System.Windows.Forms.BindingSource> 구성 요소를 데이터 원본에 일반적으로 모든 Windows Forms 컨트롤을 바인딩할 수 있습니다.  
@@ -69,9 +69,9 @@ ms.locfileid: "54514181"
   
 -   연결할 수는 <xref:System.Windows.Forms.BindingSource> 현재 제어 바인딩을 유지 하면서 다른 데이터 원본에 있습니다.  
   
--   데이터 소스의 항목을 변경 하 고 바인딩된 컨트롤을 알릴 수 있습니다. 자세한 내용은 [방법: BindingSource 사용 하 여 Windows Forms 컨트롤에 데이터 소스 업데이트 내용 반영](../../../../docs/framework/winforms/controls/reflect-data-source-updates-in-a-wf-control-with-the-bindingsource.md)합니다.  
+-   데이터 소스의 항목을 변경 하 고 바인딩된 컨트롤을 알릴 수 있습니다. 자세한 내용은 [방법: BindingSource 사용 하 여 Windows Forms 컨트롤에 데이터 소스 업데이트 내용 반영](reflect-data-source-updates-in-a-wf-control-with-the-bindingsource.md)합니다.  
   
--   바인딩할 수 있습니다는 <xref:System.Type> 메모리 내 개체 대신 합니다. 자세한 내용은 [방법: 형식에는 Windows Forms 컨트롤 바인딩](../../../../docs/framework/winforms/controls/how-to-bind-a-windows-forms-control-to-a-type.md)합니다. 그런 다음 런타임에 개체에 바인딩할 수 있습니다.  
+-   바인딩할 수 있습니다는 <xref:System.Type> 메모리 내 개체 대신 합니다. 자세한 내용은 [방법: 형식에는 Windows Forms 컨트롤 바인딩](how-to-bind-a-windows-forms-control-to-a-type.md)합니다. 그런 다음 런타임에 개체에 바인딩할 수 있습니다.  
   
 ### <a name="currency-management"></a>위치 관리  
  합니다 <xref:System.Windows.Forms.BindingSource> 구성 요소를 구현 하는 <xref:System.Windows.Forms.ICurrencyManagerProvider> 통화 관리를 처리 하는 인터페이스입니다. 사용 하 여 합니다 <xref:System.Windows.Forms.ICurrencyManagerProvider> 인터페이스에 액세스할 수도 있습니다에 대 한 통화 관리자에 게는 <xref:System.Windows.Forms.BindingSource>, 다른 통화 관리자 외에도 <xref:System.Windows.Forms.BindingSource> 동일 하 게 바인딩된 <xref:System.Windows.Forms.BindingSource.DataMember%2A>합니다.  
@@ -123,7 +123,7 @@ ms.locfileid: "54514181"
 |<xref:System.Windows.Forms.BindingSource.AddNew%2A> 메서드|내부 목록에 새 항목을 추가합니다. 구현 하는 데이터 원본에 적용 됩니다는 <xref:System.ComponentModel.IBindingList> 인터페이스 및 항목을 추가 하도록 허용 (즉,는 <xref:System.Windows.Forms.BindingSource.AllowNew%2A> 속성이 `true`).|  
   
 ### <a name="custom-item-creation"></a>사용자 지정 항목 만들기  
- 처리할 수 있습니다는 <xref:System.Windows.Forms.BindingSource.AddingNew> 고유한 항목 생성 논리를 제공 하는 이벤트입니다. 합니다 <xref:System.Windows.Forms.BindingSource.AddingNew> 새 개체에 추가 되기 전에 이벤트가 발생 된 <xref:System.Windows.Forms.BindingSource>합니다. 후에이 이벤트가 발생 합니다 <xref:System.Windows.Forms.BindingSource.AddNew%2A> 메서드를 호출 전에 내부 목록에 새 항목이 추가 됩니다. 이 이벤트를 처리 하면에서 파생 하지 않고 사용자 지정 항목 만들기 동작을 제공할 수 있습니다는 <xref:System.Windows.Forms.BindingSource> 클래스입니다. 자세한 내용은 [방법: Windows Forms BindingSource 사용 하 여 항목 추가 사용자 지정](../../../../docs/framework/winforms/controls/how-to-customize-item-addition-with-the-windows-forms-bindingsource.md)합니다.  
+ 처리할 수 있습니다는 <xref:System.Windows.Forms.BindingSource.AddingNew> 고유한 항목 생성 논리를 제공 하는 이벤트입니다. 합니다 <xref:System.Windows.Forms.BindingSource.AddingNew> 새 개체에 추가 되기 전에 이벤트가 발생 된 <xref:System.Windows.Forms.BindingSource>합니다. 후에이 이벤트가 발생 합니다 <xref:System.Windows.Forms.BindingSource.AddNew%2A> 메서드를 호출 전에 내부 목록에 새 항목이 추가 됩니다. 이 이벤트를 처리 하면에서 파생 하지 않고 사용자 지정 항목 만들기 동작을 제공할 수 있습니다는 <xref:System.Windows.Forms.BindingSource> 클래스입니다. 자세한 내용은 [방법: Windows Forms BindingSource 사용 하 여 항목 추가 사용자 지정](how-to-customize-item-addition-with-the-windows-forms-bindingsource.md)합니다.  
   
 ### <a name="transactional-item-creation"></a>트랜잭션 항목 만들기  
  합니다 <xref:System.Windows.Forms.BindingSource> 구성 요소를 구현 하는 <xref:System.ComponentModel.ICancelAddNew> 트랜잭션 항목 생성을 사용 하도록 설정 하는 인터페이스입니다. 새 항목에 대 한 호출을 사용 하 여 일시적으로 만들어진 후 <xref:System.Windows.Forms.BindingSource.AddNew%2A>를 커밋하거나 다음과 같은 방식에서으로 롤백할 수 있는 추가 될 수 있습니다.  
@@ -142,7 +142,7 @@ ms.locfileid: "54514181"
 ### <a name="design-time-support"></a>디자인 타임 지원  
  일부 개체 유형 팩터리 클래스에서 생성 된 개체 또는 웹 서비스에 의해 반환 된 개체와 같은 디자인 타임에 만들 수 없습니다. 경우에 따라 해야 디자인 타임에 이러한 형식에 컨트롤을 바인딩할 컨트롤 바인딩될 수 있는 메모리에 개체가 없는 경우에 합니다. 해야 할 수 있습니다, 예를 들어, 열 머리글 레이블을 <xref:System.Windows.Forms.DataGridView> 컨트롤과 사용자 지정 형식의 공용 속성의 이름입니다.  
   
- 이 시나리오를 지원 하기를 <xref:System.Windows.Forms.BindingSource> 구성 요소에 바인딩하는 지원 된 <xref:System.Type>합니다. 할당 하는 경우는 <xref:System.Type> 에 <xref:System.Windows.Forms.BindingSource.DataSource%2A> 속성인을 <xref:System.Windows.Forms.BindingSource> 구성 요소는 빈 만듭니다 <xref:System.ComponentModel.BindingList%601> 의 <xref:System.Type> 항목. 이후에 바인딩할 모든 컨트롤을 <xref:System.Windows.Forms.BindingSource> 디자인 타임 또는 런타임에 구성 요소 경고가 형식의 스키마 또는 속성의 현재 상태에 표시 됩니다. 자세한 내용은 [방법: 형식에는 Windows Forms 컨트롤 바인딩](../../../../docs/framework/winforms/controls/how-to-bind-a-windows-forms-control-to-a-type.md)합니다.  
+ 이 시나리오를 지원 하기를 <xref:System.Windows.Forms.BindingSource> 구성 요소에 바인딩하는 지원 된 <xref:System.Type>합니다. 할당 하는 경우는 <xref:System.Type> 에 <xref:System.Windows.Forms.BindingSource.DataSource%2A> 속성인을 <xref:System.Windows.Forms.BindingSource> 구성 요소는 빈 만듭니다 <xref:System.ComponentModel.BindingList%601> 의 <xref:System.Type> 항목. 이후에 바인딩할 모든 컨트롤을 <xref:System.Windows.Forms.BindingSource> 디자인 타임 또는 런타임에 구성 요소 경고가 형식의 스키마 또는 속성의 현재 상태에 표시 됩니다. 자세한 내용은 [방법: 형식에는 Windows Forms 컨트롤 바인딩](how-to-bind-a-windows-forms-control-to-a-type.md)합니다.  
   
 ### <a name="static-listbindinghelper-methods"></a>정적 ListBindingHelper 메서드  
  <xref:System.Windows.Forms.BindingContext?displayProperty=nameWithType>, <xref:System.Windows.Forms.CurrencyManager?displayProperty=nameWithType>, 및 <xref:System.Windows.Forms.BindingSource> 형식 모두 공통 논리에서 목록을 생성 하는 `DataSource` / `DataMember` 쌍입니다. 또한이 공통 논리는 공개적으로 노출 사용에 대 한 컨트롤 작성자 및 다음에서 다른 타사 `static` 메서드:  
@@ -166,14 +166,14 @@ ms.locfileid: "54514181"
 |<xref:System.Windows.Forms.BindingSource.Sort%2A> 속성|데이터 소스가 <xref:System.ComponentModel.IBindingList>인 경우 정렬에 사용되는 열 이름과 정렬 순서 정보를 가져오거나 설정합니다.<br /><br /> 또는<br /><br /> 데이터 원본이 있으면는 <xref:System.ComponentModel.IBindingListView> 하 고 고급 정렬을 지 원하는 가져옵니다 정렬 및 정렬 순서에 사용 되는 여러 열 이름|  
   
 ### <a name="integration-with-bindingnavigator"></a>BindingNavigator 사용 하 여 통합  
- 사용할 수는 <xref:System.Windows.Forms.BindingSource> 모든 Windows Forms 컨트롤을 데이터 소스에 바인딩할 구성 요소 이지만 <xref:System.Windows.Forms.BindingNavigator> 컨트롤은 작업을 위해 특별히 설계 되었습니다를 <xref:System.Windows.Forms.BindingSource> 구성 요소입니다. <xref:System.Windows.Forms.BindingNavigator> 제어 하기 위한 사용자 인터페이스를 제공 하는 컨트롤을 <xref:System.Windows.Forms.BindingSource> 구성 요소의 현재 항목입니다. 기본적으로 <xref:System.Windows.Forms.BindingNavigator> 컨트롤에서 탐색 메서드에 해당 하는 단추를 제공 합니다 <xref:System.Windows.Forms.BindingSource> 구성 요소입니다. 자세한 내용은 [방법: Windows Forms BindingNavigator 컨트롤을 사용 하 여 데이터를 이동](../../../../docs/framework/winforms/controls/how-to-navigate-data-with-the-windows-forms-bindingnavigator-control.md)합니다.  
+ 사용할 수는 <xref:System.Windows.Forms.BindingSource> 모든 Windows Forms 컨트롤을 데이터 소스에 바인딩할 구성 요소 이지만 <xref:System.Windows.Forms.BindingNavigator> 컨트롤은 작업을 위해 특별히 설계 되었습니다를 <xref:System.Windows.Forms.BindingSource> 구성 요소입니다. <xref:System.Windows.Forms.BindingNavigator> 제어 하기 위한 사용자 인터페이스를 제공 하는 컨트롤을 <xref:System.Windows.Forms.BindingSource> 구성 요소의 현재 항목입니다. 기본적으로 <xref:System.Windows.Forms.BindingNavigator> 컨트롤에서 탐색 메서드에 해당 하는 단추를 제공 합니다 <xref:System.Windows.Forms.BindingSource> 구성 요소입니다. 자세한 내용은 [방법: Windows Forms BindingNavigator 컨트롤을 사용 하 여 데이터를 이동](how-to-navigate-data-with-the-windows-forms-bindingnavigator-control.md)합니다.  
   
 ## <a name="see-also"></a>참고자료
 - <xref:System.Windows.Forms.BindingSource>
 - <xref:System.Windows.Forms.BindingNavigator>
-- [BindingSource 구성 요소 개요](../../../../docs/framework/winforms/controls/bindingsource-component-overview.md)
-- [BindingNavigator 컨트롤](../../../../docs/framework/winforms/controls/bindingnavigator-control-windows-forms.md)
-- [Windows Forms 데이터 바인딩](../../../../docs/framework/winforms/windows-forms-data-binding.md)
-- [Windows Forms에 사용할 수 있는 컨트롤](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)
-- [방법: 형식에는 Windows Forms 컨트롤 바인딩](../../../../docs/framework/winforms/controls/how-to-bind-a-windows-forms-control-to-a-type.md)
-- [방법: BindingSource 사용 하 여 Windows Forms 컨트롤에 데이터 소스 업데이트 내용 반영](../../../../docs/framework/winforms/controls/reflect-data-source-updates-in-a-wf-control-with-the-bindingsource.md)
+- [BindingSource 구성 요소 개요](bindingsource-component-overview.md)
+- [BindingNavigator 컨트롤](bindingnavigator-control-windows-forms.md)
+- [Windows Forms 데이터 바인딩](../windows-forms-data-binding.md)
+- [Windows Forms에 사용할 수 있는 컨트롤](controls-to-use-on-windows-forms.md)
+- [방법: 형식에는 Windows Forms 컨트롤 바인딩](how-to-bind-a-windows-forms-control-to-a-type.md)
+- [방법: BindingSource 사용 하 여 Windows Forms 컨트롤에 데이터 소스 업데이트 내용 반영](reflect-data-source-updates-in-a-wf-control-with-the-bindingsource.md)

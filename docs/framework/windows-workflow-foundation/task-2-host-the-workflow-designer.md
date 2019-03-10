@@ -2,12 +2,12 @@
 title: '작업 2: 워크플로 디자이너 호스트'
 ms.date: 03/30/2017
 ms.assetid: 0a29b138-270d-4846-b78e-2b875e34e501
-ms.openlocfilehash: e8895e4b2c90f189c88ec3a803615e736dada455
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e02134408b38e5c9aee9c59d86b1dfce032653d1
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54572775"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57708641"
 ---
 # <a name="task-2-host-the-workflow-designer"></a>작업 2: 워크플로 디자이너 호스트
 인스턴스를 호스트 하는 절차에 설명 합니다 [!INCLUDE[wfd1](../../../includes/wfd1-md.md)] Windows Presentation Foundation (WPF) 응용 프로그램에서입니다.  
@@ -16,9 +16,10 @@ ms.locfileid: "54572775"
   
 ### <a name="to-host-the-workflow-designer"></a>워크플로 디자이너를 호스트하려면  
   
-1.  만든 HostingApplication 오픈 프로젝트 [작업 1: 새 Windows Presentation Foundation 응용 프로그램을 만드는](../../../docs/framework/windows-workflow-foundation/task-1-create-a-new-wpf-app.md)합니다.  
+1.  만든 HostingApplication 오픈 프로젝트 [작업 1: 새 Windows Presentation Foundation 응용 프로그램을 만드는](task-1-create-a-new-wpf-app.md)합니다.  
   
-2.  [!INCLUDE[wfd2](../../../includes/wfd2-md.md)]를 쉽게 사용할 수 있도록 창의 크기를 조정합니다. 이 위해 선택 **MainWindow** 디자이너를 표시 하려면 F4 키를 누릅니다.는 **속성** 창에서를 **레이아웃** 섹션을 설정 합니다 **너비** 값을 600으로 하며 **높이** 350 값으로.  
+2.  
+  [!INCLUDE[wfd2](../../../includes/wfd2-md.md)]를 쉽게 사용할 수 있도록 창의 크기를 조정합니다. 이 위해 선택 **MainWindow** 디자이너를 표시 하려면 F4 키를 누릅니다.는 **속성** 창에서를 **레이아웃** 섹션을 설정 합니다 **너비** 값을 600으로 하며 **높이** 350 값으로.  
   
 3.  선택 하 여 표 이름을 설정 합니다 **그리드** 디자이너에서 패널 (안의 상자 클릭를 **MainWindow**) 설정를 **이름** 맨 위에 있는 속성을  **속성** "추가한 다음 grid1" 창입니다.  
   
@@ -97,9 +98,10 @@ ms.locfileid: "54572775"
         }  
         ```  
   
-         활동 디자이너를 등록 하는 방법에 대 한 자세한 내용은 참조 하세요. [방법: 사용자 지정 활동 디자이너를 만드는](../../../docs/framework/windows-workflow-foundation/how-to-create-a-custom-activity-designer.md)합니다.  
+         활동 디자이너를 등록 하는 방법에 대 한 자세한 내용은 참조 하세요. [방법: 사용자 지정 활동 디자이너를 만드는](how-to-create-a-custom-activity-designer.md)합니다.  
   
-    5.  `MainWindow` 클래스 생성자에서 앞에서 선언한 메서드에 호출을 추가하여 디자이너 지원을 위한 메타데이터를 등록하고 <xref:System.Activities.Presentation.WorkflowDesigner>를 만듭니다.  
+    5.  
+  `MainWindow` 클래스 생성자에서 앞에서 선언한 메서드에 호출을 추가하여 디자이너 지원을 위한 메타데이터를 등록하고 <xref:System.Activities.Presentation.WorkflowDesigner>를 만듭니다.  
   
         ```csharp  
         public MainWindow()  
@@ -119,9 +121,9 @@ ms.locfileid: "54572775"
   
 9. F5 키를 눌러 솔루션을 빌드하고 실행합니다.  
   
-10. 참조 [작업 3: 도구 상자 및 PropertyGrid 창 만들기](../../../docs/framework/windows-workflow-foundation/task-3-create-the-toolbox-and-propertygrid-panes.md) 추가 하는 방법을 알아보려면 **도구 상자** 하 고 **PropertyGrid** 재 호스트 된 워크플로 디자이너를 지원 합니다.  
+10. 참조 [작업 3: 도구 상자 및 PropertyGrid 창 만들기](task-3-create-the-toolbox-and-propertygrid-panes.md) 추가 하는 방법을 알아보려면 **도구 상자** 하 고 **PropertyGrid** 재 호스트 된 워크플로 디자이너를 지원 합니다.  
   
 ## <a name="see-also"></a>참고자료
-- [워크플로 디자이너 재호스트](../../../docs/framework/windows-workflow-foundation/rehosting-the-workflow-designer.md)
-- [작업 1: 새 Windows Presentation Foundation 응용 프로그램 만들기](../../../docs/framework/windows-workflow-foundation/task-1-create-a-new-wpf-app.md)
-- [작업 3: 도구 상자 및 PropertyGrid 창 만들기](../../../docs/framework/windows-workflow-foundation/task-3-create-the-toolbox-and-propertygrid-panes.md)
+- [워크플로 디자이너 재호스트](rehosting-the-workflow-designer.md)
+- [작업 1: 새 Windows Presentation Foundation 응용 프로그램 만들기](task-1-create-a-new-wpf-app.md)
+- [작업 3: 도구 상자 및 PropertyGrid 창 만들기](task-3-create-the-toolbox-and-propertygrid-panes.md)

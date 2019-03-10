@@ -7,18 +7,18 @@ helpviewer_keywords:
 - StatusBar control [Windows Forms], about StatusBar control
 - status bars
 ms.assetid: b7b9852c-633d-4416-bb2e-94852b989c6c
-ms.openlocfilehash: c3e52a91a31eb898d0176bc35a97cda7de9a8368
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 516462aa92e2cd836820ec34440f34bb4c5b577d
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54491352"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57703805"
 ---
 # <a name="statusbar-control-overview-windows-forms"></a>StatusBar 컨트롤 개요(Windows Forms)
 > [!IMPORTANT]
 >  <xref:System.Windows.Forms.StatusStrip> 및 <xref:System.Windows.Forms.ToolStripStatusLabel> 대체 컨트롤과 기능을 추가 합니다 <xref:System.Windows.Forms.StatusBar> 및 <xref:System.Windows.Forms.StatusBarPanel> 제어; 그러나를 <xref:System.Windows.Forms.StatusBar> 및 <xref:System.Windows.Forms.StatusBarPanel> 컨트롤 하는 경우 이전 버전과 호환성 및 향후 사용을 위해 유지 됩니다 있습니다 이 옵션을 선택 합니다.  
   
- Windows Forms [StatusBar 컨트롤](../../../../docs/framework/winforms/controls/statusbar-control-windows-forms.md) 폼에서 일반적으로 응용 프로그램에는 다양 한 종류의 상태 정보를 표시할 수는 창의 맨 아래에 표시 하는 영역으로 사용 됩니다. <xref:System.Windows.Forms.StatusBar> 컨트롤에 텍스트 또는 상태 또는 애니메이션에서 프로세스 중인; 나타내는 아이콘이 나타내는 아이콘을 표시 하는 상태 표시줄 패널에 있을 수 있습니다. 예를 들어 [!INCLUDE[ofprword](../../../../includes/ofprword-md.md)] 나타내는 문서를 저장 하는 중입니다.  
+ Windows Forms [StatusBar 컨트롤](statusbar-control-windows-forms.md) 폼에서 일반적으로 응용 프로그램에는 다양 한 종류의 상태 정보를 표시할 수는 창의 맨 아래에 표시 하는 영역으로 사용 됩니다. <xref:System.Windows.Forms.StatusBar> 컨트롤에 텍스트 또는 상태 또는 애니메이션에서 프로세스 중인; 나타내는 아이콘이 나타내는 아이콘을 표시 하는 상태 표시줄 패널에 있을 수 있습니다. 예를 들어 [!INCLUDE[ofprword](../../../../includes/ofprword-md.md)] 나타내는 문서를 저장 하는 중입니다.  
   
 ## <a name="using-the-statusbar-control"></a>StatusBar 컨트롤 사용  
  Internet Explorer는 하이퍼링크; 위로 마우스를 가져가면 페이지의 URL을 표시 하는 상태 표시줄 사용 [!INCLUDE[ofprword](../../../../includes/ofprword-md.md)] 페이지 위치, 섹션 위치 및 overtype 및 수정 버전을 추적 합니다; Visual Studio 상태 표시줄을 사용 하 여 도킹 가능한 창을 조작 하는 방법 등의 상황에 맞는 정보를 제공 하려면 같은 편집 모드에 대 한 정보 제공 으로 또는 이동 합니다.  
@@ -28,4 +28,4 @@ ms.locfileid: "54491352"
 ## <a name="see-also"></a>참고자료
 - <xref:System.Windows.Forms.StatusBar>
 - <xref:System.Windows.Forms.ToolStripStatusLabel>
-- [방법: Windows Forms StatusBar 컨트롤에서 패널 클릭 확인](../../../../docs/framework/winforms/controls/determine-which-panel-wf-statusbar-control-was-clicked.md)
+- [방법: Windows Forms StatusBar 컨트롤에서 패널 클릭 확인](determine-which-panel-wf-statusbar-control-was-clicked.md)

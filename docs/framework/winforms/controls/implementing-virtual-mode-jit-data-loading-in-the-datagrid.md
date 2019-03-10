@@ -12,12 +12,12 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], large data sets
 - virtual mode [Windows Forms], just-in-time data loading
 ms.assetid: c2a052b9-423c-4ff7-91dc-d8c7c79345f6
-ms.openlocfilehash: c8290fe7722dba564bf5addab662a9f6b62d924f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 44c985cef035e33e88ba246584efcb30fe0e9b97
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54607883"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57705560"
 ---
 # <a name="implementing-virtual-mode-with-just-in-time-data-loading-in-the-windows-forms-datagridview-control"></a>Windows Forms DataGridView 컨트롤에서 Just-In-Time 데이터 로드를 사용하여 가상 모드 구현
 가상 모드 구현 하는 이유는 <xref:System.Windows.Forms.DataGridView> 컨트롤 필요할 때에 데이터를 검색 하는 것입니다. 이 이라고 *-just-in-time 데이터 로드*합니다.  
@@ -26,7 +26,7 @@ ms.locfileid: "54607883"
   
  다음 섹션을 사용 하는 방법에 설명 된 <xref:System.Windows.Forms.DataGridView> 적시에 캐시를 사용 하 여 컨트롤입니다.  
   
- 참조를 단일 목록으로이 항목의 코드를 복사할 [방법: Forms DataGridView 컨트롤의 Windows에서-Just-in-time 데이터 로드를 사용 하 여 가상 모드 구현](../../../../docs/framework/winforms/controls/virtual-mode-with-just-in-time-data-loading-in-the-datagrid.md)합니다.  
+ 이 항목의 코드를 단일 목록으로 복사하려면 [방법: Forms DataGridView 컨트롤의 Windows에서-Just-in-time 데이터 로드를 사용 하 여 가상 모드 구현](virtual-mode-with-just-in-time-data-loading-in-the-datagrid.md)합니다.  
   
 ## <a name="the-form"></a>폼  
  다음 코드 예제에서는 정의 읽기 전용을 포함 하는 폼 <xref:System.Windows.Forms.DataGridView> 상호 작용 하는 컨트롤을 `Cache` 개체를 통해를 <xref:System.Windows.Forms.DataGridView.CellValueNeeded> 이벤트 처리기입니다. `Cache` 개체는 로컬에 저장 된 값을 관리 하 고 사용 하는 `DataRetriever` Northwind 샘플 데이터베이스의 Orders 테이블에서 값을 검색 하는 개체입니다. `DataRetriever` 구현 하는 개체를 `IDataPageRetriever` 에 필요한 인터페이스는 `Cache` 클래스를 초기화 하는 또한는 <xref:System.Windows.Forms.DataGridView> 행과 열을 제어 합니다.  
@@ -34,24 +34,24 @@ ms.locfileid: "54607883"
  합니다 `IDataPageRetriever`, `DataRetriever`, 및 `Cache` 형식은이 항목의 뒷부분에 설명 됩니다.  
   
 > [!NOTE]
->  암호와 같은 중요한 정보를 연결 문자열 내에 저장하면 애플리케이션 보안 문제가 발생할 수 있습니다. 데이터베이스 액세스를 제어할 경우에는 통합 보안이라고도 하는 Windows 인증을 사용하는 방법이 더 안전합니다. 자세한 내용은 [연결 정보 보호](../../../../docs/framework/data/adonet/protecting-connection-information.md)를 참조하세요.  
+>  암호와 같은 중요한 정보를 연결 문자열 내에 저장하면 애플리케이션 보안 문제가 발생할 수 있습니다. 데이터베이스 액세스를 제어할 경우에는 통합 보안이라고도 하는 Windows 인증을 사용하는 방법이 더 안전합니다. 자세한 내용은 [연결 정보 보호](../../data/adonet/protecting-connection-information.md)를 참조하세요.  
   
- [!code-csharp[System.Windows.Forms.DataGridView.Virtual_lazyloading#100](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.Virtual_lazyloading/CS/lazyloading.cs#100)]
- [!code-vb[System.Windows.Forms.DataGridView.Virtual_lazyloading#100](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.Virtual_lazyloading/VB/lazyloading.vb#100)]  
+ [!code-csharp[System.Windows.Forms.DataGridView.Virtual_lazyloading#100](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.Virtual_lazyloading/CS/lazyloading.cs#100)]
+ [!code-vb[System.Windows.Forms.DataGridView.Virtual_lazyloading#100](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.Virtual_lazyloading/VB/lazyloading.vb#100)]  
   
 ## <a name="the-idatapageretriever-interface"></a>IDataPageRetriever 인터페이스  
  다음 코드 예제에서는 정의 `IDataPageRetriever` 에서 구현 하는 인터페이스를 `DataRetriever` 클래스입니다. 이 인터페이스에서 선언 된 유일한 메서드는는 `SupplyPageOfData` 메서드는 초기 행 인덱스 및 데이터의 단일 페이지에 있는 행의 수가 필요 합니다. 이러한 값은 데이터 원본에서 데이터의 하위 집합을 검색 구현자에 의해 사용 됩니다.  
   
  `Cache` 개체 데이터의 첫 두 페이지가 로드 생성 하는 동안이 인터페이스의 구현을 사용 합니다. 캐시 되지 않은 값을 필요할 때마다 캐시 이러한 페이지 중 하나를 삭제 하 고에서 값이 포함 된 새 페이지를 요청 합니다 `IDataPageRetriever`합니다.  
   
- [!code-csharp[System.Windows.Forms.DataGridView.Virtual_lazyloading#201](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.Virtual_lazyloading/CS/lazyloading.cs#201)]
- [!code-vb[System.Windows.Forms.DataGridView.Virtual_lazyloading#201](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.Virtual_lazyloading/VB/lazyloading.vb#201)]  
+ [!code-csharp[System.Windows.Forms.DataGridView.Virtual_lazyloading#201](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.Virtual_lazyloading/CS/lazyloading.cs#201)]
+ [!code-vb[System.Windows.Forms.DataGridView.Virtual_lazyloading#201](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.Virtual_lazyloading/VB/lazyloading.vb#201)]  
   
 ## <a name="the-dataretriever-class"></a>DataRetriever 클래스  
  다음 코드 예제에서는 정의 `DataRetriever` 클래스를 구현 하는 `IDataPageRetriever` 서버에서 데이터 페이지를 검색 하는 인터페이스입니다. `DataRetriever` 클래스도 제공 `Columns` 및 `RowCount` 속성을는 합니다 <xref:System.Windows.Forms.DataGridView> 제어 사용 하 여 필요한 열을 만드는 빈 행의 적절 한 수를 추가 하는 <xref:System.Windows.Forms.DataGridView.Rows%2A> 컬렉션입니다. 빈 행을 추가 하는 데 필요 컨트롤은 테이블의 모든 데이터를 포함 하는 것 처럼 동작 합니다. 즉, 스크롤 막대의 스크롤 상자에 적절 한 크기를 해야 합니다. 사용자 테이블의 모든 행에 액세스할 수 없게 됩니다. 행으로 채워질는 <xref:System.Windows.Forms.DataGridView.CellValueNeeded> 뷰로 스크롤할 때에 이벤트 처리기입니다.  
   
- [!code-csharp[System.Windows.Forms.DataGridView.Virtual_lazyloading#200](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.Virtual_lazyloading/CS/lazyloading.cs#200)]
- [!code-vb[System.Windows.Forms.DataGridView.Virtual_lazyloading#200](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.Virtual_lazyloading/VB/lazyloading.vb#200)]  
+ [!code-csharp[System.Windows.Forms.DataGridView.Virtual_lazyloading#200](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.Virtual_lazyloading/CS/lazyloading.cs#200)]
+ [!code-vb[System.Windows.Forms.DataGridView.Virtual_lazyloading#200](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.Virtual_lazyloading/VB/lazyloading.vb#200)]  
   
 ## <a name="the-cache-class"></a>캐시 클래스  
  다음 코드 예제에서는 정의 `Cache` 를 통해 입력 데이터의 두 페이지를 관리 하는 클래스는 `IDataPageRetriever` 구현 합니다. `Cache` 클래스 정의 내부 `DataPage` 포함 된 구조를 <xref:System.Data.DataTable> 페이지 및 행 인덱스를 계산 하는 나타내는 페이지의 상한 및 하 한 경계 값을 단일 캐시에 저장 하 합니다.  
@@ -60,8 +60,8 @@ ms.locfileid: "54607883"
   
  데이터 페이지의 행 수가 한 번에 화면에 표시 될 수 있는 행의 수와 동일 인을 만든다고 가정이 모델에는 테이블을 통해 페이징 사용자를 게 가장 최근에 열어 본 페이지를 효율적으로 반환할 수 있습니다.  
   
- [!code-csharp[System.Windows.Forms.DataGridView.Virtual_lazyloading#300](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.Virtual_lazyloading/CS/lazyloading.cs#300)]
- [!code-vb[System.Windows.Forms.DataGridView.Virtual_lazyloading#300](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.Virtual_lazyloading/VB/lazyloading.vb#300)]  
+ [!code-csharp[System.Windows.Forms.DataGridView.Virtual_lazyloading#300](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.Virtual_lazyloading/CS/lazyloading.cs#300)]
+ [!code-vb[System.Windows.Forms.DataGridView.Virtual_lazyloading#300](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.Virtual_lazyloading/VB/lazyloading.vb#300)]  
   
 ## <a name="additional-considerations"></a>추가 고려 사항  
  이전 코드 예제에서는-just-in-time 데이터 로드의 데모로 제공 됩니다. 효율성을 극대화 하기 위해 고유의 요구 사항에 대 한 코드를 수정 해야 합니다. 최소한, 캐시에 데이터 페이지당 행 수에 대 한 적절 한 값을 선택 해야 합니다. 이 값에 전달 되는 `Cache` 생성자입니다. 페이지당 행 수는 같거나 더 높아야 동시에 표시 될 수 있는 행의 수에 <xref:System.Windows.Forms.DataGridView> 제어 합니다.  
@@ -73,8 +73,8 @@ ms.locfileid: "54607883"
 ## <a name="see-also"></a>참고자료
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridView.VirtualMode%2A>
-- [Windows Forms DataGridView 컨트롤의 성능 조정](../../../../docs/framework/winforms/controls/performance-tuning-in-the-windows-forms-datagridview-control.md)
-- [Windows Forms DataGridView 컨트롤의 크기를 조정하는 최선의 방법](../../../../docs/framework/winforms/controls/best-practices-for-scaling-the-windows-forms-datagridview-control.md)
-- [Windows Forms DataGridView 컨트롤의 가상 모드](../../../../docs/framework/winforms/controls/virtual-mode-in-the-windows-forms-datagridview-control.md)
-- [연습: Windows Forms DataGridView 컨트롤에서 가상 모드 구현](../../../../docs/framework/winforms/controls/implementing-virtual-mode-wf-datagridview-control.md)
-- [방법: Windows Forms DataGridView 컨트롤에서-Just-in-time 데이터 로드를 사용 하 여 가상 모드 구현](../../../../docs/framework/winforms/controls/virtual-mode-with-just-in-time-data-loading-in-the-datagrid.md)
+- [Windows Forms DataGridView 컨트롤의 성능 조정](performance-tuning-in-the-windows-forms-datagridview-control.md)
+- [Windows Forms DataGridView 컨트롤의 크기를 조정하는 최선의 방법](best-practices-for-scaling-the-windows-forms-datagridview-control.md)
+- [Windows Forms DataGridView 컨트롤의 가상 모드](virtual-mode-in-the-windows-forms-datagridview-control.md)
+- [연습: Windows Forms DataGridView 컨트롤에서 가상 모드 구현](implementing-virtual-mode-wf-datagridview-control.md)
+- [방법: Windows Forms DataGridView 컨트롤에서-Just-in-time 데이터 로드를 사용 하 여 가상 모드 구현](virtual-mode-with-just-in-time-data-loading-in-the-datagrid.md)

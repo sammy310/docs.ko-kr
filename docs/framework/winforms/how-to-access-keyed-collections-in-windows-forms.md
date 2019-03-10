@@ -8,12 +8,12 @@ helpviewer_keywords:
 - keyed collections [Windows Forms]
 - collections [Windows Forms], accessing with keys
 ms.assetid: b9b79b8b-d9bf-4f8c-b9d6-9578bc3219d3
-ms.openlocfilehash: 0071e3cc3ae2576bed8a7111fc2a120ea3a113c0
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: af398e8ac051bfc89c532fe5dc216e9cfbfdc4b9
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54676314"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57709621"
 ---
 # <a name="how-to-access-keyed-collections-in-windows-forms"></a>방법: Windows Forms에서 키 컬렉션 액세스
 -   키로 개별 컬렉션 항목에 액세스할 수 있습니다. 이 기능은 Windows Forms 응용 프로그램에서 일반적으로 사용 되는 여러 컬렉션 클래스에 추가 되었습니다. 다음은 액세스할 수 있는 키 컬렉션에 있는 컬렉션 클래스 중 일부를 보여 줍니다.  
@@ -34,23 +34,23 @@ ms.locfileid: "54676314"
   
 -   사용 된 <xref:System.Windows.Forms.Control.ControlCollection.Find%2A> 및 <xref:System.Windows.Forms.Control.Focus%2A> 찾기 및 포커스를 컨트롤의 이름을 지정 하는 방법입니다.  
   
-     [!code-csharp[System.Windows.Forms.KeyedCollectionsEx#1](../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.KeyedCollectionsEx/CS/Form1.cs#1)]
-     [!code-vb[System.Windows.Forms.KeyedCollectionsEx#1](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.KeyedCollectionsEx/VB/Form1.vb#1)]  
+     [!code-csharp[System.Windows.Forms.KeyedCollectionsEx#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.KeyedCollectionsEx/CS/Form1.cs#1)]
+     [!code-vb[System.Windows.Forms.KeyedCollectionsEx#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.KeyedCollectionsEx/VB/Form1.vb#1)]  
   
 ### <a name="to-access-an-image-in-an-image-collection"></a>이미지는 이미지 컬렉션에 액세스 하려면  
   
 -   사용 된 <xref:System.Windows.Forms.ImageList.ImageCollection.Item%2A> 속성에 액세스 하려는 이미지의 이름을 지정 합니다.  
   
-     [!code-csharp[System.Windows.Forms.KeyedCollectionsEx#2](../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.KeyedCollectionsEx/CS/Form1.cs#2)]
-     [!code-vb[System.Windows.Forms.KeyedCollectionsEx#2](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.KeyedCollectionsEx/VB/Form1.vb#2)]  
+     [!code-csharp[System.Windows.Forms.KeyedCollectionsEx#2](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.KeyedCollectionsEx/CS/Form1.cs#2)]
+     [!code-vb[System.Windows.Forms.KeyedCollectionsEx#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.KeyedCollectionsEx/VB/Form1.vb#2)]  
   
 ### <a name="to-set-a-tab-page-as-the-selected-tab"></a>선택된 된 탭으로 탭 페이지를 설정 하려면  
   
 -   사용 하 여는 <xref:System.Windows.Forms.TabControl.SelectedTab%2A> 와 함께 속성을 <xref:System.Windows.Forms.TabControl.TabPageCollection.Item%2A> 선택된 된 탭으로 설정 하려면 탭 페이지의 이름을 지정 하는 속성입니다.  
   
-     [!code-csharp[System.Windows.Forms.KeyedCollectionsEx#3](../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.KeyedCollectionsEx/CS/Form1.cs#3)]
-     [!code-vb[System.Windows.Forms.KeyedCollectionsEx#3](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.KeyedCollectionsEx/VB/Form1.vb#3)]  
+     [!code-csharp[System.Windows.Forms.KeyedCollectionsEx#3](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.KeyedCollectionsEx/CS/Form1.cs#3)]
+     [!code-vb[System.Windows.Forms.KeyedCollectionsEx#3](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.KeyedCollectionsEx/VB/Form1.vb#3)]  
   
 ## <a name="see-also"></a>참고자료
-- [Windows Forms 시작](../../../docs/framework/winforms/getting-started-with-windows-forms.md)
-- [방법: Windows Forms ImageList 구성 요소를 사용 하 여 이미지 추가 또는 제거](../../../docs/framework/winforms/controls/how-to-add-or-remove-images-with-the-windows-forms-imagelist-component.md)
+- [Windows Forms 시작](getting-started-with-windows-forms.md)
+- [방법: Windows Forms ImageList 구성 요소를 사용 하 여 이미지 추가 또는 제거](./controls/how-to-add-or-remove-images-with-the-windows-forms-imagelist-component.md)

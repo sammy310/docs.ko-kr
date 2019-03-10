@@ -2,25 +2,25 @@
 title: WorkflowIdentity 및 버전 관리 사용
 ms.date: 03/30/2017
 ms.assetid: b8451735-8046-478f-912b-40870a6c0c3a
-ms.openlocfilehash: ad1d3385801b451795c6be321094851339a55f81
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 64abab815c523abce88b00515239155499de9c4c
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57373428"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57708173"
 ---
 # <a name="using-workflowidentity-and-versioning"></a>WorkflowIdentity 및 버전 관리 사용
-<xref:System.Activities.WorkflowIdentity>는 워크플로 응용 프로그램 개발자에게 이름 및 <xref:System.Version>을 워크플로 정의에 연결하는 방법을 제공하며, 이러한 정보는 지속형 워크플로 인스턴스와 연결됩니다. 이 ID 정보는 워크플로 응용 프로그램 개발자가 여러 버전의 워크플로 정의를 side-by-side로 실행하는 경우와 같은 시나리오를 가능하도록 하는 데 사용될 수 있으며 동적 업데이트와 같은 다른 기능의 토대를 제공합니다. 이 항목에서는 <xref:System.Activities.WorkflowIdentity> 호스팅과 함께 <xref:System.Activities.WorkflowApplication>를 사용하는 방법을 간단하게 설명합니다. 워크플로 서비스에서 워크플로 정의의 side-by-side-실행 정보를 참조 하세요 [WorkflowServiceHost에서 Side-by-side 버전 관리](../../../docs/framework/wcf/feature-details/side-by-side-versioning-in-workflowservicehost.md)합니다. 동적 업데이트에 대 한 자세한 내용은 [동적 업데이트](../../../docs/framework/windows-workflow-foundation/dynamic-update.md)합니다.  
+<xref:System.Activities.WorkflowIdentity>는 워크플로 응용 프로그램 개발자에게 이름 및 <xref:System.Version>을 워크플로 정의에 연결하는 방법을 제공하며, 이러한 정보는 지속형 워크플로 인스턴스와 연결됩니다. 이 ID 정보는 워크플로 응용 프로그램 개발자가 여러 버전의 워크플로 정의를 side-by-side로 실행하는 경우와 같은 시나리오를 가능하도록 하는 데 사용될 수 있으며 동적 업데이트와 같은 다른 기능의 토대를 제공합니다. 이 항목에서는 <xref:System.Activities.WorkflowIdentity> 호스팅과 함께 <xref:System.Activities.WorkflowApplication>를 사용하는 방법을 간단하게 설명합니다. 워크플로 서비스에서 워크플로 정의의 side-by-side-실행 정보를 참조 하세요 [WorkflowServiceHost에서 Side-by-side 버전 관리](../wcf/feature-details/side-by-side-versioning-in-workflowservicehost.md)합니다. 동적 업데이트에 대 한 자세한 내용은 [동적 업데이트](dynamic-update.md)합니다.  
   
 ## <a name="in-this-topic"></a>항목 내용  
   
--   [WorkflowIdentity 사용](../../../docs/framework/windows-workflow-foundation/using-workflowidentity-and-versioning.md#UsingWorkflowIdentity)  
+-   [WorkflowIdentity 사용](using-workflowidentity-and-versioning.md#UsingWorkflowIdentity)  
   
-    -   [WorkflowIdentity를 사용한 side-by-side-실행](../../../docs/framework/windows-workflow-foundation/using-workflowidentity-and-versioning.md#SxS)  
+    -   [WorkflowIdentity를 사용한 side-by-side-실행](using-workflowidentity-and-versioning.md#SxS)  
   
--   [워크플로 버전 관리를 지원 하기 위해.NET Framework 4 지 속성 데이터베이스 업그레이드](../../../docs/framework/windows-workflow-foundation/using-workflowidentity-and-versioning.md#UpdatingWF4PersistenceDatabases)  
+-   [워크플로 버전 관리를 지원 하기 위해.NET Framework 4 지 속성 데이터베이스 업그레이드](using-workflowidentity-and-versioning.md#UpdatingWF4PersistenceDatabases)  
   
-    -   [데이터베이스 스키마를 업그레이드 하려면](../../../docs/framework/windows-workflow-foundation/using-workflowidentity-and-versioning.md#ToUpgrade)  
+    -   [데이터베이스 스키마를 업그레이드 하려면](using-workflowidentity-and-versioning.md#ToUpgrade)  
   
 ## <a name="UsingWorkflowIdentity"></a> WorkflowIdentity 사용  
  
@@ -84,7 +84,7 @@ wfApp.Load(instanceId);
  지속형 워크플로 인스턴스의 <xref:System.Activities.WorkflowIdentity>를 검색하려면 <xref:System.Activities.WorkflowApplication.GetInstance%2A> 메서드를 사용합니다. <xref:System.Activities.WorkflowApplication.GetInstance%2A> 메서드는 지속형 워크플로 인스턴스의 <xref:System.Activities.WorkflowApplication.Id%2A>와 지속형 인스턴스가 포함된 <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore>를 매개 변수로 받아 <xref:System.Activities.WorkflowApplicationInstance>를 반환합니다. <xref:System.Activities.WorkflowApplicationInstance>에는 지속형 워크플로 인스턴스에 연결된 <xref:System.Activities.WorkflowIdentity>를 포함하여 지속형 워크플로 인스턴스에 대한 정보가 들어 있습니다. 이 연결된 <xref:System.Activities.WorkflowIdentity>는 호스트에서 워크플로 인스턴스를 로드하고 다시 시작할 때 올바른 워크플로 정의를 제공하는 데 사용될 수 있습니다.  
   
 > [!NOTE]
->  <xref:System.Activities.WorkflowIdentity>는 null일 수 있으며, 이 값은 호스트에서 적절한 워크플로 정의에 <xref:System.Activities.WorkflowIdentity>가 연결되지 않은 상태에서 유지된 인스턴스를 매핑하는 데 사용될 수 있습니다. 이는 워크플로 응용 프로그램이 원래 워크플로 버전 관리를 사용하여 작성되지 않은 경우나 응용 프로그램이 [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)]에서 업그레이드된 경우에 해당될 수 있습니다. 자세한 내용은 [.NET Framework 4 지 속성 데이터베이스 업그레이드 워크플로 버전 관리 지원](../../../docs/framework/windows-workflow-foundation/using-workflowidentity-and-versioning.md#UpdatingWF4PersistenceDatabases)합니다.  
+>  <xref:System.Activities.WorkflowIdentity>는 null일 수 있으며, 이 값은 호스트에서 적절한 워크플로 정의에 <xref:System.Activities.WorkflowIdentity>가 연결되지 않은 상태에서 유지된 인스턴스를 매핑하는 데 사용될 수 있습니다. 이는 워크플로 응용 프로그램이 원래 워크플로 버전 관리를 사용하여 작성되지 않은 경우나 응용 프로그램이 [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)]에서 업그레이드된 경우에 해당될 수 있습니다. 자세한 내용은 [.NET Framework 4 지 속성 데이터베이스 업그레이드 워크플로 버전 관리 지원](using-workflowidentity-and-versioning.md#UpdatingWF4PersistenceDatabases)합니다.  
   
  다음 예제에서는 `Dictionary<WorkflowIdentity, Activity>` 연결할 때 사용 됩니다 <xref:System.Activities.WorkflowIdentity> 가 일치 하는 워크플로 정 및 워크플로 사용 하 여 인스턴스를 사용 하 여 시작 합니다 `MortgageWorkflow` 연결 된 워크플로 정의 `identityV1` <xref:System.Activities.WorkflowIdentity>.  
   

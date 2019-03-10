@@ -2,16 +2,16 @@
 title: '방법: 사용자 지정 인스턴스 저장소 만들기'
 ms.date: 03/30/2017
 ms.assetid: 593c4e9d-8a49-4e12-8257-cee5e6b4c075
-ms.openlocfilehash: de3602b928a861500e7984fe88bbb2176d58b840
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: cacee7d95a543525ba031de0cc0636d05fc72fc8
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57503192"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57707770"
 ---
 # <a name="how-to-create-a-custom-instance-store"></a>방법: 사용자 지정 인스턴스 저장소 만들기
 
-[!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)]에는 SQL Server을 사용하여 워크플로 데이터를 유지하는 인스턴스 저장소인 <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore>가 있습니다. 응용 프로그램에서 워크플로 데이터를 다른 매체(예: 다른 데이터베이스 또는 파일 시스템)에 유지해야 할 경우 사용자 지정 인스턴스 저장소를 구현할 수 있습니다. 사용자 지정 인스턴스 저장소는 추상 <xref:System.Runtime.DurableInstancing.InstanceStore> 클래스를 확장하고 구현에 필요한 메서드를 구현하여 만듭니다. 사용자 지정 인스턴스 저장소의 완전 한 구현에 대 한 참조를 [기업 구매 프로세스](../../../docs/framework/windows-workflow-foundation/samples/corporate-purchase-process.md) 샘플입니다.
+[!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)]에는 SQL Server을 사용하여 워크플로 데이터를 유지하는 인스턴스 저장소인 <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore>가 있습니다. 응용 프로그램에서 워크플로 데이터를 다른 매체(예: 다른 데이터베이스 또는 파일 시스템)에 유지해야 할 경우 사용자 지정 인스턴스 저장소를 구현할 수 있습니다. 사용자 지정 인스턴스 저장소는 추상 <xref:System.Runtime.DurableInstancing.InstanceStore> 클래스를 확장하고 구현에 필요한 메서드를 구현하여 만듭니다. 사용자 지정 인스턴스 저장소의 완전 한 구현에 대 한 참조를 [기업 구매 프로세스](./samples/corporate-purchase-process.md) 샘플입니다.
 
 ## <a name="implementing-the-begintrycommand-method"></a>BeginTryCommand 메서드 구현
 
@@ -229,11 +229,11 @@ ms.locfileid: "57503192"
 
 ## <a name="using-a-custom-instance-store"></a>사용자 지정 인스턴스 저장소 사용
 
-사용자 지정 인스턴스 저장소를 구현하려면 인스턴스 저장소의 인스턴스를 <xref:System.Activities.WorkflowApplication.InstanceStore%2A>에 할당하고 <xref:System.Activities.WorkflowApplication.PersistableIdle%2A> 메서드를 구현합니다. 참조 된 [방법: 만들기 및 장기 실행 워크플로 실행](../../../docs/framework/windows-workflow-foundation/how-to-create-and-run-a-long-running-workflow.md) 세부 사항에 대 한 자습서입니다.
+사용자 지정 인스턴스 저장소를 구현하려면 인스턴스 저장소의 인스턴스를 <xref:System.Activities.WorkflowApplication.InstanceStore%2A>에 할당하고 <xref:System.Activities.WorkflowApplication.PersistableIdle%2A> 메서드를 구현합니다. 참조 된 [방법: 만들기 및 장기 실행 워크플로 실행](how-to-create-and-run-a-long-running-workflow.md) 세부 사항에 대 한 자습서입니다.
 
 ## <a name="a-sample-instance-store"></a>샘플 인스턴스 저장소
 
-다음 코드 샘플에서 가져온 전체 인스턴스 저장소 구현 되는 [기업 구매 프로세스](../../../docs/framework/windows-workflow-foundation/samples/corporate-purchase-process.md) 샘플입니다. 이 인스턴스 저장소는XML을 사용하여 워크플로 데이터를 파일에 유지합니다.
+다음 코드 샘플에서 가져온 전체 인스턴스 저장소 구현 되는 [기업 구매 프로세스](./samples/corporate-purchase-process.md) 샘플입니다. 이 인스턴스 저장소는XML을 사용하여 워크플로 데이터를 파일에 유지합니다.
 
 ```csharp
 using System;

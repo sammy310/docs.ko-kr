@@ -11,12 +11,12 @@ helpviewer_keywords:
 - tabs [Windows Forms], controlling appearance
 - buttons [Windows Forms], displaying tabs as
 ms.assetid: 7c6cc443-ed62-4d26-b94d-b8913b44f773
-ms.openlocfilehash: 1ed062b3991d7738269d30a6ff13cda3c80927c2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 642115eeb61649eb369058947e5347d4389182a0
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54630322"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57702414"
 ---
 # <a name="how-to-change-the-appearance-of-the-windows-forms-tabcontrol"></a>방법: Windows Forms TabControl의 모양 변경
 속성을 사용 하 여 Windows Forms에서 탭의 모양을 변경할 수 있습니다 합니다 <xref:System.Windows.Forms.TabControl> 하며 <xref:System.Windows.Forms.TabPage> 컨트롤에서 개별 탭에 구성 하는 개체입니다. 이러한 속성을 설정 하면 수 탭에서 이미지를 표시, 가로로 대신 세로 탭이 표시, 탭의 여러 행을 표시 및 사용 하도록 설정 또는 탭을 프로그래밍 방식으로 사용 하지 않도록 설정 합니다.  
@@ -27,7 +27,7 @@ ms.locfileid: "54630322"
   
 2.  이미지 목록에 이미지를 추가 합니다.  
   
-     이미지 목록에 대 한 자세한 내용은 참조 하세요. [ImageList 구성 요소](../../../../docs/framework/winforms/controls/imagelist-component-windows-forms.md) 고 [방법: 제거 이미지는 Windows Forms ImageList 구성 요소 추가 또는](../../../../docs/framework/winforms/controls/how-to-add-or-remove-images-with-the-windows-forms-imagelist-component.md)합니다.  
+     이미지 목록에 대 한 자세한 내용은 참조 하세요. [ImageList 구성 요소](imagelist-component-windows-forms.md) 고 [방법: 제거 이미지는 Windows Forms ImageList 구성 요소 추가 또는](how-to-add-or-remove-images-with-the-windows-forms-imagelist-component.md)합니다.  
   
 3.  설정를 <xref:System.Windows.Forms.TabControl.ImageList%2A> 의 속성을 <xref:System.Windows.Forms.TabControl> 에 <xref:System.Windows.Forms.ImageList> 컨트롤.  
   
@@ -66,8 +66,8 @@ ms.locfileid: "54630322"
 -   설정 합니다 <xref:System.Windows.Forms.TabControl.Appearance%2A> 의 속성을 <xref:System.Windows.Forms.TabControl> 에 <xref:System.Windows.Forms.TabAppearance.Buttons> 또는 <xref:System.Windows.Forms.TabAppearance.FlatButtons>.  
   
 ## <a name="see-also"></a>참고자료
-- [TabControl 컨트롤](../../../../docs/framework/winforms/controls/tabcontrol-control-windows-forms.md)
-- [TabControl 컨트롤 개요](../../../../docs/framework/winforms/controls/tabcontrol-control-overview-windows-forms.md)
-- [방법: 탭 페이지에 컨트롤 추가](../../../../docs/framework/winforms/controls/how-to-add-a-control-to-a-tab-page.md)
-- [방법: 탭 페이지를 사용 하지 않도록 설정](../../../../docs/framework/winforms/controls/how-to-disable-tab-pages.md)
-- [방법: Windows Forms TabControl 사용 하 여 탭 추가 및 제거](../../../../docs/framework/winforms/controls/how-to-add-and-remove-tabs-with-the-windows-forms-tabcontrol.md)
+- [TabControl 컨트롤](tabcontrol-control-windows-forms.md)
+- [TabControl 컨트롤 개요](tabcontrol-control-overview-windows-forms.md)
+- [방법: 탭 페이지에 컨트롤 추가](how-to-add-a-control-to-a-tab-page.md)
+- [방법: 탭 페이지를 사용 하지 않도록 설정](how-to-disable-tab-pages.md)
+- [방법: Windows Forms TabControl 사용 하 여 탭 추가 및 제거](how-to-add-and-remove-tabs-with-the-windows-forms-tabcontrol.md)

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - columns [Windows Forms], resizing in grids
 - data grids [Windows Forms], resizing columns and rows
 ms.assetid: 7532764d-e5c1-4943-a08b-6377a722d3b6
-ms.openlocfilehash: e2be90a1367bdcbb5b9c6441a407e3e23e5204c8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8eae5dafa314bb293f55a780f6be67d06f376004
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54711251"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57709656"
 ---
 # <a name="resizing-columns-and-rows-in-the-windows-forms-datagridview-control"></a>Windows Forms DataGridView 컨트롤의 열 및 행 크기 조정
 `DataGridView` 컨트롤의 열 및 행 크기 조정 동작을 사용자 지정에 대 한 다양 한 옵션을 제공 합니다. 일반적으로 `DataGridView` 셀 크기가 조정 되지 않습니다 해당 내용을 기반으로 합니다. 대신 된 셀 보다 크면 모든 표시 값을 잘립니다. 콘텐츠를 문자열로 표시할 수 있는, 셀 도구 설명에 표시 합니다.  
@@ -21,19 +21,19 @@ ms.locfileid: "54711251"
  `DataGridView` 컨트롤은 속성, 메서드 및 사용자 지정 하거나 이러한 모든 사용자 지정 동작을 비활성화할 수 있도록 하는 이벤트를 제공 합니다. 또한 프로그래밍 방식으로 크기를 조정할 수 행, 열 및 해당 내용에 맞게 머리글 또는 해당 내용이 변경 될 때마다 직접 자동으로 조정 하도록 구성할 수 있습니다. 또한 자동으로 지정 하는 비율에서 컨트롤의 사용 가능한 너비를 분할 하는 열을 구성할 수 있습니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
- [Windows Forms DataGridView 컨트롤의 크기 조정 옵션](../../../../docs/framework/winforms/controls/sizing-options-in-the-windows-forms-datagridview-control.md)  
+ [Windows Forms DataGridView 컨트롤의 크기 조정 옵션](sizing-options-in-the-windows-forms-datagridview-control.md)  
  크기 조정 행, 열 및 헤더에 대 한 옵션을 설명합니다. 또한 크기 조정 관련 속성 및 메서드 세부 정보를 제공 하 고 일반적인 사용 시나리오에 설명 합니다.  
   
- [Windows Forms DataGridView 컨트롤의 열 채우기 모드](../../../../docs/framework/winforms/controls/column-fill-mode-in-the-windows-forms-datagridview-control.md)  
+ [Windows Forms DataGridView 컨트롤의 열 채우기 모드](column-fill-mode-in-the-windows-forms-datagridview-control.md)  
  열 채우기 모드를 자세히 설명 하 고 열 채우기 모드와 다른 모드를 사용 하 여 실험에 사용할 수 있는 데모 코드를 제공 합니다.  
   
- [방법: Windows Forms DataGridView 컨트롤의 크기 조정 모드 설정](../../../../docs/framework/winforms/controls/how-to-set-the-sizing-modes-of-the-windows-forms-datagridview-control.md)  
+ [방법: Windows Forms DataGridView 컨트롤의 크기 조정 모드 설정](how-to-set-the-sizing-modes-of-the-windows-forms-datagridview-control.md)  
  일반적인 용도 대 한 크기 조정 모드를 구성 하는 방법에 설명 합니다.  
   
- [방법: 프로그래밍 방식으로 Windows Forms DataGridView 컨트롤의 내용에 맞게 셀 크기 조정](../../../../docs/framework/winforms/controls/programmatically-resize-cells-to-fit-content-in-the-datagrid.md)  
+ [방법: 프로그래밍 방식으로 Windows Forms DataGridView 컨트롤의 내용에 맞게 셀 크기 조정](programmatically-resize-cells-to-fit-content-in-the-datagrid.md)  
  프로그래밍 방식으로 크기 조정을 통한 실험 하는 데 사용할 수 있는 데모 코드를 제공 합니다.  
   
- [방법: Windows Forms DataGridView 컨트롤에서 내용이 변경 될 때 자동으로 셀 크기 조정](../../../../docs/framework/winforms/controls/automatically-resize-cells-when-content-changes-in-the-datagrid.md)  
+ [방법: Windows Forms DataGridView 컨트롤에서 내용이 변경 될 때 자동으로 셀 크기 조정](automatically-resize-cells-when-content-changes-in-the-datagrid.md)  
  자동 크기 조정 모드를 사용 하 여 실험에 사용할 수 있는 데모 코드를 제공 합니다.  
   
 ## <a name="reference"></a>참조  
@@ -41,4 +41,4 @@ ms.locfileid: "54711251"
  <xref:System.Windows.Forms.DataGridView> 컨트롤에 대한 참조 설명서를 제공합니다.  
   
 ## <a name="see-also"></a>참고자료
-- [DataGridView 컨트롤](../../../../docs/framework/winforms/controls/datagridview-control-windows-forms.md)
+- [DataGridView 컨트롤](datagridview-control-windows-forms.md)

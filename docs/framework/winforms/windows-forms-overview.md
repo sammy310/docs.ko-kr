@@ -5,12 +5,12 @@ helpviewer_keywords:
 - smart clients
 - Windows Forms, about Windows Forms
 ms.assetid: 3a2b6284-c8d6-4e1c-8c69-0bed38f38cd4
-ms.openlocfilehash: 4c4d3c2f323492cafaa2dc4d52ab994323eba69b
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: bbc77c0074b35a95140b35d71e89c51ad8abac62
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57375326"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57705846"
 ---
 # <a name="windows-forms-overview"></a>Windows Forms 개요
 
@@ -26,9 +26,9 @@ ms.locfileid: "57375326"
 
  Windows Forms에서 *폼*은 정보를 사용자에게 표시하는 비주얼 화면입니다. 일반적으로 폼에 컨트롤을 추가하고 마우스 클릭이나 키 누름과 같은 사용자 동작에 대한 응답을 개발하여 Windows Forms 애플리케이션을 빌드합니다. *컨트롤*은 데이터를 표시하거나 데이터 입력을 수락하는 고유한 UI(사용자 인터페이스) 요소입니다.
 
- 사용자가 폼이나 컨트롤 중 하나에 작업을 수행하면 이벤트가 생성됩니다. 애플리케이션은 코드를 사용하여 이러한 이벤트에 대응하고, 발생 시 이벤트를 처리합니다. 자세한 내용은 [Windows Forms에서 이벤트 처리기 만들기](../../../docs/framework/winforms/creating-event-handlers-in-windows-forms.md)를 참조하세요.
+ 사용자가 폼이나 컨트롤 중 하나에 작업을 수행하면 이벤트가 생성됩니다. 애플리케이션은 코드를 사용하여 이러한 이벤트에 대응하고, 발생 시 이벤트를 처리합니다. 자세한 내용은 [Windows Forms에서 이벤트 처리기 만들기](creating-event-handlers-in-windows-forms.md)를 참조하세요.
 
- Windows Forms에는 텍스트 상자, 단추, 드롭다운 상자, 라디오 단추 및 웹 페이지를 표시하는 컨트롤 등 폼에 추가할 수 있는 다양한 컨트롤이 포함되어 있습니다. 폼에서 사용할 수 있는 모든 컨트롤의 목록은 [Windows Forms에서 사용할 수 있는 컨트롤](../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)을 참조하세요. 기존 컨트롤이 요구를 충족하지 않는 경우 Windows Forms에서 <xref:System.Windows.Forms.UserControl> 클래스를 사용하여 고유한 사용자 지정 컨트롤을 만들 수도 있습니다.
+ Windows Forms에는 텍스트 상자, 단추, 드롭다운 상자, 라디오 단추 및 웹 페이지를 표시하는 컨트롤 등 폼에 추가할 수 있는 다양한 컨트롤이 포함되어 있습니다. 폼에서 사용할 수 있는 모든 컨트롤의 목록은 [Windows Forms에서 사용할 수 있는 컨트롤](./controls/controls-to-use-on-windows-forms.md)을 참조하세요. 기존 컨트롤이 요구를 충족하지 않는 경우 Windows Forms에서 <xref:System.Windows.Forms.UserControl> 클래스를 사용하여 고유한 사용자 지정 컨트롤을 만들 수도 있습니다.
 
  Windows Forms에는 Microsoft Office와 같은 고급 애플리케이션의 기능을 에뮬레이트하는 풍부한 UI 컨트롤이 있습니다. <xref:System.Windows.Forms.ToolStrip> 및 <xref:System.Windows.Forms.MenuStrip> 컨트롤을 사용하는 경우 텍스트와 이미지를 포함하고, 하위 메뉴를 표시하며, 텍스트 상자 및 콤보 상자와 같은 기타 컨트롤을 호스트하는 도구 모음과 메뉴를 만들 수 있습니다.
 
@@ -45,10 +45,10 @@ ms.locfileid: "57375326"
 
 |설명|도움말 항목|
 |-----------------|----------------|
-|폼에서 컨트롤 사용|[방법: Windows Forms에 컨트롤 추가](../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md)|
-|<xref:System.Windows.Forms.ToolStrip> 컨트롤 사용|[방법: 디자이너를 사용 하 여 표준 항목을 포함 하는 기본 ToolStrip 만들기](../../../docs/framework/winforms/controls/create-a-basic-wf-toolstrip-with-standard-items-using-the-designer.md)|
-|<xref:System.Drawing>을 사용하여 그래픽 만들기|[그래픽 프로그래밍 시작](../../../docs/framework/winforms/advanced/getting-started-with-graphics-programming.md)|
-|사용자 지정 컨트롤 만들기|[방법: UserControl 클래스에서 상속](../../../docs/framework/winforms/controls/how-to-inherit-from-the-usercontrol-class.md)|
+|폼에서 컨트롤 사용|[방법: Windows Forms에 컨트롤 추가](./controls/how-to-add-controls-to-windows-forms.md)|
+|<xref:System.Windows.Forms.ToolStrip> 컨트롤 사용|[방법: 디자이너를 사용 하 여 표준 항목을 포함 하는 기본 ToolStrip 만들기](./controls/create-a-basic-wf-toolstrip-with-standard-items-using-the-designer.md)|
+|<xref:System.Drawing>을 사용하여 그래픽 만들기|[그래픽 프로그래밍 시작](./advanced/getting-started-with-graphics-programming.md)|
+|사용자 지정 컨트롤 만들기|[방법: UserControl 클래스에서 상속](./controls/how-to-inherit-from-the-usercontrol-class.md)|
 
 ### <a name="display-and-manipulate-data"></a>표시 하 고 데이터를 조작
  많은 애플리케이션은 데이터베이스, XML 파일, XML Web services 또는 기타 데이터 소스의 데이터를 표시해야 합니다. Windows Forms는 각 데이터 조각이 해당 셀을 사용하도록 이러한 표 형식 데이터를 기존의 행과 열 형식으로 표시하기 위해 <xref:System.Windows.Forms.DataGridView> 컨트롤이라는 유연한 컨트롤을 제공합니다. <xref:System.Windows.Forms.DataGridView>를 사용하는 경우 다른 기능 중에서도 개별 셀의 모양을 사용자 지정하고, 임의의 행과 열을 제자리에 잠그고, 셀 안에 복잡한 컨트롤을 표시할 수 있습니다.
@@ -65,10 +65,10 @@ ms.locfileid: "57375326"
 
 |설명|도움말 항목|
 |-----------------|----------------|
-|<xref:System.Windows.Forms.BindingSource> 구성 요소 사용|[방법: 디자이너를 사용 하는 BindingSource 구성 요소를 사용 하 여 Windows Forms 컨트롤 바인딩](../../../docs/framework/winforms/controls/bind-wf-controls-with-the-bindingsource.md)|
-|[!INCLUDE[vstecado](../../../includes/vstecado-md.md)] 데이터 소스 작업|[방법: Forms BindingSource 구성 요소는 Windows 사용 하 여 ADO.NET 데이터 정렬 및 필터링](../../../docs/framework/winforms/controls/sort-and-filter-ado-net-data-with-wf-bindingsource-component.md)|
+|<xref:System.Windows.Forms.BindingSource> 구성 요소 사용|[방법: 디자이너를 사용 하는 BindingSource 구성 요소를 사용 하 여 Windows Forms 컨트롤 바인딩](./controls/bind-wf-controls-with-the-bindingsource.md)|
+|[!INCLUDE[vstecado](../../../includes/vstecado-md.md)] 데이터 소스 작업|[방법: Forms BindingSource 구성 요소는 Windows 사용 하 여 ADO.NET 데이터 정렬 및 필터링](./controls/sort-and-filter-ado-net-data-with-wf-bindingsource-component.md)|
 |데이터 소스 창 사용|[Visual Studio에서 데이터에 Windows Forms 컨트롤 바인딩](/visualstudio/data-tools/bind-windows-forms-controls-to-data-in-visual-studio)|
-|애플리케이션 설정 사용|[방법: 응용 프로그램 설정 만들기](../../../docs/framework/winforms/advanced/how-to-create-application-settings.md)|
+|애플리케이션 설정 사용|[방법: 응용 프로그램 설정 만들기](./advanced/how-to-create-application-settings.md)|
 
 ### <a name="deploy-apps-to-client-computers"></a>클라이언트 컴퓨터에 앱 배포
 
@@ -98,15 +98,15 @@ Windows Forms에는 대화 상자 만들기, 인쇄, 도움말 및 설명서 추
 
 |설명|도움말 항목|
 |-----------------|----------------|
-|폼의 콘텐츠 인쇄|[방법: Windows Forms의 그래픽 인쇄](../../../docs/framework/winforms/advanced/how-to-print-graphics-in-windows-forms.md)<br /><br /> [방법: Windows Forms에서 다중 페이지 텍스트 파일 인쇄](../../../docs/framework/winforms/advanced/how-to-print-a-multi-page-text-file-in-windows-forms.md)|
-|Windows Forms 보안에 대한 자세한 정보|[Windows Forms의 보안 개요](../../../docs/framework/winforms/security-in-windows-forms-overview.md)|
+|폼의 콘텐츠 인쇄|[방법: Windows Forms의 그래픽 인쇄](./advanced/how-to-print-graphics-in-windows-forms.md)<br /><br /> [방법: Windows Forms에서 다중 페이지 텍스트 파일 인쇄](./advanced/how-to-print-a-multi-page-text-file-in-windows-forms.md)|
+|Windows Forms 보안에 대한 자세한 정보|[Windows Forms의 보안 개요](security-in-windows-forms-overview.md)|
 
 ## <a name="see-also"></a>참고자료
 
-- [Windows Forms 시작](../../../docs/framework/winforms/getting-started-with-windows-forms.md)
-- [새 Windows Form 만들기](../../../docs/framework/winforms/creating-a-new-windows-form.md)
-- [ToolStrip 컨트롤 개요](../../../docs/framework/winforms/controls/toolstrip-control-overview-windows-forms.md)
-- [DataGridView 컨트롤 개요](../../../docs/framework/winforms/controls/datagridview-control-overview-windows-forms.md)
-- [BindingSource 구성 요소 개요](../../../docs/framework/winforms/controls/bindingsource-component-overview.md)
-- [응용 프로그램 설정 개요](../../../docs/framework/winforms/advanced/application-settings-overview.md)
+- [Windows Forms 시작](getting-started-with-windows-forms.md)
+- [새 Windows Form 만들기](creating-a-new-windows-form.md)
+- [ToolStrip 컨트롤 개요](./controls/toolstrip-control-overview-windows-forms.md)
+- [DataGridView 컨트롤 개요](./controls/datagridview-control-overview-windows-forms.md)
+- [BindingSource 구성 요소 개요](./controls/bindingsource-component-overview.md)
+- [응용 프로그램 설정 개요](./advanced/application-settings-overview.md)
 - [ClickOnce 보안 및 배포](/visualstudio/deployment/clickonce-security-and-deployment)

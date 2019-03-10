@@ -2,21 +2,22 @@
 title: Expressions1
 ms.date: 03/30/2017
 ms.assetid: c42341a9-43a1-462c-bffb-c5de004aa428
-ms.openlocfilehash: 015bf50fc718881ee4e67d17298031ef0f94d4cb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7643279c2db5608c028e0a1213802ab609a2d347
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33514888"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57704286"
 ---
 # <a name="expressions"></a>식
-Windows WF (Workflow Foundation) 식은 결과 반환 하는 활동입니다. 모든 식 활동은 활동의 반환 값으로 <xref:System.Activities.Activity%601>라는 <xref:System.Activities.OutArgument> 속성을 포함하는 <xref:System.Activities.Activity%601.Result%2A>에서 간접적으로 파생됩니다. [!INCLUDE[wf1](../../../includes/wf1-md.md)]는 연산자 활동을 통해 단일 워크플로 변수에 대한 액세스를 제공하는 <xref:System.Activities.Expressions.VariableValue%601> 및 <xref:System.Activities.Expressions.VariableReference%601> 등의 단순한 활동부터 결과를 생성하기 위해 전체 Visual Basic 언어에 대한 액세스를 제공하는 <xref:Microsoft.VisualBasic.Activities.VisualBasicReference%601> 및 <xref:Microsoft.VisualBasic.Activities.VisualBasicValue%601> 등의 복잡한 활동까지 광범위한 식 활동과 함께 제공됩니다. <xref:System.Activities.CodeActivity%601> 또는 <xref:System.Activities.NativeActivity%601>에서 파생시켜서 추가 식 활동을 만들 수 있습니다.  
+Windows WF (Workflow Foundation) 식은 결과 반환 하는 모든 작업입니다. 모든 식 활동은 활동의 반환 값으로 <xref:System.Activities.Activity%601>라는 <xref:System.Activities.OutArgument> 속성을 포함하는 <xref:System.Activities.Activity%601.Result%2A>에서 간접적으로 파생됩니다. [!INCLUDE[wf1](../../../includes/wf1-md.md)]는 연산자 활동을 통해 단일 워크플로 변수에 대한 액세스를 제공하는 <xref:System.Activities.Expressions.VariableValue%601> 및 <xref:System.Activities.Expressions.VariableReference%601> 등의 단순한 활동부터 결과를 생성하기 위해 전체 Visual Basic 언어에 대한 액세스를 제공하는 <xref:Microsoft.VisualBasic.Activities.VisualBasicReference%601> 및 <xref:Microsoft.VisualBasic.Activities.VisualBasicValue%601> 등의 복잡한 활동까지 광범위한 식 활동과 함께 제공됩니다. <xref:System.Activities.CodeActivity%601> 또는 <xref:System.Activities.NativeActivity%601>에서 파생시켜서 추가 식 활동을 만들 수 있습니다.  
   
 ## <a name="using-expressions"></a>식 사용  
  Workflow Designer에서는 Visual Basic 프로젝트의 모든 식에 <xref:Microsoft.VisualBasic.Activities.VisualBasicValue%601> 및 <xref:Microsoft.VisualBasic.Activities.VisualBasicReference%601>를 사용하며, C# 워크플로 프로젝트에는 <xref:Microsoft.CSharp.Activities.CSharpValue%601> 및 <xref:Microsoft.CSharp.Activities.CSharpReference%601>를 사용합니다.  
   
 > [!NOTE]
->  [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]에는 워크플로 프로젝트의 C# 식에 대한 지원이 도입되었습니다. 자세한 내용은 참조 [C# 식을](../../../docs/framework/windows-workflow-foundation/csharp-expressions.md)합니다.  
+>  
+  [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]에는 워크플로 프로젝트의 C# 식에 대한 지원이 도입되었습니다. 자세한 내용은 [ C# 식](csharp-expressions.md)합니다.  
   
  디자이너에서 생성된 워크플로는 XAML로 저장됩니다. 여기서 식은 다음 예와 같이 대괄호로 묶인 상태로 나타납니다.  
   
@@ -165,4 +166,4 @@ Sequence w = new Sequence
 };  
 ```  
   
- 코드에서 식 사용 하는 방법에 대 한 자세한 내용은 참조 [제작 워크플로, 활동 및 식을 사용 하 여 명령적 코드](../../../docs/framework/windows-workflow-foundation/authoring-workflows-activities-and-expressions-using-imperative-code.md)합니다.
+ 식을 사용 하 여 코드에 대 한 자세한 내용은 참조 하세요. [제작 워크플로, 활동 및 식을 사용 하 여 명령적 코드](authoring-workflows-activities-and-expressions-using-imperative-code.md)합니다.

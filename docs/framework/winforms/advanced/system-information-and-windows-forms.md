@@ -10,12 +10,12 @@ helpviewer_keywords:
 - user names [Windows Forms], retrieving
 - system information [Windows Forms]
 ms.assetid: 30cf43a3-8cb2-4ff3-862b-6c34576616a8
-ms.openlocfilehash: 285a35012c4417e4ee39bf8c72e85bd6102d3e23
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d8efb783fcb5bcbe9c4ee99bc784e27a1aebb0cf
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54594449"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57707666"
 ---
 # <a name="system-information-and-windows-forms"></a>시스템 정보 및 Windows Forms
 경우에 따라 코드에서 결정 하기 위해 응용 프로그램에서 실행 되는 컴퓨터에 대 한 정보를 수집 해야 합니다. 예를 들어만 특정 네트워크 도메인;에 연결 하는 경우에 적용할 수 있는 함수를 해야 할 수 있습니다. 이 경우 도메인을 확인 하 고 도메인에 없는 경우 함수를 사용 하지 않도록 설정 하는 방법을 해야 합니다.  
@@ -44,4 +44,4 @@ MessageBox.Show("Good morning " + User + ". You are connected to " _
   
 ## <a name="see-also"></a>참고자료
 - <xref:System.Windows.Forms.SystemInformation>
-- [Windows Forms의 전원 관리](../../../../docs/framework/winforms/advanced/power-management-in-windows-forms.md)
+- [Windows Forms의 전원 관리](power-management-in-windows-forms.md)

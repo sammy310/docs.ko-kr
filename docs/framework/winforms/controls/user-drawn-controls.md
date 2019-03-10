@@ -9,12 +9,12 @@ helpviewer_keywords:
 - OnPaint method [Windows Forms]
 - user-drawn controls [Windows Forms]
 ms.assetid: 034af4b5-457f-4160-a937-22891817faa8
-ms.openlocfilehash: e9eab78695db128c0538914c5364aaa54c135403
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1529d4d62004becca4495d96fa893da20caa3954
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54509963"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57709677"
 ---
 # <a name="user-drawn-controls"></a>사용자가 그린 컨트롤
 .NET Framework 사용자 지정 컨트롤을 쉽게 개발할 수 있는 기능을 제공 합니다. 표준 컨트롤 코드 함께 바인딩된 집합이 인 사용자 컨트롤을 만들 수 있습니다 또는 등록부터 고유한 컨트롤을 디자인할 수 있습니다. 기존 컨트롤에서 상속 되는 컨트롤을 만들고의 고유 기능에 추가 상속을 사용할 수 있습니다. 어떤 방법을 사용 하는.NET Framework를 만들면 모든 컨트롤에 대 한 사용자 지정 그래픽 인터페이스를 그릴를 제공 합니다.  
@@ -25,7 +25,7 @@ ms.locfileid: "54509963"
   
 -   <xref:System.Drawing.Graphics> 개체-여러 그래픽 지향 개체 및 컨트롤을 그리는 데 필요한 기능을 제공 하는 메서드를 캡슐화 합니다.  
   
- 에 대 한 자세한 합니다 <xref:System.Drawing.Graphics> 개체와 사용 하는 [방법: 그리는 데 필요한 그래픽 개체 만들기](../../../../docs/framework/winforms/advanced/how-to-create-graphics-objects-for-drawing.md)합니다.  
+ 에 대 한 자세한 합니다 <xref:System.Drawing.Graphics> 개체와 사용 하는 [방법: 그리는 데 필요한 그래픽 개체 만들기](../advanced/how-to-create-graphics-objects-for-drawing.md)합니다.  
   
  합니다 <xref:System.Windows.Forms.Control.OnPaint%2A> 컨트롤을 그리거나 화면에서 새로 고칠 때마다 이벤트가 발생 하며 <xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A> 개체는 그리기를 수행 하는 사각형을 나타내는입니다. 전체 컨트롤을 새로 고칠 수 해야 하는 경우는 <xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A> 는 전체 컨트롤의 크기를 나타냅니다. 그러나 컨트롤의 일부를 새로 고칠 수 하는 데 필요한 경우를 <xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A> 개체는 다시 그려야 하는 영역만 나타냅니다. 이러한 사례의 예로 다른 컨트롤이 나 사용자 인터페이스의 폼에서 컨트롤을 부분적으로 가려져 때 것입니다.  
   
@@ -81,6 +81,6 @@ SetStyle(ControlStyles.ResizeRedraw, true);
 - <xref:System.Drawing.Graphics>
 - <xref:System.Windows.Forms.Control.OnPaint%2A>
 - <xref:System.Windows.Forms.PaintEventArgs>
-- [방법: 그리는 데 필요한 그래픽 개체 만들기](../../../../docs/framework/winforms/advanced/how-to-create-graphics-objects-for-drawing.md)
-- [구성 요소 컨트롤](../../../../docs/framework/winforms/controls/constituent-controls.md)
-- [사용자 지정 컨트롤의 종류](../../../../docs/framework/winforms/controls/varieties-of-custom-controls.md)
+- [방법: 그리는 데 필요한 그래픽 개체 만들기](../advanced/how-to-create-graphics-objects-for-drawing.md)
+- [구성 요소 컨트롤](constituent-controls.md)
+- [사용자 지정 컨트롤의 종류](varieties-of-custom-controls.md)

@@ -13,12 +13,12 @@ helpviewer_keywords:
 - Timer component [Windows Forms], initializing
 - procedures [Windows Forms], specific time intervals
 ms.assetid: 8025247a-2de4-4d86-b8ab-a8cb8aeab2ea
-ms.openlocfilehash: 6a5a30b77e19e316bdf08234767cab2c9b72b296
-ms.sourcegitcommit: 2b986afe4ce9e13bbeec929c9737757eb61de60e
+ms.openlocfilehash: 03f386917e554cfdf9d65778474ae809d81d1939
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "56663992"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57705573"
 ---
 # <a name="how-to-run-procedures-at-set-intervals-with-the-windows-forms-timer-component"></a>방법: Windows Forms Timer 구성 요소를 사용 하 여 설정 된 간격 프로시저를 실행 합니다.
 루프가 완료될 때까지 특정 시간 간격으로 실행되거나 설정된 시간 간격이 경과할 때 실행되는 프로시저를 만들려는 경우도 있습니다. <xref:System.Windows.Forms.Timer> 구성 요소는 이러한 프로시저를 가능하게 합니다.  
@@ -27,7 +27,7 @@ ms.locfileid: "56663992"
   
 > [!NOTE]
 >  
-  <xref:System.Windows.Forms.Timer> 구성 요소를 사용하는 경우 몇 가지 제한 사항이 있습니다. 자세한 내용은 [Windows Forms Timer 구성 요소의 Interval 속성 제한 사항](../../../../docs/framework/winforms/controls/limitations-of-the-timer-component-interval-property.md)합니다.  
+  <xref:System.Windows.Forms.Timer> 구성 요소를 사용하는 경우 몇 가지 제한 사항이 있습니다. 자세한 내용은 [Windows Forms Timer 구성 요소의 Interval 속성 제한 사항](limitations-of-the-timer-component-interval-property.md)합니다.  
   
 ## <a name="to-run-a-procedure-at-set-intervals-with-the-timer-component"></a>Timer 구성 요소를 사용하여 설정된 간격마다 프로시저를 실행하려면  
   
@@ -245,5 +245,5 @@ private:
   
 ## <a name="see-also"></a>참고자료
 - <xref:System.Windows.Forms.Timer>
-- [Timer 구성 요소](../../../../docs/framework/winforms/controls/timer-component-windows-forms.md)
-- [Timer 구성 요소 개요](../../../../docs/framework/winforms/controls/timer-component-overview-windows-forms.md)
+- [Timer 구성 요소](timer-component-windows-forms.md)
+- [Timer 구성 요소 개요](timer-component-overview-windows-forms.md)

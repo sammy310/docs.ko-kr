@@ -8,12 +8,12 @@ helpviewer_keywords:
 - custom drawing
 - owner drawing
 ms.assetid: 3823d01e-9610-43e6-864d-99f9b7c2b351
-ms.openlocfilehash: 5206289eaab1195e5314e21b0d49e4b8a5455b72
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 50f180f2f3fe825f617ae441906a7414a6b8bced
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54696310"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57707359"
 ---
 # <a name="controls-with-built-in-owner-drawing-support"></a>소유자가 그린 기본 제공 컨트롤 지원
 사용자 지정 그리기라고도 하는 Windows Forms의 소유자 그리기는 특정 컨트롤을 시각적 모양으로 변경하는 기술입니다.  
@@ -86,7 +86,7 @@ ms.locfileid: "54696310"
   
 -   <xref:System.Windows.Forms.ComboBox.DrawItem?displayProperty=nameWithType>  
   
--   [방법: ComboBox 컨트롤에서 가변 크기 텍스트 만들기](../../../../docs/framework/winforms/controls/how-to-create-variable-sized-text-in-a-combobox-control.md)  
+-   [방법: ComboBox 컨트롤에서 가변 크기 텍스트 만들기](how-to-create-variable-sized-text-in-a-combobox-control.md)  
   
 ### <a name="menuitem-component"></a>MenuItem 구성 요소  
  합니다 <xref:System.Windows.Forms.MenuItem> 구성 요소에 단일 메뉴 항목을 나타냅니다는 <xref:System.Windows.Forms.MainMenu> 또는 <xref:System.Windows.Forms.ContextMenu> 구성 요소입니다.  
@@ -172,9 +172,9 @@ ms.locfileid: "54696310"
   
 -   <xref:System.Windows.Forms.DataGridView.RowPostPaint>  
   
--   [방법: Windows Forms DataGridView 컨트롤에서 셀 모양 사용자 지정](../../../../docs/framework/winforms/controls/customize-the-appearance-of-cells-in-the-datagrid.md)  
+-   [방법: Windows Forms DataGridView 컨트롤에서 셀 모양 사용자 지정](customize-the-appearance-of-cells-in-the-datagrid.md)  
   
--   [방법: Windows Forms DataGridView 컨트롤에서 행 모양 사용자 지정](../../../../docs/framework/winforms/controls/customize-the-appearance-of-rows-in-the-datagrid.md)  
+-   [방법: Windows Forms DataGridView 컨트롤에서 행 모양 사용자 지정](customize-the-appearance-of-rows-in-the-datagrid.md)  
   
 ### <a name="toolstrip-control"></a>ToolStrip 컨트롤  
  <xref:System.Windows.Forms.ToolStrip> 및 파생 된 컨트롤을 사용 하면 모양의 모든 측면을 사용자 지정할 수 있습니다.  
@@ -185,9 +185,9 @@ ms.locfileid: "54696310"
   
 -   <xref:System.Windows.Forms.ToolStripRenderer>  
   
--   [방법: 만들기 및 사용자 지정 렌더러를 Windows Forms의 ToolStrip 컨트롤에 대 한 설정](../../../../docs/framework/winforms/controls/create-and-set-a-custom-renderer-for-the-toolstrip-control-in-wf.md)  
+-   [방법: 만들기 및 사용자 지정 렌더러를 Windows Forms의 ToolStrip 컨트롤에 대 한 설정](create-and-set-a-custom-renderer-for-the-toolstrip-control-in-wf.md)  
   
--   [방법: ToolStrip 컨트롤 그리기 사용자 지정](../../../../docs/framework/winforms/controls/how-to-custom-draw-a-toolstrip-control.md)  
+-   [방법: ToolStrip 컨트롤 그리기 사용자 지정](how-to-custom-draw-a-toolstrip-control.md)  
   
 ## <a name="see-also"></a>참고자료
-- [Windows Forms에 사용할 수 있는 컨트롤](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)
+- [Windows Forms에 사용할 수 있는 컨트롤](controls-to-use-on-windows-forms.md)

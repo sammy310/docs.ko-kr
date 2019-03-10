@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 45ad3f8b-1c26-4c9f-91a9-3bb0759a47a4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 354375d4758e4ab34d34571257f6414e6a8584f0
-ms.sourcegitcommit: 2b986afe4ce9e13bbeec929c9737757eb61de60e
+ms.openlocfilehash: 5dc5c3425672dd71359edf61c5f8625d96ad09ce
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "56664200"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57716948"
 ---
 # <a name="how-to-create-a-windows-forms-application-from-the-command-line"></a>방법: 명령줄에서 Windows Forms 응용 프로그램 만들기
 다음 절차에서는 명령줄에서 Windows Forms 응용 프로그램을 만들고 실행하기 위해 완료해야 하는 기본 단계를 설명합니다. Visual Studio에서는 이러한 절차가 광범위하게 지원됩니다.  또한 참조 [연습: WPF에서 호스팅하는 Windows Forms 컨트롤](../wpf/advanced/walkthrough-hosting-a-windows-forms-control-in-wpf.md)합니다.  
@@ -27,21 +27,21 @@ ms.locfileid: "56664200"
   
 1.  빈 코드 파일에서 다음 import 또는 using 문을 입력합니다.  
   
-     [!code-csharp[System.Windows.Forms.BasicForm#2](../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.BasicForm/CS/Form1.cs#2)]
-     [!code-vb[System.Windows.Forms.BasicForm#2](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.BasicForm/VB/Form1.vb#2)]  
+     [!code-csharp[System.Windows.Forms.BasicForm#2](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.BasicForm/CS/Form1.cs#2)]
+     [!code-vb[System.Windows.Forms.BasicForm#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.BasicForm/VB/Form1.vb#2)]  
   
 2.  Form 클래스에서 상속되는 `Form1`이라는 클래스를 선언합니다.  
   
-     [!code-csharp[System.Windows.Forms.BasicForm#3](../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.BasicForm/CS/Form1.cs#3)]
-     [!code-vb[System.Windows.Forms.BasicForm#3](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.BasicForm/VB/Form1.vb#3)]  
+     [!code-csharp[System.Windows.Forms.BasicForm#3](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.BasicForm/CS/Form1.cs#3)]
+     [!code-vb[System.Windows.Forms.BasicForm#3](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.BasicForm/VB/Form1.vb#3)]  
   
 3.  
   `Form1`에 대한 기본 생성자를 만듭니다.  
   
      이후 절차에서 생성자에 더 많은 코드를 추가합니다.  
   
-     [!code-csharp[System.Windows.Forms.BasicForm#4](../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.BasicForm/CS/Form1.cs#4)]
-     [!code-vb[System.Windows.Forms.BasicForm#4](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.BasicForm/VB/Form1.vb#4)]  
+     [!code-csharp[System.Windows.Forms.BasicForm#4](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.BasicForm/CS/Form1.cs#4)]
+     [!code-vb[System.Windows.Forms.BasicForm#4](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.BasicForm/VB/Form1.vb#4)]  
   
 4.  클래스에 `Main` 메서드를 추가합니다.  
   
@@ -51,8 +51,8 @@ ms.locfileid: "56664200"
   
     3.  폼 인스턴스를 만들고 실행합니다.  
   
-     [!code-csharp[System.Windows.Forms.BasicForm#5](../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.BasicForm/CS/Form1.cs#5)]
-     [!code-vb[System.Windows.Forms.BasicForm#5](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.BasicForm/VB/Form1.vb#5)]  
+     [!code-csharp[System.Windows.Forms.BasicForm#5](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.BasicForm/CS/Form1.cs#5)]
+     [!code-vb[System.Windows.Forms.BasicForm#5](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.BasicForm/VB/Form1.vb#5)]  
   
 #### <a name="to-compile-and-run-the-application"></a>응용 프로그램을 컴파일하고 실행하려면  
   
@@ -69,9 +69,9 @@ ms.locfileid: "56664200"
 3.  명령 프롬프트에서 다음을 입력 합니다. `Form1.exe`  
   
 ## <a name="adding-a-control-and-handling-an-event"></a>컨트롤 추가 및 이벤트 처리  
- 이전 절차의 단계에서는 컴파일 및 실행되는 기본 Windows Form을 만드는 방법만 보여 주었습니다. 다음 절차에서는 컨트롤을 만들고 폼에 추가한 다음 컨트롤에 대한 이벤트를 처리하는 방법을 보여 줍니다. Windows Forms를 추가할 수 있는 컨트롤에 대 한 자세한 내용은 참조 [Windows Forms 컨트롤](../../../docs/framework/winforms/controls/index.md)합니다.  
+ 이전 절차의 단계에서는 컴파일 및 실행되는 기본 Windows Form을 만드는 방법만 보여 주었습니다. 다음 절차에서는 컨트롤을 만들고 폼에 추가한 다음 컨트롤에 대한 이벤트를 처리하는 방법을 보여 줍니다. Windows Forms를 추가할 수 있는 컨트롤에 대 한 자세한 내용은 참조 [Windows Forms 컨트롤](./controls/index.md)합니다.  
   
- Windows Forms 응용 프로그램을 만드는 방법을 이해하는 것은 물론 이벤트 기반 프로그래밍 및 사용자 입력을 처리하는 방법도 이해해야 합니다. 자세한 내용은 [Windows Forms에서 이벤트 처리기 만들기](../../../docs/framework/winforms/creating-event-handlers-in-windows-forms.md), 및 [사용자 입력 처리](../../../docs/framework/winforms/controls/handling-user-input.md)  
+ Windows Forms 응용 프로그램을 만드는 방법을 이해하는 것은 물론 이벤트 기반 프로그래밍 및 사용자 입력을 처리하는 방법도 이해해야 합니다. 자세한 내용은 [Windows Forms에서 이벤트 처리기 만들기](creating-event-handlers-in-windows-forms.md), 및 [사용자 입력 처리](./controls/handling-user-input.md)  
   
 #### <a name="to-declare-a-button-control-and-handle-its-click-event"></a>단추 컨트롤을 선언하고 해당 click 이벤트를 처리하려면  
   
@@ -83,8 +83,8 @@ ms.locfileid: "56664200"
   
      다음 코드 예제에서는 단추 컨트롤을 선언하는 방법을 보여 줍니다.  
   
-     [!code-csharp[System.Windows.Forms.FormWithButton#2](../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.FormWithButton/CS/Form1.cs#2)]
-     [!code-vb[System.Windows.Forms.FormWithButton#2](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.FormWithButton/VB/Form1.vb#2)]  
+     [!code-csharp[System.Windows.Forms.FormWithButton#2](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.FormWithButton/CS/Form1.cs#2)]
+     [!code-vb[System.Windows.Forms.FormWithButton#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.FormWithButton/VB/Form1.vb#2)]  
   
 4.  단추에 대한 <xref:System.Windows.Forms.Control.Click> 이벤트를 처리할 메서드를 만듭니다.  
   
@@ -92,23 +92,23 @@ ms.locfileid: "56664200"
   
      다음 코드 예제에서는 단추 컨트롤의 click 이벤트를 처리하는 방법을 보여 줍니다.  
   
-     [!code-csharp[System.Windows.Forms.FormWithButton#3](../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.FormWithButton/CS/Form1.cs#3)]
-     [!code-vb[System.Windows.Forms.FormWithButton#3](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.FormWithButton/VB/Form1.vb#3)]  
+     [!code-csharp[System.Windows.Forms.FormWithButton#3](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.FormWithButton/CS/Form1.cs#3)]
+     [!code-vb[System.Windows.Forms.FormWithButton#3](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.FormWithButton/VB/Form1.vb#3)]  
   
 6.  만든 메서드에 <xref:System.Windows.Forms.Control.Click> 이벤트를 연결합니다.  
   
      다음 코드 예제에서는 이벤트를 메서드에 연결하는 방법을 보여 줍니다.  
   
-     [!code-csharp[System.Windows.Forms.FormWithButton#4](../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.FormWithButton/CS/Form1.cs#4)]
-     [!code-vb[System.Windows.Forms.FormWithButton#4](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.FormWithButton/VB/Form1.vb#4)]  
+     [!code-csharp[System.Windows.Forms.FormWithButton#4](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.FormWithButton/CS/Form1.cs#4)]
+     [!code-vb[System.Windows.Forms.FormWithButton#4](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.FormWithButton/VB/Form1.vb#4)]  
   
 7.  이전 절차에서 설명한 대로 응용 프로그램을 컴파일 및 실행합니다.  
   
 ## <a name="example"></a>예제  
  다음 코드 예제는 이전 절차의 전체 예제입니다.  
   
- [!code-csharp[System.Windows.Forms.FormWithButton#1](../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.FormWithButton/CS/Form1.cs#1)]
- [!code-vb[System.Windows.Forms.FormWithButton#1](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.FormWithButton/VB/Form1.vb#1)]  
+ [!code-csharp[System.Windows.Forms.FormWithButton#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.FormWithButton/CS/Form1.cs#1)]
+ [!code-vb[System.Windows.Forms.FormWithButton#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.FormWithButton/VB/Form1.vb#1)]  
   
 ## <a name="compiling-the-code"></a>코드 컴파일  
   
@@ -117,6 +117,6 @@ ms.locfileid: "56664200"
 ## <a name="see-also"></a>참고자료
 - <xref:System.Windows.Forms.Form>
 - <xref:System.Windows.Forms.Control>
-- [Windows Forms의 모양 변경](../../../docs/framework/winforms/changing-the-appearance-of-windows-forms.md)
-- [Windows Forms 응용 프로그램 강화](../../../docs/framework/winforms/advanced/index.md)
-- [Windows Forms 시작](../../../docs/framework/winforms/getting-started-with-windows-forms.md)
+- [Windows Forms의 모양 변경](changing-the-appearance-of-windows-forms.md)
+- [Windows Forms 응용 프로그램 강화](./advanced/index.md)
+- [Windows Forms 시작](getting-started-with-windows-forms.md)

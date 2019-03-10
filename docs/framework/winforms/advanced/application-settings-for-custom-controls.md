@@ -5,12 +5,12 @@ helpviewer_keywords:
 - custom controls [Windows Forms], application settings
 - application settings [Windows Forms], custom controls
 ms.assetid: f44afb74-76cc-44f2-890a-44b7cdc211a1
-ms.openlocfilehash: 96145a6205c3e80b23f3c69750f7faaec04aabba
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d12caf9ed2cb80d837080badab436b2e9b0b3728
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54526745"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57714348"
 ---
 # <a name="application-settings-for-custom-controls"></a>사용자 지정 컨트롤에 대한 애플리케이션 설정
 사용자 지정 컨트롤에서 타사 응용 프로그램에서 컨트롤을 호스팅할 때 응용 프로그램 설정을 유지할 수 있도록 특정 작업을 완료 해야 합니다.  
@@ -26,7 +26,7 @@ ms.locfileid: "54526745"
   
 2.  컨트롤 생성 및와 같은 폼의 폼에 배치 된 후이 사용자 지정 설정 클래스를 만드는 <xref:System.Windows.Forms.Form.Load> 이벤트 처리기입니다.  
   
- 사용자 지정 설정 클래스를 만드는 방법에 대 한 지침을 참조 하세요. [방법: 응용 프로그램 설정 만들기](../../../../docs/framework/winforms/advanced/how-to-create-application-settings.md)합니다.  
+ 사용자 지정 설정 클래스를 만드는 방법에 대 한 지침을 참조 하세요. [방법: 응용 프로그램 설정 만들기](how-to-create-application-settings.md)합니다.  
   
 ## <a name="settings-keys-and-shared-settings"></a>설정 키 및 공유 설정  
  일부 컨트롤은 동일한 폼 내에서 여러 번 사용할 수 있습니다. 대부분의 경우 이러한 컨트롤을 개별 설정을 유지 해야 합니다. 사용 하 여 합니다 <xref:System.Configuration.IPersistComponentSettings.SettingsKey%2A> 속성을 <xref:System.Configuration.IPersistComponentSettings>, 폼에서 컨트롤의 여러 버전을 명확 하 게 작동 하는 고유 문자열을 제공할 수 있습니다.  
@@ -48,4 +48,4 @@ ms.locfileid: "54526745"
 ## <a name="see-also"></a>참고자료
 - <xref:System.Configuration.ApplicationSettingsBase>
 - <xref:System.Configuration.IPersistComponentSettings>
-- [응용 프로그램 설정 아키텍처](../../../../docs/framework/winforms/advanced/application-settings-architecture.md)
+- [응용 프로그램 설정 아키텍처](application-settings-architecture.md)

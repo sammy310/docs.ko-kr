@@ -10,12 +10,12 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], mouse handling
 - navigation keys [Windows Forms], DataGridView control
 ms.assetid: 4519b928-bfc8-4e8b-bb9c-b1e76a0ca552
-ms.openlocfilehash: 4d0a3cb7a56b388ee9bd3f932f9fec604b39fa62
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 56585bf91a559844f15aede4519706674357a924
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54521766"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57708316"
 ---
 # <a name="default-keyboard-and-mouse-handling-in-the-windows-forms-datagridview-control"></a>기본 키보드 및 마우스 Windows Forms DataGridView 컨트롤에서 처리
 
@@ -52,7 +52,7 @@ ms.locfileid: "54521766"
 |ALT + 위쪽/아래쪽 화살표|현재 셀이 있으면 한 <xref:System.Windows.Forms.DataGridViewComboBoxCell>셀 편집 모드로 전환 하 고 드롭다운 목록을 표시 합니다.|  
 |스페이스바|현재 셀이 있으면를 <xref:System.Windows.Forms.DataGridViewButtonCell>, <xref:System.Windows.Forms.DataGridViewLinkCell>, 또는 <xref:System.Windows.Forms.DataGridViewCheckBoxCell>를 발생 시킵니다 합니다 <xref:System.Windows.Forms.DataGridView.CellClick> 및 <xref:System.Windows.Forms.DataGridView.CellContentClick> 이벤트. 현재 셀이 있으면는 <xref:System.Windows.Forms.DataGridViewButtonCell>, 단추를 누를 수도 있습니다. 현재 셀이 있으면는 <xref:System.Windows.Forms.DataGridViewCheckBoxCell>에 선택 상태를 변경 합니다.|  
 |Enter 키|현재 셀 및 행 변경 내용을 커밋하고 현재 셀의 바로 아래 셀으로 포커스를 이동 합니다. 마지막 행에 포커스가 있으면 포커스가 이동 하지 않고 모든 변경 내용을 커밋합니다.|  
-|Esc 키|컨트롤 편집 모드인 경우 편집을 취소 합니다. 컨트롤이 편집 모드에 없는 경우 현재 행에 컨트롤 편집을 지 원하는 데이터 원본에 바인딩되는 경우 적용 된 모든 변경 내용이 되돌립니다 또는 행 수준 커밋 범위를 사용 하 여 가상 모드 구현 되었습니다.|  
+|Esc|컨트롤 편집 모드인 경우 편집을 취소 합니다. 컨트롤이 편집 모드에 없는 경우 현재 행에 컨트롤 편집을 지 원하는 데이터 원본에 바인딩되는 경우 적용 된 모든 변경 내용이 되돌립니다 또는 행 수준 커밋 범위를 사용 하 여 가상 모드 구현 되었습니다.|  
 |백스페이스|셀을 편집할 때에 삽입 지점 앞에 있는 문자를 삭제 합니다.|  
 |Delete|셀을 편집할 때에 삽입 지점 다음 문자를 삭제 합니다.|  
 |Ctrl+Enter|포커스를 이동 하지 않고 현재 셀의 모든 변경 사항을 커밋합니다. 또한 컨트롤 편집 또는 가상 모드를 지 원하는 데이터 원본에 바인딩되는 경우 현재 행에 변경 내용을 사용 하 여 구현 된 커밋 행 수준 커밋 범위입니다.|  
@@ -117,4 +117,4 @@ ms.locfileid: "54521766"
 ## <a name="see-also"></a>참고자료
 
 - <xref:System.Windows.Forms.DataGridView>
-- [DataGridView 컨트롤](../../../../docs/framework/winforms/controls/datagridview-control-windows-forms.md)
+- [DataGridView 컨트롤](datagridview-control-windows-forms.md)

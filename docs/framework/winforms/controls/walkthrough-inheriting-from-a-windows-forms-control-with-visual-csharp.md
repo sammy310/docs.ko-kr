@@ -8,12 +8,12 @@ helpviewer_keywords:
 - inheritance [Windows Forms], walkthroughs
 - custom controls [Windows Forms], inheritance
 ms.assetid: 09476da0-8d4c-4a4c-b969-649519dfb438
-ms.openlocfilehash: d0beb45d94695d9eeed31a9a7852cf91b3db8a59
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: ad5f2211319599dbc29055b9f04b547f84f7b9fd
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56970768"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57707809"
 ---
 # <a name="walkthrough-inheriting-from-a-windows-forms-control-with-visual-c"></a>연습: Visual c# Windows Forms 컨트롤에서 상속\#
 [!INCLUDE[csprcslong](../../../../includes/csprcslong-md.md)]에서는 *상속*을 통해 강력한 사용자 지정 컨트롤을 만들 수 있습니다. 상속을 통해 표준 Windows Forms 컨트롤의 모든 고유 기능을 유지하면서 사용자 지정 기능을 통합하는 컨트롤을 만들 수 있습니다. 이 연습에서는 `ValueButton`이라는 간단한 상속된 컨트롤을 만듭니다. 이 단추는 표준 Windows Forms에서 기능을 상속 <xref:System.Windows.Forms.Button> 컨트롤을 호출 하는 사용자 지정 속성을 노출 합니다 `ButtonValue`합니다.  
@@ -142,5 +142,5 @@ ms.locfileid: "56970768"
      숫자 '5'가 `label1`에 표시되며 상속된 컨트롤의 `ButtonValue` 속성이 `valueButton1_Click` 메서드를 통해 `label1`에 전달되었음을 보여 줍니다. 따라서 `ValueButton` 컨트롤은 표준 Windows Forms 단추의 모든 기능을 상속하지만 추가 사용자 지정 속성을 노출합니다.  
   
 ## <a name="see-also"></a>참고자료
-- [방법: 컨트롤에 표시 된 도구 상자 항목 선택 대화 상자](../../../../docs/framework/winforms/controls/how-to-display-a-control-in-the-choose-toolbox-items-dialog-box.md)
-- [연습: 시각적 개체를 사용 하 여 복합 컨트롤 제작C#](../../../../docs/framework/winforms/controls/walkthrough-authoring-a-composite-control-with-visual-csharp.md)
+- [방법: 컨트롤에 표시 된 도구 상자 항목 선택 대화 상자](how-to-display-a-control-in-the-choose-toolbox-items-dialog-box.md)
+- [연습: 시각적 개체를 사용 하 여 복합 컨트롤 제작C#](walkthrough-authoring-a-composite-control-with-visual-csharp.md)

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - custom colors [Windows Forms], creating with color remap table
 - color remap tables [Windows Forms], using
 ms.assetid: 977df1ce-8665-42d4-9fb1-ef7f0ff63419
-ms.openlocfilehash: 06a25179a3afc004029972bbf7d4d5691d42b25b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 72965d6968aab256579929acc00e629bcd3c71f0
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54683913"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57707337"
 ---
 # <a name="how-to-use-a-color-remap-table"></a>방법: 색 다시 매핑 테이블 사용
 다시 매핑하는 프로세스 색 다시 매핑 테이블에 따라 이미지의 색을 변환입니다. 색 다시 매핑 테이블을 배열이 <xref:System.Drawing.Imaging.ColorMap> 개체입니다. 각 <xref:System.Drawing.Imaging.ColorMap> 배열의 개체에는 <xref:System.Drawing.Imaging.ColorMap.OldColor%2A> 속성 및 <xref:System.Drawing.Imaging.ColorMap.NewColor%2A> 속성입니다.  
@@ -28,14 +28,14 @@ ms.locfileid: "54683913"
   
  다음 그림에서는 오른쪽에서 왼쪽의 원래 이미지와 매핑된 이미지를 보여 줍니다.  
   
- ![색 다시 매핑](../../../../docs/framework/winforms/advanced/media/colortrans7.png "colortrans7")  
+ ![색 다시 매핑](./media/colortrans7.png "colortrans7")  
   
- [!code-csharp[System.Drawing.RecoloringImages#31](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.RecoloringImages/CS/Class1.cs#31)]
- [!code-vb[System.Drawing.RecoloringImages#31](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.RecoloringImages/VB/Class1.vb#31)]  
+ [!code-csharp[System.Drawing.RecoloringImages#31](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.RecoloringImages/CS/Class1.cs#31)]
+ [!code-vb[System.Drawing.RecoloringImages#31](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.RecoloringImages/VB/Class1.vb#31)]  
   
 ## <a name="compiling-the-code"></a>코드 컴파일  
  앞의 예제는 Windows forms에서 사용하도록 설계되었으며 <xref:System.Windows.Forms.PaintEventArgs> 이벤트 처리기의 매개 변수인 `e`<xref:System.Windows.Forms.Control.Paint>가 필요합니다.  
   
 ## <a name="see-also"></a>참고자료
-- [이미지 다시 칠하기](../../../../docs/framework/winforms/advanced/recoloring-images.md)
-- [이미지, 비트맵 및 메타파일](../../../../docs/framework/winforms/advanced/images-bitmaps-and-metafiles.md)
+- [이미지 다시 칠하기](recoloring-images.md)
+- [이미지, 비트맵 및 메타파일](images-bitmaps-and-metafiles.md)

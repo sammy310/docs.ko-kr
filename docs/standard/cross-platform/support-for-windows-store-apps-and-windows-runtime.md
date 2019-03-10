@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 6fa7d044-ae12-4c54-b8ee-50915607a565
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c2870e79d82d92bd0c853e6e042add3b4243f888
-ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
+ms.openlocfilehash: 750bddce508a72c6aaac659feac90b7c17e53137
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56835488"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57708407"
 ---
 # <a name="net-framework-support-for-windows-store-apps-and-windows-runtime"></a>Windows 스토어 앱 및 Windows 런타임에 대한 .NET Framework 지원
 
@@ -43,7 +43,7 @@ ms.locfileid: "56835488"
     -   
   [!INCLUDE[wrt](../../../includes/wrt-md.md)]를 관리 코드에서 쉽게 호출할 수 있기 때문에 단순히 운영 체제 API를 래핑하는 기능 또한 제거됩니다.
 
-     에 대 한 자세한 합니다 [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)]를 참조 합니다 [.NET Windows 스토어 용 앱 개요](https://docs.microsoft.com/previous-versions/windows/apps/br230302(v=vs.140)). API 선택 프로세스에 대 한 자세한 내용은 참조는 [Metro 스타일 앱 용.NET](https://blogs.msdn.microsoft.com/dotnet/2012/04/17/net-for-metro-style-apps/) .NET 블로그의 항목입니다.
+     에 대 한 자세한 합니다 [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)]를 참조 합니다 [.NET Windows 스토어 용 앱 개요](https://docs.microsoft.com/previous-versions/windows/apps/br230302(v=vs.140)). API 선택 프로세스에 대 한 자세한 내용은 참조는 [Metro 스타일 앱 용.NET](https://devblogs.microsoft.com/dotnet/net-for-metro-style-apps/) .NET 블로그의 항목입니다.
 
 -   [Windows 런타임](/uwp/api/) 건물에 대 한 사용자 인터페이스 요소를 제공 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] 응용 프로그램, 운영 체제 기능에 대 한 액세스를 제공 합니다. .NET Framework와 같이 [!INCLUDE[wrt](../../../includes/wrt-md.md)]에 있는 메타데이터를 사용하여 C# 및 Visual Basic 컴파일러를 통해 .NET Framework 클래스 라이브러리를 사용하는 방식과 같이 [!INCLUDE[wrt](../../../includes/wrt-md.md)]를 사용할 수 있습니다. .NET Framework에서는 다음과 같이 일부 차이점을 숨겨 [!INCLUDE[wrt](../../../includes/wrt-md.md)]를 좀 더 쉽게 사용할 수 있습니다.
 

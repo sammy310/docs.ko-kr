@@ -6,12 +6,12 @@ helpviewer_keywords:
 - forms [Windows Forms], adding ActiveX controls
 - ActiveX controls [Windows Forms], adding
 ms.assetid: 54a61e5b-555e-4887-b41e-6244fed271eb
-ms.openlocfilehash: 52f914b1d6fe5d8a2707e1f4ab176036ebf62cf9
-ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
+ms.openlocfilehash: 68e25cb2cd7e1f1c63954b20d24f028a49431553
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "56441787"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57707991"
 ---
 # <a name="how-to-add-activex-controls-to-windows-forms"></a>방법: Windows Forms에 ActiveX 컨트롤 추가
 Windows Forms 디자이너는 호스트 Windows Forms 컨트롤을 최적화 하는 동안에 Windows Forms에서 ActiveX 컨트롤을 배치할 수 있습니다.  
@@ -28,16 +28,16 @@ Windows Forms 디자이너는 호스트 Windows Forms 컨트롤을 최적화 하
   
 -   도구 상자 컨트롤을 두 번 클릭 합니다.  
   
-     Visual Studio 프로젝트에서 컨트롤에 대 한 모든 참조를 추가합니다. Windows Forms에서 ActiveX 컨트롤을 사용 하 여 때 염두 할 사항에 대 한 자세한 내용은 참조 하세요. [Windows Form에서 ActiveX 컨트롤을 호스팅할 때의 고려 사항](../../../../docs/framework/winforms/controls/considerations-when-hosting-an-activex-control-on-a-windows-form.md)합니다.  
+     Visual Studio 프로젝트에서 컨트롤에 대 한 모든 참조를 추가합니다. Windows Forms에서 ActiveX 컨트롤을 사용 하 여 때 염두 할 사항에 대 한 자세한 내용은 참조 하세요. [Windows Form에서 ActiveX 컨트롤을 호스팅할 때의 고려 사항](considerations-when-hosting-an-activex-control-on-a-windows-form.md)합니다.  
   
     > [!NOTE]
-    >  Windows Forms ActiveX 컨트롤 가져오기 (AxImp.exe) ActiveX 동적 링크 라이브러리 가져오기 시 예상 보다 다른 형식의 이벤트 인수를 만듭니다. AxImp.exe에서 만든 인수는 다음과 유사한: `Invoke(object sender, DWebBrowserEvents2_ProgressChangeEvent e)`때 `Invoke(object sender, DWebBrowserEvents2_ProgressChangeEventArgs e)` 예상 됩니다. 주의이 불일치로 해도 코드는 정상적으로 작동 합니다. 자세한 내용은 참조 하세요 [Windows Forms ActiveX 컨트롤 가져오기 (Aximp.exe)](../../../../docs/framework/tools/aximp-exe-windows-forms-activex-control-importer.md)합니다.  
+    >  Windows Forms ActiveX 컨트롤 가져오기 (AxImp.exe) ActiveX 동적 링크 라이브러리 가져오기 시 예상 보다 다른 형식의 이벤트 인수를 만듭니다. AxImp.exe에서 만든 인수는 다음과 유사한: `Invoke(object sender, DWebBrowserEvents2_ProgressChangeEvent e)`때 `Invoke(object sender, DWebBrowserEvents2_ProgressChangeEventArgs e)` 예상 됩니다. 주의이 불일치로 해도 코드는 정상적으로 작동 합니다. 자세한 내용은 참조 하세요 [Windows Forms ActiveX 컨트롤 가져오기 (Aximp.exe)](../../tools/aximp-exe-windows-forms-activex-control-importer.md)합니다.  
   
 ## <a name="see-also"></a>참고자료
-- [Windows Forms 컨트롤](../../../../docs/framework/winforms/controls/index.md)
+- [Windows Forms 컨트롤](index.md)
 - [여러 언어 및 라이브러리에서 사용되는 컨트롤 및 프로그래밍 가능한 개체 비교](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/0061wezk(v=vs.100))
-- [방법: Windows Forms에 컨트롤 추가](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md)
-- [Windows Forms에서 컨트롤 정렬](../../../../docs/framework/winforms/controls/arranging-controls-on-windows-forms.md)
-- [개별 Windows Forms 컨트롤 레이블 지정 및 바로 가기 제공](../../../../docs/framework/winforms/controls/labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md)
-- [Windows Forms에 사용할 수 있는 컨트롤](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)
-- [기능별 Windows Forms 컨트롤](../../../../docs/framework/winforms/controls/windows-forms-controls-by-function.md)
+- [방법: Windows Forms에 컨트롤 추가](how-to-add-controls-to-windows-forms.md)
+- [Windows Forms에서 컨트롤 정렬](arranging-controls-on-windows-forms.md)
+- [개별 Windows Forms 컨트롤 레이블 지정 및 바로 가기 제공](labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md)
+- [Windows Forms에 사용할 수 있는 컨트롤](controls-to-use-on-windows-forms.md)
+- [기능별 Windows Forms 컨트롤](windows-forms-controls-by-function.md)

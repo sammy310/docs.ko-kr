@@ -8,12 +8,12 @@ helpviewer_keywords:
 - ElementHost control
 - WPF user control [Windows Forms], hosting in Windows Forms
 ms.assetid: 2e92d8e8-f0e4-4df7-9f07-2acf35cd798c
-ms.openlocfilehash: cc5e1acd26763e2dd4324497f5d9ecde216ea975
-ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
+ms.openlocfilehash: ed48db399ba47f0e6be96f7bca33d3892b19e433
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "56441465"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57707913"
 ---
 # <a name="walkthrough-creating-new-wpf-content-on-windows-forms-at-design-time"></a>연습: 디자인 타임에 Windows Forms에서 새 WPF 콘텐츠 만들기
 
@@ -102,16 +102,16 @@ ms.locfileid: "56441465"
 
 Windows Forms와 WPF는 서로 다른 기술이지만 긴밀하게 상호 운용하도록 설계되었습니다. 다양 한 모양과 응용 프로그램에서 동작을 제공 하려면 다음을 시도 합니다.
 
-- WPF 페이지에서 Windows Forms 컨트롤을 호스트합니다. 자세한 내용은 [연습: WPF에서 호스팅하는 Windows Forms 컨트롤](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-windows-forms-control-in-wpf.md)합니다.
+- WPF 페이지에서 Windows Forms 컨트롤을 호스트합니다. 자세한 내용은 [연습: WPF에서 호스팅하는 Windows Forms 컨트롤](../../wpf/advanced/walkthrough-hosting-a-windows-forms-control-in-wpf.md)합니다.
 
-- WPF 콘텐츠에 Windows Forms 시각적 스타일을 적용합니다. 자세한 내용은 [방법: 하이브리드 응용 프로그램에서 비주얼 스타일 사용](../../../../docs/framework/wpf/advanced/how-to-enable-visual-styles-in-a-hybrid-application.md)합니다.
+- WPF 콘텐츠에 Windows Forms 시각적 스타일을 적용합니다. 자세한 내용은 [방법: 하이브리드 응용 프로그램에서 비주얼 스타일 사용](../../wpf/advanced/how-to-enable-visual-styles-in-a-hybrid-application.md)합니다.
 
-- WPF 콘텐츠의 스타일을 변경합니다. 자세한 내용은 [연습: WPF 콘텐츠 스타일 지정](../../../../docs/framework/winforms/advanced/walkthrough-styling-wpf-content.md)합니다.
+- WPF 콘텐츠의 스타일을 변경합니다. 자세한 내용은 [연습: WPF 콘텐츠 스타일 지정](walkthrough-styling-wpf-content.md)합니다.
 
 ## <a name="see-also"></a>참고자료
 
 - <xref:System.Windows.Forms.Integration.ElementHost>
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost>
-- [마이그레이션 및 상호 운용성](../../../../docs/framework/wpf/advanced/migration-and-interoperability.md)
-- [WPF 컨트롤 사용](../../../../docs/framework/winforms/advanced/using-wpf-controls.md)
+- [마이그레이션 및 상호 운용성](../../wpf/advanced/migration-and-interoperability.md)
+- [WPF 컨트롤 사용](using-wpf-controls.md)
 - [Visual Studio에서 XAML 디자인](/visualstudio/designers/designing-xaml-in-visual-studio)

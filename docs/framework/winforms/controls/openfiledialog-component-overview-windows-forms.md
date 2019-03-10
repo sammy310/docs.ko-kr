@@ -7,15 +7,16 @@ helpviewer_keywords:
 - OpenFileDialog component [Windows Forms], about OpenFileDialog
 - Open File dialog box [Windows Forms], displaying in Windows Forms
 ms.assetid: cd717300-46b6-4f82-8207-b218fa7fa407
-ms.openlocfilehash: 1aea4466fd66d84e5c6ede74ecb46d6d659db8d5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ad2fea74f0f3110ab2868064c588a7611d4261e3
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54564268"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57702908"
 ---
 # <a name="openfiledialog-component-overview-windows-forms"></a>OpenFileDialog 구성 요소 개요(Windows Forms)
-Windows Forms <xref:System.Windows.Forms.OpenFileDialog> 구성 요소는 미리 구성된 대화 상자입니다. 동일 **열려 있는 파일** Windows 운영 체제에서 노출 하는 대화 상자. <xref:System.Windows.Forms.CommonDialog> 클래스에서 상속됩니다.  
+Windows Forms <xref:System.Windows.Forms.OpenFileDialog> 구성 요소는 미리 구성된 대화 상자입니다. 동일 **열려 있는 파일** Windows 운영 체제에서 노출 하는 대화 상자. 
+  <xref:System.Windows.Forms.CommonDialog> 클래스에서 상속됩니다.  
   
 ## <a name="using-this-component"></a>이 구성 요소를 사용 하 여  
  고유한 대화 상자를 구성 하는 대신 파일 선택을 위한 간단한 솔루션으로 Windows 기반 응용 프로그램 내에서이 구성 요소를 사용 합니다. 표준 Windows 대화 상자를 사용하여 기본 기능이 사용자에게 익숙한 응용 프로그램을 만듭니다. 그러나 때 사용 하는 <xref:System.Windows.Forms.OpenFileDialog> 구성 요소를 사용자 고유의 파일 열기 논리를 작성 해야 합니다.  
@@ -26,4 +27,4 @@ Windows Forms <xref:System.Windows.Forms.OpenFileDialog> 구성 요소는 미리
   
 ## <a name="see-also"></a>참고자료
 - <xref:System.Windows.Forms.OpenFileDialog>
-- [OpenFileDialog 구성 요소](../../../../docs/framework/winforms/controls/openfiledialog-component-windows-forms.md)
+- [OpenFileDialog 구성 요소](openfiledialog-component-windows-forms.md)

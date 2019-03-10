@@ -8,12 +8,12 @@ helpviewer_keywords:
 - gradient brushes [Windows Forms], gamma correction
 - gradients [Windows Forms], gamma correction
 ms.assetid: da4690e7-5fac-4fd2-b3f0-5cb35c165b92
-ms.openlocfilehash: b3b45c312542a3f8410bd93fcbe4e4cb70aa8516
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e7205058bc2b93ac453b8c37bfc8d5236433158d
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54527161"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57708087"
 ---
 # <a name="how-to-apply-gamma-correction-to-a-gradient"></a>방법: 그라데이션에 감마 보정 적용
 브러시의을 설정 하 여 선형 그라데이션 브러시에 대 한 감마 보정을 사용할 수 있습니다 <xref:System.Drawing.Drawing2D.LinearGradientBrush.GammaCorrection%2A> 속성을 `true`입니다. 감마 보정을 사용 하지 않도록 설정 하 여 수를 <xref:System.Drawing.Drawing2D.LinearGradientBrush.GammaCorrection%2A> 속성을 `false`입니다. 감마 보정은 기본적으로 비활성화 됩니다.  
@@ -23,14 +23,14 @@ ms.locfileid: "54527161"
   
  다음 그림에서는 두 개의 채워진된 사각형을 보여 줍니다. 감마 보정 되지 않은, 맨 위 사각형 중간에 어두운 표시 됩니다. 감마 보정에는 아래 사각형 농도가 좀 더 균일에 나타납니다.  
   
- ![Gradient](../../../../docs/framework/winforms/advanced/media/gammagradient1.png "gammagradient1")  
+ ![Gradient](./media/gammagradient1.png "gammagradient1")  
   
- [!code-csharp[System.Drawing.UsingaGradientBrush#31](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/CS/Class1.cs#31)]
- [!code-vb[System.Drawing.UsingaGradientBrush#31](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/VB/Class1.vb#31)]  
+ [!code-csharp[System.Drawing.UsingaGradientBrush#31](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/CS/Class1.cs#31)]
+ [!code-vb[System.Drawing.UsingaGradientBrush#31](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/VB/Class1.vb#31)]  
   
 ## <a name="compiling-the-code"></a>코드 컴파일  
  앞의 예제는 Windows forms에서 사용하도록 설계되었으며 <xref:System.Windows.Forms.Control.Paint> 이벤트 처리기의 매개 변수인 <xref:System.Windows.Forms.PaintEventArgs> `e`가 필요합니다.  
   
 ## <a name="see-also"></a>참고자료
 - <xref:System.Drawing.Drawing2D.LinearGradientBrush>
-- [그라데이션 브러시를 사용하여 도형 채우기](../../../../docs/framework/winforms/advanced/using-a-gradient-brush-to-fill-shapes.md)
+- [그라데이션 브러시를 사용하여 도형 채우기](using-a-gradient-brush-to-fill-shapes.md)

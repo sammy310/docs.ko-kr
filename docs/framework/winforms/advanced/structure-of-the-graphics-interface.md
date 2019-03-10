@@ -5,12 +5,12 @@ helpviewer_keywords:
 - GDI+, using managed interface
 - graphics [Windows Forms], class structure
 ms.assetid: 010a1e46-656b-40a1-8d5d-87aa05ee1243
-ms.openlocfilehash: 4d000adfa02555a766410833fabe4039dd06c268
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 33be9d4d4e5a1aca933bb84e948b2200cd96b152
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54592048"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57708117"
 ---
 # <a name="structure-of-the-graphics-interface"></a>그래픽 인터페이스의 구조
 관리 되는 클래스 인터페이스를 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 약 60 개의 클래스, 50 열거형 및 8 구조를 포함 합니다. 합니다 <xref:System.Drawing.Graphics> 클래스의 핵심은 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 기능 실제로 선, 곡선, 도형, 이미지 및 텍스트를 그릴 수 있는 클래스입니다.  
@@ -23,6 +23,6 @@ ms.locfileid: "54592048"
  [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 관련 상수 컬렉션은 여러 열거형을 정의 합니다. 예를 들어 합니다 <xref:System.Drawing.Drawing2D.LineJoin> 요소를 포함 하는 열거형 <xref:System.Drawing.Drawing2D.LineJoin.Bevel>, <xref:System.Drawing.Drawing2D.LineJoin.Miter>, 및 <xref:System.Drawing.Drawing2D.LineJoin.Round>, 두 선을 조인할 때 사용할 수 있는 스타일을 지정 하는 합니다.  
   
 ## <a name="see-also"></a>참고자료
-- [그래픽 개요](../../../../docs/framework/winforms/advanced/graphics-overview-windows-forms.md)
-- [GDI + 관리 코드 정보](../../../../docs/framework/winforms/advanced/about-gdi-managed-code.md)
-- [관리되는 그래픽 클래스 사용](../../../../docs/framework/winforms/advanced/using-managed-graphics-classes.md)
+- [그래픽 개요](graphics-overview-windows-forms.md)
+- [GDI + 관리 코드 정보](about-gdi-managed-code.md)
+- [관리되는 그래픽 클래스 사용](using-managed-graphics-classes.md)

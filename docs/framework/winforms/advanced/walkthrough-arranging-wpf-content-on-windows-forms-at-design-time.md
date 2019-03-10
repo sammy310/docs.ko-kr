@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Windows Forms, anchoring and docking WPF content
 - interoperability [WPF]
 ms.assetid: 5efb1c53-1484-43d6-aa8a-f4861b99bb8a
-ms.openlocfilehash: 543546de4f9b93deb5fa70c98608246e9c06e4f7
-ms.sourcegitcommit: bef803e2025642df39f2f1e046767d89031e0304
+ms.openlocfilehash: 0738d1522c8ade8f026a3bf69fbff0bc2c2d6d85
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56304559"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57712463"
 ---
 # <a name="walkthrough-arranging-wpf-content-on-windows-forms-at-design-time"></a>연습: 디자인 타임에 Windows Forms에서 WPF 콘텐츠 정렬
 이 연습에서는 기준 위치 지정 및 맞춤선과 같은 Windows Forms 레이아웃 기능을 사용하여 WPF(Windows Presentation Foundation) 컨트롤을 정렬하는 방법을 보여 줍니다.
@@ -54,7 +54,7 @@ ms.locfileid: "56304559"
   
 #### <a name="to-create-wpf-controls"></a>WPF 컨트롤을 만들려면  
   
-1.  프로젝트에 새 WPF <xref:System.Windows.Controls.UserControl>을 추가합니다. 컨트롤 형식의 기본 이름인 `UserControl1.xaml`을 사용합니다. 자세한 내용은 [연습: 디자인 타임에 Windows Forms에서 새 WPF 콘텐츠 만들기](../../../../docs/framework/winforms/advanced/walkthrough-creating-new-wpf-content-on-windows-forms-at-design-time.md)합니다.  
+1.  프로젝트에 새 WPF <xref:System.Windows.Controls.UserControl>을 추가합니다. 컨트롤 형식의 기본 이름인 `UserControl1.xaml`을 사용합니다. 자세한 내용은 [연습: 디자인 타임에 Windows Forms에서 새 WPF 콘텐츠 만들기](walkthrough-creating-new-wpf-content-on-windows-forms-at-design-time.md)합니다.  
   
 2.  디자인 뷰에서 `UserControl1`이 선택되었는지 확인합니다. 자세한 내용은 [방법: 선택 하 고 디자인 화면에서 요소를 이동](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/bb514527(v=vs.100))합니다.  
   
@@ -93,7 +93,7 @@ ms.locfileid: "56304559"
      두 <xref:System.Windows.Forms.Integration.ElementHost> 컨트롤 모두 새 레이아웃에 맞게 크기가 조정됩니다.  
   
 ## <a name="using-snaplines-to-align-wpf-controls"></a>맞춤선을 사용하여 WPF 컨트롤 맞춤  
- 맞춤선을 사용하여 폼에서 컨트롤을 쉽게 맞출 수 있습니다. 맞춤선을 사용하여 WPF 컨트롤도 맞출 수 있습니다. 자세한 내용은 [연습: Snaplines를 사용 하 여 Forms Windows에서 컨트롤 정렬](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)합니다.  
+ 맞춤선을 사용하여 폼에서 컨트롤을 쉽게 맞출 수 있습니다. 맞춤선을 사용하여 WPF 컨트롤도 맞출 수 있습니다. 자세한 내용은 [연습: Snaplines를 사용 하 여 Forms Windows에서 컨트롤 정렬](../controls/walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)합니다.  
   
 #### <a name="to-use-snaplines-to-align-wpf-controls"></a>맞춤선을 사용하여 WPF 컨트롤을 맞추려면  
   
@@ -152,14 +152,14 @@ ms.locfileid: "56304559"
      
   <xref:System.Windows.Forms.Integration.ElementHost> 컨트롤 3개의 크기가 모두 적절하게 조정됩니다.  
   
-     자세한 내용은 [방법: TableLayoutPanel 컨트롤의 자식 컨트롤 고정 및 도킹](../../../../docs/framework/winforms/controls/how-to-anchor-and-dock-child-controls-in-a-tablelayoutpanel-control.md)합니다.  
+     자세한 내용은 [방법: TableLayoutPanel 컨트롤의 자식 컨트롤 고정 및 도킹](../controls/how-to-anchor-and-dock-child-controls-in-a-tablelayoutpanel-control.md)합니다.  
   
 ## <a name="see-also"></a>참고자료
 - <xref:System.Windows.Forms.Integration.ElementHost>
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost>
-- [방법: TableLayoutPanel 컨트롤의 자식 컨트롤 고정 및 도킹](../../../../docs/framework/winforms/controls/how-to-anchor-and-dock-child-controls-in-a-tablelayoutpanel-control.md)
-- [방법: 디자인 타임에 컨트롤을 폼의 가장자리에 맞춤](../../../../docs/framework/winforms/controls/how-to-align-a-control-to-the-edges-of-forms-at-design-time.md)
-- [연습: 맞춤선을 사용 하 여 Windows Forms에서 컨트롤 정렬](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)
-- [마이그레이션 및 상호 운용성](../../../../docs/framework/wpf/advanced/migration-and-interoperability.md)
-- [WPF 컨트롤 사용](../../../../docs/framework/winforms/advanced/using-wpf-controls.md)
+- [방법: TableLayoutPanel 컨트롤의 자식 컨트롤 고정 및 도킹](../controls/how-to-anchor-and-dock-child-controls-in-a-tablelayoutpanel-control.md)
+- [방법: 디자인 타임에 컨트롤을 폼의 가장자리에 맞춤](../controls/how-to-align-a-control-to-the-edges-of-forms-at-design-time.md)
+- [연습: 맞춤선을 사용 하 여 Windows Forms에서 컨트롤 정렬](../controls/walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)
+- [마이그레이션 및 상호 운용성](../../wpf/advanced/migration-and-interoperability.md)
+- [WPF 컨트롤 사용](using-wpf-controls.md)
 - [Visual Studio에서 XAML 디자인](/visualstudio/designers/designing-xaml-in-visual-studio)

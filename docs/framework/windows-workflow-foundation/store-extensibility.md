@@ -2,12 +2,12 @@
 title: 저장소 확장성
 ms.date: 03/30/2017
 ms.assetid: 7c3f4a46-4bac-4138-ae6a-a7c7ee0d28f5
-ms.openlocfilehash: 0c6f67469db04705a9ac7827ef301ff226ea3bdb
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 46c1ea40925a5c79180171da9a705d7e6b7c8b89
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57465729"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57703272"
 ---
 # <a name="store-extensibility"></a>저장소 확장성
 
@@ -36,7 +36,7 @@ ms.locfileid: "57465729"
     application.Extensions.Add(documentStatusExtension);
     ```
 
-     사용자 지정 지 속성 참가자를 추가 하는 방법에 대 한 자세한 내용은 참조는 [지 속성 참석자](../../../docs/framework/windows-workflow-foundation/persistence-participants.md) 샘플입니다.
+     사용자 지정 지 속성 참가자를 추가 하는 방법에 대 한 자세한 내용은 참조는 [지 속성 참석자](persistence-participants.md) 샘플입니다.
 
 3. DP 응용 프로그램의 사용자 지정 활동의 다양 한 상태 필드를 채우는 합니다 **Execute** 메서드.
 

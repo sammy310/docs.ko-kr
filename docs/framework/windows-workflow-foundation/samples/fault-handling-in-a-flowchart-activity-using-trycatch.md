@@ -2,12 +2,12 @@
 title: Flowchart 활동에서 TryCatch를 사용하여 오류 처리
 ms.date: 03/30/2017
 ms.assetid: 50922964-bfe0-4ba8-9422-0e7220d514fd
-ms.openlocfilehash: 56215ecf1b5f2b54333271f2086b831f564ff7c3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3f45d4a60de3201a3100fba3af6cc15484a1fbf0
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54507501"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57708836"
 ---
 # <a name="fault-handling-in-a-flowchart-activity-using-trycatch"></a>Flowchart 활동에서 TryCatch를 사용하여 오류 처리
 이 샘플에서는 복잡한 제어 흐름 활동 내에서 <xref:System.Activities.Statements.TryCatch> 활동을 사용하는 방법을 보여 줍니다.
@@ -47,5 +47,5 @@ ms.locfileid: "54507501"
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Built-InActivities\FlowChartWithFaultHandling`  
   
 ## <a name="see-also"></a>참고자료
-- [순서도 워크플로](../../../../docs/framework/windows-workflow-foundation/flowchart-workflows.md)
-- [예외](../../../../docs/framework/windows-workflow-foundation/exceptions.md)
+- [순서도 워크플로](../flowchart-workflows.md)
+- [예외](../exceptions.md)

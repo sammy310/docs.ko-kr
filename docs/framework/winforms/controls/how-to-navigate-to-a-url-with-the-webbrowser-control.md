@@ -12,17 +12,17 @@ helpviewer_keywords:
 - WebBrowser control [Windows Forms], navigating to URLs
 - examples [Windows Forms], WebBrowser control
 ms.assetid: b3ec38cb-f509-4d0b-bd79-9f3611259c62
-ms.openlocfilehash: 599ae9fbaed3240efa05dc04f5b6dc4180e55cfb
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8d592aea972a95a582cc35ecb14227edec5860ce
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54524223"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57707237"
 ---
 # <a name="how-to-navigate-to-a-url-with-the-webbrowser-control"></a>방법: WebBrowser 컨트롤을 사용 하 여 URL로 이동
 다음 코드 예제를 탐색 하는 방법에 설명 합니다 <xref:System.Windows.Forms.WebBrowser> 특정 URL 제어 합니다.  
   
- 새 문서를 완전히 로드 하는 경우를 확인 하려면 처리는 <xref:System.Windows.Forms.WebBrowser.DocumentCompleted> 이벤트입니다. 이 이벤트의 데모를 참조 하세요. [방법: WebBrowser 컨트롤을 사용 하 여 인쇄](../../../../docs/framework/winforms/controls/how-to-print-with-a-webbrowser-control.md)합니다.  
+ 새 문서를 완전히 로드 하는 경우를 확인 하려면 처리는 <xref:System.Windows.Forms.WebBrowser.DocumentCompleted> 이벤트입니다. 이 이벤트의 데모를 참조 하세요. [방법: WebBrowser 컨트롤을 사용 하 여 인쇄](how-to-print-with-a-webbrowser-control.md)합니다.  
   
 ## <a name="example"></a>예제  
   
@@ -39,12 +39,13 @@ this.webBrowser1.Navigate("http://www.microsoft.com");
   
 -   `webBrowser1`이라는 <xref:System.Windows.Forms.WebBrowser> 컨트롤  
   
--   `System` 및 `System.Windows.Forms` 어셈블리에 대한 참조  
+-   
+  `System` 및 `System.Windows.Forms` 어셈블리에 대한 참조  
   
 ## <a name="see-also"></a>참고자료
 - <xref:System.Windows.Forms.WebBrowser>
 - <xref:System.Windows.Forms.WebBrowser.DocumentCompleted?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.WebBrowser.Navigating?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.WebBrowser.Navigated?displayProperty=nameWithType>
-- [WebBrowser 컨트롤](../../../../docs/framework/winforms/controls/webbrowser-control-windows-forms.md)
-- [방법: WebBrowser 컨트롤을 사용 하 여 인쇄](../../../../docs/framework/winforms/controls/how-to-print-with-a-webbrowser-control.md)
+- [WebBrowser 컨트롤](webbrowser-control-windows-forms.md)
+- [방법: WebBrowser 컨트롤을 사용 하 여 인쇄](how-to-print-with-a-webbrowser-control.md)

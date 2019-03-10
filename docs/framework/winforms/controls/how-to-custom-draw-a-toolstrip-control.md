@@ -16,15 +16,16 @@ helpviewer_keywords:
 - custom drawing
 - owner drawing
 ms.assetid: 94e7d7bd-a752-441c-b5b3-7acf98881163
-ms.openlocfilehash: 6df1f2bf3190fb1453930c0553266cc27234f46d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d9a58dbaeae3f0cd165d72b8fd281b903ad9cca2
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54701432"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57705755"
 ---
 # <a name="how-to-custom-draw-a-toolstrip-control"></a>방법: ToolStrip 컨트롤 그리기 사용자 지정
-<xref:System.Windows.Forms.ToolStrip> 컨트롤에는 다음과 같은 연결된 렌더링(그리기) 클래스가 있습니다.  
+
+  <xref:System.Windows.Forms.ToolStrip> 컨트롤에는 다음과 같은 연결된 렌더링(그리기) 클래스가 있습니다.  
   
 -   <xref:System.Windows.Forms.ToolStripSystemRenderer>는 운영 체제의 모양 및 스타일을 제공합니다.  
   
@@ -51,7 +52,8 @@ ms.locfileid: "54701432"
   
 ### <a name="to-change-the-professionalcolortable"></a>ProfessionalColorTable을 변경하려면  
   
--   <xref:System.Windows.Forms.ProfessionalColorTable>을 재정의하고 원하는 색을 변경합니다.  
+-   
+  <xref:System.Windows.Forms.ProfessionalColorTable>을 재정의하고 원하는 색을 변경합니다.  
   
     ```vb  
     Private Sub Form1_Load(ByVal sender As System.Object, ByVal e As _  
@@ -137,6 +139,6 @@ ms.locfileid: "54701432"
 - <xref:System.Windows.Forms.ToolStripSystemRenderer>
 - <xref:System.Windows.Forms.ToolStripProfessionalRenderer>
 - <xref:System.Windows.Forms.ToolStripRenderer>
-- [소유자 그리기 지원이 기본 제공되는 컨트롤](../../../../docs/framework/winforms/controls/controls-with-built-in-owner-drawing-support.md)
-- [방법: 만들기 및 사용자 지정 렌더러를 Windows Forms의 ToolStrip 컨트롤에 대 한 설정](../../../../docs/framework/winforms/controls/create-and-set-a-custom-renderer-for-the-toolstrip-control-in-wf.md)
-- [ToolStrip 컨트롤 개요](../../../../docs/framework/winforms/controls/toolstrip-control-overview-windows-forms.md)
+- [소유자 그리기 지원이 기본 제공되는 컨트롤](controls-with-built-in-owner-drawing-support.md)
+- [방법: 만들기 및 사용자 지정 렌더러를 Windows Forms의 ToolStrip 컨트롤에 대 한 설정](create-and-set-a-custom-renderer-for-the-toolstrip-control-in-wf.md)
+- [ToolStrip 컨트롤 개요](toolstrip-control-overview-windows-forms.md)

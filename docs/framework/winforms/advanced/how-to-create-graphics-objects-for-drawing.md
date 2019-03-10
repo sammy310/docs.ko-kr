@@ -10,12 +10,12 @@ helpviewer_keywords:
 - images [Windows Forms], creating
 - GDI+, creating images
 ms.assetid: 162861f9-f050-445e-8abb-b2c43a918b8b
-ms.openlocfilehash: a21e049cb91ec29bcd46eb04efd78487da9a6317
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e609fbff29d058c04a839a5dcb79aab16a518298
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54497034"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57709053"
 ---
 # <a name="how-to-create-graphics-objects-for-drawing"></a>방법: 그리는 데 필요한 그래픽 개체 만들기
 선과 셰이프를 그릴 수 있습니다, 전에 텍스트를 렌더링 되거나 표시 및 사용 하 여 이미지 조작 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]을 만들어야을 <xref:System.Drawing.Graphics> 개체입니다. 합니다 <xref:System.Drawing.Graphics> 개체가 나타내는 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 그리기 화면, 및는 그래픽 이미지를 만드는 데 사용 되는 개체입니다.  
@@ -165,13 +165,13 @@ ms.locfileid: "54497034"
   
     |렌더링|참조|  
     |---------------|---------|  
-    |선|[방법: Windows Form에 선 그리기](../../../../docs/framework/winforms/advanced/how-to-draw-a-line-on-a-windows-form.md)|  
-    |도형|[방법: 윤곽선이 있는 도형 그리기](../../../../docs/framework/winforms/advanced/how-to-draw-an-outlined-shape.md)|  
-    |텍스트|[방법: Windows Form에 텍스트 그리기](../../../../docs/framework/winforms/advanced/how-to-draw-text-on-a-windows-form.md)|  
-    |이미지|[방법: GDI +를 사용 하 여 이미지를 렌더링 합니다.](../../../../docs/framework/winforms/advanced/how-to-render-images-with-gdi.md)|  
+    |선|[방법: Windows Form에 선 그리기](how-to-draw-a-line-on-a-windows-form.md)|  
+    |도형|[방법: 윤곽선이 있는 도형 그리기](how-to-draw-an-outlined-shape.md)|  
+    |텍스트|[방법: Windows Form에 텍스트 그리기](how-to-draw-text-on-a-windows-form.md)|  
+    |이미지|[방법: GDI +를 사용 하 여 이미지를 렌더링 합니다.](how-to-render-images-with-gdi.md)|  
   
 ## <a name="see-also"></a>참고자료
-- [그래픽 프로그래밍 시작](../../../../docs/framework/winforms/advanced/getting-started-with-graphics-programming.md)
-- [Windows Forms의 그래픽 및 그리기](../../../../docs/framework/winforms/advanced/graphics-and-drawing-in-windows-forms.md)
-- [선, 곡선 및 도형](../../../../docs/framework/winforms/advanced/lines-curves-and-shapes.md)
-- [방법: GDI +를 사용 하 여 이미지를 렌더링 합니다.](../../../../docs/framework/winforms/advanced/how-to-render-images-with-gdi.md)
+- [그래픽 프로그래밍 시작](getting-started-with-graphics-programming.md)
+- [Windows Forms의 그래픽 및 그리기](graphics-and-drawing-in-windows-forms.md)
+- [선, 곡선 및 도형](lines-curves-and-shapes.md)
+- [방법: GDI +를 사용 하 여 이미지를 렌더링 합니다.](how-to-render-images-with-gdi.md)

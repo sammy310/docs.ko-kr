@@ -10,12 +10,12 @@ helpviewer_keywords:
 - ComboBox control [Windows Forms], examples [C#]
 - ComboBox control [Windows Forms], drawing custom text
 ms.assetid: ce39b9ea-e626-49fe-bd5a-f567f6d157df
-ms.openlocfilehash: 2a9f6e8a1c96c2a9bf9e56c1c6acefc4181a18dc
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b55a6b66416aa79427035abdfbc19d1b0e21d94e
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54526992"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57707796"
 ---
 # <a name="how-to-create-variable-sized-text-in-a-combobox-control"></a>방법: ComboBox 컨트롤에서 가변 크기 텍스트 만들기
 이 예제에서는 텍스트에 대 한 사용자 지정 그리기를 <xref:System.Windows.Forms.ComboBox> 제어 합니다. 특정 기준을 충족 하는 항목, 하는 경우 더 큰 글꼴로 그릴 이며 빨간색을 설정 합니다.  
@@ -71,6 +71,6 @@ End Sub
 - <xref:System.Windows.Forms.ComboBox.DrawItem>
 - <xref:System.Windows.Forms.DrawItemEventArgs>
 - <xref:System.Windows.Forms.ComboBox.MeasureItem>
-- [소유자 그리기 지원이 기본 제공되는 컨트롤](../../../../docs/framework/winforms/controls/controls-with-built-in-owner-drawing-support.md)
-- [ListBox 컨트롤](../../../../docs/framework/winforms/controls/listbox-control-windows-forms.md)
-- [ComboBox 컨트롤](../../../../docs/framework/winforms/controls/combobox-control-windows-forms.md)
+- [소유자 그리기 지원이 기본 제공되는 컨트롤](controls-with-built-in-owner-drawing-support.md)
+- [ListBox 컨트롤](listbox-control-windows-forms.md)
+- [ComboBox 컨트롤](combobox-control-windows-forms.md)

@@ -12,12 +12,12 @@ helpviewer_keywords:
 - Windows Forms, linking to Web pages
 - LinkLabel control [Windows Forms], examples
 ms.assetid: 477a7398-5971-4de3-b24c-f49f32bdb28a
-ms.openlocfilehash: 05b127099b85188b0df2f1f7821ceb147cc41e1d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7e80dba9cd43385be016506ac2a7e887a68dedf2
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54698962"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57705231"
 ---
 # <a name="how-to-display-a-web-page-from-a-windows-forms-linklabel-control-visual-basic"></a>방법: Windows Forms LinkLabel 컨트롤 (Visual Basic)에서 웹 페이지를 표시 합니다.
 이 예제에서는 기본 브라우저에서 웹 페이지는 Windows Forms를 클릭할 때 표시 <xref:System.Windows.Forms.LinkLabel> 제어 합니다.  
@@ -42,7 +42,8 @@ End Sub
   
 -   라는 Windows 폼을 `Form1`입니다.  
   
--   `LinkLabel1`이라는 <xref:System.Windows.Forms.LinkLabel> 컨트롤  
+-   
+  `LinkLabel1`이라는 <xref:System.Windows.Forms.LinkLabel> 컨트롤  
   
 -   현재 인터넷에 연결 합니다.  
   
@@ -51,4 +52,4 @@ End Sub
   
 ## <a name="see-also"></a>참고자료
 - <xref:System.Windows.Forms.LinkLabel>
-- [LinkLabel 컨트롤](../../../../docs/framework/winforms/controls/linklabel-control-windows-forms.md)
+- [LinkLabel 컨트롤](linklabel-control-windows-forms.md)

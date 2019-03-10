@@ -9,12 +9,12 @@ helpviewer_keywords:
 - examples [Windows Forms], controls
 - setting images [Windows Forms], Windows Forms controls
 ms.assetid: ae80d07a-e469-4251-90ca-df71f5852454
-ms.openlocfilehash: 0f8c2ef747a160adc292a3330a4478b7a8c432d7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 265fc88fb2bb9aef0696ea0d7e707ae07084df1d
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54562312"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57702259"
 ---
 # <a name="how-to-set-the-image-displayed-by-a-windows-forms-control-using-the-designer"></a>방법: 설정 하 여 표시 되는 이미지를 Windows Forms 디자이너를 사용 하는 컨트롤
 여러 Windows Forms 컨트롤 이미지를 표시할 수 있습니다. 이미지와 같은 디스크 아이콘을 나타내는 단추 컨트롤의 용도 명확히 구분 하는 아이콘 수를 **저장할** 명령입니다. 또는 아이콘 배경 이미지를 원하는 모양을 제어할 수 있습니다.  
@@ -26,7 +26,7 @@ ms.locfileid: "54562312"
   
 1.  에 **속성** 창에서를 **이미지** 하거나 **BackgroundImage** 컨트롤의 속성에는 클릭 줄임표 단추 (  
   
-     ![VisualStudioEllipsesButton 스크린 샷](../../../../docs/framework/winforms/media/vbellipsesbutton.png "vbEllipsesButton")  
+     ![VisualStudioEllipsesButton 스크린 샷](../media/vbellipsesbutton.png "vbEllipsesButton")  
   
      )를 표시 하는 **리소스 선택** 대화 상자.  
   
@@ -36,4 +36,4 @@ ms.locfileid: "54562312"
 - <xref:System.Drawing.Image.FromFile%2A>
 - <xref:System.Drawing.Image>
 - <xref:System.Windows.Forms.Control.BackgroundImage%2A>
-- [개별 Windows Forms 컨트롤 레이블 지정 및 바로 가기 제공](../../../../docs/framework/winforms/controls/labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md)
+- [개별 Windows Forms 컨트롤 레이블 지정 및 바로 가기 제공](labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md)

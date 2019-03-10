@@ -12,16 +12,16 @@ helpviewer_keywords:
 - examples [Windows Forms], DataGrid control
 - DataGrid control [Windows Forms], click events
 ms.assetid: a0aa204b-8351-4d82-9933-ee21a5c9e409
-ms.openlocfilehash: be9c5c213f9bb52bf620b3d7edec95279220abdf
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7310557bad7e845c4b193debdefba68db2e1d116
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54722909"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57708208"
 ---
 # <a name="how-to-respond-to-clicks-in-the-windows-forms-datagrid-control"></a>방법: Windows Forms DataGrid 컨트롤에서 클릭에 응답
 > [!NOTE]
->  <xref:System.Windows.Forms.DataGridView> 컨트롤은 <xref:System.Windows.Forms.DataGrid> 컨트롤을 대체하고 여기에 다른 기능을 추가하여 새로 도입된 컨트롤이지만 이전 버전과의 호환성 및 이후 사용 가능성을 고려하여 <xref:System.Windows.Forms.DataGrid> 컨트롤을 계속 유지하도록 선택할 수 있습니다. 자세한 내용은 [Windows Forms DataGridView 및 DataGrid 컨트롤의 차이점](../../../../docs/framework/winforms/controls/differences-between-the-windows-forms-datagridview-and-datagrid-controls.md)을 참조하십시오.  
+>  <xref:System.Windows.Forms.DataGridView> 컨트롤은 <xref:System.Windows.Forms.DataGrid> 컨트롤을 대체하고 여기에 다른 기능을 추가하여 새로 도입된 컨트롤이지만 이전 버전과의 호환성 및 이후 사용 가능성을 고려하여 <xref:System.Windows.Forms.DataGrid> 컨트롤을 계속 유지하도록 선택할 수 있습니다. 자세한 내용은 [Windows Forms DataGridView 및 DataGrid 컨트롤의 차이점](differences-between-the-windows-forms-datagridview-and-datagrid-controls.md)을 참조하십시오.  
   
  Windows Forms 후 <xref:System.Windows.Forms.DataGrid> 연결 된 데이터베이스를 모니터링할 수 있습니다 하는 셀은 사용자가 클릭 합니다.  
   
@@ -141,5 +141,5 @@ ms.locfileid: "54722909"
     ```  
   
 ## <a name="see-also"></a>참고자료
-- [DataGrid 컨트롤](../../../../docs/framework/winforms/controls/datagrid-control-windows-forms.md)
-- [방법: 런타임에 Windows Forms DataGrid 컨트롤에서 표시 된 데이터 변경](../../../../docs/framework/winforms/controls/change-displayed-data-at-run-time-wf-datagrid-control.md)
+- [DataGrid 컨트롤](datagrid-control-windows-forms.md)
+- [방법: 런타임에 Windows Forms DataGrid 컨트롤에서 표시 된 데이터 변경](change-displayed-data-at-run-time-wf-datagrid-control.md)

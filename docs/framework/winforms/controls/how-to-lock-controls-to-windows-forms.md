@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Windows Forms controls, locking
 - controls [Windows Forms], locking
 ms.assetid: 94efe0d2-c14e-4d14-b903-63ea9b07e290
-ms.openlocfilehash: a59e5997104b9438681702d460dd8f6937df41b0
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: cff3b0a3ba547c15e7b1c896bde49931a6a3c742
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54741459"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57702648"
 ---
 # <a name="how-to-lock-controls-to-windows-forms"></a>방법: Windows Forms에 컨트롤 잠금
 Windows 응용 프로그램의 사용자 인터페이스 (UI)를 디자인할 때 수행 하지 않도록 이동 하거나 다른 속성을 설정 하는 경우 크기를 조정할 수 있도록 올바르게 배치 되 면 컨트롤을 잠글 수 있습니다.  
@@ -47,8 +47,8 @@ Windows 응용 프로그램의 사용자 인터페이스 (UI)를 디자인할 �
 1.  에 **속성** 창 클릭 합니다 **잠금** 속성을 선택 `false`합니다. (이름을 두 번의 속성 설정을 전환 합니다.)  
   
 ## <a name="see-also"></a>참고자료
-- [Windows Forms 컨트롤](../../../../docs/framework/winforms/controls/index.md)
-- [Windows Forms에서 컨트롤 정렬](../../../../docs/framework/winforms/controls/arranging-controls-on-windows-forms.md)
-- [개별 Windows Forms 컨트롤 레이블 지정 및 바로 가기 제공](../../../../docs/framework/winforms/controls/labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md)
-- [Windows Forms에 사용할 수 있는 컨트롤](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)
-- [기능별 Windows Forms 컨트롤](../../../../docs/framework/winforms/controls/windows-forms-controls-by-function.md)
+- [Windows Forms 컨트롤](index.md)
+- [Windows Forms에서 컨트롤 정렬](arranging-controls-on-windows-forms.md)
+- [개별 Windows Forms 컨트롤 레이블 지정 및 바로 가기 제공](labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md)
+- [Windows Forms에 사용할 수 있는 컨트롤](controls-to-use-on-windows-forms.md)
+- [기능별 Windows Forms 컨트롤](windows-forms-controls-by-function.md)

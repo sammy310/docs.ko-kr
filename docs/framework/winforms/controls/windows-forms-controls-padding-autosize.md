@@ -15,12 +15,12 @@ helpviewer_keywords:
 - layout [Windows Forms], margins and padding
 - Windows Forms, layout
 ms.assetid: f8ae2a6b-db13-4630-8e25-d104091205c7
-ms.openlocfilehash: 2e361b5af5c360869ef51650bb6926a24d1f560d
-ms.sourcegitcommit: bef803e2025642df39f2f1e046767d89031e0304
+ms.openlocfilehash: ca5f968364cd768b708616a867baee49775ca611
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56304026"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57708433"
 ---
 # <a name="walkthrough-laying-out-windows-forms-controls-with-padding-margins-and-the-autosize-property"></a>연습: Windows Forms 컨트롤 Padding, Margins 및 AutoSize 속성을 사용 하 여 레이아웃
 폼의 정확한 컨트롤 배치는 많은 응용 프로그램에서 우선 순위가 높습니다. 합니다 **Windows Forms 디자이너** 이렇게 하려면 여러 레이아웃 도구를 제공 합니다. 가장 중요 한 세 가지는 <xref:System.Windows.Forms.Control.Margin%2A>, <xref:System.Windows.Forms.Control.Padding%2A>, 및 <xref:System.Windows.Forms.Control.AutoSize%2A> 속성을 모든 Windows Forms 컨트롤에 있는 합니다.  
@@ -32,7 +32,7 @@ ms.locfileid: "56304026"
   
  다음 그림에서는 컨트롤의 <xref:System.Windows.Forms.Control.Padding%2A> 및 <xref:System.Windows.Forms.Control.Margin%2A> 속성을 보여 줍니다.  
   
- ![안쪽 여백 및 여백을 Windows Forms 컨트롤](../../../../docs/framework/winforms/controls/media/vs-winformpadmargin.gif "VS_WinFormPadMargin")  
+ ![안쪽 여백 및 여백을 Windows Forms 컨트롤](./media/vs-winformpadmargin.gif "VS_WinFormPadMargin")  
   
  <xref:System.Windows.Forms.Control.AutoSize%2A> 속성은 자동으로 크기를 자동으로 해당 내용에 컨트롤을 나타냅니다. 원래 값 보다 더 작게 할 자체 조정 되지는 <xref:System.Windows.Forms.Control.Size%2A> 속성과 값을 고려 합니다 해당 <xref:System.Windows.Forms.Control.Padding%2A> 속성입니다.  
   
@@ -74,7 +74,7 @@ ms.locfileid: "56304026"
   
 2.  중 하나를 선택 합니다 <xref:System.Windows.Forms.Button> 컨트롤과 거의 닿게 됩니다 될 때까지 다른 가깝게 이동 합니다.  
   
-     서로 표시 되는 맞춤선을 확인 합니다. 이 거리는 두 컨트롤의 합계인 <xref:System.Windows.Forms.Control.Margin%2A> 값입니다. 이동 하는이 간격에 맞춰집니다. 세부 정보를 참조 하세요. [연습: Snaplines를 사용 하 여 Forms Windows에서 컨트롤 정렬](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)합니다.  
+     서로 표시 되는 맞춤선을 확인 합니다. 이 거리는 두 컨트롤의 합계인 <xref:System.Windows.Forms.Control.Margin%2A> 값입니다. 이동 하는이 간격에 맞춰집니다. 세부 정보를 참조 하세요. [연습: Snaplines를 사용 하 여 Forms Windows에서 컨트롤 정렬](walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)합니다.  
   
 3.  변경을 <xref:System.Windows.Forms.Control.Margin%2A> 속성을 확장 하 여 컨트롤 중 하나는 <xref:System.Windows.Forms.Control.Margin%2A> 항목에는 **속성** 창과 설정을 <xref:System.Windows.Forms.Padding.All%2A> 20 속성.  
   
@@ -114,7 +114,7 @@ ms.locfileid: "56304026"
 ## <a name="automatically-sizing-your-controls"></a>자동으로 컨트롤 크기 조정  
  일부 응용 프로그램에서 컨트롤의 크기가 됩니다 동일한 런타임에 디자인 타임으로. 텍스트를 <xref:System.Windows.Forms.Button> 데이터베이스에서 수행할 수 있습니다 예를 들어, 컨트롤 및 해당 길이 미리 알 수 없게 됩니다.  
   
- 경우는 <xref:System.Windows.Forms.Control.AutoSize%2A> 속성이 `true`, 컨트롤 콘텐츠에 맞게 크기를 합니다. 자세한 내용은 [AutoSize 속성 개요](../../../../docs/framework/winforms/controls/autosize-property-overview.md)합니다.  
+ 경우는 <xref:System.Windows.Forms.Control.AutoSize%2A> 속성이 `true`, 컨트롤 콘텐츠에 맞게 크기를 합니다. 자세한 내용은 [AutoSize 속성 개요](autosize-property-overview.md)합니다.  
   
 #### <a name="to-arrange-controls-on-your-form-using-the-autosize-property"></a>AutoSize 속성을 사용 하 여 폼의 컨트롤을 정렬 하려면  
   
@@ -179,9 +179,9 @@ ms.locfileid: "56304026"
 ## <a name="next-steps"></a>다음 단계  
  Windows Forms 응용 프로그램에서 컨트롤 정렬에 대 한 여러 레이아웃 기능이 있습니다. 보십시오 일부 조합은 다음과 같습니다.  
   
--   사용 하 여 양식 작성을 <xref:System.Windows.Forms.TableLayoutPanel> 제어 합니다. 세부 정보를 참조 하세요. [연습: TableLayoutPanel을 사용 하 여 Windows Forms에서 컨트롤 정렬](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)합니다. 값을 변경 합니다 <xref:System.Windows.Forms.TableLayoutPanel> 컨트롤의 <xref:System.Windows.Forms.Control.Padding%2A> 속성인 뿐만 <xref:System.Windows.Forms.Control.Margin%2A> 해당 자식 컨트롤의 속성.  
+-   사용 하 여 양식 작성을 <xref:System.Windows.Forms.TableLayoutPanel> 제어 합니다. 세부 정보를 참조 하세요. [연습: TableLayoutPanel을 사용 하 여 Windows Forms에서 컨트롤 정렬](walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)합니다. 값을 변경 합니다 <xref:System.Windows.Forms.TableLayoutPanel> 컨트롤의 <xref:System.Windows.Forms.Control.Padding%2A> 속성인 뿐만 <xref:System.Windows.Forms.Control.Margin%2A> 해당 자식 컨트롤의 속성.  
   
--   사용 하 여 동일한 실험 시도 <xref:System.Windows.Forms.FlowLayoutPanel> 제어 합니다. 세부 정보를 참조 하세요. [연습: FlowLayoutPanel을 사용 하 여 Windows Forms에서 컨트롤 정렬](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel.md)합니다.  
+-   사용 하 여 동일한 실험 시도 <xref:System.Windows.Forms.FlowLayoutPanel> 제어 합니다. 세부 정보를 참조 하세요. [연습: FlowLayoutPanel을 사용 하 여 Windows Forms에서 컨트롤 정렬](walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel.md)합니다.  
   
 -   자식 컨트롤을 도킹 하 여 실험을 <xref:System.Windows.Forms.Panel> 제어 합니다. 합니다 <xref:System.Windows.Forms.Control.Padding%2A> 속성이의 보다 일반적인 인식 합니다 <xref:System.Windows.Forms.ScrollableControl.DockPadding%2A> 속성을 수행할 수는 경우에는 자식 컨트롤을 배치 하 여를 <xref:System.Windows.Forms.Panel> 컨트롤과 자식 컨트롤의 설정 <xref:System.Windows.Forms.Control.Dock%2A> 속성을 <xref:System.Windows.Forms.DockStyle.Fill>. 설정 된 <xref:System.Windows.Forms.Panel> 컨트롤의 <xref:System.Windows.Forms.Control.Padding%2A> 속성 다양 한 값을 미치는 영향을 확인 합니다.  
   
@@ -190,7 +190,7 @@ ms.locfileid: "56304026"
 - <xref:System.Windows.Forms.ScrollableControl.DockPadding%2A>
 - <xref:System.Windows.Forms.Control.Margin%2A>
 - <xref:System.Windows.Forms.Control.Padding%2A>
-- [AutoSize 속성 개요](../../../../docs/framework/winforms/controls/autosize-property-overview.md)
-- [연습: TableLayoutPanel을 사용 하 여 Windows Forms에서 컨트롤 정렬](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)
-- [연습: FlowLayoutPanel을 사용 하 여 Windows Forms에서 컨트롤 정렬](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel.md)
-- [연습: 맞춤선을 사용 하 여 Windows Forms에서 컨트롤 정렬](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)
+- [AutoSize 속성 개요](autosize-property-overview.md)
+- [연습: TableLayoutPanel을 사용 하 여 Windows Forms에서 컨트롤 정렬](walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)
+- [연습: FlowLayoutPanel을 사용 하 여 Windows Forms에서 컨트롤 정렬](walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel.md)
+- [연습: 맞춤선을 사용 하 여 Windows Forms에서 컨트롤 정렬](walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)

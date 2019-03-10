@@ -13,12 +13,12 @@ helpviewer_keywords:
 - ListView control [Windows Forms], adding custom information
 - TreeView control [Windows Forms], adding custom information
 ms.assetid: 68be11de-1d5b-430e-901f-cfbe48d14b19
-ms.openlocfilehash: 8120f35f866c353ae1493515bed3d216776ede23
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 40ac3fb3a148c351cf5acca235569e2a1a439a3e
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54694596"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57709675"
 ---
 # <a name="how-to-add-custom-information-to-a-treeview-or-listview-control-windows-forms"></a>방법: TreeView 또는 ListView 컨트롤 (Windows Forms)에 사용자 지정 정보 추가
 Windows Forms에서 파생 된 노드를 만들 수 있습니다 <xref:System.Windows.Forms.TreeView> 컨트롤 또는에서 파생된 된 항목을 <xref:System.Windows.Forms.ListView> 제어 합니다. 파생은 필드를 처리하는 사용자 지정 메서드 및 생성자뿐만 아니라 필요로 하는 모든 필드를 추가할 수 있습니다. 이 기능을 사용하여 각 트리 노드 또는 목록 항목에 고객 개체를 연결합니다. 여기에 있는 예제는 한 <xref:System.Windows.Forms.TreeView> 컨트롤 이지만 동일한 접근 방식을 사용할 수 있습니다는 <xref:System.Windows.Forms.ListView> 제어 합니다.  
@@ -131,5 +131,5 @@ Windows Forms에서 파생 된 노드를 만들 수 있습니다 <xref:System.Wi
     ```  
   
 ## <a name="see-also"></a>참고자료
-- [TreeView 컨트롤](../../../../docs/framework/winforms/controls/treeview-control-windows-forms.md)
-- [ListView 컨트롤](../../../../docs/framework/winforms/controls/listview-control-windows-forms.md)
+- [TreeView 컨트롤](treeview-control-windows-forms.md)
+- [ListView 컨트롤](listview-control-windows-forms.md)

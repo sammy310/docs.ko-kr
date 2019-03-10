@@ -17,12 +17,12 @@ helpviewer_keywords:
 - threading [Windows Forms], background operations
 - background operations
 ms.assetid: 64e9b3ab-7443-4a77-ab17-b8b8c0cb3f62
-ms.openlocfilehash: d7d99cf87507237b23cb40c58b2308643f7f1056
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: da535da0b0d1416597d2a62a96cec544d7be68fb
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44185300"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57707614"
 ---
 # <a name="backgroundworker-component-overview"></a>BackgroundWorker 구성 요소 개요
 일반적으로 수행하는 작업 중에는 실행 시간이 오래 걸릴 수 있는 것들이 많습니다. 예를 들면 다음과 같습니다.  
@@ -47,21 +47,21 @@ ms.locfileid: "44185300"
   
  비동기 작업을 시작하려면 <xref:System.ComponentModel.BackgroundWorker.RunWorkerAsync%2A> 메서드를 사용합니다. <xref:System.ComponentModel.BackgroundWorker.RunWorkerAsync%2A>는 작업자 메서드로 인수를 전달하는 데 사용할 수 있는 선택적 `object` 매개 변수를 사용합니다. <xref:System.ComponentModel.BackgroundWorker> 클래스는 <xref:System.ComponentModel.BackgroundWorker.DoWork> 이벤트를 표시하며, 작업자 스레드는 <xref:System.ComponentModel.BackgroundWorker.DoWork> 이벤트 처리기를 통해 이 이벤트에 연결됩니다.  
   
- <xref:System.ComponentModel.BackgroundWorker.DoWork> 이벤트 처리기는 <xref:System.ComponentModel.DoWorkEventArgs> 속성을 포함하는 <xref:System.ComponentModel.DoWorkEventArgs.Argument%2A> 매개 변수를 사용합니다. 이 속성은 <xref:System.ComponentModel.BackgroundWorker.RunWorkerAsync%2A>에서 매개 변수를 받으며 작업자 메서드로 전달될 수 있습니다. 이 작업자 메서드는 <xref:System.ComponentModel.BackgroundWorker.DoWork> 이벤트 처리기에서 호출됩니다. 다음 예에서는 `ComputeFibonacci`라는 작업자 메서드에서 결과를 할당하는 방법을 보여줍니다. 찾을 수 있습니다 보다 큰 예제의 일부 이기 [방법: 백그라운드 작업을 사용 하는 폼 구현](../../../../docs/framework/winforms/controls/how-to-implement-a-form-that-uses-a-background-operation.md)합니다.  
+ <xref:System.ComponentModel.BackgroundWorker.DoWork> 이벤트 처리기는 <xref:System.ComponentModel.DoWorkEventArgs> 속성을 포함하는 <xref:System.ComponentModel.DoWorkEventArgs.Argument%2A> 매개 변수를 사용합니다. 이 속성은 <xref:System.ComponentModel.BackgroundWorker.RunWorkerAsync%2A>에서 매개 변수를 받으며 작업자 메서드로 전달될 수 있습니다. 이 작업자 메서드는 <xref:System.ComponentModel.BackgroundWorker.DoWork> 이벤트 처리기에서 호출됩니다. 다음 예에서는 `ComputeFibonacci`라는 작업자 메서드에서 결과를 할당하는 방법을 보여줍니다. 찾을 수 있습니다 보다 큰 예제의 일부 이기 [방법: 백그라운드 작업을 사용 하는 폼 구현](how-to-implement-a-form-that-uses-a-background-operation.md)합니다.  
   
- [!code-cpp[System.ComponentModel.BackgroundWorker#5](../../../../samples/snippets/cpp/VS_Snippets_Winforms/System.ComponentModel.BackgroundWorker/CPP/fibonacciform.cpp#5)]
- [!code-csharp[System.ComponentModel.BackgroundWorker#5](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.BackgroundWorker/CS/fibonacciform.cs#5)]
- [!code-vb[System.ComponentModel.BackgroundWorker#5](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.BackgroundWorker/VB/fibonacciform.vb#5)]  
+ [!code-cpp[System.ComponentModel.BackgroundWorker#5](~/samples/snippets/cpp/VS_Snippets_Winforms/System.ComponentModel.BackgroundWorker/CPP/fibonacciform.cpp#5)]
+ [!code-csharp[System.ComponentModel.BackgroundWorker#5](~/samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.BackgroundWorker/CS/fibonacciform.cs#5)]
+ [!code-vb[System.ComponentModel.BackgroundWorker#5](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.BackgroundWorker/VB/fibonacciform.vb#5)]  
   
- 이벤트 처리기를 사용 하 여 자세한 내용은 [이벤트](../../../../docs/standard/events/index.md)합니다.  
+ 이벤트 처리기를 사용 하 여 자세한 내용은 [이벤트](../../../standard/events/index.md)합니다.  
   
 > [!CAUTION]
->  모든 종류의 다중 스레딩을 사용할 때는 매우 심각하고 복잡한 버그에 잠재적으로 노출됩니다. 다중 스레딩을 사용하는 솔루션을 구현하기 전에 [관리되는 스레딩을 구현하는 최선의 방법](../../../../docs/standard/threading/managed-threading-best-practices.md)을 참조하세요.  
+>  모든 종류의 다중 스레딩을 사용할 때는 매우 심각하고 복잡한 버그에 잠재적으로 노출됩니다. 다중 스레딩을 사용하는 솔루션을 구현하기 전에 [관리되는 스레딩을 구현하는 최선의 방법](../../../standard/threading/managed-threading-best-practices.md)을 참조하세요.  
   
- 사용 하 여 대 한 자세한 내용은 합니다 <xref:System.ComponentModel.BackgroundWorker> 클래스를 참조 하십시오 [방법: 백그라운드에서 작업 실행](../../../../docs/framework/winforms/controls/how-to-run-an-operation-in-the-background.md)합니다.  
+ 사용 하 여 대 한 자세한 내용은 합니다 <xref:System.ComponentModel.BackgroundWorker> 클래스를 참조 하십시오 [방법: 백그라운드에서 작업 실행](how-to-run-an-operation-in-the-background.md)을 참조하세요.  
   
 ## <a name="see-also"></a>참고자료
 
-- [관리되는 스레딩](../../../../docs/standard/threading/index.md)
-- [이벤트 기반 비동기 패턴 개요](../../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md)
-- [방법: 배경 작업을 사용하는 양식 구현](how-to-implement-a-form-that-uses-a-background-operation.md)
+- [관리되는 스레딩](../../../standard/threading/index.md)
+- [이벤트 기반 비동기 패턴 개요](../../../standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md)
+- [방법: 백그라운드 작업을 사용하는 양식 구현](how-to-implement-a-form-that-uses-a-background-operation.md)

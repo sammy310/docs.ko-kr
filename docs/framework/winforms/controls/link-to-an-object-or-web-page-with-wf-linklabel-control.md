@@ -15,15 +15,15 @@ helpviewer_keywords:
 - LinkLabel control [Windows Forms], linking to object or Web page
 - LinkLabel control [Windows Forms], examples
 ms.assetid: 6c91c975-3cb7-4504-82f0-fc6255f8fb85
-ms.openlocfilehash: fd397f9a6462ad9da06b1cc258a51b3cccf5d21c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 34d6807b874596bd46f11ff90052ab85cc93b5d5
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54628450"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57705192"
 ---
 # <a name="how-to-link-to-an-object-or-web-page-with-the-windows-forms-linklabel-control"></a>방법: Windows Forms LinkLabel 컨트롤을 사용 하 여 페이지를 웹 또는 개체에 연결
-Windows Forms <xref:System.Windows.Forms.LinkLabel> 컨트롤을 사용 하면 폼의 웹 스타일 링크를 만들 수 있습니다. 링크를 클릭할 때 링크를 방문한 나타내기 위해 색을 변경할 수 있습니다. 색 변경에 대 한 자세한 내용은 참조 하세요. [방법: Windows Forms LinkLabel 컨트롤의 모양을 변경](../../../../docs/framework/winforms/controls/how-to-change-the-appearance-of-the-windows-forms-linklabel-control.md)합니다.  
+Windows Forms <xref:System.Windows.Forms.LinkLabel> 컨트롤을 사용 하면 폼의 웹 스타일 링크를 만들 수 있습니다. 링크를 클릭할 때 링크를 방문한 나타내기 위해 색을 변경할 수 있습니다. 색 변경에 대 한 자세한 내용은 참조 하세요. [방법: Windows Forms LinkLabel 컨트롤의 모양을 변경](how-to-change-the-appearance-of-the-windows-forms-linklabel-control.md)합니다.  
   
 ## <a name="linking-to-another-form"></a>다른 폼에 링크  
   
@@ -180,6 +180,6 @@ Windows Forms <xref:System.Windows.Forms.LinkLabel> 컨트롤을 사용 하면 �
   
 ## <a name="see-also"></a>참고자료
 - <xref:System.Diagnostics.Process.Start%2A?displayProperty=nameWithType>
-- [LinkLabel 컨트롤 개요](../../../../docs/framework/winforms/controls/linklabel-control-overview-windows-forms.md)
-- [방법: Windows Forms LinkLabel 컨트롤의 모양 변경](../../../../docs/framework/winforms/controls/how-to-change-the-appearance-of-the-windows-forms-linklabel-control.md)
-- [LinkLabel 컨트롤](../../../../docs/framework/winforms/controls/linklabel-control-windows-forms.md)
+- [LinkLabel 컨트롤 개요](linklabel-control-overview-windows-forms.md)
+- [방법: Windows Forms LinkLabel 컨트롤의 모양 변경](how-to-change-the-appearance-of-the-windows-forms-linklabel-control.md)
+- [LinkLabel 컨트롤](linklabel-control-windows-forms.md)
