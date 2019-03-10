@@ -10,15 +10,15 @@ helpviewer_keywords:
 - page setup
 - PageSetupDialog component
 ms.assetid: 6dae05bc-c0fd-4357-bb93-841a1631d98f
-ms.openlocfilehash: c72ed5e6db6149f2161e0586c783e041eb0b731b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 482825c1e17811b31c3520a0280d7d0434489bf5
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54713540"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57713204"
 ---
 # <a name="how-to-determine-page-properties-using-the-pagesetupdialog-component"></a>방법: PageSetupDialog 구성 요소를 사용 하 여 페이지 속성
-[PageSetupDialog](../../../../docs/framework/winforms/controls/pagesetupdialog-component-windows-forms.md) 구성 요소는 문서의 사용자에게 레이아웃, 용지 크기 및 기타 페이지 레이아웃 옵션을 표시합니다.  
+[PageSetupDialog](pagesetupdialog-component-windows-forms.md) 구성 요소는 문서의 사용자에게 레이아웃, 용지 크기 및 기타 페이지 레이아웃 옵션을 표시합니다.  
   
  <xref:System.Drawing.Printing.PrintDocument> 클래스의 인스턴스를 지정해야 합니다(인쇄할 문서). 또한 사용자 컴퓨터에 로컬로 또는 네트워크를 통해 프린터가 설치되어 있어야 합니다. 부분적으로 이것이 <xref:System.Windows.Forms.PageSetupDialog> 구성 요소가 사용자에게 표시되는 페이지 서식 지정 옵션을 결정하는 방법이기 때문입니다.  
   
@@ -89,5 +89,5 @@ ms.locfileid: "54713540"
   
 ## <a name="see-also"></a>참고자료
 - <xref:System.Windows.Forms.PageSetupDialog>
-- [방법: 표준 Windows Forms 인쇄 작업 만들기](../../../../docs/framework/winforms/advanced/how-to-create-standard-windows-forms-print-jobs.md)
-- [PageSetupDialog 구성 요소](../../../../docs/framework/winforms/controls/pagesetupdialog-component-windows-forms.md)
+- [방법: 표준 Windows Forms 인쇄 작업 만들기](../advanced/how-to-create-standard-windows-forms-print-jobs.md)
+- [PageSetupDialog 구성 요소](pagesetupdialog-component-windows-forms.md)

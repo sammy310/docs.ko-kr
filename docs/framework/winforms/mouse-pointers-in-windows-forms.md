@@ -9,12 +9,12 @@ helpviewer_keywords:
 - cursors [Windows Forms], setting
 - mouse [Windows Forms], cursors
 ms.assetid: c3400d85-de5b-42e8-abc3-d6088d69ee53
-ms.openlocfilehash: 02f93a85ecaa13f5f72cd0f31a1f5ffc24c59f68
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c018986498bfbd7e492c3e7a26c94e0baa0576d5
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54491781"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57712736"
 ---
 # <a name="mouse-pointers-in-windows-forms"></a>Windows Forms의 마우스 포인터
 마우스 *포인터*, 커서도 참조 되는 경우에 따라 있는 마우스를 사용 하 여 사용자 입력에 대 한 화면에서 포커스 지점을 지정 하는 비트맵입니다. 이 항목에서는 Windows Forms에서 마우스 포인터의 개요를 제공 하 고 수정 하 고 마우스 포인터를 제어 하는 방법 중 일부를 설명 합니다.  
@@ -32,5 +32,5 @@ ms.locfileid: "54491781"
   
 ## <a name="see-also"></a>참고자료
 - <xref:System.Windows.Forms.Cursor>
-- [Windows Forms 애플리케이션의 마우스 입력](../../../docs/framework/winforms/mouse-input-in-a-windows-forms-application.md)
-- [Windows Forms에서의 끌어서 놓기 기능](../../../docs/framework/winforms/drag-and-drop-functionality-in-windows-forms.md)
+- [Windows Forms 애플리케이션의 마우스 입력](mouse-input-in-a-windows-forms-application.md)
+- [Windows Forms에서의 끌어서 놓기 기능](drag-and-drop-functionality-in-windows-forms.md)

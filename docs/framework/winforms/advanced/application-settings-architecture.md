@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - application settings [Windows Forms], architecture
 ms.assetid: c8eb2ad0-fac6-4ea2-9140-675a4a44d562
-ms.openlocfilehash: 0e26684933ee2e35dfb0daa52588c2c87505f3f9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: dd527234b90e94b5883d15b336f5e5abc9709880
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54687247"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57710682"
 ---
 # <a name="application-settings-architecture"></a>애플리케이션 설정 아키텍처
 이 항목에서는 애플리케이션 설정 아키텍처가 작동하는 방식과 그룹화된 설정 및 설정 키와 같은 고급 아키텍처 기능에 대해 설명합니다.  
@@ -34,12 +34,12 @@ ms.locfileid: "54687247"
   
 -   변경하거나 저장하기 전에 설정에 대한 유효성 검사  
   
- 내에서 정의 된 특성의 수를 사용 하 여 설정을 설명할 수 있습니다 합니다 <xref:System.Configuration> 네임 스페이스에 설명 된 이러한 [응용 프로그램 설정 특성](../../../../docs/framework/winforms/advanced/application-settings-attributes.md)합니다. 설정을 정의 사용 하 여 적용 해야 합니다 <xref:System.Configuration.ApplicationScopedSettingAttribute> 또는 <xref:System.Configuration.UserScopedSettingAttribute>, 설정을 전체 응용 프로그램 또는 현재 사용자에만 적용 되는지 여부를 설명 합니다.  
+ 내에서 정의 된 특성의 수를 사용 하 여 설정을 설명할 수 있습니다 합니다 <xref:System.Configuration> 네임 스페이스에 설명 된 이러한 [응용 프로그램 설정 특성](application-settings-attributes.md)합니다. 설정을 정의 사용 하 여 적용 해야 합니다 <xref:System.Configuration.ApplicationScopedSettingAttribute> 또는 <xref:System.Configuration.UserScopedSettingAttribute>, 설정을 전체 응용 프로그램 또는 현재 사용자에만 적용 되는지 여부를 설명 합니다.  
   
  다음 코드 예제에서는 단일 설정인 `BackgroundColor`를 사용하여 사용자 지정 설정 클래스를 정의합니다.  
   
- [!code-csharp[ApplicationSettings.Create#1](../../../../samples/snippets/csharp/VS_Snippets_Winforms/ApplicationSettings.Create/CS/MyAppSettings.cs#1)]
- [!code-vb[ApplicationSettings.Create#1](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/ApplicationSettings.Create/VB/MyAppSettings.vb#1)]  
+ [!code-csharp[ApplicationSettings.Create#1](~/samples/snippets/csharp/VS_Snippets_Winforms/ApplicationSettings.Create/CS/MyAppSettings.cs#1)]
+ [!code-vb[ApplicationSettings.Create#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/ApplicationSettings.Create/VB/MyAppSettings.vb#1)]  
   
 ## <a name="settings-persistence"></a>설정 지속성  
  합니다 <xref:System.Configuration.ApplicationSettingsBase> ; 클래스에서 파생 되는 설정 공급자에 게 이러한 작업은 클래스 자체를 유지 하거나 하지 설정을 로드할 <xref:System.Configuration.SettingsProvider>합니다. 파생 클래스가 <xref:System.Configuration.ApplicationSettingsBase> 를 통해 설정 공급자를 지정 하지 않습니다를 <xref:System.Configuration.SettingsProviderAttribute>, 다음 기본 공급자를 <xref:System.Configuration.LocalFileSettingsProvider>, 사용 됩니다.  
@@ -88,7 +88,7 @@ ms.locfileid: "54687247"
 </configuration>  
 ```  
   
- 구성 파일의 애플리케이션 설정 섹션에 있는 요소의 정의는 [애플리케이션 설정 스키마](../../../../docs/framework/configure-apps/file-schema/application-settings-schema.md)를 참조하세요.  
+ 구성 파일의 애플리케이션 설정 섹션에 있는 요소의 정의는 [애플리케이션 설정 스키마](../../configure-apps/file-schema/application-settings-schema.md)를 참조하세요.  
   
 ### <a name="settings-bindings"></a>설정 바인딩  
  애플리케이션 설정은 Windows Forms 데이터 바인딩 아키텍처를 사용하여 설정 개체와 구성 요소 간의 양방향 통신으로 설정 업데이트를 제공합니다. Visual Studio에서 애플리케이션 설정을 만들어 구성 요소 속성에 할당하면 이러한 바인딩이 자동으로 생성됩니다.  
@@ -106,7 +106,7 @@ ms.locfileid: "54687247"
   
 3.  설정의 특성에 따라 어떤 파일에 어떤 설정을 사용할지 결정합니다.  
   
- 사용자 고유의 설정 클래스를 구현 하는 경우 사용할 수 있습니다 합니다 <xref:System.Configuration.SettingsSerializeAsAttribute> 사용 하 여 이진 또는 사용자 지정 serialization에 대 한 설정을 표시 하는 <xref:System.Configuration.SettingsSerializeAs> 열거형입니다. 코드에서 사용자 고유의 설정 클래스를 만드는 방법에 대 한 자세한 내용은 참조 하세요. [방법: 응용 프로그램 설정 만들기](../../../../docs/framework/winforms/advanced/how-to-create-application-settings.md)합니다.  
+ 사용자 고유의 설정 클래스를 구현 하는 경우 사용할 수 있습니다 합니다 <xref:System.Configuration.SettingsSerializeAsAttribute> 사용 하 여 이진 또는 사용자 지정 serialization에 대 한 설정을 표시 하는 <xref:System.Configuration.SettingsSerializeAs> 열거형입니다. 코드에서 사용자 고유의 설정 클래스를 만드는 방법에 대 한 자세한 내용은 참조 하세요. [방법: 응용 프로그램 설정 만들기](how-to-create-application-settings.md)합니다.  
   
 ### <a name="settings-file-locations"></a>설정 파일 위치  
  `app`.exe.config 및 *user*.config 파일의 위치는 응용 프로그램을 설치하는 방법에 따라 다릅니다. 로컬 컴퓨터에 복사 하는 Windows Forms 기반 응용 프로그램에 대 한 `app`합니다. 응용 프로그램의 주 실행 파일의 기본 디렉터리와 같은 디렉터리의 exe.config 상주할 및 *사용자*.config에 상주할 합니다 지정 된 위치는 <xref:System.Windows.Forms.Application.LocalUserAppDataPath%2A?displayProperty=nameWithType> 속성입니다. [!INCLUDE[ndptecclick](../../../../includes/ndptecclick-md.md)]를 사용하여 응용 프로그램을 설치한 경우 이 두 파일은 모두 %InstallRoot%\Documents and Settings\\*username*\Local Settings 아래의 [!INCLUDE[ndptecclick](../../../../includes/ndptecclick-md.md)] 데이터 디렉터리에 있습니다.  
@@ -127,8 +127,8 @@ ms.locfileid: "54687247"
   
  공급자는 구현이 분명하지 않은 속성 하나와 메서드 하나를 구현해야 합니다. 합니다 <xref:System.Configuration.SettingsProvider.ApplicationName%2A> 속성의 추상 속성은 <xref:System.Configuration.SettingsProvider>; 다음을 반환 하도록 프로그래밍 해야 합니다.  
   
- [!code-csharp[ApplicationSettings.Architecture#2](../../../../samples/snippets/csharp/VS_Snippets_Winforms/ApplicationSettings.Architecture/CS/DummyClass.cs#2)]
- [!code-vb[ApplicationSettings.Architecture#2](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/ApplicationSettings.Architecture/VB/DummyProviderClass.vb#2)]  
+ [!code-csharp[ApplicationSettings.Architecture#2](~/samples/snippets/csharp/VS_Snippets_Winforms/ApplicationSettings.Architecture/CS/DummyClass.cs#2)]
+ [!code-vb[ApplicationSettings.Architecture#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/ApplicationSettings.Architecture/VB/DummyProviderClass.vb#2)]  
   
  또한 파생 클래스는 인수를 사용하지 않고 값을 반환하지 않는 `Initialize` 메서드도 구현해야 합니다. 이 메서드는 정의 되지 않은 <xref:System.Configuration.SettingsProvider>합니다.  
   
@@ -136,8 +136,8 @@ ms.locfileid: "54687247"
   
  공급자를 구현하고 컴파일했으면 설정 클래스에서 기본값 대신 이 공급자를 사용하도록 지시해야 합니다. 통해이 작업을 수행 합니다 <xref:System.Configuration.SettingsProviderAttribute>합니다. 전체 설정 클래스에 적용 하는 경우 해당 공급자가; 클래스를 정의 하는 각 설정에 대 한 사용 개별 설정에 적용 하는 경우 응용 프로그램 설정 아키텍처에만 해당 설정에 대 한 해당 공급자를 사용 하 고이 사용 하는 <xref:System.Configuration.LocalFileSettingsProvider> 나머지 부분에 대 한 합니다. 다음 코드 예제에서는 사용자 지정 공급자를 사용하도록 설정 클래스에 지시하는 방법을 보여 줍니다.  
   
- [!code-csharp[ApplicationSettings.Architecture#1](../../../../samples/snippets/csharp/VS_Snippets_Winforms/ApplicationSettings.Architecture/CS/DummyClass.cs#1)]
- [!code-vb[ApplicationSettings.Architecture#1](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/ApplicationSettings.Architecture/VB/DummyProviderClass.vb#1)]  
+ [!code-csharp[ApplicationSettings.Architecture#1](~/samples/snippets/csharp/VS_Snippets_Winforms/ApplicationSettings.Architecture/CS/DummyClass.cs#1)]
+ [!code-vb[ApplicationSettings.Architecture#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/ApplicationSettings.Architecture/VB/DummyProviderClass.vb#1)]  
   
  한 공급자를 여러 스레드에서 동시에 호출할 수 있지만, 공급자가 항상 동일한 저장소 위치에 쓰므로 애플리케이션 아키텍처는 공급자 클래스의 단일 인스턴스만 인스턴스화합니다.  
   
@@ -150,7 +150,7 @@ ms.locfileid: "54687247"
 - <xref:System.Configuration.ApplicationSettingsBase>
 - <xref:System.Configuration.SettingsProvider>
 - <xref:System.Configuration.LocalFileSettingsProvider>
-- [응용 프로그램 설정 개요](../../../../docs/framework/winforms/advanced/application-settings-overview.md)
-- [사용자 지정 컨트롤에 대한 응용 프로그램 설정](../../../../docs/framework/winforms/advanced/application-settings-for-custom-controls.md)
+- [응용 프로그램 설정 개요](application-settings-overview.md)
+- [사용자 지정 컨트롤에 대한 응용 프로그램 설정](application-settings-for-custom-controls.md)
 - [ClickOnce 및 응용 프로그램 설정](/visualstudio/deployment/clickonce-and-application-settings)
-- [응용 프로그램 설정 스키마](../../../../docs/framework/configure-apps/file-schema/application-settings-schema.md)
+- [응용 프로그램 설정 스키마](../../configure-apps/file-schema/application-settings-schema.md)

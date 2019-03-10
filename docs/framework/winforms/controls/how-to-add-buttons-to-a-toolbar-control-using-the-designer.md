@@ -8,12 +8,12 @@ helpviewer_keywords:
 - examples [Windows Forms], toolbars
 - ToolBar control [Windows Forms], adding drop-down menus
 ms.assetid: d9ce3040-3e21-4e2d-80ae-b430982b2db8
-ms.openlocfilehash: e4332842a082f7359179dbf4d7539b42bbceb6fc
-ms.sourcegitcommit: bef803e2025642df39f2f1e046767d89031e0304
+ms.openlocfilehash: 86184fa92917c53d95da21732a7c52cdd08079ee
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56305690"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57702843"
 ---
 # <a name="how-to-add-buttons-to-a-toolbar-control-using-the-designer"></a>방법: 디자이너를 사용 하 여 ToolBar 컨트롤에 단추 추가
 > [!NOTE]
@@ -21,7 +21,7 @@ ms.locfileid: "56305690"
   
  중요 한 부분을 <xref:System.Windows.Forms.ToolBar> 컨트롤은 단추를 추가 합니다. 또는 메뉴 명령에 쉽게 액세스할 수 있도록 사용할 수 있습니다 이러한 메뉴 구조에 사용할 수 없는 사용자에 게 명령을 노출할 응용 프로그램의 사용자 인터페이스의 다른 영역에 배치할 수 있습니다 또는.  
   
- 다음 절차를 수행 하려면을 **Windows 응용 프로그램** 포함 하는 양식을 사용 하 여 프로젝트를 <xref:System.Windows.Forms.ToolBar> 제어 합니다. 이러한 프로젝트 설정에 대 한 자세한 내용은 [방법: Windows Forms 응용 프로그램 프로젝트를 만듭니다](/visualstudio/ide/step-1-create-a-windows-forms-application-project) 고 [방법: Windows Forms에 컨트롤 추가](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md)합니다.  
+ 다음 절차를 수행 하려면을 **Windows 응용 프로그램** 포함 하는 양식을 사용 하 여 프로젝트를 <xref:System.Windows.Forms.ToolBar> 제어 합니다. 이러한 프로젝트 설정에 대 한 자세한 내용은 [방법: Windows Forms 응용 프로그램 프로젝트를 만듭니다](/visualstudio/ide/step-1-create-a-windows-forms-application-project) 고 [방법: Windows Forms에 컨트롤 추가](how-to-add-controls-to-windows-forms.md)합니다.  
   
 > [!NOTE]
 >  표시되는 대화 상자와 메뉴 명령은 활성 설정이나 버전에 따라 도움말에서 설명하는 것과 다를 수 있습니다. 설정을 변경하려면 **도구** 메뉴에서 **설정 가져오기 및 내보내기** 를 선택합니다. 자세한 내용은 [Visual Studio IDE 개인 설정](/visualstudio/ide/personalizing-the-visual-studio-ide)을 참조하세요.  
@@ -30,7 +30,7 @@ ms.locfileid: "56305690"
   
 1.  <xref:System.Windows.Forms.ToolBar> 컨트롤을 선택합니다.  
   
-2.  에 **속성** 창 클릭 합니다 <xref:System.Windows.Forms.ToolBar.Buttons%2A> 속성을 선택 하 고 클릭 합니다 **줄임표** (![VisualStudioEllipsesButton 스크린 샷](../../../../docs/framework/winforms/media/vbellipsesbutton.png " vbEllipsesButton")) 버튼을 클릭 하 여 **ToolBarButton 컬렉션 편집기**합니다.  
+2.  에 **속성** 창 클릭 합니다 <xref:System.Windows.Forms.ToolBar.Buttons%2A> 속성을 선택 하 고 클릭 합니다 **줄임표** (![VisualStudioEllipsesButton 스크린 샷](../media/vbellipsesbutton.png " vbEllipsesButton")) 버튼을 클릭 하 여 **ToolBarButton 컬렉션 편집기**합니다.  
   
 3.  사용 하 여는 **추가** 및 **제거** 단추를 추가 하거나 제거 하는 단추는 <xref:System.Windows.Forms.ToolBar> 제어 합니다.  
   
@@ -49,7 +49,7 @@ ms.locfileid: "56305690"
   
 ## <a name="see-also"></a>참고자료
 - <xref:System.Windows.Forms.ToolBar>
-- [방법: 도구 모음 단추의 아이콘 정의](../../../../docs/framework/winforms/controls/how-to-define-an-icon-for-a-toolbar-button.md)
-- [방법: Toolbar 단추의 메뉴 이벤트 트리거](../../../../docs/framework/winforms/controls/how-to-trigger-menu-events-for-toolbar-buttons.md)
-- [ToolBar 컨트롤 개요](../../../../docs/framework/winforms/controls/toolbar-control-overview-windows-forms.md)
-- [ToolBar 컨트롤](../../../../docs/framework/winforms/controls/toolbar-control-windows-forms.md)
+- [방법: 도구 모음 단추의 아이콘 정의](how-to-define-an-icon-for-a-toolbar-button.md)
+- [방법: Toolbar 단추의 메뉴 이벤트 트리거](how-to-trigger-menu-events-for-toolbar-buttons.md)
+- [ToolBar 컨트롤 개요](toolbar-control-overview-windows-forms.md)
+- [ToolBar 컨트롤](toolbar-control-windows-forms.md)
