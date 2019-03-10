@@ -11,49 +11,49 @@ helpviewer_keywords:
 - ToolStrip control [Windows Forms]
 - MenuStrip control [Windows Forms]
 ms.assetid: 525e2347-0804-49aa-b9a3-9b2cabbf1c35
-ms.openlocfilehash: ce6a8c4cd946677d49c04c85a61f4b47df71bbd9
-ms.sourcegitcommit: af0a22a4eb11bbcd33baec49150d551955b50a16
+ms.openlocfilehash: 2ad175f5f290fd709636e12caf0ebd0a34c0052f
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56260948"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57714764"
 ---
-# <a name="how-to-set-the-toolstrip-renderer-at-run-time"></a><span data-ttu-id="5ac8a-102">방법: 런타임 시 ToolStrip 렌더러 설정</span><span class="sxs-lookup"><span data-stu-id="5ac8a-102">How to: Set the ToolStrip Renderer at Run Time</span></span>
-<span data-ttu-id="5ac8a-103">사용자 지정 `ProfessionalColorTable` 클래스를 만들어 <xref:System.Windows.Forms.ToolStrip> 컨트롤의 모양을 사용자 지정할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="5ac8a-103">You can customize the appearance of your <xref:System.Windows.Forms.ToolStrip> control by creating a custom `ProfessionalColorTable` class.</span></span>  
+# <a name="how-to-set-the-toolstrip-renderer-at-run-time"></a><span data-ttu-id="0be5b-102">방법: 런타임 시 ToolStrip 렌더러 설정</span><span class="sxs-lookup"><span data-stu-id="0be5b-102">How to: Set the ToolStrip Renderer at Run Time</span></span>
+<span data-ttu-id="0be5b-103">사용자 지정 `ProfessionalColorTable` 클래스를 만들어 <xref:System.Windows.Forms.ToolStrip> 컨트롤의 모양을 사용자 지정할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="0be5b-103">You can customize the appearance of your <xref:System.Windows.Forms.ToolStrip> control by creating a custom `ProfessionalColorTable` class.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="5ac8a-104">예제</span><span class="sxs-lookup"><span data-stu-id="5ac8a-104">Example</span></span>  
- <span data-ttu-id="5ac8a-105">다음 코드 예제에서는 사용자 지정 `ProfessionalColorTable` 클래스를 만드는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="5ac8a-105">The following code example demonstrates how to create a custom `ProfessionalColorTable` class.</span></span> <span data-ttu-id="5ac8a-106">이 클래스는 <xref:System.Windows.Forms.MenuStrip> 및 <xref:System.Windows.Forms.ToolStrip> 컨트롤에 대한 그라데이션을 정의합니다.</span><span class="sxs-lookup"><span data-stu-id="5ac8a-106">This class defines gradients for a <xref:System.Windows.Forms.MenuStrip> and a <xref:System.Windows.Forms.ToolStrip> control.</span></span>  
+## <a name="example"></a><span data-ttu-id="0be5b-104">예제</span><span class="sxs-lookup"><span data-stu-id="0be5b-104">Example</span></span>  
+ <span data-ttu-id="0be5b-105">다음 코드 예제에서는 사용자 지정 `ProfessionalColorTable` 클래스를 만드는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="0be5b-105">The following code example demonstrates how to create a custom `ProfessionalColorTable` class.</span></span> <span data-ttu-id="0be5b-106">이 클래스는 <xref:System.Windows.Forms.MenuStrip> 및 <xref:System.Windows.Forms.ToolStrip> 컨트롤에 대한 그라데이션을 정의합니다.</span><span class="sxs-lookup"><span data-stu-id="0be5b-106">This class defines gradients for a <xref:System.Windows.Forms.MenuStrip> and a <xref:System.Windows.Forms.ToolStrip> control.</span></span>  
   
- <span data-ttu-id="5ac8a-107">이 코드 예제를 사용하려면 애플리케이션을 컴파일 및 실행한 다음 **색 변경**을 클릭하여 사용자 지정 `ProfessionalColorTable` 클래스에서 정의된 그라데이션을 적용합니다.</span><span class="sxs-lookup"><span data-stu-id="5ac8a-107">To use this code example, compile and run the application, and then click **Change Colors** to apply the gradients defined in the custom `ProfessionalColorTable` class.</span></span>  
+ <span data-ttu-id="0be5b-107">이 코드 예제를 사용하려면 애플리케이션을 컴파일 및 실행한 다음 **색 변경**을 클릭하여 사용자 지정 `ProfessionalColorTable` 클래스에서 정의된 그라데이션을 적용합니다.</span><span class="sxs-lookup"><span data-stu-id="0be5b-107">To use this code example, compile and run the application, and then click **Change Colors** to apply the gradients defined in the custom `ProfessionalColorTable` class.</span></span>  
   
- [!code-csharp[System.Windows.Forms.ToolStrip.Misc#1](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.Misc/CS/Program.cs#1)]
- [!code-vb[System.Windows.Forms.ToolStrip.Misc#1](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.Misc/VB/Program.vb#1)]  
-[!code-csharp[System.Windows.Forms.ToolStrip.Misc#20](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.Misc/CS/Program.cs#20)]
-[!code-vb[System.Windows.Forms.ToolStrip.Misc#20](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.Misc/VB/Program.vb#20)]  
+ [!code-csharp[System.Windows.Forms.ToolStrip.Misc#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.Misc/CS/Program.cs#1)]
+ [!code-vb[System.Windows.Forms.ToolStrip.Misc#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.Misc/VB/Program.vb#1)]  
+[!code-csharp[System.Windows.Forms.ToolStrip.Misc#20](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.Misc/CS/Program.cs#20)]
+[!code-vb[System.Windows.Forms.ToolStrip.Misc#20](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.Misc/VB/Program.vb#20)]  
   
-## <a name="defining-a-custom-professionalcolortable-class"></a><span data-ttu-id="5ac8a-108">사용자 지정 ProfessionalColorTable 클래스 정의</span><span class="sxs-lookup"><span data-stu-id="5ac8a-108">Defining a Custom ProfessionalColorTable class</span></span>  
- <span data-ttu-id="5ac8a-109">사용자 지정 그라데이션은 `CustomProfessionalColors` 클래스에서 정의됩니다.</span><span class="sxs-lookup"><span data-stu-id="5ac8a-109">The custom gradients are defined in the `CustomProfessionalColors` class.</span></span>  
+## <a name="defining-a-custom-professionalcolortable-class"></a><span data-ttu-id="0be5b-108">사용자 지정 ProfessionalColorTable 클래스 정의</span><span class="sxs-lookup"><span data-stu-id="0be5b-108">Defining a Custom ProfessionalColorTable class</span></span>  
+ <span data-ttu-id="0be5b-109">사용자 지정 그라데이션은 `CustomProfessionalColors` 클래스에서 정의됩니다.</span><span class="sxs-lookup"><span data-stu-id="0be5b-109">The custom gradients are defined in the `CustomProfessionalColors` class.</span></span>  
   
- [!code-csharp[System.Windows.Forms.ToolStrip.Misc#30](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.Misc/CS/Program.cs#30)]
- [!code-vb[System.Windows.Forms.ToolStrip.Misc#30](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.Misc/VB/Program.vb#30)]  
+ [!code-csharp[System.Windows.Forms.ToolStrip.Misc#30](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.Misc/CS/Program.cs#30)]
+ [!code-vb[System.Windows.Forms.ToolStrip.Misc#30](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.Misc/VB/Program.vb#30)]  
   
-## <a name="assigning-a-custom-renderer"></a><span data-ttu-id="5ac8a-110">사용자 지정 렌더러 할당</span><span class="sxs-lookup"><span data-stu-id="5ac8a-110">Assigning a Custom Renderer</span></span>  
- <span data-ttu-id="5ac8a-111">`CustomProfessionalColors` 클래스를 사용하여 새 `ToolStripProfessionalRenderer`를 만들고 <xref:System.Windows.Forms.ToolStripManager.Renderer%2A?displayProperty=nameWithType> 속성에 할당합니다.</span><span class="sxs-lookup"><span data-stu-id="5ac8a-111">Create a new `ToolStripProfessionalRenderer` with a `CustomProfessionalColors` class, and assign it to the <xref:System.Windows.Forms.ToolStripManager.Renderer%2A?displayProperty=nameWithType> property.</span></span>  
+## <a name="assigning-a-custom-renderer"></a><span data-ttu-id="0be5b-110">사용자 지정 렌더러 할당</span><span class="sxs-lookup"><span data-stu-id="0be5b-110">Assigning a Custom Renderer</span></span>  
+ <span data-ttu-id="0be5b-111">`CustomProfessionalColors` 클래스를 사용하여 새 `ToolStripProfessionalRenderer`를 만들고 <xref:System.Windows.Forms.ToolStripManager.Renderer%2A?displayProperty=nameWithType> 속성에 할당합니다.</span><span class="sxs-lookup"><span data-stu-id="0be5b-111">Create a new `ToolStripProfessionalRenderer` with a `CustomProfessionalColors` class, and assign it to the <xref:System.Windows.Forms.ToolStripManager.Renderer%2A?displayProperty=nameWithType> property.</span></span>  
   
- [!code-csharp[System.Windows.Forms.ToolStrip.Misc#22](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.Misc/CS/Program.cs#22)]
- [!code-vb[System.Windows.Forms.ToolStrip.Misc#22](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.Misc/VB/Program.vb#22)]  
+ [!code-csharp[System.Windows.Forms.ToolStrip.Misc#22](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.Misc/CS/Program.cs#22)]
+ [!code-vb[System.Windows.Forms.ToolStrip.Misc#22](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.Misc/VB/Program.vb#22)]  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="5ac8a-112">코드 컴파일</span><span class="sxs-lookup"><span data-stu-id="5ac8a-112">Compiling the Code</span></span>  
- <span data-ttu-id="5ac8a-113">이 예제에는 다음 사항이 필요합니다.</span><span class="sxs-lookup"><span data-stu-id="5ac8a-113">This example requires:</span></span>  
+## <a name="compiling-the-code"></a><span data-ttu-id="0be5b-112">코드 컴파일</span><span class="sxs-lookup"><span data-stu-id="0be5b-112">Compiling the Code</span></span>  
+ <span data-ttu-id="0be5b-113">이 예제에는 다음 사항이 필요합니다.</span><span class="sxs-lookup"><span data-stu-id="0be5b-113">This example requires:</span></span>  
   
--   <span data-ttu-id="5ac8a-114">System.Design, System.Drawing 및 System.Windows.Forms 어셈블리에 대한 참조</span><span class="sxs-lookup"><span data-stu-id="5ac8a-114">References to the System.Design, System.Drawing, and System.Windows.Forms assemblies.</span></span>  
+-   <span data-ttu-id="0be5b-114">System.Design, System.Drawing 및 System.Windows.Forms 어셈블리에 대한 참조</span><span class="sxs-lookup"><span data-stu-id="0be5b-114">References to the System.Design, System.Drawing, and System.Windows.Forms assemblies.</span></span>  
   
- <span data-ttu-id="5ac8a-115">Visual Basic 또는 Visual C#에 대 한 명령줄에서이 예제를 빌드하는 방법에 대 한 내용은 [명령줄에서 빌드](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) 하거나 [csc.exe를 사용한 명령줄 빌드](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="5ac8a-115">For information about building this example from the command line for Visual Basic or Visual C#, see [Building from the Command Line](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) or [Command-line Building With csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md).</span></span> <span data-ttu-id="5ac8a-116">또한 새 프로젝트에 코드를 붙여 넣어 Visual Studio에서이 예제를 빌드할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="5ac8a-116">You can also build this example in Visual Studio by pasting the code into a new project.</span></span>  
+ <span data-ttu-id="0be5b-115">Visual Basic 또는 Visual C#에 대 한 명령줄에서이 예제를 빌드하는 방법에 대 한 내용은 [명령줄에서 빌드](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) 하거나 [csc.exe를 사용한 명령줄 빌드](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="0be5b-115">For information about building this example from the command line for Visual Basic or Visual C#, see [Building from the Command Line](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) or [Command-line Building With csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md).</span></span> <span data-ttu-id="0be5b-116">또한 새 프로젝트에 코드를 붙여 넣어 Visual Studio에서이 예제를 빌드할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="0be5b-116">You can also build this example in Visual Studio by pasting the code into a new project.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="5ac8a-117">참고자료</span><span class="sxs-lookup"><span data-stu-id="5ac8a-117">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="0be5b-117">참고자료</span><span class="sxs-lookup"><span data-stu-id="0be5b-117">See also</span></span>
 - <xref:System.Windows.Forms.ToolStripManager>
 - <xref:System.Windows.Forms.ProfessionalColorTable>
 - <xref:System.Windows.Forms.MenuStrip>
 - <xref:System.Windows.Forms.ToolStrip>
 - <xref:System.Windows.Forms.ToolStripProfessionalRenderer>
-- [<span data-ttu-id="5ac8a-118">ToolStrip 컨트롤</span><span class="sxs-lookup"><span data-stu-id="5ac8a-118">ToolStrip Control</span></span>](../../../../docs/framework/winforms/controls/toolstrip-control-windows-forms.md)
+- [<span data-ttu-id="0be5b-118">ToolStrip 컨트롤</span><span class="sxs-lookup"><span data-stu-id="0be5b-118">ToolStrip Control</span></span>](toolstrip-control-windows-forms.md)
