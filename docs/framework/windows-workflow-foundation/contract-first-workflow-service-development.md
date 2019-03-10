@@ -2,48 +2,48 @@
 title: 계약 중심 워크플로 서비스 개발
 ms.date: 03/30/2017
 ms.assetid: e5dbaa7b-005f-4330-848d-58ac4f42f093
-ms.openlocfilehash: 3b015b8c58e5ee3acbb1277d00523a85ee96da46
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: c326f91bc8673180db755a91ab080bcf0ba72052
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57373064"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57721790"
 ---
 # <a name="contract-first-workflow-service-development"></a>계약 중심 워크플로 서비스 개발
-부터 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], Windows WF (Workflow Foundation) 기능에 웹 서비스 및 계약 중심 워크플로 개발의 형태로 워크플로 간의 통합 향상. 계약 중심 워크플로 개발 도구를 사용하면 코드에서 계약을 먼저 디자인할 수 있습니다. 그러면 이 도구는 계약의 작업을 위해 도구 상자에 활동 템플릿을 자동으로 생성합니다. 이 항목에서는 워크플로 서비스 맵의 활동 및 속성을 서비스 계약의 특성에 매핑하는 방법을 간략하게 설명합니다. 계약 중심 워크플로 서비스 만들기의 단계별 예제를 참조 하세요. [방법: 기존 서비스 계약을 사용 하는 워크플로 서비스 만들기](../../../docs/framework/windows-workflow-foundation/how-to-create-a-workflow-service-that-consumes-an-existing-service-contract.md)합니다.  
+부터 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], Windows WF (Workflow Foundation) 기능에 웹 서비스 및 계약 중심 워크플로 개발의 형태로 워크플로 간의 통합 향상. 계약 중심 워크플로 개발 도구를 사용하면 코드에서 계약을 먼저 디자인할 수 있습니다. 그러면 이 도구는 계약의 작업을 위해 도구 상자에 활동 템플릿을 자동으로 생성합니다. 이 항목에서는 워크플로 서비스 맵의 활동 및 속성을 서비스 계약의 특성에 매핑하는 방법을 간략하게 설명합니다. 계약 중심 워크플로 서비스 만들기의 단계별 예제를 참조 하세요. [방법: 기존 서비스 계약을 사용 하는 워크플로 서비스 만들기](how-to-create-a-workflow-service-that-consumes-an-existing-service-contract.md)합니다.  
   
 ## <a name="in-this-topic"></a>항목 내용  
   
--   [워크플로 특성을 서비스 계약 특성 매핑](../../../docs/framework/windows-workflow-foundation/contract-first-workflow-service-development.md#MappingAttributes)  
+-   [워크플로 특성을 서비스 계약 특성 매핑](contract-first-workflow-service-development.md#MappingAttributes)  
   
-    -   [서비스 계약 특성](../../../docs/framework/windows-workflow-foundation/contract-first-workflow-service-development.md#ServiceContract)  
+    -   [서비스 계약 특성](contract-first-workflow-service-development.md#ServiceContract)  
   
-    -   [작업 계약 특성](../../../docs/framework/windows-workflow-foundation/contract-first-workflow-service-development.md#OperationContract)  
+    -   [작업 계약 특성](contract-first-workflow-service-development.md#OperationContract)  
   
-    -   [메시지 계약 특성](../../../docs/framework/windows-workflow-foundation/contract-first-workflow-service-development.md#MessageContract)  
+    -   [메시지 계약 특성](contract-first-workflow-service-development.md#MessageContract)  
   
-    -   [데이터 계약 특성](../../../docs/framework/windows-workflow-foundation/contract-first-workflow-service-development.md#DataContract)  
+    -   [데이터 계약 특성](contract-first-workflow-service-development.md#DataContract)  
   
-    -   [오류 계약 특성](../../../docs/framework/windows-workflow-foundation/contract-first-workflow-service-development.md#FaultContract)  
+    -   [오류 계약 특성](contract-first-workflow-service-development.md#FaultContract)  
   
--   [추가 지원 및 구현 정보](../../../docs/framework/windows-workflow-foundation/contract-first-workflow-service-development.md#AdditionalSupport)  
+-   [추가 지원 및 구현 정보](contract-first-workflow-service-development.md#AdditionalSupport)  
   
-    -   [지원 되지 않는 서비스 계약 기능](../../../docs/framework/windows-workflow-foundation/contract-first-workflow-service-development.md#UnsupportedFeatures)  
+    -   [지원 되지 않는 서비스 계약 기능](contract-first-workflow-service-development.md#UnsupportedFeatures)  
   
-    -   [구성 된 메시징 활동 생성](../../../docs/framework/windows-workflow-foundation/contract-first-workflow-service-development.md#ActivityGeneration)  
+    -   [구성 된 메시징 활동 생성](contract-first-workflow-service-development.md#ActivityGeneration)  
   
 ## <a name="MappingAttributes"></a> 워크플로 특성을 서비스 계약 특성 매핑  
  다음 단원의 표에는 여러 WCF 특성 및 속성과 해당 WCF 특성 및 속성을 계약 중심 워크플로의 메시징 활동 및 속성에 매핑하는 방법이 나와 있습니다.  
   
--   [서비스 계약 특성](../../../docs/framework/windows-workflow-foundation/contract-first-workflow-service-development.md#ServiceContract)  
+-   [서비스 계약 특성](contract-first-workflow-service-development.md#ServiceContract)  
   
--   [작업 계약 특성](../../../docs/framework/windows-workflow-foundation/contract-first-workflow-service-development.md#OperationContract)  
+-   [작업 계약 특성](contract-first-workflow-service-development.md#OperationContract)  
   
--   [메시지 계약 특성](../../../docs/framework/windows-workflow-foundation/contract-first-workflow-service-development.md#MessageContract)  
+-   [메시지 계약 특성](contract-first-workflow-service-development.md#MessageContract)  
   
--   [데이터 계약 특성](../../../docs/framework/windows-workflow-foundation/contract-first-workflow-service-development.md#DataContract)  
+-   [데이터 계약 특성](contract-first-workflow-service-development.md#DataContract)  
   
--   [오류 계약 특성](../../../docs/framework/windows-workflow-foundation/contract-first-workflow-service-development.md#FaultContract)  
+-   [오류 계약 특성](contract-first-workflow-service-development.md#FaultContract)  
   
 ### <a name="ServiceContract"></a> 서비스 계약 특성  
   
@@ -109,9 +109,9 @@ ms.locfileid: "57373064"
   
 ## <a name="AdditionalSupport"></a> 추가 지원 및 구현 정보  
   
--   [지원 되지 않는 서비스 계약 기능](../../../docs/framework/windows-workflow-foundation/contract-first-workflow-service-development.md#UnsupportedFeatures)  
+-   [지원 되지 않는 서비스 계약 기능](contract-first-workflow-service-development.md#UnsupportedFeatures)  
   
--   [구성 된 메시징 활동 생성](../../../docs/framework/windows-workflow-foundation/contract-first-workflow-service-development.md#ActivityGeneration)  
+-   [구성 된 메시징 활동 생성](contract-first-workflow-service-development.md#ActivityGeneration)  
   
 ### <a name="UnsupportedFeatures"></a> 지원 되지 않는 서비스 계약 기능  
   

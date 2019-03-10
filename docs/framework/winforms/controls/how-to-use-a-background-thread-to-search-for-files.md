@@ -10,17 +10,17 @@ helpviewer_keywords:
 - threading [Windows Forms], custom controls
 - custom controls [Windows Forms], samples
 ms.assetid: 7fe3956f-5b8f-4f78-8aae-c9eb0b28f13a
-ms.openlocfilehash: a4bb4f0e1c54429e1d014050fc85d956493f9080
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5bf345e4195c64d3cf7fab7bf9a826dc99d47463
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54536332"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57723168"
 ---
 # <a name="how-to-use-a-background-thread-to-search-for-files"></a>방법: 파일을 검색 하는 백그라운드 스레드를 사용 합니다.
-합니다 <xref:System.ComponentModel.BackgroundWorker> 대체 하 고 기능을 추가 하는 구성 요소를 <xref:System.Threading> 네임 스페이스 하지만 <xref:System.Threading> 네임 스페이스 선택 하면 이전 버전과 호환성 및 향후 사용을 위해 유지 됩니다. 자세한 내용은 [BackgroundWorker 구성 요소 개요](../../../../docs/framework/winforms/controls/backgroundworker-component-overview.md)합니다.  
+합니다 <xref:System.ComponentModel.BackgroundWorker> 대체 하 고 기능을 추가 하는 구성 요소를 <xref:System.Threading> 네임 스페이스 하지만 <xref:System.Threading> 네임 스페이스 선택 하면 이전 버전과 호환성 및 향후 사용을 위해 유지 됩니다. 자세한 내용은 [BackgroundWorker 구성 요소 개요](backgroundworker-component-overview.md)합니다.  
   
- Windows Forms는 Windows Forms 본질적으로 아파트 스레드 수 있는 네이티브 Win32 창을 기반으로 하므로 (STA) 단일 스레드 아파트 모델을 사용 합니다. STA 모델 창의 모든 스레드에서 만들어질 수 있지만 일단 만들어지면 스레드를 전환할 수 없습니다 하 모든 함수 호출을 만드는 스레드에서 발생 해야 의미 합니다. Windows Forms, 외부.NET Framework의 클래스는 사용 가능한 스레딩 모델을 사용합니다. .NET framework에서 스레딩에 대 한 내용은 [스레딩](../../../../docs/standard/threading/index.md)합니다.  
+ Windows Forms는 Windows Forms 본질적으로 아파트 스레드 수 있는 네이티브 Win32 창을 기반으로 하므로 (STA) 단일 스레드 아파트 모델을 사용 합니다. STA 모델 창의 모든 스레드에서 만들어질 수 있지만 일단 만들어지면 스레드를 전환할 수 없습니다 하 모든 함수 호출을 만드는 스레드에서 발생 해야 의미 합니다. Windows Forms, 외부.NET Framework의 클래스는 사용 가능한 스레딩 모델을 사용합니다. .NET framework에서 스레딩에 대 한 내용은 [스레딩](../../../standard/threading/index.md)합니다.  
   
  STA 모델은 컨트롤의 생성 스레드 외부에서 호출 해야 하는 컨트롤에서 메서드 해야 마샬링할 수 (실행)의 경우 컨트롤의 생성 스레드입니다. 기본 클래스 <xref:System.Windows.Forms.Control> 에서는 여러 가지 방법 (<xref:System.Windows.Forms.Control.Invoke%2A>를 <xref:System.Windows.Forms.Control.BeginInvoke%2A>, 및 <xref:System.Windows.Forms.Control.EndInvoke%2A>)이이 목적을 위해. <xref:System.Windows.Forms.Control.Invoke%2A> 동기 메서드를 호출 합니다. <xref:System.Windows.Forms.Control.BeginInvoke%2A> 비동기 메서드를 호출 합니다.  
   
@@ -764,5 +764,5 @@ namespace SampleUsage
   
 ## <a name="see-also"></a>참고자료
 - <xref:System.ComponentModel.BackgroundWorker>
-- [.NET Framework에서 사용자 지정 Windows Forms 컨트롤 개발](../../../../docs/framework/winforms/controls/developing-custom-windows-forms-controls.md)
-- [이벤트 기반 비동기 패턴 개요](../../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md)
+- [.NET Framework에서 사용자 지정 Windows Forms 컨트롤 개발](developing-custom-windows-forms-controls.md)
+- [이벤트 기반 비동기 패턴 개요](../../../standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md)

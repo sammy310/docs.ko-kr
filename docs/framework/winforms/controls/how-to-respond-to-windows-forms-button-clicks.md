@@ -15,12 +15,12 @@ helpviewer_keywords:
 - examples [Windows Forms], controls
 - Click event [Windows Forms], responding to
 ms.assetid: 7a4951bd-369c-4662-b246-28ad83eda484
-ms.openlocfilehash: 98b52e914a891baec0b52dcc7b38d4f9f2198c90
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e6e6d041422a79171ec4b6159f0789b8aa6a50d5
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54539553"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57724988"
 ---
 # <a name="how-to-respond-to-windows-forms-button-clicks"></a>방법: Windows Forms 단추 클릭에 응답
 Windows Forms의 가장 기본적인 사용 <xref:System.Windows.Forms.Button> 컨트롤 단추를 클릭할 때 일부 코드를 실행 하는 것입니다.  
@@ -31,7 +31,7 @@ Windows Forms의 가장 기본적인 사용 <xref:System.Windows.Forms.Button> �
   
 ### <a name="to-respond-to-a-button-click"></a>단추 클릭에 응답  
   
--   단추의 `Click` <xref:System.EventHandler> 실행할 코드를 작성 합니다. `Button1_Click` 컨트롤에 바인딩해야 합니다. 자세한 내용은 [방법: 런타임에 Windows Forms에 대 한 이벤트 처리기를 만들](../../../../docs/framework/winforms/how-to-create-event-handlers-at-run-time-for-windows-forms.md)합니다.  
+-   단추의 `Click` <xref:System.EventHandler> 실행할 코드를 작성 합니다. `Button1_Click` 컨트롤에 바인딩해야 합니다. 자세한 내용은 [방법: 런타임에 Windows Forms에 대 한 이벤트 처리기를 만들](../how-to-create-event-handlers-at-run-time-for-windows-forms.md)합니다.  
   
     ```vb  
     Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click  
@@ -56,6 +56,6 @@ Windows Forms의 가장 기본적인 사용 <xref:System.Windows.Forms.Button> �
     ```  
   
 ## <a name="see-also"></a>참고자료
-- [Button 컨트롤 개요](../../../../docs/framework/winforms/controls/button-control-overview-windows-forms.md)
-- [Windows Forms Button 컨트롤 선택 방법](../../../../docs/framework/winforms/controls/ways-to-select-a-windows-forms-button-control.md)
-- [Button 컨트롤](../../../../docs/framework/winforms/controls/button-control-windows-forms.md)
+- [Button 컨트롤 개요](button-control-overview-windows-forms.md)
+- [Windows Forms Button 컨트롤 선택 방법](ways-to-select-a-windows-forms-button-control.md)
+- [Button 컨트롤](button-control-windows-forms.md)

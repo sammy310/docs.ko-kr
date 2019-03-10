@@ -9,33 +9,33 @@ helpviewer_keywords:
 - gradients [Windows Forms], creating path
 - graphics paths [Windows Forms], creating gradient
 ms.assetid: 1948e834-e104-481c-b71d-d8aa9e4d106e
-ms.openlocfilehash: fe1bdac900e64ec37ca87c35d5378ca1aba26ae3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6fbe8a78131cb64e28326133a7cc0fbdcbffd46b
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54513037"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57720399"
 ---
 # <a name="how-to-create-a-path-gradient"></a>방법: 경로 그라데이션 만들기
 <xref:System.Drawing.Drawing2D.PathGradientBrush> 클래스 점진적으로 색을 변경 하 여 셰이프를 입력 하는 방식을 사용자 지정할 수 있습니다. 예를 들어 경로의 센터에 대 한 한 가지 색 및 경로 경계에 다른 색을 지정할 수 있습니다. 또한 각 패스의 경계를 따라 여러 지점에 대 한 별도 색을 지정할 수 있습니다.  
   
 > [!NOTE]
->  [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)], 경로 일련의 선과 곡선에서 유지 관리는 <xref:System.Drawing.Drawing2D.GraphicsPath> 개체입니다. 에 대 한 자세한 내용은 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 경로 참조 하세요 [GDI +의 그래픽 경로](../../../../docs/framework/winforms/advanced/graphics-paths-in-gdi.md) 하 고 [Constructing 및 그리기 경로](../../../../docs/framework/winforms/advanced/constructing-and-drawing-paths.md)합니다.  
+>  [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)], 경로 일련의 선과 곡선에서 유지 관리는 <xref:System.Drawing.Drawing2D.GraphicsPath> 개체입니다. 에 대 한 자세한 내용은 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 경로 참조 하세요 [GDI +의 그래픽 경로](graphics-paths-in-gdi.md) 하 고 [Constructing 및 그리기 경로](constructing-and-drawing-paths.md)합니다.  
   
 ### <a name="to-fill-an-ellipse-with-a-path-gradient"></a>타원을 채우도록 경로 그라데이션  
   
 -   다음 예제에서는 경로 그라데이션 브러시를 사용 하 여 타원을 채웁니다. 가운데 색은 파랑으로 설정 하 고 경계 색 바다색으로 설정 됩니다. 다음 그림은 채워진된 타원을 보여 줍니다.  
   
-     ![경로 그라데이션](../../../../docs/framework/winforms/advanced/media/pathgradient1.png "pathgradient1")  
+     ![경로 그라데이션](./media/pathgradient1.png "pathgradient1")  
   
      기본적으로 경로 그라데이션 브러시를 경로의 경계 외부로 확장 되지 않습니다. 경로 그라데이션 브러시를 사용 하 여 경로 경계를 넘어 확장 하는 그림에 맞게 경로 외부 화면 영역의 채워지지 않습니다.  
   
      다음 그림에서는 변경 하는 경우 어떻게 되나요 합니다 <xref:System.Drawing.Graphics.FillEllipse%2A> 에 다음 코드에서 호출 `e.Graphics.FillRectangle(pthGrBrush, 0, 10, 200, 40)`합니다.  
   
-     ![경로 그라데이션](../../../../docs/framework/winforms/advanced/media/pathgradient2.png "pathgradient2")  
+     ![경로 그라데이션](./media/pathgradient2.png "pathgradient2")  
   
-     [!code-csharp[System.Drawing.UsingaGradientBrush#11](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/CS/Class1.cs#11)]
-     [!code-vb[System.Drawing.UsingaGradientBrush#11](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/VB/Class1.vb#11)]  
+     [!code-csharp[System.Drawing.UsingaGradientBrush#11](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/CS/Class1.cs#11)]
+     [!code-vb[System.Drawing.UsingaGradientBrush#11](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/VB/Class1.vb#11)]  
   
      앞의 코드 예제는 Windows Forms에서 사용 하도록 설계 되었으며 필요 합니다 <xref:System.Windows.Forms.PaintEventArgs> 매개 변수는 e의 <xref:System.Windows.Forms.PaintEventHandler>.  
   
@@ -43,15 +43,15 @@ ms.locfileid: "54513037"
   
 -   다음 예제에서는 별 모양 경로에서 경로 그라데이션 브러시를 생성합니다. 코드 집합을 <xref:System.Drawing.Drawing2D.PathGradientBrush.CenterColor%2A> 빨간색 별모양의 중심에서 색을 설정 하는 속성입니다. 코드 설정 하 여는 <xref:System.Drawing.Drawing2D.PathGradientBrush.SurroundColors%2A> 다양 한 색을 지정 하려면 속성 (에 저장 합니다 `colors` 배열) 개별 지점에는 `points` 배열. 코드의 마지막 문에서 경로 그라데이션 브러시를 사용 하 여 별 모양 경로 채웁니다.  
   
-     [!code-csharp[System.Drawing.UsingaGradientBrush#12](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/CS/Class1.cs#12)]
-     [!code-vb[System.Drawing.UsingaGradientBrush#12](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/VB/Class1.vb#12)]  
+     [!code-csharp[System.Drawing.UsingaGradientBrush#12](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/CS/Class1.cs#12)]
+     [!code-vb[System.Drawing.UsingaGradientBrush#12](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/VB/Class1.vb#12)]  
   
 -   다음 예제에서는 그립니다 없이 경로 그라데이션을 <xref:System.Drawing.Drawing2D.GraphicsPath> 코드에서이 개체입니다. 특정 <xref:System.Drawing.Drawing2D.PathGradientBrush.%23ctor%2A> 예제의 생성자 점의 배열을 받지만 필요 하지 않습니다는 <xref:System.Drawing.Drawing2D.GraphicsPath> 개체입니다. 또한는 <xref:System.Drawing.Drawing2D.PathGradientBrush> 경로가 아닌 사각형을 채우는 데 사용 됩니다. 사각형은 사각형의 일부 브러시에 의해 칠하지 않습니다 있도록 브러시를 정의 하는 데 닫힌된 경로 보다 큽니다. 다음 그림에서는 사각형 (점선) 및 경로 그라데이션 브러시로 칠하는 사각형의 일부를 보여 줍니다.  
   
-     ![그라데이션](../../../../docs/framework/winforms/advanced/media/gradient4.png "gradient4")  
+     ![그라데이션](./media/gradient4.png "gradient4")  
   
-     [!code-csharp[System.Drawing.UsingaGradientBrush#13](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/CS/Class1.cs#13)]
-     [!code-vb[System.Drawing.UsingaGradientBrush#13](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/VB/Class1.vb#13)]  
+     [!code-csharp[System.Drawing.UsingaGradientBrush#13](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/CS/Class1.cs#13)]
+     [!code-vb[System.Drawing.UsingaGradientBrush#13](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/VB/Class1.vb#13)]  
   
 ### <a name="to-customize-a-path-gradient"></a>경로 그라데이션 사용자 지정 하려면  
   
@@ -65,10 +65,10 @@ ms.locfileid: "54513037"
   
      다음 그림에서는 다음 코드의 출력을 보여 줍니다. 왼쪽 타원 바다색 중심점에만 있습니다. 오른쪽 타원 바다색 내부 경로 내 어디에서 나이입니다.  
   
- ![Gradient](../../../../docs/framework/winforms/advanced/media/focusscales1nogamma.png "focusscales1NoGamma")  
+ ![Gradient](./media/focusscales1nogamma.png "focusscales1NoGamma")  
   
- [!code-csharp[System.Drawing.UsingaGradientBrush#14](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/CS/Class1.cs#14)]
- [!code-vb[System.Drawing.UsingaGradientBrush#14](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/VB/Class1.vb#14)]  
+ [!code-csharp[System.Drawing.UsingaGradientBrush#14](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/CS/Class1.cs#14)]
+ [!code-vb[System.Drawing.UsingaGradientBrush#14](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/VB/Class1.vb#14)]  
   
 ### <a name="to-customize-with-interpolation"></a>보간을 사용 하 여 사용자 지정 하려면  
   
@@ -78,10 +78,10 @@ ms.locfileid: "54513037"
   
      다음 그림에서는 사용자 지정 경로 그라데이션 브러시를 사용 하 여 채운 삼각형을 보여 줍니다.  
   
-     ![경로 그라데이션](../../../../docs/framework/winforms/advanced/media/pathgradient4.png "pathgradient4")  
+     ![경로 그라데이션](./media/pathgradient4.png "pathgradient4")  
   
-     [!code-csharp[System.Drawing.UsingaGradientBrush#15](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/CS/Class1.cs#15)]
-     [!code-vb[System.Drawing.UsingaGradientBrush#15](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/VB/Class1.vb#15)]  
+     [!code-csharp[System.Drawing.UsingaGradientBrush#15](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/CS/Class1.cs#15)]
+     [!code-vb[System.Drawing.UsingaGradientBrush#15](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/VB/Class1.vb#15)]  
   
 ### <a name="to-set-the-center-point"></a>중심점을 설정 하려면  
   
@@ -89,21 +89,21 @@ ms.locfileid: "54513037"
   
      다음 예제에서는 타원을 기반으로 경로 그라데이션 브러시를 만듭니다. 타원의 중심에는 (70, 35) 되지만 경로 그라데이션 브러시의 중심점 설정 됩니다 (120, 40).  
   
-     [!code-csharp[System.Drawing.UsingaGradientBrush#16](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/CS/Class1.cs#16)]
-     [!code-vb[System.Drawing.UsingaGradientBrush#16](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/VB/Class1.vb#16)]  
+     [!code-csharp[System.Drawing.UsingaGradientBrush#16](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/CS/Class1.cs#16)]
+     [!code-vb[System.Drawing.UsingaGradientBrush#16](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/VB/Class1.vb#16)]  
   
      다음 그림은 채워진된 타원 및 경로 그라데이션 브러시의 중심점을 보여 줍니다.  
   
-     ![경로 그라데이션](../../../../docs/framework/winforms/advanced/media/pathgradient5.png "pathgradient5")  
+     ![경로 그라데이션](./media/pathgradient5.png "pathgradient5")  
   
 -   경로 브러시를 생성 하는 데 사용 된 외부 위치 경로 그라데이션 브러시의 중심점을 설정할 수 있습니다. 다음 예제에서는 대체 설정에 대 한 호출을 <xref:System.Drawing.Drawing2D.PathGradientBrush.CenterPoint%2A> 위의 코드에서 속성입니다.  
   
-     [!code-csharp[System.Drawing.UsingaGradientBrush#17](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/CS/Class1.cs#17)]
-     [!code-vb[System.Drawing.UsingaGradientBrush#17](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/VB/Class1.vb#17)]  
+     [!code-csharp[System.Drawing.UsingaGradientBrush#17](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/CS/Class1.cs#17)]
+     [!code-vb[System.Drawing.UsingaGradientBrush#17](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/VB/Class1.vb#17)]  
   
      다음 그림에서는이 변경으로 인해 출력을 보여줍니다.  
   
-     ![경로 그라데이션](../../../../docs/framework/winforms/advanced/media/pathgradient6.png "pathgradient6")  
+     ![경로 그라데이션](./media/pathgradient6.png "pathgradient6")  
   
      앞의 그림에서 타원의 오른쪽 끝에 있는 점 없는 순수 파란색 (근접 하지만). 그라데이션의 색 채우기 색 (0, 0, 255) 순수 파란색 수 없는 지점 (145, 35)에 도달 하는 경우에 따라 배치 됩니다. 채우기에 도달 하지 않습니다 하지만 (145, 35) 해당 경로 내 에서만 경로 그라데이션 브러시를 그리는 때문입니다.  
   
@@ -111,4 +111,4 @@ ms.locfileid: "54513037"
  앞의 예제에서는 Windows Forms에서 사용 하도록 설계 되었으며 필요할 <xref:System.Windows.Forms.PaintEventArgs> `e`의 매개 변수는 <xref:System.Windows.Forms.Control.Paint> 이벤트 처리기입니다.  
   
 ## <a name="see-also"></a>참고자료
-- [그라데이션 브러시를 사용하여 도형 채우기](../../../../docs/framework/winforms/advanced/using-a-gradient-brush-to-fill-shapes.md)
+- [그라데이션 브러시를 사용하여 도형 채우기](using-a-gradient-brush-to-fill-shapes.md)

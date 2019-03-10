@@ -14,20 +14,20 @@ helpviewer_keywords:
 - margins [Windows Forms], Windows Forms
 - Margin property [Windows Forms]
 ms.assetid: bac7ed4d-a163-4259-98bd-155a36345890
-ms.openlocfilehash: 26d5dd086828df94c1ea0808d2f72723344b0702
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 66748eef299c9175814fb130a7eda359c5de0546
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54614656"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57720308"
 ---
 # <a name="how-to-create-a-border-around-a-windows-forms-control-using-padding"></a>방법: Windows Forms 주위에 테두리 만들기 패딩을 사용 하 여 제어 합니다.
 다음 코드 예제에 테두리 만들기 관련 간략하게 설명 하는 방법을 보여 줍니다는 <xref:System.Windows.Forms.RichTextBox> 제어 합니다. 값을 설정 하는 예제는 <xref:System.Windows.Forms.Panel> 컨트롤의 <xref:System.Windows.Forms.Padding> 속성을 5로 설정 합니다 <xref:System.Windows.Forms.Control.Dock%2A> 자식 속성 <xref:System.Windows.Forms.RichTextBox> 컨트롤을 <xref:System.Windows.Forms.DockStyle.Fill>입니다. <xref:System.Windows.Forms.Control.BackColor%2A> 의 합니다 <xref:System.Windows.Forms.Panel> 로 설정 되어 <xref:System.Drawing.Color.Blue%2A>, 주위에 파란색 테두리가 만듭니다는 <xref:System.Windows.Forms.RichTextBox> 컨트롤입니다.  
   
 ## <a name="example"></a>예제  
- [!code-csharp[System.Windows.Forms.Padding#1](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Padding/CS/Form1.cs#1)]
- [!code-vb[System.Windows.Forms.Padding#1](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Padding/VB/Form1.vb#1)]  
+ [!code-csharp[System.Windows.Forms.Padding#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Padding/CS/Form1.cs#1)]
+ [!code-vb[System.Windows.Forms.Padding#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Padding/VB/Form1.vb#1)]  
   
 ## <a name="see-also"></a>참고자료
 - <xref:System.Windows.Forms.Padding>
-- [Windows Forms 컨트롤의 여백 및 안쪽 여백](../../../../docs/framework/winforms/controls/margin-and-padding-in-windows-forms-controls.md)
+- [Windows Forms 컨트롤의 여백 및 안쪽 여백](margin-and-padding-in-windows-forms-controls.md)

@@ -2,12 +2,12 @@
 title: Windows Workflow Foundation 기능 특성
 ms.date: 03/30/2017
 ms.assetid: e84d12da-a055-45f6-b4d1-878d127b46b6
-ms.openlocfilehash: b7fed8c40c998ff0ecc0080139690614d985fc42
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 4b9a9c5c6395ed27845c8b618e49150a02aa3bda
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57492596"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57721855"
 ---
 # <a name="windows-workflow-foundation-feature-specifics"></a>Windows Workflow Foundation 기능 특성
 
@@ -46,9 +46,9 @@ ms.locfileid: "57492596"
 - 
   <xref:System.ServiceModel.WorkflowServiceHost>에 대한 샘플은 다음 단원에서 확인할 수 있습니다.
 
-    - [실행](samples/execution.md)
+    - [실행](./samples/execution.md)
 
-    - 응용 프로그램: [일시 중단된 인스턴스 관리](samples/suspended-instance-management.md)
+    - 응용 프로그램: [일시 중단된 인스턴스 관리](./samples/suspended-instance-management.md)
 
 - [워크플로 서비스 호스팅 개요](../wcf/feature-details/hosting-workflow-services-overview.md)
 
@@ -125,7 +125,7 @@ WCF 구성 스키마 복잡 하며 기능 찾기 어려운 여러 사용자를 �
 
 - 사용자가 회선의 serialization 인스턴스 크기를 더 작게 만들기 위해 회선에 표시할 xsi:type을 지정할 수 없었습니다.
 
-합니다 [DataContractResolver](../../../docs/framework/wcf/samples/datacontractresolver.md) .NET 4.5에서 이러한 문제를 해결 합니다.
+합니다 [DataContractResolver](../wcf/samples/datacontractresolver.md) .NET 4.5에서 이러한 문제를 해결 합니다.
 
 ### <a name="getting-started"></a>시작
 
@@ -135,9 +135,9 @@ WCF 구성 스키마 복잡 하며 기능 찾기 어려운 여러 사용자를 �
 
 - 샘플:
 
-    - [DataContractResolver](../../../docs/framework/wcf/samples/datacontractresolver.md)
+    - [DataContractResolver](../wcf/samples/datacontractresolver.md)
 
-    - [KnownAssemblyAttribute](../../../docs/framework/wcf/samples/knownassemblyattribute.md)
+    - [KnownAssemblyAttribute](../wcf/samples/knownassemblyattribute.md)
 
 ### <a name="data-contract-resolver-scenarios"></a>데이터 계약 확인자 시나리오
 
@@ -167,9 +167,9 @@ WCF 구성 스키마 복잡 하며 기능 찾기 어려운 여러 사용자를 �
 
 - 샘플:
 
-    - [Flowchart 작업에서 TryCatch를 사용하여 오류 처리](../../../docs/framework/windows-workflow-foundation/samples/fault-handling-in-a-flowchart-activity-using-trycatch.md)
+    - [Flowchart 작업에서 TryCatch를 사용하여 오류 처리](./samples/fault-handling-in-a-flowchart-activity-using-trycatch.md)
 
-    - [채용 프로세스](../../../docs/framework/windows-workflow-foundation/samples/hiring-process.md)
+    - [채용 프로세스](./samples/hiring-process.md)
 
 - 디자이너 설명서:
 
@@ -201,9 +201,9 @@ WCF 구성 스키마 복잡 하며 기능 찾기 어려운 여러 사용자를 �
 
 - 샘플:
 
-    - [채용 프로세스](../../../docs/framework/windows-workflow-foundation/samples/hiring-process.md)
+    - [채용 프로세스](./samples/hiring-process.md)
 
-    - [기업 구매 프로세스](../../../docs/framework/windows-workflow-foundation/samples/corporate-purchase-process.md)
+    - [기업 구매 프로세스](./samples/corporate-purchase-process.md)
 
 - 디자이너 설명서:
 
@@ -241,7 +241,7 @@ WCF 구성 스키마 복잡 하며 기능 찾기 어려운 여러 사용자를 �
 
 - Visual Studio 2012 워크플로 콘솔 응용 프로그램을 만듭니다. Workflow Designer에서 <xref:System.Activities.Statements.TryCatch> 작업을 추가합니다.
 
-- 예제: [Flowchart 작업에서 TryCatch를 사용하여 오류 처리](../../../docs/framework/windows-workflow-foundation/samples/fault-handling-in-a-flowchart-activity-using-trycatch.md)
+- 예제: [Flowchart 작업에서 TryCatch를 사용하여 오류 처리](./samples/fault-handling-in-a-flowchart-activity-using-trycatch.md)
 
 - 디자이너 설명서: [오류 처리 활동 디자이너](/visualstudio/workflow-designer/error-handling-activity-designers)
 
@@ -257,7 +257,7 @@ WCF 구성 스키마 복잡 하며 기능 찾기 어려운 여러 사용자를 �
 
 - Visual Studio 2012 워크플로 콘솔 응용 프로그램을 만듭니다. Workflow Designer에서 <xref:System.Activities.Statements.Pick> 작업을 추가합니다.
 
-- 예제: [Pick 작업 사용](../../../docs/framework/windows-workflow-foundation/samples/using-the-pick-activity.md)
+- 예제: [Pick 작업 사용](./samples/using-the-pick-activity.md)
 
 - 디자이너 설명서: [Pick 활동 디자이너](/visualstudio/workflow-designer/pick-activity-designer)
 
@@ -287,9 +287,9 @@ WCF 구성 스키마 복잡 하며 기능 찾기 어려운 여러 사용자를 �
 
 ### <a name="getting-started"></a>시작
 
-1. 설명서: [라우팅](../../../docs/framework/wcf/feature-details/routing.md)
+1. 설명서: [라우팅](../wcf/feature-details/routing.md)
 
-2. 샘플: [라우팅 서비스 &#91;WCF 샘플&#93;](../../../docs/framework/wcf/samples/routing-services.md)
+2. 샘플: [라우팅 서비스 &#91;WCF 샘플&#93;](../wcf/samples/routing-services.md)
 
 3. 블로그: [라우팅 규칙!](https://go.microsoft.com/fwlink/?LinkId=204956)
 
@@ -321,9 +321,9 @@ WCF Discovery는 검색 메커니즘을 응용 프로그램 인프라에 통합�
 
 ### <a name="getting-started"></a>시작
 
-- 설명서: [WCF 검색](../../../docs/framework/wcf/feature-details/wcf-discovery.md)
+- 설명서: [WCF 검색](../wcf/feature-details/wcf-discovery.md)
 
-- 샘플: [검색 (샘플)](../../../docs/framework/wcf/samples/discovery-samples.md)
+- 샘플: [검색 (샘플)](../wcf/samples/discovery-samples.md)
 
 ### <a name="discovery-scenarios"></a>Discovery 시나리오
 
@@ -347,9 +347,9 @@ WCF Discovery는 검색 메커니즘을 응용 프로그램 인프라에 통합�
 
     4. 이벤트 뷰어에서 워크플로 추적 이벤트를 확인합니다.
 
-3. 샘플: [추적](../../../docs/framework/windows-workflow-foundation/samples/tracking.md)
+3. 샘플: [추적](./samples/tracking.md)
 
-4. 개념 설명서: [워크플로 추적](../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)
+4. 개념 설명서: [워크플로 추적](workflow-tracking-and-tracing.md)
 
 ## <a name="sql-workflow-instance-store"></a>SQL 워크플로 인스턴스 저장소
 
@@ -359,6 +359,6 @@ WCF Discovery는 검색 메커니즘을 응용 프로그램 인프라에 통합�
 
 1. Visual Studio 2012에서 암시적 또는 명시적를 포함 하는 워크플로 만드는 <xref:System.Activities.Statements.Persist> 활동입니다. 워크플로 서비스 호스트에 <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> 동작을 추가합니다. 이 작업은 코드나 응용 프로그램 구성 파일에서 수행할 수 있습니다.
 
-2. 샘플: [지속성](../../../docs/framework/windows-workflow-foundation/samples/persistence.md)
+2. 샘플: [지속성](./samples/persistence.md)
 
-3. 개념 설명서: [SQL 워크플로 인스턴스 저장소](../../../docs/framework/windows-workflow-foundation/sql-workflow-instance-store.md)합니다.
+3. 개념 설명서: [SQL 워크플로 인스턴스 저장소](sql-workflow-instance-store.md)합니다.

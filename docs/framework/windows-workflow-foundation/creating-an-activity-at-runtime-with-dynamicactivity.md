@@ -2,12 +2,12 @@
 title: 동적 활동을 사용하여 런타임에 활동 만들기
 ms.date: 03/30/2017
 ms.assetid: 1af85cc6-912d-449e-90c5-c5db3eca5ace
-ms.openlocfilehash: 17dda5643f86690c25067e70680a6b797dd172d3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 58dea5f6e469f871da35fc57aa4d9d8a1266bfed
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54733209"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57724630"
 ---
 # <a name="creating-an-activity-at-runtime-with-dynamicactivity"></a>동적 활동을 사용하여 런타임에 활동 만들기
 <xref:System.Activities.DynamicActivity>는 public 생성자를 사용하는 구체적이고 봉인된 클래스입니다. <xref:System.Activities.DynamicActivity>는 활동 DOM을 통해 런타임에 활동 기능을 어셈블하는 데 사용할 수 있습니다.  
@@ -74,7 +74,8 @@ ms.locfileid: "54733209"
   
 2.  선택 **파일**를 **새**하십시오 **프로젝트**합니다. 선택 **Workflow 4.0** 아래에서 **Visual C#** 에 **프로젝트 형식** 창에서 선택한 합니다 **v2010** 노드. 선택 **워크플로 콘솔 응용 프로그램** 에 **템플릿** 창입니다. 새 프로젝트의 이름을 DynamicActivitySample로 지정합니다.  
   
-3.  HelloActivity 프로젝트에서 Workflow1.xaml을 엽니다. 클릭 합니다 **인수** 디자이너의 맨 아래에 있는 옵션입니다. `In` 형식의 `TextToWrite`라는 새 `String` 인수를 만듭니다.  
+3.  HelloActivity 프로젝트에서 Workflow1.xaml을 엽니다. 클릭 합니다 **인수** 디자이너의 맨 아래에 있는 옵션입니다. 
+  `In` 형식의 `TextToWrite`라는 새 `String` 인수를 만듭니다.  
   
 4.  끌어서를 **WriteLine** 에서 활동을 **기본** 디자이너 화면에 도구 상자의 섹션. 값을 할당 `TextToWrite` 에 **텍스트** 작업의 속성입니다.  
   
@@ -98,4 +99,4 @@ ms.locfileid: "54733209"
   
 ## <a name="see-also"></a>참고자료
 
-- [명령형 코드를 사용하여 워크플로, 활동 및 식 작성](../../../docs/framework/windows-workflow-foundation/authoring-workflows-activities-and-expressions-using-imperative-code.md)
+- [명령형 코드를 사용하여 워크플로, 활동 및 식 작성](authoring-workflows-activities-and-expressions-using-imperative-code.md)

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - adding Custom Place to dialog box
 - CustomPlaces collection
 ms.assetid: 63f6469b-59cd-40f6-9e61-8b5831856780
-ms.openlocfilehash: 797b98cb408c7f9fc1d55b774f7ceccef009bb22
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d9c1373a16f7d62c2933e01e513478fc6c9866d2
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54674650"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57721881"
 ---
 # <a name="how-to-add-a-custom-place-to-a-file-dialog-box"></a>방법: 파일 대화 상자에 사용자 지정 위치 추가
 [!INCLUDE[wiprlhext](../../../../includes/wiprlhext-md.md)]의 기본 열기 및 저장 대화 상자 왼쪽에는 **즐겨찾기 링크**라는 영역이 있습니다. 이 영역을 사용자 지정 위치라고 합니다. <xref:System.Windows.Forms.OpenFileDialog> 하 고 <xref:System.Windows.Forms.SaveFileDialog> 클래스를 사용 하는 폴더를 추가 하면를 <xref:System.Windows.Forms.FileDialog.CustomPlaces%2A> 컬렉션입니다.  
@@ -39,4 +39,4 @@ ms.locfileid: "54674650"
 ## <a name="see-also"></a>참고자료
 - <xref:System.Windows.Forms.FileDialog>
 - <xref:System.Windows.Forms.FileDialogCustomPlacesCollection.Add%2A?displayProperty=nameWithType>
-- [파일 대화 상자의 사용자 지정 위치에 대한 알려진 폴더 GUID](../../../../docs/framework/winforms/controls/known-folder-guids-for-file-dialog-custom-places.md)
+- [파일 대화 상자의 사용자 지정 위치에 대한 알려진 폴더 GUID](known-folder-guids-for-file-dialog-custom-places.md)

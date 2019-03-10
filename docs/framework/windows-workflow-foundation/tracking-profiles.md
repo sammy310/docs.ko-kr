@@ -2,12 +2,12 @@
 title: 추적 프로필
 ms.date: 03/30/2017
 ms.assetid: 22682566-1cd9-4672-9791-fb3523638e18
-ms.openlocfilehash: f7acb46e16894dd287512541ad4c2be1adafb42a
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 2fa4d65a6f0056824b2fc9dd67b93608777fc75d
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57482303"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57721374"
 ---
 # <a name="tracking-profiles"></a>추적 프로필
 
@@ -345,7 +345,7 @@ TrackingProfile sampleTrackingProfile = new TrackingProfile()
 > [!WARNING]
 > 워크플로 서비스 호스트를 사용하는 WF의 경우 일반적으로 구성 파일을 사용하여 추적 프로필을 만듭니다. 추적 프로필 및 추적 쿼리 API를 사용하여 코드를 통해 추적 프로필을 만들 수도 있습니다.
 
-XML 구성 파일로 구성된 프로필은 동작 확장을 사용하여 추적 참가자에게 적용됩니다. 이후 섹션에 설명 된 대로 WorkflowServiceHost에 추가 됩니다 [워크플로에 대 한 추적 구성](../../../docs/framework/windows-workflow-foundation/configuring-tracking-for-a-workflow.md)합니다.
+XML 구성 파일로 구성된 프로필은 동작 확장을 사용하여 추적 참가자에게 적용됩니다. 이후 섹션에 설명 된 대로 WorkflowServiceHost에 추가 됩니다 [워크플로에 대 한 추적 구성](configuring-tracking-for-a-workflow.md)합니다.
 
 호스트에서 내보내는 추적 레코드의 자세한 정도는 추적 프로필의 구성 설정에 따라 결정됩니다. 추적 참가자는 쿼리를 추적 프로필에 추가하여 추적 레코드를 구독합니다. 모든 추적 레코드를 구독 하려면 추적 프로필을 사용 하 여 모든 추적 쿼리를 지정 해야 "\*" 각 쿼리의 이름 필드에 있습니다.
 
@@ -388,6 +388,6 @@ XML 구성 파일로 구성된 프로필은 동작 확장을 사용하여 추적
 
 ## <a name="see-also"></a>참고자료
 
-- [SQL 추적](../../../docs/framework/windows-workflow-foundation/samples/sql-tracking.md)
+- [SQL 추적](./samples/sql-tracking.md)
 - [Windows Server App Fabric 모니터링](https://go.microsoft.com/fwlink/?LinkId=201273)
 - [App Fabric을 사용 하 여 응용 프로그램 모니터링](https://go.microsoft.com/fwlink/?LinkId=201275)

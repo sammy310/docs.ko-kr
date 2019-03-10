@@ -8,12 +8,12 @@ helpviewer_keywords:
 - metadata [Windows Forms], property item
 - metadata [Windows Forms], reading image
 ms.assetid: 72ec0b31-0be7-444a-9575-1dbcb864e0be
-ms.openlocfilehash: a22085e0bbaeda1a166c6d46b2604858fb403d8a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: eba21519e6ea6cf4a2a412750fd305d7af620c1b
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54741446"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57720795"
 ---
 # <a name="how-to-read-image-metadata"></a>방법: 이미지 메타 데이터 읽기
 일부 이미지 파일 이미지의 기능을 확인 하려면 읽을 수 있는 메타 데이터를 포함 합니다. 예를 들어, 디지털 사진 제조업체 및 모델의 이미지 캡처에 사용한 카메라 결정할 읽을 수 있는 메타 데이터를 포함할 수 있습니다. 사용 하 여 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)], 기존 메타 데이터를 읽을 수 있습니다 및 이미지 파일에 새 메타 데이터를 쓸 수도 있습니다.  
@@ -117,12 +117,12 @@ ms.locfileid: "54741446"
  `The equipment make is Northwind Camera.`  
   
 ### <a name="code"></a>코드  
- [!code-csharp[System.Drawing.WorkingWithImages#51](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.WorkingWithImages/CS/Class1.cs#51)]
- [!code-vb[System.Drawing.WorkingWithImages#51](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.WorkingWithImages/VB/Class1.vb#51)]  
+ [!code-csharp[System.Drawing.WorkingWithImages#51](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.WorkingWithImages/CS/Class1.cs#51)]
+ [!code-vb[System.Drawing.WorkingWithImages#51](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.WorkingWithImages/VB/Class1.vb#51)]  
   
 ## <a name="compiling-the-code"></a>코드 컴파일  
  앞의 예제는 Windows forms에서 사용하도록 설계되었으며 <xref:System.Windows.Forms.Control.Paint> 이벤트 처리기의 매개 변수인 <xref:System.Windows.Forms.PaintEventArgs> `e`가 필요합니다. 양식의 처리 <xref:System.Windows.Forms.Control.Paint> 이벤트 paint 이벤트 처리기에이 코드를 붙여넣습니다. 바꿔야 `FakePhoto.jpg` 는 이미지 이름 및 경로 시스템 및 가져오기에 사용할 수는 `System.Drawing.Imaging` 네임 스페이스입니다.  
   
 ## <a name="see-also"></a>참고자료
-- [이미지, 비트맵 및 메타파일](../../../../docs/framework/winforms/advanced/images-bitmaps-and-metafiles.md)
-- [이미지, 비트맵, 아이콘 및 메타파일 사용](../../../../docs/framework/winforms/advanced/working-with-images-bitmaps-icons-and-metafiles.md)
+- [이미지, 비트맵 및 메타파일](images-bitmaps-and-metafiles.md)
+- [이미지, 비트맵, 아이콘 및 메타파일 사용](working-with-images-bitmaps-icons-and-metafiles.md)
