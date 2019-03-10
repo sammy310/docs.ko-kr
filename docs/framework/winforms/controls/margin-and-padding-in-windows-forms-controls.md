@@ -7,27 +7,27 @@ helpviewer_keywords:
 - Windows Forms, layout
 - Margin property [Windows Forms]
 ms.assetid: 3781b5a1-3085-4072-bed0-44670c23ffdc
-ms.openlocfilehash: a3218ad029735f4a5d70b3166951dcd93e061c26
-ms.sourcegitcommit: 2b986afe4ce9e13bbeec929c9737757eb61de60e
+ms.openlocfilehash: 60c808138436b947ef78b61863fc353b731b4a8f
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "56665227"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57702817"
 ---
-# <a name="margin-and-padding-in-windows-forms-controls"></a><span data-ttu-id="ab96d-102">Windows Forms 컨트롤의 여백 및 안쪽 여백</span><span class="sxs-lookup"><span data-stu-id="ab96d-102">Margin and Padding in Windows Forms Controls</span></span>
-<span data-ttu-id="ab96d-103">폼의 정확한 컨트롤 배치는 많은 응용 프로그램에서 우선 순위가 높습니다.</span><span class="sxs-lookup"><span data-stu-id="ab96d-103">Precise placement of controls on your form is a high priority for many applications.</span></span> <span data-ttu-id="ab96d-104"><xref:System.Windows.Forms?displayProperty=nameWithType> 네임스페이스는 이 목적을 위한 다양한 레이아웃 기능을 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="ab96d-104">The <xref:System.Windows.Forms?displayProperty=nameWithType> namespace gives you many layout features to accomplish this.</span></span> <span data-ttu-id="ab96d-105">가장 중요한 두 가지 기능은 <xref:System.Windows.Forms.Control.Margin%2A> 및 <xref:System.Windows.Forms.Control.Padding%2A> 속성입니다.</span><span class="sxs-lookup"><span data-stu-id="ab96d-105">Two of the most important are the <xref:System.Windows.Forms.Control.Margin%2A> and <xref:System.Windows.Forms.Control.Padding%2A> properties.</span></span>  
+# <a name="margin-and-padding-in-windows-forms-controls"></a><span data-ttu-id="7d4d0-102">Windows Forms 컨트롤의 여백 및 안쪽 여백</span><span class="sxs-lookup"><span data-stu-id="7d4d0-102">Margin and Padding in Windows Forms Controls</span></span>
+<span data-ttu-id="7d4d0-103">폼의 정확한 컨트롤 배치는 많은 응용 프로그램에서 우선 순위가 높습니다.</span><span class="sxs-lookup"><span data-stu-id="7d4d0-103">Precise placement of controls on your form is a high priority for many applications.</span></span> <span data-ttu-id="7d4d0-104"><xref:System.Windows.Forms?displayProperty=nameWithType> 네임스페이스는 이 목적을 위한 다양한 레이아웃 기능을 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="7d4d0-104">The <xref:System.Windows.Forms?displayProperty=nameWithType> namespace gives you many layout features to accomplish this.</span></span> <span data-ttu-id="7d4d0-105">가장 중요한 두 가지 기능은 <xref:System.Windows.Forms.Control.Margin%2A> 및 <xref:System.Windows.Forms.Control.Padding%2A> 속성입니다.</span><span class="sxs-lookup"><span data-stu-id="7d4d0-105">Two of the most important are the <xref:System.Windows.Forms.Control.Margin%2A> and <xref:System.Windows.Forms.Control.Padding%2A> properties.</span></span>  
   
- <span data-ttu-id="ab96d-106"><xref:System.Windows.Forms.Control.Margin%2A> 속성은 다른 컨트롤을 컨트롤의 테두리에서 지정된 거리에 유지하는 컨트롤 주위의 공간을 정의합니다.</span><span class="sxs-lookup"><span data-stu-id="ab96d-106">The <xref:System.Windows.Forms.Control.Margin%2A> property defines the space around the control that keeps other controls a specified distance from the control's borders.</span></span>  
+ <span data-ttu-id="7d4d0-106"><xref:System.Windows.Forms.Control.Margin%2A> 속성은 다른 컨트롤을 컨트롤의 테두리에서 지정된 거리에 유지하는 컨트롤 주위의 공간을 정의합니다.</span><span class="sxs-lookup"><span data-stu-id="7d4d0-106">The <xref:System.Windows.Forms.Control.Margin%2A> property defines the space around the control that keeps other controls a specified distance from the control's borders.</span></span>  
   
- <span data-ttu-id="ab96d-107"><xref:System.Windows.Forms.Control.Padding%2A> 속성은 컨트롤의 내용(예: <xref:System.Windows.Forms.Control.Text%2A> 속성의 값)을 컨트롤의 테두리에서 지정된 거리에 유지하는 컨트롤 내부의 공간을 정의합니다.</span><span class="sxs-lookup"><span data-stu-id="ab96d-107">The <xref:System.Windows.Forms.Control.Padding%2A> property defines the space in the interior of a control that keeps the control's content (for example, the value of its <xref:System.Windows.Forms.Control.Text%2A> property) a specified distance from the control's borders.</span></span>  
+ <span data-ttu-id="7d4d0-107"><xref:System.Windows.Forms.Control.Padding%2A> 속성은 컨트롤의 내용(예: <xref:System.Windows.Forms.Control.Text%2A> 속성의 값)을 컨트롤의 테두리에서 지정된 거리에 유지하는 컨트롤 내부의 공간을 정의합니다.</span><span class="sxs-lookup"><span data-stu-id="7d4d0-107">The <xref:System.Windows.Forms.Control.Padding%2A> property defines the space in the interior of a control that keeps the control's content (for example, the value of its <xref:System.Windows.Forms.Control.Text%2A> property) a specified distance from the control's borders.</span></span>  
   
- <span data-ttu-id="ab96d-108">다음 그림에서는 컨트롤의 <xref:System.Windows.Forms.Control.Padding%2A> 및 <xref:System.Windows.Forms.Control.Margin%2A> 속성을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="ab96d-108">The following illustration shows the <xref:System.Windows.Forms.Control.Padding%2A> and <xref:System.Windows.Forms.Control.Margin%2A> properties on a control.</span></span>  
+ <span data-ttu-id="7d4d0-108">다음 그림에서는 컨트롤의 <xref:System.Windows.Forms.Control.Padding%2A> 및 <xref:System.Windows.Forms.Control.Margin%2A> 속성을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="7d4d0-108">The following illustration shows the <xref:System.Windows.Forms.Control.Padding%2A> and <xref:System.Windows.Forms.Control.Margin%2A> properties on a control.</span></span>  
   
- <span data-ttu-id="ab96d-109">![안쪽 여백 및 여백을 Windows Forms 컨트롤](../../../../docs/framework/winforms/controls/media/vs-winformpadmargin.gif "VS_WinFormPadMargin")</span><span class="sxs-lookup"><span data-stu-id="ab96d-109">![Padding And Margin for Windows Forms Controls](../../../../docs/framework/winforms/controls/media/vs-winformpadmargin.gif "VS_WinFormPadMargin")</span></span>  
+ <span data-ttu-id="7d4d0-109">![안쪽 여백 및 여백을 Windows Forms 컨트롤](./media/vs-winformpadmargin.gif "VS_WinFormPadMargin")</span><span class="sxs-lookup"><span data-stu-id="7d4d0-109">![Padding And Margin for Windows Forms Controls](./media/vs-winformpadmargin.gif "VS_WinFormPadMargin")</span></span>  
   
- <span data-ttu-id="ab96d-110">Visual Studio에서는 디자인 타임에 이 기능을 지원합니다.</span><span class="sxs-lookup"><span data-stu-id="ab96d-110">There is design-time support for this feature in Visual Studio.</span></span> <span data-ttu-id="ab96d-111">또한 참조 [연습: 레이아웃 Windows Forms 컨트롤 Padding, Margins 및 AutoSize 속성을 사용 하 여](windows-forms-controls-padding-autosize.md)입니다.</span><span class="sxs-lookup"><span data-stu-id="ab96d-111">Also see [Walkthrough: Laying Out Windows Forms Controls with Padding, Margins, and the AutoSize Property](windows-forms-controls-padding-autosize.md).</span></span>  
+ <span data-ttu-id="7d4d0-110">Visual Studio에서는 디자인 타임에 이 기능을 지원합니다.</span><span class="sxs-lookup"><span data-stu-id="7d4d0-110">There is design-time support for this feature in Visual Studio.</span></span> <span data-ttu-id="7d4d0-111">또한 참조 [연습: 레이아웃 Windows Forms 컨트롤 Padding, Margins 및 AutoSize 속성을 사용 하 여](windows-forms-controls-padding-autosize.md)입니다.</span><span class="sxs-lookup"><span data-stu-id="7d4d0-111">Also see [Walkthrough: Laying Out Windows Forms Controls with Padding, Margins, and the AutoSize Property](windows-forms-controls-padding-autosize.md).</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="ab96d-112">참고자료</span><span class="sxs-lookup"><span data-stu-id="ab96d-112">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="7d4d0-112">참고자료</span><span class="sxs-lookup"><span data-stu-id="7d4d0-112">See also</span></span>
 - <xref:System.Windows.Forms.Control.AutoSize%2A>
 - <xref:System.Windows.Forms.Control.Margin%2A>
 - <xref:System.Windows.Forms.Control.Padding%2A>
