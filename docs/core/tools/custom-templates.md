@@ -3,12 +3,12 @@ title: dotnet new에 대한 사용자 지정 템플릿
 description: 모든 형식의 .NET 프로젝트 또는 파일에 대한 사용자 지정 템플릿을 알아봅니다.
 author: guardrex
 ms.date: 08/11/2017
-ms.openlocfilehash: 23dac9f4efd64ff93b00e41b1f4195e964871a3e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e37fb692640c25d7a91904b0802f97ebfab75851
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54503928"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57679062"
 ---
 # <a name="custom-templates-for-dotnet-new"></a>dotnet new에 대한 사용자 지정 템플릿
 
@@ -16,7 +16,7 @@ ms.locfileid: "54503928"
 
 NuGet *nupkg* 파일을 직접 참조하거나 템플릿이 포함된 파일 시스템 디렉터리를 지정하여 NuGet 피드의 NuGet 패키지에서 사용자 지정 템플릿을 설치할 수 있습니다. 템플릿 엔진은 값을 바꾸고, 파일과 파일 지역을 포함 및 제외하고, 서식이 사용될 때 사용자 지정 처리 작업을 실행할 수 있는 기능을 제공합니다.
 
-템플릿 엔진은 오픈 소스이며 온라인 코드 리포지토리는 GitHub의 [dotnet/templating](https://github.com/dotnet/templating/)에 있습니다. 템플릿 샘플을 보려면 [dotnet/dotnet-template-samples](https://github.com/dotnet/dotnet-template-samples) 리포지토리를 참조하세요. 타사 템플릿을 포함한 추가 템플릿은 GitHub의 [Available templates for dotnet new](https://github.com/dotnet/templating/wiki/Available-templates-for-dotnet-new)(dotnet new에 대한 사용 가능한 템플릿)에서 찾을 수 있습니다. 사용자 지정 템플릿을 만들고 사용하는 방법에 대한 자세한 내용은 [How to create your own templates for dotnet new](https://blogs.msdn.microsoft.com/dotnet/2017/04/02/how-to-create-your-own-templates-for-dotnet-new/)(dotnet new에 대한 사용자 지정 템플릿을 만드는 방법) 및 [dotnet/templating GitHub repo Wiki](https://github.com/dotnet/templating/wiki)(dotnet/templating GitHub 리포지토리 Wiki)를 참조하세요.
+템플릿 엔진은 오픈 소스이며 온라인 코드 리포지토리는 GitHub의 [dotnet/templating](https://github.com/dotnet/templating/)에 있습니다. 템플릿 샘플을 보려면 [dotnet/dotnet-template-samples](https://github.com/dotnet/dotnet-template-samples) 리포지토리를 참조하세요. 타사 템플릿을 포함한 추가 템플릿은 GitHub의 [Available templates for dotnet new](https://github.com/dotnet/templating/wiki/Available-templates-for-dotnet-new)(dotnet new에 대한 사용 가능한 템플릿)에서 찾을 수 있습니다. 사용자 지정 템플릿을 만들고 사용하는 방법에 대한 자세한 내용은 [How to create your own templates for dotnet new](https://devblogs.microsoft.com/dotnet/how-to-create-your-own-templates-for-dotnet-new/)(dotnet new에 대한 사용자 지정 템플릿을 만드는 방법) 및 [dotnet/templating GitHub repo Wiki](https://github.com/dotnet/templating/wiki)(dotnet/templating GitHub 리포지토리 Wiki)를 참조하세요.
 
 연습을 수행하고 템플릿을 만들려면 [dotnet new에 대한 사용자 지정 템플릿 만들기](~/docs/core/tutorials/create-custom-template.md) 자습서를 참조하세요.
 
@@ -155,5 +155,5 @@ dotnet new <TEMPLATE>
 - [dotnet new에 대한 사용자 지정 템플릿(자습서)](../tutorials/create-custom-template.md)
 - [dotnet/templating GitHub repo Wiki](https://github.com/dotnet/templating/wiki)(dotnet/templating GitHub 리포지토리 Wiki)
 - [dotnet/dotnet-template-samples GitHub repo](https://github.com/dotnet/dotnet-template-samples)(dotnet/dotnet-template-samples GitHub 리포지토리)
-- [How to create your own templates for dotnet new](https://blogs.msdn.microsoft.com/dotnet/2017/04/02/how-to-create-your-own-templates-for-dotnet-new/)(dotnet new에 대한 사용자 지정 템플릿을 만드는 방법)
+- [How to create your own templates for dotnet new](https://devblogs.microsoft.com/dotnet/how-to-create-your-own-templates-for-dotnet-new/)(dotnet new에 대한 사용자 지정 템플릿을 만드는 방법)
 - [*template.json* JSON 스키마 저장소에 대 한 스키마](http://json.schemastore.org/template)

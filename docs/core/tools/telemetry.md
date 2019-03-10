@@ -4,16 +4,16 @@ description: 어떤 데이터가 수집되고 수집 기능을 사용하지 않�
 author: richlander
 ms.date: 06/20/2018
 ms.custom: seodec18
-ms.openlocfilehash: 8b0b546d70eab837c2e075f839990870ae9ea6b1
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.openlocfilehash: 3a757daab372b8be8bfe2ee27d910e21fa4e3337
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53168847"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57718040"
 ---
 # <a name="net-core-sdk-telemetry"></a>.NET Core SDK 원격 분석
 
-[.NET Core SDK](index.md)에는 사용 정보를 수집하는 [원격 분석 기능](https://github.com/dotnet/cli/tree/master/src/dotnet/Telemetry)이 포함되어 있습니다. .NET 팀이 이 도구를 개선하려면 이 도구가 어떻게 사용되는지 이해해야 합니다. 자세한 내용은 [What we've learned from .NET Core SDK Telemetry](https://blogs.msdn.microsoft.com/dotnet/2017/07/21/what-weve-learned-from-net-core-sdk-telemetry/)(.NET Core SDK 원격 분석에서 배운 내용)를 참조하세요.
+[.NET Core SDK](index.md)에는 사용 정보를 수집하는 [원격 분석 기능](https://github.com/dotnet/cli/tree/master/src/dotnet/Telemetry)이 포함되어 있습니다. .NET 팀이 이 도구를 개선하려면 이 도구가 어떻게 사용되는지 이해해야 합니다. 자세한 내용은 [What we've learned from .NET Core SDK Telemetry](https://devblogs.microsoft.com/dotnet/what-weve-learned-from-net-core-sdk-telemetry/)(.NET Core SDK 원격 분석에서 배운 내용)를 참조하세요.
 
 수집된 데이터는 익명이며 Microsoft 및 커뮤니티에서 사용할 집계 형식으로 [Creative Commons Attribution 라이선스](https://creativecommons.org/licenses/by/4.0/)에 따라 게시됩니다.
 
@@ -130,6 +130,6 @@ Read more about .NET Core CLI Tools telemetry: https://aka.ms/dotnet-cli-telemet
 
 ## <a name="see-also"></a>참고 항목
 
-- [What we've learned from .NET Core SDK Telemetry](https://blogs.msdn.microsoft.com/dotnet/2017/07/21/what-weve-learned-from-net-core-sdk-telemetry/)(.NET Core SDK 원격 분석에서 배운 내용)
+- [What we've learned from .NET Core SDK Telemetry](https://devblogs.microsoft.com/dotnet/what-weve-learned-from-net-core-sdk-telemetry/)(.NET Core SDK 원격 분석에서 배운 내용)
 - [원격 분석 참조 소스(dotnet/cli 리포지토리)](https://github.com/dotnet/cli/tree/master/src/dotnet/Telemetry)
 - [.NET Core SDK Usage Data](https://github.com/dotnet/core/blob/master/release-notes/cli-usage-data.md)(.NET Core SDK 사용 데이터)

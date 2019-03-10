@@ -3,12 +3,12 @@ title: Docker 소개
 description: 이 문서에서는 .NET Core 애플리케이션 컨텍스트에서 Docker를 소개하고 간략하게 설명합니다.
 ms.date: 11/06/2017
 ms.custom: mvc, seodec18
-ms.openlocfilehash: 54bad8fcb34e46700fedf508bbc84ad846b05d76
-ms.sourcegitcommit: 3d0c29b878f00caec288dfecb3a5c959de5aa629
+ms.openlocfilehash: b2640a1cea4d77158b7d9ed6ec63cf36d9e1f9cd
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53656169"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57676280"
 ---
 # <a name="introduction-to-net-and-docker"></a>.NET 및 Docker 소개
 
@@ -178,7 +178,7 @@ Docker 컨테이너 개발을 위해 .NET Core와 .NET Framework 중에서 결�
 
 Docker 플랫폼 및 다양한 Docker 이미지에 대해 알아보았으므로, 다음 단계는 풍부한 Docker 에코시스템을 살펴보는 것입니다. 다음 링크는 Microsoft 도구가 컨테이너 개발을 보완하는 방법을 보여 줍니다.
 
-* [Using .NET and Docker together](https://blogs.msdn.microsoft.com/dotnet/2017/05/25/using-net-and-docker-together/)(.NET 및 Docker 함께 사용)
+* [Using .NET and Docker together](https://devblogs.microsoft.com/dotnet/using-net-and-docker-together/)(.NET 및 Docker 함께 사용)
 * [다중 컨테이너 및 마이크로 서비스 기반 .NET 애플리케이션 디자인 및 개발](../../standard/microservices-architecture/multi-container-microservice-net-applications/index.md)
 * [Visual Studio Code Docker 확장](https://code.visualstudio.com/docs/languages/dockerfile)
 * [Azure Service Fabric 사용 방법 알아보기](/azure/service-fabric/index)

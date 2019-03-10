@@ -1,15 +1,14 @@
 ---
 title: DNX에서 .NET Core CLI로 마이그레이션
 description: DNX 도구 사용에서 .NET Core CLI 도구로 마이그레이션합니다.
-author: blackdwarf
 ms.date: 06/20/2016
 ms.custom: seodec18
-ms.openlocfilehash: 26cf812bdce565b5278b00c6965a61b6135e3df7
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.openlocfilehash: da2b3bdb6bf6cb5cdf772d54996471d54fe0a92b
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53170706"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57674872"
 ---
 # <a name="migrating-from-dnx-to-net-core-cli-projectjson"></a>DNX에서.NET Core CLI(project.json)로 마이그레이션
 

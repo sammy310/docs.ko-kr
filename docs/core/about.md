@@ -3,12 +3,12 @@ title: .NET Core 정보
 description: .NET Core에 대한 자세히 알아봅니다.
 author: richlander
 ms.date: 08/01/2018
-ms.openlocfilehash: c9247a33d59571c10dc59e91968c2b1c60006a50
-ms.sourcegitcommit: deb9225a55485a5a6e6c7914deb30ccfceb69d3f
+ms.openlocfilehash: 6c76d5e80cba6947eb5a91fb31fc3e511970d165
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/05/2019
-ms.locfileid: "54058557"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57675968"
 ---
 # <a name="about-net-core"></a>.NET Core 정보
 
@@ -34,7 +34,7 @@ C#, Visual Basic 및 F# 언어를 사용하여 .NET Core에 대한 애플리케�
 - <xref:System.Collections.Generic.List%601?displayProperty=nameWithType> 및 <xref:System.Collections.Generic.Dictionary%602?displayProperty=nameWithType>과 같은 컬렉션
 - <xref:System.Net.Http.HttpClient?displayProperty=nameWithType> 및 <xref:System.IO.FileStream?displayProperty=nameWithType>과 같은 유틸리티 형식
 - <xref:System.Data.DataSet?displayProperty=nameWithType> 및 [DbSet](https://www.nuget.org/packages/Microsoft.EntityFrameworkCore/)과 같은 데이터 형식
-- <xref:System.Numerics.Vector?displayProperty=nameWithType> 및 [파이프라인](https://blogs.msdn.microsoft.com/dotnet/2018/07/09/system-io-pipelines-high-performance-io-in-net/)과 같은 고성능 형식
+- <xref:System.Numerics.Vector?displayProperty=nameWithType> 및 [파이프라인](https://devblogs.microsoft.com/dotnet/system-io-pipelines-high-performance-io-in-net/)과 같은 고성능 형식
 
 .NET Core는 [.NET Standard](../standard/net-standard.md) 사양을 구현하여 .NET Framework 및 Mono API에서 호환성을 제공합니다.
 
@@ -82,7 +82,7 @@ Windows 및 Unix 구현은 크기가 비슷합니다. CoreFX는 [Microsoft.Win32
 .NET Core에는 플랫폼별 라이브러리와 플랫폼 중립 라이브러리가 혼합되어 있습니다. 몇 가지 예제에서 패턴을 확인할 수 있습니다.
 
 - [CoreCLR](https://github.com/dotnet/coreclr)는 플랫폼별이며, 메모리 관리자 및 스레드 스케줄러와 같은 OS 하위 시스템을 기반으로 빌드합니다.
-- 저장소 및 암호화 API가 각 OS에서 다르기 때문에 [System.IO](https://github.com/dotnet/corefx/tree/master/src/System.IO) 및 [System.Security.Cryptography.Algorithms](https://github.com/dotnet/corefx/tree/master/src/System.Security.Cryptography.Algorithms)는 플랫폼별입니다.
+- 스토리지 및 암호화 API가 각 OS에서 다르기 때문에 [System.IO](https://github.com/dotnet/corefx/tree/master/src/System.IO) 및 [System.Security.Cryptography.Algorithms](https://github.com/dotnet/corefx/tree/master/src/System.Security.Cryptography.Algorithms)는 플랫폼별입니다.
 - [System.Collections](https://github.com/dotnet/corefx/tree/master/src/System.Collections) 및 [System.Linq](https://github.com/dotnet/corefx/tree/master/src/System.Linq)는 데이터 구조를 통해 만들고 작동하기 때문에 플랫폼 중립입니다.
 
 ## <a name="comparisons-to-other-net-implementations"></a>다른 .NET 구현과 비교
@@ -95,7 +95,7 @@ Windows 및 Unix 구현은 크기가 비슷합니다. CoreFX는 [Microsoft.Win32
 
 .NET Core와 .NET Framework 간의 주요 차이점은 다음과 같습니다.
 
-- **앱 모델** - .NET Core는 일부 .NET Framework 앱 모델을 지원하지 않습니다. 특히, ASP.NET Web Forms 및 ASP.NET MVC는 지원하지 않지만 ASP.NET Core MVC는 지원합니다. [.NET Core 3이 WPF 및 Windows Forms를 지원한다](https://blogs.msdn.microsoft.com/dotnet/2018/05/07/net-core-3-and-support-for-windows-desktop-applications/)고 발표했습니다.
+- **앱 모델** - .NET Core는 일부 .NET Framework 앱 모델을 지원하지 않습니다. 특히, ASP.NET Web Forms 및 ASP.NET MVC는 지원하지 않지만 ASP.NET Core MVC는 지원합니다. [.NET Core 3이 WPF 및 Windows Forms를 지원한다](https://devblogs.microsoft.com/dotnet/net-core-3-and-support-for-windows-desktop-applications/)고 발표했습니다.
 - **API** - .NET Core에는 팩터링이 다른 .NET Framework 기본 클래스 라이브러리의 대량 하위 집합이 포함됩니다(핵심 사례에서 어셈블리 이름이 다르고, 형식에서 노출된 멤버가 다름). 이러한 차이로 인해 어떤 경우 .NET Core에 대한 포트 원본을 변경해야 합니다([microsoft/dotnet-apiport](https://github.com/microsoft/dotnet-apiport) 참조). .NET Core는 [.NET Standard](../standard/net-standard.md) API 사양을 구현합니다.
 - **하위 시스템** -- .Net Core는 더 간단한 구현 및 프로그래밍 모델 구축을 위해 .NET Framework에 하위 시스템의 하위 집합을 구현합니다. 예를 들어 CAS(코드 액세스 보안)는 지원되지 않지만 리플렉션은 지원됩니다.
 - **플랫폼** -- .NET Framework는 Windows와 Windows Server를 지원하는 반면 .NET Core는 macOS 및 Linux도 지원합니다.

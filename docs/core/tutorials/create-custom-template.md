@@ -4,12 +4,12 @@ description: 이 재미있는 자습서에서 dotnet new 명령에 대한 사용
 author: guardrex
 ms.date: 08/12/2017
 ms.custom: seodec18
-ms.openlocfilehash: 72cafab774187cf8c59b2a00d8adcc5028974c88
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3b45a24c8a249eeb99fb1a4b14918483b978980b
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54714060"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57676449"
 ---
 # <a name="create-a-custom-template-for-dotnet-new"></a>dotnet new에 대한 사용자 지정 템플릿 만들기
 
@@ -211,5 +211,5 @@ dotnet new -u C:\Users\<USER>\Documents\Templates\GarciaSoftware.ConsoleTemplate
 
 - [dotnet/templating GitHub repo Wiki](https://github.com/dotnet/templating/wiki)(dotnet/templating GitHub 리포지토리 Wiki)
 - [dotnet/dotnet-template-samples GitHub repo](https://github.com/dotnet/dotnet-template-samples)(dotnet/dotnet-template-samples GitHub 리포지토리)
-- [How to create your own templates for dotnet new](https://blogs.msdn.microsoft.com/dotnet/2017/04/02/how-to-create-your-own-templates-for-dotnet-new/)(dotnet new에 대한 사용자 지정 템플릿을 만드는 방법)
+- [How to create your own templates for dotnet new](https://devblogs.microsoft.com/dotnet/how-to-create-your-own-templates-for-dotnet-new/)(dotnet new에 대한 사용자 지정 템플릿을 만드는 방법)
 - [*template.json* JSON 스키마 저장소에 대 한 스키마](http://json.schemastore.org/template)

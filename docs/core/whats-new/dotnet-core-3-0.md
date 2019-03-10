@@ -7,12 +7,12 @@ dev_langs:
 author: thraka
 ms.author: adegeo
 ms.date: 12/31/2018
-ms.openlocfilehash: 47a5ae3e81b0320a094ecc79e6b08035de66e785
-ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
+ms.openlocfilehash: 89264098ed17b398c83bc2dcddd98d9d8fc958f7
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "56443077"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57679738"
 ---
 # <a name="whats-new-in-net-core-30-preview-2"></a>.NET Core 3.0(Preview 2)의 새로운 기능
 
@@ -24,16 +24,16 @@ Windows, Mac 및 Linux에서 지금 바로 [.NET Core 3.0 Preview 2를 다운로
 
 각 버전에서 릴리스된 내용에 대한 자세한 내용은 다음 공지 사항을 참조하세요.
 
-- [.NET Core 3.0 Preview 1 공지 사항](https://blogs.msdn.microsoft.com/dotnet/2018/12/04/announcing-net-core-3-preview-1-and-open-sourcing-windows-desktop-frameworks/)
-- [.NET Core 3.0 Preview 2 공지 사항](https://blogs.msdn.microsoft.com/dotnet/2019/01/29/announcing-net-core-3-preview-2/)
+- [.NET Core 3.0 Preview 1 공지 사항](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-preview-1-and-open-sourcing-windows-desktop-frameworks/)
+- [.NET Core 3.0 Preview 2 공지 사항](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-preview-2/)
 
 ## <a name="c-8"></a>C# 8
 
 .NET Core 3.0은 C# 8을 지원하고 .NET Core 3.0 Preview 2에서는 다음과 같은 새로운 기능을 지원합니다. C# 8.0 기능에 대한 자세한 내용은 다음 블로그 게시물을 참조하세요.
 
-- [Do more with patterns in C# 8.0](https://blogs.msdn.microsoft.com/dotnet/2019/01/24/do-more-with-patterns-in-c-8-0/)(C# 8.0으로 더 많은 패턴 작업 수행)
-- [Take C# 8.0 for a spin](https://blogs.msdn.microsoft.com/dotnet/2018/12/05/take-c-8-0-for-a-spin/)(C# 8.0으로 작업 시도)
-- [Building C# 8.0](https://blogs.msdn.microsoft.com/dotnet/2018/11/12/building-c-8-0/)(C# 8.0 빌드)
+- [Do more with patterns in C# 8.0](https://devblogs.microsoft.com/dotnet/do-more-with-patterns-in-c-8-0/)(C# 8.0으로 더 많은 패턴 작업 수행)
+- [Take C# 8.0 for a spin](https://devblogs.microsoft.com/dotnet/take-c-8-0-for-a-spin/)(C# 8.0으로 작업 시도)
+- [Building C# 8.0](https://devblogs.microsoft.com/dotnet/building-c-8-0/)(C# 8.0 빌드)
 
 
 ### <a name="ranges-and-indices"></a>범위 및 인덱스
@@ -108,7 +108,7 @@ static string Display(object o) => o switch
 
 *switch* 문이 *switch* 식보다 더 나은 선택이 되는 경우가 있고, 패턴이 두 구문 스타일 모두에 사용되는 경우가 있습니다.
 
-자세한 내용은 [Do more with patterns in C# 8.0](https://blogs.msdn.microsoft.com/dotnet/2019/01/24/do-more-with-patterns-in-c-8-0/)(C# 8.0으로 더 많은 패턴 작업 수행)을 참조하세요.
+자세한 내용은 [Do more with patterns in C# 8.0](https://devblogs.microsoft.com/dotnet/do-more-with-patterns-in-c-8-0/)(C# 8.0으로 더 많은 패턴 작업 수행)을 참조하세요.
 
 ## <a name="ieee-floating-point-improvements"></a>IEEE 부동 소수점 개선 사항
 
@@ -271,7 +271,7 @@ dotnet new winforms
 
 Visual Studio 2019 미리 보기 2에는 .NET Core 3.0 Windows Forms 및 WPF용 **새 프로젝트** 템플릿이 추가됩니다. 디자이너는 아직 지원되지 않습니다. Visual Studio 2019에서 이러한 프로젝트를 열고 시작하고 디버그할 수 있습니다.
 
-Visual Studio 2017 15.9에서는 [.NET Core 미리 보기를 활성화](https://blogs.msdn.microsoft.com/dotnet/2018/11/13/net-core-tooling-update-for-visual-studio-2017-version-15-9/)하는 기능이 추가되었지만 해당 기능을 켜야 하며, 이 시나리오는 지원되지 않습니다.
+Visual Studio 2017 15.9에서는 [.NET Core 미리 보기를 활성화](https://devblogs.microsoft.com/dotnet/net-core-tooling-update-for-visual-studio-2017-version-15-9/)하는 기능이 추가되었지만 해당 기능을 켜야 하며, 이 시나리오는 지원되지 않습니다.
 
 새 프로젝트는 몇 가지 내용만 추가되고, 기존 .NET Core 프로젝트와 동일합니다. 기본 .NET Core 콘솔 프로젝트와 기본 Windows Forms 및 WPF 프로젝트의 비교는 다음과 같습니다.
 
@@ -730,9 +730,9 @@ PFX/PKCS#12 파일은 각각 `System.Security.Cryptography.Pkcs.Pkcs12Info` 및 
 
 ## <a name="tiered-compilation"></a>계층화된 컴파일
 
-[계층화된 컴파일](https://blogs.msdn.microsoft.com/dotnet/2018/08/02/tiered-compilation-preview-in-net-core-2-1/)은 .NET Core 3.0에서 기본적으로 켜져 있습니다. 런타임 시 JIT(Just-In-Time) 컴파일러를 보다 유연하게 사용해서 시작 시 성능과 처리량 극대화를 위한 성능을 둘 다 개선할 수 있도록 하는 기능입니다.
+[계층화된 컴파일](https://devblogs.microsoft.com/dotnet/tiered-compilation-preview-in-net-core-2-1/)은 .NET Core 3.0에서 기본적으로 켜져 있습니다. 런타임 시 JIT(Just-In-Time) 컴파일러를 보다 유연하게 사용해서 시작 시 성능과 처리량 극대화를 위한 성능을 둘 다 개선할 수 있도록 하는 기능입니다.
 
-이 기능은 [.NET Core 2.1](https://blogs.msdn.microsoft.com/dotnet/2018/05/30/announcing-net-core-2-1/)에서 옵트인 기능으로 추가되었으며, [.NET Core 2.2 Preview 2](https://blogs.msdn.microsoft.com/dotnet/2018/09/12/announcing-net-core-2-2-preview-2/)에서 기본적으로 사용할 수 있었습니다. 이후에 .NET Core 2.2 릴리스에서 다시 옵트인으로 되돌려졌습니다.
+이 기능은 [.NET Core 2.1](https://devblogs.microsoft.com/dotnet/announcing-net-core-2-1/)에서 옵트인 기능으로 추가되었으며, [.NET Core 2.2 Preview 2](https://devblogs.microsoft.com/dotnet/announcing-net-core-2-2-preview-2/)에서 기본적으로 사용할 수 있었습니다. 이후에 .NET Core 2.2 릴리스에서 다시 옵트인으로 되돌려졌습니다.
 
 ## <a name="arm64-linux-support"></a>ARM64 Linux 지원
 

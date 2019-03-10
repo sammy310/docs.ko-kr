@@ -4,12 +4,12 @@ description: Windows 호환 기능 팩 및 이를 사용하여 기존 .NET Frame
 author: terrajobst
 ms.date: 12/07/2018
 ms.custom: seodec18
-ms.openlocfilehash: 09c5533dbc46d16585b7f3cbfd2a3a70819ceb75
-ms.sourcegitcommit: c6f69b0cf149f6b54483a6d5c2ece222913f43ce
+ms.openlocfilehash: c4fd888e0fbce86ab317f18fd77374af5d3ca244
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2019
-ms.locfileid: "55903766"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57717897"
 ---
 # <a name="use-the-windows-compatibility-pack-to-port-code-to-net-core"></a>Windows 호환성 팩을 사용하여 코드를 .NET Core로 포팅
 
@@ -53,7 +53,7 @@ Windows 전용을 포함하는 약 20,000 개의 API와 다음과 같은 기술 
 
 3. Windows에서 유지하려는 경우 모두 준비되었습니다.
 
-4. Linux 또는 macOS에서 .NET Core 애플리케이션 또는 .NET Standard 라이브러리를 실행하려는 경우 [API 분석기](https://blogs.msdn.microsoft.com/dotnet/2017/10/31/introducing-api-analyzer/)를 사용하여 플랫폼 간에 작동하지 않는 API의 사용량을 찾습니다.
+4. Linux 또는 macOS에서 .NET Core 애플리케이션 또는 .NET Standard 라이브러리를 실행하려는 경우 [API 분석기](https://devblogs.microsoft.com/dotnet/introducing-api-analyzer/)를 사용하여 플랫폼 간에 작동하지 않는 API의 사용량을 찾습니다.
 
 5. 이러한 API의 사용량을 제거하거나 플랫폼 간 대체 방법으로 바꾸거나 다음과 같은 플랫폼 검사를 사용하여 보호합니다.
 

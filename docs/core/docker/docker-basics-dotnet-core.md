@@ -4,12 +4,12 @@ description: 이 자습서에서는 기본 .NET Core 애플리케이션을 만�
 ms.date: 10/11/2018
 ms.topic: tutorial
 ms.custom: mvc, seodec18
-ms.openlocfilehash: eed72553576f4154fe63b2e5cf035a781afe4b7c
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.openlocfilehash: addaabb41e57e03a5cf4ec5b2fa3b8b4f3089b32
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53169588"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57372921"
 ---
 # <a name="how-to-containerize-a-net-core-application"></a>.NET Core 애플리케이션을 컨테이너화하는 방법
 
@@ -159,7 +159,7 @@ WORKDIR /app
 COPY *.csproj ./
 ```
 
-[**RUN**](https://docs.docker.com/engine/reference/builder/#run) 명령은 현재 이미지를 기반으로 새 계층의 모든 명령을 실행하고 결과를 커밋합니다. 커밋된 결과 이미지는 Dockerfile의 다음 단계에 사용됩니다. C# 프로젝트 파일의 필요한 종속성을 가져오기 위해 **dotnet restore**를 실행하는 중입니다. 
+[**RUN**](https://docs.docker.com/engine/reference/builder/#run) 명령은 현재 이미지를 기반으로 새 계층의 모든 명령을 실행하고 결과를 커밋합니다. 커밋된 결과 이미지는 Dockerfile의 다음 단계에 사용됩니다. C# 프로젝트 파일의 필요한 종속성을 가져오기 위해 **dotnet restore**를 실행하는 중입니다.
 
 ```Dockerfile
 RUN dotnet restore
@@ -263,7 +263,7 @@ Hello World!
 * [Azure 빠른 시작용 Docker](https://docs.docker.com/docker-for-azure/#docker-community-edition-ce-for-azure)
 * [Azure용 Docker에서 앱 배포](https://docs.docker.com/docker-for-azure/deploy/)
 
-> [!Note]
+> [!NOTE]
 > Azure 구독이 없는 경우 무료 30일 계정에 [오늘 등록](https://azure.microsoft.com/free/?b=16.48)하고 Azure 크레딧 $200를 받아 원하는 조합의 Azure 서비스를 사용해 보세요.
 
 ## <a name="docker-images-used-in-this-sample"></a>이 샘플에 사용된 Docker 이미지

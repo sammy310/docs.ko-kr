@@ -4,16 +4,16 @@ description: Project.json 기반의 라이브러리를 만들 때 패키지 종�
 author: cartermp
 ms.date: 06/20/2016
 ms.custom: seodec18
-ms.openlocfilehash: 932344ff40dd32793727fbce7bc0d6cd02592f8b
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.openlocfilehash: 9d4f9d7f6e7a736b7d07062f3cd31d6f45176cb1
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53168284"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57674967"
 ---
 # <a name="reducing-package-dependencies-with-projectjson"></a>project.json으로 패키지 종속성 감소
 
-이 문서에서는 `project.json` 라이브러리를 작성할 때 패키지 종속성을 줄이는 방법에 대해 알아야 할 내용을 다룹니다. 이 문서를 마칠 때는 필요한 종속성만을 사용하도록 라이브러리를 작성하는 방법을 이해하게 될 것입니다. 
+이 문서에서는 `project.json` 라이브러리를 작성할 때 패키지 종속성을 줄이는 방법에 대해 알아야 할 내용을 다룹니다. 이 문서를 마칠 때는 필요한 종속성만을 사용하도록 라이브러리를 작성하는 방법을 이해하게 될 것입니다.
 
 ## <a name="why-its-important"></a>중요한 이유
 
@@ -27,18 +27,17 @@ ms.locfileid: "53168284"
 
 1. `project.json`의 `dependencies` 섹션에서 `NETStandard.Library` 버전 `1.6.0`을 참조합니다.
 2. 명령줄에서 `dotnet restore`([참고 참조](#dotnet-restore-note))로 패키지를 복원합니다.
-3. `project.lock.json` 파일을 검사하고 `NETSTandard.Library` 섹션을 찾습니다.  파일의 시작 부분에 있습니다.
+3. `project.lock.json` 파일을 검사하고 `NETStandard.Library` 섹션을 찾습니다.  파일의 시작 부분에 있습니다.
 4. `dependencies` 아래에 나열된 모든 패키지를 복사합니다.
 5. `.NETStandard.Library` 참조를 제거하고 복사된 패키지로 교체합니다.
 6. 필요 없는 패키지에 대한 참조를 제거합니다.
-
 
 다음 방법 중 하나를 사용하여 필요 없는 패키지를 알아낼 수 있습니다.
 
 1. 시행착오.  패키지를 제거하고 복원하면서 여전히 컴파일되는지를 알아보고 이 프로세스를 반복합니다.
 2. 참조를 피킹하여 실제로 어떤 코드가 사용되는지를 알아보기 위해 [ILSpy](https://github.com/icsharpcode/ILSpy#ilspy-------) 또는 [.NET Reflector](https://www.red-gate.com/products/dotnet-development/reflector) 같은 도구를 사용합니다.  그런 다음 사용 중인 형식에 해당하지 않는 패키지를 제거할 수 있습니다.
 
-## <a name="example"></a>예제 
+## <a name="example"></a>예제
 
 제네릭 컬렉션 형식에 추가 기능을 제공한 라이브러리를 작성했다고 가정해 보겠습니다.  그런 라이브러리는 `System.Collections` 같은 패키지에 종속되어야 하지만, `System.Net.Http` 같은 패키지에는 전혀 종속되지 않을 수 있습니다.  따라서 이 라이브러리에 필요한 것으로만 패키지 종속성을 잘라낼 수 있습니다.
 
@@ -56,7 +55,7 @@ ms.locfileid: "53168284"
 }
 ```
 
-그런 다음 `dotnet restore`([참고 참조](#dotnet-restore-note))로 패키지를 복원하고, `project.lock.json` 파일을 검사하고, `NETSTandard.Library`에 대해 복원된 모든 패키지를 찾습니다.
+그런 다음 `dotnet restore`([참고 참조](#dotnet-restore-note))로 패키지를 복원하고, `project.lock.json` 파일을 검사하고, `NETStandard.Library`에 대해 복원된 모든 패키지를 찾습니다.
 
 다음은 `netstandard1.0`을 대상으로 할 때 `project.lock.json` 파일의 관련 섹션이 어떤 모양인지를 보여줍니다.
 
