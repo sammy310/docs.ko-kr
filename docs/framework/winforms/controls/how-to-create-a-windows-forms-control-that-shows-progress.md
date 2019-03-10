@@ -10,54 +10,54 @@ helpviewer_keywords:
 - progress [Windows Forms], reporting [Windows Forms]
 - FlashTrackBar custom control
 ms.assetid: 24c5a2e3-058c-4b8d-a217-c06e6a130c2f
-ms.openlocfilehash: fb3048d837f6f1ffe2d9733cab3eb11fc4d066d3
-ms.sourcegitcommit: 07c4368273b446555cb2c85397ea266b39d5fe50
+ms.openlocfilehash: 6910a7e2e68a3807e08a8b196dde003e1d5bc9af
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/21/2019
-ms.locfileid: "56583903"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57720249"
 ---
-# <a name="how-to-create-a-windows-forms-control-that-shows-progress"></a><span data-ttu-id="a3d0f-102">방법: 진행률을 보여 주는 Windows Forms 컨트롤 만들기</span><span class="sxs-lookup"><span data-stu-id="a3d0f-102">How to: Create a Windows Forms Control That Shows Progress</span></span>
-<span data-ttu-id="a3d0f-103">다음 코드 예제에서는 사용자에게 수준 또는 애플리케이션의 진행률을 표시하는 데 사용할 수 있는 `FlashTrackBar`이라는 사용자 지정 컨트롤을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="a3d0f-103">The following code example shows a custom control called `FlashTrackBar` that can be used to show the user the level or the progress of an application.</span></span> <span data-ttu-id="a3d0f-104">그라데이션을 사용하여 진행률을 시각적으로 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="a3d0f-104">It uses a gradient to visually represent progress.</span></span>  
+# <a name="how-to-create-a-windows-forms-control-that-shows-progress"></a><span data-ttu-id="d1890-102">방법: 진행률을 보여 주는 Windows Forms 컨트롤 만들기</span><span class="sxs-lookup"><span data-stu-id="d1890-102">How to: Create a Windows Forms Control That Shows Progress</span></span>
+<span data-ttu-id="d1890-103">다음 코드 예제에서는 사용자에게 수준 또는 애플리케이션의 진행률을 표시하는 데 사용할 수 있는 `FlashTrackBar`이라는 사용자 지정 컨트롤을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="d1890-103">The following code example shows a custom control called `FlashTrackBar` that can be used to show the user the level or the progress of an application.</span></span> <span data-ttu-id="d1890-104">그라데이션을 사용하여 진행률을 시각적으로 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="d1890-104">It uses a gradient to visually represent progress.</span></span>  
   
- <span data-ttu-id="a3d0f-105">`FlashTrackBar` 컨트롤에서는 다음과 같은 개념을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="a3d0f-105">The `FlashTrackBar` control illustrates the following concepts:</span></span>  
+ <span data-ttu-id="d1890-105">`FlashTrackBar` 컨트롤에서는 다음과 같은 개념을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="d1890-105">The `FlashTrackBar` control illustrates the following concepts:</span></span>  
   
--   <span data-ttu-id="a3d0f-106">사용자 지정 속성 정의</span><span class="sxs-lookup"><span data-stu-id="a3d0f-106">Defining custom properties.</span></span>  
+-   <span data-ttu-id="d1890-106">사용자 지정 속성 정의</span><span class="sxs-lookup"><span data-stu-id="d1890-106">Defining custom properties.</span></span>  
   
--   <span data-ttu-id="a3d0f-107">사용자 지정 이벤트 정의</span><span class="sxs-lookup"><span data-stu-id="a3d0f-107">Defining custom events.</span></span> <span data-ttu-id="a3d0f-108">`FlashTrackBar`은 `ValueChanged` 이벤트를 정의합니다.</span><span class="sxs-lookup"><span data-stu-id="a3d0f-108">(`FlashTrackBar` defines the `ValueChanged` event.)</span></span>  
+-   <span data-ttu-id="d1890-107">사용자 지정 이벤트 정의</span><span class="sxs-lookup"><span data-stu-id="d1890-107">Defining custom events.</span></span> <span data-ttu-id="d1890-108">`FlashTrackBar`은 `ValueChanged` 이벤트를 정의합니다.</span><span class="sxs-lookup"><span data-stu-id="d1890-108">(`FlashTrackBar` defines the `ValueChanged` event.)</span></span>  
   
--   <span data-ttu-id="a3d0f-109">재정의 <xref:System.Windows.Forms.Control.OnPaint%2A> 컨트롤을 그리는 논리를 제공 하는 방법입니다.</span><span class="sxs-lookup"><span data-stu-id="a3d0f-109">Overriding the <xref:System.Windows.Forms.Control.OnPaint%2A> method to provide logic to draw the control.</span></span>  
+-   <span data-ttu-id="d1890-109">재정의 <xref:System.Windows.Forms.Control.OnPaint%2A> 컨트롤을 그리는 논리를 제공 하는 방법입니다.</span><span class="sxs-lookup"><span data-stu-id="d1890-109">Overriding the <xref:System.Windows.Forms.Control.OnPaint%2A> method to provide logic to draw the control.</span></span>  
   
--   <span data-ttu-id="a3d0f-110">영역 컨트롤을 그리는 데 사용 하 여 사용할 수 있는 컴퓨팅 해당 <xref:System.Windows.Forms.Control.ClientRectangle%2A> 속성입니다.</span><span class="sxs-lookup"><span data-stu-id="a3d0f-110">Computing the area available for drawing the control by using its <xref:System.Windows.Forms.Control.ClientRectangle%2A> property.</span></span> <span data-ttu-id="a3d0f-111">`FlashTrackBar`은 해당 `OptimizedInvalidate` 메서드에서 이를 수행합니다.</span><span class="sxs-lookup"><span data-stu-id="a3d0f-111">`FlashTrackBar` does this in its `OptimizedInvalidate` method.</span></span>  
+-   <span data-ttu-id="d1890-110">영역 컨트롤을 그리는 데 사용 하 여 사용할 수 있는 컴퓨팅 해당 <xref:System.Windows.Forms.Control.ClientRectangle%2A> 속성입니다.</span><span class="sxs-lookup"><span data-stu-id="d1890-110">Computing the area available for drawing the control by using its <xref:System.Windows.Forms.Control.ClientRectangle%2A> property.</span></span> <span data-ttu-id="d1890-111">`FlashTrackBar`은 해당 `OptimizedInvalidate` 메서드에서 이를 수행합니다.</span><span class="sxs-lookup"><span data-stu-id="d1890-111">`FlashTrackBar` does this in its `OptimizedInvalidate` method.</span></span>  
   
--   <span data-ttu-id="a3d0f-112">Windows Forms 디자이너에서 변경되는 경우 속성의 serialization 또는 지속성을 구현합니다.</span><span class="sxs-lookup"><span data-stu-id="a3d0f-112">Implementing serialization or persistence for a property when it is changed in the Windows Forms Designer.</span></span> <span data-ttu-id="a3d0f-113">`FlashTrackBar`은 `StartColor` 및 `EndColor` 속성을 직렬화하는 `ShouldSerializeStartColor` 및 `ShouldSerializeEndColor` 메서드를 정의합니다.</span><span class="sxs-lookup"><span data-stu-id="a3d0f-113">`FlashTrackBar` defines the `ShouldSerializeStartColor` and `ShouldSerializeEndColor` methods for serializing its `StartColor` and `EndColor` properties.</span></span>  
+-   <span data-ttu-id="d1890-112">Windows Forms 디자이너에서 변경되는 경우 속성의 serialization 또는 지속성을 구현합니다.</span><span class="sxs-lookup"><span data-stu-id="d1890-112">Implementing serialization or persistence for a property when it is changed in the Windows Forms Designer.</span></span> <span data-ttu-id="d1890-113">`FlashTrackBar`은 `StartColor` 및 `EndColor` 속성을 직렬화하는 `ShouldSerializeStartColor` 및 `ShouldSerializeEndColor` 메서드를 정의합니다.</span><span class="sxs-lookup"><span data-stu-id="d1890-113">`FlashTrackBar` defines the `ShouldSerializeStartColor` and `ShouldSerializeEndColor` methods for serializing its `StartColor` and `EndColor` properties.</span></span>  
   
- <span data-ttu-id="a3d0f-114">다음 테이블에서는 `FlashTrackBar`에서 정의된 사용자 지정 속성을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="a3d0f-114">The following table shows the custom properties defined by `FlashTrackBar`.</span></span>  
+ <span data-ttu-id="d1890-114">다음 테이블에서는 `FlashTrackBar`에서 정의된 사용자 지정 속성을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="d1890-114">The following table shows the custom properties defined by `FlashTrackBar`.</span></span>  
   
-|<span data-ttu-id="a3d0f-115">속성</span><span class="sxs-lookup"><span data-stu-id="a3d0f-115">Property</span></span>|<span data-ttu-id="a3d0f-116">설명</span><span class="sxs-lookup"><span data-stu-id="a3d0f-116">Description</span></span>|  
+|<span data-ttu-id="d1890-115">속성</span><span class="sxs-lookup"><span data-stu-id="d1890-115">Property</span></span>|<span data-ttu-id="d1890-116">설명</span><span class="sxs-lookup"><span data-stu-id="d1890-116">Description</span></span>|  
 |--------------|-----------------|  
-|`AllowUserEdit`|<span data-ttu-id="a3d0f-117">사용자가 플래시 트랙 표시줄의 값을 클릭하고 끌어와서 변경할 수 있는지 여부를 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="a3d0f-117">Indicates whether the user can change the value of the flash track bar by clicking and dragging it.</span></span>|  
-|`EndColor`|<span data-ttu-id="a3d0f-118">트랙 표시줄의 끝 색을 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="a3d0f-118">Specifies the ending color of the track bar.</span></span>|  
-|`DarkenBy`|<span data-ttu-id="a3d0f-119">전경 그라데이션과 관련하여 배경 밝기의 정도를 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="a3d0f-119">Specifies how much to darken the background with respect to the foreground gradient.</span></span>|  
-|`Max`|<span data-ttu-id="a3d0f-120">트랙 표시줄의 최대값을 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="a3d0f-120">Specifies the maximum value of the track bar.</span></span>|  
-|`Min`|<span data-ttu-id="a3d0f-121">트랙 표시줄의 최소값을 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="a3d0f-121">Specifies the minimum value of the track bar.</span></span>|  
-|`StartColor`|<span data-ttu-id="a3d0f-122">그라데이션의 시작 색을 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="a3d0f-122">Specifies the starting color of the gradient.</span></span>|  
-|`ShowPercentage`|<span data-ttu-id="a3d0f-123">그라데이션의 백분율을 표시할지 여부를 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="a3d0f-123">Indicates whether to display a percentage over the gradient.</span></span>|  
-|`ShowValue`|<span data-ttu-id="a3d0f-124">그라데이션의 현재 값을 표시할지 여부를 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="a3d0f-124">Indicates whether to display the current value over the gradient.</span></span>|  
-|`ShowGradient`|<span data-ttu-id="a3d0f-125">트랙 표시줄에서 현재 값을 나타내는 색 그라데이션을 표시해야 할지 여부를 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="a3d0f-125">Indicates whether the track bar should display a color gradient showing the current value.</span></span>|  
-|-   `Value`|<span data-ttu-id="a3d0f-126">트랙 표시줄의 현재 값을 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="a3d0f-126">Specifies the current value of the track bar.</span></span>|  
+|`AllowUserEdit`|<span data-ttu-id="d1890-117">사용자가 플래시 트랙 표시줄의 값을 클릭하고 끌어와서 변경할 수 있는지 여부를 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="d1890-117">Indicates whether the user can change the value of the flash track bar by clicking and dragging it.</span></span>|  
+|`EndColor`|<span data-ttu-id="d1890-118">트랙 표시줄의 끝 색을 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="d1890-118">Specifies the ending color of the track bar.</span></span>|  
+|`DarkenBy`|<span data-ttu-id="d1890-119">전경 그라데이션과 관련하여 배경 밝기의 정도를 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="d1890-119">Specifies how much to darken the background with respect to the foreground gradient.</span></span>|  
+|`Max`|<span data-ttu-id="d1890-120">트랙 표시줄의 최대값을 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="d1890-120">Specifies the maximum value of the track bar.</span></span>|  
+|`Min`|<span data-ttu-id="d1890-121">트랙 표시줄의 최소값을 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="d1890-121">Specifies the minimum value of the track bar.</span></span>|  
+|`StartColor`|<span data-ttu-id="d1890-122">그라데이션의 시작 색을 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="d1890-122">Specifies the starting color of the gradient.</span></span>|  
+|`ShowPercentage`|<span data-ttu-id="d1890-123">그라데이션의 백분율을 표시할지 여부를 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="d1890-123">Indicates whether to display a percentage over the gradient.</span></span>|  
+|`ShowValue`|<span data-ttu-id="d1890-124">그라데이션의 현재 값을 표시할지 여부를 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="d1890-124">Indicates whether to display the current value over the gradient.</span></span>|  
+|`ShowGradient`|<span data-ttu-id="d1890-125">트랙 표시줄에서 현재 값을 나타내는 색 그라데이션을 표시해야 할지 여부를 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="d1890-125">Indicates whether the track bar should display a color gradient showing the current value.</span></span>|  
+|-   `Value`|<span data-ttu-id="d1890-126">트랙 표시줄의 현재 값을 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="d1890-126">Specifies the current value of the track bar.</span></span>|  
   
- <span data-ttu-id="a3d0f-127">다음 테이블에서는 `FlashTrackBar:` 속성 변경 이벤트 및 이벤트를 발생시키는 메서드에 의해 정의된 추가 구성원을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="a3d0f-127">The following table shows additional members defined by `FlashTrackBar:` the property-changed event and the method that raises the event.</span></span>  
+ <span data-ttu-id="d1890-127">다음 테이블에서는 `FlashTrackBar:` 속성 변경 이벤트 및 이벤트를 발생시키는 메서드에 의해 정의된 추가 구성원을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="d1890-127">The following table shows additional members defined by `FlashTrackBar:` the property-changed event and the method that raises the event.</span></span>  
   
-|<span data-ttu-id="a3d0f-128">멤버</span><span class="sxs-lookup"><span data-stu-id="a3d0f-128">Member</span></span>|<span data-ttu-id="a3d0f-129">설명</span><span class="sxs-lookup"><span data-stu-id="a3d0f-129">Description</span></span>|  
+|<span data-ttu-id="d1890-128">멤버</span><span class="sxs-lookup"><span data-stu-id="d1890-128">Member</span></span>|<span data-ttu-id="d1890-129">설명</span><span class="sxs-lookup"><span data-stu-id="d1890-129">Description</span></span>|  
 |------------|-----------------|  
-|`ValueChanged`|<span data-ttu-id="a3d0f-130">트랙 표시줄의 `Value` 속성이 변경되면 발생하는 이벤트입니다.</span><span class="sxs-lookup"><span data-stu-id="a3d0f-130">The event that is raised when the `Value` property of the track bar changes.</span></span>|  
-|`OnValueChanged`|<span data-ttu-id="a3d0f-131">메서드는 `ValueChanged` 이벤트를 발생시킵니다.</span><span class="sxs-lookup"><span data-stu-id="a3d0f-131">The method that raises the `ValueChanged` event.</span></span>|  
+|`ValueChanged`|<span data-ttu-id="d1890-130">트랙 표시줄의 `Value` 속성이 변경되면 발생하는 이벤트입니다.</span><span class="sxs-lookup"><span data-stu-id="d1890-130">The event that is raised when the `Value` property of the track bar changes.</span></span>|  
+|`OnValueChanged`|<span data-ttu-id="d1890-131">메서드는 `ValueChanged` 이벤트를 발생시킵니다.</span><span class="sxs-lookup"><span data-stu-id="d1890-131">The method that raises the `ValueChanged` event.</span></span>|  
   
 > [!NOTE]
->  <span data-ttu-id="a3d0f-132">`FlashTrackBar` 사용 하 여 <xref:System.EventArgs> 이벤트 데이터에 대 한 클래스 및 <xref:System.EventHandler> 이벤트 대리자에 대 한 합니다.</span><span class="sxs-lookup"><span data-stu-id="a3d0f-132">`FlashTrackBar` uses the <xref:System.EventArgs> class for event data and <xref:System.EventHandler> for the event delegate.</span></span>  
+>  <span data-ttu-id="d1890-132">`FlashTrackBar` 사용 하 여 <xref:System.EventArgs> 이벤트 데이터에 대 한 클래스 및 <xref:System.EventHandler> 이벤트 대리자에 대 한 합니다.</span><span class="sxs-lookup"><span data-stu-id="d1890-132">`FlashTrackBar` uses the <xref:System.EventArgs> class for event data and <xref:System.EventHandler> for the event delegate.</span></span>  
   
- <span data-ttu-id="a3d0f-133">해당 처리할 *EventName* 이벤트 `FlashTrackBar` 에서 상속 하는 다음 메서드를 재정의 <xref:System.Windows.Forms.Control?displayProperty=nameWithType>:</span><span class="sxs-lookup"><span data-stu-id="a3d0f-133">To handle the corresponding *EventName* events, `FlashTrackBar` overrides the following methods that it inherits from <xref:System.Windows.Forms.Control?displayProperty=nameWithType>:</span></span>  
+ <span data-ttu-id="d1890-133">해당 처리할 *EventName* 이벤트 `FlashTrackBar` 에서 상속 하는 다음 메서드를 재정의 <xref:System.Windows.Forms.Control?displayProperty=nameWithType>:</span><span class="sxs-lookup"><span data-stu-id="d1890-133">To handle the corresponding *EventName* events, `FlashTrackBar` overrides the following methods that it inherits from <xref:System.Windows.Forms.Control?displayProperty=nameWithType>:</span></span>  
   
 -   <xref:System.Windows.Forms.Control.OnPaint%2A>  
   
@@ -69,7 +69,7 @@ ms.locfileid: "56583903"
   
 -   <xref:System.Windows.Forms.Control.OnResize%2A>  
   
- <span data-ttu-id="a3d0f-134">해당 속성 변경 이벤트를 처리할 `FlashTrackBar` 에서 상속 하는 다음 메서드를 재정의 <xref:System.Windows.Forms.Control?displayProperty=nameWithType>:</span><span class="sxs-lookup"><span data-stu-id="a3d0f-134">To handle the corresponding property-changed events, `FlashTrackBar` overrides the following methods that it inherits from <xref:System.Windows.Forms.Control?displayProperty=nameWithType>:</span></span>  
+ <span data-ttu-id="d1890-134">해당 속성 변경 이벤트를 처리할 `FlashTrackBar` 에서 상속 하는 다음 메서드를 재정의 <xref:System.Windows.Forms.Control?displayProperty=nameWithType>:</span><span class="sxs-lookup"><span data-stu-id="d1890-134">To handle the corresponding property-changed events, `FlashTrackBar` overrides the following methods that it inherits from <xref:System.Windows.Forms.Control?displayProperty=nameWithType>:</span></span>  
   
 -   <xref:System.Windows.Forms.Control.OnBackColorChanged%2A>  
   
@@ -77,21 +77,21 @@ ms.locfileid: "56583903"
   
 -   <xref:System.Windows.Forms.Control.OnTextChanged%2A>  
   
-## <a name="example"></a><span data-ttu-id="a3d0f-135">예제</span><span class="sxs-lookup"><span data-stu-id="a3d0f-135">Example</span></span>  
- <span data-ttu-id="a3d0f-136">`FlashTrackBar` 컨트롤은 `FlashTrackBarValueEditor` 및 `FlashTrackBarDarkenByEditor`이라는 두 개의 UI 형식 편집기를 정의하며 이는 다음 코드 목록에 표시됩니다.</span><span class="sxs-lookup"><span data-stu-id="a3d0f-136">The `FlashTrackBar` control defines two UI type editors, `FlashTrackBarValueEditor` and `FlashTrackBarDarkenByEditor`, which are shown in the following code listings.</span></span> <span data-ttu-id="a3d0f-137">`HostApp` 클래스는 Windows Form에소 `FlashTrackBar` 컨트롤을 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="a3d0f-137">The `HostApp` class uses the `FlashTrackBar` control on a Windows Form.</span></span>  
+## <a name="example"></a><span data-ttu-id="d1890-135">예제</span><span class="sxs-lookup"><span data-stu-id="d1890-135">Example</span></span>  
+ <span data-ttu-id="d1890-136">`FlashTrackBar` 컨트롤은 `FlashTrackBarValueEditor` 및 `FlashTrackBarDarkenByEditor`이라는 두 개의 UI 형식 편집기를 정의하며 이는 다음 코드 목록에 표시됩니다.</span><span class="sxs-lookup"><span data-stu-id="d1890-136">The `FlashTrackBar` control defines two UI type editors, `FlashTrackBarValueEditor` and `FlashTrackBarDarkenByEditor`, which are shown in the following code listings.</span></span> <span data-ttu-id="d1890-137">`HostApp` 클래스는 Windows Form에소 `FlashTrackBar` 컨트롤을 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="d1890-137">The `HostApp` class uses the `FlashTrackBar` control on a Windows Form.</span></span>  
   
- [!code-csharp[System.Windows.Forms.FlashTrackBar#1](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.FlashTrackBar/CS/FlashTrackBar.cs#1)]
- [!code-vb[System.Windows.Forms.FlashTrackBar#1](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.FlashTrackBar/VB/FlashTrackBar.vb#1)]  
+ [!code-csharp[System.Windows.Forms.FlashTrackBar#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.FlashTrackBar/CS/FlashTrackBar.cs#1)]
+ [!code-vb[System.Windows.Forms.FlashTrackBar#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.FlashTrackBar/VB/FlashTrackBar.vb#1)]  
   
- [!code-csharp[System.Windows.Forms.FlashTrackBar#10](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.FlashTrackBar/CS/FlashTrackBarDarkenByEditor.cs#10)]
- [!code-vb[System.Windows.Forms.FlashTrackBar#10](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.FlashTrackBar/VB/FlashTrackBarDarkenByEditor.vb#10)]  
+ [!code-csharp[System.Windows.Forms.FlashTrackBar#10](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.FlashTrackBar/CS/FlashTrackBarDarkenByEditor.cs#10)]
+ [!code-vb[System.Windows.Forms.FlashTrackBar#10](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.FlashTrackBar/VB/FlashTrackBarDarkenByEditor.vb#10)]  
   
- [!code-csharp[System.Windows.Forms.FlashTrackBar#20](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.FlashTrackBar/CS/FlashTrackBarValueEditor.cs#20)]
- [!code-vb[System.Windows.Forms.FlashTrackBar#20](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.FlashTrackBar/VB/FlashTrackBarValueEditor.vb#20)]  
+ [!code-csharp[System.Windows.Forms.FlashTrackBar#20](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.FlashTrackBar/CS/FlashTrackBarValueEditor.cs#20)]
+ [!code-vb[System.Windows.Forms.FlashTrackBar#20](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.FlashTrackBar/VB/FlashTrackBarValueEditor.vb#20)]  
   
- [!code-csharp[System.Windows.Forms.FlashTrackBar#30](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.FlashTrackBar/CS/HostApp.cs#30)]
- [!code-vb[System.Windows.Forms.FlashTrackBar#30](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.FlashTrackBar/VB/HostApp.vb#30)]  
+ [!code-csharp[System.Windows.Forms.FlashTrackBar#30](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.FlashTrackBar/CS/HostApp.cs#30)]
+ [!code-vb[System.Windows.Forms.FlashTrackBar#30](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.FlashTrackBar/VB/HostApp.vb#30)]  
   
-## <a name="see-also"></a><span data-ttu-id="a3d0f-138">참고자료</span><span class="sxs-lookup"><span data-stu-id="a3d0f-138">See also</span></span>
-- <span data-ttu-id="a3d0f-139">[디자인 타임 지원 확장](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/37899azc(v=vs.120))</span><span class="sxs-lookup"><span data-stu-id="a3d0f-139">[Extending Design-Time Support](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/37899azc(v=vs.120))</span></span>
-- [<span data-ttu-id="a3d0f-140">Windows Forms 컨트롤 개발 기본 사항</span><span class="sxs-lookup"><span data-stu-id="a3d0f-140">Windows Forms Control Development Basics</span></span>](../../../../docs/framework/winforms/controls/windows-forms-control-development-basics.md)
+## <a name="see-also"></a><span data-ttu-id="d1890-138">참고자료</span><span class="sxs-lookup"><span data-stu-id="d1890-138">See also</span></span>
+- <span data-ttu-id="d1890-139">[디자인 타임 지원 확장](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/37899azc(v=vs.120))</span><span class="sxs-lookup"><span data-stu-id="d1890-139">[Extending Design-Time Support](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/37899azc(v=vs.120))</span></span>
+- [<span data-ttu-id="d1890-140">Windows Forms 컨트롤 개발 기본 사항</span><span class="sxs-lookup"><span data-stu-id="d1890-140">Windows Forms Control Development Basics</span></span>](windows-forms-control-development-basics.md)

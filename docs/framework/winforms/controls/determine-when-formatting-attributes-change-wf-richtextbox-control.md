@@ -11,21 +11,21 @@ helpviewer_keywords:
 - text boxes [Windows Forms], determining font changes
 - SelChange event
 ms.assetid: bdfed015-f77a-41e5-b38f-f8629b2fa166
-ms.openlocfilehash: e746cd1d0f9f7d9850d0263ee6ed0a82472fcb5e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e463ac0fd77a31e4e11cb440f64ec0d4694af61f
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54504152"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57722024"
 ---
-# <a name="how-to-determine-when-formatting-attributes-change-in-the-windows-forms-richtextbox-control"></a><span data-ttu-id="ab266-102">방법: Windows Forms RichTextBox 컨트롤의 특성 변경의 형식을 지정할 때를 결정 합니다.</span><span class="sxs-lookup"><span data-stu-id="ab266-102">How to: Determine When Formatting Attributes Change in the Windows Forms RichTextBox Control</span></span>
-<span data-ttu-id="ab266-103">Windows Forms의 일반적인 용도 <xref:System.Windows.Forms.RichTextBox> 글꼴 옵션 등 단락 스타일 특성을 사용 하 여 텍스트 서식을 제어 하는 합니다.</span><span class="sxs-lookup"><span data-stu-id="ab266-103">A common use of the Windows Forms <xref:System.Windows.Forms.RichTextBox> control is formatting text with attributes such as font options or paragraph styles.</span></span> <span data-ttu-id="ab266-104">응용 프로그램 대부분의 워드프로세싱 응용 프로그램과 마찬가지로 도구 모음을 표시 하기 위해 서식 지정 하는 텍스트의 모든 변경 내용을 추적할 수 해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="ab266-104">Your application may need to keep track of any changes in text formatting for the purpose of displaying a toolbar, as in many word-processing applications.</span></span>  
+# <a name="how-to-determine-when-formatting-attributes-change-in-the-windows-forms-richtextbox-control"></a><span data-ttu-id="ce9e2-102">방법: Windows Forms RichTextBox 컨트롤의 특성 변경의 형식을 지정할 때를 결정 합니다.</span><span class="sxs-lookup"><span data-stu-id="ce9e2-102">How to: Determine When Formatting Attributes Change in the Windows Forms RichTextBox Control</span></span>
+<span data-ttu-id="ce9e2-103">Windows Forms의 일반적인 용도 <xref:System.Windows.Forms.RichTextBox> 글꼴 옵션 등 단락 스타일 특성을 사용 하 여 텍스트 서식을 제어 하는 합니다.</span><span class="sxs-lookup"><span data-stu-id="ce9e2-103">A common use of the Windows Forms <xref:System.Windows.Forms.RichTextBox> control is formatting text with attributes such as font options or paragraph styles.</span></span> <span data-ttu-id="ce9e2-104">응용 프로그램 대부분의 워드프로세싱 응용 프로그램과 마찬가지로 도구 모음을 표시 하기 위해 서식 지정 하는 텍스트의 모든 변경 내용을 추적할 수 해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="ce9e2-104">Your application may need to keep track of any changes in text formatting for the purpose of displaying a toolbar, as in many word-processing applications.</span></span>  
   
-### <a name="to-respond-to-changes-in-formatting-attributes"></a><span data-ttu-id="ab266-105">서식 특성의 변경 내용에 응답</span><span class="sxs-lookup"><span data-stu-id="ab266-105">To respond to changes in formatting attributes</span></span>  
+### <a name="to-respond-to-changes-in-formatting-attributes"></a><span data-ttu-id="ce9e2-105">서식 특성의 변경 내용에 응답</span><span class="sxs-lookup"><span data-stu-id="ce9e2-105">To respond to changes in formatting attributes</span></span>  
   
-1.  <span data-ttu-id="ab266-106">코드를 작성 합니다 <xref:System.Windows.Forms.RichTextBox.SelectionChanged> 특성의 값에 따라 적절 한 작업을 수행 하려면 이벤트 처리기입니다.</span><span class="sxs-lookup"><span data-stu-id="ab266-106">Write code in the <xref:System.Windows.Forms.RichTextBox.SelectionChanged> event handler to perform an appropriate action depending on the value of the attribute.</span></span> <span data-ttu-id="ab266-107">다음 예제에서는 값에 따라 도구 모음 단추의 모양을 변경 합니다 <xref:System.Windows.Forms.RichTextBox.SelectionBullet%2A> 속성입니다.</span><span class="sxs-lookup"><span data-stu-id="ab266-107">The following example changes the appearance of a toolbar button depending on the value of the <xref:System.Windows.Forms.RichTextBox.SelectionBullet%2A> property.</span></span> <span data-ttu-id="ab266-108">도구 모음 단추 컨트롤에서 삽입 지점을 이동 하는 경우에 업데이트 됩니다.</span><span class="sxs-lookup"><span data-stu-id="ab266-108">The toolbar button will only be updated when the insertion point is moved in the control.</span></span>  
+1.  <span data-ttu-id="ce9e2-106">코드를 작성 합니다 <xref:System.Windows.Forms.RichTextBox.SelectionChanged> 특성의 값에 따라 적절 한 작업을 수행 하려면 이벤트 처리기입니다.</span><span class="sxs-lookup"><span data-stu-id="ce9e2-106">Write code in the <xref:System.Windows.Forms.RichTextBox.SelectionChanged> event handler to perform an appropriate action depending on the value of the attribute.</span></span> <span data-ttu-id="ce9e2-107">다음 예제에서는 값에 따라 도구 모음 단추의 모양을 변경 합니다 <xref:System.Windows.Forms.RichTextBox.SelectionBullet%2A> 속성입니다.</span><span class="sxs-lookup"><span data-stu-id="ce9e2-107">The following example changes the appearance of a toolbar button depending on the value of the <xref:System.Windows.Forms.RichTextBox.SelectionBullet%2A> property.</span></span> <span data-ttu-id="ce9e2-108">도구 모음 단추 컨트롤에서 삽입 지점을 이동 하는 경우에 업데이트 됩니다.</span><span class="sxs-lookup"><span data-stu-id="ce9e2-108">The toolbar button will only be updated when the insertion point is moved in the control.</span></span>  
   
-     <span data-ttu-id="ab266-109">아래 예제에서는 가정 된 폼을 <xref:System.Windows.Forms.RichTextBox> 컨트롤 및 <xref:System.Windows.Forms.ToolBar> 도구 모음 단추를 포함 하는 컨트롤입니다.</span><span class="sxs-lookup"><span data-stu-id="ab266-109">The example below assumes a form with a <xref:System.Windows.Forms.RichTextBox> control and a <xref:System.Windows.Forms.ToolBar> control that contains a toolbar button.</span></span> <span data-ttu-id="ab266-110">도구 모음 및 도구 모음 단추에 대 한 자세한 내용은 참조 하세요. [방법: ToolBar 컨트롤에 단추 추가](../../../../docs/framework/winforms/controls/how-to-add-buttons-to-a-toolbar-control.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="ab266-110">For more information about toolbars and toolbar buttons, see [How to: Add Buttons to a ToolBar Control](../../../../docs/framework/winforms/controls/how-to-add-buttons-to-a-toolbar-control.md).</span></span>  
+     <span data-ttu-id="ce9e2-109">아래 예제에서는 가정 된 폼을 <xref:System.Windows.Forms.RichTextBox> 컨트롤 및 <xref:System.Windows.Forms.ToolBar> 도구 모음 단추를 포함 하는 컨트롤입니다.</span><span class="sxs-lookup"><span data-stu-id="ce9e2-109">The example below assumes a form with a <xref:System.Windows.Forms.RichTextBox> control and a <xref:System.Windows.Forms.ToolBar> control that contains a toolbar button.</span></span> <span data-ttu-id="ce9e2-110">도구 모음 및 도구 모음 단추에 대 한 자세한 내용은 참조 하세요. [방법: ToolBar 컨트롤에 단추 추가](how-to-add-buttons-to-a-toolbar-control.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="ce9e2-110">For more information about toolbars and toolbar buttons, see [How to: Add Buttons to a ToolBar Control](how-to-add-buttons-to-a-toolbar-control.md).</span></span>  
   
     ```vb  
     ' The following code assumes the existence of a toolbar control  
@@ -80,8 +80,8 @@ ms.locfileid: "54504152"
        }  
     ```  
   
-## <a name="see-also"></a><span data-ttu-id="ab266-111">참고자료</span><span class="sxs-lookup"><span data-stu-id="ab266-111">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="ce9e2-111">참고자료</span><span class="sxs-lookup"><span data-stu-id="ce9e2-111">See also</span></span>
 - <xref:System.Windows.Forms.RichTextBox.SelectionChanged>
 - <xref:System.Windows.Forms.RichTextBox>
-- [<span data-ttu-id="ab266-112">RichTextBox 컨트롤</span><span class="sxs-lookup"><span data-stu-id="ab266-112">RichTextBox Control</span></span>](../../../../docs/framework/winforms/controls/richtextbox-control-windows-forms.md)
-- [<span data-ttu-id="ab266-113">Windows Forms에 사용할 수 있는 컨트롤</span><span class="sxs-lookup"><span data-stu-id="ab266-113">Controls to Use on Windows Forms</span></span>](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)
+- [<span data-ttu-id="ce9e2-112">RichTextBox 컨트롤</span><span class="sxs-lookup"><span data-stu-id="ce9e2-112">RichTextBox Control</span></span>](richtextbox-control-windows-forms.md)
+- [<span data-ttu-id="ce9e2-113">Windows Forms에 사용할 수 있는 컨트롤</span><span class="sxs-lookup"><span data-stu-id="ce9e2-113">Controls to Use on Windows Forms</span></span>](controls-to-use-on-windows-forms.md)
