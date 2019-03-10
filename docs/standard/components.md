@@ -28,18 +28,18 @@ ms.locfileid: "54570725"
 
 .NET의 각 구현체에는 다음 구성 요소가 포함됩니다.
 
-- 하나 이상의 런타임. 예를 들면 다음과 같습니다. .NET Framework용 CLR, CoreCLR 및 .NET Core용 CoreRT.
+- 하나 이상의 런타임. 예: .NET Framework용 CLR과 CoreCLR, .NET Core용 CoreRT.
 - .NET Standard와 추가 API를 구현할 수 있는 클래스 라이브러리. 예: .NET Framework 기본 클래스 라이브러리, .NET Core 기본 클래스 라이브러리.
-- 필요에 따라 하나 이상의 애플리케이션 프레임워크. 예를 들면 다음과 같습니다. [ASP.NET](https://www.asp.net/), [Windows Forms](../framework/winforms/windows-forms-overview.md) 및 [WPF(Windows Presentation Foundation)](../framework/wpf/index.md)가 .NET Framework에 포함됩니다.
+- 필요에 따라 하나 이상의 애플리케이션 프레임워크. 예: .NET Framework에 포함되어 있는 [ASP.NET](https://www.asp.net/)과 [Windows Forms](../framework/winforms/windows-forms-overview.md), [WPF(Windows Presentation Foundation)](../framework/wpf/index.md).
 - 필요에 따라 개발 도구. 일부 개발 도구는 여러 구현체에서 공통적으로 사용할 수 있음.
 
 Microsoft에서 적극적으로 개발 및 유지 보수하는 네 가지 기본 .NET 구현체는 .NET Core와 .NET Framework, Mono, UWP입니다.
 
 ### <a name="net-core"></a>.NET Core
 
-.NET Core는 .NET의 플랫폼 간 구현으로, 대규모 서버 및 클라우드 워크로드를 처리하도록 설계되었습니다. Windows, macOS 및 Linux에서 실행됩니다. .NET Core는 .NET Standard를 구현하므로 .NET Standard를 대상으로 하는 코드는 .NET Core에서 실행할 수 있습니다. ASP.NET Core는 .NET Core에서 실행됩니다. 
+.NET Core는 다양한 .NET 플랫폼에서 사용할 수 있는 구현체로, 대규모 서버 및 클라우드 워크로드를 처리하도록 설계되었습니다. Windows와 macOS, Linux에서 실행됩니다. .NET Core는 .NET Standard를 구현하므로 .NET Standard를 대상으로 하는 코드는 .NET Core에서 실행할 수 있습니다. 따라서 ASP.NET Core는 .NET Core에서 실행됩니다. 
 
-.NET Core에 대한 자세한 내용은 [.NET Core 가이드](../core/index.md) 및 [서버 앱에 대해 .NET Core와 .NET Framework 중에 선택](choosing-core-framework-server.md)을 참조하세요.
+.NET Core의 자세한 내용은 [.NET Core 가이드](../core/index.md)와 [서버 앱에 대해 .NET Core와 .NET Framework 중에 선택](choosing-core-framework-server.md)을 참조하세요.
 
 ### <a name="net-framework"></a>.NET Framework
 
