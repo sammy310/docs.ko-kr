@@ -14,12 +14,12 @@ helpviewer_keywords:
 - threading [Windows Forms], background operations
 - background operations
 ms.assetid: 9b7bc5ae-051c-4904-9720-18f6667388bd
-ms.openlocfilehash: e31008bcc9580c582effa3f0131a07aa4541db6f
-ms.sourcegitcommit: af0a22a4eb11bbcd33baec49150d551955b50a16
+ms.openlocfilehash: 57a904c5d54b0c3f68efaf017a3405786600ace7
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56261013"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57715817"
 ---
 # <a name="how-to-download-a-file-in-the-background"></a>방법: 백그라운드에서 파일 다운로드
 파일 다운로드는 일반 작업이며, 대체로 시간이 많이 걸릴 수 있는 이 작업을 별도 스레드에서 실행하는 데 유용합니다. 매우 적은 양의 코드로 이 작업을 수행려면 <xref:System.ComponentModel.BackgroundWorker> 구성 요소를 사용합니다.  
@@ -27,15 +27,15 @@ ms.locfileid: "56261013"
 ## <a name="example"></a>예제  
  다음 코드 예제에서는 <xref:System.ComponentModel.BackgroundWorker> 구성 요소를 사용하여 URL에서 XML 파일을 로드하는 방법을 보여 줍니다. 클릭할 때를 **다운로드** 단추를 <xref:System.Windows.Forms.Control.Click> 이벤트 처리기 호출을 <xref:System.ComponentModel.BackgroundWorker.RunWorkerAsync%2A> 메서드의 <xref:System.ComponentModel.BackgroundWorker> 다운로드 작업을 시작 구성 요소. 다운로드 기간 중에는 단추를 사용할 수 없으며, 다운로드가 완료되면 사용할 수 있습니다. <xref:System.Windows.Forms.MessageBox>는 파일 내용을 표시합니다.  
   
- [!code-csharp[System.ComponentModel.BackgroundWorker.IsBusy#1](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.BackgroundWorker.IsBusy/CS/Form1.cs#1)]
- [!code-vb[System.ComponentModel.BackgroundWorker.IsBusy#1](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.BackgroundWorker.IsBusy/VB/Form1.vb#1)]  
+ [!code-csharp[System.ComponentModel.BackgroundWorker.IsBusy#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.BackgroundWorker.IsBusy/CS/Form1.cs#1)]
+ [!code-vb[System.ComponentModel.BackgroundWorker.IsBusy#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.BackgroundWorker.IsBusy/VB/Form1.vb#1)]  
   
  **파일 다운로드**  
   
  <xref:System.ComponentModel.BackgroundWorker.DoWork> 이벤트 처리기를 실행하는 <xref:System.ComponentModel.BackgroundWorker> 구성 요소의 작업자 스레드에서 파일이 다운로드됩니다. 이 스레드는 코드에서 <xref:System.ComponentModel.BackgroundWorker.RunWorkerAsync%2A> 메서드를 호출할 때 시작됩니다.  
   
- [!code-csharp[System.ComponentModel.BackgroundWorker.IsBusy#3](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.BackgroundWorker.IsBusy/CS/Form1.cs#3)]
- [!code-vb[System.ComponentModel.BackgroundWorker.IsBusy#3](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.BackgroundWorker.IsBusy/VB/Form1.vb#3)]  
+ [!code-csharp[System.ComponentModel.BackgroundWorker.IsBusy#3](~/samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.BackgroundWorker.IsBusy/CS/Form1.cs#3)]
+ [!code-vb[System.ComponentModel.BackgroundWorker.IsBusy#3](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.BackgroundWorker.IsBusy/VB/Form1.vb#3)]  
   
  **BackgroundWorker가 완료될 때까지 대기**  
   
@@ -45,15 +45,15 @@ ms.locfileid: "56261013"
   
  주 스레드에서 작업을 계속하려는 경우 <xref:System.ComponentModel.BackgroundWorker.IsBusy%2A> 속성을 사용하여 <xref:System.ComponentModel.BackgroundWorker> 스레드가 여전히 실행되고 있는지 여부를 확인합니다. 예제에서는 다운로드가 처리되는 동안 진행률 표시줄이 업데이트됩니다. <xref:System.Windows.Forms.Application.DoEvents%2A?displayProperty=nameWithType> 메서드를 호출하여 UI 응답성을 유지해야 합니다.  
   
- [!code-csharp[System.ComponentModel.BackgroundWorker.IsBusy#2](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.BackgroundWorker.IsBusy/CS/Form1.cs#2)]
- [!code-vb[System.ComponentModel.BackgroundWorker.IsBusy#2](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.BackgroundWorker.IsBusy/VB/Form1.vb#2)]  
+ [!code-csharp[System.ComponentModel.BackgroundWorker.IsBusy#2](~/samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.BackgroundWorker.IsBusy/CS/Form1.cs#2)]
+ [!code-vb[System.ComponentModel.BackgroundWorker.IsBusy#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.BackgroundWorker.IsBusy/VB/Form1.vb#2)]  
   
  **결과 표시**  
   
  `backgroundWorker1_RunWorkerCompleted` 메서드는 <xref:System.ComponentModel.BackgroundWorker.RunWorkerCompleted> 이벤트를 처리하며, 백그라운드 작업이 완료될 때 호출됩니다. 이 메서드는 먼저 <xref:System.ComponentModel.AsyncCompletedEventArgs.Error%2A?displayProperty=nameWithType> 속성을 확인합니다. <xref:System.ComponentModel.AsyncCompletedEventArgs.Error%2A?displayProperty=nameWithType>가 `null`이면 이 메서드는 파일 내용을 표시합니다. 다운로드를 시작할 때 사용할 수 없게 된 다운로드 단추를 사용할 수 있도록 하며 진행률 표시줄을 다시 설정합니다.  
   
- [!code-csharp[System.ComponentModel.BackgroundWorker.IsBusy#4](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.BackgroundWorker.IsBusy/CS/Form1.cs#4)]
- [!code-vb[System.ComponentModel.BackgroundWorker.IsBusy#4](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.BackgroundWorker.IsBusy/VB/Form1.vb#4)]  
+ [!code-csharp[System.ComponentModel.BackgroundWorker.IsBusy#4](~/samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.BackgroundWorker.IsBusy/CS/Form1.cs#4)]
+ [!code-vb[System.ComponentModel.BackgroundWorker.IsBusy#4](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.BackgroundWorker.IsBusy/VB/Form1.vb#4)]  
   
 ## <a name="compiling-the-code"></a>코드 컴파일  
  이 예제에는 다음 사항이 필요합니다.  
@@ -67,5 +67,5 @@ ms.locfileid: "56261013"
   
 ## <a name="see-also"></a>참고자료
 - <xref:System.ComponentModel.BackgroundWorker>
-- [방법: 백그라운드에서 작업 실행](../../../../docs/framework/winforms/controls/how-to-run-an-operation-in-the-background.md)
-- [방법: 백그라운드 작업을 사용하는 양식 구현](../../../../docs/framework/winforms/controls/how-to-implement-a-form-that-uses-a-background-operation.md)
+- [방법: 백그라운드에서 작업 실행](how-to-run-an-operation-in-the-background.md)
+- [방법: 백그라운드 작업을 사용하는 양식 구현](how-to-implement-a-form-that-uses-a-background-operation.md)

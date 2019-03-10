@@ -11,12 +11,12 @@ helpviewer_keywords:
 - collections [Windows Forms], serializing
 - collections [Windows Forms], standard types
 ms.assetid: 020c9df4-fdc5-4dae-815a-963ecae5668c
-ms.openlocfilehash: 5ec32f5c365162883797b3f3f9ece4305dce7551
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
+ms.openlocfilehash: b5b5295e61f2a417c3565e62000021019381536f
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56747666"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57712190"
 ---
 # <a name="walkthrough-serializing-collections-of-standard-types-with-the-designerserializationvisibilityattribute"></a>연습: DesignerSerializationVisibilityAttribute를 사용하여 표준 형식의 컬렉션 serialize
 사용자 지정 컨트롤 노출 하는 속성으로 컬렉션 경우도 있습니다. 이 연습을 사용 하는 방법에 설명 합니다 <xref:System.ComponentModel.DesignerSerializationVisibilityAttribute> 디자인 타임에 컬렉션 serialize 되는 방식을 제어 하는 클래스입니다. 적용 된 <xref:System.ComponentModel.DesignerSerializationVisibilityAttribute.Content> 컬렉션 속성에 값을 입력 하면 속성을 serialize 합니다.  
@@ -55,22 +55,22 @@ ms.locfileid: "56747666"
   
 6.  에 **코드 편집기**, 명명 된 문자열 배열 필드를 선언 `stringsValue` 에서 `SerializationDemoControl`합니다.  
   
-     [!code-cpp[System.ComponentModel.DesignerSerializationVisibilityAttribute#4](../../../../samples/snippets/cpp/VS_Snippets_Winforms/System.ComponentModel.DesignerSerializationVisibilityAttribute/cpp/form1.cpp#4)]
-     [!code-csharp[System.ComponentModel.DesignerSerializationVisibilityAttribute#4](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.DesignerSerializationVisibilityAttribute/CS/form1.cs#4)]
-     [!code-vb[System.ComponentModel.DesignerSerializationVisibilityAttribute#4](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.DesignerSerializationVisibilityAttribute/VB/form1.vb#4)]  
+     [!code-cpp[System.ComponentModel.DesignerSerializationVisibilityAttribute#4](~/samples/snippets/cpp/VS_Snippets_Winforms/System.ComponentModel.DesignerSerializationVisibilityAttribute/cpp/form1.cpp#4)]
+     [!code-csharp[System.ComponentModel.DesignerSerializationVisibilityAttribute#4](~/samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.DesignerSerializationVisibilityAttribute/CS/form1.cs#4)]
+     [!code-vb[System.ComponentModel.DesignerSerializationVisibilityAttribute#4](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.DesignerSerializationVisibilityAttribute/VB/form1.vb#4)]  
   
 7.  정의 된 `Strings` 속성에는 `SerializationDemoControl`.  
   
 > [!NOTE]
 >  <xref:System.ComponentModel.DesignerSerializationVisibilityAttribute.Content> 값 컬렉션의 serialization을 사용 하도록 설정 하는 데 사용 됩니다.  
   
- [!code-cpp[System.ComponentModel.DesignerSerializationVisibilityAttribute#5](../../../../samples/snippets/cpp/VS_Snippets_Winforms/System.ComponentModel.DesignerSerializationVisibilityAttribute/cpp/form1.cpp#5)]
- [!code-csharp[System.ComponentModel.DesignerSerializationVisibilityAttribute#5](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.DesignerSerializationVisibilityAttribute/CS/form1.cs#5)]
- [!code-vb[System.ComponentModel.DesignerSerializationVisibilityAttribute#5](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.DesignerSerializationVisibilityAttribute/VB/form1.vb#5)]  
+ [!code-cpp[System.ComponentModel.DesignerSerializationVisibilityAttribute#5](~/samples/snippets/cpp/VS_Snippets_Winforms/System.ComponentModel.DesignerSerializationVisibilityAttribute/cpp/form1.cpp#5)]
+ [!code-csharp[System.ComponentModel.DesignerSerializationVisibilityAttribute#5](~/samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.DesignerSerializationVisibilityAttribute/CS/form1.cs#5)]
+ [!code-vb[System.ComponentModel.DesignerSerializationVisibilityAttribute#5](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.DesignerSerializationVisibilityAttribute/VB/form1.vb#5)]  
   
 1.  F5 키를 눌러 프로젝트를 빌드하고 **UserControl 테스트 컨테이너**에서 컨트롤을 실행합니다.  
   
-2.  찾을 합니다 `Strings` 속성에는 <xref:System.Windows.Forms.PropertyGrid> 의 **UserControl 테스트 컨테이너**합니다. 클릭는 `Strings` 속성을 다음 줄임표 (![VisualStudioEllipsesButton 스크린 샷](../../../../docs/framework/winforms/media/vbellipsesbutton.png "vbEllipsesButton")) 버튼을 클릭 하는 **문자열 컬렉션 편집기**.  
+2.  찾을 합니다 `Strings` 속성에는 <xref:System.Windows.Forms.PropertyGrid> 의 **UserControl 테스트 컨테이너**합니다. 클릭는 `Strings` 속성을 다음 줄임표 (![VisualStudioEllipsesButton 스크린 샷](../media/vbellipsesbutton.png "vbEllipsesButton")) 버튼을 클릭 하는 **문자열 컬렉션 편집기**.  
   
 3.  여러 문자열을 입력 합니다 **문자열 컬렉션 편집기**합니다. 각 문자열의 끝에서 ENTER 키를 눌러 구분 합니다. 클릭 **확인** 문자열 입력이 완료 되 면 합니다.  
   
@@ -84,11 +84,11 @@ ms.locfileid: "56747666"
   
 1.  Windows 응용 프로그램 프로젝트를 솔루션에 추가 합니다. 프로젝트 이름을 `SerializationDemoControlTest`로 지정합니다.  
   
-2.  에 **도구 상자**, 라는 탭을 찾으려면 **SerializationDemoControlLib 구성 요소**합니다. 이 탭에서 찾을 수 있습니다는 `SerializationDemoControl`합니다. 자세한 내용은 [연습: 사용자 지정 구성 요소를 사용 하 여 도구 상자에 자동으로 채우기](../../../../docs/framework/winforms/controls/walkthrough-automatically-populating-the-toolbox-with-custom-components.md)합니다.  
+2.  에 **도구 상자**, 라는 탭을 찾으려면 **SerializationDemoControlLib 구성 요소**합니다. 이 탭에서 찾을 수 있습니다는 `SerializationDemoControl`합니다. 자세한 내용은 [연습: 사용자 지정 구성 요소를 사용 하 여 도구 상자에 자동으로 채우기](walkthrough-automatically-populating-the-toolbox-with-custom-components.md)합니다.  
   
 3.  위치는 `SerializationDemoControl` 양식의 합니다.  
   
-4.  찾을 합니다 `Strings` 속성에는 **속성** 창입니다. 클릭는 `Strings` 속성을 다음 줄임표 (![VisualStudioEllipsesButton 스크린 샷](../../../../docs/framework/winforms/media/vbellipsesbutton.png "vbEllipsesButton")) 버튼을 클릭 하는 **문자열 컬렉션 편집기**.  
+4.  찾을 합니다 `Strings` 속성에는 **속성** 창입니다. 클릭는 `Strings` 속성을 다음 줄임표 (![VisualStudioEllipsesButton 스크린 샷](../media/vbellipsesbutton.png "vbEllipsesButton")) 버튼을 클릭 하는 **문자열 컬렉션 편집기**.  
   
 5.  여러 문자열을 입력 합니다 **문자열 컬렉션 편집기**합니다. 각 문자열의 끝에서 ENTER 키를 눌러 구분 합니다. 클릭 **확인** 문자열 입력이 완료 되 면 합니다.  
   
@@ -131,14 +131,14 @@ ms.locfileid: "56747666"
   
 -   [디자인 타임 아키텍처](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/c5z9s1h4(v=vs.120))  
   
--   [Windows Forms 컨트롤의 특성](../../../../docs/framework/winforms/controls/attributes-in-windows-forms-controls.md)  
+-   [Windows Forms 컨트롤의 특성](attributes-in-windows-forms-controls.md)  
   
 -   [디자이너 Serialization 개요](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/ms171834(v=vs.120))  
   
--   [연습: Visual Studio 디자인 타임 기능을 활용 하는 Windows Forms 컨트롤 만들기](../../../../docs/framework/winforms/controls/creating-a-wf-control-design-time-features.md)  
+-   [연습: Visual Studio 디자인 타임 기능을 활용 하는 Windows Forms 컨트롤 만들기](creating-a-wf-control-design-time-features.md)  
   
 ## <a name="see-also"></a>참고자료
 - <xref:System.ComponentModel.DesignerSerializationVisibilityAttribute>
 - [디자이너 Serialization 개요](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/ms171834(v=vs.120))
 - [방법: Designerserializationvisibilityattribute를 사용 하 여 표준 형식의 컬렉션 serialize](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/ms171833(v=vs.120))
-- [연습: 사용자 지정 구성 요소를 사용 하 여 도구 상자에 자동으로 채우기](../../../../docs/framework/winforms/controls/walkthrough-automatically-populating-the-toolbox-with-custom-components.md)
+- [연습: 사용자 지정 구성 요소를 사용 하 여 도구 상자에 자동으로 채우기](walkthrough-automatically-populating-the-toolbox-with-custom-components.md)

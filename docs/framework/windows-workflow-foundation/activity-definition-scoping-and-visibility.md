@@ -2,12 +2,12 @@
 title: 활동 정의 범위 지정 및 표시 유형
 ms.date: 03/30/2017
 ms.assetid: ccdffa07-9503-4eea-a61b-17f1564368b7
-ms.openlocfilehash: f3a8936c1bc3275468e1e4dbd23d0d001edad021
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7b09ac6d27dd3be502c98ce3ac0a90f636714fc2
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33518504"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57723844"
 ---
 # <a name="activity-definition-scoping-and-visibility"></a>활동 정의 범위 지정 및 표시 유형
 활동 정의의 범위 지정 및 표시 유형은 개체의 범위 지정 및 표시 유형과 마찬가지로 다른 개체나 활동이 활동의 멤버에 액세스하는 기능입니다. 활동 정의는 다음 구현을 통해 수행됩니다.  
@@ -22,7 +22,7 @@ ms.locfileid: "33518504"
  데이터 범위 지정 외에 활동 모델 표시 유형을 통해서도 유효성 검사, 디버깅 및 추적과 같은 활동의 다른 측면에 대한 액세스를 제한할 수 있습니다. 실행 속성은 표시 유형과 범위 지정을 사용하여 실행 특성을 정의의 특정 범위로 제한합니다. 보조 루트는 표시 유형과 범위 지정을 사용하여 <xref:System.Activities.Statements.CompensableActivity>에서 캡처된 상태를 보정 가능한 활동이 사용되는 정의의 범위로 제한합니다.  
   
 ## <a name="definition-and-usage"></a>정의 및 사용  
- 기본 활동 클래스에서 상속 하 고 활동을 사용 하 여 새 활동을 작성에서 작성 되었습니다. 워크플로 [기본 제공 활동 라이브러리](../../../docs/framework/windows-workflow-foundation/net-framework-4-5-built-in-activity-library.md)합니다. 활동을 사용하려면 활동 작성자가 정의의 각 구성 요소에 대한 표시 유형을 구성해야 합니다.  
+ 기본 활동 클래스에서 상속 하 여 및에서 활동을 사용 하 여 새 활동을 작성 하 여 워크플로 작성 합니다 [기본 제공 활동 라이브러리](net-framework-4-5-built-in-activity-library.md)합니다. 활동을 사용하려면 활동 작성자가 정의의 각 구성 요소에 대한 표시 유형을 구성해야 합니다.  
   
 ### <a name="activity-members"></a>활동 멤버  
  활동 모델은 활동이 소비자에게 제공하는 인수, 변수, 대리자 및 자식 활동을 정의합니다. 이러한 각각의 멤버를 `public` 또는 `private`로 선언할 수 있습니다. public 멤버는 활동의 소비자가 구성하지만 `private` 멤버는 활동의 작성자가 정한 구현을 사용합니다. 데이터 범위 지정의 표시 유형 규칙은 다음과 같습니다.  

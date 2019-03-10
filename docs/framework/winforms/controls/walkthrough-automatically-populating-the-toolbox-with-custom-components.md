@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Toolbox [Windows Forms], populating
 - custom components [Windows Forms], adding to Toolbox
 ms.assetid: 2fa1e3e8-6b9f-42b2-97c0-2be57444dba4
-ms.openlocfilehash: b4c6bf42bdd1ba6b0f9ccddb730dc517dbaab963
-ms.sourcegitcommit: bef803e2025642df39f2f1e046767d89031e0304
+ms.openlocfilehash: 8ddb248d2e011714ddc7fb68474f0e92e9ad8b5e
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56304091"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57723974"
 ---
 # <a name="walkthrough-automatically-populating-the-toolbox-with-custom-components"></a>연습: 사용자 지정 구성 요소를 사용 하 여 도구 상자에 자동으로 채우기
 구성 요소는 현재 열려 있는 솔루션의 프로젝트에서 정의 된 경우는 자동으로 나타나는 합니다 **도구 상자**, 작업이 사용자가 필요 하지 않습니다. 채울 수도 있습니다는 **도구 상자** 사용 하 여 사용자 지정 구성 요소를 사용 하 여 합니다 [선택 도구 상자 항목 대화 상자 (Visual Studio)](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/dyca0t6t(v=vs.100)), 하지만 **도구 상자** 고려 솔루션에 있는 항목의 다음 특성을 모두 사용 하 여 출력을 빌드하십시오.  
@@ -97,4 +97,4 @@ ms.locfileid: "56304091"
 - [일반적으로 Windows Forms 디자이너, 옵션 대화 상자](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/5aazxs78(v=vs.100))
 - [방법: 도구 상자 탭 조작](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/66kwe227(v=vs.100))
 - [도구 상자 항목 선택 대화 상자(Visual Studio)](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/dyca0t6t(v=vs.100))
-- [Windows Forms에 컨트롤 넣기](../../../../docs/framework/winforms/controls/putting-controls-on-windows-forms.md)
+- [Windows Forms에 컨트롤 넣기](putting-controls-on-windows-forms.md)

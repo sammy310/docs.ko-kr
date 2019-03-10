@@ -5,12 +5,12 @@ helpviewer_keywords:
 - MenuStrip [Windows Forms], merging
 - merging [Windows Forms], general concepts
 ms.assetid: 95e113ba-f362-4dda-8a76-6d95ddc45cee
-ms.openlocfilehash: 96168c197771cbfebf3a090ac236b21e487cb3a9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 292c299bd15cd62eabd9a13db1abab1ed07fe57e
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54551854"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57722353"
 ---
 # <a name="merging-menu-items-in-the-windows-forms-menustrip-control"></a>Windows Forms MenuStrip 컨트롤의 메뉴 항목 병합
 응용 프로그램을 다중 문서 인터페이스 (MDI)에 있는 경우 부모 폼의 메뉴에 메뉴 항목이 나 자식 폼의 전체 메뉴를 병합할 수 있습니다.  
@@ -56,6 +56,6 @@ ms.locfileid: "54551854"
 ## <a name="see-also"></a>참고자료
 - <xref:System.Windows.Forms.ToolStripManager>
 - <xref:System.Windows.Forms.MenuStrip>
-- [MenuStrip 컨트롤](../../../../docs/framework/winforms/controls/menustrip-control-windows-forms.md)
-- [방법: MenuStrip이 포함 된 MDI 창 목록 만들기](../../../../docs/framework/winforms/controls/how-to-create-an-mdi-window-list-with-menustrip-windows-forms.md)
-- [방법: MDI 응용 프로그램의 자동 메뉴 병합 설정](../../../../docs/framework/winforms/controls/how-to-set-up-automatic-menu-merging-for-mdi-applications.md)
+- [MenuStrip 컨트롤](menustrip-control-windows-forms.md)
+- [방법: MenuStrip이 포함 된 MDI 창 목록 만들기](how-to-create-an-mdi-window-list-with-menustrip-windows-forms.md)
+- [방법: MDI 응용 프로그램의 자동 메뉴 병합 설정](how-to-set-up-automatic-menu-merging-for-mdi-applications.md)

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - TextBox control [Windows Forms], displaying quotation marks
 - quotation marks [Windows Forms], adding to strings in text boxes
 ms.assetid: 68bdc3f3-4177-4eab-99cd-cac17a82b515
-ms.openlocfilehash: 24d7ea17384a912fda454bfb1136696ab18d9843
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a8822c9a26db445080668b1b493803369ccbae4d
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54651645"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57714816"
 ---
 # <a name="how-to-put-quotation-marks-in-a-string-windows-forms"></a>방법: (Windows Forms) 문자열에 인용 부호 넣기
 경우에 따라 텍스트의 문자열에 따옴표(" ")를 배치하려고 합니다. 예를 들어:  
@@ -91,10 +91,10 @@ ms.locfileid: "54651645"
 ## <a name="see-also"></a>참고자료
 - <xref:System.Windows.Forms.TextBox>
 - <xref:Microsoft.VisualBasic.ControlChars.Quote>
-- [TextBox 컨트롤 개요](../../../../docs/framework/winforms/controls/textbox-control-overview-windows-forms.md)
-- [방법: Windows Forms TextBox 컨트롤의 삽입 지점 제어](../../../../docs/framework/winforms/controls/how-to-control-the-insertion-point-in-a-windows-forms-textbox-control.md)
-- [방법: Windows Forms TextBox 컨트롤을 사용 하 여 암호 텍스트 상자 만들기](../../../../docs/framework/winforms/controls/how-to-create-a-password-text-box-with-the-windows-forms-textbox-control.md)
-- [방법: 읽기 전용 텍스트 상자 만들기](../../../../docs/framework/winforms/controls/how-to-create-a-read-only-text-box-windows-forms.md)
-- [방법: Windows Forms TextBox 컨트롤에서 텍스트를 선택 합니다.](../../../../docs/framework/winforms/controls/how-to-select-text-in-the-windows-forms-textbox-control.md)
-- [방법: Windows Forms TextBox 컨트롤에서 여러 줄 보기](../../../../docs/framework/winforms/controls/how-to-view-multiple-lines-in-the-windows-forms-textbox-control.md)
-- [TextBox 컨트롤](../../../../docs/framework/winforms/controls/textbox-control-windows-forms.md)
+- [TextBox 컨트롤 개요](textbox-control-overview-windows-forms.md)
+- [방법: Windows Forms TextBox 컨트롤의 삽입 지점 제어](how-to-control-the-insertion-point-in-a-windows-forms-textbox-control.md)
+- [방법: Windows Forms TextBox 컨트롤을 사용 하 여 암호 텍스트 상자 만들기](how-to-create-a-password-text-box-with-the-windows-forms-textbox-control.md)
+- [방법: 읽기 전용 텍스트 상자 만들기](how-to-create-a-read-only-text-box-windows-forms.md)
+- [방법: Windows Forms TextBox 컨트롤에서 텍스트를 선택 합니다.](how-to-select-text-in-the-windows-forms-textbox-control.md)
+- [방법: Windows Forms TextBox 컨트롤에서 여러 줄 보기](how-to-view-multiple-lines-in-the-windows-forms-textbox-control.md)
+- [TextBox 컨트롤](textbox-control-windows-forms.md)

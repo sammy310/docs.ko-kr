@@ -10,19 +10,19 @@ helpviewer_keywords:
 - sounds [Windows Forms], looping
 - playing sounds [Windows Forms], looping
 ms.assetid: ea95dd46-10a3-46c0-8263-4b205f00df7f
-ms.openlocfilehash: 238d269f9c3d3b2612eab70341200221c5b43d3a
-ms.sourcegitcommit: af0a22a4eb11bbcd33baec49150d551955b50a16
+ms.openlocfilehash: 43fcc472960cc3f2432d3872160d9ace4c617836
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56260922"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57719275"
 ---
 # <a name="how-to-loop-a-sound-playing-on-a-windows-form"></a>방법: Windows Form에서 소리 재생 반복
 다음 코드 예제에서는 반복해서 소리를 재생합니다. `stopPlayingButton_Click` 이벤트 처리기의 코드가 실행되면 현재 재생되는 모든 소리가 중지됩니다. 소리가 재생되지 않으면 아무것도 발생하지 않습니다.  
   
 ## <a name="example"></a>예제  
- [!code-csharp[System.Media.SoundPlayer.PlayLooping#1](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Media.SoundPlayer.PlayLooping/CS/Form1.cs#1)]
- [!code-vb[System.Media.SoundPlayer.PlayLooping#1](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Media.SoundPlayer.PlayLooping/VB/Form1.vb#1)]  
+ [!code-csharp[System.Media.SoundPlayer.PlayLooping#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Media.SoundPlayer.PlayLooping/CS/Form1.cs#1)]
+ [!code-vb[System.Media.SoundPlayer.PlayLooping#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Media.SoundPlayer.PlayLooping/VB/Form1.vb#1)]  
   
 ## <a name="compiling-the-code"></a>코드 컴파일  
  이 예제에는 다음 사항이 필요합니다.  
@@ -55,5 +55,5 @@ ms.locfileid: "56260922"
   
 ## <a name="see-also"></a>참고자료
 - <xref:System.Media.SoundPlayer.PlayLooping%2A>
-- [방법: Windows Form에서 소리 재생](../../../../docs/framework/winforms/controls/how-to-play-a-sound-from-a-windows-form.md)
-- [SoundPlayer 클래스 개요](../../../../docs/framework/winforms/controls/soundplayer-class-overview.md)
+- [방법: Windows Form에서 소리 재생](how-to-play-a-sound-from-a-windows-form.md)
+- [SoundPlayer 클래스 개요](soundplayer-class-overview.md)

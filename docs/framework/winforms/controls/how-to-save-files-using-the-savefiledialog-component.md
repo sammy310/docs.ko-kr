@@ -11,12 +11,12 @@ helpviewer_keywords:
 - files [Windows Forms], saving
 - OpenFile method [Windows Forms], saving files with SaveFileDialog component
 ms.assetid: 02e8f409-b83f-4707-babb-e71f6b223d90
-ms.openlocfilehash: 2b84d36bd15d61fb21444e01302da86563cced9c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2a6f21f79f56c1fcad4c94ec89cbf7dc43b19638
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54615964"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57719431"
 ---
 # <a name="how-to-save-files-using-the-savefiledialog-component"></a>방법: SaveFileDialog 구성 요소를 사용 하 여 파일 저장
 <xref:System.Windows.Forms.SaveFileDialog> 구성 요소 파일 시스템을 찾아서 선택한 파일을 저장할 수 있습니다. 대화 상자에서 사용자가 선택한 파일의 경로와 이름을 반환합니다. 그러나 실제로 디스크에 파일을 쓰는 코드를 작성해야 합니다.  
@@ -32,7 +32,7 @@ ms.locfileid: "54615964"
      아래 예제에는 <xref:System.Windows.Forms.Button> 할당 된 이미지를 사용 하 여 제어 합니다. 단추를 클릭 하면는 <xref:System.Windows.Forms.SaveFileDialog> 구성 요소 형식.gif,.jpeg 및.bmp 파일을 허용 하는 필터로 인스턴스화됩니다. [파일 저장] 대화 상자에서 이 형식의 파일을 선택하면 단추의 이미지가 저장됩니다.  
   
     > [!IMPORTANT]
-    >  가져오거나 설정 합니다 <xref:System.Windows.Forms.FileDialog.FileName%2A> 속성인 어셈블리 권한 수준에서 부여한 필요는 <xref:System.Security.Permissions.FileIOPermission?displayProperty=nameWithType> 클래스입니다. 부분 신뢰 컨텍스트에서 실행하는 경우 프로세스가 권한 부족으로 인해 예외를 throw할 수 있습니다. 자세한 내용은 [코드 액세스 보안 기본 사항](../../../../docs/framework/misc/code-access-security-basics.md)을 참조하세요.  
+    >  가져오거나 설정 합니다 <xref:System.Windows.Forms.FileDialog.FileName%2A> 속성인 어셈블리 권한 수준에서 부여한 필요는 <xref:System.Security.Permissions.FileIOPermission?displayProperty=nameWithType> 클래스입니다. 부분 신뢰 컨텍스트에서 실행하는 경우 프로세스가 권한 부족으로 인해 예외를 throw할 수 있습니다. 자세한 내용은 [코드 액세스 보안 기본 사항](../../misc/code-access-security-basics.md)을 참조하세요.  
   
      이 예제에서는 폼에 가정를 <xref:System.Windows.Forms.Button> 컨트롤 해당 <xref:System.Windows.Forms.ButtonBase.Image%2A> 속성이 형식.gif,.jpeg 또는.bmp 파일을 설정 합니다.  
   
@@ -179,4 +179,4 @@ ms.locfileid: "54615964"
   
 ## <a name="see-also"></a>참고자료
 - <xref:System.Windows.Forms.SaveFileDialog>
-- [SaveFileDialog 구성 요소](../../../../docs/framework/winforms/controls/savefiledialog-component-windows-forms.md)
+- [SaveFileDialog 구성 요소](savefiledialog-component-windows-forms.md)

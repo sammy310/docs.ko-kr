@@ -7,12 +7,12 @@ helpviewer_keywords:
 - BindingSource component [Windows Forms], creating a lookup table
 - BindingSource component [Windows Forms], examples
 ms.assetid: 622fce80-879d-44be-abbf-8350ec22ca2b
-ms.openlocfilehash: 79459364fba51e8e10194a5e3681d6384beb16a7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: de61369f9fcc7493dbc3197d91c58cec9e926c13
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54539898"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57723922"
 ---
 # <a name="how-to-create-a-lookup-table-with-the-windows-forms-bindingsource-component"></a>방법: Windows Forms BindingSource 구성 요소를 사용 하 여 조회 테이블 만들기
 조회 테이블은 관련 테이블의 레코드에서 데이터를 표시하는 열이 포함된 데이터 테이블입니다. 다음 절차에서는 <xref:System.Windows.Forms.ComboBox> 컨트롤을 사용하여 부모에서 자식 테이블로의 외래 키 관계로 필드를 표시합니다.  
@@ -35,7 +35,7 @@ ms.locfileid: "54539898"
   
  이 시나리오의 테이블 중 하나인 CustomersTable에는 표시 및 저장할 실제 정보가 저장됩니다. 그러나 여기서는 공간 절약을 위해 명확성에 도움이 되는 일부 데이터를 제외했습니다. 또 하나의 테이블인 OrdersTables에는 주문 날짜 및 주문 ID에 해당하는 고객 ID 번호에 대한 표시 관련 정보만 포함됩니다. 고객 이름은 언급되지 않습니다.  
   
- 조회 테이블을 만들기 위해 [ComboBox 컨트롤](../../../../docs/framework/winforms/controls/combobox-control-windows-forms.md) 컨트롤에는 4가지 주요 속성이 설정됩니다.  
+ 조회 테이블을 만들기 위해 [ComboBox 컨트롤](combobox-control-windows-forms.md) 컨트롤에는 4가지 주요 속성이 설정됩니다.  
   
 -   <xref:System.Windows.Forms.ComboBox.DataSource%2A> 속성은 테이블 이름을 포함합니다.  
   
@@ -53,7 +53,7 @@ ms.locfileid: "54539898"
   
      이 컨트롤에는 부모 테이블의 열이 표시됩니다.  
   
-2.  다른 컨트롤을 끌어 자식 테이블의 세부 정보를 표시합니다. 테이블의 데이터 형식에 맞는 컨트롤을 선택해야 합니다. 자세한 내용은 [기능별 Windows Forms 컨트롤](../../../../docs/framework/winforms/controls/windows-forms-controls-by-function.md)을 참조하세요.  
+2.  다른 컨트롤을 끌어 자식 테이블의 세부 정보를 표시합니다. 테이블의 데이터 형식에 맞는 컨트롤을 선택해야 합니다. 자세한 내용은 [기능별 Windows Forms 컨트롤](windows-forms-controls-by-function.md)을 참조하세요.  
   
 3.  <xref:System.Windows.Forms.BindingNavigator> 컨트롤을 폼으로 끌어 옵니다. 그러면 자식 테이블의 데이터를 탐색할 수 있습니다.  
   
@@ -93,6 +93,6 @@ ms.locfileid: "54539898"
   
 ## <a name="see-also"></a>참고자료
 - <xref:System.Windows.Forms.BindingSource>
-- [BindingSource 구성 요소](../../../../docs/framework/winforms/controls/bindingsource-component.md)
-- [ComboBox 컨트롤](../../../../docs/framework/winforms/controls/combobox-control-windows-forms.md)
+- [BindingSource 구성 요소](bindingsource-component.md)
+- [ComboBox 컨트롤](combobox-control-windows-forms.md)
 - [Visual Studio에서 데이터에 컨트롤 바인딩](/visualstudio/data-tools/bind-controls-to-data-in-visual-studio)

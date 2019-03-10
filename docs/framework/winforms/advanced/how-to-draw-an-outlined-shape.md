@@ -19,20 +19,20 @@ helpviewer_keywords:
 - drawing [Windows Forms], circular shapes
 - shapes [Windows Forms], drawing
 ms.assetid: f4f9214c-607e-407d-8cdd-6549f0278451
-ms.openlocfilehash: 8a7bd12fb1bdab6ea429a889521b7dd6c649a5e7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 598706b381d12b8e820747ca872146bdb5e300c7
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54512595"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57722635"
 ---
 # <a name="how-to-draw-an-outlined-shape"></a>방법: 윤곽선이 있는 도형 그리기
 이 예제에서는 폼에 윤곽선이 있는 타원 및 사각형을 그립니다.  
   
 ## <a name="example"></a>예제  
- [!code-cpp[System.Drawing.ConceptualHowTos#6](../../../../samples/snippets/cpp/VS_Snippets_Winforms/System.Drawing.ConceptualHowTos/cpp/form1.cpp#6)]
- [!code-csharp[System.Drawing.ConceptualHowTos#6](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.ConceptualHowTos/CS/form1.cs#6)]
- [!code-vb[System.Drawing.ConceptualHowTos#6](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.ConceptualHowTos/VB/form1.vb#6)]  
+ [!code-cpp[System.Drawing.ConceptualHowTos#6](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Drawing.ConceptualHowTos/cpp/form1.cpp#6)]
+ [!code-csharp[System.Drawing.ConceptualHowTos#6](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.ConceptualHowTos/CS/form1.cs#6)]
+ [!code-vb[System.Drawing.ConceptualHowTos#6](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.ConceptualHowTos/VB/form1.vb#6)]  
   
 ## <a name="compiling-the-code"></a>코드 컴파일  
  이 메서드를 호출할 수 없습니다는 <xref:System.Windows.Forms.Form.Load> 이벤트 처리기입니다. 그려지는 콘텐츠 비활성 폼 크기가 조정 되거나 다른 양식으로 하는 경우. 재정의 해야 하는 자동으로 다시 그리기 콘텐츠를 확인 하는 <xref:System.Windows.Forms.Control.OnPaint%2A> 메서드.  
@@ -44,6 +44,6 @@ ms.locfileid: "54512595"
 - <xref:System.Drawing.Graphics.DrawEllipse%2A>
 - <xref:System.Windows.Forms.Control.OnPaint%2A>
 - <xref:System.Drawing.Graphics.DrawRectangle%2A>
-- [그래픽 프로그래밍 시작](../../../../docs/framework/winforms/advanced/getting-started-with-graphics-programming.md)
-- [펜을 사용하여 선과 도형 그리기](../../../../docs/framework/winforms/advanced/using-a-pen-to-draw-lines-and-shapes.md)
-- [Windows Forms의 그래픽 및 그리기](../../../../docs/framework/winforms/advanced/graphics-and-drawing-in-windows-forms.md)
+- [그래픽 프로그래밍 시작](getting-started-with-graphics-programming.md)
+- [펜을 사용하여 선과 도형 그리기](using-a-pen-to-draw-lines-and-shapes.md)
+- [Windows Forms의 그래픽 및 그리기](graphics-and-drawing-in-windows-forms.md)

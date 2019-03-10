@@ -2,12 +2,12 @@
 title: 동적 업데이트
 ms.date: 03/30/2017
 ms.assetid: 8b6ef19b-9691-4b4b-824c-3c651a9db96e
-ms.openlocfilehash: 9dc733e0fa9cc6fead51eb8105b7b1e37de8cd91
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: a1d5337bf69cb87d790ce4074cde4c18c989a4d8
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57496744"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57724477"
 ---
 # <a name="dynamic-update"></a>동적 업데이트
 
@@ -17,13 +17,13 @@ ms.locfileid: "57496744"
 
 지속형 워크플로 인스턴스에 동적 업데이트를 적용하려면 지속형 워크플로 인스턴스를 수정하여 필요한 변경 내용을 반영하는 방법을 설명하는 런타임 지침이 포함된 <xref:System.Activities.DynamicUpdate.DynamicUpdateMap>을 만듭니다. 업데이트 맵을 만든 후에는 원하는 지속형 워크플로 인스턴스에 이 업데이트 맵을 적용합니다. 동적 업데이트를 적용한 후에는 새로 업데이트한 워크플로 정의를 사용하여 워크플로 인스턴스를 다시 시작할 수 있습니다. 업데이트 맵을 만들어 적용하는 데 필요한 네 가지 단계는 다음과 같습니다.
 
-1. [동적 업데이트에 대 한 워크플로 정의 준비 합니다.](../../../docs/framework/windows-workflow-foundation/dynamic-update.md#Prepare)
+1. [동적 업데이트에 대 한 워크플로 정의 준비 합니다.](dynamic-update.md#Prepare)
 
-2. [원하는 변경 내용을 반영 하도록 워크플로 정의 업데이트 합니다.](../../../docs/framework/windows-workflow-foundation/dynamic-update.md#Update)
+2. [원하는 변경 내용을 반영 하도록 워크플로 정의 업데이트 합니다.](dynamic-update.md#Update)
 
-3. [업데이트 맵을 만듭니다.](../../../docs/framework/windows-workflow-foundation/dynamic-update.md#Create)
+3. [업데이트 맵을 만듭니다.](dynamic-update.md#Create)
 
-4. [원하는 지속형된 워크플로 인스턴스에 업데이트 맵을 적용합니다](../../../docs/framework/windows-workflow-foundation/dynamic-update.md#Apply)
+4. [원하는 지속형된 워크플로 인스턴스에 업데이트 맵을 적용합니다](dynamic-update.md#Apply)
 
 > [!NOTE]
 > 업데이트 맵을 만드는 1~3단계와 업데이트를 적용하는 단계는 서로 독립적으로 수행할 수 있습니다. 일반적인 시나리오는 워크플로 개발자 업데이트 맵을 오프 라인으로 만들어지고 다음 관리자는 나중에 업데이트를 적용 합니다.
@@ -37,7 +37,7 @@ ms.locfileid: "57496744"
 XAML 워크플로를 동적으로 업데이트할 수 있도록 준비하려면 해당 워크플로를 <xref:System.Activities.ActivityBuilder>에 로드한 후 <xref:System.Activities.ActivityBuilder>에 <xref:System.Activities.DynamicUpdate.DynamicUpdateServices.PrepareForUpdate%2A?displayProperty=nameWithType>를 전달합니다.
 
 > [!NOTE]
-> Serialize 된 워크플로 작업에 대 한 자세한 내용은 및 <xref:System.Activities.ActivityBuilder>를 참조 하세요 [직렬화 워크플로 및 활동을 XAML에서](../../../docs/framework/windows-workflow-foundation/serializing-workflows-and-activities-to-and-from-xaml.md)합니다.
+> Serialize 된 워크플로 작업에 대 한 자세한 내용은 및 <xref:System.Activities.ActivityBuilder>를 참조 하세요 [직렬화 워크플로 및 활동을 XAML에서](serializing-workflows-and-activities-to-and-from-xaml.md)합니다.
 
 다음 예제에서는 여러 자식 활동과 `MortgageWorkflow`로 구성된 <xref:System.Activities.Statements.Sequence> 정의를 <xref:System.Activities.ActivityBuilder>에 로드한 후 동적 업데이트를 준비합니다. 메서드가 반환한 후 <xref:System.Activities.ActivityBuilder>는 원래 워크플로 정의와 복사본이 포함되어 있습니다.
 
@@ -171,7 +171,7 @@ foreach (Guid id in ids)
 동적 업데이트를 적용한 후에는 워크플로 인스턴스를 다시 시작할 수 있습니다. 이때 새로 업데이트된 정의와 <xref:System.Activities.WorkflowIdentity>를 사용해야 합니다.
 
 > [!NOTE]
-> 작업에 대 한 자세한 내용은 <xref:System.Activities.WorkflowApplication> 하 고 <xref:System.Activities.WorkflowIdentity>를 참조 하세요 [를 사용 하 여 WorkflowIdentity 및 버전 관리](../../../docs/framework/windows-workflow-foundation/using-workflowidentity-and-versioning.md).
+> 작업에 대 한 자세한 내용은 <xref:System.Activities.WorkflowApplication> 하 고 <xref:System.Activities.WorkflowIdentity>를 참조 하세요 [를 사용 하 여 WorkflowIdentity 및 버전 관리](using-workflowidentity-and-versioning.md).
 
 다음 예제에서는 이전 예제에서 컴파일된 `MortgageWorkflow_v1.1.xaml` 워크플로를 업데이트된 워크플로 정의를 사용하여 로드하고 다시 시작합니다.
 

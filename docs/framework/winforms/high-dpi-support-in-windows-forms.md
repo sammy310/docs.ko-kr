@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 075ea4c3-900c-4f8a-9dd2-13ea6804346b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8b5ad28fbfd668819b0bcab30c33892679b4bd8c
-ms.sourcegitcommit: b8ace47d839f943f785b89e2fff8092b0bf8f565
+ms.openlocfilehash: 3dbb5af9c5cf1d8796544592602c645584d21a04
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "55674921"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57711797"
 ---
 # <a name="high-dpi-support-in-windows-forms"></a>Windows Forms의 높은 DPI 지원
 
@@ -49,7 +49,7 @@ ms.locfileid: "55674921"
 
 - 모니터별 DPI 인식을 사용 하도록 설정 합니다 *app.config* 파일입니다.
 
-  새 Windows Forms 소개 [ `<System.Windows.Forms.ApplicationConfigurationSection>` ](../../../docs/framework/configure-apps/file-schema/winforms/index.md) 요소를 새 기능을 추가 하는 사용자 지정.NET Framework 4.7부터 지원 합니다. 높은 DPI를 지 원하는 새 기능을 활용 하려면 다음 응용 프로그램 구성 파일을 추가 합니다.   
+  새 Windows Forms 소개 [ `<System.Windows.Forms.ApplicationConfigurationSection>` ](../configure-apps/file-schema/winforms/index.md) 요소를 새 기능을 추가 하는 사용자 지정.NET Framework 4.7부터 지원 합니다. 높은 DPI를 지 원하는 새 기능을 활용 하려면 다음 응용 프로그램 구성 파일을 추가 합니다.   
 
   ```xml
   <System.Windows.Forms.ApplicationConfigurationSection>
@@ -84,7 +84,7 @@ ms.locfileid: "55674921"
 </System.Windows.Forms.ApplicationConfigurationSection>    
 ```
 
-개별 키와 값 목록은 참조 하세요 [Windows Forms 구성 요소 추가](../../../docs/framework/configure-apps/file-schema/winforms/windows-forms-add-configuration-element.md)합니다.
+개별 키와 값 목록은 참조 하세요 [Windows Forms 구성 요소 추가](../configure-apps/file-schema/winforms/windows-forms-add-configuration-element.md)합니다.
 
 ## <a name="new-dpi-change-events"></a>새 DPI 변경 이벤트
 
@@ -132,5 +132,5 @@ Console.WriteLine(AppDomain.CurrentDomain.SetupInformation.TargetFrameworkName);
 
 ## <a name="see-also"></a>참고자료
 
-- [Windows Forms 구성 요소를 추가합니다.](../../../docs/framework/configure-apps/file-schema/winforms/windows-forms-add-configuration-element.md)
-- [Windows Forms의 크기 및 배율 조정](../../../docs/framework/winforms/adjusting-the-size-and-scale-of-windows-forms.md)
+- [Windows Forms 구성 요소를 추가합니다.](../configure-apps/file-schema/winforms/windows-forms-add-configuration-element.md)
+- [Windows Forms의 크기 및 배율 조정](adjusting-the-size-and-scale-of-windows-forms.md)

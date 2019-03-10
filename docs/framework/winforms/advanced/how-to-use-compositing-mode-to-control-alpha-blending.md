@@ -9,12 +9,12 @@ helpviewer_keywords:
 - colors [Windows Forms], blending
 - colors [Windows Forms], controlling transparency
 ms.assetid: f331df2d-b395-4b0a-95be-24fec8c9bbb5
-ms.openlocfilehash: 2e00b0b9b22bc8dcdd1c63494f1bc5854bc4f033
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1b6ff14de7ff524b8af603ae5fa3969d5230b1a7
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54632012"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57714127"
 ---
 # <a name="how-to-use-compositing-mode-to-control-alpha-blending"></a>방법: 알파 혼합 조절 하려면 혼합 모드를 사용 합니다.
 다음 특성을 가진 오프 스크린 비트맵을 만들려고 하는 상황이 있을 수 있습니다.  
@@ -34,28 +34,28 @@ ms.locfileid: "54632012"
   
  다음 그림에서는 코드 예제의 출력을 보여줍니다. 줄임표는 백그라운드와 혼합 되어 있지만 서로 혼합 하지 되는 note 합니다.  
   
- ![복사 원본](../../../../docs/framework/winforms/advanced/media/sourcecopy.png "sourcecopy")  
+ ![복사 원본](./media/sourcecopy.png "sourcecopy")  
   
  이 문을 포함 하는 코드 예제:  
   
- [!code-csharp[System.Drawing.AlphaBlending#41](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.AlphaBlending/CS/Class1.cs#41)]
- [!code-vb[System.Drawing.AlphaBlending#41](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.AlphaBlending/VB/Class1.vb#41)]  
+ [!code-csharp[System.Drawing.AlphaBlending#41](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.AlphaBlending/CS/Class1.cs#41)]
+ [!code-vb[System.Drawing.AlphaBlending#41](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.AlphaBlending/VB/Class1.vb#41)]  
   
  배경 물론 서로 혼합 수에 있는 줄임표를 하려는 경우 해당 문을 다음과 변경:  
   
- [!code-csharp[System.Drawing.AlphaBlending#42](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.AlphaBlending/CS/Class1.cs#42)]
- [!code-vb[System.Drawing.AlphaBlending#42](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.AlphaBlending/VB/Class1.vb#42)]  
+ [!code-csharp[System.Drawing.AlphaBlending#42](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.AlphaBlending/CS/Class1.cs#42)]
+ [!code-vb[System.Drawing.AlphaBlending#42](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.AlphaBlending/VB/Class1.vb#42)]  
   
  다음 그림에서는 수정 된 코드의 출력을 보여줍니다.  
   
- ![소스 위에](../../../../docs/framework/winforms/advanced/media/sourceover.png "sourceover")  
+ ![소스 위에](./media/sourceover.png "sourceover")  
   
- [!code-csharp[System.Drawing.AlphaBlending#43](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.AlphaBlending/CS/Class1.cs#43)]
- [!code-vb[System.Drawing.AlphaBlending#43](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.AlphaBlending/VB/Class1.vb#43)]  
+ [!code-csharp[System.Drawing.AlphaBlending#43](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.AlphaBlending/CS/Class1.cs#43)]
+ [!code-vb[System.Drawing.AlphaBlending#43](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.AlphaBlending/VB/Class1.vb#43)]  
   
 ## <a name="compiling-the-code"></a>코드 컴파일  
  앞의 예제는 Windows forms에서 사용하도록 설계되었으며 <xref:System.Windows.Forms.PaintEventArgs>의 매개 변수인 `e`<xref:System.Windows.Forms.PaintEventHandler>가 필요합니다.  
   
 ## <a name="see-also"></a>참고자료
 - <xref:System.Drawing.Color.FromArgb%2A>
-- [선 및 채우기 알파 혼합](../../../../docs/framework/winforms/advanced/alpha-blending-lines-and-fills.md)
+- [선 및 채우기 알파 혼합](alpha-blending-lines-and-fills.md)

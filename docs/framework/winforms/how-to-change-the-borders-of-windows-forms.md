@@ -8,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - Windows Forms, changing the borders
 ms.assetid: b3d5fa56-80c6-4b10-b505-f9672307ed55
-ms.openlocfilehash: 5efda369b2059afd350fc947b706fb9f4c27ae14
-ms.sourcegitcommit: 2b986afe4ce9e13bbeec929c9737757eb61de60e
+ms.openlocfilehash: f188e14b304970840bfc35a592a445f68f9d7af7
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "56664447"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57713906"
 ---
 # <a name="how-to-change-the-borders-of-windows-forms"></a>방법: Windows Forms의 테두리 변경
 Windows Forms의 모양과 동작을 결정할 때 선택할 수 있는 여러 테두리 스타일이 있습니다. <xref:System.Windows.Forms.Form.FormBorderStyle%2A> 속성을 변경하여 폼의 크기 조정 동작을 제어할 수 있습니다. 또한 <xref:System.Windows.Forms.Form.FormBorderStyle%2A>을 설정하면 캡션 표시줄 표시 방식 및 표시되는 단추에 영향을 줍니다. 자세한 내용은 <xref:System.Windows.Forms.FormBorderStyle>을 참조하세요.  
@@ -47,4 +47,4 @@ Windows Forms의 모양과 동작을 결정할 때 선택할 수 있는 여러 �
 ## <a name="see-also"></a>참고자료
 - <xref:System.Windows.Forms.FormBorderStyle>
 - <xref:System.Windows.Forms.FormBorderStyle.FixedDialog>
-- [Windows Forms 시작](../../../docs/framework/winforms/getting-started-with-windows-forms.md)
+- [Windows Forms 시작](getting-started-with-windows-forms.md)

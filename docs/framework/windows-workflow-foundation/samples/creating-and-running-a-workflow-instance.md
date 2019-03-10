@@ -2,12 +2,12 @@
 title: 워크플로 인스턴스 만들기 및 실행
 ms.date: 03/30/2017
 ms.assetid: 19d27f47-0491-4569-8f53-51bc1d940e80
-ms.openlocfilehash: a86835155417692bc332bf51eb5825ce0b017b04
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d0c59946b6419e7088e3426d7ddd08537cfab5a4
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54527265"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57722011"
 ---
 # <a name="creating-and-running-a-workflow-instance"></a>워크플로 인스턴스 만들기 및 실행
 이 샘플에서는 워크플로 인스턴스를 실행하는 방법을 보여 줍니다. 동기적 실행 방법과 비동기적 실행 방법을 모두 보여 줍니다.  
@@ -30,4 +30,4 @@ ms.locfileid: "54527265"
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Execution\CreatingWorkflowInstances`  
   
 ## <a name="see-also"></a>참고자료
-- [WorkflowInvoker 및 WorkflowApplication 사용](../../../../docs/framework/windows-workflow-foundation/using-workflowinvoker-and-workflowapplication.md)
+- [WorkflowInvoker 및 WorkflowApplication 사용](../using-workflowinvoker-and-workflowapplication.md)

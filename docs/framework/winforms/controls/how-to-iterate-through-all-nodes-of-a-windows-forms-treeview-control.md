@@ -10,12 +10,12 @@ helpviewer_keywords:
 - TreeView control [Windows Forms], iterating through nodes
 - tree nodes in TreeView control [Windows Forms], iterating through
 ms.assetid: 427f8928-ebcf-4beb-887f-695b905d5134
-ms.openlocfilehash: c6345ab5e5d4f4e480bb2724e7a1d795de2bef5d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 306c1f684f1f4c2deb057f7d81c93856ee6189e7
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54651853"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57715397"
 ---
 # <a name="how-to-iterate-through-all-nodes-of-a-windows-forms-treeview-control"></a>방법: Windows Forms TreeView 컨트롤의 노드 전체 반복
 Windows Forms의 모든 노드에 검사할 유용한 경우가 <xref:System.Windows.Forms.TreeView> 노드 값에 대해 몇 가지 계산을 수행 하기 위해 제어 합니다. 트리의 각 컬렉션의 각 노드를 반복하는 재귀 프로시저(C# 및 C++의 재귀 메서드)를 사용하여 이 작업을 수행할 수 있습니다.  
@@ -124,5 +124,5 @@ Windows Forms의 모든 노드에 검사할 유용한 경우가 <xref:System.Win
     ```  
   
 ## <a name="see-also"></a>참고자료
-- [TreeView 컨트롤](../../../../docs/framework/winforms/controls/treeview-control-windows-forms.md)
+- [TreeView 컨트롤](treeview-control-windows-forms.md)
 - [재귀 프로시저](~/docs/visual-basic/programming-guide/language-features/procedures/recursive-procedures.md)

@@ -15,12 +15,12 @@ helpviewer_keywords:
 - snaplines
 - controls [Windows Forms], positioning
 ms.assetid: 4693977e-34a4-4f19-8221-68c3120c2b2b
-ms.openlocfilehash: 27a8a97b9fe10565303c4e91d00808940be46a4f
-ms.sourcegitcommit: 07c4368273b446555cb2c85397ea266b39d5fe50
+ms.openlocfilehash: 0503deb3fbb6dc157d8796580ece847bbfb8edfb
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/21/2019
-ms.locfileid: "56583474"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57723103"
 ---
 # <a name="how-to-position-controls-on-windows-forms"></a>방법: Windows Forms에서 컨트롤 위치
 컨트롤의 위치, Windows Forms 디자이너를 사용 하거나 지정 된 <xref:System.Windows.Forms.Control.Location%2A> 속성입니다.  
@@ -33,7 +33,7 @@ ms.locfileid: "56583474"
 -   컨트롤이 마우스를 사용 하 여 적절 한 위치로 끕니다.  
   
     > [!NOTE]
-    >  컨트롤을 선택 하 고 화살표를 사용 하 여 키를 보다 정확 하 게 위치를 이동 합니다. 또한 *맞춤선* 정확 하 게 양식의 컨트롤을 배치 하는 데 도움이 됩니다. 자세한 내용은 [연습: Snaplines를 사용 하 여 Forms Windows에서 컨트롤 정렬](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)합니다.  
+    >  컨트롤을 선택 하 고 화살표를 사용 하 여 키를 보다 정확 하 게 위치를 이동 합니다. 또한 *맞춤선* 정확 하 게 양식의 컨트롤을 배치 하는 데 도움이 됩니다. 자세한 내용은 [연습: Snaplines를 사용 하 여 Forms Windows에서 컨트롤 정렬](walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)합니다.  
   
 ### <a name="to-position-a-control-using-the-properties-window"></a>속성 창을 사용 하 여 컨트롤 위치  
   
@@ -96,12 +96,12 @@ ms.locfileid: "56583474"
     >  사용 하 여는 <xref:System.Windows.Forms.Control.Location%2A> 설정할 컨트롤의 X 및 Y 속성을 동시에 배치 합니다. 사용 하 여 컨트롤의 위치를 개별적으로 설정 하려면 <xref:System.Windows.Forms.Control.Left%2A> (**X**) 또는 <xref:System.Windows.Forms.Control.Top%2A> (**Y**) 하위 속성입니다. X 및 Y 좌표를 암시적으로 설정 하지 마십시오는 <xref:System.Drawing.Point> 이 구조는 단추의 좌표 복사본을 포함 하기 때문에 단추 위치를 나타내는 구조체입니다.  
   
 ## <a name="see-also"></a>참고자료
-- [Windows Forms 컨트롤](../../../../docs/framework/winforms/controls/index.md)
-- [연습: 맞춤선을 사용 하 여 Windows Forms에서 컨트롤 정렬](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)
-- [연습: TableLayoutPanel을 사용 하 여 Windows Forms에서 컨트롤 정렬](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)
-- [연습: FlowLayoutPanel을 사용 하 여 Windows Forms에서 컨트롤 정렬](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel.md)
-- [Windows Forms에서 컨트롤 정렬](../../../../docs/framework/winforms/controls/arranging-controls-on-windows-forms.md)
-- [개별 Windows Forms 컨트롤 레이블 지정 및 바로 가기 제공](../../../../docs/framework/winforms/controls/labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md)
-- [Windows Forms에 사용할 수 있는 컨트롤](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)
-- [기능별 Windows Forms 컨트롤](../../../../docs/framework/winforms/controls/windows-forms-controls-by-function.md)
+- [Windows Forms 컨트롤](index.md)
+- [연습: 맞춤선을 사용 하 여 Windows Forms에서 컨트롤 정렬](walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)
+- [연습: TableLayoutPanel을 사용 하 여 Windows Forms에서 컨트롤 정렬](walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)
+- [연습: FlowLayoutPanel을 사용 하 여 Windows Forms에서 컨트롤 정렬](walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel.md)
+- [Windows Forms에서 컨트롤 정렬](arranging-controls-on-windows-forms.md)
+- [개별 Windows Forms 컨트롤 레이블 지정 및 바로 가기 제공](labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md)
+- [Windows Forms에 사용할 수 있는 컨트롤](controls-to-use-on-windows-forms.md)
+- [기능별 Windows Forms 컨트롤](windows-forms-controls-by-function.md)
 - [방법: Windows Forms의 화면 위치 설정](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/52aha046(v=vs.100))

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - examples [Windows Forms], toolbars
 - ToolStrip control [Windows Forms], rendering
 ms.assetid: 88a804ba-679f-4ba3-938a-0dc396199c5b
-ms.openlocfilehash: a70503dd4def19dd303a7362c9ca4d92f1419ff6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 379cb8862ce5dda5cfffc625cc72906cf6a2c305
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54538507"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57721010"
 ---
 # <a name="how-to-create-and-set-a-custom-renderer-for-the-toolstrip-control-in-windows-forms"></a>방법: 만들기 및 사용자 지정 렌더러를 Windows Forms의 ToolStrip 컨트롤에 대 한 설정
 <xref:System.Windows.Forms.ToolStrip> 컨트롤 테마 및 스타일을 손쉽게 지원을 제공합니다. 설정 하 여 완전 한 사용자 지정 모양 및 동작 (모양 및 느낌)을 구현할 수 있습니다 합니다 <xref:System.Windows.Forms.ToolStrip.Renderer%2A?displayProperty=nameWithType> 속성 또는 <xref:System.Windows.Forms.ToolStripManager.Renderer%2A?displayProperty=nameWithType> 속성을 사용자 지정 렌더러.  
@@ -85,6 +85,6 @@ ms.locfileid: "54538507"
 - <xref:System.Windows.Forms.ToolStripManager.Renderer%2A>
 - <xref:System.Windows.Forms.ToolStripRenderer>
 - <xref:System.Windows.Forms.ToolStrip.RenderMode%2A>
-- [ToolStrip 컨트롤 개요](../../../../docs/framework/winforms/controls/toolstrip-control-overview-windows-forms.md)
-- [ToolStrip 컨트롤 아키텍처](../../../../docs/framework/winforms/controls/toolstrip-control-architecture.md)
-- [ToolStrip 기술 요약](../../../../docs/framework/winforms/controls/toolstrip-technology-summary.md)
+- [ToolStrip 컨트롤 개요](toolstrip-control-overview-windows-forms.md)
+- [ToolStrip 컨트롤 아키텍처](toolstrip-control-architecture.md)
+- [ToolStrip 기술 요약](toolstrip-technology-summary.md)

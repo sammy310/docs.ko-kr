@@ -5,15 +5,15 @@ helpviewer_keywords:
 - Windows Forms, mouse input
 - mouse [Windows Forms], input
 ms.assetid: 48fc5240-75a6-44bf-9fce-6aa21b49705a
-ms.openlocfilehash: ac6cdbdb690a1e5e6693f2e5d1c5d2236a643ddb
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7817b6a414f313cd2891fe0e124e230643b06e07
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54496009"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57725328"
 ---
 # <a name="how-mouse-input-works-in-windows-forms"></a>Windows Forms에서 마우스 입력이 작동하는 방식
-수신 및 마우스 입력을 처리는 모든 Windows 응용 프로그램의 중요 한 부분입니다. 응용 프로그램에서 작업을 수행 하려면 마우스 이벤트를 처리할 수도 있고 적중 테스트를 수행 하려면 마우스 위치 정보 또는 기타 작업을 사용할 수 있습니다. 또한 응용 프로그램에서 컨트롤 마우스 입력을 처리 하는 방식을 변경할 수 있습니다. 이 항목에서는 detail 및 마우스에 대 한 시스템 설정을 변경 하는 방법에서 이러한 마우스 이벤트를 설명 합니다. 마우스를 사용 하 여 제공 되는 데이터에 대 한 자세한 정보에 대 한 이벤트와 순서는 마우스 클릭 이벤트가 발생 하는, 참조 [Windows Forms의 마우스 이벤트](../../../docs/framework/winforms/mouse-events-in-windows-forms.md)합니다.  
+수신 및 마우스 입력을 처리는 모든 Windows 응용 프로그램의 중요 한 부분입니다. 응용 프로그램에서 작업을 수행 하려면 마우스 이벤트를 처리할 수도 있고 적중 테스트를 수행 하려면 마우스 위치 정보 또는 기타 작업을 사용할 수 있습니다. 또한 응용 프로그램에서 컨트롤 마우스 입력을 처리 하는 방식을 변경할 수 있습니다. 이 항목에서는 detail 및 마우스에 대 한 시스템 설정을 변경 하는 방법에서 이러한 마우스 이벤트를 설명 합니다. 마우스를 사용 하 여 제공 되는 데이터에 대 한 자세한 정보에 대 한 이벤트와 순서는 마우스 클릭 이벤트가 발생 하는, 참조 [Windows Forms의 마우스 이벤트](mouse-events-in-windows-forms.md)합니다.  
   
 ## <a name="mouse-location-and-hit-testing"></a>마우스 위치 및 적중 테스트  
  사용자가 마우스를 움직이면 운영 체제는 마우스 포인터를 이동 합니다. 마우스 포인터를 추적 하 고 포인터의 위치를 인식 하는 운영 체제는 핫 스폿 라는 단일 픽셀을 포함 합니다. 사용자가 마우스를 이동 하거나 마우스 단추를 누를 때 합니다 <xref:System.Windows.Forms.Control> 를 포함 하는 <xref:System.Windows.Forms.Cursor.HotSpot%2A> 적합 한 마우스 이벤트를 발생 시킵니다. 사용 하 여 마우스의 현재 위치를 가져올 수 있습니다는 <xref:System.Windows.Forms.MouseEventArgs.Location%2A> 의 속성을 <xref:System.Windows.Forms.MouseEventArgs> 마우스 이벤트를 처리 하는 경우 또는 사용 하 여를 <xref:System.Windows.Forms.Cursor.Position%2A> 의 속성을 <xref:System.Windows.Forms.Cursor> 클래스. 이후에 마우스 위치 정보를 사용 하 여 적중 테스트를 수행 하 고 마우스의 위치에 따라 작업을 수행할 수 있습니다. 적중 테스트 기능에 기본 제공 Windows Forms에서 여러 컨트롤 같은 합니다 <xref:System.Windows.Forms.ListView>, <xref:System.Windows.Forms.TreeView>를 <xref:System.Windows.Forms.MonthCalendar> 및 <xref:System.Windows.Forms.DataGridView> 컨트롤입니다. 적합 한 마우스 이벤트와 함께 사용 되는 <xref:System.Windows.Forms.Control.MouseHover> 예를 들어 적중 테스트에 매우 유용 응용 프로그램은 특정 작업을 수행 하는 경우를 결정 합니다.  
@@ -53,6 +53,6 @@ ms.locfileid: "54496009"
 |<xref:System.Windows.Forms.SystemInformation.MouseWheelScrollLines%2A>|마우스 휠을 돌릴 때 스크롤되는 줄 수를 가져옵니다.|  
   
 ## <a name="see-also"></a>참고자료
-- [Windows Forms 애플리케이션의 마우스 입력](../../../docs/framework/winforms/mouse-input-in-a-windows-forms-application.md)
-- [Windows Forms의 마우스 캡처](../../../docs/framework/winforms/mouse-capture-in-windows-forms.md)
-- [Windows Forms의 마우스 포인터](../../../docs/framework/winforms/mouse-pointers-in-windows-forms.md)
+- [Windows Forms 애플리케이션의 마우스 입력](mouse-input-in-a-windows-forms-application.md)
+- [Windows Forms의 마우스 캡처](mouse-capture-in-windows-forms.md)
+- [Windows Forms의 마우스 포인터](mouse-pointers-in-windows-forms.md)

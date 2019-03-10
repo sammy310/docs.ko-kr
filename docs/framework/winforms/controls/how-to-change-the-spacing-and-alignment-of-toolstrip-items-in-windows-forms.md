@@ -9,12 +9,12 @@ helpviewer_keywords:
 - examples [Windows Forms], toolbars
 - toolbars [Windows Forms], aligning items
 ms.assetid: cd483466-0f49-43df-addf-e2b5fcd64027
-ms.openlocfilehash: 2c9c60a3bfd78b7111b9cdff6a791d70c8e53c82
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 954087fa893baf3aa623c912efb081491304d3fb
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54685065"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57719444"
 ---
 # <a name="how-to-change-the-spacing-and-alignment-of-toolstrip-items-in-windows-forms"></a>방법: 간격 및 Windows Forms에서 ToolStrip 항목의 맞춤 변경
 합니다 <xref:System.Windows.Forms.ToolStrip> 컨트롤 크기 조정 간격 등의 레이아웃 기능을 완벽 하 게 지원 <xref:System.Windows.Forms.ToolStripItem> 의 서로 상대적인, 컨트롤 배열을 컨트롤에 <xref:System.Windows.Forms.ToolStrip>, 및 간격을 기준으로 컨트롤의는 <xref:System.Windows.Forms.ToolStrip>합니다.  
@@ -87,6 +87,6 @@ ms.locfileid: "54685065"
 - <xref:System.Windows.Forms.ToolStripItem.TextImageRelation%2A>
 - <xref:System.Windows.Forms.ToolStripItem.Placement%2A>
 - <xref:System.Windows.Forms.ToolStrip.CanOverflow%2A>
-- [ToolStrip 컨트롤 개요](../../../../docs/framework/winforms/controls/toolstrip-control-overview-windows-forms.md)
-- [ToolStrip 컨트롤 아키텍처](../../../../docs/framework/winforms/controls/toolstrip-control-architecture.md)
-- [ToolStrip 기술 요약](../../../../docs/framework/winforms/controls/toolstrip-technology-summary.md)
+- [ToolStrip 컨트롤 개요](toolstrip-control-overview-windows-forms.md)
+- [ToolStrip 컨트롤 아키텍처](toolstrip-control-architecture.md)
+- [ToolStrip 기술 요약](toolstrip-technology-summary.md)

@@ -12,12 +12,12 @@ helpviewer_keywords:
 - examples [Windows Forms], toolbars
 - ToolBar control [Windows Forms], adding drop-down menus
 ms.assetid: 78a58a8d-1041-4e38-9219-4096fa6a5c5c
-ms.openlocfilehash: 134cda4aa0042323e39966d60a7d51fda54cb954
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 347ca067a5ae5544351f29afe3ebcfe11d0b1e0f
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54711553"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57713253"
 ---
 # <a name="how-to-add-buttons-to-a-toolbar-control"></a>방법: ToolBar 컨트롤에 단추 추가
 > [!NOTE]
@@ -150,7 +150,7 @@ ms.locfileid: "54711553"
   
 ## <a name="see-also"></a>참고자료
 - <xref:System.Windows.Forms.ToolBar>
-- [방법: 도구 모음 단추의 아이콘 정의](../../../../docs/framework/winforms/controls/how-to-define-an-icon-for-a-toolbar-button.md)
-- [방법: Toolbar 단추의 메뉴 이벤트 트리거](../../../../docs/framework/winforms/controls/how-to-trigger-menu-events-for-toolbar-buttons.md)
-- [ToolBar 컨트롤 개요](../../../../docs/framework/winforms/controls/toolbar-control-overview-windows-forms.md)
-- [ToolBar 컨트롤](../../../../docs/framework/winforms/controls/toolbar-control-windows-forms.md)
+- [방법: 도구 모음 단추의 아이콘 정의](how-to-define-an-icon-for-a-toolbar-button.md)
+- [방법: Toolbar 단추의 메뉴 이벤트 트리거](how-to-trigger-menu-events-for-toolbar-buttons.md)
+- [ToolBar 컨트롤 개요](toolbar-control-overview-windows-forms.md)
+- [ToolBar 컨트롤](toolbar-control-windows-forms.md)

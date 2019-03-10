@@ -10,12 +10,12 @@ helpviewer_keywords:
 - colors [Windows Forms], creating linear gradients
 - gradients
 ms.assetid: 6c88e1cc-1217-4399-ac12-cb37592b9f01
-ms.openlocfilehash: d9ceb10eb5990742271c8d952d9293807c21677a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e47707d040cd7bf67008fab33ac482706963ce39
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54696297"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57725248"
 ---
 # <a name="how-to-create-a-linear-gradient"></a>방법: 선형 그라데이션 만들기
 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 가로, 세로 및 대각선 선형 그라데이션을 제공합니다. 기본적으로 선형 그라데이션에 색이 균일 하 게 변경 합니다. 그러나 균일 하지 않은 방식으로 색이 변경 되도록 선형 그라데이션을 사용자 지정할 수 있습니다.  
@@ -28,14 +28,14 @@ ms.locfileid: "54696297"
   
  다음 그림은 선, 타원 및 사각형을 나타냅니다. 참고는 색 그라데이션 반복 하는 가로 좌표는 200 개 이상 증가 합니다.  
   
- ![선형 그라데이션](../../../../docs/framework/winforms/advanced/media/cslineargradient1.png "cslineargradient1")  
+ ![선형 그라데이션](./media/cslineargradient1.png "cslineargradient1")  
   
 ### <a name="to-use-horizontal-linear-gradients"></a>가로 선형 그라데이션 사용 하려면  
   
 -   불투명 한 빨강 및 불투명 파란색 세 번째와 네 번째 인수로 각각 전달 합니다.  
   
-     [!code-csharp[System.Drawing.UsingaGradientBrush#21](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/CS/Class1.cs#21)]
-     [!code-vb[System.Drawing.UsingaGradientBrush#21](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/VB/Class1.vb#21)]  
+     [!code-csharp[System.Drawing.UsingaGradientBrush#21](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/CS/Class1.cs#21)]
+     [!code-vb[System.Drawing.UsingaGradientBrush#21](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/VB/Class1.vb#21)]  
   
  앞의 예제에서 200에서 가로 좌표 0 가로 좌표에서 이동 색 구성 요소 선형적으로 변경 합니다. 예를 들어, 첫 번째 좌표가 0과 200 사이의 중간 지점 0과 255 사이의 중간에 있는 파란색 구성 요소를 갖습니다.  
   
@@ -53,14 +53,14 @@ ms.locfileid: "54696297"
   
  다음 그림에서는 결과 타원 및 사각형을 보여 줍니다.  
   
- ![선형 그라데이션](../../../../docs/framework/winforms/advanced/media/cslineargradient2.png "cslineargradient2")  
+ ![선형 그라데이션](./media/cslineargradient2.png "cslineargradient2")  
   
 ### <a name="to-customize-linear-gradients"></a>선형 그라데이션 사용자 지정 하려면  
   
 -   불투명 한 검정 픽셀과 불투명 한 빨강의 세 번째 및 네 번째 인수로 각각 전달 합니다.  
   
-     [!code-csharp[System.Drawing.UsingaGradientBrush#22](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/CS/Class1.cs#22)]
-     [!code-vb[System.Drawing.UsingaGradientBrush#22](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/VB/Class1.vb#22)]  
+     [!code-csharp[System.Drawing.UsingaGradientBrush#22](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/CS/Class1.cs#22)]
+     [!code-vb[System.Drawing.UsingaGradientBrush#22](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/VB/Class1.vb#22)]  
   
  이전 예제의 그라데이션 가로; 되었습니다. 즉, 색 가로 줄에 따라 점진적으로 변경 합니다. 세로 그라데이션 및 대각선 그라데이션을 정의할 수 있습니다.  
   
@@ -68,15 +68,15 @@ ms.locfileid: "54696297"
   
  다음 그림에서는 줄 및 타원을 보여 줍니다. 참고는 타원 변경에서 색 점진적으로 하나를 따라 이동 하면 줄을 통과 하는 줄에 병렬 되 (0, 0) 및 (200, 100).  
   
- ![선형 그라데이션](../../../../docs/framework/winforms/advanced/media/cslineargradient3.png "cslineargradient3")  
+ ![선형 그라데이션](./media/cslineargradient3.png "cslineargradient3")  
   
 ### <a name="to-create-diagonal-linear-gradients"></a>대각선 선형 그라데이션을 만들려면  
   
 -   불투명 파란색 픽셀과 불투명 한 녹색 세 번째와 네 번째 인수로 각각 전달 합니다.  
   
-     [!code-csharp[System.Drawing.UsingaGradientBrush#23](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/CS/Class1.cs#23)]
-     [!code-vb[System.Drawing.UsingaGradientBrush#23](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/VB/Class1.vb#23)]  
+     [!code-csharp[System.Drawing.UsingaGradientBrush#23](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/CS/Class1.cs#23)]
+     [!code-vb[System.Drawing.UsingaGradientBrush#23](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/VB/Class1.vb#23)]  
   
 ## <a name="see-also"></a>참고자료
-- [그라데이션 브러시를 사용하여 도형 채우기](../../../../docs/framework/winforms/advanced/using-a-gradient-brush-to-fill-shapes.md)
-- [Windows Forms의 그래픽 및 그리기](../../../../docs/framework/winforms/advanced/graphics-and-drawing-in-windows-forms.md)
+- [그라데이션 브러시를 사용하여 도형 채우기](using-a-gradient-brush-to-fill-shapes.md)
+- [Windows Forms의 그래픽 및 그리기](graphics-and-drawing-in-windows-forms.md)

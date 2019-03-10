@@ -6,12 +6,12 @@ helpviewer_keywords:
 - BindingSource component [Windows Forms], binding to a type
 - types [Windows Forms], binding controls to
 ms.assetid: 5ab984b5-c2d0-4638-a572-1c84013e8746
-ms.openlocfilehash: 6c307c913fc8deb62bc18ca2c01bb8621d9b0642
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 29a28052b149f565e47a2e0366ed6845b83234ba
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54496441"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57712099"
 ---
 # <a name="how-to-bind-a-windows-forms-control-to-a-type-using-the-designer"></a>방법: 디자이너를 사용 하 여 형식에는 Windows Forms 컨트롤 바인딩
 데이터와 상호 작용하는 컨트롤을 빌드하는 경우 때로는 개체가 아니라 형식에 컨트롤을 바인딩해야 합니다. 데이터를 사용할 수 없지만 데이터 바인딩된 컨트롤에서 형식의 공용 인터페이스에서 가져온 데이터를 표시하려는 경우 일반적으로 디자인 타임에 컨트롤을 형식에 바인딩해야 합니다. 다음 절차에는 새로 만드는 방법을 보여 줍니다 <xref:System.Windows.Forms.BindingSource> 즉 형식, 바인딩 및 다음 형식의 속성 중 하나를 바인딩하는 방법의 <xref:System.Windows.Forms.TextBox.Text%2A> 의 속성을 <xref:System.Windows.Forms.TextBox>입니다.  
@@ -52,6 +52,6 @@ ms.locfileid: "54496441"
 4.  에 **DataSource UI 형식 편집기**, 노드를 확장 합니다를 <xref:System.Windows.Forms.BindingSource> 에 바인딩하려는 바인딩된 형식의 속성을 선택 하 고 이전에 추가 <xref:System.Windows.Forms.TextBox.Text%2A> 속성의는 <xref:System.Windows.Forms.TextBox>.  
   
 ## <a name="see-also"></a>참고자료
-- [BindingSource 구성 요소](../../../../docs/framework/winforms/controls/bindingsource-component.md)
-- [방법: 형식에는 Windows Forms 컨트롤 바인딩](../../../../docs/framework/winforms/controls/how-to-bind-a-windows-forms-control-to-a-type.md)
+- [BindingSource 구성 요소](bindingsource-component.md)
+- [방법: 형식에는 Windows Forms 컨트롤 바인딩](how-to-bind-a-windows-forms-control-to-a-type.md)
 - [Visual Studio에서 데이터에 컨트롤 바인딩](/visualstudio/data-tools/bind-controls-to-data-in-visual-studio)

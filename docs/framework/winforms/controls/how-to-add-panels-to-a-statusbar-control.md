@@ -10,18 +10,18 @@ helpviewer_keywords:
 - status bars [Windows Forms], adding panels
 - StatusBar control [Windows Forms], adding panels
 ms.assetid: 835e3902-288c-4c38-9d69-0696d8695009
-ms.openlocfilehash: d94f43d250e9b6bacca59e1e5e310ab6866ba4cc
-ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
+ms.openlocfilehash: 0c7c843fd3b837cb221e055bd96f735fb5e9c4ed
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "56441738"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57713291"
 ---
 # <a name="how-to-add-panels-to-a-statusbar-control"></a>방법: StatusBar 컨트롤에 패널 추가
 > [!IMPORTANT]
 >  <xref:System.Windows.Forms.StatusStrip> 및 <xref:System.Windows.Forms.ToolStripStatusLabel> 대체 컨트롤과 기능을 추가 합니다 <xref:System.Windows.Forms.StatusBar> 및 <xref:System.Windows.Forms.StatusBarPanel> 제어; 그러나를 <xref:System.Windows.Forms.StatusBar> 및 <xref:System.Windows.Forms.StatusBarPanel> 컨트롤 하는 경우 이전 버전과 호환성 및 향후 사용을 위해 유지 됩니다 있습니다 이 옵션을 선택 합니다.  
   
- 내에서 프로그래밍 가능 영역을 [StatusBar 컨트롤](../../../../docs/framework/winforms/controls/statusbar-control-windows-forms.md) 컨트롤의 인스턴스를 구성 합니다 <xref:System.Windows.Forms.StatusBarPanel> 클래스입니다. 추가 하 여 추가 된 <xref:System.Windows.Forms.StatusBar.StatusBarPanelCollection> 클래스입니다.  
+ 내에서 프로그래밍 가능 영역을 [StatusBar 컨트롤](statusbar-control-windows-forms.md) 컨트롤의 인스턴스를 구성 합니다 <xref:System.Windows.Forms.StatusBarPanel> 클래스입니다. 추가 하 여 추가 된 <xref:System.Windows.Forms.StatusBar.StatusBarPanelCollection> 클래스입니다.  
   
 ### <a name="to-add-panels-to-a-status-bar"></a>상태 표시줄 패널을 추가 하려면  
   
@@ -124,7 +124,7 @@ ms.locfileid: "56441738"
 - <xref:System.Windows.Forms.StatusBar>
 - <xref:System.Windows.Forms.ToolStripStatusLabel>
 - [컬렉션 편집기 대화 상자](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/xc4yyekt(v=vs.100))
-- [방법: 상태 표시줄 패널의 크기를 설정 합니다.](../../../../docs/framework/winforms/controls/how-to-set-the-size-of-status-bar-panels.md)
-- [연습: 런타임에 상태 표시줄 정보 업데이트](../../../../docs/framework/winforms/controls/walkthrough-updating-status-bar-information-at-run-time.md)
-- [방법: Windows Forms StatusBar 컨트롤에서 패널 클릭 확인](../../../../docs/framework/winforms/controls/determine-which-panel-wf-statusbar-control-was-clicked.md)
-- [StatusBar 컨트롤 개요](../../../../docs/framework/winforms/controls/statusbar-control-overview-windows-forms.md)
+- [방법: 상태 표시줄 패널의 크기를 설정 합니다.](how-to-set-the-size-of-status-bar-panels.md)
+- [연습: 런타임에 상태 표시줄 정보 업데이트](walkthrough-updating-status-bar-information-at-run-time.md)
+- [방법: Windows Forms StatusBar 컨트롤에서 패널 클릭 확인](determine-which-panel-wf-statusbar-control-was-clicked.md)
+- [StatusBar 컨트롤 개요](statusbar-control-overview-windows-forms.md)

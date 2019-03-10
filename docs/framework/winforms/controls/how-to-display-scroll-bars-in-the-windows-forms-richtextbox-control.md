@@ -6,12 +6,12 @@ helpviewer_keywords:
 - scroll bars [Windows Forms], displaying in controls
 - RichTextBox control [Windows Forms], displaying scroll bars
 ms.assetid: cdeb42e1-86e8-410c-ba46-18aec264ef5f
-ms.openlocfilehash: 6b6cfb8c21c8f3a48bb85a0591f3390d5b5575b4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 119cf736dfa7b8b8fce57b7e8fcb24dd09f01ce0
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54610398"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57716493"
 ---
 # <a name="how-to-display-scroll-bars-in-the-windows-forms-richtextbox-control"></a>방법: Windows에서 스크롤 막대 표시 Forms RichTextBox 컨트롤
 기본적으로 Windows Forms <xref:System.Windows.Forms.RichTextBox> 컨트롤 필요에 따라 가로 및 세로 스크롤 막대를 표시 합니다. 에 대 한 가능한 값이 7 개를 <xref:System.Windows.Forms.RichTextBox.ScrollBars%2A> 속성의는 <xref:System.Windows.Forms.RichTextBox> 아래 표에서 설명 하는 컨트롤입니다.  
@@ -32,7 +32,8 @@ ms.locfileid: "54610398"
     |<xref:System.Windows.Forms.RichTextBoxScrollBars.ForcedVertical>|항상 세로 스크롤 막대를 표시합니다. 텍스트 컨트롤의 길이 초과 하지 않는 스크롤 막대를 흐리게 표시 됩니다.|  
     |<xref:System.Windows.Forms.RichTextBoxScrollBars.ForcedBoth>|항상 세로 스크롤 막대를 표시합니다. 가로 스크롤 막대 때 표시 된 <xref:System.Windows.Forms.TextBoxBase.WordWrap%2A> 속성이 `false`합니다. 스크롤 막대 너비 또는 컨트롤의 길이 텍스트 크지 않으면 흐리게 표시 됩니다.|  
   
-3.  <xref:System.Windows.Forms.TextBoxBase.WordWrap%2A> 속성을 적절한 값으로 설정합니다.  
+3.  
+  <xref:System.Windows.Forms.TextBoxBase.WordWrap%2A> 속성을 적절한 값으로 설정합니다.  
   
     |값|설명|  
     |-----------|-----------------|  
@@ -42,5 +43,5 @@ ms.locfileid: "54610398"
 ## <a name="see-also"></a>참고자료
 - <xref:System.Windows.Forms.RichTextBoxScrollBars>
 - <xref:System.Windows.Forms.RichTextBox>
-- [RichTextBox 컨트롤](../../../../docs/framework/winforms/controls/richtextbox-control-windows-forms.md)
-- [Windows Forms에 사용할 수 있는 컨트롤](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)
+- [RichTextBox 컨트롤](richtextbox-control-windows-forms.md)
+- [Windows Forms에 사용할 수 있는 컨트롤](controls-to-use-on-windows-forms.md)

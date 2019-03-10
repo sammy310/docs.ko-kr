@@ -9,12 +9,12 @@ helpviewer_keywords:
 - bitmaps [Windows Forms], loading in Windows Forms applications
 - images [Windows Forms], displaying on Windows Forms
 ms.assetid: 5bc558d7-b326-4050-a834-b8600da0de95
-ms.openlocfilehash: d8c118d9561c0fe993228cb6bd8cebcd156d411d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a23026e0ac377294e3e4356d341c45d31b4ecd79
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54586724"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57724442"
 ---
 # <a name="how-to-draw-an-existing-bitmap-to-the-screen"></a>방법: 화면에 기존 비트맵 그리기
 쉽게 화면의 기존 이미지를 그릴 수 있습니다. 먼저 만들어야를 <xref:System.Drawing.Bitmap> 파일 이름을 사용 하는 비트맵 생성자를 사용 하 여 개체 <xref:System.Drawing.Bitmap.%23ctor%28System.String%29>합니다. 이 생성자는 여러 다른 파일 형식으로 BMP, GIF, JPEG, PNG 및 TIFF 등을 사용 하 여 이미지를 허용 합니다. 만든 후는 <xref:System.Drawing.Bitmap> 개체를 전달 <xref:System.Drawing.Bitmap> 개체를 <xref:System.Drawing.Graphics.DrawImage%2A> 메서드의 <xref:System.Drawing.Graphics> 개체입니다.  
@@ -24,14 +24,14 @@ ms.locfileid: "54586724"
   
  다음 그림에서는 지정된 된 위치에 그릴 비트맵을 보여 줍니다.  
   
- ![이미지 위치](../../../../docs/framework/winforms/advanced/media/csimageposition1.png "csimageposition1")  
+ ![이미지 위치](./media/csimageposition1.png "csimageposition1")  
   
- [!code-csharp[System.Drawing.WorkingWithImages#21](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.WorkingWithImages/CS/Class1.cs#21)]
- [!code-vb[System.Drawing.WorkingWithImages#21](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.WorkingWithImages/VB/Class1.vb#21)]  
+ [!code-csharp[System.Drawing.WorkingWithImages#21](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.WorkingWithImages/CS/Class1.cs#21)]
+ [!code-vb[System.Drawing.WorkingWithImages#21](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.WorkingWithImages/VB/Class1.vb#21)]  
   
 ## <a name="compiling-the-code"></a>코드 컴파일  
  앞의 예제는 Windows forms에서 사용하도록 설계되었으며 <xref:System.Windows.Forms.Control.Paint> 이벤트 처리기의 매개 변수인 <xref:System.Windows.Forms.PaintEventArgs> `e`가 필요합니다.  
   
 ## <a name="see-also"></a>참고자료
-- [Windows Forms의 그래픽 및 그리기](../../../../docs/framework/winforms/advanced/graphics-and-drawing-in-windows-forms.md)
-- [이미지, 비트맵, 아이콘 및 메타파일 사용](../../../../docs/framework/winforms/advanced/working-with-images-bitmaps-icons-and-metafiles.md)
+- [Windows Forms의 그래픽 및 그리기](graphics-and-drawing-in-windows-forms.md)
+- [이미지, 비트맵, 아이콘 및 메타파일 사용](working-with-images-bitmaps-icons-and-metafiles.md)

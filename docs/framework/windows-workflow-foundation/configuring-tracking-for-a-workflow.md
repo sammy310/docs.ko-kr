@@ -2,12 +2,12 @@
 title: 워크플로 추적 구성
 ms.date: 03/30/2017
 ms.assetid: 905adcc9-30a0-4918-acd6-563f86db988a
-ms.openlocfilehash: c9d38533d11497bd4404e4f8795d8a1ce9b17df9
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: c72221eca0d6a8281c68914a3c9eb0557139d329
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57491258"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57719405"
 ---
 # <a name="configuring-tracking-for-a-workflow"></a>워크플로 추적 구성
 
@@ -67,7 +67,7 @@ instance.Extensions.Add(trackingParticipant);
 또는 <xref:System.ServiceModel.WorkflowServiceHost>에서 호스트되는 워크플로 서비스의 경우 코드를 통해 <xref:System.Activities.Tracking.EtwTrackingParticipant> 동작 확장을 추가할 수 있습니다. 사용자 지정 추적 참가자를 추가하려면 다음 예제 코드와 같이 새 동작 확장을 만들어 <xref:System.ServiceModel.ServiceHost>에 추가합니다.
 
 > [!NOTE]
-> 사용자 지정 추적 참가자를 추가 하는 사용자 지정 동작 요소를 만드는 방법을 보여 주는 샘플 코드를 보려는 경우 참조를 [추적](../../../docs/framework/windows-workflow-foundation/samples/tracking.md) 샘플입니다.
+> 사용자 지정 추적 참가자를 추가 하는 사용자 지정 동작 요소를 만드는 방법을 보여 주는 샘플 코드를 보려는 경우 참조를 [추적](./samples/tracking.md) 샘플입니다.
 
 ```csharp
 ServiceHost svcHost = new ServiceHost(typeof(WorkflowService), new
@@ -142,7 +142,7 @@ if (null != workflowServiceHost)
 ### <a name="configuring-tracking-using-workflowinvoker"></a>WorkflowInvoker를 사용하여 추적 구성
 
 
-  <xref:System.Activities.WorkflowInvoker>를 사용하여 실행되는 워크플로에 대한 추적을 구성하려면 추적 공급자를 <xref:System.Activities.WorkflowInvoker> 인스턴스에 대한 확장으로 추가합니다. 다음 코드 예제는 합니다 [사용자 지정 추적](../../../docs/framework/windows-workflow-foundation/samples/custom-tracking.md) 샘플입니다.
+  <xref:System.Activities.WorkflowInvoker>를 사용하여 실행되는 워크플로에 대한 추적을 구성하려면 추적 공급자를 <xref:System.Activities.WorkflowInvoker> 인스턴스에 대한 확장으로 추가합니다. 다음 코드 예제는 합니다 [사용자 지정 추적](./samples/custom-tracking.md) 샘플입니다.
 
 ```csharp
 WorkflowInvoker invoker = new WorkflowInvoker(BuildSampleWorkflow());
@@ -186,7 +186,7 @@ WF 4는 추적 레코드를 ETW(Windows용 이벤트 추적) 세션에 기록하
 
 다음 이미지는 이벤트 뷰어의 추적 이벤트를 보여 줍니다.
 
-![추적 레코드 이벤트 뷰어에서 보여 주는](../../../docs/framework/windows-workflow-foundation/media/trackingeventviewer.PNG "TrackingEventViewer")
+![추적 레코드 이벤트 뷰어에서 보여 주는](./media/trackingeventviewer.PNG "TrackingEventViewer")
 
 ### <a name="registering-an-application-specific-provider-id"></a>응용 프로그램별 공급자 ID 등록
 

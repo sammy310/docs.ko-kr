@@ -11,16 +11,16 @@ helpviewer_keywords:
 ms.assetid: 1660f69c-5711-45d2-abc1-e25bc6779124
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f98f095f888a8ef3622fabbf4c4745af60e930e3
-ms.sourcegitcommit: 07c4368273b446555cb2c85397ea266b39d5fe50
+ms.openlocfilehash: cbcc04625a14ebc23cacfb567951bf8f76f14985
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/21/2019
-ms.locfileid: "56584059"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57725105"
 ---
 # <a name="how-to-bind-data-to-the-windows-forms-datagridview-control"></a>방법: Windows Forms DataGridView 컨트롤에 데이터 바인딩
 
-<xref:System.Windows.Forms.DataGridView> 컨트롤은 다양 한 데이터 소스에 바인딩할 수 있도록 표준 Windows Forms 데이터 바인딩 모델을 지원 합니다. 바인딩할 일반적으로 <xref:System.Windows.Forms.BindingSource> 데이터 소스와의 상호 작용을 관리 하는 합니다. <xref:System.Windows.Forms.BindingSource> 를 선택 하거나 데이터의 위치를 수정할 때 뛰어난 유연성을 제공 하는 모든 Windows Forms 데이터 원본이 될 수 있습니다. 데이터 원본에 대 한 자세한 합니다 <xref:System.Windows.Forms.DataGridView> 지원, 참조는 [DataGridView 컨트롤 개요](../../../../docs/framework/winforms/controls/datagridview-control-overview-windows-forms.md).  
+<xref:System.Windows.Forms.DataGridView> 컨트롤은 다양 한 데이터 소스에 바인딩할 수 있도록 표준 Windows Forms 데이터 바인딩 모델을 지원 합니다. 바인딩할 일반적으로 <xref:System.Windows.Forms.BindingSource> 데이터 소스와의 상호 작용을 관리 하는 합니다. <xref:System.Windows.Forms.BindingSource> 를 선택 하거나 데이터의 위치를 수정할 때 뛰어난 유연성을 제공 하는 모든 Windows Forms 데이터 원본이 될 수 있습니다. 데이터 원본에 대 한 자세한 합니다 <xref:System.Windows.Forms.DataGridView> 지원, 참조는 [DataGridView 컨트롤 개요](datagridview-control-overview-windows-forms.md).  
 
 Visual Studio는 광범위 한 DataGridView 컨트롤에 데이터 바인딩 지원 합니다. 자세한 내용은 [방법: 데이터 디자이너를 사용 하 여 Windows Forms DataGridView 컨트롤에 바인딩되도록](bind-data-to-the-datagrid-using-the-designer.md)합니다.  
 
@@ -44,8 +44,8 @@ DataGridView 컨트롤을 데이터에 연결:
   
 채우기는 `connectionString` SQL Server Northwind 샘플 데이터베이스 연결에 대 한 값을 사용 하 여 예제에서 변수입니다. Windows 인증, 통합 보안은 연결 문자열에 암호를 저장 하는 보다 데이터베이스에 연결 하는 더욱 안전한 방식입니다. 연결 보안에 대 한 자세한 내용은 참조 하세요. [연결 정보 보호](../../data/adonet/protecting-connection-information.md)합니다.  
 
-[!code-csharp[System.Windows.Forms.DataGridViewBoundEditable](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewBoundEditable/CS/datagridviewboundeditable.cs)]
-[!code-vb[System.Windows.Forms.DataGridViewBoundEditable](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewBoundEditable/VB/datagridviewboundeditable.vb)]  
+[!code-csharp[System.Windows.Forms.DataGridViewBoundEditable](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewBoundEditable/CS/datagridviewboundeditable.cs)]
+[!code-vb[System.Windows.Forms.DataGridViewBoundEditable](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewBoundEditable/VB/datagridviewboundeditable.vb)]  
   
 ## <a name="see-also"></a>참고자료
 - <xref:System.Windows.Forms.DataGridView>

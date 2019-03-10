@@ -9,12 +9,12 @@ helpviewer_keywords:
 - keyboard events
 - events [Windows Forms], keyboard
 ms.assetid: d3f3e14b-a459-4ee6-9875-8957e34f8ee9
-ms.openlocfilehash: 93bdcbc8b23813d3c8c80ca720c54928fca11aec
-ms.sourcegitcommit: 2b986afe4ce9e13bbeec929c9737757eb61de60e
+ms.openlocfilehash: 6afa68295c0119cd77b91185abcf2fb9cb407590
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "56665253"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57719340"
 ---
 # <a name="using-keyboard-events"></a>키보드 이벤트 사용
 대부분 Windows Forms 프로그램에서는 키보드 이벤트를 처리하는 방식으로 키보드 입력을 처리합니다. 이 항목에서는 각 이벤트를 사용하는 시기 및 각 이벤트에 대해 제공되는 데이터에 대한 세부 정보를 포함하여 키보드 이벤트에 대한 개요를 제공합니다.  도 참조 하세요 [이벤트 처리기 개요 (Windows Forms)](event-handlers-overview-windows-forms.md) 하 고 [이벤트 개요 (Windows Forms)](events-overview-windows-forms.md)합니다.  
@@ -28,7 +28,7 @@ ms.locfileid: "56665253"
   
 -   사용자가 키를 놓을 때 한 번 발생하는 <xref:System.Windows.Forms.Control.KeyUp> 이벤트.  
   
- 사용자가 키를 누를 때 Windows Forms에서는 키보드 메시지가 문자 키 또는 물리적 키를 지정하는지에 따라 발생할 이벤트를 결정합니다. 문자 및 물리적 키에 대 한 자세한 내용은 참조 하세요. [키보드 입력 작동 방식](../../../docs/framework/winforms/how-keyboard-input-works.md)합니다.  
+ 사용자가 키를 누를 때 Windows Forms에서는 키보드 메시지가 문자 키 또는 물리적 키를 지정하는지에 따라 발생할 이벤트를 결정합니다. 문자 및 물리적 키에 대 한 자세한 내용은 참조 하세요. [키보드 입력 작동 방식](how-keyboard-input-works.md)합니다.  
   
  다음 표에서는 세 가지 키보드 이벤트에 대해 설명합니다.  
   
@@ -39,6 +39,6 @@ ms.locfileid: "56665253"
 |<xref:System.Windows.Forms.Control.KeyUp>|이 이벤트는 사용자가 물리적 키를 놓을 때 발생합니다.|<xref:System.Windows.Forms.Control.KeyUp>에 대한 처리기는 다음을 수신합니다.<br /><br /> <ul><li><xref:System.Windows.Forms.KeyEventArgs> 매개 변수:<br /><br /> <ul><li>물리적 키보드 단추를 지정하는 <xref:System.Windows.Forms.KeyEventArgs.KeyCode%2A> 속성을 제공.</li><li><xref:System.Windows.Forms.KeyEventArgs.Modifiers%2A> 속성(SHIFT, CTRL 또는 ALT).</li><li>키 코드 및 한정자를 결합하는 <xref:System.Globalization.SortKey.KeyData%2A> 속성.</li></ul></li></ul>|  
   
 ## <a name="see-also"></a>참고자료
-- [Windows Forms 응용 프로그램의 키보드 입력](../../../docs/framework/winforms/keyboard-input-in-a-windows-forms-application.md)
-- [키보드 입력 작동 방식](../../../docs/framework/winforms/how-keyboard-input-works.md)
-- [Windows Forms 애플리케이션의 마우스 입력](../../../docs/framework/winforms/mouse-input-in-a-windows-forms-application.md)
+- [Windows Forms 응용 프로그램의 키보드 입력](keyboard-input-in-a-windows-forms-application.md)
+- [키보드 입력 작동 방식](how-keyboard-input-works.md)
+- [Windows Forms 애플리케이션의 마우스 입력](mouse-input-in-a-windows-forms-application.md)

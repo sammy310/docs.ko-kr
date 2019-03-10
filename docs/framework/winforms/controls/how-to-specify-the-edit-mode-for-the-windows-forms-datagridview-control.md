@@ -8,12 +8,12 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], edit mode
 - data grids [Windows Forms], edit mode
 ms.assetid: 93e117e8-94c4-411b-ba31-645e475ed85c
-ms.openlocfilehash: fcb2014cc92a8a3e4afe7c3ed0365fd5947c70f3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 00c5bb85eb1b238371e58a631d90b69a41c49140
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54628268"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57725309"
 ---
 # <a name="how-to-specify-the-edit-mode-for-the-windows-forms-datagridview-control"></a>방법: Windows Forms DataGridView 컨트롤에 대 한 편집 모드 지정
 기본적으로 사용자의 현재 내용을 편집할 수 있습니다 <xref:System.Windows.Forms.DataGridView> 에 입력 하거나 F2 키를 눌러 텍스트 상자 셀입니다. 그러면 셀 편집 모드에서 다음 조건이 모두 충족 될 경우:  
@@ -22,7 +22,7 @@ ms.locfileid: "54628268"
   
 -   <xref:System.Windows.Forms.DataGridView> 컨트롤을 사용할 수 있습니다.  
   
--   <xref:System.Windows.Forms.DataGridView.EditMode%2A> 속성 값이 <xref:System.Windows.Forms.DataGridViewEditMode.EditProgrammatically>가 아닌 경우  
+-   합니다 <xref:System.Windows.Forms.DataGridView.EditMode%2A> 속성 값이 <xref:System.Windows.Forms.DataGridViewEditMode.EditProgrammatically>합니다.  
   
 -   합니다 `ReadOnly` 셀, 행, 열 및 컨트롤의 속성은 모두 설정 됩니다. `false`합니다.  
   
@@ -34,17 +34,18 @@ ms.locfileid: "54628268"
   
 -   설정 된 <xref:System.Windows.Forms.DataGridView.EditMode%2A?displayProperty=nameWithType> 속성을 적절 한 <xref:System.Windows.Forms.DataGridViewEditMode> 열거형입니다.  
   
-     [!code-csharp[System.Windows.Forms.DataGridViewMisc#067](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/CS/datagridviewmisc.cs#067)]
-     [!code-vb[System.Windows.Forms.DataGridViewMisc#067](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/VB/datagridviewmisc.vb#067)]  
+     [!code-csharp[System.Windows.Forms.DataGridViewMisc#067](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/CS/datagridviewmisc.cs#067)]
+     [!code-vb[System.Windows.Forms.DataGridViewMisc#067](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/VB/datagridviewmisc.vb#067)]  
   
 ## <a name="compiling-the-code"></a>코드 컴파일  
  이 예제에는 다음 사항이 필요합니다.  
   
 -   `dataGridView1`이라는 <xref:System.Windows.Forms.DataGridView> 컨트롤  
   
--   <xref:System> 및 <xref:System.Windows.Forms> 어셈블리에 대한 참조  
+-   
+  <xref:System> 및 <xref:System.Windows.Forms> 어셈블리에 대한 참조  
   
 ## <a name="see-also"></a>참고자료
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridView.EditMode%2A?displayProperty=nameWithType>
-- [Windows Forms DataGridView 컨트롤의 데이터 입력](../../../../docs/framework/winforms/controls/data-entry-in-the-windows-forms-datagridview-control.md)
+- [Windows Forms DataGridView 컨트롤의 데이터 입력](data-entry-in-the-windows-forms-datagridview-control.md)

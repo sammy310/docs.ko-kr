@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - managed HTML DOM [Windows Forms], changing styles on elements
 ms.assetid: 154e8d9f-3e2d-4e8b-a6f3-c85a070e9cc1
-ms.openlocfilehash: ad91f7591e2fa07605fe4f7ac026b7c969ab7ef0
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: a1abfaeab735746edbf089d576dc6f56dc4a6eea
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57678934"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57712775"
 ---
 # <a name="how-to-change-styles-on-an-element-in-the-managed-html-document-object-model"></a>방법: 관리 되는 HTML 문서 개체 모델의 요소에에서 대 한 스타일 변경
 
@@ -63,20 +63,19 @@ ms.locfileid: "57678934"
 6. 프로젝트의 코드 파일에 다음 코드를 추가 합니다.
 
     > [!IMPORTANT]
-    > 있는지 확인 합니다 `webBrowser1_DocumentCompleted` 이벤트 처리기에 대 한 수신기로 구성 된는 <xref:System.Windows.Forms.WebBrowser.DocumentCompleted> 이벤트입니다. Visual Studio에서 두 번 클릭 합니다 <xref:System.Windows.Forms.WebBrowser> 제어; 텍스트 편집기에서 수신기를 프로그래밍 방식으로 구성 합니다.
-
-    [!code-csharp[ManagedDOMStyles#2](../../../../samples/snippets/csharp/VS_Snippets_Winforms/ManagedDOMStyles/CS/Form1.cs#2)]
-    [!code-vb[ManagedDOMStyles#2](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/ManagedDOMStyles/VB/Form1.vb#2)]
-
-7. 프로젝트를 실행합니다. 커서를 첫 번째 실행 `DIV` 코드의 결과를 관찰 합니다.
-
-## <a name="example"></a>예제
-
-다음 코드 예제에 대 한 전체 코드를 보여 줍니다.는 `StyleGenerator` 기존 스타일 값을 구문 분석 하는 클래스 지원 추가, 변경 및 스타일을 제거 하 고 요청 된 변경 내용으로 새 스타일 값을 반환 합니다.
-
-[!code-csharp[ManagedDOMStyles#1](../../../../samples/snippets/csharp/VS_Snippets_Winforms/ManagedDOMStyles/CS/StyleGenerator.cs#1)]
-[!code-vb[ManagedDOMStyles#1](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/ManagedDOMStyles/VB/StyleGenerator.vb#1)]
-
+    >  있는지 확인 합니다 `webBrowser1_DocumentCompleted` 이벤트 처리기에 대 한 수신기로 구성 된는 <xref:System.Windows.Forms.WebBrowser.DocumentCompleted> 이벤트입니다. Visual Studio에서 두 번 클릭 합니다 <xref:System.Windows.Forms.WebBrowser> 제어; 텍스트 편집기에서 수신기를 프로그래밍 방식으로 구성 합니다.  
+  
+     [!code-csharp[ManagedDOMStyles#2](~/samples/snippets/csharp/VS_Snippets_Winforms/ManagedDOMStyles/CS/Form1.cs#2)]
+     [!code-vb[ManagedDOMStyles#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/ManagedDOMStyles/VB/Form1.vb#2)]  
+  
+7.  프로젝트를 실행합니다. 커서를 첫 번째 실행 `DIV` 코드의 결과를 관찰 합니다.  
+  
+## <a name="example"></a>예제  
+ 다음 코드 예제에 대 한 전체 코드를 보여 줍니다.는 `StyleGenerator` 기존 스타일 값을 구문 분석 하는 클래스 지원 추가, 변경 및 스타일을 제거 하 고 요청 된 변경 내용으로 새 스타일 값을 반환 합니다.  
+  
+ [!code-csharp[ManagedDOMStyles#1](~/samples/snippets/csharp/VS_Snippets_Winforms/ManagedDOMStyles/CS/StyleGenerator.cs#1)]
+ [!code-vb[ManagedDOMStyles#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/ManagedDOMStyles/VB/StyleGenerator.vb#1)]  
+  
 ## <a name="see-also"></a>참고자료
 
 - <xref:System.Windows.Forms.HtmlElement>

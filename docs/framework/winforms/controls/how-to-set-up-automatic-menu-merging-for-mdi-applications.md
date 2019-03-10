@@ -5,12 +5,12 @@ helpviewer_keywords:
 - MenuStrip [Windows Forms], merging
 - Merging [Windows Forms], automatic menu
 ms.assetid: 55e32cad-1141-4a56-aa33-d9543ca3d393
-ms.openlocfilehash: 3aeaf9ee4818b6689905c10d2bd46fc887609c35
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 152db39e7c947d5a49eaed81b00d13c02aa8014c
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54549826"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57719731"
 ---
 # <a name="how-to-set-up-automatic-menu-merging-for-mdi-applications"></a>방법: MDI 응용 프로그램의 자동 메뉴 병합 설정
 다음 절차 (MDI) 다중 문서 인터페이스 응용 프로그램에 자동 병합 설정에 대 한 기본 단계를 제공 <xref:System.Windows.Forms.MenuStrip>합니다.  
@@ -34,4 +34,4 @@ ms.locfileid: "54549826"
 ## <a name="see-also"></a>참고자료
 - <xref:System.Windows.Forms.MenuStrip>
 - <xref:System.Windows.Forms.ToolStripMenuItem>
-- [MenuStrip 컨트롤 개요](../../../../docs/framework/winforms/controls/menustrip-control-overview-windows-forms.md)
+- [MenuStrip 컨트롤 개요](menustrip-control-overview-windows-forms.md)

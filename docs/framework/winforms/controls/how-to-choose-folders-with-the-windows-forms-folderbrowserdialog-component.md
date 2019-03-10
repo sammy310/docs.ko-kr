@@ -12,12 +12,12 @@ helpviewer_keywords:
 - folders [Windows Forms], choosing
 - directories [Windows Forms], selecting
 ms.assetid: 4593670e-7c7d-4661-b46b-4ffb63258adb
-ms.openlocfilehash: 7055875f25aa0f39feb2d944f4b6684c6ae5d9a5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ea5fdc9708d8e896eb66fa42f64cac672baff08b
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54614695"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57724559"
 ---
 # <a name="how-to-choose-folders-with-the-windows-forms-folderbrowserdialog-component"></a>방법: Windows Forms FolderBrowserDialog 구성 요소를 사용 하 여 폴더를 선택 합니다.
 종종 Windows 애플리케이션을 만드는 경우 파일 집합을 저장하기 위해 사용자에게 폴더를 선택하도록 요구하는 메시지를 매우 빈번하게 표시해야 합니다. Windows Forms <xref:System.Windows.Forms.FolderBrowserDialog> 구성 요소를 사용 하면 쉽게이 작업을 수행할 수 있습니다.  
@@ -62,11 +62,11 @@ ms.locfileid: "54614695"
     ```  
   
     > [!IMPORTANT]
-    >  이 클래스를 사용 하려면 어셈블리 권한 수준에서 부여한 필요 합니다 <xref:System.Security.Permissions.FileIOPermissionAttribute.PathDiscovery%2A> 일부인 속성의는 <xref:System.Security.Permissions.FileIOPermissionAccess> 열거형입니다. 부분 신뢰 컨텍스트에서 실행하는 경우 프로세스가 권한 부족으로 인해 예외를 throw할 수 있습니다. 자세한 내용은 [코드 액세스 보안 기본 사항](../../../../docs/framework/misc/code-access-security-basics.md)을 참조하세요.  
+    >  이 클래스를 사용 하려면 어셈블리 권한 수준에서 부여한 필요 합니다 <xref:System.Security.Permissions.FileIOPermissionAttribute.PathDiscovery%2A> 일부인 속성의는 <xref:System.Security.Permissions.FileIOPermissionAccess> 열거형입니다. 부분 신뢰 컨텍스트에서 실행하는 경우 프로세스가 권한 부족으로 인해 예외를 throw할 수 있습니다. 자세한 내용은 [코드 액세스 보안 기본 사항](../../misc/code-access-security-basics.md)을 참조하세요.  
   
- 파일을 저장 하는 방법에 대 한 자세한 내용은 [방법: SaveFileDialog 구성 요소를 사용 하 여 파일 저장](../../../../docs/framework/winforms/controls/how-to-save-files-using-the-savefiledialog-component.md)합니다.  
+ 파일을 저장 하는 방법에 대 한 자세한 내용은 [방법: SaveFileDialog 구성 요소를 사용 하 여 파일 저장](how-to-save-files-using-the-savefiledialog-component.md)합니다.  
   
 ## <a name="see-also"></a>참고자료
 - <xref:System.Windows.Forms.FolderBrowserDialog>
-- [FolderBrowserDialog 구성 요소 개요(Windows Forms)](../../../../docs/framework/winforms/controls/folderbrowserdialog-component-overview-windows-forms.md)
-- [FolderBrowserDialog 구성 요소](../../../../docs/framework/winforms/controls/folderbrowserdialog-component-windows-forms.md)
+- [FolderBrowserDialog 구성 요소 개요(Windows Forms)](folderbrowserdialog-component-overview-windows-forms.md)
+- [FolderBrowserDialog 구성 요소](folderbrowserdialog-component-windows-forms.md)

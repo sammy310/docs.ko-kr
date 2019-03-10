@@ -9,12 +9,12 @@ helpviewer_keywords:
 - shapes [Windows Forms], filling with patterns
 - brushes [Windows Forms], using hatch brushes
 ms.assetid: 9c8300ff-187b-404f-af1f-ebd499f5b16f
-ms.openlocfilehash: 3fb5b443aac710a5490a238e2a571ed899dec463
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 885f0d22e83767bda3ef76c54f0857dd2a148344
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54512396"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57719717"
 ---
 # <a name="how-to-fill-a-shape-with-a-hatch-pattern"></a>방법: 빗살 무늬로 도형 채우기
 빗살 무늬 두 색으로에서 이루어집니다: 배경색 및 배경 위에 패턴을 형성 하는 줄에 대 한 하나입니다. 빗살 무늬를 사용 하 여 닫힌된 도형 채우기를 사용 하 여를 <xref:System.Drawing.Drawing2D.HatchBrush> 개체입니다. 다음 예제에서는 빗살 무늬를 사용 하 여 타원을 채우는 방법을 보여 줍니다.  
@@ -36,13 +36,13 @@ ms.locfileid: "54512396"
   
  다음 그림은 채워진된 타원을 보여 줍니다.  
   
- ![패턴을 해치](../../../../docs/framework/winforms/advanced/media/hatch1.png "hatch1")  
+ ![패턴을 해치](./media/hatch1.png "hatch1")  
   
- [!code-csharp[System.Drawing.UsingABrush#41](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingABrush/CS/Class1.cs#41)]
- [!code-vb[System.Drawing.UsingABrush#41](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingABrush/VB/Class1.vb#41)]  
+ [!code-csharp[System.Drawing.UsingABrush#41](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingABrush/CS/Class1.cs#41)]
+ [!code-vb[System.Drawing.UsingABrush#41](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingABrush/VB/Class1.vb#41)]  
   
 ## <a name="compiling-the-code"></a>코드 컴파일  
  앞의 예제는 Windows forms에서 사용하도록 설계되었으며 <xref:System.Windows.Forms.PaintEventArgs> 이벤트 처리기의 매개 변수인 `e`<xref:System.Windows.Forms.Control.Paint>가 필요합니다.  
   
 ## <a name="see-also"></a>참고자료
-- [브러시를 사용하여 도형 채우기](../../../../docs/framework/winforms/advanced/using-a-brush-to-fill-shapes.md)
+- [브러시를 사용하여 도형 채우기](using-a-brush-to-fill-shapes.md)

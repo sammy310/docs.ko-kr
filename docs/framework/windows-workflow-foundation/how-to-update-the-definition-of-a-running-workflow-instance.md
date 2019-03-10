@@ -5,41 +5,41 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 26dfac36-ae23-4909-9867-62495b55fb5e
-ms.openlocfilehash: abd25c21cf98bb0ec426ef772f8cd26baa4e8e47
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: d3ff9d217d085e3afe5171cce9d80f8dbc32ff36
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57467144"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57722908"
 ---
 # <a name="how-to-update-the-definition-of-a-running-workflow-instance"></a>방법: 실행 중인 워크플로 인스턴스의 정의 업데이트
 
-동적 업데이트는 워크플로 응용 프로그램 개발자가 지속형 워크플로 인스턴스의 워크플로 정의를 업데이트하기 위한 메커니즘을 제공합니다. 필요한 변경을 통해 버그 수정 또는 새 요구 사항을 구현하거나 예기치 않은 변경 내용을 수용할 수 있습니다. 이 자습서의에서이 단계에서는 동적 업데이트를 사용 하 여 지속형된 인스턴스를 수정 하는 방법에 설명 합니다 `v1` 에 도입 된 새 기능에 맞게 숫자 추측 워크플로의 [방법: 여러 버전을 워크플로-Side-by-side의 호스트](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md)합니다.
+동적 업데이트는 워크플로 응용 프로그램 개발자가 지속형 워크플로 인스턴스의 워크플로 정의를 업데이트하기 위한 메커니즘을 제공합니다. 필요한 변경을 통해 버그 수정 또는 새 요구 사항을 구현하거나 예기치 않은 변경 내용을 수용할 수 있습니다. 이 자습서의에서이 단계에서는 동적 업데이트를 사용 하 여 지속형된 인스턴스를 수정 하는 방법에 설명 합니다 `v1` 에 도입 된 새 기능에 맞게 숫자 추측 워크플로의 [방법: 여러 버전을 워크플로-Side-by-side의 호스트](how-to-host-multiple-versions-of-a-workflow-side-by-side.md)합니다.
 
 > [!NOTE]
 > 완료 된 버전을 다운로드 하거나이 자습서의 비디오 연습을 보려면을 참조 하세요 [Windows Workflow Foundation(wf45 ()-초보자를 위한 자습서](https://go.microsoft.com/fwlink/?LinkID=248976)합니다.
 
 ## <a name="in-this-topic"></a>항목 내용
 
-- [CreateUpdateMaps 프로젝트를 만들려면](../../../docs/framework/windows-workflow-foundation/how-to-update-the-definition-of-a-running-workflow-instance.md#BKMK_CreateProject)
+- [CreateUpdateMaps 프로젝트를 만들려면](how-to-update-the-definition-of-a-running-workflow-instance.md#BKMK_CreateProject)
 
-- [StateMachineNumberGuessWorkflow를 업데이트](../../../docs/framework/windows-workflow-foundation/how-to-update-the-definition-of-a-running-workflow-instance.md#BKMK_StateMachine)
+- [StateMachineNumberGuessWorkflow를 업데이트](how-to-update-the-definition-of-a-running-workflow-instance.md#BKMK_StateMachine)
 
-- [FlowchartNumberGuessWorkflow를 업데이트](../../../docs/framework/windows-workflow-foundation/how-to-update-the-definition-of-a-running-workflow-instance.md#BKMK_Flowchart)
+- [FlowchartNumberGuessWorkflow를 업데이트](how-to-update-the-definition-of-a-running-workflow-instance.md#BKMK_Flowchart)
 
-- [SequentialNumberGuessWorkflow를 업데이트](../../../docs/framework/windows-workflow-foundation/how-to-update-the-definition-of-a-running-workflow-instance.md#BKMK_Sequential)
+- [SequentialNumberGuessWorkflow를 업데이트](how-to-update-the-definition-of-a-running-workflow-instance.md#BKMK_Sequential)
 
-- [빌드 및 CreateUpdateMaps 응용 프로그램을 실행 하려면](../../../docs/framework/windows-workflow-foundation/how-to-update-the-definition-of-a-running-workflow-instance.md#BKMK_CreateUpdateMaps)
+- [빌드 및 CreateUpdateMaps 응용 프로그램을 실행 하려면](how-to-update-the-definition-of-a-running-workflow-instance.md#BKMK_CreateUpdateMaps)
 
-- [업데이트 된 워크플로 어셈블리를 빌드](../../../docs/framework/windows-workflow-foundation/how-to-update-the-definition-of-a-running-workflow-instance.md#BKMK_BuildAssembly)
+- [업데이트 된 워크플로 어셈블리를 빌드](how-to-update-the-definition-of-a-running-workflow-instance.md#BKMK_BuildAssembly)
 
-- [WorkflowVersionMap을 새 버전으로 업데이트 하려면](../../../docs/framework/windows-workflow-foundation/how-to-update-the-definition-of-a-running-workflow-instance.md#BKMK_UpdateWorkflowVersionMap)
+- [WorkflowVersionMap을 새 버전으로 업데이트 하려면](how-to-update-the-definition-of-a-running-workflow-instance.md#BKMK_UpdateWorkflowVersionMap)
 
-- [동적 업데이트를 적용 하기](../../../docs/framework/windows-workflow-foundation/how-to-update-the-definition-of-a-running-workflow-instance.md#BKMK_ApplyUpdate)
+- [동적 업데이트를 적용 하기](how-to-update-the-definition-of-a-running-workflow-instance.md#BKMK_ApplyUpdate)
 
-- [업데이트 된 워크플로 사용 하 여 응용 프로그램을 실행 하려면](../../../docs/framework/windows-workflow-foundation/how-to-update-the-definition-of-a-running-workflow-instance.md#BKMK_BuildAndRun)
+- [업데이트 된 워크플로 사용 하 여 응용 프로그램을 실행 하려면](how-to-update-the-definition-of-a-running-workflow-instance.md#BKMK_BuildAndRun)
 
-- [이전 버전의 워크플로 시작 하도록 설정 하려면](../../../docs/framework/windows-workflow-foundation/how-to-update-the-definition-of-a-running-workflow-instance.md#BKMK_StartPreviousVersions)
+- [이전 버전의 워크플로 시작 하도록 설정 하려면](how-to-update-the-definition-of-a-running-workflow-instance.md#BKMK_StartPreviousVersions)
 
 ### <a name="BKMK_CreateProject"></a> CreateUpdateMaps 프로젝트를 만들려면
 
@@ -257,7 +257,7 @@ ms.locfileid: "57467144"
     StateMachine sm = wf.Implementation as StateMachine;
     ```
 
-3. 다음으로 업데이트 하는 두 식이 `WriteLine` 에 대 한 업데이트 일치 하도록 해당 사용자의 추측이 너무 높거나 너무 낮은 인지 여부를 표시 하는 활동 [방법: 여러 버전을 워크플로-Side-by-side의 호스트](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md)합니다.
+3. 다음으로 업데이트 하는 두 식이 `WriteLine` 에 대 한 업데이트 일치 하도록 해당 사용자의 추측이 너무 높거나 너무 낮은 인지 여부를 표시 하는 활동 [방법: 여러 버전을 워크플로-Side-by-side의 호스트](how-to-host-multiple-versions-of-a-workflow-side-by-side.md)합니다.
 
     ```vb
     'Update the Text of the two WriteLine activities that write the
@@ -652,13 +652,13 @@ ms.locfileid: "57467144"
 
 2. 선택 **엽니다**를 **프로젝트/솔루션** 에서 합니다 **파일** 메뉴.
 
-3. 로 이동 합니다 **NumberGuessWorkflowActivities_du** 에서 만든 폴더 [방법: 여러 버전을 워크플로-Side-by-side의 호스트](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md)을 선택 **NumberGuessWorkflowActivities.csproj** (또는 **vbproj**)를 클릭 하 고 **열기**합니다.
+3. 로 이동 합니다 **NumberGuessWorkflowActivities_du** 에서 만든 폴더 [방법: 여러 버전을 워크플로-Side-by-side의 호스트](how-to-host-multiple-versions-of-a-workflow-side-by-side.md)을 선택 **NumberGuessWorkflowActivities.csproj** (또는 **vbproj**)를 클릭 하 고 **열기**합니다.
 
 4. **솔루션 탐색기**를 마우스 오른쪽 단추로 클릭 **SequentialNumberGuessWorkflow.xaml** 선택한 **프로젝트에서 제외**합니다. 에 대 한 동일한 작업을 수행할 **FlowchartNumberGuessWorkflow.xaml** 하 고 **StateMachineNumberGuessWorkflow.xaml**합니다. 이 단계에서는 프로젝트에서 이전 버전의 워크플로 정의를 제거합니다.
 
 5. 선택할 **기존 항목 추가** 에서 합니다 **프로젝트** 메뉴.
 
-6. 로 이동 합니다 **NumberGuessWorkflowActivities_du** 에서 만든 폴더 [방법: 여러 버전을 워크플로-Side-by-side의 호스트](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md)합니다.
+6. 로 이동 합니다 **NumberGuessWorkflowActivities_du** 에서 만든 폴더 [방법: 여러 버전을 워크플로-Side-by-side의 호스트](how-to-host-multiple-versions-of-a-workflow-side-by-side.md)합니다.
 
 7. 선택할 **XAML 파일 (\*.xaml;\*합니다. xoml)** 에서 합니다 **형식의 파일** 드롭 다운 목록.
 
@@ -675,7 +675,7 @@ ms.locfileid: "57467144"
 
 11. Windows 탐색기를 열고로 이동 합니다 **NumberGuessWorkflowActivities_du\bin\Debug** 폴더 (또는 **bin\Release** 프로젝트 설정에 따라).
 
-12. 이름 바꾸기 **NumberGuessWorkflowActivities.dll** 하 **NumberGuessWorkflowActivities_v15.dll**를에 복사 합니다 **PreviousVersions** 에서만든폴더[방법: 여러 버전을 워크플로-Side-by-side의 호스트](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md)합니다.
+12. 이름 바꾸기 **NumberGuessWorkflowActivities.dll** 하 **NumberGuessWorkflowActivities_v15.dll**를에 복사 합니다 **PreviousVersions** 에서만든폴더[방법: 여러 버전을 워크플로-Side-by-side의 호스트](how-to-host-multiple-versions-of-a-workflow-side-by-side.md)합니다.
 
 ### <a name="BKMK_UpdateWorkflowVersionMap"></a> WorkflowVersionMap을 새 버전으로 업데이트 하려면
 
@@ -1447,7 +1447,7 @@ ms.locfileid: "57467144"
 
 3. 클릭 **New Game** 새 워크플로 시작 하 고 워크플로 나타내는 상태 창이 버전 정보 아래를 확인 하는 `v2` 워크플로.
 
-4. 중 하나를 선택 합니다 `v1` 의 시작 부분에서 시작 하는 워크플로 [방법: 여러 버전을 워크플로-Side-by-side의 호스트](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md) 항목입니다. 상태 창 아래에서 버전 정보를 나타내는 버전은 참고 **1.5.0.0** 워크플로. 추측 값이 너무 높거나 너무 낮은지 여부 외에도 이전 추측 값에 대해 표시된 정보가 없는지 확인합니다.
+4. 중 하나를 선택 합니다 `v1` 의 시작 부분에서 시작 하는 워크플로 [방법: 여러 버전을 워크플로-Side-by-side의 호스트](how-to-host-multiple-versions-of-a-workflow-side-by-side.md) 항목입니다. 상태 창 아래에서 버전 정보를 나타내는 버전은 참고 **1.5.0.0** 워크플로. 추측 값이 너무 높거나 너무 낮은지 여부 외에도 이전 추측 값에 대해 표시된 정보가 없는지 확인합니다.
 
     **1과 10 사이의 숫자를 입력 하세요.**\
     **사용자의 추측이 너무 낮습니다.**

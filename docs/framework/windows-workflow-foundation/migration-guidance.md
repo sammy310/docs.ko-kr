@@ -2,12 +2,12 @@
 title: 마이그레이션 지침
 ms.date: 03/30/2017
 ms.assetid: cb65c132-58c9-4028-b3d4-1efc71d5e60e
-ms.openlocfilehash: b3a3e1efee44ef11f3c5a91dddb1172f20ea01ed
-ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
+ms.openlocfilehash: 405ed0dcbd730f08b84ad0b40008c4d77b02e26f
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "56441218"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57719678"
 ---
 # <a name="migration-guidance"></a>마이그레이션 지침
 에 [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)], Microsoft는 두 번째 주요 버전의 Windows WF (Workflow Foundation)를 출시 합니다. [!INCLUDE[wf1](../../../includes/wf1-md.md)]는 [!INCLUDE[vstecwinfx](../../../includes/vstecwinfx-md.md)]에서 처음 릴리스되었고(System.Workflow.* 네임스페이스의 형식 포함. 현재 WF3이라고 함) [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)]에서 기능이 향상되었습니다. WF3 이기도 부분 합니다 [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)], 새 워크플로 기술과 함께 존재 하지만 (System.Activities에서 형식\* 네임 스페이스 WF4 라고). WF4 사용을 고려하는 경우 타이밍을 제어한다는 점을 먼저 인식해야 합니다.  
@@ -35,7 +35,7 @@ ms.locfileid: "56441218"
  [WF 지침: 상태 시스템](https://go.microsoft.com/fwlink/?LinkId=153855)  
  상태 시스템 활동이 없는 경우의 WF4 흐름 제어 모델링을 설명합니다.  
   
- 이 지침은 .NET Framework 4를 대상으로 하는 워크플로 프로젝트에만 적용됩니다. 상태 시스템 워크플로는 .NET 4.0.1 플랫폼 업데이트 1 릴리스에서 추가되었으며 .NET Framework 4.5의 일부로 포함되었습니다. 상태 시스템 워크플로.NET 4.0.1-4.0.3 및.NET Framework 4.5에에서 대 한 자세한 내용은 참조 하세요 [Microsoft.NET Framework 4 기능에 대 한 업데이트 4.0.1](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/hh290669(v=vs.100)) 하 고 [상태 시스템 워크플로](../../../docs/framework/windows-workflow-foundation/state-machine-workflows.md)합니다.  
+ 이 지침은 .NET Framework 4를 대상으로 하는 워크플로 프로젝트에만 적용됩니다. 상태 시스템 워크플로는 .NET 4.0.1 플랫폼 업데이트 1 릴리스에서 추가되었으며 .NET Framework 4.5의 일부로 포함되었습니다. 상태 시스템 워크플로.NET 4.0.1-4.0.3 및.NET Framework 4.5에에서 대 한 자세한 내용은 참조 하세요 [Microsoft.NET Framework 4 기능에 대 한 업데이트 4.0.1](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/hh290669(v=vs.100)) 하 고 [상태 시스템 워크플로](state-machine-workflows.md)합니다.  
   
  [WF 마이그레이션 쿡 북: 사용자 지정 활동](https://go.microsoft.com/fwlink/?LinkId=153856)  
  WF4에서 WF3 사용자 지정 활동을 다시 디자인하기 위한 지침과 예를 제공합니다.  

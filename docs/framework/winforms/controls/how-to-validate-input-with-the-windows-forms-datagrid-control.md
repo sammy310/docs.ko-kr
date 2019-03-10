@@ -11,17 +11,17 @@ helpviewer_keywords:
 - DataGrid control [Windows Forms], validating input
 - validation [Windows Forms], user input
 ms.assetid: f1e9c3a0-d0a1-4893-a615-b4b0db046c63
-ms.openlocfilehash: 84057a2d9709963c7a7302110ab11931b86fcad9
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: dc8c8f157e6673c1bddc68bfb511683e6d2b99be
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57497628"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57720334"
 ---
 # <a name="how-to-validate-input-with-the-windows-forms-datagrid-control"></a>방법: Windows Forms DataGrid 컨트롤을 사용 하 여 입력 유효성 검사
 
 > [!NOTE]
-> <xref:System.Windows.Forms.DataGridView> 컨트롤은 <xref:System.Windows.Forms.DataGrid> 컨트롤을 대체하고 여기에 다른 기능을 추가하여 새로 도입된 컨트롤이지만 이전 버전과의 호환성 및 이후 사용 가능성을 고려하여 <xref:System.Windows.Forms.DataGrid> 컨트롤을 계속 유지하도록 선택할 수 있습니다. 자세한 내용은 [Windows Forms DataGridView 및 DataGrid 컨트롤의 차이점](../../../../docs/framework/winforms/controls/differences-between-the-windows-forms-datagridview-and-datagrid-controls.md)을 참조하십시오.
+> <xref:System.Windows.Forms.DataGridView> 컨트롤은 <xref:System.Windows.Forms.DataGrid> 컨트롤을 대체하고 여기에 다른 기능을 추가하여 새로 도입된 컨트롤이지만 이전 버전과의 호환성 및 이후 사용 가능성을 고려하여 <xref:System.Windows.Forms.DataGrid> 컨트롤을 계속 유지하도록 선택할 수 있습니다. 자세한 내용은 [Windows Forms DataGridView 및 DataGrid 컨트롤의 차이점](differences-between-the-windows-forms-datagridview-and-datagrid-controls.md)을 참조하십시오.
 
 Windows Forms에 사용할 수 있는 두 가지 유형의 입력된 유효성 검사는 <xref:System.Windows.Forms.DataGrid> 제어 합니다. 사용자가 셀을 예를 들어 정수, 문자열에 대 한 허용 되지 않는 데이터 형식의 값을 입력 하려고 하는 경우 새 잘못 된 값을 이전 값으로 바뀝니다. 이러한 종류의 입력된 유효성 검사는 자동으로 수행 됩니다 하 고 사용자 지정할 수 없습니다.
 
@@ -89,4 +89,4 @@ Windows Forms에 사용할 수 있는 두 가지 유형의 입력된 유효성 �
 - <xref:System.Windows.Forms.DataGrid>
 - <xref:System.Data.DataTable.ColumnChanging>
 - <xref:System.Data.DataRow.SetColumnError%2A>
-- [DataGrid 컨트롤](../../../../docs/framework/winforms/controls/datagrid-control-windows-forms.md)
+- [DataGrid 컨트롤](datagrid-control-windows-forms.md)

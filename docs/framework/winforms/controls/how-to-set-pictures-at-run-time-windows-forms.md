@@ -13,12 +13,12 @@ helpviewer_keywords:
 - images [Windows Forms], adding with PictureBox control [Windows Forms]
 - PictureBox control [Windows Forms], adding pictures
 ms.assetid: 18ca41d0-68a5-4660-985e-a6c1fbc01d76
-ms.openlocfilehash: c7a65bcc65710324a4457c17dd728b4771550c06
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5afb4fe3ebef705cd0671312aacb6f9ad8219621
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54694076"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57711231"
 ---
 # <a name="how-to-set-pictures-at-run-time-windows-forms"></a>방법: (Windows Forms) 런타임에 그림 설정
 Windows Forms에서 표시 되는 이미지를 프로그래밍 방식으로 설정할 수 있습니다 <xref:System.Windows.Forms.PictureBox> 제어 합니다.  
@@ -93,14 +93,14 @@ Windows Forms에서 표시 되는 이미지를 프로그래밍 방식으로 설�
     ```  
   
     > [!NOTE]
-    >  이유에 대 한 자세한 내용은 사용 해야 합니다 <xref:System.Drawing.Image.Dispose%2A> 이런에서 메서드를 참조 하세요 [관리 되지 않는 리소스 정리](../../../../docs/standard/garbage-collection/unmanaged.md)합니다.  
+    >  이유에 대 한 자세한 내용은 사용 해야 합니다 <xref:System.Drawing.Image.Dispose%2A> 이런에서 메서드를 참조 하세요 [관리 되지 않는 리소스 정리](../../../standard/garbage-collection/unmanaged.md)합니다.  
   
      이 코드는 그래픽 디자인 타임에 컨트롤에 로드 된 경우에 이미지를 지웁니다.  
   
 ## <a name="see-also"></a>참고자료
 - <xref:System.Windows.Forms.PictureBox>
 - <xref:System.Drawing.Image.FromFile%2A?displayProperty=nameWithType>
-- [PictureBox 컨트롤 개요](../../../../docs/framework/winforms/controls/picturebox-control-overview-windows-forms.md)
-- [방법: 디자이너를 사용 하 여 그림 로드](../../../../docs/framework/winforms/controls/how-to-load-a-picture-using-the-designer-windows-forms.md)
-- [방법: 실행 시 크기 또는 그림의 위치 수정](../../../../docs/framework/winforms/controls/how-to-modify-the-size-or-placement-of-a-picture-at-run-time-windows-forms.md)
-- [PictureBox 컨트롤](../../../../docs/framework/winforms/controls/picturebox-control-windows-forms.md)
+- [PictureBox 컨트롤 개요](picturebox-control-overview-windows-forms.md)
+- [방법: 디자이너를 사용 하 여 그림 로드](how-to-load-a-picture-using-the-designer-windows-forms.md)
+- [방법: 실행 시 크기 또는 그림의 위치 수정](how-to-modify-the-size-or-placement-of-a-picture-at-run-time-windows-forms.md)
+- [PictureBox 컨트롤](picturebox-control-windows-forms.md)

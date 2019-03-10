@@ -13,12 +13,12 @@ helpviewer_keywords:
 - sounds [Windows Forms], playing
 - examples [Windows Forms], sounds
 ms.assetid: afb206ff-4824-4804-a8d4-185bf5ad8e7c
-ms.openlocfilehash: 1883e73f3b1937e8568b751d1cb9f3b57548c010
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b2ac6c4f2e3334a9b4c5ff4d2a6e31b6b9bf3673
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54649507"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57711233"
 ---
 # <a name="how-to-play-a-system-sound-from-a-windows-form"></a>방법: Windows Form에서 시스템 소리 재생
 다음 코드 예제에서는 런타임에 `Exclamation` 시스템 소리를 재생합니다. 시스템 소리에 대 한 자세한 내용은 참조 하세요. <xref:System.Media.SystemSounds>합니다.  
@@ -46,5 +46,5 @@ public void playExclamation()
 ## <a name="see-also"></a>참고자료
 - <xref:System.Media.SoundPlayer>
 - <xref:System.Media.SystemSounds>
-- [방법: Windows Form에서 경고음 재생](../../../../docs/framework/winforms/controls/how-to-play-a-beep-from-a-windows-form.md)
-- [방법: Windows Form에서 소리 재생](../../../../docs/framework/winforms/controls/how-to-play-a-sound-from-a-windows-form.md)
+- [방법: Windows Form에서 경고음 재생](how-to-play-a-beep-from-a-windows-form.md)
+- [방법: Windows Form에서 소리 재생](how-to-play-a-sound-from-a-windows-form.md)

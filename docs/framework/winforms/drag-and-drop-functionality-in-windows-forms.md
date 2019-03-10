@@ -5,12 +5,12 @@ helpviewer_keywords:
 - drag and drop [Windows Forms], Windows Forms
 - Windows Forms, drag and drop
 ms.assetid: 65cd2c03-8782-474e-b958-cbe43eeb902c
-ms.openlocfilehash: ccc9fd615cda044c739793066901ebc512643970
-ms.sourcegitcommit: 2b986afe4ce9e13bbeec929c9737757eb61de60e
+ms.openlocfilehash: 9c8580f61bcb311ca6b2e1cc2a11b4d4a4dbe79c
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "56664769"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57719418"
 ---
 # <a name="drag-and-drop-functionality-in-windows-forms"></a>Windows Forms에서의 끌어서 놓기 기능
 Windows Forms에는 끌어서 놓기 동작을 구현하는 메서드, 이벤트 및 클래스 집합이 포함되어 있습니다. 이 항목에서는 Windows Forms의 끌어서 놓기 지원에 대해 개괄적으로 설명합니다.  도 참조 하세요 [끌어서 놓기 작업 및 클립보드 지원](./advanced/drag-and-drop-operations-and-clipboard-support.md)합니다.  
@@ -45,4 +45,4 @@ Windows Forms에는 끌어서 놓기 동작을 구현하는 메서드, 이벤트
   <xref:System.Windows.Forms.QueryContinueDragEventArgs> 클래스는 마우스 단추의 현재 상태 및 키보드의 한정자 키, Esc 키를 눌렀는지 여부를 지정하는 값, 끌어서 놓기 작업을 계속할지 여부를 지정하기 위해 설정할 수 있는 <xref:System.Windows.Forms.DragAction> 값을 제공합니다.  
   
 ## <a name="see-also"></a>참고자료
-- [Windows Forms 애플리케이션의 마우스 입력](../../../docs/framework/winforms/mouse-input-in-a-windows-forms-application.md)
+- [Windows Forms 애플리케이션의 마우스 입력](mouse-input-in-a-windows-forms-application.md)

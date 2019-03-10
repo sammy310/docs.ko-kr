@@ -11,12 +11,12 @@ helpviewer_keywords:
 - custom controls [Windows Forms]
 - controls [Windows Forms], composite
 ms.assetid: 3cea09e5-4344-4ccb-9858-b66ccac210ff
-ms.openlocfilehash: 907355ca78b299b34b231b8b8d88353b0dde19c0
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
+ms.openlocfilehash: 140b9284d9361aa149b4f739908376d1cbe6902c
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56746606"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57713023"
 ---
 # <a name="varieties-of-custom-controls"></a>사용자 지정 컨트롤의 종류
 .NET Framework를 사용하여 새 컨트롤을 개발 및 구현할 수 있습니다. 상속을 통해서 기존 컨트롤 및 친숙한 사용자 정의 컨트롤의 기능을 확장할 수 있습니다. 또한 고유한 그리기를 수행하는 사용자 지정 컨트롤을 작성할 수도 있습니다.  
@@ -53,9 +53,9 @@ ms.locfileid: "56746606"
   
  복합 컨트롤은 포함된 각 Windows Forms 컨트롤과 연결된 고유 기능을 모두 포함하며 해당 속성을 선택적으로 노출하고 바인딩할 수 있게 해줍니다. 또한 복합 컨트롤은 사용자의 추가 개발 작업 없이 기능을 처리하는 다량의 기본 키보드를 제공합니다.  
   
- 예를 들어 데이터베이스의 고객 주소 데이터를 표시하기 위해 복합 컨트롤을 빌드할 수 있습니다. 이 컨트롤에 포함 될 수 있습니다는 <xref:System.Windows.Forms.DataGridView> 데이터베이스 필드를 표시 하는 컨트롤을 <xref:System.Windows.Forms.BindingSource> 데이터 원본에 바인딩 처리 및 <xref:System.Windows.Forms.BindingNavigator> 레코드를 통해 이동할 컨트롤입니다. 데이터 바인딩 속성을 선택적으로 노출할 수 있으며, 애플리케이션 간에 전체 컨트롤을 패키징하고 다시 사용할 수 있습니다. 이 종류의 복합 컨트롤의 예제를 참조 하세요. [방법: Windows Forms 컨트롤에서 특성 적용](../../../../docs/framework/winforms/controls/how-to-apply-attributes-in-windows-forms-controls.md)합니다.  
+ 예를 들어 데이터베이스의 고객 주소 데이터를 표시하기 위해 복합 컨트롤을 빌드할 수 있습니다. 이 컨트롤에 포함 될 수 있습니다는 <xref:System.Windows.Forms.DataGridView> 데이터베이스 필드를 표시 하는 컨트롤을 <xref:System.Windows.Forms.BindingSource> 데이터 원본에 바인딩 처리 및 <xref:System.Windows.Forms.BindingNavigator> 레코드를 통해 이동할 컨트롤입니다. 데이터 바인딩 속성을 선택적으로 노출할 수 있으며, 애플리케이션 간에 전체 컨트롤을 패키징하고 다시 사용할 수 있습니다. 이 종류의 복합 컨트롤의 예제를 참조 하세요. [방법: Windows Forms 컨트롤에서 특성 적용](how-to-apply-attributes-in-windows-forms-controls.md)합니다.  
   
- 파생 되는 복합 컨트롤 작성에 <xref:System.Windows.Forms.UserControl> 클래스입니다. <xref:System.Windows.Forms.UserControl> 기본 클래스에서는 키보드 라우팅을 제공 자식 컨트롤 및 자식 컨트롤을 그룹으로 작업할 수 있습니다. 자세한 내용은 [Windows Forms 복합 컨트롤 개발](../../../../docs/framework/winforms/controls/developing-a-composite-windows-forms-control.md)을 참조하세요.  
+ 파생 되는 복합 컨트롤 작성에 <xref:System.Windows.Forms.UserControl> 클래스입니다. <xref:System.Windows.Forms.UserControl> 기본 클래스에서는 키보드 라우팅을 제공 자식 컨트롤 및 자식 컨트롤을 그룹으로 작업할 수 있습니다. 자세한 내용은 [Windows Forms 복합 컨트롤 개발](developing-a-composite-windows-forms-control.md)을 참조하세요.  
   
  **권장 사항**  
   
@@ -85,7 +85,7 @@ ms.locfileid: "56746606"
   
  사용자 지정 컨트롤을 구현에 대 한 코드를 작성 해야 합니다는 <xref:System.Windows.Forms.Control.OnPaint%2A> 필요한 기능별 코드 뿐만 아니라 컨트롤의 이벤트입니다. 재정의할 수도 있습니다는 <xref:System.Windows.Forms.Control.WndProc%2A> 메서드 핸들 windows 메시지를 직접. 이는 컨트롤을 만드는 가장 강력한 방법이지만 이 기술을 효과적으로 사용하려면 Microsoft Win32® API에 대해 잘 알고 있어야 합니다.  
   
- 사용자 지정 컨트롤의 예로 아날로그 시계의 모양과 동작을 복제하는 시계 컨트롤이 있습니다. 사용자 지정 그리기를 응답으로 움직입니다 시계 바늘 호출 <xref:System.Windows.Forms.Timer.Tick> 이벤트 내부에서 <xref:System.Windows.Forms.Timer> 구성 요소입니다. 자세한 내용은 [방법: 간단한 Windows Forms 컨트롤 개발](../../../../docs/framework/winforms/controls/how-to-develop-a-simple-windows-forms-control.md)합니다.  
+ 사용자 지정 컨트롤의 예로 아날로그 시계의 모양과 동작을 복제하는 시계 컨트롤이 있습니다. 사용자 지정 그리기를 응답으로 움직입니다 시계 바늘 호출 <xref:System.Windows.Forms.Timer.Tick> 이벤트 내부에서 <xref:System.Windows.Forms.Timer> 구성 요소입니다. 자세한 내용은 [방법: 간단한 Windows Forms 컨트롤 개발](how-to-develop-a-simple-windows-forms-control.md)합니다.  
   
  **권장 사항**  
   
@@ -96,7 +96,7 @@ ms.locfileid: "56746606"
 -   표준 컨트롤을 통해 사용할 수 없는 사용자 지정 기능을 구현해야 하는 경우  
   
 ### <a name="activex-controls"></a>ActiveX 컨트롤  
- Windows Forms 인프라는 Windows Forms 컨트롤을 호스팅하도록 최적화되어 있지만 ActiveX 컨트롤을 사용할 수도 있습니다. Visual Studio에서는 이 작업이 지원됩니다. 자세한 내용은 [방법: Windows Forms에 ActiveX 컨트롤 추가](../../../../docs/framework/winforms/controls/how-to-add-activex-controls-to-windows-forms.md)합니다.  
+ Windows Forms 인프라는 Windows Forms 컨트롤을 호스팅하도록 최적화되어 있지만 ActiveX 컨트롤을 사용할 수도 있습니다. Visual Studio에서는 이 작업이 지원됩니다. 자세한 내용은 [방법: Windows Forms에 ActiveX 컨트롤 추가](how-to-add-activex-controls-to-windows-forms.md)합니다.  
   
 ### <a name="windowless-controls"></a>창 없는 컨트롤  
  Microsoft Visual Basic® 6.0 및 ActiveX 기술은 *창 없는* 컨트롤을 지원합니다. 창 없는 컨트롤은 Windows Forms에서 지원되지 않습니다.  
@@ -107,8 +107,8 @@ ms.locfileid: "56746606"
  사용 하 여는 <xref:System.ComponentModel.DesignerAttribute> 컨트롤 디자이너를 사용 하 여 연결 합니다. 자세한 내용은 [디자인 타임 지원 확장](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/37899azc(v=vs.120)) 고 [방법: 디자인 타임 기능을 활용 하는 Windows Forms 컨트롤 만들기](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/307hck25(v=vs.120))합니다.  
   
 ## <a name="see-also"></a>참고자료
-- [.NET Framework에서 사용자 지정 Windows Forms 컨트롤 개발](../../../../docs/framework/winforms/controls/developing-custom-windows-forms-controls.md)
-- [방법: 간단한 Windows Forms 컨트롤 개발](../../../../docs/framework/winforms/controls/how-to-develop-a-simple-windows-forms-control.md)
-- [합성 Windows Forms 컨트롤 개발](../../../../docs/framework/winforms/controls/developing-a-composite-windows-forms-control.md)
+- [.NET Framework에서 사용자 지정 Windows Forms 컨트롤 개발](developing-custom-windows-forms-controls.md)
+- [방법: 간단한 Windows Forms 컨트롤 개발](how-to-develop-a-simple-windows-forms-control.md)
+- [합성 Windows Forms 컨트롤 개발](developing-a-composite-windows-forms-control.md)
 - [디자인 타임 지원 확장](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/37899azc(v=vs.120))
 - [방법: 디자인 타임 기능을 활용 하는 Windows Forms 컨트롤 만들기](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/307hck25(v=vs.120))

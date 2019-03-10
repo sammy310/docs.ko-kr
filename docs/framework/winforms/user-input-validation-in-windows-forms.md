@@ -7,12 +7,12 @@ helpviewer_keywords:
 - user input [Windows Forms], validating in Windows Forms
 - validating user input [Windows Forms], Windows Forms
 ms.assetid: 4ec07681-1dee-4bf9-be5e-718f635a33a1
-ms.openlocfilehash: 87124438118f05d426d5a33c914634922e657c1e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fb804e6596de14d93ec6f0405480b60c03c7cbf9
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54498910"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57711319"
 ---
 # <a name="user-input-validation-in-windows-forms"></a>Windows Forms에서 사용자 입력 유효성 검사
 사용자가 응용 프로그램에 데이터를 입력 하면 응용 프로그램에서 사용 하기 전에 데이터가 유효한 지 확인 하는 것이 좋습니다. 텍스트 필드에 특정 되지 않음을 길이가 0 인 필드는 전화 번호 또는 잘 구성 된 데이터의 다른 형식으로 지정 하거나, 또는 문자열에 데이터베이스의 보안을 손상 시킬 수 있는 모든 안전 하지 않은 문자가 포함 되지 않도록 해야 합니다. Windows Forms 응용 프로그램에서 입력의 유효성을 검사 하는 여러 가지 방법을 제공 합니다.  
@@ -22,14 +22,14 @@ ms.locfileid: "54498910"
   
  사용 하는 마스킹 언어 <xref:System.Windows.Forms.MaskedTextBox> 는 매우 유연 합니다. 이 옵션을 사용 하면 필수 문자, 필요에 따라 문자, 하이픈, 괄호와 같은 리터럴 문자, 통화 문자 및 날짜 구분 기호를 지정할 수 있습니다. 컨트롤 및 데이터 원본에 바인딩된 경우 에서도 작동 합니다. 합니다 <xref:System.Windows.Forms.Binding.Format> 마스크를 준수 하기 위해 들어오는 데이터 서식을 다시 지정 하려면 데이터 바인딩에 대 한 이벤트를 사용할 수 및 <xref:System.Windows.Forms.Binding.Parse> 이벤트 데이터 필드의 사양을 준수 하기 위해 나가는 데이터의 서식을 다시 지정 데 사용할 수 있습니다.  
   
- 자세한 내용은 [MaskedTextBox 컨트롤](../../../docs/framework/winforms/controls/maskedtextbox-control-windows-forms.md)합니다.  
+ 자세한 내용은 [MaskedTextBox 컨트롤](./controls/maskedtextbox-control-windows-forms.md)합니다.  
   
 ## <a name="event-driven-validation"></a>이벤트 기반 유효성 검사  
  완전 한 프로그래밍 방식의 제어 유효성 검사를 하려면 하거나 복잡 한 유효성 검사를 수행 해야 하는 경우 대부분의 Windows Forms 컨트롤에 기본 제공 유효성 검사 이벤트를 사용 해야 합니다. 자유 형식 사용자 입력을 허용 하는 각 컨트롤에는 <xref:System.Windows.Forms.Control.Validating> 컨트롤에 필요한 데이터 유효성 검사 될 때마다 발생 하는 이벤트입니다. 에 <xref:System.Windows.Forms.Control.Validating> 이벤트 처리 메서드를 여러 가지 방법으로 입력 하는 사용자를 확인할 수 있습니다. 예를 들어 우편 번호를 포함 해야 하는 텍스트 상자에 있는 경우 다음과 같은 방법으로 유효성 검사를 수행할 수 있습니다.  
   
 -   우편 번호는 우편 번호의 특정 그룹에 속해야 합니다, 하는 경우 사용자가 입력 데이터 유효성 검사에 대 한 입력으로 문자열 비교를 수행할 수 있습니다. 예를 들어 우편 번호는 {10001, 10002 10003} 집합의 수 있어야 하면 문자열 비교를 사용 하 여 데이터 유효성 검사 수 있습니다.  
   
--   우편 번호가 특정 형식 이어야 합니다 하는 경우에 사용자가 입력 데이터 유효성 검사에 정규식을 사용할 수 있습니다. 예를 들어 유효성을 검사할 폼 `#####` 또는 `#####-####`, 일반 식을 사용할 수 있습니다 `^(\d{5})(-\d{4})?$`합니다. 유효성을 검사할 폼 `A#A #A#`, 일반 식을 사용할 수 있습니다 `[A-Z]\d[A-Z] \d[A-Z]\d`합니다. 정규식에 대 한 자세한 내용은 참조 하세요. [.NET Framework 정규식](../../../docs/standard/base-types/regular-expressions.md) 하 고 [정규식 예제](../../../docs/standard/base-types/regular-expression-examples.md)합니다.  
+-   우편 번호가 특정 형식 이어야 합니다 하는 경우에 사용자가 입력 데이터 유효성 검사에 정규식을 사용할 수 있습니다. 예를 들어 유효성을 검사할 폼 `#####` 또는 `#####-####`, 일반 식을 사용할 수 있습니다 `^(\d{5})(-\d{4})?$`합니다. 유효성을 검사할 폼 `A#A #A#`, 일반 식을 사용할 수 있습니다 `[A-Z]\d[A-Z] \d[A-Z]\d`합니다. 정규식에 대 한 자세한 내용은 참조 하세요. [.NET Framework 정규식](../../standard/base-types/regular-expressions.md) 하 고 [정규식 예제](../../standard/base-types/regular-expression-examples.md)합니다.  
   
 -   우편 번호에 유효한 미국 우편 번호 수 있어야 하면 사용자가 입력 한 데이터의 유효성을 검사 하는 우편 번호 웹 서비스를 호출할 수 있습니다.  
   
@@ -94,5 +94,5 @@ ms.locfileid: "54498910"
 - <xref:System.Windows.Forms.Control.Validating?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.Form.Closing?displayProperty=nameWithType>
 - <xref:System.ComponentModel.CancelEventArgs?displayProperty=nameWithType>
-- [MaskedTextBox 컨트롤](../../../docs/framework/winforms/controls/maskedtextbox-control-windows-forms.md)
-- [정규식 예제](../../../docs/standard/base-types/regular-expression-examples.md)
+- [MaskedTextBox 컨트롤](./controls/maskedtextbox-control-windows-forms.md)
+- [정규식 예제](../../standard/base-types/regular-expression-examples.md)

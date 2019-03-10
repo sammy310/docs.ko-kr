@@ -2,12 +2,12 @@
 title: '작업 1: 새 Windows Presentation Foundation 응용 프로그램 만들기'
 ms.date: 03/30/2017
 ms.assetid: 270eaeba-9492-4532-af9f-403ce5c9935b
-ms.openlocfilehash: 39cd901c0129124bece8e8d3a573fd45209cfb00
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 533b4a1030ab5f47eb96ca62dc2805eae7933b9b
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54679411"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57711890"
 ---
 # <a name="task-1-create-a-new-windows-presentation-foundation-application"></a>작업 1: 새 Windows Presentation Foundation 응용 프로그램 만들기
 이 태스크에서는 빈 Windows Presentation Foundation (WPF) 응용 프로그램을 WPF 응용 프로그램에 대 한 Visual Studio 템플릿을 사용 하 여 만들고 적절 한 참조를 추가 [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] 워크플로 어셈블리입니다.  
@@ -40,8 +40,8 @@ ms.locfileid: "54679411"
   
 10. **확인**을 클릭합니다.  
   
-11. 참조 [작업 2: 워크플로 디자이너 호스트](../../../docs/framework/windows-workflow-foundation/task-2-host-the-workflow-designer.md) 을 workflow designer 디자인 캔버스를 호스트 하는 방법을 알아봅니다.  
+11. 참조 [작업 2: 워크플로 디자이너 호스트](task-2-host-the-workflow-designer.md) 을 workflow designer 디자인 캔버스를 호스트 하는 방법을 알아봅니다.  
   
 ## <a name="see-also"></a>참고자료
-- [워크플로 디자이너 재호스트](../../../docs/framework/windows-workflow-foundation/rehosting-the-workflow-designer.md)
-- [작업 2: 워크플로 디자이너 호스트](../../../docs/framework/windows-workflow-foundation/task-2-host-the-workflow-designer.md)
+- [워크플로 디자이너 재호스트](rehosting-the-workflow-designer.md)
+- [작업 2: 워크플로 디자이너 호스트](task-2-host-the-workflow-designer.md)

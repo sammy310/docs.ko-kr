@@ -8,12 +8,12 @@ helpviewer_keywords:
 - controls [Windows Forms], manipulating
 - BindingNavigator control [Windows Forms], adding buttons
 ms.assetid: faa33042-186e-4bb2-8798-17ceb987ec62
-ms.openlocfilehash: dc91a4a91d26cd51a06b1c08dcb76f8966c52594
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d86ded0b93d876eac4b97938678cafbb22c3ac8a
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54671111"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57722440"
 ---
 # <a name="how-to-add-load-save-and-cancel-buttons-to-the-windows-forms-bindingnavigator-control"></a>방법: 저장, 로드를 추가 하 고 취소 단추는 Windows Forms BindingNavigator 컨트롤
 합니다 <xref:System.Windows.Forms.BindingNavigator> 컨트롤은 특수 한 용도의 <xref:System.Windows.Forms.ToolStrip> 컨트롤 이동 및 데이터에 바인딩된 폼의 컨트롤을 조작 하기 위한 것입니다.  
@@ -34,7 +34,7 @@ ms.locfileid: "54671111"
   
 5.  <xref:System.Windows.Forms.BindingNavigator> 컨트롤을 선택합니다.  
   
-6.  스마트 태그 문자 모양을 클릭 (![스마트 태그 문자 모양](../../../../docs/framework/winforms/controls/media/vs-winformsmttagglyph.gif "VS_WinFormSmtTagGlyph")) 하므로 **BindingNavigator 태스크** 대화 상자가 나타나고 선택 **항목편집**.  
+6.  스마트 태그 문자 모양을 클릭 (![스마트 태그 문자 모양](./media/vs-winformsmttagglyph.gif "VS_WinFormSmtTagGlyph")) 하므로 **BindingNavigator 태스크** 대화 상자가 나타나고 선택 **항목편집**.  
   
      합니다 **항목 컬렉션 편집기** 나타납니다.  
   
@@ -113,5 +113,5 @@ ms.locfileid: "54671111"
 - <xref:System.Windows.Forms.BindingNavigator>
 - <xref:System.Windows.Forms.BindingSource>
 - <xref:System.Windows.Forms.ToolStrip>
-- [BindingNavigator 컨트롤](../../../../docs/framework/winforms/controls/bindingnavigator-control-windows-forms.md)
-- [BindingSource 구성 요소 개요](../../../../docs/framework/winforms/controls/bindingsource-component-overview.md)
+- [BindingNavigator 컨트롤](bindingnavigator-control-windows-forms.md)
+- [BindingSource 구성 요소 개요](bindingsource-component-overview.md)

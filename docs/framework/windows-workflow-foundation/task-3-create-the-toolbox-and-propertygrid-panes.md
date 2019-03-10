@@ -2,21 +2,21 @@
 title: '작업 3: 도구 상자 및 PropertyGrid 창 만들기'
 ms.date: 03/30/2017
 ms.assetid: 72c1546a-eed5-4f0f-a616-719a163414f4
-ms.openlocfilehash: 8e332c2caa43e1c9703272d7f2be16b545c44fd3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 45819577c39185a5d95da81521cd541087a64efc
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54558425"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57721226"
 ---
 # <a name="task-3-create-the-toolbox-and-propertygrid-panes"></a>작업 3: 도구 상자 및 PropertyGrid 창 만들기
 이 작업을 만듭니다는 **도구 상자** 및 **PropertyGrid** 창에 다시 호스트 된 추가 [!INCLUDE[wfd1](../../../includes/wfd1-md.md)]합니다.  
   
- 참조 3 개를 완료 한 후 MainWindow.xaml.cs 파일에 있어야 하는 코드에서 태스크를 [워크플로 디자이너 재 호스트](../../../docs/framework/windows-workflow-foundation/rehosting-the-workflow-designer.md) 일련의 항목은이 항목의 끝에 제공 됩니다.  
+ 참조 3 개를 완료 한 후 MainWindow.xaml.cs 파일에 있어야 하는 코드에서 태스크를 [워크플로 디자이너 재 호스트](rehosting-the-workflow-designer.md) 일련의 항목은이 항목의 끝에 제공 됩니다.  
   
 ### <a name="to-create-the-toolbox-and-add-it-to-the-grid"></a>도구 상자를 만들어 표에 추가하려면  
   
-1.  에 설명 된 절차에 따라 얻은 HostingApplication 프로젝트를 열고 [작업 2: 워크플로 디자이너 호스트](../../../docs/framework/windows-workflow-foundation/task-2-host-the-workflow-designer.md)합니다.  
+1.  에 설명 된 절차에 따라 얻은 HostingApplication 프로젝트를 열고 [작업 2: 워크플로 디자이너 호스트](task-2-host-the-workflow-designer.md)합니다.  
   
 2.  에 **솔루션 탐색기** 창 MainWindow.xaml 파일을 마우스 오른쪽 단추로 클릭 하 고 선택 **코드 보기**합니다.  
   
@@ -213,6 +213,6 @@ namespace HostingApplication
 ```  
   
 ## <a name="see-also"></a>참고자료
-- [워크플로 디자이너 재호스트](../../../docs/framework/windows-workflow-foundation/rehosting-the-workflow-designer.md)
-- [작업 1: 새 Windows Presentation Foundation 응용 프로그램 만들기](../../../docs/framework/windows-workflow-foundation/task-1-create-a-new-wpf-app.md)
-- [작업 2: 워크플로 디자이너 호스트](../../../docs/framework/windows-workflow-foundation/task-2-host-the-workflow-designer.md)
+- [워크플로 디자이너 재호스트](rehosting-the-workflow-designer.md)
+- [작업 1: 새 Windows Presentation Foundation 응용 프로그램 만들기](task-1-create-a-new-wpf-app.md)
+- [작업 2: 워크플로 디자이너 호스트](task-2-host-the-workflow-designer.md)

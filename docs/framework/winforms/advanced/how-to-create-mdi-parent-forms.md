@@ -5,16 +5,16 @@ helpviewer_keywords:
 - parent forms
 - MDI [Windows Forms], creating forms
 ms.assetid: 12c71221-2377-4bb6-b10b-7b4b300fd462
-ms.openlocfilehash: 1cc3d813b77ddf8220242f4a1dfc7fe39f9cb520
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5da7f1a53412cf30a5898fec096aaa01e3aa65d2
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54512569"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57722986"
 ---
 # <a name="how-to-create-mdi-parent-forms"></a>방법: MDI 부모 폼 만들기
 > [!IMPORTANT]
->  이 항목에서는 <xref:System.Windows.Forms.MainMenu> 컨트롤로 대체된 <xref:System.Windows.Forms.MenuStrip> 컨트롤을 사용합니다. <xref:System.Windows.Forms.MainMenu> 컨트롤은 이전 버전과의 호환성을 유지하고 원하는 경우 이후에 사용할 수 있도록 유지됩니다.  사용 하 여 부모 폼을 MDI 만들기에 대 한 자세한를 <xref:System.Windows.Forms.MenuStrip>를 참조 하세요 [방법: MenuStrip이 포함 된 MDI 창 목록 만들기](../../../../docs/framework/winforms/controls/how-to-create-an-mdi-window-list-with-menustrip-windows-forms.md)합니다.  
+>  이 항목에서는 <xref:System.Windows.Forms.MainMenu> 컨트롤로 대체된 <xref:System.Windows.Forms.MenuStrip> 컨트롤을 사용합니다. <xref:System.Windows.Forms.MainMenu> 컨트롤은 이전 버전과의 호환성을 유지하고 원하는 경우 이후에 사용할 수 있도록 유지됩니다.  사용 하 여 부모 폼을 MDI 만들기에 대 한 자세한를 <xref:System.Windows.Forms.MenuStrip>를 참조 하세요 [방법: MenuStrip이 포함 된 MDI 창 목록 만들기](../controls/how-to-create-an-mdi-window-list-with-menustrip-windows-forms.md)합니다.  
   
  MDI(다중 문서 인터페이스) 부모 폼은 MDI(다중 문서 인터페이스) 애플리케이션의 기반이 되는 요소로, 사용자가 MDI 애플리케이션과 상호 작용하는 하위 창인 MDI 자식 창을 포함합니다. MDI 부모 폼은 Windows Forms 디자이너에서 그리고 프로그래밍 방식으로 쉽게 만들 수 있습니다.  
   
@@ -33,11 +33,11 @@ ms.locfileid: "54512569"
   
      런타임에 첫 번째 메뉴가 작성되고 메뉴 항목은 숨겨지며 두 번째 메뉴는 열려 있는 MDI 자식 창을 추적합니다. 이제 MDI 부모 창이 만들어졌습니다.  
   
-4.  **F5** 키를 눌러 응용 프로그램을 실행합니다. MDI 부모 폼 내에서 작동 하는 MDI 자식 창을 만드는 방법에 대 한 내용은 [방법: MDI 자식 폼 만들기](../../../../docs/framework/winforms/advanced/how-to-create-mdi-child-forms.md)합니다.  
+4.  **F5** 키를 눌러 응용 프로그램을 실행합니다. MDI 부모 폼 내에서 작동 하는 MDI 자식 창을 만드는 방법에 대 한 내용은 [방법: MDI 자식 폼 만들기](how-to-create-mdi-child-forms.md)합니다.  
   
 ## <a name="see-also"></a>참고자료
-- [MDI(다중 문서 인터페이스) 응용 프로그램](../../../../docs/framework/winforms/advanced/multiple-document-interface-mdi-applications.md)
-- [방법: MDI 자식 폼 만들기](../../../../docs/framework/winforms/advanced/how-to-create-mdi-child-forms.md)
-- [방법: 활성 MDI 자식 확인](../../../../docs/framework/winforms/advanced/how-to-determine-the-active-mdi-child.md)
-- [방법: 활성 MDI 자식으로 데이터 전송](../../../../docs/framework/winforms/advanced/how-to-send-data-to-the-active-mdi-child.md)
-- [방법: MDI 자식 폼 정렬](../../../../docs/framework/winforms/advanced/how-to-arrange-mdi-child-forms.md)
+- [MDI(다중 문서 인터페이스) 응용 프로그램](multiple-document-interface-mdi-applications.md)
+- [방법: MDI 자식 폼 만들기](how-to-create-mdi-child-forms.md)
+- [방법: 활성 MDI 자식 확인](how-to-determine-the-active-mdi-child.md)
+- [방법: 활성 MDI 자식으로 데이터 전송](how-to-send-data-to-the-active-mdi-child.md)
+- [방법: MDI 자식 폼 정렬](how-to-arrange-mdi-child-forms.md)

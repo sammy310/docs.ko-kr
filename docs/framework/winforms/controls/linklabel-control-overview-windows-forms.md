@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Label control [Windows Forms], about Label control
 - LinkLabel control [Windows Forms], about LinkLabel control
 ms.assetid: 9e248549-10ca-43a3-bb5e-60f583d369f1
-ms.openlocfilehash: b39c682ccb73a71da1752e6e9f3f79e5916d106c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 81edab0d44ae0bb9dcabe77ad568f281e6f5fffb
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54503991"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57722364"
 ---
 # <a name="linklabel-control-overview-windows-forms"></a>LinkLabel 컨트롤 개요(Windows Forms)
 Windows Forms <xref:System.Windows.Forms.LinkLabel> 컨트롤을 사용 하면 Windows Forms 응용 프로그램에 웹 스타일 링크를 추가할 수 있습니다. 사용할 수는 <xref:System.Windows.Forms.LinkLabel> 사용할 수 있는 모든 항목에 대 한 제어를 <xref:System.Windows.Forms.Label> 에 대 한 제어를 설정할 수도 있습니다 텍스트의 부분으로 파일, 폴더 또는 웹 페이지에 대 한 링크입니다.  
@@ -25,6 +25,6 @@ Windows Forms <xref:System.Windows.Forms.LinkLabel> 컨트롤을 사용 하면 W
   
 ## <a name="see-also"></a>참고자료
 - <xref:System.Windows.Forms.LinkLabel>
-- [Label 컨트롤 개요](../../../../docs/framework/winforms/controls/label-control-overview-windows-forms.md)
-- [방법: Windows Forms LinkLabel 컨트롤을 사용 하 여 페이지를 웹 또는 개체에 연결](../../../../docs/framework/winforms/controls/link-to-an-object-or-web-page-with-wf-linklabel-control.md)
-- [방법: Windows Forms LinkLabel 컨트롤의 모양 변경](../../../../docs/framework/winforms/controls/how-to-change-the-appearance-of-the-windows-forms-linklabel-control.md)
+- [Label 컨트롤 개요](label-control-overview-windows-forms.md)
+- [방법: Windows Forms LinkLabel 컨트롤을 사용 하 여 페이지를 웹 또는 개체에 연결](link-to-an-object-or-web-page-with-wf-linklabel-control.md)
+- [방법: Windows Forms LinkLabel 컨트롤의 모양 변경](how-to-change-the-appearance-of-the-windows-forms-linklabel-control.md)

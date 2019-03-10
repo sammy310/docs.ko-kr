@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - ToolStrip control [Windows Forms], architecture
 ms.assetid: 71df2d18-862e-4701-9ff9-c1fe606f94f2
-ms.openlocfilehash: d972e738305b14f44910acf755e0ffc1d7297e49
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6e0c5a426f05590523c178f4b56d07ee98b39d7e
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54547055"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57719389"
 ---
 # <a name="toolstrip-control-architecture"></a>ToolStrip 컨트롤 아키텍처
 합니다 <xref:System.Windows.Forms.ToolStrip> 고 <xref:System.Windows.Forms.ToolStripItem> 클래스 도구 모음, 상태 및 메뉴 항목을 표시 하기 위한 유연 하 고 확장 가능한 시스템을 제공 합니다. 이러한 클래스에 포함 된 모든 합니다 <xref:System.Windows.Forms> 네임 스페이스 및 이러한 모든 이름은 일반적으로 "ToolStrip" 접두사를 사용 하 여 (같은 <xref:System.Windows.Forms.ToolStripOverflow>) 또는 "제거" 접미사를 사용 하 여 (같은 <xref:System.Windows.Forms.MenuStrip>).  
@@ -19,7 +19,7 @@ ms.locfileid: "54547055"
   
  <xref:System.Windows.Forms.ToolStrip> 에 대 한 추상 기본 클래스인 <xref:System.Windows.Forms.MenuStrip>, <xref:System.Windows.Forms.StatusStrip>, 및 <xref:System.Windows.Forms.ContextMenuStrip>합니다. 다음 개체 모델에서는 <xref:System.Windows.Forms.ToolStrip> 상속 계층 구조입니다.  
   
- ![ToolStrip 개체 모델](../../../../docs/framework/winforms/controls/media/toolstripobjectmodel.gif "ToolStripObjectModel")  
+ ![ToolStrip 개체 모델](./media/toolstripobjectmodel.gif "ToolStripObjectModel")  
 ToolStrip 개체 모델  
   
  모든 항목에 액세스할 수 있습니다는 <xref:System.Windows.Forms.ToolStrip> 를 통해를 <xref:System.Windows.Forms.ToolStrip.Items%2A> 컬렉션입니다. 모든 항목에 액세스할 수 있습니다는 <xref:System.Windows.Forms.ToolStripDropDownItem> 를 통해를 <xref:System.Windows.Forms.ToolStripDropDownItem.DropDownItems%2A> 컬렉션입니다. 파생 된 클래스에서 <xref:System.Windows.Forms.ToolStrip>를 사용할 수도 있습니다는 <xref:System.Windows.Forms.ToolStrip.DisplayedItems%2A> 현재 표시 된 항목만 액세스할 속성입니다. 다음은 현재 오버플로 메뉴에 없는 항목입니다.  
@@ -251,7 +251,7 @@ ToolStrip 개체 모델
   
  <xref:System.Windows.Forms.ToolStripItem> 에 포함 된 모든 항목에 대 한 추상 기본 클래스를 <xref:System.Windows.Forms.ToolStrip>입니다. 다음 개체 모델에서는 <xref:System.Windows.Forms.ToolStripItem> 상속 계층 구조입니다.  
   
- ![ToolStripItem 개체 모델](../../../../docs/framework/winforms/controls/media/toolstripitemobjectmodel.gif "ToolStripItemObjectModel")  
+ ![ToolStripItem 개체 모델](./media/toolstripitemobjectmodel.gif "ToolStripItemObjectModel")  
 ToolStripItem 개체 모델  
   
  <xref:System.Windows.Forms.ToolStripItem> 클래스에서 직접 상속 되거나 <xref:System.Windows.Forms.ToolStripItem>를 간접적으로 상속 됩니다에서 또는 <xref:System.Windows.Forms.ToolStripItem> 를 통해 <xref:System.Windows.Forms.ToolStripControlHost> 또는 <xref:System.Windows.Forms.ToolStripDropDownItem>합니다.  
@@ -366,23 +366,23 @@ ToolStripItem 개체 모델
 ## <a name="accessory-classes"></a>액세서리 클래스  
  기타 다양 한 기능을 제공 하는 클래스는 다음과 같습니다.  
   
--   <xref:System.Windows.Forms.ToolStripManager> 지원 <xref:System.Windows.Forms.ToolStrip>-관련 병합, 설정 및 렌더러 옵션 등의 전체 애플리케이션에 대 한 작업입니다.  
+-   <xref:System.Windows.Forms.ToolStripManager> 지원 <xref:System.Windows.Forms.ToolStrip>-관련 병합, 설정 및 렌더러 옵션 등의 전체 응용 프로그램에 대 한 작업입니다.  
   
 -   <xref:System.Windows.Forms.ToolStripRenderer> 특정 스타일 또는 테마를 적용할 수 있습니다는 <xref:System.Windows.Forms.ToolStrip> 쉽게 합니다.  
   
 -   <xref:System.Windows.Forms.ToolStripProfessionalRenderer> 펜과 대체할 수 있는 색 테이블을 기반으로 하는 브러시를 만듭니다 (<xref:System.Windows.Forms.ProfessionalColorTable>).  
   
--   <xref:System.Windows.Forms.ToolStripSystemRenderer> 시스템 색과 평면 비주얼 스타일을 적용 <xref:System.Windows.Forms.ToolStrip> 애플리케이션입니다.  
+-   <xref:System.Windows.Forms.ToolStripSystemRenderer> 시스템 색과 평면 비주얼 스타일을 적용 <xref:System.Windows.Forms.ToolStrip> 응용 프로그램입니다.  
   
 -   <xref:System.Windows.Forms.ToolStripContainer> 비슷합니다 <xref:System.Windows.Forms.SplitContainer>합니다. 도킹 된 쪽 패널 네 개 사용 하 여 (인스턴스의 <xref:System.Windows.Forms.ToolStripPanel>) 및 중앙 패널이 하나 (인스턴스의 <xref:System.Windows.Forms.ToolStripContentPanel>) 일반적인 배열을 만드는 데 있습니다. 왼쪽 패널에 제거할 수 없지만 숨길 수 있습니다. 제거 아니고 중앙 패널을 숨길 수 있습니다. 하나 이상의 정렬할 수 있습니다 <xref:System.Windows.Forms.ToolStrip>, <xref:System.Windows.Forms.MenuStrip>, 또는 <xref:System.Windows.Forms.StatusStrip> 측면 패널에서 컨트롤 다른 컨트롤에 대 한 중앙 패널을 사용할 수 있습니다. <xref:System.Windows.Forms.ToolStripContentPanel> 또한 일관 된 모양을 위해 폼의 본문으로 렌더러 지원을 받는 방법을 제공 합니다. <xref:System.Windows.Forms.ToolStripContainer> 다중 문서 인터페이스 MDI ()를 지원 하지 않습니다.  
   
 -   <xref:System.Windows.Forms.ToolStripPanel> 이동 및 정렬을 위한 공간이 제공 <xref:System.Windows.Forms.ToolStrip> 컨트롤입니다. 따라서 선택 하는 경우에 하나의 패널을 사용할 수 있습니다 및 <xref:System.Windows.Forms.ToolStripPanel> MDI 시나리오에서 잘 작동 합니다.  
   
 ## <a name="see-also"></a>참고자료
-- [ToolStrip 컨트롤 개요](../../../../docs/framework/winforms/controls/toolstrip-control-overview-windows-forms.md)
-- [ToolStrip 기술 요약](../../../../docs/framework/winforms/controls/toolstrip-technology-summary.md)
-- [ToolStrip 컨트롤](../../../../docs/framework/winforms/controls/toolstrip-control-windows-forms.md)
-- [MenuStrip 컨트롤](../../../../docs/framework/winforms/controls/menustrip-control-windows-forms.md)
-- [StatusStrip 컨트롤](../../../../docs/framework/winforms/controls/statusstrip-control.md)
-- [ContextMenuStrip 컨트롤](../../../../docs/framework/winforms/controls/contextmenustrip-control.md)
-- [BindingNavigator 컨트롤](../../../../docs/framework/winforms/controls/bindingnavigator-control-windows-forms.md)
+- [ToolStrip 컨트롤 개요](toolstrip-control-overview-windows-forms.md)
+- [ToolStrip 기술 요약](toolstrip-technology-summary.md)
+- [ToolStrip 컨트롤](toolstrip-control-windows-forms.md)
+- [MenuStrip 컨트롤](menustrip-control-windows-forms.md)
+- [StatusStrip 컨트롤](statusstrip-control.md)
+- [ContextMenuStrip 컨트롤](contextmenustrip-control.md)
+- [BindingNavigator 컨트롤](bindingnavigator-control-windows-forms.md)

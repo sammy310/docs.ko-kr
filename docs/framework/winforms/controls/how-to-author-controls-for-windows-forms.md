@@ -6,12 +6,12 @@ helpviewer_keywords:
 - UserControl class [Windows Forms], Windows Forms
 - custom controls [Windows Forms], creating
 ms.assetid: 7570e982-545b-4c3a-a7c7-55581d313400
-ms.openlocfilehash: dbb14e30e3ed2bebdabcf9163291c647e05b1cc5
-ms.sourcegitcommit: 07c4368273b446555cb2c85397ea266b39d5fe50
+ms.openlocfilehash: 38416f28546f2aebc04d9ecf2c6995282b4720b8
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/21/2019
-ms.locfileid: "56584384"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57713417"
 ---
 # <a name="how-to-author-controls-for-windows-forms"></a>방법: Windows forms 컨트롤 작성
 컨트롤은 사용자와 프로그램 간의 그래픽 링크를 나타냅니다. 컨트롤은 데이터를 제공하거나 처리하고, 사용자 입력을 허용하고, 사용자 및 애플리케이션을 연결하는 다른 함수의 구성원을 합니다. 컨트롤이 기본적으로 그래픽 인터페이스를 사용하는 구성 요소이기 때문에 사용자 상호 작용을 제공할 뿐만 아니라 구성 요소가 수행하는 모든 함수를 제공할 수 있습니다. 컨트롤은 특정 목적을 수행하기 위해 만들어지며 컨트롤 작성은 다른 프로그래밍 작업입니다. 이 점을 염두하면서 다음 단계는 컨트롤 작성 프로세스의 개요를 나타냅니다. 링크는 각 단계에 대한 추가 정보를 제공합니다.  
@@ -35,15 +35,15 @@ ms.locfileid: "56584384"
   
 2.  컨트롤에 대한 개체 모델이 필요한 경우 개체 모델 전체에 기능을 분산할 방법을 결정하고 컨트롤과 하위 개체 간의 기능을 분리합니다. 개체 모델은 복잡한 컨트롤 계획하거나 여러 기능을 통합하려는 경우에 유용할 수 있습니다.  
   
-3.  필요한 컨트롤의 형식을 확인합니다(예: 사용자 정의 컨트롤, 사용자 지정 컨트롤, 상속된 Windows Forms 컨트롤). 자세한 내용은 [컨트롤 형식 권장 사항](../../../../docs/framework/winforms/controls/control-type-recommendations.md) 및 [사용자 지정 컨트롤의 종류](../../../../docs/framework/winforms/controls/varieties-of-custom-controls.md)를 참조하세요.  
+3.  필요한 컨트롤의 형식을 확인합니다(예: 사용자 정의 컨트롤, 사용자 지정 컨트롤, 상속된 Windows Forms 컨트롤). 자세한 내용은 [컨트롤 형식 권장 사항](control-type-recommendations.md) 및 [사용자 지정 컨트롤의 종류](varieties-of-custom-controls.md)를 참조하세요.  
   
 4.  기능을 컨트롤의 속성, 메서드 및 이벤트 및 해당 하위 개체 또는 보조 구조로 나타내고 적절한 액세스 수준(예: 공용, 보호 등)을 할당합니다.  
   
-5.  컨트롤에 사용자 지정 그리기가 필요한 경우 코드를 추가합니다. 자세한 내용은 [사용자 지정 컨트롤 그리기 및 렌더링](../../../../docs/framework/winforms/controls/custom-control-painting-and-rendering.md)을 포함합니다.  
+5.  컨트롤에 사용자 지정 그리기가 필요한 경우 코드를 추가합니다. 자세한 내용은 [사용자 지정 컨트롤 그리기 및 렌더링](custom-control-painting-and-rendering.md)을 포함합니다.  
   
-6.  컨트롤에서 상속 하는 경우 <xref:System.Windows.Forms.UserControl>, 컨트롤 프로젝트를 빌드하고에서 실행 하 여 런타임 동작을 테스트할 수 있습니다 합니다 **UserControl 테스트 컨테이너**합니다. 자세한 내용은 [방법: UserControl의 런타임 동작 테스트](../../../../docs/framework/winforms/controls/how-to-test-the-run-time-behavior-of-a-usercontrol.md)합니다.  
+6.  컨트롤에서 상속 하는 경우 <xref:System.Windows.Forms.UserControl>, 컨트롤 프로젝트를 빌드하고에서 실행 하 여 런타임 동작을 테스트할 수 있습니다 합니다 **UserControl 테스트 컨테이너**합니다. 자세한 내용은 [방법: UserControl의 런타임 동작 테스트](how-to-test-the-run-time-behavior-of-a-usercontrol.md)합니다.  
   
-7.  또한 Windows 애플리케이션과 같이 새 프로젝트를 만들고 컨테이너에 배치하여 컨트롤을 테스트하고 디버그할 수 있습니다. 이 프로세스의 일부로 설명 됩니다 [연습: Visual Basic에서 합성 컨트롤 제작](../../../../docs/framework/winforms/controls/walkthrough-authoring-a-composite-control-with-visual-basic.md)합니다.  
+7.  또한 Windows 애플리케이션과 같이 새 프로젝트를 만들고 컨테이너에 배치하여 컨트롤을 테스트하고 디버그할 수 있습니다. 이 프로세스의 일부로 설명 됩니다 [연습: Visual Basic에서 합성 컨트롤 제작](walkthrough-authoring-a-composite-control-with-visual-basic.md)합니다.  
   
 8.  각 기능을 추가하면 기능을 테스트 프로젝트에 추가하여 새 기능을 실행합니다.  
   
@@ -52,10 +52,10 @@ ms.locfileid: "56584384"
 10. 컨트롤을 패키지하고 배포합니다. 자세한 내용은 참조 하세요 [Visual Studio에서 배포를 먼저 살펴보겠습니다](/visualstudio/deployment/deploying-applications-services-and-components)합니다.  
   
 ## <a name="see-also"></a>참고자료
-- [연습: Visual Basic에서 합성 컨트롤 제작](../../../../docs/framework/winforms/controls/walkthrough-authoring-a-composite-control-with-visual-basic.md)
-- [연습: Visual Basic을 사용한 Windows Forms 컨트롤에서 상속](../../../../docs/framework/winforms/controls/walkthrough-inheriting-from-a-windows-forms-control-with-visual-basic.md)
-- [방법: UserControl 클래스에서 상속](../../../../docs/framework/winforms/controls/how-to-inherit-from-the-usercontrol-class.md)
-- [방법: Control 클래스에서 상속](../../../../docs/framework/winforms/controls/how-to-inherit-from-the-control-class.md)
-- [방법: 에서 상속 하는 기존 Windows Forms 컨트롤](../../../../docs/framework/winforms/controls/how-to-inherit-from-existing-windows-forms-controls.md)
-- [방법: UserControl의 런타임 동작 테스트](../../../../docs/framework/winforms/controls/how-to-test-the-run-time-behavior-of-a-usercontrol.md)
-- [사용자 지정 컨트롤의 종류](../../../../docs/framework/winforms/controls/varieties-of-custom-controls.md)
+- [연습: Visual Basic에서 합성 컨트롤 제작](walkthrough-authoring-a-composite-control-with-visual-basic.md)
+- [연습: Visual Basic을 사용한 Windows Forms 컨트롤에서 상속](walkthrough-inheriting-from-a-windows-forms-control-with-visual-basic.md)
+- [방법: UserControl 클래스에서 상속](how-to-inherit-from-the-usercontrol-class.md)
+- [방법: Control 클래스에서 상속](how-to-inherit-from-the-control-class.md)
+- [방법: 에서 상속 하는 기존 Windows Forms 컨트롤](how-to-inherit-from-existing-windows-forms-controls.md)
+- [방법: UserControl의 런타임 동작 테스트](how-to-test-the-run-time-behavior-of-a-usercontrol.md)
+- [사용자 지정 컨트롤의 종류](varieties-of-custom-controls.md)

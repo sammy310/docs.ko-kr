@@ -15,15 +15,15 @@ helpviewer_keywords:
 - mouse [Windows Forms], events
 - MouseUp event
 ms.assetid: 8cf0070d-793b-4876-b09e-d20d28280fab
-ms.openlocfilehash: 263ad4ccbee29b31c0b10a87de82dd3ecf650919
-ms.sourcegitcommit: 2b986afe4ce9e13bbeec929c9737757eb61de60e
+ms.openlocfilehash: d762c73862d99801c3c65ca12b4c97514834ac7f
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "56664187"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57712307"
 ---
 # <a name="mouse-events-in-windows-forms"></a>Windows Forms의 마우스 이벤트
-마우스 입력을 처리하는 경우 일반적으로 마우스 포인터의 위치와 마우스 단추의 상태를 알아야 합니다. 이 항목에서는 마우스 이벤트에서 이 정보를 가져오는 방법을 자세히 설명하고 Windows Forms 컨트롤에서 마우스 클릭 이벤트가 발생하는 순서를 설명합니다. 목록 및 설명은 모든 마우스 이벤트를 참조 하세요 [Windows Forms의 마우스 입력 방법](../../../docs/framework/winforms/how-mouse-input-works-in-windows-forms.md)합니다.  도 참조 하세요 [이벤트 처리기 개요 (Windows Forms)](event-handlers-overview-windows-forms.md) 하 고 [이벤트 개요 (Windows Forms)](events-overview-windows-forms.md)합니다.  
+마우스 입력을 처리하는 경우 일반적으로 마우스 포인터의 위치와 마우스 단추의 상태를 알아야 합니다. 이 항목에서는 마우스 이벤트에서 이 정보를 가져오는 방법을 자세히 설명하고 Windows Forms 컨트롤에서 마우스 클릭 이벤트가 발생하는 순서를 설명합니다. 목록 및 설명은 모든 마우스 이벤트를 참조 하세요 [Windows Forms의 마우스 입력 방법](how-mouse-input-works-in-windows-forms.md)합니다.  도 참조 하세요 [이벤트 처리기 개요 (Windows Forms)](event-handlers-overview-windows-forms.md) 하 고 [이벤트 개요 (Windows Forms)](events-overview-windows-forms.md)합니다.  
   
 ## <a name="mouse-information"></a>마우스 정보  
  <xref:System.Windows.Forms.MouseEventArgs>는 마우스 단추 클릭 및 마우스 움직임 추적과 관련된 마우스 이벤트 처리기로 전송됩니다. <xref:System.Windows.Forms.MouseEventArgs>는 클라이언트 좌표에서 마우스 포인터의 위치, 누른 마우스 단추, 마우스 휠의 스크롤 여부를 포함하여 마우스의 현재 상태에 대한 정보를 제공합니다. 마우스 포인터가 컨트롤의 범위로 들어오거나 나갈 때 단순히 알리는 이벤트와 같은 여러 마우스 이벤트가 추가 정보 없이 <xref:System.EventArgs>를 이벤트 처리기로 전송합니다.  
@@ -62,7 +62,7 @@ ms.locfileid: "56664187"
   
 8.  <xref:System.Windows.Forms.Control.MouseUp> 이벤트  
   
- 클릭 이벤트는 마우스의 순서를 보여 주는 코드 예제에 대 한 내용은 [방법: 사용자 입력 처리 이벤트에 Windows Forms 컨트롤](../../../docs/framework/winforms/how-to-handle-user-input-events-in-windows-forms-controls.md)합니다.  
+ 클릭 이벤트는 마우스의 순서를 보여 주는 코드 예제에 대 한 내용은 [방법: 사용자 입력 처리 이벤트에 Windows Forms 컨트롤](how-to-handle-user-input-events-in-windows-forms-controls.md)합니다.  
   
 ### <a name="individual-controls"></a>개별 컨트롤  
  다음 컨트롤은 표준 마우스 클릭 이벤트 동작을 준수하지 않습니다.  
@@ -142,4 +142,4 @@ ms.locfileid: "56664187"
     >  사용자가 마우스 단추를 누른 동안 토글 컨트롤에서 포인터를 이동하는 경우(예: 누른 동안 <xref:System.Windows.Forms.Button> 컨트롤에서 마우스 이동) 토글 컨트롤이 올려진 상태로 그려지고 <xref:System.Windows.Forms.Control.MouseUp> 이벤트만 발생합니다. 이런 상황에서는 <xref:System.Windows.Forms.Control.Click> 또는 <xref:System.Windows.Forms.Control.MouseClick> 이벤트가 발생하지 않습니다.  
   
 ## <a name="see-also"></a>참고자료
-- [Windows Forms 애플리케이션의 마우스 입력](../../../docs/framework/winforms/mouse-input-in-a-windows-forms-application.md)
+- [Windows Forms 애플리케이션의 마우스 입력](mouse-input-in-a-windows-forms-application.md)

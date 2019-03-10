@@ -8,19 +8,19 @@ helpviewer_keywords:
 - assembly folder registration [Windows Forms], Choose Toolbox Items dialog box
 - Choose Toolbox Items dialog box [Windows Forms], display control
 ms.assetid: 01ef6eba-d044-40f0-951d-78eff7ebd9a9
-ms.openlocfilehash: 3893859071b49c2ce0a01ca9d31fbee4474f21c9
-ms.sourcegitcommit: 07c4368273b446555cb2c85397ea266b39d5fe50
+ms.openlocfilehash: 191a0848d01eb043420866052b64e2284eb92b49
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/21/2019
-ms.locfileid: "56583158"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57720136"
 ---
 # <a name="how-to-display-a-control-in-the-choose-toolbox-items-dialog-box"></a>방법: 컨트롤에 표시 된 도구 상자 항목 선택 대화 상자
 개발 하 고 컨트롤을 배포할 해당 컨트롤에 표시 되도록 할 수 있습니다 합니다 **도구 상자 항목 선택** 마우스 오른쪽 단추로 클릭할 때 표시 되는 대화 상자를 **도구 상자** 선택한  **항목 선택**합니다. AssemblyFoldersEx 등록 절차를 사용 하 여이 대화 상자에서 표시할 컨트롤을 사용할 수 있습니다.  
   
 ### <a name="to-display-your-control-in-the-choose-toolbox-items-dialog-box"></a>도구 상자 항목 선택 대화 상자에서 컨트롤을 표시 하려면  
   
--   컨트롤 어셈블리를 전역 어셈블리 캐시에 설치 합니다. 자세한 내용은 [방법: 글로벌 어셈블리 캐시에 어셈블리 설치](../../../../docs/framework/app-domains/how-to-install-an-assembly-into-the-gac.md)  
+-   컨트롤 어셈블리를 전역 어셈블리 캐시에 설치 합니다. 자세한 내용은 [방법: 글로벌 어셈블리 캐시에 어셈블리 설치](../../app-domains/how-to-install-an-assembly-into-the-gac.md)  
   
      또는  
   
@@ -29,6 +29,6 @@ ms.locfileid: "56583158"
 ## <a name="see-also"></a>참고자료
 - [도구 상자 항목 선택 대화 상자(Visual Studio)](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/dyca0t6t(v=vs.100))
 - [사용자 지정 컨트롤 및 디자인 타임에 어셈블리 배포](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ee849818(v=vs.100))
-- [디자인 타임에 Windows Forms 컨트롤 개발](../../../../docs/framework/winforms/controls/developing-windows-forms-controls-at-design-time.md)
-- [방법: 글로벌 어셈블리 캐시에 어셈블리 설치](../../../../docs/framework/app-domains/how-to-install-an-assembly-into-the-gac.md)
-- [연습: 사용자 지정 구성 요소를 사용 하 여 도구 상자에 자동으로 채우기](../../../../docs/framework/winforms/controls/walkthrough-automatically-populating-the-toolbox-with-custom-components.md)
+- [디자인 타임에 Windows Forms 컨트롤 개발](developing-windows-forms-controls-at-design-time.md)
+- [방법: 글로벌 어셈블리 캐시에 어셈블리 설치](../../app-domains/how-to-install-an-assembly-into-the-gac.md)
+- [연습: 사용자 지정 구성 요소를 사용 하 여 도구 상자에 자동으로 채우기](walkthrough-automatically-populating-the-toolbox-with-custom-components.md)

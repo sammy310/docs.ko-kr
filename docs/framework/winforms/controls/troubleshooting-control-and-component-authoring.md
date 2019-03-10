@@ -11,12 +11,12 @@ helpviewer_keywords:
 - components [Windows Forms], troubleshooting
 - Windows Forms controls, debugging
 ms.assetid: e9c8c099-2271-4737-882f-50f336c7a55e
-ms.openlocfilehash: 10981f6e49b1d109dce0f3b2b4dc0ab9043ceb0f
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
+ms.openlocfilehash: aa3548ce8f785f7c8b1adddf54dde0cd07482749
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56746379"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57712697"
 ---
 # <a name="troubleshooting-control-and-component-authoring"></a>컨트롤 및 구성 요소 제작 문제 해결
 이 항목에서는 구성 요소와 컨트롤을 개발할 때 발생하는 다음과 같은 일반적인 문제를 나열합니다. 자세한 내용은 [구성 요소를 사용한 프로그래밍](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/0ffkdtkf(v=vs.120))을 참조하세요.  
@@ -34,7 +34,7 @@ ms.locfileid: "56746379"
 -   도구 상자에 구성 요소 아이콘이 표시되지 않습니다.  
   
 ## <a name="cannot-add-control-to-toolbox"></a>도구 상자에 컨트롤을 추가할 수 없습니다.  
- 다른 프로젝트에서 만든 사용자 지정 컨트롤 또는 타사 컨트롤을 **도구 상자**에 추가하려는 경우 수동으로 수행해야 합니다. 현재 프로젝트가 컨트롤 또는 구성 요소를 포함하는 경우 **도구 상자**에 자동으로 표시되어야 합니다. 자세한 내용은 [연습: 사용자 지정 구성 요소를 사용 하 여 도구 상자에 자동으로 채우기](../../../../docs/framework/winforms/controls/walkthrough-automatically-populating-the-toolbox-with-custom-components.md)합니다.  
+ 다른 프로젝트에서 만든 사용자 지정 컨트롤 또는 타사 컨트롤을 **도구 상자**에 추가하려는 경우 수동으로 수행해야 합니다. 현재 프로젝트가 컨트롤 또는 구성 요소를 포함하는 경우 **도구 상자**에 자동으로 표시되어야 합니다. 자세한 내용은 [연습: 사용자 지정 구성 요소를 사용 하 여 도구 상자에 자동으로 채우기](walkthrough-automatically-populating-the-toolbox-with-custom-components.md)합니다.  
   
 #### <a name="to-add-a-control-to-the-toolbox"></a>도구 상자에 컨트롤을 추가하려면  
   
@@ -67,7 +67,7 @@ ms.locfileid: "56746379"
          컨트롤이 **도구 상자**에 추가됩니다.  
   
 ## <a name="cannot-debug-the-windows-forms-user-control-or-component"></a>Windows Forms 사용자 정의 컨트롤 또는 구성 요소를 디버깅할 수 없습니다.  
- 컨트롤에서 파생 되는 경우는 <xref:System.Windows.Forms.UserControl> 클래스 테스트 컨테이너로 해당 런타임 동작을 디버깅할 수 있습니다. 자세한 내용은 [방법: UserControl의 런타임 동작 테스트](../../../../docs/framework/winforms/controls/how-to-test-the-run-time-behavior-of-a-usercontrol.md)합니다.  
+ 컨트롤에서 파생 되는 경우는 <xref:System.Windows.Forms.UserControl> 클래스 테스트 컨테이너로 해당 런타임 동작을 디버깅할 수 있습니다. 자세한 내용은 [방법: UserControl의 런타임 동작 테스트](how-to-test-the-run-time-behavior-of-a-usercontrol.md)합니다.  
   
  다른 사용자 지정 컨트롤 및 구성 요소는 독립 실행형 프로젝트가 아닙니다. Windows Forms 프로젝트와 같은 애플리케이션에 의해 호스팅되어야 합니다. 컨트롤 또는 구성 요소를 디버깅하려면 Windows Forms 프로젝트에 추가해야 합니다.  
   
@@ -93,7 +93,7 @@ ms.locfileid: "56746379"
   
      이제 컨트롤 또는 구성 요소를 정상적으로 디버깅할 수 있습니다.  
   
- 디버깅 하는 방법에 대 한 자세한 내용은 참조 하세요. [Visual Studio에서 디버깅](/visualstudio/debugger/debugging-in-visual-studio) 고 [연습: 디자인 타임에 디버깅 사용자 지정 Windows Forms 컨트롤](../../../../docs/framework/winforms/controls/walkthrough-debugging-custom-windows-forms-controls-at-design-time.md)합니다.  
+ 디버깅 하는 방법에 대 한 자세한 내용은 참조 하세요. [Visual Studio에서 디버깅](/visualstudio/debugger/debugging-in-visual-studio) 고 [연습: 디자인 타임에 디버깅 사용자 지정 Windows Forms 컨트롤](walkthrough-debugging-custom-windows-forms-controls-at-design-time.md)합니다.  
   
 ## <a name="event-is-raised-twice-in-inherited-control-or-component"></a>상속된 컨트롤 또는 구성 요소에서 이벤트가 두 번 발생합니다.  
  중복된 `Handles` 절 때문일 수 있습니다. 자세한 내용은 [Visual Basic에서 상속된 이벤트 처리기 관련 문제 해결](~/docs/visual-basic/programming-guide/language-features/events/troubleshooting-inherited-event-handlers.md)을 참조하세요.  
@@ -105,12 +105,12 @@ ms.locfileid: "56746379"
  <xref:System.STAThreadAttribute> Windows Forms는 단일 스레드 아파트 모델을 사용 하는 CLR (공용 언어 런타임)에 게 알립니다. Windows Forms 애플리케이션의 `Main` 메서드에 이 특성을 적용하지 않는 경우 의도하지 않은 동작이 발생할 수 있습니다. 예를 들어 배경 이미지가 표시 되지 같은 컨트롤에 대 한 <xref:System.Windows.Forms.ListView>합니다. 일부 컨트롤은 올바른 자동 완성 및 끌어서 놓기 동작에 대해 이 특성을 요구할 수도 있습니다.  
   
 ## <a name="component-icon-does-not-appear-in-toolbox"></a>도구 상자에 구성 요소 아이콘이 표시되지 않습니다.  
- 사용 하는 경우 <xref:System.Drawing.ToolboxBitmapAttribute> 사용자 지정 구성 요소를 사용 하 여 아이콘을 연결할지 비트맵은 자동으로 생성 된 구성 요소에 대 한 도구 상자에 나타나지 않습니다. 비트맵을 보려면 **도구 상자 항목 선택** 대화 상자를 사용하여 컨트롤을 다시 로드합니다. 자세한 내용은 [방법: 컨트롤에 대 한 도구 상자 비트맵 제공](../../../../docs/framework/winforms/controls/how-to-provide-a-toolbox-bitmap-for-a-control.md)합니다.  
+ 사용 하는 경우 <xref:System.Drawing.ToolboxBitmapAttribute> 사용자 지정 구성 요소를 사용 하 여 아이콘을 연결할지 비트맵은 자동으로 생성 된 구성 요소에 대 한 도구 상자에 나타나지 않습니다. 비트맵을 보려면 **도구 상자 항목 선택** 대화 상자를 사용하여 컨트롤을 다시 로드합니다. 자세한 내용은 [방법: 컨트롤에 대 한 도구 상자 비트맵 제공](how-to-provide-a-toolbox-bitmap-for-a-control.md)합니다.  
   
 ## <a name="see-also"></a>참고자료
-- [디자인 타임에 Windows Forms 컨트롤 개발](../../../../docs/framework/winforms/controls/developing-windows-forms-controls-at-design-time.md)
-- [연습: 사용자 지정 구성 요소를 사용 하 여 도구 상자에 자동으로 채우기](../../../../docs/framework/winforms/controls/walkthrough-automatically-populating-the-toolbox-with-custom-components.md)
-- [방법: UserControl의 런타임 동작 테스트](../../../../docs/framework/winforms/controls/how-to-test-the-run-time-behavior-of-a-usercontrol.md)
-- [연습: 디자인 타임에 사용자 지정 Windows Forms 컨트롤 디버그](../../../../docs/framework/winforms/controls/walkthrough-debugging-custom-windows-forms-controls-at-design-time.md)
+- [디자인 타임에 Windows Forms 컨트롤 개발](developing-windows-forms-controls-at-design-time.md)
+- [연습: 사용자 지정 구성 요소를 사용 하 여 도구 상자에 자동으로 채우기](walkthrough-automatically-populating-the-toolbox-with-custom-components.md)
+- [방법: UserControl의 런타임 동작 테스트](how-to-test-the-run-time-behavior-of-a-usercontrol.md)
+- [연습: 디자인 타임에 사용자 지정 Windows Forms 컨트롤 디버그](walkthrough-debugging-custom-windows-forms-controls-at-design-time.md)
 - [구성 요소 제작](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/5dya64wy(v=vs.120))
 - [디자인 타임 개발 문제 해결](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/ms171843(v=vs.120))

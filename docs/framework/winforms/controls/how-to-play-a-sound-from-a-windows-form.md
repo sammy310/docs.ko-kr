@@ -11,12 +11,12 @@ helpviewer_keywords:
 - My.Computer.Audio object [Windows Forms], playing sounds
 - examples [Windows Forms], sounds
 ms.assetid: 3d3350b7-1ebd-4e05-a738-48ca1160a19d
-ms.openlocfilehash: 02b0cb2952e11946f994819bb09a55167781137c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7d8c723fc995e8b9987681e3db343c43d3bc2682
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54607253"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57714712"
 ---
 # <a name="how-to-play-a-sound-from-a-windows-form"></a>방법: Windows Form에서 소리 재생
 이 예제에서는 런타임에 지정된 경로에서 소리를 재생합니다.  
@@ -66,5 +66,5 @@ private void playSimpleSound()
   
 ## <a name="see-also"></a>참고자료
 - <xref:System.Media.SoundPlayer>
-- [방법: Windows Form에서 비동기적으로 소리 로드](../../../../docs/framework/winforms/controls/how-to-load-a-sound-asynchronously-within-a-windows-form.md)
+- [방법: Windows Form에서 비동기적으로 소리 로드](how-to-load-a-sound-asynchronously-within-a-windows-form.md)
 

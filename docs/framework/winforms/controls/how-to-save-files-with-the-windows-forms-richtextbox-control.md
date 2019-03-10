@@ -15,12 +15,12 @@ helpviewer_keywords:
 - .rtf files [Windows Forms], saving in RichTextBox control
 - text files [Windows Forms], saving from RichTextBox control
 ms.assetid: 4a58ec19-84d1-4383-9110-298c06adcfca
-ms.openlocfilehash: 739cc33df873ef2c8ec7a2f5eaf867abadb8da75
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c9a5d471a58c646c786cf441ee7d7ec235788f10
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54539781"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57723035"
 ---
 # <a name="how-to-save-files-with-the-windows-forms-richtextbox-control"></a>방법: Windows Forms RichTextBox 컨트롤을 사용 하 여 파일을 저장 합니다.
 Windows Forms <xref:System.Windows.Forms.RichTextBox> 컨트롤 몇 가지 형식 중 하나에 표시 될 정보를 작성할 수 있습니다.  
@@ -41,7 +41,7 @@ Windows Forms <xref:System.Windows.Forms.RichTextBox> 컨트롤 몇 가지 형�
   
 1.  저장할 파일의 경로 확인 합니다.  
   
-     실제 응용 프로그램에서 이렇게 하려면 일반적으로 사용 된 <xref:System.Windows.Forms.SaveFileDialog> 구성 요소입니다. 개요를 보려면 [SaveFileDialog 구성 요소 개요](../../../../docs/framework/winforms/controls/savefiledialog-component-overview-windows-forms.md)합니다.  
+     실제 응용 프로그램에서 이렇게 하려면 일반적으로 사용 된 <xref:System.Windows.Forms.SaveFileDialog> 구성 요소입니다. 개요를 보려면 [SaveFileDialog 구성 요소 개요](savefiledialog-component-overview-windows-forms.md)합니다.  
   
 2.  호출을 <xref:System.Windows.Forms.RichTextBox.SaveFile%2A> 메서드의 <xref:System.Windows.Forms.RichTextBox> 컨트롤을 저장할 파일 및 필요에 따라 파일 형식을 지정 합니다. 파일 이름 유일한 인수로 사용 하 여 메서드를 호출 하면 파일이 RTF로 저장 됩니다. 다른 파일 형식을 지정하려면 <xref:System.Windows.Forms.RichTextBoxStreamType> 열거형의 값을 두 번째 인수로 사용하여 메서드를 호출합니다.  
   
@@ -90,5 +90,5 @@ Windows Forms <xref:System.Windows.Forms.RichTextBox> 컨트롤 몇 가지 형�
 ## <a name="see-also"></a>참고자료
 - <xref:System.Windows.Forms.RichTextBox.SaveFile%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.RichTextBox>
-- [RichTextBox 컨트롤](../../../../docs/framework/winforms/controls/richtextbox-control-windows-forms.md)
-- [Windows Forms에 사용할 수 있는 컨트롤](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)
+- [RichTextBox 컨트롤](richtextbox-control-windows-forms.md)
+- [Windows Forms에 사용할 수 있는 컨트롤](controls-to-use-on-windows-forms.md)
