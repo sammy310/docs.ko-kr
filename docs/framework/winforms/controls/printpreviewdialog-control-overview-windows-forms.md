@@ -8,15 +8,15 @@ helpviewer_keywords:
 ms.assetid: efd4ee8d-6edd-47ec-88e4-4a4759bd2384
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e28a6c82a8dd40885c04c56f2adfb3d38e674066
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: aad8673051b22db1df6d525094394dd2a43285ca
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54667559"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57711280"
 ---
 # <a name="printpreviewdialog-control-overview-windows-forms"></a>PrintPreviewDialog 컨트롤 개요 (Windows Forms)
-Windows Forms <xref:System.Windows.Forms.PrintPreviewDialog> 컨트롤은 미리 구성 된 대화 상자를 표시 하는 데 사용 하는 방법을 [PrintDocument](../../../../docs/framework/winforms/controls/printdocument-component-windows-forms.md) 인쇄할 때 표시 됩니다. 고유한 대화 상자를 구성 하는 대신 간단한 솔루션으로 Windows 기반 응용 프로그램 내에서 사용 합니다. 컨트롤에는 인쇄, 확대, 한 페이지 또는 여러 페이지 표시 및 대화 상자 닫기 단추가 포함되어 있습니다.  
+Windows Forms <xref:System.Windows.Forms.PrintPreviewDialog> 컨트롤은 미리 구성 된 대화 상자를 표시 하는 데 사용 하는 방법을 [PrintDocument](printdocument-component-windows-forms.md) 인쇄할 때 표시 됩니다. 고유한 대화 상자를 구성 하는 대신 간단한 솔루션으로 Windows 기반 응용 프로그램 내에서 사용 합니다. 컨트롤에는 인쇄, 확대, 한 페이지 또는 여러 페이지 표시 및 대화 상자 닫기 단추가 포함되어 있습니다.  
   
 ## <a name="key-properties-and-methods"></a>키 속성 및 메서드  
  컨트롤의 키 속성은 <xref:System.Windows.Forms.PrintPreviewDialog.Document%2A>를 설정 하는 문서를 미리 볼 수 있습니다. 해당 문서를 <xref:System.Drawing.Printing.PrintDocument> 개체입니다. 대화 상자를 표시 하기 위해 호출 해야 해당 <xref:System.Windows.Forms.Form.ShowDialog%2A> 메서드. 앤티 앨리어싱을 매끄럽게, 표시 텍스트를 만들 수 있지만 느린; 표시도 가능 를 사용 하려면 다음을 설정 합니다 <xref:System.Windows.Forms.PrintPreviewDialog.UseAntiAlias%2A> 속성을 `true`입니다.  
@@ -53,6 +53,6 @@ Windows Forms <xref:System.Windows.Forms.PrintPreviewDialog> 컨트롤은 미리
 
 ## <a name="see-also"></a>참고자료
 - <xref:System.Windows.Forms.PrintPreviewDialog>
-- [PrintPreviewControl 컨트롤 개요](../../../../docs/framework/winforms/controls/printpreviewcontrol-control-overview-windows-forms.md)
-- [PrintPreviewDialog 컨트롤](../../../../docs/framework/winforms/controls/printpreviewdialog-control-windows-forms.md)
-- [대화 상자 컨트롤 및 구성 요소](../../../../docs/framework/winforms/controls/dialog-box-controls-and-components-windows-forms.md)
+- [PrintPreviewControl 컨트롤 개요](printpreviewcontrol-control-overview-windows-forms.md)
+- [PrintPreviewDialog 컨트롤](printpreviewdialog-control-windows-forms.md)
+- [대화 상자 컨트롤 및 구성 요소](dialog-box-controls-and-components-windows-forms.md)
