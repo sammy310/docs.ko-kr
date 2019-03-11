@@ -3,12 +3,12 @@ title: C#의 숫자 - C# 소개 자습서
 description: 숫자 형식, 해당 속성 및 메서드를 살펴보면서 C#을 학습합니다.
 ms.date: 10/31/2017
 ms.custom: mvc
-ms.openlocfilehash: 009c737297c331b1aa4dcad058ac6bfdf05ac037
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 1b09a65b42395bfa1caf9e564120d3df1f3f1ed5
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56978620"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57673862"
 ---
 # <a name="manipulate-integral-and-floating-point-numbers-in-c"></a>C\#에서 정수 및 부동 소수점 수 조작
 
@@ -20,7 +20,7 @@ ms.locfileid: "56978620"
 
 **numbers-quickstart**라는 디렉터리를 만듭니다. 현재 디렉터리로 지정하고 `dotnet new console -n NumbersInCSharp -o .`을 실행합니다.
 
-원하는 편집기에서 **Program.cs**를 열고 `Console.Writeline("Hello World!");` 줄을 다음으로 바꿉니다.
+원하는 편집기에서 **Program.cs**를 열고 `Console.WriteLine("Hello World!");` 줄을 다음으로 바꿉니다.
 
 ```csharp
 int a = 18;
@@ -29,7 +29,7 @@ int c = a + b;
 Console.WriteLine(c);
 ```
 
-명령 창에 `dotnet run`을 입력하여 이 코드를 실행합니다. 
+명령 창에 `dotnet run`을 입력하여 이 코드를 실행합니다.
 
 정수를 사용하는 기본 수학 연산 중 하나를 방금 살펴봤습니다. `int` 형식은 **정수**(양의 정수 또는 음의 정수)를 나타냅니다. 더하기의 경우 `+` 기호를 사용합니다. 정수에 대해 다른 일반적인 수학 연산은 다음과 같습니다.
 
@@ -48,13 +48,13 @@ c = a / b;
 Console.WriteLine(c);
 ```
 
-명령 창에 `dotnet run`을 입력하여 이 코드를 실행합니다. 
-    
+명령 창에 `dotnet run`을 입력하여 이 코드를 실행합니다.
+
 원하는 경우 동일한 줄에서 여러 수학 연산을 수행하여 실험할 수도 있습니다. 예를 들어 `c = a + b - 12 * 17;`을 사용해 보세요. 변수와 상수를 혼합해서 사용할 수 있습니다.
 
 > [!TIP]
 > C# (또는 다른 프로그래밍 언어)를 살펴보면서 코드를 작성할 때 실수를 하게 될 것입니다. **컴파일러**는 그러한 오류를 찾아 사용자에게 보고합니다. 출력에 오류 메시지가 포함되어 있으면 예제 코드와 창의 코드를 자세히 살펴보고 수정 사항을 확인하세요.
-> 이 연습은 C# 코드의 구조를 학습하는 데 도움이 됩니다.     
+> 이 연습은 C# 코드의 구조를 학습하는 데 도움이 됩니다.
 
 첫 번째 단계를 완료했습니다. 다음 섹션을 시작하기 전에 현재 코드를 별도의 메서드로 이동합니다. 이렇게 하면 새 예제 작업을 쉽게 시작할 수 있습니다. `Main` 메서드의 이름을 `WorkingWithIntegers`로 바꾸고 `WorkingWithIntegers`를 호출하는 새 `Main` 메서드를 작성합니다. 작업을 마치면 코드가 다음과 같이 됩니다.
 
@@ -164,7 +164,7 @@ namespace NumbersInCSharp
         }
 
         static void OrderPrecedence()
-        {   
+        {
             int a = 5;
             int b = 4;
             int c = 2;
@@ -196,6 +196,7 @@ namespace NumbersInCSharp
 ```
 
 ## <a name="explore-integer-precision-and-limits"></a>정수 전체 자릿수 및 한도 살펴보기
+
 마지막 샘플에서는 정수 나누기가 결과를 자르는 것을 보여 줍니다.
 **modulo** 연산자(`%` 문자)를 사용하여 **나머지**를 얻을 수 있습니다. `Main` 메서드에 다음 코드를 사용해 봅니다.
 
@@ -210,7 +211,7 @@ Console.WriteLine($"remainder: {e}");
 ```
 
 C# 정수 형식은 한 가지 다른 면에서 수학의 정수와 다릅니다. 즉 `int` 형식에는 최소 한도와 최대 한도가 있습니다. 이 코드를 `Main` 메서드에 추가하여 해당 한도를 확인합니다.
-    
+
 ```csharp
 int max = int.MaxValue;
 int min = int.MinValue;
@@ -223,13 +224,14 @@ Console.WriteLine($"The range of integers is {min} to {max}");
 int what = max + 3;
 Console.WriteLine($"An example of overflow: {what}");
 ```
-    
-답은 최소 (음의) 정수와 아주 가깝습니다. `min + 2`와 같습니다. 더하기 연산은 정수에 대해 허용된 값을 **오버플로했습니다**.
+
+답은 최소 (음의) 정수와 아주 가깝습니다. `min + 2`와 같습니다.
+더하기 연산은 정수에 대해 허용된 값을 **오버플로했습니다**.
 오버플로가 가능한 가장 큰 정수에서 가장 작은 정수로 “래핑”하기 때문에 답은 아주 큰 음수입니다.
 
 `int` 형식이 요구 사항을 충족하지 않을 때 사용하는 여러 한도와 전체 자릿수가 있는 다른 숫자 형식이 있습니다. 이에 대해 다음에 살펴보겠습니다.
 
-다시 한번, 이 섹션에서 작성한 코드를 별도의 메서드로 이동해 보겠습니다. 이 EventHandler의 이름을 `TestLimits`로 지정합니다. 
+다시 한번, 이 섹션에서 작성한 코드를 별도의 메서드로 이동해 보겠습니다. 이 EventHandler의 이름을 `TestLimits`로 지정합니다.
 
 ## <a name="work-with-the-double-type"></a>double 형식 작업
 
@@ -262,7 +264,7 @@ double min = double.MinValue;
 Console.WriteLine($"The range of double is {min} to {max}");
 ```
 
-이러한 값은 과학적 표기법으로 인쇄됩니다. `E`의 왼쪽에 있는 숫자는 유효 숫자입니다. 오른쪽의 숫자는 지수이며 10의 배수입니다. 
+이러한 값은 과학적 표기법으로 인쇄됩니다. `E`의 왼쪽에 있는 숫자는 유효 숫자입니다. 오른쪽의 숫자는 지수이며 10의 배수입니다.
 
 수학의 10진수 숫자와 마찬가지로, C#에서 double에는 반올림 오류가 발생할 수 있습니다. 다음 코드를 사용해 보세요.
 
@@ -303,23 +305,23 @@ Console.WriteLine(c / d);
 
 숫자의 `M` 접미사는 상수가 `decimal` 형식을 사용해야 함을 나타내는 방법입니다.
 
-소수점 형식을 사용하는 수학에는 소수점 오른쪽에 더 많은 숫자가 있습니다. 
+소수점 형식을 사용하는 수학에는 소수점 오른쪽에 더 많은 숫자가 있습니다.
 
 ***과제***
 
-이제 여러 가지 숫자 형식을 살펴봤으므로 반지름이 2.50센티미터인 원의 면적을 계산하는 코드를 작성하세요. 원의 면적은 반지름 제곱 곱하기 PI입니다. 힌트: .NET에는 PI의 상수가 포함되어 있습니다. 즉 해당 값에 사용할 수 있는 <xref:System.Math.PI?displayProperty=nameWithType>입니다. 
+이제 여러 가지 숫자 형식을 살펴봤으므로 반지름이 2.50센티미터인 원의 면적을 계산하는 코드를 작성하세요. 원의 면적은 반지름 제곱 곱하기 PI입니다. 힌트: .NET에는 PI의 상수가 포함되어 있습니다. 즉 해당 값에 사용할 수 있는 <xref:System.Math.PI?displayProperty=nameWithType>입니다.
 
 19에서 20 사이의 답을 받아야 합니다.
 [GitHub에서 완성된 샘플 코드를 보고](https://github.com/dotnet/samples/tree/master/csharp/numbers-quickstart/Program.cs#L104-L106) 답을 확인할 수 있습니다.
 
-원하는 경우 다른 수식을 사용해 보세요. 
+원하는 경우 다른 수식을 사용해 보세요.
 
 “C#의 숫자” 빠른 시작을 완료했습니다. 자체 개발 환경에서 [분기 및 루프](branches-and-loops-local.md) 빠른 시작을 계속할 수 있습니다.
 
 다음 항목에서는 C#의 숫자에 대해 더 자세히 알아볼 수 있습니다.
 
-[정수 형식 표](../../language-reference/keywords/integral-types-table.md)   
-[부동 소수점 형식 표](../../language-reference/keywords/floating-point-types-table.md)   
-[기본 제공 형식 표](../../language-reference/keywords/built-in-types-table.md)   
-[암시적 숫자 변환 표](../../language-reference/keywords/implicit-numeric-conversions-table.md)   
-[명시적 숫자 변환 표](../../language-reference/keywords/explicit-numeric-conversions-table.md)
+- [정수 계열 형식 표](../../language-reference/keywords/integral-types-table.md)
+- [부동 소수점 형식 표](../../language-reference/keywords/floating-point-types-table.md)
+- [기본 제공 형식 표](../../language-reference/keywords/built-in-types-table.md)
+- [암시적 숫자 변환 표](../../language-reference/keywords/implicit-numeric-conversions-table.md)
+- [명시적 숫자 변환 표](../../language-reference/keywords/explicit-numeric-conversions-table.md)

@@ -6,7 +6,7 @@ dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
-- format spexifiers, custom time interval
+- format specifiers, custom time interval
 - format strings
 - formatting [.NET Framework], time interval
 - custom time interval format strings
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: a63ebf55-7269-416b-b4f5-286f6c03bf0e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0681ff9c59e77650654495ecd6e6d9f9ded82517
-ms.sourcegitcommit: 2b986afe4ce9e13bbeec929c9737757eb61de60e
+ms.openlocfilehash: 6bfab03a6dc7ae62a7564815f7b054370cde64f8
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "56665097"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57677112"
 ---
 # <a name="custom-timespan-format-strings"></a>사용자 지정 TimeSpan 서식 문자열
 
@@ -44,7 +44,7 @@ ms.locfileid: "56665097"
 
 <a name="table"></a> 다음 표에서는 사용자 지정 날짜 및 시간 형식 지정자에 대해 설명합니다.
 
-| 형식 지정자 | 설명 | 예 |
+| 형식 지정자 | 설명 | 예제 |
 |----------------------|-----------------|-------------|
 |"d", "%d"|시간 간격의 전체 일 수입니다.<br /><br /> 추가 정보: ["d" 사용자 지정 형식 지정자](#dSpecifier).|`new TimeSpan(6, 14, 32, 17, 685):`<br /><br /> `%d` --> "6"<br /><br /> `d\.hh\:mm` --> "6.14:32"|
 |“dd”-“dddddddd”|시간 간격의 전체 일 수로, 필요에 따라 앞에 0으로 채워집니다.<br /><br /> 추가 정보: ["dd"-"dddddddd" 사용자 지정 서식 지정자](#ddSpecifier).|`new TimeSpan(6, 14, 32, 17, 685):`<br /><br /> `ddd` --> "006"<br /><br /> `dd\.hh\:mm` --> "06.14:32"|
@@ -72,7 +72,7 @@ ms.locfileid: "56665097"
 |&#92;|이스케이프 문자입니다.<br /><br /> 추가 정보: [기타 문자](#Other).|`new TimeSpan(14, 32, 17):`<br /><br /> `hh\:mm\:ss` --> "14:32:17"|
 |기타 문자|이스케이프되지 않은 다른 모든 문자는 사용자 지정 형식 지정자로 해석됩니다.<br /><br /> 추가 정보: [기타 문자](#Other).|`new TimeSpan(14, 32, 17):`<br /><br /> `hh\:mm\:ss` --> "14:32:17"|
 
-<a name="dSpecifier"></a> 
+<a name="dSpecifier"></a>
 
 ## <a name="the-d-custom-format-specifier"></a>"d" 사용자 지정 형식 지정자
 
@@ -90,9 +90,10 @@ ms.locfileid: "56665097"
 
 [표로 이동](#table)
 
-<a name="ddSpecifier"></a> 
+<a name="ddSpecifier"></a>
 
 ## <a name="the-dd-dddddddd-custom-format-specifiers"></a>"dd"-"dddddddd" 사용자 지정 형식 지정자
+
 “dd”, “ddd”, “dddd”, “ddddd”, “dddddd”, “ddddddd” 및 “dddddddd” 사용자 지정 형식 지정자는 시간 간격의 전체 일 수를 나타내는 <xref:System.TimeSpan.Days%2A?displayProperty=nameWithType> 속성 값을 출력합니다.
 
 출력 문자열에는 형식 지정자에 "d" 문자 수로 지정된 최소 자릿수가 포함되며 필요에 따라 앞에 0으로 채워집니다. 일 수의 자릿수가 형식 지정자의 "d" 문자 수를 초과할 경우 전체 일 수가 결과 문자열에 출력됩니다.
@@ -104,9 +105,10 @@ ms.locfileid: "56665097"
 
 [표로 이동](#table)
 
-<a name="hSpecifier"></a> 
+<a name="hSpecifier"></a>
 
 ## <a name="the-h-custom-format-specifier"></a>"h" 사용자 지정 형식 지정자
+
 “h” 사용자 지정 형식 지정자는 일 구성 요소의 일부로 계산되지 않은 시간 간격의 전체 시간 수를 나타내는 <xref:System.TimeSpan.Hours%2A?displayProperty=nameWithType> 속성 값을 출력합니다. <xref:System.TimeSpan.Hours%2A?displayProperty=nameWithType> 속성 값이 0-9이면 한 자리 문자열 값을 반환하고, <xref:System.TimeSpan.Hours%2A?displayProperty=nameWithType> 속성 값이 10-23이면 두 자리 문자열 값을 반환합니다.
 
 "h" 사용자 지정 형식 지정자만 단독으로 사용하는 경우 표준 형식 문자열로 잘못 해석되지 않도록 "%h"를 지정합니다. 다음 예제에서 이에 대해 설명합니다.
@@ -126,9 +128,10 @@ ms.locfileid: "56665097"
 
 [표로 이동](#table)
 
-<a name="hhSpecifier"></a> 
+<a name="hhSpecifier"></a>
 
 ## <a name="the-hh-custom-format-specifier"></a>"hh" 사용자 지정 형식 지정자
+
 “hh” 사용자 지정 형식 지정자는 일 구성 요소의 일부로 계산되지 않은 시간 간격의 전체 시간 수를 나타내는 <xref:System.TimeSpan.Hours%2A?displayProperty=nameWithType> 속성 값을 출력합니다. 0-9 값의 경우 출력 문자열 앞에 0이 포함됩니다.
 
 일반적으로 구문 분석 작업에서 하나의 숫자만 포함하는 입력 문자열은 일 수로 해석됩니다. "hh" 사용자 지정 형식 지정자를 대신 사용하여 숫자 문자열을 시간 수로 해석할 수 있습니다. 다음 예제에서 이에 대해 설명합니다.
@@ -143,9 +146,10 @@ ms.locfileid: "56665097"
 
 [표로 이동](#table)
 
-<a name="mSpecifier"></a> 
+<a name="mSpecifier"></a>
 
 ## <a name="the-m-custom-format-specifier"></a>"m" 사용자 지정 형식 지정자
+
 “m” 사용자 지정 형식 지정자는 일 구성 요소의 일부로 계산되지 않은 시간 간격의 전체 분 수를 나타내는 <xref:System.TimeSpan.Minutes%2A?displayProperty=nameWithType> 속성 값을 출력합니다. <xref:System.TimeSpan.Minutes%2A?displayProperty=nameWithType> 속성 값이 0-9이면 한 자리 문자열 값을 반환하고, <xref:System.TimeSpan.Minutes%2A?displayProperty=nameWithType> 속성 값이 10-59이면 두 자리 문자열 값을 반환합니다.
 
 "m" 사용자 지정 형식 지정자만 단독으로 사용하는 경우 표준 형식 문자열로 잘못 해석되지 않도록 "%m"을 지정합니다. 다음 예제에서 이에 대해 설명합니다.
@@ -165,9 +169,10 @@ ms.locfileid: "56665097"
 
 [표로 이동](#table)
 
-<a name="mmSpecifier"></a> 
+<a name="mmSpecifier"></a>
 
 ## <a name="the-mm-custom-format-specifier"></a>"mm" 사용자 지정 형식 지정자
+
 “mm” 사용자 지정 형식 지정자는 시간 또는 일 구성 요소의 일부로 포함되지 않은 시간 간격의 전체 분 수를 나타내는 <xref:System.TimeSpan.Minutes%2A?displayProperty=nameWithType> 속성 값을 출력합니다. 0-9 값의 경우 출력 문자열 앞에 0이 포함됩니다.
 
 일반적으로 구문 분석 작업에서 하나의 숫자만 포함하는 입력 문자열은 일 수로 해석됩니다. "mm" 사용자 지정 형식 지정자를 대신 사용하여 숫자 문자열을 분 수로 해석할 수 있습니다. 다음 예제에서 이에 대해 설명합니다.
@@ -182,9 +187,10 @@ ms.locfileid: "56665097"
 
 [표로 이동](#table)
 
-<a name="sSpecifier"></a> 
+<a name="sSpecifier"></a>
 
 ## <a name="the-s-custom-format-specifier"></a>"s" 사용자 지정 형식 지정자
+
 “s” 사용자 지정 형식 지정자는 시간, 일 또는 분 구성 요소의 일부로 포함되지 않은 시간 간격의 전체 초 수를 나타내는 <xref:System.TimeSpan.Seconds%2A?displayProperty=nameWithType> 속성 값을 출력합니다. <xref:System.TimeSpan.Seconds%2A?displayProperty=nameWithType> 속성 값이 0-9이면 한 자리 문자열 값을 반환하고, <xref:System.TimeSpan.Seconds%2A?displayProperty=nameWithType> 속성 값이 10-59이면 두 자리 문자열 값을 반환합니다.
 
 "s" 사용자 지정 형식 지정자만 단독으로 사용하는 경우 표준 형식 문자열로 잘못 해석되지 않도록 "%s"를 지정합니다. 다음 예제에서 이에 대해 설명합니다.
@@ -204,9 +210,10 @@ ms.locfileid: "56665097"
 
 [표로 이동](#table)
 
-<a name="ssSpecifier"></a> 
+<a name="ssSpecifier"></a>
 
 ## <a name="the-ss-custom-format-specifier"></a>"ss" 사용자 지정 형식 지정자
+
 “ss” 사용자 지정 형식 지정자는 시간, 일 또는 분 구성 요소의 일부로 포함되지 않은 시간 간격의 전체 초 수를 나타내는 <xref:System.TimeSpan.Seconds%2A?displayProperty=nameWithType> 속성 값을 출력합니다. 0-9 값의 경우 출력 문자열 앞에 0이 포함됩니다.
 
 일반적으로 구문 분석 작업에서 하나의 숫자만 포함하는 입력 문자열은 일 수로 해석됩니다. "ss" 사용자 지정 형식 지정자를 대신 사용하여 숫자 문자열을 초 수로 해석할 수 있습니다. 다음 예제에서 이에 대해 설명합니다.
@@ -221,9 +228,10 @@ ms.locfileid: "56665097"
 
 [표로 이동](#table)
 
-<a name="fSpecifier"></a> 
+<a name="fSpecifier"></a>
 
 ## <a name="thef-custom-format-specifier"></a>“f” 사용자 지정 형식 지정자
+
 "f" 사용자 지정 형식 지정자는 시간 간격의 1/10초를 출력합니다. 형식 지정 작업에서 나머지 소수 자릿수는 잘립니다. <xref:System.TimeSpan.ParseExact%2A?displayProperty=nameWithType> 또는 <xref:System.TimeSpan.TryParseExact%2A?displayProperty=nameWithType> 메서드를 호출하는 구문 분석 작업에서 입력 문자열에는 정확히 소수 한 자리가 포함되어야 합니다.
 
 "f" 사용자 지정 형식 지정자만 단독으로 사용하는 경우 표준 형식 문자열로 잘못 해석되지 않도록 "%f"를 지정합니다.
@@ -235,9 +243,10 @@ ms.locfileid: "56665097"
 
 [표로 이동](#table)
 
-<a name="ffSpecifier"></a> 
+<a name="ffSpecifier"></a>
 
 ## <a name="the-ff-custom-format-specifier"></a>"ff" 사용자 지정 형식 지정자
+
 "ff" 사용자 지정 형식 지정자는 시간 간격의 1/100초를 출력합니다. 형식 지정 작업에서 나머지 소수 자릿수는 잘립니다. <xref:System.TimeSpan.ParseExact%2A?displayProperty=nameWithType> 또는 <xref:System.TimeSpan.TryParseExact%2A?displayProperty=nameWithType> 메서드를 호출하는 구문 분석 작업에서 입력 문자열에는 정확히 소수 두 자리가 포함되어야 합니다.
 
 다음 예제에서는 “ff” 사용자 지정 형식 지정자를 사용하여 <xref:System.TimeSpan> 값에 1/100초를 표시합니다. "ff"가 먼저 유일한 형식 지정자로 사용된 다음 사용자 지정 형식 문자열에서 "s" 지정자와 함께 사용됩니다.
@@ -247,9 +256,10 @@ ms.locfileid: "56665097"
 
 [표로 이동](#table)
 
-<a name="f3Specifier"></a> 
+<a name="f3Specifier"></a>
 
 ## <a name="the-fff-custom-format-specifier"></a>"fff" 사용자 지정 형식 지정자
+
 "fff" 사용자 지정 형식 지정자(세 개의 "f" 문자 포함)는 시간 간격의 밀리초를 출력합니다. 형식 지정 작업에서 나머지 소수 자릿수는 잘립니다. <xref:System.TimeSpan.ParseExact%2A?displayProperty=nameWithType> 또는 <xref:System.TimeSpan.TryParseExact%2A?displayProperty=nameWithType> 메서드를 호출하는 구문 분석 작업에서 입력 문자열에는 정확히 소수 세 자리가 포함되어야 합니다.
 
 다음 예제에서는 “fff” 사용자 지정 형식 지정자를 사용하여 <xref:System.TimeSpan> 값에 밀리초를 표시합니다. "fff"가 먼저 유일한 형식 지정자로 사용된 다음 사용자 지정 형식 문자열에서 "s" 지정자와 함께 사용됩니다.
@@ -259,9 +269,10 @@ ms.locfileid: "56665097"
 
 [표로 이동](#table)
 
-<a name="f4Specifier"></a> 
+<a name="f4Specifier"></a>
 
 ## <a name="the-ffff-custom-format-specifier"></a>"ffff" 사용자 지정 형식 지정자
+
 "ffff" 사용자 지정 형식 지정자(네 개의 "f" 문자 포함)는 시간 간격의 1/10000초를 출력합니다. 형식 지정 작업에서 나머지 소수 자릿수는 잘립니다. <xref:System.TimeSpan.ParseExact%2A?displayProperty=nameWithType> 또는 <xref:System.TimeSpan.TryParseExact%2A?displayProperty=nameWithType> 메서드를 호출하는 구문 분석 작업에서 입력 문자열에는 정확히 소수 네 자리가 포함되어야 합니다.
 
 다음 예제에서는 “ffff” 사용자 지정 형식 지정자를 사용하여 <xref:System.TimeSpan> 값에 1/10000초를 표시합니다. "ffff"가 먼저 유일한 형식 지정자로 사용된 다음 사용자 지정 형식 문자열에서 "s" 지정자와 함께 사용됩니다.
@@ -271,9 +282,10 @@ ms.locfileid: "56665097"
 
 [표로 이동](#table)
 
-<a name="f5Specifier"></a> 
+<a name="f5Specifier"></a>
 
 ## <a name="the-fffff-custom-format-specifier"></a>"fffff" 사용자 지정 형식 지정자
+
 "fffff" 사용자 지정 형식 지정자(다섯 개의 "f" 문자 포함)는 시간 간격의 1/100000초를 출력합니다. 형식 지정 작업에서 나머지 소수 자릿수는 잘립니다. <xref:System.TimeSpan.ParseExact%2A?displayProperty=nameWithType> 또는 <xref:System.TimeSpan.TryParseExact%2A?displayProperty=nameWithType> 메서드를 호출하는 구문 분석 작업에서 입력 문자열에는 정확히 소수 다섯 자리가 포함되어야 합니다.
 
 다음 예제에서는 “fffff” 사용자 지정 형식 지정자를 사용하여 <xref:System.TimeSpan> 값에 1/100000초를 표시합니다. "fffff"가 먼저 유일한 형식 지정자로 사용된 다음 사용자 지정 형식 문자열에서 "s" 지정자와 함께 사용됩니다.
@@ -283,9 +295,10 @@ ms.locfileid: "56665097"
 
 [표로 이동](#table)
 
-<a name="f6Specifier"></a> 
+<a name="f6Specifier"></a>
 
 ## <a name="the-ffffff-custom-format-specifier"></a>"ffffff" 사용자 지정 형식 지정자
+
 "ffffff" 사용자 지정 형식 지정자(여섯 개의 "f" 문자 포함)는 시간 간격의 1/1000000초를 출력합니다. 형식 지정 작업에서 나머지 소수 자릿수는 잘립니다. <xref:System.TimeSpan.ParseExact%2A?displayProperty=nameWithType> 또는 <xref:System.TimeSpan.TryParseExact%2A?displayProperty=nameWithType> 메서드를 호출하는 구문 분석 작업에서 입력 문자열에는 정확히 소수 여섯 자리가 포함되어야 합니다.
 
 다음 예제에서는 “ffffff” 사용자 지정 형식 지정자를 사용하여 <xref:System.TimeSpan> 값에 1/1000000초를 표시합니다. 먼저 유일한 형식 지정자로 사용된 다음 사용자 지정 형식 문자열에서 "s" 지정자와 함께 사용됩니다.
@@ -295,9 +308,10 @@ ms.locfileid: "56665097"
 
 [표로 이동](#table)
 
-<a name="f7Specifier"></a> 
+<a name="f7Specifier"></a>
 
 ## <a name="the-fffffff-custom-format-specifier"></a>"fffffff" 사용자 지정 형식 지정자
+
 "fffffff" 사용자 지정 형식 지정자(일곱 개의 "f" 문자 포함)는 시간 간격의 1/10000000초(또는 소수 자릿수 틱)를 출력합니다. <xref:System.TimeSpan.ParseExact%2A?displayProperty=nameWithType> 또는 <xref:System.TimeSpan.TryParseExact%2A?displayProperty=nameWithType> 메서드를 호출하는 구문 분석 작업에서 입력 문자열에는 정확히 소수 일곱 자리가 포함되어야 합니다.
 
 다음 예제에서는 “fffffff” 사용자 지정 형식 지정자를 사용하여 <xref:System.TimeSpan> 값에 소수 자릿수 틱을 표시합니다. 먼저 유일한 형식 지정자로 사용된 다음 사용자 지정 형식 문자열에서 "s" 지정자와 함께 사용됩니다.
@@ -307,9 +321,10 @@ ms.locfileid: "56665097"
 
 [표로 이동](#table)
 
-<a name="F_Specifier"></a> 
+<a name="F_Specifier"></a>
 
 ## <a name="the-f-custom-format-specifier"></a>"F" 사용자 지정 형식 지정자
+
 "F" 사용자 지정 형식 지정자는 시간 간격의 1/10초를 출력합니다. 형식 지정 작업에서 나머지 소수 자릿수는 잘립니다. 시간 간격의 1/10초 값이 0이면 결과 문자열에 포함되지 않습니다. <xref:System.TimeSpan.ParseExact%2A?displayProperty=nameWithType> 또는 <xref:System.TimeSpan.TryParseExact%2A?displayProperty=nameWithType> 메서드를 호출하는 구문 분석 작업에서 1/10초 숫자 표시는 선택 사항입니다.
 
 "F" 사용자 지정 형식 지정자만 단독으로 사용하는 경우 표준 형식 문자열로 잘못 해석되지 않도록 "%F"를 지정합니다.
@@ -321,9 +336,10 @@ ms.locfileid: "56665097"
 
 [표로 이동](#table)
 
-<a name="FF_Specifier"></a> 
+<a name="FF_Specifier"></a>
 
 ## <a name="the-ff-custom-format-specifier"></a>"FF" 사용자 지정 형식 지정자
+
 "FF" 사용자 지정 형식 지정자는 시간 간격의 1/100초를 출력합니다. 형식 지정 작업에서 나머지 소수 자릿수는 잘립니다. 뒤에 오는 소수 자릿수 0이 있는 경우 결과 문자열에 포함되지 않습니다. <xref:System.TimeSpan.ParseExact%2A?displayProperty=nameWithType> 또는 <xref:System.TimeSpan.TryParseExact%2A?displayProperty=nameWithType> 메서드를 호출하는 구문 분석 작업에서 1/10초 및 1/100초 숫자 표시는 선택 사항입니다.
 
 다음 예제에서는 “FF” 사용자 지정 형식 지정자를 사용하여 <xref:System.TimeSpan> 값에 1/100초를 표시합니다. 또한 구문 분석 작업에서 이 사용자 지정 형식 지정자를 사용합니다.
@@ -333,9 +349,10 @@ ms.locfileid: "56665097"
 
 [표로 이동](#table)
 
-<a name="F3_Specifier"></a> 
+<a name="F3_Specifier"></a>
 
 ## <a name="the-fff-custom-format-specifier"></a>"FFF" 사용자 지정 형식 지정자
+
 "FFF" 사용자 지정 형식 지정자(세 개의 "F" 문자 포함)는 시간 간격의 밀리초를 출력합니다. 형식 지정 작업에서 나머지 소수 자릿수는 잘립니다. 뒤에 오는 소수 자릿수 0이 있는 경우 결과 문자열에 포함되지 않습니다. <xref:System.TimeSpan.ParseExact%2A?displayProperty=nameWithType> 또는 <xref:System.TimeSpan.TryParseExact%2A?displayProperty=nameWithType> 메서드를 호출하는 구문 분석 작업에서 1/10초, 1/100초 및 1/1000초 숫자 표시는 선택 사항입니다.
 
 다음 예제에서는 “FFF” 사용자 지정 형식 지정자를 사용하여 <xref:System.TimeSpan> 값에 1/1000초를 표시합니다. 또한 구문 분석 작업에서 이 사용자 지정 형식 지정자를 사용합니다.
@@ -345,9 +362,10 @@ ms.locfileid: "56665097"
 
 [표로 이동](#table)
 
-<a name="F4_Specifier"></a> 
+<a name="F4_Specifier"></a>
 
 ## <a name="the-ffff-custom-format-specifier"></a>"FFFF" 사용자 지정 형식 지정자
+
 "FFFF" 사용자 지정 형식 지정자(네 개의 "F" 문자 포함)는 시간 간격의 1/10000초를 출력합니다. 형식 지정 작업에서 나머지 소수 자릿수는 잘립니다. 뒤에 오는 소수 자릿수 0이 있는 경우 결과 문자열에 포함되지 않습니다. <xref:System.TimeSpan.ParseExact%2A?displayProperty=nameWithType> 또는 <xref:System.TimeSpan.TryParseExact%2A?displayProperty=nameWithType> 메서드를 호출하는 구문 분석 작업에서 1/10초, 1/100초, 1/1000초 및 1/10000초 숫자 표시는 선택 사항입니다.
 
 다음 예제에서는 “FFFF” 사용자 지정 형식 지정자를 사용하여 <xref:System.TimeSpan> 값에 1/10000초를 표시합니다. 또한 구문 분석 작업에서 "FFFF" 사용자 지정 형식 지정자를 사용합니다.
@@ -357,9 +375,10 @@ ms.locfileid: "56665097"
 
 [표로 이동](#table)
 
-<a name="F5_Specifier"></a> 
+<a name="F5_Specifier"></a>
 
 ## <a name="the-fffff-custom-format-specifier"></a>"FFFFF" 사용자 지정 형식 지정자
+
 "FFFFF" 사용자 지정 형식 지정자(다섯 개의 "F" 문자 포함)는 시간 간격의 1/100000초를 출력합니다. 형식 지정 작업에서 나머지 소수 자릿수는 잘립니다. 뒤에 오는 소수 자릿수 0이 있는 경우 결과 문자열에 포함되지 않습니다. <xref:System.TimeSpan.ParseExact%2A?displayProperty=nameWithType> 또는 <xref:System.TimeSpan.TryParseExact%2A?displayProperty=nameWithType> 메서드를 호출하는 구문 분석 작업에서 1/10초, 1/100초, 1/1000초, 1/10000초 및 1/100000초 숫자 표시는 선택 사항입니다.
 
 다음 예제에서는 “FFFFF” 사용자 지정 형식 지정자를 사용하여 <xref:System.TimeSpan> 값에 1/100000초를 표시합니다. 또한 구문 분석 작업에서 "FFFFF" 사용자 지정 형식 지정자를 사용합니다.
@@ -369,9 +388,10 @@ ms.locfileid: "56665097"
 
 [표로 이동](#table)
 
-<a name="F6_Specifier"></a> 
+<a name="F6_Specifier"></a>
 
 ## <a name="the-ffffff-custom-format-specifier"></a>"FFFFFF" 사용자 지정 형식 지정자
+
 "FFFFFF" 사용자 지정 형식 지정자(여섯 개의 "F" 문자 포함)는 시간 간격의 1/1000000초를 출력합니다. 형식 지정 작업에서 나머지 소수 자릿수는 잘립니다. 뒤에 오는 소수 자릿수 0이 있는 경우 결과 문자열에 포함되지 않습니다. <xref:System.TimeSpan.ParseExact%2A?displayProperty=nameWithType> 또는 <xref:System.TimeSpan.TryParseExact%2A?displayProperty=nameWithType> 메서드를 호출하는 구문 분석 작업에서 1/10초, 1/100초, 1/1000초, 1/10000초, 1/100000초 및 1/1000000초 숫자 표시는 선택 사항입니다.
 
 다음 예제에서는 “FFFFFF” 사용자 지정 형식 지정자를 사용하여 <xref:System.TimeSpan> 값에 1/1000000초를 표시합니다. 또한 구문 분석 작업에서 이 사용자 지정 형식 지정자를 사용합니다.
@@ -381,9 +401,10 @@ ms.locfileid: "56665097"
 
 [표로 이동](#table)
 
-<a name="F7_Specifier"></a> 
+<a name="F7_Specifier"></a>
 
 ## <a name="the-fffffff-custom-format-specifier"></a>"FFFFFFF" 사용자 지정 형식 지정자
+
 "FFFFFFF" 사용자 지정 형식 지정자(일곱 개의 "F" 문자 포함)는 시간 간격의 1/10000000초(또는 소수 자릿수 틱)를 출력합니다. 뒤에 오는 소수 자릿수 0이 있는 경우 결과 문자열에 포함되지 않습니다. <xref:System.TimeSpan.ParseExact%2A?displayProperty=nameWithType> 또는 <xref:System.TimeSpan.TryParseExact%2A?displayProperty=nameWithType> 메서드를 호출하는 구문 분석 작업에서 입력 문자열의 소수 일곱 자리 표시는 선택 사항입니다.
 
 다음 예제에서는 “FFFFFFF” 사용자 지정 형식 지정자를 사용하여 <xref:System.TimeSpan> 값에 1초의 소수 자릿수 부분을 표시합니다. 또한 구문 분석 작업에서 이 사용자 지정 형식 지정자를 사용합니다.
@@ -393,7 +414,7 @@ ms.locfileid: "56665097"
 
 [표로 이동](#table)
 
-<a name="Other"></a> 
+<a name="Other"></a>
 
 ## <a name="other-characters"></a>기타 문자
 

@@ -3,12 +3,12 @@ title: 분기 및 루프 - C# 소개 자습서
 description: 분기 및 루프에 관한 이 자습서에서는 C# 코드를 작성하여 문을 반복적으로 실행하기 위한 조건부 분기 및 루프를 지원하는 언어 구문을 살펴봅니다.
 ms.date: 10/31/2017
 ms.custom: mvc
-ms.openlocfilehash: bfb260ccfd0cf2b922c1bc3eaa98aa2c26b464d8
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: c9e2ede3ee8632304a86efdf25bb2a8db5354a13
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53153776"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57677788"
 ---
 # <a name="learn-conditional-logic-with-branch-and-loop-statements"></a>분기 및 루프 문이 포함된 조건부 논리 알아보기
 
@@ -18,9 +18,9 @@ ms.locfileid: "53153776"
 
 ## <a name="make-decisions-using-the-if-statement"></a>`if` 문을 사용하여 결정하기
 
-**branches-tutorial**이라는 디렉터리를 만듭니다. 현재 디렉터리로 지정하고 `dotnet new console -n BranchesAndLoops -o .`을 실행합니다. 이 명령은 현재 디렉터리에 새 .NET Core 콘솔 응용 프로그램을 만듭니다.
+**branches-tutorial**이라는 디렉터리를 만듭니다. 현재 디렉터리로 지정하고 `dotnet new console -n BranchesAndLoops -o .`을 실행합니다. 이 명령은 현재 디렉터리에 새 .NET Core 콘솔 애플리케이션을 만듭니다.
 
-원하는 편집기에서 **Program.cs**를 열고 `Console.Writeline("Hello World!");` 줄을 다음 코드로 바꿉니다.
+원하는 편집기에서 **Program.cs**를 열고 `Console.WriteLine("Hello World!");` 줄을 다음 코드로 바꿉니다.
 
 ```csharp
 int a = 5;
@@ -31,7 +31,7 @@ if (a + b > 10)
 
 콘솔 창에 `dotnet run`을 입력하여 이 코드를 사용해 봅니다. “The answer is greater than 10.”(답은 10보다 큽니다.)이라는 메시지가 콘솔에 출력되어야 합니다.
 
-합계가 10보다 작도록 `b`의 선언을 수정합니다. 
+합계가 10보다 작도록 `b`의 선언을 수정합니다.
 
 ```csharp
 int b = 3;
@@ -63,7 +63,8 @@ else
 
 > [!IMPORTANT]
 > `if` 및 `else` 문 아래의 들여쓰기는 사용자가 보기 편하도록 하기 위함입니다.
-> C# 언어는 들여쓰기 또는 공백을 중요하게 취급하지 않습니다. `if` 또는 `else` 키워드 뒤의 문은 조건에 따라 실행됩니다. 이 자습서의 모든 샘플에서는 문의 제어 흐름을 기준으로 줄을 들여쓰는 일반적인 방법을 따릅니다.
+> C# 언어는 들여쓰기 또는 공백을 중요하게 취급하지 않습니다.
+> `if` 또는 `else` 키워드 뒤의 문은 조건에 따라 실행됩니다. 이 자습서의 모든 샘플에서는 문의 제어 흐름을 기준으로 줄을 들여쓰는 일반적인 방법을 따릅니다.
 
 들여쓰기는 중요하지 않기 때문에 `{` 및 `}`를 사용하여 두 개 이상의 문이 조건부로 실행되는 블록의 일부가 되는 시기를 나타내야 합니다. C# 프로그래머는 일반적으로 모든 `if` 및 `else` 절에서 중괄호를 사용합니다. 다음 예제는 방금 작성한 코드와 같습니다. 다음 코드와 일치하도록 위의 코드를 수정합니다.
 
@@ -158,7 +159,7 @@ namespace BranchesAndLoops
             {
                 Console.WriteLine("The answer is not greater than 10");
                 Console.WriteLine("And the first number is not greater than the second");
-            }            
+            }
         }
 
         static void Main(string[] args)
@@ -218,7 +219,7 @@ C#에서는 일반적으로 **for** 루프가 사용됩니다. Main() 메서드�
 for(int index = 0; index < 10; index++)
 {
     Console.WriteLine($"Hello World! The index is {index}");
-} 
+}
 ```
 
 `while` 루프 및 이미 사용한 `do` 루프와 동일한 작업을 수행합니다. `for` 문에는 작동 방식을 제어하는 세 부분이 있습니다.
@@ -252,7 +253,7 @@ for(int index = 0; index < 10; index++)
 
 다음 항목에서는 해당 개념에 대해 더 자세히 알아볼 수 있습니다.
 
-[If 및 else 문](../../language-reference/keywords/if-else.md)  
-[While 문](../../language-reference/keywords/while.md)  
-[Do 문](../../language-reference/keywords/do.md)  
-[For 문](../../language-reference/keywords/for.md)  
+- [If 및 else 문](../../language-reference/keywords/if-else.md)
+- [While 문](../../language-reference/keywords/while.md)
+- [Do 문](../../language-reference/keywords/do.md)
+- [For 문](../../language-reference/keywords/for.md)

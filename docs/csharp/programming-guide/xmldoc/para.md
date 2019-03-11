@@ -9,12 +9,12 @@ helpviewer_keywords:
 - <para> C# XML tag
 - para C# XML tag
 ms.assetid: c74b8705-29df-40b1-bff5-237492b0e978
-ms.openlocfilehash: e97ee59817ec0b60ac85d20199c9219c3e0014a3
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 0891ce06b1d24b8b5841ed6c0b1e43d1d2e3fbc7
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55261365"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57481393"
 ---
 # <a name="para-c-programming-guide"></a>\<para>(C# 프로그래밍 가이드)
 ## <a name="syntax"></a>구문  
@@ -23,7 +23,7 @@ ms.locfileid: "55261365"
 <para>content</para>  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `content`  
  단락의 텍스트입니다.  
   
@@ -32,7 +32,7 @@ ms.locfileid: "55261365"
   
  [/doc](../../../csharp/language-reference/compiler-options/doc-compiler-option.md)로 컴파일하여 문서 주석을 파일로 처리합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  \<para>를 사용한 예제는 [\<summary>](../../../csharp/programming-guide/xmldoc/summary.md)를 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목

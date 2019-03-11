@@ -2,12 +2,12 @@
 title: 비동기 반환 형식(C#)
 ms.date: 05/29/2017
 ms.assetid: ddb2539c-c898-48c1-ad92-245e4a996df8
-ms.openlocfilehash: 4587ec66df91683a1fd02f0ec09c09099d922b0c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c2a15b87e97dea43c37f720856be2892ad6966a3
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54548253"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57368183"
 ---
 # <a name="async-return-types-c"></a>비동기 반환 형식(C#)
 비동기 메서드의 반환 형식은 다음과 같을 수 있습니다.
@@ -24,7 +24,7 @@ ms.locfileid: "54548253"
   
 다음 섹션 중 하나에서 각 반환 형식을 살펴보고 세 가지 형식 모두를 사용하는 전체 예제는 이 항목의 끝에 나와 있습니다.  
   
-##  <a name="BKMK_TaskTReturnType"></a> 작업\<TResult\> 반환 형식  
+## <a name="BKMK_TaskTReturnType"></a> 작업\<TResult\> 반환 형식  
 <xref:System.Threading.Tasks.Task%601> 반환 형식은 피연산자의 형식이 `TResult`인 [Return](../../../../csharp/language-reference/keywords/return.md)(C#) 문이 포함된 비동기 메서드에 사용합니다.  
   
 다음 예제에서 `GetLeisureHours` 비동기 메서드는 정수를 반환하는 `return` 문을 포함합니다. 따라서 메서드 선언은 `Task<int>`의 반환 형식을 지정해야 합니다.  <xref:System.Threading.Tasks.Task.FromResult%2A> 비동기 메서드는 문자열을 반환하는 작업에 대한 자리 표시자입니다.
@@ -40,7 +40,7 @@ ms.locfileid: "54548253"
 
 [!code-csharp[return-value](../../../../../samples/snippets/csharp/programming-guide/async/async-returns1a.cs#1)]
   
-##  <a name="BKMK_TaskReturnType"></a> Task 반환 형식  
+## <a name="BKMK_TaskReturnType"></a> Task 반환 형식  
 `return` 문을 포함하지 않거나 피연산자를 반환하지 않는 `return` 문을 포함하는 비동기 메서드의 반환 형식은 일반적으로 <xref:System.Threading.Tasks.Task>입니다. 이러한 메서드는 동기적으로 실행될 경우 `void`를 반환합니다. 비동기 메서드에 대해 <xref:System.Threading.Tasks.Task> 반환 형식을 사용하는 경우 호출된 비동기 메서드가 완료될 때까지 호출 메서드는 `await` 연산자를 사용하여 호출자의 완료를 일시 중단할 수 있습니다.  
   
 다음 예제에서 `WaitAndApologize` 비동기 메서드에는 `return` 문이 없으므로 메서드가 <xref:System.Threading.Tasks.Task> 개체를 반환합니다. 이렇게 하면 `WaitAndApologize`가 대기됩니다. <xref:System.Threading.Tasks.Task> 형식에는 반환 값이 없으므로 `Result` 속성이 포함되어 있지 않습니다.  
@@ -55,7 +55,7 @@ ms.locfileid: "54548253"
  
 [!code-csharp[return-value](../../../../../samples/snippets/csharp/programming-guide/async/async-returns2a.cs#1)]  
  
-##  <a name="BKMK_VoidReturnType"></a> Void 반환 형식
+## <a name="BKMK_VoidReturnType"></a> Void 반환 형식
 
 `void`반환 형식이 필요한 비동기 이벤트 처리기에 `void` 반환 형식을 사용합니다. 값을 반환하지 않는 이벤트 처리기 이외의 메서드의 경우 `void`를 반환하는 비동기 메서드를 대기할 수 없기 때문에 <xref:System.Threading.Tasks.Task>를 대신 반환해야 합니다. 이러한 메서드의 호출자는 호출된 비동기 메서드가 마치는 것을 기다리지 않고 완료될 때까지 계속 진행할 수 있어야 하므로, 해당 호출자는 비동기 메서드가 생성하는 모든 값 또는 예외와 독립되어 있어야 합니다.  
   

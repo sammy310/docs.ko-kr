@@ -13,12 +13,12 @@ helpviewer_keywords:
 - cross-references [C#], tags
 - <seealso> C# XML tag
 ms.assetid: 8e157f3f-f220-4fcf-9010-88905b080b18
-ms.openlocfilehash: 42cc976a160f1ff9ce08fc4ab71ed03984034850
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: cccb338d2dbed7889512428a53804324795c66bd
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55267609"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57498291"
 ---
 # <a name="seealso-c-programming-guide"></a>\<seealso>(C# 프로그래밍 가이드)
 ## <a name="syntax"></a>구문  
@@ -27,7 +27,7 @@ ms.locfileid: "55267609"
 <seealso cref="member"/>  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  cref = " `member`"  
  현재 컴파일 환경에서 호출할 수 있는 멤버 또는 필드에 대한 참조입니다. 컴파일러는 지정된 코드 요소가 있으며 `member`를 출력 XML의 요소 이름에 전달하는지 확인합니다. `member` 는 큰따옴표(“ ”)로 묶어야 합니다.  
   
@@ -38,7 +38,7 @@ ms.locfileid: "55267609"
   
  [/doc](../../../csharp/language-reference/compiler-options/doc-compiler-option.md)로 컴파일하여 문서 주석을 파일로 처리합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  \<seealso>를 사용한 예제는 [\<summary>](../../../csharp/programming-guide/xmldoc/summary.md)를 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목

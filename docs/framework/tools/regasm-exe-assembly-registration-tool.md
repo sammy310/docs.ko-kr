@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: e190e342-36ef-4651-a0b4-0e8c2c0281cb
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 30b13c75907ad0bc4d6dbce6a3ecd07f1fbede11
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: 99e1b2cb67bb434cc3c3770900c6189a4ab22242
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48264436"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57492441"
 ---
 # <a name="regasmexe-assembly-registration-tool"></a>Regasm.exe(어셈블리 등록 도구)
 
@@ -30,7 +30,7 @@ ms.locfileid: "48264436"
 regasm assemblyFile [options]
 ```
 
-#### <a name="parameters"></a>매개 변수
+## <a name="parameters"></a>매개 변수
 
 |매개 변수|설명|
 |---------------|-----------------|
@@ -52,7 +52,7 @@ regasm assemblyFile [options]
 > [!NOTE]
 > Regasm.exe의 명령줄 옵션은 대/소문자가 구분되지 않습니다. 따라서 옵션을 고유하게 식별할 수 있을 정도로만 옵션을 지정하면 됩니다. 예를 들어, **/n**은 **/nologo**와 같고, **/t:** *outfile.tlb*는 **/tlb:** *outfile.tlb*와 같습니다.
 
-## <a name="remarks"></a>설명
+## <a name="remarks"></a>주의
 
 **/regfile** 옵션을 사용하면 레지스트리를 직접 변경하는 대신 레지스트리 항목이 들어 있는 .ref 파일을 생성할 수 있습니다. 레지스트리 편집기 도구(Regedit.exe)를 사용하여 .reg 파일을 가져오면 시스템의 레지스트리를 업데이트할 수도 있습니다. 사용자 정의 등록 함수에서 수행되는 레지스트리 업데이트 내용은 .reg 파일에 포함되지 않습니다.  **/regfile** 옵션은 관리되는 클래스에 대한 레지스트리 항목만 내보냅니다.  이 옵션은 `TypeLibID` 또는 `InterfaceID`에 대한 항목은 내보내지 않습니다.
 
@@ -60,9 +60,9 @@ regasm assemblyFile [options]
 
 COM에서 사용할 수 있게 어셈블리를 등록하면 Regasm.exe는 로컬 컴퓨터의 레지스트리에 항목을 추가합니다. 좀 더 구체적으로 말하면 한 대의 컴퓨터에서 동일한 어셈블리의 여러 버전을 side by side 방식으로 실행할 수 있도록 하는 버전별 레지스트리 키를 만듭니다. 처음 어셈블리가 등록되면 어셈블리에 대해 하나의 최상위 수준 키가 만들어지고 특정 버전에 대해 고유한 하위 키가 만들어집니다. 새 버전의 어셈블리를 등록할 때마다 Regasm.exe는 새 버전에 대한 하위 키를 만듭니다.
 
-예를 들어, COM에서 사용하기 위해 관리되는 구성 요소 myComp.dll 버전 1.0.0.0을 등록한다고 가정해 봅시다. 나중에 myComp.dll, 버전 2.0.0.0을 등록할 수 있습니다. 컴퓨터의 모든 COM 클라이언트 응용 프로그램이 myComp.dll 버전 2.0.0.0을 사용하기로 하고 myComponent.dll 버전 1.0.0.0은 등록 해제하기로 했습니다. 이 레지스트리 스키마를 사용하면 버전 1.0.0.0 하위 키만 제거되므로 myComp.dll 버전 1.0.0.0을 등록 해제할 수 있습니다.
+예를 들어, COM에서 사용하기 위해 관리되는 구성 요소 myComp.dll 버전 1.0.0.0을 등록한다고 가정해 봅시다. 나중에 myComp.dll, 버전 2.0.0.0을 등록할 수 있습니다. 컴퓨터의 모든 COM 클라이언트 애플리케이션이 myComp.dll 버전 2.0.0.0을 사용하기로 하고 myComponent.dll 버전 1.0.0.0은 등록 해제하기로 했습니다. 이 레지스트리 스키마를 사용하면 버전 1.0.0.0 하위 키만 제거되므로 myComp.dll 버전 1.0.0.0을 등록 해제할 수 있습니다.
 
-Regasm.exe를 사용하여 어셈블리를 등록한 다음에는 COM 클라이언트에서 해당 어셈블리를 활성화할 수 있도록 [전역 어셈블리 캐시](../../../docs/framework/app-domains/gac.md)에 설치할 수 있습니다. 어셈블리가 한 응용 프로그램에서만 활성화되도록 하려면 해당 응용 프로그램의 디렉터리에 어셈블리를 포함하면 됩니다.
+Regasm.exe를 사용하여 어셈블리를 등록한 다음에는 COM 클라이언트에서 해당 어셈블리를 활성화할 수 있도록 [전역 어셈블리 캐시](../../../docs/framework/app-domains/gac.md)에 설치할 수 있습니다. 어셈블리가 한 애플리케이션에서만 활성화되도록 하려면 해당 애플리케이션의 디렉터리에 어셈블리를 포함하면 됩니다.
 
 ## <a name="examples"></a>예제
 

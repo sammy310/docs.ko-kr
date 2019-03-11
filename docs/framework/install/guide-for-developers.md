@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: daf9d9d5-84ac-4bd9-a864-27665ffd0f5c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 01bbd3e4fd113c39fe6fdd95945381978ab49f9f
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
+ms.openlocfilehash: ac6dbf4792df9e287c849ba2a1a93468a444d221
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56093946"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57715687"
 ---
 # <a name="install-the-net-framework-for-developers"></a>개발자용 .NET Framework 설치
 
@@ -228,7 +228,7 @@ Visual Studio에서 애플리케이션을 빌드하거나 명령줄에서 MSBuil
 
 - 응용 프로그램을 .NET Framework 4에서 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 또는 해당 포인트 릴리스 중 하나로 마이그레이션하는 방법에 대한 자세한 내용은 [마이그레이션 가이드](~/docs/framework/migration-guide/index.md)를 참조하십시오.
 
-- 온라인에서 .NET Framework 소스 코드를 검색하려면 [.NET Framework 참조 소스](https://referencesource.microsoft.com/)를 참조하십시오. 참조 소스는 [GitHub](https://github.com/Microsoft/referencesource)에서도 사용할 수 있습니다. [참조 소스를 다운로드](https://referencesource.microsoft.com/download.html)하여 오프라인에서 살펴보고, 디버그 시 소스(패치 및 업데이트 포함)를 단계별로 실행할 수 있습니다. 자세한 내용은 블로그 항목 [.NET 참조 소스의 새로운 디자인](https://blogs.msdn.com/b/dotnet/archive/2014/02/24/a-new-look-for-net-reference-source.aspx)을 참조하십시오.
+- 온라인에서 .NET Framework 소스 코드를 검색하려면 [.NET Framework 참조 소스](https://referencesource.microsoft.com/)를 참조하십시오. 참조 소스는 [GitHub](https://github.com/Microsoft/referencesource)에서도 사용할 수 있습니다. [참조 소스를 다운로드](https://referencesource.microsoft.com/download.html)하여 오프라인에서 살펴보고, 디버그 시 소스(패치 및 업데이트 포함)를 단계별로 실행할 수 있습니다. 자세한 내용은 블로그 항목 [.NET 참조 소스의 새로운 디자인](https://devblogs.microsoft.com/dotnet/a-new-look-for-net-reference-source/)을 참조하십시오.
 
 ## <a name="see-also"></a>참고 항목
 

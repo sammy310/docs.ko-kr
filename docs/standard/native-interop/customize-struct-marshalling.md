@@ -7,12 +7,12 @@ ms.date: 01/18/2019
 dev_langs:
 - csharp
 - cpp
-ms.openlocfilehash: c4d2d84a59aebedda2d1e6380caeef170051c0a3
-ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
+ms.openlocfilehash: 5bce891a0061bb1810559febf1ab904a5fb6fc94
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/19/2019
-ms.locfileid: "56411444"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57675786"
 ---
 # <a name="customizing-structure-marshalling"></a>구조체 마샬링 사용자 지정
 
@@ -65,7 +65,7 @@ struct WinBool
 };
 ```
 
-아래의 `UmanagedType.U1` 또는 `UnmanagedType.I1` 값을 사용하여 `b` 필드를 1바이트 네이티브 `bool` 형식으로 마샬링하도록 런타임에 지정할 수 있습니다.
+아래의 `UnmanagedType.U1` 또는 `UnmanagedType.I1` 값을 사용하여 `b` 필드를 1바이트 네이티브 `bool` 형식으로 마샬링하도록 런타임에 지정할 수 있습니다.
 
 ```csharp
 public struct CBool
@@ -342,7 +342,7 @@ struct Currency
 Windows에서 `object` 형식 필드를 네이티브 코드로 마샬링할 수 있습니다. 이러한 필드는 다음 세 가지 형식 중 하나로 마샬링할 수 있습니다.
 - [`VARIANT`](/windows/desktop/api/oaidl/ns-oaidl-tagvariant)
 - [`IUnknown*`](/windows/desktop/api/unknwn/nn-unknwn-iunknown)
-- [`IDispatch*`](/windows/desktop/api/oaidl/nn-oaidl-idispatch). 
+- [`IDispatch*`](/windows/desktop/api/oaidl/nn-oaidl-idispatch)
 
 기본적으로 `object` 형식 필드는 개체를 래핑하는 `IUnknown*`으로 마샬링됩니다.
 

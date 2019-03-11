@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Help, Visual Basic Web sites
 - Visual Basic, videos
 ms.assetid: 9bfb42e9-327f-439b-935e-8884f6aca80c
-ms.openlocfilehash: 25d18b4e362481dfde8fb440911bac67f27eab40
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b54c48fb7869fb3d308e238366f8e8b91368320a
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54636237"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57675604"
 ---
 # <a name="additional-resources"></a>추가 자료
 
@@ -26,7 +26,7 @@ ms.locfileid: "54636237"
 |용어|정의|
 |----------|----------------|
 |[Visual Basic .NET 언어 디자인](https://github.com/dotnet/vblang)|Visual Basic .NET 언어 디자인에 대한 GitHub의 공식 리포지토리입니다.|
-|[Microsoft Visual Basic 팀 블로그](https://blogs.msdn.microsoft.com/vbteam/)|Visual Basic 팀 블로그를 확인할 수 있습니다.|
+|[Microsoft Visual Basic 팀 블로그](https://devblogs.microsoft.com/vbteam/)|Visual Basic 팀 블로그를 확인할 수 있습니다.|
 
 ### <a name="code-samples"></a>코드 샘플
 

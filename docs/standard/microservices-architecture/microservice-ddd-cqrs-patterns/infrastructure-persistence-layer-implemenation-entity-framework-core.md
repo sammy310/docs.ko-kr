@@ -4,12 +4,12 @@ description: 컨테이너화된 .NET 애플리케이션용 .NET 마이크로 서
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/08/2018
-ms.openlocfilehash: 01e326b049ab8bb8d9c7f8c78acfc272d1d57ae9
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 637e51c45217c9ff214395235348b09119200fe7
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54146136"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57676345"
 ---
 # <a name="implement-the-infrastructure-persistence-layer-with-entity-framework-core"></a>Entity Framework Core를 사용하여 인프라 지속성 레이어 구현
 
@@ -56,7 +56,7 @@ public class Order : Entity
     private DateTime _orderDate;
     // Other fields ...
 
-    private readonly List<OrderItem> _orderItems; 
+    private readonly List<OrderItem> _orderItems;
     public IReadOnlyCollection<OrderItem> OrderItems => _orderItems;
 
     protected Order() { }
@@ -72,7 +72,7 @@ public class Order : Entity
     {
         // Validation logic...
 
-        var orderItem = new OrderItem(productId, productName, 
+        var orderItem = new OrderItem(productId, productName,
                                       unitPrice, discount,
                                       pictureUrl, units);
         _orderItems.Add(orderItem);
@@ -80,7 +80,7 @@ public class Order : Entity
 }
 ```
 
-`OrderItems` 속성은 `IReadOnlyCollection<OrderItem>`을 사용하여 읽기 전용으로만 액세스할 수 있습니다. 이 형식은 읽기 전용이므로 정기적인 업데이트로부터 보호됩니다. 
+`OrderItems` 속성은 `IReadOnlyCollection<OrderItem>`을 사용하여 읽기 전용으로만 액세스할 수 있습니다. 이 형식은 읽기 전용이므로 정기적인 업데이트로부터 보호됩니다.
 
 EF Core는 도메인 모델을 "오염"시키지 않고 도메인 모델을 물리적 데이터베이스에 매핑할 수 있는 방법을 제공합니다. 매핑 작업이 지속성 레이어에서 구현되는 순수 .NET POCO 코드입니다. 이 매핑 작업에서 필드-데이터베이스 매핑을 구성해야 합니다. `OrderingContext` 및 `OrderEntityTypeConfiguration` 클래스의 `OnModelCreating` 메서드에 대한 다음 예제에서 `SetPropertyAccessMode`에 대한 호출은 EF Core가 해당 필드를 통해 `OrderItems` 속성에 액세스하도록 지시합니다.
 
@@ -101,7 +101,7 @@ class OrderEntityTypeConfiguration : IEntityTypeConfiguration<Order>
         orderConfiguration.ToTable("orders", OrderingContext.DEFAULT_SCHEMA);
         // Other configuration
 
-        var navigation = 
+        var navigation =
               orderConfiguration.Metadata.FindNavigation(nameof(Order.OrderItems));
 
         //EF access the OrderItem collection property through its backing field
@@ -140,7 +140,7 @@ namespace Microsoft.eShopOnContainers.Services.Ordering.Infrastructure.Repositor
 
         public Buyer Add(Buyer buyer)
         {
-            return _context.Buyers.Add(buyer).Entity; 
+            return _context.Buyers.Add(buyer).Entity;
         }
 
         public async Task<Buyer> FindAsync(string BuyerIdentityGuid)
@@ -353,11 +353,11 @@ EF Core의 섀도 속성은 엔터티 클래스 모델에 존재하지 않는 �
 
 쿼리 사양 패턴은 개체에서 쿼리를 정의합니다. 예를 들어 일부 제품을 검색하는 페이징된 쿼리를 캡슐화하려면 필요한 입력 매개 변수(pageNumber, pageSize, 필터 등)를 사용하는 PagedProduct 사양을 만들 수 있습니다. 그런 다음, 모든 리포지토리 메서드(일반적으로 목록() 오버로드) 내에서 IQuerySpecification을 수용하고 해당 사양을 기반으로 필요한 쿼리를 실행합니다.
 
-제네릭 사양 인터페이스의 예제는 [eShopOnweb](https://github.com/dotnet-architecture/eShopOnWeb)의 다음 코드입니다.
+제네릭 사양 인터페이스의 예제는 [eShopOnWeb](https://github.com/dotnet-architecture/eShopOnWeb)의 다음 코드입니다.
 
 ```csharp
 // GENERIC SPECIFICATION INTERFACE
-// https://github.com/dotnet-architecture/eShopOnWeb 
+// https://github.com/dotnet-architecture/eShopOnWeb
 
 public interface ISpecification<T>
 {
@@ -372,7 +372,7 @@ public interface ISpecification<T>
 ```csharp
 // GENERIC SPECIFICATION IMPLEMENTATION (BASE CLASS)
 // https://github.com/dotnet-architecture/eShopOnWeb
- 
+
 public abstract class BaseSpecification<T> : ISpecification<T>
 {
     public BaseSpecification(Expression<Func<T, bool>> criteria)
@@ -381,16 +381,16 @@ public abstract class BaseSpecification<T> : ISpecification<T>
     }
     public Expression<Func<T, bool>> Criteria { get; }
 
-    public List<Expression<Func<T, object>>> Includes { get; } = 
+    public List<Expression<Func<T, object>>> Includes { get; } =
                                            new List<Expression<Func<T, object>>>();
 
     public List<string> IncludeStrings { get; } = new List<string>();
- 
+
     protected virtual void AddInclude(Expression<Func<T, object>> includeExpression)
     {
         Includes.Add(includeExpression);
     }
-    
+
     // string-based includes allow for including children of children
     // e.g. Basket.Items.Product
     protected virtual void AddInclude(string includeString)
@@ -432,18 +432,19 @@ public IEnumerable<T> List(ISpecification<T> spec)
     var queryableResultWithIncludes = spec.Includes
         .Aggregate(_dbContext.Set<T>().AsQueryable(),
             (current, include) => current.Include(include));
- 
+
     // modify the IQueryable to include any string-based include statements
     var secondaryResult = spec.IncludeStrings
         .Aggregate(queryableResultWithIncludes,
             (current, include) => current.Include(include));
- 
+
     // return the result of the query using the specification's criteria expression
     return secondaryResult
                     .Where(spec.Criteria)
                     .AsEnumerable();
 }
 ```
+
 사양은 필터링 논리를 캡슐화할 뿐 아니라 채울 속성을 포함하여 반환될 데이터의 모양을 지정할 수 있습니다.
 
 리포지토리에서 IQueryable을 반환하는 것을 권장하지는 않지만, 리포지토리 내에서 사용하여 결과 집합을 빌드하는 데 사용하는 것은 아무 문제 없습니다. 위의 List 메서드에 이 접근 방식이 사용된 것을 볼 수 있습니다. 중간 IQueryable 식을 사용하여 쿼리의 포함 목록을 빌드한 후 마지막 줄에서 사양의 기준을 사용하여 쿼리가 실행됩니다.
@@ -468,6 +469,6 @@ public IEnumerable<T> List(ISpecification<T> spec)
 - **사양 패턴** \
   [*https://deviq.com/specification-pattern/*](https://deviq.com/specification-pattern/)
 
->[!div class="step-by-step"]
->[이전](infrastructure-persistence-layer-design.md)
->[다음](nosql-database-persistence-infrastructure.md)
+> [!div class="step-by-step"]
+> [이전](infrastructure-persistence-layer-design.md)
+> [다음](nosql-database-persistence-infrastructure.md)

@@ -11,12 +11,12 @@ metadata:
   displayType: two-column
   interactive: csharp
   ms.custom: mvc
-  ms.openlocfilehash: 86c2226796d5632281f2b6b2cb533bfeacebd288
-  ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
+  ms.openlocfilehash: ef52031f75bd2004bcb5927524a9c82ac8fbf36f
+  ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
   ms.translationtype: HT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 01/04/2019
-  ms.locfileid: "54030518"
+  ms.lasthandoff: 03/05/2019
+  ms.locfileid: "57370321"
 items:
 - durationInMinutes: 1
   content: >
@@ -259,7 +259,7 @@ items:
     문자열 내 하위 문자열을 검색하는 두 개의 유사한 메서드 <xref:System.String.StartsWith%2A> 및 <xref:System.String.EndsWith%2A>가 있습니다. 이러한 메서드는 문자열의 시작 또는 끝 부분에 있는 하위 문자열을 찾습니다. 이전 샘플을 수정하여 <xref:System.String.Contains%2A> 대신 <xref:System.String.StartsWith%2A> 및 <xref:System.String.EndsWith%2A>를 사용해 보세요. 문자열의 시작 부분에서 “You” 또는 “goodbye”를 검색합니다. 문자열 끝 부분에서 “hello” 또는 “goodbye”를 검색합니다.
 
 
-    > [!Note]
+    > [!NOTE]
 
     > 문자열 끝에 있는 텍스트를 테스트할 때에는 구두점을 확인합니다. 문자열이 마침표로 끝나는 경우 마침표로 끝나는 문자열을 확인해야 합니다.
 

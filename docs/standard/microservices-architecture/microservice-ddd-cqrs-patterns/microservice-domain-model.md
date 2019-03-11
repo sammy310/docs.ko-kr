@@ -4,12 +4,12 @@ description: 컨테이너화된 .NET 애플리케이션용 .NET 마이크로 서
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/08/2018
-ms.openlocfilehash: fa0e81f6eb54ad01b3f2f84a37499302ff9abd06
-ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
+ms.openlocfilehash: b3dbce5185415374b2c0f6de134e03b44fe48420
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55066270"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57676371"
 ---
 # <a name="design-a-microservice-domain-model"></a>마이크로 서비스 도메인 모델 디자인
 
@@ -78,7 +78,7 @@ Eric Evans의 지적처럼 "많은 개체는 개념적 ID를 갖고 있지 않�
 
 가치 개체는 EF 같은 ORM과 관계형 데이터베이스에서는 관리하기가 어렵습니다. 반면에 문서 지향 데이터베이스에서는 구현과 사용이 훨신 쉽습니다.
 
-EF Core 2.0에는 값 개체를 더 쉽게 처리할 수 있는 [소유한 엔터티](https://blogs.msdn.microsoft.com/dotnet/2017/08/14/announcing-entity-framework-core-2-0/#owned-entities-and-table-splitting) 기능이 포함되어 있습니다. 자세한 내용은 나중에 살펴보겠습니다.
+EF Core 2.0에는 값 개체를 더 쉽게 처리할 수 있는 [소유한 엔터티](https://devblogs.microsoft.com/dotnet/announcing-entity-framework-core-2-0/#owned-entities-and-table-splitting) 기능이 포함되어 있습니다. 자세한 내용은 나중에 살펴보겠습니다.
 
 #### <a name="additional-resources"></a>추가 자료
 

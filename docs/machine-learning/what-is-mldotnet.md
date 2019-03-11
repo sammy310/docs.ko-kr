@@ -5,16 +5,19 @@ author: cjgronlund
 ms.custom: seodec18
 ms.topic: overview
 ms.date: 03/01/2019
-ms.openlocfilehash: 08e5f31502555ed1a04a6a4afa70bc98e8fd015a
-ms.sourcegitcommit: a532e8314c3a4b5b039656567fedff9787a31957
+ms.openlocfilehash: 6ba4719c830c8b0344a38dad4b86d38cc323e972
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/02/2019
-ms.locfileid: "57250964"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57466949"
 ---
 # <a name="what-is-mlnet-and-how-do-i-understand-machine-learning-basics"></a>ML.NET의 정의 및 Machine Learning 기본 사항을 이해하는 방법은 무엇인가요?
 
 ML.NET은 사용자 지정 기계 학습 솔루션을 빌드하고 .NET 애플리케이션에 통합할 수 있도록 하는 무료 오픈 소스 플랫폼 간 기계 학습 프레임워크입니다. ML.NET API를 사용하면 .NET을 종료하지 않고 이미 보유한 .NET 기술을 사용하여 앱에 AI를 통합할 수 있습니다.
+
+> [!NOTE]
+> 이 문서는 현재 미리 보기로 제공되고 있는 ML.NET을 참조합니다. 자료가 변경될 수 있습니다. 자세한 내용은 [ML.NET 소개](https://www.microsoft.com/net/learn/apps/machine-learning-and-ai/ml-dotnet)를 참조하세요.
 
 ## <a name="what-is-machine-learning"></a>기계 학습이란?
 

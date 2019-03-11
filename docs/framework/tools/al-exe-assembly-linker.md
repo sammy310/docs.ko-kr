@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: b5382965-0053-47cf-b92f-862860275a01
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d5fe3d3b913724729bb7cc8582450dfb6f50ee53
-ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
+ms.openlocfilehash: 19cccc5bcec82b04a337aa0d3913fede0a435ae8
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54223197"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57492259"
 ---
 # <a name="alexe-assembly-linker"></a>Al.exe(어셈블리 링커)
 
@@ -33,7 +33,7 @@ ms.locfileid: "54223197"
 al sources options
 ```
 
-#### <a name="parameters"></a>매개 변수
+## <a name="parameters"></a>매개 변수
 
 다음 `sources` 중에서 하나 이상 지정할 수 있습니다.
 
@@ -54,7 +54,7 @@ al sources options
 |**/config[uration]:** `text`|어셈블리의 Configuration 필드에 대한 문자열을 지정합니다. `text`에 공백이 있으면 문자열을 큰따옴표(" ")로 묶습니다. 이 문자열은 어셈블리의 사용자 지정 속성이며 리플렉션과 함께 볼 수 있습니다.<br /><br /> 텍스트가 빈 문자열이면 Win32 Configuration 리소스가 단일 공백으로 표시됩니다.<br /><br /> MSIL 모듈의 소스 코드에서 이 옵션을 사용자 지정 특성(<xref:System.Reflection.AssemblyConfigurationAttribute>)으로 지정할 수도 있습니다.|
 |**/copy[right]:** `text`|어셈블리의 Copyright 필드에 대한 문자열을 지정합니다. `text`에 공백이 있으면 문자열을 큰따옴표(" ")로 묶습니다. 이 문자열은 어셈블리의 사용자 지정 속성이며 리플렉션과 함께 볼 수 있습니다.<br /><br /> **/win32res**를 지정하지 않으면 파일 탐색기에서 **/copyright**가 Win32 Copyright(저작권) 리소스로 나타납니다.<br /><br /> 텍스트가 빈 문자열이면 Win32 Copyright 리소스가 단일 공백으로 표시됩니다.<br /><br /> **/win32res**를 지정하면 **/copyright**는 Win32 리소스 정보에 영향을 주지 않습니다.<br /><br /> MSIL 모듈의 소스 코드에서 이 옵션을 사용자 지정 특성(<xref:System.Reflection.AssemblyCopyrightAttribute>)으로 지정할 수도 있습니다.|
 |**/c[ulture]:** `text`|어셈블리에 연결할 문화권 문자열을 지정합니다. "Tags for the Identification of Languages"라는 제목의 인터넷 RFC(Requests for Comments) 문서 1766에서 정의하는 값이 문화권의 유효한 값입니다.<br /><br /> `text`에 공백이 있으면 문자열을 큰따옴표(" ")로 묶습니다. 기본 문화권 문자열은 없습니다. 이 문자열을 리플렉션과 함께 볼 수 있습니다.<br /><br /> 유효한 `text` 문자열에 대한 자세한 내용은 <xref:System.Globalization.CultureInfo>를 참조하세요.<br /><br /> MSIL 모듈의 소스 코드에서 이 옵션을 사용자 지정 특성(<xref:System.Reflection.AssemblyCultureAttribute>)으로 지정할 수도 있습니다.|
-|**/delay[sign][+&#124;-]**|어셈블리를 완전히 서명할지, 아니면 부분적으로 서명할지를 지정합니다. 완전히 서명된 어셈블리가 필요하면 **/delaysign-** 를 사용합니다. 어셈블리에 공개 키만 포함하려면 **/delaysign+** 를 사용합니다.<br /><br /> 완전히 서명된 어셈블리를 요청할 경우 *Al.exe*는 매니페스트(어셈블리 메타데이터)가 포함된 파일을 해시하고 공개 키로 해당 해시에 서명합니다. 결과로 생성되는 디지털 서명은 매니페스트가 포함된 파일에 저장됩니다. 어셈블리 서명이 연기된 경우 *Al.exe*는 시그니처를 계산하거나 저장하지 않고 나중에 시그니처를 추가할 수 있도록 파일에 공간을 예약합니다.<br /><br /> 기본값은 **/delaysign-** 입니다.<br /><br /> **/delaysign** 옵션은 **/keyfile** 또는 **/keyname**과 함께 사용하지 않으면 효과가 없습니다.<br /><br /> 예를 들어 **/delaysign+** 를 사용하면 테스터를 통해 전역 캐시에 어셈블리를 넣을 수 있습니다. 테스트를 마친 후 어셈블리에 개인 키를 포함하여 어셈블리에 완전히 서명할 수 있습니다.<br /><br /> 참고: [*Gacutil.exe*(전역 어셈블리 캐시 도구)](../../../docs/framework/tools/gacutil-exe-gac-tool.md)를 사용하여 전역 캐시에 서명이 연기된 어셈블리를 넣으려면, 먼저 [*Sn.exe*(강력한 이름 도구)](../../../docs/framework/tools/sn-exe-strong-name-tool.md)를 사용하여 확인을 건너뛰는 어셈블리를 등록합니다. 예를 들어 `Sn.exe –Vr delaySignedAssembly`과 같은 형식입니다. 개발에서만 이 기능을 사용하세요.<br /><br /> MSIL 모듈의 소스 코드에서 이 옵션을 사용자 지정 특성(<xref:System.Reflection.AssemblyDelaySignAttribute>)으로 지정할 수도 있습니다.|
+|**/delay[sign][+&#124;-]**|어셈블리를 완전히 서명할지, 아니면 부분적으로 서명할지를 지정합니다. 완전히 서명된 어셈블리가 필요하면 **/delaysign-** 를 사용합니다. 어셈블리에 공개 키만 포함하려면 **/delaysign+** 를 사용합니다.<br /><br /> 완전히 서명된 어셈블리를 요청할 경우 *Al.exe*는 매니페스트(어셈블리 메타데이터)가 포함된 파일을 해시하고 공개 키로 해당 해시에 서명합니다. 결과로 생성되는 디지털 서명은 매니페스트가 포함된 파일에 저장됩니다. 어셈블리 서명이 연기된 경우 *Al.exe*는 시그니처를 계산하거나 저장하지 않고 나중에 시그니처를 추가할 수 있도록 파일에 공간을 예약합니다.<br /><br /> 기본값은 **/delaysign-** 입니다.<br /><br /> **/delaysign** 옵션은 **/keyfile** 또는 **/keyname**과 함께 사용하지 않으면 효과가 없습니다.<br /><br /> 예를 들어 **/delaysign+** 를 사용하면 테스터를 통해 전역 캐시에 어셈블리를 넣을 수 있습니다. 테스트를 마친 후 어셈블리에 개인 키를 포함하여 어셈블리에 완전히 서명할 수 있습니다.<br /><br /> 참고: [*Gacutil.exe*(전역 어셈블리 캐시 도구)](../../../docs/framework/tools/gacutil-exe-gac-tool.md)를 사용하여 전역 캐시에 서명이 연기된 어셈블리를 넣으려면, 먼저 [*Sn.exe*(강력한 이름 도구)](../../../docs/framework/tools/sn-exe-strong-name-tool.md)를 사용하여 확인을 건너뛰는 어셈블리를 등록합니다. 예를 들어, `Sn.exe –Vr delaySignedAssembly`을 입력합니다. 개발에서만 이 기능을 사용하세요.<br /><br /> MSIL 모듈의 소스 코드에서 이 옵션을 사용자 지정 특성(<xref:System.Reflection.AssemblyDelaySignAttribute>)으로 지정할 수도 있습니다.|
 |**/descr[iption]:** `text`|어셈블리의 <xref:System.Reflection.AssemblyDescriptionAttribute.Description%2A> 필드에 대한 문자열을 지정합니다. `text`에 공백이 있으면 문자열을 큰따옴표(" ")로 묶습니다. 이 문자열은 어셈블리의 사용자 지정 속성이며 리플렉션과 함께 볼 수 있습니다.<br /><br /> **/win32res**를 지정하지 않으면 파일 탐색기에서 **/description**이 Win32 **Comments**(설명) 리소스로 나타납니다.<br /><br /> 텍스트가 빈 문자열이면 Win32 **Comments** 리소스가 단일 공백으로 나타납니다.<br /><br /> **/win32res**를 지정하면 **/description**은 Win32 리소스 정보에 영향을 주지 않습니다.<br /><br /> MSIL 모듈의 소스 코드에서 이 옵션을 사용자 지정 특성(<xref:System.Reflection.AssemblyDescriptionAttribute.Description%2A>)으로 지정할 수도 있습니다.|
 |**/e[vidence]:** `file`|어셈블리에 `file`을 Security.Evidence라는 리소스 이름으로 포함시킵니다.<br /><br /> 기본 리소스에는 Security.Evidence를 사용할 수 없습니다.|
 |**/fileversion:** `version`|어셈블리의 **File Version**(파일 버전) 필드에 대한 문자열을 지정합니다. 이 문자열은 어셈블리의 사용자 지정 속성이며 리플렉션과 함께 볼 수 있습니다.<br /><br /> **/win32res**를 지정하지 않으면 **/fileversion**이 Win32 **File Version** 리소스로 사용됩니다. **/fileversion**을 지정하지 않으면 Win32 **File Version** 리소스가 Win32 **Assembly Version**(어셈블리 버전) 리소스로 채워집니다.<br /><br /> **/win32res**를 지정하면 **/fileversion**은 Win32 리소스에 영향을 주지 않습니다.<br /><br /> MSIL 모듈의 소스 코드에서 이 옵션을 사용자 지정 특성(AssemblyFileVersionAttribute)으로 지정할 수도 있습니다.|
@@ -89,7 +89,7 @@ al sources options
 
 다음 표에서는 *Al.exe*에 의해 생성된 오류를 보여 줍니다.
 
-| Error | 설명 |
+| 오류 | 설명 |
 | ----- | ----------- |
 |al1001|내부 컴파일러 오류<br /><br /> *Al.exe*가 예기치 않은 구문을 분석할 수 없어 실패하는지 여부를 확인합니다. 그런 다음 Microsoft 기술 지원 서비스에 문의하세요.|
 |al1002|메모리 부족<br /><br /> *Al.exe*가 메모리 부족으로 중지되었습니다. 사용 가능한 메모리 양을 늘립니다.|

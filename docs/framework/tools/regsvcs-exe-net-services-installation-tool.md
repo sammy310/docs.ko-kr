@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 5220fe58-5aaf-4e8e-8bc3-b78c63025804
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fc349e13aba84de8c266442e9be8130e5f8604c2
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.openlocfilehash: b80df56c9f45f7dd195e1f7bbd03063fa30abb3a
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56219778"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57466752"
 ---
 # <a name="regsvcsexe-net-services-installation-tool"></a>Regsvcs.exe(.NET 서비스 설치 도구)
 .NET 서비스 설치 도구를 사용하면 다음과 같은 작업을 수행할 수 있습니다.  
@@ -39,7 +39,7 @@ ms.locfileid: "56219778"
 [/nologo] [/quiet]assemblyFile.dll   
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
   
 |인수|설명|  
 |--------------|-----------------|  

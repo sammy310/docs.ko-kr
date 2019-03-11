@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - = operator [C#]
 ms.assetid: d802a6d5-32f0-42b8-b180-12f5a081bfc1
-ms.openlocfilehash: 2c999e76a9238e6401e89af0faa81967b13a3995
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 40dc844f2a4b6411ea82aa2f029b36d7dd8f6e5a
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53244390"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57716321"
 ---
 # <a name="-operator-c-reference"></a>= 연산자(C# 참조)
 
@@ -42,7 +42,7 @@ C# 7.3부터 ref 대입 연산자 `= ref`를 사용하여 [ref 지역](../keywor
 
 ref 대입 연산자의 경우 왼쪽 피연산자의 형식과 오른쪽 피연산자의 형식이 같아야 합니다.
 
-자세한 내용은 [기능 제안 노트](https://github.com/dotnet/csharplang/blob/master/proposals/csharp-7.3/ref-local-reassignment.md)를 참조하세요.
+자세한 내용은 [기능 제안 노트](../../../../_csharplang/proposals/csharp-7.3/ref-local-reassignment.md)를 참조하세요.
 
 ## <a name="operator-overloadability"></a>연산자 오버로드 가능성
 

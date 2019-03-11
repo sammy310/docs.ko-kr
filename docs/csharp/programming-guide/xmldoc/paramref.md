@@ -9,12 +9,12 @@ helpviewer_keywords:
 - <paramref> C# XML tag
 - paramref C# XML tag
 ms.assetid: 756c24c1-f591-40e8-a838-559761539b0b
-ms.openlocfilehash: e6d6c62c97179d74bdb6bdd88eeb1ee129226fed
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.openlocfilehash: 9612fb61151953e0d3b70a4803aafeb571aec7dd
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57201406"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57477945"
 ---
 # <a name="paramref-c-programming-guide"></a>\<paramref>(C# 프로그래밍 가이드)
 ## <a name="syntax"></a>구문  
@@ -23,7 +23,7 @@ ms.locfileid: "57201406"
 <paramref name="name"/>  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `name`  
  참조할 매개 변수의 이름입니다. 이름을 큰따옴표(“ ”)로 묶습니다.  
   

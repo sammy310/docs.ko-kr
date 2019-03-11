@@ -12,12 +12,12 @@ helpviewer_keywords:
 - Internet, security
 - security [.NET Framework], Internet
 - permissions [.NET Framework], Internet
-ms.openlocfilehash: b08d119c0c7edb71ceab5c763c1359bf4c90cfec
-ms.sourcegitcommit: 79066169e93d9d65203028b21983574ad9dcf6b4
+ms.openlocfilehash: cb2dd26d3f111e8de0dc9c7904837d9b053d17bb
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57212536"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57724715"
 ---
 # <a name="transport-layer-security-tls-best-practices-with-the-net-framework"></a>.NET Framework를 사용한 TLS(전송 계층 보안) 모범 사례
 
@@ -252,8 +252,8 @@ Windows Registry Editor Version 5.00
 
 운영 체제에서 사용할 가장 적합한 TLS 버전을 선택할 수 있도록 .NET Framework를 업데이트하려면 최소한 다음을 설치해야 합니다.
 
-- [품질 롤업의 .NET Framework 2017년 8월 Preview](https://blogs.msdn.microsoft.com/dotnet/2017/08/16/net-framework-august-2017-preview-of-quality-rollup).
-- **또는** [.NET Framework 2017년 9월 보안 및 품질 롤업](https://blogs.msdn.microsoft.com/dotnet/2017/09/12/net-framework-september-2017-security-and-quality-rollup).
+- [품질 롤업의 .NET Framework 2017년 8월 Preview](https://devblogs.microsoft.com/dotnet/net-framework-august-2017-preview-of-quality-rollup/).
+- **또는** [.NET Framework 2017년 9월 보안 및 품질 롤업](https://devblogs.microsoft.com/dotnet/net-framework-september-2017-security-and-quality-rollup/).
 
 참고 항목:
 

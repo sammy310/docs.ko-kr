@@ -8,12 +8,12 @@ helpviewer_keywords:
 - out compiler option [C#]
 - -out compiler option [C#]
 ms.assetid: 70d91d01-7bd2-4aea-ba8b-4e9807e9caa5
-ms.openlocfilehash: 62a8835361e2e55d3d970cf3ae7cd2699e3c79fb
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6d1134367cbbe494f5ab882d88cc083110ffd5c7
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54725742"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57362359"
 ---
 # <a name="-out-c-compiler-options"></a>-out(C# 컴파일러 옵션)
 **-out** 옵션은 출력 파일의 이름을 지정합니다.  
@@ -45,7 +45,7 @@ ms.locfileid: "54725742"
   
  컴파일의 일부로 생성된 모든 모듈은 컴파일할 때 함께 생성된 어셈블리와 연결된 파일이 됩니다. 연결된 파일을 보려면 [ildasm.exe](../../../framework/tools/ildasm-exe-il-disassembler.md)를 사용하여 어셈블리 매니페스트를 확인합니다.  
   
- exe가 friend 어셈블리의 대상이 되려면 -out 컴파일러 옵션이 필요합니다. 자세한 내용은 [Friend 어셈블리](../../programming-guide/concepts/assemblies-gac/friend-assemblies.md)를 참조하세요.  
+ exe가 friend 어셈블리의 대상이 되려면 -out 컴파일러 옵션이 필요합니다. 자세한 내용은 [Friend 어셈블리](../../../standard/assembly/friend-assemblies.md)를 참조하세요.  
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 개발 환경에서 이 컴파일러 옵션을 설정하려면  
   
@@ -67,5 +67,5 @@ csc t.cs -out:mymodule.netmodule -target:module t2.cs
 ## <a name="see-also"></a>참고 항목
 
 - [C# 컴파일러 옵션](../../../csharp/language-reference/compiler-options/index.md)
-- [Friend 어셈블리](../../programming-guide/concepts/assemblies-gac/friend-assemblies.md)
+- [Friend 어셈블리](../../../standard/assembly/friend-assemblies.md)
 - [프로젝트 및 솔루션 속성 관리](/visualstudio/ide/managing-project-and-solution-properties)
