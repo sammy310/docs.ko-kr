@@ -10,52 +10,52 @@ helpviewer_keywords:
 ms.assetid: be434d7d-9c0d-46e7-8392-58a9b542d11d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 82c8eb10a4bcfca0b07e8cab6bb3c45983a975a4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: faa8e28297aa96ab199e80b476783295173f51b5
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54645316"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57498876"
 ---
-# <a name="cert2spcexe-software-publisher-certificate-test-tool"></a><span data-ttu-id="5392c-102">Cert2spc.exe(SPC 테스트 도구)</span><span class="sxs-lookup"><span data-stu-id="5392c-102">Cert2spc.exe (Software Publisher Certificate Test Tool)</span></span>
-<span data-ttu-id="5392c-103">SPC(소프트웨어 게시자 인증서) 테스트 도구를 사용하면 하나 이상의 X.509 인증서에서 SPC를 만들 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="5392c-103">The Software Publisher Certificate Test tool creates a Software Publisher's Certificate (SPC) from one or more X.509 certificates.</span></span> <span data-ttu-id="5392c-104">Cert2spc.exe는 테스트 전용이며,</span><span class="sxs-lookup"><span data-stu-id="5392c-104">Cert2spc.exe is for test purposes only.</span></span> <span data-ttu-id="5392c-105">VeriSign 또는 Thawte 같은 인증 기관에서 유효한 SPC를 받을 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="5392c-105">You can obtain a valid SPC from a Certification Authority such as VeriSign or Thawte.</span></span> <span data-ttu-id="5392c-106">X.509 인증서를 만드는 방법은 [Makecert.exe(인증서 작성 도구)](/windows/desktop/SecCrypto/makecert)를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="5392c-106">For more information about creating X.509 certificates, see [Makecert.exe (Certificate Creation Tool)](/windows/desktop/SecCrypto/makecert).</span></span>  
+# <a name="cert2spcexe-software-publisher-certificate-test-tool"></a><span data-ttu-id="e6270-102">Cert2spc.exe(SPC 테스트 도구)</span><span class="sxs-lookup"><span data-stu-id="e6270-102">Cert2spc.exe (Software Publisher Certificate Test Tool)</span></span>
+<span data-ttu-id="e6270-103">SPC(소프트웨어 게시자 인증서) 테스트 도구를 사용하면 하나 이상의 X.509 인증서에서 SPC를 만들 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="e6270-103">The Software Publisher Certificate Test tool creates a Software Publisher's Certificate (SPC) from one or more X.509 certificates.</span></span> <span data-ttu-id="e6270-104">Cert2spc.exe는 테스트 전용이며,</span><span class="sxs-lookup"><span data-stu-id="e6270-104">Cert2spc.exe is for test purposes only.</span></span> <span data-ttu-id="e6270-105">VeriSign 또는 Thawte 같은 인증 기관에서 유효한 SPC를 받을 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="e6270-105">You can obtain a valid SPC from a Certification Authority such as VeriSign or Thawte.</span></span> <span data-ttu-id="e6270-106">X.509 인증서를 만드는 방법은 [Makecert.exe(인증서 작성 도구)](/windows/desktop/SecCrypto/makecert)를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="e6270-106">For more information about creating X.509 certificates, see [Makecert.exe (Certificate Creation Tool)](/windows/desktop/SecCrypto/makecert).</span></span>  
   
- <span data-ttu-id="5392c-107">이 도구는 자동으로 Visual Studio와 함께 설치됩니다.</span><span class="sxs-lookup"><span data-stu-id="5392c-107">This tool is automatically installed with Visual Studio.</span></span> <span data-ttu-id="5392c-108">이 도구를 실행하려면 Visual Studio용 개발자 명령 프롬프트(또는 Windows 7의 Visual Studio 명령 프롬프트)를 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="5392c-108">To run the tool, use the Developer Command Prompt for Visual Studio (or the Visual Studio Command Prompt in Windows 7).</span></span> <span data-ttu-id="5392c-109">자세한 내용은 [명령 프롬프트](../../../docs/framework/tools/developer-command-prompt-for-vs.md)를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="5392c-109">For more information, see [Command Prompts](../../../docs/framework/tools/developer-command-prompt-for-vs.md).</span></span>  
+ <span data-ttu-id="e6270-107">이 도구는 자동으로 Visual Studio와 함께 설치됩니다.</span><span class="sxs-lookup"><span data-stu-id="e6270-107">This tool is automatically installed with Visual Studio.</span></span> <span data-ttu-id="e6270-108">이 도구를 실행하려면 Visual Studio용 개발자 명령 프롬프트(또는 Windows 7의 Visual Studio 명령 프롬프트)를 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="e6270-108">To run the tool, use the Developer Command Prompt for Visual Studio (or the Visual Studio Command Prompt in Windows 7).</span></span> <span data-ttu-id="e6270-109">자세한 내용은 [명령 프롬프트](../../../docs/framework/tools/developer-command-prompt-for-vs.md)를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="e6270-109">For more information, see [Command Prompts](../../../docs/framework/tools/developer-command-prompt-for-vs.md).</span></span>  
   
- <span data-ttu-id="5392c-110">명령 프롬프트에 다음을 입력합니다.</span><span class="sxs-lookup"><span data-stu-id="5392c-110">At the command prompt, type the following:</span></span>  
+ <span data-ttu-id="e6270-110">명령 프롬프트에 다음을 입력합니다.</span><span class="sxs-lookup"><span data-stu-id="e6270-110">At the command prompt, type the following:</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="5392c-111">구문</span><span class="sxs-lookup"><span data-stu-id="5392c-111">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="e6270-111">구문</span><span class="sxs-lookup"><span data-stu-id="e6270-111">Syntax</span></span>  
   
 ```  
 cert2spc cert1.cer | crl1.crl [... certN.cer | crlN.crl] outputSPCfile.spc  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="5392c-112">매개 변수</span><span class="sxs-lookup"><span data-stu-id="5392c-112">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="e6270-112">매개 변수</span><span class="sxs-lookup"><span data-stu-id="e6270-112">Parameters</span></span>  
   
-|<span data-ttu-id="5392c-113">인수</span><span class="sxs-lookup"><span data-stu-id="5392c-113">Argument</span></span>|<span data-ttu-id="5392c-114">설명</span><span class="sxs-lookup"><span data-stu-id="5392c-114">Description</span></span>|  
+|<span data-ttu-id="e6270-113">인수</span><span class="sxs-lookup"><span data-stu-id="e6270-113">Argument</span></span>|<span data-ttu-id="e6270-114">설명</span><span class="sxs-lookup"><span data-stu-id="e6270-114">Description</span></span>|  
 |--------------|-----------------|  
-|`certN.cer`|<span data-ttu-id="5392c-115">SPC 파일에 포함할 X.509 인증서의 이름입니다.</span><span class="sxs-lookup"><span data-stu-id="5392c-115">The name of an X.509 certificate to include in the SPC file.</span></span> <span data-ttu-id="5392c-116">여러 개의 이름을 공백으로 구분하여 지정할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="5392c-116">You can specify multiple names separated by spaces.</span></span>|  
-|`crlN.crl`|<span data-ttu-id="5392c-117">SPC 파일에 포함할 인증서 해지 목록의 이름입니다.</span><span class="sxs-lookup"><span data-stu-id="5392c-117">The name of a certificate revocation list to include in the SPC file.</span></span> <span data-ttu-id="5392c-118">여러 개의 이름을 공백으로 구분하여 지정할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="5392c-118">You can specify multiple names separated by spaces.</span></span>|  
-|`outputSPCfile.spc`|<span data-ttu-id="5392c-119">X.509 인증서가 들어 있는 PKCS #7 개체의 이름을 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="5392c-119">The name of the PKCS #7 object that will contain the X.509 certificates.</span></span>|  
+|`certN.cer`|<span data-ttu-id="e6270-115">SPC 파일에 포함할 X.509 인증서의 이름입니다.</span><span class="sxs-lookup"><span data-stu-id="e6270-115">The name of an X.509 certificate to include in the SPC file.</span></span> <span data-ttu-id="e6270-116">여러 개의 이름을 공백으로 구분하여 지정할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="e6270-116">You can specify multiple names separated by spaces.</span></span>|  
+|`crlN.crl`|<span data-ttu-id="e6270-117">SPC 파일에 포함할 인증서 해지 목록의 이름입니다.</span><span class="sxs-lookup"><span data-stu-id="e6270-117">The name of a certificate revocation list to include in the SPC file.</span></span> <span data-ttu-id="e6270-118">여러 개의 이름을 공백으로 구분하여 지정할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="e6270-118">You can specify multiple names separated by spaces.</span></span>|  
+|`outputSPCfile.spc`|<span data-ttu-id="e6270-119">X.509 인증서가 들어 있는 PKCS #7 개체의 이름을 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="e6270-119">The name of the PKCS #7 object that will contain the X.509 certificates.</span></span>|  
   
-|<span data-ttu-id="5392c-120">옵션</span><span class="sxs-lookup"><span data-stu-id="5392c-120">Option</span></span>|<span data-ttu-id="5392c-121">설명</span><span class="sxs-lookup"><span data-stu-id="5392c-121">Description</span></span>|  
+|<span data-ttu-id="e6270-120">옵션</span><span class="sxs-lookup"><span data-stu-id="e6270-120">Option</span></span>|<span data-ttu-id="e6270-121">설명</span><span class="sxs-lookup"><span data-stu-id="e6270-121">Description</span></span>|  
 |------------|-----------------|  
-|<span data-ttu-id="5392c-122">**/?**</span><span class="sxs-lookup"><span data-stu-id="5392c-122">**/?**</span></span>|<span data-ttu-id="5392c-123">이 도구의 명령 구문 및 옵션을 표시합니다.</span><span class="sxs-lookup"><span data-stu-id="5392c-123">Displays command syntax and options for the tool.</span></span>|  
+|<span data-ttu-id="e6270-122">**/?**</span><span class="sxs-lookup"><span data-stu-id="e6270-122">**/?**</span></span>|<span data-ttu-id="e6270-123">이 도구의 명령 구문 및 옵션을 표시합니다.</span><span class="sxs-lookup"><span data-stu-id="e6270-123">Displays command syntax and options for the tool.</span></span>|  
   
-## <a name="examples"></a><span data-ttu-id="5392c-124">예제</span><span class="sxs-lookup"><span data-stu-id="5392c-124">Examples</span></span>  
- <span data-ttu-id="5392c-125">다음 명령을 사용하여 `myCertificate.cer`에서 SPC를 만들고 이를 `mySPCFile.spc`에 포함시킵니다.</span><span class="sxs-lookup"><span data-stu-id="5392c-125">The following command creates an SPC from `myCertificate.cer` and places it in `mySPCFile.spc`.</span></span>  
+## <a name="examples"></a><span data-ttu-id="e6270-124">예제</span><span class="sxs-lookup"><span data-stu-id="e6270-124">Examples</span></span>  
+ <span data-ttu-id="e6270-125">다음 명령을 사용하여 `myCertificate.cer`에서 SPC를 만들고 이를 `mySPCFile.spc`에 포함시킵니다.</span><span class="sxs-lookup"><span data-stu-id="e6270-125">The following command creates an SPC from `myCertificate.cer` and places it in `mySPCFile.spc`.</span></span>  
   
 ```  
 cert2spc myCertificate.cer mySPCFile.spc  
 ```  
   
- <span data-ttu-id="5392c-126">다음 명령을 사용하여 `oneCertificate.cer` 및 `twoCertificate.cer`에서 SPC를 만들고 이를 `mySPCFile.spc`에 포함시킵니다.</span><span class="sxs-lookup"><span data-stu-id="5392c-126">The following command creates an SPC from `oneCertificate.cer` and `twoCertificate.cer`, and places it in `mySPCFile.spc`.</span></span>  
+ <span data-ttu-id="e6270-126">다음 명령을 사용하여 `oneCertificate.cer` 및 `twoCertificate.cer`에서 SPC를 만들고 이를 `mySPCFile.spc`에 포함시킵니다.</span><span class="sxs-lookup"><span data-stu-id="e6270-126">The following command creates an SPC from `oneCertificate.cer` and `twoCertificate.cer`, and places it in `mySPCFile.spc`.</span></span>  
   
 ```  
 cert2spc oneCertificate.cer twoCertificate.cer mySPCFile.spc  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="5392c-127">참고 항목</span><span class="sxs-lookup"><span data-stu-id="5392c-127">See also</span></span>
-- [<span data-ttu-id="5392c-128">도구</span><span class="sxs-lookup"><span data-stu-id="5392c-128">Tools</span></span>](../../../docs/framework/tools/index.md)
-- [<span data-ttu-id="5392c-129">Makecert.exe(인증서 작성 도구)</span><span class="sxs-lookup"><span data-stu-id="5392c-129">Makecert.exe (Certificate Creation Tool)</span></span>](/windows/desktop/SecCrypto/makecert)
-- [<span data-ttu-id="5392c-130">명령 프롬프트</span><span class="sxs-lookup"><span data-stu-id="5392c-130">Command Prompts</span></span>](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
+## <a name="see-also"></a><span data-ttu-id="e6270-127">참고 항목</span><span class="sxs-lookup"><span data-stu-id="e6270-127">See also</span></span>
+- [<span data-ttu-id="e6270-128">도구</span><span class="sxs-lookup"><span data-stu-id="e6270-128">Tools</span></span>](../../../docs/framework/tools/index.md)
+- [<span data-ttu-id="e6270-129">Makecert.exe(인증서 작성 도구)</span><span class="sxs-lookup"><span data-stu-id="e6270-129">Makecert.exe (Certificate Creation Tool)</span></span>](/windows/desktop/SecCrypto/makecert)
+- [<span data-ttu-id="e6270-130">명령 프롬프트</span><span class="sxs-lookup"><span data-stu-id="e6270-130">Command Prompts</span></span>](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
