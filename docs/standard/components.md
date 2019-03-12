@@ -59,11 +59,11 @@ Mono는 현재 게시된 .NET Standard 버전을 모두 지원합니다.
 
 Mono에 대한 자세한 내용은 [Mono 설명서](https://www.mono-project.com/docs/)를 참조하세요.
 
-### <a name="universal-windows-platform-uwp"></a>UWP(유니버설 Windows 플랫폼)
+### <a name="universal-windows-platform-uwp"></a>UWP(유니버설 윈도우 플랫폼)
 
-UWP는 IoT(사물 인터넷)에 대한 최신 터치 가능 Windows 애플리케이션 및 소프트웨어를 작성하는 데 사용되는 .NET의 구현입니다. PC, 태블릿, 패블릿, 휴대폰, Xbox 등 대상으로 지정할 수 있는 다양한 종류의 디바이스를 통합하도록 설계되었습니다. UWP는 중앙 집중식 앱 스토어, 실행 환경(AppContainer), Win32 대신 사용할 Windows API 집합(WinRT) 등 많은 서비스를 제공합니다. 앱은 C++, C#, VB.NET 및 JavaScript로 작성할 수 있습니다. C# 및 VB.NET을 사용할 경우 .NET API는 .NET Core에서 제공됩니다.
+UWP는 IoT(사물 인터넷)용 소프트웨어와 최신의 터치 가능 Windows 애플리케이션을 만드는데 사용할 수 있는 .NET의 구현체입니다. PC와 태블릿, 패블릿, 휴대폰, Xbox 등을 포함하여 대상이 될 수 있는 다양한 종류의 디바이스를 통합하기위해 설계되었습니다. UWP는 중앙 집중식 앱 스토어와 실행 환경(AppContainer), Win32를 대체하는 Windows API(WinRT) 등 많은 서비스를 제공합니다. 앱은 C++과 C#, VB.NET, JavaScript로 작성할 수 있습니다. C#과 VB.NET을 사용할 경우 .NET API는 .NET Core에서 제공됩니다.
 
-UWP에 대한 자세한 내용은 [유니버설 Windows 플랫폼 소개](/windows/uwp/get-started/universal-application-platform-guide)를 참조하세요.
+UWP의 자세한 내용은 [유니버설 Windows 플랫폼 소개](/windows/uwp/get-started/universal-application-platform-guide)를 참조하세요.
 
 ## <a name="net-runtimes"></a>.NET 런타임
 
@@ -72,11 +72,11 @@ UWP에 대한 자세한 내용은 [유니버설 Windows 플랫폼 소개](/windo
 - .NET Framework에 대한 CLR(공용 언어 런타임)
 - .NET Core에 대한 CoreCLR(Core 공용 언어 런타임)
 - 유니버설 Windows 플랫폼용 .NET 네이티브 
-- Xamarin.iOS, Xamarin.Android, Xamarin.Mac 및 Mono 데스크톱 프레임워크에 대한 Mono 런타임
+- Xamarin.iOS와 Xamarin.Android, Xamarin.Mac, Mono 데스크톱 프레임워크에 대한 Mono 런타임
 
 ## <a name="net-tooling-and-common-infrastructure"></a>.NET 도구 및 공통 인프라
 
-모든 .NET 구현에서 작동하는 광범위한 도구 및 인프라 구성 요소 집합에 액세스할 수 있습니다. 여기에는 다음이 포함되지만 다음으로 제한되지는 않습니다.
+모든 .NET 구현체에서 동작하는 다양한 도구와 인프라 구성 요소을 사용할 수 있습니다. 여기에는 다음 항목들이 포함되며 이 항목들이 전부는 아닙니다.
 
 - .NET 언어 및 해당 컴파일러
 - .NET 프로젝트 시스템(*.csproj*, *.vbproj* 및 *.fsproj* 파일 기반)
