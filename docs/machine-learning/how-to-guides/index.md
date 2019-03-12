@@ -4,6 +4,7 @@ description: 사용자 지정 AI 솔루션 생성 및 .NET 애플리케이션에
 ms.custom: seodec18
 ms.date: 03/01/2019
 ---
+
 # <a name="net-machine-learning-how-to-guides---mlnet"></a>.NET 기계 학습 방법 가이드 - ML.NET
 
 ML.NET 가이드의 방법 섹션에서 일반적인 질문에 대한 빠른 답변을 찾을 수 있습니다. 경우에 따라 문서를 쉽게 찾을 수 있도록 여러 섹션에 나타날 수 있습니다.
@@ -44,7 +45,7 @@ ML.NET 가이드의 방법 섹션에서 일반적인 질문에 대한 빠른 답
 
 * [ML.NET을 사용하여 텍스트 데이터에 모델 학습용 기능 엔지니어링을 적용합니다.](train-model-textual-ml-net.md)
 
-## <a name="run"></a>실행 
+## <a name="run"></a>실행
 
 * [ML.NET 파이프라인을 처리하는 동안 중간 데이터 값을 검사합니다.](inspect-intermediate-data-ml-net.md)
 
@@ -52,7 +53,6 @@ ML.NET 가이드의 방법 섹션에서 일반적인 질문에 대한 빠른 답
 
 * [PredictionFunction을 사용하여 한 번에 하나씩 예측을 수행합니다.](single-predict-model-ml-net.md)
 
-## <a name="probabalistic-infernet"></a>확률적(Infer.NET)
+## <a name="probabilistic-infernet"></a>확률(Infer.NET)
 
 * [Infer.NET 및 확률적 프로그래밍을 사용하여 게임 대전 목록 앱을 만듭니다.](matchup-app-infer-net.md)
-
