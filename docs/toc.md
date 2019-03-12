@@ -196,7 +196,8 @@
 ### [라이브러리 이식](core/porting/libraries.md)
 ### [.NET Core용 프로젝트 구성](core/porting/project-structure.md)
 ### [.NET Core로 이식하는 작업에 도움이 되는 도구](core/porting/tools.md)
-### [Windows 호환 기능 팩 사용](core/porting/windows-compat-pack.md)
+### [Windows 호환성 팩 사용](core/porting/windows-compat-pack.md)
+### [Windows Forms 프로젝트 포팅](core/porting/winforms.md)
 <!--### [🔧 NuGet packages](core/porting/nuget-packages.md)-->
 ## [소스에서 .NET Core 빌드](core/build/index.md)
 ### [.NET Core 배포 패키징](core/build/distribution-packaging.md)
