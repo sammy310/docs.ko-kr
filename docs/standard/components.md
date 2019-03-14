@@ -45,11 +45,11 @@ Microsoft에서 적극적으로 개발 및 유지 보수하는 네 가지 기본
 
 .NET Framework는 2002년부터 있었던 원래 .NET 구현입니다. 기존 .NET 개발자가 항상 사용해 온 것과 동일한 .NET Framework입니다. 버전 4.5 이상은 .NET Standard를 구현하므로 .NET Standard를 대상으로 하는 코드는 .NET Framework의 해당 버전에서 실행할 수 있습니다. Windows Forms 및 WPF를 사용하는 Windows 데스크톱 개발용 API와 같이 Windows 관련 추가 API가 포함되어 있습니다. .NET Framework는 Windows 데스크톱 애플리케이션을 구축을 위해 최적화되어 있습니다.
 
-.NET Framework에 대한 자세한 내용은 [.NET Framework 가이드](../framework/index.md)를 참조하세요.
+.NET Framework의 자세한 내용은 [.NET Framework 가이드](../framework/index.md)를 참조하세요.
 
 ### <a name="mono"></a>Mono
 
-Mono는 작은 런타임이 필요할 때 주로 사용되는 .NET 구현입니다. 이는 Android, Mac, iOS, tvOS 및 watchOS에서 Xamarin 애플리케이션의 성능을 향상하는 런타임으로, 주로 작은 사용 공간에 초점을 맞춥니다. 또한 Mono는 Unity 엔진을 사용하여 빌드된 게임을 제공합니다.
+Mono는 작은 런타임이 필요할 때 주로 사용되는 .NET 구현체입니다. 이는 Android와 Mac, iOS, tvOS, watchOS에서 Xamarin 애플리케이션을 구동하는 런타임으로, 주로 적은 공간을 점유하는데 중점을 두고 있습니다. 또한 Mono에서는 Unity 엔진으로 만든 게임이 동작합니다.
 
 Mono는 현재 게시된 .NET Standard 버전을 모두 지원합니다.
 
@@ -57,7 +57,7 @@ Mono는 현재 게시된 .NET Standard 버전을 모두 지원합니다.
 
 일반적으로 Mono는 Just-In-Time 컴파일러에서 사용되지만 iOS 같은 플랫폼에 사용되는 전체 정적 컴파일러(Ahead-Of-Time 컴파일) 기능도 제공합니다.
 
-Mono에 대한 자세한 내용은 [Mono 설명서](https://www.mono-project.com/docs/)를 참조하세요.
+Mono의 자세한 내용은 [Mono 설명서](https://www.mono-project.com/docs/)를 참조하세요.
 
 ### <a name="universal-windows-platform-uwp"></a>UWP(유니버설 Windows 플랫폼)
 
