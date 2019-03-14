@@ -95,7 +95,7 @@
 ### [.NET Core 2.0의 새로운 기능](core/whats-new/dotnet-core-2-0.md)
 ## [자습서](core/tutorials/index.md)
 ### [macOS에서 .NET Core 시작](core/tutorials/using-on-macos.md)
-### [Visual Studio for Mac을 사용하여 macOS에서 .NET Core 시작](core/tutorials/using-on-mac-vs.md)
+### [Mac용 Visual Studio를 사용하여 macOS에서 .NET Core 시작](core/tutorials/using-on-mac-vs.md)
 ### [Visual Studio for Mac을 사용하여 macOS에서 완전한 .NET Core 솔루션 빌드](core/tutorials/using-on-mac-vs-full-solution.md)
 ### [CLI 도구를 사용하여 .NET Core 시작](core/tutorials/using-with-xplat-cli.md)
 ### [.NET Core 명령줄을 사용하여 프로젝트 구성 및 테스트](core/tutorials/testing-with-cli.md)
@@ -196,7 +196,7 @@
 ### [라이브러리 이식](core/porting/libraries.md)
 ### [.NET Core용 프로젝트 구성](core/porting/project-structure.md)
 ### [.NET Core로 이식하는 작업에 도움이 되는 도구](core/porting/tools.md)
-### [Windows 호환성 팩 사용](core/porting/windows-compat-pack.md)
+### [Windows 호환 기능 팩 사용](core/porting/windows-compat-pack.md)
 ### [Windows Forms 프로젝트 포팅](core/porting/winforms.md)
 <!--### [🔧 NuGet packages](core/porting/nuget-packages.md)-->
 ## [소스에서 .NET Core 빌드](core/build/index.md)
@@ -1209,6 +1209,7 @@
 ### 학습된 모델 사용
 #### [PredictionEngine을 사용하여 한 번에 하나씩 예측 수행](machine-learning/how-to-guides/single-predict-model-ml-net.md)
 #### [학습된 모델 운용](machine-learning/how-to-guides/consuming-model-ml-net.md)
+#### [모델 Azure Functions 제공](machine-learning/how-to-guides/serve-model-serverless-azure-functions-ml-net.md)
 ### Infer.NET
 #### [Infer.NET을 사용한 확률 프로그래밍](machine-learning/how-to-guides/matchup-app-infer-net.md)
 ## 참조

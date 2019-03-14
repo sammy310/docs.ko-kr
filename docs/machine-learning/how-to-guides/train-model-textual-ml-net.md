@@ -1,29 +1,34 @@
 ---
 title: 텍스트 데이터의 모델 학습에 대한 기능 엔지니어링 적용 - ML.NET
 description: ML.NET를 사용하여 텍스트 데이터의 모델 학습에 대한 기능 엔지니어링을 적용하는 방법 알아보기
-ms.date: 02/06/2019
+ms.date: 03/05/2019
 ms.custom: mvc,how-to
-ms.openlocfilehash: 4206bfe1e840c420c90e62957036a629ecf34445
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
+ms.openlocfilehash: 8733db281dbc60ae3f4ac0c139c482b39089f2b8
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56092217"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57680076"
 ---
-# <a name="apply-feature-engineering-for-machine-learning-model-training-on-textual-data-with-mlnet"></a><span data-ttu-id="03c95-103">ML.NET를 사용하여 텍스트 데이터의 기계 학습 모델 학습에 대한 기능 엔지니어링 적용</span><span class="sxs-lookup"><span data-stu-id="03c95-103">Apply feature engineering for machine learning model training on textual data with ML.NET</span></span>
+# <a name="apply-feature-engineering-for-machine-learning-model-training-on-textual-data-with-mlnet"></a><span data-ttu-id="55feb-103">ML.NET를 사용하여 텍스트 데이터의 기계 학습 모델 학습에 대한 기능 엔지니어링 적용</span><span class="sxs-lookup"><span data-stu-id="55feb-103">Apply feature engineering for machine learning model training on textual data with ML.NET</span></span>
 
-<span data-ttu-id="03c95-104">모든 ML.NET `learners`가 `float vector`로 기능을 사용하므로 비부동 데이터를 `float` 데이터 형식으로 변환해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="03c95-104">You need to convert any non float data to `float` data types since all ML.NET `learners` expect features as a `float vector`.</span></span>
+> [!NOTE]
+> <span data-ttu-id="55feb-104">이 항목은 현재 미리 보기로 제공되는 ML.NET을 참조하며, 자료는 변경될 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="55feb-104">This topic refers to ML.NET, which is currently in Preview, and material may be subject to change.</span></span> <span data-ttu-id="55feb-105">자세한 내용은 [ML.NET 소개](https://www.microsoft.com/net/learn/apps/machine-learning-and-ai/ml-dotnet)를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="55feb-105">For more information, visit [the ML.NET introduction](https://www.microsoft.com/net/learn/apps/machine-learning-and-ai/ml-dotnet).</span></span>
 
-<span data-ttu-id="03c95-105">텍스트 데이터에 대해 알아보려면 텍스트 기능을 추출해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="03c95-105">To learn on textual data, you need to extract text features.</span></span> <span data-ttu-id="03c95-106">ML.NET에는 몇 가지 기본적인 텍스트 기능 추출 메커니즘이 있습니다.</span><span class="sxs-lookup"><span data-stu-id="03c95-106">ML.NET has some basic text feature extraction mechanisms:</span></span>
+<span data-ttu-id="55feb-106">이 방법과 관련 샘플에서는 현재 **ML.NET 버전 0.10**을 사용하고 있습니다.</span><span class="sxs-lookup"><span data-stu-id="55feb-106">This how-to and related sample are currently using **ML.NET version 0.10**.</span></span> <span data-ttu-id="55feb-107">자세한 내용은 [dotnet/machinelearning GitHub 리포지토리](https://github.com/dotnet/machinelearning/tree/master/docs/release-notes)에서 릴리스 정보를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="55feb-107">For more information, see the release notes at the [dotnet/machinelearning GitHub repo](https://github.com/dotnet/machinelearning/tree/master/docs/release-notes).</span></span>
 
-- <span data-ttu-id="03c95-107">`Text normalization`(문장 부호, 분음 부호 제거, 소문자 전환 등)</span><span class="sxs-lookup"><span data-stu-id="03c95-107">`Text normalization` (removing punctuation, diacritics, switching to lowercase etc.)</span></span>
-- <span data-ttu-id="03c95-108">`Separator-based tokenization`.</span><span class="sxs-lookup"><span data-stu-id="03c95-108">`Separator-based tokenization`.</span></span>
-- <span data-ttu-id="03c95-109">`Stopword` 제거</span><span class="sxs-lookup"><span data-stu-id="03c95-109">`Stopword` removal.</span></span>
-- <span data-ttu-id="03c95-110">`Ngram` 및 `skip-gram` 추출</span><span class="sxs-lookup"><span data-stu-id="03c95-110">`Ngram` and `skip-gram` extraction.</span></span>
-- <span data-ttu-id="03c95-111">`TF-IDF` 크기 재조정</span><span class="sxs-lookup"><span data-stu-id="03c95-111">`TF-IDF` rescaling.</span></span>
-- <span data-ttu-id="03c95-112">`Bag of words` 전환</span><span class="sxs-lookup"><span data-stu-id="03c95-112">`Bag of words` conversion.</span></span>
+<span data-ttu-id="55feb-108">모든 ML.NET `learners`가 `float vector`로 기능을 사용하므로 비부동 데이터를 `float` 데이터 형식으로 변환해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="55feb-108">You need to convert any non float data to `float` data types since all ML.NET `learners` expect features as a `float vector`.</span></span>
 
-<span data-ttu-id="03c95-113">다음 예제에서는 [Wikipedia detox 데이터 세트](https://github.com/dotnet/machinelearning/blob/master/test/data/wikipedia-detox-250-line-data.tsv)를 사용하는 ML.NET 텍스트 기능 추출 메커니즘을 보여줍니다.</span><span class="sxs-lookup"><span data-stu-id="03c95-113">The following example demonstrates ML.NET text feature extraction mechanisms using the [Wikipedia detox dataset](https://github.com/dotnet/machinelearning/blob/master/test/data/wikipedia-detox-250-line-data.tsv):</span></span>
+<span data-ttu-id="55feb-109">텍스트 데이터에 대해 알아보려면 텍스트 기능을 추출해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="55feb-109">To learn on textual data, you need to extract text features.</span></span> <span data-ttu-id="55feb-110">ML.NET에는 몇 가지 기본적인 텍스트 기능 추출 메커니즘이 있습니다.</span><span class="sxs-lookup"><span data-stu-id="55feb-110">ML.NET has some basic text feature extraction mechanisms:</span></span>
+
+- <span data-ttu-id="55feb-111">`Text normalization`(문장 부호, 분음 부호 제거, 소문자 전환 등)</span><span class="sxs-lookup"><span data-stu-id="55feb-111">`Text normalization` (removing punctuation, diacritics, switching to lowercase etc.)</span></span>
+- <span data-ttu-id="55feb-112">`Separator-based tokenization`.</span><span class="sxs-lookup"><span data-stu-id="55feb-112">`Separator-based tokenization`.</span></span>
+- <span data-ttu-id="55feb-113">`Stopword` 제거</span><span class="sxs-lookup"><span data-stu-id="55feb-113">`Stopword` removal.</span></span>
+- <span data-ttu-id="55feb-114">`Ngram` 및 `skip-gram` 추출</span><span class="sxs-lookup"><span data-stu-id="55feb-114">`Ngram` and `skip-gram` extraction.</span></span>
+- <span data-ttu-id="55feb-115">`TF-IDF` 크기 재조정</span><span class="sxs-lookup"><span data-stu-id="55feb-115">`TF-IDF` rescaling.</span></span>
+- <span data-ttu-id="55feb-116">`Bag of words` 전환</span><span class="sxs-lookup"><span data-stu-id="55feb-116">`Bag of words` conversion.</span></span>
+
+<span data-ttu-id="55feb-117">다음 예제에서는 [Wikipedia detox 데이터 세트](https://github.com/dotnet/machinelearning/blob/master/test/data/wikipedia-detox-250-line-data.tsv)를 사용하는 ML.NET 텍스트 기능 추출 메커니즘을 보여줍니다.</span><span class="sxs-lookup"><span data-stu-id="55feb-117">The following example demonstrates ML.NET text feature extraction mechanisms using the [Wikipedia detox dataset](https://github.com/dotnet/machinelearning/blob/master/test/data/wikipedia-detox-250-line-data.tsv):</span></span>
 
 ```console
 Sentiment   SentimentText

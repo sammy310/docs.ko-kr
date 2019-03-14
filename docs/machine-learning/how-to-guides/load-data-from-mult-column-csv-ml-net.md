@@ -1,22 +1,27 @@
 ---
 title: 기계 학습 처리를 위해 CSV 파일에서 많은 열을 포함하는 데이터 로드 - ML.NET
 description: ML.NET를 사용하여 기계 학습 모델을 빌드하고, 학습시키고, 점수 매기는 데 사용하기 위해 CSV 파일에서 많은 열을 포함하는 데이터를 로드하는 방법 알아보기
-ms.date: 02/06/2019
+ms.date: 03/05/2019
 ms.custom: mvc,how-to
-ms.openlocfilehash: b295653d1bd3a955c2e6da929dc8f2d4d0a4c14d
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
+ms.openlocfilehash: e33fdf1d71b02545e3ea284cc317f5d244c3fc13
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56091970"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57675955"
 ---
-# <a name="load-data-with-many-columns-from-a-csv-file-for-machine-learning-processing---mlnet"></a><span data-ttu-id="0caac-103">기계 학습 처리를 위해 CSV 파일에서 많은 열을 포함하는 데이터 로드 - ML.NET</span><span class="sxs-lookup"><span data-stu-id="0caac-103">Load data with many columns from a CSV file for machine learning processing - ML.NET</span></span>
+# <a name="load-data-with-many-columns-from-a-csv-file-for-machine-learning-processing---mlnet"></a><span data-ttu-id="cc407-103">기계 학습 처리를 위해 CSV 파일에서 많은 열을 포함하는 데이터 로드 - ML.NET</span><span class="sxs-lookup"><span data-stu-id="cc407-103">Load data with many columns from a CSV file for machine learning processing - ML.NET</span></span>
 
-<span data-ttu-id="0caac-104">`TextLoader`는 텍스트 파일에서 데이터를 로드하는 데 사용됩니다.</span><span class="sxs-lookup"><span data-stu-id="0caac-104">`TextLoader` is used to load data from text files.</span></span> <span data-ttu-id="0caac-105">데이터 열, 열 형식 및 텍스트 파일에서 해당 위치를 지정해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="0caac-105">You need to specify the data columns, their types, and their location in the text file.</span></span>
+> [!NOTE]
+> <span data-ttu-id="cc407-104">이 항목은 현재 미리 보기로 제공되는 ML.NET을 참조하며, 자료는 변경될 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="cc407-104">This topic refers to ML.NET, which is currently in Preview, and material may be subject to change.</span></span> <span data-ttu-id="cc407-105">자세한 내용은 [ML.NET 소개](https://www.microsoft.com/net/learn/apps/machine-learning-and-ai/ml-dotnet)를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="cc407-105">For more information, visit [the ML.NET introduction](https://www.microsoft.com/net/learn/apps/machine-learning-and-ai/ml-dotnet).</span></span>
 
-<span data-ttu-id="0caac-106">입력 파일에 동일한 형식의 많은 열이 있고 항상 함께 사용되는 경우 *벡터 열*로 읽습니다.</span><span class="sxs-lookup"><span data-stu-id="0caac-106">When the input file contains many columns of the same type and always used together, read them as a *vector column*.</span></span> <span data-ttu-id="0caac-107">이 전략을 사용하면 다음 예제와 같이 데이터 스키마가 정리되고 불필요한 성능 저하를 방지할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="0caac-107">This strategy results in a clean data schema and avoids unnecessary performance costs, as shown in the following example:</span></span>
+<span data-ttu-id="cc407-106">이 방법과 관련 샘플에서는 현재 **ML.NET 버전 0.10**을 사용하고 있습니다.</span><span class="sxs-lookup"><span data-stu-id="cc407-106">This how-to and related sample are currently using **ML.NET version 0.10**.</span></span> <span data-ttu-id="cc407-107">자세한 내용은 [dotnet/machinelearning GitHub 리포지토리](https://github.com/dotnet/machinelearning/tree/master/docs/release-notes)에서 릴리스 정보를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="cc407-107">For more information, see the release notes at the [dotnet/machinelearning GitHub repo](https://github.com/dotnet/machinelearning/tree/master/docs/release-notes).</span></span>
 
-<span data-ttu-id="0caac-108">[예제 파일](https://github.com/dotnet/machinelearning/tree/master/test/data/generated_regression_dataset.csv):</span><span class="sxs-lookup"><span data-stu-id="0caac-108">[Example file](https://github.com/dotnet/machinelearning/tree/master/test/data/generated_regression_dataset.csv):</span></span>
+<span data-ttu-id="cc407-108">`TextLoader`는 텍스트 파일에서 데이터를 로드하는 데 사용됩니다.</span><span class="sxs-lookup"><span data-stu-id="cc407-108">`TextLoader` is used to load data from text files.</span></span> <span data-ttu-id="cc407-109">데이터 열, 열 형식 및 텍스트 파일에서 해당 위치를 지정해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="cc407-109">You need to specify the data columns, their types, and their location in the text file.</span></span>
+
+<span data-ttu-id="cc407-110">입력 파일에 동일한 형식의 많은 열이 있고 항상 함께 사용되는 경우 *벡터 열*로 읽습니다.</span><span class="sxs-lookup"><span data-stu-id="cc407-110">When the input file contains many columns of the same type and always used together, read them as a *vector column*.</span></span> <span data-ttu-id="cc407-111">이 전략을 사용하면 다음 예제와 같이 데이터 스키마가 정리되고 불필요한 성능 저하를 방지할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="cc407-111">This strategy results in a clean data schema and avoids unnecessary performance costs, as shown in the following example:</span></span>
+
+<span data-ttu-id="cc407-112">[예제 파일](https://github.com/dotnet/machinelearning/tree/master/test/data/generated_regression_dataset.csv):</span><span class="sxs-lookup"><span data-stu-id="cc407-112">[Example file](https://github.com/dotnet/machinelearning/tree/master/test/data/generated_regression_dataset.csv):</span></span>
 
 ```console
 -2.75;0.77;-0.61;0.14;1.39;0.38;-0.53;-0.50;-2.13;-0.39;0.46;140.66
@@ -25,7 +30,7 @@ ms.locfileid: "56091970"
 0.28;1.05;-0.24;0.30;-0.99;0.19;0.32;-0.95;-1.19;-0.63;0.75;443.51
 ```
 
-<span data-ttu-id="0caac-109">`TextLoader`를 사용하여 이 파일 읽기:</span><span class="sxs-lookup"><span data-stu-id="0caac-109">Reading this file using `TextLoader`:</span></span>
+<span data-ttu-id="cc407-113">`TextLoader`를 사용하여 이 파일 읽기:</span><span class="sxs-lookup"><span data-stu-id="cc407-113">Reading this file using `TextLoader`:</span></span>
 
 ```csharp
 // Create a new context for ML.NET operations. It can be used for exception tracking and logging, 
