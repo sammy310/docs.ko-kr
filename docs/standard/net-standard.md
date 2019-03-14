@@ -59,13 +59,13 @@ ms.locfileid: "56970885"
 - 추가: .NET 표준 버전은 논리적으로 동심원입니다. 더 높은 버전이 이전 버전의 모든 API를 통합합니다. 버전 간에 큰 차이는 없습니다.
 - 변경할 수 없음: 제공되고 나면 .NET 표준 버전은 고정됩니다. 새 API는 먼저 특정 .NET 구현(예: .NET Core)에서 제공됩니다. .NET Standard 심사 위원회에서 새 API가 모든 곳에서 사용 가능하다고 판단하면 새 .NET Standard 버전에 추가됩니다.
 
-## <a name="specification"></a>사양
+## <a name="specification"></a>규격
 
-.NET 표준 사양은 표준화된 API 집합입니다. 사양은 .NET 구현자, 특히 Microsoft(.NET Framework, .NET Core, Mono 포함) 및 Unity에 의해 유지 관리됩니다. 공용 피드백 프로세스는 [GitHub](https://github.com/dotnet/standard)를 통해 새로운 .NET 표준 버전을 설정하는 과정의 일부로 사용됩니다.
+.NET 표준 규격은 표준화된 API의 집합입니다. 이 규격은 .NET을 구현한 사람, 특히 Microsoft(.NET Framework, .NET Core, Mono 포함)와 Unity에서 유지 관리합니다. 공개 피드백 절차는 [GitHub](https://github.com/dotnet/standard)을 통해 새로운 .NET Standard 버전을 만드는 과정의 일부입니다.
 
 ### <a name="official-artifacts"></a>공식 아티팩트
 
-공식 사양은 표준의 일부인 API를 정의하는 .cs 파일 집합입니다. [dotnet/standard repository](https://github.com/dotnet/standard)(dotnet/표준 리포지토리)의 [ref directory](https://github.com/dotnet/standard/tree/master/src/netstandard/ref)(ref 디렉터리)는 .NET Standard API를 정의합니다.
+공식 규격은 표준의 일부인 API를 정의하는 .cs 파일 집합입니다. [dotnet/standard repository](https://github.com/dotnet/standard)(dotnet/표준 리포지토리)의 [ref directory](https://github.com/dotnet/standard/tree/master/src/netstandard/ref)(ref 디렉터리)는 .NET Standard API를 정의합니다.
 
 [NETStandard.Library](https://www.nuget.org/packages/NETStandard.Library) 메타패키지([소스](https://github.com/dotnet/standard/blob/master/src/netstandard/pkg/NETStandard.Library.dependencies.props))는 하나 이상의 .NET Standard 버전을 부분적으로 정의하는 라이브러리 집합에 대해 설명합니다.
 
@@ -81,7 +81,7 @@ ms.locfileid: "56970885"
 
 ### <a name="package-representation"></a>패키지 표현
 
-.NET 표준 참조 어셈블리의 기본 배포 수단은 [NuGet 패키지](../core/packages.md)입니다. 구현은 각 .NET 구현에 적절한 여러 가지 방법으로 전달됩니다.
+.NET 표준 참조 어셈블리의 기본 배포 수단은 [NuGet 패키지](../core/packages.md)입니다. 구현체는 적절하고 다양한 방법으로 모든 .NET 구현체에 전달됩니다.
 
 NuGet 패키지는 하나 이상의 [프레임워크](frameworks.md)를 대상으로 합니다. .NET 표준 패키지는 “.NET 표준” 프레임워크를 대상으로 합니다. `netstandard` [압축 TFM](frameworks.md)(예: `netstandard1.4`)을 사용하여 .NET Standard 프레임워크를 대상으로 지정할 수 있습니다. 여러 런타임에서 실행되도록 만들어진 라이브러리는 이 프레임워크를 대상으로 하며, 광범위한 API의 경우 사용 가능한 API 수가 .NET Standard 1.6과 2.0 간에 세 배 이상 증가하므로 `netstandard2.0`을 대상으로 지정합니다.
 
