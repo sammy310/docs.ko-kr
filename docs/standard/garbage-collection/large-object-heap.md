@@ -8,12 +8,12 @@ helpviewer_keywords:
 - GC [.NET ], large object heap
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: df8559dc5a09b65eb388808363bb0352bc8ed398
-ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
+ms.openlocfilehash: ff25d2cef52a8c690f895222d69591bc53b3765e
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55066430"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57677180"
 ---
 # <a name="the-large-object-heap-on-windows-systems"></a>Windows 시스템의 큰 개체 힙
 
@@ -47,12 +47,12 @@ SOH의 경우 GC에 남아 있는 개체는 다음 세대로 승격됩니다. 0�
 
 그림 1에서는 GC에서 `Obj1`과 `Obj3`이 소멸된 첫 번째 0세대 GC 이후에 1세대를 형성하고, `Obj2`와 `Obj5`가 소멸된 첫 번째 1세대 이후에 2세대를 형성하는 시나리오를 보여 줍니다. 이 그림과 다음 그림은 설명을 위한 것입니다. 여기에는 힙에서 발생하는 작업을 더 잘 보여 주기 위해 매우 적은 수의 개체가 포함되어 있습니다. 실제로 더 많은 개체가 일반적으로 GC에 포함됩니다.
 
-![그림 1: 0세대 GC 및 1세대 GC](media/loh/loh-figure-1.jpg)  
+![그림 1: 0세대 GC 및 1세대 GC](media/loh/loh-figure-1.jpg)\
 그림 1: 0세대 및 1세대 GC
 
 그림 2에서는 `Obj1`과 `Obj2`가 소멸되었음을 확인한 2세대 GC 이후에 GC가 `Obj1`과 `Obj2`에서 점유하는 데 사용한 메모리에서 연속적인 사용 가능한 공간을 형성하여 `Obj4`에 대한 할당 요청을 충족하는 데 사용했음을 보여 줍니다. 마지막 개체인 `Obj3` 뒤에서 세그먼트 끝까지의 공간도 할당 요청을 충족하는 데 사용할 수 있습니다.
 
-![그림 2: 2세대 GC 이후](media/loh/loh-figure-2.jpg)  
+![그림 2: 2세대 GC 이후](media/loh/loh-figure-2.jpg)\
 그림 2: 2세대 GC 이후
 
 큰 개체 할당 요청을 수용할 사용 가능한 공간이 부족한 경우 GC는 먼저 OS에서 더 많은 세그먼트를 획득하려고 시도합니다. 이 작업이 실패하면 일부 공간을 확보하기 위해 2세대 GC가 트리거됩니다.
@@ -61,7 +61,7 @@ SOH의 경우 GC에 남아 있는 개체는 다음 세대로 승격됩니다. 0�
 
 LOH는 2세대 GC 동안에만 수집되므로 LOH 세그먼트는 이러한 GC 동안에만 해제될 수 있습니다. 그림 3에서는 가비지 수집기에서 한 세그먼트(세그먼트 2)를 OS로 다시 릴리스하고, 나머지 세그먼트에 대해 더 많은 공간을 커밋 해제하는 시나리오를 보여 줍니다. 큰 개체 할당 요청을 충족하기 위해 세그먼트 끝에 있는 커밋 해제된 공간을 사용해야 하는 경우 메모리를 다시 커밋합니다. 커밋/커밋 해제에 대한 설명은 [VirtualAlloc](/windows/desktop/api/memoryapi/nf-memoryapi-virtualalloc)에 대한 설명서를 참조하세요.
 
-![그림 3: 2세대 GC 이후의 LOH](media/loh/loh-figure-3.jpg)  
+![그림 3: 2세대 GC 이후의 LOH](media/loh/loh-figure-3.jpg)\
 그림 3: 2세대 GC 이후의 LOH
 
 ## <a name="when-is-a-large-object-collected"></a>큰 개체가 수집되는 경우
@@ -156,7 +156,7 @@ LOH 성능에 대한 데이터를 수집하는 데 사용할 수 있는 도구�
 
 성능 카운터를 확인하는 일반적인 방법은 성능 모니터(perfmon.exe)를 사용하는 것입니다. "카운터 추가" 명령을 사용하여 관심 있는 프로세스에 대해 원하는 카운터를 추가합니다. 그림 4와 같이 성능 카운터 데이터를 로그 파일에 저장할 수 있습니다.
 
-![그림 4: 성능 카운터 추가](media/loh/perfcounter.png)  
+![그림 4: 성능 카운터 추가](media/loh/perfcounter.png)\
 그림 4: 2세대 GC 이후의 LOH
 
 또한 성능 카운터는 프로그래밍 방식으로 쿼리할 수도 있습니다. 많은 사람들이 일상적인 테스트 프로세스의 일환으로 이러한 방식으로 성능 데이터를 수집합니다. 정상적이지 않은 값이 있는 카운터가 검색되면 다른 방법을 사용하여 조사하는 데 유용한 더 자세한 정보를 얻을 수 있습니다.
@@ -184,8 +184,7 @@ perfview /GCCollectOnly /AcceptEULA /nogui collect
 
 결과는 다음과 같습니다.
 
-![그림 5: PerfView를 사용하여 ETW 이벤트 검사](media/loh/perfview.png)  
-그림 5: PerfView를 사용하여 표시된 ETW 이벤트
+![그림 5: PerfView를 사용하여 ETW 이벤트 검사](media/loh/perfview.png) 그림 5: PerfView를 사용하여 표시된 ETW 이벤트
 
 여기서 알 수 있듯이, 모든 GC는 2세대 GC이며 AllocLarge를 통해 모두 트리거됩니다. 즉, 큰 개체를 할당하면 이 GC가 트리거됩니다. **LOH 잔존율 %** 열이 1%라고 표시되므로 이러한 할당은 일시적입니다.
 
@@ -197,7 +196,7 @@ perfview /GCOnly /AcceptEULA /nogui collect
 
 이 명령은 대략 100,000개의 할당마다 실행되는 AllocationTick 이벤트를 수집합니다. 즉, 큰 개체가 할당될 때마다 이벤트가 실행됩니다. 큰 개체를 할당한 호출 스택을 보여 주는 GC 힙 할당 보기 중 하나를 살펴볼 수 있습니다.
 
-![그림 6: GC 힙 할당 보기](media/loh/perfview2.png)  
+![그림 6: GC 힙 할당 보기](media/loh/perfview2.png)\
 그림 6: GC 힙 할당 보기
 
 여기서 알 수 있듯이, 이는 `Main` 메서드에서 큰 개체를 할당하는 매우 간단한 테스트입니다.

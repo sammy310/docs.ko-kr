@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 3e3e04de-99d1-4658-b716-44cb669d9589
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 107de172e523758474bafb3b86a2960b926a010a
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: eca84aa3a3d7bffaac31cc36ed14e5d5bb5a37cc
+ms.sourcegitcommit: 5d9f4b805787f890ca6e0dc7ea30a43018bc9cbb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57371374"
+ms.lasthandoff: 03/12/2019
+ms.locfileid: "57788481"
 ---
 # <a name="windows-forms-add-configuration-element"></a>Windows Forms 구성 요소를 추가합니다.
 
@@ -41,14 +41,14 @@ ms.locfileid: "57371374"
 
 | `key` 이름 | 값 | 설명 |
 | ---------- | ------ | ----------- |
-| "AnchorLayout.DisableSinglePassControlScaling" | "true"&#124;"false" | 고정 된 컨트롤은 단일 패스에서 배율 조정 여부를 나타냅니다. 크기 조정, 단일을 사용 하지 않도록 설정 하려면 "true" 전달 그렇지 않으면 false입니다. "단일 확장 전달 하는 데 사용" 섹션을 참조 합니다 [주의](#Remarks) 자세한 내용은 합니다. |
+| "AnchorLayout.DisableSinglePassControlScaling" | "true"&#124;"false" | 고정 된 컨트롤은 단일 패스에서 배율 조정 여부를 나타냅니다. 크기 조정, 단일을 사용 하지 않도록 설정 하려면 "true" 전달 그렇지 않으면 false입니다. "단일 확장 전달 하는 데 사용" 섹션을 참조 합니다 [주의](#remarks) 자세한 내용은 합니다. |
 | "DpiAwareness" | "PerMonitorV2"&#124;"false" | 응용 프로그램의 DPI 인식 여부를 나타냅니다. Dpi 인식;를 지원 하기 위해 "PerMonitorV2" 키를 설정 합니다. 그렇지 않으면 "false"로 설정 합니다. DPI 인식은 옵트인 기능입니다. Windows Forms의 높은 DPI 지원을 이용 하려면 "PerMonitorV2" 값을 설정 해야 합니다. 참조 된 [주의](#remarks) 자세한 내용은 섹션입니다. |
 | "CheckedListBox.DisableHighDpiImprovements" | "true"&#124;"false" | 나타냅니다 여부는 <xref:System.Windows.Forms.CheckedListBox> 컨트롤은.NET Framework 4.7에서 도입 된 크기 조정 및 레이아웃 개선 사항 활용 합니다. caling 및 레이아웃 개선; 옵트아웃 하려면 "true" 그렇지 않으면, "false"입니다. |
 | "DataGridView.DisableHighDpiImprovements" | "true"&#124;"false" | 나타냅니다 여부는 <xref:System.Windows.Forms.DataGridView> .NET Framework 4.7에 도입 된 크기 조정 및 레이아웃 향상 된 기능을 제어 합니다. DPI 인식; 옵트아웃 하려면 "true" "false" 그렇지 않은 경우. |
 | "DisableDpiChangedMessageHandling" | "true"&#124;"false" | DPI 배율을 변경;와 관련 된 메시지 수신을 옵트아웃 하려면 "true" "false" 그렇지 않은 경우. 참조 된 [주의](#remarks) 자세한 내용은 섹션입니다. |
 | "EnableWindowsFormsHighDpiAutoResizing" | "true"&#124;"false" | Windows Forms 응용 프로그램을 자동으로 DPI 배율 변경으로 인해 크기 조정 여부를 나타냅니다. 자동 크기 조정을 사용 하도록 설정 하려면 "true" 그렇지 않으면 false입니다. |
-| "Form.DisableSinglePassControlScaling" | "true"&#124;"false" | 나타냅니다 여부는 <xref:System.Windows.Forms.Form> 단일 패스에서 확장 됩니다. 크기 조정, 사용 하지 않도록 설정 하려면 "true" 한 번 통과 그렇지 않으면 false입니다. "단일 확장 전달 하는 데 사용" 섹션을 참조 합니다 [주의](#Remarks) 자세한 내용은 합니다. |
-| "MonthCalendar.DisableSinglePassControlScaling" | "true"&#124;"false" | 나타냅니다 여부는 <xref:System.Windows.Forms.MonthCalendar> 단일 패스에서 컨트롤의 크기가 조정 됩니다. 크기 조정, 사용 하지 않도록 설정 하려면 "true" 한 번 통과 그렇지 않으면 false입니다. "단일 확장 전달 하는 데 사용" 섹션을 참조 합니다 [주의](#Remarks) 자세한 내용은 합니다. |
+| "Form.DisableSinglePassControlScaling" | "true"&#124;"false" | 나타냅니다 여부는 <xref:System.Windows.Forms.Form> 단일 패스에서 확장 됩니다. 크기 조정, 사용 하지 않도록 설정 하려면 "true" 한 번 통과 그렇지 않으면 false입니다. "단일 확장 전달 하는 데 사용" 섹션을 참조 합니다 [주의](#remarks) 자세한 내용은 합니다. |
+| "MonthCalendar.DisableSinglePassControlScaling" | "true"&#124;"false" | 나타냅니다 여부는 <xref:System.Windows.Forms.MonthCalendar> 단일 패스에서 컨트롤의 크기가 조정 됩니다. 크기 조정, 사용 하지 않도록 설정 하려면 "true" 한 번 통과 그렇지 않으면 false입니다. "단일 확장 전달 하는 데 사용" 섹션을 참조 합니다 [주의](#remarks) 자세한 내용은 합니다. |
 | "Toolstrip.DisableHighDpiImprovements" | "true"&#124;"false" | 나타냅니다 여부는 <xref:System.Windows.Forms.ToolStrip> 컨트롤은.NET Framework 4.7에서 도입 된 크기 조정 및 레이아웃 개선 사항 활용 합니다. DPI 인식; 옵트아웃 하려면 "true" "false" 그렇지 않은 경우. |
 
 ### <a name="child-elements"></a>자식 요소
@@ -61,7 +61,7 @@ ms.locfileid: "57371374"
 | ------- | ----------- |
 | [`<System.Windows.Forms.ApplicationConfigurationSection>`](../../../../../docs/framework/configure-apps/file-schema/winforms/index.md) | 새 Windows Forms 응용 프로그램 기능에 대 한 지원을 구성합니다. |
 
-## <a name="a-nameremarks--remarks"></a><a name="remarks" /> 설명
+## <a name="remarks"></a>설명
 
 .NET Framework 4.7부터는 `<System.Windows.Forms.ApplicationConfigurationSection>` 요소를 사용하여 Windows Forms 애플리케이션을 구성해 최신 .NET Framework 릴리스에 추가된 기능을 활용할 수 있습니다.
 
@@ -96,6 +96,7 @@ Windows Forms의 높은 DPI 지원의 개요를 보려면 [Windows Forms의 높�
    <add key="EnableWindowsFormsHighDpiAutoResizing" value="false" />
 </System.Windows.Forms.ApplicationConfigurationSection>
 ```
+
 일반적으로 있습니다 옵트아웃 특정 기능을 프로그래밍 방식으로 처리 하도록 선택한 때문입니다.
 
 Windows Forms 응용 프로그램의 높은 DPI 지원의 활용에 자세한 내용은 참조 하세요. [Windows Forms의 높은 DPI 지원](../../../../../docs/framework/winforms/high-dpi-support-in-windows-forms.md)합니다.

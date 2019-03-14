@@ -4,18 +4,18 @@ description: 컨테이너화된 .NET 애플리케이션의 .NET 마이크로 서
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/08/2018
-ms.openlocfilehash: 2a8e0ad97f2ad6b4645fb493b5148667a2830ec8
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 28f5a5148b39b60d69fecc8bf1273445ebad4953
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53145269"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57675019"
 ---
 # <a name="implement-value-objects"></a>값 개체 구현
 
 엔터티 및 집계에 대한 이전 섹션에서 설명한 대로, ID는 엔터티의 근본입니다. 그러나 시스템에는 값 개체처럼 ID 및 ID 추적이 필요 없는 여러 개체와 데이터 항목이 있습니다.
 
-값 개체는 다른 엔터티를 참조할 수 있습니다. 예를 들어 한 지점에서 다른 지점으로 이동하는 경로를 생성하는 응용 프로그램에서는 해당 경로가 값 개체입니다. 특정 경로에 있는 지점의 스냅숏이 되겠지만, 이 제안 경로는 내부적으로 도시, 로드 등의 엔터티를 참조하더라도 ID를 갖지 않습니다.
+값 개체는 다른 엔터티를 참조할 수 있습니다. 예를 들어 한 지점에서 다른 지점으로 이동하는 경로를 생성하는 애플리케이션에서는 해당 경로가 값 개체입니다. 특정 경로에 있는 지점의 스냅숏이 되겠지만, 이 제안 경로는 내부적으로 도시, 로드 등의 엔터티를 참조하더라도 ID를 갖지 않습니다.
 
 그림 7-13은 순서 집계 내의 주소 값 개체를 보여줍니다.
 
@@ -35,7 +35,7 @@ ms.locfileid: "53145269"
 
 첫 번째 특징은 이미 설명했습니다. 변경 불가능은 중요한 요구 사항입니다. 일단 개체가 생성된 후에는 값 개체의 값을 변경할 수 없어야 합니다. 따라서 개체가 생성될 때 필요한 값을 제공해야 하지만, 개체의 수명 주기 동안 값이 변경되는 것을 허용하면 안 됩니다.
 
-값 개체의 변경 불가능이라는 성질 덕분에 값 개체를 사용하여 성능을 높일 수 있는 방법이 있습니다. 특히 수천 개의 값 개체 인스턴스가 있고 그 중 많은 수가 같은 값을 갖는 시스템에서 더욱 그렇습니다. 변경 불가능이라는 성질 덕분에 재사용이 가능합니다. 값이 같고 ID가 없기 때문에 교환이 가능합니다. 이와 같은 유형의 최적화는 때때로 느리게 실행되는 소프트웨어와 고성능 소프트웨어 간의 차이를 만들 수 있습니다. 물론, 이 모든 것은 응용 프로그램 환경과 배포 상황에 따라 달라집니다.
+값 개체의 변경 불가능이라는 성질 덕분에 값 개체를 사용하여 성능을 높일 수 있는 방법이 있습니다. 특히 수천 개의 값 개체 인스턴스가 있고 그 중 많은 수가 같은 값을 갖는 시스템에서 더욱 그렇습니다. 변경 불가능이라는 성질 덕분에 재사용이 가능합니다. 값이 같고 ID가 없기 때문에 교환이 가능합니다. 이와 같은 유형의 최적화는 때때로 느리게 실행되는 소프트웨어와 고성능 소프트웨어 간의 차이를 만들 수 있습니다. 물론, 이 모든 것은 애플리케이션 환경과 배포 상황에 따라 달라집니다.
 
 ## <a name="value-object-implementation-in-c"></a>C에서 값 개체 구현\#
 
@@ -92,8 +92,8 @@ public abstract class ValueObject
         return GetAtomicValues()
          .Select(x => x != null ? x.GetHashCode() : 0)
          .Aggregate((x, y) => x ^ y);
-    }        
-    // Other utilility methods
+    }
+    // Other utility methods
 }
 ```
 
@@ -133,26 +133,26 @@ public class Address : ValueObject
 
 주소의 이 값 개체 구현에 ID가 없으며 따라서 Address 클래스 및 ValueObject 클래스에도 ID 필드가 없도록 하는 방법을 확인할 수 있습니다.
 
-ID가 없는 값 개체를 구현하는 데 크게 데 도움이 되는 EF Core 2.0까지는 클래스에 Entity Framework에서 사용할 ID 필드가 있습니다. 정확한 다음 섹션의 설명입니다. 
+ID가 없는 값 개체를 구현하는 데 크게 데 도움이 되는 EF Core 2.0까지는 클래스에 Entity Framework에서 사용할 ID 필드가 있습니다. 정확한 다음 섹션의 설명입니다.
 
-변경할 수 없는 개체 값이 읽기 전용(예: 가져오기 전용 속성)이라고 주장할 수 있고 실제로 그렇습니다. 그러나 값 개체는 일반적으로 직렬화되고 deserialize되어 메시지 큐를 거치고 읽기 전용이므로 deserializer가 값을 할당하지 않도록 중지합니다. 따라서 읽기 전용이 충분히 실용적인 비공개 집합으로 둡니다.
+변경할 수 없는 개체 값이 읽기 전용(예: 가져오기 전용 속성)이라고 주장할 수 있고 실제로 그렇습니다. 그러나 값 개체는 일반적으로 직렬화되고 deserialize되어 메시지 큐를 거치고, 읽기 전용이므로 역직렬 변환기가 값을 할당하지 않도록 중지합니다. 따라서 값 개체를 읽기 전용이 충분히 실용적인 비공개 세트로 둡니다.
 
 ## <a name="how-to-persist-value-objects-in-the-database-with-ef-core-20"></a>EF Core 2.0을 사용하여 데이터베이스에서 개체 값을 유지하는 방법
 
 도메인 모델에서 값 개체를 정의하는 방법을 알아보았습니다. 하지만 일반적으로 ID가 있는 엔터티를 대상으로 하는 EF(Entity Framework) Core를 통해 개체 값을 데이터베이스에 유지하려면 어떻게 해야 할까요?
 
-### <a name="background-and-older-approaches-using-ef-core-11"></a>배경 지식 및 EF Core 1.1을 사용한 기존의 접근 방식
+### <a name="background-and-older-approaches-using-ef-core-11"></a>배경지식 및 EF Core 1.1을 사용한 기존의 접근 방식
 
-배경 지식으로 알려드리자면, EF Core 1.0 및 1.1을 사용하는 경우 기존 .NET Framework의 EF 6.x에서 정의된 것처럼 [복합 형식](xref:System.ComponentModel.DataAnnotations.Schema.ComplexTypeAttribute)을 사용할 수 없다는 제한이 있습니다. 따라서 EF Core 1.0 또는 1.1을 사용하는 경우 값 개체를 ID 필드가 있는 EF 엔터티로 저장해야 했습니다. 그래서 마치 ID가 없는 값 개체처럼 보이기 때문에 ID를 숨겨서 값 개체의 ID가 도메인 모델에서 중요하지 않다는 점을 분명히 할 수 있습니다. ID를 [섀도 속성](https://docs.microsoft.com/ef/core/modeling/shadow-properties )으로 사용하여 해당 ID를 숨길 수 있습니다. 모델에서 ID를 숨기는 구성이 EF 인프라 수준에서 설정되므로 도메인 모델에 대해 투명하다고 할 수 있습니다.
+배경지식으로 알려드리자면, EF Core 1.0 및 1.1을 사용하는 경우 기존 .NET Framework의 EF 6.x에서 정의된 것처럼 [복합 형식](xref:System.ComponentModel.DataAnnotations.Schema.ComplexTypeAttribute)을 사용할 수 없다는 제한이 있습니다. 따라서 EF Core 1.0 또는 1.1을 사용하는 경우 값 개체를 ID 필드가 있는 EF 엔터티로 저장해야 했습니다. 그래서 마치 ID가 없는 값 개체처럼 보이기 때문에 ID를 숨겨서 값 개체의 ID가 도메인 모델에서 중요하지 않다는 점을 분명히 할 수 있습니다. ID를 [섀도 속성](https://docs.microsoft.com/ef/core/modeling/shadow-properties )으로 사용하여 해당 ID를 숨길 수 있습니다. 모델에서 ID를 숨기는 구성이 EF 인프라 수준에서 설정되므로 도메인 모델에 대해 투명하다고 할 수 있습니다.
 
 eShopOnContainers 초기 버전(.NET Core 1.1)에서, EF Core 인프라에 필요한 숨겨진 ID는 DbContext 수준에서 인프라 프로젝트에 흐름 API를 사용하여 다음과 같은 방식으로 구현되었습니다. 따라서 ID가 보기의 도메인 모델 관점에서 숨겨지더라도 인프라에 계속 존재합니다.
 
 ```csharp
 // Old approach with EF Core 1.1
 // Fluent API within the OrderingContext:DbContext in the Infrastructure project
-void ConfigureAddress(EntityTypeBuilder<Address> addressConfiguration) 
+void ConfigureAddress(EntityTypeBuilder<Address> addressConfiguration)
 {
-    addressConfiguration.ToTable("address", DEFAULT_SCHEMA); 
+    addressConfiguration.ToTable("address", DEFAULT_SCHEMA);
 
     addressConfiguration.Property<int>("Id")  // Id is a shadow property
         .IsRequired();
@@ -192,7 +192,7 @@ EShopOnContainers에서, OrderingContext.cs의 OnModelCreating() 메서드 내�
 
 ```csharp
 // Part of the OrderingContext.cs class at the Ordering.Infrastructure project
-// 
+//
 protected override void OnModelCreating(ModelBuilder modelBuilder)
 {
     modelBuilder.ApplyConfiguration(new ClientRequestEntityTypeConfiguration());
@@ -206,8 +206,8 @@ protected override void OnModelCreating(ModelBuilder modelBuilder)
 다음 코드에서는 주문 엔터티에 대해 지속성 인프라가 정의됩니다.
 
 ```csharp
-// Part of the OrderEntityTypeConfiguration.cs class 
-// 
+// Part of the OrderEntityTypeConfiguration.cs class
+//
 public void Configure(EntityTypeBuilder<Order> orderConfiguration)
 {
     orderConfiguration.ToTable("orders", OrderingContext.DEFAULT_SCHEMA);
@@ -220,7 +220,7 @@ public void Configure(EntityTypeBuilder<Order> orderConfiguration)
     orderConfiguration.OwnsOne(o => o.Address);
 
     orderConfiguration.Property<DateTime>("OrderDate").IsRequired();
-    
+
     //...Additional validations, constraints and code...
     //...
 }
@@ -312,7 +312,7 @@ public class Address
 - **Martin Fowler. ValueObject 패턴** \
   [*https://martinfowler.com/bliki/ValueObject.html*](https://martinfowler.com/bliki/ValueObject.html)
 
-- **Eric Evans. 도메인 기반 디자인: 소프트웨어 핵심에서 복잡성 처리.** (도서; 값 개체의 토론 포함) \
+- **Eric Evans. 도메인 기반 디자인: 소프트웨어 핵심에서 복잡성을 처리합니다.** (도서; 값 개체의 토론 포함) \
   [*https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/*](https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/)
 
 - **Vaughn Vernon. 도메인 기반 디자인 구현.** (도서; 값 개체의 토론 포함) \
@@ -330,6 +330,6 @@ public class Address
 - **주소 클래스.** eShopOnContainers의 동일한 값 개체 클래스. \
   [*https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.Domain/AggregatesModel/OrderAggregate/Address.cs*](https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.Domain/AggregatesModel/OrderAggregate/Address.cs)
 
->[!div class="step-by-step"]
->[이전](seedwork-domain-model-base-classes-interfaces.md)
->[다음](enumeration-classes-over-enum-types.md)
+> [!div class="step-by-step"]
+> [이전](seedwork-domain-model-base-classes-interfaces.md)
+> [다음](enumeration-classes-over-enum-types.md)

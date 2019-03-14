@@ -4,12 +4,12 @@ description: 컨테이너화된 .NET 애플리케이션용 .NET 마이크로 서
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/08/2018
-ms.openlocfilehash: 884a558827e0e016e27315cee1ea9ed3e0d03dc4
-ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
+ms.openlocfilehash: ec56a02e27f4218b3abc5839d1265815e188d2ea
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55065910"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57363022"
 ---
 # <a name="implement-a-microservice-domain-model-with-net-core"></a>.NET Core를 사용하여 마이크로 서비스 도메인 모델 구현 
 
@@ -171,11 +171,11 @@ EF Core 1.1 이상의 기능을 사용하여 열을 필드에 매핑하면 속�
 - **Vaughn Vernon. DDD 및 Entity Framework를 사용한 집계 모델링** 이것은 Entity Framework Core가 *아닙니다*. \
   <https://kalele.io/blog-posts/modeling-aggregates-with-ddd-and-entity-framework/>
 
-- **Julie Lerman. 도메인 기반 디자인의 코딩: 데이터 중심 개발을 위한 팁** \
-  [*https://msdn.microsoft.com/magazine/dn342868.aspx*](https://msdn.microsoft.com/magazine/dn342868.aspx)
+- **Julie Lerman. 데이터 요소 - 도메인 기반 디자인의 코딩: 데이터 중심 개발을 위한 팁** \
+  <https://msdn.microsoft.com/magazine/dn342868.aspx>
 
 - **Udi Dahan. 완벽하게 캡슐화된 도메인 모델을 만드는 방법** \
-  [*http://udidahan.com/2008/02/29/how-to-create-fully-encapsulated-domain-models/*](http://udidahan.com/2008/02/29/how-to-create-fully-encapsulated-domain-models/)
+  <http://udidahan.com/2008/02/29/how-to-create-fully-encapsulated-domain-models/>
 
 >[!div class="step-by-step"]
 >[이전](microservice-domain-model.md)

@@ -5,12 +5,12 @@ author: oliag
 ms.author: mairaw
 ms.date: 05/31/2018
 ms.technology: dotnet-standard
-ms.openlocfilehash: d27e5299ad9b1a3dcd89d5a947d91f06a54549e2
-ms.sourcegitcommit: 01ea420eaa4bf76d5fc47673294c8881379b3369
+ms.openlocfilehash: 84dd0717725f3538f9c9b2e3b5573f1385e549ac
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/06/2019
-ms.locfileid: "55759134"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57680271"
 ---
 # <a name="net-api-analyzer"></a>.NET API 분석기
 
@@ -44,7 +44,7 @@ API 분석기는 개별 경고 표시를 제어할 수 있는 DE(사용 중단 �
 
 다음 예제(`DE004`)와 같이 **오류 목록** 창에는 사용되지 않는 API별 고유 ID가 포함된 경고가 있습니다. 
 
-![“경고 ID 및 설명을 표시하는 오류 목록 창의 스크린샷”](media/api-analyzer/warnings.jpg)
+![“경고 ID 및 설명을 표시하는 오류 목록 창의 스크린샷”](media/api-analyzer/warnings-id-and-descriptions.jpg "경고를 포함하는 오류 목록 창입니다.")
 
 ID를 클릭하면 API가 사용되지 않는 이유에 대한 자세한 정보와 사용할 수 있는 대체 API에 대한 제안이 있는 웹 페이지로 이동합니다.
 
@@ -112,5 +112,5 @@ if (RuntimeInformation.IsOSPlatform(OSPlatform.Windows))
 
 ## <a name="see-also"></a>참고 항목
 
-- [API 분석기 소개](https://blogs.msdn.microsoft.com/dotnet/2017/10/31/introducing-api-analyzer/) 블로그 게시물.
+- [API 분석기 소개](https://devblogs.microsoft.com/dotnet/introducing-api-analyzer/) 블로그 게시물.
 - YouTube의 [API 분석기](https://youtu.be/eeBEahYXGd0) 데모 동영상.

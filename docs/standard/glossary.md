@@ -1,16 +1,14 @@
 ---
 title: .NET 용어
 description: .NET 설명서에서 사용되는 선택한 용어의 의미를 알아봅니다.
-author: tdykstra
-ms.author: tdykstra
 ms.date: 01/22/2019
 ms.technology: dotnet-standard
-ms.openlocfilehash: b9654bf7f6cbc1019d00db986ba883cbab0abbb5
-ms.sourcegitcommit: 5dcfeb59179e81071f54840d4902cbe00b184294
+ms.openlocfilehash: 2d19ec0b79abdcce9797767d1280d055a9c77a87
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54857975"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57674512"
 ---
 # <a name="net-glossary"></a>.NET 용어
 
@@ -118,9 +116,9 @@ Just-In-Time 컴파일러입니다.
 .NET의 구현에는 다음이 포함됩니다.
 
 - 하나 이상의 런타임. 예를 들면 다음과 같습니다. CLR, CoreCLR, CoreRT.
-- .NET Standard의 버전을 구현하고 추가 API를 포함할 수 있는 클래스 라이브러리. 예를 들어 .NET Framework 기본 클래스 라이브러리, .NET Core 기본 클래스 라이브러리가 있습니다.
+- .NET Standard의 버전을 구현하고 추가 API를 포함할 수 있는 클래스 라이브러리. 예: .NET Framework 기본 클래스 라이브러리, .NET Core 기본 클래스 라이브러리.
 - 필요에 따라 하나 이상의 애플리케이션 프레임워크. 예를 들면 다음과 같습니다. ASP.NET, Windows Forms 및 WPF가 .NET Framework에 포함됩니다.
-- 필요에 따라 개발 도구. 일부 개발 도구는 여러 구현에서 공유됩니다.
+- 필요에 따라 개발 도구. 일부 개발 도구는 여러 구현체에서 공통적으로 사용할 수 있음.
 
 .NET 구현의 예:
 
@@ -223,7 +221,7 @@ Windows, macOS, Linux, iOS 및 Android 같은 운영 체제와 해당 운영 체
 
 .NET 설명서에서는 .NET의 구현이나 모든 구현을 포함하는 .NET 스택을 의미하는 데 “.NET 플랫폼”을 자주 사용합니다. 이러한 사용은 모두 기본(OS/하드웨어) 의미와 혼동되므로 설명서에서 이러한 사용을 제거할 계획입니다.
 
-## <a name="runtime"></a>런타임(runtime)
+## <a name="runtime"></a>런타임
 
 관리되는 프로그램에 대한 실행 환경입니다.
 

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - await keyword [C#]
 - await [C#]
 ms.assetid: 50725c24-ac76-4ca7-bca1-dd57642ffedb
-ms.openlocfilehash: 86da57c0f8ecca7e5dada3ae6756739197c3f206
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1afd763d41ac3ffd42409ff8d1b8823979ab0c08
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54618976"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57713048"
 ---
 # <a name="await-c-reference"></a>await(C# 참조)
 `await` 연산자는 비동기 메서드의 작업에 적용되어 대기 중인 작업이 완료될 때까지 메서드의 실행에 일시 중단 지점을 삽입합니다. 작업은 진행 중인 작업을 나타냅니다.  
@@ -21,17 +21,16 @@ ms.locfileid: "54618976"
 `await`는 [async](../../../csharp/language-reference/keywords/async.md) 키워드로 수정된 비동기 메서드에서만 사용할 수 있습니다. `async` 한정자를 사용하여 정의하고 일반적으로 하나 이상의 `await` 식을 포함하는 이러한 메서드를 *비동기 메서드*라고 합니다.  
   
 > [!NOTE]
->  `async` 및 `await` 키워드는 C# 5에서 도입되었습니다. 비동기 프로그래밍에 대한 소개는 [async 및 await를 사용한 비동기 프로그래밍](../../../csharp/programming-guide/concepts/async/index.md)을 참조하세요.  
+> `async` 및 `await` 키워드는 C# 5에서 도입되었습니다. 비동기 프로그래밍에 대한 소개는 [async 및 await를 사용한 비동기 프로그래밍](../../../csharp/programming-guide/concepts/async/index.md)을 참조하세요.  
   
-일반적으로 `await` 연산자가 적용되는 작업은 [작업 기반 비동기 패턴](../../../standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap.md)을 구현하는 메서드 호출에서 반환됩니다. <xref:System.Threading.Tasks.Task>, <xref:System.Threading.Tasks.Task%601>, `System.Threading.Tasks.ValueType<TResult>` 개체를 반환하는 메서드를 포함합니다.  
+일반적으로 `await` 연산자가 적용되는 작업은 [작업 기반 비동기 패턴](../../../standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap.md)을 구현하는 메서드 호출에서 반환됩니다. <xref:System.Threading.Tasks.Task>, <xref:System.Threading.Tasks.Task%601>, <xref:System.Threading.Tasks.ValueTask>, <xref:System.Threading.Tasks.ValueTask%601> 개체를 반환하는 메서드를 포함합니다.  
 
-  
- 다음 예제에서 <xref:System.Net.Http.HttpClient.GetByteArrayAsync%2A?displayProperty=nameWithType> 메서드는 `Task<byte[]>`를 반환합니다. 작업은 작업이 완료될 때 실제 바이트 배열을 생성하기 위한 약속입니다. `await` 연산자는 <xref:System.Net.Http.HttpClient.GetByteArrayAsync%2A> 메서드의 작업이 완료될 때까지 실행을 일시 중단합니다. 동시에 컨트롤은 `GetPageSizeAsync` 호출자에게 반환됩니다. 작업의 실행이 완료되면 `await` 식이 바이트 배열로 평가됩니다.  
+다음 예제에서 <xref:System.Net.Http.HttpClient.GetByteArrayAsync%2A?displayProperty=nameWithType> 메서드는 `Task<byte[]>`를 반환합니다. 작업은 작업이 완료될 때 실제 바이트 배열을 생성하기 위한 약속입니다. `await` 연산자는 <xref:System.Net.Http.HttpClient.GetByteArrayAsync%2A> 메서드의 작업이 완료될 때까지 실행을 일시 중단합니다. 동시에 컨트롤은 `GetPageSizeAsync` 호출자에게 반환됩니다. 작업의 실행이 완료되면 `await` 식이 바이트 배열로 평가됩니다.  
 
 [!code-csharp[await-example](../../../../samples/snippets/csharp/language-reference/keywords/await/await1.cs)]  
 
 > [!IMPORTANT]
->  전체 예제를 보려면 [연습: Async 및 Await를 사용하여 웹에 액세스](../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)를 참조하세요. 샘플은 Microsoft 웹 사이트의 [Async Sample: Accessing the Web Walkthrough (C# and Visual Basic)](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f)(비동기 샘플: 웹 액세스 연습(C# 및 Visual Basic))에서 다운로드할 수 있습니다. 예제는 AsyncWalkthrough_HttpClient 프로젝트에 있습니다.  
+> 전체 예제를 보려면 [연습: Async 및 Await를 사용하여 웹에 액세스](../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)를 참조하세요. 샘플은 Microsoft 웹 사이트의 [Async Sample: Accessing the Web Walkthrough (C# and Visual Basic)](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f)(비동기 샘플: 웹 액세스 연습(C# 및 Visual Basic))에서 다운로드할 수 있습니다. 예제는 AsyncWalkthrough_HttpClient 프로젝트에 있습니다.  
   
 이전 예제와 같이 `await`가 `Task<TResult>`를 반환하는 메서드 호출의 결과에 적용되는 경우 `await` 식의 형식은 `TResult`입니다. `await`가 `Task`를 반환하는 메서드 호출의 결과에 적용되는 경우 `await` 식의 형식은 `void`입니다. 다음 예제에서 차이점을 보여 줍니다.  
   

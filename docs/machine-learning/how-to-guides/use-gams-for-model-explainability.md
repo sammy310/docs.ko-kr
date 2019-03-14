@@ -1,16 +1,21 @@
 ---
 title: ML.NET에서 모델 설명을 위해 일반화된 추가 모델 및 형상 함수 사용
 description: ML.NET에서 모델 설명을 위해 일반화된 추가 모델 및 형상 함수 사용
-ms.date: 02/06/2019
+ms.date: 03/05/2019
 ms.custom: mvc,how-to
-ms.openlocfilehash: c6f30a8cc5c07d97c62ded065f1e18a4f0523617
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
+ms.openlocfilehash: f7b8b9a3daabb16f59c901911a1f6950ce864fff
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56093114"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57675591"
 ---
 # <a name="use-generalized-additive-models-and-shape-functions-for-model-explainability-in-mlnet"></a>ML.NET에서 모델 설명을 위해 일반화된 추가 모델 및 형상 함수 사용
+
+> [!NOTE]
+> 이 항목은 현재 미리 보기로 제공되는 ML.NET을 참조하며, 자료는 변경될 수 있습니다. 자세한 내용은 [ML.NET 소개](https://www.microsoft.com/net/learn/apps/machine-learning-and-ai/ml-dotnet)를 참조하세요.
+
+이 방법과 관련 샘플에서는 현재 **ML.NET 버전 0.10**을 사용하고 있습니다. 자세한 내용은 [dotnet/machinelearning GitHub 리포지토리](https://github.com/dotnet/machinelearning/tree/master/docs/release-notes)에서 릴리스 정보를 참조하세요.
 
 기계 학습 모델을 만들 때는 예측을 수행하기에 부족한 경우가 많습니다. 기계 학습 개발자, 의사 결정자 및 모델의 영향을 받는 사람이 기계 학습 모델의 의사 결정 방법 및 성과에 도움이 되는 기능을 이해해야 합니다. **GAM(일반화된 추가 모델)** 은 기계 학습 개발자가 다른 사람이 쉽게 해석할 수 있는 고용량 모델을 만들 수 있도록 돕기 위해 Microsoft 내부에서 모델 설명에 사용됩니다.
 

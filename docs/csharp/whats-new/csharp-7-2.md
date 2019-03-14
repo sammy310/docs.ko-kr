@@ -2,17 +2,17 @@
 title: C# 7.2의 새로운 기능
 description: C# 7.2의 새로운 기능에 대한 개요입니다.
 ms.date: 08/16/2017
-ms.openlocfilehash: 7ee6d06750f82c9529beaed3cc665f876af08888
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 9525d52e5eab4b8213b8a1920531dc4b4d7ac0a3
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53148177"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57673225"
 ---
 # <a name="whats-new-in-c-72"></a>C# 7.2의 새로운 기능
 
 C# 7.2는 다양한 유용한 기능을 추가하는 또 하나의 지점 릴리스입니다.
-이 릴리스의 한 테마는 불필요한 복사 또는 할당 없이 값 유형을 사용하여 보다 효율적으로 작동하고 있습니다. 
+이 릴리스의 한 테마는 불필요한 복사 또는 할당 없이 값 유형을 사용하여 보다 효율적으로 작동하고 있습니다.
 
 나머지 기능은 작지만 멋진 기능입니다.
 
@@ -48,7 +48,7 @@ C# 7.2는 [언어 버전 선택](../language-reference/configure-language-versio
 
 ## <a name="leading-underscores-in-numeric-literals"></a>숫자 리터럴의 선행 밑줄
 
-C# 7.0에서는 자릿수 구분 기호에 대한 지원을 구현해도 `_`이 리터럴 값의 첫 번째 문자가 되는 것을 허용하지 않았습니다. 16진수 및 이진 숫자 리터럴은 이제 `_`로 시작될 수 있습니다. 
+C# 7.0에서는 자릿수 구분 기호에 대한 지원을 구현해도 `_`이 리터럴 값의 첫 번째 문자가 되는 것을 허용하지 않았습니다. 16진수 및 이진 숫자 리터럴은 이제 `_`로 시작될 수 있습니다.
 
 예:
 

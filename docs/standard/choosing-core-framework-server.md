@@ -4,12 +4,12 @@ description: .NET에서 서버 앱을 구축할 때 고려해야 할 .NET 구현
 author: cartermp
 ms.author: mairaw
 ms.date: 06/19/2018
-ms.openlocfilehash: 398a504e60ce47da6923eebb261ff68e8ca3c5ee
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.openlocfilehash: 03d008230d263853e322bb582706e2dbd3a11eec
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55828516"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57678802"
 ---
 # <a name="choosing-between-net-core-and-net-framework-for-server-apps"></a>서버 앱에 대해 .NET Core와 .NET Framework 중에 선택
 
@@ -52,7 +52,7 @@ ms.locfileid: "55828516"
 
 컨테이너는 일반적으로 마이크로 서비스 아키텍처와 함께 사용됩니다. 또한 컨테이너는 모든 아키텍처 패턴을 따르는 웹앱 또는 서비스를 컨테이너화하는 데 사용할 수 있습니다. .NET Framework를 Windows 컨테이너에서 사용할 수 있지만 .NET Core의 모듈화된 간단한 특성이 컨테이너에 더 적합합니다. 컨테이너를 만들고 배포할 때 컨테이너 이미지의 크기가 .NET Framework보다 .NET Core를 사용할 때 훨씬 더 작습니다. 플랫폼 간 사용되므로 예를 들어 서버 앱을 Linux Docker 컨테이너에 배포할 수 있습니다.
 
-Docker 컨테이너는 고유한 Linux 또는 Windows 인프라나 [Azure Container Service](https://azure.microsoft.com/services/container-service/) 같은 클라우드 서비스에서 호스트할 수 있습니다. Azure Container Service는 클라우드에서 컨테이너 기반 애플리케이션을 관리, 오케스트레이션 및 확장할 수 있습니다.
+Docker 컨테이너는 고유한 Linux 또는 Windows 인프라나 [Azure Kubernetes Service](https://azure.microsoft.com/services/kubernetes-service/) 같은 클라우드 서비스에서 호스트할 수 있습니다. Azure Kubernetes Service는 클라우드에서 컨테이너 기반 애플리케이션을 관리, 오케스트레이션 및 확장할 수 있습니다.
 
 ### <a name="a-need-for-high-performance-and-scalable-systems"></a>고성능 및 확장 가능한 시스템에 대한 요구 사항
 
@@ -77,7 +77,7 @@ Docker 컨테이너는 고유한 Linux 또는 Windows 인프라나 [Azure Contai
 라이브러리는 .NET Standard를 신속하게 수용하고 있습니다. .NET Standard에서는 .NET Core를 포함한 모든 .NET 구현에서 코드를 공유할 수 있습니다. .NET Standard 2.0을 사용하면 훨씬 더 쉬워집니다.
 
 - API 노출 영역이 훨씬 더 커졌습니다. 
-- .NET Framework 호환 모드가 도입되었습니다. 이 호환 모드에서는 .NET Standard/.NET Core 프로젝트에서 .NET Framework 라이브러리를 참조할 수 있습니다. 호환 모드에 대한 자세한 내용은 [.NET Standard 2.0 발표](https://blogs.msdn.microsoft.com/dotnet/2017/08/14/announcing-net-standard-2-0/)를 참조하세요.
+- .NET Framework 호환 모드가 도입되었습니다. 이 호환 모드에서는 .NET Standard/.NET Core 프로젝트에서 .NET Framework 라이브러리를 참조할 수 있습니다. 호환 모드에 대한 자세한 내용은 [.NET Standard 2.0 발표](https://devblogs.microsoft.com/dotnet/announcing-net-standard-2-0/)를 참조하세요.
 
 따라서 라이브러리 또는 NuGet 패키지가 .NET Standard/.NET Core에서 사용할 수 없는 기술을 사용하는 경우에만 .NET Framework를 사용해야 합니다.
 

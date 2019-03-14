@@ -4,12 +4,12 @@ description: 전역 도구를 만드는 방법을 설명합니다. 전역 도구
 author: Thraka
 ms.author: adegeo
 ms.date: 08/22/2018
-ms.openlocfilehash: 045b8f7707b8ee36ea9674bba3974197a57c482d
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.openlocfilehash: a54cb0a8c32da6a89ab1c3b7757df10fd9adf5cf
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55826423"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57677866"
 ---
 # <a name="create-a-net-core-global-tool-using-the-net-core-cli"></a>.NET Core CLI를 사용하여 .NET Core 전역 도구 만들기
 
@@ -50,7 +50,7 @@ static void Main(string[] args)
                                 .GetCustomAttribute<AssemblyInformationalVersionAttribute>()
                                 .InformationalVersion
                                 .ToString();
-                                
+
         Console.WriteLine($"botsay v{versionString}");
         Console.WriteLine("-------------");
         Console.WriteLine("\nUsage:");
@@ -129,13 +129,13 @@ dotnet run -- hello from the bot
 
 애플리케이션을 패키지하고 전역 도구로 배포하려면 먼저 프로젝트 파일을 수정해야 합니다. `botsay.csproj` 파일을 열고 다음 세 개의 새 XML 노드를 `<Project><PropertyGroup>` 노드에 추가합니다.
 
-- `<PackAsTool>`  
+- `<PackAsTool>`\
 [필수] 애플리케이션이 전역 도구로 설치하도록 패키지됨을 나타냅니다.
 
-- `<ToolCommandName>`  
+- `<ToolCommandName>`\
 [선택 사항] 도구의 대체 이름입니다. 그렇지 않으면 도구의 명령 이름이 프로젝트 파일 이름 뒤에 추가됩니다. 패키지에 여러 도구를 포함할 수 있고, 고유하고 친숙한 이름을 선택하면 동일 패키지의 다른 도구와 구별하는 데 도움이 됩니다.
 
-- `<PackageOutputPath>`  
+- `<PackageOutputPath>`\
 [선택 사항] NuGet 패키지가 생성될 위치입니다. NuGet 패키지는 .NET Core CLI 전역 도구가 도구를 설치하는 데 사용됩니다.
 
 ```xml
@@ -164,7 +164,7 @@ dotnet pack
 
 `botsay.1.0.0.nupkg` 파일은 `botsay.csproj` 파일의 `<PackageOutputPath>` XML 값으로 식별되는 폴더에 생성됩니다(이 예제에서는 `./nupkg` 폴더). 이를 사용하여 쉽게 설치 및 테스트할 수 있습니다. 공개적으로 도구를 릴리스하려면 [https://www.nuget.org](https://www.nuget.org)에 업로드합니다. NuGet에서 도구를 사용할 수 있게 되면 개발자는 [dotnet tool install](dotnet-tool-install.md) 명령의 `--global` 옵션을 사용하여 사용자 수준의 도구 설치를 수행할 수 있습니다.
 
-이제 패키지가 있으므로 해당 패키지에서 도구를 설치합니다. 
+이제 패키지가 있으므로 해당 패키지에서 도구를 설치합니다.
 
 ```console
 dotnet tool install --global --add-source ./nupkg botsay

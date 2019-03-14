@@ -1,6 +1,7 @@
 ---
-title: 가비지 컬렉션 기본 사항
-ms.date: 03/30/2017
+title: 가비지 수집 기본 사항
+description: 가비지 수집기의 작동 원리와 최적 성능으로 구성하는 방법에 대해 알아봅니다.
+ms.date: 03/08/2018
 ms.technology: dotnet-standard
 helpviewer_keywords:
 - garbage collection, generations
@@ -12,14 +13,14 @@ helpviewer_keywords:
 ms.assetid: 67c5a20d-1be1-4ea7-8a9a-92b0b08658d2
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a3eae9ea2c5a776d702d0868bdc858f8489f8f78
-ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
+ms.openlocfilehash: 9bb09571ea8c9fb3a6d16a9f16c5269326d7f7da
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55066325"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57712476"
 ---
-# <a name="fundamentals-of-garbage-collection"></a>가비지 컬렉션 기본 사항
+# <a name="fundamentals-of-garbage-collection"></a>가비지 수집 기본 사항
 <a name="top"></a> CLR(공용 언어 런타임)에서 가비지 수집은 자동 메모리 관리자 역할을 합니다. 가비지 수집은 다음과 같은 이점을 제공합니다.  
   
 -   애플리케이션을 개발할 때 메모리를 해제할 필요가 없습니다.  
@@ -30,28 +31,8 @@ ms.locfileid: "55066325"
   
 -   개체에서 다른 개체의 콘텐츠를 사용할 수 없도록 하여 메모리 안전을 제공합니다.  
   
- 이 항목에서는 가비지 수집의 핵심 개념에 대해 설명합니다. 여기에는 다음 단원이 포함되어 있습니다.  
-  
--   [메모리 기본 사항](#fundamentals_of_memory)  
-  
--   [가비지 수집 조건](#conditions_for_a_garbage_collection)  
-  
--   [관리되는 힙](#the_managed_heap)  
-  
--   [세대](#generations)  
-  
--   [가비지 수집 중 수행되는 작업](#what_happens_during_a_garbage_collection)  
-  
--   [관리되지 않는 리소스 조작](#manipulating_unmanaged_resources)  
-  
--   [워크스테이션 및 서버 가비지 수집](#workstation_and_server_garbage_collection)  
-  
--   [동시 가비지 수집](#concurrent_garbage_collection)  
-  
--   [백그라운드 워크스테이션 가비지 수집](#background_garbage_collection)  
-  
--   [백그라운드 서버 가비지 수집](#background_server_garbage_collection)  
-  
+ 이 항목에서는 가비지 수집의 핵심 개념에 대해 설명합니다. 
+ 
 <a name="fundamentals_of_memory"></a>   
 ## <a name="fundamentals-of-memory"></a>메모리 기본 사항  
  다음 목록은 중요한 CLR 메모리 개념을 요약한 것입니다.  
@@ -109,9 +90,9 @@ ms.locfileid: "55066325"
   
  가비지 수집의 개입 수준(빈도와 지속 시간)은 할당 규모 및 관리되는 힙에서 남은 메모리의 크기에 따라 결정됩니다.  
   
- 힙은 두 힙(대형 개체 힙과 소형 개체 힙)의 누적으로 간주할 수 있습니다.  
+ 힙은 두 힙([대형 개체 힙](large-object-heap.md)과 소형 개체 힙)의 누적으로 간주할 수 있습니다.  
   
- 대형 개체 힙에는 85,000바이트 이상의 매우 큰 개체가 포함됩니다. 대형 개체 힙의 개체는 일반적으로 배열입니다. 인스턴스 개체의 크기가 상당히 커지는 경우는 거의 없습니다.  
+ [대형 개체 힙](large-object-heap.md)에는 85,000바이트 이상의 매우 큰 개체가 포함됩니다. 대형 개체 힙의 개체는 일반적으로 배열입니다. 인스턴스 개체의 크기가 상당히 커지는 경우는 거의 없습니다.  
   
  [맨 위로 이동](#top)  
   

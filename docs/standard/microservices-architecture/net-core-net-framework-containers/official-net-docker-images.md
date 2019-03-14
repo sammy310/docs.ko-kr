@@ -4,12 +4,12 @@ description: 컨테이너화된 .NET 애플리케이션을 위한 .NET 마이크
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 01/07/2019
-ms.openlocfilehash: be1830ccf2fe4566aa7d50a4664be2d8d2c4e2e8
-ms.sourcegitcommit: dcc8feeff4718664087747529638ec9b47e65234
+ms.openlocfilehash: c4fce49b079473ddcc2b840527b8aeb951fec780
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2019
-ms.locfileid: "55479609"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57674655"
 ---
 # <a name="official-net-docker-images"></a>공식 .NET Docker 이미지
 
@@ -23,9 +23,9 @@ ms.locfileid: "55479609"
 
 Microsoft에서는 개발자를 위한 Docker 이미지를 빌드할 때 다음과 같은 주요 시나리오를 중점적으로 고려했습니다.
 
--   .NET Core 앱을 *개발*하고 빌드하는 데 사용되는 이미지
+- .NET Core 앱을 *개발*하고 빌드하는 데 사용되는 이미지
 
--   .NET Core 앱을 *실행*하는 데 사용되는 이미지
+- .NET Core 앱을 *실행*하는 데 사용되는 이미지
 
 여러 이미지인 이유는 무엇인가요? 컨테이너화된 애플리케이션을 개발, 빌드 및 실행할 때 일반적으로 다양한 우선 순위가 있습니다. Microsoft에서는 이러한 별도 작업에 다른 이미지를 제공하여 앱을 개발하고, 빌드하고, 배포하는 별도 프로세스를 최적화할 수 있습니다.
 
@@ -50,6 +50,6 @@ Docker 허브에서 .NET 이미지 리포지토리를 탐색하는 경우 태그
 | microsoft/dotnet:**2.2-aspnetcore-runtime** | Linux 및 Windows에서 런타임 전용 및 ASP.NET Core 최적화가 포함된 ASP.NET Core(다중 아키텍처) |
 | microsoft/dotnet:**2.2-sdk**                | Linux 및 Windows에서 SDK가 포함된 .NET Core(다중 아키텍처)                                  |
 
->[!div class="step-by-step"]
->[이전](net-container-os-targets.md)
->[다음](../architect-microservice-container-applications/index.md)
+> [!div class="step-by-step"]
+> [이전](net-container-os-targets.md)
+> [다음](../architect-microservice-container-applications/index.md)

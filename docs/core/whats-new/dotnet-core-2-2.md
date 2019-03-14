@@ -7,12 +7,12 @@ dev_langs:
 author: rpetrusha
 ms.author: ronpet
 ms.date: 12/04/2018
-ms.openlocfilehash: 058e7ee1dc834ff23a9a4aa191f7eaeb1016375c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 49a65dd44159e9800f7cf50a1edaa3d9e9b82e47
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54679779"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57677268"
 ---
 # <a name="whats-new-in-net-core-22"></a>.NET Core 2.2의 새로운 기능
 
@@ -28,9 +28,9 @@ ms.locfileid: "54679779"
 
 **런타임 서비스에서 이벤트 처리**
 
-GC, JIT, ThreadPool 등의 런타임 서비스에 대한 애플리케이션 사용을 자주 모니터링하여 해당 서비스가 애플리케이션에 미치는 영향을 파악하고 싶을 수 있습니다. Windows 시스템에서 이 작업은 일반적으로 현재 프로세스의 ETW 이벤트를 모니터링하여 수행됩니다. 이 방법을 계속 사용할 수도 있지만, 낮은 권한 환경이나 Linux 또는 macOS에서 실행하는 경우 항상 ETW를 사용할 수 있는 것은 아닙니다.  
+GC, JIT, ThreadPool 등의 런타임 서비스에 대한 애플리케이션 사용을 자주 모니터링하여 해당 서비스가 애플리케이션에 미치는 영향을 파악하고 싶을 수 있습니다. Windows 시스템에서 이 작업은 일반적으로 현재 프로세스의 ETW 이벤트를 모니터링하여 수행됩니다. 이 방법을 계속 사용할 수도 있지만, 낮은 권한 환경이나 Linux 또는 macOS에서 실행하는 경우 항상 ETW를 사용할 수 있는 것은 아닙니다. 
 
-.NET Core 2.2부터 이제 <xref:System.Diagnostics.Tracing.EventListener?displayProperty=nameWithtype> 클래스를 사용하여 CoreCLR 이벤트를 사용할 수 있습니다. 이러한 이벤트는 GC, JIT, ThreadPool 및 interop와 같은 런타임 서비스의 동작을 설명합니다. CoreCLR ETW 공급자에 속하는 이벤트와 동일한 이벤트입니다.  이 공급자를 통해 애플리케이션은 이러한 이벤트를 이용하거나, 전송 메커니즘을 사용하여 원격 분석 집계 서비스에 보낼 수 있습니다. 다음 코드 샘플에서 이벤트 구독 방법을 확인할 수 있습니다.
+.NET Core 2.2부터 이제 <xref:System.Diagnostics.Tracing.EventListener?displayProperty=nameWithType> 클래스를 사용하여 CoreCLR 이벤트를 사용할 수 있습니다. 이러한 이벤트는 GC, JIT, ThreadPool 및 interop와 같은 런타임 서비스의 동작을 설명합니다. 이는 CoreCLR ETW 공급자의 일부로 공개되는 동일한 이벤트입니다.  이 공급자를 통해 애플리케이션은 이러한 이벤트를 이용하거나, 전송 메커니즘을 사용하여 원격 분석 집계 서비스에 보낼 수 있습니다. 다음 코드 샘플에서 이벤트 구독 방법을 확인할 수 있습니다.
 
 ```csharp
 internal sealed class SimpleEventListener : EventListener
@@ -82,7 +82,7 @@ internal sealed class SimpleEventListener : EventListener
 
 - 자주 실행되는 메서드에 대한 최적화된 코드를 생성하는 **두 번째 계층**. 컴파일의 두 번째 계층은 성능 향상을 위해 병렬로 수행됩니다.
 
-계층화된 컴파일을 통한 성능 향상에 대한 자세한 내용은 [.NET Core 2.2 Preview 2 알림](https://blogs.msdn.microsoft.com/dotnet/2018/09/12/announcing-net-core-2-2-preview-2/)을 참조하세요. 
+계층화된 컴파일을 통한 성능 향상에 대한 자세한 내용은 [.NET Core 2.2 Preview 2 알림](https://devblogs.microsoft.com/dotnet/announcing-net-core-2-2-preview-2/)을 참조하세요.
 
 .NET Core 2.2 Preview 2에서는 계층화된 컴파일을 기본적으로 사용할 수 있었습니다. 그러나 계층화된 컴파일을 기본적으로 사용할 준비가 되지 않았다고 결정하여, .NET Core 2.2에서도 계층화된 컴파일이 계속 옵트인 기능으로 유지되었습니다. 계층화된 컴파일을 옵트인하는 방법에 대한 자세한 내용은 [.NET Core 2.1의 새로운 기능](dotnet-core-2-1.md)에서 [JIT 컴파일러 개선](dotnet-core-2-1.md#jit-compiler-improvements)을 참조하세요.
 

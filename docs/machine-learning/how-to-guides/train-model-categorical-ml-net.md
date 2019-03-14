@@ -1,16 +1,21 @@
 ---
 title: 범주 데이터에 모델 학습용 기능 엔지니어링 적용 - ML.NET
 description: ML.NET를 사용하여 범주 데이터에 기계 학습 모델 학습용 기능 엔지니어링을 적용하는 방법을 알아봅니다.
-ms.date: 02/06/2019
+ms.date: 03/05/2019
 ms.custom: mvc,how-to
-ms.openlocfilehash: eedbe0499784e7a99b0101c42892652daef3a114
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: c8e7a6f2429dd5ceda065332770e0ba3af374143
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56968415"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57677281"
 ---
 # <a name="apply-feature-engineering-for-model-training-on-categorical-data---mlnet"></a>범주 데이터에 모델 학습용 기능 엔지니어링 적용 - ML.NET
+
+> [!NOTE]
+> 이 항목은 현재 미리 보기로 제공되는 ML.NET을 참조하며, 자료는 변경될 수 있습니다. 자세한 내용은 [ML.NET 소개](https://www.microsoft.com/net/learn/apps/machine-learning-and-ai/ml-dotnet)를 참조하세요.
+
+이 방법과 관련 샘플에서는 현재 **ML.NET 버전 0.10**을 사용하고 있습니다. 자세한 내용은 [dotnet/machinelearning GitHub 리포지토리](https://github.com/dotnet/machinelearning/tree/master/docs/release-notes)에서 릴리스 정보를 참조하세요.
 
 모든 ML.NET `learners`가 `float vector`로 기능을 사용하므로 비부동 데이터를 `float` 데이터 형식으로 변환해야 합니다.
 

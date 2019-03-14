@@ -4,28 +4,28 @@ description: 컨테이너화된 .NET 애플리케이션의.NET 마이크로 서�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/02/2018
-ms.openlocfilehash: eef1ad347cb621e1f26c9c65d46d71e83a2c3a23
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 8ddc966710f6a9a949983726fd93505fbc88391f
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56971782"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57675032"
 ---
 # <a name="subscribing-to-events"></a>이벤트 구독
 
 이벤트 버스를 사용하기 위한 첫 번째 단계는 마이크로 서비스에서 수신하려는 이벤트를 구독하는 것입니다. 구독은 수신자 마이크로 서비스에서 수행해야 합니다.
 
-다음의 간단한 코드는 서비스를 시작할 때(즉, `Startup` 클래스에서) 마이크로 서비스가 필요한 이벤트를 구독할 수 있도록 각 수신자 마이크로 서비스가 무엇을 구현해야 하는가를 나타냅니다. 이 경우 `basket.api` 마이크로 서비스는 `ProductPriceChangedIntegrationEvent` 및 `OrderStartedIntegrationEvent` 메시지를 구독해야 합니다. 
+다음의 간단한 코드는 서비스를 시작할 때(즉, `Startup` 클래스에서) 마이크로 서비스가 필요한 이벤트를 구독할 수 있도록 각 수신자 마이크로 서비스가 무엇을 구현해야 하는가를 나타냅니다. 이 경우 `basket.api` 마이크로 서비스는 `ProductPriceChangedIntegrationEvent` 및 `OrderStartedIntegrationEvent` 메시지를 구독해야 합니다.
 
 예를 들어 `ProductPriceChangedIntegrationEvent` 이벤트에 등록하면 장바구니 마이크로 서비스는 제품 가격의 변경 사항을 파악하고 해당 제품이 사용자의 장바구니에 있는 경우 사용자에게 변경 사항을 경고할 수 있습니다.
 
 ```csharp
 var eventBus = app.ApplicationServices.GetRequiredService<IEventBus>();
 
-eventBus.Subscribe<ProductPriceChangedIntegrationEvent, 
+eventBus.Subscribe<ProductPriceChangedIntegrationEvent,
                    ProductPriceChangedIntegrationEventHandler>();
 
-eventBus.Subscribe<OrderStartedIntegrationEvent, 
+eventBus.Subscribe<OrderStartedIntegrationEvent,
                    OrderStartedIntegrationEventHandler>();
 
 ```
@@ -87,9 +87,9 @@ public async Task<IActionResult> UpdateProduct([FromBody]CatalogItem product)
 }
 ```
 
-이 경우에는 원본 마이크로 서비스가 간단한 CRUD 마이크로 서비스이므로 해당 코드가 웹 API 컨트롤러에 바로 배치됩니다. 
- 
-CQRS 방식을 사용하는 경우와 같은 고급 마이크로 서비스의 경우에는 `Handle()` 메서드 내 `CommandHandler` 클래스에 구현할 수 있습니다. 
+이 경우에는 원본 마이크로 서비스가 간단한 CRUD 마이크로 서비스이므로 해당 코드가 웹 API 컨트롤러에 바로 배치됩니다.
+
+CQRS 방식을 사용하는 경우와 같은 고급 마이크로 서비스의 경우에는 `Handle()` 메서드 내 `CommandHandler` 클래스에 구현할 수 있습니다.
 
 ### <a name="designing-atomicity-and-resiliency-when-publishing-to-the-event-bus"></a>이벤트 버스로 게시할 경우 원자성 및 복원력 디자인
 
@@ -103,11 +103,11 @@ CQRS 방식을 사용하는 경우와 같은 고급 마이크로 서비스의 �
 
 앞의 아키텍처 섹션에서 언급했듯이 몇 가지 방식으로 이 문제를 해결할 수 있습니다.
 
--   [전체 이벤트 소싱](https://docs.microsoft.com/azure/architecture/patterns/event-sourcing) 패턴 사용.
+- [전체 이벤트 소싱](https://docs.microsoft.com/azure/architecture/patterns/event-sourcing) 패턴 사용.
 
--   [트랜잭션 로그 마이닝](https://www.scoop.it/t/sql-server-transaction-log-mining) 사용.
+- [트랜잭션 로그 마이닝](https://www.scoop.it/t/sql-server-transaction-log-mining) 사용.
 
--   [아웃박스 패턴](http://gistlabs.com/2014/05/the-outbox/) 사용. 이 트랜잭션 테이블에는 통합 이벤트를 저장합니다(로컬 트랜잭션 확장).
+- [아웃박스 패턴](http://gistlabs.com/2014/05/the-outbox/) 사용. 이 트랜잭션 테이블에는 통합 이벤트를 저장합니다(로컬 트랜잭션 확장).
 
 이 시나리오의 경우 ES(이벤트 소싱) 패턴이 *가장* 적절하거나 적절한 방법 중 하나입니다. 하지만 대부분의 애플리케이션 시나리오에서는 전체 ES 시스템을 구현하지 못할 수 있습니다. ES란 현재 상태 데이터를 저장하는 대신 트랜잭션 데이터베이스에 도메인 이벤트만 저장하는 것을 의미합니다. 도메인 이벤트만 저장할 경우 시스템 기록을 사용할 수 있다는 점, 지난 시스템 상태를 확인할 수 있다는 점 등의 뛰어난 이점이 있습니다. 하지만 전체 ES 시스템을 구현하려면 대부분의 시스템을 재설계해야 하며 그 외에도 많은 복잡성과 요구 사항이 있습니다. 예를 들어 [이벤트 저장소](https://eventstore.org/) 등의 이벤트 소싱용으로 만든 데이터베이스 또는 Azure Cosmos DB, MongoDB, Cassandra, CouchDB, RavenDB 등의 문서 중심 데이터베이스를 사용하려는 경우가 있습니다. ES는 이 문제에 적합한 방식이지만 이벤트 소싱에 대해 잘 알고 있는 경우가 아니면 가장 쉬운 솔루션이 아닙니다.
 
@@ -125,19 +125,19 @@ CQRS 방식을 사용하는 경우와 같은 고급 마이크로 서비스의 �
 
 단계별 프로세스는 다음과 같이 이루어집니다.
 
-1.  애플리케이션은 로컬 데이터베이스 트랜잭션을 시작합니다.
+1. 애플리케이션은 로컬 데이터베이스 트랜잭션을 시작합니다.
 
-2.  그런 다음, 도메인 엔터티의 상태를 업데이트하고 통합 이벤트 테이블로 이벤트를 삽입합니다.
+2. 그런 다음, 도메인 엔터티의 상태를 업데이트하고 통합 이벤트 테이블로 이벤트를 삽입합니다.
 
-3.  마지막으로, 트랜잭션을 커밋합니다. 그러면 원하는 원자성을 가져온 다음,
+3. 마지막으로, 트랜잭션을 커밋합니다. 그러면 원하는 원자성을 가져온 다음,
 
-4.  어떤 식으로든 이벤트를 게시합니다(다음).
+4. 어떤 식으로든 이벤트를 게시합니다(다음).
 
 이벤트 게시 단계를 구현할 경우 선택권이 있습니다.
 
--   트랜잭션을 커밋한 직후 통합 이벤트를 게시하고 다른 로컬 트랜잭션을 사용하여 게시 중인 테이블에서 이벤트를 표시합니다. 그런 다음, 원격 마이크로 서비스의 문제가 발생할 경우에 대비해 통합 이벤트를 추적하기 위한 아티팩트로 테이블을 사용하고 저장된 통합 이벤트를 기준으로 보상 작업을 수행합니다.
+- 트랜잭션을 커밋한 직후 통합 이벤트를 게시하고 다른 로컬 트랜잭션을 사용하여 게시 중인 테이블에서 이벤트를 표시합니다. 그런 다음, 원격 마이크로 서비스의 문제가 발생할 경우에 대비해 통합 이벤트를 추적하기 위한 아티팩트로 테이블을 사용하고 저장된 통합 이벤트를 기준으로 보상 작업을 수행합니다.
 
--   테이블을 일종의 큐로 사용합니다. 별도의 애플리케이션 스레드 또는 프로세스가 통합 이벤트 테이블을 쿼리하고 이벤트 버스로 이벤트를 게시한 다음, 로컬 트랜잭션을 사용하여 이벤트가 게시된 것으로 표시합니다.
+- 테이블을 일종의 큐로 사용합니다. 별도의 애플리케이션 스레드 또는 프로세스가 통합 이벤트 테이블을 쿼리하고 이벤트 버스로 이벤트를 게시한 다음, 로컬 트랜잭션을 사용하여 이벤트가 게시된 것으로 표시합니다.
 
 그림 6-22는 첫 번째 방법의 아키텍처를 보여줍니다.
 
@@ -166,55 +166,55 @@ CQRS 방식을 사용하는 경우와 같은 고급 마이크로 서비스의 �
 ```csharp
 // Update Product from the Catalog microservice
 //
-public async Task<IActionResult> UpdateProduct([FromBody]CatalogItem productToUpdate) 
+public async Task<IActionResult> UpdateProduct([FromBody]CatalogItem productToUpdate)
 {
-  var catalogItem = 
-       await _catalogContext.CatalogItems.SingleOrDefaultAsync(i => i.Id == 
-                                                               productToUpdate.Id); 
+  var catalogItem =
+       await _catalogContext.CatalogItems.SingleOrDefaultAsync(i => i.Id ==
+                                                               productToUpdate.Id);
   if (catalogItem == null) return NotFound();
 
-  bool raiseProductPriceChangedEvent = false; 
-  IntegrationEvent priceChangedEvent = null; 
+  bool raiseProductPriceChangedEvent = false;
+  IntegrationEvent priceChangedEvent = null;
 
-  if (catalogItem.Price != productToUpdate.Price) 
-          raiseProductPriceChangedEvent = true; 
+  if (catalogItem.Price != productToUpdate.Price)
+          raiseProductPriceChangedEvent = true;
 
   if (raiseProductPriceChangedEvent) // Create event if price has changed
   {
-      var oldPrice = catalogItem.Price; 
+      var oldPrice = catalogItem.Price;
       priceChangedEvent = new ProductPriceChangedIntegrationEvent(catalogItem.Id,
-                                                                  productToUpdate.Price, 
-                                                                  oldPrice); 
+                                                                  productToUpdate.Price,
+                                                                  oldPrice);
   }
   // Update current product
-  catalogItem = productToUpdate; 
+  catalogItem = productToUpdate;
 
   // Just save the updated product if the Product's Price hasn't changed.
-  if (!raiseProductPriceChangedEvent) 
+  if (!raiseProductPriceChangedEvent)
   {
       await _catalogContext.SaveChangesAsync();
   }
   else  // Publish to event bus only if product price changed
   {
-        // Achieving atomicity between original DB and the IntegrationEventLog 
+        // Achieving atomicity between original DB and the IntegrationEventLog
         // with a local transaction
         using (var transaction = _catalogContext.Database.BeginTransaction())
         {
-           _catalogContext.CatalogItems.Update(catalogItem); 
+           _catalogContext.CatalogItems.Update(catalogItem);
            await _catalogContext.SaveChangesAsync();
 
            // Save to EventLog only if product price changed
-           if(raiseProductPriceChangedEvent) 
-               await _integrationEventLogService.SaveEventAsync(priceChangedEvent); 
+           if(raiseProductPriceChangedEvent)
+               await _integrationEventLogService.SaveEventAsync(priceChangedEvent);
 
            transaction.Commit();
-        }   
+        }
 
-      // Publish the intergation event through the event bus
-      _eventBus.Publish(priceChangedEvent); 
+      // Publish the integration event through the event bus
+      _eventBus.Publish(priceChangedEvent);
 
       integrationEventLogService.MarkEventAsPublishedAsync(
-                                                priceChangedEvent); 
+                                                priceChangedEvent);
   }
 
   return Ok();
@@ -303,7 +303,7 @@ namespace Microsoft.eShopOnContainers.Services.Basket.API.IntegrationEvents.Even
 
 ### <a name="additional-resources"></a>추가 자료
 
--   **메시지 멱등성 준수** <br/>
+- **메시지 멱등성 준수** <br/>
     <https://docs.microsoft.com/previous-versions/msp-n-p/jj591565(v=pandp.10)#honoring-message-idempotency>
 
 ## <a name="deduplicating-integration-event-messages"></a>통합 이벤트 메시지 중복 제거
@@ -324,69 +324,69 @@ namespace Microsoft.eShopOnContainers.Services.Basket.API.IntegrationEvents.Even
 
 ### <a name="additional-resources"></a>추가 자료
 
--   **NServiceBus를 사용하여 포크된 eShopOnContainers(특정 소프트웨어)** <br/>
+- **NServiceBus를 사용하여 포크된 eShopOnContainers(특정 소프트웨어)** <br/>
     [*https://go.particular.net/eShopOnContainers*](https://go.particular.net/eShopOnContainers)
 
--   **이벤트 기반 메시징** <br/>
+- **이벤트 기반 메시징** <br/>
     [*http://soapatterns.org/design\_patterns/event\_driven\_messaging*](http://soapatterns.org/design_patterns/event_driven_messaging)
 
--   **Jimmy Bogard. 복원력에 대한 리팩터링: 결합 평가** <br/>
+- **Jimmy Bogard. 복원력에 대한 리팩터링: 결합 평가** <br/>
     [*https://jimmybogard.com/refactoring-towards-resilience-evaluating-coupling/*](https://jimmybogard.com/refactoring-towards-resilience-evaluating-coupling/)
 
--   **게시-구독 채널** <br/>
+- **게시-구독 채널** <br/>
     [*https://www.enterpriseintegrationpatterns.com/patterns/messaging/PublishSubscribeChannel.html*](https://www.enterpriseintegrationpatterns.com/patterns/messaging/PublishSubscribeChannel.html)
 
--   **바인딩된 컨텍스트 간 통신** <br/>
+- **바인딩된 컨텍스트 간 통신** <br/>
     <https://docs.microsoft.com/previous-versions/msp-n-p/jj591572(v=pandp.10)>
 
--   **최종 일관성** <br/>
+- **최종 일관성** <br/>
     [*https://en.wikipedia.org/wiki/Eventual\_consistency*](https://en.wikipedia.org/wiki/Eventual_consistency)
 
--   **Philip Brown. 바인딩된 컨텍스트 통합 전략** <br/>
+- **Philip Brown. 바인딩된 컨텍스트 통합 전략** <br/>
     [*https://www.culttt.com/2014/11/26/strategies-integrating-bounded-contexts/*](https://www.culttt.com/2014/11/26/strategies-integrating-bounded-contexts/)
 
--   **Chris Richardson. 집계, 이벤트 소싱 및 CQRS를 사용한 트랜잭션 마이크로 서비스 개발 - 2부** <br/>
+- **Chris Richardson. 집계, 이벤트 소싱 및 CQRS를 사용한 트랜잭션 마이크로 서비스 개발 - 2부** <br/>
     [*https://www.infoq.com/articles/microservices-aggregates-events-cqrs-part-2-richardson*](https://www.infoq.com/articles/microservices-aggregates-events-cqrs-part-2-richardson)
 
--   **Chris Richardson. 이벤트 소싱 패턴** <br/>
+- **Chris Richardson. 이벤트 소싱 패턴** <br/>
     [*https://microservices.io/patterns/data/event-sourcing.html*](https://microservices.io/patterns/data/event-sourcing.html)
 
--   **이벤트 소싱 소개** <br/>
+- **이벤트 소싱 소개** <br/>
     <https://docs.microsoft.com/previous-versions/msp-n-p/jj591559(v=pandp.10)>
 
--   **Event Store database**. 공식 사이트입니다. <br/>
+- **Event Store database**. 공식 사이트입니다. <br/>
     [*https://geteventstore.com/*](https://geteventstore.com/)
 
--   **Patrick Nommensen. 마이크로 서비스를 위한 이벤트 기반 데이터 관리** <br/>
+- **Patrick Nommensen. 마이크로 서비스를 위한 이벤트 기반 데이터 관리** <br/>
     *<https://dzone.com/articles/event-driven-data-management-for-microservices-1> *
 
--   **CAP 원리** <br/>
+- **CAP 원리** <br/>
     [*https://en.wikipedia.org/wiki/CAP\_theorem*](https://en.wikipedia.org/wiki/CAP_theorem)
 
--   **CAP 원리란?** <br/>
+- **CAP 원리란?** <br/>
     [*https://www.quora.com/What-Is-CAP-Theorem-1*](https://www.quora.com/What-Is-CAP-Theorem-1)
 
--   **데이터 일관성 입문서** <br/>
+- **데이터 일관성 입문서** <br/>
     <https://docs.microsoft.com/previous-versions/msp-n-p/dn589800(v=pandp.10)>
 
--   **Rick Saling. CAP 원리: 클라우드와 인터넷의 "모든 것이 다른" 이유** <br/>
+- **Rick Saling. CAP 원리: 클라우드와 인터넷의 "모든 것이 다른" 이유** <br/>
     [*https://blogs.msdn.microsoft.com/rickatmicrosoft/2013/01/03/the-cap-theorem-why-everything-is-different-with-the-cloud-and-internet/*](https://blogs.msdn.microsoft.com/rickatmicrosoft/2013/01/03/the-cap-theorem-why-everything-is-different-with-the-cloud-and-internet/)
 
--   **Eric Brewer. CAP 12년 후: "규칙"이 변화하는 방식** <br/>
+- **Eric Brewer. CAP 12년 후: "규칙"이 변화하는 방식** <br/>
     [*https://www.infoq.com/articles/cap-twelve-years-later-how-the-rules-have-changed*](https://www.infoq.com/articles/cap-twelve-years-later-how-the-rules-have-changed)
 
--   **Azure Service Bus. 조정된 메시징: 중복 검색**  <br/>
+- **Azure Service Bus. 조정된 메시징: 중복 검색**  <br/>
     [*https://code.msdn.microsoft.com/Brokered-Messaging-c0acea25*](https://code.msdn.microsoft.com/Brokered-Messaging-c0acea25)
 
--   **안정성 가이드**(RabbitMQ 설명서)* <br/>
+- **안정성 가이드**(RabbitMQ 설명서)* <br/>
     [*https://www.rabbitmq.com/reliability.html\#consumer*](https://www.rabbitmq.com/reliability.html#consumer)
 
--   **Azure Service Bus. 조정된 메시징: 중복 검색** <br/>
+- **Azure Service Bus. 조정된 메시징: 중복 검색** <br/>
     [*https://code.msdn.microsoft.com/Brokered-Messaging-c0acea25*](https://code.msdn.microsoft.com/Brokered-Messaging-c0acea25)
 
--   **안정성 가이드**(RabbitMQ 설명서) <br/>
+- **안정성 가이드**(RabbitMQ 설명서) <br/>
     [*https://www.rabbitmq.com/reliability.html\#consumer*](https://www.rabbitmq.com/reliability.html%23consumer)
 
->[!div class="step-by-step"]
->[이전](rabbitmq-event-bus-development-test-environment.md)
->[다음](test-aspnet-core-services-web-apps.md)
+> [!div class="step-by-step"]
+> [이전](rabbitmq-event-bus-development-test-environment.md)
+> [다음](test-aspnet-core-services-web-apps.md)

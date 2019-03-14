@@ -4,18 +4,18 @@ description: 컨테이너화된 .NET 애플리케이션용 .NET 마이크로 서
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/08/2018
-ms.openlocfilehash: a77a92d12e3b60ebb67bab557a4e5ec1dd2f882f
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 104c7564b7dd29209b48d99b1dea7524c07d7e69
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53126448"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57360422"
 ---
 # <a name="implement-readsqueries-in-a-cqrs-microservice"></a>CQRS 마이크로 서비스에서 읽기/쿼리 구현
 
-읽기/쿼리의 경우 eShopOnContainers 참조 응용 프로그램의 주문 마이크로 서비스에서 DDD 모델 및 트랜잭션 영역과 별도로 쿼리를 구현합니다. 이 작업은 주로 쿼리와 트랜잭션에 대한 요구가 매우 다르기 때문에 수행되었습니다. 쓰기는 도메인 논리와 호환되어야 하는 트랜잭션을 실행합니다. 반면에 쿼리는 idempotent(멱등원)이며 도메인 규칙과 분리될 수 있습니다.
+읽기/쿼리의 경우 eShopOnContainers 참조 애플리케이션의 주문 마이크로 서비스에서 DDD 모델 및 트랜잭션 영역과 별도로 쿼리를 구현합니다. 이 작업은 주로 쿼리와 트랜잭션에 대한 요구가 매우 다르기 때문에 수행되었습니다. 쓰기는 도메인 논리와 호환되어야 하는 트랜잭션을 실행합니다. 반면에 쿼리는 idempotent(멱등원)이며 도메인 규칙과 분리될 수 있습니다.
 
-이 접근 방식은 그림 7-3과 같이 간단합니다. API 인터페이스는 마이크로 ORM(Object Relational Mapper)(예: Dapper)과 같은 인프라를 사용하는 웹 API 컨트롤러에서 구현되며, UI 응용 프로그램의 필요에 따라 동적 ViewModel을 반환합니다.
+이 접근 방식은 그림 7-3과 같이 간단합니다. API 인터페이스는 마이크로 ORM(Object Relational Mapper)(예: Dapper)과 같은 인프라를 사용하는 웹 API 컨트롤러에서 구현되며, UI 애플리케이션의 필요에 따라 동적 ViewModel을 반환합니다.
 
 ![간소화된 CQRS 접근 방식에서 쿼리 측면에 대한 가장 간단한 방법은 데이터베이스를 Dapper 같은 Micro-ORM으로 쿼리하고 동적 ViewModels를 반환함으로써 구현될 수 있습니다.](./media/image3.png)
 
@@ -31,7 +31,7 @@ ms.locfileid: "53126448"
 
 ## <a name="use-viewmodels-specifically-made-for-client-apps-independent-from-domain-model-constraints"></a>도메인 모델 제약 조건과 별도로 클라이언트 앱용으로 특별히 제작된 ViewModels 사용
 
-쿼리는 클라이언트 응용 프로그램에 필요한 데이터를 가져오기 위해 수행되므로 쿼리에서 반환된 데이터에 기반하여 클라이언트에 대해 반환되는 형식을 구체적으로 만들 수 있습니다. 이러한 모델 또는 DTO(데이터 전송 개체)를 ViewModel이라고 합니다.
+쿼리는 클라이언트 애플리케이션에 필요한 데이터를 가져오기 위해 수행되므로 쿼리에서 반환된 데이터에 기반하여 클라이언트에 대해 반환되는 형식을 구체적으로 만들 수 있습니다. 이러한 모델 또는 DTO(데이터 전송 개체)를 ViewModel이라고 합니다.
 
 반환된 데이터(ViewModel)는 데이터베이스의 여러 엔터티 또는 테이블의 데이터, 심지어 트랜잭션 영역에 대한 도메인 모델에 정의된 여러 집계 간의 데이터를 조인한 결과일 수 있습니다. 이 경우 도메인 모델과 별도로 쿼리를 만들기 때문에 집계 경계와 제약 조건은 완전히 무시되며 필요한 테이블과 열을 자유롭게 쿼리할 수 있습니다. 이 방법은 쿼리를 만들거나 업데이트하는 데 있어 뛰어난 유연성과 생산성을 개발자에게 제공합니다.
 
@@ -39,7 +39,7 @@ ViewModel은 클래스에 정의된 정적 형식이 될 수 있습니다. 또�
 
 ## <a name="use-dapper-as-a-micro-orm-to-perform-queries"></a>Dapper를 마이크로 ORM으로 사용하여 쿼리를 수행합니다. 
 
-마이크로 ORM, Entity Framework Core 또는 일반 ADO.NET을 쿼리에 사용할 수 있습니다. 샘플 응용 프로그램에서 Dapper는 인기 있는 마이크로 ORM의 좋은 예인 eShopOnContainers에서 주문 마이크로 서비스로 선택되었습니다. 매우 작은 프레임워크이므로 뛰어난 성능으로 일반 SQL 쿼리를 실행할 수 있습니다. Dapper를 사용하면 여러 테이블에 액세스하고 조인할 수 있는 SQL 쿼리를 작성할 수 있습니다.
+마이크로 ORM, Entity Framework Core 또는 일반 ADO.NET을 쿼리에 사용할 수 있습니다. 샘플 애플리케이션에서 Dapper는 인기 있는 마이크로 ORM의 좋은 예인 eShopOnContainers에서 주문 마이크로 서비스로 선택되었습니다. 매우 작은 프레임워크이므로 뛰어난 성능으로 일반 SQL 쿼리를 실행할 수 있습니다. Dapper를 사용하면 여러 테이블에 액세스하고 조인할 수 있는 SQL 쿼리를 작성할 수 있습니다.
 
 Dapper는 오픈 소스 프로젝트(원래 Sam Saffron이 만듦)이며 [Stack Overflow](https://stackoverflow.com/)에서 사용되는 구성 요소의 일부입니다. Dapper를 사용하려면 다음 그림과 같이 [Dapper NuGet 패키지](https://www.nuget.org/packages/Dapper)를 통해 이를 설치해야 합니다.
 
@@ -95,13 +95,13 @@ public class OrderQueries : IOrderQueries
 
 ### <a name="viewmodel-as-predefined-dto-classes"></a>미리 정의된 DTO 클래스인 ViewModel
 
-**전문가**: 명시적 DTO 클래스에 기반한 "계약"과 같이 미리 정의된 정적 ViewModel 클래스는 동일한 애플리케이션에서만 사용되는 경우에도 공용 API뿐만 아니라 장기적인 마이크로 서비스에도 보다 더 적합합니다.
+**장점**: 명시적 DTO 클래스를 기반으로 하는 “계약”과 같이 미리 정의된 정적 ViewModel 클래스를 사용하면, 동일한 애플리케이션에서만 사용되는 경우에도 공용 API뿐만 아니라 장기적인 마이크로 서비스에도 확실히 더 좋습니다.
 
 Swagger에 대한 응답 형식을 지정하려면 명시적 DTO 클래스를 반환 형식으로 사용해야 합니다. 따라서 미리 정의된 DTO 클래스를 사용하면 Swagger에서 더 많은 정보를 제공할 수 있습니다. API를 사용할 때 API 문서화 및 호환성이 향상됩니다.
 
 **단점**: 앞에서 언급했듯이 코드를 업데이트할 때 DTO 클래스를 업데이트하는 데 몇 가지 단계가 필요합니다.
 
-*경험에 기반한 팁*: eShopOnContainers의 주문 마이크로 서비스에서 구현된 쿼리에서, 초기 개발 단계에서 매우 간단하고 민첩했기 때문에 동적 ViewModels를 사용하여 개발하기 시작했습니다. 그러나 개발이 안정화된 후에는 API를 리팩터링하고 ViewModel에 정적 또는 미리 정의된 DTO를 사용하도록 결정했습니다. 이는 마이크로 서비스 소비자에서 명시적 DTO 형식을 인식하고 "계약"으로 사용하는 것이 더 명확하기 때문입니다.
+경험을 기반으로 한 팁: eShopOnContainers의 주문 마이크로 서비스에서 구현된 쿼리에서, 초기 개발 단계에서 매우 간단하고 민첩했기 때문에 동적 ViewModels를 사용하여 개발하기 시작했습니다. 그러나 개발이 안정화된 후에는 API를 리팩터링하고 ViewModel에 정적 또는 미리 정의된 DTO를 사용하도록 결정했습니다. 이는 마이크로 서비스 소비자에서 명시적 DTO 형식을 인식하고 "계약"으로 사용하는 것이 더 명확하기 때문입니다.
 
 다음 예제에서는 명시적 ViewModel DTO 클래스인 OrderSummary 클래스를 사용하여 쿼리에서 데이터를 반환하는 방법을 확인할 수 있습니다.
 
@@ -188,13 +188,13 @@ public class OrderSummary
 ## <a name="additional-resources"></a>추가 자료
 
 - **Dapper** \
-  [*https://github.com/StackExchange/dapper-dot-net*](https://github.com/StackExchange/dapper-dot-net)
+ <https://github.com/StackExchange/dapper-dot-net>
 
 - **Julie Lerman. 데이터 요소 - Dapper, Entity Framework 및 하이브리드 앱(MSDN Mag. 문서)** \
-  [*https://msdn.microsoft.com/magazine/mt703432.aspx*](https://msdn.microsoft.com/magazine/mt703432.aspx)
+  <https://msdn.microsoft.com/magazine/mt703432.aspx>
 
 - **Swagger를 사용한 ASP.NET Core Web API 도움말 페이지** \
-  [*https://docs.microsoft.com/aspnet/core/tutorials/web-api-help-pages-using-swagger?tabs=visual-studio*](https://docs.microsoft.com/aspnet/core/tutorials/web-api-help-pages-using-swagger?tabs=visual-studio)
+  <https://docs.microsoft.com/aspnet/core/tutorials/web-api-help-pages-using-swagger?tabs=visual-studio>
 
 >[!div class="step-by-step"]
 >[이전](eshoponcontainers-cqrs-ddd-microservice.md)

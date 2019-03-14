@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 115f7a2f-d422-4605-ab36-13a8dd28142a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b7dbba5161c1eeecef41e93c908752410acbd956
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.openlocfilehash: 21eea2ccdff88a11e9708fef317011dc547cafda
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56221253"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57677216"
 ---
 # <a name="interop-marshaling"></a>Interop 마샬링
 <a name="top"></a> Interop 마샬링은 호출 중 관리되는 메모리와 관리되지 않는 메모리 간에 메서드 인수와 반환 값을 통해 데이터를 전달하는 방법을 제어합니다. Interop 마샬링은 공용 언어 런타임 마샬링 서비스에서 수행하는 런타임 작업입니다.  
@@ -44,8 +44,7 @@ ms.locfileid: "56221253"
   
  플랫폼 호출과 COM interop는 둘 다 interop 마샬링을 사용하여 호출자와 호출 수신자 간에 메서드 인수를 정확하게 이동하고 필요한 경우 역방향으로 이동합니다. 다음 그림과 같이 플랫폼 호출 메서드는 관리 코드에서 비관리 코드로 전달되며 [콜백 함수](callback-functions.md)가 사용되는 경우를 제외하고 반대 방향으로 전달되지 않습니다. 플랫폼 호출은 관리 코드에서 비관리 코드로만 전달될 수 있지만 데이터는 입력 또는 출력 매개 변수로 양방향으로 전달될 수 있습니다. COM interop 메서드 호출은 어느 방향으로든 전달될 수 있습니다.  
   
- ![플랫폼 호출](./media/interopmarshaling.png "interopmarshaling")  
-플랫폼 호출 및 COM Interop 호출 흐름  
+ ![플랫폼 호출](./media/interop-marshaling/interop-marshaling-invoke-and-com.png "플랫폼 호출 및 COM Interop 호출 흐름")  
   
  가장 낮은 수준에서 두 메커니즘은 모두 동일한 interop 마샬링 서비스를 사용하지만 특정 데이터 형식은 COM interop 또는 플랫폼 호출에서만 지원됩니다. 자세한 내용은 [기본 마샬링 동작](default-marshaling-behavior.md)을 참조하세요.  
   
@@ -67,8 +66,7 @@ ms.locfileid: "56221253"
   
  클라이언트와 서버가 동일한 아파트에 있으므로 interop 마샬링 서비스에서 모든 데이터 마샬링을 자동으로 처리합니다. 다음 그림에서는 동일한 COM 스타일 아파트 내의 관리되는 힙과 관리되지 않는 힙 간에 작동하는 interop 마샬링 서비스를 보여 줍니다.  
   
- ![interop 마샬링](./media/interopheap.gif "interopheap")  
-동일한 아파트 마샬링 프로세스  
+ ![관리형 힙과 비관리형 힙 간 Interop 마샬링](./media/interop-marshaling/interop-heaps-managed-and-unmanaged.gif "동일 아파트 마샬링 프로세스")  
   
  관리되는 서버를 내보내려는 경우 COM 클라이언트가 서버의 아파트를 결정하는 것에 주의합니다. MTA로 초기화된 COM 클라이언트에서 호출하는 관리되는 서버는 스레드로부터 안전해야 합니다.  
   
@@ -85,8 +83,7 @@ ms.locfileid: "56221253"
   
  관리되는 클라이언트와 관리되지 않는 서버가 동일한 아파트에 있으므로 interop 마샬링 서비스에서 모든 데이터 마샬링을 처리합니다. 그러나 클라이언트와 서버가 서로 다른 아파트에서 초기화된 경우 COM 마샬링도 필요합니다. 다음 그림에서는 아파트 간 호출의 요소를 보여 줍니다.  
   
- ![COM 마샬링](./media/singleprocessmultapt.gif "singleprocessmultapt")  
-.NET 클라이언트와 COM 개체 간의 아파트 간 호출  
+ ![COM 마샬링](./media/interop-marshaling/single-process-across-multi-apartment.gif ".NET 클라이언트와 COM 개체 간의 아파트 간 호출")  
   
  아파트 간 마샬링의 경우 다음을 수행할 수 있습니다.  
   
@@ -111,14 +108,12 @@ ms.locfileid: "56221253"
   
  다음 그림에서는 interop 마샬링과 COM 마샬링이 프로세스 및 호스트 경계 간에 통신 채널을 제공하는 방법을 보여 줍니다.  
   
- ![COM 마샬링](./media/interophost.gif "interophost")  
-크로스 프로세스 마샬링  
+ ![COM 마샬링](./media/interop-marshaling/interop-and-com-marshaling.gif "프로세스 간 마샬링")  
   
 ### <a name="preserving-identity"></a>ID 유지  
  공용 언어 런타임은 관리되는 참조와 관리되지 않는 참조의 ID를 유지합니다. 다음 그림에서는 프로세스 및 호스트 경계 간에 관리되지 않는 직접 참조(위쪽 행)와 관리되는 직접 참조(아래쪽 행)의 흐름을 보여 줍니다.  
   
- ![COM 호출 가능 래퍼 및 런타임 호출 가능 래퍼](./media/interopdirectref.gif "interopdirectref")  
-프로세스 및 호스트 경계 간에 전달되는 참조  
+ ![COM 호출 가능 래퍼 및 런타임 호출 가능 래퍼](./media/interop-marshaling/interop-direct-ref-across-process.gif "프로세스 및 호스트 경계 간에 전달되는 참조")  
   
  다음 그림에서  
   
@@ -134,7 +129,7 @@ ms.locfileid: "56221253"
 ### <a name="managed-remoting"></a>관리되는 원격  
  런타임에서는 프로세스 및 호스트 경계를 넘은 관리되는 개체 간에 통신 채널을 설정하는 데 사용할 수 있는 관리되는 원격 기능도 제공합니다. 관리되는 원격 기능은 다음 그림과 같이 통신 구성 요소 간의 방화벽을 수용할 수 있습니다.  
   
- ![SOAP 또는 TcpChannel](./media/interopremotesoap.gif "interopremotesoap")  
+ ![SOAP 또는 TcpChannel](./media/interop-marshaling/interop-remote-soap-or-tcp.gif "SOAP 또는 TcpChannel 클래스를 사용하는 방화벽을 통한 원격 호출")  
 SOAP 또는 TcpChannel 클래스를 사용하는 방화벽을 통한 원격 호출  
   
  서비스 구성 요소와 COM 간의 호출과 같은 관리되지 않는 일부 호출은 SOAP를 채널로 사용할 수 있습니다.  

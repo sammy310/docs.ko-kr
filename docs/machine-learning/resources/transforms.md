@@ -4,12 +4,12 @@ description: ML.NET에서 지원되는 기능 엔지니어링 구성 요소를 �
 author: JRAlexander
 ms.custom: seodec18
 ms.date: 01/14/2019
-ms.openlocfilehash: 54dffec37318b79edf546ba1f6e1145e35782bfb
-ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
+ms.openlocfilehash: e649c9a27f0409cb9cdfb554963b5c0e732991f2
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/19/2019
-ms.locfileid: "54415353"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57355413"
 ---
 # <a name="machine-learning-data-transforms---mlnet"></a>기계 학습 데이터 변환 - ML.NET
 
@@ -25,7 +25,7 @@ ms.locfileid: "54415353"
 | <xref:Microsoft.ML.Transforms.GroupTransform> | 스칼라 열의 값을 인접 그룹 ID 기반의 벡터로 그룹화합니다. |
 | <xref:Microsoft.ML.Transforms.UngroupTransform> | 벡터 열을 행의 시퀀스로 그룹을 해제합니다(그룹 변환의 반대). |
 
-## <a name="conversions"></a>변환 
+## <a name="conversions"></a>변환
 
 | 변형 | 정의 |
 | --- | --- |
@@ -36,7 +36,6 @@ ms.locfileid: "54415353"
 | <xref:Microsoft.ML.Transforms.Conversions.KeyToVectorMappingTransformer> | 키를 벡터 열로 변환합니다. |
 | <xref:Microsoft.ML.Transforms.Conversions.TypeConvertingTransformer> | 유형을 변환할 수 있는 경우 기본 열 유형을 변경합니다. |
 | <xref:Microsoft.ML.Transforms.Conversions.ValueToKeyMappingTransformer> | 입력 값(단어, 숫자 등)을 사전의 인덱스로 변환합니다. |
-
 
 ## <a name="deep-learning"></a>딥러닝
 
@@ -49,17 +48,17 @@ ms.locfileid: "54415353"
 
 | 변형 | 정의 |
 | --- | --- |
-| <xref:Microsoft.ML.Transforms.Text.CustomStopWordsRemovingTransform> | 개별 토큰(대/소문자를 구분하지 않는 비교)을 중지 단어와 비교하여 지정된 중지 단어의 목록을 제거합니다.| 
+| <xref:Microsoft.ML.Transforms.Text.CustomStopWordsRemovingTransform> | 개별 토큰(대/소문자를 구분하지 않는 비교)을 중지 단어와 비교하여 지정된 중지 단어의 목록을 제거합니다.|
 | <xref:Microsoft.ML.ImageAnalytics.ImageGrayscaleTransform> | 하나 이상의 ImageType 열을 사용하고 동일한 이미지의 회색조 표현으로 변환합니다.|
 | <xref:Microsoft.ML.ImageAnalytics.ImageLoaderTransform> | 하나 이상의 ReadOnlyMemory 열을 사용하고 ImageType으로 로드합니다. |
 | <xref:Microsoft.ML.ImageAnalytics.ImagePixelExtractorTransform> | 하나 이상의 ImageType 열을 사용하고 벡터 표현으로 변환합니다.|
 | <xref:Microsoft.ML.ImageAnalytics.ImageResizerTransform> | 하나 이상의 ImageType 열을 사용하고 제공된 높이 및 너비로 크기를 조정합니다.|
 | <xref:Microsoft.ML.Transforms.Text.LatentDirichletAllocationTransformer> | Latent Dirichlet 할당의 최신 구현인 LightLDA를 구현합니다.|
 | <xref:Microsoft.ML.Transforms.LoadTransform> | 지정된 모델 파일에서 특정 변환을 로드합니다. 직렬화된 체인에서 'cherry picking' 변환을 허용하거나 다른(그러나 여전히 호환 가능한) 데이터 뷰에 미리 학습된 변환을 적용하도록 합니다. |
-| <xref:Microsoft.ML.Transforms.Text.NgramExtractingTransformer> | 키의 지정된 벡터에서 ngrams 개수 모음(1-n 길이의 연속 값의 시퀀스)을 생성합니다. ngrams의 사전을 빌드하고 모음의 인덱스로 사전의 ID를 사용하여 이를 수행합니다. | 
-| <xref:Microsoft.ML.Transforms.Text.NgramExtractorTransform> | 토큰화된 텍스트의 컬렉션(ReadOnlyMemory의 벡터) 또는 키의 벡터를 숫자 기능 벡터로 설정합니다. 기능 벡터는 ngrams의 개수입니다(1-n 길이의 연속 토큰- 단어 또는 키의 시퀀스). | 
-| <xref:Microsoft.ML.Transforms.Text.NgramHashExtractingTransformer> | 해싱을 사용하여 토큰화된 텍스트의 컬렉션(ReadOnlyMemory의 벡터)을 숫자 기능 벡터로 설정합니다. | 
-| <xref:Microsoft.ML.Transforms.Text.NgramHashingTransformer> | 지정된 텍스트에서 ngrams 개수 모음(1-n 길이의 연속 단어의 시퀀스)을 생성합니다. | 
+| <xref:Microsoft.ML.Transforms.Text.NgramExtractingTransformer> | 키의 지정된 벡터에서 ngrams 개수 모음(1-n 길이의 연속 값의 시퀀스)을 생성합니다. ngrams의 사전을 빌드하고 모음의 인덱스로 사전의 ID를 사용하여 이를 수행합니다. |
+| <xref:Microsoft.ML.Transforms.Text.NgramExtractorTransform> | 토큰화된 텍스트의 컬렉션(ReadOnlyMemory의 벡터) 또는 키의 벡터를 숫자 기능 벡터로 설정합니다. 기능 벡터는 ngrams의 개수입니다(1-n 길이의 연속 토큰- 단어 또는 키의 시퀀스). |
+| <xref:Microsoft.ML.Transforms.Text.NgramHashExtractingTransformer> | 해싱을 사용하여 토큰화된 텍스트의 컬렉션(ReadOnlyMemory의 벡터)을 숫자 기능 벡터로 설정합니다. |
+| <xref:Microsoft.ML.Transforms.Text.NgramHashingTransformer> | 지정된 텍스트에서 ngrams 개수 모음(1-n 길이의 연속 단어의 시퀀스)을 생성합니다. |
 | <xref:Microsoft.ML.Transforms.Categorical.OneHotEncodingTransformer> | 데이터를 기반으로 범주의 사전을 빌드하고 배열의 인덱스로 사전의 ID를 사용하여 범주 값을 표시기 배열로 변환합니다. |
 | <xref:Microsoft.ML.Transforms.Projections.PcaTransform> | 기능 벡터의 프로젝션을 낮은 순위 하위 공간으로 계산합니다. |
 | <xref:Microsoft.ML.Transforms.Text.SentimentAnalyzingTransformer> | 미리 학습된 감정 모델을 사용하여 입력 문자열의 점수를 매깁니다. |
@@ -73,7 +72,7 @@ ms.locfileid: "54415353"
 
 | 변형 | 정의 |
 | --- | --- |
-| <xref:Microsoft.ML.Transforms.AlexNetExtension> | 미리 학습된 [AlexNet](https://en.wikipedia.org/wiki/AlexNet) 모델을 사용하기 위해 <xref:Microsoft.ML.Transforms.DnnImageFeaturizerEstimator>와 함께 사용되는 확장 메서드입니다. 이 확장을 포함하는 NuGet도 이진 모델 파일을 포함하도록 보장됩니다. | 
+| <xref:Microsoft.ML.Transforms.AlexNetExtension> | 미리 학습된 [AlexNet](https://en.wikipedia.org/wiki/AlexNet) 모델을 사용하기 위해 <xref:Microsoft.ML.Transforms.DnnImageFeaturizerEstimator>와 함께 사용되는 확장 메서드입니다. 이 확장을 포함하는 NuGet도 이진 모델 파일을 포함하도록 보장됩니다. |
 | <xref:Microsoft.ML.Transforms.ResNet18Extension> | 미리 학습된 ResNet18 모델을 사용하기 위해 <xref:Microsoft.ML.Transforms.DnnImageFeaturizerEstimator>와 함께 사용되는 확장 메서드입니다. 이 확장을 포함하는 NuGet도 이진 모델 파일을 포함하도록 보장됩니다. |
 | <xref:Microsoft.ML.Transforms.ResNet50Extension> | 미리 학습된 ResNet50 모델을 사용하기 위해 <xref:Microsoft.ML.Transforms.DnnImageFeaturizerEstimator>와 함께 사용되는 확장 메서드입니다. 이 확장을 포함하는 NuGet도 이진 모델 파일을 포함하도록 보장됩니다. |
 | <xref:Microsoft.ML.Transforms.ResNet101Extension> | 미리 학습된 ResNet101 모델을 사용하기 위해 <xref:Microsoft.ML.Transforms.DnnImageFeaturizerEstimator>와 함께 사용되는 확장 메서드입니다. 이 확장을 포함하는 NuGet도 이진 모델 파일을 포함하도록 보장됩니다. |

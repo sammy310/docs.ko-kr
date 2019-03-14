@@ -4,12 +4,12 @@ description: 컨테이너화된 .NET 애플리케이션용 .NET Microservices �
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/02/2018
-ms.openlocfilehash: cf1757531fc9eceee17f1faec66668945b9c2758
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: b451d896186ffb650e495c10786106c37ab16131
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56967973"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57676020"
 ---
 # <a name="implementing-event-based-communication-between-microservices-integration-events"></a>마이크로 서비스(통합 이벤트) 간 이벤트 기반 통신 구현
 
@@ -66,7 +66,7 @@ public class ProductPriceChangedIntegrationEvent : IntegrationEvent
 
 이벤트 버스는 그림 6-19에 나와 있는 것처럼 서로를 명확히 인식하기 위한 구성 요소를 요구하지 않고 마이크로 서비스 간의 게시/구독 스타일 통신을 허용합니다.
 
-![기본 pub/sub 패턴, 마이크로 서비스 A는 게시자가 susbcribers를 알 필요 없이, 마이크로 서비스 B와 C를 susbcribing 마이크로 서비스에 배포하는 이벤트 버스에 게시합니다.](./media/image20.png)
+![기본 pub/sub 패턴, 마이크로 서비스 A는 게시자가 구독자를 알 필요 없이, 구독하는 마이크로 서비스 B와 C에 배포되는 이벤트 버스에 게시됩니다.](./media/image20.png)
 
 **그림 6-19**. 이벤트 버스를 사용한 게시/구독 기본 사항
 
@@ -76,19 +76,19 @@ public class ProductPriceChangedIntegrationEvent : IntegrationEvent
 
 [관찰자 패턴](https://en.wikipedia.org/wiki/Observer_pattern)에서, 기본 개체(관찰 가능한 객체라고도 함)가 관련 정보(이벤트)를 관심 있는 다른 개체(관찰자 라고도 함)에게 알려줍니다.
 
-### <a name="publishsubscribe-pubsub-pattern"></a>게시-구독(Pub/Sub) 패턴 
+### <a name="publishsubscribe-pubsub-pattern"></a>게시-구독(Pub/Sub) 패턴
 
 [게시/구독 패턴](https://docs.microsoft.com/previous-versions/msp-n-p/ff649664(v=pandp.10))의 목적은 관찰자 패턴과 동일합니다. 특정 이벤트가 발생할 경우 다른 서비스에 알립니다. 하지만 관찰자 패턴과 Pub/Sub 패턴 간에는 중요한 차이가 있습니다. 관찰자 패턴에서는 관찰 가능 객체가 직접 관찰자에게 브로드캐스트를 수행함으로써 서로를 “알게”됩니다. 하지만 Pub/Sub 패턴을 사용할 경우 게시자 및 구독자 모두 알고 있는 브로커 또는 메시지 브로커 또는 이벤트 버스라는 세 번째 구성 요소가 있습니다. 따라서 Pub/Sub 패턴을 사용 하는 경우 게시자와 구독자는 앞서 언급한 이벤트 버스 또는 메시지 브로커 덕분에 정확하게 분리됩니다.
 
-### <a name="the-middleman-or-event-bus"></a>매개자 또는 이벤트 버스 
+### <a name="the-middleman-or-event-bus"></a>매개자 또는 이벤트 버스
 
 게시자와 구독자 간에 익명성을 어떻게 달성합니까? 모든 통신을 매개자가 처리하게 하는 것이 간단한 방법입니다. 이벤트 버스는 이러한 매개자 중 하나입니다.
 
 이벤트 버스는 일반적으로 두 부분으로 구성 됩니다.
 
--   추상적 개념 또는 인터페이스 및
+- 추상적 개념 또는 인터페이스 및
 
--   하나 이상의 구현입니다.
+- 하나 이상의 구현입니다.
 
 그림 6-19에서는 애플리케이션의 관점에서 이벤트 버스가 어떻게 Pub/Sub 채널에 불과한지 알 수 있습니다. 이 비동기 통신을 구현하는 방법은 달라질 수 있습니다. 환경 요구 사항에 따라 두 요구 사항(예를 들어, 생산 대 개발 환경)을 서로 교체할 수 있도록 다양한 구현 방법을 가질 수 있습니다.
 
@@ -129,6 +129,6 @@ public interface IEventBus
 
 `Subscribe` 메서드(인수에 따라 몇 가지 구현이 있을 수 있습니다)는 이벤트를 수신하려는 마이크로 서비스에서 사용됩니다. 이 메서드는 두 개의 인수를 갖습니다. 첫 번째는 (`IntegrationEvent`)을 구독할 통합 이벤트입니다. 두 번째 인수는 `IIntegrationEventHandler<T>`로 명명된 통합 이벤트 처리기(또는 콜백 메서드)로서, 수신기 마이크로 서비스가 해당 통합 이벤트 메시지를 수신할 때 실행됩니다.
 
->[!div class="step-by-step"]
->[이전](database-server-container.md)
->[다음](rabbitmq-event-bus-development-test-environment.md)
+> [!div class="step-by-step"]
+> [이전](database-server-container.md)
+> [다음](rabbitmq-event-bus-development-test-environment.md)

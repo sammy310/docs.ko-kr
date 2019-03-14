@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: ea8a403e-ae03-4faa-9d9b-02179ec72992
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c265b583b74ac9d7df128e3343bbc368e3cf9c4e
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.openlocfilehash: d0efe9234bd61a45fa87e68cdbed1be69957d218
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56220813"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57675162"
 ---
 # <a name="deploying-an-interop-application"></a>Interop 응용 프로그램 배포
 Interop 애플리케이션에는 일반적으로 .NET 클라이언트 어셈블리, 고유한 COM 형식 라이브러리를 나타내는 하나 이상의 interop 어셈블리 및 하나 이상의 등록된 COM 구성 요소가 포함됩니다. Visual Studio 및 [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)]에서는 [형식 라이브러리를 어셈블리로 가져오기](importing-a-type-library-as-an-assembly.md)에 설명된 대로 형식 라이브러리를 interop 어셈블리로 가져오고 변환하는 도구를 제공합니다. Interop 애플리케이션을 배포하는 두 가지 방법은 다음과 같습니다.  
@@ -38,8 +38,7 @@ Interop 애플리케이션에는 일반적으로 .NET 클라이언트 어셈블�
 ### <a name="private-assemblies"></a>전용 어셈블리  
  전용으로 사용할 어셈블리를 설치하려면 애플리케이션 실행 파일과 가져온 COM 형식을 포함하는 interop 어셈블리가 둘 다 동일한 디렉터리 구조에 설치되어야 합니다. 다음 그림에서는 개별 애플리케이션 디렉터리에 있는 Client1.exe 및 Client2.exe에서 전용으로 사용할 서명되지 않은 interop 어셈블리를 보여 줍니다. 이 예제에서 LOANLib.dll이라는 interop 어셈블리는 두 번 설치됩니다.  
   
- ![디렉터리 구조 및 Windows 레지스트리](media/comdeployprivate.gif "comdeployprivate")  
-전용 배포에 대한 디렉터리 구조 및 레지스트리 항목  
+ ![디렉터리 구조 및 Windows 레지스트리](./media/deploying-an-interop-application/com-private-deployment.gif "전용 배포에 대한 디렉터리 구조 및 레지스트리 항목")  
   
  애플리케이션과 연결된 모든 COM 구성 요소는 Windows 레지스트리에 설치해야 합니다. 그림의 Client1.exe 및 Client2.exe가 서로 다른 컴퓨터에 설치된 경우에는 두 컴퓨터에 모두 COM 구성 요소를 등록해야 합니다.  
   

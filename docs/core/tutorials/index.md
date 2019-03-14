@@ -28,7 +28,7 @@ ms.custom: seodec18
 
 ## <a name="building-applications-with-visual-studio-for-mac"></a>Visual Studio for Mac을 사용하여 애플리케이션 빌드
 
-- [Visual Studio for Mac을 사용하여 macOS에서 .NET Core 시작](using-on-mac-vs.md)
+- [Mac용 Visual Studio를 사용하여 macOS에서 .NET Core 시작](using-on-mac-vs.md)
 - [Visual Studio for Mac을 사용하여 macOS에서 완전한 .NET Core 솔루션 빌드](using-on-mac-vs-full-solution.md)
 
 ## <a name="building-applications-with-the-net-core-cli-tools"></a>.NET Core CLI 도구를 사용하여 애플리케이션 빌드

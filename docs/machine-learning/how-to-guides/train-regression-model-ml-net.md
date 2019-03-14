@@ -1,16 +1,21 @@
 ---
 title: ML.NET을 사용하여 값을 예측하도록 회귀 모델 학습시키기
 description: ML.NET을 사용하여 값을 예측하도록 기계 학습 회귀 모델을 학습시키는 방법 알아보기
-ms.date: 02/06/2019
+ms.date: 03/05/2019
 ms.custom: mvc,how-to
-ms.openlocfilehash: faee51550250f08443d4d9349fa2f1c92bf411dc
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
+ms.openlocfilehash: e7ea07471e155804a7ad36481aa469beda7028ae
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56092906"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57673147"
 ---
 # <a name="train-a-regression-model-to-predict-a-value-using-mlnet"></a>ML.NET을 사용하여 값을 예측하도록 회귀 모델 학습시키기
+
+> [!NOTE]
+> 이 항목은 현재 미리 보기로 제공되는 ML.NET을 참조하며, 자료는 변경될 수 있습니다. 자세한 내용은 [ML.NET 소개](https://www.microsoft.com/net/learn/apps/machine-learning-and-ai/ml-dotnet)를 참조하세요.
+
+이 방법과 관련 샘플에서는 현재 **ML.NET 버전 0.10**을 사용하고 있습니다. 자세한 내용은 [dotnet/machinelearning GitHub 리포지토리](https://github.com/dotnet/machinelearning/tree/master/docs/release-notes)에서 릴리스 정보를 참조하세요.
 
 일반적으로 ML.NET의 모델 학습은 다음 세 단계로 이루어집니다.
 

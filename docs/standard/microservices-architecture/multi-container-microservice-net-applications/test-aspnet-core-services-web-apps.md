@@ -4,12 +4,12 @@ description: 컨테이너화된 .NET 애플리케이션용 .NET 마이크로 서
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/02/2018
-ms.openlocfilehash: 8461cd77661c96e59342fa5721c93f16ce515533
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 5af1fa6163858ed80fe92118e85d149081aa6f53
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56976189"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57677749"
 ---
 # <a name="testing-aspnet-core-services-and-web-apps"></a>ASP.NET Core 서비스 및 웹앱 테스트
 
@@ -17,13 +17,13 @@ ms.locfileid: "56976189"
 
 컨트롤러가 유효한 입력 또는 무효한 입력을 기반으로 어떻게 동작하는지를 테스트하고 컨트롤러가 수행하는 비즈니스 결과를 바탕으로 컨트롤러 응답을 테스트 해야 합니다. 그러나 마이크로 서비스에 대한 다음과 같은 유형의 테스트가 있어야 합니다.
 
--   단위 테스트. 단위 테스트는 해댱 애플리케이션의 개별 구성 요소가 예상 대로 작동하는지 확인합니다. 어설션은 구성 요소 API를 테스트합니다.
+- 단위 테스트. 단위 테스트는 해댱 애플리케이션의 개별 구성 요소가 예상 대로 작동하는지 확인합니다. 어설션은 구성 요소 API를 테스트합니다.
 
--   통합 테스트. 통합 테스트는 구성 요소 간 상호 작용이 데이터베이스와 같은 외부 아티팩트에 대해 예상 대로 작동하는지 확인 합니다. 어설션은 구성 요소 API, UI 또는 데이터베이스 I/O, 로깅 등의 작업 부작용을 테스트할 수 있습니다.
+- 통합 테스트. 통합 테스트는 구성 요소 간 상호 작용이 데이터베이스와 같은 외부 아티팩트에 대해 예상 대로 작동하는지 확인 합니다. 어설션은 구성 요소 API, UI 또는 데이터베이스 I/O, 로깅 등의 작업 부작용을 테스트할 수 있습니다.
 
--   각 마이크로 서비스에 대한 기능 테스트. 이 테스트는 해당 애플리케이션이 사용자의 관점에서 예상 대로 작동하는지 확인합니다.
+- 각 마이크로 서비스에 대한 기능 테스트. 이 테스트는 해당 애플리케이션이 사용자의 관점에서 예상 대로 작동하는지 확인합니다.
 
--   서비스 테스트. 이 테스트는 다중 서비스 동시 테스트를 포함하여 종단 간 서비스 사용 사례를 테스트했는지 확인합니다. 이러한 종류의 테스트를 위해서는 먼저 환경을 준비 해야 합니다. 이 경우 준비는 곧 서비스 시작을 의미합니다(예를 들어, docker-compose를 사용하여).
+- 서비스 테스트. 이 테스트는 다중 서비스 동시 테스트를 포함하여 종단 간 서비스 사용 사례를 테스트했는지 확인합니다. 이러한 종류의 테스트를 위해서는 먼저 환경을 준비 해야 합니다. 이 경우 준비는 곧 서비스 시작을 의미합니다(예를 들어, docker-compose를 사용하여).
 
 ### <a name="implementing-unit-tests-for-aspnet-core-web-apis"></a>ASP.NET Core Web API에 대한 단위 테스트 구현
 
@@ -42,18 +42,18 @@ public async Task Get_order_detail_success()
     //Arrange
     var fakeOrderId = "12";
     var fakeOrder = GetFakeOrder();
- 
+
     //...
 
     //Act
     var orderController = new OrderController(
-        _orderServiceMock.Object, 
-        _basketServiceMock.Object, 
+        _orderServiceMock.Object,
+        _basketServiceMock.Object,
         _identityParserMock.Object);
 
     orderController.ControllerContext.HttpContext = _contextMock.Object;
     var actionResult = await orderController.Detail(fakeOrderId);
- 
+
     //Assert
     var viewResult = Assert.IsType<ViewResult>(actionResult);
     Assert.IsAssignableFrom<Order>(viewResult.ViewData.Model);
@@ -103,28 +103,28 @@ public class PrimeWebDefaultRequestShould
 
 #### <a name="additional-resources"></a>추가 자료
 
--   **Steve Smith. 컨트롤러 테스트**(ASP.NET Core) <br/>
+- **Steve Smith. 컨트롤러 테스트**(ASP.NET Core) <br/>
     [*https://docs.microsoft.com/aspnet/core/mvc/controllers/testing*](https://docs.microsoft.com/aspnet/core/mvc/controllers/testing)
 
--   **Steve Smith. 통합 테스트**(ASP.NET Core) <br/>
+- **Steve Smith. 통합 테스트**(ASP.NET Core) <br/>
     [*https://docs.microsoft.com/aspnet/core/test/integration-tests*](https://docs.microsoft.com/aspnet/core/test/integration-tests)
 
--   **Dotnet 테스트를 사용한 .NET Core의 유닛 테스트** <br/>
+- **Dotnet 테스트를 사용한 .NET Core의 유닛 테스트** <br/>
     [*https://docs.microsoft.com/dotnet/core/testing/unit-testing-with-dotnet-test*](~/docs/core/testing/unit-testing-with-dotnet-test.md)
 
--   **xUnit.net**. 공식 사이트입니다. <br/>
+- **xUnit.net**. 공식 사이트입니다. <br/>
     [*https://xunit.github.io/*](https://xunit.github.io/)
 
--   **단위 테스트 기본 사항.** <br/>
+- **단위 테스트 기본 사항.** <br/>
     [*https://docs.microsoft.com/visualstudio/test/unit-test-basics*](/visualstudio/test/unit-test-basics)
 
--   **Moq**. GitHub 리포지토리. <br/>
+- **Moq**. GitHub 리포지토리. <br/>
     [*https://github.com/moq/moq*](https://github.com/moq/moq)
 
--   **NUnit**. 공식 사이트입니다. <br/>
+- **NUnit**. 공식 사이트입니다. <br/>
     [*https://www.nunit.org/*](https://www.nunit.org/)
 
-### <a name="implementing-service-tests-on-a-multi-container-application"></a>다중 컨테이너 애플리케이션에서 서비스 테스트 구현 
+### <a name="implementing-service-tests-on-a-multi-container-application"></a>다중 컨테이너 애플리케이션에서 서비스 테스트 구현
 
 앞서 언급한 것처럼 다중 컨테이너 애플리케이션을 테스트할 경우 모든 마이크로 서비스는 Docker 호스트 또는 컨테이너 클러스터 내에서 실행해야 합니다. 여러 마이크로 서비스가 관련된 다중 작업을 포함하는 엔드투엔드 서비스 테스트는 docker-compose(또는 오케스트레이터를 사용하는 경우 이와 비슷한 메커니즘)를 실행해 Docker 호스트에서 전체 애플리케이션을 배포하고 시작하도록 요청합니다. 전체 애플리케이션 및 이의 모든 서비스가 실행되면, 종단 간 통합 및 기능 테스트를 실행할 수 있습니다.
 
@@ -136,13 +136,13 @@ public class PrimeWebDefaultRequestShould
 
 참조 애플리케이션(eShopOnContainers) 테스트는 최근에 재구성되었으며, 현재 네 가지 범주가 있습니다.
 
-1.  **단위** 테스트는 **{MicroserviceName}.UnitTests**에 포함된 이전 일반 규칙 단위 테스트일 뿐입니다.
+1. **단위** 테스트는 **{MicroserviceName}.UnitTests**에 포함된 이전 일반 규칙 단위 테스트일 뿐입니다.
 
-2.  **마이크로 서비스 기능/통합 테스트**는 각 마이크로 서비스에 대한 인프라를 포함하는 테스트 사례가 있지만 서로 격리되고 **{MicroserviceName}.FunctionalTests** 프로젝트에 포함되어 있습니다.
+2. **마이크로 서비스 기능/통합 테스트**는 각 마이크로 서비스에 대한 인프라를 포함하는 테스트 사례가 있지만 서로 격리되고 **{MicroserviceName}.FunctionalTests** 프로젝트에 포함되어 있습니다.
 
-3.  **애플리케이션 기능/통합 테스트**: 여러 마이크로 서비스를 실행하는 테스트 사례와 함께 마이크로 서비스 통합에 집중합니다. 이러한 테스트는 프로젝트 **Application.FunctionalTests**에 있습니다.
+3. **애플리케이션 기능/통합 테스트**: 여러 마이크로 서비스를 실행하는 테스트 사례와 함께 마이크로 서비스 통합에 집중합니다. 이러한 테스트는 프로젝트 **Application.FunctionalTests**에 있습니다.
 
-4.  **부하 테스트**: 각 마이크로 서비스에 대한 응답 시간에 집중합니다. 이러한 테스트는 프로젝트 **LoadTest**에 있으며 Visual Studio 2017 Enterprise Edition이 필요합니다.
+4. **부하 테스트**: 각 마이크로 서비스에 대한 응답 시간에 집중합니다. 이러한 테스트는 프로젝트 **LoadTest**에 있으며 Visual Studio 2017 Enterprise Edition이 필요합니다.
 
 마이크로 서비스별 단위 및 통합 테스트는 각 마이크로 서비스 테스트 폴더에 포함되어 있으며, 애플리케이션 부하 테스트는 그림 6-25와 같이 솔루션 폴더의 테스트 폴더 아래에 포함되어 있습니다.
 
@@ -180,7 +180,7 @@ services:
   rabbitmq:
     ports:
       - "15672:15672"
-      - "5672:5672" 
+      - "5672:5672"
   sql.data:
     environment:
       - SA_PASSWORD=Pass@word
@@ -198,16 +198,16 @@ services:
 docker-compose -f docker-compose-test.yml -f docker-compose-test.override.yml up
 ```
 
-보시다시피, 이러한 docker-compose 파일은 Redis, RabitMQ, SQL Server 및 MongoDB 마이크로 서비스만 시작합니다.
+보시다시피, 이러한 docker-compose 파일은 Redis, RabbitMQ, SQL Server 및 MongoDB 마이크로 서비스만 시작합니다.
 
-### <a name="additionl-resources"></a>추가 리소스
+### <a name="additional-resources"></a>추가 자료
 
--   GitHub의 eShopOnContainers 리포지토리에서 **추가 정보 파일 테스트** <br/>
+- GitHub의 eShopOnContainers 리포지토리에서 **추가 정보 파일 테스트** <br/>
     [*https://github.com/dotnet-architecture/eShopOnContainers/tree/dev/test*](https://github.com/dotnet-architecture/eShopOnContainers/tree/dev/test)
 
--   GitHub의 eShopOnContainers 리포지토리에서 **추가 정보 파일 부하 테스트** <br/>
+- GitHub의 eShopOnContainers 리포지토리에서 **추가 정보 파일 부하 테스트** <br/>
     [*https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/test/ServicesTests/LoadTest/*](https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/test/ServicesTests/LoadTest/)
 
->[!div class="step-by-step"]
->[이전](subscribe-events.md)
->[다음](background-tasks-with-ihostedservice.md)
+> [!div class="step-by-step"]
+> [이전](subscribe-events.md)
+> [다음](background-tasks-with-ihostedservice.md)

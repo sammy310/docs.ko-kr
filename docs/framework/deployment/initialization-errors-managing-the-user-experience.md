@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 680a7382-957f-4f6e-b178-4e866004a07e
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 02fa197b12e6a5bfb37cd0f275bc615dc179291b
-ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
+ms.openlocfilehash: 8e5a3cb79187d6434585560e9c128e03fe8003b7
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54222521"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57679374"
 ---
 # <a name="net-framework-initialization-errors-managing-the-user-experience"></a>.NET Framework 초기화 오류: 사용자 환경 관리
 
@@ -41,7 +41,7 @@ CLR 활성화 API는 HRESULT 코드를 반환하여 활성화 작업의 결과�
 
 CLR 활성화 시스템이 애플리케이션에 필요한 올바른 버전의 런타임을 로드할 수 없는 경우 컴퓨터가 애플리케이션을 실행하도록 제대로 구성되어 있지 않다고 알리는 오류 메시지를 사용자에게 표시하고 문제를 해결할 수 있는 기회를 제공합니다. 이러한 상황에서는 일반적으로 다음과 같은 오류 메시지가 표시됩니다. 사용자는 **예**를 선택하여 애플리케이션에 맞는 .NET Framework 버전을 다운로드할 수 있는 Microsoft 웹 사이트로 이동할 수 있습니다.
 
-![.NET framework 초기화 오류 대화 상자](../../../docs/framework/deployment/media/initerrordialog.png "InitErrorDialog") 초기화 오류에 대한 일반적인 오류 메시지
+![.NET Framework 초기화 오류 대화 상자](./media/initialization-errors-managing-the-user-experience/initialization-error-dialog.png "초기화 오류에 대한 일반적인 오류 메시지")
 
 ## <a name="resolving-the-initialization-error"></a>초기화 오류 해결
 
@@ -82,7 +82,7 @@ CLR은 다양한 시나리오에 대한 호스트 집합을 포함하며, 이러
 
 CLR 활성화 시스템은 CLR 2.0을 로드하는 데 문제가 있는 점을 제외하고 다른 버전의 Windows 운영 체제에서와 동일한 동작 및 UI를 [!INCLUDE[win8](../../../includes/win8-md.md)]에서 제공합니다. [!INCLUDE[win8](../../../includes/win8-md.md)]에는 CLR 4.5를 사용하는 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]가 포함되어 있습니다. 그러나 [!INCLUDE[win8](../../../includes/win8-md.md)]에 CLR 2.0을 사용하는 .NET Framework 2.0, 3.0 또는 3.5는 포함되어 있지 않습니다. 따라서 CLR 2.0을 사용하는 애플리케이션은 기본적으로 [!INCLUDE[win8](../../../includes/win8-md.md)]에서 실행되지 않습니다. 대신, 사용자가 .NET Framework 3.5를 설치할 수 있는 다음과 같은 대화 상자를 표시합니다. 사용자는 제어판에서 .NET Framework 3.5를 사용하도록 설정할 수도 있습니다. 두 옵션 모두 [Windows 10, Windows 8.1 및 Windows 8에 .NET Framework 3.5 설치](../../../docs/framework/install/dotnet-35-windows-10.md) 문서에서 설명합니다.
 
-![Windows 8에 3.5 설치용 대화 상자](../../../docs/framework/deployment/media/installdialog.png "installdialog") 요청 시 .NET Framework 3.5를 설치하도록 메시지 표시
+![Windows 8에 3.5 설치용 대화 상자](./media/initialization-errors-managing-the-user-experience/install-framework-on-demand-dialog.png "요청 시 .NET Framework 3.5를 설치하도록 메시지 표시")
 
 > [!NOTE]
 > [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]가 사용자 컴퓨터의 .NET Framework 4(CLR 4)를 대체합니다. 따라서 .NET Framework 4 애플리케이션이 [!INCLUDE[win8](../../../includes/win8-md.md)]에서 이 대화 상자를 표시하지 않고 매끄럽게 실행됩니다.

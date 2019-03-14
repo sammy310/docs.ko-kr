@@ -1,19 +1,21 @@
 ---
 title: ML.NET의 모델 학습에 대한 기본 개념
 description: 이 문서에서는 ML.NET의 *모델 학습* 시나리오에 대한 기본 개념을 설명합니다. 일부 개념은 보다 간단한 *기존 모델을 사용한 예측* 시나리오와 관련이 없습니다.
-ms.date: 02/13/2019
+ms.date: 03/05/2019
 ms.topic: overview
 ms.custom: mvc
-ms.openlocfilehash: c47d5832527dca1416abfc55756dca48f1daf493
-ms.sourcegitcommit: bef803e2025642df39f2f1e046767d89031e0304
+ms.openlocfilehash: 78554cfd1dfdb3dba82a325d47245aeb313bb6fe
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56303662"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57675565"
 ---
 # <a name="basic-concepts-for-model-training-in-mlnet"></a>ML.NET의 모델 학습에 대한 기본 개념
 
 이 문서에서는 ML.NET의 *모델 학습* 시나리오에 대한 기본 개념을 설명합니다. 일부 개념은 보다 간단한 *기존 모델을 사용한 예측* 시나리오와 관련이 있습니다.
+
+이 문서와 관련 샘플에서는 현재 **ML.NET 버전 0.10**을 사용하고 있습니다. 자세한 내용은 [dotnet/machinelearning GitHub 리포지토리](https://github.com/dotnet/machinelearning/tree/master/docs/release-notes)에서 릴리스 정보를 참조하세요.
 
 ## <a name="model-training-concepts"></a>모델 학습 개념
 
