@@ -5,5 +5,4 @@
 ## [가변 배열](jagged-arrays.md)
 ## [배열에 foreach 사용](using-foreach-with-arrays.md)
 ## [인수로 배열 전달](passing-arrays-as-arguments.md)
-## [ref 및 out을 사용하여 배열 전달](passing-arrays-using-ref-and-out.md)
 ## [암시적으로 형식화된 배열](implicitly-typed-arrays.md)
