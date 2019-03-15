@@ -2,34 +2,37 @@
 title: WCF 서비스에서 REST 스타일 서비스 호출
 ms.date: 03/30/2017
 ms.assetid: 77df81d8-7f53-4daf-8d2d-bf7996e94d5a
-ms.openlocfilehash: df57433b01df9faf49eada8189ba8864fe7a9093
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c2a3467fb5fe28194dcb8ee7715353f4cb6a1bff
+ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54596789"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57842933"
 ---
-# <a name="calling-a-rest-style-service-from-a-wcf-service"></a><span data-ttu-id="e3561-102">WCF 서비스에서 REST 스타일 서비스 호출</span><span class="sxs-lookup"><span data-stu-id="e3561-102">Calling a REST-style service from a WCF service</span></span>
-<span data-ttu-id="e3561-103">일반(SOAP 기반) WCF 서비스에서 REST 스타일의 서비스를 호출할 때 서비스 메서드의 작업 컨텍스트(들어오는 요청에 대한 정보 포함)가 나가는 요청에 사용되는 컨텍스트를 재정의합니다.</span><span class="sxs-lookup"><span data-stu-id="e3561-103">When calling a REST-style service from a regular (SOAP-based) WCF service, the operation context on the service method (which contains information about the incoming request) overrides the context which should be used by the outgoing request.</span></span> <span data-ttu-id="e3561-104">따라서 HTTP GET 요청이 HTTP POST 요청으로 변경됩니다.</span><span class="sxs-lookup"><span data-stu-id="e3561-104">This causes HTTP GET requests to change to HTTP POST requests.</span></span> <span data-ttu-id="e3561-105">WCF 서비스가 REST 스타일 서비스를 호출하는 데 올바른 컨텍스트를 사용하도록 적용하려면 새 <xref:System.ServiceModel.OperationContextScope>를 만들고 작업 컨텍스트 범위 내에서 REST 스타일 서비스를 호출합니다.</span><span class="sxs-lookup"><span data-stu-id="e3561-105">To force the WCF service to use the right context for calling the REST-style service, create a new <xref:System.ServiceModel.OperationContextScope> and call the REST-style service from inside the operation context scope.</span></span> <span data-ttu-id="e3561-106">이 항목에서는 이러한 기술을 설명하는 간단한 예제를 만드는 방법에 대해 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="e3561-106">This topic will describe how to create a simple sample that illustrates this technique.</span></span>  
-  
-## <a name="define-the-rest-style-service-contract"></a><span data-ttu-id="e3561-107">REST 스타일 서비스 계약 정의</span><span class="sxs-lookup"><span data-stu-id="e3561-107">Define the REST-style service contract</span></span>  
- <span data-ttu-id="e3561-108">간단한 REST 스타일 서비스 계약 정의:</span><span class="sxs-lookup"><span data-stu-id="e3561-108">Define a simple  REST-style service contract:</span></span>  
-  
+# <a name="calling-a-rest-style-service-from-a-wcf-service"></a><span data-ttu-id="2ccb2-102">WCF 서비스에서 REST 스타일 서비스 호출</span><span class="sxs-lookup"><span data-stu-id="2ccb2-102">Calling a REST-style service from a WCF service</span></span>
+
+<span data-ttu-id="2ccb2-103">일반(SOAP 기반) WCF 서비스에서 REST 스타일의 서비스를 호출할 때 서비스 메서드의 작업 컨텍스트(들어오는 요청에 대한 정보 포함)가 나가는 요청에 사용되는 컨텍스트를 재정의합니다.</span><span class="sxs-lookup"><span data-stu-id="2ccb2-103">When calling a REST-style service from a regular (SOAP-based) WCF service, the operation context on the service method (which contains information about the incoming request) overrides the context which should be used by the outgoing request.</span></span> <span data-ttu-id="2ccb2-104">따라서 HTTP GET 요청이 HTTP POST 요청으로 변경됩니다.</span><span class="sxs-lookup"><span data-stu-id="2ccb2-104">This causes HTTP GET requests to change to HTTP POST requests.</span></span> <span data-ttu-id="2ccb2-105">WCF 서비스가 REST 스타일 서비스를 호출하는 데 올바른 컨텍스트를 사용하도록 적용하려면 새 <xref:System.ServiceModel.OperationContextScope>를 만들고 작업 컨텍스트 범위 내에서 REST 스타일 서비스를 호출합니다.</span><span class="sxs-lookup"><span data-stu-id="2ccb2-105">To force the WCF service to use the right context for calling the REST-style service, create a new <xref:System.ServiceModel.OperationContextScope> and call the REST-style service from inside the operation context scope.</span></span> <span data-ttu-id="2ccb2-106">이 항목에서는 이러한 기술을 설명하는 간단한 예제를 만드는 방법에 대해 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="2ccb2-106">This topic will describe how to create a simple sample that illustrates this technique.</span></span>
+
+## <a name="define-the-rest-style-service-contract"></a><span data-ttu-id="2ccb2-107">REST 스타일 서비스 계약 정의</span><span class="sxs-lookup"><span data-stu-id="2ccb2-107">Define the REST-style service contract</span></span>
+
+<span data-ttu-id="2ccb2-108">간단한 REST 스타일 서비스 계약 정의:</span><span class="sxs-lookup"><span data-stu-id="2ccb2-108">Define a simple  REST-style service contract:</span></span>
+
 ```csharp
 [ServiceContract]
-public interface IRestInterface  
-{  
+public interface IRestInterface
+{
     [OperationContract, WebGet]
     int Add(int x, int y);
-    
+
     [OperationContract, WebGet]
     string Echo(string input);
 }
 ```
-  
-## <a name="implement-the-rest-style-service-contract"></a><span data-ttu-id="e3561-109">REST 스타일 서비스 계약 구현</span><span class="sxs-lookup"><span data-stu-id="e3561-109">Implement the REST-style service contract</span></span>  
- <span data-ttu-id="e3561-110">REST 스타일 서비스 계약 구현:</span><span class="sxs-lookup"><span data-stu-id="e3561-110">Implement the REST-style service contract:</span></span>  
-  
+
+## <a name="implement-the-rest-style-service-contract"></a><span data-ttu-id="2ccb2-109">REST 스타일 서비스 계약 구현</span><span class="sxs-lookup"><span data-stu-id="2ccb2-109">Implement the REST-style service contract</span></span>
+
+<span data-ttu-id="2ccb2-110">REST 스타일 서비스 계약 구현:</span><span class="sxs-lookup"><span data-stu-id="2ccb2-110">Implement the REST-style service contract:</span></span>
+
 ```csharp
 public class RestService : IRestInterface
 {
@@ -37,51 +40,54 @@ public class RestService : IRestInterface
     {
         return x + y;
     }
-    
+
     public string Echo(string input)
     {
         return input;
     }
 }
 ```
-  
-## <a name="define-the-wcf-service-contract"></a><span data-ttu-id="e3561-111">WCF 서비스 계약 정의</span><span class="sxs-lookup"><span data-stu-id="e3561-111">Define the WCF service contract</span></span>  
- <span data-ttu-id="e3561-112">REST 스타일 서비스를 호출하는 데 사용되는 WCF 서비스 계약 정의:</span><span class="sxs-lookup"><span data-stu-id="e3561-112">Define a WCF service contract  that will be used to call the REST-style service:</span></span>  
-  
+
+## <a name="define-the-wcf-service-contract"></a><span data-ttu-id="2ccb2-111">WCF 서비스 계약 정의</span><span class="sxs-lookup"><span data-stu-id="2ccb2-111">Define the WCF service contract</span></span>
+
+<span data-ttu-id="2ccb2-112">REST 스타일 서비스를 호출하는 데 사용되는 WCF 서비스 계약 정의:</span><span class="sxs-lookup"><span data-stu-id="2ccb2-112">Define a WCF service contract  that will be used to call the REST-style service:</span></span>
+
 ```csharp
 [ServiceContract]
 public interface INormalInterface
 {
     [OperationContract]
     int CallAdd(int x, int y);
-    
+
     [OperationContract]
     string CallEcho(string input);
 }
-```  
-  
-## <a name="implement-the-wcf-service-contract"></a><span data-ttu-id="e3561-113">WCF 서비스 계약 구현</span><span class="sxs-lookup"><span data-stu-id="e3561-113">Implement the WCF service contract</span></span>  
- <span data-ttu-id="e3561-114">WCF 서비스 계약 구현:</span><span class="sxs-lookup"><span data-stu-id="e3561-114">Implement the WCF service contract:</span></span>  
-  
+```
+
+## <a name="implement-the-wcf-service-contract"></a><span data-ttu-id="2ccb2-113">WCF 서비스 계약 구현</span><span class="sxs-lookup"><span data-stu-id="2ccb2-113">Implement the WCF service contract</span></span>
+
+<span data-ttu-id="2ccb2-114">WCF 서비스 계약 구현:</span><span class="sxs-lookup"><span data-stu-id="2ccb2-114">Implement the WCF service contract:</span></span>
+
 ```csharp
-public class NormalService : INormalInterface  
-{  
-    static MyRestClient client = new MyRestClient(RestServiceBaseAddress);  
-    public int CallAdd(int x, int y)  
-    {  
-        return client.Add(x, y);  
-    }  
-    
-    public string CallEcho(string input)  
-    {  
-        return client.Echo(input);  
-    }  
-}  
-```  
-  
-## <a name="create-the-client-proxy-for-the-rest-style-service"></a><span data-ttu-id="e3561-115">REST 스타일 서비스에 대한 클라이언트 프록시 만들기</span><span class="sxs-lookup"><span data-stu-id="e3561-115">Create the client proxy for the REST-style service</span></span>  
- <span data-ttu-id="e3561-116">사용 하 여 <xref:System.ServiceModel.ClientBase%601> 클라이언트 프록시를 구현 합니다.</span><span class="sxs-lookup"><span data-stu-id="e3561-116">Using <xref:System.ServiceModel.ClientBase%601> to implement the client proxy.</span></span> <span data-ttu-id="e3561-117">호출되는 각 메서드에 대해 새로운 <xref:System.ServiceModel.OperationContextScope>가 생성되고 작업 호출에 사용됩니다.</span><span class="sxs-lookup"><span data-stu-id="e3561-117">For each method called, a new <xref:System.ServiceModel.OperationContextScope> is created and used to call the operation.</span></span>  
-  
+public class NormalService : INormalInterface
+{
+    static MyRestClient client = new MyRestClient(RestServiceBaseAddress);
+    public int CallAdd(int x, int y)
+    {
+        return client.Add(x, y);
+    }
+
+    public string CallEcho(string input)
+    {
+        return client.Echo(input);
+    }
+}
+```
+
+## <a name="create-the-client-proxy-for-the-rest-style-service"></a><span data-ttu-id="2ccb2-115">REST 스타일 서비스에 대한 클라이언트 프록시 만들기</span><span class="sxs-lookup"><span data-stu-id="2ccb2-115">Create the client proxy for the REST-style service</span></span>
+
+<span data-ttu-id="2ccb2-116">사용 하 여 <xref:System.ServiceModel.ClientBase%601> 클라이언트 프록시를 구현 합니다.</span><span class="sxs-lookup"><span data-stu-id="2ccb2-116">Using <xref:System.ServiceModel.ClientBase%601> to implement the client proxy.</span></span> <span data-ttu-id="2ccb2-117">호출되는 각 메서드에 대해 새로운 <xref:System.ServiceModel.OperationContextScope>가 생성되고 작업 호출에 사용됩니다.</span><span class="sxs-lookup"><span data-stu-id="2ccb2-117">For each method called, a new <xref:System.ServiceModel.OperationContextScope> is created and used to call the operation.</span></span>
+
 ```csharp
 public class MyRestClient : ClientBase<IRestInterface>, IRestInterface
 {
@@ -107,11 +113,12 @@ public class MyRestClient : ClientBase<IRestInterface>, IRestInterface
         }
     }
 }
-```  
-  
-## <a name="host-and-call-the-services"></a><span data-ttu-id="e3561-118">서비스 호스트 및 호출</span><span class="sxs-lookup"><span data-stu-id="e3561-118">Host and call the services</span></span>  
- <span data-ttu-id="e3561-119">필요한 끝점 및 동작을 추가하여 콘솔 응용 프로그램에서 두 서비스를 모두 호스트합니다.</span><span class="sxs-lookup"><span data-stu-id="e3561-119">Host both services in a console app, adding the needed endpoints and behaviors.</span></span> <span data-ttu-id="e3561-120">그런 후 일반 WCF 서비스를 호출합니다.</span><span class="sxs-lookup"><span data-stu-id="e3561-120">And then call the regular WCF service:</span></span>  
-  
+```
+
+## <a name="host-and-call-the-services"></a><span data-ttu-id="2ccb2-118">서비스 호스트 및 호출</span><span class="sxs-lookup"><span data-stu-id="2ccb2-118">Host and call the services</span></span>
+
+<span data-ttu-id="2ccb2-119">필요한 끝점 및 동작을 추가하여 콘솔 응용 프로그램에서 두 서비스를 모두 호스트합니다.</span><span class="sxs-lookup"><span data-stu-id="2ccb2-119">Host both services in a console app, adding the needed endpoints and behaviors.</span></span> <span data-ttu-id="2ccb2-120">그런 후 일반 WCF 서비스를 호출합니다.</span><span class="sxs-lookup"><span data-stu-id="2ccb2-120">And then call the regular WCF service:</span></span>
+
 ```csharp
 public static void Main()
 {
@@ -131,108 +138,110 @@ public static void Main()
     Console.WriteLine(proxy.CallAdd(123, 456));
     Console.WriteLine(proxy.CallEcho("Hello world"));
 }
-```  
-  
-## <a name="complete-code-listing"></a><span data-ttu-id="e3561-121">전체 코드 목록</span><span class="sxs-lookup"><span data-stu-id="e3561-121">Complete code listing</span></span>  
- <span data-ttu-id="e3561-122">다음은 이 항목에서 구현된 예제의 전체 목록입니다.</span><span class="sxs-lookup"><span data-stu-id="e3561-122">The following is a complete listing of the sample implemented in this topic:</span></span>  
-  
+```
+
+## <a name="complete-code-listing"></a><span data-ttu-id="2ccb2-121">전체 코드 목록</span><span class="sxs-lookup"><span data-stu-id="2ccb2-121">Complete code listing</span></span>
+
+<span data-ttu-id="2ccb2-122">다음은 이 항목에서 구현된 예제의 전체 목록입니다.</span><span class="sxs-lookup"><span data-stu-id="2ccb2-122">The following is a complete listing of the sample implemented in this topic:</span></span>
+
 ```csharp
-public class CallingRESTSample  
-{  
-    static readonly string RestServiceBaseAddress = "http://" + Environment.MachineName + ":8008/Service";  
-    static readonly string NormalServiceBaseAddress = "http://" + Environment.MachineName + ":8000/Service";  
+public class CallingRESTSample
+{
+    static readonly string RestServiceBaseAddress = "http://" + Environment.MachineName + ":8008/Service";
+    static readonly string NormalServiceBaseAddress = "http://" + Environment.MachineName + ":8000/Service";
 
-    [ServiceContract]  
-    public interface IRestInterface  
-    {  
-        [OperationContract, WebGet]  
-        int Add(int x, int y);  
-        [OperationContract, WebGet]  
-        string Echo(string input);  
-    }  
-
-    [ServiceContract]  
-    public interface INormalInterface  
-    {  
-        [OperationContract]  
-        int CallAdd(int x, int y);  
-        [OperationContract]  
-        string CallEcho(string input);  
-    }  
-
-    public class RestService : IRestInterface  
-    {  
-        public int Add(int x, int y)  
-        {  
-            return x + y;  
-        }  
-
-        public string Echo(string input)  
-        {  
-            return input;  
-        }  
-    }  
-
-    public class MyRestClient : ClientBase<IRestInterface>, IRestInterface  
-    {  
-        public MyRestClient(string address)  
-            : base(new WebHttpBinding(), new EndpointAddress(address))  
-        {  
-            this.Endpoint.Behaviors.Add(new WebHttpBehavior());  
-        }  
-
-        public int Add(int x, int y)  
-        {  
-            using (new OperationContextScope(this.InnerChannel))  
-            {  
-                return base.Channel.Add(x, y);  
-            }  
-        }  
-
-        public string Echo(string input)  
-        {  
-            using (new OperationContextScope(this.InnerChannel))  
-            {  
-                return base.Channel.Echo(input);  
-            }  
-        }  
-    }  
-
-    public class NormalService : INormalInterface  
-    {  
-        static MyRestClient client = new MyRestClient(RestServiceBaseAddress);  
-        public int CallAdd(int x, int y)  
-        {  
-            return client.Add(x, y);  
-        }  
-
-        public string CallEcho(string input)  
-        {  
-            return client.Echo(input);  
-        }  
+    [ServiceContract]
+    public interface IRestInterface
+    {
+        [OperationContract, WebGet]
+        int Add(int x, int y);
+        [OperationContract, WebGet]
+        string Echo(string input);
     }
-    
-    public static void Main()  
-    {  
-        ServiceHost restHost = new ServiceHost(typeof(RestService), new Uri(RestServiceBaseAddress));  
-        restHost.AddServiceEndpoint(typeof(IRestInterface), new WebHttpBinding(), "").Behaviors.Add(new WebHttpBehavior());  
-        restHost.Open();  
 
-        ServiceHost normalHost = new ServiceHost(typeof(NormalService), new Uri(NormalServiceBaseAddress));  
-        normalHost.AddServiceEndpoint(typeof(INormalInterface), new BasicHttpBinding(), "");  
-        normalHost.Open();  
+    [ServiceContract]
+    public interface INormalInterface
+    {
+        [OperationContract]
+        int CallAdd(int x, int y);
+        [OperationContract]
+        string CallEcho(string input);
+    }
 
-        Console.WriteLine("Hosts opened");  
+    public class RestService : IRestInterface
+    {
+        public int Add(int x, int y)
+        {
+            return x + y;
+        }
 
-        ChannelFactory<INormalInterface> factory = new ChannelFactory<INormalInterface>(new BasicHttpBinding(), new EndpointAddress(NormalServiceBaseAddress));  
-        INormalInterface proxy = factory.CreateChannel();  
+        public string Echo(string input)
+        {
+            return input;
+        }
+    }
 
-        Console.WriteLine(proxy.CallAdd(123, 456));  
-        Console.WriteLine(proxy.CallEcho("Hello world"));  
-    }  
+    public class MyRestClient : ClientBase<IRestInterface>, IRestInterface
+    {
+        public MyRestClient(string address)
+            : base(new WebHttpBinding(), new EndpointAddress(address))
+        {
+            this.Endpoint.Behaviors.Add(new WebHttpBehavior());
+        }
+
+        public int Add(int x, int y)
+        {
+            using (new OperationContextScope(this.InnerChannel))
+            {
+                return base.Channel.Add(x, y);
+            }
+        }
+
+        public string Echo(string input)
+        {
+            using (new OperationContextScope(this.InnerChannel))
+            {
+                return base.Channel.Echo(input);
+            }
+        }
+    }
+
+    public class NormalService : INormalInterface
+    {
+        static MyRestClient client = new MyRestClient(RestServiceBaseAddress);
+        public int CallAdd(int x, int y)
+        {
+            return client.Add(x, y);
+        }
+
+        public string CallEcho(string input)
+        {
+            return client.Echo(input);
+        }
+    }
+
+    public static void Main()
+    {
+        ServiceHost restHost = new ServiceHost(typeof(RestService), new Uri(RestServiceBaseAddress));
+        restHost.AddServiceEndpoint(typeof(IRestInterface), new WebHttpBinding(), "").Behaviors.Add(new WebHttpBehavior());
+        restHost.Open();
+
+        ServiceHost normalHost = new ServiceHost(typeof(NormalService), new Uri(NormalServiceBaseAddress));
+        normalHost.AddServiceEndpoint(typeof(INormalInterface), new BasicHttpBinding(), "");
+        normalHost.Open();
+
+        Console.WriteLine("Hosts opened");
+
+        ChannelFactory<INormalInterface> factory = new ChannelFactory<INormalInterface>(new BasicHttpBinding(), new EndpointAddress(NormalServiceBaseAddress));
+        INormalInterface proxy = factory.CreateChannel();
+
+        Console.WriteLine(proxy.CallAdd(123, 456));
+        Console.WriteLine(proxy.CallEcho("Hello world"));
+    }
 }
 ```
-  
-## <a name="see-also"></a><span data-ttu-id="e3561-123">참고자료</span><span class="sxs-lookup"><span data-stu-id="e3561-123">See also</span></span>
-- [<span data-ttu-id="e3561-124">방법: 기본 WCF 웹 HTTP 서비스 만들기</span><span class="sxs-lookup"><span data-stu-id="e3561-124">How to: Create a Basic WCF Web HTTP Service</span></span>](../../../../docs/framework/wcf/feature-details/how-to-create-a-basic-wcf-web-http-service.md)
-- [<span data-ttu-id="e3561-125">WCF 웹 HTTP 프로그래밍 개체 모델</span><span class="sxs-lookup"><span data-stu-id="e3561-125">WCF Web HTTP Programming Object Model</span></span>](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-object-model.md)
+
+## <a name="see-also"></a><span data-ttu-id="2ccb2-123">참고자료</span><span class="sxs-lookup"><span data-stu-id="2ccb2-123">See also</span></span>
+
+- [<span data-ttu-id="2ccb2-124">방법: 기본 WCF 웹 HTTP 서비스 만들기</span><span class="sxs-lookup"><span data-stu-id="2ccb2-124">How to: Create a Basic WCF Web HTTP Service</span></span>](../../../../docs/framework/wcf/feature-details/how-to-create-a-basic-wcf-web-http-service.md)
+- [<span data-ttu-id="2ccb2-125">WCF 웹 HTTP 프로그래밍 개체 모델</span><span class="sxs-lookup"><span data-stu-id="2ccb2-125">WCF Web HTTP Programming Object Model</span></span>](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-object-model.md)
