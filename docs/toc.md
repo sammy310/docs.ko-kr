@@ -449,7 +449,7 @@
 ### [시그니처 파일](fsharp/language-reference/signature-files.md)
 ### [측정 단위](fsharp/language-reference/units-of-measure.md)
 ### [XML 문서](fsharp/language-reference/xml-documentation.md)
-### [지연 계산](fsharp/language-reference/lazy-computations.md)
+### [Lazy 식](fsharp/language-reference/lazy-expressions.md)
 ### [계산 식](fsharp/language-reference/computation-expressions.md)
 ### [비동기 워크플로](fsharp/language-reference/asynchronous-workflows.md)
 ### [쿼리 식](fsharp/language-reference/query-expressions.md)
@@ -1210,6 +1210,7 @@
 #### [PredictionEngine을 사용하여 한 번에 하나씩 예측 수행](machine-learning/how-to-guides/single-predict-model-ml-net.md)
 #### [학습된 모델 운용](machine-learning/how-to-guides/consuming-model-ml-net.md)
 #### [모델 Azure Functions 제공](machine-learning/how-to-guides/serve-model-serverless-azure-functions-ml-net.md)
+#### [Web API에서 모델 제공](machine-learning/how-to-guides/serve-model-web-api-ml-net.md)
 ### Infer.NET
 #### [Infer.NET을 사용한 확률 프로그래밍](machine-learning/how-to-guides/matchup-app-infer-net.md)
 ## 참조
