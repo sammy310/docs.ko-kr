@@ -4,12 +4,12 @@ description: Azure 클라우드 및 Windows 컨테이너를 사용 하 여 기�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 04/28/2018
-ms.openlocfilehash: 15ea074693a75aa04b4f3a03e6e5e3d7f748cea1
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: e89f1e79eec16919b2e70952392b6f640433156b
+ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57674941"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57846261"
 ---
 # <a name="walkthroughs-and-technical-get-started-overview"></a>연습 및 기술 시작된 개요 가져오기
 
@@ -83,7 +83,7 @@ ms.locfileid: "57674941"
 GitHub wiki의이 콘텐츠를 더 자세히 살펴보기
 
 - [둘러보기 기준을 설정한 ASP.NET MVC 및 Web Forms "레거시" 앱](https://github.com/dotnet-architecture/eShopModernizing/wiki/01.-Tour-on-the-ASP.NET-MVC-and-WebForms-apps-implementation-code)
--   [기본 WCF 서비스 및 WinForms (3 계층) "레거시" 앱에 대 한 둘러보기](https://github.com/dotnet-architecture/eShopModernizing/wiki/21.-Tour-on-the-WCF-service-and-WinForms-apps)
+- [기본 WCF 서비스 및 WinForms (3 계층) "레거시" 앱에 대 한 둘러보기](https://github.com/dotnet-architecture/eShopModernizing/wiki/21.-Tour-on-the-WCF-service-and-WinForms-apps)
 
 ## <a name="walkthrough-2-containerize-your-existing-net-applications-with-windows-containers"></a>연습 2: Windows 컨테이너를 사용 하 여 기존.NET 응용 프로그램을 컨테이너 화
 

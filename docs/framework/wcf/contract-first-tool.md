@@ -2,15 +2,16 @@
 title: 계약 중심 도구
 ms.date: 03/30/2017
 ms.assetid: 0a880690-f460-4475-a5f4-9f91ce08fcc6
-ms.openlocfilehash: 86ef109425a75e46e056447f4f40df36aa332293
-ms.sourcegitcommit: 700b9003ea6bdd83a53458bbc436c9b5778344f1
+ms.openlocfilehash: ef19843d6c8a9de0b926dd8512f5a58a5966e1bf
+ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48261617"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57846183"
 ---
 # <a name="contract-first-tool"></a>계약 중심 도구
-서비스 계약을 기존 서비스에서 만들어야 할 경우가 있습니다. [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]에서 계약 중심 도구를 사용하여 데이터 계약 클래스를 기존 서비스에서 자동으로 만들 수 있습니다. 계약 중심 도구를 사용하려면 XSD(XML 스키마 정의) 파일을 로컬에서 다운로드해야 합니다. 이 도구는 HTTP를 통해 원격 데이터 계약을 가져올 수 없습니다.
+서비스 계약을 기존 서비스에서 만들어야 할 경우가 있습니다. 
+  [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]에서 계약 중심 도구를 사용하여 데이터 계약 클래스를 기존 서비스에서 자동으로 만들 수 있습니다. 계약 중심 도구를 사용하려면 XSD(XML 스키마 정의) 파일을 로컬에서 다운로드해야 합니다. 이 도구는 HTTP를 통해 원격 데이터 계약을 가져올 수 없습니다.
 
  계약 중심 도구는 빌드 작업으로 Visual Studio 2012에 통합 됩니다. 빌드 작업에서 생성하는 코드 파일은 프로젝트가 빌드될 때마다 생성되므로 프로젝트는 기본 서비스 계약에서 변경 사항을 쉽게 채택할 수 있습니다.
 
@@ -69,31 +70,31 @@ ms.locfileid: "48261617"
 
  다음 고급 설정은 계약의 코드 생성에 대해 구성할 수 있습니다. 설정은 프로젝트의 파일 모두에 대해서만 구성할 수 있으며 이때 설정은 개별 파일에 대해 구성할 수 없습니다.
 
--   **Serializer 모드**:이 설정은 서비스 계약 파일을 읽기 위한 serializer는 결정 합니다. 때 **XML Serializer** 확인란이 선택 되는 **컬렉션 형식** 및 **형식 재사용** 옵션이 비활성화 됩니다. 이러한 옵션에만 적용 합니다 **데이터 계약 Serializer**합니다.
+-   **Serializer 모드**: 이 설정은 서비스 계약 파일을 읽기 위한 serializer는 결정 합니다. 때 **XML Serializer** 확인란이 선택 되는 **컬렉션 형식** 및 **형식 재사용** 옵션이 비활성화 됩니다. 이러한 옵션에만 적용 합니다 **데이터 계약 Serializer**합니다.
 
--   **형식 재사용**:이 설정은 형식 재사용에 사용 되는 라이브러리를 지정 합니다. 경우에이 설정을 적용 **Serializer 모드** 로 설정 된 **데이터 계약 Serializer**합니다.
+-   **형식 재사용**: 이 설정은 형식 재사용에 사용 되는 라이브러리를 지정 합니다. 경우에이 설정을 적용 **Serializer 모드** 로 설정 된 **데이터 계약 Serializer**합니다.
 
--   **컬렉션 형식**:이 설정은 컬렉션 데이터 형식에 사용할 정규화 된 또는 정규화 된 어셈블리 형식을 지정 합니다. 경우에이 설정을 적용 **Serializer 모드** 로 설정 된 **데이터 계약 Serializer**합니다.
+-   **컬렉션 형식**: 이 설정은 컬렉션 데이터 형식에 사용할 정규화 된 또는 정규화 된 어셈블리 형식을 지정 합니다. 경우에이 설정을 적용 **Serializer 모드** 로 설정 된 **데이터 계약 Serializer**합니다.
 
--   **사전 형식**:이 설정은 사전 데이터 형식에 사용할 정규화 된 또는 정규화 된 어셈블리 형식을 지정 합니다.
+-   **사전 형식**: 이 설정은 사전 데이터 형식에 사용할 정규화 된 또는 정규화 된 어셈블리 형식을 지정 합니다.
 
--   **EnableDataBinding**:이 설정은 구현 여부를 지정 합니다 <xref:System.ComponentModel.INotifyPropertyChanged> 데이터 바인딩을 구현할 모든 데이터 형식에 대 한 인터페이스입니다.
+-   **EnableDataBinding**: 이 설정은 구현 여부를 지정 합니다 <xref:System.ComponentModel.INotifyPropertyChanged> 데이터 바인딩을 구현할 모든 데이터 형식에 대 한 인터페이스입니다.
 
 -   **ExcludedTypes**:이 설정은 참조 된 어셈블리에서 제외할 정규화 된 또는 정규화 된 어셈블리 형식 목록을 지정 합니다. 경우에이 설정을 적용 **Serializer 모드** 로 설정 된 **데이터 계약 Serializer**합니다.
 
--   **GenerateInternalTypes**:이 설정은 내부로 표시 된 클래스를 생성할지 여부를 지정 합니다. 경우에이 설정을 적용 **Serializer 모드** 로 설정 된 **데이터 계약 Serializer**합니다.
+-   **GenerateInternalTypes**: 이 설정은 내부로 표시 되는 클래스를 생성할지 여부를 지정 합니다. 경우에이 설정을 적용 **Serializer 모드** 로 설정 된 **데이터 계약 Serializer**합니다.
 
--   **GenerateSerializableTypes**:이 설정은 사용 하 여 클래스를 생성할지 여부를 지정 합니다 <xref:System.SerializableAttribute> 특성입니다. 경우에이 설정을 적용 **Serializer 모드** 로 설정 된 **데이터 계약 Serializer**합니다.
+-   **GenerateSerializableTypes**: 이 설정은 사용 하 여 클래스를 생성할지 여부를 지정 합니다 <xref:System.SerializableAttribute> 특성입니다. 경우에이 설정을 적용 **Serializer 모드** 로 설정 된 **데이터 계약 Serializer**합니다.
 
--   **ImportXMLTypes**:이 설정을 적용할 데이터 계약 serializer를 구성할 지 여부를 지정 합니다 <xref:System.SerializableAttribute> 없는 클래스에 특성을 <xref:System.Runtime.Serialization.DataContractAttribute> 특성입니다.  경우에이 설정을 적용 **Serializer 모드** 로 설정 된 **데이터 계약 Serializer**합니다.
+-   **ImportXMLTypes**: 이 설정을 적용할 데이터 계약 serializer를 구성할 지 여부를 지정 합니다 <xref:System.SerializableAttribute> 없는 클래스에 특성을 <xref:System.Runtime.Serialization.DataContractAttribute> 특성입니다.  경우에이 설정을 적용 **Serializer 모드** 로 설정 된 **데이터 계약 Serializer**합니다.
 
--   **SupportFx35TypedDataSets**:이 설정은.Net에 대해 생성 하는 형식화 된 데이터 집합에 대 한 추가 기능을 제공 여부를 지정 Framework 3.5. 때 **Serializer 모드** 로 설정 된 **XML Serializer**는 <xref:System.Data.Design.TypedDataSetSchemaImporterExtensionFx35> 확장이 값이 True로 설정 된 경우 XML 스키마 가져오기에 추가 됩니다. 때 **Serializer 모드** 로 설정 됩니다 **데이터 계약 Serializer**, 유형 <xref:System.DateTimeOffset> 이 값을 False로 설정 된 경우 참조에서 제외 됩니다 있도록를 <xref:System.DateTimeOffset> 항상 생성 되며 이전 프레임 워크 버전입니다.
+-   **SupportFx35TypedDataSets**: 이 설정은.NET Framework 3.5 용으로 만든 형식화 된 데이터 집합에 대 한 추가 기능을 제공 여부를 지정 합니다. 때 **Serializer 모드** 로 설정 된 **XML Serializer**는 <xref:System.Data.Design.TypedDataSetSchemaImporterExtensionFx35> 확장이 값이 True로 설정 된 경우 XML 스키마 가져오기에 추가 됩니다. 때 **Serializer 모드** 로 설정 됩니다 **데이터 계약 Serializer**, 유형 <xref:System.DateTimeOffset> 이 값을 False로 설정 된 경우 참조에서 제외 됩니다 있도록를 <xref:System.DateTimeOffset> 항상 생성 되며 이전 프레임 워크 버전입니다.
 
--   **InputXsdFiles**:이 설정은 입력된 파일의 목록을 지정 합니다. 각 파일에는 올바른 XML 스키마가 포함되어야 합니다.
+-   **InputXsdFiles**: 이 설정은 입력된 파일 목록을 지정합니다. 각 파일에는 올바른 XML 스키마가 포함되어야 합니다.
 
--   **언어**:이 설정은 생성된 된 계약 코드의 언어를 지정 합니다. 이 설정은 <xref:System.CodeDom.Compiler.CodeDomProvider>에서 인식할 수 있어야 합니다.
+-   **언어**: 이 설정은 생성된 된 계약 코드의 언어를 지정 합니다. 이 설정은 <xref:System.CodeDom.Compiler.CodeDomProvider>에서 인식할 수 있어야 합니다.
 
--   **NamespaceMappings**:이 설정은 XSD 대상 네임 스페이스에서 CLR 네임 스페이스에 매핑을 지정 합니다. 각 매핑은 다음 형식을 사용해야 합니다.
+-   **NamespaceMappings**: 이 설정은 XSD 대상 네임 스페이스에서 CLR 네임 스페이스에 매핑을 지정합니다. 각 매핑은 다음 형식을 사용해야 합니다.
 
     ```xml
     "<Schema Namespace>, <CLR Namespace>"
@@ -105,7 +106,7 @@ ms.locfileid: "48261617"
     "*, <CLR Namespace>"
     ```
 
--   **OutputDirectory**:이 설정은 코드 파일이 생성 될 디렉터리를 지정 합니다.
+-   **OutputDirectory**: 이 설정은 코드 파일이 생성 될 디렉터리를 지정 합니다.
 
  이 설정은 프로젝트가 빌드될 때 서비스 계약 파일에서 서비스 계약 형식을 생성하는 데 사용됩니다.
 

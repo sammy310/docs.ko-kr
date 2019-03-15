@@ -2,15 +2,15 @@
 title: 사용자 지정 흐름 제어 작업 만들기
 ms.date: 03/30/2017
 ms.assetid: 27f409f6-2d1d-4cfb-9765-93eb2ad667d5
-ms.openlocfilehash: de1378cc0dd304db37aefd437d1ce6feac9f2ed2
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 2be47281335066def5c1d267cd709db5a8ff1187
+ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57724668"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57847013"
 ---
 # <a name="creating-custom-flow-control-activities"></a>사용자 지정 흐름 제어 작업 만들기
-.NET Framework에는 추상 프로그래밍 구조(예: <xref:System.Activities.Statements.Flowchart>) 또는 표준 프로그래밍 문(예: <xref:System.Activities.Statements.If>)와 유사하게 작동하는 다양한 흐름 제어 작업이 포함되어 있습니다. 이 항목에서는 샘플 프로젝트 중 하나의 아키텍처를 설명 [제네릭이 아닌 ForEach](./samples/non-generic-foreach.md)합니다.  
+다양 한 프로그래밍 구조를 추상화 하는 비슷하게 작동 하는 흐름 제어 활동을 포함 하는.NET Framework (같은 <xref:System.Activities.Statements.Flowchart>) 또는 표준 프로그래밍 문 (같은 <xref:System.Activities.Statements.If>). 이 항목에서는 샘플 프로젝트 중 하나의 아키텍처를 설명 [제네릭이 아닌 ForEach](./samples/non-generic-foreach.md)합니다.  
   
 ## <a name="creating-the-custom-class"></a>사용자 지정 클래스 만들기  
  비제네릭 ForEach 클래스는 자식 작업을 예약해야 하고 <xref:System.Activities.NativeActivity>에서 파생되는 작업에는 이 기능이 없기 때문에 <xref:System.Workflow.Activities.CodeActivity>에서 파생되어야 합니다.  

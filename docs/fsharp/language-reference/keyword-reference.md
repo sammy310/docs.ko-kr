@@ -2,12 +2,12 @@
 title: 키워드 참조
 description: 모든 정보에 대 한 링크를 찾습니다는 F# 언어 키워드입니다.
 ms.date: 05/16/2016
-ms.openlocfilehash: 5a94a30ca0f73538cc22e76fa75bd76741b70d99
-ms.sourcegitcommit: dcc8feeff4718664087747529638ec9b47e65234
+ms.openlocfilehash: d55846fe7c8d31454b6bc8684de75546800df7d6
+ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2019
-ms.locfileid: "54857907"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57845296"
 ---
 # <a name="keyword-reference"></a>키워드 참조
 
@@ -50,7 +50,7 @@ ms.locfileid: "54857907"
 |`inline`|[함수](functions/index.md)<br /><br />[인라인 함수](functions/inline-functions.md)|호출자의 코드에 직접 통합 되어야 하는 함수를 나타내는 데 사용 합니다.|
 |`interface`|[인터페이스](interfaces.md)|선언 인터페이스를 구현 하는 데 사용 합니다.|
 |`internal`|[Access Control](access-control.md)|멤버가 표시 되는지 지정 하는 데 외부가 아니라 어셈블리 내부에서.|
-|`lazy`|[지연 계산](lazy-computations.md)|계산 결과가 필요한 경우에 수행 하는 것입니다를 지정 하는 데 사용 합니다.|
+|`lazy`|[지연 식](lazy-expressions.md)|결과가 필요한 경우에 수행 하는 식을 지정 하는 데 사용 합니다.|
 |`let`|[`let` Bindings](functions/let-bindings.md)|연결 하거나 값 또는 함수에 이름을 바인딩할 하는 데 사용 합니다.|
 |`let!`|[비동기 워크플로](asynchronous-workflows.md)<br /><br />[계산 식](computation-expressions.md)|비동기 워크플로 비동기 계산의 결과에 이름을 바인딩할 또는 기타 계산 식 결과 계산 형식인 이름을 바인딩하는 데 사용 합니다.|
 |`match`|[일치 식](match-expressions.md)|패턴 값과 비교 하 여 분기 하는 데 사용 합니다.|

@@ -2,12 +2,12 @@
 title: 비동기 프로그래밍
 ms.date: 10/18/2018
 ms.assetid: 85da7447-7125-426e-aa5f-438a290d1f77
-ms.openlocfilehash: 30eb07f9f6f3a9e1d1d6a346ca0dca272c262bb3
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: b13ff7f67e7a62e071a27a77e72b7844dcb74d73
+ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57366129"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57846131"
 ---
 # <a name="asynchronous-programming"></a>비동기 프로그래밍
 
@@ -41,9 +41,9 @@ ms.locfileid: "57366129"
 
 - [Async 및 Await를 사용한 비동기 프로그래밍(Visual Basic)](../../../visual-basic/programming-guide/concepts/async/index.md)
 
-- [.NET (1 부) 4.5에서에서 SqlDataReader의 새로운 비동기 메서드를 사용 하 여](https://blogs.msdn.microsoft.com/adonet/2012/04/20/using-sqldatareaders-new-async-methods-in-net-4-5/)
+- [(1 부).NET 4.5에서 SqlDataReader의 새로운 비동기 메서드를 사용 하 여](https://blogs.msdn.microsoft.com/adonet/2012/04/20/using-sqldatareaders-new-async-methods-in-net-4-5/)
 
-- [.NET (2 부) 4.5에서에서 SqlDataReader의 새로운 비동기 메서드를 사용 하 여](https://blogs.msdn.microsoft.com/adonet/2012/07/15/using-sqldatareaders-new-async-methods-in-net-4-5-part-2-examples/)
+- [(2 부).NET 4.5에서 SqlDataReader의 새로운 비동기 메서드를 사용 하 여](https://blogs.msdn.microsoft.com/adonet/2012/07/15/using-sqldatareaders-new-async-methods-in-net-4-5-part-2-examples/)
 
 사용자 인터페이스가 응답하지 않거나 서버가 확장되지 않을 경우 코드를 좀 더 비동기화해야 할 수 있습니다. 기존에는 비동기 코드를 작성하려면 비동기 작업이 완료될 때 발생하는 논리를 표현하기 위한 콜백 설치 과정(연속이라고도 함)이 필요했습니다. 이로 인해 비동기 코드의 구조는 동기 코드에 비해 복잡했습니다.
 

@@ -2,12 +2,12 @@
 title: ADO.NET의 연결 문자열
 ms.date: 10/10/2018
 ms.assetid: 745c5f95-2f02-4674-b378-6d51a7ec2490
-ms.openlocfilehash: c765eee661858499240344cb5059fe1fa9a58ab5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1197335f3ba2a09b6e7303d31bc32383d1fd3436
+ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54627566"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57844874"
 ---
 # <a name="connection-strings-in-adonet"></a>ADO.NET의 연결 문자열
 
@@ -16,9 +16,9 @@ ms.locfileid: "54627566"
 ## <a name="connection-string-syntax"></a>연결 문자열 구문
 
 연결 문자열은 키/값 매개 변수 쌍의 세미콜론으로 구분 된 목록:
-  
+
     keyword1=value; keyword2=value;
-  
+
 키워드는 대/소문자 구분 하지 않습니다. 그러나 값을 않을 대/소문자 구분, 데이터 원본에 따라 합니다. 키워드와 값이 포함 될 수 있습니다 [공백 문자](https://en.wikipedia.org/wiki/Whitespace_character#Unicode)합니다. 선행 및 후행 공백을 키워드에서 무시 되 고 따옴표가 값입니다.
 
 값을 세미콜론을 포함 하는 경우 [유니코드 제어 문자](https://en.wikipedia.org/wiki/Unicode_control_characters), 또는 단일 또는 이중 따옴표로 묶어야 합니다 선행 또는 후행 공백을 삭제 합니다. 예를 들어:
@@ -44,19 +44,23 @@ ms.locfileid: "54627566"
 
 런타임에 유효성이 검사 되지 않은 사용자 입력에서 수동으로 구성 된 연결 문자열은 문자열 삽입 공격에 취약 및 데이터 소스에서 보안을 위협할 합니다. 이러한 문제를 해결 하기 위해 *ADO.NET* 2.0에서는 [연결 문자열 작성기](../../../../docs/framework/data/adonet/connection-string-builders.md) 마다 *.NET Framework* 데이터 공급자입니다. 이러한 연결 문자열 작성기 매개 변수를 강력한 형식의 속성을 노출 하 고 연결 문자열을 데이터 원본에 전송 되기 전에 유효성을 검사할 수 있도록 합니다.
 
-## <a name="in-this-section"></a>섹션 내용  
- [연결 문자열 작성기](../../../../docs/framework/data/adonet/connection-string-builders.md)  
- `ConnectionStringBuilder` 클래스를 사용하여 런타임에 유효한 연결 문자열을 구성하는 방법을 보여 줍니다.
-  
- [연결 문자열 및 구성 파일](../../../../docs/framework/data/adonet/connection-strings-and-configuration-files.md)  
- 구성 파일에서 연결 문자열을 저장하고 검색하는 방법을 보여 줍니다.
-  
- [연결 문자열 구문](../../../../docs/framework/data/adonet/connection-string-syntax.md)  
- `SqlClient`, `OracleClient`, `OleDb` 및 `Odbc`에 대한 공급자별 연결 문자열을 구성하는 방법을 설명합니다.
-  
- [연결 정보 보호](../../../../docs/framework/data/adonet/protecting-connection-information.md)  
- 데이터 소스 연결에 사용되는 정보를 보호하는 기법을 보여 줍니다.
-  
+## <a name="in-this-section"></a>섹션 내용
+
+[연결 문자열 작성기](../../../../docs/framework/data/adonet/connection-string-builders.md)\
+
+  `ConnectionStringBuilder` 클래스를 사용하여 런타임에 유효한 연결 문자열을 구성하는 방법을 보여 줍니다.
+
+[연결 문자열 및 구성 파일](../../../../docs/framework/data/adonet/connection-strings-and-configuration-files.md)\
+구성 파일에서 연결 문자열을 저장하고 검색하는 방법을 보여 줍니다.
+
+[연결 문자열 구문](../../../../docs/framework/data/adonet/connection-string-syntax.md)\
+
+  `SqlClient`, `OracleClient`, `OleDb` 및 `Odbc`에 대한 공급자별 연결 문자열을 구성하는 방법을 설명합니다.
+
+[연결 정보 보호](../../../../docs/framework/data/adonet/protecting-connection-information.md)\
+데이터 소스 연결에 사용되는 정보를 보호하는 기법을 보여 줍니다.
+
 ## <a name="see-also"></a>참고자료
+
 - [데이터 소스에 연결](/cpp/data/odbc/connecting-to-a-data-source)
 - [ADO.NET 관리되는 공급자 및 데이터 집합 개발자 센터](https://go.microsoft.com/fwlink/?LinkId=217917)

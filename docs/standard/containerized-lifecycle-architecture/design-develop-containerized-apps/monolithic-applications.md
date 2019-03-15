@@ -4,12 +4,12 @@ description: 컨테이너 화 된 모놀리식 응용 프로그램에 대 한 �
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 02/15/2019
-ms.openlocfilehash: 76e1db8886fe75b79cea2e28ef05e62ca519ae58
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: e7454100b09f602e1e103c38685609e1dab62fe9
+ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57676839"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57843547"
 ---
 # <a name="monolithic-applications"></a>모놀리식 응용 프로그램
 
@@ -63,7 +63,7 @@ Docker 이미지로 업데이트를 배포하는 것이 훨씬 더 빠르고 네
 
 모놀리식 앱은 Docker에서 이익을 얻을 수, 이점은 팁만에서 터치 하는 것입니다. 컨테이너 관리에 대 한 더 큰 이점은 여러 인스턴스 및 각 컨테이너 인스턴스의 수명 주기를 관리 하는 컨테이너 orchestrator를 사용 하 여 배포에서 제공 됩니다. 개별적으로 크기를 조정하고, 개발하고, 배포할 수 있는 하위 시스템으로 모놀리식 애플리케이션을 나누는 작업은 마이크로 서비스 영역의 진입점입니다.
 
-컨테이너를 사용 하 여 모놀리식 응용 프로그램 "리프트 앤 시프트" 하 고 응용 프로그램 현대화 할 수 있습니다 하는 방법에 대 한 자세한 내용은이 추가 Microsoft 설명서를 읽을 수 있습니다 [Azure 클라우드 및 Windows 컨테이너를 사용 하 여 기존.NET 응용 프로그램 현대화 ](https://docs.microsoft.com/dotnet/standard/modernize-with-azure-and-containers/)에서 PDF로 다운로드할 수도 있습니다는 <https://aka.ms/LiftAndShiftWithContainersEbook>합니다.
+컨테이너를 사용 하 여 모놀리식 응용 프로그램 "리프트 앤 시프트" 하 고 응용 프로그램 현대화 할 수 있습니다 하는 방법에 대 한 자세한 내용은이 추가 Microsoft 설명서를 읽을 수 있습니다 [Azure 클라우드 및 Windows 컨테이너를 사용 하 여 기존.NET 응용 프로그램 현대화 ](../../modernize-with-azure-and-containers/index.md)에서 PDF로 다운로드할 수도 있습니다는 <https://aka.ms/LiftAndShiftWithContainersEbook>합니다.
 
 ## <a name="publish-a-single-docker-container-app-to-azure-app-service"></a>Azure App Service에 단일 Docker 컨테이너 앱 게시
 

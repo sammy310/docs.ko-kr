@@ -5,12 +5,12 @@ author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 02/15/2019
 ms.custom: vs-dotnet
-ms.openlocfilehash: 78ea3e553e4e449b307bc3585ed66fa48d2c0d8e
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: 431a0f34ba913c18c35e28ca45660495403bf688
+ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57680362"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57844251"
 ---
 # <a name="use-docker-tools-in-visual-studio-2017-on-windows"></a>Windows의 Visual Studio 2017에서 사용 하 여 Docker 도구
 
@@ -20,7 +20,8 @@ Visual Studio 2017 버전 15.7 이상에 포함 된 Docker 도구를 사용 하�
 
 Docker에 대 한 Windows의 최신 버전을 계속 하려면 Docker 응용 프로그램 설치 프로그램은 다음 참조에 설명 된 대로 간단 하기 때문에 개발 보다 쉽습니다.
 
-> [! 으로 이동 하세요 Docker에 대 한 Windows를 설치 하는 방법에 대 한 자세한 정보] (<https://docs.docker.com/docker-for-windows/>).
+> [!TIP]
+> 로 Windows에 Docker를 설치 하는 방법에 대 한 자세한 내용은 (<https://docs.docker.com/docker-for-windows/>).
 
 ## <a name="docker-support-in-visual-studio-2017"></a>Visual Studio 2017에 docker 지원
 
@@ -83,7 +84,8 @@ Docker에 대 한 Windows의 최신 버전을 계속 하려면 Docker 응용 프
 > [!WARNING]
 > Localhost SSL 인증서가 신뢰할 수 있는 메시지를 표시 하지 않으려면 확인란을 HTTPS 요청을 웹 앱 또는 서비스에서 런타임에 실패할 수 있습니다. 이런 경우의 선택을 취소 합니다 **표시 안 함** 확인란 프로젝트를 실행 하 고 신뢰 프롬프트를 표시 합니다.
 
-> [! 정보] 서비스 구현 및 Visual Studio Tools for Docker 사용에 자세한 내용은 다음 문서를 참조 하세요.
+> [!TIP]
+> 서비스 구현 및 Visual Studio Tools for Docker 사용에 자세한 내용은 다음 문서를 참조 합니다.
 >
 >로컬 Docker 컨테이너에서 앱을 디버깅 합니다. <https://docs.microsoft.com/azure/vs-azure-tools-docker-edit-and-refresh>
 >

@@ -3,12 +3,12 @@ title: 사용 하 여 Azure Blob storage 시작F#
 description: Azure Blob storage 사용 하 여 클라우드에 구조화 되지 않은 데이터를 저장 합니다.
 author: sylvanc
 ms.date: 09/20/2016
-ms.openlocfilehash: e38f58fefa63f922bcb1a78254249a3626bfac43
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 62178edf22ad48d0388f34488b68d135068d50a2
+ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56981909"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57846430"
 ---
 # <a name="get-started-with-azure-blob-storage-using-f"></a>F를 사용 하 여 Azure Blob storage 시작\#
 
@@ -102,14 +102,14 @@ Azure Blob Storage는 블록 blob 및 페이지 blob을 지원합니다. 대부�
 
 예를 들어, 다음 라는 컨테이너에 블록 blob 집합을 고려 `photos`:
 
-*photo1.jpg*
-*2015/architecture/description.txt*
-*2015/architecture/photo3.jpg*
-*2015/architecture/photo4.jpg*
-*2016/architecture/photo5.jpg*
-*2016/architecture/photo6.jpg*
-*2016/architecture/description.txt*
-*2016/photo7.jpg*
+*photo1.jpg*\
+*2015/architecture/description.txt*\
+*2015/architecture/photo3.jpg*\
+*2015/architecture/photo4.jpg*\
+*2016/architecture/photo5.jpg*\
+*2016/architecture/photo6.jpg*\
+*2016/architecture/description.txt*\
+*2016/photo7.jpg*\
 
 호출 하는 경우 `ListBlobs` 는 위의 샘플과 같이 컨테이너에서 계층적 목록이 반환 됩니다. 둘 다 포함 되어 있으면 `CloudBlobDirectory` 고 `CloudBlockBlob` 결과 출력은 다음과 유사 하 게 한 다음 컨테이너에 blob 및 디렉터리를 각각 나타내는 개체입니다.
 

@@ -2,12 +2,12 @@
 title: 시작 F# Visual Studio Code에서
 description: 사용 하는 방법을 알아봅니다 F# Visual Studio Code 및 Ionide 플러그 인 도구 모음을 사용 하 여 합니다.
 ms.date: 12/23/2018
-ms.openlocfilehash: 79863d57abbc71d59ce01fe30abf1db0a569f1e1
-ms.sourcegitcommit: 5d9f4b805787f890ca6e0dc7ea30a43018bc9cbb
+ms.openlocfilehash: 3e526d33a8b52e3c1241ed861d5ceb37eac10451
+ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2019
-ms.locfileid: "57788494"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57846573"
 ---
 # <a name="get-started-with-f-in-visual-studio-code"></a>시작 F# Visual Studio Code에서
 
@@ -16,7 +16,7 @@ ms.locfileid: "57788494"
 를 시작 했는지 확인 [ F# 하 고 올바르게 설치 Ionide 플러그 인](install-fsharp.md#install-f-with-visual-studio-code)합니다.
 
 > [!NOTE]
-> Ionide.NET Framework를 생성 합니다 F# 프로젝트, 플랫폼 간 호환성 문제가 발생할 수 있으므로 dotnet core 없습니다. 실행 하는 경우 **Linux** 하거나 **OSX**, (명령줄 도구)를 사용 하는 간단 하 게 시작 [https://docs.microsoft.com/en-us/dotnet/fsharp/get-started/get-started-command-line].
+> Ionide.NET Framework를 생성 합니다 F# 프로젝트, 플랫폼 간 호환성 문제가 발생할 수 있으므로 dotnet core 없습니다. 실행 하는 경우 **Linux** 또는 **OSX**를 시작 하는 간단한 방법을 사용 하는 것은 [명령줄 도구](https://docs.microsoft.com/en-us/dotnet/fsharp/get-started/get-started-command-line)합니다.
 
 ## <a name="creating-your-first-project-with-ionide"></a>Ionide를 사용 하 여 첫 번째 프로젝트 만들기
 

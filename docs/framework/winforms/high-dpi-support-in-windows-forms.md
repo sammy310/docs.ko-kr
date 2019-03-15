@@ -9,18 +9,18 @@ helpviewer_keywords:
 ms.assetid: 075ea4c3-900c-4f8a-9dd2-13ea6804346b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3dbb5af9c5cf1d8796544592602c645584d21a04
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 1641702c7b1c3d3b0e83c59a96529de70f699d17
+ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57711797"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57843611"
 ---
 # <a name="high-dpi-support-in-windows-forms"></a>Windows Forms의 높은 DPI 지원
 
-.NET Framework 4.7부터 Windows Forms 일반적인 높은 DPI 및 동적 DPI 시나리오에 대 한 향상 된 기능을 포함 합니다. 여기에는 다음이 포함됩니다. 
+.NET Framework 4.7부터 Windows Forms 일반적인 높은 DPI 및 동적 DPI 시나리오에 대 한 향상 된 기능을 포함 합니다. 여기에는 다음이 포함됩니다.
 
-- 와 같은 크기 조정 및 레이아웃의 다양 한 Windows Forms의 향상 된 컨트롤을 <xref:System.Windows.Forms.MonthCalendar> 컨트롤 및 <xref:System.Windows.Forms.CheckedListBox> 제어 합니다. 
+- 와 같은 크기 조정 및 레이아웃의 다양 한 Windows Forms의 향상 된 컨트롤을 <xref:System.Windows.Forms.MonthCalendar> 컨트롤 및 <xref:System.Windows.Forms.CheckedListBox> 제어 합니다.
 
 - 단일 패스 크기 조정 합니다.  .NET Framework 4.6 및 이전 버전에서 크기 조정 필요 하는 것 보다 몇 가지 컨트롤 확장을 발생 하는 여러 패스를 통해 수행 되었습니다.
 
@@ -30,7 +30,7 @@ ms.locfileid: "57711797"
 
 ## <a name="configuring-your-windows-forms-app-for-high-dpi-support"></a>높은 DPI 지원에 대 한 Windows Forms 앱 구성
 
-새 Windows Forms를 지 원하는 높은 DPI 인식 기능은.NET Framework 4.7을 대상 Windows 10 크리에이터 스 업데이트 이상 Windows 운영 체제에서 실행 되는 응용 프로그램 에서만 사용할 수 있습니다. 
+새 Windows Forms를 지 원하는 높은 DPI 인식 기능은.NET Framework 4.7을 대상 Windows 10 크리에이터 스 업데이트 이상 Windows 운영 체제에서 실행 되는 응용 프로그램 에서만 사용할 수 있습니다.
 
 또한 Windows Forms 응용 프로그램의 높은 DPI 지원을 구성 하려면는 다음을 수행 해야 합니다.
 
@@ -49,27 +49,27 @@ ms.locfileid: "57711797"
 
 - 모니터별 DPI 인식을 사용 하도록 설정 합니다 *app.config* 파일입니다.
 
-  새 Windows Forms 소개 [ `<System.Windows.Forms.ApplicationConfigurationSection>` ](../configure-apps/file-schema/winforms/index.md) 요소를 새 기능을 추가 하는 사용자 지정.NET Framework 4.7부터 지원 합니다. 높은 DPI를 지 원하는 새 기능을 활용 하려면 다음 응용 프로그램 구성 파일을 추가 합니다.   
+  새 Windows Forms 소개 [ `<System.Windows.Forms.ApplicationConfigurationSection>` ](../configure-apps/file-schema/winforms/index.md) 요소를 새 기능을 추가 하는 사용자 지정.NET Framework 4.7부터 지원 합니다. 높은 DPI를 지 원하는 새 기능을 활용 하려면 다음 응용 프로그램 구성 파일을 추가 합니다.
 
   ```xml
   <System.Windows.Forms.ApplicationConfigurationSection>
     <add key="DpiAwareness" value="PerMonitorV2" />
-  </System.Windows.Forms.ApplicationConfigurationSection>      
+  </System.Windows.Forms.ApplicationConfigurationSection>
   ```
-   
+
   > [!IMPORTANT]
   > .NET Framework의 이전 버전에서는 높은 DPI 지원 추가 매니페스트를 사용 합니다. App.config 파일에 정의 된 설정을 재정의 하므로이 방법은 더 이상 권장 됩니다.
-   
+
 - 정적 호출 <xref:System.Windows.Forms.Application.EnableVisualStyles%2A> 메서드.
-   
+
   이 응용 프로그램 진입점의 첫 번째 메서드 호출 해야 합니다. 예를 들어:
-   
+
   ```csharp
   static void Main()
   {
       Application.EnableVisualStyles();
       Application.SetCompatibleTextRenderingDefault(false);
-      Application.Run(new Form2());   
+      Application.Run(new Form2());
   }
   ```
 
@@ -80,8 +80,8 @@ ms.locfileid: "57711797"
 ```xml
 <System.Windows.Forms.ApplicationConfigurationSection>
   <add key="DpiAwareness" value="PerMonitorV2" />
-  <add key="EnableWindowsFormsHighDpiAutoResizing" value="false" /> 
-</System.Windows.Forms.ApplicationConfigurationSection>    
+  <add key="EnableWindowsFormsHighDpiAutoResizing" value="false" />
+</System.Windows.Forms.ApplicationConfigurationSection>
 ```
 
 개별 키와 값 목록은 참조 하세요 [Windows Forms 구성 요소 추가](../configure-apps/file-schema/winforms/windows-forms-add-configuration-element.md)합니다.

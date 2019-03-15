@@ -2,12 +2,12 @@
 title: WCF 단순화 기능
 ms.date: 03/30/2017
 ms.assetid: 4535a511-6064-4da0-b361-80262a891663
-ms.openlocfilehash: f4c5d1c0dc5aa9df92368de1266044db3a6c294a
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 54255e07df5a46cc975ffd4db5c18dc828a1de44
+ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57467183"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57845279"
 ---
 # <a name="wcf-simplification-features"></a>WCF 단순화 기능
 
@@ -96,7 +96,7 @@ WCF는 개발자가 WCF 서비스를 작성할 때 ASP.NET HTTP 파이프라인 
 
 |속성|켜기|새 기본값|추가 정보|
 |--------------|--------|-----------------|----------------------|
-|channelInitializationTimeout|<xref:System.ServiceModel.NetTcpBinding>|30초|이 속성은 TCP 연결이 .Net 프레이밍 프로토콜을 사용하여 자체 인증하는 데 사용할 수 있는 시간을 결정합니다. 서버가 인증을 수행하는 데 충분한 정보를 가지려면 클라이언트가 몇 가지 초기 데이터를 보내야 합니다. 이 시간 제한은 인증되지 않은 악의적 클라이언트가 서버에 너무 오래 연결되지 않도록 ReceiveTimeout(10분)보다 일부러 작게 설정합니다. 기본값은 30초입니다. 에 대 한 자세한 내용은 <xref:System.ServiceModel.Channels.ConnectionOrientedTransportBindingElement.ChannelInitializationTimeout%2A>|
+|channelInitializationTimeout|<xref:System.ServiceModel.NetTcpBinding>|30초|이 속성은 TCP 연결이.NET 프레이밍 프로토콜을 사용 하 여 자신을 인증에 소요 수 결정 합니다. 서버가 인증을 수행하는 데 충분한 정보를 가지려면 클라이언트가 몇 가지 초기 데이터를 보내야 합니다. 이 시간 제한은 인증되지 않은 악의적 클라이언트가 서버에 너무 오래 연결되지 않도록 ReceiveTimeout(10분)보다 일부러 작게 설정합니다. 기본값은 30초입니다. 에 대 한 자세한 내용은 <xref:System.ServiceModel.Channels.ConnectionOrientedTransportBindingElement.ChannelInitializationTimeout%2A>|
 |listenBacklog|<xref:System.ServiceModel.NetTcpBinding>|16 * 프로세서 수|이 소켓 수준 속성은 대기될 "보류 중 승인" 요청의 수를 설명합니다. 수신 백로그 대기열이 채워지면 새 소켓 요청이 거부됩니다. 에 대 한 자세한 내용은 <xref:System.ServiceModel.NetTcpBinding.ListenBacklog%2A>|
 |maxPendingAccepts|ConnectionOrientedTransportBindingElement<br /><br /> SMSvcHost.exe|2 * 전송용 프로세서 수<br /><br /> 4 \* SMSvcHost.exe 용 프로세서 수|이 속성은 서버가 수신기에서 대기시킬 수 있는 채널 수를 제한합니다. MaxPendingAccepts가 너무 낮으면 모든 대기 채널이 연결 서비스를 시작한 후 새 채널이 수신을 시작하기 전까지 약간의 시간 간격이 있게 됩니다. 이 간격 동안 연결이 도달할 수 있으며 이 경우 서버에서 연결 대기 중인 채널이 없기 때문에 연결이 실패합니다. 이 속성은 <xref:System.ServiceModel.Channels.ConnectionOrientedTransportBindingElement.MaxPendingConnections%2A> 속성을 큰 숫자로 설정하여 구성할 수 있습니다. 자세한 내용은 <xref:System.ServiceModel.Channels.ConnectionOrientedTransportBindingElement.MaxPendingAccepts%2A> 고 [Net.TCP Port Sharing Service 구성](../../../docs/framework/wcf/feature-details/configuring-the-net-tcp-port-sharing-service.md)|
 |maxPendingConnections|ConnectionOrientedTransportBindingElement|12 * 프로세서 수|이 속성은 전송에서 승인하였지만 ServiceModel 디스패처에서 선택하지 않은 연결 수를 제어합니다. 이 값을 설정하려면 바인딩 요소의 `MaxConnections` 또는 바인딩의 `maxOutboundConnectionsPerEndpoint`를 사용합니다. 에 대 한 자세한 내용은 <xref:System.ServiceModel.Channels.ConnectionOrientedTransportBindingElement.MaxPendingConnections%2A>|
