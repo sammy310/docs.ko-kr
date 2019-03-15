@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrID11
 ms.assetid: 7dc22e29-8baa-4d82-a1a6-2de64ba9b25d
-ms.openlocfilehash: 1370ee71775490eb242b012c0b14f8302623f9e1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7c87a43e02f040b6b0c71c9b7eabb1421f2c4a04
+ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54645992"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58022903"
 ---
 # <a name="division-by-zero-visual-basic-error"></a>0으로 나누기(Visual Basic 오류)
 제수로 사용되는 식의 값이 0입니다.  
@@ -21,4 +21,5 @@ ms.locfileid: "54645992"
 2.  이전 작업에서 식의 변수 특히, 다른 프로시저에서 해당 프로시저로 인수로 전달된 변수를 검사합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [오류 형식](../../visual-basic/programming-guide/language-features/error-types.md)
