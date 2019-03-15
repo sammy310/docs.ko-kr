@@ -2,12 +2,12 @@
 title: <address> 올바른 원격 파일 주소가 아닙니다.
 ms.date: 07/20/2015
 ms.assetid: 2c312242-6c42-4754-a1f5-7e801a542604
-ms.openlocfilehash: 805c7ea3363d465e6fd92c494246f8eafa81e301
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 65fded4d7f9316cda8724b262216de1ad01f9ee3
+ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55261553"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58039587"
 ---
 # <a name="address-is-not-a-valid-remote-file-address"></a>\<주소 > 올바른 원격 파일 주소가 아닙니다.
 \<주소 > 올바른 원격 파일 주소가 아닙니다. 올바른 주소는 프로토콜, 경로 및 파일 이름을 포함해야 합니다.  
@@ -19,7 +19,7 @@ ms.locfileid: "55261553"
 -   지정한 주소를 확인하여 잘못된 부분을 확인하고 필요한 정보를 제공합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [My.Computer.Network.UploadFile](xref:Microsoft.VisualBasic.Devices.Network.UploadFile%2A)
 - [My.Computer.Network.DownloadFile](xref:Microsoft.VisualBasic.Devices.Network.DownloadFile%2A)
 - [방법: 파일 다운로드](../../visual-basic/developing-apps/programming/computer-resources/how-to-download-a-file.md)
-

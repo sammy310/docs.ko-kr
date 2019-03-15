@@ -2,12 +2,12 @@
 title: 이름을 지정해야 합니다.
 ms.date: 07/20/2015
 ms.assetid: 9056bc12-951c-4b86-a44a-473d7c8d5f75
-ms.openlocfilehash: 2559f55bead70fc80ba282fd11eba71bfd2d241f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 763cf68a0175d43de5237b855ac8c2af1f99b630
+ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54695532"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58018073"
 ---
 # <a name="you-must-specify-a-name"></a>이름을 지정해야 합니다.
 파일 이름 바꾸기와 같은 파일 작업을 수행하는 경우 이름을 지정해야 합니다.  
@@ -17,5 +17,6 @@ ms.locfileid: "54695532"
 -   이름을 지정합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [오류 형식](../../visual-basic/programming-guide/language-features/error-types.md)
 - [My.Computer.FileSystem](xref:Microsoft.VisualBasic.FileIO.FileSystem)

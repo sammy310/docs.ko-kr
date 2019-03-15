@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - CLR attributes for custom types [XAML Services]
 ms.assetid: 5dfb299a-b6e2-41b8-8694-e6ac987547f1
-ms.openlocfilehash: e194dbef0f18657646161a3f5cc4812b3ab78f7e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 80127bae06a90dccd204b0f2a4baef10732ade76
+ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54530104"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58039472"
 ---
 # <a name="xaml-related-clr-attributes-for-custom-types-and-libraries"></a>사용자 지정 형식 및 라이브러리에 대한 XAML 관련 CLR 특성
 이 항목에서는.NET Framework XAML 서비스에 정의 된 공용 언어 런타임 (CLR) 특성을 설명 합니다. 또한 응용 프로그램 어셈블리 또는 형식에 대 한 XAML 관련 시나리오는.NET Framework에 정의 된 CLR 특성 다른 설명 합니다. 이러한 CLR 특성을 사용 하 여 어셈블리, 형식 또는 멤버를 설정 하면 해당 형식과 관련 된 XAML 형식 시스템 정보를 제공 합니다. 정보는 XAML 노드 스트림에서 직접 처리 하거나 전용된 XAML 판독기 및 XAML 작성기를 통해.NET Framework XAML 서비스를 사용 하는 모든 XAML 소비자에 게 제공 됩니다.  
@@ -81,7 +81,7 @@ ms.locfileid: "54530104"
   
  **인수:** <xref:System.Type> 로 예상 가장 정확한 형식을 지정 하는 `ProvideValue` 특성 사용의 결과 <xref:System.Windows.Markup.MarkupExtension>합니다.  
   
- 자세한 내용은 [Markup Extensions for XAML Overview](../../../docs/framework/xaml-services/markup-extensions-for-xaml-overview.md)합니다.  
+ 자세한 내용은 [Markup Extensions for XAML Overview](markup-extensions-for-xaml-overview.md)합니다.  
   
 ### <a name="namescopepropertyattribute"></a>NameScopePropertyAttribute  
  **참조 설명서:**  <xref:System.Windows.Markup.NameScopePropertyAttribute>  
@@ -103,7 +103,7 @@ ms.locfileid: "54530104"
   
  **인수:** 특성 사용된 형식이 런타임 이름 속성의 이름을 지정 하는 문자열입니다.  
   
- <xref:System.Windows.Markup.RuntimeNamePropertyAttribute> XAML에 매핑되는 특성이 지정 된 형식의 속성을 보고 [X:name 지시문](../../../docs/framework/xaml-services/x-name-directive.md)합니다. 속성 형식 이어야 합니다 <xref:System.String> 읽기/쓰기 여야 합니다.  
+ <xref:System.Windows.Markup.RuntimeNamePropertyAttribute> XAML에 매핑되는 특성이 지정 된 형식의 속성을 보고 [X:name 지시문](x-name-directive.md)합니다. 속성 형식 이어야 합니다 <xref:System.String> 읽기/쓰기 여야 합니다.  
   
  정의 정의 하는 형식에 할당할 수 있는 모든 파생된 형식에 상속 됩니다. 특정 파생된 형식에서 정의 적용 하 여 재정의할 수 있습니다 <xref:System.Windows.Markup.RuntimeNamePropertyAttribute> 특정 파생 형식입니다.  
   
@@ -114,7 +114,7 @@ ms.locfileid: "54530104"
   
  **인수:** 없음  
   
- <xref:System.Windows.Markup.TrimSurroundingWhitespaceAttribute> 공백이 중요 한 콘텐츠 내에서 자식 요소로 표시 될 수 있는 특정 형식에 적용 됩니다 (포함 된 컬렉션에 포함 된 콘텐츠 <xref:System.Windows.Markup.WhitespaceSignificantCollectionAttribute>). <xref:System.Windows.Markup.TrimSurroundingWhitespaceAttribute> 저장에 주로 관련이, 하지만 사용할 수 있는 경로가 로드 경로에서 XAML 형식 시스템에서 검사 하 여 <xref:System.Xaml.XamlType.TrimSurroundingWhitespace%2A?displayProperty=nameWithType>입니다. 자세한 내용은 [공백 XAML 처리](../../../docs/framework/xaml-services/whitespace-processing-in-xaml.md)합니다.  
+ <xref:System.Windows.Markup.TrimSurroundingWhitespaceAttribute> 공백이 중요 한 콘텐츠 내에서 자식 요소로 표시 될 수 있는 특정 형식에 적용 됩니다 (포함 된 컬렉션에 포함 된 콘텐츠 <xref:System.Windows.Markup.WhitespaceSignificantCollectionAttribute>). <xref:System.Windows.Markup.TrimSurroundingWhitespaceAttribute> 저장에 주로 관련이, 하지만 사용할 수 있는 경로가 로드 경로에서 XAML 형식 시스템에서 검사 하 여 <xref:System.Xaml.XamlType.TrimSurroundingWhitespace%2A?displayProperty=nameWithType>입니다. 자세한 내용은 [공백 XAML 처리](whitespace-processing-in-xaml.md)합니다.  
   
 ### <a name="typeconverterattribute"></a>TypeConverterAttribute  
  **참조 설명서:**  <xref:System.ComponentModel.TypeConverterAttribute>  
@@ -127,7 +127,7 @@ ms.locfileid: "54530104"
   
  적용 하는 <xref:System.ComponentModel.TypeConverterAttribute> 특성을 형식에 형식 변환기 구현을 참조 합니다. 클래스, 구조체 또는 인터페이스에서 XAML에 대 한 형식 변환기를 정의할 수 있습니다. 변환을 고유 하 게 사용할 수 있도록 열거형에 대 한 형식 변환을 제공할 필요가 없습니다.  
   
- 형식 변환기를 사용 하 여 원하는 대상 형식에 특성 또는 초기화 텍스트 태그에 사용 되는 문자열에서 변환할 수 있어야 합니다. 자세한 내용은 [Typeconverter 및 XAML](../../../docs/framework/wpf/advanced/typeconverters-and-xaml.md)합니다.  
+ 형식 변환기를 사용 하 여 원하는 대상 형식에 특성 또는 초기화 텍스트 태그에 사용 되는 문자열에서 변환할 수 있어야 합니다. 자세한 내용은 [Typeconverter 및 XAML](../wpf/advanced/typeconverters-and-xaml.md)합니다.  
   
  형식의 모든 값에 적용 하는 대신 XAML에 대 한 형식 변환기 동작 특정 속성에 설정할 수도 있습니다. 적용 하는 예에서 <xref:System.ComponentModel.TypeConverterAttribute> 속성 정의에 (외부 정의 특정 없습니다 `get` 및 `set` 정의).  
   
@@ -142,14 +142,14 @@ ms.locfileid: "54530104"
   
  **인수:** 관련 속성 이름으로 참조 하는 문자열입니다.  
   
- 별칭을 지정 하는 클래스의 CLR 속성을 나타내는 합니다 [X:uid 지시문](../../../docs/framework/xaml-services/x-uid-directive.md)합니다.  
+ 별칭을 지정 하는 클래스의 CLR 속성을 나타내는 합니다 [X:uid 지시문](x-uid-directive.md)합니다.  
   
 ### <a name="usableduringinitializationattribute"></a>UsableDuringInitializationAttribute  
  **참조 설명서:**  <xref:System.Windows.Markup.UsableDuringInitializationAttribute>  
   
  **적용 대상:** 클래스  
   
- **인수:** 부울 값입니다. 특성의 용도 사용 하는 경우 항상 지정 해야으로 `true`입니다.  
+ **인수:** 부울입니다. 특성의 용도 사용 하는 경우 항상 지정 해야으로 `true`입니다.  
   
  이 형식이 XAML 개체 그래프를 만드는 동안 하향식으로 빌드되는지 여부를 나타냅니다. 고급 개념, 프로그래밍 모델의 정의 아마도 밀접 한 관련이 있는 경우 자세한 내용은 <xref:System.Windows.Markup.UsableDuringInitializationAttribute>을 참조하세요.  
   
@@ -169,7 +169,7 @@ ms.locfileid: "54530104"
   
  **인수:** 없음  
   
- <xref:System.Windows.Markup.WhitespaceSignificantCollectionAttribute> 컬렉션 형식을 컬렉션 내에서 XAML 노드 스트림의 값 노드 생성에 영향을 줍니다는 XAML 프로세서에서 중요 한 흰 공간으로 처리 되어야 한다는 것을 나타냅니다. 자세한 내용은 [공백 XAML 처리](../../../docs/framework/xaml-services/whitespace-processing-in-xaml.md)합니다.  
+ <xref:System.Windows.Markup.WhitespaceSignificantCollectionAttribute> 컬렉션 형식을 컬렉션 내에서 XAML 노드 스트림의 값 노드 생성에 영향을 줍니다는 XAML 프로세서에서 중요 한 흰 공간으로 처리 되어야 한다는 것을 나타냅니다. 자세한 내용은 [공백 XAML 처리](whitespace-processing-in-xaml.md)합니다.  
   
 ### <a name="xamldeferloadattribute"></a>XamlDeferLoadAttribute  
  **참조 설명서:**  <xref:System.Windows.Markup.XamlDeferLoadAttribute>  
@@ -178,7 +178,7 @@ ms.locfileid: "54530104"
   
  **인수:** 지 원하는 두 가지 특성 형식을 문자열로, forms 또는 형식을로 <xref:System.Type>합니다. <xref:System.Windows.Markup.XamlDeferLoadAttribute>을 참조하세요.  
   
- 클래스 또는 속성에 XAML에 대한 지연된 로드 사용(예: 템플릿 동작)이 있음을 나타내고 지연 동작 및 해당 대상/콘텐츠 형식을 사용하도록 설정하는 클래스를 보고합니다.  
+ 클래스 또는 속성에 XAML에 대 한 지연 된 로드 사용법 (예: 템플릿 동작의 경우) 및 지연 동작 및 해당 대상/콘텐츠 형식을 지 원하는 클래스를 보고를 나타냅니다.  
   
 ### <a name="xamlsetmarkupextensionattribute"></a>XamlSetMarkupExtensionAttribute  
  **참조 설명서:**  <xref:System.Windows.Markup.XamlSetMarkupExtensionAttribute>  
@@ -270,4 +270,4 @@ ms.locfileid: "54530104"
   
 ## <a name="see-also"></a>참고자료
 - <xref:System.Attribute>
-- [.NET Framework XAML 서비스에서 사용할 사용자 지정 형식 정의](../../../docs/framework/xaml-services/defining-custom-types-for-use-with-net-framework-xaml-services.md)
+- [.NET Framework XAML 서비스에서 사용할 사용자 지정 형식 정의](defining-custom-types-for-use-with-net-framework-xaml-services.md)
