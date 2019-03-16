@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Arguments directive in XAML [XAML Services]
 - XAML [XAML Services], x:Arguments directive
 ms.assetid: 87cc10b0-b610-4025-b6b0-ab27ca27c92e
-ms.openlocfilehash: d4cff4c2f95d1418371921a3ac992a3b243d1c07
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 351974786b9f4748499279d29202e2051d9268fd
+ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54490819"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58043335"
 ---
 # <a name="xarguments-directive"></a>x:Arguments 지시문
 패키지의 기본이 아닌 생성자 개체 요소 선언에서 XAML, 또는 팩터리 메서드 개체 선언에 대 한 생성 인수입니다.  
@@ -107,5 +107,5 @@ public Food TryLookupFood(string name)
 ```  
   
 ## <a name="see-also"></a>참고자료
-- [.NET Framework XAML 서비스에서 사용할 사용자 지정 형식 정의](../../../docs/framework/xaml-services/defining-custom-types-for-use-with-net-framework-xaml-services.md)
-- [XAML 개요(WPF)](../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)
+- [.NET Framework XAML 서비스에서 사용할 사용자 지정 형식 정의](defining-custom-types-for-use-with-net-framework-xaml-services.md)
+- [XAML 개요(WPF)](../wpf/advanced/xaml-overview-wpf.md)

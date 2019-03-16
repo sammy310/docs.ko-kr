@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrID383
 ms.assetid: 0b97b683-6626-42ec-af0b-aaa3c973a76b
-ms.openlocfilehash: f79a8872fc48fe85d10130c8a55d7cf02d8bac45
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 664da4d6eee4dd6d86f355c4a9560f2d9d9c12a8
+ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54691465"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58051168"
 ---
 # <a name="set-not-supported-read-only-property"></a>Set은 지원되지 않습니다(읽기 전용 속성).
 읽기 전용 속성을 설정하거나 변경하려고 했습니다.  
@@ -21,4 +21,5 @@ ms.locfileid: "54691465"
 2.  런타임에만 속성의 값을 반환하도록 참조를 변경합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [프로젝트 및 솔루션 속성 관리](/visualstudio/ide/managing-project-and-solution-properties)
