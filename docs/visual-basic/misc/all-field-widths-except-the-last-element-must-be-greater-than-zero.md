@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrTextFieldParser_FieldWidthsMustPositive
 ms.assetid: 41d8c661-a749-4c89-be56-905c6e7c3c9d
-ms.openlocfilehash: 27cbacacefb64d3a9c0257011a188397e83b9186
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 806dcef7b7a29afa8804a581659023c817662434
+ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54582047"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58024547"
 ---
 # <a name="all-field-widths-except-the-last-element-must-be-greater-than-zero"></a>마지막 요소를 제외한 모든 필드 너비는 0보다 커야 합니다.
 마지막 요소를 제외한 모든 필드 너비는 0보다 커야 합니다. 마지막 요소의 0보다 작거나 같은 필드 너비는 마지막 필드가 가변 길이임을 나타냅니다.  
@@ -21,6 +21,7 @@ ms.locfileid: "54582047"
 -   필드 너비를 올바른 길이로 설정합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:Microsoft.VisualBasic.FileIO.TextFieldParser.SetFieldWidths%2A?displayProperty=nameWithType>
 - <xref:Microsoft.VisualBasic.FileIO.TextFieldParser.FieldWidths>
 - [방법: 고정 너비 텍스트 파일에서 읽기](../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-fixed-width-text-files.md)

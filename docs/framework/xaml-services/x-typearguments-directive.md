@@ -10,12 +10,12 @@ helpviewer_keywords:
 - TypeArguments attribute in XAML [XAML Services]
 - XAML [XAML Services], x:TypeArguments attribute
 ms.assetid: 86561058-d393-4a44-b5c3-993a4513ea74
-ms.openlocfilehash: ef08a550ebd1784514bc47ae02089847c6f1b578
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0d3edf6c7a16fc206832d8d6deff9d4ac2f69ba3
+ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54520180"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58043263"
 ---
 # <a name="xtypearguments-directive"></a>x:TypeArguments 지시문
 전달 된 제네릭 형식의 생성자에 제네릭 인수를 입력 합니다.  
@@ -73,7 +73,7 @@ xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib"
 ## <a name="xaml-2009-or-xaml-2006-with-no-wpf-30-or-wpf-35-dependency"></a>XAML 2009 또는 WPF 3.0 또는 3.5 WPF 없이 XAML 2006 종속성  
  XAML 2006 또는 XAML 2009에 대 한.NET Framework XAML 서비스에서 제네릭 XAML 사용에 WPF 관련 대 한 제한이 완화 됩니다. XAML 태그는 지원 형식 시스템 및 개체 모델을 지원할 수 있는 모든 위치에서 일반 개체 요소를 인스턴스화할 수 있습니다.  
   
- XAML 2009를 사용 하는 경우 CLR 대신 기본 공용 언어 기본 형식에 대 한 XAML 형식을 가져올 형식, 사용할 수 있습니다 [공용 XAML 언어 기본 형식에 대 한 기본 제공 형식](../../../docs/framework/xaml-services/built-in-types-for-common-xaml-language-primitives.md) 의 정보 항목으로는 `typeString`합니다. 예를 들어, 다음에 선언할 수 있습니다 (접두사 매핑이 표시 되지 않지만 x는 XAML 2009에 대해 XAML 언어 XAML 네임 스페이스):  
+ XAML 2009를 사용 하는 경우 CLR 대신 기본 공용 언어 기본 형식에 대 한 XAML 형식을 가져올 형식, 사용할 수 있습니다 [공용 XAML 언어 기본 형식에 대 한 기본 제공 형식](built-in-types-for-common-xaml-language-primitives.md) 의 정보 항목으로는 `typeString`합니다. 예를 들어, 다음에 선언할 수 있습니다 (접두사 매핑이 표시 되지 않지만 x는 XAML 2009에 대해 XAML 언어 XAML 네임 스페이스):  
   
 ```xaml  
 <my:BusinessObject x:TypeArguments="x:String,x:Int32"/>  
@@ -82,7 +82,7 @@ xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib"
  Wpf에서 및 대상으로 할 때 [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)]와 함께 XAML 2009 기능을 사용할 수 있습니다 `x:TypeArguments` 느슨한 XAML (태그 컴파일되지 않은 XAML)에 대해서만 합니다. WPF에 대한 태그로 컴파일된 XAML 및 BAML 형식의 XAML은 현재 XAML 2009 키워드 및 기능을 지원하지 않습니다. 태그에는 XAML을 컴파일해야 하는 경우 "XAML 2006 및 WPF 일반 XAML 사용" 섹션에서 설명한 제한에서 작동 해야 합니다.  
   
 ## <a name="see-also"></a>참고자료
-- [x:Class 지시문](../../../docs/framework/xaml-services/x-class-directive.md)
-- [x:Type 태그 확장](../../../docs/framework/xaml-services/x-type-markup-extension.md)
-- [공용 XAML 언어 기본 형식에 대한 기본 제공 형식](../../../docs/framework/xaml-services/built-in-types-for-common-xaml-language-primitives.md)
-- [XAML의 제네릭](../../../docs/framework/xaml-services/generics-in-xaml.md)
+- [x:Class 지시문](x-class-directive.md)
+- [x:Type 태그 확장](x-type-markup-extension.md)
+- [공용 XAML 언어 기본 형식에 대한 기본 제공 형식](built-in-types-for-common-xaml-language-primitives.md)
+- [XAML의 제네릭](generics-in-xaml.md)

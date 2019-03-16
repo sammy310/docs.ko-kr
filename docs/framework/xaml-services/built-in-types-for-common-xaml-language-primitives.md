@@ -15,12 +15,12 @@ helpviewer_keywords:
 - x:Single [XAML Services]
 - x:Int32 [XAML Services]
 ms.assetid: 11de2f08-5b95-4989-b5ec-5178eb968184
-ms.openlocfilehash: f6225dfcc02b90da58ccafd5c70726b6f80f29d4
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: feda058a9672a3150f7beb5c1bc124eee1eae9eb
+ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48839094"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58048677"
 ---
 # <a name="built-in-types-for-common-xaml-language-primitives"></a>공용 XAML 언어 기본 형식에 대한 기본 제공 형식
 XAML 2009에서는 CLR(공용 언어 런타임) 및 다른 프로그래밍 언어에서 자주 사용되는 기본 형식인 여러 가지 데이터 형식에 대해 XAML 언어 수준 지원을 제공합니다. XAML 2009는 `x:Object`, `x:Boolean`, `x:Char`, `x:String`, `x:Decimal`, `x:Single`, `x:Double`, `x:Int16`, `x:Int32`, `x:Int64`, `x:TimeSpan`, `x:Uri`, `x:Byte`및 `x:Array`같은 기본 형식에 대한 지원을 추가합니다.  
@@ -46,7 +46,7 @@ xmlns:sys="clr-namespace:System;assembly=mscorlib">
 ### <a name="xobject"></a>x:Object  
  CLR 백업의 경우 `x:Object` 기본 형식은 <xref:System.Object>에 해당합니다.  
   
- 이 기본 형식은 일반적으로 응용 프로그램 태그에서 사용되지 않지만 XAML 형식 시스템에서 할당 가능성을 확인하는 경우와 같은 일부 시나리오에는 유용할 수 있습니다.  
+ 이 기본 형식은 일반적으로 애플리케이션 태그에서 사용되지 않지만 XAML 형식 시스템에서 할당 가능성을 확인하는 경우와 같은 일부 시나리오에는 유용할 수 있습니다.  
   
 ### <a name="xboolean"></a>x:Boolean  
  CLR 백업의 경우 `x:Boolean` 기본 형식은 <xref:System.Boolean>에 해당합니다.  
@@ -125,7 +125,7 @@ xmlns:sys="clr-namespace:System;assembly=mscorlib">
 ### <a name="xarray"></a>x:Array  
  CLR 백업의 경우 `x:Array` 기본 형식은 <xref:System.Array>에 해당합니다.  
   
- XAML 2006에서는 태그 확장 구문을 사용하여 배열을 정의할 수 있습니다. 그러나 XAML 2009 구문은 태그 확장에 액세스할 필요가 없는 언어로 정의된 기본 형식입니다. XAML 2006 지원에 대한 자세한 내용은 [x:Array Markup Extension](../../../docs/framework/xaml-services/x-array-markup-extension.md)을 참조하세요.  
+ XAML 2006에서는 태그 확장 구문을 사용하여 배열을 정의할 수 있습니다. 그러나 XAML 2009 구문은 태그 확장에 액세스할 필요가 없는 언어로 정의된 기본 형식입니다. XAML 2006 지원에 대한 자세한 내용은 [x:Array Markup Extension](x-array-markup-extension.md)을 참조하세요.  
   
  XAML 언어 사양 정의 대 한 참조 [ \[MS XAML\] 섹션 5.2.18](https://go.microsoft.com/fwlink/?LinkId=114525)합니다.  
   
@@ -133,4 +133,4 @@ xmlns:sys="clr-namespace:System;assembly=mscorlib">
 ## <a name="wpf-support"></a>WPF 지원  
  WPF에서 XAML 2009 기능을 사용할 수 있지만 태그로 컴파일되지 않은 XAML에만 사용할 수 있습니다. WPF에 대한 태그로 컴파일된 XAML 및 BAML 형식의 XAML은 현재 XAML 2009 키워드 및 기능을 지원하지 않습니다.  
   
- WPF와 함께 XAML 2009 기능을 사용할 수 있는 시나리오는 느슨한 XAML을 작성 하 고 다음 사용 하 여 WPF 런타임 및 개체 그래프에는 XAML을 로드 하는 경우 <xref:System.Windows.Markup.XamlReader.Load%2A?displayProperty=nameWithType>합니다. WPF <xref:System.Windows.Markup.XamlReader?displayProperty=nameWithType> 고 <xref:System.Windows.Markup.XamlReader.Load%2A> XAML 2009 언어 키워드 및 기능을 유효한 개체 그래프 표현으로 처리할 수 있습니다.
+ WPF와 함께 XAML 2009 기능을 사용할 수 있는 시나리오는 느슨한 XAML을 작성한 다음 <xref:System.Windows.Markup.XamlReader.Load%2A?displayProperty=nameWithType>를 사용하여 해당 XAML을 WPF 런타임 및 개체 그래프로 로드하는 경우입니다. WPF <xref:System.Windows.Markup.XamlReader?displayProperty=nameWithType> 및 해당 <xref:System.Windows.Markup.XamlReader.Load%2A> 는 XAML 2009 언어 키워드 및 기능을 유효한 개체 그래프 표현으로 처리할 수 있습니다.

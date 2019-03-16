@@ -7,12 +7,12 @@ helpviewer_keywords:
 - RFC 3066 standard [XAML Services]
 - standards [XAML Services], RFC 3066
 ms.assetid: 7aac0078-a1c5-41f8-b8b0-975510d9dca0
-ms.openlocfilehash: 508c1151b1b196a84b7c3a576e18d10c0a706fad
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9ec844c37ee2ef7979c82b308cdf167a46a3c072
+ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54692400"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58034419"
 ---
 # <a name="xmllang-handling-in-xaml"></a>XAML의 xml:lang 처리
 `xml:lang` 특성은 요소에 대해 언어 및 문화권 정보를 XML 형식으로 선언하는 [!INCLUDE[TLA2#tla_xml](../../../includes/tla2sharptla-xml-md.md)]에서 정의된 특성입니다. XAML을 사용해도 특성의 의미가 동일하게 유지되지만, 일부 추가적인 고려 사항이 적용됩니다.  
@@ -44,4 +44,4 @@ ms.locfileid: "54692400"
  <xref:System.Windows.FrameworkElement> 또는 <xref:System.Windows.FrameworkContentElement>의 파생 클래스인 요소의 경우, <xref:System.Windows.FrameworkElement.Language%2A> 특성의 해당되는 `xml:lang` 종속성 속성을 사용할 수 있습니다. 기본적으로, <xref:System.Windows.FrameworkElement.Language%2A> 속성은 이 속성 또는 `xml:lang` 특성 처리를 통해 달리 설정되지 않은 경우 "en-US"를 사용합니다.  
   
 ## <a name="see-also"></a>참고자료
-- [WPF의 전역화](../../../docs/framework/wpf/advanced/globalization-for-wpf.md)
+- [WPF의 전역화](../wpf/advanced/globalization-for-wpf.md)

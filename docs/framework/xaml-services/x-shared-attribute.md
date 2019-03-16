@@ -6,12 +6,12 @@ helpviewer_keywords:
 - x:Shared attribute [XAML Services]
 - Shared attribute in XAML [XAML Services]
 ms.assetid: c8cff434-2785-405f-9f95-16deb34c9e64
-ms.openlocfilehash: 1c718522a20fb2047ebf500adbf4044265e3af3d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 42de341d59e3e70103db765faf3160b5fe3250d3
+ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54542260"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58039397"
 ---
 # <a name="xshared-attribute"></a>x:Shared 특성
 로 설정 하면 `false`, 요청 특성 사용된 하는 리소스에 대 한 모든 요청에 대해 동일한 인스턴스를 공유 하는 대신 각 요청에 대 한 새 인스턴스를 만들 수 있도록 WPF 리소스 검색 동작을 수정 합니다.  
@@ -33,7 +33,7 @@ ms.locfileid: "54542260"
   
  와 같은 리소스 API 통해 반환 되는 개체를 수정 <xref:System.Windows.FrameworkElement.FindResource%2A>, 내에서 직접 개체를 수정 하거나는 <xref:System.Windows.ResourceDictionary>을 원래 리소스를 변경 합니다. 해당 리소스에 대 한 참조의 동적 리소스 참조 인 경우 해당 리소스의 소비자가 변경 된 리소스를 가져옵니다.  
   
- 리소스에 대 한 참조는 정적 리소스 참조 인 경우 변경 후 리소스 [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] 처리 시간 관련이 없습니다. 정적 및 동적 리소스 참조에 대 한 자세한 내용은 참조 하세요. [XAML 리소스](../../../docs/framework/wpf/advanced/xaml-resources.md)합니다.  
+ 리소스에 대 한 참조는 정적 리소스 참조 인 경우 변경 후 리소스 [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] 처리 시간 관련이 없습니다. 정적 및 동적 리소스 참조에 대 한 자세한 내용은 참조 하세요. [XAML 리소스](../wpf/advanced/xaml-resources.md)합니다.  
   
  명시적으로 지정 `x:Shared="true"` 작업이 거의 완료 기본 이미 이므로 합니다. 에 대 한 해당 직접 코드가 없는 `x:Shared` WPF에서 개체 모델; XAML 사용량에서만 지정할 수 있습니다 하 고 처리 해야 기본 WPF 동작에 의해 또는 로드 경로에서 중간 XAML 노드 스트림에서.NET Framework XAML Se를 사용 하 여 처리 하는 경우 서비스 및 해당 XAML 판독기입니다.  
   
@@ -51,5 +51,5 @@ ms.locfileid: "54542260"
   
 ## <a name="see-also"></a>참고자료
 - <xref:System.Windows.ResourceDictionary>
-- [XAML 리소스](../../../docs/framework/wpf/advanced/xaml-resources.md)
-- [기본 요소](../../../docs/framework/wpf/advanced/base-elements.md)
+- [XAML 리소스](../wpf/advanced/xaml-resources.md)
+- [기본 요소](../wpf/advanced/base-elements.md)

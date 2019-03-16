@@ -6,12 +6,12 @@ helpviewer_keywords:
 - nodes [XAML Services], XAML node stream
 - XAML [XAML Services], XAML node streams
 ms.assetid: 7c11abec-1075-474c-9d9b-778e5dab21c3
-ms.openlocfilehash: 261c44ae06959ed387a4619bf2fdb99b37141c86
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: e75d7f9454018b4a5f31eb36f1790d3a7b49af78
+ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57365726"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58034754"
 ---
 # <a name="understanding-xaml-node-stream-structures-and-concepts"></a>XAML 노드 스트림 구조 및 개념 이해
 
@@ -232,7 +232,7 @@ XAML 텍스트 태그에서 특성 형태로 태그 확장 사용이 수행된 �
 
 ### <a name="xamlobjectwriter-behavior-and-node-order"></a>XamlObjectWriter 동작 및 노드 순서
 
-`StartObject` 에 대한 <xref:System.Xaml.XamlObjectWriter> 는 XAML 개체 작성기에 개체 인스턴스를 즉시 생성하라는 신호가 아닐 수도 있습니다. XAML에는 추가 입력으로 개체를 초기화하고 전적으로 기본 생성자를 호출하여 초기 개체를 생성한 다음 속성을 설정하는 방법에 의존하지 않게 해주는 여러 언어 기능이 포함되어 있습니다. 이러한 기능에는 <xref:System.Windows.Markup.XamlDeferLoadAttribute>초기화 텍스트, [x:TypeArguments](../../../docs/framework/xaml-services/x-typearguments-directive.md), 태그 확장의 위치 매개 변수, 팩터리 메서드 및 연결된 [x:Arguments](../../../docs/framework/xaml-services/x-arguments-directive.md) 노드(XAML 2009)가 포함됩니다. 이러한 각 경우에서는 실제 개체 생성이 지연되며 노드 스트림이 다시 정렬되므로, XAML 개체 작성기가 구체적으로 해당 개체 유형에 대한 생성 지시문이 아닌 시작 멤버를 발견할 때마다 인스턴스를 실제로 생성하는 동작에 의존할 수 있습니다.
+`StartObject` 에 대한 <xref:System.Xaml.XamlObjectWriter> 는 XAML 개체 작성기에 개체 인스턴스를 즉시 생성하라는 신호가 아닐 수도 있습니다. XAML에는 추가 입력으로 개체를 초기화하고 전적으로 기본 생성자를 호출하여 초기 개체를 생성한 다음 속성을 설정하는 방법에 의존하지 않게 해주는 여러 언어 기능이 포함되어 있습니다. 이러한 기능에는 <xref:System.Windows.Markup.XamlDeferLoadAttribute>초기화 텍스트, [x:TypeArguments](x-typearguments-directive.md), 태그 확장의 위치 매개 변수, 팩터리 메서드 및 연결된 [x:Arguments](x-arguments-directive.md) 노드(XAML 2009)가 포함됩니다. 이러한 각 경우에서는 실제 개체 생성이 지연되며 노드 스트림이 다시 정렬되므로, XAML 개체 작성기가 구체적으로 해당 개체 유형에 대한 생성 지시문이 아닌 시작 멤버를 발견할 때마다 인스턴스를 실제로 생성하는 동작에 의존할 수 있습니다.
 
 ### <a name="getobject"></a>GetObject
 
@@ -241,5 +241,5 @@ XAML 텍스트 태그에서 특성 형태로 태그 확장 사용이 수행된 �
 ## <a name="see-also"></a>참고자료
 
 - <xref:System.Xaml.XamlObjectReader>
-- [XAML 서비스](../../../docs/framework/xaml-services/index.md)
-- [XAML 네임스페이스](../../../docs/framework/xaml-services/xaml-namespaces-for-net-framework-xaml-services.md)
+- [XAML 서비스](index.md)
+- [XAML 네임스페이스](xaml-namespaces-for-net-framework-xaml-services.md)
