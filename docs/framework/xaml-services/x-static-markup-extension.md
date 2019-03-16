@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Static markup extension in XAML [XAML Services]
 - XAML [XAML Services], x:Static markup extension
 ms.assetid: 056aee79-7cdd-434f-8174-dfc856cad343
-ms.openlocfilehash: 5dd454cb323d4dc2ab9b4ebd8b233ffda3e77820
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0956bb6daa60f947c1cd410ce4728da7d1bb707d
+ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54619326"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58037689"
 ---
 # <a name="xstatic-markup-extension"></a>x:Static 태그 확장
 에 정의 된 모든 값으로 정적 코드 엔터티 참조는 [!INCLUDE[TLA#tla_cls](../../../includes/tlasharptla-cls-md.md)]– 호환 방식으로 합니다. 참조 되는 정적 속성 XAML에서 속성 값을 제공 하기 사용할 수 있습니다.  
@@ -69,7 +69,7 @@ ms.locfileid: "54619326"
 
 이 태그 확장에 대 한 처리 정의한.NET Framework XAML 서비스 구현에서의 <xref:System.Windows.Markup.StaticExtension> 클래스입니다.  
 
-`x:Static`은 태그 확장입니다. XAML 사용의 모든 태그 확장을 `{` 고 `}` XAML 프로세서는 태그 확장 값을 입력 해야 한다는 인식 하는 규칙은 특성 구문에서 문자입니다. 태그 확장에 대한 자세한 내용은 [Markup Extensions for XAML Overview](../../../docs/framework/xaml-services/markup-extensions-for-xaml-overview.md)를 참조하세요.  
+`x:Static`은 태그 확장입니다. XAML 사용의 모든 태그 확장을 `{` 고 `}` XAML 프로세서는 태그 확장 값을 입력 해야 한다는 인식 하는 규칙은 특성 구문에서 문자입니다. 태그 확장에 대한 자세한 내용은 [Markup Extensions for XAML Overview](markup-extensions-for-xaml-overview.md)를 참조하세요.  
   
 ## <a name="wpf-usage-notes"></a>WPF 사용 정보  
  WPF 프로그래밍에 사용할 기본 XAML 네임 스페이스에는 많은 유용한 정적 속성이 있고 유용한 정적 속성 중 대부분 필요 없이 쉽게 사용할 수 있는 형식 변환기와 같은 지원 `{x:Static}` 합니다. 정적 속성에 대 한 중 하나가 참인 경우 XAML 네임 스페이스에 대 한 접두사를 매핑되어야 합니다.  
@@ -78,10 +78,10 @@ ms.locfileid: "54619326"
   
 -   사용자 지정 어셈블리에서 형식을 참조 합니다.  
   
--   WPF 기본 XAML 네임 스페이스의 일부가 되려면 매핑되지 않은 CLR 네임 스페이스 내에서 형식이 없는 WPF 어셈블리에 존재 하는 형식을 참조입니다. WPF에 대 한 기본 XAML 네임 스페이스를 CLR 네임 스페이스의 매핑을 다양 한 WPF 어셈블리에 정의 하 여 수행 됩니다 (이 개념에 대 한 자세한 내용은 참조 하세요. [XAML 네임 스페이스 및 WPF XAML에 대 한 매핑을 Namespace](../../../docs/framework/wpf/advanced/xaml-namespaces-and-namespace-mapping-for-wpf-xaml.md)). 매핑되지 않은 CLR 네임 스페이스는 해당 CLR 네임 스페이스 클래스 정의 되지 않는 일반적으로 XAML에 대 한 같은 대부분의 구성 된 경우 있습니다 <xref:System.Windows.Threading>합니다.  
+-   WPF 기본 XAML 네임 스페이스의 일부가 되려면 매핑되지 않은 CLR 네임 스페이스 내에서 형식이 없는 WPF 어셈블리에 존재 하는 형식을 참조입니다. WPF에 대 한 기본 XAML 네임 스페이스를 CLR 네임 스페이스의 매핑을 다양 한 WPF 어셈블리에 정의 하 여 수행 됩니다 (이 개념에 대 한 자세한 내용은 참조 하세요. [XAML 네임 스페이스 및 WPF XAML에 대 한 매핑을 Namespace](../wpf/advanced/xaml-namespaces-and-namespace-mapping-for-wpf-xaml.md)). 매핑되지 않은 CLR 네임 스페이스는 해당 CLR 네임 스페이스 클래스 정의 되지 않는 일반적으로 XAML에 대 한 같은 대부분의 구성 된 경우 있습니다 <xref:System.Windows.Threading>합니다.  
   
- WPF에 대 한 접두사와 XAML 네임 스페이스를 사용 하는 방법에 대 한 자세한 내용은 참조 하세요. [XAML 네임 스페이스 및 WPF XAML에 대 한 매핑 Namespace](../../../docs/framework/wpf/advanced/xaml-namespaces-and-namespace-mapping-for-wpf-xaml.md)합니다.  
+ WPF에 대 한 접두사와 XAML 네임 스페이스를 사용 하는 방법에 대 한 자세한 내용은 참조 하세요. [XAML 네임 스페이스 및 WPF XAML에 대 한 매핑 Namespace](../wpf/advanced/xaml-namespaces-and-namespace-mapping-for-wpf-xaml.md)합니다.  
   
 ## <a name="see-also"></a>참고자료
-- [x:Type 태그 확장](../../../docs/framework/xaml-services/x-type-markup-extension.md)
-- [WPF에서 System.Xaml로 마이그레이션된 형식](../../../docs/framework/xaml-services/types-migrated-from-wpf-to-system-xaml.md)
+- [x:Type 태그 확장](x-type-markup-extension.md)
+- [WPF에서 System.Xaml로 마이그레이션된 형식](types-migrated-from-wpf-to-system-xaml.md)

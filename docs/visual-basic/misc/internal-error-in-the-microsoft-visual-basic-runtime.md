@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrInternalError
 ms.assetid: 1a106880-dec8-4e75-a935-de3ec2096b25
-ms.openlocfilehash: d2e989e93553c22be48dab6dcda52ad268e92734
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e30bbe8b30573f54413499f04e96c77f25a888a1
+ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54616877"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58034288"
 ---
 # <a name="internal-error-in-the-microsoft-visual-basic-runtime"></a>Microsoft Visual Basic 런타임에 내부 오류 발생
 Microsoft Visual Basic 런타임에 내부 오류가 발생 했습니다.  
@@ -19,5 +19,5 @@ Microsoft Visual Basic 런타임에 내부 오류가 발생 했습니다.
 -   오류가 발생한 상황을 파악하여 Microsoft 기술 지원 서비스에 문의합니다.  
   
 ## <a name="see-also"></a>참고자료
-- [오류 형식](../../visual-basic/programming-guide/language-features/error-types.md)
 
+- [오류 형식](../../visual-basic/programming-guide/language-features/error-types.md)

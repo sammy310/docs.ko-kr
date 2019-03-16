@@ -7,12 +7,12 @@ helpviewer_keywords:
 - white-space processing in XAML [XAML Services]
 - characters [XAML Services], East Asian
 ms.assetid: cc9cc377-7544-4fd0-b65b-117b90bb0b23
-ms.openlocfilehash: 750f054c908cd9d837a18ee6c8a537285b325288
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: da559a7e009861faaba16484276eb97be537482b
+ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54728364"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58048040"
 ---
 # <a name="white-space-processing-in-xaml"></a>공백에서 XAML 처리
 XAML에 대 한 언어 규칙에 따르면 해당 유효 공백에서 처리 되어야 합니다는 [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] 프로세서 구현 합니다. 이 항목에서는 이들 XAML 언어 규칙에 대해 설명합니다. 정의한 추가 공백 처리도 문서화 된 [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] XAML 프로세서 및 serialization에 대 한 XAML 작성기 구현의 합니다.  
@@ -35,7 +35,7 @@ XAML에 대 한 언어 규칙에 따르면 해당 유효 공백에서 처리 되
   
 5.  종료 태그 바로 앞의 공백은 삭제됩니다.  
   
- "기본값"은 [xml:space](../../../docs/framework/xaml-services/xml-space-handling-in-xaml.md) 특성의 기본값으로 나타내는 상태에 해당합니다.  
+ "기본값"은 [xml:space](xml-space-handling-in-xaml.md) 특성의 기본값으로 나타내는 상태에 해당합니다.  
   
 <a name="whitespace_in_inner_text_and_string_primitives"></a>   
 ## <a name="white-space-in-inner-text-and-string-primitives"></a>내부 텍스트 및 문자열 기본 형식의 공백  
@@ -75,6 +75,6 @@ XAML에 대 한 언어 규칙에 따르면 해당 유효 공백에서 처리 되
  또한 흐름 문서 모델에서 줄 바꿈을 함축 하는 특정 인라인 요소는 의도적으로 공백을 추가 공백이 중요 한 컬렉션에도 합니다. 예를 들어를 <xref:System.Windows.Documents.LineBreak> 요소에 동일한 목적으로는 \<b R / > 태그 [!INCLUDE[TLA2#tla_html](../../../includes/tla2sharptla-html-md.md)], 태그의 가독성을 높이기 위해 일반적으로 <xref:System.Windows.Documents.LineBreak> 작성 된 줄 바꿈으로 후속 텍스트와에서 구분 됩니다. 후속 줄의 선행 공백이 될 수 있으므로 줄 바꿈을 정규화하면 안 됩니다. 해당 동작에 대 한 클래스 정의 사용 하도록 설정 하려면를 <xref:System.Windows.Documents.LineBreak> 요소에 적용 되는 <xref:System.Windows.Markup.TrimSurroundingWhitespaceAttribute>을 해석 하 고 있는 [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] 주변 공백 해당 의미에 대 한 프로세서 <xref:System.Windows.Documents.LineBreak> 항상 잘립니다.  
   
 ## <a name="see-also"></a>참고자료
-- [XAML 개요(WPF)](../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)
-- [XML 문자 엔터티 및 XAML](../../../docs/framework/xaml-services/xml-character-entities-and-xaml.md)
-- [XAML에서 처리 하는 xml: space](../../../docs/framework/xaml-services/xml-space-handling-in-xaml.md)
+- [XAML 개요(WPF)](../wpf/advanced/xaml-overview-wpf.md)
+- [XML 문자 엔터티 및 XAML](xml-character-entities-and-xaml.md)
+- [XAML에서 처리 하는 xml: space](xml-space-handling-in-xaml.md)

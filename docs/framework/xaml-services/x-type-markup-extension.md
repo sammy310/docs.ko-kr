@@ -14,12 +14,12 @@ helpviewer_keywords:
 - TargetType attribute [XAML Services]
 - Type markup extension in XAML [XAML Services]
 ms.assetid: e0e0ce6f-e873-49c7-8ad7-8b840eb353ec
-ms.openlocfilehash: 2fc44163db99be5a0f2ddb2820053a5bdda3ccbe
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 86e5619774cc1512e39fa2fb50f4c0ba5f1d074c
+ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54668992"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58042088"
 ---
 # <a name="xtype-markup-extension"></a>x:Type 태그 확장
 CLR 제공 <xref:System.Type> 개체는 지정된 된 XAML 형식에 대 한 기본 형식입니다.  
@@ -61,7 +61,7 @@ CLR 제공 <xref:System.Type> 개체는 지정된 된 XAML 형식에 대 한 기
 ## <a name="wpf-usage-notes"></a>WPF 사용 정보  
   
 ### <a name="default-xaml-namespace-and-type-mapping"></a>기본 XAML Namespace 및 형식 매핑  
- WPF 프로그래밍에 대 한 기본 XAML 네임 스페이스는 대부분의 일반적인 XAML 시나리오에 필요한 XAML 형식이 포함 따라서 XAML 형식 값을 참조할 때 접두사를 피할 수 있습니다. 또는 기본 XAML 네임 스페이스에 매핑되지 않은 CLR 네임 스페이스에서 있지만 WPF 어셈블리에 포함 된 형식에 대 한 사용자 지정 어셈블리에서 형식을 참조 하는 경우 접두사를 매핑할 해야 할 수 있습니다. 매핑 CLR 네임 스페이스의 XAML 네임 스페이스 및 접두사에 대 한 자세한 내용은 참조 하세요. [XAML 네임 스페이스 및 WPF XAML에 대 한 매핑을 Namespace](../../../docs/framework/wpf/advanced/xaml-namespaces-and-namespace-mapping-for-wpf-xaml.md)합니다.  
+ WPF 프로그래밍에 대 한 기본 XAML 네임 스페이스는 대부분의 일반적인 XAML 시나리오에 필요한 XAML 형식이 포함 따라서 XAML 형식 값을 참조할 때 접두사를 피할 수 있습니다. 또는 기본 XAML 네임 스페이스에 매핑되지 않은 CLR 네임 스페이스에서 있지만 WPF 어셈블리에 포함 된 형식에 대 한 사용자 지정 어셈블리에서 형식을 참조 하는 경우 접두사를 매핑할 해야 할 수 있습니다. 매핑 CLR 네임 스페이스의 XAML 네임 스페이스 및 접두사에 대 한 자세한 내용은 참조 하세요. [XAML 네임 스페이스 및 WPF XAML에 대 한 매핑을 Namespace](../wpf/advanced/xaml-namespaces-and-namespace-mapping-for-wpf-xaml.md)합니다.  
   
 ### <a name="type-properties-that-support-typename-as-string"></a>해당 지원 Typename 문자열로 속성 입력  
  WPF 형식의 일부 속성의 값을 지정할 수 있는 기술을 지 원하는 <xref:System.Type> 없이 `x:Type` 태그 확장을 사용 합니다. 대신 형식 이름을 문자열로 값을 지정할 수 있습니다. 이 예가 <xref:System.Windows.Controls.ControlTemplate.TargetType%2A?displayProperty=nameWithType> 고 <xref:System.Windows.Style.TargetType%2A?displayProperty=nameWithType>입니다. 형식 변환기 또는 태그 확장을 통해이 동작에 대 한 지원을 제공 하지 됩니다. 대신,이 지연 동작을 통해 구현 <xref:System.Windows.FrameworkElementFactory>합니다.  
@@ -71,7 +71,7 @@ CLR 제공 <xref:System.Type> 개체는 지정된 된 XAML 형식에 대 한 기
 ## <a name="xaml-2009"></a>XAML 2009  
  제네릭 형식 및 기능 동작을 수정에 대 한 추가 지원을 제공 하는 XAML 2009 `x:TypeArguments` 및 `x:Type` 이 지원을 제공 합니다.  
   
--   `x:TypeArguments` 및의 관련된 개체 요소를 제네릭 개체 인스턴스화에 대 한 루트 이외의 요소에 있을 수 있습니다. 자세한 내용은의 "XAML 2009" 섹션을 참조 하세요 [X:typearguments Directive](../../../docs/framework/xaml-services/x-typearguments-directive.md)합니다.  
+-   `x:TypeArguments` 및의 관련된 개체 요소를 제네릭 개체 인스턴스화에 대 한 루트 이외의 요소에 있을 수 있습니다. 자세한 내용은의 "XAML 2009" 섹션을 참조 하세요 [X:typearguments Directive](x-typearguments-directive.md)합니다.  
   
 -   XAML 2009 태그에서 제네릭 형식의 제약 조건을 지정 하는 구문을 지원 합니다. 사용할 수 있습니다 `x:TypeArguments`, `x:Type`, 또는 두 기능을 조합 합니다.  
   
@@ -81,6 +81,6 @@ CLR 제공 <xref:System.Type> 개체는 지정된 된 XAML 형식에 대 한 기
   
 ## <a name="see-also"></a>참고자료
 - <xref:System.Windows.Style>
-- [스타일 지정 및 템플릿](../../../docs/framework/wpf/controls/styling-and-templating.md)
-- [XAML 개요(WPF)](../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)
-- [태그 확장 및 WPF XAML](../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md)
+- [스타일 지정 및 템플릿](../wpf/controls/styling-and-templating.md)
+- [XAML 개요(WPF)](../wpf/advanced/xaml-overview-wpf.md)
+- [태그 확장 및 WPF XAML](../wpf/advanced/markup-extensions-and-wpf-xaml.md)

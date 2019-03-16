@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - XAML [XAML Services], type converter services how-to
 ms.assetid: b4dad00f-03da-4579-a4e9-d8d72d2ccbce
-ms.openlocfilehash: f3417ed53131a695623ea6c365314ab2c5eedd37
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 04d1a8b1c6f05537f12c3df79fda007332621264
+ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54629298"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58049451"
 ---
 # <a name="service-contexts-available-to-type-converters-and-markup-extensions"></a>형식 변환기 또는 태그 확장에서 사용할 수 있는 서비스 컨텍스트
 형식 변환기 및 태그 확장 사용을 지원하는 형식의 작성자에는 태그 또는 주변 개체 그래프 구조에서 사용하는 경우에 대한 컨텍스트 정보를 포함해야 할 수 있습니다. 제공된 개체를 올바르게 인스턴스화하거나 개체 그래프의 기존 개체에 대한 개체 참조를 만들 수 있도록 정보가 필요할 수 있습니다. .NET Framework XAML 서비스를 사용할 경우 필요할 수 있는 컨텍스트는 일련의 서비스 인터페이스로 표시됩니다. 형식 변환기 또는 태그 확장 지원 코드에서는 <xref:System.Xaml.XamlObjectWriter> 또는 관련 형식에서 사용 가능하고 통과되는 서비스 공급자 컨텍스트를 사용하여 서비스를 쿼리할 수 있습니다. XAML 스키마 컨텍스트는 이러한 한 서비스를 통해 직접 사용할 수 있습니다. 이 항목에서는 값 변환기 구현에서 서비스 컨텍스트에 액세스하는 방법을 설명하고 일반적으로 사용 가능한 서비스 및 해당 역할을 나열합니다.  
@@ -129,7 +129,7 @@ public override object ConvertFrom(ITypeDescriptorContext typeDescriptorContext,
   
  **서비스 API:**  <xref:System.Xaml.IXamlSchemaContextProvider.SchemaContext%2A>  
   
- 지연된 콘텐츠를 통합하기 위해 지연된 영역에서 같은 스키마 컨텍스트가 작동해야 하므로 XAML 스키마 컨텍스트는 모든 지연 로드 작업에 필요합니다. XAML 스키마 컨텍스트 역할에 대한 자세한 내용은 [XAML Services](../../../docs/framework/xaml-services/index.md)를 참조하세요.  
+ 지연된 콘텐츠를 통합하기 위해 지연된 영역에서 같은 스키마 컨텍스트가 작동해야 하므로 XAML 스키마 컨텍스트는 모든 지연 로드 작업에 필요합니다. XAML 스키마 컨텍스트 역할에 대한 자세한 내용은 [XAML Services](index.md)를 참조하세요.  
   
 ### <a name="irootobjectprovider"></a>IRootObjectProvider  
  **참조 설명서**: <xref:System.Xaml.IRootObjectProvider>  
@@ -189,5 +189,5 @@ public override object ConvertFrom(ITypeDescriptorContext typeDescriptorContext,
 ## <a name="see-also"></a>참고자료
 - <xref:System.Windows.Markup.MarkupExtension>
 - <xref:System.Xaml.XamlObjectWriter>
-- [XAML 태그 확장명 개요](../../../docs/framework/xaml-services/markup-extensions-for-xaml-overview.md)
-- [XAML을 위한 형식 변환기 개요](../../../docs/framework/xaml-services/type-converters-for-xaml-overview.md)
+- [XAML 태그 확장명 개요](markup-extensions-for-xaml-overview.md)
+- [XAML을 위한 형식 변환기 개요](type-converters-for-xaml-overview.md)

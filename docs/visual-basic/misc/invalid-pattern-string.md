@@ -2,12 +2,12 @@
 title: 잘못된 패턴 문자열
 ms.date: 07/20/2015
 ms.assetid: ec1aecdb-5339-4a93-be71-eec56b1d7438
-ms.openlocfilehash: 3fa42632ad6d69642d7b8ec36bf2880bc10a5024
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: bc2e91060ca1b0e21ea28b0f08febc3e0c54f4f1
+ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54732481"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58027313"
 ---
 # <a name="invalid-pattern-string"></a>잘못된 패턴 문자열
 검색의 `Like` 작업에서 지정된 패턴 문자열이 잘못되었습니다.  
@@ -23,4 +23,5 @@ ms.locfileid: "54732481"
 4.  닫는 대괄호를 사용하여 패턴 범위를 종료합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [Like 연산자](../../visual-basic/language-reference/operators/like-operator.md)

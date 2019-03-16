@@ -1,18 +1,18 @@
 ---
-title: XAML 태그 확장명 개요
+title: XAML 태그 확장 개요
 ms.date: 03/30/2017
 helpviewer_keywords:
 - markup extensions [XAML Services], custom
 - XAML [XAML Services], markup extensions
 ms.assetid: 261b2b11-2dc0-462f-8c66-55b8c9c6e436
-ms.openlocfilehash: 0d1d3530bfd8bc85d6ae2d6741cbe6d48b381f69
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 81e142a6989ad2c2c365def4ad43e1bad505c411
+ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54570020"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58019160"
 ---
-# <a name="markup-extensions-for-xaml-overview"></a>XAML 태그 확장명 개요
+# <a name="markup-extensions-for-xaml-overview"></a>XAML 태그 확장 개요
 태그 확장은 기본 형식이 나 특정 XAML 형식이 아닌 값을 가져오기 위한 XAML 기술입니다. 특성 사용과 관련하여 태그 확장은 여는 중괄호 `{` 의 알려진 문자 시퀀스를 사용하여 태그 확장 범위를 시작하고 닫는 중괄호 `}` 를 사용하여 종료합니다. .NET Framework XAML 서비스를 사용하는 경우 System.Xaml 어셈블리에서 미리 정의된 몇 가지 XAML 언어 태그 확장을 사용할 수 있습니다. System.Xaml에 정의된 <xref:System.Windows.Markup.MarkupExtension> 클래스에서 서브클래싱하고 고유한 태그 확장을 정의할 수도 있습니다. 또는 해당 프레임워크를 이미 참조하고 있는 경우 특정 프레임워크에 의해 정의된 태그 확장을 사용할 수 있습니다.  
   
  태그 확장 사용법에 액세스하는 경우 XAML 개체 작성기는 <xref:System.Windows.Markup.MarkupExtension> 재정의의 서비스 연결 지점을 통해 사용자 지정 <xref:System.Windows.Markup.MarkupExtension.ProvideValue%2A?displayProperty=nameWithType> 클래스에 서비스를 제공할 수 있습니다. 이 서비스는 사용법, 개체 작성기의 특정 기능, XAML 스키마 컨텍스트 등에 대한 컨텍스트를 가져오는 데 사용할 수 있습니다.  
@@ -25,28 +25,28 @@ ms.locfileid: "54570020"
 >  `x:` 접두사는 XAML 프로덕션의 루트 요소에서 XAML 언어 네임스페이스의 일반적인 XAML 네임스페이스 매핑에 사용됩니다. 다양 한 특정 프레임 워크에 대 한 Visual Studio 프로젝트 및 페이지 템플릿은이 사용 하 여 XAML 파일을 시작 하는 예를 들어 `x:` 매핑. 사용자 고유의 XAML 네임스페이스 매핑에서 다른 접두사 토큰을 선택할 수 있지만 이 설명서에서는 특정 프레임워크의 기본 XAML 네임스페이스나 다른 임의 CLR 또는 XML 네임스페이스와 달리 XAML 언어 XAML 네임 스페이스에서 정의된 부분인 해당 엔터티를 식별하는 방법으로 기본 `x:` 매핑을 가정합니다.  
   
 ### <a name="xtype"></a>x:Type  
- `x:Type` 은 명명된 형식에 <xref:System.Type> 개체를 제공합니다. 이 기능은 기본 CLR 형식 및 형식 파생을 그룹화 모니커 또는 식별자로 사용하는 지연 메커니즘에서 가장 자주 사용됩니다. WPF 스타일 및 템플릿, `TargetType` 속성의 용도는 특정 예제입니다. 자세한 내용은 [x:Type Markup Extension](../../../docs/framework/xaml-services/x-type-markup-extension.md)을 참조하세요.  
+ `x:Type` 은 명명된 형식에 <xref:System.Type> 개체를 제공합니다. 이 기능은 기본 CLR 형식 및 형식 파생을 그룹화 모니커 또는 식별자로 사용하는 지연 메커니즘에서 가장 자주 사용됩니다. WPF 스타일 및 템플릿, `TargetType` 속성의 용도는 특정 예제입니다. 자세한 내용은 [x:Type Markup Extension](x-type-markup-extension.md)을 참조하세요.  
   
 ### <a name="xstatic"></a>x:Static  
- `x:Static` 은 직접적으로 속성 값의 형식이 아니라 해당 형식으로 계산될 수 있는 값-형식 코드 엔터티에서 정적 값을 생성합니다. 잘 알려진 상수로 형식 정의에 이미 존재하는 값을 지정하는 데 유용합니다. 자세한 내용은 [x:Static Markup Extension](../../../docs/framework/xaml-services/x-static-markup-extension.md)을 참조하세요.  
+ `x:Static` 은 직접적으로 속성 값의 형식이 아니라 해당 형식으로 계산될 수 있는 값-형식 코드 엔터티에서 정적 값을 생성합니다. 잘 알려진 상수로 형식 정의에 이미 존재하는 값을 지정하는 데 유용합니다. 자세한 내용은 [x:Static Markup Extension](x-static-markup-extension.md)을 참조하세요.  
   
 ### <a name="xnull"></a>x:Null  
- `x:Null` 은 `null` 을 XAML 멤버에 대한 값으로 지정합니다. 특정 형식의 디자인인지 더 큰 프레임워크 개념인지에 따라 `null` 이 속성의 기본값이나 빈 문자열 특성의 암시적 값이 아닌 경우가 있습니다. 자세한 내용은 [x:Null Markup Extension](../../../docs/framework/xaml-services/x-null-markup-extension.md)을 참조하세요.  
+ `x:Null` 은 `null` 을 XAML 멤버에 대한 값으로 지정합니다. 특정 형식의 디자인인지 더 큰 프레임워크 개념인지에 따라 `null` 이 속성의 기본값이나 빈 문자열 특성의 암시적 값이 아닌 경우가 있습니다. 자세한 내용은 [x:Null Markup Extension](x-null-markup-extension.md)을 참조하세요.  
   
 ### <a name="xarray"></a>x:Array  
- `x:Array` 는 기본 요소 및 컨트롤 모델에서 제공하는 컬렉션 지원이 의도적으로 사용되지 않는 경우 XAML 구문에서 일반적인 배열 만들기를 지원합니다. 자세한 내용은 [x:Array Markup Extension](../../../docs/framework/xaml-services/x-array-markup-extension.md)을 참조하세요. 특히 XAML 2009에서 배열은 확장이 아닌 언어 기본 형식으로 액세스됩니다. 자세한 내용은 [XAML 2009 Language Features](../../../docs/framework/xaml-services/xaml-2009-language-features.md)을 참조하세요.  
+ `x:Array` 는 기본 요소 및 컨트롤 모델에서 제공하는 컬렉션 지원이 의도적으로 사용되지 않는 경우 XAML 구문에서 일반적인 배열 만들기를 지원합니다. 자세한 내용은 [x:Array Markup Extension](x-array-markup-extension.md)을 참조하세요. 특히 XAML 2009에서 배열은 확장이 아닌 언어 기본 형식으로 액세스됩니다. 자세한 내용은 [XAML 2009 Language Features](xaml-2009-language-features.md)을 참조하세요.  
   
 ### <a name="xreference"></a>x:Reference  
- `x:Reference` 는 원래(2006) 언어 집합의 확장인 XAML 2009의 일부입니다. `x:Reference` 는 개체 그래프에 있는 다른 기존 개체에 대한 참조를 나타냅니다. 해당 개체는 `x:Name`으로 식별됩니다. 자세한 내용은 [x:Reference Markup Extension](../../../docs/framework/xaml-services/x-reference-markup-extension.md)을 참조하세요.  
+ `x:Reference` 는 원래(2006) 언어 집합의 확장인 XAML 2009의 일부입니다. `x:Reference` 는 개체 그래프에 있는 다른 기존 개체에 대한 참조를 나타냅니다. 해당 개체는 `x:Name`으로 식별됩니다. 자세한 내용은 [x:Reference Markup Extension](x-reference-markup-extension.md)을 참조하세요.  
   
 ### <a name="other-x-constructs"></a>기타 x: 구문  
- XAML 언어 기능을 지원하는 다른 `x:` 구문도 있지만 이러한 구문은 태그 확장으로 구현되지 않습니다. 자세한 내용은 참조 하세요. [XAML Namespace (x:) 언어 기능](../../../docs/framework/xaml-services/xaml-namespace-x-language-features.md)합니다.  
+ XAML 언어 기능을 지원하는 다른 `x:` 구문도 있지만 이러한 구문은 태그 확장으로 구현되지 않습니다. 자세한 내용은 참조 하세요. [XAML Namespace (x:) 언어 기능](xaml-namespace-x-language-features.md)합니다.  
   
 <a name="the_markupextension_base_class"></a>   
 ## <a name="the-markupextension-base-class"></a>MarkupExtension 기본 클래스  
  System.Xaml의 XAML 판독기 및 XAML 작성기 기본 구현과 상호 작용할 수 있는 사용자 지정 태그 확장을 정의하려면 추상 <xref:System.Windows.Markup.MarkupExtension> 클래스에서 클래스를 파생시킵니다. 해당 클래스에는 재정의할 <xref:System.Windows.Markup.MarkupExtension.ProvideValue%2A>메서드가 한 개 있습니다. 태그 확장 사용에 대한 인수 및 일치하는 설정 가능한 속성을 지원하기 위해 추가 생성자도 정의해야 합니다.  
   
- <xref:System.Windows.Markup.MarkupExtension.ProvideValue%2A>을 통해 사용자 지정 태그 확장은 XAML 프로세서에서 태그 확장이 실제로 호출되는 환경을 보고하는 서비스 컨텍스트에 액세스할 수 있습니다. 로드 경로에서는 일반적으로 <xref:System.Xaml.XamlObjectWriter>입니다. 저장 경로에서는 일반적으로 <xref:System.Xaml.XamlXmlWriter>입니다. 각각은 서비스 공급자 패턴을 구현하는 내부 XAML 서비스 공급자 컨텍스트 클래스로 서비스 컨텍스트를 보고합니다. 사용 가능한 서비스 및 해당 서비스가 나타내는 의미에 대한 자세한 내용은 [Type Converters and Markup Extensions for XAML](../../../docs/framework/xaml-services/type-converters-and-markup-extensions-for-xaml.md)을 참조하세요.  
+ <xref:System.Windows.Markup.MarkupExtension.ProvideValue%2A>을 통해 사용자 지정 태그 확장은 XAML 프로세서에서 태그 확장이 실제로 호출되는 환경을 보고하는 서비스 컨텍스트에 액세스할 수 있습니다. 로드 경로에서는 일반적으로 <xref:System.Xaml.XamlObjectWriter>입니다. 저장 경로에서는 일반적으로 <xref:System.Xaml.XamlXmlWriter>입니다. 각각은 서비스 공급자 패턴을 구현하는 내부 XAML 서비스 공급자 컨텍스트 클래스로 서비스 컨텍스트를 보고합니다. 사용 가능한 서비스 및 해당 서비스가 나타내는 의미에 대한 자세한 내용은 [Type Converters and Markup Extensions for XAML](type-converters-and-markup-extensions-for-xaml.md)을 참조하세요.  
   
  태그 확장 클래스는 공용 액세스 수준을 사용해야 합니다. XAML 프로세서는 해당 서비스를 사용하기 위해 태그 확장의 지원 클래스를 항상 인스턴스화할 수 있어야 합니다.  
   
@@ -110,13 +110,13 @@ public Collate(CollationMode collationMode, object collateThis) {...}
   
 <a name="accessing_service_provider_context_from_a_markup_extension_implementation"></a>   
 ## <a name="accessing-service-provider-context-from-a-markup-extension-implementation"></a>태그 확장 구현에서 서비스 공급자 컨텍스트 액세스  
- 사용 가능한 서비스는 모든 값 변환기에서 동일합니다. 차이점은 각 값 변환기에서 서비스 컨텍스트를 수신하는 방법입니다. 서비스 액세스 및 사용 가능한 서비스는 [Type Converters and Markup Extensions for XAML](../../../docs/framework/xaml-services/type-converters-and-markup-extensions-for-xaml.md)항목에 설명되어 있습니다.  
+ 사용 가능한 서비스는 모든 값 변환기에서 동일합니다. 차이점은 각 값 변환기에서 서비스 컨텍스트를 수신하는 방법입니다. 서비스 액세스 및 사용 가능한 서비스는 [Type Converters and Markup Extensions for XAML](type-converters-and-markup-extensions-for-xaml.md)항목에 설명되어 있습니다.  
   
 <a name="property_element_usage_of_a_markup_extension"></a>   
 ## <a name="property-element-usage-of-a-markup-extension"></a>태그 확장의 속성 요소 사용  
  태그 확장 사용에 대한 시나리오는 종종 특성 사용에서 태그 확장을 사용하여 설계됩니다. 그러나 지원 클래스를 정의하여 속성 요소 사용을 지원할 수도 있습니다.  
   
- 태그 확장의 속성 요소 사용을 지원하려면 공용 기본 생성자를 정의합니다. 이 생성자는 정적 생성자가 아닌 인스턴스 생성자여야 합니다. 일반적으로 XAML 프로세서는 태그에서 처리하는 모든 개체 요소에서 기본 생성자를 호출해야 하기 때문에 이 생성자가 필요하며 여기에는 태그 확장 클래스가 개체 요소로 포함됩니다. 고급 시나리오의 경우 클래스에 대해 기본이 아닌 생성 경로를 정의할 수 있습니다. (자세한 내용은 [X:factorymethod 지시문](../../../docs/framework/xaml-services/x-factorymethod-directive.md).) 그러나 이러한 패턴을 태그 확장명 용도로 사용하면 디자이너와 원시 태그 사용자 모두 사용 패턴을 검색하기가 훨씬 더 어려워지므로 그렇게 해서는 안 됩니다.  
+ 태그 확장의 속성 요소 사용을 지원하려면 공용 기본 생성자를 정의합니다. 이 생성자는 정적 생성자가 아닌 인스턴스 생성자여야 합니다. 일반적으로 XAML 프로세서는 태그에서 처리하는 모든 개체 요소에서 기본 생성자를 호출해야 하기 때문에 이 생성자가 필요하며 여기에는 태그 확장 클래스가 개체 요소로 포함됩니다. 고급 시나리오의 경우 클래스에 대해 기본이 아닌 생성 경로를 정의할 수 있습니다. (자세한 내용은 [X:factorymethod 지시문](x-factorymethod-directive.md).) 그러나 이러한 패턴을 태그 확장명 용도로 사용하면 디자이너와 원시 태그 사용자 모두 사용 패턴을 검색하기가 훨씬 더 어려워지므로 그렇게 해서는 안 됩니다.  
   
 <a name="attributing_for_a_custom_markup_extension"></a>   
 ## <a name="attributing-for-a-custom-markup-extension"></a>사용자 지정 태그 확장에 대한 특성 지정  
@@ -156,5 +156,5 @@ public Collate(CollationMode collationMode, object collateThis) {...}
   
 ## <a name="see-also"></a>참고자료
 - <xref:System.Windows.Markup.MarkupExtension>
-- [XAML을 위한 형식 변환기 및 태그 확장명](../../../docs/framework/xaml-services/type-converters-and-markup-extensions-for-xaml.md)
-- [태그 확장 및 WPF XAML](../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md)
+- [XAML을 위한 형식 변환기 및 태그 확장명](type-converters-and-markup-extensions-for-xaml.md)
+- [태그 확장 및 WPF XAML](../wpf/advanced/markup-extensions-and-wpf-xaml.md)

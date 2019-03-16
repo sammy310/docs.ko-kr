@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrApplicationLog_ExhaustedPossibleStreamNames
 ms.assetid: 33994f52-8efb-4790-a459-033e5c1db632
-ms.openlocfilehash: 0553da64ca8fcac148cd8da5c22227b5824387de
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 45b7a16608bea4879e84fa7004097a8c38312284
+ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54628749"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58031704"
 ---
 # <a name="unable-to-obtain-a-stream-for-the-log"></a>로그에 대한 스트림을 가져올 수 없습니다.
 로그에 대한 스트림을 가져올 수 없습니다. 에 기반한 파일 이름이 \<이름 >에서 이미 사용 중인 합니다.  
@@ -25,6 +25,7 @@ ms.locfileid: "54628749"
 2.  <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener> 개체가 새 로그를 만들 수 있도록 기존 로그를 보관하고 컴퓨터에서 제거합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener>
 - <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.LogFileCreationSchedule%2A>
 - [My.Application.Log](xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase.Log)

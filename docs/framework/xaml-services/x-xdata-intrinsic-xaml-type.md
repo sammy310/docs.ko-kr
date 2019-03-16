@@ -10,12 +10,12 @@ helpviewer_keywords:
 - XData in XAML [XAML Services]
 - x:XData XAML directive element [XAML Services]
 ms.assetid: 7ce209c2-621b-4977-b643-565f7e663534
-ms.openlocfilehash: 8b951b33242fa7e17a02133adb8fed4ce638e51e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 68468c3c10fd884cf5fb92160e3cde41dbf7d529
+ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54498049"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58030270"
 ---
 # <a name="xxdata-intrinsic-xaml-type"></a>x:XData 내장 XAML 형식
 XAML 프로덕션 내에서 XML 데이터 아일랜드 배치를 사용 하도록 설정 합니다. XML 요소 내에서 `x:XData` 것 처럼 기본 XAML 네임 스페이스의 일부 또는 모든 다른 XAML 네임 스페이스 XAML 프로세서에서 처리 되지 않아야 합니다. `x:XData` 임의의 올바른 형식의 XML을 포함할 수 있습니다.  
@@ -45,11 +45,11 @@ XAML 프로덕션 내에서 XML 데이터 아일랜드 배치를 사용 하도�
 ## <a name="wpf-usage-notes"></a>WPF 사용 정보  
  합니다 `x:XData` 개체의 자식 개체로 주로 <xref:System.Windows.Data.XmlDataProvider>, 또는의 자식 개체로 <xref:System.Windows.Data.XmlDataProvider.XmlSerializer%2A?displayProperty=nameWithType> 속성 (XAML,이 일반적으로 표시 속성 요소 구문에서).  
   
- 데이터 (빈 문자열로 설정 됨) 새 기본 XML 네임 스페이스는 데이터 아일랜드 내에서 기본 XML 네임 스페이스를 일반적으로 재정의 해야 합니다. 간단한 데이터 아일랜드 때문에이 가장 쉬운 방법은 <xref:System.Windows.Data.Binding.XPath%2A> 식을 참조 하 고 데이터에 바인딩하는 접두사의 포함을 방지할 수 있습니다. 더 복잡 한 데이터 아일랜드는 데이터에 대 한 여러 개의 접두사를 정의 하 고 루트 XML 네임 스페이스에 대 한 특정 접두사를 사용할 수 있습니다. 이 경우 모든 <xref:System.Windows.Data.Binding.XPath%2A> 식 참조에 적절 한 네임 스페이스 매핑 접두사를 포함 해야 합니다. 자세한 내용은 [데이터 바인딩 개요](../../../docs/framework/wpf/data/data-binding-overview.md)를 참조하세요.  
+ 데이터 (빈 문자열로 설정 됨) 새 기본 XML 네임 스페이스는 데이터 아일랜드 내에서 기본 XML 네임 스페이스를 일반적으로 재정의 해야 합니다. 간단한 데이터 아일랜드 때문에이 가장 쉬운 방법은 <xref:System.Windows.Data.Binding.XPath%2A> 식을 참조 하 고 데이터에 바인딩하는 접두사의 포함을 방지할 수 있습니다. 더 복잡 한 데이터 아일랜드는 데이터에 대 한 여러 개의 접두사를 정의 하 고 루트 XML 네임 스페이스에 대 한 특정 접두사를 사용할 수 있습니다. 이 경우 모든 <xref:System.Windows.Data.Binding.XPath%2A> 식 참조에 적절 한 네임 스페이스 매핑 접두사를 포함 해야 합니다. 자세한 내용은 [데이터 바인딩 개요](../wpf/data/data-binding-overview.md)를 참조하세요.  
   
  기술적으로 보면 `x:XData` 형식의 모든 속성의 콘텐츠로 사용할 수 있습니다 <xref:System.Xml.Serialization.IXmlSerializable>합니다. 그러나 <xref:System.Windows.Data.XmlDataProvider.XmlSerializer%2A?displayProperty=nameWithType> 주로 사용 되는 구현입니다.  
   
 ## <a name="see-also"></a>참고자료
 - <xref:System.Windows.Data.XmlDataProvider>
-- [데이터 바인딩 개요](../../../docs/framework/wpf/data/data-binding-overview.md)
-- [Binding 태그 확장](../../../docs/framework/wpf/advanced/binding-markup-extension.md)
+- [데이터 바인딩 개요](../wpf/data/data-binding-overview.md)
+- [Binding 태그 확장](../wpf/advanced/binding-markup-extension.md)

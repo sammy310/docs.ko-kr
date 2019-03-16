@@ -6,12 +6,12 @@ helpviewer_keywords:
 - XAML [XAML Services], System.Xaml and WPF
 - System.Xaml [XAML Services], types migrated from WPF
 ms.assetid: d79dabf5-a2ec-4e8d-a37a-67c4ba8a2b91
-ms.openlocfilehash: bc895313ae89d464c4ddc16607d19b2e6160f80c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4fc9d1b2666db05fc4fb902cf8db03d9d876001b
+ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54524262"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58031478"
 ---
 # <a name="types-migrated-from-wpf-to-systemxaml"></a>WPF에서 System.Xaml로 마이그레이션된 형식
 [!INCLUDE[net_v35_long](../../../includes/net-v35-long-md.md)] 하 고 [!INCLUDE[net_v30_long](../../../includes/net-v30-long-md.md)]모두 [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] 및 Windows Workflow Foundation XAML 언어 구현이 포함 되었습니다. WPF XAML 구현에 대해 확장성을 제공한 공용 형식은 대부분 WindowsBase, PresentationCore 및 PresentationFramework 어셈블리에 있었습니다. 마찬가지로,을 Windows Workflow Foundation XAML에 대 한 확장성을 제공한 공용 형식은 System.Workflow.ComponentModel 어셈블리에 존재 합니다. [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)]에서는 XAML 관련 형식 중 일부가 System.Xaml 어셈블리로 마이그레이션되었습니다. XAML 언어 서비스의 공용 .NET Framework 구현은 원래 특정 프레임워크의 XAML 구현에서 정의되었지만 현재 전반적인 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] XAML 언어 지원의 일부인 많은 XAML 확장성 시나리오를 사용할 수 있게 합니다. 이 항목에서는 마이그레이션되는 형식을 나열하고 마이그레이션과 관련된 문제를 논의합니다.  
@@ -65,7 +65,7 @@ ms.locfileid: "54524262"
 |<xref:System.Windows.Markup.StaticExtension>|`{x:Static ...}`|  
 |<xref:System.Windows.Markup.TypeExtension>|`{x:Type ...}`|  
   
- System.Xaml에 특정 지원 클래스가 없을 수도 있지만 이제 XAML 언어의 언어 기능 처리를 위한 일반적인 논리가 System.Xaml과 구현된 XAML 판독기 및 XAML 작성기에 상주합니다. 예를 들어 `x:TypeArguments` 는 System.Xaml 구현의 XAML 판독기 및 XAML 작성기에서 처리되는 특성입니다. XAML 노드 스트림에 기록될 수 있고, 기본(CLR 기반) XAML 스키마 컨텍스트 처리가 있으며, XAML 형식 시스템 표현을 포함합니다. 결과적으로, 모든 XAML 언어 수준 기능에 대한 참조 설명서는 3.5 설명서 집합에서와 같이 [고급(Windows Presentation Foundation)](../../../docs/framework/xaml-services/index.md) 의 하위 항목으로 WPF 설명서에 포함되는 대신 [XAML Services](../../../docs/framework/wpf/advanced/index.md) 의 하위 항목 및 .NET Framework 설명서 집합의 일반 영역입니다.  
+ System.Xaml에 특정 지원 클래스가 없을 수도 있지만 이제 XAML 언어의 언어 기능 처리를 위한 일반적인 논리가 System.Xaml과 구현된 XAML 판독기 및 XAML 작성기에 상주합니다. 예를 들어 `x:TypeArguments` 는 System.Xaml 구현의 XAML 판독기 및 XAML 작성기에서 처리되는 특성입니다. XAML 노드 스트림에 기록될 수 있고, 기본(CLR 기반) XAML 스키마 컨텍스트 처리가 있으며, XAML 형식 시스템 표현을 포함합니다. 결과적으로, 모든 XAML 언어 수준 기능에 대한 참조 설명서는 3.5 설명서 집합에서와 같이 [고급(Windows Presentation Foundation)](index.md) 의 하위 항목으로 WPF 설명서에 포함되는 대신 [XAML Services](../wpf/advanced/index.md) 의 하위 항목 및 .NET Framework 설명서 집합의 일반 영역입니다.  
   
 <a name="valueserializer_and_supporting_classes"></a>   
 ## <a name="valueserializer-and-supporting-classes"></a>ValueSerializer 및 지원 클래스  
@@ -126,4 +126,4 @@ ms.locfileid: "54524262"
  WPF 어셈블리 및 System.Xaml에 대한 참조를 둘 다 포함하고 `include` 및 <xref:System.Windows.Markup> 네임스페이스에 모두 <xref:System.Xaml> 문을 사용하는 경우 형식을 명확하게 확인하기 위해 이러한 API에 대한 호출을 정규화해야 할 수도 있습니다.  
   
 ## <a name="see-also"></a>참고자료
-- [XAML 서비스](../../../docs/framework/xaml-services/index.md)
+- [XAML 서비스](index.md)
