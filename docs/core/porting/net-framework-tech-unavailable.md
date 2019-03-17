@@ -4,12 +4,12 @@ description: .NET Core에서 사용할 수 없는 .NET Framework 기술에 대�
 author: cartermp
 ms.author: mairaw
 ms.date: 12/7/2018
-ms.openlocfilehash: 8b43c15a942e0effab486e5399325bec746484a2
-ms.sourcegitcommit: c6f69b0cf149f6b54483a6d5c2ece222913f43ce
+ms.openlocfilehash: 9d7860184806288dd0d5eb3b0447839d5e47c27f
+ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2019
-ms.locfileid: "55904878"
+ms.lasthandoff: 03/17/2019
+ms.locfileid: "58125475"
 ---
 # <a name="net-framework-technologies-unavailable-on-net-core"></a>.NET Core에서 사용할 수 없는 .NET Framework 기술
 
@@ -21,7 +21,7 @@ API 또는 기술이 현재 구현되지 않았기 때문에 이들을 고의로
 
 애플리케이션 도메인(AppDomains)은 앱을 서로 분리합니다. AppDomain에는 런타임 지원이 필요하고, 일반적으로 상당히 비싸므로 추가 앱 도메인을 만들도록 지원하지 않습니다. 앞으로 이 기능을 추가할 계획이 없습니다. 코드 격리의 경우 별도의 프로세스 또는 컨테이너를 대신 사용하는 것이 좋습니다. 어셈블리를 동적으로 로드하기 위해 새 <xref:System.Runtime.Loader.AssemblyLoadContext> 클래스를 사용하는 것이 좋습니다.
 
-.NET Framework에서 코드를 쉽게 마이그레이션할 수 있도록 .NET Core에서는 <xref:System.AppDomain> API 표면의 일부를 공개했습니다. API 중 일부는 정상적으로 작동하고(예: <xref:System.AppDomain.UnhandledException?displayProperty=nameWithType>), 일부 멤버는 아무것도 수행하지 않고(예: <xref:System.AppDomain.SetCachePath%2A>), 일부는 <xref:System.PlatformNotSupportedException>을 throw합니다(예: <xref:System.AppDomain.CreateDomain%2A>). [dotnet/corefx GitHub 리포지토리](https://github.com/dotnet/corefx)의 [`System.AppDomain` 참조 소스](https://github.com/dotnet/corefx/blob/master/src/System.Runtime.Extensions/src/System/AppDomain.cs)에 대해 사용하는 형식을 확인하여 구현된 버전과 일치하는 분기를 선택합니다.
+.NET Framework에서 코드를 쉽게 마이그레이션할 수 있도록 .NET Core에서는 <xref:System.AppDomain> API 표면의 일부를 공개했습니다. API 중 일부는 정상적으로 작동하고(예: <xref:System.AppDomain.UnhandledException?displayProperty=nameWithType>), 일부 멤버는 아무것도 수행하지 않고(예: <xref:System.AppDomain.SetCachePath%2A>), 일부는 <xref:System.PlatformNotSupportedException>을 throw합니다(예: <xref:System.AppDomain.CreateDomain%2A>). [dotnet/corefx GitHub 리포지토리](https://github.com/dotnet/corefx)의 [`System.AppDomain` 참조 소스](https://github.com/dotnet/corefx/blob/master/src/Common/src/CoreLib/System/AppDomain.cs)에 대해 사용하는 형식을 확인하여 구현된 버전과 일치하는 분기를 선택합니다.
 
 ## <a name="remoting"></a>원격 통신
 
