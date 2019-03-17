@@ -2,12 +2,12 @@
 title: 워크플로 추적 구성
 ms.date: 03/30/2017
 ms.assetid: 905adcc9-30a0-4918-acd6-563f86db988a
-ms.openlocfilehash: c72221eca0d6a8281c68914a3c9eb0557139d329
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: c3e73c3801a41a9401ac2e636fda6362487a05af
+ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57719405"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58126203"
 ---
 # <a name="configuring-tracking-for-a-workflow"></a>워크플로 추적 구성
 
@@ -184,9 +184,9 @@ WF 4는 추적 레코드를 ETW(Windows용 이벤트 추적) 세션에 기록하
 
 6. 마우스 오른쪽 단추로 클릭 합니다 **분석** 노드와 선택 **새로 고침 합니다.** 가운데 창에 추적 레코드가 표시됩니다.
 
-다음 이미지는 이벤트 뷰어의 추적 이벤트를 보여 줍니다.
+다음 이미지는 이벤트 뷰어에서 추적 이벤트를 보여줍니다.
 
-![추적 레코드 이벤트 뷰어에서 보여 주는](./media/trackingeventviewer.PNG "TrackingEventViewer")
+![추적 레코드 이벤트 뷰어에서 보여 주는 스크린샷.](./media/configuring-tracking-for-a-workflow/tracking-event-viewer.png)
 
 ### <a name="registering-an-application-specific-provider-id"></a>응용 프로그램별 공급자 ID 등록
 

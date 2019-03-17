@@ -9,12 +9,12 @@ helpviewer_keywords:
 - gradients [Windows Forms], creating path
 - graphics paths [Windows Forms], creating gradient
 ms.assetid: 1948e834-e104-481c-b71d-d8aa9e4d106e
-ms.openlocfilehash: 6fbe8a78131cb64e28326133a7cc0fbdcbffd46b
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: cbbffa7b9250c5e489a95f687ea58eaf2a08d1bf
+ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57720399"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58126229"
 ---
 # <a name="how-to-create-a-path-gradient"></a>방법: 경로 그라데이션 만들기
 <xref:System.Drawing.Drawing2D.PathGradientBrush> 클래스 점진적으로 색을 변경 하 여 셰이프를 입력 하는 방식을 사용자 지정할 수 있습니다. 예를 들어 경로의 센터에 대 한 한 가지 색 및 경로 경계에 다른 색을 지정할 수 있습니다. 또한 각 패스의 경계를 따라 여러 지점에 대 한 별도 색을 지정할 수 있습니다.  
@@ -26,13 +26,13 @@ ms.locfileid: "57720399"
   
 -   다음 예제에서는 경로 그라데이션 브러시를 사용 하 여 타원을 채웁니다. 가운데 색은 파랑으로 설정 하 고 경계 색 바다색으로 설정 됩니다. 다음 그림은 채워진된 타원을 보여 줍니다.  
   
-     ![경로 그라데이션](./media/pathgradient1.png "pathgradient1")  
+     ![그라데이션 경로 타원을 채웁니다.](./media/how-to-create-a-path-gradient/gradient-path-filled-ellipse.png)  
   
      기본적으로 경로 그라데이션 브러시를 경로의 경계 외부로 확장 되지 않습니다. 경로 그라데이션 브러시를 사용 하 여 경로 경계를 넘어 확장 하는 그림에 맞게 경로 외부 화면 영역의 채워지지 않습니다.  
   
-     다음 그림에서는 변경 하는 경우 어떻게 되나요 합니다 <xref:System.Drawing.Graphics.FillEllipse%2A> 에 다음 코드에서 호출 `e.Graphics.FillRectangle(pthGrBrush, 0, 10, 200, 40)`합니다.  
+     다음 그림에서는 변경 하는 경우 어떻게 되나요 합니다 <xref:System.Drawing.Graphics.FillEllipse%2A> 에 다음 코드에서 호출 `e.Graphics.FillRectangle(pthGrBrush, 0, 10, 200, 40)`:  
   
-     ![경로 그라데이션](./media/pathgradient2.png "pathgradient2")  
+     ![그라데이션 경로 경로 경계를 벗어나 확장입니다.](./media/how-to-create-a-path-gradient/gradient-path-extended-beyond-boundary.png)  
   
      [!code-csharp[System.Drawing.UsingaGradientBrush#11](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/CS/Class1.cs#11)]
      [!code-vb[System.Drawing.UsingaGradientBrush#11](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/VB/Class1.vb#11)]  
@@ -46,9 +46,9 @@ ms.locfileid: "57720399"
      [!code-csharp[System.Drawing.UsingaGradientBrush#12](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/CS/Class1.cs#12)]
      [!code-vb[System.Drawing.UsingaGradientBrush#12](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/VB/Class1.vb#12)]  
   
--   다음 예제에서는 그립니다 없이 경로 그라데이션을 <xref:System.Drawing.Drawing2D.GraphicsPath> 코드에서이 개체입니다. 특정 <xref:System.Drawing.Drawing2D.PathGradientBrush.%23ctor%2A> 예제의 생성자 점의 배열을 받지만 필요 하지 않습니다는 <xref:System.Drawing.Drawing2D.GraphicsPath> 개체입니다. 또한는 <xref:System.Drawing.Drawing2D.PathGradientBrush> 경로가 아닌 사각형을 채우는 데 사용 됩니다. 사각형은 사각형의 일부 브러시에 의해 칠하지 않습니다 있도록 브러시를 정의 하는 데 닫힌된 경로 보다 큽니다. 다음 그림에서는 사각형 (점선) 및 경로 그라데이션 브러시로 칠하는 사각형의 일부를 보여 줍니다.  
+-   다음 예제에서는 그립니다 없이 경로 그라데이션을 <xref:System.Drawing.Drawing2D.GraphicsPath> 코드에서이 개체입니다. 특정 <xref:System.Drawing.Drawing2D.PathGradientBrush.%23ctor%2A> 예제의 생성자 점의 배열을 받지만 필요 하지 않습니다는 <xref:System.Drawing.Drawing2D.GraphicsPath> 개체입니다. 또한는 <xref:System.Drawing.Drawing2D.PathGradientBrush> 경로가 아닌 사각형을 채우는 데 사용 됩니다. 사각형은 사각형의 일부 브러시에 의해 칠하지 않습니다 있도록 브러시를 정의 하는 데 닫힌된 경로 보다 큽니다. 다음 그림에서는 사각형 (점선) 및 경로 그라데이션 브러시로 칠하는 사각형의 일부를 보여 줍니다. 
   
-     ![그라데이션](./media/gradient4.png "gradient4")  
+     ![경로 그라데이션 브러시 그라데이션 부분입니다.](./media/how-to-create-a-path-gradient/gradient-painted-path-gradient-brush.png)  
   
      [!code-csharp[System.Drawing.UsingaGradientBrush#13](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/CS/Class1.cs#13)]
      [!code-vb[System.Drawing.UsingaGradientBrush#13](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/VB/Class1.vb#13)]  
@@ -65,7 +65,7 @@ ms.locfileid: "57720399"
   
      다음 그림에서는 다음 코드의 출력을 보여 줍니다. 왼쪽 타원 바다색 중심점에만 있습니다. 오른쪽 타원 바다색 내부 경로 내 어디에서 나이입니다.  
   
- ![Gradient](./media/focusscales1nogamma.png "focusscales1NoGamma")  
+ ![포커스 눈금의 그라데이션 효과](./media/how-to-create-a-path-gradient/focus-scales-aqua-inner-outer-ellipse.png)  
   
  [!code-csharp[System.Drawing.UsingaGradientBrush#14](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/CS/Class1.cs#14)]
  [!code-vb[System.Drawing.UsingaGradientBrush#14](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/VB/Class1.vb#14)]  
@@ -78,7 +78,7 @@ ms.locfileid: "57720399"
   
      다음 그림에서는 사용자 지정 경로 그라데이션 브러시를 사용 하 여 채운 삼각형을 보여 줍니다.  
   
-     ![경로 그라데이션](./media/pathgradient4.png "pathgradient4")  
+     ![사용자 지정 경로 그라데이션 브러시를 사용 하 여 삼각형이 채워집니다.](./media/how-to-create-a-path-gradient/gradient-brush-filled-triangle.png)  
   
      [!code-csharp[System.Drawing.UsingaGradientBrush#15](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/CS/Class1.cs#15)]
      [!code-vb[System.Drawing.UsingaGradientBrush#15](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/VB/Class1.vb#15)]  
@@ -94,16 +94,16 @@ ms.locfileid: "57720399"
   
      다음 그림은 채워진된 타원 및 경로 그라데이션 브러시의 중심점을 보여 줍니다.  
   
-     ![경로 그라데이션](./media/pathgradient5.png "pathgradient5")  
+     ![채워진 타원 및 센터 지점과 그라데이션 경로입니다.](./media/how-to-create-a-path-gradient/gradient-path-filled-ellipse-center-point.png)  
   
 -   경로 브러시를 생성 하는 데 사용 된 외부 위치 경로 그라데이션 브러시의 중심점을 설정할 수 있습니다. 다음 예제에서는 대체 설정에 대 한 호출을 <xref:System.Drawing.Drawing2D.PathGradientBrush.CenterPoint%2A> 위의 코드에서 속성입니다.  
   
      [!code-csharp[System.Drawing.UsingaGradientBrush#17](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/CS/Class1.cs#17)]
      [!code-vb[System.Drawing.UsingaGradientBrush#17](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/VB/Class1.vb#17)]  
   
-     다음 그림에서는이 변경으로 인해 출력을 보여줍니다.  
+     다음 그림에서는이 변경으로 인해 출력을 보여 줍니다.  
   
-     ![경로 그라데이션](./media/pathgradient6.png "pathgradient6")  
+     ![패스의 외부 영역 중심점을 사용 하 여 그라데이션 경로입니다.](./media/how-to-create-a-path-gradient/gradient-path-center-point-outside.png)  
   
      앞의 그림에서 타원의 오른쪽 끝에 있는 점 없는 순수 파란색 (근접 하지만). 그라데이션의 색 채우기 색 (0, 0, 255) 순수 파란색 수 없는 지점 (145, 35)에 도달 하는 경우에 따라 배치 됩니다. 채우기에 도달 하지 않습니다 하지만 (145, 35) 해당 경로 내 에서만 경로 그라데이션 브러시를 그리는 때문입니다.  
   

@@ -18,12 +18,12 @@ helpviewer_keywords:
 - nested message processing [WPF]
 - reentrancy [WPF]
 ms.assetid: 02d8fd00-8d7c-4604-874c-58e40786770b
-ms.openlocfilehash: e2a4b1157ec1f114b9e33f220e09fc791cfb9fc3
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: a1417c5ee6fe774214c10b0164eb84dbfb2ed2bb
+ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57353038"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58125683"
 ---
 # <a name="threading-model"></a>스레딩 모델
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]는 개발자가 스레딩의 어려움을 해결하도록 디자인되어 있습니다. 결과적으로 대부분의 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 개발자가 둘 이상의 스레드를 사용 하는 인터페이스를 작성할 필요가 없습니다. 다중 스레드 프로그램은 복잡하고 디버그하기 어려우므로 단일 스레드 솔루션이 있을 경우 피해야 합니다.  
@@ -62,7 +62,7 @@ ms.locfileid: "57353038"
   
  다음 예제를 참조하세요.  
   
- ![소수 스크린 샷](./media/threadingprimenumberscreenshot.PNG "ThreadingPrimeNumberScreenShot")  
+ ![소수의 스레딩 보여 주는 스크린샷.](./media/threading-model/threading-prime-numbers.png)  
   
  이 간단한 애플리케이션은 3부터 위쪽으로 계산하여 소수를 검색합니다. 클릭할 때 합니다 **시작** 단추 검색이 시작 됩니다. 프로그램이 소수를 찾으면 검색 결과로 사용자 인터페이스를 업데이트합니다. 이때 사용자가 검색을 중지할 수 있습니다.  
   
@@ -74,7 +74,7 @@ ms.locfileid: "57353038"
   
  계산과 이벤트 처리 간에 처리 시간을 분할 하는 가장 좋은 방법은 계산을 관리 하는 것은 <xref:System.Windows.Threading.Dispatcher>합니다. 사용 하 여 합니다 <xref:System.Windows.Threading.Dispatcher.BeginInvoke%2A> 메서드를에서 소수 검사를 예약할 수 있습니다 동일한 큐 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 이벤트에서 가져온 것입니다. 예제에서는 단일 소수 검사를 한 번만 예약합니다. 소수 검사가 완료된 후 즉시 다음 검사를 예약합니다. 보류 중인 설정한 후에 진행 되는이 확인 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 이벤트가 처리 된 합니다.  
   
- ![디스패처 큐 설명](./media/threadingdispatcherqueue.PNG "ThreadingDispatcherQueue")  
+ ![디스패처 큐를 보여 주는 스크린샷.](./media/threading-model/threading-dispatcher-queue.png)  
   
  [!INCLUDE[TLA#tla_word](../../../../includes/tlasharptla-word-md.md)]에서는 이 메커니즘을 사용하여 맞춤법 검사를 수행합니다. 유휴 시간을 사용 하 여 백그라운드에서 이루어집니다 맞춤법 검사는 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 스레드입니다. 코드를 살펴보겠습니다.  
   
@@ -109,7 +109,7 @@ ms.locfileid: "57353038"
   
  이 예제에서는 날씨 예보를 검색하는 원격 프로시저 호출을 모방합니다. 별도 작업자 스레드가이 호출을 실행 하는를 사용 하 여 및에서 업데이트 메서드를 예약 합니다 <xref:System.Windows.Threading.Dispatcher> 의 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 완료 되 면 스레드입니다.  
   
- ![날씨 UI 스크린샷](./media/threadingweatheruiscreenshot.PNG "ThreadingWeatherUIScreenShot")  
+ ![날씨 UI를 보여 주는 스크린샷.](./media/threading-model/threading-weather-ui.png)  
   
  [!code-csharp[ThreadingWeatherForecast#ThreadingWeatherCodeBehind](~/samples/snippets/csharp/VS_Snippets_Wpf/ThreadingWeatherForecast/CSharp/Window1.xaml.cs#threadingweathercodebehind)]
  [!code-vb[ThreadingWeatherForecast#ThreadingWeatherCodeBehind](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ThreadingWeatherForecast/visualbasic/window1.xaml.vb#threadingweathercodebehind)]  
@@ -189,7 +189,7 @@ ms.locfileid: "57353038"
 ### <a name="nested-pumping"></a>중첩 펌핑  
  완전히 잠글 수 없는 경우에 따라는 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 스레드입니다. 살펴보겠습니다 합니다 <xref:System.Windows.MessageBox.Show%2A> 메서드는 <xref:System.Windows.MessageBox> 클래스입니다. <xref:System.Windows.MessageBox.Show%2A> 확인 단추를 클릭할 때까지 반환 하지 않습니다. 하지만 상호 작용하기 위해 메시지 루프를 포함해야 하는 창을 만듭니다. 사용자가 [확인]을 클릭할 때까지 기다리고 있는 동안 원래 애플리케이션 창은 사용자 입력에 반응하지 않습니다. 하지만 이 창은 그리기 메시지를 계속 처리합니다. 원래 창은 숨겨졌다 표시될 때 자동으로 재배치됩니다.  
   
- !["확인" 단추가 있는 MessageBox](./media/threadingnestedpumping.png "ThreadingNestedPumping")  
+ ![확인 단추가 있는 MessageBox를 보여 주는 스크린샷](./media/threading-model/threading-message-loop.png)  
   
  일부 스레드는 메시지 상자 창을 처리해야 합니다. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]에서는 메시지 상자 창인 경우에만 새 스레드를 만들 수 있지만 이 스레드는 원래 창에서 사용되지 않는 요소를 그릴 수 없습니다(상호 배제에 대한 이전 설명 참조). 대신 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 중첩된 메시지 처리 시스템을 사용 합니다. <xref:System.Windows.Threading.Dispatcher> 라는 특수 메서드를 포함 하는 클래스 <xref:System.Windows.Threading.Dispatcher.PushFrame%2A>를 저장 하는 응용 프로그램의 현재 실행 지점을 다음 새 메시지 루프를 시작 합니다. 원래 후 실행을 다시 시작할 중첩된 메시지 루프가 완료 되 면 <xref:System.Windows.Threading.Dispatcher.PushFrame%2A> 호출 합니다.  
   
@@ -209,7 +209,7 @@ ms.locfileid: "57353038"
   
  개발자 작업 가정 하기 때문에 대부분의 인터페이스 스레드 안전을 고려 빌드되지 않는는 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 둘 이상의 스레드에서 액세스 되지 않습니다. 예기치 않은 시간에 단일 스레드 환경 변화를 만들 수는이 경우에서에 영향 시켜는 <xref:System.Windows.Threading.DispatcherObject> 상호 배제 메커니즘을 해결 해야 합니다. 다음 의사 코드를 살펴보겠습니다.  
   
- ![스레딩 재입력 다이어그램](./media/threadingreentrancy.png "ThreadingReentrancy")  
+ ![해당 표시 스레딩 재입력 다이어그램입니다. ](./media/threading-model/threading-reentrancy.png "ThreadingReentrancy")  
   
  대부분의 시간에는 이것이 되지만 시간 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 이러한 예상치 않은 재진입 문제가 발생할 실제로 수 있습니다. 따라서 특정 키 시간 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 호출 <xref:System.Windows.Threading.Dispatcher.DisableProcessing%2A>를 사용 하도록 해당 스레드에 대 한 잠금 명령을 변경 하는 합니다 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 대신 일반적인 재입력 없는 잠금을 [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] 잠금.  
   

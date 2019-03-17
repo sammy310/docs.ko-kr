@@ -13,12 +13,12 @@ helpviewer_keywords:
 - conditional statements [Visual Basic], GoTo statement
 - GoTo statement [Visual Basic], syntax
 ms.assetid: 313274c2-8ab3-4b9c-9ba3-0fd6798e4f6d
-ms.openlocfilehash: 9d2cec7f9cd2cc9d8985c9add103748583c25dc9
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 5e7aa036f632b4c310c4978d0d684c1222d2b096
+ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56968935"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58125566"
 ---
 # <a name="goto-statement"></a>GoTo 문
 프로시저에 지정된 된 줄으로 무조건 분기 합니다.  
@@ -54,8 +54,7 @@ GoTo line
   
  다음 그림에 나와 하나 `Try` 다른 내에 중첩 된 생성 합니다. 두 구문의 블록 간에 다양 한 분기 잘못 되었거나 잘못 되었습니다.으로 표시 됩니다.  
   
- ![Try 생성에서 분기의 그래픽 다이어그램](../../../visual-basic/language-reference/statements/media/trybranching.gif "TryBranching")  
-Try 생성에서 유효 하지 않은 분기  
+ ![Try 생성에서 분기의 그래픽 다이어그램](./media/goto-statement/try-construction-branching.gif)  
   
 ## <a name="example"></a>예제  
  다음 예제에서는 `GoTo` 문을 프로시저의 줄 레이블로 분기 합니다.  

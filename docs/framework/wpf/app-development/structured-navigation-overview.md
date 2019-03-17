@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - structured navigation [WPF]
 ms.assetid: 025d30ef-fec5-436d-ad7a-5d5483331c26
-ms.openlocfilehash: 0a10a3f5fd07c7e3ceb7e08802f2c821b7d9a7f2
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 7c8c1697ff18e919711e84e724b5b8698dfe088e
+ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57369749"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58125605"
 ---
 # <a name="structured-navigation-overview"></a>구조적 탐색 개요
 호스팅될 수 있는 콘텐츠를 [!INCLUDE[TLA#tla_xbap](../../../../includes/tlasharptla-xbap-md.md)], <xref:System.Windows.Controls.Frame>, 또는 <xref:System.Windows.Navigation.NavigationWindow> 팩에서 식별할 수 있는 페이지로 구성 됩니다 [!INCLUDE[TLA#tla_uri#plural](../../../../includes/tlasharptla-urisharpplural-md.md)] 하이퍼링크 탐색 하 고 있습니다. 하이퍼링크를 통해 정의되는 페이지 및 페이지 탐색 방법의 구조를 탐색 토폴로지라고 합니다. 이 토폴로지는 다양한 애플리케이션 형식, 특히 문서를 탐색하는 애플리케이션에 적합합니다. 해당 애플리케이션의 경우 한쪽 페이지가 다른 페이지에 대해 아무것도 알 필요 없이 사용자가 페이지 사이에서 이동할 수 있습니다.  
@@ -37,9 +37,9 @@ ms.locfileid: "57369749"
   
 -   호출 페이지가 호출된 페이지로 돌아가면 호출된 페이지 인스턴스를 다른 인스턴스와 격리하기 위해 호출된 페이지가 탐색 기록에서 제거됩니다.  
   
- 다음 그림에서는 이러한 동작을 설명합니다.  
+ 다음 그림에서는 이러한 동작을 설명 합니다.  
   
- ![호출 페이지와 호출된 페이지 사이의 흐름](./media/structurednavigationoverviewfigure1.png "StructuredNavigationOverviewFigure1")  
+ ![스크린 샷 호출 페이지와 호출된 된 페이지 사이의 흐름을 보여 줍니다.](./media/structured-navigation-overview/flow-between-calling-page-called-page.png)  
   
  사용 하 여 이러한 동작을 구현할 수는 <xref:System.Windows.Navigation.PageFunction%601> 호출된 페이지와 합니다.  
   

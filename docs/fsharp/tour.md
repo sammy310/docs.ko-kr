@@ -2,12 +2,12 @@
 title: F# 둘러보기
 description: F# 코드 샘플을 사용 하 여이 자습서에서 언어 프로그래밍의 주요 기능 중 일부를 검토 합니다.
 ms.date: 11/06/2018
-ms.openlocfilehash: d741f7066517ad9bc004e2a89ba0d85a1d4c424d
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 4b3ec7fd2c42712440ea7d7045c560ab20390b45
+ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56968298"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58125579"
 ---
 # <a name="tour-of-f"></a>F 둘러보기\#
 
@@ -136,10 +136,6 @@ DUs 데이터 형식에서 트리의 재귀 구조를 나타낼 수 있으므로
 [일치 패턴](language-reference/pattern-matching.md) 기능은 F# 언어는 F# 형식에서 작동 하는 것에 대 한 정확성을 사용 하도록 설정 합니다.  위의 샘플에서 이와 매우 많은 `match x with ...` 구문입니다.  이 구조를 사용 하면 컴파일러에 일치 하는 철저 한 패턴을 통해 데이터 형식을 사용 하는 경우 모든 가능한 사례에 대 한 계정 수를 적용할 데이터 형식의 "모양"를 이해할 수 있습니다.  올바른지, 매우 강력한 이며 컴파일 시간에 런타임 문제가 일반적으로 될 항목이 "리프트"를 영리 하 게 사용할 수 있습니다.
 
 [!code-fsharp[PatternMatching](../../samples/snippets/fsharp/tour.fs#L705-L742)]
-
-약식을 사용할 수도 있습니다 `function` 사용 하는 함수를 작성할 때 유용 하는 패턴 일치에 대 한 구문을 [부분 응용 프로그램](language-reference/functions/index.md#partial-application-of-arguments):
-
-[!code-fsharp[PatternMatching](../../samples/snippets/fsharp/tour.fs#L744-L762)]
 
 사용 하는 것을 알았을 것은 `_` 패턴입니다.  이 [와일드 카드 패턴](language-reference/pattern-matching.md#wildcard-pattern), "신경을 어떤 대상을" 설명할 방법이 있는 합니다.  실수로 철저 한 패턴 일치를 무시 하 고 더 이상 사용 하 여 주의 하지 않으면 컴파일 타임 사항이에서 이점을 얻을 수 편리 하기는 하지만 `_`합니다.  분해 된 형식의 특정 부분에 신경 때 가장 적합 하면 패턴 일치 식의에서 의미 있는 모든 사례는 열거 된 경우 일치 또는 마지막 절을 패턴입니다.
 
