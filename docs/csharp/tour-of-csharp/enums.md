@@ -3,12 +3,12 @@ title: C# 열거형 - C# 언어 둘러보기
 description: C#의 열거형, 명명된 개별 상수에 대해 자세히 알아보기
 ms.date: 08/10/2016
 ms.assetid: 7faba1cc-6ea9-4a19-adb9-0335e4b132e5
-ms.openlocfilehash: d55462f0360b6896c398d581918a9c17a87583be
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 8c1c29c3c06829da81a9c9be8bb5bd99f1c9e395
+ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53126656"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "57843126"
 ---
 # <a name="enums"></a>열거형
 
@@ -18,7 +18,7 @@ ms.locfileid: "53126656"
 
 [!code-csharp[EnumExample](../../../samples/snippets/csharp/tour/enums/Program.cs#L3-L36)]
 
-각 `enum` 형식에는 `enum` 형식의 ***내부 형식***이라고 하는 정수 계열 형식이 있습니다. 내부 형식을 명시적으로 선언하지 않는 `enum` 형식의 내부 형식은 `int`입니다. `enum` 형식의 저장소 형식 및 가능한 값 범위는 내부 형식에 따라 결정됩니다. `enum` 형식에 적용될 수 있는 값 집합은 해당 `enum` 멤버로 제한되지 않습니다. 특히 `enum`의 모든 내부 형식 값은 `enum` 형식으로 캐스팅될 수 있으며 해당 `enum` 형식을 갖는 유효한 고유 값입니다.
+각 `enum` 형식에는 `enum` 형식의 ***내부 형식***이라고 하는 정수 계열 형식이 있습니다. 내부 형식을 명시적으로 선언하지 않는 `enum` 형식의 내부 형식은 `int`입니다. `enum` 형식의 스토리지 유형 및 가능한 값 범위는 내부 형식에 따라 결정됩니다. `enum` 형식에 적용될 수 있는 값 집합은 해당 `enum` 멤버로 제한되지 않습니다. 특히 `enum`의 모든 내부 형식 값은 `enum` 형식으로 캐스팅될 수 있으며 해당 `enum` 형식을 갖는 유효한 고유 값입니다.
 
 다음 예제에서는 `sbyte`의 내부 형식을 사용하여 `Alignment`라는 `enum` 형식을 선언합니다.
 
@@ -34,6 +34,6 @@ ms.locfileid: "53126656"
 
 [!code-csharp[EnumZero](../../../samples/snippets/csharp/tour/enums/Program.cs#L58-L58)]
 
->[!div class="step-by-step"]
->[이전](interfaces.md)
->[다음](delegates.md)
+> [!div class="step-by-step"]
+> [이전](interfaces.md)
+> [다음](delegates.md)

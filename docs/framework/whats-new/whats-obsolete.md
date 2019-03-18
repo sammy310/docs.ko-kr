@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: d356a43a-73df-4ae2-a457-b9628074c7cd
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 86928c734583cfc8cae0be53458a0d5c1769f292
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 416192d431234b2ce7d6e53f21803f88371a6805
+ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55287822"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "58018751"
 ---
 # <a name="whats-obsolete-in-the-net-framework-class-library"></a>.NET Framework 클래스 라이브러리의 사용되지 않는 기능
 .NET Framework는 시간이 지남에 따라 변경됩니다. 새 버전이 나올 때마다 새로운 기능을 제공하는 새로운 형식 및 형식 멤버가 추가됩니다. 기존 형식과 해당 멤버도 시간이 지남에 따라 변경됩니다. 예를 들어 일부 형식은 지원하는 기술이 새로운 기술로 대체됨에 따라 덜 중요해지고 일부 메서드는 보다 편리하거나 보다 완전한 기능을 갖춘 최신 메서드로 대체됩니다.  
@@ -68,9 +68,9 @@ ms.locfileid: "55287822"
 |1.0|v1.0.3705|  
   
 ## <a name="obsolete-lists-for-the-net-framework-45-and-later-versions"></a>.NET Framework 4.5 이상 버전에서 사용되지 않는 항목 목록  
- [사용되지 않는 형식](../../../docs/framework/whats-new/obsolete-types.md)  
+ [사용되지 않는 형식](obsolete-types.md)  
   
- [사용되지 않는 멤버](../../../docs/framework/whats-new/obsolete-members.md)  
+ [사용되지 않는 멤버](obsolete-members.md)  
   
 ## <a name="obsolete-lists-for-previous-versions"></a>이전 버전에서 사용되지 않는 항목 목록  
  [.NET Framework 4에서 사용되지 않는 형식](https://go.microsoft.com/fwlink/?LinkId=224224)  
@@ -82,4 +82,4 @@ ms.locfileid: "55287822"
  [.NET Framework 2.0에서 사용되지 않는 항목 목록](https://go.microsoft.com/fwlink/?LinkID=125264)  
   
 ## <a name="see-also"></a>참고 항목
-- [\<supportedRuntime> 요소](../../../docs/framework/configure-apps/file-schema/startup/supportedruntime-element.md)
+- [\<supportedRuntime> 요소](../configure-apps/file-schema/startup/supportedruntime-element.md)

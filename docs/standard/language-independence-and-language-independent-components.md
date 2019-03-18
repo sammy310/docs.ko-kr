@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4f0b77d0-4844-464f-af73-6e06bedeafc6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2d8957a5376e17ff69bf9e811125af5a4af1e3b6
-ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
+ms.openlocfilehash: 4b40e12c7cb077d6ef128d4ee1aada6086cb9c1d
+ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56836554"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "57846469"
 ---
 # <a name="language-independence-and-language-independent-components"></a>언어 독립성 및 언어 독립적 구성 요소
 .NET Framework는 언어에 국한되지 않습니다. 즉, 개발자로서 .NET Framework를 대상으로 하는 많은 언어 중 하나로 개발할 수 있습니다(예: C#, C++/CLI, Eiffel, F#, IronPython, IronRuby, PowerBuilder, Visual Basic, Visual COBOL 및 Windows PowerShell). 원래 작성된 언어를 모르거나 원래의 언어 규칙을 따르지 않고도 .NET Framework를 위해 개발된 클래스 라이브러리의 형식과 멤버에 액세스할 수 있습니다. 사용자가 구성 요소 개발자일 경우 언어와 상관없이 모든 .NET Framework 응용 프로그램에서 구성 요소를 액세스할 수 있습니다.  
@@ -349,7 +349,7 @@ ms.locfileid: "56836554"
 ### <a name="member-accessibility"></a>멤버 접근성  
  상속된 멤버를 재정의하면 해당 멤버의 액세스 가능성을 변경할 수 없습니다. 예를 들어 파생된 클래스의 private 메서드가 기본 클래스의 public 메서드를 재정의할 수 없습니다. 한 가지 예외는 다른 어셈블리의 형식으로 재정의된 한 어셈블리에 있는 `protected internal`(C#의 경우) 또는 `Protected Friend`(Visual Basic의 경우) 멤버입니다. 이 경우, 재정의에 대한 액세스 가능성은 `Protected`입니다.  
   
- 다음 예제에서는 <xref:System.CLSCompliantAttribute> 특성이 `true`로 설정되고 `Person`에서 파생된 `Animal` 클래스가 `Species` 속성의 액세스 가능성을 public에서 private으로 변경하려고 할 때 생성되는 오류를 보여 줍니다. 이 예제는 해당 액세스 가능성이 public으로 변경되는 경우 성공적으로 컴파일됩니다.  
+ 다음 예제에서는 <xref:System.CLSCompliantAttribute> 특성이 `true`로 설정되고 `Human`에서 파생된 `Animal` 클래스가 `Species` 속성의 액세스 가능성을 public에서 private으로 변경하려고 할 때 생성되는 오류를 보여 줍니다. 이 예제는 해당 액세스 가능성이 public으로 변경되는 경우 성공적으로 컴파일됩니다.  
   
  [!code-csharp[Conceptual.CLSCompliant#28](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.clscompliant/cs/accessibility1.cs#28)]
  [!code-vb[Conceptual.CLSCompliant#28](../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.clscompliant/vb/accessibility1.vb#28)]  

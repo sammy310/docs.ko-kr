@@ -4,12 +4,12 @@ description: Ocelot을 사용하여 API 게이트웨이를 구현하는 방법�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/02/2018
-ms.openlocfilehash: b51341b25fb81d93f85ff33fe6f2225196126ea0
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: 404f19f55b3be1e4be161543556bb2619f164b9b
+ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57679491"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "57846105"
 ---
 # <a name="implement-api-gateways-with-ocelot"></a>Ocelot을 사용하여 API 게이트웨이 구현
 
@@ -176,10 +176,10 @@ namespace OcelotApiGw
             var builder = WebHost.CreateDefaultBuilder(args);
 
             builder.ConfigureServices(s => s.AddSingleton(builder))
-                                                          .ConfigureAppConfiguration(
-                              ic => ic.AddJsonFile(Path.Combine("configuration",
-                                                                "configuration.json")))
-                                                                .UseStartup<Startup>();
+                    .ConfigureAppConfiguration(
+                          ic => ic.AddJsonFile(Path.Combine("configuration",
+                                                            "configuration.json")))
+                    .UseStartup<Startup>();
             var host = builder.Build();
             return host;
         }
@@ -541,19 +541,19 @@ API 게이트웨이는 일반적으로 서비스 범위를 벗어나는 웹 애�
 
 다음 다이어그램과 같이 Kubernetes에서 웹 애플리케이션과 여러 Ocelot API 게이트웨이/BFF 앞에 수신 Nginx 계층이 있는 것이 이상적인 아키텍처입니다.
 
- ![Kubernetes 수신은 일반적으로 API 게이트웨이 범위를 벗어난 웹 애플리케이션을 비롯한 앱의 모든 트래픽에 대해 역방향 프록시로 작동합니다.](./media/image41.png)
+![Kubernetes 수신은 일반적으로 API 게이트웨이 범위를 벗어난 웹 애플리케이션을 비롯한 앱의 모든 트래픽에 대해 역방향 프록시로 작동합니다.](./media/image41.png)
 
 **그림 6-41** Kubernetes에 배포 시 eShopOnContainers의 수신 계층
 
 eShopOnContainers를 Kubernetes에 배포하면 _수신_을 통해 몇 가지 서비스 또는 엔드포인트만 노출되며, URL에 대한 접미사 목록은 기본적으로 다음과 같습니다.
 
--   `/`: 클라이언트 SPA 웹 애플리케이션의 경우
--   `/webmvc`: 클라이언트 MVC 웹 애플리케이션의 경우
--   `/webstatus`: 상태/healthchecks를 표시하는 클라이언트 웹앱의 경우
--   `/webshoppingapigw`: 웹 BFF 및 쇼핑 비즈니스 프로세스의 경우
--   `/webmarketingapigw`: 웹 BFF 및 마케팅 비즈니스 프로세스의 경우
--   `/mobileshoppingapigw`: 모바일 BFF 및 쇼핑 비즈니스 프로세스의 경우
--   `/mobilemarketingapigw`: 모바일 BFF 및 마케팅 비즈니스 프로세스의 경우
+- `/`: 클라이언트 SPA 웹 애플리케이션의 경우
+- `/webmvc`: 클라이언트 MVC 웹 애플리케이션의 경우
+- `/webstatus`: 상태/healthchecks를 표시하는 클라이언트 웹앱의 경우
+- `/webshoppingapigw`: 웹 BFF 및 쇼핑 비즈니스 프로세스의 경우
+- `/webmarketingapigw`: 웹 BFF 및 마케팅 비즈니스 프로세스의 경우
+- `/mobileshoppingapigw`: 모바일 BFF 및 쇼핑 비즈니스 프로세스의 경우
+- `/mobilemarketingapigw`: 모바일 BFF 및 마케팅 비즈니스 프로세스의 경우
 
 Kubernetes에 배포하는 경우 각 Ocelot API 게이트웨이는 API 게이트웨이를 실행하는 각 _Pod_에 대해 서로 다른 "configuration.json" 파일을 사용합니다. 이러한 “configuration.json” 파일은 ‘ocelot’이라는 Kubernetes ‘구성 맵’에 따라 만들어진 볼륨을 탑재하여(원래는 deploy.ps1 스크립트 사용) 제공됩니다. 각 컨테이너는 `/app/configuration`이라는 컨테이너 폴더에 관련 구성 파일을 탑재합니다.
 

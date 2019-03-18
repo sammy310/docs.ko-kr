@@ -4,12 +4,12 @@ description: 컨테이너화된 .NET 애플리케이션용 .NET 마이크로 서
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/02/2018
-ms.openlocfilehash: 5af1fa6163858ed80fe92118e85d149081aa6f53
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: 99f17f713a1193e82ad64036a4b3f5e0caa20fd7
+ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57677749"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "57845975"
 ---
 # <a name="testing-aspnet-core-services-and-web-apps"></a>ASP.NET Core 서비스 및 웹앱 테스트
 
@@ -110,7 +110,7 @@ public class PrimeWebDefaultRequestShould
     [*https://docs.microsoft.com/aspnet/core/test/integration-tests*](https://docs.microsoft.com/aspnet/core/test/integration-tests)
 
 - **Dotnet 테스트를 사용한 .NET Core의 유닛 테스트** <br/>
-    [*https://docs.microsoft.com/dotnet/core/testing/unit-testing-with-dotnet-test*](~/docs/core/testing/unit-testing-with-dotnet-test.md)
+    [*https://docs.microsoft.com/dotnet/core/testing/unit-testing-with-dotnet-test*](../../../core/testing/unit-testing-with-dotnet-test.md)
 
 - **xUnit.net**. 공식 사이트입니다. <br/>
     [*https://xunit.github.io/*](https://xunit.github.io/)
@@ -128,7 +128,7 @@ public class PrimeWebDefaultRequestShould
 
 앞서 언급한 것처럼 다중 컨테이너 애플리케이션을 테스트할 경우 모든 마이크로 서비스는 Docker 호스트 또는 컨테이너 클러스터 내에서 실행해야 합니다. 여러 마이크로 서비스가 관련된 다중 작업을 포함하는 엔드투엔드 서비스 테스트는 docker-compose(또는 오케스트레이터를 사용하는 경우 이와 비슷한 메커니즘)를 실행해 Docker 호스트에서 전체 애플리케이션을 배포하고 시작하도록 요청합니다. 전체 애플리케이션 및 이의 모든 서비스가 실행되면, 종단 간 통합 및 기능 테스트를 실행할 수 있습니다.
 
-다음과 같은 몇 가지 방법을 사용할 수 있습니다. 솔루션 수준에서 애플리케이션을 배포하는 데 사용하는 docker-compose.yml 파일에서 [dotnet 테스트](https://docs.microsoft.com/dotnet/articles/core/tools/dotnet-test)를 사용하기 위해 진입점을 확장할 수 있습니다. 또한 대상으로 하는 이미지에서 테스트를 실행하는 다른 컴포즈 파일을 사용할 수 있습니다. 컨테이너의 데이터베이스와 마이크로 서비스를 포함하는 통합 테스트용 다른 구성 파일을 사용하여, 테스트를 실행하기 전에 관련 데이터가 항상 원래 상태로 재설정되도록 할수 있습니다.
+다음과 같은 몇 가지 방법을 사용할 수 있습니다. 솔루션 수준에서 애플리케이션을 배포하는 데 사용하는 docker-compose.yml 파일에서 [dotnet 테스트](../../../core/tools/dotnet-test.md)를 사용하기 위해 진입점을 확장할 수 있습니다. 또한 대상으로 하는 이미지에서 테스트를 실행하는 다른 컴포즈 파일을 사용할 수 있습니다. 컨테이너의 데이터베이스와 마이크로 서비스를 포함하는 통합 테스트용 다른 구성 파일을 사용하여, 테스트를 실행하기 전에 관련 데이터가 항상 원래 상태로 재설정되도록 할수 있습니다.
 
 컴포즈 애플리케이션이 실행되면 Visual Studio를 실행하는 경우 중단점 및 예외를 이용할 수 있습니다. 또는 Docker 컨테이너를 지원하는 Azure DevOps Services 또는 다른 CI/CD 시스템의 CI 파이프라인에서 자동으로 통합 테스트를 실행할 수 있습니다.
 

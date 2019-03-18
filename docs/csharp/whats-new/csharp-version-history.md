@@ -3,12 +3,12 @@ title: C#의 역사 - C# 가이드
 description: 이 언어의 초창기 버전은 어떤 모습이었으며 이후 어떻게 변했는가?
 author: erikdietrich
 ms.date: 09/20/2017
-ms.openlocfilehash: c750bf8e1ae6dd94c11dc887921c5c365cc04b10
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 84274f8ddfd8295d5db1e861c790c134ba30c6e2
+ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56981935"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "58126151"
 ---
 # <a name="the-history-of-c"></a>C\#의 역사
 
@@ -84,7 +84,7 @@ C# 버전 3.0은 Visual Studio 2008과 함께 2007년말에 출시되었지만 �
 - [자동 구현 속성](../programming-guide/classes-and-structs/auto-implemented-properties.md)
 - [무명 형식](../programming-guide/classes-and-structs/anonymous-types.md)
 - [쿼리 식](../linq/query-expression-basics.md)
-- [람다 식](../lambda-expressions.md)
+- [람다 식](../programming-guide/statements-expressions-operators/lambda-expressions.md)
 - [식 트리](../expression-trees.md)
 - [확장 메서드](../programming-guide/classes-and-structs/extension-methods.md)
 - [암시적 형식 지역 변수](../language-reference/keywords/var.md)

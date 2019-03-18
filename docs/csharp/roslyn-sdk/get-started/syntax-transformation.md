@@ -3,12 +3,12 @@ title: 구문 변환 시작(Roslyn API)
 description: 구문 트리를 트래버스하고, 탐색하고, 쿼리하는 방법을 소개합니다.
 ms.date: 06/01/2018
 ms.custom: mvc
-ms.openlocfilehash: 3f8d152a2e17bc9e480bd0a76488c563720a63b1
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: 3ca6ba19f84366b4e1f74ac4a0dea1edef3cee05
+ms.sourcegitcommit: 5d9f4b805787f890ca6e0dc7ea30a43018bc9cbb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49122586"
+ms.lasthandoff: 03/12/2019
+ms.locfileid: "57788442"
 ---
 # <a name="get-started-with-syntax-transformation"></a>구문 변환 시작
 
@@ -152,7 +152,7 @@ Type variable;
 
 마지막으로 다음 `if` 문을 추가하여 이니셜라이저 식의 형식이 지정된 형식과 일치하는 경우 기존 형식 이름을 `var` 키워드로 바꿉니다.
 
-[!code-csharp[ReplaceNode](../../../../samples/csharp/roslyn-sdk/SyntaxTransformationQuickStart/TransformationCS/TypeInferenceRewriter.cs#BindInitializer "Replace the initializer node")]
+[!code-csharp[ReplaceNode](../../../../samples/csharp/roslyn-sdk/SyntaxTransformationQuickStart/TransformationCS/TypeInferenceRewriter.cs#ReplaceNode "Replace the initializer node")]
 
 선언은 이니셜라이저 식을 기본 클래스 또는 인터페이스로 캐스트할 수 있기 때문에 조건이 필요합니다. 필요한 경우 할당의 왼쪽 및 오른쪽에 있는 형식이 일치하지 않습니다. 이러한 사례에서 명시적 형식을 제거하면 프로그램의 의미 체계가 변경됩니다. `var`은 상황별 키워드이므로 `var`은 키워드가 아니라 식별자로 지정됩니다. 선행 및 후행 기타 정보(공백)는 세로 공백과 들여쓰기를 유지하기 위해 이전 형식 이름에서 `var` 키워드로 전송됩니다. 형식 이름은 실제로 선언문의 손자이므로 `With*` 대신 `ReplaceNode`를 사용하여 <xref:Microsoft.CodeAnalysis.CSharp.Syntax.LocalDeclarationStatementSyntax>를 변환하는 것이 더 간단합니다.
 
@@ -174,7 +174,8 @@ Type variable;
 
 `File.WriteAllText` 코드 아래에 물결선이 표시됩니다. 전구를 선택하고 필요한 `using System.IO;` 문을 추가합니다.
 
-거의 완료되었습니다. 한 단계가 남았습니다. 테스트 <xref:Microsoft.CodeAnalysis.Compilation> 만들기. 이 빠른 시작 중에 형식 유추를 사용하지 않았으므로 완벽한 테스트 사례를 만들었습니다. 그러나 C# 프로젝트 파일에서 컴파일을 만드는 작업은 이 연습의 범위를 벗어납니다. 그래도 지침을 신중하게 수행했다면 희망적입니다. `CreateTestCompilation` 메서드의 내용을 다음 코드로 대체합니다. 이 코드는 이 빠른 시작에 설명된 프로젝트와 조건부로 일치하는 테스트 컴파일을 만듭니다.
+거의 완료되었습니다. 한 단계가 남았습니다. 테스트 <xref:Microsoft.CodeAnalysis.Compilation> 만들기. 이 빠른 시작 중에 형식 유추를 사용하지 않았으므로 완벽한 테스트 사례를 만들었습니다. 그러나 C# 프로젝트 파일에서 컴파일을 만드는 작업은 이 연습의 범위를 벗어납니다. 그래도 지침을 신중하게 수행했다면 희망적입니다. 
+  `CreateTestCompilation` 메서드의 내용을 다음 코드로 대체합니다. 이 코드는 이 빠른 시작에 설명된 프로젝트와 조건부로 일치하는 테스트 컴파일을 만듭니다.
 
 [!code-csharp[CreateTestCompilation](../../../../samples/csharp/roslyn-sdk/SyntaxTransformationQuickStart/TransformationCS/Program.cs#CreateTestCompilation "Create a test compilation using the code written for this quickstart.")]
 

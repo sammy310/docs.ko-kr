@@ -5,12 +5,12 @@ helpviewer_keywords:
 - XAML [XAML Services], XamlServices class
 - XamlServices class [XAML Services], how to use
 ms.assetid: 6ac27fad-3687-4d7a-add1-3e90675fdfde
-ms.openlocfilehash: bbb5f31516be4e977471ee1250502e58e252f1c5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 68211babbce2e9512689fa329dcf33be0afa4a0c
+ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54503194"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58027127"
 ---
 # <a name="xamlservices-class-and-basic-xaml-reading-or-writing"></a>XAMLServices 클래스 및 기본 XAML 읽기 또는 쓰기
 <xref:System.Xaml.XamlServices> 는 .NET Framework XAML 서비스에서 제공되는 클래스로, 이 클래스를 사용하여 XAML 노드 스트림에 대한 특정 액세스가 필요 없는 XAML 시나리오 또는 해당 노드에서 가져온 XAML 형식 시스템의 정보를 처리할 수 있습니다. <xref:System.Xaml.XamlServices> API는 XAML 로드 경로를 지원하는 `Load` 또는 `Parse` , XAML 저장 경로를 지원하는 `Save` , 로드 경로와 저장 경로를 연결하는 기술을 제공하는 `Transform` 으로 요약할 수 있습니다. `Transform` 은 XAML 스키마를 다른 스키마로 변경하는 데 사용할 수 있습니다. 이 항목에서는 이러한 각 API 분류를 요약하고 특정 메서드 오버로드 간의 차이점을 설명합니다.  
@@ -21,7 +21,7 @@ ms.locfileid: "54503194"
   
  대부분의 시나리오에서 가장 간단한 오버로드는 <xref:System.Xaml.XamlServices.Load%28System.String%29>입니다. 이 오버로드에는 로드할 XAML이 포함된 텍스트 파일의 이름인 `fileName` 매개 변수가 있습니다. 이는 이전에 로컬 컴퓨터에 상태나 데이터를 직렬화했던 완전 신뢰 애플리케이션과 같은 애플리케이션 시나리오에 적합합니다. 또한 애플리케이션 모델을 정의할 때 애플리케이션 동작, 시작 UI 또는 XAML을 사용하는 다른 프레임워크 정의 기능 등을 정의하는 표준 파일 중 하나를 로드하는 프레임워크에도 유용합니다.  
   
- <xref:System.Xaml.XamlServices.Load%28System.IO.Stream%29> 에 비슷한 시나리오가 있습니다. 이 오버로드는 로드할 파일을 사용자가 선택하게 하는 경우에 유용할 수 있습니다. <xref:System.IO.Stream> 은 파일 시스템에 액세스할 수 있는 다른 <xref:System.IO> API에서 종종 나오는 출력이기 때문입니다. 또는 비동기 다운로드를 통해서나 스트림을 제공하는 다른 네트워크 기술을 통해 XAML 소스에 액세스할 수도 있습니다. (스트림이나 사용자가 선택한 소스에서 로드하면 보안상 문제가 있을 수 있습니다. 자세한 내용은 [XAML Security Considerations](../../../docs/framework/xaml-services/xaml-security-considerations.md)을 참조하세요.  
+ <xref:System.Xaml.XamlServices.Load%28System.IO.Stream%29> 에 비슷한 시나리오가 있습니다. 이 오버로드는 로드할 파일을 사용자가 선택하게 하는 경우에 유용할 수 있습니다. <xref:System.IO.Stream> 은 파일 시스템에 액세스할 수 있는 다른 <xref:System.IO> API에서 종종 나오는 출력이기 때문입니다. 또는 비동기 다운로드를 통해서나 스트림을 제공하는 다른 네트워크 기술을 통해 XAML 소스에 액세스할 수도 있습니다. (스트림이나 사용자가 선택한 소스에서 로드하면 보안상 문제가 있을 수 있습니다. 자세한 내용은 [XAML Security Considerations](xaml-security-considerations.md)을 참조하세요.  
   
  <xref:System.Xaml.XamlServices.Load%28System.IO.TextReader%29> 및 <xref:System.Xaml.XamlServices.Load%28System.Xml.XmlReader%29> 는 이전 버전의 .NET Framework에서 형식을 읽어 오는 판독기에 의존하는 오버로드입니다. 이 오버로드를 사용하려면 기존에 판독기 인스턴스를 만들고 해당 `Create` API를 사용하여 관련 형식(텍스트 또는 XML)으로 XAML을 로드해야 합니다. 이미 다른 판독기에서 레코드 포인터를 이동했거나 다른 작업을 수행한 경우에는 이 과정이 중요하지 않습니다. <xref:System.Xaml.XamlServices.Load%2A> 에서 구현된 로드 경로 논리는 항상 루트에서 전체 XAML 입력을 처리합니다. 이 오버로드에 대한 시나리오는 다음과 같습니다.  
   
@@ -59,9 +59,9 @@ ms.locfileid: "54503194"
 ## <a name="transform"></a>변환  
  <xref:System.Xaml.XamlServices.Transform%2A> 는 로드 경로와 저장 경로를 단일 작업으로 연결하여 XAML을 변환합니다.  <xref:System.Xaml.XamlReader> 및 <xref:System.Xaml.XamlWriter>에 대해 다른 스키마 컨텍스트 또는 다른 지원 형식 시스템을 사용할 수 있으며, 이에 따라 결과 XAML이 변환되는 방식이 달라집니다. 광범위한 변환 작업에 효율적입니다.  
   
- XAML 노드 스트림의 각 노드를 검사해야 하는 작업의 경우 일반적으로 <xref:System.Xaml.XamlServices.Transform%2A>를 사용하지 않습니다. 대신, 고유한 로드 경로-저장 경로 작업 계열을 정의하고 고유한 논리를 삽입해야 합니다. 경로 중 하나에서 고유한 노드 루프를 중심으로 XAML 판독기/XAML 기록기 쌍을 사용합니다. 예를 들어 <xref:System.Xaml.XamlXmlReader> 를 사용하여 초기 XAML을 로드하고 연속된 <xref:System.Xaml.XamlXmlReader.Read%2A> 호출을 사용하여 노드를 한 단계씩 실행합니다. XAML 노드 스트림 수준에서 작동하므로 이제 변환을 적용하도록 개별 노드(형식, 멤버, 다른 노드)를 조정하거나 노드를 그대로 둘 수 있습니다. 그런 다음, `Write` 의 관련 <xref:System.Xaml.XamlObjectWriter> API에 노드를 보내고 개체를 작성합니다. 자세한 내용은 [Understanding XAML Node Stream Structures and Concepts](../../../docs/framework/xaml-services/understanding-xaml-node-stream-structures-and-concepts.md)을 참조하십시오.  
+ XAML 노드 스트림의 각 노드를 검사해야 하는 작업의 경우 일반적으로 <xref:System.Xaml.XamlServices.Transform%2A>를 사용하지 않습니다. 대신, 고유한 로드 경로-저장 경로 작업 계열을 정의하고 고유한 논리를 삽입해야 합니다. 경로 중 하나에서 고유한 노드 루프를 중심으로 XAML 판독기/XAML 기록기 쌍을 사용합니다. 예를 들어 <xref:System.Xaml.XamlXmlReader> 를 사용하여 초기 XAML을 로드하고 연속된 <xref:System.Xaml.XamlXmlReader.Read%2A> 호출을 사용하여 노드를 한 단계씩 실행합니다. XAML 노드 스트림 수준에서 작동하므로 이제 변환을 적용하도록 개별 노드(형식, 멤버, 다른 노드)를 조정하거나 노드를 그대로 둘 수 있습니다. 그런 다음, `Write` 의 관련 <xref:System.Xaml.XamlObjectWriter> API에 노드를 보내고 개체를 작성합니다. 자세한 내용은 [Understanding XAML Node Stream Structures and Concepts](understanding-xaml-node-stream-structures-and-concepts.md)을 참조하십시오.  
   
 ## <a name="see-also"></a>참고자료
 - <xref:System.Xaml.XamlObjectWriter>
 - <xref:System.Xaml.XamlServices>
-- [XAML 서비스](../../../docs/framework/xaml-services/index.md)
+- [XAML 서비스](index.md)

@@ -3,12 +3,12 @@ title: ML.NET 파이프라인을 처리하는 동안 중간 데이터 값 검사
 description: ML.NET 기계 학습 파이프라인을 처리하는 동안 실제 중간 데이터 값을 검사하는 방법 알아보기
 ms.date: 03/05/2019
 ms.custom: mvc,how-to
-ms.openlocfilehash: 3d20f153be7b502fb5a542a942245546412efde2
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: 362cb9351c3cb77b6aa67d59154854e882869ad9
+ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57678646"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "57843418"
 ---
 # <a name="inspect-intermediate-data-values-during-mlnet-pipeline-processing"></a>ML.NET 파이프라인을 처리하는 동안 중간 데이터 값 검사
 
@@ -24,6 +24,8 @@ ms.locfileid: "57678646"
 다음 예제에서는 `GetColumn<T>` 확장 메서드를 사용하는 방법을 보여줍니다.
 
 [예제 파일](https://github.com/dotnet/machinelearning/tree/master/test/data/adult.tiny.with-schema.txt):
+
+<!-- markdownlint-disable MD010 -->
 ```
 Label   Workclass   education   marital-status
 0   Private 11th    Never-married
@@ -32,6 +34,7 @@ Label   Workclass   education   marital-status
 1   Private Some-college    Married-civ-spouse
 
 ```
+<!-- markdownlint-enable MD010 -->
 
 클래스는 다음과 같이 정의됩니다.
 
@@ -50,7 +53,7 @@ public class InspectedRow
 ```
 
 ```csharp
-// Create a new context for ML.NET operations. It can be used for exception tracking and logging, 
+// Create a new context for ML.NET operations. It can be used for exception tracking and logging,
 // as a catalog of available operations and as the source of randomness.
 var mlContext = new MLContext();
 
