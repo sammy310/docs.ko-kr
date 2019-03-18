@@ -15,12 +15,12 @@ helpviewer_keywords:
 - scaled text [WPF]
 - typography [WPF], skewed text
 ms.assetid: 0d61678a-4185-4f2a-85c6-c1d020f96fa0
-ms.openlocfilehash: fd86293c539bf58ac93894e0b879dddb984825e1
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: be0b6a0bbe927f248be434afd15dde6a66791fe6
+ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57378949"
+ms.lasthandoff: 03/17/2019
+ms.locfileid: "58126125"
 ---
 # <a name="how-to-apply-transforms-to-text"></a>방법: 텍스트에 변환 적용
 변환을 통해 애플리케이션에서 텍스트 표시를 변경할 수 있습니다. 다음 예제에서 텍스트 표시에 영향을 줄 다른 형식의 렌더링 변환 사용을 <xref:System.Windows.Controls.TextBlock> 제어 합니다.  
@@ -28,8 +28,7 @@ ms.locfileid: "57378949"
 ## <a name="example"></a>예제  
  다음 예에서는 2차원 x-y 평면에서 지정된 점을 기준으로 회전하는 텍스트를 보여줍니다.  
   
- ![RotateTransform을 사용 하 여 회전 된 텍스트](./media/transformedtext01.jpg "TransformedText01")  
-90도 회전된 텍스트 예  
+ ![RotateTransform을 사용하여 회전된 텍스트](./media/how-to-apply-transforms-to-text/text-rotated-ninety-degrees.jpg)  
   
  다음 코드 예제에서는 한 <xref:System.Windows.Media.RotateTransform> 텍스트를 회전 합니다. <xref:System.Windows.Media.RotateTransform.Angle%2A> 값이 90 요소를 시계 방향으로 90도 회전 합니다.  
   
@@ -37,8 +36,7 @@ ms.locfileid: "57378949"
   
  다음 예에서는 텍스트의 두 번째 라인은 x축을 따라 배율을 150% 조정하여 보여주고, 텍스트의 세 번째 라인은 y축을 따라 배율을 150% 조정하여 보여줍니다.  
   
- ![ScaleTransform을 사용 하 여 배율 조정 된 텍스트](./media/transformedtext02.jpg "TransformedText02")  
-배율 조정된 텍스트의 예  
+ ![ScaleTransform을 사용하여 배율 조정된 텍스트](./media/how-to-apply-transforms-to-text/scaled-text-scaletransform.jpg) 
   
  다음 코드 예제에서는 <xref:System.Windows.Media.ScaleTransform> 를 원래 크기의 텍스트를 확장 합니다.  
   
@@ -49,17 +47,15 @@ ms.locfileid: "57378949"
   
  다음 예에서는 x축을 따라 기울어진 텍스트를 보여줍니다.  
   
- ![SkewTransform을 사용 하 여 기울인 텍스트](./media/transformedtext03.jpg "TransformedText03")  
-기울어진 텍스트의 예  
-  
+ ![SkewTransform을 사용하여 기울인 텍스트](./media/how-to-apply-transforms-to-text/skewed-transformed-text.jpg)
+   
  다음 코드 예제에서는 한 <xref:System.Windows.Media.SkewTransform> 텍스트입니다. 전단이라고도 하는 기울이기는 일관되지 않은 방식으로 좌표 공간을 늘리는 변환입니다. 이 예에서 두 텍스트 문자열은 x축을 따라 -30°와 30°를 기울입니다.  
   
  [!code-xaml[TextTransformSample#TextTransformSample3](~/samples/snippets/csharp/VS_Snippets_Wpf/TextTransformSample/CS/Window1.xaml#texttransformsample3)]  
   
  다음 예에서는 x축과 y축을 따라 변환 또는 이동되는 텍스트를 보여줍니다.  
   
- ![TranslateTransform을 사용한 텍스트 오프셋](./media/transformedtext04.jpg "TransformedText04")  
-변환된 텍스트의 예  
+ ![TranslateTransform을 사용한 텍스트 오프셋](./media/how-to-apply-transforms-to-text/transformed-text-x-y-axis.jpg)
   
  다음 코드 예제에서는 한 <xref:System.Windows.Media.TranslateTransform> 텍스트를 오프셋 합니다. 이 예제에서 기본 텍스트 아래에 있는 약간 오프셋된 텍스트 복사본이 그림자 효과를 만듭니다.  
   
