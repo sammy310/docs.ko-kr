@@ -55,9 +55,9 @@ ms.locfileid: "57712489"
 
 ### <a name="support-for-net-framework-libraries"></a>.NET Framework 라이브러리에 대한 지원
 
-압도적으로 많은 라이브러리는 .NET Standard가 아닌 .NET Framework를 대상으로 합니다. 그러나 이러한 라이브러리에서 대부분의 호출은 .NET Standard 2.0에 포함된 API를 대상으로 합니다. .NET Standard 2.0부터는 [호환성 shim](https://github.com/dotnet/standard/blob/master/docs/planning/netstandard-2.0/README.md#assembly-unification)을 사용하여 .NET Standard 라이브러리에서 .NET Framework 라이브러리에 액세스할 수 있습니다. 이 호환성 레이어는 개발자가 인식할 수 없으며, .NET Framework 라이브러리를 이용하기 위해 아무것도 할 필요가 없습니다.
+압도적으로 많은 라이브러리는 .NET Standard가 아닌 .NET Framework를 대상으로 합니다. 그러나 이러한 라이브러리에서 대부분의 호출은 .NET Standard 2.0에 포함된 API를 대상으로 합니다. .NET Standard 2.0부터는 [호환성 shim](https://github.com/dotnet/standard/blob/master/docs/planning/netstandard-2.0/README.md#assembly-unification)을 사용하여 .NET Standard 라이브러리에서 .NET Framework 라이브러리에 액세스할 수 있습니다. 이 호환성 레이어는 개발자에게 투명하며, .NET Framework 라이브러리를 이용하기 위해 아무것도 할 필요가 없습니다.
 
-한가지 필요한 사항은 .NET Framework 클래스 라이브러리에서 호출하는 API가 .NET Standard 2.0에 포함되어야 한다는 것입니다.
+한 가지 필요한 사항은 .NET Framework 클래스 라이브러리에서 호출하는 API가 .NET Standard 2.0에 포함되어야 한다는 것입니다.
 
 ### <a name="support-for-visual-basic"></a>Visual Basic에 대한 지원
 
