@@ -17,7 +17,7 @@ ms.locfileid: "56970885"
 
 [.NET Standard](https://github.com/dotnet/standard)는 모든 .NET 구현체에서 사용할 수 있는 .NET API의 공식 규격입니다. .NET Standard는 .NET 생태계의 통일성을 높이기 위한 것입니다. [ECMA 335](https://github.com/dotnet/coreclr/blob/master/Documentation/project-docs/dotnet-standards.md)에서는 .NET 구현체의 동작에 대한 통일성을 계속 설정하지만 .NET 라이브러리 구현체를 위한 .NET BCL(기본 클래스 라이브러리)에 관한 유사한 규격은 없습니다.
 
-.NET Standard을 통해 다음과 같은 주요 시나리오를 사용할 수 있습니다.
+.NET Standard를 통해 다음과 같은 주요 시나리오를 사용할 수 있습니다.
 
 - 워크로드에 독립적으로 구현할 모든 .NET 구현에 대해 균일한 BCL API 집합을 정의합니다.
 - 개발자가 이 동일한 API 집합을 사용하여 .NET 구현에서 사용할 수 있는 이식 가능한 라이브러리를 생성할 수 있게 합니다.
