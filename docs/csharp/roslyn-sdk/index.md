@@ -3,13 +3,8 @@ title: .NET Compiler Platform SDK(Roslyn API)
 description: .NET Compiler Platform SDK(Roslyn API라고도 함)를 사용하여 .NET 코드를 이해하고 오류를 찾고 이러한 오류를 수정하는 방법을 알아봅니다.
 ms.date: 10/10/2017
 ms.custom: mvc
-ms.openlocfilehash: be65d8ecafc13fc699efb10dc396b0631ba70810
-ms.sourcegitcommit: 81bd16c7435a8c9183d2a7e878a2a5eff7d04584
-ms.translationtype: HT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 01/12/2019
-ms.locfileid: "54249140"
 ---
+
 # <a name="the-net-compiler-platform-sdk"></a>.NET Compiler Platform SDK
 
 컴파일러는 애플리케이션 코드의 구문 및 의미 체계의 유효성을 검사할 때 애플리케이션 코드의 세부 모델을 빌드합니다. 컴파일러는 이 모델을 사용하여 소스 코드에서 실행 가능 출력을 빌드합니다. .NET Compiler Platform SDK는 이 모델에 대한 액세스를 제공합니다. 우리는 점점 더 IntelliSense, 리팩터링, 지능형 이름 바꾸기, “모든 참조 찾기” 및 “정의로 이동”과 같은 IDE(통합 개발 환경) 기능에 의존하여 생산성을 높입니다. 또한 코드 분석 도구를 사용하여 코드 품질을 개선하고 코드 생성기를 사용하여 애플리케이션 구성에서 도움을 받습니다. 이러한 도구가 더 스마트해짐에 따라 컴파일러가 애플리케이션 코드를 처리할 때 컴파일러만이 만드는 모델의 점점 더 많은 부분에 이러한 도구가 액세스해야 합니다. 이것이 바로 Roslyn API의 핵심 임무입니다. 블랙 박스를 열고 도구 및 최종 사용자가 컴파일러가 코드에 대해 가진 다양한 정보를 공유할 수 있도록 하는 것 말입니다.
@@ -19,7 +14,7 @@ ms.locfileid: "54249140"
 
 .NET Compiler Platform SDK는 코드 중심 도구 및 애플리케이션을 만들기 위한 진입에 대한 장벽을 크게 낮춰줍니다. 메타 프로그래밍, 코드 생성 및 변환, C# 및 VB 언어의 대화형 사용, 도메인 특정 언어에서 C# 및 VB 포함과 같은 영역의 혁신을 위한 많은 기회를 만듭니다.
 
-.NET Compiler Platform SDK를 사용하면 코딩 실수를 찾아 수정하는 ***분석기*** 및 ***코드 수정 사항***을 빌드할 수 있습니다. ***분석기***는 코드의 구문 및 구조를 이해하고 수정되어야 하는 습관을 검색합니다. ***코드 수정 사항***은 분석기가 발견한 코딩 실수를 해결하기 위한 한 가지 이상의 제안된 수정 사항을 제공합니다. 일반적으로 분석기 및 연관된 코드 수정 사항은 단일 프로젝트에서 함께 패키지됩니다. 
+.NET Compiler Platform SDK를 사용하면 코딩 실수를 찾아 수정하는 ***분석기*** 및 ***코드 수정 사항***을 빌드할 수 있습니다. ***분석기***는 코드의 구문 및 구조를 이해하고 수정되어야 하는 습관을 검색합니다. ***코드 수정 사항***은 분석기가 발견한 코딩 실수를 해결하기 위한 한 가지 이상의 제안된 수정 사항을 제공합니다. 일반적으로 분석기 및 연관된 코드 수정 사항은 단일 프로젝트에서 함께 패키지됩니다.
 
 분석기 및 코드 수정 사항은 정적 분석을 사용하여 코드를 이해하며, 코드를 실행하거나 다른 테스트 이점을 제공하지 않습니다. 그러나 흔히 버그로 이어지는 습관, 유지 관리할 수 없는 코드 또는 표준 지침 유효성 검사를 지적할 수 있습니다.
 
@@ -29,8 +24,8 @@ ms.locfileid: "54249140"
 
 분석기 및 코드 수정 사항을 작성하는 세 가지 주요 시나리오가 있습니다.
 
-1. [팀 코딩 표준 적용](#enforce-team-coding-standards)
-1. [라이브러리 패키지로 지침 제공](#provide-guidance-with-library-packages)
+1. [*팀 코딩 표준 적용*](#enforce-team-coding-standards)
+1. [*라이브러리 패키지로 지침 제공*](#provide-guidance-with-library-packages)
 1. [일반 지침 제공](#provide-general-guidance)
 
 ## <a name="enforce-team-coding-standards"></a>팀 코딩 표준 적용
@@ -46,7 +41,7 @@ ms.locfileid: "54249140"
 NuGet에는 .NET 개발자가 사용할 수 있는 다양한 라이브러리가 있습니다.
 이러한 라이브러리 중 일부는 Microsoft에서 제공한 것이고, 또 다른 일부는 타사에서 제공한 것이며, 나머지는 커뮤니티 회원 및 지원자가 제공한 것입니다. 개발자가 이러한 라이브러리로 성공할 수 있는 경우 해당 라이브러리는 더 많이 채택되고 더 많은 검토를 받게 됩니다.
 
-설명서를 제공하는 것 외에 라이브러리의 일반적인 오용을 찾아 수정하는 분석기 및 코드 수정 사항을 제공할 수 있습니다. 이러한 즉각적인 수정 사항은 개발자가 더 빠르게 성공하도록 도와줍니다. 
+설명서를 제공하는 것 외에 라이브러리의 일반적인 오용을 찾아 수정하는 분석기 및 코드 수정 사항을 제공할 수 있습니다. 이러한 즉각적인 수정 사항은 개발자가 더 빠르게 성공하도록 도와줍니다.
 
 NuGet의 라이브러리를 사용하여 분석기 및 코드 수정 사항을 패키지할 수 있습니다. 해당 시나리오에서 NuGet 패키지를 설치하는 모든 개발자는 분석기 패키지도 설치합니다. 라이브러리를 사용하는 모든 개발자는 실수 및 제안된 수정 사항에 대한 즉각 적인 피드백의 형태로 팀으로부터 즉시 지침을 받게 됩니다.
 
@@ -62,12 +57,12 @@ NuGet의 라이브러리를 사용하여 분석기 및 코드 수정 사항을 �
 
 다음 다섯 가지 항목에서 .NET Compiler Platform SDK의 개념에 대해 자세히 알아볼 수 있습니다.
 
- - [구문 시각화 도우미를 사용하여 코드 탐색](syntax-visualizer.md)
- - [컴파일러 API 모델 이해](compiler-api-model.md)
- - [구문 작업](work-with-syntax.md)
- - [의미 체계 작업](work-with-semantics.md)
- - [작업 영역 작업](work-with-workspace.md)
- 
+- [구문 시각화 도우미를 사용하여 코드 탐색](syntax-visualizer.md)
+- [컴파일러 API 모델 이해](compiler-api-model.md)
+- [구문 작업](work-with-syntax.md)
+- [의미 체계 작업](work-with-semantics.md)
+- [작업 영역 작업](work-with-workspace.md)
+
 시작하려면 **.NET Compiler Platform SDK**를 설치해야 합니다.
 
 [!INCLUDE[interactive-note](~/includes/roslyn-installation.md)]
