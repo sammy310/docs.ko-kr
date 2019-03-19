@@ -23,7 +23,7 @@ ms.locfileid: "56970885"
 - 개발자가 이 동일한 API 집합을 사용하여 .NET 구현에서 사용할 수 있는 이식 가능한 라이브러리를 생성할 수 있게 합니다.
 - OS API에 대해서만 .NET API로 인한 공유 소스의 조건부 컴파일을 줄이거나 제거하기도 합니다.
 
-다양한 .NET 구현체는 특정 버전의 .NET Standard를 대상으로 합니다. 각 .NET 구현체 버전은 지원하는 최신 .NET Standard 버전을 보급합니다. 이는 이전 버전도 지원함을 의미합니다. 예를 들어 .NET Framework 4.6에서는 .NET 표준 1.3을 구현합니다. 즉, .NET 표준 버전 1.0에서 1.3까지에 정의된 모든 API를 표시합니다. 마찬가지로 .NET Framework 4.6.1에서는 .NET Standard 1.4를 구현하지만 .NET Core 1.0에서는 .NET Standard 1.6을 구현합니다.
+다양한 .NET 구현체는 특정 버전의 .NET Standard를 대상으로 합니다. 각 .NET 구현체 버전은 지원하는 최신 .NET Standard 버전을 보급합니다. 이는 이전 버전도 지원함을 의미합니다. 예를 들어 .NET Framework 4.6에서는 .NET Standard 1.3을 구현합니다. 즉, .NET Standard 버전 1.0에서 1.3까지에 정의된 모든 API를 표시합니다. 마찬가지로 .NET Framework 4.6.1에서는 .NET Standard 1.4를 구현하지만 .NET Core 1.0에서는 .NET Standard 1.6을 구현합니다.
 
 ## <a name="net-implementation-support"></a>.NET 구현체 지원
 
@@ -35,12 +35,12 @@ ms.locfileid: "56970885"
 
 1. 실행할 .NET 구현체를 나타내는 행을 찾습니다.
 2. 해당 행의 오른쪽에서 왼쪽으로 사용 중인 버전을 나타내는 열을 찾습니다.
-3. 열 헤더는 대상에서 지원하는 .NET 표준 버전을 나타냅니다. 더 낮은 .NET 표준 버전을 대상으로 할 수도 있습니다. 더 높은 .NET 표준 버전은 구현체도 지원합니다.
+3. 열 헤더는 대상에서 지원하는 .NET Standard 버전을 나타냅니다. 더 낮은 .NET Standard 버전을 대상으로 할 수도 있습니다. 더 높은 .NET Standard 버전은 구현체도 지원합니다.
 4. 대상으로 지정할 각 플랫폼에 대해 이 프로세스를 반복합니다. 대상 플랫폼이 두 개 이상 있으면 더 낮은 버전을 선택해야 합니다. 예를 들어 .NET Framework 4.5 및 .NET Core 1.0에서 실행하려는 경우 사용할 수 있는 가장 높은 .NET 표준 버전은 .NET 표준 1.1입니다.
 
 ### <a name="which-net-standard-version-to-target"></a>대상으로 지정할 .NET 표준 버전
 
-.NET 표준 버전을 선택할 때는 다음과 같이 상충되는 요소를 고려해야 합니다.
+.NET Standard 버전을 선택할 때는 다음과 같이 상충되는 요소를 고려해야 합니다.
 
 - 버전이 높을수록 더 많은 API를 사용할 수 있습니다.
 - 버전이 낮을수록 더 많은 플랫폼에서 이 버전을 구현합니다.
@@ -61,7 +61,7 @@ ms.locfileid: "56970885"
 
 ## <a name="specification"></a>규격
 
-.NET 표준 규격은 표준화된 API의 집합입니다. 이 규격은 .NET을 구현한 사람, 특히 Microsoft(.NET Framework, .NET Core, Mono 포함)와 Unity에서 유지 관리합니다. 공개 피드백 절차는 [GitHub](https://github.com/dotnet/standard)을 통해 새로운 .NET Standard 버전을 만드는 과정의 일부입니다.
+.NET Standard 규격은 표준화된 API의 집합입니다. 이 규격은 .NET을 구현한 사람, 특히 Microsoft(.NET Framework, .NET Core, Mono 포함)와 Unity에서 유지 관리합니다. 공개 피드백 절차는 [GitHub](https://github.com/dotnet/standard)을 통해 새로운 .NET Standard 버전을 만드는 과정의 일부입니다.
 
 ### <a name="official-artifacts"></a>공식 아티팩트
 
@@ -81,7 +81,7 @@ ms.locfileid: "56970885"
 
 ### <a name="package-representation"></a>패키지 표현
 
-.NET 표준 참조 어셈블리의 기본 배포 수단은 [NuGet 패키지](../core/packages.md)입니다. 구현체는 적절하고 다양한 방법으로 모든 .NET 구현체에 전달됩니다.
+.NET Standard 참조 어셈블리의 기본 배포 수단은 [NuGet 패키지](../core/packages.md)입니다. 구현체는 각 .NET 구현에 적절한 다양한 방법으로 제공됩니다.
 
 NuGet 패키지는 하나 이상의 [프레임워크](frameworks.md)를 대상으로 합니다. .NET 표준 패키지는 “.NET 표준” 프레임워크를 대상으로 합니다. `netstandard` [압축 TFM](frameworks.md)(예: `netstandard1.4`)을 사용하여 .NET Standard 프레임워크를 대상으로 지정할 수 있습니다. 여러 런타임에서 실행되도록 만들어진 라이브러리는 이 프레임워크를 대상으로 하며, 광범위한 API의 경우 사용 가능한 API 수가 .NET Standard 1.6과 2.0 간에 세 배 이상 증가하므로 `netstandard2.0`을 대상으로 지정합니다.
 
