@@ -98,9 +98,9 @@ string urlContents = await client.GetStringAsync("https://docs.microsoft.com");
  이전 버전의 .NET Framework의 비동기에 대한 자세한 내용은 [TPL 및 일반적인 .NET Framework 비동기 프로그래밍](../../../../standard/parallel-programming/tpl-and-traditional-async-programming.md)을 참조하세요.  
   
 ## <a name="BKMK_WhatHappensUnderstandinganAsyncMethod"></a> 비동기 메서드에서 수행되는 작업  
- 비동기 프로그래밍을 이해하는 데 있어 가장 중요한 점은 메서드에서 메서드로 제어 흐름을 이동하는 방법입니다. 다음 다이어그램이 과정을 안내합니다.  
+ 비동기 프로그래밍을 이해하는 데 있어 가장 중요한 점은 메서드에서 메서드로 제어 흐름을 이동하는 방법입니다. 다음 다이어그램에서 과정을 안내합니다.  
   
- ![비동기 프로그램 추적](../../../../csharp/programming-guide/concepts/async/media/navigationtrace.png "NavigationTrace")  
+ ![비동기 프로그램 추적을 보여 주는 다이어그램입니다.](./media/index/navigation-trace-async-program.png)  
   
  다이어그램의 번호는 다음 단계에 해당합니다.  
   

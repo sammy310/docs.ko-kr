@@ -43,7 +43,11 @@ Hello World 단원 다음에 나오는 모든 소개 자습서는 자체 로컬 
 
 ## <a name="explore-new-features-in-c"></a>C\#의 새 기능 살펴보기
 
-이 [대화형 탐색](exploration/csharp-6.yml)에서 [C# 6](../whats-new/csharp-6.md)의 새 기능을 사용해 보세요.
+* [C# 6의 새로운 기능을 대화형으로 사용해 보기](exploration/csharp-6.yml): 브라우저에서 [C# 6](../whats-new/csharp-6.md)에 추가된 기능을 대화형으로 살펴보세요.
+* [문자열 보간](string-interpolation.md): C#에서 형식이 지정된 문자열을 만들기 위해 문자열 보간을 사용하는 방법을 설명합니다.
+* [Nullable 참조 형식](nullable-reference-types.md): nullable 참조 형식을 사용하여 null 참조에 대한 의도를 나타내는 방법을 설명합니다.
+* [Nullable 참조 형식을 사용하도록 프로젝트 업데이트](upgrade-to-nullable-references.md): Nullable 참조 형식을 사용하도록 기존 프로젝트를 업그레이드하는 기술을 보여 줍니다.
+* [패턴 일치를 사용하여 데이터 기능 확장](pattern-matching.md): 패턴 일치를 사용하여 핵심 기능 이상으로 형식을 확장하는 방법을 보여 줍니다.
 
 ## <a name="general-tutorials"></a>일반 자습서
 
@@ -53,6 +57,4 @@ Hello World 단원 다음에 나오는 모든 소개 자습서는 자체 로컬 
 * [REST 클라이언트](console-webapiclient.md): C# 언어의 웹 통신, JSON serialization 및 개체 지향 기능에 대해 설명합니다.
 * [C# 및 .NET의 상속](inheritance.md): 상속을 사용하여 기본 클래스, 추상 기본 클래스 및 파생 클래스를 정의하는 방법을 비롯하여 C#의 상속에 대해 설명합니다.
 * [LINQ 작업](working-with-linq.md): LINQ의 다양한 기능과 LINQ를 지원하는 언어 요소를 보여 줍니다.
-* [문자열 보간](string-interpolation.md): C#에서 형식이 지정된 문자열을 만들기 위해 문자열 보간을 사용하는 방법을 설명합니다.
 * [특성 사용](attributes.md): C#에서 특성을 만들고 사용하는 방법을 설명합니다.
-* [Nullable 참조 형식](nullable-reference-types.md): nullable 참조 형식을 사용하여 null 참조에 대한 의도를 나타내는 방법을 설명합니다.
