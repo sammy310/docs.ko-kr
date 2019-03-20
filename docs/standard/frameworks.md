@@ -17,11 +17,11 @@ ms.locfileid: "54727406"
 
 앱 또는 라이브러리에서 프레임워크를 대상으로 지정하면 앱 또는 라이브러리에서 사용할 수 있도록 하려는 API 집합을 지정하는 것입니다. TFM(대상 프레임워크 모니터)을 사용하여 프로젝트 파일에서 대상 프레임워크를 지정합니다.
 
-앱 또는 라이브러리는 [.NET Standard](~/docs/standard/net-standard.md) 버전을 대상으로 지정할 수 있습니다. .NET Standard 버전은 모든 .NET 구현에서 표준화된 API 집합을 나타냅니다. 예를 들어 라이브러리는 .NET Standard 1.6을 대상으로 하고 동일한 코드베이스를 사용하는 .NET Core 및 .NET Framework에서 작동하는 API에 액세스할 수 있습니다.
+앱 또는 라이브러리는 [.NET Standard](~/docs/standard/net-standard.md) 버전을 대상으로 지정할 수 있습니다. .NET Standard 버전은 모든 .NET 구현체에서 사용할 수 있는 표준화된 API 집합을 나타냅니다. 예를 들어 .NET Standard 1.6을 대상으로 하는 라이브러리는 동일한 코드 기반의 .NET Core 및 .NET Framework에서 동작하는 API에 액세스할 수 있습니다.
 
-앱 또는 라이브러리는 특정 .NET 구현을 대상으로 지정하여 구현 관련 API에 액세스할 수도 있습니다. 예를 들어 Xamarin.iOS(예: `Xamarin.iOS10`)를 대상으로 하는 앱은 Xamarin에서 제공하는 iOS 10용 iOS API 래퍼에 액세스하고, UWP(유니버설 Windows 플랫폼, `uap10.0`)를 대상으로 하는 앱은 Windows 10을 실행하는 디바이스에 대해 컴파일하는 API에 액세스할 수 있습니다.
+앱 또는 라이브러리는 특정 .NET 구현체을 대상으로 지정하여 구현체 관련 API에 액세스할 수도 있습니다. 예를 들어 Xamarin.iOS(예: `Xamarin.iOS10`)를 대상으로 하는 앱은 Xamarin에서 제공하는 iOS 10용 iOS API 래퍼에 액세스하고, UWP(유니버설 Windows 플랫폼, `uap10.0`)를 대상으로 하는 앱은 Windows 10이 실행되는 디바이스용으로 컴파일하는 API에 액세스할 수 있습니다.
 
-일부 대상 프레임워크(예: .NET Framework)에서 API는 프레임워크가 시스템에 설치하는 어셈블리에 의해 정의되고 애플리케이션 프레임워크 API(예: ASP.NET)를 포함할 수 있습니다.
+일부 대상 프레임워크(예: .NET Framework)의 API는 프레임워크에서 시스템에 설치하는 어셈블리에 의해 정의되고 애플리케이션 프레임워크 API(예: ASP.NET)를 포함할 수 있습니다.
 
 패키지 기반 대상 프레임워크(예: .NET Standard 및 .NET Core)에서 API는 앱이나 라이브러리에 포함된 패키지에 의해 정의됩니다. *메타패키지*는 고유한 콘텐츠는 없지만 종속성(다른 패키지) 목록인 NuGet 패키지입니다. NuGet 패키지 기반 대상 프레임워크는 함께 모여 프레임워크를 구성하는 모든 패키지를 참조하는 메타패키지를 암시적으로 지정합니다.
 
