@@ -7,29 +7,29 @@ helpviewer_keywords:
 - controls [WPF], ListView
 - ListView control [WPF]
 ms.assetid: fc3784a7-c9e8-4e2b-909a-7af37cef9b43
-ms.openlocfilehash: 7de612992c7ccab57259146e8b8fa294e503b733
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: c90849c27f7bbef2338ef255350a7dccd40c99e3
+ms.sourcegitcommit: 462dc41a13942e467984e48f4018d1f79ae67346
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57376223"
+ms.lasthandoff: 03/19/2019
+ms.locfileid: "58186054"
 ---
-# <a name="listview"></a><span data-ttu-id="3e092-102">ListView</span><span class="sxs-lookup"><span data-stu-id="3e092-102">ListView</span></span>
-<span data-ttu-id="3e092-103"><xref:System.Windows.Controls.ListView> 컨트롤은 데이터 항목 집합을 다른 레이아웃 보기에 표시 하기 위한 인프라를 제공 합니다.</span><span class="sxs-lookup"><span data-stu-id="3e092-103">The <xref:System.Windows.Controls.ListView> control provides the infrastructure to display a set of data items in different layouts or views.</span></span>  
+# <a name="listview"></a><span data-ttu-id="4e33a-102">ListView</span><span class="sxs-lookup"><span data-stu-id="4e33a-102">ListView</span></span>
+<span data-ttu-id="4e33a-103"><xref:System.Windows.Controls.ListView> 컨트롤은 데이터 항목 집합을 다른 레이아웃 보기에 표시 하기 위한 인프라를 제공 합니다.</span><span class="sxs-lookup"><span data-stu-id="4e33a-103">The <xref:System.Windows.Controls.ListView> control provides the infrastructure to display a set of data items in different layouts or views.</span></span>  
   
- <span data-ttu-id="3e092-104">다음 그림에 표시 된 <xref:System.Windows.Controls.ListView>합니다.</span><span class="sxs-lookup"><span data-stu-id="3e092-104">The following illustration shows a <xref:System.Windows.Controls.ListView>.</span></span>  
+ <span data-ttu-id="4e33a-104">다음 그림에 표시 된 <xref:System.Windows.Controls.ListView>합니다.</span><span class="sxs-lookup"><span data-stu-id="4e33a-104">The following illustration shows a <xref:System.Windows.Controls.ListView>.</span></span>  
   
- <span data-ttu-id="3e092-105">![GridView 출력이 있는 ListView](./media/listviewgridview.JPG "ListViewGridView")</span><span class="sxs-lookup"><span data-stu-id="3e092-105">![ListView with GridView output](./media/listviewgridview.JPG "ListViewGridView")</span></span>  
+ ![GridView 출력이 있는 ListView를 보여주는 스크린샷.](./media/gridview-overview/listview-gridview-output.jpg)  
   
-## <a name="in-this-section"></a><span data-ttu-id="3e092-106">섹션 내용</span><span class="sxs-lookup"><span data-stu-id="3e092-106">In This Section</span></span>  
- [<span data-ttu-id="3e092-107">개요</span><span class="sxs-lookup"><span data-stu-id="3e092-107">Overviews</span></span>](listview-overviews.md)  
- [<span data-ttu-id="3e092-108">방법 항목</span><span class="sxs-lookup"><span data-stu-id="3e092-108">How-to Topics</span></span>](listview-how-to-topics.md)  
+## <a name="in-this-section"></a><span data-ttu-id="4e33a-106">섹션 내용</span><span class="sxs-lookup"><span data-stu-id="4e33a-106">In This Section</span></span>  
+ [<span data-ttu-id="4e33a-107">개요</span><span class="sxs-lookup"><span data-stu-id="4e33a-107">Overviews</span></span>](listview-overviews.md)  
+ [<span data-ttu-id="4e33a-108">방법 항목</span><span class="sxs-lookup"><span data-stu-id="4e33a-108">How-to Topics</span></span>](listview-how-to-topics.md)  
   
-## <a name="reference"></a><span data-ttu-id="3e092-109">참조</span><span class="sxs-lookup"><span data-stu-id="3e092-109">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="4e33a-109">참조</span><span class="sxs-lookup"><span data-stu-id="4e33a-109">Reference</span></span>  
  <xref:System.Windows.Controls.ListView>  
   <xref:System.Windows.Controls.ListViewItem>  
   <xref:System.Windows.Controls.GridView>  
   
-## <a name="related-sections"></a><span data-ttu-id="3e092-110">관련 단원</span><span class="sxs-lookup"><span data-stu-id="3e092-110">Related Sections</span></span>  
- [<span data-ttu-id="3e092-111">데이터 바인딩 개요</span><span class="sxs-lookup"><span data-stu-id="3e092-111">Data Binding Overview</span></span>](../data/data-binding-overview.md)  
-  [<span data-ttu-id="3e092-112">데이터 템플릿 개요</span><span class="sxs-lookup"><span data-stu-id="3e092-112">Data Templating Overview</span></span>](../data/data-templating-overview.md)
+## <a name="related-sections"></a><span data-ttu-id="4e33a-110">관련 단원</span><span class="sxs-lookup"><span data-stu-id="4e33a-110">Related Sections</span></span>  
+ [<span data-ttu-id="4e33a-111">데이터 바인딩 개요</span><span class="sxs-lookup"><span data-stu-id="4e33a-111">Data Binding Overview</span></span>](../data/data-binding-overview.md)  
+  [<span data-ttu-id="4e33a-112">데이터 템플릿 개요</span><span class="sxs-lookup"><span data-stu-id="4e33a-112">Data Templating Overview</span></span>](../data/data-templating-overview.md)
