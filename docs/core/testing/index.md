@@ -5,13 +5,8 @@ author: ardalis
 ms.author: wiwagn
 ms.date: 08/30/2017
 ms.custom: seodec18
-ms.openlocfilehash: f3054ca74efbd09449f43e0654734bfe10e3a7c0
-ms.sourcegitcommit: deb9225a55485a5a6e6c7914deb30ccfceb69d3f
-ms.translationtype: HT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 01/05/2019
-ms.locfileid: "54058336"
 ---
+
 # <a name="unit-testing-in-net-core-and-net-standard"></a>.NET Core 및 .NET Standard의 단위 테스트
 
 .NET Core를 통해 쉽게 단위 테스트를 만들 수 있습니다. 이 문서에서는 단위 테스트를 소개하고 이 테스트와 다른 테스트의 차이점을 설명합니다. 페이지 아래쪽에 있는 연결된 리소스는 테스트 프로젝트를 솔루션에 추가하는 방법을 보여줍니다. 테스트 프로젝트를 설정한 후에 명령줄 또는 Visual Studio를 사용하여 단위 테스트를 실행할 수 있습니다.

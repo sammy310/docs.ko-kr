@@ -23,7 +23,7 @@ ms.locfileid: "56970885"
 - 개발자가 이와 같은 API를 사용하여 다양한 .NET 구현체에서 사용할 수 있는 이식 가능한 라이브러리를 만들 수 있습니다.
 - OS API에 한해서, .NET API때문에 공유된 소스의 조건부 컴파일을 줄이거나 제거할 수 있습니다.
 
-다양한 .NET 구현체는 특정 버전의 .NET Standard를 대상으로 합니다. 각 .NET 구현체 버전은 지원하는 최신 .NET Standard 버전을 보급합니다. 이는 이전 버전도 지원함을 의미합니다. 예를 들어 .NET Framework 4.6에서는 .NET Standard 1.3을 구현합니다. 즉, .NET Standard 버전 1.0에서 1.3까지에 정의된 모든 API를 표시합니다. 마찬가지로 .NET Framework 4.6.1에서는 .NET Standard 1.4를 구현하지만 .NET Core 1.0에서는 .NET Standard 1.6을 구현합니다.
+다양한 .NET 구현은 특정 버전의 .NET Standard를 대상으로 합니다. 각 .NET 구현 버전은 지원하는 최신 .NET Standard 버전을 보급합니다. 이는 이전 버전도 지원함을 의미합니다. 예를 들어 .NET Framework 4.6에서는 .NET 표준 1.3을 구현합니다. 즉, .NET 표준 버전 1.0에서 1.3까지에 정의된 모든 API를 표시합니다. 마찬가지로 .NET Framework 4.6.1에서는 .NET Standard 1.4를 구현하지만 .NET Core 1.0에서는 .NET Standard 1.6을 구현합니다.
 
 ## <a name="net-implementation-support"></a>.NET 구현체 지원
 
