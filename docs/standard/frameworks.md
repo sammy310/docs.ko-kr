@@ -132,7 +132,7 @@ public class MyClass
 ## <a name="see-also"></a>참고 항목
 
 - [패키지, 메타패키지 및 프레임워크](../core/packages.md)
-- [플랫폼 간 도구로 라이브러리 개발](../core/tutorials/libraries.md)
+- [여러 플랫폼에서 사용할 수 있는 도구로 라이브러리 개발](../core/tutorials/libraries.md)
 - [.NET Standard](net-standard.md)
 - [.NET Core 버전 관리](../core/versions/index.md)
 - [dotnet/standard GitHub repository](https://github.com/dotnet/standard)(dotnet/표준 GitHub 리포지토리)
