@@ -26,7 +26,7 @@ ms.locfileid: "55283519"
   
 -   애플리케이션에서 어셈블리를 이미 로드한 경우 <xref:System.Reflection.Assembly.FullName%2A?displayProperty=nameWithType> 속성의 값을 검색하여 정규화된 이름을 가져올 수 있습니다. 어셈블리가 GAC에 있는지 여부에 관계없이 이 접근 방식을 사용할 수 있습니다. 예제에서는 그림을 제공합니다.  
   
--   어셈블리의 파일 시스템 경로를 알고 있는 경우 static(Visual basic에서는 `Shared`) <xref:System.Reflection.AssemblyName.GetAssemblyName%2A?displayProperty=nameWithType> 메서드를 호출하여 정규화된 어셈블리 이름을 가져올 수 있습니다. 다음은 간단한 예제입니다.  
+-   어셈블리의 파일 시스템 경로를 알고 있는 경우 static(Visual Basic에서는 `Shared`) <xref:System.Reflection.AssemblyName.GetAssemblyName%2A?displayProperty=nameWithType> 메서드를 호출하여 정규화된 어셈블리 이름을 가져올 수 있습니다. 다음은 간단한 예제입니다.  
   
      [!code-csharp[System.Reflection.AssemblyName.GetAssemblyName#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.reflection.assemblyname.getassemblyname/cs/getassemblyname1.cs#1)]
      [!code-vb[System.Reflection.AssemblyName.GetAssemblyName#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.reflection.assemblyname.getassemblyname/vb/getassemblyname1.vb#1)]  
