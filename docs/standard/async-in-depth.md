@@ -6,12 +6,12 @@ ms.author: wiwagn
 ms.date: 06/20/2016
 ms.technology: dotnet-standard
 ms.assetid: 1e38f9d9-8f84-46ee-a15f-199aec4f2e34
-ms.openlocfilehash: 45dc8b72bd61fc9aa04c977a2dc67c37384697fc
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: 79154713e370029ff31591523525fb05422571d8
+ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57677528"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "57844738"
 ---
 # <a name="async-in-depth"></a>비동기에 대한 자세한 설명
 
@@ -21,12 +21,12 @@ ms.locfileid: "57677528"
 
 태스크는 [동시성 약속 모델](https://en.wikipedia.org/wiki/Futures_and_promises)을 구현하는 데 사용되는 구문입니다.  간단히 말해서, 나중에 작업이 완료될 것이라는 "약속"을 제공하여 클린 API로 약속을 조정할 수 있게 합니다.
 
-*   `Task` - 값을 반환하지 않는 작업 하나를 나타냅니다.
-*   `Task<T>` - `T` 형식의 값을 반환하는 작업 하나를 나타냅니다.
+* `Task` - 값을 반환하지 않는 작업 하나를 나타냅니다.
+* `Task<T>` - `T` 형식의 값을 반환하는 작업 하나를 나타냅니다.
 
 스레딩에 대한 추상화가 *아니라* 비동기적으로 수행되는 작업의 추상화로 태스크에 대해 추론하는 것이 중요합니다. 기본적으로 태스크는 현재 스레드에 대해 실행되며 해당하는 경우 운영 체제에 작업을 위임합니다. 필요에 따라 `Task.Run` API를 통해 별도 스레드에서 실행되도록 태스크를 명시적으로 요청할 수 있습니다.
 
-태스크는 태스크의 결과 값(`Task<T>`의 경우)을 모니터링, 대기 및 액세스하기 위한 API 프로토콜을 표시합니다. `await` 키워드가 있는 언어 통합에서는 태스크 사용을 위한 상위 수준 추상화를 제공합니다. 
+태스크는 태스크의 결과 값(`Task<T>`의 경우)을 모니터링, 대기 및 액세스하기 위한 API 프로토콜을 표시합니다. `await` 키워드가 있는 언어 통합에서는 태스크 사용을 위한 상위 수준 추상화를 제공합니다.
 
 `await`를 사용하면 태스크가 완료될 때까지 해당 호출자에게 제어가 양도되므로 태스크가 실행되는 동안 애플리케이션 또는 서비스에서 유용한 작업을 수행할 수 있습니다. 태스크가 완료된 후에는 코드에서 콜백 또는 이벤트를 사용하여 실행을 계속할 필요가 없습니다. 언어 및 태스크 API 통합에서 해당 작업을 자동으로 수행합니다. `Task<T>`를 사용하는 경우 `await` 키워드는 작업이 완료될 때 반환되는 값을 추가로 “래핑 해제”합니다.  작동 방식에 대한 자세한 내용은 아래에서 자세히 설명합니다.
 
@@ -43,7 +43,7 @@ public Task<string> GetHtmlAsync()
 {
     // Execution is synchronous here
     var client = new HttpClient();
-    
+
     return client.GetStringAsync("https://www.dotnetfoundation.org");
 }
 ```
@@ -55,14 +55,14 @@ public async Task<string> GetFirstCharactersCountAsync(string url, int count)
 {
     // Execution is synchronous here
     var client = new HttpClient();
-    
+
     // Execution of GetFirstCharactersCountAsync() is yielded to the caller here
     // GetStringAsync returns a Task<string>, which is *awaited*
     var page = await client.GetStringAsync("https://www.dotnetfoundation.org");
-    
+
     // Execution resumes when the client.GetStringAsync task completes,
     // becoming synchronous again.
-    
+
     if (count > page.Length)
     {
         return page;
@@ -74,7 +74,7 @@ public async Task<string> GetFirstCharactersCountAsync(string url, int count)
 }
 ```
 
-`GetStringAsync()` 호출은 네이티브 네트워킹 라이브러리에 대한 P/Invoke interop 호출에 도달할 때까지 하위 수준 .NET 라이브러리를 호출(다른 비동기 메서드 호출)합니다. 이후에 네이티브 라이브러리는 시스템 API 호출(예: Linux의 소켓에 대한 `write()`)을 호출할 수 있습니다. [TaskCompletionSource](xref:System.Threading.Tasks.TaskCompletionSource%601.SetResult(%600))를 사용하여 네이티브/관리 경계에 태스크 개체가 생성됩니다. 태스크 개체가 계층을 통해 위로 전달되며, 초기 호출자에게 반환될 때까지 작업되거나 바로 반환될 수 있습니다. 
+`GetStringAsync()` 호출은 네이티브 네트워킹 라이브러리에 대한 P/Invoke interop 호출에 도달할 때까지 하위 수준 .NET 라이브러리를 호출(다른 비동기 메서드 호출)합니다. 이후에 네이티브 라이브러리는 시스템 API 호출(예: Linux의 소켓에 대한 `write()`)을 호출할 수 있습니다. [TaskCompletionSource](xref:System.Threading.Tasks.TaskCompletionSource%601.SetResult(%600))를 사용하여 네이티브/관리 경계에 태스크 개체가 생성됩니다. 태스크 개체가 계층을 통해 위로 전달되며, 초기 호출자에게 반환될 때까지 작업되거나 바로 반환될 수 있습니다.
 
 위의 두 번째 예제에서는 `Task<T>` 개체가 `GetStringAsync`에서 반환됩니다. `await` 키워드를 사용하면 메서드가 새로 만든 태스크 개체를 반환합니다. `GetFirstCharactersCountAsync` 메서드의 이 위치에서 호출자에게 제어가 반환됩니다. [Task&lt;T&gt;](xref:System.Threading.Tasks.Task%601) 개체의 메서드 및 속성을 사용하면 GetFirstCharactersCountAsync의 나머지 코드가 실행될 때 완료되는 태스크의 진행률을 호출자가 모니터링할 수 있습니다.
 
@@ -82,7 +82,7 @@ public async Task<string> GetFirstCharactersCountAsync(string url, int count)
 
 예를 들어 Windows에서 OS 스레드는 네트워크 디바이스 드라이버를 호출하고 작업을 나타내는 IRP(인터럽트 요청 패킷)를 통해 네트워킹 작업을 수행하도록 요청합니다.  디바이스 드라이버는 IRP를 수신하고 네트워크를 호출한 다음 IRP를 "보류 중"으로 표시하고 OS에 다시 반환합니다.  이제 OS 스레드에서 IRP가 "보류 중"임을 알고 있으므로 이 작업에 대해 수행할 작업이 없으며 다른 작업을 수행하는 데 사용될 수 있도록 다시 "반환"됩니다.
 
-요청이 수행되고 디바이스 드라이버를 통해 데이터가 반환되면 인터럽트를 통해 수신된 새 데이터를 CPU에 알려줍니다.  이 인터럽트의 처리 방법은 OS에 따라 다르지만 결국 데이터가 시스템 interop 호출에 도달할 때까지 OS를 통해 전달됩니다. 예를 들어 Linux에서는 인터럽트 처리기가 OS를 통해 비동기적으로 데이터를 위로 전달하기 위해 IRQ의 아래쪽 절반을 예약합니다.  이 작업도 *역시* 비동기적으로 수행됩니다.  다음 사용 가능한 스레드가 비동기 메서드를 실행하고 완료된 태스크의 결과를 "래핑 해제"할 수 있을 때까지 결과가 큐에 유지됩니다.
+요청이 수행되고 디바이스 드라이버를 통해 데이터가 반환되면 인터럽트를 통해 수신된 새 데이터를 CPU에 알려줍니다.  이 인터럽트의 처리 방법은 OS에 따라 다르지만 결국 데이터가 시스템 interop 호출에 도달할 때까지 OS를 통해 전달됩니다. 예를 들어 Linux에서는 인터럽트 처리기가 OS를 통해 비동기적으로 데이터를 위로 전달하기 위해 IRQ의 아래쪽 절반을 예약합니다.  이 작업도 *역시* 비동기적으로 수행됩니다.  다음 사용 가능한 스레드가 비동기 메서드를 실행하고 완료된 작업의 결과를 “래핑 해제”할 수 있을 때까지 결과가 큐에 유지됩니다.
 
 이 전체 프로세스의 요점은 **태스크 실행 전용 스레드가 없다**는 것입니다.  일부 컨텍스트에서 작업이 실행되기는 하지만(즉, OS에서 데이터를 디바이스 드라이버로 전달하고 인터럽트에 응답해야 함) 요청에서 데이터가 반환될 때까지 *대기*하는 전용 스레드는 없습니다.  이렇게 하면 시스템에서 일부 I/O 호출이 완료될 때까지 대기하는 것보다 훨씬 더 많은 작업량을 처리할 수 있습니다.
 
@@ -90,9 +90,9 @@ public async Task<string> GetFirstCharactersCountAsync(string url, int count)
 
 0-1————————————————————————————————————————————————–2-3
 
-*   `0` 지점에서 `1` 지점 사이의 소요 시간은 비동기 메서드가 호출자에 제어를 양도할 때까지 걸리는 시간입니다.
-*   `1` 지점에서 `2` 지점 사이의 소요 시간은 CPU 비용 없이 I/O에 걸리는 시간입니다.
-*   마지막으로, `2` 지점에서 `3` 지점 사이의 소요 시간은 제어(및 잠재적으로 값)가 비동기 메서드로 다시 전달되는 시간으로, 이때 메서드가 다시 실행됩니다.
+* `0` 지점에서 `1` 지점 사이의 소요 시간은 비동기 메서드가 호출자에 제어를 양도할 때까지 걸리는 시간입니다.
+* `1` 지점에서 `2` 지점 사이의 소요 시간은 CPU 비용 없이 I/O에 걸리는 시간입니다.
+* 마지막으로, `2` 지점에서 `3` 지점 사이의 소요 시간은 제어(및 잠재적으로 값)가 비동기 메서드로 다시 전달되는 시간으로, 이때 메서드가 다시 실행됩니다.
 
 ### <a name="what-does-this-mean-for-a-server-scenario"></a>서버 시나리오에서는 어떤 의미가 있을까요?
 
@@ -125,13 +125,13 @@ public async Task<int> CalculateResult(InputData data)
 {
     // This queues up the work on the threadpool.
     var expensiveResultTask = Task.Run(() => DoExpensiveCalculation(data));
-    
+
     // Note that at this point, you can do some other work concurrently,
     // as CalculateResult() is still executing!
-    
+
     // Execution of CalculateResult is yielded here!
     var result = await expensiveResultTask;
-    
+
     return result;
 }
 ```

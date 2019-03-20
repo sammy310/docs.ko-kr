@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - typeof keyword [C#]
 ms.assetid: 0c08d880-515e-46bb-8cd2-48b8dd62c08d
-ms.openlocfilehash: 3fa82a6faee345be77fc8ea3f5aa3342adecb0f5
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: f218414bf60a86b95461d747fb6c557f03bcfcb3
+ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53244845"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "57846118"
 ---
 # <a name="typeof-c-reference"></a>typeof(C# 참조)
 
@@ -34,7 +34,13 @@ System.Type type = i.GetType();
 
 `typeof` 연산자를 오버로드할 수 없습니다.
 
-열린 제네릭 형식에서 `typeof` 연산자를 사용할 수도 있습니다. 둘 이상의 형식 매개 변수가 있는 형식의 사양에 적절한 개수의 쉼표가 있어야 합니다. 다음 예제에서는 메서드의 반환 형식이 제네릭 <xref:System.Collections.Generic.IEnumerable%601>인지 여부를 확인하는 방법을 보여 줍니다. 반환 형식이 <xref:System.Collections.Generic.IEnumerable%601> 제네릭 형식이 아닌 경우 <xref:System.Type.GetInterface%2A?displayProperty=nameWithType>은 `null`을 반환합니다.
+열린 제네릭 형식에서 `typeof` 연산자를 사용할 수도 있습니다. 둘 이상의 형식 매개 변수가 있는 형식의 사양에 적절한 개수의 쉼표가 있어야 합니다. 예를 들어 <xref:System.Collections.Generic.Dictionary%602?displayProperty=nameWIthType>에는 두 개의 형식 인수가 있으므로 다음과 같이 하나의 쉼표를 사용합니다.
+
+```csharp
+Type t = typeof(System.Collection.Generic.Dictionary<,>);
+```
+
+다음 예제에서는 메서드의 반환 형식이 제네릭 <xref:System.Collections.Generic.IEnumerable%601>인지 여부를 확인하는 방법을 보여 줍니다. 반환 형식이 <xref:System.Collections.Generic.IEnumerable%601> 제네릭 형식이 아닌 경우 <xref:System.Type.GetInterface%2A?displayProperty=nameWithType>은 `null`을 반환합니다.
 
 [!code-csharp[typeof_3.cs](~/samples/snippets/csharp/keywords/typeof/typeof_3.cs)]
 

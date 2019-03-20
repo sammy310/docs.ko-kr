@@ -6,12 +6,12 @@ helpviewer_keywords:
 - ListView controls [WPF], GridView view mode
 - controls [WPF], ListView
 ms.assetid: b2d02267-32b3-40ce-8e9f-06972d8749d9
-ms.openlocfilehash: 37332e529992f963f576a273dac917d671a3c198
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 9457430ab61681ad154aba98d72850f19d30280d
+ms.sourcegitcommit: 462dc41a13942e467984e48f4018d1f79ae67346
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57360201"
+ms.lasthandoff: 03/19/2019
+ms.locfileid: "58185443"
 ---
 # <a name="gridview-overview"></a>GridView 개요
 <xref:System.Windows.Controls.GridView> 보기 모드는에 대 한 보기 모드 중 하나는 <xref:System.Windows.Controls.ListView> 제어 합니다. <xref:System.Windows.Controls.GridView> 클래스와 해당 지원 클래스와 사용자 일반적으로 단추를 대화식 열 헤더로 사용 하는 테이블에서 항목 컬렉션 보기를 사용 하도록 설정 합니다. 이 항목에 소개 된 <xref:System.Windows.Controls.GridView> 클래스 및 용도 간략하게 설명 합니다.  
@@ -26,10 +26,8 @@ ms.locfileid: "57360201"
 >  단추 컨트롤 <xref:System.Windows.Controls.GridView> 에서 파생 된 열 머리글로 사용 <xref:System.Windows.Controls.Primitives.ButtonBase>합니다.  
   
  다음 그림에 표시 된 <xref:System.Windows.Controls.GridView> 보기 <xref:System.Windows.Controls.ListView> 콘텐츠입니다.  
-  
- **ListView 콘텐츠의 GridView 보기**  
-  
- ![스타일 지정된 ListView](./media/styledlistview.PNG "StyledListView")  
+    
+ ![ListView 콘텐츠의 GridView 보기를 보여 주는 스크린샷.](./media/gridview-overview/styled-listview-content.png)  
   
  <xref:System.Windows.Controls.GridView> 열 표시 됩니다 <xref:System.Windows.Controls.GridViewColumn> 개체 수 해당 콘텐츠를 자동으로 크기를 조정 합니다. 필요에 따라 하면 명시적으로 설정할 수는 <xref:System.Windows.Controls.GridViewColumn> 특정 너비입니다. 열 헤더 사이에 위치 조정 막대를 끌어와 열의 크기를 조정할 수 있습니다. 있습니다 수 동적으로 추가, 제거, 바꾸기 및이 기능에 내장 되어 있으므로 열 순서 바꾸기 <xref:System.Windows.Controls.GridView>합니다. 그러나 <xref:System.Windows.Controls.GridView> 표시 하는 데이터를 직접 업데이트할 수 없습니다.  
   
@@ -37,11 +35,9 @@ ms.locfileid: "57360201"
   
  [!code-xaml[ListViewCode#ListViewEmployee](~/samples/snippets/csharp/VS_Snippets_Wpf/ListViewCode/CSharp/Window1.xaml#listviewemployee)]  
   
- 다음 그림은 이전 예에서 만든 테이블을 보여줍니다.  
-  
- **ItemsSource의 데이터를 표시하는 GridView**  
-  
- ![GridView 출력이 있는 ListView](./media/listviewgridview.JPG "ListViewGridView")  
+ 다음 그림은 이전 예에서 만든 테이블을 보여줍니다. GridView 컨트롤 ItemsSource 개체에서 데이터를 표시합니다.
+    
+ ![GridView 출력이 있는 ListView를 보여주는 스크린샷.](./media/gridview-overview/listview-gridview-output.jpg)  
   
 <a name="GridViewLayoutandStyle"></a>   
 ## <a name="gridview-layout-and-style"></a>GridView 레이아웃 및 스타일  

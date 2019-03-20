@@ -3,12 +3,12 @@ title: System.Delegate 및 `delegate` 키워드
 description: .NET Framework에서 대리자를 지원하는 클래스와 해당 클래스가 ‘delegate’ 키워드에 매핑되는 방법을 설명합니다.
 ms.date: 06/20/2016
 ms.assetid: f3742fda-13c2-4283-8966-9e21c2674393
-ms.openlocfilehash: 39dca1053f87a5059bdc60f8b722091ba991cbd5
-ms.sourcegitcommit: d955cb4c681d68cf301d410925d83f25172ece86
+ms.openlocfilehash: 88179af0ac072464d8e9903f685ff578ca591bf0
+ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34827302"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "58126177"
 ---
 # <a name="systemdelegate-and-the-delegate-keyword"></a>System.Delegate 및 `delegate` 키워드
 
@@ -99,7 +99,7 @@ Comparison<string> comparer = CompareLength;
 phrases.Sort(comparer);
 ```
 
-대리자 대상으로 사용되는 메서드가 작은 메서드인 경우에는 일반적으로 [람다 식](lambda-expressions.md) 구문을 사용하여 할당을 수행합니다.
+대리자 대상으로 사용되는 메서드가 작은 메서드인 경우에는 일반적으로 [람다 식](./programming-guide/statements-expressions-operators/lambda-expressions.md) 구문을 사용하여 할당을 수행합니다.
 
 ```csharp
 Comparison<string> comparer = (left, right) => left.Length.CompareTo(right.Length);

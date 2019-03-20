@@ -8,12 +8,12 @@ helpviewer_keywords:
 - controls [WPF], ListView
 - ListView controls [WPF], about ListView control
 ms.assetid: 989e12b0-260e-4570-95c6-489284003ce2
-ms.openlocfilehash: 07328a83e431bab02a72c3f252299e4b6b919b82
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 33f4cc55a52a67381c1fbf0d0a92bfad5e50b1ec
+ms.sourcegitcommit: 462dc41a13942e467984e48f4018d1f79ae67346
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57379148"
+ms.lasthandoff: 03/19/2019
+ms.locfileid: "58186119"
 ---
 # <a name="listview-overview"></a>ListView 개요
 <xref:System.Windows.Controls.ListView> 컨트롤은 데이터 항목 집합을 다른 레이아웃 보기에 표시 하기 위한 인프라를 제공 합니다. 예를 들어 사용자가 데이터 항목을 표에 표시하고 해당 열을 정렬해야 할 수도 있습니다.  
@@ -33,7 +33,7 @@ ms.locfileid: "57379148"
   
  다음 그림에서는 이전 예제의 데이터가 표시되는 방법을 보여 줍니다.  
   
- ![GridView 출력이 있는 ListView](./media/listviewgridview.JPG "ListViewGridView")  
+ ![GridView 출력이 있는 ListView를 보여주는 스크린샷.](./media/gridview-overview/listview-gridview-output.jpg)  
   
  상속 되는 클래스를 정의 하 여 사용자 지정 뷰 모드를 만들 수는 <xref:System.Windows.Controls.ViewBase> 클래스입니다. <xref:System.Windows.Controls.ViewBase> 클래스는 사용자 지정 보기를 생성 해야 하는 인프라를 제공 합니다. 사용자 지정 뷰를 만드는 방법에 대한 자세한 내용은 [ListView의 사용자 지정 뷰 모드 만들기](how-to-create-a-custom-view-mode-for-a-listview.md)를 참조하세요.  
   

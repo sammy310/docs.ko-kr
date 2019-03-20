@@ -9,15 +9,15 @@ helpviewer_keywords:
 ms.assetid: 0ee25062-4071-4d3c-a552-87a75d3ecd34
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f63d5213ac8544b41d79ccb78d96b232c7c66936
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c5920935637393f8cfd11aed85a600dc28d49011
+ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54635977"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "58038182"
 ---
 # <a name="obsolete-members-in-the-net-framework"></a>.NET Framework에서 사용되지 않는 멤버
-이 문서의 표에는 .NET Framework 4.5 이상 버전에서 사용되지 않은 형식 멤버가 어셈블리별로 구성되어 있습니다. 각 어셈블리에서 사용되지 않는 멤버 목록과 권장되는 대체 항목을 확인하려면 다음 링크를 사용합니다. 사용되지 않는 형식의 멤버는 이 항목에 나열되지 않습니다. 사용되지 않는 형식 목록은 [사용되지 않는 형식](../../../docs/framework/whats-new/obsolete-types.md)을 참조하세요.  
+이 문서의 표에는 .NET Framework 4.5 이상 버전에서 사용되지 않은 형식 멤버가 어셈블리별로 구성되어 있습니다. 각 어셈블리에서 사용되지 않는 멤버 목록과 권장되는 대체 항목을 확인하려면 다음 링크를 사용합니다. 사용되지 않는 형식의 멤버는 이 항목에 나열되지 않습니다. 사용되지 않는 형식 목록은 [사용되지 않는 형식](obsolete-types.md)을 참조하세요.  
   
 -   [시스템 어셈블리에서 사용되지 않는 멤버](#SystemMembers)  
   
@@ -386,7 +386,7 @@ ms.locfileid: "54635977"
 |<xref:System.Data.SqlClient.SqlClientPermission?displayProperty=nameWithType>|<xref:System.Data.SqlClient.SqlClientPermission.%23ctor>|이 생성자를 사용하면 컴파일러 오류가 생성됩니다.<br /><br /> <xref:System.Data.SqlClient.SqlClientPermission.%23ctor>는 사용되지 않습니다. <xref:System.Data.SqlClient.SqlClientPermission.%23ctor%28System.Security.Permissions.PermissionState%29> 생성자에 <xref:System.Security.Permissions.PermissionState.None?displayProperty=nameWithType> 값을 전달하세요.|  
 |<xref:System.Data.SqlClient.SqlClientPermission?displayProperty=nameWithType>|<xref:System.Data.SqlClient.SqlClientPermission.%23ctor%28System.Security.Permissions.PermissionState%2CSystem.Boolean%29>|이 생성자를 사용하면 컴파일러 오류가 생성됩니다.<br /><br /> <xref:System.Data.SqlClient.SqlClientPermission.%23ctor%28System.Security.Permissions.PermissionState%2CSystem.Boolean%29>는 사용되지 않습니다. <xref:System.Data.SqlClient.SqlClientPermission.%23ctor%28System.Security.Permissions.PermissionState%29> 생성자에 <xref:System.Security.Permissions.PermissionState.None?displayProperty=nameWithType> 값을 전달하세요.|  
 |<xref:System.Data.SqlClient.SqlConnectionStringBuilder?displayProperty=nameWithType>|<xref:System.Data.SqlClient.SqlConnectionStringBuilder.ConnectionReset%2A>|<xref:System.Data.SqlClient.SqlConnectionStringBuilder.ConnectionReset%2A>는 사용되지 않습니다. <xref:System.Data.SqlClient.SqlConnection?displayProperty=nameWithType>은 '연결 다시 설정' 키워드를 무시하고 항상 연결을 다시 설정합니다.|  
-|<xref:System.Data.SqlClient.SqlParameterCollection?displayProperty=nameWithType>|<xref:System.Data.SqlClient.SqlParameterCollection.Add%28System.String%2CSystem.Object%29>|<xref:System.Data.SqlClient.SqlParameterCollection.Add%28System.String%2CSystem.Object%29>는 사용되지 않습니다. <xref:System.Data.SqlClient.SqlParameterCollection.AddWithValue%2A?displayProperty=nameWithType>을 사용하세요.|  
+|<xref:System.Data.SqlClient.SqlParameterCollection?displayProperty=nameWithType>|<xref:System.Data.SqlClient.SqlParameterCollection.Add%28System.String%2CSystem.Object%29>|<xref:System.Data.SqlClient.SqlParameterCollection.Add%28System.String%2CSystem.Object%29>는 사용되지 않습니다. <xref:System.Data.SqlClient.SqlParameterCollection.AddWithValue%2A?displayProperty=nameWithType>을 사용하십시오.|  
   
 <a name="entity"></a>   
 ### <a name="assembly-systemdataentitydll"></a>어셈블리: System.Data.Entity.dll  
@@ -405,7 +405,7 @@ ms.locfileid: "54635977"
 |----------|------------|-------------|  
 |<xref:System.Data.OracleClient.OracleParameter?displayProperty=nameWithType>|<xref:System.Data.OracleClient.OracleParameter.Precision%2A>|<xref:System.Data.OracleClient.OracleParameter.Precision%2A>는 사용되지 않습니다. 10진수의 전체 자릿수를 명시적으로 설정하려면 <xref:System.Math?displayProperty=nameWithType> 클래스를 사용하세요.|  
 |<xref:System.Data.OracleClient.OracleParameter?displayProperty=nameWithType>|<xref:System.Data.OracleClient.OracleParameter.Scale%2A>|<xref:System.Data.OracleClient.OracleParameter.Scale%2A>는 사용되지 않습니다. 10진수의 소수 자릿수를 명시적으로 설정하려면 <xref:System.Math?displayProperty=nameWithType> 클래스를 사용하세요.|  
-|<xref:System.Data.OracleClient.OracleParameterCollection?displayProperty=nameWithType>|<xref:System.Data.OracleClient.OracleParameterCollection.Add%28System.String%2CSystem.Object%29>|<xref:System.Data.OracleClient.OracleParameterCollection.Add%28System.String%2CSystem.Object%29>는 사용되지 않습니다. <xref:System.Data.OracleClient.OracleParameterCollection.AddWithValue%2A?displayProperty=nameWithType>을 사용하세요.|  
+|<xref:System.Data.OracleClient.OracleParameterCollection?displayProperty=nameWithType>|<xref:System.Data.OracleClient.OracleParameterCollection.Add%28System.String%2CSystem.Object%29>|<xref:System.Data.OracleClient.OracleParameterCollection.Add%28System.String%2CSystem.Object%29>는 사용되지 않습니다. <xref:System.Data.OracleClient.OracleParameterCollection.AddWithValue%2A?displayProperty=nameWithType>을 사용하십시오.|  
   
 <a name="design"></a>   
 ### <a name="assembly-systemdesigndll"></a>어셈블리: System.Design.dll  
@@ -578,7 +578,7 @@ ms.locfileid: "54635977"
 |형식|멤버|메시지|  
 |----------|------------|-------------|  
 |<xref:System.Drawing.FontFamily?displayProperty=nameWithType>|<xref:System.Drawing.FontFamily.GetFamilies%2A>|<xref:System.Drawing.FontFamily.GetFamilies%2A> 메서드를 사용하는 대신 <xref:System.Drawing.FontFamily.Families%2A?displayProperty=nameWithType> 속성을 사용하세요.|  
-|<xref:System.Drawing.Imaging.EncoderParameter?displayProperty=nameWithType>|<xref:System.Drawing.Imaging.EncoderParameter.%23ctor%28System.Drawing.Imaging.Encoder%2CSystem.Int32%2CSystem.Int32%2CSystem.Int32%29>|.NET Framework 4.5에서 처음으로 사용되지 않음<br /><br /> 이 생성자는 사용되지 않습니다. <xref:System.Drawing.Imaging.EncoderParameter.%23ctor%28System.Drawing.Imaging.Encoder%2CSystem.Int32%2CSystem.Drawing.Imaging.EncoderParameterValueType%2CSystem.IntPtr%29>을 사용하세요.|  
+|<xref:System.Drawing.Imaging.EncoderParameter?displayProperty=nameWithType>|<xref:System.Drawing.Imaging.EncoderParameter.%23ctor%28System.Drawing.Imaging.Encoder%2CSystem.Int32%2CSystem.Int32%2CSystem.Int32%29>|.NET Framework 4.5에서 처음으로 사용되지 않음<br /><br /> 이 생성자는 사용되지 않습니다. <xref:System.Drawing.Imaging.EncoderParameter.%23ctor%28System.Drawing.Imaging.Encoder%2CSystem.Int32%2CSystem.Drawing.Imaging.EncoderParameterValueType%2CSystem.IntPtr%29>을 사용하십시오.|  
   
 <a name="messaging"></a>   
 ### <a name="assembly-systemmessagingdll"></a>어셈블리: System.Messaging.dll  
@@ -799,5 +799,5 @@ ms.locfileid: "54635977"
 |<xref:Microsoft.VisualBasic.MyServices.RegistryProxy?displayProperty=nameWithType>|<xref:Microsoft.VisualBasic.MyServices.RegistryProxy.DynData%2A>|`DynData` 레지스트리 키는 이 버전의 .NET Framework에서 지원되지 않는 Win9x에서만 작동합니다. 대신 `PerformanceData` 레지스트리 키를 사용하세요. 이 속성은 Framework의 이후 버전에서 제거됩니다.|  
   
 ## <a name="see-also"></a>참고 항목
-- [클래스 라이브러리의 사용되지 않는 기능](../../../docs/framework/whats-new/whats-obsolete.md)
-- [사용되지 않는 형식](../../../docs/framework/whats-new/obsolete-types.md)
+- [클래스 라이브러리의 사용되지 않는 기능](whats-obsolete.md)
+- [사용되지 않는 형식](obsolete-types.md)

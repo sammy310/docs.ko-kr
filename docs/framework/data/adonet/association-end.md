@@ -2,12 +2,12 @@
 title: 연결 End
 ms.date: 03/30/2017
 ms.assetid: 2c345213-0296-4d90-ac6d-cef179798a75
-ms.openlocfilehash: 8c156ca1c05e22e540578adfb2be06cf477b29e1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c1b43dea98b65427065387aedd2305f9c7b370bd
+ms.sourcegitcommit: 462dc41a13942e467984e48f4018d1f79ae67346
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54744949"
+ms.lasthandoff: 03/19/2019
+ms.locfileid: "58185586"
 ---
 # <a name="association-end"></a>연결 End
 *연결 end* 하 게 식별 하는 [엔터티 형식](../../../../docs/framework/data/adonet/entity-type.md) 한쪽 끝에는 [연결](../../../../docs/framework/data/adonet/association-type.md) 및 연결의 해당 end에 있을 수 있는 인스턴스를 입력 하는 엔터티의 수입니다. 연결 End는 연결의 일부로 정의되고 연결에는 정확히 두 개의 연결 End가 있어야 합니다. [탐색 속성](../../../../docs/framework/data/adonet/navigation-property.md) 다른 끝에서 탐색을 허용 합니다.  
@@ -19,14 +19,15 @@ ms.locfileid: "54744949"
     > [!NOTE]
     >  지정된 연결에서 각 연결 End에 지정한 엔터티 형식은 달라야 합니다. 이렇게 하면 자체 연결이 만들어집니다.  
   
--   [연결 end 복합성](../../../../docs/framework/data/adonet/association-end-multiplicity.md) 연결의 한 end에 있을 수 있는 엔터티 형식 인스턴스 수를 나타내는입니다. 연결 End의 복합성 값은 한 개(1), 0개 또는 한 개(0..1) 또는 다수(*)일 수 있습니다.  
+-   [연결 end 복합성](../../../../docs/framework/data/adonet/association-end-multiplicity.md) 연결의 한 end에 있을 수 있는 엔터티 형식 인스턴스 수를 나타내는입니다. 연결 end 복합성 하나 (1), 0 개 이상의 값 (0..1) 또는 여러 열에 있을 수 있습니다 (\*).  
   
 -   연결 End의 이름. 이 매개 변수는 선택 사항입니다.  
   
 -   삭제 시 계단식 배열과 같이 연결에서 수행되는 작업에 대한 정보 이 매개 변수는 선택 사항입니다.  
   
 ## <a name="example"></a>예제  
- 다음 다이어그램에서는 두 연결 `PublishedBy` 및 `WrittenBy`의 개념적 모델을 보여 줍니다. `PublishedBy` 연결의 연결 End는 `Book` 및 `Publisher` 엔터티 형식입니다. `Publisher` 끝의 복합성은 한 개(1)이고 `Book` 끝의 복합성은 다수(*)이므로 한 명의 발행자가 많은 책을 출판하고 책 하나는 한 명의 발행자에 의해 출판됨을 나타냅니다.  
+ 다음 다이어그램에서는 두 연결 `PublishedBy` 및 `WrittenBy`의 개념적 모델을 보여 줍니다. 
+  `PublishedBy` 연결의 연결 End는 `Book` 및 `Publisher` 엔터티 형식입니다. 다중성 합니다 `Publisher` 끝이 한 개 (1)이 고는 `Book` 끝이 많은 (\*)는 발행자가 많은 책을 책은 하나의 게시자에서 게시를 나타내는입니다.  
   
  ![예제 모델이](../../../../docs/framework/data/adonet/media/examplemodel.gif "ExampleModel")  
   

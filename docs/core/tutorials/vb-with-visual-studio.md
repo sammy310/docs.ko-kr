@@ -7,12 +7,12 @@ ms.date: 08/07/2017
 dev_langs:
 - vb
 ms.custom: vs-dotnet, seodec18
-ms.openlocfilehash: de7a423bb3e9a288d17c86e9e0afc3b00f6fd80b
-ms.sourcegitcommit: 542aa405b295955eb055765f33723cb8b588d0d0
+ms.openlocfilehash: 8b9d87922b543f97d4b36a37759d661298318e1e
+ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/17/2019
-ms.locfileid: "54362264"
+ms.lasthandoff: 03/17/2019
+ms.locfileid: "57846287"
 ---
 # <a name="build-a-visual-basic-hello-world-application-with-the-net-core-sdk-in-visual-studio-2017"></a>Visual Studio 2017에서 .NET Core SDK를 사용하여 Visual Basic Hello World 애플리케이션 빌드
 
@@ -82,9 +82,6 @@ ms.locfileid: "54362264"
 
 - 애플리케이션의 배포 가능한 버전을 게시하려면 [Visual Studio 2017을 사용하여 .NET Core Hello World 애플리케이션 게시](publishing-with-visual-studio.md)를 참조하세요.
 
-<!--
-## Related topics
+## <a name="related-topics"></a>관련 항목
 
-Instead of a console application, you can also build a class library with .NET Core and Visual Studio 2017. For a step-by-step introduction, see [Building a class library with C# and .NET Core in Visual Studio 2017](library-with-visual-studio.md).
-
-You can also develop a .NET Core console app on Mac, Linux, and Windows by using [Visual Studio Code](https://code.visualstudio.com/), a downloadable code editor. For a step-by-step tutorial, see [Getting Started with Visual Studio Code](with-visual-studio-code.md). -->
+콘솔 애플리케이션 대신 Visual Basic, .NET Core 및 Visual Studio 2017을 사용하여 .NET Standard 클래스 라이브러리를 빌드할 수도 있습니다. 단계별 지침은 [Visual Studio 2017에서 Visual Basic 및 .NET Core SDK를 사용하여 .NET Standard 라이브러리 빌드](vb-library-with-visual-studio.md)를 참조하세요.
