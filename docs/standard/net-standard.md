@@ -15,7 +15,7 @@ ms.locfileid: "56970885"
 ---
 # <a name="net-standard"></a>.NET Standard
 
-[.NET Standard](https://github.com/dotnet/standard)는 모든 .NET 구현체에서 사용할 수 있는 .NET API의 공식 규격입니다. .NET Standard는 .NET 생태계의 통일성을 높이기 위한 것입니다. [ECMA 335](https://github.com/dotnet/coreclr/blob/master/Documentation/project-docs/dotnet-standards.md)에서는 .NET 구현체의 동작에 대한 통일성을 계속 설정하지만 .NET 라이브러리 구현체를 위한 .NET BCL(기본 클래스 라이브러리)에 관한 유사한 규격은 없습니다.
+[.NET Standard](https://github.com/dotnet/standard)는 모든 .NET 구현체에서 사용할 수 있는 .NET API의 공식 규격입니다. .NET Standard는 .NET 생태계의 통일성을 높이기 위한 것입니다. [ECMA 335](https://github.com/dotnet/coreclr/blob/master/Documentation/project-docs/dotnet-standards.md)에서는 .NET 구현체의 동작에 관한 통일성을 계속 설정하지만 .NET 라이브러리 구현을 위해 .NET BCL(기본 클래스 라이브러리)에 대한 유사한 사양은 없습니다.
 
 .NET Standard를 통해 다음과 같은 주요 시나리오를 사용할 수 있습니다.
 
@@ -23,7 +23,7 @@ ms.locfileid: "56970885"
 - 개발자가 이와 같은 API를 사용하여 다양한 .NET 구현체에서 사용할 수 있는 이식 가능한 라이브러리를 만들 수 있습니다.
 - OS API에 한해서, .NET API때문에 공유된 소스의 조건부 컴파일을 줄이거나 제거할 수 있습니다.
 
-다양한 .NET 구현은 특정 버전의 .NET Standard를 대상으로 합니다. 각 .NET 구현 버전은 지원하는 최신 .NET Standard 버전을 보급합니다. 이는 이전 버전도 지원함을 의미합니다. 예를 들어 .NET Framework 4.6에서는 .NET 표준 1.3을 구현합니다. 즉, .NET 표준 버전 1.0에서 1.3까지에 정의된 모든 API를 표시합니다. 마찬가지로 .NET Framework 4.6.1에서는 .NET Standard 1.4를 구현하지만 .NET Core 1.0에서는 .NET Standard 1.6을 구현합니다.
+다양한 .NET 구현체는 특정 버전의 .NET Standard를 대상으로 합니다. 각 .NET 구현체 버전은 지원하는 최신 .NET Standard 버전을 보급합니다. 이는 이전 버전도 지원함을 의미합니다. 예를 들어 .NET Framework 4.6에서는 .NET Standard 1.3을 구현합니다. 즉, .NET Standard 버전 1.0에서 1.3까지에 정의된 모든 API를 표시합니다. 마찬가지로 .NET Framework 4.6.1에서는 .NET Standard 1.4를 구현하지만 .NET Core 1.0에서는 .NET Standard 1.6을 구현합니다.
 
 ## <a name="net-implementation-support"></a>.NET 구현체 지원
 
