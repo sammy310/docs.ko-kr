@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 5280e816-ae17-48c4-8de0-a1e6895dd8f0
-ms.openlocfilehash: 2213d766435aaafbf37b8646a66ea3007bfcb734
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: d924d684561a2dd90ff18c803c3b12e8ac3581ce
+ms.sourcegitcommit: e994e47d3582bf09ae487ecbd53c0dac30aebaf7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57719639"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58262571"
 ---
 # <a name="how-to-create-a-sequential-workflow"></a>방법: 순차 워크플로 만들기
 기본 제공 활동뿐 아니라 사용자 지정 활동에서도 워크플로를 구성할 수 있습니다. 이 항목에서는 같은 모두 기본 제공 활동을 사용 하는 워크플로 만드는 방법을 단계별로 합니다 <xref:System.Activities.Statements.Sequence> 활동 및 사용자 지정 활동을 이전 [방법: 활동 만들기](how-to-create-an-activity.md) 항목입니다. 이 워크플로는 숫자 추측 게임을 모델링합니다.  
@@ -21,7 +21,7 @@ ms.locfileid: "57719639"
 > [!NOTE]
 >  자습서의 전체 버전을 다운로드하려면 [Windows Workflow Foundation(WF45) - 초보자를 위한 자습서](https://go.microsoft.com/fwlink/?LinkID=248976)를 참조하세요.  
   
-### <a name="to-create-the-workflow"></a>워크플로를 만들려면  
+## <a name="to-create-the-workflow"></a>워크플로를 만들려면  
   
 1.  마우스 오른쪽 단추로 클릭 **NumberGuessWorkflowActivities** 에서 **솔루션 탐색기** 선택한 **추가**하십시오 **새 항목**합니다.  
   
@@ -31,7 +31,7 @@ ms.locfileid: "57719639"
   
 4.  끌어서를 **시퀀스** 활동에서는 **제어 흐름** 부분을 **도구 상자** 놓습니다를 **여기에 작업 놓기** 에 레이블는 워크플로 디자인 화면입니다.  
   
-### <a name="to-create-the-workflow-variables-and-arguments"></a>워크플로 변수와 인수를 만들려면  
+## <a name="to-create-the-workflow-variables-and-arguments"></a>워크플로 변수와 인수를 만들려면  
   
 1.  두 번 클릭 **SequentialNumberGuessWorkflow.xaml** 에 **솔루션 탐색기** 이미 표시 되지 않으면 워크플로 디자이너에서 표시 합니다.  
   
@@ -62,7 +62,7 @@ ms.locfileid: "57719639"
   
 13. 클릭 **변수** 닫으려면 activity designer의 왼쪽 아래에에서는 **변수** 창입니다.  
   
-### <a name="to-add-the-workflow-activities"></a>워크플로 활동을 추가하려면  
+## <a name="to-add-the-workflow-activities"></a>워크플로 활동을 추가하려면  
   
 1.  끌어서를 **할당** 활동에서는 **기본** 부분을 **도구 상자** 놓습니다를 **시퀀스** 활동. 형식 `Target` 에 **에** 상자 및에 다음 식을 합니다 **C# 식 입력** 또는 **VB 식 입력** 상자입니다.  
   
@@ -138,13 +138,13 @@ ms.locfileid: "57719639"
   
 13. 클릭는 **WriteLine** 활동에는 **다음** 섹션을 선택 하 고에 다음 식을 입력 합니다 **텍스트** 속성 값 상자.  
   
-    ```vb  
+    ```text
     "Your guess is too low."  
     ```  
   
 14. 클릭는 **WriteLine** 활동에는 **Else** 섹션을 선택 하 고에 다음 식을 입력 합니다 **텍스트** 속성 값 상자.  
   
-    ```vb  
+    ```text
     "Your guess is too high."  
     ```  
   
@@ -152,7 +152,7 @@ ms.locfileid: "57719639"
   
      ![완료 된 순차 워크플로](./media/wfsequentialgettingstartedtutorialcomplete.JPG "WFSequentialGettingStartedTutorialComplete")  
   
-### <a name="to-build-the-workflow"></a>워크플로를 빌드하려면  
+## <a name="to-build-the-workflow"></a>워크플로를 빌드하려면  
   
 1.  Ctrl+Shift+B를 눌러 솔루션을 빌드합니다.  
   
