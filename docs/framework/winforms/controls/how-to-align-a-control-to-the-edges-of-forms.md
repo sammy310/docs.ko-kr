@@ -18,9 +18,7 @@ ms.lasthandoff: 03/09/2019
 ms.locfileid: "57713893"
 ---
 # <a name="how-to-align-a-control-to-the-edges-of-forms"></a>방법: 컨트롤을 폼의 가장자리에 맞춤
-
-  <xref:System.Windows.Forms.Control.Dock%2A> 속성을 설정하여 양식 가장자리에 맞춰서 컨트롤을 정렬할 수 있습니다. 이 속성은 양식에서 컨트롤의 위치를 지정합니다. 
-  <xref:System.Windows.Forms.Control.Dock%2A> 속성은 다음 값으로 설정할 수 있습니다.  
+<xref:System.Windows.Forms.Control.Dock%2A> 속성을 설정하여 양식 가장자리에 맞춰서 컨트롤을 정렬할 수 있습니다. 이 속성은 양식에서 컨트롤의 위치를 지정합니다. <xref:System.Windows.Forms.Control.Dock%2A> 속성은 다음 값으로 설정할 수 있습니다.  
   
 |설정|컨트롤에 대한 영향|  
 |-------------|----------------------------|  
