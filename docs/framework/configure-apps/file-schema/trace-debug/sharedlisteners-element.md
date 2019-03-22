@@ -11,12 +11,12 @@ helpviewer_keywords:
 - trace listeners, <sharedListeners> element
 - sharedListeners element
 ms.assetid: de200534-19dd-4156-86cf-c50521802c4c
-ms.openlocfilehash: 56a4111f2e0fd290321756c43c7f245e46044b02
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 281cc0bd2e577dedaffb7f7eaf04fe46e6ee0b59
+ms.sourcegitcommit: 344d82456f27d09a210671214a14cfd7daf1f97c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55254940"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58348819"
 ---
 # <a name="sharedlisteners-element"></a>\<sharedListeners > 요소
 소스 또는 추적 요소가 참조할 수 있는 수신기가 포함되어 있습니다.  이러한 수신기 기본적으로 모든 추적을 받지 않습니다 하 고 런타임 시 이러한 수신기를 검색할 수 없는 합니다. 공유 수신기로 식별 하는 수신기 이름으로 추적 소스를 추가할 수 있습니다.  
@@ -85,7 +85,7 @@ ms.locfileid: "55254940"
       </listeners>  
     </trace>  
   </system.diagnostics>  
-</configuration></system.diagnostics>   
+</configuration>
 ```  
   
 ## <a name="see-also"></a>참고자료
