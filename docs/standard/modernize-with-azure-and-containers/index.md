@@ -1,6 +1,6 @@
 ---
-title: Azure 클라우드 사용 하 여 기존.NET 응용 프로그램 및 Windows 컨테이너를 현대화 (2 판)
-description: 리프트 앤 시프트 및 Azure 클라우드 및이 전자책을 사용 하 여 컨테이너에 기존 응용 프로그램을 현대화 하는 방법을 알아봅니다.
+title: Azure 클라우드를 사용하여 기존.NET 응용 프로그램과 Windows 컨테이너를 최신으로 변경하기 (2 판)
+description: 리프트 앤 시프트 및 Azure 클라우드 및 이 전자책을 사용하여 컨테이너에 기존 응용 프로그램을 최신으로 변경하는 방법을 알아봅니다.
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 04/28/2018
@@ -11,7 +11,7 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 10/28/2018
 ms.locfileid: "50200087"
 ---
-# <a name="modernize-existing-net-applications-with-azure-cloud-and-windows-containers-2nd-edition"></a>Azure 클라우드 및 Windows 컨테이너를 사용 하 여 기존.NET 응용 프로그램 현대화 (2 판)
+# <a name="modernize-existing-net-applications-with-azure-cloud-and-windows-containers-2nd-edition"></a>Azure 클라우드와 Windows 컨테이너를 사용하여 기존.NET 응용 프로그램을 최신으로 변경하기 (2 판)
 
 ![표지 이미지](./media/cover.png)
 
@@ -25,11 +25,11 @@ Copyright © 2018 by Microsoft Corporation
 
 All rights reserved. 이 가이드의 내용 중 어떤 부분도 게시자의 서면 허가 없이는 어떠한 형식이나 방법으로도 복제할 수 없습니다.
 
-이 책은 Microsoft의 여러 채널을 통해 사용할 수 있는 전자는 책 (전자책)의 형태로 무료로 같은 <https://dot.net/architecture>합니다.
+이 책은 <https://dot.net/architecture>와 같은 다양한 Microsoft 채널을 통해 전자책(e-book)의 형태로 제공되며 무료로 사용할 수 있습니다.
 
-이 책에 관한 질문이 있는 경우 [dotnet-architecture-ebooks-feedback@service.microsoft.com](mailto:dotnet-architecture-ebooks-feedback@service.microsoft.com?subject=Feedback%20for%20.NET%20Container%20&%20Microservices%20Architecture%20book)으로 이메일을 보내 주세요.
+이 책에 관한 질문은 [dotnet-architecture-ebooks-feedback@service.microsoft.com](mailto:dotnet-architecture-ebooks-feedback@service.microsoft.com?subject=Feedback%20for%20.NET%20Container%20&%20Microservices%20Architecture%20book)으로 이메일을 보내 주세요.
 
-이 가이드는 작성자의 견해와 의견을 "있는 그대로" 제공하고 전달합니다. 뷰, 의견 및 URL 및 기타 인터넷 웹 사이트 참조를 비롯 한이 책에서 표현 되는 정보는 통지 없이 변경 될 수 있습니다.
+이 가이드는 작성자의 견해와 의견을 "있는 그대로" 제공하고 전달합니다. 뷰와 의견, URL, 기타 인터넷 웹 사이트 참조를 비롯한 이 책의 정보는 통보 없이 변경 될 수 있습니다.
 
 여기에 설명된 일부 예제는 예시 용도로만 제공되며 실제 데이터가 아닙니다. 실제로 연관시키거나 관련시키려고 의도하거나 추론해서는 안 됩니다.
 
@@ -48,13 +48,13 @@ All rights reserved. 이 가이드의 내용 중 어떤 부분도 게시자의 �
 
 ## <a name="introduction"></a>소개
 
-웹 응용 프로그램 또는 서비스를 현대화 하 고 클라우드로 이동 하려는 경우에 완벽 하 게 앱 아키텍처 변경 필요가 것은 아닙니다. 마이크로 서비스 같은 고급 방법을 사용 하 여 응용 프로그램을 재설계 것이 항상 좋은 비용과 시간 제한 때문입니다. 응용 프로그램의 유형에 따라 앱의 아키텍처를 변경도 필요 하지 않을 합니다. 조직의 클라우드 마이그레이션 전략 비용 효율성을 최적화하려면 비즈니스 요구 사항과 앱 요구 사항을 고려해야 합니다. 다음을 파악해야 합니다.
+웹 응용 프로그램 또는 서비스를 최신으로 변경하고 클라우드로 이동하기위해 앱 아키텍처를 완전히 변경해야 하는 것은 아닙니다. 제한된 시간과 비용 때문에 마이크로 서비스 같은 향상된 방법으로 응용 프로그램을 재설계하는 것을 항상 선택 할 수는 없습니다. 응용 프로그램의 유형에 따라 앱의 아키텍처를 변경하지 않을 수도 있습니다. 조직의 클라우드 마이그레이션 전략을 비용 효과적으로 최적화하려면 비즈니스와 앱의 요구 사항을 고려해야 합니다. 다음 사항을 결정합니다. 
 
-- 변환 필요한 앱 또는 아키텍처를 변경 합니다.
+- 아키텍처를 재설계하거나 변경이 필요한 앱.
 
-- 부분적으로만 현대화해야 하는 앱.
+- 일 부분만 최신으로 변경해야 하는 앱.
 
-- 클라우드에 바로 "리프트 앤 시프트"할 수 있는 앱.
+- 클라우드에 바로 "리프트 앤 시프트(통째로 들어 올리는)"할 수 있는 앱.
 
 ## <a name="about-this-guide"></a>이 가이드의 내용
 
