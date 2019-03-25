@@ -9,19 +9,19 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 03/05/2019
 ms.locfileid: "57357250"
 ---
-# <a name="issuerchannelbehaviors-element"></a><span data-ttu-id="27530-102">\<issuerChannelBehaviors > 요소</span><span class="sxs-lookup"><span data-stu-id="27530-102">\<issuerChannelBehaviors> Element</span></span>
+# <a name="issuerchannelbehaviors-element"></a><span data-ttu-id="2d0c7-102">\<issuerChannelBehaviors > 요소</span><span class="sxs-lookup"><span data-stu-id="2d0c7-102">\<issuerChannelBehaviors> Element</span></span>
 
-<span data-ttu-id="27530-103">지정한 서비스 토큰 서비스와 통신할 때 사용 되는 Windows Communication Foundation (WCF) 클라이언트 끝점 동작 (구성에 정의 됨)의 컬렉션을 포함 합니다.</span><span class="sxs-lookup"><span data-stu-id="27530-103">Contains a collection of Windows Communication Foundation (WCF) client endpoint behaviors (defined in the configuration) to be used when communicating with the specified Service Token Services.</span></span> <span data-ttu-id="27530-104">정의 된 동작을 포함할 수 없습니다 [ \<clientCredentials >](../../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md) 요소입니다.</span><span class="sxs-lookup"><span data-stu-id="27530-104">The defined behaviors cannot include any [\<clientCredentials>](../../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md) elements.</span></span>
+<span data-ttu-id="2d0c7-103">지정한 서비스 토큰 서비스와 통신할 때 사용 되는 Windows Communication Foundation (WCF) 클라이언트 끝점 동작 (구성에 정의 됨)의 컬렉션을 포함 합니다.</span><span class="sxs-lookup"><span data-stu-id="2d0c7-103">Contains a collection of Windows Communication Foundation (WCF) client endpoint behaviors (defined in the configuration) to be used when communicating with the specified Service Token Services.</span></span> <span data-ttu-id="2d0c7-104">정의 된 동작을 포함할 수 없습니다 [\<clientCredentials >](../../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md) 요소입니다.</span><span class="sxs-lookup"><span data-stu-id="2d0c7-104">The defined behaviors cannot include any [\<clientCredentials>](../../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md) elements.</span></span>
 
-<span data-ttu-id="27530-105">\<system.ServiceModel>\\</span><span class="sxs-lookup"><span data-stu-id="27530-105">\<system.ServiceModel>\\</span></span>
-<span data-ttu-id="27530-106">\<behaviors>\\</span><span class="sxs-lookup"><span data-stu-id="27530-106">\<behaviors>\\</span></span>
-<span data-ttu-id="27530-107">endpointBehaviors section\\</span><span class="sxs-lookup"><span data-stu-id="27530-107">endpointBehaviors section\\</span></span>
-<span data-ttu-id="27530-108">\<behavior>\\</span><span class="sxs-lookup"><span data-stu-id="27530-108">\<behavior>\\</span></span>
-<span data-ttu-id="27530-109">\<clientCredentials>\\</span><span class="sxs-lookup"><span data-stu-id="27530-109">\<clientCredentials>\\</span></span>
-<span data-ttu-id="27530-110">\<issuedToken>\\</span><span class="sxs-lookup"><span data-stu-id="27530-110">\<issuedToken>\\</span></span>
-<span data-ttu-id="27530-111">\<issuerChannelBehaviors></span><span class="sxs-lookup"><span data-stu-id="27530-111">\<issuerChannelBehaviors></span></span>
+<span data-ttu-id="2d0c7-105">\<system.ServiceModel>\\</span><span class="sxs-lookup"><span data-stu-id="2d0c7-105">\<system.ServiceModel>\\</span></span>
+<span data-ttu-id="2d0c7-106">\<behaviors>\\</span><span class="sxs-lookup"><span data-stu-id="2d0c7-106">\<behaviors>\\</span></span>
+<span data-ttu-id="2d0c7-107">endpointBehaviors section\\</span><span class="sxs-lookup"><span data-stu-id="2d0c7-107">endpointBehaviors section\\</span></span>
+<span data-ttu-id="2d0c7-108">\<behavior>\\</span><span class="sxs-lookup"><span data-stu-id="2d0c7-108">\<behavior>\\</span></span>
+<span data-ttu-id="2d0c7-109">\<clientCredentials>\\</span><span class="sxs-lookup"><span data-stu-id="2d0c7-109">\<clientCredentials>\\</span></span>
+<span data-ttu-id="2d0c7-110">\<issuedToken>\\</span><span class="sxs-lookup"><span data-stu-id="2d0c7-110">\<issuedToken>\\</span></span>
+<span data-ttu-id="2d0c7-111">\<issuerChannelBehaviors></span><span class="sxs-lookup"><span data-stu-id="2d0c7-111">\<issuerChannelBehaviors></span></span>
 
-## <a name="syntax"></a><span data-ttu-id="27530-112">구문</span><span class="sxs-lookup"><span data-stu-id="27530-112">Syntax</span></span>
+## <a name="syntax"></a><span data-ttu-id="2d0c7-112">구문</span><span class="sxs-lookup"><span data-stu-id="2d0c7-112">Syntax</span></span>
 
 ```xml
 <issuerChannelBehaviors>
@@ -30,42 +30,41 @@ ms.locfileid: "57357250"
 </issuerChannelBehaviors>
 ```
 
-## <a name="attributes-and-elements"></a><span data-ttu-id="27530-113">특성 및 요소</span><span class="sxs-lookup"><span data-stu-id="27530-113">Attributes and Elements</span></span>
+## <a name="attributes-and-elements"></a><span data-ttu-id="2d0c7-113">특성 및 요소</span><span class="sxs-lookup"><span data-stu-id="2d0c7-113">Attributes and Elements</span></span>
 
-<span data-ttu-id="27530-114">다음 섹션에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="27530-114">The following sections describe attributes, child elements, and parent elements.</span></span>
+<span data-ttu-id="2d0c7-114">다음 섹션에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="2d0c7-114">The following sections describe attributes, child elements, and parent elements.</span></span>
 
-### <a name="attributes"></a><span data-ttu-id="27530-115">특성</span><span class="sxs-lookup"><span data-stu-id="27530-115">Attributes</span></span>
+### <a name="attributes"></a><span data-ttu-id="2d0c7-115">특성</span><span class="sxs-lookup"><span data-stu-id="2d0c7-115">Attributes</span></span>
 
-<span data-ttu-id="27530-116">없음</span><span class="sxs-lookup"><span data-stu-id="27530-116">None.</span></span>
+<span data-ttu-id="2d0c7-116">없음</span><span class="sxs-lookup"><span data-stu-id="2d0c7-116">None.</span></span>
 
-### <a name="child-elements"></a><span data-ttu-id="27530-117">자식 요소</span><span class="sxs-lookup"><span data-stu-id="27530-117">Child Elements</span></span>
+### <a name="child-elements"></a><span data-ttu-id="2d0c7-117">자식 요소</span><span class="sxs-lookup"><span data-stu-id="2d0c7-117">Child Elements</span></span>
 
-|<span data-ttu-id="27530-118">요소</span><span class="sxs-lookup"><span data-stu-id="27530-118">Element</span></span>|<span data-ttu-id="27530-119">설명</span><span class="sxs-lookup"><span data-stu-id="27530-119">Description</span></span>|
+|<span data-ttu-id="2d0c7-118">요소</span><span class="sxs-lookup"><span data-stu-id="2d0c7-118">Element</span></span>|<span data-ttu-id="2d0c7-119">설명</span><span class="sxs-lookup"><span data-stu-id="2d0c7-119">Description</span></span>|
 |-------------|-----------------|
-|[<span data-ttu-id="27530-120">\<add></span><span class="sxs-lookup"><span data-stu-id="27530-120">\<add></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/add-of-issuerchannelbehaviors.md)|<span data-ttu-id="27530-121">동작을 컬렉션에 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="27530-121">Adds a behavior to the collection.</span></span>|
+|[<span data-ttu-id="2d0c7-120">\<add></span><span class="sxs-lookup"><span data-stu-id="2d0c7-120">\<add></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/add-of-issuerchannelbehaviors.md)|<span data-ttu-id="2d0c7-121">동작을 컬렉션에 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="2d0c7-121">Adds a behavior to the collection.</span></span>|
 
-### <a name="parent-elements"></a><span data-ttu-id="27530-122">부모 요소</span><span class="sxs-lookup"><span data-stu-id="27530-122">Parent Elements</span></span>
+### <a name="parent-elements"></a><span data-ttu-id="2d0c7-122">부모 요소</span><span class="sxs-lookup"><span data-stu-id="2d0c7-122">Parent Elements</span></span>
 
-|<span data-ttu-id="27530-123">요소</span><span class="sxs-lookup"><span data-stu-id="27530-123">Element</span></span>|<span data-ttu-id="27530-124">설명</span><span class="sxs-lookup"><span data-stu-id="27530-124">Description</span></span>|
+|<span data-ttu-id="2d0c7-123">요소</span><span class="sxs-lookup"><span data-stu-id="2d0c7-123">Element</span></span>|<span data-ttu-id="2d0c7-124">설명</span><span class="sxs-lookup"><span data-stu-id="2d0c7-124">Description</span></span>|
 |-------------|-----------------|
-|[<span data-ttu-id="27530-125">\<issuedToken></span><span class="sxs-lookup"><span data-stu-id="27530-125">\<issuedToken></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/issuedtoken.md)|<span data-ttu-id="27530-126">서비스에 대해 클라이언트를 인증할 때 사용되는 사용자 지정 토큰을 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="27530-126">Specifies a custom token used to authenticate a client to a service.</span></span>|
+|[<span data-ttu-id="2d0c7-125">\<issuedToken></span><span class="sxs-lookup"><span data-stu-id="2d0c7-125">\<issuedToken></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/issuedtoken.md)|<span data-ttu-id="2d0c7-126">서비스에 대해 클라이언트를 인증할 때 사용되는 사용자 지정 토큰을 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="2d0c7-126">Specifies a custom token used to authenticate a client to a service.</span></span>|
 
-## <a name="remarks"></a><span data-ttu-id="27530-127">설명</span><span class="sxs-lookup"><span data-stu-id="27530-127">Remarks</span></span>
+## <a name="remarks"></a><span data-ttu-id="2d0c7-127">설명</span><span class="sxs-lookup"><span data-stu-id="2d0c7-127">Remarks</span></span>
 
-<span data-ttu-id="27530-128">
-  `<clientCredentials>\` 요소를 포함하는 동작을 제외한 동작을 서비스와 통신하는 데 사용하는 경우 이 요소를 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="27530-128">Use this element when any behaviors (other than behaviors that include `<clientCredentials>` elements) must be used to communicate with a service.</span></span> <span data-ttu-id="27530-129">예를 들어 경우는 [ \<dataContractSerializer >](../../../../../docs/framework/configure-apps/file-schema/wcf/datacontractserializer-element.md) 동작 요소가 포함 되어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="27530-129">For example, if a [\<dataContractSerializer>](../../../../../docs/framework/configure-apps/file-schema/wcf/datacontractserializer-element.md) behavior element must be included.</span></span>
+<span data-ttu-id="2d0c7-128">`<clientCredentials>` 요소를 포함하는 동작을 제외한 동작을 서비스와 통신하는 데 사용하는 경우 이 요소를 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="2d0c7-128">Use this element when any behaviors (other than behaviors that include `<clientCredentials>` elements) must be used to communicate with a service.</span></span> <span data-ttu-id="2d0c7-129">예를 들어 경우는 [\<dataContractSerializer >](../../../../../docs/framework/configure-apps/file-schema/wcf/datacontractserializer-element.md) 동작 요소가 포함 되어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="2d0c7-129">For example, if a [\<dataContractSerializer>](../../../../../docs/framework/configure-apps/file-schema/wcf/datacontractserializer-element.md) behavior element must be included.</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="27530-130">참고자료</span><span class="sxs-lookup"><span data-stu-id="27530-130">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="2d0c7-130">참고자료</span><span class="sxs-lookup"><span data-stu-id="2d0c7-130">See also</span></span>
 
 - <xref:System.ServiceModel.Configuration.IssuedTokenClientElement.IssuerChannelBehaviors%2A>
 - <xref:System.ServiceModel.Configuration.IssuedTokenClientBehaviorsElement>
 - <xref:System.ServiceModel.Configuration.IssuedTokenClientBehaviorsElementCollection>
 - <xref:System.ServiceModel.Security.IssuedTokenClientCredential.IssuerChannelBehaviors%2A>
-- [<span data-ttu-id="27530-131">서비스 ID 및 인증</span><span class="sxs-lookup"><span data-stu-id="27530-131">Service Identity and Authentication</span></span>](../../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)
-- [<span data-ttu-id="27530-132">보안 동작</span><span class="sxs-lookup"><span data-stu-id="27530-132">Security Behaviors</span></span>](../../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)
-- [<span data-ttu-id="27530-133">페더레이션 및 발급된 토큰</span><span class="sxs-lookup"><span data-stu-id="27530-133">Federation and Issued Tokens</span></span>](../../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)
-- [<span data-ttu-id="27530-134">서비스 및 클라이언트에 보안 설정</span><span class="sxs-lookup"><span data-stu-id="27530-134">Securing Services and Clients</span></span>](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
-- [<span data-ttu-id="27530-135">클라이언트에 보안 설정</span><span class="sxs-lookup"><span data-stu-id="27530-135">Securing Clients</span></span>](../../../../../docs/framework/wcf/securing-clients.md)
-- [<span data-ttu-id="27530-136">방법: 페더레이션된 클라이언트 만들기</span><span class="sxs-lookup"><span data-stu-id="27530-136">How to: Create a Federated Client</span></span>](../../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)
-- [<span data-ttu-id="27530-137">방법: 로컬 발급자 구성</span><span class="sxs-lookup"><span data-stu-id="27530-137">How to: Configure a Local Issuer</span></span>](../../../../../docs/framework/wcf/feature-details/how-to-configure-a-local-issuer.md)
-- [<span data-ttu-id="27530-138">페더레이션 및 발급된 토큰</span><span class="sxs-lookup"><span data-stu-id="27530-138">Federation and Issued Tokens</span></span>](../../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)
+- [<span data-ttu-id="2d0c7-131">서비스 ID 및 인증</span><span class="sxs-lookup"><span data-stu-id="2d0c7-131">Service Identity and Authentication</span></span>](../../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)
+- [<span data-ttu-id="2d0c7-132">보안 동작</span><span class="sxs-lookup"><span data-stu-id="2d0c7-132">Security Behaviors</span></span>](../../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)
+- [<span data-ttu-id="2d0c7-133">페더레이션 및 발급된 토큰</span><span class="sxs-lookup"><span data-stu-id="2d0c7-133">Federation and Issued Tokens</span></span>](../../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)
+- [<span data-ttu-id="2d0c7-134">서비스 및 클라이언트에 보안 설정</span><span class="sxs-lookup"><span data-stu-id="2d0c7-134">Securing Services and Clients</span></span>](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
+- [<span data-ttu-id="2d0c7-135">클라이언트에 보안 설정</span><span class="sxs-lookup"><span data-stu-id="2d0c7-135">Securing Clients</span></span>](../../../../../docs/framework/wcf/securing-clients.md)
+- [<span data-ttu-id="2d0c7-136">방법: 페더레이션된 클라이언트 만들기</span><span class="sxs-lookup"><span data-stu-id="2d0c7-136">How to: Create a Federated Client</span></span>](../../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)
+- [<span data-ttu-id="2d0c7-137">방법: 로컬 발급자 구성</span><span class="sxs-lookup"><span data-stu-id="2d0c7-137">How to: Configure a Local Issuer</span></span>](../../../../../docs/framework/wcf/feature-details/how-to-configure-a-local-issuer.md)
+- [<span data-ttu-id="2d0c7-138">페더레이션 및 발급된 토큰</span><span class="sxs-lookup"><span data-stu-id="2d0c7-138">Federation and Issued Tokens</span></span>](../../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)

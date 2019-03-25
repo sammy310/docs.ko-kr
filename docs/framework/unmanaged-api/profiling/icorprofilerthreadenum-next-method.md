@@ -24,10 +24,10 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 03/06/2019
 ms.locfileid: "57488710"
 ---
-# <a name="icorprofilerthreadenumnext-method"></a><span data-ttu-id="475fd-102">ICorProfilerThreadEnum::Next 메서드</span><span class="sxs-lookup"><span data-stu-id="475fd-102">ICorProfilerThreadEnum::Next Method</span></span>
-<span data-ttu-id="475fd-103">시퀀스에서 열거자의 현재 위치부터 시작하여 순차적 스레드 컬렉션에서 지정된 개수의 연속 스레드를 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="475fd-103">Gets the specified number of contiguous threads from a sequential collection of threads, starting at the enumerator's current position in the sequence.</span></span>  
+# <a name="icorprofilerthreadenumnext-method"></a><span data-ttu-id="531b6-102">ICorProfilerThreadEnum::Next 메서드</span><span class="sxs-lookup"><span data-stu-id="531b6-102">ICorProfilerThreadEnum::Next Method</span></span>
+<span data-ttu-id="531b6-103">시퀀스에서 열거자의 현재 위치부터 시작하여 순차적 스레드 컬렉션에서 지정된 개수의 연속 스레드를 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="531b6-103">Gets the specified number of contiguous threads from a sequential collection of threads, starting at the enumerator's current position in the sequence.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="475fd-104">구문</span><span class="sxs-lookup"><span data-stu-id="475fd-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="531b6-104">구문</span><span class="sxs-lookup"><span data-stu-id="531b6-104">Syntax</span></span>  
   
 ```  
 HRESULT Next (    [in]  ULONG      celt,  
@@ -37,34 +37,33 @@ HRESULT Next (    [in]  ULONG      celt,
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="475fd-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="475fd-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="531b6-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="531b6-105">Parameters</span></span>  
  `celt`  
- <span data-ttu-id="475fd-106">[in] 검색할 스레드 개수입니다.</span><span class="sxs-lookup"><span data-stu-id="475fd-106">[in] The number of threads to retrieve.</span></span>  
+ <span data-ttu-id="531b6-106">[in] 검색할 스레드 개수입니다.</span><span class="sxs-lookup"><span data-stu-id="531b6-106">[in] The number of threads to retrieve.</span></span>  
   
  `ids`  
- <span data-ttu-id="475fd-107">[out] 각각 검색된 스레드를 나타내는 `ThreadID` 값의 배열입니다.</span><span class="sxs-lookup"><span data-stu-id="475fd-107">[out] An array of `ThreadID` values, each of which represents a retrieved thread.</span></span>  
+ <span data-ttu-id="531b6-107">[out] 각각 검색된 스레드를 나타내는 `ThreadID` 값의 배열입니다.</span><span class="sxs-lookup"><span data-stu-id="531b6-107">[out] An array of `ThreadID` values, each of which represents a retrieved thread.</span></span>  
   
  `pceltFetched`  
- <span data-ttu-id="475fd-108">[out] `ids` 배열에 실제로 반환된 스레드 개수에 대한 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="475fd-108">[out] A pointer to the number of threads actually returned in the `ids` array.</span></span>  
+ <span data-ttu-id="531b6-108">[out] `ids` 배열에 실제로 반환된 스레드 개수에 대한 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="531b6-108">[out] A pointer to the number of threads actually returned in the `ids` array.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="475fd-109">반환 값</span><span class="sxs-lookup"><span data-stu-id="475fd-109">Return Value</span></span>  
- <span data-ttu-id="475fd-110">이 메서드는 다음과 같은 특정 HRESULT뿐만 아니라 메서드 오류를 나타내는 HRESULT 오류도 반환합니다.</span><span class="sxs-lookup"><span data-stu-id="475fd-110">This method returns the following specific HRESULTs as well as HRESULT errors that indicate method failure.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="531b6-109">반환 값</span><span class="sxs-lookup"><span data-stu-id="531b6-109">Return Value</span></span>  
+ <span data-ttu-id="531b6-110">이 메서드는 다음과 같은 특정 HRESULT뿐만 아니라 메서드 오류를 나타내는 HRESULT 오류도 반환합니다.</span><span class="sxs-lookup"><span data-stu-id="531b6-110">This method returns the following specific HRESULTs as well as HRESULT errors that indicate method failure.</span></span>  
   
-|<span data-ttu-id="475fd-111">HRESULT</span><span class="sxs-lookup"><span data-stu-id="475fd-111">HRESULT</span></span>|<span data-ttu-id="475fd-112">설명</span><span class="sxs-lookup"><span data-stu-id="475fd-112">Description</span></span>|  
+|<span data-ttu-id="531b6-111">HRESULT</span><span class="sxs-lookup"><span data-stu-id="531b6-111">HRESULT</span></span>|<span data-ttu-id="531b6-112">설명</span><span class="sxs-lookup"><span data-stu-id="531b6-112">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="475fd-113">S_OK</span><span class="sxs-lookup"><span data-stu-id="475fd-113">S_OK</span></span>|<span data-ttu-id="475fd-114">`celt` 요소가 반환되었습니다.</span><span class="sxs-lookup"><span data-stu-id="475fd-114">`celt` elements were returned.</span></span>|  
-|<span data-ttu-id="475fd-115">S_FALSE</span><span class="sxs-lookup"><span data-stu-id="475fd-115">S_FALSE</span></span>|<span data-ttu-id="475fd-116">
-  `celt\`개 미만의 요소가 반환되었으며 이는 열거형이 완료되었음을 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="475fd-116">Fewer than `celt` elements were returned, which indicates that the enumeration is complete.</span></span>|  
+|<span data-ttu-id="531b6-113">S_OK</span><span class="sxs-lookup"><span data-stu-id="531b6-113">S_OK</span></span>|<span data-ttu-id="531b6-114">`celt` 요소가 반환되었습니다.</span><span class="sxs-lookup"><span data-stu-id="531b6-114">`celt` elements were returned.</span></span>|  
+|<span data-ttu-id="531b6-115">S_FALSE</span><span class="sxs-lookup"><span data-stu-id="531b6-115">S_FALSE</span></span>|<span data-ttu-id="531b6-116">`celt`개 미만의 요소가 반환되었으며 이는 열거형이 완료되었음을 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="531b6-116">Fewer than `celt` elements were returned, which indicates that the enumeration is complete.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="475fd-117">요구 사항</span><span class="sxs-lookup"><span data-stu-id="475fd-117">Requirements</span></span>  
- <span data-ttu-id="475fd-118">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="475fd-118">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="531b6-117">요구 사항</span><span class="sxs-lookup"><span data-stu-id="531b6-117">Requirements</span></span>  
+ <span data-ttu-id="531b6-118">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="531b6-118">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="475fd-119">**헤더:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="475fd-119">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="531b6-119">**헤더:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="531b6-119">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="475fd-120">**라이브러리:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="475fd-120">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="531b6-120">**라이브러리:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="531b6-120">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="475fd-121">**.NET Framework 버전:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="475fd-121">**.NET Framework Versions:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span></span>  
+ <span data-ttu-id="531b6-121">**.NET Framework 버전:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="531b6-121">**.NET Framework Versions:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="475fd-122">참고자료</span><span class="sxs-lookup"><span data-stu-id="475fd-122">See also</span></span>
-- [<span data-ttu-id="475fd-123">ICorProfilerThreadEnum 인터페이스</span><span class="sxs-lookup"><span data-stu-id="475fd-123">ICorProfilerThreadEnum Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerthreadenum-interface.md)
-- [<span data-ttu-id="475fd-124">프로파일링 인터페이스</span><span class="sxs-lookup"><span data-stu-id="475fd-124">Profiling Interfaces</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
+## <a name="see-also"></a><span data-ttu-id="531b6-122">참고자료</span><span class="sxs-lookup"><span data-stu-id="531b6-122">See also</span></span>
+- [<span data-ttu-id="531b6-123">ICorProfilerThreadEnum 인터페이스</span><span class="sxs-lookup"><span data-stu-id="531b6-123">ICorProfilerThreadEnum Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerthreadenum-interface.md)
+- [<span data-ttu-id="531b6-124">프로파일링 인터페이스</span><span class="sxs-lookup"><span data-stu-id="531b6-124">Profiling Interfaces</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
