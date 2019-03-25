@@ -20,7 +20,6 @@ Windows WF (Workflow Foundation)에서 사용 하 여 활동을 만드는 가장
 
 3.  새 활동을 엽니다.  도구 상자의 <xref:System.Activities.Statements.Sequence> 활동을 디자이너 화면으로 끌어 옵니다.
 
-4.  
-  <xref:System.Activities.Statements.WriteLine> 활동을 <xref:System.Activities.Statements.Sequence> 활동으로 끌어 옵니다. 입력 `"Hello World"` (따옴표로)에 **텍스트** 필드입니다.
+4.  <xref:System.Activities.Statements.WriteLine> 활동을 <xref:System.Activities.Statements.Sequence> 활동으로 끌어 옵니다. 입력 `"Hello World"` (따옴표로)에 **텍스트** 필드입니다.
 
 5.  두 번째 <xref:System.Activities.Statements.WriteLine> 활동을 첫 번째 활동 아래의 <xref:System.Activities.Statements.Sequence> 활동으로 끌어 옵니다. 입력 `"Goodbye"` (따옴표로)에 **텍스트** 필드입니다.

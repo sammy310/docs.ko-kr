@@ -11,12 +11,12 @@ helpviewer_keywords:
 - text [WPF], performance
 - glyphs [WPF]
 ms.assetid: 66b1b9a7-8618-48db-b616-c57ea4327b98
-ms.openlocfilehash: db0738008766343fa19454cac14e75b318663f34
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 14751d8241dabd0cf7c41f2920fab32e21dc43e2
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57352774"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58409408"
 ---
 # <a name="optimizing-performance-text"></a>성능 최적화: 텍스트
 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]에서는 다양한 기능의 [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] 컨트롤을 사용하여 텍스트 콘텐츠를 표시할 수 있습니다. 일반적으로 세 가지 계층으로 텍스트 렌더링을 나눌 수 있습니다.  
@@ -133,8 +133,9 @@ ms.locfileid: "57352774"
 ### <a name="showing-underlines-on-hyperlinks-only-on-mouseenter-events"></a>MouseEnter 이벤트에만 하이퍼링크에 밑줄 표시  
  <xref:System.Windows.TextDecoration> 개체 텍스트를 추가할 수 있는 시각적 장식 됩니다; 그러나 인스턴스화하는 데 성능 집중적 수 있습니다. 광범위 하 게 사용 한다면 <xref:System.Windows.Documents.Hyperlink> 요소와 같은 이벤트를 트리거하는 경우에 밑줄을 표시 하는 것이 좋습니다는 <xref:System.Windows.ContentElement.MouseEnter> 이벤트입니다. 자세한 내용은 [하이퍼링크에 밑줄이 그어지는지 여부 지정](how-to-specify-whether-a-hyperlink-is-underlined.md)을 참조하세요.  
   
- ![Textdecoration을 표시 하는 하이퍼링크](./media/textdecoration03.png "TextDecoration03")  
-MouseEnter에 표시되는 하이퍼링크  
+  다음 이미지는 어떻게 MouseEnter 이벤트 트리거 밑줄이 그어진된 하이퍼링크를 보여줍니다.
+
+  ![TextDecoration을 표시하는 하이퍼링크](./media/how-to-specify-whether-a-hyperlink-is-underlined/text-decorations-hyperlinks.png)   
   
  다음 태그 샘플은 <xref:System.Windows.Documents.Hyperlink> 와 밑줄 없이 정의 합니다.  
   

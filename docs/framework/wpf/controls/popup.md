@@ -9,19 +9,19 @@ helpviewer_keywords:
 - popups [WPF]
 - controls [WPF], Popup
 ms.assetid: 36a4320f-91ce-4f5f-9621-7934de3eff77
-ms.openlocfilehash: a36af4730a494448387ad059ff75199a19a1a359
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 3b43456de1b161763c6197956003c9e7f07135fc
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57370659"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58410110"
 ---
 # <a name="popup"></a>Popup
 <xref:System.Windows.Controls.Primitives.Popup> 현재 응용 프로그램 창 위에 떠 있는 별도 창에서 컨트롤에 내용이 표시 됩니다.  
   
  다음 그림에 표시를 <xref:System.Windows.Controls.Primitives.Popup> 기준으로 배치 되는 컨트롤을 <xref:System.Windows.Controls.Button> 부모입니다.  
   
- ![팝업 설명](./media/popuppicture.JPG "PopupPicture")  
+ ![팝업 설명](./media/popup/popup-picture-button.jpg)  
   
 ## <a name="in-this-section"></a>섹션 내용  
  [팝업 개요](popup-overview.md)  

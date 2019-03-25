@@ -8,12 +8,12 @@ helpviewer_keywords:
 - controls [WPF], Expander
 - Expander control [WPF], about Expander control
 ms.assetid: 877bf425-0e54-49ec-8fd2-13a211377abb
-ms.openlocfilehash: 2eff66377a3ba9b0e30417cc7dd1e1413d9074d9
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 29003779825b92402fa12b810c1a099731ac8af6
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57369931"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58409460"
 ---
 # <a name="expander-overview"></a>Expander 개요
 <xref:System.Windows.Controls.Expander> 컨트롤 창과 유사 하 고 헤더를 포함 하는 확장 가능한 영역에 콘텐츠를 제공할 수 있습니다.  
@@ -45,7 +45,7 @@ ms.locfileid: "57369931"
   
  **ScrollViewer의 확장기**  
   
- ![ScrollBar가 있는 확장기](./media/expanderwithscrollbar.JPG "ExpanderWithScrollBar")  
+ ![스크롤 막대가 있는 확장기를 보여주는 스크린샷.](./media/expander-overview/expander-scrollbar-control.jpg)  
   
  배치 하는 경우는 <xref:System.Windows.Controls.Expander> 에서 제어할를 <xref:System.Windows.Controls.ScrollViewer>설정는 <xref:System.Windows.Controls.ScrollViewer> 방향을에 해당 하는 속성을 차원를 <xref:System.Windows.Controls.Expander> 콘텐츠가 열리는 크기는 <xref:System.Windows.Controls.Expander> 콘텐츠 영역의. 예를 들어, 설정 하는 경우는 <xref:System.Windows.Controls.Expander.ExpandDirection%2A> 속성에는 <xref:System.Windows.Controls.Expander> 에 <xref:System.Windows.Controls.ExpandDirection.Down> (콘텐츠 영역이 아래로 열림), 설정를 <xref:System.Windows.FrameworkElement.Height%2A> 속성을는 <xref:System.Windows.Controls.ScrollViewer> 콘텐츠 영역의 필수 높이로 컨트롤. 대신 자체 콘텐츠 높이 치수를 설정 하는 경우 <xref:System.Windows.Controls.ScrollViewer> 이 설정을 인식 하지 못하고 따라서 스크롤 가능한 콘텐츠를 제공 하지 않습니다.  
   

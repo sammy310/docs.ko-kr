@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: a15ae411-8dc2-4ca3-84d2-01c9d5f1972a
-ms.openlocfilehash: 12d7dd8d47262f8eefe8f71f144c5648f089be45
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 56ebe888b816972f8d72873e4fca9f5204e6c772
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54593578"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58408927"
 ---
 # <a name="serialization"></a>Serialization
 이 항목에서는 설명 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] serialization 기능입니다. 디자인 타임에 코드 생성 도중 serialization을 추가하는 방법과 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 클래스의 런타임 serialization 동작에 대한 정보가 제공됩니다.  
@@ -24,7 +24,8 @@ ms.locfileid: "54593578"
 ## <a name="overview"></a>개요  
  생성 한 코드 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 기본적으로 지연 된 로드 기능을 제공 합니다. 지연된 로드를 사용하면 중간 계층에서 매우 편리하게 데이터를 필요한 때 투명하게 로드할 수 있습니다. 그러나 지연된 로드를 원하는지 여부에 상관없이 serializer가 지연된 로드를 트리거하기 때문에 이것은 serialization에서 문제가 됩니다. 실제로 개체가 serialize될 때 모든 지연 로드된 아웃바운드 참조 아래의 전이적 닫기가 serialize됩니다.  
   
- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] serialization 기능은 주로 다음과 같은 두 개의 메커니즘을 통해 이 문제를 해결합니다.  
+ 
+  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] serialization 기능은 주로 다음과 같은 두 개의 메커니즘을 통해 이 문제를 해결합니다.  
   
 -   지연된 로드를 해제하기 위한 <xref:System.Data.Linq.DataContext> 모드(<xref:System.Data.Linq.DataContext.ObjectTrackingEnabled%2A>). 자세한 내용은 <xref:System.Data.Linq.DataContext>을 참조하세요.  
   
@@ -50,7 +51,7 @@ ms.locfileid: "54593578"
  [!code-csharp[DLinqSerialization#3](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqSerialization/cs/northwind-ser.cs#3)]
  [!code-vb[DLinqSerialization#3](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqSerialization/vb/northwind-ser.vb#3)]  
   
- 다음 예제의 `Order` 클래스에서는 간단한 설명을 위해 `Customer` 클래스에 해당하는 역방향 연결 속성만 표시됩니다. 순환을 방지하기 위해 `DataMember` 특성이 없습니다.  
+ 다음 예제의 `Order` 클래스에서는 간단한 설명을 위해 `Customer` 클래스에 해당하는 역방향 연결 속성만 표시됩니다. 순환을 방지하기 위해 <xref:System.Runtime.Serialization.DataMemberAttribute> 특성이 없습니다.  
   
  [!code-csharp[DLinqSerialization#4](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqSerialization/cs/northwind-ser.cs#4)]
  [!code-vb[DLinqSerialization#4](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqSerialization/vb/northwind-ser.vb#4)]  
@@ -65,7 +66,7 @@ ms.locfileid: "54593578"
  [!code-vb[DLinqSerialization#6](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqSerialization/vb/Module1.vb#6)]  
   
 ### <a name="self-recursive-relationships"></a>자체 재귀적 관계  
- 자체 재귀적 관계는 동일한 패턴을 따릅니다. 외래 키에 해당하는 연결 속성에는 `DataMember` 특성이 없지만 부모 속성에는 이 특성이 있습니다.  
+ 자체 재귀적 관계는 동일한 패턴을 따릅니다. 외래 키에 해당하는 연결 속성에는 <xref:System.Runtime.Serialization.DataMemberAttribute> 특성이 없지만 부모 속성에는 이 특성이 있습니다.  
   
  다음 클래스에 두 개의 자체 재귀적 관계를 고려 합니다. / Reports 및 Employee.Mentor/Mentees 합니다.  
   

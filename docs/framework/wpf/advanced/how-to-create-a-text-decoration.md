@@ -16,33 +16,30 @@ helpviewer_keywords:
 - typography [WPF], text decorations
 - baseline type [WPF]
 ms.assetid: cf3cb4e7-782a-4be7-b2d4-e0935e21e4e0
-ms.openlocfilehash: a142604fdb36ec6f85e9411b37077bfffff587d4
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 22ff91770786e39e019de307167007548396ab33
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57363919"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58411332"
 ---
 # <a name="how-to-create-a-text-decoration"></a>방법: 텍스트 장식 만들기
 <xref:System.Windows.TextDecoration> 개체가 시각적 장식 텍스트를 추가할 수 있습니다. 텍스트 장식의 네 가지가: 밑줄, 기준, 취소선 및 윗줄 합니다. 다음 예제에서는 텍스트를 기준으로 텍스트 장식의 위치를 보여 줍니다.  
   
- ![텍스트 장식 위치의 다이어그램](./media/textdecoration01.gif "TextDecoration01")  
-텍스트 장식 형식의 예제  
+ ![텍스트 장식 종류의 다이어그램](./media/how-to-create-a-text-decoration/text-decoration-types.gif)  
   
  텍스트 장식에 텍스트를 추가 하려면 만들기를 <xref:System.Windows.TextDecoration> 개체 및 해당 속성을 수정 합니다. 사용 된 <xref:System.Windows.TextDecoration.Location%2A> 밑줄 등 텍스트 장식 나타나는 위치를 지정 하는 속성입니다. 사용 된 <xref:System.Windows.TextDecoration.Pen%2A> 텍스트 장식 단색 또는 그라데이션 색 등의 모양을 지정 하는 속성입니다. 에 대 한 값을 지정 하지 않으면 경우는 <xref:System.Windows.TextDecoration.Pen%2A> 속성에 장식 텍스트와 동일한 색의 기본값입니다. 정의한 후는 <xref:System.Windows.TextDecoration> 개체에 추가 하는 <xref:System.Windows.TextDecorations> 원하는 텍스트 개체의 컬렉션입니다.  
   
  다음 예제에서는 파선된 펜 선형 그라데이션 브러시와 스타일이 지정 된 텍스트 장식을 보여 줍니다.  
   
- ![선형 그라데이션 밑줄로 텍스트 장식](./media/textdecoration02.png "TextDecoration02")  
-선형 그라데이션으로 밑줄 예가 스타일 파선된 펜 및 브러시  
+ ![선형 그라데이션 밑줄로 텍스트 장식](./media/how-to-create-a-text-decoration/text-decoration-gradient.png)  
   
  <xref:System.Windows.Documents.Hyperlink> 개체는 유동 콘텐츠 내에서 하이퍼링크를 호스트할 수 있는 인라인 수준의 유동 콘텐츠 요소입니다. 기본적으로 <xref:System.Windows.Documents.Hyperlink> 사용을 <xref:System.Windows.TextDecoration> 밑줄을 표시 하는 개체입니다. <xref:System.Windows.TextDecoration> 많을 경우에 특히 개체를 인스턴스화할 때 성능이 저하 될 수 있습니다 <xref:System.Windows.Documents.Hyperlink> 개체입니다. 광범위 하 게 사용 한다면 <xref:System.Windows.Documents.Hyperlink> 와 같은 경우 트리거될 때만 밑줄이 표시 하려는 요소를 <xref:System.Windows.ContentElement.MouseEnter> 이벤트입니다.  
   
  다음 예제에서는 "My MSN" 링크 밑줄은 동적-만 표시 될 때를 <xref:System.Windows.ContentElement.MouseEnter> 이벤트가 트리거됩니다.  
   
- ![Textdecoration을 표시 하는 하이퍼링크](./media/textdecoration03.png "TextDecoration03")  
-Textdecoration을 사용 하 여 정의 하는 하이퍼링크  
-  
+ ![TextDecoration을 표시하는 하이퍼링크](./media/how-to-create-a-text-decoration/text-decorations-hyperlinks.png)  
+   
  자세한 내용은 [하이퍼링크에 밑줄이 그어지는지 여부 지정](how-to-specify-whether-a-hyperlink-is-underlined.md)을 참조하세요.  
   
 ## <a name="example"></a>예제  

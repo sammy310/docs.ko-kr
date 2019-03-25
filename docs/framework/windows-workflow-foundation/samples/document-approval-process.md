@@ -2,12 +2,12 @@
 title: 문서 승인 프로세스
 ms.date: 03/30/2017
 ms.assetid: 9b240937-76a7-45cd-8823-7f82c34d03bd
-ms.openlocfilehash: d1e37dcbc21239822937c57d9779a52357aac518
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 4451719bfb1d46a4e0e4dcde19666d1f8b2de427
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57717711"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58409551"
 ---
 # <a name="document-approval-process"></a>문서 승인 프로세스
 이 샘플 많은 Windows WF (Workflow Foundation) 및 Windows Communication Foundation (WCF) 기능의 사용을 함께 보여 줍니다. 이 기능들은 문서 승인 프로세스 시나리오를 구현하는 데 함께 사용됩니다. 클라이언트 응용 프로그램은 승인이 필요한 문서를 제출하고 문서를 승인합니다. 클라이언트 사이의 원활한 통신을 지원하고 승인 프로세스의 규칙을 적용하는 데는 승인 관리자 응용 프로그램이 사용됩니다. 승인 프로세스는 여러 가지 유형의 승인을 실행할 수 있는 워크플로입니다. 단일 승인 프로세스, 정족수 승인(승인자 집합의 백분율) 프로세스 및 정족수 승인과 단일 승인이 차례로 이루어지는 복합 승인 프로세스를 처리하기 위하여 각기 다른 활동이 사용됩니다.
@@ -22,9 +22,9 @@ ms.locfileid: "57717711"
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Application\DocumentApprovalProcess`  
   
 ## <a name="sample-details"></a>샘플 세부 정보  
- 다음 그래픽에서는 문서 승인 프로세스 워크플로를 보여 줍니다.  
+ 다음 그림에는 문서 승인 프로세스 워크플로를 보여 줍니다.  
   
- ![문서 승인 프로세스 워크플로](./media/approvalprocess.jpg "ApprovalProcess")  
+ ![문서 승인 프로세스 워크플로](./media/document-approval-process/document-approval-process.jpg)  
   
  클라이언트측에서 볼 때 승인 프로세스는 다음과 같이 진행됩니다.  
   
@@ -147,7 +147,9 @@ ms.locfileid: "57717711"
   
      첫째 `UserType2` 정족수에서 문서를 승인하면 문서가 `UserType3` 클라이언트로 전달됩니다.  
   
-8.  `UserType3` 클라이언트에서 문서를 승인 또는 거부합니다. `UserType1` 클라이언트에 결과가 표시됩니다.  
+8.  
+  `UserType3` 클라이언트에서 문서를 승인 또는 거부합니다. 
+  `UserType1` 클라이언트에 결과가 표시됩니다.  
   
 ##### <a name="to-clean-up"></a>정리하려면  
   

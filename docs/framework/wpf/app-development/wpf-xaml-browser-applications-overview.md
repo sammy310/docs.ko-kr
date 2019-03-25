@@ -10,12 +10,12 @@ helpviewer_keywords:
 - XAML browser applications (XBAP)
 - browser-hosted applications [WPF]
 ms.assetid: 3a7a86a8-75d5-4898-96b9-73da151e5e16
-ms.openlocfilehash: 6229e7fff4171f04d35bbc5be0596526f513191a
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: a9ac7fcc3ea4da699111ac288a5786e9f9f8b572
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57370191"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58410163"
 ---
 # <a name="wpf-xaml-browser-applications-overview"></a>WPF XAML 브라우저 애플리케이션 개요
 <a name="introduction"></a>
@@ -154,7 +154,7 @@ ms.locfileid: "57370191"
   
 -   프로젝트 파일에서 `<TargetZone>` 요소 값이 `Custom`으로 변경됩니다.  
   
--   애플리케이션 매니페스트(app.manifest)에서 `Unrestricted="true"` 특성이 `PermissionSet` 요소에 추가됩니다.  
+-   응용 프로그램 매니페스트 (app.manifest)에 `Unrestricted="true"` 특성에 추가 됩니다는 '<xref:System.Security.PermissionSet> 요소입니다.  
   
     ```xml
     <PermissionSet class="System.Security.PermissionSet"   

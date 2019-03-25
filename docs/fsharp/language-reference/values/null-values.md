@@ -1,13 +1,13 @@
 ---
 title: Null 값
 description: Null 값 사용 되는 방식을 알아봅니다는 F# 프로그래밍 언어입니다.
-ms.date: 05/16/2016
-ms.openlocfilehash: 58c54065a98a84c4d4e912cbc42d59cfea8c6de1
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.date: 03/22/2019
+ms.openlocfilehash: 93ac48eddf36981b9df550e76405c3175ae92e0a
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53610998"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58409642"
 ---
 # <a name="null-values"></a>Null 값
 
@@ -19,7 +19,7 @@ ms.locfileid: "53610998"
 
 에 정의 된 형식에 대 한 F# 에서 엄격 하 게 사용 F#, 유일한 방법은 사용 하 여 null 값에는 F# 라이브러리는 직접 사용 하는 [Unchecked.defaultof](https://msdn.microsoft.com/library/9ff97f2a-1bd4-4f4c-afbe-5886a74ab977) 또는 [Array.zeroCreate](https://msdn.microsoft.com/library/fa5b8e7a-1b5b-411c-8622-b58d7a14d3b2). 그러나는 F# 다른.NET 언어에서 사용 되는 형식에 작성 되지 않은 API를 사용 하 여 해당 형식을 사용 하는 경우 또는 F#,.NET Framework 같은 null 값이 발생할 수 있습니다.
 
-사용할 수는 `option` 입력 F# 경우 다른.NET 언어를 사용할 수 있는 null 값을 사용 하 여 참조 변수를 사용할 수 있습니다. Null을 대신 사용 하 여는 F# `option` 형식 옵션 값을 사용 하면 `None` 개체가 없는 경우. 옵션 값을 사용 하면 `Some(obj)` 개체를 사용 하 여 `obj` 개체인 경우. 자세한 내용은 [옵션](../options.md)합니다.
+사용할 수는 `option` 입력 F# 경우 다른.NET 언어를 사용할 수 있는 null 값을 사용 하 여 참조 변수를 사용할 수 있습니다. Null을 대신 사용 하 여는 F# `option` 형식 옵션 값을 사용 하면 `None` 개체가 없는 경우. 옵션 값을 사용 하면 `Some(obj)` 개체를 사용 하 여 `obj` 개체인 경우. 자세한 내용은 [옵션](../options.md)을 참조하세요. 계속을 압축할 수는 `null` 옵션으로 값 경우에 대 한 `Some x`, `x` 일 수 `null`입니다. 이 때문에 사용할 중요 한 것 `None` 값이 `null`합니다.
 
 합니다 `null` 키워드는 유효한 키워드를 F# 하면 언어 및.NET Framework Api 또는 다른.NET 언어로 작성 된 다른 Api를 사용 하 여 작업할 때 사용 해야 합니다. Null 값을 해야 할 수도 있습니다는 두 가지 경우.NET API를 호출 하 고 null 값을 인수로 전달 하는 경우 반환 값 또는.NET 메서드 호출에서 출력 매개 변수를 해석할 때 되며.
 
@@ -37,7 +37,7 @@ Null 값에 대 한 F# 형식을 사용 하는 경우와 같이 다른 방법으
 
 [!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet703.fs)]
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참고자료
 
 - [값](index.md)
 - [일치 식](../match-expressions.md)

@@ -7,19 +7,19 @@ helpviewer_keywords:
 - controls [WPF], GroupBox
 - GroupBox control [WPF]
 ms.assetid: 1f4ed3d9-a171-4623-bc4f-3314e3576271
-ms.openlocfilehash: 811a29f6575681504a8dcf72257c82d288558a12
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 6baee12c04e93a94736acacb1e4774b3cc20a3ac
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57358927"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58409018"
 ---
 # <a name="groupbox"></a>GroupBox
 <xref:System.Windows.Controls.GroupBox> 컨트롤을 <xref:System.Windows.Controls.HeaderedContentControl> 에 대 한 제목이 지정된 된 컨테이너를 제공 하는 [!INCLUDE[TLA#tla_gui](../../../../includes/tlasharptla-gui-md.md)] 콘텐츠.  
   
  다음 그림에 표시를 <xref:System.Windows.Controls.GroupBox> 를 포함 하는 <xref:System.Windows.Controls.TabControl> 및 <xref:System.Windows.Controls.Button> 에 포함 된를 <xref:System.Windows.Controls.StackPanel>입니다.  
   
- ![GroupBoxImage](./media/groupboximage.JPG "GroupBoxImage")  
+ ![Groupbox를 보여주는 스크린샷.](./media/groupbox/groupbox-tab-button-stackpanel.jpg)  
   
 ## <a name="in-this-section"></a>섹션 내용  
  [GruopBox 템플릿 정의](how-to-define-a-groupbox-template.md)  

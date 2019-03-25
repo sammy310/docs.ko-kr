@@ -6,12 +6,12 @@ helpviewer_keywords:
 - fonts [WPF], OpenType font pack
 - typography [WPF], OpenType font pack
 ms.assetid: 56b46fa1-a44e-419b-8f14-25ad51c715c3
-ms.openlocfilehash: aa7eca674bd2758358bec244f2a21a341526d4b8
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 0a2db2392c2380a397da42474a311449c8fdf9fb
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57377163"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58412164"
 ---
 # <a name="sample-opentype-font-pack"></a>샘플 OpenType 글꼴 팩
 이 항목에서는 [!INCLUDE[TLA2#tla_wcsdk](../../../../includes/tla2sharptla-wcsdk-md.md)]를 통해 배포되는 샘플 [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] 글꼴을 간략하게 설명합니다. 샘플 글꼴은 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 애플리케이션에서 사용될 수 있는 확장 [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] 기능을 지원합니다.  
@@ -34,8 +34,7 @@ ms.locfileid: "57377163"
   
  다음 그림에서는 다음과 같은 샘플 [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] 글꼴을 보여 줍니다.  
   
- ![샘플 글꼴 팩의 글꼴 이름의 목록이](./media/samplefontpack01.gif "samplefontpack01")  
-OpenType 글꼴 팩의 글꼴  
+ ![샘플 글꼴 팩의 글꼴 이름 목록](./media/sample-opentype-font-pack/font-names-sample-pack.gif)  
   
  샘플 글꼴은 Ascender Corporation으로부터 사용 허가를 받아 제공됩니다. Ascender는 고급 글꼴 제품의 공급자입니다. 샘플 글꼴의 확장 또는 사용자 지정 버전을 사용 허가하려면 [Ascender Corporation의 웹 사이트](https://go.microsoft.com/fwlink/?LinkId=182627)를 참조하세요.  
   

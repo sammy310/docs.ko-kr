@@ -27,14 +27,14 @@ helpviewer_keywords:
 - Visual Basic code, Sub procedures
 - Function procedures [Visual Basic], declaring
 ms.assetid: d3f21fb0-b804-4c99-97ed-583b23894cf1
-ms.openlocfilehash: 4a2e1704e72e608f5b5fd9c6dace42c144f92bb4
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 5f9ac99078d64387acee9160118928ad8de1764c
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56973173"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58411540"
 ---
-# <a name="declare-statement"></a>Declare Statement
+# <a name="declare-statement"></a>Declare 문
 외부 파일에 구현 된 프로시저에 대 한 참조를 선언 합니다.  
   
 ## <a name="syntax"></a>구문  
@@ -128,7 +128,7 @@ Declare [ charsetmodifier ] [ Function ] name Lib "libname" _
 -   **Mechanism.** .NET Framework를 사용 하는 Visual Basic *플랫폼 호출* (PInvoke)를 해결 하 고 외부 프로시저에 액세스 하는 메커니즘입니다. 합니다 `Declare` 문 및 <xref:System.Runtime.InteropServices.DllImportAttribute> 클래스에는 모두 자동으로이 메커니즘을 사용 하며 모든 지식이 PInvoke 필요가 없습니다. 자세한 내용은 [연습: Windows Api 호출](../../../visual-basic/programming-guide/com-interop/walkthrough-calling-windows-apis.md)합니다.  
   
 > [!IMPORTANT]
->  외부 프로시저를 CLR (공용 언어 런타임) 외부를 실행 하는 경우 *비관리 코드*합니다. 이러한 프로시저를 예를 들어 Win32 API 함수 또는 COM 메서드를 호출 하는 경우 보안 위험에 응용 프로그램을 노출할 수 있습니다. 자세한 내용은 [보안 코딩 지침 비관리 코드에 대 한](../../../framework/security/secure-coding-guidelines-for-unmanaged-code.md)합니다.  
+>  외부 프로시저를 CLR (공용 언어 런타임) 외부를 실행 하는 경우 *비관리 코드*합니다. 이러한 프로시저를 예를 들어 Windows API 함수 또는 COM 메서드를 호출 하는 경우 보안 위험에 응용 프로그램을 노출할 수 있습니다. 자세한 내용은 [보안 코딩 지침 비관리 코드에 대 한](../../../framework/security/secure-coding-guidelines-for-unmanaged-code.md)합니다.  
   
 ## <a name="example"></a>예제  
  다음 예제에서는 선언에 대 한 외부 참조는 `Function` 현재 사용자 이름을 반환 하는 프로시저입니다. 그런 다음 외부 프로시저를 호출 `GetUserNameA` 의 일부로 `getUser` 프로시저입니다.  

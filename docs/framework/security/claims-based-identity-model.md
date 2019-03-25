@@ -3,12 +3,12 @@ title: 클레임 기반 ID 모델
 ms.date: 03/30/2017
 ms.assetid: 4a96a9af-d980-43be-bf91-341a23401431
 author: BrucePerlerMS
-ms.openlocfilehash: 7248cf51946d4bf798209c047ec2c7ed3bb04ebe
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 21ed5b7616b51109ef21ee91bdf93b2808e00715
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47197944"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58411736"
 ---
 # <a name="claims-based-identity-model"></a>클레임 기반 ID 모델
 클레임 인식 응용 프로그램을 작성할 때 사용자 ID가 클레임 집합으로 응용 프로그램에 표시됩니다. 클레임이 하나는 사용자의 이름, 다른 전자 메일 주소를 수 있습니다. 외부 ID 시스템은 수신하는 ID 데이터가 신뢰할 수 있는 출처에서 제공되는 암호화 보증과 함께 각각의 요청을 작성한 사용자에 대해 파악하기 위해 필요한 모든 사항을 응용 프로그램에 제공하도록 구성됩니다.  
@@ -55,7 +55,7 @@ ms.locfileid: "47197944"
  STS(보안 토큰 서비스)는 WS-Trust 및 WS-Federation 프로토콜에 따라 보안 토큰을 작성, 서명 및 발급하는 서비스 구성 요소입니다. 이 프로토콜의 구현을 위해 수행해야 할 많은 작업이 있지만 WIF가 이러한 작업을 모두 수행하므로, 프로토콜에 대한 전문 지식이 없어도 누구나 쉽게 STS를 가져오고 실행할 수 있습니다. [AD FS(Active Directory® Federation Services) 2.0](https://go.microsoft.com/fwlink/?LinkID=247516)과 같이 미리 빌드된 STS 또는 [Microsoft Azure ACS(Access Control Service)](https://go.microsoft.com/fwlink/?LinkID=247517)와 같은 클라우드 STS를 사용하거나 사용자 지정 토큰을 발급하거나 사용자 지정 인증 또는 권한 부여를 제공하려는 경우 WIF를 사용하여 고유한 사용자 지정 STS를 만들 수 있습니다. WIF를 사용하면 쉽게 자체 STS를 만들 수 있습니다.  
   
 ### <a name="relying-party-application"></a>타사 응용 프로그램 신뢰  
- 클레임을 신뢰하는 응용 프로그램을 빌드할 때 RP(신뢰 당사자) 응용 프로그램을 빌드합니다. RP의 동의어로는, “클레임 인식 응용 프로그램” 및 “클레임 기반 응용 프로그램”이 있습니다. 웹 응용 프로그램과 웹 서비스가 모두 RP일 수 있습니다. RP 응용 프로그램은 STS에서 발급한 토큰을 사용하고 토큰에서 클레임을 추출하여 ID 관련 작업에 사용합니다. WIF는 RP 응용 프로그램을 작성하는 데 도움을 주는 기능을 제공합니다.  
+ 클레임을 신뢰하는 응용 프로그램을 빌드할 때 RP(신뢰 당사자) 응용 프로그램을 빌드합니다. RP의 동의어로는, “클레임 인식 애플리케이션” 및 “클레임 기반 애플리케이션”이 있습니다. 웹 응용 프로그램과 웹 서비스가 모두 RP일 수 있습니다. RP 응용 프로그램은 STS에서 발급한 토큰을 사용하고 토큰에서 클레임을 추출하여 ID 관련 작업에 사용합니다. WIF는 RP 응용 프로그램을 작성하는 데 도움을 주는 기능을 제공합니다.  
   
 ### <a name="standards"></a>표준  
  모두 상호 운용 가능한 상태로 만들기 위해 이전 시나리오에서 여러 WS-* 표준이 사용됩니다. WS-MetadataExchange를 사용하여 정책이 검색되고 WS-Policy 사양에 따라 정책이 구조화됩니다. STS가 보안 토큰을 요청하고 수신하는 방법을 설명하는 WS-Trust 사양을 구현하는 엔드포인트를 노출합니다. 오늘날 대부분의 STS가 SAML(Security Assertion Markup Language)로 서식이 지정된 토큰을 발급합니다. SAML은 상호 운용 가능한 방식으로 클레임을 나타내는 데 사용할 수 있는 업계에서 통용되는 XML 용어입니다. 또는 다중 플랫폼 상황에서 이를 통해 완전히 다른 플랫폼에서 STS와 통신하고 플랫폼에 관계없이 모든 응용 프로그램에서 Single Sign-On을 달성할 수 있습니다.  
@@ -73,10 +73,10 @@ ms.locfileid: "47197944"
   
  이 다이어그램은 사이트를 사용할 웹 브라우저의 인증 및 클라이언트에 WIF를 사용하도록 구성된 웹 사이트(신뢰 당사자 응용 프로그램, RP)를 보여줍니다.  
   
-1.  인증되지 않은 사용자가 페이지를 요청하면 이 브라우저가 ID 공급자(IP) 페이지로 리디렉션됩니다.  
+1.  페이지를 요청 하는 인증 되지 않은 사용자가 브라우저 identity 공급자 (IdP) 페이지로 리디렉션됩니다.  
   
-2.  IP를 사용하려면 사용자가 자격 증명을 제공해야 합니다(예: username/password, Kerberos 등).  
+2.  IdP에 필요한 사용자 사용자 이름/암호 또는 Kerberos 인증과 같은 자격 증명을 제공 합니다.  
   
-3.  IP가 브라우저에 반환되는 토큰을 발급합니다.  
+3.  IdP 문제는 토큰이 브라우저에 반환 됩니다.  
   
 4.  이제 브라우저가 원래 요청된 페이지로 다시 리디렉션되며, 이 페이지에서 WIF가 토큰이 페이지 전반의 요구 사항을 만족하는지 판별합니다. 이 경우 한 번만 인증하면 되도록 세션을 설정하기 위해 쿠키가 발급되고, 응용 프로그램에 제어가 전달됩니다.

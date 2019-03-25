@@ -10,12 +10,12 @@ helpviewer_keywords:
 - drawing text [Windows Forms], specified locations [Windows Forms]
 - Windows Forms, drawing text at a specified location
 ms.assetid: 60816423-1c38-465e-980d-2c2b64d74086
-ms.openlocfilehash: 3bca6cd364ed4e0d0179c13fb378449b7cf05739
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 8327043f9afdec7e2d84e564801342d7d7cbef9d
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57705348"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58412242"
 ---
 # <a name="how-to-draw-text-at-a-specified-location"></a>방법: 지정된 된 위치에 텍스트 그리기
 사용자 지정 그리기를 수행 하면 지정된 된 지점부터 한 가로 줄의 텍스트를 그릴 수 있습니다. 사용 하 여 이러한 방식으로 텍스트를 그릴 수 있습니다는 <xref:System.Drawing.Graphics.DrawString%2A> 메서드의 오버 로드는 <xref:System.Drawing.Graphics> 사용 하는 클래스를 <xref:System.Drawing.Point> 또는 <xref:System.Drawing.PointF> 매개 변수입니다. 합니다 <xref:System.Drawing.Graphics.DrawString%2A> 방법을 사용 하려면를 <xref:System.Drawing.Brush> 및 <xref:System.Drawing.Font>  
@@ -24,7 +24,7 @@ ms.locfileid: "57705348"
   
  다음 그림에서는 사용 하는 경우 지정된 된 지점에 그려지는 텍스트의 출력을 보여 줍니다.는 <xref:System.Drawing.Graphics.DrawString%2A> 메서드 오버 로드 합니다.  
   
- ![글꼴 텍스트](./media/csfontstext1.png "csfontstext1")  
+ ![지정된 된 위치에서 텍스트의 출력을 보여 주는 스크린샷.](./media/how-to-draw-text-at-a-specified-location/font-text-specified-point.png)  
   
 ### <a name="to-draw-a-line-of-text-with-gdi"></a>GDI +를 사용 하 여 텍스트의 선을 그리려면  
   

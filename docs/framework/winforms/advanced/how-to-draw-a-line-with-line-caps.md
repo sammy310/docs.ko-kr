@@ -10,12 +10,12 @@ helpviewer_keywords:
 - pens [Windows Forms], drawing lines
 - drawing lines [Windows Forms], line caps
 ms.assetid: eb68c3e1-c400-4886-8a04-76978a429cb6
-ms.openlocfilehash: 05c678b25563eb7a4e2e5ce0e49138b5445b4764
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 7ebb49ad5e1262dcb71dcd31c9073dfe52c49789
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57707601"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58409863"
 ---
 # <a name="how-to-draw-a-line-with-line-caps"></a>방법: 선 끝이 있는 선 그리기
 선 끝이 호출 하는 여러 도형 중 하나에서 시작 또는 줄의 끝에 그릴 수 있습니다. [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 여러 선 끝 모양을 화살촉 라운드, 사각형, 다이아몬드 등을 지원합니다.  
@@ -25,7 +25,7 @@ ms.locfileid: "57707601"
   
  다음 예제에는 한쪽 end에 있는 화살촉이와 다른 끝에 있는 둥근 단면 선을 그립니다. 그림 결과 줄을 보여 줍니다.  
   
- ![펜](./media/pens4.gif "pens4")  
+ ![둥근 끝에 있는 줄을 보여 주는 그림입니다.](./media/how-to-draw-a-line-with-line-caps/line-cap-arrowhead-example.gif)  
   
  [!code-csharp[System.Drawing.UsingAPen#71](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingAPen/CS/Class1.cs#71)]
  [!code-vb[System.Drawing.UsingAPen#71](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingAPen/VB/Class1.vb#71)]  

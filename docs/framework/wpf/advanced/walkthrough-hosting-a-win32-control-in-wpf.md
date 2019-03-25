@@ -8,12 +8,12 @@ helpviewer_keywords:
 - hosting Win32 control in WPF [WPF]
 - Win32 code [WPF], WPF interoperation
 ms.assetid: a676b1eb-fc55-4355-93ab-df840c41cea0
-ms.openlocfilehash: 1bb5def111aad850a5f74afaba352394ac2587e9
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 13845eb662064e0ac1db913bedc0b21214292db5
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57377406"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58412320"
 ---
 # <a name="walkthrough-hosting-a-win32-control-in-wpf"></a>연습: WPF에서 Win32 컨트롤 호스팅
 Windows Presentation Foundation (WPF) 응용 프로그램을 만들기 위한 풍부한 환경을 제공 합니다. 그러나 Win32 코드에 상당한 투자를 해야 하는 경우는 것을 더욱 효율적으로 적어도 일부 다시 사용 하는의 WPF 응용 프로그램에서 코드 보다는 완전히 다시 작성 합니다. WPF는 Win32 창의 WPF 페이지를 호스트 하기 위한 간단한 메커니즘을 제공 합니다.  
@@ -23,9 +23,9 @@ Windows Presentation Foundation (WPF) 응용 프로그램을 만들기 위한 �
   
 <a name="requirements"></a>   
 ## <a name="requirements"></a>요구 사항  
- 이 항목에서는 WPF 및 Win32 프로그래밍에 대 한 기본 지식이 있다고 가정 합니다. WPF 프로그래밍에 대 한 기본적인 소개를 참조 하세요 [Getting Started](../getting-started/index.md)합니다. Win32 프로그래밍 소개를 참조 해야 제목, 서적 중 특히 *Windows 프로그래밍* Charles petzold가 저술한 합니다.  
+ 이 항목에서는 WPF와 Windows API 프로그래밍 기본에 익숙하다고를 가정합니다. WPF 프로그래밍에 대 한 기본적인 소개를 참조 하세요 [Getting Started](../getting-started/index.md)합니다. Windows API 프로그래밍 소개, 표시 서적 주제에 대 특히 *Windows 프로그래밍* Charles petzold가 저술한 합니다.  
   
- 이 항목과 관련 된 샘플에서 구현 되기 때문에 C#를 플랫폼 호출 서비스인 PInvoke Win32 API에 액세스 하려면 사용 합니다. PInvoke 지식이 있으면 도움이 되지만 필수 사항은 아닙니다.  
+ 이 항목과 관련 된 샘플에서 구현 되기 때문에 C#, Windows API에 액세스 하려면 플랫폼 호출 서비스인 PInvoke 사용 합니다. PInvoke 지식이 있으면 도움이 되지만 필수 사항은 아닙니다.  
   
 > [!NOTE]
 >  이 항목에는 관련 샘플의 많은 코드 예제가 포함되어 있습니다. 그러나 가독성을 위해 전체 샘플 코드를 포함하지는 않습니다. 얻거나에서 전체 코드를 볼 수 있습니다 [WPF 샘플에서 Win32 ListBox 컨트롤 호스팅](https://github.com/Microsoft/WPF-Samples/tree/master/Migration%20and%20Interoperability/WPFHostingWin32Control)합니다.  

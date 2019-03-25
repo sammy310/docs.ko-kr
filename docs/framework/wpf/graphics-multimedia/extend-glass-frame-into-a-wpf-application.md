@@ -10,12 +10,12 @@ helpviewer_keywords:
 - extending glass frames into applications [WPF]
 - glass frames [WPF], extending into applications
 ms.assetid: 74388a3a-4b69-4a9d-ba1f-e107636bd660
-ms.openlocfilehash: d7a00f2508769534e49c965d098dbacb01a1f189
-ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
+ms.openlocfilehash: 8da1f49bf5b7d3daf6319906fb49390c008d209c
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57843534"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58412216"
 ---
 # <a name="extend-glass-frame-into-a-wpf-application"></a>투명 효과 프레임을 WPF 애플리케이션으로 확장
 
@@ -26,11 +26,9 @@ ms.locfileid: "57843534"
 
 ## <a name="example"></a>예제
 
-다음 그림에서는 Internet Explorer 7의 주소 표시줄로 확장되는 투명 효과 프레임을 보여 줍니다.
+다음 이미지에 주소 표시줄의 Internet Explorer 7의 확장 된 투명 효과 프레임을 보여 줍니다.
 
-**주소 표시줄 뒤로 투명 효과 프레임이 확장된 Internet Explorer**
-
-![주소 표시줄 뒤로 투명 효과 프레임이 확장된 IE7](./media/ie7glasstopbar.PNG "IE7glasstopbar")
+![확장 IE7 주소 표시줄 뒤로 투명 효과 프레임을 보여 주는 스크린샷.](./media/extend-glass-frame-into-a-wpf-application/internet-explorer-glass-frame-extended-address-bar.png)
 
 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 응용 프로그램에서 투명 효과 프레임을 확장하려면 관리되지 않는 [!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)]에 액세스해야 합니다. 다음 코드 예제에서는 프레임을 클라이언트 영역으로 확장하는 데 필요한 두 개의 [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)]에 대해 플랫폼 호출(pinvoke)을 수행합니다. 이러한 각 [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)]는 **NonClientRegionAPI**라는 클래스에 선언됩니다.
 
@@ -147,11 +145,9 @@ void OnLoaded(object sender, RoutedEventArgs e)
 </Window>
 ```
 
-다음 그림에서는 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 애플리케이션으로 확장되는 투명 효과 프레임을 보여 줍니다.
+다음 이미지는 보여줍니다로 확장 된 투명 효과 프레임을 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 응용 프로그램:
 
-**투명 효과 프레임이 확장 된는**[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]**응용 프로그램입니다.**
-
-![WPF 응용 프로그램으로 확장된 투명 효과 프레임](./media/wpfextendedglassintoclient.PNG "WPFextendedGlassIntoClient")
+![WPF 응용 프로그램으로 확장 된 투명 효과 프레임을 보여주는 스크린샷.](./media/extend-glass-frame-into-a-wpf-application/glass-frame-extended-wpf-application.png)
 
 ## <a name="see-also"></a>참고자료
 

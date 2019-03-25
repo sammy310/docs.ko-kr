@@ -2,12 +2,12 @@
 title: 엔터티 컨테이너(entity container)
 ms.date: 03/30/2017
 ms.assetid: 16e80405-2c75-42fc-b0e4-b1df53b1c584
-ms.openlocfilehash: 8ebb60a79fab9f60d4008e533f08ade7b3ff6e98
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d2ad565ce73b2de4b10d2f15406b283a13bbef6e
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54641189"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58409889"
 ---
 # <a name="entity-container"></a>엔터티 컨테이너(entity container)
 *엔터티 컨테이너* 의 논리적 그룹인 [엔터티 집합](../../../../docs/framework/data/adonet/entity-set.md), [연결 집합](../../../../docs/framework/data/adonet/association-set.md), 및 [imports 함수](../../../../docs/framework/data/adonet/model-declared-function.md)합니다.  
@@ -23,7 +23,7 @@ ms.locfileid: "54641189"
 ## <a name="example"></a>예제  
  다음 다이어그램에서는 세 가지 엔터티 형식 `Book`, `Publisher` 및 `Author`가 포함된 개념적 모델을 보여 줍니다.  자세한 내용은 다음 예제를 참조하세요.  
   
- ![예제 모델이](../../../../docs/framework/data/adonet/media/examplemodel.gif "ExampleModel")  
+ ![세 가지 엔터티 형식을 사용 하 여 예제 모델](./media/entity-container/example-model-three-entity-types.gif)  
   
  다이어그램에는 엔터티 컨테이너 정보가 표시되지 않지만 개념적 모델에서 엔터티 컨테이너를 정의해야 합니다. 합니다 [ADO.NET Entity Framework](../../../../docs/framework/data/adonet/ef/index.md) 개념 스키마 정의 언어 이라고 하는 DSL을 사용 하 여 ([CSDL](../../../../docs/framework/data/adonet/ef/language-reference/csdl-specification.md)) 개념적 모델을 정의 합니다. 다음 CSDL에서는 위의 다이어그램에 표시된 개념적 모델의 엔터티 컨테이너를 정의합니다. 엔터티 컨테이너 이름은 XML 특성에 정의되어 있습니다.  
   

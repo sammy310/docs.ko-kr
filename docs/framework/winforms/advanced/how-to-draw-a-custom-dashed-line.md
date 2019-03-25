@@ -9,12 +9,12 @@ helpviewer_keywords:
 - lines [Windows Forms], drawing
 - lines [Windows Forms], dashed
 ms.assetid: cd0ed96a-cce4-47b9-b58a-3bae2e3d1bee
-ms.openlocfilehash: 830fa45fc88c35b8aa5f047e065ae1efc161f581
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 06555309b8432397e754bc9dfa717c89b052343f
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57718946"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58410227"
 ---
 # <a name="how-to-draw-a-custom-dashed-line"></a>방법: 사용자 지정 파선 그리기
 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 에 나열 된 몇 가지 대시 스타일을 제공 합니다 <xref:System.Drawing.Drawing2D.DashStyle> 열거형입니다. 이러한 표준 대시 스타일 사용자 요구에 적합 하지 않는 경우 사용자 지정 대시 패턴을 만들 수 있습니다.  
@@ -24,7 +24,7 @@ ms.locfileid: "57718946"
   
  다음 그림에서는 결과 파선을 보여 줍니다. 최종 대시 줄 끝날 수 있도록 25 단위 보다 짧을 수에 (405, 5).  
   
- ![펜](./media/pens6.gif "pens6")  
+ ![파선을 보여 주는 그림입니다. ](./media/how-to-draw-a-custom-dashed-line/dashed-line-illustration.gif "pens6")  
   
  [!code-csharp[System.Drawing.UsingAPen#51](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingAPen/CS/Class1.cs#51)]
  [!code-vb[System.Drawing.UsingAPen#51](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingAPen/VB/Class1.vb#51)]  

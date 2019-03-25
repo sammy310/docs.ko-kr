@@ -10,12 +10,12 @@ helpviewer_keywords:
 - structures [Visual Basic], nested control
 - nested control statements [Visual Basic]
 ms.assetid: cf60b061-65d9-44a8-81f2-b0bdccd23a05
-ms.openlocfilehash: 9b10363e2273a22ac7ee3d9a943a1bec4616d232
-ms.sourcegitcommit: 462dc41a13942e467984e48f4018d1f79ae67346
+ms.openlocfilehash: 13e2c5c8d818a09ec5e77ec47fe8a2c83b675d82
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/19/2019
-ms.locfileid: "58185729"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58409798"
 ---
 # <a name="nested-control-structures-visual-basic"></a>중첩 제어 구조(Visual Basic)
 예를 들어 다른 제어 문의 내부에 제어 문을 배치할 수 있습니다는 `If...Then...Else` 내에서 차단 된 `For...Next` 루프입니다. 다른 제어 문 내에 배치 하는 제어 문 이라고 *중첩 된*합니다.  
@@ -67,8 +67,7 @@ Next ctl
 ## <a name="overlapping-control-structures"></a>중첩 제어 구조  
  제어 구조를 겹칠 수 없습니다. 즉, 모든 중첩 된 구조는 다음 가장 안쪽 구조 내에 완전히 포함 되어야 합니다. 예를 들어, 다음과 같은 배치 올바르지 때문에 `For` 내부 전에 루프 종료 `With` 블록을 종료 합니다.  
   
- ![잘못 된 중첩의 그래픽 다이어그램](../../../../visual-basic/programming-guide/language-features/control-flow/media/nestexampleinvalid.gif "NestExampleInvalid")  
-잘못 된 중첩 한 구조를 사용 하 여  
+ ![잘못 된 중첩의 예제를 보여 주는 다이어그램입니다.](./media/nested-control-structures/example-invalid-nesting.gif) 
   
  Visual Basic 컴파일러는 이러한 겹치는 제어 구조를 검색 하 고 컴파일 시간 오류를 발생 시킵니다.  
   

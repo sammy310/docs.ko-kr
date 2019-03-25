@@ -40,12 +40,12 @@ helpviewer_keywords:
 ms.assetid: cf624c1f-c160-46a1-bb2b-213587688da7
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 37e6b995a84a54dfcb52460d11e9843a933a5684
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 10ed899f1eda3b7fcaa95391b9af6dddb5c94560
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57353077"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58409876"
 ---
 # <a name="reliability-best-practices"></a>최선의 안정성 구현 방법
 
@@ -241,7 +241,7 @@ SQL Server의 경우 동기화 또는 스레딩을 소개하는 데 사용한 �
 
 ### <a name="do-not-block-indefinitely-in-unmanaged-code"></a>비관리 코드에서 무기한 차단하지 않음
 
-관리 코드가 아니라 비관리 코드에서 차단하면 CLR에서 스레드를 중단할 수 없으므로 서비스 거부 공격이 발생할 수 있습니다.  스레드가 차단되면 극도로 안전하지 않은 작업을 수행하지 않고 CLR에서 <xref:System.AppDomain>을 언로드하는 것을 방지할 수 있습니다.  예를 들어, Win32 동기화 기본 형식을 사용하여 차단하는 것은 확실히 허용되지 않습니다.  소켓에서 `ReadFile`에 대한 호출은 가능하면 차단하지 않아야 합니다. Win32 API에서 이와 같은 작업의 시간 제한이 초과되는 메커니즘을 제공하는 것이 가장 좋습니다.
+관리 코드가 아니라 비관리 코드에서 차단하면 CLR에서 스레드를 중단할 수 없으므로 서비스 거부 공격이 발생할 수 있습니다.  스레드가 차단되면 극도로 안전하지 않은 작업을 수행하지 않고 CLR에서 <xref:System.AppDomain>을 언로드하는 것을 방지할 수 있습니다.  Windows를 사용 하 여 차단 동기화 기본 형식는 허용 되지의 지우기 예입니다.  에 대 한 호출에서 차단 `ReadFile` 소켓에서 피해 야 가능한 경우-Windows API 해야 이와 같은 작업의 시간 초과 대 한 메커니즘을 제공 하는 것이 좋습니다.
 
 네이티브를 호출하는 모든 메서드는 적절한 시간 제한 내에 Win32 호출을 사용해야 합니다.  사용자가 시간 제한을 지정할 수 있으면 특정 보안 권한이 없이는 무한 시간을 지정할 수 없어야 합니다.  참고로 메서드를 10초가 넘게 차단할 경우 시간 제한을 지원하는 버전을 사용하거나 추가 CLR 지원이 필요합니다.
 

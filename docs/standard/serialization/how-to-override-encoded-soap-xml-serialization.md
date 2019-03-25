@@ -26,21 +26,17 @@ ms.locfileid: "57677671"
 
 4. `SoapAttributes`의 적절한 속성을 3단계에서 만든 특성으로 설정합니다.
 
-5. 
-  `SoapAttributes`를 `SoapAttributeOverrides`에 추가합니다.
+5. `SoapAttributes`를 `SoapAttributeOverrides`에 추가합니다.
 
-6. 
-  `XmlTypeMapping`를 사용하여 `SoapAttributeOverrides`을 만듭니다. `SoapReflectionImporter.ImportTypeMapping` 메서드를 사용하세요.
+6. `XmlTypeMapping`를 사용하여 `SoapAttributeOverrides`을 만듭니다. `SoapReflectionImporter.ImportTypeMapping` 메서드를 사용하세요.
 
-7. 
-  `XmlSerializer`을 사용하여 `XmlTypeMapping`를 만듭니다.
+7. `XmlSerializer`을 사용하여 `XmlTypeMapping`를 만듭니다.
 
 8. 개체를 serialize하거나 deserialize합니다.
 
 ## <a name="example"></a>예제
 
-다음 코드 예제에서는 파일을 두 가지 방법으로 serialize합니다. 우선 `XmlSerializer` 클래스의 동작을 재정의하지 않고 serialize하고, 두 번째로 동작을 재정의하여 serialize합니다. 예제에는 몇 개의 멤버가 있는 `Group`이라는 클래스가 포함됩니다. `SoapElementAttribute`와 같은 다양한 특성이 클래스 멤버에 적용되었습니다. 클래스가 `SerializeOriginal` 메서드로 serialize될 때 특성이 SOAP 메시지 내용을 제어합니다. 
-  `SerializeOverride` 메서드가 호출될 때 `XmlSerializer`의 동작은 다양한 특성을 만들고 `SoapAttributes`의 속성을 해당 특성으로 적절하게 설정하여 재정의됩니다.
+다음 코드 예제에서는 파일을 두 가지 방법으로 serialize합니다. 우선 `XmlSerializer` 클래스의 동작을 재정의하지 않고 serialize하고, 두 번째로 동작을 재정의하여 serialize합니다. 예제에는 몇 개의 멤버가 있는 `Group`이라는 클래스가 포함됩니다. `SoapElementAttribute`와 같은 다양한 특성이 클래스 멤버에 적용되었습니다. 클래스가 `SerializeOriginal` 메서드로 serialize될 때 특성이 SOAP 메시지 내용을 제어합니다. `SerializeOverride` 메서드가 호출될 때 `XmlSerializer`의 동작은 다양한 특성을 만들고 `SoapAttributes`의 속성을 해당 특성으로 적절하게 설정하여 재정의됩니다.
 
 ```csharp
 using System;

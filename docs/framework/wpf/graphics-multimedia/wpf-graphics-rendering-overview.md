@@ -8,12 +8,12 @@ helpviewer_keywords:
 - graphics [WPF], rendering
 - rendering graphics [WPF]
 ms.assetid: 6dec9657-4d8c-4e46-8c54-40fb80008265
-ms.openlocfilehash: c1d7654dc190b00363fa6cc47c362b5f9e90d8f9
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: da455adb23dd70a915e81217c6c30f2d523e001c
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57375534"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58409655"
 ---
 # <a name="wpf-graphics-rendering-overview"></a>WPF 그래픽 렌더링 개요
 이 항목에서는 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 시각적 계층에 대해 간략하게 설명합니다. 역할에 중점을 둡니다 합니다 <xref:System.Windows.Media.Visual> 의 렌더링 지원을 위한 클래스를 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 모델입니다.  
@@ -49,8 +49,7 @@ ms.locfileid: "57375534"
   
  <xref:System.Windows.Media.Visual> 자식 클래스는 파생 해야 하는 공용 추상 클래스로 노출 됩니다. 다음 그림에서는 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]에서 노출되는 시각적 개체의 계층 구조를 보여 줍니다.  
   
- ![시각적 개체에서 파생 된 클래스의 다이어그램](./media/visualclass01.png "VisualClass01")  
-시각적 개체 클래스 계층 구조  
+ ![시각적 개체에서 파생된 클래스의 다이어그램](./media/wpf-graphics-rendering-overview/classes-derived-visual-object.png)    
   
 ### <a name="drawingvisual-class"></a>DrawingVisual 클래스  
  <xref:System.Windows.Media.DrawingVisual> 는 경량 그리기 클래스 도형, 이미지 또는 텍스트를 렌더링 하는 데 사용 되는 합니다. 이 클래스는 런타임 성능을 향상시키는 레이아웃이나 이벤트 처리를 제공하지 않으므로 간단한 클래스로 간주됩니다. 이러한 이유 때문에 그리기는 배경 및 클립 아트에 적합합니다. <xref:System.Windows.Media.DrawingVisual> 사용자 지정 시각적 개체를 만드는 데 사용할 수 있습니다. 자세한 내용은 [DrawingVisual 개체 사용](using-drawingvisual-objects.md)을 참조하세요.  
@@ -110,8 +109,7 @@ DrawingGroup 작업의 순서
   
  기본값을 구성 하는 시각적 개체를 열거 하려는 경우 <xref:System.Windows.Controls.Button> 컨트롤 주시기 바랍니다 아래와 같은 시각적 개체의 계층 구조:  
   
- ![시각적 트리 계층 구조의 다이어그램](./media/visuallayeroverview03.gif "VisualLayerOverview03")  
-시각적 트리 계층 구조의 다이어그램  
+ ![시각적 트리 계층 구조의 다이어그램](./media/wpf-graphics-rendering-overview/visual-object-diagram.gif) 
   
  <xref:System.Windows.Controls.Button> 컨트롤에는 <xref:Microsoft.Windows.Themes.ClassicBorderDecorator> 를 포함 하는 요소를를 <xref:System.Windows.Controls.ContentPresenter> 요소입니다. <xref:Microsoft.Windows.Themes.ClassicBorderDecorator> 요소인 테두리 및 배경을 그리기를 담당 합니다 <xref:System.Windows.Controls.Button>합니다. 합니다 <xref:System.Windows.Controls.ContentPresenter> 요소는의 내용을 표시 하는 일을 담당 합니다 <xref:System.Windows.Controls.Button>합니다. 이 경우에 표시 하므로 텍스트를 <xref:System.Windows.Controls.ContentPresenter> 요소에 포함 되어는 <xref:System.Windows.Controls.TextBlock> 요소. 팩트는를 <xref:System.Windows.Controls.Button> 컨트롤이 사용 하는 <xref:System.Windows.Controls.ContentPresenter> 와 같은 다른 요소에서 콘텐츠를 나타낼 수 있습니다 즉은 <xref:System.Windows.Controls.Image> 또는 기 하 도형와 같은 <xref:System.Windows.Media.EllipseGeometry>합니다.  
   
@@ -124,8 +122,7 @@ DrawingGroup 작업의 순서
   
  시각적 개체를 열거 및 벡터 그래픽 명령 목록을 구성 하는 경우는 <xref:System.Windows.Controls.Button> 컨트롤 주시기 바랍니다 아래와 같은 개체의 계층 구조:  
   
- ![시각적 트리 및 렌더링 데이터의 다이어그램](./media/visuallayeroverview04.png "VisualLayerOverview04")  
-시각적 트리 및 렌더링 데이터의 다이어그램  
+ ![시각적 트리 및 렌더링 데이터의 다이어그램](./media/wpf-graphics-rendering-overview/visual-tree-rendering-data.png)  
   
  <xref:System.Windows.Controls.Button> 컨트롤에는 <xref:Microsoft.Windows.Themes.ClassicBorderDecorator> 를 포함 하는 요소를를 <xref:System.Windows.Controls.ContentPresenter> 요소입니다. <xref:Microsoft.Windows.Themes.ClassicBorderDecorator> 요소는 모든 개별 그래픽 요소 테두리와 단추의 배경색을 구성 하는 그리기를 담당 합니다. 합니다 <xref:System.Windows.Controls.ContentPresenter> 요소는의 내용을 표시 하는 일을 담당 합니다 <xref:System.Windows.Controls.Button>합니다. 이 경우에 표시 하므로 이미지는 <xref:System.Windows.Controls.ContentPresenter> 요소에 포함 되어는 <xref:System.Windows.Controls.Image> 요소.  
   
@@ -149,14 +146,12 @@ DrawingGroup 작업의 순서
   
  구성 하는 시각적 개체를 열거 하려는 경우는 <xref:System.Windows.Controls.StackPanel> 태그 예제에서 요소를 주시기 바랍니다 아래와 같은 시각적 개체의 계층 구조:  
   
- ![시각적 트리 계층 구조의 다이어그램](./media/visuallayeroverview05.gif "VisualLayerOverview05")  
-시각적 트리 계층 구조의 다이어그램  
+ ![시각적 트리 계층 구조의 다이어그램](./media/wpf-graphics-rendering-overview/visual-tree-hierarchy.gif)  
   
 ### <a name="rendering-order"></a>렌더링 순서  
  시각적 트리는 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 시각적 및 그리기 개체의 렌더링 순서를 결정합니다. 트래버스 순서는 시각적 트리의 최상위 노드를 나타내는 루트 시각적 개체에서 시작됩니다. 그런 후에 루트 시각적 개체의 자식이 왼쪽에서 오른쪽으로 트래버스됩니다. 시각적 개체에 자식이 있으면 해당 자식은 시각적 요소의 형제보다 먼저 트래버스됩니다. 즉, 시각적 자식 개체의 콘텐츠는 시각적 개체 자체의 콘텐츠보다 먼저 렌더링됩니다.  
   
- ![시각적 트리 렌더링 순서의 다이어그램](./media/visuallayeroverview06.gif "VisualLayerOverview06")  
-시각적 트리 렌더링 순서의 다이어그램  
+ ![시각적 트리 렌더링 순서의 다이어그램](./media/wpf-graphics-rendering-overview/visual-tree-rendering-order.gif) 
   
 ### <a name="root-visual"></a>루트 시각적 개체  
  **루트 시각적 개체**는 시각적 트리 계층의 최상위 요소입니다. 대부분의 응용 프로그램 루트 시각적 개체의 기본 클래스는 <xref:System.Windows.Window> 또는 <xref:System.Windows.Navigation.NavigationWindow>합니다. 그러나 Win32 애플리케이션에서 시각적 개체를 호스트한다면 루트 시각적 개체가 Win32 창에서 호스트한 최상위 시각적 개체가 될 것입니다. 자세한 내용은 [자습서: Win32 응용 프로그램에서 시각적 개체 호스팅](tutorial-hosting-visual-objects-in-a-win32-application.md)합니다.  
@@ -178,9 +173,8 @@ DrawingGroup 작업의 순서
 ### <a name="viewing-the-visual-tree-with-xamlpad"></a>XamlPad에서 시각적 트리 보기  
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 도구인 XamlPad는 현재 정의된 [!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)] 콘텐츠에 해당하는 시각적 트리를 보고 탐색하기 위한 옵션을 제공합니다. 메뉴 모음에서 **시각적 트리 표시** 단추를 클릭하여 시각적 트리를 표시합니다. 다음에서는 XamlPad의 **시각적 트리 탐색기** 패널에서 [!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)] 콘텐츠를 시각적 트리 노드로 확장하는 방법을 보여 줍니다.  
   
- ![XamlPad의 시각적 트리 탐색기 패널](./media/visuallayeroverview08.png "VisualLayerOverview08")  
-XamlPad의 시각적 트리 탐색기 패널  
-  
+ ![XamlPad의 시각적 트리 탐색기 패널](./media/wpf-graphics-rendering-overview/visual-tree-explorer.png)  
+
  통지 하는 방법을 <xref:System.Windows.Controls.Label>, <xref:System.Windows.Controls.TextBox>, 및 <xref:System.Windows.Controls.Button> 컨트롤 각각 별도 시각적 개체 계층에 표시 합니다 **시각적 트리 탐색기** XamlPad의 패널입니다. 왜냐하면 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 컨트롤을 <xref:System.Windows.Controls.ControlTemplate> 해당 컨트롤의 시각적 트리를 포함 하는 합니다. 컨트롤을 명시적으로 참조할 때는 해당 시각적 개체 계층 구조를 암시적으로 참조하게 됩니다.  
   
 ### <a name="profiling-visual-performance"></a>시각적 성능 프로파일링  
@@ -196,14 +190,12 @@ Visual Profiler 표시 출력
 ### <a name="retained-mode-graphics"></a>유지 모드 그래픽  
  시각적 개체의 역할을 이해하기 위해서는 **직접 실행 모드**와 **유지 모드** 그래픽 시스템 간 차이를 이해하는 것이 중요합니다. GDI 또는 GDI+를 기준으로 하는 표준 Win32 애플리케이션은 직접 실행 모드 그래픽 시스템을 사용합니다. 즉, 이 애플리케이션은 창의 크기 조정이나 개체의 시각적 모양 변경과 같은 동작으로 인해 무효화되는 클라이언트 영역의 부분을 다시 그립니다.  
   
- ![Win32 렌더링 시퀀스의 다이어그램](./media/visuallayeroverview01.png "VisualLayerOverview01")  
-Win32 렌더링 시퀀스의 다이어그램  
+ ![Win32 렌더링 시퀀스의 다이어그램](./media/wpf-graphics-rendering-overview/win32-rendering-squence.png)  
   
  반면, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]에서는 유지 모드 시스템을 사용합니다. 즉, 시각적 모양을 갖는 애플리케이션 개체는 serialize된 그리기 데이터 집합을 정의합니다. 그리기 데이터가 정의되면 시스템은 애플리케이션 개체 렌더링을 위한 모든 다시 그리기 요청에 응답합니다. 런타임에도 애플리케이션 개체를 수정하거나 만들 수 있으며 그리기 요청에 응답하기 위해 해당 시스템에 의존할 수 있습니다. 유지 모드 그래픽 시스템의 강점은 그리기 정보가 항상 애플리케이션에서 serialize된 상태로 지속되지만 렌더링 책임은 시스템에 남아 있다는 것입니다. 다음 다이어그램에서는 애플리케이션이 그리기 요청에 응답하기 위해 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]에 의존하는 방식을 보여 줍니다.  
   
- ![WPF 렌더링 시퀀스의 다이어그램](./media/visuallayeroverview02.png "VisualLayerOverview02")  
-WPF 렌더링 시퀀스의 다이어그램  
-  
+ ![WPF 렌더링 시퀀스의 다이어그램](./media/wpf-graphics-rendering-overview/wpf-rendering-sequence.png)  
+
 #### <a name="intelligent-redrawing"></a>지능형 다시 그리기  
  유지 모드 그래픽을 사용할 때는 가장 큰 장점 중 하나는 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]가 애플리케이션에서 다시 그려야 하는 항목을 효율적으로 최적화할 수 있다는 것입니다. 다양한 수준의 불투명도를 갖는 복잡한 장면이 있더라도 다시 그리기를 최적화하기 위해 특수한 용도의 코드를 작성할 필요가 없습니다. 이러한 특성을 업데이트 영역의 다시 그리기 작업량을 최소화하여 적은 노력으로 애플리케이션을 최적화할 수 있는 Win32 프로그래밍 작업과 비교해 보세요. Win32 애플리케이션의 다시 그리기 최적화와 관련된 복잡성 형식의 예제를 보려면 [업데이트 영역의 다시 그리기](/windows/desktop/gdi/redrawing-in-the-update-region)를 참조하세요.  
   
@@ -214,8 +206,7 @@ WPF 렌더링 시퀀스의 다이어그램
   
  다음 그림에서는 300%만큼 크기가 조정된 소스 이미지를 보여 줍니다. 소스 이미지가 벡터 그래픽 이미지처럼 배율이 조정되지 않고 비트맵 그래픽 이미지처럼 확장됩니다.  
   
- ![래스터 그래픽과 벡터 간의 차이점](./media/vectorgraphics01.png "VectorGraphics01")  
-래스터 그래픽과 벡터 그래프의 차이  
+ ![래스터 그래픽과 벡터 그래프의 차이](./media/wpf-graphics-rendering-overview/raster-vector-differences.png)  
   
  다음 태그를 보여 줍니다 두 <xref:System.Windows.Shapes.Path> 정의 된 요소입니다. 두 번째 요소를 사용 하는 <xref:System.Windows.Media.ScaleTransform> 를 첫 번째 요소의 그리기 지침 300% 만큼 조정 합니다. 그리기 명령은 <xref:System.Windows.Shapes.Path> 요소 그대로 유지 됩니다.  
   

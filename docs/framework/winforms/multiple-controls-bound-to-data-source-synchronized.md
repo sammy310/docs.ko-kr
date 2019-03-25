@@ -36,8 +36,7 @@ Windows Forms에서 데이터 바인딩을 사용 하 여 작업을 하는 경�
   
 -   이 코드 예제에서는  
   
--   
-  <xref:System>, <xref:System.Windows.Forms> 및 <xref:System.Drawing> 어셈블리에 대한 참조  
+-   <xref:System>, <xref:System.Windows.Forms> 및 <xref:System.Drawing> 어셈블리에 대한 참조  
   
 -   사용 하 여 폼을 <xref:System.Windows.Forms.Form.Load> 이벤트를 처리 하 고 호출 하는 `InitializeControlsAndDataSource` 폼의 예제에서 메서드 <xref:System.Windows.Forms.Form.Load> 이벤트 처리기입니다.  
   

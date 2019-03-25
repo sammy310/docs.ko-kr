@@ -9,7 +9,7 @@ Serialization은 개체를 저장하거나 메모리, 데이터베이스 또는 
 ## <a name="how-serialization-works"></a>Serialization 작동 방법  
  이 그림에서는 serialization의 전체 프로세스를 보여 줍니다.  
   
- ![Serialization 그래픽](../../../../csharp/programming-guide/concepts/serialization/media/serialization.gif "serialization")  
+![Serialization 그래픽](./media/index/serialization-process.gif)
   
  개체는 스트림으로 serialize되어 데이터 뿐만 아니라 버전, 문화권 및 어셈블리 이름과 같은 개체 형식에 대한 정보를 운반합니다. 해당 스트림에서 데이터베이스, 파일 또는 메모리에 저장될 수 있습니다.  
   

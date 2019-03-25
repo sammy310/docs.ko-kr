@@ -5,17 +5,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 97a10d79-3e7d-4bd1-9a99-fd9807fd70bc
-ms.openlocfilehash: e8aa8d66e667036f09bd5670e779f14fa9401450
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 480242d519fee6ddabac3b39ff21f8e1b76827f0
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54643808"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58410669"
 ---
 # <a name="internet-unsecured-client-and-service"></a>보안이 설정되지 않은 인터넷 클라이언트 및 서비스
-다음 그림에는 공용, 보안 되지 않은 Windows Communication Foundation (WCF) 클라이언트 및 서비스의 예가 나와 있습니다.  
+다음 그림에서는 공용, 보안 되지 않은 Windows Communication Foundation (WCF) 클라이언트 및 서비스의 예를 보여 줍니다.  
   
- ![보안 되지 않은 인터넷 클라이언트 및 서비스 시나리오](../../../../docs/framework/wcf/feature-details/media/publicunsecured.gif "publicUnsecured")  
+ ![비보안된 인터넷 시나리오를 보여 주는 스크린샷](./media/internet-unsecured-client-and-service/public-unsecured-internet.gif)  
   
 |특성|설명|  
 |--------------------|-----------------|  
@@ -72,7 +72,7 @@ ms.locfileid: "54643808"
   
 -   이 코드와 클라이언트 코드를 사용하여 독립 실행형 클라이언트를 만듭니다.  
   
--   엔드포인트 주소를 정의하지 않는 클라이언트를 만듭니다. 대신 구성 이름을 인수로 사용하는 클라이언트 생성자를 사용합니다. 예를 들면 다음과 같습니다.  
+-   엔드포인트 주소를 정의하지 않는 클라이언트를 만듭니다. 대신 구성 이름을 인수로 사용하는 클라이언트 생성자를 사용합니다. 예를 들어:  
   
      [!code-csharp[C_SecurityScenarios#0](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#0)]
      [!code-vb[C_SecurityScenarios#0](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#0)]  

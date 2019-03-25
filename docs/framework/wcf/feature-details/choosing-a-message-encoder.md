@@ -2,12 +2,12 @@
 title: 메시지 인코더 선택
 ms.date: 03/30/2017
 ms.assetid: 2204d82d-d962-4922-a79e-c9a231604f19
-ms.openlocfilehash: 027c9e460e15b4b038147cd79c04bd082bc3356d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0c960505d6c8368396cddebe37c76c8d95550727
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54538429"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58409486"
 ---
 # <a name="choosing-a-message-encoder"></a>메시지 인코더 선택
 이 항목에서는 Windows Communication Foundation (WCF)에 포함 된 메시지 인코더 선택 기준에 설명 합니다: 이진, 텍스트 및 전송 최적화 메커니즘 MTOM (Message).  
@@ -65,9 +65,9 @@ IgnoreWhitespace 설정이 무시됩니다.
 
 WCF 4.5부터는 WCF 이진 인코더에서 압축을 추가 지원합니다. 그러면 WCF 클라이언트에서 압축 메시지를 보낼 때 gzip/deflate 알고리즘을 사용하고 자체 호스팅된 WCF 서비스의 압축 메시지에 응답할 수 있습니다. 이 기능을 사용하면 HTTP 및 TCP 전송 모두에서 압축이 가능합니다. IIS 호스트 서버를 구성하면 IIS에서 호스팅된 WCF 서비스에서 언제나 압축된 응답을 보낼 수 있습니다. 압축 형식은 <xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement.CompressionFormat%2A?displayProperty=nameWithType> 속성에서 구성합니다. 이 속성은 <xref:System.ServiceModel.Channels.CompressionFormat?displayProperty=nameWithType> 열거형의 값 중 하나로 설정됩니다.
 
-* `CompressionFormat.Deflate`
-* `CompressionFormat.GZip`
-* `CompressionFormat.None`
+- <xref:System.ServiceModel.Channels.CompressionFormat.Deflate>
+- <xref:System.ServiceModel.Channels.CompressionFormat.GZip>
+- <xref:System.ServiceModel.Channels.CompressionFormat.None>
   
 이 속성은 binaryMessageEncodingBindingElement에 노출만 있으므로이 기능을 사용 하려면 다음과 같은 사용자 지정 바인딩을 만드는 해야 합니다.
 

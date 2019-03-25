@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: a7eb98da-4a93-4692-8b59-9d670c79ffb2
-ms.openlocfilehash: 3895bb44139a05d1933f1d3af19ccb9799309515
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 13e596ea64fc62ed6280e74636243619178ce069
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57363087"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58411436"
 ---
 # <a name="security-considerations-for-data"></a>데이터에 대한 보안 고려 사항
 
@@ -276,7 +276,7 @@ XML 판독기를 사용 하 여 직접 작업 하는 경우 (같은 또는 직�
 
 - <xref:System.SerializableAttribute> 특성으로 표시된 레거시 형식은 주의해서 사용해야 합니다. 이 중에는 신뢰할 수 있는 데이터용으로만 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Remoting에 사용하도록 디자인된 것이 많습니다. 이 특성으로 표시된 기존 형식은 상태 안전을 고려하지 않은 디자인일 가능성이 있습니다.
 
-- 상태 안전에 관해서는 데이터의 존재를 보장하기 위해 <xref:System.Runtime.Serialization.DataMemberAttribute.IsRequired%2A> 특성의 `DataMemberAttribute` 속성을 사용하지 마십시오. 데이터는 항상 `null`, `zero` 또는 `invalid`일 수 있습니다.
+- 상태 안전에 관해서는 데이터의 존재를 보장하기 위해 <xref:System.Runtime.Serialization.DataMemberAttribute.IsRequired%2A> 특성의 <xref:System.Runtime.Serialization.DataMemberAttribute> 속성을 사용하지 마십시오. 데이터는 항상 `null`, `zero` 또는 `invalid`일 수 있습니다.
 
 - 신뢰할 수 없는 데이터 소스에서 deserialize된 개체 그래프를 먼저 검사하지 않고 신뢰해서는 안 됩니다. 각 개체의 상태가 일관되어도 개체 그래프 전체는 그렇지 않을 수 있습니다. 또한 개체 그래프 유지 모드가 사용하지 않도록 설정되어 있더라도 deserialize된 그래프에 같은 개체에 대한 참조가 여러 개 있거나 순환 참조가 있을 수 있습니다. 자세한 내용은 [Serialization 및 Deserialization](../../../../docs/framework/wcf/feature-details/serialization-and-deserialization.md)합니다.
 
@@ -312,33 +312,33 @@ XML 판독기를 사용 하 여 직접 작업 하는 경우 (같은 또는 직�
 
 - 부분적으로 신뢰할 수 있는 코드에 대 한 액세스를 허용 하는 경우에 <xref:System.Runtime.Serialization.DataContractSerializer> 인스턴스이거나 제어할 합니다 [데이터 계약 서로게이트](../../../../docs/framework/wcf/extending/data-contract-surrogates.md), 다양 한 serialization/deserialization 프로세스에 대 한 제어를 행사할 수 있습니다. 예를 들어 임의의 형식을 삽입하거나, 정보 노출을 일으키거나, 결과 개체 그래프 또는 serialize된 데이터를 변조하거나, 결과적으로 serialize된 스트림을 오버플로시킬 수 있습니다. 이에 해당하는 <xref:System.Runtime.Serialization.NetDataContractSerializer> 위협에 대한 설명은 "안전한 NetDataContractSerializer 사용" 단원을 참조하십시오.
 
-- <xref:System.Runtime.Serialization.DataContractAttribute> 특성이 형식(또는 `[Serializable]` 로 표시되어 있지만 `ISerializable`이 아닌 형식)에 적용되면 deserializer에서는 모든 생성자가 public이 아니거나 요청에 의해 보호되지 않더라도 이러한 형식의 인스턴스를 만들 수 있습니다.
+- <xref:System.Runtime.Serialization.DataContractAttribute> 특성이 형식(또는 <xref:System.SerializableAttribute> 로 표시되어 있지만 <xref:System.Runtime.Serialization.ISerializable>이 아닌 형식)에 적용되면 deserializer에서는 모든 생성자가 public이 아니거나 요청에 의해 보호되지 않더라도 이러한 형식의 인스턴스를 만들 수 있습니다.
 
 - deserialize된 데이터가 신뢰되었고 알려진 모든 형식이 신뢰할 수 있는 형식인 것이 확실한 경우가 아니면 deserialization 결과를 신뢰하지 마십시오. 부분 신뢰에서 실행되는 경우에는 알려진 형식이 애플리케이션 구성 파일에서 로드되지 않지만 컴퓨터 구성 파일에서는 로드됩니다.
 
-- 서로게이트가 추가된 `DataContractSerializer` 인스턴스를 부분적으로 신뢰할 수 있는 코드에 전달하면 코드에서 서로게이트의 수정 가능한 설정을 변경할 수 있습니다.
+- 서로게이트가 추가된 <xref:System.Runtime.Serialization.DataContractSerializer> 인스턴스를 부분적으로 신뢰할 수 있는 코드에 전달하면 코드에서 서로게이트의 수정 가능한 설정을 변경할 수 있습니다.
 
 - deserialize된 개체의 경우 XML 판독기나 그 내부의 데이터가 부분적으로 신뢰할 수 있는 코드에서 왔으면 deserialize된 결과 개체를 신뢰할 수 없는 데이터와 마찬가지로 취급해야 합니다.
 
 - <xref:System.Runtime.Serialization.ExtensionDataObject> 형식에 공개 멤버가 없다고 해서 그 내부의 데이터가 안전한 것은 아닙니다. 예를 들어, 권한이 있는 데이터 소스에서 일부 데이터가 들어 있는 개체로 deserialize한 다음 해당 개체를 부분적으로 신뢰할 수 있는 코드로 전달하면 부분적으로 신뢰할 수 있는 코드에서 개체를 serialize하여 `ExtensionDataObject` 에서 데이터를 읽을 수 있습니다. 권한이 있는 데이터 소스에서 나중에 부분적으로 신뢰할 수 있는 코드로 전달할 개체로 deserialize하는 경우에는 <xref:System.Runtime.Serialization.DataContractSerializer.IgnoreExtensionDataObject%2A> 를 `true` 로 설정하는 것이 좋습니다.
 
-- <xref:System.Runtime.Serialization.DataContractSerializer> 및 <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> 는 완전 신뢰로 private, protected, internal 및 public 멤버의 serialization을 지원합니다. 그러나 부분 신뢰에서는 public 멤버만 serialize될 수 있습니다. 애플리케이션에서 public 멤버가 아닌 멤버를 serialize하려고 하면 `SecurityException` 이 throw됩니다.
+- <xref:System.Runtime.Serialization.DataContractSerializer> 및 <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> 는 완전 신뢰로 private, protected, internal 및 public 멤버의 serialization을 지원합니다. 그러나 부분 신뢰에서는 public 멤버만 serialize될 수 있습니다. 애플리케이션에서 public 멤버가 아닌 멤버를 serialize하려고 하면 <xref:System.Security.SecurityException> 이 throw됩니다.
 
-    부분 신뢰에서 internal 또는 protected internal 멤버가 serialize될 수 있도록 허용하려면 `System.Runtime.CompilerServices.InternalsVisibleTo` 어셈블리 특성을 사용합니다. 이 특성을 사용하면 어셈블리에서 internal 멤버가 일부 다른 어셈블리에 표시되도록 선언할 수 있습니다. 이 경우 internal 멤버가 serialize되도록 하려는 어셈블리는 internal 멤버가 System.Runtime.Serialization.dll에 표시되도록 선언합니다.
+    부분 신뢰에서 internal 또는 protected internal 멤버가 serialize될 수 있도록 허용하려면 <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> 어셈블리 특성을 사용합니다. 이 특성을 사용하면 어셈블리에서 internal 멤버가 일부 다른 어셈블리에 표시되도록 선언할 수 있습니다. 이 경우 internal 멤버가 serialize되도록 하려는 어셈블리는 internal 멤버가 System.Runtime.Serialization.dll에 표시되도록 선언합니다.
 
     이 방법의 장점은 상승된 코드 생성 경로가 필요하지 않다는 것입니다.
 
     이와 동시에 두 가지 주요 단점이 있습니다.
 
-    첫 번째 단점은 `InternalsVisibleTo` 특성의 선택 속성이 어셈블리 수준이라는 것입니다. 즉, 특정 클래스만 internal 멤버가 serialize되도록 지정할 수는 없습니다. 물론 `DataMember` 특성을 특정 internal 멤버에 추가하지 않는 방법으로 해당 멤버를 serialize하지 않도록 선택할 수 있습니다. 이와 마찬가지로 개발자는 약간의 표시 문제가 있지만 멤버를 private 또는 protected 대신 internal로 만들도록 선택할 수도 있습니다.
+    첫 번째 단점은 <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> 특성의 선택 속성이 어셈블리 수준이라는 것입니다. 즉, 특정 클래스만 internal 멤버가 serialize되도록 지정할 수는 없습니다. 물론 <xref:System.Runtime.Serialization.DataMemberAttribute> 특성을 특정 internal 멤버에 추가하지 않는 방법으로 해당 멤버를 serialize하지 않도록 선택할 수 있습니다. 이와 마찬가지로 개발자는 약간의 표시 문제가 있지만 멤버를 private 또는 protected 대신 internal로 만들도록 선택할 수도 있습니다.
 
     두 번째 단점은 여전히 private 또는 protected 멤버를 지원하지 않는다는 것입니다.
 
-    부분 신뢰에서 `InternalsVisibleTo` 특성의 사용을 보려면 다음 프로그램을 사용해 보십시오.
+    부분 신뢰에서 <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> 특성의 사용을 보려면 다음 프로그램을 사용해 보십시오.
 
     [!code-csharp[CDF_WCF_SecurityConsiderationsForData#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/cdf_wcf_securityconsiderationsfordata/cs/program.cs#1)]
 
-    위의 예제에서 `PermissionsHelper.InternetZone` 은 부분 신뢰의 `PermissionSet` 에 해당합니다. 이제 `InternalsVisibleToAttribute`가 없으면 애플리케이션이 실패하고 public 멤버가 아닌 멤버가 부분 신뢰로 serialize될 수 없음을 나타내는 `SecurityException` 을 throw합니다.
+    위의 예제에서 `PermissionsHelper.InternetZone` 은 부분 신뢰의 <xref:System.Security.PermissionSet> 에 해당합니다. 이제 없이 <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> 특성을 응용 프로그램은 실패를 throw 한 <xref:System.Security.SecurityException> 나타내는 public이 아닌 멤버가 부분 신뢰에서 직렬화 할 수 없습니다.
 
     그러나 다음 줄을 소스 파일에 추가하면 프로그램이 성공적으로 실행됩니다.
 

@@ -2,12 +2,12 @@
 title: 활성 패턴
 description: 활성 패턴을 사용 하 여 입력된 데이터를 분할 하는 명명 된 파티션을 정의 하는 방법을 알아봅니다는 F# 프로그래밍 언어입니다.
 ms.date: 05/16/2016
-ms.openlocfilehash: c830011b69809bd399aab0c8a8bc25d40d5c82cc
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: 0f1f57de425836738201d2d8f84ab67a0df142ee
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53612844"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58412086"
 ---
 # <a name="active-patterns"></a>활성 패턴
 
@@ -86,23 +86,23 @@ BlanchedAlmond
 Something else : Not matched.
 ```
 
-부분 활성 패턴을 사용 하는 경우 때때로 개별 선택 비연속 또는 함께 사용할 수 없습니다 있지만 될 필요 합니다. 다음 예제에서 패턴 사각형 및 패턴 큐브는 아닙니다이 일부 숫자 사각형 및 64와 같은 큐브. 다음 프로그램은 모든 정수 사각형 및 큐브는 1000000를 출력 합니다.
+부분 활성 패턴을 사용 하는 경우 때때로 개별 선택 비연속 또는 함께 사용할 수 없습니다 있지만 될 필요 합니다. 다음 예제에서 패턴 사각형 및 패턴 큐브는 아닙니다이 일부 숫자 사각형 및 64와 같은 큐브. 다음 프로그램 사각형 및 정육면체 패턴을 결합 하는 AND 패턴을 사용 합니다. 최대 1000 모두 사각형 및 큐브 뿐만 큐브만 되는 모든 정수 출력. 
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet5005.fs)]
 
 출력은 다음과 같습니다.
 
 ```
-1
-64
-729
-4096
-15625
-46656
-117649
-262144
-531441
-1000000
+1 is a cube and a square
+8 is a cube
+27 is a cube
+64 is a cube and a square
+125 is a cube
+216 is a cube
+343 is a cube
+512 is a cube
+729 is a cube and a square
+1000 is a cube
 ```
 
 ## <a name="parameterized-active-patterns"></a>매개 변수가 있는 활성 패턴
@@ -128,7 +128,7 @@ Hello, random citizen!
 Hello, George!
 ```
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참고자료
 
 - [F# 언어 참조](index.md)
 - [일치 식](match-expressions.md)

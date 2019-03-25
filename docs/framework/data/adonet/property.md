@@ -2,12 +2,12 @@
 title: 속성
 ms.date: 03/30/2017
 ms.assetid: a941c53f-fc97-42c2-8832-0fb9f1d55c06
-ms.openlocfilehash: bc8f890479e195f1e6ef847219a74f165c722fd6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 80c4bb3ccbab75c17b098723fc10b8b996e40576
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54589427"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58409720"
 ---
 # <a name="property"></a>속성
 *속성* 의 기본 구성 요소는 [엔터티 형식](../../../../docs/framework/data/adonet/entity-type.md) 하 고 [복합 형식](../../../../docs/framework/data/adonet/complex-type.md)합니다. 속성은 엔터티 형식 인스턴스 또는 복합 형식 인스턴스에 포함될 데이터의 모양과 특징을 정의합니다. 개념적 모델의 속성은 클래스에 정의된 속성과 유사합니다. 클래스의 속성이 클래스의 모양을 정의하고 개체에 대한 정보를 전달하는 것과 동일한 방식으로, 개념적 모델의 속성은 엔터티 형식의 모양을 정의하고 엔터티 형식 인스턴스에 대한 정보를 전달합니다.  
@@ -31,7 +31,7 @@ ms.locfileid: "54589427"
 ## <a name="example"></a>예제  
  다음 다이어그램에서는 세 가지 엔터티 형식 `Book`, `Publisher` 및 `Author`가 포함된 개념적 모델을 보여 줍니다. 각 속성의 형식 정보는 다이어그램에 표시되지 않지만 각 엔터티 형식에는 여러 속성이 있습니다. 속성을 [엔터티 키](../../../../docs/framework/data/adonet/entity-key.md) (키)로 표시 됩니다.  
   
- ![예제 모델이](../../../../docs/framework/data/adonet/media/examplemodel.gif "ExampleModel")  
+ ![세 가지 엔터티 형식을 사용 하 여 예제 모델](./media/property/example-model-three-entity-types.gif)  
   
  합니다 [ADO.NET Entity Framework](../../../../docs/framework/data/adonet/ef/index.md) 개념 스키마 정의 언어를 호출 하는 도메인 특정 언어 (DSL)를 사용 하 여 ([CSDL](../../../../docs/framework/data/adonet/ef/language-reference/csdl-specification.md)) 개념적 모델을 정의 합니다. 다음 CSDL에서는 위의 다이어그램에 표시된 `Book` 엔터티 형식을 정의하고 XML 특성을 사용하여 각 속성의 형식과 이름을 나타냅니다. 선택적 패싯인 `Nullable`도 XML 특성을 사용하여 정의됩니다.  
   

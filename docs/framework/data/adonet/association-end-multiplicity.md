@@ -2,12 +2,12 @@
 title: 연결 End 복합성
 ms.date: 03/30/2017
 ms.assetid: 340926ee-aefb-4bef-92cc-453e5251fd03
-ms.openlocfilehash: 151b15a6df021a25f6c3ecea00af147c6b7196ff
-ms.sourcegitcommit: 462dc41a13942e467984e48f4018d1f79ae67346
+ms.openlocfilehash: 183bbafaf1de3adf8719c7ee562be3513832ef10
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/19/2019
-ms.locfileid: "58185677"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58412099"
 ---
 # <a name="association-end-multiplicity"></a>연결 End 복합성
 *연결 end 복합성* 개수를 정의 [엔터티 형식의](../../../../docs/framework/data/adonet/entity-type.md) 한쪽 끝에 있을 수 있는 인스턴스를 [연결](../../../../docs/framework/data/adonet/association-type.md)합니다.  
@@ -20,13 +20,14 @@ ms.locfileid: "58185677"
   
 -   많은 (\*): 연결 end에 0, 1 또는 더 많은 엔터티 형식 인스턴스가 있음을 나타냅니다.  
   
- 연결은 대체로 연결 End 복합성 특성을 사용합니다. 예를 들어 연결의 end 복합성이 한 개 및 여러 (\*)에 연결-일대다 연결 이라고 합니다. 다음 예에서 `PublishedBy` 연결은 일대다 연결입니다. 즉, 한 명의 발행자가 많은 책을 출판하고 책 하나는 한 명의 발행자에 의해 출판됩니다. `WrittenBy` 연결은 다대다 연결입니다. 한 권의 책에 저자가 여러 명일 수 있고 한 명의 저자가 여러 책을 쓸 수도 있습니다.  
+ 연결은 대체로 연결 End 복합성 특성을 사용합니다. 예를 들어 연결의 end 복합성이 한 개 및 여러 (\*)에 연결-일대다 연결 이라고 합니다. 다음 예에서 `PublishedBy` 연결은 일대다 연결입니다. 즉, 한 명의 발행자가 많은 책을 출판하고 책 하나는 한 명의 발행자에 의해 출판됩니다. 
+  `WrittenBy` 연결은 다대다 연결입니다. 한 권의 책에 저자가 여러 명일 수 있고 한 명의 저자가 여러 책을 쓸 수도 있습니다.  
   
 ## <a name="example"></a>예제  
  다음 다이어그램에서는 두 연결 `PublishedBy` 및 `WrittenBy`의 개념적 모델을 보여 줍니다. 
   `PublishedBy` 연결의 연결 End는 `Book` 및 `Publisher` 엔터티 형식입니다. 다중성을 `Publisher` 끝이 한 개 (1)이 고는 `Book` 끝이 많은 (\*).  
   
- ![예제 모델이](../../../../docs/framework/data/adonet/media/examplemodel.gif "ExampleModel")  
+ ![세 가지 엔터티 형식을 사용 하 여 예제 모델](./media/association-end-multiplicity/example-model-three-entity-types.gif)  
   
  ADO.NET Entity Framework 개념적 스키마 정의 언어를 호출 하는 도메인 특정 언어 (DSL)를 사용 하 여 ([CSDL](../../../../docs/framework/data/adonet/ef/language-reference/csdl-specification.md)) 개념적 모델을 정의 합니다. 다음 CSDL에서는 위의 다이어그램에 표시된 `PublishedBy` 연결을 정의합니다.  
   

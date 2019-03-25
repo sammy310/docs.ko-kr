@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 93e099eb-daa1-4f1e-b031-c1e10a996f88
-ms.openlocfilehash: 5712b0f7ef67e0a925207858e17d256dbf50cc60
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.openlocfilehash: af3fe9a233972e939dc14117fc08343bca9d5fd6
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55826270"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58411566"
 ---
 # <a name="code-access-security-and-adonet"></a>코드 액세스 보안 및 ADO.NET
 .NET Framework는 역할 기반 보안과 CAS(코드 액세스 보안)를 제공합니다. 두 보안 기능 모두 CLR(공용 언어 런타임)이 제공하는 공용 인프라를 사용하여 구현되었습니다. 비관리 코드의 경우 대부분의 응용 프로그램은 사용자 또는 보안 주체 권한으로 실행됩니다. 결과적으로 높은 권한을 가진 사용자가 악의적이거나 오류가 많은 소프트웨어를 실행하면 컴퓨터 시스템과 개인 데이터가 손상될 수 있습니다.  
@@ -29,9 +29,11 @@ ms.locfileid: "55826270"
   
 -   `Code access permissions` 클래스에서 파생된 <xref:System.Security.CodeAccessPermission>. 파일 및 환경 변수와 같은 보호된 리소스에 액세스하고, 비관리 코드에 액세스하는 등의 보호된 작업을 수행하는 데 필요한 권한입니다.  
   
--   `Identity permissions`은 어셈블리를 식별하는 특성을 나타냅니다. 디지털 서명이나 코드 출처와 같은 항목을 포함하는 증명 정보를 기준으로 어셈블리에 권한이 부여됩니다. <xref:System.Security.CodeAccessPermission> 기본 클래스에서 ID 권한이 파생되는 경우도 있습니다.  
+-   `Identity permissions`은 어셈블리를 식별하는 특성을 나타냅니다. 디지털 서명이나 코드 출처와 같은 항목을 포함하는 증명 정보를 기준으로 어셈블리에 권한이 부여됩니다. 
+  <xref:System.Security.CodeAccessPermission> 기본 클래스에서 ID 권한이 파생되는 경우도 있습니다.  
   
--   `Role-based security permissions`은 보안 주체가 지정된 ID를 가지고 있거나 지정된 역할의 멤버인지에 따라 결정됩니다. <xref:System.Security.Permissions.PrincipalPermission> 클래스를 사용하면 활성 보안 주체에 대해 선언적 권한 검사와 필수 권한 검사를 모두 수행할 수 있습니다.  
+-   `Role-based security permissions`은 보안 주체가 지정된 ID를 가지고 있거나 지정된 역할의 멤버인지에 따라 결정됩니다. 
+  <xref:System.Security.Permissions.PrincipalPermission> 클래스를 사용하면 활성 보안 주체에 대해 선언적 권한 검사와 필수 권한 검사를 모두 수행할 수 있습니다.  
   
  리소스에 액세스하거나 작업을 수행할 수 있는 권한이 코드에 있는지 확인하기 위해서 런타임 보안 시스템은 호출 스택을 검색하여 각 호출자에게 부여된 권한과 요청된 권한을 비교합니다. 호출 스택의 호출자에게 요청된 권한이 없는 경우 <xref:System.Security.SecurityException>이 throw되고 액세스가 거부됩니다.  
   
@@ -136,7 +138,8 @@ ms.locfileid: "55826270"
 ```  
   
 ### <a name="enabling-partial-trust-with-a-custom-permission-set"></a>사용자 지정 권한 집합을 사용하여 부분 신뢰 활성화  
- 특정 영역에 대해 <xref:System.Data.SqlClient> 권한 사용을 활성화하려면 시스템 관리자는 사용자 지정 권한 집합을 만들고 이를 특정 영역에 대한 권한 집합으로 설정해야 합니다. `LocalIntranet`과 같은 기본 권한 집합은 수정할 수 없습니다. 예를 들어 포함 하도록 <xref:System.Data.SqlClient> 있는 코드에 대 한 권한을 <xref:System.Security.Policy.Zone> 의 `LocalIntranet`, 시스템 관리자는 사용 권한 집합을 복사할 수 있습니다 `LocalIntranet`이름을 "CustomLocalIntranet"으로, 추가 <xref:System.Data.SqlClient> 권한 가져오기 CustomLocalIntranet 권한 집합을 [Caspol.exe (코드 액세스 보안 정책 도구)](../../../../docs/framework/tools/caspol-exe-code-access-security-policy-tool.md)의 권한 집합 및 `LocalIntranet_Zone` CustomLocalIntranet를 합니다.  
+ 특정 영역에 대해 <xref:System.Data.SqlClient> 권한 사용을 활성화하려면 시스템 관리자는 사용자 지정 권한 집합을 만들고 이를 특정 영역에 대한 권한 집합으로 설정해야 합니다. 
+  `LocalIntranet`과 같은 기본 권한 집합은 수정할 수 없습니다. 예를 들어 포함 하도록 <xref:System.Data.SqlClient> 있는 코드에 대 한 권한을 <xref:System.Security.Policy.Zone> 의 `LocalIntranet`, 시스템 관리자는 사용 권한 집합을 복사할 수 있습니다 `LocalIntranet`이름을 "CustomLocalIntranet"으로, 추가 <xref:System.Data.SqlClient> 권한 가져오기 CustomLocalIntranet 권한 집합을 [Caspol.exe (코드 액세스 보안 정책 도구)](../../../../docs/framework/tools/caspol-exe-code-access-security-policy-tool.md)의 권한 집합 및 `LocalIntranet_Zone` CustomLocalIntranet를 합니다.  
   
 ### <a name="sample-permission-set"></a>권한 집합 예제  
  다음은 부분 신뢰 권한일 경우의 .NET Framework Data Provider for SQL Server에 대한 권한 집합 예제입니다. 사용자 지정 권한 집합을 만드는 방법에 대 한 정보를 참조 하세요 [구성 설정 사용 하 여 Caspol.exe를 권한](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/4ybs46y6(v=vs.100))합니다.  
@@ -168,7 +171,8 @@ AllowBlankPassword="False">
 > [!IMPORTANT]
 >  ADO.NET에 대한 CAS 권한을 디자인할 때 올바른 패턴은 가장 제한이 심한 경우(권한이 없는 경우)부터 시작하여 코드가 수행해야 하는 특정 작업에 필요한 특정 권한을 추가하는 것입니다. 반대 패턴인 모든 권한을 부여한 다음 특정 권한을 부여하지 않는 방식은 동일한 연결 문자열을 표현하는 방법이 많으므로 안전하지 않습니다. 예를 들어, 모든 권한을 부여한 다음 연결 문자열 "server=someserver"에 대해 사용할 수 있는 권한을 주지 않아도 "server=someserver.mycompany.com"은 여전히 허용됩니다. 항상 권한을 전혀 부여하지 않은 상태에서 시작하여 권한 집합에 허점이 생길 위험을 줄이는 것이 좋습니다.  
   
- 다음 코드에서는 적절한 CAS 권한이 없는 경우 `SqlClient`가 <xref:System.Security.SecurityException>을 throw하는 보안 요구를 수행하는 방식을 보여 줍니다. <xref:System.Security.SecurityException> 출력은 콘솔 창에 표시됩니다.  
+ 다음 코드에서는 적절한 CAS 권한이 없는 경우 `SqlClient`가 <xref:System.Security.SecurityException>을 throw하는 보안 요구를 수행하는 방식을 보여 줍니다. 
+  <xref:System.Security.SecurityException> 출력은 콘솔 창에 표시됩니다.  
   
  [!code-csharp[DataWorks SqlClient.CAS#1](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks SqlClient.CAS/CS/source.cs#1)]
  [!code-vb[DataWorks SqlClient.CAS#1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SqlClient.CAS/VB/source.vb#1)]  
@@ -190,7 +194,7 @@ Failed, as expected: Request failed.
 ```  
   
 ## <a name="interoperability-with-unmanaged-code"></a>비관리 코드와의 상호 운용성  
- CLR 외부에서 실행되는 코드를 비관리 코드라고 합니다. 따라서 비관리 코드에는 CAS와 같은 보안 메커니즘을 적용할 수 없습니다. 비관리 코드로는 COM 구성 요소, ActiveX 인터페이스, Win32 API 함수 등이 있습니다. 비관리 코드를 실행할 때에는 특수한 보안 고려 사항이 적용되므로 전체적인 응용 프로그램 보안이 손상되지 않습니다. 자세한 내용은 [비관리 코드 상호 운용](../../../../docs/framework/interop/index.md)을 참조하세요.  
+ CLR 외부에서 실행되는 코드를 비관리 코드라고 합니다. 따라서 비관리 코드에는 CAS와 같은 보안 메커니즘을 적용할 수 없습니다. COM 구성 요소, ActiveX 인터페이스 및 Windows API 함수는 비관리 코드에 속합니다. 비관리 코드를 실행할 때에는 특수한 보안 고려 사항이 적용되므로 전체적인 응용 프로그램 보안이 손상되지 않습니다. 자세한 내용은 [비관리 코드 상호 운용](../../../../docs/framework/interop/index.md)을 참조하세요.  
   
  .NET Framework는 COM interop를 통해 액세스를 제공함으로써 기존 COM 구성 요소에 대한 이전 버전과의 호환성도 지원합니다. 즉, 관련 COM 형식을 가져오는 COM interop 도구를 사용하여 COM 구성 요소를 .NET Framework 응용 프로그램에 통합할 수 있습니다. COM 형식을 가져온 후에는 즉시 사용할 수 있습니다. COM interop을 사용하면 어셈블리 메타데이터를 형식 라이브러리로 내보내고 관리 구성 요소를 COM 구성 요소로 등록하여 COM 클라이언트에서 관리 코드에 액세스할 수도 있습니다. 자세한 내용은 [고급 COM 상호 운용성](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bd9cdfyx)합니다.  
   

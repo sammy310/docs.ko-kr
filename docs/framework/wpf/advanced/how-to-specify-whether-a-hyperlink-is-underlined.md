@@ -7,20 +7,20 @@ dev_langs:
 helpviewer_keywords:
 - Hyperlink control type [WPF]
 ms.assetid: 3996cfe6-1dac-4835-aeb3-c719ce9cfee5
-ms.openlocfilehash: 9e8eb54d4710095a1aba052b16e49c528bd17c0e
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 1968e1b2730f08eb76670a477f1d2bdb0a9140bf
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57371052"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58408706"
 ---
 # <a name="how-to-specify-whether-a-hyperlink-is-underlined"></a>방법: 하이퍼링크에 밑줄이 그어지는지 여부 지정
 <xref:System.Windows.Documents.Hyperlink> 개체는 유동 콘텐츠 내에서 하이퍼링크를 호스트할 수 있는 인라인 수준의 유동 콘텐츠 요소입니다. 기본적으로 <xref:System.Windows.Documents.Hyperlink> 사용을 <xref:System.Windows.TextDecoration> 밑줄을 표시 하는 개체입니다. <xref:System.Windows.TextDecoration> 많을 경우에 특히 개체를 인스턴스화할 때 성능이 저하 될 수 있습니다 <xref:System.Windows.Documents.Hyperlink> 개체입니다. 광범위 하 게 사용 한다면 <xref:System.Windows.Documents.Hyperlink> 와 같은 경우 트리거될 때만 밑줄이 표시 하려는 요소를 <xref:System.Windows.ContentElement.MouseEnter> 이벤트입니다.  
   
- 다음 예제에서는 "My MSN" 링크 밑줄은 동적-만 표시 될 때를 <xref:System.Windows.ContentElement.MouseEnter> 이벤트가 트리거됩니다.  
+ 다음 예제에서는 "My MSN" 링크 밑줄은 동적 언어로, 즉,이 때만 나타나는 <xref:System.Windows.ContentElement.MouseEnter> 이벤트가 트리거됩니다.  
   
- ![Textdecoration을 표시 하는 하이퍼링크](./media/textdecoration03.png "TextDecoration03")  
-Textdecoration을 사용 하 여 정의 하는 하이퍼링크  
+  ![TextDecoration을 표시하는 하이퍼링크](./media/how-to-specify-whether-a-hyperlink-is-underlined/text-decorations-hyperlinks.png)  
+  
   
 ## <a name="example"></a>예제  
  다음 태그 샘플은 <xref:System.Windows.Documents.Hyperlink> 와 밑줄 없이 정의 합니다.  

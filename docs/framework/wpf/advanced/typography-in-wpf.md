@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - typography [WPF], about typography
 ms.assetid: 06cbf17b-6eff-4fe5-949d-2dd533e4e1f4
-ms.openlocfilehash: 3afb6a9bd62083704a3147df9d1cc5477b4f5921
-ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
+ms.openlocfilehash: 7378ddc8ada198beb005bc8682e6cb131def4ceb
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/16/2019
-ms.locfileid: "58125631"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58412138"
 ---
 # <a name="typography-in-wpf"></a>WPF의 입력 체계
 이 항목에서는 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]의 주요 입력 체계 기능을 소개합니다. 이러한 기능에는 텍스트 렌더링의 향상된 품질 및 성능, [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] 입력 체계 지원, 향상된 국가별 텍스트, 향상된 글꼴 지원 및 새 텍스트 API(응용 프로그래밍 인터페이스)가 포함됩니다.  
@@ -121,7 +121,7 @@ ClearType y 방향 앤티앨리어싱으로 표시된 텍스트
  자세한 내용은 [WPF의 문서](documents-in-wpf.md)를 참조하세요.  
   
 ### <a name="lightweight-text-drawing"></a>간단한 텍스트 그리기  
- 직접 텍스트를 그릴 수 있습니다 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 사용 하 여 개체를 <xref:System.Windows.Media.DrawingContext.DrawText%2A> 메서드를 <xref:System.Windows.Media.DrawingContext> 개체입니다. 만든이 메서드를 사용 하는 <xref:System.Windows.Media.FormattedText> 개체입니다. 이 개체를 사용하면 여러 줄 텍스트를 그릴 수 있으며 이 텍스트에 있는 각 문자의 서식은 개별적으로 지정할 수 있습니다. 기능을 <xref:System.Windows.Media.FormattedText> 개체는 Win32 api에서 DrawText 플래그의 기능을 많이 포함 되어 있습니다. 또한는 <xref:System.Windows.Media.FormattedText> 텍스트의 범위를 초과 하는 경우 줄임표가 표시 되는 줄임표 지원과 같은 기능을 포함 하는 개체입니다. 다음 예제에서는 두 번째와 세 번째 단어에 적용된 선형 그라데이션을 포함하여 여러 서식이 적용된 텍스트를 보여 줍니다.  
+ 직접 텍스트를 그릴 수 있습니다 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 사용 하 여 개체를 <xref:System.Windows.Media.DrawingContext.DrawText%2A> 메서드를 <xref:System.Windows.Media.DrawingContext> 개체입니다. 만든이 메서드를 사용 하는 <xref:System.Windows.Media.FormattedText> 개체입니다. 이 개체를 사용하면 여러 줄 텍스트를 그릴 수 있으며 이 텍스트에 있는 각 문자의 서식은 개별적으로 지정할 수 있습니다. 기능을 <xref:System.Windows.Media.FormattedText> 개체 DrawText 플래그 Windows API의 기능을 많이 포함 되어 있습니다. 또한는 <xref:System.Windows.Media.FormattedText> 텍스트의 범위를 초과 하는 경우 줄임표가 표시 되는 줄임표 지원과 같은 기능을 포함 하는 개체입니다. 다음 예제에서는 두 번째와 세 번째 단어에 적용된 선형 그라데이션을 포함하여 여러 서식이 적용된 텍스트를 보여 줍니다.  
   
  ![FormattedText 개체를 사용하여 표시한 텍스트](./media/typography-in-wpf/text-formatted-linear-gradient.jpg) 
   

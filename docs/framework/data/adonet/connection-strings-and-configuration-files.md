@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 37df2641-661e-407a-a3fb-7bf9540f01e8
-ms.openlocfilehash: 5de30627d6d0e1209b12912437ae3403890f1678
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.openlocfilehash: 5e83d13d24a0b17fd886995e552dd0a7e2cf8ff4
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55828347"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58409954"
 ---
 # <a name="connection-strings-and-configuration-files"></a>연결 문자열 및 구성 파일
 응용 프로그램 코드에 연결 문자열을 포함하면 보안상 취약한 부분이 생기고 유지 관리상의 문제가 발생할 수 있습니다. [Ildasm.exe(IL 디스어셈블러)](../../../../docs/framework/tools/ildasm-exe-il-disassembler.md) 도구를 사용하면 응용 프로그램의 소스 코드로 컴파일된 암호화되지 않은 연결 문자열을 볼 수 있습니다. 뿐만 아니라 연결 문자열이 계속해서 변경되는 경우에는 응용 프로그램을 다시 컴파일해야 합니다. 이와 같은 여러 가지 이유로 연결 문자열은 응용 프로그램 구성 파일에 저장하는 것이 좋습니다.  
@@ -81,7 +81,7 @@ ms.locfileid: "55828347"
 |<xref:System.Configuration.ConnectionStringSettings.ConnectionString%2A>|연결 문자열입니다. **connectionString** 특성에 매핑됩니다.|  
   
 ### <a name="example-listing-all-connection-strings"></a>예제: 모든 연결 문자열 나열  
- 다음 예제에서는 `ConnectionStringSettings` 컬렉션을 반복한 후 <xref:System.Configuration.ConnectionStringSettings.Name%2A>, <xref:System.Configuration.ConnectionStringSettings.ProviderName%2A> 및 <xref:System.Configuration.ConnectionStringSettings.ConnectionString%2A> 속성을 콘솔 창에 표시합니다.  
+ 이 예제에서는 반복 합니다 <xref:System.Configuration.ConnectionStringSettingsCollection> 표시 합니다 <xref:System.Configuration.ConnectionStringSettings.Name%2A?displayProperty=nameWithType>, <xref:System.Configuration.ConnectionStringSettings.ProviderName%2A?displayProperty=nameWithType>, 및 <xref:System.Configuration.ConnectionStringSettings.ConnectionString%2A?displayProperty=nameWithType> 콘솔 창에서 속성.  
   
 > [!NOTE]
 >  일부 프로젝트 형식에는 System.Configuration.dll이 포함되어 있지 않으므로 구성 클래스를 사용하려면 먼저 System.Configuration.dll에 대한 참조를 설정해야 할 수도 있습니다. 특정 응용 프로그램 구성 파일의 이름과 위치는 응용 프로그램의 종류 및 호스팅 프로세스에 따라 달라집니다.  
@@ -139,7 +139,7 @@ ms.locfileid: "55828347"
 |<xref:System.Configuration.RsaProtectedConfigurationProvider>|RSA 암호화 알고리즘을 사용하여 데이터를 암호화하고 해독합니다. 공개 키 암호화 및 디지털 서명에도 RSA 알고리즘을 사용할 수 있습니다. 두 개의 서로 다른 키를 사용하므로 "공개 키" 또는 비대칭 암호화라고도 합니다. [ASP.NET IIS 등록 도구(Aspnet_regiis.exe)](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/k6h9cz8h(v=vs.90))를 사용하여 Web.config 파일의 섹션을 암호화하고 암호화 키를 관리할 수 있습니다. ASP.NET에서는 파일을 처리할 때 구성 파일의 암호를 해독합니다. ASP.NET 응용 프로그램의 ID는 섹션을 암호화하고 해독하는 데 사용되는 암호화 키에 대해 읽기 액세스 권한이 있어야 합니다.|  
 |<xref:System.Configuration.DpapiProtectedConfigurationProvider>|Windows DPAPI(데이터 보호 API)를 사용하여 구성 섹션을 암호화합니다. Windows 기본 제공 암호화 서비스를 사용하며 시스템별 또는 사용자 계정별로 보호되도록 구성할 수 있습니다. 시스템별 보호는 동일한 서버에 정보를 공유해야 하는 여러 응용 프로그램이 있을 때 유용합니다. 사용자 계정별 보호는 공유된 호스팅 환경과 같이 특정 사용자 ID와 함께 실행되는 서비스에서 사용할 수 있습니다. 각 응용 프로그램은 파일 및 데이터베이스와 같은 리소스에 대한 액세스를 제한하는 개별 ID에 대해 실행됩니다.|  
   
- 두 공급자 모두 강력한 데이터 암호화를 제공합니다. 그러나 웹 팜과 같이 여러 서버에서 동일한 암호화 구성 파일을 사용하려는 경우 데이터를 암호화하는 데 사용되는 암호화 키를 내보내고 다른 서버에서 가져오도록 하려면 `RsaProtectedConfigurationProvider`를 사용해야 합니다. 자세한 내용은 [보호되는 구성 RSA 키 컨테이너 가져오기 및 내보내기](https://docs.microsoft.com/previous-versions/aspnet/yxw286t2(v=vs.100))를 참조합니다.  
+ 두 공급자 모두 강력한 데이터 암호화를 제공합니다. 그러나 웹 팜과 같이 여러 서버에서 동일한 암호화 구성 파일을 사용하려는 경우 데이터를 암호화하는 데 사용되는 암호화 키를 내보내고 다른 서버에서 가져오도록 하려면 <xref:System.Configuration.RsaProtectedConfigurationProvider>를 사용해야 합니다. 자세한 내용은 [보호되는 구성 RSA 키 컨테이너 가져오기 및 내보내기](https://docs.microsoft.com/previous-versions/aspnet/yxw286t2(v=vs.100))를 참조합니다.  
   
 ### <a name="using-the-configuration-classes"></a>구성 클래스 사용  
  <xref:System.Configuration> 네임스페이스에서는 프로그래밍 방식으로 구성을 설정하는 클래스를 제공합니다. <xref:System.Configuration.ConfigurationManager> 클래스에서는 시스템, 응용 프로그램 및 사용자 구성 파일에 대한 액세스를 제공합니다. ASP.NET 응용 프로그램을 만드는 경우 <xref:System.Web.Configuration.WebConfigurationManager> 클래스를 사용하여 **\<system.web>** 에 있는 설정과 같이 ASP.NET 응용 프로그램에 고유한 설정에 액세스할 수 있으면서 동일한 기능을 제공할 수 있습니다.  

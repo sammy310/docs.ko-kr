@@ -4,12 +4,12 @@ ms.date: 10/22/2008
 ms.technology: dotnet-standard
 ms.assetid: bebb27ac-9712-4196-9931-de19fc04dbac
 author: KrzysztofCwalina
-ms.openlocfilehash: c2a5a69186e41642abf77357db8b04e2611a43f4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f0ef8ab378fb3898f2d2e134f0b38668f6794ef3
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54513140"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58409213"
 ---
 # <a name="serialization"></a>Serialization
 Serialization은 개체를 쉽게 유지 또는 전송할 수 있는 형식으로 변환 하는 프로세스입니다. 예를 들어 개체를 serialize 하, 대상 컴퓨터에서 역직렬화 HTTP를 사용 하 여 인터넷을 통해 전송할 수 있습니다.  
@@ -80,20 +80,23 @@ Serialization은 개체를 쉽게 유지 또는 전송할 수 있는 형식으�
   
  **✓ CONSIDER** 완벽 하 게 serialization 프로세스 제어 하려는 경우 런타임 직렬화 가능 패턴을 구현 합니다. 데이터가 serialize 또는 deserialize될 때 데이터를 변환하려는 경우를 예로 들 수 있습니다.  
   
- 이 패턴은 아주 단순합니다. <xref:System.Runtime.Serialization.ISerializable> 인터페이스를 구현하고, 개체가 deserialize될 때 사용되는 특별한 생성자를 제공하기만 하면 됩니다.  
+ 이 패턴은 아주 단순합니다. 
+  <xref:System.Runtime.Serialization.ISerializable> 인터페이스를 구현하고, 개체가 deserialize될 때 사용되는 특별한 생성자를 제공하기만 하면 됩니다.  
   
  **✓ DO** serialization 생성자를 보호 하 고 입력 하 고이 예제에 표시 된 대로 정확 하 게 명명 된 두 개의 매개 변수를 제공 합니다.  
   
 ```csharp
 [Serializable]  
-public class Person : ISerializable {  
-    protected Person(SerializationInfo info, StreamingContext context) {  
-        ...  
+public class Person : ISerializable
+{  
+    protected Person(SerializationInfo info, StreamingContext context)
+    {  
+        // ...  
     }  
 }  
 ```
   
- **✓ DO** 구현에서 `ISerializable` 멤버가 명시적으로 합니다.  
+ **✓ DO** 구현에서 <xref:System.Runtime.Serialization.ISerializable> 멤버가 명시적으로 합니다.  
   
  **✓ DO** 링크 요청에 적용 <xref:System.Runtime.Serialization.ISerializable.GetObjectData%2A?displayProperty=nameWithType> 구현 합니다. 이렇게 하면만 완전히 신뢰할 수 있는 코어 및 런타임 Serializer 멤버에 액세스할 수 있습니다.  
   

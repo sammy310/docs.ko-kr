@@ -2,12 +2,12 @@
 title: <net.pipe>
 ms.date: 03/30/2017
 ms.assetid: 6a0f0318-f8f6-466c-9fae-199d7274a82e
-ms.openlocfilehash: ddd25d3d25f4c4be1a9e26d444fa799a55c9cccc
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 90d081c1287362669286aaa1185ed3b0bbe09b07
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55283285"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58412112"
 ---
 # <a name="netpipe"></a>\<net.pipe>
 명명된 파이프 연결의 수명을 관리하고 명명된 파이프을 통해 수신되는 활성화 요청을 처리하는 Named Pipe Activation Service의 구성 설정을 지정합니다.  
@@ -50,9 +50,9 @@ ms.locfileid: "55283285"
   
 |특성|설명|  
 |---------------|-----------------|  
-|`maxPendingAccepts`|공유 서비스에 대한 수신 끝점에서 동시에 수용할 수 있는 활성 스레드의 최대 수를 지정하는 정수입니다. 기본값은 2입니다.|  
+|`maxPendingAccepts`|공유 서비스에 대한 수신 엔드포인트에서 동시에 수용할 수 있는 활성 스레드의 최대 수를 지정하는 정수입니다. 기본값은 2입니다.|  
 |`maxPendingConnections`|디스패치를 대기할 수 있는 최대 연결 수를 지정하는 정수입니다. 기본값은 100입니다.|  
-|`receiveTimeout`|프레이밍 데이터를 읽고 내부 연결에서 연결 디스패치를 수행하는 데 대한 제한 시간을 지정하는 `TimeSpan`입니다. 기본값은 "00:00:10"입니다.|  
+|`receiveTimeout`|프레이밍 데이터를 읽고 내부 연결에서 연결 디스패치를 수행하는 데 대한 제한 시간을 지정하는 <xref:System.TimeSpan>입니다. 기본값은 "00:00:10"입니다.|  
   
 ### <a name="child-elements"></a>자식 요소  
   

@@ -18,12 +18,12 @@ helpviewer_keywords:
 - objects [Visual Basic], names
 - names [Visual Basic], shadowing
 ms.assetid: 54bb4c25-12c4-4181-b4a0-93546053964e
-ms.openlocfilehash: 6ac973493b67fa15ca935f61bbb8e5c07bda1e0f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 15c7112f7e318542859162655c78e19558178e5a
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54580865"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58411007"
 ---
 # <a name="shadowing-in-visual-basic"></a>Visual Basic의 숨김 기능
 동일한 이름을 공유 하는 두 가지 프로그래밍 요소를 숨길 수 중 하나, 또는 *섀도*, 다른 하나입니다. 이러한 상황에서 숨겨진된 요소는 참조를 사용할 수 있습니다. 대신, 요소 이름을 사용 하는 코드를 Visual Basic 컴파일러는 섀도잉 요소 확인 합니다.  
@@ -41,8 +41,7 @@ ms.locfileid: "54580865"
   
  다음 그림에서는 두 개의 변수, 명명 된 두 `temp`합니다. 지역 변수 `temp` 멤버 변수를 숨깁니다 `temp` 자체 프로시저 내에서 액세스할 때 `p`합니다. 그러나는 `MyClass` 키워드는 숨기기를 무시 하 고 멤버 변수에 액세스 합니다.  
   
- ![범위를 통한 숨기기 그래픽 다이어그램](../../../../visual-basic/programming-guide/language-features/declared-elements/media/shadowscope.gif "ShadowScope")  
-범위를 통한 숨김  
+ ![범위를 통한 숨김 보여 주는 그래픽입니다.](./media/shadowing/shadow-scope-diagram.gif)
   
  범위를 통한 숨김 예제를 참조 하세요. [방법: 변수 이름이 같은 변수 숨기기](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-hide-a-variable-with-the-same-name-as-your-variable.md)합니다.  
   
@@ -51,8 +50,7 @@ ms.locfileid: "54580865"
   
  다음 그림에서는 기본 클래스를 보여 줍니다 `b` 및 파생된 클래스 `d` 에서 상속 되는 `b`합니다. 라는 프로시저를 정의 하는 기본 클래스 `proc`, 파생된 클래스는이 동일한 이름의 다른 프로시저를 사용 하 여 숨깁니다. 첫 번째 `Call` 문에서 섀도잉 액세스 `proc` 파생된 클래스에서. 그러나는 `MyBase` 키워드는 숨기기를 무시 하 고 숨겨진된 프로시저는 기본 클래스에 액세스 합니다.  
   
- ![상속을 통한 숨기기 그래픽 다이어그램](../../../../visual-basic/programming-guide/language-features/declared-elements/media/shadowinherit.gif "ShadowInherit")  
-상속을 통한 숨김  
+ ![상속을 통한 숨기기 그래픽 다이어그램](./media/shadowing/shadowing-inherit-diagram.gif)  
   
  상속을 통한 숨김 예제를 참조 하세요. [방법: 변수 이름이 같은 변수 숨기기](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-hide-a-variable-with-the-same-name-as-your-variable.md) 고 [방법: 상속된 된 변수 숨기기](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-hide-an-inherited-variable.md)합니다.  
   

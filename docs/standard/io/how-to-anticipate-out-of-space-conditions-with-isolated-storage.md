@@ -37,8 +37,7 @@ ms.locfileid: "57372297"
 
 지정된 쓰기 시도가 이러한 이유로 실패할 가능성이 있는지 확인할 수 있도록 <xref:System.IO.IsolatedStorage.IsolatedStorage> 클래스는 세 가지 읽기 전용 속성 즉, <xref:System.IO.IsolatedStorage.IsolatedStorage.AvailableFreeSpace%2A>, <xref:System.IO.IsolatedStorage.IsolatedStorage.UsedSize%2A> 및 <xref:System.IO.IsolatedStorage.IsolatedStorage.Quota%2A>를 제공합니다. 이러한 속성을 사용하여 저장소에 쓰는 작업으로 인해 저장소의 최대 허용 크기가 초과되는지 여부를 판단할 수 있습니다. 격리된 저장소에 동시에 액세스할 수 있음을 명심하십시오. 따라서 남은 저장소 크기를 계산하는 경우 저장소에 쓰는 시간에 따라 저장소 공간이 사용될 수 있습니다. 그러나 사용 가능한 저장소의 상한값에 도달하는지 여부를 판단하기 위해 저장소의 최대 크기를 사용할 수는 있습니다.
 
-
-  <xref:System.IO.IsolatedStorage.IsolatedStorage.Quota%2A> 속성이 제대로 동작하려면 어셈블리에 대한 증명이 있어야 합니다. 따라서 이 속성을 <xref:System.IO.IsolatedStorage.IsolatedStorageFile>, <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetUserStoreForAssembly%2A>, 또는 <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetUserStoreForDomain%2A> 메서드를 사용하여 만들어진 <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetStore%2A> 개체에서만 검색해야 합니다. 다른 방법으로 만들어진 <xref:System.IO.IsolatedStorage.IsolatedStorageFile> 개체(예: <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetEnumerator%2A> 메서드에서 반환된 개체)는 정확한 최대 크기를 반환하지 않습니다.
+<xref:System.IO.IsolatedStorage.IsolatedStorage.Quota%2A> 속성이 제대로 동작하려면 어셈블리에 대한 증명이 있어야 합니다. 따라서 이 속성을 <xref:System.IO.IsolatedStorage.IsolatedStorageFile>, <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetUserStoreForAssembly%2A>, 또는 <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetUserStoreForDomain%2A> 메서드를 사용하여 만들어진 <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetStore%2A> 개체에서만 검색해야 합니다. 다른 방법으로 만들어진 <xref:System.IO.IsolatedStorage.IsolatedStorageFile> 개체(예: <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetEnumerator%2A> 메서드에서 반환된 개체)는 정확한 최대 크기를 반환하지 않습니다.
 
 ## <a name="example"></a>예제
 

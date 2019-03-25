@@ -5,12 +5,12 @@ helpviewer_keywords:
 - layout [WPF], automatic
 - automatic layout [WPF]
 ms.assetid: 6fed9264-18bb-4d05-8867-1fe356c6f687
-ms.openlocfilehash: af564c4ca865c47c7efdda6ed86732581f677218
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 74c4e10e8f28fb00a5528c1ab860b88d0caa4303
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57353597"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58408758"
 ---
 # <a name="use-automatic-layout-overview"></a>자동 레이아웃 사용 개요
 이 항목에서는 개발자가 작성 하는 방법에 대 한 지침을 소개 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 응용 프로그램을 지역화할 수 있는 [!INCLUDE[TLA#tla_ui#plural](../../../../includes/tlasharptla-uisharpplural-md.md)]합니다. 과거에는 UI의 지역화는 시간이 오래 걸리는 프로세스 였습니다. 에 대 한 UI를 조정 하는 각 언어는 픽셀 단위 조정이 필요 합니다. 적합 한 설계 및 코딩 표준을 사용 하 여 오늘 [!INCLUDE[TLA2#tla_ui#plural](../../../../includes/tla2sharptla-uisharpplural-md.md)] 는 작은 크기 조정 및 위치 조정 작업을 생성할 수 있습니다. 보다 쉽게 크기 및 위치가 변경 될 수 있는 응용 프로그램을 작성 하는 방법을 자동 레이아웃 이라고 하며 사용 하 여 구현할 수 있습니다 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 응용 프로그램 디자인.  
@@ -41,8 +41,7 @@ ms.locfileid: "57353597"
   
  다음 그림에서는 코드 샘플의 출력을 보여 줍니다.  
   
- ![서로 다른 언어로 텍스트는 동일한 단추](./media/globalizationbutton.png "GlobalizationButton")  
-자동 크기 조정 단추  
+ ![텍스트가 여러 언어로 표시되는 동일한 단추](./media/use-automatic-layout-overview/auto-resizable-button.png)  
   
 <a name="autolayout_coding"></a>   
 ## <a name="automatic-layout-and-coding-standards"></a>자동 레이아웃 및 코딩 표준  

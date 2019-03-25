@@ -5,12 +5,12 @@ helpviewer_keywords:
 - globalization [WPF], about globalization
 - localization [WPF], about localization
 ms.assetid: 56e5a5c8-6c96-4d19-b8e1-a5be1dc564af
-ms.openlocfilehash: 55a60a74c246e0eefb854bed3d22cfb97eff15b1
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 279fe008c8624ff2209f5e08c3c9f9713ad201cd
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57492671"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58412034"
 ---
 # <a name="wpf-globalization-and-localization-overview"></a>WPF 전역화 및 지역화 개요
 
@@ -144,9 +144,9 @@ ms.locfileid: "57492671"
   
  공유 크기 조정 기능을 사용 하는 예제 <xref:System.Windows.Controls.Grid>합니다. 마지막 세 열은 동일한 자체를 배치 하 여이 활용 하기 위해 <xref:System.Windows.Controls.DefinitionBase.SharedSizeGroup%2A>합니다. 속성의 이름에서 알 수 있듯이 이 속성을 통해 열은 같은 크기를 공유할 수 있습니다. 따라서 더 긴 문자열인 "찾아보기..."를 "찾아보기..." 가져옵니다 지역화 하는 경우 모든 단추 대신 작은 "확인" 단추 및 커집니다 "찾아보기..." 단추 너비에서 증가 합니다.  
   
- **Xml:lang**
+ **xml:lang**
   
- `Xml:lang="en-US"`  
+ `xml:lang="en-US"`  
   
  알림 합니다 [xml: lang XAML 처리](../../xaml-services/xml-lang-handling-in-xaml.md) 의 루트 요소에 배치 합니다 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]합니다. 이 속성은 해당 요소 및 자식의 문화권을 설명합니다. 이 값은 사용의 몇 가지 기능 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 이며 지역화 하는 동안 적절 하 게 변경 해야 합니다. 이 값은 단어 하이픈 넣기와 맞춤법 검사에 사용할 언어 사전을 변경합니다. 또한 숫자의 표시 및 글꼴 대체 시스템에서 사용할 글꼴을 선택하는 방법에도 영향을 줍니다. 마지막으로, 속성은 숫자 표시 방식과 복잡한 스크립트에 포함된 텍스트의 모양이 지정되는 방식에 영향을 줍니다. 기본값은 "en-US"입니다.  
   

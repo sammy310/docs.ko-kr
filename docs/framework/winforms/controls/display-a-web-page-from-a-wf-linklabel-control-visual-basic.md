@@ -42,8 +42,7 @@ End Sub
   
 -   라는 Windows 폼을 `Form1`입니다.  
   
--   
-  `LinkLabel1`이라는 <xref:System.Windows.Forms.LinkLabel> 컨트롤  
+-   `LinkLabel1`이라는 <xref:System.Windows.Forms.LinkLabel> 컨트롤  
   
 -   현재 인터넷에 연결 합니다.  
   

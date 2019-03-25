@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 938e7825-f63a-4c3d-b603-63772fabfdb3
-ms.openlocfilehash: 11435dc6f941a566427c0e0cb797e84f33dd66a2
-ms.sourcegitcommit: bef803e2025642df39f2f1e046767d89031e0304
+ms.openlocfilehash: ea052a2dd843205a8108ea48f17ea84577817215
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56303649"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58411033"
 ---
 # <a name="how-to-exchange-queued-messages-with-wcf-endpoints"></a>방법: 대기 중인 메시지와 WCF 끝점 교환
 큐는 서비스의 통신 시 사용할 수 없는 경우에 Windows Communication Foundation (WCF) 서비스와 클라이언트 간에 신뢰할 수 있는 메시징 발생할 수 있다고 확인 합니다. 다음 절차에는 WCF 서비스를 구현 하는 경우 클라이언트와 표준을 사용 하 여 서비스 간 통신을 지 속하는 큐 바인딩을 확인 하는 방법을 보여 줍니다.  
@@ -27,7 +27,7 @@ ms.locfileid: "56303649"
      [!code-vb[S_Msmq_Transacted#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/s_msmq_transacted/vb/service.vb#1)]  
   
 2.  서비스 계약에서 사용자 정의 형식을 전달하는 경우 해당 형식의 데이터 계약을 정의해야 합니다. 다음 코드에서는 `PurchaseOrder` 및 `PurchaseOrderLineItem`의 두 데이터 계약을 보여 줍니다. 이 두 형식은 서비스로 전송되는 데이터를 정의합니다. 또한 이 데이터 계약을 정의하는 클래스에서 여러 메서드도 정의합니다. 이러한 메서드는 데이터 계약의 일부로 간주되지 않습니다. 
-  `DataMember` 특성을 사용하여 선언된 해당 멤버만이 데이터 계약의 일부가 됩니다.  
+  <xref:System.Runtime.Serialization.DataMemberAttribute> 특성을 사용하여 선언된 해당 멤버만이 데이터 계약의 일부가 됩니다.  
   
      [!code-csharp[S_Msmq_Transacted#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_msmq_transacted/cs/service.cs#2)]
      [!code-vb[S_Msmq_Transacted#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/s_msmq_transacted/vb/service.vb#2)]  

@@ -52,8 +52,7 @@ ms.locfileid: "56261104"
   
  IIS에서는 각 사이트에 대해 여러 개의 바인딩을 지정할 수 있으므로, 각 스키마에 대해 여러 개의 기본 주소가 생성됩니다. 이전 버전 [!INCLUDE[netfx35_short](../../../../includes/netfx35-short-md.md)], WCF 스키마에 대 한 여러 주소를 지원 하지 않았습니다 고, 지정 된 경우 했습니다는 <xref:System.ArgumentException> 활성화 하는 동안.  
   
- 
-  [!INCLUDE[netfx35_short](../../../../includes/netfx35-short-md.md)]를 사용하면 인터넷 서비스 공급자가 동일한 사이트의 동일한 스키마에 대해 기본 주소가 다른 여러 응용 프로그램을 호스팅할 수 있습니다.  
+ [!INCLUDE[netfx35_short](../../../../includes/netfx35-short-md.md)]를 사용하면 인터넷 서비스 공급자가 동일한 사이트의 동일한 스키마에 대해 기본 주소가 다른 여러 응용 프로그램을 호스팅할 수 있습니다.  
   
  예를 들어 사이트에 다음 기본 주소가 포함될 수 있습니다.  
   
@@ -61,8 +60,7 @@ ms.locfileid: "56261104"
   
 - `http://shipping.myorg.com/Service.svc`
   
- 
-  [!INCLUDE[netfx35_short](../../../../includes/netfx35-short-md.md)]를 사용하여 구성 파일의 AppDomain 수준에서 접두사 필터를 지정합니다. 이 작업을 수행 합니다 [ \<baseAddressPrefixFilters >](../../../../docs/framework/configure-apps/file-schema/wcf/baseaddressprefixfilters.md) 접두사 목록을 포함 하는 요소입니다. IIS에서 제공하는 들어오는 기본 주소는 선택적 접두사 목록을 기반으로 필터링됩니다. 기본적으로 접두사가 지정되지 않으면 모든 주소가 통과됩니다. 접두사를 지정하면 해당 스키마에서 일치하는 기본 주소만 통과됩니다.  
+ [!INCLUDE[netfx35_short](../../../../includes/netfx35-short-md.md)]를 사용하여 구성 파일의 AppDomain 수준에서 접두사 필터를 지정합니다. 이 작업을 수행 합니다 [ \<baseAddressPrefixFilters >](../../../../docs/framework/configure-apps/file-schema/wcf/baseaddressprefixfilters.md) 접두사 목록을 포함 하는 요소입니다. IIS에서 제공하는 들어오는 기본 주소는 선택적 접두사 목록을 기반으로 필터링됩니다. 기본적으로 접두사가 지정되지 않으면 모든 주소가 통과됩니다. 접두사를 지정하면 해당 스키마에서 일치하는 기본 주소만 통과됩니다.  
   
  다음은 접두사 필터를 사용하는 구성 코드의 예제입니다.  
   
@@ -79,8 +77,7 @@ ms.locfileid: "56261104"
   
  위의 예에서 `net.tcp://payroll.myorg.com:8000` 및 `http://shipping.myorg.com:8000` 를 통해 전달 되는 해당 스키마에 대 한 유일한 기본 주소를 합니다.  
   
- 
-  `baseAddressPrefixFilter`는 와일드카드를 지원하지 않습니다.  
+ `baseAddressPrefixFilter`는 와일드카드를 지원하지 않습니다.  
   
  IIS에서 제공하는 기본 주소에 `baseAddressPrefixFilters` 목록에 없는 다른 체계에 바인딩되는 주소가 포함될 수 있습니다. 이러한 주소는 필터링되지 않습니다.  
   
@@ -113,8 +110,7 @@ ms.locfileid: "56261104"
   
 -   엔드포인트의 수신 대기 주소는 개인 URI이며 해당 `listenURI` 속성과 다른 값으로 설정됩니다.  
   
- 
-  `via`에서 지정하는 전송 주소는 `to` 매개 변수에서 지정하는 다른 원격 주소(서비스가 있는 주소)로 가기 위해 메시지가 처음 전송되어야 하는 위치입니다. 대부분의 인터넷 시나리오에서 `via` URI는 서비스의 최종 <xref:System.ServiceModel.EndpointAddress.Uri%2A> 주소의 `to` 속성과 같습니다. 수동 라우팅을 수행해야 하는 경우에만 이 두 주소를 구별합니다.  
+ `via`에서 지정하는 전송 주소는 `to` 매개 변수에서 지정하는 다른 원격 주소(서비스가 있는 주소)로 가기 위해 메시지가 처음 전송되어야 하는 위치입니다. 대부분의 인터넷 시나리오에서 `via` URI는 서비스의 최종 <xref:System.ServiceModel.EndpointAddress.Uri%2A> 주소의 `to` 속성과 같습니다. 수동 라우팅을 수행해야 하는 경우에만 이 두 주소를 구별합니다.  
   
 ### <a name="addressing-headers"></a>주소 지정 헤더  
  하나 이상의 SOAP 헤더와 해당 기본 URI로 엔드포인트에 주소를 지정할 수 있습니다. 이 유용한 하나의 시나리오 집합이 SOAP 매개 시나리오 집합입니다. 이 시나리오 집합에서는 엔드포인트에 매개자를 대상으로 한 SOAP 헤더를 포함할 해당 엔드포인트의 클라이언트가 필요합니다.  
@@ -137,8 +133,7 @@ ms.locfileid: "56261104"
 -   구성에서 사용 하 여 사용자 지정 수신 대기 주소를 지정 합니다 `ListenUri` 서비스의 특성 [ \<끝점 >](../../configure-apps/file-schema/wcf/endpoint-element.md) 요소입니다.  
   
 ### <a name="custom-soap-address-filter"></a>사용자 지정 SOAP 주소 필터  
- 
-  <xref:System.ServiceModel.EndpointAddress.Uri%2A>는 <xref:System.ServiceModel.EndpointAddress.Headers%2A> 속성과 함께 사용되어 엔드포인트의 SOAP 주소 필터(<xref:System.ServiceModel.Dispatcher.EndpointDispatcher.AddressFilter%2A>)를 정의합니다. 기본적으로 이 필터는 들어오는 메시지에 엔드포인트의 URI와 일치하는 `To` 메시지 헤더가 있는지, 모든 필수 엔드포인트 헤더가 메시지에 있는지 확인합니다.  
+ <xref:System.ServiceModel.EndpointAddress.Uri%2A>는 <xref:System.ServiceModel.EndpointAddress.Headers%2A> 속성과 함께 사용되어 엔드포인트의 SOAP 주소 필터(<xref:System.ServiceModel.Dispatcher.EndpointDispatcher.AddressFilter%2A>)를 정의합니다. 기본적으로 이 필터는 들어오는 메시지에 엔드포인트의 URI와 일치하는 `To` 메시지 헤더가 있는지, 모든 필수 엔드포인트 헤더가 메시지에 있는지 확인합니다.  
   
  일부 시나리오에서 엔드포인트는 기본 전송에 도착하는 모든 메시지를 받고 해당 `To` 헤더가 있는 메시지는 받지 않습니다. 이 기능을 사용하도록 설정하려면 사용자가 <xref:System.ServiceModel.Dispatcher.MatchAllMessageFilter> 클래스를 사용합니다.  
   

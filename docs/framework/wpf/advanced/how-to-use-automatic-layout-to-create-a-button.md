@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Button controls [WPF], creating with automatic layout
 - automatic layout [WPF], creating buttons
 ms.assetid: 96c206d0-9e77-4784-9d2d-5045aed2021c
-ms.openlocfilehash: 185bf71d4105d10a2bb85e6a0abd9da63c7d26f0
-ms.sourcegitcommit: 462dc41a13942e467984e48f4018d1f79ae67346
+ms.openlocfilehash: 8eb1e93dd87c210812c9b7758c744a616ef2d862
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/19/2019
-ms.locfileid: "58185456"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58409785"
 ---
 # <a name="how-to-use-automatic-layout-to-create-a-button"></a>방법: 자동 레이아웃을 사용하여 단추 만들기
 이 예제는 자동 레이아웃 방식을 사용하여 지역화 가능한 애플리케이션에 단추를 만드는 방법을 설명합니다.  
@@ -25,10 +25,9 @@ ms.locfileid: "58185456"
   
 [!code-xaml[LocalizationBtn#1](~/samples/snippets/csharp/VS_Snippets_Wpf/LocalizationBtn/CS/Pane1.xaml#1)]  
   
- 다음 그림에서는 코드 샘플의 출력을 보여 줍니다.  
+ 다음 그림에서는 자동 크기 조정이 불가능 단추를 사용 하 여 코드 샘플의 출력을 보여 줍니다.
   
- ![서로 다른 언어로 텍스트는 동일한 단추](./media/globalizationbutton.png "GlobalizationButton")  
-자동 크기 조정 단추  
+ ![텍스트가 여러 언어로 표시되는 동일한 단추](./media/use-automatic-layout-overview/auto-resizable-button.png)  
   
 ## <a name="see-also"></a>참고자료
 

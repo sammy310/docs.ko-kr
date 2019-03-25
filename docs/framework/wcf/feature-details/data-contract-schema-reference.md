@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - data contracts [WCF], schema reference
 ms.assetid: 9ebb0ebe-8166-4c93-980a-7c8f1f38f7c0
-ms.openlocfilehash: 48b151bb718cb05e171909d41ce4415a0988d1b2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: decde09c2225da0af420813b477b86f4564d42f7
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54662584"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58411800"
 ---
 # <a name="data-contract-schema-reference"></a>데이터 계약 스키마 참조
 이 항목에서는 XML serialization에 대한 CLR(공용 언어 런타임) 형식을 설명하기 위해 <xref:System.Runtime.Serialization.DataContractSerializer> 에서 사용하는 XSD(XML 스키마) 하위 집합에 대해 설명합니다.  
@@ -523,7 +523,7 @@ public class Employee : Person
 |`positiveInteger`|<xref:System.Int64>.|  
   
 ## <a name="iserializable-types-mapping"></a>ISerializable 형식 매핑  
- [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 은 `ISerializable` 버전 1.0에서 지속성이나 데이터 전송을 위해 개체를 serialize하는 일반 메커니즘으로 새로 추가되었습니다. [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 을 구현하고 애플리케이션 간에 전달할 수 있는 다양한 `ISerializable` 형식이 있습니다. `DataContractSerializer` 는 기본적으로 `ISerializable` 클래스에 대한 지원을 제공합니다. `DataContractSerializer` 는 형식의 QName(정규화된 이름)에 의해서만 달라지는 효율적인 속성 컬렉션인 `ISerializable` 구현 스키마 형식을 매핑합니다. 예를 들어, 합니다 `DataContractSerializer` 매핑합니다 <xref:System.Exception> 된 다음 XSD 형식에 `http://schemas.datacontract.org/2004/07/System` 네임 스페이스입니다.  
+ [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 은 <xref:System.Runtime.Serialization.ISerializable> 버전 1.0에서 지속성이나 데이터 전송을 위해 개체를 serialize하는 일반 메커니즘으로 새로 추가되었습니다. [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 을 구현하고 애플리케이션 간에 전달할 수 있는 다양한 `ISerializable` 형식이 있습니다. <xref:System.Runtime.Serialization.DataContractSerializer> 는 기본적으로 `ISerializable` 클래스에 대한 지원을 제공합니다. `DataContractSerializer` 는 형식의 QName(정규화된 이름)에 의해서만 달라지는 효율적인 속성 컬렉션인 `ISerializable` 구현 스키마 형식을 매핑합니다. 예를 들어, 합니다 `DataContractSerializer` 매핑합니다 <xref:System.Exception> 된 다음 XSD 형식에 `http://schemas.datacontract.org/2004/07/System` 네임 스페이스입니다.  
   
 ```xml  
 <xs:complexType name="Exception">  

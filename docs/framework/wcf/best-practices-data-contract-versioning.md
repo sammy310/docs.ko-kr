@@ -7,12 +7,12 @@ helpviewer_keywords:
 - best practices [WCF], data contract versioning
 - Windows Communication Foundation, data contracts
 ms.assetid: bf0ab338-4d36-4e12-8002-8ebfdeb346cb
-ms.openlocfilehash: 297d7ea0fbbd5b066539e6f2341b29390b3d38b3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 544ecc3827a698f92ec29855f1e000fce1907386
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54738354"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58409473"
 ---
 # <a name="best-practices-data-contract-versioning"></a>모범 사례: 데이터 계약 버전 관리
 이 항목에서는 시간 경과에 따라 쉽게 발전할 수 있는 데이터 계약을 만드는 최선의 방법을 보여 줍니다. 데이터 계약에 대 한 자세한 내용은의 항목을 참조 하세요 [Using Data Contracts](../../../docs/framework/wcf/feature-details/using-data-contracts.md)합니다.  
@@ -29,7 +29,8 @@ ms.locfileid: "54738354"
 ## <a name="versioning-when-schema-validation-is-required"></a>스키마 유효성 검사가 필요한 경우의 버전 관리  
  엄격한 스키마 유효성이 모든 방향(새 버전에서 이전 버전으로 및 이전 버전에서 새 버전으로)에서 필요한 경우 데이터 계약을 변경 불가능한 것으로 간주해야 합니다. 버전 관리가 필요하면 다른 이름이나 네임스페이스로 새 데이터 계약을 만들어야 하며, 해당 데이터 형식을 사용한 서비스 계약의 버전을 적절하게 관리해야 합니다.  
   
- 예를 들어 `PoProcessing` 데이터 계약을 준수하는 매개 변수를 사용하는 `PostPurchaseOrder` 작업으로 `PurchaseOrder`이라는 구매 주문 처리 서비스 계약을 가정해 보세요. `PurchaseOrder` 계약을 변경해야 하는 경우 변경 내용을 포함하는 새 데이터 계약 `PurchaseOrder2`를 만들어야 합니다. 그런 다음 서비스 계약 수준에서 버전 관리를 처리해야 합니다. 예를 들어 `PostPurchaseOrder2` 매개 변수를 사용하는 `PurchaseOrder2` 작업을 만들거나 `PoProcessing2` 작업이 `PostPurchaseOrder` 데이터 계약을 사용하는 `PurchaseOrder2` 서비스 계약을 만들어 작업을 수행합니다.  
+ 예를 들어 `PoProcessing` 데이터 계약을 준수하는 매개 변수를 사용하는 `PostPurchaseOrder` 작업으로 `PurchaseOrder`이라는 구매 주문 처리 서비스 계약을 가정해 보세요. 
+  `PurchaseOrder` 계약을 변경해야 하는 경우 변경 내용을 포함하는 새 데이터 계약 `PurchaseOrder2`를 만들어야 합니다. 그런 다음 서비스 계약 수준에서 버전 관리를 처리해야 합니다. 예를 들어 `PostPurchaseOrder2` 매개 변수를 사용하는 `PurchaseOrder2` 작업을 만들거나 `PoProcessing2` 작업이 `PostPurchaseOrder` 데이터 계약을 사용하는 `PurchaseOrder2` 서비스 계약을 만들어 작업을 수행합니다.  
   
  다른 데이터 계약에서 참조하는 데이터 계약의 변경 내용도 서비스 모델 계층으로 확장됩니다. 예를 들어 이전 시나리오에서 `PurchaseOrder` 데이터 계약을 변경할 필요가 없다고 가정합니다. 그러나 이 데이터 계약에 `Customer` 데이터 계약의 데이터 멤버가 포함되어 있고, 여기에는 변경해야 하는 `Address` 데이터 계약의 데이터 멤버가 들어 있다고 가정합니다. 이 경우 필요한 변경 내용이 포함된 `Address2` 데이터 계약, `Customer2` 데이터 멤버가 포함된 `Address2` 데이터 계약, `PurchaseOrder2` 데이터 멤버가 포함된 `Customer2` 데이터 계약을 만들어야 합니다. 이전 경우와 같이 서비스 계약의 버전을 관리해야 합니다.  
   
@@ -37,11 +38,12 @@ ms.locfileid: "54738354"
   
  자세한 내용은 모범 사례를 참조 하세요. [서비스 버전 관리](../../../docs/framework/wcf/service-versioning.md)합니다.  
   
- 경우에 따라 응용 프로그램이 보낸 메시지에서 엄격한 스키마 준수를 보장해야 하지만 들어오는 메시지가 엄격하게 스키마를 준수한다고 확신할 수 없습니다. 이 경우 들어오는 메시지에 잘못 사용된 데이터가 포함될 위험이 있습니다. 불필요 한 값이 저장 되 고 WCF에 의해 반환 되므로 스키마에 맞지 않는 메시지가 전송 되 고 있습니다. 이 문제를 방지하려면 왕복 기능을 해제해야 합니다. 이렇게 하는 데는 두 가지 방법이 있습니다.  
+ 경우에 따라 응용 프로그램이 보낸 메시지에서 엄격한 스키마 준수를 보장해야 하지만 들어오는 메시지가 엄격하게 스키마를 준수한다고 확신할 수 없습니다. 이 경우 들어오는 메시지에 잘못 사용된 데이터가 포함될 위험이 있습니다. 불필요 한 값이 저장 되 고 WCF에 의해 반환 되므로 스키마에 맞지 않는 메시지가 전송 되 고 있습니다. 이 문제를 방지하려면 왕복 기능을 해제해야 합니다. 그런 경우 두 가지 방법이 있습니다.  
   
 -   아무 형식에도 <xref:System.Runtime.Serialization.IExtensibleDataObject> 인터페이스를 구현하지 않습니다.  
   
--   <xref:System.ServiceModel.ServiceBehaviorAttribute> 속성을 <xref:System.ServiceModel.ServiceBehaviorAttribute.IgnoreExtensionDataObject%2A>로 설정하여 `true` 특성을 서비스 계약에 적용합니다.  
+-   
+  <xref:System.ServiceModel.ServiceBehaviorAttribute> 속성을 <xref:System.ServiceModel.ServiceBehaviorAttribute.IgnoreExtensionDataObject%2A>로 설정하여 `true` 특성을 서비스 계약에 적용합니다.  
   
  왕복에 대 한 자세한 내용은 참조 하세요. [이후 버전과 호환 데이터 계약](../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md)합니다.  
   
@@ -66,11 +68,12 @@ ms.locfileid: "54738354"
   
 8.  이후 버전에서 새 데이터 멤버를 추가할 수 있습니다. 항상 다음 규칙을 따라야 합니다.  
   
-    1.  <xref:System.Runtime.Serialization.DataMemberAttribute.IsRequired%2A> 속성은 항상 기본값 `false`로 유지되어야 합니다.  
+    1.  
+  <xref:System.Runtime.Serialization.DataMemberAttribute.IsRequired%2A> 속성은 항상 기본값 `false`로 유지되어야 합니다.  
   
     2.  멤버에 대해 기본값 `null` 또는 0을 허용할 수 없는 경우 <xref:System.Runtime.Serialization.OnDeserializingAttribute>로 콜백 메서드를 제공하여 들어오는 스트림에 멤버가 없는 경우 적절한 기본값을 제공해야 합니다. 콜백에 대 한 자세한 내용은 참조 하세요. [버전 독립적 Serialization 콜백](../../../docs/framework/wcf/feature-details/version-tolerant-serialization-callbacks.md)합니다.  
   
-    3.  `Order`의 `DataMemberAttribute` 속성을 사용하여 새로 추가한 모든 데이터 멤버가 기존 데이터 멤버 뒤에 나타나도록 해야 합니다. 이 작업을 수행 하는 권장된 방법은 아래와 같습니다. 데이터 계약의 첫 번째 버전의 데이터 멤버 없음 있어야 해당 `Order` 속성 집합입니다. 데이터 계약의 버전 2에서 추가된 모든 데이터 멤버의 `Order` 속성을 2로 설정해야 하며 데이터 계약의 버전 3에서 추가된 모든 데이터 멤버의 `Order` 속성을 3으로 설정해야 합니다. 둘 이상의 데이터 멤버를 동일한 `Order` 번호로 설정해도 됩니다.  
+    3.  <xref:System.Runtime.Serialization.DataMemberAttribute.Order?displayProperty=nameWithType> 새로 추가 된 데이터 멤버의 모든 기존 데이터 멤버 이후에 표시 되도록 속성을 사용 해야 합니다. 이 작업을 수행 하는 권장된 방법은 아래와 같습니다. 데이터 계약의 첫 번째 버전의 데이터 멤버 없음 있어야 해당 `Order` 속성 집합입니다. 데이터 계약의 버전 2에서 추가된 모든 데이터 멤버의 `Order` 속성을 2로 설정해야 하며 데이터 계약의 버전 3에서 추가된 모든 데이터 멤버의 `Order` 속성을 3으로 설정해야 합니다. 둘 이상의 데이터 멤버를 동일한 `Order` 번호로 설정해도 됩니다.  
   
 9. 이전 버전에서 <xref:System.Runtime.Serialization.DataMemberAttribute.IsRequired%2A> 속성이 기본값 `false`로 설정된 경우에도 이후 버전에서 데이터 멤버를 제거하지 마세요.  
   

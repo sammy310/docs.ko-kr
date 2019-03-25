@@ -2,12 +2,12 @@
 title: 연결 형식
 ms.date: 03/30/2017
 ms.assetid: 26c409f6-06e8-4441-ac78-1b1076a3c005
-ms.openlocfilehash: 65fb5c8e37c8edf7f36cc08258874eeaf234c402
-ms.sourcegitcommit: 462dc41a13942e467984e48f4018d1f79ae67346
+ms.openlocfilehash: 895d7fdc464741723322717c3ace027dc49eed9c
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/19/2019
-ms.locfileid: "58185599"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58411449"
 ---
 # <a name="association-type"></a>연결 형식
 *연결 형식* (연결이 라고도 함)는 엔터티 데이터 모델 (EDM)에서 관계를 설명 하기 위한 기본적인 빌딩 블록입니다. 개념적 모델에서 연결은 두 간의 관계를 나타냅니다 [엔터티 형식](../../../../docs/framework/data/adonet/entity-type.md) (같은 `Customer` 고 `Order`). 응용 프로그램에서 연결 인스턴스는 특정 연결(예: `Customer` 인스턴스와 `Order` 인스턴스 간의 연결)을 나타냅니다. 연결 인스턴스는 논리적으로 그룹화 되는 [연결 집합](../../../../docs/framework/data/adonet/association-set.md)합니다.  
@@ -29,7 +29,7 @@ ms.locfileid: "58185599"
  다음 다이어그램에서는 두 연결 `PublishedBy` 및 `WrittenBy`의 개념적 모델을 보여 줍니다. 
   `PublishedBy` 연결의 연결 End는 `Book` 및 `Publisher` 엔터티 형식입니다. 다중성 합니다 `Publisher` 끝이 한 개 (1)이 고는 `Book` 끝이 많은 (\*)는 발행자가 많은 책을 책은 하나의 게시자에서 게시를 나타내는입니다.  
   
- ![예제 모델이](../../../../docs/framework/data/adonet/media/examplemodel.gif "ExampleModel")  
+ ![세 가지 엔터티 형식을 사용 하 여 예제 모델](./media/association-type/example-model-three-entity-types.gif)  
   
  합니다 [ADO.NET Entity Framework](../../../../docs/framework/data/adonet/ef/index.md) 개념 스키마 정의 언어를 호출 하는 도메인 특정 언어 (DSL)를 사용 하 여 ([CSDL](../../../../docs/framework/data/adonet/ef/language-reference/csdl-specification.md)) 개념적 모델을 정의 합니다. 다음 CSDL에서는 위의 다이어그램에 표시된 `PublishedBy` 연결을 정의합니다.  
   

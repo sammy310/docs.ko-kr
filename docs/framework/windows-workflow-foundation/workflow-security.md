@@ -30,8 +30,7 @@ Windows WF (Workflow Foundation)는 Microsoft SQL Server 및 Windows Communicati
 
 -   많은 수의 자식 활동, 위치, 책갈피, 호스트 확장 또는 범위를 사용하거나 매우 큰 페이로드가 있는 책갈피를 사용할 때는 메모리가 부족하거나 유지 중에 과도한 양의 데이터베이스 공간이 할당될 수 있습니다. 개체 수준 및 데이터베이스 수준 보안을 사용하여 이 문제를 완화할 수 있습니다.
 
--   
-  <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore>를 사용할 때는 인스턴스 저장소를 보호해야 합니다. 자세한 내용은 [SQL Server에 대 한 유용한 정보](https://go.microsoft.com/fwlink/?LinkId=164972)합니다.
+-   <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore>를 사용할 때는 인스턴스 저장소를 보호해야 합니다. 자세한 내용은 [SQL Server에 대 한 유용한 정보](https://go.microsoft.com/fwlink/?LinkId=164972)합니다.
 
 -   인스턴스 저장소의 중요 데이터를 암호화해야 합니다. 자세한 내용은 [SQL 보안 암호화](https://go.microsoft.com/fwlink/?LinkId=164976)합니다.
 
@@ -41,8 +40,7 @@ Windows WF (Workflow Foundation)는 Microsoft SQL Server 및 Windows Communicati
 
 -   워크플로에서 사용 되는 Windows Communication Foundation (WCF) 끝점을 보호 되어야 합니다. 자세한 내용은 [WCF 보안 개요](https://go.microsoft.com/fwlink/?LinkID=164975)합니다.
 
--   
-  <xref:System.ServiceModel.ServiceAuthorizationManager>를 사용하여 호스트 수준 권한 부여를 구현할 수 있습니다. 참조 [방법: 서비스는 사용자 지정 권한 부여 관리자 만들기](https://go.microsoft.com/fwlink/?LinkId=192228) 세부 정보에 대 한 합니다.
+-   <xref:System.ServiceModel.ServiceAuthorizationManager>를 사용하여 호스트 수준 권한 부여를 구현할 수 있습니다. 참조 [방법: 서비스는 사용자 지정 권한 부여 관리자 만들기](https://go.microsoft.com/fwlink/?LinkId=192228) 세부 정보에 대 한 합니다.
 
 -   들어오는 메시지에 대한 ServiceSecurityContext는 OperationContext에 액세스하여 워크플로 내에서도 사용할 수 있습니다.
 

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - loading non-resource files
 - application management [WPF]
 ms.assetid: 43adb517-21a7-4df3-98e8-09e9cdf764c4
-ms.openlocfilehash: 9e7ded2869e3553eab302e150d80608b8dd7091f
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: e84f586e621aa54d7e8a8f62e605ec3016cfb757
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57377319"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58411280"
 ---
 # <a name="pack-uris-in-wpf"></a>WPF의 Pack URI
 Windows Presentation Foundation (WPF), [!INCLUDE[TLA#tla_uri#plural](../../../../includes/tlasharptla-urisharpplural-md.md)] 식별 하 고 다음을 비롯 한 다양 한 방식 파일을 로드 하는 데 사용 됩니다.  
@@ -44,7 +44,7 @@ Windows Presentation Foundation (WPF), [!INCLUDE[TLA#tla_uri#plural](../../../..
 ## <a name="the-pack-uri-scheme"></a>Pack URI 체계  
  Pack [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] 체계를 사용 하 여 합니다 [Open Packaging Conventions](https://go.microsoft.com/fwlink/?LinkID=71255) 구성 및 콘텐츠 식별에 대 한 모델을 설명 하는 (OPC) 사양입니다. 이 모델의 주요 요소는 패키지와 파트 위치를 *패키지* 인지 하는 논리 컨테이너 하나에 대 한 더 많은 논리 *파트*합니다. 다음 그림에서는 이 개념을 보여 줍니다.  
   
- ![패키지 및 파트 다이어그램](./media/wpfpackurischemefigure1.PNG "WPFPackURISchemeFigure1")  
+ ![패키지 및 파트 다이어그램](./media/pack-uris-in-wpf/wpf-package-parts-diagram.png)  
   
  OPC 사양 부분을 식별 하려면 RFC 2396의 확장성을 이용 합니다 (리소스 URI (Uniform Identifier): 팩을 정의 하려면 제네릭 구문) [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] 구성표입니다.  
   
@@ -56,7 +56,7 @@ Windows Presentation Foundation (WPF), [!INCLUDE[TLA#tla_uri#plural](../../../..
   
  다음 그림에서는 이 개념을 보여 줍니다.  
   
- ![패키지, 인증 기관 및 경로의 관계](./media/wpfpackurischemefigure2.PNG "WPFPackURISchemeFigure2")  
+ ![패키지, 권한 및 경로의 관계](./media/pack-uris-in-wpf/wpf-relationship-diagram.png)  
   
  패키지와 파트는 애플리케이션 및 파일과 유사합니다. 즉, 애플리케이션(패키지)은 다음을 비롯한 하나 이상의 파일(파트)을 포함할 수 있습니다.  
   
@@ -72,7 +72,7 @@ Windows Presentation Foundation (WPF), [!INCLUDE[TLA#tla_uri#plural](../../../..
   
  이러한 종류의 파일에 액세스 하려면 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 두 기관을 지원: 응용 프로그램: / / / 및 siteoforigin:///: / / /입니다. application:/// 인증 기관은 리소스 및 콘텐츠 파일을 비롯하여 컴파일 시 알려진 애플리케이션 데이터 파일을 식별합니다. siteoforigin:/// 인증 기관은 원본 사이트 파일을 식별합니다. 다음 그림에서는 각 인증 기관의 범위를 보여 줍니다.  
   
- ![Pack URI 다이어그램](./media/wpfpackurischemefigure4.png "WPFPackURISchemeFigure4")  
+ ![Pack URI 다이어그램](./media/pack-uris-in-wpf/wpf-pack-uri-scheme.png)  
   
 > [!NOTE]
 >  팩의 인증 기관 구성 요소가 [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] 포함 된 [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] 패키지를 가리키는 RFC 2396을 따라야 합니다. 또한 “/” 문자를 “,” 문자로 바꾸고 “%” 및 “?” 같은 예약 문자는 이스케이프해야 합니다. 자세한 내용은 OPC를 참조하세요.  

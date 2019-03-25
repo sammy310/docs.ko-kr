@@ -30,8 +30,7 @@ ms.locfileid: "56745239"
 |이름|설명|  
 |----------|-----------------|  
 |<xref:System.Windows.Forms.StatusStrip.CanOverflow%2A>|<xref:System.Windows.Forms.StatusStrip>에서 오버플로 기능을 지원하는지를 나타내는 값을 가져오거나 설정합니다.|  
-|<xref:System.Windows.Forms.StatusStrip.Stretch%2A>|
-  <xref:System.Windows.Forms.StatusStrip>이 <xref:System.Windows.Forms.ToolStripContainer>의 끝에서 끝까지 확장되는지를 나타내는 값을 가져오거나 설정합니다.|  
+|<xref:System.Windows.Forms.StatusStrip.Stretch%2A>|<xref:System.Windows.Forms.StatusStrip>이 <xref:System.Windows.Forms.ToolStripContainer>의 끝에서 끝까지 확장되는지를 나타내는 값을 가져오거나 설정합니다.|  
   
 ### <a name="important-statusstrip-companion-classes"></a>중요한 StatusStrip 도우미 클래스  
   

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - images [Windows Forms], scaling
 - images [Windows Forms], controlling quality
 ms.assetid: fde9bccf-8aa5-4b0d-ba4b-788740627b02
-ms.openlocfilehash: 83f1e569f1fb1ae49143f4ed11837759df29fe79
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 93430f521904d9d38ba98f4055480583fd650114
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57721959"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58410370"
 ---
 # <a name="how-to-use-interpolation-mode-to-control-image-quality-during-scaling"></a>방법: 배율 조정 시 보간 모드를 이미지 품질 관리 사용
 보간 모드를 <xref:System.Drawing.Graphics> 방식에 영향을 미칩니다 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 확장 (확장 및 축소) 이미지입니다. <xref:System.Drawing.Drawing2D.InterpolationMode> 열거형은 다음 목록에 나와 있는 여러 보간 모드를 정의 합니다.  
@@ -38,7 +38,7 @@ ms.locfileid: "57721959"
   
  다음 그림에서는 원본 이미지와 3 개의 더 작은 이미지를 보여 줍니다.  
   
- ![다양 한 보간 설정 이미지](./media/csgrapes1.png "csgrapes1")  
+ ![다양 한 보간 설정을 사용 하 여 이미지를 보여 주는 스크린샷.](./media/how-to-use-interpolation-mode-to-control-image-quality-during-scaling/varied-interpolation-settings.png)  
   
  [!code-csharp[System.Drawing.WorkingWithImages#81](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.WorkingWithImages/CS/Class1.cs#81)]
  [!code-vb[System.Drawing.WorkingWithImages#81](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.WorkingWithImages/VB/Class1.vb#81)]  

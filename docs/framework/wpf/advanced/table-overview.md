@@ -9,12 +9,12 @@ helpviewer_keywords:
 - documents [WPF], tables
 - tables [WPF]
 ms.assetid: 5e1105f4-8fc4-473a-ba55-88c8e71386e6
-ms.openlocfilehash: e202fe839de547145c36a5664b62c350f40bfce6
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 4abb6368946f9dac5fdefd6ca44f3adeed55f78f
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57379014"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58410821"
 ---
 # <a name="table-overview"></a>테이블 개요
 <xref:System.Windows.Documents.Table> 유동 문서 콘텐츠의 그리드 기반 프레젠테이션을 지 원하는 블록 수준 요소가입니다. 이 요소의 유연성 덕분에 이 요소는 매우 유용하지만 이해하고 제대로 사용하기가 더 복잡합니다.  
@@ -72,7 +72,7 @@ ms.locfileid: "57379014"
   
  다음 그림은 이 예제에서 렌더링하는 방법을 보여줍니다.  
   
- ![스크린 샷: 기본 테이블 렌더링](./media/basictablerrender.png "BasicTablerRender")  
+ ![기본 테이블을 렌더링 하는 방법을 보여 주는 스크린샷.](./media/table-overview/basic-table-render-example.png)  
   
 <a name="table_containment"></a>   
 ### <a name="table-containment"></a>테이블 포함  
