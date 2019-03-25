@@ -17,19 +17,19 @@ ms.locfileid: "54727406"
 
 앱 또는 라이브러리에서 프레임워크를 대상으로 지정하면 앱 또는 라이브러리에서 사용할 수 있도록 하려는 API 집합을 지정하는 것입니다. TFM(대상 프레임워크 모니터)을 사용하여 프로젝트 파일에서 대상 프레임워크를 지정합니다.
 
-앱 또는 라이브러리는 [.NET Standard](~/docs/standard/net-standard.md) 버전을 대상으로 지정할 수 있습니다. .NET Standard 버전은 모든 .NET 구현에서 표준화된 API 집합을 나타냅니다. 예를 들어 라이브러리는 .NET Standard 1.6을 대상으로 하고 동일한 코드베이스를 사용하는 .NET Core 및 .NET Framework에서 작동하는 API에 액세스할 수 있습니다.
+앱 또는 라이브러리는 [.NET Standard](~/docs/standard/net-standard.md) 버전을 대상으로 지정할 수 있습니다. .NET Standard 버전은 모든 .NET 구현체에서 사용할 수 있는 표준화된 API 집합을 나타냅니다. 예를 들어 .NET Standard 1.6을 대상으로 하는 라이브러리는 동일한 코드 기반의 .NET Core 및 .NET Framework에서 동작하는 API에 액세스할 수 있습니다.
 
-앱 또는 라이브러리는 특정 .NET 구현을 대상으로 지정하여 구현 관련 API에 액세스할 수도 있습니다. 예를 들어 Xamarin.iOS(예: `Xamarin.iOS10`)를 대상으로 하는 앱은 Xamarin에서 제공하는 iOS 10용 iOS API 래퍼에 액세스하고, UWP(유니버설 Windows 플랫폼, `uap10.0`)를 대상으로 하는 앱은 Windows 10을 실행하는 디바이스에 대해 컴파일하는 API에 액세스할 수 있습니다.
+앱 또는 라이브러리는 특정 .NET 구현체을 대상으로 지정하여 구현체 관련 API에 액세스할 수도 있습니다. 예를 들어 Xamarin.iOS(예: `Xamarin.iOS10`)를 대상으로 하는 앱은 Xamarin에서 제공하는 iOS 10용 iOS API 래퍼에 액세스하고, UWP(유니버설 Windows 플랫폼, `uap10.0`)를 대상으로 하는 앱은 Windows 10이 실행되는 디바이스용으로 컴파일하는 API에 액세스할 수 있습니다.
 
-일부 대상 프레임워크(예: .NET Framework)에서 API는 프레임워크가 시스템에 설치하는 어셈블리에 의해 정의되고 애플리케이션 프레임워크 API(예: ASP.NET)를 포함할 수 있습니다.
+일부 대상 프레임워크(예: .NET Framework)의 API는 프레임워크에서 시스템에 설치하는 어셈블리에 의해 정의되고 애플리케이션 프레임워크 API(예: ASP.NET)를 포함할 수 있습니다.
 
-패키지 기반 대상 프레임워크(예: .NET Standard 및 .NET Core)에서 API는 앱이나 라이브러리에 포함된 패키지에 의해 정의됩니다. *메타패키지*는 고유한 콘텐츠는 없지만 종속성(다른 패키지) 목록인 NuGet 패키지입니다. NuGet 패키지 기반 대상 프레임워크는 함께 모여 프레임워크를 구성하는 모든 패키지를 참조하는 메타패키지를 암시적으로 지정합니다.
+패키지 기반 대상 프레임워크(예: .NET Standard 및 .NET Core)에서 API는 앱이나 라이브러리에 포함된 패키지에 의해 정의됩니다. *메타패키지*는 고유한 내용은 없고 종속성(다른 패키지) 목록만 있는 NuGet 패키지입니다. NuGet 패키지 기반 대상 프레임워크는 프레임워크를 구성하는 모든 패키지를 참조하는 메타패키지를 암시적으로 지정합니다.
 
 ## <a name="latest-target-framework-versions"></a>최신 대상 프레임워크 버전
 
-다음 표에서는 가장 일반적인 대상 프레임워크, 프레임워크가 참조되는 방법 및 프레임워크에서 구현하는 [.NET Standard](~/docs/standard/net-standard.md)의 버전을 정의합니다. 이러한 대상 프레임워크 버전은 안정적인 최신 버전입니다. 시험판 버전은 표시되지 않습니다. TFM(대상 프레임워크 모니커)은 .NET 앱 또는 라이브러리의 대상 프레임워크를 지정하기 위해 표준화된 토큰 형식입니다.
+다음 표에서는 가장 일반적인 대상 프레임워크와 프레임워크에서 참조 및 구현한 [.NET Standard](~/docs/standard/net-standard.md)의 버전이 무엇인지 정의합니다. 표에 나오는 대상 프레임워크 버전은 최신 안정 버전입니다. 시험판 버전은 표시되지 않습니다. TFM(대상 프레임워크 모니커)은 .NET 앱이나 라이브러리의 대상 프레임워크를 지정하기 위한 표준화된 토큰 형식입니다.
 
-| 대상 프레임워크      | 최신 버전 <br/> 안정적인 버전 | TFM(대상 프레임워크 모니커) | 구현됨 <br/> .NET 표준 버전 |
+| 대상 프레임워크      | 최신 <br/> 안정적인 버전 | TFM(대상 프레임워크 모니커) | 구현된 <br/> .NET 표준 버전 |
 | :-------------------: | :-------------------------: | :----------------------------: | :-------------------------------------: |
 | .NET Standard         | 2.0                         | netstandard2.0                 | N/A                                     |
 | .NET Core             | 2.2                         | netcoreapp2.2                  | 2.0                                     |
@@ -37,7 +37,7 @@ ms.locfileid: "54727406"
 
 ## <a name="supported-target-framework-versions"></a>지원되는 대상 프레임워크 버전
 
-대상 프레임워크는 일반적으로 TFM에서 참조됩니다. 다음 표에서는 .NET Core SDK 및 NuGet 클라이언트에서 지원되는 대상 프레임워크를 보여 줍니다. 일치하는 항목은 대괄호 내에 표시됩니다. 예를 들어 `win81`은 `netcore451`과 일치하는 TFM입니다.
+대상 프레임워크는 일반적으로 TFM에서 참조됩니다. 다음 표에서는 .NET Core SDK 및 NuGet 클라이언트에서 지원되는 대상 프레임워크를 보여 줍니다. 동일한 항목은 대괄호 내에 표시됩니다. 예를 들어 `win81`은 `netcore451`과 동일한 TFM입니다.
 
 | 대상 프레임워크           | TFM |
 | -------------------------- | --- |
@@ -52,7 +52,7 @@ ms.locfileid: "54727406"
 
 ## <a name="how-to-specify-target-frameworks"></a>대상 프레임워크를 지정하는 방법
 
-대상 프레임워크는 프로젝트 파일에서 지정합니다. 단일 대상 프레임워크를 지정하는 경우 **TargetFramework** 요소를 사용합니다. 다음 콘솔 앱 프로젝트 파일에서는 .NET Core 2.2을 대상으로 하는 방법을 보여줍니다.
+대상 프레임워크는 프로젝트 파일에서 지정합니다. 단일 대상 프레임워크를 지정하는 경우 **TargetFramework** 요소를 사용합니다. 다음 콘솔 앱 프로젝트 파일에서는 .NET Core 2.2를 대상 프레임워크로 지정하는 방법을 보여줍니다.
 
 ```xml
 <Project Sdk="Microsoft.NET.Sdk">
@@ -65,9 +65,9 @@ ms.locfileid: "54727406"
 </Project>
 ```
 
-여러 대상 프레임워크를 지정하는 경우 각 대상 프레임워크에 대한 어셈블리를 조건부로 참조할 수 있습니다. 코드에서는 *if-then-else* 논리에 전처리기 기호를 사용하여 해당 어셈블리를 조건부로 컴파일할 수 있습니다.
+여러 대상 프레임워크를 지정하는 경우 각 대상 프레임워크에 대한 어셈블리를 조건에 따라 참조할 수 있습니다. 코드에서는 *if-then-else* 로직에 전처리기 기호를 사용하여 해당 어셈블리를 조건에 따라 컴파일할 수 있습니다.
 
-다음 라이브러리 프로젝트 파일은 .NET Standard(`netstandard1.4`)의 API 및 .NET Framework(`net40` 및 `net45`)의 API를 대상으로 합니다. 여러 대상 프레임워크에는 복수형 **TargetFrameworks** 요소를 사용합니다. 라이브러리가 두 개의 .NET Framework TFM에 대해 컴파일되면 `Condition` 특성에 구현 관련 패키지가 포함됩니다.
+다음 라이브러리 프로젝트 파일은 .NET Standard(`netstandard1.4`)의 API 및 .NET Framework(`net40` 및 `net45`)의 API를 대상으로 합니다. 여러 대상 프레임워크에는 복수형 **TargetFrameworks** 요소를 사용합니다. 라이브러리를 두 개의 .NET Framework TFM에 대해 컴파일하려면 `Condition` 특성에 구현체 관련 패키지를 포함합니다.
 
 ```xml
 <Project Sdk="Microsoft.NET.Sdk">
@@ -90,7 +90,7 @@ ms.locfileid: "54727406"
 </Project>
 ```
 
-라이브러리 또는 앱 내에서 각 대상 프레임워크에 대해 컴파일할 조건부 코드를 작성합니다.
+라이브러리나 앱에서, 조건에 따라 각 대상 프레임워크에 대해 컴파일하는 코드를 작성합니다.
 
 ```csharp
 public class MyClass
@@ -132,7 +132,7 @@ public class MyClass
 ## <a name="see-also"></a>참고 항목
 
 - [패키지, 메타패키지 및 프레임워크](../core/packages.md)
-- [플랫폼 간 도구로 라이브러리 개발](../core/tutorials/libraries.md)
+- [여러 플랫폼에서 사용할 수 있는 도구로 라이브러리 개발](../core/tutorials/libraries.md)
 - [.NET Standard](net-standard.md)
 - [.NET Core 버전 관리](../core/versions/index.md)
 - [dotnet/standard GitHub repository](https://github.com/dotnet/standard)(dotnet/표준 GitHub 리포지토리)
