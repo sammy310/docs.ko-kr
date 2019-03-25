@@ -3,12 +3,12 @@ title: 콘솔 애플리케이션
 description: 이 자습서에서는 .NET Core 및 C# 언어의 다양한 기능에 대해 설명합니다.
 ms.date: 03/06/2017
 ms.assetid: 883cd93d-50ce-4144-b7c9-2df28d9c11a0
-ms.openlocfilehash: dfd8124eb79690286e5cd876de57394a4d741328
-ms.sourcegitcommit: deb9225a55485a5a6e6c7914deb30ccfceb69d3f
+ms.openlocfilehash: 3ac4312ba5d6088826fdf151609f6693a265e5a3
+ms.sourcegitcommit: 344d82456f27d09a210671214a14cfd7daf1f97c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/05/2019
-ms.locfileid: "54058401"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58348832"
 ---
 # <a name="console-application"></a>콘솔 애플리케이션
 
@@ -230,17 +230,13 @@ namespace TeleprompterConsole
 {
     internal class TelePrompterConfig
     {
-        private object lockHandle = new object();
         public int DelayInMilliseconds { get; private set; } = 200;
 
         public void UpdateDelay(int increment) // negative to speed up
         {
             var newDelay = Min(DelayInMilliseconds + increment, 1000);
             newDelay = Max(newDelay, 20);
-            lock (lockHandle)
-            {
-                DelayInMilliseconds = newDelay;
-            }
+            DelayInMilliseconds = newDelay;
         }
 
         public bool Done { get; private set; }
@@ -258,8 +254,6 @@ namespace TeleprompterConsole
 ```csharp
 using static System.Math;
 ```
-
-[`lock`](../language-reference/keywords/lock-statement.md) 문에 새로 추가된 다른 언어 기능이 있습니다. 이 문은 언제든지 단일 스레드만 해당 코드에 포함될 수 있도록 합니다. 한 스레드가 잠긴 섹션에 있으면 다른 스레드는 첫 번째 스레드가 해당 섹션을 종료할 때까지 기다려야 합니다. `lock` 문은 잠금 섹션을 보호하는 개체를 사용합니다. 이 클래스를 클래스의 전용 개체를 잠그기 위해 표준 관용구를 사용합니다.
 
 다음에는 새 `config` 개체를 사용하도록 `ShowTeleprompter` 및 `GetInput` 메서드를 업데이트해야 합니다. 두 작업을 모두 시작한 다음 첫 번째 작업이 완료될 때 종료되는 하나의 최종 `Task` 반환 `async` 메서드를 작성합니다.
 

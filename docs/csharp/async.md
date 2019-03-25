@@ -5,12 +5,12 @@ author: cartermp
 ms.date: 06/20/2016
 ms.assetid: b878c34c-a78f-419e-a594-a2b44fa521a4
 ms.custom: seodec18
-ms.openlocfilehash: a36f4a6f01c4e11429fda3a3022b4092e98db6cf
-ms.sourcegitcommit: 79066169e93d9d65203028b21983574ad9dcf6b4
+ms.openlocfilehash: 90fd7332242ed58d7716e248248e2c06a6ba023f
+ms.sourcegitcommit: 462dc41a13942e467984e48f4018d1f79ae67346
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57212211"
+ms.lasthandoff: 03/19/2019
+ms.locfileid: "58185742"
 ---
 # <a name="asynchronous-programming"></a>비동기 프로그래밍
 
@@ -254,12 +254,12 @@ LINQ의 람다 식은 연기된 실행을 사용합니다. 즉, 예상치 않은
 
 전역 개체의 상태나 특정 메서드의 실행에 의존하지 마세요. 대신, 메서드의 반환 값에만 의존합니다. 이유
 
-  * 코드를 더 쉽게 추론할 수 있습니다.
-  * 코드를 더 쉽게 테스트할 수 있습니다.
-  * 비동기 및 동기 코드를 훨씬 더 쉽게 혼합할 수 있습니다.
-  * 일반적으로 함께 경합 상태를 피할 수 있습니다.
-  * 반환 값에 의존하면 비동기 코드를 간단히 조정할 수 있습니다.
-  * (이점) 이 방법은 실제로 종속성 주입에도 잘 작동합니다.
+* 코드를 더 쉽게 추론할 수 있습니다.
+* 코드를 더 쉽게 테스트할 수 있습니다.
+* 비동기 및 동기 코드를 훨씬 더 쉽게 혼합할 수 있습니다.
+* 일반적으로 함께 경합 상태를 피할 수 있습니다.
+* 반환 값에 의존하면 비동기 코드를 간단히 조정할 수 있습니다.
+* (이점) 이 방법은 실제로 종속성 주입에도 잘 작동합니다.
 
 권장되는 목적은 코드에서 완전하거나 거의 완전한 [참조 투명성](https://en.wikipedia.org/wiki/Referential_transparency_%28computer_science%29)을 달성하는 것입니다. 이렇게 하면 확실히 예측 가능하고, 테스트 가능하고, 유지 관리 가능한 코드베이스가 생성됩니다.
 

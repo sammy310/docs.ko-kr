@@ -4,12 +4,12 @@ description: .NET에서 형식을 네이티브 표현으로 마샬링하는 방�
 author: jkoritzinsky
 ms.author: jekoritz
 ms.date: 01/18/2019
-ms.openlocfilehash: 2c62581d34e77f208b7764f955dfa37613615ee4
-ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
+ms.openlocfilehash: b4846f2e6cd945a25ec6a747c9038d48fe115559
+ms.sourcegitcommit: 462dc41a13942e467984e48f4018d1f79ae67346
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/19/2019
-ms.locfileid: "56411428"
+ms.lasthandoff: 03/19/2019
+ms.locfileid: "58185417"
 ---
 # <a name="type-marshalling"></a>형식 마샬링
 
@@ -38,8 +38,8 @@ static extern int MethodA([MarshalAs(UnmanagedType.LPStr)] string parameter);
 | `uint`    | `uint32_t`              |
 | `long`    | `int64_t`               |
 | `ulong`   | `uint64_t`              |
-| `char`    | P/Invoke 또는 구조체의 `CharSet`에 따라 `char` 또는 `char16_t`입니다. [문자 집합 문서](/.charset.md)를 참조하세요. |
-| `string`  | P/Invoke 또는 구조체의 `CharSet`에 따라 `char*` 또는 `char16_t*`입니다. [문자 집합 문서](/.charset.md)를 참조하세요. |
+| `char`    | P/Invoke 또는 구조체의 `CharSet`에 따라 `char` 또는 `char16_t`입니다. [문자 집합 문서](charset.md)를 참조하세요. |
+| `string`  | P/Invoke 또는 구조체의 `CharSet`에 따라 `char*` 또는 `char16_t*`입니다. [문자 집합 문서](charset.md)를 참조하세요. |
 | `System.IntPtr` | `intptr_t`        |
 | `System.UIntPtr` | `uintptr_t`      |
 | .NET 포인터 형식(예: `void*`)  | `void*` |
@@ -73,7 +73,7 @@ static extern int MethodA([MarshalAs(UnmanagedType.LPStr)] string parameter);
 
 | .NET 형식 | 네이티브 형식(매개 변수만 해당) |
 |-----------|------------------------------|
-| `System.Text.StringBuilder` | P/Invoke의 `CharSet`에 따라 `char*` 또는 `char16_t*`입니다.  [문자 집합 문서](/.charset.md)를 참조하세요. |
+| `System.Text.StringBuilder` | P/Invoke의 `CharSet`에 따라 `char*` 또는 `char16_t*`입니다.  [문자 집합 문서](charset.md)를 참조하세요. |
 | `System.ArgIterator` | `va_list`(Windows x86/x64/arm64만 해당) |
 | `System.Runtime.InteropServices.ArrayWithOffset` | `void*` |
 | `System.Runtime.InteropServices.HandleRef` | `void*` |

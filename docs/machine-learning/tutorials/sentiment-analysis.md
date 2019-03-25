@@ -4,12 +4,12 @@ description: 감정 예측을 통해 적절한 작업을 수행하는 방법을 
 ms.date: 03/07/2019
 ms.topic: tutorial
 ms.custom: mvc, seodec18
-ms.openlocfilehash: b0d02babd126a62ef9a87b251f525a08376069aa
-ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
+ms.openlocfilehash: a88ed38b76a230095f35304aa2b52af0a7c9c22d
+ms.sourcegitcommit: 77854e8704b9689b73103d691db34d71c2bf1dad
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "57845793"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58307943"
 ---
 # <a name="tutorial-use-mlnet-in-a-sentiment-analysis-binary-classification-scenario"></a>자습서: 감정 분석 이진 분류 시나리오에서 ML.NET 사용
 
@@ -173,7 +173,7 @@ ML .NET를 사용하여 모델을 작성하는 경우 먼저 <xref:Microsoft.ML.
 다음 코드를 사용하여 `Main` 메서드 바로 뒤에 `LoadData` 메서드를 만듭니다.
 
 ```csharp
-public static (IDataView trainSet, IDataView testSet) LoadData(MLContext mlContext)
+public static TrainCatalogBase.TrainTestData LoadData(MLContext mlContext)
 {
 
 }
@@ -321,8 +321,6 @@ private static void SaveModelAsFile(MLContext mlContext, ITransformer model)
 다음으로, 다른 애플리케이션에서 다시 사용하고 이용할 수 있도록 모델을 저장하는 메서드를 만듭니다. `ITransformer`에는 `_modelPath` 전역 필드를 사용하는 <xref:Microsoft.ML.Data.TransformerChain%601.SaveTo(Microsoft.ML.IHostEnvironment,System.IO.Stream)> 메서드와 <xref:System.IO.Stream>이 있습니다. 이 파일을 zip 파일로 저장하기 위해 `SaveTo` 메서드를 호출하기 직전에 `FileStream`을 만들겠습니다. `SaveModelAsFile` 메서드에 아래 코드를 다음 줄로 추가합니다.
 
 [!code-csharp[SaveToMethod](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#SaveModel "Add the SaveTo Method")]
-
-## <a name="deploy-and-predict-with-a-loaded-model"></a>로드된 모델을 통해 배포 및 예측
 
 다음 코드를 사용해서 `_modelPath`가 포함된 콘솔 메시지를 작성하여 파일이 작성된 위치를 표시할 수도 있습니다.
 
