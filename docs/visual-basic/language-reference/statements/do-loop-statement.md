@@ -55,10 +55,8 @@ Loop { While | Until } condition
 |용어|정의|  
 |---|---|  
 |`Do`|필수 요소. 정의의 시작을 `Do` 루프입니다.|  
-|`While`|
-  `Until`를 사용하는 경우를 제외하고는 필수입니다. 될 때까지 루프 반복 `condition` 는 `False`합니다.|  
-|`Until`|
-  `While`를 사용하는 경우를 제외하고는 필수입니다. 될 때까지 루프 반복 `condition` 는 `True`합니다.|  
+|`While`|`Until`를 사용하는 경우를 제외하고는 필수입니다. 될 때까지 루프 반복 `condition` 는 `False`합니다.|  
+|`Until`|`While`를 사용하는 경우를 제외하고는 필수입니다. 될 때까지 루프 반복 `condition` 는 `True`합니다.|  
 |`condition`|선택 사항입니다. `Boolean` 식입니다. 하는 경우 `condition` 됩니다 `Nothing`, Visual Basic로 처리 `False`합니다.|  
 |`statements`|선택 사항입니다. While 또는 until 반복 되는 하나 이상의 문을 `condition` 는 `True`합니다.|  
 |`Continue Do`|선택 사항입니다. 다음 반복으로 제어를 전송 합니다 `Do` 루프입니다.|  

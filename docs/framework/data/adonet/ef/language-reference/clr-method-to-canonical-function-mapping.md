@@ -41,8 +41,7 @@ LINQ 시나리오의 경우, Entity Framework에 대한 쿼리에서는 정식 �
 |System.String 메서드(인스턴스)|정식 함수|참고|
 |---------------------------------------|------------------------|-----------|
 |Boolean Contains(String `value`)|`this` LIKE '%`value`%'|`value`가 상수가 아니면 IndexOf(`this`, `value`) > 0에 매핑됩니다.|
-|Boolean EndsWith(String `value`)|`this` LIKE `'`%`value`'|
-  `value`가 상수가 아니면 Right(`this`, length(`value`)) = `value`에 매핑됩니다.|
+|Boolean EndsWith(String `value`)|`this` LIKE `'`%`value`'|`value`가 상수가 아니면 Right(`this`, length(`value`)) = `value`에 매핑됩니다.|
 |Boolean StartsWith(String `value`)|`this` LIKE '`value`%'|`value`가 상수가 아니면 IndexOf(`this`, `value`) = 1에 매핑됩니다.|
 |길이|Length(`this`)||
 |Int32 IndexOf(String `value`)|IndexOf(`this`, `value`) - 1||

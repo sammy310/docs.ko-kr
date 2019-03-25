@@ -41,8 +41,7 @@ Windows Forms에는 끌어서 놓기 동작을 구현하는 메서드, 이벤트
 |<xref:System.Windows.Forms.Control.GiveFeedback>|이 이벤트는 끌기 작업 중에 발생합니다. 마우스 포인터 변경 등 끌어서 놓기 작업이 발생하고 있음을 알리는 시각 신호를 사용자에게 제공할 수 있습니다. 이 이벤트의 처리기는 <xref:System.Windows.Forms.GiveFeedbackEventArgs> 형식의 인수를 받습니다.|  
 |<xref:System.Windows.Forms.Control.QueryContinueDrag>|이 이벤트는 끌어서 놓기 작업 중에 발생하며 끌기 소스가 끌어서 놓기 작업을 취소해야 할지를 결정하도록 합니다. 이 이벤트의 처리기는 <xref:System.Windows.Forms.QueryContinueDragEventArgs> 형식의 인수를 받습니다.|  
   
- 
-  <xref:System.Windows.Forms.QueryContinueDragEventArgs> 클래스는 마우스 단추의 현재 상태 및 키보드의 한정자 키, Esc 키를 눌렀는지 여부를 지정하는 값, 끌어서 놓기 작업을 계속할지 여부를 지정하기 위해 설정할 수 있는 <xref:System.Windows.Forms.DragAction> 값을 제공합니다.  
+ <xref:System.Windows.Forms.QueryContinueDragEventArgs> 클래스는 마우스 단추의 현재 상태 및 키보드의 한정자 키, Esc 키를 눌렀는지 여부를 지정하는 값, 끌어서 놓기 작업을 계속할지 여부를 지정하기 위해 설정할 수 있는 <xref:System.Windows.Forms.DragAction> 값을 제공합니다.  
   
 ## <a name="see-also"></a>참고자료
 - [Windows Forms 애플리케이션의 마우스 입력](mouse-input-in-a-windows-forms-application.md)

@@ -55,8 +55,7 @@ ms.locfileid: "57372050"
   
 |특성|설명|  
 |---------------|-----------------|  
-|activityName|
-  <xref:System.Activities.Tracking.ActivityStateRecord> 인스턴스를 필터링할 활동의 이름을 지정하는 문자열입니다.|  
+|activityName|<xref:System.Activities.Tracking.ActivityStateRecord> 인스턴스를 필터링할 활동의 이름을 지정하는 문자열입니다.|  
   
 ### <a name="child-elements"></a>자식 요소  
   

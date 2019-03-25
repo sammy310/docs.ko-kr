@@ -58,8 +58,7 @@ EdmGen.exe 도구를 사용하는 경우 다음 모드 중 하나를 지정해�
 |`/outobjectlayer:`\<file>|.csdl 파일에서 생성된 개체가 포함되는 소스 코드 파일의 이름을 지정합니다.|
 |`/outviews:`\<file>|생성된 뷰가 포함되는 소스 코드 파일의 이름을 지정합니다.|
 |`/language:`[VB&#124;CSharp]|생성되는 소스 코드 파일의 언어를 지정합니다. 기본 언어는 C#입니다.|
-|`/namespace:`\<string>|사용할 모델 네임스페이스를 지정합니다. 네임스페이스는 `/mode:FullGeneration` 또는 `/mode:FromSSDLGeneration`을 실행할 때 .csdl 파일에서 설정됩니다. 
-  `/mode:EntityClassGeneration`을 실행할 때는 네임스페이스가 사용되지 않습니다.|
+|`/namespace:`\<string>|사용할 모델 네임스페이스를 지정합니다. 네임스페이스는 `/mode:FullGeneration` 또는 `/mode:FromSSDLGeneration`을 실행할 때 .csdl 파일에서 설정됩니다. `/mode:EntityClassGeneration`을 실행할 때는 네임스페이스가 사용되지 않습니다.|
 |`/entitycontainer:`\<string>|생성되는 모델 및 매핑 파일의 `<EntityContainer>` 요소에 적용할 이름을 지정합니다.|
 |`/pl[uralize]`|개념적 모델의 `Entity`, `EntitySet` 및 `NavigationProperty` 이름에 영어의 단수 및 복수 규칙을 적용합니다. 이 옵션은 다음 동작을 수행합니다.<br /><br /> -모든 확인 `EntityType` 이름을 단 수 화 합니다.<br />-모든 확인 `EntitySet` 이름을 복수화 합니다.<br />-에 대 한 각 `NavigationProperty` 최대 하나의 엔터티를 반환 하는, 이름을 단 수 있도록 합니다.<br />-에 대 한 각 `NavigationProperty` 둘 이상의 엔터티를 반환 하는, 이름을 복수화 합니다.|
 |`/SuppressForeignKeyProperties or /nofk`|외래 키 열이 개념적 모델의 엔터티 형식에 대한 스칼라 속성으로 노출되지 않도록 합니다.|

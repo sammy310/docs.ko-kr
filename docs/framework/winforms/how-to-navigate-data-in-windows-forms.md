@@ -33,8 +33,7 @@ Windows 응용 프로그램에서 데이터 원본에서 레코드를 탐색 하
   
 ### <a name="to-check-whether-you-have-passed-the-end-or-beginning"></a>시작 또는 끝 전달한 여부를 확인 하려면  
   
-1.  
-  <xref:System.Windows.Forms.BindingSource.PositionChanged> 이벤트에 대한 이벤트 처리기를 만듭니다. 처리기에서 제안 된 위치 값을 실제 데이터 요소 수를 초과 하는지 여부를 테스트할 수 있습니다.  
+1.  <xref:System.Windows.Forms.BindingSource.PositionChanged> 이벤트에 대한 이벤트 처리기를 만듭니다. 처리기에서 제안 된 위치 값을 실제 데이터 요소 수를 초과 하는지 여부를 테스트할 수 있습니다.  
   
      다음 예제에서는 마지막 데이터 요소에 도달한 있는지 여부를 테스트 하는 방법을 보여 줍니다. 예제에서는 마지막 요소에 있는 경우는 **다음** 폼에 단추를 사용 하지 않도록 설정 합니다.  
   

@@ -31,8 +31,7 @@ HRESULT EnableExceptionCallbacksOutsideOfMyCode(
  [in]  
   
 ## <a name="remarks"></a>설명  
- 
-  `enableExceptionsOutsideOfJMC`의 값이 `false`인 경우:  
+ `enableExceptionsOutsideOfJMC`의 값이 `false`인 경우:  
   
 -   DEBUG_EXCEPTION_FIRST_CHANCE 예외 디버거 콜백이 발생 하지 않습니다.  
   

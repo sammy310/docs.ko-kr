@@ -35,8 +35,7 @@ public interface ICalculator
 <%@ServiceHost language="C#" Debug="true" Service="Microsoft.Samples.SimpleAjaxService.CalculatorService" Factory="System.ServiceModel.Activation.WebScriptServiceHostFactory" %>
 ```
 
- 
-  <xref:System.ServiceModel.Description.WebScriptEndpoint>는 ASP.NET AJAX 클라이언트 페이지에서 서비스에 액세스할 수 있도록 하기 위해 미리 구성됩니다. Web.config의 다음 섹션은 끝점에 대한 추가 구성 변경 작업을 수행하는 데 사용할 수 있으며 추가 변경이 필요하지 않은 경우 제거할 수 있습니다.  
+ <xref:System.ServiceModel.Description.WebScriptEndpoint>는 ASP.NET AJAX 클라이언트 페이지에서 서비스에 액세스할 수 있도록 하기 위해 미리 구성됩니다. Web.config의 다음 섹션은 끝점에 대한 추가 구성 변경 작업을 수행하는 데 사용할 수 있으며 추가 변경이 필요하지 않은 경우 제거할 수 있습니다.  
   
 ```xml  
 <system.serviceModel>  
@@ -49,8 +48,7 @@ public interface ICalculator
 </system.serviceModel>  
 ```  
   
- 
-  <xref:System.ServiceModel.Description.WebScriptEndpoint>는 서비스의 기본 데이터 형식을 XML 대신 JSON으로 설정합니다. 서비스를 호출 하려면 `http://localhost/ServiceModelSamples/service.svc/Add?n1=100&n2=200` 후 설치를 완료 하 고이 항목의 뒷부분에 나와 있는 단계를 작성 합니다. 이 테스트 기능은 HTTP GET 요청을 사용해 설정됩니다.  
+ <xref:System.ServiceModel.Description.WebScriptEndpoint>는 서비스의 기본 데이터 형식을 XML 대신 JSON으로 설정합니다. 서비스를 호출 하려면 `http://localhost/ServiceModelSamples/service.svc/Add?n1=100&n2=200` 후 설치를 완료 하 고이 항목의 뒷부분에 나와 있는 단계를 작성 합니다. 이 테스트 기능은 HTTP GET 요청을 사용해 설정됩니다.  
   
  클라이언트 웹 페이지 SimpleAjaxClientPage.aspx에는 사용자가 페이지에 있는 작업 단추 중 하나를 클릭할 때마다 서비스를 호출하는 ASP.NET 코드가 포함되어 있습니다. `ScriptManager` 컨트롤은 서비스에 대한 프록시를 JavaScript를 통해 액세스할 수 있게 만드는 데 사용됩니다.  
 

@@ -34,8 +34,7 @@ Workflow Designer 속성 표 확장성
 
 인라인 편집기 샘플에서는 다음 방법을 보여 줍니다.
 
-- 
-  <xref:System.Activities.Presentation.PropertyEditing.PropertyValueEditor>에서 파생되는 형식을 만듭니다.
+- <xref:System.Activities.Presentation.PropertyEditing.PropertyValueEditor>에서 파생되는 형식을 만듭니다.
 
 - 생성자에는 <xref:System.Activities.Presentation.PropertyEditing.PropertyValueEditor.InlineEditorTemplate%2A> 값은 Windows Presentation Foundation (WPF) 데이터 템플릿을 사용 하 여 설정 됩니다. 이 값은 XAML 템플릿에 바인딩할 수 있지만 이 샘플에서는 코드를 사용하여 데이터 바인딩을 초기화합니다.
 

@@ -34,9 +34,7 @@ Getting Started 샘플에는 일반 서비스와 Windows Communication Foundatio
 
 클라이언트에는 서비스에 액세스하기 위한 프록시 클래스와 서비스 계약에 대한 정의가 포함되어 있습니다. 프록시 코드를 사용 하 여 서비스 메타 데이터에서 생성 되는 [ServiceModel Metadata 유틸리티 도구 (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)합니다.
 
-
-  [!INCLUDE[wv](../../../../includes/wv-md.md)]에서 서비스는 WAS(Windows Activation Service)에서 호스팅됩니다. 
-  [!INCLUDE[wxp](../../../../includes/wxp-md.md)] 및[!INCLUDE[ws2003](../../../../includes/ws2003-md.md)]에서 서비스는 IIS(인터넷 정보 서비스) 및 ASP.NET을 통해 호스팅됩니다. IIS 또는 WAS에서 서비스를 호스팅하면 서비스에 처음 액세스할 때 서비스를 자동으로 활성화할 수 있습니다.
+[!INCLUDE[wv](../../../../includes/wv-md.md)]에서 서비스는 WAS(Windows Activation Service)에서 호스팅됩니다. [!INCLUDE[wxp](../../../../includes/wxp-md.md)] 및[!INCLUDE[ws2003](../../../../includes/ws2003-md.md)]에서 서비스는 IIS(인터넷 정보 서비스) 및 ASP.NET을 통해 호스팅됩니다. IIS 또는 WAS에서 서비스를 호스팅하면 서비스에 처음 액세스할 때 서비스를 자동으로 활성화할 수 있습니다.
 
 > [!NOTE]
 > IIS 대신 콘솔 응용 프로그램에서 서비스를 호스팅하는 샘플을 시작 하려는 경우, 참조를 [Self-host](../../../../docs/framework/wcf/samples/self-host.md) 샘플입니다.

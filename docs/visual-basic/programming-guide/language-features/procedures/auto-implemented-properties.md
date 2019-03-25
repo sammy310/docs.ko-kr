@@ -65,8 +65,7 @@ End Class
   
  [!code-vb[VbVbalrAutoImplementedProperties#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbvbalrautoimplementedproperties/vb/module1.vb#3)]  
   
- 
-  `Interface`의 멤버이거나 `MustOverride`로 표시된 자동 구현 속성은 초기화할 수 없습니다.  
+ `Interface`의 멤버이거나 `MustOverride`로 표시된 자동 구현 속성은 초기화할 수 없습니다.  
   
  자동 구현 속성을 `Structure`의 멤버로 선언하는 경우 `Shared`로 표시된 자동 구현 속성만 초기화할 수 있습니다.  
   
@@ -81,12 +80,9 @@ End Class
   
 -   속성의 `Get` 또는 `Set` 프로시저에 추가합니다. 예를 들어 `Set` 프로시저에 들어오는 값의 유효성을 검사하는 코드를 추가합니다. 예를 들어 해당 속성 값을 설정하기 전에 전화번호를 나타내는 문자열에 필요한 수의 숫자가 포함되었는지 확인해야 할 수 있습니다.  
   
--   
-  `Get` 및 `Set` 프로시저에 대해 다른 접근성을 지정합니다. 
-  `Set` 프로시저를 `Private`으로, `Get` 프로시저를 `Public`으로 만들려는 경우를 예로 들 수 있습니다.  
+-   `Get` 및 `Set` 프로시저에 대해 다른 접근성을 지정합니다. `Set` 프로시저를 `Private`으로, `Get` 프로시저를 `Public`으로 만들려는 경우를 예로 들 수 있습니다.  
   
--   
-  `WriteOnly`인 속성을 만듭니다.  
+-   `WriteOnly`인 속성을 만듭니다.  
   
 -   매개 변수가 있는 속성을 사용합니다(`Default` 속성 포함). 속성에 대한 매개 변수를 지정하기 위해, 또는 `Set` 프로시저에 대해 추가 매개 변수를 지정하기 위해서는 확장된 속성을 선언해야 합니다.  
   
@@ -95,8 +91,7 @@ End Class
 -   지원 필드에 대한 XML 주석을 제공합니다.  
   
 ## <a name="expanding-an-auto-implemented-property"></a>자동 구현 속성 확장명  
- 자동 구현 속성을 `Get` 또는 `Set` 프로시저가 포함된 확장된 속성으로 변환해야 하는 경우 Visual Basic 코드 편집기는 속성에 대한 `Get` 및 `Set` 프로시저와 `End Property` 문을 자동으로 생성할 수 있습니다. 코드를 다음 빈 줄에 커서를 놓고 하는 경우에 생성 되는 `Property` 문을 입력 `G` (에 대 한 `Get`) 또는 `S` (에 대 한 `Set`) ENTER 키를 누릅니다. 
-  `Property` 문 끝에서 Enter 키를 누르면 Visual Basic 코드 편집기에서 읽기 전용 및 쓰기 전용 속성에 대한 `Get` 또는 `Set` 프로시저가 자동으로 생성됩니다.  
+ 자동 구현 속성을 `Get` 또는 `Set` 프로시저가 포함된 확장된 속성으로 변환해야 하는 경우 Visual Basic 코드 편집기는 속성에 대한 `Get` 및 `Set` 프로시저와 `End Property` 문을 자동으로 생성할 수 있습니다. 코드를 다음 빈 줄에 커서를 놓고 하는 경우에 생성 되는 `Property` 문을 입력 `G` (에 대 한 `Get`) 또는 `S` (에 대 한 `Set`) ENTER 키를 누릅니다. `Property` 문 끝에서 Enter 키를 누르면 Visual Basic 코드 편집기에서 읽기 전용 및 쓰기 전용 속성에 대한 `Get` 또는 `Set` 프로시저가 자동으로 생성됩니다.  
   
 ## <a name="see-also"></a>참고자료
 - [방법: 선언 및 Visual Basic의 기본 속성을 호출](./how-to-declare-and-call-a-default-property.md)

@@ -19,8 +19,7 @@ ms.locfileid: "57706375"
 |-|-|-|
 |ExternalizedPolicy4|ExternalizedPolicy4 활동과 이 활동의 WF 4.5 디자이너가 들어 있습니다.|**ExternalizedPolicy4.cs**: 활동 정의 합니다.<br /><br /> **ExternalizedPolicy4Designer.xaml**: ExternalizedPolicy4 활동에 대 한 사용자 지정 디자이너입니다. 이 디자이너는 WF 3.5 규칙 엔진의 규칙 편집기(<xref:System.Workflow.Activities.Rules.Design.RuleSetDialog>)를 사용합니다.|
 |ImperativeCodeClientSample|명령적 C# 코드를 사용하는 ExternalizedPolicy4 응용 프로그램을 사용하여 워크플로를 구성하고 실행하는 샘플 클라이언트 응용 프로그램입니다(디자이너가 사용되지 않음).|**ApplyDiscount.rules**: 파일을 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 규칙을 정의 합니다.<br /><br /> **Order.cs**: 고객 주문을 나타내는 형식입니다. 이 형식의 개체에 규칙이 적용됩니다.<br /><br /> **Program.cs**: 구성 하 고 Order 개체의 인스턴스에 대 한 ApplyDiscount.rules에 정의 된 규칙을 적용 하는 Policy4 활동에는 워크플로 실행 합니다.<br /><br /> App.config: 규칙 파일의 경로 사용 하 여 구성 파일입니다.|
-|DesignerClientSample|
-  [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 디자이너에서 ExternalPolicy4 응용 프로그램을 사용하여 워크플로를 구성하고 실행하는 샘플 클라이언트 응용 프로그램입니다.|**Sequence1.xaml**: Policy4 활동을 사용 하 여 규칙 평가 수행 하는 순차 워크플로.<br /><br /> **Program.cs**: Sequence1.xaml에 정의된 워크플로의 인스턴스를 실행합니다.|
+|DesignerClientSample|[!INCLUDE[wf1](../../../../includes/wf1-md.md)] 디자이너에서 ExternalPolicy4 응용 프로그램을 사용하여 워크플로를 구성하고 실행하는 샘플 클라이언트 응용 프로그램입니다.|**Sequence1.xaml**: Policy4 활동을 사용 하 여 규칙 평가 수행 하는 순차 워크플로.<br /><br /> **Program.cs**: Sequence1.xaml에 정의된 워크플로의 인스턴스를 실행합니다.|
 
 ## <a name="the-externalizedpolicy4-activity"></a>ExternalizedPolicy4 활동
 

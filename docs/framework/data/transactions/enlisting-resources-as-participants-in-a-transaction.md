@@ -30,8 +30,7 @@ ms.locfileid: "57366103"
 
 <xref:System.Transactions.Transaction.EnlistDurable%2A> 메서드는 지속적인 리소스로 트랜잭션에 참가할 리소스 관리자를 참여시키는 데 사용됩니다.  지속적인 리소스 관리자가 트랜잭션 중에 중단될 경우 <xref:System.Transactions.TransactionManager.Reenlist%2A> 메서드를 사용하여 참가자로 활동했으며 2단계를 완료하지 않은 모든 트랜잭션에 다시 참여하여 온라인 상태가 되면 복구를 수행할 수 있으며, 복구 처리가 완료되면 <xref:System.Transactions.TransactionManager.RecoveryComplete%2A>를 호출할 수 있습니다. 복구에 대 한 자세한 내용은 참조 하세요. [복구 수행](../../../../docs/framework/data/transactions/performing-recovery.md)합니다.
 
-
-  <xref:System.Transactions.Transaction.EnlistDurable%2A> 메서드는 모두 <xref:System.Guid> 개체를 첫 번째 매개 변수로 사용합니다. <xref:System.Guid>는 트랜잭션 관리자가 지속적인 인리스트먼트를 특정 리소스 관리자와 연결하는 데 사용됩니다. 따라서 리소스 관리자는 일관되게 동일한 <xref:System.Guid>를 사용하여 다시 시작할 때 여러 리소스 관리자에서 자신을 식별해야 합니다. 그렇지 않으면 복구가 실패할 수 있습니다.
+<xref:System.Transactions.Transaction.EnlistDurable%2A> 메서드는 모두 <xref:System.Guid> 개체를 첫 번째 매개 변수로 사용합니다. <xref:System.Guid>는 트랜잭션 관리자가 지속적인 인리스트먼트를 특정 리소스 관리자와 연결하는 데 사용됩니다. 따라서 리소스 관리자는 일관되게 동일한 <xref:System.Guid>를 사용하여 다시 시작할 때 여러 리소스 관리자에서 자신을 식별해야 합니다. 그렇지 않으면 복구가 실패할 수 있습니다.
 
 <xref:System.Transactions.Transaction.EnlistDurable%2A> 메서드의 두 번째 매개 변수는 리소스 관리자가 트랜잭션 알림을 받기 위해 구현하는 개체에 대한 참조입니다. 사용하는 오버로드는 리소스 관리자가 SPC(단일 단계 커밋) 최적화를 지원하는지 여부를 트랜잭션 관리자에게 알립니다. 대체로 2PC(2단계 커밋)에 참여할 <xref:System.Transactions.IEnlistmentNotification> 인터페이스를 구현합니다. 그러나 커밋 프로세스를 최적화하려면 SPC에 대한 <xref:System.Transactions.ISinglePhaseNotification> 인터페이스 구현을 고려할 수 있습니다. SPC에 대 한 자세한 내용은 참조 하세요. [단일 단계 및 다단계 트랜잭션 커밋](../../../../docs/framework/data/transactions/committing-a-transaction-in-single-phase-and-multi-phase.md) 하 고 [단일 단계 커밋 및 승격 가능한 단일 단계 알림을 사용한 최적화](../../../../docs/framework/data/transactions/optimization-spc-and-promotable-spn.md)합니다.
 
@@ -41,8 +40,7 @@ ms.locfileid: "57366103"
 
 캐시 등의 일시적인 리소스를 관리하는 참가자는 <xref:System.Transactions.Transaction.EnlistVolatile%2A> 메서드를 사용하여 참여해야 합니다. 이러한 개체는 트랜잭션의 결과를 가져올 수 없거나 시스템 오류 후에 참여하는 트랜잭션의 상태를 복구할 수 없습니다.
 
-앞에서 설명한 것처럼 리소스 관리자는 일시적인 메모리 내 리소스를 관리하는 경우에 일시적인 인리스트먼트를 만듭니다. 
-  <xref:System.Transactions.Transaction.EnlistVolatile%2A>을 사용하면 트랜잭션의 불필요한 에스컬레이션을 강제하지 않는다는 장점이 있습니다. 트랜잭션 에스컬레이션에 대 한 자세한 내용은 참조 하세요. [트랜잭션 관리 에스컬레이션](../../../../docs/framework/data/transactions/transaction-management-escalation.md) 항목입니다. 리스트 먼 트는 트랜잭션 관리자가 처리 하는 방법을에서 모두 차이가 의미 변동성을 인 리스트 먼 트와 트랜잭션 관리자가 리소스 관리자의 예상 합니다. 이는 일시적인 리소스 관리자가 복구를 수행하지 않기 때문입니다. <xref:System.Transactions.Transaction.EnlistVolatile%2A> 메서드는 <xref:System.Guid> 매개 변수를 사용하지 않습니다. 이는 일시적인 리소스 관리자가 복구를 수행하지 않으며 <xref:System.Transactions.TransactionManager.Reenlist%2A>가 필요한 <xref:System.Guid> 메서드를 호출하지 않기 때문입니다.
+앞에서 설명한 것처럼 리소스 관리자는 일시적인 메모리 내 리소스를 관리하는 경우에 일시적인 인리스트먼트를 만듭니다. <xref:System.Transactions.Transaction.EnlistVolatile%2A>을 사용하면 트랜잭션의 불필요한 에스컬레이션을 강제하지 않는다는 장점이 있습니다. 트랜잭션 에스컬레이션에 대 한 자세한 내용은 참조 하세요. [트랜잭션 관리 에스컬레이션](../../../../docs/framework/data/transactions/transaction-management-escalation.md) 항목입니다. 리스트 먼 트는 트랜잭션 관리자가 처리 하는 방법을에서 모두 차이가 의미 변동성을 인 리스트 먼 트와 트랜잭션 관리자가 리소스 관리자의 예상 합니다. 이는 일시적인 리소스 관리자가 복구를 수행하지 않기 때문입니다. <xref:System.Transactions.Transaction.EnlistVolatile%2A> 메서드는 <xref:System.Guid> 매개 변수를 사용하지 않습니다. 이는 일시적인 리소스 관리자가 복구를 수행하지 않으며 <xref:System.Transactions.TransactionManager.Reenlist%2A>가 필요한 <xref:System.Guid> 메서드를 호출하지 않기 때문입니다.
 
 지속적인 인리스트먼트와 마찬가지로 인리스트먼트에 사용하는 오버로드 메서드는 리소스 관리자가 단일 단계 커밋 최적화를 지원하는지 여부를 트랜잭션 관리자에게 나타냅니다. 일시적인 리소스 관리자는 복구를 수행할 수 없으므로 준비 단계 중에 일시적인 인리스트먼트에 대한 복구 정보는 작성되지 않습니다. 따라서 <xref:System.Transactions.PreparingEnlistment.RecoveryInformation%2A> 메서드를 호출하면 <xref:System.InvalidOperationException>이 발생합니다.
 

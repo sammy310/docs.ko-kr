@@ -49,8 +49,7 @@ ms.locfileid: "57378251"
 -   공간 데이터 형식이 포함되어 있는 Microsoft.SqlServer.Types.dll 어셈블리가 버전 10.0에서 버전 11.0으로 업그레이드되었습니다. 이 어셈블리를 참조하는 응용 프로그램은 제대로 실행되지 않을 수 있습니다. 자세한 내용은 [데이터베이스 엔진 기능의 주요 변경 내용](https://go.microsoft.com/fwlink/?LinkId=224367)합니다.  
   
 ## <a name="adonet-entity-framework"></a>ADO.NET Entity Framework  
- 
-  [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)]에는 Entity Framework 5.0을 사용할 경우 새로운 시나리오를 사용할 수 있게 하는 API가 추가되었습니다. Entity Framework 5.0에 추가 된 기능과 향상 된 기능에 대 한 자세한 내용은 다음 항목을 참조 하세요. [새로운 기능](https://go.microsoft.com/fwlink/?LinkID=251106) 하 고 [Entity Framework 릴리스 및 버전 관리](https://go.microsoft.com/fwlink/?LinkId=234899)합니다.  
+ [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)]에는 Entity Framework 5.0을 사용할 경우 새로운 시나리오를 사용할 수 있게 하는 API가 추가되었습니다. Entity Framework 5.0에 추가 된 기능과 향상 된 기능에 대 한 자세한 내용은 다음 항목을 참조 하세요. [새로운 기능](https://go.microsoft.com/fwlink/?LinkID=251106) 하 고 [Entity Framework 릴리스 및 버전 관리](https://go.microsoft.com/fwlink/?LinkId=234899)합니다.  
   
 ## <a name="see-also"></a>참고자료
 - [ADO.NET](../../../../docs/framework/data/adonet/index.md)

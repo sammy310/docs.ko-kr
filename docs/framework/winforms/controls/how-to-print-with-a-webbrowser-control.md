@@ -30,8 +30,7 @@ ms.locfileid: "57702453"
 ## <a name="compiling-the-code"></a>코드 컴파일  
  이 예제에는 다음 사항이 필요합니다.  
   
--   
-  `System` 및 `System.Windows.Forms` 어셈블리에 대한 참조  
+-   `System` 및 `System.Windows.Forms` 어셈블리에 대한 참조  
   
 ## <a name="see-also"></a>참고자료
 - <xref:System.Windows.Forms.WebBrowser>

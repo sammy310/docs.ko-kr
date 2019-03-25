@@ -14,8 +14,7 @@ ms.locfileid: "57376202"
 ---
 # <a name="detecting-changes-with-sqldependency"></a>SqlDependency로 변경 내용 감지
 
-
-  <xref:System.Data.SqlClient.SqlDependency> 개체를 <xref:System.Data.SqlClient.SqlCommand>와 연결하여 쿼리 결과가 원래 검색한 결과와 달라지는 시기를 검색할 수 있습니다. 또한 연결된 명령에 대한 결과가 변경될 때 발생하는 `OnChange` 이벤트에 대리자를 할당할 수도 있습니다. 명령을 실행하기 전에 먼저 <xref:System.Data.SqlClient.SqlDependency>와 해당 명령을 연결해야 합니다. `HasChanges`의 <xref:System.Data.SqlClient.SqlDependency> 속성을 사용하여 쿼리 결과가 데이터를 처음 검색했을 때의 결과와 달라졌는지 확인할 수도 있습니다.
+<xref:System.Data.SqlClient.SqlDependency> 개체를 <xref:System.Data.SqlClient.SqlCommand>와 연결하여 쿼리 결과가 원래 검색한 결과와 달라지는 시기를 검색할 수 있습니다. 또한 연결된 명령에 대한 결과가 변경될 때 발생하는 `OnChange` 이벤트에 대리자를 할당할 수도 있습니다. 명령을 실행하기 전에 먼저 <xref:System.Data.SqlClient.SqlDependency>와 해당 명령을 연결해야 합니다. `HasChanges`의 <xref:System.Data.SqlClient.SqlDependency> 속성을 사용하여 쿼리 결과가 데이터를 처음 검색했을 때의 결과와 달라졌는지 확인할 수도 있습니다.
 
 ## <a name="security-considerations"></a>보안 고려 사항
 
