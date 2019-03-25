@@ -23,7 +23,7 @@ ms.locfileid: "54727406"
 
 일부 대상 프레임워크(예: .NET Framework)의 API는 프레임워크에서 시스템에 설치하는 어셈블리에 의해 정의되고 애플리케이션 프레임워크 API(예: ASP.NET)를 포함할 수 있습니다.
 
-패키지 기반 대상 프레임워크(예: .NET Standard 및 .NET Core)에서 API는 앱이나 라이브러리에 포함된 패키지에 의해 정의됩니다. *메타패키지*는 고유한 내용는 없고 종속성(다른 패키지) 목록만 있는 NuGet 패키지입니다. NuGet 패키지 기반 대상 프레임워크는 프레임워크를 구성하는 모든 패키지를 참조하는 메타패키지를 암시적으로 지정합니다.
+패키지 기반 대상 프레임워크(예: .NET Standard 및 .NET Core)에서 API는 앱이나 라이브러리에 포함된 패키지에 의해 정의됩니다. *메타패키지*는 고유한 내용은 없고 종속성(다른 패키지) 목록만 있는 NuGet 패키지입니다. NuGet 패키지 기반 대상 프레임워크는 프레임워크를 구성하는 모든 패키지를 참조하는 메타패키지를 암시적으로 지정합니다.
 
 ## <a name="latest-target-framework-versions"></a>최신 대상 프레임워크 버전
 
@@ -67,7 +67,7 @@ ms.locfileid: "54727406"
 
 여러 대상 프레임워크를 지정하는 경우 각 대상 프레임워크에 대한 어셈블리를 조건에 따라 참조할 수 있습니다. 코드에서는 *if-then-else* 로직에 전처리기 기호를 사용하여 해당 어셈블리를 조건에 따라 컴파일할 수 있습니다.
 
-다음 라이브러리 프로젝트 파일은 .NET Standard(`netstandard1.4`)의 API 및 .NET Framework(`net40` 및 `net45`)의 API를 대상으로 합니다. 여러 대상 프레임워크에는 복수형 **TargetFrameworks** 요소를 사용합니다. 라이브러리를 두 개의 .NET Framework TFM에 대해 컴파일하려면 `Condition` 속성에 구현체 관련 패키지를 포함합니다.
+다음 라이브러리 프로젝트 파일은 .NET Standard(`netstandard1.4`)의 API 및 .NET Framework(`net40` 및 `net45`)의 API를 대상으로 합니다. 여러 대상 프레임워크에는 복수형 **TargetFrameworks** 요소를 사용합니다. 라이브러리를 두 개의 .NET Framework TFM에 대해 컴파일하려면 `Condition` 특성에 구현체 관련 패키지를 포함합니다.
 
 ```xml
 <Project Sdk="Microsoft.NET.Sdk">
