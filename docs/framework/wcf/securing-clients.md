@@ -81,20 +81,13 @@ Windows Communication Foundation (WCF), 서비스는 클라이언트에 대 한 
   
 |ClientCredential 속성|설명|노트|  
 |-------------------------------|-----------------|-----------|  
-|<xref:System.ServiceModel.Description.ClientCredentials.ClientCertificate%2A>|
-  <xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential>을 반환합니다.|서비스에게 자신을 인증하기 위해 클라이언트가 제공하는 X.509 인증서를 나타냅니다.|  
-|<xref:System.ServiceModel.Description.ClientCredentials.HttpDigest%2A>|
-  <xref:System.ServiceModel.Security.HttpDigestClientCredential>을 반환합니다.|HTTP digest 자격 증명을 나타냅니다. 자격 증명은 사용자 이름 및 암호에 대한 해시입니다.|  
-|<xref:System.ServiceModel.Description.ClientCredentials.IssuedToken%2A>|
-  <xref:System.ServiceModel.Security.IssuedTokenClientCredential>을 반환합니다.|보안 토큰 서비스에서 발급한 사용자 지정 보안 토큰을 나타내며 일반적으로 페더레이션 시나리오에서 사용됩니다.|  
-|<xref:System.ServiceModel.Description.ClientCredentials.Peer%2A>|
-  <xref:System.ServiceModel.Security.PeerCredential>을 반환합니다.|Windows 도메인의 피어 메시 참가를 위해 사용할 피어 자격 증명을 나타냅니다.|  
-|<xref:System.ServiceModel.Description.ClientCredentials.ServiceCertificate%2A>|
-  <xref:System.ServiceModel.Security.X509CertificateRecipientClientCredential>을 반환합니다.|out-of-band 협상에서 서비스가 제공하는 X.509 인증서를 나타냅니다.|  
-|<xref:System.ServiceModel.Description.ClientCredentials.UserName%2A>|
-  <xref:System.ServiceModel.Security.UserNamePasswordClientCredential>을 반환합니다.|사용자 이름 및 암호 쌍을 나타냅니다.|  
-|<xref:System.ServiceModel.Description.ClientCredentials.Windows%2A>|
-  <xref:System.ServiceModel.Security.WindowsClientCredential>을 반환합니다.|Windows 클라이언트 자격 증명(Kerberos 자격 증명)을 나타냅니다. 클래스의 속성은 읽기 전용입니다.|  
+|<xref:System.ServiceModel.Description.ClientCredentials.ClientCertificate%2A>|<xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential>을 반환합니다.|서비스에게 자신을 인증하기 위해 클라이언트가 제공하는 X.509 인증서를 나타냅니다.|  
+|<xref:System.ServiceModel.Description.ClientCredentials.HttpDigest%2A>|<xref:System.ServiceModel.Security.HttpDigestClientCredential>을 반환합니다.|HTTP digest 자격 증명을 나타냅니다. 자격 증명은 사용자 이름 및 암호에 대한 해시입니다.|  
+|<xref:System.ServiceModel.Description.ClientCredentials.IssuedToken%2A>|<xref:System.ServiceModel.Security.IssuedTokenClientCredential>을 반환합니다.|보안 토큰 서비스에서 발급한 사용자 지정 보안 토큰을 나타내며 일반적으로 페더레이션 시나리오에서 사용됩니다.|  
+|<xref:System.ServiceModel.Description.ClientCredentials.Peer%2A>|<xref:System.ServiceModel.Security.PeerCredential>을 반환합니다.|Windows 도메인의 피어 메시 참가를 위해 사용할 피어 자격 증명을 나타냅니다.|  
+|<xref:System.ServiceModel.Description.ClientCredentials.ServiceCertificate%2A>|<xref:System.ServiceModel.Security.X509CertificateRecipientClientCredential>을 반환합니다.|out-of-band 협상에서 서비스가 제공하는 X.509 인증서를 나타냅니다.|  
+|<xref:System.ServiceModel.Description.ClientCredentials.UserName%2A>|<xref:System.ServiceModel.Security.UserNamePasswordClientCredential>을 반환합니다.|사용자 이름 및 암호 쌍을 나타냅니다.|  
+|<xref:System.ServiceModel.Description.ClientCredentials.Windows%2A>|<xref:System.ServiceModel.Security.WindowsClientCredential>을 반환합니다.|Windows 클라이언트 자격 증명(Kerberos 자격 증명)을 나타냅니다. 클래스의 속성은 읽기 전용입니다.|  
   
 #### <a name="setting-a-clientcredentials-value-in-configuration"></a>설정 된 \<clientCredentials > 구성의 값  
  자식 요소로 끝점 동작을 사용 하 여 지정 된 자격 증명 값을 [ \<clientCredentials >](../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md) 요소입니다. 사용되는 요소는 클라이언트 자격 증명 형식에 따라 다릅니다. 예를 들어, 다음 예제에서는 구성을 사용 하 여 X.509 인증서를 설정 하는 <[\<clientCertificate >](../../../docs/framework/configure-apps/file-schema/wcf/clientcertificate-of-clientcredentials-element.md)합니다.  

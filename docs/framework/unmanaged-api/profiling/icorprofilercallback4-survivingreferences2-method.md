@@ -53,13 +53,11 @@ HRESULT SurvivingReferences2(
  크기는 `objectIDRangeStart` 배열에서 참조된 각 블록에 대해 지정됩니다.  
   
 ## <a name="remarks"></a>설명  
- 개체가 가비지 수집 후에 유지되었는지 여부를 확인하려면 `objectIDRangeStart` 및 `cObjectIDRangeLength` 배열의 요소를 다음과 같이 해석해야 합니다. 
-  `ObjectID` 값(`ObjectID`)이 다음 범위 내에 있다고 가정합니다.  
+ 개체가 가비지 수집 후에 유지되었는지 여부를 확인하려면 `objectIDRangeStart` 및 `cObjectIDRangeLength` 배열의 요소를 다음과 같이 해석해야 합니다. `ObjectID` 값(`ObjectID`)이 다음 범위 내에 있다고 가정합니다.  
   
  `ObjectIDRangeStart[i]` <= `ObjectID` < `ObjectIDRangeStart[i]` + `cObjectIDRangeLength[i]`  
   
- 
-  `i` 값이 다음 범위에 있는 경우 개체가 가비지 수집 후에 유지되었습니다.  
+ `i` 값이 다음 범위에 있는 경우 개체가 가비지 수집 후에 유지되었습니다.  
   
  0 <= `i` < `cSurvivingObjectIDRanges`  
   

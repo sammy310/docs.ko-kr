@@ -307,8 +307,7 @@ ms.locfileid: "56979966"
 > [!IMPORTANT]
 >  `/platform:x64` 또는 `/platform:anycpu` 스위치를 사용하여 컴파일되고 64비트 시스템에서 실행되는 경우 "R" 표준 숫자 형식 문자열로 형식이 지정된 <xref:System.Double> 값이 성공적으로 라운드트립되지 않는 경우가 있습니다. 자세한 내용은 다음 단락을 참조하세요.  
   
- 
-  `/platform:x64` 또는 `/platform:anycpu` 스위치를 사용하여 컴파일되고 64비트 시스템에서 실행되는 경우 "R" 표준 숫자 형식 문자열로 형식이 지정된 <xref:System.Double> 값이 성공적으로 라운드트립되지 않는 문제를 해결하려면 "G17" 표준 숫자 서식 문자열을 사용하여 <xref:System.Double> 값에 서식을 지정하면 됩니다. 다음 예제에서는 성공적으로 라운드트립되지 않는 <xref:System.Double> 값에 "R" 형식 문자열을 사용하고 "G17" 형식 문자열도 사용하여 원래 값을 성공적으로 라운드트립합니다.  
+ `/platform:x64` 또는 `/platform:anycpu` 스위치를 사용하여 컴파일되고 64비트 시스템에서 실행되는 경우 "R" 표준 숫자 형식 문자열로 형식이 지정된 <xref:System.Double> 값이 성공적으로 라운드트립되지 않는 문제를 해결하려면 "G17" 표준 숫자 서식 문자열을 사용하여 <xref:System.Double> 값에 서식을 지정하면 됩니다. 다음 예제에서는 성공적으로 라운드트립되지 않는 <xref:System.Double> 값에 "R" 형식 문자열을 사용하고 "G17" 형식 문자열도 사용하여 원래 값을 성공적으로 라운드트립합니다.  
   
  [!code-csharp[System.Double.ToString#5](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.Double.ToString/cs/roundtripex1.cs#5)]
  [!code-vb[System.Double.ToString#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Double.ToString/vb/roundtripex1.vb#5)]  

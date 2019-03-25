@@ -60,8 +60,7 @@ ms.locfileid: "57712463"
   
 3.  에 **속성** 창에서 값을 설정 합니다 <xref:System.Windows.FrameworkElement.Width%2A> 및 <xref:System.Windows.FrameworkElement.Height%2A> 속성을 `200`입니다.  
   
-4.  
-  <xref:System.Windows.Controls.Control.Background%2A> 속성 값을 `Blue`로 설정합니다.  
+4.  <xref:System.Windows.Controls.Control.Background%2A> 속성 값을 `Blue`로 설정합니다.  
   
 5.  프로젝트를 빌드합니다.  
   
@@ -76,13 +75,11 @@ ms.locfileid: "57712463"
   
 3.  에 <xref:System.Windows.Forms.TableLayoutPanel> 컨트롤의 스마트 태그 패널에서 선택 **마지막 행 제거**합니다.  
   
-4.  
-  <xref:System.Windows.Forms.TableLayoutPanel> 컨트롤을 더 큰 너비와 높이로 조정합니다.  
+4.  <xref:System.Windows.Forms.TableLayoutPanel> 컨트롤을 더 큰 너비와 높이로 조정합니다.  
   
 5.  에 **도구 상자**, 두 번 클릭 `UserControl1` 의 인스턴스를 만들 `UserControl1` 의 첫 번째 셀에는 <xref:System.Windows.Forms.TableLayoutPanel> 컨트롤입니다.  
   
-     
-  `UserControl1` 인스턴스가 `elementHost1`이라는 새 <xref:System.Windows.Forms.Integration.ElementHost> 컨트롤에서 호스트됩니다.  
+     `UserControl1` 인스턴스가 `elementHost1`이라는 새 <xref:System.Windows.Forms.Integration.ElementHost> 컨트롤에서 호스트됩니다.  
   
 6.  에 **도구 상자**를 두 번 클릭 `UserControl1` 의 두 번째 셀에 다른 인스턴스를 만들 수는 <xref:System.Windows.Forms.TableLayoutPanel> 컨트롤입니다.  
   
@@ -99,8 +96,7 @@ ms.locfileid: "57712463"
   
 1.  **도구 상자**의 인스턴스를 끕니다 `UserControl1` 폼 아래 공간에 배치 하는 <xref:System.Windows.Forms.TableLayoutPanel> 컨트롤입니다.  
   
-     
-  `UserControl1` 인스턴스가 `elementHost3`이라는 새 <xref:System.Windows.Forms.Integration.ElementHost> 컨트롤에서 호스트됩니다.  
+     `UserControl1` 인스턴스가 `elementHost3`이라는 새 <xref:System.Windows.Forms.Integration.ElementHost> 컨트롤에서 호스트됩니다.  
   
 2.  맞춤선을 사용하여 `elementHost3`의 왼쪽 가장자리를 <xref:System.Windows.Forms.TableLayoutPanel> 컨트롤의 왼쪽 가장자리에 맞춥니다.  
   
@@ -125,8 +121,7 @@ ms.locfileid: "57712463"
   
 2.  에 **속성** 창에서 합니다 <xref:System.Windows.Forms.Control.Anchor%2A> 속성을 **위쪽, 아래쪽, 왼쪽, 오른쪽**합니다.  
   
-3.  
-  <xref:System.Windows.Forms.TableLayoutPanel> 컨트롤을 더 큰 크기로 조정합니다.  
+3.  <xref:System.Windows.Forms.TableLayoutPanel> 컨트롤을 더 큰 크기로 조정합니다.  
   
      `elementHost1` 컨트롤의 크기가 조정되어 셀을 채웁니다.  
   
@@ -134,8 +129,7 @@ ms.locfileid: "57712463"
   
 5.  에 **속성** 창에서 값을 설정 합니다 <xref:System.Windows.Forms.Control.Dock%2A> 속성을 <xref:System.Windows.Forms.DockStyle.Fill>입니다.  
   
-     
-  `elementHost2` 컨트롤의 크기가 조정되어 셀을 채웁니다.  
+     `elementHost2` 컨트롤의 크기가 조정되어 셀을 채웁니다.  
   
 6.  <xref:System.Windows.Forms.TableLayoutPanel> 컨트롤을 선택합니다.  
   
@@ -149,8 +143,7 @@ ms.locfileid: "57712463"
   
 10. 폼의 크기를 조정합니다.  
   
-     
-  <xref:System.Windows.Forms.Integration.ElementHost> 컨트롤 3개의 크기가 모두 적절하게 조정됩니다.  
+     <xref:System.Windows.Forms.Integration.ElementHost> 컨트롤 3개의 크기가 모두 적절하게 조정됩니다.  
   
      자세한 내용은 [방법: TableLayoutPanel 컨트롤의 자식 컨트롤 고정 및 도킹](../controls/how-to-anchor-and-dock-child-controls-in-a-tablelayoutpanel-control.md)합니다.  
   

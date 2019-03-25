@@ -21,12 +21,10 @@ ms.locfileid: "56836450"
   
 -   스타일시트를 더 작게 유지하고 보다 쉽게 관리할 수 있습니다.  
   
- 
-  <xref:System.Xml.Xsl.XsltArgumentList> 메서드를 사용하여 <xref:System.Xml.Xsl.XsltArgumentList.AddExtensionObject%2A> 개체에 XSLT 확장 개체를 추가합니다. 이 때 정규화된 이름과 네임스페이스 URI가 확장 개체와 연결됩니다.  
+ <xref:System.Xml.Xsl.XsltArgumentList> 메서드를 사용하여 <xref:System.Xml.Xsl.XsltArgumentList.AddExtensionObject%2A> 개체에 XSLT 확장 개체를 추가합니다. 이 때 정규화된 이름과 네임스페이스 URI가 확장 개체와 연결됩니다.  
   
 > [!NOTE]
->  
-  <xref:System.Xml.Xsl.XsltArgumentList.AddExtensionObject%2A> 메서드를 호출하려면 FullTrust 권한 집합이 필요합니다. 자세한 내용은 [코드 액세스 보안](../../../../docs/framework/misc/code-access-security.md) 및 [명명된 권한 세트](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/4652tyx7(v=vs.100))를 참조하세요.  
+>  <xref:System.Xml.Xsl.XsltArgumentList.AddExtensionObject%2A> 메서드를 호출하려면 FullTrust 권한 집합이 필요합니다. 자세한 내용은 [코드 액세스 보안](../../../../docs/framework/misc/code-access-security.md) 및 [명명된 권한 세트](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/4652tyx7(v=vs.100))를 참조하세요.  
   
  확장명 개체에서 반환된 데이터 형식은 네 가지 기본 XPath 데이터 형식인 `number`, `string`, `Boolean` 및 `node set` 중 하나입니다.  
   
@@ -34,8 +32,7 @@ ms.locfileid: "56836450"
   
 ### <a name="to-use-an-xslt-extension-object"></a>XSLT 확장명 개체를 사용하려면  
   
-1.  
-  <xref:System.Xml.Xsl.XsltArgumentList> 개체를 만들고 <xref:System.Xml.Xsl.XsltArgumentList.AddExtensionObject%2A> 메서드를 사용하여 확장 개체를 추가합니다.  
+1.  <xref:System.Xml.Xsl.XsltArgumentList> 개체를 만들고 <xref:System.Xml.Xsl.XsltArgumentList.AddExtensionObject%2A> 메서드를 사용하여 확장 개체를 추가합니다.  
   
 2.  스타일시트에서 확장명 개체를 호출합니다.  
   

@@ -31,8 +31,7 @@ ms.locfileid: "57716012"
   
 1.  <xref:System.Windows.Forms.TextBox.Multiline%2A> 속성을 `true`으로 설정합니다. 하는 경우 <xref:System.Windows.Forms.TextBoxBase.WordWrap%2A> 는 `true` (기본값) 다음 컨트롤의 텍스트를 하나 이상의 단락 표시 되지만 그렇지 않은 경우 일부 줄 컨트롤의 가장자리에 클리핑 되는 목록으로 표시 됩니다.  
   
-2.  
-  <xref:System.Windows.Forms.TextBox.ScrollBars%2A> 속성을 적절한 값으로 설정합니다.  
+2.  <xref:System.Windows.Forms.TextBox.ScrollBars%2A> 속성을 적절한 값으로 설정합니다.  
   
     |값|설명|  
     |-----------|-----------------|  
@@ -40,8 +39,7 @@ ms.locfileid: "57716012"
     |<xref:System.Windows.Forms.ScrollBars.Horizontal>|줄의 너비 보다 길 수 중 일부는 목록을 표시 하려면이 값을 사용 합니다 <xref:System.Windows.Forms.TextBox> 제어 합니다.|  
     |<xref:System.Windows.Forms.ScrollBars.Both>|목록 컨트롤의 높이 보다 길 수 있으면이 값을 사용 합니다.|  
   
-3.  
-  <xref:System.Windows.Forms.TextBoxBase.WordWrap%2A> 속성을 적절한 값으로 설정합니다.  
+3.  <xref:System.Windows.Forms.TextBoxBase.WordWrap%2A> 속성을 적절한 값으로 설정합니다.  
   
     |값|설명|  
     |-----------|-----------------|  

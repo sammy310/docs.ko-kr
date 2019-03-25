@@ -57,8 +57,7 @@ RaiseEvent eventname[( argumentlist )]
   
  또한 이 예제에서는 단추(`Button1`)와 텍스트 상자(`TextBox1`)가 있는 폼(`Form1`)을 사용합니다. 단추를 클릭하면 첫 번째 텍스트 상자에 10초부터 0초까지의 카운트 다운이 표시됩니다. 전체 시간(10초)이 경과되면 첫 번째 텍스트 상자에 "Done"이 표시됩니다.  
   
- 
-  `Form1`에 대한 코드는 폼의 초기 상태 및 최종 상태를 지정합니다. 또한 이벤트가 발생될 때 실행될 코드도 포함됩니다.  
+ `Form1`에 대한 코드는 폼의 초기 상태 및 최종 상태를 지정합니다. 또한 이벤트가 발생될 때 실행될 코드도 포함됩니다.  
   
  이 예제를 사용 하려면 새 Windows 응용 프로그램 프로젝트를 열고 라는 단추를 추가 `Button1` 고 이라는 입력란 `TextBox1` 이라는 기본 폼에 `Form1`합니다. 그런 다음 폼을 마우스 오른쪽 단추로 클릭 하 고 클릭 **코드 보기** 코드 편집기를 엽니다.  
   
@@ -67,8 +66,7 @@ RaiseEvent eventname[( argumentlist )]
  [!code-vb[VbVbalrEvents#14](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrEvents/VB/Class1.vb#14)]  
   
 ## <a name="example"></a>예제  
- 
-  `Form1`에 대한 코드에 다음 코드를 추가합니다. 같은 존재할 수 있는 모든 중복 프로시저 바꿉니다 `Form_Load`, 또는 `Button_Click`합니다.  
+ `Form1`에 대한 코드에 다음 코드를 추가합니다. 같은 존재할 수 있는 모든 중복 프로시저 바꿉니다 `Form_Load`, 또는 `Button_Click`합니다.  
   
  [!code-vb[VbVbalrEvents#15](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrEvents/VB/Class1.vb#15)]  
   

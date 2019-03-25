@@ -25,8 +25,7 @@ ms.locfileid: "56980492"
 ---
 # <a name="icordebugcontroller-interface"></a>ICorDebugController 인터페이스
 
-
-  <xref:System.Diagnostics.Process>나 <xref:System.AppDomain> 같이 코드 실행 컨텍스트를 제어할 수 있는 범위를 나타냅니다.  
+<xref:System.Diagnostics.Process>나 <xref:System.AppDomain> 같이 코드 실행 컨텍스트를 제어할 수 있는 범위를 나타냅니다.  
   
 ## <a name="methods"></a>메서드  
   

@@ -56,8 +56,7 @@ ms.locfileid: "56979309"
   
  [!code-vb[VbVbalrKeywords#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrKeywords/VB/Class1.vb#4)]  
   
- 
-  `ReadOnly` 한정자는 다음 컨텍스트에서 사용할 수 있습니다.  
+ `ReadOnly` 한정자는 다음 컨텍스트에서 사용할 수 있습니다.  
   
  [Dim 문](../../../visual-basic/language-reference/statements/dim-statement.md)  
   

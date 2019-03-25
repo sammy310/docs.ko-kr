@@ -39,8 +39,7 @@ End While
 |`statements`|선택 사항입니다. 하나 이상의 문 다음 `While`는 실행 될 때마다 `condition` 는 `True`합니다.|  
 |`Continue While`|선택 사항입니다. 다음 반복으로 제어를 전송 합니다 `While` 블록입니다.|  
 |`Exit While`|선택 사항입니다. 밖으로 제어를 전송 합니다 `While` 블록입니다.|  
-|`End While`|필수 요소. 
-  `While` 블록의 정의를 종료합니다.|  
+|`End While`|필수 요소. `While` 블록의 정의를 종료합니다.|  
   
 ## <a name="remarks"></a>설명  
  사용 된 `While...End While` 조건이으로 문을 횟수 무한히 반복 하려는 경우 구조체 `True`. 조건을 테스트 하는 위치 또는 결과 항목을 사용 하 여 더 많은 유연성이 것을 선호할 수에 대 한 테스트 하려는 경우는 [수행 하는 중... 문이 루프](../../../visual-basic/language-reference/statements/do-loop-statement.md)합니다. 문을 횟수 만큼 반복 하려는 경우는 [에 대 한 중... 다음 문을](../../../visual-basic/language-reference/statements/for-next-statement.md) 일반적으로 것이 좋습니다.  

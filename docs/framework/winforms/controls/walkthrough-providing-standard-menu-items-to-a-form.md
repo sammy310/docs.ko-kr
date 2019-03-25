@@ -18,8 +18,7 @@ ms.lasthandoff: 03/09/2019
 ms.locfileid: "57711761"
 ---
 # <a name="walkthrough-providing-standard-menu-items-to-a-form"></a>연습: 폼에 표준 메뉴 항목 제공
-
-  <xref:System.Windows.Forms.MenuStrip> 컨트롤을 사용하여 폼에 표준 메뉴를 제공할 수 있습니다.  
+<xref:System.Windows.Forms.MenuStrip> 컨트롤을 사용하여 폼에 표준 메뉴를 제공할 수 있습니다.  
   
  이 연습에 사용 하는 방법을 보여 줍니다.는 <xref:System.Windows.Forms.MenuStrip> 표준 메뉴를 만들 수 있습니다. 사용자가 메뉴 항목을 선택 하는 경우에 폼 응답 합니다. 다음 태스크를이 연습에 설명 되어 있습니다.  
   

@@ -57,13 +57,11 @@ HRESULT SurvivingReferences(
 > [!IMPORTANT]
 >  이 메서드는 64비트 플랫폼에서 4GB보다 큰 개체의 크기를 `MAX_ULONG`으로 보고합니다. 4GB 보다 큰 개체를 사용 합니다 [ICorProfilerCallback4::SurvivingReferences2](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-survivingreferences2-method.md) 메서드 대신 합니다.  
   
- 개체가 가비지 수집 후에 유지되었는지 여부를 확인하려면 `objectIDRangeStart` 및 `cObjectIDRangeLength` 배열의 요소를 다음과 같이 해석해야 합니다. 
-  `ObjectID` 값(`ObjectID`)이 다음 범위 내에 있다고 가정합니다.  
+ 개체가 가비지 수집 후에 유지되었는지 여부를 확인하려면 `objectIDRangeStart` 및 `cObjectIDRangeLength` 배열의 요소를 다음과 같이 해석해야 합니다. `ObjectID` 값(`ObjectID`)이 다음 범위 내에 있다고 가정합니다.  
   
  `ObjectIDRangeStart[i]` <= `ObjectID` < `ObjectIDRangeStart[i]` + `cObjectIDRangeLength[i]`  
   
- 
-  `i` 값이 다음 범위에 있는 경우 개체가 가비지 수집 후에 유지되었습니다.  
+ `i` 값이 다음 범위에 있는 경우 개체가 가비지 수집 후에 유지되었습니다.  
   
  0 <= `i` < `cSurvivingObjectIDRanges`  
   

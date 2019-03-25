@@ -12,8 +12,7 @@ ms.locfileid: "57703740"
 # <a name="rehosting-the-workflow-designer"></a>Workflow Designer 재호스팅
 [!INCLUDE[wfd1](../../../includes/wfd1-md.md)] 만들기, 수정 및 모니터링 워크플로에의 목적에 대 한 Visual Studio 2012 외부 환경에서 다시 호스트할 수 있습니다.
 
- 
-  <xref:System.Activities.Presentation.WorkflowDesigner> 형식은 캔버스, 속성표 및 기타 요소의 래퍼이며 기본 프로그래밍 모델을 노출하여 대부분의 디자이너 다시 호스팅 시나리오를 처리합니다. 호스팅하는 <xref:System.Activities.Presentation.WorkflowDesigner> 는 Windows Presentation Foundation (WPF) 내에서 응용 프로그램에 대 한 일반적인 재호스팅 시나리오는 [!INCLUDE[wfd2](../../../includes/wfd2-md.md)]합니다.
+ <xref:System.Activities.Presentation.WorkflowDesigner> 형식은 캔버스, 속성표 및 기타 요소의 래퍼이며 기본 프로그래밍 모델을 노출하여 대부분의 디자이너 다시 호스팅 시나리오를 처리합니다. 호스팅하는 <xref:System.Activities.Presentation.WorkflowDesigner> 는 Windows Presentation Foundation (WPF) 내에서 응용 프로그램에 대 한 일반적인 재호스팅 시나리오는 [!INCLUDE[wfd2](../../../includes/wfd2-md.md)]합니다.
 
 ## <a name="in-this-section"></a>섹션 내용
  [작업 1: 새 Windows Presentation Foundation 응용 프로그램 만들기](task-1-create-a-new-wpf-app.md)

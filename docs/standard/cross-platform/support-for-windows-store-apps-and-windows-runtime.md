@@ -19,15 +19,13 @@ ms.lasthandoff: 03/09/2019
 ms.locfileid: "57708407"
 ---
 # <a name="net-framework-support-for-windows-store-apps-and-windows-runtime"></a>Windows 스토어 앱 및 Windows 런타임에 대한 .NET Framework 지원
-
-  [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]는 [!INCLUDE[wrt](../../../includes/wrt-md.md)]와 함께 다양한 소프트웨어 개발 시나리오를 지원합니다. 이러한 시나리오는 다음 세 가지 범주로 구분됩니다.
+[!INCLUDE[net_v45](../../../includes/net-v45-md.md)]는 [!INCLUDE[wrt](../../../includes/wrt-md.md)]와 함께 다양한 소프트웨어 개발 시나리오를 지원합니다. 이러한 시나리오는 다음 세 가지 범주로 구분됩니다.
 
 -   개발 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] 에 설명 된 대로 XAML 컨트롤을 사용 하 여 앱 [Windows 스토어 앱 용 로드맵 C# 또는 Visual Basic을 사용 하 여](https://docs.microsoft.com/previous-versions/windows/apps/br229583(v=win.10)), [하는 방법 (XAML) tos](https://docs.microsoft.com/previous-versions/windows/apps/br229566(v=win.10)), 및 [.NET Windows 스토어 용 앱 개요 ](https://docs.microsoft.com/previous-versions/windows/apps/br230302(v=vs.140)).
 
 -   .NET Framework로 만든 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] 응용 프로그램에서 사용할 클래스 라이브러리 개발.
 
--   
-  [!INCLUDE[wrt](../../../includes/wrt-md.md)]를 지원하는 모든 프로그래밍 언어에서 사용할 수 있는 .WinMD 파일에서 패키지된 [!INCLUDE[wrt](../../../includes/wrt-md.md)] 구성 요소 개발. 예를 들어, 참조 [Creating Windows Runtime Components in C# 및 Visual Basic](/windows/uwp/winrt-components/creating-windows-runtime-components-in-csharp-and-visual-basic)합니다.
+-   [!INCLUDE[wrt](../../../includes/wrt-md.md)]를 지원하는 모든 프로그래밍 언어에서 사용할 수 있는 .WinMD 파일에서 패키지된 [!INCLUDE[wrt](../../../includes/wrt-md.md)] 구성 요소 개발. 예를 들어, 참조 [Creating Windows Runtime Components in C# 및 Visual Basic](/windows/uwp/winrt-components/creating-windows-runtime-components-in-csharp-and-visual-basic)합니다.
 
  이 항목에서는 .NET Framework에서 모든 세 가지 범주에 대해 제공하는 지원을 간략하게 설명하고 [!INCLUDE[wrt](../../../includes/wrt-md.md)] 구성 요소에 대한 시나리오를 설명합니다. 첫 번째 섹션에서는 .NET Framework와 [!INCLUDE[wrt](../../../includes/wrt-md.md)] 사이의 관계에 대한 기본 정보가 포함되어 있으며 도움말 시스템 및 IDE에서 발생할 수 있는 일부 의문 사항을 설명합니다. 합니다 [섹션을 두 번째](#WindowsRuntimeComponents) 개발 하기 위한 시나리오에 설명 [!INCLUDE[wrt](../../../includes/wrt-md.md)] 구성 요소입니다.
 
@@ -40,8 +38,7 @@ ms.locfileid: "57708407"
 
     -   이 간소화된 API 집합은 .NET Framework 내에서 복제되었거나 [!INCLUDE[wrt](../../../includes/wrt-md.md)] 기능을 복제하는 기능을 제거하여 더욱 단순화되었습니다. 예를 들어, 컬렉션 형식의 제네릭 버전만 포함하고, XML 문서 개체 모델은 [!INCLUDE[wrt](../../../includes/wrt-md.md)] XML API 집합을 위해 제거됩니다.
 
-    -   
-  [!INCLUDE[wrt](../../../includes/wrt-md.md)]를 관리 코드에서 쉽게 호출할 수 있기 때문에 단순히 운영 체제 API를 래핑하는 기능 또한 제거됩니다.
+    -   [!INCLUDE[wrt](../../../includes/wrt-md.md)]를 관리 코드에서 쉽게 호출할 수 있기 때문에 단순히 운영 체제 API를 래핑하는 기능 또한 제거됩니다.
 
      에 대 한 자세한 합니다 [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)]를 참조 합니다 [.NET Windows 스토어 용 앱 개요](https://docs.microsoft.com/previous-versions/windows/apps/br230302(v=vs.140)). API 선택 프로세스에 대 한 자세한 내용은 참조는 [Metro 스타일 앱 용.NET](https://devblogs.microsoft.com/dotnet/net-for-metro-style-apps/) .NET 블로그의 항목입니다.
 
@@ -61,11 +58,9 @@ ms.locfileid: "57708407"
 
 -   <xref:Windows.Web.Syndication.SyndicationFeed.%23ctor(System.String,System.String,Windows.Foundation.Uri)> 설명서는 밀접 하 게 관련 된 문제를 보여 줍니다. 해당 매개 변수 형식이 언어 마다 다른 것으로 나타납니다. C# 및 Visual Basic의 경우 매개 변수 형식은 <xref:System.String?displayProperty=nameWithType> 및 <xref:System.Uri?displayProperty=nameWithType>입니다. 즉, .NET Framework에 자체 `String` 및 `Uri` 형식이 있고, 이같이 자주 사용되는 형식에 대해 다른 작업 방식을 배우도록 .NET Framework 사용자를 강요하는 것이 적합하지 않기 때문입니다. IDE에서 .NET Framework는 해당 [!INCLUDE[wrt](../../../includes/wrt-md.md)] 형식을 숨깁니다.
 
--   몇 가지 경우에 같은 <xref:Windows.UI.Xaml.GridLength> 구조를.NET Framework 이름은 같지만 더 많은 기능을 사용 하 여 형식을 제공 합니다. 예를 들어, 생성자 및 속성 항목 집합은 `GridLength`와 연관되어 있지만, 멤버를 관리 코드에서만 사용할 수 있기 때문에 Visual Basic 및 C#용 구문 블록만 있습니다. 
-  [!INCLUDE[wrt](../../../includes/wrt-md.md)]에서 구조체는 필드만 가지고 있습니다. 합니다 [!INCLUDE[wrt](../../../includes/wrt-md.md)] 구조체에 도우미 클래스인 필요 <xref:Windows.UI.Xaml.GridLengthHelper>, 해당 기능을 제공 합니다. 관리 코드를 작성할 때 IDE에서 도우미 클래스를 볼 수 없습니다.
+-   몇 가지 경우에 같은 <xref:Windows.UI.Xaml.GridLength> 구조를.NET Framework 이름은 같지만 더 많은 기능을 사용 하 여 형식을 제공 합니다. 예를 들어, 생성자 및 속성 항목 집합은 `GridLength`와 연관되어 있지만, 멤버를 관리 코드에서만 사용할 수 있기 때문에 Visual Basic 및 C#용 구문 블록만 있습니다. [!INCLUDE[wrt](../../../includes/wrt-md.md)]에서 구조체는 필드만 가지고 있습니다. 합니다 [!INCLUDE[wrt](../../../includes/wrt-md.md)] 구조체에 도우미 클래스인 필요 <xref:Windows.UI.Xaml.GridLengthHelper>, 해당 기능을 제공 합니다. 관리 코드를 작성할 때 IDE에서 도우미 클래스를 볼 수 없습니다.
 
--   IDE에서 [!INCLUDE[wrt](../../../includes/wrt-md.md)] 형식은 <xref:System.Object?displayProperty=nameWithType>에서 파생되어 나타납니다. 
-  <xref:System.Object>과 같은 <xref:System.Object.ToString%2A?displayProperty=nameWithType>에서 상속된 멤버를 가진 것으로 나타납니다. 이러한 멤버는 형식이 실제로 <xref:System.Object>에서 상속된 것처럼 작동하고, [!INCLUDE[wrt](../../../includes/wrt-md.md)] 형식을 <xref:System.Object>로 캐스팅할 수 있습니다. 이 기능은 [!INCLUDE[wrt](../../../includes/wrt-md.md)]에 대해 .NET Framework가 제공하는 지원의 일부입니다. 그러나 [!INCLUDE[wrt](../../../includes/wrt-md.md)] 참조 문서에서 형식을 볼 경우 이러한 멤버는 표시되지 않습니다. 이 상속된 명백한 멤버에 대한 문서는 <xref:System.Object?displayProperty=nameWithType> 참조 문서에서 제공합니다.
+-   IDE에서 [!INCLUDE[wrt](../../../includes/wrt-md.md)] 형식은 <xref:System.Object?displayProperty=nameWithType>에서 파생되어 나타납니다. <xref:System.Object>과 같은 <xref:System.Object.ToString%2A?displayProperty=nameWithType>에서 상속된 멤버를 가진 것으로 나타납니다. 이러한 멤버는 형식이 실제로 <xref:System.Object>에서 상속된 것처럼 작동하고, [!INCLUDE[wrt](../../../includes/wrt-md.md)] 형식을 <xref:System.Object>로 캐스팅할 수 있습니다. 이 기능은 [!INCLUDE[wrt](../../../includes/wrt-md.md)]에 대해 .NET Framework가 제공하는 지원의 일부입니다. 그러나 [!INCLUDE[wrt](../../../includes/wrt-md.md)] 참조 문서에서 형식을 볼 경우 이러한 멤버는 표시되지 않습니다. 이 상속된 명백한 멤버에 대한 문서는 <xref:System.Object?displayProperty=nameWithType> 참조 문서에서 제공합니다.
 
 <a name="DifferencesVisibleInIDE"></a>
 ### <a name="differences-that-are-visible-in-the-ide"></a>IDE에서 표시되는 차이점
@@ -85,8 +80,7 @@ ms.locfileid: "57708407"
 |`Windows.UI.Xaml.Data.PropertyChangedEventHandler`|`System.ComponentModel.PropertyChangedEventHandler`|
 |`Windows.UI.Xaml.Data.PropertyChangedEventArgs`|`System.ComponentModel.PropertyChangedEventArgs`|
 
- 
-  [!INCLUDE[wrt](../../../includes/wrt-md.md)]에서 `IMap<K, V>` 및 `IMapView<K, V>`는 `IKeyValuePair`를 사용하며 반복됩니다. 관리 코드에 전달되면 이들은 `IDictionary<TKey, TValue>` 및 `IReadOnlyDictionary<TKey, TValue>`로 표시되므로 당연히 `System.Collections.Generic.KeyValuePair<TKey, TValue>`를 사용하여 열거해야 합니다.
+ [!INCLUDE[wrt](../../../includes/wrt-md.md)]에서 `IMap<K, V>` 및 `IMapView<K, V>`는 `IKeyValuePair`를 사용하며 반복됩니다. 관리 코드에 전달되면 이들은 `IDictionary<TKey, TValue>` 및 `IReadOnlyDictionary<TKey, TValue>`로 표시되므로 당연히 `System.Collections.Generic.KeyValuePair<TKey, TValue>`를 사용하여 열거해야 합니다.
 
  인터페이스가 관리 코드에 표시되는 방식은 이러한 인터페이스를 구현하는 형식이 표시되는 방식에 영향을 미칩니다. 예를 들어 `PropertySet` 클래스는 관리되는 코드에 `IDictionary<TKey, TValue>`로 나타나는 `IMap<K, V>`를 구현합니다. `PropertySet`은 `IDictionary<TKey, TValue>` 대신 `IMap<K, V>`를 구현한 것처럼 나타나며, 따라서 관리 코드에서 이 클래스는 .NET Framework 사전의 `Add` 메서드처럼 동작하는 `Add` 메서드를 가지고 있는 것으로 보입니다. 이 클래스는 `Insert` 메서드를 가지고 있는 것으로 보이지 않습니다.
 
@@ -95,20 +89,15 @@ ms.locfileid: "57708407"
 ### <a name="primitive-types"></a>기본 형식
  관리 코드에서 [!INCLUDE[wrt](../../../includes/wrt-md.md)]를 자연스럽게 사용할 수 있도록 코드에서 [!INCLUDE[wrt](../../../includes/wrt-md.md)] 기본 형식 대신 .NET Framework 기본 형식이 나타납니다. .NET Framework에서 `Int32` 구조체와 같은 기본 형식에는 `Int32.TryParse` 메서드 등 유용한 속성 및 메서드가 많이 포함되어 있습니다. 반면에 [!INCLUDE[wrt](../../../includes/wrt-md.md)]의 기본 형식과 구조체에는 필드만 포함되어 있습니다. 관리 코드에서 기본 형식을 사용할 때 .NET Framework 형식으로 표시되고, 평소와 같이 .NET Framework 형식의 속성 및 메서드를 사용할 수 있습니다. 다음 목록은 요약을 제공합니다.
 
--   
-  [!INCLUDE[wrt](../../../includes/wrt-md.md)] 기본 형식인 `Int32`, `Int64`, `Single`, `Double`, `Boolean`, `String`(변경할 수 없는 유니코드 문자 컬렉션), `Enum`, `UInt32`, `UInt64` 및 `Guid`의 경우 `System` 네임스페이스에 있는 동일한 이름의 형식을 사용합니다.
+-   [!INCLUDE[wrt](../../../includes/wrt-md.md)] 기본 형식인 `Int32`, `Int64`, `Single`, `Double`, `Boolean`, `String`(변경할 수 없는 유니코드 문자 컬렉션), `Enum`, `UInt32`, `UInt64` 및 `Guid`의 경우 `System` 네임스페이스에 있는 동일한 이름의 형식을 사용합니다.
 
--   
-  `UInt8`에 대해 `System.Byte`를 사용합니다.
+-   `UInt8`에 대해 `System.Byte`를 사용합니다.
 
--   
-  `Char16`에 대해 `System.Char`를 사용합니다.
+-   `Char16`에 대해 `System.Char`를 사용합니다.
 
--   
-  `IInspectable` 인터페이스에 대해 `System.Object`를 사용합니다.
+-   `IInspectable` 인터페이스에 대해 `System.Object`를 사용합니다.
 
--   
-  `HRESULT`에 대해 하나의 `System.Int32` 멤버가 있는 구조체를 사용합니다.
+-   `HRESULT`에 대해 하나의 `System.Int32` 멤버가 있는 구조체를 사용합니다.
 
  인터페이스 형식에서처럼, .NET Framework 프로젝트가 JavaScript를 사용하여 빌드된 [!INCLUDE[wrt](../../../includes/wrt-md.md)] 앱에서 사용하는 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] 구성 요소일 때에만 이 표현의 증거를 볼 수 있습니다.
 
@@ -138,8 +127,7 @@ ms.locfileid: "57708407"
 -   구성 요소의 형식은 [!INCLUDE[wrt](../../../includes/wrt-md.md)] 형식에서 파생될 수 있습니다. 컨트롤의 기본 컨트롤 형식에서 파생 될 수 있습니다 합니다 <xref:Windows.UI.Xaml.Controls.Primitives> 네임 스페이스 또는 좀 더 완료 된 컨트롤 같은 <xref:Windows.UI.Xaml.Controls.Button>합니다.
 
     > [!IMPORTANT]
-    >  
-  [!INCLUDE[win8](../../../includes/win8-md.md)] 및 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]부터 관리 [!INCLUDE[wrt](../../../includes/wrt-md.md)] 구성 요소의 모든 공용 형식은 봉인되어야 합니다. 여기서 다른 [!INCLUDE[wrt](../../../includes/wrt-md.md)] 구성 요소의 형식은 파생될 수 없습니다. 구성 요소에서 다형 동작을 제공하려면 인터페이스를 만들어 다형 형식에서 구현할 수 있습니다.
+    >  [!INCLUDE[win8](../../../includes/win8-md.md)] 및 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]부터 관리 [!INCLUDE[wrt](../../../includes/wrt-md.md)] 구성 요소의 모든 공용 형식은 봉인되어야 합니다. 여기서 다른 [!INCLUDE[wrt](../../../includes/wrt-md.md)] 구성 요소의 형식은 파생될 수 없습니다. 구성 요소에서 다형 동작을 제공하려면 인터페이스를 만들어 다형 형식에서 구현할 수 있습니다.
 
 -   구성 요소에서 공용 형식에 대한 모든 매개 변수 및 반환 형식은 [!INCLUDE[wrt](../../../includes/wrt-md.md)] 형식(구성 요소가 정의하는 [!INCLUDE[wrt](../../../includes/wrt-md.md)] 형식 포함)이어야 합니다.
 
@@ -158,11 +146,9 @@ ms.locfileid: "57708407"
 
 |제목|설명|
 |-----------|-----------------|
-|[Windows 스토어 앱용 .NET 개요](https://docs.microsoft.com/previous-versions/windows/apps/br230302(v=vs.140))|
-  [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] 앱 및 [!INCLUDE[wrt](../../../includes/wrt-md.md)] 구성 요소를 만드는 데 사용할 수 있는 .NET Framework 형식 및 멤버를 설명합니다. (Windows 개발자 센터)|
+|[Windows 스토어 앱용 .NET 개요](https://docs.microsoft.com/previous-versions/windows/apps/br230302(v=vs.140))|[!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] 앱 및 [!INCLUDE[wrt](../../../includes/wrt-md.md)] 구성 요소를 만드는 데 사용할 수 있는 .NET Framework 형식 및 멤버를 설명합니다. (Windows 개발자 센터)|
 |[C# 또는 Visual Basic을 사용 하 여 Windows 스토어 앱 용 로드맵](https://docs.microsoft.com/previous-versions/windows/apps/br229583(v=win.10))|C# 또는 Visual Basic을 사용하여 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] 앱을 개발하기 시작할 때 도움을 주기 위해 다양한 퀵 스타트 항목, 지침 및 모범 사례를 포함한 주요 리소스를 제공합니다. (Windows 개발자 센터)|
 |[방법 tos (XAML)](https://docs.microsoft.com/previous-versions/windows/apps/br229566(v=win.10))|C# 또는 Visual Basic을 사용하여 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] 앱을 개발하기 시작할 때 도움을 주기 위해 다양한 퀵 스타트 항목, 지침 및 모범 사례를 포함한 주요 리소스를 제공합니다. (Windows 개발자 센터)|
 |[C# 및 Visual Basic으로 Windows 런타임 구성 요소 만들기](/windows/uwp/winrt-components/creating-windows-runtime-components-in-csharp-and-visual-basic)|.NET Framework를 사용하여 [!INCLUDE[wrt](../../../includes/wrt-md.md)] 구성 요소를 만드는 방법, JavaScript를 사용하여 Windows용으로 빌드한 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] 앱의 일부로 사용하는 방법 및 Visual Studio로 조합을 디버깅하는 방법을 설명합니다. (Windows 개발자 센터)|
-|[Windows 런타임 참조](/uwp/api/)|
-  [!INCLUDE[wrt](../../../includes/wrt-md.md)]에 대한 참조 문서입니다. (Windows 개발자 센터)|
+|[Windows 런타임 참조](/uwp/api/)|[!INCLUDE[wrt](../../../includes/wrt-md.md)]에 대한 참조 문서입니다. (Windows 개발자 센터)|
 |[Windows 런타임에 URI 전달](../../../docs/standard/cross-platform/passing-a-uri-to-the-windows-runtime.md)|관리 코드에서 URI를 [!INCLUDE[wrt](../../../includes/wrt-md.md)]로 전달할 때 발생할 수 있는 문제 및 이러한 문제를 방지하는 방법을 설명합니다.|

@@ -29,13 +29,11 @@ ms.locfileid: "57707536"
   
  개체 이니셜라이저에 대 한 자세한 내용은 참조 하세요. [방법: 생성자를 호출 하지 않고 개체 초기화 (C# 프로그래밍 가이드)](https://go.microsoft.com/fwlink/?LinkId=161015) 하 고 [방법: 개체 이니셜라이저를 사용 하 여 개체 선언](https://go.microsoft.com/fwlink/?LinkId=161016)합니다.  
   
- 다음 예제에서는 <xref:System.Activities.Statements.TryCatch> 활동이 워크플로에 사용됩니다. 
-  <xref:System.ApplicationException>이 워크플로를 통해 throw되고 <xref:System.Activities.Statements.Catch%601> 활동을 통해 처리됩니다. 에 대 한 처리기를 <xref:System.Activities.Statements.Catch%601> 활동의 활동 동작은 <xref:System.Activities.Statements.WriteLine> 사용 하 여 작업 및 예외 세부 정보 전달 됩니다 합니다 `ex` <xref:System.Activities.DelegateInArgument%601>합니다.  
+ 다음 예제에서는 <xref:System.Activities.Statements.TryCatch> 활동이 워크플로에 사용됩니다. <xref:System.ApplicationException>이 워크플로를 통해 throw되고 <xref:System.Activities.Statements.Catch%601> 활동을 통해 처리됩니다. 에 대 한 처리기를 <xref:System.Activities.Statements.Catch%601> 활동의 활동 동작은 <xref:System.Activities.Statements.WriteLine> 사용 하 여 작업 및 예외 세부 정보 전달 됩니다 합니다 `ex` <xref:System.Activities.DelegateInArgument%601>합니다.  
   
  [!code-csharp[CFX_WorkflowApplicationExample#33](~/samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowapplicationexample/cs/program.cs#33)]  
   
- 
-  <xref:System.Activities.ActivityAction%601>을 정의하는 사용자 지정 활동을 만들 때는 <xref:System.Activities.Statements.InvokeAction%601>을 사용하여 해당 <xref:System.Activities.ActivityAction%601>의 호출을 모델링합니다. 이 예제에서는 사용자 지정 `WriteLineWithNotification` 활동을 정의합니다. 이 활동은 <xref:System.Activities.Statements.Sequence> 활동과, 문자열 인수 하나를 사용하는 <xref:System.Activities.Statements.WriteLine>을 호출하는 <xref:System.Activities.Statements.InvokeAction%601>을 차례로 포함하는 <xref:System.Activities.ActivityAction%601>로 구성됩니다.  
+ <xref:System.Activities.ActivityAction%601>을 정의하는 사용자 지정 활동을 만들 때는 <xref:System.Activities.Statements.InvokeAction%601>을 사용하여 해당 <xref:System.Activities.ActivityAction%601>의 호출을 모델링합니다. 이 예제에서는 사용자 지정 `WriteLineWithNotification` 활동을 정의합니다. 이 활동은 <xref:System.Activities.Statements.Sequence> 활동과, 문자열 인수 하나를 사용하는 <xref:System.Activities.Statements.WriteLine>을 호출하는 <xref:System.Activities.Statements.InvokeAction%601>을 차례로 포함하는 <xref:System.Activities.ActivityAction%601>로 구성됩니다.  
   
  [!code-csharp[CFX_ActivityExample#1](~/samples/snippets/csharp/VS_Snippets_CFX/CFX_ActivityExample/cs/Program.cs#1)]  
   
@@ -46,8 +44,7 @@ ms.locfileid: "57707536"
  하나 이상의 인수를 전달하기 위해 제공된 일반 버전의 여러 <xref:System.Activities.Statements.InvokeAction%601> 및 <xref:System.Activities.ActivityAction%601>이 있습니다.  
   
 ## <a name="using-activityfunc"></a>ActivityFunc 사용  
- <xref:System.Activities.ActivityAction%601>은 활동의 결과 값이 없는 경우에 유용하고, 결과 값이 반환되는 경우에는 <xref:System.Activities.ActivityFunc%601>이 사용됩니다. 
-  <xref:System.Activities.ActivityFunc%601>을 정의하는 사용자 지정 활동을 만들 때는 <xref:System.Activities.Expressions.InvokeFunc%601>을 사용하여 해당 <xref:System.Activities.ActivityFunc%601>의 호출을 모델링합니다. 다음 예제에서는 `WriteFillerText` 활동을 정의합니다. 필터 텍스트를 제공하기 위해 정수 인수를 사용하고 문자열 결과를 반환하는 <xref:System.Activities.Expressions.InvokeFunc%601>을 지정합니다. 필터 텍스트가 검색되면 <xref:System.Activities.Statements.WriteLine> 활동을 사용하여 해당 텍스트가 콘솔에 표시됩니다.  
+ <xref:System.Activities.ActivityAction%601>은 활동의 결과 값이 없는 경우에 유용하고, 결과 값이 반환되는 경우에는 <xref:System.Activities.ActivityFunc%601>이 사용됩니다. <xref:System.Activities.ActivityFunc%601>을 정의하는 사용자 지정 활동을 만들 때는 <xref:System.Activities.Expressions.InvokeFunc%601>을 사용하여 해당 <xref:System.Activities.ActivityFunc%601>의 호출을 모델링합니다. 다음 예제에서는 `WriteFillerText` 활동을 정의합니다. 필터 텍스트를 제공하기 위해 정수 인수를 사용하고 문자열 결과를 반환하는 <xref:System.Activities.Expressions.InvokeFunc%601>을 지정합니다. 필터 텍스트가 검색되면 <xref:System.Activities.Statements.WriteLine> 활동을 사용하여 해당 텍스트가 콘솔에 표시됩니다.  
   
  [!code-csharp[CFX_ActivityExample#3](~/samples/snippets/csharp/VS_Snippets_CFX/CFX_ActivityExample/cs/Program.cs#3)]  
   

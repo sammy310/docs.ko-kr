@@ -36,8 +36,7 @@ ms.locfileid: "57676384"
 |<xref:System.Windows.Automation.Automation.AddAutomationFocusChangedEventHandler%2A>|포커스 변경|<xref:System.Windows.Automation.AutomationFocusChangedEventArgs>|<xref:System.Windows.Automation.AutomationFocusChangedEventHandler>|  
 |<xref:System.Windows.Automation.Automation.AddAutomationPropertyChangedEventHandler%2A>|속성 변경|<xref:System.Windows.Automation.AutomationPropertyChangedEventArgs>|<xref:System.Windows.Automation.AutomationPropertyChangedEventHandler>|  
 |<xref:System.Windows.Automation.Automation.AddStructureChangedEventHandler%2A>|구조 변경|<xref:System.Windows.Automation.StructureChangedEventArgs>|<xref:System.Windows.Automation.StructureChangedEventHandler>|  
-|<xref:System.Windows.Automation.Automation.AddAutomationEventHandler%2A>|
-  <xref:System.Windows.Automation.AutomationEvent>로 식별된 기타 모든 이벤트|<xref:System.Windows.Automation.AutomationEventArgs> 또는 <xref:System.Windows.Automation.WindowClosedEventArgs>|<xref:System.Windows.Automation.AutomationEventHandler>|  
+|<xref:System.Windows.Automation.Automation.AddAutomationEventHandler%2A>|<xref:System.Windows.Automation.AutomationEvent>로 식별된 기타 모든 이벤트|<xref:System.Windows.Automation.AutomationEventArgs> 또는 <xref:System.Windows.Automation.WindowClosedEventArgs>|<xref:System.Windows.Automation.AutomationEventHandler>|  
   
  메서드를 호출하기 전에, 이벤트를 처리하는 대리자 메서드를 만들어야 합니다. 원하는 경우, 단일 메서드에서 여러 종류의 이벤트를 처리하고 이 메서드를 여러 번 호출하여 테이블에 있는 메서드 중 하나에 전달할 수 있습니다. 예를 들어, 다양한 이벤트를 <xref:System.Windows.Automation.AutomationEventArgs.EventId%2A>에 따라 다르게 처리하도록 단일 <xref:System.Windows.Automation.AutomationEventHandler>를 설정할 수 있습니다.  
   
@@ -51,12 +50,9 @@ ms.locfileid: "57676384"
   
 |메서드|설명|  
 |------------|-----------------|  
-|<xref:System.Windows.Automation.Automation.RemoveAutomationEventHandler%2A>|
-  <xref:System.Windows.Automation.Automation.AddAutomationEventHandler%2A>를 사용하여 등록된 이벤트 처리기의 등록을 취소합니다.|  
-|<xref:System.Windows.Automation.Automation.RemoveAutomationFocusChangedEventHandler%2A>|
-  <xref:System.Windows.Automation.Automation.AddAutomationFocusChangedEventHandler%2A>를 사용하여 등록된 이벤트 처리기의 등록을 취소합니다.|  
-|<xref:System.Windows.Automation.Automation.RemoveAutomationPropertyChangedEventHandler%2A>|
-  <xref:System.Windows.Automation.Automation.AddAutomationPropertyChangedEventHandler%2A>를 사용하여 등록된 이벤트 처리기의 등록을 취소합니다.|  
+|<xref:System.Windows.Automation.Automation.RemoveAutomationEventHandler%2A>|<xref:System.Windows.Automation.Automation.AddAutomationEventHandler%2A>를 사용하여 등록된 이벤트 처리기의 등록을 취소합니다.|  
+|<xref:System.Windows.Automation.Automation.RemoveAutomationFocusChangedEventHandler%2A>|<xref:System.Windows.Automation.Automation.AddAutomationFocusChangedEventHandler%2A>를 사용하여 등록된 이벤트 처리기의 등록을 취소합니다.|  
+|<xref:System.Windows.Automation.Automation.RemoveAutomationPropertyChangedEventHandler%2A>|<xref:System.Windows.Automation.Automation.AddAutomationPropertyChangedEventHandler%2A>를 사용하여 등록된 이벤트 처리기의 등록을 취소합니다.|  
 |<xref:System.Windows.Automation.Automation.RemoveAllEventHandlers%2A>|등록된 모든 이벤트 처리기를 등록 취소합니다.|  
   
  예제 코드를 참조 하세요 [UI Automation 이벤트를 구독할](../../../docs/framework/ui-automation/subscribe-to-ui-automation-events.md)합니다.  

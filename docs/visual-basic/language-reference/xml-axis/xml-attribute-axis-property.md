@@ -43,8 +43,7 @@ object.@<attribute>
   
 |파트|설명|  
 |----------|-----------------|  
-|`prefix`|선택 사항입니다. 특성에 대 한 XML 네임 스페이스 접두사입니다. 
-  `Imports` 문으로 정의되는 전역 XML 네임스페이스여야 합니다.|  
+|`prefix`|선택 사항입니다. 특성에 대 한 XML 네임 스페이스 접두사입니다. `Imports` 문으로 정의되는 전역 XML 네임스페이스여야 합니다.|  
 |`name`|필수 요소. 로컬 특성 이름입니다. 참조 [선언 된 XML 요소 및 특성의 이름을](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md)입니다.|  
   
  \>  
