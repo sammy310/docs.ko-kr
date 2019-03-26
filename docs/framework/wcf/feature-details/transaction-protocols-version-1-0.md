@@ -2,12 +2,12 @@
 title: 트랜잭션 프로토콜 버전 1.0
 ms.date: 03/30/2017
 ms.assetid: 034679af-0002-402e-98a8-ef73dcd71bb6
-ms.openlocfilehash: c28c013bc791b5358a2282dc21446d5f2129aa2c
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: a1501bbd5364773359f9b62602ba4bb684f076ba
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55258021"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58463906"
 ---
 # <a name="transaction-protocols-version-10"></a>트랜잭션 프로토콜 버전 1.0
 Windows Communication Foundation (WCF) 버전 1은 Ws-atomic Transaction 및 Ws-coordination 프로토콜의 버전 1.0을 구현합니다. 버전 1.1에 대 한 자세한 내용은 참조 하세요. [트랜잭션 프로토콜](../../../../docs/framework/wcf/feature-details/transaction-protocols.md)합니다.  
@@ -21,9 +21,9 @@ Windows Communication Foundation (WCF) 버전 1은 Ws-atomic Transaction 및 Ws-
   
  이 항목에서는 WS-AT(WS-Atomic Transaction) 사양과 보안의 조합에 대해 설명하고, 트랜잭션 관리자 간 통신을 위해 사용하는 보안이 설정된 바인딩에 대해 설명합니다. 이 문서에서 설명하는 방식은 IBM, IONA, Sun Microsystems 등에서 WS-AT 및 WS-Coordination의 다른 구현과 함께 성공적으로 테스트되었습니다.  
   
- 다음 그림에서는 두 개의 트랜잭션 관리자(트랜잭션 관리자 1, 트랜잭션 관리자 2)와 두 개의 응용 프로그램(응용 프로그램 1, 응용 프로그램 2) 간의 상호 운용성에 대해 설명합니다.  
+ 다음 그림에서는 트랜잭션 관리자 1, 트랜잭션 관리자 2 두 트랜잭션 관리자와 두 개의 응용 프로그램, 응용 프로그램 1 및 2 응용 프로그램 간의 상호 운용성을 보여 줍니다.  
   
- ![Transaction Protocols](../../../../docs/framework/wcf/feature-details/media/transactionmanagers.gif "TransactionManagers")  
+ ![관리자 트랜잭션 간의 상호 작용을 보여 주는 스크린샷.](./media/transaction-protocols/transaction-managers-flow.gif)  
   
  한 명의 개시자(I)와 한 명의 참가자(P)가 있는 일반적인 WS-Coordination/WS-Atomic Transaction 시나리오를 예로 들어 봅니다. 개시자와 참가자는 둘 다 트랜잭션 관리자(각각 ITM과 PTM)를 가집니다. 이 항목에서는 2단계 커밋을 2PC라고 합니다.  
   
@@ -101,7 +101,7 @@ Windows Communication Foundation (WCF) 버전 1은 Ws-atomic Transaction 및 Ws-
   
  B1221: WCF에서는 이중 HTTPS 바인딩 (에서 설명한 [메시징 프로토콜](../../../../docs/framework/wcf/feature-details/messaging-protocols.md)) 활성화 메시지에 대 한 합니다. 요청 및 회신 메시지는 WS-Addressing 2004/08을 사용하여 상호 관련됩니다.  
   
- 8단원 WS-Atomic 트랜잭션 사양에서는 상관 관계 및 메시지 교환 패턴에 대해 좀 더 자세히 설명합니다.  
+ 8단원 WS-Atomic Transaction 사양에서는 상관 관계 및 메시지 교환 패턴에 대해 좀 더 자세히 설명합니다.  
   
 -   R1222: 수신 시를 `CreateCoordinationContext`, 코디네이터가 실행 해야 합니다는 `SecurityContextToken` 연관 된 비밀을 사용 하 여 `STx`입니다. 이 토큰은 WS-Trust 사양을 따르는 `t:IssuedTokens` 헤더의 내부로 반환됩니다.  
   

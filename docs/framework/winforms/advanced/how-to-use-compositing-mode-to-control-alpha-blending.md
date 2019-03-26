@@ -9,12 +9,12 @@ helpviewer_keywords:
 - colors [Windows Forms], blending
 - colors [Windows Forms], controlling transparency
 ms.assetid: f331df2d-b395-4b0a-95be-24fec8c9bbb5
-ms.openlocfilehash: 1b6ff14de7ff524b8af603ae5fa3969d5230b1a7
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 1a5cf23890cd6183d92e33ec4e24f87c226e8ec3
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57714127"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58462866"
 ---
 # <a name="how-to-use-compositing-mode-to-control-alpha-blending"></a>방법: 알파 혼합 조절 하려면 혼합 모드를 사용 합니다.
 다음 특성을 가진 오프 스크린 비트맵을 만들려고 하는 상황이 있을 수 있습니다.  
@@ -34,7 +34,7 @@ ms.locfileid: "57714127"
   
  다음 그림에서는 코드 예제의 출력을 보여줍니다. 줄임표는 백그라운드와 혼합 되어 있지만 서로 혼합 하지 되는 note 합니다.  
   
- ![복사 원본](./media/sourcecopy.png "sourcecopy")  
+ ![다이어그램 표시 줄임표 하지 서로 배경색과 혼합 됩니다.](./media/how-to-use-compositing-mode-to-control-alpha-blending/ellipses-blended-background.png)  
   
  이 문을 포함 하는 코드 예제:  
   
@@ -48,7 +48,7 @@ ms.locfileid: "57714127"
   
  다음 그림에서는 수정 된 코드의 출력을 보여줍니다.  
   
- ![소스 위에](./media/sourceover.png "sourceover")  
+ ![줄임표를 보여주는 다이어그램 배경을 사용 하 여 함께 혼합 됩니다.](./media/how-to-use-compositing-mode-to-control-alpha-blending/blend-ellipses-background.png)  
   
  [!code-csharp[System.Drawing.AlphaBlending#43](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.AlphaBlending/CS/Class1.cs#43)]
  [!code-vb[System.Drawing.AlphaBlending#43](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.AlphaBlending/VB/Class1.vb#43)]  

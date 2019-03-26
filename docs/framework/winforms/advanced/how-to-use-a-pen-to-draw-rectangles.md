@@ -8,12 +8,12 @@ helpviewer_keywords:
 - rectangles [Windows Forms], drawing
 - pens [Windows Forms], drawing rectangles
 ms.assetid: 54a7fa14-3ad8-4d64-b424-2a12005b250c
-ms.openlocfilehash: 2441687cb36d0780b7fbc935c5cb0edc74bc6ba0
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: a29cae5a360185b7fa5e70fc0181c0cfaac8fc09
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57712177"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58463191"
 ---
 # <a name="how-to-use-a-pen-to-draw-rectangles"></a>방법: 펜을 사용 하 여 사각형을 그릴 수
 사각형을 그리려면 필요는 <xref:System.Drawing.Graphics> 개체 및 <xref:System.Drawing.Pen> 개체입니다. <xref:System.Drawing.Graphics> 개체를 제공 합니다 <xref:System.Drawing.Graphics.DrawRectangle%2A> 메서드 및 <xref:System.Drawing.Pen> 개체 저장 되는 선의 색 및 두께 같은 기능입니다.  
@@ -25,7 +25,7 @@ ms.locfileid: "57712177"
   
  다음 그림에서는 결과 사각형을 보여 줍니다. 여기서 사각형 그려지는 펜 너비는 픽 했다면 점선 보여 줍니다. 사각형의 왼쪽 위 모퉁이의 확대 된 뷰는 두꺼운 검정 선은 가운데에 이러한 점선 보여 줍니다.  
   
- ![펜](./media/pens1.gif "pens1")  
+ ![검정 및 점선을 사용 하 여 그린된 사각형을 보여주는 스크린샷.](./media/how-to-use-a-pen-to-draw-rectangles/drawn-rectangle-black-lines-dotted-lines.gif)  
   
  [!code-csharp[System.Drawing.UsingAPen#21](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingAPen/CS/Class1.cs#21)]
  [!code-vb[System.Drawing.UsingAPen#21](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingAPen/VB/Class1.vb#21)]  

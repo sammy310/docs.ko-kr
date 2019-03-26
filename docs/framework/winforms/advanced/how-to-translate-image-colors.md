@@ -9,12 +9,12 @@ helpviewer_keywords:
 - images [Windows Forms], changing colors
 - image colors [Windows Forms]
 ms.assetid: 2106fb9a-4d60-4dcf-9220-9f189a6c4d19
-ms.openlocfilehash: 81aecddb28903649ff2d59e80fc90368df5e2db4
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 8b2e28cab2d2d04f7c99880f2b35a02ebe80dcd8
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57703025"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58464465"
 ---
 # <a name="how-to-translate-image-colors"></a>방법: 이미지 색 변환
 번역 네 가지 구성 요소 중 하나 이상에 값을 추가합니다. 번역을 나타내는 색 매트릭스 항목은 다음 표에 제공 됩니다.  
@@ -31,7 +31,7 @@ ms.locfileid: "57703025"
   
  다음 그림에서는 오른쪽에서 왼쪽의 원래 이미지와 변환 된 이미지를 보여 줍니다.  
   
- ![색 변환](./media/colortrans2.png "colortrans2")  
+ ![원본 및 변환 된 이미지의 스크린샷입니다.](./media/how-to-translate-image-colors/original-image-translate-colors.png)  
   
  다음 표에서 빨간색 번역 전후 4 개 막대에 대 한 색 벡터를 나열합니다. Note 색 구성 요소에 대 한 최대값은 1 이므로 두 번째 행의 빨강 구성 요소 변경 되지 않습니다. (마찬가지로 색 구성 요소에 대 한 최소값은 0입니다.)  
   

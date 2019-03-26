@@ -5,12 +5,12 @@ helpviewer_keywords:
 - data binding [WPF], Master-Detail data paradigm
 - Master-Detail data paradigm
 ms.assetid: 11429b9e-058d-4084-bfb6-2cf209c8ddf7
-ms.openlocfilehash: 41f02013feb1405e5640afa73b954dc84921c924
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: e18bc7d60b47b083a0b102938634473d85b39882
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57351484"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58463321"
 ---
 # <a name="how-to-use-the-master-detail-pattern-with-hierarchical-data"></a>방법: 계층적 데이터에 마스터-세부 패턴 사용
 이 예제에는 마스터-세부 시나리오를 구현 하는 방법을 보여 줍니다.  
@@ -23,7 +23,7 @@ ms.locfileid: "57351484"
   
  예제 스크린샷은 다음과 같습니다. 합니다 `Divisions` <xref:System.Windows.Controls.ListBox> 자동으로 선택 항목을 추적 합니다 `Leagues` <xref:System.Windows.Controls.ListBox> 해당 데이터를 표시 합니다. 합니다 `Teams` <xref:System.Windows.Controls.ListBox> 다른 두에서 선택 항목을 추적 <xref:System.Windows.Controls.ListBox> 컨트롤입니다.  
   
- ![마스터&#45;detail 예제](./media/databindingmasterdetailsample.png "DataBindingMasterDetailSample")  
+ ![마스터를 보여주는 스크린 샷&#45;세부 정보 시나리오 예제입니다.](./media/how-to-use-the-master-detail-pattern-with-hierarchical-data/databinding-master-detail-scenario.png)  
   
  이 예제에서 주의 해야 할 두 가지 사항은 다음과 같습니다.  
   

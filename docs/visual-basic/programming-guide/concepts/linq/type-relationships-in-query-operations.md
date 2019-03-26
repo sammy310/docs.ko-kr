@@ -11,18 +11,17 @@ helpviewer_keywords:
 - inferring type information [LINQ in Visual Basic]
 - relationships [LINQ in Visual Basic]
 ms.assetid: b5ff4da5-f3fd-4a8e-aaac-1cbf52fa16f6
-ms.openlocfilehash: d72a55cadce287979fad25396327680e1f0e0aaf
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 4dc5497f2e9bacac3062fde6e7dc48270697f1df
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56979101"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58465219"
 ---
 # <a name="type-relationships-in-query-operations-visual-basic"></a>쿼리 작업의 형식 관계(Visual Basic)
 사용 되는 변수 [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] 쿼리 작업은 강력한 형식 이어야 하며 서로 호환 되어야 합니다. 강력한 형식 지정 데이터 원본, 쿼리 자체 및 쿼리 실행에 사용 됩니다. 다음 그림에서는 설명 하는 용어를 식별 하는 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 쿼리 합니다. 쿼리 부분에 대 한 자세한 내용은 참조 하세요. [기본 쿼리 작업 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/basic-query-operations.md)합니다.  
   
- ![요소가 강조 표시 된 의사 코드 쿼리 합니다. ](../../../../visual-basic/programming-guide/concepts/linq/media/sjltyperels.png "SJLtypeRels")  
-LINQ 쿼리의 부분  
+ ![요소가 강조 표시 된 의사 코드 쿼리를 보여주는 스크린샷.](./media/type-relationships-in-query-operations/linq-query-description-terms.png)  
   
  쿼리에서 범위 변수의 형식을 데이터 소스에 있는 요소의 형식과 호환 되어야 합니다. 쿼리 변수의 형식에 정의 된 시퀀스 요소와 호환 되어야 합니다는 `Select` 절. 마지막으로 시퀀스 요소의 형식입니다도 호환 되어야에 사용 되는 루프 제어 변수의 형식을 사용 하 여는 `For Each` 쿼리를 실행 하는 문입니다. 이 강력한 형식화 컴파일 타임 형식 오류 식별을 용이 하 게 합니다.  
   

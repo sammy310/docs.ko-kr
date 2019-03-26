@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - security [WCF], creating a session
 ms.assetid: b6f42b5a-bbf7-45cf-b917-7ec9fa7ae110
-ms.openlocfilehash: c2e2b34c1d1589f26f3aea80384b5a96f1c64fb5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d484bb6d11e7e81ebd14586450f16d8a18bcaa54
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54544720"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58463633"
 ---
 # <a name="how-to-create-a-secure-session"></a>방법: 보안 세션 만들기
 제외 된 [ \<basicHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md) 바인딩 시스템 제공 바인딩은 Windows Communication Foundation (WCF)에서 자동으로 사용 하 여 메시지 보안을 사용 하는 경우 보안 세션입니다.  
@@ -54,7 +54,7 @@ ms.locfileid: "54544720"
      [!code-vb[c_CreateSecureSession#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_createsecuresession/vb/secureservice.vb#1)]  
   
     > [!NOTE]
-    >  에 대 한 보안 세션을 해제할 수 있습니다 합니다 [ <wsHttpBinding> ](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md) 설정 하 여 합니다 `establishSecurityContext` 특성을 `false`입니다. 다른 시스템 제공 바인딩의 경우 사용자 지정 바인딩을 만들어야만 보안 세션을 끌 수 있습니다.  
+    >  에 대 한 보안 세션을 해제할 수 있습니다 합니다 [ \<wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md) 설정 하 여 합니다 `establishSecurityContext` 특성을 `false`입니다. 다른 시스템 제공 바인딩의 경우 사용자 지정 바인딩을 만들어야만 보안 세션을 끌 수 있습니다.  
   
 ### <a name="to-specify-that-a-service-uses-secure-sessions-by-using-a-custom-binding"></a>사용자 지정 바인딩을 사용하여 서비스에서 보안 세션을 사용하도록 지정하려면  
   

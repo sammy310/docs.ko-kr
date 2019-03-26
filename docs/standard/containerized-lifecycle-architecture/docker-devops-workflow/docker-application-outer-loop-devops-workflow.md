@@ -4,12 +4,12 @@ description: "\"외부 루프\" DevOps 워크플로의 단계에 알아봅니다
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 02/15/2019
-ms.openlocfilehash: 495e717787c346e451c2f79ef4200b478577aa9d
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: 95664e20269f68a2eea5111b6c12ec7f108dc77b
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57676202"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58462983"
 ---
 # <a name="steps-in-the-outer-loop-devops-workflow-for-a-docker-application"></a>Docker 응용 프로그램에 대 한 외부 루프 DevOps 워크플로의 단계
 
@@ -90,13 +90,13 @@ Visual Studio Azure DevOps 서비스 포함 된 Docker 이미지 빌드, 인증 
 > [! 정보] 파이프라인을 Azure DevOps 서비스 Docker CI를 조합 하는 방법에 대 한 자세한 내용은 및 연습을 보려면 읽기, 이러한 사이트를 방문 합니다.
 >
 > - Docker 컨테이너를 Visual Studio Team Services (이제 Azure DevOps 서비스) 에이전트를 실행 합니다. \
->   [*https://hub.docker.com/r/microsoft/vsts-agent/*](https://hub.docker.com/r/microsoft/vsts-agent/)
+>   [https://hub.docker.com/r/microsoft/vsts-agent/](https://hub.docker.com/r/microsoft/vsts-agent/)
 >
 > - Azure DevOps 서비스를 사용 하 여.NET Core Linux Docker 이미지 작성: \
->   [*https://blogs.msdn.microsoft.com/stevelasker/2016/06/13/building-net-core-linux-docker-images-with-visual-studio-team-services/*](https://blogs.msdn.microsoft.com/stevelasker/2016/06/13/building-net-core-linux-docker-images-with-visual-studio-team-services/)
+>   [https://blogs.msdn.microsoft.com/stevelasker/2016/06/13/building-net-core-linux-docker-images-with-visual-studio-team-services/](https://blogs.msdn.microsoft.com/stevelasker/2016/06/13/building-net-core-linux-docker-images-with-visual-studio-team-services/)
 >
 > - Docker 지원 사용 하 여 컴퓨터를 구축 하는 Linux 기반 Visual Studio Team Service 빌드: \
->   [*http://donovanbrown.com/post/2016/06/03/Building-a-Linux-Based-Visual-Studio-Team-Service-Build-Machine-with-Docker-Support*](http://donovanbrown.com/post/2016/06/03/Building-a-Linux-Based-Visual-Studio-Team-Service-Build-Machine-with-Docker-Support)
+>   [http://donovanbrown.com/post/2016/06/03/Building-a-Linux-Based-Visual-Studio-Team-Service-Build-Machine-with-Docker-Support](http://donovanbrown.com/post/2016/06/03/Building-a-Linux-Based-Visual-Studio-Team-Service-Build-Machine-with-Docker-Support)
 
 ### <a name="integrate-test-and-validate-multi-container-docker-applications"></a>통합, 테스트 및 다중 컨테이너 Docker 응용 프로그램의 유효성을 검사합니다
 

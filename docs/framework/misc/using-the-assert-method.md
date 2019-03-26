@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 1e40f4d3-fb7d-4f19-b334-b6076d469ea9
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 31dcaeb6d3adcd658a9844ae5cf8e758172bd7bc
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5799ab8e827305fca565064a0ae7290c6c19eb01
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54516515"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58463009"
 ---
 # <a name="using-the-assert-method"></a>Assert 메서드 사용
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
@@ -57,8 +57,7 @@ ms.locfileid: "54516515"
   
 -   메서드 A는 어셈블리 A에 포함되고, 메서드 B는 어셈블리 B에 포함됩니다.  
   
- ![](../../../docs/framework/misc/media/assert.gif "assert")  
-Assert 사용  
+ ![Assert 메서드 어셈블리를 보여 주는 다이어그램입니다.](./media/using-the-assert-method/assert-method-assemblies.gif)    
   
  이 시나리오, 메서드는 호출 B, C B 호출, C 호출 E, E 호출에서는 F 어설션 (사용 권한 P1) C 드라이브에 파일을 읽을 수 있는 권한 및 E 메서드 (권한 P1A) C 드라이브의.txt 파일을 읽을 권한을 요청 합니다. F의 요청이 런타임에 발생 하면 f의 모든 호출자의 권한을 검사 하는 스택 워크가 수행 되어 E부터 시작 부여한 P1A 권한이 하므로 C의 어설션이 발견 된 위치만 C의 권한을 확인 하려면 스택 워크가 진행 됩니다. 요청된 권한(P1A)이 어설션된 권한(P1)의 하위 집합이기 때문에 스택 워크가 중지되고 보안 검사가 자동으로 성공합니다. 어셈블리 A와 B에 권한 P1A가 부여되지 않은 것은 중요하지 않습니다. P1을 어설션하여 메서드 C는 호출자에게 리소스에 액세스할 수 있는 권한이 부여되지 않은 경우에도 호출자가 P1로 보호된 리소스에 액세스할 수 있도록 합니다.  
   

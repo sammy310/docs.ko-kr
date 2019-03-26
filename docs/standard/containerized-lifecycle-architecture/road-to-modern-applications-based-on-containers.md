@@ -4,12 +4,12 @@ description: Docker, 컨테이너 및 마이크로 서비스 아키텍처는 모
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 11/23/2018
-ms.openlocfilehash: ac4ca2d4a24e2d26fd639eafd62968188dbeb483
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: 94f7bc27409048ec80a4e485cea4a16d30e7c1e2
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57674434"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58462684"
 ---
 # <a name="road-to-modern-applications-based-on-containers"></a>컨테이너에 기반한 최신 응용 프로그램 이동
 
@@ -24,10 +24,10 @@ Microsoft는 다양 한 지침, 샘플 응용 프로그램 및 도와주는 합�
 추가 Microsoft 전자책 아래 목록에 Docker 컨테이너와 관련 된를 찾을 수 있습니다.
 
 - **.NET 마이크로 서비스: 컨테이너 화 된.NET 응용 프로그램 아키텍처** \
-  [*https://docs.microsoft.com/dotnet/standard/microservices-architecture/*](../microservices-architecture/index.md)
+  [https://docs.microsoft.com/dotnet/standard/microservices-architecture/](../microservices-architecture/index.md)
 
 - **Azure 클라우드 및 Windows 컨테이너를 사용 하 여 기존.NET 응용 프로그램 현대화** \
-  [*https://docs.microsoft.com/dotnet/standard/modernize-with-azure-and-containers/*](../modernize-with-azure-and-containers/index.md)
+  [https://docs.microsoft.com/dotnet/standard/modernize-with-azure-and-containers/](../modernize-with-azure-and-containers/index.md)
 
 >[!div class="step-by-step"]
 >[이전](docker-containers-images-and-registries.md)

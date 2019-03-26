@@ -2,12 +2,12 @@
 title: WAS Activation 아키텍처
 ms.date: 03/30/2017
 ms.assetid: 58aeffb0-8f3f-4b40-80c8-15f3f1652fd3
-ms.openlocfilehash: 2dd11ec9d642f5bfdd08c71487e82a8cb5133520
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 71546bf6fb13c9d2fecf09b79460a953f60e4e3b
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54557109"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58465761"
 ---
 # <a name="was-activation-architecture"></a>WAS Activation 아키텍처
 이 항목에서는 Windows Process Activation Service(WAS라고도 함)의 구성 요소를 항목별로 정리하고 설명합니다.  
@@ -27,7 +27,7 @@ ms.locfileid: "54557109"
   
  WAS가 작업자 프로세스 인스턴스를 활성화하면 작업자 프로세스에 필요한 프로세스 프로토콜 처리기를 로드하고, 응용 프로그램 관리자를 사용하여 응용 프로그램을 호스트할 응용 프로그램 도메인을 만듭니다. 응용 프로그램 도메인은 응용 프로그램에서 사용하는 네트워크 프로토콜에 필요한 AppDomain 프로토콜 처리기와 응용 프로그램의 코드를 로드합니다.  
   
- ![WAS 아키텍처](../../../../docs/framework/wcf/feature-details/media/wasarchitecture.gif "WASArchitecture")  
+ ![WAS 아키텍처를 보여 주는 스크린샷.](./media/was-activation-architecture/windows-process-application-service-architecture.gif)  
   
 ### <a name="listener-adapters"></a>수신기 어댑터  
  수신기 어댑터는 수신 대기하는 네트워크 프로토콜을 사용하여 메시지를 받는 데 사용되는 네트워크 통신 논리를 구현하는 개별 Windows 서비스입니다. 다음 표에서 Windows Communication Foundation (WCF) 프로토콜에 대 한 수신기 어댑터를 나열합니다.  

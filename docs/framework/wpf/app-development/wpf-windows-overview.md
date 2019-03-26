@@ -28,12 +28,12 @@ helpviewer_keywords:
 - modal dialog boxes [WPF]
 - displaying XAML pages [WPF]
 ms.assetid: 737d04ec-8861-46c3-8d44-fa11d3528d23
-ms.openlocfilehash: d1a93fe81b892b85f77547d48428d3d9a78d5173
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: ab9b36857e2508190a212844f3c6b53d777c0552
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57373102"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58466220"
 ---
 # <a name="wpf-windows-overview"></a>WPF 창 개요
 Windows 통해 Windows Presentation Foundation (WPF) 독립 실행형 응용 프로그램을 사용 하 여 사용자 상호 작용 합니다. 창의 기본 용도는 데이터를 시각화하는 콘텐츠를 호스트하고 사용자가 데이터와 상호 작용할 수 있도록 하는 것입니다. 독립 실행형 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 응용 프로그램을 사용 하 여 자체 창을 제공 합니다 <xref:System.Windows.Window> 클래스입니다. 이 항목에서는 소개 <xref:System.Windows.Window> 만들고 독립 실행형 응용 프로그램의 창 관리의 기본적인 내용을 다루기 전에 합니다.  
@@ -44,9 +44,9 @@ Windows 통해 Windows Presentation Foundation (WPF) 독립 실행형 응용 프
   
 <a name="TheWindowClass"></a>   
 ## <a name="the-window-class"></a>Window 클래스  
- 다음 그림에서는 창을 구성하는 부분을 보여 줍니다.  
+ 다음 그림에서는 창에 구성 하는 부분을 보여 줍니다.  
   
- ![창 요소](./media/windowoverviewfigure1.PNG "WindowOverviewFigure1")  
+ ![창 요소를 보여 주는 스크린샷.](./media/wpf-windows-overview/window-constituent-elements.png)  
   
  창은 비클라이언트 영역과 클라이언트 영역의 두 영역으로 나뉩니다.  
   
@@ -146,7 +146,7 @@ Windows 통해 Windows Presentation Foundation (WPF) 독립 실행형 응용 프
   
  마지막 호출 하 여는 <xref:System.Windows.Window.Show%2A> 메서드 결과 다음 그림에 표시 됩니다.  
   
- ![Window.Show 호출로 열린 창](./media/windowoverviewfigure8.png "WindowOverviewFigure8")  
+ ![Window.Show를 호출 하 여 창 열](./media/wpf-windows-overview//window-opened-show-method.png)  
   
  호출 하 여 열려 있는 창을 <xref:System.Windows.Window.Show%2A> 는 모덜리스 창 응용 프로그램을 사용자가 동일한 응용 프로그램의 다른 창을 활성화를 허용 하는 모드에서 작동 함을 의미 합니다.  
   
@@ -282,13 +282,13 @@ Windows 통해 Windows Presentation Foundation (WPF) 독립 실행형 응용 프
   
 <a name="Window_Lifetime_Events"></a>   
 ### <a name="window-lifetime-events"></a>창 수명 이벤트  
- 다음 그림에서는 창의 수명에서 발생하는 주요 이벤트를 순서대로 보여 줍니다.  
+ 다음 그림에서는 창의 수명에서 발생 하는 주요 이벤트 시퀀스를 보여 줍니다.  
   
- ![창 수명](./media/windowlifetimeevents.png "WindowLifetimeEvents")  
+ ![창의 수명에서 이벤트를 보여 주는 다이어그램입니다.](./media/wpf-windows-overview/window-lifetime-events.png)  
   
  다음 그림에서는 정품 인증 없이 표시 되는 창의 수명에서 발생 하는 주요 이벤트의 순서를 보여 줍니다 (<xref:System.Windows.Window.ShowActivated%2A> 로 설정 되어 `false` 창이 표시 되기 전에).  
   
- ![창 수명 &#40;Window.ShowActivated &#61; False&#41;](./media/windowlifetimenoact.png "WindowLifetimeNoAct")  
+ ![정품 인증 없이 창의 수명에서 이벤트를 보여 주는 다이어그램입니다.](./media/wpf-windows-overview/window-lifetime-no-activation.png)  
   
 <a name="WindowLocation"></a>   
 ## <a name="window-location"></a>창 위치  
@@ -351,21 +351,21 @@ Windows 통해 Windows Presentation Foundation (WPF) 독립 실행형 응용 프
   
  **높이 속성:**  
   
-1.  <xref:System.Windows.FrameworkElement.MinHeight%2A?displayProperty=nameWithType> >  
+1.  <xref:System.Windows.FrameworkElement.MinHeight%2A?displayProperty=nameWithType>
   
-2.  <xref:System.Windows.FrameworkElement.MaxHeight%2A?displayProperty=nameWithType> >  
+2.  <xref:System.Windows.FrameworkElement.MaxHeight%2A?displayProperty=nameWithType>
   
-3.  <xref:System.Windows.SizeToContent.Height?displayProperty=nameWithType>/<xref:System.Windows.SizeToContent.WidthAndHeight?displayProperty=nameWithType> >  
+3.  <xref:System.Windows.SizeToContent.Height?displayProperty=nameWithType>/<xref:System.Windows.SizeToContent.WidthAndHeight?displayProperty=nameWithType>
   
 4.  <xref:System.Windows.FrameworkElement.Height%2A?displayProperty=nameWithType>  
   
  **너비 속성:**  
   
-1.  <xref:System.Windows.FrameworkElement.MinWidth%2A?displayProperty=nameWithType> >  
+1.  <xref:System.Windows.FrameworkElement.MinWidth%2A?displayProperty=nameWithType>
   
-2.  <xref:System.Windows.FrameworkElement.MaxWidth%2A?displayProperty=nameWithType> >  
+2.  <xref:System.Windows.FrameworkElement.MaxWidth%2A?displayProperty=nameWithType>
   
-3.  <xref:System.Windows.SizeToContent.Width?displayProperty=nameWithType>/<xref:System.Windows.SizeToContent.WidthAndHeight?displayProperty=nameWithType> >  
+3.  <xref:System.Windows.SizeToContent.Width?displayProperty=nameWithType>/<xref:System.Windows.SizeToContent.WidthAndHeight?displayProperty=nameWithType>
   
 4.  <xref:System.Windows.FrameworkElement.Width%2A?displayProperty=nameWithType>  
   
@@ -437,9 +437,9 @@ Windows 통해 Windows Presentation Foundation (WPF) 독립 실행형 응용 프
   
 -   <xref:System.Windows.WindowStyle.ToolWindow>  
   
- 이러한 창 스타일의 효과는 다음 그림에서 볼 수 있습니다.  
+ 이러한 창 스타일의 효과 다음 그림에 나와 있습니다.  
   
- ![창 스타일](./media/windowoverviewfigure6.PNG "WindowOverviewFigure6")  
+ ![창의 테두리 스타일을 보여 줍니다.](./media/wpf-windows-overview/window-border-styles.png)  
   
  설정할 수 있습니다 <xref:System.Windows.Window.WindowStyle%2A> 중 하나를 사용 하 여 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 태그나 코드 창의 수명 동안 변경 될 가능성이 없기 때문에 대개 구성를 사용 하 여 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 태그입니다.  
   
@@ -448,9 +448,9 @@ Windows 통해 Windows Presentation Foundation (WPF) 독립 실행형 응용 프
 #### <a name="non-rectangular-window-style"></a>사각형이 아닌 창 스타일  
  경우가 수도 있는 테두리 스타일 <xref:System.Windows.Window.WindowStyle%2A> 허용 권한이 없는 할 수 있습니다. 예를 들어 같은 사각형이 아닌 테두리가 있는 응용 프로그램을 만들려면 수도 [!INCLUDE[TLA#tla_wmp](../../../../includes/tlasharptla-wmp-md.md)] 사용 합니다.  
   
- 예를 들어 다음 그림과 같은 말 상자 창을 고려해 보겠습니다.  
+ 예를 들어, 다음 그림과 같은 말 상자 창을 것이 좋습니다.  
   
- ![사각형이 아닌 창](./media/nonrectangularwindowfigure.PNG "NonRectangularWindowFigure")  
+ ![끌어서 me. 없다는 말 상자 창을](./media/wpf-windows-overview/non-rectangular-window-figure.png)  
   
  이 유형의 창 설정 하 여 만들 수 있습니다는 <xref:System.Windows.Window.WindowStyle%2A> 속성을 <xref:System.Windows.WindowStyle.None>, 특수을 사용 하 여이 지원 하 고 <xref:System.Windows.Window> 에 투명도 대 한 합니다.  
   
@@ -460,9 +460,10 @@ Windows 통해 Windows Presentation Foundation (WPF) 독립 실행형 응용 프
   
 <a name="Task_Bar_Presence"></a>   
 ### <a name="task-bar-presence"></a>작업 표시줄 표시  
- 창의 기본 모양에는 다음 그림에서 볼 수 있는 것처럼 작업 표시줄 단추가 포함됩니다.  
-  
- ![작업 표시줄 단추가 있는 창](./media/windowoverviewfigure7.PNG "WindowOverviewFigure7")  
+
+다음 그림에 표시 된 것 처럼 작업 표시줄 단추를 포함 하는 창의 기본 모양:
+
+ ![작업 표시줄 단추가 있는 창을 보여 주는 스크린샷.](./media/wpf-windows-overview/window-taskbar-button.png)  
   
  일부 유형의 windows 메시지 상자 및 대화 상자와 같은 작업 표시줄 단추가 없는 (참조 [대화 상자 개요](dialog-boxes-overview.md)). 설정 하 여 창의 작업 표시줄 단추가 표시 되는지 여부를 제어할 수 있습니다.는 <xref:System.Windows.Window.ShowInTaskbar%2A> 속성 (`true` 기본적으로).  
   

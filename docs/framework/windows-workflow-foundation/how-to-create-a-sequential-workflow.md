@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 5280e816-ae17-48c4-8de0-a1e6895dd8f0
-ms.openlocfilehash: d924d684561a2dd90ff18c803c3b12e8ac3581ce
-ms.sourcegitcommit: e994e47d3582bf09ae487ecbd53c0dac30aebaf7
+ms.openlocfilehash: 3991c16e00f1cbb4f8c1f2c8391f89ea51c1e6f2
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58262571"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58463802"
 ---
 # <a name="how-to-create-a-sequential-workflow"></a>방법: 순차 워크플로 만들기
 기본 제공 활동뿐 아니라 사용자 지정 활동에서도 워크플로를 구성할 수 있습니다. 이 항목에서는 같은 모두 기본 제공 활동을 사용 하는 워크플로 만드는 방법을 단계별로 합니다 <xref:System.Activities.Statements.Sequence> 활동 및 사용자 지정 활동을 이전 [방법: 활동 만들기](how-to-create-an-activity.md) 항목입니다. 이 워크플로는 숫자 추측 게임을 모델링합니다.  
@@ -89,8 +89,7 @@ ms.locfileid: "58262571"
     Guess != Target  
     ```  
   
-     
-  <xref:System.Activities.Statements.DoWhile> 활동은 자식 활동을 실행한 다음 해당 <xref:System.Activities.Statements.DoWhile.Condition%2A>을 확인합니다. <xref:System.Activities.Statements.DoWhile.Condition%2A>이 `True`로 확인되면 <xref:System.Activities.Statements.DoWhile>의 활동이 다시 실행됩니다. 이 예제에서는 사용자의 추측 값을 확인하여 추측이 올바를 때까지 <xref:System.Activities.Statements.DoWhile>이 계속됩니다.  
+     <xref:System.Activities.Statements.DoWhile> 활동은 자식 활동을 실행한 다음 해당 <xref:System.Activities.Statements.DoWhile.Condition%2A>을 확인합니다. <xref:System.Activities.Statements.DoWhile.Condition%2A>이 `True`로 확인되면 <xref:System.Activities.Statements.DoWhile>의 활동이 다시 실행됩니다. 이 예제에서는 사용자의 추측 값을 확인하여 추측이 올바를 때까지 <xref:System.Activities.Statements.DoWhile>이 계속됩니다.  
   
 4.  끌어서를 **프롬프트** 활동에서는 **NumberGuessWorkflowActivities** 부분을 **도구 상자** 놓습니다를 **DoWhile** 활동 이전 단계의 합니다.  
   
@@ -148,9 +147,9 @@ ms.locfileid: "58262571"
     "Your guess is too high."  
     ```  
   
-     다음 예제에서는 완료된 워크플로를 보여 줍니다.  
+     다음 예제에서는 완료 된 워크플로 보여 줍니다.  
   
-     ![완료 된 순차 워크플로](./media/wfsequentialgettingstartedtutorialcomplete.JPG "WFSequentialGettingStartedTutorialComplete")  
+     ![완료 된 순차 워크플로 보여 주는 스크린샷.](./media/how-to-create-a-sequential-workflow/complete-sequential-workflow.jpg)  
   
 ## <a name="to-build-the-workflow"></a>워크플로를 빌드하려면  
   

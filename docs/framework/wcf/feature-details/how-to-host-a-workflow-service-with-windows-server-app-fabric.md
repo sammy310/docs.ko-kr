@@ -2,12 +2,12 @@
 title: '방법: Windows Server App Fabric을 사용 하 여 워크플로 서비스 호스트'
 ms.date: 03/30/2017
 ms.assetid: 83b62cce-5fc2-4c6d-b27c-5742ba3bac73
-ms.openlocfilehash: 94eff2a01c70e34e57ff153d0cbdef44b6377b01
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 287067391f47a0b4bcbe11bd4bfab971954cd706
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54651190"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58465128"
 ---
 # <a name="how-to-host-a-workflow-service-with-windows-server-app-fabric"></a>방법: Windows Server App Fabric을 사용 하 여 워크플로 서비스 호스트
 AppFabric에서 워크플로 서비스를 호스팅하는 것은 IIS/WAS에서 호스팅하는 것과 유사합니다. 유일한 차이점은 AppFabric에서 워크플로 서비스의 배포, 모니터링 및 관리를 위해 제공하는 도구입니다. 이 항목에서 만든 워크플로 서비스를 사용 합니다 [장기 실행 워크플로 서비스를 만드는](../../../../docs/framework/wcf/feature-details/creating-a-long-running-workflow-service.md)합니다. 이 항목에서는 워크플로 서비스를 만드는 방법을 안내하며, AppFabric을 사용하여 워크플로 서비스를 호스팅하는 방법을 설명합니다. Windows Server Appfabric에 대 한 자세한 내용은 참조 하세요. [Windows Server Appfabric](https://go.microsoft.com/fwlink/?LinkID=193037&clcid=0x409)합니다. 아래의 단계를 완료하기 전에 Windows Server AppFabric이 설치되어 있는지 확인합니다.  이 오픈 인터넷 정보 서비스 (inetmgr.exe)를 수행 하려면 서버 이름을 클릭 합니다 **연결** 사이트를 클릭 하 고 클릭 **기본 웹 사이트**합니다. 화면 오른쪽에 있는 이라는 섹션이 나타납니다 **App Fabric**합니다. 이 섹션(오른쪽 창의 맨 위에 있음)이 없으면 AppFabric이 설치되지 않은 것입니다. Windows Server Appfabric을 설치 하는 방법에 대 한 자세한 내용은 참조 하세요. [Windows Server App Fabric 설치](https://go.microsoft.com/fwlink/?LinkId=193136)합니다.  
@@ -56,13 +56,13 @@ AppFabric에서 워크플로 서비스를 호스팅하는 것은 IIS/WAS에서 �
   
 8.  선택 된 **자동 시작** 탭 합니다. 여기에서는 다음 스크린 샷과 같이 응용 프로그램에서 워크플로 서비스에 대한 자동 시작 설정을 지정할 수 있습니다.  
   
-     ![App Fabric 자동&#45;구성을 시작할](../../../../docs/framework/wcf/feature-details/media/appfabricconfigurationautostart.gif "AppFabricConfigurationAutostart")  
+     ![App Fabric 자동을 보여주는 스크린 샷&#45;구성을 시작 합니다.](./media/how-to-host-a-workflow-service-with-windows-server-app-fabric/app-fabric-auto-start-configuration.gif)  
   
      자동 시작 구성 하는 방법에 대 한 자세한 내용은 참조 하세요. [구성 자동 시작 App Fabric을 사용 하 여](https://go.microsoft.com/fwlink/?LinkId=193150)입니다.  
   
 9. 선택 된 **제한** 탭 합니다. 여기에서는 다음 스크린 샷과 같이 워크플로 서비스에 대한 제한 설정을 구성할 수 있습니다.  
   
-     ![App Fabric 구성 스로틀](../../../../docs/framework/wcf/feature-details/media/appfabricconfigurationthrottling.gif "AppFabricConfigurationThrottling")  
+     ![App Fabric 구성 제한를 보여주는 스크린샷.](./media/how-to-host-a-workflow-service-with-windows-server-app-fabric/app-fabric-throttling-configuration.gif)  
   
      제한을 구성 하는 방법에 대 한 자세한 내용은 참조 하세요. [Appfabric 제한 구성](https://go.microsoft.com/fwlink/?LinkId=193149)합니다.  
   
@@ -82,11 +82,11 @@ AppFabric에서 워크플로 서비스를 호스팅하는 것은 IIS/WAS에서 �
   
 4.  클라이언트 응용 프로그램은 워크플로 서비스를 즉시 호출한 다음 기다립니다. 워크플로 서비스는 유휴 상태가 되고 유지됩니다. 인터넷 정보 서비스(inetmgr.exe)를 시작하고 연결 창에서 OrderService로 이동한 다음 선택하여 이를 확인할 수 있습니다. 그런 다음 오른쪽 창에서 AppFabric 대시보드 아이콘을 클릭합니다. 지속된 WF 인스턴스 아래에 다음 스크린 샷과 같이 유지된 워크플로 서비스 인스턴스가 하나 있습니다.  
   
-     ![App Fabric 대시보드](../../../../docs/framework/wcf/feature-details/media/appfabricdashboard.gif "AppFabricDashboard")  
+     ![App Fabric 대시보드를 보여 주는 스크린샷.](./media/how-to-host-a-workflow-service-with-windows-server-app-fabric/app-fabric-dashboard.gif)  
   
      합니다 **WF 인스턴스 기록** 워크플로 서비스 정품 인증 수, 워크플로 서비스 인스턴스 완료 수 및 오류가 있는 워크플로 인스턴스 수와 같은 워크플로 서비스에 대 한 정보를 나열 합니다. 활성 또는 유휴 인스턴스 아래에 링크가 표시됩니다. 이 링크를 클릭하면 다음 스크린 샷과 같이 유휴 워크플로 인스턴스에 대한 자세한 정보가 표시됩니다.  
   
-     ![지속형 워크플로 인스턴스 정보](../../../../docs/framework/wcf/feature-details/media/persisteddetail.gif "PersistedDetail")  
+     ![지속형 워크플로 인스턴스 세부 정보를 보여 주는 스크린샷.](./media/how-to-host-a-workflow-service-with-windows-server-app-fabric/persisted-workflow-instance-detail.gif)  
   
      자세한 내용은 Windows Server App Fabric 기능과 사용 하는 방법 참조 [Windows Server App Fabric 호스팅 기능](https://go.microsoft.com/fwlink/?LinkID=193143&clcid=0x409)  
   

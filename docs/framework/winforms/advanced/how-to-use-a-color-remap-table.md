@@ -9,12 +9,12 @@ helpviewer_keywords:
 - custom colors [Windows Forms], creating with color remap table
 - color remap tables [Windows Forms], using
 ms.assetid: 977df1ce-8665-42d4-9fb1-ef7f0ff63419
-ms.openlocfilehash: 72965d6968aab256579929acc00e629bcd3c71f0
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 73f4f19229a31266b406214e93e2b59acd343ca2
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57707337"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58463893"
 ---
 # <a name="how-to-use-a-color-remap-table"></a>방법: 색 다시 매핑 테이블 사용
 다시 매핑하는 프로세스 색 다시 매핑 테이블에 따라 이미지의 색을 변환입니다. 색 다시 매핑 테이블을 배열이 <xref:System.Drawing.Imaging.ColorMap> 개체입니다. 각 <xref:System.Drawing.Imaging.ColorMap> 배열의 개체에는 <xref:System.Drawing.Imaging.ColorMap.OldColor%2A> 속성 및 <xref:System.Drawing.Imaging.ColorMap.NewColor%2A> 속성입니다.  
@@ -28,7 +28,7 @@ ms.locfileid: "57707337"
   
  다음 그림에서는 오른쪽에서 왼쪽의 원래 이미지와 매핑된 이미지를 보여 줍니다.  
   
- ![색 다시 매핑](./media/colortrans7.png "colortrans7")  
+ ![원본 이미지와 매핑된 이미지를 보여주는 스크린샷.](./media/how-to-use-a-color-remap-table/original-image-remap-colors.png)  
   
  [!code-csharp[System.Drawing.RecoloringImages#31](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.RecoloringImages/CS/Class1.cs#31)]
  [!code-vb[System.Drawing.RecoloringImages#31](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.RecoloringImages/VB/Class1.vb#31)]  

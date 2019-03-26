@@ -2,12 +2,12 @@
 title: 추적 참가자
 ms.date: 03/30/2017
 ms.assetid: f13e360c-eeb7-4a49-98a0-8f6a52d64f68
-ms.openlocfilehash: 934c49aaa48ecb319d55fa997aaac4eec93b54c3
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 343c2eea5d8e4cb7e90f2e2344cce9f3418c25dd
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57711969"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58462996"
 ---
 # <a name="tracking-participants"></a>추적 참가자
 추적 참가자는 워크플로 개발자가 <xref:System.Activities.Tracking.InteropTrackingRecord.TrackingRecord%2A> 개체에 액세스하여 처리할 수 있는 확장성 지점입니다. [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)]에는 추적 레코드를 ETW(Windows용 이벤트 추적) 이벤트로 기록하는 표준 추적 참가자가 포함되어 있습니다. 표준 참가자가 요구 사항에 맞지 않는 경우 사용자 지정 추적 참가자를 작성할 수도 있습니다.  
@@ -60,7 +60,7 @@ ms.locfileid: "57711969"
   
  다음 그림에서는 ETW 추적 참가자를 통한 추적 데이터 흐름을 보여 줍니다. 추적 데이터가 ETW 세션에 도달하면 다양한 방법으로 이 데이터에 액세스할 수 있습니다. 이러한 이벤트에 액세스하는 가장 유용한 방법 중 하나는 응용 프로그램과 서비스에서 로그와 추적을 보는 데 사용되는 일반적인 Windows 도구인 이벤트 뷰어를 사용하는 것입니다.  
   
- ![추적 및 ETW 추적 공급자의 흐름](./media/trackingdatathroughetwparticipant.gif "TrackingDatathroughETWParticipant")  
+ ![ETW 추적 공급자를 통해 데이터를 추적 하는 흐름입니다.](./media/tracking-participants/tracking-data-event-tracing-windows-provider.gif)  
   
 ## <a name="tracking-participant-event-data"></a>추적 참가자 이벤트 데이터  
  추적 참가자는 추적 레코드당 이벤트 하나의 형식으로 추적된 이벤트 데이터를 ETW 세션에 serialize합니다.  100 ~ 199 범위 내의 ID를 사용하여 이벤트를 식별합니다. 추적 이벤트에 대 한 정의 추적 참가자가 레코드 참조를 [추적 이벤트 참조](tracking-events-reference.md) 항목입니다.  
@@ -114,8 +114,7 @@ class ConsoleTrackingParticipant : TrackingParticipant
 myInstance.Extensions.Add(new ConsoleTrackingParticipant());  
 ```  
   
- 다음 예제에서는 <xref:System.Activities.Statements.Sequence> 활동을 포함하는 <xref:System.Activities.Statements.WriteLine> 활동으로 구성된 워크플로를 만듭니다. 
-  `ConsoleTrackingParticipant`를 확장에 추가하고 워크플로를 호출합니다.  
+ 다음 예제에서는 <xref:System.Activities.Statements.Sequence> 활동을 포함하는 <xref:System.Activities.Statements.WriteLine> 활동으로 구성된 워크플로를 만듭니다. `ConsoleTrackingParticipant`를 확장에 추가하고 워크플로를 호출합니다.  
   
 ```csharp  
 Activity activity= new Sequence()  

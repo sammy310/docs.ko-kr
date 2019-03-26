@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 60887eed-df40-4412-b812-41e1dd329d15
-ms.openlocfilehash: 05bec31cb0d1dca3dc906c183d001fb526173bb5
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 3f180fa115453be86fa5f99fbabb776eb7198623
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43502553"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58465869"
 ---
 # <a name="side-by-side-versioning-in-workflowservicehost"></a>WorkflowServiceHost에서 Side-by-side 버전 관리
 <xref:System.ServiceModel.Activities.WorkflowServiceHost>에 소개된 [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)] side-by-side 버전 관리는 단일 엔드포인트에서 여러 버전의 워크플로 서비스를 호스팅하는 기능을 제공합니다. 제공된 side-by-side 기능을 사용하여 워크플로 서비스를 구성할 수 있습니다. 그러면 기존 정의를 사용하여 실행 중인 인스턴스를 완료하는 동시에, 새 워크플로 정의를 사용하여 워크플로 서비스의 새 인스턴스를 만들 수 있습니다. 이 항목에서는 <xref:System.ServiceModel.Activities.WorkflowServiceHost>를 사용하는 워크플로 서비스 side-by-side 실행에 대해 대략적으로 설명합니다.  
@@ -31,7 +31,7 @@ ms.locfileid: "43502553"
   
 -   <xref:System.ServiceModel.Activities.Receive>에 주 버전에 없는 <xref:System.ServiceModel.Activities.SendReply> 또는 <xref:System.ServiceModel.Activities.WorkflowService.Body%2A> 작업이 없어야 하며 작업 계약과 일치해야 합니다.  
   
--   고유한 <xref:System.ServiceModel.Activities.WorkflowService.DefinitionIdentity%2A>가 있어야 합니다. 워크플로 정의 하나만 있을 수는 `null` <xref:System.ServiceModel.Activities.WorkflowService.DefinitionIdentity%2A>합니다.  
+-   고유한 <xref:System.ServiceModel.Activities.WorkflowService.DefinitionIdentity%2A>가 있어야 합니다. 하나의 워크플로 정의만 `null`<xref:System.ServiceModel.Activities.WorkflowService.DefinitionIdentity%2A>를 가질 수 있습니다.  
   
  일부 변경 내용은 허용됩니다. 다음 항목은 버전간 다를 수 있습니다.  
   
@@ -46,7 +46,7 @@ ms.locfileid: "43502553"
 ### <a name="configuring-the-definitionidentity"></a>DefinitionIdentity 구성  
  워크플로 디자이너를 사용 하 여 워크플로 서비스를 만들 때 합니다 <xref:System.ServiceModel.Activities.WorkflowService.DefinitionIdentity%2A> 를 사용 하 여 설정 됩니다는 **속성** 창. 워크플로 서비스를 선택 하 고 선택 디자이너에서 서비스의 루트 활동의 바깥쪽을 클릭 **속성 창** 에서 합니다 **보기** 메뉴. 선택 **WorkflowIdentity** 옆에 나타나는 드롭다운 목록에서 합니다 **DefinitionIdentity** 속성을 확장 한 다음 및 원하는 지정 <xref:System.Activities.WorkflowIdentity> 속성입니다. 다음 예제에서는 <xref:System.ServiceModel.Activities.WorkflowService.DefinitionIdentity%2A> 로 구성 되어 합니다 <xref:System.Activities.WorkflowIdentity.Name%2A> `MortgageWorkflow` 및 <xref:System.Activities.WorkflowIdentity.Version%2A> 의 `1.0.0.0`합니다. <xref:System.Activities.WorkflowIdentity.Package%2A>는 선택 사항이며 이 예에서는 `null`입니다.  
   
- ![DefinitionIdentity](../../../../docs/framework/wcf/feature-details/media/workflowservicedefinitionidentityv1.bmp "WorkflowServiceDefinitionIdentityv1")  
+ ![DefinitionIdentity 속성을 보여 주는 스크린샷.](./media/side-by-side-versioning-in-workflowservicehost/definitionidentity-property.bmp)  
   
  워크플로 서비스가 자체 호스팅된 경우 워크플로 서비스가 생성되면 <xref:System.ServiceModel.Activities.WorkflowService.DefinitionIdentity%2A>가 구성됩니다. 다음 예제에서는 <xref:System.ServiceModel.Activities.WorkflowService.DefinitionIdentity%2A> 사용 하 여 이전 예와 동일한 값으로 구성 됩니다 합니다 <xref:System.Activities.WorkflowIdentity.Name%2A> `MortgageWorkflow` 및 <xref:System.Activities.WorkflowIdentity.Name%2A> 의 `1.0.0.0`합니다.  
   
@@ -84,7 +84,7 @@ End With
 ### <a name="adding-a-new-version-to-a-web-hosted-workflow-service"></a>웹 호스팅된 워크플로 서비스에 새 버전 추가  
  웹 호스팅된 서비스에 새 버전의 워크플로 서비스를 구성할 때 첫 번째 단계는 서비스 파일과 이름이 동일한 `App_Code` 폴더에 새 폴더를 만드는 것입니다. 서비스의 `xamlx` 파일 이름이 `MortgageWorkflow.xamlx`인 경우 폴더 이름을 `MortgageWorkflow`로 지정해야 합니다. 원본 서비스의 `xamlx` 파일의 사본을 이 폴더에 넣은 다음 `MortgageWorkflowV1.xamlx`와 같은 새 이름으로 이름을 바꿉니다. 기본 서비스를 원하는 대로 변경하고 <xref:System.ServiceModel.Activities.WorkflowService.DefinitionIdentity%2A>를 업데이트한 다음 서비스를 배포합니다. 다음 예제에서는 <xref:System.ServiceModel.Activities.WorkflowService.DefinitionIdentity%2A>의 <xref:System.Activities.WorkflowIdentity.Name%2A> 및 `MortageWorkflow`의 <xref:System.Activities.WorkflowIdentity.Version%2A>을 사용하여 `2.0.0.0`를 업데이트하였습니다.  
   
- ![DefinitionIdentity](../../../../docs/framework/wcf/feature-details/media/workflowservicedefinitionidentityv2.bmp "WorkflowServiceDefinitionIdentityv2")  
+ ![DefinitionIdentity의 WorkflowIdentity를 보여주는 스크린샷.](./media/side-by-side-versioning-in-workflowservicehost/definitionidentity-workflowidentity.bmp)  
   
  서비스가 다시 시작되면 이전 버전이 지정된 <xref:System.ServiceModel.Activities.WorkflowServiceHost.SupportedVersions%2A> 하위 폴더에 위치하므로 `App_Code` 컬렉션에 자동으로 추가됩니다. 워크플로 서비스의 주 버전에는 경우는 `null` <xref:System.ServiceModel.Activities.WorkflowService.DefinitionIdentity%2A> 이전 버전에 추가 되지 것입니다. 한 버전에 `null`<xref:System.ServiceModel.Activities.WorkflowService.DefinitionIdentity%2A>가 있을 수는 있지만, 복수 버전이 있는 경우 `null`<xref:System.ServiceModel.Activities.WorkflowService.DefinitionIdentity%2A>가 포함된 기본 버전은 허용되지 않습니다. 그렇지 않으면 이전 버전이 <xref:System.ServiceModel.Activities.WorkflowServiceHost.SupportedVersions%2A> 컬렉션에 추가되지 않습니다.  
   

@@ -21,8 +21,7 @@ ms.locfileid: "56977528"
 
 사용 된 `Byte` 이진 데이터를 포함 하도록 데이터 형식입니다.  
   
-
-  `Byte`의 기본값은 0입니다.
+`Byte`의 기본값은 0입니다.
 
 ## <a name="literal-assignments"></a>리터럴 할당
 

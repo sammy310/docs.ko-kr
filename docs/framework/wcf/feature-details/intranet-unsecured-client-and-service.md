@@ -5,17 +5,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: f450f5d4-3547-47ec-9320-2809e6a12634
-ms.openlocfilehash: 7583eab4673dc14380f18456d1713351dbc74f17
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b8cd2c58efb08523050e19c31201be48ae98ba03
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54603120"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58466233"
 ---
 # <a name="intranet-unsecured-client-and-service"></a>보안이 설정되지 않은 인트라넷 클라이언트 및 서비스
 다음 그림에서는 WCF 응용 프로그램에 안전한 개인 네트워크에서 정보를 제공 하기 위해 개발 된 간단한 Windows Communication Foundation (WCF) 서비스를 보여 줍니다. 보안은 데이터의 중요도 낮거나, 본질적으로 안전한 네트워크 될 또는 WCF 인프라 아래 계층을 보안 기능을 제공 하기 때문에 필요 하지 않습니다.  
   
- ![보안 되지 않은 인트라넷 클라이언트 및 서비스 시나리오](../../../../docs/framework/wcf/feature-details/media/unsecuredwebservice.gif "UnsecuredWebService")  
+ ![보안 되지 않은 인트라넷 클라이언트 및 서비스 시나리오입니다.](./media/intranet-unsecured-client-and-service/unsecured-web-client-service.gif)  
   
 |특성|설명|  
 |--------------------|-----------------|  
@@ -40,8 +40,8 @@ ms.locfileid: "54603120"
  [!code-csharp[C_UnsecuredService#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_unsecuredservice/cs/source.cs#2)]
  [!code-vb[C_UnsecuredService#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_unsecuredservice/vb/source.vb#2)]  
   
-### <a name="configuration"></a>구성  
- 다음 코드는 구성을 사용하여 동일한 끝점을 설정합니다.  
+### <a name="configuration"></a>구성하기  
+ 다음 코드는 구성을 사용하여 동일한 엔드포인트를 설정합니다.  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8"?>  
@@ -75,7 +75,7 @@ ms.locfileid: "54603120"
   
 -   이 코드와 클라이언트 코드를 사용하여 독립 실행형 클라이언트를 만듭니다.  
   
--   엔드포인트 주소를 정의하지 않는 클라이언트를 만듭니다. 대신 구성 이름을 인수로 사용하는 클라이언트 생성자를 사용합니다. 예를 들면 다음과 같습니다.  
+-   엔드포인트 주소를 정의하지 않는 클라이언트를 만듭니다. 대신 구성 이름을 인수로 사용하는 클라이언트 생성자를 사용합니다. 예를 들어:  
   
      [!code-csharp[C_SecurityScenarios#0](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#0)]
      [!code-vb[C_SecurityScenarios#0](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#0)]  

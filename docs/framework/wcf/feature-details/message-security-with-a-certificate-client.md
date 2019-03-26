@@ -5,19 +5,20 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 99770573-c815-4428-a38c-e4335c8bd7ce
-ms.openlocfilehash: a027577f5118f9a5b2f3eeaa29ddfde20851a8f2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8c8a9dc17af5809ce1e3b97304535361c2cc5e58
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54530855"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58465713"
 ---
 # <a name="message-security-with-a-certificate-client"></a>인증서 클라이언트를 사용하는 메시지 보안
-다음 시나리오에서는 메시지 보안 모드를 사용 하 여 보안 서비스를 Windows Communication Foundation (WCF) 클라이언트를 보여 줍니다. 클라이언트 및 서비스는 인증서를 사용하여 인증됩니다. 자세한 내용은 [분산 응용 프로그램 보안](../../../../docs/framework/wcf/feature-details/distributed-application-security.md)합니다.  
+다음 시나리오에서는 메시지 보안 모드를 사용 하 여 보안 서비스를 Windows Communication Foundation (WCF) 클라이언트를 보여 줍니다. 클라이언트 및 서비스는 인증서를 사용하여 인증됩니다. 자세한 내용은 [분산 응용 프로그램 보안](../../../../docs/framework/wcf/feature-details/distributed-application-security.md)합니다.
+
+ ![인증서를 사용 하 여 클라이언트를 보여 주는 스크린샷.](./media/message-security-with-a-certificate-client/client-with-certificate.gif)  
   
  샘플 응용 프로그램을 참조 하세요 [메시지 보안 인증서](../../../../docs/framework/wcf/samples/message-security-certificate.md)합니다.  
   
- ![인증서를 사용 하 여 클라이언트](../../../../docs/framework/wcf/feature-details/media/clientwithcertificate.gif "ClientWithCertificate")  
   
 |특성|설명|  
 |--------------------|-----------------|  
@@ -89,7 +90,7 @@ ms.locfileid: "54530855"
   
 -   이 코드와 클라이언트 코드를 사용하여 독립 실행형 클라이언트를 만듭니다.  
   
--   엔드포인트 주소를 정의하지 않는 클라이언트를 만듭니다. 대신 구성 이름을 인수로 사용하는 클라이언트 생성자를 사용합니다. 예를 들면 다음과 같습니다.  
+-   엔드포인트 주소를 정의하지 않는 클라이언트를 만듭니다. 대신 구성 이름을 인수로 사용하는 클라이언트 생성자를 사용합니다. 예를 들어:  
   
      [!code-csharp[C_SecurityScenarios#0](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#0)]
      [!code-vb[C_SecurityScenarios#0](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#0)]  

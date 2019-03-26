@@ -87,22 +87,19 @@ ms.locfileid: "57845988"
 
 ## <a name="dates-and-calendars"></a>날짜 및 달력
 
-
-  <xref:System.Globalization.Calendar> 형식의 매개 변수를 포함하고 날짜 요소(즉, 월, 일 및 연도)가 지정된 달력의 값을 반영하도록 허용하는 생성자를 제외하면 <xref:System.DateTime> 및 <xref:System.DateTimeOffset> 값 모두 항상 그레고리오력을 기반으로 합니다. 예를 들어 <xref:System.DateTime.Year%2A?displayProperty=nameWithType> 속성은 그레고리오력으로 연도를 반환하고 <xref:System.DateTime.Day%2A?displayProperty=nameWithType> 속성은 그레고리오력에서 특정 월의 일을 반환합니다.
+<xref:System.Globalization.Calendar> 형식의 매개 변수를 포함하고 날짜 요소(즉, 월, 일 및 연도)가 지정된 달력의 값을 반영하도록 허용하는 생성자를 제외하면 <xref:System.DateTime> 및 <xref:System.DateTimeOffset> 값 모두 항상 그레고리오력을 기반으로 합니다. 예를 들어 <xref:System.DateTime.Year%2A?displayProperty=nameWithType> 속성은 그레고리오력으로 연도를 반환하고 <xref:System.DateTime.Day%2A?displayProperty=nameWithType> 속성은 그레고리오력에서 특정 월의 일을 반환합니다.
 
 > [!IMPORTANT]
 > 날짜 값과 날짜 값의 문자열 표현은 서로 다르다는 점에 주의해야 합니다. 날짜 값은 그레고리오력을 기반으로 하지만 날짜 값의 표현은 특정 문화권의 현재 달력을 기반으로 합니다.
 
-다음 예제에서는 <xref:System.DateTime> 속성과 이러한 속성의 해당 <xref:System.Globalization.Calendar> 메서드 간의 차이점을 보여 줍니다. 이 예제에서 문화권은 아랍어(이집트)이고 현재 달력은 우말쿠라입니다. 
-  <xref:System.DateTime> 값은 2011년의 7번째 월에서 15번째 일로 설정되어 있습니다. 변하지 않는 문화권의 규칙을 사용할 경우 동일한 값이 <xref:System.DateTime.ToString%28System.String%2CSystem.IFormatProvider%29?displayProperty=nameWithType> 메서드로 반환되기 때문에 이 값은 그레고리오력 날짜로 해석되는 것이 분명합니다. 현재 문화권의 규칙을 사용하여 서식이 지정된 날짜의 문자열 표현은 우말쿠라 달력의 날짜와 동일한 14/08/32입니다. 그런 다음 `DateTime` 및 `Calendar`의 멤버를 사용하여 <xref:System.DateTime> 값의 일, 월 및 연도를 반환합니다. 각각의 경우에 <xref:System.DateTime> 멤버로 반환되는 값에는 그레고리오력의 값이 반영되지만 <xref:System.Globalization.UmAlQuraCalendar> 멤버로 반환되는 값에는 우말쿠라 달력의 값이 반영됩니다.
+다음 예제에서는 <xref:System.DateTime> 속성과 이러한 속성의 해당 <xref:System.Globalization.Calendar> 메서드 간의 차이점을 보여 줍니다. 이 예제에서 문화권은 아랍어(이집트)이고 현재 달력은 우말쿠라입니다. <xref:System.DateTime> 값은 2011년의 7번째 월에서 15번째 일로 설정되어 있습니다. 변하지 않는 문화권의 규칙을 사용할 경우 동일한 값이 <xref:System.DateTime.ToString%28System.String%2CSystem.IFormatProvider%29?displayProperty=nameWithType> 메서드로 반환되기 때문에 이 값은 그레고리오력 날짜로 해석되는 것이 분명합니다. 현재 문화권의 규칙을 사용하여 서식이 지정된 날짜의 문자열 표현은 우말쿠라 달력의 날짜와 동일한 14/08/32입니다. 그런 다음 `DateTime` 및 `Calendar`의 멤버를 사용하여 <xref:System.DateTime> 값의 일, 월 및 연도를 반환합니다. 각각의 경우에 <xref:System.DateTime> 멤버로 반환되는 값에는 그레고리오력의 값이 반영되지만 <xref:System.Globalization.UmAlQuraCalendar> 멤버로 반환되는 값에는 우말쿠라 달력의 값이 반영됩니다.
 
 [!code-csharp[Conceptual.Calendars#3](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.calendars/cs/datesandcalendars2.cs#3)]
 [!code-vb[Conceptual.Calendars#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.calendars/vb/datesandcalendars2.vb#3)]
 
 ### <a name="instantiating-dates-based-on-a-calendar"></a>달력을 기반으로 날짜 인스턴스화
 
-
-  <xref:System.DateTime> 및 <xref:System.DateTimeOffset> 값은 그레고리오력을 기반으로 하기 때문에 다른 달력에서 일, 월 또는 연도 값을 사용하려면 <xref:System.Globalization.Calendar> 형식의 매개 변수를 포함하는 오버로드된 생성자를 호출하여 날짜 값을 인스턴스화해야 합니다. 특정 달력의 <xref:System.Globalization.Calendar.ToDateTime%2A?displayProperty=nameWithType> 메서드의 오버로드 중 하나를 호출하여 특정 달력의 값을 기반으로 <xref:System.DateTime> 개체를 인스턴스화할 수도 있습니다.
+<xref:System.DateTime> 및 <xref:System.DateTimeOffset> 값은 그레고리오력을 기반으로 하기 때문에 다른 달력에서 일, 월 또는 연도 값을 사용하려면 <xref:System.Globalization.Calendar> 형식의 매개 변수를 포함하는 오버로드된 생성자를 호출하여 날짜 값을 인스턴스화해야 합니다. 특정 달력의 <xref:System.Globalization.Calendar.ToDateTime%2A?displayProperty=nameWithType> 메서드의 오버로드 중 하나를 호출하여 특정 달력의 값을 기반으로 <xref:System.DateTime> 개체를 인스턴스화할 수도 있습니다.
 
 다음 예제에서는 <xref:System.DateTime> 개체를 <xref:System.Globalization.HebrewCalendar> 생성자에 전달하여 하나의 <xref:System.DateTime> 값을 인스턴스화하고 <xref:System.DateTime> 메서드를 호출하여 두 번째 <xref:System.Globalization.HebrewCalendar.ToDateTime%28System.Int32%2CSystem.Int32%2CSystem.Int32%2CSystem.Int32%2CSystem.Int32%2CSystem.Int32%2CSystem.Int32%2CSystem.Int32%29?displayProperty=nameWithType> 값을 인스턴스화합니다. 두 값은 히브리식 달력에서 동일한 값을 사용하여 만들어졌기 때문에 <xref:System.DateTime.Equals%2A?displayProperty=nameWithType> 메서드를 호출하면 두 <xref:System.DateTime> 값이 동일한 것으로 표시됩니다.
 

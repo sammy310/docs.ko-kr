@@ -5,17 +5,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: b54f491d-196b-4279-876c-76b83ec0442c
-ms.openlocfilehash: 4d3f81039fc9d4447816901c55ad0af5e501dc2c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 33f69f749934e724ee187aee2e3544f232a1b45d
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54668849"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58463932"
 ---
 # <a name="transport-security-with-basic-authentication"></a>기본 인증을 사용하는 전송 보안
 다음 그림에는 Windows Communication Foundation (WCF) 서비스 및 클라이언트를 보여 줍니다. 서버에 SSL(Secure Sockets Layer)에 사용할 유효한 X.509 인증서가 있어야 하며 클라이언트에서 서버의 인증서를 신뢰해야 합니다. 또한 웹 서비스에는 이미 사용할 수 있는 SSL 구현이 있습니다. 자세한 내용은 기본 인증을 사용 하는 방법에 대 한 인터넷 정보 서비스 (IIS)에 대해서 [ https://go.microsoft.com/fwlink/?LinkId=83822 ](https://go.microsoft.com/fwlink/?LinkId=83822)합니다.  
   
- ![전송 보안 기본 인증을 사용 하 여](../../../../docs/framework/wcf/feature-details/media/securedbyusername.gif "SecuredbyUsername")  
+ ![기본 인증을 사용 하 여 전송 보안을 보여 주는 스크린샷.](./media/transport-security-with-basic-authentication/transport-security-basic-authentication.gif)  
   
 |특성|설명|  
 |--------------------|-----------------|  
@@ -80,7 +80,7 @@ ms.locfileid: "54668849"
  [!code-csharp[C_SecurityScenarios#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#2)]
  [!code-vb[C_SecurityScenarios#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#2)]  
   
-### <a name="configuration"></a>구성  
+### <a name="configuration"></a>구성하기  
  다음 코드에서는 클라이언트 구성을 보여 줍니다.  
   
 > [!NOTE]

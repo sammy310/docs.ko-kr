@@ -9,12 +9,12 @@ helpviewer_keywords:
 - controls [WPF], layout system
 - layout system [WPF]
 ms.assetid: 3eecdced-3623-403a-a077-7595453a9221
-ms.openlocfilehash: 4c114d7ed22ac01b69f9ad77a69b4089f574c13f
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 4c967bf34c66cd2dcc4365a2a3ec214c9bac5623
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57369853"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58464569"
 ---
 # <a name="layout"></a>레이아웃
 이 항목에서는 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 레이아웃 시스템에 대해 설명합니다. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]에서 사용자 인터페이스를 만들려면 언제, 어떻게 레이아웃을 계산해야 하는지를 이해해야 합니다.  
@@ -41,7 +41,7 @@ ms.locfileid: "57369853"
   
  다음 그림에서는 간단한 레이아웃을 보여 줍니다.  
   
- ![경계 상자가 없이 겹쳐 놓은 일반적인 Grid](./media/boundingbox1.png "boundingbox1")  
+ ![경계 상자가 없는 일반적인 grid를 보여주는 스크린샷.](./media/layout/grid-no-bounding-box-superimpose.png)  
   
  다음 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]을 사용하여 이 레이아웃을 실현할 수 있습니다.  
   
@@ -49,7 +49,7 @@ ms.locfileid: "57369853"
   
  단일 <xref:System.Windows.Controls.TextBlock> 요소 내에 호스팅되는 <xref:System.Windows.Controls.Grid>합니다. 텍스트를 채우는 첫 번째 열에 할당된 된 공간 왼쪽 위 모퉁이 <xref:System.Windows.Controls.TextBlock> 실제로 훨씬 큽니다. 경계 상자 <xref:System.Windows.FrameworkElement> 를 사용 하 여 검색할 수는 <xref:System.Windows.Controls.Primitives.LayoutInformation.GetLayoutSlot%2A> 메서드. 다음 그림에서는 경계 상자는 <xref:System.Windows.Controls.TextBlock> 요소입니다.  
   
- ![이제 TextBlock의 경계 상자가 표시됨](./media/boundingbox2.png "boundingbox2")  
+ ![이제 TextBlock 경계 상자는 표시를 보여 주는 스크린샷.](./media/layout/visible-textblock-bounding-box.png)  
   
  노란색 사각형에 할당된 된 공간에 표시 된 대로 <xref:System.Windows.Controls.TextBlock> 요소인 것 보다 실제로 훨씬 큽니다. 추가 요소에 추가 되는 <xref:System.Windows.Controls.Grid>,이 할당이 축소 정도 형식과 추가 되는 요소의 크기에 따라 확장 합니다.  
   

@@ -2,12 +2,12 @@
 title: WCF 서비스 및 ASP.NET
 ms.date: 03/30/2017
 ms.assetid: b980496a-f0b0-4319-8e55-a0f0fa32da70
-ms.openlocfilehash: 837d03bbbac01be48d03c9170fc0a9a36c970da0
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 80f4f9a473f223928981ee3f0c2e9f2464cbafaf
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55282609"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58463477"
 ---
 # <a name="wcf-services-and-aspnet"></a>WCF 서비스 및 ASP.NET
 
@@ -17,7 +17,7 @@ ms.locfileid: "55282609"
 
 인터넷 정보 서비스 (IIS)에서 호스팅되는 WCF 서비스를 사용 하 여 찾을 수 있습니다. ASPX 페이지 및 단일의 공통 응용 프로그램 도메인 내에서 ASMX 웹 서비스입니다. ASP.NET은 AppDomain 관리 및 WCF 및 ASP.NET HTTP 런타임 모두에 대 한 동적 컴파일과 같은 공통 인프라 서비스를 제공합니다. WCF에 대 한 기본 구성은 side-by-side-ASP.NET을 사용 하 여 합니다.
 
-![WCF 서비스 및 ASP.NET: 상태 공유](./media/hostingwcfwithaspnet.gif "HostingWCFwithASPNET")
+![WCF 서비스와 ASP.NET을 보여 주는 스크린 샷: 상태를 공유 합니다.](./media/wcf-services-and-aspnet/windows-communication-foundation-services-asp-dotnet-configuration.gif)
 
 ASP.NET HTTP 런타임은 ASP.NET 요청을 처리 하지만 이러한 서비스는 ASP.NET 콘텐츠는 동일한 AppDomain에서 호스트 하는 경우에 WCF 서비스에 대 한 요청 처리에 참여 하지 않습니다. 대신 WCF 서비스 모델을 WCF 서비스에 주소가 지정 된 메시지를 차단 하 고 WCF 전송/채널 스택을 통해 라우트 합니다.
 

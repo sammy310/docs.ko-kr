@@ -8,16 +8,16 @@ helpviewer_keywords:
 ms.assetid: e62056c6-b351-40eb-afc0-cc13fc44e45e
 author: guardrex
 ms.author: mairaw
-ms.openlocfilehash: 232ad7527e65fd38fa471cccc917752aef766a88
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: bfc2a916e37ac27d45746eb268912b3752f4d80f
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54628840"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58464439"
 ---
 # <a name="custom-element-for-singletagsectionhandler"></a>SingleTagSectionHandler에 대 한 사용자 지정 요소
 
-정의한 사용자 지정 구성 섹션에서 설정을 정의 <section> 사용 하 여 요소를 <xref:System.Configuration.SingleTagSectionHandler> 클래스입니다.
+정의한 사용자 지정 구성 섹션에서 설정을 정의 \<섹션 > 사용 하 여 요소를 <xref:System.Configuration.SingleTagSectionHandler> 클래스입니다.
 
 [**\<configuration>**](~/docs/framework/configure-apps/file-schema/configuration-element.md)   
 &nbsp;&nbsp;*\<sectionName>*

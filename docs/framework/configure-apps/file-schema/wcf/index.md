@@ -2,12 +2,6 @@
 title: WCF 구성 스키마
 ms.date: 03/30/2017
 ms.assetid: c282aeb5-91f0-4522-8e2f-704c1ef3651f
-ms.openlocfilehash: ae9e660ee5c4163487e953077df8782955f90ef5
-ms.sourcegitcommit: b8ace47d839f943f785b89e2fff8092b0bf8f565
-ms.translationtype: MT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "55675363"
 ---
 # <a name="wcf-configuration-schema"></a>WCF 구성 스키마
 Windows Communication Foundation (WCF) 구성 요소를 사용 하 여 WCF 서비스 및 클라이언트 응용 프로그램을 구성할 수 있습니다. [구성 편집기 도구(SvcConfigEditor.exe)](../../../../../docs/framework/wcf/configuration-editor-tool-svcconfigeditor-exe.md)를 사용하여 클라이언트 및 서비스에 대한 구성 파일을 만들고 수정할 수 있습니다. 구성 파일은 XML 형식이므로 텍스트 편집기를 사용하여 구성 파일을 수동으로 편집하려면 XML에 익숙해야 합니다. 그렇지 않으면 찾을 수 없는 XML 요소 태그나 특성과 같은 문제가 발생할 수 있습니다. XML 요소 태그 및 속성이 대소문자를 구분하기 때문입니다.  
@@ -18,9 +12,9 @@ Windows Communication Foundation (WCF) 구성 요소를 사용 하 여 WCF 서�
   
  [구성 설정 잠금](https://go.microsoft.com/fwlink/?LinkId=95338)  
   
- 이 섹션에서는 각 구성 항목의 가능한 모든 값 및 이 값이 다른 WCF 구성 요소와 상호 작용하는 방법에 대해 설명합니다. 다음 맵에서는 WCF 구성 스키마를 보여 줍니다.  
+ 이 섹션에서는 각 구성 항목의 가능한 모든 값 및 이 값이 다른 WCF 구성 요소와 상호 작용하는 방법에 대해 설명합니다. 다음 맵에 WCF 구성 스키마를 보여 줍니다.  
   
- ![WCF 구성 스키마](../../../../../docs/framework/configure-apps/file-schema/wcf/media/orcasconfigschema.gif "OrcasConfigSchema")  
+ ![WCF 구성 스키마를 보여 주는 다이어그램입니다.](./media/index/windows-communication-foundation-configuration-schema.gif)  
   
 > [!CAUTION]
 >  응용 프로그램 구성 파일 (app.config) 사용 하 여 적절 한 나열 ACL (Access Control) 잠재적 보안 위협을 방지 하기 위해에서 WCF 구성 섹션을 보호 해야 합니다.  예를 들어, 적절한 사용자만이 응용 프로그램 바인딩의 보안 설정 또는 서비스에 대한 구성 파일의 서비스 모델 섹션에 액세스하거나 이를 수정할 수 있도록 해야 합니다.  

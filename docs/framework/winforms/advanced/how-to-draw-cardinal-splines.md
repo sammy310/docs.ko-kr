@@ -9,12 +9,12 @@ helpviewer_keywords:
 - drawing [Windows Forms], cardinal splines
 - graphics [Windows Forms], cardinal splines
 ms.assetid: a4a41e80-4461-4b47-b6bd-2c5e68881994
-ms.openlocfilehash: 687143273a07acba4b4d60acb1be25eee165b91d
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 0f5c7a8555130e884b641648d1ffc9865f44dc1e
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57710487"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58464699"
 ---
 # <a name="how-to-draw-cardinal-splines"></a>방법: 카디널 스플라인 그리기
 카디널 스플라인 곡선이 요소의 지정 된 집합을 통해 원활 하 게 전달 합니다. 카디널 스플라인 그리기를 만들려면를 <xref:System.Drawing.Graphics> 개체 및 배열 요소의 주소를 전달 합니다 <xref:System.Drawing.Graphics.DrawCurve%2A> 메서드.  
@@ -23,7 +23,7 @@ ms.locfileid: "57710487"
   
 -   다음 예제에서는 5 개의 지정 된 지점을 통과 하는 종 모양의 카디널 스플라인을 그립니다. 다음 그림에서는 5 점과 곡선을 보여 줍니다.  
   
-     ![카디널 스플라인](./media/cardinalspline1.png "CardinalSpline1")  
+     ![종 모양의 카디널 스플라인 보여 주는 다이어그램입니다.](./media/how-to-draw-cardinal-splines/bell-shaped-cardinal-spline.png)  
   
  [!code-csharp[System.Drawing.ConstructingDrawingCurves#21](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.ConstructingDrawingCurves/CS/Class1.cs#21)]
  [!code-vb[System.Drawing.ConstructingDrawingCurves#21](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.ConstructingDrawingCurves/VB/Class1.vb#21)]  
@@ -32,7 +32,7 @@ ms.locfileid: "57710487"
   
 -   사용 합니다 <xref:System.Drawing.Graphics.DrawClosedCurve%2A> 메서드는 <xref:System.Drawing.Graphics> 클래스는 폐쇄형된 카디널 스플라인을 그립니다. 폐쇄형된 카디널 스플라인 곡선 배열의 마지막 요소를 계속 하 고 배열의 첫 번째 지점과 연결 합니다. 다음 예제에서는 6 개의 지정 된 지점을 통과 하는 폐쇄형된 카디널 스플라인을 그립니다. 다음 그림에서는 6 포인트에 따라 닫힌된 스플라인 보여 줍니다.  
   
- ![카디널 스플라인](./media/cardinalspline1a.png "CardinalSpline1A")  
+ ![폐쇄형된 카디널 스플라인을 보여 주는 다이어그램입니다.](./media/how-to-draw-cardinal-splines/closed-cardinal-spine.png)  
   
  [!code-csharp[System.Drawing.ConstructingDrawingCurves#22](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.ConstructingDrawingCurves/CS/Class1.cs#22)]
  [!code-vb[System.Drawing.ConstructingDrawingCurves#22](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.ConstructingDrawingCurves/VB/Class1.vb#22)]  
@@ -41,7 +41,7 @@ ms.locfileid: "57710487"
   
 -   카디널 스플라인의 장력 인수를 전달 하 여 굴곡 방법을 변경 하 여 <xref:System.Drawing.Graphics.DrawCurve%2A> 메서드. 다음 예제에서는 동일한 점 집합을 통과 하는 세 개의 카디널 스플라인을 그립니다. 다음 그림에서는 세 가지 스플라인 해당 장력 값과 함께 보여 줍니다. 참고 장력 0 인 점 직선으로 연결 됩니다.  
   
- ![카디널 스플라인](./media/cardinalspline2.png "CardinalSpline2")  
+ ![카디널 스플라인 세 가지를 보여 주는 다이어그램입니다.](./media/how-to-draw-cardinal-splines/three-cardinal-splines.png)  
   
  [!code-csharp[System.Drawing.ConstructingDrawingCurves#23](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.ConstructingDrawingCurves/CS/Class1.cs#23)]
  [!code-vb[System.Drawing.ConstructingDrawingCurves#23](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.ConstructingDrawingCurves/VB/Class1.vb#23)]  

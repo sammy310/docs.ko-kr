@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: f2d34e43-fa8b-46d2-91cf-d2960e13e16b
-ms.openlocfilehash: a7107e6e0bfdb948b584b5cbd57eafc3aff1bd59
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 19be92acb16ffb5e98eb39ba36a406d66e58d97b
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54569377"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58464023"
 ---
 # <a name="how-to-create-a-custom-client-identity-verifier"></a>방법: 사용자 지정 클라이언트 Id 검증 도구 만들기
 합니다 *identity* 기능 Windows Communication Foundation (WCF)의 클라이언트에 필요한 id 서비스를 미리 지정할 수 있습니다. 서버가 클라이언트에 자신을 인증할 때마다 이 ID와 비교하여 ID가 검사됩니다. (Id 및 작동 방법의 설명에 대 한 참조 [서비스 Id 및 인증](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md).)  
@@ -37,7 +37,7 @@ ms.locfileid: "54569377"
   
 3.  `CheckAccess` 메서드는 두 개의 매개 변수를 사용합니다. 하나는 <xref:System.ServiceModel.EndpointIdentity> 클래스의 인스턴스이고 다른 하나는 <xref:System.IdentityModel.Policy.AuthorizationContext> 클래스의 인스턴스입니다.  
   
-     메서드 구현에서는 <xref:System.IdentityModel.Policy.AuthorizationContext.ClaimSets%2A> 클래스의 <xref:System.IdentityModel.Policy.AuthorizationContext> 속성에서 반환된 클레임의 컬렉션을 검사한 다음 필요한 경우 인증 검사를 수행합니다. 이 예에서는 먼저 형식이 "고유 이름"인 클레임을 찾은 다음 <xref:System.ServiceModel.EndpointIdentity>의 확장(`OrgEndpointIdentity`)과 이름을 비교합니다.  
+     메서드 구현에서는 <xref:System.IdentityModel.Policy.AuthorizationContext.ClaimSets%2A> 클래스의 <xref:System.IdentityModel.Policy.AuthorizationContext> 속성에서 반환된 클레임의 컬렉션을 검사한 다음 필요한 경우 인증 검사를 수행합니다. 이 예에서는 먼저 형식이 "고유 이름"인 클레임을 찾은 다음 <xref:System.ServiceModel.EndpointIdentity>의 확장명(`OrgEndpointIdentity`)과 이름을 비교합니다.  
   
      [!code-csharp[c_HowToSetCustomClientIdentity#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howtosetcustomclientidentity/cs/source.cs#1)]
      [!code-vb[c_HowToSetCustomClientIdentity#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_howtosetcustomclientidentity/vb/source.vb#1)]  
@@ -86,5 +86,4 @@ ms.locfileid: "54569377"
 - <xref:System.ServiceModel.EndpointIdentity>
 - <xref:System.ServiceModel.Security.IdentityVerifier>
 - [서비스 ID 샘플](../../../../docs/framework/wcf/samples/service-identity-sample.md)
-- [권한 부여 정책](../../../../docs/framework/wcf/samples/authorization-policy.md)
 - [권한 부여 정책](../../../../docs/framework/wcf/samples/authorization-policy.md)

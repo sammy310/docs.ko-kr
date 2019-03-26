@@ -12,17 +12,16 @@ helpviewer_keywords:
 - classes, overriding
 - overriding classes
 ms.assetid: 5cc1c0b0-f94b-4525-9a41-88a582cd6668
-ms.openlocfilehash: 0f2fe865019b24263f76595654455df7b597c1d8
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: d11fd0353faccdb19e1a39b7a57df9fe3bca3190
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56968532"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58465479"
 ---
 # <a name="how-to-specify-an-alternate-element-name-for-an-xml-stream"></a>방법: XML Stream에 대 한 대체 요소 이름 지정
   
-<xref:System.Xml.Serialization.XmlSerializer>를 사용하면 동일한 클래스 집합을 가진 XML 스트림을 두 개 이상 생성할 수 있습니다. 두 개의 서로 다른 XML Web services에 약간만 다른 동일한 기본 정보가 필요한 경우 이런 작업이 필요할 수 있습니다. 예를 들어 책 주문을 처리하기 때문에 둘 모두에 ISBN 번호가 필요한 두 개의 XML Web services를 가정해 보겠습니다. 한 서비스는 \<ISBN> 태그를 사용하고 다른 서비스는 \<BookID> 태그를 사용합니다. 
-  `Book`이라는 필드가 포함된 `ISBN`이라는 클래스가 있습니다. `Book` 클래스의 인스턴스가 serialize될 때 기본적으로 멤버 이름(ISBN)을 태그 요소 이름으로 사용합니다. 첫 번째 XML Web services의 경우에는 예상된 동작입니다. 하지만 XML 스트림을 두 번째 XML Web services로 전송하려면 태그의 요소 이름이 `BookID`가 되도록 serialization을 재정의해야 합니다.  
+<xref:System.Xml.Serialization.XmlSerializer>를 사용하면 동일한 클래스 집합을 가진 XML 스트림을 두 개 이상 생성할 수 있습니다. 두 개의 서로 다른 XML Web services에 약간만 다른 동일한 기본 정보가 필요한 경우 이런 작업이 필요할 수 있습니다. 예를 들어 책 주문을 처리하기 때문에 둘 모두에 ISBN 번호가 필요한 두 개의 XML Web services를 가정해 보겠습니다. 한 서비스는 \<ISBN> 태그를 사용하고 다른 서비스는 \<BookID> 태그를 사용합니다. `Book`이라는 필드가 포함된 `ISBN`이라는 클래스가 있습니다. `Book` 클래스의 인스턴스가 serialize될 때 기본적으로 멤버 이름(ISBN)을 태그 요소 이름으로 사용합니다. 첫 번째 XML Web services의 경우에는 예상된 동작입니다. 하지만 XML 스트림을 두 번째 XML Web services로 전송하려면 태그의 요소 이름이 `BookID`가 되도록 serialization을 재정의해야 합니다.  
   
 ## <a name="to-create-an-xml-stream-with-an-alternate-element-name"></a>대체 요소 이름을 사용하여 XML 스트림을 만들려면  
   
@@ -40,8 +39,7 @@ ms.locfileid: "56968532"
   
 7.  `XmlSerializer`로 `XmlAttributeOverrides` 클래스의 인스턴스를 만듭니다.  
   
-8.  
-  `Book` 클래스의 인스턴스를 만들고 이를 serialize 또는 deserialize합니다.  
+8.  `Book` 클래스의 인스턴스를 만들고 이를 serialize 또는 deserialize합니다.  
   
 ## <a name="example"></a>예제  
   
@@ -101,5 +99,4 @@ public class SerializeOverride()
 - [XML 및 SOAP serialization](../../../docs/standard/serialization/xml-and-soap-serialization.md)
 - <xref:System.Xml.Serialization.XmlSerializer>
 - [방법: 개체 serialize](../../../docs/standard/serialization/how-to-serialize-an-object.md)
-- [방법: 개체 deserialize](../../../docs/standard/serialization/how-to-deserialize-an-object.md)
 - [방법: 개체 deserialize](../../../docs/standard/serialization/how-to-deserialize-an-object.md)

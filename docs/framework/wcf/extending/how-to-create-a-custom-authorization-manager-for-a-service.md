@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Windows Communication Foundation, extending
 - OperationRequirement class
 ms.assetid: 6214afde-44c1-4bf5-ba07-5ad6493620ea
-ms.openlocfilehash: 64eb44c948f669ea5364cc38c7416fdd12cdabd6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 571c1d66bcf1ea62972eb1be3fd694964581db38
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54573951"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58465141"
 ---
 # <a name="how-to-create-a-custom-authorization-manager-for-a-service"></a>방법: 서비스에 대 한 사용자 지정 권한 부여 관리자 만들기
 Windows Communication Foundation (WCF)에서 Id 모델 인프라를 확장할 수 있는 클레임 기반 권한 부여 모델을 지원합니다. 클레임은 토큰에서 추출되어 사용자 지정 권한 부여 정책에 의해 선택적으로 처리된 다음,<xref:System.IdentityModel.Policy.AuthorizationContext>에 배치됩니다. 권한 부여 관리자는 <xref:System.IdentityModel.Policy.AuthorizationContext>에서 클레임을 검사하여 권한 부여 결정을 내립니다.  
@@ -119,5 +119,4 @@ Windows Communication Foundation (WCF)에서 Id 모델 인프라를 확장할 �
   
 ## <a name="see-also"></a>참고자료
 - <xref:System.ServiceModel.ServiceAuthorizationManager>
-- [권한 부여 정책](../../../../docs/framework/wcf/samples/authorization-policy.md)
 - [권한 부여 정책](../../../../docs/framework/wcf/samples/authorization-policy.md)

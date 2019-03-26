@@ -73,8 +73,7 @@ Windows 운영 체제를 비롯한 많은 응용 프로그램과 운영 체제�
 [!code-csharp[Conceptual.Globalization#18](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.globalization/cs/search1.cs#18)]
 [!code-vb[Conceptual.Globalization#18](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.globalization/vb/search1.vb#18)]
 
-
-  <xref:System.String.IndexOf%28System.String%2CSystem.StringComparison%29?displayProperty=nameWithType> 또는 <xref:System.String.LastIndexOf%28System.String%2CSystem.StringComparison%29?displayProperty=nameWithType> 메서드와 같이 <xref:System.StringComparison> 매개 변수를 포함하는 오버로드를 호출하면 이 예제(다른 결과를 반환하는 메서드의 두 가지 유사한 오버로드에 대한 호출)의 모호성을 피할 수 있습니다.
+<xref:System.String.IndexOf%28System.String%2CSystem.StringComparison%29?displayProperty=nameWithType> 또는 <xref:System.String.LastIndexOf%28System.String%2CSystem.StringComparison%29?displayProperty=nameWithType> 메서드와 같이 <xref:System.StringComparison> 매개 변수를 포함하는 오버로드를 호출하면 이 예제(다른 결과를 반환하는 메서드의 두 가지 유사한 오버로드에 대한 호출)의 모호성을 피할 수 있습니다.
 
 하지만 검색에 항상 문화권을 구분하지는 않습니다. 검색의 목적이 보안 결정을 내리거나 리소스에 대한 액세스를 허용하거나 허용하지 않는 것이라면, 비교는 다음 섹션의 설명처럼 서수여야 합니다.
 
@@ -233,8 +232,7 @@ Windows 운영 체제를 비롯한 많은 응용 프로그램과 운영 체제�
 
 ### <a name="perform-date-and-time-arithmetic"></a>날짜 및 시간 연산 수행
 
-
-  <xref:System.DateTime> 및 <xref:System.DateTimeOffset> 형식 모두 산술 연산을 지원합니다. 두 날짜 값 사이의 차이를 계산하거나 날짜 값에서 특정한 시간 간격을 빼거나 더할 수 있습니다. 하지만 날짜 및 시간 값에 대한 산술 연산은 표준 시간대 및 표준 시간대 조정 규칙을 감안하지 않습니다. 이 때문에, 순간을 나타내는 값에 대한 날짜 및 시간 연산은 부정확한 결과를 반환할 수 있습니다.
+<xref:System.DateTime> 및 <xref:System.DateTimeOffset> 형식 모두 산술 연산을 지원합니다. 두 날짜 값 사이의 차이를 계산하거나 날짜 값에서 특정한 시간 간격을 빼거나 더할 수 있습니다. 하지만 날짜 및 시간 값에 대한 산술 연산은 표준 시간대 및 표준 시간대 조정 규칙을 감안하지 않습니다. 이 때문에, 순간을 나타내는 값에 대한 날짜 및 시간 연산은 부정확한 결과를 반환할 수 있습니다.
 
 예를 들어, 태평양 표준시는 3월 둘째 주 일요일 즉, 2013년 3월 10일에 태평양 일광 절약 시간으로 전환됩니다. 다음 예제에 나와 있듯이 태평양 표준 시간대의 시스템상 시간인 2013년 3월 9일 오전 10시 30분의 48시간 이후인 날짜 및 시간을 계산하면 그 결과가 2013년 3월 11일 오전 10시 30분으로, 중간의 시간대 조정이 고려되지 않습니다.
 
@@ -303,8 +301,7 @@ Windows 운영 체제를 비롯한 많은 응용 프로그램과 운영 체제�
 
 - 사용자의 문화권과 상관없이 동일한 사용자 지정 서식 문자열을 사용하여 숫자의 문자열 표현을 저장하고 구문 분석합니다.
 
-- 
-  <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType> 속성에 의해 반환되는 고정 문화권의 서식 규칙을 사용하여 숫자를 문자열로 저장합니다.
+- <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType> 속성에 의해 반환되는 고정 문화권의 서식 규칙을 사용하여 숫자를 문자열로 저장합니다.
 
 - 숫자를 이진 형식이 아닌 문자열 형식으로 serialize합니다.
 
@@ -328,17 +325,13 @@ Windows 운영 체제를 비롯한 많은 응용 프로그램과 운영 체제�
 
 .NET에서 <xref:System.Globalization.CultureInfo> 클래스는 특정 문화권 또는 국가를 나타냅니다. 이들 속성 중 일부는 문화의 일부 측면에 대한 구체적인 정보를 제공하는 개체를 반환합니다.
 
-- 
-  <xref:System.Globalization.CultureInfo.CompareInfo%2A?displayProperty=nameWithType> 속성은 문화권에서 문자열을 비교하고 정렬하는 방법에 대한 정보를 포함하는 <xref:System.Globalization.CompareInfo> 개체를 반환합니다.
+- <xref:System.Globalization.CultureInfo.CompareInfo%2A?displayProperty=nameWithType> 속성은 문화권에서 문자열을 비교하고 정렬하는 방법에 대한 정보를 포함하는 <xref:System.Globalization.CompareInfo> 개체를 반환합니다.
 
-- 
-  <xref:System.Globalization.CultureInfo.DateTimeFormat%2A?displayProperty=nameWithType> 속성은 날짜 및 시간 데이터의 서식 지정에 사용되는 문화권별 정보를 제공하는 <xref:System.Globalization.DateTimeFormatInfo> 개체를 반환합니다.
+- <xref:System.Globalization.CultureInfo.DateTimeFormat%2A?displayProperty=nameWithType> 속성은 날짜 및 시간 데이터의 서식 지정에 사용되는 문화권별 정보를 제공하는 <xref:System.Globalization.DateTimeFormatInfo> 개체를 반환합니다.
 
-- 
-  <xref:System.Globalization.CultureInfo.NumberFormat%2A?displayProperty=nameWithType> 속성은 숫자 데이터의 서식 지정에 사용되는 문화권별 정보를 제공하는 <xref:System.Globalization.NumberFormatInfo> 개체를 반환합니다.
+- <xref:System.Globalization.CultureInfo.NumberFormat%2A?displayProperty=nameWithType> 속성은 숫자 데이터의 서식 지정에 사용되는 문화권별 정보를 제공하는 <xref:System.Globalization.NumberFormatInfo> 개체를 반환합니다.
 
-- 
-  <xref:System.Globalization.CultureInfo.TextInfo%2A?displayProperty=nameWithType> 속성은 문화권의 쓰기 시스템에 대한 정보를 제공하는 <xref:System.Globalization.TextInfo> 개체를 반환합니다.
+- <xref:System.Globalization.CultureInfo.TextInfo%2A?displayProperty=nameWithType> 속성은 문화권의 쓰기 시스템에 대한 정보를 제공하는 <xref:System.Globalization.TextInfo> 개체를 반환합니다.
 
 일반적으로 특정한 <xref:System.Globalization.CultureInfo> 속성의 값 및 그와 관련된 개체에 대한 가정을 하지 말아야 합니다. 대신, 문화권별 데이터를 변경의 대상으로 봐야 합니다. 그 이유는 다음과 같습니다.
 
