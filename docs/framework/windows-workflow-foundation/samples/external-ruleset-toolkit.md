@@ -113,8 +113,7 @@ Windows Workflow Foundation에 대 한 Visual Studio 추가 기능의 일부인 
 
 5. 샘플을 사용하려면 `RuleSetToolkitUsageSample` 솔루션을 빌드합니다. RuleSet 도구 주 메뉴에서 클릭 **데이터 가져오기** RuleSetToolkitUsageSample 폴더의 DiscountRuleSet.rules 파일을 가리킵니다. 클릭 합니다 **규칙 저장소-저장** 데이터베이스로 가져온된 RuleSet을 저장 하려면 메뉴 옵션입니다.
 
-6. 
-  `PolicyActivities` 어셈블리는 샘플 워크플로 프로젝트에서 참조되므로 `PolicyFromService` 활동이 워크플로에 나타납니다. 그러나 기본적으로 도구 상자에는 나타나지 않습니다. 도구 상자에 추가하려면 다음을 수행합니다.
+6. `PolicyActivities` 어셈블리는 샘플 워크플로 프로젝트에서 참조되므로 `PolicyFromService` 활동이 워크플로에 나타납니다. 그러나 기본적으로 도구 상자에는 나타나지 않습니다. 도구 상자에 추가하려면 다음을 수행합니다.
 
     - 도구 상자를 마우스 오른쪽 단추로 클릭 **선택 항목** (잠시 걸릴 수 있음).
 
