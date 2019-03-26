@@ -27,8 +27,7 @@ protected override void Execute(CodeActivityContext context)
 }
 ```
 
-
-  <xref:System.Activities.Tracking.CustomTrackingRecord>에서 <xref:System.Activities.NativeActivityContext.Track%2A> 메서드를 호출하여 코드 활동에서 `ActivityContext`를 내보냅니다.
+<xref:System.Activities.Tracking.CustomTrackingRecord>에서 <xref:System.Activities.NativeActivityContext.Track%2A> 메서드를 호출하여 코드 활동에서 `ActivityContext`를 내보냅니다.
 
 ## <a name="see-also"></a>참고자료
 

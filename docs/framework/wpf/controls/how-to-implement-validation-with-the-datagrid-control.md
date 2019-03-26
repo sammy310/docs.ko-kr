@@ -59,8 +59,7 @@ ms.locfileid: "57371088"
   
 ### <a name="to-customize-row-validation-feedback"></a>행 유효성 검사 피드백을 사용자 지정 하려면  
   
--   
-  <xref:System.Windows.Controls.DataGrid.RowValidationErrorTemplate%2A?displayProperty=nameWithType> 속성을 설정합니다. 이 속성을 사용 하면 개인에 대 한 행 유효성 검사 피드백을 사용자 지정할 수 있습니다 <xref:System.Windows.Controls.DataGrid> 컨트롤입니다. 암시적 행 스타일을 설정 하 여 여러 컨트롤에 영향을 줄 수도 있습니다는 <xref:System.Windows.Controls.DataGridRow.ValidationErrorTemplate%2A?displayProperty=nameWithType> 속성입니다.  
+-   <xref:System.Windows.Controls.DataGrid.RowValidationErrorTemplate%2A?displayProperty=nameWithType> 속성을 설정합니다. 이 속성을 사용 하면 개인에 대 한 행 유효성 검사 피드백을 사용자 지정할 수 있습니다 <xref:System.Windows.Controls.DataGrid> 컨트롤입니다. 암시적 행 스타일을 설정 하 여 여러 컨트롤에 영향을 줄 수도 있습니다는 <xref:System.Windows.Controls.DataGridRow.ValidationErrorTemplate%2A?displayProperty=nameWithType> 속성입니다.  
   
      다음 예제에서는 기본 행 유효성 검사 의견을 더 잘 보이도록 표시기를 바꿉니다. 사용자가 잘못 된 값을 입력 하는 경우 행 머리글에 흰색 느낌표가 있는 빨간색 원이 나타납니다. 이 행 및 셀 모두 유효성 검사 오류가 발생합니다. 관련된 된 오류 메시지는 도구 설명에 표시 됩니다.  
   

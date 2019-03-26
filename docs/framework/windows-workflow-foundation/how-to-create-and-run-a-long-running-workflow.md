@@ -50,8 +50,7 @@ Windows Workflow Foundation (WF)의 핵심 기능 중 하나는 유지 하 고 �
     > [!NOTE]
     >  했는지 **Create Database** 데이터베이스를 만들기 전에 로컬 서버에 대 한 권한이 있습니다.  
   
-2.  선택 **엽니다**를 **파일** 에서 합니다 **파일** 메뉴. 
-  `C:\Windows\Microsoft.NET\Framework\v4.0.30319\sql\en` 폴더로 이동합니다.  
+2.  선택 **엽니다**를 **파일** 에서 합니다 **파일** 메뉴. `C:\Windows\Microsoft.NET\Framework\v4.0.30319\sql\en` 폴더로 이동합니다.  
   
      다음 두 파일을 선택 하 고 클릭 **열려**합니다.  
   
@@ -162,8 +161,7 @@ Windows Workflow Foundation (WF)의 핵심 기능 중 하나는 유지 하 고 �
     > [!NOTE]
     >  연결 문자열이 다른 경우 해당 데이터베이스를 참조하도록 `connectionString`을 업데이트하세요.  
   
-4.  
-  `WorkflowInstanceId` 클래스에 `WorkflowFormHost` 속성을 추가합니다.  
+4.  `WorkflowInstanceId` 클래스에 `WorkflowFormHost` 속성을 추가합니다.  
   
     ```vb  
     Public ReadOnly Property WorkflowInstanceId() As Guid  
@@ -234,8 +232,7 @@ Windows Workflow Foundation (WF)의 핵심 기능 중 하나는 유지 하 고 �
   
      폼이 로드되면 `SqlWorkflowInstanceStore`가 구성되고 범위 및 워크플로 유형 콤보 상자가 기본값으로 설정되며 지속형 워크플로 인스턴스가 `InstanceId` 콤보 상자에 추가됩니다.  
   
-7.  
-  `SelectedIndexChanged`에 대한 `InstanceId` 처리기를 추가합니다. 처리기를 추가 하려면 전환 **디자인 뷰에서** 폼을 선택 합니다 `InstanceId` 콤보 상자 클릭를 **이벤트** 맨 위에 있는 아이콘을 **속성** 창 및 두 번 클릭 **SelectedIndexChanged**합니다.  
+7.  `SelectedIndexChanged`에 대한 `InstanceId` 처리기를 추가합니다. 처리기를 추가 하려면 전환 **디자인 뷰에서** 폼을 선택 합니다 `InstanceId` 콤보 상자 클릭를 **이벤트** 맨 위에 있는 아이콘을 **속성** 창 및 두 번 클릭 **SelectedIndexChanged**합니다.  
   
     ```vb  
     Private Sub InstanceId_SelectedIndexChanged(sender As Object, e As EventArgs) Handles InstanceId.SelectedIndexChanged  
@@ -813,9 +810,7 @@ Windows Workflow Foundation (WF)의 핵심 기능 중 하나는 유지 하 고 �
   
 ### <a name="BKMK_StartWorkflow"></a> 새 워크플로 시작 하려면  
   
-1.  
-  `Click`에 대한 `NewGame` 처리기를 추가합니다. 처리기를 추가 하려면 전환 **디자인 뷰** 폼을 두 번 클릭 `NewGame`합니다. 
-  `NewGame_Click` 처리기가 추가되고 폼의 뷰가 코드 뷰로 전환됩니다. 이 단추를 클릭할 때마다 새 워크플로가 시작됩니다.  
+1.  `Click`에 대한 `NewGame` 처리기를 추가합니다. 처리기를 추가 하려면 전환 **디자인 뷰** 폼을 두 번 클릭 `NewGame`합니다. `NewGame_Click` 처리기가 추가되고 폼의 뷰가 코드 뷰로 전환됩니다. 이 단추를 클릭할 때마다 새 워크플로가 시작됩니다.  
   
     ```vb  
     Private Sub NewGame_Click(sender As Object, e As EventArgs) Handles NewGame.Click  
@@ -1010,8 +1005,7 @@ Windows Workflow Foundation (WF)의 핵심 기능 중 하나는 유지 하 고 �
   
 ### <a name="BKMK_ResumeWorkflow"></a> 워크플로 다시 시작 하려면  
   
-1.  
-  `Click`에 대한 `EnterGuess` 처리기를 추가합니다. 처리기를 추가 하려면 전환 **디자인 뷰** 폼을 두 번 클릭 `EnterGuess`합니다. 이 단추를 클릭할 때마다 워크플로가 다시 시작됩니다.  
+1.  `Click`에 대한 `EnterGuess` 처리기를 추가합니다. 처리기를 추가 하려면 전환 **디자인 뷰** 폼을 두 번 클릭 `EnterGuess`합니다. 이 단추를 클릭할 때마다 워크플로가 다시 시작됩니다.  
   
     ```vb  
     Private Sub EnterGuess_Click(sender As Object, e As EventArgs) Handles EnterGuess.Click  
@@ -1227,8 +1221,7 @@ Windows Workflow Foundation (WF)의 핵심 기능 중 하나는 유지 하 고 �
   
 ### <a name="BKMK_TerminateWorkflow"></a> 워크플로 종료 하려면  
   
-1.  
-  `Click`에 대한 `QuitGame` 처리기를 추가합니다. 처리기를 추가 하려면 전환 **디자인 뷰** 폼을 두 번 클릭 `QuitGame`합니다. 이 단추를 클릭할 때마다 현재 선택된 워크플로가 종료됩니다.  
+1.  `Click`에 대한 `QuitGame` 처리기를 추가합니다. 처리기를 추가 하려면 전환 **디자인 뷰** 폼을 두 번 클릭 `QuitGame`합니다. 이 단추를 클릭할 때마다 현재 선택된 워크플로가 종료됩니다.  
   
     ```vb  
     Private Sub QuitGame_Click(sender As Object, e As EventArgs) Handles QuitGame.Click  
@@ -1337,8 +1330,7 @@ Windows Workflow Foundation (WF)의 핵심 기능 중 하나는 유지 하 고 �
   
 6.  했는지 **NumberGuessWorkflowHost** 시작 응용 프로그램으로 설정 하 고 Ctrl + f5를 눌러 응용 프로그램을 시작 합니다.  
   
-7.  추측 게임 및 시작을 클릭 하는 워크플로 유형에 대 한 범위를 선택할 **New Game**합니다. 추측 값을 입력 합니다 **추측** 상자 하 고 클릭 **이동** 에 추측을 제출 하려면. 
-  `WriteLine` 활동의 출력이 폼에 표시됩니다.  
+7.  추측 게임 및 시작을 클릭 하는 워크플로 유형에 대 한 범위를 선택할 **New Game**합니다. 추측 값을 입력 합니다 **추측** 상자 하 고 클릭 **이동** 에 추측을 제출 하려면. `WriteLine` 활동의 출력이 폼에 표시됩니다.  
   
 8.  다른 워크플로 유형 및 숫자 범위를 사용 하 여 여러 워크플로 시작, 몇 개의 추측 값을 입력 한에서 선택 하 여 워크플로 간을 전환 합니다 **워크플로 인스턴스 Id** 목록입니다.  
   

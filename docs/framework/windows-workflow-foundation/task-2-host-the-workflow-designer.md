@@ -18,8 +18,7 @@ ms.locfileid: "57708641"
   
 1.  만든 HostingApplication 오픈 프로젝트 [작업 1: 새 Windows Presentation Foundation 응용 프로그램을 만드는](task-1-create-a-new-wpf-app.md)합니다.  
   
-2.  
-  [!INCLUDE[wfd2](../../../includes/wfd2-md.md)]를 쉽게 사용할 수 있도록 창의 크기를 조정합니다. 이 위해 선택 **MainWindow** 디자이너를 표시 하려면 F4 키를 누릅니다.는 **속성** 창에서를 **레이아웃** 섹션을 설정 합니다 **너비** 값을 600으로 하며 **높이** 350 값으로.  
+2.  [!INCLUDE[wfd2](../../../includes/wfd2-md.md)]를 쉽게 사용할 수 있도록 창의 크기를 조정합니다. 이 위해 선택 **MainWindow** 디자이너를 표시 하려면 F4 키를 누릅니다.는 **속성** 창에서를 **레이아웃** 섹션을 설정 합니다 **너비** 값을 600으로 하며 **높이** 350 값으로.  
   
 3.  선택 하 여 표 이름을 설정 합니다 **그리드** 디자이너에서 패널 (안의 상자 클릭를 **MainWindow**) 설정를 **이름** 맨 위에 있는 속성을  **속성** "추가한 다음 grid1" 창입니다.  
   
@@ -100,8 +99,7 @@ ms.locfileid: "57708641"
   
          활동 디자이너를 등록 하는 방법에 대 한 자세한 내용은 참조 하세요. [방법: 사용자 지정 활동 디자이너를 만드는](how-to-create-a-custom-activity-designer.md)합니다.  
   
-    5.  
-  `MainWindow` 클래스 생성자에서 앞에서 선언한 메서드에 호출을 추가하여 디자이너 지원을 위한 메타데이터를 등록하고 <xref:System.Activities.Presentation.WorkflowDesigner>를 만듭니다.  
+    5.  `MainWindow` 클래스 생성자에서 앞에서 선언한 메서드에 호출을 추가하여 디자이너 지원을 위한 메타데이터를 등록하고 <xref:System.Activities.Presentation.WorkflowDesigner>를 만듭니다.  
   
         ```csharp  
         public MainWindow()  

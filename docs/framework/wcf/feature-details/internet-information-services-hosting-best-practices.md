@@ -47,8 +47,7 @@ ms.locfileid: "56333419"
  그러면 user2는 c:\tempForUser1에 있는 /application2에 대한 코드 생성 폴더를 변경할 수 없습니다.  
   
 ## <a name="enabling-asynchronous-processing"></a>비동기 처리 사용  
- 기본적으로 IIS 6.0 및 이전 호스팅된 WCF 서비스에 전송 된 메시지를 동기 방식으로 처리 됩니다. ASP.NET은 자체 스레드 (ASP.NET 작업자 스레드)에서 WCF에 호출 하 고 WCF 다른 스레드를 사용 하 여 요청을 처리 하는 데 키를 누릅니다. WCF는 처리를 완료할 때까지 ASP.NET 작업자 스레드를 보관합니다. 따라서 요청이 동기 방식으로 처리됩니다. -WCF 유지 하지 않으면 ASP.NET 스레드를 처리 하는 동안 요청을 처리 하는 데 필요한 스레드 수가 줄어들기 때문에 확장성이 뛰어난를 사용 하면 요청을 비동기적으로 처리 합니다. 비동기 동작을 사용 하도록 서버를 열고 들어오는 요청을 스로틀할 방법이 없으므로 IIS 6.0을 실행 하는 컴퓨터에 권장 되지 않습니다 *서비스 거부* (DOS) 공격입니다. IIS 7.0부터는 동시 요청 스로틀(`[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\ASP.NET\2.0.50727.0]"MaxConcurrentRequestsPerCpu`)이 도입되었습니다. 이 새 스로틀을 사용하면 비동기 처리를 사용해도 안전합니다.  IIS 7.0에서는 기본적으로 비동기 처리기 및 모듈이 등록되어 있습니다. 이러한 비동기 처리기 및 모듈이 해제되어 있는 경우 응용 프로그램의 Web.config 파일에서 비동기 처리 요청을 사용하도록 수동으로 설정할 수 있습니다. 사용하는 설정은 `aspNetCompatibilityEnabled` 설정에 따라 달라집니다. 
-  `aspNetCompatibilityEnabled`를 `false`로 설정한 경우에는 다음 구성 코드 조각에 나와 있는 것처럼 `System.ServiceModel.Activation.ServiceHttpModule`을 구성하십시오.  
+ 기본적으로 IIS 6.0 및 이전 호스팅된 WCF 서비스에 전송 된 메시지를 동기 방식으로 처리 됩니다. ASP.NET은 자체 스레드 (ASP.NET 작업자 스레드)에서 WCF에 호출 하 고 WCF 다른 스레드를 사용 하 여 요청을 처리 하는 데 키를 누릅니다. WCF는 처리를 완료할 때까지 ASP.NET 작업자 스레드를 보관합니다. 따라서 요청이 동기 방식으로 처리됩니다. -WCF 유지 하지 않으면 ASP.NET 스레드를 처리 하는 동안 요청을 처리 하는 데 필요한 스레드 수가 줄어들기 때문에 확장성이 뛰어난를 사용 하면 요청을 비동기적으로 처리 합니다. 비동기 동작을 사용 하도록 서버를 열고 들어오는 요청을 스로틀할 방법이 없으므로 IIS 6.0을 실행 하는 컴퓨터에 권장 되지 않습니다 *서비스 거부* (DOS) 공격입니다. IIS 7.0부터는 동시 요청 스로틀(`[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\ASP.NET\2.0.50727.0]"MaxConcurrentRequestsPerCpu`)이 도입되었습니다. 이 새 스로틀을 사용하면 비동기 처리를 사용해도 안전합니다.  IIS 7.0에서는 기본적으로 비동기 처리기 및 모듈이 등록되어 있습니다. 이러한 비동기 처리기 및 모듈이 해제되어 있는 경우 응용 프로그램의 Web.config 파일에서 비동기 처리 요청을 사용하도록 수동으로 설정할 수 있습니다. 사용하는 설정은 `aspNetCompatibilityEnabled` 설정에 따라 달라집니다. `aspNetCompatibilityEnabled`를 `false`로 설정한 경우에는 다음 구성 코드 조각에 나와 있는 것처럼 `System.ServiceModel.Activation.ServiceHttpModule`을 구성하십시오.  
   
 ```xml  
 <system.serviceModel>  
@@ -64,8 +63,7 @@ ms.locfileid: "56333419"
     </system.webServer>  
 ```  
   
- 
-  `aspNetCompatibilityEnabled`를 `true`로 설정한 경우에는 다음 구성 코드 조각에 나와 있는 것처럼 `System.ServiceModel.Activation.ServiceHttpHandlerFactory`를 구성하십시오.  
+ `aspNetCompatibilityEnabled`를 `true`로 설정한 경우에는 다음 구성 코드 조각에 나와 있는 것처럼 `System.ServiceModel.Activation.ServiceHttpHandlerFactory`를 구성하십시오.  
   
 ```xml  
 <system.serviceModel>  

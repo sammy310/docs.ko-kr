@@ -73,8 +73,7 @@ ms.locfileid: "57705989"
 
 2.  두 번 클릭 합니다 **Guess Incorrect** 상태 컴퓨터 전환 합니다.
 
-3.  
-  `Text` 활동에서 맨 왼쪽 `WriteLine`의 `If`를 업데이트합니다.
+3.  `Text` 활동에서 맨 왼쪽 `WriteLine`의 `If`를 업데이트합니다.
 
     ```vb
     Guess & " is too low."
@@ -84,8 +83,7 @@ ms.locfileid: "57705989"
     Guess + " is too low."
     ```
 
-4.  
-  `Text` 활동에서 맨 오른쪽 `WriteLine`의 `If`를 업데이트합니다.
+4.  `Text` 활동에서 맨 오른쪽 `WriteLine`의 `If`를 업데이트합니다.
 
     ```vb
     Guess & " is too high."
@@ -101,8 +99,7 @@ ms.locfileid: "57705989"
 
 7.  끌어서를 **WriteLine** 활동에서를 **기본** 부분을 **도구 상자** 놓습니다를 **여기에 작업 놓기 작업** 레이블의 전환입니다.
 
-8.  
-  `Text` 속성 상자에 다음 식을 입력합니다.
+8.  `Text` 속성 상자에 다음 식을 입력합니다.
 
     ```vb
     Guess & " is correct. You guessed it in " & Turns & " turns."
@@ -136,11 +133,9 @@ ms.locfileid: "57705989"
     Guess + " is too high."
     ```
 
-4.  끌어서를 **WriteLine** 활동에서를 **기본형** 섹션을 **도구 상자** 의 놓기 지점에 놓습니다를 `True` 맨 위 작업 `FlowDecision` . 
-  `WriteLine` 활동이 순서도에 추가되고 `True`의 `FlowDecision` 동작에 연결됩니다.
+4.  끌어서를 **WriteLine** 활동에서를 **기본형** 섹션을 **도구 상자** 의 놓기 지점에 놓습니다를 `True` 맨 위 작업 `FlowDecision` . `WriteLine` 활동이 순서도에 추가되고 `True`의 `FlowDecision` 동작에 연결됩니다.
 
-5.  
-  `Text` 속성 상자에 다음 식을 입력합니다.
+5.  `Text` 속성 상자에 다음 식을 입력합니다.
 
     ```vb
     Guess & " is correct. You guessed it in " & Turns & " turns."
@@ -154,8 +149,7 @@ ms.locfileid: "57705989"
 
 1.  **솔루션 탐색기**아래에 있는 합니다 **NumberGuessWorkflowActivities** 프로젝트를 두 번 클릭 **SequentialNumberGuessWorkflow.xaml**합니다.
 
-2.  
-  `Text` 활동에서 맨 왼쪽 `WriteLine`의 `If`를 업데이트합니다.
+2.  `Text` 활동에서 맨 왼쪽 `WriteLine`의 `If`를 업데이트합니다.
 
     ```vb
     Guess & " is too low."
@@ -165,8 +159,7 @@ ms.locfileid: "57705989"
     Guess + " is too low."
     ```
 
-3.  
-  `Text` 활동에서 맨 오른쪽 `WriteLine` 활동의 `If`를 업데이트합니다.
+3.  `Text` 활동에서 맨 오른쪽 `WriteLine` 활동의 `If`를 업데이트합니다.
 
     ```vb
     Guess & " is too high."
@@ -178,8 +171,7 @@ ms.locfileid: "57705989"
 
 4.  끌어서를 **WriteLine** 활동에서를 **기본형** 섹션을 **도구 상자** 후 놓습니다를 **DoWhile** 활동 있도록 합니다  **WriteLine** 루트의 최종 활동이 `Sequence` 활동입니다.
 
-5.  
-  `Text` 속성 상자에 다음 식을 입력합니다.
+5.  `Text` 속성 상자에 다음 식을 입력합니다.
 
     ```vb
     Guess & " is correct. You guessed it in " & Turns & " turns."
@@ -573,8 +565,7 @@ ms.locfileid: "57705989"
 **축, 4 결과적으로 숫자를 추측 합니다.**  
 
     > [!NOTE]
-    >  
-  `WriteLine` 활동에서 업데이트된 텍스트는 표시되지만 이 항목에서 추가된 최종 `WriteLine` 활동의 출력은 표시되지 않습니다. 상태 창은 `PersistableIdle` 처리기에 의해 업데이트되기 때문입니다. 워크플로는 완료 및 최종 활동 후에도 유휴 상태가 되지 않으므로 `PersistableIdle` 처리기가 호출되지 않습니다. 그러나 `Completed` 처리기에 의해 유사한 메시지가 상태 창에 표시됩니다. 필요한 경우 `Completed`에서 텍스트를 추출하여 상태 창에 표시하도록 `StringWriter` 처리기에 코드를 추가할 수 있습니다.
+    >  `WriteLine` 활동에서 업데이트된 텍스트는 표시되지만 이 항목에서 추가된 최종 `WriteLine` 활동의 출력은 표시되지 않습니다. 상태 창은 `PersistableIdle` 처리기에 의해 업데이트되기 때문입니다. 워크플로는 완료 및 최종 활동 후에도 유휴 상태가 되지 않으므로 `PersistableIdle` 처리기가 호출되지 않습니다. 그러나 `Completed` 처리기에 의해 유사한 메시지가 상태 창에 표시됩니다. 필요한 경우 `Completed`에서 텍스트를 추출하여 상태 창에 표시하도록 `StringWriter` 처리기에 코드를 추가할 수 있습니다.
 
 3.  Windows 탐색기를 열고로 이동 합니다 **NumberGuessWorkflowHost\bin\debug** 폴더 (또는 **bin\release** 프로젝트 설정에 따라) 해당 하는 메모장을 사용 하 여 추적 파일을 엽니다 완료 된 워크플로. 기록해 수행 하지 않았다면를 `InstanceId`를 사용 하 여 올바른 추적 파일을 식별할 수 있습니다 합니다 **수정한 날짜** Windows 탐색기에서 정보.
 
