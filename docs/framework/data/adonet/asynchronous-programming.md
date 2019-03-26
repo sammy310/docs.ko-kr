@@ -23,19 +23,16 @@ ms.locfileid: "57846131"
 
 3. <xref:System.Data.SqlClient.SqlCommand.BeginExecuteXmlReader%2A?displayProperty=nameWithType>
 
-
-  [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)]에서 이 기능은 SqlClient에 남아 있습니다.
+[!INCLUDE[net_v45](../../../../includes/net-v45-md.md)]에서 이 기능은 SqlClient에 남아 있습니다.
 
 > [!TIP]
 > 부터 합니다 [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)], 이러한 레거시 메서드에 더 이상 필요 합니다. `Asynchronous Processing=true` 연결 문자열에 없습니다.
 
-## <a name="asynchronous-programming-features-added-in-includenetv45includesnet-v45-mdmd"></a>
-  [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)]에 추가된 비동기 프로그래밍 기능
+## <a name="asynchronous-programming-features-added-in-includenetv45includesnet-v45-mdmd"></a>[!INCLUDE[net_v45](../../../../includes/net-v45-md.md)]에 추가된 비동기 프로그래밍 기능
 
 새로운 비동기 프로그래밍 기능에서는 코드를 비동기화하는 간단한 기술을 제공합니다.
 
-
-  [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)]에서 도입된 비동기 프로그래밍 기능에 대한 자세한 내용은 다음을 참조하세요.
+[!INCLUDE[net_v45](../../../../includes/net-v45-md.md)]에서 도입된 비동기 프로그래밍 기능에 대한 자세한 내용은 다음을 참조하세요.
 
 - [C#의 비동기 프로그래밍](../../../csharp/async.md)
 
@@ -49,16 +46,14 @@ ms.locfileid: "57846131"
 
 이제 콜백을 사용하거나 코드를 분할하지 않고도 여러 메서드나 람다 식에서 비동기 메서드를 호출할 수 있습니다.
 
-`async` 한정자는 메서드가 비동기 메서드임을 나타냅니다. 
-  `async` 메서드를 호출하면 작업이 반환됩니다. 경우는 `await` 연산자가 작업에 적용 되어, 현재 메서드가 즉시 종료 됩니다. 작업이 끝나면 동일한 메서드에서 실행이 재개됩니다.
+`async` 한정자는 메서드가 비동기 메서드임을 나타냅니다. `async` 메서드를 호출하면 작업이 반환됩니다. 경우는 `await` 연산자가 작업에 적용 되어, 현재 메서드가 즉시 종료 됩니다. 작업이 끝나면 동일한 메서드에서 실행이 재개됩니다.
 
 > [!WARNING]
 > 응용 프로그램에서 `Context Connection` 연결 문자열 키워드도 사용하는 경우에는 비동기 호출이 지원되지 않습니다.
 
 `async` 메서드를 호출할 때는 추가 스레드가 할당되지 않습니다. 완료 시 기존 I/O 완료 스레드를 잠시 사용할 수 있습니다.
 
-
-  [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)]에서는 비동기 프로그래밍을 지원하기 위해 다음 메서드가 추가되었습니다.
+[!INCLUDE[net_v45](../../../../includes/net-v45-md.md)]에서는 비동기 프로그래밍을 지원하기 위해 다음 메서드가 추가되었습니다.
 
 - <xref:System.Data.Common.DbConnection.OpenAsync%2A?displayProperty=nameWithType>
 
@@ -645,8 +640,7 @@ namespace SqlBulkCopyAsyncCodeSample {
 
 ## <a name="asynchronously-using-multiple-commands-with-mars"></a>MARS를 사용하여 여러 명령을 비동기적으로 사용
 
-이 예제에서는 단일 연결을 엽니다는 **AdventureWorks** 데이터베이스입니다. 
-  <xref:System.Data.SqlClient.SqlCommand> 개체를 사용하면 <xref:System.Data.SqlClient.SqlDataReader>가 만들어집니다. 판독기를 사용하면 두 번째 <xref:System.Data.SqlClient.SqlDataReader>가 열리고 첫 번째 <xref:System.Data.SqlClient.SqlDataReader>의 데이터가 두 번째 판독기의 WHERE 절에 대한 입력으로 사용됩니다.
+이 예제에서는 단일 연결을 엽니다는 **AdventureWorks** 데이터베이스입니다. <xref:System.Data.SqlClient.SqlCommand> 개체를 사용하면 <xref:System.Data.SqlClient.SqlDataReader>가 만들어집니다. 판독기를 사용하면 두 번째 <xref:System.Data.SqlClient.SqlDataReader>가 열리고 첫 번째 <xref:System.Data.SqlClient.SqlDataReader>의 데이터가 두 번째 판독기의 WHERE 절에 대한 입력으로 사용됩니다.
 
 > [!NOTE]
 > 다음 예제에서는 샘플 **AdventureWorks** SQL Server에 포함 된 데이터베이스입니다. 샘플 코드에 제공된 연결 문자열은 데이터베이스가 로컬 컴퓨터에 설치되었으며 사용 가능하다고 가정합니다. 사용자 환경의 필요에 따라 연결 문자열을 수정합니다.

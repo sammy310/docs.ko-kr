@@ -52,11 +52,9 @@ HRESULT GetRequestedRuntime(
 |`pwzBinary`|[in] 선택적 항목으로, 어셈블리 파일 경로를 지정합니다.|
 |`pCfgStream`|[in] 선택적 항목으로, 구성 파일을 <xref:System.Runtime.InteropServices.ComTypes.IStream?displayProperty=nameWithType>으로 지정합니다.|
 |`pwzVersion`|[in, out] 선택 사항입니다. 로드할 기본 CLR 버전을 지정하거나 반환합니다.|
-|`pcchVersion`|[in, out] 필수입니다. 버퍼 오버런을 방지하기 위해 `pwzVersion`의 예상 크기를 입력으로 지정합니다. 
-  `pwzVersion`이 null이면 사전 할당을 허용하기 위해 `GetRequestedRuntime`이 반환될 때 `pcchVersion`에 `pwzVersion`의 예상 크기가 포함됩니다. 그러지 않으면 `pcchVersion`에 `pwzVersion`에 기록된 문자 수가 포함됩니다.|
+|`pcchVersion`|[in, out] 필수입니다. 버퍼 오버런을 방지하기 위해 `pwzVersion`의 예상 크기를 입력으로 지정합니다. `pwzVersion`이 null이면 사전 할당을 허용하기 위해 `GetRequestedRuntime`이 반환될 때 `pcchVersion`에 `pwzVersion`의 예상 크기가 포함됩니다. 그러지 않으면 `pcchVersion`에 `pwzVersion`에 기록된 문자 수가 포함됩니다.|
 |`pwzImageVersion`|[out] 선택 사항입니다. 때 `GetRequestedRuntime` CLR 버전에 해당 하는 포함 된를 반환 합니다 [ICLRRuntimeInfo](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md) 반환 되는 인터페이스입니다.|
-|`pcchImageVersion`|[in, out] 선택 사항입니다. 버퍼 오버런을 방지하기 위해 `pwzImageVersion`의 크기를 입력으로 지정합니다. 
-  `pwzImageVersion`이 null이면 사전 할당을 허용하기 위해 `GetRequestedRuntime`이 반환될 때 `pcchImageVersion`에 `pwzImageVersion`의 필수 크기가 포함됩니다.|
+|`pcchImageVersion`|[in, out] 선택 사항입니다. 버퍼 오버런을 방지하기 위해 `pwzImageVersion`의 크기를 입력으로 지정합니다. `pwzImageVersion`이 null이면 사전 할당을 허용하기 위해 `GetRequestedRuntime`이 반환될 때 `pcchImageVersion`에 `pwzImageVersion`의 필수 크기가 포함됩니다.|
 |`pdwConfigFlags`|[out] 선택 사항입니다. 경우 `GetRequestedRuntime` 를 반환 하는 경우 바인딩 과정에서 구성 파일을 사용 `pdwConfigFlags` 포함을 [METAHOST_CONFIG_FLAGS](../../../../docs/framework/unmanaged-api/hosting/metahost-config-flags-enumeration.md) 지정 하는 값 여부를 [ \<시작 >](../../../../docs/framework/configure-apps/file-schema/startup/startup-element.md) 요소에는 `useLegacyV2RuntimeActivationPolicy` 특성 집합 및 특성의 값입니다. 적용 된 [METAHOST_CONFIG_FLAGS_LEGACY_V2_ACTIVATION_POLICY_MASK](../../../../docs/framework/unmanaged-api/hosting/metahost-config-flags-enumeration.md) 마스크를 `pdwConfigFlags` 관련 값을 가져오려면 `useLegacyV2RuntimeActivationPolicy`합니다.|
 |`riid`|[in] 요청 된 작업에 대 한 인터페이스 식별자 IID_ICLRRuntimeInfo를 지정 [ICLRRuntimeInfo](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md) 인터페이스입니다.|
 |`ppRuntime`|[out] 때 `GetRequestedRuntime` 에 해당 요소에 대 한 포인터를 반환 하며 [ICLRRuntimeInfo](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md) 인터페이스입니다.|
@@ -82,9 +80,7 @@ HRESULT GetRequestedRuntime(
 |S_OK|메서드가 완료되었습니다.|
 |E_POINTER|`pwzVersion`은 null이 아니고 `pcchVersion`은 null입니다.<br /><br /> 또는<br /><br /> `pwzImageVersion`은 null이 아니고 `pcchImageVersion`은 null입니다.|
 |E_INVALIDARG|`dwPolicyFlags`가 `METAHOST_POLICY_HIGHCOMPAT`를 지정하지 않습니다.|
-|ERROR_INSUFFICIENT_BUFFER|
-  `pwzVersion`에 할당된 메모리가 부적합합니다.<br /><br /> 또는<br /><br /> 
-  `pwzImageVersion`에 할당된 메모리가 부적합합니다.|
+|ERROR_INSUFFICIENT_BUFFER|`pwzVersion`에 할당된 메모리가 부적합합니다.<br /><br /> 또는<br /><br /> `pwzImageVersion`에 할당된 메모리가 부적합합니다.|
 |CLR_E_SHIM_RUNTIMELOAD|`dwPolicyFlags`에 METAHOST_POLICY_APPLY_UPGRADE_POLICY가 포함되어 있고, `pwzVersion` 및 `pcchVersion`이 둘 다 null입니다.|
 
 ## <a name="requirements"></a>요구 사항

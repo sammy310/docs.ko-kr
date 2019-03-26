@@ -43,8 +43,7 @@ HRESULT GetEventMask2(
  [out] 이벤트 범주를 지정하는 4바이트 값에 대한 포인터입니다.  각 비트는 서로 다른 기능, 동작 또는 이벤트 형식을 제어합니다. 설명 하는 비트를 [COR_PRF_HIGH_MONITOR](../../../../docs/framework/unmanaged-api/profiling/cor-prf-high-monitor-enumeration.md) 열거형입니다.  
   
 ## <a name="remarks"></a>설명  
- 
-  `GetEventMask2` 메서드를 사용하여 프로파일러가 구독한 콜백을 확인합니다. 논리 OR를 수행 하는 일반적으로 `pdwEventsLow` 하 고 `pdwEventsHigh` 값과 새 비트를 설정 하 고 호출 하려는 합니다 [SetEventMask2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo5-seteventmask2-method.md) 메서드.  
+ `GetEventMask2` 메서드를 사용하여 프로파일러가 구독한 콜백을 확인합니다. 논리 OR를 수행 하는 일반적으로 `pdwEventsLow` 하 고 `pdwEventsHigh` 값과 새 비트를 설정 하 고 호출 하려는 합니다 [SetEventMask2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo5-seteventmask2-method.md) 메서드.  
   
  이 메서드는 권장 되는 대신 합니다 [GetEventMask](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-geteventmask-method.md) 메서드.  
   

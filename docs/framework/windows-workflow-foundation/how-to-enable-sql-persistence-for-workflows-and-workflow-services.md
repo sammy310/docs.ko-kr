@@ -62,8 +62,7 @@ SQL 워크플로 인스턴스 저장소 기능을 사용하기 전에 이 기능
    > [!NOTE]
    > SQL Server 에디션에 따라 연결 문자열 서버 이름이 다를 수 있습니다.
 
-4. <xref:System.Activities.WorkflowApplication.Persist%2A> 개체에 대해 <xref:System.Activities.WorkflowApplication> 메서드를 호출하여 워크플로를 유지하거나 <xref:System.Activities.WorkflowApplication.Unload%2A> 메서드를 호출하여 워크플로를 유지하고 언로드합니다. 
-  <xref:System.Activities.WorkflowApplication.PersistableIdle%2A> 개체를 통해 발생한 <xref:System.Activities.WorkflowApplication> 이벤트를 처리하고 <xref:System.Activities.PersistableIdleAction.Persist>의 적절한 멤버(<xref:System.Activities.PersistableIdleAction.Unload> 또는 <xref:System.Activities.PersistableIdleAction>)를 반환할 수도 있습니다.
+4. <xref:System.Activities.WorkflowApplication.Persist%2A> 개체에 대해 <xref:System.Activities.WorkflowApplication> 메서드를 호출하여 워크플로를 유지하거나 <xref:System.Activities.WorkflowApplication.Unload%2A> 메서드를 호출하여 워크플로를 유지하고 언로드합니다. <xref:System.Activities.WorkflowApplication.PersistableIdle%2A> 개체를 통해 발생한 <xref:System.Activities.WorkflowApplication> 이벤트를 처리하고 <xref:System.Activities.PersistableIdleAction.Persist>의 적절한 멤버(<xref:System.Activities.PersistableIdleAction.Unload> 또는 <xref:System.Activities.PersistableIdleAction>)를 반환할 수도 있습니다.
 
    ```csharp
    wfApp.PersistableIdle = delegate(WorkflowApplicationIdleEventArgs e)
@@ -93,7 +92,7 @@ SQL 워크플로 인스턴스 저장소 기능을 사용하기 전에 이 기능
     using System.ServiceModel.Activities.Description;
     ```
 
-3. `WorkflowServiceHost` 인스턴스를 만들고 워크플로 서비스에 대한 끝점을 추가합니다.
+3. `WorkflowServiceHost` 인스턴스를 만들고 워크플로 서비스에 대한 엔드포인트를 추가합니다.
 
     ```csharp
     WorkflowServiceHost host = new WorkflowServiceHost(new CountingWorkflow(), new Uri(hostBaseAddress));
@@ -161,8 +160,7 @@ workflowServiceHost.DurableInstancingOptions.InstanceStore = sqlInstanceStoreObj
 
 ### <a name="machineconfig-elements-related-to-the-sql-workflow-instance-store-feature"></a>SQL 워크플로 인스턴스 저장소 기능과 관련된 Machine.config 요소
 
-
-  [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)]를 설치하면 SQL 워크플로 인스턴스 저장소 기능과 관련된 다음 요소가 Machine.config 파일에 추가됩니다.
+[!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)]를 설치하면 SQL 워크플로 인스턴스 저장소 기능과 관련된 다음 요소가 Machine.config 파일에 추가됩니다.
 
 - 사용할 수 있도록 Machine.config 파일에 다음 동작 확장 요소를 추가 합니다 \<sqlWorkflowInstanceStore > 서비스에 대 한 지 속성을 구성 하려면 구성 파일에서 서비스 동작 요소입니다.
 

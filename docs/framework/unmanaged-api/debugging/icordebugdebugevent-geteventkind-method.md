@@ -27,8 +27,7 @@ HRESULT GetEventKind(
  에 대 한 포인터를 [CorDebugDebugEventKind](../../../../docs/framework/unmanaged-api/debugging/cordebugdebugeventkind-enumeration.md) 이벤트의 형식을 나타내는 열거형 멤버입니다.  
   
 ## <a name="remarks"></a>설명  
- 
-  `pDebugEventKind`의 값에 따라 `QueryInterface`를 호출하여 추가 데이터를 포함하는 보다 정확한 디버그 이벤트 인터페이스를 가져올 수 있습니다.  
+ `pDebugEventKind`의 값에 따라 `QueryInterface`를 호출하여 추가 데이터를 포함하는 보다 정확한 디버그 이벤트 인터페이스를 가져올 수 있습니다.  
   
 > [!NOTE]
 >  이 메서드는 .NET 네이티브에서만 사용할 수 있습니다.  

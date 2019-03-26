@@ -13,8 +13,7 @@ ms.locfileid: "57844303"
 [!INCLUDE[arrowhead](../../../includes/arrowhead-md.md)] 전체 프레임 워크를 사용 하지 않는 클라이언트를 위한 전체.NET Framework의 경량 버전이입니다. 클라이언트 프레임워크에서는 일부 Windows Communication Foundation이 지원되지 않습니다.  
   
 ## <a name="wcf-features-supported-by-the-net-framework-client-profile"></a>.NET Framework Client Profile을 지 원하는 WCF 기능  
- 
-  [!INCLUDE[arrowhead](../../../includes/arrowhead-md.md)]에서 지원하는 Windows Communication Foundation 기능은 다음과 같습니다.  
+ [!INCLUDE[arrowhead](../../../includes/arrowhead-md.md)]에서 지원하는 Windows Communication Foundation 기능은 다음과 같습니다.  
   
 -   Cardspace와 웹 호스팅을 제외하고 모든 WCF가 지원됩니다.  
   

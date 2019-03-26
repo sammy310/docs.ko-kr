@@ -33,8 +33,7 @@ HRESULT SetThreadContext(
  [in] 쓸 바이트에 대한 포인터입니다.  
   
 ## <a name="remarks"></a>설명  
- 
-  `SetThreadContext` 메서드는 운영 체제에서 정의된 `dwThreadID` 인수로 지정된 스레드에 대한 현재 컨텍스트를 업데이트합니다. 컨텍스트 레코드의 형식을 나타내는 플랫폼에 의해 결정 됩니다 합니다 [icordebugdatatarget:: Getplatform](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget-getplatform-method.md) 메서드. Windows에서 [상황에 맞는](/windows/desktop/api/winnt/ns-winnt-_arm64_nt_context) 구조입니다.  
+ `SetThreadContext` 메서드는 운영 체제에서 정의된 `dwThreadID` 인수로 지정된 스레드에 대한 현재 컨텍스트를 업데이트합니다. 컨텍스트 레코드의 형식을 나타내는 플랫폼에 의해 결정 됩니다 합니다 [icordebugdatatarget:: Getplatform](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget-getplatform-method.md) 메서드. Windows에서 [상황에 맞는](/windows/desktop/api/winnt/ns-winnt-_arm64_nt_context) 구조입니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  

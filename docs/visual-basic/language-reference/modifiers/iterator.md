@@ -32,8 +32,7 @@ ms.locfileid: "56969286"
  반복기는 익명 함수를 수 있습니다. 자세한 내용은 [반복기](../../programming-guide/concepts/iterators.md)를 참조하세요.  
   
 ## <a name="usage"></a>사용법  
- 
-  `Iterator` 한정자는 다음 컨텍스트에서 사용할 수 있습니다.  
+ `Iterator` 한정자는 다음 컨텍스트에서 사용할 수 있습니다.  
   
 -   [Function 문](../../../visual-basic/language-reference/statements/function-statement.md)  
   

@@ -44,7 +44,7 @@ ms.locfileid: "57358173"
 ### <a name="fact-4-its-all-about-allocations"></a>팩트 4: 할당에 대 한 모든 것  
  응답성 있는 .NET Framework 앱을 빌드하는 것은 거품 정렬 대신 빠른 정렬을 사용하는 등 알고리즘에 대한 문제라고 생각할 수 있지만 그렇지 않습니다. 응답성 있는 앱을 빌드하는 데 있어서 가장 큰 요인은 메모리를 할당하는 것이며, 특히 앱의 규모가 매우 크거나 앱이 많은 양의 데이터를 처리하는 경우에 그렇습니다. 
   
- 새 컴파일러 API를 사용하여 응답성 있는 IDE 환경을 빌드하는 작업의 거의 전부는 할당을 피하고 캐싱 전략을 관리하는 것에 관련되었습니다. PerfView 추적은 새 C# 및 Visual Basic 컴파일러의 성능이 거의 CPU 바인딩이 아니라는 사실을 보여 줍니다. 이러한 새 컴파일러는 수십만 또는 수백만 개의 코드 줄을 읽고 메타데이터를 읽거나 생성된 코드를 내보낼 때 I/O 바인딩일 수 있습니다. UI 스레드 지연은 거의 전부 가비지 수집 때문입니다. .NET Framework GC는 성능을 위해 많이 조정되었고 앱 코드가 실행되는 동안 해당 작업의 많은 부분을 동시에 수행합니다. 그러나 한 번의 할당으로 많은 비용이 드는 [gen2](../../../docs/standard/garbage-collection/fundamentals.md) 컬렉션이 트리거되어 모든 스레드가 중지될 수 있습니다. 
+ 새 컴파일러 API를 사용하여 응답성 있는 IDE 환경을 빌드하는 작업의 거의 전부는 할당을 피하고 캐싱 전략을 관리하는 것에 관련되었습니다. PerfView 추적은 새 C# 및 Visual Basic 컴파일러의 성능이 거의 CPU 바인딩이 아니라는 사실을 보여 줍니다. 이러한 새 컴파일러는 수십만 또는 수백만 개의 코드 줄을 읽고 메타데이터를 읽거나 생성된 코드를 내보낼 때 I/O 바인딩일 수 있습니다. UI 스레드 지연은 거의 전부 가비지 컬렉션 때문입니다. .NET Framework GC는 성능을 위해 많이 조정되었고 앱 코드가 실행되는 동안 해당 작업의 많은 부분을 동시에 수행합니다. 그러나 한 번의 할당으로 많은 비용이 드는 [gen2](../../../docs/standard/garbage-collection/fundamentals.md) 컬렉션이 트리거되어 모든 스레드가 중지될 수 있습니다. 
   
 ## <a name="common-allocations-and-examples"></a>일반 할당 및 예제  
  이 섹션의 예제 식에는 작게 보이는 할당이 숨겨져 있습니다. 그러나 규모가 큰 앱이 식을 충분한 횟수로 실행하면 수백 MB 심지어 GB의 할당이 발생할 수 있습니다. 예를 들어, 편집기에서 개발자의 입력을 시뮬레이션한 1분간의 테스트 결과 GB 메모리가 할당되어 성능 팀이 입력 시나리오에 집중하게 되었습니다. 
@@ -119,8 +119,7 @@ public class BoxingExample
   
  **예제 2에 대한 해결 방법**  
   
- 
-  <xref:System.Enum.GetHashCode>를 호출하기 전에 기본 표현으로 캐스팅하여 두 할당을 모두 쉽게 피할 수 있습니다.  
+ <xref:System.Enum.GetHashCode>를 호출하기 전에 기본 표현으로 캐스팅하여 두 할당을 모두 쉽게 피할 수 있습니다.  
   
 ```csharp  
 ((int)color).GetHashCode()  
@@ -131,8 +130,7 @@ public class BoxingExample
  첫 번째 성능 팩트를 염두에 두고(즉, 너무 이르게 최적화하지 말 것) 서둘러 이 방식으로 모든 코드를 다시 작성하려고는 하지 마세요. 이러한 boxing 비용에 주의하되 앱을 프로파일링하고 핫 스폿을 찾은 다음에만 코드를 변경하세요. 
   
 ### <a name="strings"></a>문자열  
- 문자열 조작은 할당이 발생하는 가장 큰 원인 중 몇 가지를 차지하며, PerfView에서 흔히 상위 5가지 할당을 차지하곤 합니다. 프로그램에서는 serialization, JSON 및 REST API에 문자열을 사용합니다. 열거형 형식을 사용할 수 없을 때 시스템과 상호 작용하기 위한 프로그램 상수로 문자열을 사용할 수 있습니다. 프로파일링에 문자열이 성능에 많은 영향을 미치고 있다고 표시되는 경우 <xref:System.String>, <xref:System.String.Format%2A>, <xref:System.String.Concat%2A>, <xref:System.String.Split%2A>, <xref:System.String.Join%2A> 등과 같은 <xref:System.String.Substring%2A> 메서드에 대한 호출을 찾습니다. 
-  <xref:System.Text.StringBuilder>를 사용하여 많은 조각에서 하나의 문자열을 만드는 비용을 방지하는 것도 유용하지만 <xref:System.Text.StringBuilder> 개체를 할당하는 것조차 관리해야 하는 병목 현상이 될 수 있습니다. 
+ 문자열 조작은 할당이 발생하는 가장 큰 원인 중 몇 가지를 차지하며, PerfView에서 흔히 상위 5가지 할당을 차지하곤 합니다. 프로그램에서는 serialization, JSON 및 REST API에 문자열을 사용합니다. 열거형 형식을 사용할 수 없을 때 시스템과 상호 작용하기 위한 프로그램 상수로 문자열을 사용할 수 있습니다. 프로파일링에 문자열이 성능에 많은 영향을 미치고 있다고 표시되는 경우 <xref:System.String>, <xref:System.String.Format%2A>, <xref:System.String.Concat%2A>, <xref:System.String.Split%2A>, <xref:System.String.Join%2A> 등과 같은 <xref:System.String.Substring%2A> 메서드에 대한 호출을 찾습니다. <xref:System.Text.StringBuilder>를 사용하여 많은 조각에서 하나의 문자열을 만드는 비용을 방지하는 것도 유용하지만 <xref:System.Text.StringBuilder> 개체를 할당하는 것조차 관리해야 하는 병목 현상이 될 수 있습니다. 
   
  **예제 3: 문자열 작업**  
   
@@ -197,8 +195,7 @@ private bool TrimmedStringStartsWith(string text, int start, string prefix) {
 // etc... 
 ```  
   
- 
-  `WriteFormattedDocComment()`의 첫 번째 버전에서는 배열, 여러 부분 문자열 및 잘라낸 부분 문자열과 함께 빈 `params` 배열을 할당했습니다. "/ / /"에 대 한 확인란도 선택 합니다. 수정된 코드에서는 인덱싱만 사용하며 아무것도 할당하지 않습니다. 문자열 "/ / /"로 시작 하는 경우 공백을 아니며 다음 문자를 확인 하는 첫 번째 문자를 찾습니다. 새 코드를 사용 하 여 `IndexOfFirstNonWhiteSpaceChar` 대신 <xref:System.String.TrimStart%2A> 발생 하는 공백이 아닌 문자는 지정 된 시작 인덱스) (이후 첫 번째 인덱스를 반환할 합니다. 해결 방법이 완벽하지는 않지만 완벽한 솔루션을 위해 유사한 해결 방법을 적용하는 방법을 확인할 수 있습니다. 코드 전체에 이 접근 방식을 적용하여 `WriteFormattedDocComment()`에서 모든 할당을 제거할 수 있습니다. 
+ `WriteFormattedDocComment()`의 첫 번째 버전에서는 배열, 여러 부분 문자열 및 잘라낸 부분 문자열과 함께 빈 `params` 배열을 할당했습니다. "/ / /"에 대 한 확인란도 선택 합니다. 수정된 코드에서는 인덱싱만 사용하며 아무것도 할당하지 않습니다. 문자열 "/ / /"로 시작 하는 경우 공백을 아니며 다음 문자를 확인 하는 첫 번째 문자를 찾습니다. 새 코드를 사용 하 여 `IndexOfFirstNonWhiteSpaceChar` 대신 <xref:System.String.TrimStart%2A> 발생 하는 공백이 아닌 문자는 지정 된 시작 인덱스) (이후 첫 번째 인덱스를 반환할 합니다. 해결 방법이 완벽하지는 않지만 완벽한 솔루션을 위해 유사한 해결 방법을 적용하는 방법을 확인할 수 있습니다. 코드 전체에 이 접근 방식을 적용하여 `WriteFormattedDocComment()`에서 모든 할당을 제거할 수 있습니다. 
   
  **예제 4: StringBuilder**  
   
@@ -232,8 +229,7 @@ public class Example
   
  **예제 4에 대한 해결 방법**  
   
- 
-  `StringBuilder` 개체 할당을 해결하려면 개체를 캐시합니다. throw될 수 있는 단일 인스턴스를 캐시하는 것만으로도 성능을 현저히 향상시킬 수 있습니다. 다음은 함수의 새 구현이며, 여기에는 새로운 첫 번째 줄과 마지막 줄을 제외한 모든 코드가 생략되어 있습니다.  
+ `StringBuilder` 개체 할당을 해결하려면 개체를 캐시합니다. throw될 수 있는 단일 인스턴스를 캐시하는 것만으로도 성능을 현저히 향상시킬 수 있습니다. 다음은 함수의 새 구현이며, 여기에는 새로운 첫 번째 줄과 마지막 줄을 제외한 모든 코드가 생략되어 있습니다.  
   
 ```csharp  
 // Constructs a name like "MyType<T1, T2, T3>"  
@@ -412,7 +408,7 @@ class Compilation { /*...*/
 }  
 ```  
   
- 캐싱이 포함된 새 코드에 `SyntaxTree`라는 `cachedResult` 필드가 있는 것을 볼 수 있습니다. 이 필드가 null이면 `GetSyntaxTreeAsync()`가 작동하고 결과를 캐시에 저장합니다. `GetSyntaxTreeAsync()`에서 `SyntaxTree` 개체를 반환합니다. 문제는 `async` 형식의 `Task<SyntaxTree>` 함수가 있고 `SyntaxTree` 형식의 값을 반환하는 경우 컴파일러가 결과를 유지하기 위해 Task를 할당하는 코드를 내보낸다는 점입니다(`Task<SyntaxTree>.FromResult()` 사용). Task는 완료됨으로 표시되고 결과는 즉시 사용 가능합니다. 새 컴파일러 코드에서 이미 완료된 <xref:System.Threading.Tasks.Task> 개체가 너무 자주 발생했는데, 이러한 할당을 해결함으로써 응답성이 현저히 향상되었습니다. 
+ 캐싱이 포함된 새 코드에 `SyntaxTree`라는 `cachedResult` 필드가 있는 것을 볼 수 있습니다. 이 필드가 null이면 `GetSyntaxTreeAsync()`가 작동하고 결과를 캐시에 저장합니다. `GetSyntaxTreeAsync()` 반환 된 `SyntaxTree` 개체입니다. 문제는 `async` 형식의 `Task<SyntaxTree>` 함수가 있고 `SyntaxTree` 형식의 값을 반환하는 경우 컴파일러가 결과를 유지하기 위해 Task를 할당하는 코드를 내보낸다는 점입니다(`Task<SyntaxTree>.FromResult()` 사용). Task는 완료됨으로 표시되고 결과는 즉시 사용 가능합니다. 새 컴파일러 코드에서 이미 완료된 <xref:System.Threading.Tasks.Task> 개체가 너무 자주 발생했는데, 이러한 할당을 해결함으로써 응답성이 현저히 향상되었습니다. 
   
  **예제 6에 대한 해결 방법**  
   
@@ -438,8 +434,7 @@ class Compilation { /*...*/
 }  
 ```  
   
- 이 코드에서는 `cachedResult`의 형식이 `Task<SyntaxTree>`로 변경되고 `async`의 원래 코드를 유지하는 `GetSyntaxTreeAsync()` 도우미 함수가 채택되었습니다. 이제 `GetSyntaxTreeAsync()`는 `cachedResult`가 null이 아닌 경우 이를 반환하기 위해 [null 병합 연산자](../../csharp/language-reference/operators/null-coalescing-operator.md)를 사용합니다. 
-  `cachedResult`가 null인 경우 `GetSyntaxTreeAsync()`는 `GetSyntaxTreeUncachedAsync()`를 호출하고 결과를 캐시합니다. 일반적으로 코드가 그러는 것처럼 `GetSyntaxTreeAsync()`는 `GetSyntaxTreeUncachedAsync()`에 대한 호출을 기다리지 않습니다. await를 사용하지 않는다는 말은 `GetSyntaxTreeUncachedAsync()`에서 해당 <xref:System.Threading.Tasks.Task> 개체를 반환할 때 `GetSyntaxTreeAsync()`가 즉시 <xref:System.Threading.Tasks.Task>를 반환한다는 의미입니다. 이제 캐시된 결과가 <xref:System.Threading.Tasks.Task>이므로 캐시된 결과를 반환하기 위한 할당이 없습니다. 
+ 이 코드에서는 `cachedResult`의 형식이 `Task<SyntaxTree>`로 변경되고 `async`의 원래 코드를 유지하는 `GetSyntaxTreeAsync()` 도우미 함수가 채택되었습니다. 이제 `GetSyntaxTreeAsync()`는 `cachedResult`가 null이 아닌 경우 이를 반환하기 위해 [null 병합 연산자](../../csharp/language-reference/operators/null-coalescing-operator.md)를 사용합니다. `cachedResult`가 null인 경우 `GetSyntaxTreeAsync()`는 `GetSyntaxTreeUncachedAsync()`를 호출하고 결과를 캐시합니다. 일반적으로 코드가 그러는 것처럼 `GetSyntaxTreeAsync()`는 `GetSyntaxTreeUncachedAsync()`에 대한 호출을 기다리지 않습니다. await를 사용하지 않는다는 말은 `GetSyntaxTreeUncachedAsync()`에서 해당 <xref:System.Threading.Tasks.Task> 개체를 반환할 때 `GetSyntaxTreeAsync()`가 즉시 <xref:System.Threading.Tasks.Task>를 반환한다는 의미입니다. 이제 캐시된 결과가 <xref:System.Threading.Tasks.Task>이므로 캐시된 결과를 반환하기 위한 할당이 없습니다. 
   
 ### <a name="additional-considerations"></a>추가 고려 사항  
  다음은 규모가 큰 앱이나 많은 데이터를 처리하는 앱에서 발생할 수 있는 잠재적 문제에 대한 몇 가지 추가 사항입니다. 
@@ -454,7 +449,7 @@ class Compilation { /*...*/
   
  **캐시**  
   
- 일반적인 성능 트릭은 결과를 캐시하는 것입니다. 그러나 크기 한도 또는 삭제 정책이 없는 캐시는 메모리 누수가 될 수 있습니다. 많은 양의 데이터를 처리할 때 많은 메모리를 캐시에 유지하면 캐시된 조회의 이점을 무력화시킬 만큼의 가비지 수집이 발생할 수 있습니다. 
+ 일반적인 성능 트릭은 결과를 캐시하는 것입니다. 그러나 크기 한도 또는 삭제 정책이 없는 캐시는 메모리 누수가 될 수 있습니다. 많은 양의 데이터를 처리할 때 많은 메모리를 캐시에 유지하면 캐시된 조회의 이점을 무력화시킬 만큼의 가비지 컬렉션이 발생할 수 있습니다. 
   
  이 문서에서는 앱의 응답성에 영향을 미칠 수 있는 성능 병목 현상 증상을 어떻게 알 수 있어야 하는지에 대해 설명했습니다(특히, 대규모 시스템이나 많은 양의 데이터를 처리하는 시스템의 경우). 일반적인 원인으로는 boxing, 문자열 조작, LINQ 및 람다, 비동기 메서드의 캐싱, 크기 제한 또는 삭제 정책이 없는 캐싱, 부적절한 사전 사용 및 구조 전달이 있습니다. 앱을 조정할 때는 다음과 같은 4가지 팩트에 주의하세요.  
   

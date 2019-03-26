@@ -60,11 +60,8 @@ ms.locfileid: "57476336"
 |-|-|
 |`modeEnumValue`|다음 중 하나:<br /><br /> -문자열 토큰 `Self`;에 해당 하는 <xref:System.Windows.Data.RelativeSource> 사용 하 여 만든 해당 <xref:System.Windows.Data.RelativeSource.Mode%2A> 속성이 설정 <xref:System.Windows.Data.RelativeSourceMode.Self>합니다.<br />-문자열 토큰 `TemplatedParent`;에 해당 하는 <xref:System.Windows.Data.RelativeSource> 사용 하 여 만든 해당 <xref:System.Windows.Data.RelativeSource.Mode%2A> 속성이 설정 <xref:System.Windows.Data.RelativeSourceMode.TemplatedParent>합니다.<br />-문자열 토큰 `PreviousData`;에 해당 하는 <xref:System.Windows.Data.RelativeSource> 사용 하 여 만든 해당 <xref:System.Windows.Data.RelativeSource.Mode%2A> 속성이 설정 <xref:System.Windows.Data.RelativeSourceMode.PreviousData>합니다.<br />-아래에 있는 참조 정보에 `FindAncestor` 모드입니다.|
 |`FindAncestor`|토큰 문자열 `FindAncestor`입니다. 이 토큰을 사용하면 `RelativeSource`가 상위 항목 형식과 상위 수준(선택 사항)을 지정하는 모드로 들어갑니다. 이것은 <xref:System.Windows.Data.RelativeSource> 속성을 <xref:System.Windows.Data.RelativeSource.Mode%2A>로 설정하여 생성한 <xref:System.Windows.Data.RelativeSourceMode.FindAncestor>에 해당합니다.|
-|`typeName`|
-  `FindAncestor` 모드에 필수적인 요소입니다. 
-  <xref:System.Windows.Data.RelativeSource.AncestorType%2A> 속성을 채우는 형식의 이름입니다.|
-|`intLevel`|
-  `FindAncestor` 모드에서는 선택적으로 사용할 수 있습니다. 논리 트리에서 부모 방향 쪽으로 계산되는 상위 수준입니다.|
+|`typeName`|`FindAncestor` 모드에 필수적인 요소입니다. <xref:System.Windows.Data.RelativeSource.AncestorType%2A> 속성을 채우는 형식의 이름입니다.|
+|`intLevel`|`FindAncestor` 모드에서는 선택적으로 사용할 수 있습니다. 논리 트리에서 부모 방향 쪽으로 계산되는 상위 수준입니다.|
 
 ## <a name="remarks"></a>설명
 
@@ -74,11 +71,9 @@ ms.locfileid: "57476336"
 
 XAML 구문 섹션에 표시된 `FindAncestor` 모드에 대한 개체 요소 구문에서 `FindAncestor` 모드의 경우에는 특히 두 번째 개체 요소 구문이 사용됩니다. `FindAncestor` 모드에는 <xref:System.Windows.Data.RelativeSource.AncestorType%2A> 값이 필요합니다. 설정 해야 합니다 <xref:System.Windows.Data.RelativeSource.AncestorType%2A> 사용 하 여 특성을 [X:type 태그 확장](../../xaml-services/x-type-markup-extension.md) 찾을 상위 항목의 형식에 대 한 참조입니다. 바인딩 요청이 실시간으로 처리될 때 <xref:System.Windows.Data.RelativeSource.AncestorType%2A> 값이 사용됩니다.
 
+`FindAncestor` 모드의 경우 선택적 속성인 <xref:System.Windows.Data.RelativeSource.AncestorLevel%2A>을 사용하면 요소 트리에 같은 형식의 상위 항목이 둘 이상 있을 때 상위 항목을 쉽게 구분할 수 있습니다.
 
-  `FindAncestor` 모드의 경우 선택적 속성인 <xref:System.Windows.Data.RelativeSource.AncestorLevel%2A>을 사용하면 요소 트리에 같은 형식의 상위 항목이 둘 이상 있을 때 상위 항목을 쉽게 구분할 수 있습니다.
-
-
-  `FindAncestor` 모드를 사용하는 방법에 대한 자세한 내용은 <xref:System.Windows.Data.RelativeSource>를 참조하십시오.
+`FindAncestor` 모드를 사용하는 방법에 대한 자세한 내용은 <xref:System.Windows.Data.RelativeSource>를 참조하십시오.
 
 `{RelativeSource Self}` 시나리오에 유용 있는 인스턴스 속성을 하나 달라져야 동일한 인스턴스와 없는 일반적인 종속 속성 관계 (예:)의 다른 속성의 값에 이미 해당 두 가지 속성 사이 존재 합니다. 경우는 드물지만 두 속성이 개체에는 문자 그대로 동일 (및 동일 하 게 형식화 됩니다) 값을 적용할 수도 있습니다는 `Converter` 된 바인딩 매개 변수 `{RelativeSource Self}`, 변환기를 사용 하 여 원본 간에 변환할 및 및 대상 형식입니다. 다른 시나리오에 대 한 `{RelativeSource Self}` 의 일부로 <xref:System.Windows.MultiDataTrigger>합니다.
 

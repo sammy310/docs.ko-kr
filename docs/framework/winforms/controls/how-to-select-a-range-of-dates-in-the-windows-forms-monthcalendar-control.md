@@ -40,8 +40,7 @@ Windows Forms의 중요 한 기능은 <xref:System.Windows.Forms.MonthCalendar> 
     DateTime projectEnd = DateTime(2001, 2, 28);  
     ```  
   
-2.  
-  <xref:System.Windows.Forms.MonthCalendar.SelectionRange%2A> 속성을 설정합니다.  
+2.  <xref:System.Windows.Forms.MonthCalendar.SelectionRange%2A> 속성을 설정합니다.  
   
     ```vb  
     MonthCalendar1.SelectionRange = New SelectionRange(projectStart, projectEnd)  

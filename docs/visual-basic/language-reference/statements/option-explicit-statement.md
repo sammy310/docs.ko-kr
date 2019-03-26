@@ -37,8 +37,7 @@ Option Explicit { On | Off }
 ## <a name="remarks"></a>설명  
  때 `Option Explicit On` 또는 `Option Explicit` 파일에서 사용 하 여 모든 변수를 명시적으로 선언 해야 표시 되는 `Dim` 또는 `ReDim` 문입니다. 선언 되지 않은 변수 이름을 사용 하려고 하면 컴파일 타임 오류가 발생 합니다. `Option Explicit Off` 문은 암시적 변수 선언을 허용 합니다.  
   
- 
-  `Option Explicit` 문은 사용하는 경우 파일에서 다른 소스 코드 문 앞에 나와야 합니다.  
+ `Option Explicit` 문은 사용하는 경우 파일에서 다른 소스 코드 문 앞에 나와야 합니다.  
   
 > [!NOTE]
 >  설정 `Option Explicit` 에 `Off` 일반적으로 좋은 방법은 아닙니다. 하나 이상의 위치에서 변수 이름을 잘못 입력할 수 있습니다. 그러면 프로그램이 실행될 때 예기치 않은 결과가 발생할 수 있습니다.  

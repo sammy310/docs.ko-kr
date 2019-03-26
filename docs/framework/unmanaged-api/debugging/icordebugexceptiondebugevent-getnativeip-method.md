@@ -29,8 +29,7 @@ HRESULT GetNativeIP(
 ## <a name="remarks"></a>설명  
  이 명령 포인터의 의미는 다음 표와 같이 이벤트 유형에 따라 달라집니다.  
   
-|이벤트 유형|
-  `pStackPointer` 값의 의미|  
+|이벤트 유형|`pStackPointer` 값의 의미|  
 |----------------|--------------------------------------|  
 |[MANAGED_EXCEPTION_FIRST_CHANCE](../../../../docs/framework/unmanaged-api/debugging/cordebugrecordformat-enumeration.md)|오류가 발생한 명령의 주소입니다.|  
 |[MANAGED_EXCEPTION_USER_FIRST_CHANCE](../../../../docs/framework/unmanaged-api/debugging/cordebugrecordformat-enumeration.md)|프레임의 코드 주소에 나타난 합니다 [GetStackPointer](../../../../docs/framework/unmanaged-api/debugging/icordebugexceptiondebugevent-getstackpointer-method.md) 메서드는 실행이 다시 시작 하는 경우 예외가 발생 합니다. 예외로 인해 `try/catch/finally` 절의 catch 블록과 같은 다른 코드가 이 프레임에서 실행되거나 실행되지 않을 수 있습니다.|  

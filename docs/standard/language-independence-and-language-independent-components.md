@@ -30,8 +30,7 @@ ms.locfileid: "57846469"
   
  어떠한 언어로 작성된 다른 개체와도 완전하게 상호 작용하려면 개체는 모든 언어에 공통적인 기능만 호출자에게 노출해야 합니다. 기능의 공통 집합은 생성된 어셈블리에 적용되는 규칙 집합인 CLS(공용 언어 사양)에서 정의됩니다. 공용 언어 사양은 [ECMA-335 Standard: Common Language Infrastructure](https://www.ecma-international.org/publications/standards/Ecma-335.htm)의 Partition I, Clauses 7~11에 정의되어 있습니다.  
   
- 구성 요소가 공용 언어 사양을 따르는 경우, 이 구성 요소는 CLS 규격임이 보장되고 CLS를 지원하는 모든 프로그래밍 언어로 작성된 어셈블리 코드에서 액세스할 수 있습니다. 
-  <xref:System.CLSCompliantAttribute> 특성을 소스 코드에 적용하여 구성 요소가 컴파일 타임에 공용 언어 사양을 준수하는지 여부를 결정할 수 있습니다. 자세한 내용은 [CLSCompliantAttribute 특성](#CLSAttribute)을 참조하세요.  
+ 구성 요소가 공용 언어 사양을 따르는 경우, 이 구성 요소는 CLS 규격임이 보장되고 CLS를 지원하는 모든 프로그래밍 언어로 작성된 어셈블리 코드에서 액세스할 수 있습니다. <xref:System.CLSCompliantAttribute> 특성을 소스 코드에 적용하여 구성 요소가 컴파일 타임에 공용 언어 사양을 준수하는지 여부를 결정할 수 있습니다. 자세한 내용은 [CLSCompliantAttribute 특성](#CLSAttribute)을 참조하세요.  
   
  이 문서의 내용  
   
@@ -88,8 +87,7 @@ ms.locfileid: "57846469"
  [!code-csharp[Conceptual.CLSCompliant#1](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.clscompliant/cs/public1.cs#1)]
  [!code-vb[Conceptual.CLSCompliant#1](../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.clscompliant/vb/public1.vb#1)]  
   
- 
-  `Person` 속성의 형식을 `Age`에서 CLS 규격 16비트 부호 있는 정수인 <xref:System.UInt16>으로 변경하여 <xref:System.Int16> 클래스를 CLS 규격으로 만들 수 있습니다. private `personAge` 필드의 형식을 변경할 필요가 없습니다.  
+ `Person` 속성의 형식을 `Age`에서 CLS 규격 16비트 부호 있는 정수인 <xref:System.UInt16>으로 변경하여 <xref:System.Int16> 클래스를 CLS 규격으로 만들 수 있습니다. private `personAge` 필드의 형식을 변경할 필요가 없습니다.  
   
  [!code-csharp[Conceptual.CLSCompliant#2](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.clscompliant/cs/public2.cs#2)]
  [!code-vb[Conceptual.CLSCompliant#2](../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.clscompliant/vb/public2.vb#2)]  
@@ -157,8 +155,7 @@ ms.locfileid: "57846469"
   
 <a name="Types"></a>   
 ### <a name="types-and-type-member-signatures"></a>형식 및 형식 멤버 시그니처  
- 
-  <xref:System.Object?displayProperty=nameWithType> 형식은 CLS 규격이고 .NET Framework 형식 시스템의 모든 개체 형식의 기본 형식입니다. .NET Framework의 상속은 암시적(예: <xref:System.String> 클래스는 <xref:System.Object> 클래스에서 암시적으로 상속됨)이거나 명시적(예: <xref:System.Globalization.CultureNotFoundException> 클래스는 <xref:System.ArgumentException> 클래스에서 명시적으로 상속되고, 이 클래스는 다시 <xref:System.SystemException> 클래스에서 명시적으로 상속되며, 이 클래스는 다시 <xref:System.Exception> 클래스에서 명시적으로 상속됨)입니다. 파생된 형식은 CLS 규격이어야 하며, 그 기본 형식도 CLS 규격이어야 합니다.  
+ <xref:System.Object?displayProperty=nameWithType> 형식은 CLS 규격이고 .NET Framework 형식 시스템의 모든 개체 형식의 기본 형식입니다. .NET Framework의 상속은 암시적(예: <xref:System.String> 클래스는 <xref:System.Object> 클래스에서 암시적으로 상속됨)이거나 명시적(예: <xref:System.Globalization.CultureNotFoundException> 클래스는 <xref:System.ArgumentException> 클래스에서 명시적으로 상속되고, 이 클래스는 다시 <xref:System.SystemException> 클래스에서 명시적으로 상속되며, 이 클래스는 다시 <xref:System.Exception> 클래스에서 명시적으로 상속됨)입니다. 파생된 형식은 CLS 규격이어야 하며, 그 기본 형식도 CLS 규격이어야 합니다.  
   
  다음 예제에서는 기본 형식이 CLS 규격이 아닌 파생 형식을 보여 줍니다. 부호 없는 32비트 정수를 카운터로 사용하는 기본 `Counter` 클래스를 정의합니다. 이 클래스는 부호 없는 정수를 래핑하여 카운터 기능을 제공하므로 CLS 비규격으로 표시됩니다. 따라서 파생된 클래스인 `NonZeroCounter`도 CLS 규격이 아닙니다.  
   
@@ -208,8 +205,7 @@ ms.locfileid: "57846469"
   
  형식이 CLS 규격이 아닌 경우 <xref:System.CLSCompliantAttribute>의 `isCompliant` 값으로 `false` 특성을 해당 형식에 적용해야 합니다. 자세한 내용은 [CLSCompliantAttribute 특성](#CLSAttribute) 섹션을 참조하세요.  
   
- 다음 예제에서는 메서드 시그니처와 제네릭 형식 인스턴스화의 CLS 규격 문제를 보여 줍니다. 
-  `InvoiceItem` 클래스를 <xref:System.UInt32> 형식의 속성, `Nullable(Of UInt32)` 형식의 속성, <xref:System.UInt32> 및 `Nullable(Of UInt32)` 형식의 매개 변수를 가진 생성자로 정의합니다. 이 예제를 컴파일하려고 할 때 4개의 컴파일러 경고가 표시됩니다.  
+ 다음 예제에서는 메서드 시그니처와 제네릭 형식 인스턴스화의 CLS 규격 문제를 보여 줍니다. `InvoiceItem` 클래스를 <xref:System.UInt32> 형식의 속성, `Nullable(Of UInt32)` 형식의 속성, <xref:System.UInt32> 및 `Nullable(Of UInt32)` 형식의 매개 변수를 가진 생성자로 정의합니다. 이 예제를 컴파일하려고 할 때 4개의 컴파일러 경고가 표시됩니다.  
   
  [!code-csharp[Conceptual.CLSCompliant#3](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.clscompliant/cs/type1.cs#3)]
  [!code-vb[Conceptual.CLSCompliant#3](../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.clscompliant/vb/type1.vb#3)]  
@@ -280,8 +276,7 @@ ms.locfileid: "57846469"
 ### <a name="arrays"></a>배열  
  CLS 규격 배열은 다음 규칙을 따릅니다.  
   
--   배열의 모든 크기는 하한이 0이어야 합니다. 다음 예제에서는 하한이 1인 CLS 비규격 배열을 만듭니다. 
-  <xref:System.CLSCompliantAttribute> 특성이 있음에도 불구하고 `Numbers.GetTenPrimes` 메서드에서 반환된 배열이 CLS 규격이 아님을 컴파일러에서 감지하지 못합니다.  
+-   배열의 모든 크기는 하한이 0이어야 합니다. 다음 예제에서는 하한이 1인 CLS 비규격 배열을 만듭니다. <xref:System.CLSCompliantAttribute> 특성이 있음에도 불구하고 `Numbers.GetTenPrimes` 메서드에서 반환된 배열이 CLS 규격이 아님을 컴파일러에서 감지하지 못합니다.  
   
      [!code-csharp[Conceptual.CLSCompliant#8](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.clscompliant/cs/array1.cs#8)]
      [!code-vb[Conceptual.CLSCompliant#8](../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.clscompliant/vb/array1.vb#8)]  
@@ -501,9 +496,7 @@ ms.locfileid: "57846469"
   
 <a name="CLSAttribute"></a>   
 ## <a name="the-clscompliantattribute-attribute"></a>CLSCompliantAttribute 특성  
- 
-  <xref:System.CLSCompliantAttribute> 특성은 프로그램 요소가 공용 언어 사양을 준수하는지 여부를 나타내는 데 사용됩니다. 
-  <xref:System.CLSCompliantAttribute.%23ctor%28System.Boolean%29?displayProperty=nameWithType> 생성자에는 프로그램 요소가 CLS 규격인지 여부를 나타내는 단일 필수 매개 변수 `isCompliant`가 포함되어 있습니다.  
+ <xref:System.CLSCompliantAttribute> 특성은 프로그램 요소가 공용 언어 사양을 준수하는지 여부를 나타내는 데 사용됩니다. <xref:System.CLSCompliantAttribute.%23ctor%28System.Boolean%29?displayProperty=nameWithType> 생성자에는 프로그램 요소가 CLS 규격인지 여부를 나타내는 단일 필수 매개 변수 `isCompliant`가 포함되어 있습니다.  
   
  컴파일 타임에 컴파일러는 CLS 규격으로 우선 간주되었던 비규격 요소를 검색하고 경고를 발생시킵니다. 컴파일러는 비규격으로 명시적 선언된 형식 또는 멤버에 대해서는 경고를 발생시키지 않습니다.  
   
@@ -516,8 +509,7 @@ ms.locfileid: "57846469"
 > [!WARNING]
 >  경우에 따라 언어 컴파일러는 <xref:System.CLSCompliantAttribute> 특성 사용 여부에 관계없이 CLS 규격 규칙을 적용합니다. 예를 들어, 인터페이스에서 정적 멤버를 정의하면 CLS 규칙에 위반됩니다. 이와 관련하여 인터페이스의 `static`(C#) 또는 `Shared`(Visual Basic) 멤버를 정의하는 경우, C# 및 Visual Basic 컴파일러 모두에서 오류 메시지가 표시되고 앱이 컴파일되지 않습니다.  
   
- 
-  <xref:System.CLSCompliantAttribute> 특성은 <xref:System.AttributeUsageAttribute>의 값을 갖는 <xref:System.AttributeTargets.All?displayProperty=nameWithType> 특성으로 표시됩니다. 이 값을 사용하면 <xref:System.CLSCompliantAttribute> 특성을 어셈블리, 모듈, 형식(클래스, 구조체, 열거형, 인터페이스 및 대리자), 형식 멤버(생성자, 메서드, 속성, 필드 및 이벤트), 매개 변수, 제네릭 매개 변수 및 반환 값 등 어떤 프로그램 요소에도 적용할 수 있습니다. 그러나 실제로는 어셈블리, 형식 및 형식 멤버에만 이 특성을 적용해야 합니다. 그러지 않으면 컴파일러는 특성을 무시하고 라이브러리의 공용 인터페이스에서 비규격 매개 변수, 제네릭 매개 변수 또는 반환 값이 발생할 때마다 컴파일러 경고를 계속해서 생성합니다.  
+ <xref:System.CLSCompliantAttribute> 특성은 <xref:System.AttributeUsageAttribute>의 값을 갖는 <xref:System.AttributeTargets.All?displayProperty=nameWithType> 특성으로 표시됩니다. 이 값을 사용하면 <xref:System.CLSCompliantAttribute> 특성을 어셈블리, 모듈, 형식(클래스, 구조체, 열거형, 인터페이스 및 대리자), 형식 멤버(생성자, 메서드, 속성, 필드 및 이벤트), 매개 변수, 제네릭 매개 변수 및 반환 값 등 어떤 프로그램 요소에도 적용할 수 있습니다. 그러나 실제로는 어셈블리, 형식 및 형식 멤버에만 이 특성을 적용해야 합니다. 그러지 않으면 컴파일러는 특성을 무시하고 라이브러리의 공용 인터페이스에서 비규격 매개 변수, 제네릭 매개 변수 또는 반환 값이 발생할 때마다 컴파일러 경고를 계속해서 생성합니다.  
   
  <xref:System.CLSCompliantAttribute> 특성의 값은 포함된 프로그램 요소에 의해 상속됩니다. 예를 들어, 어셈블리가 CLS 규격으로 표시되어 있으면 해당 형식도 CLS 규격입니다. 또한 형식이 CLS 규격으로 표시되어 있으면 해당 중첩 형식 및 멤버도 CLS 규격입니다.  
   

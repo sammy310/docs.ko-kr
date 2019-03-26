@@ -31,8 +31,7 @@ ms.locfileid: "57712278"
  [!code-csharp[CFX_ActivityExample#10](~/samples/snippets/csharp/VS_Snippets_CFX/CFX_ActivityExample/cs/Program.cs#10)]  
   
 ### <a name="invoking-asynchronous-methods-on-a-class"></a>클래스에 대한 비동기 메서드 호출  
- 
-  [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]의 많은 클래스는 비동기 기능을 제공합니다. 이 기능은 <xref:System.Activities.AsyncCodeActivity> 기반 활동을 사용하여 비동기적으로 호출할 수 있습니다. 다음 예제에서는 활동 만들어집니다 비동기적으로 파일을 사용 하 여 만드는 <xref:System.IO.FileStream> 클래스입니다.  
+ [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]의 많은 클래스는 비동기 기능을 제공합니다. 이 기능은 <xref:System.Activities.AsyncCodeActivity> 기반 활동을 사용하여 비동기적으로 호출할 수 있습니다. 다음 예제에서는 활동 만들어집니다 비동기적으로 파일을 사용 하 여 만드는 <xref:System.IO.FileStream> 클래스입니다.  
   
  [!code-csharp[CFX_ActivityExample#12](~/samples/snippets/csharp/VS_Snippets_CFX/CFX_ActivityExample/cs/Program.cs#12)]  
   
@@ -40,8 +39,7 @@ ms.locfileid: "57712278"
  앞의 예제에서 <xref:System.IO.FileStream>에서 만든 <xref:System.Activities.AsyncCodeActivity.BeginExecute%2A> 개체는 <xref:System.Activities.AsyncCodeActivity.EndExecute%2A>에서 액세스합니다. 이는 `file` 변수가 <xref:System.Activities.AsyncCodeActivityContext.UserState%2A?displayProperty=nameWithType>에서 <xref:System.Activities.AsyncCodeActivity.BeginExecute%2A> 속성에 전달되기 때문입니다. 이는 <xref:System.Activities.AsyncCodeActivity.BeginExecute%2A>와 <xref:System.Activities.AsyncCodeActivity.EndExecute%2A> 간의 상태 공유에 올바른 메서드입니다. 파생 클래스(`FileWriter` in this case)에서 멤버 변수를 사용하여 <xref:System.Activities.AsyncCodeActivity.BeginExecute%2A>와 <xref:System.Activities.AsyncCodeActivity.EndExecute%2A>간에 상태를 공유하는 것은 활동 개체가 여러 활동 인스턴스에서 참조될 수 있으므로 잘못된 것입니다. 멤버 변수를 사용하여 상태를 공유하려고 시도한 경우 어떤 <xref:System.Activities.ActivityInstance>의 값이 다른 <xref:System.Activities.ActivityInstance>의 값을 덮어쓰거나 사용하게 될 수 있습니다.  
   
 ### <a name="accessing-argument-values"></a>인수 값 액세스  
- 
-  <xref:System.Activities.AsyncCodeActivity> 환경은 활동에 정의된 인수들로 구성됩니다. 이 인수에서 액세스할 수 있습니다 합니다 <xref:System.Activities.AsyncCodeActivity.BeginExecute%2A> / <xref:System.Activities.AsyncCodeActivity.EndExecute%2A> 사용 하 여 재정의 <xref:System.Activities.AsyncCodeActivityContext> 매개 변수입니다. 대리자에서는 인수에 액세스할 수 없지만 해당 매개 변수를 사용하여 인수 값 또는 원하는 다른 데이터를 대리자에 전달할 수 있습니다. 다음 예제에서는 `Max` 인수에서 상한(포함)을 가져오는 난수 생성 활동을 정의합니다. 대리자를 호출하면 인수 값이 비동기 코드에 전달됩니다.  
+ <xref:System.Activities.AsyncCodeActivity> 환경은 활동에 정의된 인수들로 구성됩니다. 이 인수에서 액세스할 수 있습니다 합니다 <xref:System.Activities.AsyncCodeActivity.BeginExecute%2A> / <xref:System.Activities.AsyncCodeActivity.EndExecute%2A> 사용 하 여 재정의 <xref:System.Activities.AsyncCodeActivityContext> 매개 변수입니다. 대리자에서는 인수에 액세스할 수 없지만 해당 매개 변수를 사용하여 인수 값 또는 원하는 다른 데이터를 대리자에 전달할 수 있습니다. 다음 예제에서는 `Max` 인수에서 상한(포함)을 가져오는 난수 생성 활동을 정의합니다. 대리자를 호출하면 인수 값이 비동기 코드에 전달됩니다.  
   
  [!code-csharp[CFX_ActivityExample#9](~/samples/snippets/csharp/VS_Snippets_CFX/CFX_ActivityExample/cs/Program.cs#9)]  
   

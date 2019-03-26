@@ -124,8 +124,7 @@ Property name ( [ parameterlist ] ) [ As returntype ] [ Implements implementslis
   
 -   `implementslist`  
   
-     
-  `Implements`가 제공된 경우 필수입니다. 구현 되는 속성 목록입니다.  
+     `Implements`가 제공된 경우 필수입니다. 구현 되는 속성 목록입니다.  
   
      `implementedproperty [ , implementedproperty ... ]`  
   

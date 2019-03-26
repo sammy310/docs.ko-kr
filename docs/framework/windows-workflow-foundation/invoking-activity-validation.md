@@ -236,8 +236,7 @@ else
 ## <a name="using-validationsettings"></a>ValidationSettings 사용  
  <xref:System.Activities.Validation.ActivityValidationServices>에서 유효성 검사를 호출하면 기본적으로 활동 트리의 모든 활동이 평가됩니다. <xref:System.Activities.Validation.ValidationSettings> 을 사용하면 세 가지 속성을 구성하여 유효성 검사를 다양한 방법으로 사용자 지정할 수 있습니다. <xref:System.Activities.Validation.ValidationSettings.SingleLevel%2A>은 유효성 검사기에서 전체 활동 트리를 검사해야 할지 또는 제공된 활동에만 유효성 검사 논리를 적용해야 할지 지정합니다. 기본값은 `false`입니다. <xref:System.Activities.Validation.ValidationSettings.AdditionalConstraints%2A>는 형식에서 제약 조건 목록으로 매핑하는 추가 제약 조건을 지정합니다. 유효성을 검사 중인 활동 트리에 있는 각 활동의 기본 형식에 대해 <xref:System.Activities.Validation.ValidationSettings.AdditionalConstraints%2A>를 조회합니다. 일치하는 제약 조건 목록이 있는 경우 활동에 대한 목록의 모든 제약 조건을 평가합니다. <xref:System.Activities.Validation.ValidationSettings.OnlyUseAdditionalConstraints%2A>는 유효성 검사기에서 모든 제약 조건을 평가해야 할지 또는 <xref:System.Activities.Validation.ValidationSettings.AdditionalConstraints%2A>에 지정된 제약 조건만 평가해야 할지 지정합니다. 기본값은 `false`입니다. <xref:System.Activities.Validation.ValidationSettings.AdditionalConstraints%2A> 및 <xref:System.Activities.Validation.ValidationSettings.OnlyUseAdditionalConstraints%2A>는 워크플로 호스트 작성자가 워크플로에 대한 유효성 검사(예: FxCop와 같은 도구에 대한 정책 제약 조건)를 추가하는 데 유용합니다 제약 조건에 대 한 자세한 내용은 참조 하세요. [선언적 제약 조건](declarative-constraints.md)합니다.  
   
- 
-  <xref:System.Activities.Validation.ValidationSettings>를 사용하려면 원하는 속성을 구성한 다음 <xref:System.Activities.Validation.ActivityValidationServices.Validate%2A> 호출 시 전달합니다. 이 예제에서는 <xref:System.Activities.Statements.Sequence>와 사용자 지정 `Add` 활동으로 구성되는 워크플로의 유효성을 검사합니다. `Add` 활동에는 두 가지 필수 인수가 있습니다.  
+ <xref:System.Activities.Validation.ValidationSettings>를 사용하려면 원하는 속성을 구성한 다음 <xref:System.Activities.Validation.ActivityValidationServices.Validate%2A> 호출 시 전달합니다. 이 예제에서는 <xref:System.Activities.Statements.Sequence>와 사용자 지정 `Add` 활동으로 구성되는 워크플로의 유효성을 검사합니다. `Add` 활동에는 두 가지 필수 인수가 있습니다.  
   
 ```csharp  
 public sealed class Add : CodeActivity<int>  

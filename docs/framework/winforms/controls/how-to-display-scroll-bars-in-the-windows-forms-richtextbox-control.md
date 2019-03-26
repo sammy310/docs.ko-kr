@@ -32,8 +32,7 @@ ms.locfileid: "57716493"
     |<xref:System.Windows.Forms.RichTextBoxScrollBars.ForcedVertical>|항상 세로 스크롤 막대를 표시합니다. 텍스트 컨트롤의 길이 초과 하지 않는 스크롤 막대를 흐리게 표시 됩니다.|  
     |<xref:System.Windows.Forms.RichTextBoxScrollBars.ForcedBoth>|항상 세로 스크롤 막대를 표시합니다. 가로 스크롤 막대 때 표시 된 <xref:System.Windows.Forms.TextBoxBase.WordWrap%2A> 속성이 `false`합니다. 스크롤 막대 너비 또는 컨트롤의 길이 텍스트 크지 않으면 흐리게 표시 됩니다.|  
   
-3.  
-  <xref:System.Windows.Forms.TextBoxBase.WordWrap%2A> 속성을 적절한 값으로 설정합니다.  
+3.  <xref:System.Windows.Forms.TextBoxBase.WordWrap%2A> 속성을 적절한 값으로 설정합니다.  
   
     |값|설명|  
     |-----------|-----------------|  

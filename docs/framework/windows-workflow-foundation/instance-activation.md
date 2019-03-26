@@ -23,8 +23,7 @@ SQL 워크플로 인스턴스 저장소는 정기적으로 다시 시작되어 �
   
  SQL 워크플로 인스턴스 저장소에서는 실행 가능한 인스턴스가 발견되면 <xref:System.Activities.DurableInstancing.HasRunnableWorkflowEvent>를 발생시킵니다. 그러면 SqlWorkflowInstanceStore는 저장소에서 <xref:System.Activities.DurableInstancing.TryLoadRunnableWorkflowCommand>가 한 번 호출될 때까지 모니터링을 중지합니다.  
   
- 
-  <xref:System.Activities.DurableInstancing.HasRunnableWorkflowEvent>에 대해 구독되고 인스턴스를 로드할 수 있는 워크플로 호스트는 인스턴스 저장소에 대해 <xref:System.Activities.DurableInstancing.TryLoadRunnableWorkflowCommand>를 실행하여 인스턴스를 메모리로 로드합니다. 워크플로 호스트는 호스트 및 인스턴스 메타 데이터 속성이 있어야 하는 경우 워크플로 인스턴스를 로드할 수 있는 것으로 간주 됩니다 **WorkflowServiceType** 동일한 값으로 설정 합니다.  
+ <xref:System.Activities.DurableInstancing.HasRunnableWorkflowEvent>에 대해 구독되고 인스턴스를 로드할 수 있는 워크플로 호스트는 인스턴스 저장소에 대해 <xref:System.Activities.DurableInstancing.TryLoadRunnableWorkflowCommand>를 실행하여 인스턴스를 메모리로 로드합니다. 워크플로 호스트는 호스트 및 인스턴스 메타 데이터 속성이 있어야 하는 경우 워크플로 인스턴스를 로드할 수 있는 것으로 간주 됩니다 **WorkflowServiceType** 동일한 값으로 설정 합니다.  
   
 ## <a name="detecting-and-activating-activatable-workflow-instances"></a>활성화 가능한 워크플로 인스턴스 검색 및 활성화  
  워크플로 인스턴스를 사용 하는 것으로 간주 *활성화할 수 있는* 인스턴스를 로드할 수 있는 워크플로 호스트가 없는 컴퓨터에서 실행 중인 경우 인스턴스를 실행할 수 있습니다. 실행 가능한 워크플로 인스턴스의 정의는 위의 "실행 가능한 워크플로 인스턴스 검색 및 활성화"를 참조하세요.  

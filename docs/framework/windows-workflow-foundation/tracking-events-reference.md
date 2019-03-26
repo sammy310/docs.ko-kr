@@ -10,8 +10,7 @@ ms.lasthandoff: 03/09/2019
 ms.locfileid: "57712216"
 ---
 # <a name="tracking-events-reference"></a>추적 이벤트 참조
-
-  [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)]의 워크플로는 다양한 수명 단계를 거치면서 실행되는 동안 추적 이벤트를 발생시킵니다. 호스트는 이 이벤트의 알림을 신청하여 수명 중에 워크플로 진행 상태를 계속 업데이트할 수 있습니다. 이 단원에서는 발생하는 추적 이벤트를 설명합니다.  
+[!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)]의 워크플로는 다양한 수명 단계를 거치면서 실행되는 동안 추적 이벤트를 발생시킵니다. 호스트는 이 이벤트의 알림을 신청하여 수명 중에 워크플로 진행 상태를 계속 업데이트할 수 있습니다. 이 단원에서는 발생하는 추적 이벤트를 설명합니다.  
   
 ## <a name="event-reference"></a>이벤트 참조  
   
@@ -114,7 +113,7 @@ ms.locfileid: "57712216"
 |[3501 - InferredContractDescription](3501-inferredcontractdescription.md)|정보|Name='%1'이고 Namespace='%2'인 ContractDescription이 WorkflowService에서 유추되었습니다.|WFServices|  
 |[3502 - InferredOperationDescription](3502-inferredoperationdescription.md)|정보|계약 '%2'에서 Name='%1'인 OperationDescription이 WorkflowService에서 유추되었습니다. IsOneWay=%3.|WFServices|  
 |[3503 - DuplicateCorrelationQuery](3503-duplicatecorrelationquery.md)|경고|Where='%1'인 중복 CorrelationQuery가 있습니다. 이 중복 쿼리는 상관 관계를 계산할 때 사용되지 않습니다.|WFServices|  
-|[3507 - ServiceEndpointAdded](3507-serviceendpointadded.md)|정보|주소 '%1', 바인딩 '%2' 및 계약 '%3'에 대해 서비스 끝점이 추가되었습니다.|WFServices|  
+|[3507 - ServiceEndpointAdded](3507-serviceendpointadded.md)|정보|주소 '%1', 바인딩 '%2' 및 계약 '%3'에 대해 서비스 엔드포인트가 추가되었습니다.|WFServices|  
 |[3508 - TrackingProfileNotFound](3508-trackingprofilenotfound.md)|자세히|ActivityDefinitionId '%2'에 대한 TrackingProfile '%1'을(를) 찾지 못했습니다. 구성 파일에 TrackingProfile이 없거나 ActivityDefinitionId가 일치하지 않습니다.|WFServices|  
 |[3550 - BufferOutOfOrderMessageNoInstance](3550-bufferoutofordermessagenoinstance.md)|정보|현재는 '%1' 작업을 수행할 수 없습니다. 서비스 인스턴스에서 이 특정 작업을 처리할 준비가 되면 다시 작업이 시도됩니다.|WFServices|  
 |[3551 - BufferOutOfOrderMessageNoBookmark](3551-bufferoutofordermessagenobookmark.md)|정보|현재는 서비스 인스턴스 '%1'에서 '%2' 작업을 수행할 수 없습니다. 서비스 인스턴스에서 이 특정 작업을 처리할 준비가 되면 다시 작업이 시도됩니다.|WFServices|  

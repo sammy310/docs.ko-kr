@@ -44,12 +44,10 @@ HRESULT Next(
  [out] 각각 가리키는 포인터 배열을 [COR_HEAPOBJECT](../../../../docs/framework/unmanaged-api/debugging/cor-heapobject-structure.md) 관리 되는 힙의 개체에 대 한 정보를 제공 하는 개체입니다.  
   
  pceltFetched  
- [out] 개수에 대 한 포인터 [COR_HEAPOBJECT](../../../../docs/framework/unmanaged-api/debugging/cor-heapobject-structure.md) 개체에 실제로 반환 된 `objects`합니다. 
-  `celt`가 1이면 이 값은 `null`일 수 있습니다.  
+ [out] 개수에 대 한 포인터 [COR_HEAPOBJECT](../../../../docs/framework/unmanaged-api/debugging/cor-heapobject-structure.md) 개체에 실제로 반환 된 `objects`합니다. `celt`가 1이면 이 값은 `null`일 수 있습니다.  
   
 ## <a name="remarks"></a>설명  
- 
-  `COR_HEAPOBJECT.type` 필드는 중첩된 참조 수가 계산되는 COM 인터페이스의 식별자입니다. 이 참조는 `ICorDebugHeapEnum::Next` 호출자가 해제해야 합니다.  
+ `COR_HEAPOBJECT.type` 필드는 중첩된 참조 수가 계산되는 COM 인터페이스의 식별자입니다. 이 참조는 `ICorDebugHeapEnum::Next` 호출자가 해제해야 합니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  

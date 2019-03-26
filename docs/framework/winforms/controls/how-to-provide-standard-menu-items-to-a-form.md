@@ -17,8 +17,7 @@ ms.lasthandoff: 03/09/2019
 ms.locfileid: "57713867"
 ---
 # <a name="how-to-provide-standard-menu-items-to-a-form"></a>방법: 폼에 표준 메뉴 항목 제공
-
-  <xref:System.Windows.Forms.MenuStrip> 컨트롤을 사용하여 폼에 표준 메뉴를 제공할 수 있습니다.  
+<xref:System.Windows.Forms.MenuStrip> 컨트롤을 사용하여 폼에 표준 메뉴를 제공할 수 있습니다.  
   
  Visual Studio에서이 기능에 대해 폭넓게 지원이 됩니다.  
   

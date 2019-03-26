@@ -145,9 +145,7 @@ public class LineItem
 }
 ```
 
-
-  <xref:System.Runtime.Serialization.DataContractAttribute>는 형식의 필드 또는 속성을 0개 이상 serialize하도록 지정하고, <xref:System.Runtime.Serialization.DataMemberAttribute>는 특정 필드 또는 속성을 serialize하도록 지정합니다. <xref:System.Runtime.Serialization.DataContractAttribute>는 클래스 또는 구조체에 적용될 수 있습니다. 
-  <xref:System.Runtime.Serialization.DataMemberAttribute>는 필드 또는 속성에 적용될 수 있으며, 이 특성이 적용되는 필드와 속성은 public 또는 private일 수 있습니다. 있는 형식의 인스턴스는 <xref:System.Runtime.Serialization.DataContractAttribute> 적용할 하 이라고 wcf에서 데이터 계약입니다. 이러한 인스턴스는 <xref:System.Runtime.Serialization.DataContractSerializer>를 사용하여 XML로 serialize됩니다.
+<xref:System.Runtime.Serialization.DataContractAttribute>는 형식의 필드 또는 속성을 0개 이상 serialize하도록 지정하고, <xref:System.Runtime.Serialization.DataMemberAttribute>는 특정 필드 또는 속성을 serialize하도록 지정합니다. <xref:System.Runtime.Serialization.DataContractAttribute>는 클래스 또는 구조체에 적용될 수 있습니다. <xref:System.Runtime.Serialization.DataMemberAttribute>는 필드 또는 속성에 적용될 수 있으며, 이 특성이 적용되는 필드와 속성은 public 또는 private일 수 있습니다. 있는 형식의 인스턴스는 <xref:System.Runtime.Serialization.DataContractAttribute> 적용할 하 이라고 wcf에서 데이터 계약입니다. 이러한 인스턴스는 <xref:System.Runtime.Serialization.DataContractSerializer>를 사용하여 XML로 serialize됩니다.
 
 아래 목록에서는 <xref:System.Runtime.Serialization.DataContractSerializer>와 <xref:System.Xml.Serialization.XmlSerializer>를 사용할 때의 중요한 차이점과 <xref:System.Xml.Serialization> 네임스페이스의 다양한 특성에 대해 설명합니다.
 
@@ -178,11 +176,9 @@ public class LineItem
 
 - 형식의 public이 아닌 멤버를 XML로 serialize할 수 있기 때문에 <xref:System.Runtime.Serialization.DataContractSerializer>에는 XML로 serialize할 수 있는 .NET 형식의 다양성에 대한 제한이 더 적습니다. 특히 <xref:System.Collections.Hashtable> 인터페이스를 구현하는 <xref:System.Collections.IDictionary>과 같은 XML 형식으로 변환할 수 있습니다. 일반적으로 <xref:System.Runtime.Serialization.DataContractSerializer>는 형식의 정의를 수정하거나 형식을 위한 래퍼를 개발하지 않고도 기존 .NET 형식의 인스턴스를 XML로 serialize할 수 있는 가능성이 훨씬 더 높습니다.
 
-- 
-  <xref:System.Runtime.Serialization.DataContractSerializer>가 형식의 public이 아닌 멤버에 액세스할 수 있다는 점에 기인한 또 다른 결과는 <xref:System.Xml.Serialization.XmlSerializer>와 달리 완전 신뢰가 필요하다는 점입니다. 완전 신뢰 코드 액세스 권한 코드를 실행 중인 자격 증명을 사용 하 여 액세스할 수 있는 컴퓨터에서 모든 리소스에 대 한 전체 액세스를 제공 합니다. 완전히 신뢰할 수 있는 코드에는 컴퓨터에서 모든 리소스에 액세스 하는 대로이 옵션을 주의 하 여 사용 해야 합니다.
+- <xref:System.Runtime.Serialization.DataContractSerializer>가 형식의 public이 아닌 멤버에 액세스할 수 있다는 점에 기인한 또 다른 결과는 <xref:System.Xml.Serialization.XmlSerializer>와 달리 완전 신뢰가 필요하다는 점입니다. 완전 신뢰 코드 액세스 권한 코드를 실행 중인 자격 증명을 사용 하 여 액세스할 수 있는 컴퓨터에서 모든 리소스에 대 한 전체 액세스를 제공 합니다. 완전히 신뢰할 수 있는 코드에는 컴퓨터에서 모든 리소스에 액세스 하는 대로이 옵션을 주의 하 여 사용 해야 합니다.
 
-- 
-  <xref:System.Runtime.Serialization.DataContractSerializer>는 버전 관리를 위한 일부 지원을 통합합니다.
+- <xref:System.Runtime.Serialization.DataContractSerializer>는 버전 관리를 위한 일부 지원을 통합합니다.
 
     - <xref:System.Runtime.Serialization.DataMemberAttribute>에는 <xref:System.Runtime.Serialization.DataMemberAttribute.IsRequired%2A> 속성이 있습니다. 이 속성에는 새 버전의 데이터 계약에 추가된, 이전 버전에는 없었던 멤버에 대해 false 값을 할당할 수 있기 때문에 새 버전의 계약이 있는 응용 프로그램에서 이전 버전을 처리할 수 있습니다.
 
@@ -205,8 +201,7 @@ public class LineItem
 }
 ```
 
-Windows 소프트웨어 개발 키트 (SDK) 라는 명령줄 도구를 포함 합니다 [ServiceModel Metadata 유틸리티 도구 (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)합니다. ASP.NET 웹 서비스에서 사용 되는 xsd.exe 도구와 같은 Svcutil.exe XML 스키마에서.NET 데이터 형식의 정의 생성할 수 있습니다. 
-  <xref:System.Runtime.Serialization.DataContractSerializer>에서 XML 스키마에 의해 정의된 형식의 XML을 내보낼 수 있으면 이러한 형식은 데이터 계약이 됩니다. 그렇지 않으면 이러한 형식은 <xref:System.Xml.Serialization.XmlSerializer>를 사용하여 serialize됩니다. Svcutil.exe에서에서 생성할 수도 XML 스키마 데이터 계약 사용 하 여 해당 `dataContractOnly` 전환 합니다.
+Windows 소프트웨어 개발 키트 (SDK) 라는 명령줄 도구를 포함 합니다 [ServiceModel Metadata 유틸리티 도구 (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)합니다. ASP.NET 웹 서비스에서 사용 되는 xsd.exe 도구와 같은 Svcutil.exe XML 스키마에서.NET 데이터 형식의 정의 생성할 수 있습니다. <xref:System.Runtime.Serialization.DataContractSerializer>에서 XML 스키마에 의해 정의된 형식의 XML을 내보낼 수 있으면 이러한 형식은 데이터 계약이 됩니다. 그렇지 않으면 이러한 형식은 <xref:System.Xml.Serialization.XmlSerializer>를 사용하여 serialize됩니다. Svcutil.exe에서에서 생성할 수도 XML 스키마 데이터 계약 사용 하 여 해당 `dataContractOnly` 전환 합니다.
 
 > [!NOTE]
 > ASP.NET 웹 서비스에서 사용 되지만 합니다 <xref:System.Xml.Serialization.XmlSerializer>, WCF ASP.NET 호환 모드는 ASP.NET 웹 서비스의 동작을 모방 하는 WCF 서비스를 통해, ASP.NET 호환성 옵션을 사용 하도록 제한 하지 않습니다는 <xref:System.Xml.Serialization.XmlSerializer>합니다. ASP.NET 호환 모드에서 실행되는 서비스에서 <xref:System.Runtime.Serialization.DataContractSerializer>를 계속 사용할 수 있습니다.
@@ -435,8 +430,7 @@ ASP.NET 웹 서비스용 클라이언트는 .asmx 파일의 URL을 입력으로 
 
 ## <a name="message-representation"></a>메시지 표현
 
-ASP.NET 웹 서비스에서 보내고 받는 SOAP 메시지의 헤더를 사용자 지정할 수 있습니다. 
-  <xref:System.Web.Services.Protocols.SoapHeader>에서 클래스가 파생되어 헤더의 구조가 정의된 다음 <xref:System.Web.Services.Protocols.SoapHeaderAttribute>가 헤더의 존재를 나타내는 데 사용됩니다.
+ASP.NET 웹 서비스에서 보내고 받는 SOAP 메시지의 헤더를 사용자 지정할 수 있습니다. <xref:System.Web.Services.Protocols.SoapHeader>에서 클래스가 파생되어 헤더의 구조가 정의된 다음 <xref:System.Web.Services.Protocols.SoapHeaderAttribute>가 헤더의 존재를 나타내는 데 사용됩니다.
 
 ```csharp
 public class SomeProtocol : SoapHeader
@@ -557,15 +551,13 @@ ASP.NET 2.0을 통해 서비스가 WS-I(웹 서비스 상호 운용성) 조직�
 public interface IEcho
 ```
 
-ASP.NET에서 서비스에 대해 생성하는 WSDL을 사용자 지정할 수 있습니다. 
-  <xref:System.Web.Services.Description.ServiceDescriptionFormatExtension>의 파생 클래스를 만들어 WSDL에 항목을 추가함으로써 사용자 지정합니다.
+ASP.NET에서 서비스에 대해 생성하는 WSDL을 사용자 지정할 수 있습니다. <xref:System.Web.Services.Description.ServiceDescriptionFormatExtension>의 파생 클래스를 만들어 WSDL에 항목을 추가함으로써 사용자 지정합니다.
 
 6.0 또는 WAS WCF 서비스를 설명 하는 WSDL로 응답 하면 내 IIS 5.1에서 호스팅되는 HTTP 끝점이 있는 WCF 서비스의.svc 파일에 대해 쿼리 WSDL 사용 하 여 HTTP GET 요청을 발급 합니다. httpGetEnabled가 true로 설정된 경우 .NET 응용 프로그램에서 호스트되는 서비스의 HTTP 기본 주소에 대해 쿼리 WSDL을 사용하여 HTTP GET 요청을 실행해도 동일한 효과가 나타납니다.
 
 그러나 WCF는 또한 생성 하는 서비스를 설명 하는 WSDL 사용 하 여 Ws-metadataexchange 요청에 응답 합니다. ASP.NET 웹 서비스는 WS-MetadataExchange 요청에 대한 지원을 기본적으로 제공하지 않습니다.
 
-WCF를 생성 하는 WSDL은 광범위 하 게 사용자 지정할 수 있습니다. 
-  <xref:System.ServiceModel.Description.ServiceMetadataBehavior> 클래스는 WSDL을 사용자 지정하기 위한 몇 가지 기능을 제공합니다. WCF는 WSDL을 생성 하지 않지만 않고 지정된 된 URL에서 정적 WSDL 파일을 사용 하도록 구성할 수 있습니다.
+WCF를 생성 하는 WSDL은 광범위 하 게 사용자 지정할 수 있습니다. <xref:System.ServiceModel.Description.ServiceMetadataBehavior> 클래스는 WSDL을 사용자 지정하기 위한 몇 가지 기능을 제공합니다. WCF는 WSDL을 생성 하지 않지만 않고 지정된 된 URL에서 정적 WSDL 파일을 사용 하도록 구성할 수 있습니다.
 
 ```xml
 <behaviors>
@@ -651,8 +643,7 @@ WCF는 상태 관리를 위한 확장 가능한 개체를 제공합니다. 확�
 public class TradingSystem: ITradingService
 ```
 
-
-  `DealData` 클래스는 서비스 유형의 같은 인스턴스 내에서 실행되는 코드로 액세스할 수 있는 상태를 정의합니다.
+`DealData` 클래스는 서비스 유형의 같은 인스턴스 내에서 실행되는 코드로 액세스할 수 있는 상태를 정의합니다.
 
 ```csharp
 internal class DealData: IExtension<InstanceContext>

@@ -18,8 +18,7 @@ ms.locfileid: "58044053"
 컴파일러 옵션을 해제합니다.  
   
 ## <a name="remarks"></a>설명  
- 
-  `Off` 키워드는 다음 컨텍스트에서 사용할 수 있습니다.  
+ `Off` 키워드는 다음 컨텍스트에서 사용할 수 있습니다.  
   
  [Option Explicit 문](../../visual-basic/language-reference/statements/option-explicit-statement.md)  
   

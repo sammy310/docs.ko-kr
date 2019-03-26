@@ -39,8 +39,7 @@ ms.locfileid: "56980466"
   
  생성자를 클래스에 대 한 프로시저를 만들려면의 이름을 설정를 `Sub` 하는 절차는 `New` 키워드입니다. 자세한 내용은 참조 하세요. [개체 수명: 개체가 만들어지고 제거 하는 방법을](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-lifetime-how-objects-are-created-and-destroyed.md)합니다.  
   
- 
-  `New` 키워드는 다음 컨텍스트에서 사용할 수 있습니다.  
+ `New` 키워드는 다음 컨텍스트에서 사용할 수 있습니다.  
   
  [Dim 문](../../../visual-basic/language-reference/statements/dim-statement.md)  
   

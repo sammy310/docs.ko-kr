@@ -20,11 +20,9 @@ ms.locfileid: "56261541"
   
 -   응용 프로그램에서 자격 증명 정보를 설정하도록 API 제공  
   
--   
-  <xref:System.IdentityModel.Selectors.SecurityTokenManager> 구현을 위한 팩터리 역할 수행  
+-   <xref:System.IdentityModel.Selectors.SecurityTokenManager> 구현을 위한 팩터리 역할 수행  
   
- 
-  <xref:System.ServiceModel.Description.ClientCredentials> 및 <xref:System.ServiceModel.Description.ServiceCredentials> 클래스는 모두 <xref:System.ServiceModel.Security.SecurityCredentialsManager> 반환에 대한 계약을 정의하는 추상 <xref:System.IdentityModel.Selectors.SecurityTokenManager> 클래스로부터 상속됩니다.  
+ <xref:System.ServiceModel.Description.ClientCredentials> 및 <xref:System.ServiceModel.Description.ServiceCredentials> 클래스는 모두 <xref:System.ServiceModel.Security.SecurityCredentialsManager> 반환에 대한 계약을 정의하는 추상 <xref:System.IdentityModel.Selectors.SecurityTokenManager> 클래스로부터 상속됩니다.  
   
  WCF에서 제공 된 기본 구현에서는 시스템 제공 자격 증명 형식을 지원 및 보안 토큰 관리자는 이러한 자격 증명 형식을 다룰 수를 만듭니다.  
   
@@ -52,16 +50,14 @@ ms.locfileid: "56261541"
   
 #### <a name="to-implement-custom-client-credentials"></a>사용자 지정 클라이언트 자격 증명을 구현하려면  
   
-1.  
-  <xref:System.ServiceModel.Description.ClientCredentials> 클래스에서 파생된 새 클래스를 정의합니다.  
+1.  <xref:System.ServiceModel.Description.ClientCredentials> 클래스에서 파생된 새 클래스를 정의합니다.  
   
 2.  선택 사항입니다. 새 자격 증명 형식에 대해 새 메서드 또는 속성을 추가합니다. 새 자격 증명 형식을 추가하지 않으려면 이 단계를 건너뜁니다. 다음 예제에서는 `CreditCardNumber` 속성을 추가합니다.  
   
 3.  <xref:System.ServiceModel.Security.SecurityCredentialsManager.CreateSecurityTokenManager%2A> 메서드를 재정의합니다. 이 메서드는 사용자 지정 클라이언트 자격 증명을 사용 하는 경우 WCF 보안 인프라에서 자동으로 호출 됩니다. 이 메서드는 <xref:System.IdentityModel.Selectors.SecurityTokenManager> 클래스 구현의 인스턴스를 만들고 반환합니다.  
   
     > [!IMPORTANT]
-    >  <xref:System.ServiceModel.Security.SecurityCredentialsManager.CreateSecurityTokenManager%2A> 메서드를 재정의하여 사용자 지정 보안 토큰 관리자를 만든다는 점이 중요합니다. 
-  <xref:System.ServiceModel.ClientCredentialsSecurityTokenManager>에서 파생된 보안 토큰 관리자는 <xref:System.IdentityModel.Selectors.SecurityTokenProvider>에서 파생된 사용자 지정 보안 토큰 공급자를 반환하여 실제 보안 토큰을 만들어야 합니다. 보안 토큰을 만들 때 이 방식을 따르지 않으면 <xref:System.ServiceModel.ChannelFactory> 개체를 캐시할 때(WCF 클라이언트 프록시의 기본 동작임) 응용 프로그램의 기능이 제대로 수행되지 않아 권한 상승 공격이 발생할 수 있습니다. 사용자 지정 자격 증명 개체는 <xref:System.ServiceModel.ChannelFactory>의 일부분으로 캐시됩니다. 그러나 사용자 지정 <xref:System.IdentityModel.Selectors.SecurityTokenManager>는 호출할 때마다 만들어지므로 토큰 생성 논리가 <xref:System.IdentityModel.Selectors.SecurityTokenManager>에 있는 한 보안 위협은 완화됩니다.  
+    >  <xref:System.ServiceModel.Security.SecurityCredentialsManager.CreateSecurityTokenManager%2A> 메서드를 재정의하여 사용자 지정 보안 토큰 관리자를 만든다는 점이 중요합니다. <xref:System.ServiceModel.ClientCredentialsSecurityTokenManager>에서 파생된 보안 토큰 관리자는 <xref:System.IdentityModel.Selectors.SecurityTokenProvider>에서 파생된 사용자 지정 보안 토큰 공급자를 반환하여 실제 보안 토큰을 만들어야 합니다. 보안 토큰을 만들 때 이 방식을 따르지 않으면 <xref:System.ServiceModel.ChannelFactory> 개체를 캐시할 때(WCF 클라이언트 프록시의 기본 동작임) 응용 프로그램의 기능이 제대로 수행되지 않아 권한 상승 공격이 발생할 수 있습니다. 사용자 지정 자격 증명 개체는 <xref:System.ServiceModel.ChannelFactory>의 일부분으로 캐시됩니다. 그러나 사용자 지정 <xref:System.IdentityModel.Selectors.SecurityTokenManager>는 호출할 때마다 만들어지므로 토큰 생성 논리가 <xref:System.IdentityModel.Selectors.SecurityTokenManager>에 있는 한 보안 위협은 완화됩니다.  
   
 4.  <xref:System.ServiceModel.Description.ClientCredentials.CloneCore%2A> 메서드를 재정의합니다.  
   
@@ -70,8 +66,7 @@ ms.locfileid: "56261541"
   
 #### <a name="to-implement-a-custom-client-security-token-manager"></a>사용자 지정 클라이언트 보안 토큰 관리자를 구현하려면  
   
-1.  
-  <xref:System.ServiceModel.ClientCredentialsSecurityTokenManager>에서 파생된 새 클래스를 정의합니다.  
+1.  <xref:System.ServiceModel.ClientCredentialsSecurityTokenManager>에서 파생된 새 클래스를 정의합니다.  
   
 2.  선택 사항입니다. 사용자 지정 <xref:System.IdentityModel.Selectors.SecurityTokenManager.CreateSecurityTokenProvider%28System.IdentityModel.Selectors.SecurityTokenRequirement%29> 구현을 만들어야 하는 경우 <xref:System.IdentityModel.Selectors.SecurityTokenProvider> 메서드를 재정의합니다. 사용자 지정 보안 토큰 공급자에 대 한 자세한 내용은 참조 하세요. [방법: 사용자 지정 보안 토큰 공급자 만들기](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-provider.md)합니다.  
   
@@ -86,8 +81,7 @@ ms.locfileid: "56261541"
   
 1.  서비스 인터페이스를 나타내는 생성된 클라이언트의 인스턴스를 만들거나 사용자가 통신하려고 하는 서비스를 가리키는 <xref:System.ServiceModel.ChannelFactory>의 인스턴스를 만듭니다.  
   
-2.  
-  <xref:System.ServiceModel.Description.ServiceEndpoint.Behaviors%2A> 속성을 통해 액세스할 수 있는 <xref:System.ServiceModel.ChannelFactory.Endpoint%2A> 컬렉션으로부터 시스템 제공 클라이언트 자격 증명 동작을 제거합니다.  
+2.  <xref:System.ServiceModel.Description.ServiceEndpoint.Behaviors%2A> 속성을 통해 액세스할 수 있는 <xref:System.ServiceModel.ChannelFactory.Endpoint%2A> 컬렉션으로부터 시스템 제공 클라이언트 자격 증명 동작을 제거합니다.  
   
 3.  사용자 지정 클라이언트 자격 증명 클래스의 새 인스턴스를 만들고 이 인스턴스를 <xref:System.ServiceModel.Description.ServiceEndpoint.Behaviors%2A> 속성을 통해 액세스할 수 있는 <xref:System.ServiceModel.ChannelFactory.Endpoint%2A> 컬렉션에 추가합니다.  
   
@@ -100,8 +94,7 @@ ms.locfileid: "56261541"
   
 #### <a name="creating-a-configuration-handler-for-custom-client-credentials"></a>사용자 지정 클라이언트 자격 증명에 대한 구성 처리기 만들기  
   
-1.  
-  <xref:System.ServiceModel.Configuration.ClientCredentialsElement>에서 파생된 새 클래스를 정의합니다.  
+1.  <xref:System.ServiceModel.Configuration.ClientCredentialsElement>에서 파생된 새 클래스를 정의합니다.  
   
 2.  선택 사항입니다. 응용 프로그램 구성을 통해 노출하려고 하는 모든 추가 구성 매개 변수에 대한 속성을 추가합니다. 아래 예제에서는 이름이 `CreditCardNumber`인 속성 하나를 추가합니다.  
   
@@ -122,8 +115,7 @@ ms.locfileid: "56261541"
   
 2.  추가 <`add`> 요소는 <`behaviorExtensions`> 요소는 `name` 특성을 적절 한 값으로.  
   
-3.  
-  `type` 특성을 정규화된 형식 이름으로 설정합니다. 또한 어셈블리 이름과 기타 어셈블리 특성을 포함시킵니다.  
+3.  `type` 특성을 정규화된 형식 이름으로 설정합니다. 또한 어셈블리 이름과 기타 어셈블리 특성을 포함시킵니다.  
   
     ```xml  
     <system.serviceModel>  
@@ -149,8 +141,7 @@ ms.locfileid: "56261541"
   
 #### <a name="to-implement-custom-service-credentials"></a>사용자 지정 서비스 자격 증명을 구현하려면  
   
-1.  
-  <xref:System.ServiceModel.Description.ServiceCredentials>에서 파생된 새 클래스를 정의합니다.  
+1.  <xref:System.ServiceModel.Description.ServiceCredentials>에서 파생된 새 클래스를 정의합니다.  
   
 2.  선택 사항입니다. 추가 중인 새 자격 증명 값에 대한 API를 제공하려면 새 속성을 추가합니다. 새 자격 증명 값을 추가하지 않으려면 이 단계를 건너뜁니다. 다음 예제에서는 `AdditionalCertificate` 속성을 추가합니다.  
   
@@ -163,8 +154,7 @@ ms.locfileid: "56261541"
   
 #### <a name="to-implement-a-custom-service-security-token-manager"></a>사용자 지정 서비스 보안 토큰 관리자를 구현하려면  
   
-1.  
-  <xref:System.ServiceModel.Security.ServiceCredentialsSecurityTokenManager> 클래스에서 파생된 새 클래스를 정의합니다.  
+1.  <xref:System.ServiceModel.Security.ServiceCredentialsSecurityTokenManager> 클래스에서 파생된 새 클래스를 정의합니다.  
   
 2.  선택 사항입니다. 사용자 지정 <xref:System.IdentityModel.Selectors.SecurityTokenManager.CreateSecurityTokenProvider%2A> 구현을 만들어야 하는 경우 <xref:System.IdentityModel.Selectors.SecurityTokenProvider> 메서드를 재정의합니다. 사용자 지정 보안 토큰 공급자에 대 한 자세한 내용은 참조 하세요. [방법: 사용자 지정 보안 토큰 공급자 만들기](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-provider.md)합니다.  
   
@@ -179,8 +169,7 @@ ms.locfileid: "56261541"
   
 1.  <xref:System.ServiceModel.ServiceHost>의 인스턴스를 만듭니다.  
   
-2.  
-  <xref:System.ServiceModel.Description.ServiceDescription.Behaviors%2A> 컬렉션으로부터 시스템 제공 서비스 자격 증명 동작을 제거합니다.  
+2.  <xref:System.ServiceModel.Description.ServiceDescription.Behaviors%2A> 컬렉션으로부터 시스템 제공 서비스 자격 증명 동작을 제거합니다.  
   
 3.  사용자 지정 서비스 자격 증명 클래스의 새 인스턴스를 만들고 이 인스턴스를 <xref:System.ServiceModel.Description.ServiceDescription.Behaviors%2A> 컬렉션에 추가합니다.  
   

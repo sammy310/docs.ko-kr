@@ -52,11 +52,10 @@ new Assign<int>
   
  C# 식은 해당 식을 포함하는 워크플로를 호출하기 전에 컴파일해야 합니다. 경우는 C# 식이 컴파일되지 않은 <xref:System.NotSupportedException> 다음과 유사한 메시지를 사용 하 여 워크플로 호출 하는 경우에 throw 됩니다. `Expression Activity type 'CSharpValue`1' 컴파일 실행 하기 위해 필요 합니다.  워크플로 컴파일 되었는지 확인 하세요.' Visual Studio C#에서 만든 워크플로 포함 하는 대부분의 시나리오에서 식을 자동으로 컴파일되지만 코드 워크플로와 같은 일부 시나리오에서는 C# 식을 수동으로 컴파일해야 합니다. C# 식을 컴파일하는 방법의 예제를 참조 하세요.는 [코드 워크플로에서 사용 하 여 C# 식](csharp-expressions.md#CodeWorkflows) 섹션을 [C# 식을](csharp-expressions.md) 항목입니다.  
   
- 
-  <xref:Microsoft.VisualBasic.Activities.VisualBasicValue%601>는 식에서 r-value로 사용할 수 있는 Visual Basic 구문의 식을 나타내며, <xref:Microsoft.CSharp.Activities.CSharpValue%601>는 식에서 r-value로 사용할 수 있는 C# 구문의 식을 나타냅니다. 이러한 식은 포함 활동이 실행될 때마다 계산됩니다. 식의 결과는 워크플로 변수 `n`에 할당되고 이 결과는 워크플로의 다음 활동에서 사용됩니다. 런타임에 워크플로 변수 `n`에 액세스하려면 <xref:System.Activities.ActivityContext>가 필요합니다. 다음 람다 식을 사용하여 이 변수에 액세스할 수 있습니다.  
+ <xref:Microsoft.VisualBasic.Activities.VisualBasicValue%601>는 식에서 r-value로 사용할 수 있는 Visual Basic 구문의 식을 나타내며, <xref:Microsoft.CSharp.Activities.CSharpValue%601>는 식에서 r-value로 사용할 수 있는 C# 구문의 식을 나타냅니다. 이러한 식은 포함 활동이 실행될 때마다 계산됩니다. 식의 결과는 워크플로 변수 `n`에 할당되고 이 결과는 워크플로의 다음 활동에서 사용됩니다. 런타임에 워크플로 변수 `n`에 액세스하려면 <xref:System.Activities.ActivityContext>가 필요합니다. 다음 람다 식을 사용하여 이 변수에 액세스할 수 있습니다.  
   
 > [!NOTE]
->  이러한 코드는 둘 다 C#을 프로그래밍 언어로 사용하지만 하나는 <xref:Microsoft.VisualBasic.Activities.VisualBasicValue%601>를 사용하고 다른 하나는 <xref:Microsoft.CSharp.Activities.CSharpValue%601>를 사용합니다. <xref:Microsoft.VisualBasic.Activities.VisualBasicValue%601> 및 <xref:Microsoft.CSharp.Activities.CSharpValue%601>는 Visual Basic 및 C# 프로젝트 모두에서 사용할 수 있습니다. 기본적으로 Workflow Designer에서 만든 식은 호스팅 프로젝트의 언어와 일치합니다. 코드에서 워크플로를 작성할 때는 워크플로 작성자가 원하는 언어를 선택합니다.  
+>  이러한 코드는 둘 다 C#을 프로그래밍 언어로 사용하지만 하나는 <xref:Microsoft.VisualBasic.Activities.VisualBasicValue%601>를 사용하고 다른 하나는 <xref:Microsoft.CSharp.Activities.CSharpValue%601>를 사용합니다. <xref:Microsoft.VisualBasic.Activities.VisualBasicValue%601> 및 <xref:Microsoft.CSharp.Activities.CSharpValue%601>는 Visual Basic 및 C# 프로젝트 모두에서 사용할 수 있습니다. 기본적으로 워크플로 디자이너에서 만든 식은 호스팅 프로젝트의 언어와 일치합니다. 코드에서 워크플로를 작성할 때는 워크플로 작성자가 원하는 언어를 선택합니다.  
   
  이러한 예제에서 식의 결과는 워크플로 변수 `n`에 할당되고 이 결과는 워크플로의 다음 활동에서 사용됩니다. 런타임에 워크플로 변수 `n`에 액세스하려면 <xref:System.Activities.ActivityContext>가 필요합니다. 다음 람다 식을 사용하여 이 변수에 액세스할 수 있습니다.  
   
@@ -72,8 +71,7 @@ new Assign<int>
   
  [!code-csharp[CFX_WorkflowApplicationExample#54](~/samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowapplicationexample/cs/program.cs#54)]  
   
- 런타임에 Visual Basic 식은 LINQ 식으로 컴파일됩니다. 이전의 두 예제는 XAML로 serialize할 수 있지만 serialize한 XAML을 Workflow Designer에서 보고 편집하려는 경우에는 식에 <xref:Microsoft.VisualBasic.Activities.VisualBasicValue%601>를 사용하세요. 
-  `ExpressionServices.Convert`를 사용하는 serialize된 워크플로는 디자이너에서 열 수 있지만 식의 값은 비게 됩니다. XAML 워크플로 직렬화 하는 방법에 대 한 자세한 내용은 참조 하세요. [직렬화 워크플로 및 활동을 XAML에서](serializing-workflows-and-activities-to-and-from-xaml.md)합니다.  
+ 런타임에 Visual Basic 식은 LINQ 식으로 컴파일됩니다. 이전의 두 예제는 XAML로 serialize할 수 있지만 serialize한 XAML을 Workflow Designer에서 보고 편집하려는 경우에는 식에 <xref:Microsoft.VisualBasic.Activities.VisualBasicValue%601>를 사용하세요. `ExpressionServices.Convert`를 사용하는 serialize된 워크플로는 디자이너에서 열 수 있지만 식의 값은 비게 됩니다. XAML 워크플로 직렬화 하는 방법에 대 한 자세한 내용은 참조 하세요. [직렬화 워크플로 및 활동을 XAML에서](serializing-workflows-and-activities-to-and-from-xaml.md)합니다.  
   
 #### <a name="literal-expressions-and-reference-types"></a>리터럴 식 및 참조 형식  
  리터럴 식은 워크플로에서 <xref:System.Activities.Expressions.Literal%601> 활동으로 표시됩니다. 다음 <xref:System.Activities.Statements.WriteLine> 활동은 기능이 동일합니다.  
@@ -144,11 +142,9 @@ new InvokeMethod<int>
 ## <a name="compiled-activities"></a>컴파일된 활동  
  동적 활동은 코드를 사용하여 인수가 포함된 활동을 정의하는 한 방법이지만 활동을 코드에서 만들어 형식으로 컴파일할 수도 있습니다. <xref:System.Activities.CodeActivity>에서 파생되는 간단한 활동과 <xref:System.Activities.AsyncCodeActivity>에서 파생되는 비동기 활동을 만들 수 있습니다. 이러한 활동은 인수를 사용하고, 값을 반환하며, 명령적 코드를 사용하여 논리를 정의합니다. 이러한 유형의 활동을 만드는 방법의 예제를 참조 하세요 [CodeActivity 기본 클래스](workflow-activity-authoring-using-the-codeactivity-class.md) 하 고 [비동기 활동 만들기](creating-asynchronous-activities-in-wf.md)합니다.  
   
- 
-  <xref:System.Activities.NativeActivity>에서 파생되는 활동은 명령적 코드를 사용하여 논리를 정의할 수 있으며 논리를 정의하는 자식 활동을 포함할 수도 있습니다. 또한 책갈피 만들기 같은 런타임 기능에도 완벽하게 액세스할 수 있습니다. 만드는 방법의 예제는 <xref:System.Activities.NativeActivity>-기반 활동을 참조 하세요 [NativeActivity 기본 클래스](nativeactivity-base-class.md), [방법: 활동을 만드는](how-to-create-an-activity.md), 및 [Native Activity를 사용 하 여 사용자 지정 복합](./samples/custom-composite-using-native-activity.md) 샘플입니다.  
+ <xref:System.Activities.NativeActivity>에서 파생되는 활동은 명령적 코드를 사용하여 논리를 정의할 수 있으며 논리를 정의하는 자식 활동을 포함할 수도 있습니다. 또한 책갈피 만들기 같은 런타임 기능에도 완벽하게 액세스할 수 있습니다. 만드는 방법의 예제는 <xref:System.Activities.NativeActivity>-기반 활동을 참조 하세요 [NativeActivity 기본 클래스](nativeactivity-base-class.md), [방법: 활동을 만드는](how-to-create-an-activity.md), 및 [Native Activity를 사용 하 여 사용자 지정 복합](./samples/custom-composite-using-native-activity.md) 샘플입니다.  
   
- 
-  <xref:System.Activities.Activity>에서 파생되는 활동은 자식 활동을 통해서만 논리를 정의합니다. 이러한 활동은 일반적으로 Workflow Designer를 사용하여 만들지만 코드를 사용하여 정의할 수도 있습니다. 다음 예제에서는 `Square`에서 파생되는 `Activity<int>` 활동을 정의합니다. `Square` 활동은 <xref:System.Activities.InArgument%601>라는 단일 `Value`를 사용하며, <xref:System.Activities.Statements.Sequence> 속성을 사용하여 <xref:System.Activities.Activity.Implementation%2A> 활동을 지정함으로써 논리를 정의합니다. <xref:System.Activities.Statements.Sequence> 활동에는 <xref:System.Activities.Statements.WriteLine> 활동과 <xref:System.Activities.Statements.Assign%601> 활동이 포함됩니다. 이러한 세 가지 활동이 함께 `Square` 활동의 논리를 구현합니다.  
+ <xref:System.Activities.Activity>에서 파생되는 활동은 자식 활동을 통해서만 논리를 정의합니다. 이러한 활동은 일반적으로 워크플로 디자이너를 사용하여 만들지만 코드를 사용하여 정의할 수도 있습니다. 다음 예제에서는 `Square`에서 파생되는 `Activity<int>` 활동을 정의합니다. `Square` 활동은 <xref:System.Activities.InArgument%601>라는 단일 `Value`를 사용하며, <xref:System.Activities.Statements.Sequence> 속성을 사용하여 <xref:System.Activities.Activity.Implementation%2A> 활동을 지정함으로써 논리를 정의합니다. <xref:System.Activities.Statements.Sequence> 활동에는 <xref:System.Activities.Statements.WriteLine> 활동과 <xref:System.Activities.Statements.Assign%601> 활동이 포함됩니다. 이러한 세 가지 활동이 함께 `Square` 활동의 논리를 구현합니다.  
   
 ```csharp  
 class Square : Activity<int>  

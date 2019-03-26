@@ -25,8 +25,7 @@ ms.locfileid: "56442492"
 
 1. 응용 프로그램에서 내부적으로 유니코드를 사용합니다.
 
-2. 
-  <xref:System.Globalization> 네임스페이스에서 제공하는 문화권 인식 클래스를 사용하여 데이터를 조작하고 형식을 지정합니다.
+2. <xref:System.Globalization> 네임스페이스에서 제공하는 문화권 인식 클래스를 사용하여 데이터를 조작하고 형식을 지정합니다.
 
     - 정렬할 때는 <xref:System.Globalization.SortKey> 클래스 및 <xref:System.Globalization.CompareInfo> 클래스를 사용합니다.
 
@@ -38,22 +37,17 @@ ms.locfileid: "56442492"
 
     - 그레고리오력 및 그레고리오력이 아닌 달력을 사용하려면 <xref:System.Globalization.Calendar> 클래스 또는 특정 달력 구현 중 하나를 사용합니다.
 
-3. 
-  <xref:System.Globalization.CultureInfo?displayProperty=nameWithType> 클래스에서 제공하는 문화권 속성 설정을 적절한 상황에서 사용합니다. 날짜 및 시간 또는 숫자 형식 지정과 같은 형식 지정 작업에는 <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=nameWithType> 속성을 사용합니다. 리소스를 검색하려면 <xref:System.Globalization.CultureInfo.CurrentUICulture%2A?displayProperty=nameWithType> 속성을 사용합니다. 
-  `CurrentCulture` 및 `CurrentUICulture` 속성을 스레드별로 설정할 수 있습니다.
+3. <xref:System.Globalization.CultureInfo?displayProperty=nameWithType> 클래스에서 제공하는 문화권 속성 설정을 적절한 상황에서 사용합니다. 날짜 및 시간 또는 숫자 형식 지정과 같은 형식 지정 작업에는 <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=nameWithType> 속성을 사용합니다. 리소스를 검색하려면 <xref:System.Globalization.CultureInfo.CurrentUICulture%2A?displayProperty=nameWithType> 속성을 사용합니다. `CurrentCulture` 및 `CurrentUICulture` 속성을 스레드별로 설정할 수 있습니다.
 
 4. 응용 프로그램에서 <xref:System.Text> 네임스페이스의 인코딩 클래스를 사용하여 다양한 인코딩 간에 데이터를 읽고 쓸 수 있도록 합니다. ASCII 데이터가 입력될 것으로 예상하지 말고, 사용자가 텍스트를 입력할 수 있는 모든 위치에 국제 문자가 제공될 것으로 가정합니다. 예를 들어, 응용 프로그램에서는 서버 이름, 디렉터리, 파일 이름, 사용자 이름 및 URL에서 국제 문자를 사용할 수 있습니다.
 
-5. 
-  <xref:System.Text.UTF8Encoding> 클래스를 사용할 때는 보안상의 이유로 이 클래스가 제공하는 오류 검색 기능을 사용합니다. 오류 검색 기능을 설정하려면 `throwOnInvalidBytes` 매개 변수를 사용하는 생성자를 사용하여 클래스의 인스턴스를 만들고 이 매개 변수의 값을 `true`로 설정합니다.
+5. <xref:System.Text.UTF8Encoding> 클래스를 사용할 때는 보안상의 이유로 이 클래스가 제공하는 오류 검색 기능을 사용합니다. 오류 검색 기능을 설정하려면 `throwOnInvalidBytes` 매개 변수를 사용하는 생성자를 사용하여 클래스의 인스턴스를 만들고 이 매개 변수의 값을 `true`로 설정합니다.
 
 6. 가능하면 문자열을 일련의 개별 문자가 아니라 전체 문자열로 처리합니다. 이것은 하위 문자열을 검색하거나 정렬할 때 특히 중요합니다. 이를 통해 조합된 문자의 구문을 분석할 때 발생하는 문제를 방지할 수 있습니다. <xref:System.Globalization.StringInfo?displayProperty=nameWithType> 클래스를 사용하여 단일 문자가 아닌 텍스트 단위를 사용할 수도 있습니다.
 
-7. 
-  <xref:System.Drawing> 네임스페이스에서 제공하는 클래스를 사용하여 텍스트를 표시합니다.
+7. <xref:System.Drawing> 네임스페이스에서 제공하는 클래스를 사용하여 텍스트를 표시합니다.
 
-8. 운영 체제 간에 일관성을 유지하려면 사용자 설정에 따라 <xref:System.Globalization.CultureInfo>가 재정의되지 않게 합니다. 
-  `CultureInfo` 매개 변수를 사용하는 `useUserOverride` 생성자를 사용하여 `false`로 설정합니다.
+8. 운영 체제 간에 일관성을 유지하려면 사용자 설정에 따라 <xref:System.Globalization.CultureInfo>가 재정의되지 않게 합니다. `CultureInfo` 매개 변수를 사용하는 `useUserOverride` 생성자를 사용하여 `false`로 설정합니다.
 
 9. 국제 데이터를 사용하여 국제 운영 체제 버전에서 응용 프로그램의 기능을 테스트합니다.
 
@@ -75,8 +69,7 @@ ms.locfileid: "56442492"
 
 7. 사용자 인터페이스에서 문자열 길이를 확장할 수 있도록 충분한 공간을 둡니다. 일부 언어에서는 다른 언어와 비교하여 구에 50-75%의 공간이 더 필요합니다.
 
-8. 
-  <xref:System.Resources.ResourceManager?displayProperty=nameWithType> 클래스를 사용하여 문화권에 따라 리소스를 검색합니다.
+8. <xref:System.Resources.ResourceManager?displayProperty=nameWithType> 클래스를 사용하여 문화권에 따라 리소스를 검색합니다.
 
 9. [Windows Forms 리소스 편집기(Winres.exe)](../../../docs/framework/tools/winres-exe-windows-forms-resource-editor.md)를 사용하여 지역화할 수 있도록 [Visual Studio](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017)를 사용하여 Windows Forms 대화 상자를 만듭니다. Windows Forms 대화 상자는 직접 코딩하지 마십시오.
 

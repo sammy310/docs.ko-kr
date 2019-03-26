@@ -67,9 +67,9 @@ HRESULT SurvivingReferences(
   
  비압축 가비지 컬렉션은 "데드" 개체가 사용한 메모리를 회수하지만 확보된 공간을 압축하지는 않습니다. 따라서 메모리가 힙에 반환되지만 "라이브" 개체는 이동되지 않습니다.  
   
- CLR(공용 언어 런타임)은 비압축 가비지 수집을 위해 `SurvivingReferences`를 호출합니다. 압축 가비지 컬렉션 [icorprofilercallback:: Movedreferences](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-movedreferences-method.md) 대신 호출 됩니다. 한 세대는 단일 가비지 수집을 압축하고 다른 세대는 압축하지 않을 수 있습니다. 특정 세대의 가비지 수집에 대해 프로파일러는 `SurvivingReferences` 콜백이나 `MovedReferences` 콜백 중 하나를 받게 되며 둘 다 받을 수는 없습니다.  
+ CLR(공용 언어 런타임)은 비압축 가비지 수집을 위해 `SurvivingReferences`를 호출합니다. 압축 가비지 컬렉션 [icorprofilercallback:: Movedreferences](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-movedreferences-method.md) 대신 호출 됩니다. 한 세대는 단일 가비지 수집을 압축하고 다른 세대는 압축하지 않을 수 있습니다. 특정 세대의 가비지 컬렉션에 대해 프로파일러는 `SurvivingReferences` 콜백이나 `MovedReferences` 콜백 중 하나를 받게 되며 둘 다 받을 수는 없습니다.  
   
- 제한된 내부 버퍼링, 서버 가비지 수집 시 여러 스레드 보고 및 기타 이유로 인해 특정 가비지 수집 중 `SurvivingReferences` 콜백을 여러 개 받을 수도 있습니다. 가비지 컬렉션 중 여러 콜백이 발생하는 경우 정보가 누적됩니다. `SurvivingReferences` 콜백에 보고된 모든 참조가 가비지 컬렉션 후에 유지됩니다.  
+ 제한된 내부 버퍼링, 서버 가비지 컬렉션 시 여러 스레드 보고 및 기타 이유로 인해 특정 가비지 컬렉션 중 `SurvivingReferences` 콜백을 여러 개 받을 수도 있습니다. 가비지 컬렉션 중 여러 콜백이 발생하는 경우 정보가 누적됩니다. `SurvivingReferences` 콜백에 보고된 모든 참조가 가비지 컬렉션 후에 유지됩니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  

@@ -19,8 +19,7 @@ ms.locfileid: "57715843"
   
  각각의 <xref:System.Activities.DynamicActivityProperty> 인스턴스는 워크플로에 대한 입력 인수 중 하나를 나타내며 <xref:System.Activities.ActivityBuilder.Implementation%2A>에는 워크플로의 논리를 구성하는 활동이 포함되어 있습니다. 이 예제의 r-value 식은 Visual Basic 식입니다. 람다 식은 <xref:System.Activities.Expressions.ExpressionServices.Convert%2A>를 사용하지 않으면 XAML로 serialize할 수 없습니다. serialize된 워크플로를 워크플로 디자이너에서 열거나 편집하려고 할 경우 Visual Basic 식을 사용해야 합니다. 자세한 내용은 [제작 워크플로, 활동 및 식을 사용 하 여 명령적 코드](authoring-workflows-activities-and-expressions-using-imperative-code.md)합니다.  
   
- 
-  <xref:System.Activities.ActivityBuilder> 인스턴스가 나타내는 워크플로 정의를 XAML로 serialize하려면 <xref:System.Activities.XamlIntegration.ActivityXamlServices>를 사용하여 <xref:System.Xaml.XamlWriter>를 만든 다음, <xref:System.Xaml.XamlServices>를 사용하여 <xref:System.Xaml.XamlWriter>를 통해 워크플로 정의를 serialize합니다. <xref:System.Activities.XamlIntegration.ActivityXamlServices>에는 <xref:System.Activities.ActivityBuilder> 인스턴스와 XAML 간을 매핑하고, XAML 워크플로를 로드하고, 호출 가능한 <xref:System.Activities.DynamicActivity>를 반환하는 메서드가 있습니다. 다음 예제에서는 이전 예제의 <xref:System.Activities.ActivityBuilder> 인스턴스를 문자열로 serialize하고 파일로 저장합니다.  
+ <xref:System.Activities.ActivityBuilder> 인스턴스가 나타내는 워크플로 정의를 XAML로 serialize하려면 <xref:System.Activities.XamlIntegration.ActivityXamlServices>를 사용하여 <xref:System.Xaml.XamlWriter>를 만든 다음, <xref:System.Xaml.XamlServices>를 사용하여 <xref:System.Xaml.XamlWriter>를 통해 워크플로 정의를 serialize합니다. <xref:System.Activities.XamlIntegration.ActivityXamlServices>에는 <xref:System.Activities.ActivityBuilder> 인스턴스와 XAML 간을 매핑하고, XAML 워크플로를 로드하고, 호출 가능한 <xref:System.Activities.DynamicActivity>를 반환하는 메서드가 있습니다. 다음 예제에서는 이전 예제의 <xref:System.Activities.ActivityBuilder> 인스턴스를 문자열로 serialize하고 파일로 저장합니다.  
   
 ```csharp  
 // Serialize the workflow to XAML and store it in a string.  
@@ -89,6 +88,6 @@ DynamicActivity<int> wf = ActivityXamlServices.Load(new StringReader(serializedA
   
  자세한 내용은 [ C# 식](csharp-expressions.md)합니다.  
   
- Serialize 된 워크플로 정의를 로드할 수도 있습니다는 <xref:System.Activities.ActivityBuilder> 를 사용 하 여 인스턴스를 <xref:System.Activities.XamlIntegration.ActivityXamlServices> <xref:System.Activities.XamlIntegration.ActivityXamlServices.CreateBuilderReader%2A> 메서드. serialize된 워크플로를 <xref:System.Activities.ActivityBuilder> 인스턴스로 로드한 후 검사하고 수정할 수 있습니다. 이 방법은 사용자 지정 Workflow Designer 작성자에게 유용하며, 디자인 프로세스가 진행되는 동안 워크플로 정의를 저장하고 다시 로드하기 위한 메커니즘을 제공합니다. 다음 예제에서는 이전 예제에서 serialize된 워크플로 정의를 로드하고 해당 속성을 검사합니다.  
+ Serialize 된 워크플로 정의를 로드할 수도 있습니다는 <xref:System.Activities.ActivityBuilder> 를 사용 하 여 인스턴스를 <xref:System.Activities.XamlIntegration.ActivityXamlServices> <xref:System.Activities.XamlIntegration.ActivityXamlServices.CreateBuilderReader%2A> 메서드. serialize된 워크플로를 <xref:System.Activities.ActivityBuilder> 인스턴스로 로드한 후 검사하고 수정할 수 있습니다. 이 방법은 사용자 지정 워크플로 디자이너 작성자에게 유용하며, 디자인 프로세스가 진행되는 동안 워크플로 정의를 저장하고 다시 로드하기 위한 메커니즘을 제공합니다. 다음 예제에서는 이전 예제에서 serialize된 워크플로 정의를 로드하고 해당 속성을 검사합니다.  
   
  [!code-csharp[CFX_WorkflowApplicationExample#44](~/samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowapplicationexample/cs/program.cs#44)]

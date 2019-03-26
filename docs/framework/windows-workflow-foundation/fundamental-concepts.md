@@ -10,8 +10,7 @@ ms.lasthandoff: 03/09/2019
 ms.locfileid: "57703415"
 ---
 # <a name="fundamental-windows-workflow-concepts"></a>Fundamental Windows Workflow 개념
-
-  [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)]의 워크플로 개발에는 일부 개발자들에게 생소한 개념이 사용됩니다. 이 항목에서는 이러한 몇 가지 개념과 그 구현 방법에 대해 설명합니다.  
+[!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)]의 워크플로 개발에는 일부 개발자들에게 생소한 개념이 사용됩니다. 이 항목에서는 이러한 몇 가지 개념과 그 구현 방법에 대해 설명합니다.  
   
 ## <a name="workflows-and-activities"></a>워크플로 및 활동  
  워크플로는 프로세스를 모델링하는 구조화된 동작의 컬렉션입니다. 워크플로의 각 동작은 활동으로 모델링됩니다. 호스트는 <xref:System.Activities.WorkflowInvoker>를 사용하여 워크플로를 메서드처럼 호출하고, <xref:System.Activities.WorkflowApplication>를 사용하여 단일 워크플로 인스턴스 실행을 명시적으로 제어하고, <xref:System.ServiceModel.WorkflowServiceHost>를 사용하여 다중 인스턴스 시나리오에서 메시지 기반의 상호 작용을 수행함으로써 워크플로와 상호 작용합니다. 워크플로 단계는 활동 계층으로 정의되기 때문에 계층의 최상위 활동이 워크플로 자체를 정의한다고 할 수 있습니다. 이 계층 모델은 이전 버전의 명시적 `SequentialWorkflow` 및 `StateMachineWorkflow` 클래스를 대체합니다. 활동 자체는 데이터 액세스에 런타임을 사용할 수 있게 해주는 <xref:System.Activities.Activity> 또는 활동 작성자에 워크플로 런타임을 표시하는 <xref:System.Activities.CodeActivity> 클래스를 사용하여 만든 사용자 지정 활동 또는 다른 활동(<xref:System.Activities.NativeActivity> 클래스를 기반으로 사용하며 일반적으로 XAML을 사용하여 정의됨)의 컬렉션으로 개발됩니다. <xref:System.Activities.CodeActivity> 및 <xref:System.Activities.NativeActivity>를 사용하여 개발되는 활동은 C# 등과 같은 CLR 호환 언어를 통해 만들어집니다.  
@@ -53,8 +52,7 @@ ms.locfileid: "57703415"
  활동에서는 <xref:System.Activities.ActivityContext> 또는 <xref:System.Activities.NativeActivityContext> 등 적절한 <xref:System.Activities.CodeActivityContext> 파생 클래스를 사용하여 워크플로 런타임 환경에 액세스합니다. 또한 인수 및 변수 확인, 자식 활동 예약 등과 같은 용도로 이 클래스를 사용합니다.  
   
 ## <a name="services"></a>서비스  
- 워크플로는 메시징 활동을 통해 서비스를 구현하고 액세스하는 자연스러운 방법을 제공합니다. 메시징 활동 WCF에서 빌드되고 및 워크플로 외부로 데이터를 가져오는 데 기본 메커니즘입니다. 원하는 메시지 교환 패턴의 종류를 모델링하여 메시징 활동을 함께 구성할 수 있습니다. 자세한 내용은 [메시징 활동](../wcf/feature-details/messaging-activities.md)합니다. 
-  <xref:System.ServiceModel.Activities.WorkflowServiceHost> 클래스는 워크플로 서비스를 호스트하는 데 사용됩니다. 자세한 내용은 [호스팅 워크플로 서비스 개요](../wcf/feature-details/hosting-workflow-services-overview.md)합니다. 워크플로 서비스에 대 한 자세한 내용은 참조 하세요. [워크플로 서비스](../wcf/feature-details/workflow-services.md)  
+ 워크플로는 메시징 활동을 통해 서비스를 구현하고 액세스하는 자연스러운 방법을 제공합니다. 메시징 활동 WCF에서 빌드되고 및 워크플로 외부로 데이터를 가져오는 데 기본 메커니즘입니다. 원하는 메시지 교환 패턴의 종류를 모델링하여 메시징 활동을 함께 구성할 수 있습니다. 자세한 내용은 [메시징 활동](../wcf/feature-details/messaging-activities.md)합니다. <xref:System.ServiceModel.Activities.WorkflowServiceHost> 클래스는 워크플로 서비스를 호스트하는 데 사용됩니다. 자세한 내용은 [호스팅 워크플로 서비스 개요](../wcf/feature-details/hosting-workflow-services-overview.md)합니다. 워크플로 서비스에 대 한 자세한 내용은 참조 하세요. [워크플로 서비스](../wcf/feature-details/workflow-services.md)  
   
 ## <a name="persistence-unloading-and-long-running-workflows"></a>워크플로 유지, 언로드 및 장기 실행  
  Windows Workflow는 다음을 제공하여 장기 실행 대응 프로그램을 쉽게 작성할 수 있도록 해줍니다.  

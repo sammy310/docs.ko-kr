@@ -17,8 +17,7 @@ ms.lasthandoff: 03/01/2019
 ms.locfileid: "57203060"
 ---
 # <a name="-netcf"></a>-netcf
-
-  [!INCLUDE[Compact](~/includes/compact-md.md)]를 대상으로 하도록 컴파일러를 설정합니다.  
+[!INCLUDE[Compact](~/includes/compact-md.md)]를 대상으로 하도록 컴파일러를 설정합니다.  
   
 ## <a name="syntax"></a>구문  
   

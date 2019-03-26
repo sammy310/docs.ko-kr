@@ -126,8 +126,7 @@ End Sub
   
 -   `implementslist`  
   
-     
-  `Implements`가 제공된 경우 필수입니다. 구현할 `Sub` 프로시저 목록입니다.  
+     `Implements`가 제공된 경우 필수입니다. 구현할 `Sub` 프로시저 목록입니다.  
   
      `implementedprocedure [ , implementedprocedure ... ]`  
   
@@ -146,8 +145,7 @@ End Sub
   
 -   `eventlist`  
   
-     
-  `Handles`가 제공된 경우 필수입니다. 이 프로시저에서 처리 하는 이벤트 목록입니다.  
+     `Handles`가 제공된 경우 필수입니다. 이 프로시저에서 처리 하는 이벤트 목록입니다.  
   
      `eventspecifier [ , eventspecifier ... ]`  
   

@@ -24,8 +24,7 @@ Windows Forms의 모양과 동작을 결정할 때 선택할 수 있는 여러 �
   
 ### <a name="to-set-the-border-style-of-windows-forms-programmatically"></a>Windows Forms의 테두리 스타일을 프로그래밍 방식으로 설정하려면  
   
--   
-  <xref:System.Windows.Forms.Form.FormBorderStyle%2A> 속성을 원하는 스타일로 설정합니다. 폼의 테두리 스타일을 설정 하는 다음 코드 예제 `DlgBx1` 에 <xref:System.Windows.Forms.FormBorderStyle.FixedDialog>입니다.  
+-   <xref:System.Windows.Forms.Form.FormBorderStyle%2A> 속성을 원하는 스타일로 설정합니다. 폼의 테두리 스타일을 설정 하는 다음 코드 예제 `DlgBx1` 에 <xref:System.Windows.Forms.FormBorderStyle.FixedDialog>입니다.  
   
     ```vb  
     DlgBx1.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog  

@@ -37,12 +37,10 @@ ms.locfileid: "57720581"
 >  C# 식에는 Visual Studio 에서만 지원 됩니다 및 다시 호스트 된 워크플로 디자이너에서 지원 되지 않습니다. 재 호스트 된 디자이너에서 지원 되는 새 WF45 기능에 대 한 자세한 내용은 참조 하세요. [다시 호스트 된 워크플로 디자이너에서 새 Workflow Foundation 4.5 기능에 대 한 지원을](wf-features-in-the-rehosted-workflow-designer.md)합니다.
 
 #### <a name="BackwardCompat"></a> 이전 버전과 호환성
- 
-  [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)]로 마이그레이션된 기존 [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] C# 워크플로 프로젝트의 Visual Basic 식이 지원됩니다. Visual Basic 식이 워크플로 디자이너에서 보면 기존 Visual Basic 식의 텍스트를 사용 하 여 바뀝니다 **XAML에서 값이 설정 되었으면**Visual Basic 식이 유효한 C# 구문이 아닌 경우. Visual Basic 식이 유효한 C# 구문인 경우에는 해당 식이 표시됩니다. Visual Basic 식을 C#으로 업데이트하려면 Workflow Designer에서 식을 편집하고 해당하는 C#식을 지정하면 됩니다. Visual Basic 식을 반드시 C#으로 업데이트할 필요는 없지만, Workflow Designer에서 식을 업데이트한 후에는 식이 C#으로 변환되며 이를 Visual Basic으로 되돌릴 수는 없습니다.
+ [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)]로 마이그레이션된 기존 [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] C# 워크플로 프로젝트의 Visual Basic 식이 지원됩니다. Visual Basic 식이 워크플로 디자이너에서 보면 기존 Visual Basic 식의 텍스트를 사용 하 여 바뀝니다 **XAML에서 값이 설정 되었으면**Visual Basic 식이 유효한 C# 구문이 아닌 경우. Visual Basic 식이 유효한 C# 구문인 경우에는 해당 식이 표시됩니다. Visual Basic 식을 C#으로 업데이트하려면 워크플로 디자이너에서 식을 편집하고 해당하는 C#식을 지정하면 됩니다. Visual Basic 식을 반드시 C#으로 업데이트할 필요는 없지만, Workflow Designer에서 식을 업데이트한 후에는 식이 C#으로 변환되며 이를 Visual Basic으로 되돌릴 수는 없습니다.
 
 ### <a name="CodeWorkflows"></a> 코드 워크플로에서 C# 식 사용
- 
-  [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] 코드 기반 워크플로에서는 C# 식이 지원되지만 워크플로를 호출하려면 먼저 <xref:System.Activities.XamlIntegration.TextExpressionCompiler.Compile%2A?displayProperty=nameWithType>을 사용하여 C# 식을 컴파일해야 합니다. 워크플로 작성자는 `CSharpValue`를 사용하여 식의 r-value를 나타내고 `CSharpReference`를 사용하여 식의 l-value를 나타냅니다. 다음 예제에서는 `Assign` 활동에 포함된 `WriteLine` 활동과 `Sequence` 활동으로 워크플로를 만듭니다. `CSharpReference`의 `To` 인수에는 `Assign`가 지정되어 식의 l-value를 나타냅니다. `CSharpValue`의 `Value` 인수와 `Assign`의 `Text` 인수에는 `WriteLine`가 지정되어 이 두 식의 r-value를 나타냅니다.
+ [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] 코드 기반 워크플로에서는 C# 식이 지원되지만 워크플로를 호출하려면 먼저 <xref:System.Activities.XamlIntegration.TextExpressionCompiler.Compile%2A?displayProperty=nameWithType>을 사용하여 C# 식을 컴파일해야 합니다. 워크플로 작성자는 `CSharpValue`를 사용하여 식의 r-value를 나타내고 `CSharpReference`를 사용하여 식의 l-value를 나타냅니다. 다음 예제에서는 `Assign` 활동에 포함된 `WriteLine` 활동과 `Sequence` 활동으로 워크플로를 만듭니다. `CSharpReference`의 `To` 인수에는 `Assign`가 지정되어 식의 l-value를 나타냅니다. `CSharpValue`의 `Value` 인수와 `Assign`의 `Text` 인수에는 `WriteLine`가 지정되어 이 두 식의 r-value를 나타냅니다.
 
 ```csharp
 Variable<int> n = new Variable<int>
@@ -196,12 +194,10 @@ static void CompileExpressions(DynamicActivity dynamicActivity)
 -   [느슨한 Xaml](csharp-expressions.md#LooseXaml)
 
 #### <a name="CompiledXaml"></a> 컴파일된 Xaml
- 
-  [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)]를 대상으로 하는 C# 워크플로 프로젝트의 일부로서 형식으로 컴파일되는 컴파일된 XAML 워크플로에서는 C# 식이 지원됩니다. 컴파일된 XAML은 Visual Studio에서 워크플로 작성의 기본 형식 및 C# 워크플로 프로젝트에서 만든 대상으로 하는 Visual Studio [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] C# 식을 사용 합니다.
+ [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)]를 대상으로 하는 C# 워크플로 프로젝트의 일부로서 형식으로 컴파일되는 컴파일된 XAML 워크플로에서는 C# 식이 지원됩니다. 컴파일된 XAML은 Visual Studio에서 워크플로 작성의 기본 형식 및 C# 워크플로 프로젝트에서 만든 대상으로 하는 Visual Studio [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] C# 식을 사용 합니다.
 
 #### <a name="LooseXaml"></a> 느슨한 Xaml
- 느슨한 XAML 워크플로에서는 C# 식이 지원됩니다. 느슨한 XAML 워크플로를 로드 및 호출하는 워크플로 호스트 프로그램은 [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)]를 대상으로 하며, <xref:System.Activities.XamlIntegration.ActivityXamlServicesSettings.CompileExpressions%2A>는 `true`로 설정되어야 합니다(기본값 `false`). 
-  <xref:System.Activities.XamlIntegration.ActivityXamlServicesSettings.CompileExpressions%2A>를 `true`로 설정하려면 <xref:System.Activities.XamlIntegration.ActivityXamlServicesSettings> 속성을 <xref:System.Activities.XamlIntegration.ActivityXamlServicesSettings.CompileExpressions%2A>로 설정하여 `true` 인스턴스를 만든 후 이를 <xref:System.Activities.XamlIntegration.ActivityXamlServices.Load%2A?displayProperty=nameWithType>에 매개 변수로 전달합니다. 하는 경우 `CompileExpressions` 로 설정 되어 있지 `true`, <xref:System.NotSupportedException> 다음과 유사한 메시지와 함께 throw 됩니다. `Expression Activity type 'CSharpValue`1' 컴파일 실행 하기 위해 필요 합니다.  워크플로 컴파일 되었는지 확인 하세요.'
+ 느슨한 XAML 워크플로에서는 C# 식이 지원됩니다. 느슨한 XAML 워크플로를 로드 및 호출하는 워크플로 호스트 프로그램은 [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)]를 대상으로 하며, <xref:System.Activities.XamlIntegration.ActivityXamlServicesSettings.CompileExpressions%2A>는 `true`로 설정되어야 합니다(기본값 `false`). <xref:System.Activities.XamlIntegration.ActivityXamlServicesSettings.CompileExpressions%2A>를 `true`로 설정하려면 <xref:System.Activities.XamlIntegration.ActivityXamlServicesSettings> 속성을 <xref:System.Activities.XamlIntegration.ActivityXamlServicesSettings.CompileExpressions%2A>로 설정하여 `true` 인스턴스를 만든 후 이를 <xref:System.Activities.XamlIntegration.ActivityXamlServices.Load%2A?displayProperty=nameWithType>에 매개 변수로 전달합니다. 하는 경우 `CompileExpressions` 로 설정 되어 있지 `true`, <xref:System.NotSupportedException> 다음과 유사한 메시지와 함께 throw 됩니다. `Expression Activity type 'CSharpValue`1' 컴파일 실행 하기 위해 필요 합니다.  워크플로 컴파일 되었는지 확인 하세요.'
 
 ```csharp
 ActivityXamlServicesSettings settings = new ActivityXamlServicesSettings

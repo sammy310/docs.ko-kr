@@ -33,8 +33,7 @@ ms.locfileid: "56976228"
 > [!NOTE]
 >  고유한 사용자 지정 파티셔너 또는 스케줄러를 제공할 수도 있습니다. 자세한 내용은 [PLINQ 및 TPL에 대한 사용자 지정 파티셔너](../../../docs/standard/parallel-programming/custom-partitioners-for-plinq-and-tpl.md) 및 [작업 스케줄러](xref:System.Threading.Tasks.TaskScheduler)를 참조하세요.  
   
- 
-  <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> 및 <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> 메서드 둘 다에는 루프 실행을 중지 또는 중단하고, 다른 스레드의 루프 상태를 모니터링하고, 스레드 로컬 상태를 유지 관리하고, 스레드 로컬 개체를 종료하고, 동시성 수준을 제어할 수 있도록 하는 여러 오버로드가 있습니다. 이 기능을 사용할 수 있도록 하는 도우미 형식에는 <xref:System.Threading.Tasks.ParallelLoopState>, <xref:System.Threading.Tasks.ParallelOptions>, <xref:System.Threading.Tasks.ParallelLoopResult>, <xref:System.Threading.CancellationToken> 및 <xref:System.Threading.CancellationTokenSource>가 있습니다.  
+ <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> 및 <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> 메서드 둘 다에는 루프 실행을 중지 또는 중단하고, 다른 스레드의 루프 상태를 모니터링하고, 스레드 로컬 상태를 유지 관리하고, 스레드 로컬 개체를 종료하고, 동시성 수준을 제어할 수 있도록 하는 여러 오버로드가 있습니다. 이 기능을 사용할 수 있도록 하는 도우미 형식에는 <xref:System.Threading.Tasks.ParallelLoopState>, <xref:System.Threading.Tasks.ParallelOptions>, <xref:System.Threading.Tasks.ParallelLoopResult>, <xref:System.Threading.CancellationToken> 및 <xref:System.Threading.CancellationTokenSource>가 있습니다.  
   
  자세한 내용은 [병렬 프로그래밍의 패턴: .NET Framework 4의 병렬 패턴 이해 및 적용](https://www.microsoft.com/download/details.aspx?id=19222)을 참조하세요.  
   
@@ -45,8 +44,7 @@ ms.locfileid: "56976228"
 |제목|설명|  
 |-----------|-----------------|  
 |[방법: 간단한 Parallel.For 루프 작성](../../../docs/standard/parallel-programming/how-to-write-a-simple-parallel-for-loop.md)|배열 또는 인덱싱 가능한 <xref:System.Collections.Generic.IEnumerable%601> 소스 컬렉션에 대한 <xref:System.Threading.Tasks.Parallel.For%2A> 루프를 작성하는 방법을 설명합니다.|  
-|[방법: 간단한 Parallel.ForEach 루프 작성](../../../docs/standard/parallel-programming/how-to-write-a-simple-parallel-foreach-loop.md)|
-  <xref:System.Collections.Generic.IEnumerable%601> 소스 컬렉션에 대한 <xref:System.Threading.Tasks.Parallel.ForEach%2A> 루프를 작성하는 방법을 설명합니다.|  
+|[방법: 간단한 Parallel.ForEach 루프 작성](../../../docs/standard/parallel-programming/how-to-write-a-simple-parallel-foreach-loop.md)|<xref:System.Collections.Generic.IEnumerable%601> 소스 컬렉션에 대한 <xref:System.Threading.Tasks.Parallel.ForEach%2A> 루프를 작성하는 방법을 설명합니다.|  
 |[방법: Parallel.For 루프 중지 또는 중단](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/dd460721(v=vs.100))|모든 스레드가 작업 알림을 받도록 병렬 루프에서 중지 또는 중단하는 방법을 설명합니다.|  
 |[방법: 스레드 로컬 변수를 사용하는 Parallel.For 루프 작성](../../../docs/standard/parallel-programming/how-to-write-a-parallel-for-loop-with-thread-local-variables.md)|각 스레드가 다른 스레드에 표시되지 않는 전용 변수를 유지 관리하는 <xref:System.Threading.Tasks.Parallel.For%2A> 루프를 작성하는 방법 및 루프 완료 시 모든 스레드의 결과를 동기화하는 방법을 설명합니다.|  
 |[방법: 파티션 로컬 변수를 사용하는 Parallel.ForEach 루프 작성](../../../docs/standard/parallel-programming/how-to-write-a-parallel-foreach-loop-with-partition-local-variables.md)|각 스레드가 다른 스레드에 표시되지 않는 전용 변수를 유지 관리하는 <xref:System.Threading.Tasks.Parallel.ForEach%2A> 루프를 작성하는 방법 및 루프 완료 시 모든 스레드의 결과를 동기화하는 방법을 설명합니다.|  

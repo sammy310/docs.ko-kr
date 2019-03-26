@@ -60,16 +60,12 @@ ms.locfileid: "56332522"
   
  SRMP 전송 프로토콜을 사용하려면 앞에서 언급했듯이 net.msmq URI 체계를 사용하여 메시지에 주소를 지정하고 `QueueTransferProtocol`의 `NetMsmqBinding` 속성에 SRMP 또는 보안 SRMP를 지정합니다.  
   
- 
-  `QueueTransferProtocol` 속성을 지정하면 보내기 전용 기능이 됩니다. 이것은 클라이언트가 사용할 큐 전송 프로토콜의 종류를 나타냅니다.  
+ `QueueTransferProtocol` 속성을 지정하면 보내기 전용 기능이 됩니다. 이것은 클라이언트가 사용할 큐 전송 프로토콜의 종류를 나타냅니다.  
   
 ### <a name="using-active-directory"></a>Active Directory 사용  
- MSMQ에는 Active Directory 통합에 대한 지원이 포함되어 있습니다. MSMQ가 Active Directory 통합과 함께 설치되는 경우 해당 컴퓨터는 Windows 도메인에 속해야 합니다. 검색할; 큐를 게시 하려면 active Directory는 사용 하는 이러한 큐 이라고 *공개 큐*합니다. 큐에 주소를 지정할 때 Active Directory를 사용하여 해당 큐를 확인할 수 있습니다. 이 방법은 네트워크 이름의 IP 주소를 확인할 때 DNS(Domain Name System)를 사용하는 방법과 비슷합니다. 
-  `UseActiveDirectory`의 `NetMsmqBinding` 속성은 대기 중인 채널이 Active Directory를 사용하여 큐 URI를 확인해야 하는지 여부를 나타내는 부울입니다. 기본적으로 이 속성은 `false`로 설정됩니다. 
-  `UseActiveDirectory` 속성이 `true`로 설정되는 경우 대기 중인 채널은 Active Directory를 사용하여 net.msmq:// URI를 형식 이름으로 변환합니다.  
+ MSMQ에는 Active Directory 통합에 대한 지원이 포함되어 있습니다. MSMQ가 Active Directory 통합과 함께 설치되는 경우 해당 컴퓨터는 Windows 도메인에 속해야 합니다. 검색할; 큐를 게시 하려면 active Directory는 사용 하는 이러한 큐 이라고 *공개 큐*합니다. 큐에 주소를 지정할 때 Active Directory를 사용하여 해당 큐를 확인할 수 있습니다. 이 방법은 네트워크 이름의 IP 주소를 확인할 때 DNS(Domain Name System)를 사용하는 방법과 비슷합니다. `UseActiveDirectory`의 `NetMsmqBinding` 속성은 대기 중인 채널이 Active Directory를 사용하여 큐 URI를 확인해야 하는지 여부를 나타내는 부울입니다. 기본적으로 이 속성은 `false`로 설정됩니다. `UseActiveDirectory` 속성이 `true`로 설정되는 경우 대기 중인 채널은 Active Directory를 사용하여 net.msmq:// URI를 형식 이름으로 변환합니다.  
   
- 
-  `UseActiveDirectory` 속성이 메시지를 보낼 때 큐의 주소를 확인하는 데 사용되므로 메시지를 보내는 클라이언트에 대해서만 설정할 수 있습니다.  
+ `UseActiveDirectory` 속성이 메시지를 보낼 때 큐의 주소를 확인하는 데 사용되므로 메시지를 보내는 클라이언트에 대해서만 설정할 수 있습니다.  
   
 ### <a name="mapping-netmsmq-uri-to-message-queuing-format-names"></a>메시지 큐 형식 이름에 net.msmq URI 매핑  
  대기 중인 채널에서 채널에 제공된 net.msmq URI 이름을 MSMQ 형식 이름으로 매핑하는 작업을 처리합니다. 다음 표에서는 이들 간 매핑에 사용된 규칙을 요약하여 설명합니다.  
@@ -96,21 +92,17 @@ ms.locfileid: "56332522"
  WCF 서비스는 받은 모든 메시지에 현재 수신 중인 특정 큐로 주소가 지정 있는지 확인 합니다. 메시지의 대상 큐가 메시지가 있는 큐와 일치하지 않으면 서비스가 메시지를 처리하지 않습니다. 이 경우 배달 못 한 편지 큐의 메시지를 다른 곳으로 배달해야 하므로 배달 못 한 편지 큐를 수신하는 서비스가 주소를 지정해야 하는 문제가 있습니다. 배달 못 한 편지 큐에서 또는 포이즌 큐에서 메시지를 읽으려면 `ServiceBehavior` 매개 변수를 포함하는 <xref:System.ServiceModel.AddressFilterMode.Any>를 사용해야 합니다. 예를 들어 참조 [배달 못 한 편지 큐](../../../../docs/framework/wcf/samples/dead-letter-queues.md)합니다.  
   
 ## <a name="msmqintegrationbinding-and-service-addressing"></a>MsmqIntegrationBinding 및 서비스 주소 지정  
- 
-  `MsmqIntegrationBinding`은 기존 MSMQ 응용 프로그램과의 통신에 사용됩니다. 기존 MSMQ 응용 프로그램과 상호 운용을 쉽게 하려면 WCF는 유일한 형식 이름 주소 지정을 지원 합니다. 따라서 이 바인딩을 사용하여 보낸 메시지는 URI 체계를 따라야 합니다.  
+ `MsmqIntegrationBinding`은 기존 MSMQ 응용 프로그램과의 통신에 사용됩니다. 기존 MSMQ 응용 프로그램과 상호 운용을 쉽게 하려면 WCF는 유일한 형식 이름 주소 지정을 지원 합니다. 따라서 이 바인딩을 사용하여 보낸 메시지는 URI 체계를 따라야 합니다.  
   
  msmq.formatname:\<*MSMQ-format-name*>>  
   
  MSMQ 형식 이름은 MSMQ에서 지정한 형식의 됩니다 [About Message Queuing](https://go.microsoft.com/fwlink/?LinkId=94837)합니다.  
   
- 
-  `MsmqIntegrationBinding`을 사용하여 큐에서 메시지를 받을 때 직접 형식 이름, 공개 및 개인 형식 이름만 사용할 수 있습니다(Active Directory 통합 필요). 그러나 직접 형식 이름을 사용하는 것이 좋습니다. 예를 들어 [!INCLUDE[wv](../../../../includes/wv-md.md)]에서 다른 형식 이름을 사용하면 시스템이 직접 형식 이름으로만 열 수 있는 하위 큐를 열려고 하므로 오류가 발생합니다.  
+ `MsmqIntegrationBinding`을 사용하여 큐에서 메시지를 받을 때 직접 형식 이름, 공개 및 개인 형식 이름만 사용할 수 있습니다(Active Directory 통합 필요). 그러나 직접 형식 이름을 사용하는 것이 좋습니다. 예를 들어 [!INCLUDE[wv](../../../../includes/wv-md.md)]에서 다른 형식 이름을 사용하면 시스템이 직접 형식 이름으로만 열 수 있는 하위 큐를 열려고 하므로 오류가 발생합니다.  
   
- 
-  `MsmqIntegrationBinding`을 사용하여 SRMP에 주소를 지정할 때 IIS(인터넷 정보 서비스)가 디스패치할 수 있도록 직접 형식 이름에 /msmq/를 추가하지 않아도 됩니다. 예를 들어: Abc는 SRMP를 사용 하 여 프로토콜을 직접 대신 큐 주소를 지정할 때 =http://adatum.com/msmq/private$/abc를 사용 해야 DIRECT =http://adatum.com/private$입니다.  
+ `MsmqIntegrationBinding`을 사용하여 SRMP에 주소를 지정할 때 IIS(인터넷 정보 서비스)가 디스패치할 수 있도록 직접 형식 이름에 /msmq/를 추가하지 않아도 됩니다. 예를 들어: Abc는 SRMP를 사용 하 여 프로토콜을 직접 대신 큐 주소를 지정할 때 =http://adatum.com/msmq/private$/abc를 사용 해야 DIRECT =http://adatum.com/private$입니다.  
   
- 
-  `MsmqIntegrationBinding`과 함께 net.msmq:// 주소 지정을 사용할 수 없습니다. 때문에 `MsmqIntegrationBinding` 자유 형식의 MSMQ 형식 이름 주소 지정을 지원 합니다.이 바인딩을 사용 하 여 MSMQ의 멀티 캐스트 및 메일 그룹 기능을 사용 하는 WCF 서비스를 사용할 수 있습니다. 한 가지 예외의 경우는 `CustomDeadLetterQueue`을 사용할 때 `MsmqIntegrationBinding`를 지정하는 것입니다. 이 경우 net.msmq:// 형식이어야 하며, `NetMsmqBinding`을 사용하여 지정하는 방법과 비슷합니다.  
+ `MsmqIntegrationBinding`과 함께 net.msmq:// 주소 지정을 사용할 수 없습니다. 때문에 `MsmqIntegrationBinding` 자유 형식의 MSMQ 형식 이름 주소 지정을 지원 합니다.이 바인딩을 사용 하 여 MSMQ의 멀티 캐스트 및 메일 그룹 기능을 사용 하는 WCF 서비스를 사용할 수 있습니다. 한 가지 예외의 경우는 `CustomDeadLetterQueue`을 사용할 때 `MsmqIntegrationBinding`를 지정하는 것입니다. 이 경우 net.msmq:// 형식이어야 하며, `NetMsmqBinding`을 사용하여 지정하는 방법과 비슷합니다.  
   
 ## <a name="see-also"></a>참고자료
 - [대기 중인 애플리케이션 웹 호스팅](../../../../docs/framework/wcf/feature-details/web-hosting-a-queued-application.md)

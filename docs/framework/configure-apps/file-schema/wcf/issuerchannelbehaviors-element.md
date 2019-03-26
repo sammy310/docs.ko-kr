@@ -11,7 +11,7 @@ ms.locfileid: "57357250"
 ---
 # <a name="issuerchannelbehaviors-element"></a>\<issuerChannelBehaviors > 요소
 
-지정한 서비스 토큰 서비스와 통신할 때 사용 되는 Windows Communication Foundation (WCF) 클라이언트 끝점 동작 (구성에 정의 됨)의 컬렉션을 포함 합니다. 정의 된 동작을 포함할 수 없습니다 [\<clientCredentials >](../../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md) 요소입니다.
+지정한 서비스 토큰 서비스와 통신할 때 사용 되는 Windows Communication Foundation (WCF) 클라이언트 끝점 동작 (구성에 정의 됨)의 컬렉션을 포함 합니다. 정의 된 동작을 포함할 수 없습니다 [\<clientCredentials>](../../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md) 요소입니다.
 
 \<system.ServiceModel>\
 \<behaviors>\

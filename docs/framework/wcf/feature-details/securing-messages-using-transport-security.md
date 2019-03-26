@@ -23,8 +23,7 @@ ms.locfileid: "56332349"
   
  전송 보안의 주요 개념은 클라이언트가 대상 큐로 메시지를 가져오는 데 필요한 보안 요구 사항을 만족해야 한다는 것입니다. 이 개념은 메시지를 받는 응용 프로그램에서 메시지가 보안되는 메시지 보안과는 다릅니다.  
   
- 
-  <xref:System.ServiceModel.NetMsmqBinding> 및 <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding>을 사용하는 전송 보안은 전송 큐 및 대상 큐 간의 전송 시 MSMQ 메시지가 보안되는 방법에 영향을 주며, 메시지 보안은 다음을 의미합니다.  
+ <xref:System.ServiceModel.NetMsmqBinding> 및 <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding>을 사용하는 전송 보안은 전송 큐 및 대상 큐 간의 전송 시 MSMQ 메시지가 보안되는 방법에 영향을 주며, 메시지 보안은 다음을 의미합니다.  
   
 -   메시지가 훼손되지 않도록 메시지에 서명합니다.  
   
@@ -46,14 +45,12 @@ ms.locfileid: "56332349"
  이를 바탕으로 다음 단원에서는 <xref:System.ServiceModel.NetMsmqBinding> 및 <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding>과 함께 제공되는 전송 보안 속성에 대해 설명합니다.  
   
 #### <a name="msmq-authentication-mode"></a>MSMQ 인증 모드  
- 
-  <xref:System.ServiceModel.MsmqTransportSecurity.MsmqAuthenticationMode%2A>는 메시지 보안을 위해 Windows 도메인 보안을 사용할지 또는 외부 인증서 기반 보안을 사용할지 명시적으로 지정합니다. 두 인증 모드에서 WCF 대기 중인된 전송 채널 사용을 `CertificateValidationMode` 서비스 구성에 지정 합니다. 인증서 유효성 검사 모드에서는 인증서의 유효성을 확인하는 데 사용하는 메커니즘을 지정합니다.  
+ <xref:System.ServiceModel.MsmqTransportSecurity.MsmqAuthenticationMode%2A>는 메시지 보안을 위해 Windows 도메인 보안을 사용할지 또는 외부 인증서 기반 보안을 사용할지 명시적으로 지정합니다. 두 인증 모드에서 WCF 대기 중인된 전송 채널 사용을 `CertificateValidationMode` 서비스 구성에 지정 합니다. 인증서 유효성 검사 모드에서는 인증서의 유효성을 확인하는 데 사용하는 메커니즘을 지정합니다.  
   
  전송 보안이 켜져 있는 경우 기본 설정은 <xref:System.ServiceModel.MsmqAuthenticationMode.WindowsDomain>입니다.  
   
 #### <a name="windows-domain-authentication-mode"></a>Windows 도메인 인증 모드  
- Windows 보안을 사용하려면 Active Directory 통합이 필요합니다. <xref:System.ServiceModel.MsmqAuthenticationMode.WindowsDomain>은 기본 전송 보안 모드입니다. 이 값으로 설정 하는 경우 WCF 채널 Windows SID를 MSMQ 메시지에 연결 하 고 Active Directory에서 가져온 내부 인증서를 사용 합니다. MSMQ에서는 메시지 보안을 위해 내부 인증서를 사용합니다. 수신 큐 관리자는 Active Directory를 사용하여 클라이언트를 인증하기 위해 일치하는 인증서를 검색하고, SID가 클라이언트의 인증서와 일치하는지도 확인합니다. 
-  `WindowsDomain` 인증 모드의 경우 내부에서 생성된 인증서, `Certificate` 인증 모드의 경우 외부에서 생성된 인증서가 메시지에 첨부되면 대상 큐가 필수 인증으로 표시되어 있지 않더라도 이 인증 단계가 실행됩니다.  
+ Windows 보안을 사용하려면 Active Directory 통합이 필요합니다. <xref:System.ServiceModel.MsmqAuthenticationMode.WindowsDomain>은 기본 전송 보안 모드입니다. 이 값으로 설정 하는 경우 WCF 채널 Windows SID를 MSMQ 메시지에 연결 하 고 Active Directory에서 가져온 내부 인증서를 사용 합니다. MSMQ에서는 메시지 보안을 위해 내부 인증서를 사용합니다. 수신 큐 관리자는 Active Directory를 사용하여 클라이언트를 인증하기 위해 일치하는 인증서를 검색하고, SID가 클라이언트의 인증서와 일치하는지도 확인합니다. `WindowsDomain` 인증 모드의 경우 내부에서 생성된 인증서, `Certificate` 인증 모드의 경우 외부에서 생성된 인증서가 메시지에 첨부되면 대상 큐가 필수 인증으로 표시되어 있지 않더라도 이 인증 단계가 실행됩니다.  
   
 > [!NOTE]
 >  큐를 만들 때 큐에 메시지를 보내는 클라이언트의 인증이 필요함을 나타내려면 큐를 인증된 큐로 표시할 수 있습니다. 이렇게 하면 인증되지 않은 메시지는 큐에서 수락하지 않습니다.  
@@ -82,8 +79,7 @@ ms.locfileid: "56332349"
 >  메시지를 암호화하려면 Active Directory 액세스가 필요하며(`UseActiveDirectory`의 <xref:System.ServiceModel.NetMsmqBinding> 속성이 `true`로 설정되어야 함), <xref:System.ServiceModel.MsmqAuthenticationMode.Certificate> 및 <xref:System.ServiceModel.MsmqAuthenticationMode.WindowsDomain>과 함께 사용할 수 있습니다.  
   
 #### <a name="none-protection-level"></a>None 보호 수준  
- 
-  <xref:System.ServiceModel.MsmqTransportSecurity.MsmqProtectionLevel%2A>이 <xref:System.Net.Security.ProtectionLevel.None>으로 설정된 경우 이 수준으로 간주됩니다. 이 수준은 다른 인증 모드에서 유효한 값이 될 수 없습니다.  
+ <xref:System.ServiceModel.MsmqTransportSecurity.MsmqProtectionLevel%2A>이 <xref:System.Net.Security.ProtectionLevel.None>으로 설정된 경우 이 수준으로 간주됩니다. 이 수준은 다른 인증 모드에서 유효한 값이 될 수 없습니다.  
   
 > [!NOTE]
 >  MSMQ 메시지가 서명된 경우 MSMQ에서는 큐의 상태와 관계없이 즉, 인증된 큐인지 아닌지에 관계없이 메시지가 첨부된 내부 또는 외부 인증서를 사용하여 서명되었는지 여부를 확인합니다.  
@@ -96,8 +92,7 @@ ms.locfileid: "56332349"
  보낸 사람이 MSMQ 4.0을 설치한 경우에만 `AES` 알고리즘을 사용할 수 있습니다. 또한 대상 큐가 MSMQ 4.0에서 호스팅되어야 합니다.  
   
 ### <a name="msmq-hash-algorithm"></a>MSMQ 해시 알고리즘  
- 해시 알고리즘은 MSMQ 메시지의 디지털 서명을 만드는 데 사용하는 알고리즘을 지정합니다. 수신 큐 관리자는 동일한 이 알고리즘을 사용하여 MSMQ 메시지를 인증합니다. 
-  <xref:System.ServiceModel.MsmqTransportSecurity.MsmqProtectionLevel%2A>이 <xref:System.Net.Security.ProtectionLevel.Sign> 또는 <xref:System.Net.Security.ProtectionLevel.EncryptAndSign>으로 설정되어 있을 경우에만 이 속성을 사용합니다.  
+ 해시 알고리즘은 MSMQ 메시지의 디지털 서명을 만드는 데 사용하는 알고리즘을 지정합니다. 수신 큐 관리자는 동일한 이 알고리즘을 사용하여 MSMQ 메시지를 인증합니다. <xref:System.ServiceModel.MsmqTransportSecurity.MsmqProtectionLevel%2A>이 <xref:System.Net.Security.ProtectionLevel.Sign> 또는 <xref:System.Net.Security.ProtectionLevel.EncryptAndSign>으로 설정되어 있을 경우에만 이 속성을 사용합니다.  
   
  지원되는 알고리즘은 `MD5`, `SHA1`, `SHA256` 및 `SHA512`입니다. 기본값은 `SHA1`입니다.  
   
