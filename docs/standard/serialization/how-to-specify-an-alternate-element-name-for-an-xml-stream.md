@@ -12,38 +12,36 @@ helpviewer_keywords:
 - classes, overriding
 - overriding classes
 ms.assetid: 5cc1c0b0-f94b-4525-9a41-88a582cd6668
-ms.openlocfilehash: 0f2fe865019b24263f76595654455df7b597c1d8
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: d11fd0353faccdb19e1a39b7a57df9fe3bca3190
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56968532"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58465479"
 ---
-# <a name="how-to-specify-an-alternate-element-name-for-an-xml-stream"></a><span data-ttu-id="b54fe-102">방법: XML Stream에 대 한 대체 요소 이름 지정</span><span class="sxs-lookup"><span data-stu-id="b54fe-102">How to: Specify an Alternate Element Name for an XML Stream</span></span>
+# <a name="how-to-specify-an-alternate-element-name-for-an-xml-stream"></a><span data-ttu-id="cd96c-102">방법: XML Stream에 대 한 대체 요소 이름 지정</span><span class="sxs-lookup"><span data-stu-id="cd96c-102">How to: Specify an Alternate Element Name for an XML Stream</span></span>
   
-<span data-ttu-id="b54fe-103"><xref:System.Xml.Serialization.XmlSerializer>를 사용하면 동일한 클래스 집합을 가진 XML 스트림을 두 개 이상 생성할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="b54fe-103">Using the <xref:System.Xml.Serialization.XmlSerializer>, you can generate more than one XML stream with the same set of classes.</span></span> <span data-ttu-id="b54fe-104">두 개의 서로 다른 XML Web services에 약간만 다른 동일한 기본 정보가 필요한 경우 이런 작업이 필요할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="b54fe-104">You might want to do this because two different XML Web services require the same basic information, with only slight differences.</span></span> <span data-ttu-id="b54fe-105">예를 들어 책 주문을 처리하기 때문에 둘 모두에 ISBN 번호가 필요한 두 개의 XML Web services를 가정해 보겠습니다.</span><span class="sxs-lookup"><span data-stu-id="b54fe-105">For example, imagine two XML Web services that process orders for books, and thus both require ISBN numbers.</span></span> <span data-ttu-id="b54fe-106">한 서비스는 \<ISBN> 태그를 사용하고 다른 서비스는 \<BookID> 태그를 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="b54fe-106">One service uses the tag \<ISBN> while the second uses the tag \<BookID>.</span></span> <span data-ttu-id="b54fe-107">
-  `Book\`이라는 필드가 포함된 `ISBN\`이라는 클래스가 있습니다.</span><span class="sxs-lookup"><span data-stu-id="b54fe-107">You have a class named `Book` that contains a field named `ISBN`.</span></span> <span data-ttu-id="b54fe-108">`Book` 클래스의 인스턴스가 serialize될 때 기본적으로 멤버 이름(ISBN)을 태그 요소 이름으로 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="b54fe-108">When an instance of the `Book` class is serialized, it will, by default, use the member name (ISBN) as the tag element name.</span></span> <span data-ttu-id="b54fe-109">첫 번째 XML Web services의 경우에는 예상된 동작입니다.</span><span class="sxs-lookup"><span data-stu-id="b54fe-109">For the first XML Web service, this is as expected.</span></span> <span data-ttu-id="b54fe-110">하지만 XML 스트림을 두 번째 XML Web services로 전송하려면 태그의 요소 이름이 `BookID`가 되도록 serialization을 재정의해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="b54fe-110">But to send the XML stream to the second XML Web service, you must override the serialization so that the tag's element name is `BookID`.</span></span>  
+<span data-ttu-id="cd96c-103"><xref:System.Xml.Serialization.XmlSerializer>를 사용하면 동일한 클래스 집합을 가진 XML 스트림을 두 개 이상 생성할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="cd96c-103">Using the <xref:System.Xml.Serialization.XmlSerializer>, you can generate more than one XML stream with the same set of classes.</span></span> <span data-ttu-id="cd96c-104">두 개의 서로 다른 XML Web services에 약간만 다른 동일한 기본 정보가 필요한 경우 이런 작업이 필요할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="cd96c-104">You might want to do this because two different XML Web services require the same basic information, with only slight differences.</span></span> <span data-ttu-id="cd96c-105">예를 들어 책 주문을 처리하기 때문에 둘 모두에 ISBN 번호가 필요한 두 개의 XML Web services를 가정해 보겠습니다.</span><span class="sxs-lookup"><span data-stu-id="cd96c-105">For example, imagine two XML Web services that process orders for books, and thus both require ISBN numbers.</span></span> <span data-ttu-id="cd96c-106">한 서비스는 \<ISBN> 태그를 사용하고 다른 서비스는 \<BookID> 태그를 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="cd96c-106">One service uses the tag \<ISBN> while the second uses the tag \<BookID>.</span></span> <span data-ttu-id="cd96c-107">`Book`이라는 필드가 포함된 `ISBN`이라는 클래스가 있습니다.</span><span class="sxs-lookup"><span data-stu-id="cd96c-107">You have a class named `Book` that contains a field named `ISBN`.</span></span> <span data-ttu-id="cd96c-108">`Book` 클래스의 인스턴스가 serialize될 때 기본적으로 멤버 이름(ISBN)을 태그 요소 이름으로 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="cd96c-108">When an instance of the `Book` class is serialized, it will, by default, use the member name (ISBN) as the tag element name.</span></span> <span data-ttu-id="cd96c-109">첫 번째 XML Web services의 경우에는 예상된 동작입니다.</span><span class="sxs-lookup"><span data-stu-id="cd96c-109">For the first XML Web service, this is as expected.</span></span> <span data-ttu-id="cd96c-110">하지만 XML 스트림을 두 번째 XML Web services로 전송하려면 태그의 요소 이름이 `BookID`가 되도록 serialization을 재정의해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="cd96c-110">But to send the XML stream to the second XML Web service, you must override the serialization so that the tag's element name is `BookID`.</span></span>  
   
-## <a name="to-create-an-xml-stream-with-an-alternate-element-name"></a><span data-ttu-id="b54fe-111">대체 요소 이름을 사용하여 XML 스트림을 만들려면</span><span class="sxs-lookup"><span data-stu-id="b54fe-111">To create an XML stream with an alternate element name</span></span>  
+## <a name="to-create-an-xml-stream-with-an-alternate-element-name"></a><span data-ttu-id="cd96c-111">대체 요소 이름을 사용하여 XML 스트림을 만들려면</span><span class="sxs-lookup"><span data-stu-id="cd96c-111">To create an XML stream with an alternate element name</span></span>  
   
-1.  <span data-ttu-id="b54fe-112"><xref:System.Xml.Serialization.XmlElementAttribute> 클래스의 인스턴스를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="b54fe-112">Create an instance of the <xref:System.Xml.Serialization.XmlElementAttribute> class.</span></span>  
+1.  <span data-ttu-id="cd96c-112"><xref:System.Xml.Serialization.XmlElementAttribute> 클래스의 인스턴스를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="cd96c-112">Create an instance of the <xref:System.Xml.Serialization.XmlElementAttribute> class.</span></span>  
   
-2.  <span data-ttu-id="b54fe-113"><xref:System.Xml.Serialization.XmlElementAttribute.ElementName%2A>의 <xref:System.Xml.Serialization.XmlElementAttribute>을 "BookID"로 설정합니다.</span><span class="sxs-lookup"><span data-stu-id="b54fe-113">Set the <xref:System.Xml.Serialization.XmlElementAttribute.ElementName%2A> of the <xref:System.Xml.Serialization.XmlElementAttribute> to "BookID".</span></span>  
+2.  <span data-ttu-id="cd96c-113"><xref:System.Xml.Serialization.XmlElementAttribute.ElementName%2A>의 <xref:System.Xml.Serialization.XmlElementAttribute>을 "BookID"로 설정합니다.</span><span class="sxs-lookup"><span data-stu-id="cd96c-113">Set the <xref:System.Xml.Serialization.XmlElementAttribute.ElementName%2A> of the <xref:System.Xml.Serialization.XmlElementAttribute> to "BookID".</span></span>  
   
-3.  <span data-ttu-id="b54fe-114"><xref:System.Xml.Serialization.XmlAttributes> 클래스의 인스턴스를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="b54fe-114">Create an instance of the <xref:System.Xml.Serialization.XmlAttributes> class.</span></span>  
+3.  <span data-ttu-id="cd96c-114"><xref:System.Xml.Serialization.XmlAttributes> 클래스의 인스턴스를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="cd96c-114">Create an instance of the <xref:System.Xml.Serialization.XmlAttributes> class.</span></span>  
   
-4.  <span data-ttu-id="b54fe-115">`XmlElementAttribute`의 <xref:System.Xml.Serialization.XmlAttributes.XmlElements%2A> 속성을 통해 액세스되는 컬렉션에 <xref:System.Xml.Serialization.XmlAttributes> 개체를 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="b54fe-115">Add the `XmlElementAttribute` object to the collection accessed through the <xref:System.Xml.Serialization.XmlAttributes.XmlElements%2A> property of <xref:System.Xml.Serialization.XmlAttributes> .</span></span>  
+4.  <span data-ttu-id="cd96c-115">`XmlElementAttribute`의 <xref:System.Xml.Serialization.XmlAttributes.XmlElements%2A> 속성을 통해 액세스되는 컬렉션에 <xref:System.Xml.Serialization.XmlAttributes> 개체를 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="cd96c-115">Add the `XmlElementAttribute` object to the collection accessed through the <xref:System.Xml.Serialization.XmlAttributes.XmlElements%2A> property of <xref:System.Xml.Serialization.XmlAttributes> .</span></span>  
   
-5.  <span data-ttu-id="b54fe-116"><xref:System.Xml.Serialization.XmlAttributeOverrides> 클래스의 인스턴스를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="b54fe-116">Create an instance of the <xref:System.Xml.Serialization.XmlAttributeOverrides> class.</span></span>  
+5.  <span data-ttu-id="cd96c-116"><xref:System.Xml.Serialization.XmlAttributeOverrides> 클래스의 인스턴스를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="cd96c-116">Create an instance of the <xref:System.Xml.Serialization.XmlAttributeOverrides> class.</span></span>  
   
-6.  <span data-ttu-id="b54fe-117">`XmlAttributes`를 <xref:System.Xml.Serialization.XmlAttributeOverrides>에 추가하고 재정의할 개체의 형식과 재정의될 멤버의 이름을 전달합니다.</span><span class="sxs-lookup"><span data-stu-id="b54fe-117">Add the `XmlAttributes` to the <xref:System.Xml.Serialization.XmlAttributeOverrides>, passing the type of the object to override and the name of the member being overridden.</span></span>  
+6.  <span data-ttu-id="cd96c-117">`XmlAttributes`를 <xref:System.Xml.Serialization.XmlAttributeOverrides>에 추가하고 재정의할 개체의 형식과 재정의될 멤버의 이름을 전달합니다.</span><span class="sxs-lookup"><span data-stu-id="cd96c-117">Add the `XmlAttributes` to the <xref:System.Xml.Serialization.XmlAttributeOverrides>, passing the type of the object to override and the name of the member being overridden.</span></span>  
   
-7.  <span data-ttu-id="b54fe-118">`XmlSerializer`로 `XmlAttributeOverrides` 클래스의 인스턴스를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="b54fe-118">Create an instance of the `XmlSerializer` class with `XmlAttributeOverrides`.</span></span>  
+7.  <span data-ttu-id="cd96c-118">`XmlSerializer`로 `XmlAttributeOverrides` 클래스의 인스턴스를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="cd96c-118">Create an instance of the `XmlSerializer` class with `XmlAttributeOverrides`.</span></span>  
   
-8.  <span data-ttu-id="b54fe-119">
-  `Book\` 클래스의 인스턴스를 만들고 이를 serialize 또는 deserialize합니다.</span><span class="sxs-lookup"><span data-stu-id="b54fe-119">Create an instance of the `Book` class, and serialize or deserialize it.</span></span>  
+8.  <span data-ttu-id="cd96c-119">`Book` 클래스의 인스턴스를 만들고 이를 serialize 또는 deserialize합니다.</span><span class="sxs-lookup"><span data-stu-id="cd96c-119">Create an instance of the `Book` class, and serialize or deserialize it.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="b54fe-120">예제</span><span class="sxs-lookup"><span data-stu-id="b54fe-120">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="cd96c-120">예제</span><span class="sxs-lookup"><span data-stu-id="cd96c-120">Example</span></span>  
   
 ```vb  
 Public Class SerializeOverride()  
@@ -85,7 +83,7 @@ public class SerializeOverride()
 }  
 ```  
   
- <span data-ttu-id="b54fe-121">해당 XML 스트림은 다음과 같을 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="b54fe-121">The XML stream might resemble the following.</span></span>  
+ <span data-ttu-id="cd96c-121">해당 XML 스트림은 다음과 같을 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="cd96c-121">The XML stream might resemble the following.</span></span>  
   
 ```xml  
 <Book>  
@@ -93,13 +91,12 @@ public class SerializeOverride()
 </Book>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="b54fe-122">참고자료</span><span class="sxs-lookup"><span data-stu-id="b54fe-122">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="cd96c-122">참고자료</span><span class="sxs-lookup"><span data-stu-id="cd96c-122">See also</span></span>
 
 - <xref:System.Xml.Serialization.XmlElementAttribute>
 - <xref:System.Xml.Serialization.XmlAttributes>
 - <xref:System.Xml.Serialization.XmlAttributeOverrides>
-- [<span data-ttu-id="b54fe-123">XML 및 SOAP serialization</span><span class="sxs-lookup"><span data-stu-id="b54fe-123">XML and SOAP Serialization</span></span>](../../../docs/standard/serialization/xml-and-soap-serialization.md)
+- [<span data-ttu-id="cd96c-123">XML 및 SOAP serialization</span><span class="sxs-lookup"><span data-stu-id="cd96c-123">XML and SOAP Serialization</span></span>](../../../docs/standard/serialization/xml-and-soap-serialization.md)
 - <xref:System.Xml.Serialization.XmlSerializer>
-- [<span data-ttu-id="b54fe-124">방법: 개체 serialize</span><span class="sxs-lookup"><span data-stu-id="b54fe-124">How to: Serialize an Object</span></span>](../../../docs/standard/serialization/how-to-serialize-an-object.md)
-- [<span data-ttu-id="b54fe-125">방법: 개체 deserialize</span><span class="sxs-lookup"><span data-stu-id="b54fe-125">How to: Deserialize an Object</span></span>](../../../docs/standard/serialization/how-to-deserialize-an-object.md)
-- [<span data-ttu-id="b54fe-126">방법: 개체 deserialize</span><span class="sxs-lookup"><span data-stu-id="b54fe-126">How to: Deserialize an Object</span></span>](../../../docs/standard/serialization/how-to-deserialize-an-object.md)
+- [<span data-ttu-id="cd96c-124">방법: 개체 serialize</span><span class="sxs-lookup"><span data-stu-id="cd96c-124">How to: Serialize an Object</span></span>](../../../docs/standard/serialization/how-to-serialize-an-object.md)
+- [<span data-ttu-id="cd96c-125">방법: 개체 deserialize</span><span class="sxs-lookup"><span data-stu-id="cd96c-125">How to: Deserialize an Object</span></span>](../../../docs/standard/serialization/how-to-deserialize-an-object.md)

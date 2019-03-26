@@ -8,28 +8,28 @@ helpviewer_keywords:
 - controls [WPF], TreeView
 - hierarchical structure [WPF], TreeView control
 ms.assetid: 805c235c-0a0e-4e34-8d96-9dc3865cf2df
-ms.openlocfilehash: d041c287fe88a2d44920848bc14cae97a70b3f0d
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: b353b413f7486990b6dd8ae5126809b27590ae3c
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57355118"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58464933"
 ---
-# <a name="treeview"></a><span data-ttu-id="36584-102">TreeView</span><span class="sxs-lookup"><span data-stu-id="36584-102">TreeView</span></span>
-<span data-ttu-id="36584-103"><xref:System.Windows.Controls.TreeView> 컨트롤 계층 구조에서 축소 가능한 노드를 사용 하 여 정보를 표시 합니다.</span><span class="sxs-lookup"><span data-stu-id="36584-103">The <xref:System.Windows.Controls.TreeView> control displays information in a hierarchical structure by using collapsible nodes.</span></span>  
+# <a name="treeview"></a><span data-ttu-id="c8581-102">TreeView</span><span class="sxs-lookup"><span data-stu-id="c8581-102">TreeView</span></span>
+<span data-ttu-id="c8581-103"><xref:System.Windows.Controls.TreeView> 컨트롤 계층 구조에서 축소 가능한 노드를 사용 하 여 정보를 표시 합니다.</span><span class="sxs-lookup"><span data-stu-id="c8581-103">The <xref:System.Windows.Controls.TreeView> control displays information in a hierarchical structure by using collapsible nodes.</span></span>  
   
- <span data-ttu-id="36584-104">다음 그림은 예가 <xref:System.Windows.Controls.TreeView> 중첩 된 컨트롤 <xref:System.Windows.Controls.TreeViewItem> 컨트롤입니다.</span><span class="sxs-lookup"><span data-stu-id="36584-104">The following illustration is an example of a <xref:System.Windows.Controls.TreeView> control that has nested <xref:System.Windows.Controls.TreeViewItem> controls.</span></span>  
+ <span data-ttu-id="c8581-104">다음 그림은의 예는 <xref:System.Windows.Controls.TreeView> 중첩 된 컨트롤 <xref:System.Windows.Controls.TreeViewItem> 컨트롤:</span><span class="sxs-lookup"><span data-stu-id="c8581-104">The following illustration is an example of a <xref:System.Windows.Controls.TreeView> control that has nested <xref:System.Windows.Controls.TreeViewItem> controls:</span></span>  
   
- <span data-ttu-id="36584-105">![TreeView 설명](./media/treeviewillustration.JPG "TreeViewIllustration")</span><span class="sxs-lookup"><span data-stu-id="36584-105">![TreeView illustration](./media/treeviewillustration.JPG "TreeViewIllustration")</span></span>  
+ ![중첩 된 TreeViewItem 컨트롤을 보여 주는 그림입니다.](./media/treeview/nested-treeviewitem-controls.jpg)  
   
-## <a name="in-this-section"></a><span data-ttu-id="36584-106">섹션 내용</span><span class="sxs-lookup"><span data-stu-id="36584-106">In This Section</span></span>  
- [<span data-ttu-id="36584-107">TreeView 개요</span><span class="sxs-lookup"><span data-stu-id="36584-107">TreeView Overview</span></span>](treeview-overview.md)  
- [<span data-ttu-id="36584-108">방법 항목</span><span class="sxs-lookup"><span data-stu-id="36584-108">How-to Topics</span></span>](treeview-how-to-topics.md)  
+## <a name="in-this-section"></a><span data-ttu-id="c8581-106">섹션 내용</span><span class="sxs-lookup"><span data-stu-id="c8581-106">In This Section</span></span>  
+ [<span data-ttu-id="c8581-107">TreeView 개요</span><span class="sxs-lookup"><span data-stu-id="c8581-107">TreeView Overview</span></span>](treeview-overview.md)  
+ [<span data-ttu-id="c8581-108">방법 항목</span><span class="sxs-lookup"><span data-stu-id="c8581-108">How-to Topics</span></span>](treeview-how-to-topics.md)  
   
-## <a name="reference"></a><span data-ttu-id="36584-109">참조</span><span class="sxs-lookup"><span data-stu-id="36584-109">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="c8581-109">참조</span><span class="sxs-lookup"><span data-stu-id="c8581-109">Reference</span></span>  
  <xref:System.Windows.Controls.TreeView>  
   <xref:System.Windows.Controls.TreeViewItem>  
   
-## <a name="related-sections"></a><span data-ttu-id="36584-110">관련 단원</span><span class="sxs-lookup"><span data-stu-id="36584-110">Related Sections</span></span>  
- [<span data-ttu-id="36584-111">데이터 바인딩 개요</span><span class="sxs-lookup"><span data-stu-id="36584-111">Data Binding Overview</span></span>](../data/data-binding-overview.md)  
-  [<span data-ttu-id="36584-112">데이터 템플릿 개요</span><span class="sxs-lookup"><span data-stu-id="36584-112">Data Templating Overview</span></span>](../data/data-templating-overview.md)
+## <a name="related-sections"></a><span data-ttu-id="c8581-110">관련 단원</span><span class="sxs-lookup"><span data-stu-id="c8581-110">Related Sections</span></span>  
+ [<span data-ttu-id="c8581-111">데이터 바인딩 개요</span><span class="sxs-lookup"><span data-stu-id="c8581-111">Data Binding Overview</span></span>](../data/data-binding-overview.md)  
+  [<span data-ttu-id="c8581-112">데이터 템플릿 개요</span><span class="sxs-lookup"><span data-stu-id="c8581-112">Data Templating Overview</span></span>](../data/data-templating-overview.md)

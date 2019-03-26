@@ -2,29 +2,29 @@
 title: 쿼리 식
 description: LINQ에 대 한 쿼리 식 지원에 대해 알아봅니다는 F# 프로그래밍 언어입니다.
 ms.date: 05/16/2016
-ms.openlocfilehash: e3ad2d4ebf09fff17aba80fcb3fc9853ec06af47
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 8fd3e2d4cfbbe890fe3b04b2676eb1d5bbc087a6
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56977986"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58463230"
 ---
-# <a name="query-expressions"></a><span data-ttu-id="bfbdd-103">쿼리 식</span><span class="sxs-lookup"><span data-stu-id="bfbdd-103">Query Expressions</span></span>
+# <a name="query-expressions"></a><span data-ttu-id="d53e1-103">쿼리 식</span><span class="sxs-lookup"><span data-stu-id="d53e1-103">Query Expressions</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="bfbdd-104">이 문서의 API 참조 링크를 통해 MSDN으로 이동됩니다.</span><span class="sxs-lookup"><span data-stu-id="bfbdd-104">The API reference links in this article will take you to MSDN.</span></span>  <span data-ttu-id="bfbdd-105">docs.microsoft.com API 참조가 완전하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="bfbdd-105">The docs.microsoft.com API reference is not complete.</span></span>
+> <span data-ttu-id="d53e1-104">이 문서의 API 참조 링크를 통해 MSDN으로 이동됩니다.</span><span class="sxs-lookup"><span data-stu-id="d53e1-104">The API reference links in this article will take you to MSDN.</span></span>  <span data-ttu-id="d53e1-105">docs.microsoft.com API 참조가 완전하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="d53e1-105">The docs.microsoft.com API reference is not complete.</span></span>
 
-<span data-ttu-id="bfbdd-106">쿼리 식을 사용 하 여 데이터 원본을 쿼리하고 원하는 폼에 데이터를 넣을 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="bfbdd-106">Query expressions enable you to query a data source and put the data in a desired form.</span></span> <span data-ttu-id="bfbdd-107">쿼리 식의 LINQ에 대 한 지원 F#입니다.</span><span class="sxs-lookup"><span data-stu-id="bfbdd-107">Query expressions provide support for LINQ in F#.</span></span>
+<span data-ttu-id="d53e1-106">쿼리 식을 사용 하 여 데이터 원본을 쿼리하고 원하는 폼에 데이터를 넣을 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="d53e1-106">Query expressions enable you to query a data source and put the data in a desired form.</span></span> <span data-ttu-id="d53e1-107">쿼리 식의 LINQ에 대 한 지원 F#입니다.</span><span class="sxs-lookup"><span data-stu-id="d53e1-107">Query expressions provide support for LINQ in F#.</span></span>
 
-## <a name="syntax"></a><span data-ttu-id="bfbdd-108">구문</span><span class="sxs-lookup"><span data-stu-id="bfbdd-108">Syntax</span></span>
+## <a name="syntax"></a><span data-ttu-id="d53e1-108">구문</span><span class="sxs-lookup"><span data-stu-id="d53e1-108">Syntax</span></span>
 
 ```fsharp
 query { expression }
 ```
 
-## <a name="remarks"></a><span data-ttu-id="bfbdd-109">설명</span><span class="sxs-lookup"><span data-stu-id="bfbdd-109">Remarks</span></span>
+## <a name="remarks"></a><span data-ttu-id="d53e1-109">설명</span><span class="sxs-lookup"><span data-stu-id="d53e1-109">Remarks</span></span>
 
-<span data-ttu-id="bfbdd-110">쿼리 식은 계산 식 시퀀스 식과 유사한 형식입니다.</span><span class="sxs-lookup"><span data-stu-id="bfbdd-110">Query expressions are a type of computation expression similar to sequence expressions.</span></span> <span data-ttu-id="bfbdd-111">시퀀스 식에서 코드를 제공 하 여 시퀀스를 지정 하는 것 처럼 쿼리 식에서 코드를 제공 하 여 데이터 집합을 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="bfbdd-111">Just as you specify a sequence by providing code in a sequence expression, you specify a set of data by providing code in a query expression.</span></span> <span data-ttu-id="bfbdd-112">시퀀스 식에는 `yield` 키워드 결과 시퀀스의 일부로 반환 될 데이터를 식별 합니다.</span><span class="sxs-lookup"><span data-stu-id="bfbdd-112">In a sequence expression, the `yield` keyword identifies data to be returned as part of the resulting sequence.</span></span> <span data-ttu-id="bfbdd-113">쿼리 식에는 `select` 키워드 같은 기능을 수행 합니다.</span><span class="sxs-lookup"><span data-stu-id="bfbdd-113">In query expressions, the `select` keyword performs the same function.</span></span> <span data-ttu-id="bfbdd-114">이외에 `select` 키워드를 F# 도 다양 한 SQL SELECT 문 부분 처럼는 쿼리 연산자를 지원 합니다.</span><span class="sxs-lookup"><span data-stu-id="bfbdd-114">In addition to the `select` keyword, F# also supports a number of query operators that are much like the parts of a SQL SELECT statement.</span></span> <span data-ttu-id="bfbdd-115">Northwind OData 원본에 연결 하는 코드와 함께 간단한 쿼리 식의 예는 다음과 같습니다.</span><span class="sxs-lookup"><span data-stu-id="bfbdd-115">Here is an example of a simple query expression, along with code that connects to the Northwind OData source.</span></span>
+<span data-ttu-id="d53e1-110">쿼리 식은 계산 식 시퀀스 식과 유사한 형식입니다.</span><span class="sxs-lookup"><span data-stu-id="d53e1-110">Query expressions are a type of computation expression similar to sequence expressions.</span></span> <span data-ttu-id="d53e1-111">시퀀스 식에서 코드를 제공 하 여 시퀀스를 지정 하는 것 처럼 쿼리 식에서 코드를 제공 하 여 데이터 집합을 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="d53e1-111">Just as you specify a sequence by providing code in a sequence expression, you specify a set of data by providing code in a query expression.</span></span> <span data-ttu-id="d53e1-112">시퀀스 식에는 `yield` 키워드 결과 시퀀스의 일부로 반환 될 데이터를 식별 합니다.</span><span class="sxs-lookup"><span data-stu-id="d53e1-112">In a sequence expression, the `yield` keyword identifies data to be returned as part of the resulting sequence.</span></span> <span data-ttu-id="d53e1-113">쿼리 식에는 `select` 키워드 같은 기능을 수행 합니다.</span><span class="sxs-lookup"><span data-stu-id="d53e1-113">In query expressions, the `select` keyword performs the same function.</span></span> <span data-ttu-id="d53e1-114">이외에 `select` 키워드를 F# 도 다양 한 SQL SELECT 문 부분 처럼는 쿼리 연산자를 지원 합니다.</span><span class="sxs-lookup"><span data-stu-id="d53e1-114">In addition to the `select` keyword, F# also supports a number of query operators that are much like the parts of a SQL SELECT statement.</span></span> <span data-ttu-id="d53e1-115">Northwind OData 원본에 연결 하는 코드와 함께 간단한 쿼리 식의 예는 다음과 같습니다.</span><span class="sxs-lookup"><span data-stu-id="d53e1-115">Here is an example of a simple query expression, along with code that connects to the Northwind OData source.</span></span>
 
 ```fsharp
 // Use the OData type provider to create types that can be used to access the Northwind database.
@@ -46,23 +46,23 @@ query1
 |> Seq.iter (fun customer -> printfn "Company: %s Contact: %s" customer.CompanyName customer.ContactName)
 ```
 
-<span data-ttu-id="bfbdd-116">이전 코드 예제의 쿼리 식은 중괄호로 않습니다.</span><span class="sxs-lookup"><span data-stu-id="bfbdd-116">In the previous code example, the query expression is in curly braces.</span></span> <span data-ttu-id="bfbdd-117">식에서 코드의 의미를 쿼리 결과에 데이터베이스의 Customers 테이블의 모든 고객을 반환 합니다.</span><span class="sxs-lookup"><span data-stu-id="bfbdd-117">The meaning of the code in the expression is, return every customer in the Customers table in the database in the query results.</span></span> <span data-ttu-id="bfbdd-118">쿼리 식을 구현 하는 형식을 반환 <xref:System.Linq.IQueryable%601> 및 <xref:System.Collections.Generic.IEnumerable%601>, 이므로 해당 반복 될 수 있는 사용 하 여 합니다 [Seq 모듈](https://msdn.microsoft.com/library/54e8f059-ca52-4632-9ae9-49685ee9b684) 예로 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="bfbdd-118">Query expressions return a type that implements <xref:System.Linq.IQueryable%601> and <xref:System.Collections.Generic.IEnumerable%601>, and so they can be iterated using the [Seq module](https://msdn.microsoft.com/library/54e8f059-ca52-4632-9ae9-49685ee9b684) as the example shows.</span></span>
+<span data-ttu-id="d53e1-116">이전 코드 예제의 쿼리 식은 중괄호로 않습니다.</span><span class="sxs-lookup"><span data-stu-id="d53e1-116">In the previous code example, the query expression is in curly braces.</span></span> <span data-ttu-id="d53e1-117">식에서 코드의 의미를 쿼리 결과에 데이터베이스의 Customers 테이블의 모든 고객을 반환 합니다.</span><span class="sxs-lookup"><span data-stu-id="d53e1-117">The meaning of the code in the expression is, return every customer in the Customers table in the database in the query results.</span></span> <span data-ttu-id="d53e1-118">쿼리 식을 구현 하는 형식을 반환 <xref:System.Linq.IQueryable%601> 및 <xref:System.Collections.Generic.IEnumerable%601>, 이므로 해당 반복 될 수 있는 사용 하 여 합니다 [Seq 모듈](https://msdn.microsoft.com/library/54e8f059-ca52-4632-9ae9-49685ee9b684) 예로 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="d53e1-118">Query expressions return a type that implements <xref:System.Linq.IQueryable%601> and <xref:System.Collections.Generic.IEnumerable%601>, and so they can be iterated using the [Seq module](https://msdn.microsoft.com/library/54e8f059-ca52-4632-9ae9-49685ee9b684) as the example shows.</span></span>
 
-<span data-ttu-id="bfbdd-119">모든 계산 식 형식 작성기 클래스에서 빌드됩니다.</span><span class="sxs-lookup"><span data-stu-id="bfbdd-119">Every computation expression type is built from a builder class.</span></span> <span data-ttu-id="bfbdd-120">쿼리 계산 식 작성기 클래스는 `QueryBuilder`합니다.</span><span class="sxs-lookup"><span data-stu-id="bfbdd-120">The builder class for the query computation expression is `QueryBuilder`.</span></span> <span data-ttu-id="bfbdd-121">자세한 내용은 [계산 식](computation-expressions.md) 하 고 [Linq.QueryBuilder 클래스](https://msdn.microsoft.com/visualfsharpdocs/conceptual/linq.querybuilder-class-%5bfsharp%5d)합니다.</span><span class="sxs-lookup"><span data-stu-id="bfbdd-121">For more information, see [Computation Expressions](computation-expressions.md) and [Linq.QueryBuilder Class](https://msdn.microsoft.com/visualfsharpdocs/conceptual/linq.querybuilder-class-%5bfsharp%5d).</span></span>
+<span data-ttu-id="d53e1-119">모든 계산 식 형식 작성기 클래스에서 빌드됩니다.</span><span class="sxs-lookup"><span data-stu-id="d53e1-119">Every computation expression type is built from a builder class.</span></span> <span data-ttu-id="d53e1-120">쿼리 계산 식 작성기 클래스는 `QueryBuilder`합니다.</span><span class="sxs-lookup"><span data-stu-id="d53e1-120">The builder class for the query computation expression is `QueryBuilder`.</span></span> <span data-ttu-id="d53e1-121">자세한 내용은 [계산 식](computation-expressions.md) 하 고 [Linq.QueryBuilder 클래스](https://msdn.microsoft.com/visualfsharpdocs/conceptual/linq.querybuilder-class-%5bfsharp%5d)합니다.</span><span class="sxs-lookup"><span data-stu-id="d53e1-121">For more information, see [Computation Expressions](computation-expressions.md) and [Linq.QueryBuilder Class](https://msdn.microsoft.com/visualfsharpdocs/conceptual/linq.querybuilder-class-%5bfsharp%5d).</span></span>
 
-## <a name="query-operators"></a><span data-ttu-id="bfbdd-122">쿼리 연산자</span><span class="sxs-lookup"><span data-stu-id="bfbdd-122">Query Operators</span></span>
+## <a name="query-operators"></a><span data-ttu-id="d53e1-122">쿼리 연산자</span><span class="sxs-lookup"><span data-stu-id="d53e1-122">Query Operators</span></span>
 
-<span data-ttu-id="bfbdd-123">쿼리 연산자와 같은 반환 되는 레코드에 조건을 적용할 쿼리 세부 정보를 지정할 수 있도록 또는 결과의 정렬 순서를 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="bfbdd-123">Query operators enable you to specify the details of the query, such as to put criteria on records to be returned, or specify the sorting order of results.</span></span> <span data-ttu-id="bfbdd-124">원본 쿼리는 쿼리 연산자를 지원 해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="bfbdd-124">The query source must support the query operator.</span></span> <span data-ttu-id="bfbdd-125">지원 되지 않는 쿼리 연산자를 사용 하려는 경우 `System.NotSupportedException` throw 됩니다.</span><span class="sxs-lookup"><span data-stu-id="bfbdd-125">If you attempt to use an unsupported query operator, `System.NotSupportedException` will be thrown.</span></span>
+<span data-ttu-id="d53e1-123">쿼리 연산자와 같은 반환 되는 레코드에 조건을 적용할 쿼리 세부 정보를 지정할 수 있도록 또는 결과의 정렬 순서를 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="d53e1-123">Query operators enable you to specify the details of the query, such as to put criteria on records to be returned, or specify the sorting order of results.</span></span> <span data-ttu-id="d53e1-124">원본 쿼리는 쿼리 연산자를 지원 해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="d53e1-124">The query source must support the query operator.</span></span> <span data-ttu-id="d53e1-125">지원 되지 않는 쿼리 연산자를 사용 하려는 경우 `System.NotSupportedException` throw 됩니다.</span><span class="sxs-lookup"><span data-stu-id="d53e1-125">If you attempt to use an unsupported query operator, `System.NotSupportedException` will be thrown.</span></span>
 
-<span data-ttu-id="bfbdd-126">쿼리 식에서 SQL로 변환할 수 식만 허용 됩니다.</span><span class="sxs-lookup"><span data-stu-id="bfbdd-126">Only expressions that can be translated to SQL are allowed in query expressions.</span></span> <span data-ttu-id="bfbdd-127">사용 하는 경우 함수 호출 하지 않고 식에서 허용 하는 예를 들어를 `where` 쿼리 연산자입니다.</span><span class="sxs-lookup"><span data-stu-id="bfbdd-127">For example, no function calls are allowed in the expressions when you use the `where` query operator.</span></span>
+<span data-ttu-id="d53e1-126">쿼리 식에서 SQL로 변환할 수 식만 허용 됩니다.</span><span class="sxs-lookup"><span data-stu-id="d53e1-126">Only expressions that can be translated to SQL are allowed in query expressions.</span></span> <span data-ttu-id="d53e1-127">사용 하는 경우 함수 호출 하지 않고 식에서 허용 하는 예를 들어를 `where` 쿼리 연산자입니다.</span><span class="sxs-lookup"><span data-stu-id="d53e1-127">For example, no function calls are allowed in the expressions when you use the `where` query operator.</span></span>
 
-<span data-ttu-id="bfbdd-128">표 1에서는 사용 가능한 쿼리 연산자를 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="bfbdd-128">Table 1 shows available query operators.</span></span> <span data-ttu-id="bfbdd-129">또한 SQL 쿼리 및 해당 하는 비교 하는 Table2를 참조 하세요 F# 쿼리 식을이 항목의 뒷부분에 있습니다.</span><span class="sxs-lookup"><span data-stu-id="bfbdd-129">In addition, see Table2, which compares SQL queries and the equivalent F# query expressions later in this topic.</span></span> <span data-ttu-id="bfbdd-130">일부 쿼리 연산자는 일부 형식 공급자에서 지원 되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="bfbdd-130">Some query operators aren't supported by some type providers.</span></span> <span data-ttu-id="bfbdd-131">특히 OData 형식 공급자는 OData의 제한으로 인해 지원 되는 쿼리 연산자에서 제한 됩니다.</span><span class="sxs-lookup"><span data-stu-id="bfbdd-131">In particular, the OData type provider is limited in the query operators that it supports due to limitations in OData.</span></span> <span data-ttu-id="bfbdd-132">자세한 내용은 [ODataService 형식 공급자 (F#)](https://msdn.microsoft.com/library/bac609dd-9d12-4bf9-a662-24bdf4faa43e)합니다.</span><span class="sxs-lookup"><span data-stu-id="bfbdd-132">For more information, see [ODataService Type Provider (F#)](https://msdn.microsoft.com/library/bac609dd-9d12-4bf9-a662-24bdf4faa43e).</span></span>
+<span data-ttu-id="d53e1-128">표 1에서는 사용 가능한 쿼리 연산자를 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="d53e1-128">Table 1 shows available query operators.</span></span> <span data-ttu-id="d53e1-129">또한 SQL 쿼리 및 해당 하는 비교 하는 Table2를 참조 하세요 F# 쿼리 식을이 항목의 뒷부분에 있습니다.</span><span class="sxs-lookup"><span data-stu-id="d53e1-129">In addition, see Table2, which compares SQL queries and the equivalent F# query expressions later in this topic.</span></span> <span data-ttu-id="d53e1-130">일부 쿼리 연산자는 일부 형식 공급자에서 지원 되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="d53e1-130">Some query operators aren't supported by some type providers.</span></span> <span data-ttu-id="d53e1-131">특히 OData 형식 공급자는 OData의 제한으로 인해 지원 되는 쿼리 연산자에서 제한 됩니다.</span><span class="sxs-lookup"><span data-stu-id="d53e1-131">In particular, the OData type provider is limited in the query operators that it supports due to limitations in OData.</span></span> <span data-ttu-id="d53e1-132">자세한 내용은 [ODataService 형식 공급자 (F#)](https://msdn.microsoft.com/library/bac609dd-9d12-4bf9-a662-24bdf4faa43e)합니다.</span><span class="sxs-lookup"><span data-stu-id="d53e1-132">For more information, see [ODataService Type Provider (F#)](https://msdn.microsoft.com/library/bac609dd-9d12-4bf9-a662-24bdf4faa43e).</span></span>
 
-<span data-ttu-id="bfbdd-133">이 테이블에는 다음 형식으로 데이터베이스를 가정합니다.</span><span class="sxs-lookup"><span data-stu-id="bfbdd-133">This table assumes a database in the following form:</span></span>
+<span data-ttu-id="d53e1-133">이 테이블에는 다음 형식으로 데이터베이스를 가정합니다.</span><span class="sxs-lookup"><span data-stu-id="d53e1-133">This table assumes a database in the following form:</span></span>
 
 ![샘플 데이터베이스 다이어그램](../media/StudentCourseDB.png)
 
-<span data-ttu-id="bfbdd-135">이어서 나오는 표에서의 코드는 또한 다음 데이터베이스 연결 코드를 가정 합니다.</span><span class="sxs-lookup"><span data-stu-id="bfbdd-135">The code in the tables that follow also assumes the following database connection code.</span></span> <span data-ttu-id="bfbdd-136">프로젝트는 System.Data, System.Data.Linq를 및 FSharp.Data.TypeProviders 어셈블리에 대 한 참조를 추가 해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="bfbdd-136">Projects should add references to System.Data,  System.Data.Linq, and FSharp.Data.TypeProviders assemblies.</span></span> <span data-ttu-id="bfbdd-137">이 데이터베이스를 만드는 코드를이 항목의 끝에 포함 되어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="bfbdd-137">The code that creates this database is included at the end of this topic.</span></span>
+<span data-ttu-id="d53e1-135">이어서 나오는 표에서의 코드는 또한 다음 데이터베이스 연결 코드를 가정 합니다.</span><span class="sxs-lookup"><span data-stu-id="d53e1-135">The code in the tables that follow also assumes the following database connection code.</span></span> <span data-ttu-id="d53e1-136">프로젝트는 System.Data, System.Data.Linq를 및 FSharp.Data.TypeProviders 어셈블리에 대 한 참조를 추가 해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="d53e1-136">Projects should add references to System.Data,  System.Data.Linq, and FSharp.Data.TypeProviders assemblies.</span></span> <span data-ttu-id="d53e1-137">이 데이터베이스를 만드는 코드를이 항목의 끝에 포함 되어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="d53e1-137">The code that creates this database is included at the end of this topic.</span></span>
 
 ```fsharp
 open System
@@ -79,16 +79,16 @@ let db = schema.GetDataContext()
 let data = [ 1; 5; 7; 11; 18; 21]
 ```
 
-### <a name="table-1-query-operators"></a><span data-ttu-id="bfbdd-138">표 1.</span><span class="sxs-lookup"><span data-stu-id="bfbdd-138">Table 1.</span></span> <span data-ttu-id="bfbdd-139">쿼리 연산자</span><span class="sxs-lookup"><span data-stu-id="bfbdd-139">Query Operators</span></span>
+### <a name="table-1-query-operators"></a><span data-ttu-id="d53e1-138">표 1.</span><span class="sxs-lookup"><span data-stu-id="d53e1-138">Table 1.</span></span> <span data-ttu-id="d53e1-139">쿼리 연산자</span><span class="sxs-lookup"><span data-stu-id="d53e1-139">Query Operators</span></span>
 
 <table style="width:100%">
   <tr>
-    <th><span data-ttu-id="bfbdd-140">연산자</span><span class="sxs-lookup"><span data-stu-id="bfbdd-140">Operator</span></span></th>
-    <th><span data-ttu-id="bfbdd-141">설명</span><span class="sxs-lookup"><span data-stu-id="bfbdd-141">Description</span></span></th>
+    <th><span data-ttu-id="d53e1-140">연산자</span><span class="sxs-lookup"><span data-stu-id="d53e1-140">Operator</span></span></th>
+    <th><span data-ttu-id="d53e1-141">설명</span><span class="sxs-lookup"><span data-stu-id="d53e1-141">Description</span></span></th>
   </tr>
   <tr>
   <td><code>contains</code></td>
-<td><span data-ttu-id="bfbdd-142">선택한 요소에 지정 된 요소를 포함 하는지 여부를 결정 합니다.</span><span class="sxs-lookup"><span data-stu-id="bfbdd-142">Determines whether the selected elements include a specified element.</span></span><br/><br/>
+<td><span data-ttu-id="d53e1-142">선택한 요소에 지정 된 요소를 포함 하는지 여부를 결정 합니다.</span><span class="sxs-lookup"><span data-stu-id="d53e1-142">Determines whether the selected elements include a specified element.</span></span><br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -101,7 +101,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </tr>
 
 <tr>
-  <td><code>count</code></td><td><span data-ttu-id="bfbdd-143">선택한 요소 수를 반환합니다.</span><span class="sxs-lookup"><span data-stu-id="bfbdd-143">Returns the number of selected elements.</span></span><br/><br/>
+  <td><code>count</code></td><td><span data-ttu-id="d53e1-143">선택한 요소 수를 반환합니다.</span><span class="sxs-lookup"><span data-stu-id="d53e1-143">Returns the number of selected elements.</span></span><br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -112,7 +112,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 
 </td></tr>
 <tr>
-<td><code>last</code></td><td><span data-ttu-id="bfbdd-144">지금까지 선택한 요소의 마지막 요소를 선택 합니다.</span><span class="sxs-lookup"><span data-stu-id="bfbdd-144">Selects the last element of those selected so far.</span></span><br/><br/>
+<td><code>last</code></td><td><span data-ttu-id="d53e1-144">지금까지 선택한 요소의 마지막 요소를 선택 합니다.</span><span class="sxs-lookup"><span data-stu-id="d53e1-144">Selects the last element of those selected so far.</span></span><br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for number in data do
@@ -122,7 +122,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 
 </td></tr>
 <tr>
-<td><code>lastOrDefault</code></td><td><span data-ttu-id="bfbdd-145">요소가 없는 경우에 지금까지 선택한 또는 기본 값의 마지막 요소를 선택 합니다.</span><span class="sxs-lookup"><span data-stu-id="bfbdd-145">Selects the last element of those selected so far, or a default value if no element is found.</span></span><br/><br/>
+<td><code>lastOrDefault</code></td><td><span data-ttu-id="d53e1-145">요소가 없는 경우에 지금까지 선택한 또는 기본 값의 마지막 요소를 선택 합니다.</span><span class="sxs-lookup"><span data-stu-id="d53e1-145">Selects the last element of those selected so far, or a default value if no element is found.</span></span><br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for number in data do
@@ -132,7 +132,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td><code>exactlyOne</code></td><td><span data-ttu-id="bfbdd-146">지금까지 선택한 단일의 특정 요소를 선택 합니다.</span><span class="sxs-lookup"><span data-stu-id="bfbdd-146">Selects the single, specific element selected so far.</span></span> <span data-ttu-id="bfbdd-147">요소가 여러 개 있는 경우 예외가 throw 됩니다.</span><span class="sxs-lookup"><span data-stu-id="bfbdd-147">If multiple elements are present, an exception is thrown.</span></span><br/><br/>
+<td><code>exactlyOne</code></td><td><span data-ttu-id="d53e1-146">지금까지 선택한 단일의 특정 요소를 선택 합니다.</span><span class="sxs-lookup"><span data-stu-id="d53e1-146">Selects the single, specific element selected so far.</span></span> <span data-ttu-id="d53e1-147">요소가 여러 개 있는 경우 예외가 throw 됩니다.</span><span class="sxs-lookup"><span data-stu-id="d53e1-147">If multiple elements are present, an exception is thrown.</span></span><br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -143,7 +143,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td><code>exactlyOneOrDefault</code></td><td><span data-ttu-id="bfbdd-148">해당 요소가 없는 경우에 지금까지 선택한 또는 기본 값의 단일의 특정 요소를 선택 합니다.</span><span class="sxs-lookup"><span data-stu-id="bfbdd-148">Selects the single, specific element of those selected so far, or a default value if that element is not found.</span></span><br/><br/>
+<td><code>exactlyOneOrDefault</code></td><td><span data-ttu-id="d53e1-148">해당 요소가 없는 경우에 지금까지 선택한 또는 기본 값의 단일의 특정 요소를 선택 합니다.</span><span class="sxs-lookup"><span data-stu-id="d53e1-148">Selects the single, specific element of those selected so far, or a default value if that element is not found.</span></span><br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -154,7 +154,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td><code>headOrDefault</code></td><td><span data-ttu-id="bfbdd-149">시퀀스에 요소가 없는 경우에 지금까지 선택한 또는 기본 값의 첫 번째 요소를 선택 합니다.</span><span class="sxs-lookup"><span data-stu-id="bfbdd-149">Selects the first element of those selected so far, or a default value if the sequence contains no elements.</span></span><br/><br/>
+<td><code>headOrDefault</code></td><td><span data-ttu-id="d53e1-149">시퀀스에 요소가 없는 경우에 지금까지 선택한 또는 기본 값의 첫 번째 요소를 선택 합니다.</span><span class="sxs-lookup"><span data-stu-id="d53e1-149">Selects the first element of those selected so far, or a default value if the sequence contains no elements.</span></span><br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -164,7 +164,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td><code>select</code></td><td><span data-ttu-id="bfbdd-150">각 지금까지 선택한 요소를 프로젝션 합니다.</span><span class="sxs-lookup"><span data-stu-id="bfbdd-150">Projects each of the elements selected so far.</span></span><br/><br/>
+<td><code>select</code></td><td><span data-ttu-id="d53e1-150">각 지금까지 선택한 요소를 프로젝션 합니다.</span><span class="sxs-lookup"><span data-stu-id="d53e1-150">Projects each of the elements selected so far.</span></span><br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -173,7 +173,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td><code>where</code></td><td><span data-ttu-id="bfbdd-151">지정 된 조건자에 따라 요소를 선택 합니다.</span><span class="sxs-lookup"><span data-stu-id="bfbdd-151">Selects elements based on a specified predicate.</span></span><br/><br/>
+<td><code>where</code></td><td><span data-ttu-id="d53e1-151">지정 된 조건자에 따라 요소를 선택 합니다.</span><span class="sxs-lookup"><span data-stu-id="d53e1-151">Selects elements based on a specified predicate.</span></span><br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -183,7 +183,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td><code>minBy</code></td><td><span data-ttu-id="bfbdd-152">지금까지 선택한 각 요소의 값을 선택 하 고 최소 결과 값을 반환 합니다.</span><span class="sxs-lookup"><span data-stu-id="bfbdd-152">Selects a value for each element selected so far and returns the minimum resulting value.</span></span><br/><br/>
+<td><code>minBy</code></td><td><span data-ttu-id="d53e1-152">지금까지 선택한 각 요소의 값을 선택 하 고 최소 결과 값을 반환 합니다.</span><span class="sxs-lookup"><span data-stu-id="d53e1-152">Selects a value for each element selected so far and returns the minimum resulting value.</span></span><br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -192,7 +192,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td><code>maxBy</code></td><td><span data-ttu-id="bfbdd-153">지금까지 선택한 각 요소의 값을 선택 하 고 최대 결과 값을 반환 합니다.</span><span class="sxs-lookup"><span data-stu-id="bfbdd-153">Selects a value for each element selected so far and returns the maximum resulting value.</span></span><br/><br/>
+<td><code>maxBy</code></td><td><span data-ttu-id="d53e1-153">지금까지 선택한 각 요소의 값을 선택 하 고 최대 결과 값을 반환 합니다.</span><span class="sxs-lookup"><span data-stu-id="d53e1-153">Selects a value for each element selected so far and returns the maximum resulting value.</span></span><br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -201,7 +201,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td><code>groupBy</code></td><td><span data-ttu-id="bfbdd-154">지정된 된 키 선택기에 따라 지금까지 선택한 요소를 그룹화 합니다.</span><span class="sxs-lookup"><span data-stu-id="bfbdd-154">Groups the elements selected so far according to a specified key selector.</span></span><br/><br/>
+<td><code>groupBy</code></td><td><span data-ttu-id="d53e1-154">지정된 된 키 선택기에 따라 지금까지 선택한 요소를 그룹화 합니다.</span><span class="sxs-lookup"><span data-stu-id="d53e1-154">Groups the elements selected so far according to a specified key selector.</span></span><br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -211,7 +211,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td><code>sortBy</code></td><td><span data-ttu-id="bfbdd-155">지정된 된 정렬 키로 오름차순 지금까지 선택한 요소를 정렬 합니다.</span><span class="sxs-lookup"><span data-stu-id="bfbdd-155">Sorts the elements selected so far in ascending order by the given sorting key.</span></span><br/><br/>
+<td><code>sortBy</code></td><td><span data-ttu-id="d53e1-155">지정된 된 정렬 키로 오름차순 지금까지 선택한 요소를 정렬 합니다.</span><span class="sxs-lookup"><span data-stu-id="d53e1-155">Sorts the elements selected so far in ascending order by the given sorting key.</span></span><br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -221,7 +221,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td><code>sortByDescending</code></td><td><span data-ttu-id="bfbdd-156">지정된 된 정렬 키로 내림차순 지금까지 선택한 요소를 정렬 합니다.</span><span class="sxs-lookup"><span data-stu-id="bfbdd-156">Sorts the elements selected so far in descending order by the given sorting key.</span></span><br/><br/>
+<td><code>sortByDescending</code></td><td><span data-ttu-id="d53e1-156">지정된 된 정렬 키로 내림차순 지금까지 선택한 요소를 정렬 합니다.</span><span class="sxs-lookup"><span data-stu-id="d53e1-156">Sorts the elements selected so far in descending order by the given sorting key.</span></span><br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -231,7 +231,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td><code>thenBy</code></td><td><span data-ttu-id="bfbdd-157">지정된 된 정렬 키로 오름차순 지금까지 선택한 요소의 후속 정렬을 수행 합니다.</span><span class="sxs-lookup"><span data-stu-id="bfbdd-157">Performs a subsequent ordering of the elements selected so far in ascending order by the given sorting key.</span></span> <span data-ttu-id="bfbdd-158">이 연산자는 뒤에 사용할 수는 <code>sortBy</code>, <code>sortByDescending</code>, <code>thenBy</code>, 또는 <code>thenByDescending</code>합니다.</span><span class="sxs-lookup"><span data-stu-id="bfbdd-158">This operator may only be used after a <code>sortBy</code>, <code>sortByDescending</code>, <code>thenBy</code>, or <code>thenByDescending</code>.</span></span><br/><br/>
+<td><code>thenBy</code></td><td><span data-ttu-id="d53e1-157">지정된 된 정렬 키로 오름차순 지금까지 선택한 요소의 후속 정렬을 수행 합니다.</span><span class="sxs-lookup"><span data-stu-id="d53e1-157">Performs a subsequent ordering of the elements selected so far in ascending order by the given sorting key.</span></span> <span data-ttu-id="d53e1-158">이 연산자는 뒤에 사용할 수는 <code>sortBy</code>, <code>sortByDescending</code>, <code>thenBy</code>, 또는 <code>thenByDescending</code>합니다.</span><span class="sxs-lookup"><span data-stu-id="d53e1-158">This operator may only be used after a <code>sortBy</code>, <code>sortByDescending</code>, <code>thenBy</code>, or <code>thenByDescending</code>.</span></span><br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -243,7 +243,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td><code>thenByDescending</code></td><td><span data-ttu-id="bfbdd-159">지정된 된 정렬 키로 내림차순 지금까지 선택한 요소의 후속 정렬을 수행 합니다.</span><span class="sxs-lookup"><span data-stu-id="bfbdd-159">Performs a subsequent ordering of the elements selected so far in descending order by the given sorting key.</span></span> <span data-ttu-id="bfbdd-160">이 연산자는 뒤에 사용할 수는 <code>sortBy</code>, <code>sortByDescending</code>, <code>thenBy</code>, 또는 <code>thenByDescending</code>합니다.</span><span class="sxs-lookup"><span data-stu-id="bfbdd-160">This operator may only be used after a <code>sortBy</code>, <code>sortByDescending</code>, <code>thenBy</code>, or <code>thenByDescending</code>.</span></span><br/><br/>
+<td><code>thenByDescending</code></td><td><span data-ttu-id="d53e1-159">지정된 된 정렬 키로 내림차순 지금까지 선택한 요소의 후속 정렬을 수행 합니다.</span><span class="sxs-lookup"><span data-stu-id="d53e1-159">Performs a subsequent ordering of the elements selected so far in descending order by the given sorting key.</span></span> <span data-ttu-id="d53e1-160">이 연산자는 뒤에 사용할 수는 <code>sortBy</code>, <code>sortByDescending</code>, <code>thenBy</code>, 또는 <code>thenByDescending</code>합니다.</span><span class="sxs-lookup"><span data-stu-id="d53e1-160">This operator may only be used after a <code>sortBy</code>, <code>sortByDescending</code>, <code>thenBy</code>, or <code>thenByDescending</code>.</span></span><br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -255,7 +255,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td><code>groupValBy</code></td><td><span data-ttu-id="bfbdd-161">지금까지 선택한 각 요소의 값을 선택 하 고 지정된 된 키로 요소를 그룹화 합니다.</span><span class="sxs-lookup"><span data-stu-id="bfbdd-161">Selects a value for each element selected so far and groups the elements by the given key.</span></span><br/><br/>
+<td><code>groupValBy</code></td><td><span data-ttu-id="d53e1-161">지금까지 선택한 각 요소의 값을 선택 하 고 지정된 된 키로 요소를 그룹화 합니다.</span><span class="sxs-lookup"><span data-stu-id="d53e1-161">Selects a value for each element selected so far and groups the elements by the given key.</span></span><br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -265,7 +265,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td><code>join</code></td><td><span data-ttu-id="bfbdd-162">두 개의 일치 하는 키에 따라 선택한 값 집합을 연관 시킵니다.</span><span class="sxs-lookup"><span data-stu-id="bfbdd-162">Correlates two sets of selected values based on matching keys.</span></span> <span data-ttu-id="bfbdd-163">= 주변 키의 순서는 조인 식에 로그인 하는 유효 합니다.</span><span class="sxs-lookup"><span data-stu-id="bfbdd-163">Note that the order of the keys around the = sign in a join expression is significant.</span></span> <span data-ttu-id="bfbdd-164">모든 조인 후 줄이 분할 된 경우에 <code>-&gt;</code> 기호 들여쓰기 없어야 들여쓰기 이상 키워드 어디까지 나 <code>for</code>합니다.</span><span class="sxs-lookup"><span data-stu-id="bfbdd-164">In all joins, if the line is split after the <code>-&gt;</code> symbol, the indentation must be indented at least as far as the keyword <code>for</code>.</span></span><br/><br/>
+<td><code>join</code></td><td><span data-ttu-id="d53e1-162">두 개의 일치 하는 키에 따라 선택한 값 집합을 연관 시킵니다.</span><span class="sxs-lookup"><span data-stu-id="d53e1-162">Correlates two sets of selected values based on matching keys.</span></span> <span data-ttu-id="d53e1-163">= 주변 키의 순서는 조인 식에 로그인 하는 유효 합니다.</span><span class="sxs-lookup"><span data-stu-id="d53e1-163">Note that the order of the keys around the = sign in a join expression is significant.</span></span> <span data-ttu-id="d53e1-164">모든 조인 후 줄이 분할 된 경우에 <code>-&gt;</code> 기호 들여쓰기 없어야 들여쓰기 이상 키워드 어디까지 나 <code>for</code>합니다.</span><span class="sxs-lookup"><span data-stu-id="d53e1-164">In all joins, if the line is split after the <code>-&gt;</code> symbol, the indentation must be indented at least as far as the keyword <code>for</code>.</span></span><br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -276,7 +276,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td><code>groupJoin</code></td><td><span data-ttu-id="bfbdd-165">두 키 일치를 기준으로 선택한 값 집합을 연관 시키고 결과 그룹화 합니다.</span><span class="sxs-lookup"><span data-stu-id="bfbdd-165">Correlates two sets of selected values based on matching keys and groups the results.</span></span> <span data-ttu-id="bfbdd-166">= 주변 키의 순서는 조인 식에 로그인 하는 유효 합니다.</span><span class="sxs-lookup"><span data-stu-id="bfbdd-166">Note that the order of the keys around the = sign in a join expression is significant.</span></span><br/><br/>
+<td><code>groupJoin</code></td><td><span data-ttu-id="d53e1-165">두 키 일치를 기준으로 선택한 값 집합을 연관 시키고 결과 그룹화 합니다.</span><span class="sxs-lookup"><span data-stu-id="d53e1-165">Correlates two sets of selected values based on matching keys and groups the results.</span></span> <span data-ttu-id="d53e1-166">= 주변 키의 순서는 조인 식에 로그인 하는 유효 합니다.</span><span class="sxs-lookup"><span data-stu-id="d53e1-166">Note that the order of the keys around the = sign in a join expression is significant.</span></span><br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -290,7 +290,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td><code>leftOuterJoin</code></td><td><span data-ttu-id="bfbdd-167">두 키 일치를 기준으로 선택한 값 집합을 연관 시키고 결과 그룹화 합니다.</span><span class="sxs-lookup"><span data-stu-id="bfbdd-167">Correlates two sets of selected values based on matching keys and groups the results.</span></span> <span data-ttu-id="bfbdd-168">모든 그룹 비어 있으면 단일 기본 값을 사용 하 여 그룹을 대신 사용 됩니다.</span><span class="sxs-lookup"><span data-stu-id="bfbdd-168">If any group is empty, a group with a single default value is used instead.</span></span> <span data-ttu-id="bfbdd-169">= 주변 키의 순서는 조인 식에 로그인 하는 유효 합니다.</span><span class="sxs-lookup"><span data-stu-id="bfbdd-169">Note that the order of the keys around the = sign in a join expression is significant.</span></span><br/><br/>
+<td><code>leftOuterJoin</code></td><td><span data-ttu-id="d53e1-167">두 키 일치를 기준으로 선택한 값 집합을 연관 시키고 결과 그룹화 합니다.</span><span class="sxs-lookup"><span data-stu-id="d53e1-167">Correlates two sets of selected values based on matching keys and groups the results.</span></span> <span data-ttu-id="d53e1-168">모든 그룹 비어 있으면 단일 기본 값을 사용 하 여 그룹을 대신 사용 됩니다.</span><span class="sxs-lookup"><span data-stu-id="d53e1-168">If any group is empty, a group with a single default value is used instead.</span></span> <span data-ttu-id="d53e1-169">= 주변 키의 순서는 조인 식에 로그인 하는 유효 합니다.</span><span class="sxs-lookup"><span data-stu-id="d53e1-169">Note that the order of the keys around the = sign in a join expression is significant.</span></span><br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -302,7 +302,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td><code>sumByNullable</code></td><td><span data-ttu-id="bfbdd-170">지금까지 선택한 각 요소의 null 허용 값을 선택 하 고 이러한 값의 합계를 반환 합니다.</span><span class="sxs-lookup"><span data-stu-id="bfbdd-170">Selects a nullable value for each element selected so far and returns the sum of these values.</span></span> <span data-ttu-id="bfbdd-171">있는 경우 null을 허용 되지 않은 값이 무시 됩니다.</span><span class="sxs-lookup"><span data-stu-id="bfbdd-171">If any nullable does not have a value, it is ignored.</span></span><br/><br/>
+<td><code>sumByNullable</code></td><td><span data-ttu-id="d53e1-170">지금까지 선택한 각 요소의 null 허용 값을 선택 하 고 이러한 값의 합계를 반환 합니다.</span><span class="sxs-lookup"><span data-stu-id="d53e1-170">Selects a nullable value for each element selected so far and returns the sum of these values.</span></span> <span data-ttu-id="d53e1-171">있는 경우 null을 허용 되지 않은 값이 무시 됩니다.</span><span class="sxs-lookup"><span data-stu-id="d53e1-171">If any nullable does not have a value, it is ignored.</span></span><br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -311,7 +311,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td><code>minByNullable</code></td><td><span data-ttu-id="bfbdd-172">지금까지 선택한 각 요소의 null 허용 값을 선택 하 고이 값 중 최소값을 반환 합니다.</span><span class="sxs-lookup"><span data-stu-id="bfbdd-172">Selects a nullable value for each element selected so far and returns the minimum of these values.</span></span> <span data-ttu-id="bfbdd-173">있는 경우 null을 허용 되지 않은 값이 무시 됩니다.</span><span class="sxs-lookup"><span data-stu-id="bfbdd-173">If any nullable does not have a value, it is ignored.</span></span><br/><br/>
+<td><code>minByNullable</code></td><td><span data-ttu-id="d53e1-172">지금까지 선택한 각 요소의 null 허용 값을 선택 하 고이 값 중 최소값을 반환 합니다.</span><span class="sxs-lookup"><span data-stu-id="d53e1-172">Selects a nullable value for each element selected so far and returns the minimum of these values.</span></span> <span data-ttu-id="d53e1-173">있는 경우 null을 허용 되지 않은 값이 무시 됩니다.</span><span class="sxs-lookup"><span data-stu-id="d53e1-173">If any nullable does not have a value, it is ignored.</span></span><br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -320,7 +320,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td><code>maxByNullable</code></td><td><span data-ttu-id="bfbdd-174">지금까지 선택한 각 요소의 null 허용 값을 선택 하 고이 값 중 최대값을 반환 합니다.</span><span class="sxs-lookup"><span data-stu-id="bfbdd-174">Selects a nullable value for each element selected so far and returns the maximum of these values.</span></span> <span data-ttu-id="bfbdd-175">있는 경우 null을 허용 되지 않은 값이 무시 됩니다.</span><span class="sxs-lookup"><span data-stu-id="bfbdd-175">If any nullable does not have a value, it is ignored.</span></span><br/><br/>
+<td><code>maxByNullable</code></td><td><span data-ttu-id="d53e1-174">지금까지 선택한 각 요소의 null 허용 값을 선택 하 고이 값 중 최대값을 반환 합니다.</span><span class="sxs-lookup"><span data-stu-id="d53e1-174">Selects a nullable value for each element selected so far and returns the maximum of these values.</span></span> <span data-ttu-id="d53e1-175">있는 경우 null을 허용 되지 않은 값이 무시 됩니다.</span><span class="sxs-lookup"><span data-stu-id="d53e1-175">If any nullable does not have a value, it is ignored.</span></span><br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -329,7 +329,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td><code>averageByNullable</code></td><td><span data-ttu-id="bfbdd-176">지금까지 선택한 각 요소의 null 허용 값을 선택 하 고 이러한 값의 평균을 반환 합니다.</span><span class="sxs-lookup"><span data-stu-id="bfbdd-176">Selects a nullable value for each element selected so far and returns the average of these values.</span></span> <span data-ttu-id="bfbdd-177">있는 경우 null을 허용 되지 않은 값이 무시 됩니다.</span><span class="sxs-lookup"><span data-stu-id="bfbdd-177">If any nullable does not have a value, it is ignored.</span></span><br/><br/>
+<td><code>averageByNullable</code></td><td><span data-ttu-id="d53e1-176">지금까지 선택한 각 요소의 null 허용 값을 선택 하 고 이러한 값의 평균을 반환 합니다.</span><span class="sxs-lookup"><span data-stu-id="d53e1-176">Selects a nullable value for each element selected so far and returns the average of these values.</span></span> <span data-ttu-id="d53e1-177">있는 경우 null을 허용 되지 않은 값이 무시 됩니다.</span><span class="sxs-lookup"><span data-stu-id="d53e1-177">If any nullable does not have a value, it is ignored.</span></span><br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -338,7 +338,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td><code>averageBy</code></td><td><span data-ttu-id="bfbdd-178">지금까지 선택한 각 요소의 값을 선택 하 고 이러한 값의 평균을 반환 합니다.</span><span class="sxs-lookup"><span data-stu-id="bfbdd-178">Selects a value for each element selected so far and returns the average of these values.</span></span><br/><br/>
+<td><code>averageBy</code></td><td><span data-ttu-id="d53e1-178">지금까지 선택한 각 요소의 값을 선택 하 고 이러한 값의 평균을 반환 합니다.</span><span class="sxs-lookup"><span data-stu-id="d53e1-178">Selects a value for each element selected so far and returns the average of these values.</span></span><br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -347,7 +347,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td><code>distinct</code></td><td><span data-ttu-id="bfbdd-179">지금까지 선택한 요소에서 고유 요소를 선택 합니다.</span><span class="sxs-lookup"><span data-stu-id="bfbdd-179">Selects distinct elements from the elements selected so far.</span></span><br/><br/>
+<td><code>distinct</code></td><td><span data-ttu-id="d53e1-179">지금까지 선택한 요소에서 고유 요소를 선택 합니다.</span><span class="sxs-lookup"><span data-stu-id="d53e1-179">Selects distinct elements from the elements selected so far.</span></span><br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -358,7 +358,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td><code>exists</code></td><td><span data-ttu-id="bfbdd-180">지금까지 선택한 요소가 조건을 충족 하는지 여부를 결정 합니다.</span><span class="sxs-lookup"><span data-stu-id="bfbdd-180">Determines whether any element selected so far satisfies a condition.</span></span><br/><br/>
+<td><code>exists</code></td><td><span data-ttu-id="d53e1-180">지금까지 선택한 요소가 조건을 충족 하는지 여부를 결정 합니다.</span><span class="sxs-lookup"><span data-stu-id="d53e1-180">Determines whether any element selected so far satisfies a condition.</span></span><br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -371,7 +371,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td><code>find</code></td><td><span data-ttu-id="bfbdd-181">지정된 된 조건을 만족 하는 지금까지 선택한 첫째 요소를 선택 합니다.</span><span class="sxs-lookup"><span data-stu-id="bfbdd-181">Selects the first element selected so far that satisfies a specified condition.</span></span><br/><br/>
+<td><code>find</code></td><td><span data-ttu-id="d53e1-181">지정된 된 조건을 만족 하는 지금까지 선택한 첫째 요소를 선택 합니다.</span><span class="sxs-lookup"><span data-stu-id="d53e1-181">Selects the first element selected so far that satisfies a specified condition.</span></span><br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -380,7 +380,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td><code>all</code></td><td><span data-ttu-id="bfbdd-182">지금까지 선택한 모든 요소가 조건을 만족 하는지를 확인 합니다.</span><span class="sxs-lookup"><span data-stu-id="bfbdd-182">Determines whether all elements selected so far satisfy a condition.</span></span><br/><br/>
+<td><code>all</code></td><td><span data-ttu-id="d53e1-182">지금까지 선택한 모든 요소가 조건을 만족 하는지를 확인 합니다.</span><span class="sxs-lookup"><span data-stu-id="d53e1-182">Determines whether all elements selected so far satisfy a condition.</span></span><br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -389,7 +389,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td><code>head</code></td><td><span data-ttu-id="bfbdd-183">지금까지 선택한에서 첫 번째 요소를 선택 합니다.</span><span class="sxs-lookup"><span data-stu-id="bfbdd-183">Selects the first element from those selected so far.</span></span><br/><br/>
+<td><code>head</code></td><td><span data-ttu-id="d53e1-183">지금까지 선택한에서 첫 번째 요소를 선택 합니다.</span><span class="sxs-lookup"><span data-stu-id="d53e1-183">Selects the first element from those selected so far.</span></span><br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -398,7 +398,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td><code>nth</code></td><td><span data-ttu-id="bfbdd-184">지금까지 선택한 간에 지정된 된 인덱스에 있는 요소를 선택합니다.</span><span class="sxs-lookup"><span data-stu-id="bfbdd-184">Selects the element at a specified index amongst those selected so far.</span></span><br/><br/>
+<td><code>nth</code></td><td><span data-ttu-id="d53e1-184">지금까지 선택한 간에 지정된 된 인덱스에 있는 요소를 선택합니다.</span><span class="sxs-lookup"><span data-stu-id="d53e1-184">Selects the element at a specified index amongst those selected so far.</span></span><br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for numbers in data do
@@ -407,7 +407,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td><code>skip</code></td><td><span data-ttu-id="bfbdd-185">지금까지 선택한 요소의 지정 된 수를 무시 하 고 나머지 요소를 선택 합니다.</span><span class="sxs-lookup"><span data-stu-id="bfbdd-185">Bypasses a specified number of the elements selected so far and then selects the remaining elements.</span></span><br/><br/>
+<td><code>skip</code></td><td><span data-ttu-id="d53e1-185">지금까지 선택한 요소의 지정 된 수를 무시 하 고 나머지 요소를 선택 합니다.</span><span class="sxs-lookup"><span data-stu-id="d53e1-185">Bypasses a specified number of the elements selected so far and then selects the remaining elements.</span></span><br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -416,7 +416,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td><code>skipWhile</code></td><td><span data-ttu-id="bfbdd-186">지정된 된 조건이 true 시퀀스의 요소를 무시 하 다음 나머지 요소를 선택 합니다.</span><span class="sxs-lookup"><span data-stu-id="bfbdd-186">Bypasses elements in a sequence as long as a specified condition is true and then selects the remaining elements.</span></span><br/><br/>
+<td><code>skipWhile</code></td><td><span data-ttu-id="d53e1-186">지정된 된 조건이 true 시퀀스의 요소를 무시 하 다음 나머지 요소를 선택 합니다.</span><span class="sxs-lookup"><span data-stu-id="d53e1-186">Bypasses elements in a sequence as long as a specified condition is true and then selects the remaining elements.</span></span><br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for number in data do
@@ -426,7 +426,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td><code>sumBy</code></td><td><span data-ttu-id="bfbdd-187">지금까지 선택한 각 요소에 대 한 값을 선택 하 고 이러한 값의 합계를 반환 합니다.</span><span class="sxs-lookup"><span data-stu-id="bfbdd-187">Selects a value for each element selected so far and returns the sum of these values.</span></span><br/><br/>
+<td><code>sumBy</code></td><td><span data-ttu-id="d53e1-187">지금까지 선택한 각 요소에 대 한 값을 선택 하 고 이러한 값의 합계를 반환 합니다.</span><span class="sxs-lookup"><span data-stu-id="d53e1-187">Selects a value for each element selected so far and returns the sum of these values.</span></span><br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -435,7 +435,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td><code>take</code></td><td><span data-ttu-id="bfbdd-188">지금까지 선택한에서 지정 된 개수의 연속 요소를 선택합니다.</span><span class="sxs-lookup"><span data-stu-id="bfbdd-188">Selects a specified number of contiguous elements from those selected so far.</span></span><br/><br/>
+<td><code>take</code></td><td><span data-ttu-id="d53e1-188">지금까지 선택한에서 지정 된 개수의 연속 요소를 선택합니다.</span><span class="sxs-lookup"><span data-stu-id="d53e1-188">Selects a specified number of contiguous elements from those selected so far.</span></span><br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -445,7 +445,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td><code>takeWhile</code></td><td><span data-ttu-id="bfbdd-189">지정된 된 조건이 true 이면 있고 다음 나머지 요소를 건너뜁니다 시퀀스에서 요소를 선택 합니다.</span><span class="sxs-lookup"><span data-stu-id="bfbdd-189">Selects elements from a sequence as long as a specified condition is true, and then skips the remaining elements.</span></span><br/><br/>
+<td><code>takeWhile</code></td><td><span data-ttu-id="d53e1-189">지정된 된 조건이 true 이면 있고 다음 나머지 요소를 건너뜁니다 시퀀스에서 요소를 선택 합니다.</span><span class="sxs-lookup"><span data-stu-id="d53e1-189">Selects elements from a sequence as long as a specified condition is true, and then skips the remaining elements.</span></span><br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for number in data do
@@ -454,7 +454,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td><code>sortByNullable</code></td><td><span data-ttu-id="bfbdd-190">지정된 된 nullable 정렬 키로 오름차순 지금까지 선택한 요소를 정렬 합니다.</span><span class="sxs-lookup"><span data-stu-id="bfbdd-190">Sorts the elements selected so far in ascending order by the given nullable sorting key.</span></span><br/><br/>
+<td><code>sortByNullable</code></td><td><span data-ttu-id="d53e1-190">지정된 된 nullable 정렬 키로 오름차순 지금까지 선택한 요소를 정렬 합니다.</span><span class="sxs-lookup"><span data-stu-id="d53e1-190">Sorts the elements selected so far in ascending order by the given nullable sorting key.</span></span><br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -464,7 +464,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td><code>sortByNullableDescending</code></td><td><span data-ttu-id="bfbdd-191">지정된 된 nullable 정렬 키로 내림차순 지금까지 선택한 요소를 정렬 합니다.</span><span class="sxs-lookup"><span data-stu-id="bfbdd-191">Sorts the elements selected so far in descending order by the given nullable sorting key.</span></span><br/><br/>
+<td><code>sortByNullableDescending</code></td><td><span data-ttu-id="d53e1-191">지정된 된 nullable 정렬 키로 내림차순 지금까지 선택한 요소를 정렬 합니다.</span><span class="sxs-lookup"><span data-stu-id="d53e1-191">Sorts the elements selected so far in descending order by the given nullable sorting key.</span></span><br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -474,7 +474,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td><code>thenByNullable</code></td><td><span data-ttu-id="bfbdd-192">지정된 된 nullable 정렬 키로 오름차순 지금까지 선택한 요소의 후속 정렬을 수행 합니다.</span><span class="sxs-lookup"><span data-stu-id="bfbdd-192">Performs a subsequent ordering of the elements selected so far in ascending order by the given nullable sorting key.</span></span> <span data-ttu-id="bfbdd-193">이 연산자 바로 다음 에서만 사용할 수 있습니다는 <code>sortBy</code>, <code>sortByDescending</code>, <code>thenBy</code>, 또는 <code>thenByDescending</code>, 또는 null을 허용 합니다.</span><span class="sxs-lookup"><span data-stu-id="bfbdd-193">This operator may only be used immediately after a <code>sortBy</code>, <code>sortByDescending</code>, <code>thenBy</code>, or <code>thenByDescending</code>, or their nullable variants.</span></span><br/><br/>
+<td><code>thenByNullable</code></td><td><span data-ttu-id="d53e1-192">지정된 된 nullable 정렬 키로 오름차순 지금까지 선택한 요소의 후속 정렬을 수행 합니다.</span><span class="sxs-lookup"><span data-stu-id="d53e1-192">Performs a subsequent ordering of the elements selected so far in ascending order by the given nullable sorting key.</span></span> <span data-ttu-id="d53e1-193">이 연산자 바로 다음 에서만 사용할 수 있습니다는 <code>sortBy</code>, <code>sortByDescending</code>, <code>thenBy</code>, 또는 <code>thenByDescending</code>, 또는 null을 허용 합니다.</span><span class="sxs-lookup"><span data-stu-id="d53e1-193">This operator may only be used immediately after a <code>sortBy</code>, <code>sortByDescending</code>, <code>thenBy</code>, or <code>thenByDescending</code>, or their nullable variants.</span></span><br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -485,7 +485,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td><code>thenByNullableDescending</code></td><td><span data-ttu-id="bfbdd-194">지정된 된 nullable 정렬 키로 내림차순 지금까지 선택한 요소의 후속 정렬을 수행 합니다.</span><span class="sxs-lookup"><span data-stu-id="bfbdd-194">Performs a subsequent ordering of the elements selected so far in descending order by the given nullable sorting key.</span></span> <span data-ttu-id="bfbdd-195">이 연산자 바로 다음 에서만 사용할 수 있습니다는 <code>sortBy</code>, <code>sortByDescending</code>, <code>thenBy</code>, 또는 <code>thenByDescending</code>, 또는 null을 허용 합니다.</span><span class="sxs-lookup"><span data-stu-id="bfbdd-195">This operator may only be used immediately after a <code>sortBy</code>, <code>sortByDescending</code>, <code>thenBy</code>, or <code>thenByDescending</code>, or their nullable variants.</span></span><br/><br/>
+<td><code>thenByNullableDescending</code></td><td><span data-ttu-id="d53e1-194">지정된 된 nullable 정렬 키로 내림차순 지금까지 선택한 요소의 후속 정렬을 수행 합니다.</span><span class="sxs-lookup"><span data-stu-id="d53e1-194">Performs a subsequent ordering of the elements selected so far in descending order by the given nullable sorting key.</span></span> <span data-ttu-id="d53e1-195">이 연산자 바로 다음 에서만 사용할 수 있습니다는 <code>sortBy</code>, <code>sortByDescending</code>, <code>thenBy</code>, 또는 <code>thenByDescending</code>, 또는 null을 허용 합니다.</span><span class="sxs-lookup"><span data-stu-id="d53e1-195">This operator may only be used immediately after a <code>sortBy</code>, <code>sortByDescending</code>, <code>thenBy</code>, or <code>thenByDescending</code>, or their nullable variants.</span></span><br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -498,20 +498,20 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </td></tr>
 </table>
 
-## <a name="comparison-of-transact-sql-and-f-query-expressions"></a><span data-ttu-id="bfbdd-196">Transact-SQL과 F# 쿼리 식 비교</span><span class="sxs-lookup"><span data-stu-id="bfbdd-196">Comparison of Transact-SQL and F# Query Expressions</span></span>
-<span data-ttu-id="bfbdd-197">다음 표에서 몇 가지 일반적인 Transact SQL 쿼리 및에 해당 하는 F#입니다.</span><span class="sxs-lookup"><span data-stu-id="bfbdd-197">The following table shows some common Transact-SQL queries and their equivalents in F#.</span></span> <span data-ttu-id="bfbdd-198">또한이 테이블의 코드 앞의 테이블 및 형식 공급자를 설정 하려면 동일한 초기 코드 같은 데이터베이스를 가정 합니다.</span><span class="sxs-lookup"><span data-stu-id="bfbdd-198">The code in this table also assumes the same database as the previous table and the same initial code to set up the type provider.</span></span>
+## <a name="comparison-of-transact-sql-and-f-query-expressions"></a><span data-ttu-id="d53e1-196">Transact-SQL과 F# 쿼리 식 비교</span><span class="sxs-lookup"><span data-stu-id="d53e1-196">Comparison of Transact-SQL and F# Query Expressions</span></span>
+<span data-ttu-id="d53e1-197">다음 표에서 몇 가지 일반적인 Transact SQL 쿼리 및에 해당 하는 F#입니다.</span><span class="sxs-lookup"><span data-stu-id="d53e1-197">The following table shows some common Transact-SQL queries and their equivalents in F#.</span></span> <span data-ttu-id="d53e1-198">또한이 테이블의 코드 앞의 테이블 및 형식 공급자를 설정 하려면 동일한 초기 코드 같은 데이터베이스를 가정 합니다.</span><span class="sxs-lookup"><span data-stu-id="d53e1-198">The code in this table also assumes the same database as the previous table and the same initial code to set up the type provider.</span></span>
 
 
-### <a name="table-2-transact-sql-and-f-query-expressions"></a><span data-ttu-id="bfbdd-199">표 2입니다.</span><span class="sxs-lookup"><span data-stu-id="bfbdd-199">Table 2.</span></span> <span data-ttu-id="bfbdd-200">Transact-SQL 및 F# 쿼리 식</span><span class="sxs-lookup"><span data-stu-id="bfbdd-200">Transact-SQL and F# Query Expressions</span></span>
+### <a name="table-2-transact-sql-and-f-query-expressions"></a><span data-ttu-id="d53e1-199">표 2입니다.</span><span class="sxs-lookup"><span data-stu-id="d53e1-199">Table 2.</span></span> <span data-ttu-id="d53e1-200">Transact-SQL 및 F# 쿼리 식</span><span class="sxs-lookup"><span data-stu-id="d53e1-200">Transact-SQL and F# Query Expressions</span></span>
 
 
 <table style="width:100%">
   <tr>
-    <th><span data-ttu-id="bfbdd-201">Transact SQL (없습니다 대/소문자 구분)</span><span class="sxs-lookup"><span data-stu-id="bfbdd-201">Transact-SQL (not case sensitive)</span></span></th>
-    <th><span data-ttu-id="bfbdd-202">F#쿼리 식 (대/소문자 구분)</span><span class="sxs-lookup"><span data-stu-id="bfbdd-202">F# Query Expression (case sensitive)</span></span></th>
+    <th><span data-ttu-id="d53e1-201">Transact SQL (없습니다 대/소문자 구분)</span><span class="sxs-lookup"><span data-stu-id="d53e1-201">Transact-SQL (not case sensitive)</span></span></th>
+    <th><span data-ttu-id="d53e1-202">F#쿼리 식 (대/소문자 구분)</span><span class="sxs-lookup"><span data-stu-id="d53e1-202">F# Query Expression (case sensitive)</span></span></th>
   </tr>
 <tr><td>
-<span data-ttu-id="bfbdd-203">테이블에서 모든 필드를 선택 합니다.</span><span class="sxs-lookup"><span data-stu-id="bfbdd-203">Select all fields from table.</span></span><br>
+<span data-ttu-id="d53e1-203">테이블에서 모든 필드를 선택 합니다.</span><span class="sxs-lookup"><span data-stu-id="d53e1-203">Select all fields from table.</span></span><br>
 
 <pre><code class="lang-sql">SELECT * FROM Student
 </code></pre>
@@ -526,7 +526,7 @@ query {
 
 </td></tr>
 <tr><td>
-<span data-ttu-id="bfbdd-204">테이블의 레코드를 계산 합니다.</span><span class="sxs-lookup"><span data-stu-id="bfbdd-204">Count records in a table.</span></span><br/>
+<span data-ttu-id="d53e1-204">테이블의 레코드를 계산 합니다.</span><span class="sxs-lookup"><span data-stu-id="d53e1-204">Count records in a table.</span></span><br/>
 
 <pre><code class="lang-sql">SELECT COUNT( * ) FROM Student
 </code></pre>
@@ -565,7 +565,7 @@ query {
 </code></pre>
 
 </td></tr><tr>
-<td><span data-ttu-id="bfbdd-205">그룹화</span><span class="sxs-lookup"><span data-stu-id="bfbdd-205">Grouping</span></span><br/>
+<td><span data-ttu-id="d53e1-205">그룹화</span><span class="sxs-lookup"><span data-stu-id="d53e1-205">Grouping</span></span><br/>
 
 <pre><code class="lang-sql">SELECT Student.Age, COUNT( * ) FROM Student
 GROUP BY Student.Age
@@ -587,7 +587,7 @@ query {
 }
 </code></pre>
 </td></tr><tr><td>
-<span data-ttu-id="bfbdd-206">조건으로 그룹화 합니다.</span><span class="sxs-lookup"><span data-stu-id="bfbdd-206">Grouping with condition.</span></span><br/>
+<span data-ttu-id="d53e1-206">조건으로 그룹화 합니다.</span><span class="sxs-lookup"><span data-stu-id="d53e1-206">Grouping with condition.</span></span><br/>
 
 <pre><code class="lang-sql">SELECT Student.Age, COUNT( * )
 FROM Student
@@ -607,7 +607,7 @@ query {
 </code></pre>
 
 </td></tr><tr><td>
-<span data-ttu-id="bfbdd-207">수 조건으로 그룹화 합니다.</span><span class="sxs-lookup"><span data-stu-id="bfbdd-207">Grouping with count condition.</span></span><br/>
+<span data-ttu-id="d53e1-207">수 조건으로 그룹화 합니다.</span><span class="sxs-lookup"><span data-stu-id="d53e1-207">Grouping with count condition.</span></span><br/>
 
 <pre><code class="lang-sql">SELECT Student.Age, COUNT( * )
 FROM Student
@@ -628,7 +628,7 @@ query {
 </code></pre>
 
 </td></tr><tr><td>
-<span data-ttu-id="bfbdd-208">그룹화, 계산, 및 합계를 계산 합니다.</span><span class="sxs-lookup"><span data-stu-id="bfbdd-208">Grouping, counting, and summing.</span></span><br/>
+<span data-ttu-id="d53e1-208">그룹화, 계산, 및 합계를 계산 합니다.</span><span class="sxs-lookup"><span data-stu-id="d53e1-208">Grouping, counting, and summing.</span></span><br/>
 
 <pre><code class="lang-sql">SELECT Student.Age, COUNT( * ), SUM(Student.Age) as total
 FROM Student
@@ -651,7 +651,7 @@ query {
 </code></pre>
 
 </td></tr><tr><td>
-<span data-ttu-id="bfbdd-209">그룹화, 계산, 및 개수 기준으로 정렬 합니다.</span><span class="sxs-lookup"><span data-stu-id="bfbdd-209">Grouping, counting, and ordering by count.</span></span><br/>
+<span data-ttu-id="d53e1-209">그룹화, 계산, 및 개수 기준으로 정렬 합니다.</span><span class="sxs-lookup"><span data-stu-id="d53e1-209">Grouping, counting, and ordering by count.</span></span><br/>
 
 <pre><code class="lang-sql">SELECT Student.Age, COUNT( * ) as myCount
 FROM Student
@@ -674,8 +674,8 @@ query {
 }
 </code></pre>
 
-</td></tr><tr><td><span data-ttu-id="bfbdd-210">
-<code>IN</code> 지정 된 값 집합</span><span class="sxs-lookup"><span data-stu-id="bfbdd-210">
+</td></tr><tr><td><span data-ttu-id="d53e1-210">
+<code>IN</code> 지정 된 값 집합</span><span class="sxs-lookup"><span data-stu-id="d53e1-210">
 <code>IN</code> a set of specified values</span></span><br/>
 
 <pre><code class="lang-sql">SELECT *
@@ -698,8 +698,8 @@ query {
 }
 </code></pre>
 
-</td></tr><tr><td><span data-ttu-id="bfbdd-211">
-<code>LIKE</code>와 <code>TOP</code>을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="bfbdd-211">
+</td></tr><tr><td><span data-ttu-id="d53e1-211">
+<code>LIKE</code>와 <code>TOP</code>을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="d53e1-211">
 <code>LIKE</code> and <code>TOP</code>.</span></span><br/>
 
 <pre><code class="lang-sql">-- '_e%' matches strings where the second character is 'e'
@@ -717,8 +717,8 @@ query {
 }
 </code></pre>
 
-</td></tr><tr><td><span data-ttu-id="bfbdd-212">
-<code>LIKE</code> 패턴을 사용 하 여 집합과 일치 합니다.</span><span class="sxs-lookup"><span data-stu-id="bfbdd-212">
+</td></tr><tr><td><span data-ttu-id="d53e1-212">
+<code>LIKE</code> 패턴을 사용 하 여 집합과 일치 합니다.</span><span class="sxs-lookup"><span data-stu-id="d53e1-212">
 <code>LIKE</code> with pattern match set.</span></span><br/>
 
 <pre><code class="lang-sql">-- '[abc]%' matches strings where the first character is
@@ -735,8 +735,8 @@ WHERE Student.Name LIKE '[abc]%'
 }
 </code></pre>
 
-</td></tr><tr><td><span data-ttu-id="bfbdd-213">
-<code>LIKE</code> 제외 패턴 집합입니다.</span><span class="sxs-lookup"><span data-stu-id="bfbdd-213">
+</td></tr><tr><td><span data-ttu-id="d53e1-213">
+<code>LIKE</code> 제외 패턴 집합입니다.</span><span class="sxs-lookup"><span data-stu-id="d53e1-213">
 <code>LIKE</code> with set exclusion pattern.</span></span><br/>
 
 <pre><code class="lang-sql">-- '[^abc]%' matches strings where the first character is
@@ -755,8 +755,8 @@ query {
 }
 </code></pre>
 
-</td></tr><tr><td><span data-ttu-id="bfbdd-214">
-<code>LIKE</code> 하나에서 필드에 있지만 다른 필드를 선택 합니다.</span><span class="sxs-lookup"><span data-stu-id="bfbdd-214">
+</td></tr><tr><td><span data-ttu-id="d53e1-214">
+<code>LIKE</code> 하나에서 필드에 있지만 다른 필드를 선택 합니다.</span><span class="sxs-lookup"><span data-stu-id="d53e1-214">
 <code>LIKE</code> on one field, but select a different field.</span></span><br/>
 
 <pre><code class="lang-sql">SELECT StudentID AS ID FROM Student
@@ -772,7 +772,7 @@ WHERE Student.Name LIKE '[^abc]%'
 }
 </code></pre>
 
-</td></tr><tr><td><span data-ttu-id="bfbdd-215"><code>LIKE</code>에서 하위 문자열 검색을 사용 하 여 합니다.</span><span class="sxs-lookup"><span data-stu-id="bfbdd-215"><code>LIKE</code>, with substring search.</span></span><br/>
+</td></tr><tr><td><span data-ttu-id="d53e1-215"><code>LIKE</code>에서 하위 문자열 검색을 사용 하 여 합니다.</span><span class="sxs-lookup"><span data-stu-id="d53e1-215"><code>LIKE</code>, with substring search.</span></span><br/>
 
 <pre><code class="lang-sql">SELECT * FROM Student
 WHERE Student.Name like '%A%'
@@ -789,7 +789,7 @@ query {
 </code></pre>
 
 </td></tr><tr><td>
-<span data-ttu-id="bfbdd-216">간단한 <code>JOIN</code> 두 테이블을 사용 하 여 합니다.</span><span class="sxs-lookup"><span data-stu-id="bfbdd-216">Simple <code>JOIN</code> with two tables.</span></span><br/>
+<span data-ttu-id="d53e1-216">간단한 <code>JOIN</code> 두 테이블을 사용 하 여 합니다.</span><span class="sxs-lookup"><span data-stu-id="d53e1-216">Simple <code>JOIN</code> with two tables.</span></span><br/>
 
 <pre><code class="lang-sql">SELECT * FROM Student
 JOIN CourseSelection
@@ -807,7 +807,7 @@ query {
 }
 </code></pre>
 
-</td></tr><tr><td><span data-ttu-id="bfbdd-217"><code>LEFT JOIN</code> 두 테이블입니다.</span><span class="sxs-lookup"><span data-stu-id="bfbdd-217"><code>LEFT JOIN</code> with two tables.</span></span><br/>
+</td></tr><tr><td><span data-ttu-id="d53e1-217"><code>LEFT JOIN</code> 두 테이블입니다.</span><span class="sxs-lookup"><span data-stu-id="d53e1-217"><code>LEFT JOIN</code> with two tables.</span></span><br/>
 
 <pre><code class="lang-sql">SELECT * FROM Student
 LEFT JOIN CourseSelection
@@ -826,7 +826,7 @@ query {
 }
 </code></pre>
 
-</td></tr><tr><td><span data-ttu-id="bfbdd-218"><code>JOIN</code> 사용 하 여 <code>COUNT</code></span><span class="sxs-lookup"><span data-stu-id="bfbdd-218"><code>JOIN</code> with <code>COUNT</code></span></span><br/>
+</td></tr><tr><td><span data-ttu-id="d53e1-218"><code>JOIN</code> 사용 하 여 <code>COUNT</code></span><span class="sxs-lookup"><span data-stu-id="d53e1-218"><code>JOIN</code> with <code>COUNT</code></span></span><br/>
 
 <pre><code class="lang-sql">SELECT COUNT( * ) FROM Student
 JOIN CourseSelection
@@ -860,7 +860,7 @@ query {
 }
 </code></pre>
 
-</td></tr><tr><td><span data-ttu-id="bfbdd-219">고유 카운트 합니다.</span><span class="sxs-lookup"><span data-stu-id="bfbdd-219">Distinct count.</span></span><br/>
+</td></tr><tr><td><span data-ttu-id="d53e1-219">고유 카운트 합니다.</span><span class="sxs-lookup"><span data-stu-id="d53e1-219">Distinct count.</span></span><br/>
 
 <pre><code class="lang-sql">SELECT DISTINCT COUNT(StudentID) FROM CourseSelection
 </code></pre>
@@ -909,7 +909,7 @@ query {
 }
 </code></pre>
 
-</td></tr><tr><td><span data-ttu-id="bfbdd-220"><code>OR</code> 순서</span><span class="sxs-lookup"><span data-stu-id="bfbdd-220"><code>OR</code> with ordering</span></span><br/>
+</td></tr><tr><td><span data-ttu-id="d53e1-220"><code>OR</code> 순서</span><span class="sxs-lookup"><span data-stu-id="d53e1-220"><code>OR</code> with ordering</span></span><br/>
 
 <pre><code class="lang-sql">SELECT * FROM Student
 WHERE Student.Age = 12 OR Student.Age = 13
@@ -927,7 +927,7 @@ query {
 }
 </code></pre>
 
-</td></tr><tr><td><span data-ttu-id="bfbdd-221"><code>TOP</code><code>OR</code>, 및 순서 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="bfbdd-221"><code>TOP</code>, <code>OR</code>, and ordering.</span></span><br/>
+</td></tr><tr><td><span data-ttu-id="d53e1-221"><code>TOP</code><code>OR</code>, 및 순서 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="d53e1-221"><code>TOP</code>, <code>OR</code>, and ordering.</span></span><br/>
 
 <pre><code class="lang-sql">SELECT TOP 2 student.Name FROM Student
 WHERE Student.Age = 11 OR Student.Age = 12
@@ -949,7 +949,7 @@ query {
 }
 </code></pre>
 
-</td></tr><tr><td><span data-ttu-id="bfbdd-222"><code>UNION</code> 두 쿼리 합니다.</span><span class="sxs-lookup"><span data-stu-id="bfbdd-222"><code>UNION</code> of two queries.</span></span><br/>
+</td></tr><tr><td><span data-ttu-id="d53e1-222"><code>UNION</code> 두 쿼리 합니다.</span><span class="sxs-lookup"><span data-stu-id="d53e1-222"><code>UNION</code> of two queries.</span></span><br/>
 
 <pre><code class="lang-sql">SELECT * FROM Student
 UNION
@@ -974,7 +974,7 @@ let query2 =
 query2.Union (query1)
 </code></pre>
 
-</td></tr><tr><td><span data-ttu-id="bfbdd-223">두 쿼리의 교차 합니다.</span><span class="sxs-lookup"><span data-stu-id="bfbdd-223">Intersection of two queries.</span></span><br/>
+</td></tr><tr><td><span data-ttu-id="d53e1-223">두 쿼리의 교차 합니다.</span><span class="sxs-lookup"><span data-stu-id="d53e1-223">Intersection of two queries.</span></span><br/>
 
 <pre><code class="lang-sql">SELECT * FROM Student
 INTERSECT
@@ -998,7 +998,7 @@ let query2 =
 query1.Intersect(query2)
 </code></pre>
 
-</td></tr><tr><td><span data-ttu-id="bfbdd-224"><code>CASE</code> 조건입니다.</span><span class="sxs-lookup"><span data-stu-id="bfbdd-224"><code>CASE</code> condition.</span></span><br/>
+</td></tr><tr><td><span data-ttu-id="d53e1-224"><code>CASE</code> 조건입니다.</span><span class="sxs-lookup"><span data-stu-id="d53e1-224"><code>CASE</code> condition.</span></span><br/>
 
 <pre><code class="lang-sql">SELECT student.StudentID,
 CASE Student.Age
@@ -1015,12 +1015,12 @@ query {
     for student in db.Student do
     select
         (if student.Age.HasValue && student.Age.Value = -1 then
-             (student.StudentID, System.Nullable<int>(100), student.Age)
+             (student.StudentID, System.Nullable&lt;int&gt;(100), student.Age)
          else (student.StudentID, student.Age, student.Age))
 }
 </code></pre>
 
-</td></tr><tr><td><span data-ttu-id="bfbdd-225">여러 사례입니다.</span><span class="sxs-lookup"><span data-stu-id="bfbdd-225">Multiple cases.</span></span><br/>
+</td></tr><tr><td><span data-ttu-id="d53e1-225">여러 사례입니다.</span><span class="sxs-lookup"><span data-stu-id="d53e1-225">Multiple cases.</span></span><br/>
 
 <pre><code class="lang-sql">SELECT Student.StudentID,
 CASE Student.Age
@@ -1039,14 +1039,14 @@ query {
     for student in db.Student do
     select
         (if student.Age.HasValue && student.Age.Value = -1 then
-             (student.StudentID, System.Nullable<int>(100), student.Age)
+             (student.StudentID, System.Nullable&lt;int&gt;(100), student.Age)
          elif student.Age.HasValue && student.Age.Value = 0 then
-             (student.StudentID, System.Nullable<int>(1000), student.Age)
+             (student.StudentID, System.Nullable&lt;int&gt;(1000), student.Age)
          else (student.StudentID, student.Age, student.Age))
 }
 </code></pre>
 
-</td></tr><tr><td><span data-ttu-id="bfbdd-226">여러 테이블.</span><span class="sxs-lookup"><span data-stu-id="bfbdd-226">Multiple tables.</span></span><br/>
+</td></tr><tr><td><span data-ttu-id="d53e1-226">여러 테이블.</span><span class="sxs-lookup"><span data-stu-id="d53e1-226">Multiple tables.</span></span><br/>
 
 <pre><code class="lang-sql">SELECT * FROM Student, Course
 </code></pre>
@@ -1061,7 +1061,7 @@ query {
 }
 </code></pre>
 
-</td></tr><tr><td><span data-ttu-id="bfbdd-227">여러 조인 합니다.</span><span class="sxs-lookup"><span data-stu-id="bfbdd-227">Multiple joins.</span></span><br/>
+</td></tr><tr><td><span data-ttu-id="d53e1-227">여러 조인 합니다.</span><span class="sxs-lookup"><span data-stu-id="d53e1-227">Multiple joins.</span></span><br/>
 
 <pre><code class="lang-sql">SELECT Student.Name, Course.CourseName
 FROM Student
@@ -1084,7 +1084,7 @@ query {
 }
 </code></pre>
 
-</td></tr><tr><td><span data-ttu-id="bfbdd-228">여러 왼쪽된 우선 외부 조인 합니다.</span><span class="sxs-lookup"><span data-stu-id="bfbdd-228">Multiple left outer joins.</span></span><br/>
+</td></tr><tr><td><span data-ttu-id="d53e1-228">여러 왼쪽된 우선 외부 조인 합니다.</span><span class="sxs-lookup"><span data-stu-id="d53e1-228">Multiple left outer joins.</span></span><br/>
 
 <pre><code class="lang-sql">SELECT Student.Name, Course.CourseName
 FROM Student
@@ -1111,7 +1111,7 @@ query {
 
 </td></tr></table>
 
-<span data-ttu-id="bfbdd-229">이러한 예제에 대 한 샘플 데이터베이스를 만드는 다음 코드를 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="bfbdd-229">The following code can be used to create the sample database for these examples.</span></span>
+<span data-ttu-id="d53e1-229">이러한 예제에 대 한 샘플 데이터베이스를 만드는 다음 코드를 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="d53e1-229">The following code can be used to create the sample database for these examples.</span></span>
 
 <pre><code class="lang-sql">SET ANSI_NULLS ON
 GO
@@ -1233,7 +1233,7 @@ INSERT INTO CourseSelection (ID, StudentID, CourseID)
 VALUES(15, 7, 3);
 </code></pre>
 
-<span data-ttu-id="bfbdd-230">다음 코드에는이 항목에 표시 되는 샘플 코드를 포함 합니다.</span><span class="sxs-lookup"><span data-stu-id="bfbdd-230">The following code contains  the sample code that appears in this topic.</span></span>
+<span data-ttu-id="d53e1-230">다음 코드에는이 항목에 표시 되는 샘플 코드를 포함 합니다.</span><span class="sxs-lookup"><span data-stu-id="d53e1-230">The following code contains  the sample code that appears in this topic.</span></span>
 
 ```fsharp
 #if INTERACTIVE
@@ -1869,7 +1869,7 @@ query {
 |> Seq.iter (fun (studentName, courseName) -> printfn "%s %s" studentName courseName)
 ```
 
-<span data-ttu-id="bfbdd-231">다음은 전체 출력이 코드를 실행 하 고 F# 대화형입니다.</span><span class="sxs-lookup"><span data-stu-id="bfbdd-231">And here is the full output when this code is run in F# Interactive.</span></span>
+<span data-ttu-id="d53e1-231">다음은 전체 출력이 코드를 실행 하 고 F# 대화형입니다.</span><span class="sxs-lookup"><span data-stu-id="d53e1-231">And here is the full output when this code is run in F# Interactive.</span></span>
 
 ```
 --> Referenced 'C:\Program Files (x86)\Reference Assemblies\Microsoft\FSharp\3.0\Runtime\v4.0\Type Providers\FSharp.Data.TypeProviders.dll'
@@ -2433,8 +2433,8 @@ module Queries2 = begin
 end
 ```
 
-## <a name="see-also"></a><span data-ttu-id="bfbdd-232">참고자료</span><span class="sxs-lookup"><span data-stu-id="bfbdd-232">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="d53e1-232">참고자료</span><span class="sxs-lookup"><span data-stu-id="d53e1-232">See also</span></span>
 
-- [<span data-ttu-id="bfbdd-233">F# 언어 참조</span><span class="sxs-lookup"><span data-stu-id="bfbdd-233">F# Language Reference</span></span>](index.md)
-- [<span data-ttu-id="bfbdd-234">Linq.QueryBuilder 클래스</span><span class="sxs-lookup"><span data-stu-id="bfbdd-234">Linq.QueryBuilder Class</span></span>](https://msdn.microsoft.com/visualfsharpdocs/conceptual/linq.querybuilder-class-%5bfsharp%5d)
-- [<span data-ttu-id="bfbdd-235">계산 식</span><span class="sxs-lookup"><span data-stu-id="bfbdd-235">Computation Expressions</span></span>](Computation-Expressions.md)
+- [<span data-ttu-id="d53e1-233">F# 언어 참조</span><span class="sxs-lookup"><span data-stu-id="d53e1-233">F# Language Reference</span></span>](index.md)
+- [<span data-ttu-id="d53e1-234">Linq.QueryBuilder 클래스</span><span class="sxs-lookup"><span data-stu-id="d53e1-234">Linq.QueryBuilder Class</span></span>](https://msdn.microsoft.com/visualfsharpdocs/conceptual/linq.querybuilder-class-%5bfsharp%5d)
+- [<span data-ttu-id="d53e1-235">계산 식</span><span class="sxs-lookup"><span data-stu-id="d53e1-235">Computation Expressions</span></span>](Computation-Expressions.md)
