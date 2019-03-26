@@ -9,13 +9,13 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 03/06/2019
 ms.locfileid: "57499123"
 ---
-# <a name="custom-tracking-records"></a><span data-ttu-id="a3516-102">사용자 지정 추적 레코드</span><span class="sxs-lookup"><span data-stu-id="a3516-102">Custom Tracking Records</span></span>
+# <a name="custom-tracking-records"></a><span data-ttu-id="08725-102">사용자 지정 추적 레코드</span><span class="sxs-lookup"><span data-stu-id="08725-102">Custom Tracking Records</span></span>
 
-<span data-ttu-id="a3516-103">이 항목에서는 사용자 지정 추적 레코드를 만들고 이 레코드와 함께 내보내질 데이터로 이 레코드를 채우는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="a3516-103">This topic demonstrates how to create custom tracking records and populate them with data to be emitted along with the records.</span></span>
+<span data-ttu-id="08725-103">이 항목에서는 사용자 지정 추적 레코드를 만들고 이 레코드와 함께 내보내질 데이터로 이 레코드를 채우는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="08725-103">This topic demonstrates how to create custom tracking records and populate them with data to be emitted along with the records.</span></span>
 
-## <a name="emitting-custom-tracking-records"></a><span data-ttu-id="a3516-104">사용자 지정 추적 레코드 내보내기</span><span class="sxs-lookup"><span data-stu-id="a3516-104">Emitting Custom Tracking Records</span></span>
+## <a name="emitting-custom-tracking-records"></a><span data-ttu-id="08725-104">사용자 지정 추적 레코드 내보내기</span><span class="sxs-lookup"><span data-stu-id="08725-104">Emitting Custom Tracking Records</span></span>
 
-<span data-ttu-id="a3516-105">다음 예제에 표시된 것처럼 코드 활동에서 사용자 지정 추적 레코드를 내보낼 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="a3516-105">Custom tracking records can be emitted from a code activity as shown in the following example.</span></span>
+<span data-ttu-id="08725-105">다음 예제에 표시된 것처럼 코드 활동에서 사용자 지정 추적 레코드를 내보낼 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="08725-105">Custom tracking records can be emitted from a code activity as shown in the following example.</span></span>
 
 ```csharp
 protected override void Execute(CodeActivityContext context)
@@ -27,10 +27,9 @@ protected override void Execute(CodeActivityContext context)
 }
 ```
 
-<span data-ttu-id="a3516-106">
-  <xref:System.Activities.Tracking.CustomTrackingRecord>에서 <xref:System.Activities.NativeActivityContext.Track%2A> 메서드를 호출하여 코드 활동에서 `ActivityContext\`를 내보냅니다.</span><span class="sxs-lookup"><span data-stu-id="a3516-106">A <xref:System.Activities.Tracking.CustomTrackingRecord> is emitted in a code activity by invoking the <xref:System.Activities.NativeActivityContext.Track%2A> method on the `ActivityContext`.</span></span>
+<span data-ttu-id="08725-106"><xref:System.Activities.Tracking.CustomTrackingRecord>에서 <xref:System.Activities.NativeActivityContext.Track%2A> 메서드를 호출하여 코드 활동에서 `ActivityContext`를 내보냅니다.</span><span class="sxs-lookup"><span data-stu-id="08725-106">A <xref:System.Activities.Tracking.CustomTrackingRecord> is emitted in a code activity by invoking the <xref:System.Activities.NativeActivityContext.Track%2A> method on the `ActivityContext`.</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="a3516-107">참고자료</span><span class="sxs-lookup"><span data-stu-id="a3516-107">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="08725-107">참고자료</span><span class="sxs-lookup"><span data-stu-id="08725-107">See also</span></span>
 
-- [<span data-ttu-id="a3516-108">Windows Server App Fabric 모니터링</span><span class="sxs-lookup"><span data-stu-id="a3516-108">Windows Server App Fabric Monitoring</span></span>](https://go.microsoft.com/fwlink/?LinkId=201273)
-- [<span data-ttu-id="a3516-109">App Fabric을 사용 하 여 응용 프로그램 모니터링</span><span class="sxs-lookup"><span data-stu-id="a3516-109">Monitoring Applications with App Fabric</span></span>](https://go.microsoft.com/fwlink/?LinkId=201275)
+- [<span data-ttu-id="08725-108">Windows Server App Fabric 모니터링</span><span class="sxs-lookup"><span data-stu-id="08725-108">Windows Server App Fabric Monitoring</span></span>](https://go.microsoft.com/fwlink/?LinkId=201273)
+- [<span data-ttu-id="08725-109">App Fabric을 사용 하 여 응용 프로그램 모니터링</span><span class="sxs-lookup"><span data-stu-id="08725-109">Monitoring Applications with App Fabric</span></span>](https://go.microsoft.com/fwlink/?LinkId=201275)
