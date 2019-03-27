@@ -6,12 +6,12 @@ helpviewer_keywords:
 - types [C#], nested types
 - C# language, type members
 ms.assetid: 4a30a4ab-d690-4936-9124-92ce9448665a
-ms.openlocfilehash: 246ddeeab9814f32b0a3bf0d3586007a434d3953
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9497eb265251f4f8affd5e2c6c7e6ed401263984
+ms.sourcegitcommit: e994e47d3582bf09ae487ecbd53c0dac30aebaf7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54592852"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58262478"
 ---
 # <a name="members-c-programming-guide"></a>멤버(C# 프로그래밍 가이드)
 클래스 및 구조체에는 해당 데이터와 동작을 나타내는 멤버가 있습니다. 클래스의 멤버에는 클래스에서 선언된 모든 멤버가 상속 계층 구조의 모든 클래스에서 선언된 모든 멤버(생성자 및 종료자 제외)와 함께 포함됩니다. 기본 클래스의 private 멤버는 상속되지만 파생 클래스에서 액세스할 수 없습니다.  
@@ -21,7 +21,7 @@ ms.locfileid: "54592852"
 |멤버|설명|  
 |------------|-----------------|  
 |[필드](../../../csharp/programming-guide/classes-and-structs/fields.md)|필드는 클래스 범위에서 선언된 변수입니다. 필드는 기본 제공 숫자 형식 또는 다른 클래스의 인스턴스일 수 있습니다. 예를 들어 달력 클래스에는 현재 날짜를 포함하는 필드가 있을 수 있습니다.|  
-|[상수](../../../csharp/programming-guide/classes-and-structs/constants.md)|상수는 해당 값이 컴파일 시간에 설정되며 변경할 수 없는 필드 또는 속성입니다.|  
+|[상수](../../../csharp/programming-guide/classes-and-structs/constants.md)|상수는 해당 값이 컴파일 시간에 설정되며 변경할 수 없는 필드입니다.|  
 |[속성](../../../csharp/programming-guide/classes-and-structs/properties.md)|속성은 해당 클래스의 필드처럼 액세스되는 클래스의 메서드입니다. 속성은 클래스 필드에 대한 보호를 제공하여 개체 모르게 필드가 변경되지 않도록 할 수 있습니다.|  
 |[메서드](../../../csharp/programming-guide/classes-and-structs/methods.md)|메서드는 클래스가 수행할 수 있는 작업을 정의합니다. 메서드는 입력 데이터를 제공하는 매개 변수를 사용할 수 있으며, 매개 변수를 통해 출력 데이터를 반환할 수 있습니다. 메서드가 매개 변수를 사용하지 않고 직접 값을 반환할 수도 있습니다.|  
 |[이벤트](../../../csharp/programming-guide/events/index.md)|이벤트는 단추 클릭, 성공적인 메서드 완료 등의 발생에 대한 알림을 다른 개체에 제공합니다. 이벤트는 대리자를 사용하여 정의 및 트리거됩니다.|  

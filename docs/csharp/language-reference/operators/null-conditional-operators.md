@@ -7,14 +7,14 @@ helpviewer_keywords:
 - ?. operator [C#]
 - ?[] operator [C#]
 ms.assetid: 9c7b2c8f-a785-44ca-836c-407bfb6d27f5
-ms.openlocfilehash: 38298cded904cbfedeaf3c6b66c74d610d714902
-ms.sourcegitcommit: 5c36aaa8299a2437c155700c810585aff19edbec
+ms.openlocfilehash: 9cbf8a0f860f0bc0328cd98e558b20b5e8e1bf8f
+ms.sourcegitcommit: 344d82456f27d09a210671214a14cfd7daf1f97c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54333241"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58348845"
 ---
-# <a name="-and--null-conditional-operators-c-and-visual-basic"></a>?. 및 ?[] Null 조건 연산자(C# 및 Visual Basic)
+# <a name="-and--null-conditional-operators-c-reference"></a>?. 및 ?[] Null 조건 연산자(C# 참조)
 
 멤버 액세스(`?.`) 또는 인덱스(`?[]`) 작업을 수행하기 전에 Null에서 왼쪽 피연산자의 값을 테스트합니다. 왼쪽 피연산자가 `null`로 계산하는 경우 `null`을 반환합니다.
 

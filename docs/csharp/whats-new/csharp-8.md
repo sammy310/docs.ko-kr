@@ -2,12 +2,12 @@
 title: C# 8.0의 새로운 기능 - C# 가이드
 description: C# 8.0의 새로운 기능을 살펴봅니다. 이 문서는 미리 보기 2가 반영된 최신 내용을 담고 있습니다.
 ms.date: 02/12/2019
-ms.openlocfilehash: 23197a051109d6c6c22c8855e3772cf4f824264c
-ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
+ms.openlocfilehash: d95ec3dc050f5633b4b069caa5bd2811f6b61300
+ms.sourcegitcommit: e994e47d3582bf09ae487ecbd53c0dac30aebaf7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "57843943"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58262581"
 ---
 # <a name="whats-new-in-c-80"></a>C# 8.0의 새로운 기능
 
@@ -180,6 +180,8 @@ static string Quadrant(Point p) => p switch
 ```
 
 switch의 무시 패턴은 `x`나 `y` 둘 중 하나만 0인 경우에 일치합니다. expression 식은 항상 값을 생성하거나 예외를 throw해야 합니다. 일치하는 케이스가 없으면 switch 식이 예외를 throw합니다. switch 식이 가능한 모든 케이스를 포함하지 않으면 컴파일러에서 경고가 생성됩니다.
+
+이 [패턴 일치에 대한 고급 자습서](../tutorials/pattern-matching.md)에서 패턴 일치 기법을 탐색할 수 있습니다.
 
 ## <a name="using-declarations"></a>using 선언
 

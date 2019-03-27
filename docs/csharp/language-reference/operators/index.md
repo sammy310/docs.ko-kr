@@ -1,29 +1,23 @@
 ---
-title: C# 연산자
+title: 'C# 연산자'
 ms.date: 04/04/2018
 f1_keywords:
-- cs.operators
+  - cs.operators
 helpviewer_keywords:
-- boolean operators [C#]
-- expressions [C#], operators
-- logical operators [C#]
-- operators [C#]
-- Visual C#, operators
-- indirection operators [C#]
-- assignment operators [C#]
-- shift operators [C#]
-- relational operators [C#]
-- bitwise operators [C#]
-- address operators [C#]
-- keywords [C#], operators
-- arithmetic operators [C#]
+  - 'boolean operators [C#]'
+  - 'expressions [C#], operators'
+  - 'logical operators [C#]'
+  - 'operators [C#]'
+  - 'Visual C#, operators'
+  - 'indirection operators [C#]'
+  - 'assignment operators [C#]'
+  - 'shift operators [C#]'
+  - 'relational operators [C#]'
+  - 'bitwise operators [C#]'
+  - 'address operators [C#]'
+  - 'keywords [C#], operators'
+  - 'arithmetic operators [C#]'
 ms.assetid: 0301e31f-22ad-49af-ac3c-d5eae7f0ac43
-ms.openlocfilehash: 6380fa4ec99f598be0d01db1061900520e94d5f1
-ms.sourcegitcommit: 5c36aaa8299a2437c155700c810585aff19edbec
-ms.translationtype: HT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54333410"
 ---
 # <a name="c-operators"></a>C# 연산자
 
@@ -47,9 +41,9 @@ C#에서는 많은 연산자를 제공하며, 이러한 연산자는 식에서 �
 
 [a&#91;x&#93;](index-operator.md) – 집계 개체 인덱싱
 
-[x++](increment-operator.md) – 후위 증가. x의 값을 반환하고 1보다 큰 x 값(일반적으로 정수 1을 더함)으로 스토리지 위치를 업데이트합니다.
+[x++](arithmetic-operators.md#increment-operator-) – 후위 증가. x의 값을 반환하고 1보다 큰 x 값(일반적으로 정수 1을 더함)으로 스토리지 위치를 업데이트합니다.
 
-[x--](decrement-operator.md) –  후위 감소. x의 값을 반환하고 1보다 작은 x 값(일반적으로 정수 1을 뺌)으로 스토리지 위치를 업데이트합니다.
+[x--](arithmetic-operators.md#decrement-operator---) –  후위 감소. x의 값을 반환하고 1보다 작은 x 값(일반적으로 정수 1을 뺌)으로 스토리지 위치를 업데이트합니다.
 
 [new](../keywords/new-operator.md) – 형식 인스턴스화.
 
@@ -79,9 +73,9 @@ C#에서는 많은 연산자를 제공하며, 이러한 연산자는 식에서 �
 
 [~x](bitwise-complement-operator.md) – 비트 보수
 
-[++x](increment-operator.md) – 전위 증가 1보다 큰 x 값(일반적으로 정수 1을 더함)으로 스토리지 위치를 업데이트한 후 x의 값을 반환합니다.
+[++x](arithmetic-operators.md#increment-operator-) – 전위 증가 1보다 큰 x 값(일반적으로 정수 1을 더함)으로 스토리지 위치를 업데이트한 후 x의 값을 반환합니다.
 
-[--x](decrement-operator.md) – 전위 감소 1보다 작은 x 값(일반적으로 정수 1을 뺌)으로 스토리지 위치를 업데이트한 후 x의 값을 반환합니다.
+[--x](arithmetic-operators.md#decrement-operator---) – 전위 감소 1보다 작은 x 값(일반적으로 정수 1을 뺌)으로 스토리지 위치를 업데이트한 후 x의 값을 반환합니다.
 
 [(T)x](invocation-operator.md) – 형식 캐스팅
 
@@ -95,19 +89,19 @@ C#에서는 많은 연산자를 제공하며, 이러한 연산자는 식에서 �
 
 이러한 연산자는 다음 섹션보다 우선 순위가 높고 이전 섹션보다 우선 순위가 낮습니다.
 
-[x * y](multiplication-operator.md) – 곱하기
+[x * y](arithmetic-operators.md#multiplication-operator-) – 곱하기
 
-[x / y](division-operator.md) – 나누기 피연산자가 정수인 경우 결과는 0으로 잘린 정수입니다(예: `-7 / 2 is -3`).
+[x / y](arithmetic-operators.md#division-operator-) – 나누기 피연산자가 정수인 경우 결과는 0으로 잘린 정수입니다(예: `-7 / 2 is -3`).
 
-[x % y](remainder-operator.md) - 나머지. 피연산자가 정수인 경우 x를 y로 나눈 나머지를 반환합니다.  `q = x / y`이고 `r = x % y`인 경우 `x = q * y + r`입니다.
+[x % y](arithmetic-operators.md#remainder-operator-) - 나머지. 피연산자가 정수인 경우 x를 y로 나눈 나머지를 반환합니다.  `q = x / y`이고 `r = x % y`인 경우 `x = q * y + r`입니다.
 
 ## <a name="additive-operators"></a>더하기 연산자
 
 이러한 연산자는 다음 섹션보다 우선 순위가 높고 이전 섹션보다 우선 순위가 낮습니다.
 
-[x + y](addition-operator.md) – 더하기
+[x + y](arithmetic-operators.md#addition-operator-) – 더하기
 
-[x – y](subtraction-operator.md) – 빼기
+[x – y](arithmetic-operators.md#subtraction-operator--) – 빼기
 
 ## <a name="shift-operators"></a>시프트 연산자
 
@@ -195,9 +189,9 @@ C#에서는 많은 연산자를 제공하며, 이러한 연산자는 식에서 �
 
 [x *= y](multiplication-assignment-operator.md) – 곱하기 대입. `y`의 값을 `x`의 값에 곱하고 결과를 `x`에 저장한 다음 새 값을 반환합니다.
 
-[x /= y](division-assignment-operator.md) – 나누기 대입. `x`의 값을 `y`의 값으로 나누고 결과를 `x`에 저장한 다음 새 값을 반환합니다.
+[x /= y](arithmetic-operators.md#compound-assignment) – 나누기 대입. `x`의 값을 `y`의 값으로 나누고 결과를 `x`에 저장한 다음 새 값을 반환합니다.
 
-[x %= y](remainder-assignment-operator.md) – 나머지 할당. `x`의 값을 `y`의 값으로 나누고 나머지를 `x`에 저장한 다음 새 값을 반환합니다.
+[x %= y](arithmetic-operators.md#compound-assignment) – 나머지 할당. `x`의 값을 `y`의 값으로 나누고 나머지를 `x`에 저장한 다음 새 값을 반환합니다.
 
 [x &= y](and-assignment-operator.md) – AND 대입. `y`의 값을 `x`의 값과 AND하고 결과를 `x`에 저장한 다음 새 값을 반환합니다.
 
@@ -210,20 +204,6 @@ C#에서는 많은 연산자를 제공하며, 이러한 연산자는 식에서 �
 [x >>= y](right-shift-assignment-operator.md) – 오른쪽 시프트 대입. `x`의 값을 오른쪽으로 `y` 위치만큼 시프트하고 결과를 `x`에 저장한 다음 새 값을 반환합니다.
 
 [=>](lambda-operator.md) – 람다 선언.
-
-## <a name="arithmetic-overflow"></a>산술 연산 오버플로
-
-산술 연산자([+](addition-operator.md), [-](subtraction-operator.md), [*](multiplication-operator.md), [/](division-operator.md))는 관련된 숫자 형식에 가능한 값의 범위를 벗어나는 결과를 생성할 수 있습니다. 자세한 내용은 특정 연산자에 대한 섹션을 참조해야 하지만 일반적으로 다음과 같습니다.
-
-- 정수 산술 연산 오버플로는 <xref:System.OverflowException>을 throw하거나 결과의 가장 중요한 비트를 삭제합니다. 정수를 0으로 나누면 항상 <xref:System.DivideByZeroException>이 throw됩니다.
-
-   정수 오버플로가 발생할 경우 수행되는 작업은 실행 컨텍스트에 따라 달라지며, 컨텍스트는 [checked 또는 unchecked](../keywords/checked-and-unchecked.md)일 수 있습니다. checked 컨텍스트에서는 <xref:System.OverflowException>이 throw됩니다. unchecked 컨텍스트에서는 결과의 가장 중요한 비트가 무시되고 실행이 계속됩니다. 따라서 C#에서는 오버플로 처리 또는 무시를 선택합니다. 기본적으로 산술 연산은 *unchecked* 컨텍스트에서 발생합니다.
-
-   산술 연산자 외에도 정수 계열 형식 간 캐스팅(예: [long](../keywords/long.md)을 [int](../keywords/int.md)로 캐스팅)은 오버플로를 발생시키고 checked 또는 unchecked 실행이 적용될 수 있습니다. 그러나 비트 연산자와 시프트 연산자는 오버플로를 발생시키지 않습니다.
-
-- 부동 소수점 산술 연산 오버플로 또는 0으로 나누기에서 예외를 throw하지 않습니다. 부동 소수점 형식은 IEEE 754를 기반으로 하여 무한대 및 NaN(숫자가 아님)를 나타내려면 프로비전이 필요하기 때문입니다.
-
-- [10진수](../keywords/decimal.md) 산술 연산 오버플로는 항상 <xref:System.OverflowException> 을 throw합니다. 10진수를 0으로 나누면 항상 <xref:System.DivideByZeroException>이 throw됩니다.
 
 ## <a name="see-also"></a>참고 항목
 

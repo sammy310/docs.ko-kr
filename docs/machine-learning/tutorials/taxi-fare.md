@@ -3,15 +3,15 @@ title: ML.NET와 함께 회귀 학습자를 사용하여 가격 예측
 description: ML.NET와 함께 회귀 학습자를 사용하여 가격을 예측합니다.
 author: aditidugar
 ms.author: johalex
-ms.date: 03/12/2019
+ms.date: 03/20/2019
 ms.topic: tutorial
 ms.custom: mvc, seodec18
-ms.openlocfilehash: 7830849efaff2aa36f9bd436851a22f948908bb6
-ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
+ms.openlocfilehash: 0a027b3b4930f7dda48d884faf0484cf33856c8d
+ms.sourcegitcommit: 77854e8704b9689b73103d691db34d71c2bf1dad
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "57846335"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58307982"
 ---
 # <a name="tutorial-predict-prices-using-a-regression-learner-with-mlnet"></a>자습서: ML.NET와 함께 회귀 학습자를 사용하여 가격 예측
 
@@ -152,7 +152,7 @@ public static ITransformer Train(MLContext mlContext, string dataPath)
 
 `Transforms`의 입력 및 출력으로 사용되는 `DataView`는 `LINQ`의 `IEnumerable`과 비슷한 기본적인 데이터 파이프라인 형식입니다.
 
-ML.NET에서 데이터는 SQL 뷰와 유사합니다. 지연 계산되고, 스키마화되며, 형식이 다릅니다. 개체가 파이프라인의 첫 번째 부분이며 데이터를 로드합니다. 이 자습서에서 개체는 댓글과 해당하는 악의적 또는 비악의적 감정을 포함하는 데이터 세트를 로드합니다. 이 데이터 세트는 모델을 만들고 학습시키는 데 사용됩니다.
+ML.NET에서 데이터는 SQL 뷰와 유사합니다. 지연 계산되고, 스키마화되며, 형식이 다릅니다. 개체가 파이프라인의 첫 번째 부분이며 데이터를 로드합니다. 이 자습서에서는 택시 주행 가격 정보가 포함된 데이터 세트를 로드합니다. 이 데이터 세트는 모델을 만들고 학습시키는 데 사용됩니다.
 
 다음 코드를 `Train` 메서드의 첫 번째 줄로 추가합니다.
 
@@ -176,7 +176,7 @@ ML.NET에서 데이터는 SQL 뷰와 유사합니다. 지연 계산되고, 스�
 
 파이프라인에 데이터를 추가하고 데이터를 올바른 입력 형식으로 변환한 후 학습 알고리즘(**학습자**)을 선택합니다. 학습자는 모델을 학습시킵니다. 이 문제에 대해 **회귀** 작업을 선택했으므로 ML.NET에서 제공하는 회귀 학습자 중 하나인 `FastTreeRegressionTrainer` 학습자를 사용합니다.
 
-`FastTreeRegressionTrainer` 학습 알고리즘은 그래디언트 부스팅을 활용합니다. 그래디언트 부스팅은 회귀 문제에 대한 기계 학습 기술입니다. 이 파이프라인은 각 회귀 트리를 단계적으로 빌드합니다. 미리 정의된 손실 함수를 사용하여 각 단계에서 오류를 측정한 다음, 수정합니다. 결과는 실제로 더 약한 예측 모델의 앙상블인 예측 모델입니다. 그래디언트 부스팅에 대한 자세한 내용은 [Boosted Decision Tree Regression](/azure/machine-learning/studio-module-reference/boosted-decision-tree-regression)(승격된 의사 결정 트리 회귀)을 참조하세요.
+`FastTreeRegressionTrainer` 학습 알고리즘은 그래디언트 부스팅을 활용합니다. 그라데이션 승격은 회귀 문제에 대한 기계 학습 기술입니다. 이 파이프라인은 각 회귀 트리를 단계적으로 빌드합니다. 미리 정의된 손실 함수를 사용하여 각 단계에서 오류를 측정한 다음, 수정합니다. 결과는 실제로 더 약한 예측 모델의 앙상블인 예측 모델입니다. 그라데이션 승격에 대한 자세한 내용은 [Boosted Decision Tree Regression](/azure/machine-learning/studio-module-reference/boosted-decision-tree-regression)(승격된 의사 결정 트리 회귀)을 참조하세요.
 
 `Train` 메서드에 다음 코드를 추가하여 이전 단계에서 추가한 데이터 처리 코드에 `FastTreeRegressionTrainer`를 추가합니다.
 
@@ -187,8 +187,6 @@ ML.NET에서 데이터는 SQL 뷰와 유사합니다. 지연 계산되고, 스�
 마지막 단계에서는 모델을 학습시킵니다. 로드되고 변환된 데이터 세트를 기준으로 <xref:Microsoft.ML.Data.TransformerChain> 모델을 학습시킵니다. 추정기가 정의되면, 이미 로드된 학습 데이터를 제공하는 동시에 <xref:Microsoft.ML.Data.EstimatorChain%601.Fit%2A>을 사용하여 모델을 학습시킵니다. 그러면 예측에 사용할 모델이 반환됩니다. `pipeline.Fit()`은 파이프라인을 학습시키고, 전달된 `DataView`에 따라 `Transformer`를 반환합니다. 이 문제가 발생할 때까지 실험이 실행되지 않습니다.
 
 [!code-csharp[TrainModel](../../../samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#11 "Train the model")]
-
-됐습니다! NYC에서 택시 요금을 예측할 수 있는 기계 학습 모델을 성공적으로 학습시켰습니다. 이제 모델이 얼마나 정확한지 살펴보고 이를 사용하여 택시 요금을 예측하는 방법에 대해 알아봅니다.
 
 ### <a name="save-the-model"></a>모델 저장
 

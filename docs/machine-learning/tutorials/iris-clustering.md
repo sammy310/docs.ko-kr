@@ -3,22 +3,22 @@ title: 클러스터링 학습자를 사용하여 아이리스 꽃 클러스터�
 description: 클러스터링 시나리오에서 ML.NET을 사용하는 방법 알아보기
 author: pkulikov
 ms.author: johalex
-ms.date: 02/19/2019
+ms.date: 03/18/2019
 ms.topic: tutorial
 ms.custom: mvc, seodec18
-ms.openlocfilehash: d8d324cdcad793ac8ade8124f56734bade695421
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 502a7aafd434650d09cefa2781d3749e5a435564
+ms.sourcegitcommit: 462dc41a13942e467984e48f4018d1f79ae67346
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57488164"
+ms.lasthandoff: 03/19/2019
+ms.locfileid: "58186132"
 ---
 # <a name="tutorial-cluster-iris-flowers-using-a-clustering-learner-with-mlnet"></a>자습서: ML.NET을 통해 클러스터링 학습자를 사용하여 아이리스 꽃 클러스터링
 
 > [!NOTE]
 > 이 항목은 현재 미리 보기로 제공되는 ML.NET을 참조하며, 자료는 변경될 수 있습니다. 자세한 내용은 [ML.NET 소개](https://www.microsoft.com/net/learn/apps/machine-learning-and-ai/ml-dotnet)를 참조하세요.
 
-이 자습서와 관련 샘플에서는 현재 **ML.NET 버전 0.10**을 사용하고 있습니다. 자세한 내용은 [dotnet/machinelearning GitHub 리포지토리](https://github.com/dotnet/machinelearning/tree/master/docs/release-notes)에서 릴리스 정보를 참조하세요.
+이 자습서와 관련 샘플에서는 현재 **ML.NET 버전 0.11**을 사용하고 있습니다. 자세한 내용은 [dotnet/machinelearning GitHub 리포지토리](https://github.com/dotnet/machinelearning/tree/master/docs/release-notes)에서 릴리스 정보를 참조하세요.
 
 이 자습서에서는 ML.NET을 사용하여 [아이리스 꽃 데이터 집합](https://en.wikipedia.org/wiki/Iris_flower_data_set)을 위해 [클러스터링 모델](../resources/tasks.md#clustering)을 빌드하는 방법을 보여줍니다.
 
@@ -129,11 +129,7 @@ ms.locfileid: "57488164"
 
 [!code-csharp[Create text loader](~/samples/machine-learning/tutorials/IrisFlowerClustering/Program.cs#SetupTextLoader)]
 
-[제네릭 `CreateTextLoader`](xref:Microsoft.ML.TextLoaderSaverCatalog.CreateTextLoader%60%601(Microsoft.ML.DataOperationsCatalog,System.Boolean,System.Char,System.Boolean,System.Boolean,System.Boolean)) 메서드를 사용하여 `IrisData` 클래스 정의에서 데이터 세트 스키마를 유추합니다.
-
-인스턴스화된 <xref:Microsoft.ML.Data.TextLoader> 인스턴스를 사용하여 학습 데이터 세트에 대한 데이터 원본을 나타내는 <xref:Microsoft.Data.DataView.IDataView> 인스턴스를 만듭니다.
-
-[!code-csharp[Create IDataView](~/samples/machine-learning/tutorials/IrisFlowerClustering/Program.cs#CreateDataView)]
+[LoadFromTextFile 메서드](xref:Microsoft.ML.TextLoaderSaverCatalog.LoadFromTextFile%60%601%28Microsoft.ML.DataOperationsCatalog,System.String,System.Char,System.Boolean,System.Boolean,System.Boolean,System.Boolean%29)에 대해 제네릭`MLContext.Data.LoadFromTextFile`래퍼를 사용하여 데이터를 로드합니다. `IrisData` 데이터 모델 형식의 데이터 세트 스키마를 유추하고 데이터 세트 헤더를 사용하는 <xref:Microsoft.Data.DataView.IDataView>를 반환하고 콤마로 구분합니다.
 
 ## <a name="create-a-learning-pipeline"></a>학습 파이프라인 만들기
 

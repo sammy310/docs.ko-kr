@@ -3,12 +3,12 @@ title: ASP.NET Core Web API에서 기계 학습 모델 제공
 description: ASP.NET Core Web API를 사용하여 인터넷을 통해 ML.NET 감정 분석 기계 학습 모델 제공
 ms.date: 03/05/2019
 ms.custom: mvc,how-to
-ms.openlocfilehash: 07b751caff8ef0ca9a23bed68ddf88feb7b5ae4f
-ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
+ms.openlocfilehash: 0cc13ec22b3a8805ec4aa17bf10560b2564ccd63
+ms.sourcegitcommit: 77854e8704b9689b73103d691db34d71c2bf1dad
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57856709"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58307917"
 ---
 # <a name="how-to-serve-machine-learning-model-through-aspnet-core-web-api"></a>방법: ASP.NET Core Web API를 통해 기계 학습 모델 제공
 
@@ -96,56 +96,9 @@ public class SentimentPrediction
 }
 ```
 
-## <a name="create-prediction-service"></a>예측 서비스 만들기
+## <a name="register-predictionengine-for-use-in-application"></a>애플리케이션에서 사용할 PredictionEngine 등록
 
-전체 애플리케이션에서 예측 논리를 구성하고 다시 사용하려면 예측 서비스를 만듭니다.
-
-1. 프로젝트에서 *Services* 디렉터리를 만들어 애플리케이션에서 사용할 서비스를 저장합니다.
-
-    솔루션 탐색기에서 프로젝트를 마우스 오른쪽 단추로 클릭하고 **추가 > 새 폴더**를 선택합니다. “Services”를 입력하고 **Enter** 키를 누릅니다.
-
-1. 솔루션 탐색기에서 *Services* 디렉터리를 마우스 오른쪽 단추로 클릭하고 **추가 > 새 항목**을 선택합니다.
-1. **새 항목 추가** 대화 상자에서 **클래스**를 선택하고 **이름** 필드를 *PredictionService.cs*로 변경합니다. 그런 다음, **추가** 단추를 선택합니다. *PredictionService.cs* 파일이 코드 편집기에서 열립니다. 다음 using 문을 *PredictionService.cs*의 맨 위에 추가합니다.
-
-```csharp
-using System;
-using System.IO;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.ML;
-using Microsoft.ML.Core.Data;
-using SentimentAnalysisWebAPI.DataModels;
-```
-
-기존 클래스 정의를 제거하고 다음 코드를 *PredictionService.cs* 파일에 추가합니다.
-
-```csharp
-public class PredictionService
-{
-    private readonly PredictionEngine<SentimentData, SentimentPrediction> _predictionEngine;
-    public PredictionService(PredictionEngine<SentimentData,SentimentPrediction> predictionEngine)
-    {
-        _predictionEngine = predictionEngine;
-    }
-
-    public string Predict(SentimentData input)
-    {
-        // Make a prediction
-        SentimentPrediction prediction = _predictionEngine.Predict(input);
-
-        //If prediction is true then it is toxic. If it is false, the it is not.
-        string isToxic = Convert.ToBoolean(prediction.Prediction) ? "Toxic" : "Not Toxic";
-
-        return isToxic;
-
-    }
-}
-```
-
-## <a name="register-predictions-service-for-use-in-application"></a>애플리케이션에서 사용할 예측 서비스 등록
-
-애플리케이션에서 예측 서비스를 사용하려면 필요할 때마다 서비스를 만들어야 합니다. 이 경우 가장 좋은 방법은 ASP.NET Core 종속성 주입을 고려하는 것입니다.
+단일 예측을 수행하기 위해 `PredictionEngine`을 사용할 수 있습니다. 애플리케이션에서 `PredictionEngine`을 사용하려면 필요할 때마다 만들어야 합니다. 이 경우 가장 좋은 방법은 ASP.NET Core 종속성 주입을 고려하는 것입니다.
 
 [종속성 주입](https://docs.microsoft.com/aspnet/core/fundamentals/dependency-injection?view=aspnetcore-2.1)에 대한 자세한 내용은 다음 링크를 참조하세요.
 
@@ -161,18 +114,17 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.ML;
 using Microsoft.ML.Core.Data;
 using SentimentAnalysisWebAPI.DataModels;
-using SentimentAnalysisWebAPI.Services;
 ```
 
-1. *ConfigureServices* 메서드에 다음 코드 줄을 추가합니다.
+2. *ConfigureServices* 메서드에 다음 코드 줄을 추가합니다.
 
 ```csharp
 public void ConfigureServices(IServiceCollection services)
 {
     services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
 
-    services.AddSingleton<MLContext>();
-    services.AddSingleton<PredictionEngine<SentimentData, SentimentPrediction>>((ctx) =>
+    services.AddScoped<MLContext>();
+    services.AddScoped<PredictionEngine<SentimentData, SentimentPrediction>>((ctx) =>
     {
         MLContext mlContext = ctx.GetRequiredService<MLContext>();
         string modelFilePathName = "MLModels/sentiment_model.zip";
@@ -187,9 +139,11 @@ public void ConfigureServices(IServiceCollection services)
         // Return prediction engine
         return model.CreatePredictionEngine<SentimentData, SentimentPrediction>(mlContext);
     });
-    services.AddSingleton<PredictionService>();
 }
 ```
+
+> [!WARNING]
+> `PredictionEngine`는 스레드로부터 안전하지 않습니다. 개체 생성 비용을 제한할 수 있는 방법은 서비스 수명 *Scoped*를 지정하는 것입니다. *Scoped* 개체는 요청 내에서는 동일하지만 요청 간에는 다릅니다. [수명 서비스](/aspnet/core/fundamentals/dependency-injection?view=aspnetcore-2.1#service-lifetimes)에 대해 자세히 알아보려면 다음 링크를 방문하세요.
 
 개략적으로 이 코드는 애플리케이션을 수동으로 초기화하지 않고도 애플리케이션에서 요청할 때 자동으로 개체 및 서비스를 초기화합니다.
 
@@ -202,9 +156,10 @@ public void ConfigureServices(IServiceCollection services)
 1. 프롬프트에서 **컨트롤러 이름** 필드를 *PredictController.cs*로 변경합니다. 그런 다음, [추가] 단추를 선택합니다. *PredictController.cs* 파일이 코드 편집기에서 열립니다. 다음 using 문을 *PredictController.cs*의 맨 위에 추가합니다.
 
 ```csharp
+using System;
 using Microsoft.AspNetCore.Mvc;
 using SentimentAnalysisWebAPI.DataModels;
-using SentimentAnalysisWebAPI.Services;
+using Microsoft.ML;
 ```
 
 기존 클래스 정의를 제거하고 다음 코드를 *PredictController.cs* 파일에 추가합니다.
@@ -212,12 +167,12 @@ using SentimentAnalysisWebAPI.Services;
 ```csharp
 public class PredictController : ControllerBase
 {
+    
+    private readonly PredictionEngine<SentimentData,SentimentPrediction> _predictionEngine;
 
-    private readonly PredictionService _predictionService;
-
-    public PredictController(PredictionService predictionService)
+    public PredictController(PredictionEngine<SentimentData, SentimentPrediction> predictionEngine)
     {
-        _predictionService = predictionService; //Define prediction service
+        _predictionEngine = predictionEngine; //Define prediction engine
     }
 
     [HttpPost]
@@ -227,13 +182,20 @@ public class PredictController : ControllerBase
         {
             return BadRequest();
         }
-        return Ok(_predictionService.Predict(input));
-    }
 
+        // Make a prediction
+        SentimentPrediction prediction = _predictionEngine.Predict(input);
+
+        //If prediction is true then it is toxic. If it is false, the it is not.
+        string isToxic = Convert.ToBoolean(prediction.Prediction) ? "Toxic" : "Not Toxic";
+
+        return Ok(isToxic);
+    }
+    
 }
 ```
 
-이렇게 하면 예측 서비스가 종속성 주입을 통해 가져오는 컨트롤러의 생성자에 전달되어 할당됩니다. 그런 다음, 이 컨트롤러의 POST 메서드에서 예측 서비스는 예측을 생성하고 성공한 경우 결과를 사용자에게 다시 반환하는 데 사용됩니다.
+이렇게 하면 `PredictionEngine`이 종속성 주입을 통해 가져오는 컨트롤러의 생성자에 전달되어 할당됩니다. 그런 다음, 이 컨트롤러의 POST 메서드에서 `PredictionEngine`은 예측을 생성하고 성공한 경우 결과를 사용자에게 다시 반환하는 데 사용됩니다.
 
 ## <a name="test-web-api-locally"></a>로컬로 Web API 테스트
 

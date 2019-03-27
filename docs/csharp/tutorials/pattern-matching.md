@@ -3,12 +3,12 @@ title: 패턴 일치 기능을 사용하여 데이터 형식 확장
 description: 이 고급 자습서에서는 패턴 일치 기술을 사용하여 개별적으로 생성된 데이터 및 알고리즘을 사용하여 기능을 만드는 방법을 보여 줍니다.
 ms.date: 03/13/2019
 ms.custom: mvc
-ms.openlocfilehash: 0d7c853709d0986710bf4d1a72daeb1f7cda3109
-ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
+ms.openlocfilehash: c064af5fdf85587d0c4fa1471894122d6fe0d2f7
+ms.sourcegitcommit: e994e47d3582bf09ae487ecbd53c0dac30aebaf7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/16/2019
-ms.locfileid: "58125813"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58262516"
 ---
 # <a name="tutorial-using-pattern-matching-features-to-extend-data-types"></a>자습서: 패턴 일치 기능을 사용하여 데이터 형식 확장
 
@@ -17,9 +17,9 @@ C# 7에서는 기본 패턴 일치 기능을 도입했습니다. 이 기능은 �
 이 자습서에서는 다음과 같은 작업을 수행하는 방법을 알아봅니다.
 
 > [!div class="checklist"]
-> * 패턴 일치를 사용해야 하는 상황을 인식하는 방법.
-> * 패턴 일치 식을 사용하여 형식 및 속성 값에 따라 동작을 구현하는 방법.
-> * 패턴 일치를 다른 기술과 결합하여 전체 알고리즘을 만드는 방법.
+> * 패턴 일치를 사용해야 하는 상황을 인식합니다.
+> * 패턴 일치 식을 사용하여 형식 및 속성 값에 따라 동작을 구현합니다.
+> * 패턴 일치를 다른 기술과 결합하여 완전한 알고리즘을 만듭니다.
 
 ## <a name="prerequisites"></a>전제 조건
 
@@ -45,12 +45,12 @@ C# 8.0 미리 보기 컴파일러를 포함하여 .NET Core를 실행하도록 �
 
 ## <a name="pattern-matching-designs"></a>패턴 일치 디자인
 
-이 자습서에서 사용되는 해결하는 데 시나리오는 패턴 일치를 사용하는 것이 적합한 종류의 문제를 중점적으로 살펴봅니다. 
+이 자습서에서 사용된 시나리오는 패턴 일치가 해결하기에 적합한 종류의 문제를 중점적으로 살펴봅니다.
 
 - 사용해야 하는 개체는 목표와 일치하는 개체 계층 구조에 없습니다. 관련 없는 시스템에 포함된 클래스를 사용 중일 수 있습니다.
 - 추가할 기능은 이 클래스에 대한 핵심 추상화에 포함되지 않습니다. 차량에 따른 통행료는 차량 형식에 따라 변경되지만 통행료는 차량의 핵심 기능이 아닙니다.
 
-데이터의 모양과 해당 데이터에 대한 작업을 분리해서 설명하면 C#의 패턴 일치 기능을 더 쉽게 사용할 수 있습니다. 
+데이터의 모양과 해당 데이터에 대한 작업을 분리해서 설명하면 C#의 패턴 일치 기능을 더 쉽게 사용할 수 있습니다.
 
 ## <a name="implement-the-basic-toll-calculations"></a>기본 통행료 계산 구현
 
@@ -61,7 +61,7 @@ C# 8.0 미리 보기 컴파일러를 포함하여 .NET Core를 실행하도록 �
 - `Bus`는 5.00 USD입니다.
 - `DeliveryTruck`은 10.00 USD입니다.
 
-새 `TollCalculator` 클래스를 만들고 차량 형식에 대한 패턴 일치를 구현하여 통행료 액수를 얻습니다.
+새 `TollCalculator` 클래스를 만들고 차량 형식에 대한 패턴 일치를 구현하여 통행료 액수를 얻습니다. 다음 코드에서는 `TollCalculator`의 초기 구현을 보여줍니다.
 
 ```csharp
 using System;
@@ -87,7 +87,7 @@ namespace toll_calculator
 }
 ```
 
-앞의 코드는 **형식 패턴**을 테스트하는 **switch 식**([`switch`](../language-reference/keywords/switch.md) 문과 같지 않음)을 사용합니다. **switch 식**은 앞의 코드에 있는 `vehicle` 변수로 시작하고 그 뒤에 `switch` 키워드가 옵니다. 다음은 중괄호로 묶인 모든 **스위치 암(arm)** 을 제공합니다. `switch` 식은 `switch` 문을 둘러싸는 구문을 다르게 구체화합니다. `case` 키워드가 생략되고 각 암(arm)의 결과는 식입니다. 마지막 두 개의 암(arm)은 새 언어 기능을 보여 줍니다. `{ }` 사례는 이전 암(arm)과 일치하지 않는 null이 아닌 개체와 일치합니다. 이 암(arm)은 이 메서드에 전달된 잘못된 형식을 catch합니다. 마지막으로 `null`이 이 메서드에 전달되면 `null` 패턴이 catch됩니다. 다른 형식 패턴은 올바른 형식의 null이 아닌 개체와만 일치하므로 `null` 패턴이 마지막일 수 있습니다.
+앞의 코드는 **형식 패턴**을 테스트하는 **switch 식**([`switch`](../language-reference/keywords/switch.md) 문과 같지 않음)을 사용합니다. **switch 식**은 앞의 코드에 있는 `vehicle` 변수로 시작하고 그 뒤에 `switch` 키워드가 옵니다. 다음은 중괄호로 묶인 모든 **스위치 암(arm)** 을 제공합니다. `switch` 식은 `switch` 문을 둘러싸는 구문을 다르게 구체화합니다. `case` 키워드가 생략되고 각 암(arm)의 결과는 식입니다. 마지막 두 개의 암(arm)은 새 언어 기능을 보여 줍니다. `{ }` 사례는 이전 암(arm)과 일치하지 않는 null이 아닌 개체와 일치합니다. 이 암(arm)은 이 메서드에 전달된 잘못된 형식을 catch합니다.  `{ }` 사례는 각 차량 형식에 대한 사례를 따라야 합니다. 순서가 반대로 된 경우 `{ }` 사례가 우선적으로 적용됩니다. 마지막으로 `null`이 이 메서드에 전달될 때 `null` 패턴이 검색됩니다. 다른 형식 패턴은 올바른 형식의 null이 아닌 개체와만 일치하므로 `null` 패턴이 마지막일 수 있습니다.
 
 `Program.cs`에서 다음 코드를 사용하여 이 코드를 테스트할 수 있습니다.
 
@@ -121,7 +121,7 @@ namespace toll_calculator
             }
             catch (ArgumentException e)
             {
-                Console.WriteLine("Caught an argument exception when using the wrong type", DayOfWeek.Friday);
+                Console.WriteLine("Caught an argument exception when using the wrong type");
             }
             try
             {
@@ -150,7 +150,7 @@ namespace toll_calculator
 - 최대 탑승자 수의 50% 미만이 탑승한 버스는 2.00 USD의 추가 요금이 부과됩니다.
 - 탑승자 수가 90%를 초과하는 버스는 1.00 USD의 할인을 받습니다.
 
-이 규칙은 동일한 switch 식에서 **속성 패턴**을 사용하여 구현할 수 있습니다. 속성 패턴은 형식이 결정된 후 개체의 속성을 검사합니다.  `Car` 사례 1개는 다른 사례 4개로 확장됩니다.
+이 규칙은 동일한 switch 식에서 **속성 패턴**을 사용하여 구현할 수 있습니다. 속성 패턴은 형식이 결정된 후 개체의 속성을 검사합니다. `Car` 사례 1개는 다른 사례 4개로 확장됩니다.
 
 ```csharp
 vehicle switch
@@ -158,13 +158,13 @@ vehicle switch
     Car { Passengers: 0}        => 2.00m + 0.50m,
     Car { Passengers: 1 }       => 2.0m,
     Car { Passengers: 2}        => 2.0m - 0.50m,
-    Car c when c.Passengers > 2 => 2.00m - 1.0m,
+    Car c                       => 2.00m - 1.0m,
 
     // ...
 };
 ```
 
-처음 3개 사례는 형식을 `Car`로 테스트한 다음, `Passengers` 속성 값을 확인합니다. 둘 다 일치하는 경우 해당 식이 계산되고 반환됩니다. 마지막 절은 스위치 암(arm)의 `when` 절을 표시합니다. `when` 절을 사용하여 속성에서 같음 이외의 조건을 테스트합니다. 앞의 예제에서 `when` 절은 테스트를 통해 승용차에 3명 이상의 승객이 있는지 확인합니다. 엄밀하게 말하면 이 예제에는 해당 절이 필요하지 않습니다.
+처음 3개 사례는 형식을 `Car`로 테스트한 다음, `Passengers` 속성 값을 확인합니다. 둘 다 일치하는 경우 해당 식이 계산되고 반환됩니다.
 
 또한 비슷한 방식으로 택시에 대한 사례를 확장합니다.
 
@@ -192,14 +192,14 @@ vehicle switch
     // ...
 
     Bus b when ((double)b.Riders / (double)b.Capacity) < 0.50 => 5.00m + 2.00m,
-    Bus b when ((double)b.Riders / (double)b.Capacity) > 0.90 => 5.00m - 1.00m, 
+    Bus b when ((double)b.Riders / (double)b.Capacity) > 0.90 => 5.00m - 1.00m,
     Bus b => 5.00m,
-    
+
     // ...
 };
 ```
 
-통행료 징수 기관은 배달 트럭의 승객 수에 관심이 없습니다. 대신, 트럭의 무게 클래스에 따라 추가 요금을 청구합니다. 5000lbs를 초과하는 트럭에는 5.00 USD가 추가로 부과됩니다. 3000lbs 미만의 경량 트럭에는 2.00 USD 할인이 제공됩니다.  해당 규칙은 다음 코드로 구현됩니다.
+통행료 징수 기관은 배달 트럭의 승객 수에 관심이 없습니다. 대신, 트럭의 무게 클래스에 따라 추가 요금을 청구합니다. 5000lbs를 초과하는 트럭에는 5.00 USD가 추가로 부과됩니다. 3000lbs 미만의 경량 트럭에는 $2.00 할인이 제공됩니다. 해당 규칙은 다음 코드로 구현됩니다.
 
 ```csharp
 vehicle switch
@@ -212,7 +212,7 @@ vehicle switch
 };
 ```
 
-완료되면 다음과 같은 메서드가 생성됩니다.
+앞의 코드는 스위치 암(arm)의 `when` 절을 표시합니다. `when` 절을 사용하여 속성에서 같음 이외의 조건을 테스트합니다. 완료되면 다음과 같은 메서드가 생성됩니다.
 
 ```csharp
 vehicle switch
@@ -220,17 +220,17 @@ vehicle switch
     Car { Passengers: 0}        => 2.00m + 0.50m,
     Car { Passengers: 1}        => 2.0m,
     Car { Passengers: 2}        => 2.0m - 0.50m,
-    Car c when c.Passengers > 2 => 2.00m - 1.0m,
-   
+    Car c                       => 2.00m - 1.0m,
+
     Taxi { Fares: 0}  => 3.50m + 1.00m,
     Taxi { Fares: 1 } => 3.50m,
     Taxi { Fares: 2}  => 3.50m - 0.50m,
     Taxi t            => 3.50m - 1.00m,
-    
+
     Bus b when ((double)b.Riders / (double)b.Capacity) < 0.50 => 5.00m + 2.00m,
-    Bus b when ((double)b.Riders / (double)b.Capacity) > 0.90 => 5.00m - 1.00m, 
+    Bus b when ((double)b.Riders / (double)b.Capacity) > 0.90 => 5.00m - 1.00m,
     Bus b => 5.00m,
-    
+
     DeliveryTruck t when (t.GrossWeightClass > 5000) => 10.00m + 5.00m,
     DeliveryTruck t when (t.GrossWeightClass < 3000) => 10.00m - 2.00m,
     DeliveryTruck t => 10.00m,
@@ -252,7 +252,7 @@ public decimal CalculateToll(object vehicle) =>
             2 => 2.0m - 0.5m,
             _ => 2.00m - 1.0m
         },
-    
+
         Taxi t => t.Fares switch
         {
             0 => 3.50m + 1.00m,
@@ -260,11 +260,11 @@ public decimal CalculateToll(object vehicle) =>
             2 => 3.50m - 0.50m,
             _ => 3.50m - 1.00m
         },
-    
+
         Bus b when ((double)b.Riders / (double)b.Capacity) < 0.50 => 5.00m + 2.00m,
-        Bus b when ((double)b.Riders / (double)b.Capacity) > 0.90 => 5.00m - 1.00m, 
+        Bus b when ((double)b.Riders / (double)b.Capacity) > 0.90 => 5.00m - 1.00m,
         Bus b => 5.00m,
-    
+
         DeliveryTruck t when (t.GrossWeightClass > 5000) => 10.00m + 5.00m,
         DeliveryTruck t when (t.GrossWeightClass < 3000) => 10.00m - 2.00m,
         DeliveryTruck t => 10.00m,
@@ -274,13 +274,13 @@ public decimal CalculateToll(object vehicle) =>
     };
 ```
 
-앞의 샘플에서 재귀 식을 사용하면 `Car` 및 `Taxi` 암(arm)에 속성 값을 테스트하는 자식 암(arm)이 포함되는 코드를 반복하지 않습니다. 해당 암(arm)은 불연속 값이 아닌 속성 범위를 테스트하므로 이 기술은 `Bus` 및 `DeliveryTruck` 암(arm)에 사용되지 않습니다.
+앞의 샘플에서 재귀 식을 사용하면 속성 값을 테스트하는 자식 암(arm)이 포함된 `Car` 및 `Taxi` 암(arm)을 반복하지 않습니다. 해당 암(arm)은 불연속 값이 아닌 속성 범위를 테스트하므로 이 기술은 `Bus` 및 `DeliveryTruck` 암(arm)에 사용되지 않습니다.
 
 ## <a name="add-peak-pricing"></a>최대 가격 추가
 
 마지막 기능을 위해 통행료 징수 기관은 시간에 따른 최대 가격을 추가하려고 합니다. 아침 및 저녁 교통 체증 시간 중에 통행료는 2배로 부과됩니다. 해당 규칙은 아침에는 도시로 들어오고 저녁 교통 체증 시간에는 나가는 한 방향의 교통량에만 영향을 줍니다. 평일 중 다른 시간에 통행료는 50% 증가합니다. 늦은 밤과 이른 아침에는 통행료가 25% 감소합니다. 주말에는 시간과 관계없이 정상 요금입니다.
 
-이 기능에 대해 패턴 일치를 사용하지만 패턴 일치를 다른 기술과 통합하게 됩니다. 방향, 요일 및 시간의 모든 조합을 고려하는 단일 패턴 일치 식을 작성할 수 있습니다. 복잡한 식이 생성됩니다. 읽기 힘들고 이해하기 어려운 식입니다. 따라서 식의 정확성을 보장하기 어렵습니다. 대신, 해당 메서드를 결합하여 모든 상태를 간결하게 설명하는 값 튜플을 빌드합니다. 그런 다음, 패턴 일치를 사용하여 통행료의 승수를 계산합니다. 튜플에는 다음 세 가지 불연속 조건이 포함됩니다.
+이 기능에 대해 패턴 일치를 사용하지만 패턴 일치를 다른 기술과 통합하게 됩니다. 방향, 요일 및 시간의 모든 조합을 설명하는 단일 패턴 일치 식을 빌드할 수 있습니다. 복잡한 식이 생성됩니다. 읽기 힘들고 이해하기 어려운 식입니다. 따라서 식의 정확성을 보장하기 어렵습니다. 대신, 해당 메서드를 결합하여 모든 상태를 간결하게 설명하는 값 튜플을 빌드합니다. 그런 다음, 패턴 일치를 사용하여 통행료의 승수를 계산합니다. 튜플에는 다음 세 가지 불연속 조건이 포함됩니다.
 
 - 요일은 주중 또는 주말입니다.
 - 통행료가 징수되는 시간대.
@@ -309,7 +309,7 @@ public decimal CalculateToll(object vehicle) =>
 
 세 가지 변수의 조합은 16가지입니다. 일부 조건을 결합하여 마지막 switch 식을 단순화합니다.
 
-통행료를 징수하는 시스템은 통행료 징수 시간에 대한 <xref:System.DateTime> 구조체를 사용합니다. 앞의 표에서 변수를 만드는 멤버 메서드를 작성합니다.  다음 함수는 패턴 일치 switch 식을 사용하여 <xref:System.DateTime>이 주말 또는 주중을 나타내는지 여부를 표시합니다.
+통행료를 징수하는 시스템은 통행료가 징수된 시간에 <xref:System.DateTime> 구조체를 사용합니다. 앞의 표에서 변수를 만드는 멤버 메서드를 작성합니다. 다음 함수는 패턴 일치 switch 식을 사용하여 <xref:System.DateTime>이 주말 또는 주중을 나타내는지 여부를 표시합니다.
 
 ```csharp
 private static bool IsWeekDay(DateTime timeOfToll) =>
@@ -339,13 +339,13 @@ private static bool IsWeekDay(DateTime timeOfToll) =>
 
 [!code-csharp[FullTuplePattern](~/samples/csharp/tutorials/patterns/finished/toll-calculator/TollCalculator.cs#TuplePatternOne)]
 
-위 코드는 작동하지만 단순화할 수 있습니다. 주말에 대한 8개 조합에는 모두 동일한 통행료가 포함됩니다. 8개를 모두 다음 줄로 바꿀 수 있습니다.
+위 코드는 작동하지만 단순화할 수 있습니다. 주말에 대한 8개 조합에는 모두 동일한 통행료가 포함됩니다. 8개 모두를 다음 줄로 바꿀 수 있습니다.
 
 ```csharp
 (false, _, _) => 1.0m,
 ```
 
-인바운드 및 아웃바운드 교통량은 둘 다 주중 주간 및 야간 시간 동안 동일한 승수를 포함합니다. 해당하는 4개 스위치 암(arm)을 다음 두 줄로 바꿀 수 있습니다.
+인바운드 및 아웃바운드 교통량은 둘 다 주중 주간 및 야간 시간 동안 동일한 승수를 포함합니다. 해당하는 4개의 스위치 암(arm)은 다음 두 줄로 바꿀 수 있습니다.
 
 ```csharp
 (true, TimeBand.Overnight, _) => 0.75m,
@@ -372,9 +372,9 @@ public decimal PeakTimePremium(DateTime timeOfToll, bool inbound) =>
 
 [!code-csharp[SimplifiedTuplePattern](../../../samples/csharp/tutorials/patterns/finished/toll-calculator/TollCalculator.cs#FinalTuplePattern)]
 
-이 예제에서는 패턴 일치의 장점 중 하나를 중점적으로 살펴봅니다. 패턴 분기는 순서대로 평가됩니다. 이전 분기가 이후 사례 중 하나를 처리하도록 분기를 재배열하는 경우 컴파일러에서 경고가 표시됩니다. 이 언어 규칙을 사용하면 코드가 변경되지 않는다는 확신과 함께 앞의 단순화 작업을 더 쉽게 수행할 수 있습니다.
+이 예제는 패턴 일치의 장점 중 하나를 강조 표시합니다. 패턴 분기는 순서대로 평가됩니다. 이전 분기가 이후 사례 중 하나를 처리하도록 분기를 재배열하는 경우 컴파일러는 접근할 수 없는 코드에 대해 경고합니다. 이 언어 규칙을 사용하면 코드가 변경되지 않는다는 확신과 함께 앞의 단순화 작업을 더 쉽게 수행할 수 있습니다.
 
-패턴 일치는 개체 지향 기술을 사용한 경우 만드는 것과 다른 솔루션을 구현하는 자연스러운 구문을 제공합니다. 클라우드에서는 데이터와 기능이 별도로 구분되지 않습니다. 데이터의 모양과 데이터에 대한 작업을 반드시 함께 설명할 필요는 없습니다. 이 자습서에서는 원래 함수와 완전히 다른 방식으로 기존 데이터를 사용했습니다. 해당 형식을 확장할 수 없더라도 패턴 일치를 사용하여 해당 형식을 통해 기능을 작성할 수 있었습니다.
+패턴 일치는 일부 유형의 코드를 더 쉽게 읽을 수 있도록 해주며 클래스에 코드를 추가할 수 없을 때 개체 지향 기술에 대한 대안을 제공합니다. 클라우드에서는 데이터와 기능이 별도로 구분되지 않습니다. 데이터의 모양과 데이터에 대한 작업을 반드시 함께 설명할 필요는 없습니다. 이 자습서에서는 원래 함수와 완전히 다른 방식으로 기존 데이터를 사용했습니다. 해당 형식을 확장할 수 없더라도 패턴 일치를 통해 해당 형식을 재정의하는 기능을 작성할 수 있었습니다.
 
 ## <a name="next-steps"></a>다음 단계
 
