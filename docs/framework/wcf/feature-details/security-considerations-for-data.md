@@ -378,7 +378,7 @@ WCF는 유연 하 게 사용자 시스템입니다. 이 항목의 내용 중 대
 
 - 인코더를 만들 때는 항상 `MaxSessionSize` 및 `MaxBufferSize`등의 관련 할당량을 구성합니다.
 
-- XPath 메시지 필터를 사용할 때는 <xref:System.ServiceModel.Dispatcher.XPathMessageFilter.NodeQuota%2A> 를 설정하여 필터에서 방문하는 XML 노드의 수를 제한합니다. 여러 노드를 방문하지 않으면 계산 시간이 오래 걸리는 XPath 식은 사용하지 마십시오.
+- XPath 메시지 필터를 사용할 때는 <xref:System.ServiceModel.Dispatcher.XPathMessageFilter.NodeQuota%2A> 를 설정하여 필터에서 방문하는 XML 노드의 수를 제한합니다. 여러 노드를 방문하지 않으면 컴퓨팅 시간이 오래 걸리는 XPath 식은 사용하지 마십시오.
 
 - 일반적으로 할당량을 수락하는 구성 요소를 사용하는 경우에는 보안상의 영향을 이해하고 안전한 값으로 설정해야 합니다.
 

@@ -15,7 +15,7 @@ ms.locfileid: "54612751"
 > [!NOTE]
 >  이 샘플의 설치 절차 및 빌드 지침은 이 항목의 끝부분에 나와 있습니다.  
   
- 이 샘플은 기반 합니다 [Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md)합니다. 서비스 계약에서는 메시지 형식을 인수로 받는 작업을 하나 정의하고 메시지를 반환합니다. 작업에서는 필요한 데이터를 모두 수집하여 메시지 본문으로부터 합계를 계산한 다음 계산된 합계를 반환 메시지의 본문으로 보냅니다.  
+ 이 샘플은 기반 합니다 [Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md)합니다. 서비스 계약에서는 메시지 형식을 인수로 받는 작업을 하나 정의하고 메시지를 반환합니다. 작업에서는 필요한 데이터를 모두 수집하여 메시지 본문으로부터 합계를 계산한 다음 컴퓨팅된 합계를 반환 메시지의 본문으로 보냅니다.  
   
 ```csharp
 [OperationContract(Action = CalculatorService.RequestAction, ReplyAction = CalculatorService.ReplyAction)]  
