@@ -1,0 +1,18 @@
+items:
+- name: 제네릭
+  href: index.md
+  items:
+  - name: .NET의 제네릭 컬렉션
+    href: collections.md
+  - name: 배열과 목록을 조작하기 위한 제네릭 대리자
+    href: delegates-for-manipulating-arrays-and-lists.md
+  - name: 제네릭 인터페이스
+    href: interfaces.md
+  - name: 공 분산 및 반공 분산
+    href: covariance-and-contravariance.md
+ms.openlocfilehash: 84f8686eb8c70ecc4b36a2335f673319bcc2dd4a
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58470145"

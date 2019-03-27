@@ -1,0 +1,16 @@
+items:
+- name: 특성
+  href: index.md
+  items:
+  - name: 특성 적용
+    href: applying-attributes.md
+  - name: 사용자 지정 특성 작성
+    href: writing-custom-attributes.md
+  - name: 특성에 저장된 정보 검색
+    href: retrieving-information-stored-in-attributes.md
+ms.openlocfilehash: d86731782c3b35fe265ef21ae3d32ced4bd8b6d6
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58470649"

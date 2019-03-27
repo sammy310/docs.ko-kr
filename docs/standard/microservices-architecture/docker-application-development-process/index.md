@@ -26,13 +26,13 @@ ms.date: 09/27/2018
 ### <a name="additional-resources"></a>추가 자료
 
 - **Visual Studio** - 공식 사이트입니다. \
-  [*https://visualstudio.microsoft.com/vs/*](https://visualstudio.microsoft.com/vs/)
+  [https://visualstudio.microsoft.com/vs/](https://visualstudio.microsoft.com/vs/)
 
 - **Visual Studio Code**. 공식 사이트입니다. \
-  [*https://code.visualstudio.com/download*](https://code.visualstudio.com/download)
+  [https://code.visualstudio.com/download](https://code.visualstudio.com/download)
 
 - **Mac 및 Windows용 Docker CE(Community Edition)** \
-  [*https://www.docker.com/community-editions*](https://www.docker.com/community-edition)
+  [https://www.docker.com/community-editions](https://www.docker.com/community-edition)
 
 ## <a name="net-languages-and-frameworks-for-docker-containers"></a>Docker 컨테이너를 위한 .NET 언어 및 프레임워크
 
