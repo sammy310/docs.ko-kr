@@ -29,8 +29,7 @@ HRESULT GetStackPointer(
 ## <a name="remarks"></a>설명  
  이 스택 포인터의 의미는 다음 표와 같이 이벤트 유형에 따라 달라집니다.  
   
-|이벤트 유형|
-  `pStackPointer` 값의 의미|  
+|이벤트 유형|`pStackPointer` 값의 의미|  
 |----------------|--------------------------------------|  
 |[MANAGED_EXCEPTION_FIRST_CHANCE](../../../../docs/framework/unmanaged-api/debugging/cordebugrecordformat-enumeration.md)|예외를 throw한 프레임에 대한 스택 포인터입니다.|  
 |[MANAGED_EXCEPTION_USER_FIRST_CHANCE](../../../../docs/framework/unmanaged-api/debugging/cordebugrecordformat-enumeration.md)|예외가 throw된 지점과 가장 가까운 사용자 코드 프레임에 대한 스택 포인터입니다.|  

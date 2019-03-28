@@ -28,13 +28,11 @@ ms.locfileid: "57845988"
 
 ## <a name="calendars-in-net"></a>.NET의 달력
 
-.NET의 모든 달력에서 파생 된 <xref:System.Globalization.Calendar?displayProperty=nameWithType> 기본 달력 구현을 제공 하는 클래스입니다. 
-  <xref:System.Globalization.Calendar> 클래스로부터 상속되는 클래스 중 하나는 모든 음력 달력의 기본 클래스인 <xref:System.Globalization.EastAsianLunisolarCalendar> 클래스입니다. .NET에는 다음과 같은 달력 구현이 포함 됩니다.
+.NET의 모든 달력에서 파생 된 <xref:System.Globalization.Calendar?displayProperty=nameWithType> 기본 달력 구현을 제공 하는 클래스입니다. <xref:System.Globalization.Calendar> 클래스로부터 상속되는 클래스 중 하나는 모든 음력 달력의 기본 클래스인 <xref:System.Globalization.EastAsianLunisolarCalendar> 클래스입니다. .NET에는 다음과 같은 달력 구현이 포함 됩니다.
 
 * <xref:System.Globalization.ChineseLunisolarCalendar>는 중국식 음력 달력을 나타냅니다.
 
-* <xref:System.Globalization.GregorianCalendar>는 그레고리오력을 나타냅니다. 이 달력은 다시 <xref:System.Globalization.GregorianCalendarTypes?displayProperty=nameWithType> 열거형으로 정의되는 하위 유형으로 세분화됩니다(예: 아랍어 및 중동 프랑스어). 
-  <xref:System.Globalization.GregorianCalendar.CalendarType%2A?displayProperty=nameWithType> 속성은 그레고리오력 달력의 하위 유형을 지정합니다.
+* <xref:System.Globalization.GregorianCalendar>는 그레고리오력을 나타냅니다. 이 달력은 다시 <xref:System.Globalization.GregorianCalendarTypes?displayProperty=nameWithType> 열거형으로 정의되는 하위 유형으로 세분화됩니다(예: 아랍어 및 중동 프랑스어). <xref:System.Globalization.GregorianCalendar.CalendarType%2A?displayProperty=nameWithType> 속성은 그레고리오력 달력의 하위 유형을 지정합니다.
 
 * <xref:System.Globalization.HebrewCalendar>는 히브리어 달력을 나타냅니다.
 
@@ -70,8 +68,7 @@ ms.locfileid: "57845988"
 
 ## <a name="calendars-and-cultures"></a>달력 및 문화권
 
-각 문화권에는 <xref:System.Globalization.CultureInfo.Calendar%2A?displayProperty=nameWithType> 속성으로 정의되는 기본 달력이 포함됩니다. 
-  <xref:System.Globalization.CultureInfo.OptionalCalendars%2A?displayProperty=nameWithType> 속성은 특정 문화권의 기본 달력을 포함하여 해당 문화권에서 지원되는 모든 달력을 지정하는 <xref:System.Globalization.Calendar> 개체의 배열을 반환합니다.
+각 문화권에는 <xref:System.Globalization.CultureInfo.Calendar%2A?displayProperty=nameWithType> 속성으로 정의되는 기본 달력이 포함됩니다. <xref:System.Globalization.CultureInfo.OptionalCalendars%2A?displayProperty=nameWithType> 속성은 특정 문화권의 기본 달력을 포함하여 해당 문화권에서 지원되는 모든 달력을 지정하는 <xref:System.Globalization.Calendar> 개체의 배열을 반환합니다.
 
 다음 예제에서는 <xref:System.Globalization.CultureInfo.Calendar%2A?displayProperty=nameWithType> 및 <xref:System.Globalization.CultureInfo.OptionalCalendars%2A?displayProperty=nameWithType> 속성에 대해 설명합니다. 이 예제에서는 태국어(태국) 및 일본어(일본) 문화권에 대해 `CultureInfo` 개체를 만들고 기본 달력과 선택적인 달력을 표시합니다. 두 경우 모두 해당 문화권의 기본 달력이 <xref:System.Globalization.CultureInfo.OptionalCalendars%2A?displayProperty=nameWithType> 컬렉션에도 포함됩니다.
 
@@ -129,19 +126,16 @@ ms.locfileid: "57845988"
 
 ### <a name="calendars-and-date-ranges"></a>달력 및 날짜 범위
 
-달력에서 지원하는 가장 빠른 날짜는 그 달력의 <xref:System.Globalization.Calendar.MinSupportedDateTime%2A?displayProperty=nameWithType> 속성에 의해 표시됩니다. 
-  <xref:System.Globalization.GregorianCalendar> 클래스의 경우 그 날짜는 서기 0001년 1월 1일입니다. 대부분의 다른 달력에서는.NET에서 이후의 날짜를 지원 합니다. 달력에서 지원하는 가장 빠른 날짜에 앞서는 날짜 및 시간 값을 사용하려고 하면 <xref:System.ArgumentOutOfRangeException> 예외가 발생합니다.
+달력에서 지원하는 가장 빠른 날짜는 그 달력의 <xref:System.Globalization.Calendar.MinSupportedDateTime%2A?displayProperty=nameWithType> 속성에 의해 표시됩니다. <xref:System.Globalization.GregorianCalendar> 클래스의 경우 그 날짜는 서기 0001년 1월 1일입니다. 대부분의 다른 달력에서는.NET에서 이후의 날짜를 지원 합니다. 달력에서 지원하는 가장 빠른 날짜에 앞서는 날짜 및 시간 값을 사용하려고 하면 <xref:System.ArgumentOutOfRangeException> 예외가 발생합니다.
 
-그러나 한 가지 중요한 예외가 있습니다. 
-  <xref:System.DateTime> 개체와 <xref:System.DateTimeOffset> 개체의 (초기화되지 않은) 기본값은 <xref:System.Globalization.GregorianCalendar.MinSupportedDateTime%2A?displayProperty=nameWithType> 값과 같습니다. 이 서 기 0001 년 1 월 1 일 지원 하지 않는 달력이 날짜의 서식을 지정 하려는 경우 형식 지정자를 제공 하지 않으면를 형식 지정 메서드가 "s" (정렬 가능한 날짜/시간 패턴) 형식 지정자를 사용 하 여 "G" (일반 날짜/시간 패턴) 형식 지정자를 대신 합니다. 따라서 형식 지정 작업에서 <xref:System.ArgumentOutOfRangeException> 예외가 발생하지 않습니다. 대신, 지원되지 않는 날짜를 반환합니다. 이 점은 다음 예제에 설명되어 있습니다. 즉, 현재 문화권이 일본식 달력을 사용하는 일본어(일본)와 우말쿠라 달력을 사용하는 아랍어(이집트)로 설정되어 있을 때 <xref:System.DateTime.MinValue?displayProperty=nameWithType>의 값을 표시합니다. 현재 문화권을 영어(미국)로도 설정하고 이런 각각의 <xref:System.DateTime.ToString%28System.IFormatProvider%29?displayProperty=nameWithType> 개체와 함께 <xref:System.Globalization.CultureInfo> 메서드를 호출합니다. 각각의 경우, 날짜는 정렬 가능한 날짜/시간 패턴을 사용하여 표시됩니다.
+그러나 한 가지 중요한 예외가 있습니다. <xref:System.DateTime> 개체와 <xref:System.DateTimeOffset> 개체의 (초기화되지 않은) 기본값은 <xref:System.Globalization.GregorianCalendar.MinSupportedDateTime%2A?displayProperty=nameWithType> 값과 같습니다. 이 서 기 0001 년 1 월 1 일 지원 하지 않는 달력이 날짜의 서식을 지정 하려는 경우 형식 지정자를 제공 하지 않으면를 형식 지정 메서드가 "s" (정렬 가능한 날짜/시간 패턴) 형식 지정자를 사용 하 여 "G" (일반 날짜/시간 패턴) 형식 지정자를 대신 합니다. 따라서 형식 지정 작업에서 <xref:System.ArgumentOutOfRangeException> 예외가 발생하지 않습니다. 대신, 지원되지 않는 날짜를 반환합니다. 이 점은 다음 예제에 설명되어 있습니다. 즉, 현재 문화권이 일본식 달력을 사용하는 일본어(일본)와 우말쿠라 달력을 사용하는 아랍어(이집트)로 설정되어 있을 때 <xref:System.DateTime.MinValue?displayProperty=nameWithType>의 값을 표시합니다. 현재 문화권을 영어(미국)로도 설정하고 이런 각각의 <xref:System.DateTime.ToString%28System.IFormatProvider%29?displayProperty=nameWithType> 개체와 함께 <xref:System.Globalization.CultureInfo> 메서드를 호출합니다. 각각의 경우, 날짜는 정렬 가능한 날짜/시간 패턴을 사용하여 표시됩니다.
 
 [!code-csharp[Conceptual.Calendars#11](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.calendars/cs/minsupporteddatetime1.cs#11)]
 [!code-vb[Conceptual.Calendars#11](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.calendars/vb/minsupporteddatetime1.vb#11)]
 
 ## <a name="working-with-eras"></a>연대 작업
 
-달력에서 날짜는 일반적으로 연대로 구분됩니다. 그러나 합니다 <xref:System.Globalization.Calendar> .net에서 클래스, 일정 및 대부분의 정의 된 모든 연대가 지원 하지는 <xref:System.Globalization.Calendar> 클래스에서는 단일 연대만 지원 합니다. 
-  <xref:System.Globalization.JapaneseCalendar> 및 <xref:System.Globalization.JapaneseLunisolarCalendar> 클래스에서만 여러 연대가 지원됩니다.
+달력에서 날짜는 일반적으로 연대로 구분됩니다. 그러나 합니다 <xref:System.Globalization.Calendar> .net에서 클래스, 일정 및 대부분의 정의 된 모든 연대가 지원 하지는 <xref:System.Globalization.Calendar> 클래스에서는 단일 연대만 지원 합니다. <xref:System.Globalization.JapaneseCalendar> 및 <xref:System.Globalization.JapaneseLunisolarCalendar> 클래스에서만 여러 연대가 지원됩니다.
 
 > [!IMPORTANT]
 >  <xref:System.Globalization.JapaneseCalendar> 및 <xref:System.Globalization.JapaneseLunisolarCalendar>의 새로운 세대가 2019년 5월 1일에 시작합니다. 이번 변경 내용은 달력을 사용하는 모든 애플리케이션에 영향을 줍니다. 자세한 내용 및 현재 애플리케이션이 영향을 받는지 확인하는 방법은 [.NET에서 일본식 달력의 새로운 세대 처리](https://devblogs.microsoft.com/dotnet/handling-a-new-era-in-the-japanese-calendar-in-net/)를 참조하세요. 참조 [일본어 연대 변경에 대 한 응용 프로그램 준비](/windows/uwp/design/globalizing/japanese-era-change) 연대 변경 될 준비가 되었는지 확인 하려면 Windows에서 응용 프로그램 테스트에 대 한 정보에 대 한 합니다.
@@ -262,8 +256,7 @@ Parameter name: year
 
 ### <a name="representing-dates-in-calendars-with-multiple-eras"></a>여러 연대를 사용 하 여 달력에 날짜 표시
 
-
-  <xref:System.Globalization.Calendar> 개체가 연대를 지원하고 <xref:System.Globalization.CultureInfo> 개체의 현재 달력인 경우 전체 날짜 및 시간, 긴 날짜 및 간단한 날짜 패턴에 대한 날짜 및 시간 값의 문자열 표현에 연대가 포함됩니다. 다음 예제에서는 현재 문화권이 일본(일본어)이고 현재 달력이 일본식 달력일 때 이러한 날짜를 표시합니다.
+<xref:System.Globalization.Calendar> 개체가 연대를 지원하고 <xref:System.Globalization.CultureInfo> 개체의 현재 달력인 경우 전체 날짜 및 시간, 긴 날짜 및 간단한 날짜 패턴에 대한 날짜 및 시간 값의 문자열 표현에 연대가 포함됩니다. 다음 예제에서는 현재 문화권이 일본(일본어)이고 현재 달력이 일본식 달력일 때 이러한 날짜를 표시합니다.
 
 [!code-csharp[Conceptual.Calendars#8](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.calendars/cs/formatstrings1.cs#8)]
 [!code-vb[Conceptual.Calendars#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.calendars/vb/formatstrings1.vb#8)]
@@ -276,8 +269,7 @@ Parameter name: year
 [!code-csharp[Conceptual.Calendars#9](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.calendars/cs/formatstrings2.cs#9)]
 [!code-vb[Conceptual.Calendars#9](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.calendars/vb/formatstrings2.vb#9)]
 
-날짜의 문자열 표현이 현재 달력이 아닌 달력으로 표현될 경우 <xref:System.Globalization.Calendar> 클래스에는 <xref:System.Globalization.Calendar.GetEra%2A?displayProperty=nameWithType>, <xref:System.Globalization.Calendar.GetYear%2A?displayProperty=nameWithType> 및 <xref:System.Globalization.Calendar.GetMonth%2A?displayProperty=nameWithType> 메서드와 함께 사용할 수 있는 <xref:System.Globalization.Calendar.GetDayOfMonth%2A?displayProperty=nameWithType> 메서드가 포함되어 날짜가 속하는 연대뿐만 아니라 날짜 자체를 모호하게 표시합니다. 다음 예제에서는 <xref:System.Globalization.JapaneseLunisolarCalendar> 클래스를 사용하여 설명을 제공합니다. 하지만 결과 문자열에 연대에 대해 정수 대신 의미 있는 이름이나 약어를 포함하기 위해서는 <xref:System.Globalization.DateTimeFormatInfo> 개체를 인스턴스화하고 <xref:System.Globalization.JapaneseCalendar>를 현재 달력으로 지정해야 합니다. 
-  <xref:System.Globalization.JapaneseLunisolarCalendar> 달력은 특정 문화권의 현재 달력이 될 수 없지만 이 경우 두 달력이 동일한 연대를 공유합니다.
+날짜의 문자열 표현이 현재 달력이 아닌 달력으로 표현될 경우 <xref:System.Globalization.Calendar> 클래스에는 <xref:System.Globalization.Calendar.GetEra%2A?displayProperty=nameWithType>, <xref:System.Globalization.Calendar.GetYear%2A?displayProperty=nameWithType> 및 <xref:System.Globalization.Calendar.GetMonth%2A?displayProperty=nameWithType> 메서드와 함께 사용할 수 있는 <xref:System.Globalization.Calendar.GetDayOfMonth%2A?displayProperty=nameWithType> 메서드가 포함되어 날짜가 속하는 연대뿐만 아니라 날짜 자체를 모호하게 표시합니다. 다음 예제에서는 <xref:System.Globalization.JapaneseLunisolarCalendar> 클래스를 사용하여 설명을 제공합니다. 하지만 결과 문자열에 연대에 대해 정수 대신 의미 있는 이름이나 약어를 포함하기 위해서는 <xref:System.Globalization.DateTimeFormatInfo> 개체를 인스턴스화하고 <xref:System.Globalization.JapaneseCalendar>를 현재 달력으로 지정해야 합니다. <xref:System.Globalization.JapaneseLunisolarCalendar> 달력은 특정 문화권의 현재 달력이 될 수 없지만 이 경우 두 달력이 동일한 연대를 공유합니다.
 
 [!code-csharp[Conceptual.Calendars#10](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.calendars/cs/formatstrings3.cs#10)]
 [!code-vb[Conceptual.Calendars#10](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.calendars/vb/formatstrings3.vb#10)]

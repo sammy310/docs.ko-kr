@@ -96,11 +96,9 @@ Windows Communication Foundation (WCF) 서비스 구성 파일 또는 코드를 
 
 ## <a name="channelfactory-caching"></a>ChannelFactory 캐싱
 
-WCF 클라이언트 응용 프로그램에서는 <xref:System.ServiceModel.ChannelFactory%601> 클래스를 사용하여 WCF 서비스와의 통신 채널을 만듭니다. 
-  <xref:System.ServiceModel.ChannelFactory%601> 인스턴스를 만들 때는 다음 작업이 필요하기 때문에 약간의 오버헤드가 발생합니다.
+WCF 클라이언트 응용 프로그램에서는 <xref:System.ServiceModel.ChannelFactory%601> 클래스를 사용하여 WCF 서비스와의 통신 채널을 만듭니다. <xref:System.ServiceModel.ChannelFactory%601> 인스턴스를 만들 때는 다음 작업이 필요하기 때문에 약간의 오버헤드가 발생합니다.
 
-1. 
-  <xref:System.ServiceModel.Description.ContractDescription> 트리 생성
+1. <xref:System.ServiceModel.Description.ContractDescription> 트리 생성
 
 2. 필요한 모든 CLR 형식 반영
 
@@ -128,8 +126,7 @@ IDN(Internationalized Domain Name)을 사용하는 WCF 서비스에 대한 지�
 
 ## <a name="httpclient"></a>HttpClient
 
-
-  <xref:System.Net.Http.HttpClient>라는 새 클래스가 추가되어 HTTP 요청 작업을 더 쉽게 수행할 수 있습니다. 자세한 내용은 참조 하세요. [소셜 및 HTTP 서비스를 사용 하 여 연결 된 앱을 만드는](https://go.microsoft.com/fwlink/?LinkId=231886) 하며 [HTTP 클라이언트 샘플](https://code.msdn.microsoft.com/windowsapps/HttpClient-sample-55700664)합니다.
+<xref:System.Net.Http.HttpClient>라는 새 클래스가 추가되어 HTTP 요청 작업을 더 쉽게 수행할 수 있습니다. 자세한 내용은 참조 하세요. [소셜 및 HTTP 서비스를 사용 하 여 연결 된 앱을 만드는](https://go.microsoft.com/fwlink/?LinkId=231886) 하며 [HTTP 클라이언트 샘플](https://code.msdn.microsoft.com/windowsapps/HttpClient-sample-55700664)합니다.
 
 ## <a name="configuration-intellisense"></a>구성 Intellisense
 

@@ -42,8 +42,7 @@ Windows Presentation Foundation에서도 동일한 동작이 발생합니다.
 
 - 데이터 소스가 <xref:System.Linq.IQueryable%601>인 경우 다음과 같은 두 가지 시나리오가 있습니다.
 
-    - 
-  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]가 <xref:System.Data.Linq.Table%601>에서 기본 <xref:System.Linq.IQueryable%601>을 찾는 경우 소스를 편집할 수 있으며 첫 번째 글머리 기호의 경우와 상황이 같아집니다.
+    - [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]가 <xref:System.Data.Linq.Table%601>에서 기본 <xref:System.Linq.IQueryable%601>을 찾는 경우 소스를 편집할 수 있으며 첫 번째 글머리 기호의 경우와 상황이 같아집니다.
 
     - 하는 경우 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 내부를 찾을 수 없습니다 <xref:System.Data.Linq.Table%601>, 소스 버전에 대 한 허용 하지 않습니다 (예를 들어 `groupby`). [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 제네릭에 맞게 쿼리를 찾습니다 `SortableBindingList`에 간단한 <xref:System.ComponentModel.BindingList%601> 지정된 된 속성의 T 엔터티에 대 한 정렬 기능을 구현 하는 합니다.
 
@@ -67,14 +66,11 @@ Windows Presentation Foundation에서도 동일한 동작이 발생합니다.
 
 ## <a name="binding-to-entitysets"></a>EntitySet에 바인딩
 
-
-  `EntitySet`은 이미 `EntitySet`를 구현하는 컬렉션이므로 <xref:System.ComponentModel.IBindingList>에 바인딩하는 것은 특수한 경우입니다. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]에서는 정렬 및 취소(<xref:System.ComponentModel.ICancelAddNew>) 지원을 추가합니다. 
-  `EntitySet` 클래스는 내부 목록을 사용하여 엔터티를 저장합니다. 이 목록은 제네릭 배열을 기반으로 하는 하위 수준 컬렉션인 제네릭 `ItemList` 클래스입니다.
+`EntitySet`은 이미 `EntitySet`를 구현하는 컬렉션이므로 <xref:System.ComponentModel.IBindingList>에 바인딩하는 것은 특수한 경우입니다. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]에서는 정렬 및 취소(<xref:System.ComponentModel.ICancelAddNew>) 지원을 추가합니다. `EntitySet` 클래스는 내부 목록을 사용하여 엔터티를 저장합니다. 이 목록은 제네릭 배열을 기반으로 하는 하위 수준 컬렉션인 제네릭 `ItemList` 클래스입니다.
 
 ### <a name="adding-a-sorting-feature"></a>정렬 기능 추가
 
-배열에서는 T의 `Array.Sort()`와 함께 사용할 수 있는 정렬 메서드(`Comparer`)를 제공합니다. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]에서는 이 항목의 앞부분에서 설명한 제네릭 `SortableBindingList.PropertyComparer` 클래스를 사용하여 이 `Comparer`에서 정렬할 속성과 방향을 가져옵니다. 
-  `ApplySort` 메서드를 제네릭 `ItemList`에 추가하면 이 기능이 호출됩니다.
+배열에서는 T의 `Array.Sort()`와 함께 사용할 수 있는 정렬 메서드(`Comparer`)를 제공합니다. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]에서는 이 항목의 앞부분에서 설명한 제네릭 `SortableBindingList.PropertyComparer` 클래스를 사용하여 이 `Comparer`에서 정렬할 속성과 방향을 가져옵니다. `ApplySort` 메서드를 제네릭 `ItemList`에 추가하면 이 기능이 호출됩니다.
 
 이제 다음과 같이 `EntitySet`측에서 정렬 지원을 선언해야 합니다.
 
@@ -116,8 +112,7 @@ System.Windows.Forms.BindingSource를 사용 하 고 BindingSource.DataMember �
 
 - 속성을 사용해야 합니다. 필드만 사용하는 것으로는 충분하지 않습니다. Windows Forms에는 이러한 사용법이 필요합니다.
 
-- 기본적으로 `image`하십시오 `varbinary`, 및 `timestamp` 데이터베이스 형식은 바이트 배열에 매핑됩니다. 
-  `ToString()`은 이 시나리오에서 지원되지 않으므로 이러한 개체를 표시할 수 없습니다.
+- 기본적으로 `image`하십시오 `varbinary`, 및 `timestamp` 데이터베이스 형식은 바이트 배열에 매핑됩니다. `ToString()`은 이 시나리오에서 지원되지 않으므로 이러한 개체를 표시할 수 없습니다.
 
 - 기본 키에 매핑된 클래스 멤버에는 setter가 있지만 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]에서는 개체 ID 변경이 지원되지 않습니다. 따라서 매핑에서 사용된 기본/고유 키는 데이터베이스에서 업데이트할 수 없습니다. 표를 변경하면 <xref:System.Data.Linq.DataContext.SubmitChanges%2A>를 호출할 때 예외가 발생합니다.
 

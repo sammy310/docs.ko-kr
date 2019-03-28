@@ -15,12 +15,10 @@ ms.lasthandoff: 03/09/2019
 ms.locfileid: "57724471"
 ---
 # <a name="bindingsource-component-overview"></a>BindingSource 구성 요소 개요
-
-  <xref:System.Windows.Forms.BindingSource> 구성 요소는 내부 데이터 소스에 컨트롤을 바인딩하는 프로세스를 간소화하도록 설계되었습니다. <xref:System.Windows.Forms.BindingSource> 구성 요소는 바인딩하는 다른 컨트롤에 대한 통로 및 데이터 소스 역할을 합니다. 내부 데이터 목록에 명령을 전달하는 동안 폼의 데이터 연결에 대한 추상화를 제공합니다. 또한 구성 요소 자체가 데이터 소스 역할을 하도록 데이터를 직접 추가할 수 있습니다.  
+<xref:System.Windows.Forms.BindingSource> 구성 요소는 내부 데이터 소스에 컨트롤을 바인딩하는 프로세스를 간소화하도록 설계되었습니다. <xref:System.Windows.Forms.BindingSource> 구성 요소는 바인딩하는 다른 컨트롤에 대한 통로 및 데이터 소스 역할을 합니다. 내부 데이터 목록에 명령을 전달하는 동안 폼의 데이터 연결에 대한 추상화를 제공합니다. 또한 구성 요소 자체가 데이터 소스 역할을 하도록 데이터를 직접 추가할 수 있습니다.  
   
 ## <a name="bindingsource-component-as-an-intermediary"></a>중개자로 작동하는 BindingSource 구성 요소  
- 
-  <xref:System.Windows.Forms.BindingSource> 구성 요소는 폼의 일부 또는 모든 컨트롤에 대한 데이터 소스 역할을 합니다. Visual Studio에서의 <xref:System.Windows.Forms.BindingSource> 이용 하 여 컨트롤을 바인딩할 수 있습니다 합니다 `DataBindings` 속성에서 액세스할 수 있는 **속성** 창. 또한 참조 [방법: Windows Forms 컨트롤에 BindingSource 구성 요소 디자이너를 사용 하 여 바인딩](bind-wf-controls-with-the-bindingsource.md)합니다.  
+ <xref:System.Windows.Forms.BindingSource> 구성 요소는 폼의 일부 또는 모든 컨트롤에 대한 데이터 소스 역할을 합니다. Visual Studio에서의 <xref:System.Windows.Forms.BindingSource> 이용 하 여 컨트롤을 바인딩할 수 있습니다 합니다 `DataBindings` 속성에서 액세스할 수 있는 **속성** 창. 또한 참조 [방법: Windows Forms 컨트롤에 BindingSource 구성 요소 디자이너를 사용 하 여 바인딩](bind-wf-controls-with-the-bindingsource.md)합니다.  
   
  개체의 단순 속성이나 기본 컬렉션(예: <xref:System.Collections.ArrayList>)과 같은 간단한 데이터 소스 및 데이터베이스 테이블과 같은 복잡한 데이터 소스 둘 다에 <xref:System.Windows.Forms.BindingSource> 구성 요소를 바인딩할 수 있습니다. <xref:System.Windows.Forms.BindingSource> 구성 요소는 바인딩 및 통화 관리 서비스를 제공하는 중간자 역할을 합니다. 디자인 타임 또는 런타임에 해당 <xref:System.Windows.Forms.BindingSource.DataSource%2A> 및 <xref:System.Windows.Forms.BindingSource.DataMember%2A> 속성을 각각 데이터베이스와 테이블로 설정하여 <xref:System.Windows.Forms.BindingSource> 구성 요소를 복잡한 데이터 소스에 바인딩할 수 있습니다. 다음 그림에서는 <xref:System.Windows.Forms.BindingSource> 구성 요소가 기존 데이터 바인딩 아키텍처에 들어가는 위치를 보여 줍니다.  
   

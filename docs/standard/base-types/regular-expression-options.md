@@ -42,9 +42,7 @@ ms.locfileid: "57677567"
 
 정규식에 대한 옵션은 다음과 같은 세 가지 방법 중 하나로 지정할 수 있습니다.
 
-- 
-  `options` 클래스 생성자 또는 정적(Visual Basic의 경우 <xref:System.Text.RegularExpressions.Regex?displayProperty=nameWithType>) 패턴 일치 메서드(예: `Shared` 또는 <xref:System.Text.RegularExpressions.Regex.%23ctor%28System.String%2CSystem.Text.RegularExpressions.RegexOptions%29?displayProperty=nameWithType>)의 <xref:System.Text.RegularExpressions.Regex.Match%28System.String%2CSystem.String%2CSystem.Text.RegularExpressions.RegexOptions%29?displayProperty=nameWithType> 매개 변수에 지정합니다. 
-  `options` 매개 변수는 <xref:System.Text.RegularExpressions.RegexOptions?displayProperty=nameWithType> 열거형 값의 비트 OR 조합입니다.
+- `options` 클래스 생성자 또는 정적(Visual Basic의 경우 <xref:System.Text.RegularExpressions.Regex?displayProperty=nameWithType>) 패턴 일치 메서드(예: `Shared` 또는 <xref:System.Text.RegularExpressions.Regex.%23ctor%28System.String%2CSystem.Text.RegularExpressions.RegexOptions%29?displayProperty=nameWithType>)의 <xref:System.Text.RegularExpressions.Regex.Match%28System.String%2CSystem.String%2CSystem.Text.RegularExpressions.RegexOptions%29?displayProperty=nameWithType> 매개 변수에 지정합니다. `options` 매개 변수는 <xref:System.Text.RegularExpressions.RegexOptions?displayProperty=nameWithType> 열거형 값의 비트 OR 조합입니다.
 
     클래스 생성자의 `options` 매개 변수를 사용하여 <xref:System.Text.RegularExpressions.Regex> 인스턴스에 옵션을 제공하면 해당 옵션이 <xref:System.Text.RegularExpressions.RegexOptions?displayProperty=nameWithType> 속성에 할당됩니다. 그러나 <xref:System.Text.RegularExpressions.RegexOptions?displayProperty=nameWithType> 속성은 정규식 패턴 자체에 인라인 옵션을 반영하지는 않습니다.
 
@@ -53,8 +51,7 @@ ms.locfileid: "57677567"
     [!code-csharp[Conceptual.Regex.Language.Options#6](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.options/cs/example1.cs#6)]
     [!code-vb[Conceptual.Regex.Language.Options#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.options/vb/example1.vb#6)]
 
-- `(?imnsx-imnsx)` 구문을 사용하여 정규식 패턴에 인라인 옵션을 적용합니다. 이 옵션은 옵션이 정의된 지점에서 패턴의 끝 부분까지 또는 다른 인라인 옵션에 의해 옵션이 정의되지 않은 지점까지 패턴에 적용됩니다. 
-  <xref:System.Text.RegularExpressions.Regex> 인스턴스의 <xref:System.Text.RegularExpressions.RegexOptions?displayProperty=nameWithType> 속성은 이러한 인라인 옵션을 반영하지 않습니다. 자세한 내용은 [기타 구문](../../../docs/standard/base-types/miscellaneous-constructs-in-regular-expressions.md) 항목을 참조하세요.
+- `(?imnsx-imnsx)` 구문을 사용하여 정규식 패턴에 인라인 옵션을 적용합니다. 이 옵션은 옵션이 정의된 지점에서 패턴의 끝 부분까지 또는 다른 인라인 옵션에 의해 옵션이 정의되지 않은 지점까지 패턴에 적용됩니다. <xref:System.Text.RegularExpressions.Regex> 인스턴스의 <xref:System.Text.RegularExpressions.RegexOptions?displayProperty=nameWithType> 속성은 이러한 인라인 옵션을 반영하지 않습니다. 자세한 내용은 [기타 구문](../../../docs/standard/base-types/miscellaneous-constructs-in-regular-expressions.md) 항목을 참조하세요.
 
     다음 예제에서 이에 대해 설명합니다. 이 예제에서는 인라인 옵션을 사용하여 대/소문자를 구분하지 않는 일치를 사용하도록 설정하고 문자 "d"로 시작하는 단어를 식별할 때 패턴 공백을 무시합니다.
 
@@ -101,14 +98,12 @@ ms.locfileid: "57677567"
 
 읽기 전용 <xref:System.Text.RegularExpressions.Regex> 속성 값을 검색하여 <xref:System.Text.RegularExpressions.Regex.Options%2A?displayProperty=nameWithType> 개체를 인스턴스화했을 때 해당 개체에 제공된 옵션을 확인할 수 있습니다. 이 속성은 <xref:System.Text.RegularExpressions.Regex.CompileToAssembly%2A?displayProperty=nameWithType> 메서드에 의해 만들어진 컴파일된 정규식에 대해 정의된 옵션을 확인하는 데 특히 유용합니다.
 
-
-  <xref:System.Text.RegularExpressions.RegexOptions.None?displayProperty=nameWithType>을 제외한 모든 옵션의 존재 유무를 테스트하려면 <xref:System.Text.RegularExpressions.Regex.Options%2A?displayProperty=nameWithType> 속성 값 및 관심 있는 <xref:System.Text.RegularExpressions.RegexOptions> 값으로 AND 작업을 수행합니다. 그런 다음 결과가 해당 <xref:System.Text.RegularExpressions.RegexOptions> 값과 같은지 테스트합니다. 다음 예제에서는 <xref:System.Text.RegularExpressions.RegexOptions.IgnoreCase?displayProperty=nameWithType> 옵션이 설정되었는지 테스트합니다.
+<xref:System.Text.RegularExpressions.RegexOptions.None?displayProperty=nameWithType>을 제외한 모든 옵션의 존재 유무를 테스트하려면 <xref:System.Text.RegularExpressions.Regex.Options%2A?displayProperty=nameWithType> 속성 값 및 관심 있는 <xref:System.Text.RegularExpressions.RegexOptions> 값으로 AND 작업을 수행합니다. 그런 다음 결과가 해당 <xref:System.Text.RegularExpressions.RegexOptions> 값과 같은지 테스트합니다. 다음 예제에서는 <xref:System.Text.RegularExpressions.RegexOptions.IgnoreCase?displayProperty=nameWithType> 옵션이 설정되었는지 테스트합니다.
 
 [!code-csharp[Conceptual.Regex.Language.Options#19](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.options/cs/determine1.cs#19)]
 [!code-vb[Conceptual.Regex.Language.Options#19](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.options/vb/determine1.vb#19)]
 
-
-  <xref:System.Text.RegularExpressions.RegexOptions.None?displayProperty=nameWithType>에 대해 테스트하려면 다음 예제에 표시된 것처럼 <xref:System.Text.RegularExpressions.Regex.Options%2A?displayProperty=nameWithType> 속성 값이 <xref:System.Text.RegularExpressions.RegexOptions.None?displayProperty=nameWithType>과 같은지 확인합니다.
+<xref:System.Text.RegularExpressions.RegexOptions.None?displayProperty=nameWithType>에 대해 테스트하려면 다음 예제에 표시된 것처럼 <xref:System.Text.RegularExpressions.Regex.Options%2A?displayProperty=nameWithType> 속성 값이 <xref:System.Text.RegularExpressions.RegexOptions.None?displayProperty=nameWithType>과 같은지 확인합니다.
 
 [!code-csharp[Conceptual.Regex.Language.Options#20](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.options/cs/determine1.cs#20)]
 [!code-vb[Conceptual.Regex.Language.Options#20](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.options/vb/determine1.vb#20)]
@@ -119,8 +114,7 @@ ms.locfileid: "57677567"
 
 ## <a name="default-options"></a>기본 옵션
 
-
-  <xref:System.Text.RegularExpressions.RegexOptions.None?displayProperty=nameWithType> 옵션은 지정된 옵션이 없고 정규식 엔진에서 해당 기본 동작을 사용함을 나타냅니다. 여기에는 다음과 같은 사항이 포함됩니다.
+<xref:System.Text.RegularExpressions.RegexOptions.None?displayProperty=nameWithType> 옵션은 지정된 옵션이 없고 정규식 엔진에서 해당 기본 동작을 사용함을 나타냅니다. 여기에는 다음과 같은 사항이 포함됩니다.
 
 - 패턴이 ECMAScript 정규식이 아니라 정식으로 해석됩니다.
 
@@ -139,11 +133,9 @@ ms.locfileid: "57677567"
 - 정규식 패턴의 캡처링 그룹은 명시적 및 암시적입니다.
 
 > [!NOTE]
-> 
-  <xref:System.Text.RegularExpressions.RegexOptions.None?displayProperty=nameWithType> 옵션과 동일한 인라인 옵션은 없습니다. 정규식 옵션이 인라인으로 적용된 경우 기본 동작은 특정 옵션을 해제하여 옵션별로 복원됩니다. 예를 들어, `(?i)`는 대/소문자를 구분하지 않는 비교를 설정하고 `(?-i)`는 기본 대/소문자를 구분하는 비교를 복원합니다.
+> <xref:System.Text.RegularExpressions.RegexOptions.None?displayProperty=nameWithType> 옵션과 동일한 인라인 옵션은 없습니다. 정규식 옵션이 인라인으로 적용된 경우 기본 동작은 특정 옵션을 해제하여 옵션별로 복원됩니다. 예를 들어, `(?i)`는 대/소문자를 구분하지 않는 비교를 설정하고 `(?-i)`는 기본 대/소문자를 구분하는 비교를 복원합니다.
 
-
-  <xref:System.Text.RegularExpressions.RegexOptions.None?displayProperty=nameWithType> 옵션은 정규식 엔진의 기본 동작을 나타내므로 메서드 호출에 명시적으로 지정되는 경우가 드뭅니다. 대신 생성자 또는 정적 패턴 일치 메서드가 `options` 매개 변수 없이 호출됩니다.
+<xref:System.Text.RegularExpressions.RegexOptions.None?displayProperty=nameWithType> 옵션은 정규식 엔진의 기본 동작을 나타내므로 메서드 호출에 명시적으로 지정되는 경우가 드뭅니다. 대신 생성자 또는 정적 패턴 일치 메서드가 `options` 매개 변수 없이 호출됩니다.
 
 [맨 위로 이동](#Top)
 
@@ -151,12 +143,9 @@ ms.locfileid: "57677567"
 
 ## <a name="case-insensitive-matching"></a>대/소문자를 구분하지 않는 일치
 
+<xref:System.Text.RegularExpressions.RegexOptions.IgnoreCase> 옵션 또는 `i` 인라인 옵션은 대/소문자를 구분하지 않는 일치를 제공합니다. 기본적으로 현재 문화권의 대/소문자 사용 규칙이 사용됩니다.
 
-  <xref:System.Text.RegularExpressions.RegexOptions.IgnoreCase> 옵션 또는 `i` 인라인 옵션은 대/소문자를 구분하지 않는 일치를 제공합니다. 기본적으로 현재 문화권의 대/소문자 사용 규칙이 사용됩니다.
-
-다음 예제에서는 "the"로 시작하는 모든 단어와 일치하는 정규식 패턴 `\bthe\w*\b`를 정의합니다. 
-  <xref:System.Text.RegularExpressions.Regex.Match%2A> 메서드에 대한 첫 번째 호출에서 기본 대/소문자를 구분하는 비교를 사용하므로 출력은 문장을 시작하는 문자열 "The"가 일치하지 않음을 나타냅니다. 
-  <xref:System.Text.RegularExpressions.Regex.Match%2A> 메서드가 옵션이 <xref:System.Text.RegularExpressions.RegexOptions.IgnoreCase>로 설정된 상태로 호출되면 이 문자열이 일치합니다.
+다음 예제에서는 "the"로 시작하는 모든 단어와 일치하는 정규식 패턴 `\bthe\w*\b`를 정의합니다. <xref:System.Text.RegularExpressions.Regex.Match%2A> 메서드에 대한 첫 번째 호출에서 기본 대/소문자를 구분하는 비교를 사용하므로 출력은 문장을 시작하는 문자열 "The"가 일치하지 않음을 나타냅니다. <xref:System.Text.RegularExpressions.Regex.Match%2A> 메서드가 옵션이 <xref:System.Text.RegularExpressions.RegexOptions.IgnoreCase>로 설정된 상태로 호출되면 이 문자열이 일치합니다.
 
 [!code-csharp[Conceptual.Regex.Language.Options#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.options/cs/case1.cs#1)]
 [!code-vb[Conceptual.Regex.Language.Options#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.options/vb/case1.vb#1)]
@@ -172,14 +161,11 @@ ms.locfileid: "57677567"
 
 ## <a name="multiline-mode"></a>여러 줄 모드
 
+<xref:System.Text.RegularExpressions.RegexOptions.Multiline?displayProperty=nameWithType> 옵션 또는 `m` 인라인 옵션은 정규식 엔진이 여러 줄로 구성된 입력 문자열을 처리할 수 있게 해줍니다. 이 옵션은 `^` 및 `$` 언어 요소가 입력 문자열의 시작 부분 및 끝 부분 대신 줄의 시작 부분 및 끝 부분과 일치하도록 해당 언어 요소의 해석을 변경합니다.
 
-  <xref:System.Text.RegularExpressions.RegexOptions.Multiline?displayProperty=nameWithType> 옵션 또는 `m` 인라인 옵션은 정규식 엔진이 여러 줄로 구성된 입력 문자열을 처리할 수 있게 해줍니다. 이 옵션은 `^` 및 `$` 언어 요소가 입력 문자열의 시작 부분 및 끝 부분 대신 줄의 시작 부분 및 끝 부분과 일치하도록 해당 언어 요소의 해석을 변경합니다.
+기본적으로 `$`는 입력 문자열의 끝 부분과만 일치합니다. <xref:System.Text.RegularExpressions.RegexOptions.Multiline?displayProperty=nameWithType> 옵션을 지정하면 줄 바꿈 문자(`\n`) 또는 입력 문자열의 끝 부분과 일치합니다. 그러나 캐리지 리턴/줄 바꿈 문자 조합과는 일치하지 않습니다. 성공적으로 일치시키려면 단순히 `\r?$`만 사용할 것이 아니라 하위 식 `$`를 사용합니다.
 
-기본적으로 `$`는 입력 문자열의 끝 부분과만 일치합니다. 
-  <xref:System.Text.RegularExpressions.RegexOptions.Multiline?displayProperty=nameWithType> 옵션을 지정하면 줄 바꿈 문자(`\n`) 또는 입력 문자열의 끝 부분과 일치합니다. 그러나 캐리지 리턴/줄 바꿈 문자 조합과는 일치하지 않습니다. 성공적으로 일치시키려면 단순히 `\r?$`만 사용할 것이 아니라 하위 식 `$`를 사용합니다.
-
-다음 예제에서는 볼링하는 사람의 이름과 점수를 추출하여 이를 내림차순으로 정렬하는 <xref:System.Collections.Generic.SortedList%602> 컬렉션에 추가합니다. 
-  <xref:System.Text.RegularExpressions.Regex.Matches%2A> 메서드가 두 번 호출됩니다. 첫 번째 메서드 호출에서 정규식은 `^(\w+)\s(\d+)$`이며 옵션이 설정되지 않았습니다. 출력에 표시된 것처럼, 정규식 엔진이 입력 패턴을 입력 문자열의 시작 부분 및 끝 부분과 함께 일치시킬 수 없어 찾은 일치 항목이 없습니다. 두 번째 메서드 호출에서 정규식은 `^(\w+)\s(\d+)\r?$`로 변경되었으며 옵션이 <xref:System.Text.RegularExpressions.RegexOptions.Multiline?displayProperty=nameWithType>으로 설정되었습니다. 출력에 표시된 것처럼, 이름 및 점수가 성공적으로 일치되었으며 점수가 내림차순으로 표시되었습니다.
+다음 예제에서는 볼링하는 사람의 이름과 점수를 추출하여 이를 내림차순으로 정렬하는 <xref:System.Collections.Generic.SortedList%602> 컬렉션에 추가합니다. <xref:System.Text.RegularExpressions.Regex.Matches%2A> 메서드가 두 번 호출됩니다. 첫 번째 메서드 호출에서 정규식은 `^(\w+)\s(\d+)$`이며 옵션이 설정되지 않았습니다. 출력에 표시된 것처럼, 정규식 엔진이 입력 패턴을 입력 문자열의 시작 부분 및 끝 부분과 함께 일치시킬 수 없어 찾은 일치 항목이 없습니다. 두 번째 메서드 호출에서 정규식은 `^(\w+)\s(\d+)\r?$`로 변경되었으며 옵션이 <xref:System.Text.RegularExpressions.RegexOptions.Multiline?displayProperty=nameWithType>으로 설정되었습니다. 출력에 표시된 것처럼, 이름 및 점수가 성공적으로 일치되었으며 점수가 내림차순으로 표시되었습니다.
 
 [!code-csharp[Conceptual.Regex.Language.Options#3](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.options/cs/multiline1.cs#3)]
 [!code-vb[Conceptual.Regex.Language.Options#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.options/vb/multiline1.vb#3)]
@@ -206,11 +192,9 @@ ms.locfileid: "57677567"
 
 ## <a name="single-line-mode"></a>한 줄 모드
 
+<xref:System.Text.RegularExpressions.RegexOptions.Singleline?displayProperty=nameWithType> 옵션 또는 `s` 인라인 옵션은 정규식 엔진이 입력 문자열이 한 줄로 구성된 것처럼 입력 문자열을 처리하도록 합니다. 이 옵션은 마침표(`.`) 언어 요소가 줄 바꿈 문자 `\n` 또는 \u000A를 제외한 모든 문자와 일치하는 대신 모든 문자와 일치하도록 해당 언어 요소의 동작을 변경하여 그렇게 합니다.
 
-  <xref:System.Text.RegularExpressions.RegexOptions.Singleline?displayProperty=nameWithType> 옵션 또는 `s` 인라인 옵션은 정규식 엔진이 입력 문자열이 한 줄로 구성된 것처럼 입력 문자열을 처리하도록 합니다. 이 옵션은 마침표(`.`) 언어 요소가 줄 바꿈 문자 `\n` 또는 \u000A를 제외한 모든 문자와 일치하는 대신 모든 문자와 일치하도록 해당 언어 요소의 동작을 변경하여 그렇게 합니다.
-
-다음 예제에서는 `.` 옵션을 사용할 때 <xref:System.Text.RegularExpressions.RegexOptions.Singleline?displayProperty=nameWithType> 언어 요소의 동작이 변경되는 방법을 보여 줍니다. 정규식 `^.+`는 문자열의 시작 부분에서 시작하여 모든 문자를 찾습니다. 기본적으로 일치는 첫 번째 줄의 끝 부분에서 끝납니다. 정규식 패턴은 캐리지 리턴 문자, `\r` 또는 \u000D와 일치하지만 `\n`과는 일치하지 않습니다. 
-  <xref:System.Text.RegularExpressions.RegexOptions.Singleline?displayProperty=nameWithType> 옵션은 전체 입력 문자열을 한 줄로 해석하기 때문에 `\n`을 포함하여 입력 문자열의 모든 문자와 일치합니다.
+다음 예제에서는 `.` 옵션을 사용할 때 <xref:System.Text.RegularExpressions.RegexOptions.Singleline?displayProperty=nameWithType> 언어 요소의 동작이 변경되는 방법을 보여 줍니다. 정규식 `^.+`는 문자열의 시작 부분에서 시작하여 모든 문자를 찾습니다. 기본적으로 일치는 첫 번째 줄의 끝 부분에서 끝납니다. 정규식 패턴은 캐리지 리턴 문자, `\r` 또는 \u000D와 일치하지만 `\n`과는 일치하지 않습니다. <xref:System.Text.RegularExpressions.RegexOptions.Singleline?displayProperty=nameWithType> 옵션은 전체 입력 문자열을 한 줄로 해석하기 때문에 `\n`을 포함하여 입력 문자열의 모든 문자와 일치합니다.
 
 [!code-csharp[Conceptual.Regex.Language.CharacterClasses#5](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.characterclasses/cs/any2.cs#5)]
 [!code-vb[Conceptual.Regex.Language.CharacterClasses#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.characterclasses/vb/any2.vb#5)]
@@ -226,8 +210,7 @@ ms.locfileid: "57677567"
 
 ## <a name="explicit-captures-only"></a>명시적 캡처만 해당
 
-기본적으로 캡처링 그룹은 정규식 패턴에 괄호를 사용하여 정의됩니다. 명명된 그룹은 `(?<`*name*`>`*subexpression*`)` 언어 옵션에 의해 이름 또는 번호가 할당되는 반면, 명명되지 않은 그룹은 인덱스로 액세스할 수 있습니다. 
-  <xref:System.Text.RegularExpressions.GroupCollection> 개체에서 명명되지 않은 그룹은 명명된 그룹 앞에 있습니다.
+기본적으로 캡처링 그룹은 정규식 패턴에 괄호를 사용하여 정의됩니다. 명명된 그룹은 `(?<`*name*`>`*subexpression*`)` 언어 옵션에 의해 이름 또는 번호가 할당되는 반면, 명명되지 않은 그룹은 인덱스로 액세스할 수 있습니다. <xref:System.Text.RegularExpressions.GroupCollection> 개체에서 명명되지 않은 그룹은 명명된 그룹 앞에 있습니다.
 
 그룹화 구문은 일반적으로 여러 언어 요소에 수량자를 적용하는 데만 사용되고, 캡처된 부분 문자열은 관심을 두는 부분이 아닙니다. 예를 들어, 다음 정규식
 
@@ -271,11 +254,9 @@ ms.locfileid: "57677567"
 
 ## <a name="compiled-regular-expressions"></a>컴파일된 정규식
 
-기본적으로 .NET의 정규식은 해석됩니다. 
-  <xref:System.Text.RegularExpressions.Regex> 개체가 인스턴스화되거나 정적 <xref:System.Text.RegularExpressions.Regex> 메서드가 호출되면 정규식 패턴이 일련의 사용자 지정 opcode로 구문 분석되고 해석기는 이러한 opcode를 사용하여 정규식을 실행합니다. 여기에는 절충 사항이 수반됩니다. 즉, 정규식 엔진의 초기화 비용은 런타임 성능을 희생하여 최소화됩니다.
+기본적으로 .NET의 정규식은 해석됩니다. <xref:System.Text.RegularExpressions.Regex> 개체가 인스턴스화되거나 정적 <xref:System.Text.RegularExpressions.Regex> 메서드가 호출되면 정규식 패턴이 일련의 사용자 지정 opcode로 구문 분석되고 해석기는 이러한 opcode를 사용하여 정규식을 실행합니다. 여기에는 절충 사항이 수반됩니다. 즉, 정규식 엔진의 초기화 비용은 런타임 성능을 희생하여 최소화됩니다.
 
-
-  <xref:System.Text.RegularExpressions.RegexOptions.Compiled?displayProperty=nameWithType> 옵션을 사용하여, 해석된 정규식 대신 컴파일된 정규식을 사용할 수 있습니다. 이 경우 패턴이 정규식 엔진에 전달되면 일련의 opcode로 구문 분석된 다음, 공용 언어 런타임으로 직접 전달될 수 있는 MSIL(Microsoft Intermediate Language)로 변환됩니다. 컴파일된 정규식은 초기화 시간을 희생하여 런타임 성능을 최대화합니다.
+<xref:System.Text.RegularExpressions.RegexOptions.Compiled?displayProperty=nameWithType> 옵션을 사용하여, 해석된 정규식 대신 컴파일된 정규식을 사용할 수 있습니다. 이 경우 패턴이 정규식 엔진에 전달되면 일련의 opcode로 구문 분석된 다음, 공용 언어 런타임으로 직접 전달될 수 있는 MSIL(Microsoft Intermediate Language)로 변환됩니다. 컴파일된 정규식은 초기화 시간을 희생하여 런타임 성능을 최대화합니다.
 
 > [!NOTE]
 > 정규식은 <xref:System.Text.RegularExpressions.RegexOptions.Compiled?displayProperty=nameWithType> 값을 `options` 클래스 생성자 또는 정적 패턴 일치 메서드의 <xref:System.Text.RegularExpressions.Regex> 매개 변수에 제공해서만 컴파일할 수 있으며, 인라인 옵션으로는 사용할 수 없습니다.
@@ -286,14 +267,12 @@ ms.locfileid: "57677567"
 
 - 특정 정규식을 나타내는 <xref:System.Text.RegularExpressions.Regex> 개체가 정규식 패턴 일치 메서드에 대한 여러 번의 호출에 사용됩니다.
 
-- 
-  <xref:System.Text.RegularExpressions.Regex> 개체가 범위를 벗어날 수 없어 재사용될 수 있습니다.
+- <xref:System.Text.RegularExpressions.Regex> 개체가 범위를 벗어날 수 없어 재사용될 수 있습니다.
 
 - 정적 정규식이 정규식 패턴 일치 메서드에 대한 여러 번의 호출에 사용됩니다. (정적 메서드 호출에 사용된 정규식이 정규식 엔진에 의해 캐시되므로 성능 향상이 가능합니다.)
 
 > [!NOTE]
-> 
-  <xref:System.Text.RegularExpressions.RegexOptions.Compiled?displayProperty=nameWithType> 옵션은 미리 정의된 컴파일된 정규식을 포함하는 특수 목적 어셈블리를 만드는 <xref:System.Text.RegularExpressions.Regex.CompileToAssembly%2A?displayProperty=nameWithType> 메서드와는 관련이 없습니다.
+> <xref:System.Text.RegularExpressions.RegexOptions.Compiled?displayProperty=nameWithType> 옵션은 미리 정의된 컴파일된 정규식을 포함하는 특수 목적 어셈블리를 만드는 <xref:System.Text.RegularExpressions.Regex.CompileToAssembly%2A?displayProperty=nameWithType> 메서드와는 관련이 없습니다.
 
 [맨 위로 이동](#Top)
 
@@ -303,8 +282,7 @@ ms.locfileid: "57677567"
 
 기본적으로 정규식 패턴에서 공백은 중요합니다. 공백은 정규식 엔진이 입력 문자열에서 공백 문자를 강제로 일치시키도록 합니다. 따라서 정규식 "`\b\w+\s`"와 "`\b\w+`"는 거의 동일한 정규식입니다. 또한 정규식 패턴에 숫자 기호(#)가 있으면 이는 일치시킬 리터럴 문자로 해석됩니다.
 
-
-  <xref:System.Text.RegularExpressions.RegexOptions.IgnorePatternWhitespace?displayProperty=nameWithType> 옵션 또는 `x` 인라인 옵션은 이 기본 동작을 다음과 같이 변경합니다.
+<xref:System.Text.RegularExpressions.RegexOptions.IgnorePatternWhitespace?displayProperty=nameWithType> 옵션 또는 `x` 인라인 옵션은 이 기본 동작을 다음과 같이 변경합니다.
 
 - 정규식 패턴에서 이스케이프되지 않은 공백은 무시됩니다. 정규식 패턴의 일부가 되려면 공백 문자가 이스케이프되어야 합니다(예: `\s` 또는 “`\`”로).
 
@@ -344,14 +322,12 @@ ms.locfileid: "57677567"
 
 ## <a name="right-to-left-mode"></a>오른쪽에서 왼쪽 모드
 
-기본적으로 정규식 엔진은 왼쪽에서 오른쪽으로 검색합니다. 
-  <xref:System.Text.RegularExpressions.RegexOptions.RightToLeft?displayProperty=nameWithType> 옵션을 사용하여 검색 방향을 반대로 할 수 있습니다. 검색은 자동으로 문자열의 마지막 문자 위치에서 시작됩니다. 시작 위치 매개 변수를 포함한 패턴 일치 메서드의 경우(예: <xref:System.Text.RegularExpressions.Regex.Match%28System.String%2CSystem.Int32%29?displayProperty=nameWithType>) 시작 위치는 검색이 시작될 가장 오른쪽 문자 위치의 인덱스입니다.
+기본적으로 정규식 엔진은 왼쪽에서 오른쪽으로 검색합니다. <xref:System.Text.RegularExpressions.RegexOptions.RightToLeft?displayProperty=nameWithType> 옵션을 사용하여 검색 방향을 반대로 할 수 있습니다. 검색은 자동으로 문자열의 마지막 문자 위치에서 시작됩니다. 시작 위치 매개 변수를 포함한 패턴 일치 메서드의 경우(예: <xref:System.Text.RegularExpressions.Regex.Match%28System.String%2CSystem.Int32%29?displayProperty=nameWithType>) 시작 위치는 검색이 시작될 가장 오른쪽 문자 위치의 인덱스입니다.
 
 > [!NOTE]
 > 오른쪽에서 왼쪽 패턴 모드는 <xref:System.Text.RegularExpressions.RegexOptions.RightToLeft?displayProperty=nameWithType> 값을 `options` 클래스 생성자 또는 정적 패턴 일치 메서드의 <xref:System.Text.RegularExpressions.Regex> 매개 변수에 제공해서만 사용할 수 있으며, 인라인 옵션으로는 사용할 수 없습니다.
 
-
-  <xref:System.Text.RegularExpressions.RegexOptions.RightToLeft?displayProperty=nameWithType> 옵션은 검색 방향만 변경하며 오른쪽에서 왼쪽으로 정규식 패턴을 해석하지는 않습니다. 예를 들어, 정규식 `\bb\w+\s`는 문자 "b"로 시작하고 뒤에 공백 문자가 있는 단어와 일치합니다. 다음 예제에서 입력 문자열은 하나 이상의 "b" 문자를 포함하는 세 단어로 구성됩니다. 첫 번째 단어는 "b"로 시작하고, 두 번째 단어는 "b"로 끝나며, 세 번째 단어는 단어 중간에 두 개의 "b" 문자를 포함합니다. 예제의 출력이 보여 주는 것처럼, 첫 번째 단어만 정규식 패턴과 일치합니다.
+<xref:System.Text.RegularExpressions.RegexOptions.RightToLeft?displayProperty=nameWithType> 옵션은 검색 방향만 변경하며 오른쪽에서 왼쪽으로 정규식 패턴을 해석하지는 않습니다. 예를 들어, 정규식 `\bb\w+\s`는 문자 "b"로 시작하고 뒤에 공백 문자가 있는 단어와 일치합니다. 다음 예제에서 입력 문자열은 하나 이상의 "b" 문자를 포함하는 세 단어로 구성됩니다. 첫 번째 단어는 "b"로 시작하고, 두 번째 단어는 "b"로 끝나며, 세 번째 단어는 단어 중간에 두 개의 "b" 문자를 포함합니다. 예제의 출력이 보여 주는 것처럼, 첫 번째 단어만 정규식 패턴과 일치합니다.
 
 [!code-csharp[Conceptual.Regex.Language.Options#17](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.options/cs/righttoleft1.cs#17)]
 [!code-vb[Conceptual.Regex.Language.Options#17](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.options/vb/righttoleft1.vb#17)]
@@ -382,8 +358,7 @@ lookahead 어설션(`(?=`*subexpression*`)` 언어 요소) 및 lookbehind 어설
 > [!NOTE]
 > ECMAScript와 호환되는 동작은 <xref:System.Text.RegularExpressions.RegexOptions.ECMAScript?displayProperty=nameWithType> 값을 `options` 클래스 생성자 또는 정적 패턴 일치 메서드의 <xref:System.Text.RegularExpressions.Regex> 매개 변수에 제공해서만 사용할 수 있으며, 인라인 옵션으로는 사용할 수 없습니다.
 
-
-  <xref:System.Text.RegularExpressions.RegexOptions.ECMAScript?displayProperty=nameWithType> 옵션은 <xref:System.Text.RegularExpressions.RegexOptions.IgnoreCase?displayProperty=nameWithType> 및 <xref:System.Text.RegularExpressions.RegexOptions.Multiline?displayProperty=nameWithType> 옵션과만 조합할 수 있습니다. 정규식에 다른 옵션을 사용하면 <xref:System.ArgumentOutOfRangeException>이 발생합니다.
+<xref:System.Text.RegularExpressions.RegexOptions.ECMAScript?displayProperty=nameWithType> 옵션은 <xref:System.Text.RegularExpressions.RegexOptions.IgnoreCase?displayProperty=nameWithType> 및 <xref:System.Text.RegularExpressions.RegexOptions.Multiline?displayProperty=nameWithType> 옵션과만 조합할 수 있습니다. 정규식에 다른 옵션을 사용하면 <xref:System.ArgumentOutOfRangeException>이 발생합니다.
 
 ECMAScript의 동작과 정식 정규식의 동작은 문자 클래스 구문, 자신을 참조하는 캡처링 그룹 및 8진수 대 역참조 해석의 세 가지 영역에서 다릅니다.
 

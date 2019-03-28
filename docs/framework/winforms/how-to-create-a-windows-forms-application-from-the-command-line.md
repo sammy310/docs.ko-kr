@@ -35,8 +35,7 @@ ms.locfileid: "57716948"
      [!code-csharp[System.Windows.Forms.BasicForm#3](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.BasicForm/CS/Form1.cs#3)]
      [!code-vb[System.Windows.Forms.BasicForm#3](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.BasicForm/VB/Form1.vb#3)]  
   
-3.  
-  `Form1`에 대한 기본 생성자를 만듭니다.  
+3.  `Form1`에 대한 기본 생성자를 만듭니다.  
   
      이후 절차에서 생성자에 더 많은 코드를 추가합니다.  
   
