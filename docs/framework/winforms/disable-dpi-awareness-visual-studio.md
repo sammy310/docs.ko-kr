@@ -1,17 +1,17 @@
 ---
 title: Visual Studio에서 인식 되는 DPI를 사용 하지 않도록 설정
 description: HDPI 모니터에 Windows Forms 디자이너 및 DPI를 인식 하지 못하는 프로세스로 Visual Studio를 실행 하는 방법의 제한 사항에 설명 합니다.
-ms.date: 12/17/2018
-ms.prod: visual-studio-dev15
+ms.date: 03/19/2019
+ms.prod: visual-studio-windows
 ms.technology: vs-ide-designers
 author: gewarren
 ms.author: gewarren
-ms.openlocfilehash: 92096663032b85058dc8c918d1f90153820f6f71
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 73f2371c40facf8902958cce020a6f02047615ba
+ms.sourcegitcommit: d938c39afb9216db377d0f0ecdaa53936a851059
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57710539"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58633870"
 ---
 # <a name="disable-dpi-awareness-in-visual-studio"></a>Visual Studio에서 인식 되는 DPI를 사용 하지 않도록 설정
 
@@ -23,11 +23,14 @@ Visual Studio는 dpi 인식 응용 프로그램에 자동으로 표시 배율을
 
 ![HDPI 모니터에서 Windows Forms 디자이너](./media/disable-dpi-awareness-visual-studio/win-forms-designer-hdpi.png)
 
-Visual Studio 2017 버전 15.8 및 나중에 폼을 여는 경우에 **Windows Forms 디자이너** HDPI 모니터를에서 Visual Studio 디자이너의 맨 위에 있는 노란색 표시줄 정보를 표시 합니다.
+양식을 열 때 합니다 **Windows Forms 디자이너** HDPI 모니터에서 Visual Studio에서 Visual Studio 디자이너의 맨 위에 있는 노란색 표시줄 정보를 표시 합니다.
 
 ![DPI를 인식 하지 못하는 모드에서 다시 시작 하려면 Visual Studio의 정보 표시줄](./media/disable-dpi-awareness-visual-studio/scaling-gold-bar.png)
 
 메시지 읽고 **기본 디스플레이에 크기 조정 (192dpi) 200%로 설정 됩니다. 디자이너 창에서 렌더링 문제를 발생할 수 있습니다이 있습니다.**
+
+> [!NOTE]
+> 이 정보 표시줄은 Visual Studio 2017 버전 15.8에서에서 도입 되었습니다.
 
 디자이너에서 작동 하지 않는 경우 폼의 레이아웃을 조정할 필요가 없습니다 정보 표시줄을 무시 하 고 다른 형식의 디자이너 또는 코드 편집기에서 작업을 계속할 수 있습니다. (할 수도 있습니다 [알림 사용 안 함](#disable-notifications) 표시할 정보 가로 막대형 계속 되지 않도록 합니다.) 만 **Windows Forms 디자이너** 영향을 받습니다. 작업할 필요가 없는 경우는 **Windows Forms 디자이너**, 다음 섹션에서는 도움이 [문제를 해결](#to-resolve-the-problem)합니다.
 
@@ -51,10 +54,13 @@ Visual Studio DPI를 인식 하지 못하는 프로세스로 실행 되 면 디�
 
 레지스트리를 수정 하 여 DPI를 인식 하지 못하는으로 Visual Studio를 표시할 수 있습니다. 열기 **레지스트리 편집기** 항목을 추가 합니다 **실행 NT\CurrentVersion\AppCompatFlags\Layers** 하위 키:
 
-**항목**: C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\devenv.exe
+**항목**: 여부를 사용 중인 Visual Studio 2017 또는 2019에 따라 다음이 값 중 하나를 사용 합니다.
 
-   > [!NOTE]
-   > Visual Studio 2017 Professional 또는 Enterprise edition을 사용 하는 경우 교체 **커뮤니티** 사용 하 여 **Professional** 또는 **Enterprise** 항목의 합니다. 또한 필요에 따라 드라이브 문자를 대체 합니다.
+- C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\devenv.exe
+- C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\devenv.exe
+
+> [!NOTE]
+> Visual studio Professional 또는 Enterprise edition을 사용 하는 경우 교체 **커뮤니티** 사용 하 여 **Professional** 또는 **Enterprise** 항목의 합니다. 또한 필요에 따라 드라이브 문자를 대체 합니다.
 
 **Type**: REG_SZ
 

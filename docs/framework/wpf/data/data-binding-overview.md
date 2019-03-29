@@ -10,12 +10,12 @@ helpviewer_keywords:
 - data binding [WPF], about data binding
 - conversion for data binding [WPF]
 ms.assetid: c707c95f-7811-401d-956e-2fffd019a211
-ms.openlocfilehash: ad86577aa4a66d9296c3c1844c9f8fa8c2b89d24
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 9e55714db55168c95f744665165e333d7f2ca730
+ms.sourcegitcommit: d938c39afb9216db377d0f0ecdaa53936a851059
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57364829"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58634559"
 ---
 # <a name="data-binding-overview"></a>데이터 바인딩 개요
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 데이터 바인딩은 응용 프로그램이 데이터를 제공하고 상호 작용할 수 있는 간단하고 일관된 방법을 제공합니다. 다양한 데이터 소스에서 [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] 개체 및 [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)]의 형태로 데이터에 요소를 바인딩할 수 있습니다. <xref:System.Windows.Controls.ContentControl>같은 <xref:System.Windows.Controls.Button> 하 고 <xref:System.Windows.Controls.ItemsControl>같은 <xref:System.Windows.Controls.ListBox> 고 <xref:System.Windows.Controls.ListView> 단일 데이터 항목의 유연한 스타일 또는 데이터 항목의 컬렉션을 사용 하도록 설정 하는 기본 제공 기능이 있습니다. 데이터를 기반으로 정렬, 필터 및 그룹 보기를 생성할 수 있습니다.  
@@ -61,7 +61,7 @@ ms.locfileid: "57364829"
   
  바인딩할 요소 및 데이터 소스의 특성에 관계없이 각 바인딩은 항상 다음 그림에 나와 있는 모델을 따릅니다.  
   
- ![기본 데이터 바인딩 다이어그램](./media/databindingmostbasic.png "DataBindingMostBasic")  
+ ![기본 데이터 바인딩 모델을 보여 주는 다이어그램입니다.](./media/data-binding-overview/basic-data-binding-diagram.png)  
   
  위 그림과 같이 데이터 바인딩은 기본적으로 바인딩 대상과 바인딩 소스를 연결합니다. 그림에서는 다음 기본 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 데이터 바인딩 개념을 보여 줍니다.  
   
@@ -101,7 +101,7 @@ ms.locfileid: "57364829"
   
  하지만 텍스트를 편집하는 동안이나 텍스트 편집을 마치고 마우스를 TextBox 외부로 이동한 후 소스 값이 업데이트될까요? <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A> 바인딩의 속성 원본의 업데이트를 트리거하는 항목이 결정 합니다. 다음 그림에서 오른쪽 화살표의 점은의 역할을 보여 줍니다.는 <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A> 속성:  
   
- ![UpdateSourceTrigger 다이어그램](./media/databindingupdatesourcetrigger.png "DataBindingUpdateSourceTrigger")  
+ ![UpdateSourceTrigger 속성의 역할을 보여 주는 다이어그램입니다.](./media/data-binding-overview/data-binding-updatesource-trigger.png)  
   
  경우는 <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A> 값이 <xref:System.Windows.Data.UpdateSourceTrigger.PropertyChanged>, 다음을 가리키는 값의 오른쪽 화살표 <xref:System.Windows.Data.BindingMode.TwoWay> 또는 <xref:System.Windows.Data.BindingMode.OneWayToSource> 바인딩 대상 속성이 변경 되는 즉시 업데이트 됩니다. 그러나 경우 합니다 <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A> 값은 <xref:System.Windows.Data.UpdateSourceTrigger.LostFocus>, 해당 값만 가져옵니다 업데이트 새 값을 사용 하 여 대상 속성이 포커스를 잃을 때.  
   
@@ -132,7 +132,7 @@ ms.locfileid: "57364829"
   
  이 예제를 기본 다이어그램에 적용하면 결과 그림은 다음과 같이 표시됩니다. 이 <xref:System.Windows.Data.BindingMode.OneWay> Background 속성을 지원 하기 때문에 바인딩 <xref:System.Windows.Data.BindingMode.OneWay> 기본적으로 바인딩.  
   
- ![데이터 바인딩 다이어그램](./media/databindingbuttonbackgroundexample.png "DataBindingButtonBackgroundExample")  
+ ![데이터 바인딩 Background 속성을 보여 주는 다이어그램입니다.](./media/data-binding-overview/data-binding-button-background-example.png)  
   
  작동 하는 이유가 궁금할 수 있습니다는 *ColorName* 하는 동안 문자열 형식 속성은 합니다 <xref:System.Windows.Controls.Control.Background%2A> 형식의 속성이 <xref:System.Windows.Media.Brush>합니다. 기본 형식 변환이 작동하기 때문이고 이 기능은 [데이터 변환](#data_conversion) 섹션에서 설명합니다.  
   
@@ -185,7 +185,7 @@ ms.locfileid: "57364829"
   
  [바인딩 만들기](#creating_a_binding) 섹션의 그림에 이 정보를 추가하려는 경우 다이어그램은 다음과 같이 표시됩니다.  
   
- ![데이터 바인딩 다이어그램](./media/databindingbuttondefaultconversion.png "DataBindingButtonDefaultConversion")  
+ ![데이터 바인딩 기본 속성을 보여 주는 다이어그램입니다.](./media/data-binding-overview/data-binding-button-default-conversion.png)  
   
  하지만, 경우에 어떻게 하는 대신 바인딩 소스 개체에 문자열 형식 속성을 *Color* 형식의 속성 <xref:System.Windows.Media.Color>? 이런 경우 바인딩 적용 되려면에서 해야 첫 번째를 설정 하는 *색* 항목으로 속성 값은를 <xref:System.Windows.Controls.Control.Background%2A> 속성은 허용 합니다. 사용자 지정 변환기를 구현 하 여 만들 해야는 <xref:System.Windows.Data.IValueConverter> 다음 예제와 같이 인터페이스:  
   
@@ -196,7 +196,7 @@ ms.locfileid: "57364829"
   
  이제 기본 변환 대신 사용자 지정 변환기가 사용되고 다이어그램이 다음과 같이 표시됩니다.  
   
- ![데이터 바인딩 다이어그램](./media/databindingconvertercolorexample.png "DataBindingConverterColorExample")  
+ ![데이터 바인딩 사용자 지정 변환기를 보여 주는 다이어그램입니다.](./media/data-binding-overview/data-binding-converter-color-example.png)  
   
  다시 말하지만, 바인딩되는 형식에 있는 형식 변환기 때문에 기본 변환을 사용할 수 있습니다. 이 동작은 대상에서 사용할 수 있는 형식 변환기에 따라 결정됩니다. 확실하지 않으면 사용자 지정 변환기를 만듭니다.  
   
@@ -217,7 +217,7 @@ ms.locfileid: "57364829"
   
  다행히도 기본 다이어그램이 적용됩니다. 바인딩하는 경우는 <xref:System.Windows.Controls.ItemsControl> 컬렉션 다이어그램은 다음과 같습니다.  
   
- ![데이터 바인딩 ItemsControl 다이어그램](./media/databindingitemscontrol.png "DataBindingItemsControl")  
+ ![데이터 바인딩 ItemsControl 개체를 보여 주는 다이어그램입니다.](./media/data-binding-overview/data-binding-itemscontrol.png)  
   
  바인딩할이 다이어그램에 표시 된 대로 <xref:System.Windows.Controls.ItemsControl> 컬렉션 개체에 <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A> 속성은 속성을 사용 합니다. 생각할 수 있습니다 <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A> 속성의 내용으로는 <xref:System.Windows.Controls.ItemsControl>합니다. 바인딩을 <xref:System.Windows.Data.BindingMode.OneWay> 때문에 <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A> 속성 지원 <xref:System.Windows.Data.BindingMode.OneWay> 기본적으로 바인딩.  
   
@@ -340,7 +340,7 @@ ms.locfileid: "57364829"
 ## <a name="data-templating"></a>데이터 템플릿  
  데이터 템플릿을 사용하지 않으면 [데이터 바인딩이란?](#what_is_data_binding) 섹션의 애플리케이션 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]가 다음과 같이 표시됩니다.  
   
- ![데이터 템플릿을 사용하지 않는 데이터 바인딩 데모](./media/databindingdemotemplates.png "DataBindingDemoTemplates")  
+ ![데이터 템플릿을 사용하지 않는 데이터 바인딩 데모](./media/data-binding-overview/data-binding-demo-templates.png)  
   
  이전 섹션의 예제에 나와 있는 것 처럼 모두를 <xref:System.Windows.Controls.ListBox> 컨트롤 및 <xref:System.Windows.Controls.ContentControl> 의 전체 컬렉션 개체 (또는 보다 구체적으로, 뷰를 통해 컬렉션 개체)에 바인딩된 *AuctionItem*s입니다. 데이터 컬렉션을 표시 하는 방법의 특정 한 지침이 없으면 합니다 <xref:System.Windows.Controls.ListBox> 내부 컬렉션에서 각 개체의 문자열 표현을 표시 및 <xref:System.Windows.Controls.ContentControl> 에 바인딩된 개체의 문자열 표현을 표시 합니다.  
   

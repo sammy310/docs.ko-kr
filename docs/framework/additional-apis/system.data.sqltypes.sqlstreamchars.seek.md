@@ -3,8 +3,7 @@ title: SqlStreamChars.Seek (Int64, SeekOrigin) 메서드 (System.Data.SqlTypes)
 author: stevestein
 ms.author: sstein
 ms.date: 12/20/2018
-ms.technology:
-- dotnet-data
+ms.technology: dotnet-data
 topic_type:
 - apiref
 api_name:
@@ -13,12 +12,12 @@ api_location:
 - System.Data.dll
 api_type:
 - Assembly
-ms.openlocfilehash: d52a1cd4dd70c29fc1af3fcf50c4f9b0c90125df
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.openlocfilehash: 6f802428a73f229e948099788ec21f07efbfab76
+ms.sourcegitcommit: d938c39afb9216db377d0f0ecdaa53936a851059
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55827385"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58634520"
 ---
 # <a name="sqlstreamcharsseekint64-seekorigin-method"></a>(Int64, SeekOrigin) SqlStreamChars.Seek 메서드
 
@@ -31,7 +30,7 @@ public abstract long Seek (long offset, System.IO.SeekOrigin origin);
 ## <a name="parameters"></a>매개 변수
 
 `offset`\
-`origin`에 상대적인 바이트 오프셋입니다.
+에 상대적인 바이트 오프셋 `origin`합니다.
 
 `origin`\
 새 위치를 가져올 참조 위치를 나타내는 열거형 값 중 하나입니다.

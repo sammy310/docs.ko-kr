@@ -3,8 +3,7 @@ title: SqlStreamChars.Flush 메서드 (System.Data.SqlTypes)
 author: stevestein
 ms.author: sstein
 ms.date: 12/20/2018
-ms.technology:
-- dotnet-data
+ms.technology: dotnet-data
 topic_type:
 - apiref
 api_name:
@@ -13,16 +12,16 @@ api_location:
 - System.Data.dll
 api_type:
 - Assembly
-ms.openlocfilehash: 6de892572691a016b7bb0eb2a28c0163380bcd03
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.openlocfilehash: 8cd24a5ca420552f283da61ecd4edcad02965403
+ms.sourcegitcommit: d938c39afb9216db377d0f0ecdaa53936a851059
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55827710"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58634195"
 ---
 # <a name="sqlstreamcharsflush-method"></a>SqlStreamChars.Flush 메서드
 
-파생 클래스에서 재정의되면 이 스트림에 대해 모든 버퍼를 지우고 버퍼링된 데이터가 내부 디바이스에 쓰여지도록 합니다. 이 메서드를 포함 하는 어셈블리에는 SQLAccess.dll friend 관계를 갖습니다. SQL Server에서 사용할 것입니다. 다른 데이터베이스에 대 한 해당 데이터베이스에서 제공 하는 호스팅 메커니즘을 사용 합니다.
+파생 클래스에서 재정의되면 이 스트림에 대해 모든 버퍼를 지우고 버퍼링된 데이터가 내부 장치에 쓰여지도록 합니다. 이 메서드를 포함 하는 어셈블리에는 SQLAccess.dll friend 관계를 갖습니다. SQL Server에서 사용할 것입니다. 다른 데이터베이스에 대 한 해당 데이터베이스에서 제공 하는 호스팅 메커니즘을 사용 합니다.
 
 ## <a name="syntax"></a>구문
 

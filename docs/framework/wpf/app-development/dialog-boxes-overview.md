@@ -10,12 +10,12 @@ helpviewer_keywords:
 - message boxes [WPF]
 - modal dialog boxes [WPF]
 ms.assetid: 0d23d544-a393-4a02-a3aa-d8cd5d3d6511
-ms.openlocfilehash: e0a52dcd3b403b3b5795dc0d025ac93176f009c3
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 14ed5655f31c8c73e6d7b8e987d1856fc869c9de
+ms.sourcegitcommit: d938c39afb9216db377d0f0ecdaa53936a851059
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57359135"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58634455"
 ---
 # <a name="dialog-boxes-overview"></a>대화 상자 개요
 독립 실행형 응용 프로그램에는 일반적으로는 응용 프로그램이 작동 하 고를 통해 해당 데이터를 처리 하는 기능을 노출 합니다. 기본 데이터를 표시 하는 주 창이 있는 [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] 메뉴 모음, 도구 모음 및 상태 표시줄과 같은 메커니즘입니다. 특수 애플리케이션에는 다음을 수행하는 추가 창이 표시될 수도 있습니다.  
@@ -40,7 +40,7 @@ ms.locfileid: "57359135"
 ## <a name="message-boxes"></a>메시지 상자  
  A *메시지 상자* 는 텍스트 정보를 표시 하 고 사용자가 단추를 사용 하 여 결정을 내릴 수 있도록 사용할 수 있는 대화 상자. 다음 그림에는 텍스트 정보를 표시하고, 질문을 하고, 질문에 대답할 때 사용할 세 개의 단추를 사용자에게 제공하는 메시지 상자가 있습니다.  
   
- ![워드 프로세서 대화 상자](./media/dialogboxesoverviewfigure1.png "DialogBoxesOverviewFigure1")  
+ ![응용 프로그램 전에 문서에 변경 내용을 저장할 것인지 묻는 워드 프로세서 대화 상자를 닫습니다.](./media/dialog-boxes-overview/word-processor-dialog.png)  
   
  메시지 상자를 만들려면 사용 하 여 <xref:System.Windows.MessageBox> 클래스입니다. <xref:System.Windows.MessageBox> 메시지 상자 텍스트, 제목, 아이콘 및 단추, 다음과 같은 코드를 사용 하 여 구성할 수 있습니다.  
   
@@ -73,7 +73,7 @@ ms.locfileid: "57359135"
 ### <a name="open-file-dialog"></a>파일 열기 대화 상자  
  다음 그림에 표시된 파일 열기 대화 상자는 파일 열기 기능에서 열려는 파일의 이름을 검색할 때 사용됩니다.  
   
- ![열기 대화 상자](./media/dialogboxesoverviewfigure2.png "DialogBoxesOverviewFigure2")  
+ ![파일을 검색할 위치를 보여 주는 열린 대화 상자.](./media/dialog-boxes-overview/open-file-dialog-box.png)  
   
  일반 파일 열기 대화 상자 구현 됩니다 합니다 <xref:Microsoft.Win32.OpenFileDialog> 클래스 및에 <xref:Microsoft.Win32> 네임 스페이스입니다. 다음 코드에서는 코드를 만들고 구성 및 표시하는 방법과 결과를 처리하는 방법을 보여 줍니다.  
   
@@ -89,7 +89,7 @@ ms.locfileid: "57359135"
 ### <a name="save-file-dialog-box"></a>파일 저장 대화 상자  
  다음 그림에 표시된 파일 저장 대화 상자는 파일 저장 기능에서 저장하려는 파일의 이름을 검색할 때 사용됩니다.  
   
- ![다른 이름으로 저장 대화 상자](./media/dialogboxesoverviewfigure3.png "DialogBoxesOverviewFigure3")  
+ ![다른 이름으로 저장 대화 상자는 파일을 저장할 위치를 표시 합니다.](./media/dialog-boxes-overview/save-file-dialog-box.png)  
   
  파일 저장 대화 상자는 일반적으로 구현 됩니다 합니다 <xref:Microsoft.Win32.SaveFileDialog> 클래스 및에 <xref:Microsoft.Win32> 네임 스페이스입니다. 다음 코드에서는 코드를 만들고 구성 및 표시하는 방법과 결과를 처리하는 방법을 보여 줍니다.  
   
@@ -102,7 +102,7 @@ ms.locfileid: "57359135"
 ### <a name="print-dialog-box"></a>인쇄 대화 상자  
  다음 그림에 표시된 인쇄 대화 상자는 인쇄 기능에서 사용자가 데이터를 인쇄할 프린터를 선택하고 구성할 때 사용됩니다.  
   
- ![인쇄 대화 상자](./media/dialogboxesoverviewfigure4.png "DialogBoxesOverviewFigure4")  
+ ![인쇄 대화 상자를 보여 주는 스크린샷.](./media/dialog-boxes-overview/print-data-dialog-box.png)  
   
  일반적인 인쇄 대화 상자 구현 됩니다 합니다 <xref:System.Windows.Controls.PrintDialog> 클래스 및에 <xref:System.Windows.Controls> 네임 스페이스입니다. 다음 코드에서는 만들고, 구성하고, 표시하는 방법을 보여 줍니다.  
   
@@ -119,7 +119,7 @@ ms.locfileid: "57359135"
 ### <a name="creating-a-modal-custom-dialog-box"></a>모달 사용자 지정 대화 상자 만들기  
  이 항목에서는 사용 하는 방법을 보여 줍니다 <xref:System.Windows.Window> 는 일반적인 모달 대화 상자 구현을 만드는 사용 하는 `Margins` 예를 들어 대화 상자 (참조 [대화 상자 샘플](https://go.microsoft.com/fwlink/?LinkID=159984)). `Margins` 대화 상자는 다음 그림에 표시 됩니다.  
   
- ![여백 대화 상자](./media/dialogboxesoverviewfigure5.png "DialogBoxesOverviewFigure5")  
+ ![왼쪽된 여백, 위쪽 여백, 오른쪽 여백 및 아래쪽 여백을 정의 하는 필드를 사용 하 여 여백 대화 상자입니다.](./media/dialog-boxes-overview/margin-size-dialog-box.png)  
   
 #### <a name="configuring-a-modal-dialog-box"></a>모달 대화 상자 구성  
  일반 대화 상자의 사용자 인터페이스에는 다음이 포함됩니다.  
@@ -208,7 +208,7 @@ ms.locfileid: "57359135"
   
  유효성 검사 규칙 연결 되 면 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 데이터 바인딩된 컨트롤에 입력 되 면을 자동으로 적용 됩니다. 컨트롤에 잘못 된 데이터가 포함 된 경우 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 다음 그림에 표시 된 대로 잘못 된 컨트롤 주위에 빨간색 테두리를 표시 됩니다.  
   
- ![잘못된 왼쪽 여백](./media/dialogboxesoverviewfigure7.png "DialogBoxesOverviewFigure7")  
+ ![잘못 된 왼쪽된 여백 값 주위에 빨간색 테두리를 사용 하 여 여백 대화 상자입니다.](./media/dialog-boxes-overview/invalid-left-margin-dialog.png)  
   
  [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]에서는 사용자가 유효한 데이터를 입력할 때까지 사용자를 잘못된 데이터로 제한하지 않습니다. 대화 상자에서 좋은 동작입니다. 사용자는 데이터의 유효성에 관계없이 대화 상자에서 컨트롤을 자유롭게 탐색할 수 있어야 합니다. 그러나이 경우 잘못 된 데이터 및 키를 눌러 입력할 수 있는 합니다 **확인** 단추입니다. 따라서이 코드에서는 대화 상자에서 모든 컨트롤의 유효성을 검사 하려면 상자는 **확인** 처리 하 여 단추를 누를 <xref:System.Windows.Controls.Primitives.ButtonBase.Click> 이벤트입니다.  
   
@@ -277,7 +277,7 @@ ms.locfileid: "57359135"
 ### <a name="creating-a-modeless-custom-dialog-box"></a>모덜리스 사용자 지정 대화 상자 만들기  
  다음 그림의 찾기 대화 상자와 같은 모덜리스 대화 상자는 기본적인 모양이 모덜 대화 상자와 같습니다.  
   
- ![찾기 대화 상자](./media/dialogboxesoverviewfigure6.PNG "DialogBoxesOverviewFigure6")  
+ ![찾기 대화 상자를 보여 주는 스크린샷.](./media/dialog-boxes-overview/find-modeless-dialog-box.png)  
   
  그러나 다음 섹션에 설명된 것처럼 동작은 약간 다릅니다.  
   

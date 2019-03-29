@@ -2,12 +2,12 @@
 title: '명시적 필드: Val 키워드'
 description: 알아봅니다는 F# 형식을 초기화 하지 않고 클래스 또는 구조체 형식의 값을 저장 하는 위치를 선언 하는 데 사용 되는 'val' 키워드입니다.
 ms.date: 05/16/2016
-ms.openlocfilehash: 492541f6eeba94d2177e92de935fa524b9def567
-ms.sourcegitcommit: 0888d7b24f475c346a3f444de8d83ec1ca7cd234
+ms.openlocfilehash: 6557514f13a9e86c7f367713775535db79e99a0c
+ms.sourcegitcommit: d938c39afb9216db377d0f0ecdaa53936a851059
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2018
-ms.locfileid: "53773629"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58634013"
 ---
 # <a name="explicit-fields-the-val-keyword"></a>명시적 필드: Val 키워드
 
@@ -40,7 +40,7 @@ val [ mutable ] [ access-modifier ] field-name : type-name
 변경 가능한 필드의 경우 .NET 컴파일 표현은 .NET 필드입니다.
 
 >[!WARNING]
-`Note` .NET Framework 네임 스페이스 `System.ComponentModel` 동일한 이름을 가진 특성을 포함 합니다. 이 특성에 대한 자세한 내용은 `System.ComponentModel.DefaultValueAttribute`를 참조하세요.
+>.NET Framework 네임 스페이스 `System.ComponentModel` 동일한 이름을 가진 특성을 포함 합니다. 이 특성에 대한 자세한 내용은 `System.ComponentModel.DefaultValueAttribute`를 참조하세요.
 
 다음 코드에서는 기본 생성자가 있는 클래스에 명시적 필드를 사용하는 방법을 보여 주고 이와 비교하기 위해 `let` 바인딩을 사용하는 방법도 보여 줍니다. `let` 바인딩된 필드 `myInt1`은 전용 필드입니다. `let` 바인딩된 필드 `myInt1`을 멤버 메서드에서 참조하는 경우 자체 식별자 `this`가 필요하지 않습니다. 그러나 명시적 필드 `myInt2`와 `myString`을 참조할 때는 자체 식별자가 필요합니다.
 
@@ -69,11 +69,11 @@ val [ mutable ] [ access-modifier ] field-name : type-name
 
 [!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-2/snippet6704.fs)]
 
-명시적 필드는 루틴에 사용하기 위한 것이 아닙니다. 일반적으로는 가능한 경우 항상 명시적 필드 대신 클래스의 `let` 바인딩을 사용해야 합니다. 명시적 필드는 네이티브 API에 대한 플랫폼 호출에 사용할 구조체를 정의해야 하는 경우 등과 같은 특정 상호 운용성 시나리오나 COM interop 시나리오에서 유용하게 사용됩니다. 자세한 내용은 [외부 함수](../functions/external-functions.md)합니다. 명시적 필드가 필요할 수 있는 또 다른 상황으로는 기본 생성자가 없는 클래스를 만드는 F# 코드 생성기를 사용하여 작업해야 하는 경우를 들 수 있습니다. 명시적 필드는 스레드에 정적인 변수나 그와 유사한 구문에도 유용하게 사용됩니다. 자세한 내용은 `System.ThreadStaticAttribute`을 참조하십시오.
+명시적 필드는 루틴에 사용하기 위한 것이 아닙니다. 일반적으로는 가능한 경우 항상 명시적 필드 대신 클래스의 `let` 바인딩을 사용해야 합니다. 명시적 필드는 네이티브 API에 대한 플랫폼 호출에 사용할 구조체를 정의해야 하는 경우 등과 같은 특정 상호 운용성 시나리오나 COM interop 시나리오에서 유용하게 사용됩니다. 자세한 내용은 [외부 함수](../functions/external-functions.md)합니다. 명시적 필드가 필요할 수 있는 또 다른 상황으로는 기본 생성자가 없는 클래스를 만드는 F# 코드 생성기를 사용하여 작업해야 하는 경우를 들 수 있습니다. 명시적 필드는 스레드에 정적인 변수나 그와 유사한 구문에도 유용하게 사용됩니다. 자세한 내용은 `System.ThreadStaticAttribute`을 참조하세요.
 
 `member val` 키워드가 형식 정의에 함께 표시되는 경우 이는 자동으로 구현된 속성의 정의입니다. 자세한 내용은 [속성](properties.md)에 정의된 인터페이스의 private C++ 관련 구현입니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참고자료
 
 - [속성](properties.md)
 - [멤버](index.md)

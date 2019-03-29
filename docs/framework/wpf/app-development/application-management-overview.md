@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - application management [WPF]
 ms.assetid: 32b1c054-5aca-423b-b4b5-ed8dc4dc637d
-ms.openlocfilehash: ef9771f44ce5bc61787f2060469d7a0b244e96b7
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 395077b7c82ee54a51b8086df0c59f731e3a2b70
+ms.sourcegitcommit: d938c39afb9216db377d0f0ecdaa53936a851059
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57356509"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58634221"
 ---
 # <a name="application-management-overview"></a>애플리케이션 관리 개요
 모든 애플리케이션은 애플리케이션 구현 및 관리에 적용하는 일반적인 기능 집합을 공유하는 경향이 있습니다. 이 항목에서는의 기능 개요를 제공 합니다 <xref:System.Windows.Application> 만들고 응용 프로그램을 관리 하기 위한 클래스입니다.  
@@ -323,7 +323,7 @@ ms.locfileid: "57356509"
 ### <a name="unhandled-exceptions"></a>처리되지 않은 예외  
  원하지 않는 예외를 throw하는 경우와 같이 애플리케이션이 비정상적인 상황에서 종료되는 경우가 있습니다. 이런 경우에는 애플리케이션에 예외를 검색하고 처리할 코드가 없을 수 있습니다. 이런 형식의 예외가 처리되지 않은 예외이며, 애플리케이션이 닫히기 전에 다음 그림에 표시된 것과 비슷한 알림으로 표시됩니다.  
   
- ![처리되지 않은 예외 알림](./media/applicationmanagementoverviewfigure2.png "ApplicationManagementOverviewFigure2")  
+ ![처리 되지 않은 예외 알림을 보여 주는 스크린샷.](./media/application-management-overview/unhandled-exception-notification.png)  
   
  사용자 환경의 관점에서는 애플리케이션에서 다음과 같은 작업의 일부 또는 전부를 수행하여 이러한 기본 동작을 방지하는 것이 바람직합니다.  
   

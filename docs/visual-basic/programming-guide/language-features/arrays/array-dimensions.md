@@ -9,12 +9,12 @@ helpviewer_keywords:
 - rectangular arrays
 - ranking, arrays
 ms.assetid: 385e911b-18c1-4e98-9924-c6d279101dd9
-ms.openlocfilehash: 5ba92e113faf9d68bad97968937cc736132b2065
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 47b90a6c513a5808dc0669d2d861de5e16406a34
+ms.sourcegitcommit: d938c39afb9216db377d0f0ecdaa53936a851059
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54708534"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58634169"
 ---
 # <a name="array-dimensions-in-visual-basic"></a>Array Dimensions in Visual Basic
 A *차원* 은 방향 배열 요소의 사양을 변경할 수 있습니다. 해당 월의 각 날짜에 대 한 총 판매량을 보유 하는 배열 이상의 차원을 (해당 월의 일)을 포함 합니다. 총 판매액이 들어 부서에서 월의 각 날짜에는 배열에 두 개의 차원 (부서 번호 및 월의 일). 배열의 차원 수 라고 해당 *순위*합니다.  
@@ -27,14 +27,11 @@ A *차원* 은 방향 배열 요소의 사양을 변경할 수 있습니다. 해
   
  다음 그림에는 개념적 구조의 서로 다른 순위를 사용 하 여 배열 보여 줍니다. 그림의 각 요소에 액세스 하는 인덱스 값을 보여 줍니다. 예를 들어, 2 차원 배열의 두 번째 행의 첫 번째 요소 인덱스를 지정 하 여 액세스할 수 있습니다 `(1, 0)`합니다.  
   
- ![하나의 그래픽 다이어그램&#45;차원 배열인](../../../../visual-basic/programming-guide/language-features/arrays/media/arrayexdimone.gif "ArrayExDimOne")  
-1 차원 배열  
+ ![1 차원 배열을 보여 주는 다이어그램입니다.](./media/array-dimensions/one-dimensional-array.gif)  
   
- ![두 개의 그래픽 다이어그램&#45;차원 배열인](../../../../visual-basic/programming-guide/language-features/arrays/media/arrayexdimtwo.gif "ArrayExDimTwo")  
-2 차원 배열  
+ ![2 차원 배열을 보여 주는 다이어그램입니다.](./media/array-dimensions/two-dimensional-array.gif)  
   
- ![세 개의 그래픽 다이어그램&#45;차원 배열인](../../../../visual-basic/programming-guide/language-features/arrays/media/arrayexdimthree.gif "ArrayExDimThree")  
-3 차원 배열  
+ ![3 차원 배열을 보여 주는 다이어그램입니다.](./media/array-dimensions/three-dimensional-array.gif)  
   
 ### <a name="one-dimension"></a>하나 이상의 차원  
  여러 개의 배열을 하나의 차원만 각 나이 사람의 수와 같은 경우 요소를 지정 하기만 하면은 해당 요소는 카운트를 보유 기간입니다. 따라서 이러한 배열은 하나의 인덱스를 사용합니다. 보유 하는 변수를 선언 하는 다음 예제는 *1 차원 배열* 의 나가 120 사이의 0에 대 한 계산 합니다.  

@@ -2,12 +2,12 @@
 title: 옵션
 description: 사용 하는 방법을 알아봅니다 F# 명명 된 값 또는 변수를 실제 값이 존재 하지 않을 경우 형식 옵션입니다.
 ms.date: 05/16/2016
-ms.openlocfilehash: ebd1c1c39468594de83b3c2af1da48c277bfcbe1
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: 6d32693bccc74c2cab642e4f626c9463092e8a39
+ms.sourcegitcommit: d938c39afb9216db377d0f0ecdaa53936a851059
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53613507"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58634104"
 ---
 # <a name="options"></a>옵션
 
@@ -41,6 +41,8 @@ ms.locfileid: "53613507"
 
 합니다 `openFile` 이전 예제의 함수 형식이 `string -> File option` 반환 하기 때문에 `File` 파일을 성공적으로 열리는 경우 개체 및 `None` 예외가 발생 한 경우. 상황에 따라 전파 되도록 허용 하는 대신 예외를 catch 하는 적절 한 설계 선택 되지 않습니다 수 있습니다.
 
+또한 것도 가능 전달할 `null` 또는 null 값을 `Some` 옵션의 경우. 이 방법은 일반적으로 사용 하지 않아야 루틴에는 일반적으로 F# .net에서 참조 형식의 특성으로 인해 가능한 비슷하나 프로그래밍 합니다.
+
 ## <a name="option-properties-and-methods"></a>옵션 속성 및 메서드
 
 옵션 종류는 다음 속성 및 메서드를 지원합니다.
@@ -65,7 +67,7 @@ ms.locfileid: "53613507"
 
 옵션 목록 또는 배열에 변환할 수 있습니다. 이러한 데이터 구조를 옵션으로 변환 하는 경우 결과 데이터 구조에 0 개 이상의 요소가 있습니다. 사용 옵션을 배열로 변환할 [ `Option.toArray` ](https://msdn.microsoft.com/library/c8044873-ba17-4b52-8231-eb1a28318c64)합니다. 사용 옵션 목록을 변환할 [ `Option.toList` ](https://msdn.microsoft.com/library/5f1af295-9fa9-40ad-b4a1-3578d94d44e1)합니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참고자료
 
 - [F# 언어 참조](index.md)
 - [F# 형식](fsharp-types.md)

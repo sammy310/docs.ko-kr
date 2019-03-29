@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - adorners [WPF], about adorners
 ms.assetid: 33d4c5c2-2daf-4e45-ba9a-5b673e2b8280
-ms.openlocfilehash: 9c9d77c9771fd8759530267bd38cb7c0bb59598c
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 94075189d82e5d446b3058b944c789a4288c26ca
+ms.sourcegitcommit: d938c39afb9216db377d0f0ecdaa53936a851059
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57357945"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58634533"
 ---
 # <a name="adorners-overview"></a>표시기 개요
 표시기는 특수 한 유형의 <xref:System.Windows.FrameworkElement>사용자에 게 시각 신호를 제공 하는 데 사용 합니다. 표시기는 다른 용도로 요소에 기능 핸들을 추가하거나 컨트롤에 대한 상태 정보를 제공하는 데 사용할 수 있습니다.  
@@ -55,7 +55,7 @@ ms.locfileid: "57357945"
   
  다음 이미지에 적용 된 SimpleCircleAdorner를 보여 줍니다.는 <xref:System.Windows.Controls.TextBox>합니다.  
   
- ![표시기 예제: 표시 된 TextBox](./media/adornedtextbox.png "AdornedTextBox")  
+ ![표시 된 텍스트 상자를 보여 주는 스크린샷.](./media/adorners-overview/simplecircleadorner-textbox.png)  
   
 <a name="rendering_behavior_for_Adorners"></a>   
 ## <a name="rendering-behavior-for-adorners"></a>표시기에 대한 렌더링 동작  
