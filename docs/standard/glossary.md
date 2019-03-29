@@ -20,19 +20,19 @@ Ahead-Of-Time 컴파일러입니다.
 
 [JIT](#jit)와 비슷한 이 컴파일러도 [IL](#il)을 기계어 코드로 변환합니다. JIT 컴파일과 달리 AOT 컴파일은 애플리케이션이 실행되기 전에 수행되며 일반적으로 다른 컴퓨터에서 수행됩니다. AOT 도구 체인은 런타임에 컴파일되지 않으므로 컴파일 시간을 최소화할 필요가 없습니다. 즉, 더 많은 시간을 최적화하는 데 사용할 수 있습니다. AOT의 컨텍스트는 전체 애플리케이션이므로 AOT 컴파일러는 모듈 간 연결 및 전체 프로그램 분석도 수행합니다. 즉, 모든 참조가 수행되고 단일 실행 파일이 생성된다는 의미입니다.
 
-[CoreRT](#corert) 및 [.NET 네이티브](#net-native)를 참조하세요.
+[CoreRT](#corert)와 [.NET 네이티브](#net-native)를 참조하세요.
 
 ## <a name="aspnet"></a>ASP.NET 
 
-.NET Framework와 함께 제공되는 원래 ASP.NET 구현입니다.
+.NET Framework와 함께 제공되는 원래 ASP.NET 구현체입니다.
 
-경우에 따라 ASP.NET은 ASP.NET Core를 포함하여 두 ASP.NET 구현을 나타내는 포괄적인 용어입니다. 지정된 인스턴스에서 이 용어가 전달하는 의미는 컨텍스트에 의해 결정됩니다. 두 구현을 모두 의미하는 데 ASP.NET을 사용하지 않는 것을 분명히 하려는 경우 ASP.NET 4.x를 참조하세요. 
+경우에 따라 ASP.NET은 ASP.NET Core를 포함한 두가지 ASP.NET 구현체를 나타내는 포괄적인 용어입니다. 지정된 인스턴스에서 이 용어가 전달하는 의미는 컨텍스트에 의해 결정됩니다. 두 구현체을 모두 의미하는 데 ASP.NET을 사용하지 않는 것을 분명히 하려는 경우 ASP.NET 4.x를 참조하세요. 
 
 [ASP.NET 설명서](/aspnet/#pivot=aspnet)를 참조하세요.
 
 ## <a name="aspnet-core"></a>ASP.NET Core
 
-.NET Core를 기반으로 하는 ASP.NET의 플랫폼 간 고성능 오픈 소스 구현입니다.
+다양한 플랫폼에서 사용할 수 있는 고성능의, .NET Core를 기반으로 하는 ASP.NET의 오픈 소스 구현체입니다.
 
 [ASP.NET Core 설명서](/aspnet/#pivot=core)를 참조하세요.
 
@@ -40,13 +40,13 @@ Ahead-Of-Time 컴파일러입니다.
 
 애플리케이션이나 다른 어셈블리에서 호출할 수 있는 API 컬렉션을 포함할 수 있는 *.dll*/*.exe* 파일입니다.
 
-어셈블리에는 인터페이스, 클래스, 구조체, 열거형 및 대리자와 같은 형식이 포함될 수 있습니다. 프로젝트의 *bin* 폴더에 있는 어셈블리를 *바이너리*라고도 합니다. [라이브러리](#library)를 참조하세요.
+어셈블리에는 인터페이스와 클래스, 구조체, 열거형, 대리자와 같은 형식이 포함될 수 있습니다. 프로젝트의 *bin* 폴더에 있는 어셈블리를 *바이너리*라고도 합니다. [라이브러리](#library)를 참조하세요.
 
 ## <a name="clr"></a>CLR
 
 공용 언어 런타임입니다.
 
-정확한 의미는 컨텍스트에 따라 달라지지만 일반적으로 .NET Framework의 런타임을 나타냅니다. CLR은 메모리 할당 및 관리를 처리합니다. 또한 CLR은 앱을 실행할 뿐만 아니라 [JIT](#jit) 컴파일러를 사용하여 즉시 코드를 생성하고 컴파일하는 가상 머신입니다. 현재 Microsoft CLR 구현은 Windows 전용입니다.
+정확한 의미는 컨텍스트에 따라 달라지지만 일반적으로 .NET Framework의 런타임을 나타냅니다. CLR은 메모리 할당 및 관리를 처리합니다. 또한 CLR은 앱을 실행할 뿐만 아니라 [JIT](#jit) 컴파일러를 사용하여 즉시 코드를 생성하고 컴파일하는 가상 머신입니다. 현재 Microsoft CLR 구현체는 Windows 전용입니다.
 
 ## <a name="coreclr"></a>CoreCLR
 
@@ -66,11 +66,11 @@ System.\* (및 제한된 범위의 Microsoft.\*) 네임스페이스를 구성하
 
 CLR/CoreCLR과 달리 CoreRT는 가상 머신이 아닙니다. 즉, [JIT](#jit)를 포함하지 않으므로 즉시 코드를 생성하고 실행하는 기능을 포함하지 않습니다. 그러나 [GC](#gc)와 RTTI(런타임 형식 식별) 및 리플렉션에 대한 기능은 포함합니다. 그러나 해당 형식 시스템은 리플렉션에 대한 메타데이터가 필요하지 않도록 설계되었습니다. 따라서 불필요한 메타데이터를 분리하고 더 중요하게는 앱이 사용하지 않는 코드를 식별할 수 있는 [AOT](#aot) 도구 체인을 사용할 수 있습니다. CoreRT는 개발 중입니다.
 
-[.NET 네이티브 및 CoreRT 소개](https://github.com/dotnet/corert/blob/master/Documentation/intro-to-corert.md)를 참조하세요.
+[.NET 네이티브와 CoreRT 소개](https://github.com/dotnet/corert/blob/master/Documentation/intro-to-corert.md)를 참조하세요.
 
-## <a name="cross-platform"></a>플랫폼 간
+## <a name="cross-platform"></a>크로스 플랫폼
 
-각 운영 체제에 맞게 다시 작성할 필요 없이 Linux, Windows 및 iOS와 같은 다양한 운영 체제에서 사용할 수 있는 애플리케이션을 개발하고 실행하는 기능입니다. 이를 통해 다양한 플랫폼에서 애플리케이션 간에 코드를 다시 사용하고 일관성을 유지할 수 있습니다.
+각 운영 체제에 맞게 다시 작성할 필요 없이 Linux와 Windows, iOS와 같은 다양한 운영 체제에서 사용할 수 있는 애플리케이션을 개발하고 실행하는 기능입니다. 이를 통해 다양한 플랫폼에서 애플리케이션 간에 코드를 다시 사용하고 일관성을 유지할 수 있습니다.
 
 ## <a name="ecosystem"></a>에코시스템
 
@@ -78,7 +78,7 @@ CLR/CoreCLR과 달리 CoreRT는 가상 머신이 아닙니다. 즉, [JIT](#jit)�
 
 “.NET 에코시스템”이라는 용어는 타사 앱 및 라이브러리를 포함한다는 점에서 “.NET 스택”과 같은 유사한 용어와 다릅니다. 다음은 문장에서의 예제입니다.
 
-- “[.NET Standard](#net-standard)는 .NET 에코시스템의 균일성을 높이기 위한 것입니다.” 
+- “[.NET Standard](#net-standard)는 .NET 에코시스템의 통일성을 높이기 위한 것입니다.” 
 
 ## <a name="framework"></a>프레임워크
 
@@ -95,7 +95,7 @@ CLR/CoreCLR과 달리 CoreRT는 가상 머신이 아닙니다. 즉, [JIT](#jit)�
 
 가비지 수집기입니다.
 
-가비지 수집기는 자동 메모리 관리의 구현입니다.  GC는 개체가 사용한 메모리에서 더 이상 사용되지 않는 메모리를 해제합니다. 
+가비지 수집기는 자동 메모리 관리의 구현체입니다.  GC는 개체가 사용한 메모리에서 더 이상 사용되지 않는 메모리를 해제합니다. 
 
 [가비지 수집](garbage-collection/index.md)을 참조하세요.
 
@@ -111,16 +111,16 @@ Just-In-Time 컴파일러입니다.
 
 [AOT](#aot)와 유사한 이 컴파일러는 [IL](#il)을 프로세서에서 이해하는 기계어 코드로 변환합니다. AOT와 달리 JIT 컴파일은 요청 시 수행되며 코드가 실행되어야 하는 것과 동일한 컴퓨터에서 수행됩니다. JIT 컴파일은 애플리케이션이 실행되는 동안 수행되므로 컴파일 시간이 실행 시간의 일부입니다. 따라서 JIT 컴파일러는 결과 코드가 생성할 수 있는 시간 단축과 코드 최적화에 소요된 시간의 균형을 맞춰야 합니다. 그러나 JIT는 실제 하드웨어를 인식하므로 개발자가 다른 구현을 제공할 필요가 없도록 합니다.
 
-## <a name="implementation-of-net"></a>.NET의 구현
+## <a name="implementation-of-net"></a>.NET의 구현체
 
-.NET의 구현에는 다음이 포함됩니다.
+.NET의 구현체에는 다음이 포함됩니다.
 
 - 하나 이상의 런타임. 예를 들면 다음과 같습니다. CLR, CoreCLR, CoreRT.
 - .NET Standard의 버전을 구현하고 추가 API를 포함할 수 있는 클래스 라이브러리. 예: .NET Framework 기본 클래스 라이브러리, .NET Core 기본 클래스 라이브러리.
 - 필요에 따라 하나 이상의 애플리케이션 프레임워크. 예를 들면 다음과 같습니다. ASP.NET, Windows Forms 및 WPF가 .NET Framework에 포함됩니다.
 - 필요에 따라 개발 도구. 일부 개발 도구는 여러 구현체에서 공통적으로 사용할 수 있음.
 
-.NET 구현의 예:
+.NET 구현체의 예:
 
 - [.NET Framework](#net-framework)
 - [.NET Core](#net-core)
@@ -134,17 +134,17 @@ Just-In-Time 컴파일러입니다.
 
 ## <a name="metapackage"></a>메타패키지
 
-고유한 라이브러리는 없지만 유일한 종속성 목록인 NuGet 패키지입니다. 포함된 패키지는 필요에 따라 대상 프레임워크에 대한 API를 설정할 수 있습니다.
+고유한 라이브러리는 없고 종속성 목록만 갖는 NuGet 패키지입니다. 포함된 패키지는 필요에 따라 대상 프레임워크에 대한 API를 설정할 수 있습니다.
 
 [패키지, 메타패키지 및 프레임워크](../core/packages.md)를 참조하세요.
 
 ## <a name="mono"></a>Mono
 
-Mono는 작은 런타임이 필요할 때 주로 사용되는 오픈 소스 [플랫폼 간](#cross-platform) .NET 구현입니다. 이는 Android, Mac, iOS, tvOS 및 watchOS에서 Xamarin 애플리케이션의 성능을 향상하는 런타임으로, 주로 작은 사용 공간이 필요한 앱에 초점을 맞춥니다.
+Mono는 작은 런타임이 필요할 때 주로 사용되는 오픈 소스 [크로스 플랫폼](#cross-platform) .NET 구현체입니다. 이는 Android와 Mac, iOS, tvOS, watchOS에서 Xamarin 애플리케이션의 성능을 향상시키는 런타임으로, 주로 작은 사용 공간이 필요한 앱에 초점을 맞춥니다.
 
 Mono는 현재 게시된 .NET Standard 버전을 모두 지원합니다.
 
-지금까지 Mono는 .NET Framework의 더 큰 API를 구현하고 Unix에서 가장 인기 있는 기능 중 일부를 에뮬레이트했습니다. 경우에 따라 Unix에서 해당 기능을 사용하는 .NET 애플리케이션을 실행하는 데도 사용됩니다.
+지금까지 Mono는 .NET Framework의 방대한 API를 구현하고 Unix에서 가장 인기 있는 기능의 일부를 따라서 만들었습니다. 경우에 따라 Unix에서 해당 기능을 사용하는 .NET 애플리케이션을 실행하는 데도 사용됩니다.
 
 일반적으로 Mono는 Just-In-Time 컴파일러에서 사용되지만 iOS 같은 플랫폼에 사용되는 전체 정적 컴파일러(Ahead-Of-Time 컴파일) 기능도 제공합니다.
 
@@ -152,19 +152,19 @@ Mono에 대한 자세한 내용은 [Mono 설명서](https://www.mono-project.com
 
 ## <a name="net"></a>.NET
 
-[.NET Standard](#net-standard) 및 모든 [.NET 구현](#implementation-of-net)과 워크로드에 대한 포괄적인 용어입니다. 항상 대문자로 표기되며, “.Net”이 아닙니다.
+[.NET Standard](#net-standard) 및 모든 [.NET 구현체](#implementation-of-net)와 워크로드에 대한 포괄적인 용어입니다. 항상 대문자로 표기하며, “.Net”이 아닙니다.
 
 [.NET 가이드](index.md)를 참조하세요.
 
 ## <a name="net-core"></a>.NET Core 
 
-.NET의 플랫폼 간 고성능 오픈 소스 구현입니다. CoreCLR(Core 공용 언어 런타임), Core AOT 런타임(CoreRT, 개발 중), Core 기본 클래스 라이브러리 및 Core SDK를 포함합니다.
+다양한 .NET 플랫폼에서 사용할 수 있는 고성능 오픈 소스 구현체입니다. CoreCLR(Core 공용 언어 런타임)과 Core AOT 런타임(CoreRT, 개발 중), Core 기본 클래스 라이브러리, Core SDK를 포함합니다.
 
 [.NET Core](../core/index.md)를 참조하세요.
 
 ## <a name="net-core-cli"></a>.NET Core CLI
 
-.NET Core 애플리케이션을 개발하기 위한 플랫폼 간 도구 체인입니다.
+다양한 플랫폼에서 사용할 수 있는 .NET Core 애플리케이션 개발용 툴 체인입니다.
 
 [.NET Core CLI(명령줄 인터페이스) 도구](../core/tools/index.md)를 참조하세요.
 
@@ -176,23 +176,23 @@ Mono에 대한 자세한 내용은 [Mono 설명서](https://www.mono-project.com
 
 ## <a name="net-framework"></a>.NET Framework
 
-Windows에서만 실행되는 .NET의 구현입니다. CLR(공용 언어 런타임), 기본 클래스 라이브러리 및 ASP.NET, Windows Forms, WPF 등의 애플리케이션 프레임워크 라이브러리를 포함합니다.
+Windows에서만 실행되는 .NET의 구현체입니다. CLR(공용 언어 런타임), 기본 클래스 라이브러리 및 ASP.NET, Windows Forms, WPF 등의 애플리케이션 프레임워크 라이브러리를 포함합니다.
 
 [.NET Framework 가이드](../framework/index.md)를 참조하세요.
 
 ## <a name="net-native"></a>.NET 네이티브
 
-JIT(Just-In-Time)와 반대로 네이티브 코드 AOT(Ahead-Of-Time)를 생성하는 컴파일러 도구 체인입니다.
+JIT(Just-In-Time)와 반대로 네이티브 코드 AOT(Ahead-Of-Time)를 생성하는 컴파일러 툴 체인입니다.
 
 컴파일은 C++ 컴파일러 및 링커가 작동하는 방식과 유사하게 개발자의 컴퓨터에서 수행되며, 사용되지 않는 코드를 제거하고 더 많은 시간을 최적화에 사용합니다. 라이브러리에서 코드를 추출하여 실행 파일에 병합합니다. 결과는 전체 앱을 나타내는 단일 모듈입니다.
 
-UWP는 .NET 네이티브에서 지원하는 첫 번째 애플리케이션 프레임워크였습니다. 이제 Windows, macOS 및 Linux용 네이티브 콘솔 앱 작성을 지원합니다.
+UWP는 .NET 네이티브에서 지원하는 첫 번째 애플리케이션 프레임워크였습니다. 이제 Windows와 macOS, Linux용 네이티브 콘솔 앱 작성을 지원합니다.
 
-[.NET 네이티브 및 CoreRT 소개](https://github.com/dotnet/corert/blob/master/Documentation/intro-to-corert.md)를 참조하세요.
+[.NET 네이티브와 CoreRT 소개](https://github.com/dotnet/corert/blob/master/Documentation/intro-to-corert.md)를 참조하세요.
 
 ## <a name="net-standard"></a>.NET Standard
 
-각 .NET 구현에서 사용할 수 있는 .NET API의 공식 사양입니다.
+모든 .NET 구현체에서 사용할 수 있는 .NET API의 공식 규격입니다.
 
 .NET Standard 사양은 설명서에서 라이브러리라고도 합니다. 라이브러리는 API 구현을 포함하므로 사양(인터페이스)뿐만 아니라 .NET Standard를 “라이브러리”라고 잘못 부르기도 합니다. .NET Standard 메타패키지(`NETStandard.Library`)의 이름을 참조할 때를 제외하고 설명서에서 이러한 사용을 제거할 계획입니다.
 
@@ -212,18 +212,18 @@ NuGet 패키지(또는 줄여서 패키지)는 작성자 이름과 같은 추가
 
 ## <a name="platform"></a>platform
 
-Windows, macOS, Linux, iOS 및 Android 같은 운영 체제와 해당 운영 체제가 실행되는 하드웨어입니다.
+Windows와 macOS, Linux, iOS, Android 같은 운영 체제와 해당 운영 체제가 실행되는 하드웨어입니다.
 
 다음은 문장에서의 사용 예입니다.
 
-- “.NET Core는 .NET의 플랫폼 간 구현입니다.” 
+- “.NET Core는 다양한 플랫폼에서 사용할 수 있는 .NET의 구현체입니다.” 
 - “PCL 프로필은 Microsoft 플랫폼을 나타내지만 .NET Standard는 플랫폼에 독립적입니다.”
 
-.NET 설명서에서는 .NET의 구현이나 모든 구현을 포함하는 .NET 스택을 의미하는 데 “.NET 플랫폼”을 자주 사용합니다. 이러한 사용은 모두 기본(OS/하드웨어) 의미와 혼동되므로 설명서에서 이러한 사용을 제거할 계획입니다.
+.NET 설명서에서는 .NET의 구현체나 모든 구현체를 포함하는 .NET 스택을 의미하는 용어로 “.NET 플랫폼”을 자주 사용합니다. 이렇게 사용한 부분은 모두 기본적인(OS/하드웨어) 의미와 혼동되므로 설명서에서 이러한 사용을 제거할 예정입니다.
 
 ## <a name="runtime"></a>런타임
 
-관리되는 프로그램에 대한 실행 환경입니다.
+관리되는 프로그램의 실행 환경입니다.
 
 OS는 런타임 환경의 일부이지만 .NET 런타임의 일부는 아닙니다. 다음은 .NET 런타임의 몇 가지 예입니다.
 
@@ -232,7 +232,7 @@ OS는 런타임 환경의 일부이지만 .NET 런타임의 일부는 아닙니�
 - .NET 네이티브(UWP)
 - Mono 런타임
 
-.NET 설명서에서는 경우에 따라 “런타임”을 사용하여 .NET의 구현을 의미합니다. 예를 들어 다음 문장에서 “런타임”은 “구현”으로 대체되어야 합니다.
+.NET 설명서에서는 경우에 따라 “런타임”을 사용하여 .NET의 구현체를 의미합니다. 예를 들어 다음 문장에서 “런타임”은 “구현체”로 대체되어야 합니다.
 
 - “다양한 .NET 런타임에서 특정 버전의 .NET Standard를 구현합니다.”
 - “여러 런타임에서 실행되도록 만들어진 라이브러리는 이 프레임워크를 대상으로 해야 합니다.” (.NET Standard를 참조)

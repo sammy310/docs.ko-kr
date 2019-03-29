@@ -131,9 +131,9 @@ C#에서는 많은 연산자를 제공하며, 이러한 연산자는 식에서 �
 
 이러한 연산자는 다음 섹션보다 우선 순위가 높고 이전 섹션보다 우선 순위가 낮습니다.
 
-[x == y](equality-comparison-operator.md) – 같음. 기본적으로 `string`이 아닌 참조 형식에 대해 참조 같음(ID 테스트)을 반환합니다. 그러나 형식이 `==`를 오버로드할 수 있으므로 ID를 테스트하려는 경우에는 `object`에서 `ReferenceEquals` 메서드를 사용하는 것이 가장 좋습니다.
+[x == y](equality-operators.md#equality-operator-) – 같음. 기본적으로 `string`이 아닌 참조 형식에 대해 참조 같음(ID 테스트)을 반환합니다. 그러나 형식이 `==`를 오버로드할 수 있으므로 ID를 테스트하려는 경우에는 `object`에서 `ReferenceEquals` 메서드를 사용하는 것이 가장 좋습니다.
 
-[x != y](not-equal-operator.md) – 같지 않음. `==`에 대한 설명을 참조하세요. 형식이 `==`를 오버로드하는 경우 `!=`를 오버로드해야 합니다.
+[x != y](equality-operators.md#inequality-operator-) – 같지 않음. `==`에 대한 설명을 참조하세요. 형식이 `==`를 오버로드하는 경우 `!=`를 오버로드해야 합니다.
 
 ## <a name="logical-and-operator"></a>논리곱 연산자
 
