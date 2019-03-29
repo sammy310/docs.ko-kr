@@ -1,0 +1,105 @@
+items:
+- name: 애플리케이션 도메인 및 어셈블리
+  href: index.md
+  items:
+  - name: 공용 언어 런타임의 어셈블리
+    href: assemblies-in-the-common-language-runtime.md
+    items:
+    - name: 어셈블리 콘텐츠
+      href: assembly-contents.md
+    - name: 어셈블리 매니페스트
+      href: assembly-manifest.md
+    - name: 전역 어셈블리 캐시
+      href: gac.md
+    - name: 강력한 이름의 어셈블리
+      href: strong-named-assemblies.md
+    - name: 어셈블리 보안 고려 사항
+      href: assembly-security-considerations.md
+    - name: 어셈블리 버전 관리
+      href: assembly-versioning.md
+    - name: 어셈블리 배치
+      href: assembly-placement.md
+    - name: 어셈블리 및 Side-by-Side 실행
+      href: assemblies-and-side-by-side-execution.md
+  - name: 응용 프로그램 도메인
+    href: application-domains.md
+  - name: 애플리케이션 도메인 및 어셈블리 방법 항목
+    href: application-domains-and-assemblies-how-to-topics.md
+  - name: 애플리케이션 도메인 사용
+    href: use.md
+    items:
+    - name: '방법: 애플리케이션 도메인 만들기'
+      href: how-to-create-an-application-domain.md
+    - name: '방법: 애플리케이션 도메인 언로드'
+      href: how-to-unload-an-application-domain.md
+    - name: '방법: 애플리케이션 도메인 구성'
+      href: how-to-configure-an-application-domain.md
+    - name: 애플리케이션 도메인에서 설치 정보 검색
+      href: retrieve-setup-information.md
+    - name: '방법: 애플리케이션 도메인에 어셈블리 로드'
+      href: how-to-load-assemblies-into-an-application-domain.md
+    - name: '방법: 어셈블리에서 형식 및 멤버 정보 가져오기'
+      href: how-to-obtain-type-and-member-information-from-an-assembly.md
+    - name: 어셈블리 섀도 복사
+      href: shadow-copy-assemblies.md
+    - name: '방법: 첫째 예외 알림 받기'
+      href: how-to-receive-first-chance-exception-notifications.md
+    - name: 어셈블리 로드 해결
+      href: resolve-assembly-loads.md
+  - name: 어셈블리를 사용한 프로그래밍
+    href: programming-with-assemblies.md
+    items:
+    - name: 어셈블리 만들기
+      href: create-assemblies.md
+    - name: 어셈블리 이름
+      href: assembly-names.md
+    - name: '방법: 어셈블리의 정규화된 이름 식별'
+      href: how-to-determine-assembly-fully-qualified-name.md
+    - name: 완전 신뢰 모드에서 인트라넷 애플리케이션 실행
+      href: running-intranet-applications-in-full-trust.md
+    - name: 어셈블리 위치
+      href: assembly-location.md
+    - name: '방법: 단일 파일 어셈블리 빌드'
+      href: how-to-build-a-single-file-assembly.md
+    - name: 다중 파일 어셈블리
+      href: multifile-assemblies.md
+    - name: '방법: 다중 파일 어셈블리 빌드'
+      href: how-to-build-a-multifile-assembly.md
+    - name: 어셈블리 특성 설정
+      href: set-assembly-attributes.md
+    - name: 강력한 이름의 어셈블리 만들기 및 사용
+      href: create-and-use-strong-named-assemblies.md
+      items:
+      - name: '방법: 공개/개인 키 쌍 만들기'
+        href: how-to-create-a-public-private-key-pair.md
+      - name: '방법: 강력한 이름으로 어셈블리 서명'
+        href: how-to-sign-an-assembly-with-a-strong-name.md
+      - name: 향상된 강력한 이름 지정
+        href: enhanced-strong-naming.md
+      - name: '방법: 강력한 이름의 어셈블리 참조'
+        href: how-to-reference-a-strong-named-assembly.md
+      - name: '방법: 강력한 이름 건너뛰기 기능 비활성화'
+        href: how-to-disable-the-strong-name-bypass-feature.md
+    - name: 어셈블리 서명 연기
+      href: delay-sign-assembly.md
+    - name: 어셈블리 및 전역 어셈블리 캐시 사용
+      href: working-with-assemblies-and-the-gac.md
+      items:
+      - name: '방법: 글로벌 어셈블리 캐시에 어셈블리 설치'
+        href: how-to-install-an-assembly-into-the-gac.md
+      - name: '방법: 글로벌 어셈블리 캐시의 내용 보기'
+        href: how-to-view-the-contents-of-the-gac.md
+      - name: '방법: 글로벌 어셈블리 캐시에서 어셈블리 제거'
+        href: how-to-remove-an-assembly-from-the-gac.md
+      - name: 전역 어셈블리 캐시에서 서비스되는 구성 요소 사용
+        href: use-serviced-components-with-the-gac.md
+    - name: '방법: 어셈블리 콘텐츠 보기'
+      href: how-to-view-assembly-contents.md
+    - name: 공용 언어 런타임의 형식 전달
+      href: type-forwarding-in-the-common-language-runtime.md
+ms.openlocfilehash: 8a928eda090b144daf61c768fb5d8b8de079af16
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58470089"

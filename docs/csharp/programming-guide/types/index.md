@@ -66,10 +66,12 @@ ms.assetid: f782d7cc-035e-4500-b1b1-36a9881130ad
   
 -   CTS의 각 형식은 *값 형식* 또는 *참조 형식*으로 정의됩니다. 여기에는 .NET 클래스 라이브러리의 모든 사용자 지정 형식과 자체 사용자 정의 형식도 포함됩니다. [struct](../../../csharp/language-reference/keywords/struct.md)를 사용하여 정의한 형식은 값 형식이고, 모든 기본 제공 숫자 형식은 `structs`입니다. [class](../../../csharp/language-reference/keywords/class.md) 키워드를 사용하여 정의한 형식은 참조 형식입니다. 참조 형식과 값 형식의 컴파일 타임 규칙 및 런타임 동작은 서로 다릅니다.  
   
- 다음 그림에서는 CTS에서 값 형식과 참조 형식 간의 관계를 보여 줍니다.  
+ 다음 그림에서는 CTS에서 값 형식과 참조 형식 간의 관계를 보여 줍니다.
+
+ 다음 이미지에서는 CTS의 값 형식과 참조 형식을 보여줍니다. 
   
- ![값 형식과 참조 형식](../../../csharp/programming-guide/types/media/valuetypescts.png "ValueTypesCTS")  
-CTS의 값 형식과 참조 형식  
+  
+ ![CTS 값 형식 및 참조 형식을 보여주는 스크린샷](./media/index/value-reference-types-common-type-system.png)  
   
 > [!NOTE]
 >  가장 일반적으로 사용되는 형식은 모두 <xref:System> 네임스페이스에 구성되어 있다는 사실을 알 수 있습니다. 그러나 형식이 포함된 네임스페이스는 형식이 값 형식인지 또는 참조 형식인지와 관련이 없습니다.  

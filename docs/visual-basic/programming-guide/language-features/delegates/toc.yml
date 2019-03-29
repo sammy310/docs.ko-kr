@@ -1,0 +1,16 @@
+items:
+- name: 대리자
+  href: index.md
+  items:
+  - name: '방법: 대리자 메서드 호출'
+    href: how-to-invoke-a-delegate-method.md
+  - name: '방법: 다른 프로시저에 프로시저 전달'
+    href: how-to-pass-procedures-to-another-procedure.md
+  - name: 완화된 대리자 변환
+    href: relaxed-delegate-conversion.md
+ms.openlocfilehash: 245db8051550fbdaa16338a8f184c0b900b20139
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58469873"

@@ -38,7 +38,7 @@ ms.assetid: 149f5ca5-5b34-4746-9542-1ae43b2d0256
 어셈블리를 사용하려면 해당 참조를 추가해야 합니다. 그런 다음 C#의 [using 지시문](../../csharp/language-reference/keywords/using-directive.md) 또는 Visual Basic의 [Imports 지시문](../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)을 사용하여 사용할 항목의 네임스페이스를 선택할 수 있습니다. 어셈블리를 참조하고 가져오면 해당 코드가 소스 파일에 속해 있는 것처럼 해당 네임스페이스의 액세스 가능한 모든 유형, 속성, 메서드 및 다른 멤버를 애플리케이션에서 사용할 수 있습니다.
 
 > [!NOTE]
-> .NET 클래스 라이브러리의 대부분의 어셈블리는 자동으로 참조됩니다. 경우에 따라, 하지만, 시스템 어셈블리를 자동으로 참조할 수 없습니다. .NET Core에서는 Visual Studio에서 NuGet Package Manager를 사용하여 어셈블리가 포함된 NuGet 패키지에 대한 참조를 추가하거나, *.csproj 또는 *.vbproj 프로젝트에 대한 [<PackageReference>](../../core/tools/dependencies.md#the-new-packagereference-element) 요소를 어셈블리로 추가할 수 있습니다. .NET framework에서 Visual Studio의 **참조 추가** 대화 상자를 사용하거나 [C#](../../csharp/language-reference/compiler-options/reference-compiler-option.md)의 `-reference` 명령줄 옵션 또는 [Visual Basic](../../visual-basic/reference/command-line-compiler/reference.md) 컴파일러를 사용하여 어셈블리에 대한 참조를 추가할 수 있습니다.
+> .NET 클래스 라이브러리의 대부분의 어셈블리는 자동으로 참조됩니다. 경우에 따라, 하지만, 시스템 어셈블리를 자동으로 참조할 수 없습니다. .NET Core에서는 Visual Studio에서 NuGet Package Manager를 사용하여 어셈블리가 포함된 NuGet 패키지에 대한 참조를 추가하거나, *.csproj 또는 *.vbproj 프로젝트에 대한 [\<PackageReference>](../../core/tools/dependencies.md#the-new-packagereference-element) 요소를 어셈블리로 추가할 수 있습니다. .NET framework에서 Visual Studio의 **참조 추가** 대화 상자를 사용하거나 [C#](../../csharp/language-reference/compiler-options/reference-compiler-option.md)의 `-reference` 명령줄 옵션 또는 [Visual Basic](../../visual-basic/reference/command-line-compiler/reference.md) 컴파일러를 사용하여 어셈블리에 대한 참조를 추가할 수 있습니다.
 
 C#에서는 단일 애플리케이션에서 동일한 어셈블리의 두 버전을 사용할 수도 있습니다. 자세한 내용은 [extern alias](../../csharp/language-reference/keywords/extern-alias.md)를 참조하세요.
 

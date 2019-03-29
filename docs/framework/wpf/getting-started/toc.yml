@@ -1,0 +1,20 @@
+items:
+- name: 시작
+  href: index.md
+  items:
+  - name: Visual Studio에서의 WPF 소개
+    href: introduction-to-wpf-in-vs.md
+  - name: WPF 버전 4.5의 새로운 기능
+    href: whats-new.md
+  - name: '연습: 내 첫 WPF 데스크톱 애플리케이션'
+    href: walkthrough-my-first-wpf-desktop-application.md
+  - name: WPF 연습
+    href: wpf-walkthroughs.md
+  - name: WPF 커뮤니티 사용자 의견
+    href: community-feedback.md
+ms.openlocfilehash: bebf111d94212c0a337602a7921f7ec5e639eed6
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58470881"

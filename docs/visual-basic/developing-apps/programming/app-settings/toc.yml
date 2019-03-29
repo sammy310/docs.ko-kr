@@ -1,0 +1,18 @@
+items:
+- name: Accessing Application Settings
+  href: index.md
+  items:
+  - name: '방법: 사용자 설정의 속성 그리드 만들기'
+    href: how-to-create-property-grids-for-user-settings.md
+  - name: '방법: 사용자 설정 유지'
+    href: how-to-persist-user-settings.md
+  - name: '방법: 사용자 설정 변경'
+    href: how-to-change-user-settings.md
+  - name: '방법: 애플리케이션 설정 읽기'
+    href: how-to-read-application-settings.md
+ms.openlocfilehash: 1360983a14f27ca882a6d5323ee4620386352b99
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58470865"

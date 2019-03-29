@@ -1,0 +1,16 @@
+items:
+- name: Serialization(C#)
+  href: index.md
+  items:
+  - name: '방법: XML 파일에 개체 데이터 쓰기'
+    href: how-to-write-object-data-to-an-xml-file.md
+  - name: '방법: XML 파일에서 개체 데이터 읽기'
+    href: how-to-read-object-data-from-an-xml-file.md
+  - name: '연습: Visual Studio에서 개체 유지'
+    href: walkthrough-persisting-an-object-in-visual-studio.md
+ms.openlocfilehash: ccf7c795b437ff2c4046b6005ec7b05528aa884f
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58470377"

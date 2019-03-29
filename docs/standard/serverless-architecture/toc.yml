@@ -1,0 +1,42 @@
+items:
+- name: 서버를 사용하지 않는 앱 전자책
+  href: index.md
+  items:
+  - name: 아키텍처 접근 방식
+    href: architecture-approaches.md
+    items:
+    - name: 아키텍처 배포 접근 방식
+      href: architecture-deployment-approaches.md
+  - name: 서버리스 아키텍처
+    href: serverless-architecture.md
+    items:
+    - name: 서버리스 아키텍처 고려 사항
+      href: serverless-architecture-considerations.md
+    - name: 서버리스 디자인 예제
+      href: serverless-design-examples.md
+  - name: Azure 서버리스 플랫폼
+    href: azure-serverless-platform.md
+    items:
+    - name: Azure Functions
+      href: azure-functions.md
+    - name: 응용 프로그램 정보
+      href: application-insights.md
+    - name: Azure Logic Apps
+      href: logic-apps.md
+    - name: Azure Event Grid
+      href: event-grid.md
+  - name: 지속 가능한 Azure Functions
+    href: durable-azure-functions.md
+    items:
+    - name: 오케스트레이션 패턴
+      href: orchestration-patterns.md
+  - name: 서버리스 비즈니스 시나리오 및 사용 사례
+    href: serverless-business-scenarios.md
+  - name: 결론
+    href: serverless-conclusion.md
+ms.openlocfilehash: d8d15dc77dd19b6e32319a98be21ddfa43073202
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58470612"
