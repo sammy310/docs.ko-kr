@@ -38,8 +38,7 @@ ms.locfileid: "57705755"
   
 ### <a name="to-switch-between-the-provided-renderers"></a>제공된 렌더러 간에 전환하려면  
   
--   
-  <xref:System.Windows.Forms.ToolStrip.RenderMode%2A> 속성을 원하는 <xref:System.Windows.Forms.ToolStripRenderMode> 값으로 설정합니다.  
+-   <xref:System.Windows.Forms.ToolStrip.RenderMode%2A> 속성을 원하는 <xref:System.Windows.Forms.ToolStripRenderMode> 값으로 설정합니다.  
   
      <xref:System.Windows.Forms.ToolStripRenderMode.ManagerRenderMode>에서는 정적 <xref:System.Windows.Forms.ToolStrip.RenderMode%2A>가 응용 프로그램에 대한 렌더러를 결정합니다. <xref:System.Windows.Forms.ToolStripRenderMode>의 다른 값은 <xref:System.Windows.Forms.ToolStripRenderMode.Custom>, <xref:System.Windows.Forms.ToolStripRenderMode.Professional> 및 <xref:System.Windows.Forms.ToolStripRenderMode.System>입니다.  
   

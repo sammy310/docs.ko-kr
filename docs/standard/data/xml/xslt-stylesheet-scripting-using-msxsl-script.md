@@ -31,8 +31,7 @@ ms.locfileid: "56835254"
   
  여기서 `msxsl`은 네임스페이스 `urn:schemas-microsoft-com:xslt`에 바인딩되는 접두사입니다.  
   
- `language` 특성은 필수 항목은 아니지만, 지정할 경우 값이 C#, VB, JScript, JavaScript, VisualBasic 또는 CSharp 중 하나여야 합니다. 지정하지 않을 경우 언어 기본값은 JScript입니다. 
-  `language-name`은 대/소문자를 구분하지 않으므로 'JavaScript'와 'javascript'는 같습니다.  
+ `language` 특성은 필수 항목은 아니지만, 지정할 경우 값이 C#, VB, JScript, JavaScript, VisualBasic 또는 CSharp 중 하나여야 합니다. 지정하지 않을 경우 언어 기본값은 JScript입니다. `language-name`은 대/소문자를 구분하지 않으므로 'JavaScript'와 'javascript'는 같습니다.  
   
  `implements-prefix` 특성은 필수 항목입니다. 이 특성은 네임스페이스를 선언하고 스크립트 블록에 연결하는 데 사용됩니다. 이 특성 값은 네임스페이스를 나타내는 접두사입니다. 이 네임스페이스는 스타일시트에서 정의할 수 있습니다.  
   
@@ -46,8 +45,7 @@ ms.locfileid: "56835254"
   
  어셈블리에서 증명 정보를 가져오려면 `this.GetType().Assembly.Evidence`를 사용합니다. URI(Uniform Resource Identifier)에서 증명 정보를 가져오려면 `Evidence e = XmlSecureResolver.CreateEvidenceForUrl(stylesheetURI)`을 사용합니다.  
   
- 
-  <xref:System.Xml.Xsl.XslTransform.Load%2A>가 아닌 <xref:System.Xml.XmlResolver>를 사용하는 `Evidence` 메서드를 사용하는 경우 어셈블리의 보안 영역은 기본적으로 Full Trust가 됩니다. 자세한 내용은 <xref:System.Security.SecurityZone> 및 [명명된 권한 집합](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/4652tyx7(v=vs.100))을 참조하세요.  
+ <xref:System.Xml.Xsl.XslTransform.Load%2A>가 아닌 <xref:System.Xml.XmlResolver>를 사용하는 `Evidence` 메서드를 사용하는 경우 어셈블리의 보안 영역은 기본적으로 Full Trust가 됩니다. 자세한 내용은 <xref:System.Security.SecurityZone> 및 [명명된 권한 집합](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/4652tyx7(v=vs.100))을 참조하세요.  
   
  함수는 `msxsl:script` 요소 내에서 선언할 수 있습니다. 다음 표에서는 기본적으로 지원되는 네임스페이스를 보여 줍니다. 나열된 네임스페이스 외부에 있는 클래스는 사용할 수 있지만, 정규화되어야만 사용 가능합니다.  
   

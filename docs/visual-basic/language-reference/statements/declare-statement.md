@@ -70,8 +70,7 @@ Declare [ charsetmodifier ] [ Function ] name Lib "libname" _
 ## <a name="remarks"></a>설명  
  경우에 따라 프로젝트 외부 (예: DLL 또는 코드 리소스) 파일에 정의 된 프로시저를 호출 해야 합니다. 이렇게 하면 Visual Basic 컴파일러 액세스 절차를 올바르게 호출 하는 데 필요한 정보를 프로시저 위치한, 등 식별 방법, 호출 시퀀스 및 반환 형식으로 사용 하는 문자열 문자 집합 없습니다. `Declare` 문 외부 프로시저에 대 한 참조를 만들고이 필요한 정보를 제공 합니다.  
   
- 
-  `Declare`는 모듈 수준에서만 사용할 수 있습니다. 즉, 합니다 *선언 컨텍스트* 외부 참조를 클래스, 구조체 또는 모듈 이어야 하며 원본 파일, 네임 스페이스, 인터페이스, 프로시저 또는 블록 수 없습니다. 자세한 내용은 [선언 컨텍스트 및 기본 액세스 수준](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md)을 참조하세요.  
+ `Declare`는 모듈 수준에서만 사용할 수 있습니다. 즉, 합니다 *선언 컨텍스트* 외부 참조를 클래스, 구조체 또는 모듈 이어야 하며 원본 파일, 네임 스페이스, 인터페이스, 프로시저 또는 블록 수 없습니다. 자세한 내용은 [선언 컨텍스트 및 기본 액세스 수준](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md)을 참조하세요.  
   
  외부 참조는 기본적으로 [공용](../../../visual-basic/language-reference/modifiers/public.md) 액세스 합니다. 액세스 한정자를 사용 하 여 해당 액세스 수준을 조정할 수 있습니다.  
   

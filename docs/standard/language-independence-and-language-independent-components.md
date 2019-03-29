@@ -358,8 +358,7 @@ ms.locfileid: "57846469"
 ### <a name="generic-types-and-members"></a>제네릭 형식 및 멤버  
  중첩 형식에는 적어도 바깥쪽 형식과 같은 수의 제네릭 매개 변수가 항상 있어야 합니다. 이러한 값은 바깥쪽 형식의 제네릭 매개 변수와 위치가 같습니다. 제네릭 형식은 새 제네릭 매개 변수를 포함할 수도 있습니다.  
   
- 포함 형식의 제네릭 형식 매개 변수와 중첩 형식 사이의 관계는 개별 언어의 구문에 의해 숨겨질 수 있습니다. 다음 예제에서 제네릭 형식 `Outer<T>`에는 두 개의 중첩된 클래스인 `Inner1A` 및 `Inner1B<U>`가 포함됩니다. 
-  `ToString`에서 각 클래스를 상속하는 <xref:System.Object.ToString%2A?displayProperty=nameWithType> 메서드에 대한 호출은 포함하는 해당 클래스의 형식 매개 변수가 각 중첩 클래스에 포함되는 것을 보여 줍니다.  
+ 포함 형식의 제네릭 형식 매개 변수와 중첩 형식 사이의 관계는 개별 언어의 구문에 의해 숨겨질 수 있습니다. 다음 예제에서 제네릭 형식 `Outer<T>`에는 두 개의 중첩된 클래스인 `Inner1A` 및 `Inner1B<U>`가 포함됩니다. `ToString`에서 각 클래스를 상속하는 <xref:System.Object.ToString%2A?displayProperty=nameWithType> 메서드에 대한 호출은 포함하는 해당 클래스의 형식 매개 변수가 각 중첩 클래스에 포함되는 것을 보여 줍니다.  
   
  [!code-csharp[Conceptual.CLSCompliant#29](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.clscompliant/cs/nestedgenerics2.cs#29)]
  [!code-vb[Conceptual.CLSCompliant#29](../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.clscompliant/vb/nestedgenerics2.vb#29)]  

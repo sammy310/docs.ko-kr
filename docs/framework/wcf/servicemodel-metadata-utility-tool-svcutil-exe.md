@@ -81,7 +81,7 @@ BasicHttpContextBinding 끝점이 있는 서비스에 대 한 *Svcutil.exe* Basi
 |인수|설명|
 |--------------|-----------------|
 |`epr`|WS-Metadata Exchange를 지원하는 서비스 엔드포인트에 대한 WS-Addressing EndpointReference가 포함된 XML 파일의 경로입니다. 자세한 내용은 메타데이터 다운로드 단원을 참조하십시오.|
-|`metadataDocumentPath`|메타 데이터 문서의 경로 (*wsdl* 하거나 *xsd*)로 코드 (.wsdl,.xsd,.wspolicy, 또는.wsmex)로 가져올 계약이 포함 된 합니다.<br /><br /> Svcutil은 메타데이터의 원격 URL을 지정하는 경우 import 및 include를 따릅니다. 그러나 로컬 파일 시스템의 메타데이터 파일을 처리하려면 이 인수로 모든 파일을 지정해야 합니다. 이러한 방식으로 네트워크 종속성을 사용할 수 없는 빌드 환경에서 Svcutil을 사용할 수 있습니다. 와일드 카드 (*.xsd, \*.wsdl)이이 인수에 대 한 합니다.|
+|`metadataDocumentPath`|메타 데이터 문서의 경로 (*wsdl* 하거나 *xsd*)로 코드 (.wsdl,.xsd,.wspolicy, 또는.wsmex)로 가져올 계약이 포함 된 합니다.<br /><br /> Svcutil은 메타데이터의 원격 URL을 지정하는 경우 import 및 include를 따릅니다. 그러나 로컬 파일 시스템의 메타데이터 파일을 처리하려면 이 인수로 모든 파일을 지정해야 합니다. 이러한 방식으로 네트워크 종속성을 사용할 수 없는 빌드 환경에서 Svcutil을 사용할 수 있습니다. 와일드 카드 (*.xsd, \*.wsdl) 이이 인수에 대 한 합니다.|
 |`url`|메타데이터를 제공하는 서비스 엔드포인트의 URL 또는 온라인으로 호스팅되는 메타데이터 문서의 URL입니다. 이러한 문서를 검색하는 방법에 대한 자세한 내용은 메타데이터 다운로드 단원을 참조하십시오.|
 
 |옵션|설명|
