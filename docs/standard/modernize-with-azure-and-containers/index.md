@@ -7,7 +7,7 @@ ms.date: 04/28/2018
 ---
 # <a name="modernize-existing-net-applications-with-azure-cloud-and-windows-containers-2nd-edition"></a>Azure 클라우드와 Windows 컨테이너를 사용하여 기존.NET 응용 프로그램을 최신으로 변경하기 (2 판)
 
-![표지 이미지](./media/cover.png)
+![표지 이미지 현대화.NET 응용 프로그램 가이드입니다.](./media/index/web-application-guide-cover-image.png)
 
 게시자:  
 Microsoft Press 및 Microsoft DevDiv  

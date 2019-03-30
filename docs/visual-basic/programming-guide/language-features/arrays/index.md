@@ -56,7 +56,7 @@ Dim sales()() As Double = New Double(11)() {}
 
 - 요소에 포함된 값은 해당 학년의 학생 수를 나타냅니다.
 
-![학생 수를 보여 주는 배열 그림](../../language-features/arrays/media/arrayexampleschool.gif "ArrayExampleSchool") "학생" 배열의 요소
+![학생 수 배열을 보여 주는 다이어그램](./media/index/students-array-elements.gif)
 
 다음 예제에서는 만들고 배열을 사용 하는 Visual Basic 코드를 포함 합니다.
 

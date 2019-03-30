@@ -8,12 +8,12 @@ helpviewer_keywords:
 - images [Windows Forms], cropping
 - images [Windows Forms], scaling
 ms.assetid: 053e3360-bca0-4b25-9afa-0e77a6f17b03
-ms.openlocfilehash: 95343ad2c7bc6a83bc4d935f33712ab910d658ff
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: ff0567dca0fd86736e02a9dd827ec15df8bf2df8
+ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57705820"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58654499"
 ---
 # <a name="how-to-crop-and-scale-images"></a>방법: 자르기 및 배율 이미지
 합니다 <xref:System.Drawing.Graphics> 클래스에는 일부의 <xref:System.Drawing.Graphics.DrawImage%2A> 메서드 중 일부는 자르기 및 배율 이미지를 사용할 수 있는 원본 및 대상 사각형 매개 변수가 있습니다.  
@@ -27,7 +27,7 @@ ms.locfileid: "57705820"
   
  다음 그림은 원래 apple 및 확장을 잘라 나타냅니다.  
   
- ![자르기 및 배율 조정](./media/cscropscale1.png "csCropScale1")  
+ ![원래 이미지 및 이미지는 동일한 스크린샷.](./media/how-to-crop-and-scale-images/original-image-cropped-image.png)  
   
  [!code-csharp[System.Drawing.WorkingWithImages#11](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.WorkingWithImages/CS/Class1.cs#11)]
  [!code-vb[System.Drawing.WorkingWithImages#11](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.WorkingWithImages/VB/Class1.vb#11)]  

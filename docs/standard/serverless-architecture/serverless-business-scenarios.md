@@ -4,14 +4,14 @@ description: 모바일 백 엔드 및 ETL 파이프라인에서 이미지 처리
 author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 06/26/2018
-ms.openlocfilehash: 4299768b701336e427b22b295bc459424bfc5927
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 177fb1d7f79a0067ab185e520778b593d4b8eaf6
+ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53153789"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58653901"
 ---
-# <a name="serverless-business-scenarios-and-use-cases"></a>서버 리스 비즈니스 시나리오 및 사용 사례
+# <a name="serverless-business-scenarios-and-use-cases"></a>서버리스 비즈니스 시나리오 및 사용 사례
 
 여러 사용 사례 및 서버 리스 응용 프로그램에 대 한 시나리오는 있습니다. 이 장에서 다양 한 시나리오를 보여 주는 샘플이 포함 되어 있습니다. 시나리오 관련된 설명서 및 공개 소스 코드 리포지토리 링크에 포함 됩니다. 이 챕터에 샘플 사용을 구축 하 고 서버 리스 솔루션 구현에 직접 시작할 수 있습니다.
 
@@ -61,7 +61,7 @@ Azure 웹 포털에서 또는 Visual Studio에서 간단한 서버 리스 Azure 
 
 추출, 변환 및 로드 (ETL)는 서로 다른 시스템을 통합 하는 일반적인 비즈니스 함수입니다. 기존의 접근 방식에서는 전용된 FTP 서버를 설정한 다음 예약 된 작업을 파일을 구문 분석 하 고 사용 하 여 비즈니스에 맞게 변환 배포에 자주 포함 됩니다. 서버 리스 아키텍처 보다 쉽게 작업 트리거가 파일이 업로드 되 면 때문에 있습니다. Azure Functions 싯 작업 코드는 특정 문제에 중점을 둔 작은의 이상적인 해당 구성을 통해 ETL을 선호 합니다.
 
-![ETL 아키텍처](./media/csvimport.png)
+![Csv 구문 분석 프로세스를 보여 주는 스크린샷.](./media/serverless-business-scenarios/csv-parse-database-import.png)
 
 소스 코드 및 실습 [CSV 가져오기 랩](https://github.com/JeremyLikness/azure-fn-file-process-hol)합니다.
 
@@ -91,7 +91,7 @@ Azure IoT Hub 및 Azure Function의 샘플 구성 됩니다. IoT Hub에서 메�
 * [Azure IoT Hub ping](https://azure.microsoft.com/resources/samples/iot-hub-node-ping/)
 * [몇 분 안에 서버 리스.NET 앱에 대 한 azure Storage](https://blogs.msdn.microsoft.com/webdev/2018/01/25/azure-storage-for-serverless-net-apps-in-minutes/)
 * [사용자 고유 앱 가져오기](https://github.com/JeremyLikness/bring-own-app-connect-17)
-* [CSV 가져오기 랩](https://github.com/JeremyLikness/azure-fn-file-process-hol)
+* [CSV import lab](https://github.com/JeremyLikness/azure-fn-file-process-hol)
 * [Event grid 붙이기](https://github.com/JeremyLikness/Event-Grid-Glue)
 * [Xamarin.Forms 클라이언트를 사용 하 여 간단한 Azure 함수를 구현합니다.](https://azure.microsoft.com/resources/samples/functions-xamarin-getting-started/)
 * [리프트 앤 시프트 서버 리스 Azure functions 사용 하 여](https://channel9.msdn.com/Events/Connect/2017/E102)

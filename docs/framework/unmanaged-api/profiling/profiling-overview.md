@@ -29,19 +29,19 @@ helpviewer_keywords:
 ms.assetid: 864c2344-71dc-46f9-96b2-ed59fb6427a8
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: dd0fef0e8a2c4b94cd5dd7beb140e669c52a07a8
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 598722c44d8d20adab9ce7d624edb820f67c0fa4
+ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43862318"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58654096"
 ---
 # <a name="profiling-overview"></a>프로파일링 개요
 <a name="top"></a> 프로파일러는 다른 응용 프로그램의 실행을 모니터링 하는 도구입니다. CLR(공용 언어 런타임) 프로파일러는 프로 파일링 API를 사용하여 CLR에서 메시지를 받고 보내는 함수로 구성된 DLL(동적 연결 라이브러리)입니다. 프로파일러 DLL은 런타임에 CLR에 의해 로드됩니다.  
   
  기존의 프로파일링 도구는 응용 프로그램의 실행 측정에 중점을 둡니다. 즉, 각 함수에서 소요된 시간이나 시간 경과에 따른 응용 프로그램의 메모리 사용량을 측정합니다. 프로파일링 API는 코드 검사 유틸리티 및 고급 디버깅 지원과 같은 광범위한 진단 도구 클래스를 대상으로 합니다. 이러한 사용은 본질적으로 모두 진단입니다. 프로파일링 API는 응용 프로그램의 실행을 측정할 뿐 아니라 모니터링합니다. 이러한 이유로 프로파일링 API는 응용 프로그램 자체에서 사용하면 안 되며, 응용 프로그램의 실행이 프로파일러에 종속되거나 영향을 받아서도 안 됩니다.  
   
- CLR 응용 프로그램을 프로파일링하려면 기존의 컴파일된 기계어 코드를 프로파일링하는 것보다 많은 지원이 필요합니다. 이는 CLR에서 응용 프로그램 도메인, 가비지 수집, 관리되는 예외 처리, 코드의 JIT(Just-In-Time) 컴파일(Microsoft Intermediate Language, 즉 MSIL 코드를 네이티브 기계어 코드로 변환) 및 비슷한 기능과 같은 개념을 도입하기 때문입니다. 기존의 프로파일링 메커니즘은 이러한 기능에 대한 유용한 정보를 식별하거나 제공할 수 없습니다. 프로파일링 API는 CLR 및 프로파일링된 응용 프로그램의 성능에 미치는 영향을 최소화하여 이 누락된 정보를 효율적으로 제공합니다.  
+ CLR 응용 프로그램을 프로파일링하려면 기존의 컴파일된 기계어 코드를 프로파일링하는 것보다 많은 지원이 필요합니다. 이는 CLR에서 응용 프로그램 도메인, 가비지 컬렉션, 관리되는 예외 처리, 코드의 JIT(Just-In-Time) 컴파일(Microsoft Intermediate Language, 즉 MSIL 코드를 네이티브 기계어 코드로 변환) 및 비슷한 기능과 같은 개념을 도입하기 때문입니다. 기존의 프로파일링 메커니즘은 이러한 기능에 대한 유용한 정보를 식별하거나 제공할 수 없습니다. 프로파일링 API는 CLR 및 프로파일링된 응용 프로그램의 성능에 미치는 영향을 최소화하여 이 누락된 정보를 효율적으로 제공합니다.  
   
  런타임의 JIT 컴파일은 프로파일링에 좋은 기회를 제공합니다. 프로파일링 API를 통해 프로파일러는 JIT 컴파일되기 전에 루틴에 대한 메모리 내 MSIL 코드 스트림을 변경할 수 있습니다. 이런 방식으로 프로파일러는 더 세부적인 조사가 필요한 특정 루틴에 계측 코드를 동적으로 추가할 수 있습니다. 이 접근 방식은 기존 시나리오에서도 가능하지만 프로파일링 API를 사용하여 CLR에 대해 구현하는 것이 훨씬 더 쉽습니다.  
   
@@ -78,13 +78,12 @@ ms.locfileid: "43862318"
   
  다음 그림에서는 프로파일러 DLL이 프로파일링되는 응용 프로그램 및 CLR과 상호 작용하는 방법을 보여 줍니다.  
   
- ![프로 파일링 아키텍처](../../../../docs/framework/unmanaged-api/profiling/media/profilingarch.png "ProfilingArch")  
-프로파일링 아키텍처  
+ ![프로 파일링 아키텍처를 보여 주는 스크린샷.](./media/profiling-overview/profiling-architecture.png)  
   
 ### <a name="the-notification-interfaces"></a>알림 인터페이스  
  [ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md) 하 고 [ICorProfilerCallback2](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-interface.md) 알림 인터페이스로 간주 될 수 있습니다. 이러한 인터페이스와 같은 메서드의 구성 [ClassLoadStarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-classloadstarted-method.md)를 [ClassLoadFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-classloadfinished-method.md), 및 [JITCompilationStarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-jitcompilationstarted-method.md)합니다. CLR은 클래스를 로드 또는 언로드하고 함수를 컴파일할 때마다 프로파일러의 `ICorProfilerCallback` 또는 `ICorProfilerCallback2` 인터페이스에서 해당 메서드를 호출합니다.  
   
- 프로파일러는 두 알림 함수를 통해 코드 성능을 측정할 수 있습니다 예를 들어: [FunctionEnter2](../../../../docs/framework/unmanaged-api/profiling/functionenter2-function.md) 하 고 [FunctionLeave2](../../../../docs/framework/unmanaged-api/profiling/functionleave2-function.md)합니다. 단순히 각 알림에 타임스탬프를 지정하고, 결과를 누적한 다음 응용 프로그램 실행 중에 가장 많은 CPU 또는 벽시계 시간을 사용한 함수를 나타내는 목록을 출력합니다.  
+ 예를 들어 프로파일러는 두 알림 함수를 통해 코드 성능을 측정할 수 있습니다. [FunctionEnter2](../../../../docs/framework/unmanaged-api/profiling/functionenter2-function.md) 하 고 [FunctionLeave2](../../../../docs/framework/unmanaged-api/profiling/functionleave2-function.md)합니다. 단순히 각 알림에 타임스탬프를 지정하고, 결과를 누적한 다음 응용 프로그램 실행 중에 가장 많은 CPU 또는 벽시계 시간을 사용한 함수를 나타내는 목록을 출력합니다.  
   
 ### <a name="the-information-retrieval-interfaces"></a>정보 검색 인터페이스  
  다른 주요 인터페이스 프로 파일링에 관련 된 됩니다 [ICorProfilerInfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md) 하 고 [ICorProfilerInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-interface.md)합니다. 프로파일러는 필요에 따라 이러한 인터페이스를 호출하여 분석에 도움이 되는 자세한 정보를 가져옵니다. CLR이 호출 될 때마다 예를 들어 합니다 [FunctionEnter2](../../../../docs/framework/unmanaged-api/profiling/functionenter2-function.md) 함수 함수 식별자를 제공 합니다. 프로파일러를 호출 하 여 해당 함수에 대 한 자세한 정보를 얻을 수는 [ICorProfilerInfo2::GetFunctionInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getfunctioninfo2-method.md) 함수의 부모 클래스, 이름 및 등을 검색 하는 방법입니다.  

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - ClearType [WPF], registry settings
 - typography [WPF], ClearType registry settings
 ms.assetid: 56f314bb-b30b-4f67-8492-8b8a9fa432ae
-ms.openlocfilehash: 471a94333260d30bc9c650f13e3a7489d9d5db7e
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: a2b24077145b3b24fa021121450534264aea0c8b
+ms.sourcegitcommit: 0aca6c5d166d7961a1e354c248495645b97a1dc5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57369723"
+ms.lasthandoff: 03/30/2019
+ms.locfileid: "58675902"
 ---
 # <a name="cleartype-registry-settings"></a>ClearType 레지스트리 설정
 이 항목의 개요를 제공 합니다 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA#tla_ct](../../../../includes/tlasharptla-ct-md.md)] 에서 사용 되는 레지스트리 설정 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 응용 프로그램입니다.  
@@ -57,7 +57,7 @@ ms.locfileid: "57369723"
   
  사용자에 대해 각 디스플레이 장치 이름에 대 한는 `ClearTypeLevel` DWORD 값은 정의 됩니다. 다음 스크린샷은 대 한 레지스트리 편집기 설정을 [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] 수준입니다.  
   
- ![레지스트리 편집기의 ClearType 설정](./media/cleartyperegistry01.png "ClearTypeRegistry01")  
+ ![레지스트리 편집기의 ClearType 설정 합니다.](./media/cleartype-registry-settings/cleartype-settings-registry-editor.png)  
   
 > [!NOTE]
 >  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 응용 프로그램 렌더링 하거나 사용 하지 않고 중 두 가지 모드 중 하나에서 텍스트 [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)]합니다. 없이 텍스트를 렌더링 하는 경우 [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)]를 회색조 렌더링 이라고 합니다.  
@@ -75,7 +75,7 @@ ms.locfileid: "57369723"
   
  사용자에 대해 각 디스플레이 장치 이름에 대 한는 `GammaLevel` DWORD 값은 정의 됩니다. 다음 스크린샷에서는 감마 수준에 대한 레지스트리 편집기 설정을 보여 줍니다.  
   
- ![레지스트리 편집기의 ClearType 설정](./media/cleartyperegistry02.png "ClearTypeRegistry02")  
+ ![레지스트리 편집기의 ClearType 감마 수준 설정](./media/cleartype-registry-settings/cleartype-gamma-level-settings-registry-editor.png)  
   
 <a name="pixel_structure"></a>   
 ## <a name="pixel-structure"></a>픽셀 구조체  
@@ -99,7 +99,7 @@ ms.locfileid: "57369723"
   
  사용자에 대해 각 디스플레이 장치 이름에 대 한는 `PixelStructure` DWORD 값은 정의 됩니다. 다음 스크린샷에서는 픽셀 구조체에 대한 레지스트리 편집기 설정을 보여 줍니다.  
   
- ![레지스트리 편집기의 ClearType 설정](./media/cleartyperegistry02.png "ClearTypeRegistry02")  
+ ![레지스트리 편집기의 ClearType 감마 수준 설정](./media/cleartype-registry-settings/cleartype-gamma-level-settings-registry-editor.png)  
   
 <a name="text_contrast_level"></a>   
 ## <a name="text-contrast-level"></a>텍스트 대비 수준  
@@ -112,7 +112,7 @@ ms.locfileid: "57369723"
   
  사용자에 대해 각 디스플레이 장치 이름에 대 한는 `TextContrastLevel` DWORD 값은 정의 됩니다. 다음 스크린샷에서는 텍스트 대조 수준에 대한 레지스트리 편집기 설정을 보여 줍니다.  
   
- ![레지스트리 편집기의 ClearType 설정](./media/cleartyperegistry01.png "ClearTypeRegistry01")  
+ ![레지스트리 편집기의 ClearType 설정 합니다.](./media/cleartype-registry-settings/cleartype-settings-registry-editor.png)  
   
 ## <a name="see-also"></a>참고자료
 - [ClearType 개요](cleartype-overview.md)
