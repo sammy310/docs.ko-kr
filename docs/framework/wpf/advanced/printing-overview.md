@@ -15,12 +15,12 @@ helpviewer_keywords:
 - XPSDrv-based printers
 - GDI print path [WPF]
 ms.assetid: 0de8ac41-9aa6-413d-a121-7aa6f41539b1
-ms.openlocfilehash: 9e7cc41602e7e86d328767db257e6dbaa7e8fed1
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: c009d86deada690f673736e0e35eb710e25f7781
+ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57370503"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58654382"
 ---
 # <a name="printing-overview"></a>인쇄 개요
 Microsoft.NET Framework를 사용 하 여 Windows Presentation Foundation (WPF)를 사용 하 여 응용 프로그램 개발자가 새로운 풍부한 인쇄 및 인쇄 시스템 관리 [!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)]합니다. [!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)]에서는 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 응용 프로그램을 만드는 개발자와 비관리 코드를 사용하는 개발자도 이러한 인쇄 시스템 향상 기능을 일부 사용할 수 있습니다. 이 새로운 기능의 핵심은 새 [!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)] 파일 형식과 [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] 인쇄 경로입니다.  
@@ -64,9 +64,9 @@ Microsoft.NET Framework를 사용 하 여 Windows Presentation Foundation (WPF)�
   
  XPSDrv 기반 프린터를 사용할 수 있도록 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 및 Windows Forms 응용 프로그램을 [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] 프린터 드라이버 (XPSDrv)의 변환을 지원 합니다 [!INCLUDE[TLA2#tla_gdi](../../../../includes/tla2sharptla-gdi-md.md)] 에 [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] 형식입니다. XPSDrv 모델은 [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] 애플리케이션에서 [!INCLUDE[TLA2#tla_gdi](../../../../includes/tla2sharptla-gdi-md.md)] 문서를 인쇄할 수 있도록 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]-[!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] 형식 변환기도 제공합니다. 에 대 한 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 응용 프로그램, 변환 [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] 하 [!INCLUDE[TLA2#tla_gdi](../../../../includes/tla2sharptla-gdi-md.md)] 형식으로 자동으로 수행 됩니다 합니다 <xref:System.Windows.Xps.XpsDocumentWriter.Write%2A> 및 <xref:System.Windows.Xps.XpsDocumentWriter.WriteAsync%2A> 의 메서드를 <xref:System.Windows.Xps.XpsDocumentWriter> 쓰기 작업의 대상 인쇄 대기열에 없는 때마다 클래스 XPSDrv 드라이버가 합니다. (Windows Forms 응용 프로그램에서 인쇄할 수 없는 [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] 문서입니다.)  
   
- 다음 그림에서는 인쇄 하위 시스템을 보여 주며 [!INCLUDE[TLA#tla_ms](../../../../includes/tlasharptla-ms-md.md)]에서 제공하는 부분과 소프트웨어 및 하드웨어 공급업체에서 정의되는 부분을 정의합니다.  
+ 다음 그림에서는 인쇄 하위 시스템을 보여 주며 제공한 일부 [!INCLUDE[TLA#tla_ms](../../../../includes/tlasharptla-ms-md.md)], 소프트웨어 및 하드웨어 공급 업체에서 정의 하는 부분:  
   
- ![XPS 인쇄 시스템](./media/xpsprint.PNG "XPSPrint")  
+ ![스크린샷은은 XPS 인쇄 시스템 보여 줍니다.](./media/printing-overview/xml-paper-specification-print-system.png)  
   
 ### <a name="basic-xps-printing"></a>기본 XPS 인쇄  
  [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]는 기본 및 고급 [!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)]를 둘 다 정의합니다. 광범위한 인쇄 사용자 지정이나 전체 [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] 기능 집합에 대한 액세스가 필요하지 않은 애플리케이션의 경우 기본 인쇄 지원을 사용할 수 있습니다. 기본 인쇄 지원은 최소한의 구성이 필요하며 익숙한 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]를 제공하는 인쇄 대화 상자 컨트롤을 통해 노출됩니다. 이 간소화된 인쇄 모델을 통해 많은 [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] 기능을 사용할 수 있습니다.  

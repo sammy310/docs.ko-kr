@@ -2,12 +2,12 @@
 title: 모델 정의 함수
 ms.date: 03/30/2017
 ms.assetid: 8bb2edc8-e8e7-44c2-adc7-f44e11bda4f0
-ms.openlocfilehash: 371af3ae090e37cfd425a9e9d5946bb0751dc527
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 67821c68ee79b42bc54e22f1e15673d2d9243a68
+ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54538884"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58653862"
 ---
 # <a name="model-defined-function"></a>모델 정의 함수
 A *모델 정의 함수* 는 개념적 모델에 정의 된 함수입니다. 모델 정의 함수의 본문을 단위로 [Entity SQL](../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-language.md)함수와 독립적으로 표현할 수를 허용 하는 규칙, 데이터 원본에서 언어를 지원 합니다.  
@@ -30,7 +30,7 @@ A *모델 정의 함수* 는 개념적 모델에 정의 된 함수입니다. 모
 ## <a name="example"></a>예제  
  다음 다이어그램에서는 세 가지 엔터티 형식 `Book`, `Publisher` 및 `Author`가 포함된 개념적 모델을 보여 줍니다.  
   
- ![게시 된 날짜를 사용 하 여 모델](../../../../docs/framework/data/adonet/media/modelwithpublisheddate.gif "ModelWithPublishedDate")  
+ ![게시 된 날짜를 사용 하 여 모델을 보여 주는 스크린샷.](./media/model-defined-function/model-published-date-three-entity-types.gif)  
   
  합니다 [ADO.NET Entity Framework](../../../../docs/framework/data/adonet/ef/index.md) 개념 스키마 정의 언어를 호출 하는 도메인 특정 언어 (DSL)를 사용 하 여 ([CSDL](../../../../docs/framework/data/adonet/ef/language-reference/csdl-specification.md)) 개념적 모델을 정의 합니다. 다음 CSDL에서는 위 다이어그램의 `Book` 인스턴스가 출판된 이후의 년 수를 반환하는 함수를 개념적 모델에 정의합니다.  
   

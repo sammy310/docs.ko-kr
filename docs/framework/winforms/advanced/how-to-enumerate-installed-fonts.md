@@ -8,12 +8,12 @@ helpviewer_keywords:
 - fonts [Windows Forms], enumerating installed
 - examples [Windows Forms], fonts
 ms.assetid: 26d74ef5-0f39-4eeb-8d20-00e66e014abe
-ms.openlocfilehash: 34234ee0400e1d2ca36f2f559b63d282f590ca0d
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: e56f06d6f7a762a1ef1ff85fa30751ea64f9f14b
+ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57709888"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58653745"
 ---
 # <a name="how-to-enumerate-installed-fonts"></a>방법: 설치 된 글꼴 열거
 합니다 <xref:System.Drawing.Text.InstalledFontCollection> 클래스에서 상속 된 <xref:System.Drawing.Text.FontCollection> 추상 기본 클래스입니다. 사용할 수는 <xref:System.Drawing.Text.InstalledFontCollection> 컴퓨터에 설치 된 글꼴을 열거 하는 개체입니다. 합니다 <xref:System.Drawing.Text.FontCollection.Families%2A> 의 속성을 <xref:System.Drawing.Text.InstalledFontCollection> 개체의 배열이 <xref:System.Drawing.FontFamily> 개체입니다.  
@@ -23,13 +23,13 @@ ms.locfileid: "57709888"
   
  예제 코드를 실행 하는 경우 다음 그림에 나와 있는 것과 비슷한 출력이 됩니다.  
   
- ![설치 된 글꼴](./media/csfontstext6.png "csfontstext6")  
+ ![설치 된 글꼴 패밀리를 보여주는 스크린샷.](./media/how-to-enumerate-installed-fonts/list-installed-font-families.png)  
   
  [!code-csharp[System.Drawing.FontsAndText#11](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.FontsAndText/CS/Class1.cs#11)]
  [!code-vb[System.Drawing.FontsAndText#11](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.FontsAndText/VB/Class1.vb#11)]  
   
 ## <a name="compiling-the-code"></a>코드 컴파일  
- 앞의 예제는 Windows forms에서 사용하도록 설계되었으며 <xref:System.Windows.Forms.PaintEventHandler>의 매개 변수인 <xref:System.Windows.Forms.PaintEventArgs> `e`가 필요합니다. 또한 가져와야는 <xref:System.Drawing.Text> 네임 스페이스입니다.  
+ 앞의 예제는 Windows Forms에서 사용 하도록 설계 되었으며 필요 <xref:System.Windows.Forms.PaintEventArgs> `e`의 매개 변수인 <xref:System.Windows.Forms.PaintEventHandler>합니다. 또한 가져와야는 <xref:System.Drawing.Text> 네임 스페이스입니다.  
   
 ## <a name="see-also"></a>참고자료
 - [글꼴 및 텍스트 사용](using-fonts-and-text.md)

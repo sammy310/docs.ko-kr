@@ -2,12 +2,12 @@
 title: 쿼리 식
 description: LINQ에 대 한 쿼리 식 지원에 대해 알아봅니다는 F# 프로그래밍 언어입니다.
 ms.date: 05/16/2016
-ms.openlocfilehash: 8fd3e2d4cfbbe890fe3b04b2676eb1d5bbc087a6
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: 1a6450bdcec4240fac58f6c27af2298dfd7f45a2
+ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58463230"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58654824"
 ---
 # <a name="query-expressions"></a>쿼리 식
 
@@ -60,7 +60,7 @@ query1
 
 이 테이블에는 다음 형식으로 데이터베이스를 가정합니다.
 
-![샘플 데이터베이스 다이어그램](../media/StudentCourseDB.png)
+![샘플 데이터베이스를 보여 주는 다이어그램입니다.](./media/query-expressions/student-course-database.png)
 
 이어서 나오는 표에서의 코드는 또한 다음 데이터베이스 연결 코드를 가정 합니다. 프로젝트는 System.Data, System.Data.Linq를 및 FSharp.Data.TypeProviders 어셈블리에 대 한 참조를 추가 해야 합니다. 이 데이터베이스를 만드는 코드를이 항목의 끝에 포함 되어 있습니다.
 

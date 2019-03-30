@@ -13,12 +13,12 @@ helpviewer_keywords:
 - XBAP security [WPF]
 - Internet Explorer security settings [WPF]
 ms.assetid: ee1baea0-3611-4e36-9ad6-fcd5205376fb
-ms.openlocfilehash: be9f1916722b493490541046906a38b9fac63a4e
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 84f7e0f1174a048d650741075344de3158c2994e
+ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57371985"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58654317"
 ---
 # <a name="security-wpf"></a>보안(WPF)
 <a name="introduction"></a> Windows Presentation Foundation (WPF) 독립 실행형 및 브라우저에서 호스팅된 응용 프로그램을 개발할 때 보안 모델을 고려해 야 합니다. [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 독립 실행형 응용 프로그램 무제한 권한으로 실행 ( [!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)] **FullTrust** 권한 집합) Windows Installer (.msi), XCopy를 사용 하 여 배포한 여부에 관계 없이 또는 [!INCLUDE[TLA2#tla_clickonce](../../../includes/tla2sharptla-clickonce-md.md)]합니다. ClickOnce를 포함한 부분 신뢰, 독립 실행형 WPF 애플리케이션 배포가 지원되지 않습니다. 그러나 완전 신뢰 호스트 응용 프로그램을 부분 신뢰를 만들 수 <xref:System.AppDomain> .NET Framework 추가 기능 모델을 사용 합니다. 자세한 내용은 [WPF 추가 기능 개요](./app-development/wpf-add-ins-overview.md)합니다.  
@@ -49,7 +49,7 @@ ms.locfileid: "57371985"
   
  *응용 프로그램 탐색*은 브라우저에서 호스트되는 응용 프로그램 내의 콘텐츠 항목 간을 탐색합니다. *브라우저 탐색*은 브라우저 자체의 콘텐츠 및 위치 URL을 변경하는 탐색입니다. 응용 프로그램 탐색 (일반적으로 XAML)과 브라우저 탐색 (일반적으로 HTML) 간의 관계는 다음 그림에 표시 됩니다.
   
- ![탐색 다이어그램](./media/safetoplevelnavigationfigure.png "SafeTopLevelNavigationFigure")  
+ ![응용 프로그램 탐색 및 브라우저 탐색 간의 관계입니다.](./media/security-wpf/application-browser-navigation-relationship.png)  
   
  안전 하다 고 간주 되는 콘텐츠 유형에 [!INCLUDE[TLA2#tla_xbap](../../../includes/tla2sharptla-xbap-md.md)] 이동할 주로 도달한 응용 프로그램 탐색 이나 브라우저 탐색이 사용 되는지 여부입니다.  
   
@@ -115,7 +115,7 @@ ms.locfileid: "57371985"
   
      합니다 **보안 설정** 대화 상자가 표시 되며 선택한 영역에 대 한 보안 설정을 구성할 수 있습니다.  
   
-     ![보안 설정 대화 상자](./media/wpfsecurityfigure1.PNG "WPFSecurityFigure1")  
+     ![보안 설정 대화 상자를 보여 주는 스크린샷.](./media/security-wpf/windows-presentation-foundation-security-settings.png)  
   
 > [!NOTE]
 >  Internet Explorer에서 인터넷 옵션 대화 상자에 액세스할 수도 있습니다. 클릭 **도구가** 을 클릭 한 다음 **인터넷 옵션**합니다.  

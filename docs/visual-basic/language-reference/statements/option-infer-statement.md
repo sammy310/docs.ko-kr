@@ -11,12 +11,12 @@ helpviewer_keywords:
 - declaring variables [Visual Basic], inferred
 - inferred variable declaration
 ms.assetid: 4ad3e6e9-8f5b-4209-a248-de22ef6e4652
-ms.openlocfilehash: 38c60245ff2c0b08ee731da6c1f88c30e1af8e3f
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 43ac5bc9e32892541ed2f9b0410b6e0ef10558a6
+ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56965829"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58654330"
 ---
 # <a name="option-infer-statement"></a>Option Infer 문
 변수를 선언할 때 지역 형식 유추를 사용하도록 설정합니다.  
@@ -39,17 +39,17 @@ Option Infer { On | Off }
   
  `Option Infer`를 `On`으로 설정하면 데이터 형식을 명시적으로 설명하지 않고 로컬 변수를 선언할 수 있습니다. 컴파일러는 초기화 식의 형식에서 변수의 데이터 형식을 유추합니다.  
   
- 다음 그림에서는 `Option Infer`가 설정되어 있습니다. 
-  `Dim someVar = 2` 선언의 변수는 형식 유추에 의해 정수로 선언됩니다.  
+ 다음 그림에서는 `Option Infer`가 설정되어 있습니다. `Dim someVar = 2` 선언의 변수는 형식 유추에 의해 정수로 선언됩니다.
+
+ 다음 스크린 샷에서 Option Infer가 설정 하는 경우 IntelliSense를 보여 줍니다. 
   
- ![선언의 IntelliSense 보기입니다. ](../../../visual-basic/language-reference/statements/media/optioninferasinteger.png "optionInferAsInteger")  
-Option Infer가 설정된 경우의 IntelliSense  
+ ![Option Infer가 설정 하는 경우 IntelliSense 보기를 보여주는 스크린샷.](./media/option-infer-statement/option-infer-as-integer-on.png)  
   
- 다음 그림에서는 `Option Infer`가 해제되어 있습니다. 
-  `Dim someVar = 2` 선언의 변수는 형식 유추에 의해 `Object`로 선언됩니다. 이 예제에서는 합니다 **Option Strict** 로 설정 되어 **해제** 에 [컴파일 페이지, 프로젝트 디자이너 (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic)합니다.  
+ 다음 그림에서는 `Option Infer`가 해제되어 있습니다. `Dim someVar = 2` 선언의 변수는 형식 유추에 의해 `Object`로 선언됩니다. 이 예제에서는 합니다 **Option Strict** 로 설정 되어 **해제** 에 [컴파일 페이지, 프로젝트 디자이너 (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic)합니다.  
   
- ![선언의 IntelliSense 보기입니다. ](../../../visual-basic/language-reference/statements/media/optioninferasobject.png "optionInferAsObject")  
-Option Infer가 해제된 경우의 IntelliSense  
+ 다음 스크린 샷에서 Option Infer가 해제 된 경우 IntelliSense를 보여 줍니다.
+ 
+ ![Option Infer가 해제 된 경우 IntelliSense 보기를 보여주는 스크린샷.](./media/option-infer-statement/option-infer-as-object-off.png)  
   
 > [!NOTE]
 >  변수가 `Object`로 선언되면 프로그램을 실행하는 동안 런타임 형식이 변경될 수 있습니다. 작업을 수행 하는 Visual Basic *boxing* 하 고 *unboxing* 간에 변환 하는 `Object` 및 값 형식을 실행 속도가 느려집니다. Boxing 및 unboxing에 대 한 내용은 참조는 [Visual Basic 언어 사양](~/_vblang/spec/conversions.md#value-type-conversions)합니다.
@@ -80,10 +80,8 @@ Option Infer가 해제된 경우의 IntelliSense
   
 |데이터 형식 지정 여부|이니셜라이저 지정 여부|예제|결과|  
 |---|---|---|---|  
-|아니요|아니요|`Dim qty`|`Option Strict`가 off(기본값)이면 변수는 `Nothing`으로 설정됩니다.<br /><br /> `Option Strict`가 on이면 컴파일 타임 오류가 발생합니다.|  
-|아니요|예|`Dim qty = 5`|
-  `Option Infer`가 on(기본값)이면 변수가 이니셜라이저의 데이터 형식을 사용합니다. 참조 [지역 형식 유추](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)합니다.<br /><br /> 
-  `Option Infer`가 off이고 `Option Strict`고 off이면 변수가 `Object`의 데이터 형식을 사용합니다.<br /><br /> `Option Infer`가 off이고 `Option Strict`는 on이면 컴파일 타임 오류가 발생합니다.|  
+|아니요|아니요|`Dim qty`|`Option Strict`가 off(기본값)이면 변수는 `Nothing`으로 설정됩니다.<br /><br /> `Option Strict`가 on이면 컴파일 시간 오류가 발생합니다.|  
+|아니요|예|`Dim qty = 5`|`Option Infer`가 on(기본값)이면 변수가 이니셜라이저의 데이터 형식을 사용합니다. 참조 [지역 형식 유추](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)합니다.<br /><br /> `Option Infer`가 off이고 `Option Strict`고 off이면 변수가 `Object`의 데이터 형식을 사용합니다.<br /><br /> `Option Infer`가 off이고 `Option Strict`는 on이면 컴파일 시간 오류가 발생합니다.|  
 |예|아니요|`Dim qty As Integer`|변수는 데이터 형식의 기본값으로 초기화됩니다. 자세한 내용은 [Dim 문](../../../visual-basic/language-reference/statements/dim-statement.md)합니다.|  
 |예|예|`Dim qty  As Integer = 5`|이니셜라이저의 데이터 형식을 지정한 데이터 형식으로 변환할 수 없으면 컴파일 시간 오류가 발생합니다.|  
   

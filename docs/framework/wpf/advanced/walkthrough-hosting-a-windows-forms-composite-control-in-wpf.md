@@ -8,12 +8,12 @@ helpviewer_keywords:
 - hosting Windows Forms control in WPF [WPF]
 - composite controls [WPF], hosting in WPF
 ms.assetid: 96fcd78d-1c77-4206-8928-3a0579476ef4
-ms.openlocfilehash: 4263b81b0917b544f37c55299b1e394e5fbaa6ac
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 50d85b74b523c8985bd0d3d407097a4f42cfeb60
+ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57359720"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58654226"
 ---
 # <a name="walkthrough-hosting-a-windows-forms-composite-control-in-wpf"></a>연습: WPF에서 Windows Forms 복합 컨트롤 호스팅
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]에서는 응용 프로그램을 만들기 위한 다양한 환경을 제공합니다. 그러나 상당한 투자 경우 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 코드 수 이상 다시 사용 하는 것이 효과적에서 해당 코드 중 일부에 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 응용 프로그램부터에서 다시 작성 하는 대신 합니다. 가장 일반적인 시나리오는 기존 Windows Forms 컨트롤을 사용 하는 경우입니다. 경우에 따라 이러한 컨트롤에 대한 소스 코드에 액세스하지 못할 수도 있습니다. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 이러한 컨트롤을 호스트 하는 간단한 절차를 제공 된 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 응용 프로그램입니다. 예를 들어 사용할 수 있습니다 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 대부분의 호스트에서 특수화 된 하면서 프로그래밍에 대 한 <xref:System.Windows.Forms.DataGridView> 컨트롤입니다.  
@@ -36,9 +36,10 @@ ms.locfileid: "57359720"
   
 ## <a name="implementing-the-windows-forms-composite-control"></a>Windows Forms 복합 컨트롤 구현  
  이 예제에서 사용 하는 Windows Forms 복합 컨트롤은 간단한 데이터 입력 폼입니다. 이 폼에서는 사용자의 이름 및 주소를 사용한 다음 사용자 지정 이벤트를 사용하여 해당 정보를 호스트에 반환합니다. 다음 그림에서는 렌더링된 컨트롤을 보여 줍니다.  
-  
- ![단순 Windows Forms 컨트롤](./media/wfcontrol.gif "WFControl")  
-Windows Forms 복합 컨트롤  
+
+ 다음 이미지에는 Windows Forms 복합 컨트롤을 보여 줍니다.  
+
+ ![간단한 Windows Forms 컨트롤을 보여 주는 스크린샷.](./media/walkthrough-hosting-a-windows-forms-composite-control-in-wpf/windows-forms-control.gif)  
   
 ### <a name="creating-the-project"></a>프로젝트 만들기  
  프로젝트를 시작하려면  
@@ -128,7 +129,9 @@ Windows Forms 복합 컨트롤
 ## <a name="implementing-the-wpf-host-application"></a>WPF 호스트 애플리케이션 구현
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 사용 하 여 응용 프로그램을 호스트 합니다 <xref:System.Windows.Forms.Integration.WindowsFormsHost> 호스팅할 컨트롤에 `MyControl1`합니다. 응용 프로그램 처리를 `OnButtonClick` 컨트롤에서 데이터를 수신 하는 이벤트입니다. 또한 컬렉션을 사용 하면 컨트롤의 속성 중 일부를 변경할 수 있는 옵션 단추는 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 응용 프로그램입니다. 다음 그림에서는 완료된 애플리케이션을 보여 줍니다.
 
- ![WPF 페이지에 포함 된 컨트롤](./media/avalonhost.gif "AvalonHost") 전체 응용 프로그램을 WPF 응용 프로그램에 포함 된 컨트롤을 보여 주는
+다음 이미지에서는 WPF 응용 프로그램에 포함 된 컨트롤을 포함 하 여 전체 응용 프로그램을 보여 줍니다.
+
+ ![WPF 페이지에 포함 된 컨트롤을 보여 주는 스크린샷.](./media/walkthrough-hosting-a-windows-forms-composite-control-in-wpf/windows-presentation-foundation-page-control.gif)
 
 ### <a name="creating-the-project"></a>프로젝트 만들기
  프로젝트를 시작하려면

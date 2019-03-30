@@ -18,12 +18,12 @@ helpviewer_keywords:
 - argument lists [Visual Basic]
 - procedures [Visual Basic], parameter lists
 ms.assetid: ff275aff-aa13-40df-bd4c-63486db8c1e9
-ms.openlocfilehash: f7291d809c754249c155eb9382f3fcd8a63c20c7
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 4b62e4b752074bb8d1a660e51ab230a87ff21db4
+ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56972557"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58654239"
 ---
 # <a name="procedure-parameters-and-arguments-visual-basic"></a>프로시저 매개 변수 및 인수(Visual Basic)
 대부분의 경우 프로시저를 호출한 후 나타나는 상황에 대 한 일부 정보를 해야 합니다. 반복 또는 공유 작업을 수행 하는 프로시저는 각 호출에 대 한 다른 정보를 사용 합니다. 이 정보는 변수, 상수 및 호출할 때 프로시저에 전달 하는 식으로 구성 됩니다.  
@@ -36,8 +36,7 @@ ms.locfileid: "56972557"
   
  다음 그림에서는 프로시저를 호출 하는 코드를 보여 줍니다. `safeSquareRoot` 서로 다른 두 위치에서. 변수 값을 전달 하는 첫 번째 호출 `x` (4.0) 매개 변수에 `number`, 및 반환 값은 `root` (2.0) 변수에 할당 된 `y`합니다. 두 번째 호출은 전달에 리터럴 값 9.0 `number`, (3.0) 반환 값을 변수에 할당 합니다 `z`.  
   
- ![매개 변수에 인수를 전달 하는 그래픽 다이어그램](./media/parametersargue.gif "ParametersArgue")  
-매개 변수에 인수를 전달합니다.  
+ ![매개 변수에 인수를 전달 보여 주는 다이어그램](./media/procedure-parameters-and-arguments/pass-argument-parameter.gif)  
   
  자세한 내용은 [매개 변수 간의 차이점 및 인수](./differences-between-parameters-and-arguments.md)합니다.  
   

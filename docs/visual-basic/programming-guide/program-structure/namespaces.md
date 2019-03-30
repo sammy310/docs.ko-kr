@@ -16,12 +16,12 @@ helpviewer_keywords:
 - naming conventions [Visual Basic], naming conflicts
 - namespaces
 ms.assetid: cffac744-ab8c-4f1f-ba50-732c22ab4b88
-ms.openlocfilehash: 6a93124789d629b1d1a953345d4b0b02a8c6ffa6
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 792741dc4df7b65ddef124615032c06a7ff1bcb8
+ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56977255"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58654668"
 ---
 # <a name="namespaces-in-visual-basic"></a>Visual Basic의 네임스페이스
 네임스페이스는 어셈블리에 정의된 개체를 구성합니다. 어셈블리는 여러 네임스페이스를 포함할 수 있으며, 이러한 각 네임스페이스는 다른 네임스페이스를 포함할 수 있습니다. 클래스 라이브러리와 같은 대규모 개체 그룹을 사용할 때 네임스페이스는 모호성을 방지하고 참조를 단순화합니다.  
@@ -37,9 +37,9 @@ ms.locfileid: "56977255"
   
  [!code-vb[VbVbalrApplication#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrApplication/VB/Class1.vb#7)]  
   
- 다음 그림에서는 `ListBox`라는 이름의 개체를 포함하는 두 개의 네임스페이스 계층 구조를 보여 줍니다.  
+ 다음 그림에서는 두 라는 개체가 포함 된 두 네임 스페이스 계층 `ListBox`:  
   
- ![Namespace 계층](../../../visual-basic/programming-guide/program-structure/media/vanamespacehierarchy.gif "vaNamespaceHierarchy")  
+ ![두 명의 네임 스페이스 계층 구조를 보여 주는 스크린샷.](./media/namespaces/visual-basic-namespace-hierarchy.gif)  
   
  기본적으로 Visual Basic을 사용 하 여 만든 모든 실행 파일에는 프로젝트와 동일한 이름 가진 네임 스페이스를 포함 합니다. 예를 들어 `ListBoxProject`라는 이름의 프로젝트 내에서 개체를 정의하면 실행 파일 ListBoxProject.exe는 `ListBoxProject`라는 네임스페이스를 포함합니다.  
   

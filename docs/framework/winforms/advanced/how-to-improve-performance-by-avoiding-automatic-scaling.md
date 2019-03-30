@@ -10,12 +10,12 @@ helpviewer_keywords:
 - images [Windows Forms], using without automatic scaling
 - performance [Windows Forms], improving image
 ms.assetid: 5fe2c95d-8653-4d55-bf0d-e5afa28f223b
-ms.openlocfilehash: b8238a4f0ce482d63ab33833c4bceaaa2814253d
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 8580bd2212a025edddada9e47b0dc2b6195b53c7
+ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57705342"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58653797"
 ---
 # <a name="how-to-improve-performance-by-avoiding-automatic-scaling"></a>방법: 자동 크기 조정 없이 성능 향상
 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 그릴 때, 성능 저하가 발생 하는 이미지를 확장 자동으로 수 있습니다. 대상 사각형의 크기를 전달 하 여 이미지의 크기 조정은 제어할 수는 또는 <xref:System.Drawing.Graphics.DrawImage%2A> 메서드.  
@@ -32,7 +32,7 @@ ms.locfileid: "57705342"
 ## <a name="example"></a>예제  
  다음 예제에서는 두 번 동일한 이미지를 그립니다. 첫 번째 경우, 대상 사각형의 높이 너비를 지정 하지 않으면 및 이미지 자동으로 크기가 조정 됩니다. 두 번째 경우에서 너비와 대상 사각형의 높이 (픽셀)을 원본 이미지의 높이 너비와 동일 하 게 지정 됩니다. 다음 그림에서는 두 번 렌더링 되는 이미지를 보여 줍니다.  
   
- ![질감 크기를 조정](./media/csscaledtexture1.png "csscaledtexture1")  
+ ![배율 조정 된 질감을 사용 하 여 이미지를 보여 주는 스크린샷.](./media/how-to-improve-performance-by-avoiding-automatic-scaling/two-scaled-texture-images.png)  
   
  [!code-csharp[System.Drawing.WorkingWithImages#32](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.WorkingWithImages/CS/Class1.cs#32)]
  [!code-vb[System.Drawing.WorkingWithImages#32](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.WorkingWithImages/VB/Class1.vb#32)]  

@@ -3,12 +3,12 @@ title: <wsFederation>
 ms.date: 03/30/2017
 ms.assetid: c537f770-68bd-4f82-96ad-6424ad91369f
 author: BrucePerlerMS
-ms.openlocfilehash: 801970ec05fc88587a5b45b5bb3a855d1a81afb3
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: de79ad6447fe67afc596783eff3fa3e6a02b600c
+ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57356093"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58654590"
 ---
 # <a name="wsfederation"></a>\<wsFederation>
 에 대 한 구성을 제공 합니다 <xref:System.IdentityModel.Services.WSFederationAuthenticationModule> (WSFAM).  
@@ -52,7 +52,7 @@ ms.locfileid: "57356093"
 |---------------|-----------------|  
 |authenticationType|인증 유형을 지정 하는 URI입니다. Ws-federation 로그인 요청 wauth 매개 변수를 설정합니다. 선택 사항입니다. 기본값은 빈 문자열로, wauth 매개 변수가 요청에 포함 되지 않습니다 지정 합니다.|  
 |새로 고침|원하는 최대 기간 인증 요청 (분)입니다. Ws-federation 로그인 요청 wfresh 매개 변수를 설정합니다. 선택 사항입니다. 기본값은 0입니다. 선택 사항입니다. **경고:**  .NET Framework 4.5의 다음 릴리스에서 `freshness` 특성 형식일 `xs:string` 기본값으로 됩니다 `null`합니다.|  
-|homeRealm|인증에 사용할 id 공급자 (IP)의 홈 영역입니다. Ws-federation 로그인 요청 whr 매개 변수를 설정합니다. 선택 사항입니다. 기본값은 다음과 같이 whr 매개 변수는 요청에 포함 되지 않습니다 지정 하는 빈 문자열인 경우.|  
+|homeRealm|Id 공급자 (IdP) 인증에 사용할의 홈 영역입니다. Ws-federation 로그인 요청 whr 매개 변수를 설정합니다. 선택 사항입니다. 기본값은 다음과 같이 whr 매개 변수는 요청에 포함 되지 않습니다 지정 하는 빈 문자열인 경우.|  
 |issuer|원하는 토큰 발급자의 URI입니다. 기본 URL의 Ws-federation 로그인 요청을 설정 하는 데 필요한 로그 아웃 요청입니다.|  
 |persistentCookiesOnPassiveRedirects|영구 쿠키 인증에 발급 한 여부를 지정 합니다. 선택 사항입니다. 기본값은 "false", 쿠키는 발급 되지 않습니다.|  
 |passiveRedirectEnabled|WSFAM 자동 STS에 권한이 없는 요청을 리디렉션할 사용 되는지 여부를 지정 합니다. 선택 사항입니다. 기본값은 "true", 권한이 없는 요청이 자동으로 리디렉션됩니다.|  

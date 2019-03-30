@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - ToolStrip control [Windows Forms], architecture
 ms.assetid: 71df2d18-862e-4701-9ff9-c1fe606f94f2
-ms.openlocfilehash: 6e0c5a426f05590523c178f4b56d07ee98b39d7e
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: bede247ca9e1c2c20ffc8fef9fd4fab89aa78453
+ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57719389"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58654772"
 ---
 # <a name="toolstrip-control-architecture"></a>ToolStrip 컨트롤 아키텍처
 합니다 <xref:System.Windows.Forms.ToolStrip> 고 <xref:System.Windows.Forms.ToolStripItem> 클래스 도구 모음, 상태 및 메뉴 항목을 표시 하기 위한 유연 하 고 확장 가능한 시스템을 제공 합니다. 이러한 클래스에 포함 된 모든 합니다 <xref:System.Windows.Forms> 네임 스페이스 및 이러한 모든 이름은 일반적으로 "ToolStrip" 접두사를 사용 하 여 (같은 <xref:System.Windows.Forms.ToolStripOverflow>) 또는 "제거" 접미사를 사용 하 여 (같은 <xref:System.Windows.Forms.MenuStrip>).  
@@ -19,8 +19,7 @@ ms.locfileid: "57719389"
   
  <xref:System.Windows.Forms.ToolStrip> 에 대 한 추상 기본 클래스인 <xref:System.Windows.Forms.MenuStrip>, <xref:System.Windows.Forms.StatusStrip>, 및 <xref:System.Windows.Forms.ContextMenuStrip>합니다. 다음 개체 모델에서는 <xref:System.Windows.Forms.ToolStrip> 상속 계층 구조입니다.  
   
- ![ToolStrip 개체 모델](./media/toolstripobjectmodel.gif "ToolStripObjectModel")  
-ToolStrip 개체 모델  
+ ![ToolStrip 개체 모델을 보여 주는 다이어그램입니다.](./media/toolstrip-control-architecture/toolstrip-object-model.gif)  
   
  모든 항목에 액세스할 수 있습니다는 <xref:System.Windows.Forms.ToolStrip> 를 통해를 <xref:System.Windows.Forms.ToolStrip.Items%2A> 컬렉션입니다. 모든 항목에 액세스할 수 있습니다는 <xref:System.Windows.Forms.ToolStripDropDownItem> 를 통해를 <xref:System.Windows.Forms.ToolStripDropDownItem.DropDownItems%2A> 컬렉션입니다. 파생 된 클래스에서 <xref:System.Windows.Forms.ToolStrip>를 사용할 수도 있습니다는 <xref:System.Windows.Forms.ToolStrip.DisplayedItems%2A> 현재 표시 된 항목만 액세스할 속성입니다. 다음은 현재 오버플로 메뉴에 없는 항목입니다.  
   
@@ -251,8 +250,7 @@ ToolStrip 개체 모델
   
  <xref:System.Windows.Forms.ToolStripItem> 에 포함 된 모든 항목에 대 한 추상 기본 클래스를 <xref:System.Windows.Forms.ToolStrip>입니다. 다음 개체 모델에서는 <xref:System.Windows.Forms.ToolStripItem> 상속 계층 구조입니다.  
   
- ![ToolStripItem 개체 모델](./media/toolstripitemobjectmodel.gif "ToolStripItemObjectModel")  
-ToolStripItem 개체 모델  
+ ![ToolStripItem 개체 모델을 보여 주는 다이어그램입니다.](./media/toolstrip-control-architecture/toolstripitem-object-model.gif)  
   
  <xref:System.Windows.Forms.ToolStripItem> 클래스에서 직접 상속 되거나 <xref:System.Windows.Forms.ToolStripItem>를 간접적으로 상속 됩니다에서 또는 <xref:System.Windows.Forms.ToolStripItem> 를 통해 <xref:System.Windows.Forms.ToolStripControlHost> 또는 <xref:System.Windows.Forms.ToolStripDropDownItem>합니다.  
   

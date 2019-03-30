@@ -8,12 +8,12 @@ helpviewer_keywords:
 - open figures [Windows Forms], filling
 - figures [Windows Forms], filling
 ms.assetid: 5a36b0e4-f1f4-46c0-a85a-22ae98491950
-ms.openlocfilehash: e9743d3268a7a2acfb6266872c3346a05269c369
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: c7d193fdad554048ecd0f2cca5a83cfccbc2a403
+ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57702730"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58654083"
 ---
 # <a name="how-to-fill-open-figures"></a>방법: 열린 그림 채우기
 전달 하 여 경로 채울 수는 <xref:System.Drawing.Drawing2D.GraphicsPath> 개체는 <xref:System.Drawing.Graphics.FillPath%2A> 메서드. <xref:System.Drawing.Graphics.FillPath%2A> 메서드는 현재 경로 대해 설정 된 채우기 모드 (대체 또는 감기)에 따라 경로 입력 합니다. 경로 모든 열린 그림 그림이 닫혀 있는 것 처럼 경로가 채워집니다. [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 시작 지점으로 해당 끝점에서 직선 그리기 하 여 그림을 닫습니다.  
@@ -23,7 +23,7 @@ ms.locfileid: "57702730"
   
  다음 그림에서는 예제 코드의 출력을 보여줍니다. 경로 채워지는지 확인 (에 따라 <xref:System.Drawing.Drawing2D.FillMode.Alternate>)를 시작 점으로 끝 지점에서 직선으로 열린 그림 닫힌 경우.  
   
- ![열린 경로 채우기](./media/fillopenpath.png "FillOpenPath")  
+ ![FillPath 메서드의 출력을 보여 주는 다이어그램](./media/how-to-fill-open-figures/fill-path-alternate-mode.png)  
   
  [!code-csharp[System.Drawing.ConstructingDrawingPaths#11](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.ConstructingDrawingPaths/CS/Class1.cs#11)]
  [!code-vb[System.Drawing.ConstructingDrawingPaths#11](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.ConstructingDrawingPaths/VB/Class1.vb#11)]  

@@ -2,12 +2,12 @@
 title: 동적 업데이트
 ms.date: 03/30/2017
 ms.assetid: 8b6ef19b-9691-4b4b-824c-3c651a9db96e
-ms.openlocfilehash: a1d5337bf69cb87d790ce4074cde4c18c989a4d8
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: e28a34e500034eec6cf250d94cf7631ca85a7d40
+ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57724477"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58653888"
 ---
 # <a name="dynamic-update"></a>동적 업데이트
 
@@ -64,7 +64,7 @@ DynamicUpdateServices.PrepareForUpdate(ab);
 
 ### <a name="Update"></a> 원하는 변경 내용을 반영 하도록 워크플로 정의 업데이트 합니다.
 
-워크플로 정의를 업데이트할 준비가 되면 원하는 변경 작업을 수행할 수 있습니다. 활동 추가 또는 제거, 공용 변수 추가, 이동 또는 삭제, 인수 추가 또는 제거, 활동 대리자의 시그니처 변경 같은 작업을 수행할 수 있습니다. 실행 중인 활동을 제거하거나 실행 중인 대리자의 시그니처를 변경할 수는 없습니다. 이러한 변경 작업은 코드를 사용하거나 재호스트된 Workflow Designer를 사용하여 수행할 수 있습니다. 다음 예제에서는 이전 예제에서 사용한 `VerifyAppraisal`의 본문을 구성하는 Sequence에 사용자 지정 `MortgageWorkflow` 활동을 추가합니다.
+워크플로 정의를 업데이트할 준비가 되면 원하는 변경 작업을 수행할 수 있습니다. 활동 추가 또는 제거, 공용 변수 추가, 이동 또는 삭제, 인수 추가 또는 제거, 활동 대리자의 시그니처 변경 같은 작업을 수행할 수 있습니다. 실행 중인 활동을 제거하거나 실행 중인 대리자의 시그니처를 변경할 수는 없습니다. 이러한 변경 작업은 코드를 사용하거나 재호스트된 워크플로 디자이너를 사용하여 수행할 수 있습니다. 다음 예제에서는 이전 예제에서 사용한 `VerifyAppraisal`의 본문을 구성하는 Sequence에 사용자 지정 `MortgageWorkflow` 활동을 추가합니다.
 
 ```csharp
 // Make desired changes to the definition. In this example, we are
@@ -101,7 +101,7 @@ using (FileStream fs = System.IO.File.Open(@"C:\WorkflowDefinitions\MortgageWork
 }
 ```
 
-<xref:System.Activities.DynamicUpdate.DynamicUpdateServices.CreateUpdateMap%2A?displayProperty=nameWithType>이 결과를 반환하면 복제된 워크플로 정의와 <xref:System.Activities.DynamicUpdate.DynamicUpdateServices.PrepareForUpdate%2A?displayProperty=nameWithType>에 대한 호출에 추가된 기타 동적 업데이트 정보는 제거되고, 수정된 워크플로 정의는 나중에 업데이트된 워크플로 인스턴스를 다시 시작할 때 사용할 수 있도록 저장될 수 있습니다. 다음 예제에서는 수정된 워크플로 정의를 `MortgageWorkflow_v2.xaml`에 저장합니다.
+<xref:System.Activities.DynamicUpdate.DynamicUpdateServices.CreateUpdateMap%2A?displayProperty=nameWithType>이 결과를 반환하면 복제된 워크플로 정의와 <xref:System.Activities.DynamicUpdate.DynamicUpdateServices.PrepareForUpdate%2A?displayProperty=nameWithType>에 대한 호출에 추가된 기타 동적 업데이트 정보는 제거되고, 수정된 워크플로 정의는 나중에 업데이트된 워크플로 인스턴스를 다시 시작할 때 사용할 수 있도록 저장될 수 있습니다. 다음 예제에서는 수정된 워크플로 정의를 `MortgageWorkflow_v1.1.xaml`에 저장합니다.
 
 ```csharp
 // Save the modified workflow definition.

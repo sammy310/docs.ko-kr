@@ -22,12 +22,12 @@ helpviewer_keywords:
 - Sub Dispose destructor
 - garbage collection [Visual Basic], Visual Basic
 ms.assetid: f1ee8458-b156-44e0-9a8a-5dd171648cd8
-ms.openlocfilehash: e6274f470e042fa5d581a574d13bd67ae8e8d6e9
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 582988c9eed19fe49bc86e75e7a9d80bbf2a6d59
+ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56979465"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58654534"
 ---
 # <a name="object-lifetime-how-objects-are-created-and-destroyed-visual-basic"></a>개체 수명: 개체 생성 되 고 (Visual Basic)를 제거 하는 방법
 `New` 키워드를 사용하여 클래스의 인스턴스인 개체를 만듭니다. 새 개체를 사용하기 전에 초기화 작업을 수행해야 하는 경우가 많습니다. 일반적인 초기화 작업으로는 파일 열기, 데이터베이스에 연결, 레지스트리 키의 값 읽기 등이 포함됩니다. 호출 하는 절차를 사용 하 여 새 개체의 초기화를 제어 하는 Visual Basic *생성자* (초기화에 대 한 제어를 허용 하는 특수 메서드).  
@@ -70,11 +70,11 @@ ms.locfileid: "56979465"
   
  파생 클래스의 인스턴스를 만들 때는 기본 클래스의 `Sub New` 생성자가 먼저 실행되고 파생 클래스의 생성자가 실행됩니다. `Sub New` 생성자의 첫 번째 코드 줄은 `MyBase.New()` 구문을 사용하여 클래스 계층 구조에서 바로 위에 있는 클래스의 생성자를 호출하기 때문입니다. 그 다음에는 기본 클래스의 생성자에 도달할 때까지 클래스 계층 구조의 각 클래스에 대해 `Sub New` 생성자가 호출됩니다. 기본 클래스의 생성자에 도달하면 기본 클래스 생성자의 코드가 실행되며, 모든 파생 클래스 내 각 생성자의 코드와 대부분의 파생 클래스 내 코드가 마지막으로 실행됩니다.  
   
- ![생성자 및 상속](../../../../visual-basic/programming-guide/language-features/objects-and-classes/media/vaconstructorsinheritance.gif "vaConstructorsInheritance")  
+ ![클래스 계층 구조 생성자 및 상속을 보여주는 스크린샷.](./media/object-lifetime-how-objects-are-created-and-destroyed/subnew-constructor-inheritance.gif)  
   
  CLR은 개체가 더 이상 필요하지 않으면 메모리를 해제하기 전에 해당 개체에 대해 <xref:System.Object.Finalize%2A> 메서드를 호출합니다. <xref:System.Object.Finalize%2A> 메서드는 상태 정보 저장, 데이터베이스에 대한 연결과 파일 닫기 그리고 개체를 해제하기 전에 수행해야 하는 기타 작업 등의 정리 작업을 수행하므로 `destructor`라고 합니다.  
   
- ![생성자 상속 2](../../../../visual-basic/programming-guide/language-features/objects-and-classes/media/vaconstructorsinheritance_2.gif "vaConstructorsInheritance_2")  
+ ![Finalize 메서드 소멸자를 보여주는 스크린샷.](./media/object-lifetime-how-objects-are-created-and-destroyed/finalize-method-destructor.gif)  
   
 ## <a name="idisposable-interface"></a>IDisposable 인터페이스  
  클래스 인스턴스는 Windows 핸들 및 데이터베이스 연결과 같이 CLR에서 관리하지 않는 리소스를 제어하는 경우가 많습니다. 이러한 리소스는 클래스의 `Finalize` 메서드에서 삭제되어야 하므로 가비지 수집기가 개체를 소멸시킬 때 해제됩니다. 그러나 가비지 컬렉션기는 CLR에 사용 가능한 메모리가 더 필요할 때만 개체를 제거합니다. 즉, 개체가 범위를 벗어난 후 오랜 시간이 지날 때까지 리소스가 해제되지 않을 수도 있습니다.  

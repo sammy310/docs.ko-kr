@@ -9,21 +9,21 @@ helpviewer_keywords:
 - text [Windows Forms], drawing in a rectangle
 - strings [Windows Forms], drawing in a rectangle
 ms.assetid: e1fb432a-dc90-48b5-9b6b-acc14507133d
-ms.openlocfilehash: 5c4e76cda37527d0167b21c0d206749ba6dab4a9
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 35eca2fc0fe40db1b590f4c599baee01c9a9faf3
+ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57708862"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58654532"
 ---
 # <a name="how-to-draw-wrapped-text-in-a-rectangle"></a>방법: 사각형 안에 줄 바꿈된 텍스트 그리기
 사용 하 여 사각형 안에 줄 바꿈된 텍스트를 그릴 수 있습니다는 <xref:System.Drawing.Graphics.DrawString%2A> 메서드의 오버 로드는 <xref:System.Drawing.Graphics> 사용 하는 클래스를 <xref:System.Drawing.Rectangle> 또는 <xref:System.Drawing.RectangleF> 매개 변수입니다. 사용할 수도 있습니다는 <xref:System.Drawing.Brush> 및 <xref:System.Drawing.Font>합니다.  
   
  사용 하 여 사각형 안에 줄 바꿈된 텍스트를 그릴 수도 있습니다는 <xref:System.Windows.Forms.TextRenderer.DrawText%2A> 메서드의 오버 로드는 <xref:System.Windows.Forms.TextRenderer> 를 사용 하는 <xref:System.Drawing.Rectangle> 및 <xref:System.Windows.Forms.TextFormatFlags> 매개 변수입니다. 사용할 수도 있습니다는 <xref:System.Drawing.Color> 및 <xref:System.Drawing.Font>합니다.  
   
- 다음 그림에서는 사용 하 여 그린 사각형에서 텍스트의 출력을 보여 줍니다.는 <xref:System.Drawing.Graphics.DrawString%2A> 메서드.  
+ 다음 그림에서는 사용 하 여 그린 사각형에서 텍스트의 출력을 보여 줍니다.는 <xref:System.Drawing.Graphics.DrawString%2A> 메서드:
   
- ![글꼴 텍스트](./media/csfontstext2.png "csfontstext2")  
+ ![DrawString 메서드를 사용 하는 경우 출력을 보여 주는 스크린샷.](./media/how-to-draw-wrapped-text-in-a-rectangle/drawstring-method-font-text.png)  
   
 ### <a name="to-draw-wrapped-text-in-a-rectangle-with-gdi"></a>GDI +를 사용 하 여 사각형 안에 줄 바꿈된 텍스트를 그리기  
   

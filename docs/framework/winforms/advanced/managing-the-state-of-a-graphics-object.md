@@ -8,12 +8,12 @@ helpviewer_keywords:
 - graphics [Windows Forms], managing state
 - graphics [Windows Forms], clipping
 ms.assetid: 6207cad1-7a34-4bd6-bfc1-db823ca7a73e
-ms.openlocfilehash: fc961b59dabc2f7f123b792e7e45a4ff3b535fc1
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: a0166d2ee5a16916fdc2ece95eaf130ebd2598d5
+ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57717624"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58653784"
 ---
 # <a name="managing-the-state-of-a-graphics-object"></a>Graphics 개체의 상태 관리
 합니다 <xref:System.Drawing.Graphics> 클래스의 핵심은 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]합니다. 가져올 항목을 그리려면를 <xref:System.Drawing.Graphics> 개체 속성을 설정 하 고 해당 메서드를 호출할 <xref:System.Drawing.Graphics.DrawLine%2A>, <xref:System.Drawing.Graphics.DrawImage%2A>, <xref:System.Drawing.Graphics.DrawString%2A>, 등).  
@@ -95,7 +95,7 @@ graphics.DrawEllipse(pen, 0, 0, 100, 50);
   
  다음 그림에서는 두 타원을 보여 줍니다. 30도 회전 (클라이언트 영역의 왼쪽 위 모퉁이) 좌표계의 원점을, 타원의 중앙에 대 한 하지는 note 합니다. 두 번째 타원에 대 한 1의 펜 너비 첫 번째 타원은 및 1 밀리미터 1 픽셀씩 의미는 note도 합니다.  
   
- ![타원](./media/csgraphicsascon1.png "csgraphicsascon1")  
+ ![타원 두를 보여 주는 그림: 회전 및 펜 너비입니다.](./media/managing-the-state-of-a-graphics-object/set-rotation-pen-width-drawellipse-method.png)  
   
 ### <a name="clipping-region"></a>클리핑 영역  
  A <xref:System.Drawing.Graphics> 개체를 유지 관리 하 여 그리는 모든 항목에 적용 되는 클리핑 영역 <xref:System.Drawing.Graphics> 개체입니다. 호출 하 여 클리핑 영역을 설정할 수 있습니다는 <xref:System.Drawing.Graphics.SetClip%2A> 메서드.  
@@ -148,7 +148,7 @@ graphics.DrawLine(pen, 40, 20, 190, 150);
   
  다음 그림에서는 잘린된 줄을 보여 줍니다.  
   
- ![제한 된 클립 영역](./media/graphicsascon2.png "graphicsascon2")  
+ ![제한 된 클립 영역을 보여 주는 다이어그램입니다.](./media/managing-the-state-of-a-graphics-object/set-clipping-region-setclip-method.png)  
   
 ## <a name="see-also"></a>참고자료
 - [Windows Forms의 그래픽 및 그리기](graphics-and-drawing-in-windows-forms.md)

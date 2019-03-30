@@ -10,20 +10,19 @@ helpviewer_keywords:
 - Do statement [Visual Basic], Do loops
 - conditional statements [Visual Basic], loop structures
 ms.assetid: ecacb09b-a4c9-42be-98b2-a15d368b5db8
-ms.openlocfilehash: b72eef632b4564abc69e6ebef43b940eb0950e9a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c09c0bdee0e8740abb7cc085f0796048a5db150c
+ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54523391"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58654369"
 ---
 # <a name="loop-structures-visual-basic"></a>루프 구조(Visual Basic)
 Visual Basic 루프 구조를 사용 하면 하나 이상의 코드 줄을 반복 해 서 실행할 수 있습니다. 조건이 될 때까지 루프 구조에서 문을 반복할 수 있습니다 `True`조건이 될 때까지 `False`, 컬렉션에서 각 요소에 대해 한 번 횟수 또는 번호를 지정 합니다.  
   
  다음 그림에서는 조건이 true가 될 때까지 문 집합을 실행 하는 루프 구조를 보여 줍니다.  
   
- ![순서도 수행 하는 중... Until 루프](../../../../visual-basic/programming-guide/language-features/control-flow/media/dountilloop.gif "DoUntilLoop")  
-조건이 true가 될 때까지 문 집합을 실행 합니다.  
+ ![Do를 보여주는 순서도 중... Until 루프입니다.](./media/loop-structures/do-until-loop-true-condition.gif)  
   
 ## <a name="while-loops"></a>While 루프  
  `While`... `End While` 에 지정 된 조건으로 생성 문 집합을 실행 합니다 `While` 문이 `True`합니다. 자세한 내용은 참조 하세요. [하는 동안... While 문 종료](../../../../visual-basic/language-reference/statements/while-end-while-statement.md)합니다.  
