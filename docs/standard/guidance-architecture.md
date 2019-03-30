@@ -16,7 +16,7 @@ ms.locfileid: "57379590"
 
 ## <a name="containerized-docker-application-lifecycle-with-the-microsoft-platform-and-toolscontainerized-lifecycle-architectureindexmd"></a>[Microsoft 플랫폼 및 도구를 활용한 컨테이너화된 Docker 애플리케이션 생명 주기](./containerized-lifecycle-architecture/index.md)
 
-이 가이드에서는 Visual Studio 및 Microsoft Azure를 사용하여 컨테이너화된 Docker 애플리케이션을 개발하고 유효성 검사, 배포하는 데 사용할 수 있고 권장되는 종단 간 생명 주기 프로세스를 소개합니다.
+이 가이드에서는 Visual Studio 및 Microsoft Azure를 사용하여 컨테이너화된 Docker 애플리케이션을 개발하고 유효성을 검사하고 배포하는 데 사용할 수 있는, 권장되는 종단 간 생명 주기 프로세스를 소개합니다.
 
 ## <a name="modernize-existing-net-applications-with-azure-cloud-and-windows-containersmodernize-with-azure-and-containersindexmd"></a>[Azure 클라우드와 Windows 컨테이너를 사용하여 기존 .NET 애플리케이션을 최신으로 바꾸기](./modernize-with-azure-and-containers/index.md)
 
