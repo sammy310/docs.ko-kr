@@ -4,12 +4,12 @@ description: 이 문서에서는 Visual Studio Code를 사용하여 .NET Core �
 author: bleroy
 ms.date: 03/23/2017
 ms.custom: seodec18
-ms.openlocfilehash: 8deaab67f7a824f6eb079f49b7fd75e0c02f1025
-ms.sourcegitcommit: 5d9f4b805787f890ca6e0dc7ea30a43018bc9cbb
+ms.openlocfilehash: e5ac6fa04a2a5001146936de56acafeec7dd895d
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2019
-ms.locfileid: "57788455"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58409499"
 ---
 # <a name="get-started-with-net-core-on-macos"></a>macOS에서 .NET Core 시작
 
@@ -215,7 +215,7 @@ dotnet run -p app/app.csproj
 
 Visual Studio Code 도구 모음에서 디버그 아이콘을 선택하거나, 메뉴 모음에서 **보기 > 디버그**를 선택하거나, 바로 가기 키 <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>D</kbd>를 사용하여 디버거 탭을 엽니다.
 
-![Visual Studio Code 디버거](./media/using-on-macos/vscodedebugger.png)
+![Visual Studio Code 디버거](./media/using-on-macos/visual-studio-code-debugger.png)
 
 디버거에서 애플리케이션을 시작하려면 재생 단추를 누릅니다. 앱이 실행을 시작하고 중단점까지 실행되며, 여기서 중단됩니다. `Get` 메서드를 단계별로 실행하며 올바른 인수를 전달했는지 확인합니다. 응답이 42인지 확인합니다.
 

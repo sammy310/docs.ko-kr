@@ -5,12 +5,12 @@ author: ardalis
 ms.author: wiwagn
 ms.date: 11/29/2017
 ms.custom: seodec18
-ms.openlocfilehash: f84792e5d973f2b2d8bcf418f68e7038fd7a81f5
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
+ms.openlocfilehash: 97cf42c78154375ce06639d4a3029ed87b993ced
+ms.sourcegitcommit: 8258515adc6c37ab6278e5a3d102d593246f8672
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56747852"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58504355"
 ---
 # <a name="unit-testing-c-in-net-core-using-dotnet-test-and-xunit"></a>dotnet 테스트 및 xUnit을 사용하여 .NET Core에서 C# 단위 테스트
 
@@ -50,7 +50,7 @@ namespace Prime.Services
 [dotnet sln](../tools/dotnet-sln.md) 명령을 실행하여 클래스 라이브러리 프로젝트를 솔루션에 추가합니다.
 
 ```
-dotnet sln add .\PrimeService\PrimeService.csproj
+dotnet sln add ./PrimeService/PrimeService.csproj
 ```
 
 ## <a name="creating-the-test-project"></a>테스트 프로젝트 만들기
@@ -100,7 +100,7 @@ GitHub의 [샘플 리포지토리](https://github.com/dotnet/samples/blob/master
 솔루션에 테스트 프로젝트를 추가하려면 *unit-testing-using-dotnet-test* 디렉터리에서 [dotnet sln](../tools/dotnet-sln.md) 명령을 실행합니다.
 
 ```
-dotnet sln add .\PrimeService.Tests\PrimeService.Tests.csproj
+dotnet sln add ./PrimeService.Tests/PrimeService.Tests.csproj
 ```
 
 ## <a name="creating-the-first-test"></a>첫 번째 테스트 만들기

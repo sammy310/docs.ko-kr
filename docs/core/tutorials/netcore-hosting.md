@@ -4,12 +4,12 @@ description: .NET Core 런타임의 작동 방식을 제어해야 하는 고급 
 author: mjrousos
 ms.date: 12/21/2018
 ms.custom: seodec18
-ms.openlocfilehash: 78eb4bb1f0dfb1b2469b69f2b90b9bacc66754aa
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 27717cd68d2ef7c19289a9e06f99bb8767f2f582
+ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56980375"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58654057"
 ---
 # <a name="write-a-custom-net-core-host-to-control-the-net-runtime-from-your-native-code"></a>사용자 지정 .NET Core 호스트를 작성하여 네이티브 코드에서 .NET 런타임 제어
 
@@ -208,4 +208,4 @@ hr = runtimeHost->CreateDelegate(
 
 처음에 작동되지 않으면, 호스트가 예상한 위치에서 *coreclr.dll*을 사용할 수 있고, 필요한 프레임워크 라이브러리가 모두 TPA 목록에 있으며 CoreCLR의 비트 수(32비트 또는 64비트)가 호스트가 빌드된 방식과 일치하는지 다시 확인합니다.
 
-.NET Core 런타임 호스트는 일부 개발자만 필요로 하는 고급 시나리오이지만, 네이티브 프로세스에서 관리 코드를 실행해야 하거나 .NET Core 런타임의 동작에 대해 더 많은 제어권이 필요한 경우 아주 유용할 수 있습니다. .NET Core는 자체를 나란히 실행할 수 있기 때문에 여러 버전의 .NET Core 런타임을 초기화 및 시작하는 호스트를 만들고 동일한 프로세스로 모든 호스트에서 앱을 실행할 수도 있습니다.
+.NET Core 런타임 호스트는 일부 개발자만 필요로 하는 고급 시나리오이지만, 네이티브 프로세스에서 관리 코드를 실행해야 하거나 .NET Core 런타임의 동작에 대해 더 많은 제어권이 필요한 경우 아주 유용할 수 있습니다.
