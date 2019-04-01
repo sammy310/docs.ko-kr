@@ -3,7 +3,7 @@ title: 'C#의 비동기 프로그래밍'
 description: 'async, await 및 Task를 사용하여 비동기 프로그래밍을 지원하는 C# 언어에 대해 간략히 설명합니다.<T>'
 ms.date: 03/18/2019
 ---
-# <a name="the-task-asynchronous-programming-model-in-c"></a>C#의 Task 비동기 프로그래밍 모델 #
+# <a name="the-task-asynchronous-programming-model-in-c"></a>C\#의 Task 비동기 프로그래밍 모델
 
 TAP(Task 비동기 프로그래밍) 모델은 비동기 코드에 대한 추상화를 제공합니다. 항상 그렇듯이 코드는 일련의 명령문으로 작성합니다. 다음 명령문이 시작되기 전에 각 명령문이 완료되는 것처럼 해당 코드를 읽을 수 있습니다. 이러한 명령문 중 일부에서 작업을 시작하고 진행 중인 작업을 나타내는 <xref:System.Threading.Tasks.Task>를 반환할 수 있으므로 컴파일러는 여러 가지 변환을 수행합니다.
 
