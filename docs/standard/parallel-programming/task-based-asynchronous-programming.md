@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 458b5e69-5210-45e5-bc44-3888f86abd6f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d2a525a8aff6f6b05777de736d97c72c38a2fa62
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 0ecc1090f2697eb0243a081cde70338c0e6fffec
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55268030"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58409928"
 ---
 # <a name="task-based-asynchronous-programming"></a>작업 기반 비동기 프로그래밍
 
@@ -236,7 +236,7 @@ Visual Studio를 사용할 경우 <xref:System.Runtime.Versioning.TargetFramewor
 
 ## <a name="canceling-tasks"></a>작업 취소
 
-`Task` 클래스는 협조적 취소를 지원하며 .NET Framework 4에 소개된 <xref:System.Threading.CancellationTokenSource?displayProperty=nameWithType> 및 <xref:System.Threading.CancellationToken?displayProperty=nameWithType> 클래스와 완전히 통합됩니다. <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> 클래스의 많은 생성자는 <xref:System.Threading.CancellationToken> 개체를 입력 매개 변수로 사용합니다. 대부분의 <xref:System.Threading.Tasks.TaskFactory.StartNew%2A> 및 <xref:System.Threading.Tasks.Task.Run%2A> 오버로드는 <xref:System.Threading.CancellationToken> 매개 변수를 포함합니다.
+<xref:System.Threading.Tasks.Task> 클래스는 협조적 취소를 지원하며 .NET Framework 4에 소개된 <xref:System.Threading.CancellationTokenSource?displayProperty=nameWithType> 및 <xref:System.Threading.CancellationToken?displayProperty=nameWithType> 클래스와 완전히 통합됩니다. <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> 클래스의 많은 생성자는 <xref:System.Threading.CancellationToken> 개체를 입력 매개 변수로 사용합니다. 대부분의 <xref:System.Threading.Tasks.TaskFactory.StartNew%2A> 및 <xref:System.Threading.Tasks.Task.Run%2A> 오버로드는 <xref:System.Threading.CancellationToken> 매개 변수를 포함합니다.
 
 이 토큰을 만든 다음 나중에 <xref:System.Threading.CancellationTokenSource> 클래스를 사용하여 취소 요청을 실행할 수 있습니다. 이 토큰을 <xref:System.Threading.Tasks.Task>에 인수로 전달하고, 취소 요청에 대한 응답 작업을 수행하는 사용자 대리자에서도 동일한 토큰을 참조합니다.
 
@@ -268,7 +268,7 @@ TPL에는 병렬 시나리오와 순차 시나리오 모두에 유용한 새로�
 
 ## <a name="custom-task-types"></a>사용자 지정 작업 형식
 
-<xref:System.Threading.Tasks.Task?displayProperty=nameWithType> 또는 <xref:System.Threading.Tasks.Task%601?displayProperty=nameWithType>에서 상속하지 않는 것이 좋습니다. 대신 <xref:System.Threading.Tasks.Task.AsyncState%2A> 속성을 사용하여 추가 데이터 또는 상태를 <xref:System.Threading.Tasks.Task> 또는 <xref:System.Threading.Tasks.Task%601> 개체에 연결하는 것이 좋습니다. 확장명 메서드를 사용하여 <xref:System.Threading.Tasks.Task> 및 <xref:System.Threading.Tasks.Task%601> 클래스의 기능을 확장할 수도 있습니다. 확장 메서드에 대한 자세한 내용은 [확장 메서드](~/docs/csharp/programming-guide/classes-and-structs/extension-methods.md) 및 [확장 메서드](~/docs/visual-basic/programming-guide/language-features/procedures/extension-methods.md)를 참조하세요.
+<xref:System.Threading.Tasks.Task?displayProperty=nameWithType> 또는 <xref:System.Threading.Tasks.Task%601?displayProperty=nameWithType>에서 상속하지 않는 것이 좋습니다. 대신 <xref:System.Threading.Tasks.Task.AsyncState%2A> 속성을 사용하여 추가 데이터 또는 상태를 <xref:System.Threading.Tasks.Task> 또는 <xref:System.Threading.Tasks.Task%601> 개체에 연결하는 것이 좋습니다. 확장 메서드를 사용하여 <xref:System.Threading.Tasks.Task> 및 <xref:System.Threading.Tasks.Task%601> 클래스의 기능을 확장할 수도 있습니다. 확장 메서드에 대한 자세한 내용은 [확장 메서드](~/docs/csharp/programming-guide/classes-and-structs/extension-methods.md) 및 [확장 메서드](~/docs/visual-basic/programming-guide/language-features/procedures/extension-methods.md)를 참조하세요.
 
 <xref:System.Threading.Tasks.Task> 또는 <xref:System.Threading.Tasks.Task%601>에서 상속해야 하는 경우에는 <xref:System.Threading.Tasks.Task.Run%2A>, <xref:System.Threading.Tasks.Task.Run%2A> 또는 <xref:System.Threading.Tasks.TaskFactory?displayProperty=nameWithType>, <xref:System.Threading.Tasks.TaskFactory%601?displayProperty=nameWithType> 또는 <xref:System.Threading.Tasks.TaskCompletionSource%601?displayProperty=nameWithType> 클래스를 사용하여 사용자 지정 작업 형식의 인스턴스를 만들 수 없습니다. 이러한 메커니즘은 <xref:System.Threading.Tasks.Task> 및 <xref:System.Threading.Tasks.Task%601> 개체만 만들기 때문입니다. 또한 <xref:System.Threading.Tasks.Task>, <xref:System.Threading.Tasks.Task%601>, <xref:System.Threading.Tasks.TaskFactory> 및 <xref:System.Threading.Tasks.TaskFactory%601>에서 제공하는 작업 연속 메커니즘을 사용하여 사용자 지정 작업의 인스턴스를 만들 수 없습니다. 이 메커니즘에서도 mechanisms also create only <xref:System.Threading.Tasks.Task> 및 <xref:System.Threading.Tasks.Task%601> 개체만 만들기 때문입니다.
 

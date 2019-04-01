@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: e636d024-0fac-45eb-b721-25a8c0ceca8f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6d2800e4608d6055f4815f835a1375f9fffee9fc
-ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
+ms.openlocfilehash: 1a8c6046d05dc706074a732d9ba2a9c1ec73c56f
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "58049732"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58412346"
 ---
 # <a name="obsolete-types-in-the-net-framework"></a>.NET Framework에서 사용되지 않는 형식
 <a name="introduction"></a> 이 문서의 표에는 어셈블리에서 구성된 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 및 [!INCLUDE[net_v46](../../../includes/net-v46-md.md)]에서 사용하지 않는 형식이 나열되어 있습니다. 사용하지 않는 형식과 각 어셈블리에서 권장되는 대체 형식의 목록을 보려면 다음 링크를 사용합니다. 이러한 형식은 사용되지 않으므로 해당 형식의 멤버도 모두 사용되지 않습니다. .NET Framework 클래스 라이브러리의 사용되지 않는 멤버에 대한 추가 목록은 [사용되지 않는 멤버](obsolete-members.md)를 참조하십시오.
@@ -205,7 +205,7 @@ ms.locfileid: "58049732"
 |----------|-------------|
 |<xref:System.ComponentModel.IComNativeDescriptorHandler?displayProperty=nameWithType>|이 인터페이스는 사용되지 않습니다. <xref:System.ComponentModel.TypeDescriptionProvider?displayProperty=nameWithType> 형식을 처리하려면 대신 <xref:System.ComponentModel.TypeDescriptor.ComObjectType%2A?displayProperty=nameWithType>를 추가합니다.|
 |<xref:System.ComponentModel.RecommendedAsConfigurableAttribute?displayProperty=nameWithType>|새 설정 모델을 사용하려면 대신 <xref:System.ComponentModel.SettingsBindableAttribute?displayProperty=nameWithType>를 사용하십시오.|
-|<xref:System.ComponentModel.Design.Serialization.RootDesignerSerializerAttribute?displayProperty=nameWithType>|이 특성은 사용되지 않습니다. 대신 <xref:System.ComponentModel.Design.Serialization.DesignerSerializerAttribute?displayProperty=nameWithType>를 사용하세요. 예를 들어 CodeDom에 대해 루트 디자이너를 지정하려면 `DesignerSerializerAttribute\(...,typeof\(TypeCodeDomSerializer\)\)`를 사용하십시오.|
+|<xref:System.ComponentModel.Design.Serialization.RootDesignerSerializerAttribute?displayProperty=nameWithType>|이 특성은 사용되지 않습니다. 대신 <xref:System.ComponentModel.Design.Serialization.DesignerSerializerAttribute?displayProperty=nameWithType>를 사용하세요.|
 |<xref:System.Diagnostics.DiagnosticsConfigurationHandler?displayProperty=nameWithType>|이 클래스는 사용되지 않습니다.|
 |<xref:System.Diagnostics.PerformanceCounterManager?displayProperty=nameWithType>|이 클래스는 사용되지 않습니다. 대신 <xref:System.Diagnostics.PerformanceCounter?displayProperty=nameWithType> 클래스를 통해 성능 카운터를 사용하십시오.|
 |<xref:System.Net.GlobalProxySelection?displayProperty=nameWithType>|이 클래스는 사용되지 않습니다. 전역 기본 프록시를 액세스 및 설정하려면 대신 <xref:System.Net.WebRequest.DefaultWebProxy%2A?displayProperty=nameWithType>를 사용하십시오. <xref:System.Net.GlobalProxySelection.GetEmptyWebProxy%2A?displayProperty=nameWithType> 대신 'null'을 사용하십시오.|

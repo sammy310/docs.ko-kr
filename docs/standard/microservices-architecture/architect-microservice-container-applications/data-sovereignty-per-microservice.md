@@ -4,12 +4,12 @@ description: 마이크로 서비스별 데이터 주권은 마이크로 서비�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/20/2018
-ms.openlocfilehash: 4900c294f94f4b4d604ba841595fc5c6d7952c10
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 8db5e4ae8e0da63493a09c76614d898358bdea98
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54144904"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58464037"
 ---
 # <a name="data-sovereignty-per-microservice"></a>마이크로 서비스별 데이터 주권
 
@@ -50,16 +50,16 @@ DDD는 실제 경계를 분산된 마이크로 서비스의 형태로 가져오�
 ### <a name="additional-resources"></a>추가 자료
 
 - **Chris Richardson. 패턴: 서비스별 데이터베이스** \
-  [*https://microservices.io/patterns/data/database-per-service.html*](https://microservices.io/patterns/data/database-per-service.html)
+  [https://microservices.io/patterns/data/database-per-service.html](https://microservices.io/patterns/data/database-per-service.html)
 
 - **Martin Fowler. BoundedContext** \
-  [*https://martinfowler.com/bliki/BoundedContext.html*](https://martinfowler.com/bliki/BoundedContext.html)
+  [https://martinfowler.com/bliki/BoundedContext.html](https://martinfowler.com/bliki/BoundedContext.html)
 
 - **Martin Fowler. PolyglotPersistence** \
-  [*https://martinfowler.com/bliki/PolyglotPersistence.html*](https://martinfowler.com/bliki/PolyglotPersistence.html)
+  [https://martinfowler.com/bliki/PolyglotPersistence.html](https://martinfowler.com/bliki/PolyglotPersistence.html)
 
 - **Alberto Brandolini. 컨텍스트 매핑을 통한 전략적인 도메인 기반 디자인** \
-  [*https://www.infoq.com/articles/ddd-contextmapping*](https://www.infoq.com/articles/ddd-contextmapping)
+  [https://www.infoq.com/articles/ddd-contextmapping](https://www.infoq.com/articles/ddd-contextmapping)
 
 >[!div class="step-by-step"]
 >[이전](microservices-architecture.md)

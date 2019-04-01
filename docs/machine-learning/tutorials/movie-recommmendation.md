@@ -6,12 +6,12 @@ ms.author: johalex
 ms.date: 03/08/2019
 ms.custom: mvc
 ms.topic: tutorial
-ms.openlocfilehash: 9b7ef12591e0a231b633f461547ec0eeaec1a530
-ms.sourcegitcommit: 77854e8704b9689b73103d691db34d71c2bf1dad
+ms.openlocfilehash: e78772df1cf7e5f8999305a1b726a7085f94601b
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58308123"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58410071"
 ---
 # <a name="tutorial-create-a-movie-recommender-with-mlnet"></a>자습서: ML.NET을 사용하여 Movie Recommender 만들기
 
@@ -106,7 +106,7 @@ ML.NET 프로세스의 첫 번째 단계는 모델 학습 및 테스트 데이�
 | 기능      | 레이블         |
 | ------------- |:-------------:|
 | `userId`        |    `rating`     |
-| `movieId `      |               |
+| `movieId`      |               |
 | `timestamp`     |               |
 
 `Label`을 예측하는 데 사용되는 `Features`를 결정하는 것은 사용자에게 달려 있습니다. 또한 [Feature Permutation 중요도](../how-to-guides/determine-global-feature-importance-in-model.md)와 같은 방법을 사용하여 최상의 `Features`를 선택할 수 있습니다.
@@ -116,7 +116,7 @@ ML.NET 프로세스의 첫 번째 단계는 모델 학습 및 테스트 데이�
 | 기능      | 레이블         |
 | ------------- |:-------------:|
 | `userId`        |    `rating`     |
-| `movieId `      |               |
+| `movieId`      |               |
 
 다음으로, 입력 클래스에 대한 데이터 구조를 정의해야 합니다.
 

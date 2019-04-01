@@ -4,12 +4,12 @@ description: 컨테이너화된 .NET 애플리케이션을 위한 .NET 마이크
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/08/2018
-ms.openlocfilehash: fa292cb97db612506eb7a6f83bb24f37425d690a
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: 4a6a7faac6d0419d88e613ca23d9862475659918
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57678659"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58464205"
 ---
 # <a name="design-the-microservice-application-layer-and-web-api"></a>마이크로 서비스 애플리케이션 계층 및 웹 API 설계하기
 
@@ -17,7 +17,7 @@ ms.locfileid: "57678659"
 
 SOLID 원칙은 DDD 패턴을 통한 마이크로 서비스 개발처럼 현대적인 필수 애플리케이션에서 사용되는 중요한 기법입니다. SOLID는 5가지 기본 원칙을 묶은 머리글자어입니다.
 
-- 단일 책임 원칙
+- Single Responsibility(단일 책임) 원칙
 
 - Open/closed(개방/폐쇄) 원칙
 
@@ -38,13 +38,13 @@ SOLID에 대해서는 다른 가이드에서 자세히 다룰 것입니다. 따�
 #### <a name="additional-resources"></a>추가 자료
 
 - **SOLID: 기본 OOP 원칙** \
-  [*https://deviq.com/solid/*](https://deviq.com/solid/%20)
+  [https://deviq.com/solid/](https://deviq.com/solid/)
 
 - **Inversion of Control 컨테이너 및 종속성 주입 패턴** \
-  [*https://martinfowler.com/articles/injection.html*](https://martinfowler.com/articles/injection.html)
+  [https://martinfowler.com/articles/injection.html](https://martinfowler.com/articles/injection.html)
 
 - **Steve Smith. 새 항목은 붙이기** \입니다.
-  [*https://ardalis.com/new-is-glue*](https://ardalis.com/new-is-glue)
+  [https://ardalis.com/new-is-glue](https://ardalis.com/new-is-glue)
 
 > [!div class="step-by-step"]
 > [이전](nosql-database-persistence-infrastructure.md)

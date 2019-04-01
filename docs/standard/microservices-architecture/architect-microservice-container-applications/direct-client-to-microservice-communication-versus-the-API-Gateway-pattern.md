@@ -4,12 +4,12 @@ description: API 게이트웨이 패턴과 클라이언트-마이크로 서비�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 01/07/2019
-ms.openlocfilehash: 35bebd9429dabbe0e3ddc3549a504719321e47e1
-ms.sourcegitcommit: b8ace47d839f943f785b89e2fff8092b0bf8f565
+ms.openlocfilehash: 0e2db3629d504065a122a69b916f19aa3b838aab
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "55675454"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58462957"
 ---
 # <a name="the-api-gateway-pattern-versus-the-direct-client-to-microservice-communication"></a>API 게이트웨이 패턴과 클라이언트-마이크로 서비스 간 직접 통신
 
@@ -173,25 +173,25 @@ Azure API Management를 통해 키, 토큰 및 IP 필터링을 사용하여 API�
 ## <a name="additional-resources"></a>추가 자료
 
 - **Charles Richardson. 패턴: API 게이트웨이/프런트 엔드의 백 엔드** \
-  [*https://microservices.io/patterns/apigateway.html*](https://microservices.io/patterns/apigateway.html)
+  [https://microservices.io/patterns/apigateway.html](https://microservices.io/patterns/apigateway.html)
 
 - **API 게이트웨이 패턴** \
-  [*https://docs.microsoft.com/azure/architecture/microservices/gateway*](https://docs.microsoft.com/azure/architecture/microservices/gateway)
+  [https://docs.microsoft.com/azure/architecture/microservices/gateway](https://docs.microsoft.com/azure/architecture/microservices/gateway)
 
 - **집계 및 컴퍼지션 패턴** \
-  [*https://microservices.io/patterns/data/api-composition.html*](https://microservices.io/patterns/data/api-composition.html)
+  [https://microservices.io/patterns/data/api-composition.html](https://microservices.io/patterns/data/api-composition.html)
 
 - **Azure API Management** \
-  [*https://azure.microsoft.com/services/api-management/*](https://azure.microsoft.com/services/api-management/)
+  [https://azure.microsoft.com/services/api-management/](https://azure.microsoft.com/services/api-management/)
 
 - **Udi Dahan. 서비스 지향 컴퍼지션** \
-  [*http://udidahan.com/2014/07/30/service-oriented-composition-with-video/*](http://udidahan.com/2014/07/30/service-oriented-composition-with-video/)
+  [http://udidahan.com/2014/07/30/service-oriented-composition-with-video/](http://udidahan.com/2014/07/30/service-oriented-composition-with-video/)
 
 - **Clemens Vasters. GOTO 2016의 메시징 및 마이크로 서비스(비디오)** \
-  [*https://www.youtube.com/watch?v=rXi5CLjIQ9k*](https://www.youtube.com/watch?v=rXi5CLjIQ9k)
+  [https://www.youtube.com/watch?v=rXi5CLjIQ9k](https://www.youtube.com/watch?v=rXi5CLjIQ9k)
 
 - **간단한 API 게이트웨이**(ASP.NET Core API 게이트웨이 자습서 시리즈) \
-  [*https://www.pogsdotnet.com/2018/08/api-gateway-in-nutshell.html*](https://www.pogsdotnet.com/2018/08/api-gateway-in-nutshell.html)
+  [https://www.pogsdotnet.com/2018/08/api-gateway-in-nutshell.html](https://www.pogsdotnet.com/2018/08/api-gateway-in-nutshell.html)
 
 >[!div class="step-by-step"]
 >[이전](identify-microservice-domain-model-boundaries.md)

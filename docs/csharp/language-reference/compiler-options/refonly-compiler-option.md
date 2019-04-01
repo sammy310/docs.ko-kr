@@ -7,12 +7,12 @@ helpviewer_keywords:
 - /refonly compiler option [C#]
 - -refonly compiler option [C#]
 - refonly compiler option [C#]
-ms.openlocfilehash: 06b246d6e5831563389efa402ccb6a942430efa4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 24f5cba5650777f4844923844708d287798c445c
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54589729"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58409265"
 ---
 # <a name="-refonly-c-compiler-options"></a>-refonly(C# 컴파일러 옵션)
 
@@ -33,7 +33,7 @@ ms.locfileid: "54589729"
 참조 어셈블리는 메타데이터 전용 어셈블리에서 메타데이터(전용 멤버)를 추가로 제거합니다.
 
 - 참조 어셈블리에는 API 화면에 있어야 하는 항목에 대한 참조만 포함됩니다. 실제 어셈블리에는 특정 구현에 관련된 추가 참조가 포함될 수 있습니다. 예를 들어 `class C { private void M() { dynamic d = 1; ... } }`에 대한 참조 어셈블리는 `dynamic`에 필요한 형식을 참조하지 않습니다.
-- 제거가 컴파일에 눈에 띄는 영향을 미치지 않을 경우 전용 함수-멤버(메서드, 속성 및 이벤트)가 제거됩니다. `InternalsVisibleTo` 특성이 없는 경우 내부 함수-멤버에 대해 동일한 작업을 수행합니다.
+- 제거가 컴파일에 눈에 띄는 영향을 미치지 않을 경우 전용 함수-멤버(메서드, 속성 및 이벤트)가 제거됩니다. <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> 특성이 없는 경우 내부 함수-멤버에 대해 동일한 작업을 수행합니다.
 - 그러나 모든 형식(전용 또는 중첩 형식 포함)은 참조 어셈블리에서 유지됩니다. 모든 특성이 유지됩니다(내부 특성인 경우에도).
 - 모든 가상 메서드가 유지됩니다. 명시적 인터페이스 구현이 유지됩니다. 명시적으로 구현된 속성 및 이벤트가 유지됩니다. 해당 접근자가 가상이므로 유지됩니다.
 - 구조체의 모든 필드가 유지됩니다. 이것은 post-C#-7.1 개선의 후보입니다.

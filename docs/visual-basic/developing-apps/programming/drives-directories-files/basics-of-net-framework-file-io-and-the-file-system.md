@@ -9,12 +9,12 @@ helpviewer_keywords:
 - streams
 - streams, definition
 ms.assetid: 49d837c0-cf28-416f-8606-4d83d7b479ef
-ms.openlocfilehash: 365c3b8f0aa107f7106e0c83d1fa60de6f4903f2
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: f0d5c4e48d8a44c2e39942cbe76acbb5ef44ea7d
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57674564"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58462775"
 ---
 # <a name="basics-of-net-framework-file-io-and-the-file-system-visual-basic"></a>.NET Framework 파일 I/O 및 파일 시스템의 기본 사항(Visual Basic)
 
@@ -29,7 +29,7 @@ ms.locfileid: "57674564"
 
 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] 는 스트림을 사용하여 파일의 읽기와 쓰기를 지원합니다. 스트림은 연속 데이터의 1차원 집합이라고 생각할 수 있습니다. 여기에는 시작과 끝이 있고 커서가 스트림에서 현재 위치를 나타냅니다.
 
-![FileStream의 현재 위치를 보여 주는 커서.](../../../../visual-basic/developing-apps/programming/drives-directories-files/media/filestream.gif "FileStream")
+![FileStream의 현재 위치를 보여 주는 커서](./media/basics-of-net-framework-file-io-and-the-file-system/filestream-cursor-position.gif)
 
 ## <a name="stream-operations"></a>스트림 작업
 
