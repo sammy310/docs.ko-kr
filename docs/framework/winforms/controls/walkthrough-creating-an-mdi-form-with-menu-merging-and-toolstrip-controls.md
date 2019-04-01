@@ -1,5 +1,5 @@
 ---
-title: '연습: 메뉴 병합 및 ToolStrip 컨트롤을 사용 하 여 MDI 폼 만들기'
+title: '연습: 메뉴 병합 및 ToolStrip 컨트롤을 사용하여 MDI 양식 만들기'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -21,7 +21,7 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 03/09/2019
 ms.locfileid: "57717143"
 ---
-# <a name="walkthrough-creating-an-mdi-form-with-menu-merging-and-toolstrip-controls"></a>연습: 메뉴 병합 및 ToolStrip 컨트롤을 사용 하 여 MDI 폼 만들기
+# <a name="walkthrough-creating-an-mdi-form-with-menu-merging-and-toolstrip-controls"></a>연습: 메뉴 병합 및 ToolStrip 컨트롤을 사용하여 MDI 양식 만들기
 <xref:System.Windows.Forms?displayProperty=nameWithType> 네임스페이스는 MDI(다중 문서 인터페이스) 응용 프로그램을 지원하고 <xref:System.Windows.Forms.MenuStrip> 컨트롤은 메뉴 병합을 지원합니다. MDI 폼은 <xref:System.Windows.Forms.ToolStrip> 컨트롤일 수도 있습니다.  
   
  이 연습에 사용 하는 방법을 보여 줍니다. <xref:System.Windows.Forms.ToolStripPanel> MDI 폼을 사용 하 여 컨트롤입니다. 폼은 자식 메뉴와 메뉴 병합도 지원합니다. 다음 태스크를이 연습에 설명 되어 있습니다.  

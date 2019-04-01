@@ -1,5 +1,5 @@
 ---
-title: '방법: FlowLayoutPanel 컨트롤의 자식 컨트롤 고정 및 도킹'
+title: '방법: FlowLayoutPanel 컨트롤에서 자식 컨트롤 고정 및 도킹'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - layout [Windows Forms], child controls
@@ -14,7 +14,7 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 03/09/2019
 ms.locfileid: "57709915"
 ---
-# <a name="how-to-anchor-and-dock-child-controls-in-a-flowlayoutpanel-control"></a>방법: FlowLayoutPanel 컨트롤의 자식 컨트롤 고정 및 도킹
+# <a name="how-to-anchor-and-dock-child-controls-in-a-flowlayoutpanel-control"></a>방법: FlowLayoutPanel 컨트롤에서 자식 컨트롤 고정 및 도킹
 <xref:System.Windows.Forms.FlowLayoutPanel> 컨트롤은 자식 컨트롤의 <xref:System.Windows.Forms.Control.Anchor%2A> 및 <xref:System.Windows.Forms.Control.Dock%2A> 속성을 지원합니다.  
   
 ### <a name="to-anchor-and-dock-child-controls-in-a-flowlayoutpanel-control"></a>FlowLayoutPanel 컨트롤의 자식 컨트롤을 고정 및 도킹하려면  

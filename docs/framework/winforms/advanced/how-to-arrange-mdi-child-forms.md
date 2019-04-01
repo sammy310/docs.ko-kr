@@ -1,5 +1,5 @@
 ---
-title: '방법: MDI 자식 폼 정렬'
+title: '방법: MDI 자식 양식 정렬'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -15,7 +15,7 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 03/09/2019
 ms.locfileid: "57711901"
 ---
-# <a name="how-to-arrange-mdi-child-forms"></a>방법: MDI 자식 폼 정렬
+# <a name="how-to-arrange-mdi-child-forms"></a>방법: MDI 자식 양식 정렬
 응용 프로그램에는 바둑판식 배열, 계단식 배열, 정렬 등 열려 있는 MDI 자식 폼의 레이아웃을 제어하는 작업을 위한 메뉴 명령이 있는 경우가 많습니다. <xref:System.Windows.Forms.Form.LayoutMdi%2A> 메서드를 <xref:System.Windows.Forms.MdiLayout> 열거형 값 중 하나와 함께 사용하여 MDI 부모 폼에서 자식 폼을 다시 정렬할 수 있습니다.  
   
  <xref:System.Windows.Forms.MdiLayout> 열거형 값은 자식 폼을 계단식으로, 가로/세로 바둑판식으로 또는 MDI 폼 아래쪽에 정렬된 자식 폼 아이콘으로 표시합니다. 이러한 값과 같은 효과가 Windows 명령과 **계단식 창 배열**, **windows 나란히 표시**를 **창 가로 정렬 보기**, 및 **바탕 화면을 표시** , 각각.  

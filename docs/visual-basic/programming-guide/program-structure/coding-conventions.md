@@ -63,7 +63,7 @@ Microsoft는 이 항목의 지침에 따라 예제와 설명서를 개발합니�
   
      [!code-vb[VbVbalrGuidelines#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#2)]  
   
--   서식이 지정된 별표(*) 블록으로 주석을 둘러싸지 마십시오.  
+-   서식이 지정된 별표 블록으로 주석을 둘러싸지 마십시오.  
   
 ## <a name="program-structure"></a>프로그램 구조  
   

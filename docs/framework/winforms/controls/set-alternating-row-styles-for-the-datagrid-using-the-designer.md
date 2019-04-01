@@ -1,5 +1,5 @@
 ---
-title: '방법: 디자이너를 사용 하 여 Windows Forms DataGridView 컨트롤에 대 한 행 스타일 교대로 반복 되는 설정'
+title: '방법: 디자이너를 사용하여 Windows Forms DataGridView 컨트롤에 대한 대체 행 스타일 설정'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - ledger-like formats
@@ -15,7 +15,7 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 03/09/2019
 ms.locfileid: "57724598"
 ---
-# <a name="how-to-set-alternating-row-styles-for-the-windows-forms-datagridview-control-using-the-designer"></a>방법: 디자이너를 사용 하 여 Windows Forms DataGridView 컨트롤에 대 한 행 스타일 교대로 반복 되는 설정
+# <a name="how-to-set-alternating-row-styles-for-the-windows-forms-datagridview-control-using-the-designer"></a>방법: 디자이너를 사용하여 Windows Forms DataGridView 컨트롤에 대한 대체 행 스타일 설정
 테이블 형식 데이터는 종종 교대로 반복 되는 행의 배경색은 여기서 장부와 비슷한 형식으로 표시 됩니다. 이 형식을 사용하면 특히 많은 열을 포함하는 넓은 테이블에서 사용자가 각 행에 있는 셀을 쉽게 구분할 수 있습니다.  
   
  <xref:System.Windows.Forms.DataGridView> 컨트롤을 사용하여 교대로 반복되는 행에 대한 전체 스타일 정보를 지정할 수 있습니다. 교대로 반복 되는 행을 구분할 수 전경색 및 배경색 외에도 글꼴과 같은 스타일 특성을 사용할 수 있습니다. 자세한 내용은 [Windows Forms DataGridView 컨트롤의 셀 스타일](cell-styles-in-the-windows-forms-datagridview-control.md)합니다.  
