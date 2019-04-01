@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - '#if directive [C#]'
 ms.assetid: 48cabbff-ca82-491f-a56a-eeccd528c7c2
-ms.openlocfilehash: 702d38cf6f3e28d20fbd5d7826cf7f1f56f235a7
-ms.sourcegitcommit: 01ea420eaa4bf76d5fc47673294c8881379b3369
+ms.openlocfilehash: b92660a69194ff2d52cd78427f73510de514ea48
+ms.sourcegitcommit: 4a8c2b8d0df44142728b68ebc842575840476f6d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/06/2019
-ms.locfileid: "55758640"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58545821"
 ---
 # <a name="if-c-reference"></a>#if(C# 참조)
 
@@ -24,7 +24,7 @@ C# 컴파일러는 `#if` 지시문과 [#endif](preprocessor-endif.md) 지시문�
 #endif
 ```
 
-[==](../operators/equality-comparison-operator.md)(같음) 및 [!=](../operators/not-equal-operator.md)(같지 않음) 연산자는 [true](../keywords/true.md) 또는 [false](../keywords/false.md)를 테스트할 때만 사용할 수 있습니다. true가 반환되면 기호가 정의된 것입니다. `#if DEBUG` 문의 의미는 `#if (DEBUG == true)`와 같습니다. [&&](../operators/conditional-and-operator.md)(및), [&#124;&#124;](../operators/conditional-or-operator.md)(또는), [!](../operators/logical-negation-operator.md)(아님) 연산자를 사용하면 여러 기호가 정의되었는지 여부를 평가할 수 있습니다. 기호와 연산자를 괄호로 묶을 수도 있습니다.
+[==](../operators/equality-operators.md#equality-operator-)(같음) 및 [!=](../operators/equality-operators.md#inequality-operator-)(같지 않음) 연산자는 [true](../keywords/true.md) 또는 [false](../keywords/false.md)를 테스트할 때만 사용할 수 있습니다. true가 반환되면 기호가 정의된 것입니다. `#if DEBUG` 문의 의미는 `#if (DEBUG == true)`와 같습니다. [&&](../operators/conditional-and-operator.md)(및), [&#124;&#124;](../operators/conditional-or-operator.md)(또는), [!](../operators/logical-negation-operator.md)(아님) 연산자를 사용하면 여러 기호가 정의되었는지 여부를 평가할 수 있습니다. 기호와 연산자를 괄호로 묶을 수도 있습니다.
 
 ## <a name="remarks"></a>주의
 

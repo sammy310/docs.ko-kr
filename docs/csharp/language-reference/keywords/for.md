@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - for keyword [C#]
 ms.assetid: 34041a40-2c87-467a-9ffb-a0417d8f67a8
-ms.openlocfilehash: 6584889f527e1459090bea322720f0cd8d9694f6
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: ba156eed25f28a0568e11c986de1e84db3cd9cf0
+ms.sourcegitcommit: 8258515adc6c37ab6278e5a3d102d593246f8672
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53149239"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58504485"
 ---
 # <a name="for-c-reference"></a>for(C# 참조)
 
@@ -47,9 +47,9 @@ for (initializer; condition; iterator)
 
   - 메서드 호출
 
-  - 접두사 또는 후위 [increment](../operators/increment-operator.md) 식(예: `++i` 또는`i++`)
+  - 접두사 또는 후위 [increment](../operators/arithmetic-operators.md#increment-operator-) 식(예: `++i` 또는`i++`)
 
-  - 접두사 또는 후위 [decrement](../operators/decrement-operator.md) 식(예: `--i` 또는`i--`)
+  - 접두사 또는 후위 [decrement](../operators/arithmetic-operators.md#decrement-operator---) 식(예: `--i` 또는`i--`)
 
   - [new](new-operator.md) 키워드를 사용하여 개체 만들기
 
@@ -79,9 +79,9 @@ i < 5
 
 - 메서드 호출
 
-- 접두사 또는 후위 [increment](../operators/increment-operator.md) 식(예: `++i` 또는`i++`)
+- 접두사 또는 후위 [increment](../operators/arithmetic-operators.md#increment-operator-) 식(예: `++i` 또는`i++`)
 
-- 접두사 또는 후위 [decrement](../operators/decrement-operator.md) 식(예: `--i` 또는`i--`)
+- 접두사 또는 후위 [decrement](../operators/arithmetic-operators.md#decrement-operator---) 식(예: `--i` 또는`i--`)
 
 - [new](new-operator.md) 키워드를 사용하여 개체 만들기
 

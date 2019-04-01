@@ -6,12 +6,12 @@ ms.author: johalex
 ms.date: 03/18/2019
 ms.topic: tutorial
 ms.custom: mvc, seodec18
-ms.openlocfilehash: 502a7aafd434650d09cefa2781d3749e5a435564
-ms.sourcegitcommit: 462dc41a13942e467984e48f4018d1f79ae67346
+ms.openlocfilehash: be59760091767b7229d80693cd69434581a8b140
+ms.sourcegitcommit: d938c39afb9216db377d0f0ecdaa53936a851059
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/19/2019
-ms.locfileid: "58186132"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58634416"
 ---
 # <a name="tutorial-cluster-iris-flowers-using-a-clustering-learner-with-mlnet"></a>자습서: ML.NET을 통해 클러스터링 학습자를 사용하여 아이리스 꽃 클러스터링
 
@@ -136,7 +136,7 @@ ms.locfileid: "58186132"
 이 자습서의 경우 클러스터링 작업의 학습 파이프라인은 다음 두 단계로 구성됩니다.
 
 - 로드된 열을 클러스터링 교육 담당자가 사용하는 하나의 **기능** 열로 연결합니다.
-- <xref:Microsoft.ML.Trainers.KMeans.KMeansPlusPlusTrainer> 교육 담당자를 사용하여 k-means++ 클러스터링 알고리즘을 사용하는 모델을 학습합니다.
+- <xref:Microsoft.ML.Trainers.KMeansPlusPlusTrainer> 교육 담당자를 사용하여 k-means++ 클러스터링 알고리즘을 사용하는 모델을 학습합니다.
 
 `Main` 메서드에 다음 코드를 추가합니다.
 

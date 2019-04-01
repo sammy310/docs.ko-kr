@@ -7,12 +7,12 @@ helpviewer_keywords:
 - C# language, operators
 - operators [C#], about operators
 ms.assetid: 214e7b83-1a41-4f7c-9867-64e9c0bab39f
-ms.openlocfilehash: a0174ca42cb65c7c8f0c8ba2dc9adfd5c43c22b8
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 7d0ceb0cddc49722d7122e4fde6149fe1ea86208
+ms.sourcegitcommit: 4a8c2b8d0df44142728b68ebc842575840476f6d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56981584"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58545470"
 ---
 # <a name="operators-c-programming-guide"></a>연산자(C# 프로그래밍 가이드)
 
@@ -45,8 +45,8 @@ C#에서 *연산자* 는 식 또는 문에서 하나 이상의 *피연산자* �
 |x[.](../../../csharp/language-reference/operators/member-access-operator.md)y<br /><br /> x?.y|멤버 액세스<br /><br /> 조건부 멤버 액세스|  
 |f[(x)](../../../csharp/language-reference/operators/invocation-operator.md)|메서드 및 대리자 호출|  
 |a[&#91;x&#93;](../../../csharp/language-reference/operators/index-operator.md)<br /><br /> a?[x]|배열 및 인덱서 액세스<br /><br /> 조건부 배열 및 인덱서 액세스|  
-|x[++](../../../csharp/language-reference/operators/increment-operator.md)|후위 증가|  
-|x[--](../../../csharp/language-reference/operators/decrement-operator.md)|후위 감소|  
+|x[++](../../../csharp/language-reference/operators/arithmetic-operators.md#increment-operator-)|후위 증가|  
+|x[--](../../../csharp/language-reference/operators/arithmetic-operators.md#decrement-operator---)|후위 감소|  
 |[new](../../../csharp/language-reference/keywords/new-operator.md) T(...)|개체 및 대리자 생성|  
 |`new` T(...){...}|이니셜라이저를 사용한 개체 생성. [개체 이니셜라이저 및 컬렉션 이니셜라이저](../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md)를 참조하세요.|  
 |`new` {...}|익명 개체 이니셜라이저. [무명 형식](../../../csharp/programming-guide/classes-and-structs/anonymous-types.md)을 참조하세요.|  
@@ -65,17 +65,17 @@ C#에서 *연산자* 는 식 또는 문에서 하나 이상의 *피연산자* �
 |[-](../../../csharp/language-reference/operators/subtraction-operator.md)x|부정|  
 |[\!](../../../csharp/language-reference/operators/logical-negation-operator.md)x|논리 부정|  
 |[~](../../../csharp/language-reference/operators/bitwise-complement-operator.md)x|비트 부정 연산|  
-|[++](../../../csharp/language-reference/operators/increment-operator.md)x|전위 증가|  
-|[--](../../../csharp/language-reference/operators/decrement-operator.md)x|전위 감소|  
+|[++](../../../csharp/language-reference/operators/arithmetic-operators.md#increment-operator-)x|전위 증가|  
+|[--](../../../csharp/language-reference/operators/arithmetic-operators.md#decrement-operator---)x|전위 감소|  
 |[(T)](../../../csharp/language-reference/operators/invocation-operator.md)x|x를 T 형식으로 명시적 변환|  
   
  **곱하기 연산자**  
   
 |식|설명|  
 |----------------|-----------------|  
-|[*](../../../csharp/language-reference/operators/multiplication-operator.md)|곱하기|  
-|[/](../../../csharp/language-reference/operators/division-operator.md)|나눗셈 기호|  
-|[%](../../../csharp/language-reference/operators/modulus-operator.md)|나머지|  
+|[*](../../../csharp/language-reference/operators/arithmetic-operators.md#multiplication-operator-)|곱하기|  
+|[/](../../../csharp/language-reference/operators/arithmetic-operators.md#division-operator-)|나눗셈 기호|  
+|[%](../../../csharp/language-reference/operators/arithmetic-operators.md#remainder-operator-)|나머지|  
   
  **더하기 연산자**  
   
@@ -106,8 +106,8 @@ C#에서 *연산자* 는 식 또는 문에서 하나 이상의 *피연산자* �
   
 |식|설명|  
 |----------------|-----------------|  
-|x [==](../../../csharp/language-reference/operators/equality-comparison-operator.md) y|Equal|  
-|x [!=](../../../csharp/language-reference/operators/not-equal-operator.md) y|같지 않음|  
+|x [==](../../../csharp/language-reference/operators/equality-operators.md#equality-operator-) y|Equal|  
+|x [!=](../../../csharp/language-reference/operators/equality-operators.md#inequality-operator-) y|같지 않음|  
   
  **논리, 조건 및 null 연산자**  
   
@@ -126,7 +126,7 @@ C#에서 *연산자* 는 식 또는 문에서 하나 이상의 *피연산자* �
 |식|설명|  
 |----------------|-----------------|  
 |[=](../../../csharp/language-reference/operators/assignment-operator.md)|할당|  
-|x op= y|복합 할당. [+=](../../../csharp/language-reference/operators/addition-assignment-operator.md), [-=](../../../csharp/language-reference/operators/subtraction-assignment-operator.md), [*=](../../../csharp/language-reference/operators/multiplication-assignment-operator.md), [/=](../../../csharp/language-reference/operators/division-assignment-operator.md), [%=](../../../csharp/language-reference/operators/modulus-assignment-operator.md), [&=](../../../csharp/language-reference/operators/and-assignment-operator.md), [&#124;=](../../../csharp/language-reference/operators/or-assignment-operator.md), [^=](../../../csharp/language-reference/operators/xor-assignment-operator.md), [<\<=](../../../csharp/language-reference/operators/left-shift-assignment-operator.md), [>>=](../../../csharp/language-reference/operators/right-shift-assignment-operator.md) 연산자를 지원합니다.|  
+|x op= y|복합 할당. [+=](../../../csharp/language-reference/operators/addition-assignment-operator.md), [-=](../../../csharp/language-reference/operators/subtraction-assignment-operator.md), [*=](../../../csharp/language-reference/operators/arithmetic-operators.md#compound-assignment), [/=](../../../csharp/language-reference/operators/arithmetic-operators.md#compound-assignment), [%=](../../../csharp/language-reference/operators/arithmetic-operators.md#compound-assignment), [&=](../../../csharp/language-reference/operators/and-assignment-operator.md), [&#124;=](../../../csharp/language-reference/operators/or-assignment-operator.md), [^=](../../../csharp/language-reference/operators/xor-assignment-operator.md), [<\<=](../../../csharp/language-reference/operators/left-shift-assignment-operator.md), [>>=](../../../csharp/language-reference/operators/right-shift-assignment-operator.md) 연산자를 지원합니다.|  
 |(T x) [=>](../../../csharp/language-reference/operators/lambda-operator.md) y|익명 함수(람다 식)|  
   
 ## <a name="associativity"></a>associativity

@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 40a67826-e4df-4f59-a651-d9eb0fdc755d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8b7c7704c4f417ef16d3a79fa6d955265e42cf14
-ms.sourcegitcommit: e994e47d3582bf09ae487ecbd53c0dac30aebaf7
+ms.openlocfilehash: 9c4ad3ca5694457637a82a36c8db4534df43a9d7
+ms.sourcegitcommit: 8258515adc6c37ab6278e5a3d102d593246f8672
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58262447"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58504433"
 ---
 # <a name="how-to-determine-which-net-framework-versions-are-installed"></a>방법: 설치된 .NET Framework 버전 확인
 
@@ -44,14 +44,14 @@ ms.locfileid: "58262447"
      - [레지스트리 편집기를 사용하여 .NET Framework 버전 찾기](#net_b)  
      - [코드를 사용하여 .NET Framework 버전에 대한 레지스트리 쿼리](#net_d)  
      - [PowerShell을 사용하여 .NET Framework 버전에 대한 레지스트리 쿼리](#ps_a)
- - 이전 .NET Framework 버전 찾기(1&#8211;4):
+- 이전 .NET Framework 버전 찾기(1&#8211;4):
      - [레지스트리 편집기를 사용하여 .NET Framework 버전 찾기](#net_a)
      - [코드를 사용하여 .NET Framework 버전에 대한 레지스트리 쿼리](#net_c)   
 
 컴퓨터에 설치된 CLR 버전의 목록을 보려면 도구 또는 코드를 사용하십시오.  
   
- - [Clrver 도구 사용](#clr_a)  
- - [코드를 사용하여 Environment 클래스 쿼리](#clr_b)  
+- [Clrver 도구 사용](#clr_a)  
+- [코드를 사용하여 Environment 클래스 쿼리](#clr_b)  
 
 .NET Framework의 버전별로 설치된 업데이트를 검색하는 방법에 대한 자세한 내용은 [방법: 설치된 .NET Framework 업데이트 확인](how-to-determine-which-net-framework-updates-are-installed.md). 
   
@@ -133,7 +133,7 @@ ms.locfileid: "58262447"
 
 ```PowerShell
 # PowerShell 4
-(Get-ItemProperty "HKLM:SOFTWARE\Microsoft\NET Framework Setup\NDP\v4\Full").Release -gt 394802
+(Get-ItemProperty "HKLM:SOFTWARE\Microsoft\NET Framework Setup\NDP\v4\Full").Release -ge 394802
 ```
 
 다른 최소 필수 .NET Framework 버전을 확인하려면 예제의 *394802*를 [.NET Framework 버전 표](#version_table)의 **릴리스** 값으로 바꿉니다.

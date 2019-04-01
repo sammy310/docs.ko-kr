@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: d1247f08-0965-416a-b978-e0b50652dfe3
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c278eca421020bea4f36f87eb6c8a9a8ba7d2a43
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 787406b1fa7e5beb59ff3f8715c1215a734ed895
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54658288"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58411306"
 ---
 # <a name="specifying-an-entry-point"></a>진입점 지정
 진입점은 DLL에서 함수의 위치를 식별합니다. 관리되는 프로젝트 내에서 대상 함수의 원래 이름이나 서수 진입점은 상호 운용 경계 간에 해당 함수를 식별합니다. 또한 진입점을 다른 이름에 매핑하여 효과적으로 함수 이름을 바꿀 수 있습니다.  
@@ -33,60 +33,66 @@ ms.locfileid: "54658288"
 ## <a name="renaming-a-function-in-visual-basic"></a>Visual Basic에서 함수 이름 바꾸기  
  Visual Basic에서는 **Declare** 문에 **Function** 키워드를 사용하여 <xref:System.Runtime.InteropServices.DllImportAttribute.EntryPoint?displayProperty=nameWithType> 필드를 설정합니다. 다음 예제에서는 기본 선언을 보여 줍니다.  
   
-```vb  
-Imports System.Runtime.InteropServices  
-  
-Public Class Win32  
-    Declare Auto Function MessageBox Lib "user32.dll" _  
-       (ByVal hWnd As Integer, ByVal txt As String,_  
-       ByVal caption As String, ByVal Typ As Integer) As Integer  
-End Class  
-```  
+```vb
+Imports System
+
+Friend Class WindowsAPI
+    Friend Shared Declare Auto Function MessageBox Lib "user32.dll" (
+        ByVal hWnd As IntPtr,
+        ByVal lpText As String,
+        ByVal lpCaption As String,
+        ByVal uType As UInteger) As Integer
+End Class
+```
   
  다음 예제와 같이 정의에 **Alias** 키워드를 포함하여 **MessageBox** 진입점을 **MsgBox**로 바꿀 수 있습니다. 두 예제에서 모두 **Auto** 키워드를 사용하면 진입점의 문자 집합 버전을 지정할 필요가 없습니다. 문자 집합을 선택하는 방법에 대한 자세한 내용은 [문자 집합 지정](../../../docs/framework/interop/specifying-a-character-set.md)을 참조하세요.  
   
-```vb  
-Imports System.Runtime.InteropServices  
-  
-Public Class Win32  
-    Declare Auto Function MsgBox Lib "user32.dll" _  
-       Alias "MessageBox" (ByVal hWnd As Integer, ByVal txt As String,_  
-       ByVal caption As String, ByVal Typ As Integer) As Integer  
-End Class  
-```  
+```vb
+Imports System
+
+Friend Class WindowsAPI
+    Friend Shared Declare Auto Function MsgBox _
+        Lib "user32.dll" Alias "MessageBox" (
+        ByVal hWnd As IntPtr,
+        ByVal lpText As String,
+        ByVal lpCaption As String,
+        ByVal uType As UInteger) As Integer
+End Class
+```
   
 ## <a name="renaming-a-function-in-c-and-c"></a>C# 및 C++에서 함수 이름 바꾸기  
  <xref:System.Runtime.InteropServices.DllImportAttribute.EntryPoint?displayProperty=nameWithType> 필드를 사용하여 DLL 함수를 이름 또는 서수로 지정할 수 있습니다. 메서드 정의의 함수 이름이 DLL의 진입점과 같으면 **EntryPoint** 필드를 사용하여 함수를 명시적으로 식별할 필요가 없습니다. 그러지 않으면 다음 특성 형식 중 하나를 사용하여 이름 또는 서수를 나타냅니다.  
   
-```  
-[DllImport("dllname", EntryPoint="Functionname")]  
-[DllImport("dllname", EntryPoint="#123")]  
-```  
+```csharp
+[DllImport("DllName", EntryPoint = "Functionname")]
+[DllImport("DllName", EntryPoint = "#123")]
+```
   
  서수 앞에 파운드 기호(#)를 추가해야 합니다.  
   
  다음 예제에서는 **EntryPoint** 필드를 사용하여 코드에서 **MessageBoxA**를 **MsgBox**로 바꾸는 방법을 보여 줍니다.  
   
-```csharp  
-using System.Runtime.InteropServices;  
+```csharp
+using System;
+using System.Runtime.InteropServices;
+
+internal static class WindowsAPI
+{
+    [DllImport("user32.dll", EntryPoint = "MessageBoxA")]
+    internal static extern int MessageBox(
+        IntPtr hWnd, string lpText, string lpCaption, uint uType);
+}
+```
   
-public class Win32 {  
-    [DllImport("user32.dll", EntryPoint="MessageBoxA")]  
-    public static extern int MsgBox(int hWnd, String text, String caption,  
-                                    uint type);  
-}  
-```  
-  
-```cpp  
-using namespace System::Runtime::InteropServices;  
-  
-typedef void* HWND;  
-[DllImport("user32", EntryPoint="MessageBoxA")]  
-extern "C" int MsgBox(HWND hWnd,  
-                      String*  pText,  
-                      String*  pCaption,  
-                      unsigned int uType);  
-```  
+```cpp
+using namespace System;
+using namespace System::Runtime::InteropServices;
+
+typedef void* HWND;
+[DllImport("user32", EntryPoint = "MessageBoxA")]
+extern "C" int MsgBox(
+    HWND hWnd, String* lpText, String* lpCaption, unsigned int uType);
+```
   
 ## <a name="see-also"></a>참고 항목
 - <xref:System.Runtime.InteropServices.DllImportAttribute>

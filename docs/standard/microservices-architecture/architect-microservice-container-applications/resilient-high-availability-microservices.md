@@ -4,12 +4,12 @@ description: 마이크로 서비스는 고가용성을 달성하기 위해 복�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/20/2018
-ms.openlocfilehash: 5e601ccae8ee3493e6a5d9cd35c4573a9df2da46
-ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
+ms.openlocfilehash: ebf3a81718cd3423d3c80edb9c2f5b10f4ef47da
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "57846625"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58465817"
 ---
 # <a name="resiliency-and-high-availability-in-microservices"></a>마이크로 서비스의 복원력 및 고가용성
 
@@ -59,25 +59,25 @@ ms.locfileid: "57846625"
 ## <a name="additional-resources"></a>추가 자료
 
 - **The Twelve-Factor App. XI. 로그: 로그를 이벤트 스트림으로 처리** \
-  [*https://12factor.net/logs*](https://12factor.net/logs)
+  [https://12factor.net/logs](https://12factor.net/logs)
 
 - **Microsoft 진단 EventFlow 라이브러리** GitHub 리포지토리 \
-  [*https://github.com/Azure/diagnostics-eventflow*](https://github.com/Azure/diagnostics-eventflow)
+  [https://github.com/Azure/diagnostics-eventflow](https://github.com/Azure/diagnostics-eventflow)
 
-- **Azure 진단이란?** \
-  [*https://docs.microsoft.com/azure/azure-diagnostics*](https://docs.microsoft.com/azure/azure-diagnostics)
+- **Azure Diagnostics란?** \
+  [https://docs.microsoft.com/azure/azure-diagnostics](https://docs.microsoft.com/azure/azure-diagnostics)
 
 - **Azure에서 Windows 컴퓨터를 Log Analytics 서비스에 연결** \
-  [*https://docs.microsoft.com/azure/log-analytics/log-analytics-windows-agents*](https://docs.microsoft.com/azure/log-analytics/log-analytics-windows-agents)
+  [https://docs.microsoft.com/azure/log-analytics/log-analytics-windows-agents](https://docs.microsoft.com/azure/log-analytics/log-analytics-windows-agents)
 
 - **Logging What You Mean: Using the Semantic Logging Application Block** \(의도한 내용 로깅: 의미 체계 로깅 애플리케이션 블록 사용)
   <https://docs.microsoft.com/previous-versions/msp-n-p/dn440729(v=pandp.60)>
 
 - **Splunk** 공식 사이트 \
-  [*https://www.splunk.com/*](https://www.splunk.com/)
+  [https://www.splunk.com/](https://www.splunk.com/)
 
 - Windows용 이벤트 추적(ETW)의 **EventSource 클래스** API
-  [*https://docs.microsoft.com/dotnet/api/system.diagnostics.tracing.eventsource*](xref:System.Diagnostics.Tracing.EventSource)
+  [https://docs.microsoft.com/dotnet/api/system.diagnostics.tracing.eventsource](xref:System.Diagnostics.Tracing.EventSource)
 
 >[!div class="step-by-step"]
 >[이전](microservice-based-composite-ui-shape-layout.md)
