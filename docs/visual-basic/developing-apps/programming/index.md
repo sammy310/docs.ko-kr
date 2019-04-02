@@ -32,6 +32,7 @@ ms.assetid: bc45a3de-ea36-46e6-a106-309a413d7804
  `My.Computer.FileSystem` 개체를 사용하여 파일 시스템에 액세스하는 방법에 대한 설명서를 포함합니다.  
   
 ## <a name="see-also"></a>참고 항목
+
 - [Visual Basic 언어 기능](../../../visual-basic/programming-guide/language-features/index.md)
 - [프로그래밍 개념](../../../visual-basic/programming-guide/concepts/index.md)
 - [컬렉션](../../../visual-basic/programming-guide/concepts/collections.md)
