@@ -10,20 +10,19 @@ helpviewer_keywords:
 ms.assetid: 8e40fab9-549d-4731-aec2-ffa47a382de0
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8422c0b22f2286df98acbed874344f7664cb8903
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8acf811b835d5afd8686701fe269b16d4b766458
+ms.sourcegitcommit: 0aca6c5d166d7961a1e354c248495645b97a1dc5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54529764"
+ms.lasthandoff: 03/30/2019
+ms.locfileid: "58676071"
 ---
 # <a name="assembly-manifest"></a>어셈블리 매니페스트
 정적 또는 동적 어셈블리인지 여부에 상관 없이 모든 어셈블리는 어셈블리의 요소가 서로 어떻게 연관되는지를 설명하는 데이터 컬렉션을 포함합니다. 이러한 어셈블리 메타데이터는 어셈블리 매니페스트에 들어 있습니다. 어셈블리 매니페스트는 어셈블리의 버전 요구 사항과 보안 ID를 지정하는 데 필요한 모든 메타데이터와 어셈블리의 범위를 정의하고 리소스나 클래스에 대한 참조를 확인하는 데 필요한 모든 메타데이터를 포함합니다. 어셈블리 매니페스트는 MSIL(Microsoft Intermediate Language)로 PE 파일(.exe 또는 .dll)에 저장되거나 어셈블리 매니페스트 정보만 포함하는 독립 실행형 PE 파일에 저장됩니다.  
   
  다음 예제에서는 매니페스트를 저장하는 여러 가지 방법을 보여 줍니다.  
   
- ![단일 파일 어셈블리](../../../docs/framework/app-domains/media/assemblytypes.gif "assemblytypes")  
-어셈블리 종류  
+ ![단일 파일 어셈블리 및 다중 파일 어셈블리 구성에서 매니페스트를 보여주는 다이어그램.](./media/assembly-manifest/assembly-types-diagram.gif)  
   
  하나의 연관 파일을 갖는 어셈블리의 경우, 매니페스트는 PE 파일에 포함되어 단일 파일 어셈블리를 구성합니다. 독립 실행형 매니페스트 파일을 만들거나 어셈블리의 PE 파일 중 하나에 매니페스트를 포함시키면 다중 파일 어셈블리를 만들 수 있습니다.  
   

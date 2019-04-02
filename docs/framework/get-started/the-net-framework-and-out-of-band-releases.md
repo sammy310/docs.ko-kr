@@ -4,12 +4,12 @@ ms.date: 10/10/2018
 ms.assetid: 721f10fa-3189-4124-a00d-56ddabd889b3
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f29d6d5e3942296905088eb250d09f3a5ace1fa4
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 3c70382b0d74e830610d1cd7746fd14244b829a0
+ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57708355"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58654564"
 ---
 # <a name="the-net-framework-and-out-of-band-releases"></a>.NET Framework 및 번외 릴리스
 
@@ -44,7 +44,7 @@ ms.locfileid: "57708355"
 
 4.  오른쪽 창에서 **검색** 상자를 사용하여 사용하려는 패키지를 찾습니다. 일부 Microsoft 패키지는 Microsoft .NET Framework 로고로 식별되며 모두 Microsoft를 게시자로 식별합니다.
 
- ![NuGet 패키지 관리자](../../../docs/framework/get-started/media/clrnugetdialog.png "clrNugetDialog")
+ ![NuGet 패키지 관리자를 보여주는 스크린샷.](./media/the-net-framework-and-out-of-band-releases/nuget-package-manager-dialog.png)
 
  앞에서 언급했듯이 OOB 패키지를 사용하는 응용 프로그램을 배포하면 응용 프로그램 패키지와 함께 OOB 어셈블리가 제공됩니다.
 

@@ -5,12 +5,12 @@ author: cartermp
 ms.date: 09/10/2018
 ms.technology: dotnet-cli
 ms.custom: seodec18
-ms.openlocfilehash: 664ff07bad596ae38b4e31a00c7af0579d8245b8
-ms.sourcegitcommit: 5d9f4b805787f890ca6e0dc7ea30a43018bc9cbb
+ms.openlocfilehash: 92ca5149ad5f0e4a50c809a316123fbf77d4152d
+ms.sourcegitcommit: 4a8c2b8d0df44142728b68ebc842575840476f6d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2019
-ms.locfileid: "57788312"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58545366"
 ---
 # <a name="get-started-with-net-core-on-windowslinuxmacos-using-the-command-line"></a>명령줄을 사용하여 Windows/Linux/macOS에서 .NET Core 시작
 
@@ -119,7 +119,8 @@ dotnet run
 
 ## <a name="working-with-multiple-files"></a>여러 파일 작업
 
-단순한 일회용 프로그램의 경우 단일 파일이 괜찮지만, 좀 더 복잡한 앱을 빌드하는 경우 프로젝트에 소스 파일이 여러 개 있을 수 있습니다. 일부 피보나치 값을 캐시하고 일부 재귀적 기능을 추가하여 이전의 피보나치 예제를 빌드해 봅시다.
+단일 파일은 간단한 일회용 프로그램에 적합하지만 더 복잡한 앱을 빌드하는 경우 프로젝트에 여러 소스 파일이 있을 수 있습니다.
+일부 피보나치 값을 캐시하여 이전 피보나치 예제에서 빌드하고 몇몇 재귀 기능을 추가해보겠습니다.
 
 1. 다음 코드를 사용하여 *Hello* 디렉터리 내에 *FibonacciGenerator.cs*라는 새 파일을 추가합니다.
 

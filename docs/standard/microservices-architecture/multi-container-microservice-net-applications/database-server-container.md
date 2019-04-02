@@ -4,12 +4,12 @@ description: 컨테이너화된 .NET 애플리케이션용 .NET 마이크로 서
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/02/2018
-ms.openlocfilehash: 347e6d36b7e838082f47d39c5ae67c219ec11d45
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 2adc58339012095c9dc58d633a9b3815cf7aba3f
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53127721"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58463347"
 ---
 # <a name="using-a-database-server-running-as-a-container"></a>컨테이너로 실행되는 데이터베이스 서버 사용
 
@@ -41,21 +41,21 @@ eShopOnContainers에서 마이크로 서비스에 필요한 모든 SQL Server �
 
 처음으로 이 SQL Server 컨테이너를 시작할 때 컨테이너는 제공한 암호를 사용하여 SQL Server를 초기화합니다. 컨테이너로 SQL Server를 실행하면 SQL Server Management Studio, Visual Studio 또는 C\# 코드와 같은 일반 SQL 연결을 통해 연결하여 데이터베이스를 업데이트할 수 있습니다.
 
-eShopOnContainers 응용 프로그램은 다음 섹션에 설명한 대로 시작 시 데이터에서 시드하여 샘플 데이터와 함께 각 마이크로 서비스 데이터베이스를 초기화합니다.
+eShopOnContainers 애플리케이션은 다음 섹션에 설명한 대로 시작 시 데이터에서 시드하여 샘플 데이터와 함께 각 마이크로 서비스 데이터베이스를 초기화합니다.
 
 SQL Server를 컨테이너로 실행하면 SQL Server의 인스턴스에 대한 액세스 권한이 없는 데모에 유용하지 않습니다. 앞서 언급한 대로 새 샘플 데이터를 시드하여 깔끔한 SQL Server 이미지 및 알려진 데이터에서 시작하는 통합 테스트를 실행할 수 있도록 개발 및 테스트 환경에 사용하는 것이 좋습니다.
 
 #### <a name="additional-resources"></a>추가 자료
 
--   **Linux, Mac 또는 Windows에서 SQL Server Docker 이미지 실행** <br/>
-    [*https://docs.microsoft.com/sql/linux/sql-server-linux-setup-docker*](https://docs.microsoft.com/sql/linux/sql-server-linux-setup-docker)
+- **Linux, Mac 또는 Windows에서 SQL Server Docker 이미지 실행** \
+    [https://docs.microsoft.com/sql/linux/sql-server-linux-setup-docker](https://docs.microsoft.com/sql/linux/sql-server-linux-setup-docker)
 
--   **sqlcmd를 사용하여 Linux에서 SQL Server 연결 및 쿼리** <br/>
-    [*https://docs.microsoft.com/sql/linux/sql-server-linux-connect-and-query-sqlcmd*](https://docs.microsoft.com/sql/linux/sql-server-linux-connect-and-query-sqlcmd)
+- **sqlcmd를 사용하여 Linux에서 SQL Server 연결 및 쿼리** \
+    [https://docs.microsoft.com/sql/linux/sql-server-linux-connect-and-query-sqlcmd](https://docs.microsoft.com/sql/linux/sql-server-linux-connect-and-query-sqlcmd)
 
-### <a name="seeding-with-test-data-on-web-application-startup"></a>웹 응용 프로그램 시작 시 테스트 데이터로 시드
+### <a name="seeding-with-test-data-on-web-application-startup"></a>웹 애플리케이션 시작 시 테스트 데이터로 시드
 
-응용 프로그램이 시작될 때 데이터베이스에 데이터를 추가하려면 Web API 프로젝트의 시작 클래스에서 구성 메서드에 다음과 같은 코드를 추가할 수 있습니다.
+애플리케이션이 시작될 때 데이터베이스에 데이터를 추가하려면 Web API 프로젝트의 시작 클래스에서 구성 메서드에 다음과 같은 코드를 추가할 수 있습니다.
 
 ```csharp
 public class Startup

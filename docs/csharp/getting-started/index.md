@@ -36,10 +36,6 @@ ms.date: 08/23/2017
 
 ## <a name="related-sections"></a>관련 단원
 
-* [C#용 Visual Studio 개발 환경 사용](/visualstudio/csharp-ide/using-the-visual-studio-development-environment-for-csharp)  
-
-    Visual C# 통합 개발 환경 사용 지침을 제공합니다.
-
 * [C# 프로그래밍 가이드](../../csharp/programming-guide/index.md)
 
     C# 프로그래밍 개념에 대한 정보를 제공하고 C#에서 다양한 작업을 수행하는 방법을 설명합니다.
@@ -48,14 +44,10 @@ ms.date: 08/23/2017
 
     C# 키워드, 연산자, 전처리기 지시문, 컴파일러 옵션 및 컴파일러 오류와 경고에 대한 자세한 참조 정보를 제공합니다.
 
-* [Visual Studio 샘플](/visualstudio/ide/visual-studio-samples)
-
-    온라인 샘플에 액세스하는 방법을 제공합니다.
-
 * [연습](../../csharp/walkthroughs.md)
 
     C#을 사용하는 프로그래밍 연습 및 각 연습에 대한 간단한 설명에 대한 링크를 제공합니다.
 
 ## <a name="see-also"></a>참고 항목
 
-- [Visual Studio를 사용하여 Visual C# 및 Visual Basic 시작](/visualstudio/ide/getting-started-with-visual-csharp-and-visual-basic)
+- * [Visual Studio를 사용한 C# 개발](/visualstudio/get-started/csharp/)

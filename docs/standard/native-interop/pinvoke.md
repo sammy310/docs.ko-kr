@@ -4,12 +4,12 @@ description: .NET에서 P/Invoke를 통해 네이티브 함수를 호출하는 �
 author: jkoritzinsky
 ms.author: jekoritz
 ms.date: 01/18/2019
-ms.openlocfilehash: 51026eab92ae4fd47ccdd78321be21bdbb5ecf49
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 4836096e12f6c3d317daa5da91566ab472053ede
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56981259"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58409239"
 ---
 # <a name="platform-invoke-pinvoke"></a>P/Invoke(플랫폼 호출)
 
@@ -241,6 +241,6 @@ namespace PInvokeSamples {
 
 ## <a name="more-resources"></a>추가 리소스
 
-*   [PInvoke.net wiki](https://www.pinvoke.net/)는 일반적인 Win32 API 및 호출 방법에 대한 정보가 포함된 우수한 Wiki입니다.
+*   [PInvoke.net wiki](https://www.pinvoke.net/)는 일반적인 Windows API 및 호출 방법에 대한 정보가 포함된 우수한 Wiki입니다.
 *   [MSDN의 P/Invoke](/cpp/dotnet/native-and-dotnet-interoperability)
 *   [P/Invoke에 대한 Mono 설명서](https://www.mono-project.com/docs/advanced/pinvoke/)

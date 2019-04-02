@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: c0a9bcdf-3df8-4db3-b1b6-abbdb2af809a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8c9716193c3429d5dd3aff1734415105713d2538
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.openlocfilehash: fe1d35f091eb98ca0080a73283d7e158e2ae26eb
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56221292"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58409447"
 ---
 # <a name="default-marshaling-behavior"></a>기본 마샬링 동작
 Interop 마샬링은 메서드 매개 변수와 연결된 데이터가 관리되는 메모리와 관리되지 않는 메모리 간에 전달될 때 동작하는 방식을 제어하는 규칙에 따라 작동합니다. 이러한 기본 제공 규칙은 데이터 형식 변형, 호출 수신자가 전달된 데이터를 변경하고 해당 변경 내용을 호출자에게 반환할 수 있는지 여부 및 마샬러가 성능 최적화를 제공하는 상황과 같은 마샬링 작업을 제어합니다.  
@@ -33,7 +33,7 @@ Interop 마샬링은 메서드 매개 변수와 연결된 데이터가 관리되
   
 ### <a name="unmanaged-signature"></a>관리되지 않는 서명  
   
-```  
+```cpp  
 BSTR MethodOne (BSTR b) {  
      return b;  
 }  
@@ -77,16 +77,14 @@ BSTR MethodOne (BSTR b) {
   
 -   COM interop의 경우 대리자는 기본적으로 **_Delegate** 형식의 COM 인터페이스로 마샬링됩니다. **_Delegate** 인터페이스는 Mscorlib.tlb 형식 라이브러리에서 정의되며 대리자가 참조하는 메서드를 호출할 수 있게 해주는 <xref:System.Delegate.DynamicInvoke%2A?displayProperty=nameWithType> 메서드를 포함합니다.  
   
- 다음 표에서는 관리되는 대리자 데이터 형식에 대한 마샬링 옵션을 보여 줍니다. 
-  <xref:System.Runtime.InteropServices.MarshalAsAttribute> 특성은 대리자를 마샬링하기 위한 여러 <xref:System.Runtime.InteropServices.UnmanagedType> 열거형 값을 제공합니다.  
+ 다음 표에서는 관리되는 대리자 데이터 형식에 대한 마샬링 옵션을 보여 줍니다. <xref:System.Runtime.InteropServices.MarshalAsAttribute> 특성은 대리자를 마샬링하기 위한 여러 <xref:System.Runtime.InteropServices.UnmanagedType> 열거형 값을 제공합니다.  
   
 |열거형 형식|관리되지 않는 형식에 대한 설명|  
 |----------------------|-------------------------------------|  
 |**UnmanagedType.FunctionPtr**|관리되지 않는 함수 포인터입니다.|  
 |**UnmanagedType.Interface**|Mscorlib.tlb에서 정의된 **_Delegate** 형식의 인터페이스입니다.|  
   
- 
-  `DelegateTestInterface`의 메서드를 COM 형식 라이브러리로 내보내는 다음 예제 코드를 살펴보세요. **ref**(또는 **ByRef**) 키워드로 표시된 대리자만 In/Out 매개 변수로 전달됩니다.  
+ `DelegateTestInterface`의 메서드를 COM 형식 라이브러리로 내보내는 다음 예제 코드를 살펴보세요. **ref**(또는 **ByRef**) 키워드로 표시된 대리자만 In/Out 매개 변수로 전달됩니다.  
   
 ```csharp  
 using System;  
@@ -103,7 +101,7 @@ void m5([MarshalAs(UnmanagedType.FunctionPtr)] ref Delegate d);
   
 ### <a name="type-library-representation"></a>형식 라이브러리 표현  
   
-```  
+```cpp  
 importlib("mscorlib.tlb");  
 interface DelegateTest : IDispatch {  
 [id(…)] HRESULT m1([in] _Delegate* d);  
@@ -121,8 +119,7 @@ interface DelegateTest : IDispatch {
 > [!NOTE]
 >  비관리 코드에서 보유한 관리되는 대리자에 대한 함수 포인터 참조는 공용 언어 런타임이 관리되는 개체에서 가비지 컬렉션을 수행할 수 없도록 차단하지 않습니다.  
   
- 예를 들어 다음 코드는 `SetChangeHandler` 메서드에 전달된 `cb` 개체 참조가 `Test` 메서드의 수명을 초과하여 `cb` 연결을 유지하지 않으므로 잘못된 것입니다. 
-  `cb` 개체가 가비지 수집되고 나면 `SetChangeHandler`에 전달된 함수 포인터가 더이상 유효하지 않습니다.  
+ 예를 들어 다음 코드는 `SetChangeHandler` 메서드에 전달된 `cb` 개체 참조가 `Test` 메서드의 수명을 초과하여 `cb` 연결을 유지하지 않으므로 잘못된 것입니다. `cb` 개체가 가비지 수집되고 나면 `SetChangeHandler`에 전달된 함수 포인터가 더이상 유효하지 않습니다.  
   
 ```csharp  
 public class ExternalAPI {  
@@ -167,13 +164,13 @@ internal class DelegateTest {
 ## <a name="default-marshaling-for-value-types"></a>값 형식에 대한 기본 마샬링  
  정수 및 부동 소수점 숫자와 같은 대부분의 값 형식은 [blittable](blittable-and-non-blittable-types.md)이며 마샬링할 필요가 없습니다. 다른 [비 blittable](blittable-and-non-blittable-types.md) 형식은 관리되는 메모리와 관리되지 않는 메모리에서 서로 다르게 표현되므로 마샬링해야 합니다. 다른 형식은 상호 운용 경계 간에 명시적 형식 지정도 필요합니다.  
   
- 이 항목에서는 형식이 지정된 값 형식에 대한 다음 정보를 제공합니다.  
+ 이 섹션에서는 다음과 같은 서식이 지정된 값 형식에 대한 정보를 제공합니다.  
   
--   [플랫폼 호출에서 사용되는 값 형식](#cpcondefaultmarshalingforvaluetypesanchor2)  
+-   [플랫폼 호출에서 사용되는 값 형식](#value-types-used-in-platform-invoke)  
   
--   [COM Interop에서 사용되는 값 형식](#cpcondefaultmarshalingforvaluetypesanchor3)  
+-   [COM Interop에서 사용되는 값 형식](#value-types-used-in-com-interop)  
   
- 이 항목에서는 형식이 지정된 형식을 설명할 뿐 아니라 특별한 마샬링 동작이 있는 [시스템 값 형식](#cpcondefaultmarshalingforvaluetypesanchor1)을 식별합니다.  
+ 이 항목에서는 형식이 지정된 형식을 설명할 뿐 아니라 특별한 마샬링 동작이 있는 [시스템 값 형식](#system-value-types)을 식별합니다.  
   
  형식이 지정된 형식은 메모리에서 해당 멤버의 레이아웃을 명시적으로 제어하는 정보가 포함된 복합 형식입니다. 멤버 레이아웃 정보는 <xref:System.Runtime.InteropServices.StructLayoutAttribute> 특성을 사용하여 제공됩니다. 레이아웃은 다음 <xref:System.Runtime.InteropServices.LayoutKind> 열거형 값 중 하나일 수 있습니다.  
   
@@ -189,7 +186,6 @@ internal class DelegateTest {
   
      각 필드에 제공된 <xref:System.Runtime.InteropServices.FieldOffsetAttribute>에 따라 멤버가 배치됨을 나타냅니다.  
   
-<a name="cpcondefaultmarshalingforvaluetypesanchor2"></a>   
 ### <a name="value-types-used-in-platform-invoke"></a>플랫폼 호출에서 사용되는 값 형식  
  다음 예제에서 `Point` 및 `Rect` 형식은 **StructLayoutAttribute**를 사용하여 멤버 레이아웃 정보를 제공합니다.  
   
@@ -224,27 +220,28 @@ public struct Rect {
 }  
 ```  
   
- 비관리 코드로 마샬링된 경우 이러한 형식이 지정된 형식은 C 스타일 구조체로 마샬링됩니다. 이렇게 하면 구조체 인수가 있는 관리되지 않는 API를 쉽게 호출할 수 있습니다. 예를 들어 Microsoft Win32 API **PtInRect** 함수에 `POINT` 및 `RECT` 구조체를 다음과 같이 전달할 수 있습니다.  
+ 비관리 코드로 마샬링된 경우 이러한 형식이 지정된 형식은 C 스타일 구조체로 마샬링됩니다. 이렇게 하면 구조체 인수가 있는 관리되지 않는 API를 쉽게 호출할 수 있습니다. 예를 들어 다음과 같이 Microsoft Windows API **PtInRect** 함수에 `POINT` 및 `RECT` 구조체를 전달할 수 있습니다.  
   
-```  
+```cpp  
 BOOL PtInRect(const RECT *lprc, POINT pt);  
 ```  
   
  다음과 같은 플랫폼 호출 정의를 사용하여 구조체를 전달할 수 있습니다.  
   
-```vb  
-Class Win32API      
-   Declare Auto Function PtInRect Lib "User32.dll" _  
-    (ByRef r As Rect, p As Point) As Boolean  
-End Class  
-```  
+```vb
+Friend Class WindowsAPI
+    Friend Shared Declare Auto Function PtInRect Lib "User32.dll" (
+        ByRef r As Rect, p As Point) As Boolean
+End Class
+```
   
-```csharp  
-class Win32API {  
-   [DllImport("User32.dll")]  
-   public static extern Bool PtInRect(ref Rect r, Point p);  
-}  
-```  
+```csharp
+internal static class WindowsAPI
+{
+   [DllImport("User32.dll")]
+   internal static extern bool PtInRect(ref Rect r, Point p);
+}
+```
   
  관리되지 않는 API는 `RECT`에 대한 포인터가 함수에 전달될 것으로 예상하기 때문에 `Rect` 값 형식은 참조로 전달되어야 합니다. 관리되지 않는 API는 `POINT`가 스택에서 전달될 것으로 예상하기 때문에 `Point` 값 형식은 값으로 전달되어야 합니다. 이러한 미묘한 차이가 매우 중요합니다. 참조는 비관리 코드에 포인터로 전달됩니다. 값은 스택에서 비관리 코드에 전달됩니다.  
   
@@ -256,7 +253,7 @@ class Win32API {
 > [!NOTE]
 >  참조 형식에 non-blittable 형식 멤버가 있을 경우 변환이 두 번 필요합니다. 첫 번째는 인수가 관리되지 않는 쪽에 전달될 때이고 두 번째는 호출에서 반환될 때입니다. 이러한 추가 오버헤드로 인해 호출자가 호출 수신자에 의한 변경 내용을 보려는 경우 In/Out 매개 변수를 인수에 명시적으로 적용해야 합니다.  
   
- 다음 예제에서 `SystemTime` 클래스는 순차적 멤버 레이아웃을 사용하며 Win32 API **GetSystemTime** 함수에 전달될 수 있습니다.  
+ 다음 예제에서 `SystemTime` 클래스는 순차적 멤버 레이아웃을 사용하며 Windows API **GetSystemTime** 함수에 전달될 수 있습니다.  
   
 ```vb  
 <StructLayout(LayoutKind.Sequential)> Public Class SystemTime  
@@ -287,28 +284,28 @@ End Class
   
  **GetSystemTime** 함수는 다음과 같이 정의됩니다.  
   
-```  
+```cpp  
 void GetSystemTime(SYSTEMTIME* SystemTime);  
 ```  
   
  **GetSystemTime**에 해당하는 플랫폼 호출 정의는 다음과 같습니다.  
   
-```vb  
-Public Class Win32  
-   Declare Auto Sub GetSystemTime Lib "Kernel32.dll" (ByVal sysTime _  
-   As SystemTime)  
-End Class  
-```  
+```vb
+Friend Class WindowsAPI
+    Friend Shared Declare Auto Sub GetSystemTime Lib "Kernel32.dll" (
+        ByVal sysTime As SystemTime)
+End Class
+```
   
-```csharp  
-class Win32API {  
-   [DllImport("Kernel32.dll", CharSet=CharSet.Auto)]  
-   public static extern void GetSystemTime(SystemTime st);  
-}  
-```  
+```csharp
+internal static class WindowsAPI
+{
+   [DllImport("Kernel32.dll", CharSet = CharSet.Auto)]
+   internal static extern void GetSystemTime(SystemTime st);
+}
+```
   
- 
-  `SystemTime`이 값 형식이 아니라 클래스이기 때문에 `SystemTime` 인수는 참조 인수로 형식화되지 않습니다. 값 형식과 달리 클래스는 항상 참조로 전달됩니다.  
+ `SystemTime`이 값 형식이 아니라 클래스이기 때문에 `SystemTime` 인수는 참조 인수로 형식화되지 않습니다. 값 형식과 달리 클래스는 항상 참조로 전달됩니다.  
   
  다음 코드 예제에서는 `SetXY`라는 메서드가 있는 다른 `Point` 클래스를 보여 줍니다. 형식이 순차적 레이아웃을 사용하므로 비관리 코드에 전달되고 구조체로 마샬링될 수 있습니다. 그러나 개체가 참조로 전달되는 경우에도 `SetXY` 멤버는 비관리 코드에서 호출할 수 없습니다.  
   
@@ -333,13 +330,12 @@ public class Point {
 }  
 ```  
   
-<a name="cpcondefaultmarshalingforvaluetypesanchor3"></a>   
 ### <a name="value-types-used-in-com-interop"></a>COM Interop에서 사용되는 값 형식  
  형식이 지정된 형식을 COM interop 메서드 호출에 전달할 수도 있습니다. 실제로 형식 라이브러리로 내보내는 경우 값 형식이 자동으로 구조체로 변환됩니다. 다음 예제에서 볼 수 있듯이, `Point` 값 형식은 이름이 `Point`인 형식 정의(typedef)가 됩니다. 형식 라이브러리의 다른 위치에 있는 `Point` 값 형식에 대한 모든 참조가 `Point` typedef로 대체됩니다.  
   
  **형식 라이브러리 표현**  
   
-```  
+```cpp  
 typedef struct tagPoint {  
    int x;  
    int y;  
@@ -352,16 +348,13 @@ interface _Graphics {
 }  
 ```  
   
- 값과 참조를 플랫폼 호출로 마샬링하는 데 사용되는 것과 동일한 규칙이 COM 인터페이스를 통해 마샬링할 때도 사용됩니다. 예를 들어 `Point` 값 형식의 인스턴스가 .NET Framework에서 COM으로 전달되는 경우 `Point`가 값으로 전달됩니다. 
-  `Point` 값 형식이 참조로 전달되는 경우에는 `Point`에 대한 포인터가 스택에서 전달됩니다. interop 마샬러는 두 방향에서 모두 더 높은 수준의 간접 참조(**Point** \*\*)를 지원하지 않습니다.  
+ 값과 참조를 플랫폼 호출로 마샬링하는 데 사용되는 것과 동일한 규칙이 COM 인터페이스를 통해 마샬링할 때도 사용됩니다. 예를 들어 `Point` 값 형식의 인스턴스가 .NET Framework에서 COM으로 전달되는 경우 `Point`가 값으로 전달됩니다. `Point` 값 형식이 참조로 전달되는 경우에는 `Point`에 대한 포인터가 스택에서 전달됩니다. interop 마샬러는 두 방향에서 모두 더 높은 수준의 간접 참조(**Point** \*\*)를 지원하지 않습니다.  
   
 > [!NOTE]
 >  내보낸 형식 라이브러리에서 명시적 레이아웃을 표현할 수 없기 때문에 <xref:System.Runtime.InteropServices.LayoutKind> 열거형 값이 **Explicit**로 설정된 구조체는 COM interop에서 사용할 수 없습니다.  
   
-<a name="cpcondefaultmarshalingforvaluetypesanchor1"></a>   
 ### <a name="system-value-types"></a>시스템 값 형식  
- 
-  <xref:System> 네임스페이스에는 런타임 기본 형식의 boxed 형식을 나타내는 여러 개의 값 형식이 있습니다. 예를 들어 값 형식 <xref:System.Int32?displayProperty=nameWithType> 구조체는 **ELEMENT_TYPE_I4**의 boxed 형식을 나타냅니다. 다른 형식이 지정된 형식처럼 이러한 형식을 구조체로 마샬링하는 대신 boxing하는 기본 형식과 동일한 방식으로 마샬링합니다. 따라서 **System.Int32**는 **long** 형식의 단일 멤버를 포함하는 구조체가 아니라 **ELEMENT_TYPE_I4**로 마샬링됩니다. 다음 표에는 기본 형식의 boxed 표현인 **System** 네임스페이스의 값 형식 목록이 포함되어 있습니다.  
+ <xref:System> 네임스페이스에는 런타임 기본 형식의 boxed 형식을 나타내는 여러 개의 값 형식이 있습니다. 예를 들어 값 형식 <xref:System.Int32?displayProperty=nameWithType> 구조체는 **ELEMENT_TYPE_I4**의 boxed 형식을 나타냅니다. 다른 형식이 지정된 형식처럼 이러한 형식을 구조체로 마샬링하는 대신 boxing하는 기본 형식과 동일한 방식으로 마샬링합니다. 따라서 **System.Int32**는 **long** 형식의 단일 멤버를 포함하는 구조체가 아니라 **ELEMENT_TYPE_I4**로 마샬링됩니다. 다음 표에는 기본 형식의 boxed 표현인 **System** 네임스페이스의 값 형식 목록이 포함되어 있습니다.  
   
 |시스템 값 형식|요소 형식|  
 |-----------------------|------------------|  
@@ -394,7 +387,7 @@ interface _Graphics {
   
 #### <a name="type-library-representation"></a>형식 라이브러리 표현  
   
-```  
+```cpp  
 typedef double DATE;  
 typedef DWORD OLE_COLOR;  
   
@@ -436,7 +429,7 @@ public interface IValueTypes {
   
 #### <a name="type-library-representation"></a>형식 라이브러리 표현  
   
-```  
+```cpp  
 […]  
 interface IValueTypes : IDispatch {  
    HRESULT M1([in] DATE d);  

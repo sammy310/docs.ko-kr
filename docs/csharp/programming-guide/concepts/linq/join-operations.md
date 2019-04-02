@@ -2,12 +2,12 @@
 title: 조인 작업(C#)
 ms.date: 07/20/2015
 ms.assetid: 5105e0da-1267-4c00-837a-f0e9602279b8
-ms.openlocfilehash: d8753ef0563a665767204c1ebc0af4e4a23b4455
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: db42874becaf9760b7060d7f306cc20f950f143a
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54537948"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58411462"
 ---
 # <a name="join-operations-c"></a>조인 작업(C#)
 두 데이터 소스를 *조인*하는 것은 한 데이터 소스의 개체를 공통 특성을 공유하는 다른 데이터 소스의 개체와 연결하는 것입니다.  
@@ -18,7 +18,7 @@ ms.locfileid: "54537948"
   
  다음 그림에서는 내부 조인 또는 왼쪽 우선 외부 조인에 포함된 두 집합 및 해당 집합 내의 요소를 개념적으로 보여줍니다.  
   
- ![내부&#47;외부를 보여 주는 두 개의 겹치는 원](../../../../csharp/programming-guide/concepts/linq/media/joincircles.png "JoinCircles")  
+ ![내부/외부를 보여주는 두 개의 겹치는 원](./media/join-operations/join-method-overlapping-circles.png)  
   
 ## <a name="methods"></a>메서드  
   

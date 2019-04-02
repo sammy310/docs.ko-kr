@@ -7,12 +7,12 @@ helpviewer_keywords:
 - optional arguments [C#], Office programming
 - named arguments [C#], Office programming
 ms.assetid: 65b8a222-bcd8-454c-845f-84adff5a356f
-ms.openlocfilehash: af5f2d13365a93e758962daea2b08ea3ae089aeb
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: aecac583e509d2a08fae55d911a26134330c74c7
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56966803"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58412203"
 ---
 # <a name="how-to-use-named-and-optional-arguments-in-office-programming-c-programming-guide"></a>방법: Office 프로그래밍에서 명명된 인수 및 선택적 인수 사용(C# 프로그래밍 가이드)
 [!INCLUDE[csharp_dev10_long](~/includes/csharp-dev10-long-md.md)]에서 도입된 명명된 인수 및 선택적 인수는 C# 프로그래밍의 편의성, 유연성 및 가독성을 향상합니다. 또한 이러한 기능은 Microsoft Office 자동화 API와 같은 COM 인터페이스에 대한 액세스에 큰 도움이 됩니다.  
@@ -79,8 +79,7 @@ ms.locfileid: "56966803"
   
 1.  `ConvertToTable` 메서드를 사용하여 텍스트를 표로 묶습니다. 이 메서드에는 선택적 매개 변수 16개가 있습니다. IntelliSense는 다음 그림과 같이 선택적 매개 변수를 중괄호로 묶습니다.  
   
-     ![ConvertToTable 메서드의 매개 변수 목록](../../../csharp/programming-guide/classes-and-structs/media/convert_tableparameters.png "Convert_TableParameters")  
-ConvertToTable 매개 변수  
+     ![ConvertToTable 메서드의 매개 변수 목록](./media/how-to-use-named-and-optional-arguments-in-office-programming/convert-table-parameters.png)  
   
      명명된 인수 및 선택적 인수를 사용하면 변경하려는 매개 변수의 값만 지정할 수 있습니다. `DisplayInWord` 메서드의 끝에 다음 코드를 추가하여 간단한 표를 만듭니다. 인수는 `range`의 텍스트 문자열에 있는 쉼표가 표의 셀을 구분하도록 지정합니다.  
   

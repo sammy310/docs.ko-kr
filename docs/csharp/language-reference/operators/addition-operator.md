@@ -9,12 +9,12 @@ helpviewer_keywords:
 - concatenation operator [C#]
 - addition operator [C#]
 ms.assetid: 93e56486-bb42-43c1-bd43-60af11e64e67
-ms.openlocfilehash: 92e20dad8ae6358f71137e955bb80e3641a66a54
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 0f04ba837f9c03107acd0b2174cbd07c14a8c213
+ms.sourcegitcommit: 8258515adc6c37ab6278e5a3d102d593246f8672
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53237755"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58504472"
 ---
 # <a name="-operator-c-reference"></a>+ 연산자(C# 참조)
 
@@ -29,6 +29,8 @@ ms.locfileid: "53237755"
 숫자 형식의 경우 `+` 연산자는 해당 피연산자의 합계를 계산합니다.
 
 [!code-csharp-interactive[numeric addition](~/samples/snippets/csharp/language-reference/operators/AdditionExamples.cs#AddNumerics)]
+
+산술 연산자에 대한 자세한 내용은 [산술 연산자](arithmetic-operators.md)를 참조하세요.
 
 ## <a name="string-concatenation"></a>문자열 연결
 

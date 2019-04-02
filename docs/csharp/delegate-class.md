@@ -3,12 +3,12 @@ title: System.Delegate 및 `delegate` 키워드
 description: .NET Framework에서 대리자를 지원하는 클래스와 해당 클래스가 ‘delegate’ 키워드에 매핑되는 방법을 설명합니다.
 ms.date: 06/20/2016
 ms.assetid: f3742fda-13c2-4283-8966-9e21c2674393
-ms.openlocfilehash: 88179af0ac072464d8e9903f685ff578ca591bf0
-ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
+ms.openlocfilehash: 4cf2b113fc9e2c6621f648af7ecb272a42b1f056
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "58126177"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58465778"
 ---
 # <a name="systemdelegate-and-the-delegate-keyword"></a>System.Delegate 및 `delegate` 키워드
 
@@ -92,7 +92,7 @@ phrases.Sort(CompareLength);
 
 메서드 이름은 괄호 없이 사용됩니다. 메서드를 인수로 사용하면 메서드 참조를 대리자 호출 대상으로 사용될 수 있는 참조로 변환하고 해당 메서드를 호출 대상으로 연결하도록 컴파일러에 알립니다.
 
-'Comparison<string>` 형식의 변수를 선언하고 할당을 수행하여 명시적 상태일 수도 있습니다.
+`Comparison<string>` 형식의 변수를 선언하고 할당을 수행하여 명시적 상태일 수도 있습니다.
 
 ```csharp
 Comparison<string> comparer = CompareLength;

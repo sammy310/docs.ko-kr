@@ -7,12 +7,12 @@ helpviewer_keywords:
 - LINQ, deferred execution
 - queries [LINQ], about LINQ queries
 ms.assetid: 37895c02-268c-41d5-be39-f7d936fa88a8
-ms.openlocfilehash: 7984d684987ef8acb172e8339f120c410f4885f3
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 1f15867c76a3498ac49df0bff6a7953f668b1a6f
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57362086"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58462892"
 ---
 # <a name="introduction-to-linq-queries-c"></a>LINQ 쿼리 소개(C#)
 *쿼리*는 데이터 소스에서 데이터를 검색하는 식입니다. 쿼리는 일반적으로 특수화된 쿼리 언어로 표현됩니다. 관계형 데이터베이스에는 SQL이 사용되고 XML에는 XQuery가 사용되는 것처럼 시간에 따라 다양한 형식의 데이터 소스에 대해 서로 다른 언어가 개발되었습니다. 따라서 개발자는 지원해야 하는 데이터 소스의 형식이나 데이터 형식에 따라 새로운 쿼리 언어를 배워야 했습니다. [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]는 다양한 데이터 소스 및 형식에 사용할 수 있는 일관된 모델을 제공함으로써 이러한 상황을 간단하게 합니다. [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 쿼리에서는 항상 개체를 사용하고 있습니다. XML 문서, SQL 데이터베이스, [!INCLUDE[vstecado](~/includes/vstecado-md.md)] 데이터 세트, .NET 컬렉션 및 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 공급자를 사용할 수 있는 다른 모든 형식에서 데이터를 쿼리하고 변환하는 데 동일한 기본 코딩 패턴을 사용합니다.  
@@ -32,7 +32,7 @@ ms.locfileid: "57362086"
   
  다음 그림에서는 전체 쿼리 작업을 보여 줍니다. [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]에서는 쿼리 실행이 쿼리 자체와 구분됩니다. 즉, 쿼리 변수를 만드는 것만으로 데이터가 검색되지는 않습니다.  
   
- ![완전한 LINQ 쿼리 작업](../../../../csharp/programming-guide/concepts/linq/media/linq_query.png "LINQ_Query")  
+ ![전체 LINQ 쿼리 작업의 다이어그램](./media/introduction-to-linq-queries/linq-query-complete-operation.png)  
   
 ## <a name="the-data-source"></a>데이터 소스  
  이전 예제에서는 데이터 소스가 배열이기 때문에 제네릭 <xref:System.Collections.Generic.IEnumerable%601> 인터페이스를 암시적으로 지원합니다. 즉, [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]로 쿼리할 수 있다는 의미입니다. 쿼리가 `foreach` 문에서 실행되고, `foreach`는 <xref:System.Collections.IEnumerable> 또는 <xref:System.Collections.Generic.IEnumerable%601>이 필요합니다. <xref:System.Collections.Generic.IEnumerable%601> 또는 제네릭 <xref:System.Linq.IQueryable%601> 같은 파생된 인터페이스를 지원하는 형식을 *쿼리 가능 형식*이라고 합니다.  
@@ -91,7 +91,6 @@ IQueryable<Customer> custQuery =
 ## <a name="see-also"></a>참고 항목
 
 - [C#에서 LINQ 시작](../../../../csharp/programming-guide/concepts/linq/getting-started-with-linq.md)
-- [연습: C#에서 쿼리 작성](../../../../csharp/programming-guide/concepts/linq/walkthrough-writing-queries-linq.md)
 - [연습: C#에서 쿼리 작성](../../../../csharp/programming-guide/concepts/linq/walkthrough-writing-queries-linq.md)
 - [LINQ 쿼리 식](../../../../csharp/programming-guide/linq-query-expressions/index.md)
 - [foreach, in](../../../../csharp/language-reference/keywords/foreach-in.md)

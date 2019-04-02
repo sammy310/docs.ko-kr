@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: ecdcf25d-cae3-4f07-a2b6-8397ac6dc42d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6ad93144dcb56d60f9aa688400918218ef8171df
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.openlocfilehash: c65634a1046b193d500e505d945784504285f93a
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56219570"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58412333"
 ---
 # <a name="creating-prototypes-in-managed-code"></a>관리 코드에서 프로토타입 만들기
 이 항목에서는 관리되지 않는 함수에 액세스하는 방법을 설명하고 관리 코드에서 메서드 정의에 주석을 다는 여러 특성 필드를 소개합니다. 플랫폼 호출에서 사용되는 .NET 기반 선언을 생성하는 방법을 보여 주는 예제는 [플랫폼 호출을 사용하여 데이터 마샬링](marshaling-data-with-platform-invoke.md)을 참조하세요.  
@@ -32,49 +32,60 @@ ms.locfileid: "56219570"
  관리 코드에서 관리되지 않는 DLL 함수에 액세스하기 전에 함수 이름과 함수를 내보내는 DLL 이름을 알아야 합니다. 이 정보를 사용하여 DLL에서 구현되는 관리되지 않는 함수에 대한 관리되는 정의를 쓰기 시작할 수 있습니다. 또한 플랫폼 호출이 함수를 만들고 데이터를 함수로 또는 반대로 마샬링하는 방법을 조정할 수 있습니다.  
   
 > [!NOTE]
->  문자열을 할당하는 Win32 API 함수를 통해 `LocalFree`와 같은 메서드를 사용하여 문자열을 해제할 수 있습니다. 플랫폼 호출은 매개 변수를 다르게 처리합니다. 플랫폼 호출의 경우 매개 변수를 `String` 형식 대신 `IntPtr` 형식으로 설정합니다. 
-  <xref:System.Runtime.InteropServices.Marshal?displayProperty=nameWithType> 클래스에서 제공된 메서드를 사용하여 형식을 문자열로 수동으로 변환하고 해제합니다.  
+>  문자열을 할당하는 Windows API 함수를 통해 `LocalFree`와 같은 메서드를 사용하여 문자열을 해제할 수 있습니다. 플랫폼 호출은 매개 변수를 다르게 처리합니다. 플랫폼 호출의 경우 매개 변수를 `String` 형식 대신 `IntPtr` 형식으로 설정합니다. <xref:System.Runtime.InteropServices.Marshal?displayProperty=nameWithType> 클래스에서 제공된 메서드를 사용하여 형식을 문자열로 수동으로 변환하고 해제합니다.  
   
 ## <a name="declaration-basics"></a>선언 기본 사항  
  관리되지 않는 함수에 대한 관리되는 정의는 다음 예제와 같이 언어 종속적입니다. 전체 코드 예제를 보려면 [플랫폼 호출 예제](platform-invoke-examples.md)를 참조하세요.  
   
-```vb  
-Imports System.Runtime.InteropServices  
-Public Class Win32  
-    Declare Auto Function MessageBox Lib "user32.dll" _  
-       (ByVal hWnd As Integer, _  
-        ByVal txt As String, ByVal caption As String, _  
-        ByVal Typ As Integer) As IntPtr  
-End Class  
-```  
+```vb
+Imports System
+
+Friend Class WindowsAPI
+    Friend Shared Declare Auto Function MessageBox Lib "user32.dll" (
+        ByVal hWnd As IntPtr,
+        ByVal lpText As String,
+        ByVal lpCaption As String,
+        ByVal uType As UInteger) As Integer
+End Class
+```
   
- 
-  <xref:System.Runtime.InteropServices.DllImportAttribute.BestFitMapping>, <xref:System.Runtime.InteropServices.DllImportAttribute.CallingConvention>, <xref:System.Runtime.InteropServices.DllImportAttribute.ExactSpelling>, <xref:System.Runtime.InteropServices.DllImportAttribute.PreserveSig>, <xref:System.Runtime.InteropServices.DllImportAttribute.SetLastError> 또는 <xref:System.Runtime.InteropServices.DllImportAttribute.ThrowOnUnmappableChar> 필드를 [!INCLUDE[vbprvbext](../../../includes/vbprvbext-md.md)] 선언에 적용하려면 `Declare` 문 대신 <xref:System.Runtime.InteropServices.DllImportAttribute> 특성을 사용해야 합니다.  
+ <xref:System.Runtime.InteropServices.DllImportAttribute.BestFitMapping>, <xref:System.Runtime.InteropServices.DllImportAttribute.CallingConvention>, <xref:System.Runtime.InteropServices.DllImportAttribute.ExactSpelling>, <xref:System.Runtime.InteropServices.DllImportAttribute.PreserveSig>, <xref:System.Runtime.InteropServices.DllImportAttribute.SetLastError> 또는 <xref:System.Runtime.InteropServices.DllImportAttribute.ThrowOnUnmappableChar> 필드를 [!INCLUDE[vbprvbext](../../../includes/vbprvbext-md.md)] 선언에 적용하려면 `Declare` 문 대신 <xref:System.Runtime.InteropServices.DllImportAttribute> 특성을 사용해야 합니다.  
   
-```vb  
-Imports System.Runtime.InteropServices  
-Public Class Win32  
-   <DllImport ("user32.dll", CharSet := CharSet.Auto)> _  
-   Public Shared Function MessageBox (ByVal hWnd As Integer, _  
-        ByVal txt As String, ByVal caption As String, _  
-        ByVal Typ As Integer) As IntPtr  
-   End Function  
-End Class  
-```  
+```vb
+Imports System
+Imports System.Runtime.InteropServices
+
+Friend Class WindowsAPI
+    <DllImport("user32.dll", CharSet:=CharSet.Auto)>
+    Friend Shared Function MessageBox(
+        ByVal hWnd As IntPtr,
+        ByVal lpText As String,
+        ByVal lpCaption As String,
+        ByVal uType As UInteger) As Integer
+    End Function
+End Class
+```
   
-```csharp  
-using System.Runtime.InteropServices;  
-[DllImport("user32.dll")]  
-    public static extern IntPtr MessageBox(int hWnd, String text,   
-                                       String caption, uint type);  
-```  
+```csharp
+using System;
+using System.Runtime.InteropServices;
+
+internal static class WindowsAPI
+{
+    [DllImport("user32.dll")]
+    internal static extern int MessageBox(
+        IntPtr hWnd, string lpText, string lpCaption, uint uType);
+}
+```
   
-```cpp  
-using namespace System::Runtime::InteropServices;  
-[DllImport("user32.dll")]  
-    extern "C" IntPtr MessageBox(int hWnd, String* pText,  
-    String* pCaption unsigned int uType);  
-```  
+```cpp
+using namespace System;
+using namespace System::Runtime::InteropServices;
+
+[DllImport("user32.dll")]
+extern "C" int MessageBox(
+    IntPtr hWnd, String* lpText, String* lpCaption, unsigned int uType);
+```
   
 ## <a name="adjusting-the-definition"></a>정의 조정  
  명시적으로 설정하는지와 관계없이 특성 필드는 관리 코드 동작을 정의합니다. 플랫폼 호출은 어셈블리에서 메타데이터로 있는 다양한 필드에 설정된 기본값에 따라 작동합니다. 필드 하나 이상의 값을 조정하여 이 기본 동작을 변경할 수 있습니다. 대부분 <xref:System.Runtime.InteropServices.DllImportAttribute>를 사용하여 값을 설정합니다.  

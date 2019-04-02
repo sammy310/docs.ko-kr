@@ -10,16 +10,15 @@ helpviewer_keywords:
 ms.assetid: 9baea3ce-27b3-4b4f-af98-9ad0f9467e6f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: df65f54a9a7408a22f8b558f99ab42d6c37ae55b
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.openlocfilehash: aeba97a5caef8fc705a3b04496ce1fd17085ec5d
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56221071"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58409317"
 ---
 # <a name="default-marshaling-for-strings"></a>문자열에 대한 기본 마샬링
-
-  <xref:System.String?displayProperty=nameWithType> 및 <xref:System.Text.StringBuilder?displayProperty=nameWithType> 클래스는 마샬링 동작이 서로 유사합니다.  
+<xref:System.String?displayProperty=nameWithType> 및 <xref:System.Text.StringBuilder?displayProperty=nameWithType> 클래스는 마샬링 동작이 서로 유사합니다.  
   
  문자열은 COM 스타일 `BSTR` 형식 또는 null로 끝나는 문자열(null 문자로 끝나는 문자 배열)로 마샬링됩니다. 문자열 내의 문자는 유니코드(Windows 시스템에서 기본값) 또는 ANSI로 마샬링할 수 있습니다.  
   
@@ -36,8 +35,7 @@ ms.locfileid: "56221071"
 <a name="cpcondefaultmarshalingforstringsanchor1"></a>
 
 ## <a name="strings-used-in-interfaces"></a>인터페이스에서 사용되는 문자열  
- 다음 표에서는 비관리 코드에 대한 메서드 인수로 마샬링하는 경우 문자열 데이터 형식에 대한 마샬링 옵션을 보여 줍니다. 
-  <xref:System.Runtime.InteropServices.MarshalAsAttribute> 특성은 문자열을 COM 인터페이스로 마샬링하기 위한 여러 <xref:System.Runtime.InteropServices.UnmanagedType> 열거형 값을 제공합니다.  
+ 다음 표에서는 비관리 코드에 대한 메서드 인수로 마샬링하는 경우 문자열 데이터 형식에 대한 마샬링 옵션을 보여 줍니다. <xref:System.Runtime.InteropServices.MarshalAsAttribute> 특성은 문자열을 COM 인터페이스로 마샬링하기 위한 여러 <xref:System.Runtime.InteropServices.UnmanagedType> 열거형 값을 제공합니다.  
   
 |열거형 형식|관리되지 않는 형식에 대한 설명|  
 |----------------------|-------------------------------------|  
@@ -83,8 +81,7 @@ HRESULT PassStringRef4([in, out] LPWStr *s);
 ## <a name="strings-used-in-platform-invoke"></a>플랫폼 호출에서 사용되는 문자열  
  플랫폼 호출은 문자열 인수를 복사하고 .NET Framework 형식(유니코드)을 플랫폼 관리되지 않는 형식으로 변환합니다. 문자열을 변경할 수 없으며, 호출이 반환될 때 관리되지 않는 메모리에서 관리되는 메모리로 다시 복사되지 않습니다.  
   
- 다음 표에서는 플랫폼 호출의 메서드 인수로 마샬링하는 경우 문자열에 대한 마샬링 옵션을 보여 줍니다. 
-  <xref:System.Runtime.InteropServices.MarshalAsAttribute> 특성은 문자열을 마샬링하기 위한 여러 <xref:System.Runtime.InteropServices.UnmanagedType> 열거형 값을 제공합니다.  
+ 다음 표에서는 플랫폼 호출의 메서드 인수로 마샬링하는 경우 문자열에 대한 마샬링 옵션을 보여 줍니다. <xref:System.Runtime.InteropServices.MarshalAsAttribute> 특성은 문자열을 마샬링하기 위한 여러 <xref:System.Runtime.InteropServices.UnmanagedType> 열거형 값을 제공합니다.  
   
 |열거형 형식|관리되지 않는 형식에 대한 설명|  
 |----------------------|-------------------------------------|  
@@ -142,8 +139,7 @@ String s);
   
 <a name="cpcondefaultmarshalingforstringsanchor2"></a>   
 ## <a name="strings-used-in-structures"></a>구조체에서 사용되는 문자열  
- 문자열은 구조체의 유효한 멤버지만 <xref:System.Text.StringBuilder> 버퍼는 구조체에서 유효하지 않습니다. 다음 표에서는 형식을 필드로 마샬링하는 경우 문자열 데이터 형식에 대한 마샬링 옵션을 보여 줍니다. 
-  <xref:System.Runtime.InteropServices.MarshalAsAttribute> 특성은 문자열을 필드로 마샬링하기 위한 여러 <xref:System.Runtime.InteropServices.UnmanagedType> 열거형 값을 제공합니다.  
+ 문자열은 구조체의 유효한 멤버지만 <xref:System.Text.StringBuilder> 버퍼는 구조체에서 유효하지 않습니다. 다음 표에서는 형식을 필드로 마샬링하는 경우 문자열 데이터 형식에 대한 마샬링 옵션을 보여 줍니다. <xref:System.Runtime.InteropServices.MarshalAsAttribute> 특성은 문자열을 필드로 마샬링하기 위한 여러 <xref:System.Runtime.InteropServices.UnmanagedType> 열거형 값을 제공합니다.  
   
 |열거형 형식|관리되지 않는 형식에 대한 설명|  
 |----------------------|-------------------------------------|  
@@ -153,8 +149,7 @@ String s);
 |`UnmanagedType.LPWStr`|null로 끝나는 유니코드 문자 배열에 대한 포인터입니다.|  
 |`UnmanagedType.ByValTStr`|고정 길이 문자 배열입니다. 배열 형식은 포함하는 구조체의 문자 집합에 의해 결정됩니다.|  
   
- 
-  `ByValTStr` 형식은 구조체 내에 나타나는 인라인 고정 길이 문자 배열에 사용됩니다. 다른 형식은 문자열에 대한 포인터를 포함하는 구조체 내에 포함된 문자열 참조에 적용됩니다.  
+ `ByValTStr` 형식은 구조체 내에 나타나는 인라인 고정 길이 문자 배열에 사용됩니다. 다른 형식은 문자열에 대한 포인터를 포함하는 구조체 내에 포함된 문자열 참조에 적용됩니다.  
   
  포함하는 구조체에 적용된 <xref:System.Runtime.InteropServices.StructLayoutAttribute> 특성의 `CharSet` 인수는 구조체에서 문자열의 문자 형식을 결정합니다. 다음 구조체 예에서는 문자열 참조 및 인라인 문자열뿐 아니라 ANSI, 유니코드 및 플랫폼 종속 문자를 포함합니다.  
   
@@ -223,10 +218,9 @@ struct StringInfoT {
 ## <a name="fixed-length-string-buffers"></a>고정 길이 문자열 버퍼  
  일부 환경에서는 고정 길이 문자 버퍼를 조작할 비관리 코드로 전달해야 합니다. 호출 수신자는 전달된 버퍼의 내용을 수정할 수 없기 때문에 이 경우 단순히 문자열을 전달하면 작동하지 않습니다. 문자열이 참조로 전달되는 경우 버퍼를 지정된 크기로 초기화할 수 있는 방법이 없습니다.  
   
- 솔루션은 문자열 대신 <xref:System.Text.StringBuilder> 버퍼를 인수로 전달하는 것입니다. 
-  `StringBuilder`의 용량을 초과하지 않는 한 호출 수신자가 `StringBuilder`를 역참조 및 수정할 수 있습니다. 고정 길이로 초기화할 수도 있습니다. 예를 들어 `StringBuilder` 버퍼를 `N` 용량으로 초기화하는 경우 마샬러가 (`N`+1)자 크기의 버퍼를 제공합니다. +1은 `StringBuilder`에는 없는데 관리되지 않는 문자열에 null 종결자가 있다는 사실을 고려합니다.  
+ 솔루션은 문자열 대신 <xref:System.Text.StringBuilder> 버퍼를 인수로 전달하는 것입니다. `StringBuilder`의 용량을 초과하지 않는 한 호출 수신자가 `StringBuilder`를 역참조 및 수정할 수 있습니다. 고정 길이로 초기화할 수도 있습니다. 예를 들어 `StringBuilder` 버퍼를 `N` 용량으로 초기화하는 경우 마샬러가 (`N`+1)자 크기의 버퍼를 제공합니다. +1은 `StringBuilder`에는 없는데 관리되지 않는 문자열에 null 종결자가 있다는 사실을 고려합니다.  
   
- 예를 들어 Microsoft Win32 API `GetWindowText` 함수(Windows.h에서 정의됨)는 조작할 비관리 코드에 전달해야 하는 고정 길이 문자 버퍼입니다. `LpString`은 크기가 `nMaxCount`인 호출자 할당 버퍼를 가리킵니다. 호출자는 버퍼를 할당하고 `nMaxCount` 인수를 할당된 버퍼 크기로 설정해야 합니다. 다음 코드에서는 Windows.h에서 정의된 `GetWindowText` 함수 선언을 보여 줍니다.  
+ 예를 들어 Microsoft Windows API `GetWindowText` 함수(Windows.h에서 정의됨)는 조작할 비관리 코드에 전달해야 하는 고정 길이 문자 버퍼입니다. `LpString`은 크기가 `nMaxCount`인 호출자 할당 버퍼를 가리킵니다. 호출자는 버퍼를 할당하고 `nMaxCount` 인수를 할당된 버퍼 크기로 설정해야 합니다. 다음 코드에서는 Windows.h에서 정의된 `GetWindowText` 함수 선언을 보여 줍니다.  
   
 ```  
 int GetWindowText(  
@@ -236,8 +230,7 @@ int nMaxCount     // Maximum number of characters to copy.
 );  
 ```  
   
- 
-  `StringBuilder`의 용량을 초과하지 않는 한 호출 수신자가 `StringBuilder`를 역참조 및 수정할 수 있습니다. 다음 코드 예제에서는 `StringBuilder`를 고정 길이로 초기화할 수 있는 방법을 보여 줍니다.  
+ `StringBuilder`의 용량을 초과하지 않는 한 호출 수신자가 `StringBuilder`를 역참조 및 수정할 수 있습니다. 다음 코드 예제에서는 `StringBuilder`를 고정 길이로 초기화할 수 있는 방법을 보여 줍니다.  
   
 ```vb  
 Public Class Win32API  

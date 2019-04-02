@@ -4,12 +4,12 @@ description: ASP.NET Core 및 Azure를 사용하여 최신 웹 애플리케이�
 author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
-ms.openlocfilehash: e3edec65fd10b0a7c05d1865703f2e0a591d8b03
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.openlocfilehash: e93c33ae29268c3968ccb59739e899966ae4339d
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55827554"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58463711"
 ---
 # <a name="test-aspnet-core-mvc-apps"></a>ASP.NET Core MVC 앱 테스트
 
@@ -197,7 +197,7 @@ public class BasicWebTests : IClassFixture<WebApplicationFactory<Startup>>
 }
 ```
 
-각 테스트를 실행하기 전에 메모리 데이터 저장소에서 사용할 애플리케이션을 구성한 다음, 테스트 데이터로 애플리케이션을 시드하는 것과 같은 추가적인 사이트 구성을 일부 수행하고자 할 수도 있습니다. 이를 수행하려면 WebApplicationFactory<TEntry>의 고유한 서브클래스를 만들고 해당 ConfigureWebHost 메서드를 재정의해야 합니다. 아래 예제에서는 eShopOnWeb FunctionalTests 프로젝트에서 가져온 것으로, 기본 웹 애플리케이션에서 테스트의 일부로 사용됩니다.
+각 테스트를 실행하기 전에 메모리 데이터 저장소에서 사용할 애플리케이션을 구성한 다음, 테스트 데이터로 애플리케이션을 시드하는 것과 같은 추가적인 사이트 구성을 일부 수행하고자 할 수도 있습니다. 이를 수행하려면 WebApplicationFactory\<TEntry>의 고유한 서브클래스를 만들고 해당 ConfigureWebHost 메서드를 재정의해야 합니다. 아래 예제에서는 eShopOnWeb FunctionalTests 프로젝트에서 가져온 것으로, 기본 웹 애플리케이션에서 테스트의 일부로 사용됩니다.
 
 ```cs
 using Microsoft.AspNetCore.Hosting;

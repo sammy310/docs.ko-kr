@@ -4,16 +4,16 @@ description: 제네릭이 실제 데이터 형식에 커밋하지 않고 형식�
 author: kuhlenh
 ms.author: wiwagn
 ms.date: 10/09/2018
-ms.openlocfilehash: 991e3800e1302843db0dc1c57ed3a7e4becd298e
-ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
+ms.openlocfilehash: 3c1181f5be717f328ae906c6009fc8a34b904c89
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56835293"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58465427"
 ---
 # <a name="generic-types-overview"></a>제네릭 형식 개요
 
-개발자는 암시적이든 명시적이든 .NET에서 항상 제네릭을 사용합니다. .NET에서 LINQ를 사용할 때 <xref:System.Collections.Generic.IEnumerable%601>로 작업하고 있다는 것을 알아차리셨나요? 또는 Entity Framework를 사용하여 데이터베이스에 통신하기 위한 “제네릭 리포지토리”의 온라인 샘플을 본 적이 있다면 대부분의 메서드가 IQueryable<T>를 반환하는 것을 보셨나요? 이러한 예제에서 **T**가 무엇이고 왜 사용되는지 궁금하게 여겼을 수도 있습니다.
+개발자는 암시적이든 명시적이든 .NET에서 항상 제네릭을 사용합니다. .NET에서 LINQ를 사용할 때 <xref:System.Collections.Generic.IEnumerable%601>로 작업하고 있다는 것을 알아차리셨나요? 또는 Entity Framework를 사용하여 데이터베이스에 통신하기 위한 "제네릭 리포지토리"의 온라인 샘플을 본 적이 있다면 대부분의 메서드가 IQueryable\<T>를 반환하는 것을 보셨나요? 이러한 예제에서 **T**가 무엇이고 왜 사용되는지 궁금하게 여겼을 수도 있습니다.
 
 .NET Framework 2.0에서 처음 소개된 **제네릭**은 기본적으로 개발자가 실제 데이터 형식에 커밋하지 않고 [형식이 안전한](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/hbzz1a9a(v=vs.100)) 데이터 구조를 정의할 수 있게 해주는 “코드 템플릿”입니다. 예를 들어 <xref:System.Collections.Generic.List%601>는 `List<int>`, `List<string>` 또는 `List<Person>`과 같은 모든 형식으로 선언하고 사용할 수 있는 [제네릭 컬렉션](xref:System.Collections.Generic)입니다.
 

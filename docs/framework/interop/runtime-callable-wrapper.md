@@ -10,20 +10,22 @@ helpviewer_keywords:
 ms.assetid: 7e542583-1e31-4e10-b523-8cf2f29cb4a4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d3abce6ef7cb1d3287d9c8b7ceb9333f209e75ad
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.openlocfilehash: 1962815b8e294b1321320ce500554046d05f4c8f
+ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56219527"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58654135"
 ---
 # <a name="runtime-callable-wrapper"></a>RCW
 공용 언어 런타임은 RCW(런타임 호출 가능 래퍼)라는 프록시를 통해 COM 개체를 노출합니다. RCW는 .NET 클라이언트에 일반적인 개체인 것처럼 나타나지만 주요 기능이 .NET 클라이언트와 COM 개체 간의 호출을 마샬링하는 것입니다.  
   
  런타임은 개체에 있는 참조 수에 관계없이 각 COM 개체에 대해 RCW를 정확한 한 개 만듭니다. 런타임은 각 개체에 대해 프로세스당 하나의 RCW를 유지 관리합니다.  특정 응용 프로그램 도메인이나 아파트에서 RCW를 만든 다음 다른 응용 프로그램 도메인이나 아파트에 참조를 전달하는 경우 첫 번째 개체에 대한 프록시가 사용됩니다.  다음 그림과 같이 INew 및 INewer 인터페이스를 노출하는 COM 개체에 대한 참조가 임의 개수의 관리되는 클라이언트에 포함될 수 있습니다.  
-  
- ![RCW](./media/rcw.gif "rcw")  
-런타임 호출 가능 래퍼를 통해 COM 개체 액세스  
+
+다음 이미지에서는 런타임 호출 가능 래퍼를 통해 COM 개체에 액세스하기 위한 프로세스를 보여줍니다.
+
+ ![RCW를 통해 COM 개체에 액세스하기 위한 프로세스.](./media/runtime-callable-wrapper/runtime-callable-wrapper.gif)  
+   
   
  형식 라이브러리에서 파생된 메타데이터를 사용하여 런타임은 호출되는 COM 개체와 해당 개체에 대한 래퍼를 둘 다 만듭니다. 각 RCW는 래핑하는 COM 개체에서 인터페이스 포인터 캐시를 유지 관리하고, RCW가 더 이상 필요하지 않으면 COM 개체에서 해당 참조를 해제합니다. 런타임은 RCW에서 가비지 컬렉션을 수행합니다.  
   
@@ -32,10 +34,11 @@ ms.locfileid: "56219527"
  표준 래퍼는 기본 제공 마샬링 규칙을 적용합니다. 예를 들어 .NET 클라이언트가 관리되지 않는 개체에 문자열 형식을 인수의 일부로 전달하는 경우 래퍼가 문자열을 BSTR 형식으로 변환합니다. COM 개체가 관리되는 호출자에게 BSTR을 반환하는 경우 호출자는 문자열을 수신합니다. 클라이언트와 서버 둘 다 익숙한 데이터를 보내고 받습니다. 다른 형식은 변환이 필요하지 않습니다. 예를 들어 표준 래퍼는 형식을 변환하지 않고 관리 코드와 비관리 코드 간에 항상 4바이트 정수를 전달합니다.  
   
 ## <a name="marshaling-selected-interfaces"></a>선택한 인터페이스 마샬링  
- RCW([런타임 호출 가능 래퍼](runtime-callable-wrapper.md))의 주요 목표는 관리되는 프로그래밍 모델과 관리되지 않는 프로그래밍 모델 간의 차이를 숨기는 것입니다. 매끄러운 전환을 만들기 위해 RCW는 다음 그림과 같이 .NET 클라이언트에 노출하지 않고 선택한 COM 인터페이스를 사용합니다.  
+ RCW([런타임 호출 가능 래퍼](runtime-callable-wrapper.md))의 주요 목표는 관리되는 프로그래밍 모델과 관리되지 않는 프로그래밍 모델 간의 차이를 숨기는 것입니다. 매끄러운 전환을 만들기 위해 RCW는 다음 그림과 같이 .NET 클라이언트에 노출하지 않고 선택한 COM 인터페이스를 사용합니다. 
+
+ 다음 이미지에서는 COM 인터페이스 및 런타임 호출 가능 래퍼를 보여줍니다. 
   
- ![인터페이스 포함 RCW](./media/rcwwithinterfaces.gif "rcwwithinterfaces")  
-COM 인터페이스 및 런타임 호출 가능 래퍼  
+ ![인터페이스를 사용하는 런타임 호출 가능 래퍼 스크린샷.](./media/runtime-callable-wrapper/runtime-callable-wrapper-interfaces.gif)  
   
  초기 바인딩된 개체로 만들어진 경우 RCW는 특정 형식입니다. COM 개체가 구현하는 인터페이스를 구현하고 개체의 인터페이스에서 메서드, 속성 및 이벤트를 노출합니다. 그림에서 RCW는 INew 인터페이스를 노출하지만 **IUnknown** 및 **IDispatch** 인터페이스를 사용합니다. 또한 RCW는 INew 인터페이스의 모든 멤버를 .NET 클라이언트에 노출합니다.  
   

@@ -4,12 +4,12 @@ description: .NET Core에서 볼 수 있는 새로운 기능에 대해 알아봅
 author: rpetrusha
 ms.author: ronpet
 ms.date: 08/13/2017
-ms.openlocfilehash: 5d21d2e07342d52dc438b67f9738f43fca47469a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2d0f6a9faaec4d4438452054624751a40c96c8e5
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54679895"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58464075"
 ---
 # <a name="whats-new-in-net-core-20"></a>.NET Core 2.0의 새로운 기능
 
@@ -144,7 +144,7 @@ Live Unit Testing이 코드를 수정하려면 언제든지 자동으로 백그�
 
 다양한 대상 프레임워크에 대한 프로젝트를 빌드하는 경우 이제 최상위 메뉴에서 대상 플랫폼을 선택할 수 있습니다. 다음 그림에서 SCD1이라는 프로젝트는 64비트 macOS X 10.11(`osx.10.11-x64`) 및 64비트 Windows 10/Windows Server 2016(`win10-x64`)을 대상으로 지정합니다. 디버그 빌드를 실행하는 경우에 프로젝트 단추를 선택하기 전에 대상 프레임워크를 선택할 수 있습니다.
 
-![프로젝트를 빌드할 때 대상 프레임워크 선택](media/multitarget.png)
+![프로젝트를 빌드할 때 대상 프레임워크 선택 영역을 보여주는 스크린샷](./media/dotnet-core-2-0/target-framework-selection.png)
 
 ### <a name="side-by-side-support-for-net-core-sdks"></a>.NET Core SDK에 대한 병렬 지원
 

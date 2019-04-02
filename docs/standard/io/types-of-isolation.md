@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 14812988-473f-44ae-b75f-fd5c2f21fb7b
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 384fd14a136dbd94725d7ef478c769a1dfce0c4c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9471d98bad9b0fbf7931f80b1e41a5e9169b2896
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54654661"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58466155"
 ---
 # <a name="types-of-isolation"></a>격리 유형
 격리된 스토리지에 대한 액세스는 항상 스토리지를 만든 사용자로 제한됩니다. 이 유형의 격리를 구현하기 위해 공용 언어 런타임은 운영 체제에서 인식하고 저장소가 열릴 때 코드가 실행 중인 프로세스에 연결된 ID인 사용자 ID의 동일한 표기법을 사용합니다. 이 ID는 인증된 사용자 ID이지만 가장으로 인해 현재 사용자의 ID가 동적으로 변경될 수 있습니다.  
@@ -48,8 +48,7 @@ ms.locfileid: "54654661"
   
  다음 그림은 저장소를 여러 범위로 격리하는 방법을 보여줍니다.  
   
- ![사용자 및 어셈블리별 격리](../../../docs/standard/io/media/typesofisolation.gif "typesofisolation")  
-격리된 스토리지 유형  
+ ![사용자 및 어셈블리별 격리를 보여주는 다이어그램](./media/types-of-isolation/isolated-storage-types.gif)  
   
  로밍 저장소를 제외하고 격리된 스토리지는 지정된 컴퓨터에 로컬인 스토리지 시설을 사용하므로 항상 컴퓨터에서 암시적으로 격리됩니다.  
   

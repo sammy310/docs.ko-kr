@@ -16,35 +16,23 @@ helpviewer_keywords:
 ms.assetid: 930653a6-95d2-4697-9d5a-52d11bb6fd4c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f44bf779060a2f9ff2de96ccad5f397a9cdd33c7
-ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
+ms.openlocfilehash: 9224e78a422b20f33f19d05e43ed1e2ec8d1c5ce
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56836307"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58410526"
 ---
 # <a name="regular-expression-language---quick-reference"></a>정규식 언어 - 빠른 참조
-<a name="top"></a> 정규식은 정규식 엔진이 입력 텍스트에서 찾으려고 하는 패턴입니다. 패턴은 하나 이상의 문자 리터럴, 연산자 또는 구문으로 구성됩니다.  간략하게 살펴보려면 [.NET 정규식](../../../docs/standard/base-types/regular-expressions.md)을 참조하세요.  
+ 정규식은 정규식 엔진이 입력 텍스트에서 찾으려고 하는 패턴입니다. 패턴은 하나 이상의 문자 리터럴, 연산자 또는 구문으로 구성됩니다.  간략하게 살펴보려면 [.NET 정규식](../../../docs/standard/base-types/regular-expressions.md)을 참조하세요.  
   
- 이 빠른 참조의 각 단원에서는 정규식을 정의하는 데 사용할 수 있는 특정 범주의 문자, 연산자 및 구문을 보여 줍니다.  
-  
- [문자 이스케이프](#character_escapes)  
- [문자 클래스](#character_classes)  
- [앵커](#anchors)  
- [그룹화 구문](#grouping_constructs)  
- [수량자](#quantifiers)  
- [역참조 구문](#backreference_constructs)  
- [교체 구문](#alternation_constructs)  
- [대체](#substitutions)  
- [정규식 옵션](#options)  
- [기타 구문](#miscellaneous_constructs)  
+ 이 빠른 참조의 각 단원에서는 정규식을 정의하는 데 사용할 수 있는 특정 범주의 문자, 연산자 및 구문을 보여줍니다.  
   
  또한 쉽게 참조할 수 있도록 다운로드 및 인쇄할 수 있는 다음과 같은 두 가지 형식으로 이 정보를 제공했습니다.  
   
  [Word(.docx) 형식으로 다운로드](https://download.microsoft.com/download/D/2/4/D240EBF6-A9BA-4E4F-A63F-AEB6DA0B921C/Regular%20expressions%20quick%20reference.docx)  
  [PDF(.pdf) 형식으로 다운로드](https://download.microsoft.com/download/D/2/4/D240EBF6-A9BA-4E4F-A63F-AEB6DA0B921C/Regular%20expressions%20quick%20reference.pdf)  
   
-<a name="character_escapes"></a>   
 ## <a name="character-escapes"></a>문자 이스케이프  
  정규식의 백슬래시 문자(\\)는 뒤에 오는 문자가 다음 표에 나와 있는 것과 같은 특수 문자이거나 리터럴로 해석되어야 함을 나타냅니다. 자세한 내용은 [문자 이스케이프](../../../docs/standard/base-types/character-escapes-in-regular-expressions.md)를 참조하세요.  
   
@@ -66,7 +54,6 @@ ms.locfileid: "56836307"
   
  [맨 위로 이동](#top)  
   
-<a name="character_classes"></a>   
 ## <a name="character-classes"></a>문자 클래스  
  문자 클래스는 문자 집합 중 하나를 찾습니다. 문자 클래스에는 다음 표에 나와 있는 언어 요소가 포함됩니다. 자세한 내용은 [문자 클래스](../../../docs/standard/base-types/character-classes-in-regular-expressions.md)를 참조하세요.  
   
@@ -103,7 +90,6 @@ ms.locfileid: "56836307"
   
  [맨 위로 이동](#top)  
   
-<a name="grouping_constructs"></a>   
 ## <a name="grouping-constructs"></a>그룹화 구문  
  그룹화 구문은 정규식의 하위 식을 나타내며 대개 입력 문자열의 부분 문자열을 캡처합니다. 그룹화 구문에는 다음 표에 나와 있는 언어 요소가 포함됩니다. 자세한 내용은 [그룹화 구문](grouping-constructs-in-regular-expressions.md)을 참조하세요.  
   
@@ -122,7 +108,6 @@ ms.locfileid: "56836307"
   
  [맨 위로 이동](#top)  
   
-<a name="quantifiers"></a>   
 ## <a name="quantifiers"></a>수량자  
  수량자는 이전 요소(문자, 그룹 또는 문자 클래스)의 인스턴스가 입력 문자열에 몇 개 있어야 일치 항목으로 간주되는지를 지정합니다. 수량자에는 다음 표에 나와 있는 언어 요소가 포함됩니다. 자세한 내용은 [수량자](quantifiers-in-regular-expressions.md)를 참조하세요.  
   
@@ -143,7 +128,6 @@ ms.locfileid: "56836307"
   
  [맨 위로 이동](#top)  
   
-<a name="backreference_constructs"></a>   
 ## <a name="backreference-constructs"></a>역참조 구문  
  역참조를 사용하면 이전에 찾은 하위 식을 이후에 동일한 정규식에서 식별할 수 있습니다. 다음 표에서는 .NET의 정규식에서 지원하는 역참조 구문을 보여줍니다. 자세한 내용은 [역참조 구문](backreference-constructs-in-regular-expressions.md)을 참조하세요.  
   
@@ -154,7 +138,6 @@ ms.locfileid: "56836307"
   
  [맨 위로 이동](#top)  
   
-<a name="alternation_constructs"></a>   
 ## <a name="alternation-constructs"></a>교체 구문  
  교체 구문은 일치를 허용하도록 정규식을 수정합니다. 이러한 구문에는 다음 표에 나와 있는 언어 요소가 포함됩니다. 자세한 내용은 [교체 구문](alternation-constructs-in-regular-expressions.md)을 참조하세요.  
   
@@ -166,7 +149,6 @@ ms.locfileid: "56836307"
   
  [맨 위로 이동](#top)  
   
-<a name="substitutions"></a>   
 ## <a name="substitutions"></a>대체  
  대체는 바꾸기 패턴에서 지원하는 정규식 언어 요소입니다. 자세한 내용은 [대체](substitutions-in-regular-expressions.md)를 참조하세요. 다음 표에 나와 있는 메타문자는 너비가 0인 원자성 어설션입니다.  
   
@@ -183,7 +165,6 @@ ms.locfileid: "56836307"
   
  [맨 위로 이동](#top)  
   
-<a name="options"></a>   
 ## <a name="regular-expression-options"></a>정규식 옵션  
  정규식 엔진이 정규식 패턴을 해석하는 방법을 제어하는 옵션을 지정할 수 있습니다. 옵션의 대부분은 인라인(정규식 패턴)에서 또는 1개 이상의 <xref:System.Text.RegularExpressions.RegexOptions> 상수로 지정될 수 있습니다. 이 빠른 참조는 인라인 옵션만 나열합니다. 인라인 및 <xref:System.Text.RegularExpressions.RegexOptions> 옵션에 대한 자세한 내용은 [Regular Expression Options](regular-expression-options.md)을 참조하세요.  
   
@@ -205,7 +186,6 @@ ms.locfileid: "56836307"
   
  [맨 위로 이동](#top)  
   
-<a name="miscellaneous_constructs"></a>   
 ## <a name="miscellaneous-constructs"></a>기타 구문  
  기타 구문은 정규식 패턴을 수정하거나 정규식 패턴에 대한 정보를 제공합니다. 다음 표에서는 .NET에서 지원하는 기타 구문을 보여줍니다. 자세한 내용은 [기타 구문](miscellaneous-constructs-in-regular-expressions.md)을 참조하세요.  
   

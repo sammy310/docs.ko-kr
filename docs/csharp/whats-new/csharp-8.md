@@ -2,12 +2,12 @@
 title: C# 8.0의 새로운 기능 - C# 가이드
 description: C# 8.0의 새로운 기능을 살펴봅니다. 이 문서는 미리 보기 2가 반영된 최신 내용을 담고 있습니다.
 ms.date: 02/12/2019
-ms.openlocfilehash: d95ec3dc050f5633b4b069caa5bd2811f6b61300
-ms.sourcegitcommit: e994e47d3582bf09ae487ecbd53c0dac30aebaf7
+ms.openlocfilehash: 07752d6d7784ff4aeb70900ef3bcd90cb29f7c22
+ms.sourcegitcommit: 4a8c2b8d0df44142728b68ebc842575840476f6d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58262581"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58545561"
 ---
 # <a name="whats-new-in-c-80"></a>C# 8.0의 새로운 기능
 
@@ -164,22 +164,37 @@ public class Point
 }
 ```
 
-다음 메서드는 **위치 패턴**을 사용하여 `x`와 `y`의 값을 추출합니다. 그런 다음, `when` 절을 사용하여 점의 사분면을 확인합니다.
+또한 사분면의 다양한 위치를 나타내는 다음 열거형을 고려하세요.
 
 ```csharp
-static string Quadrant(Point p) => p switch
+public enum Quadrant
 {
-    (0, 0) => "origin",
-    (var x, var y) when x > 0 && y > 0 => "Quadrant 1",
-    (var x, var y) when x < 0 && y > 0 => "Quadrant 2",
-    (var x, var y) when x < 0 && y < 0 => "Quadrant 3",
-    (var x, var y) when x > 0 && y < 0 => "Quadrant 4",
-    (var x, var y) => "on a border",
-    _ => "unknown"
+    Unknown,
+    Origin,
+    One,
+    Two,
+    Three,
+    Four,
+    OnBorder
+}
+```
+
+다음 메서드는 **위치 패턴**을 사용하여 `x`와 `y`의 값을 추출합니다. 그런 다음, `when` 절을 사용하여 점의 `Quadrant`를 확인합니다.
+
+```csharp
+static Quadrant GetQuadrant(Point point) => point switch
+{
+    (0, 0) => Quadrant.Origin,
+    var (x, y) when x > 0 && y > 0 => Quadrant.One,
+    var (x, y) when x < 0 && y > 0 => Quadrant.Two,
+    var (x, y) when x < 0 && y < 0 => Quadrant.Three,
+    var (x, y) when x > 0 && y < 0 => Quadrant.Four,
+    var (_, _) => Quadrant.OnBorder,
+    _ => Quadrant.Unknown
 };
 ```
 
-switch의 무시 패턴은 `x`나 `y` 둘 중 하나만 0인 경우에 일치합니다. expression 식은 항상 값을 생성하거나 예외를 throw해야 합니다. 일치하는 케이스가 없으면 switch 식이 예외를 throw합니다. switch 식이 가능한 모든 케이스를 포함하지 않으면 컴파일러에서 경고가 생성됩니다.
+이전 switch의 버리기 패턴은 `x` 또는 `y` 중 하나만 0인 경우에 일치합니다. expression 식은 항상 값을 생성하거나 예외를 throw해야 합니다. 일치하는 케이스가 없으면 switch 식이 예외를 throw합니다. switch 식이 가능한 모든 케이스를 포함하지 않으면 컴파일러에서 경고가 생성됩니다.
 
 이 [패턴 일치에 대한 고급 자습서](../tutorials/pattern-matching.md)에서 패턴 일치 기법을 탐색할 수 있습니다.
 
@@ -229,7 +244,7 @@ static void WriteLinesToFile(IEnumerable<string> lines)
 
 ## <a name="static-local-functions"></a>정적 로컬 함수
 
-이제 로컬 함수가 바깥쪽 범위의 변수를 참조하는 경우가 없도록 로컬 함수에 `static` 한정자를 추가할 수 있습니다. 이렇게 하면 `CS8421`, “A static local function can't contain a reference to <variable>”(정적 로컬 함수는 <variable> 참조를 포함할 수 없습니다.)이(가) 생성됩니다. 
+이제 로컬 함수가 바깥쪽 범위의 변수를 참조하는 경우가 없도록 로컬 함수에 `static` 한정자를 추가할 수 있습니다. 이렇게 하면 `CS8421` "정적 로컬 함수는 \<variable>에 대한 참조를 포함할 수 없습니다."를 생성합니다. 
 
 다음과 같은 코드를 생각해 볼 수 있습니다. 여기서 로컬 함수 `LocalFunction`은 바깥쪽 범위(메서드 `M`)에서 선언된 변수 `y`에 액세스합니다. 따라서 `LocalFunction`을 `static` 한정자와 함께 선언할 수 없습니다.
 

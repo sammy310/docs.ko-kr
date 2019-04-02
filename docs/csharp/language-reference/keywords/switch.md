@@ -12,12 +12,12 @@ helpviewer_keywords:
 - case statement [C#]
 - default keyword [C#]
 ms.assetid: 44bae8b8-8841-4d85-826b-8a94277daecb
-ms.openlocfilehash: 371b6e232e9d97df3ce34d69bcb10155c1242e1e
-ms.sourcegitcommit: d09c77414e9e4fc72c79b04deee7a756a120674e
+ms.openlocfilehash: 73524fd54aeffc86fe0c451ec4418308da764682
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2019
-ms.locfileid: "54084721"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58463256"
 ---
 # <a name="switch-c-reference"></a>switch(C# 참조)
 
@@ -59,7 +59,7 @@ C# 7.0부터 일치 식은 null이 아닌 모든 식일 수 있습니다.
 
 [!code-csharp[switch#2](../../../../samples/snippets/csharp/language-reference/keywords/switch/switch2.cs#1)]
 
-switch 문에서 하나의 switch 섹션만 실행됩니다. C#은 한 switch 섹션에서 다음 switch 섹션으로 계속 실행하도록 허용하지 않습니다. 이로 인해 다음 코드는 다음과 같은 컴파일러 오류를 생성합니다. CS0163: "한 case 레이블에서 다른 case 레이블(<case label>)로 제어를 이동할 수 없습니다."
+switch 문에서 하나의 switch 섹션만 실행됩니다. C#은 한 switch 섹션에서 다음 switch 섹션으로 계속 실행하도록 허용하지 않습니다. 이로 인해 다음 코드는 다음과 같은 컴파일러 오류를 생성합니다. CS0163: "한 case 레이블(\<case label>)에서 다른 case 레이블로 제어를 이동할 수 없습니다."
 
 ```csharp
 switch (caseSwitch)

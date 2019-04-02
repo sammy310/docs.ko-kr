@@ -4,12 +4,12 @@ description: 기존 .NET Framework 콘솔 애플리케이션을 가져와 Window
 author: spboyer
 ms.date: 09/28/2016
 ms.assetid: 85cca1d5-c9a4-4eb2-93e6-4f878de07fd7
-ms.openlocfilehash: 31da5c4fc8f057709b2abcab49657c2c0992d3e5
-ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
+ms.openlocfilehash: 481f62b21e223a13e06fe0cb68e4276968992aca
+ms.sourcegitcommit: d938c39afb9216db377d0f0ecdaa53936a851059
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "58126086"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58633844"
 ---
 # <a name="running-console-applications-in-windows-containers"></a>Windows 컨테이너에서 콘솔 애플리케이션 실행
 
@@ -55,7 +55,9 @@ Windows 컨테이너를 지원하려면 Windows용 Docker 버전 1.12 베타 26 
 ## <a name="building-the-application"></a>애플리케이션 빌드
 일반적으로 콘솔 애플리케이션은 설치 관리자, FTP 또는 파일 공유 배포를 통해 배포됩니다. 컨테이너에 배포하는 경우 자산을 컴파일하고 Docker 이미지를 만들 때 사용할 수 있는 위치에 스테이징해야 합니다.
 
-*build.ps1*에서 스크립트는 [MSBuild](/visualstudio/msbuild/msbuild)를 통해 애플리케이션을 컴파일하여 자산 빌드 태스크를 완료합니다. 필요한 자산을 마무리하기 위해 MSBuild에 몇 개의 매개 변수가 전달됩니다. 컴파일할 프로젝트 파일 또는 솔루션의 이름, 출력 위치, 마지막으로 구성(릴리스 또는 디버그)입니다.
+샘플 애플리케이션은 다음과 같습니다. [ConsoleRandomAnswerGenerator](https://github.com/dotnet/samples/tree/master/framework/docker/ConsoleRandomAnswerGenerator)
+
+*build.ps1*<sup>[[소스]](https://github.com/dotnet/samples/blob/master/framework/docker/ConsoleRandomAnswerGenerator/ConsoleRandomAnswerGenerator/build.ps1)</sup>에서 스크립트는 [MSBuild](/visualstudio/msbuild/msbuild)를 통해 애플리케이션을 컴파일하여 자산 빌드 작업을 완료합니다. 필요한 자산을 마무리하기 위해 MSBuild에 몇 개의 매개 변수가 전달됩니다. 컴파일할 프로젝트 파일 또는 솔루션의 이름, 출력 위치, 마지막으로 구성(릴리스 또는 디버그)입니다.
 
 `Invoke-MSBuild` 호출에서 `OutputPath`는 **publish**로 설정되고 `Configuration`은 **릴리스**로 설정됩니다. 
 

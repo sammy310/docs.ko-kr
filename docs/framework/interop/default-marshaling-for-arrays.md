@@ -10,29 +10,20 @@ helpviewer_keywords:
 ms.assetid: 8a3cca8b-dd94-4e3d-ad9a-9ee7590654bc
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ae339b18032becffcaece1924a22b958ed86d364
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.openlocfilehash: c2b5646a1a556c57814602790d5f17104d2148e5
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56219687"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58410747"
 ---
 # <a name="default-marshaling-for-arrays"></a>배열에 대한 기본 마샬링
 전체적으로 관리 코드로 구성된 애플리케이션에서는 공용 언어 런타임이 배열 형식을 In/Out 매개 변수로 전달합니다. 반면 interop 마샬러는 기본적으로 배열을 In 매개 변수로 전달합니다.  
   
  [고정 최적화](copying-and-pinning.md)를 통해 blittable 배열은 같은 아파트의 개체와 상호 작용할 때 In/Out 매개 변수로 사용되는 것으로 보일 수 있습니다. 그러나 나중에 컴퓨터 간 프록시를 생성하는 데 사용되는 형식 라이브러리에 코드를 내보내고 해당 라이브러리를 사용하여 아파트 간에 호출을 마샬링할 경우 호출은 실제 In 매개 변수 동작으로 되돌아갈 수 있습니다.  
   
- 배열은 본질적으로 복잡하고 관리되는 배열과 관리되지 않는 배열을 구별하면 다른 비 blittable 형식보다 더 많은 정보를 보장합니다. 이 항목에서는 배열 마샬링에 대한 다음 정보를 제공합니다.  
+ 배열은 본질적으로 복잡하고 관리되는 배열과 관리되지 않는 배열을 구별하면 다른 비 blittable 형식보다 더 많은 정보를 보장합니다.  
   
--   [관리되는 배열](#cpcondefaultmarshalingforarraysanchor1)  
-  
--   [관리되지 않는 배열](#cpcondefaultmarshalingforarraysanchor2)  
-  
--   [.NET 코드에 배열 매개 변수 전달](#cpcondefaultmarshalingforarraysanchor3)  
-  
--   [COM에 배열 전달](#cpcondefaultmarshalingforarraysanchor4)  
-  
-<a name="cpcondefaultmarshalingforarraysanchor1"></a>   
 ## <a name="managed-arrays"></a>관리되는 배열  
  관리되는 배열 형식은 달라질 수 있지만 <xref:System.Array?displayProperty=nameWithType> 클래스는 모든 배열 형식의 기본 클래스입니다. **System.Array** 클래스에는 배열의 순위, 길이 및 하한/상한을 결정하기 위한 속성과 배열을 액세스, 정렬, 검색, 복사, 생성하기 위한 메서드가 있습니다.  
   
@@ -46,11 +37,9 @@ ms.locfileid: "56219687"
 |**ELEMENT_TYPE_CLASS**|알 수 없음|알 수 없음|알 수 없음|**System.Array**|  
 |**ELEMENT_TYPE_SZARRAY**|형식으로 지정됩니다.|1|0|*type* **[** *n* **]**|  
   
-<a name="cpcondefaultmarshalingforarraysanchor2"></a>   
 ## <a name="unmanaged-arrays"></a>관리되지 않는 배열  
  관리되지 않는 배열은 고정 또는 가변 길이가 포함된 COM 스타일 안전 배열 또는 C 스타일 배열입니다. 안전 배열은 연결된 배열 데이터의 형식, 순위 및 경계를 제공하는 자체 설명 배열입니다. C 스타일 배열은 고정 하한이 0인 1차원 형식 배열입니다. 마샬링 서비스는 두 가지 배열 형식에 대한 지원을 모두 제한했습니다.  
   
-<a name="cpcondefaultmarshalingforarraysanchor3"></a>   
 ## <a name="passing-array-parameters-to-net-code"></a>.NET 코드에 배열 매개 변수 전달  
  C 스타일 배열 및 안전 배열은 둘 다 비관리 코드에서 안전 배열 또는 C 스타일 배열로 .NET 코드에 전달될 수 있습니다. 다음 표에서는 관리되지 않는 형식 값과 가져온 형식을 보여 줍니다.  
   
@@ -190,7 +179,6 @@ void New3(ref String ar);
   
  interop 마샬러는 **CoTaskMemAlloc** 및 **CoTaskMemFree** 메서드를 사용하여 메모리를 할당 및 검색합니다. 비관리 코드에서 수행되는 메모리 할당에는 이러한 메서드도 사용해야 합니다.  
   
-<a name="cpcondefaultmarshalingforarraysanchor4"></a>   
 ## <a name="passing-arrays-to-com"></a>COM에 배열 전달  
  모든 관리되는 배열 형식은 관리 코드에서 비관리 코드로 전달할 수 있습니다. 다음 표와 같이 관리되는 형식과 이 형식에 적용되는 특성에 따라 배열에는 안전 배열 또는 C 스타일 배열로 액세스할 수 있습니다.  
   

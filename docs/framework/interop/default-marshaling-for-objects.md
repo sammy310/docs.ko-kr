@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: c2ef0284-b061-4e12-b6d3-6a502b9cc558
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c226960373783c45594e4a41dfaff353bf0b9db4
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.openlocfilehash: 65b13d99873fe1027d0b316d1cf90e766799dbb1
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56219609"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58409278"
 ---
 # <a name="default-marshaling-for-objects"></a>개체에 대한 마샬링
 <xref:System.Object?displayProperty=nameWithType>로 형식화된 매개 변수와 필드는 비관리 코드에 다음 형식 하나로 표시할 수 있습니다.  
@@ -26,19 +26,6 @@ ms.locfileid: "56219609"
   
  COM interop만 개체 형식에 대한 마샬링을 지원합니다. 기본 동작은 개체를 COM 변형으로 마샬링하는 것입니다. 이러한 규칙은 **개체**에만 적용되고 **Object** 클래스에서 파생되는 강력한 형식의 개체에는 적용되지 않습니다.  
   
- 이 항목에서는 개체 형식 마샬링에 대한 다음과 같은 추가 정보를 제공합니다.  
-  
--   [마샬링 옵션](#cpcondefaultmarshalingforobjectsanchor7)  
-  
--   [인터페이스에 개체 마샬링](#cpcondefaultmarshalingforobjectsanchor2)  
-  
--   [변형에 개체 마샬링](#cpcondefaultmarshalingforobjectsanchor3)  
-  
--   [개체에 변형 마샬링](#cpcondefaultmarshalingforobjectsanchor4)  
-  
--   [ByRef 변형 마샬링](#cpcondefaultmarshalingforobjectsanchor6)  
-  
-<a name="cpcondefaultmarshalingforobjectsanchor7"></a>   
 ## <a name="marshaling-options"></a>마샬링 옵션  
  다음 표에서는 **Object** 데이터 형식에 대한 마샬링 옵션을 보여 줍니다. <xref:System.Runtime.InteropServices.MarshalAsAttribute> 특성은 개체를 마샬링하기 위한 여러 <xref:System.Runtime.InteropServices.UnmanagedType> 열거형 값을 제공합니다.  
   
@@ -127,11 +114,9 @@ struct ObjectHolder {
 }  
 ```  
   
-<a name="cpcondefaultmarshalingforobjectsanchor2"></a>   
 ## <a name="marshaling-object-to-interface"></a>인터페이스에 개체 마샬링  
  개체가 COM에 인터페이스로 노출되면 해당 인터페이스는 관리되는 형식 <xref:System.Object>에 대한 클래스 인터페이스입니다(**_Object** 인터페이스). 이 인터페이스는 결과 형식 라이브러리에서 **IDispatch**(<xref:System.Runtime.InteropServices.UnmanagedType>) 또는 **IUnknown**(**UnmanagedType.IUnknown**)으로 형식화됩니다. COM 클라이언트는 **_Object** 인터페이스를 통해 관리되는 클래스 또는 파생 클래스에 의해 구현된 모든 멤버를 동적으로 호출할 수 있습니다. 클라이언트는 **QueryInterface**를 호출하여 관리되는 형식에 의해 명시적으로 구현된 다른 인터페이스를 가져올 수도 있습니다.  
   
-<a name="cpcondefaultmarshalingforobjectsanchor3"></a>   
 ## <a name="marshaling-object-to-variant"></a>변형에 개체 마샬링  
  개체가 변형에 마샬링되면 내부 변형 형식은 런타임에 다음 규칙에 따라 결정됩니다.  
   
@@ -255,7 +240,6 @@ mo.SetVariant(new CurrencyWrapper(new Decimal(5.25)));
   
  COM 변형 값은 **IConvertible.To** *Type* 인터페이스를 호출하여 결정됩니다. 여기서 **To** *Type*은 **IConvertible.GetTypeCode**에서 반환된 형식에 해당하는 변환 루틴입니다. 예를 들어 **IConvertible.GetTypeCode**에서 **TypeCode.Double**을 반환하는 개체는 **VT_R8** 형식의 COM 변형으로 마샬링됩니다. **IConvertible** 인터페이스를 캐스팅하고 <xref:System.IConvertible.ToDouble%2A> 메서드를 호출하여 COM 변형의 **dblVal** 필드에 저장된 변형 값을 가져올 수 있습니다.  
   
-<a name="cpcondefaultmarshalingforobjectsanchor4"></a>   
 ## <a name="marshaling-variant-to-object"></a>개체에 변형 마샬링  
  변형을 개체에 마샬링하면 마샬링된 변형의 형식 및 때때로 값에 따라 생성된 개체 형식이 결정됩니다. 다음 표에서는 각 변형 형식 및 변형이 COM에서 .NET Framework로 전달될 때 마샬러가 만드는 일치하는 개체 형식을 나타냅니다.  
   
@@ -289,18 +273,17 @@ mo.SetVariant(new CurrencyWrapper(new Decimal(5.25)));
   
  COM에서 관리 코드에 전달된 다음 다시 COM에 전달되는 변형 형식은 호출하는 동안 동일한 변형 형식을 유지할 수 없습니다. **VT_DISPATCH** 형식 변형이 COM에서 .NET Framework에 전달될 경우 어떤 일이 나타나는지 살펴봅니다. 마샬링하는 동안 변형은 <xref:System.Object?displayProperty=nameWithType>로 변환됩니다. **Object**가 다시 COM에 전달되면 다시 **VT_UNKNOWN** 형식 변형에 마샬링됩니다. 개체가 관리 코드에서 COM에 마샬링될 때 생성된 변형이 처음에 개체를 생성하는 데 사용되는 변형과 같은 형식이라는 보장은 없습니다.  
   
-<a name="cpcondefaultmarshalingforobjectsanchor6"></a>   
 ## <a name="marshaling-byref-variants"></a>ByRef 변형 마샬링  
  변형 자체는 값 또는 참조로 전달될 수 있지만 **VT_BYREF** 플래그를 변형 형식과 함께 사용하여 변형의 콘텐츠가 값 대신 참조로 전달되고 있음을 나타낼 수도 있습니다. 참조를 통한 변형 마샬링과 **VT_BYREF** 플래그를 통한 변형 마샬링의 차이점은 혼동될 수 있습니다. 다음 그림에서는 차이점을 분명히 설명합니다.  
   
- ![스택에 전달되는 변형](./media/interopvariant.gif "interopvariant")  
+ ![스택에 전달된 변형을 보여주는 다이어그램](./media/default-marshaling-for-objects/interop-variant-passed-value-reference.gif)  
 값 및 참조로 전달되는 변형  
   
  **값을 통한 개체 및 변형 마샬링의 기본 동작**  
   
--   관리 코드에서 COM에 개체를 전달할 경우 [변형에 개체 마샬링](#cpcondefaultmarshalingforobjectsanchor3)에 정의된 규칙에 따라 개체의 콘텐츠가 마샬러에서 생성된 새 변형에 복사됩니다. 비관리 쪽에서 변형에 적용된 변경 내용은 호출에서 반환 시 다시 원래 개체에 전파되지 않습니다.  
+-   관리 코드에서 COM에 개체를 전달할 경우 [변형에 개체 마샬링](#marshaling-object-to-variant)에 정의된 규칙에 따라 개체의 콘텐츠가 마샬러에서 생성된 새 변형에 복사됩니다. 비관리 쪽에서 변형에 적용된 변경 내용은 호출에서 반환 시 다시 원래 개체에 전파되지 않습니다.  
   
--   COM에서 관리 코드에 변형을 전달할 경우 [개체에 변형 마샬링](#cpcondefaultmarshalingforobjectsanchor4)에 정의된 규칙에 따라 변형의 콘텐츠가 새로 생성된 개체에 복사됩니다. 관리 쪽에서 개체에 적용된 변경 내용은 호출에서 반환 시 다시 원래 변형에 전파되지 않습니다.  
+-   COM에서 관리 코드에 변형을 전달할 경우 [개체에 변형 마샬링](#marshaling-variant-to-object)에 정의된 규칙에 따라 변형의 콘텐츠가 새로 생성된 개체에 복사됩니다. 관리 쪽에서 개체에 적용된 변경 내용은 호출에서 반환 시 다시 원래 변형에 전파되지 않습니다.  
   
  **참조를 통한 개체 및 변형 마샬링의 기본 동작**  
   
@@ -325,8 +308,8 @@ mo.SetVariant(new CurrencyWrapper(new Decimal(5.25)));
 |----------|--------|-----------------------------|  
 |**변형**  *v*|**개체**  *o*|Never|  
 |**개체**  *o*|**변형**  *v*|Never|  
-|**변형**   ***\****  *pv*|**Ref 개체**  *o*|Always|  
-|**Ref 개체**  *o*|**변형**   ***\****  *pv*|Always|  
+|**변형**   ***\****  *pv*|**Ref 개체**  *o*|항상|  
+|**Ref 개체**  *o*|**변형**   ***\****  *pv*|항상|  
 |**변형**  *v***(VT_BYREF** *&#124;* **VT_\*)**|**개체**  *o*|Never|  
 |**변형**  *v***(VT_BYREF** *&#124;* **VT_)**|**Ref 개체**  *o*|형식이 변경되지 않은 경우에만.|  
   

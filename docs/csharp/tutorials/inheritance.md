@@ -5,12 +5,12 @@ author: rpetrusha
 ms.author: ronpet
 ms.date: 07/05/2018
 ms.assetid: aeb68c74-0ea0-406f-9fbe-2ce02d47ef31
-ms.openlocfilehash: 942950570253b73cfb9896117bd22189e56389ea
-ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
+ms.openlocfilehash: 644e0bb281525fad12e263b31263bb9caba149f0
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56836645"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58463815"
 ---
 # <a name="inheritance-in-c-and-net"></a>C# 및 .NET의 상속
 
@@ -61,7 +61,7 @@ C# 및 .NET은 *단일 상속*만 지원합니다. 즉, 하나의 클래스가 �
 
 [!code-csharp[Inheritance](../../../samples/snippets/csharp/tutorials/inheritance/basics.cs#1)]
 
-파생 클래스는 대체 구현을 제공하여 상속된 멤버를 *재정의*할 수도 있습니다. 멤버를 재정의하기 위해서는 기본 클래스의 멤버가 [virtual](../language-reference/keywords/virtual.md) 키워드로 표시되어야 합니다. 기본적으로 기본 클래스 멤버는 `virtual`로 표시되지 않으며 재정의할 수 없습니다. 다음 예제와 같이 비가상 멤버를 재정의하려고 하면 컴파일러 오류 CS0506: "<member>: 상속된 ‘<member>’ 멤버는 virtual, abstract 또는 override로 표시되지 않았으므로 재정의할 수 없습니다.”가 표시됩니다.
+파생 클래스는 대체 구현을 제공하여 상속된 멤버를 *재정의*할 수도 있습니다. 멤버를 재정의하기 위해서는 기본 클래스의 멤버가 [virtual](../language-reference/keywords/virtual.md) 키워드로 표시되어야 합니다. 기본적으로 기본 클래스 멤버는 `virtual`로 표시되지 않으며 재정의할 수 없습니다. 다음 예제와 같이 비가상 멤버를 재정의하려고 하면 컴파일러 오류 CS0506: "\<member>는 virtual, abstract 또는 override로 표시되지 않으므로 상속된 멤버 \<member>를 재정의할 수 없습니다.”가 표시됩니다.
 
 ```csharp
 public class A
@@ -194,7 +194,7 @@ public struct ValueStructure : ValueType // Generates CS0527.
 
  `Publication` 클래스에는 `abstract` 메서드가 없지만 클래스 자체는 `abstract`입니다.
 
-- 파생 클래스가 상속 계층 구조의 최종 클래스를 나타내고 자체적으로 추가 파생 클래스에 대한 기본 클래스로 사용될 수 없는지 여부. 기본적으로 모든 클래스는 기본 클래스로 사용될 수 있습니다. [sealed](../language-reference/keywords/sealed.md) 키워드를 적용하여 클래스가 추가 클래스에 대한 기본 클래스로 사용될 수 없음을 나타낼 수 있습니다. sealed 클래스에서 파생하려고 하면 컴파일러 오류 CS0509 "sealed 형식 '<typeName>'에서 파생될 수 없습니다."를 생성합니다.
+- 파생 클래스가 상속 계층 구조의 최종 클래스를 나타내고 자체적으로 추가 파생 클래스에 대한 기본 클래스로 사용될 수 없는지 여부. 기본적으로 모든 클래스는 기본 클래스로 사용될 수 있습니다. [sealed](../language-reference/keywords/sealed.md) 키워드를 적용하여 클래스가 추가 클래스에 대한 기본 클래스로 사용될 수 없음을 나타낼 수 있습니다. 봉인된 클래스로부터 파생하려고 하면 컴파일러 오류 CS0509 "봉인된 형식 \<typeName>에서 파생될 수 없습니다."를 생성했습니다.
 
   예를 들어 파생 클래스를 `sealed`로 표시합니다.
 

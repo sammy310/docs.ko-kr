@@ -8,12 +8,12 @@ dev_langs:
 - csharp
 - vb
 ms.custom: seodec18
-ms.openlocfilehash: 22494a87b4f6aaa6bd1a57873493f64df3b1ecb8
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: efb42d773669b949aeafa52fdcc445f18b469a5e
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57359733"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58410266"
 ---
 # <a name="publish-net-core-apps-with-the-cli"></a>CLI를 사용하여 .NET Core 앱 게시
 
@@ -50,7 +50,7 @@ CLI 사용에 대한 빠른 도움말을 찾나요? 다음 표는 앱을 게시�
 
 ### <a name="native-dependencies"></a>네이티브 종속성
 
-앱에 네이티브 종속성이 있는 경우 다른 운영 체제에서 실행되지 않을 수 있습니다. 예를 들어 앱이 네이티브 Win32 API를 사용하는 경우 macOS 또는 Linux에서 실행되지 않습니다. 플랫폼별 코드를 제공하고 각 플랫폼에 대해 실행 파일을 컴파일해야 합니다.
+앱에 네이티브 종속성이 있는 경우 다른 운영 체제에서 실행되지 않을 수 있습니다. 예를 들어 앱이 네이티브 Windows API를 사용하는 경우 macOS 또는 Linux에서 실행되지 않습니다. 플랫폼별 코드를 제공하고 각 플랫폼에 대해 실행 파일을 컴파일해야 합니다.
 
 또한 참조한 라이브러리에 네이티브 종속성이 있는 경우 모든 플랫폼에서 앱이 실행되지 않을 수 있습니다. 그러나 참조하는 NuGet 패키지에 플랫폼별 버전이 포함되어 있어 사용자의 필수 네이티브 종속성을 처리할 수 있습니다.
 

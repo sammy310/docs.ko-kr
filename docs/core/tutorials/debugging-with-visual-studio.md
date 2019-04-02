@@ -3,12 +3,12 @@ title: Visual Studio 2017을 사용하여 Hello World .NET Core 애플리케이�
 description: Visual Studio 2017에서 C# 또는 Visual Basic으로 작성된 Hello World 앱을 디버그하는 방법을 알아봅니다.
 ms.date: 12/15/2017
 ms.custom: vs-dotnet, seodec18
-ms.openlocfilehash: b08744e784ffdde6682a6271888ae55d3fbd242b
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.openlocfilehash: 268a0d47b63b8d6baa25305296395d7d8a86729e
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53170667"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58463425"
 ---
 # <a name="debug-your-c-or-visual-basic-net-core-hello-world-application-using-visual-studio-2017"></a>Visual Studio 2017을 사용하여 C# 또는 Visual Basic .NET Core Hello World 애플리케이션 디버그
 
@@ -39,7 +39,7 @@ ms.locfileid: "53170667"
 
 1. 중단점에 도달할 때와 `Console.WriteLine` 메서드가 실행되기 전에 프로그램 실행이 중지됩니다. **자동** 창에는 현재 줄 주위에서 사용되는 변수 값이 표시됩니다. **지역** 창(**지역** 탭을 클릭하여 볼 수 있음)에는 현재 실행 중인 메서드에 정의된 변수 값이 표시됩니다.
 
-   ![Visual Studio 애플리케이션 창](./media/debugging-with-visual-studio/break.png)
+   ![Visual Studio의 중단점 스크린샷](./media/debugging-with-visual-studio/breakpoint-console-window.png)
 
 1. 변수 값을 변경하여 프로그램에 미치는 영향을 확인할 수 있습니다. **직접 실행 창**이 표시되지 않는 경우 **디버그** > **창** > **직접 실행** 메뉴 항목을 선택하여 표시합니다. **직접 실행 창**에서는 디버그하는 애플리케이션을 조작할 수 있습니다.
 

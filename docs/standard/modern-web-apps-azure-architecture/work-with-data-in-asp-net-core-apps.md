@@ -4,12 +4,12 @@ description: ASP.NET Core 및 Azure를 사용하여 현대식 웹 애플리케�
 author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
-ms.openlocfilehash: 914a10724c416f453d93f6efc16f9ad192798264
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.openlocfilehash: 23c0995c512a07c41b3e2dbe8bc7528723379efa
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55827177"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58463737"
 ---
 # <a name="working-with-data-in-aspnet-core-apps"></a>ASP.NET Core 앱에서 데이터 작업
 
@@ -51,7 +51,7 @@ public class CatalogContext : DbContext
 }
 ```
 
-DbContext에는 DbContextOptions을 수락하고 이 인수를 기본 DbContext 생성자에게 전달하는 생성자가 있어야 합니다. 애플리케이션에 DbContext가 하나만 있는 경우 DbContextOptions 인스턴스를 전달할 수 있지만, 둘 이상 있는 경우에는 제네릭 DbContextOptions<T> 형식을 사용하여 DbContext 형식을 제네릭 매개 변수로 전달해야 합니다.
+DbContext에는 DbContextOptions을 수락하고 이 인수를 기본 DbContext 생성자에게 전달하는 생성자가 있어야 합니다. 애플리케이션에 DbContext가 하나만 있는 경우 DbContextOptions 인스턴스를 전달할 수 있지만, 둘 이상 있는 경우에는 제네릭 DbContextOptions\<T> 형식을 사용하여 DbContext 형식을 제네릭 매개 변수로 전달해야 합니다.
 
 ### <a name="configuring-ef-core"></a>EF Core 구성
 
@@ -89,7 +89,7 @@ var brandItems = await _context.CatalogBrands
     .ToListAsync();
 ```
 
-위의 예제에서 쿼리가 즉시 실행되도록 ToListAsync에 대한 호출을 추가하는 것이 중요합니다. 그렇지 않으면 명령문에서 IQueryable<SelectListItem>을 brandItems에 할당하므로 열거될 때까지 실행되지 않습니다. 메서드에서 IQueryable 결과를 반환할 때의 장점과 단점이 있습니다. 쿼리 EF Core가 추가 수정이 가능하도록 작성되지만, EF Core에서 변환할 수 없는 쿼리에 작업이 추가되면 런타임에만 발생하는 오류가 발생할 수도 있습니다. 일반적으로 데이터 액세스를 수행하는 메서드에 필터를 전달하고 메모리 내 컬렉션(예: List<T>)을 반환하는 것이 안전합니다.
+위의 예제에서 쿼리가 즉시 실행되도록 ToListAsync에 대한 호출을 추가하는 것이 중요합니다. 그렇지 않으면, 명령문에서 IQueryable\<SelectListItem>을 brandItems에 할당하므로 열거될 때까지 실행되지 않습니다. 메서드에서 IQueryable 결과를 반환할 때의 장점과 단점이 있습니다. 쿼리 EF Core가 추가 수정이 가능하도록 작성되지만, EF Core에서 변환할 수 없는 쿼리에 작업이 추가되면 런타임에만 발생하는 오류가 발생할 수도 있습니다. 일반적으로 데이터 액세스를 수행하는 메서드에 필터를 전달하고 메모리 내 컬렉션(예: List\<T>)을 반환하는 것이 안전합니다.
 
 EF Core는 지속성 저장소에서 가져오는 엔터티의 변경 내용을 추적합니다. 추적된 엔터티의 변경 내용을 저장하려면 엔터티를 가져올 때 사용한 것과 동일한 DbContext 인스턴스가 되도록 DbContext에서 SaveChanges 메서드를 호출하면 됩니다. 엔터티 추가 및 제거는 적절한 DbSet 속성에서 직접 수행되며, 마찬가지로 SaveChanges를 호출하여 데이터베이스 명령을 실행합니다. 다음 예제에서는 지속성 저장소에서 엔터티를 추가, 업데이트 및 제거하는 방법을 보여줍니다.
 

@@ -2,12 +2,12 @@
 title: C#의 컬렉션 반복
 ms.date: 08/14/2018
 ms.assetid: c93f6dd4-e72a-4a06-be1c-a98b3255b734
-ms.openlocfilehash: 386f4145c38e3a573ec04d2a0b8e260bcdc63491
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2b0e1d509cf80e13d2cee3cf0ddf2021d6c84c5b
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54720800"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58464322"
 ---
 # <a name="iterators-c"></a>반복기(C#)
 
@@ -324,7 +324,7 @@ public class Stack<T> : IEnumerable<T>
 
 반복기는 메서드 또는 `get` 접근자로 발생할 수 있습니다. 이벤트, 인스턴스 생성자, 정적 생성자 또는 정적 종료자에서는 반복기가 발생할 수 없습니다.
 
-반복기에서 반환된 `yield return`IEnumerable의 형식 인수에 대한 명령문<T>의 식 형식에서 암시적 변환이 있어야 합니다.
+`yield return` 문의 식 형식을 반복기에서 반환된 IEnumerable\<T>의 형식 인수로 암시적으로 변환해야 합니다.
 
 C#에서 반복기 메서드는 `in`, `ref` 또는 `out` 매개 변수를 사용할 수 없습니다.
 

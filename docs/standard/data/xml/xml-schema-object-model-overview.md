@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: 896a1e12-5655-42c6-8cdd-89c12862b34b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c63a21ed871bf967674d09230f897b7ab98dfa4d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: cdd43f7079563be6b1377f743a84625429ba4f16
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54554948"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58411696"
 ---
 # <a name="xml-schema-object-model-overview"></a>XML 스키마 개체 모델 개요
 Microsoft .NET Framework의 SOM(스키마 개체 모델)은 프로그래밍 방식으로 스키마를 만들고 편집하고 유효성을 검사할 수 있는 다양한 API입니다. SOM은 DOM(문서 개체 모델)이 XML 문서에서 작동하는 것과 비슷한 방식으로 XML 스키마 문서에서 작동합니다. XML 스키마 문서는 유효한 XML 파일로, SOM에 로드된 후에는 스키마를 준수하는 다른 XML 문서의 구조와 유효성에 대한 의미를 전달합니다.  
@@ -34,7 +34,7 @@ Microsoft .NET Framework의 SOM(스키마 개체 모델)은 프로그래밍 방�
 ## <a name="the-schema-object-model"></a>스키마 개체 모델  
  SOM은 XML 스키마의 요소에 해당하는 <xref:System.Xml.Schema?displayProperty=nameWithType> 네임스페이스의 다양한 클래스 집합으로 구성됩니다. 예를 들어, `<xsd:schema>...</xsd:schema>` 요소는 <xref:System.Xml.Schema.XmlSchema?displayProperty=nameWithType> 클래스에 매핑되며 `<xsd:schema/>` 요소 내에 포함할 수 있는 모든 정보는 <xref:System.Xml.Schema.XmlSchema> 클래스를 사용하여 나타낼 수 있습니다. 마찬가지로 `<xsd:element>...</xsd:element>` 및 `<xsd:attribute>...</xsd:attribute>` 요소는 각각 <xref:System.Xml.Schema.XmlSchemaElement?displayProperty=nameWithType> 및 <xref:System.Xml.Schema.XmlSchemaAttribute?displayProperty=nameWithType> 클래스에 매핑됩니다. 다음 다이어그램에 표시된 <xref:System.Xml.Schema> 네임스페이스에서 XML 스키마 개체 모델을 만드는 XML 스키마의 모든 요소에 대해 이 매핑이 계속 수행됩니다.  
   
- ![System.Xml.Schema 개체 모델](../../../../docs/standard/data/xml/media/xmlschemaobjmodeloverview.gif "XMLSchemaObjModelOverview")  
+ ![System.Xml.Schema 개체 모델](./media/xml-schema-object-model-overview/xml-schema-object-model.gif)  
   
  <xref:System.Xml.Schema> 네임스페이스의 각 클래스에 대한 자세한 내용은 .NET Framework 클래스 라이브러리의 <xref:System.Xml.Schema> 네임스페이스 참조 문서를 참조하세요.  
   

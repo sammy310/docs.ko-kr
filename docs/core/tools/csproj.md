@@ -2,12 +2,12 @@
 title: .NET Core용 csproj 형식에 대한 추가 사항
 description: 기존 및 .NET Core csproj 파일 간의 차이점에 대해 알아보기
 ms.date: 09/22/2017
-ms.openlocfilehash: c6127d20e71328733eb1fe8a21a7fa7a9735d5a2
-ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
+ms.openlocfilehash: e196be28f622873359153f32c5dd9b0b5a514c0f
+ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/17/2019
-ms.locfileid: "57845484"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58654655"
 ---
 # <a name="additions-to-the-csproj-format-for-net-core"></a>.NET Core용 csproj 형식에 대한 추가 사항
 
@@ -71,7 +71,13 @@ ms.locfileid: "57845484"
 
 이러한 변경으로 인해 다른 포함 항목의 기본 메커니즘이 수정되지 않습니다. 그러나 예를 들어 일부 파일을 지정하여 앱에 게시하려는 경우 해당 사항에 대해 *csproj*의 알려진 메커니즘을 계속 사용할 수 있습니다(예: `<Content>` 요소).
 
-`<EnableDefaultCompileItems>`는 `Compile` glob를 비활성화하지만 암시적 `None` glob와 같은 다른 glob에 영향을 주지 않습니다. \*.cs 항목에도 적용됩니다. 따라서 **솔루션 탐색기**는 `None` 항목으로 포함된 프로젝트의 일부로 \*.cs 항목을 계속해서 표시합니다. 이와 비슷한 방식으로 `<EnableDefaultNoneItems>`를 사용하여 암시적 `None` glob를 비활성화할 수 있습니다.
+`<EnableDefaultCompileItems>`는 `Compile` glob를 비활성화하지만 암시적 `None` glob와 같은 다른 glob에 영향을 주지 않습니다. \*.cs 항목에도 적용됩니다. 따라서 **솔루션 탐색기**는 `None` 항목으로 포함된 프로젝트의 일부로 \*.cs 항목을 계속해서 표시합니다. 이와 비슷한 방식으로 `<EnableDefaultNoneItems>`를 false로 설정하여 다음과 같이 암시적 `None` glob를 비활성화할 수 있습니다.
+
+```xml
+<PropertyGroup>
+    <EnableDefaultNoneItems>false</EnableDefaultNoneItems>
+</PropertyGroup>
+```
 
 **모든 암시적 glob**를 비활성화하기 위해 다음 예제와 같이 `<EnableDefaultItems>` 속성을 `false`로 설정할 수 있습니다.
 

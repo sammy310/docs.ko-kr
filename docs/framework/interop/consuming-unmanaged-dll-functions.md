@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: eca7606e-ebfb-4f47-b8d9-289903fdc045
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0c13f5aef9f08929dcd17f53777ba9e23b00b838
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 50bfcf5c27236ca704a24f49128becfbee716c21
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54728387"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58463087"
 ---
 # <a name="consuming-unmanaged-dll-functions"></a>관리되지 않는 DLL 함수 사용
-플랫폼 호출은 Win32 API의 함수와 같이 DLL(동적 연결 라이브러리)에서 구현된 관리되지 않는 함수를 관리 코드가 호출할 수 있도록 하는 서비스입니다. 이 서비스는 내보낸 함수를 찾아서 호출하고 필요에 따라 상호 운용 경계를 가로질러 인수(정수, 문자열, 배열, 구조체 등)를 마샬링합니다.  
+플랫폼 호출은 Windows API의 함수와 같이 DLL(동적 연결 라이브러리)에서 구현된 관리되지 않는 함수를 관리 코드가 호출할 수 있도록 하는 서비스입니다. 이 서비스는 내보낸 함수를 찾아서 호출하고 필요에 따라 상호 운용 경계를 가로질러 인수(정수, 문자열, 배열, 구조체 등)를 마샬링합니다.  
   
  이 섹션에서는 관리되지 않는 DLL 함수 사용과 관련된 작업을 소개하고 플랫폼 호출에 대해 자세히 설명합니다. 다음 작업 이외에 일반적인 고려 사항과 추가 정보 및 예제를 제공하는 링크가 있습니다.  
   
@@ -54,8 +54,7 @@ ms.locfileid: "54728387"
 ## <a name="a-closer-look-at-platform-invoke"></a>플랫폼 호출 자세히 보기  
  플랫폼 호출은 메타데이터에 의존하여 내보낸 함수를 찾고 런타임에 해당 인수를 마샬링합니다. 다음 그림에서 이 프로세스를 나타냅니다.  
   
- ![플랫폼 호출](../../../docs/framework/interop/media/pinvoke.gif "pinvoke")  
-관리되는 DLL 함수에 대한 플랫폼 호출  
+ ![플랫폼 호출을 보여주는 다이어그램.](./media/consuming-unmanaged-dll-functions/platform-invoke-call.gif)  
   
  플랫폼 호출이 관리되지 않는 함수를 호출할 때 다음 작업 시퀀스를 수행합니다.  
   

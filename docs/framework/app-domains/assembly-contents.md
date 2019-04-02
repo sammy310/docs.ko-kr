@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 28116714-da77-45f7-826d-fa035d121948
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 27bbc1b382d962379a50fba4557e3f2a408d9bc4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2be1aad4d222917364a57abc93b414af40b1e9ae
+ms.sourcegitcommit: 0aca6c5d166d7961a1e354c248495645b97a1dc5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54649169"
+ms.lasthandoff: 03/30/2019
+ms.locfileid: "58675655"
 ---
 # <a name="assembly-contents"></a>어셈블리 콘텐츠
 일반적으로 정적 어셈블리는 네 가지 요소로 구성됩니다.  
@@ -31,15 +31,13 @@ ms.locfileid: "54649169"
   
  어셈블리의 요소를 그룹화하는 방법에는 여러 가지가 있습니다. 다음 예제에서와 같이 모든 요소를 하나의 실제 파일에 그룹화할 수 있습니다.  
   
- ![MyAssembly.dll](../../../docs/framework/app-domains/media/assemblyover1.gif "assemblyover1")  
-단일 파일 어셈블리  
+ ![MyAssembly.dll이라는 단일 파일 어셈블리를 보여주는 다이어그램.](./media/assembly-contents/single-file-assembly.gif)  
   
  어셈블리의 요소를 여러 파일에 그룹화할 수도 있는데 이러한 파일에는 컴파일된 코드의 모듈(.netmodule), 리소스(.bmp 또는 .jpg 파일), 애플리케이션에 필요한 기타 파일 등이 있습니다. 다중 파일 어셈블리는, 서로 다른 언어로 작성된 모듈을 결합하거나 애플리케이션 다운로드 작업을 최적화할 수 있도록 필요할 때만 다운로드하는 모듈 안에 자주 사용하지 않는 형식을 그룹화할 때 사용됩니다.  
   
  다음 그림에서는 가상의 애플리케이션에 대해 일부 유틸리티 코드를 다른 모듈로 분리하고 원래 파일에 큰 리소스 파일(이 경우에는 .bmp 이미지)을 두었습니다. .NET Framework에서는 파일이 참조될 때만 파일을 다운로드합니다. 이와 같이 자주 참조되지 않는 코드를 애플리케이션과 분리된 다른 파일에 보관함으로써 코드 다운로드를 최적화할 수 있습니다.  
   
- ![MyAssembly.dll](../../../docs/framework/app-domains/media/assemblyover2.gif "assemblyover2")  
-다중 파일 어셈블리  
+ ![다중 파일 어셈블리를 보여주는 다이어그램.](./media/assembly-contents/multifile-assembly-diagram.gif) 
   
 > [!NOTE]
 >  파일 시스템은 다중 파일 어셈블리를 구성하는 파일을 실제로 연결하지 않습니다. 이들 파일은 어셈블리 매니페스트를 통해 연결되며, 공용 언어 런타임은 이들 파일을 하나의 단위로 관리합니다.  

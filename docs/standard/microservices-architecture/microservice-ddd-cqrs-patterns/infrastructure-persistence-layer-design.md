@@ -4,12 +4,12 @@ description: 컨테이너화된 .NET 애플리케이션용 .NET 마이크로 서
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/08/2018
-ms.openlocfilehash: 983e38cc9979ef14e8227e738e9da15b014e050d
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: c173d0049558ec0a752bc2aead9de9692ea28cf9
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53147738"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58463061"
 ---
 # <a name="design-the-infrastructure-persistence-layer"></a>인프라 지속성 계층 디자인
 
@@ -19,7 +19,7 @@ ms.locfileid: "53147738"
 
 리포지토리는 데이터 원본에 액세스하는 데 필요한 논리를 캡슐화하는 클래스 또는 구성 요소입니다. 리포지토리는 공통 데이터 액세스 기능에 집중해 더 나은 유지관리를 제공하고 도메인 모델 계층에서 데이터베이스에 액세스하는 데 사용되는 기술이나 인프라를 분리합니다. Entity Framework와 같은 ORM(개체 관계 매핑)을 사용하는 경우 LINQ 및 강력한 형식화 덕분에 구현해야 할 코드가 간소화됩니다. 이렇게 하면 데이터 액세스 내부 작업보다 데이터 지 속성 논리에 더 집중하게 합니다.
 
-이런 리포지토리 패턴은 데이터 원본을 사용한 작업의 잘 문서화된 방법입니다. [엔터프라이즈 응용 프로그램 아키텍처 패턴(Patterns of Enterprise Application Architecture)](https://www.amazon.com/Patterns-Enterprise-Application-Architecture-Martin/dp/0321127420/)이란 책에서, Martin Fowler는 다음과 같이 리포지토리에 대해 설명 합니다.
+이런 리포지토리 패턴은 데이터 원본을 사용한 작업의 잘 문서화된 방법입니다. [엔터프라이즈 애플리케이션 아키텍처 패턴(Patterns of Enterprise Application Architecture)](https://www.amazon.com/Patterns-Enterprise-Application-Architecture-Martin/dp/0321127420/)이란 책에서, Martin Fowler는 다음과 같이 리포지토리에 대해 설명 합니다.
 
 > 리포지토리는 도메인 모델 계층과 데이터 매핑의 중간자 역할을 하며 메모리의 도메인 개체 집합에 대해서도 비슷한 방식으로 작업을 수행합니다. 클라이언트 개체는 쿼리를 선언적으로 빌드하고 리포지토리로 보내 답변합니다. 개념적으로, 리포지토리는 데이터베이스 내에 저장된 개체 집합과 수행할 수 있는 작업을 캡슐화해 지속성 계층에 더 가까운 방법을 제공합니다. 리포지토리는 또한 작업 도메인 및 데이터 할당 또는 매핑 간의 종속성을 명확하게 한 방향으로 구분하려는 목적을 지원합니다.
 
@@ -94,7 +94,7 @@ eShopOnContainers에 구현된 리포지토리는 해당 변경 추적기를 사
 
 이러한 다중 지속성 작업은 애플리케이션 계층에서 해당 코드가 명령을 내리는 경우 나중에 단일 작업으로 수행됩니다. 실제 데이터베이스 스토리지에 메모리 내 변경을 적용은 일반적으로 [작업 단위 패턴](https://martinfowler.com/eaaCatalog/unitOfWork.html)에 기반을 두고 결정됩니다. EF에서, 작업 단위 패턴은 <xref:Microsoft.EntityFrameworkCore.DbContext>로서 구현됩니다.
 
-대부분의 경우, 저장소에 작업을 적용하는 방식이나 패턴은 애플리케이션 성능을 향상시키고 불일치 가능성을 줄일 수 있습니다. 또한, 의도된 모든 작업은 한 트랜잭션의 일부로서 커밋되기 때문에 데이터베이스 테이블에서 트랜잭션 차단을 줄여줍니다. 이 방법은 데이터베이스에 대해 많은 격리된 작업 실행에 비해 더 효율적입니다. 따라서 선택한 ORM은 많은 소형 및 별도 트랜잭션 실행과 대조적으로 동일한 트랜잭션 내에서 여러 가지 업데이트 작업을 그룹화하여 데이터베이스에서의 실행을 최적화할 수 있습니다.
+대부분의 경우, 스토리지에 작업을 적용하는 방식이나 패턴은 애플리케이션 성능을 향상시키고 불일치 가능성을 줄일 수 있습니다. 또한, 의도된 모든 작업은 한 트랜잭션의 일부로서 커밋되기 때문에 데이터베이스 테이블에서 트랜잭션 차단을 줄여줍니다. 이 방법은 데이터베이스에 대해 많은 격리된 작업 실행에 비해 더 효율적입니다. 따라서 선택한 ORM은 많은 소형 및 별도 트랜잭션 실행과 대조적으로 동일한 트랜잭션 내에서 여러 가지 업데이트 작업을 그룹화하여 데이터베이스에서의 실행을 최적화할 수 있습니다.
 
 ### <a name="repositories-shouldnt-be-mandatory"></a>리포지토리는 필수가 아닙니다
 
@@ -111,24 +111,24 @@ eShopOnContainers에 구현된 리포지토리는 해당 변경 추적기를 사
 ### <a name="repository-pattern"></a>리포지토리 패턴
 
 - **리포지토리 패턴** \
-  [*https://deviq.com/repository-pattern/*](https://deviq.com/repository-pattern/)
+  [https://deviq.com/repository-pattern/](https://deviq.com/repository-pattern/)
 
 - **Edward Hieatt와 Rob Mee. 리포지토리 패턴.** \
-  [*https://martinfowler.com/eaaCatalog/repository.html*](https://martinfowler.com/eaaCatalog/repository.html)
+  [https://martinfowler.com/eaaCatalog/repository.html](https://martinfowler.com/eaaCatalog/repository.html)
 
 - **리포지토리 패턴** \
-  [*https://docs.microsoft.com/previous-versions/msp-n-p/ff649690(v=pandp.10)*](https://docs.microsoft.com/previous-versions/msp-n-p/ff649690(v=pandp.10))
+  [https://docs.microsoft.com/previous-versions/msp-n-p/ff649690(v=pandp.10)](https://docs.microsoft.com/previous-versions/msp-n-p/ff649690(v=pandp.10))
 
-- **Eric Evans. 도메인 기반 디자인: 소프트웨어 핵심에서 복잡성 처리.** (서적, 리포지토리 패턴 논의 포함)\
-  [*https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/*](https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/)
+- **Eric Evans. 도메인 기반 디자인: 소프트웨어 핵심에서 복잡성을 처리합니다.** (서적, 리포지토리 패턴 논의 포함)\
+  [https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/](https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/)
 
 ### <a name="unit-of-work-pattern"></a>작업 단위 패턴
 
 - **Martin Fowler. 작업 단위 패턴.** \
-  [*https://martinfowler.com/eaaCatalog/unitOfWork.html*](https://martinfowler.com/eaaCatalog/unitOfWork.html)
+  [https://martinfowler.com/eaaCatalog/unitOfWork.html](https://martinfowler.com/eaaCatalog/unitOfWork.html)
 
 - **ASP.NET MVC 애플리케이션에서 작업 패턴의 리포지토리 및 단위 구현** \
-  [*https://docs.microsoft.com/aspnet/mvc/overview/older-versions/getting-started-with-ef-5-using-mvc-4/implementing-the-repository-and-unit-of-work-patterns-in-an-asp-net-mvc-application*](https://docs.microsoft.com/aspnet/mvc/overview/older-versions/getting-started-with-ef-5-using-mvc-4/implementing-the-repository-and-unit-of-work-patterns-in-an-asp-net-mvc-application)
+  [https://docs.microsoft.com/aspnet/mvc/overview/older-versions/getting-started-with-ef-5-using-mvc-4/implementing-the-repository-and-unit-of-work-patterns-in-an-asp-net-mvc-application](https://docs.microsoft.com/aspnet/mvc/overview/older-versions/getting-started-with-ef-5-using-mvc-4/implementing-the-repository-and-unit-of-work-patterns-in-an-asp-net-mvc-application)
 
 >[!div class="step-by-step"]
 >[이전](domain-events-design-implementation.md)

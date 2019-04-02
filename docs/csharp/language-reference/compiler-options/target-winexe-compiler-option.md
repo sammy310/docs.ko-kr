@@ -8,12 +8,12 @@ helpviewer_keywords:
 - -target compiler options [C#], /target:winexe
 - target compiler options [C#], /target:winexe
 ms.assetid: b5a0619c-8caa-46a5-a743-1cf68408ad7a
-ms.openlocfilehash: affb06c62baa7f53e46e1d66b522e9ce9e74d976
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5d5e5c62dc1a5fe6901ee232084a704d7d936b76
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54666061"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58411965"
 ---
 # <a name="-targetwinexe-c-compiler-options"></a>-target:winexe(C# 컴파일러 옵션)
 **-target:winexe** 옵션을 사용하면 컴파일러가 Windows 프로그램 실행 파일(EXE)을 만듭니다.  
@@ -25,7 +25,7 @@ ms.locfileid: "54666061"
 ```  
   
 ## <a name="remarks"></a>주의  
- 실행 파일은 .exe 확장명으로 생성됩니다. Windows 프로그램은 .NET Framework 라이브러리나 Win32 API를 통해 사용자 인터페이스를 제공하는 프로그램입니다.  
+ 실행 파일은 .exe 확장명으로 생성됩니다. Windows 프로그램은 .NET Framework 라이브러리나 Windows API를 통해 사용자 인터페이스를 제공하는 프로그램입니다.  
   
  [-target:exe](../../../csharp/language-reference/compiler-options/target-exe-compiler-option.md)를 사용하여 콘솔 애플리케이션을 만듭니다.  
   

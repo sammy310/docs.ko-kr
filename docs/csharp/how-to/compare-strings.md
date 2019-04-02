@@ -5,12 +5,12 @@ ms.date: 10/03/2018
 helpviewer_keywords:
 - strings [C#], comparison
 - comparing strings [C#]
-ms.openlocfilehash: 479e6d9250c546943da3ddd837f2f03a5c4e7b1e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: bce234ca3a86f057ec35e1c53d22169ee29b7b94
+ms.sourcegitcommit: 0aca6c5d166d7961a1e354c248495645b97a1dc5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54563992"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58634234"
 ---
 # <a name="how-to-compare-strings-in-c"></a>C\#에서 문자열을 비교하는 방법
 
@@ -55,7 +55,7 @@ ms.locfileid: "54563992"
 ## <a name="linguistic-comparisons"></a>언어 비교
 
 또한 현재 문화권에 대한 언어 규칙을 사용하여 문자열을 정렬할 수 있습니다.
-이를 종종 "단어 정렬 순서"라고 합니다. 언어 비교를 수행할 때 일부 영숫자가 아닌 유니코드 문자에 특별한 가중치가 할당될 수 있습니다. 예를 들어, 하이픈 "-"는 매우 작은 가중치가 할당될 수 있으므로 "co-op" 및 "coop"는 정렬 순서에 나란히 표시됩니다. 또한 일부 유니코드 문자는 <xref:System.Char> 인스턴스의 시퀀스와 동일할 수 있습니다. 다음 예에서는 "ss" 및 'ß'를 사용하여 독일어로 독일어에서는 "ss"(U+0073 U+0073)가 한 문자열에 있고 'ß'(U+00DF)가 다른 문자열에 있습니다. 언어적으로(Windows의 경우) "ss"는 "en-US" 및 "de-DE" 문화권의 독일어 Essetz: 'ß' 문자와 같습니다.
+이를 종종 "단어 정렬 순서"라고 합니다. 언어 비교를 수행할 때 일부 영숫자가 아닌 유니코드 문자에 특별한 가중치가 할당될 수 있습니다. 예를 들어, 하이픈 "-"는 매우 작은 가중치가 할당될 수 있으므로 "co-op" 및 "coop"는 정렬 순서에 나란히 표시됩니다. 또한 일부 유니코드 문자는 <xref:System.Char> 인스턴스의 시퀀스와 동일할 수 있습니다. 다음 예에서는 "ss" 및 'ß'를 사용하여 독일어로 독일어에서는 "ss"(U+0073 U+0073)가 한 문자열에 있고 'ß'(U+00DF)가 다른 문자열에 있습니다. 언어적으로(Windows의 경우) "ss"는 "en-US" 및 "de-DE" 문화권에서 독일어 Esszet: 'ß' 문자와 같습니다.
 
 [!code-csharp-interactive[Comparing strings using linguistic rules](../../../samples/snippets/csharp/how-to/strings/CompareStrings.cs#3)]
 

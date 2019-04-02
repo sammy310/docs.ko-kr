@@ -3,12 +3,12 @@ title: .NET Core를 사용하여 REST 클라이언트 만들기
 description: 이 자습서에서는 .NET Core 및 C# 언어의 다양한 기능에 대해 설명합니다.
 ms.date: 03/06/2017
 ms.assetid: 51033ce2-7a53-4cdd-966d-9da15c8204d2
-ms.openlocfilehash: e7859e9db53e8b126fd66b88d9a5e7565ea1a4ad
-ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
+ms.openlocfilehash: a375215f2d31845333290c85f7701c1a7dfbe780
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "57846170"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58412307"
 ---
 # <a name="rest-client"></a>REST 클라이언트
 
@@ -213,9 +213,9 @@ foreach (var repo in repositories)
 
 ## <a name="controlling-serialization"></a>serialization 제어
 
-더 많은 기능을 추가하기 전에 `repo` 형식의 주소를 지정하고 더 많은 표준 C# 규칙을 따르도록 합니다. 이 작업을 위해 JSON Serializer가 작동하는 방식을 제어하는 *특성*을 `repo` 형식에 주석으로 지정합니다. 여기서는 이러한 특성을 사용하여 JSON 키 이름과 C# 클래스 및 멤버 이름 간에 매핑을 정의합니다. 사용되는 2가지 특성은 `DataContract` 특성 및 `DataMember` 특성입니다. 규칙에 따라 모든 Attribute 클래스는 접미사 `Attribute`로 끝납니다. 그러나 특성을 적용할 때 해당 접미사를 사용할 필요는 없습니다.
+더 많은 기능을 추가하기 전에 `repo` 형식의 주소를 지정하고 더 많은 표준 C# 규칙을 따르도록 합니다. 이 작업을 위해 JSON Serializer가 작동하는 방식을 제어하는 *특성*을 `repo` 형식에 주석으로 지정합니다. 여기서는 이러한 특성을 사용하여 JSON 키 이름과 C# 클래스 및 멤버 이름 간에 매핑을 정의합니다. 사용되는 2가지 특성은 <xref:System.Runtime.Serialization.DataContractAttribute> 및 <xref:System.Runtime.Serialization.DataMemberAttribute> 특성입니다. 규칙에 따라 모든 Attribute 클래스는 접미사 `Attribute`로 끝납니다. 그러나 특성을 적용할 때 해당 접미사를 사용할 필요는 없습니다.
 
-`DataContract` 및 `DataMember` 특성은 다른 라이브러리에 포함되므로 해당 라이브러리를 C# 프로젝트 파일에 종속성으로 추가해야 합니다. 다음 줄을 프로젝트 파일의 `<ItemGroup>` 섹션에 추가합니다.
+<xref:System.Runtime.Serialization.DataContractAttribute> 및 <xref:System.Runtime.Serialization.DataMemberAttribute> 특성은 다른 라이브러리에 포함되므로 해당 라이브러리를 C# 프로젝트 파일에 종속성으로 추가해야 합니다. 다음 줄을 프로젝트 파일의 `<ItemGroup>` 섹션에 추가합니다.
 
 ```xml
 <PackageReference Include="System.Runtime.Serialization.Primitives" Version="4.3.0" />
@@ -223,7 +223,7 @@ foreach (var repo in repositories)
 
 파일을 저장한 후 `dotnet restore`([참고 참조](#dotnet-restore-note))를 실행하여 이 패키지를 검색합니다.
 
-다음으로 `repo.cs` 파일을 엽니다. 이름을 파스칼식 대/소문자를 사용하도록 이름을 변경하고 `Repository`라고 정확히 입력합니다. 여전히 JSON 'repo' 노드를 이 형식에 매핑하려고 하므로 `DataContract` 특성을 클래스 선언에 추가해야 합니다. 이 특성의 `Name` 속성을 이 형식에 매핑되는 JSON 노드의 이름으로 설정합니다.
+다음으로 `repo.cs` 파일을 엽니다. 이름을 파스칼식 대/소문자를 사용하도록 이름을 변경하고 `Repository`라고 정확히 입력합니다. 여전히 JSON 'repo' 노드를 이 형식에 매핑하려고 하므로 <xref:System.Runtime.Serialization.DataContractAttribute> 특성을 클래스 선언에 추가해야 합니다. 이 특성의 `Name` 속성을 이 형식에 매핑되는 JSON 노드의 이름으로 설정합니다.
 
 ```csharp
 [DataContract(Name="repo")]
@@ -357,7 +357,7 @@ foreach (var repo in repositories)
 private string JsonDate { get; set; }
 ```
 
-`DataMember` 특성은 공용 멤버가 아니어도 처리되어야 함을 serializer에 알려줍니다. 다음에는 문자열을 유효한 <xref:System.DateTime> 개체로 변환한 후 해당 <xref:System.DateTime>을 반환하는 공용 읽기 전용 속성을 작성해야 합니다.
+<xref:System.Runtime.Serialization.DataMemberAttribute> 특성은 공용 멤버가 아니어도 처리되어야 함을 serializer에 알려줍니다. 다음에는 문자열을 유효한 <xref:System.DateTime> 개체로 변환한 후 해당 <xref:System.DateTime>을 반환하는 공용 읽기 전용 속성을 작성해야 합니다.
 
 ```csharp
 [IgnoreDataMember]

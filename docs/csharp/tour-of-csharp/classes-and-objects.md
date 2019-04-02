@@ -3,12 +3,12 @@ title: C#의 클래스 및 개체 - C# 언어 둘러보기
 description: C#을 처음 사용하시나요? 클래스, 개체 및 상속 개요 읽어보기
 ms.date: 08/10/2016
 ms.assetid: 63a89bde-0f05-4bc4-b0cd-4f693854f0cd
-ms.openlocfilehash: c13265829c3b33d2c2cddfb3de9cd849b439fa67
-ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
+ms.openlocfilehash: a4276e214bbb6edb3fb1b75c21c26f18bb9fdc25
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "57846144"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58466260"
 ---
 # <a name="classes-and-objects"></a>클래스 및 개체
 
@@ -217,7 +217,7 @@ C#에서는 해당 값을 얻기 위해 먼저 로컬 변수를 *명확 하게 �
 
 실행 코드를 포함하는 멤버를 통칭하여 클래스의 *함수 멤버*라고 합니다. 이전 섹션에서는 함수 멤버의 기본 종류인 메서드에 대해 설명합니다. 이 섹션에서는 C#에서 지원하는 다른 종류의 함수 멤버인 생성자, 속성, 인덱서, 이벤트, 연산자 및 종료자에 대해 설명합니다.
 
-다음에서는 증가될 수 있는 개체 목록을 구현하는 List<T>라는 제네릭 클래스를 보여 줍니다. 이 클래스는 함수 멤버의 가장 일반적인 몇 가지 예제를 포함합니다.
+다음에서는 증가될 수 있는 개체 목록을 구현하는 List\<T>라는 제네릭 클래스를 보여줍니다. 이 클래스는 함수 멤버의 가장 일반적인 몇 가지 예제를 포함합니다.
 
 [!code-csharp[ListClass](../../../samples/snippets/csharp/tour/classes-and-objects/ListBasedExamples.cs#L4-L89)]
 

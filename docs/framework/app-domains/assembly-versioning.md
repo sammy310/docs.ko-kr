@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 775ad4fb-914f-453c-98ef-ce1089b6f903
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 87fb99ee8379a14a4a1d272a6eabb7fa8413bf64
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: cbb681567090cb26d20a31e8645c0b651bef9244
+ms.sourcegitcommit: 0aca6c5d166d7961a1e354c248495645b97a1dc5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54724072"
+ms.lasthandoff: 03/30/2019
+ms.locfileid: "58675954"
 ---
 # <a name="assembly-versioning"></a>어셈블리 버전 관리
 공용 언어 런타임을 사용하는 어셈블리에 대한 모든 버전 관리는 어셈블리 수준에서 수행됩니다. 특정 어셈블리의 버전과 해당 종속 어셈블리 버전은 어셈블리 매니페스트에 기록됩니다. 런타임에서의 버전 정책은, 구성 파일(애플리케이션 구성 파일, 게시자 정책 파일 및 컴퓨터의 관리자 구성 파일)의 명시적인 버전 정책에 의해 재정의된 경우를 제외하고는, 처음 빌드되고 테스트될 때 사용된 버전으로만 애플리케이션이 실행되도록 합니다.  
@@ -33,10 +33,9 @@ ms.locfileid: "54724072"
   
 4.  전역 어셈블리 캐시와 구성 파일에 지정된 코드 베이스를 확인한 다음 [런타임에서 어셈블리를 찾는 방법](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)에 설명된 규칙에 따라 애플리케이션의 디렉터리 및 하위 디렉터리를 검색합니다.  
   
- 다음 예제에서는 이들 단계를 설명합니다.  
+ 다음 예제에서는 이러한 단계를 설명합니다.  
   
- ![.assembly extern myAssembly](../../../docs/framework/app-domains/media/versioningover.gif "versioningover")  
-어셈블리 바인딩 요청 확인  
+ ![어셈블리 바인딩 요청 확인의 단계를 보여주는 다이어그램.](./media/assembly-versioning/resolve-assembly-binding-request.gif)
   
  애플리케이션 구성에 대한 자세한 내용은 [앱 구성](../../../docs/framework/configure-apps/index.md)을 참조하세요. 바인딩 정책에 대한 자세한 내용은 [런타임에서 어셈블리를 찾는 방법](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)을 참조하세요.  
   

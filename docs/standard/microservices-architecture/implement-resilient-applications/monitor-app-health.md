@@ -4,12 +4,12 @@ description: 상태 모니터링을 구현하는 한 가지 방법을 살펴봅�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 01/07/2019
-ms.openlocfilehash: 4ad13fa4596cc852317a367852b76a9f769caf78
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 90beb8073cd169b0a68dc0025d8cd815ccb5a308
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55259360"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58464010"
 ---
 # <a name="health-monitoring"></a>상태 모니터링
 
@@ -276,16 +276,16 @@ Azure Service Fabric은 단순한 상태 검사보다 더 향상된 고급 기�
 ## <a name="additional-resources"></a>추가 자료
 
 -   **ASP.NET Core용 HealthChecks 및 HealthChecks UI**
-    [*https://github.com/Xabaril/AspNetCore.Diagnostics.HealthChecks*](https://github.com/Xabaril/AspNetCore.Diagnostics.HealthChecks )
+    [https://github.com/Xabaril/AspNetCore.Diagnostics.HealthChecks](https://github.com/Xabaril/AspNetCore.Diagnostics.HealthChecks )
 
 -   **Service Fabric 상태 모니터링 소개**
-    [*https://docs.microsoft.com/azure/service-fabric/service-fabric-health-introduction*](/azure/service-fabric/service-fabric-health-introduction)
+    [https://docs.microsoft.com/azure/service-fabric/service-fabric-health-introduction](/azure/service-fabric/service-fabric-health-introduction)
 
 -   **Azure Application Insights**
-    [*https://azure.microsoft.com/services/application-insights/*](https://azure.microsoft.com/services/application-insights/)
+    [https://azure.microsoft.com/services/application-insights/](https://azure.microsoft.com/services/application-insights/)
 
 -   **Microsoft Operations Management Suite**
-    [*https://www.microsoft.com/en-us/cloud-platform/operations-management-suite*](https://www.microsoft.com/en-us/cloud-platform/operations-management-suite)
+    [https://www.microsoft.com/en-us/cloud-platform/operations-management-suite](https://www.microsoft.com/en-us/cloud-platform/operations-management-suite)
 
 >[!div class="step-by-step"]
 >[이전](implement-circuit-breaker-pattern.md)

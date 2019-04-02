@@ -14,12 +14,12 @@ helpviewer_keywords:
 - parameters [C#], optional
 - named and optional arguments [C#]
 ms.assetid: 839c960c-c2dc-4d05-af4d-ca5428e54008
-ms.openlocfilehash: d31cec602516b7cf3e4b358fa4b3f10e167e6e17
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.openlocfilehash: 751f8a0745322e7e8573d392a504ea02cb18572e
+ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57202737"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58654031"
 ---
 # <a name="named-and-optional-arguments-c-programming-guide"></a>명명된 인수와 선택적 인수(C# 프로그래밍 가이드)
 [!INCLUDE[csharp_dev10_long](~/includes/csharp-dev10-long-md.md)]에서는 명명된 인수 및 선택적 인수를 소개합니다. *명명된 인수*를 사용하면 인수를 매개 변수 목록 내의 매개 변수 위치가 아니라 매개 변수 이름과 연결하여 특정 매개 변수에 대한 인수를 지정할 수 있습니다. *선택적 인수*를 사용하면 일부 매개 변수에 대한 인수를 생략할 수 있습니다. 두 기법 모두 메서드, 인덱서, 생성자 및 대리자에 사용할 수 있습니다.  
@@ -88,8 +88,7 @@ ms.locfileid: "57202737"
   
  IntelliSense는 다음 그림과 같이 대괄호를 사용하여 선택적 매개 변수를 나타냅니다.  
   
- ![ExampleMethod 메서드에 대한 IntelliSense 요약 정보](../../../csharp/programming-guide/classes-and-structs/media/optional_parameters.png "Optional_Parameters")  
-ExampleMethod의 선택적 매개 변수  
+ ![ExampleMethod 메서드에 대한 IntelliSense 요약 정보를 보여주는 스크린샷.](./media/named-and-optional-arguments/optional-examplemethod-parameters.png)  
   
 > [!NOTE]
 >  .NET <xref:System.Runtime.InteropServices.OptionalAttribute> 클래스를 사용하여 선택적 매개 변수를 선언할 수도 있습니다. `OptionalAttribute` 매개 변수는 기본값이 필요하지 않습니다.  
@@ -102,10 +101,9 @@ ExampleMethod의 선택적 매개 변수
 ## <a name="com-interfaces"></a>COM 인터페이스  
  동적 개체 및 기타 향상된 기능에 대한 지원과 더불어 명명된 인수와 선택적 인수는 Office 자동화 API와 같은 COM API와의 상호 운용성을 크게 향상합니다.  
   
- 예를 들어 <xref:Microsoft.Office.Interop.Excel.Range.AutoFormat%2A>Microsoft Office Excel<xref:Microsoft.Office.Interop.Excel.Range> 인터페이스의 메서드에는 모두 선택 사항인 매개 변수 7개가 있습니다. 해당 매개 변수는 다음 그림에 나와 있습니다.  
+ 예를 들어 <xref:Microsoft.Office.Interop.Excel.Range.AutoFormat%2A>Microsoft Office Excel<xref:Microsoft.Office.Interop.Excel.Range> 인터페이스의 메서드에는 모두 선택 사항인 매개 변수 7개가 있습니다. 해당 매개 변수는 다음 그림에 표시됩니다.  
   
- ![AutoFormat 메서드에 대한 IntelliSense 요약 정보](../../../csharp/programming-guide/classes-and-structs/media/autoformat_parameters.png "AutoFormat_Parameters")  
-AutoFormat 매개 변수  
+ ![AutoFormat 메서드에 대한 IntelliSense 요약 정보를 보여주는 스크린샷](./media/named-and-optional-arguments/autoformat-method-parameters.png)  
   
  C# 3.0 및 이전 버전에서는 다음 예제와 같이 각 매개 변수에 대한 인수가 필요합니다.  
   

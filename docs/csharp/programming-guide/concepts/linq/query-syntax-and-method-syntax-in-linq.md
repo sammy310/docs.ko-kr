@@ -5,12 +5,12 @@ helpviewer_keywords:
 - LINQ [C#], query syntax vs. method syntax
 - queries [LINQ in C#], syntax comparisons
 ms.assetid: eedd6dd9-fec2-428c-9581-5b8783810ded
-ms.openlocfilehash: 6333094230e09220ab5ccf462e20ae3423d42eb6
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 1d6bd14a88f22bfa961ee28f0014b1f89ccb28b5
+ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56978656"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58654044"
 ---
 # <a name="query-syntax-and-method-syntax-in-linq-c"></a>LINQ의 쿼리 구문 및 메서드 구문(C#)
 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)](Language Integrated Query) 소개 설명서에 있는 대부분의 쿼리는 LINQ 선언적 쿼리 구문을 사용하여 작성되었습니다. 그러나 쿼리 구문은 코드를 컴파일할 때 .NET CLR(공용 언어 런타임)에 대한 메서드 호출로 변환해야 합니다. 이러한 메서드 호출은 `Where`, `Select`, `GroupBy`, `Join`, `Max`, `Average` 등과 같은 표준 쿼리 연산자를 호출합니다. 사용자는 쿼리 구문 대신 메서드 구문을 사용하여 연산자를 직접 호출할 수 있습니다.  
@@ -26,7 +26,7 @@ ms.locfileid: "56978656"
   
  메서드 기반 쿼리를 이해할 수 있도록 더 자세히 살펴보겠습니다. 식의 오른쪽에서 `where` 절이 이제 `numbers` 개체의 인스턴스 메서드로 표현된 것을 알 수 있습니다. 이 개체를 다시 호출하면 `IEnumerable<int>` 형식을 갖게 됩니다. 제네릭 <xref:System.Collections.Generic.IEnumerable%601> 인터페이스에 대해 잘 알고 있다면 여기에 `Where` 메서드가 없다는 사실을 알 것입니다. 그러나 Visual Studio IDE에서 IntelliSense 완성 목록을 호출하면 `Where` 메서드뿐 아니라 `Select`, `SelectMany`, `Join`, `Orderby` 등의 다른 많은 메서드도 볼 수 있습니다. 이들은 모두 표준 쿼리 연산자입니다.  
   
- ![Intellisense의 표준 쿼리 연산자](../../../../csharp/programming-guide/concepts/linq/media/standardqueryops.png "StandardQueryOps")  
+ ![Intellisense에서 모든 표준 쿼리 연산자를 보여주는 스크린샷](./media/query-syntax-and-method-syntax-in-linq/standard-query-operators.png)  
   
  <xref:System.Collections.Generic.IEnumerable%601>이 이러한 추가 메서드를 포함하도록 다시 정의된 것처럼 보이지만 실제로는 그렇지 않습니다. 표준 쿼리 연산자는 *확장 메서드*라는 새로운 종류의 메서드로서 구현됩니다. 확장 메서드는 기존 형식을 "확장"하며, 마치 형식에 대한 인스턴스 메서드인 것처럼 호출할 수 있습니다. 표준 쿼리 연산자는 <xref:System.Collections.Generic.IEnumerable%601>을 확장하므로 `numbers.Where(...)`를 작성할 수 있습니다.  
   

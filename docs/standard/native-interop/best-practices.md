@@ -4,12 +4,12 @@ description: .NET에서 기본 구성 요소와 인터페이스하는 모범 사
 author: jkoritzinsky
 ms.author: jekoritz
 ms.date: 01/18/2019
-ms.openlocfilehash: 90a707830049b5edf574b83e7ca03ec30527b001
-ms.sourcegitcommit: 5dcfeb59179e81071f54840d4902cbe00b184294
+ms.openlocfilehash: 5b65f80d3a81fab0d74ce26aec3b454c716a5d51
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "56411454"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58412060"
 ---
 # <a name="native-interoperability-best-practices"></a>기본 상호 운용성 모범 사례
 
@@ -29,7 +29,7 @@ ms.locfileid: "56411454"
 
 ## <a name="dllimport-attribute-settings"></a>DllImport 특성 설정
 
-| 설정 | 기본 | 권장 사항 | 세부 정보 |
+| 설정 | 기본값 | 권장 사항 | 세부 정보 |
 |---------|---------|----------------|---------|
 | <xref:System.Runtime.InteropServices.DllImportAttribute.PreserveSig>   | `true` |  기본값 유지  | 이 옵션을 명시적으로 false로 설정하면 실패한 HRESULT 반환 값이 예외로 바뀝니다(그 결과로 정의의 반환 값은 Null이 됨).|
 | <xref:System.Runtime.InteropServices.DllImportAttribute.SetLastError> | `false`  | API에 따라 다름  | API에서 GetLastError를 사용하는 경우 이 옵션을 true로 설정하고, Marshal.GetLastWin32Error를 사용하여 값을 가져옵니다. API에서 오류가 있음을 나타내는 조건을 설정하는 경우 실수로 덮어쓰지 않도록 다른 호출을 수행하기 전에 오류를 가져옵니다.|
@@ -160,7 +160,7 @@ handle.Free();
 
 ## <a name="common-windows-data-types"></a>일반적인 Windows 데이터 형식
 
-다음은 Win32 API에서 일반적으로 사용되는 데이터 형식과 Win32 코드를 호출할 때 사용할 C# 형식 목록입니다.
+Windows API에서 일반적으로 사용되는 데이터 형식과 Windows 코드를 호출할 때 사용할 C# 형식 목록은 다음과 같습니다.
 
 다음 형식은 이름과 관계없이 32비트 및 64비트 Windows에서 동일한 크기입니다.
 

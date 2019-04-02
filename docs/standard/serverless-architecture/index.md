@@ -1,19 +1,14 @@
 ---
-title: '서버를 사용하지 않는 앱: 아키텍처, 패턴 및 Azure 구현'
-description: 서버를 사용하지 않는 아키텍처에 대한 가이드입니다. 엔터프라이즈 애플리케이션에 대해 서버를 사용하지 않는 아키텍처([IaaS] (Infrastructure as a Service) 또는 [PaaS] (Platform as a Service) 대신)를 구현하는 시기, 이유 및 방법을 알아봅니다.
+title: '서버리스 앱: 아키텍처, 패턴 및 Azure 구현'
+description: '서버를 사용하지 않는 아키텍처에 대한 가이드입니다. 엔터프라이즈 애플리케이션에 대해 서버를 사용하지 않는 아키텍처([IaaS] (Infrastructure as a Service) 또는 [PaaS] (Platform as a Service) 대신)를 구현하는 시기, 이유 및 방법을 알아봅니다.'
 author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 6/26/2018
-ms.openlocfilehash: a19784f42c63914e9cf8f42ee6408ec9aa46e4f3
-ms.sourcegitcommit: 82a3f7882bc03ed733af91fc2a0b113195bf5dc7
-ms.translationtype: HT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52745318"
 ---
-# <a name="serverless-apps-architecture-patterns-and-azure-implementation"></a>서버를 사용하지 않는 앱: 아키텍처, 패턴 및 Azure 구현
 
-![](./media/Cover.jpg)
+# <a name="serverless-apps-architecture-patterns-and-azure-implementation"></a>서버리스 앱: 아키텍처, 패턴 및 Azure 구현
+
+![서버리스 앱 eBook 표지를 보여주는 스크린샷.](./media/index/serverless-apps-cover.jpg)
 
 > 다운로드 위치: <https://aka.ms/serverless-ebook>
 
@@ -119,7 +114,7 @@ Mac 및 macOS는 Apple Inc.의 상표입니다.
 ### <a name="additional-resources"></a>추가 자료
 
 * [Azure 아키텍처 센터](https://docs.microsoft.com/azure/architecture/)
-* [클라우드 응용 프로그램의 모범 사례](https://docs.microsoft.com/azure/architecture/best-practices/api-design)
+* [클라우드 애플리케이션의 모범 사례](https://docs.microsoft.com/azure/architecture/best-practices/api-design)
 
 ## <a name="who-should-use-the-guide"></a>가이드의 대상 사용자
 

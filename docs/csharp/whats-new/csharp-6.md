@@ -2,18 +2,18 @@
 title: C# 6의 새로운 기능 - C# 가이드
 description: C# 버전 6의 새로운 기능을 알아봅니다.
 ms.date: 12/12/2018
-ms.openlocfilehash: d7e3392412ad6f01cd150e31cec43aa99c42b437
-ms.sourcegitcommit: d09c77414e9e4fc72c79b04deee7a756a120674e
+ms.openlocfilehash: 1c8c8003f81d4c15f2abdc26dc15849d88582843
+ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2019
-ms.locfileid: "54084682"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58654577"
 ---
 # <a name="whats-new-in-c-6"></a>C# 6의 새로운 기능
 
 C#의 6.0 릴리스에는 개발자의 생산성을 개선하는 많은 기능이 추가되었습니다. 이러한 기능의 전반적인 영향은 더 읽기 쉬운 더 간결한 코드를 작성한다는 것입니다. 많은 일반적인 사례에 대한 더 적은 의례가 구문에 포함됩니다. 더 적은 의례로 디자인 의도를 더 쉽게 파악할 수 있습니다. 이러한 기능을 자세히 알아보세요. 생산성을 높이고 더 가독성이 높은 코드를 작성할 수 있을 것입니다. 언어의 구문보다 기능에 더 집중할 수 있습니다.
 
-이 문서의 나머지 부분에서는 이러한 각 기능을 간략히 설명하고 이러한 기능을 살펴볼 수 있는 링크를 제공합니다. 또한 자습서 섹션의 [C# 6에 대한 대화형 자습서](../tutorials/exploration/csharp-6.yml)에서 기능을 살펴볼 수도 있습니다.
+이 문서의 나머지 부분에서는 이러한 각 기능을 간략히 설명하고 이러한 기능을 살펴볼 수 있는 링크를 제공합니다. 또한 자습서 섹션의 [C# 6에 대한 대화형 살펴보기](../tutorials/exploration/csharp-6.yml)에서 기능을 살펴볼 수도 있습니다.
 
 ## <a name="read-only-auto-properties"></a>읽기 전용 auto 속성
 

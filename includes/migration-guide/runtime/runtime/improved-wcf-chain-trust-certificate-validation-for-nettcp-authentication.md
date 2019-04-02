@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: e12ba8eb53e6725ebc2e1d87edff3a6a3ce2116b
+ms.sourcegitcommit: 5d9f4b805787f890ca6e0dc7ea30a43018bc9cbb
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 03/12/2019
+ms.locfileid: "58467481"
+---
 ### <a name="improved-wcf-chain-trust-certificate-validation-for-nettcp-certificate-authentication"></a>Net.Tcp 인증서 인증에 대한 개선된 WCF 체인 신뢰 인증서 유효성 검사
 
 |   |   |
