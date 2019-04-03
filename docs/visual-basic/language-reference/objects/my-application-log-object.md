@@ -5,11 +5,11 @@ helpviewer_keywords:
 - My.Application.Log object
 ms.assetid: 296147f9-1109-4a55-9b5e-047f1ab9466c
 ms.openlocfilehash: e4c78a12d6ba66ea88573e6ef2e5b4cc04c1121a
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 5c2176883dc3107445702724a7caa7ac2f6cb0d3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58829189"
+ms.lasthandoff: 04/03/2019
+ms.locfileid: "58890786"
 ---
 # <a name="myapplicationlog-object"></a>My.Application.Log 개체
 애플리케이션의 로그 수신기에 이벤트 및 예외 정보를 쓸 수 있는 속성 및 메서드를 제공합니다.  
