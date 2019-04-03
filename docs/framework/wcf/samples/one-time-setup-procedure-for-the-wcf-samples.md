@@ -2,12 +2,12 @@
 title: Windows Communication Foundation 샘플의 일회 설치 절차
 ms.date: 03/30/2017
 ms.assetid: a5848ffd-3eb5-432d-812e-bd948ccb6bca
-ms.openlocfilehash: 705314c1eb0318fe7da53108d51f9dc985a3fdfa
-ms.sourcegitcommit: 0069cb3de8eed4e92b2195d29e5769a76111acdd
+ms.openlocfilehash: 76cf2c7ec7edbfaaa186b45f4b810c7d4c0b1d47
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/16/2019
-ms.locfileid: "56333458"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58825172"
 ---
 # <a name="one-time-setup-procedure-for-the-windows-communication-foundation-samples"></a>Windows Communication Foundation 샘플의 일회 설치 절차
 대부분의 Windows Communication Foundation (WCF) 샘플 인터넷 정보 서비스 (IIS)에서 호스팅되고 공용 가상 디렉터리에서 실행 됩니다. 이 일회 설치 절차에서는 디스크에 폴더를 만듭니다. 또한 이라는 iis 가상 디렉터리 추가 **ServiceModelSamples**합니다.
@@ -19,11 +19,9 @@ ms.locfileid: "56333458"
   
 ### <a name="one-time-setup-procedure-for-wcf-samples"></a>WCF 샘플의 일회 설치 절차  
   
-1.  
-  [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]이 설치되어 있는지 확인합니다. 설정 하는 방법에 대 한 자세한 내용은 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]를 참조 하세요 [인터넷 정보 서비스 호스팅 지침](../../../../docs/framework/wcf/samples/internet-information-service-hosting-instructions.md)합니다.  
+1.  [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]이 설치되어 있는지 확인합니다. 설정 하는 방법에 대 한 자세한 내용은 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]를 참조 하세요 [인터넷 정보 서비스 호스팅 지침](../../../../docs/framework/wcf/samples/internet-information-service-hosting-instructions.md)합니다.  
   
-2.  
-  [!INCLUDE[netfx40_long](../../../../includes/netfx40-long-md.md)]이 설치되어 있는지 확인합니다. 다음 v4.0 디렉터리 (또는 이상) 검색: **\Windows\Microsoft.NET\Framework**  
+2.  [!INCLUDE[netfx40_long](../../../../includes/netfx40-long-md.md)]이 설치되어 있는지 확인합니다. 다음 v4.0 디렉터리 (또는 이상) 검색: **\Windows\Microsoft.NET\Framework**  
   
 3.  Visual Studio 2012를 설치 하지 않은 고 운영 체제가 Windows Server 2008 SP2 없거나 나중에 설치할 [핫픽스 251798](https://go.microsoft.com/fwlink/?LinkId=184693)합니다.  
   
@@ -64,9 +62,7 @@ ms.locfileid: "56333458"
     > [!NOTE]
     >  이 단계를 완료하지 않으면 IIS에서 호스팅되는 모든 샘플이 빌드 중에 실패합니다. 사용 권한을 올바르게 설정했는지 확인하거나 SDK 명령 프롬프트와 Visual Studio 명령 프롬프트(2012)를 관리자 권한으로 실행하십시오.
 
-11. 컴퓨터에 C:\logs 디렉터리를 만듭니다. 일부 샘플에 이 디렉터리가 필요할 수 있습니다. 적절한 계정에 이 폴더에 대한 쓰기 권한을 부여해야 합니다. Windows 7의 경우 [!INCLUDE[wv](../../../../includes/wv-md.md)], 및 Windows Server 2008 R2이 계정이 **네트워크 서비스**합니다. 
-  [!INCLUDE[lserver](../../../../includes/lserver-md.md)]의 경우 NT Authority\Network Service이며, 
-  [!INCLUDE[wxp](../../../../includes/wxp-md.md)] 및 [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)]의 경우에는 ASPNET입니다.
+11. 컴퓨터에 C:\logs 디렉터리를 만듭니다. 일부 샘플에 이 디렉터리가 필요할 수 있습니다. 적절한 계정에 이 폴더에 대한 쓰기 권한을 부여해야 합니다. Windows 7의 경우 [!INCLUDE[wv](../../../../includes/wv-md.md)], 및 Windows Server 2008 R2이 계정이 **네트워크 서비스**합니다. [!INCLUDE[lserver](../../../../includes/lserver-md.md)]의 경우 NT Authority\Network Service이며, [!INCLUDE[wxp](../../../../includes/wxp-md.md)] 및 [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)]의 경우에는 ASPNET입니다.
 
 12. Setupcerttool.bat 파일을 실행합니다. 이 파일에는 \<InstallPath > \WF_WCF_Samples\WCF\Setup\ 폴더입니다.  이 스크립트는 다음 작업을 수행합니다.
 
@@ -89,5 +85,3 @@ ms.locfileid: "56333458"
     >  메시지 큐가 필요한 샘플을 실행하려면 먼저 MSMQ 서비스를 시작해야 합니다.
 
 15. 일부 샘플에는 인증서가 필요합니다. 참조 [인터넷 정보 서비스 (IIS) 서버 인증서 설치 지침](../../../../docs/framework/wcf/samples/iis-server-certificate-installation-instructions.md)합니다.
-
-## <a name="see-also"></a>참고자료

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - references [Visual Basic], declared elements
 - qualified names [Visual Basic]
 ms.assetid: d6301709-f4cc-4b7a-b8ba-80898f14ab46
-ms.openlocfilehash: 16f4fb28ab030ccebed2a8d1b93a3a6c29d075c6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5aea43c2dab4eb44ab40449ee6e970a28fdc4abb
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54501258"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58821454"
 ---
 # <a name="references-to-declared-elements-visual-basic"></a>선언된 요소 참조(Visual Basic)
 코드에서 선언 된 요소를 참조 하는 경우 Visual Basic 컴파일러에서는 해당 이름의 적절 한 선언 참조 이름과 일치 합니다. 동일한 이름을 가진 둘 이상의 요소가 선언 된 경우 참조 하는 데는 이러한 요소는 제어할 수 있습니다 *한정* 이름입니다.  
@@ -194,6 +194,7 @@ Dim xDoc As xD.XmlDocument
  동일한 이름을 공유 하는 두 가지 프로그래밍 요소를 숨길 수 중 하나, 또는 *섀도*, 다른 하나입니다. 숨겨진된 요소 참조를 사용할 수 없는 경우 대신, 숨겨진된 요소 이름을 사용 하는 코드를 Visual Basic 컴파일러는 섀도잉 요소 확인 합니다. 예제를 사용 하 여 더 자세한 내용은 참조 하세요. [Visual Basic의 숨김 기능](../../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [선언 요소 이름](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)
 - [선언 요소의 특징](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-characteristics.md)
 - [프로젝트 및 솔루션 속성 관리](/visualstudio/ide/managing-project-and-solution-properties)

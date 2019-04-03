@@ -9,12 +9,12 @@ helpviewer_keywords:
 - structures [Visual Basic], structure variables
 - structure variables [Visual Basic]
 ms.assetid: a221e74a-ffcf-4bdc-a0f6-a088a9bf26cc
-ms.openlocfilehash: 78c1d529053a10fc208ee5499b759623c227cb25
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3635729705520518d4c950f8a79da7d1249285bf
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54681813"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58841617"
 ---
 # <a name="structures-and-classes-visual-basic"></a>구조체와 클래스(Visual Basic)
 Visual Basic은 구조체와 클래스에 대 한 구문을 통합 합니다. 그러나 구조체와 클래스 간의 중요 한 차이점이 있습니다.  
@@ -87,6 +87,7 @@ Visual Basic은 구조체와 클래스에 대 한 구문을 통합 합니다. �
 -   **같음입니다.** 두 구조체의 같음 테스트를 요소 별로 테스트를 사용 하 여 수행 되어야 합니다. 두 개체 변수를 사용 하 여 비교할 수는 <xref:System.Object.Equals%2A> 메서드. <xref:System.Object.Equals%2A> 두 변수의 같은 인스턴스를 가리키는지 여부를 나타냅니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [데이터 형식](../../../../visual-basic/programming-guide/language-features/data-types/index.md)
 - [복합 데이터 형식](../../../../visual-basic/programming-guide/language-features/data-types/composite-data-types.md)
 - [Value Types and Reference Types](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)

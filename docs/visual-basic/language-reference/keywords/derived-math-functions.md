@@ -21,17 +21,17 @@ helpviewer_keywords:
 - degrees
 - arccosine function
 ms.assetid: 63e449d8-9444-44fb-8db1-6d9cf346e2aa
-ms.openlocfilehash: 1273871faf65afdd1a894c03f13a2c93507c1b13
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0d0606c52d1d50fcc2fd8eea3ad2851c95b18a69
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54505863"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58836586"
 ---
 # <a name="derived-math-functions-visual-basic"></a>파생된 수학 함수(Visual Basic)
 다음 표에서 기본 수학 함수의에서 파생 될 수 있는 비 내장 수치 연산 함수는 <xref:System.Math?displayProperty=nameWithType> 개체입니다. 기본 수학 함수를 추가 하 여 액세스할 수 있습니다 `Imports System.Math` 을 파일이 나 프로젝트입니다.  
   
-|기능|해당 파생된 항목|  
+|함수|해당 파생된 항목|  
 |--------------|-------------------------|  
 |시 컨 트 (Sec(x))|1 / Cos(x)|  
 |코시 컨 트 (Csc(x))|1 / Sin(x)|  
@@ -55,4 +55,5 @@ ms.locfileid: "54505863"
 |역 쌍 곡 코탄젠트 (Acoth(x))|로그 ((x + 1) / (x-1)) / 2|  
   
 ## <a name="see-also"></a>참고자료
+
 - [수학 함수](../../../visual-basic/language-reference/functions/math-functions.md)

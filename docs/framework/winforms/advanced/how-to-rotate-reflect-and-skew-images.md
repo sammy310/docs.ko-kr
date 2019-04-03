@@ -1,5 +1,5 @@
 ---
-title: '방법: 회전, 반사 및 기울이기 이미지'
+title: '방법: 이미지 회전, 반사 및 기울이기'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - images [Windows Forms], rotating
 - images [Windows Forms], skewing
 ms.assetid: a3bf97eb-63ed-425a-ba07-dcc65efb567c
-ms.openlocfilehash: 3e539f41667edb505269fe420396c79b68f34e8f
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: dda03c9c1e1390ca6a5250471f047d3747e989e2
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57711501"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58839914"
 ---
-# <a name="how-to-rotate-reflect-and-skew-images"></a>방법: 회전, 반사 및 기울이기 이미지
+# <a name="how-to-rotate-reflect-and-skew-images"></a>방법: 이미지 회전, 반사 및 기울이기
 회전, 반사 하 고 원본 이미지의 왼쪽 위, 오른쪽 위 및 왼쪽 아래 모퉁이 대 한 대상 점을 지정 하 여 이미지를 기울일 수 있습니다. 세 개의 대상 지점 원본 사각형이 이미지는 평행 사변형에 매핑되는 3x3 유사 변형을 결정 합니다.  
   
 ## <a name="example"></a>예제  
@@ -30,15 +30,15 @@ ms.locfileid: "57711501"
   
  다음 그림에서는 원본 이미지와 평행 사변형으로 매핑되는 이미지를 보여 줍니다. 원래 이미지 기울이기, 반영, 회전 되어 변환 합니다. 실행 하는 줄에 매핑된 원본 이미지의 위쪽 가장자리를 따라 x 축 (200, 20) 및 (110, 100). 원본 이미지의 왼쪽된 가장자리를 따라 y 축을 통해 실행 되는 줄에 매핑된 (200, 20) 및 (250, 30).  
   
- ![Stripes](./media/stripes1.gif "Stripes1")  
+ ![원본 이미지와 이미지는 평행 사변형에 매핑됩니다.](./media/how-to-rotate-reflect-and-skew-images/reflected-skewed-rotated-illustration.gif)  
   
  다음 그림에서는 사진 이미지에 적용할 비슷한 변환을 보여 줍니다.  
   
- ![변환 오르기](./media/transformedclimber.png "TransformedClimber")  
+ ![오르기와 평행 사변형에 매핑된 그림의 사진입니다.](./media/how-to-rotate-reflect-and-skew-images/reflected-skewed-rotated-photo.png)  
   
- 다음 그림은 메타 파일에 적용 된 비슷한 변환을 보여 줍니다.  
+ 다음 그림에서는 이와 유사한 메타 파일에 적용할 변환을 보여 줍니다.  
   
- ![메타 파일 변환](./media/transformedmetafile.png "TransformedMetafile")  
+ ![도형 및 텍스트와 평행 사변형으로 매핑되는 그림입니다.](./media/how-to-rotate-reflect-and-skew-images/reflected-skewed-rotated-metafile.png)  
   
  다음 예제에서는 첫 번째 그림에 표시 된 이미지를 생성 합니다.  
   

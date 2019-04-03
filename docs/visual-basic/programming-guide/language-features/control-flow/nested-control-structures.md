@@ -10,12 +10,12 @@ helpviewer_keywords:
 - structures [Visual Basic], nested control
 - nested control statements [Visual Basic]
 ms.assetid: cf60b061-65d9-44a8-81f2-b0bdccd23a05
-ms.openlocfilehash: 13e2c5c8d818a09ec5e77ec47fe8a2c83b675d82
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: c016722332dafa3d3be91a1e9e98cc0ce9a49717
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58409798"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58835195"
 ---
 # <a name="nested-control-structures-visual-basic"></a>중첩 제어 구조(Visual Basic)
 예를 들어 다른 제어 문의 내부에 제어 문을 배치할 수 있습니다는 `If...Then...Else` 내에서 차단 된 `For...Next` 루프입니다. 다른 제어 문 내에 배치 하는 제어 문 이라고 *중첩 된*합니다.  
@@ -72,6 +72,7 @@ Next ctl
  Visual Basic 컴파일러는 이러한 겹치는 제어 구조를 검색 하 고 컴파일 시간 오류를 발생 시킵니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [제어 흐름](../../../../visual-basic/programming-guide/language-features/control-flow/index.md)
 - [판단 구조](../../../../visual-basic/programming-guide/language-features/control-flow/decision-structures.md)
 - [루프 구조](../../../../visual-basic/programming-guide/language-features/control-flow/loop-structures.md)

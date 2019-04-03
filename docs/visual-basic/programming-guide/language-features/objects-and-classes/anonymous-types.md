@@ -8,12 +8,12 @@ helpviewer_keywords:
 - anonymous types [Visual Basic]
 - types [Visual Basic], anonymous
 ms.assetid: 7b87532c-4b3e-4398-8503-6ea9d67574a4
-ms.openlocfilehash: 824481c9c73d496998d5810c620b2317c1ec252a
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.openlocfilehash: 3dc2083e5b4fd06250a1387c32f0eba28e879b30
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57203443"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58829137"
 ---
 # <a name="anonymous-types-visual-basic"></a>익명 형식(Visual Basic)
 Visual Basic 데이터 형식에 대 한 클래스 정의 작성 하지 않고 개체를 만드는 데 사용할 수 있는 익명 형식을 지원 합니다. 대신 컴파일러가 클래스를 생성합니다. 클래스는 사용 가능한 이름이 없으므로에서 직접 상속 <xref:System.Object>, 개체를 선언할 때 지정 하는 속성을 포함 합니다. 데이터 형식의 이름을 지정 하지 않으면 때문 이라고 하는 *무명 형식*합니다.  
@@ -127,6 +127,7 @@ Visual Basic 데이터 형식에 대 한 클래스 정의 작성 하지 않고 �
  재정의 된 메서드의 기능과 컴파일러에서 만든 코드에 대 한 자세한 내용은 참조 하세요. [익명 형식 정의](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-type-definition.md)합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [개체 이니셜라이저: 명명 된 형식과 익명 형식](../../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)
 - [지역 형식 유추](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)
 - [Visual Basic의 LINQ 소개](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)

@@ -2,19 +2,19 @@
 title: 직렬화 XML 트리 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 2c340695-a726-4030-85be-6975d8a149cf
-ms.openlocfilehash: 54591438b49005f9016560fcc2f314d6a947d485
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ddcd82a3fe8beea87913227ed0ff86fa3974bd11
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54616760"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58827338"
 ---
 # <a name="serializing-xml-trees-visual-basic"></a>직렬화 XML 트리 (Visual Basic)
 XML 트리를 serialize하는 것은 XML 트리에서 XML을 생성하는 것을 의미합니다. 파일, <xref:System.IO.TextWriter> 클래스의 구체적 구현 또는 <xref:System.Xml.XmlWriter>의 구체적 구현으로 serialize할 수 있습니다.  
   
  serialization의 다양한 측면을 제어할 수 있습니다. 예를 들어, serialize된 XML을 들여쓸지 여부와 XML 선언을 쓸지 여부를 제어할 수 있습니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
   
 |항목|설명|  
 |-----------|-----------------|  
@@ -24,4 +24,5 @@ XML 트리를 serialize하는 것은 XML 트리에서 XML을 생성하는 것을
 |[XmlReader (XSLT 호출)로 직렬화 하는 작업 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/serializing-to-an-xmlreader-invoking-xslt.md)|다른 모듈에서 XML 트리의 내용을 읽을 수 있도록 하는 <xref:System.Xml.XmlReader>를 만드는 방법에 대해 설명합니다.|  
   
 ## <a name="see-also"></a>참고자료
+
 - [프로그래밍 가이드 (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/programming-guide-linq-to-xml.md)

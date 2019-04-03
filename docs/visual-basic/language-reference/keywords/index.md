@@ -10,12 +10,12 @@ helpviewer_keywords:
 - reserved words, Visual Basic keywords
 - Visual Basic, keywords
 ms.assetid: b5a65ef0-c408-4836-afb6-e6828c0771ca
-ms.openlocfilehash: 654c4e4c017141893dd14c7f0f84f76096b274d6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e00cb8579ba2692acdfbf3fd349e08bb8647e2d0
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54664878"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58814975"
 ---
 # <a name="keywords-visual-basic"></a>키워드(Visual Basic)
 다음 표에서 모든 Visual Basic 언어 키워드를 보여 줍니다.  
@@ -118,4 +118,5 @@ ms.locfileid: "54664878"
 |[문자열 조작 요약](../../../visual-basic/language-reference/keywords/string-manipulation-summary.md)|문자열을 조작하는 데 사용되는 함수를 나열합니다.|  
   
 ## <a name="see-also"></a>참고자료
+
 - [Visual Basic 런타임 라이브러리 멤버](../../../visual-basic/language-reference/runtime-library-members.md)

@@ -12,12 +12,12 @@ helpviewer_keywords:
 - True keyword [Visual Basic]
 - Boolean values [Visual Basic], True keyword
 ms.assetid: 4858e630-4813-4216-a55e-f4d0feb884e4
-ms.openlocfilehash: 5e90d1dc5eb0beb3afd8fc69da32f89943e94c48
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7b64302d801a08f976de0ec969983c821f7a8471
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54741914"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58841223"
 ---
 # <a name="boolean-data-type-visual-basic"></a>Boolean 데이터 형식(Visual Basic)
 만 될 수 있는 값을 포함 `True` 또는 `False`합니다. 키워드 `True` 하 고 `False` 의 두 가지 상태에 해당 `Boolean` 변수입니다.  
@@ -54,6 +54,7 @@ End If
 ```  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Boolean?displayProperty=nameWithType>
 - [데이터 형식](../../../visual-basic/language-reference/data-types/index.md)
 - [형식 변환 함수](../../../visual-basic/language-reference/functions/type-conversion-functions.md)

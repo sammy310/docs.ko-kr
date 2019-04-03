@@ -20,12 +20,12 @@ helpviewer_keywords:
 - abstract classes [Visual Basic], inheritance
 - overriding, Overrides keyword
 ms.assetid: dfc8deba-f5b3-4d1d-a937-7cb826446fc5
-ms.openlocfilehash: 3d772fb81eb13b9454f44ff8ae4256bdb4144caa
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 5e4b8511145e758bf3d6328141be0e526965dccf
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56970300"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58826576"
 ---
 # <a name="inheritance-basics-visual-basic"></a>상속 기본 사항(Visual Basic)
 `Inherits` 문을 사용 하 라는 새 클래스를 선언 하는 *파생 클래스*라고 하는 기존 클래스에 따라를 *기본 클래스*. 파생된 클래스 상속 하 고 속성, 메서드, 이벤트, 필드 및 기본 클래스에 정의 된 상수 확장할 수 있습니다. 다음 섹션에서 설명한 상속에 대 한 규칙의 일부 및 방식으로 클래스를 변경 하 여 한정자를 상속 하거나 상속 됩니다.  
@@ -143,5 +143,6 @@ End Class
  경우에 `derivedClass` 재정의 `testMethod`의 `MyClass` 키워드 `useMyClass` 결과 재정의 및 확인 하는 컴파일러의 기본 클래스 버전에 대 한 호출을 취소 `testMethod`합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [Inherits 문](../../../../visual-basic/language-reference/statements/inherits-statement.md)
 - [Me, My, MyBase 및 MyClass](../../../../visual-basic/programming-guide/program-structure/me-my-mybase-and-myclass.md)

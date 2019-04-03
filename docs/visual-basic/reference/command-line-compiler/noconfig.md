@@ -6,12 +6,12 @@ helpviewer_keywords:
 - -noconfig compiler option [Visual Basic]
 - /noconfig compiler option [Visual Basic]
 ms.assetid: a7405067-bd21-4171-adf4-a126fa3ad6c3
-ms.openlocfilehash: a5663fff6f7351272a78947d364458c83e5b8af1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 44bc619c489fdff36f0b595f7d8934689b859adb
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54687598"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58819439"
 ---
 # <a name="-noconfig"></a>-noconfig
 컴파일러는 자동으로 참조 하지는 일반적으로 사용 되는 지정 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] 어셈블리 또는 가져오기 합니다 `System` 고 `Microsoft.VisualBasic` 네임 스페이스입니다.  
@@ -36,6 +36,7 @@ ms.locfileid: "54687598"
 >  `-noconfig` 옵션은 Visual Studio 개발 환경 내에서 사용할 수 있는 명령줄에서 컴파일할 경우에 사용할 수 있는 것입니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [-nostdlib (Visual Basic)](../../../visual-basic/reference/command-line-compiler/nostdlib.md)
 - [Visual Basic 명령줄 컴파일러](../../../visual-basic/reference/command-line-compiler/index.md)
 - [@(지시 파일 지정)](../../../visual-basic/reference/command-line-compiler/specify-response-file.md)

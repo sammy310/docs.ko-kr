@@ -30,12 +30,12 @@ helpviewer_keywords:
 - Is operator [Visual Basic]
 - comparison operators [Visual Basic], Visual Basic
 ms.assetid: d6cb12a8-e52e-46a7-8aaf-f804d634a825
-ms.openlocfilehash: c8835d1c42a02fa65e9acc9bd1c1f06fcfd4af02
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 9014cac5e2f3933b27411dfe5681fc16f4cdde30
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57359824"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58821038"
 ---
 # <a name="comparison-operators-visual-basic"></a>비교 연산자(Visual Basic)
 Visual Basic에 정의 된 비교 연산자는 다음과 같습니다.  
@@ -90,7 +90,7 @@ result = string Like pattern
 ## <a name="remarks"></a>설명  
  다음 표에서 관계 비교 연산자와 결정 하는 조건을의 목록을 포함 여부 `result` 은 `True` 또는 `False`합니다.  
   
-|연산자|`True` 경우에|`False` 경우에|  
+|연산자|`True`|`False`|  
 |--------------|---------------|----------------|  
 |`<` (보다 작음)|`expression1` < `expression2`|`expression1` >= `expression2`|  
 |`<=` (보다 작거나 같음)|`expression1` <= `expression2`|`expression1` > `expression2`|  
@@ -151,6 +151,7 @@ result = string Like pattern
  앞의 예제에서 첫 번째 비교 반환 `False` 나머지 비교 돌아와 `True`합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.InvalidCastException>
 - [= 연산자](../../../visual-basic/language-reference/operators/assignment-operator.md)
 - [Visual Basic에서의 연산자 우선 순위](../../../visual-basic/language-reference/operators/operator-precedence.md)

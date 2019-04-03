@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - enumerations [Visual Basic]
 ms.assetid: e6e47b5b-3ed9-452d-a481-9c3fed88519a
-ms.openlocfilehash: 826f8fffedb8c983423fbef0fbf1f4014d93be91
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ff2d8c324aee8bbccef050c020e5392368b05b1c
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54535023"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58825107"
 ---
 # <a name="when-to-use-an-enumeration-visual-basic"></a>열거형을 사용하는 경우(Visual Basic)
 열거형에는 관련 된 상수 집합을 사용 하는 간편한 방법은 제공 합니다. 열거형, 또는 `Enum`, 기호화 된 이름 값의 집합입니다. 열거형 데이터 형식으로 처리 됩니다 하 고 변수 및 속성과 함께 사용할 상수 집합을 사용할 수 있습니다.  
@@ -36,6 +36,7 @@ ms.locfileid: "54535023"
  Visual Basic과 같은 다양 한 미리 정의 된 열거를 제공 합니다 `FirstDayOfWeek` 고 `MsgBoxResult`, 코드를 용이 하 게 합니다. 이러한 목록은 참조 하세요. [상수 및 열거형](../../../../visual-basic/language-reference/constants-and-enumerations.md)합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [방법: 열거형 선언](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-declare-enumerations.md)
 - [방법: 열거형 멤버 참조](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-refer-to-an-enumeration-member.md)
 - [열거형 및 이름 한정](../../../../visual-basic/programming-guide/language-features/constants-enums/enumerations-and-name-qualification.md)

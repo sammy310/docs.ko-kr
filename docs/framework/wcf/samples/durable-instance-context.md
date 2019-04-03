@@ -2,12 +2,12 @@
 title: 영속 인스턴스 컨텍스트
 ms.date: 03/30/2017
 ms.assetid: 97bc2994-5a2c-47c7-927a-c4cd273153df
-ms.openlocfilehash: ec01f83e25eb003e194424bbfa247011701dc1bd
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9981c4293f651bce3a0abaa3e0243d0d656ff257
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54527495"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58841453"
 ---
 # <a name="durable-instance-context"></a>영속 인스턴스 컨텍스트
 이 샘플에는 영 속 인스턴스 컨텍스트를 사용 하도록 설정 하려면 Windows Communication Foundation (WCF) 런타임 사용자 지정 하는 방법을 보여 줍니다. 여기서는 SQL Server 2005를 백업 저장소(이 경우 SQL Server 2005 Express)로 사용합니다. 사용자 지정 저장소 메커니즘에 액세스하는 방법도 제공합니다.  
@@ -262,7 +262,7 @@ public IStorageManager StorageManager
 }   
 ```  
   
- InstanceContextInitializer 클래스는 IInstanceContextInitializer 인터페이스를 구현하고 생성되는 InstanceContext의 Extensions 컬렉션에 인스턴스 컨텍스트 확장을 추가합니다.  
+ InstanceContextInitializer 클래스는 IInstanceContextInitializer 인터페이스를 구현하고 생성되는 InstanceContext의 Extensions 컬렉션에 인스턴스 컨텍스트 확장명을 추가합니다.  
   
 ```  
 public void Initialize(InstanceContext instanceContext, Message message)  
@@ -373,7 +373,7 @@ extension.StorageManager.SaveInstance(extension.ContextId, instance);
 return result;  
 ```  
   
-## <a name="using-the-extension"></a>확장명 사용  
+## <a name="using-the-extension"></a>확장 사용  
  두 채널 계층과 서비스 모델 계층 확장이 완료 되 고 WCF 응용 프로그램에서 이제 사용할 수 있습니다. 서비스는 사용자 지정 바인딩을 사용하여 채널 스택에 채널을 추가한 다음 적절한 특성으로 서비스 구현 클래스를 표시해야 합니다.  
   
 ```  
@@ -460,4 +460,3 @@ Press ENTER to shut down client
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Instancing\Durable`  
   
-## <a name="see-also"></a>참고자료

@@ -16,12 +16,12 @@ helpviewer_keywords:
 - / operator [Visual Basic]
 - math operators [Visual Basic]
 ms.assetid: 335e97f2-c434-439e-9064-76973a051101
-ms.openlocfilehash: 7d9b02a9c997ffcfdd61e277a6ed3779d8821831
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.openlocfilehash: af2316f92e2904eee1e8c046b34b8147e40cb513
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57202459"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58825068"
 ---
 # <a name="-operator-visual-basic"></a>/ 연산자(Visual Basic)
 두 숫자를 나누고 부동 소수점 결과 반환 합니다.  
@@ -81,6 +81,7 @@ expression1 / expression2
  앞의 예제에서 식에는 2.5 및 3.333333 값을 반환 합니다. 결과 항상 부동 소수점 (`Double`) 경우에 두 피연산자가 정수 상수입니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [/ = 연산자 (Visual Basic)](../../../visual-basic/language-reference/operators/floating-point-division-assignment-operator.md)
 - [\ 연산자 (Visual Basic)](../../../visual-basic/language-reference/operators/integer-division-operator.md)
 - [연산자 결과의 데이터 형식](../../../visual-basic/language-reference/operators/data-types-of-operator-results.md)

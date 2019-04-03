@@ -8,12 +8,12 @@ helpviewer_keywords:
 - troubleshooting procedures
 - procedures [Visual Basic], about procedures
 ms.assetid: 525721e8-2e02-4f75-b5d8-6b893462cf2b
-ms.openlocfilehash: e29e4a3b216657b398407701530ad9bfe975dbf6
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 492a7474a38a7e41b7e3b3f59dfa118c30256ea4
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56972003"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58830138"
 ---
 # <a name="troubleshooting-procedures-visual-basic"></a>프로시저 문제 해결(Visual Basic)
 이 페이지는 프로시저를 사용 하 여 작업할 때 발생할 수 있는 몇 가지 일반적인 문제를 나열 합니다.  
@@ -124,6 +124,7 @@ ms.locfileid: "56972003"
  마지막 매개 변수가 선언 된 점을 제외 하 고 프로시저의 두 오버 로드 시그니처가 동일한 경우 [선택 사항](../../../../visual-basic/language-reference/modifiers/optional.md) 하나로 및 [ParamArray](../../../../visual-basic/language-reference/modifiers/paramarray.md) 다른 컴파일러는 해당 프로시저를 호출할 확인 가장 가까운 일치 항목에 따라 합니다. 자세한 내용은 [Overload Resolution](./overload-resolution.md)을 참조하세요.  
   
 ## <a name="see-also"></a>참고자료
+
 - [절차](./index.md)
 - [Sub 프로시저](./sub-procedures.md)
 - [Function 프로시저](./function-procedures.md)

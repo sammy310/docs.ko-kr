@@ -9,12 +9,12 @@ helpviewer_keywords:
 - access levels, Visual Basic
 - access levels, default levels
 ms.assetid: bf63b96e-e825-4745-88c8-5dae222728db
-ms.openlocfilehash: 75c5b16164e9ecb6558e445c59e4a312158ff4f8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0d899342383bdf9d262fc9a1ab5e00bbe43066e3
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54580813"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58821701"
 ---
 # <a name="declaration-contexts-and-default-access-levels-visual-basic"></a>선언 컨텍스트 및 기본 액세스 수준(Visual Basic)
 이 항목에는 Visual Basic 형식은 다른 형식 내에서 선언 될 수 있으며 어떤 액세스 수준을 기본적으로 지정 되지 않은 경우 설명 합니다.  
@@ -34,24 +34,25 @@ ms.locfileid: "54580813"
   
 |선언 요소|Namespace 수준|모듈 수준|프로시저 수준|  
 |----------------------|---------------------|------------------|---------------------|  
-|변수 ([Dim 문](../../../visual-basic/language-reference/statements/dim-statement.md))|허용 안 됨|`Private` (`Public` 에 `Structure`에서 허용 되지 않음, `Interface`)|`Public`|  
-|상수 ([Const 문](../../../visual-basic/language-reference/statements/const-statement.md))|허용 안 됨|`Private` (`Public` 에 `Structure`에서 허용 되지 않음, `Interface`)|`Public`|  
-|열거형 ([Enum 문](../../../visual-basic/language-reference/statements/enum-statement.md))|`Friend`|`Public`|허용 안 됨|  
-|클래스 ([Class 문](../../../visual-basic/language-reference/statements/class-statement.md))|`Friend`|`Public`|허용 안 됨|  
-|구조체 ([문을 구조체](../../../visual-basic/language-reference/statements/structure-statement.md))|`Friend`|`Public`|허용 안 됨|  
-|모듈 ([Module 문](../../../visual-basic/language-reference/statements/module-statement.md))|`Friend`|허용 안 됨|허용 안 됨|  
-|인터페이스 ([Interface 문](../../../visual-basic/language-reference/statements/interface-statement.md))|`Friend`|`Public`|허용 안 됨|  
-|프로시저 ([Function 문](../../../visual-basic/language-reference/statements/function-statement.md)하십시오 [Sub 문](../../../visual-basic/language-reference/statements/sub-statement.md))|허용 안 됨|`Public`|허용 안 됨|  
-|외부 참조 ([Declare Statement](../../../visual-basic/language-reference/statements/declare-statement.md))|허용 안 됨|`Public` (사용할 수 없습니다 `Interface`)|허용 안 됨|  
-|연산자 ([Operator 문](../../../visual-basic/language-reference/statements/operator-statement.md))|허용 안 됨|`Public` (사용할 수 없습니다 `Interface` 또는 `Module`)|허용 안 됨|  
-|속성 ([Property 문](../../../visual-basic/language-reference/statements/property-statement.md))|허용 안 됨|`Public`|허용 안 됨|  
-|속성의 기본값 ([기본](../../../visual-basic/language-reference/modifiers/default.md))|허용 안 됨|`Public` (사용할 수 없습니다 `Module`)|허용 안 됨|  
-|이벤트 ([이벤트 연결 문으로](../../../visual-basic/language-reference/statements/event-statement.md))|허용 안 됨|`Public`|허용 안 됨|  
-|대리자 ([Delegate 문](../../../visual-basic/language-reference/statements/delegate-statement.md))|`Friend`|`Public`|허용 안 됨|  
+|변수 ([Dim 문](../../../visual-basic/language-reference/statements/dim-statement.md))|허용되지 않음|`Private` (`Public` 에 `Structure`에서 허용 되지 않음, `Interface`)|`Public`|  
+|상수 ([Const 문](../../../visual-basic/language-reference/statements/const-statement.md))|허용되지 않음|`Private` (`Public` 에 `Structure`에서 허용 되지 않음, `Interface`)|`Public`|  
+|열거형 ([Enum 문](../../../visual-basic/language-reference/statements/enum-statement.md))|`Friend`|`Public`|허용되지 않음|  
+|클래스 ([Class 문](../../../visual-basic/language-reference/statements/class-statement.md))|`Friend`|`Public`|허용되지 않음|  
+|구조체 ([문을 구조체](../../../visual-basic/language-reference/statements/structure-statement.md))|`Friend`|`Public`|허용되지 않음|  
+|모듈 ([Module 문](../../../visual-basic/language-reference/statements/module-statement.md))|`Friend`|허용되지 않음|허용되지 않음|  
+|인터페이스 ([Interface 문](../../../visual-basic/language-reference/statements/interface-statement.md))|`Friend`|`Public`|허용되지 않음|  
+|프로시저 ([Function 문](../../../visual-basic/language-reference/statements/function-statement.md)하십시오 [Sub 문](../../../visual-basic/language-reference/statements/sub-statement.md))|허용되지 않음|`Public`|허용되지 않음|  
+|외부 참조 ([Declare Statement](../../../visual-basic/language-reference/statements/declare-statement.md))|허용되지 않음|`Public` (사용할 수 없습니다 `Interface`)|허용되지 않음|  
+|연산자 ([Operator 문](../../../visual-basic/language-reference/statements/operator-statement.md))|허용되지 않음|`Public` (사용할 수 없습니다 `Interface` 또는 `Module`)|허용되지 않음|  
+|속성 ([Property 문](../../../visual-basic/language-reference/statements/property-statement.md))|허용되지 않음|`Public`|허용되지 않음|  
+|속성의 기본값 ([기본](../../../visual-basic/language-reference/modifiers/default.md))|허용되지 않음|`Public` (사용할 수 없습니다 `Module`)|허용되지 않음|  
+|이벤트 ([이벤트 연결 문으로](../../../visual-basic/language-reference/statements/event-statement.md))|허용되지 않음|`Public`|허용되지 않음|  
+|대리자 ([Delegate 문](../../../visual-basic/language-reference/statements/delegate-statement.md))|`Friend`|`Public`|허용되지 않음|  
   
  자세한 내용은 [액세스 수준을 Visual Basic의](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [Friend](../../../visual-basic/language-reference/modifiers/friend.md)
 - [전용](../../../visual-basic/language-reference/modifiers/private.md)
 - [공용](../../../visual-basic/language-reference/modifiers/public.md)

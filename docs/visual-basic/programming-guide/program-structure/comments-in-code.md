@@ -14,12 +14,12 @@ helpviewer_keywords:
 - comments
 - code comments
 ms.assetid: 90136fba-22eb-49f9-ba81-63db629b4a47
-ms.openlocfilehash: 71f21a7c2ea1bcc24547a5a045c22c7156397103
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.openlocfilehash: a81aa6ac0716b94625c0ce7868730d55d062e3e4
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57201679"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58814642"
 ---
 # <a name="comments-in-code-visual-basic"></a>코드 주석(Visual Basic)
 코드 예제를 읽다 보면 종종 주석 기호(`'`)를 보게 됩니다. 다음에 텍스트를 무시 하려면 Visual Basic 컴파일러에서는이 기호 또는 *주석*합니다. 주석이란 해당 코드를 읽을 사람의 편의를 위해 코드에 추가되는 간단한 설명입니다.  
@@ -57,10 +57,10 @@ ms.locfileid: "57201679"
  추가 하거나 코드 줄을 하나 이상 선택 하 여 코드 블록에 대 한 주석 기호를 제거할 수 있습니다 합니다 **주석** (![VisualBasicWinAppCodeEditorCommentButton](../../../visual-basic/programming-guide/program-structure/media/vacommentbutton.gif "vaCommentButton ")) 및 **주석** (![VisualStudioWinAppProjectUncommentButton](../../../visual-basic/programming-guide/program-structure/media/vauncommentbutton.gif "vaUncommentButton")) 단추를 **편집**  도구 모음입니다.  
   
 > [!NOTE]
->  
-  `REM` 키워드로 텍스트를 시작하여 코드에 주석을 추가할 수도 있습니다. 그러나 합니다 `'` 기호 및 **주석**/**주석** 단추는 쉽게 사용 하 고 필요한 공간 및 메모리도 절약할 합니다.  
+>  `REM` 키워드로 텍스트를 시작하여 코드에 주석을 추가할 수도 있습니다. 그러나 합니다 `'` 기호 및 **주석**/**주석** 단추는 쉽게 사용 하 고 필요한 공간 및 메모리도 절약할 합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [Basic Instincts-XML 주석 사용 하 여 코드 문서화](https://msdn.microsoft.com/magazine/dd722812.aspx)
 - [방법: XML 문서 만들기](../../../visual-basic/programming-guide/program-structure/how-to-create-xml-documentation.md)
 - [XML 주석 태그](../../../visual-basic/language-reference/xmldoc/index.md)

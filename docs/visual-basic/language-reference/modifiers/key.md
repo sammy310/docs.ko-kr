@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Key [Visual Basic]
 - Key keyword [Visual Basic]
 ms.assetid: 7697a928-7d14-4430-a72a-c9e96e8d6c11
-ms.openlocfilehash: 0f4778b69963c7b0df14308b3cb6312555647b92
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: e13a773f0b585a5c8803a77c7aaad441d90dfe75
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56967778"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58842306"
 ---
 # <a name="key-visual-basic"></a>Key(Visual Basic)
 `Key` 키워드를 사용 하면 익명 형식의 속성에 대 한 동작을 지정할 수 있습니다. 키 속성 익명 형식 인스턴스 또는 해시 코드 값입니다. 계산이 간에 같음 테스트에 참여 하는 대로 속성만 지정 합니다. 키 속성의 값을 변경할 수 없습니다.  
@@ -54,6 +54,7 @@ ms.locfileid: "56967778"
  [!code-vb[VbVbalrAnonymousTypes#28](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class2.vb#28)]  
   
 ## <a name="see-also"></a>참고자료
+
 - [익명 형식 정의](../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-type-definition.md)
 - [방법: 무명 형식 선언에서 속성 이름 및 형식 유추](../../../visual-basic/programming-guide/language-features/objects-and-classes/how-to-infer-property-names-and-types-in-anonymous-type-declarations.md)
 - [익명 형식](../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)

@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30961
 ms.assetid: 8be5aa0d-d236-4ac3-aa9c-5044f9f6562b
-ms.openlocfilehash: e394459e7d25d38e27e78f10dd547cb9ebd6230d
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 58b334eb5e6db443bcfaba72729d59cb1d798e70
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55261349"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58833531"
 ---
 # <a name="value-of-type-typename1-cannot-be-converted-to-typename2-multiple-file-references"></a>형식의 값 '\<typename1 >'로 변환할 수 없습니다 '\<typename2 >' (여러 파일 참조)
 형식의 값 '\<typename1 >'로 변환할 수 없습니다 '\<typename2 >'입니다. 형식 불일치에 대 한 파일 참조가 섞여 때문일 수 있습니다 '\<filepath1 >' 프로젝트에서 '\<projectname1 >'에 대 한 파일 참조를 사용 하 여 '\<filepath2 >' 프로젝트에서 '\<projectname2 >'입니다. 두 어셈블리가 동일하면 동일한 대상을 참조하도록 두 참조를 바꿔 보세요.  
@@ -32,6 +32,6 @@ ms.locfileid: "55261349"
 -   참조 된 어셈블리는 동일한 어셈블리 id에 없는 경우 형식에서 다른 형식으로 변환 하려고 하지 않도록 코드를 변경 합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [Visual Basic의 형식 변환](../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)
 - [프로젝트의 참조 관리](/visualstudio/ide/managing-references-in-a-project)
-

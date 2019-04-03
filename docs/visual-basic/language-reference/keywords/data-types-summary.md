@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - data types [Visual Basic], Visual Basic
 ms.assetid: 4ea2ef2a-3d4d-42d9-9f8f-173a37c96e53
-ms.openlocfilehash: e68a3b5829e694013fd2d53cb6525439c42d9a33
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: cb7d77d87e37cd4cdc4872fd862c575737a8d3cb
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54719510"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58841123"
 ---
 # <a name="data-types-summary-visual-basic"></a>데이터 형식 요약(Visual Basic)
 Visual Basic 언어 키워드 및 런타임 라이브러리 멤버 용도 따라 구성 됩니다 사용 합니다.  
@@ -21,5 +21,6 @@ Visual Basic 언어 키워드 및 런타임 라이브러리 멤버 용도 따라
 |데이터 형식 확인|<xref:Microsoft.VisualBasic.Information.IsArray%2A>, <xref:Microsoft.VisualBasic.Information.IsDate%2A>, <xref:Microsoft.VisualBasic.Information.IsDBNull%2A>, <xref:Microsoft.VisualBasic.Information.IsError%2A>, <xref:Microsoft.VisualBasic.Information.IsNothing%2A>, <xref:Microsoft.VisualBasic.Information.IsNumeric%2A>, <xref:Microsoft.VisualBasic.Information.IsReference%2A>|  
   
 ## <a name="see-also"></a>참고자료
-- [키워드](../../../visual-basic/language-reference/keywords/index.md)
+
+- [C++ 키워드](../../../visual-basic/language-reference/keywords/index.md)
 - [Visual Basic 런타임 라이브러리 멤버](../../../visual-basic/language-reference/runtime-library-members.md)

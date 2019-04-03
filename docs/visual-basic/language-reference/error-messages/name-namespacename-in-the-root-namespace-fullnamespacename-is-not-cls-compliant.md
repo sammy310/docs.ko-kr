@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC40039
 ms.assetid: c5bd5914-ae71-416a-8bed-f76f644f78be
-ms.openlocfilehash: c5afdcc98b7acb1927c9b0735a69fbe64c3d8e60
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 84706719d151ea8df478f88610df34842f6f8702
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55268719"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58841539"
 ---
 # <a name="name-namespacename-in-the-root-namespace-fullnamespacename-is-not-cls-compliant"></a>이름을 \<namespacename > 루트 네임 스페이스에서 \<fullnamespacename > CLS 규격이 아님
 로 어셈블리 표시 됩니다 `<CLSCompliant(True)>`에 요소의 루트 네임 스페이스 이름 밑줄로 시작 하지만 (`_`).  
@@ -34,10 +34,10 @@ ms.locfileid: "55268719"
 -   네임 스페이스 이름을 그대로 유지 하는, 필요한 경우 다음 제거 합니다 <xref:System.CLSCompliantAttribute> 어셈블리에서로 표시 하거나 `<CLSCompliant(False)>`합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [Namespace 문](../../../visual-basic/language-reference/statements/namespace-statement.md)
 - [Visual Basic의 네임 스페이스](../../../visual-basic/programming-guide/program-structure/namespaces.md)
 - [/rootnamespace](../../../visual-basic/reference/command-line-compiler/rootnamespace.md)
 - [프로젝트 디자이너, 응용 프로그램 페이지(Visual Basic)](/visualstudio/ide/reference/application-page-project-designer-visual-basic)
 - [선언 요소 이름](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)
 - [Visual Basic 명명 규칙](../../../visual-basic/programming-guide/program-structure/naming-conventions.md)
-

@@ -2,12 +2,12 @@
 title: '방법: 요소 (LINQ to XML)의 컬렉션 검색 (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 2269f9de-8fb9-4666-b8a1-a4e754fa6a81
-ms.openlocfilehash: b5602e327128dd886b31d2863e089480f97b3aad
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 53572ac3c80e012b95527d32da28c8685cd8cfd3
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54642768"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58833640"
 ---
 # <a name="how-to-retrieve-a-collection-of-elements-linq-to-xml-visual-basic"></a>방법: 요소 (LINQ to XML)의 컬렉션 검색 (Visual Basic)
 이 항목에서는 <xref:System.Xml.Linq.XContainer.Elements%2A> 메서드를 보여 줍니다. 이 메서드는 요소의 자식 요소 컬렉션을 검색합니다.  
@@ -15,7 +15,7 @@ ms.locfileid: "54642768"
 ## <a name="example"></a>예제  
  이 예제에서는 `purchaseOrder` 요소의 자식 요소를 반복합니다.  
   
- 이 예제에서는 XML 문서로 을 사용합니다. [샘플 XML 파일: 일반적인 구매 주문 (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-linq-to-xml.md)합니다.  
+ 이 예제에서는 XML 문서로을 사용합니다. [샘플 XML 파일: 일반적인 구매 주문(LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-linq-to-xml.md).  
   
 ```vb  
 Dim po As XElement = XElement.Load("PurchaseOrder.xml")  
@@ -38,4 +38,5 @@ Name: Items
 ```  
   
 ## <a name="see-also"></a>참고자료
+
 - [LINQ to XML 축(Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-axes.md)

@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrID59
 ms.assetid: 0926a3a4-177b-4452-9b33-d8a01e24cc21
-ms.openlocfilehash: 37d9da67656ec4821903d8ba67a27ef10f1a437d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f3df7819da0afddd7f238f282d496136d89cb052
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54728867"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58833479"
 ---
 # <a name="bad-record-length"></a>레코드 길이가 잘못되었습니다.
 이 오류의 가능한 원인:  
@@ -29,6 +29,7 @@ ms.locfileid: "54728867"
 3.  경우에서 변수를 `FilePut` 또는 `FilePutObject` 되거나 포함 하는 `Variant` 가변 길이 문자열에 지정 된 레코드 길이 보다 짧으면 4 바이트 이상 인지 확인 합니다 `Len` 절은 `FileOpen` 문을.  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:Microsoft.VisualBasic.FileSystem.FileGet%2A>
 - <xref:Microsoft.VisualBasic.FileSystem.FileGetObject%2A>
 - <xref:Microsoft.VisualBasic.FileSystem.FilePut%2A>

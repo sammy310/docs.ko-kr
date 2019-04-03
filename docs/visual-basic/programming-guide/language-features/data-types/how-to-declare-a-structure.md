@@ -7,12 +7,12 @@ helpviewer_keywords:
 - statements [Visual Basic], structure
 - structures [Visual Basic], declaring
 ms.assetid: d5e98381-eb81-47d4-af83-48cc534a2572
-ms.openlocfilehash: cee2768d0e7475d2df123491e2b506bf5c08785f
-ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
+ms.openlocfilehash: 7fc4aed4d405729b64a2f7ba772cdd794df40f2a
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55066118"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58825099"
 ---
 # <a name="how-to-declare-a-structure-visual-basic"></a>방법: 선언 구조체 (Visual Basic)
 먼저 사용 하 여 구조체 선언을 [Structure 문](../../../../visual-basic/language-reference/statements/structure-statement.md)를 종료 하 고는 `End Structure` 문. 두 문 사이 선언 해야 하나 이상의 *요소*합니다. 모든 데이터 형식의 요소 수는 있지만 비공유 변수 또는 비공유, 비 사용자 정의 이벤트를 하나 이상 이어야 합니다.  
@@ -56,6 +56,7 @@ ms.locfileid: "55066118"
      변수 외에도 `Sub` 프로시저 및 이벤트에 상수를 정의할 수도 있습니다 `Function` 절차 및 구조에는 속성입니다. 에서는 하나 이상의 속성으로 지정할 수 있습니다 합니다 *속성의 기본값을*하나 이상의 인수를 사용 하는, 합니다. 사용 하 여 이벤트를 처리할 수 있습니다는 [Shared](../../../../visual-basic/language-reference/modifiers/shared.md) `Sub` 프로시저입니다. 자세한 내용은 [방법: 선언 및 Visual Basic의 기본 속성을 호출](../../../../visual-basic/programming-guide/language-features/procedures/how-to-declare-and-call-a-default-property.md)합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [데이터 형식](../../../../visual-basic/programming-guide/language-features/data-types/index.md)
 - [기본 데이터 형식](../../../../visual-basic/programming-guide/language-features/data-types/elementary-data-types.md)
 - [복합 데이터 형식](../../../../visual-basic/programming-guide/language-features/data-types/composite-data-types.md)

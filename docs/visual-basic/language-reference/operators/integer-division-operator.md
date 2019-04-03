@@ -17,12 +17,12 @@ helpviewer_keywords:
 - quotients, integer
 - truncation [Visual Basic], integer division
 ms.assetid: 4b0ee347-950c-45c9-8e23-54bc85df208e
-ms.openlocfilehash: 7ce7bdaa2bcbf2ba67f24c7e129f8f9a03a28c52
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.openlocfilehash: 1753199e2ecf3f156b90d8c0a5cacd672397260d
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57201913"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58828706"
 ---
 # <a name="-operator-visual-basic"></a>\ 연산자(Visual Basic)
 두 숫자를 나누고 정수 결과 반환 합니다.  
@@ -69,6 +69,7 @@ expression1 \ expression2
  식 앞의 예제에서는 각각 2, 3, 33으로,-22의 값을 반환합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [\\= 연산자](../../../visual-basic/language-reference/operators/integer-division-assignment-operator.md)
 - [/ 연산자 (Visual Basic)](../../../visual-basic/language-reference/operators/floating-point-division-operator.md)
 - [Option Strict 문](../../../visual-basic/language-reference/statements/option-strict-statement.md)

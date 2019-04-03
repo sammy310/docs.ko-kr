@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - anonymous types [Visual Basic], type definition
 ms.assetid: 7a8a0ddc-55ba-4d67-869e-87a84d938bac
-ms.openlocfilehash: e74b4c7298a80f724031cc4ac1feb49ebae8f7cb
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 832d56f5c51aea87185f36ec306c3fec036a40e0
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56975617"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58825549"
 ---
 # <a name="anonymous-type-definition-visual-basic"></a>익명 형식 정의(Visual Basic)
 무명 형식의 인스턴스 선언에 대 한 응답, 컴파일러는 형식에 대해 지정된 된 속성을 포함 하는 새 클래스 정을 만듭니다.  
@@ -82,5 +82,6 @@ End Class
 >  무명 형식 선언 동일한 어셈블리에서 발생 하는, 해당 속성에 동일한 이름을 가진 및 유추 된 형식, 동일한 순서로 속성이 선언 되 고 동일한 속성이 키 속성으로 표시 된 경우에 같은 익명 형식을 만듭니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [익명 형식](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)
 - [방법: 무명 형식 선언에서 속성 이름 및 형식 유추](../../../../visual-basic/programming-guide/language-features/objects-and-classes/how-to-infer-property-names-and-types-in-anonymous-type-declarations.md)

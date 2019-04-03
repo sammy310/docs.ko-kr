@@ -2,18 +2,18 @@
 title: '방법: LINQ to XML (Visual Basic)를 사용 하 여 사전 작업'
 ms.date: 07/20/2015
 ms.assetid: 6cb3f969-1986-414a-b850-87418712edea
-ms.openlocfilehash: 9f08430aeb92b9c6e0b7b08481027fb3b5b77cad
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: def00fcd356472825ebc4b9f5c306cf3547991e1
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54572346"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58820768"
 ---
 # <a name="how-to-work-with-dictionaries-using-linq-to-xml-visual-basic"></a>방법: LINQ to XML (Visual Basic)를 사용 하 여 사전 작업
 다양한 데이터 구조를 XML로 변환하고 XML을 다시 다른 데이터 구조로 변환하는 것이 편리한 경우가 많습니다. 이 항목에서는 <xref:System.Collections.Generic.Dictionary%602>를 XML로 변환하고 다시 그 반대로 변환하여 이 일반적인 방법을 구체적으로 구현하는 것을 보여 줍니다.  
   
 ## <a name="example"></a>예제  
- 이 예제에서는 포함된 식에서 쿼리와 XML 리터럴을 사용합니다. 쿼리는 새 <xref:System.Xml.Linq.XElement> 개체를 프로젝션하고 이 개체는 `Root` <xref:System.Xml.Linq.XElement> 개체의 새 내용이 됩니다.  
+ 이 예제에서는 포함된 식에서 쿼리와 XML 리터럴을 사용합니다. 새 쿼리 프로젝트 <xref:System.Xml.Linq.XElement> 개체에 다음의 새 내용이 됩니다 합니다 `Root` <xref:System.Xml.Linq.XElement> 개체입니다.  
   
 ```vb  
 Dim dict As Dictionary(Of String, String) = New Dictionary(Of String, String)()  
@@ -71,4 +71,5 @@ Child4:Value4
 ```  
   
 ## <a name="see-also"></a>참고자료
+
 - [프로젝션 및 변형 (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/projections-and-transformations-linq-to-xml.md)

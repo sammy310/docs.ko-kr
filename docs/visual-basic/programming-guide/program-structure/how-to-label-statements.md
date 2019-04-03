@@ -7,12 +7,12 @@ helpviewer_keywords:
 - ': separator character'
 - Visual Basic code, labeling statements
 ms.assetid: 38f1ff43-2054-42cb-963b-1998e60c6ed4
-ms.openlocfilehash: 2f6f0362fcec170e677d153ad9f936a5c2e55ad7
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 69ec8c7625410f140c59ba8dd492dca76857eb96
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56981207"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58828643"
 ---
 # <a name="how-to-label-statements-visual-basic"></a>방법: 레이블 문 (Visual Basic)
 문 블록은 콜론으로 구분 하는 코드 줄으로 이루어져 있습니다. 코드를 식별 하는 문자열 또는 정수 앞에 줄 수 있다고 *레이블이 지정 된*합니다. 문 레이블은 사용에 대 한 문을 사용 하 여 같은 식별 하는 코드 줄을 표시 하 되 `On Error Goto`합니다.  
@@ -35,6 +35,7 @@ ms.locfileid: "56981207"
      [!code-vb[VbVbalrStatements#708](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#708)]  
   
 ## <a name="see-also"></a>참고자료
+
 - [문(C++)](../../../visual-basic/programming-guide/language-features/statements.md)
 - [선언 요소 이름](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)
 - [프로그램 구조 및 코드 규칙](../../../visual-basic/programming-guide/program-structure/program-structure-and-code-conventions.md)

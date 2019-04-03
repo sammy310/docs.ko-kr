@@ -2,12 +2,12 @@
 title: 반복기 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: f26b5c1e-fe9d-4004-b287-da7919d717ae
-ms.openlocfilehash: 0e090106dbedbeb9fb0d6c272deb0299ca5fac56
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 313ce0c79a71af1b602ecd4ccc9bd0ebceb5696e
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57359122"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58820851"
 ---
 # <a name="iterators-visual-basic"></a>반복기 (Visual Basic)
 *반복기*는 목록 및 배열과 같은 컬렉션을 단계별로 실행하는 데 사용할 수 있습니다.  
@@ -445,6 +445,7 @@ End Class
 -   반복기에서 목록 작성을 캡슐화합니다. 반복기 메서드에서 목록을 빌드한 후 루프에서 각 결과를 생성할 수 있습니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Collections.Generic>
 - <xref:System.Collections.Generic.IEnumerable%601>
 - [For Each...Next 문](../../../visual-basic/language-reference/statements/for-each-next-statement.md)

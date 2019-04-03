@@ -1,19 +1,19 @@
 ---
-title: '연습: 액세스할 수 있는 Windows 기반 응용 프로그램 만들기'
+title: '연습: 내게 필요한 옵션이 지원되는 Windows 기반 애플리케이션 만들기'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - accessibility [Windows Forms], Windows applications
 - Windows applications [Windows Forms], accessibility
 - applications [Windows Forms], accessibility
 ms.assetid: 654c7f2f-1586-480b-9f12-9d9b8f5cc32b
-ms.openlocfilehash: b27203f46c1d89577825e40541d9789d3b9e17de
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 19ff49cfa465cce479a4fd5264c565cbb305c84f
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57708277"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58823469"
 ---
-# <a name="walkthrough-creating-an-accessible-windows-based-application"></a>연습: 액세스할 수 있는 Windows 기반 응용 프로그램 만들기
+# <a name="walkthrough-creating-an-accessible-windows-based-application"></a>연습: 내게 필요한 옵션이 지원되는 Windows 기반 애플리케이션 만들기
 액세스할 수 있는 애플리케이션을 만드는 것은 비즈니스에 중요한 영향을 줍니다. 많은 정부 기관에는 소프트웨어 구매와 관련된 접근성 규정이 있습니다. Certified for Windows 로고에는 접근성 요구 사항이 포함됩니다. 미국에만 3천만 명이 거주하는 것으로 추정되는 잠재 고객 중 많은 사람이 소프트웨어의 내게 필요한 옵션 기능에 따른 영향을 받습니다.  
   
  이 연습에서는 Certified for Windows 로고를 위한 5가지 접근성 요구 사항을 다룹니다. 이러한 요구 사항에 따라 액세스할 수 있는 애플리케이션은 다음을 수행합니다.  
@@ -135,10 +135,12 @@ ms.locfileid: "57708277"
     |MenuItem|이름|fileCommands|  
     ||텍스트|파일(&F)|  
     |MenuItem|이름|exitApp|  
-    ||텍스트|끝내기(&X)|  
-  
-     ![피자 주문 양식](./media/vbpizzaorderform.gif "vbPizzaOrderForm")  
-이제 폼이 다음과 같이 나타납니다.  
+    ||텍스트|끝내기(&X)|
+    
+      폼은 다음 이미지와 같이 표시 됩니다.
+    
+      ![이름 텍스트 상자 및 크기와 토 핑 선택 하 여 피자 주문 양식입니다.](./media/walkthrough-creating-an-accessible-windows-based-application/visual-basic-pizza-order-form.gif)  
+
   
 ## <a name="supporting-high-contrast-mode"></a>고대비 모드 지원  
  고대비 모드는 시각 장애가 있는 사용자에게 도움이 되는 대비 색과 글꼴 크기를 사용하여 가독성을 향상시키는 Windows 시스템 설정입니다. <xref:System.Windows.Forms.SystemInformation.HighContrast%2A> 속성 고대비 모드가 설정 되어 있는지 확인 하기 위해 제공 됩니다.  

@@ -2,12 +2,12 @@
 title: 네임스페이스 개요(LINQ to XML)
 ms.date: 07/20/2015
 ms.assetid: b8eb31fa-4b26-4acf-8050-6e705687f458
-ms.openlocfilehash: b2ea4c28fe14e57d3f72bb29d4960f436bbd9bb9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 45328fe0ac549086b8abea22c42c7be37fb12b3c
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54603706"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58831966"
 ---
 # <a name="namespaces-overview-linq-to-xml"></a>네임스페이스 개요(LINQ to XML)
 이 항목에서는 네임스페이스, <xref:System.Xml.Linq.XName> 클래스 및 <xref:System.Xml.Linq.XNamespace> 클래스에 대해 소개합니다.  
@@ -24,4 +24,5 @@ ms.locfileid: "54603706"
  자세한 내용은 <xref:System.Xml.Linq.XNamespace> 및 <xref:System.Xml.Linq.XName>를 참조하세요.  
   
 ## <a name="see-also"></a>참고자료
+
 - [XML 네임 스페이스 (Visual Basic)를 사용 하 여 작업](../../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md)

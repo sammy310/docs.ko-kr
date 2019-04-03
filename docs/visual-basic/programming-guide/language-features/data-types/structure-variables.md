@@ -7,12 +7,12 @@ helpviewer_keywords:
 - variables [Visual Basic], structure variables
 - structure variables [Visual Basic]
 ms.assetid: 156872f8-aabc-4454-8e2d-f2253c3c13c9
-ms.openlocfilehash: f9cc6d0165b0eda8358d250c37910b1362473ab1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9a6e542e297a17f44d929235530ae6058cf13a36
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54640604"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58816332"
 ---
 # <a name="structure-variables-visual-basic"></a>구조체 변수(Visual Basic)
 구조를 만든 후에 해당 형식으로 프로시저 수준 및 모듈 수준 변수를 선언할 수 있습니다. 예를 들어, 컴퓨터 시스템에 대 한 정보를 기록 하는 구조를 만들 수 있습니다. 다음은 이에 대한 예입니다.  
@@ -53,6 +53,7 @@ yourSystem = mySystem
  구조 요소 인지 참조 형식 등을 `String`, `Object`, 또는 데이터에 대 한 포인터 배열에 복사 됩니다. 이전 예제의 경우 `systemInfo` 앞의 예제에서 포인터 복사 개체 변수를 포함 했습니다 `mySystem` 에 `yourSystem`, 한 구조체를 통해 개체의 데이터에 대 한 변경에 액세스할 때 적용 되는 및 다른 구조입니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [데이터 형식](../../../../visual-basic/programming-guide/language-features/data-types/index.md)
 - [기본 데이터 형식](../../../../visual-basic/programming-guide/language-features/data-types/elementary-data-types.md)
 - [복합 데이터 형식](../../../../visual-basic/programming-guide/language-features/data-types/composite-data-types.md)

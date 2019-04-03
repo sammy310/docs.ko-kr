@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30941
 ms.assetid: 7054cc1e-bac3-4c3d-82f3-35772bd8dd3b
-ms.openlocfilehash: a8a85f4f089de9be6f2ecadac05256b30d3014b0
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 598aef3943a53ee6eb97064819c9128de1839f52
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55267458"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58813940"
 ---
 # <a name="structure-structurename-must-contain-at-least-one-instance-member-variable-or-at-least-one-instance-event-declaration-not-marked-custom"></a>구조 '\<structurename >' 하나 이상의 인스턴스 멤버 변수 또는 'Custom' 표시 되지 않은 인스턴스를 하나 이상 이벤트 선언이 있어야
 구조체 정의 비공유 변수 또는 비공유 비 사용자 정의 이벤트 포함 되지 않습니다.  
@@ -26,6 +26,7 @@ ms.locfileid: "55267458"
 -   하나 이상의 변수 또는 없는 이벤트를 정의 `Shared`합니다. 하나의 이벤트를 정의 하는 경우 사용자와 공유 되지 않는 이어야 합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [구조체](../../../visual-basic/programming-guide/language-features/data-types/structures.md)
 - [방법: 구조 선언](../../../visual-basic/programming-guide/language-features/data-types/how-to-declare-a-structure.md)
 - [Structure 문](../../../visual-basic/language-reference/statements/structure-statement.md)

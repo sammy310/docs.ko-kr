@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30957
 ms.assetid: 561e593a-f50a-4b72-a708-4cab60ec7b28
-ms.openlocfilehash: 6c3b0d3b86e871228c4bf3b30f0871015641a730
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d024420fbbc3efbd3d19bb58c9379eacbafac5d3
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54718275"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58820739"
 ---
 # <a name="function-evaluation-is-disabled-because-a-previous-function-evaluation-timed-out"></a>이전 함수 실행 시간이 초과되었으므로 함수를 실행할 수 없습니다.
 함수 평가 이전 함수 실행 시간이 초과 되어 비활성화 됩니다. 함수 실행을 다시 활성화 하려면 다시 단계별로 실행 하거나 디버깅 다시 시작 합니다.  
@@ -32,5 +32,6 @@ ms.locfileid: "54718275"
 2.  디버거를 다시 실행 하거나 종료 하 고 디버깅을 다시 시작 합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [Visual Studio의 디버깅](/visualstudio/debugger/debugging-in-visual-studio)
 - [디버거로 코드 탐색](/visualstudio/debugger/navigating-through-code-with-the-debugger)

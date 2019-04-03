@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - String data type [Visual Basic], validation
 ms.assetid: 5d9a918f-6c1f-41a3-a019-b5c2b8ce0381
-ms.openlocfilehash: fb95871f347bf1093701a428a8b925f884d17a56
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 829d6485acdca22fbf10160c734e5c7f931dd855
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56979699"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58824938"
 ---
 # <a name="walkthrough-validating-that-passwords-are-complex-visual-basic"></a>연습: 암호의 복합성 검사 (Visual Basic)
 이 메서드는 몇 가지 강력한 암호 특성에 대 한 확인 하 고 실패에 대 한 암호를 확인 하는 정보를 사용 하 여 문자열 매개 변수를 업데이트 합니다.  
@@ -44,5 +44,6 @@ ms.locfileid: "56979699"
 -   모든 기호는 키보드의 맨 위 행에서 입력 한 암호를 허용 하지 않습니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Text.RegularExpressions.Regex>
 - [ASP.NET 웹 응용 프로그램 보안](https://docs.microsoft.com/previous-versions/aspnet/330a99hc(v=vs.100))

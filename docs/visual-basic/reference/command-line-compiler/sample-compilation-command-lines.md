@@ -8,12 +8,12 @@ helpviewer_keywords:
 - compiling source code [Visual Basic], from command line
 - Visual Basic compiler, sample command lines
 ms.assetid: 5bfbb487-5f47-4267-969a-39dfb917beeb
-ms.openlocfilehash: 601f8f3a5ea86da060b2d26796b2299d87946443
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0771ed41d6c58ce7cc98435b405f5819e45393db
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54547802"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58824308"
 ---
 # <a name="sample-compilation-command-lines-visual-basic"></a>샘플 컴파일 명령줄 (Visual Basic)
 Visual Studio 내에서 Visual Basic 프로그램을 컴파일할 수 또는 실행 파일 (.exe) 또는 동적 연결 라이브러리 (.dll) 파일을 생성 하려면 명령줄에서 컴파일할 수 있습니다.  
@@ -36,5 +36,6 @@ Visual Studio 내에서 Visual Basic 프로그램을 컴파일할 수 또는 실
 >  Visual Studio IDE를 사용 하 여 프로젝트를 빌드할 때 연결에 대 한 정보를 표시할 수 있습니다 **vbc** 출력 창에 해당 컴파일러 옵션을 사용 하 여 명령입니다. 이 정보를 표시 하려면 열을 [옵션 대화 상자, 프로젝트 및 솔루션, 빌드 및 실행](/visualstudio/ide/reference/options-dialog-box-projects-and-solutions-build-and-run), 설정한 후 합니다 **MSBuild 프로젝트 빌드 출력의 자세한 정도** 에 **보통** 또는 더 높은 수준의 세부 정보 표시 합니다.   
   
 ## <a name="see-also"></a>참고자료
+
 - [Visual Basic 명령줄 컴파일러](../../../visual-basic/reference/command-line-compiler/index.md)
 - [조건부 컴파일](../../../visual-basic/programming-guide/program-structure/conditional-compilation.md)

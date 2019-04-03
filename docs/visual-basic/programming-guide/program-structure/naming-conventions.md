@@ -10,12 +10,12 @@ helpviewer_keywords:
 - names [Visual Basic], naming conventions
 - naming conventions [Visual Basic], classes
 ms.assetid: 164949a4-2a7c-4736-9d82-9c3078e2e56c
-ms.openlocfilehash: ebb9d21e32993f2eb035993d32dc3de7d97b49f6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 46f59403feced4baafef4662065cb7daedbeaa7b
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54672138"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58837080"
 ---
 # <a name="visual-basic-naming-conventions"></a>Visual Basic 명명 규칙
 Visual Basic 응용 프로그램의 요소에 이름을 지정할 때 해당 이름의 첫 번째 문자는 영문자 또는 밑줄 이어야 합니다. 단, 밑줄로 시작 하는 이름에 맞지 않는 합니다 [Language Independence and Language-independent Components](../../../standard/language-independence-and-language-independent-components.md) (CLS).  
@@ -41,6 +41,7 @@ Visual Basic 응용 프로그램의 요소에 이름을 지정할 때 해당 이
 -   내부 범위에서 외부 범위에서 이름으로 동일한 이름을 사용 하지 마십시오. 잘못 된 변수에 액세스 하는 경우 오류가 발생할 수 있습니다. 변수와 이름이 같은 키워드 간에 충돌이 발생할 경우 적절 한 형식 라이브러리를 사용 하 여 앞에 키워드를 식별 해야 합니다. 예를 들어 호출 이라는 변수가 있다고 `Date`, 내장 함수를 사용할 수 있습니다 `Date` 함수를 호출 하 여만 <xref:System.DateTime.Date%2A?displayProperty=nameWithType>합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [코드에서 요소 이름으로 사용되는 키워드](../../../visual-basic/programming-guide/program-structure/keywords-as-element-names-in-code.md)
 - [Me, My, MyBase 및 MyClass](../../../visual-basic/programming-guide/program-structure/me-my-mybase-and-myclass.md)
 - [선언 요소 이름](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)

@@ -1,15 +1,15 @@
 ---
-title: '샘플 XML 파일: 여러 구매 주문 (LINQ to XML)'
+title: '샘플 XML 파일: 여러 구매 주문(LINQ to XML)'
 ms.date: 07/20/2015
 ms.assetid: 08e148ff-4070-4bb4-b089-306f4a9a7641
-ms.openlocfilehash: 676592b0bd77a10fa8bb5fa01bf3b3a06af1ca46
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0a3edba9d071b04e67d5350c9833fc515a08f218
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54623484"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58835676"
 ---
-# <a name="sample-xml-file-multiple-purchase-orders-linq-to-xml"></a>샘플 XML 파일: 여러 구매 주문 (LINQ to XML)
+# <a name="sample-xml-file-multiple-purchase-orders-linq-to-xml"></a>샘플 XML 파일: 여러 구매 주문(LINQ to XML)
 다음 XML 파일은 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 설명서의 다양한 예제에서 사용됩니다. 이 파일에는 몇 가지 구매 주문이 포함되어 있습니다.  
   
 ## <a name="purchaseordersxml"></a>PurchaseOrders.xml  
@@ -110,4 +110,5 @@ ms.locfileid: "54623484"
 ```  
   
 ## <a name="see-also"></a>참고자료
+
 - [샘플 XML 문서(LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)

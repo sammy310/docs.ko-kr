@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30617
 ms.assetid: 5e9de8e5-d26b-4fb2-9e28-814413fe9cef
-ms.openlocfilehash: 0820763cce9cc27f9a379ed5e766e0691a75f36b
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: bf0239422fb5a98e4670aea407f684753d3a7ea4
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55271267"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58825445"
 ---
 # <a name="module-statements-can-occur-only-at-file-or-namespace-level"></a>'Module' 문은 파일이나 네임스페이스 수준에서만 사용할 수 있습니다.
 `Module` 문을 소스 파일의 맨 위에 있는 나타나야 직후 `Option` 및 `Imports` 문, 전역 특성 및 네임 스페이스 선언을 다른 모든 선언 앞입니다.  
@@ -24,4 +24,5 @@ ms.locfileid: "55271267"
 -   `Module` 문을 네임스페이스 선언 또는 원본 파일의 맨 위로 이동합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [Module 문](../../../visual-basic/language-reference/statements/module-statement.md)

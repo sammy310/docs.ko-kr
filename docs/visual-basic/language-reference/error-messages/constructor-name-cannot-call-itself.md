@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30298
 ms.assetid: 2d77b7f4-0640-4f89-9c65-f101fd2847c0
-ms.openlocfilehash: 67933e9365b1aa18063f0ccf3c2146a261e7eafc
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: ef20f74055a07071ef9634973c6852ac58c3143c
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55276044"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58824722"
 ---
 # <a name="constructor-name-cannot-call-itself"></a>생성자 '\<이름 >' 자신을 호출할 수 없습니다.
 `Sub New` 클래스 또는 구조체에서 프로시저가 자신을 호출 합니다.  
@@ -28,4 +28,5 @@ ms.locfileid: "55276044"
 2.  다른 생성자를 호출 하지 않을 경우 제거 된 `Sub New` 전적으로 호출 합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [개체 수명: 개체가 만들어지고 제거 하는 방법](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-lifetime-how-objects-are-created-and-destroyed.md)

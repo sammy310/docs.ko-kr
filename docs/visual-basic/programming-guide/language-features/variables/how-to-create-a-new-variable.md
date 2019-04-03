@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Dim statement [Visual Basic]
 - variables [Visual Basic], creating
 ms.assetid: 35300be3-77b0-4bef-a156-034d3cdedde0
-ms.openlocfilehash: db317b160a27c7e38bddba82eb4eac3088886705
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 86236f7e6f4821cc45dfab80273d82b6f167fba8
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54506890"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58823287"
 ---
 # <a name="how-to-create-a-new-variable-visual-basic"></a>방법: 새 변수 (Visual Basic) 만들기
 변수를 만들 수는 [Dim 문](../../../../visual-basic/language-reference/statements/dim-statement.md)합니다.  
@@ -56,6 +56,7 @@ ms.locfileid: "54506890"
     ```  
   
 ## <a name="see-also"></a>참고자료
+
 - [변수](../../../../visual-basic/programming-guide/language-features/variables/index.md)
 - [변수 선언](../../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)
 - [선언 요소 이름](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)

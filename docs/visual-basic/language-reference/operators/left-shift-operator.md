@@ -8,12 +8,12 @@ helpviewer_keywords:
 - << operator [Visual Basic]
 - operator <<, Visual Basic left shift operator
 ms.assetid: fdb93d25-81ba-417f-b808-41207bfb8440
-ms.openlocfilehash: 329cdf1aea9ca97db000bb5ced8d9e8d6b7a4f58
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 75c16c27dc919ba365cbe3c28c61a1e46496b0ae
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56970560"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58824288"
 ---
 # <a name="-operator-visual-basic"></a>\<\< 연산자 (Visual Basic)
 비트 패턴에 산술 왼쪽된 시프트를 수행합니다.  
@@ -73,6 +73,7 @@ result = pattern << amount
  에 대 한 이동량 `result4` 17 같이 계산 됩니다. 1 및 15입니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [비트 시프트 연산자](../../../visual-basic/language-reference/operators/bit-shift-operators.md)
 - [할당 연산자](../../../visual-basic/language-reference/operators/assignment-operators.md)
 - [<<= 연산자](../../../visual-basic/language-reference/operators/left-shift-assignment-operator.md)

@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - decision structures [Visual Basic]
 ms.assetid: 6885d426-fa87-4e1c-881f-f0e9ec8d98af
-ms.openlocfilehash: e7757614ac0c3a098b140c1ca6a838c2d3808c55
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d3884f99a79a66ed8f8b25975b25a110c7341849
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54505762"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58813609"
 ---
 # <a name="control-flow-summary-visual-basic"></a>제어 흐름 요약(Visual Basic)
 Visual Basic 언어 키워드 및 런타임 라이브러리 멤버 용도 따라 구성 됩니다 사용 합니다.  
@@ -23,5 +23,6 @@ Visual Basic 언어 키워드 및 런타임 라이브러리 멤버 용도 따라
 |절차를 따르십시오.|[호출](../../../visual-basic/language-reference/statements/call-statement.md)하십시오 [함수](../../../visual-basic/language-reference/statements/function-statement.md)를 [속성](../../../visual-basic/language-reference/statements/property-statement.md), [하위](../../../visual-basic/language-reference/statements/sub-statement.md)|  
   
 ## <a name="see-also"></a>참고자료
-- [키워드](../../../visual-basic/language-reference/keywords/index.md)
+
+- [C++ 키워드](../../../visual-basic/language-reference/keywords/index.md)
 - [Visual Basic 런타임 라이브러리 멤버](../../../visual-basic/language-reference/runtime-library-members.md)

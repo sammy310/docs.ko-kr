@@ -26,12 +26,12 @@ helpviewer_keywords:
 - declaration statements [Visual Basic]
 - scalar variables [Visual Basic]
 ms.assetid: ad1c5e07-dcd7-4ae1-a79e-ad3f2dcc2083
-ms.openlocfilehash: 6ee30e885a08d3e8302d7b6083c1c65e525006c5
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 8f5f3172eaa6b43d9b07aefa0036708b26087777
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56973433"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58824119"
 ---
 # <a name="redim-statement-visual-basic"></a>ReDim 문(Visual Basic)
 배열 변수의 저장 공간을 다시 할당합니다.  
@@ -101,6 +101,7 @@ ReDim [ Preserve ] name(boundlist) [ ,  name(boundlist) [, ... ] ]
  추가 예제를 보려면 [배열](../../../visual-basic/programming-guide/language-features/arrays/index.md)합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.IndexOutOfRangeException>
 - [Const 문](../../../visual-basic/language-reference/statements/const-statement.md)
 - [Dim 문](../../../visual-basic/language-reference/statements/dim-statement.md)

@@ -2,12 +2,12 @@
 title: 고급 LINQ to XML 프로그래밍 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 36018532-a55c-4538-8a27-98f475ea3415
-ms.openlocfilehash: 1aae385db8f989aa142f588bb459486b805074e5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f30f8f1c6dcdbabc1f32f4f7e216ce65a50396c6
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54668381"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58835325"
 ---
 # <a name="advanced-linq-to-xml-programming-visual-basic"></a>고급 LINQ to XML 프로그래밍 (Visual Basic)
 이 단원에서는 특정 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 시나리오의 고급 개발자에게만 해당될 수 있는 정보를 제공합니다.  
@@ -29,4 +29,5 @@ ms.locfileid: "54668381"
 |[LINQ to XML로 WPF 데이터 바인딩](/visualstudio/designers/wpf-data-binding-with-linq-to-xml)|Windows Presentation Foundation 애플리케이션의 데이터 바인딩에 대한 데이터 소스로 LINQ to XML을 사용하는 방법에 대해 설명합니다.|  
   
 ## <a name="see-also"></a>참고자료
+
 - [프로그래밍 가이드 (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/programming-guide-linq-to-xml.md)

@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - My.Computer.Keyboard object
 ms.assetid: 78dec9be-4e69-4ede-b9be-2ac34bec2b26
-ms.openlocfilehash: c1cfe7c99473e1b4895fb7f0b9044f2520c8eef5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 19e2780d526c0ae37d6577aef25a5a4940005cb1
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54733147"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58832231"
 ---
 # <a name="mycomputerkeyboard-object"></a>My.Computer.Keyboard 개체
 현재 누른 키 등 키보드의 현재 상태에 액세스하기 위한 속성을 제공하고, 활성 창에 키 입력을 보내기 위한 메서드를 제공합니다.  
@@ -27,4 +27,5 @@ ms.locfileid: "54733147"
  **어셈블리:** Visual Basic 런타임 라이브러리(Microsoft.VisualBasic.dll)  
   
 ## <a name="see-also"></a>참고자료
+
 - [My.Computer 개체](../../../visual-basic/language-reference/objects/my-computer-object.md)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - colors [Windows Forms], transforming with color matrices
 - colors [Windows Forms], shearing
 ms.assetid: 0a424171-5b8b-45c4-afef-e9720a6c3e22
-ms.openlocfilehash: eff468e5761038723e16eddf84bdcf8849ac30d1
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: bb5f9043ea5bdd25e984d73d3640c80f599714e6
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57720227"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58826394"
 ---
 # <a name="how-to-shear-colors"></a>방법: 색 전단
 기울이기 증가 또는 색 구성 요소를 다른 색 구성 요소에 비례 하는 양을 감소 합니다. 예를 들어 빨강 구성 요소를 0.5 파랑 구성 요소 값 만큼 늘리는 변환입니다. 이러한 변환에서 (0.2, 0.5, 1) 색 (0.7, 0.5, 1) 될 것입니다. 새 빨강 구성 요소는 0.2 + (1/2)(1) 0.7입니다.  
@@ -21,9 +21,9 @@ ms.locfileid: "57720227"
 ## <a name="example"></a>예제  
  다음 예제에서는 생성 된 <xref:System.Drawing.Image> ColorBars4.bmp 파일에서 개체입니다. 다음 코드는 각 픽셀 이미지에 이전 단락에 설명 된 기울이기 변환을 적용 됩니다.  
   
- 다음 그림에서는 오른쪽에서 왼쪽의 원래 이미지와 기울이기가 적용 된 이미지를 보여 줍니다.  
+ 다음 그림에서는 오른쪽에서 왼쪽의 원래 이미지와 기울이기가 적용 된 이미지를 보여 줍니다. 
   
- ![색 전단](./media/colortrans6.png "colortrans6")  
+ ![색이 지정 된 줄무늬-side-by-side 원본 이미지와 기울이기가 적용 된 이미지를 보여 주는 사용 하 여 두 개의 사각형입니다.](./media/how-to-shear-colors/original-image-sheared-image.png)  
   
  다음 표에서 전과 기울이기 변환 후 4 개 막대에 대 한 색 벡터를 나열합니다.  
   

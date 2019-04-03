@@ -7,19 +7,19 @@ helpviewer_keywords:
 - controls [WPF], BulletDecorator
 - BulletDecorator control [WPF]
 ms.assetid: 1756cabf-59b4-47a7-883d-1bdf2e5abe00
-ms.openlocfilehash: 38efb1ba0ed9ed34d256418ae60b863fccc8eaf1
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: d5839a75434f71ff6dd91b86474aeab2e8b0ad64
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57377298"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58824990"
 ---
 # <a name="bulletdecorator"></a>BulletDecorator
 <xref:System.Windows.Controls.Primitives.BulletDecorator> 두 개의 콘텐츠 속성이: <xref:System.Windows.Controls.Primitives.BulletDecorator.Bullet%2A> 고 <xref:System.Windows.Controls.Decorator.Child%2A>입니다. 합니다 <xref:System.Windows.Controls.Primitives.BulletDecorator.Bullet%2A> 속성을 정의 합니다 <xref:System.Windows.UIElement> 글머리 기호로 사용 하 합니다. <xref:System.Windows.Controls.Decorator.Child%2A> 속성 정의 <xref:System.Windows.UIElement> 글머리 기호를 시각적으로 하는 게 부합 합니다.  
   
  다음 그림은 <xref:System.Windows.Controls.Primitives.BulletDecorator>를 사용하는 컨트롤에 대한 예제를 보여주는 그림입니다.  
   
- ![3 BulletDecorators: 확인란, 라디오 단추, 텍스트 상자](./media/bulletdecorator.png "BulletDecorator")  
+ ![확인란, 라디오 단추, 및 TextBox/구성 decorator의 예입니다.](./media/bulletdecorator/three-bullet-decorators.png)  
   
 ## <a name="reference"></a>참조  
  <xref:System.Windows.Controls.Primitives.BulletDecorator>

@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30812
 ms.assetid: 5091a250-be66-413b-98a3-2a9974c4d600
-ms.openlocfilehash: dbbcc748a65942e3a89785b267e9231f4a4a01a8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 01c0abb366e8605a9b153333e645fc3276b6bd16
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54686181"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58821727"
 ---
 # <a name="optional-parameters-must-specify-a-default-value"></a>선택적 매개 변수는 기본값을 지정해야 합니다.
 선택적 매개 변수는 매개 변수가 없는 호출 프로시저에서 제공 하는 경우 사용할 수 있는 기본 값을 제공 해야 합니다.  
@@ -31,4 +31,5 @@ ms.locfileid: "54686181"
     ```  
   
 ## <a name="see-also"></a>참고자료
+
 - [선택 사항](../../../visual-basic/language-reference/modifiers/optional.md)

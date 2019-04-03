@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Return statement [Visual Basic]
 - expressions [Visual Basic], returning control to
 ms.assetid: ac86e7f0-5a67-42c3-9834-0e0381efa3ec
-ms.openlocfilehash: 00d9f09bed513199d579c9e1c3f831b729e68839
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 7f8ec0456576133d37dd19b5c0f8878a7ac57dab
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56977138"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58831729"
 ---
 # <a name="return-statement-visual-basic"></a>Return 문(Visual Basic)
 호출한 코드로 제어가 되돌아갑니다를 `Function`, `Sub`를 `Get`를 `Set`, 또는 `Operator` 프로시저입니다.  
@@ -47,6 +47,7 @@ Return expression
  [!code-vb[VbVbalrStatements#53](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#53)]  
   
 ## <a name="see-also"></a>참고자료
+
 - [Function 문](../../../visual-basic/language-reference/statements/function-statement.md)
 - [Sub 문](../../../visual-basic/language-reference/statements/sub-statement.md)
 - [Get 문](../../../visual-basic/language-reference/statements/get-statement.md)

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - decryption [Visual Basic], strings
 - strings [Visual Basic], decrypting
 ms.assetid: 1f51e40a-2f88-43e2-a83e-28a0b5c0d6fd
-ms.openlocfilehash: fe91e0062ac35859a3b85eb080d16fb88a6f9aaf
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: aaf8238a330ceb9e1cf4f9ff5892d1db1d951faa
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56972783"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58826797"
 ---
 # <a name="walkthrough-encrypting-and-decrypting-strings-in-visual-basic"></a>연습: 암호화 및 Visual Basic의 문자열을 암호 해독
 이 연습에서는 사용 하는 방법을 보여 줍니다 합니다 <xref:System.Security.Cryptography.DESCryptoServiceProvider> 암호화 및 3des(triple Data Encryption Standard의 암호화 서비스 공급자 (CSP) 버전을 사용 하 여 문자열을 해독 하는 클래스 (<xref:System.Security.Cryptography.TripleDES>) 알고리즘입니다. 첫 번째 단계는 3DES 알고리즘을 캡슐화 하 고 base-64로 인코딩된 문자열로 암호화 된 데이터를 저장 하는 간단한 래퍼 클래스를 만드는 것입니다. 그런 다음 해당 래퍼를 사용 하 여 안전 하 게 공개적으로 액세스할 텍스트 파일에서 사용자 개인 데이터를 저장 합니다.  
@@ -75,6 +75,7 @@ ms.locfileid: "56972783"
      응용 프로그램을 테스트 하는 해독 되지 않습니다 데이터가 잘못 된 암호를 제공 하는 경우 알 수 있습니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Security.Cryptography>
 - <xref:System.Security.Cryptography.DESCryptoServiceProvider>
 - <xref:System.Security.Cryptography.DES>

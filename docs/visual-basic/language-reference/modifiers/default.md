@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Default keyword [Visual Basic]
 - default properties
 ms.assetid: 45fce9b9-d212-4b2d-ab86-6e359b8b57af
-ms.openlocfilehash: b63fa66c9cda1e439e3917ca62377f68028fc049
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f78ffe42a9d618d44da2a50c0de831396576430c
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54497843"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58836729"
 ---
 # <a name="default-visual-basic"></a>Default(Visual Basic)
 해당 클래스, 구조체 또는 인터페이스의 기본 속성으로 속성을 식별합니다.  
@@ -36,5 +36,6 @@ ms.locfileid: "54497843"
  [Property 문](../../../visual-basic/language-reference/statements/property-statement.md)  
   
 ## <a name="see-also"></a>참고자료
+
 - [방법: 선언 및 Visual Basic의 기본 속성을 호출](../../../visual-basic/programming-guide/language-features/procedures/how-to-declare-and-call-a-default-property.md)
-- [키워드](../../../visual-basic/language-reference/keywords/index.md)
+- [C++ 키워드](../../../visual-basic/language-reference/keywords/index.md)

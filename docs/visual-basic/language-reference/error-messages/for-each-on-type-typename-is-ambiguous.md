@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC32096
 ms.assetid: ed20d09c-913f-482e-89f8-c0a596c3ec24
-ms.openlocfilehash: 4a9032a00079b39851a3e8a80bc8f9bbdea1817c
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 6c34ca43decc3c5d8c72b529d8f51d7cc3b0c6b3
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55281231"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58833388"
 ---
 # <a name="for-each-on-type-typename-is-ambiguous-because-the-type-implements-multiple-instantiations-of-systemcollectionsgenericienumerableof-t"></a>'For Each' 형식에 '\<typename >' 형식을 'System.Collections.Generic.IEnumerable (Of T)'의 여러 인스턴스화를 구현 하기 때문에 모호
 A `For Each` 둘 이상 있는 반복기 변수를 지정 하는 문을 <xref:System.Collections.IEnumerable.GetEnumerator%2A> 메서드.  
@@ -26,5 +26,6 @@ A `For Each` 둘 이상 있는 반복기 변수를 지정 하는 문을 <xref:Sy
 -   사용 하 여 [DirectCast 연산자](../../../visual-basic/language-reference/operators/directcast-operator.md) 또는 [TryCast 연산자](../../../visual-basic/language-reference/operators/trycast-operator.md) 정의 하는 인터페이스를 반복기 변수 형식으로 캐스팅할는 <xref:System.Collections.IEnumerable.GetEnumerator%2A> 메서드를 사용 합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [For Each...Next 문](../../../visual-basic/language-reference/statements/for-each-next-statement.md)
 - [인터페이스](../../../visual-basic/programming-guide/language-features/interfaces/index.md)

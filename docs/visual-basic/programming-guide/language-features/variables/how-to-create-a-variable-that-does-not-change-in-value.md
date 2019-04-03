@@ -5,12 +5,12 @@ helpviewer_keywords:
 - variables [Visual Basic], read-only
 - variables [Visual Basic], constant value
 ms.assetid: 86b59266-25df-4635-ae15-9b59c411d036
-ms.openlocfilehash: 626b46123e3047b391cd67d3e85c25c5432b2a69
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 57792db826caa996e163bc0a51b01a6bbd6a4858
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54640201"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58823326"
 ---
 # <a name="how-to-create-a-variable-that-does-not-change-in-value-visual-basic"></a>방법: (Visual Basic) 값이 변경 되지 않는 변수 만들기
 해당 값을 변경 하지 않는 변수의 개념 모순 되 게 나타날 수 있습니다. 상수 불가능 한 경우에 있고 변수를 fixed 값을 가진 것이 유용 합니다. 이러한 경우에 사용 하 여 멤버 변수를 정의할 수 있습니다 합니다 [ReadOnly](../../../../visual-basic/language-reference/modifiers/readonly.md) 키워드입니다.  
@@ -44,5 +44,6 @@ ms.locfileid: "54640201"
      컴파일 타임에 값을 알지 못하는 하거나 단일 문에서 컴파일 시간에 계산할 수 없습니다. 생성자에서 런타임 시 계속 할당할 수 있습니다. 이 작업을 수행 하려면 선언 해야 합니다 `ReadOnly` 클래스 또는 구조 수준에서 변수입니다. 해당 클래스 또는 구조체에 대 한 생성자에서 변수의 고정된 값을 계산 하 고 생성자에서 반환 하기 전에를 변수에 할당 합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [WriteOnly](../../../../visual-basic/language-reference/modifiers/writeonly.md)
 - [Const 문](../../../../visual-basic/language-reference/statements/const-statement.md)

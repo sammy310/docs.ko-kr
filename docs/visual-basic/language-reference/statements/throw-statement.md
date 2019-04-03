@@ -14,12 +14,12 @@ helpviewer_keywords:
 - exception handling, unstructured
 - throw statement [Visual Basic]
 ms.assetid: a6e07406-5c8a-4498-87a2-8339f3651d62
-ms.openlocfilehash: c17adc6df0f8cf94f06547b48a32b2ffb8f303ca
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 2494eac2f61f112f3ba6321ada7404f8cd618049
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56973485"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58821394"
 ---
 # <a name="throw-statement-visual-basic"></a>Throw 문(Visual Basic)
 프로시저 내에서 예외가 throw 됩니다.  
@@ -54,5 +54,6 @@ Throw [ expression ]
  **어셈블리:** Visual Basic 런타임 라이브러리(Microsoft.VisualBasic.dll)  
   
 ## <a name="see-also"></a>참고자료
+
 - [Try...Catch...Finally 문](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)
 - [On Error 문](../../../visual-basic/language-reference/statements/on-error-statement.md)

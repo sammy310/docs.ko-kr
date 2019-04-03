@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Main method [Visual Basic]
 - main function
 ms.assetid: f0db283e-f283-4464-b521-b90858cc1b44
-ms.openlocfilehash: b84bf20acaaa912e47102973b0484d635f1aa244
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 641edd2d0e0dde5f509c8fa77ccf65358fa76a31
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54679424"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58833674"
 ---
 # <a name="main-procedure-in-visual-basic"></a>Visual Basic의 Main 프로시저
 모든 Visual Basic 응용 프로그램 라는 프로시저에 있어야 합니다. `Main`합니다. 이 절차에는 시작 지점 및 응용 프로그램에 대 한 전체 제어 하는 대로 사용 됩니다. .NET Framework 호출 프로그램 `Main` 프로시저 응용 프로그램 로드 시 컨트롤 전달할 준비가 되었습니다. 작성 해야 합니다는 Windows Forms 응용 프로그램을 만들 경우를 제외 합니다 `Main` 자체적으로 실행 하는 응용 프로그램에 대 한 절차입니다.  
@@ -109,6 +109,7 @@ ms.locfileid: "54679424"
     ```  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:Microsoft.VisualBasic.Interaction.MsgBox%2A>
 - <xref:System.Array.Length%2A>
 - <xref:Microsoft.VisualBasic.Information.UBound%2A>

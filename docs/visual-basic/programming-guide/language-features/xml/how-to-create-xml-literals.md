@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - XML literals [Visual Basic], creating
 ms.assetid: 573a6db5-b14d-4e42-b356-8cc7e2d77745
-ms.openlocfilehash: c79b607f9ce5c779539b7700feafb7d4e3d67d24
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 836ec4390e7675effe57c75c79768272d66925a3
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56974252"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58836868"
 ---
 # <a name="how-to-create-xml-literals-visual-basic"></a>방법: XML 리터럴 (Visual Basic) 만들기
 코드에서 직접 XML 리터럴을 사용 하 여 XML 문서, 조각 또는 요소를 만들 수 있습니다. 이 항목의 예제에는 세 개의 자식 요소가 있는 XML 요소를 만드는 방법 및 XML 문서를 만드는 방법을 보여 줍니다.  
@@ -22,7 +22,7 @@ ms.locfileid: "56974252"
   
      [!code-vb[VbXMLSamples#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples2.vb#5)]  
   
-     코드를 실행 합니다. 이 코드의 출력이 됩니다.  
+     코드를 실행합니다. 이 코드의 출력이 됩니다.  
   
      `<contact>`  
   
@@ -40,7 +40,7 @@ ms.locfileid: "56974252"
   
      [!code-vb[VbXMLSamples#30](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples13.vb#30)]  
   
-     코드를 실행 합니다. 이 코드의 출력이 됩니다.  
+     코드를 실행합니다. 이 코드의 출력이 됩니다.  
   
      `<?xml-stylesheet type="text/xsl" href="show_book.xsl"?>`  
   
@@ -53,6 +53,7 @@ ms.locfileid: "56974252"
      `</books>`  
   
 ## <a name="see-also"></a>참고자료
+
 - [XML](../../../../visual-basic/programming-guide/language-features/xml/index.md)
 - [Visual Basic에서 XML 만들기](../../../../visual-basic/programming-guide/language-features/xml/creating-xml.md)
 - [XML 요소 리터럴](../../../../visual-basic/language-reference/xml-literals/xml-element-literal.md)

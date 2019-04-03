@@ -13,12 +13,12 @@ helpviewer_keywords:
 - arguments [Visual Basic], ByRef
 - arguments [Visual Basic], changing value
 ms.assetid: 6fad2368-5da7-4c07-8bf8-0f4e65a1be67
-ms.openlocfilehash: ea91e88f6833b9a3abbb349688c277be10312a6c
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 6aee795fefe36c2ad19390c0ac6d1613b2199415
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56974915"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58837502"
 ---
 # <a name="how-to-change-the-value-of-a-procedure-argument-visual-basic"></a>방법: (Visual Basic) 프로시저 인수의 값 변경
 프로시저를 호출 하는 경우 각 인수를 제공 하는 프로시저에 정의 된 매개 변수 중 하나에 해당 합니다. 일부 경우에 프로시저 코드 호출 코드에서 인수를 기본 값을 변경할 수 있습니다. 절차는 다른 경우에만 인수로의 자체 로컬 복사본을 변경할 수 있습니다.  
@@ -78,6 +78,7 @@ ms.locfileid: "56974915"
  호출 코드에서 인수를 기본 값을 변경 하는 절차를 허용할 위험할은 항상 있습니다. 원하는이 값이 변경 되 고 사용 하기 전에 유효성을 검사할 준비가 되어 있는지 확인 합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [절차](./index.md)
 - [프로시저 매개 변수 및 인수](./procedure-parameters-and-arguments.md)
 - [방법: 프로시저에 인수 전달](./how-to-pass-arguments-to-a-procedure.md)

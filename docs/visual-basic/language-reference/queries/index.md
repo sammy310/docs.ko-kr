@@ -5,12 +5,12 @@ helpviewer_keywords:
 - queries [Visual Basic]
 - LINQ, queries
 ms.assetid: 8edc717c-4a24-4cbc-9c16-11f479c935db
-ms.openlocfilehash: 79ae5f1c2184f99390b1ef36a91f556cc617e51f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1ea49b16f70c0af87bbd3a8978fb10fe08d5ce6b
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54746753"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58836898"
 ---
 # <a name="queries-visual-basic"></a>쿼리(Visual Basic)
 Visual Basic을 사용 하면 만들 수 있습니다 [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] 코드 식입니다.  
@@ -59,5 +59,6 @@ Visual Basic을 사용 하면 만들 수 있습니다 [!INCLUDE[vbteclinqext](~/
  에 대해 설명 합니다 `Where` 쿼리에 대 한 필터링 조건을 지정 하는 절.  
   
 ## <a name="see-also"></a>참고자료
+
 - [LINQ](../../../visual-basic/programming-guide/language-features/linq/index.md)
 - [Visual Basic의 LINQ 소개](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)

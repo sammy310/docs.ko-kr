@@ -7,12 +7,12 @@ helpviewer_keywords:
 - extending data types [Visual Basic]
 - extension methods [Visual Basic]
 ms.assetid: b8020aae-374d-46a9-bcb7-8cc2390b93b6
-ms.openlocfilehash: a0c1721027307243fbad587afe996cc5f07a6928
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: aca8f18c4bc53318792a119617b1ca0d6c4cc32e
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56970550"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58822078"
 ---
 # <a name="extension-methods-visual-basic"></a>확장 메서드(Visual Basic)
 확장 메서드는 파생된 형식을 새로 만들지 않고 이미 정의 되어 있는 데이터 형식에 사용자 지정 기능을 추가 하는 개발자를 사용 합니다. 확장 메서드 수 있도록 기존 형식의 인스턴스 메서드인 것 처럼 호출할 수 있는 메서드를 작성 합니다.  
@@ -175,6 +175,7 @@ End Module
  우선 순위는 모호성을 해결 되지 않으면, 호출 하는 방법을 지정 하는 정규화 된 이름을 사용할 수 있습니다. 경우는 `Print` 앞의 예제에서는 메서드가 라는 모듈에 정의 되어 `StringExtensions`, 정규화 된 이름은 `StringExtensions.Print(example)` 대신 `example.Print()`합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Runtime.CompilerServices>
 - <xref:System.Runtime.CompilerServices.ExtensionAttribute>
 - [확장명 메서드](../../../../csharp/programming-guide/classes-and-structs/extension-methods.md)

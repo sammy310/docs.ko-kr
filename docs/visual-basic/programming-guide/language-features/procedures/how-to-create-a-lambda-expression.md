@@ -5,12 +5,12 @@ helpviewer_keywords:
 - lambda expressions [Visual Basic]
 - expressions [Visual Basic], lambda
 ms.assetid: 3279bd5c-80f7-410a-a7ba-f7085ed36aa5
-ms.openlocfilehash: 35df64848c0506a1c0a97bd8cd34f158f9febcd7
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 8754049e493ab23b1e7b01d0f315b00bdebf0378
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56970170"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58841422"
 ---
 # <a name="how-to-create-a-lambda-expression-visual-basic"></a>방법: 람다 식 (Visual Basic) 만들기
 A *람다 식* 은 함수 또는 서브루틴에 이름이 없습니다입니다. 람다 식은 대리자 형식이 유효한 모든 곳에서 사용할 수 있습니다.  
@@ -105,6 +105,7 @@ A *람다 식* 은 함수 또는 서브루틴에 이름이 없습니다입니다
  [!code-vb[VbVbalrLambdas#11](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class5.vb#11)]  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Linq.Enumerable>
 - [람다 식](./lambda-expressions.md)
 - [Function 문](../../../../visual-basic/language-reference/statements/function-statement.md)

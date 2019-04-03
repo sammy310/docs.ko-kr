@@ -7,12 +7,12 @@ helpviewer_keywords:
 - XML axis [Visual Basic]
 - XML [Visual Basic], accessing
 ms.assetid: 7e400e20-5d1e-4d22-a65c-9df79d5c1621
-ms.openlocfilehash: 28d8e96190328fba0769a0be247cc8b0c6bf1d68
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 90004ff2e9d5fcf1470b34b93091545b2b848b33
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54746761"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58834043"
 ---
 # <a name="xml-axis-properties-visual-basic"></a>XML 축 속성(Visual Basic)
 이 섹션의에서 항목에서는 Visual Basic의 XML 축 속성 구문을 설명 합니다. XML 축 속성을 쉽게 XML 코드에서 직접 액세스할 수 있습니다.  
@@ -28,4 +28,5 @@ ms.locfileid: "54746761"
 |[XML 값 속성](../../../visual-basic/language-reference/xml-axis/xml-value-property.md)|컬렉션의 첫 번째 요소의 값에 액세스 하는 방법에 설명 <xref:System.Xml.Linq.XElement> 또는 <xref:System.Xml.Linq.XAttribute> 개체입니다.|  
   
 ## <a name="see-also"></a>참고자료
+
 - [XML](../../../visual-basic/programming-guide/language-features/xml/index.md)

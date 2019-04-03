@@ -1,12 +1,12 @@
 ---
 title: 보간된 문자열 (Visual Basic)
 ms.date: 10/31/2017
-ms.openlocfilehash: eadd1d86c3294d7a19f2ef6d2ed767ed08430750
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e2afe5d330622557f59ad31a6d8a7afd74ba8536
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54647909"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58826758"
 ---
 # <a name="interpolated-strings-visual-basic-reference"></a>보간된 문자열 (Visual Basic 참조)
 
@@ -77,7 +77,7 @@ $"<text> {<interpolated-expression> [,<field-width>] [:<format-string>] } <text>
    [!code-vb[interpolated-strings3](../../../../../samples/snippets/visualbasic/programming-guide/language-features/strings/interpolated-strings3.vb)]  
 
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.IFormattable?displayProperty=nameWithType>
 - <xref:System.FormattableString?displayProperty=nameWithType>
 - [Visual Basic 언어 참조](index.md)
-

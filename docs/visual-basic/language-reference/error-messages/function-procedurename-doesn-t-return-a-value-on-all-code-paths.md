@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC42105
 ms.assetid: b6929bf4-a365-4a70-8dc9-6b0fc09e1468
-ms.openlocfilehash: 9782bb49a3327c6a8bd9938eca7cb3e899818784
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: badcfea4f24ba3858071e02ba47b8f77ab557f88
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55281062"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58824834"
 ---
 # <a name="function-procedurename-doesnt-return-a-value-on-all-code-paths"></a>함수 '\<procedurename >' 일부 코드 경로의 값을 반환 하지 않습니다
 함수 '\<procedurename >' 일부 코드 경로의 값을 반환 하지 않습니다. 'Return' 문이 누락 되었습니까?  
@@ -40,6 +40,7 @@ ms.locfileid: "55281062"
      항상 사용 하는 경우 프로시저에서 모든 반환 값을 반환 하는 데 쉽습니다는 `Return` 문입니다. 이렇게 하면, 앞의 마지막 문이 `End Function` 이어야 합니다는 `Return` 문입니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [Function 프로시저](../../../visual-basic/programming-guide/language-features/procedures/function-procedures.md)
 - [Function 문](../../../visual-basic/language-reference/statements/function-statement.md)
 - [프로젝트 디자이너, 컴파일 페이지(Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic)

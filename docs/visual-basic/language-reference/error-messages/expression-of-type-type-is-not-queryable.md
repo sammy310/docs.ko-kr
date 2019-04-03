@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC36593
 ms.assetid: 6f1f5860-bf97-4885-9ebb-bc87d028095c
-ms.openlocfilehash: 06b2a7f5c6bd838d09fd39f31778462c364fb8bd
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 7f74d56b47629ff76f9b935d26278ace8df4c353
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55261258"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58842332"
 ---
 # <a name="expression-of-type-type-is-not-queryable"></a>형식의 식은 \<유형 >를 쿼리할 수 없습니다
 형식의 식은 \<유형 >를 쿼리할 수 없습니다. LINQ 공급자에 대 한 어셈블리 참조 및/또는 네임 스페이스 가져오기가 없습니다 있는지 확인 합니다.  
@@ -34,6 +34,7 @@ ms.locfileid: "55261258"
 2.  원본 쿼리는 쿼리 가능 형식으로 확인 된 형식을 확인 합니다. 구현 하는 형식 이므로 <xref:System.Collections.Generic.IEnumerable%601> 또는 <xref:System.Linq.IQueryable%601>합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Linq>
 - <xref:System.Data.Linq>
 - <xref:System.Xml.Linq>

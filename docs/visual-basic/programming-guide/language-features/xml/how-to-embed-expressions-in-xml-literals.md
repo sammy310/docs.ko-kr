@@ -5,12 +5,12 @@ helpviewer_keywords:
 - embedded expressions [Visual Basic]
 - XML literals [Visual Basic], embedded expressions
 ms.assetid: 75016fad-0141-42de-8564-5051be29487e
-ms.openlocfilehash: 6ecb6a5d684badba68f4c224d5359ea428cfbbf2
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 31e79a8787978ffab2e35cd2827b80a8f1ed843e
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56968714"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58841591"
 ---
 # <a name="how-to-embed-expressions-in-xml-literals-visual-basic"></a>방법: (Visual Basic) XML 리터럴에 식 포함
 XML 리터럴의 XML 문서, 조각 또는 런타임에 생성 하는 콘텐츠를 포함 하는 요소를 만들려면 포함 된 식으로 결합할 수 있습니다. 다음 예제에서는 포함 된 식을 사용 하 여 런타임에 콘텐츠 요소, 특성 및 요소 이름이 채우는 방법을 보여 줍니다.  
@@ -66,6 +66,7 @@ XML 리터럴의 XML 문서, 조각 또는 런타임에 생성 하는 콘텐츠�
     ```  
   
 ## <a name="see-also"></a>참고자료
+
 - [방법: XML 리터럴 만들기](../../../../visual-basic/programming-guide/language-features/xml/how-to-create-xml-literals.md)
 - [XML의 포함 식](../../../../visual-basic/programming-guide/language-features/xml/embedded-expressions-in-xml.md)
 - [Visual Basic에서 XML 만들기](../../../../visual-basic/programming-guide/language-features/xml/creating-xml.md)

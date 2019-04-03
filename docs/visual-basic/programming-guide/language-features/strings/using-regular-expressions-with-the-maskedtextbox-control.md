@@ -5,12 +5,12 @@ helpviewer_keywords:
 - strings [Visual Basic], regular expressions
 - strings [Visual Basic], masked edit
 ms.assetid: 2a048fb0-7053-487d-b2c5-ffa5e22ed6f9
-ms.openlocfilehash: 58c0caa9d1df49ec53273e5b0f456cf89fc64c42
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e0165fb8d573878ae19378b2656d89627680b804
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54683692"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58826747"
 ---
 # <a name="using-regular-expressions-with-the-maskedtextbox-control-in-visual-basic"></a>Visual Basic에서 MaskedTextBox 컨트롤과 함께 정규식 사용
 이 예제에서는 간단한 정규식 작업을 변환 하는 방법에 설명 합니다 <xref:System.Windows.Forms.MaskedTextBox> 제어 합니다.  
@@ -41,7 +41,7 @@ ms.locfileid: "54683692"
 |&#92;|리터럴로 설정 마스크 문자를 이스케이프 합니다. "\\\\" 백슬래시 이스케이프 시퀀스입니다.|&#92;|  
 |다른 모든 문자입니다.|리터럴입니다. 모든 마스크가 아닌 요소 내에 그대로 표시 됩니다 <xref:System.Windows.Forms.MaskedTextBox>합니다.|다른 모든 문자입니다.|  
   
- 소수점 (.), 1/1000 (,), 시간 (:), (/), 날짜 및 통화 ($) 기호 기본 애플리케이션의 문화권에서 정의 된 대로 해당 기호를 표시 합니다. 사용 하 여 다른 문화권에 대 한 기호를 표시 하도록 할 수 있습니다는 <xref:System.Windows.Forms.MaskedTextBox.FormatProvider%2A> 속성입니다.  
+ 소수점 (.), 1/1000 (,), 시간 (:), (/), 날짜 및 통화 ($) 기호 기본 응용 프로그램의 문화권에서 정의 된 대로 해당 기호를 표시 합니다. 사용 하 여 다른 문화권에 대 한 기호를 표시 하도록 할 수 있습니다는 <xref:System.Windows.Forms.MaskedTextBox.FormatProvider%2A> 속성입니다.  
   
 ## <a name="regular-expressions-and-masks"></a>정규식과 마스크  
  사용자 입력 유효성 검사에 정규식 및 마스크를 사용할 수 있습니다, 있지만 완전히 동일 하지 않습니다. 정규식 마스크 보다 더 복잡 한 패턴을 표현할 수 있지만 더 간결 하 고 관련 형식으로에 마스크 동일한 정보를 표현할 수 있습니다.  
@@ -56,6 +56,7 @@ ms.locfileid: "54683692"
 |`$\d{6}.00`|`$999,999.00`|0-999999 사이의 통화 값입니다. 통화, 1000 단위 구분 및 10 진수 문자 바뀝니다 런타임 시 문화권별 해당 합니다.|  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Windows.Forms.MaskedTextBox.Mask%2A>
 - <xref:System.Windows.Forms.MaskedTextBox>
 - [Visual Basic의 문자열 유효성 검사](../../../../visual-basic/programming-guide/language-features/strings/validating-strings.md)

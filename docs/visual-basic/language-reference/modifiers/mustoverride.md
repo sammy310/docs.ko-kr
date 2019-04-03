@@ -15,12 +15,12 @@ helpviewer_keywords:
 - MustOverride keyword [Visual Basic]
 - properties [Visual Basic], overriding
 ms.assetid: 6e9d9ad6-bb64-433f-b32b-3ef84293bf96
-ms.openlocfilehash: fedebf3ee791fbab02ace2ba2dc121590a241c53
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0ddd7d0d2a57afc02aa7483ba5e83b65c48af534
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54627332"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58822819"
 ---
 # <a name="mustoverride-visual-basic"></a>MustOverride(Visual Basic)
 속성 또는 프로시저가이 클래스에서 구현 되지 않습니다 및 사용할 수 전에 파생된 클래스에서 재정의 해야 합니다를 지정 합니다.  
@@ -47,9 +47,10 @@ ms.locfileid: "54627332"
  [Sub 문](../../../visual-basic/language-reference/statements/sub-statement.md)  
   
 ## <a name="see-also"></a>참고자료
+
 - [NotOverridable](../../../visual-basic/language-reference/modifiers/notoverridable.md)
 - [재정의 가능](../../../visual-basic/language-reference/modifiers/overridable.md)
 - [재정의](../../../visual-basic/language-reference/modifiers/overrides.md)
 - [MustInherit](../../../visual-basic/language-reference/modifiers/mustinherit.md)
-- [키워드](../../../visual-basic/language-reference/keywords/index.md)
+- [C++ 키워드](../../../visual-basic/language-reference/keywords/index.md)
 - [Visual Basic의 숨김 기능](../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)

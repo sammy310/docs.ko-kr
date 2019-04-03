@@ -13,12 +13,12 @@ helpviewer_keywords:
 - data types [Visual Basic], declared elements
 - declared elements [Visual Basic], visibility
 ms.assetid: 1bc40fb8-b67c-4428-90a4-76b630ae2583
-ms.openlocfilehash: c34175a90c2c9c247a37ac186a415a585d1d7e97
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 98f6a7738a462e9f36abdc0380cb1fe8d488fb9d
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54582260"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58821298"
 ---
 # <a name="declared-element-characteristics-visual-basic"></a>선언된 요소 특성(Visual Basic)
 A *특징* 선언 된 요소의 요소 코드 상호 작용 하는 방법에 영향을 주는 기능입니다. 선언 된 모든 요소에 하나 이상의 연결 된 다음과 같은 특징이 있습니다.  
@@ -54,6 +54,7 @@ A *특징* 선언 된 요소의 요소 코드 상호 작용 하는 방법에 영
  <sup>1</sup> 범위는 라고도 *가시성*합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [선언 요소](../../../../visual-basic/programming-guide/language-features/declared-elements/index.md)
 - [선언 요소 이름](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)
 - [선언된 요소 참조](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)

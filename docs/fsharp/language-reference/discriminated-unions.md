@@ -2,12 +2,12 @@
 title: 구별된 공용 구조체
 description: 사용 하는 방법을 알아봅니다 F# 구별 된 공용 구조체입니다.
 ms.date: 05/16/2016
-ms.openlocfilehash: 1bb6dc06fb727f85eb5500719b175fc29090450b
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: 9d3f423d068df1c43791919b0d71ca82304ae85e
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53611869"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58821428"
 ---
 # <a name="discriminated-unions"></a>구별된 공용 구조체
 
@@ -156,7 +156,7 @@ Area of rectangle that has height 5.000000 and width 10.000000 is 50.000000
 
 이전 코드에서 `resultSumTree` 값 10이 됩니다. 다음 그림에 대 한 트리 구조를 보여 줍니다. `myTree`합니다.
 
-![Mytree의 트리 구조](../media/TreeStructureDiagram.png)
+![Mytree의 트리 구조를 보여 주는 다이어그램입니다.](../media/discriminated-unions/tree-structure-mytree.png)
 
 구별 된 공용 구조체에는 트리에서 노드 유형이 다른 경우에 작동 합니다. 다음 코드에서 형식 `Expression` 숫자와 변수의 곱하기 및 추가 지 원하는 간단한 프로그래밍 언어에서 식의 추상 구문 트리를 나타냅니다. 재귀 없는 공용 구조체 케이스의 일부 및 중 하나를 나타내고 (`Number`) 또는 변수 (`Variable`). 다른 경우는 재귀적 이며 및 작업을 나타내는 (`Add` 및 `Multiply`), 피연산자가 식도 합니다. `Evaluate` 함수를 재귀적으로 처리 구문 트리 일치 식을 사용 합니다.
 
@@ -173,6 +173,6 @@ Area of rectangle that has height 5.000000 and width 10.000000 is 50.000000
 * `[NoComparison]`
 * `[Struct]`
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참고자료
 
 - [F# 언어 참조](index.md)

@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30002
 ms.assetid: b0faf204-57fd-44de-8c05-9db027eea663
-ms.openlocfilehash: 80a3d31a8a46ce616be2dd2ab27faf0af04876f2
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: c2675d61307d92da1710368668f43af3559060a3
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55275078"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58825042"
 ---
 # <a name="type-typename-is-not-defined"></a>형식 '\<typename >'가 정의 되지 않은
 문에 정의 되지 않은 형식에 대 한 참조를 만들었습니다. 선언문의 형식 같은 정의 `Enum`, `Structure`를 `Class`, 또는 `Interface`합니다.  
@@ -32,6 +32,7 @@ ms.locfileid: "55275078"
 -   대상된.NET 프레임 워크 프로필의 일부인 어셈블리의 형식 인지 확인 합니다. 자세한 내용은 [.NET Framework 대상 지정 오류 문제 해결](/visualstudio/msbuild/troubleshooting-dotnet-framework-targeting-errors)을 참조하세요.  
   
 ## <a name="see-also"></a>참고자료
+
 - [Visual Basic의 네임 스페이스](../../../visual-basic/programming-guide/program-structure/namespaces.md)
 - [Enum 문](../../../visual-basic/language-reference/statements/enum-statement.md)
 - [Structure 문](../../../visual-basic/language-reference/statements/structure-statement.md)

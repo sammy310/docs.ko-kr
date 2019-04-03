@@ -19,12 +19,12 @@ helpviewer_keywords:
 - zeros, trailing
 - Double data type
 ms.assetid: 0c5670f7-fcb1-453a-bef1-374730cd38fd
-ms.openlocfilehash: 456383dd2f38e96a8ff18472ff44c65ba7b4a341
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 701d10a334757a96ffd634204c1e1d5eb5418ce6
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54626487"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58824665"
 ---
 # <a name="double-data-type-visual-basic"></a>Double 데이터 형식(Visual Basic)
 부호 있는 IEEE 64 비트 (8 바이트) 배정밀도 부동 소수점 숫자 값에서-1.79769313486231570 + 308에서-범위에 있는 저장 4.94065645841246544E-324 음수 값을 한 경우 4.94065645841246544 e에서-324 1.79769313486231570 e + 308에 대 한 양수 값입니다. 배정밀도 숫자는 실수의 근사값을 저장 합니다.  
@@ -56,6 +56,7 @@ ms.locfileid: "54626487"
 -   **Framework 형식입니다.** .NET Framework에서 해당하는 형식은 <xref:System.Double?displayProperty=nameWithType> 구조체입니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Double?displayProperty=nameWithType>
 - [데이터 형식](../../../visual-basic/language-reference/data-types/index.md)
 - [Decimal 데이터 형식](../../../visual-basic/language-reference/data-types/decimal-data-type.md)

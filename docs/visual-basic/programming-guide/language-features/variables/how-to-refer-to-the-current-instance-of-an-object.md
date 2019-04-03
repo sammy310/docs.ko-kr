@@ -8,12 +8,12 @@ helpviewer_keywords:
 - current instance
 - object variables [Visual Basic]
 ms.assetid: 7f9b2c77-03cd-428f-adc2-b18070226e7c
-ms.openlocfilehash: d166ce62a2bb0522d1ca7011aeff7afe076c2d8e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3c44748798d5ed554fc9fbded9c3a4d981a66d2f
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54542199"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58823365"
 ---
 # <a name="how-to-refer-to-the-current-instance-of-an-object-visual-basic"></a>방법: 개체 (Visual Basic)의 현재 인스턴스 참조
 합니다 *현재 인스턴스* 는 코드가 현재 실행 중인 개체의 합니다.  
@@ -32,6 +32,7 @@ ms.locfileid: "54542199"
      하지만 `Me` 개체 처럼 변수를 선언할 수 없거나 값을 할당할 합니다. `Me` 항상 현재 인스턴스를 의미합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [개체 변수](../../../../visual-basic/programming-guide/language-features/variables/object-variables.md)
 - [개체 변수 할당](../../../../visual-basic/programming-guide/language-features/variables/object-variable-assignment.md)
 - [Me, My, MyBase 및 MyClass](../../../../visual-basic/programming-guide/program-structure/me-my-mybase-and-myclass.md)

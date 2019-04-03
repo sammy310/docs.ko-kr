@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30616
 ms.assetid: e7658ebc-da45-451b-a409-a0f8915f0beb
-ms.openlocfilehash: 68ec1aac7ee8d292e2a433e0fb35039d4fb317b4
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 15c35cbb829bec782771b584ea25b111b81b5e1f
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55278501"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58827135"
 ---
 # <a name="variable-variablename-hides-a-variable-in-an-enclosing-block"></a>변수 '\<variablename >'가 바깥쪽 블록의 변수를 숨깁니다.
 블록에 포함 된 변수의 다른 로컬 변수와 동일한 이름이 있습니다.  
@@ -35,5 +35,6 @@ ms.locfileid: "55278501"
 -   이 오류는 또 다른 일반적인 소스 내에 선언 된 지역 변수에 액세스 하려고 하는 한 `Try` 별도의 차단 `Catch` 블록입니다. 이 해결 하려면 외부에서 변수를 선언 합니다 `Try...Catch...Finally` 구조입니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [Try...Catch...Finally 문](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)
 - [변수 선언](../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - events [Visual Basic], custom
 - custom events [Visual Basic]
 ms.assetid: 87ebee87-260c-462f-979c-407874debd19
-ms.openlocfilehash: 3bd58a09d016d818c4cc88c1d2527e81a95411e6
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: e4132f51f4dd85ad964042d05f7c5bc0a2e6e3cd
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56967128"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58826628"
 ---
 # <a name="how-to-declare-custom-events-to-conserve-memory-visual-basic"></a>방법: (Visual Basic) 메모리를 절약 하는 사용자 지정 이벤트 선언
 이 응용 프로그램의 메모리 사용량을 낮게 유지 하는 중요 한 몇 가지 경우가 있습니다. 사용자 지정 이벤트를 처리 하는 이벤트에 대해서만 메모리를 사용 하도록 응용 프로그램을 허용 합니다.  
@@ -28,6 +28,7 @@ ms.locfileid: "56967128"
  [!code-vb[VbVbalrEvents#22](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrEvents/VB/Class1.vb#22)]  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.ComponentModel.EventHandlerList>
 - [이벤트](../../../../visual-basic/programming-guide/language-features/events/index.md)
 - [방법: 차단을 방지 하는 사용자 지정 이벤트 선언](../../../../visual-basic/programming-guide/language-features/events/how-to-declare-custom-events-to-avoid-blocking.md)
