@@ -7,28 +7,29 @@ f1_keywords:
 helpviewer_keywords:
 - BC30251
 ms.assetid: aff3e1df-abe6-4bc0-9abc-a1e70514c561
-ms.openlocfilehash: 6a12bc35aeaa6e9e21835ce0a091ee89ea4c326d
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: b06c1d930a3551e9bc175c814a6297894799237d
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55260370"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58837986"
 ---
-# <a name="type-typename-has-no-constructors"></a><span data-ttu-id="57afe-102">형식 '\<typename >'에 생성자가 없습니다</span><span class="sxs-lookup"><span data-stu-id="57afe-102">Type '\<typename>' has no constructors</span></span>
-<span data-ttu-id="57afe-103">형식이 `Sub New()` 호출을 지원하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="57afe-103">A type does not support a call to `Sub New()`.</span></span> <span data-ttu-id="57afe-104">컴파일러 또는 이진 파일이 손상되었기 때문일 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="57afe-104">One possible cause is a corrupted compiler or binary file.</span></span>  
+# <a name="type-typename-has-no-constructors"></a><span data-ttu-id="2c66e-102">형식 '\<typename >'에 생성자가 없습니다</span><span class="sxs-lookup"><span data-stu-id="2c66e-102">Type '\<typename>' has no constructors</span></span>
+<span data-ttu-id="2c66e-103">형식이 `Sub New()` 호출을 지원하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="2c66e-103">A type does not support a call to `Sub New()`.</span></span> <span data-ttu-id="2c66e-104">컴파일러 또는 이진 파일이 손상되었기 때문일 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="2c66e-104">One possible cause is a corrupted compiler or binary file.</span></span>  
   
- <span data-ttu-id="57afe-105">**오류 ID:** BC30251</span><span class="sxs-lookup"><span data-stu-id="57afe-105">**Error ID:** BC30251</span></span>  
+ <span data-ttu-id="2c66e-105">**오류 ID:** BC30251</span><span class="sxs-lookup"><span data-stu-id="2c66e-105">**Error ID:** BC30251</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="57afe-106">이 오류를 해결하려면</span><span class="sxs-lookup"><span data-stu-id="57afe-106">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="2c66e-106">이 오류를 해결하려면</span><span class="sxs-lookup"><span data-stu-id="2c66e-106">To correct this error</span></span>  
   
-1.  <span data-ttu-id="57afe-107">형식이 다른 프로젝트 또는 참조되는 파일에 있으면 해당 프로젝트나 파일을 다시 설치합니다.</span><span class="sxs-lookup"><span data-stu-id="57afe-107">If the type is in a different project or in a referenced file, reinstall the project or file.</span></span>  
+1.  <span data-ttu-id="2c66e-107">형식이 다른 프로젝트 또는 참조되는 파일에 있으면 해당 프로젝트나 파일을 다시 설치합니다.</span><span class="sxs-lookup"><span data-stu-id="2c66e-107">If the type is in a different project or in a referenced file, reinstall the project or file.</span></span>  
   
-2.  <span data-ttu-id="57afe-108">형식이 같은 프로젝트에 있으면 해당 형식이 포함된 어셈블리를 다시 컴파일합니다.</span><span class="sxs-lookup"><span data-stu-id="57afe-108">If the type is in the same project, recompile the assembly containing the type.</span></span>  
+2.  <span data-ttu-id="2c66e-108">형식이 같은 프로젝트에 있으면 해당 형식이 포함된 어셈블리를 다시 컴파일합니다.</span><span class="sxs-lookup"><span data-stu-id="2c66e-108">If the type is in the same project, recompile the assembly containing the type.</span></span>  
   
-3.  <span data-ttu-id="57afe-109">오류가 다시 발생 하면, Visual Basic 컴파일러를 다시 설치 합니다.</span><span class="sxs-lookup"><span data-stu-id="57afe-109">If the error recurs, reinstall the Visual Basic compiler.</span></span>  
+3.  <span data-ttu-id="2c66e-109">오류가 다시 발생 하면, Visual Basic 컴파일러를 다시 설치 합니다.</span><span class="sxs-lookup"><span data-stu-id="2c66e-109">If the error recurs, reinstall the Visual Basic compiler.</span></span>  
   
-4.  <span data-ttu-id="57afe-110">오류가 계속 발생하면 해당 상황에 대한 정보를 수집하여 Microsoft 기술 지원 서비스에 알립니다.</span><span class="sxs-lookup"><span data-stu-id="57afe-110">If the error persists, gather information about the circumstances and notify Microsoft Product Support Services.</span></span>  
+4.  <span data-ttu-id="2c66e-110">오류가 계속 발생하면 해당 상황에 대한 정보를 수집하여 Microsoft 기술 지원 서비스에 알립니다.</span><span class="sxs-lookup"><span data-stu-id="2c66e-110">If the error persists, gather information about the circumstances and notify Microsoft Product Support Services.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="57afe-111">참고자료</span><span class="sxs-lookup"><span data-stu-id="57afe-111">See also</span></span>
-- [<span data-ttu-id="57afe-112">개체 및 클래스</span><span class="sxs-lookup"><span data-stu-id="57afe-112">Objects and Classes</span></span>](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)
-- [<span data-ttu-id="57afe-113">의견 보내기</span><span class="sxs-lookup"><span data-stu-id="57afe-113">Talk to Us</span></span>](/visualstudio/ide/talk-to-us)
+## <a name="see-also"></a><span data-ttu-id="2c66e-111">참고자료</span><span class="sxs-lookup"><span data-stu-id="2c66e-111">See also</span></span>
+
+- [<span data-ttu-id="2c66e-112">개체 및 클래스</span><span class="sxs-lookup"><span data-stu-id="2c66e-112">Objects and Classes</span></span>](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)
+- [<span data-ttu-id="2c66e-113">의견 보내기</span><span class="sxs-lookup"><span data-stu-id="2c66e-113">Talk to Us</span></span>](/visualstudio/ide/talk-to-us)
