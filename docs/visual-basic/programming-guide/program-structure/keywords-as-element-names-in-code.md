@@ -7,12 +7,12 @@ helpviewer_keywords:
 - name conflicts [Visual Basic]
 - element names [Visual Basic], in code
 ms.assetid: 2e4e8e02-23f7-49b9-a1c8-2b0402b6b525
-ms.openlocfilehash: 053149334118d69e5e85bdbd0f9a45e855e3d4dd
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: c247ada67f6554362f287cf252dd49856c4995da
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56980102"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58841149"
 ---
 # <a name="keywords-as-element-names-in-code-visual-basic"></a>코드에서 요소 이름으로 사용되는 키워드(Visual Basic)
 모든 프로그램 요소-변수, 클래스 또는 멤버와 같은-제한 된 키워드와 동일한 이름을 가질 수 있습니다. 예를 들어 라는 변수를 만들 수 있습니다 `Loop`합니다. 그러나 프로그램 버전을 가리키도록-제한적으로 동일한 이름이 있는 `Loop` 키워드-전체 한정 문자열 앞에 또는 대괄호로 묶어야 합니다 (`[ ]`) 다음 예제와 같이 합니다.  
@@ -31,6 +31,7 @@ ms.locfileid: "56980102"
 >  또한 프로그램 다른 참조 된 어셈블리에서 제공 하는 요소 이름을 포함할 수 있습니다. 이러한 이름은 제한 된 키워드와 충돌 하는 경우 대괄호로 묶으면 Visual Basic에 정의 된 요소를 해석할 수 있습니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [Visual Basic 명명 규칙](../../../visual-basic/programming-guide/program-structure/naming-conventions.md)
 - [프로그램 구조 및 코드 규칙](../../../visual-basic/programming-guide/program-structure/program-structure-and-code-conventions.md)
 - [C++ 키워드](../../../visual-basic/language-reference/keywords/index.md)
