@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - Option keyword [Visual Basic]
 ms.assetid: 6b2f41c4-2403-43b6-8a14-94a3775e5b47
-ms.openlocfilehash: 29b2602664387ee233574686440691d2f4da830b
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 96ab02bf61f6b326c3f09615bf19f9e2ecae7e86
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55279164"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58819569"
 ---
 # <a name="option-keyword-statement"></a>옵션 \<키워드 > 문
 전체 소스 파일에 적용 되는 컴파일러 옵션을 지정 하는 문을 소개 합니다.  
@@ -30,4 +30,5 @@ ms.locfileid: "55279164"
  [Option Strict 문](../../../visual-basic/language-reference/statements/option-strict-statement.md)  
   
 ## <a name="see-also"></a>참고자료
+
 - [C++ 키워드](../../../visual-basic/language-reference/keywords/index.md)

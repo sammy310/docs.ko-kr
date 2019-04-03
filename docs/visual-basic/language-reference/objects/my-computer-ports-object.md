@@ -5,12 +5,12 @@ helpviewer_keywords:
 - My.Computer.Ports object
 - Ports object
 ms.assetid: 244ede4e-25b7-445b-9fd6-163550cce193
-ms.openlocfilehash: 468b8e4e90c66b8ccfc80ebbf4c1f5d14fb564a1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6639499291f203f355ec6e7f9c70e19c7555cd9a
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54643444"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58832452"
 ---
 # <a name="mycomputerports-object"></a>My.Computer.Ports 개체
 컴퓨터의 직렬 포트에 액세스하기 위한 속성 및 메서드를 제공합니다.  
@@ -31,4 +31,5 @@ ms.locfileid: "54643444"
  **어셈블리:** [!INCLUDE[vbprvbruntime](~/includes/vbprvbruntime-md.md)]  
   
 ## <a name="see-also"></a>참고자료
+
 - [My.Computer 개체](../../../visual-basic/language-reference/objects/my-computer-object.md)
