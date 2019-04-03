@@ -2,12 +2,12 @@
 title: XPath 사용자 (Visual Basic)를 위한 LINQ to XML
 ms.date: 07/20/2015
 ms.assetid: 0e64911c-a7cc-4c20-b927-ca99078b5656
-ms.openlocfilehash: 598acfa41d9644a07a553a2f6e8948bbf2fe3b77
-ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
+ms.openlocfilehash: 13c23eec1261700b15bea7f92f6c50e9231e900a
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55066267"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58824249"
 ---
 # <a name="linq-to-xml-for-xpath-users-visual-basic"></a>XPath 사용자 (Visual Basic)를 위한 LINQ to XML
 
@@ -15,7 +15,7 @@ ms.locfileid: "55066267"
   
  모든 예제에서는 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]의 확장 메서드에 의해 사용할 수 있게 된 <xref:System.Xml.XPath.Extensions?displayProperty=nameWithType>의 XPath 기능을 사용하며 XPath 식과 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 식을 모두 실행합니다. 그런 다음 두 쿼리의 결과를 비교하여 XPath 식이 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 쿼리와 기능적으로 동일한지 확인합니다. 두 형식의 쿼리가 동일한 XML 트리에서 노드를 반환하므로 쿼리 결과 비교는 참조 ID를 사용하여 수행됩니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
   
 |항목|설명|  
 |-----------|-----------------|  
@@ -38,6 +38,7 @@ ms.locfileid: "55066267"
 |[방법: (XPath 및 LINQ to XML) 직접 선행 형제 찾기 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-find-the-immediate-preceding-sibling-xpath-linq-to-xml.md)|XPath와 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]을 사용하여 노드의 바로 이전 형제를 찾는 방법을 비교합니다.<br /><br /> 관련된 XPath 식은 `"preceding-sibling::*[1]"`입니다.|  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Xml.XPath?displayProperty=nameWithType>
 - [XML 트리 쿼리 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/querying-xml-trees.md)
 - [XPath 데이터 모델을 사용하여 XML 데이터 처리](../../../../standard/data/xml/process-xml-data-using-the-xpath-data-model.md)

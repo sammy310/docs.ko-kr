@@ -2,12 +2,12 @@
 title: LINQ to XML 프로그래밍 개요 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: a7c07d0a-1fae-4610-ae51-56dd7075cc14
-ms.openlocfilehash: ba13482df74f3e371f4b79899464cb31144ae0cf
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 741a9bff54f856d7283cae8c748047d24c0377a0
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54693346"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58827018"
 ---
 # <a name="linq-to-xml-programming-overview-visual-basic"></a>LINQ to XML 프로그래밍 개요 (Visual Basic)
 이 단원의 항목에서는 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 클래스에 대한 대략적인 개요 정보와 가장 중요한 클래스 중 세 클래스에 대한 자세한 정보를 제공합니다.  
@@ -24,4 +24,5 @@ ms.locfileid: "54693346"
 |[방법: LINQ to XML 예제 (Visual Basic) 빌드](../../../../visual-basic/programming-guide/concepts/linq/how-to-build-linq-to-xml-examples.md)|포함 된 `Imports` LINQ to XML 예제를 빌드하는 데 필요한 문을 합니다.|  
   
 ## <a name="see-also"></a>참고자료
+
 - [프로그래밍 가이드 (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/programming-guide-linq-to-xml.md)

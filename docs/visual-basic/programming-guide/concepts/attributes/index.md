@@ -2,12 +2,12 @@
 title: 특성 개요(Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 1449f69b-c063-41de-8d89-f0bbdcf96ac6
-ms.openlocfilehash: 282788f9aa5a1ac8c4ede95f04b45c26b9f56588
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: bb012b49c76963306d723d7732b4c7054bf13ebb
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54559300"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58827694"
 ---
 # <a name="attributes-overview-visual-basic"></a>특성 개요(Visual Basic)
 특성은 메타데이터 또는 선언적 정보를 코드(어셈블리, 형식, 메서드, 속성 등)에 연결하는 강력한 방법을 제공합니다. 특성이 프로그램 엔터티와 연결되면 *리플렉션*이라는 기법을 사용하여 런타임에 특성이 쿼리될 수 있습니다. 자세한 내용은 [리플렉션(Visual Basic)](../../../../visual-basic/programming-guide/concepts/reflection.md)을 참조하세요.  
@@ -143,6 +143,7 @@ Module: CLSCompliant(True)>
 -   [호출자 정보(Visual Basic)](../../../../visual-basic/programming-guide/concepts/caller-information.md)  
   
 ## <a name="see-also"></a>참고자료
+
 - [Visual Basic 프로그래밍 가이드](../../../../visual-basic/programming-guide/index.md)
 - [리플렉션(Visual Basic)](../../../../visual-basic/programming-guide/concepts/reflection.md)
 - [특성](../../../../standard/attributes/index.md)

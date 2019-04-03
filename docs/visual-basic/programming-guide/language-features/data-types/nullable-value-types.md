@@ -10,12 +10,12 @@ helpviewer_keywords:
 - nullable types [Visual Basic]
 - data types [Visual Basic], nullable
 ms.assetid: 9ac3b602-6f96-4e6d-96f7-cd4e81c468a6
-ms.openlocfilehash: 522526392dd12ede729fe8b96677029c05af57c8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 437107bb522e1635dffa4a2de88c5d10d6707592
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54665697"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58825146"
 ---
 # <a name="nullable-value-types-visual-basic"></a>Nullable 값 형식(Visual Basic)
 경우에 따라 특정 상황에서 정의 된 값이 없는 값 형식을 사용 하 여 작업할 수도 있습니다. 예를 들어 데이터베이스의 필드 구분 하기 위해 의미 있는 있는 할당 된 값이 있는 할당된 된 값 없는 한 있을 수 있습니다. 값 형식 매개 변수 정상 값 또는 null 값을 확장할 수 있습니다. 이러한 확장은 호출을 *nullable 형식*합니다.  
@@ -98,6 +98,7 @@ ms.locfileid: "54665697"
  데이터베이스는 null 허용 형식을 사용 하 여 가장 중요 한 위치 중 하나입니다. 일부 데이터베이스 개체에는 현재 nullable 형식 지원 않지만 테이블 디자이너에서 생성 된 어댑터입니다. "TableAdapter Nullable 형식 지원"을 참조 하세요 [TableAdapter 개요](/visualstudio/data-tools/tableadapter-overview)합니다.
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.InvalidOperationException>
 - <xref:System.Nullable%601.HasValue%2A>
 - [Nullable 형식 사용](../../../../csharp/programming-guide/nullable-types/using-nullable-types.md)

@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC33000
 ms.assetid: 15c5d8eb-3a8c-4141-8f41-33151afabf97
-ms.openlocfilehash: 7acec56be60f88147bac1ba4179ad0234ea1c6e1
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: dac8613d79e3262e4d1fd6ad1599fd01182e329b
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55270058"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58819374"
 ---
 # <a name="operator-declaration-must-be-one-of----amp-like-mod-and-or-xor-not--"></a>연산자 선언 중 하나 여야 합니다: +,-, *,\,/, ^, &amp;, Mod, 처럼를 Or, Xor, 되지 \< \<, >>...
 오버 로드 된 연산자만 선언할 수 있습니다. 다음 표에서 연산자를 선언할 수 있습니다.  
@@ -34,6 +34,7 @@ ms.locfileid: "55270058"
 2.  직접 오버로드할 수 없는 연산자 오버로드 기능이 필요할 경우 적절한 매개 변수를 사용하고 적절한 값을 반환하는 `Function` 프로시저를 만듭니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [Operator 문](../../../visual-basic/language-reference/statements/operator-statement.md)
 - [연산자 프로시저](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)
 - [방법: 연산자 정의](../../../visual-basic/programming-guide/language-features/procedures/how-to-define-an-operator.md)

@@ -23,12 +23,12 @@ helpviewer_keywords:
 - names [Visual Basic], naming conventions
 - identifiers [Visual Basic], elements
 ms.assetid: 09d8843b-c0dc-4afe-9dab-87c439a69e66
-ms.openlocfilehash: 5311bba92043d3fded34a5d9337b6af13e213d4a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5b1f8ccc402f7f5928a33f434664b0f28d108e6d
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54573389"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58814070"
 ---
 # <a name="declared-element-names-visual-basic"></a>선언된 요소 이름(Visual Basic)
 선언 된 모든 요소에 이름이 라고도 *식별자*, 코드를 참조 하는 데 사용 하는 하는 합니다.  
@@ -90,6 +90,7 @@ ms.locfileid: "54573389"
  이름 비교는 로캘과 무관 합니다. 두 이름이 하나의 로캘에 일치 하는 경우 모든 로캘에서 일치 보장 됩니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [선언 요소](../../../../visual-basic/programming-guide/language-features/declared-elements/index.md)
 - [선언 요소의 특징](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-characteristics.md)
 - [선언된 요소 참조](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)

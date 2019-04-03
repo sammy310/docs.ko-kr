@@ -1,5 +1,5 @@
 ---
-title: '연습: 시각적 상속 설명'
+title: '연습: 시각적 상속 데모'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - walkthroughs [Windows Forms], visual inheritance
 - Windows Forms, inheritance
 ms.assetid: 01966086-3142-450e-8210-3fd4cb33f591
-ms.openlocfilehash: aa4d18c0e3bbc2613502c7232771c57acc7f0dc8
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: fa6da3248f315ad1916e6a7fdc6b0b24ca9e98a3
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57721452"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58816319"
 ---
-# <a name="walkthrough-demonstrating-visual-inheritance"></a>연습: 시각적 상속 설명
+# <a name="walkthrough-demonstrating-visual-inheritance"></a>연습: 시각적 상속 데모
 시각적 상속을 통해 기본 폼의 컨트롤을 보고 새 컨트롤을 추가할 수 있습니다. 이 연습에서는 기본 폼을 만들고 클래스 라이브러리로 컴파일합니다. 이 클래스 라이브러리를 다른 프로젝트로 가져와 기본 폼에서 상속하는 새 양식을 만듭니다. 이 연습에서는 다음 작업을 수행하는 방법을 배웁니다.  
   
 -   기본 폼을 포함하는 클래스 라이브러리 프로젝트를 만듭니다.  
@@ -140,7 +140,7 @@ ms.locfileid: "57721452"
   
 5.  상속 된 폼을 엽니다 (**Form2**)을 두 번 클릭 열려 있지 않으면 디자이너에서.  
   
-     디자이너에서 상속 된 단추의 있는 기호 (![VisualBasicInheritanceSymbol screenshot](./media/vbinheritanceglyph.gif "vbInheritanceGlyph"))의 위쪽 모퉁이 표시 됩니다.  
+     디자이너에서 상속 된 단추가 있는 기호 (![Visual Basic 상속 기호 스크린샷입니다.](./media/walkthrough-demonstrating-visual-inheritance/visual-basic-inheritance-glyph.gif))의 위쪽 모퉁이 표시 됩니다.  
   
 6.  선택 된 **Say Hello** 단추 및 크기 조정 핸들을 관찰 합니다. 이 단추는 protected이므로 상속자가 이동하고, 크기를 조정하고, 캡션을 변경하고, 기타 수정 작업을 할 수 있습니다.  
   

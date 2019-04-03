@@ -8,12 +8,12 @@ helpviewer_keywords:
 - arrays [Visual Basic], structure elements
 - nested structures [Visual Basic]
 ms.assetid: 0f849313-ccd2-4c9a-acb9-69de6751c088
-ms.openlocfilehash: ed406254435602dcd98bc97716cc88710a470ed1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a943bbdec617ba6c95685df3a4fcdb36b52def22
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54679593"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58819111"
 ---
 # <a name="structures-and-other-programming-elements-visual-basic"></a>구조체 및 기타 프로그래밍 요소(Visual Basic)
 함께 서로 뿐만 아니라 배열, 개체 및 프로시저를 사용 하 여 구조를 사용할 수 있습니다. 이러한 요소를 개별적으로 사용 하는 대로 동일한 구문을 사용 하 여 상호 작용 합니다.  
@@ -123,6 +123,7 @@ allSystems(1).diskDrives(0).type = "Floppy"
  구조에는 다른 구조를 임의 깊이까지 포함할 수 있습니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [데이터 형식](../../../../visual-basic/programming-guide/language-features/data-types/index.md)
 - [기본 데이터 형식](../../../../visual-basic/programming-guide/language-features/data-types/elementary-data-types.md)
 - [복합 데이터 형식](../../../../visual-basic/programming-guide/language-features/data-types/composite-data-types.md)

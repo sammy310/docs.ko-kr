@@ -9,12 +9,12 @@ helpviewer_keywords:
 - data types [Visual Basic], ranges
 - operators [Visual Basic], result data types
 ms.assetid: 9d524533-e1a1-4aa8-b1b8-622068173d06
-ms.openlocfilehash: 90e3c8b61bd920ab06090f3f889d6cc61c354294
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 45dcc80ee791da1c2731ba32f0ebd34564faf806
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54650485"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58814985"
 ---
 # <a name="data-types-of-operator-results-visual-basic"></a>연산자 결과의 데이터 형식(Visual Basic)
 Visual Basic에는 피연산자의 데이터 형식을 기반으로 하는 작업의 결과 데이터 형식이 결정 합니다. 일부 경우에이 피연산자 중 하나가 보다 큰 범위의 데이터 형식일 수 있습니다.  
@@ -176,6 +176,7 @@ Visual Basic에는 피연산자의 데이터 형식을 기반으로 하는 작�
  합니다 `Like` 연산자가 패턴 일치에 대해서만 정의 `String` 피연산자입니다. Visual Basic에서 필요에 따라 각 피연산자를 변환 하려고 `String` 작업 전에 합니다. 결과 데이터 형식은 항상 `Boolean`합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [데이터 형식](../../../visual-basic/language-reference/data-types/index.md)
 - [연산자 및 식](../../../visual-basic/programming-guide/language-features/operators-and-expressions/index.md)
 - [Visual Basic의 산술 연산자](../../../visual-basic/programming-guide/language-features/operators-and-expressions/arithmetic-operators.md)

@@ -2,6 +2,12 @@
 title: 식 트리(Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 8bbbb02d-7ffc-476b-8c25-118d82bf5d46
+ms.openlocfilehash: c1e576439956a735962978d37430949ed6bc39d8
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58832500"
 ---
 # <a name="expression-trees-visual-basic"></a>식 트리(Visual Basic)
 식 트리는 `x < y` 등의 이진 연산이나 메서드 호출과 같이 각 노드가 식인 트리 형식 데이터 구조의 코드를 표시합니다.  
@@ -136,6 +142,7 @@ Console.WriteLine(expr.Compile()(4))
  자세한 내용은 [방법: 식 트리 (Visual Basic) 실행](../../../../visual-basic/programming-guide/concepts/expression-trees/how-to-execute-expression-trees.md)합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Linq.Expressions>
 - [방법: 식 트리 (Visual Basic)를 실행 합니다.](../../../../visual-basic/programming-guide/concepts/expression-trees/how-to-execute-expression-trees.md)
 - [방법: 수정 식 트리 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/expression-trees/how-to-modify-expression-trees.md)

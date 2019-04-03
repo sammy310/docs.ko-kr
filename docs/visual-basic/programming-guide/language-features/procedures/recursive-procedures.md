@@ -10,12 +10,12 @@ helpviewer_keywords:
 - functions [Visual Basic], calling recursively
 - recursion
 ms.assetid: ba1d3962-b4c3-48d3-875e-96fdb4198327
-ms.openlocfilehash: 97cceb833da0ef6f9ee4e3dab5abb1f2ba73a94e
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: de9a2af9fc3cd78879b6525245727a6f52d51c63
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56969325"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58832387"
 ---
 # <a name="recursive-procedures-visual-basic"></a>재귀 프로시저(Visual Basic)
 A *재귀* 절차는 자신을 호출 하는 것입니다. 일반적으로이 Visual Basic 코드를 작성 하는 가장 효과적인 방법은 없습니다.  
@@ -38,6 +38,7 @@ A *재귀* 절차는 자신을 호출 하는 것입니다. 일반적으로이 Vi
  **테스트**합니다. 재귀 프로시저를 작성 하는 경우 일부 제한 조건이 항상 충족 하는지 확인 하려면 매우 신중 하 게 테스트 해야 있습니다. 또한 재귀 호출이 너무 많아서 인해 메모리에서 실행할 수 없음을 확인 해야 합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.StackOverflowException>
 - [절차](./index.md)
 - [Sub 프로시저](./sub-procedures.md)

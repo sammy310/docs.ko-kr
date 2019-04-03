@@ -6,12 +6,12 @@ helpviewer_keywords:
 - writing extension methods [Visual Basic]
 - extension methods [Visual Basic]
 ms.assetid: fb2739cc-958d-4ef4-a38b-214a74c93413
-ms.openlocfilehash: 019104956b21e527c0498c286d85da27abdc5695
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d6f8b85945bd400d1f4b54a50260d72c750add8b
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54576073"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58819119"
 ---
 # <a name="how-to-write-an-extension-method-visual-basic"></a>방법: 확장명 메서드 (Visual Basic) 작성
 확장 메서드를 사용 하면 기존 클래스에 메서드를 추가할 수 있습니다. 해당 클래스의 인스턴스인 것 처럼 확장 메서드를 호출할 수 있습니다.  
@@ -82,6 +82,7 @@ End Module
  `Hello!!!!`  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Runtime.CompilerServices.ExtensionAttribute>
 - [확장명 메서드](./extension-methods.md)
 - [Module 문](../../../../visual-basic/language-reference/statements/module-statement.md)

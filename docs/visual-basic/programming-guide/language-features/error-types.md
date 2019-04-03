@@ -10,12 +10,12 @@ helpviewer_keywords:
 - run-time errors [Visual Basic], types of errors
 - syntax errors [Visual Basic], Visual Basic
 ms.assetid: 3048aabf-8c97-4e13-9150-853769cb5f6f
-ms.openlocfilehash: dc7cba394f623ae94a0d9ca8285fc12af8f0dacf
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 07db963ac3cf9d1c0d17c420480189d362cdaf2c
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54600338"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58831568"
 ---
 # <a name="error-types-visual-basic"></a>오류 형식(Visual Basic)
 Visual basic의 경우 오류 (라고도 *예외*) 세 가지 범주 중 하나에 속합니다: 구문 오류, 런타임 오류 및 논리 오류입니다.  
@@ -33,5 +33,6 @@ Visual basic의 경우 오류 (라고도 *예외*) 세 가지 범주 중 하나�
  *논리 오류* 는 나타나는 응용 프로그램을 사용에서 합니다. 이들은 사용자 작업에 대 한 응답에서 대부분의 종종 원치 않거나 예기치 않은 결과입니다. 예를 들어, 키를 잘못 입력된 또는 기타 외부 요인 않이 예상된 매개 변수 내에서 작업을 중지 하려면 응용 프로그램 또는 완전히 합니다. 논리 오류는 일반적으로 아니므로 항상 지우기 시작 위치를 해결 하려면 가장 어려운 형식입니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [Try...Catch...Finally 문](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)
 - [디버거 기본 사항](/visualstudio/debugger/debugger-basics)

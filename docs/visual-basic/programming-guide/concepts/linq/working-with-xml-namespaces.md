@@ -2,12 +2,12 @@
 title: XML 네임 스페이스 (Visual Basic)를 사용 하 여 작업
 ms.date: 07/20/2015
 ms.assetid: 428bf4b0-e348-4ffd-986b-d905d5a0e7fa
-ms.openlocfilehash: e103920187ecbbfb14a1723556d1fae0265a88d0
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b2b9db9ed547858eb5358d5e3c871c6a84d22ae6
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54607909"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58828901"
 ---
 # <a name="working-with-xml-namespaces-visual-basic"></a>XML 네임 스페이스 (Visual Basic)를 사용 하 여 작업
 이 단원의 항목에서는 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]에서 네임스페이스를 지원하는 방법에 대해 설명합니다.  
@@ -24,4 +24,5 @@ ms.locfileid: "54607909"
 |[방법: XML 네임 스페이스 (Visual Basic)에 대 한 쿼리 작성](../../../../visual-basic/programming-guide/concepts/linq/how-to-write-queries-on-xml-in-namespaces.md)|Visual Basic linq에서 to XML 쿼리에서 XML 네임 스페이스를 지정 하는 방법을 보여 줍니다.|  
   
 ## <a name="see-also"></a>참고자료
+
 - [프로그래밍 가이드 (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/programming-guide-linq-to-xml.md)

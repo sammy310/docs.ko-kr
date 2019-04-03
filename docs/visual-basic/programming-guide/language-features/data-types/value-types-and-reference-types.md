@@ -10,12 +10,12 @@ helpviewer_keywords:
 - data types [Visual Basic], value types
 - data types [Visual Basic], reference types
 ms.assetid: fc82ce15-5a40-4c5c-a1e1-a556830e7391
-ms.openlocfilehash: 2f09a2842edfa9471267f294c9b64229ae824098
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4e0831a045da5eb5798d10aeb977981ecae20040
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54738750"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58819540"
 ---
 # <a name="value-types-and-reference-types"></a>Value Types and Reference Types
 Visual Basic의 경우 데이터 형식은 분류에 따라 구현 됩니다. Visual Basic 데이터 형식 특정 형식의 변수는 자체 데이터 또는 데이터에 대 한 포인터를 저장 하는 여부에 따라 분류할 수 있습니다. 자체 데이터를 저장 하는 경우는 *값 형식*데이터는 메모리에 다른 곳에서 포인터를 보유 하는 경우를 *참조 형식*합니다.  
@@ -73,6 +73,7 @@ Dim totals() As Single = New Single(8) {}
  여부를 확인할 수 있습니다는 `Object` 변수 역할을 하는 참조 형식 또는 값 형식을 전달 하 여는 <xref:Microsoft.VisualBasic.Information.IsReference%2A> 에서 메서드는 <xref:Microsoft.VisualBasic.Information> 의 클래스는 <xref:Microsoft.VisualBasic?displayProperty=nameWithType> 네임 스페이스입니다. <xref:Microsoft.VisualBasic.Information.IsReference%2A?displayProperty=nameWithType> 반환 `True` 경우의 콘텐츠는 `Object` 변수에 참조 형식을 나타냅니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [Nullable 값 형식](../../../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md)
 - [Visual Basic의 형식 변환](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)
 - [Structure 문](../../../../visual-basic/language-reference/statements/structure-statement.md)

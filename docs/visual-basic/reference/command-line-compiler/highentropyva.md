@@ -5,12 +5,12 @@ helpviewer_keywords:
 - highentropyva compiler option (Visual Basic)
 - /highentropyva compiler option (Visual Basic)
 ms.assetid: ff25f20a-6ca2-467b-9e52-5cf439f5028e
-ms.openlocfilehash: 546b563276e0db4ee2472ef325d09fd337a62513
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 16bfea37a5742ac5aaaabfacdcf03a2b5bedb6db
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54638758"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58819283"
 ---
 # <a name="-highentropyva-visual-basic"></a>-highentropyva (Visual Basic)
 나타냅니다 64 비트 실행 파일을 또는으로 표시 되는 실행 파일을 [/platform:anycpu](../../../visual-basic/reference/command-line-compiler/platform.md) 컴파일러 옵션은 높은 엔트로피 주소 공간 레이아웃 불규칙화 (ASLR)를 지원 합니다.  
@@ -31,5 +31,6 @@ ms.locfileid: "54638758"
  옵션에는 대상 실행 파일 및 모든 모듈에서 설정 되는 해당 모듈을 64 비트 프로세스로 실행 하는 경우 4 gb (기가바이트) 보다 큰 포인터 값 처리할 수 있어야 합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [Visual Basic 명령줄 컴파일러](../../../visual-basic/reference/command-line-compiler/index.md)
 - [샘플 컴파일 명령줄](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)

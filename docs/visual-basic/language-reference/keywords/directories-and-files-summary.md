@@ -6,12 +6,12 @@ helpviewer_keywords:
 - directories [Visual Basic], Visual Basic
 - files [Visual Basic], summary
 ms.assetid: 588b75fd-a09b-4381-822d-19868990c170
-ms.openlocfilehash: 2c2a48e99f99e3e00aca61fdcf688798affa214f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f7d21c3e29cb59f2d2690ab9797c6c50e7d3009b
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54507306"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58832478"
 ---
 # <a name="directories-and-files-summary-visual-basic"></a>디렉터리 및 파일 요약(Visual Basic)
 Visual Basic 언어 키워드 및 런타임 라이브러리 멤버 용도 따라 구성 됩니다 사용 합니다.  
@@ -34,7 +34,8 @@ Visual Basic 언어 키워드 및 런타임 라이브러리 멤버 용도 따라
 |파일 특성 정보를 설정 합니다.|<xref:Microsoft.VisualBasic.FileSystem.SetAttr%2A>|  
   
 ## <a name="see-also"></a>참고자료
-- [키워드](../../../visual-basic/language-reference/keywords/index.md)
+
+- [C++ 키워드](../../../visual-basic/language-reference/keywords/index.md)
 - [Visual Basic 런타임 라이브러리 멤버](../../../visual-basic/language-reference/runtime-library-members.md)
 - [파일 읽기](../../../visual-basic/developing-apps/programming/drives-directories-files/reading-from-files.md)
 - [파일에 쓰기](../../../visual-basic/developing-apps/programming/drives-directories-files/writing-to-files.md)

@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC42104
 ms.assetid: 6909aa0b-b4a1-46f5-a18c-ba3e565c1dd8
-ms.openlocfilehash: 23201b89f44f6384ae9f75d941d264e8d59bef80
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 46551a917aeb794c8d35985076b67a315386f628
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55268836"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58819361"
 ---
 # <a name="variable-variablename-is-used-before-it-has-been-assigned-a-value"></a>변수 '\<variablename >'에 값이 할당 되기 전에
 변수 '\<variablename >'에 값이 할당 되기 전에 사용 됩니다. 런타임에 null 참조 예외가 발생할 수 있습니다.  
@@ -32,6 +32,7 @@ ms.locfileid: "55268836"
 -   변수의 유효한 값을 항상 포함 하는 데는 한 가지 방법은 해당 선언의 일부로 초기화 하는 것입니다. "초기화"를 참조 하세요 [Dim 문](../../../visual-basic/language-reference/statements/dim-statement.md)합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [Dim 문](../../../visual-basic/language-reference/statements/dim-statement.md)
 - [변수 선언](../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)
 - [변수 문제 해결](../../../visual-basic/programming-guide/language-features/variables/troubleshooting-variables.md)

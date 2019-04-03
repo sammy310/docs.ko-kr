@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Protected access modifier
 - Protected keyword [Visual Basic]
 ms.assetid: 74ad3d56-309f-49d2-b60c-1d0157d010e8
-ms.openlocfilehash: 40dda40f68e535380a82a241e3ccd383b0c9809f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 88e13fcd03c6a10cf1450cec90f9ca60aedc3eb1
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54536297"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58819166"
 ---
 # <a name="protected-visual-basic"></a>Protected(Visual Basic)
 멤버 액세스 한정자는 하나 이상의 선언 된 프로그래밍 요소를 지정 하는 고유한 클래스 내부나 파생 클래스에서 에서만 액세스할 수 있습니다.  
@@ -67,6 +67,7 @@ ms.locfileid: "54536297"
  [Sub 문](../../../visual-basic/language-reference/statements/sub-statement.md)  
   
 ## <a name="see-also"></a>참고자료
+
 - [공용](../../../visual-basic/language-reference/modifiers/public.md)
 - [Friend](../../../visual-basic/language-reference/modifiers/friend.md)
 - [전용](../../../visual-basic/language-reference/modifiers/private.md)

@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30712
 ms.assetid: c7ffbd6d-05c6-4261-b44b-1bcd521bb350
-ms.openlocfilehash: 91f754366441cb984edf23f2c2dca4fa5c542a8e
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 049db16875b14bc095e293d2a923917a9ec1d99b
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55279528"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58814460"
 ---
 # <a name="unable-to-load-information-for-class-classname"></a>클래스에 대 한 정보를 로드할 수 없습니다\<응용 프로그램 이름 >'
 사용할 수 없는 클래스를 참조가.  
@@ -26,4 +26,5 @@ ms.locfileid: "55279528"
 2.  모듈에 선언된 멤버 중 하나에 액세스해 봅니다. 선언된 모듈이 아직 로드되지 않아 디버깅 환경에서 멤버를 찾을 수 없는 경우도 있습니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [Visual Studio의 디버깅](/visualstudio/debugger/debugging-in-visual-studio)

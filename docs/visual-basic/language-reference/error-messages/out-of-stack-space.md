@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrID28
 ms.assetid: bfcd792b-ac29-4158-81fc-ea0c13f4ffa2
-ms.openlocfilehash: 2f91763888069b6dca90da03995dc1b6812fd426
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 25905e65e74b11d167d3ce2ad258599fb958eb88
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54655493"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58814603"
 ---
 # <a name="out-of-stack-space-visual-basic"></a>스택 공간이 부족합니다(Visual Basic).
 스택의는 실행 중인 프로그램의 요구를 사용 하 여 동적으로 메모리 증가 및 축소 하는 작업 영역입니다. 해당 제한은 초과 했습니다.  
@@ -29,4 +29,5 @@ ms.locfileid: "54655493"
 6.  "이벤트 cascade" 스택에서 이미 이벤트 프로시저를 호출 하는 이벤트를 트리거하여 발생 하지 있는지 확인 합니다. 종결 되지 않은 재귀 프로시저 호출을 이벤트 캐스케이딩 비슷합니다 이지만 명확 하지 호출 코드에 대 한 명시적 호출 보다는 Visual Basic에서 하므로 합니다. 사용 된 `Calls` 스택에 활성화 되어 있는 프로시저 보기 대화 상자.  
   
 ## <a name="see-also"></a>참고자료
+
 - [메모리 창](/visualstudio/debugger/memory-windows)

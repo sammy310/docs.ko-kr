@@ -5,12 +5,12 @@ helpviewer_keywords:
 - My feature
 - My reference
 ms.assetid: 6f803bd7-21ff-4569-b1fe-b00a6678b1e3
-ms.openlocfilehash: 637eecf9526c64c47ef3559cd5b65f16dd886a6b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: accf2464f7d8ead8bcd73c9704bea4fd5d2e410b
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54618937"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58824756"
 ---
 # <a name="my-reference-visual-basic"></a>My 참조(Visual Basic)
 `My` 기능에서 자주 사용 되는 메서드, 속성 및 이벤트에 대 한 직관적인 액세스를 부여 하 여 프로그래밍을 쉽고 빠릅니다. 이 테이블에 포함 된 개체를 나열 `My`, 및 각를 사용 하 여 수행할 수 있는 작업입니다.  
@@ -29,5 +29,6 @@ ms.locfileid: "54618937"
 |현재 프로젝트에서 참조 하는 XML 웹 서비스에 액세스 합니다.|[My.WebServices 개체](../../../visual-basic/language-reference/objects/my-webservices-object.md)|  
   
 ## <a name="see-also"></a>참고자료
+
 - [Visual Basic 응용 프로그램 모델 개요](../../../visual-basic/developing-apps/development-with-my/overview-of-the-visual-basic-application-model.md)
 - [My를 사용한 개발](../../../visual-basic/developing-apps/development-with-my/index.md)

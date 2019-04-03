@@ -5,12 +5,12 @@ helpviewer_keywords:
 - My.Application object [Visual Basic], Visual Basic application model
 - Visual Basic application model
 ms.assetid: 17538984-84fe-43c9-82c8-724c9529fe8b
-ms.openlocfilehash: 258e3862da79e78510991df26cc286c7231ad097
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: 02cc71dbda47d078284d9a2ec07538dfa063ac75
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58464101"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58819764"
 ---
 # <a name="overview-of-the-visual-basic-application-model"></a>Visual Basic 애플리케이션 모델 개요
 Visual Basic Windows Forms 응용 프로그램의 동작을 제어 하기 위한 잘 정의 된 모델을 제공 합니다: Visual Basic 응용 프로그램 모델입니다. 이 모델에는 catch 하면 처리 되지 않은 예외에 대 한 이벤트 뿐만 아니라 응용 프로그램의 시작 및 종료를 처리 하는 것에 대 한 이벤트가 포함 됩니다. 단일 인스턴스 응용 프로그램 개발에 대 한 지원 기능을 제공 합니다. 응용 프로그램 모델 확장 가능 하며 이므로 더 많은 제어가 필요한 개발자는 재정의 가능한 메서드를 사용자 지정할 수 있습니다.  
@@ -55,6 +55,7 @@ Visual Basic Windows Forms 응용 프로그램의 동작을 제어 하기 위한
  기본적으로 Visual Basic 응용 프로그램 모델은 Windows Forms 프로젝트에 사용할 수 있습니다. 다른 시작 개체를 사용 하도록 응용 프로그램을 구성 하거나 사용자 지정을 사용 하 여 응용 프로그램 코드를 시작 하기 `Sub Main`, 하는 개체 또는 클래스의 구현을 제공 해야 할 수는 <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase> 응용 프로그램 모델을 사용 하는 클래스입니다. 시작 개체를 변경 하는 방법에 대 한 내용은 [응용 프로그램 페이지, 프로젝트 디자이너 (Visual Basic)](/visualstudio/ide/reference/application-page-project-designer-visual-basic)합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase>
 - <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.Startup>
 - <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.StartupNextInstance>

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - objects [Visual Basic], inheritance
 - object variables [Visual Basic], determining relation
 ms.assetid: da002e3f-6616-4bad-a229-f842d06652bb
-ms.openlocfilehash: 62c0280e3773d2e3ff15bc164d9e0e6cacb7bd4d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c4ff7c8e616c9126eae11a23e001c219dcbc0907
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54544590"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58819205"
 ---
 # <a name="how-to-determine-whether-two-objects-are-related-visual-basic"></a>방법: 두 개체가 관련이 있는지 여부를 확인 (Visual Basic)
 생성 된 클래스 간의 관계를 확인 하려면 두 개체를 비교할 수 있습니다. 합니다 <xref:System.Type.IsInstanceOfType%2A> 메서드를 <xref:System.Type?displayProperty=nameWithType> 반환 클래스 `True` 지정된 된 클래스는 현재 클래스에서 상속 하는 경우 또는 현재 형식이 지정된 된 클래스에서 지 원하는 인터페이스인 경우.  
@@ -48,6 +48,7 @@ End Class
  예기치 않은 위치에 대 한 호출에서 두 개체 변수를 주의 <xref:System.Type.IsInstanceOfType%2A>합니다. 때문된 기본 형식이 생성 되는 <xref:System.Type?displayProperty=nameWithType> 클래스 및 파생된 형식 때문된에 인수로 전달 되는 <xref:System.Type.IsInstanceOfType%2A> 메서드.  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Object.GetType%2A>
 - <xref:System.Type?displayProperty=nameWithType>
 - <xref:System.Type.IsInstanceOfType%2A>

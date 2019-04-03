@@ -21,12 +21,12 @@ helpviewer_keywords:
 - OrElse operator [Visual Basic]
 - logical operators [Visual Basic], unary
 ms.assetid: ca474e13-567d-4b1d-a18b-301433705e57
-ms.openlocfilehash: 94d43b7bea48d85e612b5c995e20e286f14b024a
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: ac47b6d7fa4861d18646a23f442caccc4062852f
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56976501"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58819309"
 ---
 # <a name="logical-and-bitwise-operators-in-visual-basic"></a>Visual Basic의 논리 및 비트 연산자
 논리 연산자 비교 `Boolean` 식 및 반환 된 `Boolean` 결과입니다. 합니다 `And`, `Or`, `AndAlso`, `OrElse`, 및 `Xor` 연산자는 *이진* 하는 동안 두 개의 피연산자를 고려 하기 때문에 `Not` 연산자는 *단항* 단일 피연산자 걸리기 때문에 있습니다. 이러한 연산자 중 일부에 정수 계열 값의 비트 논리 연산을 수행할 수도 있습니다.  
@@ -96,6 +96,7 @@ ms.locfileid: "56976501"
 >  비트 연산에서 정수 계열 형식 에서만 수행할 수 있습니다. 부동 소수점 값 비트 연산을 수행 하려면 먼저 정수 계열 형식으로 변환할 수 있어야 합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [논리/비트 연산자 (Visual Basic)](../../../../visual-basic/language-reference/operators/logical-bitwise-operators.md)
 - [부울 식](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/boolean-expressions.md)
 - [Visual Basic의 산술 연산자](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/arithmetic-operators.md)

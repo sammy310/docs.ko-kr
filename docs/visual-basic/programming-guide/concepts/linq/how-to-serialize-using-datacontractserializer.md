@@ -2,12 +2,12 @@
 title: '방법: 직렬화를 사용 하 여 DataContractSerializer (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: ecaea518-8a0f-4249-b4e5-9b3fb0cdd8ad
-ms.openlocfilehash: cde857e1883d822b442b51c2931fd2fb92c24247
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9593dede3eb29aadc7ffb494e1d728cb8e679f0c
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54714323"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58826715"
 ---
 # <a name="how-to-serialize-using-datacontractserializer-visual-basic"></a>방법: 직렬화를 사용 하 여 DataContractSerializer (Visual Basic)
 이 항목에서는 <xref:System.Runtime.Serialization.DataContractSerializer>를 사용하여 serialize하고 deserialize하는 예제를 보여 줍니다.  
@@ -84,4 +84,5 @@ Testing for type: XElementNullContainer
 ```  
   
 ## <a name="see-also"></a>참고자료
+
 - [XElement 개체 (Visual Basic)를 포함 하는 개체 그래프를 직렬화 하는 작업](../../../../visual-basic/programming-guide/concepts/linq/serializing-object-graphs-that-contain-xelement-objects.md)

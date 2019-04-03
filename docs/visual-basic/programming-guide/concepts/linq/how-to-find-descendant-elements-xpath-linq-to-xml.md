@@ -2,12 +2,12 @@
 title: '방법: (XPath 및 LINQ to XML) 하위 요소 찾기 (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: e7e2dc9e-bda9-420d-a5b1-4fabf1cca46b
-ms.openlocfilehash: ea92a224ee5cc976b9bd93f8ac8792a67d360fae
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 09f12dca7b6278327394126ffb0950682d285f88
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54578681"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58833401"
 ---
 # <a name="how-to-find-descendant-elements-xpath-linq-to-xml-visual-basic"></a>방법: (XPath 및 LINQ to XML) 하위 요소 찾기 (Visual Basic)
 이 항목에서는 특정 이름을 가진 하위 요소를 가져오는 방법을 보여 줍니다.  
@@ -17,7 +17,7 @@ ms.locfileid: "54578681"
 ## <a name="example"></a>예제  
  이 예제에서는 `Name`이라는 모든 하위 요소를 찾습니다.  
   
- 이 예제에서는 XML 문서로 을 사용합니다. [샘플 XML 파일: 여러 구매 주문 (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-linq-to-xml.md)합니다.  
+ 이 예제에서는 XML 문서로을 사용합니다. [샘플 XML 파일: 여러 구매 주문(LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-linq-to-xml.md).  
   
 ```vb  
       Dim po As XDocument = XDocument.Load("PurchaseOrders.xml")  
@@ -52,4 +52,5 @@ Results are identical
 ```  
   
 ## <a name="see-also"></a>참고자료
+
 - [XPath 사용자 (Visual Basic)를 위한 LINQ to XML](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)

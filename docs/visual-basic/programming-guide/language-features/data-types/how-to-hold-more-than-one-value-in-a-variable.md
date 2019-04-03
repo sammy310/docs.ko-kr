@@ -11,12 +11,12 @@ helpviewer_keywords:
 - arrays [Visual Basic], compilation errors
 - types [Visual Basic], composite
 ms.assetid: 5fe0e558-aac2-4a40-b7f2-7cfea7336917
-ms.openlocfilehash: c6cd9c61c332fc98e99334143b50e395f4eabf47
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f22888075184e0359daec1056af09132eaf772a5
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54671501"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58825159"
 ---
 # <a name="how-to-hold-more-than-one-value-in-a-variable-visual-basic"></a>방법: 변수에 둘 이상의 값 (Visual Basic)
 변수를 선언 하면 둘 이상의 값을 보유 한 *복합 데이터 형식*합니다.  
@@ -42,6 +42,7 @@ ms.locfileid: "54671501"
 5.  수행 된 `As` 키워드와 적절 한 복합 데이터 형식의 이름 합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [데이터 형식](../../../../visual-basic/language-reference/data-types/index.md)
 - [형식 문자](../../../../visual-basic/programming-guide/language-features/data-types/type-characters.md)
 - [복합 데이터 형식](../../../../visual-basic/programming-guide/language-features/data-types/composite-data-types.md)
