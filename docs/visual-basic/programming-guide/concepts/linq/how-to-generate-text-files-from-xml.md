@@ -2,20 +2,20 @@
 title: '방법: (Visual Basic) XML에서 텍스트 파일 생성'
 ms.date: 07/20/2015
 ms.assetid: 3b33f191-4abe-4419-b81b-3cb81d9a317f
-ms.openlocfilehash: bd3c8b0f9faf0b465d9b0f6a5c17ceef62ddb285
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6273152995b458da110a2bda56ebdc35d49b6769
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54687724"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58829488"
 ---
-# <a name="how-to-generate-text-files-from-xml-visual-basic"></a><span data-ttu-id="a2b1e-102">방법: (Visual Basic) XML에서 텍스트 파일 생성</span><span class="sxs-lookup"><span data-stu-id="a2b1e-102">How to: Generate Text Files from XML (Visual Basic)</span></span>
-<span data-ttu-id="a2b1e-103">이 예제에서는 XML 파일에서 CSV(쉼표로 구분된 값) 파일을 생성하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="a2b1e-103">This example shows how to generate a comma-separated values (CSV) file from an XML file.</span></span>  
+# <a name="how-to-generate-text-files-from-xml-visual-basic"></a><span data-ttu-id="5eeed-102">방법: (Visual Basic) XML에서 텍스트 파일 생성</span><span class="sxs-lookup"><span data-stu-id="5eeed-102">How to: Generate Text Files from XML (Visual Basic)</span></span>
+<span data-ttu-id="5eeed-103">이 예제에서는 XML 파일에서 CSV(쉼표로 구분된 값) 파일을 생성하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="5eeed-103">This example shows how to generate a comma-separated values (CSV) file from an XML file.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="a2b1e-104">예제</span><span class="sxs-lookup"><span data-stu-id="a2b1e-104">Example</span></span>  
- <span data-ttu-id="a2b1e-105">Visual Basic 버전 절차적 코드를 사용 하 여 문자열의 컬렉션을 단일 문자열로 집계 합니다.</span><span class="sxs-lookup"><span data-stu-id="a2b1e-105">The Visual Basic version uses procedural code to aggregate the collection of strings into a single string.</span></span>  
+## <a name="example"></a><span data-ttu-id="5eeed-104">예제</span><span class="sxs-lookup"><span data-stu-id="5eeed-104">Example</span></span>  
+ <span data-ttu-id="5eeed-105">Visual Basic 버전 절차적 코드를 사용 하 여 문자열의 컬렉션을 단일 문자열로 집계 합니다.</span><span class="sxs-lookup"><span data-stu-id="5eeed-105">The Visual Basic version uses procedural code to aggregate the collection of strings into a single string.</span></span>  
   
- <span data-ttu-id="a2b1e-106">이 예제에서는 XML 문서로 을 사용합니다. [샘플 XML 파일: Customers 및 Orders (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="a2b1e-106">This example uses the following XML document: [Sample XML File: Customers and Orders (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml.md).</span></span>  
+ <span data-ttu-id="5eeed-106">이 예제에서는 XML 문서로을 사용합니다. [샘플 XML 파일: Customers 및 Orders(LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml.md).</span><span class="sxs-lookup"><span data-stu-id="5eeed-106">This example uses the following XML document: [Sample XML File: Customers and Orders (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml.md).</span></span>  
   
 ```vb  
 Dim custOrd As XElement = XElement.Load("CustomersOrders.xml")  
@@ -42,7 +42,7 @@ Next
 Console.WriteLine(sb.ToString())  
 ```  
   
- <span data-ttu-id="a2b1e-107">이 코드의 결과는 다음과 같습니다.</span><span class="sxs-lookup"><span data-stu-id="a2b1e-107">This code produces the following output:</span></span>  
+ <span data-ttu-id="5eeed-107">이 코드의 결과는 다음과 같습니다.</span><span class="sxs-lookup"><span data-stu-id="5eeed-107">This code produces the following output:</span></span>  
   
 ```  
 GREAL,Great Lakes Food Market,Howard Snyder,Marketing Manager,(503) 555-7555,2732 Baker Blvd.,Eugene,OR,97403,USA  
@@ -51,5 +51,6 @@ LAZYK,Lazy K Kountry Store,John Steel,Marketing Manager,(509) 555-7969,12 Orches
 LETSS,Let's Stop N Shop,Jaime Yorres,Owner,(415) 555-5938,87 Polk St. Suite 5,San Francisco,CA,94117,USA  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="a2b1e-108">참고자료</span><span class="sxs-lookup"><span data-stu-id="a2b1e-108">See also</span></span>
-- [<span data-ttu-id="a2b1e-109">프로젝션 및 변형 (LINQ to XML) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="a2b1e-109">Projections and Transformations (LINQ to XML) (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/projections-and-transformations-linq-to-xml.md)
+## <a name="see-also"></a><span data-ttu-id="5eeed-108">참고자료</span><span class="sxs-lookup"><span data-stu-id="5eeed-108">See also</span></span>
+
+- [<span data-ttu-id="5eeed-109">프로젝션 및 변형 (LINQ to XML) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="5eeed-109">Projections and Transformations (LINQ to XML) (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/projections-and-transformations-linq-to-xml.md)

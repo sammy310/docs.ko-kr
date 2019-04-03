@@ -2,18 +2,18 @@
 title: '방법: Descendants 메서드 (Visual Basic)를 사용 하 여 단일 하위 항목 찾기'
 ms.date: 07/20/2015
 ms.assetid: 0c03468c-efc8-4140-98f3-fb67acd9e8e1
-ms.openlocfilehash: 24bad2bc6ac121cd2be16933161a38a6a6fcb1e7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0a2574422f95ed4d2b82c33ee999b233d95ea398
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54552452"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58826459"
 ---
-# <a name="how-to-find-a-single-descendant-using-the-descendants-method-visual-basic"></a><span data-ttu-id="e0f05-102">방법: Descendants 메서드 (Visual Basic)를 사용 하 여 단일 하위 항목 찾기</span><span class="sxs-lookup"><span data-stu-id="e0f05-102">How to: Find a Single Descendant Using the Descendants Method (Visual Basic)</span></span>
-<span data-ttu-id="e0f05-103"><xref:System.Xml.Linq.XContainer.Descendants%2A> 축 메서드를 사용하여 고유하게 명명된 단일 요소를 찾는 코드를 신속하게 작성할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="e0f05-103">You can use the <xref:System.Xml.Linq.XContainer.Descendants%2A> axis method to quickly write code to find a single uniquely named element.</span></span> <span data-ttu-id="e0f05-104">이 기법은 지정된 이름을 가진 특정 하위 요소를 찾으려는 경우 특히 유용합니다.</span><span class="sxs-lookup"><span data-stu-id="e0f05-104">This technique is especially useful when you want to find a particular descendant with a specific name.</span></span> <span data-ttu-id="e0f05-105">원하는 요소를 탐색하는 코드를 작성할 수도 있지만 <xref:System.Xml.Linq.XContainer.Descendants%2A> 축을 사용하여 코드를 작성하는 것이 더 빠르고 쉬운 경우가 많습니다.</span><span class="sxs-lookup"><span data-stu-id="e0f05-105">You could write the code to navigate to the desired element, but it is often faster and easier to write the code using the <xref:System.Xml.Linq.XContainer.Descendants%2A> axis.</span></span>  
+# <a name="how-to-find-a-single-descendant-using-the-descendants-method-visual-basic"></a><span data-ttu-id="a6564-102">방법: Descendants 메서드 (Visual Basic)를 사용 하 여 단일 하위 항목 찾기</span><span class="sxs-lookup"><span data-stu-id="a6564-102">How to: Find a Single Descendant Using the Descendants Method (Visual Basic)</span></span>
+<span data-ttu-id="a6564-103"><xref:System.Xml.Linq.XContainer.Descendants%2A> 축 메서드를 사용하여 고유하게 명명된 단일 요소를 찾는 코드를 신속하게 작성할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="a6564-103">You can use the <xref:System.Xml.Linq.XContainer.Descendants%2A> axis method to quickly write code to find a single uniquely named element.</span></span> <span data-ttu-id="a6564-104">이 기법은 지정된 이름을 가진 특정 하위 요소를 찾으려는 경우 특히 유용합니다.</span><span class="sxs-lookup"><span data-stu-id="a6564-104">This technique is especially useful when you want to find a particular descendant with a specific name.</span></span> <span data-ttu-id="a6564-105">원하는 요소를 탐색하는 코드를 작성할 수도 있지만 <xref:System.Xml.Linq.XContainer.Descendants%2A> 축을 사용하여 코드를 작성하는 것이 더 빠르고 쉬운 경우가 많습니다.</span><span class="sxs-lookup"><span data-stu-id="a6564-105">You could write the code to navigate to the desired element, but it is often faster and easier to write the code using the <xref:System.Xml.Linq.XContainer.Descendants%2A> axis.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="e0f05-106">예제</span><span class="sxs-lookup"><span data-stu-id="e0f05-106">Example</span></span>  
- <span data-ttu-id="e0f05-107">이 예제에서는 <xref:System.Linq.Enumerable.First%2A> 표준 쿼리 연산자를 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="e0f05-107">This example uses the <xref:System.Linq.Enumerable.First%2A> standard query operator.</span></span>  
+## <a name="example"></a><span data-ttu-id="a6564-106">예제</span><span class="sxs-lookup"><span data-stu-id="a6564-106">Example</span></span>  
+ <span data-ttu-id="a6564-107">이 예제에서는 <xref:System.Linq.Enumerable.First%2A> 표준 쿼리 연산자를 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="a6564-107">This example uses the <xref:System.Linq.Enumerable.First%2A> standard query operator.</span></span>  
   
 ```vb  
 Dim root As XElement = _  
@@ -37,14 +37,14 @@ Dim grandChild3 As String = _
 Console.WriteLine(grandChild3)  
 ```  
   
- <span data-ttu-id="e0f05-108">이 코드의 결과는 다음과 같습니다.</span><span class="sxs-lookup"><span data-stu-id="e0f05-108">This code produces the following output:</span></span>  
+ <span data-ttu-id="a6564-108">이 코드의 결과는 다음과 같습니다.</span><span class="sxs-lookup"><span data-stu-id="a6564-108">This code produces the following output:</span></span>  
   
 ```  
 GC3 Value  
 ```  
   
-## <a name="example"></a><span data-ttu-id="e0f05-109">예제</span><span class="sxs-lookup"><span data-stu-id="e0f05-109">Example</span></span>  
- <span data-ttu-id="e0f05-110">다음 예제에서는 네임스페이스에 있는 XML에 대한 동일한 쿼리를 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="e0f05-110">The following example shows the same query for XML that is in a namespace.</span></span> <span data-ttu-id="e0f05-111">자세한 내용은 [XML 네임 스페이스 (Visual Basic)를 사용 하 여 작업](../../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="e0f05-111">For more information, see [Working with XML Namespaces (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md).</span></span>  
+## <a name="example"></a><span data-ttu-id="a6564-109">예제</span><span class="sxs-lookup"><span data-stu-id="a6564-109">Example</span></span>  
+ <span data-ttu-id="a6564-110">다음 예제에서는 네임스페이스에 있는 XML에 대한 동일한 쿼리를 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="a6564-110">The following example shows the same query for XML that is in a namespace.</span></span> <span data-ttu-id="a6564-111">자세한 내용은 [XML 네임 스페이스 (Visual Basic)를 사용 하 여 작업](../../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="a6564-111">For more information, see [Working with XML Namespaces (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md).</span></span>  
   
 ```vb  
 Imports <xmlns:aw='http://www.adventure-works.com'>  
@@ -74,11 +74,12 @@ Module Module1
 End Module  
 ```  
   
- <span data-ttu-id="e0f05-112">이 코드의 결과는 다음과 같습니다.</span><span class="sxs-lookup"><span data-stu-id="e0f05-112">This code produces the following output:</span></span>  
+ <span data-ttu-id="a6564-112">이 코드의 결과는 다음과 같습니다.</span><span class="sxs-lookup"><span data-stu-id="a6564-112">This code produces the following output:</span></span>  
   
 ```  
 GC3 Value  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="e0f05-113">참고자료</span><span class="sxs-lookup"><span data-stu-id="e0f05-113">See also</span></span>
-- [<span data-ttu-id="e0f05-114">기본 쿼리 (LINQ to XML) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="e0f05-114">Basic Queries (LINQ to XML) (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)
+## <a name="see-also"></a><span data-ttu-id="a6564-113">참고자료</span><span class="sxs-lookup"><span data-stu-id="a6564-113">See also</span></span>
+
+- [<span data-ttu-id="a6564-114">기본 쿼리 (LINQ to XML) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="a6564-114">Basic Queries (LINQ to XML) (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)

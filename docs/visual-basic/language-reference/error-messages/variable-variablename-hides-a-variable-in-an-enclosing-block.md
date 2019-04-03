@@ -7,21 +7,21 @@ f1_keywords:
 helpviewer_keywords:
 - BC30616
 ms.assetid: e7658ebc-da45-451b-a409-a0f8915f0beb
-ms.openlocfilehash: 68ec1aac7ee8d292e2a433e0fb35039d4fb317b4
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 15c35cbb829bec782771b584ea25b111b81b5e1f
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55278501"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58827135"
 ---
-# <a name="variable-variablename-hides-a-variable-in-an-enclosing-block"></a><span data-ttu-id="715e8-102">변수 '\<variablename >'가 바깥쪽 블록의 변수를 숨깁니다.</span><span class="sxs-lookup"><span data-stu-id="715e8-102">Variable '\<variablename>' hides a variable in an enclosing block</span></span>
-<span data-ttu-id="715e8-103">블록에 포함 된 변수의 다른 로컬 변수와 동일한 이름이 있습니다.</span><span class="sxs-lookup"><span data-stu-id="715e8-103">A variable enclosed in a block has the same name as another local variable.</span></span>  
+# <a name="variable-variablename-hides-a-variable-in-an-enclosing-block"></a><span data-ttu-id="ec102-102">변수 '\<variablename >'가 바깥쪽 블록의 변수를 숨깁니다.</span><span class="sxs-lookup"><span data-stu-id="ec102-102">Variable '\<variablename>' hides a variable in an enclosing block</span></span>
+<span data-ttu-id="ec102-103">블록에 포함 된 변수의 다른 로컬 변수와 동일한 이름이 있습니다.</span><span class="sxs-lookup"><span data-stu-id="ec102-103">A variable enclosed in a block has the same name as another local variable.</span></span>  
   
- <span data-ttu-id="715e8-104">**오류 ID:** BC30616</span><span class="sxs-lookup"><span data-stu-id="715e8-104">**Error ID:** BC30616</span></span>  
+ <span data-ttu-id="ec102-104">**오류 ID:** BC30616</span><span class="sxs-lookup"><span data-stu-id="ec102-104">**Error ID:** BC30616</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="715e8-105">이 오류를 해결하려면</span><span class="sxs-lookup"><span data-stu-id="715e8-105">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="ec102-105">이 오류를 해결하려면</span><span class="sxs-lookup"><span data-stu-id="ec102-105">To correct this error</span></span>  
   
--   <span data-ttu-id="715e8-106">블록 내부에서 변수를 이름을 다른 지역 변수와 동일 하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="715e8-106">Rename the variable in the enclosed block so that it is not the same as any other local variables.</span></span> <span data-ttu-id="715e8-107">예를 들어:</span><span class="sxs-lookup"><span data-stu-id="715e8-107">For example:</span></span>  
+-   <span data-ttu-id="ec102-106">블록 내부에서 변수를 이름을 다른 지역 변수와 동일 하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="ec102-106">Rename the variable in the enclosed block so that it is not the same as any other local variables.</span></span> <span data-ttu-id="ec102-107">예를 들어:</span><span class="sxs-lookup"><span data-stu-id="ec102-107">For example:</span></span>  
   
     ```  
     Dim a, b, x As Integer  
@@ -30,10 +30,11 @@ ms.locfileid: "55278501"
     End If  
     ```  
   
--   <span data-ttu-id="715e8-108">이 오류는 일반적으로 사용 하는 것 `Catch e As Exception` 이벤트 처리기의 내부.</span><span class="sxs-lookup"><span data-stu-id="715e8-108">A common cause for this error is the use of `Catch e As Exception` inside an event handler.</span></span> <span data-ttu-id="715e8-109">이 경우 이름을 합니다 `Catch` 블록 변수가 `ex` 대신 `e`합니다.</span><span class="sxs-lookup"><span data-stu-id="715e8-109">If this is the case, name the `Catch` block variable `ex` rather than `e`.</span></span>  
+-   <span data-ttu-id="ec102-108">이 오류는 일반적으로 사용 하는 것 `Catch e As Exception` 이벤트 처리기의 내부.</span><span class="sxs-lookup"><span data-stu-id="ec102-108">A common cause for this error is the use of `Catch e As Exception` inside an event handler.</span></span> <span data-ttu-id="ec102-109">이 경우 이름을 합니다 `Catch` 블록 변수가 `ex` 대신 `e`합니다.</span><span class="sxs-lookup"><span data-stu-id="ec102-109">If this is the case, name the `Catch` block variable `ex` rather than `e`.</span></span>  
   
--   <span data-ttu-id="715e8-110">이 오류는 또 다른 일반적인 소스 내에 선언 된 지역 변수에 액세스 하려고 하는 한 `Try` 별도의 차단 `Catch` 블록입니다.</span><span class="sxs-lookup"><span data-stu-id="715e8-110">Another common source of this error is an attempt to access a local variable declared within a `Try` block in a separate `Catch` block.</span></span> <span data-ttu-id="715e8-111">이 해결 하려면 외부에서 변수를 선언 합니다 `Try...Catch...Finally` 구조입니다.</span><span class="sxs-lookup"><span data-stu-id="715e8-111">To correct this, declare the variable outside the `Try...Catch...Finally` structure.</span></span>  
+-   <span data-ttu-id="ec102-110">이 오류는 또 다른 일반적인 소스 내에 선언 된 지역 변수에 액세스 하려고 하는 한 `Try` 별도의 차단 `Catch` 블록입니다.</span><span class="sxs-lookup"><span data-stu-id="ec102-110">Another common source of this error is an attempt to access a local variable declared within a `Try` block in a separate `Catch` block.</span></span> <span data-ttu-id="ec102-111">이 해결 하려면 외부에서 변수를 선언 합니다 `Try...Catch...Finally` 구조입니다.</span><span class="sxs-lookup"><span data-stu-id="ec102-111">To correct this, declare the variable outside the `Try...Catch...Finally` structure.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="715e8-112">참고자료</span><span class="sxs-lookup"><span data-stu-id="715e8-112">See also</span></span>
-- [<span data-ttu-id="715e8-113">Try...Catch...Finally 문</span><span class="sxs-lookup"><span data-stu-id="715e8-113">Try...Catch...Finally Statement</span></span>](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)
-- [<span data-ttu-id="715e8-114">변수 선언</span><span class="sxs-lookup"><span data-stu-id="715e8-114">Variable Declaration</span></span>](../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)
+## <a name="see-also"></a><span data-ttu-id="ec102-112">참고자료</span><span class="sxs-lookup"><span data-stu-id="ec102-112">See also</span></span>
+
+- [<span data-ttu-id="ec102-113">Try...Catch...Finally 문</span><span class="sxs-lookup"><span data-stu-id="ec102-113">Try...Catch...Finally Statement</span></span>](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)
+- [<span data-ttu-id="ec102-114">변수 선언</span><span class="sxs-lookup"><span data-stu-id="ec102-114">Variable Declaration</span></span>](../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)

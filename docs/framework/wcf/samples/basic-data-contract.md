@@ -4,22 +4,22 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Data Contract
 ms.assetid: b124e9e0-cb73-4ae0-b9c3-e6cdf5eced98
-ms.openlocfilehash: cfccf5526cdbf0cf0f147474c1c7719b1492f711
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ca9d93dc6bfe9c6f01130b00d0a6ad07efcc7bd8
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54550333"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58829345"
 ---
-# <a name="basic-data-contract"></a><span data-ttu-id="da53d-102">기본 데이터 계약</span><span class="sxs-lookup"><span data-stu-id="da53d-102">Basic Data Contract</span></span>
-<span data-ttu-id="da53d-103">이 샘플에서는 데이터 계약을 구현하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="da53d-103">This sample demonstrates how to implement a data contract.</span></span> <span data-ttu-id="da53d-104">데이터 계약을 사용하면 서비스와 구조적 데이터를 주고 받을 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="da53d-104">Data contracts allow you to pass structured data to and from services.</span></span> <span data-ttu-id="da53d-105">이 샘플은 기반 합니다 [Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md) 하지만 기본 숫자 형식 대신 복소수를 사용 합니다.</span><span class="sxs-lookup"><span data-stu-id="da53d-105">This sample is based on the [Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md) but uses complex numbers instead of basic numeric types.</span></span>  
+# <a name="basic-data-contract"></a><span data-ttu-id="d871a-102">기본 데이터 계약</span><span class="sxs-lookup"><span data-stu-id="d871a-102">Basic Data Contract</span></span>
+<span data-ttu-id="d871a-103">이 샘플에서는 데이터 계약을 구현하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="d871a-103">This sample demonstrates how to implement a data contract.</span></span> <span data-ttu-id="d871a-104">데이터 계약을 사용하면 서비스와 구조적 데이터를 주고 받을 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="d871a-104">Data contracts allow you to pass structured data to and from services.</span></span> <span data-ttu-id="d871a-105">이 샘플은 기반 합니다 [Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md) 하지만 기본 숫자 형식 대신 복소수를 사용 합니다.</span><span class="sxs-lookup"><span data-stu-id="d871a-105">This sample is based on the [Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md) but uses complex numbers instead of basic numeric types.</span></span>  
   
- <span data-ttu-id="da53d-106">이 샘플에서 서비스는 IIS(인터넷 정보 서비스)를 통해 호스팅되고 클라이언트는 콘솔 응용 프로그램(.exe)입니다.</span><span class="sxs-lookup"><span data-stu-id="da53d-106">In this sample, the service is hosted by Internet Information Services (IIS) and the client is a console application (.exe).</span></span>  
+ <span data-ttu-id="d871a-106">이 샘플에서 서비스는 IIS(인터넷 정보 서비스)를 통해 호스팅되고 클라이언트는 콘솔 응용 프로그램(.exe)입니다.</span><span class="sxs-lookup"><span data-stu-id="d871a-106">In this sample, the service is hosted by Internet Information Services (IIS) and the client is a console application (.exe).</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="da53d-107">이 샘플의 설치 절차 및 빌드 지침은 이 항목의 끝부분에 나와 있습니다.</span><span class="sxs-lookup"><span data-stu-id="da53d-107">The setup procedure and build instructions for this sample are located at the end of this topic.</span></span>  
+>  <span data-ttu-id="d871a-107">이 샘플의 설치 절차 및 빌드 지침은 이 항목의 끝부분에 나와 있습니다.</span><span class="sxs-lookup"><span data-stu-id="d871a-107">The setup procedure and build instructions for this sample are located at the end of this topic.</span></span>  
   
- <span data-ttu-id="da53d-108">다음 샘플 코드와 같이 이 서비스에 대한 서비스 계약에서는 복소수를 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="da53d-108">The service contract for this service uses complex numbers, as shown in the following sample code.</span></span>  
+ <span data-ttu-id="d871a-108">다음 샘플 코드와 같이 이 서비스에 대한 서비스 계약에서는 복소수를 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="d871a-108">The service contract for this service uses complex numbers, as shown in the following sample code.</span></span>  
   
 ```csharp
 // Define a service contract.  
@@ -37,7 +37,7 @@ public interface ICalculator
 }  
 ```  
   
- <span data-ttu-id="da53d-109">다음 샘플 코드와 같이 클라이언트와 서비스 간에 연결을 통해 전달할 수 있는 클래스의 필드를 나타내기 위해 <xref:System.Runtime.Serialization.DataContractAttribute> 및 <xref:System.Runtime.Serialization.DataMemberAttribute> 특성이 `ComplexNumber` 클래스 정의에 적용되었습니다.</span><span class="sxs-lookup"><span data-stu-id="da53d-109">The <xref:System.Runtime.Serialization.DataContractAttribute> and <xref:System.Runtime.Serialization.DataMemberAttribute> attributes have been applied to the definition of the `ComplexNumber` class to indicate which fields of the class can be passed over the wire between the client and the service, as shown in the following sample code.</span></span>  
+ <span data-ttu-id="d871a-109">다음 샘플 코드와 같이 클라이언트와 서비스 간에 연결을 통해 전달할 수 있는 클래스의 필드를 나타내기 위해 <xref:System.Runtime.Serialization.DataContractAttribute> 및 <xref:System.Runtime.Serialization.DataMemberAttribute> 특성이 `ComplexNumber` 클래스 정의에 적용되었습니다.</span><span class="sxs-lookup"><span data-stu-id="d871a-109">The <xref:System.Runtime.Serialization.DataContractAttribute> and <xref:System.Runtime.Serialization.DataMemberAttribute> attributes have been applied to the definition of the `ComplexNumber` class to indicate which fields of the class can be passed over the wire between the client and the service, as shown in the following sample code.</span></span>  
   
 ```csharp
 [DataContract(Namespace="http://Microsoft.ServiceModel.Samples")]  
@@ -56,7 +56,7 @@ public class ComplexNumber
 }  
 ```  
   
- <span data-ttu-id="da53d-110">서비스 구현은 적절한 결과를 계산하여 반환하며 `ComplexNumber` 형식의 숫자가 허용 및 반환됩니다.</span><span class="sxs-lookup"><span data-stu-id="da53d-110">The service implementation calculates and returns the appropriate result, accepting and returning numbers of the `ComplexNumber` type.</span></span>  
+ <span data-ttu-id="d871a-110">서비스 구현은 적절한 결과를 계산하여 반환하며 `ComplexNumber` 형식의 숫자가 허용 및 반환됩니다.</span><span class="sxs-lookup"><span data-stu-id="d871a-110">The service implementation calculates and returns the appropriate result, accepting and returning numbers of the `ComplexNumber` type.</span></span>  
   
 ```csharp
 // This is the service class that implements the service contract.  
@@ -95,7 +95,7 @@ public class CalculatorService : ICalculator
 }  
 ```  
   
- <span data-ttu-id="da53d-111">클라이언트 구현에서도 복소수가 사용됩니다.</span><span class="sxs-lookup"><span data-stu-id="da53d-111">The client implementation also uses complex numbers.</span></span> <span data-ttu-id="da53d-112">서비스 계약과 데이터 계약은 둘 다에서 생성 되는 generatedClient.cs 소스 파일에에서 정의 된 합니다 [ServiceModel Metadata 유틸리티 도구 (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) 서비스 메타 데이터에서 합니다.</span><span class="sxs-lookup"><span data-stu-id="da53d-112">Both the service contract and the data contract are defined in the source file generatedClient.cs, which is generated by the [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) from service metadata.</span></span>  
+ <span data-ttu-id="d871a-111">클라이언트 구현에서도 복소수가 사용됩니다.</span><span class="sxs-lookup"><span data-stu-id="d871a-111">The client implementation also uses complex numbers.</span></span> <span data-ttu-id="d871a-112">서비스 계약과 데이터 계약은 둘 다에서 생성 되는 generatedClient.cs 소스 파일에에서 정의 된 합니다 [ServiceModel Metadata 유틸리티 도구 (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) 서비스 메타 데이터에서 합니다.</span><span class="sxs-lookup"><span data-stu-id="d871a-112">Both the service contract and the data contract are defined in the source file generatedClient.cs, which is generated by the [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) from service metadata.</span></span>  
   
 ```csharp
 // Create a client.  
@@ -119,7 +119,7 @@ Console.WriteLine("Add({0} + {1}i, {2} + {3}i) = {4} + {5}i",
 }  
 ```  
   
- <span data-ttu-id="da53d-113">샘플을 실행하면 작업의 요청 및 응답이 클라이언트 콘솔 창에 표시됩니다.</span><span class="sxs-lookup"><span data-stu-id="da53d-113">When you run the sample, the requests and responses of the operation are displayed in the client console window.</span></span> <span data-ttu-id="da53d-114">클라이언트를 종료하려면 클라이언트 창에서 Enter 키를 누릅니다.</span><span class="sxs-lookup"><span data-stu-id="da53d-114">Press ENTER in the client window to shut down the client.</span></span>  
+ <span data-ttu-id="d871a-113">샘플을 실행하면 작업의 요청 및 응답이 클라이언트 콘솔 창에 표시됩니다.</span><span class="sxs-lookup"><span data-stu-id="d871a-113">When you run the sample, the requests and responses of the operation are displayed in the client console window.</span></span> <span data-ttu-id="d871a-114">클라이언트를 종료하려면 클라이언트 창에서 Enter 키를 누릅니다.</span><span class="sxs-lookup"><span data-stu-id="d871a-114">Press ENTER in the client window to shut down the client.</span></span>  
   
 ```console  
 Add(1 + 2i, 3 + 4i) = 4 + 6i  
@@ -130,21 +130,20 @@ Divide(3 + 7i, 5 + -2i) = 0.0344827586206897 + 41i
 Press <ENTER> to terminate client.  
 ```  
   
-### <a name="to-set-up-build-and-run-the-sample"></a><span data-ttu-id="da53d-115">샘플을 설치, 빌드 및 실행하려면</span><span class="sxs-lookup"><span data-stu-id="da53d-115">To set up, build, and run the sample</span></span>  
+### <a name="to-set-up-build-and-run-the-sample"></a><span data-ttu-id="d871a-115">샘플을 설치, 빌드 및 실행하려면</span><span class="sxs-lookup"><span data-stu-id="d871a-115">To set up, build, and run the sample</span></span>  
   
-1.  <span data-ttu-id="da53d-116">수행 했는지 확인 합니다 [Windows Communication Foundation 샘플에 대 한 일회성 설치 절차](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="da53d-116">Ensure that you have performed the [One-Time Setup Procedure for the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).</span></span>  
+1.  <span data-ttu-id="d871a-116">수행 했는지 확인 합니다 [Windows Communication Foundation 샘플에 대 한 일회성 설치 절차](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="d871a-116">Ensure that you have performed the [One-Time Setup Procedure for the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).</span></span>  
   
-2.  <span data-ttu-id="da53d-117">C# 또는 Visual Basic .NET 버전의 솔루션을 빌드하려면 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)의 지침을 따릅니다.</span><span class="sxs-lookup"><span data-stu-id="da53d-117">To build the C# or Visual Basic .NET edition of the solution, follow the instructions in [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).</span></span>  
+2.  <span data-ttu-id="d871a-117">C# 또는 Visual Basic .NET 버전의 솔루션을 빌드하려면 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)의 지침을 따릅니다.</span><span class="sxs-lookup"><span data-stu-id="d871a-117">To build the C# or Visual Basic .NET edition of the solution, follow the instructions in [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).</span></span>  
   
-3.  <span data-ttu-id="da53d-118">단일 또는 다중 컴퓨터 구성에서 샘플을 실행 하려면의 지침을 따릅니다 [Windows Communication Foundation 샘플 실행](../../../../docs/framework/wcf/samples/running-the-samples.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="da53d-118">To run the sample in a single- or cross-machine configuration, follow the instructions in [Running the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/running-the-samples.md).</span></span>  
+3.  <span data-ttu-id="d871a-118">단일 또는 다중 컴퓨터 구성에서 샘플을 실행 하려면의 지침을 따릅니다 [Windows Communication Foundation 샘플 실행](../../../../docs/framework/wcf/samples/running-the-samples.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="d871a-118">To run the sample in a single- or cross-machine configuration, follow the instructions in [Running the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/running-the-samples.md).</span></span>  
   
 > [!IMPORTANT]
->  <span data-ttu-id="da53d-119">컴퓨터에 이 샘플이 이미 설치되어 있을 수도 있습니다.</span><span class="sxs-lookup"><span data-stu-id="da53d-119">The samples may already be installed on your machine.</span></span> <span data-ttu-id="da53d-120">계속하기 전에 다음(기본) 디렉터리를 확인하세요.</span><span class="sxs-lookup"><span data-stu-id="da53d-120">Check for the following (default) directory before continuing.</span></span>  
+>  <span data-ttu-id="d871a-119">컴퓨터에 이 샘플이 이미 설치되어 있을 수도 있습니다.</span><span class="sxs-lookup"><span data-stu-id="d871a-119">The samples may already be installed on your machine.</span></span> <span data-ttu-id="d871a-120">계속하기 전에 다음(기본) 디렉터리를 확인하세요.</span><span class="sxs-lookup"><span data-stu-id="d871a-120">Check for the following (default) directory before continuing.</span></span>  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  <span data-ttu-id="da53d-121">이 디렉터리가 없으면로 이동 [Windows Communication Foundation (WCF) 및.NET Framework 4 용 Windows WF (Workflow Foundation) 샘플](https://go.microsoft.com/fwlink/?LinkId=150780) 모든 Windows Communication Foundation (WCF)를 다운로드 하 고 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플.</span><span class="sxs-lookup"><span data-stu-id="da53d-121">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) to download all Windows Communication Foundation (WCF) and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="da53d-122">이 샘플은 다음 디렉터리에 있습니다.</span><span class="sxs-lookup"><span data-stu-id="da53d-122">This sample is located in the following directory.</span></span>  
+>  <span data-ttu-id="d871a-121">이 디렉터리가 없으면로 이동 [Windows Communication Foundation (WCF) 및.NET Framework 4 용 Windows WF (Workflow Foundation) 샘플](https://go.microsoft.com/fwlink/?LinkId=150780) 모든 Windows Communication Foundation (WCF)를 다운로드 하 고 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플.</span><span class="sxs-lookup"><span data-stu-id="d871a-121">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) to download all Windows Communication Foundation (WCF) and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="d871a-122">이 샘플은 다음 디렉터리에 있습니다.</span><span class="sxs-lookup"><span data-stu-id="d871a-122">This sample is located in the following directory.</span></span>  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Contract\Data\Basic`  
   
-## <a name="see-also"></a><span data-ttu-id="da53d-123">참고자료</span><span class="sxs-lookup"><span data-stu-id="da53d-123">See also</span></span>

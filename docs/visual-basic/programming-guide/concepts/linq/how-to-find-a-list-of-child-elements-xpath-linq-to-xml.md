@@ -2,22 +2,22 @@
 title: '방법: (XPath 및 LINQ to XML) 자식 요소 목록 찾기 (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 2868abfd-9f7b-412a-9cb5-f643f0fed146
-ms.openlocfilehash: 4ff9e5f1dc1d1b6c9ac1674434bcb2bc4c57ffde
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7ed31f17157176a6c100a8d02e065843a62b9587
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54625111"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58825016"
 ---
-# <a name="how-to-find-a-list-of-child-elements-xpath-linq-to-xml-visual-basic"></a><span data-ttu-id="50fe0-102">방법: (XPath 및 LINQ to XML) 자식 요소 목록 찾기 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="50fe0-102">How to: Find a List of Child Elements (XPath-LINQ to XML) (Visual Basic)</span></span>
-<span data-ttu-id="50fe0-103">이 항목에서는 XPath 자식 요소 축과 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] <xref:System.Xml.Linq.XContainer.Elements%2A> 축을 비교합니다.</span><span class="sxs-lookup"><span data-stu-id="50fe0-103">This topic compares the XPath child elements axis to the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] <xref:System.Xml.Linq.XContainer.Elements%2A> axis.</span></span>  
+# <a name="how-to-find-a-list-of-child-elements-xpath-linq-to-xml-visual-basic"></a><span data-ttu-id="962d4-102">방법: (XPath 및 LINQ to XML) 자식 요소 목록 찾기 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="962d4-102">How to: Find a List of Child Elements (XPath-LINQ to XML) (Visual Basic)</span></span>
+<span data-ttu-id="962d4-103">이 항목에서는 XPath 자식 요소 축과 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] <xref:System.Xml.Linq.XContainer.Elements%2A> 축을 비교합니다.</span><span class="sxs-lookup"><span data-stu-id="962d4-103">This topic compares the XPath child elements axis to the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] <xref:System.Xml.Linq.XContainer.Elements%2A> axis.</span></span>  
   
- <span data-ttu-id="50fe0-104">XPath 식은 `./*`입니다.</span><span class="sxs-lookup"><span data-stu-id="50fe0-104">The XPath expression is: `./*`</span></span>  
+ <span data-ttu-id="962d4-104">XPath 식은 `./*`입니다.</span><span class="sxs-lookup"><span data-stu-id="962d4-104">The XPath expression is: `./*`</span></span>  
   
-## <a name="example"></a><span data-ttu-id="50fe0-105">예제</span><span class="sxs-lookup"><span data-stu-id="50fe0-105">Example</span></span>  
- <span data-ttu-id="50fe0-106">이 예제에서는 `Address` 요소의 모든 자식 요소를 찾습니다.</span><span class="sxs-lookup"><span data-stu-id="50fe0-106">This example finds all of the child elements of the `Address` element.</span></span>  
+## <a name="example"></a><span data-ttu-id="962d4-105">예제</span><span class="sxs-lookup"><span data-stu-id="962d4-105">Example</span></span>  
+ <span data-ttu-id="962d4-106">이 예제에서는 `Address` 요소의 모든 자식 요소를 찾습니다.</span><span class="sxs-lookup"><span data-stu-id="962d4-106">This example finds all of the child elements of the `Address` element.</span></span>  
   
- <span data-ttu-id="50fe0-107">이 예제에서는 XML 문서로 을 사용합니다. [샘플 XML 파일: 여러 구매 주문 (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-linq-to-xml.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="50fe0-107">This example uses the following XML document: [Sample XML File: Multiple Purchase Orders (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-linq-to-xml.md).</span></span>  
+ <span data-ttu-id="962d4-107">이 예제에서는 XML 문서로을 사용합니다. [샘플 XML 파일: 여러 구매 주문(LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-linq-to-xml.md).</span><span class="sxs-lookup"><span data-stu-id="962d4-107">This example uses the following XML document: [Sample XML File: Multiple Purchase Orders (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-linq-to-xml.md).</span></span>  
   
 ```vb  
 Dim cpo As XDocument = XDocument.Load("PurchaseOrders.xml")  
@@ -40,7 +40,7 @@ For Each el As XElement In list1
 Next  
 ```  
   
- <span data-ttu-id="50fe0-108">이 예제는 다음과 같은 출력을 생성합니다.</span><span class="sxs-lookup"><span data-stu-id="50fe0-108">This example produces the following output:</span></span>  
+ <span data-ttu-id="962d4-108">이 예제는 다음과 같은 출력을 생성합니다.</span><span class="sxs-lookup"><span data-stu-id="962d4-108">This example produces the following output:</span></span>  
   
 ```  
 Results are identical  
@@ -52,5 +52,6 @@ Results are identical
 <Country>USA</Country>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="50fe0-109">참고자료</span><span class="sxs-lookup"><span data-stu-id="50fe0-109">See also</span></span>
-- [<span data-ttu-id="50fe0-110">XPath 사용자 (Visual Basic)를 위한 LINQ to XML</span><span class="sxs-lookup"><span data-stu-id="50fe0-110">LINQ to XML for XPath Users (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
+## <a name="see-also"></a><span data-ttu-id="962d4-109">참고자료</span><span class="sxs-lookup"><span data-stu-id="962d4-109">See also</span></span>
+
+- [<span data-ttu-id="962d4-110">XPath 사용자 (Visual Basic)를 위한 LINQ to XML</span><span class="sxs-lookup"><span data-stu-id="962d4-110">LINQ to XML for XPath Users (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)

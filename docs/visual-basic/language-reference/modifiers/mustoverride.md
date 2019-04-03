@@ -15,41 +15,42 @@ helpviewer_keywords:
 - MustOverride keyword [Visual Basic]
 - properties [Visual Basic], overriding
 ms.assetid: 6e9d9ad6-bb64-433f-b32b-3ef84293bf96
-ms.openlocfilehash: fedebf3ee791fbab02ace2ba2dc121590a241c53
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0ddd7d0d2a57afc02aa7483ba5e83b65c48af534
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54627332"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58822819"
 ---
-# <a name="mustoverride-visual-basic"></a><span data-ttu-id="34575-102">MustOverride(Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="34575-102">MustOverride (Visual Basic)</span></span>
-<span data-ttu-id="34575-103">속성 또는 프로시저가이 클래스에서 구현 되지 않습니다 및 사용할 수 전에 파생된 클래스에서 재정의 해야 합니다를 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="34575-103">Specifies that a property or procedure is not implemented in this class and must be overridden in a derived class before it can be used.</span></span>  
+# <a name="mustoverride-visual-basic"></a><span data-ttu-id="a8f1c-102">MustOverride(Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="a8f1c-102">MustOverride (Visual Basic)</span></span>
+<span data-ttu-id="a8f1c-103">속성 또는 프로시저가이 클래스에서 구현 되지 않습니다 및 사용할 수 전에 파생된 클래스에서 재정의 해야 합니다를 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="a8f1c-103">Specifies that a property or procedure is not implemented in this class and must be overridden in a derived class before it can be used.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="34575-104">설명</span><span class="sxs-lookup"><span data-stu-id="34575-104">Remarks</span></span>  
- <span data-ttu-id="34575-105">속성 또는 프로시저 선언문에서만 `MustOverride`를 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="34575-105">You can use `MustOverride` only in a property or procedure declaration statement.</span></span> <span data-ttu-id="34575-106">속성을 지정 하는 절차 `MustOverride` 클래스의 멤버 여야 합니다 클래스를 표시 해야 합니다 [MustInherit](../../../visual-basic/language-reference/modifiers/mustinherit.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="34575-106">The property or procedure that specifies `MustOverride` must be a member of a class, and the class must be marked [MustInherit](../../../visual-basic/language-reference/modifiers/mustinherit.md).</span></span>  
+## <a name="remarks"></a><span data-ttu-id="a8f1c-104">설명</span><span class="sxs-lookup"><span data-stu-id="a8f1c-104">Remarks</span></span>  
+ <span data-ttu-id="a8f1c-105">속성 또는 프로시저 선언문에서만 `MustOverride`를 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="a8f1c-105">You can use `MustOverride` only in a property or procedure declaration statement.</span></span> <span data-ttu-id="a8f1c-106">속성을 지정 하는 절차 `MustOverride` 클래스의 멤버 여야 합니다 클래스를 표시 해야 합니다 [MustInherit](../../../visual-basic/language-reference/modifiers/mustinherit.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="a8f1c-106">The property or procedure that specifies `MustOverride` must be a member of a class, and the class must be marked [MustInherit](../../../visual-basic/language-reference/modifiers/mustinherit.md).</span></span>  
   
-## <a name="rules"></a><span data-ttu-id="34575-107">규칙</span><span class="sxs-lookup"><span data-stu-id="34575-107">Rules</span></span>  
+## <a name="rules"></a><span data-ttu-id="a8f1c-107">규칙</span><span class="sxs-lookup"><span data-stu-id="a8f1c-107">Rules</span></span>  
   
--   <span data-ttu-id="34575-108">**완료 되지 않은 선언입니다.**</span><span class="sxs-lookup"><span data-stu-id="34575-108">**Incomplete Declaration.**</span></span> <span data-ttu-id="34575-109">지정 하는 경우 `MustOverride`, 되지 모든 추가 속성 또는 프로시저에 대 한 코드 줄을 지정 하지 않으면 아무리 `End Function`, `End Property`, 또는 `End Sub` 문입니다.</span><span class="sxs-lookup"><span data-stu-id="34575-109">When you specify `MustOverride`, you do not supply any additional lines of code for the property or procedure, not even the `End Function`, `End Property`, or `End Sub` statement.</span></span>  
+-   <span data-ttu-id="a8f1c-108">**완료 되지 않은 선언입니다.**</span><span class="sxs-lookup"><span data-stu-id="a8f1c-108">**Incomplete Declaration.**</span></span> <span data-ttu-id="a8f1c-109">지정 하는 경우 `MustOverride`, 되지 모든 추가 속성 또는 프로시저에 대 한 코드 줄을 지정 하지 않으면 아무리 `End Function`, `End Property`, 또는 `End Sub` 문입니다.</span><span class="sxs-lookup"><span data-stu-id="a8f1c-109">When you specify `MustOverride`, you do not supply any additional lines of code for the property or procedure, not even the `End Function`, `End Property`, or `End Sub` statement.</span></span>  
   
--   <span data-ttu-id="34575-110">**결합 된 한정자입니다.**</span><span class="sxs-lookup"><span data-stu-id="34575-110">**Combined Modifiers.**</span></span> <span data-ttu-id="34575-111">지정할 수 없습니다 `MustOverride` 와 함께 `NotOverridable`를 `Overridable`, 또는 `Shared` 같은 선언에 있습니다.</span><span class="sxs-lookup"><span data-stu-id="34575-111">You cannot specify `MustOverride` together with `NotOverridable`, `Overridable`, or `Shared` in the same declaration.</span></span>  
+-   <span data-ttu-id="a8f1c-110">**결합 된 한정자입니다.**</span><span class="sxs-lookup"><span data-stu-id="a8f1c-110">**Combined Modifiers.**</span></span> <span data-ttu-id="a8f1c-111">지정할 수 없습니다 `MustOverride` 와 함께 `NotOverridable`를 `Overridable`, 또는 `Shared` 같은 선언에 있습니다.</span><span class="sxs-lookup"><span data-stu-id="a8f1c-111">You cannot specify `MustOverride` together with `NotOverridable`, `Overridable`, or `Shared` in the same declaration.</span></span>  
   
--   <span data-ttu-id="34575-112">**숨기기와 재정의 합니다.**</span><span class="sxs-lookup"><span data-stu-id="34575-112">**Shadowing and Overriding.**</span></span> <span data-ttu-id="34575-113">숨김과 재정의는 둘 다 상속된 요소를 다시 정의하지만 두 방법에는 중요한 차이점이 있습니다.</span><span class="sxs-lookup"><span data-stu-id="34575-113">Both shadowing and overriding redefine an inherited element, but there are significant differences between the two approaches.</span></span> <span data-ttu-id="34575-114">자세한 내용은 [Visual Basic의 숨김 기능](../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="34575-114">For more information, see [Shadowing in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md).</span></span>  
+-   <span data-ttu-id="a8f1c-112">**숨기기와 재정의 합니다.**</span><span class="sxs-lookup"><span data-stu-id="a8f1c-112">**Shadowing and Overriding.**</span></span> <span data-ttu-id="a8f1c-113">숨김과 재정의는 둘 다 상속된 요소를 다시 정의하지만 두 방법에는 중요한 차이점이 있습니다.</span><span class="sxs-lookup"><span data-stu-id="a8f1c-113">Both shadowing and overriding redefine an inherited element, but there are significant differences between the two approaches.</span></span> <span data-ttu-id="a8f1c-114">자세한 내용은 [Visual Basic의 숨김 기능](../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="a8f1c-114">For more information, see [Shadowing in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md).</span></span>  
   
--   <span data-ttu-id="34575-115">**대체 용어입니다.**</span><span class="sxs-lookup"><span data-stu-id="34575-115">**Alternate Terms.**</span></span> <span data-ttu-id="34575-116">재정의에서 제외 하 고 사용할 수 없는 요소 라고도 함은 *순수 가상* 요소입니다.</span><span class="sxs-lookup"><span data-stu-id="34575-116">An element that cannot be used except in an override is sometimes called a *pure virtual* element.</span></span>  
+-   <span data-ttu-id="a8f1c-115">**대체 용어입니다.**</span><span class="sxs-lookup"><span data-stu-id="a8f1c-115">**Alternate Terms.**</span></span> <span data-ttu-id="a8f1c-116">재정의에서 제외 하 고 사용할 수 없는 요소 라고도 함은 *순수 가상* 요소입니다.</span><span class="sxs-lookup"><span data-stu-id="a8f1c-116">An element that cannot be used except in an override is sometimes called a *pure virtual* element.</span></span>  
   
- <span data-ttu-id="34575-117">`MustOverride` 한정자는 다음 컨텍스트에서 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="34575-117">The `MustOverride` modifier can be used in these contexts:</span></span>  
+ <span data-ttu-id="a8f1c-117">`MustOverride` 한정자는 다음 컨텍스트에서 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="a8f1c-117">The `MustOverride` modifier can be used in these contexts:</span></span>  
   
- [<span data-ttu-id="34575-118">Function 문</span><span class="sxs-lookup"><span data-stu-id="34575-118">Function Statement</span></span>](../../../visual-basic/language-reference/statements/function-statement.md)  
+ [<span data-ttu-id="a8f1c-118">Function 문</span><span class="sxs-lookup"><span data-stu-id="a8f1c-118">Function Statement</span></span>](../../../visual-basic/language-reference/statements/function-statement.md)  
   
- [<span data-ttu-id="34575-119">Property 문</span><span class="sxs-lookup"><span data-stu-id="34575-119">Property Statement</span></span>](../../../visual-basic/language-reference/statements/property-statement.md)  
+ [<span data-ttu-id="a8f1c-119">Property 문</span><span class="sxs-lookup"><span data-stu-id="a8f1c-119">Property Statement</span></span>](../../../visual-basic/language-reference/statements/property-statement.md)  
   
- [<span data-ttu-id="34575-120">Sub 문</span><span class="sxs-lookup"><span data-stu-id="34575-120">Sub Statement</span></span>](../../../visual-basic/language-reference/statements/sub-statement.md)  
+ [<span data-ttu-id="a8f1c-120">Sub 문</span><span class="sxs-lookup"><span data-stu-id="a8f1c-120">Sub Statement</span></span>](../../../visual-basic/language-reference/statements/sub-statement.md)  
   
-## <a name="see-also"></a><span data-ttu-id="34575-121">참고자료</span><span class="sxs-lookup"><span data-stu-id="34575-121">See also</span></span>
-- [<span data-ttu-id="34575-122">NotOverridable</span><span class="sxs-lookup"><span data-stu-id="34575-122">NotOverridable</span></span>](../../../visual-basic/language-reference/modifiers/notoverridable.md)
-- [<span data-ttu-id="34575-123">재정의 가능</span><span class="sxs-lookup"><span data-stu-id="34575-123">Overridable</span></span>](../../../visual-basic/language-reference/modifiers/overridable.md)
-- [<span data-ttu-id="34575-124">재정의</span><span class="sxs-lookup"><span data-stu-id="34575-124">Overrides</span></span>](../../../visual-basic/language-reference/modifiers/overrides.md)
-- [<span data-ttu-id="34575-125">MustInherit</span><span class="sxs-lookup"><span data-stu-id="34575-125">MustInherit</span></span>](../../../visual-basic/language-reference/modifiers/mustinherit.md)
-- [<span data-ttu-id="34575-126">키워드</span><span class="sxs-lookup"><span data-stu-id="34575-126">Keywords</span></span>](../../../visual-basic/language-reference/keywords/index.md)
-- [<span data-ttu-id="34575-127">Visual Basic의 숨김 기능</span><span class="sxs-lookup"><span data-stu-id="34575-127">Shadowing in Visual Basic</span></span>](../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)
+## <a name="see-also"></a><span data-ttu-id="a8f1c-121">참고자료</span><span class="sxs-lookup"><span data-stu-id="a8f1c-121">See also</span></span>
+
+- [<span data-ttu-id="a8f1c-122">NotOverridable</span><span class="sxs-lookup"><span data-stu-id="a8f1c-122">NotOverridable</span></span>](../../../visual-basic/language-reference/modifiers/notoverridable.md)
+- [<span data-ttu-id="a8f1c-123">재정의 가능</span><span class="sxs-lookup"><span data-stu-id="a8f1c-123">Overridable</span></span>](../../../visual-basic/language-reference/modifiers/overridable.md)
+- [<span data-ttu-id="a8f1c-124">재정의</span><span class="sxs-lookup"><span data-stu-id="a8f1c-124">Overrides</span></span>](../../../visual-basic/language-reference/modifiers/overrides.md)
+- [<span data-ttu-id="a8f1c-125">MustInherit</span><span class="sxs-lookup"><span data-stu-id="a8f1c-125">MustInherit</span></span>](../../../visual-basic/language-reference/modifiers/mustinherit.md)
+- [<span data-ttu-id="a8f1c-126">C++ 키워드</span><span class="sxs-lookup"><span data-stu-id="a8f1c-126">Keywords</span></span>](../../../visual-basic/language-reference/keywords/index.md)
+- [<span data-ttu-id="a8f1c-127">Visual Basic의 숨김 기능</span><span class="sxs-lookup"><span data-stu-id="a8f1c-127">Shadowing in Visual Basic</span></span>](../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)

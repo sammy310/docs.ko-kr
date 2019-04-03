@@ -4,25 +4,26 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - My.Computer.Info object
 ms.assetid: 2eb2aa5f-303d-426c-918d-989c8b7b08d0
-ms.openlocfilehash: 4d187d171aa90ae1067078f7540a18f39c3508a1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1ef633b8e9fcbfb815c8cd8296fecac3e7c4b041
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54685661"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58834594"
 ---
-# <a name="mycomputerinfo-object"></a><span data-ttu-id="e9a1e-102">My.Computer.Info 개체</span><span class="sxs-lookup"><span data-stu-id="e9a1e-102">My.Computer.Info Object</span></span>
-<span data-ttu-id="e9a1e-103">컴퓨터의 메모리, 로드된 어셈블리, 이름 및 운영 체제에 대한 정보를 가져오기 위한 속성을 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="e9a1e-103">Provides properties for getting information about the computer's memory, loaded assemblies, name, and operating system.</span></span>  
+# <a name="mycomputerinfo-object"></a><span data-ttu-id="f2a6e-102">My.Computer.Info 개체</span><span class="sxs-lookup"><span data-stu-id="f2a6e-102">My.Computer.Info Object</span></span>
+<span data-ttu-id="f2a6e-103">컴퓨터의 메모리, 로드된 어셈블리, 이름 및 운영 체제에 대한 정보를 가져오기 위한 속성을 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="f2a6e-103">Provides properties for getting information about the computer's memory, loaded assemblies, name, and operating system.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="e9a1e-104">설명</span><span class="sxs-lookup"><span data-stu-id="e9a1e-104">Remarks</span></span>  
- <span data-ttu-id="e9a1e-105">속성에 대 한 자세한 합니다 `My.Computer.Info` 개체를 참조 하십시오 <xref:Microsoft.VisualBasic.Devices.ComputerInfo>합니다.</span><span class="sxs-lookup"><span data-stu-id="e9a1e-105">For information about the properties of the `My.Computer.Info` object, see <xref:Microsoft.VisualBasic.Devices.ComputerInfo>.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="f2a6e-104">설명</span><span class="sxs-lookup"><span data-stu-id="f2a6e-104">Remarks</span></span>  
+ <span data-ttu-id="f2a6e-105">속성에 대 한 자세한 합니다 `My.Computer.Info` 개체를 참조 하십시오 <xref:Microsoft.VisualBasic.Devices.ComputerInfo>합니다.</span><span class="sxs-lookup"><span data-stu-id="f2a6e-105">For information about the properties of the `My.Computer.Info` object, see <xref:Microsoft.VisualBasic.Devices.ComputerInfo>.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="e9a1e-106">요구 사항</span><span class="sxs-lookup"><span data-stu-id="e9a1e-106">Requirements</span></span>  
- <span data-ttu-id="e9a1e-107">**네임스페이스:** <xref:Microsoft.VisualBasic.Devices></span><span class="sxs-lookup"><span data-stu-id="e9a1e-107">**Namespace:** <xref:Microsoft.VisualBasic.Devices></span></span>  
+## <a name="requirements"></a><span data-ttu-id="f2a6e-106">요구 사항</span><span class="sxs-lookup"><span data-stu-id="f2a6e-106">Requirements</span></span>  
+ <span data-ttu-id="f2a6e-107">**네임스페이스:** <xref:Microsoft.VisualBasic.Devices></span><span class="sxs-lookup"><span data-stu-id="f2a6e-107">**Namespace:** <xref:Microsoft.VisualBasic.Devices></span></span>  
   
- <span data-ttu-id="e9a1e-108">**클래스:** <xref:Microsoft.VisualBasic.Devices.ComputerInfo></span><span class="sxs-lookup"><span data-stu-id="e9a1e-108">**Class:** <xref:Microsoft.VisualBasic.Devices.ComputerInfo></span></span>  
+ <span data-ttu-id="f2a6e-108">**클래스:** <xref:Microsoft.VisualBasic.Devices.ComputerInfo></span><span class="sxs-lookup"><span data-stu-id="f2a6e-108">**Class:** <xref:Microsoft.VisualBasic.Devices.ComputerInfo></span></span>  
   
- <span data-ttu-id="e9a1e-109">**어셈블리:** Visual Basic 런타임 라이브러리(Microsoft.VisualBasic.dll)</span><span class="sxs-lookup"><span data-stu-id="e9a1e-109">**Assembly:** Visual Basic Runtime Library (in Microsoft.VisualBasic.dll)</span></span>  
+ <span data-ttu-id="f2a6e-109">**어셈블리:** Visual Basic 런타임 라이브러리(Microsoft.VisualBasic.dll)</span><span class="sxs-lookup"><span data-stu-id="f2a6e-109">**Assembly:** Visual Basic Runtime Library (in Microsoft.VisualBasic.dll)</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="e9a1e-110">참고자료</span><span class="sxs-lookup"><span data-stu-id="e9a1e-110">See also</span></span>
-- [<span data-ttu-id="e9a1e-111">My.Computer 개체</span><span class="sxs-lookup"><span data-stu-id="e9a1e-111">My.Computer Object</span></span>](../../../visual-basic/language-reference/objects/my-computer-object.md)
+## <a name="see-also"></a><span data-ttu-id="f2a6e-110">참고자료</span><span class="sxs-lookup"><span data-stu-id="f2a6e-110">See also</span></span>
+
+- [<span data-ttu-id="f2a6e-111">My.Computer 개체</span><span class="sxs-lookup"><span data-stu-id="f2a6e-111">My.Computer Object</span></span>](../../../visual-basic/language-reference/objects/my-computer-object.md)

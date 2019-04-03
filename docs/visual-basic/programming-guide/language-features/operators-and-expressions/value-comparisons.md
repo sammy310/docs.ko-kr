@@ -10,43 +10,44 @@ helpviewer_keywords:
 - operators [Visual Basic], comparison
 - expressions [Visual Basic], comparing
 ms.assetid: 60da0c76-9458-4afc-97e9-44a7939c064c
-ms.openlocfilehash: 50054b9e32f4d49a34c1bb1a5c79129662019aee
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 270b226d0a1aa7d08721e6f9ed36d68492685af3
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56965910"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58818607"
 ---
-# <a name="value-comparisons-visual-basic"></a><span data-ttu-id="71188-102">값 비교(Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="71188-102">Value Comparisons (Visual Basic)</span></span>
-<span data-ttu-id="71188-103">숫자 변수 값을 비교 하는 식을 생성 하려면 비교 연산자를 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="71188-103">Comparison operators can be used to construct expressions that compare the values of numeric variables.</span></span> <span data-ttu-id="71188-104">이러한 식은 반환을 `Boolean` 비교가 true 인지에 따라 값 false입니다.</span><span class="sxs-lookup"><span data-stu-id="71188-104">These expressions return a `Boolean` value based on whether the comparison is true or false.</span></span> <span data-ttu-id="71188-105">이러한 식의 예는 다음과 같습니다.</span><span class="sxs-lookup"><span data-stu-id="71188-105">Examples of such an expression are as follows.</span></span>  
+# <a name="value-comparisons-visual-basic"></a><span data-ttu-id="d88fb-102">값 비교(Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="d88fb-102">Value Comparisons (Visual Basic)</span></span>
+<span data-ttu-id="d88fb-103">숫자 변수 값을 비교 하는 식을 생성 하려면 비교 연산자를 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="d88fb-103">Comparison operators can be used to construct expressions that compare the values of numeric variables.</span></span> <span data-ttu-id="d88fb-104">이러한 식은 반환을 `Boolean` 비교가 true 인지에 따라 값 false입니다.</span><span class="sxs-lookup"><span data-stu-id="d88fb-104">These expressions return a `Boolean` value based on whether the comparison is true or false.</span></span> <span data-ttu-id="d88fb-105">이러한 식의 예는 다음과 같습니다.</span><span class="sxs-lookup"><span data-stu-id="d88fb-105">Examples of such an expression are as follows.</span></span>  
   
  `45 > 26`  
   
  `26 > 45`  
   
- <span data-ttu-id="71188-106">첫 번째 식의 결과가 `True`이므로 45 26 보다 큽니다.</span><span class="sxs-lookup"><span data-stu-id="71188-106">The first expression evaluates to `True`, because 45 is greater than 26.</span></span> <span data-ttu-id="71188-107">두 번째 예에서는 `False`이므로 26 45 보다 크지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="71188-107">The second example evaluates to `False`, because 26 is not greater than 45.</span></span>  
+ <span data-ttu-id="d88fb-106">첫 번째 식의 결과가 `True`이므로 45 26 보다 큽니다.</span><span class="sxs-lookup"><span data-stu-id="d88fb-106">The first expression evaluates to `True`, because 45 is greater than 26.</span></span> <span data-ttu-id="d88fb-107">두 번째 예에서는 `False`이므로 26 45 보다 크지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="d88fb-107">The second example evaluates to `False`, because 26 is not greater than 45.</span></span>  
   
- <span data-ttu-id="71188-108">또한이 방식으로 숫자 식을 비교할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="71188-108">You can also compare numeric expressions in this fashion.</span></span> <span data-ttu-id="71188-109">비교 식 자체는 다음 예제와 같이 복잡 한 식 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="71188-109">The expressions you compare can themselves be complex expressions, as in the following example.</span></span>  
+ <span data-ttu-id="d88fb-108">또한이 방식으로 숫자 식을 비교할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="d88fb-108">You can also compare numeric expressions in this fashion.</span></span> <span data-ttu-id="d88fb-109">비교 식 자체는 다음 예제와 같이 복잡 한 식 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="d88fb-109">The expressions you compare can themselves be complex expressions, as in the following example.</span></span>  
   
  `x / 45 * (y +17) >= System.Math.Sqrt(z) / (p - (x * 16))`  
   
- <span data-ttu-id="71188-110">이전 복잡 한 식에는 리터럴, 변수 및 함수 호출이 포함 됩니다.</span><span class="sxs-lookup"><span data-stu-id="71188-110">The preceding complex expression includes literals, variables, and function calls.</span></span> <span data-ttu-id="71188-111">비교 연산자의 양쪽에 있는 식을 평가 하 고 결과 값을 사용 하 여 그런 비교는 `>=` 비교 연산자입니다.</span><span class="sxs-lookup"><span data-stu-id="71188-111">The expressions on both sides of the comparison operator are evaluated, and the resulting values are then compared using the `>=` comparison operator.</span></span> <span data-ttu-id="71188-112">왼쪽에 있는 식의 값 보다 크면 이거나 오른쪽 식의 값과 같으면는 전체 식을 계산 하는 경우 `True`이 고, 그렇지 않으면 결과가 `False`합니다.</span><span class="sxs-lookup"><span data-stu-id="71188-112">If the value of the expression on the left side is greater than or equal to the value of the expression on the right, the entire expression evaluates to `True`; otherwise, it evaluates to `False`.</span></span>  
+ <span data-ttu-id="d88fb-110">이전 복잡 한 식에는 리터럴, 변수 및 함수 호출이 포함 됩니다.</span><span class="sxs-lookup"><span data-stu-id="d88fb-110">The preceding complex expression includes literals, variables, and function calls.</span></span> <span data-ttu-id="d88fb-111">비교 연산자의 양쪽에 있는 식을 평가 하 고 결과 값을 사용 하 여 그런 비교는 `>=` 비교 연산자입니다.</span><span class="sxs-lookup"><span data-stu-id="d88fb-111">The expressions on both sides of the comparison operator are evaluated, and the resulting values are then compared using the `>=` comparison operator.</span></span> <span data-ttu-id="d88fb-112">왼쪽에 있는 식의 값 보다 크면 이거나 오른쪽 식의 값과 같으면는 전체 식을 계산 하는 경우 `True`이 고, 그렇지 않으면 결과가 `False`합니다.</span><span class="sxs-lookup"><span data-stu-id="d88fb-112">If the value of the expression on the left side is greater than or equal to the value of the expression on the right, the entire expression evaluates to `True`; otherwise, it evaluates to `False`.</span></span>  
   
- <span data-ttu-id="71188-113">값을 비교 하는 식에서 가장 흔히 사용 됩니다 `If...Then` 다음 예제와 같이 생성 합니다.</span><span class="sxs-lookup"><span data-stu-id="71188-113">Expressions that compare values are most commonly used in `If...Then` constructions, as in the following example.</span></span>  
+ <span data-ttu-id="d88fb-113">값을 비교 하는 식에서 가장 흔히 사용 됩니다 `If...Then` 다음 예제와 같이 생성 합니다.</span><span class="sxs-lookup"><span data-stu-id="d88fb-113">Expressions that compare values are most commonly used in `If...Then` constructions, as in the following example.</span></span>  
   
  [!code-vb[VbVbalrOperators#84](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#84)]  
   
- <span data-ttu-id="71188-114">`=` 기호는 대입 연산자 뿐만 아니라 비교 연산자입니다.</span><span class="sxs-lookup"><span data-stu-id="71188-114">The `=` sign is a comparison operator as well as an assignment operator.</span></span> <span data-ttu-id="71188-115">비교 연산자로 사용 하는 다음 예제에서와 같이 왼쪽의 값이 오른쪽의 값과 같으면 여부를 평가 합니다.</span><span class="sxs-lookup"><span data-stu-id="71188-115">When used as a comparison operator, it evaluates whether the value on the left is equal to the value on the right, as shown in the following example.</span></span>  
+ <span data-ttu-id="d88fb-114">`=` 기호는 대입 연산자 뿐만 아니라 비교 연산자입니다.</span><span class="sxs-lookup"><span data-stu-id="d88fb-114">The `=` sign is a comparison operator as well as an assignment operator.</span></span> <span data-ttu-id="d88fb-115">비교 연산자로 사용 하는 다음 예제에서와 같이 왼쪽의 값이 오른쪽의 값과 같으면 여부를 평가 합니다.</span><span class="sxs-lookup"><span data-stu-id="d88fb-115">When used as a comparison operator, it evaluates whether the value on the left is equal to the value on the right, as shown in the following example.</span></span>  
   
  [!code-vb[VbVbalrOperators#85](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#85)]  
   
- <span data-ttu-id="71188-116">비교 식을 어디서 나 사용할 수도 있습니다는 `Boolean` 값이 필요한, 예:는 `If`, `While`, `Loop`, 또는 `ElseIf` 문을에 할당 하거나 값을 전달 하는 경우 또는 `Boolean` 변수입니다.</span><span class="sxs-lookup"><span data-stu-id="71188-116">You can also use a comparison expression anywhere a `Boolean` value is needed, such as in an `If`, `While`, `Loop`, or `ElseIf` statement, or when assigning to or passing a value to a `Boolean` variable.</span></span> <span data-ttu-id="71188-117">다음 예제에서는 비교 식에서 반환 된 값에 할당 되는 `Boolean` 변수입니다.</span><span class="sxs-lookup"><span data-stu-id="71188-117">In the following example, the value returned by the comparison expression is assigned to a `Boolean` variable.</span></span>  
+ <span data-ttu-id="d88fb-116">비교 식을 어디서 나 사용할 수도 있습니다는 `Boolean` 값이 필요한, 예:는 `If`, `While`, `Loop`, 또는 `ElseIf` 문을에 할당 하거나 값을 전달 하는 경우 또는 `Boolean` 변수입니다.</span><span class="sxs-lookup"><span data-stu-id="d88fb-116">You can also use a comparison expression anywhere a `Boolean` value is needed, such as in an `If`, `While`, `Loop`, or `ElseIf` statement, or when assigning to or passing a value to a `Boolean` variable.</span></span> <span data-ttu-id="d88fb-117">다음 예제에서는 비교 식에서 반환 된 값에 할당 되는 `Boolean` 변수입니다.</span><span class="sxs-lookup"><span data-stu-id="d88fb-117">In the following example, the value returned by the comparison expression is assigned to a `Boolean` variable.</span></span>  
   
  [!code-vb[VbVbalrOperators#86](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#86)]  
   
-## <a name="see-also"></a><span data-ttu-id="71188-118">참고자료</span><span class="sxs-lookup"><span data-stu-id="71188-118">See also</span></span>
-- [<span data-ttu-id="71188-119">부울 식</span><span class="sxs-lookup"><span data-stu-id="71188-119">Boolean Expressions</span></span>](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/boolean-expressions.md)
-- [<span data-ttu-id="71188-120">연산자 및 식</span><span class="sxs-lookup"><span data-stu-id="71188-120">Operators and Expressions</span></span>](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/index.md)
-- [<span data-ttu-id="71188-121">Comparison Operators in Visual Basic</span><span class="sxs-lookup"><span data-stu-id="71188-121">Comparison Operators in Visual Basic</span></span>](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md)
-- [<span data-ttu-id="71188-122">방법: 숫자 값 계산</span><span class="sxs-lookup"><span data-stu-id="71188-122">How to: Calculate Numeric Values</span></span>](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/how-to-calculate-numeric-values.md)
-- [<span data-ttu-id="71188-123">Visual Basic에서의 연산자 우선 순위</span><span class="sxs-lookup"><span data-stu-id="71188-123">Operator Precedence in Visual Basic</span></span>](../../../../visual-basic/language-reference/operators/operator-precedence.md)
+## <a name="see-also"></a><span data-ttu-id="d88fb-118">참고자료</span><span class="sxs-lookup"><span data-stu-id="d88fb-118">See also</span></span>
+
+- [<span data-ttu-id="d88fb-119">부울 식</span><span class="sxs-lookup"><span data-stu-id="d88fb-119">Boolean Expressions</span></span>](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/boolean-expressions.md)
+- [<span data-ttu-id="d88fb-120">연산자 및 식</span><span class="sxs-lookup"><span data-stu-id="d88fb-120">Operators and Expressions</span></span>](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/index.md)
+- [<span data-ttu-id="d88fb-121">Comparison Operators in Visual Basic</span><span class="sxs-lookup"><span data-stu-id="d88fb-121">Comparison Operators in Visual Basic</span></span>](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md)
+- [<span data-ttu-id="d88fb-122">방법: 숫자 값 계산</span><span class="sxs-lookup"><span data-stu-id="d88fb-122">How to: Calculate Numeric Values</span></span>](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/how-to-calculate-numeric-values.md)
+- [<span data-ttu-id="d88fb-123">Visual Basic에서의 연산자 우선 순위</span><span class="sxs-lookup"><span data-stu-id="d88fb-123">Operator Precedence in Visual Basic</span></span>](../../../../visual-basic/language-reference/operators/operator-precedence.md)

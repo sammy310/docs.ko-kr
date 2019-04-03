@@ -2,26 +2,26 @@
 title: 전역 네임스페이스 작업(Visual Basic)(LINQ to XML)
 ms.date: 07/20/2015
 ms.assetid: 0a8064d5-e02f-4315-ad48-6deaa443a2f0
-ms.openlocfilehash: 0922c6973baeb3e0ca51d984b332fd7a3e0b13f6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d8e74e949815d36f06f522460cc31ca6c3ccabb3
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54733911"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58827382"
 ---
-# <a name="working-with-global-namespaces-visual-basic-linq-to-xml"></a><span data-ttu-id="2bd47-102">전역 네임스페이스 작업(Visual Basic)(LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="2bd47-102">Working with Global Namespaces (Visual Basic) (LINQ to XML)</span></span>
-<span data-ttu-id="2bd47-103">Visual Basic에서 XML 리터럴의 주요 기능 중 하나는 사용 하 여 XML 네임 스페이스를 선언 하는 기능을 `Imports` 문입니다.</span><span class="sxs-lookup"><span data-stu-id="2bd47-103">One of the key features of XML literals in Visual Basic is the capability to declare XML namespaces by using the `Imports` statement.</span></span> <span data-ttu-id="2bd47-104">이 기능을 사용하여 접두사를 사용하는 XML 네임스페이스를 선언하거나 기본 XML 네임스페이스를 선언할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="2bd47-104">Using this feature, you can declare an XML namespace that uses a prefix, or you can declare a default XML namespace.</span></span>  
+# <a name="working-with-global-namespaces-visual-basic-linq-to-xml"></a><span data-ttu-id="9baa0-102">전역 네임스페이스 작업(Visual Basic)(LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="9baa0-102">Working with Global Namespaces (Visual Basic) (LINQ to XML)</span></span>
+<span data-ttu-id="9baa0-103">Visual Basic에서 XML 리터럴의 주요 기능 중 하나는 사용 하 여 XML 네임 스페이스를 선언 하는 기능을 `Imports` 문입니다.</span><span class="sxs-lookup"><span data-stu-id="9baa0-103">One of the key features of XML literals in Visual Basic is the capability to declare XML namespaces by using the `Imports` statement.</span></span> <span data-ttu-id="9baa0-104">이 기능을 사용하여 접두사를 사용하는 XML 네임스페이스를 선언하거나 기본 XML 네임스페이스를 선언할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="9baa0-104">Using this feature, you can declare an XML namespace that uses a prefix, or you can declare a default XML namespace.</span></span>  
   
- <span data-ttu-id="2bd47-105">이 기능은 두 가지 상황에서 유용합니다.</span><span class="sxs-lookup"><span data-stu-id="2bd47-105">This capability is useful in two situations.</span></span> <span data-ttu-id="2bd47-106">첫째, XML 리터럴에서 선언된 네임스페이스는 포함 식에까지 영향을 미치지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="2bd47-106">First, namespaces declared in XML literals do not carry over into embedded expressions.</span></span> <span data-ttu-id="2bd47-107">전역 네임스페이스를 선언하면 네임스페이스와 함께 포함 식을 사용하기 위해 수행해야 하는 작업량이 줄어듭니다.</span><span class="sxs-lookup"><span data-stu-id="2bd47-107">Declaring global namespaces reduces the amount of work that you have to do to use embedded expressions with namespaces.</span></span> <span data-ttu-id="2bd47-108">둘째, XML 속성과 함께 네임스페이스를 사용하기 위해 전역 네임스페이스를 선언해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="2bd47-108">Second, you must declare global namespaces in order to use namespaces with XML properties.</span></span>  
+ <span data-ttu-id="9baa0-105">이 기능은 두 가지 상황에서 유용합니다.</span><span class="sxs-lookup"><span data-stu-id="9baa0-105">This capability is useful in two situations.</span></span> <span data-ttu-id="9baa0-106">첫째, XML 리터럴에서 선언된 네임스페이스는 포함 식에까지 영향을 미치지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="9baa0-106">First, namespaces declared in XML literals do not carry over into embedded expressions.</span></span> <span data-ttu-id="9baa0-107">전역 네임스페이스를 선언하면 네임스페이스와 함께 포함 식을 사용하기 위해 수행해야 하는 작업량이 줄어듭니다.</span><span class="sxs-lookup"><span data-stu-id="9baa0-107">Declaring global namespaces reduces the amount of work that you have to do to use embedded expressions with namespaces.</span></span> <span data-ttu-id="9baa0-108">둘째, XML 속성과 함께 네임스페이스를 사용하기 위해 전역 네임스페이스를 선언해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="9baa0-108">Second, you must declare global namespaces in order to use namespaces with XML properties.</span></span>  
   
- <span data-ttu-id="2bd47-109">프로젝트 수준에서 전역 네임스페이스를 선언할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="2bd47-109">You can declare global namespaces at the project level.</span></span> <span data-ttu-id="2bd47-110">또한 모듈 수준에서 전역 네임스페이스를 선언할 수도 있습니다. 모듈 수준 전역 네임스페이스는 프로젝트 수준 전역 네임스페이스를 무시합니다.</span><span class="sxs-lookup"><span data-stu-id="2bd47-110">You can also declare global namespaces at the module level, which overrides the project-level global namespaces.</span></span> <span data-ttu-id="2bd47-111">마지막으로 XML 리터럴에서 전역 네임스페이스를 재정의할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="2bd47-111">Finally, you can override global namespaces in an XML literal.</span></span>  
+ <span data-ttu-id="9baa0-109">프로젝트 수준에서 전역 네임스페이스를 선언할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="9baa0-109">You can declare global namespaces at the project level.</span></span> <span data-ttu-id="9baa0-110">또한 모듈 수준에서 전역 네임스페이스를 선언할 수도 있습니다. 모듈 수준 전역 네임스페이스는 프로젝트 수준 전역 네임스페이스를 무시합니다.</span><span class="sxs-lookup"><span data-stu-id="9baa0-110">You can also declare global namespaces at the module level, which overrides the project-level global namespaces.</span></span> <span data-ttu-id="9baa0-111">마지막으로 XML 리터럴에서 전역 네임스페이스를 재정의할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="9baa0-111">Finally, you can override global namespaces in an XML literal.</span></span>  
   
- <span data-ttu-id="2bd47-112">전역적으로 선언된 네임스페이스에 있는 XML 속성이나 XML 리터럴을 사용하는 경우 Visual Studio에서 XML 속성이나 XML 리터럴을 마우스로 가리키면 확장된 이름을 볼 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="2bd47-112">When using XML literals or XML properties that are in globally-declared namespaces, you can see the expanded name of XML literals or properties by hovering over them in Visual Studio.</span></span> <span data-ttu-id="2bd47-113">도구 설명에 확장된 이름이 표시됩니다.</span><span class="sxs-lookup"><span data-stu-id="2bd47-113">You will see the expanded name in a tooltip.</span></span>  
+ <span data-ttu-id="9baa0-112">전역적으로 선언된 네임스페이스에 있는 XML 속성이나 XML 리터럴을 사용하는 경우 Visual Studio에서 XML 속성이나 XML 리터럴을 마우스로 가리키면 확장된 이름을 볼 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="9baa0-112">When using XML literals or XML properties that are in globally-declared namespaces, you can see the expanded name of XML literals or properties by hovering over them in Visual Studio.</span></span> <span data-ttu-id="9baa0-113">도구 설명에 확장된 이름이 표시됩니다.</span><span class="sxs-lookup"><span data-stu-id="9baa0-113">You will see the expanded name in a tooltip.</span></span>  
   
- <span data-ttu-id="2bd47-114"><xref:System.Xml.Linq.XNamespace> 메서드를 사용하여 전역 네임스페이스에 해당하는 `GetXmlNamespace` 개체를 가져올 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="2bd47-114">You can get an <xref:System.Xml.Linq.XNamespace> object that corresponds to a global namespace using the `GetXmlNamespace` method.</span></span>  
+ <span data-ttu-id="9baa0-114"><xref:System.Xml.Linq.XNamespace> 메서드를 사용하여 전역 네임스페이스에 해당하는 `GetXmlNamespace` 개체를 가져올 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="9baa0-114">You can get an <xref:System.Xml.Linq.XNamespace> object that corresponds to a global namespace using the `GetXmlNamespace` method.</span></span>  
   
-## <a name="examples-of-global-namespaces"></a><span data-ttu-id="2bd47-115">전역 네임스페이스의 예제</span><span class="sxs-lookup"><span data-stu-id="2bd47-115">Examples of Global Namespaces</span></span>  
- <span data-ttu-id="2bd47-116">다음 예제에서는 `Imports` 문을 사용하여 기본 전역 네임스페이스를 선언한 다음 XML 리터럴을 사용하여 해당 네임스페이스에서 <xref:System.Xml.Linq.XElement> 개체를 초기화합니다.</span><span class="sxs-lookup"><span data-stu-id="2bd47-116">The following example declares a default global namespace by using the `Imports` statement, and then uses an XML literal to initialize an <xref:System.Xml.Linq.XElement> object in that namespace:</span></span>  
+## <a name="examples-of-global-namespaces"></a><span data-ttu-id="9baa0-115">전역 네임스페이스의 예제</span><span class="sxs-lookup"><span data-stu-id="9baa0-115">Examples of Global Namespaces</span></span>  
+ <span data-ttu-id="9baa0-116">다음 예제에서는 `Imports` 문을 사용하여 기본 전역 네임스페이스를 선언한 다음 XML 리터럴을 사용하여 해당 네임스페이스에서 <xref:System.Xml.Linq.XElement> 개체를 초기화합니다.</span><span class="sxs-lookup"><span data-stu-id="9baa0-116">The following example declares a default global namespace by using the `Imports` statement, and then uses an XML literal to initialize an <xref:System.Xml.Linq.XElement> object in that namespace:</span></span>  
   
 ```vb  
 Imports <xmlns="http://www.adventure-works.com">  
@@ -34,13 +34,13 @@ Module Module1
 End Module  
 ```  
   
- <span data-ttu-id="2bd47-117">이 예제는 다음과 같은 출력을 생성합니다.</span><span class="sxs-lookup"><span data-stu-id="2bd47-117">This example produces the following output:</span></span>  
+ <span data-ttu-id="9baa0-117">이 예제는 다음과 같은 출력을 생성합니다.</span><span class="sxs-lookup"><span data-stu-id="9baa0-117">This example produces the following output:</span></span>  
   
 ```xml  
 <Root xmlns="http://www.adventure-works.com" />  
 ```  
   
- <span data-ttu-id="2bd47-118">다음 예제에서는 접두사가 포함된 전역 네임스페이스를 선언한 다음 XML 리터럴을 사용하여 요소를 초기화합니다.</span><span class="sxs-lookup"><span data-stu-id="2bd47-118">The following example declares a global namespace with a prefix, and then uses an XML literal to initialize an element:</span></span>  
+ <span data-ttu-id="9baa0-118">다음 예제에서는 접두사가 포함된 전역 네임스페이스를 선언한 다음 XML 리터럴을 사용하여 요소를 초기화합니다.</span><span class="sxs-lookup"><span data-stu-id="9baa0-118">The following example declares a global namespace with a prefix, and then uses an XML literal to initialize an element:</span></span>  
   
 ```vb  
 Imports <xmlns:aw="http://www.adventure-works.com">  
@@ -53,14 +53,14 @@ Module Module1
 End Module  
 ```  
   
- <span data-ttu-id="2bd47-119">이 예제는 다음과 같은 출력을 생성합니다.</span><span class="sxs-lookup"><span data-stu-id="2bd47-119">This example produces the following output:</span></span>  
+ <span data-ttu-id="9baa0-119">이 예제는 다음과 같은 출력을 생성합니다.</span><span class="sxs-lookup"><span data-stu-id="9baa0-119">This example produces the following output:</span></span>  
   
 ```xml  
 <aw:Root xmlns:aw="http://www.adventure-works.com" />  
 ```  
   
-## <a name="global-namespaces-and-embedded-expressions"></a><span data-ttu-id="2bd47-120">전역 네임스페이스 및 포함 식</span><span class="sxs-lookup"><span data-stu-id="2bd47-120">Global Namespaces and Embedded Expressions</span></span>  
- <span data-ttu-id="2bd47-121">XML 리터럴에서 선언된 네임스페이스는 포함 식에까지 영향을 미치지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="2bd47-121">Namespaces that are declared in XML literals do not carry over into embedded expressions.</span></span> <span data-ttu-id="2bd47-122">다음 예제에서는 기본 네임스페이스를 선언한 다음</span><span class="sxs-lookup"><span data-stu-id="2bd47-122">The following example declares a default namespace.</span></span> <span data-ttu-id="2bd47-123">`Child` 요소에 대한 포함 식을 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="2bd47-123">It then uses an embedded expression for the `Child` element.</span></span>  
+## <a name="global-namespaces-and-embedded-expressions"></a><span data-ttu-id="9baa0-120">전역 네임스페이스 및 포함 식</span><span class="sxs-lookup"><span data-stu-id="9baa0-120">Global Namespaces and Embedded Expressions</span></span>  
+ <span data-ttu-id="9baa0-121">XML 리터럴에서 선언된 네임스페이스는 포함 식에까지 영향을 미치지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="9baa0-121">Namespaces that are declared in XML literals do not carry over into embedded expressions.</span></span> <span data-ttu-id="9baa0-122">다음 예제에서는 기본 네임스페이스를 선언한 다음</span><span class="sxs-lookup"><span data-stu-id="9baa0-122">The following example declares a default namespace.</span></span> <span data-ttu-id="9baa0-123">`Child` 요소에 대한 포함 식을 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="9baa0-123">It then uses an embedded expression for the `Child` element.</span></span>  
   
 ```vb  
 Dim root As XElement = _  
@@ -70,7 +70,7 @@ Dim root As XElement = _
 Console.WriteLine(root)  
 ```  
   
- <span data-ttu-id="2bd47-124">이 예제는 다음과 같은 출력을 생성합니다.</span><span class="sxs-lookup"><span data-stu-id="2bd47-124">This example produces the following output:</span></span>  
+ <span data-ttu-id="9baa0-124">이 예제는 다음과 같은 출력을 생성합니다.</span><span class="sxs-lookup"><span data-stu-id="9baa0-124">This example produces the following output:</span></span>  
   
 ```xml  
 <Root xmlns="http://www.adventure-works.com">  
@@ -78,9 +78,9 @@ Console.WriteLine(root)
 </Root>  
 ```  
   
- <span data-ttu-id="2bd47-125">보다시피 생성되는 XML에는 기본 네임스페이스의 선언이 포함됩니다. 따라서 `Child` 요소는 네임스페이스에 없습니다.</span><span class="sxs-lookup"><span data-stu-id="2bd47-125">As you can see, the resulting XML includes a declaration of a default namespace so that the `Child` element is in no namespace.</span></span>  
+ <span data-ttu-id="9baa0-125">보다시피 생성되는 XML에는 기본 네임스페이스의 선언이 포함됩니다. 따라서 `Child` 요소는 네임스페이스에 없습니다.</span><span class="sxs-lookup"><span data-stu-id="9baa0-125">As you can see, the resulting XML includes a declaration of a default namespace so that the `Child` element is in no namespace.</span></span>  
   
- <span data-ttu-id="2bd47-126">포함 식에서 다음과 같이 네임스페이스를 다시 선언할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="2bd47-126">You could re-declare the namespace in the embedded expression, as follows:</span></span>  
+ <span data-ttu-id="9baa0-126">포함 식에서 다음과 같이 네임스페이스를 다시 선언할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="9baa0-126">You could re-declare the namespace in the embedded expression, as follows:</span></span>  
   
 ```vb  
 Dim root As XElement = _  
@@ -90,7 +90,7 @@ Dim root As XElement = _
 Console.WriteLine(root)  
 ```  
   
- <span data-ttu-id="2bd47-127">이 예제는 다음과 같은 출력을 생성합니다.</span><span class="sxs-lookup"><span data-stu-id="2bd47-127">This example produces the following output:</span></span>  
+ <span data-ttu-id="9baa0-127">이 예제는 다음과 같은 출력을 생성합니다.</span><span class="sxs-lookup"><span data-stu-id="9baa0-127">This example produces the following output:</span></span>  
   
 ```xml  
 <Root xmlns="http://www.adventure-works.com">  
@@ -98,7 +98,7 @@ Console.WriteLine(root)
 </Root>  
 ```  
   
- <span data-ttu-id="2bd47-128">그러나 이 방법은 전역 기본 네임스페이스보다 사용하기가 더 불편합니다. 따라서 전역 기본 네임스페이스를 사용하는 것이 더 좋습니다.</span><span class="sxs-lookup"><span data-stu-id="2bd47-128">However, this is more cumbersome to use than the global default namespace, which is a better approach.</span></span> <span data-ttu-id="2bd47-129">전역 기본 네임스페이스를 사용하면 네임스페이스를 선언하지 않고 XML 리터럴을 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="2bd47-129">With the global default namespace, you can use XML literals without declaring namespaces.</span></span> <span data-ttu-id="2bd47-130">생성되는 XML은 전역적으로 선언된 기본 네임스페이스에 있습니다.</span><span class="sxs-lookup"><span data-stu-id="2bd47-130">The resulting XML will be in the globally-declared default namespace.</span></span>  
+ <span data-ttu-id="9baa0-128">그러나 이 방법은 전역 기본 네임스페이스보다 사용하기가 더 불편합니다. 따라서 전역 기본 네임스페이스를 사용하는 것이 더 좋습니다.</span><span class="sxs-lookup"><span data-stu-id="9baa0-128">However, this is more cumbersome to use than the global default namespace, which is a better approach.</span></span> <span data-ttu-id="9baa0-129">전역 기본 네임스페이스를 사용하면 네임스페이스를 선언하지 않고 XML 리터럴을 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="9baa0-129">With the global default namespace, you can use XML literals without declaring namespaces.</span></span> <span data-ttu-id="9baa0-130">생성되는 XML은 전역적으로 선언된 기본 네임스페이스에 있습니다.</span><span class="sxs-lookup"><span data-stu-id="9baa0-130">The resulting XML will be in the globally-declared default namespace.</span></span>  
   
 ```vb  
 Imports <xmlns="http://www.adventure-works.com">  
@@ -113,7 +113,7 @@ Module Module1
 End Module  
 ```  
   
- <span data-ttu-id="2bd47-131">이 예제는 다음과 같은 출력을 생성합니다.</span><span class="sxs-lookup"><span data-stu-id="2bd47-131">This example produces the following output:</span></span>  
+ <span data-ttu-id="9baa0-131">이 예제는 다음과 같은 출력을 생성합니다.</span><span class="sxs-lookup"><span data-stu-id="9baa0-131">This example produces the following output:</span></span>  
   
 ```xml  
 <Root xmlns="http://www.adventure-works.com">  
@@ -121,8 +121,8 @@ End Module
 </Root>  
 ```  
   
-## <a name="using-namespaces-with-xml-properties"></a><span data-ttu-id="2bd47-132">XML 속성과 함께 네임스페이스 사용</span><span class="sxs-lookup"><span data-stu-id="2bd47-132">Using Namespaces with XML Properties</span></span>  
- <span data-ttu-id="2bd47-133">네임스페이스에 있는 XML 트리로 작업하는 경우 XML 속성을 사용하고 있으면 XML 속성도 올바른 네임스페이스에 있도록 전역 네임스페이스를 사용해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="2bd47-133">If you are working with an XML tree that is in a namespace, and you use XML properties, then you must use a global namespace so that the XML properties will also be in the correct namespace.</span></span> <span data-ttu-id="2bd47-134">다음 예제에서는 네임스페이스에 XML 트리를 선언한 다음</span><span class="sxs-lookup"><span data-stu-id="2bd47-134">The following example declares an XML tree in a namespace.</span></span> <span data-ttu-id="2bd47-135">`Child` 요소의 수를 출력합니다.</span><span class="sxs-lookup"><span data-stu-id="2bd47-135">It then prints the count of `Child` elements.</span></span>  
+## <a name="using-namespaces-with-xml-properties"></a><span data-ttu-id="9baa0-132">XML 속성과 함께 네임스페이스 사용</span><span class="sxs-lookup"><span data-stu-id="9baa0-132">Using Namespaces with XML Properties</span></span>  
+ <span data-ttu-id="9baa0-133">네임스페이스에 있는 XML 트리로 작업하는 경우 XML 속성을 사용하고 있으면 XML 속성도 올바른 네임스페이스에 있도록 전역 네임스페이스를 사용해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="9baa0-133">If you are working with an XML tree that is in a namespace, and you use XML properties, then you must use a global namespace so that the XML properties will also be in the correct namespace.</span></span> <span data-ttu-id="9baa0-134">다음 예제에서는 네임스페이스에 XML 트리를 선언한 다음</span><span class="sxs-lookup"><span data-stu-id="9baa0-134">The following example declares an XML tree in a namespace.</span></span> <span data-ttu-id="9baa0-135">`Child` 요소의 수를 출력합니다.</span><span class="sxs-lookup"><span data-stu-id="9baa0-135">It then prints the count of `Child` elements.</span></span>  
   
 ```vb  
 Dim root As XElement = _  
@@ -132,13 +132,13 @@ Dim root As XElement = _
 Console.WriteLine(root.<Child>.Count())  
 ```  
   
- <span data-ttu-id="2bd47-136">이 예제는 `Child` 요소가 없음을 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="2bd47-136">This example indicates that there are no `Child` elements.</span></span> <span data-ttu-id="2bd47-137">이 예제의 결과는 다음과 같습니다.</span><span class="sxs-lookup"><span data-stu-id="2bd47-137">It produces the following output:</span></span>  
+ <span data-ttu-id="9baa0-136">이 예제는 `Child` 요소가 없음을 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="9baa0-136">This example indicates that there are no `Child` elements.</span></span> <span data-ttu-id="9baa0-137">이 예제의 결과는 다음과 같습니다.</span><span class="sxs-lookup"><span data-stu-id="9baa0-137">It produces the following output:</span></span>  
   
 ```  
 0  
 ```  
   
- <span data-ttu-id="2bd47-138">그러나 기본 전역 네임스페이스를 선언하는 경우 XML 리터럴과 XML 속성이 모두 기본 전역 네임스페이스에 있습니다.</span><span class="sxs-lookup"><span data-stu-id="2bd47-138">If, however, you declare a default global namespace, then both the XML literal and the XML property are in the default global namespace:</span></span>  
+ <span data-ttu-id="9baa0-138">그러나 기본 전역 네임스페이스를 선언하는 경우 XML 리터럴과 XML 속성이 모두 기본 전역 네임스페이스에 있습니다.</span><span class="sxs-lookup"><span data-stu-id="9baa0-138">If, however, you declare a default global namespace, then both the XML literal and the XML property are in the default global namespace:</span></span>  
   
 ```vb  
 Imports <xmlns="http://www.adventure-works.com">  
@@ -154,13 +154,13 @@ Module Module1
 End Module  
 ```  
   
- <span data-ttu-id="2bd47-139">이 예제는 `Child` 요소가 하나 있음을 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="2bd47-139">This example indicates that there is one `Child` element.</span></span> <span data-ttu-id="2bd47-140">이 예제의 결과는 다음과 같습니다.</span><span class="sxs-lookup"><span data-stu-id="2bd47-140">It produces the following output:</span></span>  
+ <span data-ttu-id="9baa0-139">이 예제는 `Child` 요소가 하나 있음을 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="9baa0-139">This example indicates that there is one `Child` element.</span></span> <span data-ttu-id="9baa0-140">이 예제의 결과는 다음과 같습니다.</span><span class="sxs-lookup"><span data-stu-id="9baa0-140">It produces the following output:</span></span>  
   
 ```  
 1  
 ```  
   
- <span data-ttu-id="2bd47-141">접두사가 포함된 전역 네임스페이스를 선언하면 XML 리터럴과 XML 속성 모두에 접두사를 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="2bd47-141">If you declare a global namespace that has a prefix, you can use the prefix for both XML literals and XML properties:</span></span>  
+ <span data-ttu-id="9baa0-141">접두사가 포함된 전역 네임스페이스를 선언하면 XML 리터럴과 XML 속성 모두에 접두사를 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="9baa0-141">If you declare a global namespace that has a prefix, you can use the prefix for both XML literals and XML properties:</span></span>  
   
 ```vb  
 Imports <xmlns:aw="http://www.adventure-works.com">  
@@ -176,8 +176,8 @@ Module Module1
 End Module  
 ```  
   
-## <a name="xnamespace-and-global-namespaces"></a><span data-ttu-id="2bd47-142">XNamespace 및 전역 네임스페이스</span><span class="sxs-lookup"><span data-stu-id="2bd47-142">XNamespace and Global Namespaces</span></span>  
- <span data-ttu-id="2bd47-143"><xref:System.Xml.Linq.XNamespace> 메서드를 사용하여 `GetXmlNamespace` 개체를 가져올 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="2bd47-143">You can get an <xref:System.Xml.Linq.XNamespace> object by using the `GetXmlNamespace` method:</span></span>  
+## <a name="xnamespace-and-global-namespaces"></a><span data-ttu-id="9baa0-142">XNamespace 및 전역 네임스페이스</span><span class="sxs-lookup"><span data-stu-id="9baa0-142">XNamespace and Global Namespaces</span></span>  
+ <span data-ttu-id="9baa0-143"><xref:System.Xml.Linq.XNamespace> 메서드를 사용하여 `GetXmlNamespace` 개체를 가져올 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="9baa0-143">You can get an <xref:System.Xml.Linq.XNamespace> object by using the `GetXmlNamespace` method:</span></span>  
   
 ```vb  
 Imports <xmlns:aw="http://www.adventure-works.com">  
@@ -191,11 +191,12 @@ Module Module1
 End Module  
 ```  
   
- <span data-ttu-id="2bd47-144">이 예제는 다음과 같은 출력을 생성합니다.</span><span class="sxs-lookup"><span data-stu-id="2bd47-144">This example produces the following output:</span></span>  
+ <span data-ttu-id="9baa0-144">이 예제는 다음과 같은 출력을 생성합니다.</span><span class="sxs-lookup"><span data-stu-id="9baa0-144">This example produces the following output:</span></span>  
   
 ```  
 http://www.adventure-works.com  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="2bd47-145">참고자료</span><span class="sxs-lookup"><span data-stu-id="2bd47-145">See also</span></span>
-- [<span data-ttu-id="2bd47-146">XML 네임 스페이스 (Visual Basic)를 사용 하 여 작업</span><span class="sxs-lookup"><span data-stu-id="2bd47-146">Working with XML Namespaces (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md)
+## <a name="see-also"></a><span data-ttu-id="9baa0-145">참고자료</span><span class="sxs-lookup"><span data-stu-id="9baa0-145">See also</span></span>
+
+- [<span data-ttu-id="9baa0-146">XML 네임 스페이스 (Visual Basic)를 사용 하 여 작업</span><span class="sxs-lookup"><span data-stu-id="9baa0-146">Working with XML Namespaces (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md)

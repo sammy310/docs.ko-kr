@@ -5,30 +5,31 @@ helpviewer_keywords:
 - strings [Visual Basic], accessing characters
 - characters [Visual Basic], accessing in strings
 ms.assetid: 02c5206c-ffab-494d-b648-3b2ea358dc34
-ms.openlocfilehash: f2831333008844c959c3625698fce6c485450683
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 840a769b0bb322ef7b878a312437c5ec200ab074
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56967557"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58834493"
 ---
-# <a name="how-to-access-characters-in-strings-in-visual-basic"></a><span data-ttu-id="c305b-102">방법: Visual Basic의 문자열에서 문자 액세스</span><span class="sxs-lookup"><span data-stu-id="c305b-102">How to: Access Characters in Strings in Visual Basic</span></span>
-<span data-ttu-id="c305b-103">이 예제를 사용 하는 방법에 설명 합니다 <xref:System.String.Chars%2A> 속성에 액세스 하는 문자열의 지정된 된 위치에 있는 문자가 있습니다.</span><span class="sxs-lookup"><span data-stu-id="c305b-103">This example demonstrates how to use the <xref:System.String.Chars%2A> property to access the character at the specified location in a string.</span></span>  
+# <a name="how-to-access-characters-in-strings-in-visual-basic"></a><span data-ttu-id="4b621-102">방법: Visual Basic의 문자열에서 문자 액세스</span><span class="sxs-lookup"><span data-stu-id="4b621-102">How to: Access Characters in Strings in Visual Basic</span></span>
+<span data-ttu-id="4b621-103">이 예제를 사용 하는 방법에 설명 합니다 <xref:System.String.Chars%2A> 속성에 액세스 하는 문자열의 지정된 된 위치에 있는 문자가 있습니다.</span><span class="sxs-lookup"><span data-stu-id="4b621-103">This example demonstrates how to use the <xref:System.String.Chars%2A> property to access the character at the specified location in a string.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="c305b-104">예제</span><span class="sxs-lookup"><span data-stu-id="c305b-104">Example</span></span>  
- <span data-ttu-id="c305b-105">경우에 따라 문자열 내에서 해당 문자의 위치 및 문자열의 문자에 대 한 데이터가 있어야 유용 합니다.</span><span class="sxs-lookup"><span data-stu-id="c305b-105">Sometimes it is useful to have data about the characters in your string and the positions of those characters within your string.</span></span> <span data-ttu-id="c305b-106">문자열을 문자 배열로 생각할 수 있습니다 (`Char` 인스턴스);를 통해 해당 문자의 인덱스를 참조 하 여 특정 문자를 검색할 수 있습니다는 <xref:System.String.Chars%2A> 속성입니다.</span><span class="sxs-lookup"><span data-stu-id="c305b-106">You can think of a string as an array of characters (`Char` instances); you can retrieve a particular character by referencing the index of that character through the <xref:System.String.Chars%2A> property.</span></span>  
+## <a name="example"></a><span data-ttu-id="4b621-104">예제</span><span class="sxs-lookup"><span data-stu-id="4b621-104">Example</span></span>  
+ <span data-ttu-id="4b621-105">경우에 따라 문자열 내에서 해당 문자의 위치 및 문자열의 문자에 대 한 데이터가 있어야 유용 합니다.</span><span class="sxs-lookup"><span data-stu-id="4b621-105">Sometimes it is useful to have data about the characters in your string and the positions of those characters within your string.</span></span> <span data-ttu-id="4b621-106">문자열을 문자 배열로 생각할 수 있습니다 (`Char` 인스턴스);를 통해 해당 문자의 인덱스를 참조 하 여 특정 문자를 검색할 수 있습니다는 <xref:System.String.Chars%2A> 속성입니다.</span><span class="sxs-lookup"><span data-stu-id="4b621-106">You can think of a string as an array of characters (`Char` instances); you can retrieve a particular character by referencing the index of that character through the <xref:System.String.Chars%2A> property.</span></span>  
   
  [!code-vb[VbVbalrStrings#49](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class2.vb#49)]  
   
- <span data-ttu-id="c305b-107">합니다 `index` 의 매개 변수는 <xref:System.String.Chars%2A> 속성은 0부터 시작 합니다.</span><span class="sxs-lookup"><span data-stu-id="c305b-107">The `index` parameter of the <xref:System.String.Chars%2A> property is zero-based.</span></span>  
+ <span data-ttu-id="4b621-107">합니다 `index` 의 매개 변수는 <xref:System.String.Chars%2A> 속성은 0부터 시작 합니다.</span><span class="sxs-lookup"><span data-stu-id="4b621-107">The `index` parameter of the <xref:System.String.Chars%2A> property is zero-based.</span></span>  
   
-## <a name="robust-programming"></a><span data-ttu-id="c305b-108">강력한 프로그래밍</span><span class="sxs-lookup"><span data-stu-id="c305b-108">Robust Programming</span></span>  
- <span data-ttu-id="c305b-109"><xref:System.String.Chars%2A> 속성이 지정된 된 위치에 문자를 반환 합니다.</span><span class="sxs-lookup"><span data-stu-id="c305b-109">The <xref:System.String.Chars%2A> property returns the character at the specified position.</span></span> <span data-ttu-id="c305b-110">그러나 둘 이상의 문자로 일부 유니코드 문자를 나타낼 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="c305b-110">However, some Unicode characters can be represented by more than one character.</span></span> <span data-ttu-id="c305b-111">유니코드 문자를 사용 하는 방법에 대 한 자세한 내용은 참조 하세요. [방법: 문자 배열을 문자열로 변환할](../../../../visual-basic/programming-guide/language-features/strings/how-to-convert-a-string-to-an-array-of-characters.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="c305b-111">For more information on how to work with Unicode characters, see [How to: Convert a String to an Array of Characters](../../../../visual-basic/programming-guide/language-features/strings/how-to-convert-a-string-to-an-array-of-characters.md).</span></span>  
+## <a name="robust-programming"></a><span data-ttu-id="4b621-108">강력한 프로그래밍</span><span class="sxs-lookup"><span data-stu-id="4b621-108">Robust Programming</span></span>  
+ <span data-ttu-id="4b621-109"><xref:System.String.Chars%2A> 속성이 지정된 된 위치에 문자를 반환 합니다.</span><span class="sxs-lookup"><span data-stu-id="4b621-109">The <xref:System.String.Chars%2A> property returns the character at the specified position.</span></span> <span data-ttu-id="4b621-110">그러나 둘 이상의 문자로 일부 유니코드 문자를 나타낼 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="4b621-110">However, some Unicode characters can be represented by more than one character.</span></span> <span data-ttu-id="4b621-111">유니코드 문자를 사용 하는 방법에 대 한 자세한 내용은 참조 하세요. [방법: 문자 배열을 문자열로 변환할](../../../../visual-basic/programming-guide/language-features/strings/how-to-convert-a-string-to-an-array-of-characters.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="4b621-111">For more information on how to work with Unicode characters, see [How to: Convert a String to an Array of Characters](../../../../visual-basic/programming-guide/language-features/strings/how-to-convert-a-string-to-an-array-of-characters.md).</span></span>  
   
- <span data-ttu-id="c305b-112">합니다 <xref:System.String.Chars%2A> 속성을 <xref:System.IndexOutOfRangeException> 예외 경우는 `index` 매개 변수는 문자열의 길이 보다 크거나이 0 보다 작은 경우 또는</span><span class="sxs-lookup"><span data-stu-id="c305b-112">The <xref:System.String.Chars%2A> property throws an <xref:System.IndexOutOfRangeException> exception if the `index` parameter is greater than or equal to the length of the string, or if it is less than zero</span></span>  
+ <span data-ttu-id="4b621-112">합니다 <xref:System.String.Chars%2A> 속성을 <xref:System.IndexOutOfRangeException> 예외 경우는 `index` 매개 변수는 문자열의 길이 보다 크거나이 0 보다 작은 경우 또는</span><span class="sxs-lookup"><span data-stu-id="4b621-112">The <xref:System.String.Chars%2A> property throws an <xref:System.IndexOutOfRangeException> exception if the `index` parameter is greater than or equal to the length of the string, or if it is less than zero</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="c305b-113">참고자료</span><span class="sxs-lookup"><span data-stu-id="c305b-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="4b621-113">참고자료</span><span class="sxs-lookup"><span data-stu-id="4b621-113">See also</span></span>
+
 - <xref:System.String.Chars%2A>
-- [<span data-ttu-id="c305b-114">방법: 문자열을 문자 배열로 변환</span><span class="sxs-lookup"><span data-stu-id="c305b-114">How to: Convert a String to an Array of Characters</span></span>](../../../../visual-basic/programming-guide/language-features/strings/how-to-convert-a-string-to-an-array-of-characters.md)
-- [<span data-ttu-id="c305b-115">Visual Basic에서 문자열 및 기타 데이터 형식 사이에 변환</span><span class="sxs-lookup"><span data-stu-id="c305b-115">Converting Between Strings and Other Data Types in Visual Basic</span></span>](../../../../visual-basic/programming-guide/language-features/strings/converting-between-strings-and-other-data-types.md)
-- [<span data-ttu-id="c305b-116">문자열</span><span class="sxs-lookup"><span data-stu-id="c305b-116">Strings</span></span>](../../../../visual-basic/programming-guide/language-features/strings/index.md)
+- [<span data-ttu-id="4b621-114">방법: 문자열을 문자 배열로 변환</span><span class="sxs-lookup"><span data-stu-id="4b621-114">How to: Convert a String to an Array of Characters</span></span>](../../../../visual-basic/programming-guide/language-features/strings/how-to-convert-a-string-to-an-array-of-characters.md)
+- [<span data-ttu-id="4b621-115">Visual Basic에서 문자열 및 기타 데이터 형식 사이에 변환</span><span class="sxs-lookup"><span data-stu-id="4b621-115">Converting Between Strings and Other Data Types in Visual Basic</span></span>](../../../../visual-basic/programming-guide/language-features/strings/converting-between-strings-and-other-data-types.md)
+- [<span data-ttu-id="4b621-116">문자열</span><span class="sxs-lookup"><span data-stu-id="4b621-116">Strings</span></span>](../../../../visual-basic/programming-guide/language-features/strings/index.md)

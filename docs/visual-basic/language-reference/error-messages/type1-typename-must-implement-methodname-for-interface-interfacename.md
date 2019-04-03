@@ -1,5 +1,5 @@
 ---
-title: "'<type1>'<typename>'은(는) '<methodname>' 인터페이스에 대한 '<interfacename>'을(를) 구현해야 합니다."
+title: <type1>'<typename>'구현 해야 합니다'<methodname>'interface'에 대 한<interfacename>'
 ms.date: 07/20/2015
 f1_keywords:
 - vbc30149
@@ -7,28 +7,29 @@ f1_keywords:
 helpviewer_keywords:
 - BC30149
 ms.assetid: 29d1b7f4-dca7-478c-bbe7-c657f342c183
-ms.openlocfilehash: c5dd7c6889a3fb5344142ee9914f98e8922d748b
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: b8bcb16798284a09608ba6942226ef07c6859d4f
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55264438"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58824206"
 ---
-# <a name="type1typename-must-implement-methodname-for-interface-interfacename"></a><span data-ttu-id="f2c18-102">\<type1 >'\<typename >'를 구현 해야 합니다 '\<methodname >' 인터페이스에 대 한 '\<interfacename >'</span><span class="sxs-lookup"><span data-stu-id="f2c18-102">\<type1>'\<typename>' must implement '\<methodname>' for interface '\<interfacename>'</span></span>
-<span data-ttu-id="f2c18-103">클래스 또는 구조체는 인터페이스를 구현 하지만 인터페이스에 의해 정의 된 프로시저를 구현 하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="f2c18-103">A class or structure claims to implement an interface but does not implement a procedure defined by the interface.</span></span> <span data-ttu-id="f2c18-104">인터페이스의 모든 멤버를 구현 해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="f2c18-104">Every member of the interface must be implemented.</span></span>  
+# <a name="type1typename-must-implement-methodname-for-interface-interfacename"></a><span data-ttu-id="37116-102">\<type1 >'\<typename >'를 구현 해야 합니다 '\<methodname >' 인터페이스에 대 한 '\<interfacename >'</span><span class="sxs-lookup"><span data-stu-id="37116-102">\<type1>'\<typename>' must implement '\<methodname>' for interface '\<interfacename>'</span></span>
+<span data-ttu-id="37116-103">클래스 또는 구조체는 인터페이스를 구현 하지만 인터페이스에 의해 정의 된 프로시저를 구현 하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="37116-103">A class or structure claims to implement an interface but does not implement a procedure defined by the interface.</span></span> <span data-ttu-id="37116-104">인터페이스의 모든 멤버를 구현 해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="37116-104">Every member of the interface must be implemented.</span></span>  
   
- <span data-ttu-id="f2c18-105">**오류 ID:** BC30149</span><span class="sxs-lookup"><span data-stu-id="f2c18-105">**Error ID:** BC30149</span></span>  
+ <span data-ttu-id="37116-105">**오류 ID:** BC30149</span><span class="sxs-lookup"><span data-stu-id="37116-105">**Error ID:** BC30149</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="f2c18-106">이 오류를 해결하려면</span><span class="sxs-lookup"><span data-stu-id="f2c18-106">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="37116-106">이 오류를 해결하려면</span><span class="sxs-lookup"><span data-stu-id="37116-106">To correct this error</span></span>  
   
-1.  <span data-ttu-id="f2c18-107">동일한 이름 및 서명을 인터페이스에 정의 된 대로 사용 하 여 프로시저를 선언 합니다.</span><span class="sxs-lookup"><span data-stu-id="f2c18-107">Declare a procedure with the same name and signature as defined in the interface.</span></span> <span data-ttu-id="f2c18-108">포함 해야 적어도 `End Function` 또는 `End Sub` 문입니다.</span><span class="sxs-lookup"><span data-stu-id="f2c18-108">Be sure to include at least the `End Function` or `End Sub` statement.</span></span>  
+1.  <span data-ttu-id="37116-107">동일한 이름 및 서명을 인터페이스에 정의 된 대로 사용 하 여 프로시저를 선언 합니다.</span><span class="sxs-lookup"><span data-stu-id="37116-107">Declare a procedure with the same name and signature as defined in the interface.</span></span> <span data-ttu-id="37116-108">포함 해야 적어도 `End Function` 또는 `End Sub` 문입니다.</span><span class="sxs-lookup"><span data-stu-id="37116-108">Be sure to include at least the `End Function` or `End Sub` statement.</span></span>  
   
-2.  <span data-ttu-id="f2c18-109">추가 `Implements` 의 끝에 절을 `Function` 또는 `Sub` 문입니다.</span><span class="sxs-lookup"><span data-stu-id="f2c18-109">Add an `Implements` clause to the end of the `Function` or `Sub` statement.</span></span> <span data-ttu-id="f2c18-110">예를 들어:</span><span class="sxs-lookup"><span data-stu-id="f2c18-110">For example:</span></span>  
+2.  <span data-ttu-id="37116-109">추가 `Implements` 의 끝에 절을 `Function` 또는 `Sub` 문입니다.</span><span class="sxs-lookup"><span data-stu-id="37116-109">Add an `Implements` clause to the end of the `Function` or `Sub` statement.</span></span> <span data-ttu-id="37116-110">예를 들어:</span><span class="sxs-lookup"><span data-stu-id="37116-110">For example:</span></span>  
   
     ```  
     Public Sub DoSomething() Implements IBaseInterface.DoSomething  
     ```  
   
-## <a name="see-also"></a><span data-ttu-id="f2c18-111">참고자료</span><span class="sxs-lookup"><span data-stu-id="f2c18-111">See also</span></span>
-- [<span data-ttu-id="f2c18-112">Implements 문</span><span class="sxs-lookup"><span data-stu-id="f2c18-112">Implements Statement</span></span>](../../../visual-basic/language-reference/statements/implements-statement.md)
-- [<span data-ttu-id="f2c18-113">인터페이스</span><span class="sxs-lookup"><span data-stu-id="f2c18-113">Interfaces</span></span>](../../../visual-basic/programming-guide/language-features/interfaces/index.md)
+## <a name="see-also"></a><span data-ttu-id="37116-111">참고자료</span><span class="sxs-lookup"><span data-stu-id="37116-111">See also</span></span>
+
+- [<span data-ttu-id="37116-112">Implements 문</span><span class="sxs-lookup"><span data-stu-id="37116-112">Implements Statement</span></span>](../../../visual-basic/language-reference/statements/implements-statement.md)
+- [<span data-ttu-id="37116-113">인터페이스</span><span class="sxs-lookup"><span data-stu-id="37116-113">Interfaces</span></span>](../../../visual-basic/programming-guide/language-features/interfaces/index.md)

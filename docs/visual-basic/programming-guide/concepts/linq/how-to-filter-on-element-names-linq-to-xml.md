@@ -2,20 +2,20 @@
 title: '방법: (LINQ to XML) 요소 이름 필터링 (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: b1437b4a-48aa-4546-834a-d6d3ab015fe1
-ms.openlocfilehash: 6b685da79f149298df14db0d0793130325aa95d9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 868647ba9536886ea84fa10d94738ff0f29d8f02
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54578707"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58836391"
 ---
-# <a name="how-to-filter-on-element-names-linq-to-xml-visual-basic"></a><span data-ttu-id="e7798-102">방법: (LINQ to XML) 요소 이름 필터링 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="e7798-102">How to: Filter on Element Names (LINQ to XML) (Visual Basic)</span></span>
-<span data-ttu-id="e7798-103"><xref:System.Collections.Generic.IEnumerable%601>의 <xref:System.Xml.Linq.XElement>을 반환하는 메서드 중 하나를 호출하면 요소 이름을 기준으로 필터링할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="e7798-103">When you call one of the methods that return <xref:System.Collections.Generic.IEnumerable%601> of <xref:System.Xml.Linq.XElement>, you can filter on the element name.</span></span>  
+# <a name="how-to-filter-on-element-names-linq-to-xml-visual-basic"></a><span data-ttu-id="14bff-102">방법: (LINQ to XML) 요소 이름 필터링 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="14bff-102">How to: Filter on Element Names (LINQ to XML) (Visual Basic)</span></span>
+<span data-ttu-id="14bff-103"><xref:System.Collections.Generic.IEnumerable%601>의 <xref:System.Xml.Linq.XElement>을 반환하는 메서드 중 하나를 호출하면 요소 이름을 기준으로 필터링할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="14bff-103">When you call one of the methods that return <xref:System.Collections.Generic.IEnumerable%601> of <xref:System.Xml.Linq.XElement>, you can filter on the element name.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="e7798-104">예제</span><span class="sxs-lookup"><span data-stu-id="e7798-104">Example</span></span>  
- <span data-ttu-id="e7798-105">이 예제에서는 하위 요소의 컬렉션을 검색합니다. 하위 항목이 필터링되므로 컬렉션에는 지정된 이름을 가진 하위 항목만 포함됩니다.</span><span class="sxs-lookup"><span data-stu-id="e7798-105">This example retrieves a collection of descendants that is filtered to contain only descendants with the specified name.</span></span>  
+## <a name="example"></a><span data-ttu-id="14bff-104">예제</span><span class="sxs-lookup"><span data-stu-id="14bff-104">Example</span></span>  
+ <span data-ttu-id="14bff-105">이 예제에서는 하위 요소의 컬렉션을 검색합니다. 하위 항목이 필터링되므로 컬렉션에는 지정된 이름을 가진 하위 항목만 포함됩니다.</span><span class="sxs-lookup"><span data-stu-id="14bff-105">This example retrieves a collection of descendants that is filtered to contain only descendants with the specified name.</span></span>  
   
- <span data-ttu-id="e7798-106">이 예제에서는 XML 문서로 을 사용합니다. [샘플 XML 파일: 일반적인 구매 주문 (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-linq-to-xml.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="e7798-106">This example uses the following XML document: [Sample XML File: Typical Purchase Order (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-linq-to-xml.md).</span></span>  
+ <span data-ttu-id="14bff-106">이 예제에서는 XML 문서로을 사용합니다. [샘플 XML 파일: 일반적인 구매 주문(LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-linq-to-xml.md).</span><span class="sxs-lookup"><span data-stu-id="14bff-106">This example uses the following XML document: [Sample XML File: Typical Purchase Order (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-linq-to-xml.md).</span></span>  
   
 ```vb  
 Dim po As XElement = XElement.Load("PurchaseOrder.xml")  
@@ -27,14 +27,14 @@ For Each prdName As XElement In items
 Next  
 ```  
   
- <span data-ttu-id="e7798-107">이 코드의 결과는 다음과 같습니다.</span><span class="sxs-lookup"><span data-stu-id="e7798-107">This code produces the following output:</span></span>  
+ <span data-ttu-id="14bff-107">이 코드의 결과는 다음과 같습니다.</span><span class="sxs-lookup"><span data-stu-id="14bff-107">This code produces the following output:</span></span>  
   
 ```  
 ProductName:Lawnmower  
 ProductName:Baby Monitor  
 ```  
   
- <span data-ttu-id="e7798-108"><xref:System.Collections.Generic.IEnumerable%601> 컬렉션의 <xref:System.Xml.Linq.XElement>을 반환하는 다른 메서드는 같은 패턴을 따릅니다.</span><span class="sxs-lookup"><span data-stu-id="e7798-108">The other methods that return <xref:System.Collections.Generic.IEnumerable%601> of <xref:System.Xml.Linq.XElement> collections follow the same pattern.</span></span> <span data-ttu-id="e7798-109">이들 메서드 시그니처는 <xref:System.Xml.Linq.XContainer.Elements%2A> 및 <xref:System.Xml.Linq.XContainer.Descendants%2A>와 비슷합니다.</span><span class="sxs-lookup"><span data-stu-id="e7798-109">Their signatures are similar to <xref:System.Xml.Linq.XContainer.Elements%2A> and <xref:System.Xml.Linq.XContainer.Descendants%2A>.</span></span> <span data-ttu-id="e7798-110">다음은 메서드 시그니처가 유사한 메서드의 전체 목록입니다.</span><span class="sxs-lookup"><span data-stu-id="e7798-110">The following is the complete list of methods that have similar method signatures:</span></span>  
+ <span data-ttu-id="14bff-108"><xref:System.Collections.Generic.IEnumerable%601> 컬렉션의 <xref:System.Xml.Linq.XElement>을 반환하는 다른 메서드는 같은 패턴을 따릅니다.</span><span class="sxs-lookup"><span data-stu-id="14bff-108">The other methods that return <xref:System.Collections.Generic.IEnumerable%601> of <xref:System.Xml.Linq.XElement> collections follow the same pattern.</span></span> <span data-ttu-id="14bff-109">이들 메서드 시그니처는 <xref:System.Xml.Linq.XContainer.Elements%2A> 및 <xref:System.Xml.Linq.XContainer.Descendants%2A>와 비슷합니다.</span><span class="sxs-lookup"><span data-stu-id="14bff-109">Their signatures are similar to <xref:System.Xml.Linq.XContainer.Elements%2A> and <xref:System.Xml.Linq.XContainer.Descendants%2A>.</span></span> <span data-ttu-id="14bff-110">다음은 메서드 시그니처가 유사한 메서드의 전체 목록입니다.</span><span class="sxs-lookup"><span data-stu-id="14bff-110">The following is the complete list of methods that have similar method signatures:</span></span>  
   
 -   <xref:System.Xml.Linq.XNode.Ancestors%2A>  
   
@@ -50,10 +50,10 @@ ProductName:Baby Monitor
   
 -   <xref:System.Xml.Linq.XElement.DescendantsAndSelf%2A>  
   
-## <a name="example"></a><span data-ttu-id="e7798-111">예제</span><span class="sxs-lookup"><span data-stu-id="e7798-111">Example</span></span>  
- <span data-ttu-id="e7798-112">다음 예제에서는 네임스페이스에 있는 XML에 대한 동일한 쿼리를 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="e7798-112">The following example shows the same query for XML that is in a namespace.</span></span> <span data-ttu-id="e7798-113">자세한 내용은 [XML 네임 스페이스 (Visual Basic)를 사용 하 여 작업](../../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="e7798-113">For more information, see [Working with XML Namespaces (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md).</span></span>  
+## <a name="example"></a><span data-ttu-id="14bff-111">예제</span><span class="sxs-lookup"><span data-stu-id="14bff-111">Example</span></span>  
+ <span data-ttu-id="14bff-112">다음 예제에서는 네임스페이스에 있는 XML에 대한 동일한 쿼리를 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="14bff-112">The following example shows the same query for XML that is in a namespace.</span></span> <span data-ttu-id="14bff-113">자세한 내용은 [XML 네임 스페이스 (Visual Basic)를 사용 하 여 작업](../../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="14bff-113">For more information, see [Working with XML Namespaces (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md).</span></span>  
   
- <span data-ttu-id="e7798-114">이 예제에서는 XML 문서로 을 사용합니다. [샘플 XML 파일: Namespace에서 일반적인 구매 주문](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-in-a-namespace.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="e7798-114">This example uses the following XML document: [Sample XML File: Typical Purchase Order in a Namespace](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-in-a-namespace.md).</span></span>  
+ <span data-ttu-id="14bff-114">이 예제에서는 XML 문서로을 사용합니다. [샘플 XML 파일: 네임스페이스에서 일반적인 구매 주문](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-in-a-namespace.md).</span><span class="sxs-lookup"><span data-stu-id="14bff-114">This example uses the following XML document: [Sample XML File: Typical Purchase Order in a Namespace](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-in-a-namespace.md).</span></span>  
   
 ```vb  
 Imports <xmlns:aw="http://www.adventure-works.com">  
@@ -71,12 +71,13 @@ Module Module1
 End Module  
 ```  
   
- <span data-ttu-id="e7798-115">이 코드의 결과는 다음과 같습니다.</span><span class="sxs-lookup"><span data-stu-id="e7798-115">This code produces the following output:</span></span>  
+ <span data-ttu-id="14bff-115">이 코드의 결과는 다음과 같습니다.</span><span class="sxs-lookup"><span data-stu-id="14bff-115">This code produces the following output:</span></span>  
   
 ```  
 {http://www.adventure-works.com}ProductName:Lawnmower  
 {http://www.adventure-works.com}ProductName:Baby Monitor  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="e7798-116">참고자료</span><span class="sxs-lookup"><span data-stu-id="e7798-116">See also</span></span>
-- [<span data-ttu-id="e7798-117">LINQ to XML 축(Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="e7798-117">LINQ to XML Axes (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-axes.md)
+## <a name="see-also"></a><span data-ttu-id="14bff-116">참고자료</span><span class="sxs-lookup"><span data-stu-id="14bff-116">See also</span></span>
+
+- [<span data-ttu-id="14bff-117">LINQ to XML 축(Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="14bff-117">LINQ to XML Axes (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-axes.md)
