@@ -10,12 +10,12 @@ helpviewer_keywords:
 - type promotion
 - declared elements [Visual Basic], visibility
 ms.assetid: 035eeb15-e4c5-4288-ab3c-6bd5d22f7051
-ms.openlocfilehash: b00fdd563a6599b3acfaaafa229fdef9400e57b6
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: f7ac6bfb944da8bd50e035ba97b2b513176dc661
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56969195"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58838874"
 ---
 # <a name="type-promotion-visual-basic"></a>형식 승격(Visual Basic)
 모듈의 프로그래밍 요소를 선언 하면 Visual Basic 모듈을 포함 하는 네임 스페이스에 해당 범위를 승격 합니다. 이 이라고 *형식 승격*합니다.  
@@ -59,6 +59,7 @@ ms.locfileid: "56969195"
 -   **정규화 합니다.** 모듈과 동일한 네임 스페이스의 다른 요소를 사용 하 여 작업할 때 가장 안전한 방법은 항상 모든 프로그래밍 요소에 대 한 정규화를 사용 하는 것입니다. 형식 승격 모듈 멤버의 수 이며 해당 멤버를 완벽 하 게 적합 하지 않습니다, 경우 실수로 다른 프로그래밍 요소를 액세스할 수 있습니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [Module 문](../../../../visual-basic/language-reference/statements/module-statement.md)
 - [Namespace 문](../../../../visual-basic/language-reference/statements/namespace-statement.md)
 - [부분](../../../../visual-basic/language-reference/modifiers/partial.md)

@@ -2,12 +2,12 @@
 title: 래핑되지 않은 메시지
 ms.date: 03/30/2017
 ms.assetid: 019657bd-1f9b-4315-ad74-eaa4e7551ff6
-ms.openlocfilehash: a3f3548e8dc8a85127eae3d080888c304bfa4b90
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fa3e9e02d2cb7bfb815eb107d29a0c84204ddcdf
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54623133"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58841201"
 ---
 # <a name="unwrapped-messages"></a>래핑되지 않은 메시지
 이 샘플에서는 래핑되지 않은 메시지를 보여 줍니다. 기본적으로 메시지 본문은 서비스 작업 매개 변수가 래핑되도록 서식이 지정됩니다. 다음 샘플에서는 `Add` 서비스에 `ICalculator` 요청 메시지를 래핑된 모드로 표시합니다.  
@@ -112,4 +112,3 @@ public class ResponseMessage
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Contract\Message\Unwrapped`  
   
-## <a name="see-also"></a>참고자료

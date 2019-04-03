@@ -2,14 +2,20 @@
 title: Visual Basic의 연산자 및 식
 ms.date: 07/20/2015
 helpviewer_keywords:
-  - 'operators [Visual Basic], operands'
-  - 'operators [Visual Basic]'
-  - 'operands [Visual Basic], definition'
-  - 'Visual Basic code, operators'
-  - 'Visual Basic code, expressions'
-  - operands
-  - 'expressions [Visual Basic]'
+- operators [Visual Basic], operands
+- operators [Visual Basic]
+- operands [Visual Basic], definition
+- Visual Basic code, operators
+- Visual Basic code, expressions
+- operands
+- expressions [Visual Basic]
 ms.assetid: b86f3131-94ee-448f-96cd-79611e028b26
+ms.openlocfilehash: 8de4eeaa22f83392bcb6bb79a1fea327281dfec9
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58843749"
 ---
 # <a name="operators-and-expressions-in-visual-basic"></a>Visual Basic의 연산자 및 식
 *연산자*는 값을 가지는 하나 이상의 코드 요소에서 작업을 수행하는 코드 요소입니다. 값 요소는 변수, 상수, 리터럴, 속성을 포함하고 `Function` 및 `Operator` 프로시저와 식에서 반환됩니다.  
@@ -58,6 +64,7 @@ ms.assetid: b86f3131-94ee-448f-96cd-79611e028b26
   
   
 ## <a name="see-also"></a>참고자료
+
 - [연산자](../../../../visual-basic/language-reference/operators/index.md)
 - [연산자의 효율적 결합](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/efficient-combination-of-operators.md)
 - [문(C++)](../../../../visual-basic/language-reference/statements/index.md)

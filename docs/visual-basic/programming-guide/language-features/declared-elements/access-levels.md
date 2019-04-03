@@ -14,12 +14,12 @@ helpviewer_keywords:
 - Private access modifier
 - declared elements [Visual Basic], access level
 ms.assetid: 6e06c1ab-fd78-47f0-83a8-1152780b5e1a
-ms.openlocfilehash: 1278119ca82678267aa782f2518ab26b50966730
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.openlocfilehash: d8f2f16d2fb15f2e840f13f177d3fea83fda315e
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57203628"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58843104"
 ---
 # <a name="access-levels-in-visual-basic"></a>Visual Basic의 액세스 수준
 합니다 *액세스 수준* 것에 액세스할 수 있도록 범위를 읽거나 쓸 수 있는 권한이 있는 코드, 선언 된 요소입니다. 요소 자체를 선언한 방법 뿐만 아니라 요소의 컨테이너의 액세스 수준에 따라 결정 됩니다. 포함 하는 요소에 액세스할 수 없는 코드에 액세스할 수 없는 포함 된 요소의 이더라도로 선언 `Public`합니다. 예를 들어를 `Public` 변수는 `Private` 구조 아닌 하지만 해당 구조체를 포함 하는 클래스 내에서 액세스할 수 있습니다 해당 클래스 외부에서.  
@@ -67,8 +67,7 @@ Protected Friend stringForProjectAndHeirs As String
 Private numberForMeOnly As Integer  
 ```  
   
- 
-  `Private`는 모듈 수준에서만 사용할 수 있습니다. 즉, 모듈, 클래스 또는 구조체 내 있지만 소스 파일 또는 네임 스페이스, 인터페이스 또는 프로시저의 수준이 아닌 개인 요소를 선언할 수 있습니다.  
+ `Private`는 모듈 수준에서만 사용할 수 있습니다. 즉, 모듈, 클래스 또는 구조체 내 있지만 소스 파일 또는 네임 스페이스, 인터페이스 또는 프로시저의 수준이 아닌 개인 요소를 선언할 수 있습니다.  
   
  모듈 수준에서의 `Dim` 액세스 수준 키워드 없이 문과 동일는 `Private` 선언 합니다. 그러나 사용 하려는는 `Private` 코드를 더 쉽게 읽고 해석 하는 키워드입니다.  
 
@@ -116,6 +115,7 @@ Private Protected internalValue As Integer
 |`Private Protected`|Private protected 요소를 선언 하는 클래스의 코드 또는 bas 클래스와 동일한 어셈블리에 있는 파생된 클래스에서 코드입니다.|인터페이스<br /><br /> 클래스<br /><br /> 구조체<br /><br /> 절차<br /><br /> 속성<br /><br /> 멤버 변수<br /><br /> 상수<br /><br /> 열거형<br /><br /> 이벤트<br /><br /> 외부 선언<br /><br /> 대리자|클래스|
   
 ## <a name="see-also"></a>참고자료
+
 - [Dim 문](../../../../visual-basic/language-reference/statements/dim-statement.md)
 - [정적](../../../../visual-basic/language-reference/modifiers/static.md)
 - [선언 요소 이름](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)

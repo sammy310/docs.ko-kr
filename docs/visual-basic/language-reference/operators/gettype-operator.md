@@ -7,12 +7,12 @@ helpviewer_keywords:
 - GetType operator [Visual Basic]
 - GetType keyword [Visual Basic]
 ms.assetid: 4f733297-2503-4607-850c-15eba65fff90
-ms.openlocfilehash: de80feecda1268f3899f73c52727372452a2d366
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 34ab192814583db5cdc0d0183c73cc22b8633e9c
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57502633"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58840323"
 ---
 # <a name="gettype-operator-visual-basic"></a>GetType 연산자(Visual Basic)
 반환 된 <xref:System.Type> 지정 된 형식의 개체입니다. <xref:System.Type> 개체는 해당 속성, 메서드 및 이벤트와 같은 유형에 대 한 정보를 제공 합니다.  
@@ -58,6 +58,7 @@ GetType(typename)
  [!code-vb[VbVbalrOperators#26](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#26)]  
   
 ## <a name="see-also"></a>참고자료
+
 - [Visual Basic에서의 연산자 우선 순위](../../../visual-basic/language-reference/operators/operator-precedence.md)
 - [기능별 연산자 목록](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)
 - [연산자 및 식](../../../visual-basic/programming-guide/language-features/operators-and-expressions/index.md)

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - data types [Visual Basic], object variable
 - variables [Visual Basic], object
 ms.assetid: 31555704-58a3-49f1-9a0a-6421f605664f
-ms.openlocfilehash: ce38089e91b25cf50e738d956881f3a44bfa3306
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c17c5f85952596f0a080ca473e8f792740e66b8f
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54588730"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58840395"
 ---
 # <a name="object-variable-values-visual-basic"></a>개체 변수 값(Visual Basic)
 변수를 [Object Data Type](../../../../visual-basic/language-reference/data-types/object-data-type.md) 모든 형식의 데이터를 참조할 수 있습니다. 에 저장 되는 값을 `Object` 변수는 특정 위치에 보관 메모리 변수 자체는 데이터에 대 한 포인터를 유지 합니다.  
@@ -20,7 +20,7 @@ ms.locfileid: "54588730"
 ## <a name="object-classifier-functions"></a>분류자 함수 개체  
  항목에 대 한 정보를 반환 하는 함수를 제공 하는 Visual Basic을 `Object` 변수가 참조 하는 다음 표에 나와 있는 것 처럼 합니다.  
   
-|기능|개체 변수가 참조 하는 경우 True를 반환 합니다.|  
+|함수|개체 변수가 참조 하는 경우 True를 반환 합니다.|  
 |--------------|---------------------------------------------------|  
 |<xref:Microsoft.VisualBasic.Information.IsArray%2A>|단일 값이 아닌 값의 배열|  
 |<xref:Microsoft.VisualBasic.Information.IsDate%2A>|A [날짜 데이터 형식](../../../../visual-basic/language-reference/data-types/date-data-type.md) 값 또는 날짜 및 시간 값으로 해석 될 수 있는 문자열|  
@@ -67,6 +67,7 @@ If TypeOf frm Is Object Then Debug.WriteLine("frm is Object")
  선언 하 고 배열을 사용 하 여 `Object` 변수입니다. 다양 한 데이터 형식 및 개체 클래스를 처리 해야 하는 경우에 유용 합니다. 배열의 모든 요소에는 동일한 선언 된 데이터 형식이 있어야 합니다. 이 데이터 형식으로 선언 `Object` 개체를 저장 하 고 클래스 인스턴스의 배열에 다른 데이터 형식과 함께 수 있습니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [개체 변수](../../../../visual-basic/programming-guide/language-features/variables/object-variables.md)
 - [개체 변수 선언](../../../../visual-basic/programming-guide/language-features/variables/object-variable-declaration.md)
 - [개체 변수 할당](../../../../visual-basic/programming-guide/language-features/variables/object-variable-assignment.md)

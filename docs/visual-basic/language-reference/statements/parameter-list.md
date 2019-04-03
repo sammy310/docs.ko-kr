@@ -10,12 +10,12 @@ helpviewer_keywords:
 - arguments [Visual Basic], Visual Basic
 - procedures [Visual Basic], parameter lists
 ms.assetid: 5d737319-0c34-4df9-a23d-188fc840becd
-ms.openlocfilehash: 4ecb0b4a8fc154a179bc5d9d74ce9821cf4fea75
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 651f08812032aa1c5aacc04fdb3d7f491f12b607
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56982169"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58836287"
 ---
 # <a name="parameter-list-visual-basic"></a>매개 변수 목록(Visual Basic)
 프로시저를 호출할 때에 필요한 매개 변수를 지정 합니다. 여러 매개 변수는 쉼표로 구분 됩니다. 다음은 하나의 매개 변수에 대 한 구문입니다.  
@@ -87,6 +87,7 @@ parametername[( )] [ As parametertype ] [ = defaultvalue ]
  [!code-vb[VbVbalrStatements#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#2)]  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Runtime.InteropServices.DllImportAttribute>
 - [Function 문](../../../visual-basic/language-reference/statements/function-statement.md)
 - [Sub 문](../../../visual-basic/language-reference/statements/sub-statement.md)

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - delegates [Visual Basic], relaxed conversion
 - conversions [Visual Basic], relaxed delegate
 ms.assetid: 64f371d0-5416-4f65-b23b-adcbf556e81c
-ms.openlocfilehash: 96941754f17326893437cdcf83c588880e010cc0
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 57e863d9781721a997ae49e1a5c9d8f3562a1bd0
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56979512"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58842722"
 ---
 # <a name="relaxed-delegate-conversion-visual-basic"></a>완화된 대리자 변환(Visual Basic)
 완화 된 대리자 변환을 사용 하면 해당 시그니처가 동일 하지 않은 경우에 대리자 또는 처리기에 sub 및 함수를 할당할 수 있습니다. 따라서 대리자를 바인딩할 메서드 호출을 이미 허용 바인딩을 사용 하 여 일치 됩니다.  
@@ -83,6 +83,7 @@ End Sub
  [!code-vb[VbVbalrRelaxedDelegates#11](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrRelaxedDelegates/VB/Module1.vb#11)]  
   
 ## <a name="see-also"></a>참고자료
+
 - [람다 식](../../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)
 - [확대 변환과 축소 변환](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)
 - [대리자](../../../../visual-basic/programming-guide/language-features/delegates/index.md)

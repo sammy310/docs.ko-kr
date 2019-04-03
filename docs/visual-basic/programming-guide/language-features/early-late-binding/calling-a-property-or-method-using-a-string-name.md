@@ -12,12 +12,12 @@ helpviewer_keywords:
 - properties [Visual Basic], setting at run time
 - CallByName function
 ms.assetid: 79a7b8b4-b8c7-4ad8-aca8-12a9a2b32f03
-ms.openlocfilehash: eb9d214d7bb226a4e14cb42e78bffd940049838d
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: e267c0c4d1d3e8f986348863d933c984f686b33b
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56967531"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58842644"
 ---
 # <a name="calling-a-property-or-method-using-a-string-name-visual-basic"></a>문자열 이름을 사용하여 속성 또는 메서드 호출(Visual Basic)
 대부분의 경우에서 디자인 타임에 개체의 메서드와 속성을 검색 하 고 처리 하는 코드를 작성할 수 있습니다. 그러나 경우에 따라 모르고 개체의 속성 및 메서드에 대 한 사전에 또는 속성을 지정 하거나 런타임에 메서드를 실행 하려면 최종 사용자의 유연성 할 수 있습니다.  
@@ -47,5 +47,6 @@ ms.locfileid: "56967531"
 >  하는 동안 합니다 `CallByName` 함수는 일부 경우에 유용할 수 있습니다, 성능에 미치는 영향에 대 한 유용성을 평가 해야 합니다-사용 하 여 `CallByName` 프로시저를 호출 하는 런타임에 바인딩된 호출 보다 약간 더 느려집니다. 호출 되는 반복 해 서 같은 루프 내에서 함수를 호출 하는 경우 `CallByName` 성능에 심각한 영향을 줄 수 있습니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:Microsoft.VisualBasic.Interaction.CallByName%2A>
 - [개체 형식 확인](../../../../visual-basic/programming-guide/language-features/early-late-binding/determining-object-type.md)

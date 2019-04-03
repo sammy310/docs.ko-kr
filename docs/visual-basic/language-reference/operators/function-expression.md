@@ -6,12 +6,12 @@ helpviewer_keywords:
 - functions [Visual Basic], function expressions
 - lambda expressions [Visual Basic], function expression
 ms.assetid: e8a47a45-4b8a-4f45-a623-7653625dffbc
-ms.openlocfilehash: 6cecc7fc2356a265ca4a3d57c837298ec33efc60
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 0aa47fd277cfe47b3d8f08b41ffca9c547dcbfe9
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56965841"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58839689"
 ---
 # <a name="function-expression-visual-basic"></a>함수 식(Visual Basic)
 매개 변수 및 함수가 람다 식을 정의 하는 코드를 선언 합니다.  
@@ -88,6 +88,7 @@ Dim londonCusts = db.Customers.
  쿼리 메서드에 대 한 자세한 내용은 참조 하세요. [쿼리](../../../visual-basic/language-reference/queries/index.md)합니다. 표준 쿼리 연산자에 대 한 자세한 내용은 참조 하세요. [표준 쿼리 연산자 개요](../../programming-guide/concepts/linq/standard-query-operators-overview.md)합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [Function 문](../../../visual-basic/language-reference/statements/function-statement.md)
 - [람다 식](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)
 - [연산자 및 식](../../../visual-basic/programming-guide/language-features/operators-and-expressions/index.md)

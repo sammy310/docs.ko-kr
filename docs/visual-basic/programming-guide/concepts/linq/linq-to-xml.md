@@ -2,12 +2,12 @@
 title: LINQ to XML (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: f7386556-a6b9-40d5-92b6-e8701dc2c63e
-ms.openlocfilehash: a6b09bb2384b3da6e106d13aaca178252f47f5d0
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1ed438b87d2b53e7e811c22e614c60c759fa07f2
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54648961"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58835858"
 ---
 # <a name="linq-to-xml-visual-basic"></a>LINQ to XML (Visual Basic)
 LINQ to XML에서는 .NET LINQ(Language-Integrated Query) Framework를 사용하는 메모리 내 XML 프로그래밍 인터페이스를 제공합니다. LINQ to XML은 최신 .NET Framework 언어 기능을 사용하며 업데이트되고 다시 디자인된 DOM(문서 개체 모델) XML 프로그래밍 인터페이스와 유사합니다.  
@@ -25,6 +25,7 @@ LINQ to XML에서는 .NET LINQ(Language-Integrated Query) Framework를 사용하
  LINQ to XML의 관리되는 참조 설명서에 대한 포인터를 제공합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [Visual Basic의 LINQ to XML 개요](../../../../visual-basic/programming-guide/language-features/xml/overview-of-linq-to-xml.md)
 - [XML](../../../../visual-basic/programming-guide/language-features/xml/index.md)
 - [LINQ(Language-Integrated Query)(Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/index.md)

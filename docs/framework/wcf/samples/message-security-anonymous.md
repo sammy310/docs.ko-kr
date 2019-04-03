@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - WS Security
 ms.assetid: c321cbf9-8c05-4cce-b5a5-4bf7b230ee03
-ms.openlocfilehash: 2cb1834414b402f8840a9dfa1ee9e2497cea7af5
-ms.sourcegitcommit: bef803e2025642df39f2f1e046767d89031e0304
+ms.openlocfilehash: 534061e203c2efb0b81e5a1d1c720097a08ce15a
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56304247"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58843671"
 ---
 # <a name="message-security-anonymous"></a>Message Security Anonymous
 Message Security Anonymous 샘플 어떻게 Windows Communication Foundation (WCF) 응용 프로그램을 구현 하는 메시지 수준 보안 없습니다 클라이언트 인증을 사용 하지만 서버의 X.509를 사용 하 여 서버 인증이 필요한을 보여 줍니다. 인증서입니다. 클라이언트와 서버 간의 모든 응용 프로그램 메시지는 서명 및 암호화됩니다. 이 샘플은 기반 합니다 [WSHttpBinding](../../../../docs/framework/wcf/samples/wshttpbinding.md) 샘플입니다. 이 샘플은 IIS(인터넷 정보 서비스)에 의해 호스트되는 클라이언트 콘솔 프로그램(.exe) 및 서비스 라이브러리(.dll)로 구성됩니다. 이 서비스는 요청-회신 통신 패턴을 정의하는 계약을 구현합니다.
@@ -238,5 +238,3 @@ Press <ENTER> to terminate client.
   
 > [!NOTE]
 >  다중 컴퓨터 구성에서 이 샘플을 실행할 경우에는 이 스크립트로 클라이언트의 서비스 인증서를 제거할 수 없습니다. 컴퓨터 인증서를 사용 하는 Windows Communication Foundation (WCF) 샘플을 실행 하는 경우에 CurrentUser-TrustedPeople 저장소에에서 설치 된 서비스 인증서를 선택 취소 해야 합니다. 이 작업을 수행 하려면 다음 명령을 사용 합니다. `certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>` 예를 들면 다음과 같습니다. `certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com.`
-
-## <a name="see-also"></a>참고자료

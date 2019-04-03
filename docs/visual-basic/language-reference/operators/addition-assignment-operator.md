@@ -10,12 +10,12 @@ helpviewer_keywords:
 - += operator [Visual Basic], appending strings
 - compound assignment statements [Visual Basic]
 ms.assetid: d3e959f4-85d4-4e47-87c4-77b62335a5b3
-ms.openlocfilehash: 7fdf5cd422cf2a4081372bc14e74ed7463393520
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 4b8f36397d0f52866ebe9fa188d6b163364aeffc
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56979855"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58839021"
 ---
 # <a name="-operator-visual-basic"></a>+= 연산자(Visual Basic)
 숫자 변수 또는 속성의 값에 숫자 식의 값을 추가 하 고 그 결과 변수 또는 속성에 할당 합니다. 연결을 사용할 수도 있습니다는 `String` 식을 `String` 변수 또는 속성 및 변수 또는 속성에 결과 할당 합니다.  
@@ -58,6 +58,7 @@ variableorproperty += expression
  변수의 `num1` 의 값과 13, 이제는 `str1` 은 "103"입니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [+ 연산자](../../../visual-basic/language-reference/operators/addition-operator.md)
 - [할당 연산자](../../../visual-basic/language-reference/operators/assignment-operators.md)
 - [산술 연산자](../../../visual-basic/language-reference/operators/arithmetic-operators.md)

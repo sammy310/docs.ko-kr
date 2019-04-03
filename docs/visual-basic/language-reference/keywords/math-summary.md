@@ -7,12 +7,12 @@ helpviewer_keywords:
 - math functions, Visual Basic
 - math functions
 ms.assetid: 6abf2dd7-92d2-488a-8e2b-819be9b30c3f
-ms.openlocfilehash: 1314bd56ab7fb26dc5bb53b959370caa2287dc87
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d7447a3155c9727a9c55ea86826d1ef15ac21243
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54731857"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58838835"
 ---
 # <a name="math-summary-visual-basic"></a>수학 요약(Visual Basic)
 Visual Basic 언어 키워드 및 런타임 라이브러리 멤버 용도 따라 구성 됩니다 사용 합니다.  
@@ -27,6 +27,7 @@ Visual Basic 언어 키워드 및 런타임 라이브러리 멤버 용도 따라
 |숫자 변환을 수행 합니다.|<xref:Microsoft.VisualBasic.Conversion.Fix%2A>, <xref:Microsoft.VisualBasic.Conversion.Int%2A>|  
   
 ## <a name="see-also"></a>참고자료
+
 - [파생된 수학 함수](../../../visual-basic/language-reference/keywords/derived-math-functions.md)
-- [키워드](../../../visual-basic/language-reference/keywords/index.md)
+- [C++ 키워드](../../../visual-basic/language-reference/keywords/index.md)
 - [Visual Basic 런타임 라이브러리 멤버](../../../visual-basic/language-reference/runtime-library-members.md)

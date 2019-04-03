@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC32025
 ms.assetid: 43707bf1-1c6b-4d82-b081-e5a17dca51c1
-ms.openlocfilehash: 2a2f5692518c6784dfc6e3be6302f1e8dcf2aaa7
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: deef3de645040d7c3d95b1a6c8a25fcf10de881b
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55265573"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58842709"
 ---
 # <a name="region-and-end-region-statements-are-not-valid-within-method-bodiesmultiline-lambdas"></a>메서드 본문에서는 '#Region' 및 '#End Region' 문을 사용할 수 없습니다./multiline lambdas
 `#Region` 블록 클래스, 모듈 또는 네임 스페이스 수준에서 선언 해야 합니다. 축소 가능한 영역에는 하나 이상의 프로시저 포함할 수 있지만 시작 하거나 프로시저 내부에서 끝날 수 없습니다.  
@@ -26,4 +26,5 @@ ms.locfileid: "55265573"
 2.  있는지 확인 합니다 `#Region` 및 `#End Region` 지시문은 같은 코드 블록에 있습니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [#Region 지시문](../../../visual-basic/language-reference/directives/region-directive.md)

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - WithEvents keyword [Visual Basic], walkthroughs
 - event handlers [Visual Basic], walkthroughs
 ms.assetid: f145b3fc-5ae0-4509-a2aa-1ff6934706bd
-ms.openlocfilehash: 0757c3ce0528f76eab5607e20ebca2e66a903900
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 2a8b515f500884d743b7dcca41ffe8c1607375a9
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56974148"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58840928"
 ---
 # <a name="walkthrough-handling-events-visual-basic"></a>연습: 이벤트 처리 (Visual Basic)
 이것이 이벤트로 작업 하는 방법을 보여 주는 두 항목 중 두 번째 숫자입니다. 첫 번째 항목인 [연습: 선언 및 발생 이벤트](../../../../visual-basic/programming-guide/language-features/events/walkthrough-declaring-and-raising-events.md)를 선언 하 고 이벤트를 발생 하는 방법을 보여 줍니다. 이 섹션에서는 다음 연습에서 클래스 및 형식을 사용 하 여 수행한 이벤트를 처리 하는 방법을 보여 줍니다.  
@@ -117,5 +117,6 @@ ms.locfileid: "56974148"
 >  만큼 선언할 수 있습니다 `WithEvents` 배열을 하지만 변수의 수 필요한 `WithEvents` 변수는 지원 되지 않습니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [연습: 이벤트 선언 및 발생](../../../../visual-basic/programming-guide/language-features/events/walkthrough-declaring-and-raising-events.md)
 - [이벤트](../../../../visual-basic/programming-guide/language-features/events/index.md)

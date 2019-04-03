@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30106
 ms.assetid: 2c5363e1-62c2-4f5a-b675-c7337aeb363d
-ms.openlocfilehash: b113860366ccbe47fed8ef13abb90a540dc88b33
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 01659205f271b089fe4e8aa87cf7a8c44e7a4000
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54710653"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58837996"
 ---
 # <a name="number-of-indices-exceeds-the-number-of-dimensions-of-the-indexed-array"></a>인덱스 수가 인덱싱된 배열의 차수보다 많습니다.
 배열 요소에 액세스하는 데 사용하는 인덱스 수는 정확하게 배열의 순위, 즉 배열에 선언된 차원 수와 같아야 합니다.  
@@ -36,4 +36,5 @@ ms.locfileid: "54710653"
     ```  
   
 ## <a name="see-also"></a>참고자료
+
 - [배열(C++)](../../../visual-basic/programming-guide/language-features/arrays/index.md)

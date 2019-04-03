@@ -13,12 +13,12 @@ helpviewer_keywords:
 - return values [Visual Basic], Operator procedures
 - operator overloading
 ms.assetid: d4b0e253-092a-4e6e-9fe2-01f562140a29
-ms.openlocfilehash: 1e7d767b1ba370ac7303abfd8aa3606a43c33de9
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 3a09657ee7a79b7f590adba0e4fb0c04a8e89043
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56973290"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58843645"
 ---
 # <a name="how-to-define-an-operator-visual-basic"></a>방법: 연산자 (Visual Basic)를 정의 합니다.
 클래스 또는 구조체를 정의한 경우에 표준 연산자의 동작을 정의할 수 있습니다 (같은 `*`, `<>`, 또는 `And`) 클래스 또는 구조체 형식의 하나 또는 두 피연산자 모두가 하는 경우.  
@@ -38,6 +38,7 @@ ms.locfileid: "56973290"
   
   
 ## <a name="see-also"></a>참고자료
+
 - [연산자 프로시저](./operator-procedures.md)
 - [방법: 변환 연산자를 정의 합니다.](./how-to-define-a-conversion-operator.md)
 - [방법: 연산자 프로시저 호출](./how-to-call-an-operator-procedure.md)

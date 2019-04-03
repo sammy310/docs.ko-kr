@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Visual Basic code, specifications
 - specifications, Visual Basic
 ms.assetid: 42c30017-19d0-442e-87a2-850b66ddc3df
-ms.openlocfilehash: 3810dd4d956c5cd8ef74cfd4da695f660e539820
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 399bc15f3249c99f1c94338869e77befc8c26015
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54744689"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58842618"
 ---
 # <a name="visual-basic-language-specification"></a>Visual Basic 언어 사양
 Visual Basic 언어 사양 Visual Basic 문법 및 구문에 대 한 모든 질문에 대 한 답변에 대 한 믿을 만한 원본 됩니다. Visual Basic 참조 설명서에서 다루지 않은 여러 항목을 포함 하 여 언어에 대 한 자세한 정보가 있습니다.  
@@ -23,6 +23,7 @@ Visual Basic 언어 사양 Visual Basic 문법 및 구문에 대 한 모든 질�
 사양에 관한 문제는 [dotnet/vblang](https://github.com/dotnet/vblang/issues) 리포지토리에 작성해야 합니다. 또는 발견한 오류를 수정하는 데 관심이 있는 경우 동일한 리포지토리에 [끌어오기 요청](https://github.com/dotnet/vblang/pulls)을 제출할 수 있습니다.
 
 ## <a name="see-also"></a>참고자료
+
 - [Visual Basic 언어 참조](../../../visual-basic/language-reference/index.md)
 
 >[!div class="step-by-step"]

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - procedures [Visual Basic], multiple versions
 - procedure overloading [Visual Basic], multiple versions
 ms.assetid: 71ccdd66-1b00-4b66-bee4-6926c0d696f4
-ms.openlocfilehash: baaaca13755b9fdc11308ff3e4df39835dbe466e
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: c31c9ad05af04aec5dc41790aea530c62611f500
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56980778"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58841175"
 ---
 # <a name="how-to-define-multiple-versions-of-a-procedure-visual-basic"></a>방법: 여러 버전의 프로시저 (Visual Basic)를 정의 합니다.
 여러 버전의 프로시저를 정의할 수 있습니다 *오버 로드* 이름은 같지만 다른 매개 변수 목록을 사용 하 여 각 버전에 대 한 것입니다. 오버 로드의 용도 이름으로 구분할 필요 없이 프로시저의 밀접 한 관련이 있는 여러 버전을 정의 하는 것입니다.  
@@ -43,6 +43,7 @@ ms.locfileid: "56980778"
  각 오버 로드 된 버전의 프로시저 이름이 같지만 서로 다른 매개 변수 목록이 있는지 확인 합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [절차](./index.md)
 - [프로시저 매개 변수 및 인수](./procedure-parameters-and-arguments.md)
 - [프로시저 문제 해결](./troubleshooting-procedures.md)

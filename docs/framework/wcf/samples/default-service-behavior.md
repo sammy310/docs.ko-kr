@@ -5,12 +5,12 @@ helpviewer_keywords:
 - service behaviors, defaults
 - Default Service Behavior Sample [Windows Communication Foundation]
 ms.assetid: 442d4f71-c64e-4c62-816a-a66c38e7d3ec
-ms.openlocfilehash: 7d58154858cd5f2aef21cc6ceeb93d1ee2f2d1a6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 18ef0758dad9abc0c30651806957c9bb2c852abc
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54619586"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58843069"
 ---
 # <a name="default-service-behavior"></a>기본 서비스 동작
 이 샘플에서는 서비스 동작 설정을 구성하는 방법을 보여 줍니다. 샘플을 기반으로 합니다 [Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md)를 구현 하는 `ICalculator` 서비스 계약입니다. 이 샘플에서는 <xref:System.ServiceModel.ServiceBehaviorAttribute> 및 <xref:System.ServiceModel.OperationBehaviorAttribute> 특성을 사용하여 서비스 동작 및 작업 동작을 명시적으로 정의합니다. 동작은 구성 파일에서 구성할 수도 있고 코드에서 명령적으로 구성할 수도 있습니다. 이 샘플에서는 코드에서 명령적으로 구성하는 방법을 보여 줍니다.  
@@ -94,4 +94,3 @@ Press <ENTER> to terminate client.
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\Behaviors\Default`  
   
-## <a name="see-also"></a>참고자료

@@ -2,12 +2,12 @@
 title: Service Identity 샘플
 ms.date: 03/30/2017
 ms.assetid: 79fa8c1c-85bb-4b67-bc67-bfaf721303f8
-ms.openlocfilehash: 33d3344e6a74e2afa9ad36f9df2e36eb8e1cb17b
-ms.sourcegitcommit: bef803e2025642df39f2f1e046767d89031e0304
+ms.openlocfilehash: fcb967af6d95169817dea3f17ea350cf21494d56
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56303896"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58835648"
 ---
 # <a name="service-identity-sample"></a>Service Identity 샘플
 이 Service Identity 샘플에서는 서비스의 ID를 설정하는 방법을 보여 줍니다. 클라이언트는 디자인 타임에 서비스의 메타데이터를 사용하여 ID를 검색한 다음 런타임에 서비스의 ID를 인증할 수 있습니다. 서비스 ID의 개념을 사용하면 클라이언트가 작업을 호출하기 전에 서비스를 인증함으로써 인증되지 않은 호출로부터 클라이언트를 보호할 수 있습니다. 보안 연결에서는 또한 서비스가 클라이언트의 액세스를 허용하기 전에 클라이언트의 자격 증명을 인증하는데, 이 부분은 샘플에서 다루지 않습니다. 샘플을 참조 하세요 [클라이언트](../../../../docs/framework/wcf/samples/client.md) 서버 인증을 보여 줍니다.
@@ -158,5 +158,3 @@ class CustomIdentityVerifier : IdentityVerifier
   
     > [!NOTE]
     >  다중 컴퓨터 구성에서 이 샘플을 실행할 경우에는 이 스크립트로 클라이언트의 서비스 인증서를 제거할 수 없습니다. 컴퓨터 인증서를 사용 하는 Windows Communication Foundation (WCF) 샘플을 실행 하는 경우에 CurrentUser-TrustedPeople 저장소에에서 설치 된 서비스 인증서를 선택 취소 해야 합니다. 이 작업을 수행 하려면 다음 명령을 사용 합니다. `certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>` 예를 들어: `certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`합니다.
-
-## <a name="see-also"></a>참고자료

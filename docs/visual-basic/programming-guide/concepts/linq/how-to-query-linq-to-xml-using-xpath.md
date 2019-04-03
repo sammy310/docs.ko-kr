@@ -2,12 +2,12 @@
 title: '방법: LINQ to XML XPath (Visual Basic)를 사용 하 여 쿼리'
 ms.date: 07/20/2015
 ms.assetid: e1f69a20-1efa-452d-9089-c472fa84b3d5
-ms.openlocfilehash: 754b3c4d1f14f2f78b5688f13ab679bc01798a6c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: cff0b5f6e4bb3c64522dc13a44dd79d7c172c1b5
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54615992"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58843079"
 ---
 # <a name="how-to-query-linq-to-xml-using-xpath-visual-basic"></a>방법: LINQ to XML XPath (Visual Basic)를 사용 하 여 쿼리
 이 항목에서는 XPath를 사용하여 XML 트리를 쿼리할 수 있도록 하는 확장명 메서드에 대해 소개합니다. 이러한 확장 메서드 사용에 대한 자세한 내용은 <xref:System.Xml.XPath.Extensions?displayProperty=nameWithType>를 참조하세요.  
@@ -43,4 +43,5 @@ Next
 ```  
   
 ## <a name="see-also"></a>참고자료
+
 - [고급 쿼리 기술 (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-query-techniques-linq-to-xml.md)

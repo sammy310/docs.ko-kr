@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC42025
 ms.assetid: db3337e5-c349-42bf-86df-d9c1e00952a5
-ms.openlocfilehash: 78981e5af0d4bf1694a3ad7c9ead2e4e7fd9330e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8e6ddab16c59d7ce95d96b377e3f372f6ebe5278
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54703551"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58843567"
 ---
 # <a name="access-of-shared-member-through-an-instance-qualifying-expression-will-not-be-evaluated"></a>인스턴스를 통한 공유 멤버 액세스입니다. 정규화 식을 계산하지 않습니다.
 클래스 또는 구조체의 인스턴스 변수는 액세스 하는 `Shared` 변수, 속성, 프로시저 또는 해당 클래스 또는 구조체에 정의 된 이벤트입니다. 이 경고는 인스턴스 변수를 사용 하 여 클래스 또는 상수 또는 열거형 또는 중첩 된 클래스 또는 구조체와 같은 구조체의 멤버를 암시적으로 공유를 액세스 하는 경우에 발생할 수 있습니다.  
@@ -56,5 +56,6 @@ End Module
 >  동일한 이름을 가진 두 개의 프로그래밍 요소가 범위의 효과 대 한 경고 수 있습니다. 이전 예제를 사용 하 여 인스턴스를 선언 하는 경우 `Dim testClass as testClass = Nothing`, 컴파일러는 호출을 처리 `testClass.sayHello()` 클래스 이름 및 경고 없이 통해 메서드의 액세스 발생 합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [공유](../../../visual-basic/language-reference/modifiers/shared.md)
 - [Visual Basic의 범위](../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)

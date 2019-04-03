@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC33107
 ms.assetid: 493c8899-3f6b-4471-8eb6-9284e8492768
-ms.openlocfilehash: cb47670e8417e903b2886887394b972d1ac138b0
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 32ff0adca9d35e6b5439ae06be85414924dac2e6
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55284637"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58838627"
 ---
 # <a name="first-operand-in-a-binary-if-expression-must-be-nullable-or-a-reference-type"></a>'If' 이항 식의 첫 번째 피연산자는 nullable이거나 참조 형식이어야 합니다.
 `If` 식 2 또는 3 개의 인수를 사용할 수 있습니다. 두 개의 인수를 보낼 때 첫 번째 인수는 참조 형식 또는 nullable 형식 이어야 합니다. 첫 번째 인수 이외의 값으로 계산 하는 경우 `Nothing`, 해당 값이 반환 됩니다. 첫 번째 인수를 평가 하는 경우 `Nothing`, 두 번째 인수가 평가 되 고 반환 합니다.  
@@ -54,6 +54,7 @@ Console.WriteLine(If(booleanVar, "Test returns True.", "Test returns False."))
 ```  
   
 ## <a name="see-also"></a>참고자료
+
 - [If 연산자](../../../visual-basic/language-reference/operators/if-operator.md)
 - [If...Then...Else 문](../../../visual-basic/language-reference/statements/if-then-else-statement.md)
 - [Nullable 값 형식](../../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md)

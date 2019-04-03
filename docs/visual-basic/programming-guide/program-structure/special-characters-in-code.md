@@ -30,12 +30,12 @@ helpviewer_keywords:
 - exclamation point operator (!)
 - Visual Basic code, special characters
 ms.assetid: 310dce0c-45b5-4e0d-83e9-32df258d2a3e
-ms.openlocfilehash: 17b5fcc2be2730abfd7ee0090f9f34053e81c5f8
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 65fcd10521742e287c7934080b3352a06668df7a
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56971899"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58835559"
 ---
 # <a name="special-characters-in-code-visual-basic"></a>코드의 특수 문자(Visual Basic)
 경우에 따라 영문자 또는 숫자 하지 않은 문자 즉, 코드에서 특수 문자를 사용 해야 합니다. 문장 부호 및 특수 문자는 Visual Basic 문자 집합의 프로그램 텍스트 컴파일러 또는 컴파일된 프로그램이 수행 하는 작업을 정의 하는 데 구성에서 사용이 다양 한 경우 이러한 특수 문자는 수행할 작업을 지정하지 않습니다.  
@@ -88,5 +88,6 @@ ms.locfileid: "56971899"
  합니다 `!` 문자로도 사용 됩니다는 `Single` 문자를 입력 합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [프로그램 구조 및 코드 규칙](../../../visual-basic/programming-guide/program-structure/program-structure-and-code-conventions.md)
 - [형식 문자](../../../visual-basic/programming-guide/language-features/data-types/type-characters.md)

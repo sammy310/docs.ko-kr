@@ -2,9 +2,15 @@
 title: Visual Basic의 변수
 ms.date: 07/20/2015
 helpviewer_keywords:
-  - 'variables [Visual Basic]'
-  - 'values [Visual Basic], storing'
+- variables [Visual Basic]
+- values [Visual Basic], storing
 ms.assetid: 4cfaa06d-4ae3-4307-897b-cf599dc24caa
+ms.openlocfilehash: 9a39c53ea2d57bca379297897d6d4d1b9f7a1a9f
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58840383"
 ---
 # <a name="variables-in-visual-basic"></a>Visual Basic의 변수
 Visual Basic을 사용 하 여 계산을 수행할 때 값을 저장 해야 하는 경우가 많습니다. 예를 들어 여러 값을 계산하여 비교하고 비교 결과에 따라 값에서 다른 작업을 수행해야 할 수 있습니다. 값을 비교하려면 값을 보존해야 합니다.  
@@ -28,6 +34,7 @@ Visual Basic을 사용 하 여 계산을 수행할 때 값을 저장 해야 하�
  변수처럼 *속성*은 액세스할 수 있는 값을 나타냅니다. 그러나 변수보다 더 복잡합니다. 속성에는 값을 설정 및 검색하는 방법을 제어하는 코드 블록이 사용됩니다. 자세한 내용은 [Visual Basic에서 속성과 변수의 차이점](../../../../visual-basic/programming-guide/language-features/procedures/differences-between-properties-and-variables.md)을 참조하세요.  
   
 ## <a name="see-also"></a>참고자료
+
 - [변수 선언](../../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)
 - [개체 변수](../../../../visual-basic/programming-guide/language-features/variables/object-variables.md)
 - [변수 문제 해결](../../../../visual-basic/programming-guide/language-features/variables/troubleshooting-variables.md)

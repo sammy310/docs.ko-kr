@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Object data type
 - Object data type [Visual Basic], reference
 ms.assetid: 61ea4a7c-3b3d-48d4-adc4-eacfa91779b2
-ms.openlocfilehash: 5a37b571e0600927e0e50fdb1a63bcf8ef194d72
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 616110145db2796e05509094b1c023daacd68f03
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54617540"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58835572"
 ---
 # <a name="object-data-type"></a>Object Data Type
 개체를 참조 하는 주소를 저장 합니다. 참조 형식 (문자열, 배열, 클래스 또는 인터페이스)를 할당할 수 있습니다는 `Object` 변수입니다. `Object` 변수 값 형식의 데이터도 참조할 수 있습니다 (숫자 `Boolean`를 `Char`, `Date`, 구조체 또는 열거형)입니다.  
@@ -67,6 +67,7 @@ objDb = myCollection.Item(1)
 ```  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Object>
 - [데이터 형식](../../../visual-basic/language-reference/data-types/index.md)
 - [형식 변환 함수](../../../visual-basic/language-reference/functions/type-conversion-functions.md)

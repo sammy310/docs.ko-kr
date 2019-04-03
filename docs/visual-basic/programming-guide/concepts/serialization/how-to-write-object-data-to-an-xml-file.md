@@ -2,12 +2,12 @@
 title: '방법: XML 파일 (Visual Basic)에 개체 데이터 쓰기'
 ms.date: 07/20/2015
 ms.assetid: f7966480-5ed2-43ac-9894-33427436de2a
-ms.openlocfilehash: a7784566cba7b9cf85914a410b78240856879ba8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 52b896b0191f29f68cc31e02fc325638ca6341b4
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54715831"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58843736"
 ---
 # <a name="how-to-write-object-data-to-an-xml-file-visual-basic"></a>방법: XML 파일 (Visual Basic)에 개체 데이터 쓰기
 이 예제에서는 <xref:System.Xml.Serialization.XmlSerializer> 클래스를 사용하여 XML 파일에 클래스의 개체를 씁니다.  
@@ -55,6 +55,7 @@ End Module
  이 예제에서는 파일이 아직 없는 경우 새 파일을 만듭니다. 애플리케이션에서 파일을 만들어야 하는 경우 해당 애플리케이션에 폴더에 대한 `Create` 권한이 있어야 합니다. 파일이 이미 있는 경우 애플리케이션에 더 낮은 권한인 `Write` 권한만 있으면 됩니다. 가능한 경우 배포하는 동안 파일을 만들고, 폴더에 대한 `Create` 권한 대신 단일 파일에 대해 `Read` 권한만 부여하는 것이 더 안전합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.IO.StreamWriter>
 - [방법: XML 파일 (Visual Basic)에서 개체 데이터 읽기](../../../../visual-basic/programming-guide/concepts/serialization/how-to-read-object-data-from-an-xml-file.md)
 - [Serialization(Visual Basic)](../../../../visual-basic/programming-guide/concepts/serialization/index.md)

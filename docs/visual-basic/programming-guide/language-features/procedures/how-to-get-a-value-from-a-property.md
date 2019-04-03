@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Visual Basic code, properties
 - properties [Visual Basic], values
 ms.assetid: 3954423e-6ab7-4a4c-b55c-a8d27be47891
-ms.openlocfilehash: de5719527216411c7bd156f2cc0d369442eaee20
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 7dbc9d926ae937dd032c0c054bde440037ab9f0d
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56964775"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58842917"
 ---
 # <a name="how-to-get-a-value-from-a-property-visual-basic"></a>방법: (Visual Basic) 속성에서 값 가져오기
 식에서 속성 이름을 포함 하 여 속성의 값을 검색 합니다.  
@@ -39,6 +39,7 @@ ms.locfileid: "56964775"
  변수 처럼 식에 참여 하는 속성의 값 또는 상수 또는 변수 또는 대입문의 왼쪽에는 속성에 저장 됩니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [절차](./index.md)
 - [속성 프로시저](./property-procedures.md)
 - [프로시저 매개 변수 및 인수](./procedure-parameters-and-arguments.md)

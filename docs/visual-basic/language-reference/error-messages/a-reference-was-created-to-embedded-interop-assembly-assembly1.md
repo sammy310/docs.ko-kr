@@ -8,12 +8,12 @@ helpviewer_keywords:
 - VBC40059
 - BC40059
 ms.assetid: 520e39cb-8ab6-46f5-aa00-08afd51b4b7c
-ms.openlocfilehash: 058aa4891d05147756290affd60ea5fb260c33ef
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: c0b4f56e3d1613486dd1198976557831ce657e1b
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55262954"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58837548"
 ---
 # <a name="a-reference-was-created-to-embedded-interop-assembly-assembly1-because-of-an-indirect-reference-to-that-assembly-from-assembly-assembly2"></a>포함 된 interop 어셈블리에 대 한 참조를 만든 '\<assembly1 >' 어셈블리에서 해당 어셈블리에 간접 참조 때문에 '\<assembly2 >'
 포함된 interop 어셈블리 ‘\<assembly1>’에 대한 참조는 해당 어셈블리에 대한 ‘\<assembly2>’ 어셈블리의 간접 참조로 인해 만들어졌습니다. 두 어셈블리 중 하나에서 ‘Embed Interop Types’ 속성을 변경하는 것이 좋습니다.  
@@ -32,5 +32,6 @@ ms.locfileid: "55262954"
 -   경고를 제거하기 위해 assembly1의 `Embed Interop Types` 속성을 `False`로 설정할 수 있습니다. 이 경우 interop 형식 정보는 주 interop 어셈블리 (PIA)에서 제공 됩니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [/link(Visual Basic)](../../../visual-basic/reference/command-line-compiler/link.md)
 - [비관리 코드와의 상호 운용](../../../framework/interop/index.md)

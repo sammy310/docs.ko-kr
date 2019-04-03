@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrID52
 ms.assetid: d0e96aea-7621-48f6-a78b-5d37d18aaa4e
-ms.openlocfilehash: c57f431350d4f63507ee7374616b62ca32151c86
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b6da1031b60a4cd73c53588cf18992797c3fddab
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54639408"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58839069"
 ---
 # <a name="bad-file-name-or-number"></a>파일 이름 또는 번호가 잘못되었습니다.
 지정한 파일에 액세스 하는 동안 오류가 발생 했습니다. 이 오류에 대 한 가능한 원인 중:  
@@ -29,5 +29,6 @@ ms.locfileid: "54639408"
 3.  운영 체제 규칙을 준수 하는지 확인 하려면 파일 이름을 확인 합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:Microsoft.VisualBasic.FileSystem.FileOpen%2A>
 - [Visual Basic 명명 규칙](../../../visual-basic/programming-guide/program-structure/naming-conventions.md)

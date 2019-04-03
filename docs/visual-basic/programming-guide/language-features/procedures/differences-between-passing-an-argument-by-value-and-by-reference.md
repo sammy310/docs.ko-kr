@@ -8,12 +8,12 @@ helpviewer_keywords:
 - ByVal keyword [Visual Basic], passing arguments by value
 - arguments [Visual Basic], passing by value or by reference
 ms.assetid: 5f5c38fe-3e2d-494c-8fff-f4025b55ec93
-ms.openlocfilehash: 129bb01184d051572ac757a2883aac4de8469d2c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1b85941c14721280a5025db442c4793930244ec8
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54513310"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58837514"
 ---
 # <a name="differences-between-passing-an-argument-by-value-and-by-reference-visual-basic"></a>인수를 값으로 전달할 때와 참조로 전달할 때의 차이점(Visual Basic)
 프로시저에 하나 이상의 인수를 전달 하는 경우 각 인수는 호출 코드에서 기본 프로그래밍 요소에 해당 합니다. 이 기본 요소의 값 또는 참조를 전달할 수 있습니다. 이 *전달 메커니즘*합니다.  
@@ -40,6 +40,7 @@ ms.locfileid: "54513310"
 |참조 형식 (클래스 또는 구조체 인스턴스에 대 한 포인터 포함)|프로시저 변수를 변경할 수 없습니다 있지만 가리키는 인스턴스 멤버를 변경할 수 있습니다.|프로시저 변수 및 가리키는 인스턴스 멤버를 변경할 수 있습니다.|  
   
 ## <a name="see-also"></a>참고자료
+
 - [절차](./index.md)
 - [프로시저 매개 변수 및 인수](./procedure-parameters-and-arguments.md)
 - [방법: 프로시저에 인수 전달](./how-to-pass-arguments-to-a-procedure.md)

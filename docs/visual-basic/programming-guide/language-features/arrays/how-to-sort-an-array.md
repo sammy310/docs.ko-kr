@@ -7,12 +7,12 @@ helpviewer_keywords:
 - arrays [Visual Basic], sorting
 - examples [Visual Basic], arrays
 ms.assetid: 9289aeaa-9626-4698-94a7-1d1fd3702b87
-ms.openlocfilehash: 0b04bfbedf9d7266d1b2e190fa85b8a64cf6efbf
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3f4dbd6dce0957de3451b1f29c3a67ccd6791045
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54558438"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58838081"
 ---
 # <a name="how-to-sort-an-array-in-visual-basic"></a>방법: Visual Basic에서 배열 정렬
 이 예제에서는 배열을 선언 `String` 명명 된 개체 `zooAnimals`, 채운 다음 사전순으로 정렬 합니다.  
@@ -44,6 +44,7 @@ End Sub
 -   배열의 하나 이상의 요소를 구현 하지 않는 합니다 <xref:System.IComparable> 인터페이스 (<xref:System.InvalidOperationException> 클래스)  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Array.Sort%2A?displayProperty=nameWithType>
 - [배열](../../../../visual-basic/programming-guide/language-features/arrays/index.md)
 - [배열 문제 해결](../../../../visual-basic/programming-guide/language-features/arrays/troubleshooting-arrays.md)

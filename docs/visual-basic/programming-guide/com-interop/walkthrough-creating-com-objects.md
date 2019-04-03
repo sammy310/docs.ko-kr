@@ -8,12 +8,12 @@ helpviewer_keywords:
 - object creation [Visual Basic], COM objects
 - COM objects, walkthroughs
 ms.assetid: 7b07a463-bc72-4392-9ba0-9dfcb697a44f
-ms.openlocfilehash: 6b079db3ccc07494bdfdf7dba49c27fe14dca4e5
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 5fc0105cffb5606f9382aca7b55d6544d04f9fe7
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56973940"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58838159"
 ---
 # <a name="walkthrough-creating-com-objects-with-visual-basic"></a>연습: Visual Basic을 사용 하 여 COM 개체 만들기
 새 응용 프로그램 또는 구성 요소를 만들 때.NET Framework 어셈블리를 만드는 것이 좋습니다. 그러나 Visual Basic도 쉽게 COM에.NET Framework 구성 요소 노출 이 옵션을 사용 하면 COM 구성 요소를 필요로 하는 이전 응용 프로그램 도구 모음에 대 한 새 구성 요소를 제공할 수 있습니다. 이 연습에는 Visual Basic 노출을 사용 하는 방법을 보여 줍니다. [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] COM 개체를 사용 하 여 및 COM 클래스 템플릿을 사용 하지 않고 개체입니다.  
@@ -91,6 +91,7 @@ ms.locfileid: "56973940"
     >  True 이면 COM 개체 하지 않기 때문에 다른 Visual Basic 응용 프로그램에서 Visual Basic을 사용 하 여 생성 하는 COM 개체를 사용할 수 없습니다. 이러한 COM 개체에 대 한 참조를 추가 하려는 시도 오류가 발생 합니다. 자세한 내용은 참조 하세요 [.NET Framework 응용 프로그램의 COM 상호 운용성](../../../visual-basic/programming-guide/com-interop/com-interoperability-in-net-framework-applications.md)합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:Microsoft.VisualBasic.ComClassAttribute>
 - [COM Interop](../../../visual-basic/programming-guide/com-interop/index.md)
 - [연습: COM 개체를 사용한 상속 구현](../../../visual-basic/programming-guide/com-interop/walkthrough-implementing-inheritance-with-com-objects.md)

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - My namespace [Visual Basic], customizing
 - My namespace
 ms.assetid: 4e8279c2-ed5b-4681-8903-8a6671874000
-ms.openlocfilehash: caa9c2cadb9194161756f89b5acb16da0a955485
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 74be338cd6f704174d89032fb7f9e859215c2bc3
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54543719"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58843541"
 ---
 # <a name="customizing-which-objects-are-available-in-my-visual-basic"></a>My에 사용할 수 있는 개체 사용자 지정(Visual Basic)
 이 항목에서는 설명 하는 제어 하는 방법 `My` 개체는 프로젝트를 설정 하 여 사용할 수 있습니다 `_MYTYPE` 조건부 컴파일 상수입니다. Visual Studio 통합 개발 환경 (IDE) 유지는 `_MYTYPE` 조건부 컴파일 상수를 프로젝트의 형식을 사용 하 여 동기화 합니다.  
@@ -70,6 +70,7 @@ ms.locfileid: "54543719"
 |`_MYTYPE`|사용 하도록 설정 `My.Log`, `My.Request`, 및 `My.Response`이면 상수가 "Web"입니다.|  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase>
 - <xref:Microsoft.VisualBasic.Devices.Computer>
 - <xref:Microsoft.VisualBasic.Logging.Log>

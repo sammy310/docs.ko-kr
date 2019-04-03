@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Auto keyword [Visual Basic]
 - Auto keyword [Visual Basic], marshaling strings
 ms.assetid: bf79ba95-a62c-48a5-916f-0ac7a52c13ec
-ms.openlocfilehash: c128ab9982ae7ccd5fff34020f2750f703da16a1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e4beb320b3aa0cadb790dd3ab92255496bc32f05
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54664605"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58843840"
 ---
 # <a name="auto-visual-basic"></a>Auto(Visual Basic)
 Visual Basic 선언 되는 외부 프로시저의 외부 이름을 기반으로 하는.NET Framework 규칙에 따라 문자열을 마샬링하고 지정 합니다.  
@@ -30,10 +30,11 @@ Visual Basic 선언 되는 외부 프로시저의 외부 이름을 기반으로 
   
  [Declare 문](../../../visual-basic/language-reference/statements/declare-statement.md)  
   
-## <a name="smart-device-developer-notes"></a>스마트 디바이스 개발자 노트  
+## <a name="smart-device-developer-notes"></a>스마트 장치 개발자 노트  
  이 키워드는 지원 되지 않습니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [ANSI](../../../visual-basic/language-reference/modifiers/ansi.md)
 - [유니코드](../../../visual-basic/language-reference/modifiers/unicode.md)
 - [키워드](../../../visual-basic/language-reference/keywords/index.md)
