@@ -9,36 +9,37 @@ helpviewer_keywords:
 - return values [Visual Basic], Operator procedures
 - operator overloading
 ms.assetid: 54203dfa-c24b-463f-9942-d5153e89e762
-ms.openlocfilehash: fe5c314fe4e39c8a06803037da29b51148188e14
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: cf7bfdd09c7f3429f9c730a7aec34b24af3f2e9f
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56974642"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58829228"
 ---
-# <a name="how-to-define-a-conversion-operator-visual-basic"></a><span data-ttu-id="c08ce-102">방법: 변환 연산자 (Visual Basic)를 정의 합니다.</span><span class="sxs-lookup"><span data-stu-id="c08ce-102">How to: Define a Conversion Operator (Visual Basic)</span></span>
-<span data-ttu-id="c08ce-103">클래스 또는 구조체를 정의한 경우 해당 클래스 또는 구조체 형식 및 다른 데이터 형식 간의 형식 변환 연산자를 정의할 수 있습니다 (같은 `Integer`, `Double`, 또는 `String`).</span><span class="sxs-lookup"><span data-stu-id="c08ce-103">If you have defined a class or structure, you can define a type conversion operator between the type of your class or structure and another data type (such as `Integer`, `Double`, or `String`).</span></span>  
+# <a name="how-to-define-a-conversion-operator-visual-basic"></a><span data-ttu-id="f0979-102">방법: 변환 연산자 (Visual Basic)를 정의 합니다.</span><span class="sxs-lookup"><span data-stu-id="f0979-102">How to: Define a Conversion Operator (Visual Basic)</span></span>
+<span data-ttu-id="f0979-103">클래스 또는 구조체를 정의한 경우 해당 클래스 또는 구조체 형식 및 다른 데이터 형식 간의 형식 변환 연산자를 정의할 수 있습니다 (같은 `Integer`, `Double`, 또는 `String`).</span><span class="sxs-lookup"><span data-stu-id="f0979-103">If you have defined a class or structure, you can define a type conversion operator between the type of your class or structure and another data type (such as `Integer`, `Double`, or `String`).</span></span>  
   
- <span data-ttu-id="c08ce-104">형식 변환으로 정의 [CType Function](../../../../visual-basic/language-reference/functions/ctype-function.md) 클래스 또는 구조체 내에서 프로시저입니다.</span><span class="sxs-lookup"><span data-stu-id="c08ce-104">Define the type conversion as a [CType Function](../../../../visual-basic/language-reference/functions/ctype-function.md) procedure within the class or structure.</span></span> <span data-ttu-id="c08ce-105">모든 변환 프로시저 여야 `Public Shared`를 각각 지정 해야 합니다 [Widening](../../../../visual-basic/language-reference/modifiers/widening.md) 또는 [Narrowing](../../../../visual-basic/language-reference/modifiers/narrowing.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="c08ce-105">All conversion procedures must be `Public Shared`, and each one must specify either [Widening](../../../../visual-basic/language-reference/modifiers/widening.md) or [Narrowing](../../../../visual-basic/language-reference/modifiers/narrowing.md).</span></span>  
+ <span data-ttu-id="f0979-104">형식 변환으로 정의 [CType Function](../../../../visual-basic/language-reference/functions/ctype-function.md) 클래스 또는 구조체 내에서 프로시저입니다.</span><span class="sxs-lookup"><span data-stu-id="f0979-104">Define the type conversion as a [CType Function](../../../../visual-basic/language-reference/functions/ctype-function.md) procedure within the class or structure.</span></span> <span data-ttu-id="f0979-105">모든 변환 프로시저 여야 `Public Shared`를 각각 지정 해야 합니다 [Widening](../../../../visual-basic/language-reference/modifiers/widening.md) 또는 [Narrowing](../../../../visual-basic/language-reference/modifiers/narrowing.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="f0979-105">All conversion procedures must be `Public Shared`, and each one must specify either [Widening](../../../../visual-basic/language-reference/modifiers/widening.md) or [Narrowing](../../../../visual-basic/language-reference/modifiers/narrowing.md).</span></span>  
   
- <span data-ttu-id="c08ce-106">클래스 또는 구조체에서 연산자를 정의 라고도 *오버 로드* 연산자입니다.</span><span class="sxs-lookup"><span data-stu-id="c08ce-106">Defining an operator on a class or structure is also called *overloading* the operator.</span></span>  
+ <span data-ttu-id="f0979-106">클래스 또는 구조체에서 연산자를 정의 라고도 *오버 로드* 연산자입니다.</span><span class="sxs-lookup"><span data-stu-id="f0979-106">Defining an operator on a class or structure is also called *overloading* the operator.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="c08ce-107">예제</span><span class="sxs-lookup"><span data-stu-id="c08ce-107">Example</span></span>  
- <span data-ttu-id="c08ce-108">다음 예제에서는 라는 구조 간의 변환 연산자를 정의 `digit` 및 `Byte`합니다.</span><span class="sxs-lookup"><span data-stu-id="c08ce-108">The following example defines conversion operators between a structure called `digit` and a `Byte`.</span></span>  
+## <a name="example"></a><span data-ttu-id="f0979-107">예제</span><span class="sxs-lookup"><span data-stu-id="f0979-107">Example</span></span>  
+ <span data-ttu-id="f0979-108">다음 예제에서는 라는 구조 간의 변환 연산자를 정의 `digit` 및 `Byte`합니다.</span><span class="sxs-lookup"><span data-stu-id="f0979-108">The following example defines conversion operators between a structure called `digit` and a `Byte`.</span></span>  
   
  [!code-vb[VbVbcnProcedures#27](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#27)]  
   
- <span data-ttu-id="c08ce-109">구조를 테스트할 수 있습니다 `digit` 다음 코드를 사용 합니다.</span><span class="sxs-lookup"><span data-stu-id="c08ce-109">You can test the structure `digit` with the following code.</span></span>  
+ <span data-ttu-id="f0979-109">구조를 테스트할 수 있습니다 `digit` 다음 코드를 사용 합니다.</span><span class="sxs-lookup"><span data-stu-id="f0979-109">You can test the structure `digit` with the following code.</span></span>  
   
  [!code-vb[VbVbcnProcedures#28](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#28)]  
   
-## <a name="see-also"></a><span data-ttu-id="c08ce-110">참고자료</span><span class="sxs-lookup"><span data-stu-id="c08ce-110">See also</span></span>
-- [<span data-ttu-id="c08ce-111">연산자 프로시저</span><span class="sxs-lookup"><span data-stu-id="c08ce-111">Operator Procedures</span></span>](./operator-procedures.md)
-- [<span data-ttu-id="c08ce-112">방법: 연산자 정의</span><span class="sxs-lookup"><span data-stu-id="c08ce-112">How to: Define an Operator</span></span>](./how-to-define-an-operator.md)
-- [<span data-ttu-id="c08ce-113">방법: 연산자 프로시저 호출</span><span class="sxs-lookup"><span data-stu-id="c08ce-113">How to: Call an Operator Procedure</span></span>](./how-to-call-an-operator-procedure.md)
-- [<span data-ttu-id="c08ce-114">방법: 연산자를 정의 하는 클래스를 사용 합니다.</span><span class="sxs-lookup"><span data-stu-id="c08ce-114">How to: Use a Class that Defines Operators</span></span>](./how-to-use-a-class-that-defines-operators.md)
-- [<span data-ttu-id="c08ce-115">Operator 문</span><span class="sxs-lookup"><span data-stu-id="c08ce-115">Operator Statement</span></span>](../../../../visual-basic/language-reference/statements/operator-statement.md)
-- [<span data-ttu-id="c08ce-116">Structure 문</span><span class="sxs-lookup"><span data-stu-id="c08ce-116">Structure Statement</span></span>](../../../../visual-basic/language-reference/statements/structure-statement.md)
-- [<span data-ttu-id="c08ce-117">방법: 구조 선언</span><span class="sxs-lookup"><span data-stu-id="c08ce-117">How to: Declare a Structure</span></span>](../../../../visual-basic/programming-guide/language-features/data-types/how-to-declare-a-structure.md)
-- [<span data-ttu-id="c08ce-118">암시적 변환과 명시적 변환</span><span class="sxs-lookup"><span data-stu-id="c08ce-118">Implicit and Explicit Conversions</span></span>](../../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md)
-- [<span data-ttu-id="c08ce-119">확대 변환과 축소 변환</span><span class="sxs-lookup"><span data-stu-id="c08ce-119">Widening and Narrowing Conversions</span></span>](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)
+## <a name="see-also"></a><span data-ttu-id="f0979-110">참고자료</span><span class="sxs-lookup"><span data-stu-id="f0979-110">See also</span></span>
+
+- [<span data-ttu-id="f0979-111">연산자 프로시저</span><span class="sxs-lookup"><span data-stu-id="f0979-111">Operator Procedures</span></span>](./operator-procedures.md)
+- [<span data-ttu-id="f0979-112">방법: 연산자 정의</span><span class="sxs-lookup"><span data-stu-id="f0979-112">How to: Define an Operator</span></span>](./how-to-define-an-operator.md)
+- [<span data-ttu-id="f0979-113">방법: 연산자 프로시저 호출</span><span class="sxs-lookup"><span data-stu-id="f0979-113">How to: Call an Operator Procedure</span></span>](./how-to-call-an-operator-procedure.md)
+- [<span data-ttu-id="f0979-114">방법: 연산자를 정의 하는 클래스를 사용 합니다.</span><span class="sxs-lookup"><span data-stu-id="f0979-114">How to: Use a Class that Defines Operators</span></span>](./how-to-use-a-class-that-defines-operators.md)
+- [<span data-ttu-id="f0979-115">Operator 문</span><span class="sxs-lookup"><span data-stu-id="f0979-115">Operator Statement</span></span>](../../../../visual-basic/language-reference/statements/operator-statement.md)
+- [<span data-ttu-id="f0979-116">Structure 문</span><span class="sxs-lookup"><span data-stu-id="f0979-116">Structure Statement</span></span>](../../../../visual-basic/language-reference/statements/structure-statement.md)
+- [<span data-ttu-id="f0979-117">방법: 구조 선언</span><span class="sxs-lookup"><span data-stu-id="f0979-117">How to: Declare a Structure</span></span>](../../../../visual-basic/programming-guide/language-features/data-types/how-to-declare-a-structure.md)
+- [<span data-ttu-id="f0979-118">암시적 변환과 명시적 변환</span><span class="sxs-lookup"><span data-stu-id="f0979-118">Implicit and Explicit Conversions</span></span>](../../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md)
+- [<span data-ttu-id="f0979-119">확대 변환과 축소 변환</span><span class="sxs-lookup"><span data-stu-id="f0979-119">Widening and Narrowing Conversions</span></span>](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)

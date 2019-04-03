@@ -7,41 +7,41 @@ helpviewer_keywords:
 - refout compiler option [Visual Basic]
 - /refout compiler option [Visual Basic]
 - -refout compiler option [Visual Basic]
-ms.openlocfilehash: 3d7f5f9065ba53bd037d7307f62c9acad913b8e9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f2cdd228d8ce1912abbbe888c29c42f29299ebba
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54638706"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58832738"
 ---
-# <a name="-refout-visual-basic"></a><span data-ttu-id="d9dfb-102">-refout (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="d9dfb-102">-refout (Visual Basic)</span></span>
+# <a name="-refout-visual-basic"></a><span data-ttu-id="f2454-102">-refout (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="f2454-102">-refout (Visual Basic)</span></span>
 
-<span data-ttu-id="d9dfb-103">**-refout** 옵션은 참조 어셈블리가 출력되어야 하는 파일 경로를 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="d9dfb-103">The **-refout** option specifies a file path where the reference assembly should be output.</span></span>
+<span data-ttu-id="f2454-103">**-refout** 옵션은 참조 어셈블리가 출력되어야 하는 파일 경로를 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="f2454-103">The **-refout** option specifies a file path where the reference assembly should be output.</span></span>
 
 [!INCLUDE[compiler-options](~/includes/compiler-options.md)]
 
-## <a name="syntax"></a><span data-ttu-id="d9dfb-104">구문</span><span class="sxs-lookup"><span data-stu-id="d9dfb-104">Syntax</span></span>
+## <a name="syntax"></a><span data-ttu-id="f2454-104">구문</span><span class="sxs-lookup"><span data-stu-id="f2454-104">Syntax</span></span>
 
 ```console
 -refout:filepath
 ```
 
-## <a name="arguments"></a><span data-ttu-id="d9dfb-105">인수</span><span class="sxs-lookup"><span data-stu-id="d9dfb-105">Arguments</span></span>
+## <a name="arguments"></a><span data-ttu-id="f2454-105">인수</span><span class="sxs-lookup"><span data-stu-id="f2454-105">Arguments</span></span>
 
- <span data-ttu-id="d9dfb-106">`filepath` 경로 및 참조 어셈블리의 이름입니다.</span><span class="sxs-lookup"><span data-stu-id="d9dfb-106">`filepath` The path and filename of the reference assembly.</span></span> <span data-ttu-id="d9dfb-107">일반적으로 주 어셈블리의 하위 폴더에는 것이 있어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="d9dfb-107">It should generally be in a sub-folder of the primary assembly.</span></span> <span data-ttu-id="d9dfb-108">권장되는 규칙(MSBuild에서 사용됨)은 주 어셈블리에 상대적으로 “ref/” sub-폴더에 참조 어셈블리를 배치하는 것입니다.</span><span class="sxs-lookup"><span data-stu-id="d9dfb-108">The recommended convention (used by MSBuild) is to place the reference assembly in a "ref/" sub-folder relative to the primary assembly.</span></span> <span data-ttu-id="d9dfb-109">모든 폴더 `filepath` ; 있어야 컴파일러에서 만들 하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="d9dfb-109">All folders in `filepath` must exist; the compiler does not create them.</span></span> 
+ <span data-ttu-id="f2454-106">`filepath` 경로 및 참조 어셈블리의 이름입니다.</span><span class="sxs-lookup"><span data-stu-id="f2454-106">`filepath` The path and filename of the reference assembly.</span></span> <span data-ttu-id="f2454-107">일반적으로 주 어셈블리의 하위 폴더에는 것이 있어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="f2454-107">It should generally be in a sub-folder of the primary assembly.</span></span> <span data-ttu-id="f2454-108">권장되는 규칙(MSBuild에서 사용됨)은 주 어셈블리에 상대적으로 “ref/” sub-폴더에 참조 어셈블리를 배치하는 것입니다.</span><span class="sxs-lookup"><span data-stu-id="f2454-108">The recommended convention (used by MSBuild) is to place the reference assembly in a "ref/" sub-folder relative to the primary assembly.</span></span> <span data-ttu-id="f2454-109">모든 폴더 `filepath` ; 있어야 컴파일러에서 만들 하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="f2454-109">All folders in `filepath` must exist; the compiler does not create them.</span></span> 
 
-## <a name="remarks"></a><span data-ttu-id="d9dfb-110">설명</span><span class="sxs-lookup"><span data-stu-id="d9dfb-110">Remarks</span></span>
+## <a name="remarks"></a><span data-ttu-id="f2454-110">설명</span><span class="sxs-lookup"><span data-stu-id="f2454-110">Remarks</span></span>
 
-<span data-ttu-id="d9dfb-111">Visual Basic 지원은 `-refout` 버전 15.3부터 전환 합니다.</span><span class="sxs-lookup"><span data-stu-id="d9dfb-111">Visual Basic supports the `-refout` switch starting with version 15.3.</span></span>
+<span data-ttu-id="f2454-111">Visual Basic 지원은 `-refout` 버전 15.3부터 전환 합니다.</span><span class="sxs-lookup"><span data-stu-id="f2454-111">Visual Basic supports the `-refout` switch starting with version 15.3.</span></span>
 
-<span data-ttu-id="d9dfb-112">참조 어셈블리는 구현 코드가 없는 메타 데이터를 포함 하는 메타 데이터 전용 어셈블리입니다.</span><span class="sxs-lookup"><span data-stu-id="d9dfb-112">Reference assemblies are metadata-only assemblies that contain metadata but no implementation code.</span></span> <span data-ttu-id="d9dfb-113">익명 형식을 제외한 모든 항목에 대 한 형식 및 멤버 정보가 포함 됩니다.</span><span class="sxs-lookup"><span data-stu-id="d9dfb-113">They include type and member information for everything except anonymous types.</span></span> <span data-ttu-id="d9dfb-114">메서드 본문은 단일 바뀝니다 `throw null` 문입니다.</span><span class="sxs-lookup"><span data-stu-id="d9dfb-114">Their method bodies are replaced with a single `throw null` statement.</span></span> <span data-ttu-id="d9dfb-115">사용 하는 이유 `throw null` (달리 본문이 없는) 메서드 본문은 PEVerify 실행 하 고 (따라서 메타 데이터의 완전성을 검증)를 전달할 수 있도록 합니다.</span><span class="sxs-lookup"><span data-stu-id="d9dfb-115">The reason for using `throw null` method bodies (as opposed to no bodies) is so that PEVerify can run and pass (thus validating the completeness of the metadata).</span></span>
+<span data-ttu-id="f2454-112">참조 어셈블리는 구현 코드가 없는 메타 데이터를 포함 하는 메타 데이터 전용 어셈블리입니다.</span><span class="sxs-lookup"><span data-stu-id="f2454-112">Reference assemblies are metadata-only assemblies that contain metadata but no implementation code.</span></span> <span data-ttu-id="f2454-113">익명 형식을 제외한 모든 항목에 대 한 형식 및 멤버 정보가 포함 됩니다.</span><span class="sxs-lookup"><span data-stu-id="f2454-113">They include type and member information for everything except anonymous types.</span></span> <span data-ttu-id="f2454-114">메서드 본문은 단일 바뀝니다 `throw null` 문입니다.</span><span class="sxs-lookup"><span data-stu-id="f2454-114">Their method bodies are replaced with a single `throw null` statement.</span></span> <span data-ttu-id="f2454-115">사용 하는 이유 `throw null` (달리 본문이 없는) 메서드 본문은 PEVerify 실행 하 고 (따라서 메타 데이터의 완전성을 검증)를 전달할 수 있도록 합니다.</span><span class="sxs-lookup"><span data-stu-id="f2454-115">The reason for using `throw null` method bodies (as opposed to no bodies) is so that PEVerify can run and pass (thus validating the completeness of the metadata).</span></span>
 
-<span data-ttu-id="d9dfb-116">참조 어셈블리는 어셈블리 수준 포함 [ReferenceAssembly](xref:System.Runtime.CompilerServices.ReferenceAssemblyAttribute) 특성입니다.</span><span class="sxs-lookup"><span data-stu-id="d9dfb-116">Reference assemblies include an assembly-level [ReferenceAssembly](xref:System.Runtime.CompilerServices.ReferenceAssemblyAttribute) attribute.</span></span> <span data-ttu-id="d9dfb-117">이 특성을 소스에서 지정할 수 있습니다. 이렇게 하면 컴파일러가 특성을 합성할 필요가 없습니다.</span><span class="sxs-lookup"><span data-stu-id="d9dfb-117">This attribute may be specified in source (then the compiler won't need to synthesize it).</span></span> <span data-ttu-id="d9dfb-118">이 특성으로 인해 런타임은 실행에 대 한 참조 어셈블리를 로드 하지 않습니다 (하지만 여전히 있을 수 있습니다 리플렉션 전용 컨텍스트에 로드).</span><span class="sxs-lookup"><span data-stu-id="d9dfb-118">Because of this attribute, runtimes refuse to load reference assemblies for execution (but they can still be loaded in a reflection-only context).</span></span> <span data-ttu-id="d9dfb-119">어셈블리에 반영 되는 도구를 참조 어셈블리를 리플렉션 전용으로 로드를 확인 해야 합니다. 그렇지 않으면 런타임에서 throw 된 <xref:System.BadImageFormatException>합니다.</span><span class="sxs-lookup"><span data-stu-id="d9dfb-119">Tools that reflect on assemblies need to ensure they load reference assemblies as reflection-only; otherwise, the runtime throws a <xref:System.BadImageFormatException>.</span></span>
+<span data-ttu-id="f2454-116">참조 어셈블리는 어셈블리 수준 포함 [ReferenceAssembly](xref:System.Runtime.CompilerServices.ReferenceAssemblyAttribute) 특성입니다.</span><span class="sxs-lookup"><span data-stu-id="f2454-116">Reference assemblies include an assembly-level [ReferenceAssembly](xref:System.Runtime.CompilerServices.ReferenceAssemblyAttribute) attribute.</span></span> <span data-ttu-id="f2454-117">이 특성을 소스에서 지정할 수 있습니다. 이렇게 하면 컴파일러가 특성을 합성할 필요가 없습니다.</span><span class="sxs-lookup"><span data-stu-id="f2454-117">This attribute may be specified in source (then the compiler won't need to synthesize it).</span></span> <span data-ttu-id="f2454-118">이 특성으로 인해 런타임은 실행에 대 한 참조 어셈블리를 로드 하지 않습니다 (하지만 여전히 있을 수 있습니다 리플렉션 전용 컨텍스트에 로드).</span><span class="sxs-lookup"><span data-stu-id="f2454-118">Because of this attribute, runtimes refuse to load reference assemblies for execution (but they can still be loaded in a reflection-only context).</span></span> <span data-ttu-id="f2454-119">어셈블리에 반영 되는 도구를 참조 어셈블리를 리플렉션 전용으로 로드를 확인 해야 합니다. 그렇지 않으면 런타임에서 throw 된 <xref:System.BadImageFormatException>합니다.</span><span class="sxs-lookup"><span data-stu-id="f2454-119">Tools that reflect on assemblies need to ensure they load reference assemblies as reflection-only; otherwise, the runtime throws a <xref:System.BadImageFormatException>.</span></span>
 
-<span data-ttu-id="d9dfb-120">`-refout` 및 [`-refonly`](refonly-compiler-option.md) 옵션은 함께 사용할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="d9dfb-120">The `-refout` and [`-refonly`](refonly-compiler-option.md) options are mutually exclusive.</span></span>
+<span data-ttu-id="f2454-120">`-refout` 및 [`-refonly`](refonly-compiler-option.md) 옵션은 함께 사용할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="f2454-120">The `-refout` and [`-refonly`](refonly-compiler-option.md) options are mutually exclusive.</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="d9dfb-121">참고자료</span><span class="sxs-lookup"><span data-stu-id="d9dfb-121">See also</span></span>
-- [<span data-ttu-id="d9dfb-122">/refonly</span><span class="sxs-lookup"><span data-stu-id="d9dfb-122">-refonly</span></span>](refonly-compiler-option.md)
-- [<span data-ttu-id="d9dfb-123">Visual Basic 명령줄 컴파일러</span><span class="sxs-lookup"><span data-stu-id="d9dfb-123">Visual Basic Command-Line Compiler</span></span>](index.md)
-- [<span data-ttu-id="d9dfb-124">샘플 컴파일 명령줄</span><span class="sxs-lookup"><span data-stu-id="d9dfb-124">Sample Compilation Command Lines</span></span>](sample-compilation-command-lines.md)
+## <a name="see-also"></a><span data-ttu-id="f2454-121">참고자료</span><span class="sxs-lookup"><span data-stu-id="f2454-121">See also</span></span>
 
+- [<span data-ttu-id="f2454-122">/refonly</span><span class="sxs-lookup"><span data-stu-id="f2454-122">-refonly</span></span>](refonly-compiler-option.md)
+- [<span data-ttu-id="f2454-123">Visual Basic 명령줄 컴파일러</span><span class="sxs-lookup"><span data-stu-id="f2454-123">Visual Basic Command-Line Compiler</span></span>](index.md)
+- [<span data-ttu-id="f2454-124">샘플 컴파일 명령줄</span><span class="sxs-lookup"><span data-stu-id="f2454-124">Sample Compilation Command Lines</span></span>](sample-compilation-command-lines.md)

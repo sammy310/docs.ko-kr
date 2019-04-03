@@ -2,21 +2,21 @@
 title: '방법: 데이터 정렬 또는 필터링 텍스트에서 단어 또는 필드 (LINQ) (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 9df137fe-335b-46e0-aecf-ea8a9eddd4e3
-ms.openlocfilehash: 565e4497e362e82528aea850dc86d20c9983259b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6a5277e26b74ccf54af0cdc5f671516fcc7badb8
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54632805"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58832205"
 ---
-# <a name="how-to-sort-or-filter-text-data-by-any-word-or-field-linq-visual-basic"></a><span data-ttu-id="5830c-102">방법: 데이터 정렬 또는 필터링 텍스트에서 단어 또는 필드 (LINQ) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="5830c-102">How to: Sort or Filter Text Data by Any Word or Field (LINQ) (Visual Basic)</span></span>
-<span data-ttu-id="5830c-103">다음 예제에서는 줄의 필드를 기준으로 쉼표로 구분된 값 등의 구조적 텍스트 줄을 정렬하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="5830c-103">The following example shows how to sort lines of structured text, such as comma-separated values, by any field in the line.</span></span> <span data-ttu-id="5830c-104">필드가 런타임에 동적으로 지정될 수도 있습니다.</span><span class="sxs-lookup"><span data-stu-id="5830c-104">The field may be dynamically specified at runtime.</span></span> <span data-ttu-id="5830c-105">scores.csv의 필드가 학생의 ID 번호와 일련의 시험 성적 4개를 나타낸다고 가정합니다.</span><span class="sxs-lookup"><span data-stu-id="5830c-105">Assume that the fields in scores.csv represent a student's ID number, followed by a series of four test scores.</span></span>  
+# <a name="how-to-sort-or-filter-text-data-by-any-word-or-field-linq-visual-basic"></a><span data-ttu-id="8404f-102">방법: 데이터 정렬 또는 필터링 텍스트에서 단어 또는 필드 (LINQ) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="8404f-102">How to: Sort or Filter Text Data by Any Word or Field (LINQ) (Visual Basic)</span></span>
+<span data-ttu-id="8404f-103">다음 예제에서는 줄의 필드를 기준으로 쉼표로 구분된 값 등의 구조적 텍스트 줄을 정렬하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="8404f-103">The following example shows how to sort lines of structured text, such as comma-separated values, by any field in the line.</span></span> <span data-ttu-id="8404f-104">필드가 런타임에 동적으로 지정될 수도 있습니다.</span><span class="sxs-lookup"><span data-stu-id="8404f-104">The field may be dynamically specified at runtime.</span></span> <span data-ttu-id="8404f-105">scores.csv의 필드가 학생의 ID 번호와 일련의 시험 성적 4개를 나타낸다고 가정합니다.</span><span class="sxs-lookup"><span data-stu-id="8404f-105">Assume that the fields in scores.csv represent a student's ID number, followed by a series of four test scores.</span></span>  
   
-### <a name="to-create-a-file-that-contains-data"></a><span data-ttu-id="5830c-106">데이터가 포함된 파일을 만들려면</span><span class="sxs-lookup"><span data-stu-id="5830c-106">To create a file that contains data</span></span>  
+### <a name="to-create-a-file-that-contains-data"></a><span data-ttu-id="8404f-106">데이터가 포함된 파일을 만들려면</span><span class="sxs-lookup"><span data-stu-id="8404f-106">To create a file that contains data</span></span>  
   
-1.  <span data-ttu-id="5830c-107">항목에서 scores.csv 데이터를 복사 [방법: 콘텐츠에서 서로 다른 파일 (LINQ) (Visual Basic) 조인](../../../../visual-basic/programming-guide/concepts/linq/how-to-join-content-from-dissimilar-files-linq.md) 솔루션 폴더에 저장 합니다.</span><span class="sxs-lookup"><span data-stu-id="5830c-107">Copy the scores.csv data from the topic [How to: Join Content from Dissimilar Files (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-join-content-from-dissimilar-files-linq.md) and save it to your solution folder.</span></span>  
+1.  <span data-ttu-id="8404f-107">항목 [방법: 콘텐츠에서 서로 다른 파일 (LINQ) (Visual Basic) 조인](../../../../visual-basic/programming-guide/concepts/linq/how-to-join-content-from-dissimilar-files-linq.md) 솔루션 폴더에 저장 합니다.</span><span class="sxs-lookup"><span data-stu-id="8404f-107">Copy the scores.csv data from the topic [How to: Join Content from Dissimilar Files (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-join-content-from-dissimilar-files-linq.md) and save it to your solution folder.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="5830c-108">예제</span><span class="sxs-lookup"><span data-stu-id="5830c-108">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="8404f-108">예제</span><span class="sxs-lookup"><span data-stu-id="8404f-108">Example</span></span>  
   
 ```vb  
 Class SortLines  
@@ -69,10 +69,11 @@ End Class
 ' 115, 35, 72, 91, 70  
 ```  
   
- <span data-ttu-id="5830c-109">이 예제에는 쿼리 변수는 함수에서 반환 하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="5830c-109">This example also demonstrates how to return a query variable from a Function.</span></span>  
+ <span data-ttu-id="8404f-109">이 예제에는 쿼리 변수는 함수에서 반환 하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="8404f-109">This example also demonstrates how to return a query variable from a Function.</span></span>  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="5830c-110">코드 컴파일</span><span class="sxs-lookup"><span data-stu-id="5830c-110">Compiling the Code</span></span>  
- <span data-ttu-id="5830c-111">System.Core.dll에 대한 참조와 System.Linq 네임스페이스에 대한 `Imports` 문을 사용하여 .NET Framework 버전 3.5 이상을 대상으로 하는 프로젝트를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="5830c-111">Create a project that targets the .NET Framework version 3.5 or higher with a reference to System.Core.dll and a `Imports` statement for the System.Linq namespace.</span></span>  
+## <a name="compiling-the-code"></a><span data-ttu-id="8404f-110">코드 컴파일</span><span class="sxs-lookup"><span data-stu-id="8404f-110">Compiling the Code</span></span>  
+ <span data-ttu-id="8404f-111">System.Core.dll에 대한 참조와 System.Linq 네임스페이스에 대한 `Imports` 문을 사용하여 .NET Framework 버전 3.5 이상을 대상으로 하는 프로젝트를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="8404f-111">Create a project that targets the .NET Framework version 3.5 or higher with a reference to System.Core.dll and a `Imports` statement for the System.Linq namespace.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="5830c-112">참고자료</span><span class="sxs-lookup"><span data-stu-id="5830c-112">See also</span></span>
-- [<span data-ttu-id="5830c-113">LINQ 및 문자열 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="5830c-113">LINQ and Strings (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)
+## <a name="see-also"></a><span data-ttu-id="8404f-112">참고자료</span><span class="sxs-lookup"><span data-stu-id="8404f-112">See also</span></span>
+
+- [<span data-ttu-id="8404f-113">LINQ 및 문자열 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="8404f-113">LINQ and Strings (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)

@@ -8,21 +8,21 @@ helpviewer_keywords:
 - arrays [Visual Basic], structure elements
 - nested structures [Visual Basic]
 ms.assetid: 0f849313-ccd2-4c9a-acb9-69de6751c088
-ms.openlocfilehash: ed406254435602dcd98bc97716cc88710a470ed1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a943bbdec617ba6c95685df3a4fcdb36b52def22
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54679593"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58819111"
 ---
-# <a name="structures-and-other-programming-elements-visual-basic"></a><span data-ttu-id="be922-102">구조체 및 기타 프로그래밍 요소(Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="be922-102">Structures and Other Programming Elements (Visual Basic)</span></span>
-<span data-ttu-id="be922-103">함께 서로 뿐만 아니라 배열, 개체 및 프로시저를 사용 하 여 구조를 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="be922-103">You can use structures in conjunction with arrays, objects, and procedures, as well as with each other.</span></span> <span data-ttu-id="be922-104">이러한 요소를 개별적으로 사용 하는 대로 동일한 구문을 사용 하 여 상호 작용 합니다.</span><span class="sxs-lookup"><span data-stu-id="be922-104">The interactions use the same syntax as these elements use individually.</span></span>  
+# <a name="structures-and-other-programming-elements-visual-basic"></a><span data-ttu-id="808e0-102">구조체 및 기타 프로그래밍 요소(Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="808e0-102">Structures and Other Programming Elements (Visual Basic)</span></span>
+<span data-ttu-id="808e0-103">함께 서로 뿐만 아니라 배열, 개체 및 프로시저를 사용 하 여 구조를 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="808e0-103">You can use structures in conjunction with arrays, objects, and procedures, as well as with each other.</span></span> <span data-ttu-id="808e0-104">이러한 요소를 개별적으로 사용 하는 대로 동일한 구문을 사용 하 여 상호 작용 합니다.</span><span class="sxs-lookup"><span data-stu-id="808e0-104">The interactions use the same syntax as these elements use individually.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="be922-105">구조체 선언에서는 구조 요소를 초기화할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="be922-105">You cannot initialize any of the structure elements in the structure declaration.</span></span> <span data-ttu-id="be922-106">구조 형식으로 선언 된 변수는 요소에만 값을 할당할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="be922-106">You can assign values only to elements of a variable that has been declared to be of a structure type.</span></span>  
+>  <span data-ttu-id="808e0-105">구조체 선언에서는 구조 요소를 초기화할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="808e0-105">You cannot initialize any of the structure elements in the structure declaration.</span></span> <span data-ttu-id="808e0-106">구조 형식으로 선언 된 변수는 요소에만 값을 할당할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="808e0-106">You can assign values only to elements of a variable that has been declared to be of a structure type.</span></span>  
   
-## <a name="structures-and-arrays"></a><span data-ttu-id="be922-107">구조체 및 배열</span><span class="sxs-lookup"><span data-stu-id="be922-107">Structures and Arrays</span></span>  
- <span data-ttu-id="be922-108">구조체의 해당 요소 중 하나 이상으로 배열을 포함할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="be922-108">A structure can contain an array as one or more of its elements.</span></span> <span data-ttu-id="be922-109">다음은 이에 대한 예입니다.</span><span class="sxs-lookup"><span data-stu-id="be922-109">The following example illustrates this.</span></span>  
+## <a name="structures-and-arrays"></a><span data-ttu-id="808e0-107">구조체 및 배열</span><span class="sxs-lookup"><span data-stu-id="808e0-107">Structures and Arrays</span></span>  
+ <span data-ttu-id="808e0-108">구조체의 해당 요소 중 하나 이상으로 배열을 포함할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="808e0-108">A structure can contain an array as one or more of its elements.</span></span> <span data-ttu-id="808e0-109">다음은 이에 대한 예입니다.</span><span class="sxs-lookup"><span data-stu-id="808e0-109">The following example illustrates this.</span></span>  
   
 ```vb  
 Public Structure systemInfo  
@@ -33,7 +33,7 @@ Public Structure systemInfo
 End Structure   
 ```  
   
- <span data-ttu-id="be922-110">개체의 속성에 액세스 하는 동일한 방식으로 구조 내에서 배열의 값 액세스할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="be922-110">You access the values of an array within a structure the same way you access a property on an object.</span></span> <span data-ttu-id="be922-111">다음은 이에 대한 예입니다.</span><span class="sxs-lookup"><span data-stu-id="be922-111">The following example illustrates this.</span></span>  
+ <span data-ttu-id="808e0-110">개체의 속성에 액세스 하는 동일한 방식으로 구조 내에서 배열의 값 액세스할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="808e0-110">You access the values of an array within a structure the same way you access a property on an object.</span></span> <span data-ttu-id="808e0-111">다음은 이에 대한 예입니다.</span><span class="sxs-lookup"><span data-stu-id="808e0-111">The following example illustrates this.</span></span>  
   
 ```vb  
 Dim mySystem As systemInfo  
@@ -41,13 +41,13 @@ ReDim mySystem.diskDrives(3)
 mySystem.diskDrives(0) = "1.44 MB"  
 ```  
   
- <span data-ttu-id="be922-112">구조체의 배열을 선언할 수도 있습니다.</span><span class="sxs-lookup"><span data-stu-id="be922-112">You can also declare an array of structures.</span></span> <span data-ttu-id="be922-113">다음은 이에 대한 예입니다.</span><span class="sxs-lookup"><span data-stu-id="be922-113">The following example illustrates this.</span></span>  
+ <span data-ttu-id="808e0-112">구조체의 배열을 선언할 수도 있습니다.</span><span class="sxs-lookup"><span data-stu-id="808e0-112">You can also declare an array of structures.</span></span> <span data-ttu-id="808e0-113">다음은 이에 대한 예입니다.</span><span class="sxs-lookup"><span data-stu-id="808e0-113">The following example illustrates this.</span></span>  
   
 ```vb  
 Dim allSystems(100) As systemInfo  
 ```  
   
- <span data-ttu-id="be922-114">이 데이터 아키텍처의 구성 요소에 액세스 하려면 동일한 규칙을 따릅니다.</span><span class="sxs-lookup"><span data-stu-id="be922-114">You follow the same rules to access the components of this data architecture.</span></span> <span data-ttu-id="be922-115">다음은 이에 대한 예입니다.</span><span class="sxs-lookup"><span data-stu-id="be922-115">The following example illustrates this.</span></span>  
+ <span data-ttu-id="808e0-114">이 데이터 아키텍처의 구성 요소에 액세스 하려면 동일한 규칙을 따릅니다.</span><span class="sxs-lookup"><span data-stu-id="808e0-114">You follow the same rules to access the components of this data architecture.</span></span> <span data-ttu-id="808e0-115">다음은 이에 대한 예입니다.</span><span class="sxs-lookup"><span data-stu-id="808e0-115">The following example illustrates this.</span></span>  
   
 ```vb  
 ReDim allSystems(5).diskDrives(3)  
@@ -55,8 +55,8 @@ allSystems(5).CPU = "386SX"
 allSystems(5).diskDrives(2) = "100M SCSI"  
 ```  
   
-## <a name="structures-and-objects"></a><span data-ttu-id="be922-116">구조 및 개체</span><span class="sxs-lookup"><span data-stu-id="be922-116">Structures and Objects</span></span>  
- <span data-ttu-id="be922-117">구조체의 해당 요소 중 하나 이상으로 개체를 포함할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="be922-117">A structure can contain an object as one or more of its elements.</span></span> <span data-ttu-id="be922-118">다음은 이에 대한 예입니다.</span><span class="sxs-lookup"><span data-stu-id="be922-118">The following example illustrates this.</span></span>  
+## <a name="structures-and-objects"></a><span data-ttu-id="808e0-116">구조 및 개체</span><span class="sxs-lookup"><span data-stu-id="808e0-116">Structures and Objects</span></span>  
+ <span data-ttu-id="808e0-117">구조체의 해당 요소 중 하나 이상으로 개체를 포함할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="808e0-117">A structure can contain an object as one or more of its elements.</span></span> <span data-ttu-id="808e0-118">다음은 이에 대한 예입니다.</span><span class="sxs-lookup"><span data-stu-id="808e0-118">The following example illustrates this.</span></span>  
   
 ```vb  
 Protected Structure userInput  
@@ -66,10 +66,10 @@ Protected Structure userInput
 End Structure  
 ```  
   
- <span data-ttu-id="be922-119">이러한 선언에서 특정 개체 클래스를 사용 해야 하면 대신 `Object`합니다.</span><span class="sxs-lookup"><span data-stu-id="be922-119">You should use a specific object class in such a declaration, rather than `Object`.</span></span>  
+ <span data-ttu-id="808e0-119">이러한 선언에서 특정 개체 클래스를 사용 해야 하면 대신 `Object`합니다.</span><span class="sxs-lookup"><span data-stu-id="808e0-119">You should use a specific object class in such a declaration, rather than `Object`.</span></span>  
   
-## <a name="structures-and-procedures"></a><span data-ttu-id="be922-120">구조 및 프로시저</span><span class="sxs-lookup"><span data-stu-id="be922-120">Structures and Procedures</span></span>  
- <span data-ttu-id="be922-121">프로시저 인수로 구조체를 전달할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="be922-121">You can pass a structure as a procedure argument.</span></span> <span data-ttu-id="be922-122">다음은 이에 대한 예입니다.</span><span class="sxs-lookup"><span data-stu-id="be922-122">The following example illustrates this.</span></span>  
+## <a name="structures-and-procedures"></a><span data-ttu-id="808e0-120">구조 및 프로시저</span><span class="sxs-lookup"><span data-stu-id="808e0-120">Structures and Procedures</span></span>  
+ <span data-ttu-id="808e0-121">프로시저 인수로 구조체를 전달할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="808e0-121">You can pass a structure as a procedure argument.</span></span> <span data-ttu-id="808e0-122">다음은 이에 대한 예입니다.</span><span class="sxs-lookup"><span data-stu-id="808e0-122">The following example illustrates this.</span></span>  
   
 ```vb  
 Public currentCPUName As String = "700MHz Pentium compatible"  
@@ -81,9 +81,9 @@ Public Sub fillSystem(ByRef someSystem As systemInfo)
 End Sub  
 ```  
   
- <span data-ttu-id="be922-123">앞의 예제에서는 구조체를 전달 *참조별*, 호출 코드에서 변경 내용이 적용 되도록 해당 요소를 수정 하는 절차를 허용 하는 합니다.</span><span class="sxs-lookup"><span data-stu-id="be922-123">The preceding example passes the structure *by reference*, which allows the procedure to modify its elements so that the changes take effect in the calling code.</span></span> <span data-ttu-id="be922-124">이러한 수정에 대 한 구조를 보호 하려는 경우 값으로 전달 합니다.</span><span class="sxs-lookup"><span data-stu-id="be922-124">If you want to protect a structure against such modification, pass it by value.</span></span>  
+ <span data-ttu-id="808e0-123">앞의 예제에서는 구조체를 전달 *참조별*, 호출 코드에서 변경 내용이 적용 되도록 해당 요소를 수정 하는 절차를 허용 하는 합니다.</span><span class="sxs-lookup"><span data-stu-id="808e0-123">The preceding example passes the structure *by reference*, which allows the procedure to modify its elements so that the changes take effect in the calling code.</span></span> <span data-ttu-id="808e0-124">이러한 수정에 대 한 구조를 보호 하려는 경우 값으로 전달 합니다.</span><span class="sxs-lookup"><span data-stu-id="808e0-124">If you want to protect a structure against such modification, pass it by value.</span></span>  
   
- <span data-ttu-id="be922-125">구조를 반환할 수도 있습니다는 `Function` 프로시저입니다.</span><span class="sxs-lookup"><span data-stu-id="be922-125">You can also return a structure from a `Function` procedure.</span></span> <span data-ttu-id="be922-126">다음은 이에 대한 예입니다.</span><span class="sxs-lookup"><span data-stu-id="be922-126">The following example illustrates this.</span></span>  
+ <span data-ttu-id="808e0-125">구조를 반환할 수도 있습니다는 `Function` 프로시저입니다.</span><span class="sxs-lookup"><span data-stu-id="808e0-125">You can also return a structure from a `Function` procedure.</span></span> <span data-ttu-id="808e0-126">다음은 이에 대한 예입니다.</span><span class="sxs-lookup"><span data-stu-id="808e0-126">The following example illustrates this.</span></span>  
   
 ```vb  
 Dim allSystems(100) As systemInfo  
@@ -96,8 +96,8 @@ Function findByDate(ByVal searchDate As Date) As systemInfo
 End Function  
 ```  
   
-## <a name="structures-within-structures"></a><span data-ttu-id="be922-127">구조 내에서 구조</span><span class="sxs-lookup"><span data-stu-id="be922-127">Structures Within Structures</span></span>  
- <span data-ttu-id="be922-128">구조체는 다른 구조를 포함할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="be922-128">Structures can contain other structures.</span></span> <span data-ttu-id="be922-129">다음은 이에 대한 예입니다.</span><span class="sxs-lookup"><span data-stu-id="be922-129">The following example illustrates this.</span></span>  
+## <a name="structures-within-structures"></a><span data-ttu-id="808e0-127">구조 내에서 구조</span><span class="sxs-lookup"><span data-stu-id="808e0-127">Structures Within Structures</span></span>  
+ <span data-ttu-id="808e0-128">구조체는 다른 구조를 포함할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="808e0-128">Structures can contain other structures.</span></span> <span data-ttu-id="808e0-129">다음은 이에 대한 예입니다.</span><span class="sxs-lookup"><span data-stu-id="808e0-129">The following example illustrates this.</span></span>  
   
 ```vb  
 Public Structure driveInfo  
@@ -118,18 +118,19 @@ ReDim allSystems(1).diskDrives(3)
 allSystems(1).diskDrives(0).type = "Floppy"  
 ```  
   
- <span data-ttu-id="be922-130">또한 다른 모듈에 정의 된 구조 내에서 하나의 모듈에 정의 된 구조체를 캡슐화 하이 기법을 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="be922-130">You can also use this technique to encapsulate a structure defined in one module within a structure defined in a different module.</span></span>  
+ <span data-ttu-id="808e0-130">또한 다른 모듈에 정의 된 구조 내에서 하나의 모듈에 정의 된 구조체를 캡슐화 하이 기법을 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="808e0-130">You can also use this technique to encapsulate a structure defined in one module within a structure defined in a different module.</span></span>  
   
- <span data-ttu-id="be922-131">구조에는 다른 구조를 임의 깊이까지 포함할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="be922-131">Structures can contain other structures to an arbitrary depth.</span></span>  
+ <span data-ttu-id="808e0-131">구조에는 다른 구조를 임의 깊이까지 포함할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="808e0-131">Structures can contain other structures to an arbitrary depth.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="be922-132">참고자료</span><span class="sxs-lookup"><span data-stu-id="be922-132">See also</span></span>
-- [<span data-ttu-id="be922-133">데이터 형식</span><span class="sxs-lookup"><span data-stu-id="be922-133">Data Types</span></span>](../../../../visual-basic/programming-guide/language-features/data-types/index.md)
-- [<span data-ttu-id="be922-134">기본 데이터 형식</span><span class="sxs-lookup"><span data-stu-id="be922-134">Elementary Data Types</span></span>](../../../../visual-basic/programming-guide/language-features/data-types/elementary-data-types.md)
-- [<span data-ttu-id="be922-135">복합 데이터 형식</span><span class="sxs-lookup"><span data-stu-id="be922-135">Composite Data Types</span></span>](../../../../visual-basic/programming-guide/language-features/data-types/composite-data-types.md)
-- [<span data-ttu-id="be922-136">Value Types and Reference Types</span><span class="sxs-lookup"><span data-stu-id="be922-136">Value Types and Reference Types</span></span>](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)
-- [<span data-ttu-id="be922-137">구조체</span><span class="sxs-lookup"><span data-stu-id="be922-137">Structures</span></span>](../../../../visual-basic/programming-guide/language-features/data-types/structures.md)
-- [<span data-ttu-id="be922-138">데이터 형식 문제 해결</span><span class="sxs-lookup"><span data-stu-id="be922-138">Troubleshooting Data Types</span></span>](../../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)
-- [<span data-ttu-id="be922-139">방법: 구조 선언</span><span class="sxs-lookup"><span data-stu-id="be922-139">How to: Declare a Structure</span></span>](../../../../visual-basic/programming-guide/language-features/data-types/how-to-declare-a-structure.md)
-- [<span data-ttu-id="be922-140">구조체 변수</span><span class="sxs-lookup"><span data-stu-id="be922-140">Structure Variables</span></span>](../../../../visual-basic/programming-guide/language-features/data-types/structure-variables.md)
-- [<span data-ttu-id="be922-141">구조체와 클래스</span><span class="sxs-lookup"><span data-stu-id="be922-141">Structures and Classes</span></span>](../../../../visual-basic/programming-guide/language-features/data-types/structures-and-classes.md)
-- [<span data-ttu-id="be922-142">Structure 문</span><span class="sxs-lookup"><span data-stu-id="be922-142">Structure Statement</span></span>](../../../../visual-basic/language-reference/statements/structure-statement.md)
+## <a name="see-also"></a><span data-ttu-id="808e0-132">참고자료</span><span class="sxs-lookup"><span data-stu-id="808e0-132">See also</span></span>
+
+- [<span data-ttu-id="808e0-133">데이터 형식</span><span class="sxs-lookup"><span data-stu-id="808e0-133">Data Types</span></span>](../../../../visual-basic/programming-guide/language-features/data-types/index.md)
+- [<span data-ttu-id="808e0-134">기본 데이터 형식</span><span class="sxs-lookup"><span data-stu-id="808e0-134">Elementary Data Types</span></span>](../../../../visual-basic/programming-guide/language-features/data-types/elementary-data-types.md)
+- [<span data-ttu-id="808e0-135">복합 데이터 형식</span><span class="sxs-lookup"><span data-stu-id="808e0-135">Composite Data Types</span></span>](../../../../visual-basic/programming-guide/language-features/data-types/composite-data-types.md)
+- [<span data-ttu-id="808e0-136">Value Types and Reference Types</span><span class="sxs-lookup"><span data-stu-id="808e0-136">Value Types and Reference Types</span></span>](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)
+- [<span data-ttu-id="808e0-137">구조체</span><span class="sxs-lookup"><span data-stu-id="808e0-137">Structures</span></span>](../../../../visual-basic/programming-guide/language-features/data-types/structures.md)
+- [<span data-ttu-id="808e0-138">데이터 형식 문제 해결</span><span class="sxs-lookup"><span data-stu-id="808e0-138">Troubleshooting Data Types</span></span>](../../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)
+- [<span data-ttu-id="808e0-139">방법: 구조 선언</span><span class="sxs-lookup"><span data-stu-id="808e0-139">How to: Declare a Structure</span></span>](../../../../visual-basic/programming-guide/language-features/data-types/how-to-declare-a-structure.md)
+- [<span data-ttu-id="808e0-140">구조체 변수</span><span class="sxs-lookup"><span data-stu-id="808e0-140">Structure Variables</span></span>](../../../../visual-basic/programming-guide/language-features/data-types/structure-variables.md)
+- [<span data-ttu-id="808e0-141">구조체와 클래스</span><span class="sxs-lookup"><span data-stu-id="808e0-141">Structures and Classes</span></span>](../../../../visual-basic/programming-guide/language-features/data-types/structures-and-classes.md)
+- [<span data-ttu-id="808e0-142">Structure 문</span><span class="sxs-lookup"><span data-stu-id="808e0-142">Structure Statement</span></span>](../../../../visual-basic/language-reference/statements/structure-statement.md)

@@ -2,22 +2,22 @@
 title: '방법: (XPath 및 LINQ to XML) 하위 요소 찾기 (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: e7e2dc9e-bda9-420d-a5b1-4fabf1cca46b
-ms.openlocfilehash: ea92a224ee5cc976b9bd93f8ac8792a67d360fae
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 09f12dca7b6278327394126ffb0950682d285f88
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54578681"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58833401"
 ---
-# <a name="how-to-find-descendant-elements-xpath-linq-to-xml-visual-basic"></a><span data-ttu-id="b4094-102">방법: (XPath 및 LINQ to XML) 하위 요소 찾기 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="b4094-102">How to: Find Descendant Elements (XPath-LINQ to XML) (Visual Basic)</span></span>
-<span data-ttu-id="b4094-103">이 항목에서는 특정 이름을 가진 하위 요소를 가져오는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="b4094-103">This topic shows how to get the descendant elements with a particular name.</span></span>  
+# <a name="how-to-find-descendant-elements-xpath-linq-to-xml-visual-basic"></a><span data-ttu-id="bd74f-102">방법: (XPath 및 LINQ to XML) 하위 요소 찾기 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="bd74f-102">How to: Find Descendant Elements (XPath-LINQ to XML) (Visual Basic)</span></span>
+<span data-ttu-id="bd74f-103">이 항목에서는 특정 이름을 가진 하위 요소를 가져오는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="bd74f-103">This topic shows how to get the descendant elements with a particular name.</span></span>  
   
- <span data-ttu-id="b4094-104">XPath 식은 `//Name`입니다.</span><span class="sxs-lookup"><span data-stu-id="b4094-104">The XPath expression is `//Name`.</span></span>  
+ <span data-ttu-id="bd74f-104">XPath 식은 `//Name`입니다.</span><span class="sxs-lookup"><span data-stu-id="bd74f-104">The XPath expression is `//Name`.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="b4094-105">예제</span><span class="sxs-lookup"><span data-stu-id="b4094-105">Example</span></span>  
- <span data-ttu-id="b4094-106">이 예제에서는 `Name`이라는 모든 하위 요소를 찾습니다.</span><span class="sxs-lookup"><span data-stu-id="b4094-106">This example finds all descendants named `Name`.</span></span>  
+## <a name="example"></a><span data-ttu-id="bd74f-105">예제</span><span class="sxs-lookup"><span data-stu-id="bd74f-105">Example</span></span>  
+ <span data-ttu-id="bd74f-106">이 예제에서는 `Name`이라는 모든 하위 요소를 찾습니다.</span><span class="sxs-lookup"><span data-stu-id="bd74f-106">This example finds all descendants named `Name`.</span></span>  
   
- <span data-ttu-id="b4094-107">이 예제에서는 XML 문서로 을 사용합니다. [샘플 XML 파일: 여러 구매 주문 (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-linq-to-xml.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="b4094-107">This example uses the following XML document: [Sample XML File: Multiple Purchase Orders (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-linq-to-xml.md).</span></span>  
+ <span data-ttu-id="bd74f-107">이 예제에서는 XML 문서로을 사용합니다. [샘플 XML 파일: 여러 구매 주문(LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-linq-to-xml.md).</span><span class="sxs-lookup"><span data-stu-id="bd74f-107">This example uses the following XML document: [Sample XML File: Multiple Purchase Orders (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-linq-to-xml.md).</span></span>  
   
 ```vb  
       Dim po As XDocument = XDocument.Load("PurchaseOrders.xml")  
@@ -39,7 +39,7 @@ For Each el As XElement In list1
 Next  
 ```  
   
- <span data-ttu-id="b4094-108">이 예제는 다음과 같은 출력을 생성합니다.</span><span class="sxs-lookup"><span data-stu-id="b4094-108">This example produces the following output:</span></span>  
+ <span data-ttu-id="bd74f-108">이 예제는 다음과 같은 출력을 생성합니다.</span><span class="sxs-lookup"><span data-stu-id="bd74f-108">This example produces the following output:</span></span>  
   
 ```  
 Results are identical  
@@ -51,5 +51,6 @@ Results are identical
 <Name>Jessica Arnold</Name>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="b4094-109">참고자료</span><span class="sxs-lookup"><span data-stu-id="b4094-109">See also</span></span>
-- [<span data-ttu-id="b4094-110">XPath 사용자 (Visual Basic)를 위한 LINQ to XML</span><span class="sxs-lookup"><span data-stu-id="b4094-110">LINQ to XML for XPath Users (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
+## <a name="see-also"></a><span data-ttu-id="bd74f-109">참고자료</span><span class="sxs-lookup"><span data-stu-id="bd74f-109">See also</span></span>
+
+- [<span data-ttu-id="bd74f-110">XPath 사용자 (Visual Basic)를 위한 LINQ to XML</span><span class="sxs-lookup"><span data-stu-id="bd74f-110">LINQ to XML for XPath Users (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)

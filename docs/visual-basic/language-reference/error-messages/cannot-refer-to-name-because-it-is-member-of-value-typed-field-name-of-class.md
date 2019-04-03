@@ -7,24 +7,25 @@ f1_keywords:
 helpviewer_keywords:
 - BC30310
 ms.assetid: 2aeb8872-7c87-4f01-98ef-9714ba3eebbe
-ms.openlocfilehash: c29d3def2299dc1d7e3b084b3408b3f919addc63
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: aac190119ced74496c4dd012d200fca6d895ff28
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55279589"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58826771"
 ---
-# <a name="cannot-refer-to-name-because-it-is-a-member-of-the-value-typed-field-name-of-class-classname-which-has-systemmarshalbyrefobject-as-a-base-class"></a><span data-ttu-id="e9ec9-102">참조할 수 없습니다. '\<이름 >' 값 형식 필드의 멤버 이기 때문에 '\<이름 >' 클래스의\<classname >'를 기본 클래스로 사용 되는 ' System.MarshalByRefObject'가</span><span class="sxs-lookup"><span data-stu-id="e9ec9-102">Cannot refer to '\<name>' because it is a member of the value-typed field '\<name>' of class '\<classname>' which has 'System.MarshalByRefObject' as a base class</span></span>
-<span data-ttu-id="e9ec9-103">`System.MarshalByRefObject` 클래스를 사용 하면 응용 프로그램 도메인 경계를 넘어 개체에 대 한 원격 액세스를 지 원하는 응용 프로그램입니다.</span><span class="sxs-lookup"><span data-stu-id="e9ec9-103">The `System.MarshalByRefObject` class enables applications that support remote access to objects across application domain boundaries.</span></span> <span data-ttu-id="e9ec9-104">형식에서 상속 해야 합니다는 `MarshalByRejectObject` 클래스 유형이 응용 프로그램 도메인 경계에 걸쳐 사용 됩니다.</span><span class="sxs-lookup"><span data-stu-id="e9ec9-104">Types must inherit from the `MarshalByRejectObject` class when the type is used across application domain boundaries.</span></span> <span data-ttu-id="e9ec9-105">개체의 멤버는 만든 응용 프로그램 도메인 외부에서 사용할 수 없기 때문에 개체의 상태는 복사 해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="e9ec9-105">The state of the object must not be copied because the members of the object are not usable outside the application domain in which they were created.</span></span>  
+# <a name="cannot-refer-to-name-because-it-is-a-member-of-the-value-typed-field-name-of-class-classname-which-has-systemmarshalbyrefobject-as-a-base-class"></a><span data-ttu-id="59ec1-102">참조할 수 없습니다. '\<이름 >' 값 형식 필드의 멤버 이기 때문에 '\<이름 >' 클래스의\<classname >'를 기본 클래스로 사용 되는 ' System.MarshalByRefObject'가</span><span class="sxs-lookup"><span data-stu-id="59ec1-102">Cannot refer to '\<name>' because it is a member of the value-typed field '\<name>' of class '\<classname>' which has 'System.MarshalByRefObject' as a base class</span></span>
+<span data-ttu-id="59ec1-103">`System.MarshalByRefObject` 클래스를 사용 하면 응용 프로그램 도메인 경계를 넘어 개체에 대 한 원격 액세스를 지 원하는 응용 프로그램입니다.</span><span class="sxs-lookup"><span data-stu-id="59ec1-103">The `System.MarshalByRefObject` class enables applications that support remote access to objects across application domain boundaries.</span></span> <span data-ttu-id="59ec1-104">형식에서 상속 해야 합니다는 `MarshalByRejectObject` 클래스 유형이 응용 프로그램 도메인 경계에 걸쳐 사용 됩니다.</span><span class="sxs-lookup"><span data-stu-id="59ec1-104">Types must inherit from the `MarshalByRejectObject` class when the type is used across application domain boundaries.</span></span> <span data-ttu-id="59ec1-105">개체의 멤버는 만든 응용 프로그램 도메인 외부에서 사용할 수 없기 때문에 개체의 상태는 복사 해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="59ec1-105">The state of the object must not be copied because the members of the object are not usable outside the application domain in which they were created.</span></span>  
   
- <span data-ttu-id="e9ec9-106">**오류 ID:** BC30310</span><span class="sxs-lookup"><span data-stu-id="e9ec9-106">**Error ID:** BC30310</span></span>  
+ <span data-ttu-id="59ec1-106">**오류 ID:** BC30310</span><span class="sxs-lookup"><span data-stu-id="59ec1-106">**Error ID:** BC30310</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="e9ec9-107">이 오류를 해결하려면</span><span class="sxs-lookup"><span data-stu-id="e9ec9-107">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="59ec1-107">이 오류를 해결하려면</span><span class="sxs-lookup"><span data-stu-id="59ec1-107">To correct this error</span></span>  
   
-1.  <span data-ttu-id="e9ec9-108">에 참조 되는 멤버가 올바른지 확인에 대 한 참조를 확인 합니다.</span><span class="sxs-lookup"><span data-stu-id="e9ec9-108">Check the reference to make sure the member being referred to is valid.</span></span>  
+1.  <span data-ttu-id="59ec1-108">에 참조 되는 멤버가 올바른지 확인에 대 한 참조를 확인 합니다.</span><span class="sxs-lookup"><span data-stu-id="59ec1-108">Check the reference to make sure the member being referred to is valid.</span></span>  
   
-2.  <span data-ttu-id="e9ec9-109">멤버를 명시적으로 한정 된 `Me` 키워드입니다.</span><span class="sxs-lookup"><span data-stu-id="e9ec9-109">Explicitly qualify the member with the `Me` keyword.</span></span>  
+2.  <span data-ttu-id="59ec1-109">멤버를 명시적으로 한정 된 `Me` 키워드입니다.</span><span class="sxs-lookup"><span data-stu-id="59ec1-109">Explicitly qualify the member with the `Me` keyword.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="e9ec9-110">참고자료</span><span class="sxs-lookup"><span data-stu-id="e9ec9-110">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="59ec1-110">참고자료</span><span class="sxs-lookup"><span data-stu-id="59ec1-110">See also</span></span>
+
 - <xref:System.MarshalByRefObject>
-- [<span data-ttu-id="e9ec9-111">Dim 문</span><span class="sxs-lookup"><span data-stu-id="e9ec9-111">Dim Statement</span></span>](../../../visual-basic/language-reference/statements/dim-statement.md)
+- [<span data-ttu-id="59ec1-111">Dim 문</span><span class="sxs-lookup"><span data-stu-id="59ec1-111">Dim Statement</span></span>](../../../visual-basic/language-reference/statements/dim-statement.md)
