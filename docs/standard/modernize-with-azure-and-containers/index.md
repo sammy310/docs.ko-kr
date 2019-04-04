@@ -94,26 +94,26 @@ All rights reserved. 이 가이드의 내용 중 어떤 부분도 게시자의 �
 | **장점**|
 | <li>재설계, 새로운 코드 불필요 <li> 최소한의 작업으로 빠른 마이그레이션 가능 <li> Azure에서 지원되는 공통점 <li> 기본 가용성 보장 <li> 클라우드로 이동 후 아주 쉬운 최신화 | <li> 재설계 불필요 <li> 최소한의 코드 및 구성 변경 <li> 컨테이너로 인해 향상된 배포와 DevOps 릴리스 민첩성 <li> 밀도 증가 및 배포 비용 감소 <li> 앱 및 종속성의 이식성 <li> 호스트 대상의 유연성 : PaaS나 IaaS 방식 | <li> 클라우드용 설계, 클리우드에서 최고의 이득을 얻을 수 있으나 새로운 코드 필요 <li> 마이크로 서비스 클라우드 전용 접근법 <li> 최신 중요 업무용 응용 프로그램, 클라우드 복원력이 있는 매우 뛰어난 확장성 <li> 완벽하게 관리되는 서비스 <li> 규모에 최적화 <li> 하위 시스템에 의한 자율적인 민첩성 최적화 <li> 배포 및 DevOps 기반 |
 | **당면 과제** |
-| <li> 운영 경비 변화 또는 데이터 센터 폐쇄가 아닌 클라우드 가격 축소 <li> 관리 되는 거의 없습니다. OS 또는 미들웨어 패치; 없습니다 Terraform, Spinnaker 또는 Puppet 같은 인프라 솔루션을 사용할 수 있습니다. | <li> 컨테이너 화는 개발자와 IT 운영에 대 한 학습 곡선의 추가 단계 <li> DevOps 및 CI/CD 파이프라인은 일반적으로 ''이 접근 방식에 대 한 합니다. 조직은의 문화권에 있는 현재 것 추가 챌린지를 그렇지 않은 경우| <li> 클라우드 네이티브 앱과 마이크로 서비스 아키텍처에 대 한 재개발 필요 하며 일반적으로 상당한 코드 리팩터링 또는 재작성 현대화 하는 경우 (시간 및 예산 증가) <li> DevOps 및 CI/CD 파이프라인은 일반적으로 ''이 접근 방식에 대 한 합니다. 조직은의 문화권에 있는 현재 것 추가 챌린지를 그렇지 않은 경우|
-> **표 1-1.** 기존 .NET 애플리케이션 및 서비스의 현대화 경로 이점 및 당면 과제
+| <li> 운영 비용이나 데이터 센터 폐쇄가 아닌 클라우드 가격 축소 <li> 관리가 어려움: OS나 미들웨어 패치 없음. Terraform이나 Spinnaker, Puppet 같은 인프라 솔루션을 사용할 수 있음. | <li> 컨테이너화는 개발자와 IT 운영에 대한 학습 곡선의 단계를 증가시킴 <li> DevOps 및 CI/CD 파이프라인은 일반적으로 이러한 방식에서 반드시 필요하며, 현재 조직에 없다면 추가적인 당면 과제입니다. | <li> 클라우드 네이티브 앱과 마이크로 서비스 아키텍처의 재개발이 필요하며 일반적으로 최신으로 변경하는 경우 상당한 코드 리팩터링이나 재작성이 필요합니다(시간 및 예산 증가). <li> DevOps 및 CI/CD 파이프라인은 일반적으로 이러한 방식에서 반드시 필요하며, 현재 조직에 없다면 추가적인 당면 과제입니다.|
+> **표 1-1.** 기존 .NET 애플리케이션과 서비스를 최신으로 변경하는 방법의 이점 및 당면 과제
 
-### <a name="key-technologies-and-architectures-by-maturity-level"></a>완성도별 핵심 기술 및 아키텍처
+### <a name="key-technologies-and-architectures-by-maturity-level"></a>성숙도별 핵심 기술 및 아키텍처
 
-.NET Framework 애플리케이션은 2001년 후반에 출시된 .NET Framework 버전 1.0으로 처음 시작되었습니다. 그런 다음 회사에서 최신 버전을 출시했습니다(예: 2.0, 3.5 및 .NET 4.x). 대부분의 이러한 응용 프로그램 및 Windows Server 인터넷 정보 서버 (IIS)에서 실행 하 고 SQL Server, Oracle, MySQL 또는 다른 RDBMS 같은 관계형 데이터베이스를 사용 합니다.
+초기 .NET Framework 애플리케이션은 2001년 후반에 출시된 .NET Framework 버전 1.0으로 시작되었습니다. 그런 다음 기업에서는 최신 버전(예: .NET 2.0과 3.5, 4.x)으로 넘어갔습니다. 이러한 응용 프로그램은 대부분 Windows Server와 인터넷 정보 서버(IIS)에서 동작하고 SQL Server나 Oracle, MySQL 또는 그 밖의 RDBMS와 같은 관계형 데이터베이스를 사용합니다.
 
-요즘 기존 .NET 애플리케이션은 .NET Framework 4.x 또는 .NET Framework 3.5에 기반을 두고 있으며, ASP.NET MVC, ASP.NET Web Forms, ASP.NET Web API, Windows Communication Foundation(WCF), ASP.NET SignalR 및 ASP.NET Web Pages 같은 웹 프레임워크를 사용합니다. 이러한 기존의 .NET Framework 기술은 Windows에 종속됩니다. 레거시 앱만 마이그레이션하고 애플리케이션 인프라에 대한 변경 사항을 최소화하고자 하는 경우에는 이러한 종속성을 고려하는 것이 중요합니다.
+최근 .NET 애플리케이션은 대부분 .NET Framework 4.x나 .NET Framework 3.5 기반이며, ASP.NET MVC와 ASP.NET Web Forms, ASP.NET Web API, Windows Communication Foundation(WCF), ASP.NET SignalR, ASP.NET Web Pages 같은 웹 프레임워크를 사용합니다. 이와 같은 기존의 .NET Framework 기술은 Windows에 종속됩니다. 단순히 레거시 앱만 마이그레이션하고 애플리케이션 인프라의 변경을 최소화하려면 이러한 종속성을 고려해야 합니다.
 
-그림 1-2에서는 각각의 세 가지 클라우드 완성도별로 사용되는 주요 기술과 아키텍처 스타일을 보여 줍니다.
+그림 1-2에서는 각각의 세 가지 클라우드 성숙도에 해당하는 주요 기술과 아키텍처 스타일을 보여 줍니다.
 
-![기존 .NET 웹 애플리케이션 현대화의 각 완성도에 해당하는 주요 기술](./media/image1-2.png)
+![각 성숙도별 기존 .NET 웹 애플리케이션을 최신으로 변경하는데 필요한 주요 기술](./media/image1-2.png)
 
-> **그림 1-2.** 기존 .NET 웹 애플리케이션 현대화의 각 완성도에 해당하는 주요 기술
+> **그림 1-2.** 각 성숙도별로 기존 .NET 웹 애플리케이션을 최신으로 변경하는데 필요한 주요 기술
 
-그림 1-2는 가장 일반적인 시나리오를 보여주지만 아키텍처에 관해서는 여러 하이브리드 및 혼합된 변형 형태가 가능합니다. 예를 들어 완성 모델은 기존 웹앱의 모놀리식 아키텍처에만 적용되는 것이 아니라 서비스 방향, N 계층 및 다른 아키텍처 스타일 변형에도 적용됩니다. 포커스 또는 하나 또는 다른 아키텍처 유형 및 관련된 기술에는 백분율을 더 높은 응용 프로그램의 전반적인 진보성 수준을 결정합니다.
+그림 1-2는 가장 일반적인 시나리오이며 아키텍처는 여러 가지 하이브리드와 혼합된 변형 형태가 가능합니다. 예를 들어 성숙도 모델은 기존 웹앱의 모놀리식 아키텍처 뿐만 아니라 서비스 지향과 N-티어, 그 밖의 아키텍처 스타일 변형에도 적용됩니다. 집중되어 있거나 비중이 높은 아키텍처 유형과 관련 기술이 응용 프로그램의 전반적인 성숙도를 결정합니다.
 
-현대화 프로세스의 각 완성도는 다음 핵심 기술 및 접근법과 연관이 있습니다.
+최신화 과정의 각 성숙도는 다음 핵심 기술 및 방법과 관련이 있습니다.
 
-- **클라우드 인프라 지원** (재호스팅 또는 기본 리프트 및 시프트): 첫 번째 단계로, 대부분의 조직에서는 하려고만 신속 하 게 클라우드 마이그레이션 전략을 실행 합니다. 이 경우 응용 프로그램은 다시 호스트 된 합니다. 대부분의 재호스팅은 [Azure Site Recovery](https://azure.microsoft.com/services/site-recovery/) 및 [Azure Database Migration Service](https://azure.microsoft.com/campaigns/database-migration/) 같은 클라우드 도구 기반의 Azure로 마이그레이션하는 데 도움이 되는 지침, 정보 및 메커니즘을 제공하는 서비스인 [Azure Migrate](https://aka.ms/azuremigrate)를 사용하여 자동화할 수 있습니다. 레거시 앱을 클라우드로 이동할 때 자산에 대한 인프라 세부 정보를 파악할 수 있도록 수동으로 재호스팅을 설정할 수도 있습니다. 거의 사용 하 여 Azure에서 Vm에 응용 프로그램를 이동할 수는 예를 들어, 사소한 구성 변경만을 사용 하 여 수정할 것입니다. 이 경우 네트워킹은 온-프레미스 환경과 비슷합니다. Azure에서 가상 네트워크를 만드는 경우에 특히 비슷합니다.
+- **클라우드 인프라 지원** (재호스팅 또는 기본적인 리프트 엔 시프트): 첫 번째 단계로, 대부분의 조직에서는 신속하게 클라우드 마이그레이션 전략을 실행하려고 합니다. 이 경우 응용 프로그램은 재호스팅됩니다. 대부분의 재호스팅은 [Azure Site Recovery](https://azure.microsoft.com/services/site-recovery/)와 [Azure Database Migration Service](https://azure.microsoft.com/campaigns/database-migration/) 같은 클라우드 도구 기반의 Azure 마이그레이션 가이드와 정보, 메커니즘을 제공하는 [Azure Migrate](https://aka.ms/azuremigrate) 서비스로 자동화할 수 있습니다. 레거시 앱을 클라우드로 옮길 때 자산에 대한 인프라 세부 정보를 파악할 수 있도록 수동으로 재호스팅을 설정할 수도 있습니다. 예를 들면 간단한 설정값을 변경하는 등의 최소한의 변경으로 응용 프로그램을 Azure의 VM으로 옮길 수 있습니다. 이 경우 네트워킹은 온-프레미스 환경과 비슷하며, Azure에서 가상 네트워크를 만드는 경우라면 특히 비슷합니다.
 
 - **클라우드 최적화** (관리 서비스와 Windows 컨테이너): 이 모델은 응용 프로그램의 핵심 아키텍처를 변경 하지 않고 클라우드에서 상당한 이점을 얻는 몇 가지 중요 한 배포 최적화 합니다. 여기서 기본 단계는 기존의 .NET Framework 애플리케이션에 [Windows 컨테이너](https://docs.microsoft.com/virtualization/windowscontainers/about/) 지원을 추가하는 것입니다. 이 중요 한 단계 (컨테이너 화)는 전반적인 리프트 앤 시프트 작업 light 이므로 코드를 건드리지 필요 하지 않습니다. [Image2Docker](https://github.com/docker/communitytools-image2docker-win) 또는 Visual Studio 같은 도구와 [Docker](https://www.docker.com/)용 도구를 사용할 수 있습니다. Visual Studio는 ASP.NET 애플리케이션 및 Windows 컨테이너 이미지에 대한 스마트 기본값을 자동으로 선택합니다. 이러한 도구는 신속한 내부 루프와 Azure로 컨테이너를 가져올 수 있는 빠른 경로를 제공합니다. 여러 환경에 배포할 때 민첩성이 향상됩니다. 그런 다음 프로덕션으로 전환, 배포할 수 있습니다 하 여 Windows 컨테이너에 [Azure Web App for Containers](https://azure.microsoft.com/services/app-service/containers/), [Azure ACI (Container Instances), 및 Windows Server 2016 및 IaaS 방식이 선호 하는 경우 컨테이너를 사용 하 여 Azure Vm입니다. 같은 오 케 스트레이 터에 약간 더 복잡 한 다중 컨테이너 응용 프로그램에 대 한 [Azure Service Fabric](https://azure.microsoft.com/services/service-fabric/) 하거나 [Azure Kubernetes Service (AKS/ACS)](https://azure.microsoft.com/services/container-service/)합니다. 이 초기 현대화 중 추가할 수도 있습니다 자산와 같은 도구를 사용 하 여 모니터링 하는 등 클라우드에서 [Azure Application Insights](https://docs.microsoft.com/azure/application-insights/app-insights-overview); CI/CD 파이프라인을 사용 하 여 앱 수명 주기에 [Azure DevOps 서비스](https://visualstudio.microsoft.com/team-services/); 및 Azure에서 사용할 수 있는 많은 추가 데이터 리소스 서비스입니다. 예를 들어 원래 기존의 [ASP.NET Web Forms](https://www.asp.net/web-forms) 또는 [ASP.NET MVC](https://www.asp.net/mvc)를 사용하여 개발되었지만 이제 Windows 컨테이너를 사용하여 배포할 모놀리식 웹앱을 수정할 수 있습니다. Windows 컨테이너를 사용할 경우 애플리케이션의 핵심 아키텍처를 변경하지 않고 데이터도 [Azure SQL Database Managed Instance](https://docs.microsoft.com/azure/sql-database/)의 데이터베이스로 마이그레이션해야 합니다.
 
