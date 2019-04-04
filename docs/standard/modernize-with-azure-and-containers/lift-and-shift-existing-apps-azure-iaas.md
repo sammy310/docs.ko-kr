@@ -1,5 +1,5 @@
 ---
-title: 기존.NET 앱을 Azure IaaS(클라우드 인프라 지원)로 리프트 앤 시프트 하기
+title: 기존 .NET 앱을 Azure IaaS(클라우드 인프라 지원)로 리프트 앤 시프트하기
 description: Azure 클라우드와 Windows 컨테이너를 사용하여 기존.NET 응용 프로그램을 최신으로 변경합니다.
 author: CESARDELATORRE
 ms.author: wiwagn
@@ -11,11 +11,11 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 01/30/2019
 ms.locfileid: "55266626"
 ---
-# <a name="lift-and-shift-existing-net-apps-to-azure-iaas-cloud-infrastructure-ready"></a>기존.NET 앱을 Azure IaaS (클라우드 인프라 지원)로 리프트 앤 시프트 하기
+# <a name="lift-and-shift-existing-net-apps-to-azure-iaas-cloud-infrastructure-ready"></a>기존.NET 앱을 Azure IaaS(클라우드 인프라 지원)로 리프트 앤 시프트하기
 
-> 목표 : 첫 번째 단계에서는 온-프레미스 투자 및 하드웨어와 네트워킹 유지 관리의 총 비용을 줄이기 위해 단순히 기존 응용 프로그램을 클라우드로 리호스팅 합니다.
+> 목표: 첫 번째 단계에서는 온-프레미스 투자 및 하드웨어와 네트워킹 유지 관리의 총 비용을 줄이기 위해 단순히 기존 응용 프로그램을 클라우드로 리호스팅합니다.
 
-기존 응용 프로그램을 Azure 서비스 형태의 인프라 (IaaS) 플랫폼으로 마이그레이션하는 *방법*을 살펴보기 전에, Azure의 IaaS로 직접 마이그레이션하려는 *이유*를 분석하는 것이 중요합니다. 이 최신화 성숙도 시나리오에서는 기본적으로 기존 온-프레미스 인프라를 사용하지 않고 클라우드의 VM을 사용합니다.
+기존 응용 프로그램을 Azure 서비스 형태의 인프라(IaaS) 플랫폼으로 마이그레이션하는 *방법*을 살펴보기 전에, Azure의 IaaS로 직접 마이그레이션하려는 *이유*를 분석하는 것이 중요합니다. 이 최신화 성숙도 시나리오에서는 기본적으로 기존 온-프레미스 인프라를 사용하지 않고 클라우드의 VM을 사용합니다.
 
 그 밖에 분석할 점은 Azure의 고급 관리 서비스를 추가하지 않고 순수 IaaS 클라우드로 마이그레이션하려는 *이유*입니다. 처음부터 IaaS가 필요한 사례를 결정하십시오.
 
