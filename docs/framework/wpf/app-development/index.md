@@ -2,9 +2,15 @@
 title: 애플리케이션 개발
 ms.date: 01/26/2018
 helpviewer_keywords:
-  - 'WPF [WPF], about application development'
-  - 'application development [WPF], about'
+- WPF [WPF], about application development
+- application development [WPF], about
 ms.assetid: 2996ce5e-81e9-49ae-881b-952db3dd1b7e
+ms.openlocfilehash: 979a5324fe9cb6c3469660e061d5df7f312ef2c4
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57365129"
 ---
 # <a name="application-development"></a>애플리케이션 개발
 <a name="introduction"></a> Windows Presentation Foundation (WPF)은 다음 유형의 응용 프로그램 개발에 사용할 수 있는 프레젠테이션 프레임 워크:  

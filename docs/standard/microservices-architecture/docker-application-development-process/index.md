@@ -1,9 +1,15 @@
 ---
 title: Docker 기반 애플리케이션에 대한 개발 프로세스
-description: 'Docker 기반 애플리케이션 개발 옵션을 개괄적으로 살펴봅니다. Windows용 Visual Studio, Mac용 Visual Studio 또는 여러 플랫폼(Windows, Mac, Linux)을 지원하는 Visual Studio Code를 사용합니다.'
+description: Docker 기반 애플리케이션 개발 옵션을 개괄적으로 살펴봅니다. Windows용 Visual Studio, Mac용 Visual Studio 또는 여러 플랫폼(Windows, Mac, Linux)을 지원하는 Visual Studio Code를 사용합니다.
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/27/2018
+ms.openlocfilehash: 219a562459be7fb1114dfdd9f139c938d1282c5c
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58465037"
 ---
 # <a name="development-process-for-docker-based-applications"></a>Docker 기반 애플리케이션에 대한 개발 프로세스
 

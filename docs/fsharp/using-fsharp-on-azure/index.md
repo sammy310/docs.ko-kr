@@ -1,10 +1,15 @@
 ---
-title: 'Azure에서 F# 사용'
-description: '사용 하 여 Azure 서비스 사용에 대 한 가이드F#'
+title: Azure에서 F# 사용
+description: 사용 하 여 Azure 서비스 사용에 대 한 가이드F#
 author: sylvanc
 ms.date: 09/22/2016
+ms.openlocfilehash: 8243c021b8bc3ea9b067b278a5d9c6e3619232b7
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57371050"
 ---
-
 # <a name="using-f-on-azure"></a>Azure에서 F# 사용
 
 F#은 클라우드 프로그래밍의 뛰어난 언어이며 웹 애플리케이션, 클라우드 서비스, 클라우드 호스티드 마이크로 서비스를 작성하는 데 자주 사용되고 확장 가능한 데이터 처리에도 사용됩니다.

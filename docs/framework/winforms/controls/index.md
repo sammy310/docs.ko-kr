@@ -2,10 +2,16 @@
 title: Windows Forms 컨트롤
 ms.date: 03/30/2017
 helpviewer_keywords:
-  - Windows Forms controls
-  - 'controls [Windows Forms]'
-  - 'Windows Forms controls, about Windows Forms controls'
+- Windows Forms controls
+- controls [Windows Forms]
+- Windows Forms controls, about Windows Forms controls
 ms.assetid: f050de8f-4ebd-4042-94b8-edf9a1dbd52a
+ms.openlocfilehash: da5f0b4418d61b973044a89d4902900247efb115
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57707784"
 ---
 # <a name="windows-forms-controls"></a>Windows Forms 컨트롤
 Windows Forms 애플리케이션의 사용자 인터페이스를 디자인하고 수정할 때는 컨트롤을 추가하고 정렬하고 배치해야 합니다. 컨트롤은 폼 개체에 포함된 개체입니다. 각 컨트롤 형식은 컨트롤을 특정 목적에 적합하게 만들어주는 자체적인 속성, 메서드 및 이벤트 집합을 갖습니다. 디자이너에서 컨트롤을 조작하고 런타임에 동적으로 컨트롤을 추가하는 코드를 작성할 수 있습니다.  

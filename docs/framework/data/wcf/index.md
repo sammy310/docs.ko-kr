@@ -2,11 +2,16 @@
 title: WCF Data Services 4.5
 ms.date: 03/30/2017
 helpviewer_keywords:
-  - Astoria
-  - 'WCF Data Services, getting started'
+- Astoria
+- WCF Data Services, getting started
 ms.assetid: 73d2bec3-7c92-4110-b905-11bb0462357a
+ms.openlocfilehash: 6910bfbc94f69292bb8c2a52bf3ebef8fcfb3a8a
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57500241"
 ---
-
 # <a name="wcf-data-services-45"></a>WCF Data Services 4.5
 
 WCF Data Services (이전의 "ADO.NET Data Services")를 사용 하는 서비스를 만들 수 있도록.NET Framework의 구성 요소인 합니다 [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] 노출 하 고의 의미 체계를 사용 하 여 웹 또는 인트라넷을 통해 데이터를 사용 [ (REST) representational state transfer](https://go.microsoft.com/fwlink/?LinkId=113919)합니다. OData는 URI로 주소를 지정할 수 있는 리소스로 데이터를 노출합니다. 데이터는 표준 HTTP 동사인 GET, PUT, POST 및 DELETE를 사용하여 액세스되고 변경됩니다. OData의 엔터티-관계 규칙을 사용 합니다 [엔터티 데이터 모델](../../../../docs/framework/data/adonet/entity-data-model.md) 리소스 연결으로 관련 된 엔터티 집합으로 노출 합니다.

@@ -1,11 +1,16 @@
 ---
 title: '서버리스 앱: 아키텍처, 패턴 및 Azure 구현'
-description: '서버를 사용하지 않는 아키텍처에 대한 가이드입니다. 엔터프라이즈 애플리케이션에 대해 서버를 사용하지 않는 아키텍처([IaaS] (Infrastructure as a Service) 또는 [PaaS] (Platform as a Service) 대신)를 구현하는 시기, 이유 및 방법을 알아봅니다.'
+description: 서버를 사용하지 않는 아키텍처에 대한 가이드입니다. 엔터프라이즈 애플리케이션에 대해 서버를 사용하지 않는 아키텍처([IaaS] (Infrastructure as a Service) 또는 [PaaS] (Platform as a Service) 대신)를 구현하는 시기, 이유 및 방법을 알아봅니다.
 author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 6/26/2018
+ms.openlocfilehash: a44af1fc76b54ec9be0d8e3b3ba2e54f3e3b220b
+ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58653940"
 ---
-
 # <a name="serverless-apps-architecture-patterns-and-azure-implementation"></a>서버리스 앱: 아키텍처, 패턴 및 Azure 구현
 
 ![서버리스 앱 eBook 표지를 보여주는 스크린샷.](./media/index/serverless-apps-cover.jpg)

@@ -1,7 +1,13 @@
 ---
-title: 'F# 언어 참조'
-description: '찾을 F# 언어 토큰, 개념, 형식, 식 및 컴파일러 지원 구문 항목에 대 한이 참조에서 언어 기능 정보입니다.'
+title: F# 언어 참조
+description: 찾을 F# 언어 토큰, 개념, 형식, 식 및 컴파일러 지원 구문 항목에 대 한이 참조에서 언어 기능 정보입니다.
 ms.date: 05/16/2016
+ms.openlocfilehash: b70264b44b0820993cd77cb6c4f95a1547783174
+ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57846638"
 ---
 # <a name="f-language-reference"></a>F# 언어 참조
 

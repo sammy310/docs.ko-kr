@@ -1,26 +1,26 @@
 ---
 title: 달력 작업
-ms.date: 02/23/2019
+ms.date: 04/01/2019
 ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
-- globalization [.NET Framework], calendars
+- globalization [.NET], calendars
 - calendars, global applications
 - global applications, calendars
 - world-ready applications, calendars
-- international applications [.NET Framework], calendars
+- international applications [.NET], calendars
 - culture, calendars
 ms.assetid: 0c1534e5-979b-4c8a-a588-1c24301aefb3
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6bc41f6881c8a876e77ac385c715a5517b95842c
-ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
+ms.openlocfilehash: b683784489cd68b66b4f9660f0df5e63b676a91c
+ms.sourcegitcommit: a3db1a9eafca89f95ccf361bc1833b47fbb2bb30
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57845988"
+ms.lasthandoff: 04/04/2019
+ms.locfileid: "58921353"
 ---
 # <a name="working-with-calendars"></a>달력 작업
 
@@ -30,33 +30,33 @@ ms.locfileid: "57845988"
 
 .NET의 모든 달력에서 파생 된 <xref:System.Globalization.Calendar?displayProperty=nameWithType> 기본 달력 구현을 제공 하는 클래스입니다. <xref:System.Globalization.Calendar> 클래스로부터 상속되는 클래스 중 하나는 모든 음력 달력의 기본 클래스인 <xref:System.Globalization.EastAsianLunisolarCalendar> 클래스입니다. .NET에는 다음과 같은 달력 구현이 포함 됩니다.
 
-* <xref:System.Globalization.ChineseLunisolarCalendar>는 중국식 음력 달력을 나타냅니다.
+* <xref:System.Globalization.ChineseLunisolarCalendar>에 중국식 음력 달력을 나타냅니다.
 
-* <xref:System.Globalization.GregorianCalendar>는 그레고리오력을 나타냅니다. 이 달력은 다시 <xref:System.Globalization.GregorianCalendarTypes?displayProperty=nameWithType> 열거형으로 정의되는 하위 유형으로 세분화됩니다(예: 아랍어 및 중동 프랑스어). <xref:System.Globalization.GregorianCalendar.CalendarType%2A?displayProperty=nameWithType> 속성은 그레고리오력 달력의 하위 유형을 지정합니다.
+* <xref:System.Globalization.GregorianCalendar>양력 달력을 나타냅니다. 이 달력은 다시 <xref:System.Globalization.GregorianCalendarTypes?displayProperty=nameWithType> 열거형으로 정의되는 하위 유형으로 세분화됩니다(예: 아랍어 및 중동 프랑스어). <xref:System.Globalization.GregorianCalendar.CalendarType%2A?displayProperty=nameWithType> 속성은 그레고리오력 달력의 하위 유형을 지정합니다.
 
-* <xref:System.Globalization.HebrewCalendar>는 히브리어 달력을 나타냅니다.
+* <xref:System.Globalization.HebrewCalendar>히브리어 달력을 나타냅니다.
 
-* <xref:System.Globalization.HijriCalendar>는 회교식 달력을 나타냅니다.
+* <xref:System.Globalization.HijriCalendar>회교식 달력을 나타냅니다.
 
-* <xref:System.Globalization.JapaneseCalendar>는 일본식 달력을 나타냅니다.
+* <xref:System.Globalization.JapaneseCalendar>에 일본식 달력을 나타냅니다.
 
-* <xref:System.Globalization.JapaneseLunisolarCalendar>는 일본식 음력 달력을 나타냅니다.
+* <xref:System.Globalization.JapaneseLunisolarCalendar>일본식 음력 달력을 나타냅니다.
 
-* <xref:System.Globalization.JulianCalendar>는 율리우스력을 나타냅니다.
+* <xref:System.Globalization.JulianCalendar>를 율리우스력을 나타냅니다.
 
-* <xref:System.Globalization.KoreanCalendar>는 한국식 달력을 나타냅니다.
+* <xref:System.Globalization.KoreanCalendar>에 한국식 달력을 나타냅니다.
 
-* <xref:System.Globalization.KoreanLunisolarCalendar>는 한국식 음력 달력을 나타냅니다.
+* <xref:System.Globalization.KoreanLunisolarCalendar>한국식 음력 달력을 나타냅니다.
 
-* <xref:System.Globalization.PersianCalendar>는 페르시아력을 나타냅니다.
+* <xref:System.Globalization.PersianCalendar>에 페르시아력을 나타냅니다.
 
-* <xref:System.Globalization.TaiwanCalendar>는 대만식 달력을 나타냅니다.
+* <xref:System.Globalization.TaiwanCalendar>을 대만 달력을 나타냅니다.
 
-* <xref:System.Globalization.TaiwanLunisolarCalendar>는 대만식 음력 달력을 나타냅니다.
+* <xref:System.Globalization.TaiwanLunisolarCalendar>대만식 음력 달력을 나타냅니다.
 
-* <xref:System.Globalization.ThaiBuddhistCalendar>는 태국 불교식 달력을 나타냅니다.
+* <xref:System.Globalization.ThaiBuddhistCalendar>태국 불교식 달력을 나타냅니다.
 
-* <xref:System.Globalization.UmAlQuraCalendar>는 사우디아라비아 회교식(Um Al Qura) 달력을 나타냅니다.
+* <xref:System.Globalization.UmAlQuraCalendar>Um Al Qura 달력을 나타냅니다.
 
 달력은 다음 두 가지 방법 중 하나로 사용할 수 있습니다.
 
@@ -138,13 +138,16 @@ ms.locfileid: "57845988"
 달력에서 날짜는 일반적으로 연대로 구분됩니다. 그러나 합니다 <xref:System.Globalization.Calendar> .net에서 클래스, 일정 및 대부분의 정의 된 모든 연대가 지원 하지는 <xref:System.Globalization.Calendar> 클래스에서는 단일 연대만 지원 합니다. <xref:System.Globalization.JapaneseCalendar> 및 <xref:System.Globalization.JapaneseLunisolarCalendar> 클래스에서만 여러 연대가 지원됩니다.
 
 > [!IMPORTANT]
->  <xref:System.Globalization.JapaneseCalendar> 및 <xref:System.Globalization.JapaneseLunisolarCalendar>의 새로운 세대가 2019년 5월 1일에 시작합니다. 이번 변경 내용은 달력을 사용하는 모든 애플리케이션에 영향을 줍니다. 자세한 내용 및 현재 애플리케이션이 영향을 받는지 확인하는 방법은 [.NET에서 일본식 달력의 새로운 세대 처리](https://devblogs.microsoft.com/dotnet/handling-a-new-era-in-the-japanese-calendar-in-net/)를 참조하세요. 참조 [일본어 연대 변경에 대 한 응용 프로그램 준비](/windows/uwp/design/globalizing/japanese-era-change) 연대 변경 될 준비가 되었는지 확인 하려면 Windows에서 응용 프로그램 테스트에 대 한 정보에 대 한 합니다.
+>  Reiwa 연대의 새로운 시대를 <xref:System.Globalization.JapaneseCalendar> 고 <xref:System.Globalization.JapaneseLunisolarCalendar>, 2019 년 5 월 1 일에 시작 합니다. 이번 변경 내용은 달력을 사용하는 모든 애플리케이션에 영향을 줍니다. 자세한 내용은 다음 문서를 참조 하세요.
+> - [.NET에서 일본식 달력의 새로운 시대 처리](https://devblogs.microsoft.com/dotnet/handling-a-new-era-in-the-japanese-calendar-in-net/), 여러 연대를 사용 하 여 달력 지원 하도록.net 추가 기능을 설명 하 고 다중 연대 달력을 처리할 때 사용 하기 위한 모범 사례에 설명 합니다.
+> - [일본어 연대 변경에 대 한 응용 프로그램 준비](/windows/uwp/design/globalizing/japanese-era-change), 연대 변경 될 준비가 되었는지 확인 하려면 Windows에서 응용 프로그램 테스트에 정보를 제공 합니다.
+> - [.NET Framework에 대 한 새 일본어 연대 요약이 업데이트](https://support.microsoft.com/en-us/help/4477957/new-japanese-era-updates-for-net-framework)를 해당 새 일본식 달력의 연대를 관련 된 개별 Windows 버전용.NET Framework 업데이트를 나열 하는 새.NET Framework 기능 다중 연대 지원에 대 한 정보 및 포함 응용 프로그램을 테스트에서 검색할 항목입니다.
 
-대부분의 달력의 연대를 매우 긴 시간을 나타냅니다. 일반 달력에서 예를 들어, 현재 연대에 걸쳐 두 millenia 두 개 있습니다. 에 대 한 합니다 <xref:System.Globalization.JapaneseCalendar> 하며 <xref:System.Globalization.JapaneseLunisolarCalendar>두 달력 여러 연대를 지 원하는,이 비율이 높을수록 좋다고입니다. 연대를 emperor reign 기간에 해당합니다. 여러 연대를에 대 한 지원을 현재 연대의 상한값을 알 수 없는 경우에 특히 특수 문제 제기 합니다. 
+대부분의 달력의 연대를 매우 긴 시간을 나타냅니다. 일반 달력에서 예를 들어, 현재 연대에 걸쳐 두 왔습니다 두 개 있습니다. 에 대 한 합니다 <xref:System.Globalization.JapaneseCalendar> 하며 <xref:System.Globalization.JapaneseLunisolarCalendar>두 달력 여러 연대를 지 원하는,이 비율이 높을수록 좋다고입니다. 연대를 emperor reign 기간에 해당합니다. 여러 연대를에 대 한 지원을 현재 연대의 상한값을 알 수 없는 경우에 특히 특수 문제 제기 합니다. 
 
 ### <a name="eras-and-era-names"></a>연대 및 연대 이름
 
-.NET에서는 특정 달력 구현에서 지원 되는 연대를 나타내는 정수에 역순으로 저장 되는 <xref:System.Globalization.Calendar.Eras%2A?displayProperty=nameWithType> 배열입니다. 현재 연대는 0번 인덱스에 있으며, 여러 연대를 지원하는 <xref:System.Globalization.Calendar> 클래스의 경우 각 연속되는 인덱스에 이전 연대가 반영됩니다. 정적 <xref:System.Globalization.Calendar.CurrentEra?displayProperty=nameWithType> 속성은 <xref:System.Globalization.Calendar.Eras%2A?displayProperty=nameWithType> 배열에서 현재 연대의 인덱스를 정의하며 값이 항상 0인 상수입니다. 개별 <xref:System.Globalization.Calendar> 클래스에는 또한 현재 연대의 값을 반환하는 정적 필드가 포함됩니다. 이러한 필드는 다음 표에 나열되어 있습니다.
+.NET에서는 특정 달력 구현에서 지원 되는 연대를 나타내는 정수에 역순으로 저장 되는 <xref:System.Globalization.Calendar.Eras%2A?displayProperty=nameWithType> 배열입니다. (즉, 최신 시간 범위를 사용 하 여 연대) 현재 연대는 0 번 인덱스 한 <xref:System.Globalization.Calendar> 각 연속 되는 인덱스, 여러 연대를 지 원하는 클래스에 이전 연대가 반영 합니다. 정적 <xref:System.Globalization.Calendar.CurrentEra?displayProperty=nameWithType> 속성은 <xref:System.Globalization.Calendar.Eras%2A?displayProperty=nameWithType> 배열에서 현재 연대의 인덱스를 정의하며 값이 항상 0인 상수입니다. 개별 <xref:System.Globalization.Calendar> 클래스에는 또한 현재 연대의 값을 반환하는 정적 필드가 포함됩니다. 이러한 필드는 다음 표에 나열되어 있습니다.
 
 | 달력 클래스                                        | 현재 연대 필드                                                 |
 | ----------------------------------------------------- | ----------------------------------------------------------------- |
@@ -162,8 +165,8 @@ ms.locfileid: "57845988"
 
 특정 연대 번호에 해당하는 이름은 연대 번호를 <xref:System.Globalization.DateTimeFormatInfo.GetEraName%2A?displayProperty=nameWithType> 또는 <xref:System.Globalization.DateTimeFormatInfo.GetAbbreviatedEraName%2A?displayProperty=nameWithType> 메서드에 전달하여 검색할 수 있습니다. 다음 예제에서는 이러한 메서드를 호출하여 <xref:System.Globalization.GregorianCalendar> 클래스에서 연대 지원에 대한 정보를 검색합니다.
 
-[!code-csharp[Conceptual.Calendars#7](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.calendars/cs/instantiatewithera1.cs#7)]
-[!code-vb[Conceptual.Calendars#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.calendars/vb/instantiatewithera1.vb#7)]
+[!code-csharp[Conceptual.Calendars#7](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.calendars/cs/instantiatewithera1.cs)]
+[!code-vb[Conceptual.Calendars#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.calendars/vb/instantiatewithera1.vb)]
 
 또한 "g" 사용자 지정 날짜 및 시간 서식 문자열에는 날짜 및 시간의 문자열 표현으로 달력의 연대 이름이 포함됩니다. 자세한 내용은 [사용자 지정 날짜 및 시간 형식 문자열](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)합니다.
 
@@ -197,7 +200,7 @@ ms.locfileid: "57845988"
 > [!TIP]
 > 여러 연대를 지 원하는 달력을 사용 하 여 작업 하는 경우 *항상* 양력 날짜를 사용 하 여 날짜를 인스턴스화합니다 하거나 해당 달력을 기반으로 하는 시간과 날짜를 인스턴스화할 때 연대를 지정 합니다.
 
-에 연대를 지정 하는 <xref:System.Globalization.Calendar.ToDateTime(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)> 메서드를 제공한 달력의 연대의 인덱스 <xref:System.Globalization.Calendar.Eras> 속성입니다. 그러나 해당 연대 변경 사항이 달력, 이러한 인덱스 없는 상수 값 현재 연대의 인덱스 0에 이며 가장 오래 된 연대의 인덱스 `Eras.Length - 1`합니다. 새로운 일정에 추가 되 면 이전 연대의 인덱스 씩 증가 합니다. 다음과 같이 적절 한 연대의 인덱스를 제공할 수 있습니다.
+연대를 지정 하는 <xref:System.Globalization.Calendar.ToDateTime(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)> 메서드를 제공한 달력의 연대의 인덱스 <xref:System.Globalization.Calendar.Eras> 속성입니다. 그러나 해당 연대 변경 사항이 달력, 이러한 인덱스 없는 상수 값 현재 연대의 인덱스 0에 이며 가장 오래 된 연대의 인덱스 `Eras.Length - 1`합니다. 새로운 일정에 추가 되 면 이전 연대의 인덱스 씩 증가 합니다. 다음과 같이 적절 한 연대의 인덱스를 제공할 수 있습니다.
 
 - 현재 연대에 있는 날짜에 대 한 달력의 항상 사용 <xref:System.Globalization.Calendar.CurrentEra> 속성입니다.
 
@@ -205,7 +208,7 @@ ms.locfileid: "57845988"
 
 ### <a name="calendars-eras-and-date-ranges-relaxed-range-checks"></a>일정, 연대를 및 날짜 범위: 관대 한 범위 검사
 
-매우 많은 개별 달력 날짜 범위를 지원 되는 같은에 있는 연대를 <xref:System.Globalization.JapaneseCalendar> 및 <xref:System.Globalization.JapaneseLunisolarCalendar> 클래스는 범위도 지원 합니다. 이전에.NET 엄격한 연대 연대 별 날짜는 연대 범위의 확인 하기 위해 범위 검사를 사용 합니다. 범위 밖 날짜를 throw 한.NET Framework는 기본적으로 완화 된 범위가 지정 된 확인을 사용 합니다. 즉, 날짜의 지정된 된 연대에 범위를 벗어난 경우 메서드에서 throw는 <xref:System.ArgumentOutOfRangeException>합니다. 도입 된.NET Framework의 모든 버전 연대를 완화 하는 업데이트 범위 확인 지정된 된 연대에 "오버플로"의 범위 외부에 있는 연대 별 날짜를 다음 연대 및 예외가 인스턴스화하려면 throw 됩니다.
+매우 많은 개별 달력 날짜 범위를 지원 되는 같은에 있는 연대를 <xref:System.Globalization.JapaneseCalendar> 및 <xref:System.Globalization.JapaneseLunisolarCalendar> 클래스는 범위도 지원 합니다. 이전에.NET 엄격한 연대 연대 별 날짜를 해당 연대 범위의 확인 하기 위해 범위 검사를 사용 합니다. 즉, 날짜의 지정된 된 연대에 범위를 벗어난 경우 메서드에서 throw는 <xref:System.ArgumentOutOfRangeException>합니다. 현재.NET은 기본적으로 완화 된 범위가 지정 된 확인을 사용 합니다. 모든 버전의.NET 완화 된 연대를 도입 업데이트 범위 확인 다음 연대로 "오버플로" 범위 밖에 있는 경우 지정된 된 연대에 있는 연대 별 날짜를 인스턴스화하려면 및 예외가 발생 하지 않습니다.
 
 다음 예제에서는 1926, 25 년 12 월에 시작 되며, 1989 년 1 월 7에 종료 되었습니다 쇼프레젠테이션에서 연대의 65th 연도에서 날짜를 인스턴스화하고 하려고 합니다. 이 날짜는 1990 년 1 월 9 일에 해당 쇼프레젠테이션에서 연대를 범위를 벗어나는 되는 <xref:System.Globalization.JapaneseCalendar>합니다. 예제의 출력에서 볼 수 있듯이 예제에서 표시 되는 날짜 헤이세이 연대에 있는 두 번째 연도의 1990 년 1 월 9, 됩니다.
 
@@ -360,4 +363,5 @@ Japanese calendar date: 平成1年8月18日 (Gregorian: Friday, August 18, 1989)
 ## <a name="see-also"></a>참고자료
 
 - [방법: 그레고리오 력이 아닌 달력의 날짜 표시](../../../docs/standard/base-types/how-to-display-dates-in-non-gregorian-calendars.md)
-- [샘플: Calendar week range 유틸리티](https://code.msdn.microsoft.com/NET-Framework-4-Calendar-3360a84a)
+- [예제: Calendar week range 유틸리티](https://code.msdn.microsoft.com/NET-Framework-4-Calendar-3360a84a)
+- [달력 클래스](xref:System.Globalization.Calendar)

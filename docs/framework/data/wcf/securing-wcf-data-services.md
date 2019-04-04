@@ -8,12 +8,12 @@ helpviewer_keywords:
 - securing application [WCF Data Services]
 - WCF Data Services, security
 ms.assetid: 99fc2baa-a040-4549-bc4d-f683d60298af
-ms.openlocfilehash: 6efcb6947917ba3d16f562d24e8deefbe1d6e955
-ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
+ms.openlocfilehash: bc5fe149050ad0a4784d90d370dfcd3f99663b38
+ms.sourcegitcommit: a3db1a9eafca89f95ccf361bc1833b47fbb2bb30
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/16/2019
-ms.locfileid: "58125969"
+ms.lasthandoff: 04/04/2019
+ms.locfileid: "58920885"
 ---
 # <a name="securing-wcf-data-services"></a>WCF Data Services에 보안 설정
 이 항목에서는 개발, 배포 및 Open Data Protocol (OData)을 지 원하는 액세스 서비스는 WCF Data Services 및 응용 프로그램 실행에 관련 된 보안 고려 사항을 설명 합니다. 또한 안전한.NET Framework 응용 프로그램을 만들기 위한 권장 사항을 따라야 합니다.  
@@ -29,13 +29,10 @@ WCF Data Services 어떤 종류의 자체에 대 한 인증을 구현 하지 않
 |인증 옵션|설명|  
 |----------------------------|-----------------|  
 |익명 인증|HTTP 익명 인증을 사용하도록 설정되어 있는 경우 임의의 보안 주체에서 데이터 서비스에 연결할 수 있습니다. 익명 액세스를 위해서 자격 증명이 필요하지는 않습니다. 누구나 데이터 서비스에 액세스할 수 있도록 하려는 경우에만 이 옵션을 사용하세요.|  
-|기본 인증 및 다이제스트 인증|인증을 위해서는 사용자 이름 및 암호로 구성된 자격 증명이 필요합니다. Windows 클라이언트가 아닌 클라이언트의 인증을 지원합니다. **보안 정보:**  기본 인증 자격 증명(사용자 이름 및 암호)은 보안되지 않은 상태로 보내지므로 누군가 이를 가로챌 수 있습니다. 다이제스트 인증은 제공된 자격 증명을 기반으로 한 해시를 보내므로 기본 인증보다 안전합니다. 두 인증 모두 메시지 가로채기(man in the middle) 공격을 받기 쉽습니다. 이 인증 방법을 사용할 때는 SSL(Secure Sockets Layer)을 사용하여 클라이언트와 데이터 서비스 간 통신을 암호화하는 것이 좋습니다. <br /><br /> ASP.NET 응용 프로그램에서 HTTP 다이제스트 인증 요청 및 Microsoft 인터넷 정보 서비스 (IIS) 모두 기본 구현을 제공 합니다. 이 Windows 인증 공급자 구현을 통해 .NET Framework 클라이언트 응용 프로그램에서 요청의 HTTP 헤더에 있는 자격 증명을 데이터 서비스에 제공하여 Windows 사용자의 인증을 원활하게 협상할 수 있습니다. 자세한 내용은 [다이제스트 인증 기술 참조](https://go.microsoft.com/fwlink/?LinkId=200408)합니다.<br /><br /> 에 데이터 서비스 사용 하 여 기본 인증을 기반으로 일부 사용자 지정 인증 서비스와 Windows 자격 증명이 아니라 하려는 경우 인증에 대 한 사용자 지정 ADP.NET HTTP 모듈을 구현 해야 합니다.<br /><br /> WCF Data Services를 사용 하 여 사용자 지정 기본 인증 체계를 사용 하는 방법의 예는 블로그 게시물 [를 참조 하세요.
-OData 및 인증-부 6 – 사용자 지정 기본 인증] (https://devblogs.microsoft.com/odata/odata-and-authentication-part-6-custom-basic-authentication/)].|  
+|기본 인증 및 다이제스트 인증|인증을 위해서는 사용자 이름 및 암호로 구성된 자격 증명이 필요합니다. Windows 클라이언트가 아닌 클라이언트의 인증을 지원합니다. **보안 정보:**  기본 인증 자격 증명(사용자 이름 및 암호)은 보안되지 않은 상태로 보내지므로 누군가 이를 가로챌 수 있습니다. 다이제스트 인증은 제공된 자격 증명을 기반으로 한 해시를 보내므로 기본 인증보다 안전합니다. 두 인증 모두 메시지 가로채기(man in the middle) 공격을 받기 쉽습니다. 이 인증 방법을 사용할 때는 SSL(Secure Sockets Layer)을 사용하여 클라이언트와 데이터 서비스 간 통신을 암호화하는 것이 좋습니다. <br /><br /> ASP.NET 응용 프로그램에서 HTTP 다이제스트 인증 요청 및 Microsoft 인터넷 정보 서비스 (IIS) 모두 기본 구현을 제공 합니다. 이 Windows 인증 공급자 구현을 통해 .NET Framework 클라이언트 응용 프로그램에서 요청의 HTTP 헤더에 있는 자격 증명을 데이터 서비스에 제공하여 Windows 사용자의 인증을 원활하게 협상할 수 있습니다. 자세한 내용은 [다이제스트 인증 기술 참조](https://go.microsoft.com/fwlink/?LinkId=200408)합니다.<br /><br /> 에 데이터 서비스 사용 하 여 기본 인증을 기반으로 일부 사용자 지정 인증 서비스와 Windows 자격 증명이 아니라 하려는 경우 인증에 대 한 사용자 지정 ADP.NET HTTP 모듈을 구현 해야 합니다.<br /><br /> WCF Data Services를 사용 하 여 사용자 지정 기본 인증 체계를 사용 하는 방법의 예로, 블로그 게시물을 참조 하세요 [OData 및 인증-6 부-사용자 지정 기본 인증](https://devblogs.microsoft.com/odata/odata-and-authentication-part-6-custom-basic-authentication/)합니다.|  
 |Windows 인증|Windows 기반 자격 증명은 NTLM 또는 Kerberos를 사용하여 교환됩니다. 이 메커니즘은 기본 인증 또는 다이제스트 인증보다 안전하지만 클라이언트가 Windows 기반 응용 프로그램이어야 합니다. IIS는 Windows 인증 ASP.NET 응용 프로그램에서 HTTP 요청에 대 한 구현을 제공합니다. 자세한 내용은 [ASP.NET 폼 인증 개요](https://docs.microsoft.com/previous-versions/aspnet/7t6b43z4(v=vs.100))합니다.<br /><br /> WCF Data Services를 사용 하 여 Windows 인증을 사용 하는 방법의 예에 대 한 블로그 게시물을 참조 하세요 [OData 및 인증 – 2 부 – Windows 인증](https://devblogs.microsoft.com/odata/odata-and-authentication-part-2-windows-authentication/)합니다.|  
-|ASP.NET 폼 인증|폼 인증을 사용하면 직접 작성한 코드로 사용자를 인증한 다음 인증 토큰을 쿠키나 페이지 URL에 유지할 수 있습니다. 만든 로그인 폼을 사용하여 사용자의 사용자 이름과 암호를 인증할 수 있습니다. 인증되지 않은 요청은 로그인 페이지로 리디렉션되고 여기서 사용자는 자격 증명을 제공한 후 폼을 제출합니다. 응용 프로그램에서 요청을 인증하는 경우 시스템에서는 이후 요청에 사용할 ID를 다시 설정하기 위한 키가 포함된 티켓을 발급합니다. 자세한 내용은 [폼 인증 공급자](https://docs.microsoft.com/previous-versions/aspnet/9wff0kyh(v=vs.100))합니다. **보안 정보:**  기본적으로 폼 인증 티켓을 포함 하는 쿠키는 ASP.NET 웹 응용 프로그램에서 폼 인증을 사용 하는 경우 보호 되지 않습니다. SSL을 사용하여 인증 티켓과 초기 로그인 자격 증명을 모두 보호하는 것이 좋습니다. <br /><br /> WCF Data Services를 사용 하 여 폼 인증을 사용 하는 방법의 예는 블로그 게시물 [를 참조 하세요.
-OData 및 인증-부 7 – Forms 인증] (https://devblogs.microsoft.com/odata/odata-and-authentication-part-7-forms-authentication/)합니다.|  
-|클레임 기반 인증|클레임 기반 인증 일 경우 데이터 서비스를 신뢰할 수 있는 "타사" id 공급자 서비스 사용자를 인증에 의존 합니다. ID 공급자는 데이터 서비스 리소스에 대한 액세스를 요청하는 사용자를 긍정적으로 인증하고 요청된 리소스에 대한 액세스 권한을 부여하는 토큰을 발급합니다. 그런 다음 이 토큰이 데이터 서비스에 제공되며 이후에는 이 토큰을 통해 액세스 토큰을 발급한 ID 서비스와의 트러스트 관계를 기반으로 사용자에게 액세스 권한이 부여됩니다.<br /><br /> 클레임 기반 인증 공급자를 사용하여 얻을 수 있는 이점은 이 공급자를 사용하여 트러스트 도메인 간에 다양한 종류의 클라이언트를 인증할 수 있다는 사실입니다. 이러한 타사 공급자를 사용하면 데이터 서비스에서 사용자를 유지 관리하고 인증하기 위한 요구 사항을 줄일 수 있습니다. OAuth 2.0은 Microsoft Azure AppFabric 액세스 제어에서 페더레이션 권한 부여를 위해 서비스로 지원하는 클레임 기반 인증 프로토콜입니다. 이 프로토콜은 REST 기반 서비스를 지원합니다. WCF Data Services를 사용 하 여 OAuth 2.0을 사용 하는 방법의 예는 블로그 게시물 [를 참조 하세요.
-OData 및 인증-8-OAuth WRAP 부] (https://devblogs.microsoft.com/odata/odata-and-authentication-part-8-oauth-wrap/)합니다.|  
+|ASP.NET 폼 인증|폼 인증을 사용하면 직접 작성한 코드로 사용자를 인증한 다음 인증 토큰을 쿠키나 페이지 URL에 유지할 수 있습니다. 만든 로그인 폼을 사용하여 사용자의 사용자 이름과 암호를 인증할 수 있습니다. 인증되지 않은 요청은 로그인 페이지로 리디렉션되고 여기서 사용자는 자격 증명을 제공한 후 폼을 제출합니다. 응용 프로그램에서 요청을 인증하는 경우 시스템에서는 이후 요청에 사용할 ID를 다시 설정하기 위한 키가 포함된 티켓을 발급합니다. 자세한 내용은 [폼 인증 공급자](https://docs.microsoft.com/previous-versions/aspnet/9wff0kyh(v=vs.100))합니다. **보안 정보:**  기본적으로 폼 인증 티켓을 포함 하는 쿠키는 ASP.NET 웹 응용 프로그램에서 폼 인증을 사용 하는 경우 보호 되지 않습니다. SSL을 사용하여 인증 티켓과 초기 로그인 자격 증명을 모두 보호하는 것이 좋습니다. <br /><br /> 사용 하는 방법의 예가 폼 WCF Data Services를 사용 하 여 인증에 대 한 블로그 게시물을 참조 하세요 [OData 및 인증 – Part 7 – Forms 인증](https://devblogs.microsoft.com/odata/odata-and-authentication-part-7-forms-authentication/)합니다.|  
+|클레임 기반 인증|클레임 기반 인증 일 경우 데이터 서비스를 신뢰할 수 있는 "타사" id 공급자 서비스 사용자를 인증에 의존 합니다. ID 공급자는 데이터 서비스 리소스에 대한 액세스를 요청하는 사용자를 긍정적으로 인증하고 요청된 리소스에 대한 액세스 권한을 부여하는 토큰을 발급합니다. 그런 다음 이 토큰이 데이터 서비스에 제공되며 이후에는 이 토큰을 통해 액세스 토큰을 발급한 ID 서비스와의 트러스트 관계를 기반으로 사용자에게 액세스 권한이 부여됩니다.<br /><br /> 클레임 기반 인증 공급자를 사용하여 얻을 수 있는 이점은 이 공급자를 사용하여 트러스트 도메인 간에 다양한 종류의 클라이언트를 인증할 수 있다는 사실입니다. 이러한 타사 공급자를 사용하면 데이터 서비스에서 사용자를 유지 관리하고 인증하기 위한 요구 사항을 줄일 수 있습니다. OAuth 2.0은 Windows Azure AppFabric Access Control에서 페더레이션 권한 부여를 위해 서비스로 지원하는 클레임 기반 인증 프로토콜입니다. 이 프로토콜은 REST 기반 서비스를 지원합니다. WCF Data Services를 사용 하 여 OAuth 2.0을 사용 하는 방법의 예로, 블로그 게시물을 참조 하세요 [OData 및 인증 – 일부 8 – OAuth WRAP](https://devblogs.microsoft.com/odata/odata-and-authentication-part-8-oauth-wrap/)합니다.|  
   
 <a name="clientAuthentication"></a>   
 ### <a name="authentication-in-the-client-library"></a>클라이언트 라이브러리의 인증  

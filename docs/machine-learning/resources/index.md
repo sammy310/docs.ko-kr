@@ -3,6 +3,12 @@ title: 기계 학습 리소스 - ML.NET
 description: 사용자 지정 AI 솔루션 생성 및 .NET 애플리케이션에 통합을 지원하기 위해 이러한 ML.NET 리소스를 살펴봅니다.
 ms.custom: seodec18
 ms.date: 03/01/2019
+ms.openlocfilehash: 30d0ed07c8799657f12767a0c90822d9ff88b021
+ms.sourcegitcommit: a532e8314c3a4b5b039656567fedff9787a31957
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 03/02/2019
+ms.locfileid: "57251068"
 ---
 # <a name="machine-learning-resources---mlnet"></a>기계 학습 리소스 - ML.NET
 

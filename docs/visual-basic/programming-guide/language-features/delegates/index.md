@@ -2,11 +2,16 @@
 title: 대리자(Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
-  - 'delegates [Visual Basic]'
-  - 'Visual Basic code, delegates'
+- delegates [Visual Basic]
+- Visual Basic code, delegates
 ms.assetid: 410b60dc-5e60-4ec0-bfae-426755a2ee28
+ms.openlocfilehash: b3f333f1714a66a8ff462000385af92cf343a19e
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57674031"
 ---
-
 # <a name="delegates-visual-basic"></a>대리자(Visual Basic)
 
 대리자는 메서드를 참조하는 개체입니다. 다른 프로그래밍 언어에서 사용되는 함수 포인터와 비슷하기 때문에 *형식 안전 함수 포인터*라고도 합니다. 함수 포인터와 달리 Visual Basic 대리자는 클래스를 기반으로 하는 참조 형식 <xref:System.Delegate?displayProperty=nameWithType>합니다. 대리자는 공유 메서드(클래스의 특정 인스턴스 없이 호출할 수 있는 메서드) 및 인스턴스 메서드를 둘 다 참조할 수 있습니다.

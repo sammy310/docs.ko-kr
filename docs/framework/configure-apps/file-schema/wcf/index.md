@@ -2,6 +2,12 @@
 title: WCF 구성 스키마
 ms.date: 03/30/2017
 ms.assetid: c282aeb5-91f0-4522-8e2f-704c1ef3651f
+ms.openlocfilehash: baea1e49bce10054530afa5b6f282023d5ceb981
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58463334"
 ---
 # <a name="wcf-configuration-schema"></a>WCF 구성 스키마
 Windows Communication Foundation (WCF) 구성 요소를 사용 하 여 WCF 서비스 및 클라이언트 응용 프로그램을 구성할 수 있습니다. [구성 편집기 도구(SvcConfigEditor.exe)](../../../../../docs/framework/wcf/configuration-editor-tool-svcconfigeditor-exe.md)를 사용하여 클라이언트 및 서비스에 대한 구성 파일을 만들고 수정할 수 있습니다. 구성 파일은 XML 형식이므로 텍스트 편집기를 사용하여 구성 파일을 수동으로 편집하려면 XML에 익숙해야 합니다. 그렇지 않으면 찾을 수 없는 XML 요소 태그나 특성과 같은 문제가 발생할 수 있습니다. XML 요소 태그 및 속성이 대소문자를 구분하기 때문입니다.  
