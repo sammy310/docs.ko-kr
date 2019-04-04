@@ -2,10 +2,16 @@
 title: XAML 서비스
 ms.date: 03/30/2017
 helpviewer_keywords:
-  - 'XAML [XAML Services], System.Xaml concepts'
-  - 'XAML Services in WPF [XAML Services]'
-  - 'System.Xaml [XAML Services], conceptual documentation'
+- XAML [XAML Services], System.Xaml concepts
+- XAML Services in WPF [XAML Services]
+- System.Xaml [XAML Services], conceptual documentation
 ms.assetid: 0e11f386-808c-4eae-9ba6-029ad7ba2211
+ms.openlocfilehash: 37fdd96c0666bc6ecda0f46daa5ca6271a8666ab
+ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58048151"
 ---
 # <a name="xaml-services"></a><span data-ttu-id="de7d3-102">XAML 서비스</span><span class="sxs-lookup"><span data-stu-id="de7d3-102">XAML Services</span></span>
 <span data-ttu-id="de7d3-103">이 항목에서는.NET Framework XAML 서비스 라고 하는 기술 집합의 기능을 설명 합니다.</span><span class="sxs-lookup"><span data-stu-id="de7d3-103">This topic describes the capabilities of a technology set known as .NET Framework XAML Services.</span></span> <span data-ttu-id="de7d3-104">에 도입 된 어셈블리인 System.Xaml 어셈블리에 있는 대부분의 서비스와 설명 되는 Api는 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] .NET core 어셈블리의 집합입니다.</span><span class="sxs-lookup"><span data-stu-id="de7d3-104">The majority of the services and APIs described are located in the assembly System.Xaml, which is an assembly introduced with the [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] set of .NET core assemblies.</span></span> <span data-ttu-id="de7d3-105">판독기 및 작성기, 스키마 클래스 및 스키마 지원이 팩터리를 포함 하는 서비스 클래스, XAML 언어 내장 함수 지원을 및 다른 XAML 언어 기능 특성을 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="de7d3-105">Services include readers and writers, schema classes and schema support, factories, attributing of classes, XAML language intrinsic support, and other XAML language features.</span></span>  

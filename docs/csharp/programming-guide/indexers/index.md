@@ -1,13 +1,19 @@
 ---
-title: '인덱서 - C# 프로그래밍 가이드'
+title: 인덱서 - C# 프로그래밍 가이드
 ms.custom: seodec18
 ms.date: 03/10/2017
 f1_keywords:
-  - cs.indexers
+- cs.indexers
 helpviewer_keywords:
-  - 'indexers [C#]'
-  - 'C# language, indexers'
+- indexers [C#]
+- C# language, indexers
 ms.assetid: 022cd27d-d5e0-4cfe-8b97-dc018cc3355d
+ms.openlocfilehash: 5ab0a5e524979110c355391cf800cc82e6d6244f
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57365024"
 ---
 # <a name="indexers-c-programming-guide"></a><span data-ttu-id="27d69-102">인덱서(C# 프로그래밍 가이드)</span><span class="sxs-lookup"><span data-stu-id="27d69-102">Indexers (C# Programming Guide)</span></span>
 

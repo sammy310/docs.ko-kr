@@ -4,6 +4,12 @@ description: 컨테이너화된 .NET 애플리케이션을 위한 .NET 마이크
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/08/2018
+ms.openlocfilehash: 8f2297121429acad4222f72ac4fea54e8469b215
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58464673"
 ---
 # <a name="tackle-business-complexity-in-a-microservice-with-ddd-and-cqrs-patterns"></a><span data-ttu-id="0dbfa-103">DDD 및 CQRS 패턴을 사용하여 마이크로 서비스에서 비즈니스 복잡성 처리</span><span class="sxs-lookup"><span data-stu-id="0dbfa-103">Tackle Business Complexity in a Microservice with DDD and CQRS Patterns</span></span>
 

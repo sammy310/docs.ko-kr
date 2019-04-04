@@ -1,7 +1,13 @@
 ---
-title: 'C#의 비동기 프로그래밍'
-description: 'async, await 및 Task를 사용하여 비동기 프로그래밍을 지원하는 C# 언어에 대해 간략히 설명합니다.<T>'
+title: C#의 비동기 프로그래밍
+description: async, await 및 Task를 사용하여 비동기 프로그래밍을 지원하는 C# 언어에 대해 간략히 설명합니다.<T>
 ms.date: 03/18/2019
+ms.openlocfilehash: dc85fd4fb30278dc39c75c88d5fd23c1f1633366
+ms.sourcegitcommit: 8258515adc6c37ab6278e5a3d102d593246f8672
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58504368"
 ---
 # <a name="the-task-asynchronous-programming-model-in-c"></a><span data-ttu-id="8b8ae-103">C\#의 Task 비동기 프로그래밍 모델</span><span class="sxs-lookup"><span data-stu-id="8b8ae-103">The Task asynchronous programming model in C\#</span></span>
 

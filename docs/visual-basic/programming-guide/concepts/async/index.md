@@ -2,6 +2,12 @@
 title: Async 및 Await를 사용한 비동기 프로그래밍(Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: bd7e462b-583b-4395-9c36-45aa9e61072c
+ms.openlocfilehash: 0a00327d5c9c0a017deeb8ab46ae1eef680228ce
+ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58125527"
 ---
 # <a name="asynchronous-programming-with-async-and-await-visual-basic"></a><span data-ttu-id="4cd25-102">Async 및 Await를 사용한 비동기 프로그래밍(Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="4cd25-102">Asynchronous Programming with Async and Await (Visual Basic)</span></span>
 <span data-ttu-id="4cd25-103">비동기 프로그래밍을 사용하여 성능 병목 현상을 방지하고 애플리케이션의 전체적인 응답성을 향상할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="4cd25-103">You can avoid performance bottlenecks and enhance the overall responsiveness of your application by using asynchronous programming.</span></span> <span data-ttu-id="4cd25-104">그러나 비동기 애플리케이션을 쓰는 일반적인 기술이 복잡하여 해당 애플리케이션을 쓰고, 디버깅하고, 유지 관리하기 어려울 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="4cd25-104">However, traditional techniques for writing asynchronous applications can be complicated, making them difficult to write, debug, and maintain.</span></span>  

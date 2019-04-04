@@ -1,10 +1,15 @@
 ---
-title: 'C# 둘러보기 - C# 가이드'
-description: 'C#을 처음 사용하시나요? 언어의 기본 사항에 대해 알아봅니다.'
+title: C# 둘러보기 - C# 가이드
+description: C#을 처음 사용하시나요? 언어의 기본 사항에 대해 알아봅니다.
 ms.date: 08/10/2016
 ms.assetid: ebc727cd-8112-42e7-b59c-3c2873ad661c
+ms.openlocfilehash: 4a59d08cc60b94308fce06efc46f683779ff1468
+ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57843431"
 ---
-
 # <a name="a-tour-of-the-c-language"></a><span data-ttu-id="59bb7-104">C# 언어 둘러보기</span><span class="sxs-lookup"><span data-stu-id="59bb7-104">A Tour of the C# Language</span></span>
 
 <span data-ttu-id="59bb7-105">C#(“샵 참조”)은 간단하면서도 형식이 안전한 최신 개체 지향 프로그래밍 언어입니다.</span><span class="sxs-lookup"><span data-stu-id="59bb7-105">C# (pronounced "See Sharp") is a simple, modern, object-oriented, and type-safe programming language.</span></span> <span data-ttu-id="59bb7-106">C#은 C 언어 제품군에서 시작되었으며 C, C++, Java 및 JavaScript 프로그래머에게 친숙할 것입니다.</span><span class="sxs-lookup"><span data-stu-id="59bb7-106">C# has its roots in the C family of languages and will be immediately familiar to C, C++, Java, and JavaScript programmers.</span></span>

@@ -2,9 +2,15 @@
 title: Windows Forms 응용 프로그램 기초(Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
-  - Windows applications
-  - 'Windows Forms, Visual Basic'
+- Windows applications
+- Windows Forms, Visual Basic
 ms.assetid: 0b919d30-7fd6-42db-85c8-543d15312441
+ms.openlocfilehash: 99aa61d921217ab5638172a54697054e8421fd5c
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56972679"
 ---
 # <a name="windows-forms-application-basics-visual-basic"></a><span data-ttu-id="cb42e-102">Windows Forms 응용 프로그램 기초(Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="cb42e-102">Windows Forms Application Basics (Visual Basic)</span></span>
 <span data-ttu-id="cb42e-103">사용자의 컴퓨터에서 로컬로 실행 되는 Windows Forms 응용 프로그램을 만드는 기능은 Visual Basic의 중요 한 부분입니다.</span><span class="sxs-lookup"><span data-stu-id="cb42e-103">An important part of Visual Basic is the ability to create Windows Forms applications that run locally on users' computers.</span></span> <span data-ttu-id="cb42e-104">Windows Forms를 사용 하 여 응용 프로그램 및 사용자 인터페이스를 만들려면 Visual Studio를 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="cb42e-104">You can use Visual Studio to create the application and user interface using Windows Forms.</span></span> <span data-ttu-id="cb42e-105">Windows Forms 응용 프로그램의 클래스에 빌드되는 <xref:System.Windows.Forms> 네임 스페이스입니다.</span><span class="sxs-lookup"><span data-stu-id="cb42e-105">A Windows Forms application is built on classes from the <xref:System.Windows.Forms> namespace.</span></span>  

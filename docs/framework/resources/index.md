@@ -2,17 +2,23 @@
 title: .NET 앱의 리소스
 ms.date: 07/25/2018
 helpviewer_keywords:
-  - 'deploying applications [.NET Framework], resources'
-  - 'deploying applications [.NET Core], resources'
-  - application resources
-  - resource files
-  - satellite assemblies
-  - localization
-  - packaging application resources
-  - localizing resources
+- deploying applications [.NET Framework], resources
+- deploying applications [.NET Core], resources
+- application resources
+- resource files
+- satellite assemblies
+- localization
+- packaging application resources
+- localizing resources
 ms.assetid: 8ad495d4-2941-40cf-bf64-e82e85825890
 author: rpetrusha
 ms.author: ronpet
+ms.openlocfilehash: 889158aebb70de20b4e64044b5fa61dc3494ed73
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57203365"
 ---
 # <a name="resources-in-net-apps"></a><span data-ttu-id="f011e-102">.NET 앱의 리소스</span><span class="sxs-lookup"><span data-stu-id="f011e-102">Resources in .NET Apps</span></span>
 <span data-ttu-id="f011e-103">거의 모든 프로덕션 수준 응용 프로그램은 리소스를 사용해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="f011e-103">Nearly every production-quality app has to use resources.</span></span> <span data-ttu-id="f011e-104">리소스는 응용 프로그램과 함께 논리적으로 배포되는 실행 불가능한 데이터입니다.</span><span class="sxs-lookup"><span data-stu-id="f011e-104">A resource is any nonexecutable data that is logically deployed with an app.</span></span> <span data-ttu-id="f011e-105">리소스는 응용 프로그램에서 오류 메시지로 표시되거나 사용자 인터페이스의 일부로 표시될 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="f011e-105">A resource might be displayed in an app as error messages or as part of the user interface.</span></span> <span data-ttu-id="f011e-106">리소스는 문자열, 이미지, 지속된 개체 등을 포함하여 수많은 형식의 데이터를 포함할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="f011e-106">Resources can contain data in a number of forms, including strings, images, and persisted objects.</span></span> <span data-ttu-id="f011e-107">(지속된 개체를 리소스 파일에 쓰려면 해당 개체를 serialize할 수 있어야 합니다.) 리소스 파일에 데이터를 저장하면 전체 응용 프로그램을 다시 컴파일하지 않고 데이터를 변경할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="f011e-107">(To write persisted objects to a resource file, the objects must be serializable.) Storing your data in a resource file enables you to change the data without recompiling your entire app.</span></span> <span data-ttu-id="f011e-108">또한 단일 위치에 데이터를 저장할 수 있고, 여러 위치에 저장되어 있는 하드 코딩된 데이터를 사용하지 않아도 됩니다.</span><span class="sxs-lookup"><span data-stu-id="f011e-108">It also enables you to store data in a single location, and eliminates the need to rely on hard-coded data that is stored in multiple locations.</span></span>  

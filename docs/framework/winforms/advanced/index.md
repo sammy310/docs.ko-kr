@@ -2,9 +2,15 @@
 title: Windows Forms 애플리케이션 강화
 ms.date: 03/30/2017
 helpviewer_keywords:
-  - 'Windows Forms, enhancing'
-  - 'Windows Forms, adding features'
+- Windows Forms, enhancing
+- Windows Forms, adding features
 ms.assetid: 733d1219-d6ad-4256-a55b-9eccf47f5a06
+ms.openlocfilehash: 82847add5b35fe767d42ee88d7754f789174e434
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57713555"
 ---
 # <a name="enhancing-windows-forms-applications"></a><span data-ttu-id="66250-102">Windows Forms 애플리케이션 강화</span><span class="sxs-lookup"><span data-stu-id="66250-102">Enhancing Windows Forms Applications</span></span>
 <span data-ttu-id="66250-103">Windows Forms에는 사용자의 특정 요구에 맞게 Windows 기반 애플리케이션을 향상시키는 데 사용할 수 있는 다양한 기능이 포함되어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="66250-103">Windows Forms contains many features that you can use to enhance your Windows-based applications to meet the specific needs of your users.</span></span> <span data-ttu-id="66250-104">다음 항목에서는 이러한 기능과 사용 방법을 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="66250-104">The following topics describe these features and how to use them.</span></span>  

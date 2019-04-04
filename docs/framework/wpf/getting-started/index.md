@@ -2,10 +2,16 @@
 title: 시작(WPF)
 ms.date: 01/26/2018
 helpviewer_keywords:
-  - 'getting started [WPF]'
-  - 'introduction [WPF]'
-  - 'WPF [WPF], getting started'
+- getting started [WPF]
+- introduction [WPF]
+- WPF [WPF], getting started
 ms.assetid: 04f91da8-708c-46c7-8172-f1695ec847cd
+ms.openlocfilehash: 0717536912802461e6d03e240b22d3e05d535f86
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57371137"
 ---
 # <a name="getting-started-wpf"></a><span data-ttu-id="27a99-102">시작(WPF)</span><span class="sxs-lookup"><span data-stu-id="27a99-102">Getting Started (WPF)</span></span>
 <span data-ttu-id="27a99-103">WPF(Windows Presentation Foundation)는 데스크톱 클라이언트 애플리케이션을 만드는 UI 프레임워크입니다.</span><span class="sxs-lookup"><span data-stu-id="27a99-103">Windows Presentation Foundation (WPF) is a UI framework that creates desktop client applications.</span></span> <span data-ttu-id="27a99-104">WPF 개발 플랫폼은 애플리케이션 모델, 리소스, 컨트롤, 그래픽, 레이아웃, 데이터 바인딩, 문서 및 보안을 포함하여 다양한 애플리케이션 개발 기능 집합을 지원합니다.</span><span class="sxs-lookup"><span data-stu-id="27a99-104">The WPF development platform supports a broad set of application development features, including an application model, resources, controls, graphics, layout, data binding, documents, and security.</span></span> <span data-ttu-id="27a99-105">.NET Framework의 하위 집합이므로 이전에 ASP.NET 또는 Windows Forms를 사용하여 .NET Framework로 애플리케이션을 빌드한 경우 프로그래밍 환경이 비슷합니다.</span><span class="sxs-lookup"><span data-stu-id="27a99-105">It is a subset of the .NET Framework, so if you have previously built applications with the .NET Framework using ASP.NET or Windows Forms, the programming experience should be familiar.</span></span> <span data-ttu-id="27a99-106">WPF는 XAML(Extensible Application Markup Language)을 사용하여 애플리케이션 프로그래밍을 위한 선언적 모델을 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="27a99-106">WPF uses the Extensible Application Markup Language (XAML) to provide a declarative model for application programming.</span></span> <span data-ttu-id="27a99-107">이 섹션의 항목에서는 WPF를 소개하고 WPF를 시작하는 데 유용한 정보를 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="27a99-107">This section has topics that introduce and help you get started with WPF.</span></span>  

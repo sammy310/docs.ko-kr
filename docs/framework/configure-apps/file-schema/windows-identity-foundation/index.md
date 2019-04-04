@@ -3,6 +3,12 @@ title: Windows Identity Foundation 구성 스키마
 ms.date: 03/30/2017
 ms.assetid: 4d4f6d76-49a5-4bad-b345-097b2e2844e9
 author: BrucePerlerMS
+ms.openlocfilehash: 9c8009b4d95e5aa2c3d9bb8a8958040127a9e628
+ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 02/20/2019
+ms.locfileid: "56441192"
 ---
 # <a name="windows-identity-foundation-configuration-schema"></a><span data-ttu-id="d9df3-102">Windows Identity Foundation 구성 스키마</span><span class="sxs-lookup"><span data-stu-id="d9df3-102">Windows Identity Foundation Configuration Schema</span></span>
 <span data-ttu-id="d9df3-103">이 섹션의 항목에서는 WIF(Windows Identity Foundation) 구성 스키마에 대한 정보를 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="d9df3-103">The topics in this section provide information about the Windows Identity Foundation (WIF) configuration schema.</span></span> <span data-ttu-id="d9df3-104">또한 프레임 워크에 의해 노출 되는 클래스를 통해 WIF를 사용 하도록 응용 프로그램을 구성할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="d9df3-104">You can also configure an application to use WIF through classes exposed by the framework.</span></span> <span data-ttu-id="d9df3-105">이러한 클래스는 스키마의 관련 요소를 다루는 섹션에 설명되어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="d9df3-105">These classes are noted in the sections that treat relevant elements in the schema.</span></span> <span data-ttu-id="d9df3-106">다음은 WIF 구성 스키마에 의해 노출된 기본 XML 태그 구조를 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="d9df3-106">The following shows the basic XML tag structure exposed by the WIF configuration schema.</span></span> <span data-ttu-id="d9df3-107">특성은 생략됩니다.</span><span class="sxs-lookup"><span data-stu-id="d9df3-107">Attributes are omitted.</span></span> <span data-ttu-id="d9df3-108">강조 표시된 주석은 스키마의 주요 구성 요소를 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="d9df3-108">Highlighted comments indicate major components of the schema.</span></span>  

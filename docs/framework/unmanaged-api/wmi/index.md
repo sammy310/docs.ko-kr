@@ -4,8 +4,13 @@ description: WMI 및 성능 카운터 정보에 대한 .NET Framework 관리되�
 author: rpetrusha
 ms.author: ronpet
 ms.date: 11/06/2017
+ms.openlocfilehash: bbf22496098f848cc7c55652198d792c6f631c15
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57377458"
 ---
-
 # <a name="windows-management-instrumentation-wmi-and-performance-counters-unmanaged-api-reference"></a><span data-ttu-id="29351-103">WMI(Windows Management Instrumentation) 및 성능 카운터(관리되지 않는 API 참조)</span><span class="sxs-lookup"><span data-stu-id="29351-103">Windows Management Instrumentation (WMI) and Performance Counters (Unmanaged API Reference)</span></span>
 
 <span data-ttu-id="29351-104">.NET Framework WMI 및 성능 카운터 관리되지 않는 API는 [네이티브 Windows Management Instrumentation API](/windows/desktop/WmiSdk/com-api-for-wmi)에 대한 호출을 래핑하는 함수 집합으로 구성됩니다.</span><span class="sxs-lookup"><span data-stu-id="29351-104">The .NET Framework WMI and Performance Counters unmanaged API consists of a set of functions that wrap calls to the [native Windows Management Instrumentation API](/windows/desktop/WmiSdk/com-api-for-wmi).</span></span> <span data-ttu-id="29351-105">이를 통해 원격 컴퓨터 시스템을 관리하고 모니터링하는 도구와 라이브러리를 개발할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="29351-105">It allows you to develop tools and libraries that manage and monitor remote computer systems.</span></span>

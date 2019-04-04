@@ -4,6 +4,12 @@ description: 컨테이너화된 .NET 애플리케이션에 대한 .NET 마이크
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 01/07/2019
+ms.openlocfilehash: 9a544172e180bbd3ae5eb2281e73e36407ffc003
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58463646"
 ---
 # <a name="net-microservices-architecture-for-containerized-net-applications"></a><span data-ttu-id="d63df-105">.NET 마이크로 서비스: 컨테이너화된 .NET 애플리케이션을 위한 아키텍처</span><span class="sxs-lookup"><span data-stu-id="d63df-105">.NET Microservices: Architecture for Containerized .NET Applications</span></span>
 

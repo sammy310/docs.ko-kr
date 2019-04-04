@@ -2,11 +2,17 @@
 title: .NET Framework 성능
 ms.date: 03/30/2017
 helpviewer_keywords:
-  - 'performance [.NET Framework]'
-  - 'reliability [.NET Framework]'
+- performance [.NET Framework]
+- reliability [.NET Framework]
 ms.assetid: c1676cca-3f1a-41ec-b469-9029566074fc
 author: mairaw
 ms.author: mairaw
+ms.openlocfilehash: a575f6c067d22ddf35a238c36f66fe8e91f6be0c
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57361280"
 ---
 # <a name="net-framework-performance"></a><span data-ttu-id="cac68-102">.NET Framework 성능</span><span class="sxs-lookup"><span data-stu-id="cac68-102">.NET Framework Performance</span></span>
 <span data-ttu-id="cac68-103">성능이 우수한 앱을 만들려면 앱의 다른 모든 기능을 디자인하는 것처럼 성능을 디자인하고 계획해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="cac68-103">If you want to create apps with great performance, you should design and plan for performance just as you would design any other feature of your app.</span></span> <span data-ttu-id="cac68-104">앱의 성능을 측정할 수 있도록 Microsoft에서 제공하는 도구를 사용하고 필요한 경우 메모리 사용, 코드 처리량 및 응답성을 향상시킬 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="cac68-104">You can use the tools provided by Microsoft to measure your app's performance, and, if needed, make improvements to memory use, code throughput, and responsiveness.</span></span> <span data-ttu-id="cac68-105">이 항목에는 Microsoft에서 제공하는 성능 분석 도구가 나열되어 있으며, 앱 개발의 특정 영역에 대한 성능을 설명하는 다른 항목의 링크가 제공되어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="cac68-105">This topic lists the performance analysis tools that Microsoft provides, and provides links to other topics that cover performance for specific areas of app development.</span></span>  

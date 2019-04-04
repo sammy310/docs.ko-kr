@@ -2,11 +2,17 @@
 title: 인터페이스(Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
-  - 'Visual Basic code, interfaces'
-  - 'interfaces [Visual Basic], Visual Basic'
-  - interfaces
-  - 'interfaces [Visual Basic]'
+- Visual Basic code, interfaces
+- interfaces [Visual Basic], Visual Basic
+- interfaces
+- interfaces [Visual Basic]
 ms.assetid: 61b06674-12c9-430b-be68-cc67ecee1f5b
+ms.openlocfilehash: 5f85eca1026d05d8dc3d862559ee48440edf2c4b
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56972388"
 ---
 # <a name="interfaces-visual-basic"></a><span data-ttu-id="e0ee6-102">인터페이스(Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="e0ee6-102">Interfaces (Visual Basic)</span></span>
 <span data-ttu-id="e0ee6-103">*인터페이스*는 클래스가 구현할 수 있는 속성, 메서드 및 이벤트를 정의합니다.</span><span class="sxs-lookup"><span data-stu-id="e0ee6-103">*Interfaces* define the properties, methods, and events that classes can implement.</span></span> <span data-ttu-id="e0ee6-104">인터페이스를 사용하면 기능을 밀접한 관련이 있는 속성, 메서드, 이벤트 등의 작은 그룹으로 정의할 수 있습니다. 이렇게 하면 기존 코드를 그대로 사용하여 인터페이스에 대한 고급 구현을 개발할 수 있기 때문에 호환성 문제가 줄어듭니다.</span><span class="sxs-lookup"><span data-stu-id="e0ee6-104">Interfaces allow you to define features as small groups of closely related properties, methods, and events; this reduces compatibility problems because you can develop enhanced implementations for your interfaces without jeopardizing existing code.</span></span> <span data-ttu-id="e0ee6-105">추가적인 인터페이스와 구현을 개발하여 언제든지 새로운 기능을 추가할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="e0ee6-105">You can add new features at any time by developing additional interfaces and implementations.</span></span>  

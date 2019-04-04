@@ -1,8 +1,14 @@
 ---
-title: 'F# 가이드'
-description: '이 가이드에서는 F#, .NET에서 실행되는 함수형 프로그래밍 언어에 대한 다양한 교육 자료에 대한 개요를 제공합니다.'
+title: F# 가이드
+description: 이 가이드에서는 F#, .NET에서 실행되는 함수형 프로그래밍 언어에 대한 다양한 교육 자료에 대한 개요를 제공합니다.
 author: cartermp
 ms.date: 08/03/2018
+ms.openlocfilehash: 7bba949a7567173f5f3918a6ed32aabad26fb362
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56977008"
 ---
 # <a name="f-guide"></a><span data-ttu-id="221e2-103">F# 가이드</span><span class="sxs-lookup"><span data-stu-id="221e2-103">F# Guide</span></span>
 

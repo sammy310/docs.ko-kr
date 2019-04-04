@@ -1,10 +1,16 @@
 ---
 title: .NET Core 자습서
-description: '.NET Core 학습을 위한 자습서에 따라 Mac, Linux 및 Windows에서 앱과 라이브러리를 빌드하세요.'
+description: .NET Core 학습을 위한 자습서에 따라 Mac, Linux 및 Windows에서 앱과 라이브러리를 빌드하세요.
 author: richlander
 ms.date: 03/16/2017
 titleSuffix: ''
 ms.custom: seodec18
+ms.openlocfilehash: 794aa91e11f8d7386d3fe98f692e245e8af95eaa
+ms.sourcegitcommit: 5d9f4b805787f890ca6e0dc7ea30a43018bc9cbb
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 03/12/2019
+ms.locfileid: "57788299"
 ---
 # <a name="learn-net-core-and-the-net-core-sdk-tools-by-exploring-these-tutorials"></a><span data-ttu-id="0c250-103">자습서에서 .NET Core 및 .NET Core SDK 도구 알아보기</span><span class="sxs-lookup"><span data-stu-id="0c250-103">Learn .NET Core and the .NET Core SDK tools by exploring these Tutorials</span></span>
 

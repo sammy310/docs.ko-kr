@@ -1,14 +1,20 @@
 ---
-title: 'C# 프로그래밍 가이드'
+title: C# 프로그래밍 가이드
 ms.date: 05/02/2017
 f1_keywords:
-  - cs.langref
+- cs.langref
 helpviewer_keywords:
-  - 'reference tables [C#]'
-  - 'C# language, programming guide'
-  - 'Visual C#, programming concepts'
-  - 'C# language, concepts'
+- reference tables [C#]
+- C# language, programming guide
+- Visual C#, programming concepts
+- C# language, concepts
 ms.assetid: ac0f23a2-6bf3-4077-be99-538ae5fd3bc5
+ms.openlocfilehash: 701086c76d4e7b811ca67a9dd2112e69a45ba254
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56745877"
 ---
 # <a name="c-programming-guide"></a><span data-ttu-id="d26ea-102">C# 프로그래밍 가이드</span><span class="sxs-lookup"><span data-stu-id="d26ea-102">C# programming guide</span></span>
 <span data-ttu-id="d26ea-103">이 섹션에서는 핵심 C# 언어 기능과 .NET Framework를 통해 C#에서 액세스할 수 있는 기능에 대한 자세한 정보를 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="d26ea-103">This section provides detailed information on key C# language features and features accessible to C# through the .NET Framework.</span></span>  

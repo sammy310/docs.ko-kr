@@ -5,8 +5,13 @@ author: ardalis
 ms.author: wiwagn
 ms.date: 08/30/2017
 ms.custom: seodec18
+ms.openlocfilehash: 73667843452bbcab52a8cd4aa7906beecc095677
+ms.sourcegitcommit: 462dc41a13942e467984e48f4018d1f79ae67346
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 03/19/2019
+ms.locfileid: "58185508"
 ---
-
 # <a name="unit-testing-in-net-core-and-net-standard"></a><span data-ttu-id="82a02-103">.NET Core 및 .NET Standard의 단위 테스트</span><span class="sxs-lookup"><span data-stu-id="82a02-103">Unit testing in .NET Core and .NET Standard</span></span>
 
 <span data-ttu-id="82a02-104">.NET Core를 통해 쉽게 단위 테스트를 만들 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="82a02-104">.NET Core makes it easy to create unit tests.</span></span> <span data-ttu-id="82a02-105">이 문서에서는 단위 테스트를 소개하고 이 테스트와 다른 테스트의 차이점을 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="82a02-105">This article introduces unit tests and illustrates how they differ from other kinds of tests.</span></span> <span data-ttu-id="82a02-106">페이지 아래쪽에 있는 연결된 리소스는 테스트 프로젝트를 솔루션에 추가하는 방법을 보여줍니다.</span><span class="sxs-lookup"><span data-stu-id="82a02-106">The linked resources near the bottom of the page show you how to add a test project to your solution.</span></span> <span data-ttu-id="82a02-107">테스트 프로젝트를 설정한 후에 명령줄 또는 Visual Studio를 사용하여 단위 테스트를 실행할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="82a02-107">After you set up your test project, you will be able to run your unit tests using the command line or Visual Studio.</span></span>

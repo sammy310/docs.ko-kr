@@ -4,6 +4,12 @@ description: 이 가이드에 대 한 핵심 내용 검토 합니다.
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 02/15/2019
+ms.openlocfilehash: 092c182fd9246f4ded148302f6d49cbde24d27d0
+ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56835839"
 ---
 # <a name="key-takeaways"></a><span data-ttu-id="ac88d-103">핵심 내용</span><span class="sxs-lookup"><span data-stu-id="ac88d-103">Key takeaways</span></span>
 
