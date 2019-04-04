@@ -1,6 +1,6 @@
 ---
 title: Service Fabric에 Windows 컨테이너를 배포 하는 경우
-description: Azure 클라우드 및 Windows 컨테이너를 사용 하 여 기존.NET 응용 프로그램 현대화 | Service Fabric에 Windows 컨테이너를 배포 하는 경우
+description: Azure 클라우드와 Windows 컨테이너를 사용하여 기존 .NET 응용 프로그램 최신화 | Service Fabric에 Windows 컨테이너를 배포하는 경우
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 04/30/2018
@@ -11,15 +11,15 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 12/10/2018
 ms.locfileid: "53129508"
 ---
-# <a name="when-to-deploy-windows-containers-to-service-fabric"></a>Service Fabric에 Windows 컨테이너를 배포 하는 경우
+# <a name="when-to-deploy-windows-containers-to-service-fabric"></a>Service Fabric에 Windows 컨테이너를 배포하는 경우
 
-Windows 컨테이너를 기반으로 하는 응용 프로그램 더 많은 IaaS Vm에서 지금 이동 하는 플랫폼을 사용 하 여 신속 하 게 해야 합니다. 이 향상 된 자동화 된 확장성 및 높은 확장성 및 배포에 대 한 완전 한 관리 환경이 향상을 업그레이드 하는 작업, 버전 관리, 롤백 및 상태 모니터링. 오 케 스트레이 터는 Microsoft Azure 클라우드 뿐만 아니라 온-프레미스 또는 다른 클라우드에서 사용할 수 있는 Azure Service Fabric을 사용 하 여 이러한 목표를 달성할 수 있습니다.
+Windows 컨테이너를 기반으로하는 응용 프로그램은 IaaS VM에서 훨씬 더 멀리 이동하는 플랫폼을 빠르게 사용해야 할 것입니다. 이는 향상된 높고 자동화된 확장성을 제공하고 배포, 업그레이드, 버전 관리, 롤백 및 상태 모니터링에 대한 완벽한 관리 경험을 크게 향상시킵니다. Microsoft Azure 클라우드뿐만 아니라 온-프레미스나 그 밖에 클라우드에서도 사용할 수 있는 오케스트레이터 Azure Service Fabric을 사용하여 이러한 목표를 달성 할 수 있습니다.
 
-많은 조직 들이 고 두 가지 이유로 모놀리식 기존 응용 프로그램을 컨테이너로 이동 합니다.
+많은 조직에서 다음 두 가지 이유때문에 모놀리식의 기존 응용 프로그램을 컨테이너로 옮깁니다.
 
--   비용된 절감, 통합 및 기존 하드웨어 또는 높은 밀도로 실행 중인 응용 프로그램에서 제거로 인 한 합니다.
+-   기존 하드웨어의 통합 및 제거 또는 더 높은 밀도의 응용 프로그램 실행으로 인한 비용 절감.
 
--   개발 및 운영 간의 일관 된 배포 계약입니다.
+-   개발 및 운영 간의 일관된 배포 약속.
 
 비용 절감을 추구 하는 것은 이해할 수 있도록 하 고 모든 조직 목표를 추적 되는 것입니다. 일관 된 배포를 평가 하려면 어렵습니다 이지만 중요 한 동일 하 게 합니다. 일관 된 배포 계약을 선택 하면 적합 한 기술을 사용 하 여 개발자는 운영 팀 배포 및 응용 프로그램을 관리 하는 단일 방법을 가져옵니다 코드 의미 합니다. 본이 계약은 특정 기술만 사용 하는 개발자를 강제 하거나 다양 한 기술의 복잡성을 처리 하는 작업의 어려움을 완화 합니다. 기본적으로, 각 응용 프로그램은 자체 포함된 배포 이미지에 컨테이너 화 된.
 
