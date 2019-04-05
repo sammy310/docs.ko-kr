@@ -1,6 +1,6 @@
 ---
-title: 클라우드에 최적화 된 응용 프로그램에서 Microsoft 기술
-description: 기존.NET 응용 프로그램을 Azure 클라우드와 Windows 컨테이너를 사용하여 최신화 | 클라우드에 최적화 된 응용 프로그램에서 Microsoft 기술
+title: 클라우드에 최적화된 응용 프로그램 내의 Microsoft 기술
+description: 기존.NET 응용 프로그램을 Azure 클라우드와 Windows 컨테이너를 사용하여 최신화 | 클라우드에 최적화된 응용 프로그램 내의 Microsoft 기술
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 04/28/2018
@@ -11,9 +11,9 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 12/10/2018
 ms.locfileid: "53153880"
 ---
-# <a name="microsoft-technologies-in-cloud-optimized-applications"></a>클라우드에 최적화 된 응용 프로그램에서 Microsoft 기술
+# <a name="microsoft-technologies-in-cloud-optimized-applications"></a>클라우드에 최적화된 응용 프로그램 내의 Microsoft 기술
 
-다음 목록은 클라우드에 최적화 된 앱의 요구 사항으로 인식되는 도구와 기술, 솔루션을 설명 합니다. 우선 순위에 따라 클라우드 최적화 요소를 단계적 또는 선택적으로 채택할 수 있습니다.
+다음 목록은 클라우드에 최적화된 앱의 요구 사항으로 인식되는 도구와 기술, 솔루션을 설명합니다. 우선 순위에 따라 클라우드 최적화 요소를 단계적 또는 선택적으로 채택할 수 있습니다.
 
 -   **클라우드 인프라**: 계산 플랫폼과 운영 체제, 네트워크, 저장소를 제공하는 인프라입니다. Microsoft Azure는 이 수준에 위치합니다.
 
