@@ -7,26 +7,26 @@ helpviewer_keywords:
 - ListBox control [WPF]
 - controls [WPF], ListBox
 ms.assetid: b91bb352-4f51-44e0-9017-a041f216c852
-ms.openlocfilehash: fe458ea2ca4107b7d43b160ba90b57c10b88a7f6
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 69f93b902fc3c35749871a187e57d45a404c6602
+ms.sourcegitcommit: 68eb5c4928e2b082f178a42c16f73fedf52c2ab8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57362229"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59055055"
 ---
-# <a name="listbox"></a><span data-ttu-id="579b9-102">ListBox</span><span class="sxs-lookup"><span data-stu-id="579b9-102">ListBox</span></span>
-<span data-ttu-id="579b9-103"><xref:System.Windows.Controls.ListBox> 컨트롤은 선택 가능한 항목 목록 사용 하 여 사용자를 제공 합니다.</span><span class="sxs-lookup"><span data-stu-id="579b9-103">A <xref:System.Windows.Controls.ListBox> control provides users with a list of selectable items.</span></span>  
+# <a name="listbox"></a><span data-ttu-id="72f25-102">ListBox</span><span class="sxs-lookup"><span data-stu-id="72f25-102">ListBox</span></span>
+<span data-ttu-id="72f25-103"><xref:System.Windows.Controls.ListBox> 컨트롤은 선택 가능한 항목 목록 사용 하 여 사용자를 제공 합니다.</span><span class="sxs-lookup"><span data-stu-id="72f25-103">A <xref:System.Windows.Controls.ListBox> control provides users with a list of selectable items.</span></span>  
   
- <span data-ttu-id="579b9-104">다음 그림에서는 일반적인 <xref:System.Windows.Controls.ListBox>합니다.</span><span class="sxs-lookup"><span data-stu-id="579b9-104">The following figure illustrates a typical <xref:System.Windows.Controls.ListBox>.</span></span>  
+ <span data-ttu-id="72f25-104">다음 그림에서는 일반적인 <xref:System.Windows.Controls.ListBox>합니다.</span><span class="sxs-lookup"><span data-stu-id="72f25-104">The following figure illustrates a typical <xref:System.Windows.Controls.ListBox>.</span></span>  
   
- <span data-ttu-id="579b9-105">![ListBox 스크린 샷](./media/ss-ctl-listbox.gif "SS_CTL_listbox")</span><span class="sxs-lookup"><span data-stu-id="579b9-105">![ListBox screen shot](./media/ss-ctl-listbox.gif "SS_CTL_listbox")</span></span>  
-<span data-ttu-id="579b9-106">일반적인 ListBox</span><span class="sxs-lookup"><span data-stu-id="579b9-106">Typical ListBox</span></span>  
+ <span data-ttu-id="72f25-105">![ListBox 스크린 샷](./media/ss-ctl-listbox.gif "SS_CTL_listbox")</span><span class="sxs-lookup"><span data-stu-id="72f25-105">![ListBox screenshot](./media/ss-ctl-listbox.gif "SS_CTL_listbox")</span></span>  
+<span data-ttu-id="72f25-106">일반적인 ListBox</span><span class="sxs-lookup"><span data-stu-id="72f25-106">Typical ListBox</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="579b9-107">섹션 내용</span><span class="sxs-lookup"><span data-stu-id="579b9-107">In This Section</span></span>  
- [<span data-ttu-id="579b9-108">방법 항목</span><span class="sxs-lookup"><span data-stu-id="579b9-108">How-to Topics</span></span>](listbox-how-to-topics.md)  
+## <a name="in-this-section"></a><span data-ttu-id="72f25-107">섹션 내용</span><span class="sxs-lookup"><span data-stu-id="72f25-107">In This Section</span></span>  
+ [<span data-ttu-id="72f25-108">방법 항목</span><span class="sxs-lookup"><span data-stu-id="72f25-108">How-to Topics</span></span>](listbox-how-to-topics.md)  
   
-## <a name="reference"></a><span data-ttu-id="579b9-109">참조</span><span class="sxs-lookup"><span data-stu-id="579b9-109">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="72f25-109">참조</span><span class="sxs-lookup"><span data-stu-id="72f25-109">Reference</span></span>  
  <xref:System.Windows.Controls.ListBox>  
   <xref:System.Windows.Controls.ListBoxItem>  
   
-## <a name="related-sections"></a><span data-ttu-id="579b9-110">관련 단원</span><span class="sxs-lookup"><span data-stu-id="579b9-110">Related Sections</span></span>
+## <a name="related-sections"></a><span data-ttu-id="72f25-110">관련 단원</span><span class="sxs-lookup"><span data-stu-id="72f25-110">Related Sections</span></span>

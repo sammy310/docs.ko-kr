@@ -8,31 +8,31 @@ helpviewer_keywords:
 - controls [WPF], ToolTip
 - popups [WPF]
 ms.assetid: a3cb42d6-6ce3-4aa0-a557-2cc5b142f1e4
-ms.openlocfilehash: 8f471b26daa89bc513b36eaed5336aa6262cb26d
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 9fbb2fa4d403f59619792271eb3b8046cfa23949
+ms.sourcegitcommit: 68eb5c4928e2b082f178a42c16f73fedf52c2ab8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57367572"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59054990"
 ---
-# <a name="tooltip"></a><span data-ttu-id="f79b0-102">도구 설명</span><span class="sxs-lookup"><span data-stu-id="f79b0-102">ToolTip</span></span>
-<span data-ttu-id="f79b0-103">도구 설명이 같은 요소를 위로 마우스 포인터를 놓을 때 표시 되는 작은 팝업 창에 <xref:System.Windows.Controls.Button>입니다.</span><span class="sxs-lookup"><span data-stu-id="f79b0-103">A tooltip is a small pop-up window that appears when a user pauses the mouse pointer over an element, such as over a <xref:System.Windows.Controls.Button>.</span></span>  
+# <a name="tooltip"></a><span data-ttu-id="9e875-102">도구 설명</span><span class="sxs-lookup"><span data-stu-id="9e875-102">ToolTip</span></span>
+<span data-ttu-id="9e875-103">도구 설명이 같은 요소를 위로 마우스 포인터를 놓을 때 표시 되는 작은 팝업 창에 <xref:System.Windows.Controls.Button>입니다.</span><span class="sxs-lookup"><span data-stu-id="9e875-103">A tooltip is a small pop-up window that appears when a user pauses the mouse pointer over an element, such as over a <xref:System.Windows.Controls.Button>.</span></span>  
   
- <span data-ttu-id="f79b0-104">다음 그림에서는 마우스 포인터로 가리키는 합니다 **닫기**<xref:System.Windows.Controls.Button>, 그러면 해당 식별 표시 <xref:System.Windows.Controls.ToolTip>합니다.</span><span class="sxs-lookup"><span data-stu-id="f79b0-104">The following illustration shows a mouse pointer that points to the **Close**<xref:System.Windows.Controls.Button>, which then displays its identifying <xref:System.Windows.Controls.ToolTip>.</span></span>  
+ <span data-ttu-id="9e875-104">다음 그림에서는 마우스 포인터로 가리키는 합니다 **닫기**<xref:System.Windows.Controls.Button>, 그러면 해당 식별 표시 <xref:System.Windows.Controls.ToolTip>합니다.</span><span class="sxs-lookup"><span data-stu-id="9e875-104">The following illustration shows a mouse pointer that points to the **Close**<xref:System.Windows.Controls.Button>, which then displays its identifying <xref:System.Windows.Controls.ToolTip>.</span></span>  
   
- <span data-ttu-id="f79b0-105">도구 설명이 표시를 사용 하 여 닫기 단추</span><span class="sxs-lookup"><span data-stu-id="f79b0-105">Close button with its tooltip displayed</span></span>  
+ <span data-ttu-id="9e875-105">도구 설명이 표시를 사용 하 여 닫기 단추</span><span class="sxs-lookup"><span data-stu-id="9e875-105">Close button with its tooltip displayed</span></span>  
   
- <span data-ttu-id="f79b0-106">![ToolTip 스크린 샷](./media/ss-ctl-tooltip.png "SS_CTL_tooltip")</span><span class="sxs-lookup"><span data-stu-id="f79b0-106">![ToolTip screen shot](./media/ss-ctl-tooltip.png "SS_CTL_tooltip")</span></span>  
+ <span data-ttu-id="9e875-106">![ToolTip 스크린 샷](./media/ss-ctl-tooltip.png "SS_CTL_tooltip")</span><span class="sxs-lookup"><span data-stu-id="9e875-106">![ToolTip screenshot](./media/ss-ctl-tooltip.png "SS_CTL_tooltip")</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="f79b0-107">섹션 내용</span><span class="sxs-lookup"><span data-stu-id="f79b0-107">In This Section</span></span>  
- [<span data-ttu-id="f79b0-108">도구 설명 개요</span><span class="sxs-lookup"><span data-stu-id="f79b0-108">ToolTip Overview</span></span>](tooltip-overview.md)  
-  [<span data-ttu-id="f79b0-109">방법 항목</span><span class="sxs-lookup"><span data-stu-id="f79b0-109">How-to Topics</span></span>](tooltip-how-to-topics.md)  
+## <a name="in-this-section"></a><span data-ttu-id="9e875-107">섹션 내용</span><span class="sxs-lookup"><span data-stu-id="9e875-107">In This Section</span></span>  
+ [<span data-ttu-id="9e875-108">도구 설명 개요</span><span class="sxs-lookup"><span data-stu-id="9e875-108">ToolTip Overview</span></span>](tooltip-overview.md)  
+  [<span data-ttu-id="9e875-109">방법 항목</span><span class="sxs-lookup"><span data-stu-id="9e875-109">How-to Topics</span></span>](tooltip-how-to-topics.md)  
   
-## <a name="reference"></a><span data-ttu-id="f79b0-110">참조</span><span class="sxs-lookup"><span data-stu-id="f79b0-110">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="9e875-110">참조</span><span class="sxs-lookup"><span data-stu-id="9e875-110">Reference</span></span>  
  <xref:System.Windows.Controls.ToolTip>  
   <xref:System.Windows.Controls.ToolTipService>  
   <xref:System.Windows.Controls.Primitives.Popup>  
   
-## <a name="related-sections"></a><span data-ttu-id="f79b0-111">관련 단원</span><span class="sxs-lookup"><span data-stu-id="f79b0-111">Related Sections</span></span>  
- [<span data-ttu-id="f79b0-112">팝업 개요</span><span class="sxs-lookup"><span data-stu-id="f79b0-112">Popup Overview</span></span>](popup-overview.md)  
-  [<span data-ttu-id="f79b0-113">방법 항목</span><span class="sxs-lookup"><span data-stu-id="f79b0-113">How-to Topics</span></span>](popup-how-to-topics.md)
+## <a name="related-sections"></a><span data-ttu-id="9e875-111">관련 단원</span><span class="sxs-lookup"><span data-stu-id="9e875-111">Related Sections</span></span>  
+ [<span data-ttu-id="9e875-112">Popup 개요</span><span class="sxs-lookup"><span data-stu-id="9e875-112">Popup Overview</span></span>](popup-overview.md)  
+  [<span data-ttu-id="9e875-113">방법 항목</span><span class="sxs-lookup"><span data-stu-id="9e875-113">How-to Topics</span></span>](popup-how-to-topics.md)
