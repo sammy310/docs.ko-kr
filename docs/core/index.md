@@ -4,12 +4,12 @@ description: .NET Core는 Windows, Linux 및 Mac 앱을 만들기 위한 모듈�
 author: richlander
 ms.date: 08/01/2018
 ms.custom: updateeachrelease
-ms.openlocfilehash: 62019c5414857ed5eee99a6a60f5b0b183fe25e8
-ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
+ms.openlocfilehash: 79a0c09074159160dd01b0c7970612f7058cc3fc
+ms.sourcegitcommit: a3db1a9eafca89f95ccf361bc1833b47fbb2bb30
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "54030284"
+ms.lasthandoff: 04/04/2019
+ms.locfileid: "58920625"
 ---
 # <a name="net-core-guide"></a>.NET Core 가이드
 
@@ -21,7 +21,7 @@ ms.locfileid: "54030284"
 
 ## <a name="download-net-core-22"></a>.NET Core 2.2 다운로드
 
-[.NET Core 2.2 SDK](https://www.microsoft.com/net/download)를 다운로드하여 Windows, macOS 또는 Linux 머신에서 .NET Core를 사용해 보세요. Docker 컨테이너를 사용하려면 [microsoft/dotnet](https://hub.docker.com/r/microsoft/dotnet/)을 방문하세요.
+[.NET Core 2.2 SDK](https://www.microsoft.com/net/download)를 다운로드하여 Windows, macOS 또는 Linux 머신에서 .NET Core를 사용해 보세요. Docker 컨테이너를 사용하려면 [dotnet/core](https://hub.docker.com/_/microsoft-dotnet-core/)를 방문하세요.
 
 다른 .NET Core 버전을 찾는 경우 [.NET Core 다운로드](https://www.microsoft.com/net/download/archives)에서 모든 .NET Core 버전을 사용할 수 있습니다.
 
@@ -44,7 +44,7 @@ dotnet run
 Hello World!
 ```
 
-## <a name="support"></a>Support(지원)
+## <a name="support"></a>고객 지원팀
 
 .NET Core는 [Microsoft에 의해](https://www.microsoft.com/net/support/policy) Windows, macOS 및 Linux에서 지원됩니다. 보안 및 품질을 위해 1년에 여러 번, 일반적으로 매월 업데이트됩니다.
 
