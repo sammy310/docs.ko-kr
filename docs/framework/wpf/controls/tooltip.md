@@ -8,12 +8,12 @@ helpviewer_keywords:
 - controls [WPF], ToolTip
 - popups [WPF]
 ms.assetid: a3cb42d6-6ce3-4aa0-a557-2cc5b142f1e4
-ms.openlocfilehash: 8f471b26daa89bc513b36eaed5336aa6262cb26d
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 9fbb2fa4d403f59619792271eb3b8046cfa23949
+ms.sourcegitcommit: 68eb5c4928e2b082f178a42c16f73fedf52c2ab8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57367572"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59054990"
 ---
 # <a name="tooltip"></a>도구 설명
 도구 설명이 같은 요소를 위로 마우스 포인터를 놓을 때 표시 되는 작은 팝업 창에 <xref:System.Windows.Controls.Button>입니다.  
@@ -34,5 +34,5 @@ ms.locfileid: "57367572"
   <xref:System.Windows.Controls.Primitives.Popup>  
   
 ## <a name="related-sections"></a>관련 단원  
- [팝업 개요](popup-overview.md)  
+ [Popup 개요](popup-overview.md)  
   [방법 항목](popup-how-to-topics.md)

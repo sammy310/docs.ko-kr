@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0c1534e5-979b-4c8a-a588-1c24301aefb3
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b683784489cd68b66b4f9660f0df5e63b676a91c
-ms.sourcegitcommit: a3db1a9eafca89f95ccf361bc1833b47fbb2bb30
+ms.openlocfilehash: a0113ef84c2b3e42f6d14d25747f7fdbb836a212
+ms.sourcegitcommit: 68eb5c4928e2b082f178a42c16f73fedf52c2ab8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2019
-ms.locfileid: "58921353"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59055315"
 ---
 # <a name="working-with-calendars"></a>달력 작업
 
@@ -163,7 +163,7 @@ ms.locfileid: "58921353"
 | <xref:System.Globalization.ThaiBuddhistCalendar>      | <xref:System.Globalization.ThaiBuddhistCalendar.ThaiBuddhistEra>  |
 | <xref:System.Globalization.UmAlQuraCalendar>          | <xref:System.Globalization.UmAlQuraCalendar.UmAlQuraEra>          |
 
-특정 연대 번호에 해당하는 이름은 연대 번호를 <xref:System.Globalization.DateTimeFormatInfo.GetEraName%2A?displayProperty=nameWithType> 또는 <xref:System.Globalization.DateTimeFormatInfo.GetAbbreviatedEraName%2A?displayProperty=nameWithType> 메서드에 전달하여 검색할 수 있습니다. 다음 예제에서는 이러한 메서드를 호출하여 <xref:System.Globalization.GregorianCalendar> 클래스에서 연대 지원에 대한 정보를 검색합니다.
+특정 연대 번호에 해당하는 이름은 연대 번호를 <xref:System.Globalization.DateTimeFormatInfo.GetEraName%2A?displayProperty=nameWithType> 또는 <xref:System.Globalization.DateTimeFormatInfo.GetAbbreviatedEraName%2A?displayProperty=nameWithType> 메서드에 전달하여 검색할 수 있습니다. 다음 예제에서는 이러한 메서드를 호출하여 <xref:System.Globalization.GregorianCalendar> 클래스에서 연대 지원에 대한 정보를 검색합니다. 각 지원 되는 일본식 달력 연대의 두 번째 연도의 1 월 1 일에 해당 하는 양력 날짜 뿐만 아니라 현재 연대를 나타내는 두 번째 연도의 1 월 1 일에 해당 하는 양력 날짜를 표시 합니다.
 
 [!code-csharp[Conceptual.Calendars#7](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.calendars/cs/instantiatewithera1.cs)]
 [!code-vb[Conceptual.Calendars#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.calendars/vb/instantiatewithera1.vb)]
@@ -172,7 +172,7 @@ ms.locfileid: "58921353"
 
 ### <a name="instantiating-a-date-with-an-era"></a>연대를 사용 하 여 날짜 인스턴스화
 
-두 개의 <xref:System.Globalization.Calendar> 여러 연대를 지 원하는 클래스를 특정 연도, 월 및 월의 일 구성 된 날짜 모호 해질 수 있습니다. 지 하는 예를 들어, 모든 연대입니다.는 <xref:System.Globalization.JapaneseCalendar> 누구의 번호는 1 년 있어야 합니다. 일반적으로 연대가 지정되지 않으면 날짜 및 시간과 달력 메서드에서는 모두 값이 현재 연대에 속하는 것으로 가정합니다. 경우는 <xref:System.DateTime.%23ctor%2A> 하 고 <xref:System.DateTimeOffset.%23ctor%2A> 형식의 매개 변수를 포함 하는 생성자 <xref:System.Globalization.Calendar>, 뿐만 [JapaneseCalendar.ToDateTime](xref:System.Globalization.Calendar.ToDateTime(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)) 및 [JapaneseLunisolarCalendar.ToDateTime ](xref:System.Globalization.Calendar.ToDateTime(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)) 메서드. 다음 예제에서는 지정 되지 않은 달력 종류의 두 번째 연도의 1 월 1 일을 나타내는 날짜를 인스턴스화합니다. 예제의 출력으로 날짜 헤이세이 연대를이 예제에서는 실행 된 시간에 현재 연대에 있는 두 번째 연도의로 해석 됩니다. 平成, 연대를 반환 하는 문자열에서 연도 이전 합니다 <xref:System.DateTime.ToString(System.String,System.IFormatProvider)?displayProperty=nameWithType> 메서드 그레고리오력의 1990 년 1 월 1 일에 해당 합니다. (범위 헤이세이 연대의 1989에서 그레고리오력의 2019에.)
+두 개의 <xref:System.Globalization.Calendar> 여러 연대를 지 원하는 클래스를 특정 연도, 월 및 월의 일 구성 된 날짜 모호 해질 수 있습니다. 지 하는 예를 들어, 모든 연대입니다.는 <xref:System.Globalization.JapaneseCalendar> 누구의 번호는 1 년 있어야 합니다. 일반적으로 연대가 지정되지 않으면 날짜 및 시간과 달력 메서드에서는 모두 값이 현재 연대에 속하는 것으로 가정합니다. 경우는 <xref:System.DateTime.%23ctor%2A> 하 고 <xref:System.DateTimeOffset.%23ctor%2A> 형식의 매개 변수를 포함 하는 생성자 <xref:System.Globalization.Calendar>, 뿐만 [JapaneseCalendar.ToDateTime](xref:System.Globalization.Calendar.ToDateTime(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)) 및 [JapaneseLunisolarCalendar.ToDateTime ](xref:System.Globalization.Calendar.ToDateTime(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)) 메서드. 다음 예제에서는 지정 되지 않은 달력 종류의 두 번째 연도의 1 월 1 일을 나타내는 날짜를 인스턴스화합니다. Reiwa 연대 현재 연대 경우 예제를 실행 하는 경우 날짜 Reiwa 연대의 2 년으로 해석 됩니다. 令和, 연대를 반환 하는 문자열에서 연도 이전 합니다 <xref:System.DateTime.ToString(System.String,System.IFormatProvider)?displayProperty=nameWithType> 메서드 그레고리오 력으로 2020 년 1 월 1에 해당 합니다. (일반 달력의 연도 2019 Reiwa 연대 시작 됩니다.)
 
 [!code-csharp[A date in the current era](~/samples/snippets/standard/datetime/calendars/current-era/cs/program.cs)]
 [!code-vb[A date in the current era](~/samples/snippets/standard/datetime/calendars/current-era/vb/program.vb)]

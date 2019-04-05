@@ -1,13 +1,13 @@
 ---
 title: '가져오기 선언: Open 키워드'
 description: 에 대해 알아봅니다 F# 선언 및 모듈 또는 네임 스페이스 정규화 된 이름을 사용 하지 않고 참조할 수 있는 요소를 지정 하는 방법을 가져옵니다.
-ms.date: 05/16/2016
-ms.openlocfilehash: 261ffdfdea2860db72b052b2ffeb5c7e5d652c24
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.date: 04/04/2019
+ms.openlocfilehash: ad64190c3243c57a185f3b864270fca80590f079
+ms.sourcegitcommit: 68eb5c4928e2b082f178a42c16f73fedf52c2ab8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53610322"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59055003"
 ---
 # <a name="import-declarations-the-open-keyword"></a>가져오기 선언: `open` 키워드
 
@@ -66,8 +66,8 @@ printfn "%A" empty
 
 일부 모듈, 레코드 또는 공용 구조체 형식을 지정할 수는 `RequireQualifiedAccess` 특성입니다. 이러한 모듈, 레코드 또는 공용 구조체의 요소를 참조할 때 가져오기 선언을 포함 여부에 관계 없이 정규화 된 이름을 사용 해야 합니다. 에 전략적으로이 특성을 사용 하면 일반적으로 정의 하는 형식 이름을 사용한 경우 이름 충돌을 방지 하 고 있으므로 복원 력을 코드 라이브러리의 변경 내용에 도움이 합니다. 자세한 내용은 [Core.RequireQualifiedAccessAttribute 클래스](https://msdn.microsoft.com/visualfsharpdocs/conceptual/core.requirequalifiedaccessattribute-class-%5Bfsharp%5D)합니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참고자료
 
-- [# 언어 참조](index.md)
+- [F# 언어 참조](index.md)
 - [네임스페이스](namespaces.md)
 - [모듈](modules.md)

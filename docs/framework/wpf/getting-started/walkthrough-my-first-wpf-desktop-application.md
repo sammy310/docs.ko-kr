@@ -11,14 +11,14 @@ ms.assetid: b96bed40-8946-4285-8fe4-88045ab854ed
 author: mairaw
 ms.author: mairaw
 ms.custom: vs-dotnet
-ms.openlocfilehash: b7ad8afbad212d5c79c9391bd9f6d1da7ff8fb28
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: dbfc40bd1fcc97810ea1397731bd8c232297cbd1
+ms.sourcegitcommit: 68eb5c4928e2b082f178a42c16f73fedf52c2ab8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57358191"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59055250"
 ---
-# <a name="walkthrough-my-first-wpf-desktop-application"></a>연습: 내 첫 WPF 데스크톱 응용 프로그램
+# <a name="walkthrough-my-first-wpf-desktop-application"></a>연습: 내 첫 WPF 데스크톱 애플리케이션
 
 이 문서에서는 대부분의 WPF 응용 프로그램에 공통 된 요소를 포함 하는 간단한 Windows Presentation Foundation (WPF) 응용 프로그램을 개발 하는 방법을 보여 줍니다. Extensible Application Markup Language (XAML) 태그, 코드 숨김, 응용 프로그램 정의 컨트롤, 레이아웃, 데이터 바인딩 및 스타일.
 
@@ -493,7 +493,7 @@ ms.locfileid: "57358191"
 이 연습에서는 다양 한 Windows Presentation Foundation (WPF)를 사용 하 여 UI 만들기에 대 한 기술 배웠습니다. 이제 데이터 바인딩된.NET Framework 응용 프로그램의 구성 요소에 대 한 기본적인 지식이 있어야 합니다. WPF 아키텍처 및 프로그래밍 모델에 대한 자세한 내용은 다음 항목을 참조하세요.
 
 - [WPF 아키텍처](../advanced/wpf-architecture.md)
-- [XAML 개요(WPF)](../advanced/xaml-overview-wpf.md)
+- [XAML 개요 (WPF)](../advanced/xaml-overview-wpf.md)
 - [종속성 속성 개요](../advanced/dependency-properties-overview.md)
 - [레이아웃](../advanced/layout.md)
 
@@ -505,7 +505,7 @@ ms.locfileid: "57358191"
 - [그래픽 및 멀티미디어](../graphics-multimedia/index.md)
 - [WPF의 문서](../advanced/documents-in-wpf.md)
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참고자료
 
 - [패널 개요](../controls/panels-overview.md)
 - [데이터 템플릿 개요](../data/data-templating-overview.md)
