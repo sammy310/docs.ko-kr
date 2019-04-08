@@ -118,7 +118,7 @@ ms.locfileid: "59055250"
 
     이 파일에 선언 된 이벤트를 처리 하는 코드를 포함 하는 코드 숨김 파일은 *MainWindow.xaml*합니다. 이 파일에는 XAML에 정의된 창의 부분 클래스가 포함되어 있습니다.
 
-7. C#을 사용 하는 경우 변경 합니다 `MainWindow` 에서 파생 된 클래스 <xref:System.Windows.Navigation.NavigationWindow>합니다. (Visual basic에서는 자동으로 이루어집니다 XAML에서 창을 변경 하면 됩니다.)
+7. C#을 사용 하는 경우 변경 합니다 `MainWindow` 에서 파생 된 클래스 <xref:System.Windows.Navigation.NavigationWindow>합니다. (Visual Basic에서는 자동으로 이루어집니다 XAML에서 창을 변경 하면 됩니다.)
 
    코드는 다음과 같습니다.
 

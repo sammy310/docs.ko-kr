@@ -19,7 +19,7 @@ ms.locfileid: "58826095"
 모든 데이터 형식의 기본 값을 나타냅니다. 기본값은 참조 형식에 대해는 `null` 참조 합니다. 값 형식에 대 한 기본값의 값 형식은 nullable 인지에 따라 달라 집니다.  
   
 > [!NOTE]
->  Nullable이 아닌 값 형식에 대 한 `Nothing` Visual basic에서에서 다른 `null` 에서 C#합니다. Visual basic에서는 null이 아닌 값 형식의 변수를 설정한 경우 `Nothing`, 변수의 선언 된 형식에 대 한 기본 값으로 설정 됩니다. C#nullable이 아닌 값 형식의 변수를 할당 하는 경우 `null`, 컴파일 시간 오류가 발생 합니다.  
+>  Nullable이 아닌 값 형식에 대 한 `Nothing` Visual Basic에서에서 다른 `null` 에서 C#합니다. Visual Basic에서는 null이 아닌 값 형식의 변수를 설정한 경우 `Nothing`, 변수의 선언 된 형식에 대 한 기본 값으로 설정 됩니다. C#nullable이 아닌 값 형식의 변수를 할당 하는 경우 `null`, 컴파일 시간 오류가 발생 합니다.  
   
 ## <a name="remarks"></a>설명  
  `Nothing` 데이터 형식의 기본 값을 나타냅니다. 기본 값을 값 형식 또는 참조 형식의 변수 인지에 따라 달라 집니다.  

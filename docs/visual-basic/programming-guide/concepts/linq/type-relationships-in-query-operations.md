@@ -25,7 +25,7 @@ ms.locfileid: "58822338"
   
  쿼리에서 범위 변수의 형식을 데이터 소스에 있는 요소의 형식과 호환 되어야 합니다. 쿼리 변수의 형식에 정의 된 시퀀스 요소와 호환 되어야 합니다는 `Select` 절. 마지막으로 시퀀스 요소의 형식입니다도 호환 되어야에 사용 되는 루프 제어 변수의 형식을 사용 하 여는 `For Each` 쿼리를 실행 하는 문입니다. 이 강력한 형식화 컴파일 타임 형식 오류 식별을 용이 하 게 합니다.  
   
- Visual Basic 편리 강력한 형식 지정 라고도 지역 형식 유추를 구현 하 여 *암시적 형식 지정*합니다. 기능은 이전 예제에서 사용 됩니다 하 고 표시 될 전체에서 사용 되는 것은 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 샘플 및 설명서입니다. Visual basic에서 지역 형식 유추를 사용 하 여 수행 됩니다는 `Dim` 문 없이 `As` 절. 다음 예에서 `city` 문자열로 강력 하 게 형식화 됩니다.  
+ Visual Basic 편리 강력한 형식 지정 라고도 지역 형식 유추를 구현 하 여 *암시적 형식 지정*합니다. 기능은 이전 예제에서 사용 됩니다 하 고 표시 될 전체에서 사용 되는 것은 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 샘플 및 설명서입니다. Visual Basic에서 지역 형식 유추를 사용 하 여 수행 됩니다는 `Dim` 문 없이 `As` 절. 다음 예에서 `city` 문자열로 강력 하 게 형식화 됩니다.  
   
  [!code-vb[VbLINQTypeRels#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQTypeRels/VB/Class1.vb#1)]  
   

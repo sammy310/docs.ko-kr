@@ -40,7 +40,7 @@ LINQ의 분할은 요소를 다시 정렬한 후 섹션 중 하나를 반환하�
  [!code-vb[CsLINQPartitioning#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/CsLINQPartitioning/VB/Partitioning.vb#2)]  
   
 ### <a name="take"></a>Take  
- 다음 코드 예제에서는 `Take` 절 Visual basic의 문자열 배열에서 처음 두 문자열을 반환 합니다.  
+ 다음 코드 예제에서는 `Take` 절 Visual Basic의 문자열 배열에서 처음 두 문자열을 반환 합니다.  
   
  [!code-vb[CsLINQPartitioning#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/CsLINQPartitioning/VB/Partitioning.vb#3)]  
   

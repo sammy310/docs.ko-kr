@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - My.Computer.Info object [Visual Basic], tasks
 ms.assetid: 13c145bc-5c85-4fea-a5dd-2ca8681a0252
-ms.openlocfilehash: 508ab8a1cc302e58baa869fc30cea322e01235e3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 00e6acd7cdbb41d8d763ae2a948bf9c108d54d59
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54743636"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58823456"
 ---
 # <a name="getting-information-about-the-computer-visual-basic"></a>컴퓨터에 대한 정보 가져오기(Visual Basic)
 `My.Computer.Info` 개체는 컴퓨터의 메모리, 로드된 어셈블리, 이름 및 운영 체제에 대한 정보를 가져오기 위한 속성을 제공합니다.  
@@ -26,4 +26,5 @@ ms.locfileid: "54743636"
 |애플리케이션을 실행 중인 컴퓨터에 설치된 `UICulture` 확인|<xref:Microsoft.VisualBasic.Devices.ComputerInfo.InstalledUICulture%2A>|  
   
 ## <a name="see-also"></a>참고 항목
+
 - <xref:Microsoft.VisualBasic.Devices.ServerComputer.Info%2A>

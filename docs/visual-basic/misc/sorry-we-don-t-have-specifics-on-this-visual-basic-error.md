@@ -3058,7 +3058,7 @@ ms.locfileid: "58022974"
  Visual Basic 언어 구문 및 컴파일러에 대 한 일반적인 토론 질문에 대 한 포럼을 제공 합니다.  
   
  [Visual Basic Interop 및 업그레이드](https://social.msdn.microsoft.com/Forums/en-US/home?forum=vbinterop)  
- 에 대 한 질문을 위한 포럼을 제공 하 고 Visual basic 업그레이드 및 상호 운용성 기능을 사용 하 여 발급 합니다.  
+ 에 대 한 질문을 위한 포럼을 제공 하 고 Visual Basic 업그레이드 및 상호 운용성 기능을 사용 하 여 발급 합니다.  
   
  [Visual Basic IDE](https://social.msdn.microsoft.com/Forums/en-US/home?forum=vbide)  
  Visual Studio 환경에서 작업 하는 방법에 대 한 질문에 대 한 포럼을 제공 합니다.  

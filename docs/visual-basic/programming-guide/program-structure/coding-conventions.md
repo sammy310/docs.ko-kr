@@ -22,7 +22,7 @@ Microsoft는 이 항목의 지침에 따라 예제와 설명서를 개발합니�
   
 -   코드를 더 쉽게 복사, 변경 및  유지 관리할 수 있습니다.  
   
--   코드가 Visual basic을 위한 "모범 사례"가 될 것입니다.  
+-   코드가 Visual Basic을 위한 "모범 사례"가 될 것입니다.  
   
 ## <a name="naming-conventions"></a>명명 규칙  
   

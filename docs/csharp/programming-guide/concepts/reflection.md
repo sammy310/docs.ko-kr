@@ -2,12 +2,12 @@
 title: 리플렉션(C#)
 ms.date: 07/20/2015
 ms.assetid: f80a2362-953b-4e8e-9759-cd5f334190d4
-ms.openlocfilehash: 8cdfe00a09d340d8b77f1f5582a3a3ad82c496b1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4dfd9391407fec4bd20ac4ae05162763e909d665
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54537649"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58841318"
 ---
 # <a name="reflection-c"></a>리플렉션(C#)
 리플렉션은 어셈블리, 모듈 및 형식을 설명하는 개체(<xref:System.Type> 형식)를 제공합니다. 리플렉션을 사용하면 동적으로 형식 인스턴스를 만들거나, 형식을 기존 개체에 바인딩하거나, 기존 개체에서 형식을 가져와 해당 메서드를 호출하거나, 필드 및 속성에 액세스할 수 있습니다. 코드에서 특성을 사용하는 경우 리플렉션은 특성에 대한 액세스를 제공합니다. 자세한 내용은 [특성](../../../../docs/standard/attributes/index.md)을 참조하세요.  
@@ -28,7 +28,7 @@ System.Console.WriteLine(type);
  다음 예제에서는 리플렉션을 사용하여 로드된 어셈블리의 전체 이름을 가져옵니다.  
   
 ```csharp  
-// Using Reflection to get information from an Assembly:  
+// Using Reflection to get information of an Assembly:  
 System.Reflection.Assembly info = typeof(System.Int32).Assembly;  
 System.Console.WriteLine(info);  
 ```  

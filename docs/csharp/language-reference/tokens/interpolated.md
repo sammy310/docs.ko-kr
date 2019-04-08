@@ -13,12 +13,12 @@ helpviewer_keywords:
 - interpolated string [C#]
 author: pkulikov
 ms.author: ronpet
-ms.openlocfilehash: 97c8580b5573348e58acb85b7368eb23927cde17
-ms.sourcegitcommit: 75567a3cb437009db55949c6092f4e77ed1a9da4
+ms.openlocfilehash: 64728182fe0b758f8da668d19761305e2001f1a5
+ms.sourcegitcommit: a3db1a9eafca89f95ccf361bc1833b47fbb2bb30
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54307177"
+ms.lasthandoff: 04/04/2019
+ms.locfileid: "58920898"
 ---
 # <a name="---string-interpolation-c-reference"></a>$ - 문자열 보간(C# 참조)
 
@@ -87,7 +87,7 @@ ms.locfileid: "54307177"
 
 ## <a name="additional-resources"></a>추가 자료
 
-문자열 보간을 처음 접하는 경우 [C#의 문자열 보간](../../tutorials/intro-to-csharp/interpolated-strings.yml) 대화형 자습서를 참조하세요. 또는 머신에서 로컬로 [C#의 문자열 보간](../../tutorials/string-interpolation.md) 자습서를 시도할 수 있습니다.
+문자열 보간을 처음 접하는 경우 [C#의 문자열 보간](../../tutorials/exploration/interpolated-strings.yml) 대화형 자습서를 참조하세요. 또는 머신에서 로컬로 [C#의 문자열 보간](../../tutorials/string-interpolation.md) 자습서를 시도할 수 있습니다.
 
 ## <a name="see-also"></a>참고 항목
 
@@ -95,7 +95,7 @@ ms.locfileid: "54307177"
 - <xref:System.FormattableString?displayProperty=nameWithType>
 - <xref:System.IFormattable?displayProperty=nameWithType>
 - [복합 형식 지정](../../../standard/base-types/composite-formatting.md)
-- [숫자 결과 형식 지정 표](../keywords/formatting-numeric-results-table.md)
+- [숫자 결과 서식 지정 표](../keywords/formatting-numeric-results-table.md)
 - [문자열](../../programming-guide/strings/index.md)
 - [C# 프로그래밍 가이드](../../programming-guide/index.md)
 - [C# 특수 문자](index.md)

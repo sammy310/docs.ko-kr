@@ -14,7 +14,7 @@ ms.lasthandoff: 04/02/2019
 ms.locfileid: "58831581"
 ---
 # <a name="documenting-your-code-with-xml-visual-basic"></a>코드를 XML로 문서화(Visual Basic)
-Visual basic에서 XML을 사용 하 여 코드를 문서화할 수 있습니다.  
+Visual Basic에서 XML을 사용 하 여 코드를 문서화할 수 있습니다.  
   
 ## <a name="xml-documentation-comments"></a>XML 문서 주석  
  Visual Basic 프로젝트에 대 한 XML 문서를 자동으로 만들려면 쉬운을 제공 합니다. 형식 및 멤버는 XML 구조를 자동으로 생성 하 고 각 매개 변수 및 기타 설명에 대 한 요약, 설명이 포함 된 설명서를 제공할 수 있습니다. 적절 한 설정을 사용 하면 XML 문서는.xml 확장명 프로젝트와 동일한 이름 가진 XML 파일에 자동으로 내보내집니다. 자세한 내용은 [/doc](../../../visual-basic/reference/command-line-compiler/doc.md)를 참조하세요.  

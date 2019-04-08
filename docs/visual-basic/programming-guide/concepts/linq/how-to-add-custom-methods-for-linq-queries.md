@@ -51,7 +51,7 @@ End Module
  <xref:System.Collections.Generic.IEnumerable%601> 인터페이스에서 다른 집계 메서드를 호출하는 것과 같은 방식으로 열거 가능한 컬렉션에 대해 이 확장 메서드를 호출합니다.  
   
 > [!NOTE]
->  Visual basic에서는 사용 하거나 메서드 호출 또는 표준 쿼리 구문이 합니다 `Aggregate` 또는 `Group By` 절. 자세한 내용은 [Aggregate 절](../../../../visual-basic/language-reference/queries/aggregate-clause.md) 하 고 [그룹 By 절](../../../../visual-basic/language-reference/queries/group-by-clause.md)합니다.  
+>  Visual Basic에서는 사용 하거나 메서드 호출 또는 표준 쿼리 구문이 합니다 `Aggregate` 또는 `Group By` 절. 자세한 내용은 [Aggregate 절](../../../../visual-basic/language-reference/queries/aggregate-clause.md) 하 고 [그룹 By 절](../../../../visual-basic/language-reference/queries/group-by-clause.md)합니다.  
   
  다음 코드 예제에서는 `double` 형식의 배열에 대해 `Median` 메서드를 사용하는 방법을 보여 줍니다.  
   
@@ -125,7 +125,7 @@ Function Median(Of T)(ByVal source As IEnumerable(Of T),
 End Function  
 ```  
   
- 이제 임의 형식의 개체 시퀀스에 대해 `Median` 메서드를 호출할 수 있습니다. 형식에 자체 메서드 오버로드가 없으면 대리자 매개 변수를 전달해야 합니다. Visual basic에서는이 목적을 위해 람다 식을 사용할 수 있습니다. 또한 사용 하는 경우는 `Aggregate` 또는 `Group By` 메서드 호출 대신 절 값 또는 식을이 절 범위에 있는 전달할 수 있습니다.  
+ 이제 임의 형식의 개체 시퀀스에 대해 `Median` 메서드를 호출할 수 있습니다. 형식에 자체 메서드 오버로드가 없으면 대리자 매개 변수를 전달해야 합니다. Visual Basic에서는이 목적을 위해 람다 식을 사용할 수 있습니다. 또한 사용 하는 경우는 `Aggregate` 또는 `Group By` 메서드 호출 대신 절 값 또는 식을이 절 범위에 있는 전달할 수 있습니다.  
   
  다음 예제 코드에서는 정수 배열 및 문자열 배열에 대해 `Median` 메서드를 호출하는 방법을 보여 줍니다. 문자열의 경우 배열에서 문자열 길이의 중앙값이 계산됩니다. 예제에서는 각 경우에 <xref:System.Func%602> 대리자 매개 변수를 `Median` 메서드에 전달하는 방법을 보여 줍니다.  
   

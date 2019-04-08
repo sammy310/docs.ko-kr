@@ -94,7 +94,7 @@ BasicHttpContextBinding 끝점이 있는 서비스에 대 한 *Svcutil.exe* Basi
 |/excludeType:\<type>|참조된 계약 형식에서 제외할 정규화된 형식 이름 또는 정규화된 어셈블리 형식 이름을 지정합니다.<br /><br /> 별도의 DLL에서 `/r`과 함께 이 스위치를 사용하는 경우 XSD 클래스의 전체 이름이 참조됩니다.<br /><br /> 약식: `/et`|
 |/importXmlTypes|비데이터 계약 형식을 IXmlSerializable 형식으로 가져오도록 데이터 계약 serializer를 구성합니다.|
 |/internal|internal로 표시된 클래스를 생성합니다. 기본값: 공용 클래스만 생성합니다.<br /><br /> 약식: `/i`|
-|/language:\<language>|코드 생성에 사용할 프로그래밍 언어를 지정합니다. Machine.config 파일에 등록 된 언어 이름 또는에서 상속 되는 클래스의 정규화 된 이름을 제공 해야 <xref:System.CodeDom.Compiler.CodeDomProvider>합니다.<br /><br /> 값: c#, cs, csharp, vb, visualbasic, c++, cpp<br /><br /> 기본값: csharp<br /><br /> 약식: `/l`|
+|/language:\<language>|코드 생성에 사용할 프로그래밍 언어를 지정합니다. Machine.config 파일에 등록 된 언어 이름 또는에서 상속 되는 클래스의 정규화 된 이름을 제공 해야 <xref:System.CodeDom.Compiler.CodeDomProvider>합니다.<br /><br /> 값: C#, cs, csharp, vb, visualbasic, c++, cpp<br /><br /> 기본값: csharp<br /><br /> 약식: `/l`|
 |/mergeConfig|기존 파일을 덮어쓰는 대신 생성된 구성을 기존 파일에 병합합니다.|
 |/messageContract|메시지 계약 형식을 생성합니다.<br /><br /> 약식: `/mc`|
 |/namespace:\<문자열, 문자열 >|WSDL 또는 XML 스키마 targetNamespace에서 CLR 네임스페이스로의 매핑을 지정합니다. 사용 하 여 '\*'의 targetNamespace CLR 네임 스페이스를 명시적으로 매핑하지 않고 모든 targetNamespaces를 매핑합니다.<br /><br /> 메시지 계약 이름이 작업 이름과 충돌하지 않도록 하려면 `::`을 사용하여 형식 참조를 한정하거나 이름이 고유한지 확인해야 합니다.<br /><br /> 기본값: 데이터 계약에 대 한 스키마 문서의 대상 네임 스페이스에서 파생 됩니다. 기본 네임스페이스는 생성된 다른 모든 형식에 사용됩니다.<br /><br /> 약식: `/n` **참고:**  XmlSerializer를 사용 하는 형식을 생성 하는 경우 단일 네임 스페이스 매핑은 사용할 수 있습니다. 기본 네임 스페이스 또는 지정 된 네임 스페이스에서 생성 된 모든 형식 일은 ' *'.|
