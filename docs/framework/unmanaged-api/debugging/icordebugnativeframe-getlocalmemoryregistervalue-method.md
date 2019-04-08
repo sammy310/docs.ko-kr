@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: abaa543299dec74d769b91ca3b21d76863624f13
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 9b2244ec1be6fc0e5e19fac5adc7ecb38d68a0af
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57484942"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59081152"
 ---
-# <a name="icordebugnativeframegetlocalmemoryregistervalue-method"></a><span data-ttu-id="ec250-102">ICorDebugNativeFrame::GetLocalMemoryRegisterValue 메서드</span><span class="sxs-lookup"><span data-stu-id="ec250-102">ICorDebugNativeFrame::GetLocalMemoryRegisterValue Method</span></span>
-<span data-ttu-id="ec250-103">낮은 word 및 높은 단어에 저장 됩니다 메모리 위치를 확인 하 고 지정 된 레지스터 각각이 네이티브 프레임에 대 한 지역 변수 또는 인수의 값을 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="ec250-103">Gets the value of an argument or local variable, of which the low word and high word are stored in the specified register and memory location, respectively, for this native frame.</span></span>  
+# <a name="icordebugnativeframegetlocalmemoryregistervalue-method"></a><span data-ttu-id="066ff-102">ICorDebugNativeFrame::GetLocalMemoryRegisterValue 메서드</span><span class="sxs-lookup"><span data-stu-id="066ff-102">ICorDebugNativeFrame::GetLocalMemoryRegisterValue Method</span></span>
+<span data-ttu-id="066ff-103">낮은 word 및 높은 단어에 저장 됩니다 메모리 위치를 확인 하 고 지정 된 레지스터 각각이 네이티브 프레임에 대 한 지역 변수 또는 인수의 값을 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="066ff-103">Gets the value of an argument or local variable, of which the low word and high word are stored in the specified register and memory location, respectively, for this native frame.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="ec250-104">구문</span><span class="sxs-lookup"><span data-stu-id="ec250-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="066ff-104">구문</span><span class="sxs-lookup"><span data-stu-id="066ff-104">Syntax</span></span>  
   
 ```  
 HRESULT GetLocalMemoryRegisterValue (  
@@ -39,30 +39,29 @@ HRESULT GetLocalMemoryRegisterValue (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="ec250-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="ec250-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="066ff-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="066ff-105">Parameters</span></span>  
  `highWordAddress`  
- <span data-ttu-id="ec250-106">[in] `CORDB_ADDRESS` 값의 높은 단어를 포함 하는 메모리 위치를 지정 하는 값입니다.</span><span class="sxs-lookup"><span data-stu-id="ec250-106">[in] A `CORDB_ADDRESS` value that specifies the memory location containing the high word of the value.</span></span>  
+ <span data-ttu-id="066ff-106">[in] `CORDB_ADDRESS` 값의 높은 단어를 포함 하는 메모리 위치를 지정 하는 값입니다.</span><span class="sxs-lookup"><span data-stu-id="066ff-106">[in] A `CORDB_ADDRESS` value that specifies the memory location containing the high word of the value.</span></span>  
   
  `lowWordRegister`  
- <span data-ttu-id="ec250-107">[in] 값의 낮은 단어를 포함 하는 레지스터를 지정 하는 "CorDebugRegister" 열거형의 값입니다.</span><span class="sxs-lookup"><span data-stu-id="ec250-107">[in] A value of the "CorDebugRegister" enumeration that specifies the register containing the low word of the value.</span></span>  
+ <span data-ttu-id="066ff-107">[in] 값의 낮은 단어를 포함 하는 레지스터를 지정 하는 "CorDebugRegister" 열거형의 값입니다.</span><span class="sxs-lookup"><span data-stu-id="066ff-107">[in] A value of the "CorDebugRegister" enumeration that specifies the register containing the low word of the value.</span></span>  
   
  `cbSigBlob`  
- <span data-ttu-id="ec250-108">[in] 참조 하는 이진 메타 데이터 서명의 크기를 지정 하는 정수를 `pvSigBlob` 매개 변수입니다.</span><span class="sxs-lookup"><span data-stu-id="ec250-108">[in] An integer that specifies the size of the binary metadata signature which is referenced by the `pvSigBlob` parameter.</span></span>  
+ <span data-ttu-id="066ff-108">[in] 참조 하는 이진 메타 데이터 서명의 크기를 지정 하는 정수를 `pvSigBlob` 매개 변수입니다.</span><span class="sxs-lookup"><span data-stu-id="066ff-108">[in] An integer that specifies the size of the binary metadata signature which is referenced by the `pvSigBlob` parameter.</span></span>  
   
  `pvSigBlob`  
- <span data-ttu-id="ec250-109">[in] `PCCOR_SIGNATURE` 이진 메타 데이터 서명의 값의 형식 가리키는 값입니다.</span><span class="sxs-lookup"><span data-stu-id="ec250-109">[in] A `PCCOR_SIGNATURE` value that points to the binary metadata signature of the value's type.</span></span>  
+ <span data-ttu-id="066ff-109">[in] `PCCOR_SIGNATURE` 이진 메타 데이터 서명의 값의 형식 가리키는 값입니다.</span><span class="sxs-lookup"><span data-stu-id="066ff-109">[in] A `PCCOR_SIGNATURE` value that points to the binary metadata signature of the value's type.</span></span>  
   
  `ppValue`  
- <span data-ttu-id="ec250-110">[out] 지정된 된 등록 및 메모리 위치에 저장 된 검색된 된 값을 나타내는 "ICorDebugValue" 개체의 주소에 대 한 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="ec250-110">[out] A pointer to the address of an "ICorDebugValue" object representing the retrieved value that is stored in the specified register and memory location.</span></span>  
+ <span data-ttu-id="066ff-110">[out] 지정된 된 등록 및 메모리 위치에 저장 된 검색된 된 값을 나타내는 "ICorDebugValue" 개체의 주소에 대 한 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="066ff-110">[out] A pointer to the address of an "ICorDebugValue" object representing the retrieved value that is stored in the specified register and memory location.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="ec250-111">요구 사항</span><span class="sxs-lookup"><span data-stu-id="ec250-111">Requirements</span></span>  
- <span data-ttu-id="ec250-112">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="ec250-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="066ff-111">요구 사항</span><span class="sxs-lookup"><span data-stu-id="066ff-111">Requirements</span></span>  
+ <span data-ttu-id="066ff-112">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="066ff-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="ec250-113">**헤더:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="ec250-113">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="066ff-113">**헤더:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="066ff-113">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="ec250-114">**라이브러리:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="ec250-114">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="066ff-114">**라이브러리:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="066ff-114">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="ec250-115">**.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="ec250-115">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ **<span data-ttu-id="066ff-115">.NET Framework 버전:</span><span class="sxs-lookup"><span data-stu-id="066ff-115">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="ec250-116">참고자료</span><span class="sxs-lookup"><span data-stu-id="ec250-116">See also</span></span>
-
+## <a name="see-also"></a><span data-ttu-id="066ff-116">참고자료</span><span class="sxs-lookup"><span data-stu-id="066ff-116">See also</span></span>

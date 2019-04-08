@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 93a85f2fd0f2095ce22bd69a3251d7950fcdb529
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 9af0773c2ef066c103f823e4d28c0fd6e9eadc24
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57464596"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59086561"
 ---
-# <a name="iassemblynamegetproperty-method"></a><span data-ttu-id="5446b-102">IAssemblyName::GetProperty 메서드</span><span class="sxs-lookup"><span data-stu-id="5446b-102">IAssemblyName::GetProperty Method</span></span>
-<span data-ttu-id="5446b-103">지정 된 속성 식별자가 참조 하는 속성에 대 한 포인터를 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="5446b-103">Gets a pointer to the property referenced by the specified property identifier.</span></span>  
+# <a name="iassemblynamegetproperty-method"></a><span data-ttu-id="6cd7c-102">IAssemblyName::GetProperty 메서드</span><span class="sxs-lookup"><span data-stu-id="6cd7c-102">IAssemblyName::GetProperty Method</span></span>
+<span data-ttu-id="6cd7c-103">지정 된 속성 식별자가 참조 하는 속성에 대 한 포인터를 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="6cd7c-103">Gets a pointer to the property referenced by the specified property identifier.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="5446b-104">구문</span><span class="sxs-lookup"><span data-stu-id="5446b-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="6cd7c-104">구문</span><span class="sxs-lookup"><span data-stu-id="6cd7c-104">Syntax</span></span>  
   
 ```  
 HRESULT GetProperty (  
@@ -37,22 +37,23 @@ HRESULT GetProperty (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="5446b-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="5446b-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="6cd7c-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="6cd7c-105">Parameters</span></span>  
  `PropertyId`  
- <span data-ttu-id="5446b-106">[in] 요청된 된 속성에 대 한 고유 식별자입니다.</span><span class="sxs-lookup"><span data-stu-id="5446b-106">[in] The unique identifier for the requested property.</span></span>  
+ <span data-ttu-id="6cd7c-106">[in] 요청된 된 속성에 대 한 고유 식별자입니다.</span><span class="sxs-lookup"><span data-stu-id="6cd7c-106">[in] The unique identifier for the requested property.</span></span>  
   
  `pvProperty`  
- <span data-ttu-id="5446b-107">[out] 반환 된 속성을 데이터입니다.</span><span class="sxs-lookup"><span data-stu-id="5446b-107">[out] The returned property data.</span></span>  
+ <span data-ttu-id="6cd7c-107">[out] 반환 된 속성을 데이터입니다.</span><span class="sxs-lookup"><span data-stu-id="6cd7c-107">[out] The returned property data.</span></span>  
   
  `pcbProperty`  
- <span data-ttu-id="5446b-108">[out에서] 크기 (바이트)의 `pvProperty`합니다.</span><span class="sxs-lookup"><span data-stu-id="5446b-108">[in, out] The size, in bytes, of `pvProperty`.</span></span>  
+ <span data-ttu-id="6cd7c-108">[out에서] 크기 (바이트)의 `pvProperty`합니다.</span><span class="sxs-lookup"><span data-stu-id="6cd7c-108">[in, out] The size, in bytes, of `pvProperty`.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="5446b-109">요구 사항</span><span class="sxs-lookup"><span data-stu-id="5446b-109">Requirements</span></span>  
- <span data-ttu-id="5446b-110">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="5446b-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="6cd7c-109">요구 사항</span><span class="sxs-lookup"><span data-stu-id="6cd7c-109">Requirements</span></span>  
+ <span data-ttu-id="6cd7c-110">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="6cd7c-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="5446b-111">**헤더:** Fusion.h</span><span class="sxs-lookup"><span data-stu-id="5446b-111">**Header:** Fusion.h</span></span>  
+ <span data-ttu-id="6cd7c-111">**헤더:** Fusion.h</span><span class="sxs-lookup"><span data-stu-id="6cd7c-111">**Header:** Fusion.h</span></span>  
   
- <span data-ttu-id="5446b-112">**.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="5446b-112">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ **<span data-ttu-id="6cd7c-112">.NET Framework 버전:</span><span class="sxs-lookup"><span data-stu-id="6cd7c-112">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="5446b-113">참고자료</span><span class="sxs-lookup"><span data-stu-id="5446b-113">See also</span></span>
-- [<span data-ttu-id="5446b-114">IAssemblyName 인터페이스</span><span class="sxs-lookup"><span data-stu-id="5446b-114">IAssemblyName Interface</span></span>](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md)
+## <a name="see-also"></a><span data-ttu-id="6cd7c-113">참고자료</span><span class="sxs-lookup"><span data-stu-id="6cd7c-113">See also</span></span>
+
+- [<span data-ttu-id="6cd7c-114">IAssemblyName 인터페이스</span><span class="sxs-lookup"><span data-stu-id="6cd7c-114">IAssemblyName Interface</span></span>](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md)

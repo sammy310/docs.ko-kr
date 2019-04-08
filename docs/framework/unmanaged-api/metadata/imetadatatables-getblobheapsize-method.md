@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 72624eb1d1d43eecb5052ebceec38b1bc32750ff
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: d22e61d28e0fbf06fa1cfe9e9ac18a534726f01d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57474347"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59076457"
 ---
-# <a name="imetadatatablesgetblobheapsize-method"></a><span data-ttu-id="ce8df-102">IMetaDataTables::GetBlobHeapSize 메서드</span><span class="sxs-lookup"><span data-stu-id="ce8df-102">IMetaDataTables::GetBlobHeapSize Method</span></span>
-<span data-ttu-id="ce8df-103">(BLOB) 이진 대형 개체 힙 바이트의 크기를 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="ce8df-103">Gets the size, in bytes, of the binary large object (BLOB) heap.</span></span>  
+# <a name="imetadatatablesgetblobheapsize-method"></a><span data-ttu-id="0ba55-102">IMetaDataTables::GetBlobHeapSize 메서드</span><span class="sxs-lookup"><span data-stu-id="0ba55-102">IMetaDataTables::GetBlobHeapSize Method</span></span>
+<span data-ttu-id="0ba55-103">(BLOB) 이진 대형 개체 힙 바이트의 크기를 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="0ba55-103">Gets the size, in bytes, of the binary large object (BLOB) heap.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="ce8df-104">구문</span><span class="sxs-lookup"><span data-stu-id="ce8df-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="0ba55-104">구문</span><span class="sxs-lookup"><span data-stu-id="0ba55-104">Syntax</span></span>  
   
 ```  
 HRESULT GetBlobHeapSize (  
@@ -35,19 +35,20 @@ HRESULT GetBlobHeapSize (
 );   
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="ce8df-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="ce8df-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="0ba55-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="0ba55-105">Parameters</span></span>  
  `pcbBlobs`  
- <span data-ttu-id="ce8df-106">[out] 크기 (바이트)는 BLOB 힙에서의 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="ce8df-106">[out] A pointer to the size, in bytes, of the BLOB heap.</span></span>  
+ <span data-ttu-id="0ba55-106">[out] 크기 (바이트)는 BLOB 힙에서의 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="0ba55-106">[out] A pointer to the size, in bytes, of the BLOB heap.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="ce8df-107">요구 사항</span><span class="sxs-lookup"><span data-stu-id="ce8df-107">Requirements</span></span>  
- <span data-ttu-id="ce8df-108">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="ce8df-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="0ba55-107">요구 사항</span><span class="sxs-lookup"><span data-stu-id="0ba55-107">Requirements</span></span>  
+ <span data-ttu-id="0ba55-108">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="0ba55-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="ce8df-109">**헤더:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="ce8df-109">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="0ba55-109">**헤더:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="0ba55-109">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="ce8df-110">**라이브러리:** MsCorEE.dll에서 리소스로 사용</span><span class="sxs-lookup"><span data-stu-id="ce8df-110">**Library:** Used as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="0ba55-110">**라이브러리:** MsCorEE.dll에서 리소스로 사용</span><span class="sxs-lookup"><span data-stu-id="0ba55-110">**Library:** Used as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="ce8df-111">**.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="ce8df-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ **<span data-ttu-id="0ba55-111">.NET Framework 버전:</span><span class="sxs-lookup"><span data-stu-id="0ba55-111">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="ce8df-112">참고자료</span><span class="sxs-lookup"><span data-stu-id="ce8df-112">See also</span></span>
-- [<span data-ttu-id="ce8df-113">IMetaDataTables 인터페이스</span><span class="sxs-lookup"><span data-stu-id="ce8df-113">IMetaDataTables Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-interface.md)
-- [<span data-ttu-id="ce8df-114">IMetaDataTables2 인터페이스</span><span class="sxs-lookup"><span data-stu-id="ce8df-114">IMetaDataTables2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatatables2-interface.md)
+## <a name="see-also"></a><span data-ttu-id="0ba55-112">참고자료</span><span class="sxs-lookup"><span data-stu-id="0ba55-112">See also</span></span>
+
+- [<span data-ttu-id="0ba55-113">IMetaDataTables 인터페이스</span><span class="sxs-lookup"><span data-stu-id="0ba55-113">IMetaDataTables Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-interface.md)
+- [<span data-ttu-id="0ba55-114">IMetaDataTables2 인터페이스</span><span class="sxs-lookup"><span data-stu-id="0ba55-114">IMetaDataTables2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatatables2-interface.md)

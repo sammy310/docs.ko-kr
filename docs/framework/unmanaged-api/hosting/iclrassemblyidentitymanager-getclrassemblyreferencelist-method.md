@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 65ec26384b88ba3048666f3b6e3affcb90d8f070
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: de166a22350e49197ff6a5b5d6dc956cdcc2d1ac
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57479313"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59089512"
 ---
-# <a name="iclrassemblyidentitymanagergetclrassemblyreferencelist-method"></a><span data-ttu-id="daf70-102">ICLRAssemblyIdentityManager::GetCLRAssemblyReferenceList 메서드</span><span class="sxs-lookup"><span data-stu-id="daf70-102">ICLRAssemblyIdentityManager::GetCLRAssemblyReferenceList Method</span></span>
-<span data-ttu-id="daf70-103">한 인터페이스 포인터를 가져옵니다는 [ICLRAssemblyReferenceList](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyreferencelist-interface.md) 부분 어셈블리 id의 제공 된 목록에서 인스턴스.</span><span class="sxs-lookup"><span data-stu-id="daf70-103">Gets an interface pointer to an [ICLRAssemblyReferenceList](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyreferencelist-interface.md) instance from the supplied list of partial assembly identities.</span></span>  
+# <a name="iclrassemblyidentitymanagergetclrassemblyreferencelist-method"></a><span data-ttu-id="b58a4-102">ICLRAssemblyIdentityManager::GetCLRAssemblyReferenceList 메서드</span><span class="sxs-lookup"><span data-stu-id="b58a4-102">ICLRAssemblyIdentityManager::GetCLRAssemblyReferenceList Method</span></span>
+<span data-ttu-id="b58a4-103">한 인터페이스 포인터를 가져옵니다는 [ICLRAssemblyReferenceList](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyreferencelist-interface.md) 부분 어셈블리 id의 제공 된 목록에서 인스턴스.</span><span class="sxs-lookup"><span data-stu-id="b58a4-103">Gets an interface pointer to an [ICLRAssemblyReferenceList](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyreferencelist-interface.md) instance from the supplied list of partial assembly identities.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="daf70-104">구문</span><span class="sxs-lookup"><span data-stu-id="daf70-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="b58a4-104">구문</span><span class="sxs-lookup"><span data-stu-id="b58a4-104">Syntax</span></span>  
   
 ```  
 HRESULT  GetCLRAssemblyReferenceList (  
@@ -37,36 +37,37 @@ HRESULT  GetCLRAssemblyReferenceList (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="daf70-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="daf70-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="b58a4-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="b58a4-105">Parameters</span></span>  
  `ppwzAssemblyReferences`  
- <span data-ttu-id="daf70-106">[in] 배열 형식으로 null로 끝나는 문자열의 "이름, 속성 = value..." 부분 어셈블리 id의 목록을 지정 하는 합니다.</span><span class="sxs-lookup"><span data-stu-id="daf70-106">[in] An array of null-terminated strings in the form "name, property=value..." that specify a list of partial assembly identities.</span></span>  
+ <span data-ttu-id="b58a4-106">[in] 배열 형식으로 null로 끝나는 문자열의 "이름, 속성 = value..." 부분 어셈블리 id의 목록을 지정 하는 합니다.</span><span class="sxs-lookup"><span data-stu-id="b58a4-106">[in] An array of null-terminated strings in the form "name, property=value..." that specify a list of partial assembly identities.</span></span>  
   
  `dwNumOfReferences`  
- <span data-ttu-id="daf70-107">[in] 항목 수가 `ppwzAssemblyReferences`합니다.</span><span class="sxs-lookup"><span data-stu-id="daf70-107">[in] The number of items in `ppwzAssemblyReferences`.</span></span>  
+ <span data-ttu-id="b58a4-107">[in] 항목 수가 `ppwzAssemblyReferences`합니다.</span><span class="sxs-lookup"><span data-stu-id="b58a4-107">[in] The number of items in `ppwzAssemblyReferences`.</span></span>  
   
  `ppReferenceList`  
- <span data-ttu-id="daf70-108">[out] 에 대 한 인터페이스 포인터를 `ICLRAssemblyReferenceList` 에 지정 된 어셈블리 목록에 대 한 어셈블리 id 데이터를 포함 하는 개체 `ppwzAssemblyReferences`합니다.</span><span class="sxs-lookup"><span data-stu-id="daf70-108">[out] An interface pointer to an `ICLRAssemblyReferenceList` object that contains the assembly identity data for the list of assemblies specified in `ppwzAssemblyReferences`.</span></span>  
+ <span data-ttu-id="b58a4-108">[out] 에 대 한 인터페이스 포인터를 `ICLRAssemblyReferenceList` 에 지정 된 어셈블리 목록에 대 한 어셈블리 id 데이터를 포함 하는 개체 `ppwzAssemblyReferences`합니다.</span><span class="sxs-lookup"><span data-stu-id="b58a4-108">[out] An interface pointer to an `ICLRAssemblyReferenceList` object that contains the assembly identity data for the list of assemblies specified in `ppwzAssemblyReferences`.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="daf70-109">반환 값</span><span class="sxs-lookup"><span data-stu-id="daf70-109">Return Value</span></span>  
+## <a name="return-value"></a><span data-ttu-id="b58a4-109">반환 값</span><span class="sxs-lookup"><span data-stu-id="b58a4-109">Return Value</span></span>  
   
-|<span data-ttu-id="daf70-110">HRESULT</span><span class="sxs-lookup"><span data-stu-id="daf70-110">HRESULT</span></span>|<span data-ttu-id="daf70-111">설명</span><span class="sxs-lookup"><span data-stu-id="daf70-111">Description</span></span>|  
+|<span data-ttu-id="b58a4-110">HRESULT</span><span class="sxs-lookup"><span data-stu-id="b58a4-110">HRESULT</span></span>|<span data-ttu-id="b58a4-111">설명</span><span class="sxs-lookup"><span data-stu-id="b58a4-111">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="daf70-112">S_OK</span><span class="sxs-lookup"><span data-stu-id="daf70-112">S_OK</span></span>|<span data-ttu-id="daf70-113">메서드가 성공적으로 반환 합니다.</span><span class="sxs-lookup"><span data-stu-id="daf70-113">The method returned successfully.</span></span>|  
-|<span data-ttu-id="daf70-114">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="daf70-114">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="daf70-115">프로세스에는 CLR (공용 언어 런타임)에 로드 되지 또는 CLR 상태인는 관리 코드를 실행 하거나 호출을 처리할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="daf70-115">The common language runtime (CLR) has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
-|<span data-ttu-id="daf70-116">HOST_E_TIMEOUT</span><span class="sxs-lookup"><span data-stu-id="daf70-116">HOST_E_TIMEOUT</span></span>|<span data-ttu-id="daf70-117">호출 시간이 초과 되었습니다.</span><span class="sxs-lookup"><span data-stu-id="daf70-117">The call timed out.</span></span>|  
-|<span data-ttu-id="daf70-118">HOST_E_NOT_OWNER</span><span class="sxs-lookup"><span data-stu-id="daf70-118">HOST_E_NOT_OWNER</span></span>|<span data-ttu-id="daf70-119">호출자가 잠금을 소유 하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="daf70-119">The caller does not own the lock.</span></span>|  
-|<span data-ttu-id="daf70-120">HOST_E_ABANDONED</span><span class="sxs-lookup"><span data-stu-id="daf70-120">HOST_E_ABANDONED</span></span>|<span data-ttu-id="daf70-121">이벤트가 차단 된 스레드가 취소 된 또는 파이버를 대기 하 고 있습니다.</span><span class="sxs-lookup"><span data-stu-id="daf70-121">An event was canceled while a blocked thread or fiber was waiting on it.</span></span>|  
-|<span data-ttu-id="daf70-122">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="daf70-122">E_FAIL</span></span>|<span data-ttu-id="daf70-123">알 수 없는 치명적인 오류가 발생 했습니다.</span><span class="sxs-lookup"><span data-stu-id="daf70-123">An unknown catastrophic failure occurred.</span></span> <span data-ttu-id="daf70-124">메서드가 E_FAIL을 반환 하는 경우 CLR은 프로세스 내에서 사용할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="daf70-124">If a method returns E_FAIL, the CLR is no longer usable within the process.</span></span> <span data-ttu-id="daf70-125">메서드를 호스트 하는 데 대 한 후속 호출 HOST_E_CLRNOTAVAILABLE를 반환 합니다.</span><span class="sxs-lookup"><span data-stu-id="daf70-125">Subsequent calls to hosting methods return HOST_E_CLRNOTAVAILABLE.</span></span>|  
+|<span data-ttu-id="b58a4-112">S_OK</span><span class="sxs-lookup"><span data-stu-id="b58a4-112">S_OK</span></span>|<span data-ttu-id="b58a4-113">메서드가 성공적으로 반환 합니다.</span><span class="sxs-lookup"><span data-stu-id="b58a4-113">The method returned successfully.</span></span>|  
+|<span data-ttu-id="b58a4-114">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="b58a4-114">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="b58a4-115">프로세스에는 CLR (공용 언어 런타임)에 로드 되지 또는 CLR 상태인는 관리 코드를 실행 하거나 호출을 처리할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="b58a4-115">The common language runtime (CLR) has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
+|<span data-ttu-id="b58a4-116">HOST_E_TIMEOUT</span><span class="sxs-lookup"><span data-stu-id="b58a4-116">HOST_E_TIMEOUT</span></span>|<span data-ttu-id="b58a4-117">호출 시간이 초과 되었습니다.</span><span class="sxs-lookup"><span data-stu-id="b58a4-117">The call timed out.</span></span>|  
+|<span data-ttu-id="b58a4-118">HOST_E_NOT_OWNER</span><span class="sxs-lookup"><span data-stu-id="b58a4-118">HOST_E_NOT_OWNER</span></span>|<span data-ttu-id="b58a4-119">호출자가 잠금을 소유 하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="b58a4-119">The caller does not own the lock.</span></span>|  
+|<span data-ttu-id="b58a4-120">HOST_E_ABANDONED</span><span class="sxs-lookup"><span data-stu-id="b58a4-120">HOST_E_ABANDONED</span></span>|<span data-ttu-id="b58a4-121">이벤트가 차단 된 스레드가 취소 된 또는 파이버를 대기 하 고 있습니다.</span><span class="sxs-lookup"><span data-stu-id="b58a4-121">An event was canceled while a blocked thread or fiber was waiting on it.</span></span>|  
+|<span data-ttu-id="b58a4-122">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="b58a4-122">E_FAIL</span></span>|<span data-ttu-id="b58a4-123">알 수 없는 치명적인 오류가 발생 했습니다.</span><span class="sxs-lookup"><span data-stu-id="b58a4-123">An unknown catastrophic failure occurred.</span></span> <span data-ttu-id="b58a4-124">메서드가 E_FAIL을 반환 하는 경우 CLR은 프로세스 내에서 사용할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="b58a4-124">If a method returns E_FAIL, the CLR is no longer usable within the process.</span></span> <span data-ttu-id="b58a4-125">메서드를 호스트 하는 데 대 한 후속 호출 HOST_E_CLRNOTAVAILABLE를 반환 합니다.</span><span class="sxs-lookup"><span data-stu-id="b58a4-125">Subsequent calls to hosting methods return HOST_E_CLRNOTAVAILABLE.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="daf70-126">요구 사항</span><span class="sxs-lookup"><span data-stu-id="daf70-126">Requirements</span></span>  
- <span data-ttu-id="daf70-127">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="daf70-127">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="b58a4-126">요구 사항</span><span class="sxs-lookup"><span data-stu-id="b58a4-126">Requirements</span></span>  
+ <span data-ttu-id="b58a4-127">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="b58a4-127">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="daf70-128">**헤더:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="daf70-128">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="b58a4-128">**헤더:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="b58a4-128">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="daf70-129">**라이브러리:** MSCorEE.dll에 리소스로 포함</span><span class="sxs-lookup"><span data-stu-id="daf70-129">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="b58a4-129">**라이브러리:** MSCorEE.dll에 리소스로 포함</span><span class="sxs-lookup"><span data-stu-id="b58a4-129">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="daf70-130">**.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="daf70-130">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ **<span data-ttu-id="b58a4-130">.NET Framework 버전:</span><span class="sxs-lookup"><span data-stu-id="b58a4-130">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="daf70-131">참고자료</span><span class="sxs-lookup"><span data-stu-id="daf70-131">See also</span></span>
-- [<span data-ttu-id="daf70-132">ICLRAssemblyIdentityManager 인터페이스</span><span class="sxs-lookup"><span data-stu-id="daf70-132">ICLRAssemblyIdentityManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyidentitymanager-interface.md)
-- [<span data-ttu-id="daf70-133">ICLRAssemblyReferenceList 인터페이스</span><span class="sxs-lookup"><span data-stu-id="daf70-133">ICLRAssemblyReferenceList Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyreferencelist-interface.md)
+## <a name="see-also"></a><span data-ttu-id="b58a4-131">참고자료</span><span class="sxs-lookup"><span data-stu-id="b58a4-131">See also</span></span>
+
+- [<span data-ttu-id="b58a4-132">ICLRAssemblyIdentityManager 인터페이스</span><span class="sxs-lookup"><span data-stu-id="b58a4-132">ICLRAssemblyIdentityManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyidentitymanager-interface.md)
+- [<span data-ttu-id="b58a4-133">ICLRAssemblyReferenceList 인터페이스</span><span class="sxs-lookup"><span data-stu-id="b58a4-133">ICLRAssemblyReferenceList Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyreferencelist-interface.md)

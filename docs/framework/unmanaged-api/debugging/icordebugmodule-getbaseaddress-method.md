@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 11685e8ceba1638ce99a8c4c47b66d0ae2e67714
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 763f2872099fac87138b7e1ab058c60475892b0c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57476167"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59107421"
 ---
-# <a name="icordebugmodulegetbaseaddress-method"></a><span data-ttu-id="313c3-102">ICorDebugModule::GetBaseAddress 메서드</span><span class="sxs-lookup"><span data-stu-id="313c3-102">ICorDebugModule::GetBaseAddress Method</span></span>
-<span data-ttu-id="313c3-103">모듈의 기본 주소를 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="313c3-103">Gets the base address of the module.</span></span>  
+# <a name="icordebugmodulegetbaseaddress-method"></a><span data-ttu-id="defc8-102">ICorDebugModule::GetBaseAddress 메서드</span><span class="sxs-lookup"><span data-stu-id="defc8-102">ICorDebugModule::GetBaseAddress Method</span></span>
+<span data-ttu-id="defc8-103">모듈의 기본 주소를 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="defc8-103">Gets the base address of the module.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="313c3-104">구문</span><span class="sxs-lookup"><span data-stu-id="313c3-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="defc8-104">구문</span><span class="sxs-lookup"><span data-stu-id="defc8-104">Syntax</span></span>  
   
 ```  
 HRESULT GetBaseAddress(  
@@ -35,22 +35,20 @@ HRESULT GetBaseAddress(
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="313c3-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="313c3-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="defc8-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="defc8-105">Parameters</span></span>  
  `pAddress`  
- <span data-ttu-id="313c3-106">[out] `CORDB_ADDRESS` 모듈의 기본 주소를 지정 하는 합니다.</span><span class="sxs-lookup"><span data-stu-id="313c3-106">[out] A `CORDB_ADDRESS` that specifies the base address of the module.</span></span>  
+ <span data-ttu-id="defc8-106">[out] `CORDB_ADDRESS` 모듈의 기본 주소를 지정 하는 합니다.</span><span class="sxs-lookup"><span data-stu-id="defc8-106">[out] A `CORDB_ADDRESS` that specifies the base address of the module.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="313c3-107">설명</span><span class="sxs-lookup"><span data-stu-id="313c3-107">Remarks</span></span>  
- <span data-ttu-id="313c3-108">이 모듈은 네이티브 경우 (즉, 경우 모듈 네이티브 이미지 생성기, NGen.exe에서 생성 된) 이미지를 해당 기본 주소는 0이 됩니다.</span><span class="sxs-lookup"><span data-stu-id="313c3-108">If the module is a native image (that is, if the module was produced by the native image generator, NGen.exe), its base address will be zero.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="defc8-107">설명</span><span class="sxs-lookup"><span data-stu-id="defc8-107">Remarks</span></span>  
+ <span data-ttu-id="defc8-108">이 모듈은 네이티브 경우 (즉, 경우 모듈 네이티브 이미지 생성기, NGen.exe에서 생성 된) 이미지를 해당 기본 주소는 0이 됩니다.</span><span class="sxs-lookup"><span data-stu-id="defc8-108">If the module is a native image (that is, if the module was produced by the native image generator, NGen.exe), its base address will be zero.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="313c3-109">요구 사항</span><span class="sxs-lookup"><span data-stu-id="313c3-109">Requirements</span></span>  
- <span data-ttu-id="313c3-110">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="313c3-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="defc8-109">요구 사항</span><span class="sxs-lookup"><span data-stu-id="defc8-109">Requirements</span></span>  
+ <span data-ttu-id="defc8-110">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="defc8-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="313c3-111">**헤더:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="313c3-111">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="defc8-111">**헤더:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="defc8-111">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="313c3-112">**라이브러리:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="313c3-112">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="defc8-112">**라이브러리:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="defc8-112">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="313c3-113">**.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="313c3-113">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ **<span data-ttu-id="defc8-113">.NET Framework 버전:</span><span class="sxs-lookup"><span data-stu-id="defc8-113">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="313c3-114">참고자료</span><span class="sxs-lookup"><span data-stu-id="313c3-114">See also</span></span>
-
-
+## <a name="see-also"></a><span data-ttu-id="defc8-114">참고자료</span><span class="sxs-lookup"><span data-stu-id="defc8-114">See also</span></span>
