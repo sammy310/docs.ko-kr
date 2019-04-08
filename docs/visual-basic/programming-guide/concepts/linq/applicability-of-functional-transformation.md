@@ -2,12 +2,12 @@
 title: 함수 변환 (Visual Basic)의 적용 가능성
 ms.date: 07/20/2015
 ms.assetid: 3b74e134-e19b-44bc-8d06-e26c48305040
-ms.openlocfilehash: 01ebc25e77e7098d0aad5ec612e57d7f6b078d4f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7efeab82dafc284f64a950eb7f5e4a6ee3f2e73d
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54699404"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58827616"
 ---
 # <a name="applicability-of-functional-transformation-visual-basic"></a>함수 변환 (Visual Basic)의 적용 가능성
 순수 함수 변환은 광범위한 상황에서 적용 가능합니다.  
@@ -33,6 +33,7 @@ ms.locfileid: "54699404"
  응용 프로그램에 최적인 디자인의 요소가 모두 통합 수 있도록 Visual Basic에서는 명령형 방법과 함수형 방법을 지원는 반드시 합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [순수 함수 변환 (Visual Basic) 소개](../../../../visual-basic/programming-guide/concepts/linq/introduction-to-pure-functional-transformations.md)
 - [XML의 함수 변환(Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/functional-transformation-of-xml.md)
 - [(Visual Basic) 순수 함수로 리팩터링](../../../../visual-basic/programming-guide/concepts/linq/refactoring-into-pure-functions.md)

@@ -2,12 +2,18 @@
 title: 문서 주석에 대한 권장 XML 태그(Visual Basic)
 ms.date: 07/20/2015
 f1_keywords:
-  - vb.XmlDocComment
+- vb.XmlDocComment
 helpviewer_keywords:
-  - 'tags, XML'
-  - 'XML comments, recommended tags [Visual Basic]'
-  - 'comments, recommended XML tags'
+- tags, XML
+- XML comments, recommended tags [Visual Basic]
+- comments, recommended XML tags
 ms.assetid: 294e0736-ff1e-498e-af83-6db71ed41a72
+ms.openlocfilehash: e59ee25b22c51e47dc83233af33099e6c55de87b
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58814952"
 ---
 # <a name="recommended-xml-tags-for-documentation-comments-visual-basic"></a>문서 주석에 대한 권장 XML 태그(Visual Basic)
 Visual Basic 컴파일러는 XML 파일에 코드에서 문서 주석을 처리할 수 있습니다. 설명서에 XML 파일을 처리 하는 데 추가 도구를 사용할 수 있습니다.  
@@ -34,6 +40,7 @@ Visual Basic 컴파일러는 XML 파일에 코드에서 문서 주석을 처리�
 >  문서 주석의 텍스트에 꺾쇠 괄호를 하려는 경우 사용할 `&lt;` 고 `&gt;`입니다. 예를 들어, 문자열 `"&lt;text in angle brackets&gt;"` 으로 표시 됩니다 `<text in angle brackets>`합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [코드를 XML로 문서화](../../../visual-basic/programming-guide/program-structure/documenting-your-code-with-xml.md)
 - [/doc](../../../visual-basic/reference/command-line-compiler/doc.md)
 - [방법: XML 문서 만들기](../../../visual-basic/programming-guide/program-structure/how-to-create-xml-documentation.md)

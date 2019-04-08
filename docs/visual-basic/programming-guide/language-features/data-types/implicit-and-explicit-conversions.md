@@ -20,12 +20,12 @@ helpviewer_keywords:
 - data type conversion [Visual Basic], implicit
 - implicit data type conversions [Visual Basic]
 ms.assetid: 77de1659-af8a-492c-967e-e7ef60ccce66
-ms.openlocfilehash: 8e0ab9e3818ff4210dc6e349104ea0dcc4c8bfa7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 82ff710629089cd14c7e982b4afa4301d0790811
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54596009"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58833999"
 ---
 # <a name="implicit-and-explicit-conversions-visual-basic"></a>암시적 변환과 명시적 변환(Visual Basic)
 *암시적 변환* 소스 코드의 특수 구문이 필요 하지 않습니다. 다음 예제에서는 Visual Basic 암시적으로 변환 된 값 `k` 단 정밀도 부동 소수점 값에 할당 하기 전에 `q`입니다.  
@@ -130,6 +130,7 @@ End If
  명시적 변환을 수행 라고도 *캐스팅* 지정 된 데이터 형식 또는 개체 클래스에는 식입니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [Visual Basic의 형식 변환](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)
 - [문자열과 다른 형식 사이의 변환](../../../../visual-basic/programming-guide/language-features/data-types/conversions-between-strings-and-other-types.md)
 - [방법: Visual Basic에서 다른 형식으로 변환할 개체](../../../../visual-basic/programming-guide/language-features/data-types/how-to-convert-an-object-to-another-type.md)

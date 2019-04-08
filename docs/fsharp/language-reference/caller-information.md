@@ -2,12 +2,12 @@
 title: 호출자 정보
 description: 메서드에서 호출자 정보를 가져오려면 호출자 정보 인수 특성을 사용 하는 방법에 설명 합니다.
 ms.date: 04/25/2017
-ms.openlocfilehash: 9c6b2a92a15e12d016a153b401f166c8fd1efe93
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: fd9ce204193ae7402a2e8cf3440cb831ac446af0
+ms.sourcegitcommit: 5c2176883dc3107445702724a7caa7ac2f6cb0d3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53613819"
+ms.lasthandoff: 04/03/2019
+ms.locfileid: "58890308"
 ---
 # <a name="caller-information"></a>호출자 정보
 
@@ -30,9 +30,9 @@ open System.Diagnostics
 open System.Runtime.CompilerServices
 
 type Tracer() =
-    member __.DoTrace(msg: string,
+    member __.DoTrace(message: string,
                       [<CallerMemberName>] ?memberName: string,
-                      [<CallerFilePath>] ?path: string
+                      [<CallerFilePath>] ?path: string,
                       [<CallerLineNumber>] ?line: int) =
         Trace.WriteLine(sprintf "Message: %s" message)
         match (memberName, path, line) with
@@ -70,7 +70,7 @@ type Tracer() =
 |특성 생성자|특성이 적용되는 멤버의 이름입니다. 특성이 멤버 내에 있는 어떤 요소인 경우(예: 매개 변수, 반환 값 또는 제네릭 형식 매개 변수) 이 결과는 그 요소와 관련된 멤버의 이름입니다.|
 |포함하는 멤버가 없음(예: 어셈블리 수준 또는 형식에 적용되는 특성)|선택적 매개 변수의 기본값입니다.|
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참고자료
 
 - [특성](attributes.md)
 - [명명 된 인수](parameters-and-arguments.md#named-arguments)

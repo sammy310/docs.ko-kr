@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30982
 ms.assetid: 741e85d9-a747-42ad-a1e1-a3f1928aaff5
-ms.openlocfilehash: 1f1df0c7391c027994caabadc4b857bec55f5938
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: e90e881546c12df2c8b19ff03a4d4c7304c4596c
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57367183"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58815877"
 ---
 # <a name="type-of-variablename-cannot-be-inferred-because-the-loop-bounds-and-the-step-variable-do-not-widen-to-the-same-type"></a>유형의 '\<variablename >' 루프 범위와 단계 변수가 같은 형식으로 확대 되지 않으므로 유추할 수 없습니다.
 사용자가 작성 한 `For...Next` 루프는 다음 조건으로 인해 컴파일러가 루프 제어 변수의 데이터 형식을 유추할 수 없습니다.  
@@ -63,6 +63,7 @@ Dim n = 20
     ```  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:Microsoft.VisualBasic.Conversion.Val%2A>
 - [For...Next 문](../../../visual-basic/language-reference/statements/for-next-statement.md)
 - [암시적 변환과 명시적 변환](../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md)

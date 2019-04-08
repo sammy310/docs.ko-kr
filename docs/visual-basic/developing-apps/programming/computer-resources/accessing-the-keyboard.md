@@ -7,12 +7,12 @@ helpviewer_keywords:
 - keystrokes
 - CapsLock property
 ms.assetid: aa37d54c-5c98-4b44-b98a-c26d2a03c038
-ms.openlocfilehash: f4b719727f3264886f8c4c313d4e1154f0d04728
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 00cdf18d057ca8a5c59cde02759b5c8c572a8bba
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54549265"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58823573"
 ---
 # <a name="accessing-the-keyboard-visual-basic"></a>키보드에 액세스(Visual Basic)
 `My.Computer.Keyboard` 개체는 현재 누른 키 등 키보드의 현재 상태에 액세스하기 위한 속성을 제공하고, 활성 창에 키 입력을 보내기 위한 메서드를 제공합니다.  
@@ -31,5 +31,6 @@ ms.locfileid: "54549265"
 |애플리케이션 시작 및 키 입력 보내기|[방법: 애플리케이션 시작 및 키 입력 보내기(Visual Basic)](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-start-an-application-and-send-it-keystrokes.md)|  
   
 ## <a name="see-also"></a>참고 항목
+
 - <xref:Microsoft.VisualBasic.Devices.Keyboard>
 - <xref:System.Windows.Forms.Keys?displayProperty=nameWithType>

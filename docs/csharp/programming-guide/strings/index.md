@@ -1,11 +1,17 @@
 ---
-title: '문자열 - C# 프로그래밍 가이드'
+title: 문자열 - C# 프로그래밍 가이드
 ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
-  - 'C# language, strings'
-  - 'strings [C#]'
+- C# language, strings
+- strings [C#]
 ms.assetid: 21580405-cb25-4541-89d5-037846a38b07
+ms.openlocfilehash: 57781dd5a988435778587636cc458256b966446c
+ms.sourcegitcommit: a3db1a9eafca89f95ccf361bc1833b47fbb2bb30
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 04/04/2019
+ms.locfileid: "58920690"
 ---
 # <a name="strings-c-programming-guide"></a>문자열(C# 프로그래밍 가이드)
 문자열은 값이 텍스트인 <xref:System.String> 형식의 개체입니다. 내부적으로 텍스트는 <xref:System.Char> 개체의 순차적 읽기 전용 컬렉션으로 저장됩니다. C# 문자열의 끝에 null 종료 문자가 없으므로 C# 문자열에는 포함된 null 문자('\0')를 여러 개 사용할 수 있습니다. 문자열의 <xref:System.String.Length%2A> 속성은 유니코드 문자 수가 아닌 포함된 `Char` 개체 수를 나타냅니다. 문자열에서 개별 유니코드 코드 포인트에 액세스하려면 <xref:System.Globalization.StringInfo> 개체를 사용합니다.  
@@ -68,7 +74,7 @@ ms.assetid: 21580405-cb25-4541-89d5-037846a38b07
  형식 문자열은 콘텐츠가 런타임에 동적으로 결정되는 문자열입니다. 형식 문자열은 문자열 내의 중괄호 안에 ‘보간된 식’이나 자리 표시자를 포함하여 만들어집니다. 중괄호(`{...}`) 안의 모든 내용은 런타임에 하나의 값으로 확인되고 형식화된 문자열로 출력됩니다. 형식 문자열을 만드는 두 가지 방법은 문자열 보간 및 복합 형식 지정입니다.
 
 ### <a name="string-interpolation"></a>문자열 보간
-C# 6.0 이상에서 사용 가능한 [‘보간된 문자열’](../../language-reference/tokens/interpolated.md)은 `$` 특수 문자로 식별되고 중괄호 안에 보간된 식을 포함합니다. 문자열 보간을 처음 접하는 경우 빠른 개요를 위해 [문자열 보간 - C# 대화형 자습서](../../tutorials/intro-to-csharp/interpolated-strings.yml)를 참조하세요.
+C# 6.0 이상에서 사용 가능한 [‘보간된 문자열’](../../language-reference/tokens/interpolated.md)은 `$` 특수 문자로 식별되고 중괄호 안에 보간된 식을 포함합니다. 문자열 보간을 처음 접하는 경우 빠른 개요를 위해 [문자열 보간 - C# 대화형 자습서](../../tutorials/exploration/interpolated-strings.yml)를 참조하세요.
 
 코드의 가독성과 유지 관리를 개선하려면 문자열 보간을 사용합니다. 문자열 보간은 `String.Format` 메서드와 동일한 결과를 제공하지만 더 편리하고 인라인 명확성이 향상됩니다.
 
@@ -129,8 +135,8 @@ string s = String.Empty;
 |[방법: 검색 문자열](../../how-to/search-strings.md)|문자열에서 특정 텍스트 또는 패턴에 대해 검색을 사용하는 방법을 설명합니다.|  
 |[방법: 문자열이 숫자 값을 나타내는지 확인](../../../csharp/programming-guide/strings/how-to-determine-whether-a-string-represents-a-numeric-value.md)|문자열에 올바른 숫자 값이 있는지 여부를 확인할 수 있도록 문자열을 안전하게 구문 분석하는 방법을 보여 줍니다.|  
 |[문자열 보간](../../language-reference/tokens/interpolated.md)|문자열의 서식을 지정하는 편리한 구문을 제공하는 문자열 보간 기능에 대해 설명합니다.|
-|[기본적인 문자열 작업](../../../../docs/standard/base-types/basic-string-operations.md)|<xref:System.String?displayProperty=nameWithType> 및 <xref:System.Text.StringBuilder?displayProperty=nameWithType> 메서드를 사용하여 기본적인 문자열 작업을 수행하는 항목에 대한 링크를 제공합니다.|  
-|[Parsing Strings](../../../standard/base-types/parsing-strings.md)|.NET 기본 형식의 문자열 표현을 해당 형식의 인스턴스로 변환하는 방법에 대해 설명합니다.|  
+|[기본 문자열 작업](../../../../docs/standard/base-types/basic-string-operations.md)|<xref:System.String?displayProperty=nameWithType> 및 <xref:System.Text.StringBuilder?displayProperty=nameWithType> 메서드를 사용하여 기본적인 문자열 작업을 수행하는 항목에 대한 링크를 제공합니다.|  
+|[문자열 구문 분석](../../../standard/base-types/parsing-strings.md)|.NET 기본 형식의 문자열 표현을 해당 형식의 인스턴스로 변환하는 방법에 대해 설명합니다.|  
 |[.NET에서 날짜 및 시간 문자열 구문 분석](../../../standard/base-types/parsing-datetime.md)|"01/24/2008"과 같은 문자열을 <xref:System.DateTime?displayProperty=nameWithType> 개체로 변환하는 방법을 보여 줍니다.|  
 |[문자열 비교](../../../../docs/standard/base-types/comparing.md)|문자열을 비교하는 방법에 대한 정보가 포함되어 있으며, C# 및 Visual Basic의 예제를 제공합니다.|  
 |[StringBuilder 클래스 사용](../../../standard/base-types/stringbuilder.md)|<xref:System.Text.StringBuilder> 클래스를 사용하여 동적 문자열 개체를 만들고 수정하는 방법을 설명합니다.|  

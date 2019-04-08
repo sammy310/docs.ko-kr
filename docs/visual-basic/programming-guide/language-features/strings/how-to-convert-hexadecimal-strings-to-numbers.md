@@ -8,12 +8,12 @@ helpviewer_keywords:
 - decimals [Visual Basic], hexadecimals
 - string conversion [Visual Basic], hexadecimal to numbers
 ms.assetid: 76675807-eadb-4c08-bd50-e6c6ff4b8ced
-ms.openlocfilehash: c8ef615b6874642fa9ad1b22fe9d7f7745d4ffde
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.openlocfilehash: 350cfb59a01a4526a2b679fabfa2d49aeab23c19
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57201003"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58813091"
 ---
 # <a name="how-to-convert-hexadecimal-strings-to-numbers-visual-basic"></a>방법: 숫자 (Visual Basic)를 16 진수 문자열 변환
 사용 하는 정수를 16 진수 문자열로 변환 하는이 예제는 <xref:System.Convert.ToInt32%2A?displayProperty=nameWithType> 메서드.  
@@ -34,5 +34,6 @@ ms.locfileid: "57201003"
    접두사 또는 숫자 구분 기호 있는 경우에 대 한 호출을 <xref:System.Convert.ToInt32(System.String,System.Int32)> 메서드가 throw를 <xref:System.FormatException>입니다.
 
 ## <a name="see-also"></a>참고자료
+
 - <xref:Microsoft.VisualBasic.Conversion.Hex%2A>
 - <xref:System.Convert.ToInt32%2A?displayProperty=nameWithType>

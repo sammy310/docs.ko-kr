@@ -1,17 +1,17 @@
 ---
-title: Visual Basic 응용 프로그램 모델 확장
+title: Visual Basic 애플리케이션 모델 확장
 ms.date: 07/20/2015
 helpviewer_keywords:
 - Visual Basic Application Model, extending
 ms.assetid: e91d3bed-4c27-40e3-871d-2be17467c72c
-ms.openlocfilehash: 64c175216cf21b7947462cf79e4b88ab6fcd6d86
-ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
+ms.openlocfilehash: aceb63d3cb9af75fa4eb32ed5bca5d65825704e8
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/25/2018
-ms.locfileid: "39245650"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58834714"
 ---
-# <a name="extending-the-visual-basic-application-model"></a>Visual Basic 응용 프로그램 모델 확장
+# <a name="extending-the-visual-basic-application-model"></a>Visual Basic 애플리케이션 모델 확장
 재정의 하 여 응용 프로그램 모델 기능을 추가할 수 있습니다 합니다 `Overridable` 의 멤버는 <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase> 클래스입니다. 이 기술은 응용 프로그램 시작 및 종료 하는 대로 사용자 고유의 메서드 호출을 추가 및 응용 프로그램 모델의 동작을 사용자 지정할 수 있습니다.  
   
 ## <a name="visual-overview-of-the-application-model"></a>응용 프로그램 모델의 시각적 개요  
@@ -19,13 +19,13 @@ ms.locfileid: "39245650"
   
  다음 그래픽 일반적인 Visual Basic Windows Forms 응용 프로그램에서 응용 프로그램 모델 호출 순서를 보여 줍니다. 시퀀스 될 때 시작 되는 `Sub Main` 프로시저 호출을 <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.Run%2A> 메서드.  
   
- ![Visual Basic 응용 프로그램 모델 &#45; &#45; 실행](../../../visual-basic/developing-apps/customizing-extending-my/media/vb_modelrun.gif "VB_ModelRun")  
+ ![응용 프로그램 모델 호출 순서를 보여 주는 다이어그램입니다.](./media/extending-the-visual-basic-application-model/application-model-call-sequence.gif)  
   
  Visual Basic 응용 프로그램 모델도 제공 합니다 <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.StartupNextInstance> 및 <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.UnhandledException> 이벤트입니다. 다음 그래픽에는 이러한 이벤트를 발생 시키기 위한 메커니즘을 보여 줍니다.  
   
- ![Visual Basic 응용 프로그램 모델 &#45; &#45; 다음 인스턴스](../../../visual-basic/developing-apps/customizing-extending-my/media/vb_modelnext.gif "VB_ModelNext")  
+ ![StartupNextInstance 이벤트를 발생 시키는 OnStartupNextInstance 메서드를 보여 주는 다이어그램입니다.](./media/extending-the-visual-basic-application-model/raise-startupnextinstance-event.gif)  
   
- ![Visual Basic 응용 프로그램 모델 처리 되지 않은 예외](../../../visual-basic/developing-apps/customizing-extending-my/media/vb_unhandex.gif "VB_UnhandEx")  
+ ![오류로 인해 UnhandledException 이벤트를 발생 시키는 OnUnhandledException 메서드를 보여 주는 다이어그램입니다.](./media/extending-the-visual-basic-application-model/raise-unhandledexception-event.gif)  
   
 ## <a name="overriding-the-base-methods"></a>기본 메서드를 재정의합니다.  
  <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.Run%2A> 메서드는 순서를 정의 합니다 `Application` 메서드를 실행 합니다. 기본적으로 `Sub Main` 절차는 Windows Forms 응용 프로그램에 대 한 호출을 <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.Run%2A> 메서드.  
@@ -44,7 +44,7 @@ ms.locfileid: "39245650"
   
     2.  <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnCreateSplashScreen%2A>. 디자이너를를 시작 화면을 초기화 하는 코드를 내보낼 수 있습니다.  
   
-         기본적으로이 메서드는 없습니다. Visual Basic에서 응용 프로그램에 대 한 시작 화면을 선택 하면 **프로젝트 디자이너**, 디자이너 재정의 합니다 <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnCreateSplashScreen%2A> 설정 하는 메서드를 사용 하 여 메서드를 <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.SplashScreen%2A> 시작 화면 폼의 새 인스턴스 속성 .  
+         기본적으로 이 메서드는 아무것도 수행하지 않습니다. Visual Basic에서 응용 프로그램에 대 한 시작 화면을 선택 하면 **프로젝트 디자이너**, 디자이너 재정의 합니다 <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnCreateSplashScreen%2A> 설정 하는 메서드를 사용 하 여 메서드를 <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.SplashScreen%2A> 시작 화면 폼의 새 인스턴스 속성 .  
   
 2.  <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnStartup%2A>. 발생 시키기 위한 확장성 지점을 제공 합니다 `Startup` 이벤트입니다. 이 함수에서 반환 하는 경우 응용 프로그램 시작 시퀀스 중지 `False`합니다.  
   
@@ -56,7 +56,7 @@ ms.locfileid: "39245650"
   
     1.  <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnCreateMainForm%2A>. 기본 폼을 초기화 하는 코드를 내보내는 디자이너에 대 한 방법을 제공 합니다.  
   
-         기본적으로이 메서드는 없습니다. 그러나 선택 하면 기본 폼에서 Visual Basic 응용 프로그램에 대 한 **프로젝트 디자이너**, 디자이너 재정의 <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnCreateMainForm%2A> 설정 하는 메서드를 사용 하 여 메서드를 <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.MainForm%2A> 기본 폼의 새 인스턴스에 대 한 속성입니다.  
+         기본적으로 이 메서드는 아무것도 수행하지 않습니다. 그러나 선택 하면 기본 폼에서 Visual Basic 응용 프로그램에 대 한 **프로젝트 디자이너**, 디자이너 재정의 <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnCreateMainForm%2A> 설정 하는 메서드를 사용 하 여 메서드를 <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.MainForm%2A> 기본 폼의 새 인스턴스에 대 한 속성입니다.  
   
     2.  <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.HideSplashScreen%2A>. 응용 프로그램 정의 시작 화면에 열려 있는 경우이 메서드는 시작 화면을 닫습니다.  
   
@@ -90,13 +90,14 @@ ms.locfileid: "39245650"
 |<xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.SaveMySettingsOnExit%2A>|응용 프로그램이 종료 될 때 응용 프로그램의 사용자 설정 변경 내용을 자동으로 저장 합니다.|**종료 시 종료할 때 My.Settings 저장** 확인란|  
 |<xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.ShutdownStyle%2A>|응용 프로그램이 시작 폼을 닫을 때 또는 마지막 폼을 닫을 때와 같은 종료 원인입니다.|**종료 모드** 목록|  
   
-## <a name="see-also"></a>참고 항목  
- <xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase>  
- <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.Startup>  
- <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.StartupNextInstance>  
- <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.UnhandledException>  
- <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.Shutdown>  
- <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.NetworkAvailabilityChanged>  
- <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.NetworkAvailabilityChanged>  
- [Visual Basic 응용 프로그램 모델 개요](../../../visual-basic/developing-apps/development-with-my/overview-of-the-visual-basic-application-model.md)  
- [프로젝트 디자이너, 응용 프로그램 페이지(Visual Basic)](/visualstudio/ide/reference/application-page-project-designer-visual-basic)
+## <a name="see-also"></a>참고자료
+
+- <xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase>
+- <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.Startup>
+- <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.StartupNextInstance>
+- <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.UnhandledException>
+- <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.Shutdown>
+- <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.NetworkAvailabilityChanged>
+- <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.NetworkAvailabilityChanged>
+- [Visual Basic 응용 프로그램 모델 개요](../../../visual-basic/developing-apps/development-with-my/overview-of-the-visual-basic-application-model.md)
+- [프로젝트 디자이너, 응용 프로그램 페이지(Visual Basic)](/visualstudio/ide/reference/application-page-project-designer-visual-basic)

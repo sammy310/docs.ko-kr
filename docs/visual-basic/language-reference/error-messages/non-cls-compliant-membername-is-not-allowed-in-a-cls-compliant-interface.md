@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC40033
 ms.assetid: 060c4b08-798e-40f1-94cf-c05c524f1b8a
-ms.openlocfilehash: aeacc49faad6198a9341a1ec7d010f1cd173912d
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: dbffe2bd196e798b90104aebb74269387660c794
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55288979"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58840460"
 ---
 # <a name="non-cls-compliant-membername-is-not-allowed-in-a-cls-compliant-interface"></a>비-CLS 규격 \<membername > CLS 규격 인터페이스에 허용 되지 않습니다
 속성, 프로시저 또는 인터페이스의 이벤트로 표시 됩니다 `<CLSCompliant(True)>` 인터페이스 자체으로 표시 되 면 `<CLSCompliant(False)>` 되거나 표시 되지 않습니다.  
@@ -36,5 +36,5 @@ ms.locfileid: "55288979"
 -   이 멤버는 현재 인터페이스 내에서 유지 하려면를 제거 합니다 <xref:System.CLSCompliantAttribute> 해당 정의에서 표시 하거나 `<CLSCompliant(False)>`합니다.  
   
 ## <a name="see-also"></a>참고자료
-- [Interface 문](../../../visual-basic/language-reference/statements/interface-statement.md)
 
+- [Interface 문](../../../visual-basic/language-reference/statements/interface-statement.md)

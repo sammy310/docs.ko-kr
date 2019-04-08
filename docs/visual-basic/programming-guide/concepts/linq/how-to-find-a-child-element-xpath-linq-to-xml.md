@@ -2,12 +2,12 @@
 title: '방법: (XPath 및 LINQ to XML) 자식 요소 찾기 (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: adb46c98-a650-42e2-b62d-835920fe8421
-ms.openlocfilehash: 8472a3d9e90aa117c936c4314204f70d2ab33487
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 96ad54d6f89aefd004a7803baef855d656b8a82d
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54495814"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58821532"
 ---
 # <a name="how-to-find-a-child-element-xpath-linq-to-xml-visual-basic"></a>방법: (XPath 및 LINQ to XML) 자식 요소 찾기 (Visual Basic)
 이 항목에서는 XPath 자식 요소 축과 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] <xref:System.Xml.Linq.XContainer.Element%2A> 메서드를 비교합니다.  
@@ -17,7 +17,7 @@ ms.locfileid: "54495814"
 ## <a name="example"></a>예제  
  이 예제에서는 자식 요소 `DeliveryNotes`를 찾습니다.  
   
- 이 예제에서는 XML 문서로 을 사용합니다. [샘플 XML 파일: 여러 구매 주문 (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-linq-to-xml.md)합니다.  
+ 이 예제에서는 XML 문서로을 사용합니다. [샘플 XML 파일: 여러 구매 주문(LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-linq-to-xml.md).  
   
 ```vb  
 Dim cpo As XDocument = XDocument.Load("PurchaseOrders.xml")  
@@ -47,4 +47,5 @@ Results are identical
 ```  
   
 ## <a name="see-also"></a>참고자료
+
 - [XPath 사용자 (Visual Basic)를 위한 LINQ to XML](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)

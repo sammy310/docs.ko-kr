@@ -2,12 +2,12 @@
 title: '연습: 비동기를 사용 하 여 웹 서비스에 액세스 하 고 Await (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 84fd047f-fab8-4d89-8ced-104fb7310a91
-ms.openlocfilehash: a9eb9f53b456b309997ef9e6fdb83b770478889b
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 4d8f650f5150f862a77cd194d91d906f505723a7
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57379122"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58816997"
 ---
 # <a name="walkthrough-accessing-the-web-by-using-async-and-await-visual-basic"></a>연습: 비동기를 사용 하 여 웹 서비스에 액세스 하 고 Await (Visual Basic)
 async/await 기능을 사용하여 비동기 프로그램을 보다 쉽고 직관적인 방식으로 작성할 수 있습니다. 동기 코드처럼 보이는 비동기 코드를 작성하고 일반적으로 비동기 코드에 수반되는 어려운 콜백 함수 및 연속 작업을 컴파일러에서 처리하도록 할 수 있습니다.  
@@ -674,6 +674,7 @@ End Class
 ```  
   
 ## <a name="see-also"></a>참고자료
+
 - [비동기 샘플: 웹 연습에 액세스 (C# 및 Visual Basic)](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f)
 - [Await 연산자](../../../../visual-basic/language-reference/operators/await-operator.md)
 - [비동기](../../../../visual-basic/language-reference/modifiers/async.md)

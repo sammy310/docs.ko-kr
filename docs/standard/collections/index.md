@@ -3,15 +3,21 @@ title: 컬렉션 및 데이터 구조
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 helpviewer_keywords:
-  - grouping data in collections
-  - 'objects [.NET Framework], grouping in collections'
-  - 'Array class, grouping data in collections'
-  - 'threading [.NET Framework], safety'
-  - Collections classes
-  - 'collections [.NET Framework]'
+- grouping data in collections
+- objects [.NET Framework], grouping in collections
+- Array class, grouping data in collections
+- threading [.NET Framework], safety
+- Collections classes
+- collections [.NET Framework]
 ms.assetid: 60cc581f-1db5-445b-ba04-a173396bf872
 author: mairaw
 ms.author: mairaw
+ms.openlocfilehash: bed202d927cc026b903cb006220620210893056e
+ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56836152"
 ---
 # <a name="collections-and-data-structures"></a>컬렉션 및 데이터 구조
 비슷한 데이터는 컬렉션으로 저장 및 조작하면 보다 효율적으로 처리할 수 있는 경우가 많습니다. <xref:System.Array?displayProperty=nameWithType> 클래스 또는 <xref:System.Collections>, <xref:System.Collections.Generic> 및 <xref:System.Collections.Concurrent>, System.Collections.Immutable 네임스페이스의 클래스를 사용하여 컬렉션의 개별 요소 또는 일정 범위의 요소를 추가, 제거 및 수정할 수 있습니다.  

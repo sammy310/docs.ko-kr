@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Visual Basic, code hiding
 - Visual Basic code, collapsing and hiding
 ms.assetid: b770e8f5-e07d-491a-ab4b-a977980f9ba2
-ms.openlocfilehash: bbce0e4a2427843ed9d9d51b25684db8c54ba69a
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: bf2a7188456097ac227039e4d902a14eb182664c
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56980128"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58822299"
 ---
 # <a name="how-to-collapse-and-hide-sections-of-code-visual-basic"></a>방법: (Visual Basic) 코드 섹션 축소 및 숨기기
 `#Region` 지시문을 사용 하면 Visual Basic 파일에서 코드 섹션 축소 및 숨기기 수 있습니다. `#Region` 지시문을 사용 하면 Visual Studio 코드 편집기를 사용 하는 경우 축소 또는 확장할 수 있는 코드 블록을 지정할 수 있습니다. 코드를 선택적으로 숨길 수 있습니다 파일을 보다 관리 가능 하 고 쉽게 읽을 수 있습니다. 자세한 내용은 [개요](/visualstudio/ide/outlining)를 참조하세요.  
@@ -30,6 +30,7 @@ ms.locfileid: "56980128"
     >  코드에서 컴파일되는 하지 않는 숨기고 영향을 주지 않습니다 `#If...#End If` 문입니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [조건부 컴파일](../../../visual-basic/programming-guide/program-structure/conditional-compilation.md)
 - [#Region 지시문](../../../visual-basic/language-reference/directives/region-directive.md)
 - [#If...Then...#Else 지시문](../../../visual-basic/language-reference/directives/if-then-else-directives.md)

@@ -2,12 +2,12 @@
 title: 생성 작업 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 22b8e380-8eb0-4c93-b4ff-7ac21caf27d5
-ms.openlocfilehash: d62a28404265d99182057d9ee8659a2a090b1255
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: cbc3de23fc8ef691c0342b318728c035db9a36b6
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54591528"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58830112"
 ---
 # <a name="generation-operations-visual-basic"></a>생성 작업 (Visual Basic)
 생성은 값의 새 시퀀스를 만드는 작업을 나타냅니다.  
@@ -24,5 +24,6 @@ ms.locfileid: "54591528"
 |Repeat|반복되는 값이 하나 들어 있는 컬렉션을 생성합니다.|해당 사항 없음.|<xref:System.Linq.Enumerable.Repeat%2A?displayProperty=nameWithType>|  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Linq>
 - [표준 쿼리 연산자 개요(Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)

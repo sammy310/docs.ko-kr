@@ -2,12 +2,12 @@
 title: 고급 쿼리 기술 (LINQ to XML) (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 79be877c-fadc-4dfb-9f03-426082b13656
-ms.openlocfilehash: 140c8dcf5098a474dc2be48d9debc16e92886bb6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 609ac419eea5c320bb51bad2193d10ec63a2e651
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54610034"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58833700"
 ---
 # <a name="advanced-query-techniques-linq-to-xml-visual-basic"></a>고급 쿼리 기술 (LINQ to XML) (Visual Basic)
 이 단원에서는 고급 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 쿼리 기법의 예제를 제공합니다.  
@@ -26,4 +26,5 @@ ms.locfileid: "54610034"
 |[방법: 파일 시스템 (Visual Basic)에서 XML 트리 채우기](../../../../visual-basic/programming-guide/concepts/linq/how-to-populate-an-xml-tree-from-the-file-system.md)|파일 시스템에서 XML 트리를 만드는 코드를 제공합니다.|  
   
 ## <a name="see-also"></a>참고자료
+
 - [XML 트리 쿼리 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/querying-xml-trees.md)

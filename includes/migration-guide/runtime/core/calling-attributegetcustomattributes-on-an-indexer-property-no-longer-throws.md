@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: a3f54bec98f220af48e932e6485d06732a4c6ddd
+ms.sourcegitcommit: 0aca6c5d166d7961a1e354c248495645b97a1dc5
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58761346"
+---
 ### <a name="calling-attributegetcustomattributes-on-an-indexer-property-no-longer-throws-ambiguousmatchexception-if-the-ambiguity-can-be-resolved-by-indexs-type"></a>인덱스 형식으로 모호성이 해결될 수 있는 경우 인덱서 속성에서 Attribute.GetCustomAttributes를 호출하면 더 이상 AmbiguousMatchException이 throw되지 않습니다.
 
 |   |   |

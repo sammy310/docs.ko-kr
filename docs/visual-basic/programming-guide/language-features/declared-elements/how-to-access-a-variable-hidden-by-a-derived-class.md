@@ -9,12 +9,12 @@ helpviewer_keywords:
 - declared elements [Visual Basic], referencing
 - variables [Visual Basic], accessing hidden
 ms.assetid: ae21a8ac-9cd4-4fba-a3ec-ecc4321ef93c
-ms.openlocfilehash: e840c83d7969eeb0322034f0f274fb19ca2b8e7e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a97a51d4570d87eaa873fb3152ad810f528dff46
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54622847"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58832179"
 ---
 # <a name="how-to-access-a-variable-hidden-by-a-derived-class-visual-basic"></a>방법: 파생된 클래스 (Visual Basic)에 의해 숨겨진 변수에 액세스
 변수에 액세스 하는 파생된 클래스에서 코드를 컴파일러가 파생 단계의 이전 버전과 액세스 하는 클래스에서 액세스할 수 있는 버전 즉, 가장 가까운 액세스할 수 있는 버전에 대 한 참조에 확인 일반적으로 합니다. 파생된 클래스에서 변수를 정의 하는 경우 코드에 일반적으로 해당 정의 액세스 합니다.  
@@ -50,6 +50,7 @@ ms.locfileid: "54622847"
  위험을 낮추기 위해서는 숨겨진 변수의 의도 하지 않은 버전에 대 한 참조를 완전히 숨겨진된 변수에 대 한 모든 참조를 한정할 수 있습니다. 숨김 변수 이름이 같은 둘 이상의 버전을 소개합니다. 코드 문이 변수 이름에는 참조, 컴파일러 참조를 확인 하는 버전 코드 문의 위치 및 한정 문자열의 현재 상태 등의 요인에 따라 달라 집니다. 잘못 된 버전의 변수 참조의 위험이 있습니다이 합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [선언된 요소 참조](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)
 - [Visual Basic의 숨김 기능](../../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)
 - [숨기기와 재정의의 차이점](../../../../visual-basic/programming-guide/language-features/declared-elements/differences-between-shadowing-and-overriding.md)

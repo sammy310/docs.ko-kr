@@ -11,12 +11,12 @@ helpviewer_keywords:
 - procedure parameters
 - parameters [Visual Basic], definition
 ms.assetid: c237c056-74f4-4749-9f2c-15864f139a31
-ms.openlocfilehash: ec7c92975bc056fd740033b602b15cd1611c44d1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a69b956c7cffcc2a26916d6fc92f23dd4e2322d7
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54694037"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58838978"
 ---
 # <a name="differences-between-parameters-and-arguments-visual-basic"></a>매개 변수와 인수의 차이점(Visual Basic)
 대부분의 경우에서 프로시저를 호출한 후 나타나는 상황에 대 한 정보가 있어야 합니다. 반복 또는 공유 작업을 수행 하는 프로시저는 각 호출에 대 한 다른 정보를 사용 합니다. 이 정보는 변수, 상수 및 호출할 때 프로시저에 전달 하는 식으로 구성 됩니다.  
@@ -38,6 +38,7 @@ ms.locfileid: "54694037"
  매개 변수 정의 달리 인수 이름을 갖지 않습니다. 각 인수는 0 이상의 변수, 상수 및 리터럴을 포함할 수 있는 식입니다. 계산된 된 식의 데이터 형식을 해당 매개 변수에 정의 된 데이터 형식과 일치 일반적으로 해야 하 고 어떤 경우이 매개 변수 형식으로 변환할 수 있어야 합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [절차](./index.md)
 - [Sub 프로시저](./sub-procedures.md)
 - [Function 프로시저](./function-procedures.md)

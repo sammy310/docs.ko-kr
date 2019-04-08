@@ -9,12 +9,12 @@ helpviewer_keywords:
 - return values [Visual Basic], Operator procedures
 - operator overloading
 ms.assetid: 54203dfa-c24b-463f-9942-d5153e89e762
-ms.openlocfilehash: fe5c314fe4e39c8a06803037da29b51148188e14
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: cf7bfdd09c7f3429f9c730a7aec34b24af3f2e9f
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56974642"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58829228"
 ---
 # <a name="how-to-define-a-conversion-operator-visual-basic"></a>방법: 변환 연산자 (Visual Basic)를 정의 합니다.
 클래스 또는 구조체를 정의한 경우 해당 클래스 또는 구조체 형식 및 다른 데이터 형식 간의 형식 변환 연산자를 정의할 수 있습니다 (같은 `Integer`, `Double`, 또는 `String`).  
@@ -33,6 +33,7 @@ ms.locfileid: "56974642"
  [!code-vb[VbVbcnProcedures#28](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#28)]  
   
 ## <a name="see-also"></a>참고자료
+
 - [연산자 프로시저](./operator-procedures.md)
 - [방법: 연산자 정의](./how-to-define-an-operator.md)
 - [방법: 연산자 프로시저 호출](./how-to-call-an-operator-procedure.md)

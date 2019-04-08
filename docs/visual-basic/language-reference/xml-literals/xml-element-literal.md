@@ -8,12 +8,12 @@ helpviewer_keywords:
 - element literal [Visual Basic]
 - XML literals [Visual Basic], element
 ms.assetid: 95039642-7893-48b7-b23f-45a6c55d8f67
-ms.openlocfilehash: 71e6cf3e6169434ea0a28f8691cf82f6c8e8a030
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 7bd47d2461ba86dfbd1d5ff5993382914116f9ba
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56979935"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58842254"
 ---
 # <a name="xml-element-literal-visual-basic"></a>XML 요소 리터럴(Visual Basic)
 
@@ -160,6 +160,7 @@ ms.locfileid: "56979935"
  컴파일러가 XML 네임 스페이스에 대 한 접두사 정의에 전역 XML 네임 스페이스의 접두사를 변환 하는 주의 하십시오. 합니다 \<ns:middle >에 대 한 XML 네임 스페이스 접두사를 재정의 하는 요소는 \<ns:inner1 > 요소입니다. 그러나 합니다 \<ns:inner2 > 정의한 네임 스페이스를 사용 하는 요소는 `Imports` 문입니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Xml.Linq.XElement>
 - [선언된 XML 요소 및 특성의 이름](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md)
 - [XML 주석 리터럴](../../../visual-basic/language-reference/xml-literals/xml-comment-literal.md)

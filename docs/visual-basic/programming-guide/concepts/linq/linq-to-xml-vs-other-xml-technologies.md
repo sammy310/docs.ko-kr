@@ -2,12 +2,12 @@
 title: LINQ to XML과 비교 다른 XML Technologies2
 ms.date: 07/20/2015
 ms.assetid: 72ce3a82-ffc6-488c-98e7-b9b40f3591ec
-ms.openlocfilehash: 2a671e2588dfe5d325caf745d60fcb993f4d0052
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 80d3d034454d4de74e8aafd41679b82d111e6f3e
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54690324"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58839095"
 ---
 # <a name="linq-to-xml-vs-other-xml-technologies"></a>LINQ to XML과 비교 기타 XML 기술 비교
 이 항목에서는 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)], <xref:System.Xml.XmlReader>, XSLT, MSXML 및 XmlLite와 같은 XML 기술을 비교합니다. 이 정보는 사용할 기술을 결정할 때 유용할 수 있습니다.  
@@ -53,4 +53,5 @@ ms.locfileid: "54690324"
  XmlLite는 [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)]와 통합되지 않았으며 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]에 핵심적인 프로그래머 생산성 향상 기능을 제공하지 않습니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [시작(LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/getting-started-linq-to-xml.md)

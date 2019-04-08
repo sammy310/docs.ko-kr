@@ -17,12 +17,12 @@ helpviewer_keywords:
 - members [Visual Basic], Implements keyword
 - reimplementation
 ms.assetid: 5252cdf9-964d-4fc6-af0f-0449b7126b5a
-ms.openlocfilehash: cb0ea5ce52effad4df541e6a9196b1faf279262e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 05de1d9f8966c17d84deba34f27819cce4aff3fe
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54522513"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58832621"
 ---
 # <a name="implements-clause-visual-basic"></a>Implements 절(Visual Basic)
 클래스 또는 구조체 멤버는 인터페이스에 정의 된 멤버에 대 한 구현을 제공 하는 것을 나타냅니다.  
@@ -45,6 +45,7 @@ ms.locfileid: "54522513"
 - [Sub 문](../../../visual-basic/language-reference/statements/sub-statement.md)  
   
 ## <a name="see-also"></a>참고자료
+
 - [Implements 문](../../../visual-basic/language-reference/statements/implements-statement.md)
 - [Interface 문](../../../visual-basic/language-reference/statements/interface-statement.md)
 - [Class 문](../../../visual-basic/language-reference/statements/class-statement.md)

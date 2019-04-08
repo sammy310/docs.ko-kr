@@ -11,12 +11,12 @@ helpviewer_keywords:
 - dates [Visual Basic]
 - String data type [Visual Basic], converting
 ms.assetid: 3aa744e7-1419-45d5-85e3-e5abc2953673
-ms.openlocfilehash: 22fa31d862259c6dc8607ee44561bc8c18662d88
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3653194c7e48533e664ac7513ca7f4f48d1c69f7
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54642820"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58819517"
 ---
 # <a name="return-values-for-the-cstr-function-visual-basic"></a>CStr 함수의 반환 값(Visual Basic)
 다음 표에서 반환 값에 대 한 설명 `CStr` 의 다른 데이터 형식에 대 한 `expression`합니다.  
@@ -34,6 +34,7 @@ ms.locfileid: "54642820"
 >  `CStr` 함수가 응용 프로그램에 대 한 현재 문화권 설정에 따라 해당 변환을 수행 합니다. 숫자의 문자열 표현을 특정 문화권에서을 사용 수의 `ToString(IFormatProvider)` 메서드. 사용 예를 들어 <xref:System.Double.ToString%2A?displayProperty=nameWithType> 형식의 값을 변환할 때는 `Double` 에 `String`합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:Microsoft.VisualBasic.DateAndTime.DatePart%2A>
 - [형식 변환 함수](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
 - [Boolean 데이터 형식](../../../visual-basic/language-reference/data-types/boolean-data-type.md)

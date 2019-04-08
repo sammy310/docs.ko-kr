@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 0beafad4-b2c8-47f4-b342-83411d57a51f
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 8fd1a4d41e65ea4d39f1cfee33aa5e166eec71ce
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0911132a705f3de89d771324cbb63e8db31bdfdb
+ms.sourcegitcommit: 5c2176883dc3107445702724a7caa7ac2f6cb0d3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54628554"
+ms.lasthandoff: 04/03/2019
+ms.locfileid: "58890516"
 ---
 # <a name="clr-etw-providers"></a>CLR ETW 공급자
 CLR(공용 언어 런타임)에는 런타임 공급자 및 런다운 공급자라는 두 개의 공급자가 있습니다.  
@@ -84,7 +84,7 @@ CLR(공용 언어 런타임)에는 런타임 공급자 및 런다운 공급자�
 4.  프로필을 병합하여 하나의 로그 파일 만들기:  
   
     ```  
-    xperf -merge -d clr1.etl clr2.etl merged.etl  
+    xperf -merge clr1.etl clr2.etl merged.etl  
     ```  
   
      merged.etl 파일에는 런타임 및 런다운 공급자 세션의 이벤트가 포함됩니다.  

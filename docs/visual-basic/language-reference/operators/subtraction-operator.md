@@ -17,12 +17,12 @@ helpviewer_keywords:
 - operators [Visual Basic], negation
 - minus operator [Visual Basic]
 ms.assetid: bff2c368-662d-4c92-ac87-1d9bdfd3426a
-ms.openlocfilehash: 0c10fc3998469e19d5be744ea8fb4faed25f1a2a
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.openlocfilehash: 1a5c47a2f1bc8a8b9e1b0263b90006a0e58e17bb
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57201224"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58830671"
 ---
 # <a name="--operator-visual-basic"></a>- 연산자(Visual Basic)
 두 숫자 식 또는 숫자 식의 음수 값 간의 차이 반환합니다.  
@@ -68,6 +68,7 @@ ms.locfileid: "57201224"
  이러한 문 실행 한 후 다음 `binaryResult` 124.45 포함 및 `unaryResult` –334.90을 포함 합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [-= 연산자 (Visual Basic)](../../../visual-basic/language-reference/operators/subtraction-assignment-operator.md)
 - [산술 연산자](../../../visual-basic/language-reference/operators/arithmetic-operators.md)
 - [Visual Basic에서의 연산자 우선 순위](../../../visual-basic/language-reference/operators/operator-precedence.md)

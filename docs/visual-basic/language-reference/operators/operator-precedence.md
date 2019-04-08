@@ -14,12 +14,12 @@ helpviewer_keywords:
 - math operators [Visual Basic]
 - order of precedence
 ms.assetid: cbbdb282-f572-458e-a520-008a675f8063
-ms.openlocfilehash: a87407fe863569ff961f4a2dc320e73719ed4d9d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 568927eb4759c214311ad34a5b45e28094dd80be
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54601764"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58830034"
 ---
 # <a name="operator-precedence-in-visual-basic"></a>Visual Basic에서의 연산자 우선 순위
 각 파트 평가 되 고 호출 하는 미리 결정 된 순서 대로 확인 식에서 여러 작업 발생 *연산자 우선 순위*합니다.  
@@ -112,6 +112,7 @@ g = (a - (b + c)) / (d * e)
 ```  
   
 ## <a name="see-also"></a>참고자료
+
 - [= 연산자](../../../visual-basic/language-reference/operators/assignment-operator.md)
 - [Is 연산자](../../../visual-basic/language-reference/operators/is-operator.md)
 - [IsNot 연산자](../../../visual-basic/language-reference/operators/isnot-operator.md)

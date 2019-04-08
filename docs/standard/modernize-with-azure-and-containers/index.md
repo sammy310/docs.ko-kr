@@ -4,6 +4,12 @@ description: 리프트 앤 시프트 및 Azure 클라우드 및 이 전자책을
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 04/28/2018
+ms.openlocfilehash: 68d5ce7ad71fae5ed3e1460c56581dd69c3925f3
+ms.sourcegitcommit: 0aca6c5d166d7961a1e354c248495645b97a1dc5
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 03/30/2019
+ms.locfileid: "58675928"
 ---
 # <a name="modernize-existing-net-applications-with-azure-cloud-and-windows-containers-2nd-edition"></a>Azure 클라우드와 Windows 컨테이너를 사용하여 기존.NET 응용 프로그램을 최신으로 변경하기 (2 판)
 
@@ -52,19 +58,19 @@ All rights reserved. 이 가이드의 내용 중 어떤 부분도 게시자의 �
 
 ## <a name="about-this-guide"></a>이 가이드의 내용
 
-이 가이드에 중점을 둡니다 주로 기존 MICROSOFT.NET Framework 웹 또는 서비스 지향 응용 프로그램의 초기 현대화 크게 응용 프로그램의 코드를 변경 하지 않고 최신 또는 더 현대적인 환경으로 워크 로드를 이동 하는 작업을 의미 합니다. 및 기본 아키텍처입니다. 
+이 가이드는 주로 기존 MICROSOFT.NET Framework 웹이나 서비스 지향 응용 프로그램의 기본 아키텍처와 응용 프로그램의 코드를 크게 변경하지 않고 최신의 새로운 환경으로 워크로드를 옮기는 작업을 뜻하는 초기의 최신화에 중점을 둡니다. 
 
 이 가이드에서는 클라우드로 앱을 옮기는 것의 이득과 Windows 컨테이너와 Windows 컨테이너를 지원하는 Azure의 관련된 계산 플랫폼과 같은 새로운 기술과 방법을 사용하여 앱을 부분적으로 최신화하는 것에 대한 이점을 강조합니다.
 
 ## <a name="path-to-the-cloud-for-existing-net-applications"></a>기존.NET 애플리케이션을 클라우드로 이동하는 경로
 
-조직에서는 일반적으로 애플리케이션에 민첩성과 속도를 구현하기 위해 클라우드로 이동하기로 선택합니다. 온-프레미스 서버를 설치하는 데 일반적으로 몇 주가 걸리는 데 비해, 클라우드에는 몇 분 안에 수천 대의 서버(VM)를 설치할 수 있습니다.
+조직에서는 일반적으로 응용 프로그램이 민첩성과 속도를 갖게 하기 위해 클라우드로 옮기는 것을 선택합니다. 클라우드에서는 몇 분 안에 수천 대의 서버(VM)를 설치할 수 있는데 비해 온프레미스에 직접 서버를 구축하는 데는 몇 주의 시간이 걸리는 것이 일반적입니다.
 
 클라우드로 애플리케이션을 마이그레이션하는 방법에 대한 단일 만능 전략은 없습니다. 귀하에게 적합한 마이그레이션 전략은 귀사의 요구 사항과 우선 순위, 마이그레이션하는 애플리케이션의 종류에 따라 달라집니다. 모든 애플리케이션이 서비스 제공 플랫폼([PaaS](https://azure.microsoft.com/overview/what-is-paas/)) 모델로의 전환이나 [클라우드 전용](https://www.gartner.com/doc/3181919/architect-design-cloudnative-applications) 애플리케이션 모델 개발에 대한 투자를 보증하는 것은 아닙니다. 대다수의 경우 비즈니스 요구 사항에 따라 단계식 또는 증분 접근법을 사용하여 클라우드로의 자산 전환에 투자할 수 있습니다.
 
 최상의 장기적인 민첩성과 가치를 지닌 최신 응용 프로그램의 경우 *클라우드 네이티브* 응용 프로그램 아키텍처에 투자하는 것이 좋습니다. 그러나 기존 응용 프로그램의 경우 중요 이점을 실현하기 위해서는 클라우드로 이동하면서 최소한의 시간과 비용(재설계 또는 코드 변경 없이)을 들이는 것이 핵심입니다.
 
-그림 1-1에서는 증분 단계로 기존.NET 애플리케이션을 클라우드로 이동하는 경우에 취할 수 있는 경로를 보여 줍니다.
+그림 1-1에서는 증분 단계로 기존.NET 응용 프로그램을 클라우드로 옮기는 경우 선택할 수 있는 방법을 보여 줍니다.
 
  ![기존 .NET 애플리케이션 및 서비스의 현대화 경로](./media/image1-1.png)
 

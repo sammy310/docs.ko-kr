@@ -11,12 +11,12 @@ helpviewer_keywords:
 - declared elements [Visual Basic], access level
 - Protected keyword [Visual Basic], accessing variables
 ms.assetid: eaf4f073-7922-43ce-ae1e-90ff376ae947
-ms.openlocfilehash: 4d5db7fe474d8732e0ae37f3d95d0187eef68ec9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fb7c04ac6c24648dfb2a8cfa5e01bf97c6b0b3be
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54582491"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58841695"
 ---
 # <a name="how-to-control-the-availability-of-a-variable-visual-basic"></a>방법: 변수 (Visual Basic)의 사용 가능성 제어
 지정 하 여 변수의 사용 가능성 제어 해당 *액세스 수준*합니다. 액세스 수준 변수에 쓰거나 읽을 수 있는 코드를 결정 합니다.  
@@ -87,6 +87,7 @@ Private numberForMeOnly As Integer
  더 제한적인 변수를 액세스 수준에 악성 코드가 부적절 하 게 가능성이 줄어듭니다 사용 합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [Visual Basic의 액세스 수준](../../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)
 - [Dim 문](../../../../visual-basic/language-reference/statements/dim-statement.md)
 - [공용](../../../../visual-basic/language-reference/modifiers/public.md)

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - literals [Visual Basic], coercing data type
 - declarations [Visual Basic], data types
 ms.assetid: 057206d2-3a5b-40b9-b3af-57446f9b52fa
-ms.openlocfilehash: 269045dcfec14fafe878c2716490c93e79efe3d7
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 50e36aa13439bafcca27a7153a8c5d6043f03975
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56978218"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58833505"
 ---
 # <a name="constant-and-literal-data-types-visual-basic"></a>상수 및 리터럴 데이터 형식(Visual Basic)
 리터럴 값인 변수의 값 또는 숫자 3 또는 문자열 "Hello"와 같은 식의 결과가 아니라 자체적으로 표현 됩니다. 상수는 리터럴 대신 해당 값이 달라질 변수와 달리 프로그램 전체에서이 동일한 값을 유지 하는 의미 있는 이름입니다.  
@@ -62,6 +62,7 @@ myDecimal = 100000000000000000000   ' This causes a compiler error.
 |`String`|"|(없음)|  
   
 ## <a name="see-also"></a>참고자료
+
 - [사용자 정의 상수](../../../../visual-basic/programming-guide/language-features/constants-enums/user-defined-constants.md)
 - [방법: 상수 선언](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-declare-a-constant.md)
 - [상수 개요](../../../../visual-basic/programming-guide/language-features/constants-enums/constants-overview.md)

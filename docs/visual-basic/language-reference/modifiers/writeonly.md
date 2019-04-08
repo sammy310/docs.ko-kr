@@ -11,12 +11,12 @@ helpviewer_keywords:
 - properties [Visual Basic], write-only
 - sensitive data
 ms.assetid: 488d2899-b09f-4cee-92f0-6f9f9fc4f944
-ms.openlocfilehash: b6c8a05a4575c5d1ec01aa1b2badf2129c54bc2a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1b8de27e872914ba59d73126d2a9a7c42609165e
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54522780"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58829030"
 ---
 # <a name="writeonly-visual-basic"></a>WriteOnly(Visual Basic)
 속성을 쓸 수는 있지만 읽을 수는 있는지를 지정 합니다.  
@@ -49,6 +49,7 @@ ms.locfileid: "54522780"
  [Property 문](../../../visual-basic/language-reference/statements/property-statement.md)  
   
 ## <a name="see-also"></a>참고자료
+
 - [ReadOnly](../../../visual-basic/language-reference/modifiers/readonly.md)
 - [전용](../../../visual-basic/language-reference/modifiers/private.md)
-- [키워드](../../../visual-basic/language-reference/keywords/index.md)
+- [C++ 키워드](../../../visual-basic/language-reference/keywords/index.md)

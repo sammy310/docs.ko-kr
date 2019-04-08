@@ -14,12 +14,12 @@ helpviewer_keywords:
 - variables [Visual Basic], and properties
 - properties [Visual Basic], and variables
 ms.assetid: 7a03a8be-5381-431f-bd7c-16e887e4e07b
-ms.openlocfilehash: f2388f091278d398b5e8f3b82f147ab69937f2aa
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: de4800e23519c2cc1c8b2b219287b9fa018b9bbf
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54689525"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58842904"
 ---
 # <a name="differences-between-properties-and-variables-in-visual-basic"></a>Visual Basic에서 속성과 변수의 차이점
 변수 및 속성에 모두 액세스할 수 있는 값을 나타냅니다. 그러나 저장소 구현에는 차이점이 있습니다.  
@@ -45,6 +45,7 @@ ms.locfileid: "54689525"
  <sup>1</sup> 변수와 달리 속성의 값은 저장소의 단일 항목에 직접 맞지 않을 수 있습니다. 저장소 편의 또는 보안에 대 한 부분으로 분할할 수 있습니다 또는 암호화 된 형식으로 값을 저장할 수 있습니다. 이러한 경우는 `Get` 프로시저는 구성 요소 조립 또는 저장 된 값을 해독 및 `Set` 프로시저는 새 값을 암호화 또는 구성 저장소로 분할 합니다. 속성 값이 경우, 하루 중 시간과 같은 사용 후 삭제 될 수 있습니다는 `Get` 프로시저 계산 하 고 즉석에서 속성에 액세스할 때마다 합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [속성 프로시저](./property-procedures.md)
 - [프로시저 매개 변수 및 인수](./procedure-parameters-and-arguments.md)
 - [Property 문](../../../../visual-basic/language-reference/statements/property-statement.md)

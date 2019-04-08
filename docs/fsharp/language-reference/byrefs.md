@@ -2,12 +2,12 @@
 title: Byref
 description: Byref 및 byref와 유사한 형식에 대 한 자세한 F#에 낮은 수준의 프로그래밍에 사용 됩니다.
 ms.date: 09/02/2018
-ms.openlocfilehash: d8d8b2f0c9965a06e823e9be4e8d1b34201cc471
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: c0bad26672fbb9eb315eee1c3e275183ddeb9297
+ms.sourcegitcommit: 68eb5c4928e2b082f178a42c16f73fedf52c2ab8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56976553"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59055367"
 ---
 # <a name="byrefs"></a>Byref
 
@@ -56,9 +56,10 @@ open System
 
 let f (dt: inref<DateTime>) =
     printfn "Now: %s" (dt.ToString())
-
-let dt = DateTime.Now
-f &dt // Pass a pointer to 'dt'
+    
+let usage =
+    let dt = DateTime.Now
+    f &dt // Pass a pointer to 'dt'
 ```
 
 사용 하 여 포인터에 대 한 작성 하는 `outref<'T>` 또는 `byref<'T>`에 대 한 포인터를 잡고 값도 확인 해야 `mutable`합니다.
@@ -84,7 +85,7 @@ f &dt
 다음 코드를 살펴보세요.
 
 ```fsharp
-let f (x: inref<SomeStruct>) = s.SomeField
+let f (x: inref<SomeStruct>) = x.SomeField
 ```
 
 의미상으로 다음이 의미합니다.
@@ -120,10 +121,10 @@ C# 지원 합니다 `in ref` 및 `out ref` 외에에서 키워드 `ref` 반환 �
 
 |F#구문|내보낸된 구문|
 |------------|-----------------|
-|`inref<'T>` 인수|`[In]` 인수에는 특성|
-|`inref<'T>` 반환|`modreq` 특성 값을|
+|`inref<'T>` 인수(argument)|`[In]` 인수에는 특성|
+|`inref<'T>` return|`modreq` 특성 값을|
 |`inref<'T>` 추상 슬롯 또는 구현|`modreq` 인수 또는 반환|
-|`outref<'T>` 인수|`[Out]` 인수에는 특성|
+|`outref<'T>` 인수(argument)|`[Out]` 인수에는 특성|
 
 ### <a name="type-inference-and-overloading-rules"></a>형식 유추 및 규칙을 오버 로드
 
@@ -133,7 +134,7 @@ C# 지원 합니다 `in ref` 및 `out ref` 외에에서 키워드 `ref` 반환 �
 2. `this` 변경할 수 없는 필드가 있는 구조체 형식에 대 한 포인터입니다.
 3. 다른 메모리 위치의 주소를 파생 `inref<_>` 포인터입니다.
 
-때 암시적 주소는 `inref` 가져오는 동안에 형식의 인수를 사용 하 여 오버 로드 `SomeType` 형식의 인수를 사용 하 여 오버 로드에 선호 `inref<SomeType>`합니다. 예를 들면,
+때 암시적 주소는 `inref` 가져오는 동안에 형식의 인수를 사용 하 여 오버 로드 `SomeType` 형식의 인수를 사용 하 여 오버 로드에 선호 `inref<SomeType>`합니다. 예를 들어:
 
 ```fsharp
 type C() =

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - loop structures [Visual Basic], optimizing performance
 - control flow [Visual Basic]
 ms.assetid: c60d7589-51f2-4463-a2d5-22506bbc1554
-ms.openlocfilehash: 1bc467854e0c1f082a986c1216e971c86d85c994
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 5fc96e1ae3624adc197b5b13029498b9aa90c95e
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56970079"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58819504"
 ---
 # <a name="walkthrough-implementing-ienumerableof-t-in-visual-basic"></a>연습: Visual Basic에서 IEnumerable(Of T) 구현
 <xref:System.Collections.Generic.IEnumerable%601> 인터페이스는 한 번에 하나의 항목 값의 시퀀스를 반환할 수 있는 클래스에서 구현 됩니다. 한 번에 하나의 항목은 메모리에 로드할 데이터의 전체 집합 작업할 필요가 없습니다 데이터 반환 활용 합니다. 충분 한 메모리를 사용 하 여 데이터의 단일 항목을 로드 해야 합니다. 구현 하는 클래스를 `IEnumerable(T)` 인터페이스를 사용 하 여 사용할 수 `For Each` 루프 또는 LINQ 쿼리 합니다.  
@@ -29,7 +29,7 @@ ms.locfileid: "56970079"
   
 **Enumerable 클래스 프로젝트를 만들려면**
 
-1.  Visual basic의 경우에 **파일** 메뉴에서 **새로 만들기** 을 클릭 한 다음 **프로젝트**.
+1.  Visual Basic의 경우에 **파일** 메뉴에서 **새로 만들기** 을 클릭 한 다음 **프로젝트**.
 
 1.  **새 프로젝트** 대화 상자의 **프로젝트 형식** 창에서 **Windows**가 선택되었는지 확인합니다. **템플릿** 창에서 **클래스 라이브러리**를 선택합니다. **이름** 상자에 `StreamReaderEnumerable`를 입력한 다음 **확인**을 클릭합니다. 새 프로젝트가 표시 됩니다.
 
@@ -94,6 +94,7 @@ ms.locfileid: "56970079"
  [!code-vb[VbVbalrIteratorWalkthrough#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrIteratorWalkthrough/VB/Module1.vb#10)]  
   
 ## <a name="see-also"></a>참고자료
+
 - [Visual Basic의 LINQ 소개](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
 - [제어 흐름](../../../../visual-basic/programming-guide/language-features/control-flow/index.md)
 - [루프 구조](../../../../visual-basic/programming-guide/language-features/control-flow/loop-structures.md)

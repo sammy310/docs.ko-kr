@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Visual Basic code, properties
 - default properties
 ms.assetid: 68b4026e-09ef-4613-808e-f6287494ff63
-ms.openlocfilehash: c7510147e2abdcfbb71cf79412a9125724776685
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: f11b5a184b72df68e302094dee762ec6876a397c
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56977554"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58829332"
 ---
 # <a name="how-to-declare-and-call-a-default-property-in-visual-basic"></a>방법: 선언 및 Visual Basic의 기본 속성을 호출
 A *속성의 기본값을* 지정 하지 않고 코드에 액세스할 수 있는 클래스 또는 구조체 속성입니다. 코드 이름은 호출 하는 경우 클래스 또는 구조 및 제외 속성을 하 고 컨텍스트 속성에 대 한 액세스 허용, Visual Basic 있을 경우 해당 클래스 또는 구조체의 기본 속성에 대 한 액세스를 확인 합니다.  
@@ -82,6 +82,7 @@ A *속성의 기본값을* 지정 하지 않고 코드에 액세스할 수 있�
  이러한 단점 때문에 기본 속성을 정의 하지 않는 고려해 야 합니다. 코드의 가독성을 높이기 위해 항상 모든 속성에 명시적으로 참조할 수도도 기본 속성 해야 있습니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [속성 프로시저](./property-procedures.md)
 - [프로시저 매개 변수 및 인수](./procedure-parameters-and-arguments.md)
 - [Property 문](../../../../visual-basic/language-reference/statements/property-statement.md)

@@ -1,6 +1,6 @@
 ---
-title: Azure Vm (IaaS 클라우드)에 Windows 컨테이너를 배포 하는 경우
-description: Azure 클라우드 및 Windows 컨테이너를 사용 하 여 기존.NET 응용 프로그램 현대화 | Azure Vm (IaaS 클라우드)에 Windows 컨테이너를 배포 하는 경우
+title: Azure VM(IaaS 클라우드)에 Windows 컨테이너를 배포하는 경우
+description: Azure 클라우드와 Windows 컨테이너를 사용하여 기존 .NET 응용 프로그램 최신화 | Azure VM(IaaS 클라우드)에 Windows 컨테이너를 배포하는 경우
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 04/28/2018
@@ -11,9 +11,9 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 12/10/2018
 ms.locfileid: "53152151"
 ---
-# <a name="when-to-deploy-windows-containers-to-azure-vms-iaas-cloud"></a>Azure Vm (IaaS 클라우드)에 Windows 컨테이너를 배포 하는 경우
+# <a name="when-to-deploy-windows-containers-to-azure-vms-iaas-cloud"></a>Azure VM(IaaS 클라우드)에 Windows 컨테이너를 배포하는 경우
 
-또한 Windows 컨테이너를 사용 하는 경우에 조직에서 Azure Vm을 사용 하는, 하는 경우 여전히 IaaS 사용 하 여 처리입니다. 즉, 인프라 운영, VM OS 패치 및 인프라의 복잡성을 사용 하 여 해당 처리 확장성이 높은 응용 프로그램에 대 한 부하 분산 된 인프라에서 여러 Vm에 배포 해야 하는 경우. Windows 컨테이너를 사용 하 여 Azure VM에 대 한 주요 시나리오는 다음과 같습니다.
+조직에서 Azure VM을 사용한다면, Windows 컨테이너 또한 사용한다 해도 IaaS 사용하는 것입니다. 이는 부하 분산 인프라에 있는 여러 VM에 배포가 필요한 경우, 확장성이 뛰어난 응용 프로그램에 대한 인프라 운영과 VM OS 패치, 인프라 복잡성을 처리한다는 의미입니다. Azure VM에서 Windows 컨테이너를 사용하는 주요 시나리오는 다음과 같습니다.
 
 -   **개발/테스트 환경을**: 클라우드에서 VM은 개발 및 테스트 클라우드에 적합 합니다. 신속 하 게 만들 수도 있고 필요에 따라 환경을 중지.
 

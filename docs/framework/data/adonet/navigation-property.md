@@ -2,12 +2,12 @@
 title: 탐색 속성-ADO.NET
 ms.date: 03/30/2017
 ms.assetid: d0bf1a6a-1d84-484c-b7c3-b410fd8dc0b1
-ms.openlocfilehash: 6729b22dbc012d5ccfabd64cd83b710833fe1b9d
-ms.sourcegitcommit: 5dcfeb59179e81071f54840d4902cbe00b184294
+ms.openlocfilehash: b57ecf9329aa9ea8afc07507613c9e3961bfd0a9
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54857946"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58836601"
 ---
 # <a name="navigation-property"></a>탐색 속성
 
@@ -29,7 +29,7 @@ ms.locfileid: "54857946"
 
 다음 다이어그램에서는 세 가지 엔터티 형식 `Book`, `Publisher` 및 `Author`가 포함된 개념적 모델을 보여 줍니다. 탐색 속성 `Publisher` 및 `Authors`는 Book 엔터티 형식에 정의됩니다. 탐색 속성 `Books`는 Publisher 엔터티 형식과 `Author` 엔터티 형식에 모두 정의됩니다.
 
-![탐색 속성을 사용 하 여 모델](/media/modelwithnavprops.gif "ModelWithNavProps")
+ ![세 가지 엔터티 형식을 사용 하 여 개념적 모델을 보여 주는 다이어그램입니다.](./media/navigation-property/conceptual-model-entity-types-associations.gif)  
 
 합니다 [ADO.NET Entity Framework](./ef/index.md) 개념 스키마 정의 언어를 호출 하는 도메인 특정 언어 (DSL)를 사용 하 여 ([CSDL](./ef/language-reference/csdl-specification.md)) 개념적 모델을 정의 합니다. 다음 CSDL에서는 위의 다이어그램에 표시된 `Book` 엔터티 형식을 정의합니다.
 

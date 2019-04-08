@@ -8,12 +8,12 @@ helpviewer_keywords:
 - ToolTip control [WPF], positioning
 - positioning ToolTip controls [WPF]
 ms.assetid: cddf3757-9e5f-4ce3-a6eb-44489cf3804a
-ms.openlocfilehash: d20eea0890708eb2ec2ada503f5c871d54ccc035
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 64b3823be5203ffcb9dcea371495dbb6ead1605f
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57364536"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58840499"
 ---
 # <a name="how-to-position-a-tooltip"></a>방법: 도구 설명 배치
 이 예제에는 화면의 도구 설명의 위치를 지정 하는 방법을 보여 줍니다.  
@@ -34,16 +34,19 @@ ms.locfileid: "57364536"
  사용 하 여 도구 설명의 내용을 정의 하는 경우는 <xref:System.Windows.Controls.ToolTip> 개체 클래스의 속성을 사용할 수 있지만 <xref:System.Windows.Controls.ToolTipService> 속성 보다 우선적으로 적용 합니다. 사용 된 <xref:System.Windows.Controls.ToolTipService> 속성으로 정의 되어 있지 않은 도구 설명에 <xref:System.Windows.Controls.ToolTip> 개체입니다.  
   
  다음 그림은 이러한 속성을 사용 하 여 도구 설명을 배치 하는 방법을 보여 줍니다. 하지만, [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] 이러한 그림과 예제에 정의 된 속성을 설정 하는 방법을 보여 줍니다는 <xref:System.Windows.Controls.ToolTip> 클래스의 해당 속성을 <xref:System.Windows.Controls.ToolTipService> 클래스 동일한 레이아웃 규칙에 따라 합니다. 배치 속성에 대 한 가능한 값에 대 한 자세한 내용은 참조 하세요. [Popup 배치 동작](popup-placement-behavior.md)합니다.  
+ 
+ 다음 이미지는 배치 속성을 사용 하 여 tooltip 배치를 보여줍니다.  
   
- ![ToolTip 배치](./media/tooltipplacement.png "ToolTipPlacement")  
-배치 속성을 사용 하 여 ToolTip 배치  
+ ![배치 속성을 사용 하 여 ToolTip 배치를 보여 주는 다이어그램입니다.](./media/how-to-position-a-tooltip/tooltip-placement-property.png)
+ 
+ 다음 이미지는 배치 및 PlacementRectangle 속성을 사용 하 여 tooltip 배치를 보여줍니다.   
+
+ ![PlacementRectangle 속성을 사용 하 여 ToolTip 배치를 보여 주는 다이어그램입니다.](./media/how-to-position-a-tooltip/tooltip-placement-rectangle-property.png)  
+ 
+ 다음 이미지는 배치, PlacementRectangle, 및 오프셋 속성을 사용 하 여 tooltip 배치를 보여줍니다.   
   
- ![배치 사각형을 사용 하 여 ToolTip 배치](./media/tooltipplacementrectangle.png "ToolTipPlacementRectangle")  
-배치 및 PlacementRectangle 속성을 사용 하 여 ToolTip 배치  
-  
- ![ToolTip 배치 다이어그램](./media/tooltipplacementprhv.png "ToolTipPlacementPRHV")  
-Placement, PlacementRectangle, 및 오프셋 속성을 사용 하 여 ToolTip 배치  
-  
+ ![오프셋 속성을 사용 하 여 ToolTip 배치를 보여 주는 다이어그램입니다.](./media/how-to-position-a-tooltip/tooltip-placement-offset-property.png)
+
  다음 예제에서는 사용 하는 방법을 보여 줍니다 합니다 <xref:System.Windows.Controls.ToolTip> 내용이 도구 설명의 위치를 지정 하는 속성을 <xref:System.Windows.Controls.ToolTip> 개체입니다.  
   
  [!code-xaml[ToolTipService#ToolTip](~/samples/snippets/csharp/VS_Snippets_Wpf/ToolTipService/CSharp/Pane1.xaml#tooltip)]  

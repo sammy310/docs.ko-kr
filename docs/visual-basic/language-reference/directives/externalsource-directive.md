@@ -12,12 +12,12 @@ helpviewer_keywords:
 - ExternalSource directive (#ExternalSource)
 - '#ExternalSource directive'
 ms.assetid: 243bc6a2-34c3-4eeb-a776-9fd2bf988149
-ms.openlocfilehash: 550934723a5599573be578ce5746ab7520b59dd1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 39e6963c97340daab3f0ab7ad6860695f1f6c135
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54705971"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58823430"
 ---
 # <a name="externalsource-directive"></a>#ExternalSource 지시문
 소스 코드의 특정 줄과 소스 외부에 있는 텍스트 간의 매핑을 나타냅니다.  
@@ -51,4 +51,5 @@ ms.locfileid: "54705971"
  외부 소스 지시문 컴파일에 영향을 주지 않으며 중첩할 수 없습니다. 이러한는 내부 용도로 응용 프로그램에서 합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [조건부 컴파일](../../../visual-basic/programming-guide/program-structure/conditional-compilation.md)

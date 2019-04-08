@@ -1,12 +1,18 @@
 ---
-title: '시작 - C# 가이드'
+title: 시작 - C# 가이드
 description: '기초 C # 개념을 빨리 배우고 .NET Core 애플리케이션을 작성할 수 있는 짧고 간단한 자습서를 찾아보세요.'
 helpviewer_keywords:
-  - 'Visual C#, getting started'
-  - 'getting started, Visual C#'
+- Visual C#, getting started
+- getting started, Visual C#
 author: rpetrusha
 ms.author: ronpet
 ms.date: 08/23/2017
+ms.openlocfilehash: 9894d96c74741477b871d6073d78ea95413b8299
+ms.sourcegitcommit: 0aca6c5d166d7961a1e354c248495645b97a1dc5
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 03/30/2019
+ms.locfileid: "58675668"
 ---
 # <a name="get-started-with-c"></a>C\# 시작
 

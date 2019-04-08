@@ -6,12 +6,12 @@ helpviewer_keywords:
 - enumerations [Visual Basic], declaring
 - declaring enumerations [Visual Basic]
 ms.assetid: db4ca1c3-f429-4c81-ae81-29e0157b29fd
-ms.openlocfilehash: 2654860269bc57cf6aed814760414c6ccb6383da
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 1e6ec63688899533b64a6fc5215f77019b64b49c
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56968766"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58830164"
 ---
 # <a name="how-to-declare-enumerations-visual-basic"></a>방법: 열거형 (Visual Basic)를 선언 합니다.
 사용 하 여 열거형을 만듭니다는 `Enum` 클래스 또는 모듈을 선언 섹션에서 설명 합니다. 메서드 내에서 열거형을 선언할 수 없습니다. 적절 한 수준의 액세스를 지정 하려면 `Private`, `Protected`를 `Friend`, 또는 `Public`합니다.  
@@ -43,6 +43,7 @@ ms.locfileid: "56968766"
      [!code-vb[VbEnumsTask#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class2.vb#6)]  
   
 ## <a name="see-also"></a>참고자료
+
 - [열거형 및 이름 한정](../../../../visual-basic/programming-guide/language-features/constants-enums/enumerations-and-name-qualification.md)
 - [방법: 열거형 멤버 참조](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-refer-to-an-enumeration-member.md)
 - [방법: Visual Basic에서 열거형 반복](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-iterate-through-an-enumeration.md)

@@ -2,12 +2,12 @@
 title: 로드 또는 XML2 구문 분석할 때 공백 유지
 ms.date: 07/20/2015
 ms.assetid: ef6518e0-2c8d-462c-8b92-a16e9dc737ad
-ms.openlocfilehash: b4f4f59e1cd4423d2ec7418c09a9abd1273ce3b4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4fa000d9299515101bc01923db43d442577be828
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54716184"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58818971"
 ---
 # <a name="preserving-white-space-while-loading-or-parsing-xml"></a>XML을 로드 또는 구문 분석할 때 공백 유지
 이 항목에서는 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]의 공백 동작을 제어하는 방법에 대해 설명합니다.  
@@ -38,4 +38,5 @@ ms.locfileid: "54716184"
  <xref:System.Xml.XmlWriter>를 사용하여 XML 트리를 만들 수 있습니다. <xref:System.Xml.XmlWriter>에 쓴 노드가 트리에 채워집니다. 그러나 이 메서드를 사용하여 XML 트리를 빌드하면 노드가 공백인지 여부나 유효한지 여부에 관계없이 모든 노드가 유지됩니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [(Visual Basic) XML 구문 분석](../../../../visual-basic/programming-guide/concepts/linq/parsing-xml.md)

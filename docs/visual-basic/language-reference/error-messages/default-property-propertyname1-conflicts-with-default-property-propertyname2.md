@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC40007
 ms.assetid: 692ccf76-5715-4f11-a972-84cf9de30bc1
-ms.openlocfilehash: bc75b01532ffb112622d7f9bc837490c627883b3
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: ab45278b2e1199282e3066c34828b9bda716e162
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55270395"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58813173"
 ---
 # <a name="default-property-propertyname1-conflicts-with-default-property-propertyname2-in-classname-and-so-should-be-declared-shadows"></a>기본 속성 '\<propertyname1 >' 기본 속성과 충돌 '\<propertyname2 >'에서 '\<classname >' h'로 선언 해야 하므로
 기본 클래스에 정의 된 속성과 동일한 이름을 가진 속성이 선언 됩니다. 이 이런 경우이 클래스의 속성이 기본 클래스 속성을 숨겨야 합니다.  
@@ -26,5 +26,6 @@ ms.locfileid: "55270395"
 -   추가 된 `Shadows` 속성의 이름을 선언 되는 선언 또는 변경 하는 키워드입니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md)
 - [Visual Basic의 숨김 기능](../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)

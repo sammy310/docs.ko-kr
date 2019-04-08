@@ -2,12 +2,12 @@
 title: '방법: (Visual Basic) 문자열을 구문 분석'
 ms.date: 07/20/2015
 ms.assetid: 896e1b4b-f9bd-4975-8bc1-55b6badce1ac
-ms.openlocfilehash: 513a82cbed796be42eb8e531ec71221ef0ac267f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 815e94b3b41c2c0cc1d18d598307ab292919bea4
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54652451"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58827304"
 ---
 # <a name="how-to-parse-a-string-visual-basic"></a>방법: (Visual Basic) 문자열을 구문 분석
 이 항목에서는 XML 트리를 만드는 방법 C#입니다.  
@@ -50,4 +50,5 @@ Dim contacts as XElement = _
 ```  
   
 ## <a name="see-also"></a>참고자료
+
 - [(Visual Basic) XML 구문 분석](../../../../visual-basic/programming-guide/concepts/linq/parsing-xml.md)

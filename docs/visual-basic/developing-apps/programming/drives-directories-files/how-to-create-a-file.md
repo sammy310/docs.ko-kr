@@ -5,12 +5,12 @@ helpviewer_keywords:
 - text files [Visual Basic], creating
 - files [Visual Basic], creating
 ms.assetid: 0253bb6d-5519-4a50-b882-b93ef5cca0d9
-ms.openlocfilehash: 397db70cc8f5977bd861e9e6d6df2f0c8f884db2
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: a05e73a2096c82c9299e4483bbaf69e560fc2e45
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56967019"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58839420"
 ---
 # <a name="how-to-create-a-file-in-visual-basic"></a>방법: Visual Basic에서 파일 만들기
 이 예제에서는 <xref:System.IO.File> 클래스의 <xref:System.IO.File.Create%2A> 메서드를 사용하여 지정된 경로에 빈 텍스트 파일을 만듭니다.  
@@ -46,6 +46,7 @@ ms.locfileid: "56967019"
  사용자에게 파일을 만들 수 있는 권한이 없으면 <xref:System.UnauthorizedAccessException>이 throw됩니다.  
   
 ## <a name="see-also"></a>참고 항목
+
 - <xref:System.IO>
 - <xref:System.IO.File.Create%2A>
 - [부분적으로 신뢰할 수 있는 코드에서 라이브러리 사용](../../../../framework/misc/using-libraries-from-partially-trusted-code.md)

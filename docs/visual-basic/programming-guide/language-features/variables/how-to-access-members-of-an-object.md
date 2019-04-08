@@ -5,12 +5,12 @@ helpviewer_keywords:
 - members [Visual Basic], accessing
 - object variables [Visual Basic], accessing members
 ms.assetid: a0072514-6a79-4dd6-8d03-ca8c13e61ddc
-ms.openlocfilehash: 5e91f1b99a17f4bbdc65a77ab26050ee57e96ac4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2b7e600a23ed326fe3e914957b4e698bc34c6135
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54724845"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58819655"
 ---
 # <a name="how-to-access-members-of-an-object-visual-basic"></a>방법: 개체 (Visual Basic)의 멤버에 액세스
 개체 변수에 개체를 참조 하는 경우, 해당 메서드, 속성, 필드 및 이벤트와 같은 경우 해당 개체의 멤버를 사용 하려는 경우가 많습니다. 예를 들어 만든 후 새 <xref:System.Windows.Forms.Form> 개체를 설정 하려는 경우 해당 <xref:System.Windows.Forms.Control.Text%2A> 속성 또는 호출 해당 <xref:System.Windows.Forms.Control.Focus%2A> 메서드.  
@@ -71,6 +71,7 @@ ms.locfileid: "54724845"
      개체 변수에 할당 하는 모든 개체의 멤버에 액세스할 수를 설정 해야 `Option Strict Off`합니다. 이렇게 하면 컴파일러는 개체를 변수에 할당 하 여 지정된 된 멤버 노출 된다는 것을 보장할 수 없습니다. 개체에 액세스 하려는 멤버를 노출 하지 않습니다 경우는 <xref:System.MemberAccessException> 예외가 발생 합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Object>
 - <xref:System.Windows.Forms.Form>
 - <xref:System.MemberAccessException>

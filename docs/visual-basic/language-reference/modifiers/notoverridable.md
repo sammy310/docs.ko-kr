@@ -16,12 +16,12 @@ helpviewer_keywords:
 - methods [Visual Basic], sealed
 - properties [Visual Basic], overriding
 ms.assetid: 66ec6984-f5f5-4857-b362-6a3907aaf9e0
-ms.openlocfilehash: d2495e9d44a32e080d20deb4232ab27bfbd4051a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 41c08a48fdb7501081e887fb5cf9f99c334c72ac
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54595814"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58822317"
 ---
 # <a name="notoverridable-visual-basic"></a>NotOverridable(Visual Basic)
 파생된 클래스에서 속성 또는 프로시저를 재정의할 수 없음을 지정 합니다.  
@@ -50,10 +50,11 @@ ms.locfileid: "54595814"
  [Sub 문](../../../visual-basic/language-reference/statements/sub-statement.md)  
   
 ## <a name="see-also"></a>참고자료
+
 - [한정자](../../../visual-basic/language-reference/modifiers/index.md)
 - [상속 기본 사항](../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)
 - [MustOverride](../../../visual-basic/language-reference/modifiers/mustoverride.md)
 - [재정의 가능](../../../visual-basic/language-reference/modifiers/overridable.md)
 - [재정의](../../../visual-basic/language-reference/modifiers/overrides.md)
-- [키워드](../../../visual-basic/language-reference/keywords/index.md)
+- [C++ 키워드](../../../visual-basic/language-reference/keywords/index.md)
 - [Visual Basic의 숨김 기능](../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)

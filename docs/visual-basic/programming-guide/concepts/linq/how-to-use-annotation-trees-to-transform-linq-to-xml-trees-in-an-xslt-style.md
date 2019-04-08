@@ -2,12 +2,12 @@
 title: '방법: LINQ to XML 트리 (Visual Basic) XSLT 스타일에서 변환할 주석 사용'
 ms.date: 07/20/2015
 ms.assetid: 08e91fa2-dac2-4463-9ef1-87b1ac3fa890
-ms.openlocfilehash: ed31e00b6d67a6707a98977c58e4e7afe35c8ad7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a8db5f9dc29b4053321c81c9da58e12610ef63c7
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54746301"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58824873"
 ---
 # <a name="how-to-use-annotations-to-transform-linq-to-xml-trees-in-an-xslt-style-visual-basic"></a>방법: LINQ to XML 트리 (Visual Basic) XSLT 스타일에서 변환할 주석 사용
 주석을 사용하여 XML 트리를 쉽게 변환할 수 있습니다.  
@@ -34,7 +34,7 @@ ms.locfileid: "54746301"
   
 -   주석으로 추가된 새 요소는 새 자식 노드를 포함할 수 있으며 원하는 모양의 하위 트리를 형성할 수 있습니다.  
   
--   특별 한 규칙은: 새 요소의 자식 노드를 다른 네임 스페이스에서 네임 스페이스가이 목적을 위해 구성 된 경우 (이 예제에서는 네임 스페이스는 `http://www.microsoft.com/LinqToXmlTransform/2007`), 다음 해당 자식 요소가 새 트리에 복사 되지 않습니다. 대신 네임스페이스가 위에서 언급한 특수 네임스페이스이고 요소의 로컬 이름이 `ApplyTransforms`이면 소스 트리에 있는 요소의 자식 노드가 반복되고 새 트리에 복사됩니다. 단, 주석이 달린 자식 요소는 이러한 규칙에 따라 스스로 변환됩니다.  
+-   특별한 규칙이 있습니다. 새 요소의 자식 노드가 이 목적을 위해 구성된 다른 네임스페이스(이 예제에서는 네임스페이스가 `http://www.microsoft.com/LinqToXmlTransform/2007`임)에 있으면 해당 자식 요소가 새 트리에 복사되지 않습니다. 대신 네임스페이스가 위에서 언급한 특수 네임스페이스이고 요소의 로컬 이름이 `ApplyTransforms`이면 소스 트리에 있는 요소의 자식 노드가 반복되고 새 트리에 복사됩니다. 단, 주석이 달린 자식 요소는 이러한 규칙에 따라 스스로 변환됩니다.  
   
 -   이 방법은 XSL의 변환 사양과 다소 유사합니다. 일련의 노드를 선택하는 쿼리는 템플릿에 대한 XPath 식과 유사합니다. 주석으로 저장된 새 <xref:System.Xml.Linq.XElement>를 만들 코드는 XSL의 시퀀스 생성자와 유사하고 `ApplyTransforms` 요소는 XSL의 `xsl:apply-templates` 요소와 기능 면에서 유사합니다.  
   
@@ -379,4 +379,5 @@ After Transform
 ```  
   
 ## <a name="see-also"></a>참고자료
+
 - [고급 LINQ to XML 프로그래밍 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)

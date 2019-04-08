@@ -2,12 +2,12 @@
 title: '방법: Namespace (Visual Basic)에서 모든 노드 찾기'
 ms.date: 07/20/2015
 ms.assetid: b735d7da-5727-48a3-ab57-a16378adc32e
-ms.openlocfilehash: 3a89b0eae4baf380787df32b1d327dd1f52b6f05
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c04447df1d4a3e29558a3bad172715d2bdee340b
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54640687"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58813849"
 ---
 # <a name="how-to-find-all-nodes-in-a-namespace-visual-basic"></a>방법: Namespace (Visual Basic)에서 모든 노드 찾기
 해당 특정 네임스페이스에서 모든 노드를 찾기 위해 각 요소나 특성의 네임스페이스를 기준으로 필터링할 수 있습니다.  
@@ -54,7 +54,7 @@ Nodes in the http://www.adventure-works.com namespace
 ## <a name="example"></a>예제  
  다음 쿼리에서 액세스하는 XML 파일에는 두 가지 네임스페이스의 구매 주문이 포함되어 있습니다. 쿼리에서는 네임스페이스 중 하나에 있는 요소만 포함된 트리를 새로 만듭니다.  
   
- 이 예제에서는 XML 문서로 을 사용합니다. [샘플 XML 파일: 통합 된 구매 주문](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-consolidated-purchase-orders.md)합니다.  
+ 이 예제에서는 XML 문서로을 사용합니다. [샘플 XML 파일: 통합된 구매 주문](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-consolidated-purchase-orders.md).  
   
 ```vb  
 Imports <xmlns:aw="http://www.adventure-works.com">  
@@ -110,4 +110,5 @@ End Module
 ```  
   
 ## <a name="see-also"></a>참고자료
+
 - [기본 쿼리 (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)

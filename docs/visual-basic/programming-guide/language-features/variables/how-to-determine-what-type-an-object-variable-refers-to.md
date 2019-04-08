@@ -6,12 +6,12 @@ helpviewer_keywords:
 - variables [Visual Basic], object
 - object variables [Visual Basic], determining type
 ms.assetid: 6f6a138d-58a4-40d1-9f4e-0a3c598eaf81
-ms.openlocfilehash: 149af116f2b848082367b33d826bace8345cee05
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: dc6f54719d4f30be00b7b85f0ab18c4cb02b0d7c
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54571180"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58816410"
 ---
 # <a name="how-to-determine-what-type-an-object-variable-refers-to-visual-basic"></a>방법: 개체 변수 (Visual Basic)를 참조 형식 확인
 개체 변수를 다른 곳에 저장 된 데이터에 대 한 포인터를 포함 합니다. 런타임에 해당 데이터 형식을 변경할 수 있습니다. 언제 든 지 사용할 수 있습니다는 <xref:System.Type.GetTypeCode%2A> , 현재 런타임 형식을 확인 하는 방법 또는 [TypeOf 연산자](../../../../visual-basic/language-reference/operators/typeof-operator.md) 런타임 형식 현재 확인 하려면 지정된 된 형식과 호환 됩니다.  
@@ -53,6 +53,7 @@ ms.locfileid: "54571180"
  참고는 지정된 된 형식의 변수 또는 식 수 없습니다. 클래스, 구조체 또는 인터페이스와 같은 정의 된 유형의 이름 이어야 합니다. 여기에 내장 형식이 같은 `Integer` 고 `String`입니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Object.GetType%2A>
 - <xref:System.Type?displayProperty=nameWithType>
 - <xref:System.Type.GetTypeCode%2A>

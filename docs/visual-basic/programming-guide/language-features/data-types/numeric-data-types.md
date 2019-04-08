@@ -23,12 +23,12 @@ helpviewer_keywords:
 - Single data type [Visual Basic], numeric types
 - Decimal data type [Visual Basic], numeric data types
 ms.assetid: a27bd4d0-7e14-43eb-9cc4-b42eaab323c9
-ms.openlocfilehash: 1188e8288bb73a49acc3e3bf0f72e3ac4fef5f7a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 75e60cb2a3a934956099ce6fc7d81bf6ecea4d11
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54636418"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58841643"
 ---
 # <a name="numeric-data-types-visual-basic"></a>숫자 데이터 형식(Visual Basic)
 Visual Basic 제공 여러 *숫자 데이터 형식* 숫자 다양 한 표현으로 처리할 수 있도록 합니다. *정수 계열* 형식을 나타내는 정수만 (양수, 음수 및 0) 및 *비정 수 계열* 형식은 정수와 소수 부분을 사용 하 여 숫자를 나타냅니다.  
@@ -79,6 +79,7 @@ Visual Basic 제공 여러 *숫자 데이터 형식* 숫자 다양 한 표현으
  전체 범위를 필요 하지 않은 경우는 `Double` 데이터 형식을 사용할 수는 `Single` -3.4028235E + 38에서 3.4028235E + 38 까지의 부동 소수점 숫자를 사용할 수 있는 데이터 형식입니다. 사용할 수 있는 가장 작은 크기 `Single` 변수가-1.401298E-45 음수 값 및 1.401298E-45 양수 값입니다. 공용 언어 런타임 저장할 수 있습니다 작은 부동 소수점 숫자를 보유할 변수를 매우 많은 경우에 `Single` 변수 보다 효율적이 고 메모리 소비를 저장 합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [기본 데이터 형식](../../../../visual-basic/programming-guide/language-features/data-types/elementary-data-types.md)
 - [문자 데이터 형식](../../../../visual-basic/programming-guide/language-features/data-types/character-data-types.md)
 - [기타 데이터 형식](../../../../visual-basic/programming-guide/language-features/data-types/miscellaneous-data-types.md)

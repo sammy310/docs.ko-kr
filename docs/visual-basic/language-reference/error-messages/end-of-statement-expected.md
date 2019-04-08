@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30205
 ms.assetid: 53c7f825-a737-4b76-a1fa-f67745b8bd40
-ms.openlocfilehash: 1e4c46088d3d89d9c2066e33def880941107575f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ab6a4a0e6736e2af9c1fa0dd170b6aa4c42d9e4a
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54565022"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58817156"
 ---
 # <a name="end-of-statement-expected"></a>문의 끝이 필요합니다.
 문이 구문적으로 완료 되었지만 문을 완료 하는 요소 뒤에 추가 프로그래밍 요소입니다. 줄 종결자가 오는 모든 문의 끝에 필요 합니다.
@@ -28,5 +28,6 @@ ms.locfileid: "54565022"
 2.  문이 완료 되는 요소 뒤에 줄 종결자를 삽입 합니다.
   
 ## <a name="see-also"></a>참고자료
+
 - [방법: 코드에서 문 분리 및 결합](../../../visual-basic/programming-guide/program-structure/how-to-break-and-combine-statements-in-code.md)
 - [문(C++)](../../../visual-basic/programming-guide/language-features/statements.md)

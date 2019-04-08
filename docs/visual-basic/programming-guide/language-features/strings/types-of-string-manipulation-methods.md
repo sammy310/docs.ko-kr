@@ -5,12 +5,12 @@ helpviewer_keywords:
 - strings [Visual Basic], manipulating [Visual Basic]
 - string manipulation
 ms.assetid: 905055cd-7f50-48fb-9eed-b0995af1dc1f
-ms.openlocfilehash: a75984d0eb64ef8c18def3ae59d5e1f4b6d20ce2
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 44eb101ebdfeb316958a659107190ef1fc84df44
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56980347"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58821155"
 ---
 # <a name="types-of-string-manipulation-methods-in-visual-basic"></a>Visual Basic의 문자열 조작 메서드 유형
 분석 하 고 문자열을 조작 하는 여러 가지가 있습니다. 메서드 중 일부는 Visual Basic 언어의 일부인 있고에 내재 된 `String` 클래스.  
@@ -44,4 +44,5 @@ ms.locfileid: "56980347"
  자세한 내용은 설명서를 참조 합니다 <xref:System.String> 클래스입니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [Visual Basic의 문자열 소개](../../../../visual-basic/programming-guide/language-features/strings/introduction-to-strings.md)

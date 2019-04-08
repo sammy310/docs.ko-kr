@@ -5,23 +5,21 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 4e5d2ea5-d8f8-4712-bd18-ea3c5461702c
-ms.openlocfilehash: 00cbea3ae4528016a736c639c07059c1d2cb6407
-ms.sourcegitcommit: 0069cb3de8eed4e92b2195d29e5769a76111acdd
+ms.openlocfilehash: 8d11f39942793414e9e800b4e180d4d5ed5b2a3a
+ms.sourcegitcommit: 68eb5c4928e2b082f178a42c16f73fedf52c2ab8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/16/2019
-ms.locfileid: "56332041"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59055159"
 ---
 # <a name="how-to-implement-an-asynchronous-service-operation"></a>방법: 비동기 서비스 작업 구현
-Windows Communication Foundation (WCF) 응용 프로그램에서 서비스 작업이 호출 하는 방법을 클라이언트에 지시 하지 않고 동기적으로 열렸는지 또는 비동기적을 구현할 수 있습니다. 예를 들어 비동기 서비스 작업을 동기적으로 호출하고, 동기 서비스 작업을 비동기적으로 호출할 수 있습니다. 클라이언트 응용 프로그램에서 작업을 비동기적으로 호출 하는 방법을 보여 주는 예제를 참조 하세요. [방법: 서비스 작업을 비동기적으로 호출](../../../docs/framework/wcf/feature-details/how-to-call-wcf-service-operations-asynchronously.md)합니다. 동기 및 비동기 작업에 대 한 자세한 내용은 참조 하세요. [Designing Service Contracts](../../../docs/framework/wcf/designing-service-contracts.md) 하 고 [동기 및 비동기 작업](../../../docs/framework/wcf/synchronous-and-asynchronous-operations.md)합니다. 이 항목에서는 비동기 서비스 작업의 기본 구조에 대해 설명하지만 코드가 완성되지 않았습니다. 서비스 및 클라이언트 측의 전체 예제를 참조 하세요 [비동기](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms751505(v=vs.100))합니다.  
+Windows Communication Foundation (WCF) 응용 프로그램에서 서비스 작업이 호출 하는 방법을 클라이언트에 지시 하지 않고 동기적으로 열렸는지 또는 비동기적을 구현할 수 있습니다. 예를 들어 비동기 서비스 작업을 동기적으로 호출할 수 있습니다 및 동기 서비스 작업을 비동기적으로 호출할 수 있습니다. 클라이언트 응용 프로그램에서 작업을 비동기적으로 호출 하는 방법을 보여 주는 예제를 참조 하세요. [방법: 서비스 작업을 비동기적으로 호출](../../../docs/framework/wcf/feature-details/how-to-call-wcf-service-operations-asynchronously.md)합니다. 동기 및 비동기 작업에 대 한 자세한 내용은 참조 하세요. [Designing Service Contracts](../../../docs/framework/wcf/designing-service-contracts.md) 하 고 [동기 및 비동기 작업](../../../docs/framework/wcf/synchronous-and-asynchronous-operations.md)합니다. 이 항목에서는 비동기 서비스 작업의 기본 구조에 대해 설명하지만 코드가 완성되지 않았습니다. 서비스 및 클라이언트 측의 전체 예제를 참조 하세요 [비동기](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms751505(v=vs.100))합니다.  
   
 ### <a name="implement-a-service-operation-asynchronously"></a>비동기 서비스 작업 구현  
   
-1.  서비스 계약에서 .NET 비동기 디자인 지침에 따라 비동기 메서드 쌍을 선언합니다. 
-  `Begin` 메서드는 매개 변수, 콜백 개체 및 상태 개체를 가져와서 <xref:System.IAsyncResult?displayProperty=nameWithType> 및 `End`를 가져오는 일치하는 <xref:System.IAsyncResult?displayProperty=nameWithType> 메서드를 반환한 다음 반환 값을 반환합니다. 비동기 호출에 대 한 자세한 내용은 참조 하세요. [비동기 프로그래밍 디자인 패턴](https://go.microsoft.com/fwlink/?LinkId=248221)합니다.  
+1.  서비스 계약에서 .NET 비동기 디자인 지침에 따라 비동기 메서드 쌍을 선언합니다. `Begin` 메서드는 매개 변수, 콜백 개체 및 상태 개체를 가져와서 <xref:System.IAsyncResult?displayProperty=nameWithType> 및 `End`를 가져오는 일치하는 <xref:System.IAsyncResult?displayProperty=nameWithType> 메서드를 반환한 다음 반환 값을 반환합니다. 비동기 호출에 대 한 자세한 내용은 참조 하세요. [비동기 프로그래밍 디자인 패턴](https://go.microsoft.com/fwlink/?LinkId=248221)합니다.  
   
-2.  
-  `Begin` 특성을 가진 비동기 메서드 쌍의 <xref:System.ServiceModel.OperationContractAttribute?displayProperty=nameWithType> 메서드를 표시하고 <xref:System.ServiceModel.OperationContractAttribute.AsyncPattern%2A?displayProperty=nameWithType> 속성을 `true`로 설정합니다. 예를 들어 다음 코드에서는 단계 1 및 2를 수행합니다.  
+2.  `Begin` 특성을 가진 비동기 메서드 쌍의 <xref:System.ServiceModel.OperationContractAttribute?displayProperty=nameWithType> 메서드를 표시하고 <xref:System.ServiceModel.OperationContractAttribute.AsyncPattern%2A?displayProperty=nameWithType> 속성을 `true`로 설정합니다. 예를 들어 다음 코드에서는 단계 1 및 2를 수행합니다.  
   
      [!code-csharp[C_SyncAsyncClient#6](../../../samples/snippets/csharp/VS_Snippets_CFX/c_syncasyncclient/cs/services.cs#6)]
      [!code-vb[C_SyncAsyncClient#6](../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_syncasyncclient/vb/services.vb#6)]  
@@ -42,8 +40,7 @@ Windows Communication Foundation (WCF) 응용 프로그램에서 서비스 작�
   
     3.  비동기 `BeginServiceAsyncMethod` / `EndServiceAsyncMethod` 작업 쌍입니다.  
   
-2.  
-  <xref:System.IAsyncResult?displayProperty=nameWithType> 개체를 사용하여 서비스 구현.  
+2.  <xref:System.IAsyncResult?displayProperty=nameWithType> 개체를 사용하여 서비스 구현.  
   
  [!code-csharp[C_SyncAsyncClient#1](../../../samples/snippets/csharp/VS_Snippets_CFX/c_syncasyncclient/cs/services.cs#1)]
  [!code-vb[C_SyncAsyncClient#1](../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_syncasyncclient/vb/services.vb#1)]  

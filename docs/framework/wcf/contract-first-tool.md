@@ -2,16 +2,15 @@
 title: 계약 중심 도구
 ms.date: 03/30/2017
 ms.assetid: 0a880690-f460-4475-a5f4-9f91ce08fcc6
-ms.openlocfilehash: ef19843d6c8a9de0b926dd8512f5a58a5966e1bf
-ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
+ms.openlocfilehash: ad0566eaff08d27e8368f091388adda7376a37ef
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57846183"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58819621"
 ---
 # <a name="contract-first-tool"></a>계약 중심 도구
-서비스 계약을 기존 서비스에서 만들어야 할 경우가 있습니다. 
-  [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]에서 계약 중심 도구를 사용하여 데이터 계약 클래스를 기존 서비스에서 자동으로 만들 수 있습니다. 계약 중심 도구를 사용하려면 XSD(XML 스키마 정의) 파일을 로컬에서 다운로드해야 합니다. 이 도구는 HTTP를 통해 원격 데이터 계약을 가져올 수 없습니다.
+서비스 계약을 기존 서비스에서 만들어야 할 경우가 있습니다. [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]에서 계약 중심 도구를 사용하여 데이터 계약 클래스를 기존 서비스에서 자동으로 만들 수 있습니다. 계약 중심 도구를 사용하려면 XSD(XML 스키마 정의) 파일을 로컬에서 다운로드해야 합니다. 이 도구는 HTTP를 통해 원격 데이터 계약을 가져올 수 없습니다.
 
  계약 중심 도구는 빌드 작업으로 Visual Studio 2012에 통합 됩니다. 빌드 작업에서 생성하는 코드 파일은 프로젝트가 빌드될 때마다 생성되므로 프로젝트는 기본 서비스 계약에서 변경 사항을 쉽게 채택할 수 있습니다.
 
@@ -62,11 +61,11 @@ ms.locfileid: "57846183"
 ## <a name="configuring-contract-first-options"></a>도구 중심 옵션 구성
  WCF 프로젝트의 속성 메뉴에서 도구 중심 옵션을 구성할 수 있습니다. 계약 중심 개발을 사용 하려면 선택 합니다 **XSD를 형식 정의 언어로** 프로젝트 속성 창의 WCF 페이지에서 확인란 합니다.
 
- ![WCF 프로젝트 옵션 표시 계약&#45;첫 번째](../../../docs/framework/wcf/media/contractfirstoptions.png "ContractFirstOptions")
+ ![사용 하도록 설정 하는 계약 중심 개발을 사용 하 여 WCF 옵션의 스크린샷.](./media/contract-first-tool/contract-first-options.png)
 
  고급 속성을 구성하려면 고급 단추를 클릭합니다.
 
- ![고급 계약&#45;첫 번째 속성](../../../docs/framework/wcf/media/contractfirstadvanced.png "ContractFirstAdvanced")
+ ![고급 계약 코드 생성 설정 대화 상자입니다.](./media/contract-first-tool/advanced-contract-settings.png)
 
  다음 고급 설정은 계약의 코드 생성에 대해 구성할 수 있습니다. 설정은 프로젝트의 파일 모두에 대해서만 구성할 수 있으며 이때 설정은 개별 파일에 대해 구성할 수 없습니다.
 
@@ -119,9 +118,9 @@ ms.locfileid: "57846183"
 using MyProjectNamespace.ContractTypes;
 ```
 
- 서비스 계약에 정의된 형식은 아래에 나와 있는 것처럼 프로젝트에서 확인할 수 있게 됩니다.
+ 아래와 같이 서비스 계약에 정의 된 형식은 프로젝트에서 확인할 수 있게 됩니다.
 
- ![서비스 계약에서 파생 된 형식을 사용 하 여](../../../docs/framework/wcf/media/contractfirsttypes.png "ContractFirstTypes")
+ ![첫 번째 몇 글자를 입력 한 후 IntelliSense에 표시 되는 SearchRequest 클래스입니다.](./media/contract-first-tool/service-contract-types.png)
 
  도구에서 생성한 형식은 GeneratedXSDTypes.cs 파일에 만들어집니다. 파일을 만들 합니다 \<프로젝트 디렉터리 > /obj/\<빌드 구성 > 기본적으로 / xsdgeneratedcode / 디렉터리입니다. 이 항목 시작에 있는 샘플 스키마는 다음과 같이 변환됩니다.
 

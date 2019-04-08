@@ -5,12 +5,12 @@ helpviewer_keywords:
 - attribute list
 - attributes [Visual Basic], applying
 ms.assetid: 5880073a-68a4-4b6b-8a07-ace32959a4e2
-ms.openlocfilehash: fb25ecad3b797a4993e7a780823a38a0f0ccbd1f
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 2399ec1342280df101e2818399e0f41f10d9606d
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56975630"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58818423"
 ---
 # <a name="attribute-list-visual-basic"></a>특성 목록(Visual Basic)
 선언 된 프로그래밍 요소에 적용할 특성을 지정 합니다. 여러 특성은 쉼표로 구분합니다. 다음은 하나의 특성에 대 한 구문입니다.  
@@ -54,6 +54,7 @@ ms.locfileid: "56975630"
  <xref:System.Runtime.InteropServices.DllImportAttribute> 특성 사용된 하는 절차는 관리 되지 않는 동적 연결 라이브러리 (DLL)의 진입점을 나타낸다는 것을 나타냅니다. 특성 위치 인수로 DLL 이름 및 변수 이니셜라이저, 다른 정보를 제공합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [어셈블리](../../../visual-basic/language-reference/modifiers/assembly.md)
 - [모듈 \<키워드>](../../../visual-basic/language-reference/modifiers/module-keyword.md)
 - [특성 개요](../../../visual-basic/programming-guide/concepts/attributes/index.md)

@@ -12,12 +12,12 @@ helpviewer_keywords:
 - Seek function
 - FileOpen function
 ms.assetid: 4c145456-5453-4bda-aab5-578dc8bee59a
-ms.openlocfilehash: 515c12a87ddab6c616f98325624e7fd31ea926d7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5ebdf2ac42ddd4e6e201559d9fc6711b19cbdd60
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54642924"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58827590"
 ---
 # <a name="mycomputerfilesystem-object"></a>My.Computer.FileSystem 개체
 드라이브, 파일 및 디렉터리를 사용하기 위한 속성 및 메서드를 제공합니다.  
@@ -38,5 +38,6 @@ ms.locfileid: "54642924"
  **어셈블리:** Visual Basic 런타임 라이브러리(Microsoft.VisualBasic.dll)  
   
 ## <a name="see-also"></a>참고자료
+
 - [My.Computer.FileSystem.SpecialDirectories 개체](../../../visual-basic/language-reference/objects/my-computer-filesystem-specialdirectories-object.md)
 - [My.Computer 개체](../../../visual-basic/language-reference/objects/my-computer-object.md)

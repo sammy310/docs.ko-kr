@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Assembly keyword [Visual Basic]
 - attribute blocks, Assembly keyword
 ms.assetid: 925e7471-3bdf-4b51-bb93-cbcfc6efc52f
-ms.openlocfilehash: e6cb7e7a2520d6bb586dab4ed0af75abb04fabd2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 819fa9cf1bd25e9426fb1e75925a269fcf7a71cd
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54726470"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58819257"
 ---
 # <a name="assembly-visual-basic"></a>Assembly(Visual Basic)
 소스 파일의 시작 부분에 있는 특성이 전체 어셈블리에 적용 되도록 지정 합니다.  
@@ -28,6 +28,6 @@ ms.locfileid: "54726470"
  적용할 수 있습니다도 특성 AssemblyInfo.vb 파일에서 어셈블리에 경우 특성 블록을 사용 하 여 주 소스 코드 파일에서 필요가 없습니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [모듈 \<키워드>](../../../visual-basic/language-reference/modifiers/module-keyword.md)
 - [특성 개요](../../../visual-basic/programming-guide/concepts/attributes/index.md)
-

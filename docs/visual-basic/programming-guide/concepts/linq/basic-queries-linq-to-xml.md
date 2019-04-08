@@ -2,12 +2,12 @@
 title: 기본 쿼리 (LINQ to XML) (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: aec6ef60-f6f4-4548-b3db-cf6c94bb0008
-ms.openlocfilehash: c0f1d34360b0336109cb2ba9471274e061deffca
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9f4a0508fddd5140ff2cc8f82f9c613a66b2d7ca
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54650813"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58821402"
 ---
 # <a name="basic-queries-linq-to-xml-visual-basic"></a>기본 쿼리 (LINQ to XML) (Visual Basic)
 이 단원에서는 기본 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 쿼리의 예제를 제공합니다.  
@@ -31,4 +31,5 @@ ms.locfileid: "54650813"
 |[방법: 빈 쿼리 결과 집합 (Visual Basic) 디버그](../../../../visual-basic/programming-guide/concepts/linq/how-to-debug-empty-query-results-sets.md)|기본 네임스페이스에 있는 XML에 대한 쿼리를 디버깅할 때 적절한 해결 방법을 보여 줍니다.|  
   
 ## <a name="see-also"></a>참고자료
+
 - [XML 트리 쿼리 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/querying-xml-trees.md)

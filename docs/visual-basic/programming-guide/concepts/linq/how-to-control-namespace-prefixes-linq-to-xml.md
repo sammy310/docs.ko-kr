@@ -2,12 +2,12 @@
 title: '방법: Namespace 접두사 제어 (Visual Basic) (LINQ to XML)'
 ms.date: 07/20/2015
 ms.assetid: 2fcf28a5-31b6-409d-84ea-27c22f71fc9f
-ms.openlocfilehash: 91117307caf7e55bd8b512fbd841760616f0b2c5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7e5a05d2fa93e61338f450d0a4d890fa94c04fd2
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54623744"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58839038"
 ---
 # <a name="how-to-control-namespace-prefixes-visual-basic-linq-to-xml"></a>방법: Namespace 접두사 제어 (Visual Basic) (LINQ to XML)
 이 항목에서는 네임스페이스 접두사를 제어하는 방법에 대해 설명합니다.  
@@ -54,4 +54,5 @@ End Module
 ```  
   
 ## <a name="see-also"></a>참고자료
+
 - [XML 네임 스페이스 (Visual Basic)를 사용 하 여 작업](../../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md)

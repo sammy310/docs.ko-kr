@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - XML comments [Visual Basic], parsing [Visual Basic]
 ms.assetid: 78a15cd0-7708-4e79-85d1-c154b7a14a8c
-ms.openlocfilehash: 1cff4d72a294a4635df72dc91c46fa5da92aa388
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: a10255be140c7c86a435cca98cec5df7df82ffee
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56976202"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58842098"
 ---
 # <a name="processing-the-xml-file-visual-basic"></a>XML 파일 처리(Visual Basic)
 컴파일러는 문서 생성을 위해 태그가 지정되는 코드의 각 구문에 대해 ID 문자열을 생성합니다. (코드에 태그를 하는 방법에 대 한 자세한 내용은 [XML 주석 태그](../../../visual-basic/language-reference/xmldoc/index.md).) ID 문자열은 구문을 고유하게 식별합니다. XML 파일을 처리 하는 프로그램은 해당 하는 데 ID 문자열을 사용할 수 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] 메타 데이터/리플렉션 항목입니다.  
@@ -42,5 +42,6 @@ ms.locfileid: "56976202"
  [!code-vb[VbVbcnXmlDocComments#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnXmlDocComments/VB/Class1.vb#10)]  
   
 ## <a name="see-also"></a>참고자료
+
 - [/doc](../../../visual-basic/reference/command-line-compiler/doc.md)
 - [방법: XML 문서 만들기](../../../visual-basic/programming-guide/program-structure/how-to-create-xml-documentation.md)

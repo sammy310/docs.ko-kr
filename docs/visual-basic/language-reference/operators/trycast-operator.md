@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - TryCast keyword [Visual Basic]
 ms.assetid: d1ef5d47-fef4-491e-b014-1d910628f65c
-ms.openlocfilehash: dd50a23f09fa5dd49b86eefe163cea20430e2360
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: c0eea4565d5040bb00743fc7864ac15b0fccdea9
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56981285"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58831594"
 ---
 # <a name="trycast-operator-visual-basic"></a>TryCast 연산자(Visual Basic)
 예외를 throw 하지 않는 형식 변환 작업을 소개 합니다.  
@@ -40,5 +40,6 @@ ms.locfileid: "56981285"
  [!code-vb[VbVbalrKeywords#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrKeywords/VB/Class1.vb#6)]  
   
 ## <a name="see-also"></a>참고자료
+
 - [확대 변환과 축소 변환](../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)
 - [암시적 변환과 명시적 변환](../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md)

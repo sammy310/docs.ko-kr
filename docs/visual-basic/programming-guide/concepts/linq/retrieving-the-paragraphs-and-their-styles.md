@@ -2,12 +2,12 @@
 title: 단락 및 해당 스타일 (Visual Basic) 검색
 ms.date: 07/20/2015
 ms.assetid: d9ed2238-d38e-4ad4-b88b-db7859df9bde
-ms.openlocfilehash: a726c3b609d778d8d91be61091a3627ec1358dfc
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3c6554c44c95db13aada0d9edf96cc2df595c6d1
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54716028"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58816943"
 ---
 # <a name="retrieving-the-paragraphs-and-their-styles-visual-basic"></a>단락 및 해당 스타일 (Visual Basic) 검색
 이 예제에서는 WordprocessingML 문서에서 단락 노드를 검색하는 쿼리를 작성합니다. 또한 각 단락의 스타일도 식별합니다.  
@@ -135,4 +135,5 @@ StyleName:Code
  다음 항목인 [(Visual Basic) 단락의 텍스트 검색](../../../../visual-basic/programming-guide/concepts/linq/retrieving-the-text-of-the-paragraphs.md), 단락의 텍스트를 검색 하는 쿼리를 만들어야 합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [자습서: (Visual Basic) WordprocessingML 문서에서 내용 조작](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)

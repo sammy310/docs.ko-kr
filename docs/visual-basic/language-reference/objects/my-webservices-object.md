@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - My.WebServices object
 ms.assetid: f188dc05-2c75-41b6-bb68-122d1c3110a2
-ms.openlocfilehash: 1b4e703cb3f723ea283f725d0f4ce4711dca3c9e
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: a60f32c4f581e42f240fca55ce496776c5511ba3
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56967817"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58840434"
 ---
 # <a name="mywebservices-object"></a>My.WebServices 개체
 만들기 및 현재 프로젝트에서 참조 하는 각 XML 웹 서비스의 단일 인스턴스 액세스에 대 한 속성을 제공 합니다.  
@@ -63,6 +63,7 @@ ms.locfileid: "56967817"
 |웹 사이트|아니요|  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Web.Services.Protocols.SoapHttpClientProtocol>
 - <xref:System.ArgumentException>
 - [응용 프로그램 웹 서비스 액세스](../../../visual-basic/developing-apps/programming/accessing-application-web-services.md)

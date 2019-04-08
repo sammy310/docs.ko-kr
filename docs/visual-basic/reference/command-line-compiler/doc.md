@@ -6,12 +6,12 @@ helpviewer_keywords:
 - -doc compiler option [Visual Basic]
 - /doc compiler option [Visual Basic]
 ms.assetid: 5fc32ec9-a149-4648-994c-a8d0cccd0a65
-ms.openlocfilehash: eccd68d77eb9afabdc3bd4301f6258b80b7d7e7f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 13005eb55b430f6ff9b3a6408582a02e53838742
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54736655"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58824587"
 ---
 # <a name="-doc"></a>-doc
 XML 파일에 대해 문서 주석을 처리합니다.  
@@ -54,5 +54,6 @@ XML 파일에 대해 문서 주석을 처리합니다.
  샘플은 [Documenting Your Code with XML](../../../visual-basic/programming-guide/program-structure/documenting-your-code-with-xml.md)(XML과 함께 코드 문서화)을 참조하세요.  
   
 ## <a name="see-also"></a>참고자료
+
 - [Visual Basic 명령줄 컴파일러](../../../visual-basic/reference/command-line-compiler/index.md)
 - [코드를 XML로 문서화](../../../visual-basic/programming-guide/program-structure/documenting-your-code-with-xml.md)

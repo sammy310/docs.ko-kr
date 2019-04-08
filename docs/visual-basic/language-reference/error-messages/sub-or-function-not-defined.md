@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrID35
 ms.assetid: 661fdb90-ee7d-40ce-b30b-5e7267bd957a
-ms.openlocfilehash: 4627f8ddb979780481feadbef06225baf6a7c0ca
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6bca368e13a32559bcb7cbb028dcaa1dea0353e3
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54532177"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58819790"
 ---
 # <a name="sub-or-function-not-defined-visual-basic"></a>Sub 또는 Function이 정의되지 않았습니다(Visual Basic).
 A `Sub` 또는 `Function` 호출 수를 정의 해야 합니다. 이 오류가 발생하는 원인은 다음과 같습니다.  
@@ -31,6 +31,7 @@ A `Sub` 또는 `Function` 호출 수를 정의 해야 합니다. 이 오류가 �
 3.  루틴의 이름을 확인 합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [오류 형식](../../../visual-basic/programming-guide/language-features/error-types.md)
 - [프로젝트의 참조 관리](/visualstudio/ide/managing-references-in-a-project)
 - [Sub 문](../../../visual-basic/language-reference/statements/sub-statement.md)

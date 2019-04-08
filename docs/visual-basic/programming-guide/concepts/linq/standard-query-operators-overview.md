@@ -2,12 +2,12 @@
 title: 표준 쿼리 연산자 개요 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 302bd39e-2ec1-495b-94bf-37d370d6f05f
-ms.openlocfilehash: 1e665a9408deb5d5788301b1b24f39a4fd79fbc3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9bfdf2163be52d9016a800d65006bbc4fbf560a3
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54526498"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58841474"
 ---
 # <a name="standard-query-operators-overview-visual-basic"></a>표준 쿼리 연산자 개요 (Visual Basic)
 *표준 쿼리 연산자*는 LINQ 패턴을 형성하는 메서드입니다. 이 메서드 중 대부분은 시퀀스에서 작동합니다. 여기서 시퀀스란 <xref:System.Collections.Generic.IEnumerable%601> 인터페이스 또는 <xref:System.Linq.IQueryable%601> 인터페이스를 구현하는 형식의 개체입니다. 표준 쿼리 연산자는 필터링, 프로젝션, 집계, 정렬 등을 포함하여 쿼리 기능을 제공합니다.  
@@ -101,6 +101,7 @@ MsgBox(output.ToString())
  [집계 작업 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/aggregation-operations.md)  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Linq.Enumerable>
 - <xref:System.Linq.Queryable>
 - [LINQ 소개(Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/introduction-to-linq.md)

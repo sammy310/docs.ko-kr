@@ -11,12 +11,12 @@ helpviewer_keywords:
 - return values [Visual Basic], Operator procedures
 - operator overloading
 ms.assetid: 7ccce94a-6ca0-47d1-9f3f-13385d34f5d5
-ms.openlocfilehash: 358e81904f48ad844351a20a448b615a0fef8f89
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: bd512adf2f06ed0fbd3d36ed3175a0928bf1c57c
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56972519"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58829410"
 ---
 # <a name="how-to-use-a-class-that-defines-operators-visual-basic"></a>방법: 연산자 (Visual Basic)를 정의 하는 클래스를 사용 합니다.
 클래스 또는 고유한 연산자를 정의 하는 구조를 사용 하는 경우에 Visual Basic에서 이러한 연산자를 액세스할 수 있습니다.  
@@ -40,6 +40,7 @@ ms.locfileid: "56972519"
  프로젝트에는 System.Data 및 System.XML에 대 한 참조가 있어야 합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [연산자 프로시저](./operator-procedures.md)
 - [방법: 연산자 정의](./how-to-define-an-operator.md)
 - [방법: 변환 연산자를 정의 합니다.](./how-to-define-a-conversion-operator.md)

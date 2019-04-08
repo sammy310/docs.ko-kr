@@ -19,12 +19,12 @@ helpviewer_keywords:
 - floating-point numbers [Visual Basic], comparison
 - floating-point numbers
 ms.assetid: 90040d67-b630-4125-a6ae-37195b079042
-ms.openlocfilehash: 3e7190f3ba63b6af9f7f402fbc23b4268c329856
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 851be5bdf4a3adced724dc2df33657a84226270d
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56974746"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58818854"
 ---
 # <a name="troubleshooting-data-types-visual-basic"></a>데이터 형식 문제 해결(Visual Basic)
 이 페이지는 기본 데이터 형식에 대 한 작업을 수행할 때 발생할 수 있는 몇 가지 일반적인 문제를 나열 합니다.  
@@ -113,6 +113,7 @@ ms.locfileid: "56974746"
  일반적으로 `String` 값 다른 데이터 형식에서는 의미가 없으며 변환이 매우 인위적인 하며 위험 합니다. 사용을 제한 해야 가능 하면 `String` 하도록 디자인 된 문자 시퀀스에는 변수입니다. 다른 형식에 해당 하는 값을 사용 하는 코드를 작성 하지 말아야 합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [데이터 형식](../../../../visual-basic/programming-guide/language-features/data-types/index.md)
 - [형식 문자](../../../../visual-basic/programming-guide/language-features/data-types/type-characters.md)
 - [Value Types and Reference Types](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)

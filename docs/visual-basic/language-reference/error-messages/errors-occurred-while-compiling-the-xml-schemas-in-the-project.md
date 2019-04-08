@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC36810
 ms.assetid: 9323b5d2-ba14-4e49-91f1-9ad647162144
-ms.openlocfilehash: 17886ececbd418ae60d6321c7a6278a1e982b9af
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 337fc1fb4dfc83c9b4814d3e45eb0cbe0758f7ce
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54611282"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58842527"
 ---
 # <a name="errors-occurred-while-compiling-the-xml-schemas-in-the-project"></a>프로젝트에서 XML 스키마를 컴파일하는 동안 오류가 발생했습니다.
 프로젝트에서 XML 스키마를 컴파일하는 동안 오류가 발생 했습니다. 이 인해 XML IntelliSense를 사용할 수 없습니다.  
@@ -32,5 +32,6 @@ ms.locfileid: "54611282"
 -   오류가 없는 XSD 스키마에 식별 되 면 XML 컴파일러는 자세한 오류 메시지를 제공할 수 있는 충분 한 정보가 없을 수 있습니다. .xsd 파일에 대 한 XML 네임 스페이스에에서 포함 된 프로젝트 일치를 사용 하 여 Visual Studio에서 설정 된 XML 스키마에 대 한 식별 된 XML 네임 스페이스를 확인 하는 경우 자세한 오류 정보를 가져올 수 있습니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [오류 목록 창](/visualstudio/ide/reference/error-list-window)
 - [XML](../../../visual-basic/programming-guide/language-features/xml/index.md)

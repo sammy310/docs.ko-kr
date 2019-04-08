@@ -2,12 +2,12 @@
 title: (Visual Basic) XML 트리에서 요소, 특성 및 노드 제거
 ms.date: 07/20/2015
 ms.assetid: 5cf21919-4360-4b49-b29d-58ea3164ac72
-ms.openlocfilehash: eee761772d920c6f6fa49b3ddd8b3142ec9f5e43
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 85a7a3b4047e269c562177cfa045b952472aaac2
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54495775"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58814915"
 ---
 # <a name="removing-elements-attributes-and-nodes-from-an-xml-tree-visual-basic"></a>(Visual Basic) XML 트리에서 요소, 특성 및 노드 제거
 XML 트리를 수정하여 요소, 특성 및 다른 형식의 노드를 제거할 수 있습니다.  
@@ -32,7 +32,7 @@ XML 트리를 수정하여 요소, 특성 및 다른 형식의 노드를 제거�
 ## <a name="example"></a>예제  
   
 ### <a name="description"></a>설명  
- 이 예제에서는 요소를 제거하는 세 가지 방법을 보여 줍니다. 첫째, 단일 요소를 제거합니다. 둘째, 요소의 컬렉션을 검색하고 <xref:System.Linq.Enumerable.ToList%2A?displayProperty=nameWithType> 연산자를 사용하여 구체화한 다음 제거합니다. 마지막으로, 요소의 컬렉션을 검색하고 <xref:System.Xml.Linq.Extensions.Remove%2A> 확장명 메서드를 사용하여 제거합니다.  
+ 이 예제에서는 요소를 제거하는 세 가지 방법을 보여 줍니다. 첫째, 단일 요소를 제거합니다. 둘째, 요소의 컬렉션을 검색하고 <xref:System.Linq.Enumerable.ToList%2A?displayProperty=nameWithType> 연산자를 사용하여 구체화한 다음 제거합니다. 마지막으로, 요소의 컬렉션을 검색하고 <xref:System.Xml.Linq.Extensions.Remove%2A> 확장 메서드를 사용하여 제거합니다.  
   
  에 대 한 자세한 합니다 <xref:System.Linq.Enumerable.ToList%2A> 연산자를 참조 하세요 [데이터 형식 변환 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/converting-data-types.md)합니다.  
   
@@ -80,4 +80,5 @@ Console.WriteLine(root)
  `Child1`에서는 첫 번째 손자 요소가 제거되었고, `Child2`와 `Child3`에서는 모든 손자 요소가 제거되었습니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [XML 트리 수정 (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/modifying-xml-trees-linq-to-xml.md)

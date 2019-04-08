@@ -7,12 +7,12 @@ helpviewer_keywords:
 - = assignment statements [Visual Basic]
 - assignment operators [Visual Basic]
 ms.assetid: 43b7e40c-b7af-45f6-b100-198a90f2561e
-ms.openlocfilehash: 7a7af78864069cd6d6743623298d81ce1f3f96a1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 217ae092872b5de1638d88051aed1f8a4e785b7d
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54568038"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58829059"
 ---
 # <a name="assignment-operators-visual-basic"></a>할당 연산자(Visual Basic)
 Visual Basic에 정의 된 할당 연산자는 다음과 같습니다.  
@@ -38,6 +38,7 @@ Visual Basic에 정의 된 할당 연산자는 다음과 같습니다.
  [&= 연산자](../../../visual-basic/language-reference/operators/and-assignment-operator.md)  
   
 ## <a name="see-also"></a>참고자료
+
 - [Visual Basic에서의 연산자 우선 순위](../../../visual-basic/language-reference/operators/operator-precedence.md)
 - [기능별 연산자 목록](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)
 - [문(C++)](../../../visual-basic/language-reference/statements/index.md)

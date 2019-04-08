@@ -2,12 +2,12 @@
 title: '방법: LINQ (Visual Basic)를 사용 하 여 ArrayList 쿼리'
 ms.date: 07/20/2015
 ms.assetid: 176358a9-d765-4b57-9557-7feb4428138d
-ms.openlocfilehash: 5e1a7e84c8f8789edb3f0c867986d5a5e27674c3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ed440a7970d0ef1a49af36fa56b1c7ca74715e5f
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54669031"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58837158"
 ---
 # <a name="how-to-query-an-arraylist-with-linq-visual-basic"></a>방법: LINQ (Visual Basic)를 사용 하 여 ArrayList 쿼리
 LINQ를 사용하여 <xref:System.Collections.ArrayList> 등의 제네릭이 아닌 <xref:System.Collections.IEnumerable> 컬렉션을 쿼리하는 경우 컬렉션에 있는 개체의 특정 형식을 반영하도록 범위 변수의 형식을 명시적으로 선언해야 합니다. 예를 들어 있는 경우는 <xref:System.Collections.ArrayList> 의 `Student` 개체에 [From 절이](../../../../visual-basic/language-reference/queries/from-clause.md) 는 다음과 같습니다:  
@@ -77,4 +77,5 @@ End Module
 ```  
   
 ## <a name="see-also"></a>참고자료
+
 - [LINQ to Objects(Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)

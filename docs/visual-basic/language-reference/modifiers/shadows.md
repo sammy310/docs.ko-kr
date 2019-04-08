@@ -11,12 +11,12 @@ helpviewer_keywords:
 - Shadows keyword [Visual Basic]
 - names [Visual Basic], shadowing
 ms.assetid: 6bf687cd-0544-4797-b51b-911125ec57c6
-ms.openlocfilehash: e879819d945f3e7256edd34e87b9cae4a04c0829
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c314db90a1a0f89613e20897387bdec8ec534837
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54512738"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58834142"
 ---
 # <a name="shadows-visual-basic"></a>Shadows(Visual Basic)
 선언 된 프로그래밍 요소를 동일 하 게 명명 된 요소 또는 기본 클래스에서 오버 로드 된 요소 집합을 다시 선언 하 고 숨기도록 지정 합니다.  
@@ -69,6 +69,7 @@ ms.locfileid: "54512738"
  [Sub 문](../../../visual-basic/language-reference/statements/sub-statement.md)  
   
 ## <a name="see-also"></a>참고자료
+
 - [공유](../../../visual-basic/language-reference/modifiers/shared.md)
 - [정적](../../../visual-basic/language-reference/modifiers/static.md)
 - [전용](../../../visual-basic/language-reference/modifiers/private.md)

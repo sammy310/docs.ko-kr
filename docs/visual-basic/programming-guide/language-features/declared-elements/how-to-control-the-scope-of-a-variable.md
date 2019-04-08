@@ -12,12 +12,12 @@ helpviewer_keywords:
 - declared elements [Visual Basic], visibility
 - visibility [Visual Basic], variables
 ms.assetid: 44b7f62a-cb5c-4d50-bce9-60ae68f87072
-ms.openlocfilehash: 656bfa6fa9b3445d91cd8ac39b83bccf3e44758e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ef7957a991718112fe01c4fa3a85f29b9226abd3
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54521415"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58818725"
 ---
 # <a name="how-to-control-the-scope-of-a-variable-visual-basic"></a>방법: 변수 (Visual Basic)의 범위 제어
 일반적으로 변수가 *범위*, 또는 참조를 선언 하는 영역 전체에 대 한 표시 합니다. 경우에 따라 변수의 *액세스 수준* 해당 범위에 영향을 줄 수 있습니다.  
@@ -87,6 +87,7 @@ Public strMsg As String
  변수의 범위는 좁을수록 악성 코드가 부적절 하 게 가능성이 줄어듭니다 사용 합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [Visual Basic의 범위](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)
 - [Visual Basic의 수명](../../../../visual-basic/programming-guide/language-features/declared-elements/lifetime.md)
 - [Visual Basic의 액세스 수준](../../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)

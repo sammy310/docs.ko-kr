@@ -2,12 +2,12 @@
 title: Visual Studio IDE 및 도구 지원에 대 한 LINQ (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: e3bfe0d9-4a79-49cf-a31c-93297c688829
-ms.openlocfilehash: 620215ae8c49642df27fdc944dd929550e870e24
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0ed0488f76e81d3097ec84ab914e060d4d1198a1
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54728241"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58832192"
 ---
 # <a name="visual-studio-ide-and-tools-support-for-linq-visual-basic"></a>Visual Studio IDE 및 도구 지원에 대 한 LINQ (Visual Basic)
 Visual Studio IDE(통합 개발 환경)는 LINQ 애플리케이션 개발을 지원하는 다음과 같은 기능을 제공합니다.  
@@ -25,4 +25,5 @@ Visual Studio IDE(통합 개발 환경)는 LINQ 애플리케이션 개발을 지
  Visual Studio 디버거는 쿼리 식의 디버깅을 지원합니다. 자세한 내용은 [LINQ 디버깅](/visualstudio/debugger/debugging-linq)을 참조하세요.  
   
 ## <a name="see-also"></a>참고자료
+
 - [LINQ(Language-Integrated Query)(Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/index.md)

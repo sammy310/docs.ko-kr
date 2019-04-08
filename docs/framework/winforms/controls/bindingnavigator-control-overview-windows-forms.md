@@ -9,20 +9,21 @@ helpviewer_keywords:
 - data [Windows Forms], navigating
 - data navigation
 ms.assetid: 4423eede-f8d1-4d02-822f-5bf8432680d0
-ms.openlocfilehash: 489c60aff7b431617477a381161e1c8f587947e5
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: b6413c8481a021afa34b7de228df14c109a50889
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57703311"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58834233"
 ---
 # <a name="bindingnavigator-control-overview-windows-forms"></a>BindingNavigator 컨트롤 개요(Windows Forms)
 <xref:System.Windows.Forms.BindingNavigator> 컨트롤을 사용하여 사용자가 Windows Form에서 데이터를 검색 및 변경할 수 있게 해주는 표준화된 방법을 만들 수 있습니다. 사용자가 폼의 데이터 레코드를 탐색하고 레코드와 상호 작용할 수 있도록 <xref:System.Windows.Forms.BindingSource> 구성 요소와 함께 <xref:System.Windows.Forms.BindingNavigator>를 사용하는 경우가 많습니다.  
   
 ## <a name="how-the-bindingnavigator-works"></a>BindingNavigator 작동 방식  
- <xref:System.Windows.Forms.BindingNavigator> 컨트롤은 데이터 추가, 데이터 삭제 및 데이터 탐색과 같은 대부분의 일반적인 데이터 관련 작업을 위한 일련의 <xref:System.Windows.Forms.ToolStripItem> 개체를 포함하는 <xref:System.Windows.Forms.ToolStrip>으로 구성됩니다. 기본적으로 <xref:System.Windows.Forms.BindingNavigator> 컨트롤은 이러한 표준 단추를 포함합니다. 다음 스크린샷은 폼의 <xref:System.Windows.Forms.BindingNavigator> 컨트롤을 보여 줍니다.  
+
+ <xref:System.Windows.Forms.BindingNavigator> 컨트롤은 데이터 추가, 데이터 삭제 및 데이터 탐색과 같은 대부분의 일반적인 데이터 관련 작업을 위한 일련의 <xref:System.Windows.Forms.ToolStripItem> 개체를 포함하는 <xref:System.Windows.Forms.ToolStrip>으로 구성됩니다. 기본적으로 <xref:System.Windows.Forms.BindingNavigator> 컨트롤은 이러한 표준 단추를 포함합니다. 다음 스크린 샷에 표시 된 <xref:System.Windows.Forms.BindingNavigator> 양식에 컨트롤:
   
- ![BindingNavigator 컨트롤](./media/cpdatacontainerctrl.gif "cpDataContainerCtrl")  
+ ![BindingNavigator 컨트롤을 보여주는 스크린샷.](./media/bindingnavigator-control-overview-windows-forms/bindingnavigator-control-form.gif)  
   
  다음 표에서는 컨트롤을 나열하고 해당 기능을 설명합니다.  
   

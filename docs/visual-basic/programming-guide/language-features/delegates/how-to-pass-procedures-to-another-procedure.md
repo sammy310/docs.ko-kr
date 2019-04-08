@@ -5,12 +5,12 @@ helpviewer_keywords:
 - AddressOf operator [Visual Basic]
 - delegates [Visual Basic], passing procedures
 ms.assetid: 5adbba15-5a1d-413f-ab3e-3ff6cc0a4669
-ms.openlocfilehash: e9e6165414db00e7d7182e204d86d23debfbf4f6
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: c2305cd18cfaaa67355dfb342f22e39d37ae0e79
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56967739"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58818477"
 ---
 # <a name="how-to-pass-procedures-to-another-procedure-in-visual-basic"></a>방법: 프로시저에 Visual Basic에서 다른 프로시저 전달
 이 예제에서는 대리자를 사용 하 여 프로시저에 다른 프로시저 전달 하는 방법을 보여 줍니다.  
@@ -46,6 +46,7 @@ ms.locfileid: "56967739"
      때 `Test` 는 호출 처음 표시 하면 `AddNumbers` 에서 작동 하 `5` 및 `3`, 8 인 합니다. 결과 `SubtractNumbers` 역할을 하 `9` 및 `3` 표시 되 면 6이 있습니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [대리자](../../../../visual-basic/programming-guide/language-features/delegates/index.md)
 - [AddressOf 연산자](../../../../visual-basic/language-reference/operators/addressof-operator.md)
 - [Delegate 문](../../../../visual-basic/language-reference/statements/delegate-statement.md)

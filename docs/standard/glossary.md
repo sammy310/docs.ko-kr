@@ -115,9 +115,9 @@ Just-In-Time 컴파일러입니다.
 
 .NET의 구현체에는 다음이 포함됩니다.
 
-- 하나 이상의 런타임. 예를 들면 다음과 같습니다. CLR, CoreCLR, CoreRT.
+- 하나 이상의 런타임. 예: CLR, CoreCLR, CoreRT.
 - .NET Standard의 버전을 구현하고 추가 API를 포함할 수 있는 클래스 라이브러리. 예: .NET Framework 기본 클래스 라이브러리, .NET Core 기본 클래스 라이브러리.
-- 필요에 따라 하나 이상의 애플리케이션 프레임워크. 예를 들면 다음과 같습니다. ASP.NET, Windows Forms 및 WPF가 .NET Framework에 포함됩니다.
+- 필요에 따라 하나 이상의 애플리케이션 프레임워크. 예: ASP.NET과 Windows Forms, WPF가 .NET Framework에 포함됩니다.
 - 필요에 따라 개발 도구. 일부 개발 도구는 여러 구현체에서 공통적으로 사용할 수 있음.
 
 .NET 구현체의 예:

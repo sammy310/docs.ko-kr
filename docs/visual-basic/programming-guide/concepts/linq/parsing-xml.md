@@ -2,17 +2,17 @@
 title: (Visual Basic) XML 구문 분석
 ms.date: 07/20/2015
 ms.assetid: 5bcbd7e2-d9f1-4c8f-80d6-39915fe17bd1
-ms.openlocfilehash: 4f6cb9ad943214f04ecd997656f198ab4b095524
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ec9df29c239d2780b4fc13bb101a22c54eb43da5
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54548848"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58832760"
 ---
 # <a name="parsing-xml-visual-basic"></a>(Visual Basic) XML 구문 분석
 이 단원의 항목에서는 XML 문서의 구문을 분석하는 방법에 대해 설명합니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
   
 |항목|설명|  
 |-----------|-----------------|  
@@ -24,4 +24,5 @@ ms.locfileid: "54548848"
 |[방법: (Visual Basic) XmlReader에서 XML 조각 스트리밍 Stream](../../../../visual-basic/programming-guide/concepts/linq/how-to-stream-xml-fragments-from-an-xmlreader.md)|<xref:System.Xml.XmlReader>를 사용하여 XML 조각을 스트림하는 방법을 보여 줍니다.<br /><br /> 예상할 수 없는 큰 크기의 XML 파일을 처리해야 하는 경우 전체 XML 트리를 메모리에 로드하는 것이 가능하지 않을 수 있습니다. 이러한 경우 XML 조각을 스트림할 수 있습니다.|  
   
 ## <a name="see-also"></a>참고자료
+
 - [XML 트리 만들기 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-xml-trees.md)

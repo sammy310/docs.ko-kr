@@ -9,12 +9,12 @@ helpviewer_keywords:
 - joining [LINQ in Visual Basic]
 - queries [LINQ in Visual Basic], how-to topics
 ms.assetid: 5b00a478-035b-41c6-8918-be1a97728396
-ms.openlocfilehash: 66255a9bfa2a4f9acb33073bae755efbab61042e
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: dde627edfeb1d4473c9d2e01b9ff83c580a0f122
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56977987"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58822689"
 ---
 # <a name="how-to-combine-data-with-linq-by-using-joins-visual-basic"></a>방법: 조인 (Visual Basic)를 사용 하 여 데이터와 LINQ 결합
 Visual Basic에서 제공 합니다 `Join` 고 `Group Join` 쿼리 절을 사용 하면 컬렉션 간의 공통 값을 기반으로 하는 여러 컬렉션의 콘텐츠를 결합할 수 있습니다. 이러한 값 이라고 *키* 값입니다. 관계형 데이터베이스 개념에 익숙한 개발자는 `Join` INNER JOIN으로 절 및 `Group Join` 으로 효과적으로 LEFT OUTER JOIN 절.  
@@ -80,6 +80,7 @@ Visual Basic에서 제공 합니다 `Join` 고 `Group Join` 쿼리 절을 사용
 2.  F5 키를 눌러 예제를 실행 합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [LINQ](../../../../visual-basic/programming-guide/language-features/linq/index.md)
 - [Visual Basic의 LINQ 소개](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
 - [Join 절](../../../../visual-basic/language-reference/queries/join-clause.md)

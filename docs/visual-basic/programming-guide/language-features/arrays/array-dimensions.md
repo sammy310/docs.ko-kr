@@ -9,12 +9,12 @@ helpviewer_keywords:
 - rectangular arrays
 - ranking, arrays
 ms.assetid: 385e911b-18c1-4e98-9924-c6d279101dd9
-ms.openlocfilehash: 47b90a6c513a5808dc0669d2d861de5e16406a34
-ms.sourcegitcommit: d938c39afb9216db377d0f0ecdaa53936a851059
+ms.openlocfilehash: 0b4e7c9e253f94e1e28700c8669d28799ab69d91
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58634169"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58836937"
 ---
 # <a name="array-dimensions-in-visual-basic"></a>Array Dimensions in Visual Basic
 A *차원* 은 방향 배열 요소의 사양을 변경할 수 있습니다. 해당 월의 각 날짜에 대 한 총 판매량을 보유 하는 배열 이상의 차원을 (해당 월의 일)을 포함 합니다. 총 판매액이 들어 부서에서 월의 각 날짜에는 배열에 두 개의 차원 (부서 번호 및 월의 일). 배열의 차원 수 라고 해당 *순위*합니다.  
@@ -87,5 +87,6 @@ Dim salesAmounts(4, 11, 30) As Double
 >  사용 하지 않고 배열을 만들 수 있습니다 합니다 `Dim` 문 또는 `New` 절. 예를 들어, 호출할 수 있습니다는 <xref:System.Array.CreateInstance%2A> 메서드 또는 다른 구성 요소 배열을 전달할 수 코드 이러한 방식으로 생성 합니다. 이러한 배열은 0이 아닌 하한값을 가질 수 있습니다. 사용 하 여 차원에서 최소치 항상 테스트할 수 있습니다 합니다 <xref:System.Array.GetLowerBound%2A> 메서드 또는 `LBound` 함수입니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [배열](../../../../visual-basic/programming-guide/language-features/arrays/index.md)
 - [배열 문제 해결](../../../../visual-basic/programming-guide/language-features/arrays/troubleshooting-arrays.md)

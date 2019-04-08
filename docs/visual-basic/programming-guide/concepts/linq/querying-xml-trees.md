@@ -2,12 +2,12 @@
 title: XML 트리 쿼리(Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 2e35c1ab-08c8-4378-9ca8-8ff344756eda
-ms.openlocfilehash: bb0024a6cfb93be5f1f78f33ad29c22f3400de48
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0d3855a562ce5ec43b28fba21b2ab4db0583a2d3
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54671384"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58839628"
 ---
 # <a name="querying-xml-trees-visual-basic"></a>XML 트리 쿼리(Visual Basic)
 이 단원에서는 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 쿼리의 예제를 제공합니다.  
@@ -16,7 +16,7 @@ ms.locfileid: "54671384"
   
  XML 트리를 인스턴스화한 후에는 쿼리를 작성하는 것이 트리에서 데이터를 추출하는 가장 효과적인 방법입니다. 또한 함수 생성과 함께 쿼리를 수행하여 원래 문서와 모양이 다른 XML 문서를 새로 생성할 수 있습니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
   
 |항목|설명|  
 |-----------|-----------------|  
@@ -27,5 +27,6 @@ ms.locfileid: "54671384"
 |[(Visual Basic) XML의 순수 함수 변환](../../../../visual-basic/programming-guide/concepts/linq/pure-functional-transformations-of-xml.md)|함수형 프로그래밍의 스타일로 쿼리를 작성하는 방법에 대한 간단한 자습서를 제공합니다.|  
   
 ## <a name="see-also"></a>참고자료
+
 - [프로그래밍 가이드 (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/programming-guide-linq-to-xml.md)
 - [Visual Basic에서 LINQ 시작](../../../../visual-basic/programming-guide/concepts/linq/getting-started-with-linq.md)

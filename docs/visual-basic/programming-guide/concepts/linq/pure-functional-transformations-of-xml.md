@@ -2,12 +2,12 @@
 title: (Visual Basic) XML의 순수 함수 변환
 ms.date: 07/20/2015
 ms.assetid: 5e19b74a-7773-4b58-b110-953ffd364c55
-ms.openlocfilehash: 1af777296c8b8d9736b701b297b2253326c9da7f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 48149faba1c41583ab4e50c539d52e4caf90592a
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54584742"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58843424"
 ---
 # <a name="pure-functional-transformations-of-xml-visual-basic"></a>(Visual Basic) XML의 순수 함수 변환
 이 단원에서는 XML의 함수 변환 자습서를 제공합니다. 이 자습서에는 함수 변환을 사용하기 위해 이해해야 하는 주요 개념과 언어 구문에 대한 설명과 함수 변환을 사용하여 XML 문서를 조작하는 예제가 포함되어 있습니다. 이 자습서에서 LINQ to XML 코드 예제를 제공하지만 모든 기본 개념은 다른 LINQ 기술에도 적용됩니다.  
@@ -27,4 +27,5 @@ ms.locfileid: "54584742"
 |[자습서: (Visual Basic) WordprocessingML 문서에서 내용 조작](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)|함수 변환을 보여 주는 자습서입니다.|  
   
 ## <a name="see-also"></a>참고자료
+
 - [XML 트리 쿼리 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/querying-xml-trees.md)

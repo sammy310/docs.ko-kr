@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - components [Visual Basic]
 ms.assetid: ee6a4156-73f7-4e9b-8e01-c74c4798b65c
-ms.openlocfilehash: 7a0b513e5045db609550133e20c20ef65f17844c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ca336e2ffa3831167088d92bfca017ce2226d8a9
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54551921"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58828084"
 ---
 # <a name="creating-and-using-components-in-visual-basic"></a>Visual Basic에서 구성 요소 만들기 및 사용
 *구성 요소*는 <xref:System.ComponentModel.IComponent?displayProperty=nameWithType> 인터페이스를 구현하는 클래스이거나 <xref:System.ComponentModel.IComponent>를 구현하는 클래스에서 직접 또는 간접적으로 파생되는 클래스입니다. [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] 구성 요소는 재사용 가능한 개체이고, 다른 개체와 상호 작용할 수 있으며, 외부 리소스 및 디자인 타임 지원에 대한 제어를 제공합니다.  
@@ -63,5 +63,5 @@ ms.locfileid: "54551921"
  일반적인 문제 해결 방법을 설명합니다.  
   
 ## <a name="see-also"></a>참고자료
-- [방법: Windows Forms에서 디자인 타임 지원 액세스](../../framework/winforms/controls/developing-windows-forms-controls-at-design-time.md)
 
+- [방법: Windows Forms에서 디자인 타임 지원 액세스](../../framework/winforms/controls/developing-windows-forms-controls-at-design-time.md)

@@ -11,12 +11,12 @@ helpviewer_keywords:
 - arbitrary content classes [WPF], content model
 - ContentControl class [WPF], displaying content
 ms.assetid: 214da5ef-547a-4cf8-9b07-4aa8a0e52cdd
-ms.openlocfilehash: bd9dc7a441987b2089f0f21c81311a628ae3cdfa
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 6cbb13fdcba2cf014c4c31a5dc5b21fe2721b214
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57373091"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58816917"
 ---
 # <a name="wpf-content-model"></a>WPF 콘텐츠 모델
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]는 다양한 형식의 콘텐츠를 표시하는 것을 기본 용도로 하는 많은 컨트롤 형식 및 컨트롤과 유사한 형식을 제공하는 프레젠테이션 플랫폼입니다. 사용할 컨트롤이나 파생시킬 컨트롤을 결정하려면 특정 컨트롤이 가장 잘 표시할 수 있는 개체 유형을 이해해야 합니다.  
@@ -38,9 +38,9 @@ ms.locfileid: "57373091"
 |<xref:System.Windows.Controls.ItemsControl>|임의 개체의 컬렉션입니다.|  
 |<xref:System.Windows.Controls.HeaderedItemsControl>|헤더와 항목 컬렉션이며 모두 임의의 개체입니다.|  
   
- 이러한 클래스에서 상속하는 컨트롤은 동일한 형식의 콘텐츠를 포함하며 콘텐츠를 동일한 방식으로 처리할 수 있습니다. 다음 그림에서는 이미지와 일부 텍스트를 포함하는 각 콘텐츠 모델의 컨트롤을 하나씩 보여 줍니다.  
+ 이러한 클래스에서 상속하는 컨트롤은 동일한 형식의 콘텐츠를 포함하며 콘텐츠를 동일한 방식으로 처리할 수 있습니다. 다음 그림에서는 일부 텍스트와 이미지를 포함 하는 각 콘텐츠 모델에서 하나의 컨트롤을 보여 줍니다.  
   
- ![Button, GroupBox, Listbax, TreeViewItem](./media/controlcontentmodelimagetextinto.PNG "ControlContentModelImageTextInto")  
+ ![각 콘텐츠 모델에서 네 가지 다른 컨트롤을 보여 주는 스크린샷.](./media/wpf-content-model/control-content-model-image-text.png)  
   
 ### <a name="controls-that-contain-a-single-arbitrary-object"></a>임의의 단일 개체가 들어 있는 컨트롤  
  <xref:System.Windows.Controls.ContentControl> 클래스에는 하나의 임의의 콘텐츠가 포함 되어 있습니다. 해당 콘텐츠 속성은 <xref:System.Windows.Controls.ContentControl.Content%2A>합니다. 다음 컨트롤에서 상속 <xref:System.Windows.Controls.ContentControl> 하며 해당 콘텐츠 모델을 사용 합니다.  
@@ -85,10 +85,9 @@ ms.locfileid: "57373091"
   
 -   <xref:System.Windows.Window>  
   
- 다음 그림에서는 4 개의 단추입니다 <xref:System.Windows.Controls.ContentControl.Content%2A> 문자열로 설정 됩니다는 <xref:System.DateTime> 개체를 <xref:System.Windows.Shapes.Rectangle>, 및 <xref:System.Windows.Controls.Panel> 포함 하는 <xref:System.Windows.Shapes.Ellipse> 및 <xref:System.Windows.Controls.TextBlock>합니다.  
+ 4 다음 그림에 표시 된 단추 <xref:System.Windows.Controls.ContentControl.Content%2A> 문자열로 설정 됩니다는 <xref:System.DateTime> 개체를 <xref:System.Windows.Shapes.Rectangle>, 및 <xref:System.Windows.Controls.Panel> 를 포함 하는 <xref:System.Windows.Shapes.Ellipse> 및 <xref:System.Windows.Controls.TextBlock>:  
   
- ![네 개의 단추가](./media/controlcontentmodelbuttons.PNG "ControlContentModelButtons")  
-다양한 형식의 내용을 가진 네 개의 단추  
+ ![서로 다른 내용 유형 사용 하 여 네 개의 단추를 보여 주는 스크린샷.](./media/wpf-content-model/control-content-model-buttons.png)  
   
  설정 하는 방법의 예는 <xref:System.Windows.Controls.ContentControl.Content%2A> 속성 참조 <xref:System.Windows.Controls.ContentControl>합니다.  
   
@@ -105,8 +104,7 @@ ms.locfileid: "57373091"
   
  다음 그림에서는 두 <xref:System.Windows.Controls.TabItem> 개체입니다. 첫 번째 <xref:System.Windows.Controls.TabItem> 했습니다 <xref:System.Windows.UIElement> 개체로 합니다 <xref:System.Windows.Controls.HeaderedContentControl.Header%2A> 및 <xref:System.Windows.Controls.ContentControl.Content%2A>합니다. <xref:System.Windows.Controls.HeaderedContentControl.Header%2A> 로 설정 되어를 <xref:System.Windows.Controls.StackPanel> 를 포함 하는 <xref:System.Windows.Shapes.Ellipse> 및 <xref:System.Windows.Controls.TextBlock>합니다. <xref:System.Windows.Controls.ContentControl.Content%2A> 로 설정 되어를 <xref:System.Windows.Controls.StackPanel> 를 포함 하는 <xref:System.Windows.Controls.TextBlock> 및 <xref:System.Windows.Controls.Label>. 두 번째 <xref:System.Windows.Controls.TabItem> 문자열에는 <xref:System.Windows.Controls.HeaderedContentControl.Header%2A> 와 <xref:System.Windows.Controls.TextBlock> 에 <xref:System.Windows.Controls.ContentControl.Content%2A>합니다.  
   
- ![TabControl](./media/controlcontentmodelteabitem.PNG "ControlContentModelTeabItem")  
-헤더 속성에서 다양한 형식을 사용하는 TabControl  
+ ![헤더 속성에 다른 형식을 사용 하는 TabControl 합니다.](./media/wpf-content-model/control-content-model-tab.png)  
   
  만드는 방법의 예로 <xref:System.Windows.Controls.TabItem> 개체를 참조 하세요. <xref:System.Windows.Controls.HeaderedContentControl>합니다.  
   
@@ -147,8 +145,7 @@ ms.locfileid: "57373091"
   
 -   A <xref:System.Windows.Controls.Panel> 를 포함 하는 <xref:System.Windows.Shapes.Ellipse> 및 <xref:System.Windows.Controls.TextBlock>합니다.  
   
- ![네 형식의 콘텐츠가 있는 ListBox](./media/controlcontentmodellistbox2.PNG "ControlContentModelListBox2")  
-여러 개체 형식이 들어 있는 ListBox  
+ ![네 형식의 콘텐츠가 있는 ListBox를 보여주는 스크린샷.](./media/wpf-content-model/control-content-model-listbox.png)  
   
 ### <a name="controls-that-contain-a-header-and-a-collection-of-arbitrary-objects"></a>헤더와 임의 개체의 컬렉션을 포함하는 컨트롤  
  합니다 <xref:System.Windows.Controls.HeaderedItemsControl> 클래스에서 상속 <xref:System.Windows.Controls.ItemsControl> 헤더 문자열, 개체 또는 다른 요소 등의 여러 항목을 포함할 수 있습니다. 상속 된 <xref:System.Windows.Controls.ItemsControl> 콘텐츠 속성을 <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A>, 및 <xref:System.Windows.Controls.ItemsControl.Items%2A>, 정의 및는 <xref:System.Windows.Controls.HeaderedItemsControl.Header%2A> 임의의 개체가 될 수 있는 속성.  
@@ -226,7 +223,7 @@ ms.locfileid: "57373091"
 ## <a name="classes-that-enable-users-to-enter-text"></a>사용자가 텍스트를 입력할 수 있는 클래스  
  WPF는 사용자가 텍스트를 입력할 수 있는 세 개의 기본 컨트롤을 제공합니다. 각 컨트롤에는 텍스트가 다르게 표시됩니다. 다음 표에서는 이 세 가지 텍스트 관련 컨트롤과 텍스트를 표시할 때의 기능 및 컨트롤 텍스트를 포함하는 속성을 보여 줍니다.  
   
-|Control|텍스트 표시|콘텐츠 속성|  
+|컨트롤|텍스트 표시|콘텐츠 속성|  
 |-------------|--------------------------|----------------------|  
 |<xref:System.Windows.Controls.TextBox>|일반 텍스트|<xref:System.Windows.Controls.TextBox.Text%2A>|  
 |<xref:System.Windows.Controls.RichTextBox>|서식 있는 텍스트|<xref:System.Windows.Controls.RichTextBox.Document%2A>|  
@@ -240,7 +237,7 @@ ms.locfileid: "57373091"
   
  다음 표에서 콘텐츠 속성을 <xref:System.Windows.Controls.FlowDocumentReader>, <xref:System.Windows.Controls.FlowDocumentPageViewer>, 및 <xref:System.Windows.Controls.FlowDocumentScrollViewer> 클래스입니다.  
   
-|Control|콘텐츠 속성|콘텐츠 속성 형식|  
+|컨트롤|콘텐츠 속성|콘텐츠 속성 형식|  
 |-------------|----------------------|---------------------------|  
 |<xref:System.Windows.Controls.FlowDocumentPageViewer>|문서|<xref:System.Windows.Documents.IDocumentPaginatorSource>|  
 |<xref:System.Windows.Controls.FlowDocumentReader>|문서|<xref:System.Windows.Documents.FlowDocument>|  

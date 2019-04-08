@@ -2,8 +2,14 @@
 title: Visual Basic의 LINQ
 ms.date: 07/20/2015
 helpviewer_keywords:
-  - 'what''s new [Visual Basic]'
+- what's new [Visual Basic]
 ms.assetid: ddba5545-ff6e-46c3-8967-5c4280db5aca
+ms.openlocfilehash: 286e6266ef8f11a7a09a9e9fe898276a6734a96d
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58824860"
 ---
 # <a name="linq-in-visual-basic"></a>Visual Basic의 LINQ
 이 섹션에는 Visual Basic 및 [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)]를 이해하고 사용하는 데 도움이 되는 개요, 예제 및 배경 정보가 나와 있습니다.  
@@ -40,6 +46,7 @@ ms.assetid: ddba5545-ff6e-46c3-8967-5c4280db5aca
  LINQ 쿼리 결과를 무명 형식 대신 특정 형식으로 반환하는 방법의 예를 제공합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [LINQ(Language-Integrated Query)](../../../../visual-basic/programming-guide/concepts/linq/index.md)
 - [Visual Basic의 LINQ to XML 개요](../../../../visual-basic/programming-guide/language-features/xml/overview-of-linq-to-xml.md)
 - [LINQ to DataSet 개요](../../../../framework/data/adonet/linq-to-dataset-overview.md)

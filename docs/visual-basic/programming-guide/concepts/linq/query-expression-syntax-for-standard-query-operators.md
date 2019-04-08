@@ -2,12 +2,12 @@
 title: 표준 쿼리 연산자 (Visual Basic)에 대 한 쿼리 식 구문
 ms.date: 07/20/2015
 ms.assetid: eb978d86-d3b5-497b-95ce-a054bea8f510
-ms.openlocfilehash: 49a0b9d70022ee655d87b34a3bb044e1f60b308d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: bdbca93d5898e363ccf62b13231163573e2ba972
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54549680"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58832517"
 ---
 # <a name="query-expression-syntax-for-standard-query-operators-visual-basic"></a>표준 쿼리 연산자 (Visual Basic)에 대 한 쿼리 식 구문
 일부로 호출할 수 있도록 Visual Basic 언어 키워드 구문이 전용 자주 사용 되는 표준 쿼리 연산자 중 일부는 *쿼리 식*합니다. 쿼리 식은 *메서드 기반* 양식과는 다른, 가독성이 더 우수한 쿼리 표현 양식입니다. 쿼리 식 절은 컴파일 시간에 쿼리 메서드 호출로 변환됩니다.  
@@ -43,6 +43,7 @@ ms.locfileid: "54549680"
 |<xref:System.Linq.Enumerable.Where%2A>|`Where`<br /><br /> (자세한 내용은 [Where 절](../../../../visual-basic/language-reference/queries/where-clause.md).)|  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Linq.Enumerable>
 - <xref:System.Linq.Queryable>
 - [표준 쿼리 연산자 개요(Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)

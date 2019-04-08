@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Net profile TCP
 ms.assetid: e8475fe6-0ecd-407a-8e7e-45860561bb74
-ms.openlocfilehash: a07a41fece076731ec8bf53b26bc6a2c935169d2
-ms.sourcegitcommit: 0069cb3de8eed4e92b2195d29e5769a76111acdd
+ms.openlocfilehash: ad76a06815be61c883d083d1f794831725665c03
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/16/2019
-ms.locfileid: "56333354"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58840967"
 ---
 # <a name="default-nettcpbinding"></a>기본 NetTcpBinding
 이 샘플에서는 <xref:System.ServiceModel.NetTcpBinding> 바인딩을 사용하는 방법을 보여 줍니다. 이 샘플은 기반 합니다 [Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md) 계산기 서비스를 구현 하는 합니다. 이 샘플에서 서비스는 자체 호스트됩니다. 서비스와 클라이언트 모두 콘솔 응용 프로그램입니다.  
@@ -34,7 +34,7 @@ ms.locfileid: "56333354"
           contract="Microsoft.ServiceModel.Samples.ICalculator" />  
 ```  
   
- 위의 샘플에서는 기본 설정과 함께 `netTcpBinding` 바인딩을 사용하도록 엔드포인트를 구성하는 방법을 보여 줍니다. `netTcpBinding` 바인딩을 구성하고 일부 설정을 변경하려면 바인딩 구성을 정의해야 합니다. 끝점은 `bindingConfiguration` 특성이 있는 이름으로 바인딩 구성을 참조해야 합니다. 이 샘플에서 바인딩 구성은 이름이 `Binding1`로 지정되며 다음 샘플 구성과 같이 정의됩니다.  
+ 위의 샘플에서는 기본 설정과 함께 `netTcpBinding` 바인딩을 사용하도록 엔드포인트를 구성하는 방법을 보여 줍니다. `netTcpBinding` 바인딩을 구성하고 일부 설정을 변경하려면 바인딩 구성을 정의해야 합니다. 엔드포인트는 `bindingConfiguration` 특성이 있는 이름으로 바인딩 구성을 참조해야 합니다. 이 샘플에서 바인딩 구성은 이름이 `Binding1`로 지정되며 다음 샘플 구성과 같이 정의됩니다.  
   
 ```xml  
 <services>  
@@ -122,4 +122,3 @@ Press ENTER to terminate client.
     </client>  
     ```  
   
-## <a name="see-also"></a>참고자료

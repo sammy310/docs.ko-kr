@@ -14,12 +14,12 @@ helpviewer_keywords:
 - operators [Visual Basic], Boolean
 - Visual Basic code, expressions
 ms.assetid: d3d90406-55c8-4404-8143-50fd7f0d0d1a
-ms.openlocfilehash: 065df7d6217dd6f817dee1d11dd0fd4a68b6323c
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: ce9146791935a488108d110134e9273507b0da6f
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56965542"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58825536"
 ---
 # <a name="boolean-expressions-visual-basic"></a>부울 식(Visual Basic)
 A *부울 식* 값으로 계산 되는 식의 [Boolean 데이터 형식](../../../../visual-basic/language-reference/data-types/boolean-data-type.md): `True` 또는 `False`합니다. `Boolean` 식에는 여러 가지 형식을 취할 수 있습니다. 가장 간단한 방법은 값에 대 한 직접 비교는 `Boolean` 변수를 `Boolean` 리터럴, 다음 예제에서와 같이 합니다.  
@@ -67,6 +67,7 @@ A *부울 식* 값으로 계산 되는 식의 [Boolean 데이터 형식](../../.
  부울 식의 계산 순서를 제어 하려면 괄호를 사용할 수 있습니다. 괄호로 묶은 식을 먼저 평가 합니다. 여러 수준의 중첩을 가장 깊이 중첩 된 식에 우선 순위가 부여 됩니다. 괄호 안에서 평가 연산자 우선 순위 규칙에 따라 진행 됩니다. 자세한 내용은 [Visual Basic의 연산자 우선 순위](../../../../visual-basic/language-reference/operators/operator-precedence.md)합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [Visual Basic의 논리 및 비트 연산자](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/logical-and-bitwise-operators.md)
 - [값 비교](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/value-comparisons.md)
 - [문(C++)](../../../../visual-basic/programming-guide/language-features/statements.md)

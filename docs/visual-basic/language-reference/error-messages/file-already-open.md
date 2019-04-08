@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrID55
 ms.assetid: d674a0fb-ef16-4cc2-9da7-709a8a07dbea
-ms.openlocfilehash: cda72e03eb5c2469b8106957a0c50fbfa5314549
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e565dbd6352a8f76290f3f58d62e2e14a18ef45f
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54567037"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58823508"
 ---
 # <a name="file-already-open"></a>파일이 이미 열려 있습니다.
 다른 것 보다 먼저 파일을 닫아야 때로는 `FileOpen` 또는 다른 작업이 발생할 수 있습니다. 이 오류의 가능한 원인:  
@@ -23,4 +23,5 @@ ms.locfileid: "54567037"
 1.  문을 실행 하기 전에 파일을 닫습니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:Microsoft.VisualBasic.FileSystem.FileOpen%2A>

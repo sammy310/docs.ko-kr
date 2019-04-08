@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Visual Basic code, procedures
 - arguments [Visual Basic], modifiable
 ms.assetid: 87b2df69-e1f7-4657-9caf-b3f48d693428
-ms.openlocfilehash: 06f3009d984f7a303a0ee6e8d529a3ff60900fbc
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a880ae8c13eebd5d9d325468098e058f58d3fa71
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54498685"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58826667"
 ---
 # <a name="differences-between-modifiable-and-nonmodifiable-arguments-visual-basic"></a>수정할 수 있는 인수와 수정할 수 없는 인수 사이의 차이점(Visual Basic)
 프로시저를 호출 하는 경우 일반적으로에 하나 이상의 인수를 전달 합니다. 각 인수는 기본 프로그래밍 요소에 해당합니다. 인수 자체와 내부 요소에 모두 수정할 수 또는 수정할 수 없는 일 수 있습니다.  
@@ -38,6 +38,7 @@ ms.locfileid: "54498685"
  호출된 프로시저 수정 호출 코드의 내부 요소에 영향을 주지 않습니다 하지만 자체 로컬 복사본을 수정할 수 없는 인수를 수정할 수 있습니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [절차](./index.md)
 - [프로시저 매개 변수 및 인수](./procedure-parameters-and-arguments.md)
 - [방법: 프로시저에 인수 전달](./how-to-pass-arguments-to-a-procedure.md)

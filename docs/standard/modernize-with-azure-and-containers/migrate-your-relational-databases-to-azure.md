@@ -1,6 +1,6 @@
 ---
 title: 관계형 데이터베이스를 azure로 마이그레이션
-description: Azure 클라우드 및 Windows 컨테이너를 사용 하 여 기존.NET 응용 프로그램 현대화 | 관계형 데이터베이스를 azure로 마이그레이션
+description: Azure 클라우드와 Windows 컨테이너를 사용하여 기존 .NET 응용 프로그램 최신화 | 관계형 데이터베이스를 azure로 마이그레이션
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 04/28/2018
@@ -15,7 +15,7 @@ ms.locfileid: "57677554"
 
 Vision: Azure는 가장 포괄적인 데이터베이스 마이그레이션은 제공합니다.
 
-Azure에서 IaaS Vm (순수한 리프트 앤 시프트)에 직접 데이터베이스 서버를 마이그레이션할 수 있습니다 또는 추가 혜택에 대 한 Azure SQL Database로 마이그레이션할 수 있습니다. Azure SQL Database 관리 되는 인스턴스 및 전체 데이터베이스-as a service (DBaaS) 옵션을 제공 합니다. 그림 3-1에서는 마이그레이션 경로가 Azure에서 사용할 수 있는 여러 관계형 데이터베이스를 보여 줍니다.
+Azure에서 IaaS VM(순수한 리프트 앤 시프트)에 직접 데이터베이스 서버를 마이그레이션하거나, 추가적인 이득을 얻기 위해 Azure SQL Database로 마이그레이션할 수 있습니다. Azure SQL Database에서는 관리되는 인스턴스와 서비스 형태의 전체 데이터베이스(DBaaS) 옵션을 제공합니다. 그림 3-1에서는 Azure에서 사용할 수 있는 다양한 관계형 데이터베이스 마이그레이션 경로를 보여 줍니다.
 
 ![Azure에서 데이터베이스 마이그레이션 경로](./media/image3-1.png)
 

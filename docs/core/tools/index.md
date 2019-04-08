@@ -3,6 +3,12 @@ title: .NET Core CLI(명령줄 인터페이스) 도구
 description: .NET Core CLI(명령줄 인터페이스) 도구 및 기능에 대한 개요입니다.
 ms.date: 08/14/2017
 ms.custom: seodec18
+ms.openlocfilehash: e174867ce06e573fc85579183df0196d8276fb37
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58826316"
 ---
 # <a name="net-core-command-line-interface-cli-tools"></a>.NET Core CLI(명령줄 인터페이스) 도구
 
@@ -116,11 +122,17 @@ dotnet /build_output/my_app.dll
 
 ### <a name="driver"></a>드라이버
 
-이 드라이버는 [dotnet](dotnet.md)으로 이름이 지정되며 [프레임워크 종속 앱](../deploying/index.md)을 실행하거나 명령을 실행합니다. `dotnet`이 명령 없이 사용되는 유일한 경우는 애플리케이션을 시작할 때 사용되는 경우입니다.
+이 드라이버는 [dotnet](dotnet.md)으로 이름이 지정되며 [프레임워크 종속 앱](../deploying/index.md)을 실행하거나 명령을 실행합니다. 
 
-예를 들어 프레임워크 종속 앱을 실행하려면 드라이버 다음에 앱을 지정합니다(예: `dotnet /path/to/my_app.dll`). 앱의 DLL이 있는 폴더에서 명령을 실행할 때는 `dotnet my_app.dll`을 실행하기만 하면 됩니다.
+예를 들어 프레임워크 종속 앱을 실행하려면 드라이버 다음에 앱을 지정합니다(예: `dotnet /path/to/my_app.dll`). 앱의 DLL이 있는 폴더에서 명령을 실행할 때는 `dotnet my_app.dll`을 실행하기만 하면 됩니다. 특정 버전의 .NET Core 런타임을 사용하려면 `--fx-version <VERSION>` 옵션을 사용합니다([dotnet 명령](dotnet.md) 참조).
 
-드라이버에 명령을 제공하면 `dotnet.exe`가 CLI 명령 실행 프로세스를 시작합니다. 먼저 드라이버는 사용할 SDK 버전을 확인합니다. 명령 옵션에 버전을 지정하지 않으면 드라이버는 사용 가능한 최신 버전을 사용합니다. 설치된 최신 버전 이외의 버전을 지정하려면 `--fx-version <VERSION>` 옵션([dotnet 명령](dotnet.md) 참조 확인)을 사용합니다. SDK 버전이 확인되면 드라이버는 명령을 실행합니다.
+드라이버에 명령을 제공하면 `dotnet.exe`가 CLI 명령 실행 프로세스를 시작합니다. 예:
+
+```bash
+> dotnet build
+```
+
+먼저 드라이버는 사용할 SDK 버전을 확인합니다. ['global.json'](global-json.md)이 없는 경우 사용 가능한 최신 버전의 SDK가 사용됩니다. 이는 머신의 최신 버전에 따라 미리 보기 또는 안정적인 버전일 수 있습니다.  SDK 버전이 확인되면 명령을 실행합니다.
 
 ### <a name="command-verb"></a>명령("동사")
 

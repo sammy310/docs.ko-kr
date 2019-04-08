@@ -11,12 +11,12 @@ helpviewer_keywords:
 - inferring type information [LINQ in Visual Basic]
 - relationships [LINQ in Visual Basic]
 ms.assetid: b5ff4da5-f3fd-4a8e-aaac-1cbf52fa16f6
-ms.openlocfilehash: 4dc5497f2e9bacac3062fde6e7dc48270697f1df
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: fd2bcfad0ae24288887500ae6286e6ac73fddac5
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58465219"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58822338"
 ---
 # <a name="type-relationships-in-query-operations-visual-basic"></a>쿼리 작업의 형식 관계(Visual Basic)
 사용 되는 변수 [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] 쿼리 작업은 강력한 형식 이어야 하며 서로 호환 되어야 합니다. 강력한 형식 지정 데이터 원본, 쿼리 자체 및 쿼리 실행에 사용 됩니다. 다음 그림에서는 설명 하는 용어를 식별 하는 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 쿼리 합니다. 쿼리 부분에 대 한 자세한 내용은 참조 하세요. [기본 쿼리 작업 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/basic-query-operations.md)합니다.  
@@ -25,7 +25,7 @@ ms.locfileid: "58465219"
   
  쿼리에서 범위 변수의 형식을 데이터 소스에 있는 요소의 형식과 호환 되어야 합니다. 쿼리 변수의 형식에 정의 된 시퀀스 요소와 호환 되어야 합니다는 `Select` 절. 마지막으로 시퀀스 요소의 형식입니다도 호환 되어야에 사용 되는 루프 제어 변수의 형식을 사용 하 여는 `For Each` 쿼리를 실행 하는 문입니다. 이 강력한 형식화 컴파일 타임 형식 오류 식별을 용이 하 게 합니다.  
   
- Visual Basic 편리 강력한 형식 지정 라고도 지역 형식 유추를 구현 하 여 *암시적 형식 지정*합니다. 기능은 이전 예제에서 사용 됩니다 하 고 표시 될 전체에서 사용 되는 것은 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 샘플 및 설명서입니다. Visual basic에서 지역 형식 유추를 사용 하 여 수행 됩니다는 `Dim` 문 없이 `As` 절. 다음 예에서 `city` 문자열로 강력 하 게 형식화 됩니다.  
+ Visual Basic 편리 강력한 형식 지정 라고도 지역 형식 유추를 구현 하 여 *암시적 형식 지정*합니다. 기능은 이전 예제에서 사용 됩니다 하 고 표시 될 전체에서 사용 되는 것은 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 샘플 및 설명서입니다. Visual Basic에서 지역 형식 유추를 사용 하 여 수행 됩니다는 `Dim` 문 없이 `As` 절. 다음 예에서 `city` 문자열로 강력 하 게 형식화 됩니다.  
   
  [!code-vb[VbLINQTypeRels#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQTypeRels/VB/Class1.vb#1)]  
   
@@ -117,6 +117,7 @@ Next
 3.  반복 변수 형식의 `For Each` 루프에는 2 단계에서 만든 익명 형식입니다. 형식에 사용 가능한 이름이 없으므로, 루프 반복 변수의 형식이 암시적으로 결정 해야 합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [Visual Basic에서 LINQ 시작](../../../../visual-basic/programming-guide/concepts/linq/getting-started-with-linq.md)
 - [익명 형식](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)
 - [지역 형식 유추](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)

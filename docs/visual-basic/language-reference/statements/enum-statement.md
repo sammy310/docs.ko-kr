@@ -11,12 +11,12 @@ helpviewer_keywords:
 - variables [Visual Basic], enumeration
 - constants [Visual Basic], enumerated
 ms.assetid: a45e51f1-65ff-48e1-bf32-79130f137377
-ms.openlocfilehash: 662dc63b69a8229693471909a50b0c4f336b5637
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: fa97a374d4570e014222bf44844271b3394453da
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56965698"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58830073"
 ---
 # <a name="enum-statement-visual-basic"></a>Enum 문(Visual Basic)
 열거형을 선언 하 고 해당 멤버의 값을 정의 합니다.  
@@ -79,8 +79,7 @@ End Enum
   
 -   `End` `Enum`  
   
-     
-  `Enum` 블록을 종료합니다.  
+     `Enum` 블록을 종료합니다.  
   
 ## <a name="remarks"></a>설명  
  서로 논리적으로 관련 된 변경 되지 않는 값 집합에 있는 경우 열거형의 함께 정의할 수 있습니다. 열거형 및 해당 값 보다 쉽게 기억할 수 있는 해당 멤버에 대 한 의미 있는 이름을 제공 합니다. 다음 코드에서 여러 위치에서 열거형 멤버를 사용할 수 있습니다.  
@@ -173,6 +172,7 @@ End Enum
  [!code-vb[VbEnumsTask#51](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class1.vb#51)]  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Enum>
 - <xref:Microsoft.VisualBasic.Strings.AscW%2A>
 - [Const 문](../../../visual-basic/language-reference/statements/const-statement.md)

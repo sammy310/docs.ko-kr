@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Take While clause [Visual Basic]
 - Take While statement [Visual Basic]
 ms.assetid: db8f9f2f-fc9f-4a6c-b0b8-1bf048147e11
-ms.openlocfilehash: f7e0587d7737d99d48fcc9cd4a102e78248a55e5
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 080a106fc1deeb54165511ed03d7c7c5d2060f21
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56979946"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58818751"
 ---
 # <a name="take-while-clause-visual-basic"></a>Take While 절(Visual Basic)
 지정된 조건이 `true`이면 컬렉션의 요소를 포함하고 나머지 요소를 무시합니다.  
@@ -41,6 +41,7 @@ Take While expression
  [!code-vb[VbSimpleQuerySamples#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#2)]  
   
 ## <a name="see-also"></a>참고자료
+
 - [Visual Basic의 LINQ 소개](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
 - [쿼리](../../../visual-basic/language-reference/queries/index.md)
 - [Select 절](../../../visual-basic/language-reference/queries/select-clause.md)

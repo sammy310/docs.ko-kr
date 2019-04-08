@@ -21,12 +21,12 @@ helpviewer_keywords:
 - current instance [Visual Basic], Me keyword
 - MyBase keyword [Visual Basic], relationship to similar programming elements
 ms.assetid: f8e241ae-b1ed-4886-9aa0-08c632154029
-ms.openlocfilehash: 5c86660574e9d12f646eed9d6d6397781cb9b9c6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a8df6e48fd5bce9bb28d8aef7e031f36741ad0ad
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54685492"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58813394"
 ---
 # <a name="me-my-mybase-and-myclass-in-visual-basic"></a>Visual Basic의 Me, My, MyBase 및 MyClass
 `Me`를 `My`, `MyBase`, 및 `MyClass` Visual Basic에는 비슷한 이름 이지만 다른 목적으로 합니다. 이 항목에서는 구별할 수 있도록 이러한 각 엔터티를 설명 합니다.  
@@ -59,4 +59,5 @@ ChangeFormColor(Me)
  `MyClass` 키워드 원래 구현 된 클래스의 현재 인스턴스를 참조 하는 개체 변수 처럼 동작 합니다. `MyClass` 비슷합니다 `Me`, 되지만에 대 한 모든 메서드 호출이 메서드 것 처럼 처리 됩니다 `NotOverridable`합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [상속 기본 사항](../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)

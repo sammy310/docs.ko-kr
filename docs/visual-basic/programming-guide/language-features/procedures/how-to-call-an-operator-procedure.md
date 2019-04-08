@@ -11,12 +11,12 @@ helpviewer_keywords:
 - overloaded operators [Visual Basic], calling
 - operator overloading
 ms.assetid: 0dce42cc-f0b0-4c14-9f62-018b21f33497
-ms.openlocfilehash: ab9dd9e3f9abdd8379a59ed458c47d5ec8b4f2ad
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 46614ad43e7be72c8396f47ba7f5d02185f62827
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56978971"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58837093"
 ---
 # <a name="how-to-call-an-operator-procedure-visual-basic"></a>방법: 연산자 프로시저 (Visual Basic)를 호출 합니다.
 연산자 기호를 사용 하 여 식에서 연산자 프로시저를 호출 합니다. 호출 하는 변환 연산자의 경우는 [CType 함수](../../../../visual-basic/language-reference/functions/ctype-function.md) 다른 데이터 형식에서 값을 변환할 수 있습니다.  
@@ -54,6 +54,7 @@ ms.locfileid: "56978971"
  클래스 또는 구조체를 사용 하는 데 사용할 연산자를 정의 해야 합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [연산자 프로시저](./operator-procedures.md)
 - [방법: 연산자 정의](./how-to-define-an-operator.md)
 - [방법: 변환 연산자를 정의 합니다.](./how-to-define-a-conversion-operator.md)

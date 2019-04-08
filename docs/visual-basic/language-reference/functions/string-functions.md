@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - string functions
 ms.assetid: f1bf9ac2-cbcf-4298-ae51-53182076bdc8
-ms.openlocfilehash: 11ea31ae245d34525ea33d5d2a53a72f1c415b16
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 645d19219481d22ade90f44aaecb62471eb915d5
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56981454"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58817204"
 ---
 # <a name="string-functions-visual-basic"></a>문자열 함수(Visual Basic)
 다음 표에서 검색 문자열을 조작 하는 Visual Basic 함수를 나열 합니다.  
@@ -82,6 +82,7 @@ ms.locfileid: "56981454"
  [!code-vb[VbVbalrStrings#27](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class1.vb#27)]  
   
 ## <a name="see-also"></a>참고자료
+
 - [C++ 키워드](../../../visual-basic/language-reference/keywords/index.md)
 - [Visual Basic 런타임 라이브러리 멤버](../../../visual-basic/language-reference/runtime-library-members.md)
 - [문자열 조작 요약](../../../visual-basic/language-reference/keywords/string-manipulation-summary.md)

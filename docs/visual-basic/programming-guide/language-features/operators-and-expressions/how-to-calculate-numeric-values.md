@@ -11,12 +11,12 @@ helpviewer_keywords:
 - Visual Basic code, expressions
 - numeric expressions
 ms.assetid: ba6bf43d-bd96-49b8-b1de-4a7797551372
-ms.openlocfilehash: 036985a7b60afedc1e8ef0854c619ea8515e5ffe
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 33184d9be275f5e777ffd79c6dd4e3182d865de7
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56974304"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58825757"
 ---
 # <a name="how-to-calculate-numeric-values-visual-basic"></a>방법: 숫자 값 (Visual Basic)를 계산 합니다.
 숫자 식 사용 하 여 숫자 값을 계산할 수 있습니다. A *숫자 식* 리터럴, 상수 및 숫자 값을 나타내는 변수를 포함 하는 식과 해당 값에 대해 작동 하는 연산자가 있습니다.  
@@ -63,6 +63,7 @@ ms.locfileid: "56974304"
      자세한 내용은 [Visual Basic의 연산자 우선 순위](../../../../visual-basic/language-reference/operators/operator-precedence.md)합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [연산자 및 식](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/index.md)
 - [값 비교](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/value-comparisons.md)
 - [문(C++)](../../../../visual-basic/language-reference/statements/index.md)

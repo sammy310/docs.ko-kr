@@ -2,12 +2,12 @@
 title: '방법: XML 네임 스페이스 (Visual Basic)에 대 한 쿼리 작성'
 ms.date: 07/20/2015
 ms.assetid: 7d4131b5-3288-414f-b77c-b2edc2a1f465
-ms.openlocfilehash: 00dfc4e14c38357deb3efc4a32fd00a97f6010b8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4efa1de254a0264752514c5ae6e601a66fa56f95
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54609931"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58833440"
 ---
 # <a name="how-to-write-queries-on-xml-in-namespaces-visual-basic"></a>방법: XML 네임 스페이스 (Visual Basic)에 대 한 쿼리 작성
 네임스페이스에 있는 XML에 대한 쿼리를 작성하려면 올바른 네임스페이스를 가진 <xref:System.Xml.Linq.XName> 개체를 사용해야 합니다.  
@@ -89,4 +89,5 @@ End Module
 ```  
   
 ## <a name="see-also"></a>참고자료
+
 - [XML 네임 스페이스 (Visual Basic)를 사용 하 여 작업](../../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md)

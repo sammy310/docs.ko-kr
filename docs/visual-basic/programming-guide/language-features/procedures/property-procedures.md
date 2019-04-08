@@ -13,12 +13,12 @@ helpviewer_keywords:
 - property procedures
 - Get statement [Visual Basic], property procedures
 ms.assetid: 46a98379-e1a2-45dd-a48c-b51213f5ab07
-ms.openlocfilehash: d0a0003409f0abc277d92f4e68981d9ffd901a41
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 47e93ee17f160ce5cd701fd0a12ec16b3997ce9b
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56971535"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58828351"
 ---
 # <a name="property-procedures-visual-basic"></a>Property 프로시저(Visual Basic)
 속성 프로시저는 일련의 모듈, 클래스 또는 구조체에서 사용자 지정 속성을 조작 하는 Visual Basic 문 합니다. 속성 프로시저는 라고도 *속성 접근자*합니다.  
@@ -106,6 +106,7 @@ End Property
  [!code-vb[VbVbcnProcedures#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#9)]  
   
 ## <a name="see-also"></a>참고자료
+
 - [절차](./index.md)
 - [Function 프로시저](./function-procedures.md)
 - [연산자 프로시저](./operator-procedures.md)

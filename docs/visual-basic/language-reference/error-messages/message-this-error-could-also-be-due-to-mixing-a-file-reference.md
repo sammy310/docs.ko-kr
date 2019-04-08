@@ -1,5 +1,5 @@
 ---
-title: "'<message> 이 오류는 '<assemblyname>' 어셈블리에 대한 프로젝트 참조와 파일 참조가 섞여 있기 때문에 발생할 수도 있습니다."
+title: <message> 이 오류는 어셈블리에 대 한 프로젝트 참조를 사용 하는 파일 참조가 섞여 수도 있습니다 '<assemblyname>'
 ms.date: 07/20/2015
 f1_keywords:
 - bc30971
@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30971
 ms.assetid: 75d2e8b5-2fdc-4623-8b32-cba805dab7db
-ms.openlocfilehash: f28327b4df5b15f368f736e7402179227035a06e
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 0f2e7040de5ea74f3793129d23d4ae8c80b71f25
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55272554"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58841552"
 ---
 # <a name="message-this-error-could-also-be-due-to-mixing-a-file-reference-with-a-project-reference-to-assembly-assemblyname"></a>\<메시지 > 참조 어셈블리에 대 한 프로젝트 참조를 사용 하 여 파일 참조가 섞여 있기 때문에이 오류도 수 '\<assemblyname >'
 \<메시지 > 참조 어셈블리에 대 한 프로젝트 참조를 사용 하 여 파일 참조가 섞여 있기 때문에이 오류도 수 '\<assemblyname >. 이 경우에 대 한 파일 참조를 교체를 시도 '\<assemblyfilename >' 프로젝트에서 '\<projectname1 >'에 대 한 프로젝트 참조를 사용 하 여 '\<projectname2 >'입니다.  
@@ -30,6 +30,7 @@ ms.locfileid: "55272554"
 2.  프로젝트 속성에서 사용 중인 형식을 정의하는 어셈블리가 포함된 프로젝트에 대한 참조를 추가합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [프로젝트의 참조 관리](/visualstudio/ide/managing-references-in-a-project)
 - [선언된 요소 참조](../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)
 

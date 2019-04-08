@@ -11,12 +11,12 @@ helpviewer_keywords:
 - conditional operator [Visual Basic]
 - If Operator [Visual Basic]
 ms.assetid: dd56c9df-7cd4-442c-9ba6-20c70ee44c8f
-ms.openlocfilehash: 25b0d7e85fe1c1e0d0589b4b9a9db2d85ca71526
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 9ab01755d75c91ce87acf83e7f406b26c466aef6
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56965912"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58834637"
 ---
 # <a name="if-operator-visual-basic"></a>If 연산자(Visual Basic)
 사용 조건에 따라 두 값 중 하나를 반환 하는 평가 단락 (short-circuit). `If` 세 개의 인수를 사용 하 여 또는 두 개의 인수를 사용 하 여 연산자를 호출할 수 있습니다.  
@@ -61,6 +61,7 @@ If( [argument1,] argument2, argument3 )
  [!code-vb[VbVbalrOperators#102](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class4.vb#102)]  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:Microsoft.VisualBasic.Interaction.IIf%2A>
 - [Nullable 값 형식](../../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md)
 - [Nothing](../../../visual-basic/language-reference/nothing.md)

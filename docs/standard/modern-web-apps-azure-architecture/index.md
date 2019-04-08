@@ -4,8 +4,13 @@ description: ASP.NET Core 및 Azure를 사용하여 모놀리식 웹 애플리�
 author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
+ms.openlocfilehash: 27212045d9870c9f2fc15509d76f3e9b07d8657f
+ms.sourcegitcommit: 0aca6c5d166d7961a1e354c248495645b97a1dc5
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 03/30/2019
+ms.locfileid: "58675837"
 ---
-
 # <a name="architect-modern-web-applications-with-aspnet-core-and-azure"></a>ASP.NET Core 및 Azure를 사용하여 현대식 웹 애플리케이션 설계
 
 ![최신 웹 애플리케이션 설계자 가이드의 표지 이미지](./media/index/web-application-guide-cover-image.png)

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - constants [Visual Basic], user-defined
 - circular references between constants [Visual Basic]
 ms.assetid: a1206d5c-c45e-4ac2-970a-4a0be6a05fdd
-ms.openlocfilehash: e519fcaf90c6f18e75d5c409cbe7067d5db36429
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: f0196457235ad77df545a367573f62b43209269d
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56975942"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58813914"
 ---
 # <a name="user-defined-constants-visual-basic"></a>사용자 정의 상수(Visual Basic)
 상수는 숫자 또는 변경 되지 않는 문자열의 발생 하는 의미 있는 이름입니다. 상수는 애플리케이션 실행 중 변함없이 유지되는 값을 저장합니다. 컨트롤 또는 구성 요소를 사용 하 여 작업에 의해 정의 된 상수를 사용할 수 있습니다 하거나 직접 만들 수 있습니다. 사용자가 직접 만든 상수 상수 라고 *사용자 정의*합니다.  
@@ -56,6 +56,7 @@ ms.locfileid: "56975942"
  주기가 발생 하는 경우 Visual Basic 컴파일러 오류를 생성 합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [Const 문](../../../../visual-basic/language-reference/statements/const-statement.md)
 - [상수 및 리터럴 데이터 형식](../../../../visual-basic/programming-guide/language-features/constants-enums/constant-and-literal-data-types.md)
 - [상수 및 열거형](../../../../visual-basic/programming-guide/language-features/constants-enums/index.md)

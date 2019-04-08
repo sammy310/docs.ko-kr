@@ -18,12 +18,12 @@ helpviewer_keywords:
 - objects [Visual Basic], names
 - names [Visual Basic], shadowing
 ms.assetid: 54bb4c25-12c4-4181-b4a0-93546053964e
-ms.openlocfilehash: 15c7112f7e318542859162655c78e19558178e5a
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: 9ad992a53618fa2f410e0b0fb23886c30136384f
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58411007"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58839394"
 ---
 # <a name="shadowing-in-visual-basic"></a>Visual Basic의 숨김 기능
 동일한 이름을 공유 하는 두 가지 프로그래밍 요소를 숨길 수 중 하나, 또는 *섀도*, 다른 하나입니다. 이러한 상황에서 숨겨진된 요소는 참조를 사용할 수 있습니다. 대신, 요소 이름을 사용 하는 코드를 Visual Basic 컴파일러는 섀도잉 요소 확인 합니다.  
@@ -138,6 +138,7 @@ End Class
  위의 예에서 변수 `basObj` 기본 클래스로 선언 합니다. 할당을 `dervCls` 개체를 확대 변환 구성 요소 이므로 유효 합니다. 그러나 기본 클래스에서 변수 숨김 버전에 액세스할 수 없습니다 `z` 파생된 클래스에서 때문에 컴파일러에서는 `basObj.z` 원래 기본 클래스 값입니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [선언된 요소 참조](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)
 - [Visual Basic의 범위](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)
 - [확대 변환과 축소 변환](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)

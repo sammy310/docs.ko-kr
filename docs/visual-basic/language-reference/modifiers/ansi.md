@@ -8,12 +8,12 @@ helpviewer_keywords:
 - ANSI, Visual Basic
 - ANSI
 ms.assetid: 4f1fa6ff-5557-41ab-b6da-90baf4c15917
-ms.openlocfilehash: e474bd686cc753a0265df1fc2914a73d1b62f1b5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 98dafab3e524ea371bba228eb231e28d46cc3b4e
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54737324"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58819457"
 ---
 # <a name="ansi-visual-basic"></a>Ansi(Visual Basic)
 Visual Basic 선언 되는 외부 프로시저의 이름에 관계 없이 ANSI American National Standards Institute () 값으로 모든 문자열을 마샬링하고 지정 합니다.  
@@ -29,10 +29,11 @@ Visual Basic 선언 되는 외부 프로시저의 이름에 관계 없이 ANSI A
   
  [Declare 문](../../../visual-basic/language-reference/statements/declare-statement.md)  
   
-## <a name="smart-device-developer-notes"></a>스마트 디바이스 개발자 노트  
+## <a name="smart-device-developer-notes"></a>스마트 장치 개발자 노트  
  이 키워드는 지원 되지 않습니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [자동](../../../visual-basic/language-reference/modifiers/auto.md)
 - [유니코드](../../../visual-basic/language-reference/modifiers/unicode.md)
 - [키워드](../../../visual-basic/language-reference/keywords/index.md)

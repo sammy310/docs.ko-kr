@@ -28,12 +28,12 @@ helpviewer_keywords:
 - End keyword [Visual Basic], Function statements
 - Handles keyword [Visual Basic], Function statements
 ms.assetid: a4497077-0f46-4ede-a27f-9e8670df52b9
-ms.openlocfilehash: 947507cb813437facc2b2343ff6f1a5d50f4dd98
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: dffe67d1c31b0fe7c037839ba0588793a461f276
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56971639"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58818464"
 ---
 # <a name="function-statement-visual-basic"></a>Function 문(Visual Basic)
 선언 하 고 이름, 매개 변수를 정의 하는 코드는 `Function` 프로시저입니다.  
@@ -129,8 +129,7 @@ End Function
   
 -   `implementslist`  
   
-     
-  `Implements`가 제공된 경우 필수입니다. 구현할 `Function` 프로시저 목록입니다.  
+     `Implements`가 제공된 경우 필수입니다. 구현할 `Function` 프로시저 목록입니다.  
   
      `implementedprocedure [ , implementedprocedure ... ]`  
   
@@ -149,8 +148,7 @@ End Function
   
 -   `eventlist`  
   
-     
-  `Handles`가 제공된 경우 필수입니다. 이 프로시저에서 처리 하는 이벤트 목록입니다.  
+     `Handles`가 제공된 경우 필수입니다. 이 프로시저에서 처리 하는 이벤트 목록입니다.  
   
      `eventspecifier [ , eventspecifier ... ]`  
   
@@ -257,6 +255,7 @@ End Function
  [!code-vb[csAsyncMethod#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/csasyncmethod/vb/mainwindow.xaml.vb#1)]  
   
 ## <a name="see-also"></a>참고자료
+
 - [Sub 문](sub-statement.md)
 - [Function 프로시저](../../../visual-basic/programming-guide/language-features/procedures/function-procedures.md)
 - [매개 변수 목록](parameter-list.md)

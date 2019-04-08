@@ -3,9 +3,15 @@ layout: HubPage
 ms.topic: hub-page
 hide_bc: true
 title: .NET 설명서
-description: 'C#, Visual Basic 및 F#을 사용하는 모든 플랫폼에서 .NET을 사용하여 다양한 애플리케이션을 만드는 방법을 알아보세요. API 참조, 샘플 코드, 자습서 등을 찾아보세요.'
+description: C#, Visual Basic 및 F#을 사용하는 모든 플랫폼에서 .NET을 사용하여 다양한 애플리케이션을 만드는 방법을 알아보세요. API 참조, 샘플 코드, 자습서 등을 찾아보세요.
 ms.custom: updateeachrelease
 ms.date: 12/04/2018
+ms.openlocfilehash: 31e810246528c99a665128d3535b92dbfcb4352d
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58464517"
 ---
 <!-- markdownlint-disable MD033 -->
 <div id="main" class="v2">

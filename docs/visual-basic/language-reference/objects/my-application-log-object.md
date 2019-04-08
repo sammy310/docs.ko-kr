@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - My.Application.Log object
 ms.assetid: 296147f9-1109-4a55-9b5e-047f1ab9466c
-ms.openlocfilehash: 62b072058951fd6b4f85e93407d699c3346ff5f8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e4c78a12d6ba66ea88573e6ef2e5b4cc04c1121a
+ms.sourcegitcommit: 5c2176883dc3107445702724a7caa7ac2f6cb0d3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54699140"
+ms.lasthandoff: 04/03/2019
+ms.locfileid: "58890786"
 ---
 # <a name="myapplicationlog-object"></a>My.Application.Log 개체
 애플리케이션의 로그 수신기에 이벤트 및 예외 정보를 쓸 수 있는 속성 및 메서드를 제공합니다.  
@@ -30,4 +30,5 @@ ms.locfileid: "54699140"
  **어셈블리:** [!INCLUDE[vbprvbruntime](~/includes/vbprvbruntime-md.md)]  
   
 ## <a name="see-also"></a>참고자료
+
 - [My.Application 개체](../../../visual-basic/language-reference/objects/my-application-object.md)

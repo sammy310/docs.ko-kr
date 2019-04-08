@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - My.Settings object
 ms.assetid: 41f30dc1-202a-4273-b9b7-5728941f996c
-ms.openlocfilehash: 5d6d56e4a1eddcb687fe042568509ba489aa8bb3
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: a962f7cce961b1ee6829702a6815ba02c534efb4
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56973472"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58840369"
 ---
 # <a name="mysettings-object"></a>My.Settings 개체
 응용 프로그램의 설정에 액세스 하기 위한 속성 및 메서드를 제공 합니다.  
@@ -60,6 +60,7 @@ ms.locfileid: "56973472"
  이 예제가 작동하려면 애플리케이션에 `String` 형식의 `Nickname` 설정이 있어야 합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Configuration.ApplicationSettingsBase>
 - [방법: Visual Basic에서 애플리케이션 설정 읽기](../../../visual-basic/developing-apps/programming/app-settings/how-to-read-application-settings.md)
 - [방법: Visual Basic에서 사용자 설정 변경](../../../visual-basic/developing-apps/programming/app-settings/how-to-change-user-settings.md)

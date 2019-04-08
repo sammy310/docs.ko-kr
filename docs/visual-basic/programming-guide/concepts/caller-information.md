@@ -2,12 +2,12 @@
 title: 호출자 정보 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 15d556eb-4d0c-4497-98a3-7f60abb7d6a1
-ms.openlocfilehash: b3d7c999137b1e62de573470b8327bf070f2b1a9
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 004cb003b6cf980f902d7625694e3d2fbfa5ee42
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57375547"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58826056"
 ---
 # <a name="caller-information-visual-basic"></a>호출자 정보 (Visual Basic)
 호출자 정보 특성을 사용하여 메서드 호출자에 대한 정보를 얻을 수 있습니다. 소스 코드 파일 경로, 소스 코드 줄 번호 및 호출자의 멤버 이름을 얻을 수 있습니다. 이 정보는 추적, 디버깅 및 진단 도구를 만드는 데 도움이 됩니다.  
@@ -75,6 +75,7 @@ End Sub
 |포함하는 멤버가 없음(예: 어셈블리 수준 또는 형식에 적용되는 특성)|선택적 매개 변수의 기본값입니다.|  
   
 ## <a name="see-also"></a>참고자료
+
 - [특성(Visual Basic)](../../../visual-basic/language-reference/attributes.md)
 - [일반 특성(Visual Basic)](../../../visual-basic/programming-guide/concepts/attributes/common-attributes.md)
 - [선택적 매개 변수](../../../visual-basic/programming-guide/language-features/procedures/optional-parameters.md)

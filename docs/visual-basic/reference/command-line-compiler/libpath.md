@@ -6,12 +6,12 @@ helpviewer_keywords:
 - /libpath compiler option [Visual Basic]
 - -libpath compiler option [Visual Basic]
 ms.assetid: 5f1c26c9-3455-4e89-bdf3-b12d6c2e655b
-ms.openlocfilehash: ca5a6836a7cfbc6a36c83044caff23a7d590dfc0
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
+ms.openlocfilehash: b8e28b821f6536ddb5c7612e8706e024dd79a0bd
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56745987"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58833319"
 ---
 # <a name="-libpath"></a>-libpath
 참조 된 어셈블리의 위치를 지정 합니다.  
@@ -57,6 +57,7 @@ vbc -libpath:c:\;"c:\New Assemblies" -reference:t2.dll t2.vb
 ```  
   
 ## <a name="see-also"></a>참고자료
+
 - [.NET 어셈블리](../../../standard/assembly/index.md)
 - [Visual Basic 명령줄 컴파일러](../../../visual-basic/reference/command-line-compiler/index.md)
 - [샘플 컴파일 명령줄](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)

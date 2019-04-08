@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Unicode, file encoding
 - file encoding
 ms.assetid: ea2c5f5f-bbb1-4150-9928-b9951fa6bc57
-ms.openlocfilehash: f7ccd47b8778aa3a374ee102b39038e8df475e9b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c22e8046a8b88890f25bc6b671825eb6d68ec6b8
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54731922"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58814005"
 ---
 # <a name="file-encodings-visual-basic"></a>파일 인코딩(Visual Basic)
 문자 인코딩이라고도 하는 파일 인코딩은 텍스트 처리 시 문자를 나타내는 방법을 지정합니다. 처리할 수 있거나 없는 언어 문자를 기준으로 특정 인코딩이 다른 인코딩보다 선호될 수 있지만, 일반적으로 유니코드가 선호됩니다.  
@@ -36,5 +36,6 @@ ms.locfileid: "54731922"
 |<xref:System.Text.UTF8Encoding>|유니코드 문자의 UTF-8 인코딩을 나타냅니다.|  
   
 ## <a name="see-also"></a>참고 항목
+
 - [파일 읽기](../../../../visual-basic/developing-apps/programming/drives-directories-files/reading-from-files.md)
 - [파일에 쓰기](../../../../visual-basic/developing-apps/programming/drives-directories-files/writing-to-files.md)

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - /nowarn compiler option [Visual Basic]
 - -nowarn compiler option [Visual Basic]
 ms.assetid: 7ebf2106-0652-4fdc-bf60-70fc86465d83
-ms.openlocfilehash: eff367fd6cc14c655f0c623731e334054233b0a0
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 31f7a2b771cfa1bcc6581d720aa0de3505aec826
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54744312"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58828214"
 ---
 # <a name="-nowarn"></a>-nowarn
 컴파일러에서 경고를 생성하지 않도록 합니다.  
@@ -54,6 +54,7 @@ vbc -nowarn:42024 t2.vb
 ```  
   
 ## <a name="see-also"></a>참고자료
+
 - [Visual Basic 명령줄 컴파일러](../../../visual-basic/reference/command-line-compiler/index.md)
 - [샘플 컴파일 명령줄](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
 - [Configuring Warnings in Visual Basic](/visualstudio/ide/configuring-warnings-in-visual-basic)

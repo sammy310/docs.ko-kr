@@ -7,12 +7,12 @@ helpviewer_keywords:
 - procedures [Visual Basic], calling
 - procedures [Visual Basic], returning a value
 ms.assetid: a445127b-0f5f-465a-98fb-3e514b93d115
-ms.openlocfilehash: 10167075e903693df804cba044301e1f1bc6306e
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: ee80ae48a9b9bfae0afe8f0a2c6e7ebf047d9d36
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56974460"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58820388"
 ---
 # <a name="how-to-call-a-procedure-that-returns-a-value-visual-basic"></a>방법: (Visual Basic) 값을 반환 하는 프로시저 호출
 `Function` 프로시저가 호출 코드에 값을 반환 합니다. 식 또는 대입문의 오른쪽에 있는 이름과 인수를 포함 하 여 프로시저를 호출 합니다.  
@@ -45,6 +45,7 @@ ms.locfileid: "56974460"
  [!code-vb[VbVbcnProcedures#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#7)]  
   
 ## <a name="see-also"></a>참고자료
+
 - [Function 프로시저](./function-procedures.md)
 - [프로시저 매개 변수 및 인수](./procedure-parameters-and-arguments.md)
 - [Function 문](../../../../visual-basic/language-reference/statements/function-statement.md)

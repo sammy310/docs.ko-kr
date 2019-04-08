@@ -10,12 +10,12 @@ helpviewer_keywords:
 - write-only properties
 - properties [Visual Basic], write-only
 ms.assetid: 9ecc27b4-df84-420d-9075-db25455fb3cd
-ms.openlocfilehash: c6bb924a3c41e1c586f66c9473a94d1971ee262f
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 0a8d95ffbabf03a0e6c9d88edb28c248b60f3252
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56973771"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58839082"
 ---
 # <a name="set-statement-visual-basic"></a>Set 문(Visual Basic)
 선언 된 `Set` 속성 프로시저 속성에 값을 할당 하는 데 사용 합니다.  
@@ -88,6 +88,7 @@ End Set
  [!code-vb[VbVbalrStatements#55](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#55)]  
   
 ## <a name="see-also"></a>참고자료
+
 - [Get 문](../../../visual-basic/language-reference/statements/get-statement.md)
 - [Property 문](../../../visual-basic/language-reference/statements/property-statement.md)
 - [Sub 문](../../../visual-basic/language-reference/statements/sub-statement.md)

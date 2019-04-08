@@ -17,12 +17,12 @@ helpviewer_keywords:
 - type parameters
 - data type arguments
 ms.assetid: 0db8f65c-65af-4089-ab7f-6fcfecb60444
-ms.openlocfilehash: e4c6c5cb8c041f1f0dfb3a9a3f858850d67d1c38
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 880570c714292b0c11eef4e2cd4c4b410bb075f1
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54698240"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58823443"
 ---
 # <a name="of-clause-visual-basic"></a>Of 절(Visual Basic)
 소개는 `Of` 식별 하는 절을 *형식 매개 변수* 에 *제네릭* 클래스, 구조체, 인터페이스, 대리자 또는 프로시저. 제네릭 형식에 대 한 자세한 내용은 [Visual Basic의 제네릭 형식](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)합니다.  
@@ -65,6 +65,7 @@ Dim d As New dictionary(Of String, Integer)
  [Sub 문](../../../visual-basic/language-reference/statements/sub-statement.md)  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.IComparable>
 - [형식 목록](../../../visual-basic/language-reference/statements/type-list.md)
 - [Visual Basic의 제네릭 형식](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)

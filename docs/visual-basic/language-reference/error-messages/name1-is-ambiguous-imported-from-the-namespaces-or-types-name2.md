@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30561
 ms.assetid: 761091f7-1018-4299-b481-3966a4a2c126
-ms.openlocfilehash: b867380661e3545db9ac64cb67ad4e3a5a1a6b1e
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 0268693f29fc3c4e485679cd77d7069ea595b2eb
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55254745"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58830021"
 ---
 # <a name="name1-is-ambiguous-imported-from-the-namespaces-or-types-name2"></a>'\<name1 >'는 네임 스페이스 또는 형식에서 가져온 모호\<name2 >'
 모호한 이름을 제공했으므로 다른 이름과 충돌합니다. Visual Basic 컴파일러에는 충돌 해결 규칙이; 없습니다 직접 이름을 구분 해야 합니다.  
@@ -26,6 +26,7 @@ ms.locfileid: "55254745"
 2.  이름을 정규화합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [Imports 문(.NET 네임스페이스 및 형식)](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)
 - [Visual Basic의 네임 스페이스](../../../visual-basic/programming-guide/program-structure/namespaces.md)
 - [Namespace 문](../../../visual-basic/language-reference/statements/namespace-statement.md)

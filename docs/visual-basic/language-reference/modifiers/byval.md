@@ -8,19 +8,18 @@ helpviewer_keywords:
 - ByVal keyword [Visual Basic], contexts
 - ByVal keyword [Visual Basic]
 ms.assetid: 1eaf4e58-b305-4785-9e3d-e416b9c75598
-ms.openlocfilehash: edee47e41ca78175a6fb24ed5eac255c03de0901
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 5e534eac2300327d4c54c5ce93d8b2c6c538e794
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56972577"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58832499"
 ---
 # <a name="byval-visual-basic"></a>ByVal(Visual Basic)
 이러한 방식으로 호출된 된 프로시저 또는 속성을 인수의 기반이 되는 호출 코드에서 변수 값을 변경할 수는 인수로 전달 되도록 지정 합니다.  
   
 ## <a name="remarks"></a>설명  
- 
-  `ByVal` 한정자는 다음 컨텍스트에서 사용할 수 있습니다.  
+ `ByVal` 한정자는 다음 컨텍스트에서 사용할 수 있습니다.  
   
  [Declare 문](../../../visual-basic/language-reference/statements/declare-statement.md)  
   
@@ -38,5 +37,6 @@ ms.locfileid: "56972577"
  [!code-vb[VbVbalrKeywords#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrKeywords/VB/Class5.vb#10)]  
   
 ## <a name="see-also"></a>참고자료
+
 - [C++ 키워드](../../../visual-basic/language-reference/keywords/index.md)
 - [값 또는 참조로 인수 전달](../../../visual-basic/programming-guide/language-features/procedures/passing-arguments-by-value-and-by-reference.md)

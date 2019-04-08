@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Microsoft.VisualBasic namespace
 - members [Visual Basic], Visual Basic run-time library
 ms.assetid: f5e82c6e-3500-452b-bdb8-78f0d5477604
-ms.openlocfilehash: ef6ce3fe62bd45716184ccbbb0f5a29f18e7477f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 061782dbd0ac54286a6c0da74fe769d98848f118
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54514805"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58828720"
 ---
 # <a name="visual-basic-runtime-library-members"></a>Visual Basic 런타임 라이브러리 멤버
 `Microsoft.VisualBasic` 클래스, 모듈, 상수 및 열거형 Visual Basic 런타임 라이브러리를 구성 하는 네임 스페이스를 포함 합니다. 이러한 라이브러리 멤버 프로시저, 속성 및 코드에서 사용할 수 있는 상수 값을 제공 합니다. 각 모듈 및 클래스 기능의 특정 범주를 나타냅니다.  
@@ -194,5 +194,6 @@ ms.locfileid: "54514805"
  `Microsoft.VisualBasic` 네임 스페이스는 Visual Basic 런타임 라이브러리의 일부로 상수 및 열거형을 제공 합니다. 코드에서 이러한 상수 값을 사용할 수 있습니다. 각 열거 기능의 특정 범주를 나타냅니다. 자세한 내용은 [상수 및 열거형](../../visual-basic/language-reference/constants-and-enumerations.md)합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [상수 및 열거형](../../visual-basic/language-reference/constants-and-enumerations.md)
-- [키워드](../../visual-basic/language-reference/keywords/index.md)
+- [C++ 키워드](../../visual-basic/language-reference/keywords/index.md)

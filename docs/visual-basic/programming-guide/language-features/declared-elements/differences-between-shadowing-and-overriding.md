@@ -5,12 +5,12 @@ helpviewer_keywords:
 - shadowing, vs. overriding
 - overriding, vs. shadowing
 ms.assetid: 2d014a0b-7630-407d-8f4e-24bd87987923
-ms.openlocfilehash: d60d668c97019418b30b89147e86f7beea1c31f7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b935184f0e4d0378bfea69811aa4e6c068a9776f
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54640685"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58827928"
 ---
 # <a name="differences-between-shadowing-and-overriding-visual-basic"></a>숨기기와 재정의의 차이점(Visual Basic)
 기본 클래스에서 상속 되는 클래스를 정의 하는 경우 하나 이상의 파생된 클래스에서 기본 클래스 요소를 다시 정의 하려는 경우가 있습니다. 숨기기와 재정의이 목적을 위해는 둘 다 사용할 수 있습니다.  
@@ -52,6 +52,7 @@ ms.locfileid: "54640685"
 -   요소 형식을 변경 하거나 호출 시퀀스의 자유를 원하고 있습니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [선언된 요소 참조](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)
 - [Visual Basic의 숨김 기능](../../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)
 - [방법: 변수 이름이 같은 변수 숨기기](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-hide-a-variable-with-the-same-name-as-your-variable.md)

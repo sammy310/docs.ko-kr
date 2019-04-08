@@ -23,12 +23,12 @@ helpviewer_keywords:
 - module-level constants and variables
 - Object data type [Visual Basic], declaring constants
 ms.assetid: f901b4fa-481f-4621-822e-427060577ad1
-ms.openlocfilehash: 26a987543cdd80e7e3075dd4d0a04de69b51e465
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 95bfa3da5499c518dad0c235b539784fee2bb522
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56964936"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58843411"
 ---
 # <a name="how-to-declare-a-constant-visual-basic"></a>방법: (Visual Basic) 상수 선언
 사용 된 `Const` 상수를 선언 하 고 해당 값을 설정 하는 문. 상수를 선언 하 여 값으로 의미 있는 이름을 할당 합니다. 상수 선언 되 면 수정 하거나 새 값을 지정할 수 없습니다.  
@@ -66,6 +66,7 @@ ms.locfileid: "56964936"
     ```  
   
 ## <a name="see-also"></a>참고자료
+
 - [Const 문](../../../../visual-basic/language-reference/statements/const-statement.md)
 - [상수 및 리터럴 데이터 형식](constant-and-literal-data-types.md)
 - [상수 개요](constants-overview.md)

@@ -1,11 +1,16 @@
 ---
 title: .NET 샘플 및 자습서
-description: '.NET Core, ASP.NET Core 및 .NET에 대해 배우는 데 도움이 되는 C# 언어용 샘플 및 자습서에 대한 정보입니다.'
+description: .NET Core, ASP.NET Core 및 .NET에 대해 배우는 데 도움이 되는 C# 언어용 샘플 및 자습서에 대한 정보입니다.
 author: BillWagner
 ms.author: wiwagn
 ms.date: 04/11/2017
+ms.openlocfilehash: 682c60ca4a0e801ec8e138a88124b86b88f39615
+ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "57558951"
 ---
-
 # <a name="net-samples-and-tutorials"></a>.NET 샘플 및 자습서
 
 .NET 설명서에는 .NET에 대해 설명하는 샘플 및 자습서 집합이 포함되어 있습니다. 이 항목에서는 .NET Core, ASP.NET Core 및 C# 샘플 및 자습서를 찾고, 보고, 다운로드하는 방법을 설명합니다. F# 프로그래밍 언어를 학습하기 위한 리소스는 [F# Foundation 사이트](https://fsharp.org/learn.html)에서 찾을 수 있습니다. 온라인 코드 편집기를 사용하여 C#을 살펴보는 데 관심이 있는 경우 [이 대화형 자습서](https://www.microsoft.com/net/learn/in-browser-tutorial/1)로 시작하고 [C# 대화형 자습서](../csharp/tutorials/intro-to-csharp/index.md)를 계속 진행하세요. 샘플 코드를 보고 다운로드 하는 방법에 대한 지침은 [샘플 보기 및 다운로드](#viewing-and-downloading-samples) 섹션을 참조하세요.

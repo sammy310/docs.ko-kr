@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrID70
 ms.assetid: 71f46756-f522-4814-aab4-492bf9924245
-ms.openlocfilehash: 43ec20382a2043868fb54e2f472cb316ebfbd623
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d904ee48ee187d073647b6e09af57264c8c318f6
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54717833"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58813953"
 ---
 # <a name="permission-denied-visual-basic"></a>사용 권한이 거부되었습니다(Visual Basic).
 쓰기 금지 되어 디스크에 쓸 수 또는 잠긴된 파일에 액세스 하도록 시도 했습니다.  
@@ -23,4 +23,5 @@ ms.locfileid: "54717833"
 3.  레지스트리에 액세스 하려면 사용자 권한에 포함이 유형의 레지스트리 액세스를 확인 합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [오류 형식](../../../visual-basic/programming-guide/language-features/error-types.md)

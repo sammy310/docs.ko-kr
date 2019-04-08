@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Visual Basic, LINQ features
 - LINQ [Visual Basic], features supporting LINQ
 ms.assetid: c821bb50-b6f6-4cf9-8aba-2717e465bd3a
-ms.openlocfilehash: e76fcb891e0b258d261208f7cb9173c49899ba11
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 155d5c36483accc12d066a5530fea20a563e1498
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56974265"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58814499"
 ---
 # <a name="visual-basic-features-that-support-linq"></a>LINQ를 지원하는 Visual Basic 기능
 이름을 [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] 쿼리 구문을 지원 하 고 다른 언어 구문이 도입 되면서 언어로 직접 Visual Basic의 기술을 나타냅니다. 사용 하 여 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)], 외부 데이터 원본에 대 한 쿼리는 새 언어를 배울 필요가 없습니다. Visual Basic을 사용 하 여 데이터 관계형 데이터베이스, XML 저장소 또는 개체에 대해 쿼리할 수 있습니다. 언어에 대 한 쿼리 기능이 통합이 컴파일 타임 구문 오류 및 형식 안전성 확인 수 있습니다. 이 통합은 또한 Visual Basic의 다양 한 기능의 다양 한 쿼리를 작성할 수 있는 새로운 대부분이 이미 알고 있다고 보장 합니다.  
@@ -94,6 +94,7 @@ ms.locfileid: "56974265"
  자세한 내용은 [람다 식](../../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)을 참조하세요.  
   
 ## <a name="see-also"></a>참고자료
+
 - [LINQ(Language-Integrated Query)(Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/index.md)
 - [Visual Basic에서 LINQ 시작](../../../../visual-basic/programming-guide/concepts/linq/getting-started-with-linq.md)
 - [LINQ 및 문자열 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)

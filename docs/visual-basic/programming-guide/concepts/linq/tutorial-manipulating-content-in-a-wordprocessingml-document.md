@@ -2,12 +2,12 @@
 title: '자습서: (Visual Basic) WordprocessingML 문서에서 내용 조작'
 ms.date: 07/20/2015
 ms.assetid: f8028ba8-2dd1-4425-930c-8cc23176ebbc
-ms.openlocfilehash: e36e76f03476bf0504590dfcae1c7dd8fa203312
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7b0a400a19dbe863490e5b2e34ec367e61a413a2
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54556274"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58834961"
 ---
 # <a name="tutorial-manipulating-content-in-a-wordprocessingml-document-visual-basic"></a>자습서: (Visual Basic) WordprocessingML 문서에서 내용 조작
 이 자습서에서는 함수 변환 방법과 LINQ to XML을 적용하여 XML 문서를 조작하는 방법을 보여 줍니다. Visual Basic 예제 쿼리 및 Microsoft Word에서 저장 된 Office Open XML WordprocessingML 문서에서 정보를 조작 합니다.  
@@ -30,5 +30,6 @@ ms.locfileid: "54556274"
 |[자세한 내용은 office Open XML WordprocessingML 문서 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/details-of-office-open-xml-wordprocessingml-documents.md)|Office Open XML WordprocessingML 문서에 대해 설명합니다.|  
   
 ## <a name="see-also"></a>참고자료
+
 - [(Visual Basic) XML의 순수 함수 변환](../../../../visual-basic/programming-guide/concepts/linq/pure-functional-transformations-of-xml.md)
 - [순수 함수 변환 (Visual Basic) 소개](../../../../visual-basic/programming-guide/concepts/linq/introduction-to-pure-functional-transformations.md)

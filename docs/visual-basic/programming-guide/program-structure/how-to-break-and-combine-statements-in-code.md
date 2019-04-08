@@ -21,12 +21,12 @@ helpviewer_keywords:
 - Visual Basic code, line continuation in
 - statements [Visual Basic], line breaks in
 ms.assetid: dea01dad-a8ac-484a-bb3a-8c45a1b1eccc
-ms.openlocfilehash: a43d09be53eb5a04d154e482f9388e2ca480118a
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 680084c39b90d4f664f48559fa21388ce192d999
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56967180"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58837743"
 ---
 # <a name="how-to-break-and-combine-statements-in-code-visual-basic"></a>방법: (Visual Basic) 코드에서 문 분리 및 결합
 코드를 작성할 때 코드 편집기에서 가로 스크롤을 볼 수 있는 긴 문을 시간에 만들 수 있습니다. 방식에 영향을 주지 않지만 코드 실행, 하기 어렵습니다에 누구나 모니터에 표시 된 대로 코드를 읽는 합니다. 이러한 경우 긴 문은 여러 줄으로 분리를 고려해 야 합니다.  
@@ -59,5 +59,6 @@ ms.locfileid: "56967180"
      [!code-vb[VbVbcnConventions#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnConventions/VB/Class1.vb#10)]  
   
 ## <a name="see-also"></a>참고자료
+
 - [프로그램 구조 및 코드 규칙](../../../visual-basic/programming-guide/program-structure/program-structure-and-code-conventions.md)
 - [문(C++)](../../../visual-basic/programming-guide/language-features/statements.md)

@@ -10,14 +10,14 @@ helpviewer_keywords:
 - operator >>
 - right shift operators [Visual Basic]
 ms.assetid: 054dc6a6-47d9-47ef-82da-cfa2b59fbf8f
-ms.openlocfilehash: 46bc87c653742c8469ffaff1decb9549a29feaeb
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 8803dc2e25edde756958a243d429dd30c5c78bcf
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56972081"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58816969"
 ---
-# <a name="-operator-visual-basic"></a>>> 연산자(Visual Basic)
+# <a name="-operator-visual-basic"></a>>> 연산자 (Visual Basic)
 비트 패턴에 산술 오른쪽 시프트를 수행합니다.  
   
 ## <a name="syntax"></a>구문  
@@ -87,6 +87,7 @@ result = pattern >> amount
 -   `negresult2` 이-1 (부호 비트 전파 됨 입니다).  
   
 ## <a name="see-also"></a>참고자료
+
 - [비트 시프트 연산자](../../../visual-basic/language-reference/operators/bit-shift-operators.md)
 - [할당 연산자](../../../visual-basic/language-reference/operators/assignment-operators.md)
 - [>>= 연산자](../../../visual-basic/language-reference/operators/right-shift-assignment-operator.md)

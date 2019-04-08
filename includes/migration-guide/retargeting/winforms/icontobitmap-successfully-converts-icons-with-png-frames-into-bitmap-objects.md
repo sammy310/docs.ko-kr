@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: 9c2a8eca3f4498906cf703ff3b8ffb7336ff7a1b
+ms.sourcegitcommit: 0aca6c5d166d7961a1e354c248495645b97a1dc5
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58761073"
+---
 ### <a name="icontobitmap-successfully-converts-icons-with-png-frames-into-bitmap-objects"></a>Icon.ToBitmap은 PNG 프레임이 있는 아이콘을 Bitmap 개체로 성공적으로 변환합니다.
 
 |   |   |

@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC31194
 ms.assetid: 03d50c31-addd-4c90-9c53-725b84f9782e
-ms.openlocfilehash: eb30d63e83452e75f353c44a9d0445c7dbb1013a
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: c8480c6fab2bff931950ebc21d0a8affe3c41c66
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55287510"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58827148"
 ---
 # <a name="value-of-type-type1-cannot-be-converted-to-type2"></a>'type1' 형식의 값을 'type2'(으)로 변환할 수 없습니다.
 'Type1' 형식의 값을 'type2'으로 변환할 수 없습니다. 'Value' 속성을 사용 하 여 첫 번째 요소의 문자열 값을 검색할 '\<parentElement >'입니다.  
@@ -26,6 +26,7 @@ ms.locfileid: "55287510"
 -   XML 리터럴의 `Value` 속성을 사용하여 해당 값을 `String`으로 참조합니다. `CType` 함수, 다른 형식 변환 함수 또는 <xref:System.Convert> 클래스를 사용하여 지정된 형식으로 값을 캐스팅합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Convert>
 - [형식 변환 함수](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
 - [XML 리터럴](../../../visual-basic/language-reference/xml-literals/index.md)

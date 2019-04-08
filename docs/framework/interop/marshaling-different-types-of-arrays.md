@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: c5ac9920-5b6e-4dc9-bf2d-1f6f8ad3b0bf
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 56ca8e6c077d41552f85b65ba5f6b755165ee11a
-ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
+ms.openlocfilehash: ef5c9acab6fd8fa852b619eeeee150eb33b69507
+ms.sourcegitcommit: 5c2176883dc3107445702724a7caa7ac2f6cb0d3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58654616"
+ms.lasthandoff: 04/03/2019
+ms.locfileid: "58890438"
 ---
 # <a name="marshaling-different-types-of-arrays"></a>여러 형식의 배열 마샬링
 배열은 동일한 형식의 요소를 하나 이상 포함하는 관리 코드의 참조 형식입니다. 배열은 참조 형식이지만 관리되지 않는 함수에 In 매개 변수로 전달됩니다. 이 동작은 관리되는 배열이 관리되는 개체에 전달되는 방식(In/Out 매개 변수로)과 일치하지 않습니다. 자세한 내용은 [복사 및 고정](copying-and-pinning.md)을 참조하세요.  
@@ -86,7 +86,7 @@ ms.locfileid: "58654616"
     int TestArrayOfStructs2 (MYPERSON* pPersonArray, int size);  
     ```  
   
- [PinvokeLib.dll](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/as6wyhwt(v=vs.100)) 은 앞에 나열된 함수 및 2개의 구조체 변수 **MYPOINT** 및 **MYPERSON**에 대한 구현을 포함하는 관리되지 않는 사용자 지정 라이브러리입니다. 구조체에는 다음과 같은 요소가 포함됩니다.  
+ [PinvokeLib.dll](marshaling-data-with-platform-invoke.md#pinvokelibdll) 은 앞에 나열된 함수 및 2개의 구조체 변수 **MYPOINT** 및 **MYPERSON**에 대한 구현을 포함하는 관리되지 않는 사용자 지정 라이브러리입니다. 구조체에는 다음과 같은 요소가 포함됩니다.  
   
 ```  
 typedef struct _MYPOINT  

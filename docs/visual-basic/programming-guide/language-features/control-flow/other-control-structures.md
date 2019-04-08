@@ -5,12 +5,12 @@ helpviewer_keywords:
 - statements [Visual Basic], control flow
 - control structures [Visual Basic]
 ms.assetid: 24b811f7-98ba-40ec-8dd3-4d528cfa4574
-ms.openlocfilehash: a383d0c95de5286cce722c05bd8888d5acffb173
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c42070ce2ea866e59e1b2e190f7c05e1ee7cc922
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54590002"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58819322"
 ---
 # <a name="other-control-structures-visual-basic"></a>기타 제어 구조(Visual Basic)
 Visual Basic에는 제어 구조 도움이 되는 리소스를 삭제 또는 개체 참조를 반복 해야 하는 횟수를 줄일 제공 합니다.  
@@ -22,6 +22,7 @@ Visual Basic에는 제어 구조 도움이 되는 리소스를 삭제 또는 개
  `With...End With` 생성 개체 참조를 한 번만 지정할 수 있습니다 다음 일련의 해당 멤버에 액세스 하는 문 실행 합니다. 이 코드를 단순화 하 고 Visual Basic 액세스 하는 각 문에 대 한 참조를 다시 설정할 필요가 없기 때문에 성능을 향상 시킬 수 있습니다. 자세한 내용은 참조 하세요. [사용 하 여는 중... 문을 사용 하 여 종료](../../../../visual-basic/language-reference/statements/with-end-with-statement.md)합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [제어 흐름](../../../../visual-basic/programming-guide/language-features/control-flow/index.md)
 - [판단 구조](../../../../visual-basic/programming-guide/language-features/control-flow/decision-structures.md)
 - [루프 구조](../../../../visual-basic/programming-guide/language-features/control-flow/loop-structures.md)

@@ -2,12 +2,12 @@
 title: Visual Studio (Visual Basic)에서 개체 유지
 ms.date: 07/20/2015
 ms.assetid: f1d0b562-e349-4dce-ab5f-c05108467030
-ms.openlocfilehash: 002c5470765b33d038ab0fd463fcc6ccfdf6f109
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 312545827702c2d01c50f2a92ace5a3b61494a33
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54690438"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58841583"
 ---
 # <a name="walkthrough-persisting-an-object-in-visual-studio-visual-basic"></a>연습: Visual Studio (Visual Basic)에서 개체 유지
 디자인 타임에 개체의 속성을 기본값으로 설정할 수 있지만, 런타임에 입력한 값은 개체가 소멸될 때 손실됩니다. serialization을 사용하면 인스턴스 간에 개체의 데이터를 유지할 수 있으므로, 다음에 개체를 인스턴스화할 때 값을 저장하고 검색할 수 있습니다.  
@@ -216,5 +216,6 @@ ms.locfileid: "54690438"
  이 시점에서 다시 애플리케이션을 빌드 및 실행할 수 있습니다. 처음에는 텍스트 상자에 기본값이 나타납니다. 값을 변경하고 네 번째 텍스트 상자에 이름을 입력합니다. 애플리케이션을 닫았다가 다시 엽니다. 이제 새 값이 텍스트 상자에 나타납니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [Serialization(Visual Basic)](../../../../visual-basic/programming-guide/concepts/serialization/index.md)
 - [Visual Basic 프로그래밍 가이드](../../../../visual-basic/programming-guide/index.md)

@@ -14,12 +14,12 @@ helpviewer_keywords:
 - procedure arguments [Visual Basic], in parentheses
 - arguments [Visual Basic], changing value
 ms.assetid: 77b4f2d2-1055-4c2f-a521-874d1db86946
-ms.openlocfilehash: 7bd78772b35e3f336f49c1d39b5f56a3a2076c30
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 497ae11b858b7d164ba3b5607ff2109254a154de
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56970287"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58842047"
 ---
 # <a name="how-to-force-an-argument-to-be-passed-by-value-visual-basic"></a>방법: (Visual Basic) 값으로 전달 될 인수가 설정
 프로시저 선언 전달 메커니즘을 결정 합니다. 매개 변수 선언 되 면 [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md), Visual Basic는 해당 인수가 참조로 전달 하려면 필요 합니다. 이렇게 하면 인수의 기반이 되는 호출 코드에서 프로그래밍 요소의 값을 변경 하는 절차입니다. 이러한 변경에 대 한 내부 요소를 보호 하려는 경우 재정의할 수 있습니다는 `ByRef` 인수 이름을 괄호로 묶어 전달 메커니즘 프로시저에서 호출 합니다. 이 괄호는 호출의 인수 목록을 묶는 괄호는 별개입니다.  
@@ -53,6 +53,7 @@ ms.locfileid: "56970287"
  호출 코드에서 인수를 기본 값을 변경 하는 절차를 허용할 위험할은 항상 있습니다. 원하는이 값이 변경 되 고 사용 하기 전에 유효성을 검사할 준비가 되어 있는지 확인 합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [절차](./index.md)
 - [프로시저 매개 변수 및 인수](./procedure-parameters-and-arguments.md)
 - [방법: 프로시저에 인수 전달](./how-to-pass-arguments-to-a-procedure.md)

@@ -17,12 +17,12 @@ helpviewer_keywords:
 - Operator statement [Visual Basic]
 - CType function [Visual Basic], Operator statement
 ms.assetid: b12ec4af-1ad7-4a17-865b-c5ee96320ae5
-ms.openlocfilehash: 44b0a2513f504c8fecec74868130463581b597af
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 184970d33aae4af135153f9d6f6755770bdf84f6
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56981701"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58818594"
 ---
 # <a name="operator-statement"></a>Operator Statement
 연산자 기호, 피연산자 및 클래스 또는 구조체에서 연산자 프로시저를 정의 하는 코드를 선언 합니다.  
@@ -171,6 +171,7 @@ End Operator
  [!code-vb[VbVbalrStatements#44](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#44)]  
   
 ## <a name="see-also"></a>참고자료
+
 - [IsFalse 연산자](../../../visual-basic/language-reference/operators/isfalse-operator.md)
 - [IsTrue 연산자](../../../visual-basic/language-reference/operators/istrue-operator.md)
 - [확장](../../../visual-basic/language-reference/modifiers/widening.md)

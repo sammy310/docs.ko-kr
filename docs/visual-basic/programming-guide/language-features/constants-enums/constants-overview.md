@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - constants [Visual Basic]
 ms.assetid: 29016fe8-78b3-4dc8-90b8-1cfec2fa8ac9
-ms.openlocfilehash: 34f3dee4edba58375c5c84b579e39a8a29ebc1bb
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2939110de77718baf32e2a0d8f1aa52dba997cf3
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54737691"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58841300"
 ---
 # <a name="constants-overview-visual-basic"></a>상수 개요(Visual Basic)
 상수는 숫자 또는 변경 되지 않는 문자열의 발생 하는 의미 있는 이름입니다. 상수 이름에서 알 수 있듯이 동일 하 게 유지에서 전체 응용 프로그램의 실행 하는 값을 저장 합니다. 크게 코드의 가독성을 향상 하 고 쉽게 상수를 사용 하 여 유지할 수 있습니다. 다시 나타나는 값을 포함 하는 코드에서 사용 하거나 기억 하거나 의미가 명확 하지 않은 어려운 특정 번호에 따라 달라 집니다.  
@@ -45,5 +45,6 @@ ms.locfileid: "54737691"
 |[Option Strict 문](../../../../visual-basic/language-reference/statements/option-strict-statement.md)|에 대해 설명 합니다 `Option Strict` 문 및 사용 합니다.|  
   
 ## <a name="see-also"></a>참고자료
+
 - [열거형 개요](../../../../visual-basic/programming-guide/language-features/constants-enums/enumerations-overview.md)
 - [방법: Visual Basic에서 배열 변수 초기화](../../../../visual-basic/programming-guide/language-features/arrays/how-to-initialize-an-array-variable.md)

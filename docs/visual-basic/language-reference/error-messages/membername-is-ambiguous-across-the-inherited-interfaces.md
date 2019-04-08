@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30685
 ms.assetid: 756add7a-23d5-4b4f-a48d-8297d6459c73
-ms.openlocfilehash: 1548c9894d476cc4b92d6581362d309e7b4d00d4
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 4415608bcfca63b43b3d9ebf17ce622ccd418775
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55264997"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58820859"
 ---
 # <a name="membername-is-ambiguous-across-the-inherited-interfaces-interfacename1-and-interfacename2"></a>'\<membername >' 상속 된 인터페이스에서 모호\<interfacename1 >' 및 '\<interfacename2 >'
 여러 인터페이스에서 동일한 이름의 두 개 이상의 멤버를 상속 하는 인터페이스입니다.  
@@ -47,4 +47,5 @@ ms.locfileid: "55264997"
     ```  
   
 ## <a name="see-also"></a>참고자료
+
 - [인터페이스](../../../visual-basic/programming-guide/language-features/interfaces/index.md)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - BC30420
 - Sub Main error message
 ms.assetid: a006d57d-4dd3-46a7-9026-ca9a31470da7
-ms.openlocfilehash: 4dc354c03f33cb5ac7784236a8124281179dadf4
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 880b3a53e445cc8523ba2cae050ac02114ee715e
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55287549"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58821051"
 ---
 # <a name="sub-main-was-not-found-in-name"></a>'Sub'에서 찾을 '\<이름 >'
 `Sub Main`이 누락되었거나 잘못된 위치가 지정되었습니다.  
@@ -27,5 +27,6 @@ ms.locfileid: "55287549"
 2.  프로젝트의 시작 개체의 위치를 지정 합니다 **시작 폼** 상자를 **프로젝트 디자이너**합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [Sub 문](../../../visual-basic/language-reference/statements/sub-statement.md)
 - [Visual Basic의 main 프로시저](../../../visual-basic/programming-guide/program-structure/main-procedure.md)

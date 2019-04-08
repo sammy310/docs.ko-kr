@@ -13,12 +13,12 @@ helpviewer_keywords:
 - parentheses [Visual Basic], complex expressions
 - numeric expressions
 ms.assetid: bd22340e-b5be-458b-8772-3916c02309a4
-ms.openlocfilehash: daaf75256b3449209b4e3c030cc6b54692c6a172
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8f5dd6c56b3e4576b9d798e0e5e10b2996f558dc
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54620431"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58841263"
 ---
 # <a name="efficient-combination-of-operators-visual-basic"></a>연산자의 효율적 결합(Visual Basic)
 복잡 한 식은 여러 다른 연산자를 포함할 수 있습니다. 다음은 이에 대한 예입니다.  
@@ -46,6 +46,7 @@ ms.locfileid: "54620431"
  앞의 예제에서 `z + 2` 먼저 계산된 된 다음 다른 괄호 식이 됩니다. 일반적으로 더하기 또는 곱하기 보다 높은 우선 순위에는 지 수가 고, 다른 식을 괄호로 묶여 있기 때문에이 예제의 마지막으로 평가 됩니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [Visual Basic의 산술 연산자](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/arithmetic-operators.md)
 - [Comparison Operators in Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md)
 - [Visual Basic의 논리 및 비트 연산자](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/logical-and-bitwise-operators.md)

@@ -15,12 +15,12 @@ helpviewer_keywords:
 - sealed classes [Visual Basic]
 - classes [Visual Basic], not inheritable
 ms.assetid: 5c4da7c9-9562-4653-a947-1972e992f9f9
-ms.openlocfilehash: 80f111c699de9c40960681812770b5007179da26
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 05adafaf26cab7f7ed00c51ee23fafbe02f2a408
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54699196"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58821792"
 ---
 # <a name="notinheritable-visual-basic"></a>NotInheritable(Visual Basic)
 클래스를 기본 클래스로 사용할 수 없음을 지정 합니다.  
@@ -33,6 +33,7 @@ ms.locfileid: "54699196"
  [Class 문](../../../visual-basic/language-reference/statements/class-statement.md)  
   
 ## <a name="see-also"></a>참고자료
+
 - [Inherits 문](../../../visual-basic/language-reference/statements/inherits-statement.md)
 - [MustInherit](../../../visual-basic/language-reference/modifiers/mustinherit.md)
-- [키워드](../../../visual-basic/language-reference/keywords/index.md)
+- [C++ 키워드](../../../visual-basic/language-reference/keywords/index.md)

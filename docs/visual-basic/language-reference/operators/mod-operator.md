@@ -12,12 +12,12 @@ helpviewer_keywords:
 - arithmetic operators [Visual Basic], Mod
 - math operators [Visual Basic]
 ms.assetid: 6ff7e40e-cec8-4c77-bff6-8ddd2791c25b
-ms.openlocfilehash: 6bb34eb810f6e2d0b0d631f5891e3e65aa0b170f
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: b127c50f3319d4fe7c4890fc3bffb295baa37466
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56981402"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58840174"
 ---
 # <a name="mod-operator-visual-basic"></a>Mod 연산자 (Visual Basic)
 두 숫자를 나누고 나머지만 반환 합니다.  
@@ -45,7 +45,7 @@ number1 Mod number2
 > [!NOTE]
 > 간에 차이가 *나머지* 하 고 *모듈러스* 수학에서 음수 값에 대해 다른 결과 사용 하 여 합니다. 합니다 `Mod` .NET Framework, Visual Basic의 연산자 `op_Modulus` 연산자 및 내부 [rem](<xref:System.Reflection.Emit.OpCodes.Rem>) 나머지 작업을 모두 수행 하는 IL 명령입니다.
 
-결과 `Mod` 는 피제수의 부호를 유지 하는 작업 `number1`, 이므로 양수 또는 음수일 수 있습니다. 결과 항상 범위 (-`number2`, `number2`), 배타적입니다. 예를 들면,
+결과 `Mod` 는 피제수의 부호를 유지 하는 작업 `number1`, 이므로 양수 또는 음수일 수 있습니다. 결과 항상 범위 (-`number2`, `number2`), 배타적입니다. 예를 들어:
 
 ```vb
 Public Module Example
@@ -101,6 +101,7 @@ End Module
  [!code-vb[VbVbalrOperators#32](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#32)]  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:Microsoft.VisualBasic.Conversion.Int%2A>
 - <xref:Microsoft.VisualBasic.Conversion.Fix%2A>
 - [산술 연산자](../../../visual-basic/language-reference/operators/arithmetic-operators.md)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - examples [Visual Basic], string conversion
 - arrays [Visual Basic], byte arrays
 ms.assetid: f477d35c-a3fc-4a30-b1d4-cd0d353aae1d
-ms.openlocfilehash: a96664f308a711d440f063627665283c5b7fc264
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 2fa0b86459e6191d3bd5f884d92b071218b4063a
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56967505"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58823274"
 ---
 # <a name="how-to-convert-strings-into-an-array-of-bytes-in-visual-basic"></a>방법: Visual Basic에서 바이트 배열을 문자열 변환
 이 항목에는 바이트 배열을 문자열로 변환 하는 방법을 보여 줍니다.  
@@ -40,6 +40,7 @@ ms.locfileid: "56967505"
 -   <xref:System.Text.Encoding.UTF8%2A?displayProperty=nameWithType>: UTF-8 형식에 대한 인코딩을 가져옵니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Text.Encoding?displayProperty=nameWithType>
 - <xref:System.Text.Encoding.GetBytes%2A>
 - [방법: Visual Basic의 문자열 바이트 배열로 변환](../../../../visual-basic/programming-guide/language-features/strings/how-to-convert-an-array-of-bytes-into-a-string.md)

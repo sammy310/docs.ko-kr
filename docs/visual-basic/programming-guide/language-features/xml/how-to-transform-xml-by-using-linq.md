@@ -5,12 +5,12 @@ helpviewer_keywords:
 - XML [Visual Basic], transforming
 - LINQ to XML [Visual Basic], transforming XML
 ms.assetid: 815687f4-0bc2-4c0b-adc6-d78744aa356f
-ms.openlocfilehash: 628af13a4cdea41ade943b69e326ec2d9abcbf1c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0d07c47e64b7eaea80155eabbc50bc2bae0a889c
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54536349"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58834264"
 ---
 # <a name="how-to-transform-xml-by-using-linq-visual-basic"></a>방법: LINQ (Visual Basic)를 사용 하 여 XML 변환
 [XML 리터럴](../../../../visual-basic/language-reference/xml-literals/index.md) 쉽게 한 소스에서 XML을 읽고 새 XML 형식으로 변환 합니다. 를 변환 하려면 콘텐츠를 검색 하는 LINQ 쿼리를 활용 하거나 새 XML 형식으로 기존 문서에서 콘텐츠를 변경할 수 있습니다.  
@@ -156,6 +156,7 @@ ms.locfileid: "54536349"
     ```  
   
 ## <a name="see-also"></a>참고자료
+
 - [XML 리터럴](../../../../visual-basic/language-reference/xml-literals/index.md)
 - [Visual Basic에서 XML 조작](../../../../visual-basic/programming-guide/language-features/xml/manipulating-xml.md)
 - [XML](../../../../visual-basic/programming-guide/language-features/xml/index.md)

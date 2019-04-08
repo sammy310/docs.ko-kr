@@ -2,14 +2,14 @@
 title: '샘플 XML 파일: 3에서 여러 구매 주문'
 ms.date: 07/20/2015
 ms.assetid: 03f754c6-89f7-4143-8456-4963044be7e5
-ms.openlocfilehash: 4ef1e715bf9b1fd8e417f189655a1badc6d0df2d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4f7a25b9b56c5d37d45ee46928f3d4ceb3607c35
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54616175"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58829943"
 ---
-# <a name="sample-xml-file-multiple-purchase-orders-in-a-namespace"></a>샘플 XML 파일: Namespace에서 여러 구매 주문
+# <a name="sample-xml-file-multiple-purchase-orders-in-a-namespace"></a>샘플 XML 파일: 네임스페이스에서 여러 구매 주문
 다음 XML 파일은 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 설명서의 다양한 예제에서 사용됩니다. 이 파일에는 몇 가지 구매 주문이 포함되어 있습니다. XML은 네임스페이스에 있습니다.  
   
 ## <a name="purchaseordersinnamespacexml"></a>PurchaseOrdersInNamespace.xml  
@@ -110,4 +110,5 @@ ms.locfileid: "54616175"
 ```  
   
 ## <a name="see-also"></a>참고자료
+
 - [샘플 XML 문서(LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)

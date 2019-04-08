@@ -1,15 +1,15 @@
 ---
-title: '샘플 XML 파일: Books (LINQ to XML)'
+title: '샘플 XML 파일: Books(LINQ to XML)'
 ms.date: 07/20/2015
 ms.assetid: 27ca5847-2289-40c0-8331-ede67ec59d1c
-ms.openlocfilehash: 3f99541f9c0aaafe25fe1fd09510b93c8e815eaf
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d16a67ba95f7fa9f940c12c61f9ab128abd55a57
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54525757"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58817086"
 ---
-# <a name="sample-xml-file-books-linq-to-xml"></a>샘플 XML 파일: Books (LINQ to XML)
+# <a name="sample-xml-file-books-linq-to-xml"></a>샘플 XML 파일: Books(LINQ to XML)
 다음 XML 파일은 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 설명서의 다양한 예제에서 사용됩니다. 이 파일에는 책에 대한 정보가 포함되어 있습니다.  
   
 ## <a name="booksxml"></a>books.xml  
@@ -40,4 +40,5 @@ ms.locfileid: "54525757"
 ```  
   
 ## <a name="see-also"></a>참고자료
+
 - [샘플 XML 문서(LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)

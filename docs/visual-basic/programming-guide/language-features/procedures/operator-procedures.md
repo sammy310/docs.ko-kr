@@ -11,12 +11,12 @@ helpviewer_keywords:
 - operator overloading
 - operator procedures
 ms.assetid: 8c513d38-246b-4fb7-8b75-29e1364e555b
-ms.openlocfilehash: fe08c855e4dd0adca68d48c3b32cb399033a9d46
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: e6e65b1a75d7a80caff3e7cbacdb9dd706e46cdf
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56974928"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58815572"
 ---
 # <a name="operator-procedures-visual-basic"></a>연산자 프로시저(Visual Basic)
 연산자 프로시저는 일련의 표준 연산자의 동작을 정의 하는 Visual Basic 문 (같은 `*`, `<>`, 또는 `And`) 클래스 또는 구조체 정의에 있습니다. 또한이 호출 됩니다 *연산자 오버 로드*합니다.  
@@ -81,6 +81,7 @@ ms.locfileid: "56974928"
   
   
 ## <a name="see-also"></a>참고자료
+
 - [절차](./index.md)
 - [Sub 프로시저](./sub-procedures.md)
 - [Function 프로시저](./function-procedures.md)

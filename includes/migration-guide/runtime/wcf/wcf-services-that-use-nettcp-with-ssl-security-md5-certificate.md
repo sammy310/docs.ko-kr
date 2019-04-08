@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: ae3766e2045b5834fbf6ea20415942413b1590c0
+ms.sourcegitcommit: 0aca6c5d166d7961a1e354c248495645b97a1dc5
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58761413"
+---
 ### <a name="wcf-services-that-use-nettcp-with-ssl-security-and-md5-certificate-authentication"></a>SSL 보안 및 MD5 인증서 인증과 함께 NETTCP를 사용하는 WCF 서비스
 
 |   |   |

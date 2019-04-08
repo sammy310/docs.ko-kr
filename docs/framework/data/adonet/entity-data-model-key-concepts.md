@@ -2,12 +2,12 @@
 title: 엔터티 데이터 모델의 주요 개념
 ms.date: 03/30/2017
 ms.assetid: c635a16d-6674-45aa-9344-dcb7df992bab
-ms.openlocfilehash: 0a79143f8927a8368eaba1224c27f453ca81bdf7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: bcfc9cbb82a23dcb4d33ca8a838a49eac7180111
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54574328"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58825666"
 ---
 # <a name="entity-data-model-key-concepts"></a>엔터티 데이터 모델의 주요 개념
 (EDM (엔터티 데이터 모델) 세 가지 주요 개념을 사용 하 여 데이터의 구조를 설명: *엔터티 형식*를 *연결 형식*, 및 *속성*합니다. 이는 모든 EDM 구현의 데이터 구조 설명에 가장 중요한 개념입니다.  
@@ -32,7 +32,7 @@ ms.locfileid: "54574328"
 ## <a name="representations-of-a-conceptual-model"></a>개념적 모델의 표현  
  A *개념적 모델* 엔터티 및 관계로 일부 데이터 구조의 특정 표현입니다. 개념적 모델을 나타내는 한 가지 방법은 다이어그램을 사용하는 것입니다. 다음 다이어그램에서는 엔터티 형식 세 개(`Book`, `Publisher` 및 `Author`)와 연결 두 개(`PublishedBy` 및 `WrittenBy`)가 있는 개념적 모델을 나타냅니다.  
   
- ![탐색 속성을 사용 하 여 모델](../../../../docs/framework/data/adonet/media/modelwithnavprops.gif "ModelWithNavProps")  
+ ![세 가지 엔터티 형식을 사용 하 여 개념적 모델을 보여 주는 다이어그램입니다.](./media/entity-data-model-key-concepts/conceptual-model-entity-types-associations.gif)  
   
  그러나 이 표현은 모델에 대한 일부 세부 정보의 표시와 관련하여 몇 가지 단점이 있습니다. 예를 들어, 속성 형식과 엔터티 집합 정보가 다이어그램에 표시되지 않습니다. DSL(Domain-Specific Language)을 사용하면 개념적 모델의 세부 정보를 보다 명확하게 표시할 수 있습니다. 합니다 [ADO.NET Entity Framework](../../../../docs/framework/data/adonet/ef/index.md) 이라는 XML 기반 DSL을 사용 하 여 *개념 스키마 정의 언어* ([CSDL](../../../../docs/framework/data/adonet/ef/language-reference/csdl-specification.md)) 개념적 모델을 정의 합니다. 다음은 위의 다이어그램에 표시된 개념적 모델의 CSDL 정의입니다.  
   

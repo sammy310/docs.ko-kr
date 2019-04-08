@@ -2,12 +2,12 @@
 title: '방법: (Visual Basic) 파일에서 XML을 로드 합니다.'
 ms.date: 07/20/2015
 ms.assetid: e2d337ad-8ac8-4671-b694-30e5ca1413b7
-ms.openlocfilehash: 9ca19868629c89c10a8aca8f88860115a9efe7bc
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b4f1f9abfa33b76e702b51221715da80c3f66421
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54494667"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58814964"
 ---
 # <a name="how-to-load-xml-from-a-file-visual-basic"></a>방법: (Visual Basic) 파일에서 XML을 로드 합니다.
 이 항목에서는 <xref:System.Xml.Linq.XElement.Load%2A?displayProperty=nameWithType> 메서드를 사용하여 URI에서 XML을 로드하는 방법을 보여 줍니다.  
@@ -15,7 +15,7 @@ ms.locfileid: "54494667"
 ## <a name="example"></a>예제  
  다음 예제에서는 파일에서 XML 문서를 로드하는 방법을 보여 줍니다. 다음 예제에서는 books.xml을 로드하고 XML 트리를 콘솔에 출력합니다.  
   
- 이 예제에서는 XML 문서로 을 사용합니다. [샘플 XML 파일: Books (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-books-linq-to-xml.md)합니다.  
+ 이 예제에서는 XML 문서로을 사용합니다. [샘플 XML 파일: Books(LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-books-linq-to-xml.md).  
   
 ```vb  
 Dim booksFromFile As XElement = XElement.Load("books.xml")  
@@ -49,4 +49,5 @@ Console.WriteLine(booksFromFile)
 ```  
   
 ## <a name="see-also"></a>참고자료
+
 - [(Visual Basic) XML 구문 분석](../../../../visual-basic/programming-guide/concepts/linq/parsing-xml.md)

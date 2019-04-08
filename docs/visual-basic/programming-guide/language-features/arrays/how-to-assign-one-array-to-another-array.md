@@ -6,12 +6,12 @@ helpviewer_keywords:
 - arrays [Visual Basic], assigning
 - arrays [Visual Basic], covariance
 ms.assetid: 1ae89ea5-f292-4282-bcfc-e9b06b37fbd5
-ms.openlocfilehash: f2617d270caf5ed4ade68934486fee6afb6c413f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 834dad07ec1f4116aca72a184ccffc664d0a42ed
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54572723"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58835286"
 ---
 # <a name="how-to-assign-one-array-to-another-array-visual-basic"></a>방법: 한 배열을 다른 배열 (Visual Basic) 할당
 배열 개체 이기 때문에 다른 개체 형식 처럼 대입 문에서 사용할 수 있습니다. 배열 변수 배열 요소 및 차수 및 길이 정보를 구성 하는 데이터 포인터를 보유 하 고 할당만이 포인터를 복사 합니다.  
@@ -43,6 +43,7 @@ ms.locfileid: "54572723"
  컴파일러 오류 위의 규칙 위반 하면 예를 들어 데이터 형식이 호환 되지 않는 경우 또는 순위 같지 보고 합니다. 오류 처리를 할당 하기 전에 배열 호환 되는지 확인 하기 위해 코드에 추가할 수 있습니다. 사용할 수도 있습니다는 [TryCast 연산자](../../../../visual-basic/language-reference/operators/trycast-operator.md) 키워드 예외가 throw 되지 않게 하려는 경우.  
   
 ## <a name="see-also"></a>참고자료
+
 - [배열](../../../../visual-basic/programming-guide/language-features/arrays/index.md)
 - [배열 문제 해결](../../../../visual-basic/programming-guide/language-features/arrays/troubleshooting-arrays.md)
 - [Enum 문](../../../../visual-basic/language-reference/statements/enum-statement.md)

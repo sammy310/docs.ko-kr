@@ -2,12 +2,18 @@
 title: Visual Basic의 프로시저
 ms.date: 04/28/2017
 helpviewer_keywords:
-  - 'procedures [Visual Basic], structured code'
-  - 'Visual Basic code, procedures'
-  - 'procedures [Visual Basic], types of'
-  - 'structured code [Visual Basic], procedures'
-  - procedures
+- procedures [Visual Basic], structured code
+- Visual Basic code, procedures
+- procedures [Visual Basic], types of
+- structured code [Visual Basic], procedures
+- procedures
 ms.assetid: 9effbcf0-80a0-4d1a-98f4-2c6920592766
+ms.openlocfilehash: dfd366cd823931962af878de59225ea183fff7c0
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58814928"
 ---
 # <a name="procedures-in-visual-basic"></a>Visual Basic의 프로시저
 A *프로시저* 선언문으로 묶은 Visual Basic 문 블록입니다 (`Function`, `Sub`, `Operator`, `Get`, `Set`) 일치 하는 `End` 선언 합니다. Visual Basic의 모든 실행 문은 프로시저 내에 있어야 합니다.  
@@ -56,6 +62,7 @@ A *프로시저* 선언문으로 묶은 Visual Basic 문 블록입니다 (`Funct
 -   한 프로그램에서 사용하기 위해 프로시저를 개발한 후, 거의 또는 전혀 수정하지 않고 종종 다른 프로그램에서 사용할 수 있습니다. 이를 통해 코드 중복을 방지할 수 있습니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [방법: 프로시저 만들기](./how-to-create-a-procedure.md)
 - [Sub 프로시저](./sub-procedures.md)
 - [Function 프로시저](./function-procedures.md)

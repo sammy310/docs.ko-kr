@@ -2,12 +2,12 @@
 title: '방법: 식 트리 (Visual Basic)를 실행 합니다.'
 ms.date: 07/20/2015
 ms.assetid: 9dfb5ab3-f48f-417e-975f-f8f6f1cdc18d
-ms.openlocfilehash: fde681905cded0e4043f52c5f2a29cee74b91209
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: cccb0b301e1da6d82c616d56604ad46dfde83e2a
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54729355"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58837522"
 ---
 # <a name="how-to-execute-expression-trees-visual-basic"></a>방법: 식 트리 (Visual Basic)를 실행 합니다.
 이 항목에서는 식 트리를 실행하는 방법을 보여 줍니다. 식 트리를 실행할 때 값이 반환될 수 있거나, 메서드 호출 등의 작업만 수행할 수도 있습니다.  
@@ -49,5 +49,6 @@ MsgBox(result)
 -   System.Linq.Expressions 네임스페이스를 포함합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [식 트리(Visual Basic)](../../../../visual-basic/programming-guide/concepts/expression-trees/index.md)
 - [방법: 수정 식 트리 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/expression-trees/how-to-modify-expression-trees.md)

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - globalization [WPF], about globalization
 - localization [WPF], about localization
 ms.assetid: 56e5a5c8-6c96-4d19-b8e1-a5be1dc564af
-ms.openlocfilehash: 279fe008c8624ff2209f5e08c3c9f9713ad201cd
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: c97ae4f277395a75fb7522ffb74061001c10e07d
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58412034"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58819582"
 ---
 # <a name="wpf-globalization-and-localization-overview"></a>WPF 전역화 및 지역화 개요
 
@@ -94,9 +94,9 @@ ms.locfileid: "58412034"
   
  다음 그래픽은 BAML 양식의 XAML을 기반으로 하는 일반적인 지역화 워크플로를 보여 줍니다. 이 다이어그램 개발자 응용 프로그램을 영어로 작성 하는 것으로 가정 합니다. 개발자가 WPF 애플리케이션을 만들고 전역화합니다. 프로젝트 파일에서 개발자 설정 `<UICulture>en-US</UICulture>` , 빌드 시 언어 중립적 주 어셈블리의 위성을 사용 하 여 생성 되도록 합니다. resources.dll 모든 지역화 가능 리소스를 포함 합니다. 또는 WPF 지역화 API가 주 어셈블리에서의 추출을 지원하므로 주 어셈블리에서 소스 언어를 유지할 수 있습니다. 빌드 프로세스 후 XAML이 BAML로 컴파일됩니다. 문화권에 중립적인 MyDialog.exe.resources.dll이 영어권 고객에게 제공됩니다.  
   
- ![지역화 워크플로](./media/localizationworkflow.png "LocalizationWorkflow")  
+ ![지역화 워크플로 보여 주는 다이어그램입니다.](./media/wpf-globalization-and-localization-overview/localization-workflow.png)  
   
- ![지역화되지 않은 워크플로](./media/localizationworkflow2.png "LocalizationWorkflow2")  
+ ![지역화 되지 않은 워크플로 보여 주는 다이어그램입니다.](./media/wpf-globalization-and-localization-overview/unlocalized-workflow.png)  
   
 ## <a name="examples-of-wpf-localization"></a>WPF 지역화 예제
 
@@ -108,11 +108,11 @@ ms.locfileid: "58412034"
   
  **영어:**  
   
- ![실행 대화 상자](./media/rundialogenglish.PNG "RunDialogEnglish")  
+ ![영어 실행 대화 상자를 보여주는 스크린샷.](./media/wpf-globalization-and-localization-overview/run-dialog-box-english.png)  
   
  **독일어:**  
   
- ![독일어 실행 대화 상자](./media/rundialoggerman.PNG "RunDialogGerman")  
+ ![독일어 실행 대화 상자를 보여주는 스크린샷.](./media/wpf-globalization-and-localization-overview/run-dialog-box-german.png)  
   
  **전역 실행 대화 상자 디자인**  
   
@@ -226,13 +226,13 @@ ms.locfileid: "58412034"
   
  **영어:**  
   
- ![영어 페이지](./media/englishhomepage.jpg "EnglishHomepage")  
+ ![영어 홈 페이지를 보여주는 스크린샷.](./media/wpf-globalization-and-localization-overview/english-home-page-sample.jpg)  
   
  **아랍어:**  
   
- ![아랍어 페이지](./media/arabichomepage.jpg "ArabicHomepage")  
+ ![아랍어 홈페이지를 보여주는 스크린샷.](./media/wpf-globalization-and-localization-overview/arabic-home-page-sample.jpg)  
   
-### <a name="designing-a-global-microsoft-homepage"></a>글로벌 Microsoft 홈페이지 디자인  
+### <a name="designing-a-global-microsoft-home-page"></a>한 글로벌 Microsoft 홈페이지 디자인  
  이 Microsoft 사우디아라비아 웹 사이트 샘플에서는 RightToLeft 언어를 위해 제공되는 전역화 기능을 보여 줍니다. 히브리어 및 아랍어 같은 언어에는 오른쪽에서 왼쪽 읽기 순서를 따라서 레이아웃 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 배치 종종 해야 영어 등의 왼쪽에서 오른쪽 언어로 것 보다 상당히 다릅니다. 왼쪽에서 오른쪽으로 읽는 언어를 오른쪽에서 왼쪽으로 읽는 언어로 또는 그 반대로 지역화하는 작업은 꽤 까다로울 수 있습니다. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]는 이러한 지역화를 훨씬 쉽게 수행할 수 있도록 디자인되었습니다.  
   
  **FlowDirection**  
@@ -247,11 +247,11 @@ ms.locfileid: "58412034"
   
  **FlowDirection="LeftToRight"**  
   
- ![왼쪽에서 오른쪽으로 흐름](./media/lefttoright.PNG "LeftToRight")  
+ ![왼쪽에서 오른쪽으로 그라데이션 흐름을 보여주는 스크린샷.](./media/wpf-globalization-and-localization-overview/gradient-flow-left-right.png)  
   
  **FlowDirection="RightToLeft"**  
   
- ![오른쪽에서 왼쪽으로 흐름](./media/righttoleft.PNG "RightToLeft")  
+ ![오른쪽에서 왼쪽으로 그라데이션 흐름을 보여주는 스크린샷.](./media/wpf-globalization-and-localization-overview/gradient-flow-right-left.png)  
   
  **패널 및 컨트롤에 고정 크기 사용 피하기**  
   

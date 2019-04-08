@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - operators [Visual Basic]
 ms.assetid: d1fb027c-872b-4ccc-afc8-2380e3f65d4a
-ms.openlocfilehash: 3aa2b7d1d7750de255121b4ddb81c6f9d3cef346
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7e65e8e015c88c95c527e148aca6ecb2641afa61
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54672372"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58816228"
 ---
 # <a name="operators-listed-by-functionality-visual-basic"></a>기능별 연산자 목록(Visual Basic)
 아래에 나열 된 범주 중 하나를 참조 하거나 도움말 목차 Visual Basic 연산자의 사전순 목록을 보려면의이 부분을 엽니다.  
@@ -27,5 +27,6 @@ ms.locfileid: "54672372"
 |[기타 연산자](../../../visual-basic/language-reference/operators/miscellaneous-operators.md)|이러한 연산자는 기타 작업을 수행합니다.|  
   
 ## <a name="see-also"></a>참고자료
+
 - [연산자 및 식](../../../visual-basic/programming-guide/language-features/operators-and-expressions/index.md)
 - [Visual Basic에서의 연산자 우선 순위](../../../visual-basic/language-reference/operators/operator-precedence.md)

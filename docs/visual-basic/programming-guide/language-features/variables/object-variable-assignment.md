@@ -13,12 +13,12 @@ helpviewer_keywords:
 - assignment statements [Visual Basic], object variable assignment
 - Me keyword [Visual Basic], as object variable
 ms.assetid: 3706811d-fd40-44fe-8727-d692e8e55d6d
-ms.openlocfilehash: a2c476280009a617573fb7989b2184cd9baa6a8a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: dff1b9bb9e87f827663786cac3f33531db41b2c1
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54660686"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58840278"
 ---
 # <a name="object-variable-assignment-visual-basic"></a>개체 변수 할당(Visual Basic)
 일반적인 대입문을를 사용 하 여 개체를 개체 변수에 할당 합니다. 개체 식을 할당할 수 있습니다 또는 [Nothing](../../../../visual-basic/language-reference/nothing.md) 키워드, 다음 예제와 같이 보여 줍니다.  
@@ -76,6 +76,7 @@ addStandardText(Me)
 ```  
   
 ## <a name="see-also"></a>참고자료
+
 - [개체 변수](../../../../visual-basic/programming-guide/language-features/variables/object-variables.md)
 - [개체 변수 선언](../../../../visual-basic/programming-guide/language-features/variables/object-variable-declaration.md)
 - [개체 변수 값](../../../../visual-basic/programming-guide/language-features/variables/object-variable-values.md)

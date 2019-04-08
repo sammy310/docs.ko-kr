@@ -10,12 +10,12 @@ helpviewer_keywords:
 - strings [Visual Basic], concatenating
 - sum operator [Visual Basic]
 ms.assetid: 5694778f-0a2c-4539-8009-f66f318fb46d
-ms.openlocfilehash: 448ca9d52d820029464b75a616dc032a7cc41f59
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 4fc8ce96caea436b63fe346139e27ec8dd048f10
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56979648"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58814109"
 ---
 # <a name="-operator-visual-basic"></a>+ 연산자(Visual Basic)
 두 숫자를 추가 하거나 숫자 식의 양수 값을 반환 합니다. 두 문자열 식을 연결할도 사용할 수 있습니다.  
@@ -109,6 +109,7 @@ expression1 + expression2
  모호성을 제거 하려면 사용 해야 합니다 `&` 연산자 대신 `+` 연결 합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [& 연산자](../../../visual-basic/language-reference/operators/concatenation-operator.md)
 - [연결 연산자](../../../visual-basic/language-reference/operators/concatenation-operators.md)
 - [산술 연산자](../../../visual-basic/language-reference/operators/arithmetic-operators.md)

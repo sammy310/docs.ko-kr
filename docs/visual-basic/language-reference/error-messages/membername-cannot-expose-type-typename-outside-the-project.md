@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30909
 ms.assetid: ffa7395d-e182-4087-8ce8-079810fdae54
-ms.openlocfilehash: 03767501488a395073f925e27adea439751c0de6
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 16f579a05236ba8977a071cb08068be8e98799f8
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55265066"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58818346"
 ---
 # <a name="membername-cannot-expose-type-typename-outside-the-project-through-containertype-containertypename"></a>'\<membername >' 형식을 노출할 수 없습니다 '\<typename >'를 통해 프로젝트 외부 \<containertype > '\<containertypename >'
 변수, 프로시저 매개 변수 또는 함수 반환 해당 컨테이너 외부에 노출 됩니다 있지만 컨테이너 외부 하지 노출 해야 하는 형식으로 선언 되어 있습니다.  
@@ -36,4 +36,5 @@ End Class
 -   변수, 프로시저 매개 변수 또는 함수에 대 한 액세스 수준을 변경 하는 최소 제한적으로 해당 데이터 형식의 액세스 수준을 돌아갑니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [Visual Basic의 액세스 수준](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)

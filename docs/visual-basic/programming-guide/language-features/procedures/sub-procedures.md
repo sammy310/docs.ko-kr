@@ -11,12 +11,12 @@ helpviewer_keywords:
 - procedures [Visual Basic], Sub
 - syntax [Visual Basic], Sub procedures
 ms.assetid: 6a0a4958-ed0a-4d3d-8d31-0772c82bda58
-ms.openlocfilehash: 646d7d217891dc8ea5b78f7ce30fce19fab08316
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: b70594e002bbf08f0890586e78df901ccb26c7ce
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56977580"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58843112"
 ---
 # <a name="sub-procedures-visual-basic"></a>Sub 프로시저(Visual Basic)
 A `Sub` 절차는 일련의 Visual Basic 문으로 둘러싸인 합니다 `Sub` 및 `End Sub` 문. `Sub` 프로시저는 작업을 수행한 다음 호출 코드에 제어를 반환 하지만 호출 코드에 값을 반환 하지는 않습니다.  
@@ -73,6 +73,7 @@ A `Sub` 절차는 일련의 Visual Basic 문으로 둘러싸인 합니다 `Sub` 
  [!code-vb[VbVbcnProcedures#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#3)]  
   
 ## <a name="see-also"></a>참고자료
+
 - [절차](./index.md)
 - [Function 프로시저](./function-procedures.md)
 - [속성 프로시저](./property-procedures.md)

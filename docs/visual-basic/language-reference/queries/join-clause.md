@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Join statement [Visual Basic]
 - Join clause [Visual Basic]
 ms.assetid: 6dd37936-b27c-4e00-98ad-154b23f4de64
-ms.openlocfilehash: 1a2ec42adb4c41c33cb9e1c09822795c81e3a728
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 21432b95b30ae38ac2cbc9e55b5a3066f0bef665
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56971301"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58825848"
 ---
 # <a name="join-clause-visual-basic"></a>Join 절(Visual Basic)
 두 컬렉션을 단일 컬렉션으로 결합합니다. 조인 연산은 일치 하는 키 기준으로 하며 사용 하 여 `Equals` 연산자입니다.  
@@ -88,6 +88,7 @@ On key1 Equals key2 [ And key3 Equals key4 [... ]
  `explorer (2424), File Explorer, Priority = 8`  
   
 ## <a name="see-also"></a>참고자료
+
 - [Visual Basic의 LINQ 소개](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
 - [쿼리](../../../visual-basic/language-reference/queries/index.md)
 - [Select 절](../../../visual-basic/language-reference/queries/select-clause.md)

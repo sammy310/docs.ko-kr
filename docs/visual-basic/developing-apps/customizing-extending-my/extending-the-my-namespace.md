@@ -8,12 +8,12 @@ helpviewer_keywords:
 - My namespace
 - My namespace [Visual Basic], extending
 ms.assetid: 808e8617-b01c-4135-8b21-babe87389e8e
-ms.openlocfilehash: 843ea95cded81aa7870f8a7bef20df586c4085a6
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 4d7bb6eef398746a4bd2dc4dbf3d526da1c1e0f1
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57361202"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58814162"
 ---
 # <a name="extending-the-my-namespace-in-visual-basic"></a>Visual Basic에서 My 네임스페이스 확장
 `My` Visual Basic의 네임 스페이스의.NET Framework의 강력한 쉽게 활용할 수 있도록 하는 메서드와 속성을 노출 합니다. `My` 네임 스페이스 코드 한 줄으로 어려운 작업이 줄어들 일반적인 프로그래밍 문제를 단순화 합니다. 또한를 `My` 의 동작을 사용자 지정할 수 있도록 네임 스페이스는 완벽 한 확장성 `My` 특정 응용 프로그램 요구에 맞게 해당 계층에 새 서비스를 추가 합니다. 이 항목에서는의 기존 멤버를 사용자 지정 하는 방법을 `My` 네임 스페이스 및 사용자 고유의 사용자 지정 클래스를 추가 하는 방법의 `My` 네임 스페이스입니다.  
@@ -101,6 +101,7 @@ ms.locfileid: "57361202"
  배포 하는 방법에 대 한 자세한 내용은 `My` 네임 스페이스 확장을 참조 하세요 [패키징 및 배포 사용자 지정 내 확장](../../../visual-basic/developing-apps/customizing-extending-my/packaging-and-deploying-custom-my-extensions.md)합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [사용자 지정 My 확장명 패키징 및 배포](../../../visual-basic/developing-apps/customizing-extending-my/packaging-and-deploying-custom-my-extensions.md)
 - [Visual Basic 애플리케이션 모델 확장](../../../visual-basic/developing-apps/customizing-extending-my/extending-the-visual-basic-application-model.md)
 - [My에 사용할 수 있는 개체 사용자 지정](../../../visual-basic/developing-apps/customizing-extending-my/customizing-which-objects-are-available-in-my.md)

@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrID54
 ms.assetid: 74891e96-884b-4c8d-872d-cd11ae272372
-ms.openlocfilehash: 1d85f49ce0aed44dea12c9ba16135425e6e2e431
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d3d0ebd003f178567ec9e9b19d6baccb8bc15f60
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54565750"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58819985"
 ---
 # <a name="bad-file-mode"></a>파일 모드가 잘못되었습니다.
 파일 콘텐츠를 조작에 사용 된 문이 파일이 열린 모드에 적합 해야 합니다. 이 오류가 발생하는 원인은 다음과 같습니다.  
@@ -35,5 +35,6 @@ ms.locfileid: "54565750"
 -   `My.Computer.FileSystem` 개체에서 사용할 수 있는 기능을 사용합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:Microsoft.VisualBasic.FileSystem>
-- [문제 해결: 읽기 및 텍스트 파일에 쓰기](../../../visual-basic/developing-apps/programming/drives-directories-files/troubleshooting-reading-from-and-writing-to-text-files.md)
+- [문제 해결: 텍스트 파일 읽기 및 쓰기](../../../visual-basic/developing-apps/programming/drives-directories-files/troubleshooting-reading-from-and-writing-to-text-files.md)

@@ -14,12 +14,12 @@ helpviewer_keywords:
 - logical negation
 - operators [Visual Basic], negation
 ms.assetid: 8f2ea83c-d2ed-480a-a474-3042a1cad9b5
-ms.openlocfilehash: db88b61518a52a70553c037fdd95f9a135dcb268
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 4e54fdca9123ad5595eb9a8c5e2ac5bc303a8f6a
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56981220"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58824215"
 ---
 # <a name="not-operator-visual-basic"></a>Not 연산자(Visual Basic)
 논리 부정 연산을 수행 하는 `Boolean` 식 또는 숫자 식에 비트 부정을 합니다.  
@@ -76,6 +76,7 @@ result = Not expression
  앞의 예제는 각각 – 11 고 –9,-7, 결과 생성합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [논리/비트 연산자 (Visual Basic)](../../../visual-basic/language-reference/operators/logical-bitwise-operators.md)
 - [Visual Basic에서의 연산자 우선 순위](../../../visual-basic/language-reference/operators/operator-precedence.md)
 - [기능별 연산자 목록](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)

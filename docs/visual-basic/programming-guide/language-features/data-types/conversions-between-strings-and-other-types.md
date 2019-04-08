@@ -9,12 +9,12 @@ helpviewer_keywords:
 - type conversion [Visual Basic], string
 - regional options
 ms.assetid: c3a99596-f09a-44a5-81dd-1b89a094f1df
-ms.openlocfilehash: 292ec8c76695427ab00110d83502f7d16c6504b4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1e42fca7800a76cab10fd60058e34d31ae8b8830
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54719744"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58821663"
 ---
 # <a name="conversions-between-strings-and-other-types-visual-basic"></a>문자열과 다른 형식 사이의 변환(Visual Basic)
 숫자를 변환할 수 있습니다 `Boolean`, 또는 날짜/시간 값을 `String`입니다. 반대 방향으로 변환할 수도 있습니다-숫자 문자열 값에서 `Boolean`, 또는 `Date` -문자열의 내용을 대상 데이터 형식의 유효한 값으로 해석 될 수 있습니다. 그렇지 않을 경우 런타임 오류가 발생 합니다.  
@@ -41,6 +41,7 @@ Str = "The total count is " & count
  문자열을 숫자 값으로 변환 하는 Visual Basic을 사용 하 여는 **국가별 옵션** 는 Windows에 지정 된 설정을 **제어판** 1000 단위를 해석 하 구분 기호, 소수 구분 기호 및 통화 기호입니다. 즉, 설정 중 하나에 변환이 성공할 수도 있습니다. 예를 들어 `"$14.20"` 허용 되는 모든 프랑스어 로캘이 있지만 영어 (미국) 로캘을에 있습니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [Visual Basic의 형식 변환](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)
 - [확대 변환과 축소 변환](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)
 - [암시적 변환과 명시적 변환](../../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md)

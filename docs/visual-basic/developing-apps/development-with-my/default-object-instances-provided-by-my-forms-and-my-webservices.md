@@ -7,12 +7,12 @@ helpviewer_keywords:
 - rapid application development (RAD), My.Forms
 - rapid application development (RAD), My.WebServices
 ms.assetid: de930027-9108-4f0c-b97c-5e7db4d6ef79
-ms.openlocfilehash: 5a81cde63de258f0996c3ddbc99e0102d58d79b8
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: ca31e1c40c77bf7f42d246019d81f4ffaed646e8
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56973914"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58839368"
 ---
 # <a name="default-object-instances-provided-by-myforms-and-mywebservices-visual-basic"></a>My.Forms 및 My.WebServices에서 제공하는 기본 개체 인스턴스(Visual Basic)
 합니다 [My.Forms](../../../visual-basic/language-reference/objects/my-forms-object.md) 하 고 [My.WebServices](../../../visual-basic/language-reference/objects/my-webservices-object.md) 개체 폼, 데이터 원본 및 응용 프로그램에서 사용 하는 XML Web services에 대 한 액세스를 제공 합니다. 컬렉션을 제공 하 여 이렇게 *인스턴스를 기본* 이러한 각 개체의 합니다.  
@@ -27,6 +27,7 @@ ms.locfileid: "56973914"
  합니다 `My.Forms` 개체에 대 한 기본 인스턴스의 컬렉션을 반환 합니다. 모든 `Form` 프로젝트에 있는 클래스입니다. 마찬가지로, `My.WebServices` 만들었다고에 대 한 참조 응용 프로그램에서 모든 웹 서비스에 대 한 프록시 클래스의 기본 인스턴스를 제공 합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [My.Forms 개체](../../../visual-basic/language-reference/objects/my-forms-object.md)
 - [My.WebServices 개체](../../../visual-basic/language-reference/objects/my-webservices-object.md)
 - [My가 프로젝트 형식에 의존하는 방식](../../../visual-basic/developing-apps/development-with-my/how-my-depends-on-project-type.md)

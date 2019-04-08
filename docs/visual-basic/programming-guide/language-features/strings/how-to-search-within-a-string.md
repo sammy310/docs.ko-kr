@@ -6,12 +6,12 @@ helpviewer_keywords:
 - strings [Visual Basic], searching
 - examples [Visual Basic], strings
 ms.assetid: ae4c79e0-08ea-489f-bdb2-5eb6d355f284
-ms.openlocfilehash: c150299efe07809d0d33edf882771f552c3e5b63
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: b690aa78a2cf07b0db5bdd28d7d71ed4a79fbf61
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56982013"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58823300"
 ---
 # <a name="how-to-search-within-a-string-visual-basic"></a>방법: 검색 문자열 (Visual Basic)
 이 예제에서는 호출을 <xref:System.String.IndexOf%2A> 메서드는 <xref:System.String> 부분 문자열의 첫 번째 발생의 인덱스를 보고 하는 개체입니다.  
@@ -34,6 +34,7 @@ ms.locfileid: "56982013"
  최적의 오류 컨트롤에 대 한 문자열 검색을 묶습니다 하려는 합니다 `Try` 블록을 [시도 하는 중... Catch 하는 중... Finally 문](../../../../visual-basic/language-reference/statements/try-catch-finally-statement.md) 생성 합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.String.IndexOf%2A>
 - [Try...Catch...Finally 문](../../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)
 - [Visual Basic의 문자열 소개](../../../../visual-basic/programming-guide/language-features/strings/introduction-to-strings.md)

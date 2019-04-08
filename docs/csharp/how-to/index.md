@@ -1,9 +1,14 @@
 ---
-title: '방법 문서(C# 가이드)'
+title: 방법 문서(C# 가이드)
 description: 유용한 팁 및 간단하고 집중된 코드 샘플의 컬렉션
 ms.date: 12/20/2017
+ms.openlocfilehash: cc78b8ffffc4f40629f213921fab6145751a7c57
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57202342"
 ---
-
 # <a name="how-to-c"></a>방법(C#)
 
 C# 가이드의 방법 섹션에서 일반적인 질문에 대한 빠른 답변을 찾을 수 있습니다. 경우에 따라 문서는 여러 섹션에 나타날 수 있습니다. 여러 검색 경로를 쉽게 찾을 수 있도록 했습니다. 

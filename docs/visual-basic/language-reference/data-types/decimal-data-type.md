@@ -20,12 +20,12 @@ helpviewer_keywords:
 - '@ identifier type character'
 - identifier type characters [Visual Basic], @
 ms.assetid: 1d855b45-afe2-45b0-a623-96b6f63a43d5
-ms.openlocfilehash: 7a04f0a9862927f8588a895c7f0f099509aa4d8d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4d530a8c1f85d2f0045184c05df63849047a8204
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54512894"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58834103"
 ---
 # <a name="decimal-data-type-visual-basic"></a>Decimal 데이터 형식(Visual Basic)
 부호 있는 10의 거듭제곱으로 조정 된 96 비트 (12 바이트) 정수 숫자를 나타내는 128 비트 (16 바이트) 값을 저장 합니다. 배율은 소수점의 오른쪽에 자릿수를 지정합니다. 이 범위는 0에서 28입니다. 가장 큰 가능한 값은 소수 자릿수가 0 (소수 자릿수 없이)를 사용 하 여 + /-79228162514264337593543950335 (7 + /-.9228162514264337593543950335E + 28). 소수 자릿수가 28 + /-7.9228162514264337593543950335 사이, 가장 큰 값은와 0.0000000000000000000000000001 1E-28) (+ + /-0이 아닌 가장 작은 값입니다.  
@@ -79,6 +79,7 @@ Dim bigDec3 As Decimal = 9223372036854775808D  ' No overflow.
  에 대 한 `bigDec3`, 리터럴 형식 문자 `D` 리터럴을 해석 하도록 컴파일러에 강제 적용 하 여 문제 해결을 `Decimal` 대신으로 `Long`.  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Decimal?displayProperty=nameWithType>
 - <xref:System.Decimal.%23ctor%2A?displayProperty=nameWithType>
 - <xref:System.Math.Round%2A?displayProperty=nameWithType>

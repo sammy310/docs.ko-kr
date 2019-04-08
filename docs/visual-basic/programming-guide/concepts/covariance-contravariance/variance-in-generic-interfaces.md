@@ -2,12 +2,12 @@
 title: (Visual Basic) 제네릭 인터페이스의 가변성
 ms.date: 07/20/2015
 ms.assetid: cf4096d0-4bb3-45a9-9a6b-f01e29a60333
-ms.openlocfilehash: d39f1b125875f9a9f41ccb6b25a3a88fe577adba
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 50a1aeb5c17a0f193b9e90ca2167ef298f7ed237
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54618635"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58828110"
 ---
 # <a name="variance-in-generic-interfaces-visual-basic"></a>(Visual Basic) 제네릭 인터페이스의 가변성
 .NET Framework 4에서는 기존의 몇몇 제네릭 인터페이스에 대한 가변성 지원이 추가되었습니다. 가변성 지원은 이러한 인터페이스를 구현하는 클래스의 암시적 변환을 가능하게 합니다. 다음 인터페이스는 현재 variant입니다.  
@@ -92,6 +92,7 @@ Dim listObjects As IEnumerable(Of Object) = New List(Of String)
 ```  
   
 ## <a name="see-also"></a>참고자료
+
 - [제네릭 컬렉션용 인터페이스의 가변성 사용(Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/using-variance-in-interfaces-for-generic-collections.md)
 - [Variant 제네릭 인터페이스 만들기(Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/creating-variant-generic-interfaces.md)
 - [제네릭 인터페이스](../../../../standard/generics/interfaces.md)

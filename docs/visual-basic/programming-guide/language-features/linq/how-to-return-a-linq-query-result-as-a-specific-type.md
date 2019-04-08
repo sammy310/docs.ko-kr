@@ -9,12 +9,12 @@ helpviewer_keywords:
 - queries [LINQ in Visual Basic], how-to topics
 - query samples [Visual Basic]
 ms.assetid: 621bb10a-e5d7-44fb-a025-317964b19d92
-ms.openlocfilehash: 784a848b02e75d2ae9a6c6530141e69a05a9041b
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: ba6479852f7a78fb26743a04fd08adea07c1ffff
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56973498"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58835871"
 ---
 # <a name="how-to-return-a-linq-query-result-as-a-specific-type-visual-basic"></a>방법: 특정 형식 (Visual Basic)으로 LINQ 쿼리 결과 반환 합니다.
 언어 통합 쿼리 (LINQ)를 사용 하면 쉽게 데이터베이스 정보에 액세스 하 고 쿼리를 실행 합니다. LINQ 쿼리는 기본적으로 익명 형식으로 개체의 목록을 반환합니다. 쿼리를 사용 하 여 특정 형식의 목록을 반환 하도록 지정할 수도 있습니다는 `Select` 절.  
@@ -35,7 +35,7 @@ ms.locfileid: "56973498"
   
 ### <a name="to-add-a-project-that-contains-a-linq-to-sql-file"></a>LINQ to SQL 파일을 포함 하는 프로젝트를 추가 하려면  
   
-1.  Visual Studio의 **파일** 메뉴에서 **새로 만들기**를 가리킨 다음 **프로젝트**를 클릭합니다. Visual basic **Windows Forms 응용 프로그램** 프로젝트 유형으로 합니다.  
+1.  Visual Studio의 **파일** 메뉴에서 **새로 만들기**를 가리킨 다음 **프로젝트**를 클릭합니다. Visual Basic **Windows Forms 응용 프로그램** 프로젝트 유형으로 합니다.  
   
 2.  **프로젝트** 메뉴에서 **새 항목 추가**를 클릭합니다. 선택 된 **LINQ to SQL 클래스** 항목 템플릿.  
   
@@ -76,6 +76,7 @@ ms.locfileid: "56973498"
 5.  F5 키를 눌러 프로젝트를 실행 하 고 결과 확인 합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [LINQ](../../../../visual-basic/programming-guide/language-features/linq/index.md)
 - [쿼리](../../../../visual-basic/language-reference/queries/index.md)
 - [LINQ to SQL](../../../../framework/data/adonet/sql/linq/index.md)

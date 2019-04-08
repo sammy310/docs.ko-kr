@@ -6,12 +6,12 @@ helpviewer_keywords:
 - nodes [XAML Services], XAML node stream
 - XAML [XAML Services], XAML node streams
 ms.assetid: 7c11abec-1075-474c-9d9b-778e5dab21c3
-ms.openlocfilehash: e75d7f9454018b4a5f31eb36f1790d3a7b49af78
-ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
+ms.openlocfilehash: babf98b7dd30cd60e72e310ae8ba8c9a42d9125f
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58034754"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58824431"
 ---
 # <a name="understanding-xaml-node-stream-structures-and-concepts"></a>XAML 노드 스트림 구조 및 개념 이해
 
@@ -218,9 +218,9 @@ XAML 텍스트 태그에서 특성 형태로 태그 확장 사용이 수행된 �
 
 - **알 수 없는 콘텐츠:** 이 멤버 노드의 이름은 `_UnknownContent`합니다. 엄격히 말해서, <xref:System.Xaml.XamlDirective>이며 XAML 언어 XAML 네임스페이스에서 정의됩니다. 이 지시문은 XAML 개체 요소에 소스 XAML의 콘텐츠가 포함되지만 현재 사용할 수 있는 XAML 스키마 컨텍스트에서 콘텐츠 속성을 확인할 수 없는 경우에 대한 센티널로 사용됩니다. XAML 노드 스트림에서 `_UnknownContent`라는 멤버를 확인하여 이러한 경우를 검색할 수 있습니다. 로드 경로 XAML 노드 스트림에서 다른 작업을 수행하지 않는 경우 임의 개체에서 <xref:System.Xaml.XamlObjectWriter> 멤버를 발견하면 시도된 `WriteEndObject` 에서 기본 `_UnknownContent` 가 발생합니다. 기본 <xref:System.Xaml.XamlXmlWriter> 가 발생하지 않고 멤버를 암시적으로 처리합니다. `_UnknownContent` 에서 <xref:System.Xaml.XamlLanguage.UnknownContent%2A>에 대한 정적 엔터티를 가져올 수 있습니다.
 
-- **컬렉션의 컬렉션 속성:** 일반적으로 XAML에 사용되는 컬렉션 클래스의 지원 CLR 형식에는 컬렉션 항목을 포함하는 명명된 전용 속성이 있지만 지원 형식을 확인할 때까지 XAML 형식 시스템에서 해당 속성을 알 수 없습니다. 대신, XAML 노드 스트림은 `Items` 자리 표시자를 컬렉션 XAML 형식의 멤버로 소개합니다. .NET Framework XAML 서비스 구현의 노드 스트림에서 이 지시문/멤버의 이름은 `_Items`입니다. 이 지시문에 대한 상수는 <xref:System.Xaml.XamlLanguage.Items%2A>에서 가져올 수 있습니다.
+- **컬렉션의 컬렉션 속성:** 일반적으로 XAML에 사용 되는 컬렉션 클래스의 지원 CLR 형식에 컬렉션 항목을 포함 하는 속성을 명명 된 전용으로 해당 속성은 지원 형식을 확인할 때까지 XAML 형식 시스템을 알 수 없습니다. 대신, XAML 노드 스트림은 `Items` 자리 표시자를 컬렉션 XAML 형식의 멤버로 소개합니다. .NET Framework XAML 서비스 구현의 노드 스트림에서 이 지시문/멤버의 이름은 `_Items`입니다. 이 지시문에 대한 상수는 <xref:System.Xaml.XamlLanguage.Items%2A>에서 가져올 수 있습니다.
 
-    XAML 노드 스트림을 항목을 구문 분석할 수 있는 Items 속성이 포함 되는 것에 따라 지원 형식 확인 및 XAML 스키마 컨텍스트입니다. 예를 들면 다음과 같습니다.
+    XAML 노드 스트림을 항목을 구문 분석할 수 있는 Items 속성이 포함 되는 것에 따라 지원 형식 확인 및 XAML 스키마 컨텍스트입니다. 예를 들어 개체에 적용된
 
 - **XML로 정의 된 구성원:** XML로 정의 된 `xml:base`, `xml:lang` 하 고 `xml:space` 멤버 라는 XAML 지시문으로 보고 됩니다 `base`를 `lang`, 및 `space` .NET Framework XAML 서비스 구현에서. 이러한 멤버에 대한 네임스페이스는 XML 네임스페이스 `http://www.w3.org/XML/1998/namespace`입니다. 각 멤버에 대한 상수는 <xref:System.Xaml.XamlLanguage>에서 가져올 수 있습니다.
 

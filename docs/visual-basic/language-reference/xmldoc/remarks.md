@@ -5,12 +5,12 @@ helpviewer_keywords:
 - <remarks> XML tag
 - remarks XML tag
 ms.assetid: c6241773-a7ed-41c9-9a8b-9722a0c606a9
-ms.openlocfilehash: 5065d43a0d3262ebe89d25351f791022bfd87077
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: c5c088472ae09a416953d9c0829cad1cb48646b8
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57502568"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58833492"
 ---
 # <a name="remarks-visual-basic"></a>\<설명 > (Visual Basic)
 멤버에 대 한 설명 부분을 지정합니다.  
@@ -38,4 +38,5 @@ ms.locfileid: "57502568"
  [!code-vb[VbVbcnXmlDocComments#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnXmlDocComments/VB/Class1.vb#6)]  
   
 ## <a name="see-also"></a>참고자료
+
 - [XML 주석 태그](../../../visual-basic/language-reference/xmldoc/index.md)

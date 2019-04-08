@@ -9,12 +9,12 @@ helpviewer_keywords:
 - ^= operator [Visual Basic]
 - compound assignment statements [Visual Basic]
 ms.assetid: 397da132-2d96-4a85-a7bc-f7c730a608c9
-ms.openlocfilehash: efea38d7da13b67490f498658e7739929517dba2
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: fe5d7b3dcb55192167512e0934e09cff7dfddb6d
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56964943"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58819656"
 ---
 # <a name="-operator-visual-basic"></a>^= 연산자(Visual Basic)
 변수 또는 식의 거듭제곱으로 속성의 값 및 변수 또는 속성에 다시 결과 할당 합니다.  
@@ -50,6 +50,7 @@ variableorproperty ^= expression
  [!code-vb[VbVbalrOperators#21](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#21)]  
   
 ## <a name="see-also"></a>참고자료
+
 - [^ 연산자](../../../visual-basic/language-reference/operators/exponentiation-operator.md)
 - [할당 연산자](../../../visual-basic/language-reference/operators/assignment-operators.md)
 - [산술 연산자](../../../visual-basic/language-reference/operators/arithmetic-operators.md)

@@ -2,9 +2,15 @@
 title: 참조(Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
-  - language reference
-  - 'Visual Basic code, language reference'
+- language reference
+- Visual Basic code, language reference
 ms.assetid: df6e7c50-5f3e-4381-98ed-ba5c3e9fe228
+ms.openlocfilehash: af8d2c99015304507b2b3361a8a851d125c14a81
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57377154"
 ---
 # <a name="reference-visual-basic"></a>참조(Visual Basic)
 이 섹션에서는 Visual Basic 프로그래밍의 다양 한 측면에 대 한 참조 정보에 대 한 링크를 제공 합니다.  

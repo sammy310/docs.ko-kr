@@ -13,12 +13,12 @@ helpviewer_keywords:
 - Visual Basic code, operators
 - arithmetic operators [Visual Basic], about arithmetic operators
 ms.assetid: 325dac7a-ea4f-41d5-8b48-f6e904211569
-ms.openlocfilehash: 2bd88b2df91c38d658e46157a9a83ce44ab9f25c
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 635c791f81107a1800e2ef381f6bea78cbc18e18
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56981272"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58820778"
 ---
 # <a name="arithmetic-operators-in-visual-basic"></a>Visual Basic의 산술 연산자
 산술 연산자는 리터럴, 변수, 다른 식, 함수 및 속성 호출 및 상수를 나타내는 숫자 값의 계산을 포함 하는 친숙 한 산술 연산을 수행 하도록 사용 됩니다. 피연산자의 개별 비트 수준에서 역할 및를 왼쪽 또는 오른쪽의 비트 패턴을 이동할 비트 시프트 연산자는 산술 연산자를 사용 하 여 분류 합니다.  
@@ -95,6 +95,7 @@ ms.locfileid: "56981272"
  설정한 경우 `Option Strict Off`, 예기치 않은 데이터 또는 정밀도 손실을 초래할 수 있습니다 하지만 Visual Basic에서 암시적 축소 변환을 수행를 허용 하는 단, 합니다. 따라서이 사용 하는 권장 `Option Strict On` 프로덕션 코드를 작성할 때. 자세한 내용은 [Widening and Narrowing Conversions](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)을 참조하세요.  
   
 ## <a name="see-also"></a>참고자료
+
 - [산술 연산자](../../../../visual-basic/language-reference/operators/arithmetic-operators.md)
 - [비트 시프트 연산자](../../../../visual-basic/language-reference/operators/bit-shift-operators.md)
 - [Comparison Operators in Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md)

@@ -2,12 +2,12 @@
 title: 공통 특성 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 11fe4894-1bf9-4525-a36b-cddcd3a5d22b
-ms.openlocfilehash: 9c9e8ba886697b9306a89caed4944fd2752db835
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: e001c9a637d2e5e34e77158704e4ad81d6973a50
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57375404"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58834547"
 ---
 # <a name="common-attributes-visual-basic"></a>공통 특성 (Visual Basic)
 이 항목에서는 Visual Basic 프로그램에서 가장 일반적으로 사용 되는 특성을 설명 합니다.  
@@ -255,6 +255,7 @@ End Structure
  사용 하 여 `VBFixedArrayAttribute` 크기에서 수정 된 배열을 선언할 수 있습니다. Visual Basic 문자열 처럼 배열은 기본적으로 가변 길이입니다. 이 특성은 파일에 데이터를 쓰거나 직렬화 하는 경우에 유용 합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Reflection>
 - <xref:System.Attribute>
 - [Visual Basic 프로그래밍 가이드](../../../../visual-basic/programming-guide/index.md)

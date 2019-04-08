@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC31102
 ms.assetid: 6f7b31b7-3656-4ae1-8851-90f5f4c6950a
-ms.openlocfilehash: 1539eb1652d93402c349c65f77a3edc65b3beb57
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 3bc50d6762998ca5d8f445d84c8b698c9f46436f
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55277565"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58834467"
 ---
 # <a name="set-accessor-of-property-propertyname-is-not-accessible"></a>'Set' 접근자 속성의 '\<propertyname >'에 액세스할 수 없습니다
 문에서 속성에 대 한 액세스 되지 않은 경우 속성의 값을 저장 하려고 `Set` 프로시저입니다.  
@@ -34,5 +34,6 @@ ms.locfileid: "55277565"
 -   속성을 정의 하는 소스 코드 제어 없는 또는 제한 해야 하는 경우는 `Set` 프로시저 액세스 수준 속성 자체에 쉽게 액세스할 수 있는 코드의 영역으로 속성 값을 설정 하는 문을 이동 하려고 보다는 속성입니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [속성 프로시저](../../../visual-basic/programming-guide/language-features/procedures/property-procedures.md)
 - [방법: 액세스 수준이 혼합된 된 속성 선언](../../../visual-basic/programming-guide/language-features/procedures/how-to-declare-a-property-with-mixed-access-levels.md)

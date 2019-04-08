@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Visual Basic code, properties
 - properties [Visual Basic]
 ms.assetid: 4d229712-6be8-4c5c-bac5-06995ce9185a
-ms.openlocfilehash: 4afcd57a9133515cecc72da856f67e4e3d5ff717
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 3e3f1168a983b2fa608cbadffba0531afef7c92b
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56970963"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58816851"
 ---
 # <a name="how-to-create-a-property-visual-basic"></a>방법: 속성 (Visual Basic) 만들기
 속성 정의 간에 묶습니다를 `Property` 문 및 `End Property` 문. 이 정의 내에서 정의 `Get` 프로시저는 `Set` 프로시저 중 하나 또는 둘 다. 이러한 프로시저 내에서 모든 속성의 코드에 표시 됩니다.  
@@ -61,6 +61,7 @@ ms.locfileid: "56970963"
  [!code-vb[VbVbcnProcedures#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#9)]  
   
 ## <a name="see-also"></a>참고자료
+
 - [절차](./index.md)
 - [속성 프로시저](./property-procedures.md)
 - [프로시저 매개 변수 및 인수](./procedure-parameters-and-arguments.md)

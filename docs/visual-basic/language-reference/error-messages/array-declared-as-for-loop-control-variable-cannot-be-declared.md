@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC32039
 ms.assetid: 1d8b6560-c9eb-4b71-a038-24c6f5a5ce46
-ms.openlocfilehash: d8fe794adcc1c2d28437bac7e732f99a6b6c07c0
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: bee3bcd3701945f5cf77f6761defc8be77acf49f
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54518620"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58843580"
 ---
 # <a name="array-declared-as-for-loop-control-variable-cannot-be-declared-with-an-initial-size"></a>For 루프 제어 변수를 통해 선언되는 배열은 초기 크기를 지정하여 선언할 수 없습니다.
 A `For Each` 루프에으로 배열을 사용 하 여 해당 *요소* 반복 변수는 하지만 해당 배열을 초기화 합니다.  
@@ -34,6 +34,7 @@ For Each listElement(1) As Integer In arrayList
 -   선언에서 초기화를 제거 합니다 *요소* 반복 변수입니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [For...Next 문](../../../visual-basic/language-reference/statements/for-next-statement.md)
 - [배열](../../../visual-basic/programming-guide/language-features/arrays/index.md)
 - [컬렉션](../../../standard/collections/index.md)

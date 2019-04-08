@@ -8,12 +8,12 @@ helpviewer_keywords:
 - optionstrict compiler option [Visual Basic]
 - /optionstrict compiler option [Visual Basic]
 ms.assetid: c7b10086-0fa4-49db-b3c8-4ae0db5957da
-ms.openlocfilehash: fdea071f8c41f2e707d10c96c8b6ab1fbb44bad0
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5479c312ae7eb7a166803a6e1238806aae9bd656
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54733313"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58835663"
 ---
 # <a name="-optionstrict"></a>-optionstrict
 암시적 형식 변환을 제한 하려면 엄격한 형식 의미 체계를 적용 합니다.  
@@ -57,6 +57,7 @@ vbc -optionstrict+ test.vb
 ```  
   
 ## <a name="see-also"></a>참고자료
+
 - [Visual Basic 명령줄 컴파일러](../../../visual-basic/reference/command-line-compiler/index.md)
 - [-optioncompare](../../../visual-basic/reference/command-line-compiler/optioncompare.md)
 - [-optionexplicit](../../../visual-basic/reference/command-line-compiler/optionexplicit.md)

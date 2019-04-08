@@ -7,12 +7,12 @@ helpviewer_keywords:
 - procedures [Visual Basic], structure
 - Visual Basic code, program structure
 ms.assetid: ad0c6531-d762-4c77-a700-de16b07b6119
-ms.openlocfilehash: 64ac6da99bf304639dfc0de5e24d6d6bdd3e9795
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
+ms.openlocfilehash: 5817d4d37610c87bb7e4ade407421ddce7a3a862
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56746525"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58828123"
 ---
 # <a name="structure-of-a-visual-basic-program"></a>Visual Basic 프로그램의 구조
 Visual Basic 프로그램은 표준 구성 요소에서 빌드됩니다. A *솔루션* 하나 이상의 프로젝트를 구성 합니다. A *프로젝트* 에 하나 이상의 어셈블리를 포함할 수 있습니다. 각 *어셈블리* 하나 이상의 소스 파일에서 컴파일됩니다. A *소스 파일* 정의와 클래스, 구조체, 모듈 및 궁극적으로 모든 코드를 포함 하는 인터페이스의 구현을 제공 합니다.  
@@ -93,6 +93,7 @@ Visual Basic 프로그램은 표준 구성 요소에서 빌드됩니다. A *솔�
  이 절차의 가장 일반적인 것은 `Sub Main()`합니다. 자세한 내용은 [Visual Basic의 Main 프로시저](../../../visual-basic/programming-guide/program-structure/main-procedure.md)합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [Visual Basic의 main 프로시저](../../../visual-basic/programming-guide/program-structure/main-procedure.md)
 - [Visual Basic 명명 규칙](../../../visual-basic/programming-guide/program-structure/naming-conventions.md)
 - [Visual Basic 제한 사항](../../../visual-basic/programming-guide/program-structure/limitations.md)

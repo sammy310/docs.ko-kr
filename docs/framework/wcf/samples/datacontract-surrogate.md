@@ -2,12 +2,12 @@
 title: DataContract 서로게이트
 ms.date: 03/30/2017
 ms.assetid: b0188f3c-00a9-4cf0-a887-a2284c8fb014
-ms.openlocfilehash: 341b56727c910d552a5238d95976884162f1c524
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: 33d5db0251d22ff2fac05c475903eca7dcb3e0fb
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58409837"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58828058"
 ---
 # <a name="datacontract-surrogate"></a>DataContract 서로게이트
 이 샘플에서는 데이터 계약 서로게이트 클래스를 사용하여 serialization, deserialization, 스키마 내보내기 및 스키마 가져오기와 같은 프로세스를 사용자 지정할 수 있는 방법에 대해 설명합니다. 이 샘플에는 데이터 serialize 되 고 Windows Communication Foundation (WCF) 클라이언트와 서비스 간에 전송 되는 클라이언트 및 서버 시나리오에서 서로게이트를 사용 하는 방법을 보여 줍니다.  
@@ -30,8 +30,7 @@ public interface IPersonnelDataService
 }  
 ```  
   
- 
-  `AddEmployee` 작업을 통해 사용자는 새 직원에 대한 데이터를 추가할 수 있으며 `GetEmployee` 작업은 이름을 기준으로 한 직원 검색을 지원합니다.  
+ `AddEmployee` 작업을 통해 사용자는 새 직원에 대한 데이터를 추가할 수 있으며 `GetEmployee` 작업은 이름을 기준으로 한 직원 검색을 지원합니다.  
   
  이러한 작업에는 다음 데이터 형식이 사용됩니다.  
   
@@ -50,8 +49,7 @@ class Employee
 }  
 ```  
   
- 
-  `Employee` 형식에서는 다음 샘플 코드의 `Person` 클래스가 유효한 데이터 계약 클래스가 아니므로 <xref:System.Runtime.Serialization.DataContractSerializer>에 의해 serialize될 수 없습니다.  
+ `Employee` 형식에서는 다음 샘플 코드의 `Person` 클래스가 유효한 데이터 계약 클래스가 아니므로 <xref:System.Runtime.Serialization.DataContractSerializer>에 의해 serialize될 수 없습니다.  
   
 ```  
 public class Person  
@@ -66,8 +64,7 @@ public class Person
 }  
 ```  
   
- 
-  <xref:System.Runtime.Serialization.DataContractAttribute> 특성을 `Person` 클래스에 적용할 수 있지만 항상 가능한 것은 아닙니다. 예를 들어, `Person` 클래스는 제어할 수 없는 별개의 어셈블리에 정의할 수 있습니다.  
+ <xref:System.Runtime.Serialization.DataContractAttribute> 특성을 `Person` 클래스에 적용할 수 있지만 항상 가능한 것은 아닙니다. 예를 들어, `Person` 클래스는 제어할 수 없는 별개의 어셈블리에 정의할 수 있습니다.  
   
  이 제한 사항이 있을 경우 `Person` 클래스를 serialize하는 한 가지 방법은 <xref:System.Runtime.Serialization.DataContractAttribute>로 표시된 다른 클래스로 대체하고 필요한 데이터를 새 클래스에 복사하는 것입니다. 이렇게 하는 것은 `Person` 클래스를 <xref:System.Runtime.Serialization.DataContractSerializer>에 대해 DataContract로 표시하기 위해서입니다. 이것은 데이터 계약 클래스가 아닌 클래스를 serialize하는 한 방법이라는 것에 주의하십시오.  
   
@@ -191,8 +188,7 @@ public void GetKnownCustomDataTypes(
   
  이 경우에 이 특성이 필요하지 않지만 이 샘플에서는 이해를 돕기 위해 사용되었습니다. 사용자는 코드나 구성을 사용해 비슷한 `IContractBehavior``IEndpointBehavior` 또는 `IOperationBehavior`를 추가하여 수동으로 서로게이트를 사용하도록 설정할 수도 있습니다.  
   
- 
-  `IContractBehavior` 구현은 등록된 `DataContractSerializerOperationBehavior`가 있는지 확인하여 DataContract를 사용하는 작업을 찾습니다. 작업에 이 동작이 있는 경우 해당 동작에서 `DataContractSurrogate` 속성이 설정됩니다. 다음 샘플 코드에서는 이를 수행하는 방법을 보여 줍니다. 이 작업 동작에서 서로게이트를 설정하면 serialization 및 deserialization에 대해 사용할 수 있도록 설정됩니다.  
+ `IContractBehavior` 구현은 등록된 `DataContractSerializerOperationBehavior`가 있는지 확인하여 DataContract를 사용하는 작업을 찾습니다. 작업에 이 동작이 있는 경우 해당 동작에서 `DataContractSurrogate` 속성이 설정됩니다. 다음 샘플 코드에서는 이를 수행하는 방법을 보여 줍니다. 이 작업 동작에서 서로게이트를 설정하면 serialization 및 deserialization에 대해 사용할 수 있도록 설정됩니다.  
   
 ```  
 public void ApplyClientBehavior(ContractDescription description, ServiceEndpoint endpoint, System.ServiceModel.Dispatcher.ClientRuntime proxy)  
@@ -273,4 +269,3 @@ public void ExportContract(WsdlExporter exporter, WsdlContractConversionContext 
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\DataContract`  
   
-## <a name="see-also"></a>참고자료

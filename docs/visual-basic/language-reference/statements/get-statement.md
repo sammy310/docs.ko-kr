@@ -11,12 +11,12 @@ helpviewer_keywords:
 - Get keyword [Visual Basic]
 - property procedures [Visual Basic], Get statements
 ms.assetid: 56b05cdc-bd64-4dfd-bb12-824eacec6f94
-ms.openlocfilehash: 0d1d7e2650aaa357e4972ce61c1e19eef7c40b97
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 245d2cc36abde76a8f8bd73bae5d7ede183d4d03
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56973420"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58840512"
 ---
 # <a name="get-statement"></a>Get 문
 선언 된 `Get` 속성 프로시저는 속성의 값을 검색 하는 데 사용 합니다.  
@@ -83,6 +83,7 @@ End Get
  [!code-vb[VbVbalrStatements#30](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#30)]  
   
 ## <a name="see-also"></a>참고자료
+
 - [Set 문](../../../visual-basic/language-reference/statements/set-statement.md)
 - [Property 문](../../../visual-basic/language-reference/statements/property-statement.md)
 - [Exit 문](../../../visual-basic/language-reference/statements/exit-statement.md)

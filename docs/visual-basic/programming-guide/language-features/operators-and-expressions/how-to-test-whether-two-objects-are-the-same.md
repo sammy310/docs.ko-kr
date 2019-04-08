@@ -9,12 +9,12 @@ helpviewer_keywords:
 - objects [Visual Basic], variables referring to same
 - Visual Basic code, operators
 ms.assetid: f760e828-8704-4256-bc2d-c22a4c93b524
-ms.openlocfilehash: d13671f284863fa7bf56964c2b9b963c25e8ea52
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: dbb268175d197e7b931af45a98f3a273c593e5a3
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56977450"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58819128"
 ---
 # <a name="how-to-test-whether-two-objects-are-the-same-visual-basic"></a>방법: 두 개체가 동일한 (Visual Basic) 인지 여부를 테스트합니다
 두 변수 개체를 참조 하는 경우 사용할 수 있습니다 합니다 `Is` 또는 `IsNot` 연산자 또는 둘 다에서 동일한 인스턴스를 참조 하는지 확인 합니다.  
@@ -30,4 +30,5 @@ ms.locfileid: "56977450"
  사용할지 `Is` 또는 `IsNot` 할 개인 편의 관련 됩니다. 하나는 지정된 된 식에서 다른 보다 읽기 쉬울 수 있습니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [Comparison Operators in Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md)

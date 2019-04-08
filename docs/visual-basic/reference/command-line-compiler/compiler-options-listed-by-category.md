@@ -4,12 +4,12 @@ ms.date: 04/12/2018
 helpviewer_keywords:
 - Visual Basic compiler, options
 ms.assetid: fbe36f7a-7cfa-4f77-a8d4-2be5958568e3
-ms.openlocfilehash: e7e81715b396580208fd7bbbb797a7c93301503d
-ms.sourcegitcommit: facefcacd7ae2e5645e463bc841df213c505ffd4
+ms.openlocfilehash: 333bfb539fc375fd8f2dd170a187002fcf81ea2b
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "55738905"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58827369"
 ---
 # <a name="visual-basic-compiler-options-listed-by-category"></a>Visual Basic 컴파일러 옵션 범주별 목록
 Visual Basic 명령줄 컴파일러는 Visual Studio 통합된 개발 환경 (IDE) 내에서 프로그램을 컴파일하는 대신 제공 됩니다. 다음은 기능 범주별으로 정렬 된 Visual Basic 명령줄 컴파일러 옵션의 목록입니다.  
@@ -127,5 +127,6 @@ Visual Basic 명령줄 컴파일러는 Visual Studio 통합된 개발 환경 (ID
 |`-checksumalgorithm:<alg>`|PDB에 저장된 소스 파일 체크섬을 계산하기 위한 알고리즘을 지정합니다.  지원되는 값은 다음과 같습니다. SHA1(기본값) 또는 SHA256.|  
   
 ## <a name="see-also"></a>참고자료
+
 - [Visual Basic 컴파일러 옵션 사전순 목록](../../../visual-basic/reference/command-line-compiler/compiler-options-listed-alphabetically.md)
 - [프로젝트 및 솔루션 속성 관리](/visualstudio/ide/managing-project-and-solution-properties?view=vs-2017)

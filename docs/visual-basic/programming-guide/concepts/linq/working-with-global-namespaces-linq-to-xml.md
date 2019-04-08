@@ -2,12 +2,12 @@
 title: 전역 네임스페이스 작업(Visual Basic)(LINQ to XML)
 ms.date: 07/20/2015
 ms.assetid: 0a8064d5-e02f-4315-ad48-6deaa443a2f0
-ms.openlocfilehash: 0922c6973baeb3e0ca51d984b332fd7a3e0b13f6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d8e74e949815d36f06f522460cc31ca6c3ccabb3
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54733911"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58827382"
 ---
 # <a name="working-with-global-namespaces-visual-basic-linq-to-xml"></a>전역 네임스페이스 작업(Visual Basic)(LINQ to XML)
 Visual Basic에서 XML 리터럴의 주요 기능 중 하나는 사용 하 여 XML 네임 스페이스를 선언 하는 기능을 `Imports` 문입니다. 이 기능을 사용하여 접두사를 사용하는 XML 네임스페이스를 선언하거나 기본 XML 네임스페이스를 선언할 수 있습니다.  
@@ -198,4 +198,5 @@ http://www.adventure-works.com
 ```  
   
 ## <a name="see-also"></a>참고자료
+
 - [XML 네임 스페이스 (Visual Basic)를 사용 하 여 작업](../../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md)

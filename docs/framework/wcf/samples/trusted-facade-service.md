@@ -2,12 +2,12 @@
 title: 신뢰된 외관 서비스
 ms.date: 03/30/2017
 ms.assetid: c34d1a8f-e45e-440b-a201-d143abdbac38
-ms.openlocfilehash: e7e55cc9d4bc9f0f81ad0570b37d7a749e6fadc2
-ms.sourcegitcommit: 0069cb3de8eed4e92b2195d29e5769a76111acdd
+ms.openlocfilehash: 78eae4a632317e8d31c64cd3c249adc7994f0d86
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/16/2019
-ms.locfileid: "56332442"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58834298"
 ---
 # <a name="trusted-facade-service"></a>신뢰된 외관 서비스
 이 시나리오 샘플에는 Windows Communication Foundation (WCF)를 사용 하 여 다른 서비스로 호출자의 id 정보를 전달 하는 방법을 보여 줍니다. 보안 인프라.  
@@ -291,4 +291,3 @@ Press <ENTER> to terminate client.
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Scenario\TrustedFacade`  
   
-## <a name="see-also"></a>참고자료

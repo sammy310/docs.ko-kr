@@ -13,12 +13,12 @@ helpviewer_keywords:
 - operators [Visual Basic], comparison
 - operators [Visual Basic], short-circuiting logical
 ms.assetid: d181afe5-fafa-460f-a13b-81203f6f4587
-ms.openlocfilehash: dbd97b23bd67b3c98fb89037205ac12f120ca490
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 88c05b54402733fadb686e3c6f883b2d2d56990c
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54692115"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58815071"
 ---
 # <a name="common-tasks-performed-with-visual-basic-operators"></a>Visual Basic 연산자를 사용한 일반적인 작업
 연산자는 호출 하는 하나 이상의 식과 관련 된 여러 가지 일반적인 작업 수행 *피연산자*합니다.  
@@ -79,5 +79,6 @@ ms.locfileid: "54692115"
 |정수 계열 값의 비트에서 비트 논리 부정 연산을 수행합니다|[Not 연산자](../../../../visual-basic/language-reference/operators/not-operator.md)|  
   
 ## <a name="see-also"></a>참고자료
+
 - [연산자 및 식](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/index.md)
 - [기능별 연산자 목록](../../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)

@@ -2,12 +2,12 @@
 title: (Visual Basic) 노드를 사용한 프로그래밍
 ms.date: 07/20/2015
 ms.assetid: d8422a9b-dd37-44a3-8aac-2237ed9561e0
-ms.openlocfilehash: 1cd9792905c1816094d9bbd12e0648c5a4d7c4f6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ed7f460b441a5973c33841f1f53ce4679b627071
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54527408"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58817112"
 ---
 # <a name="programming-with-nodes-visual-basic"></a>(Visual Basic) 노드를 사용한 프로그래밍
 XML 편집기, 변환 시스템 또는 보고서 작성기와 같은 프로그램을 작성해야 하는 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 개발자는 요소와 특성보다 세부적인 단위에서 작업하는 프로그램을 작성해야 하는 경우가 많습니다. LINQ to XML 개발자는 흔히 노드 수준에서 작업하여 텍스트 노드, 처리 명령 및 주석을 조작해야 합니다. 이 항목에서는 노드 수준의 프로그래밍에 대해 자세히 설명합니다.  
@@ -172,4 +172,5 @@ Console.WriteLine(doc.Nodes().Count())
 ```  
   
 ## <a name="see-also"></a>참고자료
+
 - [고급 LINQ to XML 프로그래밍 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)

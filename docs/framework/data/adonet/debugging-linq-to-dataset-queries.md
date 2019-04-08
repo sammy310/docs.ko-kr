@@ -25,7 +25,7 @@ Visual Studio의 디버깅을 지원 하며 [!INCLUDE[linq_dataset](../../../../
   
  Visual C#의 Visual Studio에서 사용할 수 없습니다 편집 하며 계속 하기를 포함 하는 메서드에서 코드를 [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] 쿼리 합니다.  
   
- Visual Studio에서 Visual basic에서 사용할 수 있습니다 편집 하며 계속 하기 비[!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] 코드를 포함 하는 방법에도 [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] 쿼리 합니다. 또한 변경 작업으로 인해 [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] 쿼리의 줄 번호가 변경되는 경우에도 [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] 문 앞에 코드를 추가하거나 제거할 수 있습니다. Visual Basic 디버깅에 대 한 환경 이외[!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] 코드 동일 하 게 유지 되기 전과 [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] 도입 되었습니다. 그러나 디버깅을 중지하고 변경 내용을 적용하는 경우가 아니면 [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] 쿼리를 변경, 추가 또는 제거할 수 없습니다.  
+ Visual Studio에서 Visual Basic에서 사용할 수 있습니다 편집 하며 계속 하기 비[!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] 코드를 포함 하는 방법에도 [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] 쿼리 합니다. 또한 변경 작업으로 인해 [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] 쿼리의 줄 번호가 변경되는 경우에도 [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] 문 앞에 코드를 추가하거나 제거할 수 있습니다. Visual Basic 디버깅에 대 한 환경 이외[!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] 코드 동일 하 게 유지 되기 전과 [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] 도입 되었습니다. 그러나 디버깅을 중지하고 변경 내용을 적용하는 경우가 아니면 [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] 쿼리를 변경, 추가 또는 제거할 수 없습니다.  
   
 ## <a name="see-also"></a>참고자료
 - [관리 코드 디버그](/visualstudio/debugger/debugging-managed-code)

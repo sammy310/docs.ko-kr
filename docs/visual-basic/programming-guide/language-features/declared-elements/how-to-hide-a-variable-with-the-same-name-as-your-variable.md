@@ -12,12 +12,12 @@ helpviewer_keywords:
 - declared elements [Visual Basic], referencing
 - declared elements [Visual Basic], about declared elements
 ms.assetid: e39c0752-f19f-4d2e-a453-00df1b5fc7ee
-ms.openlocfilehash: a770167bca0dc3538c828bfcc8a8de4ef86e80c2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a8a7eda2a636d7f89131d140c82ad4f3c4743211
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54602418"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58826680"
 ---
 # <a name="how-to-hide-a-variable-with-the-same-name-as-your-variable-visual-basic"></a>방법: 변수 (Visual Basic) 이름이 같은 변수 숨기기
 변수를 숨길 수 있습니다 *섀도잉* 즉, 이름이 같은 변수를 사용 하 여 정의 하 여 합니다. 두 가지 방법으로 숨기려는 변수의 섀도잉할 수 있습니다.  
@@ -104,6 +104,7 @@ ms.locfileid: "54602418"
  숨김 변수 이름이 같은 둘 이상의 버전을 소개합니다. 코드 문이 변수 이름에는 참조, 컴파일러 참조를 확인 하는 버전 코드 문의 위치 및 한정 문자열의 현재 상태 등의 요인에 따라 달라 집니다. 숨겨진 변수의 의도 하지 않은 버전으로 참조 위험이 증가 수이 있습니다. 숨겨진된 변수에 대 한 모든 참조를 정규화 하 여 위험을 낮출 수 있습니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [선언된 요소 참조](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)
 - [Visual Basic의 숨김 기능](../../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)
 - [숨기기와 재정의의 차이점](../../../../visual-basic/programming-guide/language-features/declared-elements/differences-between-shadowing-and-overriding.md)

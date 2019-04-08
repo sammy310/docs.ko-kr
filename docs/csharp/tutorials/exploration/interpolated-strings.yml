@@ -9,14 +9,12 @@ metadata:
   level: Beginner
   displayType: two-column
   interactive: csharp
-  nextTutorialHref: list-collection.yml
-  nextTutorialTitle: C#의 컬렉션
-  ms.openlocfilehash: c5d9ba80df952a58740ac2557bfc0011ef2ea539
-  ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
+  ms.openlocfilehash: 5490176d91a6ed900471e33af6adce1fa3e62d8f
+  ms.sourcegitcommit: a3db1a9eafca89f95ccf361bc1833b47fbb2bb30
   ms.translationtype: HT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 01/04/2019
-  ms.locfileid: "54030414"
+  ms.lasthandoff: 04/04/2019
+  ms.locfileid: "58921394"
 items:
 - durationInMinutes: 2
   content: >

@@ -13,12 +13,12 @@ helpviewer_keywords:
 - data types [Visual Basic], optimizing
 - ChrW function [Visual Basic], preferred to Chr
 ms.assetid: 28f5e4ba-ec24-4f37-b90a-e8ee822f778a
-ms.openlocfilehash: e0cb67b4b26bf59b074bf5964f253c007fdbe719
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0b517bca3a9e296eb891e30df91c1d32eb357432
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54736171"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58830125"
 ---
 # <a name="efficient-use-of-data-types-visual-basic"></a>데이터 형식의 효율적 사용(Visual Basic)
 데이터 형식 없이 선언 된 변수와 선언 되지 않은 변수 할당 되는 `Object` 데이터 형식입니다. 이 사용 하면 쉽게 프로그램을 신속 하 게 작성할 수 있지만 느리게 실행 되기를 발생할 수 있습니다.  
@@ -33,7 +33,7 @@ ms.locfileid: "54736171"
 -   코드의 더 빠른 실행에서 발생합니다.  
   
 ## <a name="most-efficient-data-types"></a>가장 효율적인 데이터 형식  
- 분수를 포함 하지 않은 변수는 정수 데이터 형식의 비정 수 형식 보다 더 효율적입니다. Visual basic에서는 `Integer` 및 `UInteger` 은 가장 효율적인 숫자 유형입니다.  
+ 분수를 포함 하지 않은 변수는 정수 데이터 형식의 비정 수 형식 보다 더 효율적입니다. Visual Basic에서는 `Integer` 및 `UInteger` 은 가장 효율적인 숫자 유형입니다.  
   
  소수에 `Double` 가장 효율적인 데이터 형식 이므로 현재 플랫폼의 프로세서에서 배정밀도 부동 소수점 작업을 수행 합니다. 그러나 작업과 `Double` 와 같은 정수 계열 형식과 마찬가지로 빠르지 않습니다 `Integer`합니다.  
   
@@ -49,6 +49,7 @@ Protected s As String
  합니다 `AscW` 및 `ChrW` 함수는 유니코드에서 작동 합니다. 우선적으로 사용 해야 `Asc` 고 `Chr`, 내부 및 외부로 유니코드 변환 해야 하는 합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:Microsoft.VisualBasic.Strings.Asc%2A>
 - <xref:Microsoft.VisualBasic.Strings.AscW%2A>
 - <xref:Microsoft.VisualBasic.Strings.Chr%2A>

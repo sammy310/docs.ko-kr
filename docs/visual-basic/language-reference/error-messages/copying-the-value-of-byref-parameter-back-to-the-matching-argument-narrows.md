@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC32053
 ms.assetid: 281564b7-99f7-451f-b10d-f985e831bb25
-ms.openlocfilehash: c5d427495e8eedae9dc0163c97401338fb6d0bbd
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: fa8607bf72dfb344048ec82514182dcb6810274d
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55276616"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58817164"
 ---
 # <a name="copying-the-value-of-byref-parameter-parametername-back-to-the-matching-argument-narrows-from-type-typename1-to-type-typename2"></a>'ByRef' 매개 변수의 값을 복사 '\<parametername >' 인수에 다시 축소 됩니다. 형식에서 '\<typename1 >' 형식으로 '\<typename2 >'
 해당 매개 변수 형식으로 확대 되는 인수를 사용 하 여 프로시저 호출 및 매개 변수에서 인수 변환을 축소 됩니다.  
@@ -34,6 +34,7 @@ ms.locfileid: "55276616"
 -   호출 인수에 값을 반환 해야 할 경우 역방향 변환 연산자를 정의할 [Widening](../../../visual-basic/language-reference/modifiers/widening.md)가능한 경우.  
   
 ## <a name="see-also"></a>참고자료
+
 - [절차](../../../visual-basic/programming-guide/language-features/procedures/index.md)
 - [프로시저 매개 변수 및 인수](../../../visual-basic/programming-guide/language-features/procedures/procedure-parameters-and-arguments.md)
 - [값 또는 참조로 인수 전달](../../../visual-basic/programming-guide/language-features/procedures/passing-arguments-by-value-and-by-reference.md)

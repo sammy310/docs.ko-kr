@@ -8,12 +8,12 @@ helpviewer_keywords:
 - LINQ to XML [Visual Basic], embedded expressions
 - XML literals [Visual Basic], embedded expressions
 ms.assetid: bf2eb779-b751-4b7c-854f-9f2161482352
-ms.openlocfilehash: feb0168c216b23ff02ca9350f868e091fefca689
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 4c96665994a7e56bc70f72b66d5922f5a6472a13
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56965789"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58827577"
 ---
 # <a name="embedded-expressions-in-xml-visual-basic"></a>XML의 포함 식(Visual Basic)
 포함 식을 통해 식을 런타임에 계산 되는 식을 포함 하는 XML 리터럴을 만들 수 있습니다. 포함된 식에 대 한 구문은 `<%=` `expression` `%>`는 동일한 구문을 사용 하는 대로 [!INCLUDE[vstecasp](~/includes/vstecasp-md.md)]입니다.  
@@ -81,6 +81,7 @@ ms.locfileid: "56965789"
 >  XML 네임 스페이스 접두사를 사용 하 여 선언 되는 경우는 `xmlns` 네임 스페이스 특성을 특성 값을 상수 문자열 이어야 합니다. 이런 점에서 사용 하 여는 `xmlns` 사용과 같은 특성은는 `Imports` XML 네임 스페이스를 선언 하는 문입니다. XML 네임 스페이스 값을 지정 하려면 포함 된 식을 사용할 수 없습니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [Visual Basic에서 XML 만들기](../../../../visual-basic/programming-guide/language-features/xml/creating-xml.md)
 - [XML 문서 리터럴](../../../../visual-basic/language-reference/xml-literals/xml-document-literal.md)
 - [XML 요소 리터럴](../../../../visual-basic/language-reference/xml-literals/xml-element-literal.md)

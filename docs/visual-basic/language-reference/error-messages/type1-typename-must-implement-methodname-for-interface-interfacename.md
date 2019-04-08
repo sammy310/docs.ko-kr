@@ -1,5 +1,5 @@
 ---
-title: "'<type1>'<typename>'은(는) '<methodname>' 인터페이스에 대한 '<interfacename>'을(를) 구현해야 합니다."
+title: <type1>'<typename>'구현 해야 합니다'<methodname>'interface'에 대 한<interfacename>'
 ms.date: 07/20/2015
 f1_keywords:
 - vbc30149
@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30149
 ms.assetid: 29d1b7f4-dca7-478c-bbe7-c657f342c183
-ms.openlocfilehash: c5dd7c6889a3fb5344142ee9914f98e8922d748b
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: b8bcb16798284a09608ba6942226ef07c6859d4f
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55264438"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58824206"
 ---
 # <a name="type1typename-must-implement-methodname-for-interface-interfacename"></a>\<type1 >'\<typename >'를 구현 해야 합니다 '\<methodname >' 인터페이스에 대 한 '\<interfacename >'
 클래스 또는 구조체는 인터페이스를 구현 하지만 인터페이스에 의해 정의 된 프로시저를 구현 하지 않습니다. 인터페이스의 모든 멤버를 구현 해야 합니다.  
@@ -30,5 +30,6 @@ ms.locfileid: "55264438"
     ```  
   
 ## <a name="see-also"></a>참고자료
+
 - [Implements 문](../../../visual-basic/language-reference/statements/implements-statement.md)
 - [인터페이스](../../../visual-basic/programming-guide/language-features/interfaces/index.md)

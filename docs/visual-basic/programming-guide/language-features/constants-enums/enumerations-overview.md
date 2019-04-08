@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Visual Basic code, enumerations
 - enumerations [Visual Basic], about enumerations
 ms.assetid: b42a38ee-5e77-4f99-a037-e3a127ead89c
-ms.openlocfilehash: 5d84711c9efbe8d73d1cfe1dc7ac431b675d0b50
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1c3465a3b2d12b110096ceedf2602d6560b82f4d
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54693096"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58821844"
 ---
 # <a name="enumerations-overview-visual-basic"></a>열거형 개요(Visual Basic)
 열거형에는 관련 된 상수 집합을 사용 하 여 작동 하 고 이름의 상수 값을 연결 하는 편리한 방법을 제공 합니다. 예를 들어 요일과 연결된 정수 상수에 대한 열거형을 선언한 다음, 코드에 정수 값 대신 요일 이름을 사용할 수 있습니다.  
@@ -29,6 +29,7 @@ ms.locfileid: "54693096"
 |열거형을 사용 하는 경우 결정|[열거형을 사용하는 경우](../../../../visual-basic/programming-guide/language-features/constants-enums/when-to-use-an-enumeration.md)|  
   
 ## <a name="see-also"></a>참고자료
+
 - [상수 개요](../../../../visual-basic/programming-guide/language-features/constants-enums/constants-overview.md)
 - [사용자 정의 상수](../../../../visual-basic/programming-guide/language-features/constants-enums/user-defined-constants.md)
 - [방법: 상수 선언](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-declare-a-constant.md)

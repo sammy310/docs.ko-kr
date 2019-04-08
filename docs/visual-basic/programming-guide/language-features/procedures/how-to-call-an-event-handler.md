@@ -8,12 +8,12 @@ helpviewer_keywords:
 - procedures [Visual Basic], event handlers
 - procedures [Visual Basic], calling
 ms.assetid: 72e18ef8-144e-40df-a1f4-066a57271e28
-ms.openlocfilehash: 58a96ccd06b70d481de335af5c3cd2be565cbd92
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: dd21f80e4b3892cbd9db901b619ecff98f6b70bd
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56973524"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58837769"
 ---
 # <a name="how-to-call-an-event-handler-in-visual-basic"></a>방법: Visual Basic의 이벤트 처리기를 호출 합니다.
 *이벤트* 작업 또는 항목은-같은 마우스 클릭 이나 신용 한도 초과-응답 코드를 작성할 수 있는 한 일부 프로그램 구성 요소에 의해 인식 합니다. *이벤트 처리기* 이벤트에 응답을 작성 하는 코드입니다.  
@@ -53,6 +53,7 @@ ms.locfileid: "56973524"
      실행 하 여 이벤트에서 이벤트 처리기를 분리할 수 있습니다 합니다 [RemoveHandler 문](../../../../visual-basic/language-reference/statements/removehandler-statement.md)합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [절차](./index.md)
 - [Sub 프로시저](./sub-procedures.md)
 - [Sub 문](../../../../visual-basic/language-reference/statements/sub-statement.md)

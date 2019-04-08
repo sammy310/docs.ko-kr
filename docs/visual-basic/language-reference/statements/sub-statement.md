@@ -29,12 +29,12 @@ helpviewer_keywords:
 - ByVal keyword [Visual Basic], Sub statements
 - Visual Basic code, Sub procedures
 ms.assetid: e347d700-d06c-405b-b302-e9b1edb57dfc
-ms.openlocfilehash: 6984e7e9f8695ff5bccdde01171733e740a5d6a7
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: ab94865f4881b40b38f67eb40d2f9fa2e1982af8
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56965958"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58817229"
 ---
 # <a name="sub-statement-visual-basic"></a>Sub 문(Visual Basic)
 선언 하 고 이름, 매개 변수를 정의 하는 코드는 `Sub` 프로시저입니다.  
@@ -227,6 +227,7 @@ End Sub
  [!code-vb[csAsyncMethod#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/csasyncmethod/vb/mainwindow.xaml.vb#1)]  
   
 ## <a name="see-also"></a>참고자료
+
 - [Implements 문](implements-statement.md)
 - [Function 문](function-statement.md)
 - [매개 변수 목록](parameter-list.md)

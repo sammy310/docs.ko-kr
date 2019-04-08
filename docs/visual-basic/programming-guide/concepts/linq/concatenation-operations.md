@@ -2,12 +2,12 @@
 title: 연결 작업 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 4021e019-a8f7-477b-879e-07dd7f44feb9
-ms.openlocfilehash: 06f46e55545f669214f4a14775252df1a86b2008
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 90e848b21c79278f81507831025045224c4cf634
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54501271"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58834116"
 ---
 # <a name="concatenation-operations-visual-basic"></a>연결 작업 (Visual Basic)
 연결은 한 시퀀스를 다른 시퀀스에 추가하는 작업을 나타냅니다.  
@@ -25,6 +25,7 @@ ms.locfileid: "54501271"
 |Concat|두 시퀀스를 연결하여 하나의 시퀀스를 구성합니다.|해당 사항 없음.|<xref:System.Linq.Enumerable.Concat%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Concat%2A?displayProperty=nameWithType>|  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Linq>
 - [표준 쿼리 연산자 개요(Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)
 - [방법: (LINQ) (Visual Basic) 문자열 컬렉션 결합 및 비교](../../../../visual-basic/programming-guide/concepts/linq/how-to-combine-and-compare-string-collections-linq.md)

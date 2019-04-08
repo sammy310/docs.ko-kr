@@ -2,24 +2,26 @@
 title: <issuerChannelBehaviors> 요소
 ms.date: 03/30/2017
 ms.assetid: f7378673-8e9b-45b2-98d1-cf5dccdd8c40
-ms.openlocfilehash: 3386a287d577681b67bd3ad54a75b0276e29da1f
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 7cbd50daa82b0ca937a1bba93786545898b03c8b
+ms.sourcegitcommit: 5c2176883dc3107445702724a7caa7ac2f6cb0d3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57357250"
+ms.lasthandoff: 04/03/2019
+ms.locfileid: "58890477"
 ---
 # <a name="issuerchannelbehaviors-element"></a>\<issuerChannelBehaviors > 요소
 
 지정한 서비스 토큰 서비스와 통신할 때 사용 되는 Windows Communication Foundation (WCF) 클라이언트 끝점 동작 (구성에 정의 됨)의 컬렉션을 포함 합니다. 정의 된 동작을 포함할 수 없습니다 [\<clientCredentials>](../../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md) 요소입니다.
 
-\<system.ServiceModel>\
-\<behaviors>\
-endpointBehaviors section\
-\<behavior>\
-\<clientCredentials>\
-\<issuedToken>\
-\<issuerChannelBehaviors>
+```xml
+<system.ServiceModel>
+  <behaviors>
+    <endpointBehaviors>
+      <behavior>
+        <clientCredentials>
+          <issuedToken>
+            <issuerChannelBehaviors>
+```
 
 ## <a name="syntax"></a>구문
 
@@ -65,6 +67,6 @@ endpointBehaviors section\
 - [페더레이션 및 발급된 토큰](../../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)
 - [서비스 및 클라이언트에 보안 설정](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
 - [클라이언트에 보안 설정](../../../../../docs/framework/wcf/securing-clients.md)
-- [방법: 페더레이션된 클라이언트 만들기](../../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)
+- [방법: 페더레이션 클라이언트 만들기](../../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)
 - [방법: 로컬 발급자 구성](../../../../../docs/framework/wcf/feature-details/how-to-configure-a-local-issuer.md)
 - [페더레이션 및 발급된 토큰](../../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)

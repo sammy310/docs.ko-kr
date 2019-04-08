@@ -14,12 +14,12 @@ helpviewer_keywords:
 - Xor keyword [Visual Basic]
 - bitwise comparison [Visual Basic]
 ms.assetid: 036000a9-3934-4e7f-a9d0-a816de3d84a6
-ms.openlocfilehash: bc3df1fdee5405445b4534a6982383c49b369b01
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 0cba3a995fb1ab774c8a5308e58f0b6905fc23f3
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56980440"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58827070"
 ---
 # <a name="xor-operator-visual-basic"></a>배타적 or 연산자(Visual Basic)
 두 논리 제외를 수행 `Boolean` 식이나 두 숫자 식에 비트 제외 합니다.  
@@ -90,6 +90,7 @@ result = expression1 Xor expression2
  앞의 예제는 각각 2, 12, 14, 결과 생성합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [논리/비트 연산자 (Visual Basic)](../../../visual-basic/language-reference/operators/logical-bitwise-operators.md)
 - [Visual Basic에서의 연산자 우선 순위](../../../visual-basic/language-reference/operators/operator-precedence.md)
 - [기능별 연산자 목록](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)

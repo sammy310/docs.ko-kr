@@ -7,12 +7,12 @@ helpviewer_keywords:
 - XML child axis property [Visual Basic]
 - XML [Visual Basic], accessing
 ms.assetid: 6689eb36-c471-469f-a82d-099ab8197b25
-ms.openlocfilehash: 874c7490e451d64bf50e25934ea43a9b928ddab9
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: cd1b0db5305c7879d89cfdfff6cd458d6dea14f4
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56980557"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58836820"
 ---
 # <a name="how-to-access-xml-child-elements-visual-basic"></a>방법: XML 자식 요소 액세스 (Visual Basic)
 이 예제에서는 자식을 사용 하는 방법을 XML 요소에 지정 된 이름이 있는 모든 XML 자식 요소에 액세스 하려면 축 속성을 보여 줍니다. 사용 하 여 특히 합니다 <xref:System.Xml.Linq.XElement.Value%2A> 속성을 하는 컬렉션의 첫 번째 요소의 값을 가져옵니다는 `name` 자식 축 속성에서 반환 합니다. 합니다 `name` 자식 축 속성 이라는 모든 자식 요소를 가져옵니다 `phone` 에 `contact` 개체입니다. 또한이 예제에서는 합니다 `phone` 이라는 모든 자식 요소를 액세스 하는 자식 축 속성 `phone` 에 포함 된를 `contact` 개체입니다.  
@@ -26,6 +26,7 @@ ms.locfileid: "56980557"
 -   <xref:System.Xml.Linq> 네임스페이스에 대한 참조  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Xml.Linq.XContainer.Elements%2A?displayProperty=nameWithType>
 - [XML Child 축 속성](../../../../visual-basic/language-reference/xml-axis/xml-child-axis-property.md)
 - [XML 값 속성](../../../../visual-basic/language-reference/xml-axis/xml-value-property.md)

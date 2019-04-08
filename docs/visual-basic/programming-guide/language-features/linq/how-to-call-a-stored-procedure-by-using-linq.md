@@ -7,12 +7,12 @@ helpviewer_keywords:
 - stored procedures [LINQ to SQL]
 - queries [LINQ in Visual Basic], how-to topics
 ms.assetid: 6436d384-d1e0-40aa-8afd-451007477260
-ms.openlocfilehash: f37f5b232b6b5e7bb56ec028c702d5fa9ec798d9
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 2d05d43ae8f9b93fd3e5e405bb7ff0d59832e830
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56971379"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58823352"
 ---
 # <a name="how-to-call-a-stored-procedure-by-using-linq-visual-basic"></a>방법: LINQ (Visual Basic)를 사용 하 여 저장된 프로시저를 호출 합니다.
 언어 통합 쿼리 (LINQ) 쉽게 데이터베이스 개체와 같은 저장 프로시저를 포함 하 여 데이터베이스 정보에 액세스할 수 있습니다.  
@@ -33,7 +33,7 @@ ms.locfileid: "56971379"
   
 ### <a name="to-add-a-project-that-contains-a-linq-to-sql-file"></a>LINQ to SQL 파일을 포함 하는 프로젝트를 추가 하려면  
   
-1.  Visual Studio의 **파일** 메뉴에서 **새로 만들기**를 가리킨 다음 **프로젝트**를 클릭합니다. Visual basic **Windows Forms 응용 프로그램** 프로젝트 유형으로 합니다.  
+1.  Visual Studio의 **파일** 메뉴에서 **새로 만들기**를 가리킨 다음 **프로젝트**를 클릭합니다. Visual Basic **Windows Forms 응용 프로그램** 프로젝트 유형으로 합니다.  
   
 2.  **프로젝트** 메뉴에서 **새 항목 추가**를 클릭합니다. 선택 된 **LINQ to SQL 클래스** 항목 템플릿.  
   
@@ -69,6 +69,7 @@ ms.locfileid: "56971379"
 4.  F5 키를 눌러 프로젝트를 실행 하 고 결과 확인 합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [LINQ](../../../../visual-basic/programming-guide/language-features/linq/index.md)
 - [쿼리](../../../../visual-basic/language-reference/queries/index.md)
 - [LINQ to SQL](../../../../framework/data/adonet/sql/linq/index.md)

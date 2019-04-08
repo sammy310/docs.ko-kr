@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Visual Basic code, XML
 - XML [Visual Basic], manipulating
 ms.assetid: da32cffb-198d-41b1-9af3-260fe32e3b7d
-ms.openlocfilehash: 70ba038a2bdf4bde092ef6beecf32ac9ad5cbba1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7ed045b79460b3f1b3178d6bc85de9358d61f116
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54506903"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58835897"
 ---
 # <a name="manipulating-xml-in-visual-basic"></a>Visual Basic에서 XML 조작
 사용할 수 있습니다 *XML 리터럴을* 문자열, 파일, 스트림 등 외부 소스에서 XML을 로드 합니다. 사용할 수 있습니다 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] XML을 조작 하 여 사용 [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] XML을 쿼리하고 있습니다.  
@@ -43,6 +43,7 @@ ms.locfileid: "54506903"
  링크를 사용 하는 방법을 설명 하는 섹션이 제공 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] Visual Basic의 합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [XML](../../../../visual-basic/programming-guide/language-features/xml/index.md)
 - [LINQ](../../../../visual-basic/programming-guide/language-features/linq/index.md)
 - [Visual Basic의 LINQ 소개](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)

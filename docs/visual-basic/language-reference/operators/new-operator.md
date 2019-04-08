@@ -11,12 +11,12 @@ helpviewer_keywords:
 - New constraint
 - New keyword [Visual Basic]
 ms.assetid: d7d566d7-fe0e-4336-91f7-641a542de4d0
-ms.openlocfilehash: dda23ef3ff49bd32474f39f5ae1807e57bdc2a62
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 630b0c48def77449f426b287a26f95af7cfb930e
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56980466"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58837732"
 ---
 # <a name="new-operator-visual-basic"></a>New 연산자(Visual Basic)
 소개는 `New` 새 개체 인스턴스를 만들려면 절 형식 매개 변수에 생성자 제약 조건이 지정 또는 식별을 `Sub` 클래스 생성자로 프로시저입니다.  
@@ -48,6 +48,7 @@ ms.locfileid: "56980466"
  [Sub 문](../../../visual-basic/language-reference/statements/sub-statement.md)  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.OutOfMemoryException>
 - [C++ 키워드](../../../visual-basic/language-reference/keywords/index.md)
 - [형식 목록](../../../visual-basic/language-reference/statements/type-list.md)

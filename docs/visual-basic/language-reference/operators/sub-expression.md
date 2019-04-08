@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Sub Expression [Visual Basic]
 - subroutines [Visual Basic], sub expressions
 ms.assetid: 36b6bfd1-6539-4d8f-a5eb-6541a745ffde
-ms.openlocfilehash: 5e8c66f4f2b21a890b8c61e6fc642ce276df6f60
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 5b26a091dc8eb7415702c3c2853a569324def7d5
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56966725"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58824613"
 ---
 # <a name="sub-expression-visual-basic"></a>하위 식(Visual Basic)
 매개 변수 및 서브루틴 람다 식을 정의 하는 코드를 선언 합니다.  
@@ -58,6 +58,7 @@ End Sub
  [!code-vb[VbVbalrLambdas#15](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class1.vb#15)]  
   
 ## <a name="see-also"></a>참고자료
+
 - [Sub 문](../../../visual-basic/language-reference/statements/sub-statement.md)
 - [람다 식](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)
 - [연산자 및 식](../../../visual-basic/programming-guide/language-features/operators-and-expressions/index.md)

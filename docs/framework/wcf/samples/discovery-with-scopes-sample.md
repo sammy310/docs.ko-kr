@@ -2,12 +2,12 @@
 title: 범위 샘플을 사용한 검색
 ms.date: 03/30/2017
 ms.assetid: 6a37a754-6b8c-4ebe-bdf2-d4f0520271d5
-ms.openlocfilehash: 0d874116b90f423fbb78803a3641ef55fc848952
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ba49021022c33c1490f3dbaafc5bba1352ecf55c
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54508771"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58814296"
 ---
 # <a name="discovery-with-scopes-sample"></a>범위 샘플을 사용한 검색
 이 샘플에서는 범위를 사용하여 검색 가능한 엔드포인트를 분류하는 방법과 <xref:System.ServiceModel.Discovery.DiscoveryClient>를 사용하여 엔드포인트에 대한 비동기 검색을 수행하는 방법을 보여 줍니다. 이 샘플의 서비스에서는 엔드포인트 검색 동작을 추가하고 이를 사용하여 엔드포인트에 범위를 추가하고 엔드포인트의 검색 기능을 제어하여 각 엔드포인트에 대한 검색을 사용자 지정하는 방법을 보여 줍니다. 이 샘플의 클라이언트에서는 <xref:System.ServiceModel.Discovery.DiscoveryClient>를 만들고 <xref:System.ServiceModel.Discovery.FindCriteria>에 범위를 추가하는 방식으로 검색 매개 변수를 세부적으로 조정하여 범위를 포함하는 방법을 보여 줍니다. 이 샘플에서는 클라이언트가 종료 조건을 추가하여 응답을 제한하는 방법도 보여 줍니다.  
@@ -37,4 +37,3 @@ ms.locfileid: "54508771"
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Discovery\DiscoveryWithScopes`  
   
-## <a name="see-also"></a>참고자료

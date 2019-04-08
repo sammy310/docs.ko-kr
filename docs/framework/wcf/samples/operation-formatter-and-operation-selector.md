@@ -2,12 +2,12 @@
 title: 작업 포맷터와 작업 선택기
 ms.date: 03/30/2017
 ms.assetid: 1c27e9fe-11f8-4377-8140-828207b98a0e
-ms.openlocfilehash: 5261c082f748877505701221668b61bf7097ef06
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b4cc135983a741f4ae024a2917871f344e8a111c
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54661258"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58836235"
 ---
 # <a name="operation-formatter-and-operation-selector"></a>작업 포맷터와 작업 선택기
 이 샘플에서는 WCF에 필요한 것에서 다른 형식으로 메시지 데이터를 허용 하도록 Windows Communication Foundation (WCF) 확장성 요소를 사용할 수 있는 방법을 보여 줍니다. 기본적으로 WCF 포맷터는 메서드 매개 변수 아래에 포함 되도록 예상 합니다 `soap:body` 요소입니다. 이 샘플에서는 대신 HTTP GET 쿼리 문자열의 매개 변수 데이터를 구문 분석하고 이 데이터를 사용하여 메서드를 호출하는 사용자 지정 작업 포맷터를 구현하는 방법을 보여 줍니다.  
@@ -20,7 +20,7 @@ ms.locfileid: "54661258"
   
 -   `UriOperationSelector`(서버에서 <xref:System.ServiceModel.Dispatcher.IDispatchOperationSelector>를 구현하여 GET 요청의 작업 이름을 기반으로 작업 디스패치를 수행합니다.)  
   
--   `EnableHttpGetRequestsBehavior` 끝점 동작과 해당 구성(런타임에 필요한 작업 선택기를 추가합니다.)  
+-   `EnableHttpGetRequestsBehavior` 엔드포인트 동작과 해당 구성(런타임에 필요한 작업 선택기를 추가합니다.)  
   
 -   런타임에 새 작업 포맷터를 삽입하는 방법을 보여 줍니다.  
   
@@ -116,7 +116,7 @@ void ReplaceFormatterBehavior(OperationDescription operationDescription, Endpoin
     </bindings>  
     ```  
   
--   서비스의 App.config에서는 또한 사용자 지정 `EnableHttpGetRequestsBehavior`를 동작 확장 섹션에 추가한 다음 사용하여 이를 지정해야 합니다.  
+-   서비스의 App.config에서는 또한 사용자 지정 `EnableHttpGetRequestsBehavior`를 동작 확장명 섹션에 추가한 다음 사용하여 이를 지정해야 합니다.  
   
     ```xml  
     <behaviors>  
@@ -178,4 +178,3 @@ void ReplaceFormatterBehavior(OperationDescription operationDescription, Endpoin
   
 3.  단일 또는 다중 컴퓨터 구성에서 샘플을 실행 하려면의 지침을 따릅니다 [Windows Communication Foundation 샘플 실행](../../../../docs/framework/wcf/samples/running-the-samples.md)합니다.  
   
-## <a name="see-also"></a>참고자료

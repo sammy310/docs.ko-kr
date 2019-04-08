@@ -8,18 +8,18 @@ helpviewer_keywords:
 - Nothing keyword [Visual Basic]
 - Nothing keyword [Visual Basic], syntax
 ms.assetid: 06176e2d-bbf7-4a37-afaa-a86ad21ee99f
-ms.openlocfilehash: b8dfc166681dbadf1d2f4ba5a985011f5427f50a
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 97c651dbcc657fbab0706c9a959bd0031c0fe343
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56981428"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58826095"
 ---
 # <a name="nothing-visual-basic"></a>Nothing(Visual Basic)
 모든 데이터 형식의 기본 값을 나타냅니다. 기본값은 참조 형식에 대해는 `null` 참조 합니다. 값 형식에 대 한 기본값의 값 형식은 nullable 인지에 따라 달라 집니다.  
   
 > [!NOTE]
->  Nullable이 아닌 값 형식에 대 한 `Nothing` Visual basic에서에서 다른 `null` 에서 C#합니다. Visual basic에서는 null이 아닌 값 형식의 변수를 설정한 경우 `Nothing`, 변수의 선언 된 형식에 대 한 기본 값으로 설정 됩니다. C#nullable이 아닌 값 형식의 변수를 할당 하는 경우 `null`, 컴파일 시간 오류가 발생 합니다.  
+>  Nullable이 아닌 값 형식에 대 한 `Nothing` Visual Basic에서에서 다른 `null` 에서 C#합니다. Visual Basic에서는 null이 아닌 값 형식의 변수를 설정한 경우 `Nothing`, 변수의 선언 된 형식에 대 한 기본 값으로 설정 됩니다. C#nullable이 아닌 값 형식의 변수를 할당 하는 경우 `null`, 컴파일 시간 오류가 발생 합니다.  
   
 ## <a name="remarks"></a>설명  
  `Nothing` 데이터 형식의 기본 값을 나타냅니다. 기본 값을 값 형식 또는 참조 형식의 변수 인지에 따라 달라 집니다.  
@@ -51,6 +51,7 @@ ms.locfileid: "56981428"
  `Nothing` 다른는 <xref:System.DBNull> 는 초기화 되지 않은 variant 또는 존재 하지 않는 데이터베이스 열을 나타내는 개체입니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [Dim 문](../../visual-basic/language-reference/statements/dim-statement.md)
 - [개체 수명: 개체가 만들어지고 제거 하는 방법](../../visual-basic/programming-guide/language-features/objects-and-classes/object-lifetime-how-objects-are-created-and-destroyed.md)
 - [Visual Basic의 수명](../../visual-basic/programming-guide/language-features/declared-elements/lifetime.md)

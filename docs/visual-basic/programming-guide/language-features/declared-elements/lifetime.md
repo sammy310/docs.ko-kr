@@ -10,12 +10,12 @@ helpviewer_keywords:
 - lifetime [Visual Basic], Visual Basic
 - lifetime [Visual Basic]
 ms.assetid: bd91e390-690a-469a-9946-8dca70bc14e7
-ms.openlocfilehash: 15fb6895836de95d37081c44973f455622da178e
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 7a8730834c5241ddb1271d689cdda8942741f15f
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56976046"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58824925"
 ---
 # <a name="lifetime-in-visual-basic"></a>Visual Basic의 수명
 합니다 *수명* 선언 된 요소의 기간 자신이 하는 동안 사용할 수 있습니다. 변수는 수명이 하는 유일한 요소입니다. 이 목적을 위해 컴파일러가 처리 프로시저 매개 변수 및 변수의 특별 한 경우로 반환 합니다. 변수의 수명 값을 보관할 수 있는 기간을 나타냅니다. 해당 값은 해당 수명 동안 변경할 수 있지만 항상 어떤 값을 가집니다.  
@@ -72,6 +72,7 @@ ms.locfileid: "56976046"
  앞의 예제에서 선언 하 여 동일한 수명 주기를 생성할 수 있습니다 `applesSold` 모듈 수준입니다. 그러나 변수의 범위를이 이렇게 변경 하면 프로시저 단독으로 액세스할 수를 더 이상 됩니다. 다른 프로시저에 액세스할 수 있으므로 `applesSold` 및 해당 값을 변경, 누계를 신뢰할 수 없고 및 코드 관리가 더욱 어려워질 수 있습니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [공유](../../../../visual-basic/language-reference/modifiers/shared.md)
 - [Nothing](../../../../visual-basic/language-reference/nothing.md)
 - [선언 요소 이름](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)

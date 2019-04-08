@@ -5,12 +5,12 @@ helpviewer_keywords:
 - <permission> XML tag
 - permission XML tag
 ms.assetid: 0edf0500-5cd7-49c0-9255-64c48f972b77
-ms.openlocfilehash: d8fe70445b2a2500f99a0156604238665b7bbd1c
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 7333d4a4d051c157f6732224da0fffe4d7cd35ee
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57473502"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58827668"
 ---
 # <a name="permission-visual-basic"></a>\<사용 권한 > (Visual Basic)
 멤버에 대 한 필요한 사용 권한을 지정 합니다.  
@@ -39,4 +39,5 @@ ms.locfileid: "57473502"
  [!code-vb[VbVbcnXmlDocComments#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnXmlDocComments/VB/Class1.vb#7)]  
   
 ## <a name="see-also"></a>참고자료
+
 - [XML 주석 태그](../../../visual-basic/language-reference/xmldoc/index.md)

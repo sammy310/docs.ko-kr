@@ -1,20 +1,20 @@
 ---
-title: '샘플 XML 파일: Customers 및 Orders (LINQ to XML)'
+title: '샘플 XML 파일: Customers 및 Orders(LINQ to XML)'
 ms.date: 07/20/2015
 ms.assetid: ed319807-c432-4f8e-9694-dad4c7648310
-ms.openlocfilehash: 1ee702b8a487544f89454f35a1c1bdb5658c393d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9d5bf7600f99085ec860e88ab58c5b97aa9fae4c
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54671605"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58816696"
 ---
-# <a name="sample-xml-file-customers-and-orders-linq-to-xml"></a>샘플 XML 파일: Customers 및 Orders (LINQ to XML)
+# <a name="sample-xml-file-customers-and-orders-linq-to-xml"></a>샘플 XML 파일: Customers 및 Orders(LINQ to XML)
 다음 XML 파일은 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 설명서의 다양한 예제에서 사용됩니다. 이 파일에는 고객과 주문이 포함되어 있습니다.  
   
- 항목 [샘플 XSD 파일: Customers 및 Orders](../../../../visual-basic/programming-guide/concepts/linq/sample-xsd-file-customers-and-orders.md) 이 문서의 유효성을 검사 하는 데 사용 될 수 있는 XSD가 포함 되어 있습니다. 이 항목에서는 XSD의 `xs:key` 및 `xs:keyref` 기능을 사용하여 `CustomerID` 요소의 `Customer` 특성을 키로 설정하고 각 `CustomerID` 요소의 `Order` 요소와 각 `CustomerID` 요소의 `Customer` 특성 간 관계를 설정합니다.  
+ 항목 [샘플 XSD 파일: Customers 및 Orders](../../../../visual-basic/programming-guide/concepts/linq/sample-xsd-file-customers-and-orders.md)에는 이 문서의 유효성을 검사하는 데 사용할 수 있는 XSD가 포함되어 있습니다. 이 항목에서는 XSD의 `xs:key` 및 `xs:keyref` 기능을 사용하여 `CustomerID` 요소의 `Customer` 특성을 키로 설정하고 각 `CustomerID` 요소의 `Order` 요소와 각 `CustomerID` 요소의 `Customer` 특성 간 관계를 설정합니다.  
   
- 사용 하 여이 관계를 활용 하는 LINQ 쿼리 작성의 예는 `Join` 절 참조 [방법: 두 컬렉션 조인 (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-join-two-collections-linq-to-xml.md)합니다.  
+ `Join` 절을 사용하여 이 관계를 이용하는 LINQ 쿼리를 작성하는 예제는 [방법: 두 컬렉션 조인 (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-join-two-collections-linq-to-xml.md)합니다.  
   
 ## <a name="customersordersxml"></a>CustomersOrders.xml  
   
@@ -435,4 +435,5 @@ ms.locfileid: "54671605"
 ```  
   
 ## <a name="see-also"></a>참고자료
+
 - [샘플 XML 문서(LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)

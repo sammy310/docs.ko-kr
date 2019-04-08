@@ -10,12 +10,12 @@ helpviewer_keywords:
 - signatures [Visual Basic], procedure
 - overloads [Visual Basic], resolution
 ms.assetid: 766115d1-4352-45fb-859f-6063e0de0ec0
-ms.openlocfilehash: 435ba13b6d0b2a7d272c7f2bbea7ec410dd3d5e7
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: e7a05a5fb0b2053e92d9f947f197bdb2dcfa7ce0
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57678826"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58832283"
 ---
 # <a name="overload-resolution-visual-basic"></a>오버로드 확인(Visual Basic)
 Visual Basic 컴파일러는 여러 오버 로드 된 버전에 정의 된 프로시저 호출을 발견 하면, 오버 로드를 호출 하는 결정 해야 합니다. 다음 단계를 수행 하 여 수행 합니다.  
@@ -59,6 +59,7 @@ Visual Basic 컴파일러는 여러 오버 로드 된 버전에 정의 된 프�
 |빈 배열을 등 임의 길이의 배열|`ParamArray`|  
   
 ## <a name="see-also"></a>참고자료
+
 - [선택적 매개 변수](./optional-parameters.md)
 - [매개 변수 배열](./parameter-arrays.md)
 - [프로시저 오버로딩](./procedure-overloading.md)

@@ -15,12 +15,12 @@ helpviewer_keywords:
 - scope [Visual Basic], Visual Basic
 - procedure scope [Visual Basic]
 ms.assetid: 208106fe-79c9-4eec-93c6-55f08548895f
-ms.openlocfilehash: 38dd9d6d40780c25f06a35cf1ffbe4743b7da4a4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6139af65958cefe43578f436204fa6836a71de0b
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54537244"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58823547"
 ---
 # <a name="scope-in-visual-basic"></a>Visual Basic의 범위
 합니다 *범위* 선언 된 요소의 이름을 한정 하거나 통하지 않고를 참조할 수 있는 모든 코드의 집합입니다는 [Imports 문 (.NET Namespace 및 형식)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)합니다. 요소는 다음 수준 중 하나에서 범위를 포함할 수 있습니다.  
@@ -135,6 +135,7 @@ Public strMsg As String
  일반적으로 변수 또는 상수를 선언할 때 최대한으로 좁은 범위를 확인 하려면이 좋은 프로그래밍 방법 (블록 범위는 좁음). 이 메모리를 절약 하는 데 도움이 됩니다 하 고 변수를 잘못 참조 코드의 가능성을 최소화 합니다. 변수를 선언 해야 마찬가지로 [정적](../../../../visual-basic/language-reference/modifiers/static.md) 경우에 프로시저 호출 하는 동안 값을 유지 해야 합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [선언 요소의 특징](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-characteristics.md)
 - [방법: 변수의 범위 제어](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-control-the-scope-of-a-variable.md)
 - [Visual Basic의 수명](../../../../visual-basic/programming-guide/language-features/declared-elements/lifetime.md)
