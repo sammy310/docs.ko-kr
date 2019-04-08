@@ -2,12 +2,12 @@
 title: 배포 아키텍처
 ms.date: 03/30/2017
 ms.assetid: ed4ca86e-e3d8-4acb-87aa-1921fbc353be
-ms.openlocfilehash: b07fc03fd11c794d804b6bcd1813010965365e43
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4083f7f7ef3fc986e9a7c430b8ed8cfe451c9d86
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54623445"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59075914"
 ---
 # <a name="architecture-of-syndication"></a>배포 아키텍처
 배포 API는 네트워크에서 배포된 콘텐츠를 다양한 형식으로 작성할 수 있는 형식 중립적 프로그래밍 모델을 제공하기 위해 디자인되었습니다. 추상 데이터 모델은 다음 클래스로 구성됩니다.  
@@ -78,6 +78,7 @@ ms.locfileid: "54623445"
 -   배포 프로토콜의 주요 기능은 확장성입니다. Atom 1.0 및 RSS 2.0에서는 사양에 정의되지 않은 배포 피드에 특성 및 요소를 추가할 수 있습니다. WCF 배포 프로그래밍 모델에서는 두 가지 사용자 지정 특성 및 확장:는 새 클래스 파생 및 자유로운 형식의 액세스 합니다. 자세한 내용은 [배포 확장성](../../../../docs/framework/wcf/feature-details/syndication-extensibility.md)합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [WCF 배포 개요](../../../../docs/framework/wcf/feature-details/wcf-syndication-overview.md)
 - [WCF 배포 개체 모델을 Atom 및 RSS로 매핑하는 방법](../../../../docs/framework/wcf/feature-details/how-the-wcf-syndication-object-model-maps-to-atom-and-rss.md)
 - [WCF 웹 HTTP 프로그래밍 모델](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)

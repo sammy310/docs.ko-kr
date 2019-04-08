@@ -7,22 +7,22 @@ helpviewer_keywords:
 - animation [WPF], paths
 - path animations [WPF]
 ms.assetid: e9b71017-bac4-40d7-858b-326939442cb1
-ms.openlocfilehash: 6004dad448b965d51be6543478cbd059fb7f4d87
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 714303569111f30d4cc03ab0ab7cb2acec4276c2
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57373480"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59072508"
 ---
 # <a name="path-animation-how-to-topics"></a>경로 애니메이션 방법 항목
 이 섹션의 항목 경로 따라 개체에 애니메이션을 적용 하는 방법을 보여 줍니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
  [경로를 따라 개체에 애니메이션 효과 주기(Double 애니메이션)](how-to-animate-an-object-along-a-path-double-animation.md)  
- [경로를 따라 개체에 애니메이션 효과 주기(포인트 애니메이션)](how-to-animate-an-object-along-a-path-point-animation.md)  
+ [경로를 따라 개체에 애니메이션 효과 주기(Point 애니메이션)](how-to-animate-an-object-along-a-path-point-animation.md)  
  [경로를 따라 개체에 애니메이션 효과 주기(Matrix 애니메이션)](how-to-animate-an-object-along-a-path-matrix-animation.md)  
- [경로를 따라 개체에 애니메이션 효과 주기(오프셋이 누적된 매트릭스 애니메이션)](animate-an-object-along-a-path-matrix-animation-with-offset.md)  
- [기하학적 경로를 사용하여 개체 회전(매트릭스 애니메이션)](how-to-rotate-an-object-by-using-a-geometric-path-matrix-animation.md)  
+ [경로를 따라 개체에 애니메이션 효과 주기(오프셋이 누적된 Matrix 애니메이션)](animate-an-object-along-a-path-matrix-animation-with-offset.md)  
+ [기하학적 경로를 사용하여 개체 회전(Matrix 애니메이션)](how-to-rotate-an-object-by-using-a-geometric-path-matrix-animation.md)  
  [기하학적 경로를 사용하여 개체 회전](how-to-rotate-an-object-by-using-a-geometric-path.md)  
   
 ## <a name="reference"></a>참조  
@@ -31,6 +31,7 @@ ms.locfileid: "57373480"
  <xref:System.Windows.Media.Animation.Storyboard>  
   
 ## <a name="see-also"></a>참고자료
+
 - [그래픽 및 멀티미디어](index.md)
 - [애니메이션 개요](animation-overview.md)
 - [키 프레임 애니메이션 개요](key-frame-animations-overview.md)

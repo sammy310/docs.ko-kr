@@ -2,12 +2,12 @@
 title: ISNULL(Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: dc7a0173-3664-4c90-a57b-5cbb0a8ed7ee
-ms.openlocfilehash: 1b728e170968e2fbeb67eef3f8f940c64816ff0d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 894d3ab91623aa4246bf7735fb1b7d04e066825a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54528734"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59072638"
 ---
 # <a name="isnull-entity-sql"></a>ISNULL(Entity SQL)
 쿼리 식이 null인지 여부를 결정합니다.  
@@ -26,7 +26,7 @@ expression IS [ NOT ] NULL
  IS NULL의 EDM 부울 결과를 부정합니다.  
   
 ## <a name="return-value"></a>반환 값  
- `true`이 null을 반환하면 `expression`이고, 그렇지 않으면 `false`입니다.  
+ `true` 하는 경우 `expression` 고, 그렇지 않으면 null을 반환 합니다 `false`합니다.  
   
 ## <a name="remarks"></a>설명  
  외부 조인의 요소가 null인지 여부를 확인하려면 `IS NULL`을 사용합니다.  
@@ -46,7 +46,7 @@ select c from LOB.Customer as c where c.DOB is not null
   
  다음 표에서는 일부 패턴에 대한 `IS NULL`의 동작을 보여 줍니다. 공급자 호출 이전에 모든 예외가 클라이언트 측에서 throw됩니다.  
   
-|패턴|동작|  
+|무늬|동작|  
 |-------------|--------------|  
 |null IS NULL|`true`를 반환합니다.|  
 |TREAT (null AS EntityType) IS NULL|`true`를 반환합니다.|  
@@ -66,4 +66,5 @@ select c from LOB.Customer as c where c.DOB is not null
  [!code-csharp[DP EntityServices Concepts 2#ISNULL](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#isnull)]  
   
 ## <a name="see-also"></a>참고자료
+
 - [엔터티 SQL 참조](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)

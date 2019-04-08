@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 74eb098ee68f57477c8b9115db2bce60919f0b12
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8056ef18089f56f1f9b6717d505fa3d058957541
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54580215"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59074419"
 ---
 # <a name="spawninstance-function"></a>SpawnInstance 함수
 클래스의 새 인스턴스를 만듭니다.    
@@ -59,8 +59,8 @@ HRESULT SpawnInstance (
 |상수  |값  |설명  |
 |---------|---------|---------|
 | `WBEM_E_INCOMPLETE_CLASS` | 0x80041020 | `ptr` 올바른 클래스 정의가 아닌 경우 및 새 인스턴스를 생성할 수 없습니다. 완료 되지 않은 또는 등록 되지 않은 Windows 관리를 사용 하 여 호출 하 여 [PutClassWmi](putclasswmi.md)합니다. |
-| `WBEM_E_OUT_OF_MEMORY` | 0x80041006 | 메모리가 부족하여 작업을 완료할 수 없는 경우 |
-| `WBEM_E_INVALID_PARAMETER` | 0x80041008 | `ppNewClass`가 `null`인 경우 |
+| `WBEM_E_OUT_OF_MEMORY` | 0x80041006 | 메모리가 부족 하 여 작업을 완료할 수 없습니다. |
+| `WBEM_E_INVALID_PARAMETER` | 0x80041008 | `ppNewClass` `null`합니다. |
 | `WBEM_S_NO_ERROR` | 0 | 함수 호출이 성공 했습니다.  |
   
 ## <a name="remarks"></a>설명
@@ -68,9 +68,6 @@ HRESULT SpawnInstance (
 이 함수에 대 한 호출을 래핑하는 [IWbemClassObject::SpawnInstance](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-spawninstance) 메서드.
 
 `ptr` 클래스 정의에서 받아야 Windows 관리 합니다. (인스턴스에서 인스턴스 생성은 지원 하지만 반환 된 인스턴스에만 비어 있습니다.) 그런 다음이 클래스 정의 사용 하 여 새 인스턴스를 만듭니다. 에 대 한 호출을 [PutInstanceWmi](putinstancewmi.md) 함수는 Windows 관리 인스턴스를 작성 하려는 경우에 필요 합니다.
-
-
-
 
 반환 되는 새 개체 `ppNewClass` 현재 개체의 하위 클래스는 자동으로 됩니다. 이 동작을 재정의할 수 없습니다. 서브 클래스 (파생된 클래스)을 만들 수 있는 다른 메서드가 없는 합니다.
 
@@ -82,4 +79,5 @@ HRESULT SpawnInstance (
  **.NET Framework 버전:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>참고자료
-- [WMI 및 성능 카운터 (관리 되지 않는 API 참조)](index.md)
+
+- [WMI 및 성능 카운터(관리되지 않는 API 참조)](index.md)

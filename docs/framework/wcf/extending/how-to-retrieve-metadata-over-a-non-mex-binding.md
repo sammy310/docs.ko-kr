@@ -1,15 +1,15 @@
 ---
-title: '방법: 가 아닌-MEX 바인딩을 통해 메타 데이터를 검색 합니다.'
+title: '방법: MEX가 아닌 바인딩을 통해 메타데이터 검색'
 ms.date: 03/30/2017
 ms.assetid: 2292e124-81b2-4317-b881-ce9c1ec66ecb
-ms.openlocfilehash: ac0a7d979e6b86933c4acd88b1a2fa11ba5bc991
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 04acde96d7e712d8c6bc64988775a37fc79aaeab
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54689553"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59074159"
 ---
-# <a name="how-to-retrieve-metadata-over-a-non-mex-binding"></a>방법: 가 아닌-MEX 바인딩을 통해 메타 데이터를 검색 합니다.
+# <a name="how-to-retrieve-metadata-over-a-non-mex-binding"></a>방법: MEX가 아닌 바인딩을 통해 메타데이터 검색
 이 항목에서는 MEX가 아닌 바인딩을 통해 MEX 엔드포인트로부터 메타데이터를 검색하는 방법에 대해 설명합니다. 이 샘플의 코드를 기반으로 합니다 [사용자 지정 보안 메타 데이터 끝점](../../../../docs/framework/wcf/samples/custom-secure-metadata-endpoint.md) 샘플입니다.  
   
 ### <a name="to-retrieve-metadata-over-a-non-mex-binding"></a>MEX가 아닌 바인딩을 통해 메타데이터를 검색하려면  
@@ -124,4 +124,5 @@ ms.locfileid: "54689553"
 5.  이제 서비스 엔드포인트의 컬렉션을 가지게 됩니다. 메타 데이터를 가져오는 방법에 대 한 자세한 내용은 참조 하세요. [방법: 서비스 끝점으로 메타 데이터를 가져오기](../../../../docs/framework/wcf/feature-details/how-to-import-metadata-into-service-endpoints.md)합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [메타데이터](../../../../docs/framework/wcf/feature-details/metadata.md)
