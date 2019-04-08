@@ -13,198 +13,198 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 04/02/2019
 ms.locfileid: "58814564"
 ---
-# <a name="visual-basic-coding-conventions"></a><span data-ttu-id="72b30-102">Visual Basic 코딩 규칙</span><span class="sxs-lookup"><span data-stu-id="72b30-102">Visual Basic Coding Conventions</span></span>
-<span data-ttu-id="72b30-103">Microsoft는 이 항목의 지침에 따라 예제와 설명서를 개발합니다.</span><span class="sxs-lookup"><span data-stu-id="72b30-103">Microsoft develops samples and documentation that follow the guidelines in this topic.</span></span> <span data-ttu-id="72b30-104">사용자가 동일한 코딩 규칙을 따른다면, 다음과 같은 이점을 얻을 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="72b30-104">If you follow the same coding conventions, you may gain the following benefits:</span></span>  
+# <a name="visual-basic-coding-conventions"></a><span data-ttu-id="7f712-102">Visual Basic 코딩 규칙</span><span class="sxs-lookup"><span data-stu-id="7f712-102">Visual Basic Coding Conventions</span></span>
+<span data-ttu-id="7f712-103">Microsoft는 이 항목의 지침에 따라 예제와 설명서를 개발합니다.</span><span class="sxs-lookup"><span data-stu-id="7f712-103">Microsoft develops samples and documentation that follow the guidelines in this topic.</span></span> <span data-ttu-id="7f712-104">사용자가 동일한 코딩 규칙을 따른다면, 다음과 같은 이점을 얻을 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="7f712-104">If you follow the same coding conventions, you may gain the following benefits:</span></span>  
   
--   <span data-ttu-id="72b30-105">코드는 판독기 레이아웃이 아닌 내용에 집중할 수 있도록 일관된 모양을 갖습니다.</span><span class="sxs-lookup"><span data-stu-id="72b30-105">Your code will have a consistent look, so that readers can better focus on content, not layout.</span></span>  
+-   <span data-ttu-id="7f712-105">코드는 판독기 레이아웃이 아닌 내용에 집중할 수 있도록 일관된 모양을 갖습니다.</span><span class="sxs-lookup"><span data-stu-id="7f712-105">Your code will have a consistent look, so that readers can better focus on content, not layout.</span></span>  
   
--   <span data-ttu-id="72b30-106">읽는 사람이 이전 경험을 기반으로 예상할 수 있으므로 코드를 더 신속하게 이해합니다.</span><span class="sxs-lookup"><span data-stu-id="72b30-106">Readers understand your code more quickly because they can make assumptions based on previous experience.</span></span>  
+-   <span data-ttu-id="7f712-106">읽는 사람이 이전 경험을 기반으로 예상할 수 있으므로 코드를 더 신속하게 이해합니다.</span><span class="sxs-lookup"><span data-stu-id="7f712-106">Readers understand your code more quickly because they can make assumptions based on previous experience.</span></span>  
   
--   <span data-ttu-id="72b30-107">코드를 더 쉽게 복사, 변경 및  유지 관리할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="72b30-107">You can copy, change, and maintain the code more easily.</span></span>  
+-   <span data-ttu-id="7f712-107">코드를 더 쉽게 복사, 변경 및  유지 관리할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="7f712-107">You can copy, change, and maintain the code more easily.</span></span>  
   
--   <span data-ttu-id="72b30-108">코드가 Visual basic을 위한 "모범 사례"가 될 것입니다.</span><span class="sxs-lookup"><span data-stu-id="72b30-108">You help ensure that your code demonstrates "best practices" for Visual Basic.</span></span>  
+-   <span data-ttu-id="7f712-108">코드가 Visual Basic을 위한 "모범 사례"가 될 것입니다.</span><span class="sxs-lookup"><span data-stu-id="7f712-108">You help ensure that your code demonstrates "best practices" for Visual Basic.</span></span>  
   
-## <a name="naming-conventions"></a><span data-ttu-id="72b30-109">명명 규칙</span><span class="sxs-lookup"><span data-stu-id="72b30-109">Naming Conventions</span></span>  
+## <a name="naming-conventions"></a><span data-ttu-id="7f712-109">명명 규칙</span><span class="sxs-lookup"><span data-stu-id="7f712-109">Naming Conventions</span></span>  
   
--   <span data-ttu-id="72b30-110">명명 지침에 대한 정보를 더 보려면, [명명 지침](../../../standard/design-guidelines/naming-guidelines.md) 항목을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="72b30-110">For information about naming guidelines, see [Naming Guidelines](../../../standard/design-guidelines/naming-guidelines.md) topic.</span></span>  
+-   <span data-ttu-id="7f712-110">명명 지침에 대한 정보를 더 보려면, [명명 지침](../../../standard/design-guidelines/naming-guidelines.md) 항목을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="7f712-110">For information about naming guidelines, see [Naming Guidelines](../../../standard/design-guidelines/naming-guidelines.md) topic.</span></span>  
   
--   <span data-ttu-id="72b30-111">변수 이름의 일부로 "My" 또는 "my"를 사용하지 마십시오.</span><span class="sxs-lookup"><span data-stu-id="72b30-111">Do not use "My" or "my" as part of a variable name.</span></span> <span data-ttu-id="72b30-112">이것은 `My`개체와 혼동을 일으킵니다.</span><span class="sxs-lookup"><span data-stu-id="72b30-112">This practice creates confusion with the `My` objects.</span></span>  
+-   <span data-ttu-id="7f712-111">변수 이름의 일부로 "My" 또는 "my"를 사용하지 마십시오.</span><span class="sxs-lookup"><span data-stu-id="7f712-111">Do not use "My" or "my" as part of a variable name.</span></span> <span data-ttu-id="7f712-112">이것은 `My`개체와 혼동을 일으킵니다.</span><span class="sxs-lookup"><span data-stu-id="7f712-112">This practice creates confusion with the `My` objects.</span></span>  
   
--   <span data-ttu-id="72b30-113">지침에 맞게 자동으로 생성된 코드에서 개체의 이름을 변경할 필요가 없습니다.</span><span class="sxs-lookup"><span data-stu-id="72b30-113">You do not have to change the names of objects in auto-generated code to make them fit the guidelines.</span></span>  
+-   <span data-ttu-id="7f712-113">지침에 맞게 자동으로 생성된 코드에서 개체의 이름을 변경할 필요가 없습니다.</span><span class="sxs-lookup"><span data-stu-id="7f712-113">You do not have to change the names of objects in auto-generated code to make them fit the guidelines.</span></span>  
   
-## <a name="layout-conventions"></a><span data-ttu-id="72b30-114">레이아웃 규칙</span><span class="sxs-lookup"><span data-stu-id="72b30-114">Layout Conventions</span></span>  
+## <a name="layout-conventions"></a><span data-ttu-id="7f712-114">레이아웃 규칙</span><span class="sxs-lookup"><span data-stu-id="7f712-114">Layout Conventions</span></span>  
   
--   <span data-ttu-id="72b30-115">공백으로 탭을 삽입하고, 4칸 들여쓰기하는 스마트 들여쓰기를 사용하십시오.</span><span class="sxs-lookup"><span data-stu-id="72b30-115">Insert tabs as spaces, and use smart indenting with four-space indents.</span></span>  
+-   <span data-ttu-id="7f712-115">공백으로 탭을 삽입하고, 4칸 들여쓰기하는 스마트 들여쓰기를 사용하십시오.</span><span class="sxs-lookup"><span data-stu-id="7f712-115">Insert tabs as spaces, and use smart indenting with four-space indents.</span></span>  
   
--   <span data-ttu-id="72b30-116">코드 편집기에서 코드의 서식을 재조정하기 위해서는 **Pretty listing(reformatting)of code** 옵션을 이용하십시오.</span><span class="sxs-lookup"><span data-stu-id="72b30-116">Use **Pretty listing (reformatting) of code** to reformat your code in the code editor.</span></span> <span data-ttu-id="72b30-117">자세한 내용은 [옵션, 텍스트 편집기, 기본(Visual Basic)](/visualstudio/ide/reference/options-text-editor-basic-visual-basic)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="72b30-117">For more information, see [Options, Text Editor, Basic (Visual Basic)](/visualstudio/ide/reference/options-text-editor-basic-visual-basic).</span></span>  
+-   <span data-ttu-id="7f712-116">코드 편집기에서 코드의 서식을 재조정하기 위해서는 **Pretty listing(reformatting)of code** 옵션을 이용하십시오.</span><span class="sxs-lookup"><span data-stu-id="7f712-116">Use **Pretty listing (reformatting) of code** to reformat your code in the code editor.</span></span> <span data-ttu-id="7f712-117">자세한 내용은 [옵션, 텍스트 편집기, 기본(Visual Basic)](/visualstudio/ide/reference/options-text-editor-basic-visual-basic)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="7f712-117">For more information, see [Options, Text Editor, Basic (Visual Basic)](/visualstudio/ide/reference/options-text-editor-basic-visual-basic).</span></span>  
   
--   <span data-ttu-id="72b30-118">한 줄에 하나의 문을 사용하십시오.</span><span class="sxs-lookup"><span data-stu-id="72b30-118">Use only one statement per line.</span></span> <span data-ttu-id="72b30-119">Visual Basic의 줄 구분 기호 문자(:)를 사용하지 마십시오.</span><span class="sxs-lookup"><span data-stu-id="72b30-119">Don't use the Visual Basic line separator character (:).</span></span>  
+-   <span data-ttu-id="7f712-118">한 줄에 하나의 문을 사용하십시오.</span><span class="sxs-lookup"><span data-stu-id="7f712-118">Use only one statement per line.</span></span> <span data-ttu-id="7f712-119">Visual Basic의 줄 구분 기호 문자(:)를 사용하지 마십시오.</span><span class="sxs-lookup"><span data-stu-id="7f712-119">Don't use the Visual Basic line separator character (:).</span></span>  
   
--   <span data-ttu-id="72b30-120">언어에서 허용하더라도, 암시적 줄 연속 문자를 위해 명시적 줄 연속 문자 "_"를 사용하지 마십시오.</span><span class="sxs-lookup"><span data-stu-id="72b30-120">Avoid using the explicit line continuation character "_" in favor of implicit line continuation wherever the language allows it.</span></span>  
+-   <span data-ttu-id="7f712-120">언어에서 허용하더라도, 암시적 줄 연속 문자를 위해 명시적 줄 연속 문자 "_"를 사용하지 마십시오.</span><span class="sxs-lookup"><span data-stu-id="7f712-120">Avoid using the explicit line continuation character "_" in favor of implicit line continuation wherever the language allows it.</span></span>  
   
--   <span data-ttu-id="72b30-121">한 줄에 하나의 선언만 사용하십시오.</span><span class="sxs-lookup"><span data-stu-id="72b30-121">Use only one declaration per line.</span></span>  
+-   <span data-ttu-id="7f712-121">한 줄에 하나의 선언만 사용하십시오.</span><span class="sxs-lookup"><span data-stu-id="7f712-121">Use only one declaration per line.</span></span>  
   
--   <span data-ttu-id="72b30-122">만약 **Pretty listing(reformatting)of code**가 연속 줄 형식을 자동으로 지정하지 않는다면, 수동으로 연속된 줄을 들여쓰기하십시오.</span><span class="sxs-lookup"><span data-stu-id="72b30-122">If **Pretty listing (reformatting) of code** doesn't format continuation lines automatically, manually indent continuation lines one tab stop.</span></span> <span data-ttu-id="72b30-123">그러나 목록의 항목을 항상 왼쪽 맞춤으로 하십시오.</span><span class="sxs-lookup"><span data-stu-id="72b30-123">However, always left-align items in a list.</span></span>  
+-   <span data-ttu-id="7f712-122">만약 **Pretty listing(reformatting)of code**가 연속 줄 형식을 자동으로 지정하지 않는다면, 수동으로 연속된 줄을 들여쓰기하십시오.</span><span class="sxs-lookup"><span data-stu-id="7f712-122">If **Pretty listing (reformatting) of code** doesn't format continuation lines automatically, manually indent continuation lines one tab stop.</span></span> <span data-ttu-id="7f712-123">그러나 목록의 항목을 항상 왼쪽 맞춤으로 하십시오.</span><span class="sxs-lookup"><span data-stu-id="7f712-123">However, always left-align items in a list.</span></span>  
   
     ```  
     a As Integer,  
     b As Integer  
     ```  
   
--   <span data-ttu-id="72b30-124">메서드와 속성의 정의 사이에는 하나 이상의 빈 줄을 추가하십시오.</span><span class="sxs-lookup"><span data-stu-id="72b30-124">Add at least one blank line between method and property definitions.</span></span>  
+-   <span data-ttu-id="7f712-124">메서드와 속성의 정의 사이에는 하나 이상의 빈 줄을 추가하십시오.</span><span class="sxs-lookup"><span data-stu-id="7f712-124">Add at least one blank line between method and property definitions.</span></span>  
   
-## <a name="commenting-conventions"></a><span data-ttu-id="72b30-125">주석 규칙</span><span class="sxs-lookup"><span data-stu-id="72b30-125">Commenting Conventions</span></span>  
+## <a name="commenting-conventions"></a><span data-ttu-id="7f712-125">주석 규칙</span><span class="sxs-lookup"><span data-stu-id="7f712-125">Commenting Conventions</span></span>  
   
--   <span data-ttu-id="72b30-126">코드 줄의 끝이 아닌, 별도 줄에 주석을 작성하십시오.</span><span class="sxs-lookup"><span data-stu-id="72b30-126">Put comments on a separate line instead of at the end of a line of code.</span></span>  
+-   <span data-ttu-id="7f712-126">코드 줄의 끝이 아닌, 별도 줄에 주석을 작성하십시오.</span><span class="sxs-lookup"><span data-stu-id="7f712-126">Put comments on a separate line instead of at the end of a line of code.</span></span>  
   
--   <span data-ttu-id="72b30-127">주석은 대문자로 시작하고, 주석의 끝에 마침표를 찍으십시오.</span><span class="sxs-lookup"><span data-stu-id="72b30-127">Start comment text with an uppercase letter, and end comment text with a period.</span></span>  
+-   <span data-ttu-id="7f712-127">주석은 대문자로 시작하고, 주석의 끝에 마침표를 찍으십시오.</span><span class="sxs-lookup"><span data-stu-id="7f712-127">Start comment text with an uppercase letter, and end comment text with a period.</span></span>  
   
--   <span data-ttu-id="72b30-128">주석 구분 기호(')와 주석 내용 사이에 빈 칸을 하나 삽입하십시오.</span><span class="sxs-lookup"><span data-stu-id="72b30-128">Insert one space between the comment delimiter (') and the comment text.</span></span>  
+-   <span data-ttu-id="7f712-128">주석 구분 기호(')와 주석 내용 사이에 빈 칸을 하나 삽입하십시오.</span><span class="sxs-lookup"><span data-stu-id="7f712-128">Insert one space between the comment delimiter (') and the comment text.</span></span>  
   
      [!code-vb[VbVbalrGuidelines#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#2)]  
   
--   <span data-ttu-id="72b30-129">서식이 지정된 별표 블록으로 주석을 둘러싸지 마십시오.</span><span class="sxs-lookup"><span data-stu-id="72b30-129">Do not surround comments with formatted blocks of asterisks.</span></span>  
+-   <span data-ttu-id="7f712-129">서식이 지정된 별표 블록으로 주석을 둘러싸지 마십시오.</span><span class="sxs-lookup"><span data-stu-id="7f712-129">Do not surround comments with formatted blocks of asterisks.</span></span>  
   
-## <a name="program-structure"></a><span data-ttu-id="72b30-130">프로그램 구조</span><span class="sxs-lookup"><span data-stu-id="72b30-130">Program Structure</span></span>  
+## <a name="program-structure"></a><span data-ttu-id="7f712-130">프로그램 구조</span><span class="sxs-lookup"><span data-stu-id="7f712-130">Program Structure</span></span>  
   
--   <span data-ttu-id="72b30-131">사용 하는 경우는 `Main` 메서드를 새 콘솔 응용 프로그램에 대 한 기본 구조를 사용 하 고 사용 하 여 `My` 명령줄 인수에 대 한 합니다.</span><span class="sxs-lookup"><span data-stu-id="72b30-131">When you use the `Main` method, use the default construct for new console applications, and use `My` for command-line arguments.</span></span>  
+-   <span data-ttu-id="7f712-131">사용 하는 경우는 `Main` 메서드를 새 콘솔 응용 프로그램에 대 한 기본 구조를 사용 하 고 사용 하 여 `My` 명령줄 인수에 대 한 합니다.</span><span class="sxs-lookup"><span data-stu-id="7f712-131">When you use the `Main` method, use the default construct for new console applications, and use `My` for command-line arguments.</span></span>  
   
      [!code-vb[VbVbalrGuidelines#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#3)]  
   
-## <a name="language-guidelines"></a><span data-ttu-id="72b30-132">언어 지침</span><span class="sxs-lookup"><span data-stu-id="72b30-132">Language Guidelines</span></span>  
+## <a name="language-guidelines"></a><span data-ttu-id="7f712-132">언어 지침</span><span class="sxs-lookup"><span data-stu-id="7f712-132">Language Guidelines</span></span>  
   
-### <a name="string-data-type"></a><span data-ttu-id="72b30-133">String 데이터 형식</span><span class="sxs-lookup"><span data-stu-id="72b30-133">String Data Type</span></span>  
+### <a name="string-data-type"></a><span data-ttu-id="7f712-133">String 데이터 형식</span><span class="sxs-lookup"><span data-stu-id="7f712-133">String Data Type</span></span>  
   
--   <span data-ttu-id="72b30-134">문자열을 연결하려면 앰퍼샌드(&)를 사용하십시오.</span><span class="sxs-lookup"><span data-stu-id="72b30-134">To concatenate strings, use an ampersand (&).</span></span>  
+-   <span data-ttu-id="7f712-134">문자열을 연결하려면 앰퍼샌드(&)를 사용하십시오.</span><span class="sxs-lookup"><span data-stu-id="7f712-134">To concatenate strings, use an ampersand (&).</span></span>  
   
      [!code-vb[VbVbalrGuidelines#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#4)]  
   
--   <span data-ttu-id="72b30-135">문자열을 루프에 추가 하려면 사용 된 <xref:System.Text.StringBuilder> 개체입니다.</span><span class="sxs-lookup"><span data-stu-id="72b30-135">To append strings in loops, use the <xref:System.Text.StringBuilder> object.</span></span>  
+-   <span data-ttu-id="7f712-135">문자열을 루프에 추가 하려면 사용 된 <xref:System.Text.StringBuilder> 개체입니다.</span><span class="sxs-lookup"><span data-stu-id="7f712-135">To append strings in loops, use the <xref:System.Text.StringBuilder> object.</span></span>  
   
      [!code-vb[VbVbalrGuidelines#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#5)]  
   
-### <a name="relaxed-delegates-in-event-handlers"></a><span data-ttu-id="72b30-136">완화된 대리자 이벤트 처리기</span><span class="sxs-lookup"><span data-stu-id="72b30-136">Relaxed Delegates in Event Handlers</span></span>  
- <span data-ttu-id="72b30-137">이벤트 처리기에 인수 (개체 및 Eventarg)를 명시적으로 적합 하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="72b30-137">Do not explicitly qualify the arguments (Object and EventArgs) to event handlers.</span></span> <span data-ttu-id="72b30-138">이벤트 (예를 들어, object, EventArgs와 발신자)에 전달 되는 이벤트 인수를 사용 하지 않는 경우 완화 된 대리자를 사용 하 여 및 코드에서 이벤트 인수를 생략 합니다.</span><span class="sxs-lookup"><span data-stu-id="72b30-138">If you are not using the event arguments that are passed to an event (for example, sender as Object, e as EventArgs), use relaxed delegates, and leave out the event arguments in your code:</span></span>  
+### <a name="relaxed-delegates-in-event-handlers"></a><span data-ttu-id="7f712-136">완화된 대리자 이벤트 처리기</span><span class="sxs-lookup"><span data-stu-id="7f712-136">Relaxed Delegates in Event Handlers</span></span>  
+ <span data-ttu-id="7f712-137">이벤트 처리기에 인수 (개체 및 Eventarg)를 명시적으로 적합 하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="7f712-137">Do not explicitly qualify the arguments (Object and EventArgs) to event handlers.</span></span> <span data-ttu-id="7f712-138">이벤트 (예를 들어, object, EventArgs와 발신자)에 전달 되는 이벤트 인수를 사용 하지 않는 경우 완화 된 대리자를 사용 하 여 및 코드에서 이벤트 인수를 생략 합니다.</span><span class="sxs-lookup"><span data-stu-id="7f712-138">If you are not using the event arguments that are passed to an event (for example, sender as Object, e as EventArgs), use relaxed delegates, and leave out the event arguments in your code:</span></span>  
   
  [!code-vb[VbVbalrGuidelines#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#7)]  
   
-### <a name="unsigned-data-type"></a><span data-ttu-id="72b30-139">부호 없는 데이터 형식</span><span class="sxs-lookup"><span data-stu-id="72b30-139">Unsigned Data Type</span></span>  
+### <a name="unsigned-data-type"></a><span data-ttu-id="7f712-139">부호 없는 데이터 형식</span><span class="sxs-lookup"><span data-stu-id="7f712-139">Unsigned Data Type</span></span>  
   
--   <span data-ttu-id="72b30-140">사용 하 여 `Integer` 필요한 되 제외한 부호 없는 형식 대신 합니다.</span><span class="sxs-lookup"><span data-stu-id="72b30-140">Use `Integer` rather than unsigned types, except where they are necessary.</span></span>  
+-   <span data-ttu-id="7f712-140">사용 하 여 `Integer` 필요한 되 제외한 부호 없는 형식 대신 합니다.</span><span class="sxs-lookup"><span data-stu-id="7f712-140">Use `Integer` rather than unsigned types, except where they are necessary.</span></span>  
   
-### <a name="arrays"></a><span data-ttu-id="72b30-141">배열</span><span class="sxs-lookup"><span data-stu-id="72b30-141">Arrays</span></span>  
+### <a name="arrays"></a><span data-ttu-id="7f712-141">배열</span><span class="sxs-lookup"><span data-stu-id="7f712-141">Arrays</span></span>  
   
--   <span data-ttu-id="72b30-142">선언 줄에서 배열을 초기화할 때는 간단한 구문을 사용 합니다.</span><span class="sxs-lookup"><span data-stu-id="72b30-142">Use the short syntax when you initialize arrays on the declaration line.</span></span> <span data-ttu-id="72b30-143">예를 들어 다음 구문을 사용 합니다.</span><span class="sxs-lookup"><span data-stu-id="72b30-143">For example, use the following syntax.</span></span>  
+-   <span data-ttu-id="7f712-142">선언 줄에서 배열을 초기화할 때는 간단한 구문을 사용 합니다.</span><span class="sxs-lookup"><span data-stu-id="7f712-142">Use the short syntax when you initialize arrays on the declaration line.</span></span> <span data-ttu-id="7f712-143">예를 들어 다음 구문을 사용 합니다.</span><span class="sxs-lookup"><span data-stu-id="7f712-143">For example, use the following syntax.</span></span>  
   
      [!code-vb[VbVbalrGuidelines#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#8)]  
   
-     <span data-ttu-id="72b30-144">다음 구문을 사용 하지 마십시오.</span><span class="sxs-lookup"><span data-stu-id="72b30-144">Do not use the following syntax.</span></span>  
+     <span data-ttu-id="7f712-144">다음 구문을 사용 하지 마십시오.</span><span class="sxs-lookup"><span data-stu-id="7f712-144">Do not use the following syntax.</span></span>  
   
      [!code-vb[VbVbalrGuidelines#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#9)]  
   
--   <span data-ttu-id="72b30-145">변수의 아니라 형식에 배열 지정자를 배치 합니다.</span><span class="sxs-lookup"><span data-stu-id="72b30-145">Put the array designator on the type, not on the variable.</span></span> <span data-ttu-id="72b30-146">예를 들어 다음 구문을 사용 합니다.</span><span class="sxs-lookup"><span data-stu-id="72b30-146">For example, use the following syntax:</span></span>  
+-   <span data-ttu-id="7f712-145">변수의 아니라 형식에 배열 지정자를 배치 합니다.</span><span class="sxs-lookup"><span data-stu-id="7f712-145">Put the array designator on the type, not on the variable.</span></span> <span data-ttu-id="7f712-146">예를 들어 다음 구문을 사용 합니다.</span><span class="sxs-lookup"><span data-stu-id="7f712-146">For example, use the following syntax:</span></span>  
   
      [!code-vb[VbVbalrGuidelines#11](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#11)]  
   
-     <span data-ttu-id="72b30-147">다음 구문을 사용 하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="72b30-147">Do not use the following syntax:</span></span>  
+     <span data-ttu-id="7f712-147">다음 구문을 사용 하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="7f712-147">Do not use the following syntax:</span></span>  
   
      [!code-vb[VbVbalrGuidelines#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#10)]  
   
--   <span data-ttu-id="72b30-148">선언 하 고 기본 데이터 형식의 배열을 초기화할 때 {} 구문을 사용 합니다.</span><span class="sxs-lookup"><span data-stu-id="72b30-148">Use the { } syntax when you declare and initialize arrays of basic data types.</span></span> <span data-ttu-id="72b30-149">예를 들어 다음 구문을 사용 합니다.</span><span class="sxs-lookup"><span data-stu-id="72b30-149">For example, use the following syntax:</span></span>  
+-   <span data-ttu-id="7f712-148">선언 하 고 기본 데이터 형식의 배열을 초기화할 때 {} 구문을 사용 합니다.</span><span class="sxs-lookup"><span data-stu-id="7f712-148">Use the { } syntax when you declare and initialize arrays of basic data types.</span></span> <span data-ttu-id="7f712-149">예를 들어 다음 구문을 사용 합니다.</span><span class="sxs-lookup"><span data-stu-id="7f712-149">For example, use the following syntax:</span></span>  
   
      [!code-vb[VbVbalrGuidelines#12](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#12)]  
   
-     <span data-ttu-id="72b30-150">다음 구문을 사용 하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="72b30-150">Do not use the following syntax:</span></span>  
+     <span data-ttu-id="7f712-150">다음 구문을 사용 하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="7f712-150">Do not use the following syntax:</span></span>  
   
      [!code-vb[VbVbalrGuidelines#13](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#13)]  
   
-### <a name="use-the-with-keyword"></a><span data-ttu-id="72b30-151">사용 된 키워드를 사용 하 여</span><span class="sxs-lookup"><span data-stu-id="72b30-151">Use the With Keyword</span></span>  
- <span data-ttu-id="72b30-152">일련의 하나 이상의 개체에 대 한 호출을 수행 하면 사용을 고려 합니다 `With` 키워드:</span><span class="sxs-lookup"><span data-stu-id="72b30-152">When you make a series of calls to one object, consider using the `With` keyword:</span></span>  
+### <a name="use-the-with-keyword"></a><span data-ttu-id="7f712-151">사용 된 키워드를 사용 하 여</span><span class="sxs-lookup"><span data-stu-id="7f712-151">Use the With Keyword</span></span>  
+ <span data-ttu-id="7f712-152">일련의 하나 이상의 개체에 대 한 호출을 수행 하면 사용을 고려 합니다 `With` 키워드:</span><span class="sxs-lookup"><span data-stu-id="7f712-152">When you make a series of calls to one object, consider using the `With` keyword:</span></span>  
   
  [!code-vb[VbVbalrGuidelines#15](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#15)]  
   
-### <a name="use-the-trycatch-and-using-statements-when-you-use-exception-handling"></a><span data-ttu-id="72b30-153">사용 하는 중... Catch 및 예외 처리를 사용 하는 경우 Using 문</span><span class="sxs-lookup"><span data-stu-id="72b30-153">Use the Try...Catch and Using Statements when you use Exception Handling</span></span>  
- <span data-ttu-id="72b30-154">`On Error Goto`는 사용하지 마세요.</span><span class="sxs-lookup"><span data-stu-id="72b30-154">Do not use `On Error Goto`.</span></span>  
+### <a name="use-the-trycatch-and-using-statements-when-you-use-exception-handling"></a><span data-ttu-id="7f712-153">사용 하는 중... Catch 및 예외 처리를 사용 하는 경우 Using 문</span><span class="sxs-lookup"><span data-stu-id="7f712-153">Use the Try...Catch and Using Statements when you use Exception Handling</span></span>  
+ <span data-ttu-id="7f712-154">`On Error Goto`는 사용하지 마세요.</span><span class="sxs-lookup"><span data-stu-id="7f712-154">Do not use `On Error Goto`.</span></span>  
   
-### <a name="use-the-isnot-keyword"></a><span data-ttu-id="72b30-155">IsNot 키워드 사용</span><span class="sxs-lookup"><span data-stu-id="72b30-155">Use the IsNot Keyword</span></span>  
- <span data-ttu-id="72b30-156">사용 된 `IsNot` 대신 키워드 `Not...Is Nothing`합니다.</span><span class="sxs-lookup"><span data-stu-id="72b30-156">Use the `IsNot` keyword instead of `Not...Is Nothing`.</span></span>  
+### <a name="use-the-isnot-keyword"></a><span data-ttu-id="7f712-155">IsNot 키워드 사용</span><span class="sxs-lookup"><span data-stu-id="7f712-155">Use the IsNot Keyword</span></span>  
+ <span data-ttu-id="7f712-156">사용 된 `IsNot` 대신 키워드 `Not...Is Nothing`합니다.</span><span class="sxs-lookup"><span data-stu-id="7f712-156">Use the `IsNot` keyword instead of `Not...Is Nothing`.</span></span>  
   
-### <a name="new-keyword"></a><span data-ttu-id="72b30-157">새 키워드</span><span class="sxs-lookup"><span data-stu-id="72b30-157">New Keyword</span></span>  
+### <a name="new-keyword"></a><span data-ttu-id="7f712-157">새 키워드</span><span class="sxs-lookup"><span data-stu-id="7f712-157">New Keyword</span></span>  
   
--   <span data-ttu-id="72b30-158">간단한 인스턴스를 사용 합니다.</span><span class="sxs-lookup"><span data-stu-id="72b30-158">Use short instantiation.</span></span> <span data-ttu-id="72b30-159">예를 들어 다음 구문을 사용 합니다.</span><span class="sxs-lookup"><span data-stu-id="72b30-159">For example, use the following syntax:</span></span>  
+-   <span data-ttu-id="7f712-158">간단한 인스턴스를 사용 합니다.</span><span class="sxs-lookup"><span data-stu-id="7f712-158">Use short instantiation.</span></span> <span data-ttu-id="7f712-159">예를 들어 다음 구문을 사용 합니다.</span><span class="sxs-lookup"><span data-stu-id="7f712-159">For example, use the following syntax:</span></span>  
   
      [!code-vb[VbVbalrGuidelines#21](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#21)]  
   
-     <span data-ttu-id="72b30-160">앞의 줄은이에 해당 합니다.</span><span class="sxs-lookup"><span data-stu-id="72b30-160">The preceding line is equivalent to this:</span></span>  
+     <span data-ttu-id="7f712-160">앞의 줄은이에 해당 합니다.</span><span class="sxs-lookup"><span data-stu-id="7f712-160">The preceding line is equivalent to this:</span></span>  
   
      [!code-vb[VbVbalrGuidelines#22](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#22)]  
   
--   <span data-ttu-id="72b30-161">매개 변수가 없는 생성자 대신 새 개체에 대 한 개체 이니셜라이저를 사용 합니다.</span><span class="sxs-lookup"><span data-stu-id="72b30-161">Use object initializers for new objects instead of the parameterless constructor:</span></span>  
+-   <span data-ttu-id="7f712-161">매개 변수가 없는 생성자 대신 새 개체에 대 한 개체 이니셜라이저를 사용 합니다.</span><span class="sxs-lookup"><span data-stu-id="7f712-161">Use object initializers for new objects instead of the parameterless constructor:</span></span>  
   
      [!code-vb[VbVbalrGuidelines#23](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#23)]  
   
-### <a name="event-handling"></a><span data-ttu-id="72b30-162">이벤트 처리</span><span class="sxs-lookup"><span data-stu-id="72b30-162">Event Handling</span></span>  
+### <a name="event-handling"></a><span data-ttu-id="7f712-162">이벤트 처리</span><span class="sxs-lookup"><span data-stu-id="7f712-162">Event Handling</span></span>  
   
--   <span data-ttu-id="72b30-163">사용 하 여 `Handles` 대신 `AddHandler`:</span><span class="sxs-lookup"><span data-stu-id="72b30-163">Use `Handles` rather than `AddHandler`:</span></span>  
+-   <span data-ttu-id="7f712-163">사용 하 여 `Handles` 대신 `AddHandler`:</span><span class="sxs-lookup"><span data-stu-id="7f712-163">Use `Handles` rather than `AddHandler`:</span></span>  
   
      [!code-vb[VbVbalrGuidelines#24](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#24)]  
   
--   <span data-ttu-id="72b30-164">사용 하 여 `AddressOf`, 및 대리자를 명시적으로 인스턴스화할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="72b30-164">Use `AddressOf`, and do not instantiate the delegate explicitly:</span></span>  
+-   <span data-ttu-id="7f712-164">사용 하 여 `AddressOf`, 및 대리자를 명시적으로 인스턴스화할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="7f712-164">Use `AddressOf`, and do not instantiate the delegate explicitly:</span></span>  
   
      [!code-vb[VbVbalrGuidelines#25](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#25)]  
   
--   <span data-ttu-id="72b30-165">이벤트를 정의할 때는 간단한 구문을 사용 하 여 및 대리자를 정의 하 여 컴파일러가:</span><span class="sxs-lookup"><span data-stu-id="72b30-165">When you define an event, use the short syntax, and let the compiler define the delegate:</span></span>  
+-   <span data-ttu-id="7f712-165">이벤트를 정의할 때는 간단한 구문을 사용 하 여 및 대리자를 정의 하 여 컴파일러가:</span><span class="sxs-lookup"><span data-stu-id="7f712-165">When you define an event, use the short syntax, and let the compiler define the delegate:</span></span>  
   
      [!code-vb[VbVbalrGuidelines#26](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#26)]  
   
--   <span data-ttu-id="72b30-166">이벤트 인지를 확인 하지 않습니다 `Nothing` (null)를 호출 하기 전에 `RaiseEvent` 메서드.</span><span class="sxs-lookup"><span data-stu-id="72b30-166">Do not verify whether an event is `Nothing` (null) before you call the `RaiseEvent` method.</span></span> <span data-ttu-id="72b30-167">`RaiseEvent` 에 대 한 확인 `Nothing` 이벤트를 발생 시키기 전에 합니다.</span><span class="sxs-lookup"><span data-stu-id="72b30-167">`RaiseEvent` checks for `Nothing` before it raises the event.</span></span>  
+-   <span data-ttu-id="7f712-166">이벤트 인지를 확인 하지 않습니다 `Nothing` (null)를 호출 하기 전에 `RaiseEvent` 메서드.</span><span class="sxs-lookup"><span data-stu-id="7f712-166">Do not verify whether an event is `Nothing` (null) before you call the `RaiseEvent` method.</span></span> <span data-ttu-id="7f712-167">`RaiseEvent` 에 대 한 확인 `Nothing` 이벤트를 발생 시키기 전에 합니다.</span><span class="sxs-lookup"><span data-stu-id="7f712-167">`RaiseEvent` checks for `Nothing` before it raises the event.</span></span>  
   
-### <a name="using-shared-members"></a><span data-ttu-id="72b30-168">공유 멤버 사용</span><span class="sxs-lookup"><span data-stu-id="72b30-168">Using Shared Members</span></span>  
- <span data-ttu-id="72b30-169">호출 `Shared` 클래스 이름에서가 아니라 인스턴스 변수를 사용 하 여 멤버입니다.</span><span class="sxs-lookup"><span data-stu-id="72b30-169">Call `Shared` members by using the class name, not from an instance variable.</span></span>  
+### <a name="using-shared-members"></a><span data-ttu-id="7f712-168">공유 멤버 사용</span><span class="sxs-lookup"><span data-stu-id="7f712-168">Using Shared Members</span></span>  
+ <span data-ttu-id="7f712-169">호출 `Shared` 클래스 이름에서가 아니라 인스턴스 변수를 사용 하 여 멤버입니다.</span><span class="sxs-lookup"><span data-stu-id="7f712-169">Call `Shared` members by using the class name, not from an instance variable.</span></span>  
   
-### <a name="use-xml-literals"></a><span data-ttu-id="72b30-170">XML 리터럴을 사용 하십시오.</span><span class="sxs-lookup"><span data-stu-id="72b30-170">Use XML Literals</span></span>  
- <span data-ttu-id="72b30-171">XML 리터럴의 XML (예를 들어, 로드, 쿼리 및 변환)를 사용 하 여 작업할 때 발생할 수 있는 가장 일반적인 작업을 간소화 합니다.</span><span class="sxs-lookup"><span data-stu-id="72b30-171">XML literals simplify the most common tasks that you encounter when you work with XML (for example, load, query, and transform).</span></span> <span data-ttu-id="72b30-172">XML을 사용 하 여 개발 하는 경우 다음이 지침을 따르세요.</span><span class="sxs-lookup"><span data-stu-id="72b30-172">When you develop with XML, follow these guidelines:</span></span>  
+### <a name="use-xml-literals"></a><span data-ttu-id="7f712-170">XML 리터럴을 사용 하십시오.</span><span class="sxs-lookup"><span data-stu-id="7f712-170">Use XML Literals</span></span>  
+ <span data-ttu-id="7f712-171">XML 리터럴의 XML (예를 들어, 로드, 쿼리 및 변환)를 사용 하 여 작업할 때 발생할 수 있는 가장 일반적인 작업을 간소화 합니다.</span><span class="sxs-lookup"><span data-stu-id="7f712-171">XML literals simplify the most common tasks that you encounter when you work with XML (for example, load, query, and transform).</span></span> <span data-ttu-id="7f712-172">XML을 사용 하 여 개발 하는 경우 다음이 지침을 따르세요.</span><span class="sxs-lookup"><span data-stu-id="7f712-172">When you develop with XML, follow these guidelines:</span></span>  
   
--   <span data-ttu-id="72b30-173">XML 리터럴을 사용 하 여 XML 문서 및 XML Api를 직접 호출 하는 대신 조각을 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="72b30-173">Use XML literals to create XML documents and fragments instead of calling XML APIs directly.</span></span>  
+-   <span data-ttu-id="7f712-173">XML 리터럴을 사용 하 여 XML 문서 및 XML Api를 직접 호출 하는 대신 조각을 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="7f712-173">Use XML literals to create XML documents and fragments instead of calling XML APIs directly.</span></span>  
   
--   <span data-ttu-id="72b30-174">XML 리터럴의 성능 최적화를 활용 하기 위해 파일 또는 프로젝트 수준에서 XML 네임 스페이스를 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="72b30-174">Import XML namespaces at the file or project level to take advantage of the performance optimizations for XML literals.</span></span>  
+-   <span data-ttu-id="7f712-174">XML 리터럴의 성능 최적화를 활용 하기 위해 파일 또는 프로젝트 수준에서 XML 네임 스페이스를 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="7f712-174">Import XML namespaces at the file or project level to take advantage of the performance optimizations for XML literals.</span></span>  
   
--   <span data-ttu-id="72b30-175">특성과 해당 요소는 XML 문서에 액세스 하려면 XML 축 속성을 사용 합니다.</span><span class="sxs-lookup"><span data-stu-id="72b30-175">Use the XML axis properties to access elements and attributes in an XML document.</span></span>  
+-   <span data-ttu-id="7f712-175">특성과 해당 요소는 XML 문서에 액세스 하려면 XML 축 속성을 사용 합니다.</span><span class="sxs-lookup"><span data-stu-id="7f712-175">Use the XML axis properties to access elements and attributes in an XML document.</span></span>  
   
--   <span data-ttu-id="72b30-176">포함된 식을 사용 하 여 값을 포함 하 고 같은 API 호출을 사용 하는 대신 기존 값에서 XML을 만들 수는 `Add` 메서드:</span><span class="sxs-lookup"><span data-stu-id="72b30-176">Use embedded expressions to include values and to create XML from existing values instead of using API calls such as the `Add` method:</span></span>  
+-   <span data-ttu-id="7f712-176">포함된 식을 사용 하 여 값을 포함 하 고 같은 API 호출을 사용 하는 대신 기존 값에서 XML을 만들 수는 `Add` 메서드:</span><span class="sxs-lookup"><span data-stu-id="7f712-176">Use embedded expressions to include values and to create XML from existing values instead of using API calls such as the `Add` method:</span></span>  
   
      [!code-vb[VbVbalrGuidelines#27](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#27)]  
   
-### <a name="linq-queries"></a><span data-ttu-id="72b30-177">LINQ 쿼리</span><span class="sxs-lookup"><span data-stu-id="72b30-177">LINQ Queries</span></span>  
+### <a name="linq-queries"></a><span data-ttu-id="7f712-177">LINQ 쿼리</span><span class="sxs-lookup"><span data-stu-id="7f712-177">LINQ Queries</span></span>  
   
--   <span data-ttu-id="72b30-178">쿼리 변수에 의미 있는 이름을 사용 합니다.</span><span class="sxs-lookup"><span data-stu-id="72b30-178">Use meaningful names for query variables:</span></span>  
+-   <span data-ttu-id="7f712-178">쿼리 변수에 의미 있는 이름을 사용 합니다.</span><span class="sxs-lookup"><span data-stu-id="7f712-178">Use meaningful names for query variables:</span></span>  
   
      [!code-vb[VbVbalrGuidelines#28](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#28)]  
   
--   <span data-ttu-id="72b30-179">익명 형식의 속성 이름이 올바로 대문자로 표시 되도록 파스칼을 사용 하 여 쿼리에서 요소에 대 한 이름을 제공 대/소문자 구분:</span><span class="sxs-lookup"><span data-stu-id="72b30-179">Provide names for elements in a query to make sure that property names of anonymous types are correctly capitalized using Pascal casing:</span></span>  
+-   <span data-ttu-id="7f712-179">익명 형식의 속성 이름이 올바로 대문자로 표시 되도록 파스칼을 사용 하 여 쿼리에서 요소에 대 한 이름을 제공 대/소문자 구분:</span><span class="sxs-lookup"><span data-stu-id="7f712-179">Provide names for elements in a query to make sure that property names of anonymous types are correctly capitalized using Pascal casing:</span></span>  
   
      [!code-vb[VbVbalrGuidelines#29](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#29)]  
   
--   <span data-ttu-id="72b30-180">결과의 속성 이름이 모호하면 속성 이름을 바꿉니다.</span><span class="sxs-lookup"><span data-stu-id="72b30-180">Rename properties when the property names in the result would be ambiguous.</span></span> <span data-ttu-id="72b30-181">예를 들어 쿼리에서 고객 이름과 주문 ID를 반환 바꿀로 남겨두지 않고 `Name` 고 `ID` 결과에서:</span><span class="sxs-lookup"><span data-stu-id="72b30-181">For example, if your query returns a customer name and an order ID, rename them instead of leaving them as `Name` and `ID` in the result:</span></span>  
+-   <span data-ttu-id="7f712-180">결과의 속성 이름이 모호하면 속성 이름을 바꿉니다.</span><span class="sxs-lookup"><span data-stu-id="7f712-180">Rename properties when the property names in the result would be ambiguous.</span></span> <span data-ttu-id="7f712-181">예를 들어 쿼리에서 고객 이름과 주문 ID를 반환 바꿀로 남겨두지 않고 `Name` 고 `ID` 결과에서:</span><span class="sxs-lookup"><span data-stu-id="7f712-181">For example, if your query returns a customer name and an order ID, rename them instead of leaving them as `Name` and `ID` in the result:</span></span>  
   
      [!code-vb[VbVbalrGuidelines#30](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#30)]  
   
--   <span data-ttu-id="72b30-182">쿼리 변수 및 범위 변수 선언에서 형식 유추를 사용 합니다.</span><span class="sxs-lookup"><span data-stu-id="72b30-182">Use type inference in the declaration of query variables and range variables:</span></span>  
+-   <span data-ttu-id="7f712-182">쿼리 변수 및 범위 변수 선언에서 형식 유추를 사용 합니다.</span><span class="sxs-lookup"><span data-stu-id="7f712-182">Use type inference in the declaration of query variables and range variables:</span></span>  
   
      [!code-vb[VbVbalrGuidelines#31](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#31)]  
   
--   <span data-ttu-id="72b30-183">아래의 쿼리 절을 정렬 된 `From` 문:</span><span class="sxs-lookup"><span data-stu-id="72b30-183">Align query clauses under the `From` statement:</span></span>  
+-   <span data-ttu-id="7f712-183">아래의 쿼리 절을 정렬 된 `From` 문:</span><span class="sxs-lookup"><span data-stu-id="7f712-183">Align query clauses under the `From` statement:</span></span>  
   
      [!code-vb[VbVbalrGuidelines#32](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#32)]  
   
--   <span data-ttu-id="72b30-184">사용 하 여 `Where` 나중 쿼리 절이 필터링 된 데이터 집합에서 실행 되도록 다른 앞 절 쿼리 절:</span><span class="sxs-lookup"><span data-stu-id="72b30-184">Use `Where` clauses before other query clauses so that later query clauses operate on the filtered set of data:</span></span>  
+-   <span data-ttu-id="7f712-184">사용 하 여 `Where` 나중 쿼리 절이 필터링 된 데이터 집합에서 실행 되도록 다른 앞 절 쿼리 절:</span><span class="sxs-lookup"><span data-stu-id="7f712-184">Use `Where` clauses before other query clauses so that later query clauses operate on the filtered set of data:</span></span>  
   
      [!code-vb[VbVbalrGuidelines#33](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#33)]  
   
--   <span data-ttu-id="72b30-185">사용 된 `Join` 절을 사용 하는 대신 조인 작업을 명시적으로 정의 `Where` 조인 작업을 암시적으로 정의 하는 절:</span><span class="sxs-lookup"><span data-stu-id="72b30-185">Use the `Join` clause to explicitly define a join operation instead of using the `Where` clause to implicitly define a join operation:</span></span>  
+-   <span data-ttu-id="7f712-185">사용 된 `Join` 절을 사용 하는 대신 조인 작업을 명시적으로 정의 `Where` 조인 작업을 암시적으로 정의 하는 절:</span><span class="sxs-lookup"><span data-stu-id="7f712-185">Use the `Join` clause to explicitly define a join operation instead of using the `Where` clause to implicitly define a join operation:</span></span>  
   
      [!code-vb[VbVbalrGuidelines#34](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#34)]  
   
-## <a name="see-also"></a><span data-ttu-id="72b30-186">참고자료</span><span class="sxs-lookup"><span data-stu-id="72b30-186">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="7f712-186">참고자료</span><span class="sxs-lookup"><span data-stu-id="7f712-186">See also</span></span>
 
-- [<span data-ttu-id="72b30-187">보안 코딩 지침</span><span class="sxs-lookup"><span data-stu-id="72b30-187">Secure Coding Guidelines</span></span>](../../../standard/security/secure-coding-guidelines.md)
+- [<span data-ttu-id="7f712-187">보안 코딩 지침</span><span class="sxs-lookup"><span data-stu-id="7f712-187">Secure Coding Guidelines</span></span>](../../../standard/security/secure-coding-guidelines.md)

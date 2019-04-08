@@ -7,29 +7,30 @@ helpviewer_keywords:
 - keystrokes
 - CapsLock property
 ms.assetid: aa37d54c-5c98-4b44-b98a-c26d2a03c038
-ms.openlocfilehash: f4b719727f3264886f8c4c313d4e1154f0d04728
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 00cdf18d057ca8a5c59cde02759b5c8c572a8bba
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54549265"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58823573"
 ---
-# <a name="accessing-the-keyboard-visual-basic"></a><span data-ttu-id="429a9-102">키보드에 액세스(Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="429a9-102">Accessing the Keyboard (Visual Basic)</span></span>
-<span data-ttu-id="429a9-103">`My.Computer.Keyboard` 개체는 현재 누른 키 등 키보드의 현재 상태에 액세스하기 위한 속성을 제공하고, 활성 창에 키 입력을 보내기 위한 메서드를 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="429a9-103">The `My.Computer.Keyboard` object provides properties for accessing the current state of the keyboard, such as what keys are currently pressed, and provides a method to send keystrokes to the active window.</span></span>  
+# <a name="accessing-the-keyboard-visual-basic"></a><span data-ttu-id="ac020-102">키보드에 액세스(Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="ac020-102">Accessing the Keyboard (Visual Basic)</span></span>
+<span data-ttu-id="ac020-103">`My.Computer.Keyboard` 개체는 현재 누른 키 등 키보드의 현재 상태에 액세스하기 위한 속성을 제공하고, 활성 창에 키 입력을 보내기 위한 메서드를 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="ac020-103">The `My.Computer.Keyboard` object provides properties for accessing the current state of the keyboard, such as what keys are currently pressed, and provides a method to send keystrokes to the active window.</span></span>  
   
-## <a name="tasks"></a><span data-ttu-id="429a9-104">작업</span><span class="sxs-lookup"><span data-stu-id="429a9-104">Tasks</span></span>  
- <span data-ttu-id="429a9-105">이 표에서는 `My.Computer.Keyboard` 개체와 관련된 작업을 나열하고, 각 작업을 수행하는 방법을 보여 주는 항목을 가리킵니다.</span><span class="sxs-lookup"><span data-stu-id="429a9-105">This table lists tasks associated with the `My.Computer.Keyboard` object and points to topics demonstrating how to perform each task.</span></span>  
+## <a name="tasks"></a><span data-ttu-id="ac020-104">작업</span><span class="sxs-lookup"><span data-stu-id="ac020-104">Tasks</span></span>  
+ <span data-ttu-id="ac020-105">이 표에서는 `My.Computer.Keyboard` 개체와 관련된 작업을 나열하고, 각 작업을 수행하는 방법을 보여 주는 항목을 가리킵니다.</span><span class="sxs-lookup"><span data-stu-id="ac020-105">This table lists tasks associated with the `My.Computer.Keyboard` object and points to topics demonstrating how to perform each task.</span></span>  
   
-|<span data-ttu-id="429a9-106">대상</span><span class="sxs-lookup"><span data-stu-id="429a9-106">To</span></span>|<span data-ttu-id="429a9-107">참조</span><span class="sxs-lookup"><span data-stu-id="429a9-107">See</span></span>|  
+|<span data-ttu-id="ac020-106">대상</span><span class="sxs-lookup"><span data-stu-id="ac020-106">To</span></span>|<span data-ttu-id="ac020-107">참조</span><span class="sxs-lookup"><span data-stu-id="ac020-107">See</span></span>|  
 |--------|---------|  
-|<span data-ttu-id="429a9-108">CAPS LOCK이 켜져 있는지 여부를 확인합니다.</span><span class="sxs-lookup"><span data-stu-id="429a9-108">Determine whether CAPS LOCK is on</span></span>|<xref:Microsoft.VisualBasic.Devices.Keyboard.CapsLock%2A>|  
-|<span data-ttu-id="429a9-109">Shift 키가 눌러져 있는지 여부를 확인합니다.</span><span class="sxs-lookup"><span data-stu-id="429a9-109">Determine whether the SHIFT key is down</span></span>|<xref:Microsoft.VisualBasic.Devices.Keyboard.ShiftKeyDown%2A>|  
-|<span data-ttu-id="429a9-110">Alt 키가 눌러져 있는지 여부를 확인합니다.</span><span class="sxs-lookup"><span data-stu-id="429a9-110">Determine whether the ALT key is down</span></span>|<xref:Microsoft.VisualBasic.Devices.Keyboard.AltKeyDown%2A>|  
-|<span data-ttu-id="429a9-111">Ctrl 키가 눌러져 있는지 여부를 확인합니다.</span><span class="sxs-lookup"><span data-stu-id="429a9-111">Determine whether the CTRL key is down</span></span>|<xref:Microsoft.VisualBasic.Devices.Keyboard.CtrlKeyDown%2A>|  
-|<span data-ttu-id="429a9-112">NUM LOCK이 켜져 있는지 여부를 확인합니다.</span><span class="sxs-lookup"><span data-stu-id="429a9-112">Determine whether NUM LOCK is on</span></span>|<xref:Microsoft.VisualBasic.Devices.Keyboard.NumLock%2A>|  
-|<span data-ttu-id="429a9-113">SCROLL LOCK이 켜져 있는지 여부를 확인합니다.</span><span class="sxs-lookup"><span data-stu-id="429a9-113">Determine whether SCROLL LOCK is on</span></span>|<xref:Microsoft.VisualBasic.Devices.Keyboard.ScrollLock%2A>|  
-|<span data-ttu-id="429a9-114">애플리케이션 시작 및 키 입력 보내기</span><span class="sxs-lookup"><span data-stu-id="429a9-114">Start an application and send it keystrokes</span></span>|[<span data-ttu-id="429a9-115">방법: 애플리케이션 시작 및 키 입력 보내기(Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="429a9-115">How to: Start an Application and Send it Keystrokes (Visual Basic)</span></span>](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-start-an-application-and-send-it-keystrokes.md)|  
+|<span data-ttu-id="ac020-108">CAPS LOCK이 켜져 있는지 여부를 확인합니다.</span><span class="sxs-lookup"><span data-stu-id="ac020-108">Determine whether CAPS LOCK is on</span></span>|<xref:Microsoft.VisualBasic.Devices.Keyboard.CapsLock%2A>|  
+|<span data-ttu-id="ac020-109">Shift 키가 눌러져 있는지 여부를 확인합니다.</span><span class="sxs-lookup"><span data-stu-id="ac020-109">Determine whether the SHIFT key is down</span></span>|<xref:Microsoft.VisualBasic.Devices.Keyboard.ShiftKeyDown%2A>|  
+|<span data-ttu-id="ac020-110">Alt 키가 눌러져 있는지 여부를 확인합니다.</span><span class="sxs-lookup"><span data-stu-id="ac020-110">Determine whether the ALT key is down</span></span>|<xref:Microsoft.VisualBasic.Devices.Keyboard.AltKeyDown%2A>|  
+|<span data-ttu-id="ac020-111">Ctrl 키가 눌러져 있는지 여부를 확인합니다.</span><span class="sxs-lookup"><span data-stu-id="ac020-111">Determine whether the CTRL key is down</span></span>|<xref:Microsoft.VisualBasic.Devices.Keyboard.CtrlKeyDown%2A>|  
+|<span data-ttu-id="ac020-112">NUM LOCK이 켜져 있는지 여부를 확인합니다.</span><span class="sxs-lookup"><span data-stu-id="ac020-112">Determine whether NUM LOCK is on</span></span>|<xref:Microsoft.VisualBasic.Devices.Keyboard.NumLock%2A>|  
+|<span data-ttu-id="ac020-113">SCROLL LOCK이 켜져 있는지 여부를 확인합니다.</span><span class="sxs-lookup"><span data-stu-id="ac020-113">Determine whether SCROLL LOCK is on</span></span>|<xref:Microsoft.VisualBasic.Devices.Keyboard.ScrollLock%2A>|  
+|<span data-ttu-id="ac020-114">애플리케이션 시작 및 키 입력 보내기</span><span class="sxs-lookup"><span data-stu-id="ac020-114">Start an application and send it keystrokes</span></span>|[<span data-ttu-id="ac020-115">방법: 애플리케이션 시작 및 키 입력 보내기(Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="ac020-115">How to: Start an Application and Send it Keystrokes (Visual Basic)</span></span>](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-start-an-application-and-send-it-keystrokes.md)|  
   
-## <a name="see-also"></a><span data-ttu-id="429a9-116">참고 항목</span><span class="sxs-lookup"><span data-stu-id="429a9-116">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="ac020-116">참고 항목</span><span class="sxs-lookup"><span data-stu-id="ac020-116">See also</span></span>
+
 - <xref:Microsoft.VisualBasic.Devices.Keyboard>
 - <xref:System.Windows.Forms.Keys?displayProperty=nameWithType>

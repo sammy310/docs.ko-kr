@@ -6,23 +6,24 @@ helpviewer_keywords:
 - My.WebServices object
 - applications [Visual Basic], Web services
 ms.assetid: 8ad5405b-e771-42b1-82d3-ce97af2cea9e
-ms.openlocfilehash: a321776692366c64acf4ad3a01c31bc91947e2cf
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 453dc05a8715d3ab096c0bdd5ed75d601bf1b181
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54521064"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58818828"
 ---
-# <a name="accessing-application-web-services-visual-basic"></a><span data-ttu-id="6ea32-102">애플리케이션 웹 서비스 액세스(Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="6ea32-102">Accessing Application Web Services (Visual Basic)</span></span>
-<span data-ttu-id="6ea32-103">`My.WebServices` 개체는 현재 프로젝트에서 참조하는 각 웹 서비스의 인스턴스를 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="6ea32-103">The `My.WebServices` object provides an instance of each Web service referenced by the current project.</span></span> <span data-ttu-id="6ea32-104">필요에 따라 각 인스턴스가 인스턴스화됩니다.</span><span class="sxs-lookup"><span data-stu-id="6ea32-104">Each instance is instantiated on demand.</span></span> <span data-ttu-id="6ea32-105">`My.WebServices` 개체의 속성을 통해 이러한 웹 서비스에 액세스할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="6ea32-105">You can access these Web services through the properties of the `My.WebServices` object.</span></span> <span data-ttu-id="6ea32-106">속성 이름은 속성이 액세스하는 웹 서비스의 이름과 같습니다.</span><span class="sxs-lookup"><span data-stu-id="6ea32-106">The name of the property is the same as the name of the Web service that the property accesses.</span></span> <span data-ttu-id="6ea32-107"><xref:System.Web.Services.Protocols.SoapHttpClientProtocol>에서 상속되는 모든 클래스는 웹 서비스입니다.</span><span class="sxs-lookup"><span data-stu-id="6ea32-107">Any class that inherits from <xref:System.Web.Services.Protocols.SoapHttpClientProtocol> is a Web service.</span></span>  
+# <a name="accessing-application-web-services-visual-basic"></a><span data-ttu-id="274fc-102">애플리케이션 웹 서비스 액세스(Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="274fc-102">Accessing Application Web Services (Visual Basic)</span></span>
+<span data-ttu-id="274fc-103">`My.WebServices` 개체는 현재 프로젝트에서 참조하는 각 웹 서비스의 인스턴스를 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="274fc-103">The `My.WebServices` object provides an instance of each Web service referenced by the current project.</span></span> <span data-ttu-id="274fc-104">필요에 따라 각 인스턴스가 인스턴스화됩니다.</span><span class="sxs-lookup"><span data-stu-id="274fc-104">Each instance is instantiated on demand.</span></span> <span data-ttu-id="274fc-105">`My.WebServices` 개체의 속성을 통해 이러한 웹 서비스에 액세스할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="274fc-105">You can access these Web services through the properties of the `My.WebServices` object.</span></span> <span data-ttu-id="274fc-106">속성 이름은 속성이 액세스하는 웹 서비스의 이름과 같습니다.</span><span class="sxs-lookup"><span data-stu-id="274fc-106">The name of the property is the same as the name of the Web service that the property accesses.</span></span> <span data-ttu-id="274fc-107"><xref:System.Web.Services.Protocols.SoapHttpClientProtocol>에서 상속되는 모든 클래스는 웹 서비스입니다.</span><span class="sxs-lookup"><span data-stu-id="274fc-107">Any class that inherits from <xref:System.Web.Services.Protocols.SoapHttpClientProtocol> is a Web service.</span></span>  
   
-## <a name="tasks"></a><span data-ttu-id="6ea32-108">작업</span><span class="sxs-lookup"><span data-stu-id="6ea32-108">Tasks</span></span>  
- <span data-ttu-id="6ea32-109">다음 표에는 애플리케이션이 참조하는 웹 서비스에 액세스하는 가능한 방법이 나와 있습니다.</span><span class="sxs-lookup"><span data-stu-id="6ea32-109">The following table lists possible ways to access Web services referenced by an application.</span></span>  
+## <a name="tasks"></a><span data-ttu-id="274fc-108">작업</span><span class="sxs-lookup"><span data-stu-id="274fc-108">Tasks</span></span>  
+ <span data-ttu-id="274fc-109">다음 표에는 애플리케이션이 참조하는 웹 서비스에 액세스하는 가능한 방법이 나와 있습니다.</span><span class="sxs-lookup"><span data-stu-id="274fc-109">The following table lists possible ways to access Web services referenced by an application.</span></span>  
   
-|<span data-ttu-id="6ea32-110">대상</span><span class="sxs-lookup"><span data-stu-id="6ea32-110">To</span></span>|<span data-ttu-id="6ea32-111">참조</span><span class="sxs-lookup"><span data-stu-id="6ea32-111">See</span></span>|  
+|<span data-ttu-id="274fc-110">대상</span><span class="sxs-lookup"><span data-stu-id="274fc-110">To</span></span>|<span data-ttu-id="274fc-111">참조</span><span class="sxs-lookup"><span data-stu-id="274fc-111">See</span></span>|  
 |---|---|   
-|<span data-ttu-id="6ea32-112">웹 서비스 호출</span><span class="sxs-lookup"><span data-stu-id="6ea32-112">Call a Web service</span></span>|[<span data-ttu-id="6ea32-113">My.WebServices 개체</span><span class="sxs-lookup"><span data-stu-id="6ea32-113">My.WebServices Object</span></span>](../../../visual-basic/language-reference/objects/my-webservices-object.md)|  
-|<span data-ttu-id="6ea32-114">비동기적으로 웹 서비스 호출 및 완료 시 이벤트 처리</span><span class="sxs-lookup"><span data-stu-id="6ea32-114">Call a Web service asynchronously and handle an event when it completes</span></span>|[<span data-ttu-id="6ea32-115">방법: 비동기적으로 웹 서비스 호출</span><span class="sxs-lookup"><span data-stu-id="6ea32-115">How to: Call a Web Service Asynchronously</span></span>](../../../visual-basic/developing-apps/programming/how-to-call-a-web-service-asynchronously.md)|  
+|<span data-ttu-id="274fc-112">웹 서비스 호출</span><span class="sxs-lookup"><span data-stu-id="274fc-112">Call a Web service</span></span>|[<span data-ttu-id="274fc-113">My.WebServices 개체</span><span class="sxs-lookup"><span data-stu-id="274fc-113">My.WebServices Object</span></span>](../../../visual-basic/language-reference/objects/my-webservices-object.md)|  
+|<span data-ttu-id="274fc-114">비동기적으로 웹 서비스 호출 및 완료 시 이벤트 처리</span><span class="sxs-lookup"><span data-stu-id="274fc-114">Call a Web service asynchronously and handle an event when it completes</span></span>|[<span data-ttu-id="274fc-115">방법: 비동기적으로 웹 서비스 호출</span><span class="sxs-lookup"><span data-stu-id="274fc-115">How to: Call a Web Service Asynchronously</span></span>](../../../visual-basic/developing-apps/programming/how-to-call-a-web-service-asynchronously.md)|  
   
-## <a name="see-also"></a><span data-ttu-id="6ea32-116">참고 항목</span><span class="sxs-lookup"><span data-stu-id="6ea32-116">See also</span></span>
-- [<span data-ttu-id="6ea32-117">My.WebServices 개체</span><span class="sxs-lookup"><span data-stu-id="6ea32-117">My.WebServices Object</span></span>](../../../visual-basic/language-reference/objects/my-webservices-object.md)
+## <a name="see-also"></a><span data-ttu-id="274fc-116">참고 항목</span><span class="sxs-lookup"><span data-stu-id="274fc-116">See also</span></span>
+
+- [<span data-ttu-id="274fc-117">My.WebServices 개체</span><span class="sxs-lookup"><span data-stu-id="274fc-117">My.WebServices Object</span></span>](../../../visual-basic/language-reference/objects/my-webservices-object.md)
