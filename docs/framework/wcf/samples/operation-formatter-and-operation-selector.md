@@ -2,12 +2,12 @@
 title: 작업 포맷터와 작업 선택기
 ms.date: 03/30/2017
 ms.assetid: 1c27e9fe-11f8-4377-8140-828207b98a0e
-ms.openlocfilehash: b4cc135983a741f4ae024a2917871f344e8a111c
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 3843feacca0da6118ecc9d0f54a2cb088865caaa
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58836235"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59100407"
 ---
 # <a name="operation-formatter-and-operation-selector"></a>작업 포맷터와 작업 선택기
 이 샘플에서는 WCF에 필요한 것에서 다른 형식으로 메시지 데이터를 허용 하도록 Windows Communication Foundation (WCF) 확장성 요소를 사용할 수 있는 방법을 보여 줍니다. 기본적으로 WCF 포맷터는 메서드 매개 변수 아래에 포함 되도록 예상 합니다 `soap:body` 요소입니다. 이 샘플에서는 대신 HTTP GET 쿼리 문자열의 매개 변수 데이터를 구문 분석하고 이 데이터를 사용하여 메서드를 호출하는 사용자 지정 작업 포맷터를 구현하는 방법을 보여 줍니다.  
@@ -16,11 +16,11 @@ ms.locfileid: "58836235"
   
  이를 위해 이 샘플에서는 다음을 제공합니다.  
   
--   `QueryStringFormatter`(클라이언트와 서버에 대해 각각 <xref:System.ServiceModel.Dispatcher.IClientMessageFormatter> 및 <xref:System.ServiceModel.Dispatcher.IDispatchMessageFormatter>를 구현하고 쿼리 문자열의 데이터를 처리합니다.)  
+-   `QueryStringFormatter`를 구현 하는 <xref:System.ServiceModel.Dispatcher.IClientMessageFormatter> 및 <xref:System.ServiceModel.Dispatcher.IDispatchMessageFormatter> 클라이언트와 서버에 대 한 각각 쿼리 문자열의 데이터를 처리 합니다.  
   
--   `UriOperationSelector`(서버에서 <xref:System.ServiceModel.Dispatcher.IDispatchOperationSelector>를 구현하여 GET 요청의 작업 이름을 기반으로 작업 디스패치를 수행합니다.)  
+-   `UriOperationSelector`를 구현 하는 <xref:System.ServiceModel.Dispatcher.IDispatchOperationSelector> 서버의 GET 요청에 작업 이름을 기반으로 작업 디스패치를 수행 합니다.  
   
--   `EnableHttpGetRequestsBehavior` 엔드포인트 동작과 해당 구성(런타임에 필요한 작업 선택기를 추가합니다.)  
+-   `EnableHttpGetRequestsBehavior` 끝점 동작 (및 해당 구성)는 런타임에 필요한 작업 선택기를 추가 합니다.  
   
 -   런타임에 새 작업 포맷터를 삽입하는 방법을 보여 줍니다.  
   
@@ -38,7 +38,7 @@ ms.locfileid: "58836235"
   
 -   이 샘플에서는 <xref:System.ComponentModel.TypeConverter> 클래스를 사용하여 요청 메시지의 매개 변수 데이터를 문자열로 변환하고 문자열을 매개 변수 데이터로 변환합니다. 특정 형식에 대해 <xref:System.ComponentModel.TypeConverter>를 사용할 수 없는 경우 샘플 포맷터는 예외를 throw합니다.  
   
--   클라이언트의 `IClientMessageFormatter.SerializeRequest` 메서드에서 포맷터는 적절한 받는 사람 주소가 포함된 URI를 만들고 작업 이름을 접미사로 추가합니다. 이 이름은 서버의 적절한 작업으로 디스패치하는 데 사용됩니다. 그런 다음 포맷터는 매개 변수 개체의 배열을 가져와서 매개 변수 이름 및 <xref:System.ComponentModel.TypeConverter> 클래스를 통해 변환된 값을 사용하여 매개 변수 데이터를 URI 쿼리 문자열로 serialize합니다. 그런 다음 <xref:System.ServiceModel.Channels.MessageHeaders.To%2A> 및 <xref:System.ServiceModel.Channels.MessageProperties.Via%2A> 속성이 이 URI로 설정됩니다. <xref:System.ServiceModel.Channels.MessageProperties>는 <xref:System.ServiceModel.Channels.Message.Properties%2A> 속성을 통해 액세스됩니다.  
+-   클라이언트의 `IClientMessageFormatter.SerializeRequest` 메서드에서 포맷터는 적절한 받는 사람 주소가 포함된 URI를 만들고 작업 이름을 접미사로 추가합니다. 이 이름은 서버의 적절한 작업으로 디스패치하는 데 사용됩니다. 그런 다음 포맷터는 매개 변수 개체의 배열을 가져와서 매개 변수 이름 및 <xref:System.ComponentModel.TypeConverter> 클래스를 통해 변환된 값을 사용하여 매개 변수 데이터를 URI 쿼리 문자열로 serialize합니다. 그런 다음 <xref:System.ServiceModel.Channels.MessageHeaders.To%2A> 및 <xref:System.ServiceModel.Channels.MessageProperties.Via%2A> 속성이 이 URI로 설정됩니다. <xref:System.ServiceModel.Channels.MessageProperties> 통해 액세스 된 <xref:System.ServiceModel.Channels.Message.Properties%2A> 속성입니다.  
   
 -   서버의 `IDispatchMessageFormatter.DeserializeRequest` 메서드에서 포맷터는 들어오는 요청 메시지 속성에서 `Via` URI를 검색합니다. 포맷터는 URI 쿼리 문자열의 이름-값 쌍을 매개 변수 이름과 값으로 구문 분석하고 매개 변수 이름과 값을 사용하여 메서드로 전달되는 매개 변수의 배열을 채웁니다. 작업 디스패치가 이미 발생했으므로 이 메서드에서는 작업 이름 접미사가 무시됩니다.  
   
@@ -177,4 +177,3 @@ void ReplaceFormatterBehavior(OperationDescription operationDescription, Endpoin
 2.  지침에 따라 솔루션을 빌드하려면 [Building Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)합니다.  
   
 3.  단일 또는 다중 컴퓨터 구성에서 샘플을 실행 하려면의 지침을 따릅니다 [Windows Communication Foundation 샘플 실행](../../../../docs/framework/wcf/samples/running-the-samples.md)합니다.  
-  

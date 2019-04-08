@@ -10,12 +10,12 @@ helpviewer_keywords:
 - TreeView control [Windows Forms], adding shortcut menus
 - tree nodes in TreeView control [Windows Forms], shortcut menus
 ms.assetid: a23c6752-fd8f-44ad-b781-bab37962fc7c
-ms.openlocfilehash: 537593399db7deb775929cd742a749ce47890db6
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: ba29e86f62c8d56b0d300d1841a70f434087dd84
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57703620"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59100023"
 ---
 # <a name="how-to-attach-a-shortcut-menu-to-a-treeview-node"></a>방법: TreeView 노드에 바로 가기 메뉴 연결
 Windows Forms <xref:System.Windows.Forms.TreeView> 제어 파일 및 폴더 Windows 탐색기의 왼쪽된 창에 표시 된 비슷한 노드 계층 구조를 표시 합니다. 설정 하 여 합니다 <xref:System.Windows.Forms.Control.ContextMenuStrip%2A> 속성을 제공할 수 있습니다 상황에 맞는 작업 사용자에 게는 마우스 오른쪽 단추로 클릭는 <xref:System.Windows.Forms.TreeView> 제어 합니다. 연결 하 여는 <xref:System.Windows.Forms.ContextMenuStrip> 구성 요소를 개별 <xref:System.Windows.Forms.TreeNode> 항목을 사용자 지정된 된 바로 가기 메뉴 기능 수준을 추가할 수 있습니다 프로그램 <xref:System.Windows.Forms.TreeView> 컨트롤입니다.  
@@ -37,5 +37,6 @@ Windows Forms <xref:System.Windows.Forms.TreeView> 제어 파일 및 폴더 Wind
  [!code-vb[System.Windows.Forms.TreeNodeContextMenuStrip#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/system.windows.forms.TreeNodeContextMenuStrip/VB/Form1.vb#1)]  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Windows.Forms.ContextMenuStrip>
 - [TreeView 컨트롤](treeview-control-windows-forms.md)

@@ -1,5 +1,5 @@
 ---
-title: '연습: DesignerSerializationVisibilityAttribute를 사용하여 표준 형식의 컬렉션 serialize'
+title: '연습: DesignerSerializationVisibilityAttribute를 사용하여 표준 형식의 컬렉션 직렬화'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - collections [Windows Forms], serializing
 - collections [Windows Forms], standard types
 ms.assetid: 020c9df4-fdc5-4dae-815a-963ecae5668c
-ms.openlocfilehash: b5b5295e61f2a417c3565e62000021019381536f
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 04eb56fe78aa2d9ef5ab0daae4ba1c873cfc2b26
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57712190"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59097761"
 ---
-# <a name="walkthrough-serializing-collections-of-standard-types-with-the-designerserializationvisibilityattribute"></a>연습: DesignerSerializationVisibilityAttribute를 사용하여 표준 형식의 컬렉션 serialize
+# <a name="walkthrough-serializing-collections-of-standard-types-with-the-designerserializationvisibilityattribute"></a>연습: DesignerSerializationVisibilityAttribute를 사용하여 표준 형식의 컬렉션 직렬화
 사용자 지정 컨트롤 노출 하는 속성으로 컬렉션 경우도 있습니다. 이 연습을 사용 하는 방법에 설명 합니다 <xref:System.ComponentModel.DesignerSerializationVisibilityAttribute> 디자인 타임에 컬렉션 serialize 되는 방식을 제어 하는 클래스입니다. 적용 된 <xref:System.ComponentModel.DesignerSerializationVisibilityAttribute.Content> 컬렉션 속성에 값을 입력 하면 속성을 serialize 합니다.  
   
  이 항목의 코드를 단일 목록으로 복사하려면 [방법: Designerserializationvisibilityattribute를 사용 하 여 표준 형식의 컬렉션 serialize](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/ms171833(v=vs.120))합니다.  
@@ -133,12 +133,13 @@ ms.locfileid: "57712190"
   
 -   [Windows Forms 컨트롤의 특성](attributes-in-windows-forms-controls.md)  
   
--   [디자이너 Serialization 개요](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/ms171834(v=vs.120))  
+-   [디자이너 serialization 개요](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/ms171834(v=vs.120))  
   
--   [연습: Visual Studio 디자인 타임 기능을 활용 하는 Windows Forms 컨트롤 만들기](creating-a-wf-control-design-time-features.md)  
+-   [연습: Visual Studio의 디자인 타임 기능을 활용하는 Windows Forms 컨트롤 만들기](creating-a-wf-control-design-time-features.md)  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.ComponentModel.DesignerSerializationVisibilityAttribute>
-- [디자이너 Serialization 개요](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/ms171834(v=vs.120))
+- [디자이너 serialization 개요](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/ms171834(v=vs.120))
 - [방법: Designerserializationvisibilityattribute를 사용 하 여 표준 형식의 컬렉션 serialize](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/ms171833(v=vs.120))
-- [연습: 사용자 지정 구성 요소를 사용 하 여 도구 상자에 자동으로 채우기](walkthrough-automatically-populating-the-toolbox-with-custom-components.md)
+- [연습: 사용자 지정 구성 요소로 도구 상자 자동 채우기](walkthrough-automatically-populating-the-toolbox-with-custom-components.md)

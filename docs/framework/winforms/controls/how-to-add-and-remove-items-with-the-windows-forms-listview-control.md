@@ -1,5 +1,5 @@
 ---
-title: '방법: Windows Forms ListView 컨트롤을 사용 하 여 항목 추가 및 제거'
+title: '방법: Windows Forms ListView 컨트롤을 사용하여 항목 추가 및 제거'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - list views [Windows Forms], adding list items
 - ListView control [Windows Forms], adding list items
 ms.assetid: 1b35a80a-edd8-495f-a807-a28c4aae52c6
-ms.openlocfilehash: cfa6690db464f432c9082278627a03cd43df6834
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: ef0275b3cbc79f22b4fa573f41e4cbdbc3d58990
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57717247"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59104652"
 ---
-# <a name="how-to-add-and-remove-items-with-the-windows-forms-listview-control"></a>방법: Windows Forms ListView 컨트롤을 사용 하 여 항목 추가 및 제거
+# <a name="how-to-add-and-remove-items-with-the-windows-forms-listview-control"></a>방법: Windows Forms ListView 컨트롤을 사용하여 항목 추가 및 제거
 Windows Forms에 항목을 추가 하는 프로세스 <xref:System.Windows.Forms.ListView> 컨트롤 주로 이루어져 항목을 지정 하 고 속성을 할당 합니다. 목록 항목 추가 또는 제거를 언제 든 지 수행할 수 있습니다.  
   
 ### <a name="to-add-items-programmatically"></a>프로그래밍 방식으로 항목을 추가 하려면  
@@ -34,6 +34,7 @@ Windows Forms에 항목을 추가 하는 프로세스 <xref:System.Windows.Forms
      [!code-vb[System.Windows.Forms.ListViewLegacyTopics#12](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ListViewLegacyTopics/VB/Class1.vb#12)]  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Windows.Forms.ListView>
 - [ListView 컨트롤](listview-control-windows-forms.md)
 - [ListView 컨트롤 개요](listview-control-overview-windows-forms.md)

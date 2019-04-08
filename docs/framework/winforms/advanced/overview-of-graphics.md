@@ -5,12 +5,12 @@ helpviewer_keywords:
 - graphics [Windows Forms], using managed interface
 - graphics [Windows Forms], about graphics
 ms.assetid: a602aef8-a8c8-4c36-9816-74e7bad96a68
-ms.openlocfilehash: 8d8e1ab286d4e5723f5ca6bca0b6eeff53ac1d43
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: a95086645771de61cfc859e34b225992bc16eac9
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57711345"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59103937"
 ---
 # <a name="overview-of-graphics"></a>그래픽 개요
 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] API (응용 프로그래밍 인터페이스)는 Microsoft Windows 운영 체제의 하위 시스템을 구성 하는 경우 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 화면과 프린터에 정보를 표시 하는 일을 담당 합니다. 이름에서 알 수 있듯이, [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]는 이전 버전의 Windows에 포함된 그래픽 장치 인터페이스인 [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)]의 후속 프로그램입니다.  
@@ -28,7 +28,8 @@ ms.locfileid: "57711345"
   
 -   <xref:System.Drawing.Printing>  
   
- 그래픽 장치 인터페이스를 사용 하 여 같은 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)], 특정 디스플레이 장치의 세부 정보를 염려 하지 않고 화면 또는 프린터에 정보를 표시할 수 있습니다. 프로그래머가 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 클래스에서 제공하는 메서드를 호출합니다. 이러한 메서드가 다시 특정 장치 드라이버에 대한 적절한 호출을 수행합니다. [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]는 그래픽 하드웨어에서 응용 프로그램을 분리합니다. 이 프로그래머가 장치 독립적인 응용 프로그램을 만들 수는 것입니다.  
+ 그래픽 장치 인터페이스를 사용 하 여 같은 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)], 특정 디스플레이 장치의 세부 정보를 염려 하지 않고 화면 또는 프린터에 정보를 표시할 수 있습니다. 프로그래머가 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 클래스에서 제공하는 메서드를 호출합니다. 이러한 메서드가 다시 특정 장치 드라이버에 대한 적절한 호출을 수행합니다. [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 그래픽 하드웨어에서 응용 프로그램을 분리 합니다. 이 프로그래머가 장치 독립적인 응용 프로그램을 만들 수는 것입니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [그래픽 개요](graphics-overview-windows-forms.md)

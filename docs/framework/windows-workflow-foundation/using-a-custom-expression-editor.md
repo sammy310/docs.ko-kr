@@ -2,12 +2,12 @@
 title: 사용자 지정 식 편집기 사용
 ms.date: 03/30/2017
 ms.assetid: 0901b58b-e037-44a8-8281-f6f54361cfca
-ms.openlocfilehash: 3bbad843c5e4d409627c255be7341d364a3d36d6
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 2a390dd57d31994e8a2ba6a424d74bf7ee44fc10
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57716532"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59101278"
 ---
 # <a name="using-a-custom-expression-editor"></a>사용자 지정 식 편집기 사용
 사용자 지정 식 편집기를 구현하여 보다 다양하거나 단순한 식 편집 환경을 제공할 수 있습니다. 사용자 지정 식 편집기는 다음과 같은 경우에 사용할 수 있습니다.  
@@ -279,6 +279,7 @@ namespace WpfApplication1
  사용 중인 경우는 **ExpressionTextBox** 컨트롤을 사용자 지정 활동 디자이너에서 필요 없는 만들고 사용 하 여 식 편집기를 제거 하는 <xref:System.Activities.Presentation.View.IExpressionEditorService.CreateExpressionEditor%2A> 및 <xref:System.Activities.Presentation.View.IExpressionEditorService.CloseExpressionEditors%2A> 의 메서드는 <xref:System.Activities.Presentation.View.IExpressionEditorService> 인터페이스. <xref:System.Activities.Presentation.View.ExpressionTextBox> 클래스가 이 부분을 자동으로 관리합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Activities.Presentation.View.IExpressionEditorService>
 - <xref:System.Activities.Presentation.View.IExpressionEditorInstance>
-- [사용자 지정 작업 디자이너에서 ExpressionTextBox 사용](./samples/using-the-expressiontextbox-in-a-custom-activity-designer.md)
+- [사용자 지정 활동 디자이너에서 ExpressionTextBox 사용](./samples/using-the-expressiontextbox-in-a-custom-activity-designer.md)

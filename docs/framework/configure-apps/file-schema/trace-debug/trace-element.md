@@ -10,12 +10,12 @@ helpviewer_keywords:
 - trace element
 - trace listener, <trace> element
 ms.assetid: 7931c942-63c1-47c3-a045-9d9de3cacdbf
-ms.openlocfilehash: d930e1fe9a9a4012e363bbbffe83e1ea7cc1c595
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 5faf352dce2a459a999b3cf54209f6bd9793bde0
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55257800"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59073795"
 ---
 # <a name="trace-element"></a>\<추적 > 요소
 추적 메시지를 수집하고 저장하고 라우팅하는 수신기가 포함되어 있습니다.  
@@ -86,6 +86,7 @@ ms.locfileid: "55257800"
 ```  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Diagnostics.TraceListener>
 - <xref:System.Diagnostics.DefaultTraceListener>
 - <xref:System.Diagnostics.TextWriterTraceListener>

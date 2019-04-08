@@ -1,5 +1,5 @@
 ---
-title: '방법: 설치 된 디코더 나열'
+title: '방법: 설치된 디코더 나열'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - image codecs [Windows Forms], listing
 - image decoders [Windows Forms], listing
 ms.assetid: 11417191-8c95-40ca-8024-779e61706fb6
-ms.openlocfilehash: c40bb79dde4a9baf8b84f3cda5fdabc6e30ad0b5
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: c92b8010def2f77f859ee0bd9cdb1ed51dd15f27
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57717533"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59079417"
 ---
-# <a name="how-to-list-installed-decoders"></a>방법: 설치 된 디코더 나열
+# <a name="how-to-list-installed-decoders"></a>방법: 설치된 디코더 나열
 응용 프로그램 특정 이미지 파일 형식을 읽을 수 있는지 여부를 결정 하는 컴퓨터에서 사용할 이미지 디코더를 나열 하려는 경우. <xref:System.Drawing.Imaging.ImageCodecInfo> 클래스를 제공 합니다 <xref:System.Drawing.Imaging.ImageCodecInfo.GetImageDecoders%2A> 정적 메서드는 이미지 디코더를 사용할 수를 확인할 수 있도록 합니다. <xref:System.Drawing.Imaging.ImageCodecInfo.GetImageDecoders%2A> 배열을 반환 <xref:System.Drawing.Imaging.ImageCodecInfo> 개체입니다.  
   
 ## <a name="example"></a>예제  
@@ -32,5 +32,6 @@ ms.locfileid: "57717533"
 -   A <xref:System.Windows.Forms.PaintEventArgs>에서의 매개 변수인 <xref:System.Windows.Forms.PaintEventHandler>합니다.   
   
 ## <a name="see-also"></a>참고자료
-- [방법: 설치 된 인코더 나열](how-to-list-installed-encoders.md)
-- [관리되는 GDI+에서 이미지 인코더 및 디코더 사용](using-image-encoders-and-decoders-in-managed-gdi.md)
+
+- [방법: 설치된 인코더 나열](how-to-list-installed-encoders.md)
+- [관리형 GDI+에서 이미지 인코더 및 디코더 사용](using-image-encoders-and-decoders-in-managed-gdi.md)

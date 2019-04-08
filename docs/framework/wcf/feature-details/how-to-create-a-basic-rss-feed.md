@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 431879b8-a5f8-4947-ad1e-4768c726aca8
-ms.openlocfilehash: 1de8d252be4740ad2a23ce1074d772364529eecf
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7b1ff72295332be072d7c664a546ed6e4d998ac8
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54695571"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59073834"
 ---
 # <a name="how-to-create-a-basic-rss-feed"></a>방법: 기본 RSS 피드 만들기
 Windows Communication Foundation (WCF)를 사용 하면 배포 피드를 노출 하는 서비스를 만들 수 있습니다. 이 항목에서는 RSS 배포 피드를 노출하는 배포 서비스를 만드는 방법에 대해 설명합니다.  
@@ -95,5 +95,6 @@ Windows Communication Foundation (WCF)를 사용 하면 배포 피드를 노출 
  앞의 코드를 컴파일할 때 System.ServiceModel.dll 및 System.ServiceModel.Web.dll을 참조합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.ServiceModel.WebHttpBinding>
 - <xref:System.ServiceModel.Web.WebGetAttribute>

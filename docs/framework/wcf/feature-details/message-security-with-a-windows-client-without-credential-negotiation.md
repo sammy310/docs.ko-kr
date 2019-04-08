@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: fc07a26c-cbee-41c5-8fb0-329085fef749
-ms.openlocfilehash: 2e5671832fa1025c424c746b8c27162d3935fddd
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6b4414d56e22646e057e6b1999e15722244deda4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54525166"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59075171"
 ---
 # <a name="message-security-with-a-windows-client-without-credential-negotiation"></a>자격 증명 협상 없이 Windows 클라이언트를 사용하는 메시지 보안
 다음 시나리오에는 Windows Communication Foundation (WCF) 클라이언트 및 Kerberos 프로토콜에 의해 보호 되는 서비스를 보여 줍니다.  
@@ -55,7 +55,7 @@ ms.locfileid: "54525166"
  [!code-csharp[C_SecurityScenarios#12](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#12)]
  [!code-vb[C_SecurityScenarios#12](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#12)]  
   
-### <a name="configuration"></a>구성하기  
+### <a name="configuration"></a>구성  
  코드 대신 다음 구성을 사용할 수 있습니다.  
   
 ```xml  
@@ -97,7 +97,7 @@ ms.locfileid: "54525166"
   
 -   이 코드와 클라이언트 코드를 사용하여 독립 실행형 클라이언트를 만듭니다.  
   
--   엔드포인트 주소를 정의하지 않는 클라이언트를 만듭니다. 대신 구성 이름을 인수로 사용하는 클라이언트 생성자를 사용합니다. 예를 들면 다음과 같습니다.  
+-   엔드포인트 주소를 정의하지 않는 클라이언트를 만듭니다. 대신 구성 이름을 인수로 사용하는 클라이언트 생성자를 사용합니다. 예를 들어:  
   
      [!code-csharp[C_SecurityScenarios#0](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#0)]
      [!code-vb[C_SecurityScenarios#0](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#0)]  
@@ -113,7 +113,7 @@ ms.locfileid: "54525166"
  [!code-csharp[C_SecurityScenarios#19](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#19)]
  [!code-vb[C_SecurityScenarios#19](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#19)]  
   
-### <a name="configuration"></a>구성하기  
+### <a name="configuration"></a>구성  
  다음 코드에서는 클라이언트를 구성합니다. 유의 합니다 [ \<servicePrincipalName >](../../../../docs/framework/configure-apps/file-schema/wcf/serviceprincipalname.md) 요소 Active Directory 도메인 서비스의 계정에 대해 등록 된 서비스의 SPN에 맞게 설정 해야 합니다.  
   
 ```xml  
@@ -147,6 +147,7 @@ ms.locfileid: "54525166"
 ```  
   
 ## <a name="see-also"></a>참고자료
+
 - [보안 개요](../../../../docs/framework/wcf/feature-details/security-overview.md)
 - [서비스 ID 및 인증](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)
-- [Windows Server appfabric 보안 모델](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+- [Windows Server AppFabric 보안 모델](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

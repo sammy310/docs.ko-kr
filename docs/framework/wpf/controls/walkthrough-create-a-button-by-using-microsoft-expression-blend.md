@@ -6,12 +6,12 @@ helpviewer_keywords:
 - converting [WPF], shape to button
 - Expression Blend [WPF Designer]
 ms.assetid: ff5037c2-bba7-4cae-8abb-6475b686c48e
-ms.openlocfilehash: cd143b55190ce398cc33e57a832ae85aabc36c41
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: f969e13ba50c2aadd170bdb28716213056d62cad
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57352700"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59100121"
 ---
 # <a name="walkthrough-create-a-button-by-using-microsoft-expression-blend"></a>연습: Microsoft Expression Blend를 사용하여 단추 만들기
 이 연습을 만드는 과정을 단계별로 안내를 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] Microsoft Expression Blend를 사용 하 여 사용자 지정된 단추입니다.  
@@ -248,6 +248,7 @@ ms.locfileid: "57352700"
 -   Bitmapeffect 추가 그라데이션, 만들기, 변환에 사용 및 개체의 기본 속성을 설정 합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [XAML을 사용하여 단추 만들기](walkthrough-create-a-button-by-using-xaml.md)
 - [스타일 지정 및 템플릿](styling-and-templating.md)
 - [애니메이션 개요](../graphics-multimedia/animation-overview.md)

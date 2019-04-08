@@ -8,12 +8,12 @@ helpviewer_keywords:
 - adorners [WPF], binding to children of Panels
 - Panel control [WPF], binding adorners to children
 ms.assetid: 4cc9b972-b472-4e5c-bdf3-3702d7fbb1f5
-ms.openlocfilehash: 9f840180edf55c3e10e6859dfc2b9f4b6495b878
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: e96e1772794a1594d97e1a0109d944d23515468d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57358195"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59100888"
 ---
 # <a name="how-to-adorn-the-children-of-a-panel"></a>방법: 패널의 자식 표시
 지정된 된 자식에 표시기를 프로그래밍 방식으로 바인딩하는 방법을 보여 주는이 예제 <xref:System.Windows.Controls.Panel>합니다.  
@@ -21,7 +21,7 @@ ms.locfileid: "57358195"
 ## <a name="example"></a>예제  
  자식에 표시기를 바인딩할는 <xref:System.Windows.Controls.Panel>, 다음이 단계를 수행 합니다.  
   
-1.  선언 <xref:System.Windows.Documents.AdornerLayer> 개체를 호출 합니다 `static` <xref:System.Windows.Documents.AdornerLayer.GetAdornerLayer%2A> 자식을 표시할 요소에 대 한 표시기 계층을 찾을 방법입니다.  
+1.  선언 <xref:System.Windows.Documents.AdornerLayer> 개체와 호출 된 `static`<xref:System.Windows.Documents.AdornerLayer.GetAdornerLayer%2A> 자식을 표시할 요소에 대 한 표시기 계층을 찾을 방법입니다.  
   
 2.  부모 요소와 호출의 자식을 열거는 <xref:System.Windows.Documents.AdornerLayer.Add%2A> 표시기 각 자식 요소를 바인딩하는 방법입니다.  
   
@@ -34,4 +34,5 @@ ms.locfileid: "57358195"
 >  [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]를 사용하여 표시기를 다른 요소에 바인딩하는 것은 현재 지원되지 않습니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [표시기 개요](adorners-overview.md)

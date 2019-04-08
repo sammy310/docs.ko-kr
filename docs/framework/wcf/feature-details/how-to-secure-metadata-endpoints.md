@@ -1,18 +1,18 @@
 ---
-title: '방법: 메타 데이터 끝점 보안'
+title: '방법: 메타데이터 엔드포인트 보안'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 9f71b6ae-737c-4382-8d89-0a7b1c7e182b
-ms.openlocfilehash: e7ba87a0e2a0a9dd0a4cd984dd88b4850a24040e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: be4bf9b3601e33d90306401abe1dce73f77d09e3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54590684"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59076577"
 ---
-# <a name="how-to-secure-metadata-endpoints"></a>방법: 메타 데이터 끝점 보안
+# <a name="how-to-secure-metadata-endpoints"></a>방법: 메타데이터 엔드포인트 보안
 서비스의 메타데이터에는 악의적인 사용자가 활용할 수 있는 응용 프로그램에 대한 중요한 정보가 들어 있습니다. 또한 서비스의 소비자는 서비스의 메타데이터를 가져오기 위한 보안 메커니즘이 필요할 수도 있습니다. 따라서 보안 엔드포인트를 사용하여 메타데이터를 게시해야 하는 경우가 있습니다.  
   
  메타 데이터 끝점은 일반적으로 응용 프로그램 끝점을 보호 하기 위한 Windows Communication Foundation (WCF)에서 정의 된 표준 보안 메커니즘을 사용 하 여 보호 됩니다. (자세한 내용은 [보안 개요](../../../../docs/framework/wcf/feature-details/security-overview.md).)  
@@ -93,10 +93,11 @@ ms.locfileid: "54590684"
 -   <xref:System.ServiceModel.Description?displayProperty=nameWithType>  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpsGetEnabled%2A>
 - <xref:System.ServiceModel.Description.ServiceMetadataBehavior>
 - <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpsGetUrl%2A>
-- [방법: SSL 인증서로 포트 구성](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md)
+- [방법: SSL 인증서를 사용하여 포트 구성](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md)
 - [인증서 작업](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)
 - [메타데이터 관련 보안 고려 사항](../../../../docs/framework/wcf/feature-details/security-considerations-with-metadata.md)
 - [서비스 및 클라이언트에 보안 설정](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)

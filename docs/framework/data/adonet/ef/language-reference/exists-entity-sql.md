@@ -2,12 +2,12 @@
 title: EXISTS(Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: d28ead43-4afb-4bdc-af64-efd2e05005d7
-ms.openlocfilehash: e6668fa2f978ddb785c4dac950c32d3caa2979af
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 76be542c64f75f27d126d7dbb6bde2baea8f6016
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54552543"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59078241"
 ---
 # <a name="exists-entity-sql"></a>EXISTS(Entity SQL)
 컬렉션이 비어 있는지 확인합니다.  
@@ -26,7 +26,7 @@ ms.locfileid: "54552543"
  EXISTS의 결과를 부정하도록 지정합니다.  
   
 ## <a name="return-value"></a>반환 값  
- 컬렉션이 비어 있지 않으면 `true`이고 비어 있으면 `false`입니다.  
+ `true` 컬렉션이 비어 있습니다. 그렇지 않으면 `false`합니다.  
   
 ## <a name="remarks"></a>설명  
  EXISTS는 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 집합 연산자 중 하나입니다. 모든 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 집합 연산자는 왼쪽에서 오른쪽으로 계산됩니다. 우선 순위에 대 한 정보를 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 집합 연산자를 참조 하십시오 [EXCEPT](../../../../../../docs/framework/data/adonet/ef/language-reference/except-entity-sql.md)합니다.  
@@ -41,4 +41,5 @@ ms.locfileid: "54552543"
  [!code-csharp[DP EntityServices Concepts 2#EXISTS](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#exists)]  
   
 ## <a name="see-also"></a>참고자료
+
 - [엔터티 SQL 참조](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)

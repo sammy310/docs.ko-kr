@@ -1,5 +1,5 @@
 ---
-title: '방법: Forms MonthCalendar 컨트롤의 Windows를 사용 하 여 특정 날짜를 굵게 표시'
+title: '방법: Windows Forms MonthCalendar 컨트롤을 사용하여 특정 날짜를 굵게 표시'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - GetDayBold event
 - MonthCalendar control [Windows Forms], dates displayed in bold
 ms.assetid: 8b20db5b-8118-4825-90e8-2c45c186ac7d
-ms.openlocfilehash: c27037a166d147df51731c5d59fd42f73294c7ad
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: cf3ec21aa0272f60599f5659d78214120bcfcaf8
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57718976"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59073704"
 ---
-# <a name="how-to-display-specific-days-in-bold-with-the-windows-forms-monthcalendar-control"></a>방법: Forms MonthCalendar 컨트롤의 Windows를 사용 하 여 특정 날짜를 굵게 표시
+# <a name="how-to-display-specific-days-in-bold-with-the-windows-forms-monthcalendar-control"></a>방법: Windows Forms MonthCalendar 컨트롤을 사용하여 특정 날짜를 굵게 표시
 Windows Forms <xref:System.Windows.Forms.MonthCalendar> 반복적으로 또는 단일 날짜로 컨트롤 굵은 글꼴로 일 표시할 수 있습니다. 주말과 휴일 등의 특정 날짜에 주목 하도록이 수행할 수 있습니다.  
   
  이 기능을 제어 하는 세 가지 속성입니다. <xref:System.Windows.Forms.MonthCalendar.BoldedDates%2A> 속성 단일 날짜를 포함 합니다. <xref:System.Windows.Forms.MonthCalendar.AnnuallyBoldedDates%2A> 속성 매년 굵게 표시 되는 날짜가 포함 되어 있습니다. <xref:System.Windows.Forms.MonthCalendar.MonthlyBoldedDates%2A> 속성 매월 굵게 표시 되는 날짜가 포함 되어 있습니다. 이러한 각 속성의 배열을 포함 <xref:System.DateTime> 개체입니다. 추가 하거나, 이러한 목록 중 하나에서 날짜를 제거 하려면 추가 하거나 제거 해야 합니다는 <xref:System.DateTime> 개체입니다.  
@@ -128,6 +128,7 @@ Windows Forms <xref:System.Windows.Forms.MonthCalendar> 반복적으로 또는 �
     ```  
   
 ## <a name="see-also"></a>참고자료
+
 - [MonthCalendar 컨트롤](monthcalendar-control-windows-forms.md)
 - [방법: Windows Forms MonthCalendar 컨트롤에서 날짜 범위 선택](how-to-select-a-range-of-dates-in-the-windows-forms-monthcalendar-control.md)
 - [방법: Windows Forms MonthCalendar 컨트롤의 모양 변경](how-to-change-monthcalendar-control-appearance.md)

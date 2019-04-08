@@ -1,5 +1,5 @@
 ---
-title: '방법: 인쇄 작업을 현재 인쇄할 수 있는지 확인'
+title: '방법: 특정 시간에 인쇄 작업을 인쇄할 수 있는지 확인'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - printers [WPF], availability
 - print jobs [WPF], timing
 ms.assetid: 7e9c8ec1-abf6-4b3d-b1c6-33b35d3c4063
-ms.openlocfilehash: 2e93fe23a6084fec4e2a251b0361c29a4207e621
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: dab836af8ba3d177719d910142cd93f8f6de0002
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57352739"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59099861"
 ---
-# <a name="how-to-discover-whether-a-print-job-can-be-printed-at-this-time-of-day"></a>방법: 인쇄 작업을 현재 인쇄할 수 있는지 확인
+# <a name="how-to-discover-whether-a-print-job-can-be-printed-at-this-time-of-day"></a>방법: 특정 시간에 인쇄 작업을 인쇄할 수 있는지 확인
 인쇄 대기열 항상 사용할 수 없는 하루 24 시간에 대 한 합니다. 하루 중 특정 시간에 사용할 수 없도록 설정할 수 있는 시작 및 종료 시간 속성을 갖습니다. 예를 들어, 오후 5 시 이후에 특정 부서 에서만 단독으로 사용에 대 한 프린터를 예약 합니다.이 기능은 사용할 수 있습니다. 해당 학과 사용 되는 다른 큐에서는 다른 부서에서 프린터를 처리 해야 합니다. 선호 하는 방식된 부서에 대 한 큐 수를 설정할 수 있지만 항상 사용 가능한, 다른 부서에 대 한 큐 오후 5 시 이후에 사용할 수 없게 설정할 수 됩니다.  
   
  또한 인쇄 작업 자체는 지정 된 기간 내 에서만 인쇄 가능 하도록 설정할 수 있습니다.  
@@ -75,6 +75,7 @@ ms.locfileid: "57352739"
  [!code-vb[DiagnoseProblematicPrintJob#TimeConverter](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/visualbasic/program.vb#timeconverter)]  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.DateTime>
 - <xref:System.Printing.PrintSystemJobInfo>
 - <xref:System.Printing.PrintQueue>

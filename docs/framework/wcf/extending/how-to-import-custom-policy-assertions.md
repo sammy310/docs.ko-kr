@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 1f41d787-accb-4a10-bfc6-a807671d1581
-ms.openlocfilehash: ff727922aeee7aeaea801dabd842f913ce75c220
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e27c6ed6508544180d8659717b700e604b0f3d3c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54674783"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59073626"
 ---
 # <a name="how-to-import-custom-policy-assertions"></a>방법: 사용자 지정 정책 어설션 가져오기
 정책 어설션은 서비스 엔드포인트의 기능 및 요구 사항에 대해 설명합니다.  클라이언트 응용 프로그램은 서비스 메타데이터에서 정책 어설션을 사용하여 서비스 엔드포인트에 대해 서비스 계약을 사용자 지정하거나 클라이언트 바인딩을 구성할 수 있습니다.  
@@ -64,6 +64,7 @@ ms.locfileid: "54674783"
 1.  메타데이터를 가져오기 전에 가져오기를 <xref:System.ServiceModel.Description.MetadataImporter.PolicyImportExtensions%2A?displayProperty=nameWithType> 속성(예를 들어 <xref:System.ServiceModel.Description.WsdlImporter?displayProperty=nameWithType>를 사용 중인 경우)에 추가합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.ServiceModel.Description.MetadataResolver?displayProperty=nameWithType>
 - <xref:System.ServiceModel.Description.WsdlImporter?displayProperty=nameWithType>
 - <xref:System.ServiceModel.Description.MetadataResolver?displayProperty=nameWithType>
