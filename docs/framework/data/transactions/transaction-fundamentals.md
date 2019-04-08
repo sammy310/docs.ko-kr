@@ -2,12 +2,12 @@
 title: 트랜잭션 기본 사항
 ms.date: 03/30/2017
 ms.assetid: 353f4ee2-e6bf-4b1c-b1c8-385fc8a486c0
-ms.openlocfilehash: cb5123cbee9245178cac43cfd2388cce3f5d356f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 49e44ce1112a44c105f47560017331afe4454a0d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54620515"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59076760"
 ---
 # <a name="transaction-fundamentals"></a>트랜잭션 기본 사항
 트랜잭션은 여러 작업을 함께 바인딩합니다. 예를 들어 응용 프로그램이 두 가지 작업을 수행한다고 가정합니다. 먼저 데이터베이스에 새 테이블을 만듭니다. 그런 다음 특수 개체를 호출하여 데이터를 수집하고 형식을 지정하여 새 테이블에 삽입합니다. 데이터를 채울 수 없는 경우 새 테이블을 만들지 않으려고 한다는 점에서 두 작업은 서로 관련이 있고 상호 종속적입니다. 단일 트랜잭션 범위 내에서 두 작업을 실행하면 두 작업 간의 연결이 적용됩니다. 두 번째 작업이 실패하면 첫 번째 작업이 새 테이블을 만들기 전의 지점으로 롤백됩니다.  
@@ -25,4 +25,5 @@ ms.locfileid: "54620515"
  ADO.NET을 사용 하 여 트랜잭션을 만들 수 있습니다 <xref:System.EnterpriseServices>, 또는에서 제공 하는 트랜잭션 프로그래밍 모델을 <xref:System.Transactions> 네임 스페이스입니다. 합니다 [System.Transactions에서 제공 하는 기능](../../../../docs/framework/data/transactions/features-provided-by-system-transactions.md) 사용 하 여 트랜잭션 응용 프로그램을 작성 하는 데 사용할 수 있는 기능을 설명 하는 항목을 <xref:System.Transactions> 네임 스페이스입니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [System.Transactions에서 제공하는 기능](../../../../docs/framework/data/transactions/features-provided-by-system-transactions.md)

@@ -1,5 +1,5 @@
 ---
-title: '방법: Windows Form에 채워진된 사각형 그리기'
+title: '방법: Windows Form에서 채워진 사각형 그리기'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,14 +12,14 @@ helpviewer_keywords:
 - rectangles [Windows Forms], drawing
 - drawing rectangles
 ms.assetid: d656a93c-987d-4809-aafd-493fe17450f0
-ms.openlocfilehash: 53fab93f47c16257b5ab2e336b43c6133a31d509
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: e551eacf0924c9bffa802fb5d2ba8bae7c1c3a98
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57716896"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59072029"
 ---
-# <a name="how-to-draw-a-filled-rectangle-on-a-windows-form"></a>방법: Windows Form에 채워진된 사각형 그리기
+# <a name="how-to-draw-a-filled-rectangle-on-a-windows-form"></a>방법: Windows Form에서 채워진 사각형 그리기
 이 예제에서는 폼에 채워진된 사각형을 그립니다.  
   
 ## <a name="example"></a>예제  
@@ -34,6 +34,7 @@ ms.locfileid: "57716896"
  항상 호출 해야 <xref:System.IDisposable.Dispose%2A> 와 같은 시스템 리소스를 사용 하는 모든 개체에 <xref:System.Drawing.Brush> 고 <xref:System.Drawing.Graphics> 개체입니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Drawing.Graphics.FillRectangle%2A>
 - <xref:System.Windows.Forms.Control.OnPaint%2A>
 - [그래픽 프로그래밍 시작](getting-started-with-graphics-programming.md)
