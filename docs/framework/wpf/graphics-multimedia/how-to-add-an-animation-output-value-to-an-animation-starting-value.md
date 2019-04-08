@@ -4,25 +4,26 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - animation [WPF]
 ms.assetid: b89a82be-b03d-481e-a8d3-cc513d09ca00
-ms.openlocfilehash: f27a214d4fa6fd33d993e7ae458ebb736b60bed7
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 945675d03a280e2394fdb0eab27c0978dc7cc320
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57351959"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59102611"
 ---
-# <a name="how-to-add-an-animation-output-value-to-an-animation-starting-value"></a><span data-ttu-id="a8f88-102">방법: 애니메이션 시작 값에 애니메이션 출력 값 추가</span><span class="sxs-lookup"><span data-stu-id="a8f88-102">How to: Add an Animation Output Value to an Animation Starting Value</span></span>
-<span data-ttu-id="a8f88-103">이 예제에서는 애니메이션 시작 값에 애니메이션 출력 값을 추가 하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="a8f88-103">This example shows how to add an animation output value to an animation starting value.</span></span>  
+# <a name="how-to-add-an-animation-output-value-to-an-animation-starting-value"></a><span data-ttu-id="37b43-102">방법: 애니메이션 시작 값에 애니메이션 출력 값 추가</span><span class="sxs-lookup"><span data-stu-id="37b43-102">How to: Add an Animation Output Value to an Animation Starting Value</span></span>
+<span data-ttu-id="37b43-103">이 예제에서는 애니메이션 시작 값에 애니메이션 출력 값을 추가 하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="37b43-103">This example shows how to add an animation output value to an animation starting value.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="a8f88-104">예제</span><span class="sxs-lookup"><span data-stu-id="a8f88-104">Example</span></span>  
- <span data-ttu-id="a8f88-105"><xref:System.Windows.Media.Animation.DoubleAnimation.IsAdditive%2A> 속성 애니메이션된 속성의 시작 값 (기본값)에 추가 하는 애니메이션의 출력 값 여부를 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="a8f88-105">The <xref:System.Windows.Media.Animation.DoubleAnimation.IsAdditive%2A> property specifies whether you want the output value of an animation added to the starting value (base value) of an animated property.</span></span> <span data-ttu-id="a8f88-106">사용할 수는 <xref:System.Windows.Media.Animation.DoubleAnimation.IsAdditive%2A> 가장 기본적인 애니메이션 및 대부분의 키 프레임 애니메이션을 사용 하 여 속성입니다.</span><span class="sxs-lookup"><span data-stu-id="a8f88-106">You can use the <xref:System.Windows.Media.Animation.DoubleAnimation.IsAdditive%2A> property with most basic animations and most key frame animations.</span></span> <span data-ttu-id="a8f88-107">자세한 내용은 [애니메이션 개요](animation-overview.md) 하 고 [키 프레임 애니메이션 개요](key-frame-animations-overview.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="a8f88-107">For more information, see [Animation Overview](animation-overview.md) and [Key-Frame Animations Overview](key-frame-animations-overview.md).</span></span>  
+## <a name="example"></a><span data-ttu-id="37b43-104">예제</span><span class="sxs-lookup"><span data-stu-id="37b43-104">Example</span></span>  
+ <span data-ttu-id="37b43-105"><xref:System.Windows.Media.Animation.DoubleAnimation.IsAdditive%2A> 속성 애니메이션된 속성의 시작 값 (기본값)에 추가 하는 애니메이션의 출력 값 여부를 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="37b43-105">The <xref:System.Windows.Media.Animation.DoubleAnimation.IsAdditive%2A> property specifies whether you want the output value of an animation added to the starting value (base value) of an animated property.</span></span> <span data-ttu-id="37b43-106">사용할 수는 <xref:System.Windows.Media.Animation.DoubleAnimation.IsAdditive%2A> 가장 기본적인 애니메이션 및 대부분의 키 프레임 애니메이션을 사용 하 여 속성입니다.</span><span class="sxs-lookup"><span data-stu-id="37b43-106">You can use the <xref:System.Windows.Media.Animation.DoubleAnimation.IsAdditive%2A> property with most basic animations and most key frame animations.</span></span> <span data-ttu-id="37b43-107">자세한 내용은 [애니메이션 개요](animation-overview.md) 하 고 [키 프레임 애니메이션 개요](key-frame-animations-overview.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="37b43-107">For more information, see [Animation Overview](animation-overview.md) and [Key-Frame Animations Overview](key-frame-animations-overview.md).</span></span>  
   
- <span data-ttu-id="a8f88-108">다음 예제를 사용 하 여 결과 보여 줍니다.는 <xref:System.Windows.Media.Animation.DoubleAnimation.IsAdditive%2A?displayProperty=nameWithType> 속성을 <xref:System.Windows.Media.Animation.DoubleAnimation> 하 고 사용 하는 <xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames.IsAdditive%2A?displayProperty=nameWithType> 속성과 <xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames>합니다.</span><span class="sxs-lookup"><span data-stu-id="a8f88-108">The following example shows the effect of using the <xref:System.Windows.Media.Animation.DoubleAnimation.IsAdditive%2A?displayProperty=nameWithType> property with <xref:System.Windows.Media.Animation.DoubleAnimation> and using the <xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames.IsAdditive%2A?displayProperty=nameWithType> property with <xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames>.</span></span>  
+ <span data-ttu-id="37b43-108">다음 예제를 사용 하 여 결과 보여 줍니다.는 <xref:System.Windows.Media.Animation.DoubleAnimation.IsAdditive%2A?displayProperty=nameWithType> 속성을 <xref:System.Windows.Media.Animation.DoubleAnimation> 하 고 사용 하는 <xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames.IsAdditive%2A?displayProperty=nameWithType> 속성과 <xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames>합니다.</span><span class="sxs-lookup"><span data-stu-id="37b43-108">The following example shows the effect of using the <xref:System.Windows.Media.Animation.DoubleAnimation.IsAdditive%2A?displayProperty=nameWithType> property with <xref:System.Windows.Media.Animation.DoubleAnimation> and using the <xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames.IsAdditive%2A?displayProperty=nameWithType> property with <xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames>.</span></span>  
   
  [!code-xaml[timingbehaviors_snip#IsAdditiveWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/timingbehaviors_snip/CSharp/IsAdditiveExample.xaml#isadditivewholepage)]  
   
-## <a name="see-also"></a><span data-ttu-id="a8f88-109">참고자료</span><span class="sxs-lookup"><span data-stu-id="a8f88-109">See also</span></span>
-- [<span data-ttu-id="a8f88-110">주기가 반복되는 동안 애니메이션 값 누적</span><span class="sxs-lookup"><span data-stu-id="a8f88-110">Accumulate Animation Values During Repeat Cycles</span></span>](how-to-accumulate-animation-values-during-repeat-cycles.md)
-- [<span data-ttu-id="a8f88-111">애니메이션 개요</span><span class="sxs-lookup"><span data-stu-id="a8f88-111">Animation Overview</span></span>](animation-overview.md)
-- [<span data-ttu-id="a8f88-112">키 프레임 애니메이션 개요</span><span class="sxs-lookup"><span data-stu-id="a8f88-112">Key-Frame Animations Overview</span></span>](key-frame-animations-overview.md)
-- [<span data-ttu-id="a8f88-113">애니메이션 및 타이밍 방법 항목</span><span class="sxs-lookup"><span data-stu-id="a8f88-113">Animation and Timing How-to Topics</span></span>](animation-and-timing-how-to-topics.md)
+## <a name="see-also"></a><span data-ttu-id="37b43-109">참고자료</span><span class="sxs-lookup"><span data-stu-id="37b43-109">See also</span></span>
+
+- [<span data-ttu-id="37b43-110">반복 주기 동안 애니메이션 값 누적</span><span class="sxs-lookup"><span data-stu-id="37b43-110">Accumulate Animation Values During Repeat Cycles</span></span>](how-to-accumulate-animation-values-during-repeat-cycles.md)
+- [<span data-ttu-id="37b43-111">애니메이션 개요</span><span class="sxs-lookup"><span data-stu-id="37b43-111">Animation Overview</span></span>](animation-overview.md)
+- [<span data-ttu-id="37b43-112">키 프레임 애니메이션 개요</span><span class="sxs-lookup"><span data-stu-id="37b43-112">Key-Frame Animations Overview</span></span>](key-frame-animations-overview.md)
+- [<span data-ttu-id="37b43-113">애니메이션 및 타이밍 방법 항목</span><span class="sxs-lookup"><span data-stu-id="37b43-113">Animation and Timing How-to Topics</span></span>](animation-and-timing-how-to-topics.md)

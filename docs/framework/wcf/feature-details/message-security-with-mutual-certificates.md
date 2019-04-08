@@ -5,48 +5,48 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 99d7a528-7ae4-4d39-a0f9-3066ea237de0
-ms.openlocfilehash: 51795007b906a6eb71e5e03b4afef2fc83328b28
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8fc8d6d4a63b7a752fb8c26991d904761fdcebdd
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54593344"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59076024"
 ---
-# <a name="message-security-with-mutual-certificates"></a><span data-ttu-id="ae41e-102">상호 인증서를 사용하는 메시지 보안</span><span class="sxs-lookup"><span data-stu-id="ae41e-102">Message Security with Mutual Certificates</span></span>
-<span data-ttu-id="ae41e-103">다음 시나리오에는 Windows Communication Foundation (WCF) 서비스 및 메시지 보안 모드를 사용 하 여 보호 하는 클라이언트를 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="ae41e-103">The following scenario shows a Windows Communication Foundation (WCF) service and client secured using message security mode.</span></span> <span data-ttu-id="ae41e-104">클라이언트 및 서비스는 인증서를 사용하여 인증됩니다.</span><span class="sxs-lookup"><span data-stu-id="ae41e-104">The client and the service are authenticated with certificates.</span></span>  
+# <a name="message-security-with-mutual-certificates"></a><span data-ttu-id="9a966-102">상호 인증서를 사용하는 메시지 보안</span><span class="sxs-lookup"><span data-stu-id="9a966-102">Message Security with Mutual Certificates</span></span>
+<span data-ttu-id="9a966-103">다음 시나리오에는 Windows Communication Foundation (WCF) 서비스 및 메시지 보안 모드를 사용 하 여 보호 하는 클라이언트를 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="9a966-103">The following scenario shows a Windows Communication Foundation (WCF) service and client secured using message security mode.</span></span> <span data-ttu-id="9a966-104">클라이언트 및 서비스는 인증서를 사용하여 인증됩니다.</span><span class="sxs-lookup"><span data-stu-id="9a966-104">The client and the service are authenticated with certificates.</span></span>  
   
- <span data-ttu-id="ae41e-105">이 시나리오는 X.509 인증서 토큰 프로필과 함께 WS-Security를 사용하므로 상호 운용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="ae41e-105">This scenario is interoperable because it uses WS-Security with the X.509 certificate token profile.</span></span>  
+ <span data-ttu-id="9a966-105">이 시나리오는 X.509 인증서 토큰 프로필과 함께 WS-Security를 사용하므로 상호 운용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="9a966-105">This scenario is interoperable because it uses WS-Security with the X.509 certificate token profile.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="ae41e-106">이 시나리오에서는 서비스 인증서의 협상을 수행하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="ae41e-106">This scenario does not perform negotiation of the service certificate.</span></span> <span data-ttu-id="ae41e-107">서비스 인증서는 통신을 수행하기 전에 클라이언트에 제공해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="ae41e-107">The service certificate must be provided to the client in advance of any communication.</span></span> <span data-ttu-id="ae41e-108">서버 인증서는 응용 프로그램과 함께 배포하거나 대역 외 통신에 제공할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="ae41e-108">The server certificate can be distributed with the application or provided in an out-of-band communication.</span></span>  
+>  <span data-ttu-id="9a966-106">이 시나리오에서는 서비스 인증서의 협상을 수행하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="9a966-106">This scenario does not perform negotiation of the service certificate.</span></span> <span data-ttu-id="9a966-107">서비스 인증서는 통신을 수행하기 전에 클라이언트에 제공해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="9a966-107">The service certificate must be provided to the client in advance of any communication.</span></span> <span data-ttu-id="9a966-108">서버 인증서는 응용 프로그램과 함께 배포하거나 대역 외 통신에 제공할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="9a966-108">The server certificate can be distributed with the application or provided in an out-of-band communication.</span></span>  
   
- <span data-ttu-id="ae41e-109">![메시지 보안 상호 인증서를 사용 하 여](../../../../docs/framework/wcf/feature-details/media/f4157312-b17c-416c-a5ee-fa7b54db211b.gif "f4157312-b17c-416c-a5ee-fa7b54db211b")</span><span class="sxs-lookup"><span data-stu-id="ae41e-109">![Message security with mutual certificates](../../../../docs/framework/wcf/feature-details/media/f4157312-b17c-416c-a5ee-fa7b54db211b.gif "f4157312-b17c-416c-a5ee-fa7b54db211b")</span></span>  
+ <span data-ttu-id="9a966-109">![메시지 보안 상호 인증서를 사용 하 여](../../../../docs/framework/wcf/feature-details/media/f4157312-b17c-416c-a5ee-fa7b54db211b.gif "f4157312-b17c-416c-a5ee-fa7b54db211b")</span><span class="sxs-lookup"><span data-stu-id="9a966-109">![Message security with mutual certificates](../../../../docs/framework/wcf/feature-details/media/f4157312-b17c-416c-a5ee-fa7b54db211b.gif "f4157312-b17c-416c-a5ee-fa7b54db211b")</span></span>  
   
-|<span data-ttu-id="ae41e-110">특성</span><span class="sxs-lookup"><span data-stu-id="ae41e-110">Characteristic</span></span>|<span data-ttu-id="ae41e-111">설명</span><span class="sxs-lookup"><span data-stu-id="ae41e-111">Description</span></span>|  
+|<span data-ttu-id="9a966-110">특성</span><span class="sxs-lookup"><span data-stu-id="9a966-110">Characteristic</span></span>|<span data-ttu-id="9a966-111">설명</span><span class="sxs-lookup"><span data-stu-id="9a966-111">Description</span></span>|  
 |--------------------|-----------------|  
-|<span data-ttu-id="ae41e-112">보안 모드</span><span class="sxs-lookup"><span data-stu-id="ae41e-112">Security Mode</span></span>|<span data-ttu-id="ae41e-113">메시지</span><span class="sxs-lookup"><span data-stu-id="ae41e-113">Message</span></span>|  
-|<span data-ttu-id="ae41e-114">상호 운용성</span><span class="sxs-lookup"><span data-stu-id="ae41e-114">Interoperability</span></span>|<span data-ttu-id="ae41e-115">예, 클라이언트 및 서비스와 호환되는 WS-Security 및 X.509 인증서 토큰 프로필과 상호 운용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="ae41e-115">Yes, with WS-Security and X.509 certificate token profile compatible clients and services.</span></span>|  
-|<span data-ttu-id="ae41e-116">인증</span><span class="sxs-lookup"><span data-stu-id="ae41e-116">Authentication</span></span>|<span data-ttu-id="ae41e-117">서버와 클라이언트의 상호 인증입니다.</span><span class="sxs-lookup"><span data-stu-id="ae41e-117">Mutual authentication of the server and client.</span></span>|  
-|<span data-ttu-id="ae41e-118">무결성</span><span class="sxs-lookup"><span data-stu-id="ae41e-118">Integrity</span></span>|<span data-ttu-id="ae41e-119">예</span><span class="sxs-lookup"><span data-stu-id="ae41e-119">Yes</span></span>|  
-|<span data-ttu-id="ae41e-120">기밀성</span><span class="sxs-lookup"><span data-stu-id="ae41e-120">Confidentiality</span></span>|<span data-ttu-id="ae41e-121">예</span><span class="sxs-lookup"><span data-stu-id="ae41e-121">Yes</span></span>|  
-|<span data-ttu-id="ae41e-122">전송</span><span class="sxs-lookup"><span data-stu-id="ae41e-122">Transport</span></span>|<span data-ttu-id="ae41e-123">HTTP</span><span class="sxs-lookup"><span data-stu-id="ae41e-123">HTTP</span></span>|  
-|<span data-ttu-id="ae41e-124">바인딩</span><span class="sxs-lookup"><span data-stu-id="ae41e-124">Binding</span></span>|<xref:System.ServiceModel.WSHttpBinding>|  
+|<span data-ttu-id="9a966-112">보안 모드</span><span class="sxs-lookup"><span data-stu-id="9a966-112">Security Mode</span></span>|<span data-ttu-id="9a966-113">메시지</span><span class="sxs-lookup"><span data-stu-id="9a966-113">Message</span></span>|  
+|<span data-ttu-id="9a966-114">상호 운용성</span><span class="sxs-lookup"><span data-stu-id="9a966-114">Interoperability</span></span>|<span data-ttu-id="9a966-115">예, 클라이언트 및 서비스와 호환되는 WS-Security 및 X.509 인증서 토큰 프로필과 상호 운용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="9a966-115">Yes, with WS-Security and X.509 certificate token profile compatible clients and services.</span></span>|  
+|<span data-ttu-id="9a966-116">인증</span><span class="sxs-lookup"><span data-stu-id="9a966-116">Authentication</span></span>|<span data-ttu-id="9a966-117">서버와 클라이언트의 상호 인증입니다.</span><span class="sxs-lookup"><span data-stu-id="9a966-117">Mutual authentication of the server and client.</span></span>|  
+|<span data-ttu-id="9a966-118">무결성</span><span class="sxs-lookup"><span data-stu-id="9a966-118">Integrity</span></span>|<span data-ttu-id="9a966-119">예</span><span class="sxs-lookup"><span data-stu-id="9a966-119">Yes</span></span>|  
+|<span data-ttu-id="9a966-120">기밀성</span><span class="sxs-lookup"><span data-stu-id="9a966-120">Confidentiality</span></span>|<span data-ttu-id="9a966-121">예</span><span class="sxs-lookup"><span data-stu-id="9a966-121">Yes</span></span>|  
+|<span data-ttu-id="9a966-122">전송</span><span class="sxs-lookup"><span data-stu-id="9a966-122">Transport</span></span>|<span data-ttu-id="9a966-123">HTTP</span><span class="sxs-lookup"><span data-stu-id="9a966-123">HTTP</span></span>|  
+|<span data-ttu-id="9a966-124">바인딩</span><span class="sxs-lookup"><span data-stu-id="9a966-124">Binding</span></span>|<xref:System.ServiceModel.WSHttpBinding>|  
   
-## <a name="service"></a><span data-ttu-id="ae41e-125">서비스</span><span class="sxs-lookup"><span data-stu-id="ae41e-125">Service</span></span>  
- <span data-ttu-id="ae41e-126">다음 코드와 구성은 독립적으로 실행되어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="ae41e-126">The following code and configuration are meant to run independently.</span></span> <span data-ttu-id="ae41e-127">다음 작업 중 하나를 수행합니다.</span><span class="sxs-lookup"><span data-stu-id="ae41e-127">Do one of the following:</span></span>  
+## <a name="service"></a><span data-ttu-id="9a966-125">서비스</span><span class="sxs-lookup"><span data-stu-id="9a966-125">Service</span></span>  
+ <span data-ttu-id="9a966-126">다음 코드와 구성은 독립적으로 실행되어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="9a966-126">The following code and configuration are meant to run independently.</span></span> <span data-ttu-id="9a966-127">다음 작업 중 하나를 수행합니다.</span><span class="sxs-lookup"><span data-stu-id="9a966-127">Do one of the following:</span></span>  
   
--   <span data-ttu-id="ae41e-128">구성 없이 코드를 사용하여 독립 실행형 서비스를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="ae41e-128">Create a stand-alone service using the code with no configuration.</span></span>  
+-   <span data-ttu-id="9a966-128">구성 없이 코드를 사용하여 독립 실행형 서비스를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="9a966-128">Create a stand-alone service using the code with no configuration.</span></span>  
   
--   <span data-ttu-id="ae41e-129">제공된 구성을 사용하여 서비스를 만들지만 엔드포인트를 정의하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="ae41e-129">Create a service using the supplied configuration, but do not define any endpoints.</span></span>  
+-   <span data-ttu-id="9a966-129">제공된 구성을 사용하여 서비스를 만들지만 엔드포인트를 정의하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="9a966-129">Create a service using the supplied configuration, but do not define any endpoints.</span></span>  
   
-### <a name="code"></a><span data-ttu-id="ae41e-130">코드</span><span class="sxs-lookup"><span data-stu-id="ae41e-130">Code</span></span>  
- <span data-ttu-id="ae41e-131">다음 코드에서는 메시지 보안을 사용하는 서비스 엔드포인트를 만드는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="ae41e-131">The following code shows creates a service endpoint that uses message security.</span></span> <span data-ttu-id="ae41e-132">서비스는 자신을 인증하기 위한 인증서가 필요합니다.</span><span class="sxs-lookup"><span data-stu-id="ae41e-132">The service requires a certificate to authenticate itself.</span></span>  
+### <a name="code"></a><span data-ttu-id="9a966-130">코드</span><span class="sxs-lookup"><span data-stu-id="9a966-130">Code</span></span>  
+ <span data-ttu-id="9a966-131">다음 코드에서는 메시지 보안을 사용하는 서비스 엔드포인트를 만드는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="9a966-131">The following code shows creates a service endpoint that uses message security.</span></span> <span data-ttu-id="9a966-132">서비스는 자신을 인증하기 위한 인증서가 필요합니다.</span><span class="sxs-lookup"><span data-stu-id="9a966-132">The service requires a certificate to authenticate itself.</span></span>  
   
  [!code-csharp[C_SecurityScenarios#13](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#13)]
  [!code-vb[C_SecurityScenarios#13](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#13)]  
   
-### <a name="configuration"></a><span data-ttu-id="ae41e-133">구성하기</span><span class="sxs-lookup"><span data-stu-id="ae41e-133">Configuration</span></span>  
- <span data-ttu-id="ae41e-134">다음 구성은 동일한 서비스를 만드는 데 코드 대신 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="ae41e-134">The following configuration can be used instead of the code to create the same service.</span></span>  
+### <a name="configuration"></a><span data-ttu-id="9a966-133">구성</span><span class="sxs-lookup"><span data-stu-id="9a966-133">Configuration</span></span>  
+ <span data-ttu-id="9a966-134">다음 구성은 동일한 서비스를 만드는 데 코드 대신 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="9a966-134">The following configuration can be used instead of the code to create the same service.</span></span>  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8"?>  
@@ -90,24 +90,24 @@ ms.locfileid: "54593344"
 </configuration>  
 ```  
   
-## <a name="client"></a><span data-ttu-id="ae41e-135">클라이언트</span><span class="sxs-lookup"><span data-stu-id="ae41e-135">Client</span></span>  
- <span data-ttu-id="ae41e-136">다음 코드와 구성은 독립적으로 실행되어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="ae41e-136">The following code and configuration are meant to run independently.</span></span> <span data-ttu-id="ae41e-137">다음 작업 중 하나를 수행합니다.</span><span class="sxs-lookup"><span data-stu-id="ae41e-137">Do one of the following:</span></span>  
+## <a name="client"></a><span data-ttu-id="9a966-135">클라이언트</span><span class="sxs-lookup"><span data-stu-id="9a966-135">Client</span></span>  
+ <span data-ttu-id="9a966-136">다음 코드와 구성은 독립적으로 실행되어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="9a966-136">The following code and configuration are meant to run independently.</span></span> <span data-ttu-id="9a966-137">다음 작업 중 하나를 수행합니다.</span><span class="sxs-lookup"><span data-stu-id="9a966-137">Do one of the following:</span></span>  
   
--   <span data-ttu-id="ae41e-138">이 코드와 클라이언트 코드를 사용하여 독립 실행형 클라이언트를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="ae41e-138">Create a stand-alone client using the code (and client code).</span></span>  
+-   <span data-ttu-id="9a966-138">이 코드와 클라이언트 코드를 사용하여 독립 실행형 클라이언트를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="9a966-138">Create a stand-alone client using the code (and client code).</span></span>  
   
--   <span data-ttu-id="ae41e-139">엔드포인트 주소를 정의하지 않는 클라이언트를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="ae41e-139">Create a client that does not define any endpoint addresses.</span></span> <span data-ttu-id="ae41e-140">대신 구성 이름을 인수로 사용하는 클라이언트 생성자를 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="ae41e-140">Instead, use the client constructor that takes the configuration name as an argument.</span></span> <span data-ttu-id="ae41e-141">예를 들면 다음과 같습니다.</span><span class="sxs-lookup"><span data-stu-id="ae41e-141">For example:</span></span>  
+-   <span data-ttu-id="9a966-139">엔드포인트 주소를 정의하지 않는 클라이언트를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="9a966-139">Create a client that does not define any endpoint addresses.</span></span> <span data-ttu-id="9a966-140">대신 구성 이름을 인수로 사용하는 클라이언트 생성자를 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="9a966-140">Instead, use the client constructor that takes the configuration name as an argument.</span></span> <span data-ttu-id="9a966-141">예를 들어:</span><span class="sxs-lookup"><span data-stu-id="9a966-141">For example:</span></span>  
   
      [!code-csharp[C_SecurityScenarios#0](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#0)]
      [!code-vb[C_SecurityScenarios#0](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#0)]  
   
-### <a name="code"></a><span data-ttu-id="ae41e-142">코드</span><span class="sxs-lookup"><span data-stu-id="ae41e-142">Code</span></span>  
- <span data-ttu-id="ae41e-143">다음 코드에서는 클라이언트를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="ae41e-143">The following code creates the client.</span></span> <span data-ttu-id="ae41e-144">보안 모드는 Message로 설정되며 클라이언트 자격 증명 형식은 Certificate로 설정됩니다.</span><span class="sxs-lookup"><span data-stu-id="ae41e-144">The security mode is set to Message, and the client credential type is set to Certificate.</span></span>  
+### <a name="code"></a><span data-ttu-id="9a966-142">코드</span><span class="sxs-lookup"><span data-stu-id="9a966-142">Code</span></span>  
+ <span data-ttu-id="9a966-143">다음 코드에서는 클라이언트를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="9a966-143">The following code creates the client.</span></span> <span data-ttu-id="9a966-144">보안 모드는 Message로 설정되며 클라이언트 자격 증명 형식은 Certificate로 설정됩니다.</span><span class="sxs-lookup"><span data-stu-id="9a966-144">The security mode is set to Message, and the client credential type is set to Certificate.</span></span>  
   
  [!code-csharp[C_SecurityScenarios#20](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#20)]
  [!code-vb[C_SecurityScenarios#20](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#20)]  
   
-### <a name="configuration"></a><span data-ttu-id="ae41e-145">구성하기</span><span class="sxs-lookup"><span data-stu-id="ae41e-145">Configuration</span></span>  
- <span data-ttu-id="ae41e-146">다음과 같이 클라이언트를 구성합니다.</span><span class="sxs-lookup"><span data-stu-id="ae41e-146">The following configures the client.</span></span> <span data-ttu-id="ae41e-147">클라이언트 인증서를 사용 하 여 지정 해야 합니다 [ \<clientCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/clientcertificate-of-clientcredentials-element.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="ae41e-147">A client certificate must be specified using the [\<clientCertificate>](../../../../docs/framework/configure-apps/file-schema/wcf/clientcertificate-of-clientcredentials-element.md).</span></span> <span data-ttu-id="ae41e-148">또한 사용 하 여 서비스 인증서는 지정 된 [ \<defaultCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/defaultcertificate-element.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="ae41e-148">Also, the service certificate is specified using the [\<defaultCertificate>](../../../../docs/framework/configure-apps/file-schema/wcf/defaultcertificate-element.md).</span></span>  
+### <a name="configuration"></a><span data-ttu-id="9a966-145">구성</span><span class="sxs-lookup"><span data-stu-id="9a966-145">Configuration</span></span>  
+ <span data-ttu-id="9a966-146">다음과 같이 클라이언트를 구성합니다.</span><span class="sxs-lookup"><span data-stu-id="9a966-146">The following configures the client.</span></span> <span data-ttu-id="9a966-147">클라이언트 인증서를 사용 하 여 지정 해야 합니다 [ \<clientCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/clientcertificate-of-clientcredentials-element.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="9a966-147">A client certificate must be specified using the [\<clientCertificate>](../../../../docs/framework/configure-apps/file-schema/wcf/clientcertificate-of-clientcredentials-element.md).</span></span> <span data-ttu-id="9a966-148">또한 사용 하 여 서비스 인증서는 지정 된 [ \<defaultCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/defaultcertificate-element.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="9a966-148">Also, the service certificate is specified using the [\<defaultCertificate>](../../../../docs/framework/configure-apps/file-schema/wcf/defaultcertificate-element.md).</span></span>  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8"?>  
@@ -158,7 +158,8 @@ ms.locfileid: "54593344"
 </configuration>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="ae41e-149">참고자료</span><span class="sxs-lookup"><span data-stu-id="ae41e-149">See also</span></span>
-- [<span data-ttu-id="ae41e-150">보안 개요</span><span class="sxs-lookup"><span data-stu-id="ae41e-150">Security Overview</span></span>](../../../../docs/framework/wcf/feature-details/security-overview.md)
-- [<span data-ttu-id="ae41e-151">Windows Server appfabric 보안 모델</span><span class="sxs-lookup"><span data-stu-id="ae41e-151">Security Model for Windows Server App Fabric</span></span>](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
-- [<span data-ttu-id="ae41e-152">방법: 만들기 및 개발 중 전송 보안에 대 한 WCF에서 임시 인증서 설치</span><span class="sxs-lookup"><span data-stu-id="ae41e-152">How to: Create and Install Temporary Certificates in WCF for Transport Security During Development</span></span>](https://go.microsoft.com/fwlink/?LinkId=244264)
+## <a name="see-also"></a><span data-ttu-id="9a966-149">참고자료</span><span class="sxs-lookup"><span data-stu-id="9a966-149">See also</span></span>
+
+- [<span data-ttu-id="9a966-150">보안 개요</span><span class="sxs-lookup"><span data-stu-id="9a966-150">Security Overview</span></span>](../../../../docs/framework/wcf/feature-details/security-overview.md)
+- [<span data-ttu-id="9a966-151">Windows Server AppFabric 보안 모델</span><span class="sxs-lookup"><span data-stu-id="9a966-151">Security Model for Windows Server App Fabric</span></span>](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+- [<span data-ttu-id="9a966-152">방법: 만들기 및 개발 중 전송 보안에 대 한 WCF에서 임시 인증서 설치</span><span class="sxs-lookup"><span data-stu-id="9a966-152">How to: Create and Install Temporary Certificates in WCF for Transport Security During Development</span></span>](https://go.microsoft.com/fwlink/?LinkId=244264)

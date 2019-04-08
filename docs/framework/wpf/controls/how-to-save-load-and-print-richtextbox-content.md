@@ -12,27 +12,28 @@ helpviewer_keywords:
 - RichTextBox control [WPF], printing
 - RichTextBox control [WPF], loading
 ms.assetid: ffb113d3-c68a-47ca-8ac0-882283f38326
-ms.openlocfilehash: bcb368ababaac15dd92b11e43c22dfb705a7c0b3
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 90581bee7815dafd44c3cae18a8af7394fee1e9a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57365739"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59072465"
 ---
-# <a name="how-to-save-load-and-print-richtextbox-content"></a><span data-ttu-id="4d620-102">방법: RichTextBox 콘텐츠 저장, 로드 및 인쇄</span><span class="sxs-lookup"><span data-stu-id="4d620-102">How to: Save, Load, and Print RichTextBox Content</span></span>
-<span data-ttu-id="4d620-103">다음 예제에서는의 콘텐츠를 저장 하는 방법을 보여 줍니다는 <xref:System.Windows.Controls.RichTextBox> 파일에 해당 콘텐츠 되돌려 로드는 <xref:System.Windows.Controls.RichTextBox>, 콘텐츠를 인쇄 하 고 합니다.</span><span class="sxs-lookup"><span data-stu-id="4d620-103">The following example shows how to save content of a <xref:System.Windows.Controls.RichTextBox> to a file, load that content back into the <xref:System.Windows.Controls.RichTextBox>, and print the contents.</span></span>  
+# <a name="how-to-save-load-and-print-richtextbox-content"></a><span data-ttu-id="379d3-102">방법: RichTextBox 콘텐츠 저장, 로드 및 인쇄</span><span class="sxs-lookup"><span data-stu-id="379d3-102">How to: Save, Load, and Print RichTextBox Content</span></span>
+<span data-ttu-id="379d3-103">다음 예제에서는의 콘텐츠를 저장 하는 방법을 보여 줍니다는 <xref:System.Windows.Controls.RichTextBox> 파일에 해당 콘텐츠 되돌려 로드는 <xref:System.Windows.Controls.RichTextBox>, 콘텐츠를 인쇄 하 고 합니다.</span><span class="sxs-lookup"><span data-stu-id="379d3-103">The following example shows how to save content of a <xref:System.Windows.Controls.RichTextBox> to a file, load that content back into the <xref:System.Windows.Controls.RichTextBox>, and print the contents.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="4d620-104">예제</span><span class="sxs-lookup"><span data-stu-id="4d620-104">Example</span></span>  
- <span data-ttu-id="4d620-105">예제에 대한 태그는 다음과 같습니다.</span><span class="sxs-lookup"><span data-stu-id="4d620-105">Below is the markup for the example.</span></span>  
+## <a name="example"></a><span data-ttu-id="379d3-104">예제</span><span class="sxs-lookup"><span data-stu-id="379d3-104">Example</span></span>  
+ <span data-ttu-id="379d3-105">예제에 대한 태그는 다음과 같습니다.</span><span class="sxs-lookup"><span data-stu-id="379d3-105">Below is the markup for the example.</span></span>  
   
  [!code-xaml[RichTextBoxMiscSnippets_snip#SaveLoadPrintRTBExampleWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/RichTextBoxMiscSnippets_snip/CSharp/SaveLoadPrintRTB.xaml#saveloadprintrtbexamplewholepage)]  
   
-## <a name="example"></a><span data-ttu-id="4d620-106">예제</span><span class="sxs-lookup"><span data-stu-id="4d620-106">Example</span></span>  
- <span data-ttu-id="4d620-107">예제에 대한 코드 숨김은 다음과 같습니다.</span><span class="sxs-lookup"><span data-stu-id="4d620-107">Below is the code behind for the example.</span></span>  
+## <a name="example"></a><span data-ttu-id="379d3-106">예제</span><span class="sxs-lookup"><span data-stu-id="379d3-106">Example</span></span>  
+ <span data-ttu-id="379d3-107">예제에 대한 코드 숨김은 다음과 같습니다.</span><span class="sxs-lookup"><span data-stu-id="379d3-107">Below is the code behind for the example.</span></span>  
   
  [!code-csharp[RichTextBoxMiscSnippets_snip#SaveLoadPrintRTBCodeExampleWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/RichTextBoxMiscSnippets_snip/CSharp/SaveLoadPrintRTB.xaml.cs#saveloadprintrtbcodeexamplewholepage)]
  [!code-vb[RichTextBoxMiscSnippets_snip#SaveLoadPrintRTBCodeExampleWholePage](~/samples/snippets/visualbasic/VS_Snippets_Wpf/RichTextBoxMiscSnippets_snip/VisualBasic/SaveLoadPrintRTB.xaml.vb#saveloadprintrtbcodeexamplewholepage)]  
   
-## <a name="see-also"></a><span data-ttu-id="4d620-108">참고자료</span><span class="sxs-lookup"><span data-stu-id="4d620-108">See also</span></span>
-- [<span data-ttu-id="4d620-109">RichTextBox 개요</span><span class="sxs-lookup"><span data-stu-id="4d620-109">RichTextBox Overview</span></span>](richtextbox-overview.md)
-- [<span data-ttu-id="4d620-110">TextBox 개요</span><span class="sxs-lookup"><span data-stu-id="4d620-110">TextBox Overview</span></span>](textbox-overview.md)
+## <a name="see-also"></a><span data-ttu-id="379d3-108">참고자료</span><span class="sxs-lookup"><span data-stu-id="379d3-108">See also</span></span>
+
+- [<span data-ttu-id="379d3-109">RichTextBox 개요</span><span class="sxs-lookup"><span data-stu-id="379d3-109">RichTextBox Overview</span></span>](richtextbox-overview.md)
+- [<span data-ttu-id="379d3-110">TextBox 개요</span><span class="sxs-lookup"><span data-stu-id="379d3-110">TextBox Overview</span></span>](textbox-overview.md)
