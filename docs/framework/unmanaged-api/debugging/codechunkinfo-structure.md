@@ -16,18 +16,18 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e9d5ed028045f14012567ecfa86ff6a5c3d419a1
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 58c9d4c66af0bb9f4e66d17b18ac78ef8271bc31
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56977918"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59072664"
 ---
-# <a name="codechunkinfo-structure"></a><span data-ttu-id="51c16-102">CodeChunkInfo 구조체</span><span class="sxs-lookup"><span data-stu-id="51c16-102">CodeChunkInfo Structure</span></span>
+# <a name="codechunkinfo-structure"></a><span data-ttu-id="0c8e3-102">CodeChunkInfo 구조체</span><span class="sxs-lookup"><span data-stu-id="0c8e3-102">CodeChunkInfo Structure</span></span>
 
-<span data-ttu-id="51c16-103">메모리 내의 단일 코드 청크를 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="51c16-103">Represents a single chunk of code in memory.</span></span>  
+<span data-ttu-id="0c8e3-103">메모리 내의 단일 코드 청크를 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="0c8e3-103">Represents a single chunk of code in memory.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="51c16-104">구문</span><span class="sxs-lookup"><span data-stu-id="51c16-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="0c8e3-104">구문</span><span class="sxs-lookup"><span data-stu-id="0c8e3-104">Syntax</span></span>  
   
 ```  
 typedef struct _CodeChunkInfo {  
@@ -36,26 +36,27 @@ typedef struct _CodeChunkInfo {
 } CodeChunkInfo;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="51c16-105">멤버</span><span class="sxs-lookup"><span data-stu-id="51c16-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="0c8e3-105">멤버</span><span class="sxs-lookup"><span data-stu-id="0c8e3-105">Members</span></span>  
   
-|<span data-ttu-id="51c16-106">멤버</span><span class="sxs-lookup"><span data-stu-id="51c16-106">Member</span></span>|<span data-ttu-id="51c16-107">설명</span><span class="sxs-lookup"><span data-stu-id="51c16-107">Description</span></span>|  
+|<span data-ttu-id="0c8e3-106">멤버</span><span class="sxs-lookup"><span data-stu-id="0c8e3-106">Member</span></span>|<span data-ttu-id="0c8e3-107">설명</span><span class="sxs-lookup"><span data-stu-id="0c8e3-107">Description</span></span>|  
 |------------|-----------------|  
-|`startAddr`|<span data-ttu-id="51c16-108">`CORDB_ADDRESS` 청크의 시작 주소를 지정 하는 값입니다.</span><span class="sxs-lookup"><span data-stu-id="51c16-108">A `CORDB_ADDRESS` value that specifies the starting address of the chunk.</span></span>|  
-|`length`|<span data-ttu-id="51c16-109">청크의 바이트 크기입니다.</span><span class="sxs-lookup"><span data-stu-id="51c16-109">The size, in bytes, of the chunk.</span></span>|  
+|`startAddr`|<span data-ttu-id="0c8e3-108">`CORDB_ADDRESS` 청크의 시작 주소를 지정 하는 값입니다.</span><span class="sxs-lookup"><span data-stu-id="0c8e3-108">A `CORDB_ADDRESS` value that specifies the starting address of the chunk.</span></span>|  
+|`length`|<span data-ttu-id="0c8e3-109">청크의 바이트 크기입니다.</span><span class="sxs-lookup"><span data-stu-id="0c8e3-109">The size, in bytes, of the chunk.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="51c16-110">설명</span><span class="sxs-lookup"><span data-stu-id="51c16-110">Remarks</span></span>  
- <span data-ttu-id="51c16-111">코드의 단일 청크는 함수 같은 코드 개체의 포함 된 네이티브 코드의 영역입니다.</span><span class="sxs-lookup"><span data-stu-id="51c16-111">The single chunk of code is a region of native code that is part of a code object such as a function.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="0c8e3-110">설명</span><span class="sxs-lookup"><span data-stu-id="0c8e3-110">Remarks</span></span>  
+ <span data-ttu-id="0c8e3-111">코드의 단일 청크는 함수 같은 코드 개체의 포함 된 네이티브 코드의 영역입니다.</span><span class="sxs-lookup"><span data-stu-id="0c8e3-111">The single chunk of code is a region of native code that is part of a code object such as a function.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="51c16-112">요구 사항</span><span class="sxs-lookup"><span data-stu-id="51c16-112">Requirements</span></span>  
- <span data-ttu-id="51c16-113">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="51c16-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="0c8e3-112">요구 사항</span><span class="sxs-lookup"><span data-stu-id="0c8e3-112">Requirements</span></span>  
+ <span data-ttu-id="0c8e3-113">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="0c8e3-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="51c16-114">**헤더:** CorDebug.idl</span><span class="sxs-lookup"><span data-stu-id="51c16-114">**Header:** CorDebug.idl</span></span>  
+ <span data-ttu-id="0c8e3-114">**헤더:** CorDebug.idl</span><span class="sxs-lookup"><span data-stu-id="0c8e3-114">**Header:** CorDebug.idl</span></span>  
   
- <span data-ttu-id="51c16-115">**라이브러리:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="51c16-115">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="0c8e3-115">**라이브러리:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="0c8e3-115">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="51c16-116">**.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="51c16-116">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ **<span data-ttu-id="0c8e3-116">.NET Framework 버전:</span><span class="sxs-lookup"><span data-stu-id="0c8e3-116">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="51c16-117">참고자료</span><span class="sxs-lookup"><span data-stu-id="51c16-117">See also</span></span>
-- [<span data-ttu-id="51c16-118">GetCodeChunks 메서드</span><span class="sxs-lookup"><span data-stu-id="51c16-118">GetCodeChunks Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugcode2-getcodechunks-method.md)
-- [<span data-ttu-id="51c16-119">디버깅 구조체</span><span class="sxs-lookup"><span data-stu-id="51c16-119">Debugging Structures</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)
-- [<span data-ttu-id="51c16-120">디버깅</span><span class="sxs-lookup"><span data-stu-id="51c16-120">Debugging</span></span>](../../../../docs/framework/unmanaged-api/debugging/index.md)
+## <a name="see-also"></a><span data-ttu-id="0c8e3-117">참고자료</span><span class="sxs-lookup"><span data-stu-id="0c8e3-117">See also</span></span>
+
+- [<span data-ttu-id="0c8e3-118">GetCodeChunks 메서드</span><span class="sxs-lookup"><span data-stu-id="0c8e3-118">GetCodeChunks Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugcode2-getcodechunks-method.md)
+- [<span data-ttu-id="0c8e3-119">디버깅 구조체</span><span class="sxs-lookup"><span data-stu-id="0c8e3-119">Debugging Structures</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)
+- [<span data-ttu-id="0c8e3-120">디버깅</span><span class="sxs-lookup"><span data-stu-id="0c8e3-120">Debugging</span></span>](../../../../docs/framework/unmanaged-api/debugging/index.md)

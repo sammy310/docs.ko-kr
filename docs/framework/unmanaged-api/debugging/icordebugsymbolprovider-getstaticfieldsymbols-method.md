@@ -4,17 +4,17 @@ ms.date: 03/30/2017
 ms.assetid: b178367f-a6e4-413c-b06f-daf3804b456b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 69ad0878daf57c379a5958dbeacddac8510c6eba
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 18bfab7a666a4c715b2236f5101bcceacb5b2fed
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57476154"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59072690"
 ---
-# <a name="icordebugsymbolprovidergetstaticfieldsymbols-method"></a><span data-ttu-id="67a5d-102">ICorDebugSymbolProvider::GetStaticFieldSymbols 메서드</span><span class="sxs-lookup"><span data-stu-id="67a5d-102">ICorDebugSymbolProvider::GetStaticFieldSymbols Method</span></span>
-<span data-ttu-id="67a5d-103">typespec 서명에 해당하는 정적 필드 기호를 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="67a5d-103">Gets the static field symbols that correspond to a typespec signature.</span></span>  
+# <a name="icordebugsymbolprovidergetstaticfieldsymbols-method"></a><span data-ttu-id="9d8a6-102">ICorDebugSymbolProvider::GetStaticFieldSymbols 메서드</span><span class="sxs-lookup"><span data-stu-id="9d8a6-102">ICorDebugSymbolProvider::GetStaticFieldSymbols Method</span></span>
+<span data-ttu-id="9d8a6-103">typespec 서명에 해당하는 정적 필드 기호를 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="9d8a6-103">Gets the static field symbols that correspond to a typespec signature.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="67a5d-104">구문</span><span class="sxs-lookup"><span data-stu-id="67a5d-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="9d8a6-104">구문</span><span class="sxs-lookup"><span data-stu-id="9d8a6-104">Syntax</span></span>  
   
 ```  
 HRESULT GetStaticFieldSymbols(  
@@ -26,37 +26,38 @@ HRESULT GetStaticFieldSymbols(
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="67a5d-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="67a5d-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="9d8a6-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="9d8a6-105">Parameters</span></span>  
  `cbSignature`  
- <span data-ttu-id="67a5d-106">[in] `typeSig` 배열의 바이트 수입니다.</span><span class="sxs-lookup"><span data-stu-id="67a5d-106">[in] The number of bytes in the `typeSig` array.</span></span>  
+ <span data-ttu-id="9d8a6-106">[in] `typeSig` 배열의 바이트 수입니다.</span><span class="sxs-lookup"><span data-stu-id="9d8a6-106">[in] The number of bytes in the `typeSig` array.</span></span>  
   
  `typeSig`  
- <span data-ttu-id="67a5d-107">[in] `typespec` 서명이 들어 있는 바이트 배열입니다.</span><span class="sxs-lookup"><span data-stu-id="67a5d-107">[in] A byte array that contains the `typespec` signature.</span></span>  
+ <span data-ttu-id="9d8a6-107">[in] `typespec` 서명이 들어 있는 바이트 배열입니다.</span><span class="sxs-lookup"><span data-stu-id="9d8a6-107">[in] A byte array that contains the `typespec` signature.</span></span>  
   
  `cRequestedSymbols`  
- <span data-ttu-id="67a5d-108">[in] 요청된 기호 수입니다.</span><span class="sxs-lookup"><span data-stu-id="67a5d-108">[in] The number of symbols requested.</span></span>  
+ <span data-ttu-id="9d8a6-108">[in] 요청된 기호 수입니다.</span><span class="sxs-lookup"><span data-stu-id="9d8a6-108">[in] The number of symbols requested.</span></span>  
   
  `pcFetchedSymbols`  
- <span data-ttu-id="67a5d-109">[out] 메서드에 의해 검색되는 기호 수에 대한 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="67a5d-109">[out] A pointer to the number of symbols retrieved by the method.</span></span>  
+ <span data-ttu-id="9d8a6-109">[out] 메서드에 의해 검색되는 기호 수에 대한 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="9d8a6-109">[out] A pointer to the number of symbols retrieved by the method.</span></span>  
   
  `pSymbols`  
- <span data-ttu-id="67a5d-110">[out] 에 대 한 포인터를 [ICorDebugStaticFieldSymbol](../../../../docs/framework/unmanaged-api/debugging/icordebugstaticfieldsymbol-interface.md) 요청 된 정적 필드 기호를 포함 하는 배열입니다.</span><span class="sxs-lookup"><span data-stu-id="67a5d-110">[out] A pointer to an [ICorDebugStaticFieldSymbol](../../../../docs/framework/unmanaged-api/debugging/icordebugstaticfieldsymbol-interface.md) array that contains the requested static field symbols.</span></span>  
+ <span data-ttu-id="9d8a6-110">[out] 에 대 한 포인터를 [ICorDebugStaticFieldSymbol](../../../../docs/framework/unmanaged-api/debugging/icordebugstaticfieldsymbol-interface.md) 요청 된 정적 필드 기호를 포함 하는 배열입니다.</span><span class="sxs-lookup"><span data-stu-id="9d8a6-110">[out] A pointer to an [ICorDebugStaticFieldSymbol](../../../../docs/framework/unmanaged-api/debugging/icordebugstaticfieldsymbol-interface.md) array that contains the requested static field symbols.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="67a5d-111">설명</span><span class="sxs-lookup"><span data-stu-id="67a5d-111">Remarks</span></span>  
+## <a name="remarks"></a><span data-ttu-id="9d8a6-111">설명</span><span class="sxs-lookup"><span data-stu-id="9d8a6-111">Remarks</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="67a5d-112">이 메서드는 .NET 네이티브에서만 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="67a5d-112">This method is available with .NET Native only.</span></span>  
+>  <span data-ttu-id="9d8a6-112">이 메서드는 .NET 네이티브에서만 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="9d8a6-112">This method is available with .NET Native only.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="67a5d-113">요구 사항</span><span class="sxs-lookup"><span data-stu-id="67a5d-113">Requirements</span></span>  
- <span data-ttu-id="67a5d-114">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="67a5d-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="9d8a6-113">요구 사항</span><span class="sxs-lookup"><span data-stu-id="9d8a6-113">Requirements</span></span>  
+ <span data-ttu-id="9d8a6-114">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="9d8a6-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="67a5d-115">**헤더:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="67a5d-115">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="9d8a6-115">**헤더:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="9d8a6-115">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="67a5d-116">**라이브러리:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="67a5d-116">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="9d8a6-116">**라이브러리:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="9d8a6-116">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="67a5d-117">**.NET Framework 버전:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]</span><span class="sxs-lookup"><span data-stu-id="67a5d-117">**.NET Framework Versions:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]</span></span>  
+ **<span data-ttu-id="9d8a6-117">.NET Framework 버전:</span><span class="sxs-lookup"><span data-stu-id="9d8a6-117">.NET Framework Versions:</span></span>** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="67a5d-118">참고자료</span><span class="sxs-lookup"><span data-stu-id="67a5d-118">See also</span></span>
-- [<span data-ttu-id="67a5d-119">GetInstanceFieldSymbols 메서드</span><span class="sxs-lookup"><span data-stu-id="67a5d-119">GetInstanceFieldSymbols Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugsymbolprovider-getinstancefieldsymbols-method.md)
-- [<span data-ttu-id="67a5d-120">ICorDebugSymbolProvider 인터페이스</span><span class="sxs-lookup"><span data-stu-id="67a5d-120">ICorDebugSymbolProvider Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugsymbolprovider-interface.md)
-- [<span data-ttu-id="67a5d-121">디버깅 인터페이스</span><span class="sxs-lookup"><span data-stu-id="67a5d-121">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+## <a name="see-also"></a><span data-ttu-id="9d8a6-118">참고자료</span><span class="sxs-lookup"><span data-stu-id="9d8a6-118">See also</span></span>
+
+- [<span data-ttu-id="9d8a6-119">GetInstanceFieldSymbols 메서드</span><span class="sxs-lookup"><span data-stu-id="9d8a6-119">GetInstanceFieldSymbols Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugsymbolprovider-getinstancefieldsymbols-method.md)
+- [<span data-ttu-id="9d8a6-120">ICorDebugSymbolProvider 인터페이스</span><span class="sxs-lookup"><span data-stu-id="9d8a6-120">ICorDebugSymbolProvider Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugsymbolprovider-interface.md)
+- [<span data-ttu-id="9d8a6-121">디버깅 인터페이스</span><span class="sxs-lookup"><span data-stu-id="9d8a6-121">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
