@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - COM [WCF], integration overview
 ms.assetid: 02c5697f-6e2e-47d6-b715-f3a28aebfbd5
-ms.openlocfilehash: bd031b0f7464da2f1e251abfa1fe314ee2fa763d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 182e5f41498d8f5e3fcbc4b84aa7e86b67ce3ccc
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54710229"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59087627"
 ---
 # <a name="integrating-with-com-applications-overview"></a>COM 응용 프로그램과 통합 개요
 Windows Communication Foundation (WCF)은 관리 코드 개발자와 연결 된 응용 프로그램을 만들기 위한 풍부한 환경 제공 합니다. 그러나 관리 되지 않는 COM 기반 코드에 상당한 투자를 포함 하 고 마이그레이션 하지 않으려는 경우 통합할 수 있습니다 여전히 WCF 웹 서비스 기존 코드에 직접 WCF 서비스 모니커를 사용 하 여. 서비스 모니커는 Office VBA, Visual Basic 6.0 또는 Visual C++ 6.0과 같은 다양한 범위의 COM 기반 개발 환경에서 사용할 수 있습니다.  
@@ -66,4 +66,5 @@ Windows Communication Foundation (WCF)은 관리 코드 개발자와 연결 된 
 >  `</configuration>`  
   
 ## <a name="see-also"></a>참고자료
+
 - [방법: 서비스 모니커 등록 및 구성](../../../../docs/framework/wcf/feature-details/how-to-register-and-configure-a-service-moniker.md)

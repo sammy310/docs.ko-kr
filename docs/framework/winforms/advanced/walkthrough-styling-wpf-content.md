@@ -6,12 +6,12 @@ helpviewer_keywords:
 - interoperability [WDF]
 - styles [Windows Forms], WPF content
 ms.assetid: e574aac7-7ea4-4cdb-8034-bab541f000df
-ms.openlocfilehash: 6329f25b8ead128c32ae0c7aca1f0bceaac8474c
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 9cf5d1c2e08f18c08273d6c7b34446a3827743b3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57712398"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59079360"
 ---
 # <a name="walkthrough-styling-wpf-content"></a>연습: WPF 콘텐츠 스타일 지정
 이 연습에서는 Windows Forms에 호스트되는 WPF(Windows Presentation Foundation) 컨트롤에 스타일을 적용하는 방법을 보여 줍니다.
@@ -68,12 +68,11 @@ ms.locfileid: "57712398"
   
 2.  에 **도구 상자**를 두 번 클릭 `UserControl1` 의 인스턴스를 만드는 `UserControl1` 양식의 합니다.  
   
-     
-  `UserControl1` 인스턴스가 `elementHost1`이라는 새 <xref:System.Windows.Forms.Integration.ElementHost> 컨트롤에서 호스트됩니다.  
+     `UserControl1` 인스턴스가 `elementHost1`이라는 새 <xref:System.Windows.Forms.Integration.ElementHost> 컨트롤에서 호스트됩니다.  
   
 3.  에 대 한 스마트 태그 패널에서 `elementHost1`, 클릭 **호스팅된 콘텐츠 편집** 드롭 다운 목록에서.  
   
-     `UserControl1`이 [!INCLUDE[wpfdesigner_current_short](../../../../includes/wpfdesigner-current-short-md.md)]에서 열립니다.  
+     `UserControl1` 열립니다는 [!INCLUDE[wpfdesigner_current_short](../../../../includes/wpfdesigner-current-short-md.md)]합니다.  
   
 4.  XAML 뷰에서 `<UserControl>` 여는 태그 뒤에 다음 XAML을 삽입합니다.  
   
@@ -151,6 +150,7 @@ ms.locfileid: "57712398"
 5.  확인 및 취소 단추를 클릭하고 차이점을 확인합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Windows.Forms.Integration.ElementHost>
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost>
 - [마이그레이션 및 상호 운용성](../../wpf/advanced/migration-and-interoperability.md)

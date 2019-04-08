@@ -1,19 +1,19 @@
 ---
-title: '방법: 디자이너를 사용 하 여 Windows Forms로 다중 창 사용자 인터페이스 만들기'
+title: '방법: 디자이너를 사용하여 Windows Forms에서 다중 창 사용자 인터페이스 만들기'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - user interface [Windows Forms], multipane
 - SplitContainer control [Windows Forms], using the designer
 - multipane user interface
 ms.assetid: c3f9294d-a26c-4198-9242-f237f55f7573
-ms.openlocfilehash: 1ad446fde4ccfc9ad9c48e619321deed044f1014
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 2b72d972d679a47213c0d5ed4270d2c623d713ca
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57713776"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59082934"
 ---
-# <a name="how-to-create-a-multipane-user-interface-with-windows-forms-using-the-designer"></a>방법: 디자이너를 사용 하 여 Windows Forms로 다중 창 사용자 인터페이스 만들기
+# <a name="how-to-create-a-multipane-user-interface-with-windows-forms-using-the-designer"></a>방법: 디자이너를 사용하여 Windows Forms에서 다중 창 사용자 인터페이스 만들기
 다음 절차를 사용 하 여 Microsoft Outlook에서 사용 하는 비슷한 다중 창 사용자 인터페이스를 만듭니다는 **폴더** 목록에는 **메시지** 창 및 **미리보기** 창입니다. 이 정렬 폼에 컨트롤을 도킹을 통해 주로 수행 됩니다.  
   
  컨트롤을 고정 하면 부모 컨테이너의 가장자리 컨트롤은 고정 시킬 확인할 수 있습니다. 따라서 설정 하는 경우는 <xref:System.Windows.Forms.SplitContainer.Dock%2A> 속성을 <xref:System.Windows.Forms.DockStyle.Right>, 컨트롤의 오른쪽 가장자리 부모 컨트롤의 오른쪽 가장자리에 도킹 됩니다. 또한 컨트롤의 도킹된 가장자리 컨테이너 컨트롤과의 일치 하도록 크기가 조정 됩니다. 방법에 대 한 자세한 내용은 <xref:System.Windows.Forms.SplitContainer.Dock%2A> 속성을 참조 하십시오 [방법: Windows Forms에서 컨트롤을 도킹](how-to-dock-controls-on-windows-forms.md)합니다.  
@@ -47,5 +47,6 @@ ms.locfileid: "57713776"
      이 시점에서 응용 프로그램 개발에는 정교한 사용자 인터페이스를 트 했습니다. 다음 단계는 자체 응용 프로그램의 프로그래밍을 사용 하 여 계속 아마도 연결 하 여 합니다 <xref:System.Windows.Forms.TreeView> 컨트롤 및 <xref:System.Windows.Forms.ListView> 일부 종류의 데이터 소스 컨트롤입니다. 데이터에 컨트롤을 연결 하는 방법에 대 한 자세한 내용은 참조 하세요. [데이터 바인딩 및 Windows Forms](../data-binding-and-windows-forms.md)합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Windows.Forms.SplitContainer>
 - [SplitContainer 컨트롤](splitcontainer-control-windows-forms.md)

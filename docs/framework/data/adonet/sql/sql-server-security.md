@@ -2,12 +2,12 @@
 title: SQL Server 보안
 ms.date: 03/30/2017
 ms.assetid: 9053724d-a1fb-4f0f-b9dc-7f6dd893e8ff
-ms.openlocfilehash: 33ec28536115f8571bfda47266ed3b5cad1442bb
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4aa4feadb6305f8a0ea6f99c2add780d6fca95cd
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54650585"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59080771"
 ---
 # <a name="sql-server-security"></a>SQL Server 보안
 SQL Server에는 안전한 데이터베이스 응용 프로그램 만들기를 지원하는 많은 기능이 있습니다.  
@@ -33,12 +33,13 @@ SQL Server에는 안전한 데이터베이스 응용 프로그램 만들기를 �
  SQL Server Express에 대 한 보안 고려 사항을 설명합니다.  
   
 ## <a name="related-sections"></a>관련 단원  
-[SQL Server 데이터베이스 엔진 및 Azure SQL 데이터베이스에 대한 보안 센터](/sql/relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database)  
+[SQL Server 데이터베이스 엔진 및 Azure SQL Database에 대 한 보안 센터](/sql/relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database)  
 SQL Server 및 Azure SQL Database에 대 한 보안 고려 사항을 설명합니다.
 
 [SQL Server 설치에 대한 보안 고려 사항](/sql/sql-server/install/security-considerations-for-a-sql-server-installation)  
 SQL Server를 설치 하기 전에 고려해 야 할 보안 문제를 설명 합니다.
 
 ## <a name="see-also"></a>참고자료
+
 - [ADO.NET 응용 프로그램 보안](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
 - [SQL Server 및 ADO.NET](../../../../../docs/framework/data/adonet/sql/index.md)

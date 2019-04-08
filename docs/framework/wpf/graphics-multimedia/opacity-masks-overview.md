@@ -6,12 +6,12 @@ helpviewer_keywords:
 - masks [WPF], opacity
 - opacity [WPF], masks
 ms.assetid: 22367fab-5f59-4583-abfd-db2bf86eaef7
-ms.openlocfilehash: 7b6afebbf6ac2dda0f8eb9932630da9a273f972e
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 84525e58487ce9b0bc26f77ff8dbced734bc90a9
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57376808"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59080087"
 ---
 # <a name="opacity-masks-overview"></a>불투명 마스크 개요
 불투명 마스크를 사용하여 요소 또는 시각적 개체의 부분을 투명하게 또는 부분적으로 투명하게 만들 수 있습니다. 적용할 불투명 마스크를 만들려면를 <xref:System.Windows.Media.Brush> 에 <xref:System.Windows.UIElement.OpacityMask%2A> 요소의 속성 또는 <xref:System.Windows.Media.Visual>합니다.  브러시가 요소 또는 시각적 개체에 매핑되고, 각 브러시 픽셀의 불투명도 값을 사용하여 요소 또는 시각적 개체의 각 해당 픽셀에 대한 결과 불투명도가 결정됩니다.  
@@ -73,7 +73,7 @@ DrawingBrush 불투명 마스크 예제
   
 <a name="argbsyntax"></a>   
 ### <a name="specifying-color-opacity-in-xaml"></a>"XAML"에서 색 불투명도 지정  
- [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]에서는 [!INCLUDE[TLA2#tla_argb](../../../../includes/tla2sharptla-argb-md.md)] 16진수 표기법을 사용하여 개별 색의 불투명도를 지정합니다. [!INCLUDE[TLA2#tla_argb](../../../../includes/tla2sharptla-argb-md.md)] 16진수 표기법은 다음 구문을 사용합니다.  
+ [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]에서는 [!INCLUDE[TLA2#tla_argb](../../../../includes/tla2sharptla-argb-md.md)] 16진수 표기법을 사용하여 개별 색의 불투명도를 지정합니다. [!INCLUDE[TLA2#tla_argb](../../../../includes/tla2sharptla-argb-md.md)] 16 진수 표기법으로 다음 구문을 사용합니다.  
   
  `#` **aa** *rrggbb*  
   
@@ -116,5 +116,6 @@ DrawingBrush 불투명 마스크 예제
  [!code-xaml[OpacityMasksSnippet#TiledDrawingasOpacityMask](~/samples/snippets/csharp/VS_Snippets_Wpf/OpacityMasksSnippet/CS/DrawingBrushExample.xaml#tileddrawingasopacitymask)]  
   
 ## <a name="see-also"></a>참고자료
+
 - [이미지, 그림 및 시각적 표시로 그리기](painting-with-images-drawings-and-visuals.md)
 - [단색 및 그라데이션을 사용한 그리기 개요](painting-with-solid-colors-and-gradients-overview.md)

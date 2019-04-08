@@ -5,12 +5,12 @@ helpviewer_keywords:
 - typography [WPF], animations
 - animation [WPF], text
 ms.assetid: eec3d26c-0a21-420f-8012-671621c47089
-ms.openlocfilehash: 4cc7932b43f8a3c35d750f9a9020e16257867f76
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: 38aa432fecc5b5e10d8eb90be9c1c596728ed613
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58463126"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59108214"
 ---
 # <a name="how-to-apply-animations-to-text"></a>방법: 텍스트에 애니메이션 적용
 애니메이션은 애플리케이션의 텍스트 모양과 표시를 변경할 수 있습니다. 다음 예제에서는 다양 한 유형의 애니메이션을 사용 하 여 텍스트의 표시에 영향을 줄을 <xref:System.Windows.Controls.TextBlock> 제어 합니다.  
@@ -37,4 +37,5 @@ ms.locfileid: "58463126"
  [!code-xaml[TextAnimationSample#TextAnimationSample4](~/samples/snippets/csharp/VS_Snippets_Wpf/TextAnimationSample/CS/Window1.xaml#textanimationsample4)]  
   
 ## <a name="see-also"></a>참고자료
+
 - [애니메이션 개요](../graphics-multimedia/animation-overview.md)

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - grid control pattern
 - UI Automation, grid control pattern
 ms.assetid: 234d11a0-7ce7-4309-8989-2f4720e02f78
-ms.openlocfilehash: 12588e6aa108813b2d857f6818bd27a275d12597
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: 63885e0467f79f140678ffcaa6737f40a8fa7f6f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57676813"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59100576"
 ---
 # <a name="implementing-the-ui-automation-grid-control-pattern"></a>UI 자동화 Grid 컨트롤 패턴 구현
 > [!NOTE]
@@ -36,7 +36,7 @@ ms.locfileid: "57676813"
   
 -   공급자 구현에 따라 숨겨진 행 및 열은 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 트리에 로드될 수 있으며, 그에 따라 <xref:System.Windows.Automation.GridPattern.GridPatternInformation.RowCount%2A> 및 <xref:System.Windows.Automation.GridPattern.GridPatternInformation.ColumnCount%2A> 속성에 반영됩니다. 숨겨진 행 및 열이 아직 로드되지 않았으면 반영되지 않습니다.  
   
--   <xref:System.Windows.Automation.Provider.IGridProvider> 는 표의 활성 구현을 사용하도록 설정하지 않습니다. 이 기능을 사용하려면 <xref:System.Windows.Automation.Provider.ITransformProvider> 를 구현해야 합니다.  
+-   <xref:System.Windows.Automation.Provider.IGridProvider> 는 표의 활성 구현을 사용 하도록 설정 하지 않습니다. <xref:System.Windows.Automation.Provider.ITransformProvider> 이 기능을 사용 하도록 구현 해야 합니다.  
   
 -   추가, 제거 또는 병합된 셀과 같이 표의 구조 또는 레이아웃 변경 내용을 수신하려면 <xref:System.Windows.Automation.StructureChangedEventHandler> 를 사용합니다.  
   
@@ -64,9 +64,10 @@ ms.locfileid: "57676813"
 |<xref:System.ArgumentOutOfRangeException>|<xref:System.Windows.Automation.Provider.IGridProvider.GetItem%2A><br /><br /> -요청 된 행 또는 열 좌표가 0 보다 작은 경우.|  
   
 ## <a name="see-also"></a>참고자료
+
 - [UI 자동화 컨트롤 패턴 개요](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)
 - [UI 자동화 공급자의 컨트롤 패턴 지원](../../../docs/framework/ui-automation/support-control-patterns-in-a-ui-automation-provider.md)
 - [클라이언트용 UI 자동화 컨트롤 패턴](../../../docs/framework/ui-automation/ui-automation-control-patterns-for-clients.md)
 - [UI 자동화 GridItem 컨트롤 패턴 구현](../../../docs/framework/ui-automation/implementing-the-ui-automation-griditem-control-pattern.md)
 - [UI 자동화 트리 개요](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)
-- [UI 자동화의 캐싱 사용](../../../docs/framework/ui-automation/use-caching-in-ui-automation.md)
+- [UI 자동화에서 캐싱 사용](../../../docs/framework/ui-automation/use-caching-in-ui-automation.md)

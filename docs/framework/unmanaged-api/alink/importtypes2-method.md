@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e2958fe31ff0065cfb028eaddf8bbb02f3618f9d
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: f14822a58f3982d6f9fee1328c10b960657c056f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57471734"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59098470"
 ---
 # <a name="importtypes2-method"></a>ImportTypes2 메서드
 형식의 가져오기를 시작합니다. 형식을 통해 가져온 각 범위에서 가져오기를 시작 하려면이 메서드를 호출 [ImportFile 메서드](../../../../docs/framework/unmanaged-api/alink/importfile-method.md)합니다.  
@@ -65,6 +65,7 @@ HRESULT ImportTypes2(
  Alink.h 필요  
   
 ## <a name="see-also"></a>참고자료
+
 - [IALink2 인터페이스](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
 - [IALink 인터페이스](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
 - [ALink API](../../../../docs/framework/unmanaged-api/alink/index.md)

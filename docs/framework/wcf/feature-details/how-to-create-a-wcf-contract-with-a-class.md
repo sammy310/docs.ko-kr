@@ -5,18 +5,18 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 1ad69393-3915-4e7f-9b91-b6fc59c6f5ba
-ms.openlocfilehash: b32d4feb03daac33af8b7ca3b533a0b7013bb090
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a514134ed0af3b691a2e66720f81594a51747b6f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54658928"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59089525"
 ---
 # <a name="how-to-create-a-windows-communication-foundation-contract-with-a-class"></a>방법: 클래스를 사용 하 여 Windows Communication Foundation 계약 만들기
 Windows Communication Foundation (WCF) 계약을 만드는 인터페이스를 사용 하는 것이 좋습니다. 자세한 내용은 [방법: 서비스 계약 정의](../../../../docs/framework/wcf/how-to-define-a-wcf-service-contract.md)합니다. 또는 다음에 요약한 대로 클래스를 만든 후 <xref:System.ServiceModel.ServiceContractAttribute> 특성을 직접 해당 클래스에 적용하고 <xref:System.ServiceModel.OperationContractAttribute> 특성을 계약의 일부인 클래스의 각 메서드에 적용합니다.  
   
 > [!WARNING]
->  `[ServiceContract]` 및 `[ServiceContractAttribute]` 에 대해 동일한 작업을 수행합니다. 동일한 작업에 대 한 참인 `[OperationContract]` 고 `[OperationContractAttribute]`입니다. 각 경우 전자가 후자 보다 빠릅니다.  
+>  `[ServiceContract]` 및 `[ServiceContractAttribute]` 동일한 작업을 수행 합니다. 동일한 작업에 대 한 참인 `[OperationContract]` 고 `[OperationContractAttribute]`입니다. 각 경우 전자가 후자 보다 빠릅니다.  
   
  서비스 계약에 대 한 자세한 내용은 참조 하세요. [Designing Service Contracts](../../../../docs/framework/wcf/designing-service-contracts.md)합니다.  
   
@@ -39,5 +39,6 @@ Windows Communication Foundation (WCF) 계약을 만드는 인터페이스를 �
  <xref:System.ServiceModel.OperationContractAttribute> 클래스가 적용된 메서드는 기본적으로 요청-회신 메시지 패턴을 사용합니다. 이 메시지 패턴에 대 한 자세한 내용은 참조 하세요. [방법: 요청-회신 계약을 만들려면](../../../../docs/framework/wcf/feature-details/how-to-create-a-request-reply-contract.md)합니다. 특성의 속성을 설정하여 다른 메시지 패턴을 만들고 사용할 수도 있습니다. 추가 예제는 [방법: 단방향 계약을 만들려면](../../../../docs/framework/wcf/feature-details/how-to-create-a-one-way-contract.md) 고 [방법: 이중 계약 만들기](../../../../docs/framework/wcf/feature-details/how-to-create-a-duplex-contract.md)합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.ServiceModel.ServiceContractAttribute>
 - <xref:System.ServiceModel.OperationContractAttribute>

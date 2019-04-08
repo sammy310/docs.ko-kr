@@ -2,12 +2,12 @@
 title: '방법: DBML 및 외부 매핑 파일 유효성 검사'
 ms.date: 03/30/2017
 ms.assetid: d9ea37f5-0a9e-4401-8fc3-1e6fd44c49f9
-ms.openlocfilehash: 42cba5b9b686f5f94d4ebf8f889461e1bab009b5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b01bcf98bba185b7a4b1802f470a585371980177
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54692732"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59078735"
 ---
 # <a name="how-to-validate-dbml-and-external-mapping-files"></a>방법: DBML 및 외부 매핑 파일 유효성 검사
 수정한 외부 매핑 파일 및 .dbml 파일은 해당 스키마 정의에 대해 유효성이 검사되어야 합니다. 이 항목에서는 유효성 검사 프로세스를 구현 하는 단계를 사용 하 여 Visual Studio 사용자를 제공 합니다.  
@@ -71,4 +71,5 @@ ms.locfileid: "54692732"
 7.  에 **파일 이름** 상자에서 확장명이.xsd 인 파일 이름을 만듭니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [참조](../../../../../../docs/framework/data/adonet/sql/linq/reference.md)

@@ -1,13 +1,13 @@
 ---
-title: <httpListener> 요소(네트워크 설정)
+title: <httpListener> 요소 (네트워크 설정)
 ms.date: 03/30/2017
 ms.assetid: 62f121fd-3f2e-4033-bb39-48ae996bfbd9
-ms.openlocfilehash: ff5e4ad2788ab3df621beb52b1703647df068a7f
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: b3a6d527bc1bf8210bb85424fa218fda495a2a2d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55257995"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59099745"
 ---
 # <a name="httplistener-element-network-settings"></a>\<httpListener > 요소 (네트워크 설정)
 매개 변수에서 사용 하는 사용자 지정을 <xref:System.Net.HttpListener> 클래스입니다.  
@@ -43,7 +43,7 @@ ms.locfileid: "55257995"
   
 |**요소**|**설명**|  
 |-----------------|---------------------|  
-|[settings](../../../../../docs/framework/configure-apps/file-schema/network/settings-element-network-settings.md)|<xref:System.Net> 네임스페이스에 대한 기본 네트워크 옵션을 구성합니다.|  
+|[설정](../../../../../docs/framework/configure-apps/file-schema/network/settings-element-network-settings.md)|<xref:System.Net> 네임스페이스에 대한 기본 네트워크 옵션을 구성합니다.|  
   
 ## <a name="remarks"></a>설명  
  합니다 **unescapeRequestUrl** 하는 경우 특성을 나타냅니다 <xref:System.Net.HttpListener> 는 백분율로 인코딩된 값 변환 되 고 다른 정규화 단계에 따라 변환 된 URI 대신 이스케이프 되지 않은 원시 URI를 사용 합니다.  
@@ -138,6 +138,7 @@ ms.locfileid: "55257995"
 |비워 둘 수 있습니다.||  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Net.Configuration.HttpListenerElement>
 - <xref:System.Net.HttpListener>
 - <xref:System.Net.HttpListenerRequest.Url%2A>

@@ -9,21 +9,19 @@ helpviewer_keywords:
 - hybrid applications [WPF interoperability]
 - message loops [WPF]
 ms.assetid: f440c23f-fa5d-4d5a-852f-ba61150e6405
-ms.openlocfilehash: dbc70f58fddfad6e7e7271802b8b01d2b52ab25a
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 707e77ac69878c1c7fb8e975c1f90ad657228d1a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57370100"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59079677"
 ---
 # <a name="troubleshooting-hybrid-applications"></a>혼합 애플리케이션 문제 해결
 <a name="introduction"></a> 이 항목에서는 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 및 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 기술을 둘 다 사용하는 혼합 응용 프로그램을 작성할 때 발생할 수 있는 몇 가지 일반적인 문제에 대해 설명합니다.  
-  
 
-  
 <a name="overlapping_controls"></a>   
 ## <a name="overlapping-controls"></a>컨트롤 겹침  
- 컨트롤이 예상대로 겹치지 않을 수 있습니다. [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]는 각 컨트롤에 대해 별도의 HWND를 사용합니다. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]는 페이지의 모든 콘텐츠에 대해 하나의 HWND를 사용합니다. 이러한 구현 차이로 인해 예기치 않은 겹치는 동작이 발생합니다.  
+ 컨트롤이 예상대로 겹치지 않을 수 있습니다. [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 각 컨트롤에 대 한 별도 HWND를 사용합니다. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 페이지의 모든 콘텐츠에 대해 하나의 HWND를 사용합니다. 이러한 구현 차이로 인해 예기치 않은 겹치는 동작이 발생합니다.  
   
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]에서 호스트되는 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 컨트롤은 항상 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 콘텐츠 위에 나타납니다.  
   
@@ -34,8 +32,8 @@ ms.locfileid: "57370100"
  합니다 <xref:System.Windows.Forms.Integration.WindowsFormsHost> 고 <xref:System.Windows.Forms.Integration.ElementHost> 클래스는 단일 자식 컨트롤이 나 요소만 호스트할 수 있습니다. 둘 이상의 컨트롤이나 요소를 호스트하려면 컨테이너를 자식 콘텐츠로 사용해야 합니다. 예를 들어, 추가할 수 있습니다 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 단추 및 확인란 컨트롤을를 <xref:System.Windows.Forms.Panel?displayProperty=nameWithType> 컨트롤을 패널에 할당 한 다음는 <xref:System.Windows.Forms.Integration.WindowsFormsHost> 컨트롤의 <xref:System.Windows.Forms.Integration.WindowsFormsHost.Child%2A> 속성입니다. 그러나 추가할 수 없습니다 단추 및 확인란 컨트롤을 별도로 동일한 <xref:System.Windows.Forms.Integration.WindowsFormsHost> 제어 합니다.  
   
 <a name="scaling"></a>   
-## <a name="scaling"></a>배율 조정  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 및 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]는 배율 조정 모델이 서로 다릅니다. 일부 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 배율 조정 변환은 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 컨트롤에서 의미가 있지만 일부는 그렇지 않습니다. 예를 들어 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 컨트롤의 배율을 0으로 조정할 수 있지만 동일한 컨트롤의 배율을 0이 아닌 값으로 다시 조정하려고 하면 컨트롤의 크기가 0으로 유지됩니다. 자세한 내용은 [WindowsFormsHost 요소에 대한 레이아웃 고려 사항](layout-considerations-for-the-windowsformshost-element.md)을 참조하세요.  
+## <a name="scaling"></a>크기 조정  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 및 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 은 크기 조정 모델이 서로 다릅니다. 일부 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 배율 조정 변환은 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 컨트롤에서 의미가 있지만 일부는 그렇지 않습니다. 예를 들어 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 컨트롤의 배율을 0으로 조정할 수 있지만 동일한 컨트롤의 배율을 0이 아닌 값으로 다시 조정하려고 하면 컨트롤의 크기가 0으로 유지됩니다. 자세한 내용은 [WindowsFormsHost 요소에 대한 레이아웃 고려 사항](layout-considerations-for-the-windowsformshost-element.md)을 참조하세요.  
   
 <a name="adapter"></a>   
 ## <a name="adapter"></a>어댑터  
@@ -88,7 +86,7 @@ ms.locfileid: "57370100"
   
 <a name="enabling_visual_styles"></a>   
 ## <a name="enabling-visual-styles"></a>비주얼 스타일 사용  
- [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 컨트롤에서 [!INCLUDE[TLA#tla_winxp](../../../../includes/tlasharptla-winxp-md.md)] 비주얼 스타일을 사용할 수 없습니다. 합니다 <xref:System.Windows.Forms.Application.EnableVisualStyles%2A?displayProperty=nameWithType> 에 대 한 템플릿에서 호출을 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 응용 프로그램입니다. 이 메서드는 기본적으로 호출되지 않지만 Comctl32.dll 버전 6.0을 사용할 수 있는 경우 [!INCLUDE[TLA2#tla_visualstu](../../../../includes/tla2sharptla-visualstu-md.md)]를 사용하여 프로젝트를 만들면 컨트롤에 대한 [!INCLUDE[TLA#tla_winxp](../../../../includes/tlasharptla-winxp-md.md)] 비주얼 스타일이 제공됩니다. 호출 해야 합니다 <xref:System.Windows.Forms.Application.EnableVisualStyles%2A> 메서드 핸들 스레드에서 생성 되기 전에 합니다. 자세한 내용은 [방법: 하이브리드 응용 프로그램에서 비주얼 스타일 사용](how-to-enable-visual-styles-in-a-hybrid-application.md)합니다.  
+ [!INCLUDE[TLA#tla_winxp](../../../../includes/tlasharptla-winxp-md.md)] 시각적 개체에서 스타일을 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 컨트롤을 사용할 수 있습니다. 합니다 <xref:System.Windows.Forms.Application.EnableVisualStyles%2A?displayProperty=nameWithType> 에 대 한 템플릿에서 호출을 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 응용 프로그램입니다. 이 메서드는 기본적으로 호출되지 않지만 Comctl32.dll 버전 6.0을 사용할 수 있는 경우 [!INCLUDE[TLA2#tla_visualstu](../../../../includes/tla2sharptla-visualstu-md.md)]를 사용하여 프로젝트를 만들면 컨트롤에 대한 [!INCLUDE[TLA#tla_winxp](../../../../includes/tlasharptla-winxp-md.md)] 비주얼 스타일이 제공됩니다. 호출 해야 합니다 <xref:System.Windows.Forms.Application.EnableVisualStyles%2A> 메서드 핸들 스레드에서 생성 되기 전에 합니다. 자세한 내용은 [방법: 하이브리드 응용 프로그램에서 비주얼 스타일 사용](how-to-enable-visual-styles-in-a-hybrid-application.md)합니다.  
   
 <a name="licensed_controls"></a>   
 ## <a name="licensed-controls"></a>사용이 허가된 컨트롤  
@@ -115,11 +113,12 @@ ms.locfileid: "57370100"
  에 호스팅된 WPF 컨트롤을 <xref:System.Windows.Forms.Integration.ElementHost> 현재 지원 하지 않습니다는 <xref:System.Windows.Forms.Control.ImeMode%2A> 속성입니다. 변경 내용을 <xref:System.Windows.Forms.Control.ImeMode%2A> 호스트 된 컨트롤에서 무시 됩니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Windows.Forms.Integration.ElementHost>
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost>
 - [WPF Designer의 상호 운용성](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/bb628658(v=vs.100))
 - [Windows Forms 및 WPF 상호 운용성 입력 아키텍처](windows-forms-and-wpf-interoperability-input-architecture.md)
-- [방법: 하이브리드 응용 프로그램에서 비주얼 스타일 사용](how-to-enable-visual-styles-in-a-hybrid-application.md)
+- [방법: 하이브리드 애플리케이션에서 비주얼 스타일 사용](how-to-enable-visual-styles-in-a-hybrid-application.md)
 - [WindowsFormsHost 요소에 대한 레이아웃 고려 사항](layout-considerations-for-the-windowsformshost-element.md)
 - [Windows Forms 및 WPF 속성 매핑](windows-forms-and-wpf-property-mapping.md)
 - [Windows Forms 디자이너의 디자인 타임 오류](../../winforms/controls/design-time-errors-in-the-windows-forms-designer.md)

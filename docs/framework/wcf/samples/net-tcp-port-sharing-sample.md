@@ -2,12 +2,12 @@
 title: Net.TCP Port Sharing 샘플
 ms.date: 03/30/2017
 ms.assetid: 03da5959-0574-4e91-8a53-05854b6c55dc
-ms.openlocfilehash: 2ff63de62ad11ab89721cbf87f1edaca8c54a027
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: f70069754d712f6f3d70eb3ac3ffb4cc645c3f83
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58830177"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59079619"
 ---
 # <a name="nettcp-port-sharing-sample"></a>Net.TCP Port Sharing 샘플
 TCP/IP 프로토콜은 포트라는 16비트 숫자를 사용하여 동일한 컴퓨터에서 실행되는 여러 네트워크 응용 프로그램에 대한 연결을 구분합니다. 응용 프로그램이 포트에서 수신 대기 중이면 이 포트의 모든 TCP 트래픽이 해당 응용 프로그램으로 이동합니다. 다른 응용 프로그램이 동시에 이 포트에서 수신 대기할 수는 없습니다.  
@@ -138,4 +138,3 @@ Press <ENTER> to terminate client.
 4.  C# 또는 Visual Basic .NET 버전의 솔루션을 빌드하려면 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)의 지침을 따릅니다.  
   
 5.  단일 또는 다중 컴퓨터 구성에서 샘플을 실행 하려면의 지침을 따릅니다 [Windows Communication Foundation 샘플 실행](../../../../docs/framework/wcf/samples/running-the-samples.md)합니다. 이 샘플의 실행에 대한 자세한 내용은 앞의 샘플 실행 단원을 참조하십시오.  
-  

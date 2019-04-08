@@ -1,15 +1,15 @@
 ---
-title: '방법: 메타 데이터 교환 계약을 통해 서비스 모니커 사용'
+title: '방법: 메타데이터 교환 계약을 통해 서비스 모니커 사용'
 ms.date: 03/30/2017
 ms.assetid: c41a07e5-cb9d-45d6-9ea4-34511e227faf
-ms.openlocfilehash: e7c05bb43b7811d4716a225142dd880886586783
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e1d6c6516294d7df7f8c89a3aaddcf2ac3ba0e2a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54495099"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59082700"
 ---
-# <a name="how-to-use-a-service-moniker-with-metadata-exchange-contracts"></a>방법: 메타 데이터 교환 계약을 통해 서비스 모니커 사용
+# <a name="how-to-use-a-service-moniker-with-metadata-exchange-contracts"></a>방법: 메타데이터 교환 계약을 통해 서비스 모니커 사용
 몇 가지 새 WCF 서비스를 개발 후 스크립트 또는 Visual Basic 6.0 응용 프로그램에서 이러한 서비스를 호출할 수 있으려면 것인지 결정할 수 있습니다. 한 가지 방법은 WCF 클라이언트 어셈블리를 생성, COM을 사용 하 여 어셈블리를 등록, GAC에 어셈블리를 설치 및 Visual Basic 코드에서 COM 형식을 참조할 수 있습니다. 응용 프로그램을 배포 하는 경우에 WCF 클라이언트 어셈블리도 배포 해야 합니다. 사용자는 WCF 클라이언트 어셈블리를 COM에 등록하고 GAC에 배치해야 합니다. 또한 WCF COM Interop을 사용 하면 WCF 클라이언트 어셈블리에 의존 하지 않고 동일한 서비스 호출을 수행할 수 있습니다. WCF 모니커를 사용 하면 URI 형식을 추출 하려면 서비스 모니커를 사용 하는 메타 데이터 교환 (Mex) 끝점을 지정 하 여 모든 COM 호환 언어 (Visual Basic, VBScript, Visual Basic Applications (VBA) 등에 대 한)에서 WCF 서비스를 호출할 수 있습니다. 서비스에 대 한 정보를 제공 합니다. 이 항목에서는 Mex 끝점을 지정 하는 WCF 모니커를 사용 하 여 WCF 시작 샘플을 호출 하는 방법을 설명 합니다.  
   
 > [!NOTE]
@@ -40,5 +40,6 @@ ms.locfileid: "54495099"
     >  모니커의 형식이 잘못되었거나 서비스를 사용할 수 없는 경우 `GetObject`를 호출하면 "구문이 잘못되었습니다."라는 오류가 반환됩니다.  이 오류가 발생하면 사용하고 있는 모니커가 올바르고 서비스를 사용할 수 있는지 확인하세요.  
   
 ## <a name="see-also"></a>참고자료
-- [방법: 등록 없이 Windows Communication Foundation 서비스 모니커 사용](../../../../docs/framework/wcf/feature-details/use-the-wcf-service-moniker-without-registration.md)
+
+- [방법: 등록하지 않고 Windows Communication Foundation 서비스 모니커 사용](../../../../docs/framework/wcf/feature-details/use-the-wcf-service-moniker-without-registration.md)
 - [방법: WSDL 계약을 통해 서비스 모니커 사용](../../../../docs/framework/wcf/feature-details/how-to-use-a-service-moniker-with-wsdl-contracts.md)

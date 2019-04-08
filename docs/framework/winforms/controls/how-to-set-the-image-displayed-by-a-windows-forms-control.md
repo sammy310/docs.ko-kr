@@ -1,5 +1,5 @@
 ---
-title: '방법: 설정 하 여 표시 되는 이미지를 Windows Forms 컨트롤'
+title: '방법: Windows Forms 컨트롤에서 표시하는 이미지 설정'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,14 +12,14 @@ helpviewer_keywords:
 - images [Windows Forms], Windows Forms controls
 - examples [Windows Forms], controls
 ms.assetid: 9445af8f-4f62-48b0-a3f6-068058964b9f
-ms.openlocfilehash: 93bc7970ce7c287273f8bd7ff50b07c6658e2a08
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 031ddcb3b852e75353fed7420735350e79f23df3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54644926"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59085092"
 ---
-# <a name="how-to-set-the-image-displayed-by-a-windows-forms-control"></a>방법: 설정 하 여 표시 되는 이미지를 Windows Forms 컨트롤
+# <a name="how-to-set-the-image-displayed-by-a-windows-forms-control"></a>방법: Windows Forms 컨트롤에서 표시하는 이미지 설정
 여러 Windows Forms 컨트롤 이미지를 표시할 수 있습니다. 이러한 이미지와 같은 디스켓 아이콘을 나타내는 단추 컨트롤의 용도 설명 하는 아이콘이 수는 **저장** 명령입니다. 또는 아이콘 배경 이미지가 모양과 동작을 제어할 수 있습니다.  
   
 ### <a name="to-set-the-image-displayed-by-a-control"></a>컨트롤에서 표시 되는 이미지를 설정 하려면  
@@ -57,6 +57,7 @@ ms.locfileid: "54644926"
     ```  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Drawing.Image.FromFile%2A>
 - <xref:System.Drawing.Image>
 - <xref:System.Windows.Forms.Control.BackgroundImage%2A>

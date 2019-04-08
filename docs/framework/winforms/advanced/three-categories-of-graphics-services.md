@@ -8,12 +8,12 @@ helpviewer_keywords:
 - vector graphics
 - typography
 ms.assetid: 068c0ef3-f6ee-4d58-a7b6-eb2531ead408
-ms.openlocfilehash: f7aa4de8a0d646c441d0921fb2561ef5a9480f4e
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: ccbd5e236b47d1d870c9b77cfa2b3880619cf3cd
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57711232"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59083597"
 ---
 # <a name="three-categories-of-graphics-services"></a>세 가지 범주의 그래픽 서비스
 Windows Forms의 그래픽 제공은 다음 세 가지 광범위 한 범주에 속합니다.  
@@ -40,6 +40,7 @@ Windows Forms의 그래픽 제공은 다음 세 가지 광범위 한 범주에 �
  또한 Windows Forms 제공 옵션을 사용 하 여 텍스트를 그릴 [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] 기능에서 해당 <xref:System.Windows.Forms.TextRenderer> 클래스입니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [그래픽 개요](graphics-overview-windows-forms.md)
-- [GDI + 관리 코드 정보](about-gdi-managed-code.md)
-- [관리되는 그래픽 클래스 사용](using-managed-graphics-classes.md)
+- [GDI+ 관리 코드 정보](about-gdi-managed-code.md)
+- [관리형 그래픽 클래스 사용](using-managed-graphics-classes.md)

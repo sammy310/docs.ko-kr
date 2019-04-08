@@ -7,12 +7,12 @@ helpviewer_keywords:
 - custom controls [Windows Forms], types
 - controls [Windows Forms], creating
 ms.assetid: 5235fe9d-c36a-4c08-ae76-6cb90b50085e
-ms.openlocfilehash: b488997558d81c05307411d8b7fbf5b59100f9ea
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 5dc734997917af7ec4a20a6c12ae04825507c7ce
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57717705"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59098457"
 ---
 # <a name="control-type-recommendations"></a>컨트롤 형식 권장 사항
 .NET Framework는 새 컨트롤을 개발 및 구현하는 기능을 제공합니다. 익숙한 사용자 정의 컨트롤뿐 아니라 이제 고유한 그리기를 수행하는 사용자 지정 컨트롤을 작성할 수 있으며 상속을 통해 기존 컨트롤의 기능을 확장할 수도 있습니다. 만들 컨트롤 형식을 결정하기 어려울 수 있습니다. 이 섹션에서는 상속할 수 있는 다양한 컨트롤 형식 간의 차이점을 요약하고 프로젝트에 대해 선택할 형식과 관련된 고려 사항을 제공합니다.  
@@ -45,40 +45,41 @@ ms.locfileid: "57717705"
   
 -   표준 컨트롤을 통해 사용할 수 없는 사용자 지정 기능을 구현해야 하는 경우  
   
--   [방법: 컨트롤에 표시 된 도구 상자 항목 선택 대화 상자](how-to-display-a-control-in-the-choose-toolbox-items-dialog-box.md)  
+-   [방법: 도구 상자 항목 선택 대화 상자에 컨트롤 표시](how-to-display-a-control-in-the-choose-toolbox-items-dialog-box.md)  
   
--   [연습: Designerserializationvisibilityattribute를 사용 하 여 표준 형식의 컬렉션 직렬화](serializing-collections-designerserializationvisibilityattribute.md)  
+-   [연습: DesignerSerializationVisibilityAttribute를 사용하여 표준 형식의 컬렉션 직렬화](serializing-collections-designerserializationvisibilityattribute.md)  
   
--   [연습: 시각적 개체를 사용 하 여 Windows Forms 컨트롤에서 상속C#](walkthrough-inheriting-from-a-windows-forms-control-with-visual-csharp.md)  
+-   [연습: Visual C#을 사용하여 Windows Forms 컨트롤에서 상속](walkthrough-inheriting-from-a-windows-forms-control-with-visual-csharp.md)  
   
--   [방법: 컨트롤에 대 한 도구 상자 비트맵 제공](how-to-provide-a-toolbox-bitmap-for-a-control.md)  
+-   [방법: 컨트롤에 대한 도구 상자 비트맵 제공](how-to-provide-a-toolbox-bitmap-for-a-control.md)  
   
--   [방법: 에서 상속 하는 기존 Windows Forms 컨트롤](how-to-inherit-from-existing-windows-forms-controls.md)  
+-   [방법: 기존 Windows Forms 컨트롤에서 상속](how-to-inherit-from-existing-windows-forms-controls.md)  
   
--   [연습: 디자인 타임에 사용자 지정 Windows Forms 컨트롤 디버그](walkthrough-debugging-custom-windows-forms-controls-at-design-time.md)  
+-   [연습: 디자인 타임에 사용자 지정 Windows Forms 컨트롤 디버깅](walkthrough-debugging-custom-windows-forms-controls-at-design-time.md)  
   
 -   [방법: Control 클래스에서 상속](how-to-inherit-from-the-control-class.md)  
   
 -   [방법: UserControl의 런타임 동작 테스트](how-to-test-the-run-time-behavior-of-a-usercontrol.md)  
   
--   [방법: 디자인 타임에 컨트롤을 폼의 가장자리에 맞춤](how-to-align-a-control-to-the-edges-of-forms-at-design-time.md)  
+-   [방법: 디자인 타임에 양식의 가장자리에 컨트롤 맞춤](how-to-align-a-control-to-the-edges-of-forms-at-design-time.md)  
   
 -   [방법: UserControl 클래스에서 상속](how-to-inherit-from-the-usercontrol-class.md)  
   
--   [방법: Windows forms 컨트롤 작성](how-to-author-controls-for-windows-forms.md)  
+-   [방법: Windows Forms 컨트롤 작성](how-to-author-controls-for-windows-forms.md)  
   
--   [방법: 복합 컨트롤 제작](how-to-author-composite-controls.md)  
+-   [방법: 복합 컨트롤 작성](how-to-author-composite-controls.md)  
   
--   [연습: Visual Basic에서 합성 컨트롤 제작](walkthrough-authoring-a-composite-control-with-visual-basic.md)  
+-   [연습: Visual Basic을 사용하여 복합 컨트롤 작성](walkthrough-authoring-a-composite-control-with-visual-basic.md)  
   
--   [연습: 시각적 개체를 사용 하 여 복합 컨트롤 제작C#](walkthrough-authoring-a-composite-control-with-visual-csharp.md)  
+-   [연습: Visual C#에서 복합 컨트롤 제작](walkthrough-authoring-a-composite-control-with-visual-csharp.md)  
   
--   [연습: Visual Basic을 사용한 Windows Forms 컨트롤에서 상속](walkthrough-inheriting-from-a-windows-forms-control-with-visual-basic.md)  
+-   [연습: Visual Basic을 사용하여 Windows Forms 컨트롤에서 상속](walkthrough-inheriting-from-a-windows-forms-control-with-visual-basic.md)  
   
--   [연습: Visual Studio 디자인 타임 기능을 활용 하는 Windows Forms 컨트롤 만들기](creating-a-wf-control-design-time-features.md)  
+-   [연습: Visual Studio의 디자인 타임 기능을 활용하는 Windows Forms 컨트롤 만들기](creating-a-wf-control-design-time-features.md)  
   
 -   [방법: 디자인 타임 기능을 활용 하는 Windows Forms 컨트롤 만들기](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/307hck25(v=vs.120))  
   
 ## <a name="see-also"></a>참고자료
+
 - [방법: 간단한 Windows Forms 컨트롤 개발](how-to-develop-a-simple-windows-forms-control.md)
 - [사용자 지정 컨트롤의 종류](varieties-of-custom-controls.md)

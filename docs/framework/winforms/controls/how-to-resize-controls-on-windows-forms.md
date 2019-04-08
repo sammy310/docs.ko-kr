@@ -9,12 +9,12 @@ helpviewer_keywords:
 - size [Windows Forms], controls
 - Windows Forms controls, size
 ms.assetid: d2dba441-a8c0-4705-b8e8-2e5d86d6e7ec
-ms.openlocfilehash: 486564f8092733ad253aac4ad9ee60ff0f83dce7
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 598d3a6ea7f7cf6dc19cae5f55f49243d5d3ba31
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57719769"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59091748"
 ---
 # <a name="how-to-resize-controls-on-windows-forms"></a>방법: Windows Forms에서 컨트롤 크기 조정
 개별 컨트롤의 크기를 조정할 수 있고 같은 동일 하거나 다른 종류의 여러 컨트롤을 크기 조정할 수 <xref:System.Windows.Forms.Button> 고 <xref:System.Windows.Forms.GroupBox> 컨트롤입니다.  
@@ -33,6 +33,7 @@ ms.locfileid: "57719769"
 2.  에 **형식** 메뉴 선택 **같은 크기로**, 네 가지 옵션 중 하나를 선택 합니다. 처음 세 명령은 선택한 첫 번째 컨트롤에 맞게 컨트롤의 크기를 변경 합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [Windows Forms 컨트롤](index.md)
 - [Windows Forms에서 컨트롤 정렬](arranging-controls-on-windows-forms.md)
 - [개별 Windows Forms 컨트롤 레이블 지정 및 바로 가기 제공](labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md)

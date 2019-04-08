@@ -2,12 +2,12 @@
 title: UDP 활성화
 ms.date: 03/30/2017
 ms.assetid: 4b0ccd10-0dfb-4603-93f9-f0857c581cb7
-ms.openlocfilehash: a61b7fce891ea1ab68f48f836ffaae2b96c8e25d
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 21599990aff1209729a151b4c5a8829e305a1e90
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58836326"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59088602"
 ---
 # <a name="udp-activation"></a>UDP 활성화
 이 샘플은 기반는 [전송 합니다. UDP](../../../../docs/framework/wcf/samples/transport-udp.md) 샘플입니다. 확장 된 [전송 합니다. UDP](../../../../docs/framework/wcf/samples/transport-udp.md) 샘플 Windows 프로세스 활성화 서비스 (WAS)를 사용한 프로세스 활성화를 지원 하도록 합니다.  
@@ -161,4 +161,3 @@ ms.locfileid: "58836326"
 >  이 디렉터리가 없으면로 이동 [Windows Communication Foundation (WCF) 및.NET Framework 4 용 Windows WF (Workflow Foundation) 샘플](https://go.microsoft.com/fwlink/?LinkId=150780) 모든 Windows Communication Foundation (WCF)를 다운로드 하 고 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플. 이 샘플은 다음 디렉터리에 있습니다.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Transport\UdpActivation`  
-  
