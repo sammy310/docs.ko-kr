@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: a84dd9a3-d6cf-4824-989a-ecbbf443eeb4
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c276df65497a0d8cafea80959b8193790c19ebba
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4e5b4cb4a04a79a748f4ea2292bac67a88a6e9f8
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54667351"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59131289"
 ---
 # <a name="invalidmemberdeclaration-mda"></a>invalidMemberDeclaration MDA
 `invalidMemberDeclaration` MDA(관리 디버깅 도우미)는 COM에서 호출할 멤버의 매개 변수를 마샬링하는 방법을 결정하는 동안 발생 하는 오류를 보고하기 위해 활성화됩니다.  
@@ -35,7 +35,7 @@ ms.locfileid: "54667351"
 ## <a name="output"></a>출력  
  멤버 이름, 형식 이름 및 오류 메시지를 포함하는 정보 메시지입니다.  
   
-## <a name="configuration"></a>구성하기  
+## <a name="configuration"></a>구성  
   
 ```xml  
 <mdaConfig>  
@@ -46,6 +46,7 @@ ms.locfileid: "54667351"
 ```  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Runtime.InteropServices.MarshalAsAttribute>
 - [관리 디버깅 도우미를 사용하여 오류 진단](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
-- [interop 마샬링](../../../docs/framework/interop/interop-marshaling.md)
+- [Interop 마샬링](../../../docs/framework/interop/interop-marshaling.md)

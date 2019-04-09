@@ -1,5 +1,5 @@
 ---
-title: '방법: Windows Forms DataGridView 컨트롤에서 셀 및 열은 동작과 모양을 확장 하 여 사용자 지정'
+title: '방법: 동작 및 모양을 확장하여 Windows Forms DataGridView 컨트롤에서 셀 및 열 사용자 지정'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - columns [Windows Forms], customizing in DataGridView control
 - cells [Windows Forms], customizing in DataGridView control
 ms.assetid: 9b7dc7b6-5ce6-4566-9949-902f74f17a81
-ms.openlocfilehash: 7ea684fd0a3f23005e70594bf1870851a3708a8c
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: c68327bb0fb747cdf38d61e944401db9f3af22a8
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57721270"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59130691"
 ---
-# <a name="how-to-customize-cells-and-columns-in-the-windows-forms-datagridview-control-by-extending-their-behavior-and-appearance"></a>방법: Windows Forms DataGridView 컨트롤에서 셀 및 열은 동작과 모양을 확장 하 여 사용자 지정
+# <a name="how-to-customize-cells-and-columns-in-the-windows-forms-datagridview-control-by-extending-their-behavior-and-appearance"></a>방법: 동작 및 모양을 확장하여 Windows Forms DataGridView 컨트롤에서 셀 및 열 사용자 지정
 <xref:System.Windows.Forms.DataGridView> 컨트롤은 속성, 이벤트 및 도우미 클래스를 통해 모양과 동작을 사용자 지정하는 다양한 방법을 제공합니다. 경우에 따라 해당 셀에 대해 이러한 기능으로 충족할 수 없는 요구 사항이 있을 수 있습니다. 고유한 사용자 지정 <xref:System.Windows.Forms.DataGridViewCell> 클래스를 만들어 확장 기능을 제공할 수 있습니다.  
   
  <xref:System.Windows.Forms.DataGridViewCell> 기본 클래스 또는 파생 클래스 중 하나에서 파생시켜 사용자 지정 <xref:System.Windows.Forms.DataGridViewCell> 클래스를 만듭니다. 모든 유형의 열에 모든 유형의 셀을 표시할 수 있지만 일반적으로 셀 형식을 표시하기 위한 사용자 지정 <xref:System.Windows.Forms.DataGridViewColumn> 클래스도 만듭니다. 열 클래스는 <xref:System.Windows.Forms.DataGridViewColumn> 또는 파생 형식 중 하나에서 파생됩니다.  
@@ -71,10 +71,11 @@ ms.locfileid: "57721270"
  Visual Basic 또는 Visual C#에 대 한 명령줄에서이 예제를 빌드하는 방법에 대 한 내용은 [명령줄에서 빌드](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) 하거나 [csc.exe를 사용한 명령줄 빌드](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)합니다. 또한 새 프로젝트에 코드를 붙여 넣어 Visual Studio에서이 예제를 빌드할 수 있습니다.
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridViewCell>
 - <xref:System.Windows.Forms.DataGridViewColumn>
 - [Windows Forms DataGridView 컨트롤 사용자 지정](customizing-the-windows-forms-datagridview-control.md)
 - [DataGridView 컨트롤 아키텍처](datagridview-control-architecture-windows-forms.md)
 - [Windows Forms DataGridView 컨트롤의 열 형식](column-types-in-the-windows-forms-datagridview-control.md)
-- [Windows Forms DataGridView 컨트롤의 크기를 조정하는 최선의 방법](best-practices-for-scaling-the-windows-forms-datagridview-control.md)
+- [Windows Forms DataGridView 컨트롤의 크기 조정에 대한 모범 사례](best-practices-for-scaling-the-windows-forms-datagridview-control.md)

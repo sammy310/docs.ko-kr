@@ -1,5 +1,5 @@
 ---
-title: '방법: Windows Forms BindingSource 사용 하 여 항목 추가 사용자 지정'
+title: '방법: Windows Forms BindingSource를 사용하여 항목 추가 사용자 지정'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - examples [Windows Forms], BindingSource component
 - BindingSource component [Windows Forms], examples
 ms.assetid: 1aae11fc-6fb2-4cb9-b3d0-e0638fe77ef0
-ms.openlocfilehash: f199fd55262b1b72bf8bc1a133a09b80db95c27a
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 0a2f8491d0f027ca834257e2ec3a08d0b8bdb7ef
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57722934"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59129553"
 ---
-# <a name="how-to-customize-item-addition-with-the-windows-forms-bindingsource"></a>방법: Windows Forms BindingSource 사용 하 여 항목 추가 사용자 지정
+# <a name="how-to-customize-item-addition-with-the-windows-forms-bindingsource"></a>방법: Windows Forms BindingSource를 사용하여 항목 추가 사용자 지정
 <xref:System.Windows.Forms.BindingSource> 구성 요소를 사용하여 Windows Forms 컨트롤을 데이터 소스에 바인딩하는 경우 새 항목의 생성을 사용자 지정해야 할 수도 있습니다. <xref:System.Windows.Forms.BindingSource> 구성 요소는 일반적으로 바인딩된 컨트롤이 새 항목을 만들어야 할 때 발생하는 <xref:System.Windows.Forms.BindingSource.AddingNew> 이벤트를 제공하여 이 작업을 간소화합니다. 이벤트 처리기에서 필요한 사용자 지정 동작(예: 웹 서비스에 대해 메서드 호출 또는 클래스 팩터리에서 새 개체 가져오기)을 제공할 수 있습니다.  
   
 > [!NOTE]
@@ -39,8 +39,9 @@ ms.locfileid: "57722934"
  Visual Basic 또는 Visual C#에 대 한 명령줄에서이 예제를 빌드하는 방법에 대 한 내용은 [명령줄에서 빌드](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) 하거나 [csc.exe를 사용한 명령줄 빌드](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)합니다. 또한 새 프로젝트에 코드를 붙여 넣어 Visual Studio에서이 예제를 빌드할 수 있습니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Windows.Forms.BindingNavigator>
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.BindingSource>
 - [BindingSource 구성 요소](bindingsource-component.md)
-- [방법: 형식에는 Windows Forms 컨트롤 바인딩](how-to-bind-a-windows-forms-control-to-a-type.md)
+- [방법: 형식에 Windows Forms 컨트롤 바인딩](how-to-bind-a-windows-forms-control-to-a-type.md)

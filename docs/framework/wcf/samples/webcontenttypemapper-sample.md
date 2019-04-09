@@ -2,12 +2,12 @@
 title: WebContentTypeMapper 샘플
 ms.date: 03/30/2017
 ms.assetid: a4fe59e7-44d8-43c6-a1f8-40c45223adca
-ms.openlocfilehash: f9da688d1ba77d5e9c3e7106138fd36c96d4fc81
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
-ms.translationtype: MT
+ms.openlocfilehash: 7858b07c3da8684326b931b54f825c87a6e35717
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58840213"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59131510"
 ---
 # <a name="webcontenttypemapper-sample"></a>WebContentTypeMapper 샘플
 이 샘플에는 Windows Communication Foundation (WCF) 메시지 본문 형식에 새 콘텐츠 형식을 매핑하는 방법을 보여 줍니다.  
@@ -68,4 +68,3 @@ public class JsonContentTypeMapper : WebContentTypeMapper
 >  이 디렉터리가 없으면로 이동 [Windows Communication Foundation (WCF) 및.NET Framework 4 용 Windows WF (Workflow Foundation) 샘플](https://go.microsoft.com/fwlink/?LinkId=150780) 모든 Windows Communication Foundation (WCF)를 다운로드 하 고 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플. 이 샘플은 다음 디렉터리에 있습니다.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Ajax\WebContentTypeMapper`  
-  

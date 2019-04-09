@@ -1,5 +1,5 @@
 ---
-title: '방법: 함수 집합으로 그룹 Windows Forms RadioButton 컨트롤'
+title: '방법: Windows Forms RadioButton 컨트롤을 기능 집합으로 그룹화'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - radio buttons [Windows Forms], grouping
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - Windows Forms controls, grouping
 - RadioButton control [Windows Forms], grouping
 ms.assetid: 58f8fe34-50b7-49d8-a2be-c271be3c6b32
-ms.openlocfilehash: 2d0f32c506025c2d7f302bca67aa20e24d71a865
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: c785b124d0b9efdbd9a1fa85819031cad3c8857c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57723298"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59117899"
 ---
-# <a name="how-to-group-windows-forms-radiobutton-controls-to-function-as-a-set"></a>방법: 함수 집합으로 그룹 Windows Forms RadioButton 컨트롤
+# <a name="how-to-group-windows-forms-radiobutton-controls-to-function-as-a-set"></a>방법: Windows Forms RadioButton 컨트롤을 기능 집합으로 그룹화
 Windows Forms <xref:System.Windows.Forms.RadioButton> 컨트롤은 사용자는 하나만 할당할 수는 프로시저 또는 개체 두 개 이상 설정 중에서 선택할 수 있도록 디자인 되었습니다. 예를 들어 그룹 <xref:System.Windows.Forms.RadioButton> 컨트롤을 주문에 대 한 패키지 운송 업체의을 표시할 수 있지만 운송 업체 중 하나에 사용 됩니다. 따라서 하나의 <xref:System.Windows.Forms.RadioButton> 한 번에 선택할 수 있습니다, 기능 그룹의 일부인 경우에 합니다.  
   
  와 같은 컨테이너 내에서 그려 라디오 단추 그룹을 <xref:System.Windows.Forms.Panel> 컨트롤을 <xref:System.Windows.Forms.GroupBox> 컨트롤 또는 폼입니다. 폼 될 하나의 그룹에 직접 추가 되는 모든 라디오 단추입니다. 별도 그룹을 추가 하려면 패널 이나 그룹 상자 안에 배치 해야 합니다. 패널 이나 그룹 상자에 대 한 자세한 내용은 참조 하세요. [Panel 컨트롤 개요](panel-control-overview-windows-forms.md) 하거나 [GroupBox 컨트롤 개요](groupbox-control-overview-windows-forms.md)합니다.  
@@ -26,6 +26,7 @@ Windows Forms <xref:System.Windows.Forms.RadioButton> 컨트롤은 사용자는 
 2.  그릴 <xref:System.Windows.Forms.RadioButton> 컨트롤을 <xref:System.Windows.Forms.GroupBox> 또는 <xref:System.Windows.Forms.Panel> 제어 합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Windows.Forms.RadioButton>
 - [RadioButton 컨트롤 개요](radiobutton-control-overview-windows-forms.md)
 - [Panel 컨트롤 개요](panel-control-overview-windows-forms.md)

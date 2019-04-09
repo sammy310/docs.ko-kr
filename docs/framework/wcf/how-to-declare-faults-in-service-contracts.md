@@ -1,18 +1,18 @@
 ---
-title: '방법: 서비스 계약에 오류 선언'
+title: '방법: 서비스 계약에서 오류 선언'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: e8da98e7-d22f-4f60-ac82-3fb0928a353f
-ms.openlocfilehash: 145e9d7551e59a246d2540c2a7106e1a16686099
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 90abb29550ce7e027244b220f30e9fe46e282ff3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54727952"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59129495"
 ---
-# <a name="how-to-declare-faults-in-service-contracts"></a>방법: 서비스 계약에 오류 선언
+# <a name="how-to-declare-faults-in-service-contracts"></a>방법: 서비스 계약에서 오류 선언
 관리 코드에서 오류 조건이 발생하면 예외가 throw됩니다. Windows Communication Foundation (WCF) 응용 프로그램에서 서비스 계약 지정 오류 정보는 서비스 계약에서 SOAP 오류를 선언 하 여 클라이언트에 반환 됩니다. 예외와 오류 간의 관계의 개요를 보려면 [지정 및 계약 및 서비스에서 오류 처리](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)합니다.  
   
 ### <a name="create-a-service-contract-that-specifies-a-soap-fault"></a>SOAP 오류를 지정하는 서비스 계약 만들기  
@@ -45,5 +45,6 @@ ms.locfileid: "54727952"
  [!code-vb[FaultContractAttribute#1](../../../samples/snippets/visualbasic/VS_Snippets_CFX/faultcontractattribute/vb/services.vb#1)]  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.ServiceModel.FaultContractAttribute?displayProperty=nameWithType>
 - <xref:System.ServiceModel.FaultException%601?displayProperty=nameWithType>

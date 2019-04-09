@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: beb48835039f142ea1d9e18871f77ada1b6f4f3e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0109b25b1cdc42204fc4873577e495641c4ec4fd
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54706315"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59131458"
 ---
 # <a name="isymunmanagedscope2-interface"></a>ISymUnmanagedScope2 인터페이스
 메서드 내에서 어휘 범위를 나타냅니다. 이 인터페이스를 확장 합니다 [ISymUnmanagedScope](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope-interface.md) 범위 내에서 정의 된 상수에 대 한 정보를 가져오는 메서드를 사용 하 여 인터페이스입니다.  
@@ -37,5 +37,6 @@ ms.locfileid: "54706315"
  **헤더:** CorSym.idl, CorSym.h  
   
 ## <a name="see-also"></a>참고자료
+
 - [진단 기호 저장소 인터페이스](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)
 - [ISymUnmanagedScope 인터페이스](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope-interface.md)

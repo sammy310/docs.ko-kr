@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 41b27c8d545cce7051ca1507a6bd98b87a32468b
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 726ac0e23f739f451e1a0ab66c4c36aa6edbe569
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57499565"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59132134"
 ---
 # <a name="isymunmanagedwriterdefinedocument-method"></a>ISymUnmanagedWriter::DefineDocument 메서드
 소스 문서를 정의합니다. 알려진된 언어, 공급 업체 및 문서 형식에 대 한 guid가 제공 됩니다.  
@@ -61,4 +61,5 @@ HRESULT DefineDocument(
  **헤더:** CorSym.idl, CorSym.h  
   
 ## <a name="see-also"></a>참고자료
+
 - [ISymUnmanagedWriter 인터페이스](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)

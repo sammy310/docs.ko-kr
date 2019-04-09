@@ -1,18 +1,18 @@
 ---
-title: '방법: MDI 응용 프로그램의 자동 메뉴 병합 설정'
+title: '방법: MDI 애플리케이션에 대한 자동 메뉴 병합 설정'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - MenuStrip [Windows Forms], merging
 - Merging [Windows Forms], automatic menu
 ms.assetid: 55e32cad-1141-4a56-aa33-d9543ca3d393
-ms.openlocfilehash: 152db39e7c947d5a49eaed81b00d13c02aa8014c
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 17edde6e3968823abc915eb5faed6d2751ed9393
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57719731"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59129358"
 ---
-# <a name="how-to-set-up-automatic-menu-merging-for-mdi-applications"></a>방법: MDI 응용 프로그램의 자동 메뉴 병합 설정
+# <a name="how-to-set-up-automatic-menu-merging-for-mdi-applications"></a>방법: MDI 애플리케이션에 대한 자동 메뉴 병합 설정
 다음 절차 (MDI) 다중 문서 인터페이스 응용 프로그램에 자동 병합 설정에 대 한 기본 단계를 제공 <xref:System.Windows.Forms.MenuStrip>합니다.  
   
 ### <a name="to-set-up-automatic-menu-merging"></a>자동 메뉴 병합 설정 하려면  
@@ -32,6 +32,7 @@ ms.locfileid: "57719731"
 7.  사용 하 여는 <xref:System.Windows.Forms.ToolStripItem.MergeAction%2A> 자식 폼의 메뉴에서 속성 항목 <xref:System.Windows.Forms.MenuStrip> 부모 폼에 병합 되는 방식을 제어 합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Windows.Forms.MenuStrip>
 - <xref:System.Windows.Forms.ToolStripMenuItem>
 - [MenuStrip 컨트롤 개요](menustrip-control-overview-windows-forms.md)
