@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - clients [WCF], architecture
 ms.assetid: f60d9bc5-8ade-4471-8ecf-5a07a936c82d
-ms.openlocfilehash: d67da4cedc4bd9bad468197db4a2ad60d054894a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 34abe6b07cebc446324785bde1061c7aa2b04e4a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54492600"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59115923"
 ---
 # <a name="wcf-client-overview"></a>WCF 클라이언트 개요
 이 섹션에서는 클라이언트 응용 프로그램에 수행할 작업, 구성, 만들기 및 Windows Communication Foundation (WCF) 클라이언트를 사용 하는 방법 및 클라이언트 응용 프로그램을 보호 하는 방법을 설명 합니다.  
@@ -172,5 +172,6 @@ End Interface
  WCF 클라이언트 형식은 확장 <xref:System.ServiceModel.ClientBase%601>에서 파생 되는 <xref:System.ServiceModel.IClientChannel?displayProperty=nameWithType> 기본 채널 시스템을 노출 하는 인터페이스입니다. <xref:System.ServiceModel.ChannelFactory%601?displayProperty=nameWithType> 클래스와의 대상 서비스 계약을 사용하여 서비스를 호출할 수 있습니다. 자세한 내용은 참조 하세요 [WCF 클라이언트 아키텍처](../../../docs/framework/wcf/feature-details/client-architecture.md)합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.ServiceModel.ClientBase%601?displayProperty=nameWithType>
 - <xref:System.ServiceModel.ChannelFactory%601?displayProperty=nameWithType>

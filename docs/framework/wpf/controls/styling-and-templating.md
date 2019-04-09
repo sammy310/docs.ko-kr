@@ -15,12 +15,12 @@ helpviewer_keywords:
 - styles [WPF], triggers
 - styles [WPF], event triggers
 ms.assetid: 481765e5-5467-4a75-9f7b-e10e2ac410d9
-ms.openlocfilehash: bc77d6e32588f48d3a4e0dd841b98b8bc65ea4f5
-ms.sourcegitcommit: 68eb5c4928e2b082f178a42c16f73fedf52c2ab8
+ms.openlocfilehash: 3fae4993a13b02ad998668f644a80ba7c07196fa
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/05/2019
-ms.locfileid: "59055328"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59132299"
 ---
 # <a name="styling-and-templating"></a>스타일 지정 및 템플릿
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 스타일 지정 및 템플릿 집합 개발자와 디자이너가 시각적으로 멋진 효과를 만들고 해당 제품에 대해 일관 된 모양을 만들려면 허용 하는 기능 (스타일, 템플릿, 트리거 및 스토리 보드)을 참조 하십시오. 개발자 및/또는 디자이너는 애플리케이션에 따라 모양을 광범위하게 사용자 지정할 수 있지만 애플리케이션 내에서 또는 애플리케이션 간에 모양을 유지 관리 및 공유하려면 강력한 스타일 지정 및 템플릿 모델이 필요합니다. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 이 모델을 제공 합니다.  
@@ -197,6 +197,7 @@ ms.locfileid: "59055328"
  사용자 지정 컨트롤에 대한 테마를 만들 경우 [컨트롤 작성 개요](control-authoring-overview.md)의 외부 컨트롤 라이브러리 섹션을 참조하세요.  
   
 ## <a name="see-also"></a>참고자료
+
 - [WPF의 Pack URI](../app-development/pack-uris-in-wpf.md)
 - [방법: ControlTemplate에서 생성된 요소 찾기](how-to-find-controltemplate-generated-elements.md)
 - [DataTemplate에서 생성된 요소 찾기](../data/how-to-find-datatemplate-generated-elements.md)

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - MenuStrip control [Windows Forms], arranging items
 - ToolStripMenuItems [Windows Forms], copying and pasting
 ms.assetid: 17ef4207-e92e-4db2-b648-27246e6517ad
-ms.openlocfilehash: 18077f542b1b49f8e81e68fc1e7a5d3e1e417a21
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 94dc1271468661801d07b341214b03bc31bb3099
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57713880"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59116352"
 ---
 # <a name="how-to-copy-toolstripmenuitems"></a>방법: ToolStripMenuItems 복사
 디자인 타임에 최상위 메뉴 전체와 해당 하위 메뉴 항목을 <xref:System.Windows.Forms.MenuStrip>의 다른 위치로 복사할 수 있습니다. 최상위 메뉴 간에 개별 메뉴 항목을 복사하거나 메뉴 내에서 메뉴 항목의 위치를 변경할 수도 있습니다.  
@@ -43,6 +43,7 @@ ms.locfileid: "57713880"
      복사한 하위 메뉴 항목이 선택한 하위 메뉴 항목 앞에 삽입됩니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Windows.Forms.MenuStrip>
 - <xref:System.Windows.Forms.ToolStripMenuItem>
 - [MenuStrip 컨트롤 개요](menustrip-control-overview-windows-forms.md)

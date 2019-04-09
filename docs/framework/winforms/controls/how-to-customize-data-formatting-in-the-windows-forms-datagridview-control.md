@@ -16,20 +16,19 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], substituting cell values for display
 - data grids [Windows Forms], formatting data
 ms.assetid: a6e72c70-ce18-425f-828d-d57be6f96ab6
-ms.openlocfilehash: 4a7e74afa985d36281994078bd0ea464f084cfa9
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 5ce43054130db88792acab852b1e886285ff34d7
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57714907"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59116053"
 ---
 # <a name="how-to-customize-data-formatting-in-the-windows-forms-datagridview-control"></a>방법: Windows Forms DataGridView 컨트롤에서 데이터 형식 사용자 지정
 다음 코드 예제에서는 열과 값에 따라 셀이 표시되는 방식을 변경하는 <xref:System.Windows.Forms.DataGridView.CellFormatting?displayProperty=nameWithType> 이벤트에 대한 처리기를 구현하는 방법을 보여 줍니다.  
   
  음수를 포함하는 `Balance` 열의 셀에는 빨간색 배경이 제공됩니다. 또한 이러한 셀에 통화 형식을 지정하여 음수 값을 괄호 안에 표시할 수도 있습니다. 자세한 내용은 [방법: 형식 데이터에는 Windows Forms DataGridView 컨트롤](how-to-format-data-in-the-windows-forms-datagridview-control.md)합니다.  
   
- `Priority` 열의 셀에는 해당하는 텍스트 셀 값 대신 이미지가 표시됩니다. 
-  <xref:System.Windows.Forms.DataGridViewCellFormattingEventArgs>의 <xref:System.Windows.Forms.ConvertEventArgs.Value%2A> 속성은 텍스트 셀 값을 가져오고 해당하는 이미지 표시 값을 설정하는 데 사용됩니다.  
+ `Priority` 열의 셀에는 해당하는 텍스트 셀 값 대신 이미지가 표시됩니다. <xref:System.Windows.Forms.DataGridViewCellFormattingEventArgs>의 <xref:System.Windows.Forms.ConvertEventArgs.Value%2A> 속성은 텍스트 셀 값을 가져오고 해당하는 이미지 표시 값을 설정하는 데 사용됩니다.  
   
 ## <a name="example"></a>예제  
  [!code-csharp[System.Windows.Forms.DataGridViewCustomizeDataFormatting#00](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewCustomizeDataFormatting/cs/customFormatting.cs#00)]
@@ -40,17 +39,18 @@ ms.locfileid: "57714907"
   
 -   System, System.Drawing 및 System.Windows.Forms 어셈블리에 대한 참조  
   
--   실행 파일과 동일한 디렉터리에 있는 `highPri.bmp`, `mediumPri.bmp` 및 `lowPri.bmp`로 명명된 <xref:System.Drawing.Bitmap> 이미지  
+-   <xref:System.Drawing.Bitmap> 명명 된 이미지 `highPri.bmp`, `mediumPri.bmp`, 및 `lowPri.bmp` 실행 파일과 동일한 디렉터리에 상주 합니다.  
   
  Visual Basic 또는 Visual C#에 대 한 명령줄에서이 예제를 빌드하는 방법에 대 한 내용은 [명령줄에서 빌드](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) 하거나 [csc.exe를 사용한 명령줄 빌드](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)합니다. 또한 새 프로젝트에 코드를 붙여 넣어 Visual Studio에서이 예제를 빌드할 수 있습니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Windows.Forms.DataGridView.DefaultCellStyle%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.DataGridViewBand.DefaultCellStyle%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridViewCellStyle>
 - <xref:System.Drawing.Bitmap>
 - [Windows Forms DataGridView 컨트롤에서 데이터 표시](displaying-data-in-the-windows-forms-datagridview-control.md)
-- [방법: 형식 데이터에는 Windows Forms DataGridView 컨트롤](how-to-format-data-in-the-windows-forms-datagridview-control.md)
+- [방법: Windows Forms DataGridView 컨트롤에서 데이터 형식 지정](how-to-format-data-in-the-windows-forms-datagridview-control.md)
 - [Windows Forms DataGridView 컨트롤의 셀 스타일](cell-styles-in-the-windows-forms-datagridview-control.md)
-- [Windows Forms DataGridView 컨트롤의 데이터 형식 지정](data-formatting-in-the-windows-forms-datagridview-control.md)
+- [Windows Forms DataGridView 컨트롤에서 데이터 형식 지정](data-formatting-in-the-windows-forms-datagridview-control.md)

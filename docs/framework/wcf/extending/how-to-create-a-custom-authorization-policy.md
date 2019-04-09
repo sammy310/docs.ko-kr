@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 05b0549b-882d-4660-b6f0-5678543e5475
-ms.openlocfilehash: ba5d8d02d0c8d5993e1b072298aadcaa5fe0fe35
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 78cc77a5491e50d718a53efff1c6f99acf23cf27
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54705906"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59115390"
 ---
 # <a name="how-to-create-a-custom-authorization-policy"></a>방법: 사용자 지정 권한 부여 정책 만들기
 Id 모델 인프라에 Windows Communication Foundation (WCF) 클레임 기반 권한 부여 모델을 지원합니다. 클레임은 토큰에서 추출되어 사용자 지정 권한 부여 정책에 의해 선택적으로 처리된 다음,이후에 권한 부여를 결정하기 위해 검사할 수 있는 <xref:System.IdentityModel.Policy.AuthorizationContext>에 배치됩니다. 사용자 지정 정책은 들어오는 토큰을 응용 프로그램에서 필요로 하는 클레임으로 변형하는 데 사용할 수 있습니다. 이러한 방식으로 응용 프로그램 계층 수 영향을 받지 않도록 WCF가 지 원하는 다른 토큰 형식으로 제공 되는 서로 다른 클레임에 대 한 세부 정보에서. 이 항목에서는 사용자 지정 권한 부여 정책을 구현하는 방법과 이 정책을 서비스에 사용된 정책 컬렉션에 추가하는 방법에 대해 설명합니다.  
@@ -76,7 +76,8 @@ Id 모델 인프라에 Windows Communication Foundation (WCF) 클레임 기반 �
  [!code-vb[c_CustomAuthPol#5](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customauthpol/vb/source.vb#5)]  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.ServiceModel.ServiceAuthorizationManager>
 - [방법: 클레임 비교](../../../../docs/framework/wcf/extending/how-to-compare-claims.md)
-- [방법: 서비스에 대 한 사용자 지정 권한 부여 관리자 만들기](../../../../docs/framework/wcf/extending/how-to-create-a-custom-authorization-manager-for-a-service.md)
+- [방법: 서비스에 대한 사용자 지정 권한 부여 관리자 만들기](../../../../docs/framework/wcf/extending/how-to-create-a-custom-authorization-manager-for-a-service.md)
 - [권한 부여 정책](../../../../docs/framework/wcf/samples/authorization-policy.md)

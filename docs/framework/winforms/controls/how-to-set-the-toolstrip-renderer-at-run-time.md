@@ -1,5 +1,5 @@
 ---
-title: '방법: 런타임 시 ToolStrip 렌더러 설정'
+title: '방법: 런타임에 ToolStrip 렌더러 설정'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - ToolStrip control [Windows Forms]
 - MenuStrip control [Windows Forms]
 ms.assetid: 525e2347-0804-49aa-b9a3-9b2cabbf1c35
-ms.openlocfilehash: 2ad175f5f290fd709636e12caf0ebd0a34c0052f
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: f0e8668ef46de8cc073663786bcd43b740a1b2f6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57714764"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59138588"
 ---
-# <a name="how-to-set-the-toolstrip-renderer-at-run-time"></a>방법: 런타임 시 ToolStrip 렌더러 설정
+# <a name="how-to-set-the-toolstrip-renderer-at-run-time"></a>방법: 런타임에 ToolStrip 렌더러 설정
 사용자 지정 `ProfessionalColorTable` 클래스를 만들어 <xref:System.Windows.Forms.ToolStrip> 컨트롤의 모양을 사용자 지정할 수 있습니다.  
   
 ## <a name="example"></a>예제  
@@ -51,6 +51,7 @@ ms.locfileid: "57714764"
  Visual Basic 또는 Visual C#에 대 한 명령줄에서이 예제를 빌드하는 방법에 대 한 내용은 [명령줄에서 빌드](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) 하거나 [csc.exe를 사용한 명령줄 빌드](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)합니다. 또한 새 프로젝트에 코드를 붙여 넣어 Visual Studio에서이 예제를 빌드할 수 있습니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Windows.Forms.ToolStripManager>
 - <xref:System.Windows.Forms.ProfessionalColorTable>
 - <xref:System.Windows.Forms.MenuStrip>

@@ -1,19 +1,19 @@
 ---
-title: '방법: 디자이너를 사용 하 여 Windows Forms ListView 컨트롤에서 항목 그룹화'
+title: '방법: 디자이너를 사용하여 Windows Forms ListView 컨트롤에서 항목 그룹화'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - ListView control [Windows Forms], grouping items
 - grouping
 - groups [Windows Forms], in Windows Forms controls
 ms.assetid: 8b615000-69d9-4c64-acaf-b54fa09b69e3
-ms.openlocfilehash: 4c3e20ad7a09cc21e6c1d2a6d8fbbc47d11c903d
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 223c2a639fdb7a05506eca333a44ca31c0dae75f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57703558"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59136658"
 ---
-# <a name="how-to-group-items-in-a-windows-forms-listview-control-using-the-designer"></a>방법: 디자이너를 사용 하 여 Windows Forms ListView 컨트롤에서 항목 그룹화
+# <a name="how-to-group-items-in-a-windows-forms-listview-control-using-the-designer"></a>방법: 디자이너를 사용하여 Windows Forms ListView 컨트롤에서 항목 그룹화
 그룹화 기능을 <xref:System.Windows.Forms.ListView> 컨트롤을 사용 하면 그룹의 관련된 항목 집합을 표시할 수 있습니다. 이러한 그룹은 화면에서 그룹 제목을 포함 하는 행 그룹 머리글에 의해 구분 됩니다. 사용할 수 있습니다 <xref:System.Windows.Forms.ListView> 그룹 날짜 또는 기타 논리 그룹으로 항목을 사전순으로 그룹화 하 여 보다 쉽게 긴 목록 이동 되도록 합니다. 다음 이미지에서는 일부 그룹화 된 항목을 보여 줍니다.  
   
  ![ListView 그룹](./media/listviewgroups.gif "ListViewGroups")  
@@ -46,9 +46,10 @@ ms.locfileid: "57703558"
 3.  선택 된 <xref:System.Windows.Forms.ListViewItem.Group%2A> 속성 드롭다운 목록에서 그룹을 선택 하 고 있습니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Windows.Forms.ListView>
 - <xref:System.Windows.Forms.ListView.Groups%2A>
 - <xref:System.Windows.Forms.ListViewGroup>
 - [ListView 컨트롤](listview-control-windows-forms.md)
 - [ListView 컨트롤 개요](listview-control-overview-windows-forms.md)
-- [방법: Windows Forms ListView 컨트롤을 사용 하 여 항목 추가 및 제거](how-to-add-and-remove-items-with-the-windows-forms-listview-control.md)
+- [방법: Windows Forms ListView 컨트롤을 사용하여 항목 추가 및 제거](how-to-add-and-remove-items-with-the-windows-forms-listview-control.md)

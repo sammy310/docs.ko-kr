@@ -2,12 +2,12 @@
 title: 지속성 참석자
 ms.date: 03/30/2017
 ms.assetid: f84d2d5d-1c1b-4f19-be45-65b552d3e9e3
-ms.openlocfilehash: a8392bd756d8315a72d9df131476414f8982cf03
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: f9a1f2142a2aef617c3337bf1bc384a51c8ed049
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57723766"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59115897"
 ---
 # <a name="persistence-participants"></a>지속성 참석자
 지속성 참가자는 응용 프로그램 호스트에서 트리거된 지속성 작업(저장 또는 로드)에 참가할 수 있습니다. 합니다 [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] 두 가지 추상 클래스와 함께 제공 되 **PersistenceParticipant** 하 고 **PersistenceIOParticipant**, 지 속성 참가자를 만드는 데 사용할 수 있는 합니다. 지속성 참가자는 이 클래스 중 하나에서 파생되고 관련 메서드를 구현한 다음 클래스의 인스턴스를 <xref:System.ServiceModel.Activities.WorkflowServiceHost.WorkflowExtensions%2A>의 <xref:System.ServiceModel.Activities.WorkflowServiceHost> 컬렉션에 추가합니다. 응용 프로그램 호스트는 워크플로 인스턴스를 지속할 때 이 워크플로 확장을 검색하고 적당한 시간에 지속성 참가자에서 해당 메서드를 호출합니다.  
@@ -58,7 +58,8 @@ ms.locfileid: "57723766"
   
 ## <a name="in-this-section"></a>섹션 내용  
   
--   [방법: 사용자 지정 지 속성 참석자 만들기](how-to-create-a-custom-persistence-participant.md)  
+-   [방법: 사용자 지정 지속성 참가자 만들기](how-to-create-a-custom-persistence-participant.md)  
   
 ## <a name="see-also"></a>참고자료
+
 - [저장소 확장성](store-extensibility.md)

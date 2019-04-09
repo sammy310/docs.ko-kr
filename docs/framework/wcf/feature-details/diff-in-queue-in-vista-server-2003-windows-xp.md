@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - queues [WCF], differences in operating systems
 ms.assetid: aa809d93-d0a3-4ae6-a726-d015cca37c04
-ms.openlocfilehash: 5bbae7e54160923e973ff6a8adb655587adf1002
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d13cb3e732d0276902def5de6ca7c007f61b0ec9
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54708833"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59115988"
 ---
 # <a name="differences-in-queuing-features-in-windows-vista-windows-server-2003-and-windows-xp"></a>Windows Vista, Windows Server 2003 및 Windows XP의 큐 기능 차이점
 이 항목에서는 Windows Communication Foundation (WCF) 큐 기능 간의 차이점을 보여 줍니다 [!INCLUDE[wv](../../../../includes/wv-md.md)], [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)], 및 [!INCLUDE[wxp](../../../../includes/wxp-md.md)]합니다.  
@@ -19,7 +19,7 @@ ms.locfileid: "54708833"
   
  일반적으로 큐 관리자를 공유하는 모든 대기 중인 응용 프로그램에 대해 시스템 전체 수준의 배달 못한 편지 큐 하나가 존재합니다. 각 응용 프로그램에 대해 배달 못한 편지 큐를 사용하면 이러한 응용 프로그램에서 해당 응용 프로그램별 배달 못한 편지 큐를 직접 지정하여 큐 관리자를 공유하는 대기 중인 응용 프로그램을 서로 격리할 수 있습니다. 다른 응용 프로그램과 배달 못한 편지 큐를 공유하는 응용 프로그램에서는 큐에서 해당되는 메시지를 찾아야 합니다. 응용 프로그램별 배달 못한 편지 큐를 사용하면 응용 프로그램에서는 배달 못한 편지 큐에 있는 모든 메시지가 자신에 해당되는 것임을 확신할 수 있습니다.  
   
- [!INCLUDE[wv](../../../../includes/wv-md.md)]에서는 응용 프로그램별 배달 못한 편지 큐를 사용할 수 있습니다. [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] 및 [!INCLUDE[wxp](../../../../includes/wxp-md.md)]에서는 응용 프로그램별 배달 못한 편지 큐를 사용할 수 없고 시스템 수준의 배달 못한 편지 큐를 사용해야 합니다.  
+ [!INCLUDE[wv](../../../../includes/wv-md.md)] 응용 프로그램별 배달 못 한 편지 큐를 제공합니다. [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] 및 [!INCLUDE[wxp](../../../../includes/wxp-md.md)]에서는 응용 프로그램별 배달 못한 편지 큐를 사용할 수 없고 시스템 수준의 배달 못한 편지 큐를 사용해야 합니다.  
   
 ## <a name="poison-message-handling"></a>포이즌 메시지 처리  
  포이즌 메시지는 받는 응용 프로그램에 전달하는 최대 배달 시도 횟수를 초과한 메시지입니다. 이 상황은 트랜잭션 큐에서 메시지를 읽는 응용 프로그램이 오류 때문에 메시지를 즉시 처리할 수 없는 경우에 발생합니다. 응용 프로그램에서 대기 중인 메시지를 받은 트랜잭션이 중단되면 메시지가 큐에 반환됩니다. 그러면 응용 프로그램에서 새 트랜잭션으로 메시지를 다시 검색하려고 시도합니다. 오류를 일으킨 문제가 해결되지 않은 경우 받는 응용 프로그램은 최대 배달 시도 횟수를 초과할 때까지 같은 메시지를 받고 중단하는 루프에 갇힐 수 있으며, 포이즌 메시지가 발생합니다.  
@@ -36,5 +36,6 @@ ms.locfileid: "54708833"
  [!INCLUDE[wv](../../../../includes/wv-md.md)]의 MSMQ에서는 원격 트랜잭션 읽기를 지원합니다. 이를 통해 큐에서 읽기를 수행하는 응용 프로그램을 큐가 호스팅된 컴퓨터와 다른 컴퓨터에 호스팅할 수 있습니다. 이 기능을 사용하면 중앙의 큐에서 읽기를 수행하는 서비스 팜을 구성하여 시스템의 전체적인 처리량을 높일 수 있습니다. 또한 메시지를 읽거나 처리하는 동안 오류가 발생하면 트랜잭션을 롤백하여 나중에 처리할 수 있도록 메시지를 큐에 남길 수 있습니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [배달 못 한 편지 큐를 사용하여 메시지 전송 오류 처리](../../../../docs/framework/wcf/feature-details/using-dead-letter-queues-to-handle-message-transfer-failures.md)
 - [포이즌 메시지 처리](../../../../docs/framework/wcf/feature-details/poison-message-handling.md)
