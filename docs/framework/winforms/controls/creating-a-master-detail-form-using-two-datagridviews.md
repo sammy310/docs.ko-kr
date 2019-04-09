@@ -10,14 +10,14 @@ helpviewer_keywords:
 - master-details lists [Windows Forms], displaying on Windows Forms
 - walkthroughs [Windows Forms], DataGridView control
 ms.assetid: c5fa29e8-47f7-4691-829b-0e697a691f36
-ms.openlocfilehash: 80ec480b5d45a338c1f15796ae82015d6da24fc9
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 66807287dcaffae4bd310040312e0f56e8fda5d0
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57705534"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59078878"
 ---
-# <a name="walkthrough-creating-a-masterdetail-form-using-two-windows-forms-datagridview-controls"></a>연습: 두 개의 Windows Forms DataGridView 컨트롤을 사용 하 여 마스터/세부 폼 만들기
+# <a name="walkthrough-creating-a-masterdetail-form-using-two-windows-forms-datagridview-controls"></a>연습: 두 개의 Windows Forms DataGridView 컨트롤을 사용하여 마스터/세부 양식 만들기
 사용에 대 한 가장 일반적인 시나리오 중 하나를 <xref:System.Windows.Forms.DataGridView> 컨트롤은 합니다 *마스터/세부 정보* 두 데이터베이스 테이블 간의 부모/자식 관계를 표시 되는 폼입니다. 마스터 테이블에서 행을 선택 하면 해당 자식 데이터를 사용 하 여 업데이트 세부 정보 테이블.  
   
  마스터/세부 폼을 구현 하는 것은 간의 상호 작용을 사용 하 여 쉽게 합니다 <xref:System.Windows.Forms.DataGridView> 컨트롤 및 <xref:System.Windows.Forms.BindingSource> 구성 요소입니다. 이 연습에서는 두 개를 사용 하 여 폼 빌드됩니다 <xref:System.Windows.Forms.DataGridView> 컨트롤과 두 <xref:System.Windows.Forms.BindingSource> 구성 요소입니다. Northwind SQL Server 예제 데이터베이스의 테이블과 관련 된 두 폼 표시 됩니다. `Customers` 및 `Orders`합니다. 마스터 데이터베이스에 모든 고객을 표시 하는 폼을 완료 하면 더 <xref:System.Windows.Forms.DataGridView> 하 고 선택한 고객 세부 정보에 대 한 모든 주문을 <xref:System.Windows.Forms.DataGridView>합니다.  
@@ -76,8 +76,9 @@ ms.locfileid: "57705534"
 -   셀의 모양을 사용자 지정 합니다. 자세한 내용은 [방법: Windows Forms DataGridView 컨트롤에서 셀 모양 사용자 지정](customize-the-appearance-of-cells-in-the-datagrid.md) 고 [방법: Windows Forms DataGridView 컨트롤에 기본 셀 스타일 설정](how-to-set-default-cell-styles-for-the-windows-forms-datagridview-control.md)합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.BindingSource>
 - [Windows Forms DataGridView 컨트롤에서 데이터 표시](displaying-data-in-the-windows-forms-datagridview-control.md)
-- [방법: 두 개의 Windows Forms DataGridView 컨트롤을 사용 하 여 마스터/세부 폼 만들기](create-a-master-detail-form-using-two-datagridviews.md)
+- [방법: 두 개의 Windows Forms DataGridView 컨트롤을 사용하여 마스터/세부 양식 만들기](create-a-master-detail-form-using-two-datagridviews.md)
 - [연결 정보 보호](../../data/adonet/protecting-connection-information.md)

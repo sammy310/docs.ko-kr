@@ -1,18 +1,18 @@
 ---
-title: '방법: 계층적 데이터에 마스터-세부 패턴 사용'
+title: '방법: 계층적 데이터에서 마스터-세부 정보 패턴 사용'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - data binding [WPF], Master-Detail data paradigm
 - Master-Detail data paradigm
 ms.assetid: 11429b9e-058d-4084-bfb6-2cf209c8ddf7
-ms.openlocfilehash: e18bc7d60b47b083a0b102938634473d85b39882
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: 3a17d6cd5b723dcde4d8dc7059c9f416308f73db
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58463321"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59082661"
 ---
-# <a name="how-to-use-the-master-detail-pattern-with-hierarchical-data"></a>방법: 계층적 데이터에 마스터-세부 패턴 사용
+# <a name="how-to-use-the-master-detail-pattern-with-hierarchical-data"></a>방법: 계층적 데이터에서 마스터-세부 정보 패턴 사용
 이 예제에는 마스터-세부 시나리오를 구현 하는 방법을 보여 줍니다.  
   
 ## <a name="example"></a>예제  
@@ -34,8 +34,9 @@ ms.locfileid: "58463321"
  때 사용 하는 방법은 약간 다른 [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] 데이터입니다. 예를 들어 참조 [계층적 XML 데이터에 마스터-세부 패턴 사용](how-to-use-the-master-detail-pattern-with-hierarchical-xml-data.md)합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Windows.HierarchicalDataTemplate>
-- [선택에 따라 수집 및 표시 정보에 바인딩](how-to-bind-to-a-collection-and-display-information-based-on-selection.md)
+- [선택 영역에 따라 컬렉션 및 표시 정보에 바인딩](how-to-bind-to-a-collection-and-display-information-based-on-selection.md)
 - [데이터 바인딩 개요](data-binding-overview.md)
 - [데이터 템플릿 개요](data-templating-overview.md)
 - [방법 항목](data-binding-how-to-topics.md)

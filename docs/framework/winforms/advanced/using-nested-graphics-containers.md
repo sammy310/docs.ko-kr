@@ -9,12 +9,12 @@ helpviewer_keywords:
 - graphics [Windows Forms], clipping
 - graphics [Windows Forms], transformations in nested objects
 ms.assetid: a0d9f178-43a4-4323-bb5a-d3e3f77ae6c1
-ms.openlocfilehash: a66edd0297b723b81c31675c9b0e6b6def9ed10a
-ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
+ms.openlocfilehash: 6bbf7918ccff184e597204b35aa005ab17d8d8af
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/16/2019
-ms.locfileid: "58125865"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59104301"
 ---
 # <a name="using-nested-graphics-containers"></a>중첩된 Graphics 컨테이너 사용
 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 일시적으로 바꾸거나의 상태 부분을 보강 하는 데 사용할 수 있는 컨테이너를 제공 된 <xref:System.Drawing.Graphics> 개체입니다. 호출 하 여 컨테이너를 만들어야 합니다 <xref:System.Drawing.Graphics.BeginContainer%2A> 메서드는 <xref:System.Drawing.Graphics> 개체입니다. 호출할 수 있습니다 <xref:System.Drawing.Graphics.BeginContainer%2A> 반복 하 여 중첩 된 컨테이너를 구성 합니다. 호출할 때마다 <xref:System.Drawing.Graphics.BeginContainer%2A> 를 호출 하 여 이루어야 <xref:System.Drawing.Graphics.EndContainer%2A>합니다.  
@@ -57,5 +57,6 @@ ms.locfileid: "58125865"
  ![중첩 된 컨테이너에서 가져온 문자열을 보여 주는 그림입니다.](./media/using-nested-graphics-containers/nested-containers-three-strings.png)  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Drawing.Graphics>
 - [Graphics 개체의 상태 관리](managing-the-state-of-a-graphics-object.md)

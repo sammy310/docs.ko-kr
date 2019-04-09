@@ -2,12 +2,12 @@
 title: '서비스: Calls Faulted Per Second'
 ms.date: 03/30/2017
 ms.assetid: 94247356-2b29-4b50-b639-91ca8c1cf3a9
-ms.openlocfilehash: c9af93c7cc0f07ced4435c98fd307e7a7976687f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 595b623d70bad82ea39ab3ef93fb5fd499268ff2
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54580085"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59088478"
 ---
 # <a name="service-calls-faulted-per-second"></a>서비스: Calls Faulted Per Second
 카운터 이름: Calls Faulted Per Second.  
@@ -22,4 +22,5 @@ ms.locfileid: "54580085"
  Windows Communication Foundation (WCF) 응용 프로그램의 경우 서비스 메서드는 SOAP 오류 메시지를 사용 하 여 처리 오류 정보를 통신 합니다. SOAP 오류는 서비스 작업의 메타데이터에 포함된 메시지 유형이므로 클라이언트가 실행을 더욱 견고하게 만들거나 대화형으로 만드는 데 사용할 수 있는 오류 계약을 만듭니다. SOAP 오류는 XML 형식으로 클라이언트에 표현되므로 상호 운용성이 매우 높습니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [계약 및 서비스에서 오류 지정 및 처리](../../../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)

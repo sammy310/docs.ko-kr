@@ -8,12 +8,12 @@ helpviewer_keywords:
 - graphics [WPF], rectangles
 - rectangles [WPF], creating with RectangleGeometry class
 ms.assetid: e40b8a8e-54b8-416b-a9f2-be6dca9fdf0b
-ms.openlocfilehash: bd42aca2541d67469173f63655ada18a12eb692c
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 146ca7017ee38ad5c1065e59662ac441e7bfbfe2
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57352505"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59075798"
 ---
 # <a name="how-to-define-a-rectangle-using-a-rectanglegeometry"></a>방법: RectangleGeometry를 사용하여 사각형 정의
 이 예제를 사용 하는 방법에 설명 합니다 <xref:System.Windows.Media.RectangleGeometry> 사각형을 설명 하는 클래스입니다.  
@@ -34,6 +34,7 @@ RectangleGeometry
  다른 단순 기 하 도형 클래스를 포함 <xref:System.Windows.Media.LineGeometry> 고 <xref:System.Windows.Media.EllipseGeometry>입니다. 좀더 복잡 한 뿐만 아니라 이러한 기 하이 도형을 만들 수도 있습니다를 사용 하는 <xref:System.Windows.Media.PathGeometry> 또는 <xref:System.Windows.Media.StreamGeometry>합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [Geometry 개요](geometry-overview.md)
 - [복합 도형 만들기](how-to-create-a-composite-shape.md)
 - [PathGeometry를 사용하여 도형 만들기](how-to-create-a-shape-by-using-a-pathgeometry.md)

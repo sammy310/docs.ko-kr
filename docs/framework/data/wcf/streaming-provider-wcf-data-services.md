@@ -10,12 +10,12 @@ helpviewer_keywords:
 - streaming data provider [WCF Data Services]
 - WCF Data Services, streams
 ms.assetid: f0978fe4-5f9f-42aa-a5c2-df395d7c9495
-ms.openlocfilehash: 1107fe12f5efa2b812f723568f5cb4fea1eddc8a
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
+ms.openlocfilehash: afe33835c8d29c4fe0e16ab4c7e00808336d0752
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56093842"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59087900"
 ---
 # <a name="streaming-provider-wcf-data-services"></a>스트리밍 공급자(WCF Data Services)
 데이터 서비스에서 BLOB(Binary Large Object) 데이터를 노출할 수 있습니다. 이 이진 데이터는 비디오 및 오디오 스트림, 이미지, 문서 파일 또는 다른 형식의 이진 미디어를 나타낼 수 있습니다. 데이터 모델의 엔터티에 이진 속성이 하나 이상 포함되어 있는 경우 데이터 서비스가 이 이진 데이터를 응답 피드의 항목 안에 base-64로 인코딩하여 반환합니다. 로드 하 고 이러한 방식으로 큰 이진 데이터를 직렬화 하는 작업 성능에 영향 때문에 [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] 이진 데이터가 속한 엔터티와 독립적으로 검색 하는 메커니즘을 정의 합니다. 이 작업은 엔터티의 이진 데이터를 하나 이상의 데이터 스트림으로 구분하여 수행됩니다.  
@@ -81,27 +81,23 @@ ms.locfileid: "56093842"
   
 ## <a name="enabling-large-binary-streams-in-the-hosting-environment"></a>호스팅 환경에서 큰 이진 스트림 사용  
  [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 웹 응용 프로그램에서 데이터 서비스를 만들 때 WCF(Windows Communication Foundation)가 HTTP 프로토콜 구현을 제공하는 데 사용됩니다. 기본적으로 WCF는 HTTP 메시지의 크기를 65K바이트로 제한합니다. 데이터 서비스에서 보내고 받는 큰 이진 데이터를 스트리밍할 수 있으려면 큰 이진 파일을 사용할 수 있고 전송에 스트림을 사용하도록 웹 응용 프로그램도 구성해야 합니다. 이렇게 하려면 응용 프로그램의 Web.config 파일에 있는 `<configuration />` 요소에 다음을 추가합니다.  
-  
-  
-  
+
 > [!NOTE]
 >  사용 해야는 <xref:System.ServiceModel.TransferMode.Streamed?displayProperty=nameWithType> 전송 모드는 요청 및 응답 메시지의 이진 데이터 스트림 되 고 WCF로 버퍼링 되지 않습니다.  
   
  자세한 내용은 [Streaming Message Transfer](../../../../docs/framework/wcf/feature-details/streaming-message-transfer.md) 하 고 [전송 할당량](../../../../docs/framework/wcf/feature-details/transport-quotas.md)합니다.  
   
  기본적으로 인터넷 정보 서비스(IIS)는 요청 크기를 4MB로 제한합니다. 데이터 서비스가 IIS에서 실행 하는 경우 4MB 보다 큰 스트림을 받을 수 있도록 설정 해야 합니다 `maxRequestLength` 특성을 [httpRuntime 요소 (ASP.NET 설정 스키마)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/e1f13641(v=vs.100)) 에 `<system.web />` 구성 섹션으로 다음 예제와 같이:  
-  
-  
-  
+
 ## <a name="using-data-streams-in-a-client-application"></a>클라이언트 응용 프로그램에서 데이터 스트림 사용  
  [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 클라이언트 라이브러리를 사용하면 클라이언트에서 이진 스트림으로 노출된 이러한 리소스를 검색하고 업데이트할 수 있습니다. 자세한 내용은 [이진 데이터 작업](../../../../docs/framework/data/wcf/working-with-binary-data-wcf-data-services.md)합니다.  
   
 ## <a name="considerations-for-working-with-a-streaming-provider"></a>스트리밍 공급자로 작업하기 위한 고려 사항  
  스트리밍 공급자를 구현하는 경우와 데이터 서비스에서 미디어 리소스에 액세스하는 경우 고려할 사항은 다음과 같습니다.  
   
--   미디어 리소스에 대한 MERGE 요청은 지원되지 않습니다. 기존 엔터티의 미디어 리소스를 변경하려면 PUT 요청을 사용하세요.  
+-   미디어 리소스에 대한 병합 요청은 지원되지 않습니다. 기존 엔터티의 미디어 리소스를 변경하려면 PUT 요청을 사용하세요.  
   
--   POST 요청을 사용하여 새 미디어 링크 항목을 만들 수 없습니다. 대신 POST 요청을 실행하여 새 미디어 리소스를 만들어야 하며, 이 경우 데이터 서비스에서 기본값을 사용하여 새 미디어 링크 항목을 만듭니다. 이 새 엔터티는 이후 MERGE 또는 PUT 요청으로 업데이트할 수 있습니다. 또한 엔터티를 캐시하는 것을 고려할 수 있으며 속성 값을 POST 요청의 Slug 헤더 값으로 설정하는 등, 삭제기에서 업데이트를 수행할 수 있습니다.  
+-   POST 요청을 사용하여 새 미디어 링크 항목을 만들 수 없습니다. 대신 POST 요청을 실행하여 새 미디어 리소스를 만들어야 하며, 이 경우 데이터 서비스에서 기본값을 사용하여 새 미디어 링크 항목을 만듭니다. 이 새 엔터티는 이후 병합 또는 PUT 요청으로 업데이트할 수 있습니다. 또한 엔터티를 캐시하는 것을 고려할 수 있으며 속성 값을 POST 요청의 Slug 헤더 값으로 설정하는 등, 삭제기에서 업데이트를 수행할 수 있습니다.  
   
 -   POST 요청을 받으면 데이터 서비스는 <xref:System.Data.Services.Providers.IDataServiceStreamProvider.GetWriteStream%2A>를 호출하여 미디어 링크 항목을 만들기 전에 <xref:System.Data.Services.IUpdatable.SaveChanges%2A>을 호출하여 미디어 리소스를 만듭니다.  
   
@@ -130,6 +126,7 @@ ms.locfileid: "56093842"
  자세한 내용은 [데이터 서비스 버전 관리](../../../../docs/framework/data/wcf/data-service-versioning-wcf-data-services.md)합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [Data Services 공급자](../../../../docs/framework/data/wcf/data-services-providers-wcf-data-services.md)
 - [사용자 지정 데이터 서비스 공급자](../../../../docs/framework/data/wcf/custom-data-service-providers-wcf-data-services.md)
-- [이진 데이터 작업](../../../../docs/framework/data/wcf/working-with-binary-data-wcf-data-services.md)
+- [이진 데이터 사용](../../../../docs/framework/data/wcf/working-with-binary-data-wcf-data-services.md)

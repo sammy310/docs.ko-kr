@@ -2,12 +2,12 @@
 title: '방법: WSDL 계약을 통해 서비스 모니커 사용'
 ms.date: 03/30/2017
 ms.assetid: a88d9650-bb50-4f48-8c85-12f5ce98a83a
-ms.openlocfilehash: 9e9d4b49904f555d790c4b5fde760c004eb1820a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b8729055c82e3ce1273e8a0cfae53a1f6d3c14e3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54726574"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59081673"
 ---
 # <a name="how-to-use-a-service-moniker-with-wsdl-contracts"></a>방법: WSDL 계약을 통해 서비스 모니커 사용
 완전히 독립된 COM Interop 클라이언트가 필요한 경우가 있습니다. 호출하려는 서비스에서 MEX 엔드포인트를 노출하지 않을 수도 있고 WCF 클라이언트 DLL이 COM interop에 등록되지 않을 수도 있습니다. 이 경우 서비스를 설명하는 WSDL 파일을 만들어 WCF 서비스 모니커에 전달할 수 있습니다. 이 항목에서는 WCF WSDL 모니커를 사용하여 WCF 시작 샘플을 호출하는 방법에 대해 설명합니다.  
@@ -23,9 +23,7 @@ ms.locfileid: "54726574"
      [!code-csharp[S_WSDL_Client#0](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_wsdl_client/cs/service.cs#0)]  
   
 4.  서비스 App.config에 바인딩 네임스페이스를 추가합니다.  
-  
-  
-  
+
 5.  응용 프로그램에서 읽을 WSDL 파일을 만듭니다. 네임 스페이스는 3 및 4 단계에서 추가 된로 이동 하 여 서비스의 WSDL 설명 전체에 대 한 쿼리를 IE를 사용할 수 있습니다 `http://localhost/ServiceModelSamples/Service.svc?wsdl`합니다. 그런 다음 Internet Explorer에서 serviceWSDL.xml로 파일을 저장할 수 있습니다. 3단계와 4단계에서 네임스페이스를 지정하지 않은 경우 위 URL을 쿼리했을 때 반환되는 WSDL 문서는 전체 WSDL이 아닙니다. 반환되는 WSDL 문서에는 다른 WSDL 문서를 가져오는 몇 개의 import 문이 포함됩니다. 각 import 문을 수행하고 전체 WSDL 문서를 빌드하여 서비스에서 반환되는 WSDL과 가져온 WSDL을 결합해야 합니다.  
   
 6.  Visual Basic 6.0을 열고 새 표준 .exe 파일을 만듭니다. 폼에 단추를 추가하고 단추를 두 번 클릭하여 다음 코드를 클릭 처리기에 추가합니다.  
@@ -57,5 +55,6 @@ ms.locfileid: "54726574"
 7.  Visual Basic 응용 프로그램을 실행합니다. Subtract(145, 76.54)를 호출한 결과가 표시된 메시지 상자가 나타납니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [시작](../../../../docs/framework/wcf/samples/getting-started-sample.md)
-- [COM 애플리케이션과 통합 개요](../../../../docs/framework/wcf/feature-details/integrating-with-com-applications-overview.md)
+- [COM 응용 프로그램과 통합 개요](../../../../docs/framework/wcf/feature-details/integrating-with-com-applications-overview.md)

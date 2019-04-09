@@ -1,5 +1,5 @@
 ---
-title: '방법: DataGrid 컨트롤을 사용 하 여 유효성 검사 구현'
+title: '방법: DataGrid 컨트롤을 사용하여 유효성 검사 구현'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - DataGrid [WPF], validation
 - validation [WPF], DataGrid
 ms.assetid: ec6078a8-1e42-4648-b414-f4348e81bda1
-ms.openlocfilehash: e3be25fecc58ba41dbb5b2e904eddcb9c2b3c98a
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: aead8cbd500262a4cba535fd023dd9701d50257a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57371088"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59086809"
 ---
-# <a name="how-to-implement-validation-with-the-datagrid-control"></a>방법: DataGrid 컨트롤을 사용 하 여 유효성 검사 구현
+# <a name="how-to-implement-validation-with-the-datagrid-control"></a>방법: DataGrid 컨트롤을 사용하여 유효성 검사 구현
 <xref:System.Windows.Controls.DataGrid> 컨트롤을 사용 하면 셀 및 행 수준에서 유효성 검사를 수행할 수 있습니다. 셀 수준 유효성 검사를 사용 하 여 사용자는 값을 업데이트 하는 경우 바인딩된 데이터 개체의 개별 속성을 확인 합니다. 행 수준 유효성 검사를 사용 하 여 행에 변경 내용을 커밋할 때 전체 데이터 개체에 유효성 검사 합니다. 유효성 검사 오류에 대 한 사용자 지정된 시각적 피드백을 제공 하거나 기본 시각적 피드백을 사용할 수도 있습니다는 <xref:System.Windows.Controls.DataGrid> 제어를 제공 합니다.  
   
  다음 절차 유효성 검사 규칙을 적용 하는 방법에 설명 <xref:System.Windows.Controls.DataGrid> 바인딩 및 시각적 피드백을 사용자 지정 합니다.  
@@ -91,8 +91,9 @@ ms.locfileid: "57371088"
  [!code-xaml[DataGrid_Validation#FullXaml](~/samples/snippets/csharp/VS_Snippets_Wpf/datagrid_validation/cs/mainwindow.xaml#fullxaml)]  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Windows.Controls.DataGrid>
 - [DataGrid](datagrid.md)
 - [데이터 바인딩](../data/data-binding-wpf.md)
 - [바인딩 유효성 검사 구현](../data/how-to-implement-binding-validation.md)
-- [사용자 지정 개체의 유효성 검사 논리 구현](../data/how-to-implement-validation-logic-on-custom-objects.md)
+- [사용자 지정 개체에 대한 유효성 검사 논리 구현](../data/how-to-implement-validation-logic-on-custom-objects.md)

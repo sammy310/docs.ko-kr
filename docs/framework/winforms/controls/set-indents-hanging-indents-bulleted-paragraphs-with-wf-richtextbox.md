@@ -1,5 +1,5 @@
 ---
-title: '방법: 들여쓰기, 내어쓰기 및 Windows Forms RichTextBox 컨트롤을 사용 하 여 글머리 기호 단락 설정'
+title: '방법: Windows Forms RichTextBox 컨트롤을 사용하여 들여쓰기, 내어쓰기 및 글머리 기호 단락 설정'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -13,14 +13,14 @@ helpviewer_keywords:
 - RichTextBox control [Windows Forms], setting indents and bullets
 - text boxes [Windows Forms], bullets
 ms.assetid: abfb40e6-5642-4691-8ec1-9d9ae91688dc
-ms.openlocfilehash: b2173769634ddc4b7b42c822c3f60212eb8d8886
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 4cb9b351b5ed1ab9cd05be0763d967000791fb46
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57713034"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59140649"
 ---
-# <a name="how-to-set-indents-hanging-indents-and-bulleted-paragraphs-with-the-windows-forms-richtextbox-control"></a>방법: 들여쓰기, 내어쓰기 및 Windows Forms RichTextBox 컨트롤을 사용 하 여 글머리 기호 단락 설정
+# <a name="how-to-set-indents-hanging-indents-and-bulleted-paragraphs-with-the-windows-forms-richtextbox-control"></a>방법: Windows Forms RichTextBox 컨트롤을 사용하여 들여쓰기, 내어쓰기 및 글머리 기호 단락 설정
 Windows Forms <xref:System.Windows.Forms.RichTextBox> 컨트롤에 표시 되는 텍스트 서식 지정에 대 한 다양 한 옵션이 있습니다. 설정 하 여 선택한 단락의 글머리 기호 목록으로 서식을 지정할 수 있습니다는 <xref:System.Windows.Forms.RichTextBox.SelectionBullet%2A> 속성입니다. 사용할 수도 있습니다는 <xref:System.Windows.Forms.RichTextBox.SelectionIndent%2A>, <xref:System.Windows.Forms.RichTextBox.SelectionRightIndent%2A>, 및 <xref:System.Windows.Forms.RichTextBox.SelectionHangingIndent%2A> 왼쪽 및 오른쪽 가장자리 컨트롤의 다른 텍스트 줄의 왼쪽된 가장자리를 기준으로 단락 들여쓰기를 설정 하는 속성입니다.  
   
 ### <a name="to-format-a-paragraph-as-a-bulleted-list"></a>단락의 서식을 글머리 기호 목록으로 지정하려면  
@@ -69,6 +69,7 @@ Windows Forms <xref:System.Windows.Forms.RichTextBox> 컨트롤에 표시 되는
     >  이러한 모든 속성은 선택한 텍스트가 포함된 단락에 적용되며, 현재 삽입 지점 이후로 입력된 텍스트에도 적용됩니다. 예를 들어 사용자가 단락 내의 단어를 선택한 다음 들여쓰기를 조정하면, 이 단어가 포함된 전체 단락뿐만 아니라 선택한 단락 이후에 입력되는 모든 단락에도 새 설정이 적용됩니다. 프로그래밍 방식으로 텍스트를 선택 하는 방법에 대 한 내용은 <xref:System.Windows.Forms.TextBoxBase.Select%2A>합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Windows.Forms.RichTextBox>
 - [RichTextBox 컨트롤](richtextbox-control-windows-forms.md)
 - [Windows Forms에 사용할 수 있는 컨트롤](controls-to-use-on-windows-forms.md)
