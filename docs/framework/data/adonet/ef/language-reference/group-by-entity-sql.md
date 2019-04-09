@@ -2,12 +2,12 @@
 title: GROUP BY(Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: cf4f4972-4724-4945-ba44-943a08549139
-ms.openlocfilehash: 4dffc88866721bde0d4e846fa805bb60c6855b5b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 581a18b75d6028089e96b97dc5adeb2d3986c088
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54740569"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59081920"
 ---
 # <a name="group-by-entity-sql"></a>GROUP BY(Entity SQL)
 쿼리 식([SELECT](../../../../../../docs/framework/data/adonet/ef/language-reference/select-entity-sql.md))을 통해 반환되는 개체가 배치될 그룹을 지정합니다.  
@@ -20,7 +20,7 @@ ms.locfileid: "54740569"
   
 ## <a name="arguments"></a>인수  
  `aliasedExpression`  
- 그룹화가 수행되는 유효한 쿼리 식입니다. `expression` 은 속성일 수도 있고 FROM 절을 통해 반환되는 속성을 참조하는 비집계 식일 수도 있습니다. GROUP BY 절의 모든 식은 같지 않음을 비교할 수 있는 형식으로 계산되어야 합니다. 이런 형식은 일반적으로 숫자, 문자열, 날짜와 같은 스칼라 기본 형식입니다. 컬렉션을 기준으로 그룹화할 수 없습니다.  
+ 그룹화가 수행되는 유효한 쿼리 식입니다. `expression` 속성 또는 FROM 절에서 반환 되는 속성을 참조 하는 비 집계 식일 수 있습니다. GROUP BY 절의 모든 식은 같지 않음을 비교할 수 있는 형식으로 계산되어야 합니다. 이런 형식은 일반적으로 숫자, 문자열, 날짜와 같은 스칼라 기본 형식입니다. 컬렉션을 기준으로 그룹화할 수 없습니다.  
   
 ## <a name="remarks"></a>설명  
  SELECT 절에 집계 함수가 포함 된 경우 \<select 목록 >, GROUP BY 각 그룹에 대 한 요약 값을 계산 합니다. GROUP BY가 지정된 경우, 선택 목록 내의 집계가 아닌 식에 있는 모든 속성 이름이 GROUP BY 목록에 포함되어야 하거나 아니면 GROUP BY 식이 선택 목록 식과 정확히 일치해야 합니다.  
@@ -69,5 +69,6 @@ GROUP BY 1   -- BAD, a constant is not allowed
  [!code-csharp[DP EntityServices Concepts 2#GROUPBY](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#groupby)]  
   
 ## <a name="see-also"></a>참고자료
+
 - [엔터티 SQL 참조](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
 - [쿼리 식](../../../../../../docs/framework/data/adonet/ef/language-reference/query-expressions-entity-sql.md)

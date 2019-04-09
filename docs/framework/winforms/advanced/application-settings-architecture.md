@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - application settings [Windows Forms], architecture
 ms.assetid: c8eb2ad0-fac6-4ea2-9140-675a4a44d562
-ms.openlocfilehash: dd527234b90e94b5883d15b336f5e5abc9709880
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: f686fa00662ad29323c1883c45ed0e790b133f2c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57710682"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59099783"
 ---
 # <a name="application-settings-architecture"></a>애플리케이션 설정 아키텍처
 이 항목에서는 애플리케이션 설정 아키텍처가 작동하는 방식과 그룹화된 설정 및 설정 키와 같은 고급 아키텍처 기능에 대해 설명합니다.  
@@ -147,10 +147,11 @@ ms.locfileid: "57710682"
  공급자는 특성에 정의 된 설정 중 일부를 지원 하지 않아도 <xref:System.Configuration?displayProperty=nameWithType> 네임 스페이스 최소 지원 해야 하지만 <xref:System.Configuration.ApplicationScopedSettingAttribute> 및 <xref:System.Configuration.UserScopedSettingAttribute>에 지원 해야 <xref:System.Configuration.DefaultSettingValueAttribute>합니다. 지원하지 않는 특성에 대해서는 공급자가 알림 없이 실패해야 하며 예외를 throw하면 안됩니다. 하지만 설정 클래스에서 특성의 조합이 잘못를 사용 하는 경우-적용 하는 등 <xref:System.Configuration.ApplicationScopedSettingAttribute> 고 <xref:System.Configuration.UserScopedSettingAttribute> 같은 설정으로-공급자에서 예외를 throw 하 고 작업을 중단 해야 합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Configuration.ApplicationSettingsBase>
 - <xref:System.Configuration.SettingsProvider>
 - <xref:System.Configuration.LocalFileSettingsProvider>
-- [응용 프로그램 설정 개요](application-settings-overview.md)
-- [사용자 지정 컨트롤에 대한 응용 프로그램 설정](application-settings-for-custom-controls.md)
+- [애플리케이션 설정 개요](application-settings-overview.md)
+- [사용자 지정 컨트롤에 대한 애플리케이션 설정](application-settings-for-custom-controls.md)
 - [ClickOnce 및 응용 프로그램 설정](/visualstudio/deployment/clickonce-and-application-settings)
-- [응용 프로그램 설정 스키마](../../configure-apps/file-schema/application-settings-schema.md)
+- [애플리케이션 설정 스키마](../../configure-apps/file-schema/application-settings-schema.md)

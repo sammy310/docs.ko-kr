@@ -7,12 +7,12 @@ helpviewer_keywords:
 - graphics [WPF], PathGeometry class
 - XAML [WPF], object element usage
 ms.assetid: b8586241-a02d-486e-9223-e1e98e047f41
-ms.openlocfilehash: 65a86b82af9269d1af7198b8106ad478e88f3691
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 32eefba26b5e04370599e4c97767b6662cfd1c13
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57379161"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59082492"
 ---
 # <a name="path-markup-syntax"></a>경로 태그 구문
 그러나 경로에 대해서는 [에서 Shape 및 기본 그리기 개요 WPF](shapes-and-basic-drawing-in-wpf-overview.md) 하며 [기 하 도형 개요](geometry-overview.md),이 항목에서는 설명 세부 정보에서 경로 지정 하 여 강력 하 고 복잡 한 미니 언어 기 하 도형 보다 조밀 하 게 사용 하 여 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]입니다.  
@@ -57,7 +57,7 @@ ms.locfileid: "57379161"
   
 |용어|설명|  
 |----------|-----------------|  
-|*fillRule*|<xref:System.Windows.Media.FillRule?displayProperty=nameWithType><br /><br /> 지정 여부를 <xref:System.Windows.Media.StreamGeometry> 사용 하는 <xref:System.Windows.Media.FillRule.EvenOdd> 또는 <xref:System.Windows.Media.FillRule.Nonzero> <xref:System.Windows.Media.PathGeometry.FillRule%2A>합니다.<br /><br /> -   `F0` 지정 된 <xref:System.Windows.Media.FillRule.EvenOdd> 채우기 규칙입니다.<br />-   `F1` 지정 된 <xref:System.Windows.Media.FillRule.Nonzero> 채우기 규칙입니다.<br /><br /> 하위 경로 기본 동작을 사용 하 여이 명령을 생략 <xref:System.Windows.Media.FillRule.EvenOdd>합니다. 이 명령을 지정하는 경우 맨 앞에 배치해야 합니다.|  
+|*fillRule*|<xref:System.Windows.Media.FillRule?displayProperty=nameWithType><br /><br /> 지정 여부를 <xref:System.Windows.Media.StreamGeometry> 사용 하는 <xref:System.Windows.Media.FillRule.EvenOdd> 또는 <xref:System.Windows.Media.FillRule.Nonzero><xref:System.Windows.Media.PathGeometry.FillRule%2A>합니다.<br /><br /> -   `F0` 지정 된 <xref:System.Windows.Media.FillRule.EvenOdd> 채우기 규칙입니다.<br />-   `F1` 지정 된 <xref:System.Windows.Media.FillRule.Nonzero> 채우기 규칙입니다.<br /><br /> 하위 경로 기본 동작을 사용 하 여이 명령을 생략 <xref:System.Windows.Media.FillRule.EvenOdd>합니다. 이 명령을 지정하는 경우 맨 앞에 배치해야 합니다.|  
 |*figureDescription*|이동 명령, 그리기 명령 및 선택적 닫기 명령으로 구성된 그림입니다.<br /><br /> `moveCommand` `drawCommands`  `[` `closeCommand` `]`|  
 |*moveCommand*|그림의 시작점을 지정하는 이동 명령입니다. 참조 된 [이동 명령](#themovecommand) 섹션입니다.|  
 |*drawCommands*|그림의 콘텐츠를 설명하는 하나 이상의 그리기 명령입니다. 참조 된 [그리기 명령](#drawcommands) 섹션입니다.|  
@@ -97,9 +97,8 @@ ms.locfileid: "57379161"
 대문자 `L` 나타냅니다 `endPoint` 절대 값인지; 소문자 `l` 나타냅니다 `endPoint` 오프셋을 이전 지점으로 또는 (0, 0) 존재 하지 않는 경우.
 
 ### <a name="horizontal-line-command"></a>수평선 명령  
- 현재 점과 지정된 x 좌표 간에 수평선을 만듭니다. `H 90`은 유효한 수평선 명령의 예입니다.
+ 현재 점과 지정된 x 좌표 간에 수평선을 만듭니다. `H 90` 유효한 수평선 명령의 예입니다.
 
-  
 |구문|  
 |------------|  
 |`H`  *x*<br /><br /> 또는<br /><br /> `h`  *x*|  
@@ -111,9 +110,8 @@ ms.locfileid: "57379161"
 대문자 `H` 나타냅니다 `x` 절대 값인지; 소문자 `h` 나타냅니다 `x` 오프셋을 이전 지점으로 또는 (0, 0) 존재 하지 않는 경우.
   
 ### <a name="vertical-line-command"></a>수직선 명령  
- 현재 점과 지정된 y 좌표 간에 수직선을 만듭니다. `v 90`은 유효한 수직선 명령의 예입니다.
+ 현재 점과 지정된 y 좌표 간에 수직선을 만듭니다. `v 90` 유효한 수직선 명령의 예입니다.
 
-  
 |구문|  
 |------------|  
 |`V`  *y*<br /><br /> 또는<br /><br /> `v`  *y*|  
@@ -125,7 +123,7 @@ ms.locfileid: "57379161"
 대문자 `V` 나타냅니다 `y` 절대 값인지; 소문자 `v` 나타냅니다 `y` 오프셋을 이전 지점으로 또는 (0, 0) 존재 하지 않는 경우.  
     
 ### <a name="cubic-bezier-curve-command"></a>입방형 3차원 곡선 명령  
- 지정한 두 개의 제어점을 사용 하 여 현재 점과 지정 된 끝점 간에 입방 형 3 차원 곡선을 만듭니다 (`controlPoint`1 및 `controlPoint`2). `C 100,200 200,400 300,200`은 유효한 곡선 명령의 예입니다.  
+ 지정한 두 개의 제어점을 사용 하 여 현재 점과 지정 된 끝점 간에 입방 형 3 차원 곡선을 만듭니다 (`controlPoint`1 및 `controlPoint`2). `C 100,200 200,400 300,200` 유효한 곡선 명령의 예입니다.  
   
 |구문|  
 |------------|  
@@ -138,7 +136,7 @@ ms.locfileid: "57379161"
 |`endPoint`|<xref:System.Windows.Point?displayProperty=nameWithType><br /><br /> 곡선을 그릴 지점입니다.|  
   
 ### <a name="quadratic-bezier-curve-command"></a>정방형 3차원 곡선 명령  
- 지정 된 제어점을 사용 하 여 현재 점과 지정 된 끝점 간에 정방형 베 지 어 곡선을 만듭니다 (`controlPoint`). `q 100,200 300,200`은 유효한 정방형 3차원 곡선 명령의 예입니다.  
+ 지정 된 제어점을 사용 하 여 현재 점과 지정 된 끝점 간에 정방형 베 지 어 곡선을 만듭니다 (`controlPoint`). `q 100,200 300,200` 유효한 정방형 3 차원 곡선 명령의 예입니다.  
   
 |구문|  
 |------------|  
@@ -225,6 +223,7 @@ ms.locfileid: "57379161"
  과학적 표기법을 사용할 수도 있습니다. 예를 들어 `+1.e17` 은 유효한 값입니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Windows.Shapes.Path>
 - <xref:System.Windows.Media.StreamGeometry>
 - <xref:System.Windows.Media.PathGeometry>

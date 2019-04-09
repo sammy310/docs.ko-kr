@@ -6,18 +6,16 @@ helpviewer_keywords:
 - dependency objects [WPF], constructor patterns
 - FXCop tool [WPF]
 ms.assetid: f704b81c-449a-47a4-ace1-9332e3cc6d60
-ms.openlocfilehash: d963d9c8b7ddfba0c24fcb10ddf9cc45a2f4d0c5
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: ba8b0a48b2b75a9191553392d5ec0a1f66575807
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57363984"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59086730"
 ---
 # <a name="safe-constructor-patterns-for-dependencyobjects"></a>DependencyObject의 안전한 생성자 패턴
 일반적으로 클래스 생성자는 가상 메서드나 대리자와 같은 콜백을 호출하면 안 됩니다. 이는 생성자는 파생 클래스에 대한 생성자의 기본 초기화로 호출될 수 있기 때문입니다. 특정 개체의 불완전한 초기화 상태에서 가상 항목이 입력될 수 있습니다. 하지만 속성 시스템 자체는 내부적으로 콜백을 종속성 속성 시스템의 일부로 호출하고 표시합니다. 사용 하 여 종속성 속성 값을 설정 하는 것으로 간단한 작업 <xref:System.Windows.DependencyObject.SetValue%2A> 호출 잠재적으로 포함 하는 콜백을 어딘가에 결정에서 합니다. 이런 이유로 생성자 본문에서 종속성 속성 값을 설정할 때 주의해야 합니다. 형식이 기본 클래스로 사용될 경우 문제가 발생할 수 있습니다. 특정 패턴을 구현 하기 위한 방법이 <xref:System.Windows.DependencyObject> 여기서 설명 되는 종속성 속성 상태 및 고유 콜백과 사용 하 여 특정 문제를 방지 하는 생성자입니다.  
-  
- 
-  
+
 <a name="Property_System_Virtual_Methods"></a>   
 ## <a name="property-system-virtual-methods"></a>속성 시스템 가상 메서드  
  다음 가상 메서드나 콜백은 계산 하는 동안 호출 될 수는 <xref:System.Windows.DependencyObject.SetValue%2A> 종속성 속성 값을 설정 하는 호출: <xref:System.Windows.ValidateValueCallback>, <xref:System.Windows.PropertyChangedCallback>합니다 <xref:System.Windows.CoerceValueCallback>, <xref:System.Windows.DependencyObject.OnPropertyChanged%2A>합니다. 이러한 각 가상 메서드 또는 콜백은 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 속성 시스템 및 종속성 속성의 다양성을 확장하기 위한 특정 목적으로 사용됩니다. 이러한 가상 항목을 사용하여 속성 값 확인을 사용자 지정하는 방법에 대한 자세한 내용은 [종속성 속성 콜백 및 유효성 검사](dependency-property-callbacks-and-validation.md)를 참조하세요.  
@@ -115,6 +113,7 @@ public MyClass : SomeBaseClass {
  이러한 동일한 패턴을 적용 하지 않는 속성 설정 편의 위해 래퍼를 사용 하 여 값을 설정 하는 속성을 설정 하는 경우 <xref:System.Windows.DependencyObject.SetValue%2A>합니다. 호출이 <xref:System.Windows.DependencyObject.SetValue%2A> 생성자 매개 변수를 통해 성공 초기화에 대 한 클래스의 기본 생성자도 호출 해야 합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [사용자 지정 종속성 속성](custom-dependency-properties.md)
 - [종속성 속성 개요](dependency-properties-overview.md)
 - [종속성 속성 보안](dependency-property-security.md)

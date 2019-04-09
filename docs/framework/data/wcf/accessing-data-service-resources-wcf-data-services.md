@@ -8,12 +8,12 @@ helpviewer_keywords:
 - WCF Data Services, getting started
 - WCF Data Services, accessing data
 ms.assetid: 9665ff5b-3e3a-495d-bf83-d531d5d060ed
-ms.openlocfilehash: 9589656c00573f7b3bba07aee1f89902a34d61ce
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6d4b0af7f20cbf932773df3ae226729a0a6c2500
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54740842"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59085872"
 ---
 # <a name="accessing-data-service-resources-wcf-data-services"></a>데이터 서비스 리소스에 액세스(WCF Data Services)
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 지원 된 [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] Uri로 주소를 지정할 수 있는 리소스를 사용 하 여 피드로 데이터를 노출 하 합니다. 이러한 리소스의 엔터티-관계 규칙에 따라 표시 됩니다는 [엔터티 데이터 모델](../../../../docs/framework/data/adonet/entity-data-model.md)합니다. 이 모델에서 엔터티는 고객, 주문, 항목 및 제품과 같이 응용 프로그램 도메인의 데이터 형식인 데이터 운영 단위를 나타냅니다. REST(Representational State Transfer)의 의미 체계, 특히 GET, PUT, POST, DELETE 등의 표준 HTTP 동사를 사용하여 엔터티 데이터에 액세스하고 변경합니다.  
@@ -97,4 +97,5 @@ http://services.odata.org/Northwind/Northwind.svc/Orders(10643)/$links/Shipper
  URI는 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 리소스 주소 엔터티 데이터의 서비스에서 노출 하면 메시지를 표시 합니다. 웹 브라우저의 주소 필드에 URI를 입력 하는 경우는 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 요청된 된 리소스의 피드 표현이 반환 됩니다. 자세한 내용은 참조는 [WCF Data Services 퀵 스타트](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md)합니다. 하지만 웹 브라우저를 예상 되는 데이터를 반환 하는 데이터 서비스 리소스에 수 또한 만들기, 업데이트 및 데이터를 삭제 하는 프로덕션 데이터 서비스는 일반적으로 응용 프로그램 코드에서 액세스를 테스트 또는 웹 페이지에서 언어를 스크립팅 하는 데 유용할 수 있습니다. 자세한 내용은 [클라이언트 응용 프로그램에서 데이터 서비스를 사용 하 여](../../../../docs/framework/data/wcf/using-a-data-service-in-a-client-application-wcf-data-services.md)입니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [Open Data Protocol 웹 사이트](https://go.microsoft.com/fwlink/?LinkID=182204)

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Transforms [WPF], origins of
 - graphics [WPF], origins of Transforms
 ms.assetid: f4dbc29d-93c7-41cd-96d8-5cfd8624b470
-ms.openlocfilehash: bdcc17e2d9bf68170c10dd8e35670f3e072a527c
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 48b3b0df8dab8516873495a996074eae57ffe00f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57352570"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59082960"
 ---
 # <a name="how-to-specify-the-origin-of-a-transform-by-using-relative-values"></a>방법: 상대 값을 사용하여 변환 원점 지정
 이 예제에서는 상대 값의 출처를 지정 하는 데는 <xref:System.Windows.UIElement.RenderTransform%2A> 에 적용 되는 한 <xref:System.Windows.FrameworkElement>합니다.  
@@ -40,6 +40,7 @@ RenderTransformOrigin (0.5, 0.5)의 RenderTransform 속성을 사용하여 45도
  변환 하는 방법에 대 한 자세한 내용은 <xref:System.Windows.FrameworkElement> 개체를 참조 합니다 [변환 개요](transforms-overview.md)합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Windows.Media.Transform>
 - [Transform 개요](transforms-overview.md)
 - [방법 항목](transformations-how-to-topics.md)

@@ -1,16 +1,16 @@
 ---
-title: 느슨한 형 확장명 샘플
+title: 느슨한 형 확장 샘플
 ms.date: 03/30/2017
 ms.assetid: 56ce265b-8163-4b85-98e7-7692a12c4357
-ms.openlocfilehash: 19d39e4a70022304262c5872636d3ea03a3b861b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f22d5b2c1c7680b750d8bd26da10588e0ca9f585
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54668485"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59086795"
 ---
-# <a name="loosely-typed-extensions-sample"></a>느슨한 형 확장명 샘플
-배포 개체 모델은 확장명 데이터, 즉 배포 피드의 XML 표현에는 있지만 <xref:System.ServiceModel.Syndication.SyndicationFeed> 및 <xref:System.ServiceModel.Syndication.SyndicationItem>과 같은 클래스에서 명시적으로 노출되지 않는 정보로 작업할 수 있도록 풍부한 지원을 제공합니다. 이 샘플에서는 확장명 데이터로 작업하는 기본적인 기술을 보여 줍니다.  
+# <a name="loosely-typed-extensions-sample"></a>느슨한 형 확장 샘플
+배포 개체 모델은 확장 데이터, 즉 배포 피드의 XML 표현에는 있지만 <xref:System.ServiceModel.Syndication.SyndicationFeed> 및 <xref:System.ServiceModel.Syndication.SyndicationItem>과 같은 클래스에서 명시적으로 노출되지 않는 정보로 작업할 수 있도록 풍부한 지원을 제공합니다. 이 샘플에서는 확장명 데이터로 작업하는 기본적인 기술을 보여 줍니다.  
   
  이 샘플에서는 예를 들기 위해 <xref:System.ServiceModel.Syndication.SyndicationFeed> 클래스를 사용하지만 이 샘플에 나온 패턴은 확장명 데이터를 지원하는 다음과 같은 모든 배포 클래스에서 사용할 수 있습니다.  
   
@@ -52,20 +52,20 @@ w.w3.org/2001/XMLSchema" xmlns="">
 </feed>  
 ```  
   
- 이 문서에는 다음과 같은 확장 데이터가 포함되어 있습니다.  
+ 이 문서에는 다음과 같은 확장명 데이터가 포함되어 있습니다.  
   
 -   `myAttribute` 요소의 `<feed>` 특성  
   
--   `<simpleString>` 요소  
+-   `<simpleString>` 요소입니다.  
   
--   `<DataContractExtension>` 요소  
+-   `<DataContractExtension>` 요소입니다.  
   
--   `<XmlSerializerExtension>` 요소  
+-   `<XmlSerializerExtension>` 요소입니다.  
   
--   `<xElementExtension>` 요소  
+-   `<xElementExtension>` 요소입니다.  
   
 ## <a name="writing-extension-data"></a>확장명 데이터 쓰기  
- 특성 확장은 다음 샘플 코드에서와 같이 <xref:System.ServiceModel.Syndication.SyndicationFeed.AttributeExtensions%2A> 컬렉션에 항목을 추가하여 만듭니다.  
+ 특성 확장명은 다음 샘플 코드에서와 같이 <xref:System.ServiceModel.Syndication.SyndicationFeed.AttributeExtensions%2A> 컬렉션에 항목을 추가하여 만듭니다.  
   
 ```  
 //Attribute extensions are stored in a dictionary indexed by   
@@ -102,7 +102,7 @@ feed.ElementExtensions.Add(new XElement("xElementExtension",
 ```  
   
 ## <a name="reading-extension-data"></a>확장 데이터 읽기  
- 특성 확장의 값은 다음 샘플 코드에서와 같이 <xref:System.ServiceModel.Syndication.SyndicationFeed.AttributeExtensions%2A> 컬렉션에서 <xref:System.Xml.XmlQualifiedName>으로 특성을 조회하여 가져올 수 있습니다.  
+ 특성 확장명의 값은 다음 샘플 코드에서와 같이 <xref:System.ServiceModel.Syndication.SyndicationFeed.AttributeExtensions%2A> 컬렉션에서 <xref:System.Xml.XmlQualifiedName>으로 특성을 조회하여 가져올 수 있습니다.  
   
 ```  
 Console.WriteLine( feed.AttributeExtensions[ new XmlQualifiedName( "myAttribute", "" )]);  
@@ -156,5 +156,6 @@ foreach (SyndicationElementExtension extension in feed2.ElementExtensions.Where<
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Syndication\LooselyTypedExtensions`  
   
 ## <a name="see-also"></a>참고자료
-- [강력한 형식 확장명](../../../../docs/framework/wcf/samples/strongly-typed-extensions-sample.md)
+
+- [강력한 형식의 확장명](../../../../docs/framework/wcf/samples/strongly-typed-extensions-sample.md)
 - [WCF 배포](../../../../docs/framework/wcf/feature-details/wcf-syndication.md)

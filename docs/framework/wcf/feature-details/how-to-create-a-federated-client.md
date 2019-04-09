@@ -1,5 +1,5 @@
 ---
-title: '방법: 페더레이션된 클라이언트 만들기'
+title: '방법: 페더레이션 클라이언트 만들기'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - WCF, federation
 - federation
 ms.assetid: 56ece47e-98bf-4346-b92b-fda1fc3b4d9c
-ms.openlocfilehash: 18c01c8ea6ada24a551b92fc571b68b336e10f64
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 457c09ec381db97bc757b9288c9d6ebc0890a305
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54614331"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59104327"
 ---
-# <a name="how-to-create-a-federated-client"></a>방법: 페더레이션된 클라이언트 만들기
+# <a name="how-to-create-a-federated-client"></a>방법: 페더레이션 클라이언트 만들기
 Windows Communication Foundation (WCF)를 만들기에 대 한 클라이언트를 *페더레이션 서비스* 세 가지 주요 단계로 구성 됩니다.  
   
 1.  구성 된 [ \<wsFederationHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md) 또는 유사한 사용자 지정 바인딩을 합니다. 적절 한 바인딩 만들기에 대 한 자세한 내용은 참조 하세요. [방법: WSFederationHttpBinding 만들기](../../../../docs/framework/wcf/feature-details/how-to-create-a-wsfederationhttpbinding.md)합니다. 또는 실행 하는 [ServiceModel Metadata 유틸리티 도구 (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) 페더레이션된 서비스 및 하나 이상의와 통신 하기 위한 구성 파일을 생성 하려면 페더레이션된 서비스의 메타 데이터 끝점에 대해 보안 토큰 서비스입니다.  
@@ -161,10 +161,11 @@ Windows Communication Foundation (WCF)를 만들기에 대 한 클라이언트�
 >  제공된 URI로 범위가 지정된 인증서에 대한 클라이언트 개념은 이러한 URI에서 엔드포인트를 노출하는 서비스로 아웃바운드 호출하는 응용 프로그램에만 적용됩니다. 서버에서 반환 된 컬렉션에서 구성 된 클레임과 같은 발급 된 토큰에 서명 하는 데 사용 되는 인증서에 적용 되지 않습니다 합니다 <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.KnownCertificates%2A> 의 <xref:System.ServiceModel.Security.IssuedTokenServiceCredential> 클래스입니다. 자세한 내용은 [방법: 페더레이션 서비스에서 자격 증명 구성](../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)합니다.  
   
 ## <a name="see-also"></a>참고자료
-- [페더레이션 샘플](../../../../docs/framework/wcf/samples/federation-sample.md)
-- [방법: WSFederationHttpBinding에서 보안 세션을 사용 하지 않도록 설정](../../../../docs/framework/wcf/feature-details/how-to-disable-secure-sessions-on-a-wsfederationhttpbinding.md)
+
+- [Federation 샘플](../../../../docs/framework/wcf/samples/federation-sample.md)
+- [방법: WSFederationHttpBinding에서 보안 세션을 사용하지 않도록 설정](../../../../docs/framework/wcf/feature-details/how-to-disable-secure-sessions-on-a-wsfederationhttpbinding.md)
 - [방법: WSFederationHttpBinding 만들기](../../../../docs/framework/wcf/feature-details/how-to-create-a-wsfederationhttpbinding.md)
 - [방법: 페더레이션 서비스에서 자격 증명 구성](../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)
 - [방법: 로컬 발급자 구성](../../../../docs/framework/wcf/feature-details/how-to-configure-a-local-issuer.md)
 - [메타데이터 관련 보안 고려 사항](../../../../docs/framework/wcf/feature-details/security-considerations-with-metadata.md)
-- [방법: 메타 데이터 끝점 보안](../../../../docs/framework/wcf/feature-details/how-to-secure-metadata-endpoints.md)
+- [방법: 메타데이터 엔드포인트 보안](../../../../docs/framework/wcf/feature-details/how-to-secure-metadata-endpoints.md)

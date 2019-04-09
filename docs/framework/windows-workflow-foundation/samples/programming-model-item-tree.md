@@ -2,12 +2,12 @@
 title: Programming Model Item Tree
 ms.date: 03/30/2017
 ms.assetid: 0229efde-19ac-4bdc-a187-c6227a7bd1a5
-ms.openlocfilehash: 428012cf483595a280ef70b488ed1f344474948a
-ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
+ms.openlocfilehash: f3def07ecbc60362b2a8c1d38689dc686cd5bbd5
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58653849"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59086470"
 ---
 # <a name="programming-model-item-tree"></a>Programming Model Item Tree
 이 샘플을 탐색 하는 방법을 보여 줍니다는 <xref:System.Activities.Presentation.Model.ModelItem> Windows Presentation Foundation (WPF) 트리 뷰에서 선언적 데이터 바인딩을 사용 하 여 트리.
@@ -49,4 +49,5 @@ justAdded.Properties["DisplayName"].SetValue("new name");
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Designer\ProgrammingModelItemTree`  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Windows.Data.IValueConverter>

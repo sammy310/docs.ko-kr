@@ -2,12 +2,12 @@
 title: '&amp;&amp; (및) (Entity SQL)'
 ms.date: 03/30/2017
 ms.assetid: e7d24213-471d-4807-b85e-570375df89b5
-ms.openlocfilehash: 6ee7987f2801a35fb9669472ce7b237e684f64e1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f0b20a8c1960bd6191a35c426dbea45c30ccc1c0
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54579669"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59084071"
 ---
 # <a name="ampamp-and-entity-sql"></a>&amp;&amp; (및) (Entity SQL)
 두 식이 `true` 이면 `true`를 반환하고, 그렇지 않으면 `false` 또는 `NULL`을 반환합니다.  
@@ -32,7 +32,7 @@ boolean_expression && boolean_expression
 ||`TRUE`|`FALSE`|`NULL`|  
 |-|------------|-------------|------------|  
 |`TRUE`|TRUE|FALSE|NULL|  
-|`FALSE`|FALSE|false|FALSE|  
+|`FALSE`|FALSE|FALSE|FALSE|  
 |`NULL`|NULL|false|NULL|  
   
 ## <a name="example"></a>예제  
@@ -45,4 +45,5 @@ boolean_expression && boolean_expression
  [!code-csharp[DP EntityServices Concepts 2#AND](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#and)]  
   
 ## <a name="see-also"></a>참고자료
+
 - [엔터티 SQL 참조](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)

@@ -1,13 +1,13 @@
 ---
-title: '방법: JSON 데이터 serialize 및 Deserialize'
+title: '방법: JSON 데이터 직렬화 및 역직렬화'
 ms.date: 03/25/2019
 ms.assetid: 88abc1fb-8196-4ee3-a23b-c6934144d1dd
-ms.openlocfilehash: c5da34b6ab7953dbff62ca757ba08d0c7364b4cf
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: 6363a8e161969c188c5dd18c425ffd42969e9adc
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58465206"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59106160"
 ---
 # <a name="how-to-serialize-and-deserialize-json-data"></a>방법: JSON 데이터 serialize 및 deserialize
 JSON(JavaScript Object Notation)은 클라이언트 브라우저 및 AJAX 사용 웹 서비스 간에 소량의 데이터를 신속하게 교환할 수 있는 효율적인 데이터 인코딩 형식입니다.  
@@ -136,5 +136,6 @@ public class TestDuplicateDataDerived : TestDuplicateDataBase
 ```  
   
 ## <a name="see-also"></a>참고자료
+
 - [독립 실행형 JSON serialization](stand-alone-json-serialization.md)
 - [JSON에 대 한 지원 및 기타 데이터 전송 형식](support-for-json-and-other-data-transfer-formats.md)

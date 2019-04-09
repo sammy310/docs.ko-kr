@@ -1,19 +1,19 @@
 ---
-title: '방법: 디자이너를 사용 하 여 ToolStripMenuItems 숨기기'
+title: '방법: 디자이너를 사용하여 ToolStripMenuItems 숨기기'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - ToolStripMenuItems [Windows Forms], hiding menu items in designer
 - MenuStrip control [Windows Forms], hiding menu items in designer
 - menu items [Windows Forms], hiding
 ms.assetid: 8f1b057e-3d8a-4f11-88df-935f7b29a836
-ms.openlocfilehash: 2af9f31360f667662d4d640b5e449ff6ee8ce381
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: ddfbcbe78cdf8e5b0d126e82189589edef2be58a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57721543"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59085690"
 ---
-# <a name="how-to-hide-toolstripmenuitems-using-the-designer"></a>방법: 디자이너를 사용 하 여 ToolStripMenuItems 숨기기
+# <a name="how-to-hide-toolstripmenuitems-using-the-designer"></a>방법: 디자이너를 사용하여 ToolStripMenuItems 숨기기
 메뉴 항목 숨기기는 응용 프로그램의 사용자 인터페이스 (UI)를 제어 하 고 사용자 명령을 제한 하는 방법입니다. 종종 전체 메뉴에 메뉴 항목을 모두 사용할 수 없는 경우 숨기려면 해야 합니다. 이 사용자에 대해 더 적은 방해 요소를 표시합니다. 또한 하려는 숨기고 메뉴 또는 메뉴 항목을 사용 하지 않도록 설정으로 숨기는 것 만으로도 사용자 바로 가기 키를 사용 하 여 메뉴 명령에 액세스 하는 것을 금지 하지 않습니다. 메뉴 항목을 사용 하지 않도록 설정 하는 방법은 참조 하세요. [방법: 디자이너를 사용 하 여 ToolStripMenuItems를 사용 하지 않도록 설정](how-to-disable-toolstripmenuitems-using-the-designer.md)합니다.  
   
 > [!NOTE]
@@ -35,10 +35,11 @@ ms.locfileid: "57721543"
      하위 메뉴 항목을 숨길 때 추가 작업을 위해 쉽게 선택할 수 있도록 디자인 타임에 폼에 표시 유지 합니다. 이 런타임 시 실제로 표시 되지 것입니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Windows.Forms.ToolStripItem.Visible%2A>
 - <xref:System.Windows.Forms.MenuStrip>
 - <xref:System.Windows.Forms.ToolStripMenuItem.Enabled%2A>
 - <xref:System.Windows.Forms.ToolStripItem.Available%2A>
 - <xref:System.Windows.Forms.ToolStripMenuItem.Overflow%2A>
 - [MenuStrip 컨트롤 개요](menustrip-control-overview-windows-forms.md)
-- [방법: 디자이너를 사용 하 여 ToolStripMenuItems를 사용 하지 않도록 설정](how-to-disable-toolstripmenuitems-using-the-designer.md)
+- [방법: 디자이너를 사용하여 ToolStripMenuItems를 사용하지 않도록 설정](how-to-disable-toolstripmenuitems-using-the-designer.md)

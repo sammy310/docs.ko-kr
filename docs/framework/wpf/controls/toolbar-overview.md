@@ -5,17 +5,16 @@ helpviewer_keywords:
 - controls [WPF], ToolBar
 - ToolBar control [WPF]
 ms.assetid: a8edb32c-118d-4f31-b6e6-8899082b504b
-ms.openlocfilehash: 6bd44e4b8406e945ea8f0913563d2f2f6e0b3822
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: 711d55e46fb548787976a1f966c9fbf6dc7f12d8
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58464959"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59105329"
 ---
 # <a name="toolbar-overview"></a>ToolBar 개요
 <xref:System.Windows.Controls.ToolBar> 컨트롤은 명령 또는 해당 함수에서 일반적으로 관련이 있는 컨트롤의 그룹에 대 한 컨테이너입니다. <xref:System.Windows.Controls.ToolBar> 명령을 호출 하는 단추는 일반적으로 포함 합니다.  
-  
-  
+
 <a name="ToolBarControl"></a>   
 ## <a name="toolbar-control"></a>ToolBar 컨트롤  
  <xref:System.Windows.Controls.ToolBar> 제어는 단일 행 또는 열에 단추나 다른 컨트롤의 막대 모양 정렬에서 해당 이름을 사용 합니다. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.Controls.ToolBar> 크기 제한 내에서 자연스럽 게 적합 하지 않은 모든 항목을 배치 하는 오버플로 메커니즘을 제공 하는 컨트롤 <xref:System.Windows.Controls.ToolBar> 특수 오버플로 영역에 있습니다. 또한 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.Controls.ToolBar> 컨트롤은 일반적으로 사용 관련 된 <xref:System.Windows.Controls.ToolBarTray> 를 조정 하 고 컨트롤과 사용자가 시작한 지원 뿐만 아니라 특수 레이아웃 동작을 제공 하는 컨트롤입니다.  
@@ -41,7 +40,8 @@ ms.locfileid: "58464959"
  [ToolBar 스타일 및 템플릿](toolbar-styles-and-templates.md)을 참조하세요.  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Windows.Controls.Primitives.ToolBarPanel>
 - <xref:System.Windows.Controls.Primitives.ToolBarOverflowPanel>
-- [ToolBar 컨트롤의 스타일 지정](how-to-style-controls-on-a-toolbar.md)
-- [WPF Controls Gallery Sample](https://go.microsoft.com/fwlink/?LinkID=160053)(WPF 컨트롤 갤러리 샘플)
+- [ToolBar의 컨트롤 스타일 지정](how-to-style-controls-on-a-toolbar.md)
+- [WPF 컨트롤 갤러리 샘플](https://go.microsoft.com/fwlink/?LinkID=160053)

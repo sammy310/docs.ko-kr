@@ -7,12 +7,12 @@ helpviewer_keywords:
 - ListView controls [WPF], CheckBox controls
 - CheckBox control [WPF], ListView control
 ms.assetid: f6d66c7f-906c-4f65-a55a-0ede9d00e26a
-ms.openlocfilehash: 31a500c3a592ff8d1dd839543171991e908c23c9
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: b09d5ad11b0961febf524cec1e19cb1e59832e44
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57368534"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59083109"
 ---
 # <a name="how-to-create-listviewitems-with-a-checkbox"></a>방법: CheckBox를 사용하여 ListViewItems 만들기
 이 예제에서는 열을 표시 하는 방법을 보여 줍니다 <xref:System.Windows.Controls.CheckBox> 컨트롤을 <xref:System.Windows.Controls.ListView> 사용 하는 컨트롤을 <xref:System.Windows.Controls.GridView>입니다.  
@@ -29,6 +29,7 @@ ms.locfileid: "57368534"
  [!code-xaml[ListViewChkBox#GridViewColumnCheckBox](~/samples/snippets/csharp/VS_Snippets_Wpf/ListViewChkBox/CS/window1.xaml#gridviewcolumncheckbox)]  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Windows.Controls.Control>
 - <xref:System.Windows.Controls.ListView>
 - <xref:System.Windows.Controls.GridView>

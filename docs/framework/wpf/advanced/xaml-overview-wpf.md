@@ -19,18 +19,16 @@ helpviewer_keywords:
 - Extensible Application Markup Language (see XAML)
 - attribute syntax [XAML]
 ms.assetid: a80db4cd-dd0f-479f-a45f-3740017c22e4
-ms.openlocfilehash: cc5e60b1a8059e58ce6d23801eb51d8b2eb414d6
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 56b97170884ef31004b06b0eb50a8d79ad1d041c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57379239"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59102832"
 ---
 # <a name="xaml-overview-wpf"></a>XAML 개요 (WPF)
 이 항목에서는 XAML 언어의 기능을 설명하고 XAML을 사용하여 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 애플리케이션을 작성하는 방법을 보여 줍니다. 이 항목에서는 특히 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]에서 구현된 XAML에 대해 자세히 설명합니다. XAML 자체는 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]보다 큰 언어 개념입니다.  
-  
-  
-  
+
 <a name="what_is_xaml"></a>   
 ## <a name="what-is-xaml"></a>XAML이란?  
  XAML은 선언적 태그 언어입니다. XAML 만들기를 간소화는.NET Framework 프로그래밍 모델에 적용 된 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] .NET Framework 응용 프로그램입니다. 선언적 XAML 태그에 표시되는 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 요소를 만든 다음 코드 숨김 파일을 사용하여 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 정의를 런타임 논리와 구분할 수 있습니다. 이 정의는 partial 클래스 정의를 통해 태그에 연결됩니다. XAML은 어셈블리에 정의된 특정 지원 형식 집합으로 개체의 인스턴스화를 직접 나타냅니다. 이는 지원 형식 시스템에 직접 연결되지 않고 해석되는 언어인 대부분의 다른 태그 언어와의 차이점입니다. XAML은 개별 대상이 잠재적으로 서로 다른 도구를 사용하여 애플리케이션의 논리와 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]에 대해 작업할 수 있는 워크플로를 가능하게 합니다.  
@@ -205,14 +203,14 @@ ms.locfileid: "57379239"
   
  `xmlns`를 사용하여 이름 범위의 사용 및 매핑 범위를 정의하는 방식은 XML 1.0 사양과 일치합니다. XAML 이름 범위는 형식 확인 및 XAML 구문 분석에 적용할 경우 형식이 이름 범위의 요소를 지원하는 방법도 암시한다는 점에서 XML 이름 범위와는 다릅니다.  
   
- `xmlns`특성은 각 XAML 파일의 루트 요소에서만 엄격하게 필요합니다. `xmlns` 정의는 루트 요소의 모든 하위 요소에 적용됩니다(이 동작은 `xmlns`에 대한 XML 1.0 사양과 일치함). `xmlns` 특성은 루트 아래의 다른 요소에서도 허용되며, 정의 요소의 모든 하위 요소에 적용됩니다. 그러나 XAML 네임스페이스를 자주 정의하거나 재정의할 경우 XAML 태그 스타일을 읽기 어렵게 될 수 있습니다.  
+ `xmlns`특성은 각 XAML 파일의 루트 요소에서만 엄격하게 필요합니다. `xmlns` 정의 루트 요소의 모든 하위 요소에 적용 됩니다 (이 동작에 대 한 XML 1.0 사양과 일치 역시 `xmlns`.) `xmlns` 특성은 루트 아래의 다른 요소 에서도 허용 되며 정의 요소의 모든 하위 요소에 적용 됩니다. 그러나 XAML 네임스페이스를 자주 정의하거나 재정의할 경우 XAML 태그 스타일을 읽기 어렵게 될 수 있습니다.  
   
  XAML 프로세서의 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 구현에는 WPF 핵심 어셈블리를 인식하는 인프라가 포함되어 있습니다. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 핵심 어셈블리는 기본 XAML 네임스페이스로의 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 매핑을 지원하는 형식을 포함한다고 알려져 있습니다. 이 어셈블리는 프로젝트 빌드 파일과 WPF 빌드 및 프로젝트 시스템에 속하는 구성을 통해 사용할 수 있습니다. 따라서 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 어셈블리에서 제공된 XAML 요소를 참조하려는 경우 기본 XAML 네임스페이스를 기본 `xmlns`로 선언하기만 하면 됩니다.  
   
 ### <a name="the-x-prefix"></a>X: 접두사  
  앞의 루트 요소 예제에서는 접두사 `x:`를 사용하여 XAML 언어 구문을 지원하는 전용 XAML 네임스페이스인 XAML 네임스페이스 [!INCLUDE[TLA#tla_xamlxmlnsv1](../../../../includes/tlasharptla-xamlxmlnsv1-md.md)]를 매핑했습니다. 이 `x:` 접두사는 이 [!INCLUDE[TLA2#tla_sdk](../../../../includes/tla2sharptla-sdk-md.md)] 전체의 설명서, 예제 및 프로젝트 템플릿에서 이 XAML 네임스페이스를 매핑하는 데 사용됩니다. XAML 언어의 XAML 네임스페이스에는 XAML에서 자주 사용하게 될 몇 가지 프로그래밍 구문이 들어 있습니다. 다음은 가장 많이 사용하게 될 `x:` 접두사 네임스페이스 프로그래밍 구문의 목록입니다.  
   
--   [x:Key](../../xaml-services/x-key-directive.md): 각 리소스에 대 한 고유 키를 설정 하는 <xref:System.Windows.ResourceDictionary> (또는 다른 프레임 워크에서 비슷한 사전 개념). `x:Key`는 일반적인 WPF 응용 프로그램 태그에서 보게 될 `x:` 사용의 90%를 차지할 것입니다.  
+-   [x:Key](../../xaml-services/x-key-directive.md): 각 리소스에 대 한 고유 키를 설정 하는 <xref:System.Windows.ResourceDictionary> (또는 다른 프레임 워크에서 비슷한 사전 개념). `x:Key` 아마도의 90%를 차지 합니다 `x:` 사용 일반적인 WPF 응용 프로그램의 태그에 표시 됩니다.  
   
 -   [X:class](../../xaml-services/x-class-directive.md): 지정 된 [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] XAML 페이지에 대 한 코드 숨김을 제공 하는 클래스에 대 한 네임 스페이스 및 클래스 이름입니다. 이러한 클래스가 WPF 프로그래밍 모델에 대해 코드 숨김을 지원하도록 해야 하므로 리소스가 없는 경우에도 `x:`가 매핑된 것을 자주 보게 됩니다.  
   
@@ -258,7 +256,7 @@ ms.locfileid: "57379239"
  [!code-csharp[XAMLOvwSupport#ButtonWithCodeBehindHandler](~/samples/snippets/csharp/VS_Snippets_Wpf/XAMLOvwSupport/CSharp/page3.xaml.cs#buttonwithcodebehindhandler)]
  [!code-vb[XAMLOvwSupport#ButtonWithCodeBehindHandler](~/samples/snippets/visualbasic/VS_Snippets_Wpf/XAMLOvwSupport/VisualBasic/Page1.xaml.vb#buttonwithcodebehindhandler)]  
   
- 코드 숨김 파일은 CLR 네임스페이스 `ExampleNamespace`를 사용하며 `ExamplePage`를 해당 네임스페이스 안에서 partial 클래스로 선언합니다. 이는 태그 루트에 제공되는 `ExampleNamespace`.`ExamplePage`의 `x:Class` 특성 값과 유사합니다. WPF 태그 컴파일러는 루트 요소 형식에서 클래스를 파생하여 모든 컴파일된 XAML 파일에 대한 partial 클래스를 만듭니다. 같은 partial 클래스를 정의하는 코드 숨김을 제공하는 경우, 결과 코드는 컴파일된 애플리케이션의 동일한 네임스페이스와 클래스 안에서 결합됩니다.  
+ 코드 숨김 파일은 CLR 네임스페이스 `ExampleNamespace`를 사용하며 `ExamplePage`를 해당 네임스페이스 안에서 partial 클래스로 선언합니다. 이 태그는 `x:Class` 특성 값 `ExampleNamespace`합니다.`ExamplePage` 유사합니다. WPF 태그 컴파일러는 루트 요소 형식에서 클래스를 파생하여 모든 컴파일된 XAML 파일에 대한 partial 클래스를 만듭니다. 같은 partial 클래스를 정의하는 코드 숨김을 제공하는 경우, 결과 코드는 컴파일된 애플리케이션의 동일한 네임스페이스와 클래스 안에서 결합됩니다.  
   
  WPF에서의 코드 숨김 프로그래밍 요구 사항에 대한 자세한 내용은 [WPF의 코드 숨김 및 XAML](code-behind-and-xaml-in-wpf.md)의 "코드 숨김, 이벤트 처리기 및 partial 클래스 요구 사항" 섹션을 참조하세요.  
   
@@ -309,7 +307,7 @@ ms.locfileid: "57379239"
 ## <a name="xaml-security"></a>XAML 보안  
  XAML은 개체 인스턴스화 및 실행을 직접적으로 나타내는 태그 언어입니다. 따라서 XAML에서 만든 요소에는 생성된 해당 코드가 수행하는 것과 마찬가지로 시스템 리소스(예: 네트워크 액세스, 파일 시스템 IO)와 상호 작용하는 동일한 기능이 있습니다.  
   
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]에서는 [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)] 보안 프레임워크인 [!INCLUDE[TLA#tla_cas](../../../../includes/tlasharptla-cas-md.md)]를 지원합니다. 즉, 인터넷 영역에서 실행되는 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 콘텐츠는 실행 권한이 줄어듭니다. 이때 "느슨한 XAML"(컴파일되지 않은 XAML의 페이지가 로드 시 XAML 뷰어에 의해 해석됨) 및 [!INCLUDE[TLA#tla_xbap](../../../../includes/tlasharptla-xbap-md.md)]는 일반적으로 이 인터넷 영역에서 실행되며 같은 권한 집합을 사용합니다.  하지만 완전히 신뢰할 수 있는 애플리케이션으로 로드된 XAML은 시스템 리소스에 대해 호스팅 애플리케이션과 동일한 액세스 권한을 가집니다. 자세한 내용은 [WPF 부분 신뢰 보안](../wpf-partial-trust-security.md)을 참조하세요.  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 지원 합니다 [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)] 보안 프레임 워크 [!INCLUDE[TLA#tla_cas](../../../../includes/tlasharptla-cas-md.md)]합니다. 즉, 인터넷 영역에서 실행되는 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 콘텐츠는 실행 권한이 줄어듭니다. 이때 "느슨한 XAML"(컴파일되지 않은 XAML의 페이지가 로드 시 XAML 뷰어에 의해 해석됨) 및 [!INCLUDE[TLA#tla_xbap](../../../../includes/tlasharptla-xbap-md.md)]는 일반적으로 이 인터넷 영역에서 실행되며 같은 권한 집합을 사용합니다.  하지만 완전히 신뢰할 수 있는 애플리케이션으로 로드된 XAML은 시스템 리소스에 대해 호스팅 애플리케이션과 동일한 액세스 권한을 가집니다. 자세한 내용은 [WPF 부분 신뢰 보안](../wpf-partial-trust-security.md)을 참조하세요.  
   
 <a name="loading_xaml_from_code"></a>   
 ## <a name="loading-xaml-from-code"></a>코드에서 XAML 로드  
@@ -328,9 +326,10 @@ ms.locfileid: "57379239"
  [종속성 속성 개요](dependency-properties-overview.md)에서는 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]의 다양한 속성에 대해 자세히 설명하고 종속성 속성의 개념을 소개합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [XAML 구문 정보](xaml-syntax-in-detail.md)
 - [WPF에 대한 XAML 및 사용자 지정 클래스](xaml-and-custom-classes-for-wpf.md)
-- [XAML Namespace (x:) 언어 기능](../../xaml-services/xaml-namespace-x-language-features.md)
+- [XAML 네임스페이스(x:) 언어 기능](../../xaml-services/xaml-namespace-x-language-features.md)
 - [WPF XAML 확장](wpf-xaml-extensions.md)
 - [기본 요소 개요](base-elements-overview.md)
 - [WPF의 트리](trees-in-wpf.md)
