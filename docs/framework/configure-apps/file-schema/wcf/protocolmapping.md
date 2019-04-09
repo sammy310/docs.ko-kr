@@ -2,12 +2,12 @@
 title: <protocolMapping>
 ms.date: 03/30/2017
 ms.assetid: 5076644b-1f33-4f26-9488-87de9fcda04c
-ms.openlocfilehash: 6ec17457c8742fdf17208c6588e0ab70ece7c42a
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: e26044340bda84fe38b7e286edf833affa94b86c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55268676"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59118217"
 ---
 # <a name="protocolmapping"></a>\<protocolMapping>
 전송 프로토콜 체계 (예: http, net.tcp, net.pipe 등) 및 WCF 바인딩 간의 기본 프로토콜 매핑 집합을 정의 하기 위한 구성 섹션을 나타냅니다. 런타임에 기본 끝점을 만들 때 Windows Communication Foundation (WCF) 구성 된 매핑을 살펴봅니다 및 바인딩을 사용 하 여 특정 기본 주소를 결정 합니다.  
@@ -35,7 +35,7 @@ ms.locfileid: "55268676"
   
 |요소|설명|  
 |-------------|-----------------|  
-|[\<필터>](filters-of-routing.md)|전송 프로토콜 체계 (예: http, net.tcp, net.pipe 등) 및 WCF 바인딩 간의 기본 프로토콜 매핑을 포함합니다.|  
+|[\<filters>](filters-of-routing.md)|전송 프로토콜 체계 (예: http, net.tcp, net.pipe 등) 및 WCF 바인딩 간의 기본 프로토콜 매핑을 포함합니다.|  
   
 ### <a name="parent-elements"></a>부모 요소  
   
@@ -60,5 +60,6 @@ ms.locfileid: "55268676"
 ```  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.ServiceModel.Configuration.ProtocolMappingSection?displayProperty=nameWithType>
 - <xref:System.ServiceModel.Configuration.ProtocolMappingElement?displayProperty=nameWithType>

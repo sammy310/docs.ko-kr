@@ -1,5 +1,5 @@
 ---
-title: '방법: 디자이너를 사용 하 여 도구 모음 단추의 아이콘 정의'
+title: '방법: 디자이너를 사용하여 도구 모음 단추에 대한 아이콘 정의'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - toolbars [Windows Forms], adding icons to buttons
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - icons [Windows Forms], toolbar buttons
 - ToolBar control [Windows Forms], adding icons to buttons
 ms.assetid: d848f38e-67f2-49d4-8e88-01c845c06c02
-ms.openlocfilehash: 2099738d5b666aa305d678c962c0b203d3ab67b2
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 6657a9bbb850a24ae47be11854d6affd2a02f9b7
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57717741"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59118276"
 ---
-# <a name="how-to-define-an-icon-for-a-toolbar-button-using-the-designer"></a>방법: 디자이너를 사용 하 여 도구 모음 단추의 아이콘 정의
+# <a name="how-to-define-an-icon-for-a-toolbar-button-using-the-designer"></a>방법: 디자이너를 사용하여 도구 모음 단추에 대한 아이콘 정의
 > [!NOTE]
 >  <xref:System.Windows.Forms.ToolStrip> 컨트롤은 <xref:System.Windows.Forms.ToolBar> 컨트롤을 대체하고 여기에 다른 기능을 추가하여 새로 도입된 컨트롤이지만 이전 버전과의 호환성 및 이후 사용 가능성을 고려하여 <xref:System.Windows.Forms.ToolBar> 컨트롤을 계속 유지하도록 선택할 수 있습니다.  
   
@@ -42,7 +42,8 @@ ms.locfileid: "57717741"
 6.  에 **속성** 의 오른쪽 창에 표시 되는 창을 **ToolBarButton 컬렉션 편집기**설정는 <xref:System.Windows.Forms.ToolBarButton.ImageIndex%2A> 목록의 값 중 하나로 각 도구 모음 단추의 속성은 추가할 이미지에서 출발 하는 <xref:System.Windows.Forms.ImageList> 구성 요소입니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Windows.Forms.ToolBar>
-- [방법: Toolbar 단추의 메뉴 이벤트 트리거](how-to-trigger-menu-events-for-toolbar-buttons.md)
+- [방법: Toolbar 단추에 대한 메뉴 이벤트 트리거](how-to-trigger-menu-events-for-toolbar-buttons.md)
 - [ToolBar 컨트롤](toolbar-control-windows-forms.md)
 - [ImageList 구성 요소](imagelist-component-windows-forms.md)

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - custom context menus [WPF]
 - TextBox control [WPF], custom content menus
 ms.assetid: 842d3cd5-6fa0-4be4-8d90-6c7466213b1c
-ms.openlocfilehash: 805f5205a91f9b3da0c48c987f1f49f1d81892b7
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: b0507c6fa37f0f51f9e12ebe5f908c39c25b50d9
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57358602"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59129418"
 ---
 # <a name="how-to-use-a-custom-context-menu-with-a-textbox"></a>방법: TextBox에 사용자 지정 컨텍스트 메뉴 사용
 정의 대 한 간단한 사용자 지정 상황에 맞는 메뉴를 구현 하는 방법을 보여 주는이 예제는 <xref:System.Windows.Controls.TextBox>합니다.  
@@ -36,6 +36,7 @@ ms.locfileid: "57358602"
  [!code-vb[TextBox_ContextMenu#_TextBox_ContextMenu](~/samples/snippets/visualbasic/VS_Snippets_Wpf/TextBox_ContextMenu/VisualBasic/Window1.xaml.vb#_textbox_contextmenu)]  
   
 ## <a name="see-also"></a>참고자료
-- [상황에 맞는 메뉴로 맞춤법 검사 사용](how-to-use-spell-checking-with-a-context-menu.md)
+
+- [상황에 맞는 메뉴에서 맞춤법 검사 사용](how-to-use-spell-checking-with-a-context-menu.md)
 - [TextBox 개요](textbox-overview.md)
 - [RichTextBox 개요](richtextbox-overview.md)

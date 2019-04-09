@@ -2,12 +2,12 @@
 title: LINQ to Entities
 ms.date: 03/30/2017
 ms.assetid: 641f9b68-9046-47a1-abb0-1c8eaeda0e2d
-ms.openlocfilehash: 19849f318d07a11fe0d894f7f0a68cd37f1ee249
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
-ms.translationtype: MT
+ms.openlocfilehash: 29980450bd75c6ba0992ad7fd3165f6f2d5f32bc
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55825786"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59129690"
 ---
 # <a name="linq-to-entities"></a>LINQ to Entities
 LINQ to Entities에서는 개발자가 Visual Basic 또는 Visual C#을 사용하여 Entity Framework 개념적 모델에 대한 쿼리를 작성할 수 있도록 해 주는 LINQ(Language-Integrated Query) 지원을 제공합니다. Entity Framework에 대한 쿼리는 개체 컨텍스트에 대해 실행되는 명령 트리 쿼리로 표현됩니다. LINQ to Entities는 LINQ(Language-Integrated Query) 쿼리를 명령 트리 쿼리로 변환하여 Entity Framework에 대해 실행한 다음 Entity Framework와 LINQ에서 모두 사용할 수 있는 개체를 반환합니다. 다음은 LINQ to Entities 쿼리를 만들고 실행하는 프로세스입니다.  
@@ -35,7 +35,7 @@ LINQ to Entities에서는 개발자가 Visual Basic 또는 Visual C#을 사용�
 ## <a name="query-conversion"></a>쿼리 변환  
  LINQ to Entities 쿼리를 Entity Framework에 대해 실행하려면 LINQ 쿼리를 Entity Framework에 대해 실행할 수 있는 명령 트리 표현으로 변환해야 합니다.  
   
- LINQ to Entities 쿼리는 LINQ 표준 쿼리 연산자(예: <xref:System.Linq.Queryable.Select%2A>, <xref:System.Linq.Queryable.Where%2A> 및 <xref:System.Linq.Queryable.GroupBy%2A>)와 식(x > 10, Contact.LastName 등)으로 구성됩니다. LINQ 연산자는 클래스로 정의되지 않으며 클래스에 있는 메서드입니다. LINQ에서 식은 <xref:System.Linq.Expressions> 네임스페이스 내의 형식에 허용되는 모든 항목을 포함할 수 있습니다. 확대하면 람다 함수로 표현할 수 있는 모든 항목을 포함할 수 있습니다. LINQ의 식은 <xref:System.Data.Objects.ObjectQuery%601>에서 지원되고 정의에 따라 데이터베이스에서 허용되는 연산으로 제한된 Entity Framework에서 허용되는 식의 상위 집합입니다.  
+ LINQ to Entities 쿼리에서 LINQ 표준 쿼리 연산자 이루어져 있습니다 (같은 <xref:System.Linq.Queryable.Select%2A>, <xref:System.Linq.Queryable.Where%2A>, 및 <xref:System.Linq.Queryable.GroupBy%2A>)와 식 (x > 10, Contact.LastName, 및 등). LINQ 연산자는 클래스로 정의되지 않으며 클래스에 있는 메서드입니다. LINQ에서 식은 <xref:System.Linq.Expressions> 네임스페이스 내의 형식에 허용되는 모든 항목을 포함할 수 있습니다. 확대하면 람다 함수로 표현할 수 있는 모든 항목을 포함할 수 있습니다. LINQ의 식은 <xref:System.Data.Objects.ObjectQuery%601>에서 지원되고 정의에 따라 데이터베이스에서 허용되는 연산으로 제한된 Entity Framework에서 허용되는 식의 상위 집합입니다.  
   
  Entity Framework에서는 연산자와 식이 모두 단일 형식 계층 구조로 표현된 다음 명령 트리에 배치됩니다. 명령 트리는 Entity Framework에서 쿼리를 실행하는 데 사용됩니다. LINQ 쿼리를 명령 트리로 표현할 수 없는 경우에는 쿼리를 변환할 때 예외가 throw됩니다. LINQ to Entities 쿼리를 변환하는 데는 표준 쿼리 연산자 변환과 식 변환이라는 두 가지 하위 변환이 수반됩니다.  
   
@@ -89,6 +89,7 @@ LINQ to Entities에서는 개발자가 Visual Basic 또는 Visual C#을 사용�
  [LINQ to Entities에서 알려진 문제 및 고려 사항](../../../../../../docs/framework/data/adonet/ef/language-reference/known-issues-and-considerations-in-linq-to-entities.md)  
   
 ## <a name="see-also"></a>참고자료
+
 - [LINQ to Entities에서 알려진 문제 및 고려 사항](../../../../../../docs/framework/data/adonet/ef/language-reference/known-issues-and-considerations-in-linq-to-entities.md)
 - [언어 통합 쿼리 (LINQ)C#](../../../../../csharp/programming-guide/concepts/linq/index.md)
 - [언어 통합 쿼리 (LINQ)-Visual Basic](../../../../../visual-basic/programming-guide/concepts/linq/index.md)

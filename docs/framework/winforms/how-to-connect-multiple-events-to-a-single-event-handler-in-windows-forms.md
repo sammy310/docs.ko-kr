@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Windows Forms controls, events
 - menu items [Windows Forms], multicasting event-handling methods
 ms.assetid: 5a20749a-41b5-4acc-8eb1-9e5040b0a2c4
-ms.openlocfilehash: 71b17e8a4bedca54cb7fff5f14ce28a0c572fe88
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: d55ccc21efb92ba1e51f4ae88be5025f2f80905b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57722662"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59117964"
 ---
 # <a name="how-to-connect-multiple-events-to-a-single-event-handler-in-windows-forms"></a>방법: Windows Forms에서 단일 이벤트 처리기에 여러 이벤트 연결
 응용 프로그램 디자인에서 있습니다 경우가 동일한 절차를 수행 하는 여러 이벤트 또는 단일 이벤트 처리기를 사용 하 여 여러 이벤트에 대 한 합니다. 예를 들어, 동일한 기능을 노출 하는 경우 폼에서 단추와 마찬가지로 동일한 이벤트를 발생 시킬 수 있는 메뉴 명령이에 강력한 시간 보호기가 경우가 많습니다. 속성 창의 이벤트 보기를 사용 하 여이 수행할 수 있습니다 C# 를 사용 하 여 또는 합니다 `Handles` 키워드 및 **클래스 이름** 및 **메서드 이름** 드롭다운 목록 상자는 Visual Basic 코드 편집기에서.  
@@ -61,5 +61,6 @@ ms.locfileid: "57722662"
      코드는 이벤트에서 기존 이벤트 처리기를 바인딩할 폼에 추가 됩니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [Windows Forms에서 이벤트 처리기 만들기](creating-event-handlers-in-windows-forms.md)
 - [이벤트 처리기 개요](event-handlers-overview-windows-forms.md)
