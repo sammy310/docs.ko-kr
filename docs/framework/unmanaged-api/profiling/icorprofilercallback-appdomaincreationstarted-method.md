@@ -17,38 +17,39 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 2bffa383734a96a32595b018fd6d9b3dc62d5526
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 6e42a8ab23705703770c8214b8c641b48c86094a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57484760"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59117224"
 ---
-# <a name="icorprofilercallbackappdomaincreationstarted-method"></a><span data-ttu-id="68706-102">ICorProfilerCallback::AppDomainCreationStarted 메서드</span><span class="sxs-lookup"><span data-stu-id="68706-102">ICorProfilerCallback::AppDomainCreationStarted Method</span></span>
-<span data-ttu-id="68706-103">응용 프로그램 도메인은 생성 되 고 있음을 프로파일러에 알립니다.</span><span class="sxs-lookup"><span data-stu-id="68706-103">Notifies the profiler that an application domain is being created.</span></span>  
+# <a name="icorprofilercallbackappdomaincreationstarted-method"></a><span data-ttu-id="c3134-102">ICorProfilerCallback::AppDomainCreationStarted 메서드</span><span class="sxs-lookup"><span data-stu-id="c3134-102">ICorProfilerCallback::AppDomainCreationStarted Method</span></span>
+<span data-ttu-id="c3134-103">응용 프로그램 도메인은 생성 되 고 있음을 프로파일러에 알립니다.</span><span class="sxs-lookup"><span data-stu-id="c3134-103">Notifies the profiler that an application domain is being created.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="68706-104">구문</span><span class="sxs-lookup"><span data-stu-id="68706-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="c3134-104">구문</span><span class="sxs-lookup"><span data-stu-id="c3134-104">Syntax</span></span>  
   
 ```  
 HRESULT AppDomainCreationStarted(  
     [in] AppDomainID appDomainId);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="68706-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="68706-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="c3134-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="c3134-105">Parameters</span></span>  
  `appDomainId`  
- <span data-ttu-id="68706-106">[in] 생성 되는 도메인을 식별 합니다.</span><span class="sxs-lookup"><span data-stu-id="68706-106">[in] Identifies the domain which is being created.</span></span>  
+ <span data-ttu-id="c3134-106">[in] 생성 되는 도메인을 식별 합니다.</span><span class="sxs-lookup"><span data-stu-id="c3134-106">[in] Identifies the domain which is being created.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="68706-107">설명</span><span class="sxs-lookup"><span data-stu-id="68706-107">Remarks</span></span>  
- <span data-ttu-id="68706-108">ID 정보 요청 될 때까지 적합 하지 않습니다.는 [icorprofilercallback:: Appdomaincreationfinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-appdomaincreationfinished-method.md) 메서드가 호출 됩니다.</span><span class="sxs-lookup"><span data-stu-id="68706-108">The ID is not valid for any information request until the [ICorProfilerCallback::AppDomainCreationFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-appdomaincreationfinished-method.md) method is called.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="c3134-107">설명</span><span class="sxs-lookup"><span data-stu-id="c3134-107">Remarks</span></span>  
+ <span data-ttu-id="c3134-108">ID 정보 요청 될 때까지 적합 하지 않습니다.는 [icorprofilercallback:: Appdomaincreationfinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-appdomaincreationfinished-method.md) 메서드가 호출 됩니다.</span><span class="sxs-lookup"><span data-stu-id="c3134-108">The ID is not valid for any information request until the [ICorProfilerCallback::AppDomainCreationFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-appdomaincreationfinished-method.md) method is called.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="68706-109">요구 사항</span><span class="sxs-lookup"><span data-stu-id="68706-109">Requirements</span></span>  
- <span data-ttu-id="68706-110">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="68706-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="c3134-109">요구 사항</span><span class="sxs-lookup"><span data-stu-id="c3134-109">Requirements</span></span>  
+ <span data-ttu-id="c3134-110">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="c3134-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="68706-111">**헤더:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="68706-111">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="c3134-111">**헤더:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="c3134-111">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="68706-112">**라이브러리:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="68706-112">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="c3134-112">**라이브러리:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="c3134-112">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="68706-113">**.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="68706-113">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ **<span data-ttu-id="c3134-113">.NET Framework 버전:</span><span class="sxs-lookup"><span data-stu-id="c3134-113">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="68706-114">참고자료</span><span class="sxs-lookup"><span data-stu-id="68706-114">See also</span></span>
-- [<span data-ttu-id="68706-115">ICorProfilerCallback 인터페이스</span><span class="sxs-lookup"><span data-stu-id="68706-115">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+## <a name="see-also"></a><span data-ttu-id="c3134-114">참고자료</span><span class="sxs-lookup"><span data-stu-id="c3134-114">See also</span></span>
+
+- [<span data-ttu-id="c3134-115">ICorProfilerCallback 인터페이스</span><span class="sxs-lookup"><span data-stu-id="c3134-115">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
