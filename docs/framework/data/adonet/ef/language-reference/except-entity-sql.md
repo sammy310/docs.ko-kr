@@ -2,47 +2,48 @@
 title: EXCEPT(Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 69cc23e5-3f8f-4b49-b20e-2f84ff11c80d
-ms.openlocfilehash: 1e7ab2c29b6418e86fc1b6f0ed2aad92a18ee7e5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 32c8c418056231e98696eb8f4e9cb372d6c5740c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54671319"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59089460"
 ---
-# <a name="except-entity-sql"></a><span data-ttu-id="f1895-102">EXCEPT(Entity SQL)</span><span class="sxs-lookup"><span data-stu-id="f1895-102">EXCEPT (Entity SQL)</span></span>
-<span data-ttu-id="f1895-103">EXCEPT 피연산자 오른쪽 쿼리 식에서 반환되지 않은 모든 고유한 값 컬렉션을 EXCEPT 피연산자 왼쪽에 있는 쿼리 식에서 반환합니다.</span><span class="sxs-lookup"><span data-stu-id="f1895-103">Returns a collection of any distinct values from the query expression to the left of the EXCEPT operand that are not also returned from the query expression to the right of the EXCEPT operand.</span></span> <span data-ttu-id="f1895-104">모든 식은 형식이 같거나 기본 형식 또는 파생 형식이 `expression`이어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="f1895-104">All expressions must be of the same type or of a common base or derived type as `expression`.</span></span>  
+# <a name="except-entity-sql"></a><span data-ttu-id="32d86-102">EXCEPT(Entity SQL)</span><span class="sxs-lookup"><span data-stu-id="32d86-102">EXCEPT (Entity SQL)</span></span>
+<span data-ttu-id="32d86-103">EXCEPT 피연산자 오른쪽 쿼리 식에서 반환되지 않은 모든 고유한 값 컬렉션을 EXCEPT 피연산자 왼쪽에 있는 쿼리 식에서 반환합니다.</span><span class="sxs-lookup"><span data-stu-id="32d86-103">Returns a collection of any distinct values from the query expression to the left of the EXCEPT operand that are not also returned from the query expression to the right of the EXCEPT operand.</span></span> <span data-ttu-id="32d86-104">모든 식은 형식이 같거나 기본 형식 또는 파생 형식이 `expression`이어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="32d86-104">All expressions must be of the same type or of a common base or derived type as `expression`.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="f1895-105">구문</span><span class="sxs-lookup"><span data-stu-id="f1895-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="32d86-105">구문</span><span class="sxs-lookup"><span data-stu-id="32d86-105">Syntax</span></span>  
   
 ```  
 expression EXCEPT expression  
 ```  
   
-## <a name="arguments"></a><span data-ttu-id="f1895-106">인수</span><span class="sxs-lookup"><span data-stu-id="f1895-106">Arguments</span></span>  
+## <a name="arguments"></a><span data-ttu-id="32d86-106">인수</span><span class="sxs-lookup"><span data-stu-id="32d86-106">Arguments</span></span>  
  `expression`  
- <span data-ttu-id="f1895-107">다른 쿼리 식에서 반환된 컬렉션과 비교할 컬렉션을 반환하는 모든 유효한 쿼리 식입니다.</span><span class="sxs-lookup"><span data-stu-id="f1895-107">Any valid query expression that returns a collection to compare with the collection returned from another query expression.</span></span>  
+ <span data-ttu-id="32d86-107">다른 쿼리 식에서 반환된 컬렉션과 비교할 컬렉션을 반환하는 모든 유효한 쿼리 식입니다.</span><span class="sxs-lookup"><span data-stu-id="32d86-107">Any valid query expression that returns a collection to compare with the collection returned from another query expression.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="f1895-108">반환 값</span><span class="sxs-lookup"><span data-stu-id="f1895-108">Return Value</span></span>  
- <span data-ttu-id="f1895-109">형식이 같거나 기본 형식 또는 파생 형식이 `expression`인 컬렉션입니다.</span><span class="sxs-lookup"><span data-stu-id="f1895-109">A collection of the same type or of a common base or derived type as `expression`.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="32d86-108">반환 값</span><span class="sxs-lookup"><span data-stu-id="32d86-108">Return Value</span></span>  
+ <span data-ttu-id="32d86-109">형식이 같거나 기본 형식 또는 파생 형식이 `expression`인 컬렉션입니다.</span><span class="sxs-lookup"><span data-stu-id="32d86-109">A collection of the same type or of a common base or derived type as `expression`.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="f1895-110">설명</span><span class="sxs-lookup"><span data-stu-id="f1895-110">Remarks</span></span>  
- <span data-ttu-id="f1895-111">EXCEPT는 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 집합 연산자 중 하나입니다.</span><span class="sxs-lookup"><span data-stu-id="f1895-111">EXCEPT is one of the [!INCLUDE[esql](../../../../../../includes/esql-md.md)] set operators.</span></span> <span data-ttu-id="f1895-112">모든 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 집합 연산자는 왼쪽에서 오른쪽으로 계산됩니다.</span><span class="sxs-lookup"><span data-stu-id="f1895-112">All [!INCLUDE[esql](../../../../../../includes/esql-md.md)] set operators are evaluated from left to right.</span></span> <span data-ttu-id="f1895-113">다음 표에서는 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 집합 연산자의 우선 순위를 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="f1895-113">The following table shows the precedence of the [!INCLUDE[esql](../../../../../../includes/esql-md.md)] set operators.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="32d86-110">설명</span><span class="sxs-lookup"><span data-stu-id="32d86-110">Remarks</span></span>  
+ <span data-ttu-id="32d86-111">EXCEPT는 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 집합 연산자 중 하나입니다.</span><span class="sxs-lookup"><span data-stu-id="32d86-111">EXCEPT is one of the [!INCLUDE[esql](../../../../../../includes/esql-md.md)] set operators.</span></span> <span data-ttu-id="32d86-112">모든 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 집합 연산자는 왼쪽에서 오른쪽으로 계산됩니다.</span><span class="sxs-lookup"><span data-stu-id="32d86-112">All [!INCLUDE[esql](../../../../../../includes/esql-md.md)] set operators are evaluated from left to right.</span></span> <span data-ttu-id="32d86-113">다음 표에서는 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 집합 연산자의 우선 순위를 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="32d86-113">The following table shows the precedence of the [!INCLUDE[esql](../../../../../../includes/esql-md.md)] set operators.</span></span>  
   
-|<span data-ttu-id="f1895-114">우선 순위</span><span class="sxs-lookup"><span data-stu-id="f1895-114">Precedence</span></span>|<span data-ttu-id="f1895-115">연산자</span><span class="sxs-lookup"><span data-stu-id="f1895-115">Operators</span></span>|  
+|<span data-ttu-id="32d86-114">우선 순위</span><span class="sxs-lookup"><span data-stu-id="32d86-114">Precedence</span></span>|<span data-ttu-id="32d86-115">연산자</span><span class="sxs-lookup"><span data-stu-id="32d86-115">Operators</span></span>|  
 |----------------|---------------|  
-|<span data-ttu-id="f1895-116">가장 높음</span><span class="sxs-lookup"><span data-stu-id="f1895-116">Highest</span></span>|<span data-ttu-id="f1895-117">INTERSECT</span><span class="sxs-lookup"><span data-stu-id="f1895-117">INTERSECT</span></span>|  
-||<span data-ttu-id="f1895-118">UNION</span><span class="sxs-lookup"><span data-stu-id="f1895-118">UNION</span></span><br /><br /> <span data-ttu-id="f1895-119">UNION ALL</span><span class="sxs-lookup"><span data-stu-id="f1895-119">UNION ALL</span></span>|  
-||<span data-ttu-id="f1895-120">EXCEPT</span><span class="sxs-lookup"><span data-stu-id="f1895-120">EXCEPT</span></span>|  
-|<span data-ttu-id="f1895-121">가장 낮음</span><span class="sxs-lookup"><span data-stu-id="f1895-121">Lowest</span></span>|<span data-ttu-id="f1895-122">EXISTS</span><span class="sxs-lookup"><span data-stu-id="f1895-122">EXISTS</span></span><br /><br /> <span data-ttu-id="f1895-123">OVERLAPS</span><span class="sxs-lookup"><span data-stu-id="f1895-123">OVERLAPS</span></span><br /><br /> <span data-ttu-id="f1895-124">FLATTEN</span><span class="sxs-lookup"><span data-stu-id="f1895-124">FLATTEN</span></span><br /><br /> <span data-ttu-id="f1895-125">SET</span><span class="sxs-lookup"><span data-stu-id="f1895-125">SET</span></span>|  
+|<span data-ttu-id="32d86-116">가장 높음</span><span class="sxs-lookup"><span data-stu-id="32d86-116">Highest</span></span>|<span data-ttu-id="32d86-117">INTERSECT</span><span class="sxs-lookup"><span data-stu-id="32d86-117">INTERSECT</span></span>|  
+||<span data-ttu-id="32d86-118">UNION</span><span class="sxs-lookup"><span data-stu-id="32d86-118">UNION</span></span><br /><br /> <span data-ttu-id="32d86-119">UNION ALL</span><span class="sxs-lookup"><span data-stu-id="32d86-119">UNION ALL</span></span>|  
+||<span data-ttu-id="32d86-120">EXCEPT</span><span class="sxs-lookup"><span data-stu-id="32d86-120">EXCEPT</span></span>|  
+|<span data-ttu-id="32d86-121">가장 낮음</span><span class="sxs-lookup"><span data-stu-id="32d86-121">Lowest</span></span>|<span data-ttu-id="32d86-122">EXISTS</span><span class="sxs-lookup"><span data-stu-id="32d86-122">EXISTS</span></span><br /><br /> <span data-ttu-id="32d86-123">OVERLAPS</span><span class="sxs-lookup"><span data-stu-id="32d86-123">OVERLAPS</span></span><br /><br /> <span data-ttu-id="32d86-124">FLATTEN</span><span class="sxs-lookup"><span data-stu-id="32d86-124">FLATTEN</span></span><br /><br /> <span data-ttu-id="32d86-125">SET</span><span class="sxs-lookup"><span data-stu-id="32d86-125">SET</span></span>|  
   
-## <a name="example"></a><span data-ttu-id="f1895-126">예제</span><span class="sxs-lookup"><span data-stu-id="f1895-126">Example</span></span>  
- <span data-ttu-id="f1895-127">다음 Entity SQL 쿼리에서는 EXCEPT 연산자를 사용하여 두 쿼리 식에서 모든 고유한 값의 컬렉션을 반환합니다.</span><span class="sxs-lookup"><span data-stu-id="f1895-127">The following Entity SQL query uses the EXCEPT operator to return a collection of any distinct values from two query expressions.</span></span> <span data-ttu-id="f1895-128">쿼리는 AdventureWorks Sales 모델을 기반으로 합니다.</span><span class="sxs-lookup"><span data-stu-id="f1895-128">The query is based on the AdventureWorks Sales Model.</span></span> <span data-ttu-id="f1895-129">이 쿼리를 컴파일하고 실행하려면 다음 단계를 수행하세요.</span><span class="sxs-lookup"><span data-stu-id="f1895-129">To compile and run this query, follow these steps:</span></span>  
+## <a name="example"></a><span data-ttu-id="32d86-126">예제</span><span class="sxs-lookup"><span data-stu-id="32d86-126">Example</span></span>  
+ <span data-ttu-id="32d86-127">다음 Entity SQL 쿼리에서는 EXCEPT 연산자를 사용하여 두 쿼리 식에서 모든 고유한 값의 컬렉션을 반환합니다.</span><span class="sxs-lookup"><span data-stu-id="32d86-127">The following Entity SQL query uses the EXCEPT operator to return a collection of any distinct values from two query expressions.</span></span> <span data-ttu-id="32d86-128">쿼리는 AdventureWorks Sales 모델을 기반으로 합니다.</span><span class="sxs-lookup"><span data-stu-id="32d86-128">The query is based on the AdventureWorks Sales Model.</span></span> <span data-ttu-id="32d86-129">이 쿼리를 컴파일하고 실행하려면 다음 단계를 수행하세요.</span><span class="sxs-lookup"><span data-stu-id="32d86-129">To compile and run this query, follow these steps:</span></span>  
   
-1.  <span data-ttu-id="f1895-130">절차에 따라 [방법: StructuralType 결과 반환 하는 쿼리 실행](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="f1895-130">Follow the procedure in [How to: Execute a Query that Returns StructuralType Results](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md).</span></span>  
+1.  <span data-ttu-id="32d86-130">절차에 따라 [방법: StructuralType 결과 반환 하는 쿼리 실행](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="32d86-130">Follow the procedure in [How to: Execute a Query that Returns StructuralType Results](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md).</span></span>  
   
-2.  <span data-ttu-id="f1895-131">다음 쿼리를 `ExecuteStructuralTypeQuery` 메서드에 인수로 전달합니다.</span><span class="sxs-lookup"><span data-stu-id="f1895-131">Pass the following query as an argument to the `ExecuteStructuralTypeQuery` method:</span></span>  
+2.  <span data-ttu-id="32d86-131">다음 쿼리를 `ExecuteStructuralTypeQuery` 메서드에 인수로 전달합니다.</span><span class="sxs-lookup"><span data-stu-id="32d86-131">Pass the following query as an argument to the `ExecuteStructuralTypeQuery` method:</span></span>  
   
  [!code-csharp[DP EntityServices Concepts 2#EXCEPT](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#except)]  
   
-## <a name="see-also"></a><span data-ttu-id="f1895-132">참고자료</span><span class="sxs-lookup"><span data-stu-id="f1895-132">See also</span></span>
-- [<span data-ttu-id="f1895-133">엔터티 SQL 참조</span><span class="sxs-lookup"><span data-stu-id="f1895-133">Entity SQL Reference</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
+## <a name="see-also"></a><span data-ttu-id="32d86-132">참고자료</span><span class="sxs-lookup"><span data-stu-id="32d86-132">See also</span></span>
+
+- [<span data-ttu-id="32d86-133">엔터티 SQL 참조</span><span class="sxs-lookup"><span data-stu-id="32d86-133">Entity SQL Reference</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)

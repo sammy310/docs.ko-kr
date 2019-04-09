@@ -16,42 +16,43 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d4315c9f5296e8c3ffc9d8241b929c71c2448db6
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 3767368c9da8c97cd081787c0945a15552a1da46
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56965867"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59092671"
 ---
-# <a name="icordebugeval2-interface"></a><span data-ttu-id="165f9-102">ICorDebugEval2 인터페이스</span><span class="sxs-lookup"><span data-stu-id="165f9-102">ICorDebugEval2 Interface</span></span>
+# <a name="icordebugeval2-interface"></a><span data-ttu-id="44a61-102">ICorDebugEval2 인터페이스</span><span class="sxs-lookup"><span data-stu-id="44a61-102">ICorDebugEval2 Interface</span></span>
 
-<span data-ttu-id="165f9-103">확장 "ICorDebugEval" 제네릭 형식에 대 한 지원을 제공 합니다.</span><span class="sxs-lookup"><span data-stu-id="165f9-103">Extends "ICorDebugEval" to provide support for generic types.</span></span>  
+<span data-ttu-id="44a61-103">확장 "ICorDebugEval" 제네릭 형식에 대 한 지원을 제공 합니다.</span><span class="sxs-lookup"><span data-stu-id="44a61-103">Extends "ICorDebugEval" to provide support for generic types.</span></span>  
   
-## <a name="methods"></a><span data-ttu-id="165f9-104">메서드</span><span class="sxs-lookup"><span data-stu-id="165f9-104">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="44a61-104">메서드</span><span class="sxs-lookup"><span data-stu-id="44a61-104">Methods</span></span>  
   
-|<span data-ttu-id="165f9-105">메서드</span><span class="sxs-lookup"><span data-stu-id="165f9-105">Method</span></span>|<span data-ttu-id="165f9-106">설명</span><span class="sxs-lookup"><span data-stu-id="165f9-106">Description</span></span>|  
+|<span data-ttu-id="44a61-105">메서드</span><span class="sxs-lookup"><span data-stu-id="44a61-105">Method</span></span>|<span data-ttu-id="44a61-106">설명</span><span class="sxs-lookup"><span data-stu-id="44a61-106">Description</span></span>|  
 |------------|-----------------|  
-|[<span data-ttu-id="165f9-107">CallParameterizedFunction 메서드</span><span class="sxs-lookup"><span data-stu-id="165f9-107">CallParameterizedFunction Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugeval2-callparameterizedfunction-method.md)|<span data-ttu-id="165f9-108">지정 된 "ICorDebugFunction"를 해당 생성자 형식 매개 변수 또는 형식 매개 변수 자체 들 형식 안에 중첩 될 수 있습니다는에 대 한 호출을 설정 합니다.</span><span class="sxs-lookup"><span data-stu-id="165f9-108">Sets up a call to the specified "ICorDebugFunction", which can be nested inside a type whose constructor takes type parameters, or can itself take type parameters.</span></span>|  
-|[<span data-ttu-id="165f9-109">CreateValueForType 메서드</span><span class="sxs-lookup"><span data-stu-id="165f9-109">CreateValueForType Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugeval2-createvaluefortype-method.md)|<span data-ttu-id="165f9-110">초기 값이 null 또는 0을 사용 하 여 지정 된 형식의 새 "ICorDebugValue"에 대 한 포인터를 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="165f9-110">Gets a pointer to a new "ICorDebugValue" of the specified type, with an initial value of null or zero.</span></span>|  
-|[<span data-ttu-id="165f9-111">NewParameterizedArray 메서드</span><span class="sxs-lookup"><span data-stu-id="165f9-111">NewParameterizedArray Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugeval2-newparameterizedarray-method.md)|<span data-ttu-id="165f9-112">지정 된 요소 형식 및 차원에는 새 배열을 할당합니다.</span><span class="sxs-lookup"><span data-stu-id="165f9-112">Allocates a new array of the specified element type and dimensions.</span></span>|  
-|[<span data-ttu-id="165f9-113">NewParameterizedObject 메서드</span><span class="sxs-lookup"><span data-stu-id="165f9-113">NewParameterizedObject Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugeval2-newparameterizedobject-method.md)|<span data-ttu-id="165f9-114">새 매개 변수가 있는 형식 개체를 인스턴스화하고 개체의 생성자 메서드를 호출 합니다.</span><span class="sxs-lookup"><span data-stu-id="165f9-114">Instantiates a new parameterized type object and calls the object's constructor method.</span></span>|  
-|[<span data-ttu-id="165f9-115">NewParameterizedObjectNoConstructor 메서드</span><span class="sxs-lookup"><span data-stu-id="165f9-115">NewParameterizedObjectNoConstructor Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugeval2-newparameterizedobjectnoconstructor-method.md)|<span data-ttu-id="165f9-116">Constructor 메서드를 호출 하려고 하지 않고 지정된 된 클래스의 새 매개 변수가 있는 형식 개체를 인스턴스화하십시오</span><span class="sxs-lookup"><span data-stu-id="165f9-116">Instantiates a new parameterized type object of the specified class without attempting to call a constructor method</span></span>|  
-|[<span data-ttu-id="165f9-117">NewStringWithLength 메서드</span><span class="sxs-lookup"><span data-stu-id="165f9-117">NewStringWithLength Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugeval2-newstringwithlength-method.md)|<span data-ttu-id="165f9-118">지정된 된 콘텐츠를 사용 하 여 지정 된 길이의 새 문자열을 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="165f9-118">Creates a new string of the specified length with the specified contents.</span></span>|  
-|[<span data-ttu-id="165f9-119">RudeAbort 메서드</span><span class="sxs-lookup"><span data-stu-id="165f9-119">RudeAbort Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugeval2-rudeabort-method.md)|<span data-ttu-id="165f9-120">계산 중단이 `ICorDebugEval2` 현재 수행 중입니다.</span><span class="sxs-lookup"><span data-stu-id="165f9-120">Aborts the computation that this `ICorDebugEval2` is currently performing.</span></span>|  
+|[<span data-ttu-id="44a61-107">CallParameterizedFunction 메서드</span><span class="sxs-lookup"><span data-stu-id="44a61-107">CallParameterizedFunction Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugeval2-callparameterizedfunction-method.md)|<span data-ttu-id="44a61-108">지정 된 "ICorDebugFunction"를 해당 생성자 형식 매개 변수 또는 형식 매개 변수 자체 들 형식 안에 중첩 될 수 있습니다는에 대 한 호출을 설정 합니다.</span><span class="sxs-lookup"><span data-stu-id="44a61-108">Sets up a call to the specified "ICorDebugFunction", which can be nested inside a type whose constructor takes type parameters, or can itself take type parameters.</span></span>|  
+|[<span data-ttu-id="44a61-109">CreateValueForType 메서드</span><span class="sxs-lookup"><span data-stu-id="44a61-109">CreateValueForType Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugeval2-createvaluefortype-method.md)|<span data-ttu-id="44a61-110">초기 값이 null 또는 0을 사용 하 여 지정 된 형식의 새 "ICorDebugValue"에 대 한 포인터를 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="44a61-110">Gets a pointer to a new "ICorDebugValue" of the specified type, with an initial value of null or zero.</span></span>|  
+|[<span data-ttu-id="44a61-111">NewParameterizedArray 메서드</span><span class="sxs-lookup"><span data-stu-id="44a61-111">NewParameterizedArray Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugeval2-newparameterizedarray-method.md)|<span data-ttu-id="44a61-112">지정 된 요소 형식 및 차원에는 새 배열을 할당합니다.</span><span class="sxs-lookup"><span data-stu-id="44a61-112">Allocates a new array of the specified element type and dimensions.</span></span>|  
+|[<span data-ttu-id="44a61-113">NewParameterizedObject 메서드</span><span class="sxs-lookup"><span data-stu-id="44a61-113">NewParameterizedObject Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugeval2-newparameterizedobject-method.md)|<span data-ttu-id="44a61-114">새 매개 변수가 있는 형식 개체를 인스턴스화하고 개체의 생성자 메서드를 호출 합니다.</span><span class="sxs-lookup"><span data-stu-id="44a61-114">Instantiates a new parameterized type object and calls the object's constructor method.</span></span>|  
+|[<span data-ttu-id="44a61-115">NewParameterizedObjectNoConstructor 메서드</span><span class="sxs-lookup"><span data-stu-id="44a61-115">NewParameterizedObjectNoConstructor Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugeval2-newparameterizedobjectnoconstructor-method.md)|<span data-ttu-id="44a61-116">Constructor 메서드를 호출 하려고 하지 않고 지정된 된 클래스의 새 매개 변수가 있는 형식 개체를 인스턴스화하십시오</span><span class="sxs-lookup"><span data-stu-id="44a61-116">Instantiates a new parameterized type object of the specified class without attempting to call a constructor method</span></span>|  
+|[<span data-ttu-id="44a61-117">NewStringWithLength 메서드</span><span class="sxs-lookup"><span data-stu-id="44a61-117">NewStringWithLength Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugeval2-newstringwithlength-method.md)|<span data-ttu-id="44a61-118">지정된 된 콘텐츠를 사용 하 여 지정 된 길이의 새 문자열을 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="44a61-118">Creates a new string of the specified length with the specified contents.</span></span>|  
+|[<span data-ttu-id="44a61-119">RudeAbort 메서드</span><span class="sxs-lookup"><span data-stu-id="44a61-119">RudeAbort Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugeval2-rudeabort-method.md)|<span data-ttu-id="44a61-120">계산 중단이 `ICorDebugEval2` 현재 수행 중입니다.</span><span class="sxs-lookup"><span data-stu-id="44a61-120">Aborts the computation that this `ICorDebugEval2` is currently performing.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="165f9-121">설명</span><span class="sxs-lookup"><span data-stu-id="165f9-121">Remarks</span></span>  
+## <a name="remarks"></a><span data-ttu-id="44a61-121">설명</span><span class="sxs-lookup"><span data-stu-id="44a61-121">Remarks</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="165f9-122">이 인터페이스는 크로스 시스템 또는 크로스 프로세스 원격 호출을 지원하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="165f9-122">This interface does not support being called remotely, either cross-machine or cross-process.</span></span>  
+>  <span data-ttu-id="44a61-122">이 인터페이스는 크로스 시스템 또는 크로스 프로세스 원격 호출을 지원하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="44a61-122">This interface does not support being called remotely, either cross-machine or cross-process.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="165f9-123">요구 사항</span><span class="sxs-lookup"><span data-stu-id="165f9-123">Requirements</span></span>  
- <span data-ttu-id="165f9-124">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="165f9-124">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="44a61-123">요구 사항</span><span class="sxs-lookup"><span data-stu-id="44a61-123">Requirements</span></span>  
+ <span data-ttu-id="44a61-124">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="44a61-124">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="165f9-125">**헤더:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="165f9-125">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="44a61-125">**헤더:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="44a61-125">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="165f9-126">**라이브러리:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="165f9-126">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="44a61-126">**라이브러리:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="44a61-126">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="165f9-127">**.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="165f9-127">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ **<span data-ttu-id="44a61-127">.NET Framework 버전:</span><span class="sxs-lookup"><span data-stu-id="44a61-127">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="165f9-128">참고자료</span><span class="sxs-lookup"><span data-stu-id="165f9-128">See also</span></span>
-- [<span data-ttu-id="165f9-129">디버깅 인터페이스</span><span class="sxs-lookup"><span data-stu-id="165f9-129">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+## <a name="see-also"></a><span data-ttu-id="44a61-128">참고자료</span><span class="sxs-lookup"><span data-stu-id="44a61-128">See also</span></span>
+
+- [<span data-ttu-id="44a61-129">디버깅 인터페이스</span><span class="sxs-lookup"><span data-stu-id="44a61-129">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

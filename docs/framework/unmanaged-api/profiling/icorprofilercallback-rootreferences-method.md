@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: cfab1d716b5a8b530561e2dc72442591eb0d8e42
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: b616017745d7cc33d57b1626b6c27c59a0a60a32
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57499032"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59091176"
 ---
-# <a name="icorprofilercallbackrootreferences-method"></a><span data-ttu-id="0ec90-102">ICorProfilerCallback::RootReferences 메서드</span><span class="sxs-lookup"><span data-stu-id="0ec90-102">ICorProfilerCallback::RootReferences Method</span></span>
-<span data-ttu-id="0ec90-103">가비지 컬렉션 후 루트 참조에 대 한 정보를 사용 하 여 프로파일러를 알립니다.</span><span class="sxs-lookup"><span data-stu-id="0ec90-103">Notifies the profiler with information about root references after garbage collection.</span></span>  
+# <a name="icorprofilercallbackrootreferences-method"></a><span data-ttu-id="d3358-102">ICorProfilerCallback::RootReferences 메서드</span><span class="sxs-lookup"><span data-stu-id="d3358-102">ICorProfilerCallback::RootReferences Method</span></span>
+<span data-ttu-id="d3358-103">가비지 컬렉션 후 루트 참조에 대 한 정보를 사용 하 여 프로파일러를 알립니다.</span><span class="sxs-lookup"><span data-stu-id="d3358-103">Notifies the profiler with information about root references after garbage collection.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="0ec90-104">구문</span><span class="sxs-lookup"><span data-stu-id="0ec90-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="d3358-104">구문</span><span class="sxs-lookup"><span data-stu-id="d3358-104">Syntax</span></span>  
   
 ```  
 HRESULT RootReferences(  
@@ -35,28 +35,29 @@ HRESULT RootReferences(
     [in, size_is(cRootRefs)] ObjectID rootRefIds[] );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="0ec90-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="0ec90-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="d3358-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="d3358-105">Parameters</span></span>  
  `cRootRefs`  
- <span data-ttu-id="0ec90-106">[in] 에 대 한 참조 횟수를 `rootRefIds` 배열입니다.</span><span class="sxs-lookup"><span data-stu-id="0ec90-106">[in] The number of references in the `rootRefIds` array.</span></span>  
+ <span data-ttu-id="d3358-106">[in] 에 대 한 참조 횟수를 `rootRefIds` 배열입니다.</span><span class="sxs-lookup"><span data-stu-id="d3358-106">[in] The number of references in the `rootRefIds` array.</span></span>  
   
  `rootRefIds`  
- <span data-ttu-id="0ec90-107">[in] 스택에 있는 개체 또는 정적 개체를 참조 하는 개체 Id의 배열입니다.</span><span class="sxs-lookup"><span data-stu-id="0ec90-107">[in] An array of object IDs that reference either a static object or an object on the stack.</span></span>  
+ <span data-ttu-id="d3358-107">[in] 스택에 있는 개체 또는 정적 개체를 참조 하는 개체 Id의 배열입니다.</span><span class="sxs-lookup"><span data-stu-id="d3358-107">[in] An array of object IDs that reference either a static object or an object on the stack.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="0ec90-108">설명</span><span class="sxs-lookup"><span data-stu-id="0ec90-108">Remarks</span></span>  
- <span data-ttu-id="0ec90-109">둘 다 `RootReferences` 하 고 [ICorProfilerCallback2::RootReferences2](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-rootreferences2-method.md) 프로파일러에 알리기 위해 호출 됩니다.</span><span class="sxs-lookup"><span data-stu-id="0ec90-109">Both `RootReferences` and [ICorProfilerCallback2::RootReferences2](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-rootreferences2-method.md) are called to notify the profiler.</span></span> <span data-ttu-id="0ec90-110">하나 또는 다른 프로파일러는 일반적으로 구현 됩니다 둘 모두가 아닌 정보를 전달 되므로 `RootReferences2` 전달의 상위 집합이 `RootReferences`합니다.</span><span class="sxs-lookup"><span data-stu-id="0ec90-110">Profilers will normally implement one or the other, but not both, because the information passed in `RootReferences2` is a superset of that passed in `RootReferences`.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="d3358-108">설명</span><span class="sxs-lookup"><span data-stu-id="d3358-108">Remarks</span></span>  
+ <span data-ttu-id="d3358-109">둘 다 `RootReferences` 하 고 [ICorProfilerCallback2::RootReferences2](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-rootreferences2-method.md) 프로파일러에 알리기 위해 호출 됩니다.</span><span class="sxs-lookup"><span data-stu-id="d3358-109">Both `RootReferences` and [ICorProfilerCallback2::RootReferences2](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-rootreferences2-method.md) are called to notify the profiler.</span></span> <span data-ttu-id="d3358-110">하나 또는 다른 프로파일러는 일반적으로 구현 됩니다 둘 모두가 아닌 정보를 전달 되므로 `RootReferences2` 전달의 상위 집합이 `RootReferences`합니다.</span><span class="sxs-lookup"><span data-stu-id="d3358-110">Profilers will normally implement one or the other, but not both, because the information passed in `RootReferences2` is a superset of that passed in `RootReferences`.</span></span>  
   
- <span data-ttu-id="0ec90-111">이기는 `rootRefIds` null 개체가 포함 될 배열입니다.</span><span class="sxs-lookup"><span data-stu-id="0ec90-111">It is possible for the `rootRefIds` array to contain a null object.</span></span> <span data-ttu-id="0ec90-112">예를 들어 스택에 선언 된 모든 개체 참조는 가비지 수집기에서 루트로 처리 되 고 항상 보고 됩니다.</span><span class="sxs-lookup"><span data-stu-id="0ec90-112">For example, all object references declared on the stack are treated as roots by the garbage collector and will always be reported.</span></span>  
+ <span data-ttu-id="d3358-111">이기는 `rootRefIds` null 개체가 포함 될 배열입니다.</span><span class="sxs-lookup"><span data-stu-id="d3358-111">It is possible for the `rootRefIds` array to contain a null object.</span></span> <span data-ttu-id="d3358-112">예를 들어 스택에 선언 된 모든 개체 참조는 가비지 수집기에서 루트로 처리 되 고 항상 보고 됩니다.</span><span class="sxs-lookup"><span data-stu-id="d3358-112">For example, all object references declared on the stack are treated as roots by the garbage collector and will always be reported.</span></span>  
   
- <span data-ttu-id="0ec90-113">개체 Id가 반환한 `RootReferences` 가비지 컬렉션 이전 주소에서 개체를 새 주소로 이동 하는 중일 수 있으므로 자체를 콜백 하는 동안 유효 하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="0ec90-113">The object IDs returned by `RootReferences` are not valid during the callback itself, because the garbage collection might be in the middle of moving objects from old addresses to new addresses.</span></span> <span data-ttu-id="0ec90-114">따라서 프로파일러 시도 하지 않아야 하는 동안 개체를 검사 한 `RootReferences` 호출 합니다.</span><span class="sxs-lookup"><span data-stu-id="0ec90-114">Therefore, profilers must not attempt to inspect objects during a `RootReferences` call.</span></span> <span data-ttu-id="0ec90-115">때 [ICorProfilerCallback2::GarbageCollectionFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-garbagecollectionfinished-method.md) 는 호출 개체를 모두 새 위치로 이동 되었습니다 및 안전 하 게 검사할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="0ec90-115">When [ICorProfilerCallback2::GarbageCollectionFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-garbagecollectionfinished-method.md) is called, all objects have been moved to their new locations and can be safely inspected.</span></span>  
+ <span data-ttu-id="d3358-113">개체 Id가 반환한 `RootReferences` 가비지 컬렉션 이전 주소에서 개체를 새 주소로 이동 하는 중일 수 있으므로 자체를 콜백 하는 동안 유효 하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="d3358-113">The object IDs returned by `RootReferences` are not valid during the callback itself, because the garbage collection might be in the middle of moving objects from old addresses to new addresses.</span></span> <span data-ttu-id="d3358-114">따라서 프로파일러 시도 하지 않아야 하는 동안 개체를 검사 한 `RootReferences` 호출 합니다.</span><span class="sxs-lookup"><span data-stu-id="d3358-114">Therefore, profilers must not attempt to inspect objects during a `RootReferences` call.</span></span> <span data-ttu-id="d3358-115">때 [ICorProfilerCallback2::GarbageCollectionFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-garbagecollectionfinished-method.md) 는 호출 개체를 모두 새 위치로 이동 되었습니다 및 안전 하 게 검사할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="d3358-115">When [ICorProfilerCallback2::GarbageCollectionFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-garbagecollectionfinished-method.md) is called, all objects have been moved to their new locations and can be safely inspected.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="0ec90-116">요구 사항</span><span class="sxs-lookup"><span data-stu-id="0ec90-116">Requirements</span></span>  
- <span data-ttu-id="0ec90-117">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="0ec90-117">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="d3358-116">요구 사항</span><span class="sxs-lookup"><span data-stu-id="d3358-116">Requirements</span></span>  
+ <span data-ttu-id="d3358-117">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="d3358-117">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="0ec90-118">**헤더:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="0ec90-118">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="d3358-118">**헤더:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="d3358-118">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="0ec90-119">**라이브러리:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="0ec90-119">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="d3358-119">**라이브러리:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="d3358-119">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="0ec90-120">**.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="0ec90-120">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ **<span data-ttu-id="d3358-120">.NET Framework 버전:</span><span class="sxs-lookup"><span data-stu-id="d3358-120">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="0ec90-121">참고자료</span><span class="sxs-lookup"><span data-stu-id="0ec90-121">See also</span></span>
-- [<span data-ttu-id="0ec90-122">ICorProfilerCallback 인터페이스</span><span class="sxs-lookup"><span data-stu-id="0ec90-122">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+## <a name="see-also"></a><span data-ttu-id="d3358-121">참고자료</span><span class="sxs-lookup"><span data-stu-id="d3358-121">See also</span></span>
+
+- [<span data-ttu-id="d3358-122">ICorProfilerCallback 인터페이스</span><span class="sxs-lookup"><span data-stu-id="d3358-122">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)

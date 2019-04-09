@@ -13,19 +13,19 @@ helpviewer_keywords:
 - ToolStrip control [Windows Forms], text
 - toolbars [Windows Forms], text
 ms.assetid: d62dc9d1-2edd-4dfa-aed7-1335d6e13d86
-ms.openlocfilehash: cd15e581e646f53ed56af654917c7543bf18617e
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 5c326c8f6a56c934d317305f85f4c88e95e75f8b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57705404"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59088485"
 ---
-# <a name="how-to-change-the-appearance-of-toolstrip-text-and-images-in-windows-forms"></a><span data-ttu-id="22b3d-102">방법: Windows Forms에서 ToolStrip 텍스트 및 이미지의 모양 변경</span><span class="sxs-lookup"><span data-stu-id="22b3d-102">How to: Change the Appearance of ToolStrip Text and Images in Windows Forms</span></span>
-<span data-ttu-id="22b3d-103">텍스트 및 이미지에 표시 되는지 여부를 제어할 수 있습니다는 <xref:System.Windows.Forms.ToolStripItem> 서로 기준으로 정렬 되는 방법 및 및 <xref:System.Windows.Forms.ToolStrip>합니다.</span><span class="sxs-lookup"><span data-stu-id="22b3d-103">You can control whether text and images are displayed on a <xref:System.Windows.Forms.ToolStripItem> and how they are aligned relative to each other and the <xref:System.Windows.Forms.ToolStrip>.</span></span>  
+# <a name="how-to-change-the-appearance-of-toolstrip-text-and-images-in-windows-forms"></a><span data-ttu-id="81173-102">방법: Windows Forms에서 ToolStrip 텍스트 및 이미지의 모양 변경</span><span class="sxs-lookup"><span data-stu-id="81173-102">How to: Change the Appearance of ToolStrip Text and Images in Windows Forms</span></span>
+<span data-ttu-id="81173-103">텍스트 및 이미지에 표시 되는지 여부를 제어할 수 있습니다는 <xref:System.Windows.Forms.ToolStripItem> 서로 기준으로 정렬 되는 방법 및 및 <xref:System.Windows.Forms.ToolStrip>합니다.</span><span class="sxs-lookup"><span data-stu-id="81173-103">You can control whether text and images are displayed on a <xref:System.Windows.Forms.ToolStripItem> and how they are aligned relative to each other and the <xref:System.Windows.Forms.ToolStrip>.</span></span>  
   
-### <a name="to-define-what-is-displayed-on-a-toolstripitem"></a><span data-ttu-id="22b3d-104">ToolStripItem의 표시 되는 항목을 정의 하려면</span><span class="sxs-lookup"><span data-stu-id="22b3d-104">To define what is displayed on a ToolStripItem</span></span>  
+### <a name="to-define-what-is-displayed-on-a-toolstripitem"></a><span data-ttu-id="81173-104">ToolStripItem의 표시 되는 항목을 정의 하려면</span><span class="sxs-lookup"><span data-stu-id="81173-104">To define what is displayed on a ToolStripItem</span></span>  
   
--   <span data-ttu-id="22b3d-105">설정 된 <xref:System.Windows.Forms.ToolStripItem.DisplayStyle%2A> 속성을 원하는 값입니다.</span><span class="sxs-lookup"><span data-stu-id="22b3d-105">Set the <xref:System.Windows.Forms.ToolStripItem.DisplayStyle%2A> property to the desired value.</span></span> <span data-ttu-id="22b3d-106">가능성은 `Image`, `ImageAndText`하십시오 `None`, 및 `Text`합니다.</span><span class="sxs-lookup"><span data-stu-id="22b3d-106">The possibilities are `Image`, `ImageAndText`, `None`, and `Text`.</span></span> <span data-ttu-id="22b3d-107">기본값은 `ImageAndText`입니다.</span><span class="sxs-lookup"><span data-stu-id="22b3d-107">The default is `ImageAndText`.</span></span>  
+-   <span data-ttu-id="81173-105">설정 된 <xref:System.Windows.Forms.ToolStripItem.DisplayStyle%2A> 속성을 원하는 값입니다.</span><span class="sxs-lookup"><span data-stu-id="81173-105">Set the <xref:System.Windows.Forms.ToolStripItem.DisplayStyle%2A> property to the desired value.</span></span> <span data-ttu-id="81173-106">가능성은 `Image`, `ImageAndText`하십시오 `None`, 및 `Text`합니다.</span><span class="sxs-lookup"><span data-stu-id="81173-106">The possibilities are `Image`, `ImageAndText`, `None`, and `Text`.</span></span> <span data-ttu-id="81173-107">기본값은 `ImageAndText`입니다.</span><span class="sxs-lookup"><span data-stu-id="81173-107">The default is `ImageAndText`.</span></span>  
   
     ```vb  
     ToolStripButton2.DisplayStyle = _  
@@ -36,9 +36,9 @@ ms.locfileid: "57705404"
     toolStripButton2.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;  
     ```  
   
-### <a name="to-align-text-on-a-toolstripitem"></a><span data-ttu-id="22b3d-108">ToolStripItem의 텍스트에 맞게</span><span class="sxs-lookup"><span data-stu-id="22b3d-108">To align text on a ToolStripItem</span></span>  
+### <a name="to-align-text-on-a-toolstripitem"></a><span data-ttu-id="81173-108">ToolStripItem의 텍스트에 맞게</span><span class="sxs-lookup"><span data-stu-id="81173-108">To align text on a ToolStripItem</span></span>  
   
--   <span data-ttu-id="22b3d-109">설정 된 <xref:System.Windows.Forms.ToolStripItem.TextAlign%2A> 속성을 원하는 값입니다.</span><span class="sxs-lookup"><span data-stu-id="22b3d-109">Set the <xref:System.Windows.Forms.ToolStripItem.TextAlign%2A> property to the desired value.</span></span> <span data-ttu-id="22b3d-110">가능성은 중간 위쪽과 아래쪽 왼쪽, 가운데, 오른쪽을 사용 하 여 조합 합니다.</span><span class="sxs-lookup"><span data-stu-id="22b3d-110">The possibilities are any combination of top, middle, and bottom with left, center, and right.</span></span> <span data-ttu-id="22b3d-111">기본값은 `MiddleCenter`입니다.</span><span class="sxs-lookup"><span data-stu-id="22b3d-111">The default is `MiddleCenter`.</span></span>  
+-   <span data-ttu-id="81173-109">설정 된 <xref:System.Windows.Forms.ToolStripItem.TextAlign%2A> 속성을 원하는 값입니다.</span><span class="sxs-lookup"><span data-stu-id="81173-109">Set the <xref:System.Windows.Forms.ToolStripItem.TextAlign%2A> property to the desired value.</span></span> <span data-ttu-id="81173-110">가능성은 중간 위쪽과 아래쪽 왼쪽, 가운데, 오른쪽을 사용 하 여 조합 합니다.</span><span class="sxs-lookup"><span data-stu-id="81173-110">The possibilities are any combination of top, middle, and bottom with left, center, and right.</span></span> <span data-ttu-id="81173-111">기본값은 `MiddleCenter`입니다.</span><span class="sxs-lookup"><span data-stu-id="81173-111">The default is `MiddleCenter`.</span></span>  
   
     ```vb  
     ToolStripSplitButton1.TextAlign = _  
@@ -49,9 +49,9 @@ ms.locfileid: "57705404"
     toolStripSplitButton1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;  
     ```  
   
-### <a name="to-align-an-image-on-a-toolstripitem"></a><span data-ttu-id="22b3d-112">ToolStripItem의 이미지에 맞게</span><span class="sxs-lookup"><span data-stu-id="22b3d-112">To align an image on a ToolStripItem</span></span>  
+### <a name="to-align-an-image-on-a-toolstripitem"></a><span data-ttu-id="81173-112">ToolStripItem의 이미지에 맞게</span><span class="sxs-lookup"><span data-stu-id="81173-112">To align an image on a ToolStripItem</span></span>  
   
--   <span data-ttu-id="22b3d-113">설정 된 <xref:System.Windows.Forms.ToolStripItem.ImageAlign%2A> 속성을 원하는 값입니다.</span><span class="sxs-lookup"><span data-stu-id="22b3d-113">Set the <xref:System.Windows.Forms.ToolStripItem.ImageAlign%2A> property to the desired value.</span></span> <span data-ttu-id="22b3d-114">가능성은 중간 위쪽과 아래쪽 왼쪽, 가운데, 오른쪽을 사용 하 여 조합 합니다.</span><span class="sxs-lookup"><span data-stu-id="22b3d-114">The possibilities are any combination of top, middle, and bottom with left, center, and right.</span></span> <span data-ttu-id="22b3d-115">기본값은 `MiddleLeft`입니다.</span><span class="sxs-lookup"><span data-stu-id="22b3d-115">The default is `MiddleLeft`.</span></span>  
+-   <span data-ttu-id="81173-113">설정 된 <xref:System.Windows.Forms.ToolStripItem.ImageAlign%2A> 속성을 원하는 값입니다.</span><span class="sxs-lookup"><span data-stu-id="81173-113">Set the <xref:System.Windows.Forms.ToolStripItem.ImageAlign%2A> property to the desired value.</span></span> <span data-ttu-id="81173-114">가능성은 중간 위쪽과 아래쪽 왼쪽, 가운데, 오른쪽을 사용 하 여 조합 합니다.</span><span class="sxs-lookup"><span data-stu-id="81173-114">The possibilities are any combination of top, middle, and bottom with left, center, and right.</span></span> <span data-ttu-id="81173-115">기본값은 `MiddleLeft`입니다.</span><span class="sxs-lookup"><span data-stu-id="81173-115">The default is `MiddleLeft`.</span></span>  
   
     ```vb  
     ToolStripSplitButton1.ImageAlign = _  
@@ -62,9 +62,9 @@ ms.locfileid: "57705404"
     toolStripSplitButton1.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;  
     ```  
   
-### <a name="to-define-how-toolstripitem-text-and-images-are-displayed-relative-to-each-other"></a><span data-ttu-id="22b3d-116">Toolstripitem을 가리키는 텍스트 및 이미지 서로 기준으로 표시 되는 방법을 정의 하려면</span><span class="sxs-lookup"><span data-stu-id="22b3d-116">To define how ToolStripItem text and images are displayed relative to each other</span></span>  
+### <a name="to-define-how-toolstripitem-text-and-images-are-displayed-relative-to-each-other"></a><span data-ttu-id="81173-116">Toolstripitem을 가리키는 텍스트 및 이미지 서로 기준으로 표시 되는 방법을 정의 하려면</span><span class="sxs-lookup"><span data-stu-id="81173-116">To define how ToolStripItem text and images are displayed relative to each other</span></span>  
   
--   <span data-ttu-id="22b3d-117">설정 된 <xref:System.Windows.Forms.ToolStripItem.TextImageRelation%2A> 속성을 원하는 값입니다.</span><span class="sxs-lookup"><span data-stu-id="22b3d-117">Set the <xref:System.Windows.Forms.ToolStripItem.TextImageRelation%2A> property to the desired value.</span></span> <span data-ttu-id="22b3d-118">가능성은 `ImageAboveText`, `ImageBeforeText`를 `Overlay`합니다 `TextAboveImage`, 및 `TextBeforeImage`합니다.</span><span class="sxs-lookup"><span data-stu-id="22b3d-118">The possibilities are `ImageAboveText`, `ImageBeforeText`, `Overlay`, `TextAboveImage`, and `TextBeforeImage`.</span></span> <span data-ttu-id="22b3d-119">기본값은 `ImageBeforeText`입니다.</span><span class="sxs-lookup"><span data-stu-id="22b3d-119">The default is `ImageBeforeText`.</span></span>  
+-   <span data-ttu-id="81173-117">설정 된 <xref:System.Windows.Forms.ToolStripItem.TextImageRelation%2A> 속성을 원하는 값입니다.</span><span class="sxs-lookup"><span data-stu-id="81173-117">Set the <xref:System.Windows.Forms.ToolStripItem.TextImageRelation%2A> property to the desired value.</span></span> <span data-ttu-id="81173-118">가능성은 `ImageAboveText`, `ImageBeforeText`를 `Overlay`합니다 `TextAboveImage`, 및 `TextBeforeImage`합니다.</span><span class="sxs-lookup"><span data-stu-id="81173-118">The possibilities are `ImageAboveText`, `ImageBeforeText`, `Overlay`, `TextAboveImage`, and `TextBeforeImage`.</span></span> <span data-ttu-id="81173-119">기본값은 `ImageBeforeText`입니다.</span><span class="sxs-lookup"><span data-stu-id="81173-119">The default is `ImageBeforeText`.</span></span>  
   
     ```vb  
     ToolStripButton1.TextImageRelation = _  
@@ -75,8 +75,9 @@ ms.locfileid: "57705404"
     toolStripButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;  
     ```  
   
-## <a name="see-also"></a><span data-ttu-id="22b3d-120">참고자료</span><span class="sxs-lookup"><span data-stu-id="22b3d-120">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="81173-120">참고자료</span><span class="sxs-lookup"><span data-stu-id="81173-120">See also</span></span>
+
 - <xref:System.Windows.Forms.ToolStrip>
-- [<span data-ttu-id="22b3d-121">ToolStrip 컨트롤 개요</span><span class="sxs-lookup"><span data-stu-id="22b3d-121">ToolStrip Control Overview</span></span>](toolstrip-control-overview-windows-forms.md)
-- [<span data-ttu-id="22b3d-122">ToolStrip 컨트롤 아키텍처</span><span class="sxs-lookup"><span data-stu-id="22b3d-122">ToolStrip Control Architecture</span></span>](toolstrip-control-architecture.md)
-- [<span data-ttu-id="22b3d-123">ToolStrip 기술 요약</span><span class="sxs-lookup"><span data-stu-id="22b3d-123">ToolStrip Technology Summary</span></span>](toolstrip-technology-summary.md)
+- [<span data-ttu-id="81173-121">ToolStrip 컨트롤 개요</span><span class="sxs-lookup"><span data-stu-id="81173-121">ToolStrip Control Overview</span></span>](toolstrip-control-overview-windows-forms.md)
+- [<span data-ttu-id="81173-122">ToolStrip 컨트롤 아키텍처</span><span class="sxs-lookup"><span data-stu-id="81173-122">ToolStrip Control Architecture</span></span>](toolstrip-control-architecture.md)
+- [<span data-ttu-id="81173-123">ToolStrip 기술 요약</span><span class="sxs-lookup"><span data-stu-id="81173-123">ToolStrip Technology Summary</span></span>](toolstrip-technology-summary.md)
