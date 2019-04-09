@@ -2,12 +2,12 @@
 title: 엔터티 형식(entity type)
 ms.date: 03/30/2017
 ms.assetid: a6dee9ab-9e4a-48f2-a169-3f79cc15821c
-ms.openlocfilehash: cb542a1750a6b45dd2fca4d32501719470d9a78a
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: 026b0aef7cf2de8fe222721191afa459859701ee
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58410890"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59108266"
 ---
 # <a name="entity-type"></a>엔터티 형식(entity type)
 합니다 *엔터티 형식* 엔터티 데이터 모델 (EDM)를 사용 하 여 데이터의 구조를 설명 하기 위한 기본적인 빌딩 블록입니다. 개념적 모델에서 엔터티 형식은 고객이나 주문과 같은 최상위 개념의 구조를 나타냅니다. 엔터티 형식은 엔터티 형식 인스턴스의 템플릿입니다. 각 템플릿에는 다음 정보가 들어 있습니다.  
@@ -36,6 +36,7 @@ ms.locfileid: "58410890"
  [!code-xml[EDM_Example_Model#EntityExample](../../../../samples/snippets/xml/VS_Snippets_Data/edm_example_model/xml/books.edmx#entityexample)]  
   
 ## <a name="see-also"></a>참고자료
+
 - [엔터티 데이터 모델의 주요 개념](../../../../docs/framework/data/adonet/entity-data-model-key-concepts.md)
 - [엔터티 데이터 모델](../../../../docs/framework/data/adonet/entity-data-model.md)
-- [facet](../../../../docs/framework/data/adonet/facet.md)
+- [패싯](../../../../docs/framework/data/adonet/facet.md)

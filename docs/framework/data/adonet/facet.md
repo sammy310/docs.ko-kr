@@ -2,12 +2,12 @@
 title: 패싯
 ms.date: 03/30/2017
 ms.assetid: 91c4e6aa-3e54-4b6c-a38a-abf27808cc85
-ms.openlocfilehash: 9994aff7337dd842e1d70c22ea288d2fda5648d6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9353b143a328e0fb183b7870332462a0a2c91b10
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54648234"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59094504"
 ---
 # <a name="facet"></a>패싯
 A *패싯* 세부 정보는 기본 형식 속성 정의를 추가 하는 데 사용 됩니다. A [속성](../../../../docs/framework/data/adonet/property.md) 정의 속성 형식에 대 한 정보가 있지만 보다 자세한 정보가 필요한 경우가 많습니다. 예를 들어, 개념적 모델의 엔터티 형식에는 값을 null로 설정할 수 없는 `String` 형식의 속성이 있을 수 있습니다. 패싯을 사용하면 이 수준의 세부 정보를 지정할 수 있습니다.  
@@ -35,5 +35,6 @@ A *패싯* 세부 정보는 기본 형식 속성 정의를 추가 하는 데 사
  [!code-xml[EDM_Example_Model#EntityExample](../../../../samples/snippets/xml/VS_Snippets_Data/edm_example_model/xml/books.edmx#entityexample)]  
   
 ## <a name="see-also"></a>참고자료
+
 - [엔터티 데이터 모델의 주요 개념](../../../../docs/framework/data/adonet/entity-data-model-key-concepts.md)
 - [엔터티 데이터 모델](../../../../docs/framework/data/adonet/entity-data-model.md)

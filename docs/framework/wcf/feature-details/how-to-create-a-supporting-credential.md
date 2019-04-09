@@ -1,15 +1,15 @@
 ---
-title: '방법: 지원 자격 증명 만들기'
+title: '방법: 지원하는 자격 증명 만들기'
 ms.date: 03/30/2017
 ms.assetid: d0952919-8bb4-4978-926c-9cc108f89806
-ms.openlocfilehash: 1e56d595b389f2217f4c50db1242f418742a5d56
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3ae2b59abf59b0256741ef4e908305d9f4350b4a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54539807"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59093711"
 ---
-# <a name="how-to-create-a-supporting-credential"></a>방법: 지원 자격 증명 만들기
+# <a name="how-to-create-a-supporting-credential"></a>방법: 지원하는 자격 증명 만들기
 둘 이상의 자격 증명이 필요한 사용자 지정 보안 체계를 사용할 수 있습니다. 예를 들어 서비스는 클라이언트로부터 사용자 이름과 암호뿐 아니라 클라이언트가 18세 이상임을 입증하는 자격 증명을 요구할 수 있습니다. 두 번째 자격 증명은는 *자격 증명을 지 원하는*합니다. 이 항목에서는 Windows Communication Foundation (WCF) 클라이언트에서 이러한 자격 증명을 구현 하는 방법에 설명 합니다.  
   
 > [!NOTE]
@@ -81,4 +81,5 @@ ms.locfileid: "54539807"
  [!code-csharp[c_SupportingCredential#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_supportingcredential/cs/source.cs#1)]  
   
 ## <a name="see-also"></a>참고자료
-- [방법: SecurityBindingElement를 사용 하 여 사용자 지정 바인딩 만들기](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)
+
+- [방법: SecurityBindingElement를 사용하여 사용자 지정 바인딩 만들기](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)

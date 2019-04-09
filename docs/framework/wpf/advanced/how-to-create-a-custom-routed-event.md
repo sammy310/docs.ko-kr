@@ -8,12 +8,12 @@ helpviewer_keywords:
 - routed events [WPF], creating
 - events [WPF], routing
 ms.assetid: b79f459a-1c3f-4045-b2d4-1659cc8eaa3c
-ms.openlocfilehash: c351bec05fa8ad8438cb8521f6ab1e6277a40b1d
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: a3850875c8ca747f8709b55f8fe721d25be24304
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57373402"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59091475"
 ---
 # <a name="how-to-create-a-custom-routed-event"></a>방법: 사용자 지정 라우트된 이벤트 만들기
 이벤트 라우팅을 지원 하도록 사용자 지정 이벤트를 등록 해야는 <xref:System.Windows.RoutedEvent> 를 사용 하는 <xref:System.Windows.EventManager.RegisterRoutedEvent%2A> 메서드. 이 예제에서는 사용자 지정 라우트된 이벤트를 만드는 데 대한 기본 사항을 설명합니다.  
@@ -35,6 +35,7 @@ ms.locfileid: "57373402"
  버블링 이벤트 작동 방식에 대한 예제를 보려면 [라우트된 이벤트 처리](how-to-handle-a-routed-event.md)를 참조하세요.  
   
 ## <a name="see-also"></a>참고자료
+
 - [라우트된 이벤트 개요](routed-events-overview.md)
 - [입력 개요](input-overview.md)
 - [컨트롤 제작 개요](../controls/control-authoring-overview.md)

@@ -1,5 +1,5 @@
 ---
-title: '방법: IIS 5.0 및 IIS 6.0을 구성하여 WPF 응용 프로그램 배포'
+title: '방법: IIS 5.0 및 IIS 6.0을 구성하여 WPF 애플리케이션 배포'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - MIME types [WPF], registering
@@ -13,19 +13,18 @@ helpviewer_keywords:
 - file extensions [WPF], registering
 - registering MIME types [WPF]
 ms.assetid: c6e8c2cb-9ba2-4e75-a0d5-180ec9639433
-ms.openlocfilehash: a257da5c229c925fbc653c015ffc8d4b5d744651
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 6fa00c4ced8c05d056703560e5740689c6dcfe39
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57366402"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59096292"
 ---
-# <a name="how-to-configure-iis-50-and-iis-60-to-deploy-wpf-applications"></a>방법: IIS 5.0 및 IIS 6.0을 구성하여 WPF 응용 프로그램 배포
+# <a name="how-to-configure-iis-50-and-iis-60-to-deploy-wpf-applications"></a>방법: IIS 5.0 및 IIS 6.0을 구성하여 WPF 애플리케이션 배포
 
 적절한 [!INCLUDE[TLA#tla_mime](../../../../includes/tlasharptla-mime-md.md)] 형식으로 구성된 경우 대부분의 웹 서버에서 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 애플리케이션을 배포할 수 있습니다. 기본적으로 [!INCLUDE[TLA#tla_iis70](../../../../includes/tlasharptla-iis70-md.md)]는 이러한 [!INCLUDE[TLA2#tla_mime](../../../../includes/tla2sharptla-mime-md.md)] 형식으로 구성되지만 [!INCLUDE[TLA#tla_iis50](../../../../includes/tlasharptla-iis50-md.md)]과 [!INCLUDE[TLA#tla_iis60](../../../../includes/tlasharptla-iis60-md.md)]은 아닙니다.
 
 이 항목에서는 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 애플리케이션을 배포하도록 [!INCLUDE[TLA#tla_iis50](../../../../includes/tlasharptla-iis50-md.md)]과 [!INCLUDE[TLA#tla_iis60](../../../../includes/tlasharptla-iis60-md.md)]을 구성하는 방법을 설명합니다.
-
 
 > [!NOTE]
 > 확인할 수 있습니다 합니다 *UserAgent* 시스템에.NET Framework가 설치 되어 있는지 확인 하 고 레지스트리에서 문자열입니다. 자세한 내용 및 검사 하는 스크립트를 *UserAgent* 시스템에.NET Framework가 설치 되어 있는지 여부를 확인 하려면 참조는 문자열 [감지 the.NET Framework 3.0 설치 여부](how-to-detect-whether-the-net-framework-3-0-is-installed.md)합니다.

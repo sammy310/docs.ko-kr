@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: fa360c46-e5f8-411e-a711-46997771133d
-ms.openlocfilehash: 11bf7e1021c3bb65e4d736e83d2631ae05c274f6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 023efcc15d7080afc1583f4ad8984e152b86cf23
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54630422"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59140324"
 ---
 # <a name="paging-through-a-query-result"></a>쿼리 결과를 통해 페이징
 쿼리 결과 페이징은 쿼리의 결과를 작은 단위의 데이터 하위 집합, 즉 페이지로 반환하는 프로세스입니다. 이 방법은 관리하기 쉬운 작은 청크 단위로 결과를 표시하기 위해 일반적으로 사용됩니다.  
@@ -124,5 +124,6 @@ adapter.Fill(dataSet, "Orders");
 ```  
   
 ## <a name="see-also"></a>참고자료
-- [DataAdapter 및 DataReader](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)
+
+- [DataAdapters 및 DataReaders](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)
 - [ADO.NET 관리되는 공급자 및 데이터 집합 개발자 센터](https://go.microsoft.com/fwlink/?LinkId=217917)

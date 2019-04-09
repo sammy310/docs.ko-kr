@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 7139d585-4034-4dfa-916f-2120a8b72792
-ms.openlocfilehash: 0b8c473171f86b569f42c75701805818d8b81c42
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.openlocfilehash: ca7e8363497534bd4802dad991f8affb0386334b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55825773"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59094478"
 ---
 # <a name="how-to-execute-a-query-that-returns-primitivetype-results"></a>방법: PrimitiveType 결과를 반환하는 쿼리 실행
 이 항목에서는 <xref:System.Data.EntityClient.EntityCommand>를 사용하여 개념적 모델에 대해 명령을 실행하는 방법과 <xref:System.Data.Metadata.Edm.PrimitiveType>를 사용하여 <xref:System.Data.EntityClient.EntityDataReader> 결과를 검색하는 방법을 보여 줍니다.  
@@ -37,5 +37,6 @@ ms.locfileid: "55825773"
  [!code-vb[DP EntityServices Concepts#eSQLPrimitiveTypes](../../../../../samples/snippets/visualbasic/VS_Snippets_Data/dp entityservices concepts/vb/source.vb#esqlprimitivetypes)]  
   
 ## <a name="see-also"></a>참고자료
+
 - [엔터티 SQL 참조](../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
 - [Entity Framework용 EntityClient 공급자](../../../../../docs/framework/data/adonet/ef/entityclient-provider-for-the-entity-framework.md)

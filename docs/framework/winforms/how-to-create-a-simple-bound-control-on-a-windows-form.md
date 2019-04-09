@@ -5,12 +5,12 @@ helpviewer_keywords:
 - data binding [Windows Forms], simple data binding
 - Windows Forms controls, data binding
 ms.assetid: 3bcaded8-0f1a-4cc0-8830-f59be253bf4e
-ms.openlocfilehash: f481b85c07a107b10d88d47c4873b555191bac7f
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 85b19c43441650789eed6b92a771d2f2433c6a10
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57708342"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59094081"
 ---
 # <a name="how-to-create-a-simple-bound-control-on-a-windows-form"></a>방법: Windows Form에 단순 바인딩된 컨트롤 만들기
 사용 하 여 *단순 바인딩*, 컨트롤에서 데이터 집합 테이블에서 열 값과 같은 단일 데이터 요소를 표시할 수 있습니다. 컨트롤의 모든 속성을 데이터 값에 간단한 바인딩할 수 있습니다.  
@@ -46,6 +46,7 @@ ms.locfileid: "57708342"
     >  있기 때문에 단순 바인딩된 컨트롤에는 하나의 데이터 요소만 표시, 전형적인 Windows Form을 단순 바인딩된 컨트롤에서 탐색 논리를 포함 하도록 합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Windows.Forms.Binding>
 - [Windows Forms 데이터 바인딩](windows-forms-data-binding.md)
 - [데이터 바인딩 및 Windows Forms](data-binding-and-windows-forms.md)

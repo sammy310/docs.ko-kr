@@ -1,5 +1,5 @@
 ---
-title: '방법: SSL 인증서로 포트 구성'
+title: '방법: SSL 인증서를 사용하여 포트 구성'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - WCF, security mode
 - WCF, security
 ms.assetid: b8abcc8e-a5f5-4317-aca5-01e3c40ab24d
-ms.openlocfilehash: 3aa32e54643ffb8e2e4e40f730ab3f5c084b8cd9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 533c329bed7b1cb9b07805032c839d3f5ff10634
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54521718"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59139817"
 ---
-# <a name="how-to-configure-a-port-with-an-ssl-certificate"></a>방법: SSL 인증서로 포트 구성
+# <a name="how-to-configure-a-port-with-an-ssl-certificate"></a>방법: SSL 인증서를 사용하여 포트 구성
 사용 하 여 자체 호스팅된 Windows Communication Foundation (WCF) 서비스를 만들 때의 <xref:System.ServiceModel.WSHttpBinding> 클래스를 사용 하 여 전송 보안, X.509 인증서로 포트를 구성 해야 합니다. 자체 호스트된 서비스를 만들지 않는 경우에는 IIS(인터넷 정보 서비스)에서 서비스를 호스트할 수 있습니다. 자세한 내용은 [HTTP 전송 보안](../../../../docs/framework/wcf/feature-details/http-transport-security.md)합니다.  
   
  포트를 구성하려면 컴퓨터에서 실행하는 운영 체제에 따라 다른 도구를 사용해야 합니다.  
@@ -105,7 +105,7 @@ ms.locfileid: "54521718"
   
 ### <a name="to-delete-an-ssl-certificate-from-a-port-number"></a>포트 번호에서 SSL 인증서를 삭제하려면  
   
-1.  HttpCfg.exe 또는 Netsh.exe 도구를 사용하여 컴퓨터에 있는 모든 바인딩의 포트와 지문을 표시합니다. 정보를 디스크에 인쇄하려면 다음 예제와 같이 리디렉션 문자 ">"를 사용합니다.  
+1.  HttpCfg.exe 또는 Netsh.exe 도구를 사용하여 컴퓨터에 있는 모든 바인딩의 포트와 지문을 표시합니다. 디스크에 대 한 정보를 인쇄 하려면 리디렉션 문자를 사용 하 여 ">" 다음 예제에서와 같이 합니다.  
   
     ```  
     httpcfg query ssl>myMachinePorts.txt  
@@ -130,4 +130,5 @@ ms.locfileid: "54521718"
  [!code-vb[c_WsHttpService#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_wshttpservice/vb/source.vb#3)]  
   
 ## <a name="see-also"></a>참고자료
+
 - [HTTP 전송 보안](../../../../docs/framework/wcf/feature-details/http-transport-security.md)

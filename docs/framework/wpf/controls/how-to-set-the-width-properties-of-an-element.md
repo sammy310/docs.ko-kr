@@ -8,12 +8,12 @@ helpviewer_keywords:
 - width properties [WPF]
 - Panel control [WPF], width properties of elements
 ms.assetid: 6ee04a9d-63f0-4f5b-a406-0a8cd4c35729
-ms.openlocfilehash: a8fdc7c6659eb33f948741145c0b2e100bb133e4
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: a5ed67ba20176398a863a1e9826b1eab71b182f2
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57376847"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59096877"
 ---
 # <a name="how-to-set-the-width-properties-of-an-element"></a>방법: 요소의 너비 속성 설정
 ## <a name="example"></a>예제  
@@ -34,12 +34,13 @@ ms.locfileid: "57376847"
  전체 샘플을 참조 하세요 [너비 속성 비교 샘플](https://go.microsoft.com/fwlink/?LinkID=160050)합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Windows.Controls.ListBox>
 - <xref:System.Windows.FrameworkElement>
 - <xref:System.Windows.FrameworkElement.ActualWidth%2A>
 - <xref:System.Windows.FrameworkElement.MaxWidth%2A>
 - <xref:System.Windows.FrameworkElement.MinWidth%2A>
 - <xref:System.Windows.FrameworkElement.Width%2A>
-- [패널 개요](panels-overview.md)
+- [Panel 개요](panels-overview.md)
 - [요소의 높이 속성 설정](how-to-set-the-height-properties-of-an-element.md)
 - [너비 속성 비교 샘플](https://go.microsoft.com/fwlink/?LinkID=160050)

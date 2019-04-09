@@ -1,5 +1,5 @@
 ---
-title: '방법: ToolStrip 컨트롤에 설정/해제 단추 만들기'
+title: '방법: ToolStrip 컨트롤에서 설정/해제 단추 만들기'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - examples [Windows Forms], toolbars
 - ToolStrip control [Windows Forms], creating toggle buttons
 ms.assetid: d9c197df-4c65-43f2-beee-b68b52b2befc
-ms.openlocfilehash: a059726ea410e88121a0b755295c3c492c11962a
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: e688e9a220e6c82caa2d107589b5ca9a1e59e72b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57705521"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59091254"
 ---
-# <a name="how-to-create-toggle-buttons-in-toolstrip-controls"></a>방법: ToolStrip 컨트롤에 설정/해제 단추 만들기
+# <a name="how-to-create-toggle-buttons-in-toolstrip-controls"></a>방법: ToolStrip 컨트롤에서 설정/해제 단추 만들기
 사용자가 토글 단추를 클릭 하면 오목 하 게 표시 하 고 사용자가 단추를 다시 클릭 될 때까지 오목한 상태를 유지 합니다.  
   
 ### <a name="to-create-a-toggling-toolstripbutton"></a>토글 ToolStripButton를 만들려면  
@@ -36,5 +36,6 @@ ms.locfileid: "57705521"
     ```  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Windows.Forms.ToolStripButton>
 - [ToolStrip 컨트롤 개요](toolstrip-control-overview-windows-forms.md)

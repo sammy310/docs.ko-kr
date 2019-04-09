@@ -3,12 +3,12 @@ title: <bookmarkResumptionQuery>
 ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: 226de75d-d25c-48d5-b069-4b7d80a6852b
-ms.openlocfilehash: 7fb298bcbc5b4bf5d699d3c79936ca3c15f67c0e
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: e43ba66e2c3ccfbb723b1eea8ef6774ad3f9f2aa
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55268186"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59140038"
 ---
 # <a name="bookmarkresumptionquery"></a>\<bookmarkResumptionQuery>
 워크플로 인스턴스 내의 책갈피 다시 시작을 추적하는 데 사용되는 쿼리를 나타냅니다. 추적 참가자가 책갈피 다시 시작 레코드를 구독하려면 쿼리가 필요합니다.  
@@ -55,6 +55,7 @@ ms.locfileid: "55268186"
 |[\<bookmarkResumptionQueries>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/bookmarkresumptionqueries.md)|워크플로 인스턴스 내의 책갈피 다시 시작을 추적하는 데 사용되는 쿼리의 컬렉션을 나타냅니다.|  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.ServiceModel.Activities.Tracking.Configuration.BookmarkResumptionQueryElementCollection?displayProperty=nameWithType>
 - <xref:System.Activities.Tracking.BookmarkResumptionQuery?displayProperty=nameWithType>
 - [워크플로 추적](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)

@@ -1,18 +1,18 @@
 ---
-title: '방법: 코드에서 서비스 끝점 만들기'
+title: '방법: 코드에서 서비스 엔드포인트 만들기'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 3fbb22fa-2930-48b8-b437-def1de87c6a0
-ms.openlocfilehash: 143a43545646e180bcfdedb60c64bbbb7c83ac2a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0b51018a5940e01b38b00addb762fa6504495a4c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54517476"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59139869"
 ---
-# <a name="how-to-create-a-service-endpoint-in-code"></a>방법: 코드에서 서비스 끝점 만들기
+# <a name="how-to-create-a-service-endpoint-in-code"></a>방법: 코드에서 서비스 엔드포인트 만들기
 이 예제에서는 계산기 서비스에 대해 `ICalculator` 계약을 정의하고, `CalculatorService` 클래스에서 서비스를 구현한 다음 코드로 엔드포인트를 정의합니다. 이 때 서비스가 <xref:System.ServiceModel.BasicHttpBinding> 클래스를 사용하도록 지정합니다.  
   
  일반적으로 바인딩 및 주소 정보를 코드에서 명령적으로 지정하지 않고 구성에서 선언적으로 지정하는 것이 좋습니다. 일반적으로 배포된 서비스의 바인딩과 주소가 서비스를 배포할 때 사용된 바인딩 및 주소와 다르기 때문에 코드로 엔드포인트를 정의하는 것은 효과적이지 않습니다. 일반적으로 바인딩 및 주소 지정 정보를 코드와 구분하면 응용 프로그램을 다시 컴파일하거나 다시 배포할 필요 없이 해당 정보를 변경할 수 있습니다.  
@@ -47,4 +47,5 @@ ms.locfileid: "54517476"
      기본 끝점에 대 한 자세한 내용은 참조 하세요. [Simplified Configuration](../../../../docs/framework/wcf/simplified-configuration.md) 하 고 [Simplified Configuration for WCF Services](../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md)합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [방법: 코드에서 서비스 바인딩 지정](../../../../docs/framework/wcf/how-to-specify-a-service-binding-in-code.md)

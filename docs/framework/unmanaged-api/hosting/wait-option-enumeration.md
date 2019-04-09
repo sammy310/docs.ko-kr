@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 793d3996f9cbcb1a38a728ade06f775784166123
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0ac28f28d4d284ba26fadd46e53ebeb8e5b5f3cd
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54745898"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59139583"
 ---
 # <a name="waitoption-enumeration"></a>WAIT_OPTION 열거형
 작업을 호스트 하는 경우 공용 언어 런타임 (CLR) 블록에서 요청한 작업 수행 해야 여부를 나타내는 값을 포함 합니다.  
@@ -57,4 +57,5 @@ typedef enum {
  **.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>참고자료
+
 - [호스팅 열거형](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)

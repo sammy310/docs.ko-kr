@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 41e10855a7254da4124ac0bf9aa247b90311632b
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 59bfc6785d3ad195e219afc323b7fdb513d8fefc
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57479081"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59092567"
 ---
 # <a name="setassemblyfile2-method"></a>SetAssemblyFile2 메서드
 이름 및 새 어셈블리에 대 한 옵션을 설정합니다. 바인딩되지 않은 모듈을 생성 하는 경우에이 메서드를 호출 하지 마세요.  
@@ -57,6 +57,7 @@ HRESULT SetAssemblyFile2(
  Alink.h가 필요합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [IALink2 인터페이스](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
 - [IALink 인터페이스](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
 - [ALink API](../../../../docs/framework/unmanaged-api/alink/index.md)

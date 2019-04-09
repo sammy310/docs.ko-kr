@@ -2,12 +2,12 @@
 title: <rsa>
 ms.date: 03/30/2017
 ms.assetid: ae1f2267-e40d-42ff-8abf-06ab7067bdb9
-ms.openlocfilehash: 126a6923469580d2d9481ab4b999560d9beda398
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 0e307069bd3a98153cc66147ba7bcf511cf13a8e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55273571"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59091657"
 ---
 # <a name="rsa"></a>\<rsa>
 이 ID를 가진 엔드포인트와 연결되는 보안 WCF 클라이언트는 서버가 나타내는 클레임 중에 이 ID 생성에 사용된 RSA 공개 키가 포함된 클레임이 있음을 확인합니다.  
@@ -54,6 +54,7 @@ ms.locfileid: "55273571"
 ```  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.ServiceModel.Configuration.IdentityElement>
 - <xref:System.ServiceModel.EndpointAddress>
 - <xref:System.ServiceModel.EndpointAddress.Identity%2A>

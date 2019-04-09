@@ -1,15 +1,15 @@
 ---
-title: '방법: 메타 데이터 검색 및 규격 서비스 구현'
+title: '방법: 메타데이터 검색 및 규정 준수 서비스 구현'
 ms.date: 03/30/2017
 ms.assetid: f6f3a2b9-c8aa-4b0b-832c-ec2927bf1163
-ms.openlocfilehash: a043672ad564341209bc179f9d1596c228fe19cd
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2ddc50e2851217002c825163761855d649b56db1
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54608497"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59095973"
 ---
-# <a name="how-to-retrieve-metadata-and-implement-a-compliant-service"></a>방법: 메타 데이터 검색 및 규격 서비스 구현
+# <a name="how-to-retrieve-metadata-and-implement-a-compliant-service"></a>방법: 메타데이터 검색 및 규정 준수 서비스 구현
 서비스를 디자인하는 사람과 구현하는 사람이 다른 경우가 많습니다. 상호 운용하는 응용 프로그램이 중요한 환경에서는 WSDL(웹 서비스 기술 언어)로 계약을 디자인하거나 설명할 수 있으며 개발자는 제공된 계약에 따라 서비스를 구현해야 합니다. 기존 서비스를 Windows Communication Foundation (WCF) 마이그레이션 있지만 통신 형식을 유지할 수도 있습니다. 또한 이중 계약에서는 호출자가 콜백 계약도 구현해야 합니다.  
   
  이러한 경우에 사용 해야 합니다 [ServiceModel Metadata 유틸리티 도구 (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) (또는 이와 동등한 도구)의 요구 사항을 충족 하기 위해 구현할 수 있는 관리 되는 언어의 서비스 계약 인터페이스를 생성 하는 계약입니다. 일반적으로 [ServiceModel Metadata 유틸리티 도구 (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) 올바른 바인딩을 설정 하는 클라이언트 구성 파일 뿐만 아니라 채널 팩터리 또는 WCF 클라이언트 형식과 함께 사용 되는 서비스 계약을 획득 하는 데 사용 됩니다 및 주소입니다. 생성된 구성 파일을 사용하려면 해당 파일을 서비스 구성 파일로 변경해야 합니다. 서비스 계약을 수정해야 할 수도 있습니다.  
@@ -60,4 +60,5 @@ ms.locfileid: "54608497"
 [!code-xml[ClientProxyCodeSample#20](../../../../samples/snippets/csharp/VS_Snippets_CFX/clientproxycodesample/cs/hostapplication.exe.config#20)]    
   
 ## <a name="see-also"></a>참고자료
+
 - [ServiceModel Metadata 유틸리티 도구(Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)

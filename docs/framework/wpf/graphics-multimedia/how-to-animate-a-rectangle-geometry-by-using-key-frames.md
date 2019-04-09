@@ -9,12 +9,12 @@ helpviewer_keywords:
 - RectangleGeometry objects [WPF], animating with key frames
 - animation [WPF], RectangleGeometry objects with key frames
 ms.assetid: a8b45ceb-0e32-4ba1-928f-df6d30db17c6
-ms.openlocfilehash: 30bd09ac61c855e0cda81261ca652f0574aa73e3
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 7a4ba4e682ad5880e7059b1a5babe3094bd1770a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57375937"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59139622"
 ---
 # <a name="how-to-animate-a-rectangle-geometry-by-using-key-frames"></a>방법: 키 프레임을 사용하여 사각형에 애니메이션 효과 주기
 애니메이션을 적용 하는 방법을 보여 주는이 예제는 <xref:System.Windows.Media.RectangleGeometry.Rect%2A> 의 속성을 <xref:System.Windows.Media.RectangleGeometry> 키 프레임을 사용 하 여 합니다.  
@@ -35,6 +35,7 @@ ms.locfileid: "57375937"
  전체 샘플을 보려면 [키 프레임 애니메이션 샘플](https://go.microsoft.com/fwlink/?LinkID=160012)을 참조하세요.  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Windows.Media.RectangleGeometry>
 - <xref:System.Windows.Media.RectangleGeometry.Rect%2A>
 - <xref:System.Windows.Media.Animation.RectAnimationUsingKeyFrames>

@@ -2,12 +2,12 @@
 title: SQL Server에서 저장 프로시저에 서명
 ms.date: 01/05/2018
 ms.assetid: eeed752c-0084-48e5-9dca-381353007a0d
-ms.openlocfilehash: da7b21d725d301006288245c940e4367c3ce8568
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1caf3de06a03d4eab97e68ac1ecdc00dacdd5dc8
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54606824"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59094621"
 ---
 # <a name="signing-stored-procedures-in-sql-server"></a>SQL Server에서 저장 프로시저에 서명
  디지털 설명은 서명자의 개인 키로 암호화된 데이터 다이제스트입니다. 개인 키를 사용하면 디지털 서명이 소유자별로 고유하게 유지됩니다. 저장된 프로시저, (인라인 테이블 반환 함수)를 제외한 함수, 트리거 및 어셈블리를 서명할 수 있습니다.  
@@ -55,6 +55,7 @@ ms.locfileid: "54606824"
 |[인증서를 사용 하 여 저장된 프로시저에 서명](/sql/relational-databases/tutorial-signing-stored-procedures-with-a-certificate) SQL Server 온라인 설명서의|인증서로 저장 프로시저에 서명하는 방법에 대한 자습서를 제공합니다.|  
   
 ## <a name="see-also"></a>참고자료
+
 - [ADO.NET 응용 프로그램 보안](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
 - [SQL Server 보안 개요](../../../../../docs/framework/data/adonet/sql/overview-of-sql-server-security.md)
 - [SQL Server의 응용 프로그램 보안 시나리오](../../../../../docs/framework/data/adonet/sql/application-security-scenarios-in-sql-server.md)

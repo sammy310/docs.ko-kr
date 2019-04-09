@@ -8,12 +8,12 @@ helpviewer_keywords:
 - WCF Data Services, deferred content
 - WCF Data Services, loading data
 ms.assetid: 6f143d30-d997-4e6b-bcf0-d5c394ecb108
-ms.openlocfilehash: a05d294f80943e771a298b4442a521de86ff2f19
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7687378ae2a6c7d8021acc53b19544206ee0cc84
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54616968"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59092632"
 ---
 # <a name="how-to-load-related-entities-wcf-data-services"></a>방법: 관련된 엔터티 (WCF Data Services)를 로드 합니다.
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]에서 관련 엔터티를 로드해야 하는 경우 <xref:System.Data.Services.Client.DataServiceContext.LoadProperty%2A> 클래스의 <xref:System.Data.Services.Client.DataServiceContext> 메서드를 사용할 수 있습니다. 사용할 수도 있습니다는 <xref:System.Data.Services.Client.DataServiceQuery%601.Expand%2A> 메서드를를 <xref:System.Data.Services.Client.DataServiceQuery%601> 관련된 엔터티가 같은 쿼리 응답에서 즉시 로드 되도록 해야 합니다.  
@@ -33,4 +33,5 @@ ms.locfileid: "54616968"
  [!code-vb[Astoria Northwind Client#ExpandOrderDetails](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/source.vb#expandorderdetails)]  
   
 ## <a name="see-also"></a>참고자료
+
 - [데이터 서비스 쿼리](../../../../docs/framework/data/wcf/querying-the-data-service-wcf-data-services.md)
