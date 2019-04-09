@@ -12,36 +12,37 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e564ce63f7bf9e04ebf9a0bdcfc819ea23b3b2ff
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4c29d631f84ce2dd7532e32951e71d6597218ebb
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54515562"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59088862"
 ---
-# <a name="icordebugfunction3-interface"></a><span data-ttu-id="e77fe-102">ICorDebugFunction3 인터페이스</span><span class="sxs-lookup"><span data-stu-id="e77fe-102">ICorDebugFunction3 Interface</span></span>
-<span data-ttu-id="e77fe-103">[.NET Framework 4.5.2 이상 버전에서 지원됨]</span><span class="sxs-lookup"><span data-stu-id="e77fe-103">[Supported in the .NET Framework 4.5.2 and later versions]</span></span>  
+# <a name="icordebugfunction3-interface"></a><span data-ttu-id="73957-102">ICorDebugFunction3 인터페이스</span><span class="sxs-lookup"><span data-stu-id="73957-102">ICorDebugFunction3 Interface</span></span>
+<span data-ttu-id="73957-103">[.NET Framework 4.5.2 이상 버전에서 지원됨]</span><span class="sxs-lookup"><span data-stu-id="73957-103">[Supported in the .NET Framework 4.5.2 and later versions]</span></span>  
   
- <span data-ttu-id="e77fe-104">ReJIT 요청의 코드에 대 한 액세스를 제공 하는 ICorDebugFunction 인터페이스를 논리적으로 확장 합니다.</span><span class="sxs-lookup"><span data-stu-id="e77fe-104">Logically extends the ICorDebugFunction interface to provide access to code from a ReJIT request.</span></span>  
+ <span data-ttu-id="73957-104">ReJIT 요청의 코드에 대 한 액세스를 제공 하는 ICorDebugFunction 인터페이스를 논리적으로 확장 합니다.</span><span class="sxs-lookup"><span data-stu-id="73957-104">Logically extends the ICorDebugFunction interface to provide access to code from a ReJIT request.</span></span>  
   
-## <a name="methods"></a><span data-ttu-id="e77fe-105">메서드</span><span class="sxs-lookup"><span data-stu-id="e77fe-105">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="73957-105">메서드</span><span class="sxs-lookup"><span data-stu-id="73957-105">Methods</span></span>  
   
-|<span data-ttu-id="e77fe-106">메서드</span><span class="sxs-lookup"><span data-stu-id="e77fe-106">Method</span></span>|<span data-ttu-id="e77fe-107">설명</span><span class="sxs-lookup"><span data-stu-id="e77fe-107">Description</span></span>|  
+|<span data-ttu-id="73957-106">메서드</span><span class="sxs-lookup"><span data-stu-id="73957-106">Method</span></span>|<span data-ttu-id="73957-107">설명</span><span class="sxs-lookup"><span data-stu-id="73957-107">Description</span></span>|  
 |------------|-----------------|  
-|[<span data-ttu-id="e77fe-108">GetActiveReJitRequestILCode 메서드</span><span class="sxs-lookup"><span data-stu-id="e77fe-108">GetActiveReJitRequestILCode Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugfunction3-getactiverejitrequestilcode-method.md)|<span data-ttu-id="e77fe-109">한 인터페이스 포인터를 가져옵니다는 [ICorDebugILCode](../../../../docs/framework/unmanaged-api/debugging/icordebugilcode-interface.md) 활성 ReJIT 요청의 IL을 포함 하는 합니다.</span><span class="sxs-lookup"><span data-stu-id="e77fe-109">Gets an interface pointer to an [ICorDebugILCode](../../../../docs/framework/unmanaged-api/debugging/icordebugilcode-interface.md) that contains the IL from an active ReJIT request.</span></span>|  
+|[<span data-ttu-id="73957-108">GetActiveReJitRequestILCode 메서드</span><span class="sxs-lookup"><span data-stu-id="73957-108">GetActiveReJitRequestILCode Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugfunction3-getactiverejitrequestilcode-method.md)|<span data-ttu-id="73957-109">한 인터페이스 포인터를 가져옵니다는 [ICorDebugILCode](../../../../docs/framework/unmanaged-api/debugging/icordebugilcode-interface.md) 활성 ReJIT 요청의 IL을 포함 하는 합니다.</span><span class="sxs-lookup"><span data-stu-id="73957-109">Gets an interface pointer to an [ICorDebugILCode](../../../../docs/framework/unmanaged-api/debugging/icordebugilcode-interface.md) that contains the IL from an active ReJIT request.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="e77fe-110">설명</span><span class="sxs-lookup"><span data-stu-id="e77fe-110">Remarks</span></span>  
+## <a name="remarks"></a><span data-ttu-id="73957-110">설명</span><span class="sxs-lookup"><span data-stu-id="73957-110">Remarks</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="e77fe-111">요구 사항</span><span class="sxs-lookup"><span data-stu-id="e77fe-111">Requirements</span></span>  
- <span data-ttu-id="e77fe-112">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="e77fe-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="73957-111">요구 사항</span><span class="sxs-lookup"><span data-stu-id="73957-111">Requirements</span></span>  
+ <span data-ttu-id="73957-112">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="73957-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="e77fe-113">**헤더:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="e77fe-113">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="73957-113">**헤더:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="73957-113">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="e77fe-114">**라이브러리:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="e77fe-114">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="73957-114">**라이브러리:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="73957-114">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="e77fe-115">**.NET Framework 버전:** [!INCLUDE[net_current_v452plus](../../../../includes/net-current-v452plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="e77fe-115">**.NET Framework Versions:** [!INCLUDE[net_current_v452plus](../../../../includes/net-current-v452plus-md.md)]</span></span>  
+ **<span data-ttu-id="73957-115">.NET Framework 버전:</span><span class="sxs-lookup"><span data-stu-id="73957-115">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v452plus](../../../../includes/net-current-v452plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="e77fe-116">참고자료</span><span class="sxs-lookup"><span data-stu-id="e77fe-116">See also</span></span>
-- [<span data-ttu-id="e77fe-117">디버깅 인터페이스</span><span class="sxs-lookup"><span data-stu-id="e77fe-117">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
-- [<span data-ttu-id="e77fe-118">디버깅</span><span class="sxs-lookup"><span data-stu-id="e77fe-118">Debugging</span></span>](../../../../docs/framework/unmanaged-api/debugging/index.md)
-- [<span data-ttu-id="e77fe-119">ReJIT: 방법 가이드</span><span class="sxs-lookup"><span data-stu-id="e77fe-119">ReJIT: A How-To Guide</span></span>](https://blogs.msdn.com/b/davbr/archive/2011/10/12/rejit-a-how-to-guide.aspx)
+## <a name="see-also"></a><span data-ttu-id="73957-116">참고자료</span><span class="sxs-lookup"><span data-stu-id="73957-116">See also</span></span>
+
+- [<span data-ttu-id="73957-117">디버깅 인터페이스</span><span class="sxs-lookup"><span data-stu-id="73957-117">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [<span data-ttu-id="73957-118">디버깅</span><span class="sxs-lookup"><span data-stu-id="73957-118">Debugging</span></span>](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [<span data-ttu-id="73957-119">ReJIT: 방법 가이드</span><span class="sxs-lookup"><span data-stu-id="73957-119">ReJIT: A How-To Guide</span></span>](https://blogs.msdn.com/b/davbr/archive/2011/10/12/rejit-a-how-to-guide.aspx)

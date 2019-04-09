@@ -8,21 +8,21 @@ helpviewer_keywords:
 - Windows Presentation Foundation [WPF], data
 - data [WPF]
 ms.assetid: dea454e2-abd8-4c53-ba37-d3ed53187d64
-ms.openlocfilehash: 26c9297586df18bb89d1f769c5457eae12e3b211
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: ee45771a289804395387f9d6d49b667da1a76024
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57353974"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59077734"
 ---
-# <a name="data"></a><span data-ttu-id="6ab35-102">데이터</span><span class="sxs-lookup"><span data-stu-id="6ab35-102">Data</span></span>
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] <span data-ttu-id="6ab35-103">데이터 바인딩은 응용 프로그램이 데이터를 제공하고 상호 작용할 수 있는 간단하고 일관된 방법을 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="6ab35-103">data binding provides a simple and consistent way for applications to present and interact with data.</span></span> <span data-ttu-id="6ab35-104">다양한 데이터 소스에서 [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] 개체 및 XML의 형태로 데이터에 요소를 바인딩할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="6ab35-104">Elements can be bound to data from a variety of data sources in the form of [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] objects and XML.</span></span> [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] <span data-ttu-id="6ab35-105">또한 끌어서 놓기 작업을 통해 데이터 전송을 위한 메커니즘을 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="6ab35-105">also provides a mechanism for the transfer of data through drag-and-drop operations.</span></span>  
+# <a name="data"></a><span data-ttu-id="dd35c-102">데이터</span><span class="sxs-lookup"><span data-stu-id="dd35c-102">Data</span></span>
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] <span data-ttu-id="dd35c-103">데이터 바인딩 응용 프로그램 데이터와 상호 작용을 간단 하 고 일관적인 방법을 제공 합니다.</span><span class="sxs-lookup"><span data-stu-id="dd35c-103">data binding provides a simple and consistent way for applications to present and interact with data.</span></span> <span data-ttu-id="dd35c-104">다양한 데이터 소스에서 [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] 개체 및 XML의 형태로 데이터에 요소를 바인딩할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="dd35c-104">Elements can be bound to data from a variety of data sources in the form of [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] objects and XML.</span></span> [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] <span data-ttu-id="dd35c-105">또한 끌어서 놓기 작업을 통해 데이터의 전송 메커니즘을 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="dd35c-105">also provides a mechanism for the transfer of data through drag-and-drop operations.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="6ab35-106">섹션 내용</span><span class="sxs-lookup"><span data-stu-id="6ab35-106">In This Section</span></span>  
- [<span data-ttu-id="6ab35-107">데이터 바인딩</span><span class="sxs-lookup"><span data-stu-id="6ab35-107">Data Binding</span></span>](data-binding-wpf.md)  
- [<span data-ttu-id="6ab35-108">끌어서 놓기</span><span class="sxs-lookup"><span data-stu-id="6ab35-108">Drag and Drop</span></span>](../advanced/drag-and-drop.md)  
+## <a name="in-this-section"></a><span data-ttu-id="dd35c-106">섹션 내용</span><span class="sxs-lookup"><span data-stu-id="dd35c-106">In This Section</span></span>  
+ [<span data-ttu-id="dd35c-107">데이터 바인딩</span><span class="sxs-lookup"><span data-stu-id="dd35c-107">Data Binding</span></span>](data-binding-wpf.md)  
+ [<span data-ttu-id="dd35c-108">끌어서 놓기</span><span class="sxs-lookup"><span data-stu-id="dd35c-108">Drag and Drop</span></span>](../advanced/drag-and-drop.md)  
   
-## <a name="reference"></a><span data-ttu-id="6ab35-109">참조</span><span class="sxs-lookup"><span data-stu-id="6ab35-109">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="dd35c-109">참조</span><span class="sxs-lookup"><span data-stu-id="dd35c-109">Reference</span></span>  
  <xref:System.Windows.Data>  
   
  <xref:System.Windows.Data.Binding>  
@@ -31,13 +31,14 @@ ms.locfileid: "57353974"
   
  <xref:System.Windows.Controls.DataTemplateSelector>  
   
-## <a name="related-sections"></a><span data-ttu-id="6ab35-110">관련 단원</span><span class="sxs-lookup"><span data-stu-id="6ab35-110">Related Sections</span></span>  
- [<span data-ttu-id="6ab35-111">컨트롤</span><span class="sxs-lookup"><span data-stu-id="6ab35-111">Controls</span></span>](../controls/index.md)  
+## <a name="related-sections"></a><span data-ttu-id="dd35c-110">관련 단원</span><span class="sxs-lookup"><span data-stu-id="dd35c-110">Related Sections</span></span>  
+ [<span data-ttu-id="dd35c-111">컨트롤</span><span class="sxs-lookup"><span data-stu-id="dd35c-111">Controls</span></span>](../controls/index.md)  
   
- [<span data-ttu-id="6ab35-112">스타일 지정 및 템플릿</span><span class="sxs-lookup"><span data-stu-id="6ab35-112">Styling and Templating</span></span>](../controls/styling-and-templating.md)  
+ [<span data-ttu-id="dd35c-112">스타일 지정 및 템플릿</span><span class="sxs-lookup"><span data-stu-id="dd35c-112">Styling and Templating</span></span>](../controls/styling-and-templating.md)  
   
- [<span data-ttu-id="6ab35-113">데이터 바인딩</span><span class="sxs-lookup"><span data-stu-id="6ab35-113">Data Binding</span></span>](../advanced/optimizing-performance-data-binding.md)  
+ [<span data-ttu-id="dd35c-113">데이터 바인딩</span><span class="sxs-lookup"><span data-stu-id="dd35c-113">Data Binding</span></span>](../advanced/optimizing-performance-data-binding.md)  
   
-## <a name="see-also"></a><span data-ttu-id="6ab35-114">참고자료</span><span class="sxs-lookup"><span data-stu-id="6ab35-114">See also</span></span>
-- [<span data-ttu-id="6ab35-115">연습: 내 첫 WPF 데스크톱 애플리케이션</span><span class="sxs-lookup"><span data-stu-id="6ab35-115">Walkthrough: My first WPF desktop application</span></span>](../getting-started/walkthrough-my-first-wpf-desktop-application.md)
-- [<span data-ttu-id="6ab35-116">연습: WPF 응용 프로그램에서 응용 프로그램 데이터 캐싱</span><span class="sxs-lookup"><span data-stu-id="6ab35-116">Walkthrough: Caching Application Data in a WPF Application</span></span>](../advanced/walkthrough-caching-application-data-in-a-wpf-application.md)
+## <a name="see-also"></a><span data-ttu-id="dd35c-114">참고자료</span><span class="sxs-lookup"><span data-stu-id="dd35c-114">See also</span></span>
+
+- [<span data-ttu-id="dd35c-115">연습: 내 첫 WPF 데스크톱 애플리케이션</span><span class="sxs-lookup"><span data-stu-id="dd35c-115">Walkthrough: My first WPF desktop application</span></span>](../getting-started/walkthrough-my-first-wpf-desktop-application.md)
+- [<span data-ttu-id="dd35c-116">연습: WPF 애플리케이션에서 애플리케이션 데이터 캐싱</span><span class="sxs-lookup"><span data-stu-id="dd35c-116">Walkthrough: Caching Application Data in a WPF Application</span></span>](../advanced/walkthrough-caching-application-data-in-a-wpf-application.md)

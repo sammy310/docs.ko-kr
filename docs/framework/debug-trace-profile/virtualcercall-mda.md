@@ -11,29 +11,29 @@ helpviewer_keywords:
 ms.assetid: 1eb18c7a-f5e0-443f-80fb-67bfbb047da2
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4315d6ee5f7b63b21fcdb0f8efc5b2a693a3a2c1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e2c8712837dab17f70be32617711c1bad9349508
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54697467"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59086080"
 ---
-# <a name="virtualcercall-mda"></a><span data-ttu-id="ae62a-102">virtualCERCall MDA</span><span class="sxs-lookup"><span data-stu-id="ae62a-102">virtualCERCall MDA</span></span>
-<span data-ttu-id="ae62a-103">`virtualCERCall` MDA(관리 디버깅 도우미)는 CER(제약이 있는 실행 영역) 호출 그래프 내의 호출 사이트가 가상 대상, 즉 최종이 아닌 가상 메서드에 대한 가상 호출 또는 인터페이스를 사용한 호출을 참조함을 나타내는 경고로 활성화됩니다.</span><span class="sxs-lookup"><span data-stu-id="ae62a-103">The `virtualCERCall` managed debugging assistant (MDA) is activated as a warning indicating that a call site within a constrained execution region (CER) call graph refers to a virtual target, that is, a virtual call to a non-final virtual method or a call using an interface.</span></span> <span data-ttu-id="ae62a-104">CLR(공용 언어 런타임)은 중간 언어 및 메타데이터 분석만으로 이러한 호출의 대상 메서드를 예측할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="ae62a-104">The common language runtime (CLR) cannot predict the destination method of these calls from the intermediate language and metadata analysis alone.</span></span> <span data-ttu-id="ae62a-105">결과적으로, CER 그래프의 일부로 호출 트리를 준비할 수 없으며 하위 트리가 자동으로 차단될 수 없다는 점에서 스레드가 중단됩니다.</span><span class="sxs-lookup"><span data-stu-id="ae62a-105">As a result, the call tree cannot be prepared as part of the CER graph and thread aborts in that subtree cannot be automatically blocked.</span></span> <span data-ttu-id="ae62a-106">이 MDA는 호출 대상을 컴퓨팅하는 데 필요한 추가 정보가 런타임 시 확인된 다음 <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareMethod%2A> 메서드에 대한 명시적 호출을 사용하여 CER을 확장해야 하는 경우를 경고합니다.</span><span class="sxs-lookup"><span data-stu-id="ae62a-106">This MDA warns of cases where a CER might need to be extended by using explicit calls to the <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareMethod%2A> method once the additional information required to compute the call target is known at run time.</span></span>  
+# <a name="virtualcercall-mda"></a><span data-ttu-id="288b3-102">virtualCERCall MDA</span><span class="sxs-lookup"><span data-stu-id="288b3-102">virtualCERCall MDA</span></span>
+<span data-ttu-id="288b3-103">`virtualCERCall` MDA(관리 디버깅 도우미)는 CER(제약이 있는 실행 영역) 호출 그래프 내의 호출 사이트가 가상 대상, 즉 최종이 아닌 가상 메서드에 대한 가상 호출 또는 인터페이스를 사용한 호출을 참조함을 나타내는 경고로 활성화됩니다.</span><span class="sxs-lookup"><span data-stu-id="288b3-103">The `virtualCERCall` managed debugging assistant (MDA) is activated as a warning indicating that a call site within a constrained execution region (CER) call graph refers to a virtual target, that is, a virtual call to a non-final virtual method or a call using an interface.</span></span> <span data-ttu-id="288b3-104">CLR(공용 언어 런타임)은 중간 언어 및 메타데이터 분석만으로 이러한 호출의 대상 메서드를 예측할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="288b3-104">The common language runtime (CLR) cannot predict the destination method of these calls from the intermediate language and metadata analysis alone.</span></span> <span data-ttu-id="288b3-105">결과적으로, CER 그래프의 일부로 호출 트리를 준비할 수 없으며 하위 트리가 자동으로 차단될 수 없다는 점에서 스레드가 중단됩니다.</span><span class="sxs-lookup"><span data-stu-id="288b3-105">As a result, the call tree cannot be prepared as part of the CER graph and thread aborts in that subtree cannot be automatically blocked.</span></span> <span data-ttu-id="288b3-106">이 MDA는 호출 대상을 컴퓨팅하는 데 필요한 추가 정보가 런타임 시 확인된 다음 <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareMethod%2A> 메서드에 대한 명시적 호출을 사용하여 CER을 확장해야 하는 경우를 경고합니다.</span><span class="sxs-lookup"><span data-stu-id="288b3-106">This MDA warns of cases where a CER might need to be extended by using explicit calls to the <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareMethod%2A> method once the additional information required to compute the call target is known at run time.</span></span>  
   
-## <a name="symptoms"></a><span data-ttu-id="ae62a-107">증상</span><span class="sxs-lookup"><span data-stu-id="ae62a-107">Symptoms</span></span>  
- <span data-ttu-id="ae62a-108">스레드가 중단되거나 애플리케이션 도메인이 언로드될 때 CER이 실행되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="ae62a-108">CERs that do not run when a thread is aborted or an application domain is unloaded.</span></span>  
+## <a name="symptoms"></a><span data-ttu-id="288b3-107">증상</span><span class="sxs-lookup"><span data-stu-id="288b3-107">Symptoms</span></span>  
+ <span data-ttu-id="288b3-108">스레드가 중단되거나 애플리케이션 도메인이 언로드될 때 CER이 실행되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="288b3-108">CERs that do not run when a thread is aborted or an application domain is unloaded.</span></span>  
   
-## <a name="cause"></a><span data-ttu-id="ae62a-109">원인</span><span class="sxs-lookup"><span data-stu-id="ae62a-109">Cause</span></span>  
- <span data-ttu-id="ae62a-110">CER에 자동으로 준비할 수 없는 가상 메서드 호출이 포함되어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="ae62a-110">A CER contains a call to a virtual method that cannot be prepared automatically.</span></span>  
+## <a name="cause"></a><span data-ttu-id="288b3-109">원인</span><span class="sxs-lookup"><span data-stu-id="288b3-109">Cause</span></span>  
+ <span data-ttu-id="288b3-110">CER에 자동으로 준비할 수 없는 가상 메서드 호출이 포함되어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="288b3-110">A CER contains a call to a virtual method that cannot be prepared automatically.</span></span>  
   
-## <a name="resolution"></a><span data-ttu-id="ae62a-111">해결</span><span class="sxs-lookup"><span data-stu-id="ae62a-111">Resolution</span></span>  
- <span data-ttu-id="ae62a-112">가상 메서드에 대해 <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareMethod%2A>를 호출합니다.</span><span class="sxs-lookup"><span data-stu-id="ae62a-112">Call <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareMethod%2A> for the virtual method.</span></span>  
+## <a name="resolution"></a><span data-ttu-id="288b3-111">해결</span><span class="sxs-lookup"><span data-stu-id="288b3-111">Resolution</span></span>  
+ <span data-ttu-id="288b3-112">가상 메서드에 대해 <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareMethod%2A>를 호출합니다.</span><span class="sxs-lookup"><span data-stu-id="288b3-112">Call <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareMethod%2A> for the virtual method.</span></span>  
   
-## <a name="effect-on-the-runtime"></a><span data-ttu-id="ae62a-113">런타임에 대한 영향</span><span class="sxs-lookup"><span data-stu-id="ae62a-113">Effect on the Runtime</span></span>  
- <span data-ttu-id="ae62a-114">이 MDA는 CLR에 아무런 영향을 미치지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="ae62a-114">This MDA has no effect on the CLR.</span></span>  
+## <a name="effect-on-the-runtime"></a><span data-ttu-id="288b3-113">런타임에 대한 영향</span><span class="sxs-lookup"><span data-stu-id="288b3-113">Effect on the Runtime</span></span>  
+ <span data-ttu-id="288b3-114">이 MDA는 CLR에 아무런 영향을 미치지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="288b3-114">This MDA has no effect on the CLR.</span></span>  
   
-## <a name="output"></a><span data-ttu-id="ae62a-115">출력</span><span class="sxs-lookup"><span data-stu-id="ae62a-115">Output</span></span>  
+## <a name="output"></a><span data-ttu-id="288b3-115">출력</span><span class="sxs-lookup"><span data-stu-id="288b3-115">Output</span></span>  
   
 ```  
 Method 'MethodWithCer', while executing within a constrained execution region, makes a call  
@@ -46,7 +46,7 @@ declaringType name="VirtualCERCall+MyClass"
     callsite name="MethodWithCer" offset="0x0024"  
 ```  
   
-## <a name="configuration"></a><span data-ttu-id="ae62a-116">구성하기</span><span class="sxs-lookup"><span data-stu-id="ae62a-116">Configuration</span></span>  
+## <a name="configuration"></a><span data-ttu-id="288b3-116">구성하기</span><span class="sxs-lookup"><span data-stu-id="288b3-116">Configuration</span></span>  
   
 ```xml  
 <mdaConfig>  
@@ -56,7 +56,7 @@ declaringType name="VirtualCERCall+MyClass"
 </mdaConfig>  
 ```  
   
-## <a name="example"></a><span data-ttu-id="ae62a-117">예제</span><span class="sxs-lookup"><span data-stu-id="ae62a-117">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="288b3-117">예제</span><span class="sxs-lookup"><span data-stu-id="288b3-117">Example</span></span>  
   
 ```csharp
 class MyClass  
@@ -96,7 +96,8 @@ void MethodWithCer(MyClass object)
 }  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="ae62a-118">참고자료</span><span class="sxs-lookup"><span data-stu-id="ae62a-118">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="288b3-118">참고자료</span><span class="sxs-lookup"><span data-stu-id="288b3-118">See also</span></span>
+
 - <xref:System.Runtime.InteropServices.MarshalAsAttribute>
-- [<span data-ttu-id="ae62a-119">관리 디버깅 도우미를 사용하여 오류 진단</span><span class="sxs-lookup"><span data-stu-id="ae62a-119">Diagnosing Errors with Managed Debugging Assistants</span></span>](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
-- [<span data-ttu-id="ae62a-120">interop 마샬링</span><span class="sxs-lookup"><span data-stu-id="ae62a-120">Interop Marshaling</span></span>](../../../docs/framework/interop/interop-marshaling.md)
+- [<span data-ttu-id="288b3-119">관리 디버깅 도우미를 사용하여 오류 진단</span><span class="sxs-lookup"><span data-stu-id="288b3-119">Diagnosing Errors with Managed Debugging Assistants</span></span>](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
+- [<span data-ttu-id="288b3-120">Interop 마샬링</span><span class="sxs-lookup"><span data-stu-id="288b3-120">Interop Marshaling</span></span>](../../../docs/framework/interop/interop-marshaling.md)

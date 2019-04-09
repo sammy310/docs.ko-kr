@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cae8f326a293a40164120dc17c13e451c4e93f1f
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 80402234d9374fa4f16e1f8bb315536a9bdfb2c2
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57489438"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59081517"
 ---
-# <a name="iassemblynameisequal-method"></a><span data-ttu-id="a8192-102">IAssemblyName::IsEqual 메서드</span><span class="sxs-lookup"><span data-stu-id="a8192-102">IAssemblyName::IsEqual Method</span></span>
-<span data-ttu-id="a8192-103">지정 된 결정 [IAssemblyName](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md) 개체와 같으면이 `IAssemblyName`지정된 된 비교 플래그에 따라 합니다.</span><span class="sxs-lookup"><span data-stu-id="a8192-103">Determines whether a specified [IAssemblyName](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md) object is equal to this `IAssemblyName`, based on the specified comparison flags.</span></span>  
+# <a name="iassemblynameisequal-method"></a><span data-ttu-id="567e7-102">IAssemblyName::IsEqual 메서드</span><span class="sxs-lookup"><span data-stu-id="567e7-102">IAssemblyName::IsEqual Method</span></span>
+<span data-ttu-id="567e7-103">지정 된 결정 [IAssemblyName](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md) 개체와 같으면이 `IAssemblyName`지정된 된 비교 플래그에 따라 합니다.</span><span class="sxs-lookup"><span data-stu-id="567e7-103">Determines whether a specified [IAssemblyName](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md) object is equal to this `IAssemblyName`, based on the specified comparison flags.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="a8192-104">구문</span><span class="sxs-lookup"><span data-stu-id="a8192-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="567e7-104">구문</span><span class="sxs-lookup"><span data-stu-id="567e7-104">Syntax</span></span>  
   
 ```  
 HRESULT IsEqual (  
@@ -36,20 +36,21 @@ HRESULT IsEqual (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="a8192-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="a8192-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="567e7-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="567e7-105">Parameters</span></span>  
  `pName`  
- <span data-ttu-id="a8192-106">[in] 합니다 `IAssemblyName` 비교 하는 개체 `IAssemblyName`합니다.</span><span class="sxs-lookup"><span data-stu-id="a8192-106">[in] The `IAssemblyName` object to which to compare this `IAssemblyName`.</span></span>  
+ <span data-ttu-id="567e7-106">[in] 합니다 `IAssemblyName` 비교 하는 개체 `IAssemblyName`합니다.</span><span class="sxs-lookup"><span data-stu-id="567e7-106">[in] The `IAssemblyName` object to which to compare this `IAssemblyName`.</span></span>  
   
  `dwCmpFlags`  
- <span data-ttu-id="a8192-107">[in] 비트 조합 [ASM_CMP_FLAGS](../../../../docs/framework/unmanaged-api/fusion/asm-cmp-flags-enumeration.md) 비교에 영향을 주는 값입니다.</span><span class="sxs-lookup"><span data-stu-id="a8192-107">[in] A bitwise combination of [ASM_CMP_FLAGS](../../../../docs/framework/unmanaged-api/fusion/asm-cmp-flags-enumeration.md) values that influence the comparison.</span></span>  
+ <span data-ttu-id="567e7-107">[in] 비트 조합 [ASM_CMP_FLAGS](../../../../docs/framework/unmanaged-api/fusion/asm-cmp-flags-enumeration.md) 비교에 영향을 주는 값입니다.</span><span class="sxs-lookup"><span data-stu-id="567e7-107">[in] A bitwise combination of [ASM_CMP_FLAGS](../../../../docs/framework/unmanaged-api/fusion/asm-cmp-flags-enumeration.md) values that influence the comparison.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="a8192-108">요구 사항</span><span class="sxs-lookup"><span data-stu-id="a8192-108">Requirements</span></span>  
- <span data-ttu-id="a8192-109">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="a8192-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="567e7-108">요구 사항</span><span class="sxs-lookup"><span data-stu-id="567e7-108">Requirements</span></span>  
+ <span data-ttu-id="567e7-109">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="567e7-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="a8192-110">**헤더:** Fusion.h</span><span class="sxs-lookup"><span data-stu-id="a8192-110">**Header:** Fusion.h</span></span>  
+ <span data-ttu-id="567e7-110">**헤더:** Fusion.h</span><span class="sxs-lookup"><span data-stu-id="567e7-110">**Header:** Fusion.h</span></span>  
   
- <span data-ttu-id="a8192-111">**.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="a8192-111">**NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ **<span data-ttu-id="567e7-111">.NET Framework 버전:</span><span class="sxs-lookup"><span data-stu-id="567e7-111">NET Framework Versions:</span></span>** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="a8192-112">참고자료</span><span class="sxs-lookup"><span data-stu-id="a8192-112">See also</span></span>
-- [<span data-ttu-id="a8192-113">IAssemblyName 인터페이스</span><span class="sxs-lookup"><span data-stu-id="a8192-113">IAssemblyName Interface</span></span>](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md)
-- [<span data-ttu-id="a8192-114">Fusion 열거형</span><span class="sxs-lookup"><span data-stu-id="a8192-114">Fusion Enumerations</span></span>](../../../../docs/framework/unmanaged-api/fusion/fusion-enumerations.md)
+## <a name="see-also"></a><span data-ttu-id="567e7-112">참고자료</span><span class="sxs-lookup"><span data-stu-id="567e7-112">See also</span></span>
+
+- [<span data-ttu-id="567e7-113">IAssemblyName 인터페이스</span><span class="sxs-lookup"><span data-stu-id="567e7-113">IAssemblyName Interface</span></span>](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md)
+- [<span data-ttu-id="567e7-114">Fusion 열거형</span><span class="sxs-lookup"><span data-stu-id="567e7-114">Fusion Enumerations</span></span>](../../../../docs/framework/unmanaged-api/fusion/fusion-enumerations.md)

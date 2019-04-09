@@ -10,29 +10,29 @@ helpviewer_keywords:
 - data binding [Windows Forms], MaskedTextBox control [Windows Forms]
 - MaskedTextBox control [Windows Forms], binding data
 ms.assetid: 34b29f07-e8df-48d4-b08b-53fcca524708
-ms.openlocfilehash: b03eff45b8494253918ae4462c29f50568c81569
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 0350d6e690d54d6176ede3b858f75829326b7556
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57717468"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59090604"
 ---
-# <a name="how-to-bind-data-to-the-maskedtextbox-control"></a><span data-ttu-id="f5f03-102">방법: MaskedTextBox 컨트롤에 데이터 바인딩</span><span class="sxs-lookup"><span data-stu-id="f5f03-102">How to: Bind Data to the MaskedTextBox Control</span></span>
-<span data-ttu-id="f5f03-103">데이터를 바인딩할 수 있습니다는 <xref:System.Windows.Forms.MaskedTextBox> 다른 Windows Forms 컨트롤에 같이 제어 합니다.</span><span class="sxs-lookup"><span data-stu-id="f5f03-103">You can bind data to a <xref:System.Windows.Forms.MaskedTextBox> control just as you can to any other Windows Forms control.</span></span> <span data-ttu-id="f5f03-104">그러나 데이터베이스에서 데이터 형식의 마스크 정의 필요한 형식이 일치 하지 않으면, 데이터의 서식을 다시 지정 해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="f5f03-104">However, if the format of your data in the database does not match the format expected by your mask definition, you will need to reformat the data.</span></span> <span data-ttu-id="f5f03-105">다음 절차를 사용 하 여 이렇게 하는 방법에 설명 합니다 <xref:System.Windows.Forms.Binding.Format> 및 <xref:System.Windows.Forms.Binding.Parse> 의 이벤트는 <xref:System.Windows.Forms.Binding> 클래스를 별도 전화 번호를 표시 및 편집할 수 있는 단일 필드로 확장 데이터베이스 필드를 전화 합니다.</span><span class="sxs-lookup"><span data-stu-id="f5f03-105">The following procedure demonstrates how to do this using the <xref:System.Windows.Forms.Binding.Format> and <xref:System.Windows.Forms.Binding.Parse> events of the <xref:System.Windows.Forms.Binding> class to display separate phone number and phone extension database fields as a single editable field.</span></span>  
+# <a name="how-to-bind-data-to-the-maskedtextbox-control"></a><span data-ttu-id="09943-102">방법: MaskedTextBox 컨트롤에 데이터 바인딩</span><span class="sxs-lookup"><span data-stu-id="09943-102">How to: Bind Data to the MaskedTextBox Control</span></span>
+<span data-ttu-id="09943-103">데이터를 바인딩할 수 있습니다는 <xref:System.Windows.Forms.MaskedTextBox> 다른 Windows Forms 컨트롤에 같이 제어 합니다.</span><span class="sxs-lookup"><span data-stu-id="09943-103">You can bind data to a <xref:System.Windows.Forms.MaskedTextBox> control just as you can to any other Windows Forms control.</span></span> <span data-ttu-id="09943-104">그러나 데이터베이스에서 데이터 형식의 마스크 정의 필요한 형식이 일치 하지 않으면, 데이터의 서식을 다시 지정 해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="09943-104">However, if the format of your data in the database does not match the format expected by your mask definition, you will need to reformat the data.</span></span> <span data-ttu-id="09943-105">다음 절차를 사용 하 여 이렇게 하는 방법에 설명 합니다 <xref:System.Windows.Forms.Binding.Format> 및 <xref:System.Windows.Forms.Binding.Parse> 의 이벤트는 <xref:System.Windows.Forms.Binding> 클래스를 별도 전화 번호를 표시 및 편집할 수 있는 단일 필드로 확장 데이터베이스 필드를 전화 합니다.</span><span class="sxs-lookup"><span data-stu-id="09943-105">The following procedure demonstrates how to do this using the <xref:System.Windows.Forms.Binding.Format> and <xref:System.Windows.Forms.Binding.Parse> events of the <xref:System.Windows.Forms.Binding> class to display separate phone number and phone extension database fields as a single editable field.</span></span>  
   
- <span data-ttu-id="f5f03-106">다음 절차는 Northwind 샘플 데이터베이스가 설치 된 SQL Server 데이터베이스에 액세스할 수 있는지에 필요 합니다.</span><span class="sxs-lookup"><span data-stu-id="f5f03-106">The following procedure requires that you have access to a SQL Server database with the Northwind sample database installed.</span></span>  
+ <span data-ttu-id="09943-106">다음 절차는 Northwind 샘플 데이터베이스가 설치 된 SQL Server 데이터베이스에 액세스할 수 있는지에 필요 합니다.</span><span class="sxs-lookup"><span data-stu-id="09943-106">The following procedure requires that you have access to a SQL Server database with the Northwind sample database installed.</span></span>  
   
-### <a name="to-bind-data-to-a-maskedtextbox-control"></a><span data-ttu-id="f5f03-107">MaskedTextBox 컨트롤에 데이터를 바인딩하려면</span><span class="sxs-lookup"><span data-stu-id="f5f03-107">To bind data to a MaskedTextBox control</span></span>  
+### <a name="to-bind-data-to-a-maskedtextbox-control"></a><span data-ttu-id="09943-107">MaskedTextBox 컨트롤에 데이터를 바인딩하려면</span><span class="sxs-lookup"><span data-stu-id="09943-107">To bind data to a MaskedTextBox control</span></span>  
   
-1.  <span data-ttu-id="f5f03-108">새 Windows Forms 프로젝트를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="f5f03-108">Create a new Windows Forms project.</span></span>  
+1.  <span data-ttu-id="09943-108">새 Windows Forms 프로젝트를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="09943-108">Create a new Windows Forms project.</span></span>  
   
-2.  <span data-ttu-id="f5f03-109">두 개의 끌어 <xref:System.Windows.Forms.TextBox> ; 양식에 컨트롤 이름을 지정 하 여 `FirstName` 및 `LastName`합니다.</span><span class="sxs-lookup"><span data-stu-id="f5f03-109">Drag two <xref:System.Windows.Forms.TextBox> controls onto your form; name them `FirstName` and `LastName`.</span></span>  
+2.  <span data-ttu-id="09943-109">두 개의 끌어 <xref:System.Windows.Forms.TextBox> ; 양식에 컨트롤 이름을 지정 하 여 `FirstName` 및 `LastName`합니다.</span><span class="sxs-lookup"><span data-stu-id="09943-109">Drag two <xref:System.Windows.Forms.TextBox> controls onto your form; name them `FirstName` and `LastName`.</span></span>  
   
-3.  <span data-ttu-id="f5f03-110">끌어서를 <xref:System.Windows.Forms.MaskedTextBox> 컨트롤을 폼; 이름을 `PhoneMask`입니다.</span><span class="sxs-lookup"><span data-stu-id="f5f03-110">Drag a <xref:System.Windows.Forms.MaskedTextBox> control onto your form; name it `PhoneMask`.</span></span>  
+3.  <span data-ttu-id="09943-110">끌어서를 <xref:System.Windows.Forms.MaskedTextBox> 컨트롤을 폼; 이름을 `PhoneMask`입니다.</span><span class="sxs-lookup"><span data-stu-id="09943-110">Drag a <xref:System.Windows.Forms.MaskedTextBox> control onto your form; name it `PhoneMask`.</span></span>  
   
-4.  <span data-ttu-id="f5f03-111">설정 된 <xref:System.Windows.Forms.MaskedTextBox.Mask%2A> 속성을 `PhoneMask` 에 `(000) 000-0000 x9999`입니다.</span><span class="sxs-lookup"><span data-stu-id="f5f03-111">Set the <xref:System.Windows.Forms.MaskedTextBox.Mask%2A> property of `PhoneMask` to `(000) 000-0000 x9999`.</span></span>  
+4.  <span data-ttu-id="09943-111">설정 된 <xref:System.Windows.Forms.MaskedTextBox.Mask%2A> 속성을 `PhoneMask` 에 `(000) 000-0000 x9999`입니다.</span><span class="sxs-lookup"><span data-stu-id="09943-111">Set the <xref:System.Windows.Forms.MaskedTextBox.Mask%2A> property of `PhoneMask` to `(000) 000-0000 x9999`.</span></span>  
   
-5.  <span data-ttu-id="f5f03-112">폼에 다음 네임 스페이스 가져오기를 추가 합니다.</span><span class="sxs-lookup"><span data-stu-id="f5f03-112">Add the following namespace imports to the form.</span></span>  
+5.  <span data-ttu-id="09943-112">폼에 다음 네임 스페이스 가져오기를 추가 합니다.</span><span class="sxs-lookup"><span data-stu-id="09943-112">Add the following namespace imports to the form.</span></span>  
   
     ```csharp  
     using System.Data.SqlClient;  
@@ -42,7 +42,7 @@ ms.locfileid: "57717468"
     Imports System.Data.SqlClient  
     ```  
   
-6.  <span data-ttu-id="f5f03-113">폼을 마우스 오른쪽 단추로 클릭 하 고 선택 **코드 보기**합니다.</span><span class="sxs-lookup"><span data-stu-id="f5f03-113">Right-click the form and choose **View Code**.</span></span> <span data-ttu-id="f5f03-114">이 코드를 어디서 나 폼 클래스에 배치 합니다.</span><span class="sxs-lookup"><span data-stu-id="f5f03-114">Place this code anywhere in your form class.</span></span>  
+6.  <span data-ttu-id="09943-113">폼을 마우스 오른쪽 단추로 클릭 하 고 선택 **코드 보기**합니다.</span><span class="sxs-lookup"><span data-stu-id="09943-113">Right-click the form and choose **View Code**.</span></span> <span data-ttu-id="09943-114">이 코드를 어디서 나 폼 클래스에 배치 합니다.</span><span class="sxs-lookup"><span data-stu-id="09943-114">Place this code anywhere in your form class.</span></span>  
   
     ```csharp  
     Binding currentBinding, phoneBinding;  
@@ -136,7 +136,7 @@ ms.locfileid: "57717468"
     End Sub  
     ```  
   
-7.  <span data-ttu-id="f5f03-115">에 대 한 이벤트 처리기를 추가 합니다 <xref:System.Windows.Forms.Binding.Format> 및 <xref:System.Windows.Forms.Binding.Parse> 조합 및 분리 하는 이벤트를 `PhoneNumber` 및 `Extension` 바인딩된 필드 <xref:System.Data.DataSet>합니다.</span><span class="sxs-lookup"><span data-stu-id="f5f03-115">Add event handlers for the <xref:System.Windows.Forms.Binding.Format> and <xref:System.Windows.Forms.Binding.Parse> events to combine and separate the `PhoneNumber` and `Extension` fields from the bound <xref:System.Data.DataSet>.</span></span>  
+7.  <span data-ttu-id="09943-115">에 대 한 이벤트 처리기를 추가 합니다 <xref:System.Windows.Forms.Binding.Format> 및 <xref:System.Windows.Forms.Binding.Parse> 조합 및 분리 하는 이벤트를 `PhoneNumber` 및 `Extension` 바인딩된 필드 <xref:System.Data.DataSet>합니다.</span><span class="sxs-lookup"><span data-stu-id="09943-115">Add event handlers for the <xref:System.Windows.Forms.Binding.Format> and <xref:System.Windows.Forms.Binding.Parse> events to combine and separate the `PhoneNumber` and `Extension` fields from the bound <xref:System.Data.DataSet>.</span></span>  
   
     ```csharp  
     private void phoneBinding_Format(Object sender, ConvertEventArgs e)  
@@ -204,7 +204,7 @@ ms.locfileid: "57717468"
     End Sub  
     ```  
   
-8.  <span data-ttu-id="f5f03-116">두 개의 추가 <xref:System.Windows.Forms.Button> 폼에 컨트롤을 합니다.</span><span class="sxs-lookup"><span data-stu-id="f5f03-116">Add two <xref:System.Windows.Forms.Button> controls to the form.</span></span> <span data-ttu-id="f5f03-117">해당 이름을 `previousButton` 고 `nextButton`입니다.</span><span class="sxs-lookup"><span data-stu-id="f5f03-117">Name them `previousButton` and `nextButton`.</span></span> <span data-ttu-id="f5f03-118">추가할 각 단추를 두 번 클릭을 <xref:System.Windows.Forms.Control.Click> 이벤트 처리기 및 다음 코드 예제 에서처럼 이벤트 처리기를 입력 합니다.</span><span class="sxs-lookup"><span data-stu-id="f5f03-118">Double-click each button to add a <xref:System.Windows.Forms.Control.Click> event handler, and fill in the event handlers as shown in the following code example.</span></span>  
+8.  <span data-ttu-id="09943-116">두 개의 추가 <xref:System.Windows.Forms.Button> 폼에 컨트롤을 합니다.</span><span class="sxs-lookup"><span data-stu-id="09943-116">Add two <xref:System.Windows.Forms.Button> controls to the form.</span></span> <span data-ttu-id="09943-117">해당 이름을 `previousButton` 고 `nextButton`입니다.</span><span class="sxs-lookup"><span data-stu-id="09943-117">Name them `previousButton` and `nextButton`.</span></span> <span data-ttu-id="09943-118">추가할 각 단추를 두 번 클릭을 <xref:System.Windows.Forms.Control.Click> 이벤트 처리기 및 다음 코드 예제 에서처럼 이벤트 처리기를 입력 합니다.</span><span class="sxs-lookup"><span data-stu-id="09943-118">Double-click each button to add a <xref:System.Windows.Forms.Control.Click> event handler, and fill in the event handlers as shown in the following code example.</span></span>  
   
     ```csharp  
     private void previousButton_Click(object sender, EventArgs e)  
@@ -228,26 +228,27 @@ ms.locfileid: "57717468"
     End Sub  
     ```  
   
-9. <span data-ttu-id="f5f03-119">샘플을 실행합니다.</span><span class="sxs-lookup"><span data-stu-id="f5f03-119">Run the sample.</span></span> <span data-ttu-id="f5f03-120">데이터를 편집 하 고 사용 합니다 **이전** 및 **다음** 데이터를 올바르게 유지 되어 있는지 확인 하려면 단추를 <xref:System.Data.DataSet>입니다.</span><span class="sxs-lookup"><span data-stu-id="f5f03-120">Edit the data, and use the **Previous** and **Next** buttons to see that the data is properly persisted to the <xref:System.Data.DataSet>.</span></span>  
+9. <span data-ttu-id="09943-119">샘플을 실행합니다.</span><span class="sxs-lookup"><span data-stu-id="09943-119">Run the sample.</span></span> <span data-ttu-id="09943-120">데이터를 편집 하 고 사용 합니다 **이전** 및 **다음** 데이터를 올바르게 유지 되어 있는지 확인 하려면 단추를 <xref:System.Data.DataSet>입니다.</span><span class="sxs-lookup"><span data-stu-id="09943-120">Edit the data, and use the **Previous** and **Next** buttons to see that the data is properly persisted to the <xref:System.Data.DataSet>.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="f5f03-121">예제</span><span class="sxs-lookup"><span data-stu-id="f5f03-121">Example</span></span>  
- <span data-ttu-id="f5f03-122">다음 코드 예제에는 이전 절차를 완료 한 결과를 나열 하는 전체 코드입니다.</span><span class="sxs-lookup"><span data-stu-id="f5f03-122">The following code example is the full code listing that results from completing the previous procedure.</span></span>  
+## <a name="example"></a><span data-ttu-id="09943-121">예제</span><span class="sxs-lookup"><span data-stu-id="09943-121">Example</span></span>  
+ <span data-ttu-id="09943-122">다음 코드 예제에는 이전 절차를 완료 한 결과를 나열 하는 전체 코드입니다.</span><span class="sxs-lookup"><span data-stu-id="09943-122">The following code example is the full code listing that results from completing the previous procedure.</span></span>  
   
  [!code-cpp[MaskedTextBoxData#1](~/samples/snippets/cpp/VS_Snippets_Winforms/MaskedTextBoxData/cpp/form1.cpp#1)]
  [!code-csharp[MaskedTextBoxData#1](~/samples/snippets/csharp/VS_Snippets_Winforms/MaskedTextBoxData/CS/form1.cs#1)]
  [!code-vb[MaskedTextBoxData#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/MaskedTextBoxData/VB/form1.vb#1)]  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="f5f03-123">코드 컴파일</span><span class="sxs-lookup"><span data-stu-id="f5f03-123">Compiling the Code</span></span>  
+## <a name="compiling-the-code"></a><span data-ttu-id="09943-123">코드 컴파일</span><span class="sxs-lookup"><span data-stu-id="09943-123">Compiling the Code</span></span>  
   
--   <span data-ttu-id="f5f03-124">시각적 개체 만들기 C# 또는 Visual Basic 프로젝트입니다.</span><span class="sxs-lookup"><span data-stu-id="f5f03-124">Create a Visual C# or Visual Basic project.</span></span>  
+-   <span data-ttu-id="09943-124">시각적 개체 만들기 C# 또는 Visual Basic 프로젝트입니다.</span><span class="sxs-lookup"><span data-stu-id="09943-124">Create a Visual C# or Visual Basic project.</span></span>  
   
--   <span data-ttu-id="f5f03-125">추가 된 <xref:System.Windows.Forms.TextBox> 및 <xref:System.Windows.Forms.MaskedTextBox> 이전 절차에서 설명한 대로 폼에 컨트롤입니다.</span><span class="sxs-lookup"><span data-stu-id="f5f03-125">Add the <xref:System.Windows.Forms.TextBox> and <xref:System.Windows.Forms.MaskedTextBox> controls to the form, as described in the previous procedure.</span></span>  
+-   <span data-ttu-id="09943-125">추가 된 <xref:System.Windows.Forms.TextBox> 및 <xref:System.Windows.Forms.MaskedTextBox> 이전 절차에서 설명한 대로 폼에 컨트롤입니다.</span><span class="sxs-lookup"><span data-stu-id="09943-125">Add the <xref:System.Windows.Forms.TextBox> and <xref:System.Windows.Forms.MaskedTextBox> controls to the form, as described in the previous procedure.</span></span>  
   
--   <span data-ttu-id="f5f03-126">프로젝트의 기본 폼에 대 한 소스 코드 파일을 엽니다.</span><span class="sxs-lookup"><span data-stu-id="f5f03-126">Open the source code file for the project's default form.</span></span>  
+-   <span data-ttu-id="09943-126">프로젝트의 기본 폼에 대 한 소스 코드 파일을 엽니다.</span><span class="sxs-lookup"><span data-stu-id="09943-126">Open the source code file for the project's default form.</span></span>  
   
--   <span data-ttu-id="f5f03-127">이전 "코드" 섹션에 나와 있는 코드를 사용 하 여이 파일의 소스 코드를 대체 합니다.</span><span class="sxs-lookup"><span data-stu-id="f5f03-127">Replace the source code in this file with the code listed in the previous "Code" section.</span></span>  
+-   <span data-ttu-id="09943-127">이전 "코드" 섹션에 나와 있는 코드를 사용 하 여이 파일의 소스 코드를 대체 합니다.</span><span class="sxs-lookup"><span data-stu-id="09943-127">Replace the source code in this file with the code listed in the previous "Code" section.</span></span>  
   
--   <span data-ttu-id="f5f03-128">응용 프로그램을 컴파일합니다.</span><span class="sxs-lookup"><span data-stu-id="f5f03-128">Compile the application.</span></span>  
+-   <span data-ttu-id="09943-128">응용 프로그램을 컴파일합니다.</span><span class="sxs-lookup"><span data-stu-id="09943-128">Compile the application.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="f5f03-129">참고자료</span><span class="sxs-lookup"><span data-stu-id="f5f03-129">See also</span></span>
-- [<span data-ttu-id="f5f03-130">연습: MaskedTextBox 컨트롤 사용</span><span class="sxs-lookup"><span data-stu-id="f5f03-130">Walkthrough: Working with the MaskedTextBox Control</span></span>](walkthrough-working-with-the-maskedtextbox-control.md)
+## <a name="see-also"></a><span data-ttu-id="09943-129">참고자료</span><span class="sxs-lookup"><span data-stu-id="09943-129">See also</span></span>
+
+- [<span data-ttu-id="09943-130">연습: MaskedTextBox 컨트롤 사용</span><span class="sxs-lookup"><span data-stu-id="09943-130">Walkthrough: Working with the MaskedTextBox Control</span></span>](walkthrough-working-with-the-maskedtextbox-control.md)
