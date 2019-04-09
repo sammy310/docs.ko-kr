@@ -2,17 +2,17 @@
 title: '&amp;&amp; (및) (Entity SQL)'
 ms.date: 03/30/2017
 ms.assetid: e7d24213-471d-4807-b85e-570375df89b5
-ms.openlocfilehash: 6ee7987f2801a35fb9669472ce7b237e684f64e1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f0b20a8c1960bd6191a35c426dbea45c30ccc1c0
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54579669"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59084071"
 ---
-# <a name="ampamp-and-entity-sql"></a><span data-ttu-id="8de95-102">&amp;&amp; (및) (Entity SQL)</span><span class="sxs-lookup"><span data-stu-id="8de95-102">&amp;&amp; (AND) (Entity SQL)</span></span>
-<span data-ttu-id="8de95-103">두 식이 `true` 이면 `true`를 반환하고, 그렇지 않으면 `false` 또는 `NULL`을 반환합니다.</span><span class="sxs-lookup"><span data-stu-id="8de95-103">Returns `true` if both expressions are `true`; otherwise, `false` or `NULL`.</span></span>  
+# <a name="ampamp-and-entity-sql"></a><span data-ttu-id="2dadb-102">&amp;&amp; (및) (Entity SQL)</span><span class="sxs-lookup"><span data-stu-id="2dadb-102">&amp;&amp; (AND) (Entity SQL)</span></span>
+<span data-ttu-id="2dadb-103">두 식이 `true` 이면 `true`를 반환하고, 그렇지 않으면 `false` 또는 `NULL`을 반환합니다.</span><span class="sxs-lookup"><span data-stu-id="2dadb-103">Returns `true` if both expressions are `true`; otherwise, `false` or `NULL`.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="8de95-104">구문</span><span class="sxs-lookup"><span data-stu-id="8de95-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="2dadb-104">구문</span><span class="sxs-lookup"><span data-stu-id="2dadb-104">Syntax</span></span>  
   
 ```  
 boolean_expression AND boolean_expression  
@@ -20,29 +20,30 @@ or
 boolean_expression && boolean_expression  
 ```  
   
-## <a name="arguments"></a><span data-ttu-id="8de95-105">인수</span><span class="sxs-lookup"><span data-stu-id="8de95-105">Arguments</span></span>  
+## <a name="arguments"></a><span data-ttu-id="2dadb-105">인수</span><span class="sxs-lookup"><span data-stu-id="2dadb-105">Arguments</span></span>  
  `boolean_expression`  
- <span data-ttu-id="8de95-106">부울을 반환하는 모든 유효한 식입니다.</span><span class="sxs-lookup"><span data-stu-id="8de95-106">Any valid expression that returns a Boolean.</span></span>  
+ <span data-ttu-id="2dadb-106">부울을 반환하는 모든 유효한 식입니다.</span><span class="sxs-lookup"><span data-stu-id="2dadb-106">Any valid expression that returns a Boolean.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="8de95-107">설명</span><span class="sxs-lookup"><span data-stu-id="8de95-107">Remarks</span></span>  
- <span data-ttu-id="8de95-108">이중 앰퍼샌드(&&)는 AND 연산자와 같은 기능을 합니다.</span><span class="sxs-lookup"><span data-stu-id="8de95-108">Double ampersands (&&) have the same functionality as the AND operator.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="2dadb-107">설명</span><span class="sxs-lookup"><span data-stu-id="2dadb-107">Remarks</span></span>  
+ <span data-ttu-id="2dadb-108">이중 앰퍼샌드(&&)는 AND 연산자와 같은 기능을 합니다.</span><span class="sxs-lookup"><span data-stu-id="2dadb-108">Double ampersands (&&) have the same functionality as the AND operator.</span></span>  
   
- <span data-ttu-id="8de95-109">다음 표에서는 가능한 입력 값과 반환 형식을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="8de95-109">The following table shows possible input values and return types.</span></span>  
+ <span data-ttu-id="2dadb-109">다음 표에서는 가능한 입력 값과 반환 형식을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="2dadb-109">The following table shows possible input values and return types.</span></span>  
   
 ||`TRUE`|`FALSE`|`NULL`|  
 |-|------------|-------------|------------|  
-|`TRUE`|<span data-ttu-id="8de95-110">TRUE</span><span class="sxs-lookup"><span data-stu-id="8de95-110">TRUE</span></span>|<span data-ttu-id="8de95-111">FALSE</span><span class="sxs-lookup"><span data-stu-id="8de95-111">FALSE</span></span>|<span data-ttu-id="8de95-112">NULL</span><span class="sxs-lookup"><span data-stu-id="8de95-112">NULL</span></span>|  
-|`FALSE`|<span data-ttu-id="8de95-113">FALSE</span><span class="sxs-lookup"><span data-stu-id="8de95-113">FALSE</span></span>|<span data-ttu-id="8de95-114">false</span><span class="sxs-lookup"><span data-stu-id="8de95-114">FALSE</span></span>|<span data-ttu-id="8de95-115">FALSE</span><span class="sxs-lookup"><span data-stu-id="8de95-115">FALSE</span></span>|  
-|`NULL`|<span data-ttu-id="8de95-116">NULL</span><span class="sxs-lookup"><span data-stu-id="8de95-116">NULL</span></span>|<span data-ttu-id="8de95-117">false</span><span class="sxs-lookup"><span data-stu-id="8de95-117">FALSE</span></span>|<span data-ttu-id="8de95-118">NULL</span><span class="sxs-lookup"><span data-stu-id="8de95-118">NULL</span></span>|  
+|`TRUE`|<span data-ttu-id="2dadb-110">TRUE</span><span class="sxs-lookup"><span data-stu-id="2dadb-110">TRUE</span></span>|<span data-ttu-id="2dadb-111">FALSE</span><span class="sxs-lookup"><span data-stu-id="2dadb-111">FALSE</span></span>|<span data-ttu-id="2dadb-112">NULL</span><span class="sxs-lookup"><span data-stu-id="2dadb-112">NULL</span></span>|  
+|`FALSE`|<span data-ttu-id="2dadb-113">FALSE</span><span class="sxs-lookup"><span data-stu-id="2dadb-113">FALSE</span></span>|<span data-ttu-id="2dadb-114">FALSE</span><span class="sxs-lookup"><span data-stu-id="2dadb-114">FALSE</span></span>|<span data-ttu-id="2dadb-115">FALSE</span><span class="sxs-lookup"><span data-stu-id="2dadb-115">FALSE</span></span>|  
+|`NULL`|<span data-ttu-id="2dadb-116">NULL</span><span class="sxs-lookup"><span data-stu-id="2dadb-116">NULL</span></span>|<span data-ttu-id="2dadb-117">false</span><span class="sxs-lookup"><span data-stu-id="2dadb-117">FALSE</span></span>|<span data-ttu-id="2dadb-118">NULL</span><span class="sxs-lookup"><span data-stu-id="2dadb-118">NULL</span></span>|  
   
-## <a name="example"></a><span data-ttu-id="8de95-119">예제</span><span class="sxs-lookup"><span data-stu-id="8de95-119">Example</span></span>  
- <span data-ttu-id="8de95-120">다음 Entity SQL 쿼리에서는 AND 연산자를 사용하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="8de95-120">The following Entity SQL query demonstrates how to use the AND operator.</span></span> <span data-ttu-id="8de95-121">쿼리는 AdventureWorks Sales 모델을 기반으로 합니다.</span><span class="sxs-lookup"><span data-stu-id="8de95-121">The query is based on the AdventureWorks Sales Model.</span></span> <span data-ttu-id="8de95-122">이 쿼리를 컴파일하고 실행하려면 다음 단계를 수행하세요.</span><span class="sxs-lookup"><span data-stu-id="8de95-122">To compile and run this query, follow these steps:</span></span>  
+## <a name="example"></a><span data-ttu-id="2dadb-119">예제</span><span class="sxs-lookup"><span data-stu-id="2dadb-119">Example</span></span>  
+ <span data-ttu-id="2dadb-120">다음 Entity SQL 쿼리에서는 AND 연산자를 사용하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="2dadb-120">The following Entity SQL query demonstrates how to use the AND operator.</span></span> <span data-ttu-id="2dadb-121">쿼리는 AdventureWorks Sales 모델을 기반으로 합니다.</span><span class="sxs-lookup"><span data-stu-id="2dadb-121">The query is based on the AdventureWorks Sales Model.</span></span> <span data-ttu-id="2dadb-122">이 쿼리를 컴파일하고 실행하려면 다음 단계를 수행하세요.</span><span class="sxs-lookup"><span data-stu-id="2dadb-122">To compile and run this query, follow these steps:</span></span>  
   
-1.  <span data-ttu-id="8de95-123">절차에 따라 [방법: StructuralType 결과 반환 하는 쿼리 실행](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="8de95-123">Follow the procedure in [How to: Execute a Query that Returns StructuralType Results](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md).</span></span>  
+1.  <span data-ttu-id="2dadb-123">절차에 따라 [방법: StructuralType 결과 반환 하는 쿼리 실행](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="2dadb-123">Follow the procedure in [How to: Execute a Query that Returns StructuralType Results](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md).</span></span>  
   
-2.  <span data-ttu-id="8de95-124">다음 쿼리를 `ExecuteStructuralTypeQuery` 메서드에 인수로 전달합니다.</span><span class="sxs-lookup"><span data-stu-id="8de95-124">Pass the following query as an argument to the `ExecuteStructuralTypeQuery` method:</span></span>  
+2.  <span data-ttu-id="2dadb-124">다음 쿼리를 `ExecuteStructuralTypeQuery` 메서드에 인수로 전달합니다.</span><span class="sxs-lookup"><span data-stu-id="2dadb-124">Pass the following query as an argument to the `ExecuteStructuralTypeQuery` method:</span></span>  
   
  [!code-csharp[DP EntityServices Concepts 2#AND](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#and)]  
   
-## <a name="see-also"></a><span data-ttu-id="8de95-125">참고자료</span><span class="sxs-lookup"><span data-stu-id="8de95-125">See also</span></span>
-- [<span data-ttu-id="8de95-126">엔터티 SQL 참조</span><span class="sxs-lookup"><span data-stu-id="8de95-126">Entity SQL Reference</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
+## <a name="see-also"></a><span data-ttu-id="2dadb-125">참고자료</span><span class="sxs-lookup"><span data-stu-id="2dadb-125">See also</span></span>
+
+- [<span data-ttu-id="2dadb-126">엔터티 SQL 참조</span><span class="sxs-lookup"><span data-stu-id="2dadb-126">Entity SQL Reference</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)

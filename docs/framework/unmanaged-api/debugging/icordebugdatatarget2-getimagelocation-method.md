@@ -4,17 +4,17 @@ ms.date: 03/30/2017
 ms.assetid: 696afe71-5852-478d-a33f-b2d2dbc4b91f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e382dbadc3acf6ca4bc7cad2ca37d58125a82be2
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: c7acf08262c73df00a96cfb5c244cdfc352e51ea
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57488541"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59080483"
 ---
-# <a name="icordebugdatatarget2getimagelocation-method"></a><span data-ttu-id="0fe91-102">ICorDebugDataTarget2::GetImageLocation 메서드</span><span class="sxs-lookup"><span data-stu-id="0fe91-102">ICorDebugDataTarget2::GetImageLocation Method</span></span>
-<span data-ttu-id="0fe91-103">모듈의 경로를 모듈의 기준 주소에서 반환합니다.</span><span class="sxs-lookup"><span data-stu-id="0fe91-103">Returns the path of a module from the module's base address.</span></span>  
+# <a name="icordebugdatatarget2getimagelocation-method"></a><span data-ttu-id="c4722-102">ICorDebugDataTarget2::GetImageLocation 메서드</span><span class="sxs-lookup"><span data-stu-id="c4722-102">ICorDebugDataTarget2::GetImageLocation Method</span></span>
+<span data-ttu-id="c4722-103">모듈의 경로를 모듈의 기준 주소에서 반환합니다.</span><span class="sxs-lookup"><span data-stu-id="c4722-103">Returns the path of a module from the module's base address.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="0fe91-104">구문</span><span class="sxs-lookup"><span data-stu-id="0fe91-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="c4722-104">구문</span><span class="sxs-lookup"><span data-stu-id="c4722-104">Syntax</span></span>  
   
 ```  
 HRESULT GetImageLocation(    [in] CORDB_ADDRESS baseAddress,  
@@ -24,33 +24,34 @@ HRESULT GetImageLocation(    [in] CORDB_ADDRESS baseAddress,
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="0fe91-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="0fe91-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="c4722-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="c4722-105">Parameters</span></span>  
  `baseAddress`  
- <span data-ttu-id="0fe91-106">[in] A [CORDB_ADDRESS](../../../../docs/framework/unmanaged-api/common-data-types-unmanaged-api-reference.md) 모듈의 기준 주소를 나타내는 값입니다.</span><span class="sxs-lookup"><span data-stu-id="0fe91-106">[in] A [CORDB_ADDRESS](../../../../docs/framework/unmanaged-api/common-data-types-unmanaged-api-reference.md) value that represents the module's base address.</span></span>  
+ <span data-ttu-id="c4722-106">[in] A [CORDB_ADDRESS](../../../../docs/framework/unmanaged-api/common-data-types-unmanaged-api-reference.md) 모듈의 기준 주소를 나타내는 값입니다.</span><span class="sxs-lookup"><span data-stu-id="c4722-106">[in] A [CORDB_ADDRESS](../../../../docs/framework/unmanaged-api/common-data-types-unmanaged-api-reference.md) value that represents the module's base address.</span></span>  
   
  `cchName`  
- <span data-ttu-id="0fe91-107">[in] 모듈 경로를 수신할 버퍼의 문자 수입니다.</span><span class="sxs-lookup"><span data-stu-id="0fe91-107">[in] The number of characters in the buffer that is to receive the module path.</span></span>  
+ <span data-ttu-id="c4722-107">[in] 모듈 경로를 수신할 버퍼의 문자 수입니다.</span><span class="sxs-lookup"><span data-stu-id="c4722-107">[in] The number of characters in the buffer that is to receive the module path.</span></span>  
   
  `pcchName`  
- <span data-ttu-id="0fe91-108">[out] `szName` 버퍼에 기록된 문자 수에 대한 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="0fe91-108">[out] A pointer to the number of characters written to the `szName` buffer.</span></span>  
+ <span data-ttu-id="c4722-108">[out] `szName` 버퍼에 기록된 문자 수에 대한 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="c4722-108">[out] A pointer to the number of characters written to the `szName` buffer.</span></span>  
   
  `szName`  
- <span data-ttu-id="0fe91-109">[out] 모듈의 경로입니다.</span><span class="sxs-lookup"><span data-stu-id="0fe91-109">[out] The path of the module.</span></span>  
+ <span data-ttu-id="c4722-109">[out] 모듈의 경로입니다.</span><span class="sxs-lookup"><span data-stu-id="c4722-109">[out] The path of the module.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="0fe91-110">설명</span><span class="sxs-lookup"><span data-stu-id="0fe91-110">Remarks</span></span>  
+## <a name="remarks"></a><span data-ttu-id="c4722-110">설명</span><span class="sxs-lookup"><span data-stu-id="c4722-110">Remarks</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="0fe91-111">이 메서드는 .NET 네이티브에서만 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="0fe91-111">This method is available with .NET Native only.</span></span>  
+>  <span data-ttu-id="c4722-111">이 메서드는 .NET 네이티브에서만 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="c4722-111">This method is available with .NET Native only.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="0fe91-112">요구 사항</span><span class="sxs-lookup"><span data-stu-id="0fe91-112">Requirements</span></span>  
- <span data-ttu-id="0fe91-113">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="0fe91-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="c4722-112">요구 사항</span><span class="sxs-lookup"><span data-stu-id="c4722-112">Requirements</span></span>  
+ <span data-ttu-id="c4722-113">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="c4722-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="0fe91-114">**헤더:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="0fe91-114">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="c4722-114">**헤더:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="c4722-114">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="0fe91-115">**라이브러리:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="0fe91-115">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="c4722-115">**라이브러리:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="c4722-115">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="0fe91-116">**.NET Framework 버전:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]</span><span class="sxs-lookup"><span data-stu-id="0fe91-116">**.NET Framework Versions:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]</span></span>  
+ **<span data-ttu-id="c4722-116">.NET Framework 버전:</span><span class="sxs-lookup"><span data-stu-id="c4722-116">.NET Framework Versions:</span></span>** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="0fe91-117">참고자료</span><span class="sxs-lookup"><span data-stu-id="0fe91-117">See also</span></span>
-- [<span data-ttu-id="0fe91-118">ICorDebugDataTarget2 인터페이스</span><span class="sxs-lookup"><span data-stu-id="0fe91-118">ICorDebugDataTarget2 Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget2-interface.md)
-- [<span data-ttu-id="0fe91-119">디버깅 인터페이스</span><span class="sxs-lookup"><span data-stu-id="0fe91-119">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+## <a name="see-also"></a><span data-ttu-id="c4722-117">참고자료</span><span class="sxs-lookup"><span data-stu-id="c4722-117">See also</span></span>
+
+- [<span data-ttu-id="c4722-118">ICorDebugDataTarget2 인터페이스</span><span class="sxs-lookup"><span data-stu-id="c4722-118">ICorDebugDataTarget2 Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget2-interface.md)
+- [<span data-ttu-id="c4722-119">디버깅 인터페이스</span><span class="sxs-lookup"><span data-stu-id="c4722-119">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

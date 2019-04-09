@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a46f7b277987df7e15eb2d534d1bbacc3250f4e1
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 8fe6559eca2fef1c9481c8996b19ffb8a08c6019
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57466013"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59080035"
 ---
-# <a name="imetadatatablesgetstringheapsize-method"></a><span data-ttu-id="22a25-102">IMetaDataTables::GetStringHeapSize 메서드</span><span class="sxs-lookup"><span data-stu-id="22a25-102">IMetaDataTables::GetStringHeapSize Method</span></span>
-<span data-ttu-id="22a25-103">문자열 힙에 바이트 단위로 크기를 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="22a25-103">Gets the size, in bytes, of the string heap.</span></span>  
+# <a name="imetadatatablesgetstringheapsize-method"></a><span data-ttu-id="c3bb6-102">IMetaDataTables::GetStringHeapSize 메서드</span><span class="sxs-lookup"><span data-stu-id="c3bb6-102">IMetaDataTables::GetStringHeapSize Method</span></span>
+<span data-ttu-id="c3bb6-103">문자열 힙에 바이트 단위로 크기를 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="c3bb6-103">Gets the size, in bytes, of the string heap.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="22a25-104">구문</span><span class="sxs-lookup"><span data-stu-id="22a25-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="c3bb6-104">구문</span><span class="sxs-lookup"><span data-stu-id="c3bb6-104">Syntax</span></span>  
   
 ```  
 HRESULT GetStringHeapSize (  
@@ -35,19 +35,20 @@ HRESULT GetStringHeapSize (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="22a25-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="22a25-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="c3bb6-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="c3bb6-105">Parameters</span></span>  
  `pcbStrings`  
- <span data-ttu-id="22a25-106">[out] 문자열 힙의 바이트의 크기에 대 한 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="22a25-106">[out] A pointer to the size, in bytes, of the string heap.</span></span>  
+ <span data-ttu-id="c3bb6-106">[out] 문자열 힙의 바이트의 크기에 대 한 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="c3bb6-106">[out] A pointer to the size, in bytes, of the string heap.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="22a25-107">요구 사항</span><span class="sxs-lookup"><span data-stu-id="22a25-107">Requirements</span></span>  
- <span data-ttu-id="22a25-108">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="22a25-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="c3bb6-107">요구 사항</span><span class="sxs-lookup"><span data-stu-id="c3bb6-107">Requirements</span></span>  
+ <span data-ttu-id="c3bb6-108">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="c3bb6-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="22a25-109">**헤더:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="22a25-109">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="c3bb6-109">**헤더:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="c3bb6-109">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="22a25-110">**라이브러리:** MsCorEE.dll에서 리소스로 사용</span><span class="sxs-lookup"><span data-stu-id="22a25-110">**Library:** Used as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="c3bb6-110">**라이브러리:** MsCorEE.dll에서 리소스로 사용</span><span class="sxs-lookup"><span data-stu-id="c3bb6-110">**Library:** Used as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="22a25-111">**.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="22a25-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ **<span data-ttu-id="c3bb6-111">.NET Framework 버전:</span><span class="sxs-lookup"><span data-stu-id="c3bb6-111">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="22a25-112">참고자료</span><span class="sxs-lookup"><span data-stu-id="22a25-112">See also</span></span>
-- [<span data-ttu-id="22a25-113">IMetaDataTables 인터페이스</span><span class="sxs-lookup"><span data-stu-id="22a25-113">IMetaDataTables Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-interface.md)
-- [<span data-ttu-id="22a25-114">IMetaDataTables2 인터페이스</span><span class="sxs-lookup"><span data-stu-id="22a25-114">IMetaDataTables2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatatables2-interface.md)
+## <a name="see-also"></a><span data-ttu-id="c3bb6-112">참고자료</span><span class="sxs-lookup"><span data-stu-id="c3bb6-112">See also</span></span>
+
+- [<span data-ttu-id="c3bb6-113">IMetaDataTables 인터페이스</span><span class="sxs-lookup"><span data-stu-id="c3bb6-113">IMetaDataTables Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-interface.md)
+- [<span data-ttu-id="c3bb6-114">IMetaDataTables2 인터페이스</span><span class="sxs-lookup"><span data-stu-id="c3bb6-114">IMetaDataTables2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatatables2-interface.md)
