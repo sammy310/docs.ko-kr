@@ -8,12 +8,12 @@ helpviewer_keywords:
 - WCF, federation
 - federation
 ms.assetid: 149ab165-0ef3-490a-83a9-4322a07bd98a
-ms.openlocfilehash: 983504993a1252e4345c3c50130a25e25e99446d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 43347e3afdf55277ee8969954626d02192a10ec5
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54509284"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59112569"
 ---
 # <a name="how-to-configure-credentials-on-a-federation-service"></a>방법: 페더레이션 서비스에서 자격 증명 구성
 Windows Communication Foundation (WCF), 페더레이션된 서비스를 만드는 다음과 같은 기본 절차 이루어져 있습니다.  
@@ -72,11 +72,12 @@ Windows Communication Foundation (WCF), 페더레이션된 서비스를 만드�
  예를 들어 <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.CertificateValidationMode%2A>를 <xref:System.ServiceModel.Security.X509CertificateValidationMode.PeerTrust>로 설정하면 서명 인증서가 `TrustedPeople` 인증서 저장소에 있는 발급된 모든 토큰을 인증하게 됩니다. 이 경우 <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.TrustedStoreLocation%2A> 속성을 <xref:System.Security.Cryptography.X509Certificates.StoreLocation.CurrentUser> 또는 <xref:System.Security.Cryptography.X509Certificates.StoreLocation.LocalMachine>으로 설정합니다. <xref:System.ServiceModel.Security.X509CertificateValidationMode.Custom> 등의 다른 모드를 선택할 수도 있습니다. `Custom`을 선택하면 <xref:System.IdentityModel.Selectors.X509CertificateValidator> 클래스의 인스턴스를 <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.CustomCertificateValidator%2A> 속성에 할당해야 합니다. 사용자 지정 유효성 검사기에서 원하는 조건을 사용하여 인증서의 유효성을 검사할 수 있습니다. 자세한 내용은 [방법: 사용자 지정 인증서 유효성 검사기를 사용 하는 서비스 만들기](../../../../docs/framework/wcf/extending/how-to-create-a-service-that-employs-a-custom-certificate-validator.md)합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [페더레이션](../../../../docs/framework/wcf/feature-details/federation.md)
 - [페더레이션 및 트러스트](../../../../docs/framework/wcf/feature-details/federation-and-trust.md)
-- [페더레이션 샘플](../../../../docs/framework/wcf/samples/federation-sample.md)
-- [방법: WSFederationHttpBinding에서 보안 세션을 사용 하지 않도록 설정](../../../../docs/framework/wcf/feature-details/how-to-disable-secure-sessions-on-a-wsfederationhttpbinding.md)
+- [Federation 샘플](../../../../docs/framework/wcf/samples/federation-sample.md)
+- [방법: WSFederationHttpBinding에서 보안 세션을 사용하지 않도록 설정](../../../../docs/framework/wcf/feature-details/how-to-disable-secure-sessions-on-a-wsfederationhttpbinding.md)
 - [방법: WSFederationHttpBinding 만들기](../../../../docs/framework/wcf/feature-details/how-to-create-a-wsfederationhttpbinding.md)
-- [방법: 페더레이션된 클라이언트 만들기](../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)
+- [방법: 페더레이션 클라이언트 만들기](../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)
 - [인증서 작업](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)
 - [SecurityBindingElement 인증 모드](../../../../docs/framework/wcf/feature-details/securitybindingelement-authentication-modes.md)
