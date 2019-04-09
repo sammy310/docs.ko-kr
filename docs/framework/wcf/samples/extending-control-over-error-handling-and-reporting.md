@@ -2,12 +2,12 @@
 title: 오류 처리 및 오류 보고에 대한 확장 제어
 ms.date: 03/30/2017
 ms.assetid: 45f996a7-fa00-45cb-9d6f-b368f5778aaa
-ms.openlocfilehash: 8a6064d5ebc8f80eb5fe3cba309c0eb1c71ee020
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 520a939c5527fa341a6c3a609297c69ec05dd7ce
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58814343"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59094114"
 ---
 # <a name="extending-control-over-error-handling-and-reporting"></a>오류 처리 및 오류 보고에 대한 확장 제어
 이 샘플에는 오류 처리 및 오류 보고 사용 하 여 Windows Communication Foundation (WCF) 서비스에 대 한 제어를 확장 하는 방법을 보여 줍니다.는 <xref:System.ServiceModel.Dispatcher.IErrorHandler> 인터페이스입니다. 샘플을 기반으로 합니다 [Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md) 일부 추가 코드 오류를 처리 하는 서비스에 추가 합니다. 클라이언트에서는 몇 가지 오류 조건을 발생시키고 서비스에서는 해당 오류를 가로채서 파일에 기록합니다.  
@@ -19,7 +19,7 @@ ms.locfileid: "58814343"
   
  이 샘플에서 `CalculatorErrorHandler` 형식은 <xref:System.ServiceModel.Dispatcher.IErrorHandler> 인터페이스를 구현합니다. 안에  
   
- <xref:System.ServiceModel.Dispatcher.IErrorHandler.HandleError%2A> 메서드에서 `CalculatorErrorHandler`는 c:\logs에 있는 Error.txt 텍스트 파일에 오류 로그를 기록합니다. 샘플에서는 오류를 기록한 후 제거하지 않으므로 해당 오류를 클라이언트에 다시 보고할 수 있습니다.  
+ <xref:System.ServiceModel.Dispatcher.IErrorHandler.HandleError%2A> 메서드는 `CalculatorErrorHandler` c:\logs에 있는 Error.txt 텍스트 파일에 오류 로그를 기록 합니다. 샘플에서는 오류를 기록한 후 제거하지 않으므로 해당 오류를 클라이언트에 다시 보고할 수 있습니다.  
   
 ```  
 public class CalculatorErrorHandler : IErrorHandler  
@@ -157,4 +157,3 @@ Fault: Reason = Invalid Argument: The argument must be greater than zero.
 >  이 디렉터리가 없으면로 이동 [Windows Communication Foundation (WCF) 및.NET Framework 4 용 Windows WF (Workflow Foundation) 샘플](https://go.microsoft.com/fwlink/?LinkId=150780) 모든 Windows Communication Foundation (WCF)를 다운로드 하 고 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플. 이 샘플은 다음 디렉터리에 있습니다.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\ErrorHandling`  
-  

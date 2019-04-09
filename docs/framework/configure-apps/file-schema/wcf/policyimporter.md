@@ -2,12 +2,12 @@
 title: <policyImporter>
 ms.date: 03/30/2017
 ms.assetid: b0d03456-546f-44bb-ab12-1b2ce7f98fca
-ms.openlocfilehash: ab9193d5974ccffcbfa3e741ac4d32ff357ed372
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 81f38d2a163163ca7255ca546bbddbbb58fa3a1b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55269239"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59094179"
 ---
 # <a name="policyimporter"></a>\<policyImporter>
 바인딩에 대한 사용자 지정 정책 어설션의 가져오기를 제어하는 정책 가져오기를 지정합니다.  
@@ -50,6 +50,7 @@ ms.locfileid: "55269239"
  정책 가져오기는, 바인딩 기능에 대한 사용자 지정 정책 어설션을 검색하거나 어설션에서 요구하는 기능을 구현하는 사용자 지정 바인딩 요소를 연결하는 데 사용됩니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.ServiceModel.Configuration.PolicyImporterElementCollection>
 - <xref:System.ServiceModel.Configuration.PolicyImporterElement>
 - <xref:System.ServiceModel.Configuration.MetadataElement>

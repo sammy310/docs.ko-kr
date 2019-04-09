@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7b8c72a2dde70a93b589181b0cc1bd7824b3f52d
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: a38812803127857281f9766fa3ed551971ec0330
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57496523"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59093533"
 ---
 # <a name="icordebugremotecreateprocessex-method"></a>ICorDebugRemote::CreateProcessEx 메서드
 디버거에서 원격 컴퓨터의 프로세스를 시작합니다.  
@@ -107,6 +107,7 @@ HRESULT CreateProcessEx (
  **.NET framework 버전:** 4.5, 4, 3.5 SP1  
   
 ## <a name="see-also"></a>참고자료
+
 - [ICorDebugRemote 인터페이스](../../../../docs/framework/unmanaged-api/debugging/icordebugremote-interface.md)
 - [ICorDebug 인터페이스](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)
 

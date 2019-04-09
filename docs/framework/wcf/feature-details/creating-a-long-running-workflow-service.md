@@ -2,12 +2,12 @@
 title: 장기 실행 워크플로 서비스 만들기
 ms.date: 03/30/2017
 ms.assetid: 4c39bd04-5b8a-4562-a343-2c63c2821345
-ms.openlocfilehash: 8fe1ad70db6c788a304d9099fb2f35a4d89db489
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: 37d3accae017b6725eab5ebb3d7df6e1bc15a56a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57679439"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59109657"
 ---
 # <a name="creating-a-long-running-workflow-service"></a>장기 실행 워크플로 서비스 만들기
 이 항목에서는 장기 실행 워크플로 서비스를 만드는 방법에 대해 설명합니다. 장기 실행 워크플로 서비스는 장기간 실행될 수 있습니다. 특정 지점에서 워크플로는 추가 정보를 기다리며 유휴 상태가 될 수 있습니다. 이 경우 워크플로는 SQL 데이터베이스에 유지되고 메모리에서 제거됩니다. 추가 정보를 사용할 수 있으면 워크플로 인스턴스가 다시 메모리에 로드되어 계속 실행됩니다.  이 시나리오에서는 매우 간단한 주문 시스템을 구현합니다.  클라이언트가 워크플로 서비스에 초기 메시지를 보내 주문을 시작하고, 워크플로 서비스는 주문 ID를 클라이언트에 반환합니다. 이 시점에서 워크플로 서비스가 클라이언트에서 다른 메시지를 기다리며 유휴 상태가 되고 SQL Server 데이터베이스에 유지됩니다.  클라이언트가 품목을 주문하기 위해 다음 메시지를 보내면 워크플로 서비스는 메모리에 다시 로드되고 주문 처리를 마칩니다. 코드 샘플에서 워크플로 서비스는 품목이 주문에 추가되었음을 나타내는 문자열을 반환합니다. 코드 샘플은 이 기술의 실제 응용 프로그램이라기보다는 장기 실행 워크플로 서비스를 보여 주는 간단한 샘플입니다. 이 항목을 Visual Studio 2012 프로젝트 및 솔루션을 만드는 방법을 알고 있다고 가정 합니다.
@@ -19,7 +19,7 @@ ms.locfileid: "57679439"
 
 2.  Visual Studio 2012
 
-3.  Microsoft [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]
+3.  Microsoft  [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]
 
 4.  WCF 및 Visual Studio 2012를 사용 하 여 알고 있으며 프로젝트/솔루션을 만드는 방법을 알고 있어야 합니다.
 
@@ -39,8 +39,7 @@ ms.locfileid: "57679439"
 
 1.  빈 Visual Studio 2012 솔루션을 만들고, 이름을 `OrderProcessing`입니다.
 
-2.  
-  `OrderService`라는 새 WCF 워크플로 서비스 응용 프로그램 프로젝트를 솔루션에 추가합니다.
+2.  `OrderService`라는 새 WCF 워크플로 서비스 응용 프로그램 프로젝트를 솔루션에 추가합니다.
 
 3.  프로젝트 속성 대화 상자에서 선택 합니다 **웹** 탭 합니다.
 
@@ -200,4 +199,5 @@ ms.locfileid: "57679439"
     ```
 
 ## <a name="see-also"></a>참고자료
+
 - [워크플로 서비스](../../../../docs/framework/wcf/feature-details/workflow-services.md)

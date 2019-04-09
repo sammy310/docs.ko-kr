@@ -1,5 +1,5 @@
 ---
-title: '방법: 에서 맞춤 및 늘이기 컨트롤을 TableLayoutPanel 컨트롤'
+title: '방법: TableLayoutPanel 컨트롤에서 컨트롤 맞춤 및 늘이기'
 ms.date: 03/30/2017
 f1_keywords:
 - net.ComponentModel.StyleCollectionEditor.TLP.AlignStretchCtrl
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - controls [Windows Forms], stretching
 - controls [Windows Forms], aligning
 ms.assetid: 7dc1a157-6fee-4995-8ebc-b65bdc0909a8
-ms.openlocfilehash: 511ed20e63778b70355d1deb12e4256b4d2e9101
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: c0bcf91d358d233b5b1d2e300d63112303e87a09
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57702921"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59095406"
 ---
-# <a name="how-to-align-and-stretch-a-control-in-a-tablelayoutpanel-control"></a>방법: 에서 맞춤 및 늘이기 컨트롤을 TableLayoutPanel 컨트롤
+# <a name="how-to-align-and-stretch-a-control-in-a-tablelayoutpanel-control"></a>방법: TableLayoutPanel 컨트롤에서 컨트롤 맞춤 및 늘이기
 정렬 하는 컨트롤에서 stretch를 <xref:System.Windows.Forms.TableLayoutPanel> 사용 하 여를 <xref:System.Windows.Forms.Control.Anchor%2A> 및 <xref:System.Windows.Forms.Control.Dock%2A> 속성.  
   
 > [!NOTE]
@@ -40,4 +40,5 @@ ms.locfileid: "57702921"
 8.  값을 설정 합니다 <xref:System.Windows.Forms.Button> 컨트롤의 <xref:System.Windows.Forms.Control.Anchor%2A> 속성을 <xref:System.Windows.Forms.AnchorStyles.None>입니다. <xref:System.Windows.Forms.Button> 셀의 가운데에 컨트롤은 이동 합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [TableLayoutPanel 컨트롤](tablelayoutpanel-control-windows-forms.md)

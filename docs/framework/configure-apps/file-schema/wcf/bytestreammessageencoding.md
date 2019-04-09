@@ -2,12 +2,12 @@
 title: <byteStreamMessageEncoding>
 ms.date: 03/30/2017
 ms.assetid: bbadd8dd-60a2-4007-b959-89373a8a7d60
-ms.openlocfilehash: c8dfd6824877d6f9e5b089a538cce35ffe51320b
-ms.sourcegitcommit: b8ace47d839f943f785b89e2fff8092b0bf8f565
+ms.openlocfilehash: ce9f282ea1101befe3bf99762efa61e9b47b74cf
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "55674284"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59109904"
 ---
 # <a name="bytestreammessageencoding"></a>\<byteStreamMessageEncoding>
 문자 인코딩을 지정하는 옵션을 사용하여 메시지 인코딩을 바이트 스트림으로 지정합니다.  
@@ -46,6 +46,7 @@ ms.locfileid: "55674284"
 |[\<binding>](../../../../../docs/framework/misc/binding.md)|사용자 지정 바인딩의 모든 바인딩 기능을 정의합니다.|  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.ServiceModel.Configuration.ByteStreamMessageEncodingElement>
 - <xref:System.ServiceModel.Channels.CustomBinding>
 - <xref:System.ServiceModel.Channels.MessageEncodingBindingElement>
@@ -53,6 +54,6 @@ ms.locfileid: "55674284"
 - [메시지 인코딩](../../../../../docs/framework/configure-apps/file-schema/wcf/message-encoding.md)
 - [메시지 인코더 선택](../../../../../docs/framework/wcf/feature-details/choosing-a-message-encoder.md)
 - [바인딩](../../../../../docs/framework/wcf/bindings.md)
-- [바인딩 확장](../../../../../docs/framework/wcf/extending/extending-bindings.md)
+- [바인딩 확장명](../../../../../docs/framework/wcf/extending/extending-bindings.md)
 - [사용자 지정 바인딩](../../../../../docs/framework/wcf/extending/custom-bindings.md)
 - [\<customBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)

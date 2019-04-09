@@ -6,12 +6,12 @@ helpviewer_keywords:
 ms.assetid: ce13088e-3095-4f0e-9f6b-fad30bbd3d41
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 0f8e189dce2e5141f7a0743b37ed892540f3bb46
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d3846e9e00158efbd4828053411b604dafc56e27
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54656975"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59091332"
 ---
 # <a name="controlling-net-framework-logging"></a>.NET Framework 로깅 제어
 ETW(Windows용 이벤트 추적)를 사용하여 CLR(공용 언어 런타임) 이벤트를 기록할 수 있습니다. 다음과 같은 도구를 사용하여 추적을 만들고 볼 수 있습니다.  
@@ -53,9 +53,9 @@ Provider                                 GUID
   
     -   `-p` 매개 변수는 공급자 GUID를 식별합니다.  
   
-    -   `0x1CCBD`는 발생할 이벤트의 범주를 지정합니다.  
+    -   `0x1CCBD` 발생할 수 있는 이벤트의 범주를 지정 합니다.  
   
-    -   `0x5`는 로깅 수준을 설정합니다(이 경우, verbose(5)).  
+    -   `0x5` (이 예제의 경우 verbose (5)) 로깅 수준을 설정 합니다.  
   
     -   `-ets` 매개 변수는 이벤트 추적 세션에 명령을 보내도록 Logman에 지시합니다.  
   
@@ -109,5 +109,6 @@ Provider                                 GUID
      이 명령에 의해 XPerf는 사용자가 볼 수 있는 쉼표로 분리된 값 파일(CSV)로 이벤트를 덤프하게 됩니다. 이벤트별로 서로 다른 필드가 있기 때문에 이 CSV 파일에서는 데이터 앞에 헤더 줄이 둘 이상 있습니다. 모든 줄의 첫 번째 필드는 이벤트 유형이고, 이 유형은 나머지 필드 확인에 사용되어야 하는 헤더를 나타냅니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [Windows 성능 도구 키트](/windows-hardware/test/wpt/)
 - [공용 언어 런타임의 ETW 이벤트](../../../docs/framework/performance/etw-events-in-the-common-language-runtime.md)

@@ -15,12 +15,12 @@ helpviewer_keywords:
 - examples [Windows Forms], controls
 - Click event [Windows Forms], responding to
 ms.assetid: 7a4951bd-369c-4662-b246-28ad83eda484
-ms.openlocfilehash: e6e6d041422a79171ec4b6159f0789b8aa6a50d5
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: a10eaa3ea62df9301a53f5609b503bfabcb50a46
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57724988"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59110073"
 ---
 # <a name="how-to-respond-to-windows-forms-button-clicks"></a>방법: Windows Forms 단추 클릭에 응답
 Windows Forms의 가장 기본적인 사용 <xref:System.Windows.Forms.Button> 컨트롤 단추를 클릭할 때 일부 코드를 실행 하는 것입니다.  
@@ -56,6 +56,7 @@ Windows Forms의 가장 기본적인 사용 <xref:System.Windows.Forms.Button> �
     ```  
   
 ## <a name="see-also"></a>참고자료
+
 - [Button 컨트롤 개요](button-control-overview-windows-forms.md)
 - [Windows Forms Button 컨트롤 선택 방법](ways-to-select-a-windows-forms-button-control.md)
 - [Button 컨트롤](button-control-windows-forms.md)

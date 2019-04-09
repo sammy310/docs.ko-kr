@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 22276e543e8eeb9c6cf9aeee7a9af92c503d3a7d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0d8d59ef282818dd9852d0ff8d2ec2abd40986d0
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54549017"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59097137"
 ---
 # <a name="iassemblyname-interface"></a>IAssemblyName 인터페이스
 설명 하 고 어셈블리의 고유 id를 사용 하 여 작업에 대 한 메서드를 제공 합니다.  
@@ -47,5 +47,6 @@ ms.locfileid: "54549017"
  **.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>참고자료
+
 - [Fusion 인터페이스](../../../../docs/framework/unmanaged-api/fusion/fusion-interfaces.md)
 - [IAssemblyEnum 인터페이스](../../../../docs/framework/unmanaged-api/fusion/iassemblyenum-interface.md)

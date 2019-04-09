@@ -1,5 +1,5 @@
 ---
-title: '방법: Windows Forms ContextMenu 구성 요소를 사용 하 여 메뉴 항목 추가 및 제거'
+title: '방법: Windows Forms ContextMenu 구성 요소를 사용하여 메뉴 항목 추가 및 제거'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -16,14 +16,14 @@ helpviewer_keywords:
 - context menus [Windows Forms], examples
 - examples [Windows Forms], context menus
 ms.assetid: 426d1eaf-7fb8-4b0b-8a33-5e8721786ea4
-ms.openlocfilehash: 8b63182bdb37e47a71bee2d22500263cd4889ac9
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: e02a187edc1392f15fe98354bb2e5c43843e430c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57725066"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59094465"
 ---
-# <a name="how-to-add-and-remove-menu-items-with-the-windows-forms-contextmenu-component"></a>방법: Windows Forms ContextMenu 구성 요소를 사용 하 여 메뉴 항목 추가 및 제거
+# <a name="how-to-add-and-remove-menu-items-with-the-windows-forms-contextmenu-component"></a>방법: Windows Forms ContextMenu 구성 요소를 사용하여 메뉴 항목 추가 및 제거
 추가 Windows Forms의 바로 가기 메뉴 항목을 제거 하는 방법을 설명 합니다.  
   
  Windows Forms <xref:System.Windows.Forms.ContextMenu> 구성 요소는 선택한 개체에 관련 된 자주 사용 되는 명령의 메뉴를 제공 합니다. 추가 하 여 바로 가기 메뉴 항목을 추가할 수 있습니다 <xref:System.Windows.Forms.MenuItem> 개체는 <xref:System.Windows.Forms.Menu.MenuItems%2A> 컬렉션입니다.  
@@ -75,6 +75,7 @@ ms.locfileid: "57725066"
     ```  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Windows.Forms.ContextMenu>
 - [ContextMenu 구성 요소](contextmenu-component-windows-forms.md)
 - [ContextMenu 구성 요소 개요](contextmenu-component-overview-windows-forms.md)
