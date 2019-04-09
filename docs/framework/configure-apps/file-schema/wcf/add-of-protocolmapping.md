@@ -1,13 +1,13 @@
 ---
-title: <add>의 <protocolMapping>
+title: <add> / <protocolMapping>
 ms.date: 03/30/2017
 ms.assetid: 08e62249-1641-41d1-91b1-66d7b46244e4
-ms.openlocfilehash: 18b50ec2d848bc6bb920fb8f630ac7703654b286
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 85d09c920de2ca1ab4971551ff98ea58c4492f44
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55280737"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59109267"
 ---
 # <a name="add-of-protocolmapping"></a>\<추가 >의 \<protocolMapping >
 전송 프로토콜 체계 (예: http, net.tcp, net.pipe 등) 및 Windows Communication Foundation (WCF) 바인딩 간의 기본 프로토콜 매핑을 나타냅니다. 런타임에 기본 끝점을 만들 때 WCF 구성 된 매핑을 확인 하 고 특정 사용할 바인딩을 기준 주소를 결정 합니다.  
@@ -33,7 +33,7 @@ ms.locfileid: "55280737"
   
 |요소|설명|  
 |-------------|-----------------|  
-|바인딩|기본 끝점을 만드는 중에 끝점으로 사용할 바인딩 형식을 지정하는 문자열입니다.|  
+|바인딩|기본 엔드포인트를 만드는 중에 엔드포인트로 사용할 바인딩 형식을 지정하는 문자열입니다.|  
 |bindingConfiguration|참조할 바인딩 구성 섹션의 이름을 지정하는 문자열입니다.|  
 |scheme|기본 엔드포인트로 사용될 전송 프로토콜 체계입니다.|  
   
@@ -63,5 +63,6 @@ ms.locfileid: "55280737"
 ```  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.ServiceModel.Configuration.ProtocolMappingSection?displayProperty=nameWithType>
 - <xref:System.ServiceModel.Configuration.ProtocolMappingElement?displayProperty=nameWithType>

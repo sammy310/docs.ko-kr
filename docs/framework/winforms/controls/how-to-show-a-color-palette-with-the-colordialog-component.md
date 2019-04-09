@@ -1,5 +1,5 @@
 ---
-title: '방법: ColorDialog 구성 요소를 사용 하 여 색상표 표시'
+title: '방법: ColorDialog 구성 요소를 사용하여 색상표 표시'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -14,14 +14,14 @@ helpviewer_keywords:
 - color palettes [Windows Forms], showing in ColorDialog component
 - colors [Windows Forms], showing palettes
 ms.assetid: ee050f61-dbc8-4436-ba22-51360981ab48
-ms.openlocfilehash: 35f6f81c2b13234b23b3b2295e45caf5f16abd9e
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: fcaf5da9958cf66fb63bd753dc94cba9c10f62f6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57708329"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59096038"
 ---
-# <a name="how-to-show-a-color-palette-with-the-colordialog-component"></a>방법: ColorDialog 구성 요소를 사용 하 여 색상표 표시
+# <a name="how-to-show-a-color-palette-with-the-colordialog-component"></a>방법: ColorDialog 구성 요소를 사용하여 색상표 표시
 합니다 [ColorDialog](colordialog-component-windows-forms.md) 색상표를 표시 하 고 사용자가 선택한 색을 포함 하는 속성을 반환 하는 구성 요소입니다.  
   
 ### <a name="to-choose-a-color-using-the-colordialog-component"></a>ColorDialog 구성 요소를 사용 하 여 색을 선택 하려면  
@@ -77,5 +77,6 @@ ms.locfileid: "57708329"
     ```  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Windows.Forms.ColorDialog>
 - [ColorDialog 구성 요소](colordialog-component-windows-forms.md)

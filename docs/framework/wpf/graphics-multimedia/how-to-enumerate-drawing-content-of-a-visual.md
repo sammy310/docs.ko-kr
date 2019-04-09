@@ -1,18 +1,18 @@
 ---
-title: '방법: 시각적 요소의 그리기 콘텐츠 열거'
+title: '방법: 시각적 개체의 그리기 콘텐츠 열거'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - retrieving the DrawingGroup value of a Visual [WPF]
 - enumerating the contents of a Visual [WPF]
 ms.assetid: 2974ddb3-2997-4713-8fd2-e93d549c58a8
-ms.openlocfilehash: 6414026090766544585c8e5e940ef9f0c62566d2
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 4f0afc1075fe66c7f154fcef3cd883709db55316
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57360016"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59108006"
 ---
-# <a name="how-to-enumerate-drawing-content-of-a-visual"></a>방법: 시각적 요소의 그리기 콘텐츠 열거
+# <a name="how-to-enumerate-drawing-content-of-a-visual"></a>방법: 시각적 개체의 그리기 콘텐츠 열거
 합니다 <xref:System.Windows.Media.Drawing> 의 콘텐츠를 열거 하는 것에 대 한 개체 모델을 제공 하는 개체는 <xref:System.Windows.Media.Visual>합니다.  
   
 ## <a name="example"></a>예제  
@@ -24,6 +24,7 @@ ms.locfileid: "57360016"
  [!code-csharp[DrawingMiscSnippets_snip#GraphicsMMRetrieveDrawings](~/samples/snippets/csharp/VS_Snippets_Wpf/DrawingMiscSnippets_snip/CSharp/EnumerateDrawingsExample.xaml.cs#graphicsmmretrievedrawings)]  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Windows.Media.Drawing>
 - <xref:System.Windows.Media.DrawingGroup>
 - <xref:System.Windows.Media.VisualTreeHelper>

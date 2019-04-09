@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - sessions [WCF]
 ms.assetid: 864ba12f-3331-4359-a359-6d6d387f1035
-ms.openlocfilehash: 6ef3ff671175182bdd3b1eab2b17ec0298ff15e1
-ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
+ms.openlocfilehash: 433efade37d9aa07f99a212b631a571dfbc766dd
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "56442726"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59095869"
 ---
 # <a name="using-sessions"></a>세션 사용
 Windows Communication Foundation (WCF) 응용 프로그램에는 *세션* 메시지 그룹을 대화에 연결 합니다. WCF 세션에서 사용할 수 있는 세션 개체에 다릅니다. [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] 응용 프로그램을 다른 동작을 지원 하 고 다양 한 방법으로 제어 됩니다. 세션 WCF에서 사용 하도록 설정 하는 기능에 설명 응용 프로그램 및 사용 하는 방법입니다.  
@@ -32,11 +32,11 @@ Windows Communication Foundation (WCF) 응용 프로그램에는 *세션* 메시
   
  에 대해 잘 알고 있다면 합니다 <xref:System.Web.SessionState.HttpSessionState?displayProperty=nameWithType> 클래스의 [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] 제공 응용 프로그램 및 기능, 해당 유형의 세션 및 WCF 세션 간에 다음과 같은 차이점을 알 수 있습니다.  
   
--   [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] 세션은 항상 서버에 의해 실행됩니다.  
+-   [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] 세션은 항상 서버에서 시작 합니다.  
   
--   [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] 세션은 암시적으로 순서가 지정되지 않습니다.  
+-   [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] 세션은 암시적으로 순서가 없습니다.  
   
--   [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] 세션은 요청을 통해 일반 데이터 저장소 메커니즘을 제공합니다.  
+-   [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] 세션 요청에 대해 일반 데이터 저장소 메커니즘을 제공합니다.  
   
  이 항목에서는 다음을 설명합니다.  
   
@@ -108,14 +108,14 @@ Windows Communication Foundation (WCF) 응용 프로그램에는 *세션* 메시
 > [!NOTE]
 >  기본 동작은 로컬 생성자 및 소멸자와 비슷하지만 일치하지는 않습니다. WCF 서비스 작업이 시작 또는 종료 작업 이거나 동시에 둘 다를 수 있습니다. 또한 기본적으로 횟수와 순서에 관계없이 시작 작업을 호출할 수 있습니다. <xref:System.ServiceModel.InstanceContext?displayProperty=nameWithType> 개체를 조작하여 서비스 인스턴스의 수명을 명시적으로 지정하지 않는 한 세션이 설정되고 인스턴스와 연결되면 추가 세션이 생성되지 않습니다. 마지막으로 상태는 세션과 연결되고 서비스 개체와는 연결되지 않습니다.  
   
- 예를 들어 합니다 `ICalculatorSession` 앞의 예제에서 사용 되는 계약 WCF 클라이언트 첫 번째 호출 된 개체가 필요 합니다 `Clear` 를호출할때다른작업전하는작업,이WCF클라이언트개체를사용하여세션을종료해야`Equals` 작업 합니다. 다음 코드 예제에서는 이러한 요구 사항을 적용하는 계약을 보여 줍니다. 먼저`Clear` 를 호출하여 세션을 시작해야 하며, `Equals` 을 호출하면 세션이 끝납니다.  
+ 예를 들어 합니다 `ICalculatorSession` 앞의 예제에서 사용 되는 계약 WCF 클라이언트 첫 번째 호출 된 개체가 필요 합니다 `Clear` 를호출할때다른작업전하는작업,이WCF클라이언트개체를사용하여세션을종료해야`Equals` 작업 합니다. 다음 코드 예제에서는 이러한 요구 사항을 적용하는 계약을 보여 줍니다. `Clear` 세션을 시작 하려면 먼저 호출 해야 하면 세션이 끝납니다 및 `Equals` 라고 합니다.  
   
  [!code-csharp[SCA.IsInitiatingIsTerminating#1](../../../samples/snippets/csharp/VS_Snippets_CFX/sca.isinitiatingisterminating/cs/service.cs#1)]
  [!code-vb[SCA.IsInitiatingIsTerminating#1](../../../samples/snippets/visualbasic/VS_Snippets_CFX/sca.isinitiatingisterminating/vb/service.vb#1)]  
   
  서비스는 클라이언트와 함께 세션을 시작하지 않습니다. WCF 클라이언트 응용 프로그램에서 세션 기반 채널의 수명과 세션 수명 사이는 직접적인 관계가 있습니다. 예를 들어, 클라이언트는 새 세션 기반 채널을 만들어 새 세션을 만들고 세션 기반 채널을 정상적으로 닫아서 기존 세션을 종료합니다. 클라이언트는 다음 중 하나를 호출하여 서비스 엔드포인트와 함께 세션을 시작합니다.  
   
--   <xref:System.ServiceModel.ICommunicationObject.Open%2A?displayProperty=nameWithType>에 대한 호출을 통해 반환된 채널의 <xref:System.ServiceModel.ChannelFactory%601.CreateChannel%2A?displayProperty=nameWithType>  
+-   <xref:System.ServiceModel.ICommunicationObject.Open%2A?displayProperty=nameWithType> 에 대 한 호출에서 반환 된 채널에서 <xref:System.ServiceModel.ChannelFactory%601.CreateChannel%2A?displayProperty=nameWithType>합니다.  
   
 -   <xref:System.ServiceModel.ClientBase%601.Open%2A?displayProperty=nameWithType> 생성 된 WCF 클라이언트 개체를 [ServiceModel Metadata 유틸리티 도구 (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)합니다.  
   
@@ -123,7 +123,7 @@ Windows Communication Foundation (WCF) 응용 프로그램에는 *세션* 메시
   
  일반적으로 클라이언트는 다음 중 하나를 호출하여 서비스 엔드포인트와 함께 세션을 종료합니다.  
   
--   <xref:System.ServiceModel.ICommunicationObject.Close%2A?displayProperty=nameWithType>에 대한 호출을 통해 반환된 채널의 <xref:System.ServiceModel.ChannelFactory%601.CreateChannel%2A?displayProperty=nameWithType>  
+-   <xref:System.ServiceModel.ICommunicationObject.Close%2A?displayProperty=nameWithType> 에 대 한 호출에서 반환 된 채널에서 <xref:System.ServiceModel.ChannelFactory%601.CreateChannel%2A?displayProperty=nameWithType>합니다.  
   
 -   <xref:System.ServiceModel.ClientBase%601.Close%2A?displayProperty=nameWithType> Svcutil.exe에 의해 생성 된 WCF 클라이언트 개체입니다.  
   
@@ -146,5 +146,6 @@ Windows Communication Foundation (WCF) 응용 프로그램에는 *세션* 메시
 >  이 경우 사용할 수 있는 "세션"이 하나이기 때문에 MaxConcurrentSessions에는 영향을 주지 않습니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.ServiceModel.OperationContractAttribute.IsInitiating%2A>
 - <xref:System.ServiceModel.OperationContractAttribute.IsTerminating%2A>
