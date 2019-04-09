@@ -1,19 +1,19 @@
 ---
-title: '방법: 메서드 바인딩'
+title: '방법: 메서드에 바인딩'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - data binding [WPF], binding to methods using ObjectDataProvider
 - binding [WPF], to methods
 - methods [WPF], binding to
 ms.assetid: 5f55e71e-2182-42a0-88d1-700cc1427a7a
-ms.openlocfilehash: 8ccba42c3e16fdda73c087afde99e9864dc4ab0e
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 6cdad46fd6d9ef3bc4ce1a13fedb6ff1d639d93e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57351933"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59123242"
 ---
-# <a name="how-to-bind-to-a-method"></a>방법: 메서드 바인딩
+# <a name="how-to-bind-to-a-method"></a>방법: 메서드에 바인딩
 다음 예제에서는 사용 하는 메서드를 바인딩하는 방법을 보여 줍니다 <xref:System.Windows.Data.ObjectDataProvider>합니다.  
   
 ## <a name="example"></a>예제  
@@ -32,5 +32,6 @@ ms.locfileid: "57351933"
  `InvalidationCharacterRule` 되는 <xref:System.Windows.Controls.ValidationRule> 잘못 된 문자를 확인 하 합니다. 빨간색 테두리 인 기본 오류 템플릿이 주위를 <xref:System.Windows.Controls.TextBox>, 사용자에 게 알리는 입력된 값을 double 값 없을 때 나타납니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [방법 항목](data-binding-how-to-topics.md)
-- [열거형 바인딩](how-to-bind-to-an-enumeration.md)
+- [열거형에 바인딩](how-to-bind-to-an-enumeration.md)

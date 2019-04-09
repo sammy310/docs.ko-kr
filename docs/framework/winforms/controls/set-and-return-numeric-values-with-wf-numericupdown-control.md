@@ -1,5 +1,5 @@
 ---
-title: '방법: 설정 및 Windows Forms NumericUpDown 컨트롤을 사용 하 여 숫자 값을 반환'
+title: '방법: Windows Forms NumericUpDown 컨트롤을 사용하여 숫자 값 설정 및 반환'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - Windows Forms controls, NumericUpDown
 - NumericUpDown control [Windows Forms], setting and returning values
 ms.assetid: 5bd8f8cd-4c12-49ea-9cc3-2a647d064689
-ms.openlocfilehash: 166b14fca2009d0609fa48a5f07912b33f074071
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 281fbbd4459230056fcac2e6c684422c91dc0817
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57703209"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59119888"
 ---
-# <a name="how-to-set-and-return-numeric-values-with-the-windows-forms-numericupdown-control"></a>방법: 설정 및 Windows Forms NumericUpDown 컨트롤을 사용 하 여 숫자 값을 반환
+# <a name="how-to-set-and-return-numeric-values-with-the-windows-forms-numericupdown-control"></a>방법: Windows Forms NumericUpDown 컨트롤을 사용하여 숫자 값 설정 및 반환
 Windows Forms의 숫자 값을 <xref:System.Windows.Forms.NumericUpDown> 컨트롤에 의해 결정 됩니다 해당 <xref:System.Windows.Forms.NumericUpDown.Value%2A> 속성입니다. 다른 속성의 경우와 마찬가지로 컨트롤의 값에 대 한 조건부 테스트를 작성할 수 있습니다. 한 번 합니다 <xref:System.Windows.Forms.NumericUpDown.Value%2A> 속성이 설정 되어에서 작업을 수행 하는 코드를 작성 하 여 직접 조정할 수 있습니다 하거나 호출할 수 있습니다 합니다 <xref:System.Windows.Forms.NumericUpDown.UpButton%2A> 및 <xref:System.Windows.Forms.NumericUpDown.DownButton%2A> 메서드.  
   
 ### <a name="to-set-the-numeric-value"></a>숫자 값을 설정 하려면  
@@ -90,6 +90,7 @@ Windows Forms의 숫자 값을 <xref:System.Windows.Forms.NumericUpDown> 컨트�
     ```  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Windows.Forms.NumericUpDown>
 - <xref:System.Windows.Forms.NumericUpDown.Value%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.NumericUpDown.Increment%2A?displayProperty=nameWithType>

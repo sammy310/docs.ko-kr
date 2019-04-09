@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Paint event [Windows Forms], handling in Windows Forms custom control
 - OnPaint method [Windows Forms], overriding in Windows Forms custom controls
 ms.assetid: e9ca2723-0107-4540-bb21-4f5ffb4a9906
-ms.openlocfilehash: 93afd0d463ed3f52ec6425c9de19a6c147860ed9
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: baf4e6cb3b2a40b1b792ae12e78cb9f878a738ff
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57713234"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59124308"
 ---
 # <a name="overriding-the-onpaint-method"></a>OnPaint 메서드 재정의
 에 정의 된 이벤트를 재정의 하기 위한 기본 단계는 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 동일 하 고 다음 목록에 요약 되어 있습니다.  
@@ -87,6 +87,7 @@ public class PaintEventArgs : EventArgs {
  호출 하는 컨트롤을 해당 <xref:System.Windows.Forms.Control.OnPaint%2A> 해당 시각적 표시를 변경 해야 할 때마다 메서드. 이 메서드가 발생을 <xref:System.Windows.Forms.Control.Paint> 이벤트입니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [이벤트](../../../standard/events/index.md)
 - [Windows Forms 컨트롤 렌더링](rendering-a-windows-forms-control.md)
 - [이벤트 정의](defining-an-event-in-windows-forms-controls.md)

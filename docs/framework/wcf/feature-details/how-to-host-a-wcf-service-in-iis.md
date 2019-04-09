@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: b044b1c9-c1e5-4c9f-84d8-0f02f4537f8b
-ms.openlocfilehash: 44c1b489897a25d293644c5a3ef7d446dd8d4a3b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 8b2ebc108bf3eef60e8877e617acec782da38fa4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54651125"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59124555"
 ---
 # <a name="how-to-host-a-wcf-service-in-iis"></a>방법: IIS에서 WCF 서비스 호스팅
 이 항목에서는 인터넷 정보 서비스 (IIS)에서 호스트 되는 Windows Communication Foundation (WCF) 서비스를 만드는 데 필요한 기본 단계를 간략하게 설명 합니다. 이 항목에서는 사용자가 IIS에 대해 잘 알고 있으며 IIS 관리 도구를 사용해 IIS 응용 프로그램을 만들고 관리하는 방법을 이해하고 있다고 가정합니다. IIS에 대 한 자세한 내용은 참조 하세요. [인터넷 정보 서비스](https://go.microsoft.com/fwlink/?LinkId=132449)합니다. IIS 환경에서 실행 되는 프로세스 재활용와 같은 IIS 기능을 최대한 활용 하는 WCF 서비스 종료, 프로세스 상태 모니터링 및 메시지 기반 활성화를 유휴입니다. 이 호스팅 옵션을 사용하려면 IIS를 적절히 구성해야 하지만 호스팅 코드를 애플리케이션의 일부로 작성하지 않아도 됩니다. HTTP 전송을 사용하는 경우에만 IIS 호스팅을 사용할 수 있습니다.  
@@ -66,7 +66,7 @@ ms.locfileid: "54651125"
   
      다음 예제에서는 구성 파일의 엔드포인트를 명시적으로 지정합니다. 서비스에 엔드포인트를 추가하지 않으면 런타임에서 기본 엔드포인트를 자동으로 추가합니다. 기본 끝점, 바인딩 및 동작 참조 하는 방법에 대 한 자세한 내용은 [Simplified Configuration](../../../../docs/framework/wcf/simplified-configuration.md) 하 고 [Simplified Configuration for WCF Services](../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md)합니다.  
   
-11. 서비스가 올바르게 호스팅되는지 확인하려면 Internet Explorer 인스턴스를 열고 서비스 URL인 `http://localhost/IISHostedCalc/Service.svc`로 이동합니다.  
+11. 서비스가 호스팅되는 올바르게 확인 하려면 서비스의 URL 찾아 Internet Explorer의 인스턴스를 엽니다. `http://localhost/IISHostedCalc/Service.svc`  
   
 ## <a name="example"></a>예제  
  다음은 IIS에서 호스팅되는 계산기 서비스에 해당되는 전체 코드 목록입니다.  
@@ -76,7 +76,8 @@ ms.locfileid: "54651125"
  [!code-xml[c_HowTo_HostInIIS#100](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_hostiniis/common/web.config#100)]  
   
 ## <a name="see-also"></a>참고자료
-- [인터넷 정보 서비스에서 호스팅](../../../../docs/framework/wcf/feature-details/hosting-in-internet-information-services.md)
+
+- [인터넷 정보 서비스에서의 호스팅](../../../../docs/framework/wcf/feature-details/hosting-in-internet-information-services.md)
 - [서비스 호스팅](../../../../docs/framework/wcf/hosting-services.md)
 - [WCF 서비스 및 ASP.NET](../../../../docs/framework/wcf/feature-details/wcf-services-and-aspnet.md)
 - [보안](../../../../docs/framework/wcf/feature-details/security.md)

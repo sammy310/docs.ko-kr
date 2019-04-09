@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - security [WCF], auditing events
 ms.assetid: e71e9587-3336-46a2-9a9e-d72a1743ecec
-ms.openlocfilehash: f3d4ed8ea9a3c0f45185cd0f631cd983b0e364c5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 0dd025b8b7adc97420699eb2f5099ab1ee75b820
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54566829"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59125764"
 ---
 # <a name="how-to-audit-windows-communication-foundation-security-events"></a>방법: Windows Communication Foundation 보안 이벤트 감사
 Windows Communication Foundation (WCF)를 사용 하면 Windows 이벤트 뷰어를 사용 하 여 볼 수 있는 Windows 이벤트 로그에 보안 이벤트를 기록할 수 있습니다. 이 항목에서는 보안 이벤트를 기록하도록 응용 프로그램을 설정하는 방법에 대해 설명합니다. WCF 감사 하는 방법에 대 한 자세한 내용은 참조 하세요. [감사](../../../../docs/framework/wcf/feature-details/auditing-security-events.md)합니다.  
@@ -36,7 +36,7 @@ Windows Communication Foundation (WCF)를 사용 하면 Windows 이벤트 뷰어
      [!code-csharp[AuditingSecurityEvents#4](../../../../samples/snippets/csharp/VS_Snippets_CFX/auditingsecurityevents/cs/auditingsecurityevents.cs#4)]
      [!code-vb[AuditingSecurityEvents#4](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/auditingsecurityevents/vb/auditingsecurityevents.vb#4)]  
   
-     기본 `SuppressAuditFailure` 속성이 `true`이므로 감사하지 못해도 응용 프로그램에 영향을 주지 않습니다. 그렇지 않으면 예외가 throw됩니다. 성공한 모든 감사에 대해 자세한 추적이 기록됩니다. 감사하지 못하면 오류 수준에서 추적이 기록됩니다.  
+     기본 `SuppressAuditFailure` 속성이 `true`이므로 감사하지 못해도 응용 프로그램에 영향을 주지 않습니다. 그러지 않으면 예외가 throw됩니다. 성공한 모든 감사에 대해 자세한 추적이 기록됩니다. 감사하지 못하면 오류 수준에서 추적이 기록됩니다.  
   
 4.  <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior>의 설명에 있는 동작 컬렉션에서 기존 <xref:System.ServiceModel.ServiceHost>를 삭제합니다. 동작 컬렉션은 <xref:System.ServiceModel.Description.ServiceDescription.Behaviors%2A> 컬렉션에서 액세스되는 <xref:System.ServiceModel.ServiceHostBase.Description%2A> 속성으로 액세스됩니다. 다음 코드와 같이 동일한 컬렉션에 새 <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior>를 추가합니다.  
   
@@ -88,6 +88,7 @@ Windows Communication Foundation (WCF)를 사용 하면 Windows 이벤트 뷰어
  경우는 <xref:System.ServiceModel.AuditLogLocation> 속성이 <xref:System.ServiceModel.AuditLogLocation.Security> 및 **개체 액세스 감사** 설정 하지 않으면 합니다 **로컬 보안 정책**, 감사 이벤트가 보안 로그에 기록 되지 것입니다. 오류가 반환되지는 않지만 감사 항목이 보안 로그에 기록되지 않습니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior.AuditLogLocation%2A>
 - <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior>
 - <xref:System.ServiceModel.AuditLogLocation>

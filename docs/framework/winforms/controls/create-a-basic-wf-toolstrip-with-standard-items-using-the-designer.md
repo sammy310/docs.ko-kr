@@ -7,12 +7,12 @@ helpviewer_keywords:
 - toolbars [Windows Forms], adding items
 - ToolStrip control [Windows Forms], adding standard items
 ms.assetid: 028deb1a-acf8-4911-979a-ba8431cd9d82
-ms.openlocfilehash: 4c93db7b333f231bc328b3a16d51cfb5243ba098
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 9f0224a9360d7ce31a85883902c9668b4a1158b6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57714036"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59119290"
 ---
 # <a name="how-to-create-a-basic-windows-forms-toolstrip-with-standard-items-using-the-designer"></a>방법: 디자이너를 사용 하 여 표준 항목을 사용 하 여 기본 Windows Forms ToolStrip 만들기
 다음 절차를 만드는 방법을 보여는 <xref:System.Windows.Forms.ToolStrip> 7 추가 <xref:System.Windows.Forms.ToolStripButton> 일반적인 작업을 나타내는 컨트롤입니다.  
@@ -29,6 +29,7 @@ ms.locfileid: "57714036"
 3.  에 **ToolStrip 작업** 창 선택 **표준 항목 삽입**합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Windows.Forms.ToolStrip>
 - [ToolStrip 컨트롤 개요](toolstrip-control-overview-windows-forms.md)
 - [ToolStrip 컨트롤](toolstrip-control-windows-forms.md)

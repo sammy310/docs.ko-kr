@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c4822a63bf2524582d2dc7677385d26b8914ca0a
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: f88c22f88aa9e1aaa777f12d8b230e7ba92dffeb
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57489008"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59124594"
 ---
 # <a name="corbindtoruntimehost-function"></a>CorBindToRuntimeHost 함수
 호스트를 프로세스에는 CLR (공용 언어 런타임)의 지정된 된 버전을 로드할 수 있습니다.  
@@ -89,6 +89,7 @@ HRESULT CorBindToRuntimeHost (
  **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>참고자료
+
 - [CorBindToCurrentRuntime 함수](../../../../docs/framework/unmanaged-api/hosting/corbindtocurrentruntime-function.md)
 - [CorBindToRuntime 함수](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntime-function.md)
 - [CorBindToRuntimeByCfg 함수](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimebycfg-function.md)
