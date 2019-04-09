@@ -1,19 +1,19 @@
 ---
-title: '방법: ToolStrip 컨트롤의 도구 설명 사용'
+title: '방법: ToolStrip 컨트롤에서 도구 설명 사용'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - ToolStrip control [Windows Forms], adding tooltips
 - toolbars [Windows Forms], adding tooltips
 - tooltips [Windows Forms], adding
 ms.assetid: c5d86024-a7c5-44ee-8b3f-2daf53d80d3e
-ms.openlocfilehash: 7177daef469f6c601cfa468c6437deb9653ffc85
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 884fb75d53e425702cdef46615a16394b835518f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57707471"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59076476"
 ---
-# <a name="how-to-use-tooltips-in-toolstrip-controls"></a>방법: ToolStrip 컨트롤의 도구 설명 사용
+# <a name="how-to-use-tooltips-in-toolstrip-controls"></a>방법: ToolStrip 컨트롤에서 도구 설명 사용
 표시할 수 있습니다는 <xref:System.Windows.Forms.ToolTip> 에 대 한 합니다 <xref:System.Windows.Forms.ToolStrip> 컨트롤을 설정 하 여 원하는 컨트롤 <xref:System.Windows.Forms.ToolStrip.ShowItemToolTips%2A> 속성을 `true`입니다.  
   
 ### <a name="to-display-a-tooltip"></a>도구 설명이 표시  
@@ -30,12 +30,13 @@ ms.locfileid: "57707471"
   
      합니다 `AutoToolTip` 속성은 `true` 에 대해 기본적으로 <xref:System.Windows.Forms.ToolStripButton>를 <xref:System.Windows.Forms.ToolStripDropDownButton>, 및 <xref:System.Windows.Forms.ToolStripSplitButton>합니다.  
   
-     A <xref:System.Windows.Forms.ToolStripButton> 사용 하 여 해당 `Text` 속성에 대 한는 <xref:System.Windows.Forms.ToolTip> 기본적으로는 텍스트입니다. 이 절차의 사용자 지정 텍스트를 표시 하는 <xref:System.Windows.Forms.ToolStripButton> <xref:System.Windows.Forms.ToolTip>합니다.  
+     A <xref:System.Windows.Forms.ToolStripButton> 사용 하 여 해당 `Text` 속성에 대 한는 <xref:System.Windows.Forms.ToolTip> 기본적으로는 텍스트입니다. 이 절차의 사용자 지정 텍스트를 표시 하는 <xref:System.Windows.Forms.ToolStripButton><xref:System.Windows.Forms.ToolTip>합니다.  
   
 > [!NOTE]
 >  설정 하는 경우 <xref:System.Windows.Forms.ToolStripItemDisplayStyle> 하 <xref:System.Windows.Forms.ToolStripItemDisplayStyle.None> 또는 <xref:System.Windows.Forms.ToolStripItemDisplayStyle.Image>, 텍스트가 없는 단추를 나타나지만 도구 설명도 표시 됩니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Windows.Forms.ToolStrip.ShowItemToolTips%2A>
 - <xref:System.Windows.Forms.ToolStripButton>
 - <xref:System.Windows.Forms.ToolStripDropDownButton>

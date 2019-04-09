@@ -9,12 +9,12 @@ helpviewer_keywords:
 - templates [WPF], RadioButton
 - parts [WPF], RadioButton
 ms.assetid: 9acf93f7-dd2f-4010-8ce0-1edd81c52ae2
-ms.openlocfilehash: 4f401c928db57a75bafa7fee0e59542b2eb8a3b6
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: f11a8338c96d14c3c518713865061e4095ff23b1
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57377089"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59078722"
 ---
 # <a name="radiobutton-styles-and-templates"></a>RadioButton 스타일 및 템플릿
 이 항목에서는 스타일 및 템플릿에 대해 설명 합니다 <xref:System.Windows.Controls.RadioButton> 제어 합니다. 기본값을 수정할 수 있습니다 <xref:System.Windows.Controls.ControlTemplate> 고유한 모양을 제어할 수 있습니다. 자세한 내용은 [ControlTemplate을 만들어 기존 컨트롤의 모양 사용자 지정](customizing-the-appearance-of-an-existing-control.md)을 참조하세요.  
@@ -33,9 +33,9 @@ ms.locfileid: "57377089"
 |사용 안 함|CommonStates|컨트롤이 비활성화되었습니다.|  
 |포커스 있음|FocusStates|컨트롤에 포커스가 있습니다.|  
 |포커스 없음|FocusStates|컨트롤에 포커스가 없습니다.|  
-|선택한 상태|CheckStates|<xref:System.Windows.Controls.Primitives.ToggleButton.IsChecked%2A>가 `true`인 경우|  
-|선택 취소 되어 있음|CheckStates|<xref:System.Windows.Controls.Primitives.ToggleButton.IsChecked%2A>가 `false`인 경우|  
-|비활성화|CheckStates|<xref:System.Windows.Controls.Primitives.ToggleButton.IsThreeState%2A>가 `true`이고 <xref:System.Windows.Controls.Primitives.ToggleButton.IsChecked%2A>이 `null`인 경우|  
+|선택한 상태|CheckStates|<xref:System.Windows.Controls.Primitives.ToggleButton.IsChecked%2A> `true`합니다.|  
+|선택 취소 되어 있음|CheckStates|<xref:System.Windows.Controls.Primitives.ToggleButton.IsChecked%2A> `false`합니다.|  
+|비활성화|CheckStates|<xref:System.Windows.Controls.Primitives.ToggleButton.IsThreeState%2A> 됩니다 `true`, 및 <xref:System.Windows.Controls.Primitives.ToggleButton.IsChecked%2A> 는 `null`합니다.|  
 |유효|ValidationStates|컨트롤에서 사용 된 <xref:System.Windows.Controls.Validation> 클래스 및 <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> 연결 된 속성은 `false`합니다.|  
 |InvalidFocused|ValidationStates|합니다 <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> 연결 된 속성은 `true` 가 컨트롤에 포커스가 있습니다.|  
 |InvalidUnfocused|ValidationStates|합니다 <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> 연결 된 속성은 `true` 가 컨트롤에 포커스가 없는 합니다.|  
@@ -52,6 +52,7 @@ ms.locfileid: "57377089"
  전체 샘플을 보려면 [Styling with ControlTemplates Sample](https://github.com/Microsoft/WPF-Samples/tree/master/Styles%20&%20Templates/IntroToStylingAndTemplating)(ControlTemplate으로 스타일 지정 샘플)을 참조하세요.  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Windows.FrameworkElement.Style%2A>
 - <xref:System.Windows.Controls.ControlTemplate>
 - [Control 스타일 및 템플릿](control-styles-and-templates.md)

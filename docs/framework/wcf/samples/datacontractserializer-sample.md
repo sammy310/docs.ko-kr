@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - XML Formatter
 ms.assetid: e0a2fe89-3534-48c8-aa3c-819862224571
-ms.openlocfilehash: 13cbcae4beda058daf9b2c50b1e4ded47f080082
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 30b104143a6305eb4f4a3c2b8d7760198d7c7525
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58828071"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59104678"
 ---
 # <a name="datacontractserializer-sample"></a>DataContractSerializer 샘플
 DataContractSerializer 샘플은 데이터 계약 클래스에 대한 일반 serialization 및 deserialization 서비스를 수행하는 <xref:System.Runtime.Serialization.DataContractSerializer>를 보여 줍니다. 이 샘플에서는 만듭니다는 `Record` 개체, 메모리 스트림으로 serialize 및 deserialize 된 메모리 스트림을 다시 다른 `Record` 개체의 사용을 보여 합니다 <xref:System.Runtime.Serialization.DataContractSerializer>. 그런 다음 이진 작성기로 `Record` 개체를 deserialize하여 이진 작성기가 serialization에 미치는 영향을 보여 줍니다.  
@@ -140,4 +140,3 @@ Press <ENTER> to terminate client.
 >  이 디렉터리가 없으면로 이동 [Windows Communication Foundation (WCF) 및.NET Framework 4 용 Windows WF (Workflow Foundation) 샘플](https://go.microsoft.com/fwlink/?LinkId=150780) 모든 Windows Communication Foundation (WCF)를 다운로드 하 고 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플. 이 샘플은 다음 디렉터리에 있습니다.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Contract\Data\DataContractSerializer`  
-  

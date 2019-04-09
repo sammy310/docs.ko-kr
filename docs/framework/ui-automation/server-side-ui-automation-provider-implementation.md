@@ -6,12 +6,12 @@ helpviewer_keywords:
 - UI Automation, server-side provider implementation
 - provider implementation, UI Automation
 ms.assetid: 6acc6d08-bd67-4e2e-915c-9c1d34eb86fe
-ms.openlocfilehash: df2c1fcd6c84b7670c53a8f06f97c2ea46b8b33d
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: ca8471f6a25c9ef5295af0edaabcefe58114aac6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57679413"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59077292"
 ---
 # <a name="server-side-ui-automation-provider-implementation"></a>서버 쪽 UI 자동화 공급자 구현
 > [!NOTE]
@@ -19,7 +19,7 @@ ms.locfileid: "57679413"
   
  이 섹션에서는 사용자 지정 컨트롤에 대한 서버 쪽 UI 자동화 공급자를 구현하는 방법을 설명합니다.  
   
- Windows Presentation Foundation (WPF) 요소에 대 한 및 비 구현-[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 요소 (위해 설계 된 것과 같은 [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)]) 근본적으로 다릅니다. [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 요소는 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 에서 파생 클래스를 통해 <xref:System.Windows.Automation.Peers.AutomationPeer>에 대해 지원합니다. 비[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 요소는 공급자 인터페이스의 구현을 통해 지원합니다.  
+ Windows Presentation Foundation (WPF) 요소에 대 한 및 비 구현-[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 요소 (위해 설계 된 것과 같은 [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)]) 근본적으로 다릅니다. [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 요소에 대 한 지원 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 에서 파생 된 클래스를 통해 <xref:System.Windows.Automation.Peers.AutomationPeer>합니다. 비[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 요소는 공급자 인터페이스의 구현을 통해 지원합니다.  
   
 <a name="Security_Considerations"></a>   
 ## <a name="security-considerations"></a>보안 고려 사항  
@@ -42,8 +42,7 @@ ms.locfileid: "57679413"
 -   UIAutomationTypes.dll  
   
 -   WindowsBase.dll  
-  
-  
+
 <a name="Provider_Interfaces"></a>   
 ### <a name="provider-interfaces"></a>공급자 인터페이스  
  모든 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 공급자는 다음 인터페이스 중 하나를 구현해야 합니다.  
@@ -69,7 +68,7 @@ ms.locfileid: "57679413"
   
 |기능|구현|  
 |-------------------|--------------------|  
-| [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]|제어 창에 전송된 WM_GETOBJECT 메시지에 대한 응답으로, <xref:System.Windows.Automation.Provider.IRawElementProviderSimple> 을 구현하는 개체(또는 파생된 인터페이스)를 반환합니다. 조각의 경우, 이는 조각 루트에 대한 공급자여야 합니다.|  
+|공급자를 노출 합니다. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]|제어 창에 전송된 WM_GETOBJECT 메시지에 대한 응답으로, <xref:System.Windows.Automation.Provider.IRawElementProviderSimple> 을 구현하는 개체(또는 파생된 인터페이스)를 반환합니다. 조각의 경우, 이는 조각 루트에 대한 공급자여야 합니다.|  
 |속성 값 제공|<xref:System.Windows.Automation.Provider.IRawElementProviderSimple.GetPropertyValue%2A> 를 구현하여 값을 제공하거나 재정의합니다.|  
 |클라이언트에서 컨트롤을 조작할 수 있게 설정|<xref:System.Windows.Automation.Provider.IInvokeProvider>와 같은 컨트롤 패턴을 지원하는 인터페이스를 구현합니다. 이러한 패턴 공급자를 <xref:System.Windows.Automation.Provider.IRawElementProviderSimple.GetPatternProvider%2A>구현에서 반환합니다.|  
 |이벤트 발생|<xref:System.Windows.Automation.Provider.AutomationInteropProvider> 의 정적 메서드 중 하나를 호출하여 클라이언트가 수신할 수 있는 이벤트를 발생시킵니다.|  
@@ -78,7 +77,7 @@ ms.locfileid: "57679413"
   
 <a name="Property_Values_in_Non_WPF_Providers"></a>   
 ### <a name="property-values-in-non-wpf-providers"></a>비 WPF 공급자의 속성 값  
- 사용자 지정 컨트롤에 대한[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 공급자는 자동화 시스템뿐만 아니라 클라이언트 응용 프로그램에서도 사용할 수 있는 특정 속성을 지원해야 합니다. 창에서 호스트되는 요소(HWND)의 경우 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 에서는 기본 창 공급자에서 일부 속성을 검색할 수 있지만 다른 일부 속성은 사용자 지정 공급자에서 가져와야 합니다.  
+ [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 사용자 지정 컨트롤에 대 한 공급자는 클라이언트 응용 프로그램 뿐만 아니라 자동화 시스템에서 사용할 수 있는 특정 속성을 지원 해야 합니다. 창에서 호스트되는 요소(HWND)의 경우 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 에서는 기본 창 공급자에서 일부 속성을 검색할 수 있지만 다른 일부 속성은 사용자 지정 공급자에서 가져와야 합니다.  
   
  HWND 기반 컨트롤에 대한 공급자는 일반적으로 다음 속성(필드 값으로 식별됨)을 제공할 필요가 없습니다.  
   
@@ -113,7 +112,7 @@ ms.locfileid: "57679413"
   
 <a name="Events_in_Non_WPF_Providers"></a>   
 ### <a name="events-in-non-wpf-providers"></a>비 WPF 공급자의 이벤트  
- [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 공급자는 UI 상태 변경 시 이를 클라이언트 응용 프로그램에 알리는 이벤트를 발생시켜야 합니다. 다음 메서드는 이벤트를 발생시키는 데 사용됩니다.  
+ [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 공급자는 클라이언트 응용 프로그램의 UI 상태에서 변경에 알리는 이벤트를 발생 시켜야 합니다. 다음 메서드는 이벤트를 발생시키는 데 사용됩니다.  
   
 |메서드|설명|  
 |------------|-----------------|  
@@ -145,7 +144,7 @@ ms.locfileid: "57679413"
   
 <a name="Non_WPF_Provider_Reparenting"></a>   
 ### <a name="non-wpf-provider-reparenting"></a>비 WPF 공급자 부모 재지정  
- 팝업 창은 실제로 최상위 창이므로 기본적으로 데스크톱의 자식 항목으로 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 트리에 나타납니다. 그러나 많은 경우, 팝업 창은 논리적으로 다른 일부 컨트롤의 자식 항목입니다. 예를 들어 콤보 상자의 드롭다운 목록은 논리적으로 콤보 상자의 자식 항목입니다. 마찬가지로, 메뉴 팝업 창은 논리적으로 메뉴의 자식 항목입니다. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 에서는 팝업 창이 관련 컨트롤의 자식 항목으로 보이도록 팝업 창의 부모 재지정을 지원합니다.  
+ 팝업 창은 실제로 최상위 창이므로 기본적으로 데스크톱의 자식 항목으로 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 트리에 나타납니다. 그러나 많은 경우, 팝업 창은 논리적으로 다른 일부 컨트롤의 자식 항목입니다. 예를 들어 콤보 상자의 드롭다운 목록은 논리적으로 콤보 상자의 자식 항목입니다. 마찬가지로, 메뉴 팝업 창은 논리적으로 메뉴의 자식 항목입니다. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 연결된 된 컨트롤의 자식 항목 처럼 보이도록 팝업 창의 부모 재지정에 대 한 지원을 제공 합니다.  
   
  팝업 창의 부모를 다시 지정하려면  
   
@@ -163,13 +162,14 @@ ms.locfileid: "57679413"
   
 <a name="Non_WPF_Provider_Repositioning"></a>   
 ### <a name="non-wpf-provider-repositioning"></a>비 WPF 공급자 위치 변경  
- [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 조각은 각각 창에 포함된 두 개 이상의 항목(HWND)을 포함할 수 있습니다. 각 HWND에는 HWND를 이를 포함하는 HWND의 자식으로 간주하는 고유한 기본 공급자가 있기 때문에, [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 트리는 기본적으로 조각에 있는 HWND를 부모 창의 자식 항목으로 표시합니다. 대부분의 경우 이것은 바람직한 동작이지만, 때로는 [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)]의 논리 구조와 일치하지 않기 때문에 혼란을 일으킬 수 있습니다.  
+ [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 조각은 각각 창 (HWND)에 포함 된 두 개 이상의 요소를 포함할 수 있습니다. 각 HWND에는 HWND를 이를 포함하는 HWND의 자식으로 간주하는 고유한 기본 공급자가 있기 때문에, [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 트리는 기본적으로 조각에 있는 HWND를 부모 창의 자식 항목으로 표시합니다. 대부분의 경우 이것은 바람직한 동작이지만, 때로는 [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)]의 논리 구조와 일치하지 않기 때문에 혼란을 일으킬 수 있습니다.  
   
  그 좋은 예가 rebar 컨트롤입니다. rebar에는 밴드가 있고, 각 밴드에는 도구 모음, 편집 상자, 콤보 상자와 같은 HWND 기반 컨트롤이 있을 수 있습니다. rebar HWND에 대한 기본 창 공급자는 밴드 컨트롤 HWND를 자식으로 간주하고, rebar 공급자는 밴드를 자식으로 간주합니다. HWND 공급자 및 rebar 공급자는 함께 작업하며 각 자식 항목을 결합하기 때문에 밴드와 HWND 기반 컨트롤이 모두 rebar의 자식으로 나타납니다. 그러나 논리적으로는 밴드만 rebar의 자식으로 나타나야 하며 각 밴드 공급자는 포함된 컨트롤에 대한 기본 HWND 공급자와 연결되어야 합니다.  
   
  이를 위해 rebar에 대한 조각 루트 공급자는 밴드는 나타내는 일련의 자식 항목을 노출합니다. 각 밴드에는 속성 및 패턴을 노출할 수 있는 단일 공급자가 있습니다. <xref:System.Windows.Automation.Provider.IRawElementProviderSimple.HostRawElementProvider%2A>구현에서 밴드 공급자는 <xref:System.Windows.Automation.Provider.AutomationInteropProvider.HostProviderFromHandle%2A>호출 후 컨트롤의 창 핸들에 전달하여 가져온 컨트롤 HWND에 대한 기본 창 공급자를 반환합니다. 마지막으로, rebar에 대한 조각 루트 공급자는 <xref:System.Windows.Automation.Provider.IRawElementProviderHwndOverride> 인터페이스를 구현하고 <xref:System.Windows.Automation.Provider.IRawElementProviderHwndOverride.GetOverrideProviderForHwnd%2A> 구현에서 지정된 HWND에 포함된 컨트롤에 적절한 밴드 공급자를 반환합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [UI 자동화 공급자 개요](../../../docs/framework/ui-automation/ui-automation-providers-overview.md)
 - [서버 쪽 UI 자동화 공급자 노출](../../../docs/framework/ui-automation/expose-a-server-side-ui-automation-provider.md)
 - [UI 자동화 공급자에서 속성 반환](../../../docs/framework/ui-automation/return-properties-from-a-ui-automation-provider.md)

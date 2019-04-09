@@ -2,12 +2,12 @@
 title: TREAT(Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 5b77f156-55de-4cb4-8154-87f707d4c635
-ms.openlocfilehash: 1a65c73b8c6013c2b78343224c5bbb925101f9f3
-ms.sourcegitcommit: c6f69b0cf149f6b54483a6d5c2ece222913f43ce
+ms.openlocfilehash: e1382c4daa513477011a1d1c2132840dfae84de0
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2019
-ms.locfileid: "55903772"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59077344"
 ---
 # <a name="treat-entity-sql"></a>TREAT(Entity SQL)
 특정 기본 형식의 개체를 지정된 파생 형식의 개체로 처리합니다.  
@@ -52,7 +52,7 @@ WHERE p IS OF (NamespaceName.Employee)
   
  다음 표에서는 일반 패턴 및 비교적 특수한 패턴에 대한 TREAT의 동작을 보여 줍니다. 공급자 호출 이전에 모든 예외가 클라이언트 측에서 throw됩니다.  
   
-|패턴|동작|  
+|무늬|동작|  
 |-------------|--------------|  
 |`TREAT (null AS EntityType)`|`DbNull`를 반환합니다.|  
 |`TREAT (null AS ComplexType)`|예외를 throw합니다.|  
@@ -67,5 +67,6 @@ WHERE p IS OF (NamespaceName.Employee)
  [!code-csharp[DP EntityServices Concepts 2#TREAT_ISOF](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#treat_isof)]  
   
 ## <a name="see-also"></a>참고자료
+
 - [엔터티 SQL 참조](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
-- [null 허용 구조적 형식](../../../../../../docs/framework/data/adonet/ef/language-reference/nullable-structured-types-entity-sql.md)
+- [nullable 구조적 형식](../../../../../../docs/framework/data/adonet/ef/language-reference/nullable-structured-types-entity-sql.md)

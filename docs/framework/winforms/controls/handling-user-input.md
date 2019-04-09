@@ -9,12 +9,12 @@ helpviewer_keywords:
 - custom controls [Windows Forms], keyboard events using code
 - custom controls [Windows Forms], mouse events using code
 ms.assetid: d9b12787-86f6-4022-8e0f-e12d312c4af2
-ms.openlocfilehash: a1129e3778763a4e2cd06759c5a5ad7656244934
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 3ebe82fc18deba52fafe76da7ff85fb247446e46
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57720979"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59074956"
 ---
 # <a name="handling-user-input"></a>사용자 입력 처리
 이 항목에서 제공 하는 기본 키보드 및 마우스 이벤트를 설명 합니다. <xref:System.Windows.Forms.Control?displayProperty=nameWithType>합니다. 이벤트를 처리할 경우 컨트롤 작성자는 이벤트에 대리자를 연결하는 대신 보호된 `On`*EventName* 메서드를 재정의해야 합니다. 이벤트의 검토는 [구성 요소에서 이벤트 발생](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/sh2e3k5z(v=vs.120))을 참조하세요.  
@@ -64,6 +64,7 @@ ms.locfileid: "57720979"
  에 대 한 전체 소스 코드를 `FlashTrackBar` 샘플을 참조 하십시오 [방법: 진행률을 보여 주는 Windows Forms 컨트롤 만들기](how-to-create-a-windows-forms-control-that-shows-progress.md)합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [Windows Forms 컨트롤의 이벤트](events-in-windows-forms-controls.md)
 - [이벤트 정의](defining-an-event-in-windows-forms-controls.md)
 - [이벤트](../../../standard/events/index.md)

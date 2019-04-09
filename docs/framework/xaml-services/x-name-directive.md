@@ -10,12 +10,12 @@ helpviewer_keywords:
 - XAML [XAML Services], x:Name attribute
 - Name attribute in XAML [XAML Services]
 ms.assetid: b7e61222-e8cf-48d2-acd0-6df3b7685d48
-ms.openlocfilehash: 3d188038526570761c2e50dc607fd4aac165fda5
-ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
+ms.openlocfilehash: d25c8500250411083e9fb6b33b3f743e5cd103c0
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58034348"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59076747"
 ---
 # <a name="xname-directive"></a>x:Name 지시문
 XAML 이름 범위에 대 한 XAML 정의 요소를 고유 하 게 식별합니다. XAML 이름 범위와 해당 고유성 모델 프레임 워크 Api를 제공 하거나 런타임에 XAML에서 생성 된 개체 그래프에 액세스 하는 동작을 구현 하는 경우 인스턴스화된 개체에 적용할 수 있습니다.  
@@ -67,6 +67,7 @@ XAML 이름 범위에 대 한 XAML 정의 요소를 고유 하 게 식별합니�
  `x:Name` Silverlight 용은 별도로 설명 됩니다. 자세한 내용은 참조 하세요. [XAML Namespace (x:) 언어 기능 (Silverlight)](https://go.microsoft.com/fwlink/?LinkId=199081)합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Windows.FrameworkElement.Name%2A?displayProperty=nameWithType>
 - <xref:System.Windows.FrameworkContentElement.Name%2A?displayProperty=nameWithType>
 - [WPF의 트리](../wpf/advanced/trees-in-wpf.md)

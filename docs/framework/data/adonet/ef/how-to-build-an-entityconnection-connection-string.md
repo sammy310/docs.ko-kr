@@ -1,18 +1,18 @@
 ---
-title: '방법: EntityConnection 연결 문자열 작성'
+title: '방법: EntityConnection 연결 문자열 빌드'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 5bd1a748-3df7-4d0a-a607-14f25e3175e9
-ms.openlocfilehash: 84cef3b874f7deab129fad6dcd363c078153c311
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.openlocfilehash: 19943f44431a50111552f0f60d46af420a7966bf
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55826397"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59097306"
 ---
-# <a name="how-to-build-an-entityconnection-connection-string"></a>방법: EntityConnection 연결 문자열 작성
+# <a name="how-to-build-an-entityconnection-connection-string"></a>방법: EntityConnection 연결 문자열 빌드
 이 항목에서는 <xref:System.Data.EntityClient.EntityConnection>을 작성하는 방법에 대한 예제를 제공합니다.  
   
 ### <a name="to-run-the-code-in-this-example"></a>이 예제의 코드를 실행하려면  
@@ -31,5 +31,6 @@ ms.locfileid: "55826397"
  [!code-vb[DP EntityServices Concepts#BuildingConnectionStringWithEntityCommand](../../../../../samples/snippets/visualbasic/VS_Snippets_Data/dp entityservices concepts/vb/source.vb#buildingconnectionstringwithentitycommand)]  
   
 ## <a name="see-also"></a>참고자료
+
 - [방법: 개체 컨텍스트에서 EntityConnection 사용](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738461(v=vs.100))
 - [Entity Framework용 EntityClient 공급자](../../../../../docs/framework/data/adonet/ef/entityclient-provider-for-the-entity-framework.md)

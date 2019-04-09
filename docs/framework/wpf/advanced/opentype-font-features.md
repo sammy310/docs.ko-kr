@@ -9,12 +9,12 @@ helpviewer_keywords:
 - typography [WPF], OpenType font technology
 - OpenType font technology [WPF]
 ms.assetid: 4061a9d1-fe8b-4921-9e17-18ec7d2e3ea2
-ms.openlocfilehash: a3bcca1e7d031a9351881a5192370bead18aa7bb
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 86921b610b4b42cfc0393af2966b70870bc650f9
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57467157"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59104483"
 ---
 # <a name="opentype-font-features"></a>OpenType 글꼴 기능
 
@@ -22,7 +22,7 @@ ms.locfileid: "57467157"
   
 <a name="overview"></a>   
 ## <a name="opentype-font-format"></a>OpenType 글꼴 서식  
- [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] 글꼴 서식은 PostScript 글꼴 데이터에 대한 지원을 추가하는 [!INCLUDE[TLA#tla_truetype](../../../../includes/tlasharptla-truetype-md.md)] 글꼴 서식의 확장입니다. [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] 글꼴 서식은 [!INCLUDE[TLA#tla_ms](../../../../includes/tlasharptla-ms-md.md)]와 Adobe Corporation이 공동으로 개발했습니다. [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] 글꼴 및 [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] 글꼴을 지원하는 운영 체제 서비스는 글꼴에 포함된 윤곽선이 [!INCLUDE[TLA2#tla_truetype](../../../../includes/tla2sharptla-truetype-md.md)] 윤곽선인지 아니면 CFF(PostScript) 윤곽선인지에 관계없이 글꼴을 설치하여 사용하는 간단한 방법을 사용자에게 제공합니다.  
+ [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] 글꼴 서식은 PostScript 글꼴 데이터에 대한 지원을 추가하는 [!INCLUDE[TLA#tla_truetype](../../../../includes/tlasharptla-truetype-md.md)] 글꼴 서식의 확장입니다. [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] 글꼴 서식은 [!INCLUDE[TLA#tla_ms](../../../../includes/tlasharptla-ms-md.md)]와 Adobe Corporation이 공동으로 개발했습니다. [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] 글꼴 및 운영 체제는 지원 서비스 [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] 글꼴 글꼴 포함 되어 있는지를 설치 하 고 글꼴을 사용 하는 간단한 방법 사용 하 여 사용자 제공 [!INCLUDE[TLA2#tla_truetype](../../../../includes/tla2sharptla-truetype-md.md)] 윤곽선 또는 CFF (PostScript) 윤곽선입니다.  
   
  [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] 글꼴 서식은 다음과 같이 개발자 문제를 해결합니다.  
   
@@ -42,7 +42,7 @@ ms.locfileid: "57467157"
  [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] 글꼴 서식에 대한 자세한 내용은 [OpenType 사양](https://go.microsoft.com/fwlink/?LinkId=96731)을 참조하세요.  
   
 ### <a name="advanced-typographic-extensions"></a>고급 입력 체계 확장  
- 고급 입력 체계 표([!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] 레이아웃 표)는 [!INCLUDE[TLA2#tla_truetype](../../../../includes/tla2sharptla-truetype-md.md)] 또는 CFF 윤곽선으로 글꼴 기능을 확장합니다. [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] 레이아웃 글꼴에는 고품질 국제 입력 체계를 지원하도록 글꼴 기능을 확장하는 추가 정보가 들어 있습니다. 대부분의 [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] 글꼴은 사용 가능한 전체 [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] 기능 중 하위 집합만 노출합니다. [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] 글꼴은 다음과 같은 기능을 제공합니다.  
+ 고급 입력 체계 표([!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] 레이아웃 표)는 [!INCLUDE[TLA2#tla_truetype](../../../../includes/tla2sharptla-truetype-md.md)] 또는 CFF 윤곽선으로 글꼴 기능을 확장합니다. [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] 레이아웃 글꼴에는 고품질 국제 입력 체계를 지원 하도록 글꼴 기능을 확장 하는 추가 정보가 포함 되어 있습니다. 대부분의 [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] 글꼴은 사용 가능한 전체 [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] 기능 중 하위 집합만 노출합니다. [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] 글꼴 같은 기능을 제공 합니다.  
   
 -   합자, 위치 형식, 대체 문자 및 기타 글꼴 대체를 지원하는 문자와 문자 모양 간의 다양한 매핑  
   
@@ -88,7 +88,7 @@ ms.locfileid: "57467157"
   
 <a name="capitals"></a>   
 ## <a name="capitals"></a>대문자  
- 대문자는 대문자 스타일의 문자 모양으로 텍스트를 렌더링하는 일련의 입력 체계 형식입니다. 일반적으로 텍스트를 모두 대문자로 렌더링하면 글자 사이의 간격이 너무 좁아 보이고 글자의 무게와 비율상 너무 무거워 보일 수 있습니다. [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)]은 작은 대문자, 꼬마 대문자, 제목 및 대문자 간격을 비롯하여 대문자에 대한 여러 가지 스타일 서식을 지원합니다. 이러한 스타일 서식을 사용하여 대문자 모양을 제어할 수 있습니다.  
+ 대문자는 대문자 스타일의 문자 모양으로 텍스트를 렌더링하는 일련의 입력 체계 형식입니다. 일반적으로 텍스트를 모두 대문자로 렌더링하면 글자 사이의 간격이 너무 좁아 보이고 글자의 무게와 비율상 너무 무거워 보일 수 있습니다. [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] 작은 대문자를 포함 하 여, 대문자, 꼬마 대문자, 제목, 및 대문자 간격에 대 한 다양 한 스타일 서식 지원 합니다. 이러한 스타일 서식을 사용하여 대문자 모양을 제어할 수 있습니다.  
   
  다음 텍스트는 “SmallCaps” 및 “AllSmallCaps”로 스타일이 지정된 문자 앞에 Pescadero 글꼴의 표준 대문자를 표시합니다. 이 경우 세 단어 모두 동일한 글꼴 크기가 사용됩니다.  
   
@@ -118,7 +118,7 @@ ms.locfileid: "57467157"
   
 <a name="ligatures"></a>   
 ## <a name="ligatures"></a>합자  
- 합자는 읽기 쉽거나 보기 좋은 텍스트를 만들기 위해 단일 문자 모양으로 구성된 두 개 이상의 문자 모양입니다. [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] 글꼴은 네 가지 형식의 합자를 지원합니다.  
+ 합자는 읽기 쉽거나 보기 좋은 텍스트를 만들기 위해 단일 문자 모양으로 구성된 두 개 이상의 문자 모양입니다. [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] 글꼴은 네 가지 형식의 합자를 지원 합니다.  
   
 -   **표준 합자**. 가독성을 향상시키기 위해 디자인되었습니다. 표준 합자에는 “fi”, “fl” 및 “ff”가 포함됩니다.  
   
@@ -161,8 +161,7 @@ ms.locfileid: "57467157"
  선단 장식은 종종 붓글씨와 관련된 정교한 장식을 사용하는 장식용 문자 모양입니다. 다음 텍스트는 Pescadero 글꼴의 표준 및 선단 장식 문자 모양을 표시합니다.  
   
  ![OpenType 표준 및 선단 장식 문자 모양을 사용 하 여 텍스트](./media/opentype-font-features/opentype-standard-swash-glyphs.gif "OpenType 표준 및 선단 장식 문자 모양을 사용 하는 텍스트")  
-  
-  
+
  선단 장식은 종종 이벤트 발표와 같은 짧은 문장에서 장식 요소로 사용됩니다. 다음 텍스트는 선단 장식을 사용하여 이벤트 이름의 대문자를 강조합니다.  
   
  ![OpenType 선단 장식을 사용 하 여 텍스트](./media/opentype-font-features/opentype-swashes.gif "OpenType 선단 장식을 사용 하는 텍스트")  
@@ -182,11 +181,10 @@ ms.locfileid: "57467157"
   
 <a name="alternates"></a>   
 ## <a name="alternates"></a>대체 문자  
- 대체 문자는 표준 문자 모양으로 대체될 수 있는 문자 모양입니다. 다음 예제에서 사용된 Pericles 글꼴과 같은 [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] 글꼴에는 텍스트의 다른 모양을 만드는 데 사용할 수 있는 대체 문자 모양이 포함될 수 있습니다. 다음 텍스트는 Pericles 글꼴의 표준 문자 모양을 표시합니다.  
+ 대체 문자는 표준 문자 모양으로 대체될 수 있는 문자 모양입니다. [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] 다음 예제에서 사용 된 Pericles 글꼴과 같은 글꼴 텍스트에 대 한 다른 모양을 만드는 데 사용할 수 있는 대체 문자를 포함할 수 있습니다. 다음 텍스트는 Pericles 글꼴의 표준 문자 모양을 표시합니다.  
   
  ![OpenType 표준 문자 모양을 사용 하 여 텍스트](./media/opentype-font-features/opentype-standard-glyphs.gif "OpenType 표준 문자 모양을 사용 하는 텍스트")  
-  
-  
+
  Pericles [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] 글꼴에는 표준 문자 모양 집합에 스타일 대체 문자를 제공하는 추가 문자 모양이 포함되어 있습니다. 다음 텍스트는 스타일 대체 문자 모양을 표시합니다.  
   
  ![OpenType 스타일 대체 문자 모양을 사용 하 여 텍스트](./media/opentype-font-features/opentype-stylistic-alternate-glyphs.gif "OpenType 스타일 대체 문자 모양을 사용 하는 텍스트")  
@@ -226,7 +224,7 @@ ms.locfileid: "57467157"
  OpenType 글꼴은 텍스트의 숫자 값으로 사용할 수 있는 많은 기능을 지원합니다.  
   
 ### <a name="fractions"></a>소수  
- [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] 글꼴은 슬래시를 사용하거나 위아래로 표현된 분수 스타일을 지원합니다.  
+ [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] 글꼴 스타일 분수 슬래시, 누적을 지원 합니다.  
   
  다음 텍스트는 Palatino Linotype 글꼴의 분수 스타일을 표시합니다.  
   
@@ -237,7 +235,7 @@ ms.locfileid: "57467157"
  [!code-xaml[OpenTypeFontSamples#10](~/samples/snippets/csharp/VS_Snippets_Wpf/OpenTypeFontSamples/CS/PageOne.xaml#10)]  
   
 ### <a name="old-style-numerals"></a>이전 스타일 숫자  
- [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] 글꼴은 이전 스타일 숫자 형식을 지원합니다. 이 형식은 더 이상 표준이 아닌 스타일의 숫자를 표시할 때 유용합니다. 다음 텍스트는 Palatino Linotype 글꼴의 표준 및 이전 스타일 숫자 형식으로 된 18세기 날짜를 표시합니다.  
+ [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] 글꼴에는 이전 스타일 숫자 형식을 지원합니다. 이 형식은 더 이상 표준이 아닌 스타일의 숫자를 표시할 때 유용합니다. 다음 텍스트는 Palatino Linotype 글꼴의 표준 및 이전 스타일 숫자 형식으로 된 18세기 날짜를 표시합니다.  
   
  ![OpenType 이전 스타일 숫자를 사용 하 여 텍스트](./media/opentype-font-features/opentype-old-style-numerals.gif "OpenType 이전 스타일 숫자를 사용 하 여 텍스트")  
     
@@ -250,7 +248,7 @@ ms.locfileid: "57467157"
  [!code-xaml[OpenTypeFontSamples#11](~/samples/snippets/csharp/VS_Snippets_Wpf/OpenTypeFontSamples/CS/PageOne.xaml#11)]  
   
 ### <a name="proportional-and-tabular-figures"></a>가변 폭 및 테이블 형식 숫자  
- [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] 글꼴은 숫자를 사용할 때 너비 정렬을 제어하기 위해 가변 폭 및 테이블 형식 숫자 기능을 지원합니다. 가변 폭 숫자는 각 숫자의 너비를 다르게 처리합니다. 예를 들어 “1”은 “5”보다 너비가 좁습니다. 테이블 형식 숫자는 같은 너비의 숫자로 처리되어 세로로 정렬되므로 금융 형식 정보의 가독성이 높아집니다.  
+ [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] 글꼴 숫자를 사용할 때 너비 맞춤을 제어 하는 가변 폭 및 테이블 형식 숫자 기능을 지원 합니다. 가변 폭 숫자는 각 숫자의 너비를 다르게 처리합니다. 예를 들어 “1”은 “5”보다 너비가 좁습니다. 테이블 형식 숫자는 같은 너비의 숫자로 처리되어 세로로 정렬되므로 금융 형식 정보의 가독성이 높아집니다.  
   
  다음 텍스트는 Miramonte 글꼴을 사용하여 첫 번째 열에 두 개의 가변 폭 숫자를 표시합니다. 숫자 “5”와 “1” 사이의 너비 차이를 확인할 수 있습니다. 두 번째 열은 테이블 형식 숫자 기능을 사용하여 너비가 조정된 동일한 두 개의 숫자 값을 보여 줍니다.  
   
@@ -261,7 +259,7 @@ ms.locfileid: "57467157"
  [!code-xaml[OpenTypeFontSamples#OpenTypeFontSnippet19](~/samples/snippets/csharp/VS_Snippets_Wpf/OpenTypeFontSamples/CS/Window1.xaml#opentypefontsnippet19)]  
   
 ### <a name="slashed-zero"></a>슬래시 0  
- [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] 글꼴은 문자 “O”와 숫자 “0”의 차이를 강조하기 위해 슬래시 0 숫자 형식을 지원합니다. 슬래시 0 숫자는 금융 정보 및 비즈니스 정보의 식별자에 주로 사용됩니다.  
+ [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] 글꼴 지원 슬래시 0 숫자 형식을 "O" 문자와 숫자 "0"의 차이 강조 하기 위해. 슬래시 0 숫자는 금융 정보 및 비즈니스 정보의 식별자에 주로 사용됩니다.  
   
  다음 텍스트는 Miramonte 글꼴을 사용하는 샘플 주문 식별자를 나타냅니다. 첫 번째 줄에는 표준 숫자가 사용됩니다. 두 번째 줄에서는 대문자 “O” 문자와의 대비를 높이기 위해 슬래시 0 숫자가 사용되었습니다.  
   
@@ -338,8 +336,9 @@ ms.locfileid: "57467157"
 |<xref:System.Windows.Documents.Typography.Variants%2A>|<xref:System.Windows.FontVariants.Inferior> &#124; <xref:System.Windows.FontVariants.Normal> &#124; <xref:System.Windows.FontVariants.Ordinal> &#124; <xref:System.Windows.FontVariants.Ruby> &#124; <xref:System.Windows.FontVariants.Subscript> &#124; <xref:System.Windows.FontVariants.Superscript>|<xref:System.Windows.FontVariants.Normal?displayProperty=nameWithType>|  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Windows.Documents.Typography>
 - [OpenType 사양](https://go.microsoft.com/fwlink/?LinkId=96731)
 - [WPF의 입력 체계](typography-in-wpf.md)
 - [샘플 OpenType 글꼴 팩](sample-opentype-font-pack.md)
-- [응용 프로그램과 함께 글꼴 패키징](packaging-fonts-with-applications.md)
+- [애플리케이션과 함께 글꼴 패키징](packaging-fonts-with-applications.md)

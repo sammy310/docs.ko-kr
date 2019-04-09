@@ -2,12 +2,12 @@
 title: OVERLAPS(Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 41743e89-79cb-4d7b-8a27-355b45024b61
-ms.openlocfilehash: 8ab2b00767aed19cff5448d811d7cdcd1871d9a7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 74399c4c5701fcf039666ef3de19de2cf9a6b50e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54679333"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59104210"
 ---
 # <a name="overlaps-entity-sql"></a>OVERLAPS(Entity SQL)
 두 컬렉션에 공통 요소가 있는지 여부를 확인합니다.  
@@ -23,7 +23,7 @@ expression OVERLAPS expression
  다른 쿼리 식에서 반환된 컬렉션과 비교할 컬렉션을 반환하는 모든 유효한 쿼리 식입니다. 모든 식은 형식이 같거나 기본 형식 또는 파생 형식이 `expression`이어야 합니다.  
   
 ## <a name="return-value"></a>반환 값  
- 두 컬렉션에 공통 요소가 있으면`true` 이고, 그렇지 않으면 `false`입니다.  
+ `true` 두 컬렉션에 공통 요소가; 하는 경우 그렇지 않으면 `false`합니다.  
   
 ## <a name="remarks"></a>설명  
  OVERLAPS 제공 기능적으로 다음에 해당을 합니다.  
@@ -42,4 +42,5 @@ expression OVERLAPS expression
  [!code-csharp[DP EntityServices Concepts 2#OVERLAPS](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#overlaps)]  
   
 ## <a name="see-also"></a>참고자료
+
 - [엔터티 SQL 참조](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)

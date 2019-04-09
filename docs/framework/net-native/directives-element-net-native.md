@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 444846f3-48d5-4341-a43e-69f7221389eb
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 14eac92a2f3e5ed5d93f4e608f7d42b13849036e
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 5cfc9dc5c8122f9b1b1696cedcd5d9a8ceead403
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55254173"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59100225"
 ---
 # <a name="directives-element-net-native"></a>\<지시문 > 요소 (.NET 네이티브)
 .NET 네이티브에 대 한 모든 런타임 지시문 파일의 루트 요소입니다.  
@@ -34,7 +34,7 @@ ms.locfileid: "55254173"
   
 |요소|설명|  
 |-------------|-----------------|  
-|[\<Application>](../../../docs/framework/net-native/application-element-net-native.md)|해당 메타데이터를 리플렉션에 사용할 수 있는 응용 프로그램 수준 형식 및 형식 멤버의 컨테이너로 사용됩니다.|  
+|[\<응용 프로그램 >](../../../docs/framework/net-native/application-element-net-native.md)|해당 메타데이터를 리플렉션에 사용할 수 있는 응용 프로그램 수준 형식 및 형식 멤버의 컨테이너로 사용됩니다.|  
 |[\<Library>](../../../docs/framework/net-native/library-element-net-native.md)|런타임에 자식 형식 및 형식 멤버에 메타데이터가 필요한 어셈블리를 정의합니다.|  
   
 ## <a name="remarks"></a>설명  
@@ -43,5 +43,6 @@ ms.locfileid: "55254173"
  `<Directives>` 요소는 [\<Application>](../../../docs/framework/net-native/application-element-net-native.md) 요소를 포함하지 않거나 하나 포함할 수 있으며 [\<Library>](../../../docs/framework/net-native/library-element-net-native.md) 요소를 포함하지 않거나 하나 이상 포함할 수 있습니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [런타임 지시문(rd.xml) 구성 파일 참조](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
 - [런타임 지시문 요소](../../../docs/framework/net-native/runtime-directive-elements.md)

@@ -1,13 +1,13 @@
 ---
-title: <message>의 <wsHttpBinding>
+title: <message> / <wsHttpBinding>
 ms.date: 03/30/2017
 ms.assetid: 621abbde-590b-454d-90ac-68dc3c69c720
-ms.openlocfilehash: 88149fd1df7679a51cc9cad449d020f29c1709eb
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 4d9b46b6c148f9280f6504b9bccdf644ab451c00
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55260855"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59102676"
 ---
 # <a name="message-of-wshttpbinding"></a>\<메시지 >의 \<wsHttpBinding >
 메시지 수준 보안 설정을 정의 합니다 [ \<wsHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md)합니다.  
@@ -84,6 +84,7 @@ ms.locfileid: "55260855"
 |[\<security>](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-wshttpbinding.md)|에 대 한 보안 설정을 정의 하는 [ \<wsHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md)합니다.|  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.ServiceModel.NonDualMessageSecurityOverHttp>
 - <xref:System.ServiceModel.Configuration.WSHttpSecurityElement.Message%2A>
 - <xref:System.ServiceModel.WSHttpSecurity.Message%2A>

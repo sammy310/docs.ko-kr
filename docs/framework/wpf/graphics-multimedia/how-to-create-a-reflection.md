@@ -9,12 +9,12 @@ helpviewer_keywords:
 - brushes [WPF], creating reflections
 - reflections [WPF], creating
 ms.assetid: 4f017e16-ab80-43c7-98df-03b6bddbb203
-ms.openlocfilehash: 8d29b29d349e9a5ee76ace72837d67e791c25d51
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 61b597cd36fcf0d60f215d9b5403f3b42b21dec4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57353571"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59105263"
 ---
 # <a name="how-to-create-a-reflection"></a>방법: 리플렉션 만들기
 사용 하는 방법을 보여 주는이 예제는 <xref:System.Windows.Media.VisualBrush> 반사를 만들려고 합니다. 때문에 <xref:System.Windows.Media.VisualBrush> 기존 시각적 개체를 표시할 수 있습니다, 리플렉션 및 확대와 같은 흥미로운 시각적 효과 생성 하기 위해이 기능을 사용할 수 있습니다.  
@@ -32,5 +32,6 @@ ms.locfileid: "57353571"
  화면의 일부를 확대 하는 방법 및 반사를 만드는 방법을 보여 주는 예제를 포함 하는 전체 샘플을 참조 하세요 [VisualBrush 샘플](https://go.microsoft.com/fwlink/?LinkID=160049)합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Windows.Media.VisualBrush>
 - [이미지, 그림 및 시각적 표시로 그리기](painting-with-images-drawings-and-visuals.md)

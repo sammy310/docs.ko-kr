@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1f776f20f163df91d65509e5dbab31fe9c29a965
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: f8952b34781045089945e7e72e179e88300b5fdd
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57492103"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59103352"
 ---
 # <a name="icordebugmanagedcallback2exception-method"></a>ICorDebugManagedCallback2::Exception 메서드
 예외 처리기 검색을 시작한 디버거에 알립니다.  
@@ -66,7 +66,7 @@ HRESULT Exception (
   
  특정 프레임 및 오프셋 하 여 결정 됩니다는 `dwEventType` 다음과 같은 매개 변수:  
   
-|`dwEventType`의 값|`pFrame`의 값|`nOffset`의 값|  
+|값 `dwEventType`|값 `pFrame`|값 `nOffset`|  
 |----------------------------|-----------------------|------------------------|  
 |DEBUG_EXCEPTION_FIRST_CHANCE|예외를 발생 시킨 프레임입니다.|프레임에 명령 포인터입니다.|  
 |DEBUG_EXCEPTION_USER_FIRST_CHANCE|예외가 throw 된 지점과 가장 가까운 사용자 코드 프레임입니다.|프레임에 명령 포인터입니다.|  
@@ -83,5 +83,6 @@ HRESULT Exception (
  **.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>참고자료
+
 - [ICorDebugManagedCallback2 인터페이스](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-interface.md)
 - [ICorDebugManagedCallback 인터페이스](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)

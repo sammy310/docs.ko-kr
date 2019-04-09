@@ -1,5 +1,5 @@
 ---
-title: '방법: 색 다시 매핑 테이블 사용'
+title: '방법: 색 다시 매핑 변경 테이블 사용'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - custom colors [Windows Forms], creating with color remap table
 - color remap tables [Windows Forms], using
 ms.assetid: 977df1ce-8665-42d4-9fb1-ef7f0ff63419
-ms.openlocfilehash: 73f4f19229a31266b406214e93e2b59acd343ca2
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: 619eee8e5c08d24f2c7c485dfdc43331f5d64e9f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58463893"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59080061"
 ---
-# <a name="how-to-use-a-color-remap-table"></a>방법: 색 다시 매핑 테이블 사용
+# <a name="how-to-use-a-color-remap-table"></a>방법: 색 다시 매핑 변경 테이블 사용
 다시 매핑하는 프로세스 색 다시 매핑 테이블에 따라 이미지의 색을 변환입니다. 색 다시 매핑 테이블을 배열이 <xref:System.Drawing.Imaging.ColorMap> 개체입니다. 각 <xref:System.Drawing.Imaging.ColorMap> 배열의 개체에는 <xref:System.Drawing.Imaging.ColorMap.OldColor%2A> 속성 및 <xref:System.Drawing.Imaging.ColorMap.NewColor%2A> 속성입니다.  
   
  때 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 이전 색 배열을 비교할 이미지의 각 픽셀 이미지를 그립니다. 이전 색상을 픽셀의 색 일치 하는 경우 해당 새로운 색으로 변경 됩니다. 색이 렌더링에만 변경 됩니다-이미지 자체의 색상 값 (에 저장 된를 <xref:System.Drawing.Image> 또는 <xref:System.Drawing.Bitmap> 개체)는 변경 되지 않습니다.  
@@ -34,8 +34,9 @@ ms.locfileid: "58463893"
  [!code-vb[System.Drawing.RecoloringImages#31](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.RecoloringImages/VB/Class1.vb#31)]  
   
 ## <a name="compiling-the-code"></a>코드 컴파일  
- 앞의 예제는 Windows forms에서 사용하도록 설계되었으며 <xref:System.Windows.Forms.PaintEventArgs> 이벤트 처리기의 매개 변수인 `e`<xref:System.Windows.Forms.Control.Paint>가 필요합니다.  
+ 앞의 예제는 Windows Forms에서 사용 하도록 설계 되었으며 필요 <xref:System.Windows.Forms.PaintEventArgs>`e`의 매개 변수는 <xref:System.Windows.Forms.Control.Paint> 이벤트 처리기입니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [이미지 다시 칠하기](recoloring-images.md)
 - [이미지, 비트맵 및 메타파일](images-bitmaps-and-metafiles.md)

@@ -9,16 +9,15 @@ helpviewer_keywords:
 - resizing Windows Forms
 - Windows Forms, resizing
 ms.assetid: 5d9dd47e-e68c-48c9-a0a3-a9ff34ba009d
-ms.openlocfilehash: 9399069ad5365b025fe8c92b2f10c36c4666f4b4
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 2da4b7483e92b02360bceb886d84a7f729b84dee
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57705423"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59077227"
 ---
 # <a name="how-to-resize-windows-forms"></a>방법: Windows Forms 크기 조정
-여러가지 방법으로 Windows Form의 크기를 지정할 수 있습니다. 
-  <xref:System.Windows.Forms.Form.Size%2A> 속성에 대해 새 값을 설정하거나 <xref:System.Windows.Forms.Control.Height%2A> 또는 <xref:System.Windows.Forms.Control.Width%2A> 속성을 개별적으로 조정하여 프로그래밍 방식으로 폼의 높이와 너비를 모두 변경할 수 있습니다. Visual Studio를 사용 하는 경우에 Windows Forms 디자이너를 사용 하 여 크기를 변경할 수 있습니다. 또한 참조 [방법: 디자이너를 사용 하 여 Windows Forms 크기 조정](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/37k2zkwx(v=vs.100))합니다.  
+여러가지 방법으로 Windows Form의 크기를 지정할 수 있습니다. <xref:System.Windows.Forms.Form.Size%2A> 속성에 대해 새 값을 설정하거나 <xref:System.Windows.Forms.Control.Height%2A> 또는 <xref:System.Windows.Forms.Control.Width%2A> 속성을 개별적으로 조정하여 프로그래밍 방식으로 폼의 높이와 너비를 모두 변경할 수 있습니다. Visual Studio를 사용 하는 경우에 Windows Forms 디자이너를 사용 하 여 크기를 변경할 수 있습니다. 또한 참조 [방법: 디자이너를 사용 하 여 Windows Forms 크기 조정](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/37k2zkwx(v=vs.100))합니다.  
   
 ### <a name="to-resize-a-form-programmatically"></a>프로그래밍 방식으로 폼의 크기를 조정하려면  
   
@@ -114,5 +113,6 @@ ms.locfileid: "57705423"
     ```  
   
 ## <a name="see-also"></a>참고자료
+
 - [Windows Forms 시작](getting-started-with-windows-forms.md)
-- [Windows Forms 응용 프로그램 강화](./advanced/index.md)
+- [Windows Forms 애플리케이션 강화](./advanced/index.md)

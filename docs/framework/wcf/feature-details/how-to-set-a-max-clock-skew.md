@@ -8,12 +8,12 @@ helpviewer_keywords:
 - MaxClockSkew property
 - WCF, custom bindings
 ms.assetid: 491d1705-eb29-43c2-a44c-c0cf996f74eb
-ms.openlocfilehash: 73c3bd7c8bf02fd003510c838fec45a68829fe1c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e487da6316ec381c2009ee33575848dd80df8ab2
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54646881"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59076630"
 ---
 # <a name="how-to-set-a-max-clock-skew"></a>방법: 최대 클럭 오차 설정
 두 개의 컴퓨터에서 클록 설정이 서로 다른 경우 시간 중심 기능이 비활성화될 수 있습니다. 이 가능성을 줄이기 위해 `MaxClockSkew` 설정을 <xref:System.TimeSpan>으로 설정할 수 있습니다. 이 속성은 다음 두 개의 클래스에서 사용할 수 있습니다.  
@@ -27,7 +27,7 @@ ms.locfileid: "54646881"
   
  시스템 제공 바인딩 중 하나에서 속성을 변경하려면 바인딩 컬렉션에서 보안 바인딩 요소를 찾아 `MaxClockSkew` 속성을 새 값으로 설정합니다. 두 개의 클래스는 <xref:System.ServiceModel.Channels.SecurityBindingElement>: <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> 및 <xref:System.ServiceModel.Channels.AsymmetricSecurityBindingElement>에서 파생됩니다. 컬렉션에서 보안 바인딩을 검색하는 경우 `MaxClockSkew` 속성을 제대로 설정하기 위해 이러한 형식 중 하나를 캐스팅해야 합니다. 다음 예제에서는 <xref:System.ServiceModel.WSHttpBinding>를 사용하는 <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement>을 사용합니다. 각 시스템 제공 바인딩에 사용할 보안 바인딩 형식을 지정 하는 목록에 대해서 [System-Provided Bindings](../../../../docs/framework/wcf/system-provided-bindings.md)합니다.  
   
-### <a name="to-create-a-custom-binding-with-a-new-clock-skew-value-in-code"></a>코드에서 새 클록 오차 값으로 사용자 지정 바인딩을 만들려면  
+### <a name="to-create-a-custom-binding-with-a-new-clock-skew-value-in-code"></a>코드에서 새 클럭 오차 값으로 사용자 지정 바인딩을 만들려면  
   
 1.  > [!WARNING]
     >  코드에서 다음 네임 스페이스에 대 한 추가 참조를 확인 합니다. <xref:System.ServiceModel.Channels>, <xref:System.ServiceModel.Description>, <xref:System.Security.Permissions>, 및 <xref:System.ServiceModel.Security.Tokens>.  
@@ -85,7 +85,8 @@ ms.locfileid: "54646881"
     ```  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.ServiceModel.Channels.LocalClientSecuritySettings>
 - <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings>
 - <xref:System.ServiceModel.Channels.CustomBinding>
-- [방법: SecurityBindingElement를 사용 하 여 사용자 지정 바인딩 만들기](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)
+- [방법: SecurityBindingElement를 사용하여 사용자 지정 바인딩 만들기](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)

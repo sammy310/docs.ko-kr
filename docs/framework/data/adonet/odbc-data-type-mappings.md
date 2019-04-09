@@ -2,17 +2,17 @@
 title: ODBC 데이터 형식 매핑
 ms.date: 03/30/2017
 ms.assetid: 43c35d32-831d-480f-a150-78f7e869d17f
-ms.openlocfilehash: f57ba69a03837805f168cf33a9b8060633a6330f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8165ab933352394e29cbe93a9e8ba64267f8ae60
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54724228"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59074068"
 ---
 # <a name="odbc-data-type-mappings"></a>ODBC 데이터 형식 매핑
 다음 표에서는 .NET Framework Data Provider for ODBC([!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)])의 데이터 형식에 대해 유추된 <xref:System.Data.Odbc> 형식을 보여 줍니다. 또한 이 표에는 <xref:System.Data.Odbc.OdbcDataReader>의 형식화된 접근자 메서드도 나열되어 있습니다.  
   
-|ODBC 형식|[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 형식|[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]의 형식화된 접근자|  
+|ODBC 형식|[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] type|[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 형식화 된 접근자|  
 |---------------|----------------------------------------------------------------------|--------------------------------------------------------------------------------|  
 |SQL_BIGINT|Int64|GetInt64()|  
 |SQL_BINARY|Byte[]|GetBytes()|  
@@ -36,5 +36,6 @@ ms.locfileid: "54724228"
 |SQL_WVARCHAR|문자열<br /><br /> Char[]|GetString()<br /><br /> GetChars()|  
   
 ## <a name="see-also"></a>참고자료
+
 - [ADO.NET에서 데이터 검색 및 수정](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)
 - [ADO.NET 관리되는 공급자 및 데이터 집합 개발자 센터](https://go.microsoft.com/fwlink/?LinkId=217917)

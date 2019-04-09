@@ -2,12 +2,12 @@
 title: dataContractSerializer
 ms.date: 03/30/2017
 ms.assetid: a47513a4-a96c-4350-8586-daacb05dee71
-ms.openlocfilehash: 933d49092c392fa293468d546e521bf7ed858376
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8ba16d9cc30b07d3e6b0924e6013ec01443867d4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54539846"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59139050"
 ---
 # <a name="datacontractserializer"></a>dataContractSerializer
 <xref:System.Runtime.Serialization.DataContractSerializer>에 대한 구성 데이터를 포함합니다.  
@@ -51,6 +51,7 @@ ms.locfileid: "54539846"
 >  `<dataContractSerializer>` 동작 요소(있는 경우)는 항상 구성 파일에서 `<enableWebScript>` 동작 요소 앞에 나와야 합니다. 그렇지 않으면 결과 동작이 정의되지 않습니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Runtime.Serialization.DataContractSerializer>
 - <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior>
 - <xref:System.ServiceModel.Configuration.DataContractSerializerElement>

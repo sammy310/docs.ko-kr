@@ -5,17 +5,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: e491b9bf-741a-4296-9f51-76c25ddf6a82
-ms.openlocfilehash: 1caf81df5998e5aaef4ad011a399d70aff43ca9b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6423959ed5036cc8ab2a88bb7273ef7aa95c8958
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54634457"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59101538"
 ---
 # <a name="how-to-directly-execute-sql-queries"></a>방법: SQL 쿼리 직접 실행
-[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]을 작성한 쿼리를 텍스트 형식의 매개 변수가 있는 SQL 쿼리로 변환하고 SQL 서버에 전달하여 처리합니다.  
+[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 작성 한 쿼리를 텍스트 형식의 매개 변수가 있는 SQL 쿼리로 변환 하 고에 대 한 SQL server에 보냅니다 처리.  
   
- SQL에서는 응용 프로그램에서 로컬로 사용할 수 있는 다양한 메서드를 실행할 수 없습니다. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]에서 이러한 로컬 메서드를 해당 작업과 SQL 환경 내부에서 사용 가능한 함수로 변환하려 합니다. [!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)] 기본 제공 형식에서 대부분의 메서드와 연산자는 SQL 명령으로 직접 변환됩니다. 일부는 사용할 수 있는 함수에서 생성될 수 있습니다. 생성될 수 없는 일부는 런타임 예외를 발생시킵니다. 자세한 내용은 [SQL-CLR 형식 매핑](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mapping.md)합니다.  
+ SQL에서는 응용 프로그램에서 로컬로 사용할 수 있는 다양한 메서드를 실행할 수 없습니다. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 이러한 로컬 메서드를 해당 작업과 SQL 환경 내부에서 사용 가능한 함수 변환 하려고 합니다. [!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)] 기본 제공 형식에서 대부분의 메서드와 연산자는 SQL 명령으로 직접 변환됩니다. 일부는 사용할 수 있는 함수에서 생성될 수 있습니다. 생성될 수 없는 일부는 런타임 예외를 발생시킵니다. 자세한 내용은 [SQL-CLR 형식 매핑](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mapping.md)합니다.  
   
  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 쿼리가 부족하여 특수한 작업을 수행할 수 없는 경우 <xref:System.Data.Linq.DataContext.ExecuteQuery%2A> 메서드를 사용하여 SQL 쿼리를 실행하고 쿼리의 결과를 직접 개체로 변환합니다.  
   
@@ -36,5 +36,6 @@ ms.locfileid: "54634457"
  매개 변수는 `Console.WriteLine()` 및 `String.Format()`에서 사용되는 동일한 중괄호 표기법을 사용하여 쿼리 텍스트에서 표현됩니다. 사실 `String.Format()` 중괄호 중괄호로 묶인된 매개 변수를 대체와 같은 매개 변수 이름 생성을 제공 하는 쿼리 문자열에서 실제로 라고 @p0를 @p1 ..., @p(n).  
   
 ## <a name="see-also"></a>참고자료
+
 - [배경 정보](../../../../../../docs/framework/data/adonet/sql/linq/background-information.md)
 - [데이터베이스 쿼리](../../../../../../docs/framework/data/adonet/sql/linq/querying-the-database.md)

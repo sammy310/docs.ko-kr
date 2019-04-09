@@ -1,5 +1,5 @@
 ---
-title: '방법: 색 매트릭스를 사용 하 여 단색으로 변형'
+title: '방법: 색 매트릭스를 사용하여 단색으로 변환'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - image colors [Windows Forms], transforming
 - color matrices [Windows Forms], using
 ms.assetid: 44df4556-a433-49c0-ac0f-9a12063a5860
-ms.openlocfilehash: f19039c69f27f78e838ea1a891690451af3f0cdc
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 66ddd85d4f841edf9cabf338fbb66a8e2dda491a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57705599"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59075183"
 ---
-# <a name="how-to-use-a-color-matrix-to-transform-a-single-color"></a>방법: 색 매트릭스를 사용 하 여 단색으로 변형
+# <a name="how-to-use-a-color-matrix-to-transform-a-single-color"></a>방법: 색 매트릭스를 사용하여 단색으로 변환
 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 제공 된 <xref:System.Drawing.Image> 고 <xref:System.Drawing.Bitmap> 저장 및 이미지 조작을 위한 클래스입니다. <xref:System.Drawing.Image> 및 <xref:System.Drawing.Bitmap> 개체는 32 비트 숫자도 각 픽셀의 색을 저장 합니다. 각각 8 비트가 빨간색, 녹색, 파랑 및 알파에 대 한 합니다. 각 네 가지 구성 요소에는 0부터 농도가 없음을 나타내고 255 전체 강도 나타내는 0부터 255 까지의 숫자입니다. 색의 투명도 지정 하는 알파 구성 요소: 0은 완전히 투명 하 고 255는 완전히 불투명 한 합니다.  
   
  색 벡터는 (빨강, 녹색, 파란색, 알파) 형식의 4 중 튜플입니다. 예를 들어 색 벡터 (0, 255, 0, 255)를 빨강 및 파랑, 녹색 농도가 불투명 한 색을 나타냅니다.  
@@ -64,5 +64,6 @@ ms.locfileid: "57705599"
  앞의 예제는 Windows forms에서 사용하도록 설계되었으며 <xref:System.Windows.Forms.Control.Paint> 이벤트 처리기의 매개 변수인 <xref:System.Windows.Forms.PaintEventArgs> `e`가 필요합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [이미지 다시 칠하기](recoloring-images.md)
-- [좌표계 및 변형](coordinate-systems-and-transformations.md)
+- [좌표계 및 변환](coordinate-systems-and-transformations.md)

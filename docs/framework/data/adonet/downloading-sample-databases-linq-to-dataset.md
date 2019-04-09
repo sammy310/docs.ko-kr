@@ -2,12 +2,12 @@
 title: 샘플 데이터베이스 다운로드(LINQ to DataSet)
 ms.date: 03/30/2017
 ms.assetid: eb42a7af-d410-4b7f-b4a8-13c72ce6fd09
-ms.openlocfilehash: f0fc3e8d447f82c89b3b558d95b45120db0a876d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a022380bf266997c82de43e103e7d56348447cfc
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54573336"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59104912"
 ---
 # <a name="downloading-sample-databases-linq-to-dataset"></a>샘플 데이터베이스 다운로드(LINQ to DataSet)
 샘플 및 연습에는 [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] 설명서 AdventureWorks 샘플 데이터베이스를 사용 합니다. 이 제품은 Microsoft 다운로드 사이트에서 무료로 다운로드할 수 있습니다. [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] 설명서의 샘플과 연습에서는 SQL Server를 데이터 저장소로 사용합니다. SQL Server 대신 무료로 사용할 수 있는 SQL Server Express Edition을 데이터 저장소로 사용할 수도 있습니다.  
@@ -74,4 +74,5 @@ ms.locfileid: "54573336"
 3.  웹 사이트의 설치 지침을 따릅니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [시작](../../../../docs/framework/data/adonet/getting-started-linq-to-dataset.md)

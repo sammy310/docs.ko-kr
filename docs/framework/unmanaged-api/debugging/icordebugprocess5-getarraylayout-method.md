@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f5cff3f3f577a0c7ef04a226ec70a2722c89b5c8
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 332de11790e78b712a429365bd89cc9e41539edc
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57496887"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59105523"
 ---
 # <a name="icordebugprocess5getarraylayout-method"></a>ICorDebugProcess5::GetArrayLayout 메서드
 배열 형식의 레이아웃에 대 한 정보를 제공합니다.  
@@ -52,5 +52,6 @@ HRESULT GetArrayLayout(    [in] COR_TYPEID id,     [out] COR_ARRAY_LAYOUT *pLayo
  **.NET Framework 버전:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
 ## <a name="see-also"></a>참고자료
+
 - [ICorDebugProcess5 인터페이스](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-interface.md)
 - [디버깅 인터페이스](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

@@ -11,12 +11,12 @@ helpviewer_keywords:
 - spelling checker [WPF]
 - checking spelling [WPF]
 ms.assetid: 6f953d2b-67e8-4012-84ce-53c0e958da47
-ms.openlocfilehash: 633ffe38503df743df355a8b476e7b254fcafffa
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 7381bafc349506d89058581e9ed62a4348a72865
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57370681"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59076850"
 ---
 # <a name="how-to-enable-spell-checking-in-a-text-editing-control"></a>방법: 텍스트 편집 컨트롤에서 맞춤법 검사 사용
 다음 예제에서 실시간 맞춤법 검사를 사용 하도록 설정 하는 방법을 보여 줍니다는 <xref:System.Windows.Controls.TextBox> 를 사용 하 여는 <xref:System.Windows.Controls.SpellCheck.IsEnabled%2A> 의 속성을 <xref:System.Windows.Controls.SpellCheck> 클래스.  
@@ -28,6 +28,7 @@ ms.locfileid: "57370681"
  [!code-vb[TextBoxMiscSnippets_procedural_snip#SpellCheckCodeExampleWholePage](~/samples/snippets/visualbasic/VS_Snippets_Wpf/TextBoxMiscSnippets_procedural_snip/visualbasic/spellcheckexample.vb#spellcheckcodeexamplewholepage)]  
   
 ## <a name="see-also"></a>참고자료
-- [상황에 맞는 메뉴로 맞춤법 검사 사용](how-to-use-spell-checking-with-a-context-menu.md)
+
+- [상황에 맞는 메뉴에서 맞춤법 검사 사용](how-to-use-spell-checking-with-a-context-menu.md)
 - [TextBox 개요](textbox-overview.md)
 - [RichTextBox 개요](richtextbox-overview.md)

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 44b30d571e6786ad840308a21fb185270c6e5ae7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 16e91a0c748e5b148e79dc73cf213b03c68c5021
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54509872"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59103755"
 ---
 # <a name="isymunmanagedencupdategetlocalvariables-method"></a>ISymUnmanagedENCUpdate::GetLocalVariables 메서드
 지역 변수를 가져옵니다.  
@@ -58,4 +58,5 @@ HRESULT GetLocalVariables(
  **헤더:** CorSym.idl, CorSym.h  
   
 ## <a name="see-also"></a>참고자료
+
 - [ISymUnmanagedENCUpdate 인터페이스](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedencupdate-interface.md)

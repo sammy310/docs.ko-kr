@@ -1,5 +1,5 @@
 ---
-title: '방법: Windows Forms NotifyIcon 구성 요소를 사용 하 여 바로 가기 메뉴 연결'
+title: '방법: Windows Forms NotifyIcon 구성 요소에 바로 가기 메뉴 연결'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - NotifyIcon component [Windows Forms], associating shortcut menus
 - shortcut menus [Windows Forms], for background processes
 ms.assetid: d68f3926-08d3-4f7d-949f-1981b29cf188
-ms.openlocfilehash: e9e50aee63ec36ac005daabed27c3ac3c42a4dc9
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 702a848631ce45c0efcb8eadfdf64074b454ac7d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57720386"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59097992"
 ---
-# <a name="how-to-associate-a-shortcut-menu-with-a-windows-forms-notifyicon-component"></a>방법: Windows Forms NotifyIcon 구성 요소를 사용 하 여 바로 가기 메뉴 연결
+# <a name="how-to-associate-a-shortcut-menu-with-a-windows-forms-notifyicon-component"></a>방법: Windows Forms NotifyIcon 구성 요소에 바로 가기 메뉴 연결
 > [!NOTE]
 >  있지만 <xref:System.Windows.Forms.MenuStrip> 하 고 <xref:System.Windows.Forms.ContextMenuStrip> 바꾸고 기능을 추가 합니다 <xref:System.Windows.Forms.MainMenu> 및 <xref:System.Windows.Forms.ContextMenu> 이전 버전의 컨트롤 <xref:System.Windows.Forms.MainMenu> 및 <xref:System.Windows.Forms.ContextMenu> 선택 하면 이전 버전과 호환성 및 향후 사용을 위해 유지 됩니다.  
   
@@ -127,8 +127,9 @@ contextMenu1 = gcnew System::Windows::Forms::ContextMenu();
 ```  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Windows.Forms.NotifyIcon>
 - <xref:System.Windows.Forms.NotifyIcon.Icon%2A>
-- [방법: Windows Forms NotifyIcon 구성 요소를 사용 하 여 작업 표시줄에 응용 프로그램 아이콘 추가](app-icons-to-the-taskbar-with-wf-notifyicon.md)
+- [방법: Windows Forms NotifyIcon 구성 요소를 사용하여 작업 표시줄에 애플리케이션 아이콘 추가](app-icons-to-the-taskbar-with-wf-notifyicon.md)
 - [NotifyIcon 구성 요소](notifyicon-component-windows-forms.md)
 - [NotifyIcon 구성 요소 개요](notifyicon-component-overview-windows-forms.md)
