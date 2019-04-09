@@ -16,17 +16,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bbb2bf681ed05728a015456e0e4c37157a55f755
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2c7b9b25673685dde8b75702c80f525515917ae1
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54699755"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59078709"
 ---
-# <a name="cordebugexceptionflags-enumeration"></a><span data-ttu-id="b2cec-102">CorDebugExceptionFlags 열거형</span><span class="sxs-lookup"><span data-stu-id="b2cec-102">CorDebugExceptionFlags Enumeration</span></span>
-<span data-ttu-id="b2cec-103">예외에 대한 추가 정보를 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="b2cec-103">Provides additional information about an exception.</span></span>  
+# <a name="cordebugexceptionflags-enumeration"></a><span data-ttu-id="b006d-102">CorDebugExceptionFlags 열거형</span><span class="sxs-lookup"><span data-stu-id="b006d-102">CorDebugExceptionFlags Enumeration</span></span>
+<span data-ttu-id="b006d-103">예외에 대한 추가 정보를 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="b006d-103">Provides additional information about an exception.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="b2cec-104">구문</span><span class="sxs-lookup"><span data-stu-id="b2cec-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="b006d-104">구문</span><span class="sxs-lookup"><span data-stu-id="b006d-104">Syntax</span></span>  
   
 ```  
 typedef enum CorDebugExceptionFlags {  
@@ -35,24 +35,25 @@ typedef enum CorDebugExceptionFlags {
 } CorDebugExceptionFlags;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="b2cec-105">멤버</span><span class="sxs-lookup"><span data-stu-id="b2cec-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="b006d-105">멤버</span><span class="sxs-lookup"><span data-stu-id="b006d-105">Members</span></span>  
   
-|<span data-ttu-id="b2cec-106">멤버</span><span class="sxs-lookup"><span data-stu-id="b2cec-106">Member</span></span>|<span data-ttu-id="b2cec-107">설명</span><span class="sxs-lookup"><span data-stu-id="b2cec-107">Description</span></span>|  
+|<span data-ttu-id="b006d-106">멤버</span><span class="sxs-lookup"><span data-stu-id="b006d-106">Member</span></span>|<span data-ttu-id="b006d-107">설명</span><span class="sxs-lookup"><span data-stu-id="b006d-107">Description</span></span>|  
 |------------|-----------------|  
-|`DEBUG_EXCEPTION_NONE`|<span data-ttu-id="b2cec-108">예외가 없습니다.</span><span class="sxs-lookup"><span data-stu-id="b2cec-108">There is no exception.</span></span>|  
-|`DEBUG_EXCEPTION_CAN_BE_INTERCEPTED`|<span data-ttu-id="b2cec-109">예외를 가로챌 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="b2cec-109">The exception is interceptable.</span></span><br /><br /> <span data-ttu-id="b2cec-110">시간상 디버거가 아직 예외를 가로챌 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="b2cec-110">The timing of the exception may still be such that the debugger cannot intercept it.</span></span> <span data-ttu-id="b2cec-111">예를 들어 현재 콜백 아래에 관리 코드가 없거나 예외 이벤트가 JIT(Just-In-Time) 연결에서 발생한 경우에는 예외를 가로챌 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="b2cec-111">For example, if there is no managed code below the current callback or the exception event resulted from a just-in-time (JIT) attachment, the exception cannot be intercepted.</span></span>|  
+|`DEBUG_EXCEPTION_NONE`|<span data-ttu-id="b006d-108">예외가 없습니다.</span><span class="sxs-lookup"><span data-stu-id="b006d-108">There is no exception.</span></span>|  
+|`DEBUG_EXCEPTION_CAN_BE_INTERCEPTED`|<span data-ttu-id="b006d-109">예외를 가로챌 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="b006d-109">The exception is interceptable.</span></span><br /><br /> <span data-ttu-id="b006d-110">시간상 디버거가 아직 예외를 가로챌 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="b006d-110">The timing of the exception may still be such that the debugger cannot intercept it.</span></span> <span data-ttu-id="b006d-111">예를 들어 현재 콜백 아래에 관리 코드가 없거나 예외 이벤트가 JIT(Just-In-Time) 연결에서 발생한 경우에는 예외를 가로챌 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="b006d-111">For example, if there is no managed code below the current callback or the exception event resulted from a just-in-time (JIT) attachment, the exception cannot be intercepted.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="b2cec-112">설명</span><span class="sxs-lookup"><span data-stu-id="b2cec-112">Remarks</span></span>  
- <span data-ttu-id="b2cec-113">이후 버전에서는 이 열거형에 대해 새 값이 추가될 수 있으므로 예기치 않은 값에 대해 `CorDebugExceptionFlags`를 사용하는 코드를 준비해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="b2cec-113">New values may be added to this enumeration in later versions, so you should prepare code that uses `CorDebugExceptionFlags` for unexpected values.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="b006d-112">설명</span><span class="sxs-lookup"><span data-stu-id="b006d-112">Remarks</span></span>  
+ <span data-ttu-id="b006d-113">이후 버전에서는 이 열거형에 대해 새 값이 추가될 수 있으므로 예기치 않은 값에 대해 `CorDebugExceptionFlags`를 사용하는 코드를 준비해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="b006d-113">New values may be added to this enumeration in later versions, so you should prepare code that uses `CorDebugExceptionFlags` for unexpected values.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="b2cec-114">요구 사항</span><span class="sxs-lookup"><span data-stu-id="b2cec-114">Requirements</span></span>  
- <span data-ttu-id="b2cec-115">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="b2cec-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="b006d-114">요구 사항</span><span class="sxs-lookup"><span data-stu-id="b006d-114">Requirements</span></span>  
+ <span data-ttu-id="b006d-115">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="b006d-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="b2cec-116">**헤더:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="b2cec-116">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="b006d-116">**헤더:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="b006d-116">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="b2cec-117">**라이브러리:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="b2cec-117">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="b006d-117">**라이브러리:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="b006d-117">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="b2cec-118">**.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="b2cec-118">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ **<span data-ttu-id="b006d-118">.NET Framework 버전:</span><span class="sxs-lookup"><span data-stu-id="b006d-118">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="b2cec-119">참고자료</span><span class="sxs-lookup"><span data-stu-id="b2cec-119">See also</span></span>
-- [<span data-ttu-id="b2cec-120">디버깅 열거형</span><span class="sxs-lookup"><span data-stu-id="b2cec-120">Debugging Enumerations</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
+## <a name="see-also"></a><span data-ttu-id="b006d-119">참고자료</span><span class="sxs-lookup"><span data-stu-id="b006d-119">See also</span></span>
+
+- [<span data-ttu-id="b006d-120">디버깅 열거형</span><span class="sxs-lookup"><span data-stu-id="b006d-120">Debugging Enumerations</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)

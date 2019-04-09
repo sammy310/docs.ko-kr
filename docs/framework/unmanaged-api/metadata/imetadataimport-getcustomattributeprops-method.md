@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 422ff5d5a2924bf66fee9dad99d57fed9477d0f1
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: c27a55166ebc055f324ec45ba6dfd835c8b8bbf6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57484435"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59075745"
 ---
-# <a name="imetadataimportgetcustomattributeprops-method"></a><span data-ttu-id="af81f-102">IMetaDataImport::GetCustomAttributeProps 메서드</span><span class="sxs-lookup"><span data-stu-id="af81f-102">IMetaDataImport::GetCustomAttributeProps Method</span></span>
-<span data-ttu-id="af81f-103">해당 메타데이터 토큰이 지정된 경우 사용자 지정 특성의 값을 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="af81f-103">Gets the value of the custom attribute, given its metadata token.</span></span>  
+# <a name="imetadataimportgetcustomattributeprops-method"></a><span data-ttu-id="c132d-102">IMetaDataImport::GetCustomAttributeProps 메서드</span><span class="sxs-lookup"><span data-stu-id="c132d-102">IMetaDataImport::GetCustomAttributeProps Method</span></span>
+<span data-ttu-id="c132d-103">해당 메타데이터 토큰이 지정된 경우 사용자 지정 특성의 값을 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="c132d-103">Gets the value of the custom attribute, given its metadata token.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="af81f-104">구문</span><span class="sxs-lookup"><span data-stu-id="af81f-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="c132d-104">구문</span><span class="sxs-lookup"><span data-stu-id="c132d-104">Syntax</span></span>  
   
 ```  
 HRESULT GetCustomAttributeProps (  
@@ -39,34 +39,35 @@ HRESULT GetCustomAttributeProps (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="af81f-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="af81f-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="c132d-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="c132d-105">Parameters</span></span>  
  `cv`  
- <span data-ttu-id="af81f-106">[in] 검색할 사용자 지정 특성을 나타내는 메타데이터 토큰입니다.</span><span class="sxs-lookup"><span data-stu-id="af81f-106">[in] A metadata token that represents the custom attribute to be retrieved.</span></span>  
+ <span data-ttu-id="c132d-106">[in] 검색할 사용자 지정 특성을 나타내는 메타데이터 토큰입니다.</span><span class="sxs-lookup"><span data-stu-id="c132d-106">[in] A metadata token that represents the custom attribute to be retrieved.</span></span>  
   
  `ptkObj`  
- <span data-ttu-id="af81f-107">[out, optional] 사용자 지정 특성이 수정하는 개체를 나타내는 메타데이터 토큰입니다.</span><span class="sxs-lookup"><span data-stu-id="af81f-107">[out, optional] A metadata token representing the object that the custom attribute modifies.</span></span> <span data-ttu-id="af81f-108">이 값은 `mdCustomAttribute`를 제외한 모든 메타데이터 토큰 형식일 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="af81f-108">This value can be any type of metadata token except `mdCustomAttribute`.</span></span>  
+ <span data-ttu-id="c132d-107">[out, optional] 사용자 지정 특성이 수정하는 개체를 나타내는 메타데이터 토큰입니다.</span><span class="sxs-lookup"><span data-stu-id="c132d-107">[out, optional] A metadata token representing the object that the custom attribute modifies.</span></span> <span data-ttu-id="c132d-108">이 값은 `mdCustomAttribute`를 제외한 모든 메타데이터 토큰 형식일 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="c132d-108">This value can be any type of metadata token except `mdCustomAttribute`.</span></span>  
   
  `ptkType`  
- <span data-ttu-id="af81f-109">[out, optional] 반환된 사용자 지정 특성의 <xref:System.Type>을 나타내는 `mdMethodDef` 또는 `mdMemberRef` 메타데이터 토큰입니다.</span><span class="sxs-lookup"><span data-stu-id="af81f-109">[out, optional] An `mdMethodDef` or `mdMemberRef` metadata token representing the <xref:System.Type> of the returned custom attribute.</span></span>  
+ <span data-ttu-id="c132d-109">[out, optional] 반환된 사용자 지정 특성의 <xref:System.Type>을 나타내는 `mdMethodDef` 또는 `mdMemberRef` 메타데이터 토큰입니다.</span><span class="sxs-lookup"><span data-stu-id="c132d-109">[out, optional] An `mdMethodDef` or `mdMemberRef` metadata token representing the <xref:System.Type> of the returned custom attribute.</span></span>  
   
  `ppBlob`  
- <span data-ttu-id="af81f-110">[out, optional] 사용자 지정 특성의 값인 데이터 배열에 대한 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="af81f-110">[out, optional] A pointer to an array of data that is the value of the custom attribute.</span></span>  
+ <span data-ttu-id="c132d-110">[out, optional] 사용자 지정 특성의 값인 데이터 배열에 대한 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="c132d-110">[out, optional] A pointer to an array of data that is the value of the custom attribute.</span></span>  
   
  `pcbSize`  
- <span data-ttu-id="af81f-111">[out, optional] \*`ppBlob`에 반환된 데이터의 크기(바이트)입니다.</span><span class="sxs-lookup"><span data-stu-id="af81f-111">[out, optional] The size in bytes of the data returned in \*`ppBlob`.</span></span>  
+ <span data-ttu-id="c132d-111">[out, optional] \*`ppBlob`에 반환된 데이터의 크기(바이트)입니다.</span><span class="sxs-lookup"><span data-stu-id="c132d-111">[out, optional] The size in bytes of the data returned in \*`ppBlob`.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="af81f-112">설명</span><span class="sxs-lookup"><span data-stu-id="af81f-112">Remarks</span></span>  
- <span data-ttu-id="af81f-113">사용자 지정 특성은 메타데이터 엔진에서 인식할 수 있는 형식인 데이터 배열로 저장됩니다.</span><span class="sxs-lookup"><span data-stu-id="af81f-113">A custom attribute is stored as an array of data, the format which is understood by the metadata engine.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="c132d-112">설명</span><span class="sxs-lookup"><span data-stu-id="c132d-112">Remarks</span></span>  
+ <span data-ttu-id="c132d-113">사용자 지정 특성은 메타데이터 엔진에서 인식할 수 있는 형식인 데이터 배열로 저장됩니다.</span><span class="sxs-lookup"><span data-stu-id="c132d-113">A custom attribute is stored as an array of data, the format which is understood by the metadata engine.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="af81f-114">요구 사항</span><span class="sxs-lookup"><span data-stu-id="af81f-114">Requirements</span></span>  
- <span data-ttu-id="af81f-115">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="af81f-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="c132d-114">요구 사항</span><span class="sxs-lookup"><span data-stu-id="c132d-114">Requirements</span></span>  
+ <span data-ttu-id="c132d-115">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="c132d-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="af81f-116">**헤더:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="af81f-116">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="c132d-116">**헤더:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="c132d-116">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="af81f-117">**라이브러리:** MsCorEE.dll에 리소스로 포함</span><span class="sxs-lookup"><span data-stu-id="af81f-117">**Library:** Included as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="c132d-117">**라이브러리:** MsCorEE.dll에 리소스로 포함</span><span class="sxs-lookup"><span data-stu-id="c132d-117">**Library:** Included as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="af81f-118">**.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="af81f-118">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ **<span data-ttu-id="c132d-118">.NET Framework 버전:</span><span class="sxs-lookup"><span data-stu-id="c132d-118">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="af81f-119">참고자료</span><span class="sxs-lookup"><span data-stu-id="af81f-119">See also</span></span>
-- [<span data-ttu-id="af81f-120">IMetaDataImport 인터페이스</span><span class="sxs-lookup"><span data-stu-id="af81f-120">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
-- [<span data-ttu-id="af81f-121">IMetaDataImport2 인터페이스</span><span class="sxs-lookup"><span data-stu-id="af81f-121">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+## <a name="see-also"></a><span data-ttu-id="c132d-119">참고자료</span><span class="sxs-lookup"><span data-stu-id="c132d-119">See also</span></span>
+
+- [<span data-ttu-id="c132d-120">IMetaDataImport 인터페이스</span><span class="sxs-lookup"><span data-stu-id="c132d-120">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [<span data-ttu-id="c132d-121">IMetaDataImport2 인터페이스</span><span class="sxs-lookup"><span data-stu-id="c132d-121">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
