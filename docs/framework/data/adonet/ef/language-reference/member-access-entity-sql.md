@@ -2,12 +2,12 @@
 title: . (멤버 액세스)(Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 4733e3b2-3efa-4b96-b591-ac31350e96ad
-ms.openlocfilehash: e2874e5bff8d8c34f700a81bf52c6729df49aca5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6ebedd2b381d035d199e151f64632acf7d502ff5
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54626672"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59139713"
 ---
 # <a name="-member-access-entity-sql"></a>. (멤버 액세스)(Entity SQL)
 점 연산자 (.)가는 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 멤버 액세스 연산자입니다. 멤버 액세스 연산자를 사용하여 구조 개념적 모델 형식 인스턴스의 속성 또는 필드 값을 구합니다.  
@@ -31,4 +31,5 @@ expression.identifier
  `select p.Name.FirstName from LOB.Person as p`  
   
 ## <a name="see-also"></a>참고자료
+
 - [엔터티 SQL 참조](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)

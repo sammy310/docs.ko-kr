@@ -1,5 +1,5 @@
 ---
-title: DacpReJitData 구조
+title: DacpReJitData 구조체
 ms.date: 02/01/2019
 api.name:
 - DacpReJitData Structure
@@ -15,14 +15,14 @@ topic_type:
 - apiref
 author: hoyosjs
 ms.author: juhoyosa
-ms.openlocfilehash: 974b99da085a5cb969ab37cddb0f2f2c62010d14
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.openlocfilehash: a2850add9acb2f7c5297ac6956e349c9277be291
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55828688"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59122800"
 ---
-# <a name="dacprejitdata-structure"></a>DacpReJitData 구조
+# <a name="dacprejitdata-structure"></a>DacpReJitData 구조체
 
 지정 된 프로파일러가 계측 메서드에 대 한 기본 정보를 정의 합니다.
 
@@ -55,7 +55,6 @@ struct MSLAYOUT DacpReJitData
 | `flags`          | 지정된 된 버전에 대 한 메서드의 ReJit 계측의 현재 상태를 나타내는 플래그입니다. |
 | `NativeCodeAddr` | 메서드의 rejitted 구현의 기본 주소입니다.                                         |
 
-
 ## <a name="remarks"></a>설명
 
 이 구조는 런타임 내에서 있으며 모든 헤더 또는 라이브러리 파일을 통해 노출 되지 않습니다. 를 사용 하려면 위에서 지정한 대로 구조를 정의 합니다. 사용 하 여 구조 정의 해야 `ms_struct` 압축 사용 하지 않는 경우 Microsoft 컴파일러.
@@ -67,5 +66,6 @@ struct MSLAYOUT DacpReJitData
 **.NET Framework 버전:** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
 
 ## <a name="see-also"></a>참고자료
+
 - [디버깅](../../../../docs/framework/unmanaged-api/debugging/index.md)
 - [디버깅 구조체](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)

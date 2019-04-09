@@ -2,12 +2,12 @@
 title: SELECT(Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 9a33bd0d-ded1-41e7-ba3c-305502755e3b
-ms.openlocfilehash: b7e339764e5baee93ccac64cb41d7fba43438476
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f5bc3b795eb20551abda2104c2f399c8da10a962
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54660361"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59136021"
 ---
 # <a name="select-entity-sql"></a>SELECT(Entity SQL)
 쿼리 결과로 반환될 요소를 지정합니다.  
@@ -62,7 +62,7 @@ SELECT customers.Name FROM customers AS c
  FULL, INNER, LEFT, OUTER, ON, RIGHT 등의 JOIN 구문을 사용할 수도 있습니다. ON은 내부 조인에 필수적이지만 크로스 조인에는 사용할 수 없습니다.  
   
 ## <a name="row-and-value-select-clauses"></a>ROW 및 VALUE SELECT 절  
- [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 에서는 두 가지 변형의 SELECT 절을 지원합니다. 하나는 행 선택으로서, SELECT 키워드로 식별됩니다. 이 절은 프로젝션될 값을 하나 이상 지정하는 데 사용됩니다. 반환되는 값 주위에 행 래퍼가 암시적으로 추가되므로, 쿼리 식의 결과는 항상 행의 multiset입니다.  
+ [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 두 가지 변형의 SELECT 절을 지원합니다. 하나는 행 선택으로서, SELECT 키워드로 식별됩니다. 이 절은 프로젝션될 값을 하나 이상 지정하는 데 사용됩니다. 반환되는 값 주위에 행 래퍼가 암시적으로 추가되므로, 쿼리 식의 결과는 항상 행의 multiset입니다.  
   
  행의 각 쿼리 식에서는 별칭이 지정되어야 합니다. 별칭이 지정되지 않은 경우[!INCLUDE[esql](../../../../../../includes/esql-md.md)] 에서는 별칭 생성 규칙에 따라 별칭을 생성합니다.  
   
@@ -101,6 +101,7 @@ SELECT a1, a2 FROM T1 AS a1, T2 AS a2
  [!code-csharp[DP EntityServices Concepts 2#LESS](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#less)]  
   
 ## <a name="see-also"></a>참고자료
+
 - [쿼리 식](../../../../../../docs/framework/data/adonet/ef/language-reference/query-expressions-entity-sql.md)
 - [엔터티 SQL 참조](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
 - [TOP](../../../../../../docs/framework/data/adonet/ef/language-reference/top-entity-sql.md)
