@@ -9,12 +9,12 @@ helpviewer_keywords:
 - clipping regions defined [WPF]
 - hit-test objects [WPF]
 ms.assetid: 47ad531d-a4da-4e99-b12e-1de710c32493
-ms.openlocfilehash: 8683b3ba55f3b9d5425c865af7e18127b55be02d
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 57e32d3e56c3f319f7ee8aa58020d37e46a6454d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57363661"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59140220"
 ---
 # <a name="geometries"></a>Geometry
 <xref:System.Windows.Media.Geometry> 렌더링 하는 데 사용 하는 다양 한 클래스는 [!INCLUDE[TLA#tla_2d](../../../../includes/tlasharptla-2d-md.md)] 그래픽 개체 적중 테스트 및 클리핑 영역을 정의 합니다.  
@@ -25,8 +25,9 @@ ms.locfileid: "57363661"
  [방법 항목](geometries-how-to-topics.md)  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Windows.Media.Brushes>
 - <xref:System.Windows.Shapes.Shape>
-- [2차원 그래픽 및 이미징](../advanced/optimizing-performance-2d-graphics-and-imaging.md)
+- [2D 그래픽 및 이미징](../advanced/optimizing-performance-2d-graphics-and-imaging.md)
 - [WPF에서 Shape 및 기본 그리기 개요](shapes-and-basic-drawing-in-wpf-overview.md)
 - [그래픽 및 멀티미디어](index.md)

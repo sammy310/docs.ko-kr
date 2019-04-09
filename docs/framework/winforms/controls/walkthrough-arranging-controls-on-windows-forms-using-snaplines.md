@@ -1,5 +1,5 @@
 ---
-title: '연습: 맞춤선을 사용 하 여 Windows Forms에서 컨트롤 정렬'
+title: '연습: Windows Forms에서 맞춤선을 사용하여 컨트롤 정렬'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - controls [Windows Forms], arranging with snaplines
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - SnapLine class [Windows Forms], walkthroughs
 - Windows Forms controls, arranging
 ms.assetid: d5c9edc7-cf30-4a97-8ebe-201d569340f8
-ms.openlocfilehash: f898a15fd2157c625767d53d8b53c5469fb9a957
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 4d352ee5c431ba43bbe338a9caf7bd0716e91834
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57703597"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59139791"
 ---
-# <a name="walkthrough-arranging-controls-on-windows-forms-using-snaplines"></a>연습: 맞춤선을 사용 하 여 Windows Forms에서 컨트롤 정렬
+# <a name="walkthrough-arranging-controls-on-windows-forms-using-snaplines"></a>연습: Windows Forms에서 맞춤선을 사용하여 컨트롤 정렬
 폼의 정확한 컨트롤 배치는 많은 응용 프로그램에서 우선 순위가 높습니다. Windows Forms 디자이너를 이렇게 하려면 여러 레이아웃 도구를 제공 합니다. 가장 중요 한 것은 <xref:System.Windows.Forms.Design.Behavior.SnapLine> 기능입니다.  
   
  맞춤선은 정확 하 게 맞출 위치를 다른 컨트롤과 보여 줍니다. 또한 여백 Windows 사용자 인터페이스 지침에 지정 된 대로 컨트롤 사이의 권장된 거리 보여 줍니다. 자세한 내용은 참조 하세요 [사용자 인터페이스 디자인 및 개발](https://go.microsoft.com/FWLink/?LinkId=83878)합니다.  
@@ -240,8 +240,9 @@ ms.locfileid: "57703597"
  Windows 사용자 인터페이스 디자인에 대 한 내용은 책을 참조 하세요 *Microsoft Windows User Experience, 사용자 인터페이스 개발자 및 디자이너를 위한 공식 지침* Redmond, WA: Microsoft Press, 1999. (USBN: 0-7356-0566-1).  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Windows.Forms.Design.Behavior.SnapLine>
-- [연습: FlowLayoutPanel을 사용 하 여 Windows Forms에서 컨트롤 정렬](walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel.md)
-- [연습: TableLayoutPanel을 사용 하 여 Windows Forms에서 컨트롤 정렬](walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)
-- [연습: Windows Forms 컨트롤 Padding, Margins 및 AutoSize 속성을 사용 하 여 레이아웃](windows-forms-controls-padding-autosize.md)
+- [연습: FlowLayoutPanel을 사용하여 Windows Forms에서 컨트롤 정렬](walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel.md)
+- [연습: TableLayoutPanel을 사용하여 Windows Forms에서 컨트롤 정렬](walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)
+- [연습: Padding, Margin 및 AutoSize 속성을 사용하여 Windows Forms 컨트롤 레이아웃](windows-forms-controls-padding-autosize.md)
 - [Windows Forms에서 컨트롤 정렬](arranging-controls-on-windows-forms.md)

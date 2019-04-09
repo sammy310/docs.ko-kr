@@ -2,12 +2,12 @@
 title: Windows Communication Foundation에서 메시지 큐로
 ms.date: 03/30/2017
 ms.assetid: 78d0d0c9-648e-4d4a-8f0a-14d9cafeead9
-ms.openlocfilehash: abe033846aad061df2130f16f732215fb1416f1a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7761761a20fea765988b5d7fac678125e8c66b05
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54710523"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59136996"
 ---
 # <a name="windows-communication-foundation-to-message-queuing"></a>Windows Communication Foundation에서 메시지 큐로
 이 샘플 응용 프로그램을 Windows Communication Foundation (WCF) 메시지 큐 (MSMQ) 응용 프로그램에 메시지를 보내는 방법을 보여 줍니다. 이 서비스는 자체적으로 호스트되는 콘솔 응용 프로그램으로서 이를 사용하여 서비스에서 대기된 메시지를 받는 것을 볼 수 있습니다. 서비스 및 클라이언트가 동시에 실행될 필요는 없습니다.
@@ -174,5 +174,6 @@ public partial class OrderProcessorClient : System.ServiceModel.ClientBase<IOrde
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\MSMQIntegration\WcfToMsmq`  
   
 ## <a name="see-also"></a>참고자료
-- [방법: 메시지와 WCF 끝점 및 응용 프로그램 큐 메시지를 교환 합니다.](../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md)
-- [메시지 큐](https://go.microsoft.com/fwlink/?LinkId=94968)
+
+- [방법: WCF 엔드포인트 및 메시지 큐 애플리케이션과 메시지 교환](../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md)
+- [메시지 큐(영문 페이지일 수 있음)](https://go.microsoft.com/fwlink/?LinkId=94968)

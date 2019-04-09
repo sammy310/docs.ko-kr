@@ -6,12 +6,12 @@ helpviewer_keywords:
 - event handlers [WPF], weak event pattern
 - IWeakEventListener interface [WPF]
 ms.assetid: e7c62920-4812-4811-94d8-050a65c856f6
-ms.openlocfilehash: 039d25fb14ed2d29f21168267611d4f0d7f2d04f
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 49795235d489ebc70cec11332e6be4a9452bc21d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57367611"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59139258"
 ---
 # <a name="weak-event-patterns"></a>약한 이벤트 패턴
 응용 프로그램에서 있기 이벤트 소스에 연결 된 처리기를 조정 하 여 원본에 처리기를 연결 하는 수신기 개체를 사용 하 여 소멸 되지 것입니다. 이 경우 메모리 누수가 발생할 수 있습니다. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 특정 이벤트에 대 한 전용된 관리자 클래스를 제공 하 고 해당 이벤트에 대 한 수신기에서 인터페이스를 구현 하 여이 문제를 해결 하기 위해 사용할 수 있는 디자인 패턴을 소개 합니다. 이 디자인 패턴 이라고 합니다 *약한 이벤트 패턴*합니다.  
@@ -131,6 +131,7 @@ ms.locfileid: "57367611"
     ```  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Windows.WeakEventManager>
 - <xref:System.Windows.IWeakEventListener>
 - [라우트된 이벤트 개요](routed-events-overview.md)

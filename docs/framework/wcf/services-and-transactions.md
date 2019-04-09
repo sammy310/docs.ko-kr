@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - service contracts [WCF], designing services and transactions
 ms.assetid: 864813ff-2709-4376-912d-f5c8d318c460
-ms.openlocfilehash: 5078e12ed5c68556a1d1d04d01c90440b57c1407
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9dfe34406bfda2c16bd2f0cd53796b2fcef07b57
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54736405"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59138335"
 ---
 # <a name="services-and-transactions"></a>서비스 및 트랜잭션
 Windows Communication Foundation (WCF) 응용 프로그램 클라이언트 내에서 트랜잭션을 시작 하 고 서비스 작업 내에서 트랜잭션을 조정할 수 있습니다. 클라이언트는 트랜잭션을 초기화하고 여러 서비스 작업을 호출하며 서비스 작업이 하나의 단위로 커밋되는지 또는 롤백되는지 확인합니다.  
@@ -89,6 +89,7 @@ using (TransactionScope ts = new TransactionScope(TransactionScopeOption.Require
 ```  
   
 ## <a name="see-also"></a>참고자료
+
 - [System.ServiceModel의 트랜잭션 지원](../../../docs/framework/wcf/feature-details/transactional-support-in-system-servicemodel.md)
 - [트랜잭션 모델](../../../docs/framework/wcf/feature-details/transaction-models.md)
-- [WS 트랜잭션 흐름](../../../docs/framework/wcf/samples/ws-transaction-flow.md)
+- [WS Transaction Flow](../../../docs/framework/wcf/samples/ws-transaction-flow.md)

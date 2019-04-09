@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - service contracts [WCF], data transfer
 ms.assetid: 7c5a26c8-89c9-4bcb-a4bc-7131e6d01f0c
-ms.openlocfilehash: a9066054c82fdb2e25dace0b7611df4cbbf4ec93
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a3ac0f321a20624deea1fe382d04a8d4e1b6c510
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54617267"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59135202"
 ---
 # <a name="specifying-data-transfer-in-service-contracts"></a>서비스 계약에서 데이터 전송 지정
 Windows Communication Foundation (WCF) 메시징 인프라로 생각할 수 있습니다. 서비스 작업에서는 메시지를 받고 처리한 다음 보낼 수 있습니다. 메시지는 작업 계약을 사용하여 설명됩니다. 다음 계약을 예로 들 수 있습니다.  
@@ -432,7 +432,7 @@ End Class
 ## <a name="specifying-the-use-and-style"></a>사용 및 스타일 지정  
  WSDL(웹 서비스 기술 언어)을 사용하여 서비스를 설명하는 경우 문서 스타일과 RPC(원격 프로시저 호출) 스타일이 일반적으로 사용됩니다. 문서 스타일에서 전체 메시지 본문은 스키마를 사용하여 설명되고 WSDL은 해당 스키마 내의 요소를 참조하여 여러 메시지 본문 부분을 설명합니다. RPC 스타일에서 WSDL은 요소가 아닌 각 메시지 부분의 스키마 형식을 참조합니다. 이 두 스타일 중 하나를 수동으로 선택해야 하는 경우도 있습니다. 둘 중 하나만 수동으로 설정하려면 <xref:System.ServiceModel.DataContractFormatAttribute>가 사용 중인 경우에는 `Style` 특성을 적용한 다음 <xref:System.Runtime.Serialization.DataContractSerializer> 속성을 설정하고, `Style`를 사용하는 경우에는 <xref:System.ServiceModel.XmlSerializerFormatAttribute> 특성에 <xref:System.Xml.Serialization.XmlSerializer>을 설정합니다.  
   
- 또한 <xref:System.Xml.Serialization.XmlSerializer>는 serialize된 두 가지 형식의 XML `Literal` 및 `Encoded`를 지원합니다. `Literal`은 가장 일반적으로 허용되는 폼이며 <xref:System.Runtime.Serialization.DataContractSerializer>에서 유일하게 지원하는 폼입니다. `Encoded`는 SOAP 사양의 5단원에 설명된 레거시 폼이며 새 서비스에는 사용하지 않는 것이 좋습니다. `Encoded` 모드로 전환하려면 `Use` 특성에서 <xref:System.ServiceModel.XmlSerializerFormatAttribute> 속성을 `Encoded`로 설정합니다.  
+ 또한 <xref:System.Xml.Serialization.XmlSerializer>는 serialize된 두 가지 형식의 XML `Literal` 및 `Encoded`를 지원합니다. `Literal` 가장 일반적으로 허용 되는 폼 이며 유일한 형식은 <xref:System.Runtime.Serialization.DataContractSerializer> 지원 합니다. `Encoded` SOAP 사양의 5 단원에 설명 된 레거시 폼 이며 새 서비스에 대 한 권장 되지 않습니다. `Encoded` 모드로 전환하려면 `Use` 특성에서 <xref:System.ServiceModel.XmlSerializerFormatAttribute> 속성을 `Encoded`로 설정합니다.  
   
  대부분의 경우 `Style` 및 `Use` 속성에 대한 기본 설정을 변경하면 안 됩니다.  
   
@@ -575,6 +575,7 @@ Dim serviceHost As ServiceHost = New ServiceHost(GetType(IDataService))
  고급 serialization 개념에 대 한 자세한 내용은 참조 하십시오 [Serialization 및 Deserialization](../../../../docs/framework/wcf/feature-details/serialization-and-deserialization.md)합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [XmlSerializer 클래스 사용](../../../../docs/framework/wcf/feature-details/using-the-xmlserializer-class.md)
-- [방법: 스트리밍을 사용 하도록 설정](../../../../docs/framework/wcf/feature-details/how-to-enable-streaming.md)
-- [방법: 클래스 또는 구조체에 대 한 기본 데이터 계약 만들기](../../../../docs/framework/wcf/feature-details/how-to-create-a-basic-data-contract-for-a-class-or-structure.md)
+- [방법: 스트리밍 사용](../../../../docs/framework/wcf/feature-details/how-to-enable-streaming.md)
+- [방법: 클래스 또는 구조체에 대한 기본 데이터 계약 만들기](../../../../docs/framework/wcf/feature-details/how-to-create-a-basic-data-contract-for-a-class-or-structure.md)
