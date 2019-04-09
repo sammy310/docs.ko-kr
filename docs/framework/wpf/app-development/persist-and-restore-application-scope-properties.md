@@ -1,5 +1,5 @@
 ---
-title: '방법: 응용 프로그램 세션 간의 응용 프로그램 범위 속성 유지 및 복원'
+title: '방법: 애플리케이션 세션 간의 애플리케이션 범위 속성 유지 및 복원'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,22 +12,20 @@ helpviewer_keywords:
 - properties [WPF], restoring
 - application-scope properties [WPF], restoring
 ms.assetid: 55d5904a-f444-4eb5-abd3-6bc74dd14226
-ms.openlocfilehash: 2ba3a31d1fe8efde436fd76f88ccfab2853df5ee
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 99b04060d4e7c14313655010dc4fbd5ce1c90487
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57377139"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59134955"
 ---
-# <a name="how-to-persist-and-restore-application-scope-properties-across-application-sessions"></a><span data-ttu-id="e8244-102">방법: 응용 프로그램 세션 간의 응용 프로그램 범위 속성 유지 및 복원</span><span class="sxs-lookup"><span data-stu-id="e8244-102">How to: Persist and Restore Application-Scope Properties Across Application Sessions</span></span>
-<span data-ttu-id="e8244-103">이 예제에서는 응용 프로그램은 다음 경우에 응용 프로그램 범위 속성 복원 시작 하는 방법 및 응용 프로그램 종료 될 때 응용 프로그램 범위 속성을 유지 하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="e8244-103">This example shows how to persist application-scope properties when an application shuts down, and how to restore application-scope properties when an application is next launch.</span></span>  
+# <a name="how-to-persist-and-restore-application-scope-properties-across-application-sessions"></a><span data-ttu-id="ef4a2-102">방법: 애플리케이션 세션 간의 애플리케이션 범위 속성 유지 및 복원</span><span class="sxs-lookup"><span data-stu-id="ef4a2-102">How to: Persist and Restore Application-Scope Properties Across Application Sessions</span></span>
+<span data-ttu-id="ef4a2-103">이 예제에서는 응용 프로그램은 다음 경우에 응용 프로그램 범위 속성 복원 시작 하는 방법 및 응용 프로그램 종료 될 때 응용 프로그램 범위 속성을 유지 하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="ef4a2-103">This example shows how to persist application-scope properties when an application shuts down, and how to restore application-scope properties when an application is next launch.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="e8244-104">예제</span><span class="sxs-lookup"><span data-stu-id="e8244-104">Example</span></span>  
- <span data-ttu-id="e8244-105">응용 프로그램, 응용 프로그램 범위 속성 유지 및 격리 된 저장소에서 복원 합니다.</span><span class="sxs-lookup"><span data-stu-id="e8244-105">The application persists application-scope properties to, and restores them from, isolated storage.</span></span> <span data-ttu-id="e8244-106">격리 된 저장소에 파일 액세스 권한 없이 응용 프로그램에서 안전 하 게 사용할 수 있는 보호 된 저장소 영역입니다.</span><span class="sxs-lookup"><span data-stu-id="e8244-106">Isolated storage is a protected storage area that can safely be used by applications without file access permission.</span></span>  <span data-ttu-id="e8244-107">*App.xaml* 파일에 정의 `App_Startup` 에 대 한 처리기 메서드를 <xref:System.Windows.Application.Startup?displayProperty=nameWithType> 이벤트 및 `App_Exit` 에 대 한 처리기 메서드는 <xref:System.Windows.Application.Exit?displayProperty=nameWithType> 이벤트를 강조 표시 된 줄의 첫 번째 예제에 나와 있는 것 처럼.</span><span class="sxs-lookup"><span data-stu-id="e8244-107">The *App.xaml* file defines the `App_Startup` method as the handler for the <xref:System.Windows.Application.Startup?displayProperty=nameWithType> event, and the `App_Exit` method as the handler for the  <xref:System.Windows.Application.Exit?displayProperty=nameWithType> event, as shown in the highlighted lines of the first example.</span></span> <span data-ttu-id="e8244-108">두 번째 예의 일부를 보여 줍니다.는 *App.xaml.cs* 하 고 *App.xaml.vb* 파일에 대 한 코드를 강조 표시 하는 `App_Startup` 응용 프로그램 범위 속성 및 합니다 복원하는메서드를`App_Exit` 메서드를 응용 프로그램 범위 속성을 저장 합니다.</span><span class="sxs-lookup"><span data-stu-id="e8244-108">The second example shows a portion of the *App.xaml.cs* and *App.xaml.vb* files that highlights the code for the `App_Startup` method, which restores application-scope properties, and the `App_Exit` method, which saves application-scope properties.</span></span>
- 
-  
+## <a name="example"></a><span data-ttu-id="ef4a2-104">예제</span><span class="sxs-lookup"><span data-stu-id="ef4a2-104">Example</span></span>  
+ <span data-ttu-id="ef4a2-105">응용 프로그램, 응용 프로그램 범위 속성 유지 및 격리 된 저장소에서 복원 합니다.</span><span class="sxs-lookup"><span data-stu-id="ef4a2-105">The application persists application-scope properties to, and restores them from, isolated storage.</span></span> <span data-ttu-id="ef4a2-106">격리 된 저장소에 파일 액세스 권한 없이 응용 프로그램에서 안전 하 게 사용할 수 있는 보호 된 저장소 영역입니다.</span><span class="sxs-lookup"><span data-stu-id="ef4a2-106">Isolated storage is a protected storage area that can safely be used by applications without file access permission.</span></span>  <span data-ttu-id="ef4a2-107">*App.xaml* 파일에 정의 `App_Startup` 에 대 한 처리기 메서드를 <xref:System.Windows.Application.Startup?displayProperty=nameWithType> 이벤트 및 `App_Exit` 에 대 한 처리기 메서드는 <xref:System.Windows.Application.Exit?displayProperty=nameWithType> 이벤트를 강조 표시 된 줄의 첫 번째 예제에 나와 있는 것 처럼.</span><span class="sxs-lookup"><span data-stu-id="ef4a2-107">The *App.xaml* file defines the `App_Startup` method as the handler for the <xref:System.Windows.Application.Startup?displayProperty=nameWithType> event, and the `App_Exit` method as the handler for the  <xref:System.Windows.Application.Exit?displayProperty=nameWithType> event, as shown in the highlighted lines of the first example.</span></span> <span data-ttu-id="ef4a2-108">두 번째 예의 일부를 보여 줍니다.는 *App.xaml.cs* 하 고 *App.xaml.vb* 파일에 대 한 코드를 강조 표시 하는 `App_Startup` 응용 프로그램 범위 속성 및 합니다 복원하는메서드를`App_Exit` 메서드를 응용 프로그램 범위 속성을 저장 합니다.</span><span class="sxs-lookup"><span data-stu-id="ef4a2-108">The second example shows a portion of the *App.xaml.cs* and *App.xaml.vb* files that highlights the code for the `App_Startup` method, which restores application-scope properties, and the `App_Exit` method, which saves application-scope properties.</span></span>
+
  [!code-xaml[HOWTOApplicationModelSnippets#PersistRestoreAppScopePropertiesXAML1](~/samples/snippets/csharp/VS_Snippets_Wpf/HOWTOApplicationModelSnippets/CSharp/App.xaml?highlight=1-7)]
   
  [!code-csharp[HOWTOApplicationModelSnippets#PersistRestoreAppScopePropertiesCODEBEHIND1](~/samples/snippets/csharp/VS_Snippets_Wpf/HOWTOApplicationModelSnippets/CSharp/App.xaml.cs?highlight=17-55)]
  [!code-vb[HOWTOApplicationModelSnippets#PersistRestoreAppScopePropertiesCODEBEHIND1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/HOWTOApplicationModelSnippets/visualbasic/application.xaml.vb#persistrestoreappscopepropertiescodebehind1)]
- 

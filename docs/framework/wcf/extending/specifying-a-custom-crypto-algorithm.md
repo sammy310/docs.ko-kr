@@ -2,24 +2,24 @@
 title: 사용자 지정 암호화 알고리즘 지정
 ms.date: 03/30/2017
 ms.assetid: d662a305-8e09-451d-9a59-b0f12b012f1d
-ms.openlocfilehash: 5c7bddb7e6e1696ea1cb4f8359e34a51a89fce40
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c92ce463f885e9784913b07eb11941ecd7d78d09
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54537688"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59113713"
 ---
-# <a name="specifying-a-custom-crypto-algorithm"></a><span data-ttu-id="3ae49-102">사용자 지정 암호화 알고리즘 지정</span><span class="sxs-lookup"><span data-stu-id="3ae49-102">Specifying a Custom Crypto Algorithm</span></span>
-<span data-ttu-id="3ae49-103">WCF를 통해 데이터를 암호화하거나 디지털 서명을 연산화할 때 사용할 사용자 지정 암호화 알고리즘을 지정할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="3ae49-103">WCF allows you to specify a custom crypto algorithm to use when encrypting data or computing digital signatures.</span></span> <span data-ttu-id="3ae49-104">이렇게 하려면 다음 단계를 따릅니다.</span><span class="sxs-lookup"><span data-stu-id="3ae49-104">This is done by the following steps:</span></span>  
+# <a name="specifying-a-custom-crypto-algorithm"></a><span data-ttu-id="cffc2-102">사용자 지정 암호화 알고리즘 지정</span><span class="sxs-lookup"><span data-stu-id="cffc2-102">Specifying a Custom Crypto Algorithm</span></span>
+<span data-ttu-id="cffc2-103">WCF를 통해 데이터를 암호화하거나 디지털 서명을 연산화할 때 사용할 사용자 지정 암호화 알고리즘을 지정할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="cffc2-103">WCF allows you to specify a custom crypto algorithm to use when encrypting data or computing digital signatures.</span></span> <span data-ttu-id="cffc2-104">이렇게 하려면 다음 단계를 따릅니다.</span><span class="sxs-lookup"><span data-stu-id="cffc2-104">This is done by the following steps:</span></span>  
   
-1.  <span data-ttu-id="3ae49-105"><xref:System.ServiceModel.Security.SecurityAlgorithmSuite>에서 클래스를 파생시킵니다.</span><span class="sxs-lookup"><span data-stu-id="3ae49-105">Derive a class from <xref:System.ServiceModel.Security.SecurityAlgorithmSuite></span></span>  
+1.  <span data-ttu-id="cffc2-105">클래스 파생</span><span class="sxs-lookup"><span data-stu-id="cffc2-105">Derive a class from</span></span> <xref:System.ServiceModel.Security.SecurityAlgorithmSuite>  
   
-2.  <span data-ttu-id="3ae49-106">알고리즘을 등록합니다.</span><span class="sxs-lookup"><span data-stu-id="3ae49-106">Register the algorithm</span></span>  
+2.  <span data-ttu-id="cffc2-106">알고리즘을 등록합니다.</span><span class="sxs-lookup"><span data-stu-id="cffc2-106">Register the algorithm</span></span>  
   
-3.  <span data-ttu-id="3ae49-107"><xref:System.ServiceModel.Security.SecurityAlgorithmSuite> 파생 클래스로 바인딩을 구성합니다. </span><span class="sxs-lookup"><span data-stu-id="3ae49-107">Configure the binding with the <xref:System.ServiceModel.Security.SecurityAlgorithmSuite>-derived class.</span></span>  
+3.  <span data-ttu-id="cffc2-107"><xref:System.ServiceModel.Security.SecurityAlgorithmSuite> 파생 클래스로 바인딩을 구성합니다. </span><span class="sxs-lookup"><span data-stu-id="cffc2-107">Configure the binding with the <xref:System.ServiceModel.Security.SecurityAlgorithmSuite>-derived class.</span></span>  
   
-## <a name="derive-a-class-from-securityalgorithmsuite"></a><span data-ttu-id="3ae49-108">SecurityAlgorithmSuite에서 클래스를 파생시킵니다.</span><span class="sxs-lookup"><span data-stu-id="3ae49-108">Derive a class from SecurityAlgorithmSuite</span></span>  
- <span data-ttu-id="3ae49-109"><xref:System.ServiceModel.Security.SecurityAlgorithmSuite>는 다양한 보안 관련 작업을 수행할 때 사용할 알고리즘을 지정할 수 있도록 하는 추상 기본 클래스입니다.</span><span class="sxs-lookup"><span data-stu-id="3ae49-109">The <xref:System.ServiceModel.Security.SecurityAlgorithmSuite> is an abstract base class that allows you to specify the algorithm to use when performing various security related operations.</span></span> <span data-ttu-id="3ae49-110">예를 들어 디지털 서명의 해시를 계산하거나 메시지를 암호화하는 작업을 수행할 때 활용됩니다.</span><span class="sxs-lookup"><span data-stu-id="3ae49-110">For example, computing a hash for a digital signature or encrypting a message.</span></span> <span data-ttu-id="3ae49-111">다음 코드에서는 <xref:System.ServiceModel.Security.SecurityAlgorithmSuite>에서 클래스를 파생하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="3ae49-111">The following code shows how to derive a class from <xref:System.ServiceModel.Security.SecurityAlgorithmSuite>:</span></span>  
+## <a name="derive-a-class-from-securityalgorithmsuite"></a><span data-ttu-id="cffc2-108">SecurityAlgorithmSuite에서 클래스를 파생시킵니다.</span><span class="sxs-lookup"><span data-stu-id="cffc2-108">Derive a class from SecurityAlgorithmSuite</span></span>  
+ <span data-ttu-id="cffc2-109"><xref:System.ServiceModel.Security.SecurityAlgorithmSuite>는 다양한 보안 관련 작업을 수행할 때 사용할 알고리즘을 지정할 수 있도록 하는 추상 기본 클래스입니다.</span><span class="sxs-lookup"><span data-stu-id="cffc2-109">The <xref:System.ServiceModel.Security.SecurityAlgorithmSuite> is an abstract base class that allows you to specify the algorithm to use when performing various security related operations.</span></span> <span data-ttu-id="cffc2-110">예를 들어 디지털 서명의 해시를 계산하거나 메시지를 암호화하는 작업을 수행할 때 활용됩니다.</span><span class="sxs-lookup"><span data-stu-id="cffc2-110">For example, computing a hash for a digital signature or encrypting a message.</span></span> <span data-ttu-id="cffc2-111">다음 코드에서는 <xref:System.ServiceModel.Security.SecurityAlgorithmSuite>에서 클래스를 파생하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="cffc2-111">The following code shows how to derive a class from <xref:System.ServiceModel.Security.SecurityAlgorithmSuite>:</span></span>  
   
 ```csharp  
 public class MyCustomAlgorithmSuite : SecurityAlgorithmSuite  
@@ -86,8 +86,8 @@ public class MyCustomAlgorithmSuite : SecurityAlgorithmSuite
     }  
 ```  
   
-## <a name="register-the-custom-algorithm"></a><span data-ttu-id="3ae49-112">사용자 지정 알고리즘을 등록합니다.</span><span class="sxs-lookup"><span data-stu-id="3ae49-112">Register the Custom Algorithm</span></span>  
- <span data-ttu-id="3ae49-113">등록은 구성 파일이나 명령적 코드에서 수행할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="3ae49-113">Registration can be done in a configuration file or in imperative code.</span></span> <span data-ttu-id="3ae49-114">암호화 서비스 공급자를 구현하는 클래스와 별칭 간의 매핑을 만들어 사용자 지정 알고리즘을 등록합니다.</span><span class="sxs-lookup"><span data-stu-id="3ae49-114">Registering a custom algorithm is done by creating a mapping between a class that implements a crypto service provider and an alias.</span></span> <span data-ttu-id="3ae49-115">그런 다음 별칭은 WCF 서비스의 바인딩에서 알고리즘을 지정할 때 사용되는 URI에 매핑됩니다.</span><span class="sxs-lookup"><span data-stu-id="3ae49-115">The alias is then mapped to a URI which is used when specifying the algorithm in the WCF service’s binding.</span></span> <span data-ttu-id="3ae49-116">다음 구성 코드 조각은 구성에서 사용자 지정 알고리즘을 등록하는 방법을 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="3ae49-116">The following configuration snippet illustrates how to register a custom algorithm in config:</span></span>  
+## <a name="register-the-custom-algorithm"></a><span data-ttu-id="cffc2-112">사용자 지정 알고리즘을 등록합니다.</span><span class="sxs-lookup"><span data-stu-id="cffc2-112">Register the Custom Algorithm</span></span>  
+ <span data-ttu-id="cffc2-113">등록은 구성 파일이나 명령적 코드에서 수행할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="cffc2-113">Registration can be done in a configuration file or in imperative code.</span></span> <span data-ttu-id="cffc2-114">암호화 서비스 공급자를 구현하는 클래스와 별칭 간의 매핑을 만들어 사용자 지정 알고리즘을 등록합니다.</span><span class="sxs-lookup"><span data-stu-id="cffc2-114">Registering a custom algorithm is done by creating a mapping between a class that implements a crypto service provider and an alias.</span></span> <span data-ttu-id="cffc2-115">그런 다음 별칭은 WCF 서비스의 바인딩에서 알고리즘을 지정할 때 사용되는 URI에 매핑됩니다.</span><span class="sxs-lookup"><span data-stu-id="cffc2-115">The alias is then mapped to a URI which is used when specifying the algorithm in the WCF service’s binding.</span></span> <span data-ttu-id="cffc2-116">다음 구성 코드 조각은 구성에서 사용자 지정 알고리즘을 등록하는 방법을 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="cffc2-116">The following configuration snippet illustrates how to register a custom algorithm in config:</span></span>  
   
 ```xml  
 <configuration>  
@@ -105,9 +105,9 @@ public class MyCustomAlgorithmSuite : SecurityAlgorithmSuite
 </configuration>  
 ```  
   
- <span data-ttu-id="3ae49-117">아래 섹션의 <`cryptoClasses`> 요소는 SHA256CryptoServiceProvider와 별칭 "SHA256CSP" 간의 매핑을 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="3ae49-117">The section under the <`cryptoClasses`> element creates the mapping between the SHA256CryptoServiceProvider and the alias "SHA256CSP".</span></span> <span data-ttu-id="3ae49-118"><`nameEntry`> 요소는 "SHA256CSP" 별칭과 지정된 된 URL 간의 매핑을 만듭니다 (http://constoso.com/CustomAlgorithms/CustomHashAlgorithm ).</span><span class="sxs-lookup"><span data-stu-id="3ae49-118">The <`nameEntry`> element creates the mapping between the "SHA256CSP" alias and the specified URL (http://constoso.com/CustomAlgorithms/CustomHashAlgorithm ).</span></span>  
+ <span data-ttu-id="cffc2-117">아래 섹션의 <`cryptoClasses`> 요소는 SHA256CryptoServiceProvider와 별칭 "SHA256CSP" 간의 매핑을 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="cffc2-117">The section under the <`cryptoClasses`> element creates the mapping between the SHA256CryptoServiceProvider and the alias "SHA256CSP".</span></span> <span data-ttu-id="cffc2-118"><`nameEntry`> 요소는 "SHA256CSP" 별칭과 지정된 된 URL 간의 매핑을 만듭니다 (http://constoso.com/CustomAlgorithms/CustomHashAlgorithm ).</span><span class="sxs-lookup"><span data-stu-id="cffc2-118">The <`nameEntry`> element creates the mapping between the "SHA256CSP" alias and the specified URL (http://constoso.com/CustomAlgorithms/CustomHashAlgorithm ).</span></span>  
   
- <span data-ttu-id="3ae49-119">코드로 사용자 지정 알고리즘을 등록하려면 <xref:System.Security.Cryptography.CryptoConfig.AddAlgorithm(System.Type,System.String[])> 메서드를 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="3ae49-119">To register the custom algorithm in code use the <xref:System.Security.Cryptography.CryptoConfig.AddAlgorithm(System.Type,System.String[])> method.</span></span> <span data-ttu-id="3ae49-120">이 메서드는 두 매핑을 모두 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="3ae49-120">This method creates both mappings.</span></span> <span data-ttu-id="3ae49-121">다음 예제에서는 이 메서드를 호출하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="3ae49-121">The following example shows how to call this method:</span></span>  
+ <span data-ttu-id="cffc2-119">코드로 사용자 지정 알고리즘을 등록하려면 <xref:System.Security.Cryptography.CryptoConfig.AddAlgorithm(System.Type,System.String[])> 메서드를 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="cffc2-119">To register the custom algorithm in code use the <xref:System.Security.Cryptography.CryptoConfig.AddAlgorithm(System.Type,System.String[])> method.</span></span> <span data-ttu-id="cffc2-120">이 메서드는 두 매핑을 모두 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="cffc2-120">This method creates both mappings.</span></span> <span data-ttu-id="cffc2-121">다음 예제에서는 이 메서드를 호출하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="cffc2-121">The following example shows how to call this method:</span></span>  
   
 ```  
 // Register the custom URI string defined for the hashAlgorithm in MyCustomAlgorithmSuite class to create the   
@@ -115,18 +115,19 @@ public class MyCustomAlgorithmSuite : SecurityAlgorithmSuite
 CryptoConfig.AddAlgorithm(typeof(SHA256CryptoServiceProvider), "http://constoso.com/CustomAlgorithms/CustomHashAlgorithm");  
 ```  
   
-## <a name="configure-the-binding"></a><span data-ttu-id="3ae49-122">바인딩 구성</span><span class="sxs-lookup"><span data-stu-id="3ae49-122">Configure the Binding</span></span>  
- <span data-ttu-id="3ae49-123">다음 코드 조각과 같이 바인딩 설정에서 사용자 지정 <xref:System.ServiceModel.Security.SecurityAlgorithmSuite> 파생 클래스를 지정하여 바인딩을 구성합니다.</span><span class="sxs-lookup"><span data-stu-id="3ae49-123">You configure the binding by specifying the custom <xref:System.ServiceModel.Security.SecurityAlgorithmSuite>-derived class in the binding settings as shown in the following code snippet:</span></span>  
+## <a name="configure-the-binding"></a><span data-ttu-id="cffc2-122">바인딩 구성</span><span class="sxs-lookup"><span data-stu-id="cffc2-122">Configure the Binding</span></span>  
+ <span data-ttu-id="cffc2-123">다음 코드 조각과 같이 바인딩 설정에서 사용자 지정 <xref:System.ServiceModel.Security.SecurityAlgorithmSuite> 파생 클래스를 지정하여 바인딩을 구성합니다.</span><span class="sxs-lookup"><span data-stu-id="cffc2-123">You configure the binding by specifying the custom <xref:System.ServiceModel.Security.SecurityAlgorithmSuite>-derived class in the binding settings as shown in the following code snippet:</span></span>  
   
 ```csharp  
 WSHttpBinding binding = new WSHttpBinding();  
             binding.Security.Message.AlgorithmSuite = new MyCustomAlgorithmSuite();  
 ```  
   
- <span data-ttu-id="3ae49-124">전체 코드 예제를 참조 합니다 [WCF 보안의 암호화 Agility](../../../../docs/framework/wcf/samples/cryptographic-agility-in-wcf-security.md) 샘플입니다.</span><span class="sxs-lookup"><span data-stu-id="3ae49-124">For a complete code example, see the [Cryptographic Agility in WCF Security](../../../../docs/framework/wcf/samples/cryptographic-agility-in-wcf-security.md) sample.</span></span>  
+ <span data-ttu-id="cffc2-124">전체 코드 예제를 참조 합니다 [WCF 보안의 암호화 Agility](../../../../docs/framework/wcf/samples/cryptographic-agility-in-wcf-security.md) 샘플입니다.</span><span class="sxs-lookup"><span data-stu-id="cffc2-124">For a complete code example, see the [Cryptographic Agility in WCF Security](../../../../docs/framework/wcf/samples/cryptographic-agility-in-wcf-security.md) sample.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="3ae49-125">참고자료</span><span class="sxs-lookup"><span data-stu-id="3ae49-125">See also</span></span>
-- [<span data-ttu-id="3ae49-126">서비스 및 클라이언트에 보안 설정</span><span class="sxs-lookup"><span data-stu-id="3ae49-126">Securing Services and Clients</span></span>](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
-- [<span data-ttu-id="3ae49-127">서비스에 보안 설정</span><span class="sxs-lookup"><span data-stu-id="3ae49-127">Securing Services</span></span>](../../../../docs/framework/wcf/securing-services.md)
-- [<span data-ttu-id="3ae49-128">보안 개요</span><span class="sxs-lookup"><span data-stu-id="3ae49-128">Security Overview</span></span>](../../../../docs/framework/wcf/feature-details/security-overview.md)
-- [<span data-ttu-id="3ae49-129">보안 개념</span><span class="sxs-lookup"><span data-stu-id="3ae49-129">Security Concepts</span></span>](../../../../docs/framework/wcf/feature-details/security-concepts.md)
+## <a name="see-also"></a><span data-ttu-id="cffc2-125">참고자료</span><span class="sxs-lookup"><span data-stu-id="cffc2-125">See also</span></span>
+
+- [<span data-ttu-id="cffc2-126">서비스 및 클라이언트에 보안 설정</span><span class="sxs-lookup"><span data-stu-id="cffc2-126">Securing Services and Clients</span></span>](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
+- [<span data-ttu-id="cffc2-127">서비스에 보안 설정</span><span class="sxs-lookup"><span data-stu-id="cffc2-127">Securing Services</span></span>](../../../../docs/framework/wcf/securing-services.md)
+- [<span data-ttu-id="cffc2-128">보안 개요</span><span class="sxs-lookup"><span data-stu-id="cffc2-128">Security Overview</span></span>](../../../../docs/framework/wcf/feature-details/security-overview.md)
+- [<span data-ttu-id="cffc2-129">보안 개념</span><span class="sxs-lookup"><span data-stu-id="cffc2-129">Security Concepts</span></span>](../../../../docs/framework/wcf/feature-details/security-concepts.md)

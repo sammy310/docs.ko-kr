@@ -16,17 +16,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0247f356bfc9f354edc420ea5460da02b17ab116
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ce79987c7fcf45b8d10dcc4613e053ee735941de
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54561142"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59112816"
 ---
-# <a name="assemblybindinfo-structure"></a><span data-ttu-id="e06a2-102">AssemblyBindInfo 구조체</span><span class="sxs-lookup"><span data-stu-id="e06a2-102">AssemblyBindInfo Structure</span></span>
-<span data-ttu-id="e06a2-103">참조 된 어셈블리에 대 한 자세한 정보를 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="e06a2-103">Provides detailed information about the referenced assembly.</span></span>  
+# <a name="assemblybindinfo-structure"></a><span data-ttu-id="6321d-102">AssemblyBindInfo 구조체</span><span class="sxs-lookup"><span data-stu-id="6321d-102">AssemblyBindInfo Structure</span></span>
+<span data-ttu-id="6321d-103">참조 된 어셈블리에 대 한 자세한 정보를 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="6321d-103">Provides detailed information about the referenced assembly.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="e06a2-104">구문</span><span class="sxs-lookup"><span data-stu-id="e06a2-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="6321d-104">구문</span><span class="sxs-lookup"><span data-stu-id="6321d-104">Syntax</span></span>  
   
 ```  
 typedef struct _AssemblyBindInfo {  
@@ -37,31 +37,32 @@ typedef struct _AssemblyBindInfo {
 } AssemblyBindInfo;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="e06a2-105">멤버</span><span class="sxs-lookup"><span data-stu-id="e06a2-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="6321d-105">멤버</span><span class="sxs-lookup"><span data-stu-id="6321d-105">Members</span></span>  
   
-|<span data-ttu-id="e06a2-106">멤버</span><span class="sxs-lookup"><span data-stu-id="e06a2-106">Member</span></span>|<span data-ttu-id="e06a2-107">설명</span><span class="sxs-lookup"><span data-stu-id="e06a2-107">Description</span></span>|  
+|<span data-ttu-id="6321d-106">멤버</span><span class="sxs-lookup"><span data-stu-id="6321d-106">Member</span></span>|<span data-ttu-id="6321d-107">설명</span><span class="sxs-lookup"><span data-stu-id="6321d-107">Description</span></span>|  
 |------------|-----------------|  
-|`dwAppDomainId`|<span data-ttu-id="e06a2-108">에 대 한 고유 식별자를 `IStream` 에 대 한 호출에서 반환 된 [ihostassemblystore:: Provideassembly](../../../../docs/framework/unmanaged-api/hosting/ihostassemblystore-provideassembly-method.md)에 참조 된 어셈블리를 로드 하는 합니다.</span><span class="sxs-lookup"><span data-stu-id="e06a2-108">A unique identifier for the `IStream` returned by a call to [IHostAssemblyStore::ProvideAssembly](../../../../docs/framework/unmanaged-api/hosting/ihostassemblystore-provideassembly-method.md), from which the referenced assembly is to be loaded.</span></span>|  
-|`lpReferencedIdentity`|<span data-ttu-id="e06a2-109">참조 된 어셈블리에 대 한 고유 식별자입니다.</span><span class="sxs-lookup"><span data-stu-id="e06a2-109">A unique identifier for the referenced assembly.</span></span>|  
-|`lpPostPolicyIdentity`|<span data-ttu-id="e06a2-110">바인딩 정책 값을 적용 한 후 참조 된 어셈블리에 대 한 식별자입니다.</span><span class="sxs-lookup"><span data-stu-id="e06a2-110">The identifier for the referenced assembly after the application of any binding policy values.</span></span>|  
-|`ePolicyLevel`|<span data-ttu-id="e06a2-111">중 하나는 [EPolicyAction](../../../../docs/framework/unmanaged-api/hosting/epolicyaction-enumeration.md) 어떤 버전 관리 정책이 있는 경우 적용할 참조 된 어셈블리를 나타내는 값입니다.</span><span class="sxs-lookup"><span data-stu-id="e06a2-111">One of the [EPolicyAction](../../../../docs/framework/unmanaged-api/hosting/epolicyaction-enumeration.md) values that indicate which versioning policies, if any, should be applied to the referenced assembly.</span></span>|  
+|`dwAppDomainId`|<span data-ttu-id="6321d-108">에 대 한 고유 식별자를 `IStream` 에 대 한 호출에서 반환 된 [ihostassemblystore:: Provideassembly](../../../../docs/framework/unmanaged-api/hosting/ihostassemblystore-provideassembly-method.md)에 참조 된 어셈블리를 로드 하는 합니다.</span><span class="sxs-lookup"><span data-stu-id="6321d-108">A unique identifier for the `IStream` returned by a call to [IHostAssemblyStore::ProvideAssembly](../../../../docs/framework/unmanaged-api/hosting/ihostassemblystore-provideassembly-method.md), from which the referenced assembly is to be loaded.</span></span>|  
+|`lpReferencedIdentity`|<span data-ttu-id="6321d-109">참조 된 어셈블리에 대 한 고유 식별자입니다.</span><span class="sxs-lookup"><span data-stu-id="6321d-109">A unique identifier for the referenced assembly.</span></span>|  
+|`lpPostPolicyIdentity`|<span data-ttu-id="6321d-110">바인딩 정책 값을 적용 한 후 참조 된 어셈블리에 대 한 식별자입니다.</span><span class="sxs-lookup"><span data-stu-id="6321d-110">The identifier for the referenced assembly after the application of any binding policy values.</span></span>|  
+|`ePolicyLevel`|<span data-ttu-id="6321d-111">중 하나는 [EPolicyAction](../../../../docs/framework/unmanaged-api/hosting/epolicyaction-enumeration.md) 어떤 버전 관리 정책이 있는 경우 적용할 참조 된 어셈블리를 나타내는 값입니다.</span><span class="sxs-lookup"><span data-stu-id="6321d-111">One of the [EPolicyAction](../../../../docs/framework/unmanaged-api/hosting/epolicyaction-enumeration.md) values that indicate which versioning policies, if any, should be applied to the referenced assembly.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="e06a2-112">설명</span><span class="sxs-lookup"><span data-stu-id="e06a2-112">Remarks</span></span>  
- <span data-ttu-id="e06a2-113">고유 식별자를 제공 하는 호스트 `dwAppDomainId` 는 CLR (공용 언어 런타임)에 있습니다.</span><span class="sxs-lookup"><span data-stu-id="e06a2-113">The host supplies the unique identifier `dwAppDomainId` to the common language runtime (CLR).</span></span> <span data-ttu-id="e06a2-114">호출한 후 `IHostAssemblyStore::ProvideAssembly` 런타임 식별자를 사용 하 여 결정을 반환 하는지 여부를 내용의 `IStream` 매핑되어 있는 합니다.</span><span class="sxs-lookup"><span data-stu-id="e06a2-114">After a call to `IHostAssemblyStore::ProvideAssembly` returns, the runtime uses the identifier to determine whether the contents of the `IStream` have been mapped.</span></span> <span data-ttu-id="e06a2-115">그렇다면 런타임 스트림에 다시 매핑하는 것이 아니라 기존 복사본을 로드 합니다.</span><span class="sxs-lookup"><span data-stu-id="e06a2-115">If so, the runtime loads the existing copy rather than remapping the stream.</span></span> <span data-ttu-id="e06a2-116">런타임에서에서 반환 된 스트림을 대 한 조회 키로이 식별자도 사용에 대 한 호출 [ihostassemblystore:: Providemodule](../../../../docs/framework/unmanaged-api/hosting/ihostassemblystore-providemodule-method.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="e06a2-116">The runtime also uses this identifier as a lookup key for streams returned from calls to [IHostAssemblyStore::ProvideModule](../../../../docs/framework/unmanaged-api/hosting/ihostassemblystore-providemodule-method.md).</span></span> <span data-ttu-id="e06a2-117">따라서 식별자 어셈블리 요청 및 요청 모듈에 대 한 고유 해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="e06a2-117">Therefore, the identifier must be unique for module requests and for assembly requests.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="6321d-112">설명</span><span class="sxs-lookup"><span data-stu-id="6321d-112">Remarks</span></span>  
+ <span data-ttu-id="6321d-113">고유 식별자를 제공 하는 호스트 `dwAppDomainId` 는 CLR (공용 언어 런타임)에 있습니다.</span><span class="sxs-lookup"><span data-stu-id="6321d-113">The host supplies the unique identifier `dwAppDomainId` to the common language runtime (CLR).</span></span> <span data-ttu-id="6321d-114">호출한 후 `IHostAssemblyStore::ProvideAssembly` 런타임 식별자를 사용 하 여 결정을 반환 하는지 여부를 내용의 `IStream` 매핑되어 있는 합니다.</span><span class="sxs-lookup"><span data-stu-id="6321d-114">After a call to `IHostAssemblyStore::ProvideAssembly` returns, the runtime uses the identifier to determine whether the contents of the `IStream` have been mapped.</span></span> <span data-ttu-id="6321d-115">그렇다면 런타임 스트림에 다시 매핑하는 것이 아니라 기존 복사본을 로드 합니다.</span><span class="sxs-lookup"><span data-stu-id="6321d-115">If so, the runtime loads the existing copy rather than remapping the stream.</span></span> <span data-ttu-id="6321d-116">런타임에서에서 반환 된 스트림을 대 한 조회 키로이 식별자도 사용에 대 한 호출 [ihostassemblystore:: Providemodule](../../../../docs/framework/unmanaged-api/hosting/ihostassemblystore-providemodule-method.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="6321d-116">The runtime also uses this identifier as a lookup key for streams returned from calls to [IHostAssemblyStore::ProvideModule](../../../../docs/framework/unmanaged-api/hosting/ihostassemblystore-providemodule-method.md).</span></span> <span data-ttu-id="6321d-117">따라서 식별자 어셈블리 요청 및 요청 모듈에 대 한 고유 해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="6321d-117">Therefore, the identifier must be unique for module requests and for assembly requests.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="e06a2-118">요구 사항</span><span class="sxs-lookup"><span data-stu-id="e06a2-118">Requirements</span></span>  
- <span data-ttu-id="e06a2-119">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="e06a2-119">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="6321d-118">요구 사항</span><span class="sxs-lookup"><span data-stu-id="6321d-118">Requirements</span></span>  
+ <span data-ttu-id="6321d-119">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="6321d-119">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="e06a2-120">**헤더:** MSCorEE.idl</span><span class="sxs-lookup"><span data-stu-id="e06a2-120">**Header:** MSCorEE.idl</span></span>  
+ <span data-ttu-id="6321d-120">**헤더:** MSCorEE.idl</span><span class="sxs-lookup"><span data-stu-id="6321d-120">**Header:** MSCorEE.idl</span></span>  
   
- <span data-ttu-id="e06a2-121">**라이브러리:** MSCorEE.dll에 리소스로 포함</span><span class="sxs-lookup"><span data-stu-id="e06a2-121">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="6321d-121">**라이브러리:** MSCorEE.dll에 리소스로 포함</span><span class="sxs-lookup"><span data-stu-id="6321d-121">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="e06a2-122">**.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="e06a2-122">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ **<span data-ttu-id="6321d-122">.NET Framework 버전:</span><span class="sxs-lookup"><span data-stu-id="6321d-122">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="e06a2-123">참고자료</span><span class="sxs-lookup"><span data-stu-id="e06a2-123">See also</span></span>
-- [<span data-ttu-id="e06a2-124">호스팅 구조체</span><span class="sxs-lookup"><span data-stu-id="e06a2-124">Hosting Structures</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-structures.md)
-- [<span data-ttu-id="e06a2-125">ICLRAssemblyIdentityManager 인터페이스</span><span class="sxs-lookup"><span data-stu-id="e06a2-125">ICLRAssemblyIdentityManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyidentitymanager-interface.md)
-- [<span data-ttu-id="e06a2-126">ICLRAssemblyReferenceList 인터페이스</span><span class="sxs-lookup"><span data-stu-id="e06a2-126">ICLRAssemblyReferenceList Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyreferencelist-interface.md)
-- [<span data-ttu-id="e06a2-127">IHostAssemblyManager 인터페이스</span><span class="sxs-lookup"><span data-stu-id="e06a2-127">IHostAssemblyManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostassemblymanager-interface.md)
-- [<span data-ttu-id="e06a2-128">IHostAssemblyStore 인터페이스</span><span class="sxs-lookup"><span data-stu-id="e06a2-128">IHostAssemblyStore Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostassemblystore-interface.md)
-- [<span data-ttu-id="e06a2-129">ModuleBindInfo 구조체</span><span class="sxs-lookup"><span data-stu-id="e06a2-129">ModuleBindInfo Structure</span></span>](../../../../docs/framework/unmanaged-api/hosting/modulebindinfo-structure.md)
+## <a name="see-also"></a><span data-ttu-id="6321d-123">참고자료</span><span class="sxs-lookup"><span data-stu-id="6321d-123">See also</span></span>
+
+- [<span data-ttu-id="6321d-124">호스팅 구조체</span><span class="sxs-lookup"><span data-stu-id="6321d-124">Hosting Structures</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-structures.md)
+- [<span data-ttu-id="6321d-125">ICLRAssemblyIdentityManager 인터페이스</span><span class="sxs-lookup"><span data-stu-id="6321d-125">ICLRAssemblyIdentityManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyidentitymanager-interface.md)
+- [<span data-ttu-id="6321d-126">ICLRAssemblyReferenceList 인터페이스</span><span class="sxs-lookup"><span data-stu-id="6321d-126">ICLRAssemblyReferenceList Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyreferencelist-interface.md)
+- [<span data-ttu-id="6321d-127">IHostAssemblyManager 인터페이스</span><span class="sxs-lookup"><span data-stu-id="6321d-127">IHostAssemblyManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostassemblymanager-interface.md)
+- [<span data-ttu-id="6321d-128">IHostAssemblyStore 인터페이스</span><span class="sxs-lookup"><span data-stu-id="6321d-128">IHostAssemblyStore Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostassemblystore-interface.md)
+- [<span data-ttu-id="6321d-129">ModuleBindInfo 구조체</span><span class="sxs-lookup"><span data-stu-id="6321d-129">ModuleBindInfo Structure</span></span>](../../../../docs/framework/unmanaged-api/hosting/modulebindinfo-structure.md)
