@@ -18,12 +18,12 @@ helpviewer_keywords:
 - keywords [C#], operators
 - arithmetic operators [C#]
 ms.assetid: 0301e31f-22ad-49af-ac3c-d5eae7f0ac43
-ms.openlocfilehash: 7666918cbff7a395a93a274629fe574ff20e170c
-ms.sourcegitcommit: 4a8c2b8d0df44142728b68ebc842575840476f6d
+ms.openlocfilehash: 877992227df417badf7322be7f9be79bf7256e69
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/28/2019
-ms.locfileid: "58545691"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59308655"
 ---
 # <a name="c-operators"></a>C# 연산자
 
@@ -75,7 +75,7 @@ C#에서는 많은 연산자를 제공하며, 이러한 연산자는 식에서 �
 
 [-x](subtraction-operator.md) – 숫자 부정
 
-[\!x](logical-negation-operator.md) – 논리 부정
+[\!x](boolean-logical-operators.md#logical-negation-operator-) – 논리 부정
 
 [~x](bitwise-complement-operator.md) – 비트 보수
 
@@ -163,13 +163,13 @@ C#에서는 많은 연산자를 제공하며, 이러한 연산자는 식에서 �
 
 이 연산자는 다음 섹션보다 우선 순위가 높고 이전 섹션보다 우선 순위가 낮습니다.
 
-[x && y](conditional-and-operator.md) – 논리적 AND. 첫 번째 피연산자가 false로 확인되면, C#에서 두 번째 피연산자를 계산하지 않습니다.
+[x && y](boolean-logical-operators.md#conditional-logical-and-operator-) – 논리적 AND. 첫 번째 피연산자가 false로 확인되면, C#에서 두 번째 피연산자를 계산하지 않습니다.
 
 ## <a name="conditional-or-operator"></a>조건부 OR 연산자
 
 이 연산자는 다음 섹션보다 우선 순위가 높고 이전 섹션보다 우선 순위가 낮습니다.
 
-[x &#124;&#124; y](conditional-or-operator.md) – 논리적 OR. 첫 번째 피연산자가 true로 확인되면, C#에서 두 번째 피연산자를 계산하지 않습니다.
+[x &#124;&#124; y](boolean-logical-operators.md#conditional-logical-or-operator-) – 논리적 OR. 첫 번째 피연산자가 true로 확인되면, C#에서 두 번째 피연산자를 계산하지 않습니다.
 
 ## <a name="null-coalescing-operator"></a>Null 병합 연산자
 

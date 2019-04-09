@@ -2,12 +2,12 @@
 title: C# 자습서
 description: C# 자습서를 탐색하여 C# 프로그램을 빌드하는 방법과 C# 언어 기능에 관해 학습합니다.
 ms.date: 10/25/2018
-ms.openlocfilehash: 54c05f2fcc80d21b10cbb6a2baee37014aa62d07
-ms.sourcegitcommit: a3db1a9eafca89f95ccf361bc1833b47fbb2bb30
+ms.openlocfilehash: a82bd8e5ff28e0e006025de96f7da66505c0aff7
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2019
-ms.locfileid: "58920489"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59214444"
 ---
 # <a name="c-tutorials"></a>C# 자습서
 
@@ -61,5 +61,3 @@ Hello World 단원 다음에 나오는 모든 소개 자습서는 자체 로컬 
 * [LINQ 작업](working-with-linq.md): LINQ의 다양한 기능과 LINQ를 지원하는 언어 요소를 보여 줍니다.
 * [특성 사용](attributes.md): C#에서 특성을 만들고 사용하는 방법을 설명합니다.
 * [문자열 보간](exploration/interpolated-strings.yml) 자습서에서는 문자열에 값을 삽입하는 방법을 보여줍니다. 포함된 C# 식을 사용하여 보간된 문자열을 만드는 방법과 결과 문자열에서 식 결과의 텍스트 모양을 제어하는 방법을 설명합니다. 이 자습서는 [머신에서 로컬로 실행](exploration/interpolated-strings-local.md)할 수도 있습니다.
-
-

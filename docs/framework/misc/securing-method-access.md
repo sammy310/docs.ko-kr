@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: f7c2d6ec-3b18-4e0e-9991-acd97189d818
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 8ad7c9aba84a769cb4ea16a2d288b1a9b4f17ca5
-ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
-ms.translationtype: HT
+ms.openlocfilehash: 2159199fc12ef83a6bf4a44841d71799e0dad4dc
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55066014"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59166181"
 ---
 # <a name="securing-method-access"></a>메서드 액세스 보안
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
@@ -234,11 +234,12 @@ class Implemented : ICanCastToMe
 ## <a name="virtual-internal-overrides-or-overloads-overridable-friend"></a>Virtual Internal 재정의 또는 Overloads Overridable Friend  
   
 > [!NOTE]
->  둘 다로 메서드를 선언 하는 경우이 섹션에서는 보안 문제에 대 한 경고 `virtual` 하 고 `internal` (`Overloads` `Overridable` `Friend` Visual Basic에서). 이 경고는.NET Framework 버전 1.0 및 1.1에만 적용 됩니다, 그리고 이후 버전에 적용 되지 않습니다.  
+>  둘 다로 메서드를 선언 하는 경우이 섹션에서는 보안 문제에 대 한 경고 `virtual` 하 고 `internal` (`Overloads` `Overridable` `Friend` Visual basic에서). 이 경고는.NET Framework 버전 1.0 및 1.1에만 적용 됩니다, 그리고 이후 버전에 적용 되지 않습니다.  
   
- .NET Framework 버전 1.0 및 1.1에서는 알아야 형식 시스템 액세스 가능성의 미묘한 차이 확인 코드를 다른 어셈블리에 사용할 수 없는 경우. 선언 된 메서드 **가상** 하 고 **내부** (**Overloads Overridable Friend** Visual Basic에서) 부모 클래스의 vtable 항목을 재정의할 수 있습니다 및 에서만 사용할 수 있습니다 동일한 어셈블리 내에서 내부 이기 때문입니다. 그러나 재정의 대 한 내게 필요한 옵션에 의해 결정 되는 **가상** 키워드 및 해당 코드는 클래스 자체에 액세스할 수 있다면 다른 어셈블리에서 재정의 될 수이 있습니다. 재정의 가능성 문제를 제출 하는 경우 선언적 보안을 사용 하 여, 수정 하거나 제거 합니다 **가상** 키워드 엄격 하 게 필요 하지 않은 경우.  
+ .NET Framework 버전 1.0 및 1.1에서는 알아야 형식 시스템 액세스 가능성의 미묘한 차이 확인 코드를 다른 어셈블리에 사용할 수 없는 경우. 선언 된 메서드 **가상** 하 고 **내부** (**Overloads Overridable Friend** Visual basic에서) 부모 클래스의 vtable 항목을 재정의할 수 있습니다 및 에서만 사용할 수 있습니다 동일한 어셈블리 내에서 내부 이기 때문입니다. 그러나 재정의 대 한 내게 필요한 옵션에 의해 결정 되는 **가상** 키워드 및 해당 코드는 클래스 자체에 액세스할 수 있다면 다른 어셈블리에서 재정의 될 수이 있습니다. 재정의 가능성 문제를 제출 하는 경우 선언적 보안을 사용 하 여, 수정 하거나 제거 합니다 **가상** 키워드 엄격 하 게 필요 하지 않은 경우.  
   
  언어 컴파일러에서 컴파일 오류 때문에 이 재정의가 차단되더라도 다른 컴파일러로 작성된 코드는 재정의될 수 있습니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [보안 코딩 지침](../../../docs/standard/security/secure-coding-guidelines.md)
