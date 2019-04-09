@@ -1,5 +1,5 @@
 ---
-title: '방법: Windows Forms DataGrid 컨트롤에서 열 숨기기 또는 삭제'
+title: '방법: Windows Forms DataGrid 컨트롤에서 열 삭제 또는 숨기기'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,14 +12,14 @@ helpviewer_keywords:
 - columns [Windows Forms], deleting in data grids
 - DataGrid control [Windows Forms], hiding columns
 ms.assetid: bcd0dd96-6687-4c48-b0e1-d5287b93ac91
-ms.openlocfilehash: 42a697992d4c6c75fe5958a7a17d6df8a7b4f6e4
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: e6e8a4a5908d890d34ab6de952917cd97be2b433
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57724521"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59120148"
 ---
-# <a name="how-to-delete-or-hide-columns-in-the-windows-forms-datagrid-control"></a>방법: Windows Forms DataGrid 컨트롤에서 열 숨기기 또는 삭제
+# <a name="how-to-delete-or-hide-columns-in-the-windows-forms-datagrid-control"></a>방법: Windows Forms DataGrid 컨트롤에서 열 삭제 또는 숨기기
 > [!NOTE]
 >  <xref:System.Windows.Forms.DataGridView> 컨트롤은 <xref:System.Windows.Forms.DataGrid> 컨트롤을 대체하고 여기에 다른 기능을 추가하여 새로 도입된 컨트롤이지만 이전 버전과의 호환성 및 이후 사용 가능성을 고려하여 <xref:System.Windows.Forms.DataGrid> 컨트롤을 계속 유지하도록 선택할 수 있습니다. 자세한 내용은 [Windows Forms DataGridView 및 DataGrid 컨트롤의 차이점](differences-between-the-windows-forms-datagridview-and-datagrid-controls.md)을 참조하십시오.  
   
@@ -125,5 +125,6 @@ ms.locfileid: "57724521"
     ```  
   
 ## <a name="see-also"></a>참고자료
-- [방법: 런타임에 Windows Forms DataGrid 컨트롤에서 표시 된 데이터 변경](change-displayed-data-at-run-time-wf-datagrid-control.md)
-- [방법: Windows Forms DataGrid 컨트롤에 테이블과 열 추가](how-to-add-tables-and-columns-to-the-windows-forms-datagrid-control.md)
+
+- [방법: 런타임에 Windows Forms DataGrid 컨트롤에 표시되는 데이터 변경](change-displayed-data-at-run-time-wf-datagrid-control.md)
+- [방법: Windows Forms DataGrid 컨트롤에 테이블 및 열 추가](how-to-add-tables-and-columns-to-the-windows-forms-datagrid-control.md)

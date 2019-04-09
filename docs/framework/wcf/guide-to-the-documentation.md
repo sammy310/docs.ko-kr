@@ -5,12 +5,12 @@ helpviewer_keywords:
 - WCF [WCF], documentation
 - Windows Communication Foundation [WCF], documentation
 ms.assetid: 2aa18c85-a4fd-4bb9-986a-a8249e4f8e0e
-ms.openlocfilehash: b6c509bd150ec2443762134079427ebd2de8ba09
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a3d7ca994b185c39ac43cb6643098de602692842
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54552627"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59119602"
 ---
 # <a name="guide-to-the-documentation"></a>설명서에 대한 안내
 제공한 Windows Communication Foundation (WCF) 설명서에 대 한 지침은 다음과 같습니다. 구체적인 관심사와 지식 수준에 따라 그룹화된 링크 문서부터 보시는 것이 좋습니다.  
@@ -62,7 +62,8 @@ ms.locfileid: "54552627"
  시스템 제공 바인딩에서 지원 되는 프로토콜의 목록을 참조 하세요 [웹 서비스 프로토콜에서 지 원하는 시스템 제공 상호 운용성 바인딩에서](../../../docs/framework/wcf/feature-details/web-services-protocols-supported-by-system-provided-interoperability-bindings.md)합니다. 시스템 제공 바인딩 목록을 참조 하세요 [System-Provided Bindings](../../../docs/framework/wcf/system-provided-bindings.md)합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [Windows Communication Foundation 샘플](../../../docs/framework/wcf/samples/index.md)
 - [개념적 개요](../../../docs/framework/wcf/conceptual-overview.md)
-- [지침 및 모범 사례](../../../docs/framework/wcf/guidelines-and-best-practices.md)
+- [지침 및 최선의 구현 방법](../../../docs/framework/wcf/guidelines-and-best-practices.md)
 - [클라이언트 빌드](../../../docs/framework/wcf/building-clients.md)

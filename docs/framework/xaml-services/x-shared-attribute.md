@@ -6,12 +6,12 @@ helpviewer_keywords:
 - x:Shared attribute [XAML Services]
 - Shared attribute in XAML [XAML Services]
 ms.assetid: c8cff434-2785-405f-9f95-16deb34c9e64
-ms.openlocfilehash: 42de341d59e3e70103db765faf3160b5fe3250d3
-ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
+ms.openlocfilehash: da35f209b632bdf9e4ab2298239a505df69d6048
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58039397"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59125745"
 ---
 # <a name="xshared-attribute"></a>x:Shared 특성
 로 설정 하면 `false`, 요청 특성 사용된 하는 리소스에 대 한 모든 요청에 대해 동일한 인스턴스를 공유 하는 대신 각 요청에 대 한 새 인스턴스를 만들 수 있도록 WPF 리소스 검색 동작을 수정 합니다.  
@@ -50,6 +50,7 @@ ms.locfileid: "58039397"
 -   <xref:System.Windows.ResourceDictionary> 항목이 포함 된 다른 내에 중첩 되어야 하지 <xref:System.Windows.ResourceDictionary>합니다. 예를 들어 사용할 수 없습니다 `x:Shared` 항목에 대 한는 <xref:System.Windows.ResourceDictionary> 내는 <xref:System.Windows.Style> 는 이미는 <xref:System.Windows.ResourceDictionary> 항목입니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Windows.ResourceDictionary>
 - [XAML 리소스](../wpf/advanced/xaml-resources.md)
 - [기본 요소](../wpf/advanced/base-elements.md)

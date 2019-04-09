@@ -2,12 +2,12 @@
 title: 대기 중인 응용 프로그램 웹 호스팅
 ms.date: 03/30/2017
 ms.assetid: c7a539fa-e442-4c08-a7f1-17b7f5a03e88
-ms.openlocfilehash: 957a97c263f44302b66b6fb57b8330f63a178fa1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c44a6b5059f5294646d95b4281dcf7845b369929
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54700210"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59126024"
 ---
 # <a name="web-hosting-a-queued-application"></a>대기 중인 응용 프로그램 웹 호스팅
 Windows 프로세스 활성화 서비스 (WAS)는 정품 인증 및 호스트 Windows Communication Foundation (WCF) 서비스를 사용 하는 응용 프로그램을 포함 하는 작업자 프로세스의 수명을 관리 합니다. WAS 프로세스 모델은 HTTP에 대한 종속성을 제거하여 HTTP 서버의 [!INCLUDE[iis601](../../../../includes/iis601-md.md)] 프로세스 모델을 일반화합니다. 이렇게 하면 WCF 서비스가 HTTP 및 net.msmq 및 msmq.formatname 메시지 기반 활성화를 지원 하 고 많은 수의 지정된 된 컴퓨터에서 응용 프로그램을 호스트 하는 기능을 제공 하는 호스팅 환경에서와 같은 HTTP가 아닌 프로토콜을 모두 사용할 수 있습니다.  
@@ -42,5 +42,6 @@ Windows 프로세스 활성화 서비스 (WAS)는 정품 인증 및 호스트 Wi
  시스템 차원의 배달 못 한 큐 등의 시스템 큐나 포이즌 하위 큐 등의 하위 큐에 있는 메시지를 기반으로 WAS에 호스트된 응용 프로그램을 활성화할 수 없습니다. 이 제품 버전의 제한 사항입니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [포이즌 메시지 처리](../../../../docs/framework/wcf/feature-details/poison-message-handling.md)
 - [서비스 엔드포인트 및 큐 주소 지정](../../../../docs/framework/wcf/feature-details/service-endpoints-and-queue-addressing.md)

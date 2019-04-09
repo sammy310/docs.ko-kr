@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: a2b86b63-08b2-4943-b344-3c2cf46ccd31
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c70c70f251fca9312019d4c63304e8354bf87fd1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f0ecb05dba70dc9c8aba7f04928fd0ab49c900c8
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54729160"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59125582"
 ---
 # <a name="reportavoncomrelease-mda"></a>reportAvOnComRelease MDA
 `reportAvOnComRelease` MDA(관리 디버깅 도우미)는 COM interop를 수행하고 원시 COM 호출과 결합된 <xref:System.Runtime.InteropServices.Marshal.Release%2A> 또는 <xref:System.Runtime.InteropServices.Marshal.ReleaseComObject%2A> 메서드를 사용하는 동안 사용자 참조 계산 오류로 인해 예외가 throw되면 활성화됩니다.  
@@ -29,7 +29,7 @@ ms.locfileid: "54729160"
 ## <a name="cause"></a>원인  
  경우에 따라, COM interop를 수행하고 원시 COM 호출과 결합된 <xref:System.Runtime.InteropServices.Marshal.Release%2A> 또는 <xref:System.Runtime.InteropServices.Marshal.ReleaseComObject%2A> 메서드를 사용하는 동안 사용자 참조 계산 오류로 인해 예외가 throw됩니다. 일반적으로 이 예외는 이렇게 하지 않으면 CLR에서 액세스 위반이 발생하여 CLR이 종료되기 때문에 무시됩니다. 이 도우미를 사용하도록 설정한 경우 이러한 예외는 단순히 무시되는 것이 아니라 감지 및 보고될 수 있습니다.  
   
-## <a name="resolution"></a>해결 방법  
+## <a name="resolution"></a>해결  
  참조 계산 코드를 검토하고 오류를 검색하며, 개체의 네이티브 클라이언트에 참조 계산 오류가 있는지 검토합니다.  
   
 ## <a name="effect-on-the-runtime"></a>런타임에 대한 영향  
@@ -38,7 +38,7 @@ ms.locfileid: "54729160"
 ## <a name="output"></a>출력  
  가능한 경우 출력에 COM 인터페이스 포인터의 원래 vtable이 포함됩니다. 그러지 않으면 정보 메시지가 표시됩니다.  
   
-## <a name="configuration"></a>구성하기  
+## <a name="configuration"></a>구성  
   
 ```xml  
 <mdaConfig>  
@@ -49,6 +49,7 @@ ms.locfileid: "54729160"
 ```  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Runtime.InteropServices.MarshalAsAttribute>
 - [관리 디버깅 도우미를 사용하여 오류 진단](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
-- [interop 마샬링](../../../docs/framework/interop/interop-marshaling.md)
+- [Interop 마샬링](../../../docs/framework/interop/interop-marshaling.md)

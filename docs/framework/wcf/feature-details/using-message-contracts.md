@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - message contracts [WCF]
 ms.assetid: 1e19c64a-ae84-4c2f-9155-91c54a77c249
-ms.openlocfilehash: 34f1c761a127fe00612259a79dae47d1c9d5512f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4c5f1ab0b6fa56e4836a950ca3f2bbad19cfbff2
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54534422"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59121981"
 ---
 # <a name="using-message-contracts"></a>메시지 계약 사용
 일반적으로 Windows Communication Foundation (WCF) 응용 프로그램을 빌드하는 경우 개발자는 데이터 구조 및 serialization 문제에 주의 기울여야 및 데이터 전달 되는 메시지의 구조를 사용 하 여 고려할 필요가 없습니다. 이러한 응용 프로그램의 경우 매개 변수 또는 반환 값에 대한 데이터 계약을 만드는 과정은 간단합니다. (자세한 내용은 [Specifying Data Transfer in Service Contracts](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md).)  
@@ -105,7 +105,7 @@ public class BankingTransaction
  <xref:System.ServiceModel.MessageContractAttribute>를 사용하면 SOAP 메시지 본문에서 래퍼 요소의 이름을 제어하는 WrapperName 및 WrapperNamespace 특성을 지정할 수 있습니다. 기본적으로 메시지 계약 형식의 이름이 래퍼로 사용되며 메시지 계약이 정의된 네임스페이스 `http://tempuri.org/`가 기본 네임스페이스로 사용됩니다.  
   
 > [!NOTE]
->  <xref:System.Runtime.Serialization.KnownTypeAttribute> 특성은 메시지 계약에서 무시됩니다. <xref:System.Runtime.Serialization.KnownTypeAttribute>가 필요할 경우 해당 메시지 계약을 사용 중인 작업에 포함시킵니다.  
+>  <xref:System.Runtime.Serialization.KnownTypeAttribute> 특성은 메시지 계약에서 무시 됩니다. <xref:System.Runtime.Serialization.KnownTypeAttribute>가 필요할 경우 해당 메시지 계약을 사용 중인 작업에 포함시킵니다.  
   
 ## <a name="controlling-header-and-body-part-names-and-namespaces"></a>헤더와 본문 부분의 이름 및 네임스페이스 제어  
  메시지 계약의 SOAP 표현에서 각 헤더 및 본문 부분은 하나의 이름과 하나의 네임스페이스를 가진 XML 요소로 매핑됩니다.  
@@ -244,7 +244,7 @@ public class PatientRecord
 ## <a name="soap-header-attributes"></a>SOAP 헤더 특성  
  SOAP 표준은 헤더에 있을 수 있는 다음 특성을 정의합니다.  
   
--   `Actor/Role`(SOAP 1.1에서는 `Actor`, SOAP 1.2에서는 `Role`)  
+-   `Actor/Role` (`Actor` soap 1.1 `Role` soap 1.2)  
   
 -   `MustUnderstand`  
   
@@ -448,5 +448,6 @@ public class OperationDetails
  메시지 개체를 `Result` 속성으로 수신하고 반환된 값을 해당 개체의 속성으로 포함하려면 `/messageContract` 명령 옵션을 사용합니다. 이렇게 하면 응답 메시지를 `Result` 개체의 <xref:System.EventArgs> 속성으로 반환하는 서명이 생성됩니다. 모든 내부 반환 값은 응답 메시지 개체의 속성이 됩니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [데이터 계약 사용](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)
 - [서비스 디자인 및 구현](../../../../docs/framework/wcf/designing-and-implementing-services.md)

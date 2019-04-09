@@ -1,15 +1,15 @@
 ---
-title: 'Windows Communication Foundation 채택 예상: 향후 통합 간소화'
+title: 'Windows Communication Foundation 채택에 대한 기대: 향후 통합 간소화'
 ms.date: 03/30/2017
 ms.assetid: 3028bba8-6355-4ee0-9ecd-c56e614cb474
-ms.openlocfilehash: c20011c6cf7a31d8c45769b6995bb6754088bba6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 2f733f9cc33846913539fee4afdd95efa9224058
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54731285"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59124802"
 ---
-# <a name="anticipating-adopting-the-windows-communication-foundation-easing-future-integration"></a>Windows Communication Foundation 채택 예상: 향후 통합 간소화
+# <a name="anticipating-adopting-the-windows-communication-foundation-easing-future-integration"></a>Windows Communication Foundation 채택에 대한 기대: 향후 통합 간소화
 현재 ASP.NET을 사용 하 고 나중에 WCF를 사용 하는 경우이 항목에서는 새 ASP.NET 웹 서비스는 WCF 응용 프로그램과 함께 잘 작동 하는지 확인 하기 위한 지침을 제공 합니다.  
   
 ## <a name="general-recommendations"></a>일반 권장 사항  
@@ -44,4 +44,5 @@ public interface IEcho
  IIS(인터넷 정보 서비스)에서 제공하는 인증 옵션은 사용하지 마십시오. WCF 클라이언트 지원 하지 않습니다. 서비스를 보호 해야 하는 경우 이러한 옵션은 더 풍부 하며 표준 프로토콜을 기반으로 하기 때문에 WCF에서 제공 하는 옵션을 사용 합니다.  
   
 ## <a name="see-also"></a>참고자료
-- [Windows Communication Foundation 채택 예상: 향후 마이그레이션 간소화](../../../../docs/framework/wcf/feature-details/anticipating-adopting-wcf-migration.md)
+
+- [Windows Communication Foundation 채택에 대한 기대: 향후 마이그레이션 간소화](../../../../docs/framework/wcf/feature-details/anticipating-adopting-wcf-migration.md)
