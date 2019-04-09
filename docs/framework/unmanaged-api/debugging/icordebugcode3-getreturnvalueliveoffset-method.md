@@ -19,17 +19,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4f1f4734b6cb5b214b219742a6cac1c50220b96e
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 03ee275336d3ae71f63d82add694fe1308efbe8b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57492857"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59125939"
 ---
-# <a name="icordebugcode3getreturnvalueliveoffset-method"></a><span data-ttu-id="c1eec-102">ICorDebugCode3::GetReturnValueLiveOffset 메서드</span><span class="sxs-lookup"><span data-stu-id="c1eec-102">ICorDebugCode3::GetReturnValueLiveOffset Method</span></span>
-<span data-ttu-id="c1eec-103">지정된 된 IL 오프셋에 대 한 디버거 함수에서 반환 값을 얻을 수 있도록 중단점을 배치할 위치 네이티브 오프셋을 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="c1eec-103">For a specified IL offset, gets the native offsets where a breakpoint should be placed so that the debugger can obtain the return value from a function.</span></span>  
+# <a name="icordebugcode3getreturnvalueliveoffset-method"></a><span data-ttu-id="54874-102">ICorDebugCode3::GetReturnValueLiveOffset 메서드</span><span class="sxs-lookup"><span data-stu-id="54874-102">ICorDebugCode3::GetReturnValueLiveOffset Method</span></span>
+<span data-ttu-id="54874-103">지정된 된 IL 오프셋에 대 한 디버거 함수에서 반환 값을 얻을 수 있도록 중단점을 배치할 위치 네이티브 오프셋을 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="54874-103">For a specified IL offset, gets the native offsets where a breakpoint should be placed so that the debugger can obtain the return value from a function.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="c1eec-104">구문</span><span class="sxs-lookup"><span data-stu-id="c1eec-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="54874-104">구문</span><span class="sxs-lookup"><span data-stu-id="54874-104">Syntax</span></span>  
   
 ```cpp
 HRESULT GetReturnValueLiveOffset(  
@@ -40,44 +40,45 @@ HRESULT GetReturnValueLiveOffset(
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="c1eec-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="c1eec-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="54874-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="54874-105">Parameters</span></span>  
  `ILoffset`  
- <span data-ttu-id="c1eec-106">IL 오프셋입니다.</span><span class="sxs-lookup"><span data-stu-id="c1eec-106">The IL offset.</span></span> <span data-ttu-id="c1eec-107">함수 호출 사이트 여야 합니다 또는 함수 호출이 실패 합니다.</span><span class="sxs-lookup"><span data-stu-id="c1eec-107">It must be a function call site or the function call will fail.</span></span>  
+ <span data-ttu-id="54874-106">IL 오프셋입니다.</span><span class="sxs-lookup"><span data-stu-id="54874-106">The IL offset.</span></span> <span data-ttu-id="54874-107">함수 호출 사이트 여야 합니다 또는 함수 호출이 실패 합니다.</span><span class="sxs-lookup"><span data-stu-id="54874-107">It must be a function call site or the function call will fail.</span></span>  
   
  `bufferSize`  
- <span data-ttu-id="c1eec-108">저장할 수 있는 바이트 수가 `pOffsets`합니다.</span><span class="sxs-lookup"><span data-stu-id="c1eec-108">The number of bytes available to store `pOffsets`.</span></span>  
+ <span data-ttu-id="54874-108">저장할 수 있는 바이트 수가 `pOffsets`합니다.</span><span class="sxs-lookup"><span data-stu-id="54874-108">The number of bytes available to store `pOffsets`.</span></span>  
   
  `pFetched`  
- <span data-ttu-id="c1eec-109">실제로 반환 된 오프셋 수에 대 한 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="c1eec-109">A pointer to the number of offsets actually returned.</span></span> <span data-ttu-id="c1eec-110">일반적으로 해당 값은 1 이지만 단일 IL 지침은 여러 매핑할 수 있습니다 `CALL` 어셈블리 명령입니다.</span><span class="sxs-lookup"><span data-stu-id="c1eec-110">Usually, its value is 1, but a single IL instruction can map to multiple `CALL` assembly instructions.</span></span>  
+ <span data-ttu-id="54874-109">실제로 반환 된 오프셋 수에 대 한 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="54874-109">A pointer to the number of offsets actually returned.</span></span> <span data-ttu-id="54874-110">일반적으로 해당 값은 1 이지만 단일 IL 지침은 여러 매핑할 수 있습니다 `CALL` 어셈블리 명령입니다.</span><span class="sxs-lookup"><span data-stu-id="54874-110">Usually, its value is 1, but a single IL instruction can map to multiple `CALL` assembly instructions.</span></span>  
   
  `pOffsets`  
- <span data-ttu-id="c1eec-111">네이티브 오프셋의 배열입니다.</span><span class="sxs-lookup"><span data-stu-id="c1eec-111">An array of native offsets.</span></span> <span data-ttu-id="c1eec-112">일반적으로 `pOffsets` 단일 IL 지침은 여러 여러 맵을 매핑할 수 있지만 단일 오프셋이 포함 `CALL` 어셈블리 명령입니다.</span><span class="sxs-lookup"><span data-stu-id="c1eec-112">Typically, `pOffsets` contains a single offset, although a single IL instruction can map to multiple map to multiple `CALL` assembly instructions.</span></span>  
+ <span data-ttu-id="54874-111">네이티브 오프셋의 배열입니다.</span><span class="sxs-lookup"><span data-stu-id="54874-111">An array of native offsets.</span></span> <span data-ttu-id="54874-112">일반적으로 `pOffsets` 단일 IL 지침은 여러 여러 맵을 매핑할 수 있지만 단일 오프셋이 포함 `CALL` 어셈블리 명령입니다.</span><span class="sxs-lookup"><span data-stu-id="54874-112">Typically, `pOffsets` contains a single offset, although a single IL instruction can map to multiple map to multiple `CALL` assembly instructions.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="c1eec-113">설명</span><span class="sxs-lookup"><span data-stu-id="c1eec-113">Remarks</span></span>  
- <span data-ttu-id="c1eec-114">이 메서드는 함께 사용 합니다 [ICorDebugILFrame3::GetReturnValueForILOffset](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe3-getreturnvalueforiloffset-method.md) 참조 형식을 반환 하는 메서드의 반환 값을 가져오는 방법입니다.</span><span class="sxs-lookup"><span data-stu-id="c1eec-114">This method is used along with the [ICorDebugILFrame3::GetReturnValueForILOffset](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe3-getreturnvalueforiloffset-method.md) method to get the return value of a method that returns a reference type.</span></span> <span data-ttu-id="c1eec-115">이 메서드는 함수 호출 사이트에 대 한 오프셋 IL 전달 하나 이상의 네이티브 오프셋을 반환 합니다.</span><span class="sxs-lookup"><span data-stu-id="c1eec-115">Passing an IL offset to a function call site to this method returns one or more native offsets.</span></span> <span data-ttu-id="c1eec-116">디버거는 함수의 이러한 네이티브 오프셋에서 중단점을 설정할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="c1eec-116">The debugger can then set breakpoints on these native offsets in the function.</span></span> <span data-ttu-id="c1eec-117">디버거가 중단점 중 하나에 도달 하면 전달 하면이 메서드를 전달 하는 동일한 IL 오프셋 합니다 [ICorDebugILFrame3::GetReturnValueForILOffset](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe3-getreturnvalueforiloffset-method.md) 반환 값을 가져오는 방법입니다.</span><span class="sxs-lookup"><span data-stu-id="c1eec-117">When the debugger hits one of the breakpoints, you can then pass the same IL offset that you passed to this method to the [ICorDebugILFrame3::GetReturnValueForILOffset](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe3-getreturnvalueforiloffset-method.md) method to get the return value.</span></span> <span data-ttu-id="c1eec-118">디버거가 모든 중단점을 설정 하는 것을 지워야 합니다.</span><span class="sxs-lookup"><span data-stu-id="c1eec-118">The debugger should then clear all the breakpoints that it set.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="54874-113">설명</span><span class="sxs-lookup"><span data-stu-id="54874-113">Remarks</span></span>  
+ <span data-ttu-id="54874-114">이 메서드는 함께 사용 합니다 [ICorDebugILFrame3::GetReturnValueForILOffset](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe3-getreturnvalueforiloffset-method.md) 참조 형식을 반환 하는 메서드의 반환 값을 가져오는 방법입니다.</span><span class="sxs-lookup"><span data-stu-id="54874-114">This method is used along with the [ICorDebugILFrame3::GetReturnValueForILOffset](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe3-getreturnvalueforiloffset-method.md) method to get the return value of a method that returns a reference type.</span></span> <span data-ttu-id="54874-115">이 메서드는 함수 호출 사이트에 대 한 오프셋 IL 전달 하나 이상의 네이티브 오프셋을 반환 합니다.</span><span class="sxs-lookup"><span data-stu-id="54874-115">Passing an IL offset to a function call site to this method returns one or more native offsets.</span></span> <span data-ttu-id="54874-116">디버거는 함수의 이러한 네이티브 오프셋에서 중단점을 설정할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="54874-116">The debugger can then set breakpoints on these native offsets in the function.</span></span> <span data-ttu-id="54874-117">디버거가 중단점 중 하나에 도달 하면 전달 하면이 메서드를 전달 하는 동일한 IL 오프셋 합니다 [ICorDebugILFrame3::GetReturnValueForILOffset](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe3-getreturnvalueforiloffset-method.md) 반환 값을 가져오는 방법입니다.</span><span class="sxs-lookup"><span data-stu-id="54874-117">When the debugger hits one of the breakpoints, you can then pass the same IL offset that you passed to this method to the [ICorDebugILFrame3::GetReturnValueForILOffset](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe3-getreturnvalueforiloffset-method.md) method to get the return value.</span></span> <span data-ttu-id="54874-118">디버거가 모든 중단점을 설정 하는 것을 지워야 합니다.</span><span class="sxs-lookup"><span data-stu-id="54874-118">The debugger should then clear all the breakpoints that it set.</span></span>  
   
 > [!WARNING]
->  <span data-ttu-id="c1eec-119">합니다 `ICorDebugCode3::GetReturnValueLiveOffset` 및 [ICorDebugILFrame3::GetReturnValueForILOffset](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe3-getreturnvalueforiloffset-method.md) 메서드 참조 형식만 대 한 반환 값 정보를 가져올 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="c1eec-119">The `ICorDebugCode3::GetReturnValueLiveOffset` and [ICorDebugILFrame3::GetReturnValueForILOffset](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe3-getreturnvalueforiloffset-method.md) methods allow you to get return value information for reference types only.</span></span> <span data-ttu-id="c1eec-120">값 형식에서 반환 값 정보 검색 (에서 파생 되는 모든 형식 즉, <xref:System.ValueType>) 지원 되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="c1eec-120">Retrieving return value information from value types (that is, all types that derive from <xref:System.ValueType>) is not supported.</span></span>  
+>  <span data-ttu-id="54874-119">합니다 `ICorDebugCode3::GetReturnValueLiveOffset` 및 [ICorDebugILFrame3::GetReturnValueForILOffset](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe3-getreturnvalueforiloffset-method.md) 메서드 참조 형식만 대 한 반환 값 정보를 가져올 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="54874-119">The `ICorDebugCode3::GetReturnValueLiveOffset` and [ICorDebugILFrame3::GetReturnValueForILOffset](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe3-getreturnvalueforiloffset-method.md) methods allow you to get return value information for reference types only.</span></span> <span data-ttu-id="54874-120">값 형식에서 반환 값 정보 검색 (에서 파생 되는 모든 형식 즉, <xref:System.ValueType>) 지원 되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="54874-120">Retrieving return value information from value types (that is, all types that derive from <xref:System.ValueType>) is not supported.</span></span>  
   
- <span data-ttu-id="c1eec-121">반환 된 `HRESULT` 다음 표에 나와 있는 값입니다.</span><span class="sxs-lookup"><span data-stu-id="c1eec-121">The function returns the `HRESULT` values shown in the following table.</span></span>  
+ <span data-ttu-id="54874-121">반환 된 `HRESULT` 다음 표에 나와 있는 값입니다.</span><span class="sxs-lookup"><span data-stu-id="54874-121">The function returns the `HRESULT` values shown in the following table.</span></span>  
   
-|<span data-ttu-id="c1eec-122">`HRESULT` 값</span><span class="sxs-lookup"><span data-stu-id="c1eec-122">`HRESULT` value</span></span>|<span data-ttu-id="c1eec-123">설명</span><span class="sxs-lookup"><span data-stu-id="c1eec-123">Description</span></span>|  
+|`HRESULT` <span data-ttu-id="54874-122">값</span><span class="sxs-lookup"><span data-stu-id="54874-122">value</span></span>|<span data-ttu-id="54874-123">설명</span><span class="sxs-lookup"><span data-stu-id="54874-123">Description</span></span>|  
 |---------------------|-----------------|  
-|`S_OK`|<span data-ttu-id="c1eec-124">명령 실행 성공</span><span class="sxs-lookup"><span data-stu-id="c1eec-124">Success.</span></span>|  
-|`CORDBG_E_INVALID_OPCODE`|<span data-ttu-id="c1eec-125">지정된 된 IL 오프셋된 사이트 호출 명령이 아니거나 함수가 반환 `void`합니다.</span><span class="sxs-lookup"><span data-stu-id="c1eec-125">The given IL offset site is not a call instruction, or the function returns `void`.</span></span>|  
-|`CORDBG_E_UNSUPPORTED`|<span data-ttu-id="c1eec-126">지정된 된 IL 오프셋은 적절 한 호출 이지만 반환 형식은 반환 값 가져오기에 대 한 지원 되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="c1eec-126">The given IL offset is a proper call, but the return type is unsupported for getting a return value.</span></span>|  
+|`S_OK`|<span data-ttu-id="54874-124">명령 실행 성공</span><span class="sxs-lookup"><span data-stu-id="54874-124">Success.</span></span>|  
+|`CORDBG_E_INVALID_OPCODE`|<span data-ttu-id="54874-125">지정된 된 IL 오프셋된 사이트 호출 명령이 아니거나 함수가 반환 `void`합니다.</span><span class="sxs-lookup"><span data-stu-id="54874-125">The given IL offset site is not a call instruction, or the function returns `void`.</span></span>|  
+|`CORDBG_E_UNSUPPORTED`|<span data-ttu-id="54874-126">지정된 된 IL 오프셋은 적절 한 호출 이지만 반환 형식은 반환 값 가져오기에 대 한 지원 되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="54874-126">The given IL offset is a proper call, but the return type is unsupported for getting a return value.</span></span>|  
   
- <span data-ttu-id="c1eec-127">`ICorDebugCode3::GetReturnValueLiveOffset` 메서드는 x86 기반 및 AMD64 시스템입니다.</span><span class="sxs-lookup"><span data-stu-id="c1eec-127">The `ICorDebugCode3::GetReturnValueLiveOffset` method is available only on x86-based and AMD64 systems.</span></span>  
+ <span data-ttu-id="54874-127">`ICorDebugCode3::GetReturnValueLiveOffset` 메서드는 x86 기반 및 AMD64 시스템입니다.</span><span class="sxs-lookup"><span data-stu-id="54874-127">The `ICorDebugCode3::GetReturnValueLiveOffset` method is available only on x86-based and AMD64 systems.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="c1eec-128">요구 사항</span><span class="sxs-lookup"><span data-stu-id="c1eec-128">Requirements</span></span>  
- <span data-ttu-id="c1eec-129">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="c1eec-129">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="54874-128">요구 사항</span><span class="sxs-lookup"><span data-stu-id="54874-128">Requirements</span></span>  
+ <span data-ttu-id="54874-129">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="54874-129">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="c1eec-130">**헤더:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="c1eec-130">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="54874-130">**헤더:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="54874-130">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="c1eec-131">**라이브러리:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="c1eec-131">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="54874-131">**라이브러리:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="54874-131">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="c1eec-132">**.NET Framework 버전:** [!INCLUDE[net_current_v451plus](../../../../includes/net-current-v451plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="c1eec-132">**.NET Framework Versions:** [!INCLUDE[net_current_v451plus](../../../../includes/net-current-v451plus-md.md)]</span></span>  
+ **<span data-ttu-id="54874-132">.NET Framework 버전:</span><span class="sxs-lookup"><span data-stu-id="54874-132">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v451plus](../../../../includes/net-current-v451plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="c1eec-133">참고자료</span><span class="sxs-lookup"><span data-stu-id="c1eec-133">See also</span></span>
-- [<span data-ttu-id="c1eec-134">GetReturnValueForILOffset 메서드</span><span class="sxs-lookup"><span data-stu-id="c1eec-134">GetReturnValueForILOffset Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe3-getreturnvalueforiloffset-method.md)
-- [<span data-ttu-id="c1eec-135">ICorDebugCode3 인터페이스</span><span class="sxs-lookup"><span data-stu-id="c1eec-135">ICorDebugCode3 Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugcode3-interface.md)
+## <a name="see-also"></a><span data-ttu-id="54874-133">참고자료</span><span class="sxs-lookup"><span data-stu-id="54874-133">See also</span></span>
+
+- [<span data-ttu-id="54874-134">GetReturnValueForILOffset 메서드</span><span class="sxs-lookup"><span data-stu-id="54874-134">GetReturnValueForILOffset Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe3-getreturnvalueforiloffset-method.md)
+- [<span data-ttu-id="54874-135">ICorDebugCode3 인터페이스</span><span class="sxs-lookup"><span data-stu-id="54874-135">ICorDebugCode3 Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugcode3-interface.md)
