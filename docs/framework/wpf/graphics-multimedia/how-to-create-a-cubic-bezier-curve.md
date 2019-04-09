@@ -7,12 +7,12 @@ helpviewer_keywords:
 - graphics [WPF], cubic Bezier curves
 - cubic Bezier curves [WPF]
 ms.assetid: 450a3a77-7c57-48b0-a008-0f6051add980
-ms.openlocfilehash: da5472408caf8db92fd025730de48b820397f372
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 36544abc774b7fe82c2ff47483cfedd6fb13e344
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57364569"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59115572"
 ---
 # <a name="how-to-create-a-cubic-bezier-curve"></a>방법: 입방형 3차원 곡선 만들기
 이 예제에는 입방 형 3 차원 곡선을 만드는 방법을 보여 줍니다. 입방 형 3 차원 곡선을 만들려면 사용 합니다 <xref:System.Windows.Media.PathGeometry>, <xref:System.Windows.Media.PathFigure>, 및 <xref:System.Windows.Media.BezierSegment> 클래스입니다.  도형을 표시를 사용 하 여를 <xref:System.Windows.Shapes.Path> 요소를 사용 하 여 또는 <xref:System.Windows.Media.GeometryDrawing> 또는 <xref:System.Windows.Media.DrawingContext>합니다. 다음 예제에서는 입방 형 3 차원 곡선을에서 그려집니다 (10, 100)에 (300, 100). 곡선의 제어점에 (100, 0) 및 (200, 200).  
@@ -33,6 +33,7 @@ ms.locfileid: "57364569"
  이 예제는 더 큰 샘플에 속합니다. 전체 샘플을 보려면 [기하 도형 샘플](https://go.microsoft.com/fwlink/?LinkID=159989)을 참조하세요.  
   
 ## <a name="see-also"></a>참고자료
+
 - [타원형 원호 만들기](how-to-create-an-elliptical-arc.md)
 - [PathGeometry에 LineSegment 만들기](how-to-create-a-linesegment-in-a-pathgeometry.md)
 - [입방형 3차원 곡선 만들기](how-to-create-a-cubic-bezier-curve.md)

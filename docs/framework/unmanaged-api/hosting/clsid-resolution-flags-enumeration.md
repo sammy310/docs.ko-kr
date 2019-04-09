@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bee25122920a6fcec3bbd4e9e53bbdad008d5304
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 36792d01ebdad72271a8b0597a33d83cab34780e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54514108"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59114032"
 ---
 # <a name="clsidresolutionflags-enumeration"></a>CLSID_RESOLUTION_FLAGS 열거형
 CLR (공용 언어 런타임) 확인 하는 방법을 나타내는 값을 포함 한 `CLSID`합니다.  
@@ -50,4 +50,5 @@ typedef enum {
  **.NET Framework 버전:** [!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]  
   
 ## <a name="see-also"></a>참고자료
+
 - [호스팅 열거형](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)

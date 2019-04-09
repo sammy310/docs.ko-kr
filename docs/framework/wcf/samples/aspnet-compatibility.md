@@ -2,12 +2,12 @@
 title: ASP.NET 호환성
 ms.date: 03/30/2017
 ms.assetid: c8b51f1e-c096-4c42-ad99-0519887bbbc5
-ms.openlocfilehash: 1128183e990567d15b133bf8aa4ff5d32f10c663
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 521ab07d2a747927a7b26c38221f59de736990b5
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54541094"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59112530"
 ---
 # <a name="aspnet-compatibility"></a>ASP.NET 호환성
 이 샘플에는 Windows Communication Foundation (WCF)에서 ASP.NET 호환성 모드를 사용 하도록 설정 하는 방법을 보여 줍니다. ASP.NET 등의 기능 파일/URL 권한 부여, 세션 상태를 사용 하 여 ASP.NET 호환성 모드 ASP.NET 응용 프로그램 파이프라인에 완전히 참여 하 고 가능에서 실행 되는 서비스 및 <xref:System.Web.HttpContext> 클래스입니다. <xref:System.Web.HttpContext> 클래스에는 쿠키, 세션 및 다른 ASP.NET 기능에 액세스할 수 있습니다. 이 모드에서는 바인딩에 HTTP 전송이 사용되고 서비스 자체가 IIS에서 호스트되어야 합니다.  
@@ -128,4 +128,5 @@ Press <ENTER> to terminate client.
 4.  단일 컴퓨터 또는 다중 컴퓨터 구성에서 샘플을 실행 하려면의 지침을 따릅니다 [Windows Communication Foundation 샘플 실행](../../../../docs/framework/wcf/samples/running-the-samples.md)합니다.  
   
 ## <a name="see-also"></a>참고자료
-- [AppFabric 호스팅 및 지 속성 샘플](https://go.microsoft.com/fwlink/?LinkId=193961)
+
+- [AppFabric 호스팅 및 지속성 샘플](https://go.microsoft.com/fwlink/?LinkId=193961)

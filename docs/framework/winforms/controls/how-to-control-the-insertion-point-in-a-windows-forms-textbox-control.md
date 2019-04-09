@@ -1,5 +1,5 @@
 ---
-title: '방법: Windows Forms TextBox 컨트롤의 삽입 지점 제어'
+title: '방법: Windows Forms TextBox 컨트롤에서 삽입 지점 제어'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,22 +10,21 @@ helpviewer_keywords:
 - insertion points [Windows Forms], TextBox controls
 - text boxes [Windows Forms], controlling insertion point
 ms.assetid: 5bee7d34-5121-429e-ab1f-d8ff67bc74c1
-ms.openlocfilehash: cb3e7e7a44391ec7ee34ad0659f4185bd2304d26
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 1fa6e8a3642086f81d0a62502d801ec6ade9b3d1
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57714894"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59110718"
 ---
-# <a name="how-to-control-the-insertion-point-in-a-windows-forms-textbox-control"></a>방법: Windows Forms TextBox 컨트롤의 삽입 지점 제어
+# <a name="how-to-control-the-insertion-point-in-a-windows-forms-textbox-control"></a>방법: Windows Forms TextBox 컨트롤에서 삽입 지점 제어
 경우는 Windows Forms <xref:System.Windows.Forms.TextBox> 컨트롤의 포커스를 처음 받을, 기존 텍스트의 왼쪽에 텍스트 상자 내에서 기본 삽입 됩니다. 키보드 또는 마우스를 사용 하 여 커서를 이동할 수 있습니다. 텍스트 상자를 잃고 포커스를 다시 얻은 후, 하는 경우 아무 곳에 나 사용자 마지막으로 저장할 삽입 지점이 됩니다.  
   
  일부 경우에이 동작을 사용자에 게 혼란을 줄 수 있습니다. 단어의 처리 응용 프로그램을 사용자 기존 텍스트 뒤에 새 문자를 예상할 수 있습니다. 데이터 항목 응용 프로그램에서는 사용자 모든 기존 항목을 바꾸려면 새로운 문자 예상 합니다. 합니다 <xref:System.Windows.Forms.TextBoxBase.SelectionStart%2A> 고 <xref:System.Windows.Forms.TextBoxBase.SelectionLength%2A> 속성을 사용 하는 목적에 맞게 동작을 수정할 수 있습니다.  
   
 ### <a name="to-control-the-insertion-point-in-a-textbox-control"></a>TextBox 컨트롤의 삽입 지점 제어  
   
-1.  
-  <xref:System.Windows.Forms.TextBoxBase.SelectionStart%2A> 속성을 적절한 값으로 설정합니다. 0에 바로 첫 번째 문자의 왼쪽에 삽입 지점을 넣습니다.  
+1.  <xref:System.Windows.Forms.TextBoxBase.SelectionStart%2A> 속성을 적절한 값으로 설정합니다. 0에 바로 첫 번째 문자의 왼쪽에 삽입 지점을 넣습니다.  
   
 2.  (선택 사항) 설정 된 <xref:System.Windows.Forms.TextBoxBase.SelectionLength%2A> 속성을 선택 하려는 텍스트의 길이입니다.  
   
@@ -63,11 +62,12 @@ ms.locfileid: "57714894"
 -   설정 된 <xref:System.Windows.Forms.TextBox> 컨트롤의 <xref:System.Windows.Forms.Control.TabIndex%2A> 속성을 `0`입니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Windows.Forms.TextBox>
 - [TextBox 컨트롤 개요](textbox-control-overview-windows-forms.md)
-- [방법: Windows Forms TextBox 컨트롤을 사용 하 여 암호 텍스트 상자 만들기](how-to-create-a-password-text-box-with-the-windows-forms-textbox-control.md)
+- [방법: Windows Forms TextBox 컨트롤을 사용하여 암호 텍스트 상자 만들기](how-to-create-a-password-text-box-with-the-windows-forms-textbox-control.md)
 - [방법: 읽기 전용 텍스트 상자 만들기](how-to-create-a-read-only-text-box-windows-forms.md)
 - [방법: 문자열에 인용 부호 넣기](how-to-put-quotation-marks-in-a-string-windows-forms.md)
-- [방법: Windows Forms TextBox 컨트롤에서 텍스트를 선택 합니다.](how-to-select-text-in-the-windows-forms-textbox-control.md)
-- [방법: Windows Forms TextBox 컨트롤에서 여러 줄 보기](how-to-view-multiple-lines-in-the-windows-forms-textbox-control.md)
+- [방법: Windows Forms TextBox 컨트롤에서 텍스트 선택](how-to-select-text-in-the-windows-forms-textbox-control.md)
+- [방법: Windows Forms TextBox 컨트롤에서 여러 줄 표시](how-to-view-multiple-lines-in-the-windows-forms-textbox-control.md)
 - [TextBox 컨트롤](textbox-control-windows-forms.md)

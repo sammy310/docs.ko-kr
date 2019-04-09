@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - WCF Data Services, customizing requests
 ms.assetid: 1632f9af-e45f-4363-9222-03823daa8e28
-ms.openlocfilehash: 786d4deaa1b2e4dfacab6c89c7d3d5e734bd3ffd
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3c97e943d5516f879dda973bc008800032df5eb5
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54718132"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59134863"
 ---
 # <a name="how-to-specify-client-credentials-for-a-data-service-request-wcf-data-services"></a>방법: 데이터 서비스에 대 한 클라이언트 자격 증명 요청 (WCF Data Services)를 지정 합니다.
 기본적으로 클라이언트 라이브러리는 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 서비스에 요청을 보낼 때 자격 증명을 제공하지 않습니다. 하지만 <xref:System.Net.NetworkCredential>의 <xref:System.Data.Services.Client.DataServiceContext.Credentials%2A> 속성에 대해 <xref:System.Data.Services.Client.DataServiceContext>을 제공하여 데이터 서비스에 요청을 인증하기 위해 자격 증명이 보내지도록 지정할 수 있습니다.  자세한 내용은 [Securing WCF Data Services](../../../../docs/framework/data/wcf/securing-wcf-data-services.md)을 참조하세요. 이 항목의 예제는 데이터 서비스의 데이터를 요청할 때 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 클라이언트에 사용되는 자격 증명을 명시적으로 제공하는 방법을 나타냅니다.  
@@ -53,5 +53,6 @@ ms.locfileid: "54718132"
  자세한 내용은 [Securing WCF Data Services](../../../../docs/framework/data/wcf/securing-wcf-data-services.md)을 참조하세요.  
   
 ## <a name="see-also"></a>참고자료
-- [WCF Data Services 보안](../../../../docs/framework/data/wcf/securing-wcf-data-services.md)
+
+- [WCF Data Services에 보안 설정](../../../../docs/framework/data/wcf/securing-wcf-data-services.md)
 - [WCF Data Services 클라이언트 라이브러리](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)

@@ -1,5 +1,5 @@
 ---
-title: '방법: Windows 자격 증명을 사용 하 여 서비스에 보안 설정'
+title: '방법: Windows 자격 증명을 사용하여 서비스 보호'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,14 +7,14 @@ dev_langs:
 helpviewer_keywords:
 - WCF, security
 ms.assetid: d171b5ca-96ef-47ff-800c-c138023cf76e
-ms.openlocfilehash: b5fece86dca524cb3f94f64dcb98361a93bf84a3
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: 70b8e2f28559d5fc54736db1319d2309aa5b86a7
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58410929"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59111334"
 ---
-# <a name="how-to-secure-a-service-with-windows-credentials"></a>방법: Windows 자격 증명을 사용 하 여 서비스에 보안 설정
+# <a name="how-to-secure-a-service-with-windows-credentials"></a>방법: Windows 자격 증명을 사용하여 서비스 보호
 이 항목에서는 Windows 도메인에 있고 동일한 도메인의 클라이언트에서 호출 되는 Windows Communication Foundation (WCF) 서비스에서 전송 보안을 사용 하는 방법을 보여 줍니다. 이 시나리오에 대 한 자세한 내용은 참조 하세요. [Windows 인증을 사용 하 여 전송 보안](../../../docs/framework/wcf/feature-details/transport-security-with-windows-authentication.md)합니다. 샘플 응용 프로그램에 대 한 참조를 [WSHttpBinding](../../../docs/framework/wcf/samples/wshttpbinding.md) 샘플입니다.  
   
  이 항목에서는 사용자의 기존 계약 인터페이스 및 구현이 이미 정의되어 있다고 가정하고 여기에 더 추가합니다. 사용자는 기존 서비스 및 클라이언트를 수정할 수도 있습니다.  
@@ -32,14 +32,11 @@ ms.locfileid: "58410929"
   
 1.  이 프로시저 코드는 예제 단원의 서비스 코드에 있는 `Run`클래스에 대한 `Test` 메서드의 시작 부분에 삽입됩니다.  
   
-2.  
-  <xref:System.ServiceModel.WSHttpBinding> 클래스의 인스턴스를 만듭니다.  
+2.  <xref:System.ServiceModel.WSHttpBinding> 클래스의 인스턴스를 만듭니다.  
   
-3.  
-  <xref:System.ServiceModel.WSHttpSecurity.Mode%2A> 클래스의 <xref:System.ServiceModel.WSHttpSecurity> 속성을 <xref:System.ServiceModel.SecurityMode.Message>로 설정합니다.  
+3.  <xref:System.ServiceModel.WSHttpSecurity.Mode%2A> 클래스의 <xref:System.ServiceModel.WSHttpSecurity> 속성을 <xref:System.ServiceModel.SecurityMode.Message>로 설정합니다.  
   
-4.  
-  <xref:System.ServiceModel.MessageSecurityOverHttp.ClientCredentialType%2A> 클래스의 <xref:System.ServiceModel.MessageSecurityOverHttp> 속성을 <xref:System.ServiceModel.MessageCredentialType.Windows>로 설정합니다.  
+4.  <xref:System.ServiceModel.MessageSecurityOverHttp.ClientCredentialType%2A> 클래스의 <xref:System.ServiceModel.MessageSecurityOverHttp> 속성을 <xref:System.ServiceModel.MessageCredentialType.Windows>로 설정합니다.  
   
 5.  이 프로시저에 대한 코드는 다음과 같습니다.  
   
@@ -53,22 +50,17 @@ ms.locfileid: "58410929"
   
 1.  앞의 프로시저 코드 뒤에 이 프로시저 코드를 삽입합니다.  
   
-2.  
-  <xref:System.Type>이라는 `contractType` 변수를 만들어 인터페이스(`ICalculator`)의 형식을 할당합니다. Visual Basic을 사용 하는 경우 사용 합니다 `GetType` C#을 사용 하 여 사용 하는 경우 연산자는 `typeof` 키워드.  
+2.  <xref:System.Type>이라는 `contractType` 변수를 만들어 인터페이스(`ICalculator`)의 형식을 할당합니다. Visual Basic을 사용 하는 경우 사용 합니다 `GetType` C#을 사용 하 여 사용 하는 경우 연산자는 `typeof` 키워드.  
   
-3.  
-  <xref:System.Type>이라는 두 번째 `serviceType` 변수를 만들어 구현된 계약(`Calculator`)의 형식을 할당합니다.  
+3.  <xref:System.Type>이라는 두 번째 `serviceType` 변수를 만들어 구현된 계약(`Calculator`)의 형식을 할당합니다.  
   
 4.  서비스의 기본 주소를 사용하여 <xref:System.Uri>라는 `baseAddress` 클래스의 인스턴스를 만듭니다. 기본 주소에는 전송과 일치하는 체계가 있어야 합니다. 이 경우 전송 체계는 HTTP 및 주소에는 특수 한 포함 됩니다. 기본 끝점 주소 뿐만 아니라 리소스 URI (Uniform Identifier) "localhost" 및 포트 번호 (8036) ("serviceModelSamples /): `http://localhost:8036/serviceModelSamples/`합니다.  
   
-5.  
-  <xref:System.ServiceModel.ServiceHost> 및 `serviceType` 변수를 사용하여 `baseAddress` 클래스의 인스턴스를 만듭니다.  
+5.  <xref:System.ServiceModel.ServiceHost> 및 `serviceType` 변수를 사용하여 `baseAddress` 클래스의 인스턴스를 만듭니다.  
   
-6.  
-  `contractType`, 바인딩 및 엔드포인트 이름(secureCalculator)을 사용하여 엔드포인트를 서비스에 추가합니다. 클라이언트는 서비스에 대한 호출을 시작할 때 기본 주소와 엔드포인트 이름을 연결해야 합니다.  
+6.  `contractType`, 바인딩 및 엔드포인트 이름(secureCalculator)을 사용하여 엔드포인트를 서비스에 추가합니다. 클라이언트는 서비스에 대한 호출을 시작할 때 기본 주소와 엔드포인트 이름을 연결해야 합니다.  
   
-7.  
-  <xref:System.ServiceModel.Channels.CommunicationObject.Open%2A> 메서드를 호출하여 서비스를 시작합니다. 이 프로시저에 대한 코드는 다음과 같습니다.  
+7.  <xref:System.ServiceModel.Channels.CommunicationObject.Open%2A> 메서드를 호출하여 서비스를 시작합니다. 이 프로시저에 대한 코드는 다음과 같습니다.  
   
      [!code-csharp[c_SecureWindowsService#2](../../../samples/snippets/csharp/VS_Snippets_CFX/c_securewindowsservice/cs/secureservice.cs#2)]
      [!code-vb[c_SecureWindowsService#2](../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securewindowsservice/vb/secureservice.vb#2)]  
@@ -86,14 +78,11 @@ ms.locfileid: "58410929"
   
 2.  이 프로시저의 코드는 클라이언트 프로그램에 대한 `Main` 메서드의 시작 부분에 삽입됩니다.  
   
-3.  
-  <xref:System.ServiceModel.WSHttpBinding> 클래스의 인스턴스를 만들고 보안 모드를 `Message`로, 클라이언트 자격 증명 형식을 `Windows`로 설정합니다. 이 예제에서는 변수 이름을 `clientBinding`으로 지정합니다.  
+3.  <xref:System.ServiceModel.WSHttpBinding> 클래스의 인스턴스를 만들고 보안 모드를 `Message`로, 클라이언트 자격 증명 형식을 `Windows`로 설정합니다. 이 예제에서는 변수 이름을 `clientBinding`으로 지정합니다.  
   
-4.  
-  <xref:System.ServiceModel.EndpointAddress>라는 `serviceAddress` 클래스의 인스턴스를 만듭니다. 기본 주소를 엔드포인트 이름과 연결하여 인스턴스를 초기화합니다.  
+4.  <xref:System.ServiceModel.EndpointAddress>라는 `serviceAddress` 클래스의 인스턴스를 만듭니다. 기본 주소를 엔드포인트 이름과 연결하여 인스턴스를 초기화합니다.  
   
-5.  
-  `serviceAddress` 및 `clientBinding` 변수를 사용하여 생성된 클라이언트 클래스의 인스턴스를 만듭니다.  
+5.  `serviceAddress` 및 `clientBinding` 변수를 사용하여 생성된 클라이언트 클래스의 인스턴스를 만듭니다.  
   
 6.  다음 코드와 같이 <xref:System.ServiceModel.ClientBase%601.Open%2A> 메서드를 호출합니다.  
   
@@ -159,6 +148,7 @@ ms.locfileid: "58410929"
  [!code-vb[c_SecureWindowsClient#0](../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securewindowsclient/vb/secureclient.vb#0)]      
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.ServiceModel.WSHttpBinding>
 - [ServiceModel Metadata 유틸리티 도구(Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)
 - [방법: 클라이언트 만들기](../../../docs/framework/wcf/how-to-create-a-wcf-client.md)

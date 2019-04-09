@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 81dd0c37-e2a4-4694-83b0-f2e49e693810
-ms.openlocfilehash: 7a424f289bb4ffba102d1023909b139ac2a70c33
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7ce759de004d479f5162d2ce3a965f5c40afa450
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54503744"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59110795"
 ---
 # <a name="the-linq-to-sql-object-model"></a>LINQ to SQL 개체 모델
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)], 개발자의 프로그래밍 언어로 표현 되는 개체 모델을 관계형 데이터베이스의 데이터 모델에 매핑되어 있습니다. 그런 다음 개체 모델에 따라 데이터 작업이 수행됩니다.  
@@ -65,11 +65,11 @@ ms.locfileid: "54503744"
  자세한 내용은의 Association 특성 단원을 참조 하세요 [특성 기반 매핑](../../../../../../docs/framework/data/adonet/sql/linq/attribute-based-mapping.md)합니다.  
   
 ## <a name="linq-to-sql-methods-and-database-stored-procedures"></a>LINQ to SQL 메서드 및 데이터베이스 저장 프로시저  
- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]은 저장 프로시저와 사용자 정의 함수를 지원합니다. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]에서 이러한 데이터베이스 정의 추상화를 클라이언트 개체에 매핑하면 클라이언트 코드에서 강력한 형식으로 해당 개체에 액세스할 수 있습니다. 메서드 시그니처는 데이터베이스에 정의된 프로시저 및 함수의 시그니처와 매우 유사합니다. IntelliSense를 사용하여 이러한 메서드를 검색할 수 있습니다.  
+ [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 저장 프로시저 및 사용자 정의 함수를 지원 합니다. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]에서 이러한 데이터베이스 정의 추상화를 클라이언트 개체에 매핑하면 클라이언트 코드에서 강력한 형식으로 해당 개체에 액세스할 수 있습니다. 메서드 시그니처는 데이터베이스에 정의된 프로시저 및 함수의 시그니처와 매우 유사합니다. IntelliSense를 사용하여 이러한 메서드를 검색할 수 있습니다.  
   
  매핑된 프로시저에 대한 호출에서 반환되는 결과 집합은 강력한 형식의 컬렉션입니다.  
   
- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]은 <xref:System.Data.Linq.Mapping.FunctionAttribute> 및 <xref:System.Data.Linq.Mapping.ParameterAttribute> 특성을 사용하여 저장 프로시저와 함수를 메서드에 매핑합니다. 저장 프로시저를 나타내는 메서드와 사용자 정의 함수를 나타내는 메서드는 <xref:System.Data.Linq.Mapping.FunctionAttribute.IsComposable%2A> 속성에 의해 구별됩니다. 이 속성이 `false`(기본값)로 설정된 경우 메서드는 저장 프로시저를 나타내고 `true`로 설정된 경우 메서드는 데이터베이스 함수를 나타냅니다.  
+ [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 메서드에 저장된 프로시저 및 함수를 사용 하 여 매핑하는 <xref:System.Data.Linq.Mapping.FunctionAttribute> 및 <xref:System.Data.Linq.Mapping.ParameterAttribute> 특성입니다. 저장 프로시저를 나타내는 메서드와 사용자 정의 함수를 나타내는 메서드는 <xref:System.Data.Linq.Mapping.FunctionAttribute.IsComposable%2A> 속성에 의해 구별됩니다. 이 속성이 `false`(기본값)로 설정된 경우 메서드는 저장 프로시저를 나타내고 `true`로 설정된 경우 메서드는 데이터베이스 함수를 나타냅니다.  
   
 > [!NOTE]
 >  Visual Studio를 사용 하는 경우 사용할 수 있습니다는 [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] 저장된 프로시저 및 사용자 정의 함수에 매핑되는 메서드를 만들 수 있습니다.  
@@ -81,5 +81,6 @@ ms.locfileid: "54503744"
  자세한 내용은의 함수 특성, 저장 프로시저 특성 및 매개 변수 특성 섹션을 참조 하세요 [특성 기반 매핑](../../../../../../docs/framework/data/adonet/sql/linq/attribute-based-mapping.md) 하 고 [저장 프로시저](../../../../../../docs/framework/data/adonet/sql/linq/stored-procedures.md)합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [특성 기반 매핑](../../../../../../docs/framework/data/adonet/sql/linq/attribute-based-mapping.md)
 - [배경 정보](../../../../../../docs/framework/data/adonet/sql/linq/background-information.md)

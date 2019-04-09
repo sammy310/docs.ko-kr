@@ -6,12 +6,12 @@ helpviewer_keywords:
 - control patterns, Invoke
 - Invoke control pattern
 ms.assetid: e5b1e239-49f8-468e-bfec-1fba02ec9ac4
-ms.openlocfilehash: 55e75e5835aa60a51b9186f31913347ad04dccdd
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: 5c9d94aca6b9b53c505fa7419406a0d2fc4a0ae7
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57674954"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59134786"
 ---
 # <a name="implementing-the-ui-automation-invoke-control-pattern"></a>UI 자동화 Invoke 컨트롤 패턴 구현
 > [!NOTE]
@@ -29,7 +29,7 @@ ms.locfileid: "57674954"
   
 -   일반적으로 컨트롤은 미리 정의된 키보드 바로 가기 또는 몇 가지 키 입력의 조합을 클릭하거나, 두 번 클릭하거나, ENTER 키를 눌러 호출합니다.  
   
--   <xref:System.Windows.Automation.InvokePatternIdentifiers.InvokedEvent> 는 활성화된 컨트롤에서 발생합니다(연결된 작업을 수행하는 컨트롤에 대한 응답으로) 가능하면, 컨트롤이 작업을 완료하여 차단하지 않고 반환된 후에 이벤트가 발생해야 합니다. 다음 시나리오에서 호출 요청을 처리하기 전에 Invoked 이벤트가 발생해야 합니다.  
+-   <xref:System.Windows.Automation.InvokePatternIdentifiers.InvokedEvent> (연결 된 작업을 수행 하는 컨트롤에 대 한 응답)로 활성화 된 컨트롤에서 발생 합니다. 가능하면, 컨트롤이 작업을 완료하여 차단하지 않고 반환된 후에 이벤트가 발생해야 합니다. 다음 시나리오에서 호출 요청을 처리하기 전에 Invoked 이벤트가 발생해야 합니다.  
   
     -   작업이 완료될 때까지 기다리는 것은 실제로 불가능합니다.  
   
@@ -48,7 +48,7 @@ ms.locfileid: "57674954"
   
 -   호출하는 즉시 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 트리에서 요소가 사라질 수 있습니다. 그 결과, 이벤트 콜백에서 제공하는 요소로부터 정보를 요청하는 작업에 실패할 수 있습니다. 이러한 문제의 해결 방법으로 캐시된 정보를 프리페치하는 것이 좋습니다.  
   
--   컨트롤은 여러 개의 컨트롤 패턴을 구현할 수 있습니다. 예를 들어, [!INCLUDE[TLA#tla_xl](../../../includes/tlasharptla-xl-md.md)] 도구 모음의 채우기 색 컨트롤은 <xref:System.Windows.Automation.InvokePattern> 및 <xref:System.Windows.Automation.ExpandCollapsePattern> 컨트롤 패턴 둘 다 구현합니다. <xref:System.Windows.Automation.ExpandCollapsePattern> 은 메뉴를 노출하고 <xref:System.Windows.Automation.InvokePattern> 은 선택된 색으로 활성 상태의 선택 항목을 채웁니다.  
+-   컨트롤은 여러 개의 컨트롤 패턴을 구현할 수 있습니다. 예를 들어, [!INCLUDE[TLA#tla_xl](../../../includes/tlasharptla-xl-md.md)] 도구 모음의 채우기 색 컨트롤은 <xref:System.Windows.Automation.InvokePattern> 및 <xref:System.Windows.Automation.ExpandCollapsePattern> 컨트롤 패턴 둘 다 구현합니다. <xref:System.Windows.Automation.ExpandCollapsePattern> 메뉴를 표시 하며 <xref:System.Windows.Automation.InvokePattern> 선택한 색으로 활성 선택 영역을 채웁니다.  
   
 <a name="Required_Members_for_the_IValueProvider_Interface"></a>   
 ## <a name="required-members-for-iinvokeprovider"></a>IInvokeProvider에 필요한 멤버  
@@ -56,7 +56,7 @@ ms.locfileid: "57674954"
   
 |필요한 멤버|멤버 형식|노트|  
 |----------------------|-----------------|-----------|  
-|<xref:System.Windows.Automation.Provider.IInvokeProvider.Invoke%2A>|메서드|<xref:System.Windows.Automation.Provider.IInvokeProvider.Invoke%2A> 는 비동기 호출이며 차단하지 않고 즉시 반환해야 합니다.<br /><br /> 이 동작은 호출될 때 직접 또는 간접적으로 모달 대화 상자를 시작하는 컨트롤에 특히 중요합니다. 이벤트를 발생시킨 모든 UI 자동화 클라이언트는 모달 대화 상자가 닫힐 때까지 차단된 상태로 유지됩니다.|  
+|<xref:System.Windows.Automation.Provider.IInvokeProvider.Invoke%2A>|메서드|<xref:System.Windows.Automation.Provider.IInvokeProvider.Invoke%2A> 비동기 호출 이며 차단 하지 않고 즉시 반환 해야 합니다.<br /><br /> 이 동작은 호출될 때 직접 또는 간접적으로 모달 대화 상자를 시작하는 컨트롤에 특히 중요합니다. 이벤트를 발생시킨 모든 UI 자동화 클라이언트는 모달 대화 상자가 닫힐 때까지 차단된 상태로 유지됩니다.|  
   
 <a name="Exceptions"></a>   
 ## <a name="exceptions"></a>예외  
@@ -67,9 +67,10 @@ ms.locfileid: "57674954"
 |<xref:System.Windows.Automation.ElementNotEnabledException>|컨트롤이 사용 설정되지 않은 경우.|  
   
 ## <a name="see-also"></a>참고자료
+
 - [UI 자동화 컨트롤 패턴 개요](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)
 - [UI 자동화 공급자의 컨트롤 패턴 지원](../../../docs/framework/ui-automation/support-control-patterns-in-a-ui-automation-provider.md)
 - [클라이언트용 UI 자동화 컨트롤 패턴](../../../docs/framework/ui-automation/ui-automation-control-patterns-for-clients.md)
 - [UI 자동화를 사용하여 컨트롤 호출](../../../docs/framework/ui-automation/invoke-a-control-using-ui-automation.md)
 - [UI 자동화 트리 개요](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)
-- [UI 자동화의 캐싱 사용](../../../docs/framework/ui-automation/use-caching-in-ui-automation.md)
+- [UI 자동화에서 캐싱 사용](../../../docs/framework/ui-automation/use-caching-in-ui-automation.md)

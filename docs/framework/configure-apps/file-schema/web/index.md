@@ -9,12 +9,12 @@ helpviewer_keywords:
 - configuration files [ASP.NET]
 - configuration schema [.NET Framework], Web settings
 ms.assetid: ae1ac356-267d-4753-8d7a-7a04eb45a9be
-ms.openlocfilehash: 4bde008661e78fc85c428fa5100f81483936b460
-ms.sourcegitcommit: b351b0781a035616c90c68ccae6dd60aae66a953
+ms.openlocfilehash: 1f0241b65c915dd5703ceea97dd5b07f88832003
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/26/2019
-ms.locfileid: "55083602"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59113063"
 ---
 # <a name="web-settings-schema"></a>웹 설정 스키마
 웹 설정은 CPU와 ASP.NET 호스팅 계층에서 관리하는 프로세스 전반 동작에 적용되는 실행 수준 ASP.NET 설정을 지정합니다. 이러한 설정은 ASP.NET 애플리케이션의 Web.config 파일에서 지정된 애플리케이션 도메인 유형 설정과 다릅니다.  
@@ -25,11 +25,11 @@ ms.locfileid: "55083602"
   
  웹 설정은 machine.config 파일, 루트 Web.config 또는 애플리케이션 수준 Web.config 파일과 같은 다른 구성 파일에는 사용되지 않습니다.  
   
- [\<configuration> 요소](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)  
+ [\<구성 > 요소](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)  
   
- [\<system.web> 요소(웹 설정)](../../../../../docs/framework/configure-apps/file-schema/web/system-web-element-web-settings.md)  
+ [\<system.web > 요소 (웹 설정)](../../../../../docs/framework/configure-apps/file-schema/web/system-web-element-web-settings.md)  
   
- [\<applicationPool> 요소(웹 설정)](../../../../../docs/framework/configure-apps/file-schema/web/applicationpool-element-web-settings.md)  
+ [\<응용 프로그램 풀 > 요소 (웹 설정)](../../../../../docs/framework/configure-apps/file-schema/web/applicationpool-element-web-settings.md)  
   
 |요소|설명|  
 |-------------|-----------------|  
@@ -37,4 +37,5 @@ ms.locfileid: "55083602"
 |[\<applicationPool>](../../../../../docs/framework/configure-apps/file-schema/web/applicationpool-element-web-settings.md)|CPU와 ASP.NET 호스팅 계층에서 관리하는 프로세스 전반 동작에 적용되는 실행 수준 ASP.NET 설정을 지정합니다.|  
   
 ## <a name="see-also"></a>참고자료
+
 - [구성 파일 스키마](../../../../../docs/framework/configure-apps/file-schema/index.md)

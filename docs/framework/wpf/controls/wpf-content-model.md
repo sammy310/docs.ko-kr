@@ -11,25 +11,23 @@ helpviewer_keywords:
 - arbitrary content classes [WPF], content model
 - ContentControl class [WPF], displaying content
 ms.assetid: 214da5ef-547a-4cf8-9b07-4aa8a0e52cdd
-ms.openlocfilehash: 6cbb13fdcba2cf014c4c31a5dc5b21fe2721b214
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 4f866e0366a7781c287b3ebae7b668c2b296a5cc
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58816917"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59134610"
 ---
 # <a name="wpf-content-model"></a>WPF 콘텐츠 모델
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]는 다양한 형식의 콘텐츠를 표시하는 것을 기본 용도로 하는 많은 컨트롤 형식 및 컨트롤과 유사한 형식을 제공하는 프레젠테이션 플랫폼입니다. 사용할 컨트롤이나 파생시킬 컨트롤을 결정하려면 특정 컨트롤이 가장 잘 표시할 수 있는 개체 유형을 이해해야 합니다.  
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 주로 다양 한 유형의 콘텐츠를 표시 하는 하는 여러 컨트롤 형식 및 컨트롤과 유사한 형식을 제공 하는 프레젠테이션 플랫폼입니다. 사용할 컨트롤이나 파생시킬 컨트롤을 결정하려면 특정 컨트롤이 가장 잘 표시할 수 있는 개체 유형을 이해해야 합니다.  
   
  이 항목에서는 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 컨트롤 형식 및 컨트롤과 비슷한 형식에 대한 콘텐츠 모델을 요약하여 보여 줍니다. 콘텐츠 모델은 컨트롤에 사용될 수 있는 컨트롤에 대해 설명합니다. 또한 이 항목에서는 각 컨트롤 모델에 대한 콘텐츠 속성을 보여 줍니다. 콘텐츠 속성은 개체의 콘텐츠를 저장하는 데 사용되는 속성입니다.  
-  
- 
-  
+
 <a name="classes_that_contain_arbitrary_content"></a>   
 ## <a name="classes-that-contain-arbitrary-content"></a>임의의 콘텐츠가 들어 있는 클래스  
  일부 컨트롤 문자열 등 모든 형식의 개체를 포함할 수 있습니다는 <xref:System.DateTime> 개체 또는 <xref:System.Windows.UIElement> 추가 항목에 대 한 컨테이너입니다. 예를 들어, 한 <xref:System.Windows.Controls.Button> 이미지 및 일부 텍스트를 포함할 수 있습니다 또는 <xref:System.Windows.Controls.CheckBox> 의 값을 포함할 수 있습니다 <xref:System.DateTime.Now%2A?displayProperty=nameWithType>합니다.  
   
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]에는 임의의 콘텐츠가 들어 있는 네 개의 클래스가 있습니다. 다음 표에 클래스에서 상속 하는 <xref:System.Windows.Controls.Control>합니다.  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 에 임의의 콘텐츠를 포함할 수 있는 네 개의 클래스가 있습니다. 다음 표에 클래스에서 상속 하는 <xref:System.Windows.Controls.Control>합니다.  
   
 |임의의 콘텐츠가 들어 있는 클래스|콘텐츠|  
 |-------------------------------------------|-------------|  
@@ -217,7 +215,7 @@ ms.locfileid: "58816917"
   
 <a name="classes_that_provides_visual_feedback_about_a_uielement"></a>   
 ## <a name="classes-that-provide-visual-feedback-about-a-uielement"></a>UIElement에 대한 시각적 피드백을 제공하는 클래스  
- <xref:System.Windows.Documents.Adorner> 클래스는 사용자에 게 시각 신호를 제공 합니다. 예를 들어, 사용 하 여는 <xref:System.Windows.Documents.Adorner> 요소에 기능 핸들을 추가 하거나 컨트롤에 대 한 상태 정보를 제공 합니다. <xref:System.Windows.Documents.Adorner> 클래스는 사용자 고유의 표시기 (adorner)를 만들 수 있도록 프레임 워크를 제공 합니다. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]는 구현된 표시기를 제공하지 않습니다. 자세한 내용은 [표시기 개요](adorners-overview.md)를 참조하세요.  
+ <xref:System.Windows.Documents.Adorner> 클래스는 사용자에 게 시각 신호를 제공 합니다. 예를 들어, 사용 하 여는 <xref:System.Windows.Documents.Adorner> 요소에 기능 핸들을 추가 하거나 컨트롤에 대 한 상태 정보를 제공 합니다. <xref:System.Windows.Documents.Adorner> 클래스는 사용자 고유의 표시기 (adorner)를 만들 수 있도록 프레임 워크를 제공 합니다. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 구현된 된 표시기를 제공 하지 않습니다. 자세한 내용은 [표시기 개요](adorners-overview.md)를 참조하세요.  
   
 <a name="classes_that_enable_users_to_enter_text"></a>   
 ## <a name="classes-that-enable-users-to-enter-text"></a>사용자가 텍스트를 입력할 수 있는 클래스  
@@ -250,4 +248,5 @@ ms.locfileid: "58816917"
  <xref:System.Windows.Documents.TextElement> 및 관련된 클래스를 사용 하면 텍스트 형식을 지정 합니다. <xref:System.Windows.Documents.TextElement> 개체가 포함 되 고 텍스트 서식 지정 <xref:System.Windows.Controls.TextBlock> 고 <xref:System.Windows.Documents.FlowDocument> 개체입니다. 두 가지 기본 유형이 <xref:System.Windows.Documents.TextElement> 개체가 <xref:System.Windows.Documents.Block> 요소 및 <xref:System.Windows.Documents.Inline> 요소입니다. <xref:System.Windows.Documents.Block> 요소는 단락 또는 목록과 같은 텍스트 블록을 나타냅니다. <xref:System.Windows.Documents.Inline> 요소 블록에서 텍스트의 일부를 나타냅니다. 많은 <xref:System.Windows.Documents.Inline> 클래스 적용 되는 텍스트의 서식을 지정 합니다. 각 <xref:System.Windows.Documents.TextElement> 에 자체 콘텐츠 모델이 있습니다. 자세한 내용은 [TextElement 콘텐츠 모델 개요](../advanced/textelement-content-model-overview.md)를 참조하세요.  
   
 ## <a name="see-also"></a>참고자료
+
 - [고급](../advanced/index.md)

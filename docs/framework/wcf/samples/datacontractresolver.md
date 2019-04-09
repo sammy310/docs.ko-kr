@@ -2,12 +2,12 @@
 title: DataContractResolver
 ms.date: 03/30/2017
 ms.assetid: 6c200c02-bc14-4b8d-bbab-9da31185b805
-ms.openlocfilehash: ad5436a60b5cd82b44931713d863eaeed791e264
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a42bf12e6ee8275814898a0158348f56bfb2688e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54723981"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59112868"
 ---
 # <a name="datacontractresolver"></a>DataContractResolver
 이 샘플에서는 <xref:System.Runtime.Serialization.DataContractResolver> 클래스를 사용하여 serialization 및 deserialization 프로세스를 사용자 지정하는 방법을 보여 줍니다. 이 샘플에서는 DataContractResolver를 사용하여 serialization 및 deserialization 중에 xsi:type 표현에 대한 CLR 형식의 매핑 방법을 보여 줍니다.
@@ -166,4 +166,5 @@ class MyDataContractResolver : DataContractResolver
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Contract\Data\DataContractResolver`  
   
 ## <a name="see-also"></a>참고자료
+
 - [데이터 계약 확인자 사용](../../../../docs/framework/wcf/feature-details/using-a-data-contract-resolver.md)

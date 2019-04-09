@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Windows Communication Foundation, security
 - WCF, security
 ms.assetid: f478c80d-792d-4e7a-96bd-a2ff0b6f65f9
-ms.openlocfilehash: 12eafa006e65527a70245c4332a34eb55f7d8af0
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 94f1284e864bc63c321e004ac4a20843b191711d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54525263"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59136957"
 ---
 # <a name="security-overview"></a>보안 개요
 Windows Communication Foundation (WCF)는 SOAP 메시지 기반의 분산된 프로그래밍 플랫폼 이며 클라이언트와 서비스 간의 메시지 보안 데이터를 보호 하는 데 중요 합니다. WCF는 기존 보안 인프라와 SOAP 메시지에 대 한 보안 표준에 따라 보안 메시지를 교환 하기 위한 융통성과 상호 운용 가능한 플랫폼을 제공 합니다.  
@@ -89,7 +89,7 @@ Windows Communication Foundation (WCF)는 SOAP 메시지 기반의 분산된 프
   
  세 번째 보안 모드는 위 두 가지 모드를 모두 사용하며 두 모드의 이점을 모두 갖추고 있습니다. 이 모드를 `TransportWithMessageCredential`이라고 합니다. 이 모드에서는 클라이언트를 인증하는 데 메시지 보안을 사용하고 서버를 인증하고 메시지 기밀성과 무결성을 제공하는 데 전송 보안을 사용합니다. 이로 인해 `TransportWithMessageCredential` 보안 모드는 전송 보안 모드만큼 빠른 속도를 제공하면서 메시지 보안과 같은 방식으로 클라이언트 인증 확장성을 지원합니다. 반면 메시지 보안 모드와는 달리 완벽한 종단 간 보안은 제공하지 않습니다.  
   
-### <a name="access-control"></a>Access Control  
+### <a name="access-control"></a>액세스 제어  
  *액세스 제어* 권한 부여 라고도 합니다. *권한 부여* 사용자 마다 서로 다른 데이터 보기 권한을 부여할 수 있습니다. 예를 들어, 회사의 인사 관리 파일에는 중요한 직원 데이터가 들어 있기 때문에 관리자만 직원 데이터를 볼 수 있습니다. 또한 관리자는 자신이 관리하는 부하 직원에 대한 데이터만 볼 수 있습니다. 이 경우 액세스 제어는 역할("관리자")뿐 아니라 관리자의 특정 ID에 기반하므로 관리자는 다른 관리자의 직원 레코드를 볼 수 없습니다.  
   
  Wcf에서 액세스 제어 기능을 CLR (공용 언어 런타임)와 통합을 통해 제공 됩니다 <xref:System.Security.Permissions.PrincipalPermissionAttribute> 라고 하는 Api 집합을 통해 합니다 *id 모델*합니다. 액세스 제어 및 클레임 기반 권한 부여에 대 한 자세한 내용은 참조 하세요 [보안 확장](../../../../docs/framework/wcf/extending/extending-security.md)합니다.  
@@ -98,6 +98,7 @@ Windows Communication Foundation (WCF)는 SOAP 메시지 기반의 분산된 프
  *감사* Windows 이벤트 로그에 보안 이벤트의 로깅입니다. 인증 실패 또는 성공과 같은 보안 관련 이벤트를 기록할 수 있습니다. 자세한 내용은 [감사](../../../../docs/framework/wcf/feature-details/auditing-security-events.md)합니다. 프로그래밍 세부 정보를 참조 하세요. [방법: 보안 이벤트 감사](../../../../docs/framework/wcf/feature-details/how-to-audit-wcf-security-events.md)합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Security.Permissions.PrincipalPermissionAttribute>
 - [서비스에 보안 설정](../../../../docs/framework/wcf/securing-services.md)
 - [일반적인 보안 시나리오](../../../../docs/framework/wcf/feature-details/common-security-scenarios.md)
@@ -112,4 +113,4 @@ Windows Communication Foundation (WCF)는 SOAP 메시지 기반의 분산된 프
 - [시스템 제공 바인딩](../../../../docs/framework/wcf/system-provided-bindings.md)
 - [엔드포인트 만들기 개요](../../../../docs/framework/wcf/endpoint-creation-overview.md)
 - [보안 확장](../../../../docs/framework/wcf/extending/extending-security.md)
-- [Windows Server appfabric 보안 모델](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+- [Windows Server AppFabric 보안 모델](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

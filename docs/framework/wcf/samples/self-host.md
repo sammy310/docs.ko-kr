@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Self hosted service
 - Self Host Sample [Windows Communication Foundation]
 ms.assetid: 05e68661-1ddf-4abf-a899-9bb1b8272a5b
-ms.openlocfilehash: efcccb651ec838aa8d2173200c100ed89ddb50c6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9b3e2a7bea7a0749707416e0fce7be25cf00c99e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54618687"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59135755"
 ---
 # <a name="self-host"></a>자체 호스팅
 이 샘플에서는 콘솔 응용 프로그램에서 자체 호스팅 서비스를 구현하는 방법을 보여 줍니다. 이 샘플은 기반 합니다 [Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md)합니다. 서비스 구성 파일이 Web.config에서 App.config로 이름이 바뀌고 호스트에서 사용하는 기본 주소를 구성하도록 수정되었습니다. 서비스 소스 코드가 구성된 기본 주소를 제공하는 서비스 호스트를 만들고 여는 정적 `Main` 기능을 구현하도록 수정되었습니다. 서비스 구현이 각 작업에 대해 콘솔에 출력을 쓰도록 수정되었습니다. 클라이언트는 서비스의 올바른 엔드포인트 주소를 구성하기 위한 부분을 제외하고는 수정되지 않았습니다.  
@@ -76,4 +76,5 @@ public static void Main()
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\Hosting\SelfHost`  
   
 ## <a name="see-also"></a>참고자료
-- [AppFabric 호스팅 및 지 속성 샘플](https://go.microsoft.com/fwlink/?LinkId=193961)
+
+- [AppFabric 호스팅 및 지속성 샘플](https://go.microsoft.com/fwlink/?LinkId=193961)

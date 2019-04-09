@@ -14,12 +14,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9b49b63049d33c41757db1abae82ed2a4e266b42
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 62e4328b75a7f6fecc28cd620ec3ac18460316c5
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54572216"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59111139"
 ---
 # <a name="writeablemetadataupdatemode-enumeration"></a>WriteableMetadataUpdateMode 열거형
 [.NET Framework 4.5.2 이상 버전에서 지원됨]  
@@ -39,7 +39,7 @@ typedef enum WriteableMetadataUpdateMode {
   
 |멤버 이름|설명|  
 |-----------------|-----------------|  
-|`LegacyCompatPolicy`|메타데이터에 대한 메모리 내 업데이트를 표시할 때 .NET Framework 이전 버전과의 호환성을 유지합니다. 자세한 내용은 설명 부분을 참조하십시오.|  
+|`LegacyCompatPolicy`|메타데이터에 대한 메모리 내 업데이트를 표시할 때 .NET Framework 이전 버전과의 호환성을 유지합니다. 자세한 내용은 설명 부분을 참조하세요.|  
 |`AlwaysShowUpdates`|메타데이터에 대한 메모리 내 업데이트를 디버거에 표시합니다.|  
   
 ## <a name="remarks"></a>설명  
@@ -57,5 +57,6 @@ typedef enum WriteableMetadataUpdateMode {
  **.NET Framework 버전:** [!INCLUDE[net_current_v452plus](../../../../includes/net-current-v452plus-md.md)]  
   
 ## <a name="see-also"></a>참고자료
+
 - [디버깅 열거형](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
 - [SetWriteableMetadataUpdateMode 메서드](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess7-setwriteablemetadataupdatemode-method.md)
