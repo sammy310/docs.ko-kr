@@ -1,5 +1,5 @@
 ---
-title: '방법: Polyline 요소를 사용하여 다중선 그리기'
+title: '방법: Polyline 요소를 사용하여 폴리라인 그리기'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - connected lines [WPF]
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - lines [WPF], connected (see polylines)
 - drawing [WPF], polylines
 ms.assetid: 65db8935-d047-4295-87c4-b427ff3ad293
-ms.openlocfilehash: 35981f6d5a47ea5d5e024efe714b52103938eddf
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 4f55ecc206be0ef4947923047e796c36131c70ec
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57378182"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59114848"
 ---
-# <a name="how-to-draw-a-polyline-by-using-the-polyline-element"></a>방법: Polyline 요소를 사용하여 다중선 그리기
+# <a name="how-to-draw-a-polyline-by-using-the-polyline-element"></a>방법: Polyline 요소를 사용하여 폴리라인 그리기
 이 예제에서는 사용 하 여 일련의 연결 된 줄은 다중선 그리기를 <xref:System.Windows.Shapes.Polyline> 요소입니다.  
   
  다중선 그리기를 만들려면를 <xref:System.Windows.Shapes.Polyline> 요소 및 사용 하 여 해당 <xref:System.Windows.Shapes.Polyline.Points%2A> 셰이프 꼭 짓 점을 지정 하는 속성입니다. 마지막으로 사용 합니다 <xref:System.Windows.Shapes.Shape.Stroke%2A> 및 <xref:System.Windows.Shapes.Shape.StrokeThickness%2A> 스트로크 없는 줄에 표시 되지 않으므로 간략하게 설명 하는 다중선을 설명 하는 속성입니다.  
@@ -35,6 +35,7 @@ ms.locfileid: "57378182"
  이 예제는 더 큰 샘플;의 일부 전체 샘플을 참조 하세요 [도형 요소 샘플](https://go.microsoft.com/fwlink/?LinkID=160037)합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Windows.Shapes.Polyline>
 - <xref:System.Windows.Shapes.Polygon>
 - <xref:System.Windows.Shapes.Shape>

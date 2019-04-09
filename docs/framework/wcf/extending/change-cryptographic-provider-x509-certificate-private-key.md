@@ -1,5 +1,5 @@
 ---
-title: '방법: X.509 인증서의 개인 키에 대 한 암호화 공급자 변경'
+title: '방법: X.509 인증서의 개인 키에 대한 암호화 공급 기업 변경'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - cryptographic provider [WCF], changing
 - cryptographic provider [WCF]
 ms.assetid: b4254406-272e-4774-bd61-27e39bbb6c12
-ms.openlocfilehash: 4e11dd90d1cc57f3f2f559c22e1548b8fbcedaea
-ms.sourcegitcommit: af0a22a4eb11bbcd33baec49150d551955b50a16
+ms.openlocfilehash: 90e26154b4a0a006a4cbb114ec5ddd74a33fc762
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56261914"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59115195"
 ---
-# <a name="how-to-change-the-cryptographic-provider-for-an-x509-certificates-private-key"></a>방법: X.509 인증서의 개인 키에 대 한 암호화 공급자 변경
+# <a name="how-to-change-the-cryptographic-provider-for-an-x509-certificates-private-key"></a>방법: X.509 인증서의 개인 키에 대한 암호화 공급 기업 변경
 이 항목에서는 X.509 인증서의 개인 키를 제공 하는 데 암호화 공급자를 변경 하는 방법 및 Windows Communication Foundation (WCF) 보안 프레임 워크에 공급자를 통합 하는 방법을 보여 줍니다. 인증서를 사용 하는 방법에 대 한 자세한 내용은 참조 하세요. [Working with Certificates](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)합니다.  
   
  WCF 보안 프레임 워크에 설명 된 대로 새 보안 토큰 형식을 도입 하는 방법을 제공 [방법: 사용자 지정 토큰 만들기](../../../../docs/framework/wcf/extending/how-to-create-a-custom-token.md)합니다. 사용자 지정 토큰을 사용하여 시스템에서 제공되는 기존 형식을 대체할 수도 있습니다.  
@@ -77,6 +77,7 @@ ms.locfileid: "56261914"
      [!code-vb[c_CustomX509Token#7](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customx509token/vb/source.vb#7)]  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.IdentityModel.Tokens.X509AsymmetricSecurityKey>
 - <xref:System.IdentityModel.Tokens.AsymmetricSecurityKey>
 - <xref:System.IdentityModel.Tokens.SecurityKey>
@@ -85,5 +86,5 @@ ms.locfileid: "56261914"
 - <xref:System.Security.Cryptography.AsymmetricSignatureFormatter>
 - [연습: 사용자 지정 클라이언트 및 서비스 자격 증명 만들기](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md)
 - [방법: 사용자 지정 보안 토큰 인증자 만들기](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-authenticator.md)
-- [방법: 사용자 지정 보안 토큰 공급자 만들기](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-provider.md)
+- [방법: 사용자 지정 보안 토큰 공급 기업 만들기](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-provider.md)
 - [방법: 사용자 지정 토큰 만들기](../../../../docs/framework/wcf/extending/how-to-create-a-custom-token.md)

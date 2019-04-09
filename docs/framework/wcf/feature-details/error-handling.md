@@ -2,12 +2,12 @@
 title: 오류 처리
 ms.date: 03/30/2017
 ms.assetid: c948841a-7db9-40ae-9b78-587d216cbcaf
-ms.openlocfilehash: ddc3921fbb6b453db43ed3939134650395ade670
-ms.sourcegitcommit: af0a22a4eb11bbcd33baec49150d551955b50a16
+ms.openlocfilehash: da2ae3db0ff0432a49fcbf6de674bfb730be1286
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56261155"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59136437"
 ---
 # <a name="error-handling"></a>오류 처리
 ## <a name="error-handling-in-windows-communication-foundation"></a>Windows Communication Foundation의 오류 처리  
@@ -68,4 +68,5 @@ ms.locfileid: "56261155"
  오류 처리기를 설치하여 다른 디스패치 오류 유형과 동일한 방법으로 형식 변환 디스패치 오류를 검사할 수 있습니다. 서비스 수준 예외를 처리하기 위해 IErrorHandler 확장성 지점이 호출됩니다. 이때 호출자에게 전송될 응답을 선택하고 사용자 지정 작업 및 보고를 수행할 수 있습니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [기본 WCF 프로그래밍](../basic-wcf-programming.md)

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Windows Communication Foundation [WCF], get started
 - get started [WCF]
 ms.assetid: df939177-73cb-4440-bd95-092a421516a1
-ms.openlocfilehash: 66211cfcf2b742e43eccbefb2bc7c4bd1147b05b
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: d4613edefeb8db2c0d1e11e925f8ac41329efb0d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58408862"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59137932"
 ---
 # <a name="tutorial-get-started-with-windows-communication-foundation-applications"></a>자습서: Windows Communication Foundation 응용 프로그램 시작
 다음 일련의 자습서는 프로그래밍 환경의 Windows Communication Foundation (WCF)를 소개 합니다. 작업 순서에서이 자습서를 통해 WCF 응용 프로그램을 만드는 데 필요한 단계를 대략적으로 이해할을 표시 됩니다. 를 마친 후에 실행 중인 WCF 서비스 및 서비스를 호출 하는 WCF 클라이언트 해야 합니다. 
@@ -72,5 +72,3 @@ ms.locfileid: "58408862"
 - [Getting started 샘플](samples/getting-started-sample.md)
 - [Windows Communication Foundation 샘플](samples/index.md)
 - [자체 호스팅](samples/self-host.md)
-
-

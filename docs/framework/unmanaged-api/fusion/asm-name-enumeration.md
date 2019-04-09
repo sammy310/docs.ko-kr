@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 20bfe7794e1ac6259e5b70c2670801e4c7244520
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b37e9c2874448b5fff82f6a37f6ca850875f2b04
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54675343"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59112517"
 ---
 # <a name="asmname-enumeration"></a>ASM_NAME 열거형
 버전, 빌드, 문화권, 서명 및 속성을 검색 하거나 설정한을 어셈블리의 등등 나타냅니다 [IAssemblyName](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md) 메서드.  
@@ -74,5 +74,6 @@ typedef enum {
  **.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>참고자료
+
 - [IAssemblyName 인터페이스](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md)
 - [Fusion 열거형](../../../../docs/framework/unmanaged-api/fusion/fusion-enumerations.md)

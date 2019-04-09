@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 0d3da389-6b7b-40f6-a877-fac546d6019c
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 07932a12916138dd7cbee2576e4fc747898b8063
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: dd322d25d91bb277a4c817594c968c28a6d61d68
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54610848"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59136138"
 ---
 # <a name="exception-thrownv1-etw-event"></a>예외가 throw된 V1 ETW 이벤트
 이 이벤트는 throw된 예외에 대한 정보를 캡처합니다.  
@@ -21,7 +21,7 @@ ms.locfileid: "54610848"
   
 |이벤트를 발생시키기 위한 키워드|수준|  
 |-----------------------------------|-----------|  
-|`ExceptionKeyword`(0x8000)|경고(2)|  
+|`ExceptionKeyword` (0x8000)|경고(2)|  
   
  다음 표에서는 이벤트 정보를 보여 줍니다.  
   
@@ -41,4 +41,5 @@ ms.locfileid: "54610848"
 |ClrInstanceID|win:UInt16|CLR 또는 CoreCLR 인스턴스에 대한 고유 ID입니다.|  
   
 ## <a name="see-also"></a>참고자료
+
 - [CLR ETW 이벤트](../../../docs/framework/performance/clr-etw-events.md)

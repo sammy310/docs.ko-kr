@@ -2,12 +2,12 @@
 title: ADO.NET에서 Side-by-Side 실행
 ms.date: 03/30/2017
 ms.assetid: 9f9ba96d-9f89-4f65-bb2f-6860879f4393
-ms.openlocfilehash: 122cb33f4cca203f09104c5a40a1ad5d13326c57
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a8747d749ed7e751ba577a2cd29c2048065f2645
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54538637"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59136762"
 ---
 # <a name="side-by-side-execution-in-adonet"></a>ADO.NET에서 Side-by-Side 실행
 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]에서의 side-by-side 실행은 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]의 여러 버전이 설치되어 있는 컴퓨터에서 응용 프로그램을 컴파일한 버전만 사용하여 응용 프로그램을 실행하는 기능입니다. Side-by-side-실행을 구성 하는 방법에 대 한 자세한 내용은 참조 하세요. [Side-by-side-실행](../../../../docs/framework/deployment/side-by-side-execution.md)합니다.  
@@ -15,7 +15,7 @@ ms.locfileid: "54538637"
  [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]의 특정 버전을 사용하여 컴파일된 응용 프로그램을 다른 버전의 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]에서 실행할 수 있습니다. 그러나 설치되어 있는 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]의 버전별로 응용 프로그램 버전을 컴파일하여 개별적으로 실행하는 것이 좋습니다. 이 두 가지 방법 중 어떠한 방법으로 응용 프로그램을 실행 여부에 관계없이 모든 경우에 응용 프로그램의 다음 버전 또는 이전 버전과의 호환성에 영향을 줄 수 있는 릴리스 간의 [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] 변경 내용을 파악해야 합니다.  
   
 ## <a name="forward-compatibility-and-backward-compatibility"></a>다음 버전 및 이전 버전과의 호환성  
- 다음 버전과의 호환성은 응용 프로그램이 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]의 이전 버전에서 컴파일될 수 있지만 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]의 다음 버전에서도 올바르게 실행되는 것을 뜻합니다. [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] 버전 1.1용으로 작성된 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 코드는 이후 버전과 호환됩니다.  
+ 다음 버전과의 호환성은 응용 프로그램이 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]의 이전 버전에서 컴파일될 수 있지만 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]의 다음 버전에서도 올바르게 실행되는 것을 뜻합니다. [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] 용으로 작성 된 코드는 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 버전 1.1 이상 버전을 사용 하 여 더 높은 버전과 호환 됩니다.  
   
  이전 버전과의 호환성은 응용 프로그램이 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]의 새 버전용으로 컴파일되지만 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]의 이전 버전에서도 기능 손실 없이 실행되는 것을 뜻합니다. 물론 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]의 새 버전에 도입된 기능에는 해당되지 않습니다.  
   
@@ -65,6 +65,7 @@ SET NOCOUNT OFF;
 ```  
   
 ## <a name="see-also"></a>참고자료
+
 - [ADO.NET 개요](../../../../docs/framework/data/adonet/ado-net-overview.md)
 - [ADO.NET에서 데이터 검색 및 수정](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)
 - [ADO.NET 관리되는 공급자 및 데이터 집합 개발자 센터](https://go.microsoft.com/fwlink/?LinkId=217917)

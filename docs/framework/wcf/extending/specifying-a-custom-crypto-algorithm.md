@@ -2,17 +2,17 @@
 title: 사용자 지정 암호화 알고리즘 지정
 ms.date: 03/30/2017
 ms.assetid: d662a305-8e09-451d-9a59-b0f12b012f1d
-ms.openlocfilehash: 5c7bddb7e6e1696ea1cb4f8359e34a51a89fce40
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c92ce463f885e9784913b07eb11941ecd7d78d09
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54537688"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59113713"
 ---
 # <a name="specifying-a-custom-crypto-algorithm"></a>사용자 지정 암호화 알고리즘 지정
 WCF를 통해 데이터를 암호화하거나 디지털 서명을 연산화할 때 사용할 사용자 지정 암호화 알고리즘을 지정할 수 있습니다. 이렇게 하려면 다음 단계를 따릅니다.  
   
-1.  <xref:System.ServiceModel.Security.SecurityAlgorithmSuite>에서 클래스를 파생시킵니다.  
+1.  클래스 파생 <xref:System.ServiceModel.Security.SecurityAlgorithmSuite>  
   
 2.  알고리즘을 등록합니다.  
   
@@ -126,6 +126,7 @@ WSHttpBinding binding = new WSHttpBinding();
  전체 코드 예제를 참조 합니다 [WCF 보안의 암호화 Agility](../../../../docs/framework/wcf/samples/cryptographic-agility-in-wcf-security.md) 샘플입니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [서비스 및 클라이언트에 보안 설정](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
 - [서비스에 보안 설정](../../../../docs/framework/wcf/securing-services.md)
 - [보안 개요](../../../../docs/framework/wcf/feature-details/security-overview.md)

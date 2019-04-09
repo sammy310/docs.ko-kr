@@ -7,12 +7,12 @@ helpviewer_keywords:
 - sharing message loops [WPF]
 - interoperability [WPF], Win32
 ms.assetid: 39ee888c-e5ec-41c8-b11f-7b851a554442
-ms.openlocfilehash: 2de3c2eba534618f6bd6dee0b2c23758f9e15f3f
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 74055ec3facb7db9145c4c0e969d57da24eccbc8
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57378217"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59115078"
 ---
 # <a name="sharing-message-loops-between-win32-and-wpf"></a>Win32와 WPF 간에 메시지 루프 공유
 이 항목에서는 상호 운용성을 위한 메시지 루프를 구현 하는 방법을 설명 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)], 기존를 사용 하 여 메시지에 대 한 노출을 루프 <xref:System.Windows.Threading.Dispatcher> 또는에 별도 메시지 루프를 생성 하 여를 [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] 측의 상호 운용 코드입니다.  
@@ -62,6 +62,7 @@ ms.locfileid: "57378217"
  사용 하 여 해당 메시지에 대 한 후크를 추가한 경우 키보드 싱크를 이동 하는 메시지 HWND에 전송 되지 않을 수 있습니다는 <xref:System.Windows.Interop.HwndSource.AddHook%2A> 메서드. 메시지가 아니라 직접 전송할 메시지 펌프 수준에서 처리 될 수 있습니다는 `DispatchMessage` 함수입니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Windows.Interop.ComponentDispatcher>
 - <xref:System.Windows.Interop.IKeyboardInputSink>
 - [WPF 및 Win32 상호 운용성](wpf-and-win32-interoperation.md)
