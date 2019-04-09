@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 26ada5af-175c-4576-931a-9f07fa1723e9
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 663ceda1c0621e1152e795db79c3953be0090d5d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 88f23c2e03966bffccc9153e18e1b54e6847987d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54681796"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59127610"
 ---
 # <a name="bindingfailure-mda"></a>bindingFailure MDA
 `bindingFailure` MDA(관리 디버깅 도우미)는 어셈블리 로드에 실패할 때 활성화됩니다.  
@@ -48,7 +48,7 @@ ms.locfileid: "54681796"
   
 -   위의 확인에 따라 원인을 해결합니다. 가능한 해결 옵션은 다음과 같습니다.  
   
-    -   전역 어셈블리 캐시에 요청된 어셈블리를 설치하고 <xref:System.Reflection.Assembly.Load%2A> 메서드를 호출하여 ID로 어셈블리를 로드합니다.  
+    -   전역 어셈블리 캐시에 요청된 어셈블리를 설치하고 <xref:System.Reflection.Assembly.Load%2A> id로 어셈블리를 로드 하는 메서드.  
   
     -   요청된 어셈블리를 애플리케이션 디렉터리에 복사하고 <xref:System.Reflection.Assembly.Load%2A> 메서드를 호출하여 ID로 어셈블리를 로드합니다.  
   
@@ -99,4 +99,5 @@ namespace ConsoleApplication1
 ```  
   
 ## <a name="see-also"></a>참고자료
+
 - [관리 디버깅 도우미를 사용하여 오류 진단](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)

@@ -2,12 +2,12 @@
 title: <localIssuer>
 ms.date: 03/30/2017
 ms.assetid: 26bdd0df-0e7d-4b9e-bbeb-f28c53769385
-ms.openlocfilehash: 2ab90ec8982580a0a1efe1ed042ae7deff53819a
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 9a51387cd75d57a6828ecde1dcd788b056f7e27a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55256513"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59122878"
 ---
 # <a name="localissuer"></a>\<localIssuer>
 보안 토큰을 가져오는 데 사용할 로컬 발급자의 주소 및 바인딩을 지정합니다.  
@@ -35,7 +35,7 @@ endpointBehaviors 섹션
   
 |특성|설명|  
 |---------------|-----------------|  
-|address|필수 문자열입니다. 로컬 발급자의 URI를 지정합니다.|  
+|주소|필수 문자열입니다. 로컬 발급자의 URI를 지정합니다.|  
 |바인딩|선택적 문자열입니다. 시스템에서 제공한 바인딩 중 하나입니다. 목록에 대해서 [System-Provided Bindings](../../../../../docs/framework/wcf/system-provided-bindings.md)합니다.|  
 |bindingConfiguration|선택적 문자열입니다. 구성 파일에서 발견되는 바인딩 구성을 지정합니다.|  
   
@@ -78,6 +78,7 @@ endpointBehaviors 섹션
 ```  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.ServiceModel.Configuration.IssuedTokenClientElement.LocalIssuer%2A>
 - <xref:System.ServiceModel.Configuration.IssuedTokenParametersEndpointAddressElement>
 - <xref:System.ServiceModel.Security.IssuedTokenClientCredential>
@@ -88,5 +89,5 @@ endpointBehaviors 섹션
 - [페더레이션 및 발급된 토큰](../../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)
 - [서비스 및 클라이언트에 보안 설정](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
 - [클라이언트에 보안 설정](../../../../../docs/framework/wcf/securing-clients.md)
-- [방법: 페더레이션된 클라이언트 만들기](../../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)
+- [방법: 페더레이션 클라이언트 만들기](../../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)
 - [페더레이션 및 발급된 토큰](../../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)

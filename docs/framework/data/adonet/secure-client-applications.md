@@ -2,12 +2,12 @@
 title: 안전한 클라이언트 응용 프로그램
 ms.date: 03/30/2017
 ms.assetid: 6239592e-fa7d-4dea-9f00-d296d0048b01
-ms.openlocfilehash: c8efdf4c4baceb22ee60bdcf333ad1fec9ebd2d0
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
+ms.openlocfilehash: 0c14089247e916b91cb385c7d715cce54acee57c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56092711"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59119616"
 ---
 # <a name="secure-client-applications"></a>안전한 클라이언트 응용 프로그램
 일반적으로 응용 프로그램은 데이터 손실을 야기하거나 시스템을 손상시킬 수 있는 취약성으로부터 보호되어야 하는 다양한 부분으로 구성됩니다. 안전한 사용자 인터페이스를 만들면 공격자가 데이터나 시스템 리소스에 액세스하기 전에 이를 차단함으로써 여러 가지 문제를 예방할 수 있습니다.  
@@ -52,7 +52,7 @@ ms.locfileid: "56092711"
 |리소스|설명|  
 |--------------|-----------------|  
 |[ASP.NET 웹 사이트 보안](https://docs.microsoft.com/previous-versions/aspnet/91f66yxt(v=vs.100))|ASP.NET 응용 프로그램의 보안을 유지하는 방법을 설명합니다.|  
-|[ASP.NET을 사용 하 여 만든 XML Web Services 보안](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/w67h0dw7(v=vs.100))|ASP.NET 웹 서비스의 보안을 구현하는 방법을 설명합니다.|  
+|[ASP.NET을 사용하여 만든 XML Web services에 보안 설정](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/w67h0dw7(v=vs.100))|ASP.NET 웹 서비스의 보안을 구현하는 방법을 설명합니다.|  
 |[스크립트 악용 개요](https://docs.microsoft.com/previous-versions/aspnet/w1sw53ds(v=vs.100))|악의적인 문자를 웹 페이지에 삽입하려고 시도하는 스크립트 기반 공격을 차단하는 방법에 대해 설명합니다.|  
 |[웹 응용 프로그램에 대 한 기본 보안 사례](https://docs.microsoft.com/previous-versions/aspnet/zdh19h94(v=vs.100))|일반 보안 관련 정보와 추가 정보에 대한 링크를 제공합니다.|  
   
@@ -66,8 +66,9 @@ ms.locfileid: "56092711"
 |[보안 및 원격 서비스 고려 사항](../../../../docs/framework/misc/security-and-remoting-considerations.md)|보호되는 개체 및 응용 프로그램 도메인 간의 보안 문제에 대해 설명합니다.|  
   
 ## <a name="see-also"></a>참고자료
+
 - [ADO.NET 응용 프로그램 보안](../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
 - [데이터 액세스 전략에 대 한 권장 사항](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/8fxztkff(v=vs.90))
-- [응용 프로그램 보안](/visualstudio/ide/securing-applications)
+- [애플리케이션 보안](/visualstudio/ide/securing-applications)
 - [연결 정보 보호](../../../../docs/framework/data/adonet/protecting-connection-information.md)
 - [ADO.NET 관리되는 공급자 및 데이터 집합 개발자 센터](https://go.microsoft.com/fwlink/?LinkId=217917)

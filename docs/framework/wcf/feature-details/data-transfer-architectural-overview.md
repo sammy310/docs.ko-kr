@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - data transfer [WCF], architectural overview
 ms.assetid: 343c2ca2-af53-4936-a28c-c186b3524ee9
-ms.openlocfilehash: 217da219dc49c588a7f6bc8d32048553f179d67f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: bb903f6d182c7a8be915daf67a4df30475cfae62
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54528029"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59127460"
 ---
 # <a name="data-transfer-architectural-overview"></a>데이터 전송 아키텍처 개요
 Windows Communication Foundation (WCF) 메시징 인프라로 생각할 수 있습니다. WCF는 메시지를 받고, 처리하고, 추가 작업을 위해 사용자 코드로 디스패치하거나, 사용자 코드에서 제공된 데이터로부터 메시지를 생성하고 이 메시지를 대상에 전달할 수 있습니다. 고급 개발자를 대상으로 한 이 항목에서는 메시지 및 포함된 데이터를 처리하기 위한 아키텍처에 대해 설명합니다. 데이터를 주고 받는 방법을 보다 간단하게, 작업에 초점을 두고 설명하는 내용은 [Specifying Data Transfer in Service Contracts](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md)을 참조하십시오.  
@@ -81,8 +81,8 @@ Windows Communication Foundation (WCF) 메시징 인프라로 생각할 수 있�
 |------------------|--------------------------|--------------------------------------------------|-------------------------------------------------------|  
 |비스트리밍 프로그래밍 모델에서 만들어진 나가는 메시지|메시지 작성에 필요한 데이터(예: serialize하는 데 필요한 개체 및 <xref:System.Runtime.Serialization.DataContractSerializer> 인스턴스)*|저장된 데이터를 기반으로 메시지를 작성하는 사용자 지정 논리(예: `WriteObject`의 `DataContractSerializer` 호출. 단 이 serializer를 사용 중인 경우)*|`OnWriteBodyContents`를 호출하고, 결과를 버퍼링하고, 버퍼를 통해 XML 판독기를 반환|  
 |스트리밍된 프로그래밍 모델에서 만들어진 나가는 메시지|작성할 데이터가 포함된 `Stream`*|<xref:System.Xml.IStreamProvider> 메커니즘을 사용하여 저장된 스트림에서 가져온 데이터 작성*|`OnWriteBodyContents`를 호출하고, 결과를 버퍼링하고, 버퍼를 통해 XML 판독기를 반환|  
-|스트리밍 채널 스택에서 들어오는 메시지|네트워크를 통해 `Stream` 와 함께 들어오는 데이터를 나타내는 <xref:System.Xml.XmlReader> 개체|`XmlReader`를 사용하여 저장된 `WriteNode`로부터 콘텐츠 작성|저장된 `XmlReader`반환|  
-|스트리밍되지 않은 채널 스택에서 들어오는 메시지|`XmlReader` 와 함께 본문 데이터가 포함된 버퍼| `XmlReader` 를 사용하여 저장된 `WriteNode`로부터 콘텐츠를 작성합니다.|저장된 lang 반환|  
+|스트리밍 채널 스택에서 들어오는 메시지|네트워크를 통해 `Stream` 와 함께 들어오는 데이터를 나타내는 <xref:System.Xml.XmlReader> 개체|저장 된 콘텐츠를 작성 `XmlReader` 를 사용 하 여 `WriteNode`|저장된 된 반환 `XmlReader`|  
+|스트리밍되지 않은 채널 스택에서 들어오는 메시지|`XmlReader` 와 함께 본문 데이터가 포함된 버퍼|저장 된 콘텐츠를 작성 `XmlReader` 를 사용 하 여 `WriteNode`|저장된 lang 반환|  
   
  \* 이러한 항목에 직접 구현 되지 않습니다 `Message` 하위 클래스의 서브 클래스에는 <xref:System.ServiceModel.Channels.BodyWriter> 클래스입니다. 에 대 한 자세한 내용은 <xref:System.ServiceModel.Channels.BodyWriter>를 참조 하세요 [Using the Message Class](../../../../docs/framework/wcf/feature-details/using-the-message-class.md)합니다.  
   
@@ -135,7 +135,7 @@ Windows Communication Foundation (WCF) 메시징 인프라로 생각할 수 있�
   
  앞에서 설명한 대로 일부 예제만 제공하기 위해서도 다양한 동작이 있을 수 있습니다. 이러한 동작으로는 다양한 프로토콜을 통한 네트워크 패킷 주고받기, 데이터베이스의 메시지 읽기 또는 쓰기, 메시지 큐에서 메시지 대기시키기 또는 제거하기 등이 있습니다. 이러한 모든 작업 공통점이 점은: WCF 간의 변형이 필요`Message` 인스턴스는 실제 바이트 그룹과 보낼 수 있는, 수신, 읽기, 작성, 큐에 대기 또는 큐에서 제거 합니다. `Message` 를 바이트 그룹으로 변환하는 프로세스를 *인코딩*이라 하며, 바이트 그룹으로부터 `Message` 를 만드는 역 프로세스를 *디코딩*이라 합니다.  
   
- 대부분의 전송 채널은 *메시지 인코더* 라는 구성 요소를 사용하여 인코딩 및 디코딩 작업을 수행합니다. 메시지 인코더는 <xref:System.ServiceModel.Channels.MessageEncoder> 클래스의 서브클래스입니다. `MessageEncoder`는 다양한 `ReadMessage` 및 `WriteMessage` 메서드 오버로드를 포함하여 `Message`와 바이트 그룹 사이에서 변환합니다.  
+ 대부분의 전송 채널은 *메시지 인코더* 라는 구성 요소를 사용하여 인코딩 및 디코딩 작업을 수행합니다. 메시지 인코더는 <xref:System.ServiceModel.Channels.MessageEncoder> 클래스의 서브클래스입니다. `MessageEncoder` 다양 한 포함 `ReadMessage` 하 고 `WriteMessage` 메서드 오버 로드 간에 변환할 `Message` 와 바이트 그룹입니다.  
   
  보내는 쪽에서는 버퍼링 전송 채널이 상위 채널로부터 `Message` 개체를 받아서 `WriteMessage`로 전달합니다. 버퍼링 전송 채널은 바이트 배열을 다시 가져온 다음 이를 사용하여 해당 동작(예: 이러한 바이트를 유효한 TCP 패킷으로 패키지화하고 올바른 대상으로 이를 보냄)을 수행합니다. 스트리밍 전송 채널은 먼저 `Stream` 을 만든 다음(예: 나가는 TCP 연결을 통해), 메시지를 작성하는 적합한 `Stream` 오버로드로 보내기 위해 필요한 `Message` 과 `WriteMessage` 를 모두 전달합니다.  
   
@@ -268,9 +268,10 @@ Windows Communication Foundation (WCF) 메시징 인프라로 생각할 수 있�
   
  WCF 직렬화 및 역직렬화 매개 변수 및 메시지 파트에 대 한 "기본" 두 가지의 serialization 기술을 지원: 합니다 <xref:System.Runtime.Serialization.DataContractSerializer> 하며 `XmlSerializer`합니다. 그뿐 아니라 사용자 지정 serializer도 작성할 수 있습니다. 그러나 WCF의 다른 부분 (예: 제네릭 `GetBody` 메서드 또는 SOAP 오류 serialization)만 사용 하도록 제한 될 수 있습니다 합니다 <xref:System.Runtime.Serialization.XmlObjectSerializer> 서브 클래스 (<xref:System.Runtime.Serialization.DataContractSerializer> 및 <xref:System.Runtime.Serialization.NetDataContractSerializer>, 아닌는 <xref:System.Xml.Serialization.XmlSerializer>), 또는 사용 하도록 하드 코드 된 있을 수도 있습니다 <xref:System.Runtime.Serialization.DataContractSerializer>합니다.  
   
- `XmlSerializer` 는 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 웹 서비스에서 사용되는 serialization 엔진입니다. `DataContractSerializer` 는 새 데이터 계약 프로그래밍 모델을 이해하는 새 serialization 엔진입니다. `DataContractSerializer` 가 기본 선택되며, `XmlSerializer` 를 사용할지 여부는 <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior.DataContractFormatAttribute%2A> 특성을 사용하여 작업별로 지정할 수 있습니다.  
+ `XmlSerializer` 는 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 웹 서비스에서 사용되는 serialization 엔진입니다. `DataContractSerializer` 는 새 데이터 계약 프로그래밍 모델을 이해하는 새 serialization 엔진입니다. `DataContractSerializer` 기본 선택 되며 사용 하도록 선택 합니다 `XmlSerializer` 사용 하 여 작업 별로 만들 수 있습니다는 <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior.DataContractFormatAttribute%2A> 특성.  
   
- <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior> 및 <xref:System.ServiceModel.Description.XmlSerializerOperationBehavior> 는 `DataContractSerializer` 와 `XmlSerializer`각각에 대해 메시지 포맷터에서의 플러그 인을 담당하는 작업 동작입니다. <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior> 동작은 실제로 <xref:System.Runtime.Serialization.XmlObjectSerializer>를 비롯하여 <xref:System.Runtime.Serialization.NetDataContractSerializer> 에서 파생되는 모든 serializer와 함께 작동할 수 있습니다. 자세한 내용은 독립 실행형 Serialization 사용에 설명되어 있습니다. 해당 동작은 `CreateSerializer` 가상 메서드 오버로드 중 하나를 호출하여 serializer를 가져옵니다. 다른 serializer를 플러그 인하려면 새 <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior> 서브클래스를 만들고, 두 `CreateSerializer` 오버로드를 모두 재정의합니다.  
+ <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior> 및 <xref:System.ServiceModel.Description.XmlSerializerOperationBehavior> 는 작업 동작에 대해 메시지 포맷터에 연결 하는 일을 담당 합니다 `DataContractSerializer` 및 `XmlSerializer`, 각각. <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior> 동작은 실제로 <xref:System.Runtime.Serialization.XmlObjectSerializer>를 비롯하여 <xref:System.Runtime.Serialization.NetDataContractSerializer> 에서 파생되는 모든 serializer와 함께 작동할 수 있습니다. 자세한 내용은 독립 실행형 Serialization 사용에 설명되어 있습니다. 해당 동작은 `CreateSerializer` 가상 메서드 오버로드 중 하나를 호출하여 serializer를 가져옵니다. 다른 serializer를 플러그 인하려면 새 <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior> 서브클래스를 만들고, 두 `CreateSerializer` 오버로드를 모두 재정의합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [서비스 계약에서 데이터 전송 지정](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md)

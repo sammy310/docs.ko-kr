@@ -8,12 +8,12 @@ helpviewer_keywords:
 - impersonation [WCF]
 - delegation [WCF]
 ms.assetid: 110e60f7-5b03-4b69-b667-31721b8e3152
-ms.openlocfilehash: 86f7f485c289d1641605ab538f8500418b77cfd8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: ab3f1dd633193dcf88401d097d6835e6894aaa5a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54663312"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59122241"
 ---
 # <a name="delegation-and-impersonation-with-wcf"></a>WCF를 통한 위임 및 가장
 *가장* 은 서비스에서 서비스 도메인 리소스에 대한 클라이언트 액세스를 제한하는 데 사용하는 일반적인 기술 서비스입니다. 서비스 도메인 리소스는 로컬 파일(가장)과 같은 시스템 리소스이거나 파일 공유(위임)와 같은 다른 시스템의 리소스일 수 있습니다. 샘플 응용 프로그램을 보려면 [클라이언트 가장](../../../../docs/framework/wcf/samples/impersonating-the-client.md)을 참조하세요. 가장을 사용 하는 방법의 예제를 참조 하세요. [방법: 서비스에서 클라이언트 가장](../../../../docs/framework/wcf/how-to-impersonate-a-client-on-a-service.md)합니다.  
@@ -37,9 +37,9 @@ ms.locfileid: "54663312"
 ### <a name="cached-token-impersonation"></a>캐시된 토큰 가장  
  다음과 같은 바인딩을 통해 캐시된 토큰 가장을 수행할 수 있습니다.  
   
--   Windows 클라이언트 자격 증명이 있는<xref:System.ServiceModel.WSHttpBinding>, <xref:System.ServiceModel.WSDualHttpBinding>및 <xref:System.ServiceModel.NetTcpBinding>   
+-   <xref:System.ServiceModel.WSHttpBinding>하십시오 <xref:System.ServiceModel.WSDualHttpBinding>, 및 <xref:System.ServiceModel.NetTcpBinding> Windows 클라이언트 자격 증명을 사용 하 여 합니다.  
   
--   <xref:System.ServiceModel.BasicHttpBinding> 가 <xref:System.ServiceModel.BasicHttpSecurityMode> 자격 증명으로 설정된 <xref:System.ServiceModel.BasicHttpSecurityMode.TransportWithMessageCredential> 또는 서비스를 통해 올바른 Windows 계정으로 매핑할 수 있는 사용자 이름 자격 증명을 클라이언트에서 제공하는 기타 표준 바인딩  
+-   <xref:System.ServiceModel.BasicHttpBinding> 사용 하 여는 <xref:System.ServiceModel.BasicHttpSecurityMode> 로 설정 된 <xref:System.ServiceModel.BasicHttpSecurityMode.TransportWithMessageCredential> 자격 증명 또는 기타 클라이언트 서비스는 유효한 Windows 계정에 매핑할 수 있는 사용자 이름 자격 증명을 제공 하는 여기서 표준 바인딩.  
   
 -   <xref:System.ServiceModel.Channels.CustomBinding> 속성이 `requireCancellation`로 설정된 Windows 클라이언트 자격 증명을 사용하는 모든 `true`. 이 속성은 <xref:System.ServiceModel.Security.Tokens.SecureConversationSecurityTokenParameters>, <xref:System.ServiceModel.Security.Tokens.SslSecurityTokenParameters> 및 <xref:System.ServiceModel.Security.Tokens.SspiSecurityTokenParameters> 클래스에서 사용할 수 있습니다. 바인딩에 보안 대화가 사용되는 경우에도 `requireCancellation` 속성이 `true`로 설정되어야 합니다.  
   
@@ -48,7 +48,7 @@ ms.locfileid: "54663312"
 ### <a name="s4u-based-impersonation"></a>S4U 기반 가장  
  다음과 같은 바인딩을 통해 S4U 기반 가장을 수행할 수 있습니다.  
   
--   서비스를 통해 올바른Windows 계정으로 매핑될 수 있는 인증서 클라이언트 자격 증명을 가진<xref:System.ServiceModel.WSHttpBinding>, <xref:System.ServiceModel.WSDualHttpBinding>및 <xref:System.ServiceModel.NetTcpBinding>   
+-   <xref:System.ServiceModel.WSHttpBinding>를 <xref:System.ServiceModel.WSDualHttpBinding>, 및 <xref:System.ServiceModel.NetTcpBinding> 서비스 유효한 Windows 계정에 매핑할 수 있는 인증서 클라이언트 자격 증명을 사용 하 여 합니다.  
   
 -   <xref:System.ServiceModel.Channels.CustomBinding> 속성이 `requireCancellation` 로 설정된 Windows 클라이언트 자격 증명을 사용하는 `false`  
   
@@ -111,7 +111,7 @@ ms.locfileid: "54663312"
   
  다음 표에는 캐시된 토큰을 통해 가장할 때 서비스를 통해 가져오는 가장 수준이 지정되어 있습니다.  
   
-|`AllowedImpersonationLevel` 값|서비스의 `SeImpersonatePrivilege` 포함 여부|서비스와 클라이언트의 위임 가능 여부|캐시된 토큰 `ImpersonationLevel`|  
+|`AllowedImpersonationLevel` 값|서비스에 `SeImpersonatePrivilege`|서비스와 클라이언트의 위임 가능 여부|캐시 된 토큰 `ImpersonationLevel`|  
 |---------------------------------------|------------------------------------------|--------------------------------------------------|---------------------------------------|  
 |Anonymous|예|N/A|가장|  
 |Anonymous|아니요|해당 없음|ID|  
@@ -125,7 +125,7 @@ ms.locfileid: "54663312"
 ## <a name="impersonation-level-obtained-from-user-name-credentials-and-cached-token-impersonation"></a>사용자 이름 자격 증명 및 캐시된 토큰 가장에서 가져온 가장 수준  
  클라이언트 서비스에 해당 사용자 이름과 암호를 전달 하 여 WCF 설정에 해당 하는 해당 사용자로 로그온 할 수 있도록 합니다 `AllowedImpersonationLevel` 속성을 <xref:System.Security.Principal.TokenImpersonationLevel.Delegation>입니다. `AllowedImpersonationLevel`은 <xref:System.ServiceModel.Security.WindowsClientCredential> 및 <xref:System.ServiceModel.Security.HttpDigestClientCredential> 클래스에서 사용할 수 있습니다. 다음 표에는 서비스에서 사용자 이름 자격 증명을 받을 때 가져오는 가장 수준이 지정되어 있습니다.  
   
-|`AllowedImpersonationLevel`|서비스의 `SeImpersonatePrivilege`포함 여부|서비스와 클라이언트의 위임 가능 여부|캐시된 토큰 `ImpersonationLevel`|  
+|`AllowedImpersonationLevel`|서비스에 `SeImpersonatePrivilege`|서비스와 클라이언트의 위임 가능 여부|캐시 된 토큰 `ImpersonationLevel`|  
 |---------------------------------|------------------------------------------|--------------------------------------------------|---------------------------------------|  
 |N/A|예|예|위임|  
 |N/A|예|아니요|가장|  
@@ -133,7 +133,7 @@ ms.locfileid: "54663312"
   
 ## <a name="impersonation-level-obtained-from-s4u-based-impersonation"></a>S4U 기반 가장에서 가져온 가장 수준  
   
-|서비스의 `SeTcbPrivilege`포함 여부|서비스의 `SeImpersonatePrivilege`포함 여부|서비스와 클라이언트의 위임 가능 여부|캐시된 토큰 `ImpersonationLevel`|  
+|서비스에 `SeTcbPrivilege`|서비스에 `SeImpersonatePrivilege`|서비스와 클라이언트의 위임 가능 여부|캐시 된 토큰 `ImpersonationLevel`|  
 |----------------------------------|------------------------------------------|--------------------------------------------------|---------------------------------------|  
 |예|예|N/A|가장|  
 |예|아니요|해당 없음|ID|  
@@ -206,6 +206,7 @@ sh.Credentials.ClientCertificate.Authentication.MapClientCertificateToWindowsAcc
 -   [Kerberos Protocol Transition and Constrained Delegation](https://go.microsoft.com/fwlink/?LinkId=36725)  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.ServiceModel.OperationBehaviorAttribute>
 - <xref:System.ServiceModel.OperationBehaviorAttribute.Impersonation%2A>
 - <xref:System.ServiceModel.ImpersonationOption>
@@ -220,6 +221,6 @@ sh.Credentials.ClientCertificate.Authentication.MapClientCertificateToWindowsAcc
 - <xref:System.ServiceModel.ChannelFactory%601>
 - <xref:System.Security.Principal.TokenImpersonationLevel.Identification>
 - [전송 보안을 통해 가장 사용](../../../../docs/framework/wcf/feature-details/using-impersonation-with-transport-security.md)
-- [클라이언트 가장](../../../../docs/framework/wcf/samples/impersonating-the-client.md)
+- [Impersonating the Client](../../../../docs/framework/wcf/samples/impersonating-the-client.md)
 - [방법: 서비스에서 클라이언트 가장](../../../../docs/framework/wcf/how-to-impersonate-a-client-on-a-service.md)
 - [ServiceModel Metadata 유틸리티 도구(Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)

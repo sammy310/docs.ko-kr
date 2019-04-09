@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 1f9bcd9b-8f8f-47fa-8f1e-0d47236eb800
-ms.openlocfilehash: d9824d4fdb7ffe78da8a8abaf3bac53d5c2e7ec2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 1b8b344c713fdd27c67cf98c51c8c69198fd508f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54580150"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59127467"
 ---
 # <a name="how-to-access-a-wse-30-service-with-a-wcf-client"></a>방법: WSE 3.0 액세스 WCF 클라이언트를 사용 하 여 서비스
 Windows Communication Foundation (WCF) 클라이언트는 WCF 클라이언트가 2004 년 8 월 버전의 Ws-addressing 사양 사용 하도록 구성 된 하는 경우 Microsoft.NET 서비스용 유선 수준으로 호환 Web Services Enhancements (WSE) 3.0 사용 하 여 합니다. 그러나 WSE 3.0 서비스 지원 하지 않습니다 메타 데이터 교환 (MEX) 프로토콜은 지금 사용 하는 경우는 [ServiceModel Metadata 유틸리티 도구 (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) WCF 클라이언트 클래스를 만들려면 보안 설정이 적용 되지 않습니다는 생성 된 WCF 클라이언트입니다. 따라서 보안 설정을 지정 해야 합니다는 WSE 3.0 서비스에 WCF 클라이언트 생성 된 후 필요 합니다.  
@@ -59,9 +59,8 @@ Windows Communication Foundation (WCF) 클라이언트는 WCF 클라이언트가
   
 ## <a name="example"></a>예제  
  다음 코드 예제에서는 WSE 3.0 턴키 보안 어설션의 속성에 해당하는 속성을 노출하는 사용자 지정 바인딩을 정의합니다. 명명 된 해당 사용자 지정 바인딩을 `WseHttpBinding`, WSSecurityAnonymous WSE 3.0 QuickStart 샘플과 통신 하는 WCF 클라이언트에 대 한 바인딩 속성을 지정 하려면 사용 됩니다.  
-  
-  
-  
+
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.ServiceModel.Channels.Binding>
-- [WSE와의 상호 운용](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms752257%28v=vs.90%29)
+- [Interoperating with WSE](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms752257%28v=vs.90%29)

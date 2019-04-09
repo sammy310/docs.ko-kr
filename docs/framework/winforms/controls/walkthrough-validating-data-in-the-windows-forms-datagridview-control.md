@@ -1,5 +1,5 @@
 ---
-title: '연습: Windows Forms DataGridView 컨트롤의 데이터 유효성 검사'
+title: '연습: Windows Forms DataGridView 컨트롤에서 데이터 유효성 검사'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,14 +12,14 @@ helpviewer_keywords:
 - data validation [Windows Forms], Windows Forms
 - walkthroughs [Windows Forms], DataGridView control
 ms.assetid: a4f1d015-2969-430c-8ea2-b612d179c290
-ms.openlocfilehash: 6bb46a9bc54652d781d3421051b7d6e09fc91772
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: a9572bf469f539fdf52f414b2e0b6aa10f7ea288
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57710032"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59127350"
 ---
-# <a name="walkthrough-validating-data-in-the-windows-forms-datagridview-control"></a>연습: Windows Forms DataGridView 컨트롤의 데이터 유효성 검사
+# <a name="walkthrough-validating-data-in-the-windows-forms-datagridview-control"></a>연습: Windows Forms DataGridView 컨트롤에서 데이터 유효성 검사
 데이터 항목 기능을 사용자에 게 표시할 때 자주를 양식에 입력 된 데이터의 유효성을 검사 해야 합니다. <xref:System.Windows.Forms.DataGridView> 클래스는 데이터는 데이터 저장소에 커밋되기 전에 유효성 검사를 수행 하는 편리한 방법을 제공 합니다. 처리 하 여 데이터를 확인할 수 있습니다는 <xref:System.Windows.Forms.DataGridView.CellValidating> 이벤트에 의해 발생 하는 <xref:System.Windows.Forms.DataGridView> 현재 셀이 변경 되는 경우.  
   
  이 연습에서는 행을 검색 합니다는 `Customers` Northwind 샘플 데이터베이스의 테이블 및 표시를 <xref:System.Windows.Forms.DataGridView> 제어 합니다. 사용자가 셀을 편집 하는 경우는 `CompanyName` 열과 셀을 유지 하려고 합니다 <xref:System.Windows.Forms.DataGridView.CellValidating> 이벤트 처리기는 비어 있지 않습니다; 새 값이 빈 문자열인 경우 되도록 새 회사 이름 문자열을 검사는 <xref:System.Windows.Forms.DataGridView> 사용자의 커서를 방지 하는 비어 있지 않은 문자열이 입력 될 때까지 셀 나갈 수 없도록 합니다.  
@@ -89,9 +89,10 @@ ms.locfileid: "57710032"
 -   셀의 모양을 사용자 지정 합니다. 자세한 내용은 [방법: Windows Forms DataGridView 컨트롤에서 셀 모양 사용자 지정](customize-the-appearance-of-cells-in-the-datagrid.md) 고 [방법: Windows Forms DataGridView 컨트롤의 글꼴 및 색 스타일 설정](how-to-set-font-and-color-styles-in-the-windows-forms-datagridview-control.md)합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.BindingSource>
 - [Windows Forms DataGridView 컨트롤의 데이터 입력](data-entry-in-the-windows-forms-datagridview-control.md)
-- [방법: Windows Forms DataGridView 컨트롤의 데이터 유효성 검사](how-to-validate-data-in-the-windows-forms-datagridview-control.md)
-- [연습: Windows Forms DataGridView 컨트롤에서 데이터 입력 중에 발생 하는 오류 처리](handling-errors-that-occur-during-data-entry-in-the-datagrid.md)
+- [방법: Windows Forms DataGridView 컨트롤에서 데이터 유효성 검사](how-to-validate-data-in-the-windows-forms-datagridview-control.md)
+- [연습: Windows Forms DataGridView 컨트롤에서 데이터 입력 중에 발생하는 오류 처리](handling-errors-that-occur-during-data-entry-in-the-datagrid.md)
 - [연결 정보 보호](../../data/adonet/protecting-connection-information.md)

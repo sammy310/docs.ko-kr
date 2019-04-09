@@ -2,12 +2,12 @@
 title: null 허용 구조적 형식(Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: ae006fa9-997e-45bb-8a04-a7f62026171e
-ms.openlocfilehash: c4b0584283e179be2661e518d5bb350b536b058f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 632b092e1d0d99a2a40cc3cd4b323e234de6232b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54731766"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59127857"
 ---
 # <a name="nullable-structured-types-entity-sql"></a>null 허용 구조적 형식(Entity SQL)
 구조적 형식의 `null` 인스턴스는 존재하지 않는 인스턴스입니다. 이는 모든 속성에 `null` 값이 있는 기존 인스턴스와 다릅니다.  
@@ -89,4 +89,5 @@ ms.locfileid: "54731766"
     ```  
   
 ## <a name="see-also"></a>참고자료
+
 - [Entity SQL 개요](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)
