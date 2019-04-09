@@ -17,15 +17,16 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2b8afa78b324e68b345ee36513f6dda9ba042f29
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 446a66661f10f0292100951eb842110887c636a9
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54629191"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59110406"
 ---
-# <a name="icordebugeditandcontinueerrorinfogetmodule-method"></a><span data-ttu-id="e84e4-102">ICorDebugEditAndContinueErrorInfo::GetModule 메서드</span><span class="sxs-lookup"><span data-stu-id="e84e4-102">ICorDebugEditAndContinueErrorInfo::GetModule Method</span></span>
-<span data-ttu-id="e84e4-103">`GetModule`는 사용되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="e84e4-103">`GetModule` is obsolete.</span></span> <span data-ttu-id="e84e4-104">이 메서드를 호출 하지 마세요.</span><span class="sxs-lookup"><span data-stu-id="e84e4-104">Do not call this method.</span></span>  
+# <a name="icordebugeditandcontinueerrorinfogetmodule-method"></a><span data-ttu-id="32623-102">ICorDebugEditAndContinueErrorInfo::GetModule 메서드</span><span class="sxs-lookup"><span data-stu-id="32623-102">ICorDebugEditAndContinueErrorInfo::GetModule Method</span></span>
+`GetModule` <span data-ttu-id="32623-103">사용 되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="32623-103">is obsolete.</span></span> <span data-ttu-id="32623-104">이 메서드를 호출 하지 마세요.</span><span class="sxs-lookup"><span data-stu-id="32623-104">Do not call this method.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="e84e4-105">참고자료</span><span class="sxs-lookup"><span data-stu-id="e84e4-105">See also</span></span>
-- [<span data-ttu-id="e84e4-106">디버깅 인터페이스</span><span class="sxs-lookup"><span data-stu-id="e84e4-106">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+## <a name="see-also"></a><span data-ttu-id="32623-105">참고자료</span><span class="sxs-lookup"><span data-stu-id="32623-105">See also</span></span>
+
+- [<span data-ttu-id="32623-106">디버깅 인터페이스</span><span class="sxs-lookup"><span data-stu-id="32623-106">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
