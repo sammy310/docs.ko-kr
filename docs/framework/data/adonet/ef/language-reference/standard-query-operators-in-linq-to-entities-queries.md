@@ -2,12 +2,12 @@
 title: LINQ to Entities 쿼리에서 표준 쿼리 연산자
 ms.date: 08/21/2018
 ms.assetid: 7fa55a9b-6219-473d-b1e5-2884a32dcdff
-ms.openlocfilehash: 558ee35c433475bf3b2d5a3cdb4b24b612197c13
-ms.sourcegitcommit: c6f69b0cf149f6b54483a6d5c2ece222913f43ce
+ms.openlocfilehash: 5c666bad40d0e433ee5f8d2b1155e881d7042a85
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2019
-ms.locfileid: "55904650"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59118146"
 ---
 # <a name="standard-query-operators-in-linq-to-entities-queries"></a>LINQ to Entities 쿼리에서 표준 쿼리 연산자
 쿼리에는 데이터 소스에서 검색하려는 정보를 지정합니다. 또한 정보를 반환하기 전에 정보에 대한 정렬, 그룹화 및 구체화하는 방법을 쿼리에 지정할 수 있습니다. LINQ에서는 쿼리에서 사용할 수 있는 표준 쿼리 메서드 집합을 제공합니다. 이러한 메서드 중 대부분은 시퀀스;에서 작동 이 컨텍스트에서 시퀀스의 형식이 구현 하는 개체를 <xref:System.Collections.Generic.IEnumerable%601> 인터페이스 또는 <xref:System.Linq.IQueryable%601> 인터페이스입니다. 표준 쿼리 연산자 쿼리 기능에는 필터링, 프로젝션, 집계, 정렬, 그룹화, 페이징 등이 포함됩니다. 자주 사용되는 표준 쿼리 연산자 중 일부는 전용 키워드 구문이 있어서 쿼리 식 구문을 사용하여 호출할 수 있습니다. 쿼리 식은 메서드 기반 방법과는 다른, 가독성이 더 우수한 쿼리 표현 방법입니다. 쿼리 식 절은 컴파일 시간에 쿼리 메서드 호출로 변환됩니다. 동등한 쿼리 식 절이 있는 표준 쿼리 연산자의 목록은 참조 하세요. [표준 쿼리 연산자 개요](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/bb397896(v=vs.120))합니다.  
@@ -26,7 +26,7 @@ ms.locfileid: "55904650"
   
  <xref:System.Collections.Generic.IEqualityComparer%601>를 사용하는 메서드를 제외하고, 조인 메서드의 오버로드 중 대부분이 지원됩니다. 이는 비교자를 데이터 원본으로 변환할 수 없기 때문입니다.  
   
-## <a name="set-methods"></a>Set 메서드  
+## <a name="set-methods"></a>메서드 설정  
  LINQ의 Set 작업은 동일 컬렉션이나 다른 컬렉션(또는 집합)에 동등한 요소가 있는지 여부에 따라 결과 집합이 결정되는 쿼리 작업입니다. set 메서드는 `All`, `Any`, `Concat`, `Contains`, `DefaultIfEmpty`, `Distinct`, `EqualAll`, `Except`, `Intersect` 및 `Union`입니다.  
   
  set 메서드의 오버로드 중 대부분은 [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)]에서 지원되지만, LINQ to Objects와 비교하여 다소 동작의 차이가 있습니다. 그러나 <xref:System.Collections.Generic.IEqualityComparer%601>를 사용하는 set 메서드는 지원되지 않습니다. 이 비교자는 데이터 원본으로 변환될 수 없기 때문입니다.  
@@ -69,7 +69,7 @@ ms.locfileid: "55904650"
 ## <a name="type-methods"></a>형식 메서드  
  형식 변환과 테스트를 다루는 두 LINQ 메서드는 모두 Entity Framework의 컨텍스트에서 지원 됩니다. 이 지원 되는 형식만 형식은 적절 한 Entity Framework 형식에 매핑되는 것을 의미 합니다. 이러한 형식의 목록, 참조 [개념적 모델 형식 (CSDL)](/ef/ef6/modeling/designer/advanced/edmx/csdl-spec#conceptual-model-types-csdl)합니다. 형식 메서드는 `Convert` 및 `OfType`입니다.  
   
- `OfType`은 엔터티 형식에 대해 지원됩니다. `Convert`는 개념적 모델 기본 형식에 대해 지원됩니다.  C# `is` 및 `as` 메서드 역시 지원됩니다.  
+ `OfType` 엔터티 형식에 대해 지원 됩니다. `Convert` 개념적 모델 기본 형식에 지원 됩니다.  C# `is` 및 `as` 메서드 역시 지원됩니다.  
   
 ## <a name="paging-methods"></a>페이징 메서드  
  페이징 작업 시퀀스에서 단일 요소 또는 여러 요소를 반환합니다. 지원 되는 페이징 메서드는 `First`, `FirstOrDefault`, `Single`, `SingleOrDefault`합니다 `Skip`, 및 `Take`합니다.  
@@ -77,5 +77,6 @@ ms.locfileid: "55904650"
  중 데이터 원본 또는 데이터 원본에 집합이 암시적으로 정렬 되어 있지 않아 함수에 매핑할 수 없거나, 다양 한 페이징 메서드가 지원 되지 않습니다. 기본값을 반환하는 메서드는 null 기본값을 갖는 개념적 모델 기본 형식과 참조 형식으로 제한됩니다. 빈 시퀀스에서 페이징 메서드가 실행되면 null이 반환됩니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [지원 및 미지원 LINQ 메서드 (LINQ to Entities)](../../../../../../docs/framework/data/adonet/ef/language-reference/supported-and-unsupported-linq-methods-linq-to-entities.md)
 - [표준 쿼리 연산자 개요](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/bb397896(v=vs.120))

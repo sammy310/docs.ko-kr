@@ -2,12 +2,12 @@
 title: ORDER BY(Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: c0b61572-ecee-41eb-9d7f-74132ec8a26c
-ms.openlocfilehash: ac888a26f906d8439b51c9c56d966440d7a25b7c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3f5d3c9a65bd9ac412a908a3e850a7e01d2ee6cd
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54670201"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59116664"
 ---
 # <a name="order-by-entity-sql"></a>ORDER BY(Entity SQL)
 SELECT 문에서 반환되는 개체에 적용하는 정렬 순서를 지정합니다.  
@@ -125,6 +125,7 @@ SELECT C2.FirstName, C2.LastName
  [!code-csharp[DP EntityServices Concepts 2#ORDERBY](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#orderby)]  
   
 ## <a name="see-also"></a>참고자료
+
 - [쿼리 식](../../../../../../docs/framework/data/adonet/ef/language-reference/query-expressions-entity-sql.md)
 - [엔터티 SQL 참조](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
 - [SKIP](../../../../../../docs/framework/data/adonet/ef/language-reference/skip-entity-sql.md)

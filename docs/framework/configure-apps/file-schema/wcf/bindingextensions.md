@@ -2,17 +2,17 @@
 title: <bindingExtensions>
 ms.date: 03/30/2017
 ms.assetid: 8373f94d-d095-486f-8f1e-4ac2f72b58c7
-ms.openlocfilehash: 6eed4e8c549bccb06d8d425b084554a2ec7a1183
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: ed55701e45d8580e37cf4776de6b9c5241e0548c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55272762"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59113037"
 ---
 # <a name="bindingextensions"></a>\<bindingExtensions>
 이 섹션은 시스템 또는 응용 프로그램 구성 파일의 사용자 정의 바인딩을 사용할 수 있도록 합니다. `add` 키워드를 사용하고 요소의 `type` 특성을 사용자 정의 바인딩으로 설정하고 `name` 특성을 사용자 정의 바인딩의 이름으로 설정하여 사용자 정의 바인딩을 이 컬렉션에 추가할 수 있습니다.  
   
- 바인딩 확장을 사용하면 끝점 구성의 일부로 사용할 사용자 정의 바인딩을 만들 수 있습니다. 프로그래밍에서 바인딩 확장은 추상 클래스 <xref:System.ServiceModel.Channels.Binding>을 구현하는 형식입니다.  
+ 바인딩 확장을 사용하면 엔드포인트 구성의 일부로 사용할 사용자 정의 바인딩을 만들 수 있습니다. 프로그래밍에서 바인딩 확장은 추상 클래스 <xref:System.ServiceModel.Channels.Binding>을 구현하는 형식입니다.  
   
  다음 예제에서는 `add` 요소와 `name` 특성을 사용하여 구성 파일의 `bindingElementExtensions` 섹션에 바인딩 확장을 추가합니다.  
   
@@ -42,4 +42,5 @@ ms.locfileid: "55272762"
 ```  
   
 ## <a name="see-also"></a>참고자료
-- [바인딩 확장](../../../../../docs/framework/wcf/extending/extending-bindings.md)
+
+- [바인딩 확장명](../../../../../docs/framework/wcf/extending/extending-bindings.md)

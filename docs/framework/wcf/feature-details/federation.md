@@ -8,12 +8,12 @@ helpviewer_keywords:
 - WCF, federation
 - federation [WCF]
 ms.assetid: 2f1e646f-8361-48d4-9d5d-1b961f31ede4
-ms.openlocfilehash: f05d4a9348c12a29dc3cd7b93334ab1134eeb1a3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: af3e5c4c33936e809438019f1a8af823ffc3e52b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54709392"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59114044"
 ---
 # <a name="federation"></a>페더레이션
 이 항목에서는 페더레이션 보안의 개념에 대한 간략한 개요를 제공합니다. 또한 페더레이션된 보안 아키텍처를 배포 하는 것에 대 한 Windows Communication Foundation (WCF) 지원을 설명 합니다. 페더레이션을 설명 하는 샘플 응용 프로그램을 참조 하세요 [Federation 샘플](../../../../docs/framework/wcf/samples/federation-sample.md)합니다.  
@@ -290,4 +290,5 @@ operationRequirementType="FederationSample.MyServiceOperationRequirement, MyServ
  페더레이션 보안은 책임을 확실히 나누며, 안전하고 확장성 있는 서비스 아키텍처를 구축하는 데 도움이 됩니다. 빌드하고 분산된 응용 프로그램을 배포 하기 위한 플랫폼으로 WCF는 페더레이션된 보안을 구현 하는 것에 대 한 기본 지원을 제공 합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [보안](../../../../docs/framework/wcf/feature-details/security.md)
