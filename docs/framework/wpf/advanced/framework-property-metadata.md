@@ -5,18 +5,16 @@ helpviewer_keywords:
 - metadata [WPF], framework properties
 - framework property metadata [WPF]
 ms.assetid: 9962f380-b885-4b61-a62e-457397083fea
-ms.openlocfilehash: f313c17a278a7b51379c4da9389c01eedf4a1e62
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: b6bacf6f0c27b123d36f17510d84e5ef5e2cf122
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57379278"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59108708"
 ---
 # <a name="framework-property-metadata"></a>프레임워크 속성 메타데이터
 프레임워크 속성 메타데이터는 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 아키텍처의 WPF 프레임워크 수준에 있는 것으로 간주되는 개체 요소의 속성용으로 보고됩니다. 일반적으로 WPF 프레임워크 수준 지정에서는 렌더링, 데이터 바인딩 및 속성 시스템 미세 조정과 같은 기능이 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 프레젠테이션 [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] 및 실행 파일을 통해 처리됩니다. 이러한 시스템에서 프레임워크 속성 메타데이터를 쿼리하여 특정 요소 속성의 기능별 특성을 결정합니다.  
-  
- 
-  
+
 <a name="prerequisites"></a>   
 ## <a name="prerequisites"></a>필수 구성 요소  
  이 항목에서는 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 클래스에서 기존 종속성 속성의 소비자 관점에서 종속성 속성을 이해하고 [종속성 속성 개요](dependency-properties-overview.md)를 읽었다고 가정합니다. [종속성 속성 메타데이터](dependency-property-metadata.md)도 읽어야 합니다.  
@@ -73,6 +71,7 @@ ms.locfileid: "57379278"
  이 동작을 구현 하 여 <xref:System.Windows.FrameworkPropertyMetadata.Merge%2A>, 파생 된 메타 데이터 클래스에서 재정의할 수 있습니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Windows.DependencyProperty.GetMetadata%2A>
 - [종속성 속성 메타데이터](dependency-property-metadata.md)
 - [종속성 속성 개요](dependency-properties-overview.md)

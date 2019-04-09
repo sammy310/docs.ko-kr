@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Windows Forms, content assignments
 - WPF user control [Windows Forms], hosting in Windows Forms
 ms.assetid: b3e9ef93-7e0f-4a2f-8f1e-3437609a1eb7
-ms.openlocfilehash: 364cfe521a1e141bdfcfb3cfc47170714d010a87
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 781eaaabb7306018366450c013c227fe5a1fef78
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57707926"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59108682"
 ---
 # <a name="walkthrough-assigning-wpf-content-on-windows-forms-at-design-time"></a>연습: 디자인 타임에 Windows Forms에서 WPF 콘텐츠 할당
 이 연습에서는 폼에 표시할 WPF(Windows Presentation Foundation) 컨트롤 형식을 선택하는 방법을 보여 줍니다. 프로젝트에 포함된 모든 WPF 컨트롤 형식을 선택할 수 있습니다.
@@ -76,8 +76,7 @@ ms.locfileid: "57707926"
   
 2.  에 **도구 상자**를 두 번 클릭 `UserControl1` 의 인스턴스를 만드는 `UserControl1` 양식의 합니다.  
   
-     
-  `UserControl1` 인스턴스가 `elementHost1`이라는 새 <xref:System.Windows.Forms.Integration.ElementHost> 컨트롤에서 호스트됩니다.  
+     `UserControl1` 인스턴스가 `elementHost1`이라는 새 <xref:System.Windows.Forms.Integration.ElementHost> 컨트롤에서 호스트됩니다.  
   
 3.  에 대 한 스마트 태그 패널에서 `elementHost1`열고 합니다 **호스팅된 콘텐츠 선택** 드롭 다운 목록.  
   
@@ -98,6 +97,7 @@ ms.locfileid: "57707926"
 9. 이제 `elementHost2` 컨트롤이 `UserControl1` 형식의 인스턴스를 호스트합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Windows.Forms.Integration.ElementHost>
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost>
 - [마이그레이션 및 상호 운용성](../../wpf/advanced/migration-and-interoperability.md)

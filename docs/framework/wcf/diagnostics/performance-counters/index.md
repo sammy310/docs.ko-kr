@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - performance counters [WCF]
 ms.assetid: f559b2bd-ed83-4988-97a1-e88f06646609
-ms.openlocfilehash: c2bb9d2f67cfc0bf0a28492f77c16fdb39b07fe9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 31c5b386d707aa49cd36d536f1c8b419eb74a658
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54595242"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59087861"
 ---
 # <a name="wcf-performance-counters"></a>WCF 성능 카운터
 Windows Communication Foundation (WCF)에 다양 한 응용 프로그램의 성능을 측정할 수 있도록 성능 카운터가 포함 됩니다.  
@@ -91,7 +91,7 @@ config.Save();
 ServiceName@ServiceBaseAddress  
 ```  
   
- 서비스 범위 내의 카운터가 끝점 컬렉션 내의 카운터로부터 집계됩니다.  
+ 서비스 범위 내의 카운터가 엔드포인트 컬렉션 내의 카운터로부터 집계됩니다.  
   
  새 InstanceContext가 만들어지면 서비스 인스턴스 만들기에 대한 성능 카운터가 증가합니다. 기존 서비스에서 활성화 상태가 아닌 메시지를 받거나, 한 세션에서 인스턴스에 연결하고 세션을 끝낸 다음 다른 세션에서 다시 연결하는 경우에도 새 InstanceContext가 만들어집니다.  
   
@@ -104,7 +104,7 @@ ServiceName@ServiceBaseAddress
   
  데이터는 개별 작업을 위해 수집된 데이터와 비슷하지만 엔드포인트에서만 집계됩니다.  
   
- 끝점 범위 내의 카운터가 작업 컬렉션 내의 카운터로부터 집계됩니다.  
+ 엔드포인트 범위 내의 카운터가 작업 컬렉션 내의 카운터로부터 집계됩니다.  
   
 > [!NOTE]
 >  두 엔드포인트의 계약 이름과 주소가 동일한 경우 두 엔드포인트는 동일한 카운터 인스턴스에 매핑됩니다.  
@@ -118,7 +118,7 @@ ServiceName@ServiceBaseAddress
   
  이 카운터를 사용하면 호출이 사용되는 방법과 작업 진행 상태를 측정할 수 있습니다.  
   
- 카운터가 여러 범위에 표시될 때 상위 범위에서 수집된 데이터가 하위 범위의 데이터와 결합됩니다. 예를 들어, 끝점의 `Calls`는 끝점에 있는 모든 작업 호출의 합계를 나타내고 서비스의 `Calls`는 서비스에 있는 모든 끝점에 대한 모든 호출 합계를 나타냅니다.  
+ 카운터가 여러 범위에 표시될 때 상위 범위에서 수집된 데이터가 하위 범위의 데이터와 결합됩니다. 예를 들어, 엔드포인트의 `Calls`는 엔드포인트에 있는 모든 작업 호출의 합계를 나타내고 서비스의 `Calls`는 서비스에 있는 모든 엔드포인트에 대한 모든 호출 합계를 나타냅니다.  
   
 > [!NOTE]
 >  계약에 중복 작업 이름이 있는 경우 두 작업에 대해 카운터 인스턴스를 하나만 가져옵니다.  
@@ -139,4 +139,5 @@ ServiceName@ServiceBaseAddress
  카운터를 프로그래밍 방식으로 액세스 하는 방법에 대 한 자세한 내용은 참조 하세요. [성능 카운터 프로그래밍 아키텍처](https://go.microsoft.com/fwlink/?LinkId=95179)합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [관리 및 진단](../../../../../docs/framework/wcf/diagnostics/index.md)

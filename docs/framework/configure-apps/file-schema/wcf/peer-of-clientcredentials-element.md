@@ -2,12 +2,12 @@
 title: <peer> <clientCredentials> 요소
 ms.date: 03/30/2017
 ms.assetid: 505bd987-0042-4622-b68e-94f439729d53
-ms.openlocfilehash: 8bdb52ccaaa8b41b3321447d2d68f9021a093481
-ms.sourcegitcommit: 01ea420eaa4bf76d5fc47673294c8881379b3369
+ms.openlocfilehash: 7074ee992755557d7e5503035c89bdbefd678792
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/06/2019
-ms.locfileid: "55758354"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59107239"
 ---
 # <a name="peer-of-clientcredentials-element"></a>\<피어 >의 \<clientCredentials > 요소
 피어 투 피어 클라이언트를 인증할 때 사용하는 자격 증명을 지정합니다.  
@@ -53,6 +53,7 @@ ms.locfileid: "55758354"
  이 구성 요소는 피어 노드가 메시에서 다른 노드로부터 인증을 얻는 데 사용하는 자격 증명과 피어 노드가 다른 피어 노드를 인증하는 데 사용하는 인증 설정을 지정합니다. 자세한 내용은 [피어 채널 메시지 인증](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/aa967730(v=vs.90)) 하 고 [피어 채널 응용 프로그램 보안](../../../../../docs/framework/wcf/feature-details/securing-peer-channel-applications.md)합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.ServiceModel.Configuration.ClientCredentialsElement>
 - <xref:System.ServiceModel.Description.ClientCredentials>
 - <xref:System.ServiceModel.Configuration.PeerCredentialElement>
@@ -62,7 +63,7 @@ ms.locfileid: "55758354"
 - <xref:System.ServiceModel.Security.PeerCredential>
 - [피어 투 피어 네트워킹](../../../../../docs/framework/wcf/feature-details/peer-to-peer-networking.md)
 - [클라이언트에 보안 설정](../../../../../docs/framework/wcf/securing-clients.md)
-- [피어 채널 메시지 인증](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/aa967730(v=vs.90))
-- [피어 채널 사용자 지정 인증](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751447(v=vs.90))
-- [피어 채널 애플리케이션 보안](../../../../../docs/framework/wcf/feature-details/securing-peer-channel-applications.md)
+- [Peer Channel Message Authentication](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/aa967730(v=vs.90))
+- [Peer Channel Custom Authentication](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751447(v=vs.90))
+- [피어 채널 응용 프로그램 보안](../../../../../docs/framework/wcf/feature-details/securing-peer-channel-applications.md)
 - [서비스 및 클라이언트에 보안 설정](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)

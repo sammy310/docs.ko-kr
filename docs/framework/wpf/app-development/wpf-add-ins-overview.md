@@ -12,18 +12,16 @@ helpviewer_keywords:
 - add-ins [WPF], architecture
 - add-ins [WPF], limitations
 ms.assetid: 00b4c776-29a8-4dba-b603-280a0cdc2ade
-ms.openlocfilehash: 859e586d6cb0b334a7ad766de5d3aabb0e1864ac
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 36cfcaca5ae49c87916f6d7c769c878c4321247f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57365843"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59091618"
 ---
 # <a name="wpf-add-ins-overview"></a>WPF 추가 기능 개요
 <a name="Introduction"></a> .NET Framework 개발자가 추가 기능 확장성을 지 원하는 응용 프로그램을 만드는 데 사용할 추가 모델을 포함 합니다. 이 추가 기능 모델을 사용하면 애플리케이션 기능과 통합하고 이 기능을 확장하는 추가 기능을 만들 수 있습니다. 일부 시나리오에서는 응용 프로그램 에서도 추가 기능을 통해 제공 되는 사용자 인터페이스를 표시 해야 합니다. 이 항목에서는 WPF 이러한 시나리오, 해당 이점 및 제한 사항 기반이 되는 아키텍처를 사용 하도록 설정 하려면.NET Framework 추가 기능에서 모델을 보강 하는 방법을 보여 줍니다.  
-  
 
-  
 <a name="Requirements"></a>   
 ## <a name="prerequisites"></a>전제 조건  
  .NET Framework 추가 기능 모델을 사용 하 여 친근 함이 필요 합니다. 자세한 내용은 [추가 기능 및 확장성](/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100))을 참조하세요.  
@@ -167,7 +165,7 @@ ms.locfileid: "57365843"
  이러한 작업은 다음 하위 섹션에 자세히 설명되어 있습니다.  
   
 ### <a name="configuring-the-pipeline-and-add-in-for-clickonce-deployment"></a>ClickOnce 배포를 위한 파이프라인 및 추가 기능 구성  
- [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)]는 [!INCLUDE[TLA2#tla_clickonce](../../../../includes/tla2sharptla-clickonce-md.md)] 배포 캐시의 안전한 폴더로 다운로드되고 이 폴더에서 실행됩니다. [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)]가 추가 기능을 호스트하려면 파이프라인과 추가 기능 어셈블리도 안전한 폴더에 다운로드해야 합니다. 이 작업을 수행하려면 다운로드할 파이프라인과 추가 기능 어셈블리를 모두 포함하도록 애플리케이션 매니페스트를 구성해야 합니다. [!INCLUDE[TLA2#tla_visualstu](../../../../includes/tla2sharptla-visualstu-md.md)]에서 파이프라인 어셈블리를 검색하려면 파이프라인과 추가 기능 어셈블리가 호스트 [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] 프로젝트의 루트 폴더에 있어야 하지만, 이 작업은 [!INCLUDE[TLA2#tla_visualstu](../../../../includes/tla2sharptla-visualstu-md.md)]에서 가장 쉽게 수행됩니다.  
+ [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] 다운로드 되 고 안전한 폴더에서 실행 되는 [!INCLUDE[TLA2#tla_clickonce](../../../../includes/tla2sharptla-clickonce-md.md)] 배포 캐시 합니다. [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)]가 추가 기능을 호스트하려면 파이프라인과 추가 기능 어셈블리도 안전한 폴더에 다운로드해야 합니다. 이 작업을 수행하려면 다운로드할 파이프라인과 추가 기능 어셈블리를 모두 포함하도록 애플리케이션 매니페스트를 구성해야 합니다. [!INCLUDE[TLA2#tla_visualstu](../../../../includes/tla2sharptla-visualstu-md.md)]에서 파이프라인 어셈블리를 검색하려면 파이프라인과 추가 기능 어셈블리가 호스트 [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] 프로젝트의 루트 폴더에 있어야 하지만, 이 작업은 [!INCLUDE[TLA2#tla_visualstu](../../../../includes/tla2sharptla-visualstu-md.md)]에서 가장 쉽게 수행됩니다.  
   
  결과적으로 첫 번째 단계에서는 각 파이프라인 어셈블리의 빌드 출력과 추가 기능 어셈블리 프로젝트를 설정하여 [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] 프로젝트의 루트에 파이프라인 및 추가 기능 어셈블리를 빌드합니다. 다음 표에서는 호스트 [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] 프로젝트와 동일한 솔루션 및 루트 폴더에 있는 파이프라인 어셈블리 프로젝트와 추가 기능 어셈블리 프로젝트의 빌드 출력 경로를 보여줍니다.  
   
@@ -283,9 +281,10 @@ ms.locfileid: "57365843"
  기본적으로 여러 응용 프로그램 도메인을 사용 하는 경우 각 응용 프로그램에 필요한 다양 한.NET Framework 어셈블리는 모든 도메인에 로드 해당 응용 프로그램. 결과적으로 새 애플리케이션 도메인을 만들고 이 도메인의 애플리케이션을 시작하는 데 필요한 시간이 성능에 영향을 미칠 수 있습니다. 그러나.NET Framework 응용 프로그램을 이미 로드 된 경우 응용 프로그램 도메인 간에 어셈블리를 공유 하도록 지시 하 여 시작 시간을 줄일 수 있는 방법을 제공 합니다. 사용 하 여이 작업을 수행 합니다 <xref:System.LoaderOptimizationAttribute> 진입점 메서드를 적용 해야 하는 특성 (`Main`). 이 경우, 애플리케이션 정의를 구현하는 코드만 사용해야 합니다([애플리케이션 관리 개요](application-management-overview.md) 참조).  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.LoaderOptimizationAttribute>
 - [추가 기능 및 확장성](/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100))
 - [응용 프로그램 도메인](../../app-domains/application-domains.md)
-- [.NET framework Remoting 개요](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/kwdt6w2k(v=vs.100))
-- [개체 사용 가능](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/wcf3swha(v=vs.100))
+- [.NET Framework Remoting 개요](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/kwdt6w2k(v=vs.100))
+- [개체를 원격으로 사용 가능하도록 설정](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/wcf3swha(v=vs.100))
 - [방법 항목](how-to-topics.md)

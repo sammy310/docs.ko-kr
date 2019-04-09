@@ -11,12 +11,12 @@ helpviewer_keywords:
 - ListView control [Windows Forms], adding search capabilities
 - searching [Windows Forms], adding search capabilities to ListView control
 ms.assetid: 557782d9-b705-4bab-b496-9938afddac82
-ms.openlocfilehash: c25349d4ab981d422ade93944f709c3068a7aba9
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: c1c59c3d4bb5d0d35103371575ebdd49d3559bbe
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57722370"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59108552"
 ---
 # <a name="how-to-add-search-capabilities-to-a-listview-control"></a>방법: ListView 컨트롤에 검색 기능 추가
 에 있는 항목의 큰 목록으로 작업 하는 경우에 종종는 <xref:System.Windows.Forms.ListView> 사용자에 게 검색 기능을 제공 하려는 컨트롤입니다. <xref:System.Windows.Forms.ListView> 두 가지 방법으로이 기능을 제공 하는 컨트롤: 텍스트 일치 및 위치를 검색 합니다.  
@@ -48,9 +48,10 @@ ms.locfileid: "57722370"
  [!code-vb[System.Windows.Forms.ListViewFindItems#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ListViewFindItems/VB/form1.vb#2)]  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Windows.Forms.ListView>
 - <xref:System.Windows.Forms.ListView.FindItemWithText%2A>
 - <xref:System.Windows.Forms.ListView.FindNearestItem%2A>
 - [ListView 컨트롤](listview-control-windows-forms.md)
 - [ListView 컨트롤 개요](listview-control-overview-windows-forms.md)
-- [방법: Windows Forms ListView 컨트롤을 사용 하 여 항목 추가 및 제거](how-to-add-and-remove-items-with-the-windows-forms-listview-control.md)
+- [방법: Windows Forms ListView 컨트롤을 사용하여 항목 추가 및 제거](how-to-add-and-remove-items-with-the-windows-forms-listview-control.md)

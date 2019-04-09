@@ -1,5 +1,5 @@
 ---
-title: '방법: ControlTemplate에서 생성 된 요소 찾기'
+title: '방법: ControlTemplate에서 생성된 요소 찾기'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - ControlTemplates [WPF], finding elements
 - finding ControlTemplate elements [WPF]
 ms.assetid: d7b25447-ceff-4bb4-9be5-fd7c40ef00af
-ms.openlocfilehash: 9a6609d70a6b863f16533aac81ffce4daf171bcf
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 426f6c93433711ac72fe67eff2ee3006aa4d9166
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57364504"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59092130"
 ---
-# <a name="how-to-find-controltemplate-generated-elements"></a>방법: ControlTemplate에서 생성 된 요소 찾기
+# <a name="how-to-find-controltemplate-generated-elements"></a>방법: ControlTemplate에서 생성된 요소 찾기
 이 예제에 의해 생성 된 요소를 찾는 방법을 보여 줍니다는 <xref:System.Windows.Controls.ControlTemplate>합니다.  
   
 ## <a name="example"></a>예제  
@@ -29,6 +29,7 @@ ms.locfileid: "57364504"
  [!code-vb[FindGeneratedItems#CTFindElement](~/samples/snippets/visualbasic/VS_Snippets_Wpf/FindGeneratedItems/VisualBasic/Window1.xaml.vb#ctfindelement)]  
   
 ## <a name="see-also"></a>참고자료
+
 - [DataTemplate에서 생성된 요소 찾기](../data/how-to-find-datatemplate-generated-elements.md)
 - [스타일 지정 및 템플릿](styling-and-templating.md)
 - [WPF XAML 이름 범위](../advanced/wpf-xaml-namescopes.md)

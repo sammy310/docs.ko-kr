@@ -2,12 +2,12 @@
 title: 마이그레이션 고려 사항(Entity Framework)
 ms.date: 03/30/2017
 ms.assetid: c85b6fe8-cc32-4642-8f0a-dc0e5a695936
-ms.openlocfilehash: d783bc79585740710e663d26ecd4110f64882b44
-ms.sourcegitcommit: c6f69b0cf149f6b54483a6d5c2ece222913f43ce
+ms.openlocfilehash: 359e373476398bb26f06eb86eb13296ab05d2705
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2019
-ms.locfileid: "55903902"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59089889"
 ---
 # <a name="migration-considerations-entity-framework"></a>마이그레이션 고려 사항(Entity Framework)
 [!INCLUDE[vstecado](../../../../../includes/vstecado-md.md)] Entity Framework를 사용하면 기존 응용 프로그램보다 몇 가지 이점이 있습니다. 가장 중요한 이점 중 하나는 개념적 모델을 사용하여 응용 프로그램에서 사용되는 데이터 구조를 데이터 소스의 스키마와 구분할 수 있다는 것입니다. 이렇게 하면 응용 프로그램을 적절하게 변경하지 않아도 나중에 저장소 모델이나 데이터 소스 자체를 쉽게 변경할 수 있습니다. 사용 하는 이점에 대 한 자세한 내용은 합니다 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]를 참조 하세요 [Entity Framework 개요](../../../../../docs/framework/data/adonet/ef/overview.md) 및 [엔터티 데이터 모델](../../../../../docs/framework/data/adonet/entity-data-model.md)합니다.  
@@ -79,7 +79,7 @@ ms.locfileid: "55903902"
   
   자세한 내용은 [컨트롤에 개체 바인딩](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738469(v=vs.100))합니다.  
   
-- [!INCLUDE[vstecasp](../../../../../includes/vstecasp-md.md)] 데이터 소스 컨트롤  
+- [!INCLUDE[vstecasp](../../../../../includes/vstecasp-md.md)] 데이터 소스 컨트롤입니다.  
 
   합니다 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] 의 데이터 바인딩 간소화 하도록 설계 된 데이터 소스 컨트롤 포함 [!INCLUDE[vstecasp](../../../../../includes/vstecasp-md.md)] 웹 응용 프로그램입니다. 자세한 내용은 [EntityDataSource 웹 서버 컨트롤 개요](https://docs.microsoft.com/previous-versions/aspnet/cc488502(v=vs.100))합니다.  
   
@@ -88,7 +88,7 @@ ms.locfileid: "55903902"
   
 - 데이터 서비스를 노출하는 응용 프로그램  
 
-  WCF(Windows Communication Foundation)를 기반으로 하는 웹 서비스와 응용 프로그램은 XML 요청/응답 메시징 형식을 사용하여 기본 데이터 소스의 데이터를 노출합니다. [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]에서는 이진, XML 또는 WCF 데이터 계약 serialization을 사용하여 엔터티 개체의 serialization을 지원합니다. 이진 및 WCF serialization은 모두 개체 그래프의 전체 serialization을 지원합니다. 자세한 내용은 [N 계층 애플리케이션 빌드](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896304(v=vs.100))합니다.  
+  WCF(Windows Communication Foundation)를 기반으로 하는 웹 서비스와 응용 프로그램은 XML 요청/응답 메시징 형식을 사용하여 기본 데이터 소스의 데이터를 노출합니다. [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]에서는 이진, XML 또는 WCF 데이터 계약 serialization을 사용하여 엔터티 개체의 serialization을 지원합니다. 이진 및 WCF serialization은 모두 개체 그래프의 전체 serialization을 지원합니다. 자세한 내용은 [N 계층 응용 프로그램 빌드](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896304(v=vs.100))합니다.  
   
 - XML 데이터를 사용하는 응용 프로그램  
 
@@ -103,5 +103,6 @@ ms.locfileid: "55903902"
   [!INCLUDE[vstecasp](../../../../../includes/vstecasp-md.md)] 웹 응용 프로그램에서 웹 페이지 또는 사용자 세션의 상태를 유지 자주 해야 합니다. 개체는 <xref:System.Data.Objects.ObjectContext> 인스턴스 클라이언트 보기 상태나 또는 서버에서 세션 상태를 저장 하 고 나중에 검색 및 수 새 개체 컨텍스트에 다시 연결 합니다. 자세한 내용은 [연결 및 분리 개체](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896271(v=vs.100))합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [배포 고려 사항](../../../../../docs/framework/data/adonet/ef/deployment-considerations.md)
 - [Entity Framework 용어](../../../../../docs/framework/data/adonet/ef/terminology.md)

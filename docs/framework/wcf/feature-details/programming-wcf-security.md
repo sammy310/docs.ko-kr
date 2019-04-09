@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - message security [WCF], programming overview
 ms.assetid: 739ec222-4eda-4cc9-a470-67e64a7a3f10
-ms.openlocfilehash: 2b49031b0001ddba01a888806206360c1cbdbacb
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 41157d12f1133878e133895ed0f803bc7018af51
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54699469"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59087809"
 ---
 # <a name="programming-wcf-security"></a>WCF 보안 프로그래밍
 이 항목에서는 보안 Windows Communication Foundation (WCF) 응용 프로그램을 만드는 데 기본 프로그래밍 작업을 설명 합니다. 이 항목에서는 인증, 기밀성 및 무결성을 통틀어 *전송 보안*합니다. 이 항목에서는 권한 부여 (리소스 또는 서비스에 대 한 액세스 제어);를 다루지 않습니다. 권한 부여에 대 한 내용은 참조 하세요 [권한 부여](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md)합니다.  
@@ -102,5 +102,6 @@ ms.locfileid: "54699469"
  [!code-vb[c_TcpClient#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_tcpclient/vb/source.vb#1)]  
   
 ## <a name="see-also"></a>참고자료
+
 - [기본 WCF 프로그래밍](../../../../docs/framework/wcf/basic-wcf-programming.md)
 - [일반적인 보안 시나리오](../../../../docs/framework/wcf/feature-details/common-security-scenarios.md)

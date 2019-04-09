@@ -8,12 +8,12 @@ helpviewer_keywords:
 - WCF, security
 - ProtectionLevel property
 ms.assetid: 3d4e8f80-0f9e-4a26-9899-beb6584e78df
-ms.openlocfilehash: 13e07d06ed795bc50822d95cdd1ab44c6c336d2c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ce9fc8549218db5a1446026421f1a7ba1e5a23aa
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54586858"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59089850"
 ---
 # <a name="how-to-set-the-protectionlevel-property"></a>방법: ProtectionLevel 속성 설정
 적절한 특성을 적용하고 속성을 설정하여 보호 수준을 설정할 수 있습니다. 각 메시지의 모든 부분에 영향을 주도록 서비스 수준에서 보호를 설정하거나 메서드에서 메시지 부분으로 점차 세부적인 수준에서 보호를 설정할 수 있습니다. 에 대 한 자세한 내용은 합니다 `ProtectionLevel` 속성을 참조 하세요 [보호 수준 이해](../../../docs/framework/wcf/understanding-protection-level.md)합니다.  
@@ -89,6 +89,7 @@ ms.locfileid: "54586858"
  [!code-vb[C_ProtectionLevel#0](../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_protectionlevel/vb/source.vb#0)]  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.ServiceModel.ServiceContractAttribute>
 - <xref:System.ServiceModel.OperationContractAttribute>
 - <xref:System.ServiceModel.FaultContractAttribute>

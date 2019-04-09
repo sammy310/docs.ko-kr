@@ -1,5 +1,5 @@
 ---
-title: '방법: Windows Forms BindingNavigator 컨트롤을 사용 하 여 데이터 집합에서 이동'
+title: '방법: Windows Forms BindingNavigator 컨트롤을 사용하여 DataSet를 통해 이동'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - BindingNavigator control [Windows Forms], moving through datasets
 - examples [Windows Forms], BindingNavigator control
 ms.assetid: 146d97be-3d97-400e-accb-860bbf47729d
-ms.openlocfilehash: d8db965993e82040cfe88c22aaabfaed21462a40
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: d76c2e5882c9df94674294da00ba446dfbfd2b3a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57709756"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59086522"
 ---
-# <a name="how-to-move-through-a-dataset-with-the-windows-forms-bindingnavigator-control"></a>방법: Windows Forms BindingNavigator 컨트롤을 사용 하 여 데이터 집합에서 이동
+# <a name="how-to-move-through-a-dataset-with-the-windows-forms-bindingnavigator-control"></a>방법: Windows Forms BindingNavigator 컨트롤을 사용하여 DataSet를 통해 이동
 데이터 기반 애플리케이션을 빌드할 때 사용자에게 데이터 컬렉션을 표시해야 하는 경우가 많습니다. <xref:System.Windows.Forms.BindingSource> 구성 요소와 더불어 <xref:System.Windows.Forms.BindingNavigator> 컨트롤은 컬렉션을 탐색하고 항목을 순차적으로 표시하기 위한 편리하고 확장 가능한 솔루션을 제공합니다.  
   
 ## <a name="example"></a>예제  
@@ -36,9 +36,10 @@ ms.locfileid: "57709756"
  Visual Basic 또는 Visual C#에 대 한 명령줄에서이 예제를 빌드하는 방법에 대 한 내용은 [명령줄에서 빌드](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) 하거나 [csc.exe를 사용한 명령줄 빌드](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)합니다. 또한 새 프로젝트에 코드를 붙여 넣어 Visual Studio에서이 예제를 빌드할 수 있습니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Windows.Forms.BindingSource>
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.BindingSource>
 - [BindingNavigator 컨트롤](bindingnavigator-control-windows-forms.md)
 - [BindingSource 구성 요소](bindingsource-component.md)
-- [방법: 형식에는 Windows Forms 컨트롤 바인딩](how-to-bind-a-windows-forms-control-to-a-type.md)
+- [방법: 형식에 Windows Forms 컨트롤 바인딩](how-to-bind-a-windows-forms-control-to-a-type.md)

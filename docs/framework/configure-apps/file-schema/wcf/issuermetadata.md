@@ -2,12 +2,12 @@
 title: <issuerMetadata>
 ms.date: 03/30/2017
 ms.assetid: e7eae2c0-cc17-4281-af59-e4eb8d54f92a
-ms.openlocfilehash: c557bd903462ccf4029b7317cbd45610e3fba165
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 0dffad6a17720dd0506acbcd60efe4aafe24ed28
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55264455"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59090110"
 ---
 # <a name="issuermetadata"></a>\<issuerMetadata>
 \<system.serviceModel>  
@@ -48,7 +48,7 @@ ms.locfileid: "55264455"
   
 |특성|설명|  
 |---------------|-----------------|  
-|address|필수 `string` 특성입니다.<br /><br /> 끝점의 주소를 지정합니다. 주소는 절대 URI이어야 합니다. 기본값은 빈 문자열입니다.|  
+|주소|필수 `string` 특성입니다.<br /><br /> 엔드포인트의 주소를 지정합니다. 주소는 절대 URI이어야 합니다. 기본값은 빈 문자열입니다.|  
   
 ### <a name="child-elements"></a>자식 요소  
   
@@ -64,6 +64,7 @@ ms.locfileid: "55264455"
 |[\<message>](../../../../../docs/framework/configure-apps/file-schema/wcf/message-element-of-wsfederationhttpbinding.md)|에 대 한 메시지 수준 보안 설정을 정의 합니다 [ \<wsFederationHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md) 요소입니다.|  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.ServiceModel.FederatedMessageSecurityOverHttp.IssuerMetadataAddress%2A>
 - <xref:System.ServiceModel.Configuration.FederatedMessageSecurityOverHttpElement.IssuerMetadata%2A>
 - [서비스 ID 및 인증](../../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)

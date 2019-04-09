@@ -1,5 +1,5 @@
 ---
-title: '방법: 탭 페이지를 사용 하지 않도록 설정'
+title: '방법: 탭 페이지를 사용하지 않도록 설정'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - tab pages [Windows Forms], hiding in forms
 - TabControl control [Windows Forms], disabling pages
 ms.assetid: adcc6618-8a34-4ee1-bbe3-47e732de6a59
-ms.openlocfilehash: a2a0f4084529b1dd2618c1cd6171ee45b8f569d3
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: ace713a635b5d9c4b73f85cd3d378c0f1ff3dba1
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57705001"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59107577"
 ---
-# <a name="how-to-disable-tab-pages"></a>방법: 탭 페이지를 사용 하지 않도록 설정
+# <a name="how-to-disable-tab-pages"></a>방법: 탭 페이지를 사용하지 않도록 설정
 일부 경우에 Windows Forms 응용 프로그램 내에서 사용할 수 있는 데이터에 대 한 액세스를 제한 해야 합니다. 데이터는 탭 컨트롤의 탭 페이지에 표시 된 경우의 예로 들 수 있습니다. 관리자는 게스트 또는 하위 수준의 사용자를 제한 하려고 하는 탭 페이지에 대 한 정보를 있을 수 있습니다.  
   
 ### <a name="to-disable-tab-pages-programmatically"></a>탭 페이지를 프로그래밍 방식으로 사용 하지 않도록 설정  
@@ -102,7 +102,8 @@ ms.locfileid: "57705001"
     ```  
   
 ## <a name="see-also"></a>참고자료
+
 - [TabControl 컨트롤 개요](tabcontrol-control-overview-windows-forms.md)
 - [방법: 탭 페이지에 컨트롤 추가](how-to-add-a-control-to-a-tab-page.md)
-- [방법: Windows Forms TabControl 사용 하 여 탭 추가 및 제거](how-to-add-and-remove-tabs-with-the-windows-forms-tabcontrol.md)
+- [방법: Windows Forms TabControl을 사용하여 탭 추가 및 제거](how-to-add-and-remove-tabs-with-the-windows-forms-tabcontrol.md)
 - [방법: Windows Forms TabControl의 모양 변경](how-to-change-the-appearance-of-the-windows-forms-tabcontrol.md)

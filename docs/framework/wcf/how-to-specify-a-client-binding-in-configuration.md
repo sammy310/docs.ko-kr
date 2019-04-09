@@ -2,12 +2,12 @@
 title: '방법: 구성에서 클라이언트 바인딩 지정'
 ms.date: 03/30/2017
 ms.assetid: 4a7c79aa-50ee-4991-891e-adc0599323a7
-ms.openlocfilehash: 2441b307961079c28e114b4fed69c252ff42e0d4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 81e9b4b5949d3a89749911a30ad199c4f0da300f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54606389"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59091566"
 ---
 # <a name="how-to-specify-a-client-binding-in-configuration"></a>방법: 구성에서 클라이언트 바인딩 지정
 이 예제에서는 계산기 서비스를 사용할 클라이언트 콘솔 응용 프로그램을 만들고 해당 클라이언트에 대한 바인딩을 구성에 선언적으로 지정합니다. 클라이언트는 `CalculatorService` 인터페이스를 구현하는 `ICalculator`에 액세스하고, 서비스 및 클라이언트 모두 <xref:System.ServiceModel.BasicHttpBinding> 클래스를 사용합니다.  
@@ -51,4 +51,5 @@ ms.locfileid: "54606389"
 6.  클라이언트를 컴파일하고 실행합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [바인딩을 사용하여 서비스 및 클라이언트 구성](../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)

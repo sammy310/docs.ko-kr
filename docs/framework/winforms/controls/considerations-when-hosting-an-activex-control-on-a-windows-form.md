@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Windows Forms, hosting ActiveX controls
 - ActiveX controls [Windows Forms], adding
 ms.assetid: 2509302d-a74e-484f-9890-2acdbfa67a68
-ms.openlocfilehash: 354c524924794cd240a230e325a4f0eee58cdc50
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: babae31a3be9775d07ca84c54e1177d297cab5cf
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57705209"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59108760"
 ---
 # <a name="considerations-when-hosting-an-activex-control-on-a-windows-form"></a>Windows Form에서 ActiveX 컨트롤을 호스팅할 때의 고려 사항
 Windows Forms는 Windows Forms 컨트롤을 호스팅하도록 최적화되어 있지만 ActiveX 컨트롤을 사용할 수도 있습니다. ActiveX 컨트롤을 사용하는 애플리케이션을 계획할 때 다음 사항을 고려하세요.  
@@ -29,6 +29,7 @@ Windows Forms는 Windows Forms 컨트롤을 호스팅하도록 최적화되어 �
     >  ActiveX 컨트롤의 멤버 이름에 정의 된 이름과 일치 하는 경우는 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)], ActiveX 컨트롤 가져오기에서 멤버 이름의 접두사는 다음 **Ctl** 를 만들 때의 <xref:System.Windows.Forms.AxHost> 클래스를 파생 합니다. 예를 들어 ActiveX 컨트롤에 **Layout**이라는 멤버가 있으면 **Layout** 이벤트가 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]에 이미 정의되어 있으므로 AxHost 파생 클래스에서 이 멤버의 이름이 **CtlLayout**으로 변경됩니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [방법: Windows Forms에 ActiveX 컨트롤 추가](how-to-add-activex-controls-to-windows-forms.md)
 - [코드 액세스 보안](../../misc/code-access-security.md)
 - [여러 언어 및 라이브러리에서 사용되는 컨트롤 및 프로그래밍 가능한 개체 비교](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/0061wezk(v=vs.100))

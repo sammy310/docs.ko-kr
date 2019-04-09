@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: c1fc7d6c-7220-475c-a312-5b8b201f66e0
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7998275ae1e80a87354dd5b3a8b0a1aa73b3b987
-ms.sourcegitcommit: b8ace47d839f943f785b89e2fff8092b0bf8f565
+ms.openlocfilehash: 85cfe57f7a3b8cfecfae4c4ae00efaea464e6120
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "55674778"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59090344"
 ---
 # <a name="gccpugroup-element"></a>\<GCCpuGroup > 요소
 가비지 수집에서 여러 CPU 그룹을 지원할지를 지정합니다.  
@@ -73,6 +73,7 @@ ms.locfileid: "55674778"
 ```  
   
 ## <a name="see-also"></a>참고자료
+
 - [런타임 설정 스키마](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
 - [구성 파일 스키마](../../../../../docs/framework/configure-apps/file-schema/index.md)
 - [동시 가비지 수집을 사용 하지 않도록 설정](gcconcurrent-element.md#to-disable-background-garbage-collection)

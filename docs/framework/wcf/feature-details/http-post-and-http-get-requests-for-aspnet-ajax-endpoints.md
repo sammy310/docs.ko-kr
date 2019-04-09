@@ -1,15 +1,15 @@
 ---
-title: '방법: ASP.NET AJAX 끝점에 대 한 요청에서 HTTP POST 및 HTTP GET 간의 선택'
+title: '방법: ASP.NET AJAX 엔드포인트에 대한 HTTP POST 및 HTTP GET 요청 중에서 선택'
 ms.date: 03/30/2017
 ms.assetid: b47de82a-4c92-4af6-bceb-a5cb8bb8ede9
-ms.openlocfilehash: 8de65bbf8cd9e0eab3861504946967ad319cd824
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 33763a77d1ab1c82af9b9e1fb9c42d72392f8798
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54718808"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59091280"
 ---
-# <a name="how-to-choose-between-http-post-and-http-get-requests-for-aspnet-ajax-endpoints"></a>방법: ASP.NET AJAX 끝점에 대 한 요청에서 HTTP POST 및 HTTP GET 간의 선택
+# <a name="how-to-choose-between-http-post-and-http-get-requests-for-aspnet-ajax-endpoints"></a>방법: ASP.NET AJAX 엔드포인트에 대한 HTTP POST 및 HTTP GET 요청 중에서 선택
 
 Windows Communication Foundation (WCF)를 사용 하면 클라이언트 웹 사이트의 JavaScript에서 호출할 수 있는 ASP.NET AJAX 사용 끝점을 노출 하는 서비스를 만들 수 있습니다. 이러한 서비스 구축을 위한 기본 절차에 설명 되어 [방법: 구성을 사용 하 여 ASP.NET AJAX 끝점 추가](../../../../docs/framework/wcf/feature-details/how-to-use-configuration-to-add-an-aspnet-ajax-endpoint.md) 고 [방법: 구성을 사용 하지 않고 ASP.NET AJAX 끝점 추가](../../../../docs/framework/wcf/feature-details/how-to-add-an-aspnet-ajax-endpoint-without-using-configuration.md)합니다.  
   
@@ -91,5 +91,6 @@ Windows Communication Foundation (WCF)를 사용 하면 클라이언트 웹 사�
 2. ASP.NET AJAX Script Manager 컨트롤의 스크립트 컬렉션에 서비스 URL을 입력하여 다른 ASP.NET AJAX 서비스와 동일한 방법으로 GET 작업을 통해 서비스를 사용할 수 있습니다. 예를 들어 참조 된 [기본 AJAX 서비스](../../../../docs/framework/wcf/samples/basic-ajax-service.md)합니다.
   
 ## <a name="see-also"></a>참고자료
+
 - [ASP.NET AJAX용 WCF 서비스 만들기](../../../../docs/framework/wcf/feature-details/creating-wcf-services-for-aspnet-ajax.md)
 - [방법: AJAX 사용 ASP.NET 웹 서비스를 WCF로 마이그레이션](../../../../docs/framework/wcf/feature-details/how-to-migrate-ajax-enabled-aspnet-web-services-to-wcf.md)

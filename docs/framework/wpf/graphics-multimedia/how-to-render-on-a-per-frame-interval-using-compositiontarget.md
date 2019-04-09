@@ -8,12 +8,12 @@ helpviewer_keywords:
 - CompositionTarget objects [WPF], rendering per frame
 - rendering per frame using CompositionTarget objects [WPF]
 ms.assetid: 701246cd-66b7-4d69-ada9-17b3b433d95d
-ms.openlocfilehash: 919e39dbe96a1a72ce517d59dcb239636f5aa692
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 00b416d423a4bdc8bab576add2d77fd305ea6e0f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57353207"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59089421"
 ---
 # <a name="how-to-render-on-a-per-frame-interval-using-compositiontarget"></a>방법: CompositionTarget을 사용하여 프레임별 간격에 렌더링
 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 애니메이션 엔진은 프레임 기반 애니메이션을 만들기 위한 다양한 기능을 제공합니다. 그러나 프레임당 렌더링을 좀 더 미세하게 제어해야 하는 애플리케이션 시나리오도 있습니다. <xref:System.Windows.Media.CompositionTarget> 프레임당 콜백을 기준으로 사용자 지정 애니메이션을 만드는 기능을 제공 하는 개체입니다.  
@@ -41,5 +41,6 @@ ms.locfileid: "57353207"
  추가 또는 제거 렌더링 <xref:System.EventHandler> 대리자 이벤트가 발생 하는 동안 이벤트가 완료 된 후까지 지연 됩니다 발생 합니다. 이 일치 하는 방법 <xref:System.MulticastDelegate>-기반된 이벤트는 공용 언어 런타임 (CLR)에서 처리 됩니다. 또한 렌더링 이벤트가 반드시 특정 순서로 호출되는 것은 아닙니다. 여러 개인 경우 <xref:System.EventHandler> 대리자는 특정 순서에 의존 하는 단일 등록 해야 <xref:System.Windows.Media.CompositionTarget.Rendering> 올바른 대리자 주문 직접 이벤트를 반복 합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Windows.Media.CompositionTarget>
 - [WPF 그래픽 렌더링 개요](wpf-graphics-rendering-overview.md)

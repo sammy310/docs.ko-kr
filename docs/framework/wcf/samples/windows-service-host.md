@@ -5,12 +5,12 @@ helpviewer_keywords:
 - NT Service
 - NT Service Host Sample [Windows Communication Foundation]
 ms.assetid: 1b2f45c5-2bed-4979-b0ee-8f9efcfec028
-ms.openlocfilehash: f07bdacddfbaa35b17821d2a8a0191fef86e38f9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2ee7abb2fa709c6d49b049d69882b2fd6b7f3a0c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54579396"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59088329"
 ---
 # <a name="windows-service-host"></a>Windows Service 호스트
 이 샘플에서는 관리 되는 Windows 서비스에서 호스팅되는 Windows Communication Foundation (WCF) 서비스를 보여 줍니다. Windows 서비스의 서비스 애플릿을 사용 하 여 제어 됩니다 **제어판** 시스템 다시 부팅 후 자동으로 시작 되도록 구성할 수 있습니다. 이 샘플은 클라이언트 프로그램과 Windows 서비스 프로그램으로 구성됩니다. 서비스는 .exe 프로그램으로 구현되고 자체 호스팅 코드가 포함됩니다. WAS(Windows Process Activation Services) 또는 IIS(인터넷 정보 서비스) 등의 다른 호스팅 환경에서는 직접 호스팅 코드를 작성할 필요가 없습니다.
@@ -64,4 +64,5 @@ ms.locfileid: "54579396"
 4.  단일 컴퓨터 또는 다중 컴퓨터 구성에서 샘플을 실행 하려면의 지침을 따릅니다 [Windows Communication Foundation 샘플 실행](../../../../docs/framework/wcf/samples/running-the-samples.md)합니다.  
   
 ## <a name="see-also"></a>참고자료
-- [AppFabric 호스팅 및 지 속성 샘플](https://go.microsoft.com/fwlink/?LinkId=193961)
+
+- [AppFabric 호스팅 및 지속성 샘플](https://go.microsoft.com/fwlink/?LinkId=193961)

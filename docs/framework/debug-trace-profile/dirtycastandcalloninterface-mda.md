@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: aa388ed3-7e3d-48ea-a0b5-c47ae19cec38
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 8a1d8aa391b546d02c813e1f719601b9bff198be
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5a28820479ca15ad72475ae9a7754bbbf99ce5c5
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54657235"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59108591"
 ---
 # <a name="dirtycastandcalloninterface-mda"></a>dirtyCastAndCallOnInterface MDA
 `dirtyCastAndCallOnInterface` MDA(관리 디버깅 도우미)는 런타임에만 바인딩됨으로 표시된 클래스 인터페이스에 대해 vtable을 통해 초기에 바인딩된 호출을 시도할 때 활성화됩니다.  
@@ -29,7 +29,7 @@ ms.locfileid: "54657235"
  코드에서 런타임에만 바인딩되는 클래스 인터페이스에 대해 vtable을 통해 초기에 바인딩된 호출을 시도 중입니다. 기본적으로 클래스 인터페이스는 런타임에만 바인딩됨으로 식별됩니다. <xref:System.Runtime.InteropServices.ClassInterfaceAttribute> 특성에 <xref:System.Runtime.InteropServices.ClassInterfaceType.AutoDispatch> 값(`[ClassInterface(ClassInterfaceType.AutoDispatch)]`)을 사용하여 런타임에 바인딩됨으로 식별할 수도 있습니다.  
   
 ## <a name="resolution"></a>해결  
- 권장되는 해결 방법은 COM에서 사용할 명시적 인터페이스를 정의하고 자동으로 생성된 클래스 인터페이스 대신 이 인터페이스를 통해 COM 클라이언트가 호출하도록 하는 것입니다. 또는 `IDispatch`를 통해 COM 호출을 런타임에 바인딩된 호출로 변환할 수 있습니다.  
+ 권장되는 해결 방법은 COM에서 사용할 명시적 인터페이스를 정의하고 자동으로 생성된 클래스 인터페이스 대신 이 인터페이스를 통해 COM 클라이언트가 호출하도록 하는 것입니다. 또는 `IDispatch`를 통해 COM 호출을 런타임에 바인딩된 호출로 변형할 수 있습니다.  
   
  끝으로, 클래스를 <xref:System.Runtime.InteropServices.ClassInterfaceType.AutoDual>(`[ClassInterface(ClassInterfaceType.AutoDual)]`)로 식별하여 COM에서 초기에 바인딩된 호출을 배치할 수 있도록 허용할 수 있습니다. 그러나 <xref:System.Runtime.InteropServices.ClassInterfaceAttribute>에 설명된 버전 관리 제한 사항 때문에 <xref:System.Runtime.InteropServices.ClassInterfaceType.AutoDual>은 사용하지 않는 것이 좋습니다.  
   
@@ -39,7 +39,7 @@ ms.locfileid: "54657235"
 ## <a name="output"></a>출력  
  초기에 바인딩됨으로 액세스되는 필드 이름 또는 메서드 이름입니다.  
   
-## <a name="configuration"></a>구성하기  
+## <a name="configuration"></a>구성  
   
 ```xml  
 <mdaConfig>  
@@ -50,5 +50,6 @@ ms.locfileid: "54657235"
 ```  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Runtime.InteropServices.ClassInterfaceAttribute>
 - [관리 디버깅 도우미를 사용하여 오류 진단](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
