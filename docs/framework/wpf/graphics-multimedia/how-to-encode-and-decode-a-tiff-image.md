@@ -13,29 +13,30 @@ helpviewer_keywords:
 - decoding image formats [WPF]
 - TIFF decoding [WPF]
 ms.assetid: 1dfe3209-fc73-40e6-ad1c-71c1c58b3364
-ms.openlocfilehash: e89f39dedcc210aaa6917b4b964d1944673047b5
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 0b2b638d3aa81e48a1378794435d59da1b323aa2
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57356678"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59107434"
 ---
-# <a name="how-to-encode-and-decode-a-tiff-image"></a><span data-ttu-id="44ab6-102">방법: TIFF 이미지 인코딩 및 디코딩</span><span class="sxs-lookup"><span data-stu-id="44ab6-102">How to: Encode and Decode a TIFF Image</span></span>
-<span data-ttu-id="44ab6-103">다음 예제를 디코딩 및 인코딩하는 방법을 보여는 [!INCLUDE[TLA#tla_tiff](../../../../includes/tlasharptla-tiff-md.md)] 특정을 사용 하 여 이미지 <xref:System.Windows.Media.Imaging.TiffBitmapDecoder> 고 <xref:System.Windows.Media.Imaging.TiffBitmapEncoder> 개체입니다.</span><span class="sxs-lookup"><span data-stu-id="44ab6-103">The following examples show how to decode and encode a [!INCLUDE[TLA#tla_tiff](../../../../includes/tlasharptla-tiff-md.md)] image using the specific <xref:System.Windows.Media.Imaging.TiffBitmapDecoder> and <xref:System.Windows.Media.Imaging.TiffBitmapEncoder> objects.</span></span>  
+# <a name="how-to-encode-and-decode-a-tiff-image"></a><span data-ttu-id="88086-102">방법: TIFF 이미지 인코딩 및 디코딩</span><span class="sxs-lookup"><span data-stu-id="88086-102">How to: Encode and Decode a TIFF Image</span></span>
+<span data-ttu-id="88086-103">다음 예제를 디코딩 및 인코딩하는 방법을 보여는 [!INCLUDE[TLA#tla_tiff](../../../../includes/tlasharptla-tiff-md.md)] 특정을 사용 하 여 이미지 <xref:System.Windows.Media.Imaging.TiffBitmapDecoder> 고 <xref:System.Windows.Media.Imaging.TiffBitmapEncoder> 개체입니다.</span><span class="sxs-lookup"><span data-stu-id="88086-103">The following examples show how to decode and encode a [!INCLUDE[TLA#tla_tiff](../../../../includes/tlasharptla-tiff-md.md)] image using the specific <xref:System.Windows.Media.Imaging.TiffBitmapDecoder> and <xref:System.Windows.Media.Imaging.TiffBitmapEncoder> objects.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="44ab6-104">예제</span><span class="sxs-lookup"><span data-stu-id="44ab6-104">Example</span></span>  
- <span data-ttu-id="44ab6-105">디코딩하는 방법을 보여 주는이 예제는 [!INCLUDE[TLA2#tla_tiff](../../../../includes/tla2sharptla-tiff-md.md)] 를 사용 하 여 이미지를 <xref:System.Windows.Media.Imaging.TiffBitmapDecoder> 에서 <xref:System.Uri>합니다.</span><span class="sxs-lookup"><span data-stu-id="44ab6-105">This example demonstrates how to decode a [!INCLUDE[TLA2#tla_tiff](../../../../includes/tla2sharptla-tiff-md.md)] image using a <xref:System.Windows.Media.Imaging.TiffBitmapDecoder> from a <xref:System.Uri>.</span></span>  
+## <a name="example"></a><span data-ttu-id="88086-104">예제</span><span class="sxs-lookup"><span data-stu-id="88086-104">Example</span></span>  
+ <span data-ttu-id="88086-105">디코딩하는 방법을 보여 주는이 예제는 [!INCLUDE[TLA2#tla_tiff](../../../../includes/tla2sharptla-tiff-md.md)] 를 사용 하 여 이미지를 <xref:System.Windows.Media.Imaging.TiffBitmapDecoder> 에서 <xref:System.Uri>합니다.</span><span class="sxs-lookup"><span data-stu-id="88086-105">This example demonstrates how to decode a [!INCLUDE[TLA2#tla_tiff](../../../../includes/tla2sharptla-tiff-md.md)] image using a <xref:System.Windows.Media.Imaging.TiffBitmapDecoder> from a <xref:System.Uri>.</span></span>  
   
  [!code-cpp[TiffBitmapDecoderEncoder#1](~/samples/snippets/cpp/VS_Snippets_Wpf/TiffBitmapDecoderEncoder/CPP/TiffEncoderDecoder.cpp#1)]
  [!code-csharp[TiffBitmapDecoderEncoder#1](~/samples/snippets/csharp/VS_Snippets_Wpf/TiffBitmapDecoderEncoder/CSharp/TiffEncoderDecoder.cs#1)]
  [!code-vb[TiffBitmapDecoderEncoder#1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/TiffBitmapDecoderEncoder/VB/TiffEncoderDecoder.vb#1)]  
   
-## <a name="example"></a><span data-ttu-id="44ab6-106">예제</span><span class="sxs-lookup"><span data-stu-id="44ab6-106">Example</span></span>  
- <span data-ttu-id="44ab6-107">인코딩하는 방법을 보여 주는이 예제는 <xref:System.Windows.Media.Imaging.BitmapSource> 에 [!INCLUDE[TLA2#tla_tiff](../../../../includes/tla2sharptla-tiff-md.md)] 사용 하 여 이미지를 <xref:System.Windows.Media.Imaging.TiffBitmapEncoder>입니다.</span><span class="sxs-lookup"><span data-stu-id="44ab6-107">This example demonstrates how to encode a <xref:System.Windows.Media.Imaging.BitmapSource> into a [!INCLUDE[TLA2#tla_tiff](../../../../includes/tla2sharptla-tiff-md.md)] image using a <xref:System.Windows.Media.Imaging.TiffBitmapEncoder>.</span></span>  
+## <a name="example"></a><span data-ttu-id="88086-106">예제</span><span class="sxs-lookup"><span data-stu-id="88086-106">Example</span></span>  
+ <span data-ttu-id="88086-107">인코딩하는 방법을 보여 주는이 예제는 <xref:System.Windows.Media.Imaging.BitmapSource> 에 [!INCLUDE[TLA2#tla_tiff](../../../../includes/tla2sharptla-tiff-md.md)] 사용 하 여 이미지를 <xref:System.Windows.Media.Imaging.TiffBitmapEncoder>입니다.</span><span class="sxs-lookup"><span data-stu-id="88086-107">This example demonstrates how to encode a <xref:System.Windows.Media.Imaging.BitmapSource> into a [!INCLUDE[TLA2#tla_tiff](../../../../includes/tla2sharptla-tiff-md.md)] image using a <xref:System.Windows.Media.Imaging.TiffBitmapEncoder>.</span></span>  
   
  [!code-cpp[TiffBitmapDecoderEncoder#4](~/samples/snippets/cpp/VS_Snippets_Wpf/TiffBitmapDecoderEncoder/CPP/TiffEncoderDecoder.cpp#4)]
  [!code-csharp[TiffBitmapDecoderEncoder#4](~/samples/snippets/csharp/VS_Snippets_Wpf/TiffBitmapDecoderEncoder/CSharp/TiffEncoderDecoder.cs#4)]
  [!code-vb[TiffBitmapDecoderEncoder#4](~/samples/snippets/visualbasic/VS_Snippets_Wpf/TiffBitmapDecoderEncoder/VB/TiffEncoderDecoder.vb#4)]  
   
-## <a name="see-also"></a><span data-ttu-id="44ab6-108">참고자료</span><span class="sxs-lookup"><span data-stu-id="44ab6-108">See also</span></span>
-- [<span data-ttu-id="44ab6-109">이미징 개요</span><span class="sxs-lookup"><span data-stu-id="44ab6-109">Imaging Overview</span></span>](imaging-overview.md)
+## <a name="see-also"></a><span data-ttu-id="88086-108">참고자료</span><span class="sxs-lookup"><span data-stu-id="88086-108">See also</span></span>
+
+- [<span data-ttu-id="88086-109">이미징 개요</span><span class="sxs-lookup"><span data-stu-id="88086-109">Imaging Overview</span></span>](imaging-overview.md)
