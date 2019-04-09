@@ -16,17 +16,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b31df454c49ddccc74a7e877c09efa4f45b69d9e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: bc98b2421d23ffd6dfb716a8cc782b46a9d59ce0
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54491796"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59128898"
 ---
-# <a name="assemblyrefflags-enumeration"></a><span data-ttu-id="da152-102">AssemblyRefFlags 열거형</span><span class="sxs-lookup"><span data-stu-id="da152-102">AssemblyRefFlags Enumeration</span></span>
-<span data-ttu-id="da152-103">어셈블리 참조의 기능을 설명 하는 값을 포함 합니다.</span><span class="sxs-lookup"><span data-stu-id="da152-103">Contains values that describe features of an assembly reference.</span></span>  
+# <a name="assemblyrefflags-enumeration"></a><span data-ttu-id="cc957-102">AssemblyRefFlags 열거형</span><span class="sxs-lookup"><span data-stu-id="cc957-102">AssemblyRefFlags Enumeration</span></span>
+<span data-ttu-id="cc957-103">어셈블리 참조의 기능을 설명 하는 값을 포함 합니다.</span><span class="sxs-lookup"><span data-stu-id="cc957-103">Contains values that describe features of an assembly reference.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="da152-104">구문</span><span class="sxs-lookup"><span data-stu-id="da152-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="cc957-104">구문</span><span class="sxs-lookup"><span data-stu-id="cc957-104">Syntax</span></span>  
   
 ```  
 typedef enum {  
@@ -34,20 +34,21 @@ typedef enum {
 } AssemblyRefFlags;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="da152-105">멤버</span><span class="sxs-lookup"><span data-stu-id="da152-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="cc957-105">멤버</span><span class="sxs-lookup"><span data-stu-id="cc957-105">Members</span></span>  
   
-|<span data-ttu-id="da152-106">멤버</span><span class="sxs-lookup"><span data-stu-id="da152-106">Member</span></span>|<span data-ttu-id="da152-107">설명</span><span class="sxs-lookup"><span data-stu-id="da152-107">Description</span></span>|  
+|<span data-ttu-id="cc957-106">멤버</span><span class="sxs-lookup"><span data-stu-id="cc957-106">Member</span></span>|<span data-ttu-id="cc957-107">설명</span><span class="sxs-lookup"><span data-stu-id="cc957-107">Description</span></span>|  
 |------------|-----------------|  
-|`arfFullOriginator`|<span data-ttu-id="da152-108">어셈블리 참조 어셈블리의 게시자에 대 한 완전 한 해시 되지 않은 정보에 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="da152-108">Specifies that the assembly reference contains full, unhashed information about the publisher of the assembly.</span></span>|  
+|`arfFullOriginator`|<span data-ttu-id="cc957-108">어셈블리 참조 어셈블리의 게시자에 대 한 완전 한 해시 되지 않은 정보에 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="cc957-108">Specifies that the assembly reference contains full, unhashed information about the publisher of the assembly.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="da152-109">요구 사항</span><span class="sxs-lookup"><span data-stu-id="da152-109">Requirements</span></span>  
- <span data-ttu-id="da152-110">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="da152-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="cc957-109">요구 사항</span><span class="sxs-lookup"><span data-stu-id="cc957-109">Requirements</span></span>  
+ <span data-ttu-id="cc957-110">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="cc957-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="da152-111">**헤더:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="da152-111">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="cc957-111">**헤더:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="cc957-111">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="da152-112">**.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="da152-112">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ **<span data-ttu-id="cc957-112">.NET Framework 버전:</span><span class="sxs-lookup"><span data-stu-id="cc957-112">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="da152-113">참고자료</span><span class="sxs-lookup"><span data-stu-id="da152-113">See also</span></span>
-- [<span data-ttu-id="da152-114">메타데이터 열거형</span><span class="sxs-lookup"><span data-stu-id="da152-114">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
-- [<span data-ttu-id="da152-115">IMetaDataAssemblyEmit 인터페이스</span><span class="sxs-lookup"><span data-stu-id="da152-115">IMetaDataAssemblyEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)
-- [<span data-ttu-id="da152-116">DefineAssemblyRef 메서드</span><span class="sxs-lookup"><span data-stu-id="da152-116">DefineAssemblyRef Method</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-defineassemblyref-method.md)
+## <a name="see-also"></a><span data-ttu-id="cc957-113">참고자료</span><span class="sxs-lookup"><span data-stu-id="cc957-113">See also</span></span>
+
+- [<span data-ttu-id="cc957-114">메타데이터 열거형</span><span class="sxs-lookup"><span data-stu-id="cc957-114">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+- [<span data-ttu-id="cc957-115">IMetaDataAssemblyEmit 인터페이스</span><span class="sxs-lookup"><span data-stu-id="cc957-115">IMetaDataAssemblyEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)
+- [<span data-ttu-id="cc957-116">DefineAssemblyRef 메서드</span><span class="sxs-lookup"><span data-stu-id="cc957-116">DefineAssemblyRef Method</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-defineassemblyref-method.md)
