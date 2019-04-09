@@ -7,12 +7,12 @@ helpviewer_keywords:
 - graphics [WPF], composite shapes
 - fill [WPF], controlling
 ms.assetid: c1c94575-9eca-48a5-a49a-2ec65259f229
-ms.openlocfilehash: 0b2e71e7db403857aa1a3b0dddcfe907150f9528
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 9b3ab1f7b81c296aa1ee766136b6c95b82cab105
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57357289"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59084052"
 ---
 # <a name="how-to-control-the-fill-of-a-composite-shape"></a>방법: 복합 도형의 채우기 제어
 합니다 <xref:System.Windows.Media.GeometryGroup.FillRule%2A> 의 속성을 <xref:System.Windows.Media.GeometryGroup> 또는 <xref:System.Windows.Media.PathGeometry>은 복합 도형이 지정 된 기 하 도형의 일부 인지 확인 하는 "규칙"을 지정 합니다. 두 개의 가능한 값에 대 한 <xref:System.Windows.Media.FillRule>: <xref:System.Windows.Media.FillRule.EvenOdd> 고 <xref:System.Windows.Media.FillRule.Nonzero>입니다. 다음 섹션에서는 이러한 두 가지 규칙을 사용하는 방법을 설명합니다.  
@@ -62,5 +62,6 @@ ms.locfileid: "57357289"
 ## <a name="example"></a>예제  
   
 ## <a name="see-also"></a>참고자료
+
 - [복합 도형 만들기](how-to-create-a-composite-shape.md)
 - [Geometry 개요](geometry-overview.md)
