@@ -1,15 +1,15 @@
 ---
-title: '방법: 서비스 끝점으로 메타 데이터 가져오기'
+title: '방법: 서비스 엔드포인트로 메타데이터 가져오기'
 ms.date: 03/30/2017
 ms.assetid: b69dbe20-92a1-4911-89d8-ffbc3dad4663
-ms.openlocfilehash: 5a6375f0a0b0f657401a1ac2254be942d4e618aa
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 05106295448c4682f07dd17295574ecdc39bf903
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54548679"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59126869"
 ---
-# <a name="how-to-import-metadata-into-service-endpoints"></a>방법: 서비스 끝점으로 메타 데이터 가져오기
+# <a name="how-to-import-metadata-into-service-endpoints"></a>방법: 서비스 엔드포인트로 메타데이터 가져오기
 이 항목에서는 서비스 끝점의 컬렉션으로 메타 데이터 가져오기에 정의 된 서비스를 사용 하는 방법을 설명 합니다 [Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md)합니다. 이 항목에서는 서비스에서 메타데이터를 가져온 다음 서비스에 `Add` 메서드를 호출하는 클라이언트 응용 프로그램을 만든 방법을 보여 줍니다.  
   
 ### <a name="to-import-metadata-into-service-endpoints"></a>서비스 엔드포인트로 메타데이터를 가져오려면  
@@ -38,5 +38,6 @@ ms.locfileid: "54548679"
      [!code-csharp[UE_ImportMetadata#4](../../../../samples/snippets/csharp/VS_Snippets_CFX/ue_importmetadata/cs/client.cs#4)]  
   
 ## <a name="see-also"></a>참고자료
+
 - [메타데이터](../../../../docs/framework/wcf/feature-details/metadata.md)
 - [시작](../../../../docs/framework/wcf/samples/getting-started-sample.md)

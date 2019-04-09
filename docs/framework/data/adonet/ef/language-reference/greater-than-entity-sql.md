@@ -2,14 +2,14 @@
 title: '> (보다 큼) (Entity SQL)'
 ms.date: 03/30/2017
 ms.assetid: 4cea865c-677c-4b06-99a1-010f2ae2394a
-ms.openlocfilehash: c4a0f60f6dcaf503dca0b16ed80bc05884922b34
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
-ms.translationtype: MT
+ms.openlocfilehash: 992e1b7cf4733266f606f8357c71d72722b04896
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55277396"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59127129"
 ---
-# <a name="-greater-than-entity-sql"></a>> (보다 큼)(Entity SQL)
+# <a name="-greater-than-entity-sql"></a>> (보다 큼) (Entity SQL)
 두 식을 비교하여 왼쪽 식의 값이 오른쪽 식의 값보다 큰지 여부를 결정합니다.  
   
 ## <a name="syntax"></a>구문  
@@ -23,7 +23,7 @@ expression > expression
  모든 유효한 식입니다. 비교할 두 식 모두 데이터 형식이 암시적으로 변환 가능해야 합니다.  
   
 ## <a name="result-types"></a>결과 형식  
- 왼쪽 식의 값이 오른쪽 식의 값보다 크면`true` 이고, 그렇지 않으면 `false`입니다.  
+ `true` 왼쪽된 식에 값이 오른쪽 식; 보다 큰 경우 그렇지 않으면 `false`합니다.  
   
 ## <a name="example"></a>예제  
  다음 Entity SQL 쿼리는 > 비교 연산자를 통해 두 식을 비교하여 왼쪽 식의 값이 오른쪽 식의 값보다 큰지 여부를 결정합니다. 쿼리는 AdventureWorks Sales 모델을 기반으로 합니다. 이 쿼리를 컴파일하고 실행하려면 다음 단계를 수행하세요.  
@@ -35,4 +35,5 @@ expression > expression
  [!code-csharp[DP EntityServices Concepts 2#GREATER](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#greater)]  
   
 ## <a name="see-also"></a>참고자료
+
 - [엔터티 SQL 참조](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)

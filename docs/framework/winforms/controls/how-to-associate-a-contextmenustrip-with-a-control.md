@@ -1,5 +1,5 @@
 ---
-title: '방법: ContextMenuStrip과 컨트롤 연결'
+title: '방법: 컨트롤에 ContextMenuStrip 연결'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - context menus [Windows Forms], associating with controls
 - ContextMenuStrips [Windows Forms], relating
 ms.assetid: 6fc40a42-5d69-427f-aa30-0a146193226b
-ms.openlocfilehash: 4b61da8dc9f36e0a80807547e2049ef512c94747
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 4e39769621c46ead92076489014f6e0e9dc7863d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57718339"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59122371"
 ---
-# <a name="how-to-associate-a-contextmenustrip-with-a-control"></a>방법: ContextMenuStrip과 컨트롤 연결
+# <a name="how-to-associate-a-contextmenustrip-with-a-control"></a>방법: 컨트롤에 ContextMenuStrip 연결
 컨트롤 및 바로 가기 메뉴를 만든 후 다음 절차를 따라 사용자가 컨트롤을 마우스 오른쪽 단추로 클릭할 때 지정된 바로 가기 메뉴를 표시합니다. 이러한 절차에서는 <xref:System.Windows.Forms.ContextMenuStrip>을 Windows Form 및 <xref:System.Windows.Forms.ToolStrip> 컨트롤과 연결합니다.  
   
 ### <a name="to-associate-a-contextmenustrip-with-a-windows-form"></a>ContextMenuStrip을 Windows Form과 연결하려면  
@@ -42,6 +42,7 @@ ms.locfileid: "57718339"
  Visual Basic 또는 Visual C#에 대 한 명령줄에서이 예제를 빌드하는 방법에 대 한 내용은 [명령줄에서 빌드](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) 하거나 [csc.exe를 사용한 명령줄 빌드](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)합니다. 또한 새 프로젝트에 코드를 붙여 넣어 Visual Studio에서이 예제를 빌드할 수 있습니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Windows.Forms.ContextMenuStrip>
 - <xref:System.Windows.Forms.Control.ContextMenuStrip%2A>
 - <xref:System.Windows.Forms.ToolStrip>

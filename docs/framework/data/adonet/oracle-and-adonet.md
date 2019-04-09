@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 8ee8e389-53cf-45cf-80bd-1df63ef34f2e
-ms.openlocfilehash: cec371c414d6945386816703232abbc642633070
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ce92705d22edfc832e894dd2feaafcd11088bf26
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54661844"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59120668"
 ---
 # <a name="oracle-and-adonet"></a>Oracle 및 ADO.NET
 > [!NOTE]
@@ -65,7 +65,7 @@ csc /r:System.Data.OracleClient.dll
  [ADO.NET 응용 프로그램 보안](../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  
  [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)]을 사용할 때 보안 코드를 작성하는 방법을 설명합니다.  
   
- [DataSet, DataTable 및 DataView](../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  
+ [DataSets, DataTables 및 DataViews](../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  
  `DataSets`, 형식화된 `DataSets`, `DataTables` 및 `DataViews`를 만들고 사용하는 방법에 대해 설명합니다.  
   
  [ADO.NET에서 데이터 검색 및 수정](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)  
@@ -74,9 +74,10 @@ csc /r:System.Data.OracleClient.dll
  [SQL Server 및 ADO.NET](../../../../docs/framework/data/adonet/sql/index.md)  
  SQL Server 관련 기능을 사용하는 방법에 대해 설명합니다.  
   
- [DbProviderFactory](../../../../docs/framework/data/adonet/dbproviderfactories.md)  
+ [DbProviderFactories](../../../../docs/framework/data/adonet/dbproviderfactories.md)  
  [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)]에서 공급자 독립적인 코드를 쓸 수 있게 하는 일반 클래스에 대해 설명합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [ADO.NET](../../../../docs/framework/data/adonet/index.md)
 - [ADO.NET 관리되는 공급자 및 데이터 집합 개발자 센터](https://go.microsoft.com/fwlink/?LinkId=217917)
