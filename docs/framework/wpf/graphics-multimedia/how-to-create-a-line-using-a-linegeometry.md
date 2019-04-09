@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - graphics [WPF], lines
 ms.assetid: 41231b22-1f74-4c26-a8e7-a55b29f8f6bd
-ms.openlocfilehash: 6d5d0b413f940a2c7f70e05135ff070c1fe5ba21
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: f8c334a54f78aec7af91064a447fd18f23dcfbdc
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57374663"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59123060"
 ---
 # <a name="how-to-create-a-line-using-a-linegeometry"></a>방법: LineGeometry를 사용하여 선 만들기
 사용 하는 방법을 보여 주는이 예제는 <xref:System.Windows.Media.LineGeometry> 줄을 설명 하는 클래스입니다. <xref:System.Windows.Media.LineGeometry> 시작 및 끝 지점을 사용 하 여 정의 됩니다.  
@@ -31,6 +31,7 @@ ms.locfileid: "57374663"
  다른 단순 기 하 도형 클래스를 포함 <xref:System.Windows.Media.LineGeometry> 고 <xref:System.Windows.Media.EllipseGeometry>입니다. 좀더 복잡 한 뿐만 아니라 이러한 기 하이 도형을 만들 수도 있습니다를 사용 하는 <xref:System.Windows.Media.PathGeometry> 또는 <xref:System.Windows.Media.StreamGeometry>합니다. 자세한 내용은 참조는 [기 하 도형 개요](geometry-overview.md)합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [Geometry 개요](geometry-overview.md)
 - [복합 도형 만들기](how-to-create-a-composite-shape.md)
 - [PathGeometry를 사용하여 도형 만들기](how-to-create-a-shape-by-using-a-pathgeometry.md)

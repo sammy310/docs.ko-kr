@@ -15,12 +15,12 @@ helpviewer_keywords:
 - DataSet class [Windows Forms], binding and Windows Forms
 - data [Windows Forms], data providers
 ms.assetid: 3d2c43f6-462b-4d35-9c86-13e9afe012e1
-ms.openlocfilehash: 145e14f4a6e11209e46e8761f8a0551c1400a605
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: b648d62c9128f0864d60ace1ca56700f594b78c5
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57711306"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59124620"
 ---
 # <a name="data-sources-supported-by-windows-forms"></a>Windows Forms에서 지원하는 데이터 소스
 일반적으로 데이터 바인딩은 데 사용 된 응용 프로그램 내에서 데이터베이스에 저장 된 데이터를 활용 합니다. Windows Forms 데이터 바인딩에 특정 최소 요구 사항이 충족 된다면 배열 및 컬렉션 등의 다른 구조에 있는 데이터 뿐만 아니라 데이터베이스에서 데이터를 액세스할 수 있습니다.  
@@ -58,6 +58,7 @@ ms.locfileid: "57711306"
 -   <xref:System.Data.DataViewManager>. <xref:System.Data.DataViewManager> 전체 사용자 지정 뷰입니다 <xref:System.Data.DataSet>비슷합니다는 <xref:System.Data.DataView>, 비슷하지만 관계가 포함 합니다. 사용 하 여는 <xref:System.Data.DataViewManager.DataViewSettings%2A> 컬렉션을 설정할 수 있습니다 기본 필터 및 모든 보기에 대 한 정렬 옵션을 <xref:System.Data.DataViewManager> 에 지정된 된 테이블에 대 한 합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [Windows Forms 데이터 바인딩의 변경 알림](change-notification-in-windows-forms-data-binding.md)
 - [데이터 바인딩 및 Windows Forms](data-binding-and-windows-forms.md)
 - [Windows Forms 데이터 바인딩](windows-forms-data-binding.md)
