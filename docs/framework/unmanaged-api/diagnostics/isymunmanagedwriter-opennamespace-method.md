@@ -17,33 +17,34 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4cf0fbcbf6af53c6a7865e2a2cf7874ea44581e4
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 1585acce8bba0dff327c961f5e32ef6b46794401
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57474620"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59126336"
 ---
-# <a name="isymunmanagedwriteropennamespace-method"></a><span data-ttu-id="32670-102">ISymUnmanagedWriter::OpenNamespace 메서드</span><span class="sxs-lookup"><span data-stu-id="32670-102">ISymUnmanagedWriter::OpenNamespace Method</span></span>
-<span data-ttu-id="32670-103">새 네임스페이스를 엽니다.</span><span class="sxs-lookup"><span data-stu-id="32670-103">Opens a new namespace.</span></span> <span data-ttu-id="32670-104">메서드 또는 네임 스페이스를 차지 하는 변수를 정의 하기 전에이 메서드를 호출 합니다.</span><span class="sxs-lookup"><span data-stu-id="32670-104">Call this method before defining methods or variables that occupy a namespace.</span></span> <span data-ttu-id="32670-105">네임 스페이스를 중첩할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="32670-105">Namespaces can be nested.</span></span>  
+# <a name="isymunmanagedwriteropennamespace-method"></a><span data-ttu-id="e5fec-102">ISymUnmanagedWriter::OpenNamespace 메서드</span><span class="sxs-lookup"><span data-stu-id="e5fec-102">ISymUnmanagedWriter::OpenNamespace Method</span></span>
+<span data-ttu-id="e5fec-103">새 네임스페이스를 엽니다.</span><span class="sxs-lookup"><span data-stu-id="e5fec-103">Opens a new namespace.</span></span> <span data-ttu-id="e5fec-104">메서드 또는 네임 스페이스를 차지 하는 변수를 정의 하기 전에이 메서드를 호출 합니다.</span><span class="sxs-lookup"><span data-stu-id="e5fec-104">Call this method before defining methods or variables that occupy a namespace.</span></span> <span data-ttu-id="e5fec-105">네임 스페이스를 중첩할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="e5fec-105">Namespaces can be nested.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="32670-106">구문</span><span class="sxs-lookup"><span data-stu-id="32670-106">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="e5fec-106">구문</span><span class="sxs-lookup"><span data-stu-id="e5fec-106">Syntax</span></span>  
   
 ```  
 HRESULT OpenNamespace(  
     [in] const WCHAR *name);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="32670-107">매개 변수</span><span class="sxs-lookup"><span data-stu-id="32670-107">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="e5fec-107">매개 변수</span><span class="sxs-lookup"><span data-stu-id="e5fec-107">Parameters</span></span>  
  `name`  
- <span data-ttu-id="32670-108">[in] 새 네임 스페이스의 이름에 대 한 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="32670-108">[in] A pointer to the name of the new namespace.</span></span>  
+ <span data-ttu-id="e5fec-108">[in] 새 네임 스페이스의 이름에 대 한 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="e5fec-108">[in] A pointer to the name of the new namespace.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="32670-109">반환 값</span><span class="sxs-lookup"><span data-stu-id="32670-109">Return Value</span></span>  
- <span data-ttu-id="32670-110">메서드가 성공 하면 s_ok이 고 그렇지 않으면 E_FAIL 또는 일부 다른 오류 코드입니다.</span><span class="sxs-lookup"><span data-stu-id="32670-110">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="e5fec-109">반환 값</span><span class="sxs-lookup"><span data-stu-id="e5fec-109">Return Value</span></span>  
+ <span data-ttu-id="e5fec-110">메서드가 성공 하면 s_ok이 고 그렇지 않으면 E_FAIL 또는 일부 다른 오류 코드입니다.</span><span class="sxs-lookup"><span data-stu-id="e5fec-110">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="32670-111">요구 사항</span><span class="sxs-lookup"><span data-stu-id="32670-111">Requirements</span></span>  
- <span data-ttu-id="32670-112">**헤더:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="32670-112">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="e5fec-111">요구 사항</span><span class="sxs-lookup"><span data-stu-id="e5fec-111">Requirements</span></span>  
+ <span data-ttu-id="e5fec-112">**헤더:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="e5fec-112">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="32670-113">참고자료</span><span class="sxs-lookup"><span data-stu-id="32670-113">See also</span></span>
-- [<span data-ttu-id="32670-114">ISymUnmanagedWriter 인터페이스</span><span class="sxs-lookup"><span data-stu-id="32670-114">ISymUnmanagedWriter Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)
-- [<span data-ttu-id="32670-115">CloseNamespace 메서드</span><span class="sxs-lookup"><span data-stu-id="32670-115">CloseNamespace Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-closenamespace-method.md)
+## <a name="see-also"></a><span data-ttu-id="e5fec-113">참고자료</span><span class="sxs-lookup"><span data-stu-id="e5fec-113">See also</span></span>
+
+- [<span data-ttu-id="e5fec-114">ISymUnmanagedWriter 인터페이스</span><span class="sxs-lookup"><span data-stu-id="e5fec-114">ISymUnmanagedWriter Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)
+- [<span data-ttu-id="e5fec-115">CloseNamespace 메서드</span><span class="sxs-lookup"><span data-stu-id="e5fec-115">CloseNamespace Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-closenamespace-method.md)
