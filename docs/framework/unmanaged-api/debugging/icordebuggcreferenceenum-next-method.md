@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9f76b727511ad604c407fb2998a5ecea26f91c49
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 33ad221f2a05357484d0877b6306d78e3864eff6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57481367"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59120174"
 ---
-# <a name="icordebuggcreferenceenumnext-method"></a><span data-ttu-id="c7b43-102">ICorDebugGCReferenceEnum::Next 메서드</span><span class="sxs-lookup"><span data-stu-id="c7b43-102">ICorDebugGCReferenceEnum::Next Method</span></span>
-<span data-ttu-id="c7b43-103">지정 된 개수를 가져옵니다 [COR_GC_REFERENCE](../../../../docs/framework/unmanaged-api/debugging/cor-gc-reference-structure.md) 가비지 수집 될 개체에 대 한 정보가 포함 된 인스턴스.</span><span class="sxs-lookup"><span data-stu-id="c7b43-103">Gets the specified number of [COR_GC_REFERENCE](../../../../docs/framework/unmanaged-api/debugging/cor-gc-reference-structure.md) instances that contain information about objects that will be garbage-collected.</span></span>  
+# <a name="icordebuggcreferenceenumnext-method"></a><span data-ttu-id="f8208-102">ICorDebugGCReferenceEnum::Next 메서드</span><span class="sxs-lookup"><span data-stu-id="f8208-102">ICorDebugGCReferenceEnum::Next Method</span></span>
+<span data-ttu-id="f8208-103">지정 된 개수를 가져옵니다 [COR_GC_REFERENCE](../../../../docs/framework/unmanaged-api/debugging/cor-gc-reference-structure.md) 가비지 수집 될 개체에 대 한 정보가 포함 된 인스턴스.</span><span class="sxs-lookup"><span data-stu-id="f8208-103">Gets the specified number of [COR_GC_REFERENCE](../../../../docs/framework/unmanaged-api/debugging/cor-gc-reference-structure.md) instances that contain information about objects that will be garbage-collected.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="c7b43-104">구문</span><span class="sxs-lookup"><span data-stu-id="c7b43-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="f8208-104">구문</span><span class="sxs-lookup"><span data-stu-id="f8208-104">Syntax</span></span>  
   
 ```  
 HRESULT Next(  
@@ -36,28 +36,28 @@ HRESULT Next(
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="c7b43-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="c7b43-105">Parameters</span></span>  
- <span data-ttu-id="c7b43-106">celt</span><span class="sxs-lookup"><span data-stu-id="c7b43-106">celt</span></span>  
- <span data-ttu-id="c7b43-107">[in] 검색할 루트의 수입니다.</span><span class="sxs-lookup"><span data-stu-id="c7b43-107">[in] The number of roots to be retrieved.</span></span>  
+## <a name="parameters"></a><span data-ttu-id="f8208-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="f8208-105">Parameters</span></span>  
+ <span data-ttu-id="f8208-106">celt</span><span class="sxs-lookup"><span data-stu-id="f8208-106">celt</span></span>  
+ <span data-ttu-id="f8208-107">[in] 검색할 루트의 수입니다.</span><span class="sxs-lookup"><span data-stu-id="f8208-107">[in] The number of roots to be retrieved.</span></span>  
   
- <span data-ttu-id="c7b43-108">루트</span><span class="sxs-lookup"><span data-stu-id="c7b43-108">roots</span></span>  
- <span data-ttu-id="c7b43-109">[out] 각각 가리키는 포인터 배열을 [COR_GC_REFERENCE](../../../../docs/framework/unmanaged-api/debugging/cor-gc-reference-structure.md) 가비지가 수집 되기를 개체의 루트를 나타내는 개체입니다.</span><span class="sxs-lookup"><span data-stu-id="c7b43-109">[out] An array of pointers, each of which points to a [COR_GC_REFERENCE](../../../../docs/framework/unmanaged-api/debugging/cor-gc-reference-structure.md) object that represents the root of an object to be garbage-collected.</span></span>  
+ <span data-ttu-id="f8208-108">루트</span><span class="sxs-lookup"><span data-stu-id="f8208-108">roots</span></span>  
+ <span data-ttu-id="f8208-109">[out] 각각 가리키는 포인터 배열을 [COR_GC_REFERENCE](../../../../docs/framework/unmanaged-api/debugging/cor-gc-reference-structure.md) 가비지가 수집 되기를 개체의 루트를 나타내는 개체입니다.</span><span class="sxs-lookup"><span data-stu-id="f8208-109">[out] An array of pointers, each of which points to a [COR_GC_REFERENCE](../../../../docs/framework/unmanaged-api/debugging/cor-gc-reference-structure.md) object that represents the root of an object to be garbage-collected.</span></span>  
   
- <span data-ttu-id="c7b43-110">pceltFetched</span><span class="sxs-lookup"><span data-stu-id="c7b43-110">pceltFetched</span></span>  
- <span data-ttu-id="c7b43-111">[out] 개수에 대 한 포인터 [COR_GC_REFERENCE](../../../../docs/framework/unmanaged-api/debugging/cor-gc-reference-structure.md) 개체에 실제로 반환 된 `roots`합니다.</span><span class="sxs-lookup"><span data-stu-id="c7b43-111">[out] A pointer to the number of [COR_GC_REFERENCE](../../../../docs/framework/unmanaged-api/debugging/cor-gc-reference-structure.md) objects actually returned in `roots`.</span></span> <span data-ttu-id="c7b43-112">
-  `celt\`가 1이면 이 값은 `null\`일 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="c7b43-112">This value may be `null` if `celt` is 1.</span></span>  
+ <span data-ttu-id="f8208-110">pceltFetched</span><span class="sxs-lookup"><span data-stu-id="f8208-110">pceltFetched</span></span>  
+ <span data-ttu-id="f8208-111">[out] 개수에 대 한 포인터 [COR_GC_REFERENCE](../../../../docs/framework/unmanaged-api/debugging/cor-gc-reference-structure.md) 개체에 실제로 반환 된 `roots`합니다.</span><span class="sxs-lookup"><span data-stu-id="f8208-111">[out] A pointer to the number of [COR_GC_REFERENCE](../../../../docs/framework/unmanaged-api/debugging/cor-gc-reference-structure.md) objects actually returned in `roots`.</span></span> <span data-ttu-id="f8208-112">`celt`가 1이면 이 값은 `null`일 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="f8208-112">This value may be `null` if `celt` is 1.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="c7b43-113">설명</span><span class="sxs-lookup"><span data-stu-id="c7b43-113">Remarks</span></span>  
+## <a name="remarks"></a><span data-ttu-id="f8208-113">설명</span><span class="sxs-lookup"><span data-stu-id="f8208-113">Remarks</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="c7b43-114">요구 사항</span><span class="sxs-lookup"><span data-stu-id="c7b43-114">Requirements</span></span>  
- <span data-ttu-id="c7b43-115">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="c7b43-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="f8208-114">요구 사항</span><span class="sxs-lookup"><span data-stu-id="f8208-114">Requirements</span></span>  
+ <span data-ttu-id="f8208-115">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="f8208-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="c7b43-116">**헤더:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="c7b43-116">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="f8208-116">**헤더:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="f8208-116">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="c7b43-117">**라이브러리:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="c7b43-117">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="f8208-117">**라이브러리:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="f8208-117">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="c7b43-118">**.NET Framework 버전:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="c7b43-118">**.NET Framework Versions:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span></span>  
+ **<span data-ttu-id="f8208-118">.NET Framework 버전:</span><span class="sxs-lookup"><span data-stu-id="f8208-118">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="c7b43-119">참고자료</span><span class="sxs-lookup"><span data-stu-id="c7b43-119">See also</span></span>
-- [<span data-ttu-id="c7b43-120">ICorDebugGCReferenceEnum 인터페이스</span><span class="sxs-lookup"><span data-stu-id="c7b43-120">ICorDebugGCReferenceEnum Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebuggcreferenceenum-interface.md)
-- [<span data-ttu-id="c7b43-121">디버깅 인터페이스</span><span class="sxs-lookup"><span data-stu-id="c7b43-121">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+## <a name="see-also"></a><span data-ttu-id="f8208-119">참고자료</span><span class="sxs-lookup"><span data-stu-id="f8208-119">See also</span></span>
+
+- [<span data-ttu-id="f8208-120">ICorDebugGCReferenceEnum 인터페이스</span><span class="sxs-lookup"><span data-stu-id="f8208-120">ICorDebugGCReferenceEnum Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebuggcreferenceenum-interface.md)
+- [<span data-ttu-id="f8208-121">디버깅 인터페이스</span><span class="sxs-lookup"><span data-stu-id="f8208-121">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
