@@ -5,90 +5,91 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: d729120c-4c1b-4f34-bbe9-33694fca2dde
-ms.openlocfilehash: bc3a6de1101b3e7626312197bc2d1ba37f7e04a4
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.openlocfilehash: d9d53e91f5252a0ac44822ac6252ce02e9697d33
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55825799"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59130587"
 ---
-# <a name="query-expression-syntax-examples-aggregate-operators"></a><span data-ttu-id="11d00-102">쿼리 식 구문 예제: 집계 연산자</span><span class="sxs-lookup"><span data-stu-id="11d00-102">Query Expression Syntax Examples: Aggregate Operators</span></span>
-<span data-ttu-id="11d00-103">이 항목의 예제에 사용 하는 방법을 보여 줍니다는 <xref:System.Linq.Enumerable.Average%2A>, <xref:System.Linq.Enumerable.Count%2A>, <xref:System.Linq.Enumerable.Max%2A>, <xref:System.Linq.Enumerable.Min%2A>, 및 <xref:System.Linq.Enumerable.Sum%2A> 쿼리 하는 메서드는 [AdventureWorks Sales 모델](https://archive.codeplex.com/?p=msftdbprodsamples) 쿼리 식 구문을 사용 합니다.</span><span class="sxs-lookup"><span data-stu-id="11d00-103">The examples in this topic demonstrate how to use the <xref:System.Linq.Enumerable.Average%2A>, <xref:System.Linq.Enumerable.Count%2A>, <xref:System.Linq.Enumerable.Max%2A>, <xref:System.Linq.Enumerable.Min%2A>, and <xref:System.Linq.Enumerable.Sum%2A> methods to query the [AdventureWorks Sales Model](https://archive.codeplex.com/?p=msftdbprodsamples) using query expression syntax.</span></span> <span data-ttu-id="11d00-104">이 예제에서 사용하는 AdventureWorks Sales 모델에서는 AdventureWorks 샘플 데이터베이스의 Contact, Address, Product, SalesOrderHeader 및 SalesOrderDetail 테이블을 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="11d00-104">The AdventureWorks Sales Model used in these examples is built from the Contact, Address, Product, SalesOrderHeader, and SalesOrderDetail tables in the AdventureWorks sample database.</span></span>  
+# <a name="query-expression-syntax-examples-aggregate-operators"></a><span data-ttu-id="028cb-102">쿼리 식 구문 예제: 집계 연산자</span><span class="sxs-lookup"><span data-stu-id="028cb-102">Query Expression Syntax Examples: Aggregate Operators</span></span>
+<span data-ttu-id="028cb-103">이 항목의 예제에 사용 하는 방법을 보여 줍니다는 <xref:System.Linq.Enumerable.Average%2A>, <xref:System.Linq.Enumerable.Count%2A>, <xref:System.Linq.Enumerable.Max%2A>, <xref:System.Linq.Enumerable.Min%2A>, 및 <xref:System.Linq.Enumerable.Sum%2A> 쿼리 하는 메서드는 [AdventureWorks Sales 모델](https://archive.codeplex.com/?p=msftdbprodsamples) 쿼리 식 구문을 사용 합니다.</span><span class="sxs-lookup"><span data-stu-id="028cb-103">The examples in this topic demonstrate how to use the <xref:System.Linq.Enumerable.Average%2A>, <xref:System.Linq.Enumerable.Count%2A>, <xref:System.Linq.Enumerable.Max%2A>, <xref:System.Linq.Enumerable.Min%2A>, and <xref:System.Linq.Enumerable.Sum%2A> methods to query the [AdventureWorks Sales Model](https://archive.codeplex.com/?p=msftdbprodsamples) using query expression syntax.</span></span> <span data-ttu-id="028cb-104">이 예제에서 사용하는 AdventureWorks Sales 모델에서는 AdventureWorks 샘플 데이터베이스의 Contact, Address, Product, SalesOrderHeader 및 SalesOrderDetail 테이블을 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="028cb-104">The AdventureWorks Sales Model used in these examples is built from the Contact, Address, Product, SalesOrderHeader, and SalesOrderDetail tables in the AdventureWorks sample database.</span></span>  
   
- <span data-ttu-id="11d00-105">이 항목의 예제에서는 다음을 사용 `using` / `Imports` 문:</span><span class="sxs-lookup"><span data-stu-id="11d00-105">The examples in this topic use the following `using`/`Imports` statements:</span></span>  
+ <span data-ttu-id="028cb-105">이 항목의 예제에서는 다음을 사용 `using` / `Imports` 문:</span><span class="sxs-lookup"><span data-stu-id="028cb-105">The examples in this topic use the following `using`/`Imports` statements:</span></span>  
   
  [!code-csharp[DP L2E Examples#ImportsUsing](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Examples/CS/Program.cs#importsusing)]
  [!code-vb[DP L2E Examples#ImportsUsing](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Examples/VB/Module1.vb#importsusing)]  
   
-## <a name="average"></a><span data-ttu-id="11d00-106">평균</span><span class="sxs-lookup"><span data-stu-id="11d00-106">Average</span></span>  
+## <a name="average"></a><span data-ttu-id="028cb-106">평균</span><span class="sxs-lookup"><span data-stu-id="028cb-106">Average</span></span>  
   
-### <a name="example"></a><span data-ttu-id="11d00-107">예제</span><span class="sxs-lookup"><span data-stu-id="11d00-107">Example</span></span>  
- <span data-ttu-id="11d00-108">다음 예제에서는 <xref:System.Linq.Enumerable.Average%2A> 메서드를 사용하여 각 스타일의 평균 제품 가격을 검색합니다.</span><span class="sxs-lookup"><span data-stu-id="11d00-108">The following example uses the <xref:System.Linq.Enumerable.Average%2A> method to find the average list price of the products of each style.</span></span>  
+### <a name="example"></a><span data-ttu-id="028cb-107">예제</span><span class="sxs-lookup"><span data-stu-id="028cb-107">Example</span></span>  
+ <span data-ttu-id="028cb-108">다음 예제에서는 <xref:System.Linq.Enumerable.Average%2A> 메서드를 사용하여 각 스타일의 평균 제품 가격을 검색합니다.</span><span class="sxs-lookup"><span data-stu-id="028cb-108">The following example uses the <xref:System.Linq.Enumerable.Average%2A> method to find the average list price of the products of each style.</span></span>  
   
  [!code-csharp[DP L2E Examples#Average2_MQ](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Examples/CS/Program.cs#average2_mq)]
  [!code-vb[DP L2E Examples#Average2_MQ](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Examples/VB/Module1.vb#average2_mq)]  
   
-### <a name="example"></a><span data-ttu-id="11d00-109">예제</span><span class="sxs-lookup"><span data-stu-id="11d00-109">Example</span></span>  
- <span data-ttu-id="11d00-110">다음 예제에서는 <xref:System.Linq.Enumerable.Average%2A>를 사용하여 각 연락처 ID의 평균 합계를 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="11d00-110">The following example uses <xref:System.Linq.Enumerable.Average%2A> to get the average total due for each contact ID.</span></span>  
+### <a name="example"></a><span data-ttu-id="028cb-109">예제</span><span class="sxs-lookup"><span data-stu-id="028cb-109">Example</span></span>  
+ <span data-ttu-id="028cb-110">다음 예제에서는 <xref:System.Linq.Enumerable.Average%2A>를 사용하여 각 연락처 ID의 평균 합계를 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="028cb-110">The following example uses <xref:System.Linq.Enumerable.Average%2A> to get the average total due for each contact ID.</span></span>  
   
  [!code-csharp[DP L2E Examples#AverageGrouped_MQ](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Examples/CS/Program.cs#averagegrouped_mq)]
  [!code-vb[DP L2E Examples#AverageGrouped_MQ](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Examples/VB/Module1.vb#averagegrouped_mq)]  
   
-### <a name="example"></a><span data-ttu-id="11d00-111">예제</span><span class="sxs-lookup"><span data-stu-id="11d00-111">Example</span></span>  
- <span data-ttu-id="11d00-112">다음 예제에서는 <xref:System.Linq.Enumerable.Average%2A>를 사용하여 각 연락처에서 평균 합계 값을 가지는 주문을 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="11d00-112">The following example uses <xref:System.Linq.Enumerable.Average%2A> to get the orders with the average total due for each contact.</span></span>  
+### <a name="example"></a><span data-ttu-id="028cb-111">예제</span><span class="sxs-lookup"><span data-stu-id="028cb-111">Example</span></span>  
+ <span data-ttu-id="028cb-112">다음 예제에서는 <xref:System.Linq.Enumerable.Average%2A>를 사용하여 각 연락처에서 평균 합계 값을 가지는 주문을 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="028cb-112">The following example uses <xref:System.Linq.Enumerable.Average%2A> to get the orders with the average total due for each contact.</span></span>  
   
  [!code-csharp[DP L2E Examples#AverageElements_MQ](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Examples/CS/Program.cs#averageelements_mq)]
  [!code-vb[DP L2E Examples#AverageElements_MQ](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Examples/VB/Module1.vb#averageelements_mq)]  
   
-## <a name="count"></a><span data-ttu-id="11d00-113">개수</span><span class="sxs-lookup"><span data-stu-id="11d00-113">Count</span></span>  
+## <a name="count"></a><span data-ttu-id="028cb-113">개수</span><span class="sxs-lookup"><span data-stu-id="028cb-113">Count</span></span>  
   
-### <a name="example"></a><span data-ttu-id="11d00-114">예제</span><span class="sxs-lookup"><span data-stu-id="11d00-114">Example</span></span>  
- <span data-ttu-id="11d00-115">다음 예제에서는 <xref:System.Linq.Enumerable.Count%2A>를 사용하여 연락처 ID의 목록과 각 연락처의 주문 수를 반환합니다.</span><span class="sxs-lookup"><span data-stu-id="11d00-115">The following example uses <xref:System.Linq.Enumerable.Count%2A> to return a list of contact IDs and how many orders each has.</span></span>  
+### <a name="example"></a><span data-ttu-id="028cb-114">예제</span><span class="sxs-lookup"><span data-stu-id="028cb-114">Example</span></span>  
+ <span data-ttu-id="028cb-115">다음 예제에서는 <xref:System.Linq.Enumerable.Count%2A>를 사용하여 연락처 ID의 목록과 각 연락처의 주문 수를 반환합니다.</span><span class="sxs-lookup"><span data-stu-id="028cb-115">The following example uses <xref:System.Linq.Enumerable.Count%2A> to return a list of contact IDs and how many orders each has.</span></span>  
   
  [!code-csharp[DP L2E Examples#CountNested](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Examples/CS/Program.cs#countnested)]
  [!code-vb[DP L2E Examples#CountNested](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Examples/VB/Module1.vb#countnested)]  
   
-### <a name="example"></a><span data-ttu-id="11d00-116">예제</span><span class="sxs-lookup"><span data-stu-id="11d00-116">Example</span></span>  
- <span data-ttu-id="11d00-117">다음 예제에서는 색으로 제품을 그룹화한 다음 <xref:System.Linq.Enumerable.Count%2A>를 사용하여 각 색 그룹의 제품 수를 반환합니다.</span><span class="sxs-lookup"><span data-stu-id="11d00-117">The following example groups products by color and uses <xref:System.Linq.Enumerable.Count%2A> to return the number of products in each color group.</span></span>  
+### <a name="example"></a><span data-ttu-id="028cb-116">예제</span><span class="sxs-lookup"><span data-stu-id="028cb-116">Example</span></span>  
+ <span data-ttu-id="028cb-117">다음 예제에서는 색으로 제품을 그룹화한 다음 <xref:System.Linq.Enumerable.Count%2A>를 사용하여 각 색 그룹의 제품 수를 반환합니다.</span><span class="sxs-lookup"><span data-stu-id="028cb-117">The following example groups products by color and uses <xref:System.Linq.Enumerable.Count%2A> to return the number of products in each color group.</span></span>  
   
  [!code-csharp[DP L2E Examples#CountGrouped](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Examples/CS/Program.cs#countgrouped)]
  [!code-vb[DP L2E Examples#CountGrouped](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Examples/VB/Module1.vb#countgrouped)]  
   
-## <a name="max"></a><span data-ttu-id="11d00-118">최대값</span><span class="sxs-lookup"><span data-stu-id="11d00-118">Max</span></span>  
+## <a name="max"></a><span data-ttu-id="028cb-118">최대</span><span class="sxs-lookup"><span data-stu-id="028cb-118">Max</span></span>  
   
-### <a name="example"></a><span data-ttu-id="11d00-119">예제</span><span class="sxs-lookup"><span data-stu-id="11d00-119">Example</span></span>  
- <span data-ttu-id="11d00-120">다음 예제에서는 <xref:System.Linq.Enumerable.Max%2A> 메서드를 사용하여 각 연락처 ID의 최대 합계를 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="11d00-120">The following example uses the <xref:System.Linq.Enumerable.Max%2A> method to get the largest total due for each contact ID.</span></span>  
+### <a name="example"></a><span data-ttu-id="028cb-119">예제</span><span class="sxs-lookup"><span data-stu-id="028cb-119">Example</span></span>  
+ <span data-ttu-id="028cb-120">다음 예제에서는 <xref:System.Linq.Enumerable.Max%2A> 메서드를 사용하여 각 연락처 ID의 최대 합계를 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="028cb-120">The following example uses the <xref:System.Linq.Enumerable.Max%2A> method to get the largest total due for each contact ID.</span></span>  
   
  [!code-csharp[DP L2E Examples#MaxGrouped_MQ](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Examples/CS/Program.cs#maxgrouped_mq)]
  [!code-vb[DP L2E Examples#MaxGrouped_MQ](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Examples/VB/Module1.vb#maxgrouped_mq)]  
   
-### <a name="example"></a><span data-ttu-id="11d00-121">예제</span><span class="sxs-lookup"><span data-stu-id="11d00-121">Example</span></span>  
- <span data-ttu-id="11d00-122">다음 예제에서는 <xref:System.Linq.Enumerable.Max%2A> 메서드를 사용하여 각 연락처 ID에서 최대 합계 값을 가지는 주문을 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="11d00-122">The following example uses the <xref:System.Linq.Enumerable.Max%2A> method to get the orders with the largest total due for each contact ID.</span></span>  
+### <a name="example"></a><span data-ttu-id="028cb-121">예제</span><span class="sxs-lookup"><span data-stu-id="028cb-121">Example</span></span>  
+ <span data-ttu-id="028cb-122">다음 예제에서는 <xref:System.Linq.Enumerable.Max%2A> 메서드를 사용하여 각 연락처 ID에서 최대 합계 값을 가지는 주문을 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="028cb-122">The following example uses the <xref:System.Linq.Enumerable.Max%2A> method to get the orders with the largest total due for each contact ID.</span></span>  
   
  [!code-csharp[DP L2E Examples#MaxElements_MQ](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Examples/CS/Program.cs#maxelements_mq)]
  [!code-vb[DP L2E Examples#MaxElements_MQ](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Examples/VB/Module1.vb#maxelements_mq)]  
   
-## <a name="min"></a><span data-ttu-id="11d00-123">최소값</span><span class="sxs-lookup"><span data-stu-id="11d00-123">Min</span></span>  
+## <a name="min"></a><span data-ttu-id="028cb-123">최소</span><span class="sxs-lookup"><span data-stu-id="028cb-123">Min</span></span>  
   
-### <a name="example"></a><span data-ttu-id="11d00-124">예제</span><span class="sxs-lookup"><span data-stu-id="11d00-124">Example</span></span>  
- <span data-ttu-id="11d00-125">다음 예제에서는 <xref:System.Linq.Enumerable.Min%2A> 메서드를 사용하여 각 연락처 ID의 최소 합계를 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="11d00-125">The following example uses the <xref:System.Linq.Enumerable.Min%2A> method to get the smallest total due for each contact ID.</span></span>  
+### <a name="example"></a><span data-ttu-id="028cb-124">예제</span><span class="sxs-lookup"><span data-stu-id="028cb-124">Example</span></span>  
+ <span data-ttu-id="028cb-125">다음 예제에서는 <xref:System.Linq.Enumerable.Min%2A> 메서드를 사용하여 각 연락처 ID의 최소 합계를 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="028cb-125">The following example uses the <xref:System.Linq.Enumerable.Min%2A> method to get the smallest total due for each contact ID.</span></span>  
   
  [!code-csharp[DP L2E Examples#MinGrouped_MQ](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Examples/CS/Program.cs#mingrouped_mq)]
  [!code-vb[DP L2E Examples#MinGrouped_MQ](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Examples/VB/Module1.vb#mingrouped_mq)]  
   
-### <a name="example"></a><span data-ttu-id="11d00-126">예제</span><span class="sxs-lookup"><span data-stu-id="11d00-126">Example</span></span>  
- <span data-ttu-id="11d00-127">다음 예제에서는 <xref:System.Linq.Enumerable.Min%2A> 메서드를 사용하여 각 연락처에서 최소 합계 값을 가지는 주문을 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="11d00-127">The following example uses the <xref:System.Linq.Enumerable.Min%2A> method to get the orders with the smallest total due for each contact.</span></span>  
+### <a name="example"></a><span data-ttu-id="028cb-126">예제</span><span class="sxs-lookup"><span data-stu-id="028cb-126">Example</span></span>  
+ <span data-ttu-id="028cb-127">다음 예제에서는 <xref:System.Linq.Enumerable.Min%2A> 메서드를 사용하여 각 연락처에서 최소 합계 값을 가지는 주문을 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="028cb-127">The following example uses the <xref:System.Linq.Enumerable.Min%2A> method to get the orders with the smallest total due for each contact.</span></span>  
   
  [!code-csharp[DP L2E Examples#MinElements_MQ](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Examples/CS/Program.cs#minelements_mq)]
  [!code-vb[DP L2E Examples#MinElements_MQ](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Examples/VB/Module1.vb#minelements_mq)]  
   
-## <a name="sum"></a><span data-ttu-id="11d00-128">Sum</span><span class="sxs-lookup"><span data-stu-id="11d00-128">Sum</span></span>  
+## <a name="sum"></a><span data-ttu-id="028cb-128">Sum</span><span class="sxs-lookup"><span data-stu-id="028cb-128">Sum</span></span>  
   
-### <a name="example"></a><span data-ttu-id="11d00-129">예제</span><span class="sxs-lookup"><span data-stu-id="11d00-129">Example</span></span>  
- <span data-ttu-id="11d00-130">다음 예제에서는 <xref:System.Linq.Enumerable.Sum%2A> 메서드를 사용하여 각 연락처 ID의 합계를 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="11d00-130">The following example uses the <xref:System.Linq.Enumerable.Sum%2A> method to get the total due for each contact ID.</span></span>  
+### <a name="example"></a><span data-ttu-id="028cb-129">예제</span><span class="sxs-lookup"><span data-stu-id="028cb-129">Example</span></span>  
+ <span data-ttu-id="028cb-130">다음 예제에서는 <xref:System.Linq.Enumerable.Sum%2A> 메서드를 사용하여 각 연락처 ID의 합계를 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="028cb-130">The following example uses the <xref:System.Linq.Enumerable.Sum%2A> method to get the total due for each contact ID.</span></span>  
   
  [!code-csharp[DP L2E Examples#SumGrouped_MQ](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Examples/CS/Program.cs#sumgrouped_mq)]
  [!code-vb[DP L2E Examples#SumGrouped_MQ](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Examples/VB/Module1.vb#sumgrouped_mq)]  
   
-## <a name="see-also"></a><span data-ttu-id="11d00-131">참고자료</span><span class="sxs-lookup"><span data-stu-id="11d00-131">See also</span></span>
-- [<span data-ttu-id="11d00-132">LINQ to Entities에서 쿼리</span><span class="sxs-lookup"><span data-stu-id="11d00-132">Queries in LINQ to Entities</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/queries-in-linq-to-entities.md)
+## <a name="see-also"></a><span data-ttu-id="028cb-131">참고자료</span><span class="sxs-lookup"><span data-stu-id="028cb-131">See also</span></span>
+
+- [<span data-ttu-id="028cb-132">LINQ to Entities에서 쿼리</span><span class="sxs-lookup"><span data-stu-id="028cb-132">Queries in LINQ to Entities</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/queries-in-linq-to-entities.md)

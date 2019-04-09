@@ -8,18 +8,18 @@ helpviewer_keywords:
 - images [Windows Forms], changing encoder parameters
 - JPEG images [Windows Forms], setting quality level
 ms.assetid: 4b9a74e3-9504-43c1-9f28-ace651d0772e
-ms.openlocfilehash: 678e89eaa240cbe3a396c1ee3d6c18e7ceca17ee
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: de9dce1b3c15070fda268c430ce5da641efef6f4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57722293"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59130678"
 ---
-# <a name="how-to-set-jpeg-compression-level"></a><span data-ttu-id="09610-102">방법: JPEG 압축 수준 설정</span><span class="sxs-lookup"><span data-stu-id="09610-102">How to: Set JPEG Compression Level</span></span>
-<span data-ttu-id="09610-103">이미지를 디스크에 저장할 때 파일 크기를 최소화하거나 품질을 향상시키기 위해 이미지의 매개 변수를 수정해야 할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="09610-103">You may want to modify the parameters of an image when you save the image to disk to minimize the file size or improve its quality.</span></span> <span data-ttu-id="09610-104">압축 수준을 수정하여 JPEG 이미지의 품질을 조정할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="09610-104">You can adjust the quality of a JPEG image by modifying its compression level.</span></span> <span data-ttu-id="09610-105">JPEG 이미지를 저장할 때 압축 수준을 지정 하려면 만들어야 합니다는 <xref:System.Drawing.Imaging.EncoderParameters> 개체를 전달 하는 <xref:System.Drawing.Image.Save%2A> 메서드를 <xref:System.Drawing.Image> 클래스.</span><span class="sxs-lookup"><span data-stu-id="09610-105">To specify the compression level when you save a JPEG image, you must create an <xref:System.Drawing.Imaging.EncoderParameters> object and pass it to the <xref:System.Drawing.Image.Save%2A> method of the <xref:System.Drawing.Image> class.</span></span> <span data-ttu-id="09610-106">초기화 된 <xref:System.Drawing.Imaging.EncoderParameters> 하나로 구성 된 배열을 개체 <xref:System.Drawing.Imaging.EncoderParameter>합니다.</span><span class="sxs-lookup"><span data-stu-id="09610-106">Initialize the <xref:System.Drawing.Imaging.EncoderParameters> object so that it has an array that consists of one <xref:System.Drawing.Imaging.EncoderParameter>.</span></span> <span data-ttu-id="09610-107">만들 때 합니다 <xref:System.Drawing.Imaging.EncoderParameter>를 지정 합니다 <xref:System.Drawing.Imaging.Encoder.Quality> 인코더와 원하는 압축 수준을 합니다.</span><span class="sxs-lookup"><span data-stu-id="09610-107">When you create the <xref:System.Drawing.Imaging.EncoderParameter>, specify the <xref:System.Drawing.Imaging.Encoder.Quality> encoder, and the desired compression level.</span></span>  
+# <a name="how-to-set-jpeg-compression-level"></a><span data-ttu-id="dde13-102">방법: JPEG 압축 수준 설정</span><span class="sxs-lookup"><span data-stu-id="dde13-102">How to: Set JPEG Compression Level</span></span>
+<span data-ttu-id="dde13-103">이미지를 디스크에 저장할 때 파일 크기를 최소화하거나 품질을 향상시키기 위해 이미지의 매개 변수를 수정해야 할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="dde13-103">You may want to modify the parameters of an image when you save the image to disk to minimize the file size or improve its quality.</span></span> <span data-ttu-id="dde13-104">압축 수준을 수정하여 JPEG 이미지의 품질을 조정할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="dde13-104">You can adjust the quality of a JPEG image by modifying its compression level.</span></span> <span data-ttu-id="dde13-105">JPEG 이미지를 저장할 때 압축 수준을 지정 하려면 만들어야 합니다는 <xref:System.Drawing.Imaging.EncoderParameters> 개체를 전달 하는 <xref:System.Drawing.Image.Save%2A> 메서드를 <xref:System.Drawing.Image> 클래스.</span><span class="sxs-lookup"><span data-stu-id="dde13-105">To specify the compression level when you save a JPEG image, you must create an <xref:System.Drawing.Imaging.EncoderParameters> object and pass it to the <xref:System.Drawing.Image.Save%2A> method of the <xref:System.Drawing.Image> class.</span></span> <span data-ttu-id="dde13-106">초기화 된 <xref:System.Drawing.Imaging.EncoderParameters> 하나로 구성 된 배열을 개체 <xref:System.Drawing.Imaging.EncoderParameter>합니다.</span><span class="sxs-lookup"><span data-stu-id="dde13-106">Initialize the <xref:System.Drawing.Imaging.EncoderParameters> object so that it has an array that consists of one <xref:System.Drawing.Imaging.EncoderParameter>.</span></span> <span data-ttu-id="dde13-107">만들 때 합니다 <xref:System.Drawing.Imaging.EncoderParameter>를 지정 합니다 <xref:System.Drawing.Imaging.Encoder.Quality> 인코더와 원하는 압축 수준을 합니다.</span><span class="sxs-lookup"><span data-stu-id="dde13-107">When you create the <xref:System.Drawing.Imaging.EncoderParameter>, specify the <xref:System.Drawing.Imaging.Encoder.Quality> encoder, and the desired compression level.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="09610-108">예제</span><span class="sxs-lookup"><span data-stu-id="09610-108">Example</span></span>  
- <span data-ttu-id="09610-109">다음 예제 코드에서는 <xref:System.Drawing.Imaging.EncoderParameter> 개체와 세 개의 JPEG 이미지를 저장 합니다.</span><span class="sxs-lookup"><span data-stu-id="09610-109">The following example code creates an <xref:System.Drawing.Imaging.EncoderParameter> object and saves three JPEG images.</span></span> <span data-ttu-id="09610-110">각 JPEG 이미지를 수정 하 여 다른 품질 수준에 저장 됩니다는 `long` 에 전달 된 값을 <xref:System.Drawing.Imaging.EncoderParameter> 생성자입니다.</span><span class="sxs-lookup"><span data-stu-id="09610-110">Each JPEG image is saved with a different quality level, by modifying the `long` value passed to the <xref:System.Drawing.Imaging.EncoderParameter> constructor.</span></span> <span data-ttu-id="09610-111">품질 수준이 0이면 가장 많이 압축하고, 100이면 가장 적게 압축합니다.</span><span class="sxs-lookup"><span data-stu-id="09610-111">A quality level of 0 corresponds to the greatest compression, and a quality level of 100 corresponds to the least compression.</span></span>  
+## <a name="example"></a><span data-ttu-id="dde13-108">예제</span><span class="sxs-lookup"><span data-stu-id="dde13-108">Example</span></span>  
+ <span data-ttu-id="dde13-109">다음 예제 코드에서는 <xref:System.Drawing.Imaging.EncoderParameter> 개체와 세 개의 JPEG 이미지를 저장 합니다.</span><span class="sxs-lookup"><span data-stu-id="dde13-109">The following example code creates an <xref:System.Drawing.Imaging.EncoderParameter> object and saves three JPEG images.</span></span> <span data-ttu-id="dde13-110">각 JPEG 이미지를 수정 하 여 다른 품질 수준에 저장 됩니다는 `long` 에 전달 된 값을 <xref:System.Drawing.Imaging.EncoderParameter> 생성자입니다.</span><span class="sxs-lookup"><span data-stu-id="dde13-110">Each JPEG image is saved with a different quality level, by modifying the `long` value passed to the <xref:System.Drawing.Imaging.EncoderParameter> constructor.</span></span> <span data-ttu-id="dde13-111">품질 수준이 0이면 가장 많이 압축하고, 100이면 가장 적게 압축합니다.</span><span class="sxs-lookup"><span data-stu-id="dde13-111">A quality level of 0 corresponds to the greatest compression, and a quality level of 100 corresponds to the least compression.</span></span>  
   
 ```csharp  
 private void VaryQualityLevel()  
@@ -120,16 +120,17 @@ Private Function GetEncoder(ByVal format As ImageFormat) As ImageCodecInfo
 End Function  
 ```  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="09610-112">코드 컴파일</span><span class="sxs-lookup"><span data-stu-id="09610-112">Compiling the Code</span></span>  
- <span data-ttu-id="09610-113">이 예제에는 다음 사항이 필요합니다.</span><span class="sxs-lookup"><span data-stu-id="09610-113">This example requires:</span></span>  
+## <a name="compiling-the-code"></a><span data-ttu-id="dde13-112">코드 컴파일</span><span class="sxs-lookup"><span data-stu-id="dde13-112">Compiling the Code</span></span>  
+ <span data-ttu-id="dde13-113">이 예제에는 다음 사항이 필요합니다.</span><span class="sxs-lookup"><span data-stu-id="dde13-113">This example requires:</span></span>  
   
--   <span data-ttu-id="09610-114">Windows Forms 애플리케이션</span><span class="sxs-lookup"><span data-stu-id="09610-114">A Windows Forms application.</span></span>  
+-   <span data-ttu-id="dde13-114">Windows Forms 애플리케이션</span><span class="sxs-lookup"><span data-stu-id="dde13-114">A Windows Forms application.</span></span>  
   
--   <span data-ttu-id="09610-115">A <xref:System.Windows.Forms.PaintEventArgs>에서의 매개 변수인 <xref:System.Windows.Forms.PaintEventHandler>합니다. </span><span class="sxs-lookup"><span data-stu-id="09610-115">A <xref:System.Windows.Forms.PaintEventArgs>, which is a parameter of <xref:System.Windows.Forms.PaintEventHandler>.</span></span>  
+-   <span data-ttu-id="dde13-115">A <xref:System.Windows.Forms.PaintEventArgs>에서의 매개 변수인 <xref:System.Windows.Forms.PaintEventHandler>합니다. </span><span class="sxs-lookup"><span data-stu-id="dde13-115">A <xref:System.Windows.Forms.PaintEventArgs>, which is a parameter of <xref:System.Windows.Forms.PaintEventHandler>.</span></span>  
   
--   <span data-ttu-id="09610-116">**c:\\** 에 있는 `TestPhoto.jpg` 이미지 파일</span><span class="sxs-lookup"><span data-stu-id="09610-116">An image file that is named `TestPhoto.jpg` and located at **c:\\**.</span></span>  
+-   <span data-ttu-id="dde13-116">**c:\\** 에 있는 `TestPhoto.jpg` 이미지 파일</span><span class="sxs-lookup"><span data-stu-id="dde13-116">An image file that is named `TestPhoto.jpg` and located at **c:\\**.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="09610-117">참고자료</span><span class="sxs-lookup"><span data-stu-id="09610-117">See also</span></span>
-- [<span data-ttu-id="09610-118">방법: 인코더에서 지원 되는 매개 변수 확인</span><span class="sxs-lookup"><span data-stu-id="09610-118">How to: Determine the Parameters Supported by an Encoder</span></span>](how-to-determine-the-parameters-supported-by-an-encoder.md)
-- [<span data-ttu-id="09610-119">비트맵의 유형</span><span class="sxs-lookup"><span data-stu-id="09610-119">Types of Bitmaps</span></span>](types-of-bitmaps.md)
-- [<span data-ttu-id="09610-120">관리되는 GDI+에서 이미지 인코더 및 디코더 사용</span><span class="sxs-lookup"><span data-stu-id="09610-120">Using Image Encoders and Decoders in Managed GDI+</span></span>](using-image-encoders-and-decoders-in-managed-gdi.md)
+## <a name="see-also"></a><span data-ttu-id="dde13-117">참고자료</span><span class="sxs-lookup"><span data-stu-id="dde13-117">See also</span></span>
+
+- [<span data-ttu-id="dde13-118">방법: 인코더에서 지원하는 매개 변수 확인</span><span class="sxs-lookup"><span data-stu-id="dde13-118">How to: Determine the Parameters Supported by an Encoder</span></span>](how-to-determine-the-parameters-supported-by-an-encoder.md)
+- [<span data-ttu-id="dde13-119">비트맵의 유형</span><span class="sxs-lookup"><span data-stu-id="dde13-119">Types of Bitmaps</span></span>](types-of-bitmaps.md)
+- [<span data-ttu-id="dde13-120">관리형 GDI+에서 이미지 인코더 및 디코더 사용</span><span class="sxs-lookup"><span data-stu-id="dde13-120">Using Image Encoders and Decoders in Managed GDI+</span></span>](using-image-encoders-and-decoders-in-managed-gdi.md)
