@@ -1,5 +1,5 @@
 ---
-title: '방법: Windows Forms DataGridViewComboBoxCell 드롭다운 목록의 개체 액세스'
+title: '방법: Windows Forms DataGridViewComboBoxCell 드롭다운 목록에서 개체 액세스'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - combo boxes [Windows Forms], in DataGridView control
 - combo boxes [Windows Forms], accessing objects in DataGridViewComboBoxCell drop-down lists
 ms.assetid: bcbe794a-d1fa-47f8-b5a3-5f085b32097d
-ms.openlocfilehash: 8a4731e081b31f74b4f17c2796b56cdf6b95e3e2
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 221774895fa5867ad6ec870f7e293c9366e442f3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57705729"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59080789"
 ---
-# <a name="how-to-access-objects-in-a-windows-forms-datagridviewcomboboxcell-drop-down-list"></a>방법: Windows Forms DataGridViewComboBoxCell 드롭다운 목록의 개체 액세스
+# <a name="how-to-access-objects-in-a-windows-forms-datagridviewcomboboxcell-drop-down-list"></a>방법: Windows Forms DataGridViewComboBoxCell 드롭다운 목록에서 개체 액세스
 같은 합니다 <xref:System.Windows.Forms.ComboBox> 컨트롤을 <xref:System.Windows.Forms.DataGridViewComboBoxColumn> 및 <xref:System.Windows.Forms.DataGridViewComboBoxCell> 형식을 사용 하면 임의의 개체 드롭다운 목록에 추가할 수입니다. 이 기능을 사용 하 여 별도 컬렉션에서 해당 개체를 저장 하지 않고 드롭다운 목록에서 복잡 한 상태를 나타낼 수 있습니다.  
   
  달리를 <xref:System.Windows.Forms.ComboBox> 컨트롤을 <xref:System.Windows.Forms.DataGridView> 형식은 하지는 <xref:System.Windows.Forms.ComboBox.SelectedItem%2A> 현재 선택한 개체를 검색 하는 속성. 대신 설정 해야 합니다 <xref:System.Windows.Forms.DataGridViewComboBoxColumn.ValueMember%2A?displayProperty=nameWithType> 또는 <xref:System.Windows.Forms.DataGridViewComboBoxCell.ValueMember%2A?displayProperty=nameWithType> 속성을 비즈니스 개체의 속성 이름입니다. 셀 비즈니스 개체의 표시 속성을 설정 하는 사용자를 선택 하면 <xref:System.Windows.Forms.DataGridViewCell.Value%2A> 속성입니다.  
@@ -69,6 +69,7 @@ ms.locfileid: "57705729"
 -   System 및 System.Windows.Forms 어셈블리에 대한 참조  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridViewComboBoxColumn>
 - <xref:System.Windows.Forms.DataGridViewComboBoxColumn.Items%2A?displayProperty=nameWithType>

@@ -1,6 +1,6 @@
 ---
 title: 컨테이너 기반 응용 프로그램에 대 한 Azure 계산 플랫폼 선택
-description: Azure 클라우드 및 Windows 컨테이너를 사용 하 여 기존.NET 응용 프로그램 현대화 | 컨테이너 기반 응용 프로그램에 대 한 Azure 계산 플랫폼 선택
+description: Azure 클라우드와 Windows 컨테이너를 사용하여 기존 .NET 응용 프로그램 최신화 | 컨테이너 기반 응용 프로그램용 Azure 계산 플랫폼 선택
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/04/2018
@@ -13,9 +13,9 @@ ms.locfileid: "58186106"
 ---
 # <a name="choosing-azure-compute-platforms-for-container-based-applications"></a>컨테이너 기반 응용 프로그램에 대 한 Azure 계산 플랫폼 선택
 
-이전 섹션을 읽은 후 확인 했을 때 Azure는 여러 선택 항목을 제공 하는 개방형 클라우드입니다. 그러나 컨테이너 화 된 응용 프로그램에 사용 해야 하는 제품/기술에 대 한 질문 수도 표시, 요구 사항에 맞게 가장 적합 한를 사용할 수 있습니다.
+앞선 절에서 Azure는 여러 가지를 선택할 수 있는 개방형 클라우드라는 것을 알 수 있었습니다. 요구 사항에 맞는 적합한 선택은 가능하더라도 컨테이너화된 응용 프로그램에 어떤 제품이나 기술을 사용해야 할 것인지 의문이 생길 수 있습니다.
 
-로 *기본적으로* 권장 사항, 다음은이 설명서에 권장 되는 기본 조건:
+*기본적인* 권장 사항으로, 이 설명서에서 권장하는 주요 기준은 다음과 같습니다.
 
 - **단일 모놀리식 앱:** Azure App Service를 선택 합니다.
 - **N 계층 앱:** 단일 또는 몇 백 엔드 서비스에 있는 경우 Azure Kubernetes Service (AKS), Service Fabric (SF) 또는 App Service와 같은 오 케 스트레이 터를 선택 합니다.
