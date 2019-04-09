@@ -2,12 +2,12 @@
 title: XML 스키마에서 데이터 집합 관계형 구조 파생(XSD)
 ms.date: 03/30/2017
 ms.assetid: 8f6cd04d-6197-4bc4-9096-8c51c7e4acae
-ms.openlocfilehash: 8d11fdbcb973eb3e4b7487eb6aacb28374c4c654
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 549579fca0179994191987097c12b6085ee91756
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54717940"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59119693"
 ---
 # <a name="deriving-dataset-relational-structure-from-xml-schema-xsd"></a>XML 스키마에서 데이터 집합 관계형 구조 파생(XSD)
 이 단원에서는 XSD(XML 스키마 정의 언어) 스키마 문서에서 `DataSet`의 관계형 스키마를 빌드하는 방법을 간략하게 설명합니다. 일반적으로 각각에 대해 `complexType` 스키마 요소의 자식 요소 테이블에서 생성 되는 `DataSet`합니다. 테이블 구조는 복합 형식의 정의에 의해 결정됩니다. 만들어진 테이블은 `DataSet` 스키마의 최상위 요소에 대 한 합니다. 그러나 테이블에만 만들어집니다 최상위 수준에 대 한 `complexType` 요소 때를 `complexType` 요소는 다른 내부에 중첩 `complexType` 는 요소인 경우 중첩 된 `complexType` 요소에 매핑되는 `DataTable` 내는 `DataSet`합니다.  
@@ -83,10 +83,10 @@ OutOfStateCustomers (CustomerID , CompanyName, Phone)
 ```  
   
 ## <a name="in-this-section"></a>섹션 내용  
- [데이터 세트 제약 조건에 XSD(XML 스키마) 제약 조건 매핑](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/mapping-xml-schema-xsd-constraints-to-dataset-constraints.md)  
+ [데이터 집합 제약 조건에 XSD(XML 스키마) 제약 조건 매핑](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/mapping-xml-schema-xsd-constraints-to-dataset-constraints.md)  
  고유 및 외래 키 제약 조건을 만드는 데 필요한 XML 스키마 요소에 설명 된 `DataSet`합니다.  
   
- [XSD(XML 스키마)에서 데이터 세트 관계 생성](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/generating-dataset-relations-from-xml-schema-xsd.md)  
+ [XSD(XML 스키마)에서 데이터 집합 관계 생성](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/generating-dataset-relations-from-xml-schema-xsd.md)  
  테이블 열 간의 관계를 만드는 데 XML 스키마 요소에 설명 된 `DataSet`합니다.  
   
  [XML 스키마 제약 조건 및 관계](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/xml-schema-constraints-and-relationships.md)  
@@ -97,4 +97,5 @@ OutOfStateCustomers (CustomerID , CompanyName, Phone)
  로드 하 고 관계형 구조와 데이터를 유지 하는 방법을 설명는 `DataSet` XML 데이터로 합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [ADO.NET 관리되는 공급자 및 데이터 집합 개발자 센터](https://go.microsoft.com/fwlink/?LinkId=217917)

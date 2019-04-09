@@ -11,12 +11,12 @@ helpviewer_keywords:
 - tabs [Windows Forms], controlling appearance
 - buttons [Windows Forms], displaying tabs as
 ms.assetid: 7c6cc443-ed62-4d26-b94d-b8913b44f773
-ms.openlocfilehash: 642115eeb61649eb369058947e5347d4389182a0
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: c84ce67225b70933e65b8f88da1eaef6b1f3de99
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57702414"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59133135"
 ---
 # <a name="how-to-change-the-appearance-of-the-windows-forms-tabcontrol"></a>방법: Windows Forms TabControl의 모양 변경
 속성을 사용 하 여 Windows Forms에서 탭의 모양을 변경할 수 있습니다 합니다 <xref:System.Windows.Forms.TabControl> 하며 <xref:System.Windows.Forms.TabPage> 컨트롤에서 개별 탭에 구성 하는 개체입니다. 이러한 속성을 설정 하면 수 탭에서 이미지를 표시, 가로로 대신 세로 탭이 표시, 탭의 여러 행을 표시 및 사용 하도록 설정 또는 탭을 프로그래밍 방식으로 사용 하지 않도록 설정 합니다.  
@@ -66,8 +66,9 @@ ms.locfileid: "57702414"
 -   설정 합니다 <xref:System.Windows.Forms.TabControl.Appearance%2A> 의 속성을 <xref:System.Windows.Forms.TabControl> 에 <xref:System.Windows.Forms.TabAppearance.Buttons> 또는 <xref:System.Windows.Forms.TabAppearance.FlatButtons>.  
   
 ## <a name="see-also"></a>참고자료
+
 - [TabControl 컨트롤](tabcontrol-control-windows-forms.md)
 - [TabControl 컨트롤 개요](tabcontrol-control-overview-windows-forms.md)
 - [방법: 탭 페이지에 컨트롤 추가](how-to-add-a-control-to-a-tab-page.md)
-- [방법: 탭 페이지를 사용 하지 않도록 설정](how-to-disable-tab-pages.md)
-- [방법: Windows Forms TabControl 사용 하 여 탭 추가 및 제거](how-to-add-and-remove-tabs-with-the-windows-forms-tabcontrol.md)
+- [방법: 탭 페이지를 사용하지 않도록 설정](how-to-disable-tab-pages.md)
+- [방법: Windows Forms TabControl을 사용하여 탭 추가 및 제거](how-to-add-and-remove-tabs-with-the-windows-forms-tabcontrol.md)

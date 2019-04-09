@@ -1,19 +1,19 @@
 ---
-title: '방법: 합성 그리기 만들기'
+title: '방법: 복합 그리기 만들기'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - drawings [WPF], composite
 - composite drawings [WPF]
 - graphics [WPF], composite drawings
 ms.assetid: 066eb0ab-5f0e-439d-85c6-dca60af269fc
-ms.openlocfilehash: ec71fb3e2f92444d33e15da38f0c88acc715c46d
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 0af7fbca593627ebe8cd102a02617a27eac50aa5
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57374143"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59132472"
 ---
-# <a name="how-to-create-a-composite-drawing"></a>방법: 합성 그리기 만들기
+# <a name="how-to-create-a-composite-drawing"></a>방법: 복합 그리기 만들기
 사용 하는 방법을 보여 주는이 예제는 <xref:System.Windows.Media.DrawingGroup> 여러 결합 하 여 복잡 한 그리기를 만들려면 <xref:System.Windows.Media.Drawing> 를 단일 합성 그리기로 개체입니다.  
   
 ## <a name="example"></a>예제  
@@ -42,6 +42,7 @@ DrawingGroup를 사용 하 여 만든 합성 그리기
  에 대 한 자세한 내용은 <xref:System.Windows.Media.Drawing> 개체를 참조 하세요 [Drawing 개체 개요](drawing-objects-overview.md)합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Windows.Media.DrawingGroup.BitmapEffect%2A>
 - <xref:System.Windows.Media.DrawingGroup.Transform%2A>
 - <xref:System.Windows.Media.DrawingGroup.OpacityMask%2A>

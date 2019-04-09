@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 348b49e5-589d-4eb2-a597-d6ff60ab52d1
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 008a61a75aa96faad801e6da8bb0f8a86f65829c
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 9fdc4441a8a11df5427badfaea95edb0abe52bde
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55288082"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59131718"
 ---
 # <a name="method-element-net-native"></a>\<메서드 > 요소 (.NET 네이티브)
 생성자 또는 메서드에 런타임 리플렉션 정책을 적용합니다.  
@@ -146,7 +146,8 @@ ms.locfileid: "55288082"
 ```  
   
 ## <a name="see-also"></a>참고자료
+
 - [런타임 지시문(rd.xml) 구성 파일 참조](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
 - [런타임 지시문 요소](../../../docs/framework/net-native/runtime-directive-elements.md)
 - [런타임 지시문 정책 설정](../../../docs/framework/net-native/runtime-directive-policy-settings.md)
-- [\<MethodInstantiation> 요소](../../../docs/framework/net-native/methodinstantiation-element-net-native.md)
+- [\<MethodInstantiation > 요소](../../../docs/framework/net-native/methodinstantiation-element-net-native.md)

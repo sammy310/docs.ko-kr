@@ -9,12 +9,12 @@ helpviewer_keywords:
 - XsdDataContractExporter class
 - XsdDataContractImporter class
 ms.assetid: 0da32b50-ccd9-463a-844c-7fe803d3bf44
-ms.openlocfilehash: 0529f112192fa64746d8c6dc7a49433b33bafbf5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9f13f9d95c40b964c5eb416c590a5d603d714bac
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54527720"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59133785"
 ---
 # <a name="schema-import-and-export"></a>스키마 가져오기 및 내보내기
 Windows Communication Foundation (WCF)는 새 serialization 엔진을 포함 합니다 <xref:System.Runtime.Serialization.DataContractSerializer>합니다. `DataContractSerializer`는 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 개체와 XML을 양방향으로 변환합니다. 자체는 serializer 외에도 WCF에는 연결 된 스키마를 가져오고 내보내는 메커니즘이 포함 되어 있습니다. *스키마* 정식, 되 고 컴퓨터가 읽을 수 있는 설명 serializer가 생성 하거나 deserializer가 액세스할 수 있는 XML의 셰이프입니다. WCF에서는 여러 타사 플랫폼과 상호 운용할 수 있는 스키마 표현으로 World Wide Web Consortium (W3C) XML 스키마 정의 언어 (XSD)를 사용 합니다.  
@@ -60,6 +60,7 @@ Windows Communication Foundation (WCF)는 새 serialization 엔진을 포함 합
  사용에 대 한 자세한 내용은 합니다 <xref:System.Runtime.Serialization.XsdDataContractExporter>를 참조 하세요 [클래스에서 스키마 내보내기](../../../../docs/framework/wcf/feature-details/exporting-schemas-from-classes.md)합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Runtime.Serialization.DataContractSerializer>
 - <xref:System.Runtime.Serialization.XsdDataContractImporter>
 - <xref:System.Runtime.Serialization.XsdDataContractExporter>

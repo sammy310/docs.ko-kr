@@ -2,12 +2,12 @@
 title: 단방향
 ms.date: 03/30/2017
 ms.assetid: 74e3e03d-cd15-4191-a6a5-1efa2dcb9e73
-ms.openlocfilehash: e4b8a805fdbe4f330496233d5234abc0169b8c6e
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
-ms.translationtype: MT
+ms.openlocfilehash: 53718b6523bb76e30233540323d5f4f87d466fed
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58826693"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59131328"
 ---
 # <a name="one-way"></a>단방향
 이 샘플에서는 단방향 서비스 작업이 있는 서비스 계약을 보여 줍니다. 클라이언트는 양방향 서비스 작업에서처럼 서비스 작업이 완료될 때까지 대기하지 않습니다. 이 샘플은 기반 합니다 [Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md) 사용 하는 `wsHttpBinding` 바인딩. 이 샘플의 서비스는 자체적으로 호스팅되는 콘솔 응용 프로그램으로서 이를 통해 요청을 수신하고 처리하는 서비스를 볼 수 있습니다. 클라이언트 역시 콘솔 응용 프로그램입니다.  
@@ -84,7 +84,7 @@ Processing Divide(22,7) - result: 3.14285714285714
 ```  
   
 > [!NOTE]
->  정의에 따라 HTTP는 요청/응답 프로토콜입니다. 요청이 수행되면 응답이 반환됩니다. 이는 HTTP를 통해 노출되는 단방향 서비스 작업에도 적용됩니다. 작업이 호출되면 서비스 작업이 실행되기 전에 서비스가 202라는 HTTP 상태 코드를 반환합니다. 이 상태 코드는 요청의 처리가 수락되었으나 아직 처리가 완료되지 않았음을 의미합니다. 작업을 호출한 클라이언트는 서비스로부터 202 응답을 받을 때까지 차단합니다. 이로 인해 세션을 사용하도록 구성된 바인딩을 통해 여러 개의 단방향 메시지가 보내질 경우 예기치 않은 동작이 발생할 수 있습니다. 이 샘플에 사용된 `wsHttpBinding` 바인딩은 기본적으로 세션을 사용하여 보안 컨텍스트를 설정하도록 구성됩니다. 기본적으로 세션의 메시지는 보내진 순서대로 도착하는 것이 보장됩니다. 그 때문에 세션에서 두 번째 메시지가 보내지면 첫 번째 메시지가 처리될 때까지 처리되지 않습니다. 그 결과 클라이언트는 어떤 메시지에 대해 이전의 메시지 처리가 완료될 때까지 202 응답을 수신하지 않습니다. 따라서 클라이언트는 후속 작업 호출 각각을 차단하는 것처럼 보입니다. 이 동작을 방지하기 위해 이 샘플에서는 각기 다른 인스턴스에 동시에 메시지를 디스패치하여 처리하도록 런타임을 구성합니다. 이 샘플은 각 메시지를 다른 인스턴스에서 처리하도록 <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A>를 `PerCall`로 설정합니다. 한 번에 한 스레드가 메시지를 디스패치하도록 <xref:System.ServiceModel.ServiceBehaviorAttribute.ConcurrencyMode%2A>를 `Multiple`로 설정합니다.  
+>  정의에 따라 HTTP는 요청/응답 프로토콜입니다. 요청이 수행되면 응답이 반환됩니다. 이는 HTTP를 통해 노출되는 단방향 서비스 작업에도 적용됩니다. 작업이 호출되면 서비스 작업이 실행되기 전에 서비스가 202라는 HTTP 상태 코드를 반환합니다. 이 상태 코드는 요청의 처리가 수락되었으나 아직 처리가 완료되지 않았음을 의미합니다. 작업을 호출한 클라이언트는 서비스로부터 202 응답을 받을 때까지 차단합니다. 이로 인해 세션을 사용하도록 구성된 바인딩을 통해 여러 개의 단방향 메시지가 보내질 경우 예기치 않은 동작이 발생할 수 있습니다. 이 샘플에 사용된 `wsHttpBinding` 바인딩은 기본적으로 세션을 사용하여 보안 컨텍스트를 설정하도록 구성됩니다. 기본적으로 세션의 메시지는 보내진 순서대로 도착하는 것이 보장됩니다. 그 때문에 세션에서 두 번째 메시지가 보내지면 첫 번째 메시지가 처리될 때까지 처리되지 않습니다. 그 결과 클라이언트는 어떤 메시지에 대해 이전의 메시지 처리가 완료될 때까지 202 응답을 수신하지 않습니다. 따라서 클라이언트는 후속 작업 호출 각각을 차단하는 것처럼 보입니다. 이 동작을 방지하기 위해 이 샘플에서는 각기 다른 인스턴스에 동시에 메시지를 디스패치하여 처리하도록 런타임을 구성합니다. 이 샘플은 각 메시지를 다른 인스턴스에서 처리하도록 <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A>를 `PerCall`로 설정합니다. <xref:System.ServiceModel.ServiceBehaviorAttribute.ConcurrencyMode%2A> 로 설정 된 `Multiple` 둘 이상의 스레드에서 한 번에 메시지를 디스패치할 수 있도록 하려면.  
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>샘플을 설치, 빌드 및 실행하려면  
   
@@ -105,4 +105,3 @@ Processing Divide(22,7) - result: 3.14285714285714
 >  이 디렉터리가 없으면로 이동 [Windows Communication Foundation (WCF) 및.NET Framework 4 용 Windows WF (Workflow Foundation) 샘플](https://go.microsoft.com/fwlink/?LinkId=150780) 모든 Windows Communication Foundation (WCF)를 다운로드 하 고 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플. 이 샘플은 다음 디렉터리에 있습니다.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Contract\Service\Oneway`  
-  

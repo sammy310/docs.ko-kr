@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - configuring services [WCF]
 ms.assetid: c9c8cd32-2c9d-4541-ad0d-16dff6bd2a00
-ms.openlocfilehash: 92c86980f3276054dbcd41c1cd796e2bc2c0df23
-ms.sourcegitcommit: af0a22a4eb11bbcd33baec49150d551955b50a16
+ms.openlocfilehash: 144d2b6732ea319ba920317601eff2ebd7b58322
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56261363"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59132576"
 ---
 # <a name="configuring-services-using-configuration-files"></a>구성 파일을 사용하여 서비스 구성
 디자인 타임에 대신 배포 지점에서 서비스 동작 데이터 및 끝점을 제공 하는 유연성을 제공 구성 파일을 사용 하 여 Windows Communication Foundation (WCF) 서비스를 구성 합니다. 이 항목에서는 사용할 수 있는 기본 기술에 대해 간략하게 설명합니다.  
@@ -263,6 +263,7 @@ ms.locfileid: "56261363"
  자식 동작 컬렉션에 부모 동작 컬렉션에 이미 있는 동작이 포함되어 있으면 자식 동작이 부모 동작을 재정의합니다. 부모 동작 컬렉션 만약 `<serviceMetadata httpGetEnabled="False" />` 자식 동작 컬렉션 했으며 `<serviceMetadata httpGetEnabled="True" />`자식 동작은 동작 컬렉션의 부모 동작을 재정의 하 고 httpGetEnabled는 "true"입니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [단순화된 구성](../../../docs/framework/wcf/simplified-configuration.md)
 - [WCF 서비스 구성](configuring-services.md)
 - [\<service>](../../../docs/framework/configure-apps/file-schema/wcf/service.md)

@@ -10,21 +10,19 @@ helpviewer_keywords:
 - typography [WPF], packaging fonts with applications
 - packaging fonts with applications [WPF]
 ms.assetid: db15ee48-4d24-49f5-8b9d-a64460865286
-ms.openlocfilehash: e66841fe72281bf0562b2ce50925a5c3a6bb9b54
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: fb91d4b413db512021b90f0d4ba3049fe7333601
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57378875"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59123800"
 ---
 # <a name="packaging-fonts-with-applications"></a>애플리케이션과 함께 글꼴 패키징
 이 항목에서는 글꼴을 패키지 하는 방법에 대 한 개요를 제공 하면 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 응용 프로그램입니다.  
   
 > [!NOTE]
 >  대부분의 소프트웨어와 마찬가지로 글꼴 파일도 판매되는 것이 아니라 사용이 허가됩니다. 글꼴 사용을 관리 하는 라이선스 다 공급 업체 하지만 일반적 글꼴 포함 하 여 대부분의 라이선스 [!INCLUDE[TLA#tla_ms#initcap](../../../../includes/tlasharptla-mssharpinitcap-md.md)] 응용 프로그램 제공 및 [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)], 글꼴 또는 응용 프로그램 내에 포함 되도록 허용 하지 않습니다 재배포 합니다. 따라서 개발자는 애플리케이션 내에 포함하거나 기타 다른 방법으로 재배포하려는 글꼴에 대해 필요한 라이선스 권한이 있는지 확인해야 합니다.  
-  
 
-  
 <a name="introduction_to_packaging_fonts"></a>   
 ## <a name="introduction-to-packaging-fonts"></a>글꼴 패키징 소개  
  내에 리소스로 글꼴을 쉽게 패키징할 수 있습니다 프로그램 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 사용자 인터페이스 텍스트 및 다른 형식의 텍스트를 표시 하는 응용 프로그램 콘텐츠를 기반으로 합니다. 글꼴은 애플리케이션의 어셈블리 파일 내에 포함하거나 별도로 저장할 수 있습니다. 리소스 전용 글꼴 라이브러리를 만들어 애플리케이션에서 이를 참조하도록 할 수도 있습니다.  
@@ -173,6 +171,7 @@ ms.locfileid: "57378875"
 -   올바르지 않은 참조가 있는 경우 애플리케이션에서는 사용 가능한 글꼴로 대체합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Windows.Documents.Typography>
 - <xref:System.Windows.Media.FontFamily>
 - [Microsoft 입력 체계: 링크, 뉴스 및 연락처](https://docs.microsoft.com/typography/)

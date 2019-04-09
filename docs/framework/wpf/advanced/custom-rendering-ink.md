@@ -9,12 +9,12 @@ helpviewer_keywords:
 - ink [WPF], custom-rendering
 - classes [WPF], InkCanvas
 ms.assetid: 65c978a7-0ee0-454f-ac7f-b1bd2efecac5
-ms.openlocfilehash: ce4c2bd48e819541d942c795307df36629ec05b9
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: MT
+ms.openlocfilehash: fead6e28949726bef46fe2be46e976fb47c3e9a3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57362632"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59125660"
 ---
 # <a name="custom-rendering-ink"></a>잉크 렌더링 사용자 지정
 합니다 <xref:System.Windows.Ink.Stroke.DrawingAttributes%2A> 스트로크의 속성을 사용 하면 해당 크기, 색 및 셰이프 등 스트로크의 모양을 지정할 수 있습니다 하지만 어떤 모양을 사용자 지정 하려는 경우가 있을 수 있습니다 <xref:System.Windows.Ink.Stroke.DrawingAttributes%2A> 허용 합니다. 에어브러시, 오일 페인트 및 다른 많은 효과가 있는 모양을 렌더링하여 잉크 모양을 사용자 지정하려는 경우도 있을 수 있습니다. 사용자 지정을 구현 하 여 잉크 렌더링 사용자 지정 하는 Windows Presentation Foundation (WPF) 허용 <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> 고 <xref:System.Windows.Ink.Stroke> 개체입니다.  
@@ -92,4 +92,5 @@ ms.locfileid: "57362632"
  직접 파생 시켜 잉크 모양을 사용자 지정할 수 있습니다 <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer>하십시오 <xref:System.Windows.Ink.Stroke>, 및 <xref:System.Windows.Controls.InkCanvas> 클래스입니다. 이와 함께 이러한 클래스는 사용자가 스트로크를 그릴 때와 스트로크가 수집된 후의 모양이 일관되도록 합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [고급 잉크 처리](advanced-ink-handling.md)

@@ -1,5 +1,5 @@
 ---
-title: DacpModuleData 구조
+title: DacpModuleData 구조체
 ms.date: 02/01/2019
 api.name:
 - DacpModuleData Structure
@@ -15,14 +15,14 @@ topic_type:
 - apiref
 author: hoyosjs
 ms.author: juhoyosa
-ms.openlocfilehash: db3fdaa768e3d1b445f08c3964521570631f0965
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.openlocfilehash: 752d87c5f4a6b8d854a06be8962ee754cdd4622d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55828668"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59132008"
 ---
-# <a name="dacpmoduledata-structure"></a>DacpModuleData 구조
+# <a name="dacpmoduledata-structure"></a>DacpModuleData 구조체
 
 모듈의 런타임 정보에 대 한 전송 버퍼를 정의합니다.
 
@@ -49,7 +49,6 @@ struct DacpModuleData
 | `ilBase`  | 로드 된 이미지의 주소의 기본입니다.                                 |
 | `payLoad` | 런타임에서 사용 되는 추가 모듈 정보에 대 한 페이로드 버퍼입니다. |
 
-
 ## <a name="remarks"></a>설명
 
 이 구조는 런타임 내에서 있으며 모든 헤더 또는 라이브러리 파일을 통해 노출 되지 않습니다. 를 사용 하려면 위에서 지정한 대로 구조를 정의 합니다.
@@ -61,5 +60,6 @@ struct DacpModuleData
 **.NET Framework 버전:** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
 
 ## <a name="see-also"></a>참고자료
+
 - [디버깅](../../../../docs/framework/unmanaged-api/debugging/index.md)
 - [디버깅 구조체](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)
