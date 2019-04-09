@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 39b2ef5f98529cf9fa4dac9d78763e2cad7251a9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7a94673b4be4d15edaaf54c22f90723216c8bc10
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54724962"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59141299"
 ---
-# <a name="icorthreadpoolcorregisterwaitforsingleobject-method"></a><span data-ttu-id="17864-102">ICorThreadpool::CorRegisterWaitForSingleObject 메서드</span><span class="sxs-lookup"><span data-stu-id="17864-102">ICorThreadpool::CorRegisterWaitForSingleObject Method</span></span>
-<span data-ttu-id="17864-103">이 메서드는 .NET Framework 인프라를 지원하며 사용자 코드에서 직접 사용할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="17864-103">This method supports the .NET Framework infrastructure and is not intended to be used directly from your code.</span></span>  
+# <a name="icorthreadpoolcorregisterwaitforsingleobject-method"></a><span data-ttu-id="0a1c6-102">ICorThreadpool::CorRegisterWaitForSingleObject 메서드</span><span class="sxs-lookup"><span data-stu-id="0a1c6-102">ICorThreadpool::CorRegisterWaitForSingleObject Method</span></span>
+<span data-ttu-id="0a1c6-103">이 메서드는 .NET Framework 인프라를 지원하며 사용자 코드에서 직접 사용할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="0a1c6-103">This method supports the .NET Framework infrastructure and is not intended to be used directly from your code.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="17864-104">구문</span><span class="sxs-lookup"><span data-stu-id="17864-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="0a1c6-104">구문</span><span class="sxs-lookup"><span data-stu-id="0a1c6-104">Syntax</span></span>  
   
 ```  
 HRESULT CorRegisterWaitForSingleObject (  
@@ -41,14 +41,15 @@ HRESULT CorRegisterWaitForSingleObject (
 );  
 ```  
   
-## <a name="requirements"></a><span data-ttu-id="17864-105">요구 사항</span><span class="sxs-lookup"><span data-stu-id="17864-105">Requirements</span></span>  
- <span data-ttu-id="17864-106">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="17864-106">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="0a1c6-105">요구 사항</span><span class="sxs-lookup"><span data-stu-id="0a1c6-105">Requirements</span></span>  
+ <span data-ttu-id="0a1c6-106">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="0a1c6-106">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="17864-107">**헤더:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="17864-107">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="0a1c6-107">**헤더:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="0a1c6-107">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="17864-108">**라이브러리:** MSCorEE.dll에 리소스로 포함</span><span class="sxs-lookup"><span data-stu-id="17864-108">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="0a1c6-108">**라이브러리:** MSCorEE.dll에 리소스로 포함</span><span class="sxs-lookup"><span data-stu-id="0a1c6-108">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="17864-109">**.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="17864-109">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ **<span data-ttu-id="0a1c6-109">.NET Framework 버전:</span><span class="sxs-lookup"><span data-stu-id="0a1c6-109">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="17864-110">참고자료</span><span class="sxs-lookup"><span data-stu-id="17864-110">See also</span></span>
-- [<span data-ttu-id="17864-111">ICorThreadpool 인터페이스</span><span class="sxs-lookup"><span data-stu-id="17864-111">ICorThreadpool Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/icorthreadpool-interface.md)
+## <a name="see-also"></a><span data-ttu-id="0a1c6-110">참고자료</span><span class="sxs-lookup"><span data-stu-id="0a1c6-110">See also</span></span>
+
+- [<span data-ttu-id="0a1c6-111">ICorThreadpool 인터페이스</span><span class="sxs-lookup"><span data-stu-id="0a1c6-111">ICorThreadpool Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/icorthreadpool-interface.md)

@@ -7,19 +7,20 @@ helpviewer_keywords:
 - controls [WPF], FlowDocumentReader
 - FlowDocumentReader control [WPF]
 ms.assetid: ba7aaa70-f77b-4555-a79d-68a12c8e134b
-ms.openlocfilehash: a0d7adc127c593176ec7b60bf55a8f903c8b6ab7
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: d8201eeceeb39ffea888849eba32e77ee7c25ece
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57364088"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59138192"
 ---
-# <a name="flowdocumentreader"></a><span data-ttu-id="e878e-102">FlowDocumentReader</span><span class="sxs-lookup"><span data-stu-id="e878e-102">FlowDocumentReader</span></span>
-<span data-ttu-id="e878e-103">합니다 <xref:System.Windows.Controls.FlowDocumentReader> 컨트롤은 보기 데 <xref:System.Windows.Documents.FlowDocument> 콘텐츠입니다.</span><span class="sxs-lookup"><span data-stu-id="e878e-103">The <xref:System.Windows.Controls.FlowDocumentReader> control is used to view <xref:System.Windows.Documents.FlowDocument> content.</span></span> <span data-ttu-id="e878e-104">여러 표시 모드를 지원합니다.</span><span class="sxs-lookup"><span data-stu-id="e878e-104">It supports multiple viewing modes.</span></span>  
+# <a name="flowdocumentreader"></a><span data-ttu-id="d177a-102">FlowDocumentReader</span><span class="sxs-lookup"><span data-stu-id="d177a-102">FlowDocumentReader</span></span>
+<span data-ttu-id="d177a-103">합니다 <xref:System.Windows.Controls.FlowDocumentReader> 컨트롤은 보기 데 <xref:System.Windows.Documents.FlowDocument> 콘텐츠입니다.</span><span class="sxs-lookup"><span data-stu-id="d177a-103">The <xref:System.Windows.Controls.FlowDocumentReader> control is used to view <xref:System.Windows.Documents.FlowDocument> content.</span></span> <span data-ttu-id="d177a-104">여러 표시 모드를 지원합니다.</span><span class="sxs-lookup"><span data-stu-id="d177a-104">It supports multiple viewing modes.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="e878e-105">참고자료</span><span class="sxs-lookup"><span data-stu-id="e878e-105">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="d177a-105">참고자료</span><span class="sxs-lookup"><span data-stu-id="d177a-105">See also</span></span>
+
 - <xref:System.Windows.Controls.FlowDocumentReader>
 - <xref:System.Windows.Controls.FlowDocumentPageViewer>
 - <xref:System.Windows.Controls.FlowDocumentScrollViewer>
-- [<span data-ttu-id="e878e-106">WPF의 문서</span><span class="sxs-lookup"><span data-stu-id="e878e-106">Documents in WPF</span></span>](../advanced/documents-in-wpf.md)
-- [<span data-ttu-id="e878e-107">유동 문서 개요</span><span class="sxs-lookup"><span data-stu-id="e878e-107">Flow Document Overview</span></span>](../advanced/flow-document-overview.md)
+- [<span data-ttu-id="d177a-106">WPF의 문서</span><span class="sxs-lookup"><span data-stu-id="d177a-106">Documents in WPF</span></span>](../advanced/documents-in-wpf.md)
+- [<span data-ttu-id="d177a-107">유동 문서 개요</span><span class="sxs-lookup"><span data-stu-id="d177a-107">Flow Document Overview</span></span>](../advanced/flow-document-overview.md)
