@@ -10,30 +10,31 @@ api_type:
 ms.assetid: 6f2bb148-1e2b-4e45-a5a5-0ceddc40064b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 53120508c4810270747f749f1adfbae6ba800404
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: febe130b4d61b6179aeab3bfcd63891c38b13fbe
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54567895"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59128936"
 ---
-# <a name="icorprofilerinfo6-interface"></a><span data-ttu-id="3fbe9-102">ICorProfilerInfo6 인터페이스</span><span class="sxs-lookup"><span data-stu-id="3fbe9-102">ICorProfilerInfo6 Interface</span></span>
-<span data-ttu-id="3fbe9-103">[.NET Framework 4.6 및 이상 버전에서 지원 됨]</span><span class="sxs-lookup"><span data-stu-id="3fbe9-103">[Supported in the .NET Framework 4.6 and later versions]</span></span>  
+# <a name="icorprofilerinfo6-interface"></a><span data-ttu-id="8aa99-102">ICorProfilerInfo6 인터페이스</span><span class="sxs-lookup"><span data-stu-id="8aa99-102">ICorProfilerInfo6 Interface</span></span>
+<span data-ttu-id="8aa99-103">[.NET Framework 4.6 및 이상 버전에서 지원 됨]</span><span class="sxs-lookup"><span data-stu-id="8aa99-103">[Supported in the .NET Framework 4.6 and later versions]</span></span>  
   
- <span data-ttu-id="3fbe9-104">서브 클래스 [ICorProfilerInfo5](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo5-interface.md) 인라인 지정된 메서드를 지정 된 NGen 모듈에 정의 된 모든 메서드에 대 한 열거자를 제공 하는 합니다.</span><span class="sxs-lookup"><span data-stu-id="3fbe9-104">A subclass of [ICorProfilerInfo5](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo5-interface.md) that provides an enumerator for all methods that are defined in a given NGen module and inline a given method.</span></span>  
+ <span data-ttu-id="8aa99-104">서브 클래스 [ICorProfilerInfo5](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo5-interface.md) 인라인 지정된 메서드를 지정 된 NGen 모듈에 정의 된 모든 메서드에 대 한 열거자를 제공 하는 합니다.</span><span class="sxs-lookup"><span data-stu-id="8aa99-104">A subclass of [ICorProfilerInfo5](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo5-interface.md) that provides an enumerator for all methods that are defined in a given NGen module and inline a given method.</span></span>  
   
-## <a name="methods"></a><span data-ttu-id="3fbe9-105">메서드</span><span class="sxs-lookup"><span data-stu-id="3fbe9-105">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="8aa99-105">메서드</span><span class="sxs-lookup"><span data-stu-id="8aa99-105">Methods</span></span>  
   
-|<span data-ttu-id="3fbe9-106">메서드</span><span class="sxs-lookup"><span data-stu-id="3fbe9-106">Method</span></span>|<span data-ttu-id="3fbe9-107">설명</span><span class="sxs-lookup"><span data-stu-id="3fbe9-107">Description</span></span>|  
+|<span data-ttu-id="8aa99-106">메서드</span><span class="sxs-lookup"><span data-stu-id="8aa99-106">Method</span></span>|<span data-ttu-id="8aa99-107">설명</span><span class="sxs-lookup"><span data-stu-id="8aa99-107">Description</span></span>|  
 |------------|-----------------|  
-|[<span data-ttu-id="3fbe9-108">ICorProfilerInfo6::EnumNgenModuleMethodsInliningThisMethod 메서드</span><span class="sxs-lookup"><span data-stu-id="3fbe9-108">ICorProfilerInfo6::EnumNgenModuleMethodsInliningThisMethod Method</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo6-enumngenmodulemethodsinliningthismethod-method.md)|<span data-ttu-id="3fbe9-109">지정 된 NGen 모듈에 속하고 지정 된 메서드의 본문에 인라인 처리 되지 않은 모든 메서드에 대 한 열거자를 반환 합니다.</span><span class="sxs-lookup"><span data-stu-id="3fbe9-109">Returns an enumerator for all methods that belong to a given NGen module and that are inlined in the body of a given method.</span></span>|  
+|[<span data-ttu-id="8aa99-108">ICorProfilerInfo6::EnumNgenModuleMethodsInliningThisMethod 메서드</span><span class="sxs-lookup"><span data-stu-id="8aa99-108">ICorProfilerInfo6::EnumNgenModuleMethodsInliningThisMethod Method</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo6-enumngenmodulemethodsinliningthismethod-method.md)|<span data-ttu-id="8aa99-109">지정 된 NGen 모듈에 속하고 지정 된 메서드의 본문에 인라인 처리 되지 않은 모든 메서드에 대 한 열거자를 반환 합니다.</span><span class="sxs-lookup"><span data-stu-id="8aa99-109">Returns an enumerator for all methods that belong to a given NGen module and that are inlined in the body of a given method.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="3fbe9-110">요구 사항</span><span class="sxs-lookup"><span data-stu-id="3fbe9-110">Requirements</span></span>  
- <span data-ttu-id="3fbe9-111">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="3fbe9-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="8aa99-110">요구 사항</span><span class="sxs-lookup"><span data-stu-id="8aa99-110">Requirements</span></span>  
+ <span data-ttu-id="8aa99-111">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="8aa99-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="3fbe9-112">**헤더:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="3fbe9-112">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="8aa99-112">**헤더:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="8aa99-112">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="3fbe9-113">**.NET Framework 버전:** [!INCLUDE[net_current_v46plus](../../../../includes/net-current-v46plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="3fbe9-113">**.NET Framework Versions:** [!INCLUDE[net_current_v46plus](../../../../includes/net-current-v46plus-md.md)]</span></span>  
+ **<span data-ttu-id="8aa99-113">.NET Framework 버전:</span><span class="sxs-lookup"><span data-stu-id="8aa99-113">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v46plus](../../../../includes/net-current-v46plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="3fbe9-114">참고자료</span><span class="sxs-lookup"><span data-stu-id="3fbe9-114">See also</span></span>
-- [<span data-ttu-id="3fbe9-115">프로파일링 인터페이스</span><span class="sxs-lookup"><span data-stu-id="3fbe9-115">Profiling Interfaces</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
+## <a name="see-also"></a><span data-ttu-id="8aa99-114">참고자료</span><span class="sxs-lookup"><span data-stu-id="8aa99-114">See also</span></span>
+
+- [<span data-ttu-id="8aa99-115">프로파일링 인터페이스</span><span class="sxs-lookup"><span data-stu-id="8aa99-115">Profiling Interfaces</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
