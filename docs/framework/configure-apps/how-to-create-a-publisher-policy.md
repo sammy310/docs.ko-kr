@@ -7,23 +7,23 @@ helpviewer_keywords:
 - GAC (global assembly cache), publisher policy assembly
 - global assembly cache, publisher policy assembly
 ms.assetid: 8046bc5d-2fa9-4277-8a5e-6dcc96c281d9
-ms.openlocfilehash: ed73b9c15d5d9279b97063077f210d3ac5dc68e4
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: ce2df9d4cea601652ebde2032758137b01faacdc
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59227394"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59344665"
 ---
 # <a name="how-to-create-a-publisher-policy"></a>방법: 게시자 정책 만들기
 어셈블리 공급 업체는 응용 프로그램 업그레이드 된 어셈블리를 사용 하 여 게시자 정책 파일을 포함 하 여 최신 버전의 어셈블리를 사용할지는 상태 수입니다. 게시자 정책 파일 어셈블리 리디렉션 및 코드 베이스 설정을 지정 하 고 응용 프로그램 구성 파일로 동일한 형식을 사용 합니다. 게시자 정책 파일을 어셈블리로 컴파일되고 전역 어셈블리 캐시에 배치 됩니다.  
   
  게시자 정책 만들기와 관련 된 세 가지 단계는:  
   
-1.  게시자 정책 파일을 만듭니다.  
+1. 게시자 정책 파일을 만듭니다.  
   
-2.  게시자 정책 어셈블리를 만듭니다.  
+2. 게시자 정책 어셈블리를 만듭니다.  
   
-3.  게시자 정책 어셈블리를 전역 어셈블리 캐시에 추가 합니다.  
+3. 게시자 정책 어셈블리를 전역 어셈블리 캐시에 추가 합니다.  
   
  게시자 정책에 대 한 스키마에 설명 되어 [어셈블리 버전 리디렉션](../../../docs/framework/configure-apps/redirect-assembly-versions.md)합니다. 다음 예제에서는 게시자 정책 파일 버전으로 리디렉션하는 `myAssembly` 다른 합니다.  
   
@@ -51,7 +51,7 @@ ms.locfileid: "59227394"
   
 #### <a name="to-create-a-publisher-policy-assembly"></a>게시자 정책 어셈블리를 만들려면  
   
-1.  명령 프롬프트에서 다음 명령을 입력 합니다.  
+1. 명령 프롬프트에서 다음 명령을 입력 합니다.  
   
      **al /link:** *publisherPolicyFile* **/out:** *publisherPolicyAssemblyFile* **/keyfile:** *keyPairFile* **/platform:** *processorArchitecture*  
   
@@ -87,7 +87,7 @@ ms.locfileid: "59227394"
   
 #### <a name="to-add-the-publisher-policy-assembly-to-the-global-assembly-cache"></a>게시자 정책 어셈블리를 전역 어셈블리 캐시에 추가 하려면  
   
-1.  명령 프롬프트에서 다음 명령을 입력 합니다.  
+1. 명령 프롬프트에서 다음 명령을 입력 합니다.  
   
      **gacutil /i**  *publisherPolicyAssemblyFile*  
   

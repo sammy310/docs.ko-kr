@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - security [WCF], providing credentials
 ms.assetid: db8cb478-aa43-478b-bf97-c6489ad7c7fd
-ms.openlocfilehash: dd9b53b50f76ec80232a5fb8624e2b1701f9760d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 1677d44faf6901eb1eda93a9374636b7caa558a0
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59140168"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59346030"
 ---
 # <a name="how-to-create-a-custom-security-token-provider"></a>방법: 사용자 지정 보안 토큰 공급 기업 만들기
 이 항목에서는 사용자 지정 보안 토큰 공급자를 사용하여 새 토큰 형식을 만드는 방법과 공급자를 사용자 지정 보안 토큰 관리자와 통합하는 방법에 대해 설명합니다.  
@@ -26,22 +26,22 @@ ms.locfileid: "59140168"
   
 ### <a name="to-create-a-custom-security-token-provider"></a>사용자 지정 보안 토큰 공급자를 만들려면  
   
-1.  <xref:System.IdentityModel.Selectors.SecurityTokenProvider> 클래스에서 파생된 새 클래스를 정의합니다.  
+1. <xref:System.IdentityModel.Selectors.SecurityTokenProvider> 클래스에서 파생된 새 클래스를 정의합니다.  
   
-2.  <xref:System.IdentityModel.Selectors.SecurityTokenProvider.GetTokenCore%28System.TimeSpan%29> 메서드를 구현합니다. 이 메서드는 보안 토큰의 인스턴스를 만들고 반환합니다. 다음 예제에서는 `MySecurityTokenProvider`라는 클래스를 만들고, <xref:System.IdentityModel.Selectors.SecurityTokenProvider.GetTokenCore%28System.TimeSpan%29> 메서드를 재정의하여 <xref:System.IdentityModel.Tokens.X509SecurityToken> 클래스의 인스턴스를 반환합니다. 클래스 생성자에 <xref:System.Security.Cryptography.X509Certificates.X509Certificate2> 클래스의 인스턴스가 필요합니다.  
+2. <xref:System.IdentityModel.Selectors.SecurityTokenProvider.GetTokenCore%28System.TimeSpan%29> 메서드를 구현합니다. 이 메서드는 보안 토큰의 인스턴스를 만들고 반환합니다. 다음 예제에서는 `MySecurityTokenProvider`라는 클래스를 만들고, <xref:System.IdentityModel.Selectors.SecurityTokenProvider.GetTokenCore%28System.TimeSpan%29> 메서드를 재정의하여 <xref:System.IdentityModel.Tokens.X509SecurityToken> 클래스의 인스턴스를 반환합니다. 클래스 생성자에 <xref:System.Security.Cryptography.X509Certificates.X509Certificate2> 클래스의 인스턴스가 필요합니다.  
   
      [!code-csharp[c_CustomTokenProvider#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customtokenprovider/cs/source.cs#1)]
      [!code-vb[c_CustomTokenProvider#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customtokenprovider/vb/source.vb#1)]  
   
 ### <a name="to-integrate-a-custom-security-token-provider-with-a-custom-security-token-manager"></a>사용자 지정 보안 토큰 공급자를 사용자 지정 보안 토큰 관리자와 통합하려면  
   
-1.  <xref:System.IdentityModel.Selectors.SecurityTokenManager> 클래스에서 파생된 새 클래스를 정의합니다. 아래 예제는 <xref:System.ServiceModel.ClientCredentialsSecurityTokenManager> 클래스에서 파생된 <xref:System.IdentityModel.Selectors.SecurityTokenManager> 클래스에서 파생됩니다.  
+1. <xref:System.IdentityModel.Selectors.SecurityTokenManager> 클래스에서 파생된 새 클래스를 정의합니다. 아래 예제는 <xref:System.ServiceModel.ClientCredentialsSecurityTokenManager> 클래스에서 파생된 <xref:System.IdentityModel.Selectors.SecurityTokenManager> 클래스에서 파생됩니다.  
   
-2.  아직 재정의되지 않은 경우 <xref:System.IdentityModel.Selectors.SecurityTokenManager.CreateSecurityTokenProvider%28System.IdentityModel.Selectors.SecurityTokenRequirement%29> 메서드를 재정의합니다.  
+2. 아직 재정의되지 않은 경우 <xref:System.IdentityModel.Selectors.SecurityTokenManager.CreateSecurityTokenProvider%28System.IdentityModel.Selectors.SecurityTokenRequirement%29> 메서드를 재정의합니다.  
   
      <xref:System.IdentityModel.Selectors.SecurityTokenManager.CreateSecurityTokenProvider%28System.IdentityModel.Selectors.SecurityTokenRequirement%29> 메서드는의 인스턴스를 반환 하는 일을 담당 합니다 <xref:System.IdentityModel.Selectors.SecurityTokenProvider> 클래스에 적절 한를 <xref:System.IdentityModel.Selectors.SecurityTokenRequirement> WCF 보안 프레임 워크에서 매개 변수가 메서드에 전달 합니다. 적절한 보안 토큰 매개 변수를 사용하여 메서드를 호출할 때 이전 절차에서 만든 사용자 지정 보안 토큰 공급자 구현을 반환하도록 메서드를 수정합니다. 보안 토큰 관리자에 대 한 자세한 내용은 참조는 [연습: 사용자 지정 클라이언트 및 서비스 자격 증명 만들기](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md)합니다.  
   
-3.  메서드에 논리를 추가하여 <xref:System.IdentityModel.Selectors.SecurityTokenRequirement> 매개 변수를 기반으로 사용자 지정 보안 토큰 공급자를 반환할 수 있도록 합니다. 다음 예제에서는 토큰 요구 사항에 맞을 경우 사용자 지정 보안 토큰 공급자를 반환합니다. 요구 사항에는 X.509 보안 토큰 및 토큰이 메시지 출력에 사용되는 메시지 방향이 포함됩니다. 다른 모든 경우에서 코드는 기본 클래스를 호출하여 다른 보안 토큰 요구 사항에 대한 시스템 제공 동작을 유지 관리합니다.  
+3. 메서드에 논리를 추가하여 <xref:System.IdentityModel.Selectors.SecurityTokenRequirement> 매개 변수를 기반으로 사용자 지정 보안 토큰 공급자를 반환할 수 있도록 합니다. 다음 예제에서는 토큰 요구 사항에 맞을 경우 사용자 지정 보안 토큰 공급자를 반환합니다. 요구 사항에는 X.509 보안 토큰 및 토큰이 메시지 출력에 사용되는 메시지 방향이 포함됩니다. 다른 모든 경우에서 코드는 기본 클래스를 호출하여 다른 보안 토큰 요구 사항에 대한 시스템 제공 동작을 유지 관리합니다.  
   
  [!code-csharp[c_CustomTokenProvider#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customtokenprovider/cs/source.cs#2)]
  [!code-vb[c_CustomTokenProvider#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customtokenprovider/vb/source.vb#2)]  

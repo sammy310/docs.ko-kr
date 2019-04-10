@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: a2b5c90f-6cc3-4128-bfab-1db488d5af26
-ms.openlocfilehash: 84ef85b1e53d97ff468c3360af5e394a0e4ad776
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: e40866c5160d6850b39133050d09026f5ffd6cc5
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59091202"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59344180"
 ---
 # <a name="how-to-update-rows-in-the-database"></a>방법: 데이터베이스에서 행 업데이트
 연결 된 개체의 멤버 값을 수정 하 여 데이터베이스의 행을 업데이트할 수 있습니다 합니다 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] <xref:System.Data.Linq.Table%601> 컬렉션과 다음 데이터베이스에 변경 내용을 제출 합니다. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 변경 내용을 적절 한 SQL에 변환 `UPDATE` 명령입니다.  
@@ -24,11 +24,11 @@ ms.locfileid: "59091202"
   
 ### <a name="to-update-a-row-in-the-database"></a>데이터베이스의 행을 업데이트하려면  
   
-1.  업데이트할 행에 대한 데이터베이스를 쿼리합니다.  
+1. 업데이트할 행에 대한 데이터베이스를 쿼리합니다.  
   
-2.  결과 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 개체의 멤버 값에 대해 필요한 사항을 변경을 합니다.  
+2. 결과 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 개체의 멤버 값에 대해 필요한 사항을 변경을 합니다.  
   
-3.  데이터베이스에 변경 내용을 전송합니다.  
+3. 데이터베이스에 변경 내용을 전송합니다.  
   
 ## <a name="example"></a>예제  
  다음 예제에서는 주문 #11000에 대한 데이터베이스를 쿼리한 다음 결과 `ShipName` 개체의 `ShipVia`과 `Order`에 대한 값을 변경합니다. 마지막으로 이러한 멤버 값의 변경 내용을 `ShipName`과 `ShipVia` 열의 변경 내용으로 데이터베이스에 전송합니다.  

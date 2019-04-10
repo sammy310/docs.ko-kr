@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Clipboard [Windows Forms], pasting
 - Clipboard [Windows Forms], getting data from
 ms.assetid: 1047d2fe-1235-46db-aad9-563aea1d743b
-ms.openlocfilehash: 0ffe87d55f7325f77bd33bdbf5d5fbab9f321f93
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: f4399d8548eff76aaa4effae6da7239cd3b0284b
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59203329"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59343716"
 ---
 # <a name="how-to-send-data-to-the-active-mdi-child"></a>방법: 활성 MDI 자식으로 데이터 보내기
 컨텍스트 내에서 종종 [다중 문서 MDI (인터페이스) 응용 프로그램](multiple-document-interface-mdi-applications.md), 사용자 데이터를 클립보드에서 MDI 응용 프로그램에 붙여 넣는 같은 활성 자식 창에 데이터를 전송 해야 합니다.  
@@ -25,7 +25,7 @@ ms.locfileid: "59203329"
   
 ### <a name="to-send-data-to-the-active-mdi-child-window-from-the-clipboard"></a>클립보드에서 활성 MDI 자식 창에 데이터를 보내도록  
   
-1.  메서드를 활성 자식 폼의 활성 컨트롤을 클립보드에 텍스트를 복사 합니다.  
+1. 메서드를 활성 자식 폼의 활성 컨트롤을 클립보드에 텍스트를 복사 합니다.  
   
     > [!NOTE]
     >  이 예제에서는 가정 MDI 부모 폼 (`Form1`) 포함 된 하나 이상의 MDI 자식 창에 있는 <xref:System.Windows.Forms.RichTextBox> 제어 합니다. 자세한 내용은 [MDI 부모 폼 만들기](how-to-create-mdi-parent-forms.md)합니다.  

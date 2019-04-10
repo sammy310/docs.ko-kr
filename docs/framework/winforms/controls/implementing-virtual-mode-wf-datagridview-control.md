@@ -12,12 +12,12 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], large data sets
 - walkthroughs [Windows Forms], DataGridView control
 ms.assetid: 74eb5276-5ab8-4ce0-8005-dae751d85f7c
-ms.openlocfilehash: 7509e2f5035cb05c20af379f9f6a141177d540d4
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 7f6bf1703a6536f4d22b3a2fbe412579c59d39dd
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59127051"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59344327"
 ---
 # <a name="walkthrough-implementing-virtual-mode-in-the-windows-forms-datagridview-control"></a>연습: Windows Forms DataGridView 컨트롤에서 가상 모드 구현
 매우 많은 양의의 표 형식 데이터를 표시 하려는 경우는 <xref:System.Windows.Forms.DataGridView> 컨트롤을 설정할 수 있습니다 합니다 <xref:System.Windows.Forms.DataGridView.VirtualMode%2A> 속성을 `true` 명시적으로 해당 데이터 저장소를 사용 하 여 컨트롤의 상호 작용을 관리 합니다. 이렇게 하면이 상황에서 컨트롤의 성능을 미세 조정할 수 있습니다.  
@@ -30,7 +30,7 @@ ms.locfileid: "59127051"
   
 #### <a name="to-implement-virtual-mode"></a>가상 모드 구현  
   
-1.  파생 되는 클래스를 만듭니다 <xref:System.Windows.Forms.Form> 개와 <xref:System.Windows.Forms.DataGridView> 제어 합니다.  
+1. 파생 되는 클래스를 만듭니다 <xref:System.Windows.Forms.Form> 개와 <xref:System.Windows.Forms.DataGridView> 제어 합니다.  
   
      다음 코드는 몇 가지 기본 초기화를 포함합니다. 이후 단계에서 사용할 몇 가지 변수 선언, 제공을 `Main` 메서드를 클래스 생성자에서 간단한 폼 레이아웃을 제공 합니다.  
   
@@ -41,13 +41,13 @@ ms.locfileid: "59127051"
     [!code-csharp[System.Windows.Forms.DataGridView.VirtualMode#002](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.VirtualMode/CS/virtualmode.cs#002)]
     [!code-vb[System.Windows.Forms.DataGridView.VirtualMode#002](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.VirtualMode/VB/virtualmode.vb#002)]  
   
-2.  폼의 처리기를 구현 <xref:System.Windows.Forms.Form.Load> 초기화 하는 이벤트를 <xref:System.Windows.Forms.DataGridView> 제어 하 고 샘플 값을 사용 하 여 데이터 저장소를 채웁니다.  
+2. 폼의 처리기를 구현 <xref:System.Windows.Forms.Form.Load> 초기화 하는 이벤트를 <xref:System.Windows.Forms.DataGridView> 제어 하 고 샘플 값을 사용 하 여 데이터 저장소를 채웁니다.  
   
      [!code-cpp[System.Windows.Forms.DataGridView.VirtualMode#110](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.VirtualMode/CPP/virtualmode.cpp#110)]
      [!code-csharp[System.Windows.Forms.DataGridView.VirtualMode#110](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.VirtualMode/CS/virtualmode.cs#110)]
      [!code-vb[System.Windows.Forms.DataGridView.VirtualMode#110](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.VirtualMode/VB/virtualmode.vb#110)]  
   
-3.  에 대 한 처리기를 구현 합니다 <xref:System.Windows.Forms.DataGridView.CellValueNeeded> 데이터 저장소에서 요청된 된 셀 값을 검색 하는 이벤트 또는 `Customer` 편집에서 현재 개체입니다.  
+3. 에 대 한 처리기를 구현 합니다 <xref:System.Windows.Forms.DataGridView.CellValueNeeded> 데이터 저장소에서 요청된 된 셀 값을 검색 하는 이벤트 또는 `Customer` 편집에서 현재 개체입니다.  
   
      이 이벤트가 발생할 때마다는 <xref:System.Windows.Forms.DataGridView> 셀 그리기를 제어 해야 합니다.  
   
@@ -55,13 +55,13 @@ ms.locfileid: "59127051"
      [!code-csharp[System.Windows.Forms.DataGridView.VirtualMode#120](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.VirtualMode/CS/virtualmode.cs#120)]
      [!code-vb[System.Windows.Forms.DataGridView.VirtualMode#120](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.VirtualMode/VB/virtualmode.vb#120)]  
   
-4.  에 대 한 처리기를 구현 합니다 <xref:System.Windows.Forms.DataGridView.CellValuePushed> 에서 편집된 셀 값을 저장 하는 이벤트를 `Customer` 편집된 된 행을 나타내는 개체입니다. 이 이벤트는 사용자 커밋 셀 값이 변경 될 때마다 발생 합니다.  
+4. 에 대 한 처리기를 구현 합니다 <xref:System.Windows.Forms.DataGridView.CellValuePushed> 에서 편집된 셀 값을 저장 하는 이벤트를 `Customer` 편집된 된 행을 나타내는 개체입니다. 이 이벤트는 사용자 커밋 셀 값이 변경 될 때마다 발생 합니다.  
   
      [!code-cpp[System.Windows.Forms.DataGridView.VirtualMode#130](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.VirtualMode/CPP/virtualmode.cpp#130)]
      [!code-csharp[System.Windows.Forms.DataGridView.VirtualMode#130](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.VirtualMode/CS/virtualmode.cs#130)]
      [!code-vb[System.Windows.Forms.DataGridView.VirtualMode#130](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.VirtualMode/VB/virtualmode.vb#130)]  
   
-5.  에 대 한 처리기를 구현 합니다 <xref:System.Windows.Forms.DataGridView.NewRowNeeded> 새로 만든 이벤트 `Customer` 새로 만든된 행을 나타내는 개체입니다.  
+5. 에 대 한 처리기를 구현 합니다 <xref:System.Windows.Forms.DataGridView.NewRowNeeded> 새로 만든 이벤트 `Customer` 새로 만든된 행을 나타내는 개체입니다.  
   
      이 이벤트는 사용자가 새 레코드에 대 한 행을 입력할 때마다 발생 합니다.  
   
@@ -69,7 +69,7 @@ ms.locfileid: "59127051"
      [!code-csharp[System.Windows.Forms.DataGridView.VirtualMode#140](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.VirtualMode/CS/virtualmode.cs#140)]
      [!code-vb[System.Windows.Forms.DataGridView.VirtualMode#140](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.VirtualMode/VB/virtualmode.vb#140)]  
   
-6.  에 대 한 처리기를 구현 합니다 <xref:System.Windows.Forms.DataGridView.RowValidated> 데이터 저장소로 새롭거나 수정 된 행을 저장 하는 이벤트입니다.  
+6. 에 대 한 처리기를 구현 합니다 <xref:System.Windows.Forms.DataGridView.RowValidated> 데이터 저장소로 새롭거나 수정 된 행을 저장 하는 이벤트입니다.  
   
      이 이벤트는 사용자는 현재 행이 변경 될 때마다 발생 합니다.  
   
@@ -77,7 +77,7 @@ ms.locfileid: "59127051"
      [!code-csharp[System.Windows.Forms.DataGridView.VirtualMode#150](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.VirtualMode/CS/virtualmode.cs#150)]
      [!code-vb[System.Windows.Forms.DataGridView.VirtualMode#150](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.VirtualMode/VB/virtualmode.vb#150)]  
   
-7.  에 대 한 처리기를 구현 합니다 <xref:System.Windows.Forms.DataGridView.RowDirtyStateNeeded> 나타내는 이벤트 여부를 <xref:System.Windows.Forms.DataGridView.CancelRowEdit> 사용자 행의 편집 모드에 두 번 또는 한 번 편집 모드 외부 ESC 키를 눌러 신호를 보낼 때 이벤트가 발생 하는 합니다.  
+7. 에 대 한 처리기를 구현 합니다 <xref:System.Windows.Forms.DataGridView.RowDirtyStateNeeded> 나타내는 이벤트 여부를 <xref:System.Windows.Forms.DataGridView.CancelRowEdit> 사용자 행의 편집 모드에 두 번 또는 한 번 편집 모드 외부 ESC 키를 눌러 신호를 보낼 때 이벤트가 발생 하는 합니다.  
   
      기본적으로 <xref:System.Windows.Forms.DataGridView.CancelRowEdit> 경우가 아니면 수정 된 현재 행에서 셀 있을 때 행의 버전을 변경 시 발생 합니다 <xref:System.Windows.Forms.QuestionEventArgs.Response%2A?displayProperty=nameWithType> 속성이로 설정 되어 `true` 에 <xref:System.Windows.Forms.DataGridView.RowDirtyStateNeeded> 이벤트 처리기. 이 이벤트는 커밋 범위 런타임 시 결정 되는 경우에 유용 합니다.  
   
@@ -85,7 +85,7 @@ ms.locfileid: "59127051"
      [!code-csharp[System.Windows.Forms.DataGridView.VirtualMode#160](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.VirtualMode/CS/virtualmode.cs#160)]
      [!code-vb[System.Windows.Forms.DataGridView.VirtualMode#160](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.VirtualMode/VB/virtualmode.vb#160)]  
   
-8.  에 대 한 처리기를 구현 합니다 <xref:System.Windows.Forms.DataGridView.CancelRowEdit> 의 값을 삭제 하는 이벤트를 `Customer` 현재 행을 나타내는 개체입니다.  
+8. 에 대 한 처리기를 구현 합니다 <xref:System.Windows.Forms.DataGridView.CancelRowEdit> 의 값을 삭제 하는 이벤트를 `Customer` 현재 행을 나타내는 개체입니다.  
   
      이 이벤트는 사용자 행의 편집 모드에 두 번 또는 한 번 편집 모드 외부 ESC 키를 눌러 신호를 보낼 때 발생 합니다. 경우 또는 현재 행에서 셀을 수정한 경우이 이벤트가 발생 하지 않습니다 값을 <xref:System.Windows.Forms.QuestionEventArgs.Response%2A?displayProperty=nameWithType> 속성 설정한 `false` 에 <xref:System.Windows.Forms.DataGridView.RowDirtyStateNeeded> 이벤트 처리기입니다.  
   

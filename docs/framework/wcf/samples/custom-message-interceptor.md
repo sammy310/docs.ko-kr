@@ -2,12 +2,12 @@
 title: 사용자 지정 메시지 인터셉터
 ms.date: 03/30/2017
 ms.assetid: 73f20972-53f8-475a-8bfe-c133bfa225b0
-ms.openlocfilehash: c756b9947b48fbf7cd902bf570c6d29f52fdaad6
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: d585e60c9b31e56873b0501425f55541bd647e02
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59181417"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59344275"
 ---
 # <a name="custom-message-interceptor"></a>사용자 지정 메시지 인터셉터
 이 샘플에서는 채널 확장성 모델의 사용 방법을 보여 줍니다. 특히 채널 팩터리 및 채널 수신기를 만드는 사용자 지정 바인딩 요소를 구현하여 런타임 스택의 특정 지점에서 들어오고 보내는 모든 메시지를 가로채는 방법을 보여 줍니다. 또한 이 샘플에는 이 사용자 지정 팩터리의 사용을 보여 주는 클라이언트와 서버도 포함되어 있습니다.  
@@ -28,13 +28,13 @@ ms.locfileid: "59181417"
   
  샘플은 WCF 모범 사례를 따르면 및 채널 프레임 워크를 사용 하 여 사용자 지정 계층화 된 채널을 Windows Communication Foundation (WCF)를 만드는 권장된 절차를 설명 합니다. 사용자 지정 계층화된 채널을 만드는 단계는 다음과 같습니다.  
   
-1.  채널 팩터리 및 채널 수신기에서 지원할 채널 셰이프를 결정합니다.  
+1. 채널 팩터리 및 채널 수신기에서 지원할 채널 셰이프를 결정합니다.  
   
-2.  채널 셰이프를 지원하는 채널 팩터리 및 채널 수신기를 만듭니다.  
+2. 채널 셰이프를 지원하는 채널 팩터리 및 채널 수신기를 만듭니다.  
   
-3.  사용자 지정 계층화된 채널을 채널 스택에 추가하는 바인딩 요소를 추가합니다.  
+3. 사용자 지정 계층화된 채널을 채널 스택에 추가하는 바인딩 요소를 추가합니다.  
   
-4.  새 바인딩 요소가 구성 시스템에 노출되도록 바인딩 요소 확장명 섹션을 추가합니다.  
+4. 새 바인딩 요소가 구성 시스템에 노출되도록 바인딩 요소 확장명 섹션을 추가합니다.  
   
 ## <a name="channel-shapes"></a>채널 셰이프  
  사용자 지정 계층화된 채널을 작성하는 첫 번째 단계는 채널에 필요한 셰이프를 결정하는 것입니다. 메시지 검사자를 위해 아래의 계층이 지원하는 모든 셰이프를 지원합니다. 예를 들어, 아래의 계층이 <xref:System.ServiceModel.Channels.IOutputChannel> 및 <xref:System.ServiceModel.Channels.IDuplexSessionChannel>을 빌드할 수 있는 경우 <xref:System.ServiceModel.Channels.IOutputChannel> 및 <xref:System.ServiceModel.Channels.IDuplexSessionChannel>도 노출합니다.  
@@ -147,16 +147,16 @@ Dangerous wind detected! Reported speed (70) is greater than 64 kph.
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>샘플을 설치, 빌드 및 실행하려면  
   
-1.  다음 명령을 사용하여 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 4.0을 설치합니다.  
+1. 다음 명령을 사용하여 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 4.0을 설치합니다.  
   
     ```  
     %windir%\Microsoft.NET\Framework\v4.0.XXXXX\aspnet_regiis.exe /i /enable  
     ```  
   
-2.  수행 했는지 확인 합니다 [Windows Communication Foundation 샘플에 대 한 일회성 설치 절차](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)합니다.  
+2. 수행 했는지 확인 합니다 [Windows Communication Foundation 샘플에 대 한 일회성 설치 절차](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)합니다.  
   
-3.  지침에 따라 솔루션을 빌드하려면 [Building Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)합니다.  
+3. 지침에 따라 솔루션을 빌드하려면 [Building Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)합니다.  
   
-4.  단일 또는 다중 컴퓨터 구성에서 샘플을 실행 하려면의 지침을 따릅니다 [Windows Communication Foundation 샘플 실행](../../../../docs/framework/wcf/samples/running-the-samples.md)합니다.  
+4. 단일 또는 다중 컴퓨터 구성에서 샘플을 실행 하려면의 지침을 따릅니다 [Windows Communication Foundation 샘플 실행](../../../../docs/framework/wcf/samples/running-the-samples.md)합니다.  
   
-5.  먼저 Service.exe를 실행한 다음 Client.exe를 실행하고 두 콘솔 창의 출력을 확인합니다.  
+5. 먼저 Service.exe를 실행한 다음 Client.exe를 실행하고 두 콘솔 창의 출력을 확인합니다.  

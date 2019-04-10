@@ -9,12 +9,12 @@ helpviewer_keywords:
 - DataContractAttribute class
 - data contracts [WCF], creating for a class or structure
 ms.assetid: bc464889-3070-4a2f-91d2-e788a0f686a7
-ms.openlocfilehash: b46273c468891aa2b18c04adc1ee035c98255ded
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 4e5e6b77cdb13c17557f176a37fbb9e7d42ab667
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59220515"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59346004"
 ---
 # <a name="how-to-create-a-basic-data-contract-for-a-class-or-structure"></a>방법: 클래스 또는 구조체에 대한 기본 데이터 계약 만들기
 이 항목에서는 클래스 또는 구조를 사용하여 데이터 계약을 만드는 기본 단계를 보여 줍니다. 데이터 계약 및 사용 방법에 대 한 자세한 내용은 참조 하세요. [Using Data Contracts](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)합니다.  
@@ -23,9 +23,9 @@ ms.locfileid: "59220515"
   
 ### <a name="to-create-a-basic-data-contract-for-a-class-or-structure"></a>클래스 또는 구조체에 대한 기본 데이터 계약을 만들려면  
   
-1.  <xref:System.Runtime.Serialization.DataContractAttribute> 특성을 클래스에 적용하여 형식에 데이터 계약이 있음을 선언합니다. 특성이 없는 경우를 비롯한 모든 public 형식을 serialize할 있습니다. <xref:System.Runtime.Serialization.DataContractSerializer> 특성이 없는 경우 <xref:System.Runtime.Serialization.DataContractAttribute>는 데이터 계약을 유추합니다. 자세한 내용은 [Serializable Types](../../../../docs/framework/wcf/feature-details/serializable-types.md)합니다.  
+1. <xref:System.Runtime.Serialization.DataContractAttribute> 특성을 클래스에 적용하여 형식에 데이터 계약이 있음을 선언합니다. 특성이 없는 경우를 비롯한 모든 public 형식을 serialize할 있습니다. <xref:System.Runtime.Serialization.DataContractSerializer> 특성이 없는 경우 <xref:System.Runtime.Serialization.DataContractAttribute>는 데이터 계약을 유추합니다. 자세한 내용은 [Serializable Types](../../../../docs/framework/wcf/feature-details/serializable-types.md)합니다.  
   
-2.  <xref:System.Runtime.Serialization.DataMemberAttribute> 특성을 각 멤버에 적용하여 serialize되는 멤버(속성, 필드 또는 이벤트)를 정의합니다. 이러한 멤버를 데이터 멤버라고 합니다. 기본적으로 모든 public 형식을 serialize할 있습니다. 자세한 내용은 [Serializable Types](../../../../docs/framework/wcf/feature-details/serializable-types.md)합니다.  
+2. <xref:System.Runtime.Serialization.DataMemberAttribute> 특성을 각 멤버에 적용하여 serialize되는 멤버(속성, 필드 또는 이벤트)를 정의합니다. 이러한 멤버를 데이터 멤버라고 합니다. 기본적으로 모든 public 형식을 serialize할 있습니다. 자세한 내용은 [Serializable Types](../../../../docs/framework/wcf/feature-details/serializable-types.md)합니다.  
   
     > [!NOTE]
     >  <xref:System.Runtime.Serialization.DataMemberAttribute> 특성을 private 필드에 적용하여 데이터가 다른 사용자에게 노출되게 할 수 있습니다. 멤버에 중요한 데이터가 포함되지 않도록 해야 합니다.  

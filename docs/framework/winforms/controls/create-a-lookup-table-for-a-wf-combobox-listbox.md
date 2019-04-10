@@ -14,12 +14,12 @@ helpviewer_keywords:
 - combo boxes [Windows Forms], lookup tables
 - ListBox control [Windows Forms], creating lookup tables
 ms.assetid: 4ce35f12-1f4e-4317-92d1-af8686a8cfaa
-ms.openlocfilehash: 95b1962b83a44a99ebc466e27c732917d63dc3c2
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: a58522cc17ac379897a89a8e61485a1e271438a3
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59125985"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59344106"
 ---
 # <a name="how-to-create-a-lookup-table-for-a-windows-forms-combobox-listbox-or-checkedlistbox-control"></a>방법: Windows Forms ComboBox, ListBox 또는 CheckedListBox 컨트롤에 대한 조회 테이블 만들기
 경우에 따라 Windows Form에서는 친숙한 형식으로 데이터를 표시하지만 프로그램에서는 더 의미 있는 형식으로 데이터를 저장하는 데 유용합니다. 예를 들어 음식 주문 양식의 목록 상자에는 메뉴 항목이 이름별로 표시될 수 있습니다. 그러나 주문을 기록하는 데이터 테이블에는 음식을 나타내는 고유 ID 번호가 포함됩니다. 다음 표에서는 음식에 대한 주문 양식 데이터를 저장 및 표시하는 방법의 예를 보여 줍니다.  
@@ -46,13 +46,13 @@ ms.locfileid: "59125985"
   
 ### <a name="to-create-a-lookup-table"></a>조회 테이블을 만들려면  
   
-1.  양식에 <xref:System.Windows.Forms.ComboBox>, <xref:System.Windows.Forms.ListBox> 또는 <xref:System.Windows.Forms.CheckedListBox> 컨트롤을 추가합니다.  
+1. 양식에 <xref:System.Windows.Forms.ComboBox>, <xref:System.Windows.Forms.ListBox> 또는 <xref:System.Windows.Forms.CheckedListBox> 컨트롤을 추가합니다.  
   
-2.  데이터 소스에 연결합니다.  
+2. 데이터 소스에 연결합니다.  
   
-3.  두 테이블 간에 데이터 관계를 설정합니다. 참조 [DataRelation 개체 소개](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/0k21zcyx(v=vs.120))합니다.  
+3. 두 테이블 간에 데이터 관계를 설정합니다. 참조 [DataRelation 개체 소개](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/0k21zcyx(v=vs.120))합니다.  
   
-4.  다음 속성을 설정합니다. 코드 또는 디자이너에서 설정할 수 있습니다.  
+4. 다음 속성을 설정합니다. 코드 또는 디자이너에서 설정할 수 있습니다.  
   
     |속성|설정|  
     |--------------|-------------|  
@@ -60,7 +60,7 @@ ms.locfileid: "59125985"
     |<xref:System.Windows.Forms.ListControl.DisplayMember%2A>|컨트롤에 표시하려는 데이터 소스 테이블의 열입니다. 앞의 시나리오에서 이것이 `"Name"` (코드를 설정 하려면 따옴표 사용).|  
     |<xref:System.Windows.Forms.ListControl.ValueMember%2A>|저장된 정보를 포함하는 데이터 소스 테이블의 열입니다. 앞의 시나리오에서 이것이 `"ID"` (코드를 설정 하려면 따옴표 사용).|  
   
-5.  프로시저에서 <xref:System.Windows.Forms.ControlBindingsCollection> 클래스의 <xref:System.Windows.Forms.ControlBindingsCollection.Add%2A> 메서드를 호출하여 양식 입력을 기록하는 테이블에 컨트롤의 <xref:System.Windows.Forms.ListControl.SelectedValue%2A> 속성을 바인딩합니다. 또한 하면이 코드에서는 대신 디자이너에서 컨트롤의 액세스 <xref:System.Windows.Forms.Control.DataBindings%2A> 에서 속성을 **속성** 창입니다. 앞의 시나리오에서 이것이 `OrderDetailsTable`, 열은 `"ItemID"`합니다.  
+5. 프로시저에서 <xref:System.Windows.Forms.ControlBindingsCollection> 클래스의 <xref:System.Windows.Forms.ControlBindingsCollection.Add%2A> 메서드를 호출하여 양식 입력을 기록하는 테이블에 컨트롤의 <xref:System.Windows.Forms.ListControl.SelectedValue%2A> 속성을 바인딩합니다. 또한 하면이 코드에서는 대신 디자이너에서 컨트롤의 액세스 <xref:System.Windows.Forms.Control.DataBindings%2A> 에서 속성을 **속성** 창입니다. 앞의 시나리오에서 이것이 `OrderDetailsTable`, 열은 `"ItemID"`합니다.  
   
     ```vb  
     ListBox1.DataBindings.Add("SelectedValue", OrderDetailsTable, "ItemID")  

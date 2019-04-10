@@ -6,12 +6,12 @@ title: .NET 설명서
 description: C#, Visual Basic 및 F#을 사용하는 모든 플랫폼에서 .NET을 사용하여 다양한 애플리케이션을 만드는 방법을 알아보세요. API 참조, 샘플 코드, 자습서 등을 찾아보세요.
 ms.custom: updateeachrelease
 ms.date: 12/04/2018
-ms.openlocfilehash: 132cab6f7c196f88fdc02259e55d0fcb5fbbfd10
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.openlocfilehash: 61b3e6f2aae2ad2633f82360b227a876f685fcc1
+ms.sourcegitcommit: d21bee9dbd32b9540ad30f9d0e2e874227040be3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 04/09/2019
-ms.locfileid: "59297270"
+ms.locfileid: "59427489"
 ---
 <!-- markdownlint-disable MD033 -->
 <div id="main" class="v2">
@@ -231,8 +231,8 @@ ms.locfileid: "59297270"
                                             </div>
                                             <div class="cardText">
                                                 <h3><a href="/dotnet/machine-learning">ML.NET 가이드</a></h3>
-                                                <p><a href="/dotnet/machine-learning/index#tutorials">자습서</a></p>
-                                                <p><a href="/dotnet/machine-learning/index#resources">자료</a></p>
+                                                <p><a href="/dotnet/machine-learning/tutorials">자습서</a></p>
+                                                <p><a href="/dotnet/machine-learning/resources">자료</a></p>
                                                 <p><a href="/dotnet/machine-learning/resources/glossary">용어</a></p>
                                                 <p><a href="/dotnet/api?view=ml-dotnet">ML.NET API 참조</a></p>
                                             </div>

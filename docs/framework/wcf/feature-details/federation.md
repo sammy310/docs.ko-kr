@@ -8,12 +8,12 @@ helpviewer_keywords:
 - WCF, federation
 - federation [WCF]
 ms.assetid: 2f1e646f-8361-48d4-9d5d-1b961f31ede4
-ms.openlocfilehash: af3e5c4c33936e809438019f1a8af823ffc3e52b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 382d2aeff98b7d48dbae07dadb04ed644c3f4449
+ms.sourcegitcommit: d21bee9dbd32b9540ad30f9d0e2e874227040be3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59114044"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59427307"
 ---
 # <a name="federation"></a>페더레이션
 이 항목에서는 페더레이션 보안의 개념에 대한 간략한 개요를 제공합니다. 또한 페더레이션된 보안 아키텍처를 배포 하는 것에 대 한 Windows Communication Foundation (WCF) 지원을 설명 합니다. 페더레이션을 설명 하는 샘플 응용 프로그램을 참조 하세요 [Federation 샘플](../../../../docs/framework/wcf/samples/federation-sample.md)합니다.  
@@ -33,9 +33,9 @@ ms.locfileid: "59114044"
 |STS(보안 토큰 서비스)|보안 토큰을 발급하는 웹 서비스. 이 웹 서비스에서 신뢰하는 증거를 기반으로 누구나 이 어설션을 신뢰할 수 있도록 만듭니다. 이는 도메인 간의 신뢰를 조정하는 기준을 형성합니다.|  
   
 ### <a name="example-scenario"></a>예제 시나리오  
- 다음 그림에서는 페더레이션 보안의 예제를 보여 줍니다.  
+ 다음 그림에서는 페더레이션된 보안의 예를 보여 줍니다.  
   
- ![Federation](../../../../docs/framework/wcf/feature-details/media/typicalfederatedsecurityscenario.gif "TypicalFederatedSecurityScenario")  
+ ![일반적인 페더레이션된 보안 시나리오를 보여 주는 다이어그램입니다.](./media/federation/typical-federated-security-scenario.gif)  
   
  이 시나리오는 두 조직에 포함 됩니다. A 및 조직 B가 조직 A의에서 일부 사용자가 가치 있게 여기는 웹 리소스 (웹 서비스).  
   
@@ -90,12 +90,12 @@ ms.locfileid: "59114044"
 ## <a name="sample-implementation-using-wcf"></a>WCF를 사용하여 샘플 구현  
  다음 그림에는 WCF에서 네이티브 지원을 사용 하 여 페더레이션된 보안 아키텍처에 대 한 샘플 구현을 보여 줍니다.  
   
- ![WCF의 페더레이션 보안](../../../../docs/framework/wcf/feature-details/media/federatedsecurityinwcf.gif "FederatedSecurityInWCF")  
+ ![샘플 페더레이션 보안 구현을 보여 주는 다이어그램입니다.](./media/federation/federated-security-implementation.gif)  
   
 ### <a name="example-myservice"></a>예제 MyService  
  `MyService` 서비스는 `MyServiceEndpoint`를 통해 단일 끝점을 노출합니다. 다음 그림에서는 엔드포인트와 연관된 주소, 바인딩 및 계약을 보여 줍니다.  
   
- ![Federation](../../../../docs/framework/wcf/feature-details/media/myservice.gif "MyService")  
+ ![MyServiceEndpoint 세부 정보를 보여 주는 다이어그램입니다.](./media/federation/myserviceendpoint-details.gif)  
   
  서비스 끝점 `MyServiceEndpoint` 사용 하 여 [ \<wsFederationHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md) 하며 함께 유효한 SAML Security Assertions Markup Language () 토큰을는 `accessAuthorized` STS B에서 발급 한 클레임 서비스 구성에서 선언적으로 지정 됩니다.  
   
@@ -160,7 +160,7 @@ operationRequirementType="FederationSample.MyServiceOperationRequirement, MyServ
 #### <a name="sts-b"></a>STS B  
  다음 그림에서는 STS B를 보여 줍니다. 위에서 설명한 것처럼 STS(보안 토큰 서비스)도 웹 서비스이며 이와 연관된 엔드포인트, 정책 등을 가질 수 있습니다.  
   
- ![Federation](../../../../docs/framework/wcf/feature-details/media/msservicestsb.gif "MsServiceSTSB")  
+ ![2. 보안 토큰 서비스를 보여 주는 다이어그램](./media/federation/myservice-security-token-service-b.gif)  
   
  STS B는 보안 토큰을 요청하는 데 사용할 수 있는 `STSEndpoint`라는 단일 엔드포인트를 노출합니다. 특히 STS B는 서비스에 액세스하기 위해 `accessAuthorized` 클레임과 함께 `MyService` 서비스 사이트에 제공할 수 있는 SAML 토큰을 발급합니다. 그러나 STS B를 사용하려면 `userAuthenticated` 클레임이 포함된 STS A에서 발급한 유효한 SAML 토큰을 제공해야 합니다. 이는 STS 구성에서 선언적으로 지정됩니다.  
   
@@ -284,7 +284,7 @@ operationRequirementType="FederationSample.MyServiceOperationRequirement, MyServ
 ### <a name="client-at-organization-a"></a>조직 A의 클라이언트  
  다음 그림에서는 `MyService` 서비스 호출에 포함된 단계와 함께 조직 A의 클라이언트를 보여 줍니다. 다른 기능 구성 요소도 완전성을 위해 포함됩니다.  
   
- ![Federation](../../../../docs/framework/wcf/feature-details/media/federationclienta.gif "FederationClientA")  
+ ![Showwing MyService 서비스 호출에서 단계 다이어그램입니다.](./media/federation/federation-myservice-service-call-process.gif)  
   
 ## <a name="summary"></a>요약  
  페더레이션 보안은 책임을 확실히 나누며, 안전하고 확장성 있는 서비스 아키텍처를 구축하는 데 도움이 됩니다. 빌드하고 분산된 응용 프로그램을 배포 하기 위한 플랫폼으로 WCF는 페더레이션된 보안을 구현 하는 것에 대 한 기본 지원을 제공 합니다.  

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 70055c4b-1173-47a3-be80-b5bce6f59e9a
-ms.openlocfilehash: f4db3325081a820a37a8791849d2ad9697d15151
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 61f61962e06e94572b7eb564ab08b829ba2c864f
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59118107"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59344873"
 ---
 # <a name="custom-composite-designers---workflow-items-presenter"></a>사용자 지정 복합 디자이너 - 워크플로 항목 프리젠터
 <xref:System.Activities.Presentation.WorkflowItemsPresenter?displayProperty=nameWithType> 는 포함된 요소의 컬렉션을 편집할 수 있도록 하는 WF 디자이너 프로그래밍 모델의 키 형식입니다. 이 샘플에서는 이러한 편집 가능한 컬렉션을 표시하는 활동 디자이너를 빌드하는 방법을 보여 줍니다.
@@ -25,9 +25,9 @@ ms.locfileid: "59118107"
 
 ### <a name="to-set-up-build-and-run-the-sample"></a>샘플을 설치, 빌드 및 실행하려면
 
-1.  엽니다는 **UsingWorkflowItemsPresenter.sln** Visual Studio 2010에서 VB 또는 C#에 대 한 샘플 솔루션.
+1. 엽니다는 **UsingWorkflowItemsPresenter.sln** Visual Studio 2010에서 VB 또는 C#에 대 한 샘플 솔루션.
 
-2.  솔루션을 빌드하고 실행합니다. 다시 호스트된 Workflow Designer 응용 프로그램이 열리며 여기에서 활동을 캔버스로 끌어 올 수 있습니다.
+2. 솔루션을 빌드하고 실행합니다. 다시 호스트된 Workflow Designer 응용 프로그램이 열리며 여기에서 활동을 캔버스로 끌어 올 수 있습니다.
 
 ## <a name="sample-highlights"></a>샘플의 중요 사항
  이 샘플의 코드는 다음 내용을 보여 줍니다.

@@ -2,12 +2,12 @@
 title: 사용자 지정 메시지 필터
 ms.date: 03/30/2017
 ms.assetid: 98dd0af8-fce6-4255-ac32-42eb547eea67
-ms.openlocfilehash: 31816ae67e3273e033b53951ff78d662ef8192c4
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 34e6d851bd0aa3515c5c43521be6213451b7ed12
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59172837"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59345822"
 ---
 # <a name="custom-message-filter"></a>사용자 지정 메시지 필터
 이 샘플에는 Windows Communication Foundation (WCF) 끝점에 메시지를 디스패치할 때 사용 하는 메시지 필터를 교체 하는 방법을 보여 줍니다.  
@@ -119,11 +119,11 @@ Hello
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>샘플을 설치, 빌드 및 실행하려면  
   
-1.  지침에 따라 솔루션을 빌드하려면 [Building Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)합니다.  
+1. 지침에 따라 솔루션을 빌드하려면 [Building Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)합니다.  
   
-2.  단일 컴퓨터 구성에서 샘플을 실행 하려면의 지침을 따릅니다 [Windows Communication Foundation 샘플 실행](../../../../docs/framework/wcf/samples/running-the-samples.md)합니다.  
+2. 단일 컴퓨터 구성에서 샘플을 실행 하려면의 지침을 따릅니다 [Windows Communication Foundation 샘플 실행](../../../../docs/framework/wcf/samples/running-the-samples.md)합니다.  
   
-3.  다중 컴퓨터 구성에서 샘플을 실행 하는 지침을 따르세요 [Windows Communication Foundation 샘플 실행](../../../../docs/framework/wcf/samples/running-the-samples.md) Client.cs에서 다음 줄을 변경 합니다.  
+3. 다중 컴퓨터 구성에서 샘플을 실행 하는 지침을 따르세요 [Windows Communication Foundation 샘플 실행](../../../../docs/framework/wcf/samples/running-the-samples.md) Client.cs에서 다음 줄을 변경 합니다.  
   
     ```  
     Uri serviceVia = new Uri("http://localhost/ServiceModelSamples/service.svc");  

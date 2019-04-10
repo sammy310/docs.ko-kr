@@ -7,12 +7,12 @@ helpviewer_keywords:
 - reusing commonly defined objects [WPF]
 - XAML [WPF], reusing resources
 ms.assetid: 91580b89-a0a8-4889-aecb-fddf8e63175f
-ms.openlocfilehash: d736d80a05469dafecbdaf196701c14528ee7d26
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 0176ebffe82e60671ea66481b7d659004dc31477
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59230020"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59344925"
 ---
 # <a name="xaml-resources"></a>XAML 리소스
 리소스는 애플리케이션의 여러 위치에서 다시 사용할 수 있는 개체입니다. 리소스의 예로는 브러시와 스타일이 있습니다. 이 개요에서 리소스를 사용 하는 방법에 설명 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]합니다. 또한 만들고 하 하거나 코드 서로 바꿔 코드를 사용 하 여 리소스에 액세스 하 고 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]입니다. 자세한 내용은 [리소스 및 코드](resources-and-code.md)합니다.  
@@ -69,11 +69,11 @@ ms.locfileid: "59230020"
   
 #### <a name="static-resource-lookup-behavior"></a>정적 리소스 조회 동작  
   
-1.  조회 프로세스가 속성을 설정하는 요소를 통해 정의된 리소스 사전에서 요청된 키를 확인합니다.  
+1. 조회 프로세스가 속성을 설정하는 요소를 통해 정의된 리소스 사전에서 요청된 키를 확인합니다.  
   
-2.  그런 다음 조회 프로세스가 논리 트리를 상향식으로 통과하여 부모 요소와 해당 리소스 사전으로 이동합니다. 이 작업은 루트 요소에 도달할 때까지 계속됩니다.  
+2. 그런 다음 조회 프로세스가 논리 트리를 상향식으로 통과하여 부모 요소와 해당 리소스 사전으로 이동합니다. 이 작업은 루트 요소에 도달할 때까지 계속됩니다.  
   
-3.  다음으로 애플리케이션 리소스를 확인합니다. 응용 프로그램 리소스는 리소스 사전에서 정의한 내에서 리소스를 <xref:System.Windows.Application> 개체에 대 한 프로그램 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 응용 프로그램입니다.  
+3. 다음으로 애플리케이션 리소스를 확인합니다. 응용 프로그램 리소스는 리소스 사전에서 정의한 내에서 리소스를 <xref:System.Windows.Application> 개체에 대 한 프로그램 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 응용 프로그램입니다.  
   
  리소스 사전 내의 정적 리소스 참조는 리소스 참조 전에 사전순으로 이미 정의된 리소스를 참조해야 합니다. 전방 참조는 정적 리소스 참조로 확인할 수 없습니다. 따라서 정적 리소스 참조를 사용하는 경우, 리소스별 용도에 맞게 리소스를 각 리소스 사전의 시작 부분에 정의하도록 리소스 사전 구조를 디자인해야 합니다.  
   
@@ -101,19 +101,19 @@ ms.locfileid: "59230020"
 #### <a name="dynamic-resource-lookup-behavior"></a>동적 리소스 조회 동작  
  동적 리소스 참조에 대 한 리소스 조회 동작 호출 하는 경우 코드의 조회 동작과 유사 <xref:System.Windows.FrameworkElement.FindResource%2A> 또는 <xref:System.Windows.FrameworkElement.SetResourceReference%2A>합니다.  
   
-1.  조회 프로세스가 속성을 설정하는 요소를 통해 정의된 리소스 사전에서 요청된 키를 확인합니다.  
+1. 조회 프로세스가 속성을 설정하는 요소를 통해 정의된 리소스 사전에서 요청된 키를 확인합니다.  
   
     -   요소를 정의 하는 경우는 <xref:System.Windows.FrameworkElement.Style%2A> 속성을 <xref:System.Windows.Style.Resources%2A> 사전 내에서 <xref:System.Windows.Style> 확인란이 선택 되어.  
   
     -   요소를 정의 하는 경우는 <xref:System.Windows.Controls.Control.Template%2A> 속성을 <xref:System.Windows.FrameworkTemplate.Resources%2A> 사전 내에서 <xref:System.Windows.FrameworkTemplate> 확인란이 선택 되어.  
   
-2.  그런 다음 조회 프로세스가 논리 트리를 상향식으로 통과하여 부모 요소와 해당 리소스 사전으로 이동합니다. 이 작업은 루트 요소에 도달할 때까지 계속됩니다.  
+2. 그런 다음 조회 프로세스가 논리 트리를 상향식으로 통과하여 부모 요소와 해당 리소스 사전으로 이동합니다. 이 작업은 루트 요소에 도달할 때까지 계속됩니다.  
   
-3.  다음으로 애플리케이션 리소스를 확인합니다. 응용 프로그램 리소스는 리소스 사전에서 정의한 내에서 리소스를 <xref:System.Windows.Application> 개체에 대 한 프로그램 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 응용 프로그램입니다.  
+3. 다음으로 애플리케이션 리소스를 확인합니다. 응용 프로그램 리소스는 리소스 사전에서 정의한 내에서 리소스를 <xref:System.Windows.Application> 개체에 대 한 프로그램 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 응용 프로그램입니다.  
   
-4.  현재 활성 테마의 테마 리소스 사전을 확인합니다. 런타임 시 테마가 변경되면 값을 재평가합니다.  
+4. 현재 활성 테마의 테마 리소스 사전을 확인합니다. 런타임 시 테마가 변경되면 값을 재평가합니다.  
   
-5.  시스템 리소스를 확인합니다.  
+5. 시스템 리소스를 확인합니다.  
   
  예외 동작이 있는 경우 다음과 같이 다양합니다.  
   

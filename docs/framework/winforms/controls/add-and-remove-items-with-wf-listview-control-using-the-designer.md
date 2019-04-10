@@ -5,12 +5,12 @@ helpviewer_keywords:
 - ListView control [Windows Forms], populating
 - ListView control [Windows Forms], adding list items
 ms.assetid: 217611ee-fd11-4d39-9a54-a37c3e781be1
-ms.openlocfilehash: 37e793104eb29c21e67b975a7caa372cc817e57f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 6e08a7013242b0dbb433e288c4f8d788cb4e143b
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59143886"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59343846"
 ---
 # <a name="how-to-add-and-remove-items-with-the-windows-forms-listview-control-using-the-designer"></a>방법: 디자이너를 사용하여 Windows Forms ListView 컨트롤에서 항목 추가 및 제거
 Windows Forms에 항목을 추가 하는 프로세스 <xref:System.Windows.Forms.ListView> 컨트롤 주로 이루어져 항목을 지정 하 고 속성을 할당 합니다. 목록 항목 추가 또는 제거를 언제 든 지 수행할 수 있습니다.  
@@ -22,15 +22,15 @@ Windows Forms에 항목을 추가 하는 프로세스 <xref:System.Windows.Forms
   
 ### <a name="to-add-or-remove-items-using-the-designer"></a>디자이너를 사용 하 여 항목을 추가 하거나 제거  
   
-1.  <xref:System.Windows.Forms.ListView> 컨트롤을 선택합니다.  
+1. <xref:System.Windows.Forms.ListView> 컨트롤을 선택합니다.  
   
-2.  에 **속성** 창에서 클릭 합니다 **줄임표** (![VisualStudioEllipsesButton 스크린 샷](../media/vbellipsesbutton.png "vbEllipsesButton")) 단추 옆에 <xref:System.Windows.Forms.ListView.Items%2A> 속성입니다.  
+2. 에 **속성** 창에서 클릭 합니다 **줄임표** (![VisualStudioEllipsesButton 스크린 샷](../media/vbellipsesbutton.png "vbEllipsesButton")) 단추 옆에 <xref:System.Windows.Forms.ListView.Items%2A> 속성입니다.  
   
      합니다 **ListViewItem 컬렉션 편집기** 나타납니다.  
   
-3.  항목을 추가 하려면 클릭 합니다 **추가** 단추입니다. 새 항목의 속성을 같은 설정한 수는 <xref:System.Windows.Forms.ListView.Text%2A> 고 <xref:System.Windows.Forms.ListViewItem.ImageIndex%2A> 속성입니다.  
+3. 항목을 추가 하려면 클릭 합니다 **추가** 단추입니다. 새 항목의 속성을 같은 설정한 수는 <xref:System.Windows.Forms.ListView.Text%2A> 고 <xref:System.Windows.Forms.ListViewItem.ImageIndex%2A> 속성입니다.  
   
-4.  항목을 제거 하려면 선택 하 고 클릭 합니다 **제거** 단추입니다.  
+4. 항목을 제거 하려면 선택 하 고 클릭 합니다 **제거** 단추입니다.  
   
 ## <a name="see-also"></a>참고자료
 

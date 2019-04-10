@@ -2,12 +2,12 @@
 title: 신뢰된 외관 서비스
 ms.date: 03/30/2017
 ms.assetid: c34d1a8f-e45e-440b-a201-d143abdbac38
-ms.openlocfilehash: 4b02928224f1cb96a25dc71941273625e7d9e5e6
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 4921b2746b9df362a0bb3e6048602d41f3f2faaf
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59091553"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59346160"
 ---
 # <a name="trusted-facade-service"></a>신뢰된 외관 서비스
 이 시나리오 샘플에는 Windows Communication Foundation (WCF)를 사용 하 여 다른 서비스로 호출자의 id 정보를 전달 하는 방법을 보여 줍니다. 보안 인프라.  
@@ -260,27 +260,27 @@ Press <ENTER> to terminate client.
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>샘플을 설치, 빌드 및 실행하려면  
   
-1.  수행 했는지 확인 합니다 [Windows Communication Foundation 샘플에 대 한 일회성 설치 절차](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)합니다.  
+1. 수행 했는지 확인 합니다 [Windows Communication Foundation 샘플에 대 한 일회성 설치 절차](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)합니다.  
   
-2.  C# 또는 Visual Basic .NET 버전의 솔루션을 빌드하려면 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)의 지침을 따릅니다.  
+2. C# 또는 Visual Basic .NET 버전의 솔루션을 빌드하려면 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)의 지침을 따릅니다.  
   
 #### <a name="to-run-the-sample-on-the-same-machine"></a>단일 컴퓨터 구성에서 샘플을 실행하려면  
   
-1.  Makecert.exe가 있는 폴더가 경로에 포함되는지 확인합니다.  
+1. Makecert.exe가 있는 폴더가 경로에 포함되는지 확인합니다.  
   
-2.  샘플 설치 폴더에서 Setup.bat를 실행하여 이 작업은 샘플 실행에 필요한 모든 인증서를 설치합니다.  
+2. 샘플 설치 폴더에서 Setup.bat를 실행하여 이 작업은 샘플 실행에 필요한 모든 인증서를 설치합니다.  
   
-3.  \BackendService\bin 디렉터리에서 BackendService.exe를 별도의 콘솔 창에 실행합니다.  
+3. \BackendService\bin 디렉터리에서 BackendService.exe를 별도의 콘솔 창에 실행합니다.  
   
-4.  \FacadeService\bin 디렉터리에서 FacadeService.exe를 별도의 콘솔 창에 실행합니다.  
+4. \FacadeService\bin 디렉터리에서 FacadeService.exe를 별도의 콘솔 창에 실행합니다.  
   
-5.  \client\bin에서 Client.exe를 실행합니다. 클라이언트 콘솔 애플리케이션에 클라이언트 동작이 표시됩니다.  
+5. \client\bin에서 Client.exe를 실행합니다. 클라이언트 콘솔 애플리케이션에 클라이언트 동작이 표시됩니다.  
   
-6.  클라이언트와 서비스가 통신할 수 없는 경우 참조 [WCF 샘플에 대 한 문제 해결 팁](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))합니다.  
+6. 클라이언트와 서비스가 통신할 수 없는 경우 참조 [WCF 샘플에 대 한 문제 해결 팁](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))합니다.  
   
 #### <a name="to-clean-up-after-the-sample"></a>샘플 실행 후 정리를 수행하려면  
   
-1.  샘플 실행을 완료했으면 샘플 폴더에서 Cleanup.bat를 실행합니다.  
+1. 샘플 실행을 완료했으면 샘플 폴더에서 Cleanup.bat를 실행합니다.  
   
 > [!IMPORTANT]
 >  컴퓨터에 이 샘플이 이미 설치되어 있을 수도 있습니다. 계속하기 전에 다음(기본) 디렉터리를 확인하세요.  

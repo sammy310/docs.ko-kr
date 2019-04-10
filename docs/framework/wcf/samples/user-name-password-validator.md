@@ -2,12 +2,12 @@
 title: User Name Password Validator
 ms.date: 03/30/2017
 ms.assetid: 42f03841-286b-42d8-ba58-18c75422bc8e
-ms.openlocfilehash: d15a3753bbea023cd992ed50549ef2c7b0dad74f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 52c22660e56d63121181bdcb618e0bed598ca585
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59162752"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59345016"
 ---
 # <a name="user-name-password-validator"></a>User Name Password Validator
 이 샘플에서는 사용자 지정 UserNamePassword 유효성 검사기를 구현하는 방법을 보여 줍니다. 사용자 이름/암호 쌍이 데이터베이스 같은 외부 저장소에 저장되어 있는 경우처럼 기본 제공되는 UserNamePassword 유효성 검사 모드가 응용 프로그램 요구 사항에 맞지 않는 경우 유용합니다. 이 샘플에서는 두 개의 특정 사용자 이름/암호 쌍을 확인하는 사용자 지정 유효성 검사기가 있는 서비스를 보여 줍니다. 클라이언트에서는 이러한 사용자 이름/암호 쌍을 사용하여 서비스의 인증을 얻습니다.
@@ -278,40 +278,40 @@ serviceHost.Credentials. UserNameAuthentication.CustomUserNamePasswordValidator 
 
 #### <a name="to-set-up-and-build-the-sample"></a>샘플을 설치하고 빌드하려면
 
-1.  지침에 따라 솔루션을 빌드하려면 [Building Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)합니다.
+1. 지침에 따라 솔루션을 빌드하려면 [Building Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)합니다.
 
-2.  단일 컴퓨터 또는 다중 컴퓨터 구성에서 샘플을 실행하려면 다음 지침을 사용합니다.
+2. 단일 컴퓨터 또는 다중 컴퓨터 구성에서 샘플을 실행하려면 다음 지침을 사용합니다.
 
 #### <a name="to-run-the-sample-on-the-same-machine"></a>단일 컴퓨터 구성에서 샘플을 실행하려면
 
-1.  Visual Studio 2012 명령 프롬프트에서 샘플 설치 폴더에서 Setup.bat를 실행 합니다. 이 작업은 샘플 실행에 필요한 모든 인증서를 설치합니다.
+1. Visual Studio 2012 명령 프롬프트에서 샘플 설치 폴더에서 Setup.bat를 실행 합니다. 이 작업은 샘플 실행에 필요한 모든 인증서를 설치합니다.
 
     > [!NOTE]
     >  Setup.bat 배치 파일은 Visual Studio 2012 명령 프롬프트에서 실행 되도록 설계 되었습니다. 경로 환경 변수 집합을 Visual Studio 2012 명령 프롬프트 내에서 Setup.bat 스크립트에 필요한 실행 파일이 포함 된 디렉터리를 가리킵니다.  
   
-2.  service\bin에서 Service.exe를 실행합니다.  
+2. service\bin에서 Service.exe를 실행합니다.  
   
-3.  \client\bin에서 Client.exe를 실행합니다. 클라이언트 콘솔 애플리케이션에 클라이언트 동작이 표시됩니다.  
+3. \client\bin에서 Client.exe를 실행합니다. 클라이언트 콘솔 애플리케이션에 클라이언트 동작이 표시됩니다.  
   
-4.  클라이언트와 서비스가 통신할 수 없는 경우 참조 [WCF 샘플에 대 한 문제 해결 팁](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))합니다.  
+4. 클라이언트와 서비스가 통신할 수 없는 경우 참조 [WCF 샘플에 대 한 문제 해결 팁](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))합니다.  
   
 #### <a name="to-run-the-sample-across-machines"></a>다중 컴퓨터 구성에서 샘플을 실행하려면  
   
-1.  서비스 컴퓨터에 서비스 이진 파일용 디렉터리를 만듭니다.  
+1. 서비스 컴퓨터에 서비스 이진 파일용 디렉터리를 만듭니다.  
   
-2.  서비스 프로그램 파일을 서비스 컴퓨터의 서비스 디렉터리에 복사합니다. Setup.bat 및 Cleanup.bat 파일도 서비스 컴퓨터로 복사합니다.  
+2. 서비스 프로그램 파일을 서비스 컴퓨터의 서비스 디렉터리에 복사합니다. Setup.bat 및 Cleanup.bat 파일도 서비스 컴퓨터로 복사합니다.  
   
-3.  컴퓨터의 정규화된 도메인 이름을 포함하는 주체 이름을 가진 서버 인증서가 있어야 합니다. 이 새로운 인증서 이름을 반영하도록 서버의 구성 파일을 업데이트해야 합니다.  
+3. 컴퓨터의 정규화된 도메인 이름을 포함하는 주체 이름을 가진 서버 인증서가 있어야 합니다. 이 새로운 인증서 이름을 반영하도록 서버의 구성 파일을 업데이트해야 합니다.  
   
-4.  서버 인증서를 클라이언트의 CurrentUser-TrustedPeople 저장소에 복사합니다. 신뢰할 수 있는 발급자에 의해 서버 인증서가 발급되지 않은 경우에만 이 작업을 수행해야 합니다.  
+4. 서버 인증서를 클라이언트의 CurrentUser-TrustedPeople 저장소에 복사합니다. 신뢰할 수 있는 발급자에 의해 서버 인증서가 발급되지 않은 경우에만 이 작업을 수행해야 합니다.  
   
-5.  서비스 컴퓨터의 App.config 파일에서 기본 주소 값을 변경하여 localhost 대신 정규화된 컴퓨터 이름을 지정합니다.  
+5. 서비스 컴퓨터의 App.config 파일에서 기본 주소 값을 변경하여 localhost 대신 정규화된 컴퓨터 이름을 지정합니다.  
   
-6.  서비스 컴퓨터의 명령 프롬프트 창에서 Service.exe를 실행합니다.  
+6. 서비스 컴퓨터의 명령 프롬프트 창에서 Service.exe를 실행합니다.  
   
-7.  언어별 폴더의 \client\bin\ 폴더에서 클라이언트 컴퓨터로 클라이언트 프로그램 파일을 복사합니다.  
+7. 언어별 폴더의 \client\bin\ 폴더에서 클라이언트 컴퓨터로 클라이언트 프로그램 파일을 복사합니다.  
   
-8.  클라이언트 컴퓨터의 Client.exe.config 파일에서 엔드포인트의 주소 값을 서비스의 새 주소와 일치하도록 변경합니다.  
+8. 클라이언트 컴퓨터의 Client.exe.config 파일에서 엔드포인트의 주소 값을 서비스의 새 주소와 일치하도록 변경합니다.  
   
 9. 클라이언트 컴퓨터의 명령 프롬프트 창에서 Client.exe를 실행합니다.  
   
@@ -319,4 +319,4 @@ serviceHost.Credentials. UserNameAuthentication.CustomUserNamePasswordValidator 
   
 #### <a name="to-clean-up-after-the-sample"></a>샘플 실행 후 정리를 수행하려면  
   
-1.  샘플 실행을 완료했으면 샘플 폴더에서 Cleanup.bat를 실행합니다. 그러면 인증서 저장소에서 서버 인증서가 제거됩니다.  
+1. 샘플 실행을 완료했으면 샘플 폴더에서 Cleanup.bat를 실행합니다. 그러면 인증서 저장소에서 서버 인증서가 제거됩니다.  

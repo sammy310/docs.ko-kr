@@ -2,12 +2,12 @@
 title: 사용자 지정 활동 디자이너에서 ExpressionTextBox 사용
 ms.date: 03/30/2017
 ms.assetid: f82e73e7-a256-4a4d-82b7-c0d62f4ab5e7
-ms.openlocfilehash: 7c1ba262046a665b8d63157fe3cdb4b1a41c37bf
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: c85254f1ae7ba8a269568cf1a14acf367b595e33
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59229383"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59344977"
 ---
 # <a name="using-the-expressiontextbox-in-a-custom-activity-designer"></a>사용자 지정 활동 디자이너에서 ExpressionTextBox 사용
 이 샘플에서는 사용자 지정 활동 디자이너에서 <xref:System.Activities.Presentation.View.ExpressionTextBox>를 사용하는 방법을 보여 줍니다. 사용자 지정 활동인 `MultiAssign`은 두 개의 문자열 변수에 두 개의 문자열 값을 할당합니다. <xref:System.Activities.Presentation.View.ExpressionTextBox> 컨트롤 중 일부는 <xref:System.Activities.InArgument>에 바인딩되고 또 다른 일부는 <xref:System.Activities.OutArgument>에 바인딩됩니다.
@@ -23,19 +23,19 @@ ms.locfileid: "59229383"
 
 #### <a name="to-use-this-sample"></a>이 샘플을 사용하려면
 
-1.  Expressiontextboxsample.sln 솔루션 파일을 열고 Visual Studio 2010을 사용 합니다.
+1. Expressiontextboxsample.sln 솔루션 파일을 열고 Visual Studio 2010을 사용 합니다.
 
-2.  Ctrl+Shift+B를 눌러 솔루션을 빌드합니다.
+2. Ctrl+Shift+B를 눌러 솔루션을 빌드합니다.
 
 #### <a name="to-run-this-sample"></a>이 샘플을 실행하려면
 
-1.  솔루션에 워크플로 콘솔 응용 프로그램을 추가합니다.
+1. 솔루션에 워크플로 콘솔 응용 프로그램을 추가합니다.
 
-2.  에 대 한 참조를 추가 합니다 **ExpressionTextBoxSample** 새 워크플로 콘솔 응용 프로그램 프로젝트에서 프로젝트입니다.
+2. 에 대 한 참조를 추가 합니다 **ExpressionTextBoxSample** 새 워크플로 콘솔 응용 프로그램 프로젝트에서 프로젝트입니다.
 
-3.  솔루션을 빌드합니다.
+3. 솔루션을 빌드합니다.
 
-4.  끌기 합니다 **MultiAssign** 활동 도구 상자에서 워크플로에 놓습니다.
+4. 끌기 합니다 **MultiAssign** 활동 도구 상자에서 워크플로에 놓습니다.
 
 > [!IMPORTANT]
 >  컴퓨터에 이 샘플이 이미 설치되어 있을 수도 있습니다. 계속하기 전에 다음(기본) 디렉터리를 확인하세요.  

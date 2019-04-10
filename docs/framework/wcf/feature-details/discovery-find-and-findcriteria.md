@@ -2,12 +2,12 @@
 title: 찾기 및 FindCriteria
 ms.date: 03/30/2017
 ms.assetid: 99016fa4-1778-495b-b4cc-0e22fbec42c6
-ms.openlocfilehash: c95f8e1b48c4e58c6d521bd06df4a470999fa375
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 6efbfe34bbe5b15696d247c291f1d88006a53a36
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59095778"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59345783"
 ---
 # <a name="discovery-find-and-findcriteria"></a>찾기 및 FindCriteria
 찾기 작업은 하나 이상의 서비스를 검색하는 클라이언트에 의해 시작되며 검색 작업의 주요 동작 중 하나입니다. 찾기를 수행하면 네트워크를 통해 WS-Discovery Probe 메시지가 보내집니다. 지정된 조건과 일치하는 서비스는 WS-Discovery ProbeMatch 메시지를 사용하여 응답합니다. 검색 메시지에 대 한 자세한 내용은 참조는 [Ws-discovery 사양](https://go.microsoft.com/fwlink/?LinkID=122347)합니다.  
@@ -40,9 +40,9 @@ ms.locfileid: "59095778"
   
  종료 조건은 다음과 같습니다.  
   
-1.  <xref:System.ServiceModel.Discovery.FindCriteria.Duration%2A> 네트워크에서 서비스 로부터 응답을 기다리는 최대 시간-합니다. 기본 시간은 20초입니다.  
+1. <xref:System.ServiceModel.Discovery.FindCriteria.Duration%2A> 네트워크에서 서비스 로부터 응답을 기다리는 최대 시간-합니다. 기본 시간은 20초입니다.  
   
-2.  <xref:System.ServiceModel.Discovery.FindCriteria.MaxResults%2A> 기다릴 응답-최대 수입니다. <xref:System.ServiceModel.Discovery.FindCriteria.MaxResults%2A>이 경과하기 전에 <xref:System.ServiceModel.Discovery.FindCriteria.Duration%2A> 응답을 받으면 찾기 작업이 종료됩니다.  
+2. <xref:System.ServiceModel.Discovery.FindCriteria.MaxResults%2A> 기다릴 응답-최대 수입니다. <xref:System.ServiceModel.Discovery.FindCriteria.MaxResults%2A>이 경과하기 전에 <xref:System.ServiceModel.Discovery.FindCriteria.Duration%2A> 응답을 받으면 찾기 작업이 종료됩니다.  
   
 ## <a name="findresponse"></a>FindResponse  
  <xref:System.ServiceModel.Discovery.FindResponse> 에 <xref:System.ServiceModel.Discovery.FindResponse.Endpoints%2A> 일치 하는 네트워크 서비스에서 보낸 응답을 포함 하는 컬렉션 속성입니다. 응답하는 서비스가 없으면 컬렉션이 비어 있습니다. 하나 이상의 서비스가 응답하면 서비스 주소 및 계약을 비롯한 서비스에 대한 일부 추가 정보가 포함된 <xref:System.ServiceModel.Discovery.EndpointDiscoveryMetadata> 개체에 각 응답이 저장됩니다.  

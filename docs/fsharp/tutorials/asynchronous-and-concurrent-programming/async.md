@@ -2,12 +2,12 @@
 title: 비동기 프로그래밍
 description: 에 대해 알아봅니다 하는 방법 F# 는 사용 하기 쉬운 및 언어에 자연 스러운 언어 수준 프로그래밍 모델을 통해 비동기 프로그래밍이 수행 됩니다.
 ms.date: 06/20/2016
-ms.openlocfilehash: 18ba4873cd3dba6d9548a07c4487306d96adab61
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 6925a0132f9beed6be5f9dded3630b551072bea2
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56980089"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59343456"
 ---
 # <a name="async-programming-in-f"></a>F #의 비동기 프로그래밍\#
 
@@ -57,7 +57,7 @@ printfn "%s" html
 
 앞에서 설명한 대로 비동기 코드는 명시적으로 시작 해야 하는 다른 컨텍스트에서 수행할 작업에 대 한 사양입니다. 이렇게 하려면 두 가지는 다음과 같습니다.
 
-1.  `Async.RunSynchronously` 다른 스레드에서 비동기 워크플로 시작 하 고 그 결과 기다립니다.
+1. `Async.RunSynchronously` 다른 스레드에서 비동기 워크플로 시작 하 고 그 결과 기다립니다.
 
 ```fsharp
 open System
@@ -78,7 +78,7 @@ let fetchHtmlAsync url =
  printfn "%s" html
  ```
 
-2.  `Async.Start` 비동기 워크플로 다른 스레드에서 시작 되며 됩니다 **되지** 그 결과 기다립니다.
+2. `Async.Start` 비동기 워크플로 다른 스레드에서 시작 되며 됩니다 **되지** 그 결과 기다립니다.
 
 ```fsharp
 open System
@@ -184,9 +184,9 @@ for html in htmlList do
 
 반면, F# 비동기 워크플로 더 자연스럽 게 취소할 수 있습니다. 취소는 간단한 3 단계로 이루어진 프로세스입니다.
 
-1.  새 `CancellationTokenSource`를 만듭니다.
-2.  시작 함수에 전달 합니다.
-3.  호출 `Cancel` 토큰에 있습니다.
+1. 새 `CancellationTokenSource`를 만듭니다.
+2. 시작 함수에 전달 합니다.
+3. 호출 `Cancel` 토큰에 있습니다.
 
 예제:
 
