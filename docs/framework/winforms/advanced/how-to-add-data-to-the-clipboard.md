@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Clipboard [Windows Forms], copying data to
 - data [Windows Forms], copying to Clipboard
 ms.assetid: 25152454-0e78-40a9-8a9e-a2a5a274e517
-ms.openlocfilehash: 896f5bd503c53041e2fed1401fd4455049e62449
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 03d3a0c6026761fcdbc45472f2bbb7ac593f4394
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59109098"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59325685"
 ---
 # <a name="how-to-add-data-to-the-clipboard"></a>방법: 클립보드에 데이터 추가
 <xref:System.Windows.Forms.Clipboard> 클래스는 Windows 운영 체제 클립보드 기능과 상호 작용 하는 데 사용할 수 있는 메서드를 제공 합니다. 많은 응용 프로그램 데이터에 대 한 임시 저장소로 클립보드를 사용 합니다. 예를 들어 워드 프로세서 잘라내기 및 붙여넣기 작업 중 클립보드를 사용합니다. 클립보드 다른 응용 프로그램에서 데이터를 전송할 때도 유용 합니다.  
@@ -35,14 +35,14 @@ ms.locfileid: "59109098"
   
 ### <a name="to-add-data-to-the-clipboard-in-a-single-common-format"></a>단일의 공통 형식으로 클립보드에 데이터를 추가 하려면  
   
-1.  사용 된 <xref:System.Windows.Forms.Clipboard.SetAudio%2A>, <xref:System.Windows.Forms.Clipboard.SetFileDropList%2A>, <xref:System.Windows.Forms.Clipboard.SetImage%2A>, 또는 <xref:System.Windows.Forms.Clipboard.SetText%2A> 메서드. 이러한 메서드는 에서만 사용할 수 있습니다 [!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)]합니다.  
+1. 사용 된 <xref:System.Windows.Forms.Clipboard.SetAudio%2A>, <xref:System.Windows.Forms.Clipboard.SetFileDropList%2A>, <xref:System.Windows.Forms.Clipboard.SetImage%2A>, 또는 <xref:System.Windows.Forms.Clipboard.SetText%2A> 메서드. 이러한 메서드는 에서만 사용할 수 있습니다 [!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)]합니다.  
   
      [!code-csharp[System.Windows.Forms.Clipboard#2](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Clipboard/CS/form1.cs#2)]
      [!code-vb[System.Windows.Forms.Clipboard#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Clipboard/vb/form1.vb#2)]  
   
 ### <a name="to-add-data-to-the-clipboard-in-a-custom-format"></a>사용자 지정 형식으로 클립보드에 데이터를 추가 하려면  
   
-1.  사용 하 여는 <xref:System.Windows.Forms.Clipboard.SetData%2A> 메서드를 사용자 지정 형식 이름입니다. 이 메서드는 에서만 사용할 수 있습니다 [!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)]합니다.  
+1. 사용 하 여는 <xref:System.Windows.Forms.Clipboard.SetData%2A> 메서드를 사용자 지정 형식 이름입니다. 이 메서드는 에서만 사용할 수 있습니다 [!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)]합니다.  
   
      미리 정의 된 형식 이름을 사용 하 여 사용할 수도 있습니다는 <xref:System.Windows.Forms.Clipboard.SetData%2A> 메서드. 자세한 내용은 <xref:System.Windows.Forms.DataFormats>을 참조하세요.  
   
@@ -53,7 +53,7 @@ ms.locfileid: "59109098"
   
 ### <a name="to-add-data-to-the-clipboard-in-multiple-formats"></a>여러 형식으로 클립보드에 데이터를 추가 하려면  
   
-1.  사용 된 <xref:System.Windows.Forms.Clipboard.SetDataObject%2A> 메서드와 전달을 <xref:System.Windows.Forms.DataObject> 데이터를 포함 하는. 버전에서 클립보드에 데이터를 추가 하려면이 메서드를 사용 해야 이전의 [!INCLUDE[dnprdnlong](../../../../includes/dnprdnlong-md.md)]합니다.  
+1. 사용 된 <xref:System.Windows.Forms.Clipboard.SetDataObject%2A> 메서드와 전달을 <xref:System.Windows.Forms.DataObject> 데이터를 포함 하는. 버전에서 클립보드에 데이터를 추가 하려면이 메서드를 사용 해야 이전의 [!INCLUDE[dnprdnlong](../../../../includes/dnprdnlong-md.md)]합니다.  
   
      [!code-csharp[System.Windows.Forms.Clipboard#4](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Clipboard/CS/form1.cs#4)]
      [!code-vb[System.Windows.Forms.Clipboard#4](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Clipboard/vb/form1.vb#4)]  

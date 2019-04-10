@@ -2,19 +2,19 @@
 title: 활동 정의 범위 지정 및 표시 유형
 ms.date: 03/30/2017
 ms.assetid: ccdffa07-9503-4eea-a61b-17f1564368b7
-ms.openlocfilehash: 7b09ac6d27dd3be502c98ce3ac0a90f636714fc2
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 27c43323a176c841f3d90cb9c52f25599bc0686d
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57723844"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59325217"
 ---
 # <a name="activity-definition-scoping-and-visibility"></a>활동 정의 범위 지정 및 표시 유형
 활동 정의의 범위 지정 및 표시 유형은 개체의 범위 지정 및 표시 유형과 마찬가지로 다른 개체나 활동이 활동의 멤버에 액세스하는 기능입니다. 활동 정의는 다음 구현을 통해 수행됩니다.  
   
-1.  활동이 사용자에게 노출하는 멤버(<xref:System.Activities.Argument>, <xref:System.Activities.Variable> 및 <xref:System.Activities.ActivityDelegate> 개체와 자식 활동) 결정  
+1. 활동이 사용자에게 노출하는 멤버(<xref:System.Activities.Argument>, <xref:System.Activities.Variable> 및 <xref:System.Activities.ActivityDelegate> 개체와 자식 활동) 결정  
   
-2.  활동의 실행 논리 구현  
+2. 활동의 실행 논리 구현  
   
  구현에는 활동의 소비자에게 노출되기 보다는 구현의 세부 정보에 해당하는 멤버가 포함될 수 있습니다.  형식 정의와 마찬가지로 활동 모델을 통해 작성자는 정의할 활동의 정의와 관련하여 활동 멤버의 표시 유형을 한정할 수 있습니다.  이 표시 유형은 데이터 범위 지정과 같은 멤버 사용에 관련된 측면을 제어합니다.  
   
@@ -27,9 +27,9 @@ ms.locfileid: "57723844"
 ### <a name="activity-members"></a>활동 멤버  
  활동 모델은 활동이 소비자에게 제공하는 인수, 변수, 대리자 및 자식 활동을 정의합니다. 이러한 각각의 멤버를 `public` 또는 `private`로 선언할 수 있습니다. public 멤버는 활동의 소비자가 구성하지만 `private` 멤버는 활동의 작성자가 정한 구현을 사용합니다. 데이터 범위 지정의 표시 유형 규칙은 다음과 같습니다.  
   
-1.  public 멤버와 public 자식 활동의 public 멤버는 public 변수를 참조할 수 있습니다.  
+1. public 멤버와 public 자식 활동의 public 멤버는 public 변수를 참조할 수 있습니다.  
   
-2.  public 멤버와 public 자식 활동의 public 멤버는 인수 및 private 변수를 참조할 수 있습니다.  
+2. public 멤버와 public 자식 활동의 public 멤버는 인수 및 private 변수를 참조할 수 있습니다.  
   
  활동의 소비자가 설정할 수 있는 멤버는 private으로 설정해서는 안 됩니다.  
   
@@ -41,7 +41,7 @@ ms.locfileid: "57723844"
   
  <xref:System.Activities.NativeActivity>에서 파생되는 클래스의 멤버는 <xref:System.Activities.NativeActivityMetadata> 메서드에 전달된 <xref:System.Activities.NativeActivity.CacheMetadata%2A> 구조체를 사용하여 런타임으로 선언됩니다.  
   
-#### <a name="activity"></a>동작  
+#### <a name="activity"></a>활동  
  <xref:System.Activities.Activity>를 사용하여 만든 활동에는 다른 활동 구성을 통해 엄격하게 디자인된 동작이 포함됩니다. <xref:System.Activities.Activity> 클래스에는 <xref:System.Activities.Activity.Implementation%2A>을 사용하여 런타임에 의해 얻은 구현 자식 활동이 하나 있습니다. <xref:System.Activities.Activity>에서 파생되는 활동은 public 인수, public 변수, 가져온 ActivityDelegates 및 가져온 Activities를 정의할 수 있습니다.  
   
  가져온 ActivityDelegates 및 Activities는 활동의 public 자식으로 선언되지만 활동에서 직접 예약할 수는 없습니다. 이 정보는 유효성 검사 중에 활동이 실행되지 않는 위치에서 부모와 만나는 유효성 검사를 실행하지 않도록 방지하는 데 사용됩니다. public 자식과 마찬가지로 가져온 자식도 활동 구현에서 참조하고 예약할 수 있습니다. 즉, Activity1 활동을 가져오는 활동은 Activity1을 예약하는 구현에 <xref:System.Activities.Statements.Sequence>를 포함할 수 있습니다.  
@@ -52,7 +52,7 @@ ms.locfileid: "57723844"
 #### <a name="summary-of-visibilities"></a>표시 유형 요약  
  다음 표에는 이 섹션의 앞부분에 있는 정보가 요약되어 있습니다.  
   
-|멤버 형식|NativeActivity|동작|CodeActivity/AsyncCodeActivity|  
+|멤버 형식|NativeActivity|활동|CodeActivity/AsyncCodeActivity|  
 |-----------------|--------------------|--------------|--------------------------------------|  
 |인수|Public/Private|Public|적용할 수 없음|  
 |변수|Public/Private|Public|적용할 수 없음|  
