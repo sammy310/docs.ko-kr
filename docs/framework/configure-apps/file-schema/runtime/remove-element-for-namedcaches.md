@@ -1,26 +1,26 @@
 ---
-title: <remove>에 대한 <namedCaches> 요소
+title: <remove> 에 대 한 요소 <namedCaches>
 ms.date: 03/30/2017
 helpviewer_keywords:
 - remove element for namedCaches
 - <remove> element for namedCaches
 ms.assetid: 24211ea5-163e-4fe5-aed8-004d8499760c
-ms.openlocfilehash: 22d06ab1df0d5ed74073772302421a680f1665ef
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 053e2776153489dfdd61547fdc039980646ae697
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55257021"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59229773"
 ---
-# <a name="remove-element-for-namedcaches"></a><span data-ttu-id="b8f3d-102">\<제거 > 요소에 대 한 \<namedCaches ></span><span class="sxs-lookup"><span data-stu-id="b8f3d-102">\<remove> Element for \<namedCaches></span></span>
-<span data-ttu-id="b8f3d-103">메모리 캐시용으로 명명된 캐시 항목을 `namedCaches` 컬렉션에서 제거합니다.</span><span class="sxs-lookup"><span data-stu-id="b8f3d-103">Removes a named cache entry from the `namedCaches` collection for a memory cache.</span></span>  
+# <a name="remove-element-for-namedcaches"></a><span data-ttu-id="f6765-102">\<제거 > 요소에 대 한 \<namedCaches ></span><span class="sxs-lookup"><span data-stu-id="f6765-102">\<remove> Element for \<namedCaches></span></span>
+<span data-ttu-id="f6765-103">메모리 캐시용으로 명명된 캐시 항목을 `namedCaches` 컬렉션에서 제거합니다.</span><span class="sxs-lookup"><span data-stu-id="f6765-103">Removes a named cache entry from the `namedCaches` collection for a memory cache.</span></span>  
   
- <span data-ttu-id="b8f3d-104">\<system.runtime.caching></span><span class="sxs-lookup"><span data-stu-id="b8f3d-104">\<system.runtime.caching></span></span>  
-<span data-ttu-id="b8f3d-105">\<memoryCache></span><span class="sxs-lookup"><span data-stu-id="b8f3d-105">\<memoryCache></span></span>  
-<span data-ttu-id="b8f3d-106">\<namedCaches></span><span class="sxs-lookup"><span data-stu-id="b8f3d-106">\<namedCaches></span></span>  
-<span data-ttu-id="b8f3d-107">\<remove></span><span class="sxs-lookup"><span data-stu-id="b8f3d-107">\<remove></span></span>  
+ <span data-ttu-id="f6765-104">\<system.runtime.caching></span><span class="sxs-lookup"><span data-stu-id="f6765-104">\<system.runtime.caching></span></span>  
+<span data-ttu-id="f6765-105">\<memoryCache></span><span class="sxs-lookup"><span data-stu-id="f6765-105">\<memoryCache></span></span>  
+<span data-ttu-id="f6765-106">\<namedCaches></span><span class="sxs-lookup"><span data-stu-id="f6765-106">\<namedCaches></span></span>  
+<span data-ttu-id="f6765-107">\<remove></span><span class="sxs-lookup"><span data-stu-id="f6765-107">\<remove></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="b8f3d-108">구문</span><span class="sxs-lookup"><span data-stu-id="b8f3d-108">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="f6765-108">구문</span><span class="sxs-lookup"><span data-stu-id="f6765-108">Syntax</span></span>  
   
 ```xml  
 <namedCaches>  
@@ -29,26 +29,27 @@ ms.locfileid: "55257021"
  </namedCaches>  
 ```  
   
-## <a name="type"></a><span data-ttu-id="b8f3d-109">형식</span><span class="sxs-lookup"><span data-stu-id="b8f3d-109">Type</span></span>  
+## <a name="type"></a><span data-ttu-id="f6765-109">형식</span><span class="sxs-lookup"><span data-stu-id="f6765-109">Type</span></span>  
  `None`  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="b8f3d-110">특성 및 요소</span><span class="sxs-lookup"><span data-stu-id="b8f3d-110">Attributes and Elements</span></span>  
- <span data-ttu-id="b8f3d-111">다음 섹션에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="b8f3d-111">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="f6765-110">특성 및 요소</span><span class="sxs-lookup"><span data-stu-id="f6765-110">Attributes and Elements</span></span>  
+ <span data-ttu-id="f6765-111">다음 섹션에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="f6765-111">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="b8f3d-112">특성</span><span class="sxs-lookup"><span data-stu-id="b8f3d-112">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="f6765-112">특성</span><span class="sxs-lookup"><span data-stu-id="f6765-112">Attributes</span></span>  
  `None`  
   
-### <a name="child-elements"></a><span data-ttu-id="b8f3d-113">자식 요소</span><span class="sxs-lookup"><span data-stu-id="b8f3d-113">Child Elements</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="f6765-113">자식 요소</span><span class="sxs-lookup"><span data-stu-id="f6765-113">Child Elements</span></span>  
  `None`  
   
-### <a name="parent-elements"></a><span data-ttu-id="b8f3d-114">부모 요소</span><span class="sxs-lookup"><span data-stu-id="b8f3d-114">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="f6765-114">부모 요소</span><span class="sxs-lookup"><span data-stu-id="f6765-114">Parent Elements</span></span>  
   
-|<span data-ttu-id="b8f3d-115">요소</span><span class="sxs-lookup"><span data-stu-id="b8f3d-115">Element</span></span>|<span data-ttu-id="b8f3d-116">설명</span><span class="sxs-lookup"><span data-stu-id="b8f3d-116">Description</span></span>|  
+|<span data-ttu-id="f6765-115">요소</span><span class="sxs-lookup"><span data-stu-id="f6765-115">Element</span></span>|<span data-ttu-id="f6765-116">설명</span><span class="sxs-lookup"><span data-stu-id="f6765-116">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="b8f3d-117">\<namedCaches></span><span class="sxs-lookup"><span data-stu-id="b8f3d-117">\<namedCaches></span></span>](../../../../../docs/framework/configure-apps/file-schema/runtime/namedcaches-element-cache-settings.md)|<span data-ttu-id="b8f3d-118">명명 된 구성 설정의 컬렉션을 포함 <xref:System.Runtime.Caching.MemoryCache> 인스턴스.</span><span class="sxs-lookup"><span data-stu-id="b8f3d-118">Contains a collection of configuration settings for the named <xref:System.Runtime.Caching.MemoryCache> instances.</span></span>|  
+|[<span data-ttu-id="f6765-117">\<namedCaches></span><span class="sxs-lookup"><span data-stu-id="f6765-117">\<namedCaches></span></span>](../../../../../docs/framework/configure-apps/file-schema/runtime/namedcaches-element-cache-settings.md)|<span data-ttu-id="f6765-118">명명 된 구성 설정의 컬렉션을 포함 <xref:System.Runtime.Caching.MemoryCache> 인스턴스.</span><span class="sxs-lookup"><span data-stu-id="f6765-118">Contains a collection of configuration settings for the named <xref:System.Runtime.Caching.MemoryCache> instances.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="b8f3d-119">설명</span><span class="sxs-lookup"><span data-stu-id="b8f3d-119">Remarks</span></span>  
- <span data-ttu-id="b8f3d-120">합니다 `remove` 요소를 제거는 `namedCache` 메모리 캐시에 대 한 명명 된 캐시 컬렉션에서 항목입니다.</span><span class="sxs-lookup"><span data-stu-id="b8f3d-120">The `remove` element removes a `namedCache` entry from the named cache collection for a memory cache.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="f6765-119">설명</span><span class="sxs-lookup"><span data-stu-id="f6765-119">Remarks</span></span>  
+ <span data-ttu-id="f6765-120">합니다 `remove` 요소를 제거는 `namedCache` 메모리 캐시에 대 한 명명 된 캐시 컬렉션에서 항목입니다.</span><span class="sxs-lookup"><span data-stu-id="f6765-120">The `remove` element removes a `namedCache` entry from the named cache collection for a memory cache.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="b8f3d-121">참고자료</span><span class="sxs-lookup"><span data-stu-id="b8f3d-121">See also</span></span>
-- [<span data-ttu-id="b8f3d-122">\<namedCaches > 요소 (캐시 설정)</span><span class="sxs-lookup"><span data-stu-id="b8f3d-122">\<namedCaches> Element (Cache Settings)</span></span>](../../../../../docs/framework/configure-apps/file-schema/runtime/namedcaches-element-cache-settings.md)
+## <a name="see-also"></a><span data-ttu-id="f6765-121">참고자료</span><span class="sxs-lookup"><span data-stu-id="f6765-121">See also</span></span>
+
+- [<span data-ttu-id="f6765-122">\<namedCaches > 요소 (캐시 설정)</span><span class="sxs-lookup"><span data-stu-id="f6765-122">\<namedCaches> Element (Cache Settings)</span></span>](../../../../../docs/framework/configure-apps/file-schema/runtime/namedcaches-element-cache-settings.md)
