@@ -10,12 +10,12 @@ helpviewer_keywords:
 - streaming data provider [WCF Data Services]
 - WCF Data Services, streams
 ms.assetid: f0978fe4-5f9f-42aa-a5c2-df395d7c9495
-ms.openlocfilehash: afe33835c8d29c4fe0e16ab4c7e00808336d0752
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: c2e51133850a59de2b68164870f909ef50d47b69
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59087900"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59298879"
 ---
 # <a name="streaming-provider-wcf-data-services"></a>스트리밍 공급자(WCF Data Services)
 데이터 서비스에서 BLOB(Binary Large Object) 데이터를 노출할 수 있습니다. 이 이진 데이터는 비디오 및 오디오 스트림, 이미지, 문서 파일 또는 다른 형식의 이진 미디어를 나타낼 수 있습니다. 데이터 모델의 엔터티에 이진 속성이 하나 이상 포함되어 있는 경우 데이터 서비스가 이 이진 데이터를 응답 피드의 항목 안에 base-64로 인코딩하여 반환합니다. 로드 하 고 이러한 방식으로 큰 이진 데이터를 직렬화 하는 작업 성능에 영향 때문에 [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] 이진 데이터가 속한 엔터티와 독립적으로 검색 하는 메커니즘을 정의 합니다. 이 작업은 엔터티의 이진 데이터를 하나 이상의 데이터 스트림으로 구분하여 수행됩니다.  
@@ -28,15 +28,15 @@ ms.locfileid: "59087900"
   
  이진 데이터의 스트리밍을 지원하도록 데이터 서비스를 구성하려면 다음 단계를 수행해야 합니다.  
   
-1.  데이터 모델에서 하나 이상의 엔터티 특성을 미디어 링크 항목으로 지정합니다. 이러한 엔터티에는 스트리밍할 이진 데이터가 포함되면 안 됩니다. 엔터티의 모든 이진 속성은 항상 base-64로 인코딩된 이진 데이터로 항목에 반환됩니다.  
+1. 데이터 모델에서 하나 이상의 엔터티 특성을 미디어 링크 항목으로 지정합니다. 이러한 엔터티에는 스트리밍할 이진 데이터가 포함되면 안 됩니다. 엔터티의 모든 이진 속성은 항상 base-64로 인코딩된 이진 데이터로 항목에 반환됩니다.  
   
-2.  T:System.Data.Services.Providers.IDataServiceStreamProvider 인터페이스를 구현합니다.  
+2. T:System.Data.Services.Providers.IDataServiceStreamProvider 인터페이스를 구현합니다.  
   
-3.  <xref:System.IServiceProvider> 인터페이스를 구현하는 데이터 서비스를 정의합니다. 데이터 서비스는 <xref:System.IServiceProvider.GetService%2A> 구현을 사용하여 스트리밍 데이터 공급자 구현에 액세스합니다. 이 메서드는 적절한 스트리밍 공급자 구현을 반환합니다.  
+3. <xref:System.IServiceProvider> 인터페이스를 구현하는 데이터 서비스를 정의합니다. 데이터 서비스는 <xref:System.IServiceProvider.GetService%2A> 구현을 사용하여 스트리밍 데이터 공급자 구현에 액세스합니다. 이 메서드는 적절한 스트리밍 공급자 구현을 반환합니다.  
   
-4.  웹 응용 프로그램 구성에서 큰 메시지 스트림을 사용하도록 설정합니다.  
+4. 웹 응용 프로그램 구성에서 큰 메시지 스트림을 사용하도록 설정합니다.  
   
-5.  서버나 데이터 소스의 이진 리소스에 대한 액세스를 사용하도록 설정합니다.  
+5. 서버나 데이터 소스의 이진 리소스에 대한 액세스를 사용하도록 설정합니다.  
   
  이 항목의 예제는 샘플 스트리밍 사진 서비스 게시물에서 자세히 설명 하는 기반으로 [데이터 서비스 스트리밍 공급자 시리즈: 스트리밍 공급자 (1 부) 구현](https://go.microsoft.com/fwlink/?LinkID=198989)합니다. 이 샘플 서비스에 대 한 소스 코드는에서 사용할 수는 [스트리밍 사진 데이터 서비스 샘플 페이지](https://go.microsoft.com/fwlink/?LinkID=198988) MSDN 코드 갤러리의 합니다.  
   

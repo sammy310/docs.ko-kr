@@ -9,12 +9,12 @@ helpviewer_keywords:
 - ', '
 - flow documents [WPF]
 ms.assetid: ef236a50-d44f-43c8-ba7c-82b0c733c0b7
-ms.openlocfilehash: 14402bde39ec90d8ef17ed5ee07f9eefb8151939
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: f8e5a7475765bffb76e7b07e81db25b4a62ae038
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59139609"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59303494"
 ---
 # <a name="flow-document-overview"></a>유동 문서 개요
 유동 문서는 보기와 가독성을 최적화하도록 설계되었습니다. 유동 문서는 미리 정의된 하나의 레이아웃으로 설정되는 것이 아니라, 창 크기, 디바이스 해상도 및 선택적 사용자 기본 설정 등의 런타임 변수에 따라 동적으로 콘텐츠를 조정하고 리플로우합니다. 유동 문서에서는 페이지 매김 및 열과 같은 고급 문서 기능을 제공합니다. 이 항목에서는 유동 문서의 개요와 해당 문서를 작성하는 방법을 제공합니다.  
@@ -89,9 +89,9 @@ ms.locfileid: "59139609"
   
  유동 콘텐츠에 사용되는 중요한 범주는 다음 두 가지가 있습니다.  
   
-1.  **블록 파생 클래스**: "블록 콘텐츠 요소" 또는 "블록 요소" 라고도합니다. 상속 되는 요소 <xref:System.Windows.Documents.Block> 공통 부모 아래 요소를 그룹화 하거나 그룹에 공통 특성을 적용할 수 있습니다.  
+1. **블록 파생 클래스**: "블록 콘텐츠 요소" 또는 "블록 요소" 라고도합니다. 상속 되는 요소 <xref:System.Windows.Documents.Block> 공통 부모 아래 요소를 그룹화 하거나 그룹에 공통 특성을 적용할 수 있습니다.  
   
-2.  **인라인 파생 클래스**: "인라인 콘텐츠 요소" 또는 "인라인 요소" 라고도합니다. 상속 되는 요소 <xref:System.Windows.Documents.Inline> 블록 요소 또는 다른 인라인 요소에 포함 됩니다. 인라인 요소는 종종 화면에 렌더링되는 콘텐츠의 직접 컨테이너로 사용됩니다. 예를 들어를 <xref:System.Windows.Documents.Paragraph> (블록 요소)를 포함할 수는 <xref:System.Windows.Documents.Run> (인라인 요소) 하지만 <xref:System.Windows.Documents.Run> 실제로 화면에 렌더링 되는 텍스트를 포함 합니다.  
+2. **인라인 파생 클래스**: "인라인 콘텐츠 요소" 또는 "인라인 요소" 라고도합니다. 상속 되는 요소 <xref:System.Windows.Documents.Inline> 블록 요소 또는 다른 인라인 요소에 포함 됩니다. 인라인 요소는 종종 화면에 렌더링되는 콘텐츠의 직접 컨테이너로 사용됩니다. 예를 들어를 <xref:System.Windows.Documents.Paragraph> (블록 요소)를 포함할 수는 <xref:System.Windows.Documents.Run> (인라인 요소) 하지만 <xref:System.Windows.Documents.Run> 실제로 화면에 렌더링 되는 텍스트를 포함 합니다.  
   
  이러한 두 범주의 각 클래스는 아래 간략하게 설명되어 있습니다.  
   

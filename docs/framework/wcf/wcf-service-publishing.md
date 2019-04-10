@@ -2,12 +2,12 @@
 title: WCF 서비스 게시
 ms.date: 03/30/2017
 ms.assetid: c806b253-cd47-4b96-b831-e73cbf08808f
-ms.openlocfilehash: 04912d94568cf144e874513395e6a6f31375fb7c
-ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
+ms.openlocfilehash: 33725c2f393529a7e59ed0b3ae1db01a359fb9a5
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "56441439"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59299724"
 ---
 # <a name="wcf-service-publishing"></a>WCF 서비스 게시
 
@@ -35,13 +35,13 @@ WCF 서비스 라이브러리 템플릿 및 다음을 포함 하는 해당 항�
 
 서비스 구현을 배포하려면 다음 단계를 수행합니다.
 
-1.  관리자 권한으로 Visual Studio를 엽니다 (실행 파일을 마우스 오른쪽 단추로 클릭 하 고 선택 **관리자 권한으로 실행** 엽니다).  IIS 7.0 사용 하거나 나중에 있는지를 확인 하는 경우 제어판에서 "설정 Windows 기능 사용 / 해제"를 사용 하 여 "IIS 메타 베이스 및 iis 6 구성 호환성" 구성 요소를 설치 했습니다.
+1. 관리자 권한으로 Visual Studio를 엽니다 (실행 파일을 마우스 오른쪽 단추로 클릭 하 고 선택 **관리자 권한으로 실행** 엽니다).  IIS 7.0 사용 하거나 나중에 있는지를 확인 하는 경우 제어판에서 "설정 Windows 기능 사용 / 해제"를 사용 하 여 "IIS 메타 베이스 및 iis 6 구성 호환성" 구성 요소를 설치 했습니다.
 
-2.  서비스 프로젝트를 열고 **빌드** > **게시 \<프로젝트 이름 >** 주 메뉴에서에서 프로젝트를 마우스 오른쪽 단추로 클릭 하거나 **솔루션 탐색기**누릅니다 **게시**합니다.
+2. 서비스 프로젝트를 열고 **빌드** > **게시 \<프로젝트 이름 >** 주 메뉴에서에서 프로젝트를 마우스 오른쪽 단추로 클릭 하거나 **솔루션 탐색기**누릅니다 **게시**합니다.
 
-3.  합니다 **게시** 창이 나타납니다. 클릭 된 **...** . 단추를 클릭하여 서비스를 배포할 대상 위치를 지정합니다. 로컬 IIS, 파일 시스템 또는 FTP 사이트에 응용 프로그램을 배포 하도록 선택할 수 있습니다. 로컬 IIS에 응용 프로그램을 배포 하는 경우 웹 사이트를 선택 하 고 클릭 하 여 웹 응용 프로그램을 만들 수는 **새 웹 응용 프로그램 만들기** 오른쪽 위 모서리에 있는 아이콘입니다.
+3. 합니다 **게시** 창이 나타납니다. 클릭 된 **...** . 단추를 클릭하여 서비스를 배포할 대상 위치를 지정합니다. 로컬 IIS, 파일 시스템 또는 FTP 사이트에 응용 프로그램을 배포 하도록 선택할 수 있습니다. 로컬 IIS에 응용 프로그램을 배포 하는 경우 웹 사이트를 선택 하 고 클릭 하 여 웹 응용 프로그램을 만들 수는 **새 웹 응용 프로그램 만들기** 오른쪽 위 모서리에 있는 아이콘입니다.
 
-4.  클릭 한 후 **게시** 주 창에서 Visual Studio 응용 프로그램을 지정한 대상 위치에 배포 및 대상 디렉터리에 Web.config,.svc 및 어셈블리 파일을 복사 합니다. . .Svc의 이름은 됩니다 "projectname.servicename.svc"입니다. 서비스를 성공적으로 게시 된 후 Visual Studio 출력 창의 비슷합니다는 옥을 찾을 수 있습니다 "연결할 `http://localhost/WebApplicationFolderName...`"입니다. Ctrl 키를 누르고 링크를 클릭하여 Visual Studio 내에서 브라우저 페이지를 열고 서비스 디렉터리 구조를 볼 수 있습니다.
+4. 클릭 한 후 **게시** 주 창에서 Visual Studio 응용 프로그램을 지정한 대상 위치에 배포 및 대상 디렉터리에 Web.config,.svc 및 어셈블리 파일을 복사 합니다. . .Svc의 이름은 됩니다 "projectname.servicename.svc"입니다. 서비스를 성공적으로 게시 된 후 Visual Studio 출력 창의 비슷합니다는 옥을 찾을 수 있습니다 "연결할 `http://localhost/WebApplicationFolderName...`"입니다. Ctrl 키를 누르고 링크를 클릭하여 Visual Studio 내에서 브라우저 페이지를 열고 서비스 디렉터리 구조를 볼 수 있습니다.
 
      사이트를 찾을 수 없으면 IIS에서 디렉터리 브라우저를 사용하도록 설정되지 않았을 수 있습니다. 사용 하도록 설정 하려면 "가능한 해결 방법" 단원의 팁을 따르십시오. 또는 직접 입력할 있습니다 `http://localhost/WebApplicationFolderName/ProjectName.ServiceName.svc` 서비스 페이지를 볼 수 있습니다.
 

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - WithEvents keyword [Visual Basic], walkthroughs
 - event handlers [Visual Basic], walkthroughs
 ms.assetid: f145b3fc-5ae0-4509-a2aa-1ff6934706bd
-ms.openlocfilehash: 2a8b515f500884d743b7dcca41ffe8c1607375a9
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 2ae32f0ac31c504e86d5cf39ed6a36cc5523a4a0
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58840928"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59308564"
 ---
 # <a name="walkthrough-handling-events-visual-basic"></a>연습: 이벤트 처리 (Visual Basic)
 이것이 이벤트로 작업 하는 방법을 보여 주는 두 항목 중 두 번째 숫자입니다. 첫 번째 항목인 [연습: 선언 및 발생 이벤트](../../../../visual-basic/programming-guide/language-features/events/walkthrough-declaring-and-raising-events.md)를 선언 하 고 이벤트를 발생 하는 방법을 보여 줍니다. 이 섹션에서는 다음 연습에서 클래스 및 형식을 사용 하 여 수행한 이벤트를 처리 하는 방법을 보여 줍니다.  
@@ -23,7 +23,7 @@ ms.locfileid: "58840928"
   
 ### <a name="to-handle-the-percentdone-event-of-the-widget-class"></a>위젯 클래스의 PercentDone 이벤트를 처리 하려면  
   
-1.  다음 코드를 배치할 `Form1`:  
+1. 다음 코드를 배치할 `Form1`:  
   
      [!code-vb[VbVbcnWalkthroughDeclaringAndRaisingEvents#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnWalkthroughDeclaringAndRaisingEvents/VB/Form1.vb#4)]  
   
@@ -38,20 +38,20 @@ ms.locfileid: "58840928"
   
 #### <a name="to-handle-an-event"></a>이벤트를 처리 하려면  
   
-1.  선택 `mWidget` 왼쪽된 드롭다운 목록에서 합니다 **코드 편집기**합니다.  
+1. 선택 `mWidget` 왼쪽된 드롭다운 목록에서 합니다 **코드 편집기**합니다.  
   
-2.  선택 된 `PercentDone` 오른쪽 드롭다운 목록에서 이벤트입니다. 합니다 **코드 편집기** 열립니다는 `mWidget_PercentDone` 이벤트 프로시저입니다.  
+2. 선택 된 `PercentDone` 오른쪽 드롭다운 목록에서 이벤트입니다. 합니다 **코드 편집기** 열립니다는 `mWidget_PercentDone` 이벤트 프로시저입니다.  
   
     > [!NOTE]
     >  합니다 **코드 편집기** 유용 하지만 새 이벤트 처리기를 삽입에 필요 하지 않습니다. 이 연습에서는 이벤트 처리기 코드에 직접 복사 하는 보다 직접적인 것입니다.  
   
-3.  다음 코드를 `mWidget_PercentDone` 이벤트 처리기에 추가합니다.  
+3. 다음 코드를 `mWidget_PercentDone` 이벤트 처리기에 추가합니다.  
   
      [!code-vb[VbVbcnWalkthroughDeclaringAndRaisingEvents#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnWalkthroughDeclaringAndRaisingEvents/VB/Form1.vb#5)]  
   
      때마다 합니다 `PercentDone` 이벤트가 발생 하면 이벤트 프로시저에서 완료 백분율을 표시는 `Label` 제어 합니다. 합니다 `DoEvents` 메서드를 사용 하면 다시 그리기를 위해 레이블을 사용자 클릭을 기회를 제공 하 고는 **취소** 단추입니다.  
   
-4.  다음 코드를 추가 합니다 `Button2_Click` 이벤트 처리기:  
+4. 다음 코드를 추가 합니다 `Button2_Click` 이벤트 처리기:  
   
      [!code-vb[VbVbcnWalkthroughDeclaringAndRaisingEvents#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnWalkthroughDeclaringAndRaisingEvents/VB/Form1.vb#6)]  
   
@@ -64,11 +64,11 @@ ms.locfileid: "58840928"
   
 #### <a name="to-create-an-object-and-assign-a-reference-to-it"></a>개체를 만들고이에 대 한 참조를 할당 하려면  
   
-1.  선택 **(Form1 이벤트)** 왼쪽된 드롭다운 목록에서 합니다 **코드 편집기**합니다.  
+1. 선택 **(Form1 이벤트)** 왼쪽된 드롭다운 목록에서 합니다 **코드 편집기**합니다.  
   
-2.  선택 된 `Load` 오른쪽 드롭다운 목록에서 이벤트입니다. 합니다 **코드 편집기** 열립니다는 `Form1_Load` 이벤트 프로시저입니다.  
+2. 선택 된 `Load` 오른쪽 드롭다운 목록에서 이벤트입니다. 합니다 **코드 편집기** 열립니다는 `Form1_Load` 이벤트 프로시저입니다.  
   
-3.  다음 코드를 추가 합니다 `Form1_Load` 이벤트 프로시저를 만드는 `Widget`:  
+3. 다음 코드를 추가 합니다 `Form1_Load` 이벤트 프로시저를 만드는 `Widget`:  
   
      [!code-vb[VbVbcnWalkthroughDeclaringAndRaisingEvents#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnWalkthroughDeclaringAndRaisingEvents/VB/Form1.vb#7)]  
   
@@ -88,11 +88,11 @@ ms.locfileid: "58840928"
   
 #### <a name="to-run-the-program"></a>프로그램을 실행하려면  
   
-1.  F5 키를 눌러 프로젝트 실행 모드로 전환 합니다.  
+1. F5 키를 눌러 프로젝트 실행 모드로 전환 합니다.  
   
-2.  클릭 합니다 **작업 시작** 단추입니다. 각 시간을 `PercentDone` 이벤트가 발생 하면 완료 된 작업의 백분율을 사용 하 여 레이블이 업데이트 됩니다.  
+2. 클릭 합니다 **작업 시작** 단추입니다. 각 시간을 `PercentDone` 이벤트가 발생 하면 완료 된 작업의 백분율을 사용 하 여 레이블이 업데이트 됩니다.  
   
-3.  클릭 합니다 **취소** 작업을 중지 하려면 단추입니다. 모양의 합니다 **취소** 단추 클릭할 때 즉시 변경 되지 않습니다. 합니다 `Click` 이벤트가 발생할 수는 `My.Application.DoEvents` 문을 이벤트 처리를 허용 합니다.  
+3. 클릭 합니다 **취소** 작업을 중지 하려면 단추입니다. 모양의 합니다 **취소** 단추 클릭할 때 즉시 변경 되지 않습니다. 합니다 `Click` 이벤트가 발생할 수는 `My.Application.DoEvents` 문을 이벤트 처리를 허용 합니다.  
   
     > [!NOTE]
     >  `My.Application.DoEvents` 메서드 이벤트를 처리 하지 동일한 방식으로 폼 마찬가지로 합니다. 예를 들어이 연습에서는 클릭 해야 합니다 **취소** 단추를 두 번입니다. 폼에 직접 이벤트를 처리할 수 있도록을 따르면 다중 스레딩 합니다. 자세한 내용은 [관리 되는 스레딩](../../../../standard/threading/index.md)합니다.

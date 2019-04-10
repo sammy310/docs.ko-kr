@@ -2,12 +2,12 @@
 title: ASP.NET 캐싱 통합
 ms.date: 03/30/2017
 ms.assetid: f581923a-8a72-42fc-bd6a-46de2aaeecc1
-ms.openlocfilehash: 376e188bcabbff1d87e7b45aa281e2a2b92a13b6
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 8ed546459479e9986d6bbecf6eaca350d2d73c98
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47197450"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59309474"
 ---
 # <a name="aspnet-caching-integration"></a>ASP.NET 캐싱 통합
 이 샘플에서는 WCF 웹 HTTP 프로그래밍 모델을 사용하여 ASP.NET 출력 캐시를 활용하는 방법을 보여 줍니다. 이 항목에서는 ASP.NET 출력 캐시 통합 기능을 중점적으로 설명합니다.  
@@ -36,7 +36,7 @@ ms.locfileid: "47197450"
   
 -   **서비스**: ASP.NET에서 호스팅되는 WCF HTTP 서비스가 포함 하는 웹 응용 프로그램 프로젝트입니다.  
   
--   **클라이언트**: 서비스를 호출 하는 콘솔 응용 프로그램 프로젝트입니다.  
+-   **클라이언트**: 서비스를 호출하는 콘솔 응용 프로그램 프로젝트입니다.  
   
 -   **일반적인**: 클라이언트와 서비스에서 사용 하는 고객 형식을 포함 하는 공유 라이브러리입니다.  
   
@@ -44,21 +44,21 @@ ms.locfileid: "47197450"
   
 #### <a name="to-run-the-sample"></a>이 샘플을 실행하려면  
   
-1.  ASP.NET Caching Integration 샘플의 솔루션을 엽니다.  
+1. ASP.NET Caching Integration 샘플의 솔루션을 엽니다.  
   
-2.  Ctrl+Shift+B를 눌러 솔루션을 빌드합니다.  
+2. Ctrl+Shift+B를 눌러 솔루션을 빌드합니다.  
   
-3.  경우는 **솔루션 탐색기** 창이 아직 열려 있지 않으면, CTRL + W + S를 누릅니다.  
+3. 경우는 **솔루션 탐색기** 창이 아직 열려 있지 않으면, CTRL + W + S를 누릅니다.  
   
-4.  **솔루션 탐색기** 창에서 마우스 오른쪽 단추로 클릭 합니다 **Service** 프로젝트를 마우스 **새 인스턴스 시작**합니다. 그러면 ASP.NET Development Server가 시작되어 서비스를 호스트합니다.  
+4. **솔루션 탐색기** 창에서 마우스 오른쪽 단추로 클릭 합니다 **Service** 프로젝트를 마우스 **새 인스턴스 시작**합니다. 그러면 ASP.NET Development Server가 시작되어 서비스를 호스트합니다.  
   
-5.  **솔루션 탐색기** 창에서 마우스 오른쪽 단추로 클릭 합니다 **클라이언트** 프로젝트를 마우스 **새 인스턴스 시작**합니다.  
+5. **솔루션 탐색기** 창에서 마우스 오른쪽 단추로 클릭 합니다 **클라이언트** 프로젝트를 마우스 **새 인스턴스 시작**합니다.  
   
-6.  클라이언트 콘솔 창이 나타나고 실행 중인 서비스의 URI와 실행 중인 서비스에 대한 HTML 도움말 페이지의 URI가 제공됩니다. 언제든지 브라우저에서 HTML 도움말 페이지의 URI를 입력하면 해당 도움말 페이지를 볼 수 있습니다.  
+6. 클라이언트 콘솔 창이 나타나고 실행 중인 서비스의 URI와 실행 중인 서비스에 대한 HTML 도움말 페이지의 URI가 제공됩니다. 언제든지 브라우저에서 HTML 도움말 페이지의 URI를 입력하면 해당 도움말 페이지를 볼 수 있습니다.  
   
-7.  샘플이 실행되면 클라이언트에서는 현재 활동의 상태를 씁니다.  
+7. 샘플이 실행되면 클라이언트에서는 현재 활동의 상태를 씁니다.  
   
-8.  아무 키나 눌러 클라이언트 콘솔 응용 프로그램을 종료합니다.  
+8. 아무 키나 눌러 클라이언트 콘솔 응용 프로그램을 종료합니다.  
   
 9. Shift+F5를 눌러 서비스 디버깅을 중지합니다.  
   

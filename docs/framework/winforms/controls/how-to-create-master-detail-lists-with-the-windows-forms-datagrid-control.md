@@ -10,12 +10,12 @@ helpviewer_keywords:
 - DataGrid control [Windows Forms], master-details lists
 - related tables [Windows Forms], displaying in DataGrid control
 ms.assetid: 20388c6a-94f9-4d96-be18-8c200491247f
-ms.openlocfilehash: f1acfab747c2309a2860870f8bcec9c0cf3b7bf0
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 92b4a7d9513ce0ec9b7c02f57c23fa4267fb26ad
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59094985"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59302415"
 ---
 # <a name="how-to-create-masterdetail-lists-with-the-windows-forms-datagrid-control"></a>방법: Windows Forms DataGrid 컨트롤을 사용하여 마스터/세부 목록 만들기
 > [!NOTE]
@@ -25,17 +25,17 @@ ms.locfileid: "59094985"
   
 ### <a name="to-set-a-masterdetail-relationship-programmatically"></a>마스터/세부 관계를 프로그래밍 방식으로 설정 하려면  
   
-1.  두 개의 새 만들려면 <xref:System.Windows.Forms.DataGrid> 컨트롤과 해당 속성을 설정 합니다.  
+1. 두 개의 새 만들려면 <xref:System.Windows.Forms.DataGrid> 컨트롤과 해당 속성을 설정 합니다.  
   
-2.  데이터 집합에 테이블을 추가 합니다.  
+2. 데이터 집합에 테이블을 추가 합니다.  
   
-3.  형식의 변수 선언 <xref:System.Data.DataRelation> 만들려는 관계를 나타내는입니다.  
+3. 형식의 변수 선언 <xref:System.Data.DataRelation> 만들려는 관계를 나타내는입니다.  
   
-4.  테이블, 열 및 두 테이블을 연결 해 주는 항목 및 관계의 이름을 지정 하 여 관계를 인스턴스화하십시오.  
+4. 테이블, 열 및 두 테이블을 연결 해 주는 항목 및 관계의 이름을 지정 하 여 관계를 인스턴스화하십시오.  
   
-5.  에 대 한 관계를 추가 합니다 <xref:System.Data.DataSet> 개체의 <xref:System.Data.DataSet.Relations%2A> 컬렉션입니다.  
+5. 에 대 한 관계를 추가 합니다 <xref:System.Data.DataSet> 개체의 <xref:System.Data.DataSet.Relations%2A> 컬렉션입니다.  
   
-6.  사용 하 여는 <xref:System.Windows.Forms.DataGrid.SetDataBinding%2A> 메서드를 <xref:System.Windows.Forms.DataGrid> 각 표를 바인딩하는 <xref:System.Data.DataSet>합니다.  
+6. 사용 하 여는 <xref:System.Windows.Forms.DataGrid.SetDataBinding%2A> 메서드를 <xref:System.Windows.Forms.DataGrid> 각 표를 바인딩하는 <xref:System.Data.DataSet>합니다.  
   
      다음 예제에서는 이전에 생성 된의 Customers 및 Orders 테이블 간 마스터/세부 관계를 설정 하는 방법을 보여 줍니다 <xref:System.Data.DataSet> (`ds`).  
   

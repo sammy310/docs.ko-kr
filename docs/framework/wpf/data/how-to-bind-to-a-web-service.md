@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Web service binding [WPF]
 - data binding [WPF], Web service
 ms.assetid: 77e2d373-69ba-4cbd-b6f5-2c83c38fc98b
-ms.openlocfilehash: 66e91190e68d9610dd95d677edb276e117ec6abb
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 2c3bc1f2142f07aba3df2da6c46117d3907443a5
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59098581"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59304989"
 ---
 # <a name="how-to-bind-to-a-web-service"></a>방법: 웹 서비스에 바인딩
 이 예제에서는 웹 서비스 메서드 호출에서 반환 된 개체에 바인딩하는 방법을 보여 줍니다.  
@@ -24,13 +24,13 @@ ms.locfileid: "59098581"
   
  웹 서비스를 호출 하기 전에에 대 한 참조 해야 합니다. 사용 하 여 MTPS 서비스 웹 참조를 만들려면 [!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)], 다음 단계를 수행 합니다.  
   
-1.  프로젝트를 열고 [!INCLUDE[TLA2#tla_visualstu](../../../../includes/tla2sharptla-visualstu-md.md)]합니다.  
+1. 프로젝트를 열고 [!INCLUDE[TLA2#tla_visualstu](../../../../includes/tla2sharptla-visualstu-md.md)]합니다.  
   
-2.  **프로젝트** 메뉴에서 클릭 **웹 참조 추가**합니다.  
+2. **프로젝트** 메뉴에서 클릭 **웹 참조 추가**합니다.  
   
-3.  대화 상자에서 설정 합니다 **URL** 하 [ http://services.msdn.microsoft.com/contentservices/contentservice.asmx?wsdl ](https://services.msdn.microsoft.com/contentservices/contentservice.asmx?wsdl)합니다.  
+3. 대화 상자에서 설정 합니다 **URL** 하 [ http://services.msdn.microsoft.com/contentservices/contentservice.asmx?wsdl ](https://services.msdn.microsoft.com/contentservices/contentservice.asmx?wsdl)합니다.  
   
-4.  키를 눌러 **이동** 차례로 **참조 추가**합니다.  
+4. 키를 눌러 **이동** 차례로 **참조 추가**합니다.  
   
  웹 서비스 메서드를 호출 하는 다음으로 설정 하 고는 <xref:System.Windows.FrameworkElement.DataContext%2A> 적절 한 컨트롤 또는 창의 반환 된 개체입니다. 합니다 **GetContent** MTPS 서비스의 메서드는에 대 한 참조를 사용 합니다 **getContentRequest** 개체입니다. 따라서 다음 예제에서는 먼저 요청 개체를 설정합니다.  
   

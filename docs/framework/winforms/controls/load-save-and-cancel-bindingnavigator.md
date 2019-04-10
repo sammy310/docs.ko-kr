@@ -8,12 +8,12 @@ helpviewer_keywords:
 - controls [Windows Forms], manipulating
 - BindingNavigator control [Windows Forms], adding buttons
 ms.assetid: faa33042-186e-4bb2-8798-17ceb987ec62
-ms.openlocfilehash: 52d4fc32836a5d20bd99d8ebfd3119c761376e30
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 4d5cc91ca8bf71b2d5893f591652d777041e1a4d
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59098717"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59304781"
 ---
 # <a name="how-to-add-load-save-and-cancel-buttons-to-the-windows-forms-bindingnavigator-control"></a>방법: Windows Forms BindingNavigator 컨트롤에 로드, 저장 및 취소 단추 추가
 합니다 <xref:System.Windows.Forms.BindingNavigator> 컨트롤은 특수 한 용도의 <xref:System.Windows.Forms.ToolStrip> 컨트롤 이동 및 데이터에 바인딩된 폼의 컨트롤을 조작 하기 위한 것입니다.  
@@ -24,21 +24,21 @@ ms.locfileid: "59098717"
   
 ### <a name="to-add-load-save-and-cancel-buttons-to-the-bindingnavigator-component"></a>부하를 추가 하려면 저장 및 취소 단추가 BindingNavigator 구성 요소  
   
-1.  폼에 <xref:System.Windows.Forms.TextBox> 컨트롤을 추가합니다.  
+1. 폼에 <xref:System.Windows.Forms.TextBox> 컨트롤을 추가합니다.  
   
-2.  에 바인딩하는 <xref:System.Windows.Forms.BindingSource>, 데이터 원본에 바인딩된 합니다. 예를 들어를 <xref:System.Windows.Forms.BindingSource> 데이터베이스에 바인딩되어 있습니다.  
+2. 에 바인딩하는 <xref:System.Windows.Forms.BindingSource>, 데이터 원본에 바인딩된 합니다. 예를 들어를 <xref:System.Windows.Forms.BindingSource> 데이터베이스에 바인딩되어 있습니다.  
   
-3.  데이터 집합 및 테이블 어댑터를 생성 한 후 끌어서를 <xref:System.Windows.Forms.BindingNavigator> 컨트롤을 폼입니다.  
+3. 데이터 집합 및 테이블 어댑터를 생성 한 후 끌어서를 <xref:System.Windows.Forms.BindingNavigator> 컨트롤을 폼입니다.  
   
-4.  설정 된 <xref:System.Windows.Forms.BindingNavigator> 컨트롤의 <xref:System.Windows.Forms.BindingNavigator.BindingSource%2A> 속성을는 <xref:System.Windows.Forms.BindingSource> 폼에서 컨트롤에 바인딩되어 있는 합니다.  
+4. 설정 된 <xref:System.Windows.Forms.BindingNavigator> 컨트롤의 <xref:System.Windows.Forms.BindingNavigator.BindingSource%2A> 속성을는 <xref:System.Windows.Forms.BindingSource> 폼에서 컨트롤에 바인딩되어 있는 합니다.  
   
-5.  <xref:System.Windows.Forms.BindingNavigator> 컨트롤을 선택합니다.  
+5. <xref:System.Windows.Forms.BindingNavigator> 컨트롤을 선택합니다.  
   
-6.  스마트 태그 문자 모양을 클릭 (![스마트 태그 문자 모양](./media/vs-winformsmttagglyph.gif "VS_WinFormSmtTagGlyph")) 하므로 **BindingNavigator 태스크** 대화 상자가 나타나고 선택 **항목편집**.  
+6. 스마트 태그 문자 모양을 클릭 (![스마트 태그 문자 모양](./media/vs-winformsmttagglyph.gif "VS_WinFormSmtTagGlyph")) 하므로 **BindingNavigator 태스크** 대화 상자가 나타나고 선택 **항목편집**.  
   
      합니다 **항목 컬렉션 편집기** 나타납니다.  
   
-7.  에 **항목 컬렉션 편집기**, 다음 단계를 완료 합니다.  
+7. 에 **항목 컬렉션 편집기**, 다음 단계를 완료 합니다.  
   
     1.  추가 <xref:System.Windows.Forms.ToolStripSeparator> 및 3 <xref:System.Windows.Forms.ToolStripButton> 적절 한 형식을 선택 하 여 항목 <xref:System.Windows.Forms.ToolStripItem> 를 클릭 하 고는 **추가** 단추입니다.  
   
@@ -50,7 +50,7 @@ ms.locfileid: "59098717"
   
     5.  클릭 **확인** 대화 상자를 닫습니다. 단추에 추가 되는 <xref:System.Windows.Forms.ToolStrip>합니다.  
   
-8.  폼을 마우스 오른쪽 단추로 클릭 하 고 선택 **코드 보기**합니다.  
+8. 폼을 마우스 오른쪽 단추로 클릭 하 고 선택 **코드 보기**합니다.  
   
 9. 코드 편집기에서 데이터 테이블 어댑터를 로드 하는 코드 줄을 찾습니다. 이 코드는 2 단계에서 데이터 바인딩을 설정할 때 생성 되었습니다. 코드는 다음과 유사 해야 합니다.: `TableAdapterName.Fill(DataSetName.TableName)`합니다. 양식의 포함 될 가능성이 <xref:System.Windows.Forms.Form.Load> 이벤트입니다.  
   

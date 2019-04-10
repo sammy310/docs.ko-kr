@@ -6,12 +6,12 @@ helpviewer_keywords:
 - LINQ queries [Visual Basic]
 - LINQ [Visual Basic], writing queries
 ms.assetid: 4affb732-3e9b-4479-aa31-1f9bd8183cbe
-ms.openlocfilehash: 362d241d1da01ea935ab3bb3dcdfcba30cb8c67e
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 6f6968713fdb1c0ec0ee9f9da3b199a649938de5
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56975149"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59295876"
 ---
 # <a name="writing-your-first-linq-query-visual-basic"></a>LINQ 쿼리 처음 작성(Visual Basic)
 *쿼리*는 데이터 소스에서 데이터를 검색하는 식입니다. 쿼리는 전용된 쿼리 언어로 표현 됩니다. 시간이 지남에 따라 다른 언어가 개발 되었습니다 다양 한 유형의 데이터 원본에 대 한 예를 들어, 관계형 데이터베이스에 대 한 SQL 및 XML에 대 한 XQuery입니다. 이렇게 하면 응용 프로그램 개발자가 각 유형의 데이터 원본 또는 지원 되는 데이터 형식에 대 한 새 쿼리 언어를 배울 필요 합니다.  
@@ -21,11 +21,11 @@ ms.locfileid: "56975149"
 ## <a name="three-stages-of-a-query-operation"></a>쿼리 작업의 세 단계  
  [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 쿼리 작업의 세 가지 작업으로 구성 됩니다.  
   
-1.  데이터 소스 또는 소스를 가져옵니다.  
+1. 데이터 소스 또는 소스를 가져옵니다.  
   
-2.  쿼리 만들기.  
+2. 쿼리 만들기.  
   
-3.  쿼리 실행.  
+3. 쿼리 실행.  
   
  [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)], 쿼리의 실행 된 쿼리 만들기와에서 다릅니다. 쿼리를 만들어 모든 데이터를 검색할 수 없습니다. 이 내용에 대해서는 이 항목의 뒷부분에서 자세히 설명합니다.  
   
@@ -122,7 +122,7 @@ Dim customers As Table(Of Customer) = db.GetTable(Of Customer)
 
 - [Visual Basic에서 LINQ 시작](getting-started-with-linq.md)
 - [지역 형식 유추](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)
-- [표준 쿼리 연산자 개요(Visual Basic)](standard-query-operators-overview.md)
+- [표준 쿼리 연산자 개요 (Visual Basic)](standard-query-operators-overview.md)
 - [Visual Basic의 LINQ 소개](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
 - [LINQ](../../../../visual-basic/programming-guide/language-features/linq/index.md)
 - [쿼리](../../../../visual-basic/language-reference/queries/index.md)

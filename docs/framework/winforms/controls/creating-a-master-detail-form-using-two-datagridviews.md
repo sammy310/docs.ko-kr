@@ -10,12 +10,12 @@ helpviewer_keywords:
 - master-details lists [Windows Forms], displaying on Windows Forms
 - walkthroughs [Windows Forms], DataGridView control
 ms.assetid: c5fa29e8-47f7-4691-829b-0e697a691f36
-ms.openlocfilehash: 66807287dcaffae4bd310040312e0f56e8fda5d0
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: a887dacfcb83b4b6ea4cb2690ab09b0d1b20b4fa
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59078878"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59295798"
 ---
 # <a name="walkthrough-creating-a-masterdetail-form-using-two-windows-forms-datagridview-controls"></a>연습: 두 개의 Windows Forms DataGridView 컨트롤을 사용하여 마스터/세부 양식 만들기
 사용에 대 한 가장 일반적인 시나리오 중 하나를 <xref:System.Windows.Forms.DataGridView> 컨트롤은 합니다 *마스터/세부 정보* 두 데이터베이스 테이블 간의 부모/자식 관계를 표시 되는 폼입니다. 마스터 테이블에서 행을 선택 하면 해당 자식 데이터를 사용 하 여 업데이트 세부 정보 테이블.  
@@ -33,14 +33,14 @@ ms.locfileid: "59078878"
   
 #### <a name="to-create-a-masterdetail-form"></a>마스터/세부 폼을 만들려면  
   
-1.  파생 되는 클래스를 만듭니다 <xref:System.Windows.Forms.Form> 두 포함 <xref:System.Windows.Forms.DataGridView> 컨트롤과 두 <xref:System.Windows.Forms.BindingSource> 구성 요소입니다. 다음 코드는 기본 폼의 초기화를 제공 하 고 포함 된 `Main` 메서드. Visual Studio 디자이너를 사용 하 여 폼을 만드는 경우이 코드는 대신 디자이너 생성된 코드를 사용할 수 있지만 변수 선언에 여기에 표시 된 이름을 사용 해야 합니다.  
+1. 파생 되는 클래스를 만듭니다 <xref:System.Windows.Forms.Form> 두 포함 <xref:System.Windows.Forms.DataGridView> 컨트롤과 두 <xref:System.Windows.Forms.BindingSource> 구성 요소입니다. 다음 코드는 기본 폼의 초기화를 제공 하 고 포함 된 `Main` 메서드. Visual Studio 디자이너를 사용 하 여 폼을 만드는 경우이 코드는 대신 디자이너 생성된 코드를 사용할 수 있지만 변수 선언에 여기에 표시 된 이름을 사용 해야 합니다.  
   
      [!code-csharp[System.Windows.Forms.DataGridViewMasterDetails#01](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMasterDetails/CS/masterdetails.cs#01)]
      [!code-vb[System.Windows.Forms.DataGridViewMasterDetails#01](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMasterDetails/VB/masterdetails.vb#01)]  
     [!code-csharp[System.Windows.Forms.DataGridViewMasterDetails#02](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMasterDetails/CS/masterdetails.cs#02)]
     [!code-vb[System.Windows.Forms.DataGridViewMasterDetails#02](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMasterDetails/VB/masterdetails.vb#02)]  
   
-2.  데이터베이스에 연결 하는 세부 정보를 처리 하는 것에 대 한 폼의 클래스 정의에서 메서드를 구현 합니다. 이 예제에서는 `GetData` 채우는 메서드를 <xref:System.Data.DataSet> 개체, 추가 <xref:System.Data.DataRelation> 개체 데이터 집합에 바인딩합니다는 <xref:System.Windows.Forms.BindingSource> 구성 요소입니다. `connectionString` 변수를 사용자의 데이터베이스에 적합한 값으로 설정해야 합니다.  
+2. 데이터베이스에 연결 하는 세부 정보를 처리 하는 것에 대 한 폼의 클래스 정의에서 메서드를 구현 합니다. 이 예제에서는 `GetData` 채우는 메서드를 <xref:System.Data.DataSet> 개체, 추가 <xref:System.Data.DataRelation> 개체 데이터 집합에 바인딩합니다는 <xref:System.Windows.Forms.BindingSource> 구성 요소입니다. `connectionString` 변수를 사용자의 데이터베이스에 적합한 값으로 설정해야 합니다.  
   
     > [!IMPORTANT]
     >  암호와 같은 중요한 정보를 연결 문자열 내에 저장하면 애플리케이션 보안 문제가 발생할 수 있습니다. 데이터베이스 액세스를 제어할 경우에는 통합 보안이라고도 하는 Windows 인증을 사용하는 방법이 더 안전합니다. 자세한 내용은 [연결 정보 보호](../../data/adonet/protecting-connection-information.md)를 참조하세요.  
@@ -48,7 +48,7 @@ ms.locfileid: "59078878"
      [!code-csharp[System.Windows.Forms.DataGridViewMasterDetails#20](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMasterDetails/CS/masterdetails.cs#20)]
      [!code-vb[System.Windows.Forms.DataGridViewMasterDetails#20](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMasterDetails/VB/masterdetails.vb#20)]  
   
-3.  폼의 처리기를 구현 <xref:System.Windows.Forms.Form.Load> 바인딩하는 이벤트를 <xref:System.Windows.Forms.DataGridView> 컨트롤을 합니다 <xref:System.Windows.Forms.BindingSource> 구성 요소 및 호출을 `GetData` 메서드. 다음 예제에서는 크기를 조정 하는 코드를 포함 <xref:System.Windows.Forms.DataGridView> 표시 된 데이터에 맞게 열입니다.  
+3. 폼의 처리기를 구현 <xref:System.Windows.Forms.Form.Load> 바인딩하는 이벤트를 <xref:System.Windows.Forms.DataGridView> 컨트롤을 합니다 <xref:System.Windows.Forms.BindingSource> 구성 요소 및 호출을 `GetData` 메서드. 다음 예제에서는 크기를 조정 하는 코드를 포함 <xref:System.Windows.Forms.DataGridView> 표시 된 데이터에 맞게 열입니다.  
   
      [!code-csharp[System.Windows.Forms.DataGridViewMasterDetails#10](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMasterDetails/CS/masterdetails.cs#10)]
      [!code-vb[System.Windows.Forms.DataGridViewMasterDetails#10](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMasterDetails/VB/masterdetails.vb#10)]  

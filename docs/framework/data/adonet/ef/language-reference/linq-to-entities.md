@@ -2,25 +2,25 @@
 title: LINQ to Entities
 ms.date: 03/30/2017
 ms.assetid: 641f9b68-9046-47a1-abb0-1c8eaeda0e2d
-ms.openlocfilehash: 29980450bd75c6ba0992ad7fd3165f6f2d5f32bc
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: da9529da9b45fc8ac2fdf0b19d65634dd33450fc
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59129690"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59304586"
 ---
 # <a name="linq-to-entities"></a>LINQ to Entities
 LINQ to Entities에서는 개발자가 Visual Basic 또는 Visual C#을 사용하여 Entity Framework 개념적 모델에 대한 쿼리를 작성할 수 있도록 해 주는 LINQ(Language-Integrated Query) 지원을 제공합니다. Entity Framework에 대한 쿼리는 개체 컨텍스트에 대해 실행되는 명령 트리 쿼리로 표현됩니다. LINQ to Entities는 LINQ(Language-Integrated Query) 쿼리를 명령 트리 쿼리로 변환하여 Entity Framework에 대해 실행한 다음 Entity Framework와 LINQ에서 모두 사용할 수 있는 개체를 반환합니다. 다음은 LINQ to Entities 쿼리를 만들고 실행하는 프로세스입니다.  
   
-1.  <xref:System.Data.Objects.ObjectQuery%601>에서 <xref:System.Data.Objects.ObjectContext> 인스턴스를 생성합니다.  
+1. <xref:System.Data.Objects.ObjectQuery%601>에서 <xref:System.Data.Objects.ObjectContext> 인스턴스를 생성합니다.  
   
-2.  <xref:System.Data.Objects.ObjectQuery%601> 인스턴스를 사용하여 LINQ to Entities 쿼리를 C# 또는 Visual Basic으로 작성합니다.  
+2. <xref:System.Data.Objects.ObjectQuery%601> 인스턴스를 사용하여 LINQ to Entities 쿼리를 C# 또는 Visual Basic으로 작성합니다.  
   
-3.  LINQ 표준 쿼리 연산자 및 식을 명령 트리로 변환합니다.  
+3. LINQ 표준 쿼리 연산자 및 식을 명령 트리로 변환합니다.  
   
-4.  명령 트리 표현에서 데이터 소스에 대해 쿼리를 실행합니다. 실행 중에 데이터 소스에서 throw되는 모든 예외는 클라이언트에게 직접 전달됩니다.  
+4. 명령 트리 표현에서 데이터 소스에 대해 쿼리를 실행합니다. 실행 중에 데이터 소스에서 throw되는 모든 예외는 클라이언트에게 직접 전달됩니다.  
   
-5.  쿼리 결과를 다시 클라이언트에 반환합니다.  
+5. 쿼리 결과를 다시 클라이언트에 반환합니다.  
   
 ## <a name="constructing-an-objectquery-instance"></a>ObjectQuery 인스턴스 생성  
  <xref:System.Data.Objects.ObjectQuery%601> 제네릭 클래스는 0개 이상의 형식화된 엔터티로 구성된 컬렉션을 반환하는 쿼리를 나타냅니다. 개체 쿼리는 수동으로 생성되는 대신 일반적으로 기존 개체 컨텍스트에서 생성되며 항상 해당 개체 컨텍스트에 속합니다. 이 컨텍스트는 쿼리를 작성하고 실행하는 데 필요한 연결 및 메타데이터 정보를 제공합니다. <xref:System.Data.Objects.ObjectQuery%601> 제네릭 클래스는 LINQ 쿼리를 증분 빌드할 수 있는 작성기 메서드를 가지고 있는 <xref:System.Linq.IQueryable%601> 제네릭 인터페이스를 구현합니다. C# `var` 키워드(Visual Basic에서는 로컬 형식 유추가 가능한 경우 `Dim`)를 사용하여 컴파일러에서 엔터티 형식을 유추하도록 할 수도 있습니다.  

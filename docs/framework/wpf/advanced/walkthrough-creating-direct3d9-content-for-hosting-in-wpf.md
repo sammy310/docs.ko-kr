@@ -7,12 +7,12 @@ helpviewer_keywords:
 - WPF [WPF], creating Direct3D9 content
 - Direct3D9 [WPF interoperability], creating Direct3D9 content
 ms.assetid: 286e98bc-1eaa-4b5e-923d-3490a9cca5fc
-ms.openlocfilehash: 8acef4a52c9317618485a7c46c1e22cc2524dd69
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 160395b84ef7ca447d162ceff34752113a1d59a9
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57379603"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59300270"
 ---
 # <a name="walkthrough-creating-direct3d9-content-for-hosting-in-wpf"></a>연습: WPF에서 호스팅할 Direct3D9 콘텐츠 만들기
 이 연습에는 Windows Presentation Foundation (WPF) 응용 프로그램에서 호스팅에 적합 한 Direct3D9 콘텐츠를 만드는 방법을 보여 줍니다. WPF 응용 프로그램에서 호스팅할 Direct3D9 콘텐츠 호스팅에 대 한 자세한 내용은 참조 하세요. [WPF 및 Direct3D9 상호 운용성](wpf-and-direct3d9-interoperation.md)합니다.
@@ -37,29 +37,29 @@ ms.locfileid: "57379603"
 
 #### <a name="to-create-the-direct3d9-project"></a>Direct3D9 프로젝트를 만들려면
 
-1.  명명 된 c + +에서 새 Win32 프로젝트를 만들 `D3DContent`합니다.
+1. 새 Win32 프로젝트를 만듭니다 C++ 이라는 `D3DContent`합니다.
 
      Win32 응용 프로그램 마법사가 열리고 시작 화면을 표시 합니다.
 
-2.  **다음**을 클릭합니다.
+2. **다음**을 클릭합니다.
 
      응용 프로그램 설정 화면이 나타납니다.
 
-3.  에 **응용 프로그램 유형:** 섹션에서 합니다 **DLL** 옵션입니다.
+3. 에 **응용 프로그램 유형:** 섹션에서 합니다 **DLL** 옵션입니다.
 
-4.  **마침**을 클릭합니다.
+4. **마침**을 클릭합니다.
 
      D3DContent 프로젝트가 생성 됩니다.
 
-5.  솔루션 탐색기에서 D3DContent 프로젝트를 마우스 오른쪽 단추로 클릭 하 고 선택 **속성**합니다.
+5. 솔루션 탐색기에서 D3DContent 프로젝트를 마우스 오른쪽 단추로 클릭 하 고 선택 **속성**합니다.
 
      합니다 **D3DContent 속성 페이지** 대화 상자가 열립니다.
 
-6.  선택 된 **C/c + +** 노드.
+6. 선택 된 **C /C++**  노드.
 
-7.  에 **Additional Include Directories** 필드에 폴더를 포함 하는 DirectX의 위치를 지정 합니다. 이 폴더에 대 한 기본 위치는 %ProgramFiles%\Microsoft DirectX SDK (*버전*) \Include 합니다.
+7. 에 **Additional Include Directories** 필드에 폴더를 포함 하는 DirectX의 위치를 지정 합니다. 이 폴더에 대 한 기본 위치는 %ProgramFiles%\Microsoft DirectX SDK (*버전*) \Include 합니다.
 
-8.  두 번 클릭 합니다 **링커** 노드를 확장 합니다.
+8. 두 번 클릭 합니다 **링커** 노드를 확장 합니다.
 
 9. 에 **추가 라이브러리 디렉터리** 필드, DirectX 라이브러리 폴더의 위치를 지정 합니다. 이 폴더에 대 한 기본 위치는 %ProgramFiles%\Microsoft DirectX SDK (*버전*) \Lib\x86 합니다.
 
@@ -74,7 +74,7 @@ ms.locfileid: "57379603"
 
 #### <a name="to-create-the-direct3d9-content"></a>에 Direct3D9 콘텐츠 만들기
 
-1.  솔루션 탐색기를 사용 하면 다음 프로젝트에 세 개의 c + + 클래스를 추가 합니다.
+1. 솔루션 탐색기를 사용 하 여 세 개의 추가 C++ 프로젝트에 클래스 이름이 다음입니다.
 
      `CRenderer` (사용 하 여 가상 소멸자)
 
@@ -82,31 +82,31 @@ ms.locfileid: "57379603"
 
      `CTriangleRenderer`
 
-2.  Renderer.h 코드 편집기에서 열고 자동 생성 된 코드를 다음 코드로 바꿉니다.
+2. Renderer.h 코드 편집기에서 열고 자동 생성 된 코드를 다음 코드로 바꿉니다.
 
      [!code-cpp[System.Windows.Interop.D3DImage#RendererH](~/samples/snippets/cpp/VS_Snippets_Wpf/System.Windows.Interop.D3DImage/cpp/renderer.h#rendererh)]
 
-3.  Renderer.cpp 코드 편집기에서 열고 자동 생성 된 코드를 다음 코드로 바꿉니다.
+3. Renderer.cpp 코드 편집기에서 열고 자동 생성 된 코드를 다음 코드로 바꿉니다.
 
      [!code-cpp[System.Windows.Interop.D3DImage#RendererCPP](~/samples/snippets/cpp/VS_Snippets_Wpf/System.Windows.Interop.D3DImage/cpp/renderer.cpp#renderercpp)]
 
-4.  RendererManager.h 코드 편집기에서 열고 자동 생성 된 코드를 다음 코드로 바꿉니다.
+4. RendererManager.h 코드 편집기에서 열고 자동 생성 된 코드를 다음 코드로 바꿉니다.
 
      [!code-cpp[System.Windows.Interop.D3DImage#RendererManagerH](~/samples/snippets/cpp/VS_Snippets_Wpf/System.Windows.Interop.D3DImage/cpp/renderermanager.h#renderermanagerh)]
 
-5.  RendererManager.cpp 코드 편집기에서 열고 자동 생성 된 코드를 다음 코드로 바꿉니다.
+5. RendererManager.cpp 코드 편집기에서 열고 자동 생성 된 코드를 다음 코드로 바꿉니다.
 
      [!code-cpp[System.Windows.Interop.D3DImage#RendererManagerCPP](~/samples/snippets/cpp/VS_Snippets_Wpf/System.Windows.Interop.D3DImage/cpp/renderermanager.cpp#renderermanagercpp)]
 
-6.  TriangleRenderer.h 코드 편집기에서 열고 자동 생성 된 코드를 다음 코드로 바꿉니다.
+6. TriangleRenderer.h 코드 편집기에서 열고 자동 생성 된 코드를 다음 코드로 바꿉니다.
 
      [!code-cpp[System.Windows.Interop.D3DImage#TriangleRendererH](~/samples/snippets/cpp/VS_Snippets_Wpf/System.Windows.Interop.D3DImage/cpp/trianglerenderer.h#trianglerendererh)]
 
-7.  TriangleRenderer.cpp 코드 편집기에서 열고 자동 생성 된 코드를 다음 코드로 바꿉니다.
+7. TriangleRenderer.cpp 코드 편집기에서 열고 자동 생성 된 코드를 다음 코드로 바꿉니다.
 
      [!code-cpp[System.Windows.Interop.D3DImage#TriangleRendererCPP](~/samples/snippets/cpp/VS_Snippets_Wpf/System.Windows.Interop.D3DImage/cpp/trianglerenderer.cpp#trianglerenderercpp)]
 
-8.  Stdafx.h 코드 편집기에서 열고 자동 생성 된 코드를 다음 코드로 바꿉니다.
+8. Stdafx.h 코드 편집기에서 열고 자동 생성 된 코드를 다음 코드로 바꿉니다.
 
      [!code-cpp[System.Windows.Interop.D3DImage#StdafxH](~/samples/snippets/cpp/VS_Snippets_Wpf/System.Windows.Interop.D3DImage/cpp/stdafx.h#stdafxh)]
 

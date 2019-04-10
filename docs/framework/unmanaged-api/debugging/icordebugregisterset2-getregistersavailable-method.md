@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0ee807ae17e4d53d3f6f3963f5a91df0a2dddd0c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 1522d643a69c47eec03770a8f51756dd4250075a
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59099874"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59309422"
 ---
 # <a name="icordebugregisterset2getregistersavailable-method"></a>ICorDebugRegisterSet2::GetRegistersAvailable 메서드
 사용 가능한 레지스터의 비트맵을 제공 하는 바이트 배열을 가져옵니다.  
@@ -46,11 +46,11 @@ HRESULT GetRegistersAvailable (
 ## <a name="remarks"></a>설명  
  CorDebugRegister 열거형의 값을 다른 마이크로프로세서의 레지스터를 지정합니다. 각 값의 상위 5 비트는 인덱스를 `availableRegChunks` 바이트 배열입니다. 각 값의 세 가지 하위 비트는 인덱싱된 바이트에서 비트 위치를 식별 합니다. 지정 된 `CorDebugRegister` 특정 레지스터를 마스크의 레지스터의 위치를 지정 하는 값은 다음과 같이 결정 됩니다.  
   
-1.  정확한 바이트에 액세스 하는 데 필요한 인덱스를 추출 합니다 `availableRegChunks` 배열:  
+1. 정확한 바이트에 액세스 하는 데 필요한 인덱스를 추출 합니다 `availableRegChunks` 배열:  
   
      `CorDebugRegister` 값 >> 3  
   
-2.  여기서 0 비트는 최하위 비트에서 인덱싱된 바이트 비트 위치를 추출 합니다.  
+2. 여기서 0 비트는 최하위 비트에서 인덱싱된 바이트 비트 위치를 추출 합니다.  
   
      `CorDebugRegister` 값 및 7  
   

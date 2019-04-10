@@ -10,12 +10,12 @@ helpviewer_keywords:
 - StatusStrip control [Windows Forms]
 - ToolStrip control [Windows Forms]
 ms.assetid: dac37d98-589e-4d6d-9673-6437e8943122
-ms.openlocfilehash: f9e54ecd49fc3bd295f236292715393358bab0b7
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: b4957a3f2efcb31594806a188e3d3bb10c2dac09
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59094881"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59296396"
 ---
 # <a name="walkthrough-providing-standard-menu-items-to-a-form"></a>연습: 양식에 표준 메뉴 항목 제공
 <xref:System.Windows.Forms.MenuStrip> 컨트롤을 사용하여 폼에 표준 메뉴를 제공할 수 있습니다.  
@@ -47,53 +47,53 @@ ms.locfileid: "59094881"
   
 #### <a name="to-create-the-project"></a>프로젝트를 만들려면  
   
-1.  라는 Windows 응용 프로그램 프로젝트를 만듭니다 **StandardMenuForm** (**파일** > **New** > **프로젝트**  >  **Visual C#** 하거나 **Visual Basic** > **클래식 데스크톱** > **Windows Forms 응용 프로그램**).  
+1. 라는 Windows 응용 프로그램 프로젝트를 만듭니다 **StandardMenuForm** (**파일** > **New** > **프로젝트**  >  **Visual C#** 하거나 **Visual Basic** > **클래식 데스크톱** > **Windows Forms 응용 프로그램**).  
   
-2.  Windows Forms 디자이너에서 폼을 선택 합니다.  
+2. Windows Forms 디자이너에서 폼을 선택 합니다.  
   
 ## <a name="creating-a-standard-menu"></a>표준 메뉴 만들기  
  Windows Forms 디자이너를 자동으로 채울 수는 <xref:System.Windows.Forms.MenuStrip> 표준 메뉴 항목을 사용 하 여 제어 합니다.  
   
 #### <a name="to-create-a-standard-menu"></a>표준 메뉴를 만들려면  
   
-1.  **도구 상자**를 끌어를 <xref:System.Windows.Forms.MenuStrip> 컨트롤을 폼으로 합니다.  
+1. **도구 상자**를 끌어를 <xref:System.Windows.Forms.MenuStrip> 컨트롤을 폼으로 합니다.  
   
-2.  클릭 합니다 <xref:System.Windows.Forms.MenuStrip> 컨트롤의 스마트 태그 문자 모양 (![스마트 태그 문자 모양](./media/vs-winformsmttagglyph.gif "VS_WinFormSmtTagGlyph")) 선택한 **표준 항목 삽입**합니다.  
+2. 클릭 합니다 <xref:System.Windows.Forms.MenuStrip> 컨트롤의 스마트 태그 문자 모양 (![스마트 태그 문자 모양](./media/vs-winformsmttagglyph.gif "VS_WinFormSmtTagGlyph")) 선택한 **표준 항목 삽입**합니다.  
   
      <xref:System.Windows.Forms.MenuStrip> 컨트롤이 표준 메뉴 항목으로 채워집니다.  
   
-3.  클릭 합니다 **파일** 메뉴 항목을 해당 기본 메뉴 항목 및 해당 아이콘을 참조 하세요.  
+3. 클릭 합니다 **파일** 메뉴 항목을 해당 기본 메뉴 항목 및 해당 아이콘을 참조 하세요.  
   
 ## <a name="creating-a-statusstrip-control"></a>StatusStrip 컨트롤 만들기  
  사용 된 <xref:System.Windows.Forms.StatusStrip> Windows Forms 응용 프로그램에 대 한 상태를 표시 하는 컨트롤입니다. 현재 예제에서는 사용자가 선택한 메뉴 항목에 표시 됩니다는 <xref:System.Windows.Forms.StatusStrip> 제어 합니다.  
   
 #### <a name="to-create-a-statusstrip-control"></a>StatusStrip 컨트롤을 만들려면  
   
-1.  **도구 상자**를 끌어를 <xref:System.Windows.Forms.StatusStrip> 컨트롤을 폼으로 합니다.  
+1. **도구 상자**를 끌어를 <xref:System.Windows.Forms.StatusStrip> 컨트롤을 폼으로 합니다.  
   
      <xref:System.Windows.Forms.StatusStrip> 컨트롤은 자동으로 폼의 아래쪽에 도킹 합니다.  
   
-2.  클릭 합니다 <xref:System.Windows.Forms.StatusStrip> 컨트롤의 드롭다운 단추를 선택 **statuslabel은** 추가할를 <xref:System.Windows.Forms.ToolStripStatusLabel> 컨트롤을 <xref:System.Windows.Forms.StatusStrip> 제어 합니다.  
+2. 클릭 합니다 <xref:System.Windows.Forms.StatusStrip> 컨트롤의 드롭다운 단추를 선택 **statuslabel은** 추가할를 <xref:System.Windows.Forms.ToolStripStatusLabel> 컨트롤을 <xref:System.Windows.Forms.StatusStrip> 제어 합니다.  
   
 ## <a name="handling-item-selection"></a>처리 항목 선택  
  처리는 <xref:System.Windows.Forms.ToolStripDropDownItem.DropDownItemClicked> 메뉴 항목을 선택할 때 응답할 이벤트입니다.  
   
 #### <a name="to-handle-item-selection"></a>항목 선택을 처리 하려면  
   
-1.  클릭 합니다 **파일** 만들기에서 만든 메뉴 항목을 표준 메뉴 섹션.  
+1. 클릭 합니다 **파일** 만들기에서 만든 메뉴 항목을 표준 메뉴 섹션.  
   
-2.  **속성** 창에서 **이벤트**를 클릭합니다.  
+2. **속성** 창에서 **이벤트**를 클릭합니다.  
   
-3.  두 번 클릭 하 여 <xref:System.Windows.Forms.ToolStripDropDownItem.DropDownItemClicked> 이벤트입니다.  
+3. 두 번 클릭 하 여 <xref:System.Windows.Forms.ToolStripDropDownItem.DropDownItemClicked> 이벤트입니다.  
   
      Windows Forms 디자이너에 대 한 이벤트 처리기가 생성 된 <xref:System.Windows.Forms.ToolStripDropDownItem.DropDownItemClicked> 이벤트입니다.  
   
-4.  이벤트 처리기에 다음 코드를 삽입 합니다.  
+4. 이벤트 처리기에 다음 코드를 삽입 합니다.  
   
      [!code-csharp[System.Windows.Forms.ToolStrip.StandardMenu#3](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.StandardMenu/CS/Form1.cs#3)]
      [!code-vb[System.Windows.Forms.ToolStrip.StandardMenu#3](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.StandardMenu/VB/Form1.vb#3)]  
   
-5.  삽입 된 `UpdateStatus` 폼에 유틸리티 메서드 정의 합니다.  
+5. 삽입 된 `UpdateStatus` 폼에 유틸리티 메서드 정의 합니다.  
   
      [!code-csharp[System.Windows.Forms.ToolStrip.StandardMenu#2](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.StandardMenu/CS/Form1.cs#2)]
      [!code-vb[System.Windows.Forms.ToolStrip.StandardMenu#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.StandardMenu/VB/Form1.vb#2)]  
@@ -102,11 +102,11 @@ ms.locfileid: "59094881"
   
 #### <a name="to-test-your-form"></a>폼을 테스트 하려면  
   
-1.  F5 키를 눌러 컴파일하고 폼을 실행 합니다.  
+1. F5 키를 눌러 컴파일하고 폼을 실행 합니다.  
   
-2.  클릭 합니다 **파일** 메뉴 항목 메뉴를 엽니다.  
+2. 클릭 합니다 **파일** 메뉴 항목 메뉴를 엽니다.  
   
-3.  에 **파일** 메뉴 선택 항목 중 하나를 클릭 합니다.  
+3. 에 **파일** 메뉴 선택 항목 중 하나를 클릭 합니다.  
   
      <xref:System.Windows.Forms.StatusStrip> 컨트롤 선택한 항목을 표시 합니다.  
   

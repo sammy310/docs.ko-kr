@@ -8,12 +8,12 @@ helpviewer_keywords:
 - DataGrid [WPF], validation
 - validation [WPF], DataGrid
 ms.assetid: ec6078a8-1e42-4648-b414-f4348e81bda1
-ms.openlocfilehash: aead8cbd500262a4cba535fd023dd9701d50257a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 00d09c62aae67e3438816409c95ccf96050b3206
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59086809"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59305958"
 ---
 # <a name="how-to-implement-validation-with-the-datagrid-control"></a>방법: DataGrid 컨트롤을 사용하여 유효성 검사 구현
 <xref:System.Windows.Controls.DataGrid> 컨트롤을 사용 하면 셀 및 행 수준에서 유효성 검사를 수행할 수 있습니다. 셀 수준 유효성 검사를 사용 하 여 사용자는 값을 업데이트 하는 경우 바인딩된 데이터 개체의 개별 속성을 확인 합니다. 행 수준 유효성 검사를 사용 하 여 행에 변경 내용을 커밋할 때 전체 데이터 개체에 유효성 검사 합니다. 유효성 검사 오류에 대 한 사용자 지정된 시각적 피드백을 제공 하거나 기본 시각적 피드백을 사용할 수도 있습니다는 <xref:System.Windows.Controls.DataGrid> 제어를 제공 합니다.  
@@ -42,14 +42,14 @@ ms.locfileid: "59086809"
   
 ### <a name="to-validate-multiple-values-in-a-single-row"></a>단일 행에 여러 값의 유효성 검사  
   
-1.  구현 된 <xref:System.Windows.Controls.ValidationRule> 바인딩된 데이터 개체의 여러 속성을 확인 하는 하위 클래스입니다. 사용자 <xref:System.Windows.Controls.ValidationRule.Validate%2A> 메서드 구현으로 캐스팅 합니다 `value` 매개 변수 값을를 <xref:System.Windows.Data.BindingGroup> 인스턴스. 통해 데이터 개체에 액세스할 수 있습니다는 <xref:System.Windows.Data.BindingGroup.Items%2A> 속성입니다.  
+1. 구현 된 <xref:System.Windows.Controls.ValidationRule> 바인딩된 데이터 개체의 여러 속성을 확인 하는 하위 클래스입니다. 사용자 <xref:System.Windows.Controls.ValidationRule.Validate%2A> 메서드 구현으로 캐스팅 합니다 `value` 매개 변수 값을를 <xref:System.Windows.Data.BindingGroup> 인스턴스. 통해 데이터 개체에 액세스할 수 있습니다는 <xref:System.Windows.Data.BindingGroup.Items%2A> 속성입니다.  
   
      다음 예제에서는이 유효성 검사이 프로세스를 여부를 `StartDate` 속성 값을 `Course` 개체가 이전의 해당 `EndDate` 속성 값.  
   
      [!code-csharp[DataGrid_Validation#CourseValidationRule](~/samples/snippets/csharp/VS_Snippets_Wpf/datagrid_validation/cs/mainwindow.xaml.cs#coursevalidationrule)]
      [!code-vb[DataGrid_Validation#CourseValidationRule](~/samples/snippets/visualbasic/VS_Snippets_Wpf/datagrid_validation/vb/mainwindow.xaml.vb#coursevalidationrule)]  
   
-2.  유효성 검사 규칙을 추가 합니다 <xref:System.Windows.Controls.DataGrid.RowValidationRules%2A?displayProperty=nameWithType> 컬렉션입니다. <xref:System.Windows.Controls.DataGrid.RowValidationRules%2A> 속성에 대 한 직접 액세스를 제공 합니다 <xref:System.Windows.Data.BindingGroup.ValidationRules%2A> 의 속성을 <xref:System.Windows.Data.BindingGroup> 컨트롤에서 사용 하는 모든 바인딩이 그룹화 하는 인스턴스.  
+2. 유효성 검사 규칙을 추가 합니다 <xref:System.Windows.Controls.DataGrid.RowValidationRules%2A?displayProperty=nameWithType> 컬렉션입니다. <xref:System.Windows.Controls.DataGrid.RowValidationRules%2A> 속성에 대 한 직접 액세스를 제공 합니다 <xref:System.Windows.Data.BindingGroup.ValidationRules%2A> 의 속성을 <xref:System.Windows.Data.BindingGroup> 컨트롤에서 사용 하는 모든 바인딩이 그룹화 하는 인스턴스.  
   
      다음 예제에서는 <xref:System.Windows.Controls.DataGrid.RowValidationRules%2A> XAML의 속성입니다. 합니다 <xref:System.Windows.Controls.ValidationRule.ValidationStep%2A> 속성이 <xref:System.Windows.Controls.ValidationStep.UpdatedValue> 바인딩된 데이터 개체를 업데이트 한 후에 유효성 검사가 수행 되도록 합니다.  
   

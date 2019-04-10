@@ -11,12 +11,12 @@ helpviewer_keywords:
 - explicit variable declaration
 - Option Explicit statement [Visual Basic]
 ms.assetid: e82ac1ad-2cd3-49b2-b985-8bcf016f3fcc
-ms.openlocfilehash: c42dd74ea0dc01b8ae7ffb7eb04737a9784625a9
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 0a319ba4259e66ed9a37aa2de9e97d2335b78663
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58841461"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59308616"
 ---
 # <a name="option-explicit-statement-visual-basic"></a>Option Explicit 문(Visual Basic)
 파일에서 모든 변수에 명시적으로 강제 또는 암시적 변수 선언을 허용 합니다.  
@@ -47,11 +47,11 @@ Option Explicit { On | Off }
   
 #### <a name="to-set-option-explicit-in-the-ide"></a>IDE에서 Option Explicit을 설정 하려면  
   
-1.  **솔루션 탐색기**에서 프로젝트를 선택합니다. **프로젝트** 메뉴에서 **속성**을 클릭합니다.  
+1. **솔루션 탐색기**에서 프로젝트를 선택합니다. **프로젝트** 메뉴에서 **속성**을 클릭합니다.  
   
-2.  **컴파일** 탭을 클릭합니다.  
+2. **컴파일** 탭을 클릭합니다.  
   
-3.  값을 설정 합니다 **Option Explicit** 상자입니다.  
+3. 값을 설정 합니다 **Option Explicit** 상자입니다.  
   
  새 프로젝트를 만들 때를 **Option Explicit** 에 설정 합니다 **컴파일** 탭으로 설정 됩니다는 **Option Explicit** 에서 설정는 **VB 기본값**대화 상자. 액세스 하는 **VB 기본값** 대화 상자의 합니다 **도구** 메뉴에서 클릭 **옵션**. **옵션** 대화 상자에서 **프로젝트 및 솔루션**을 확장하고 **VB 기본값**을 클릭합니다. 초기 기본 설정은 **VB 기본값** 는 `On`합니다.  
   
@@ -75,4 +75,4 @@ Option Explicit { On | Off }
 - [/optioncompare](../../../visual-basic/reference/command-line-compiler/optioncompare.md)
 - [/optionexplicit](../../../visual-basic/reference/command-line-compiler/optionexplicit.md)
 - [/optionstrict](../../../visual-basic/reference/command-line-compiler/optionstrict.md)
-- [옵션 대화 상자, 프로젝트, Visual Basic 기본값](/visualstudio/ide/reference/visual-basic-defaults-projects-options-dialog-box)
+- [옵션 대화 상자, 프로젝트, VB 기본값](/visualstudio/ide/reference/visual-basic-defaults-projects-options-dialog-box)

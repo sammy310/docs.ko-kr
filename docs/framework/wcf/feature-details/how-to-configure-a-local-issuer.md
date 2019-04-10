@@ -8,12 +8,12 @@ helpviewer_keywords:
 - WCF, federation
 - federation
 ms.assetid: 15263371-514e-4ea6-90fb-14b4939154cd
-ms.openlocfilehash: cb4a2bcc6f62fac5d0dde82ab32ed6e04e8a9b7c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 46dbb39a31a1ef256bef0f5b7e1bbc41ce1eca3e
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59095557"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59306991"
 ---
 # <a name="how-to-configure-a-local-issuer"></a>방법: 로컬 발급자 구성
 이 항목에서는 발급된 토큰에 로컬 발급자를 사용하도록 클라이언트를 구성하는 방법에 대해 설명합니다.  
@@ -27,14 +27,14 @@ ms.locfileid: "59095557"
   
 ### <a name="to-configure-the-local-issuer-in-code"></a>로컬 발급자를 코드로 구성하려면  
   
-1.  형식의 변수 만들기 <xref:System.ServiceModel.Security.IssuedTokenClientCredential>  
+1. 형식의 변수 만들기 <xref:System.ServiceModel.Security.IssuedTokenClientCredential>  
   
-2.  해당 변수를 <xref:System.ServiceModel.Description.ClientCredentials.IssuedToken%2A> 클래스의`ClientCredentials` 속성에서 반환된 인스턴스에 설정합니다. 이 인스턴스는 <xref:System.ServiceModel.ClientBase%601.ClientCredentials%2A>에서 상속된 클라이언트의<xref:System.ServiceModel.ClientBase%601> 속성이나 <xref:System.ServiceModel.ChannelFactory.Credentials%2A>의 <xref:System.ServiceModel.ChannelFactory> 속성에 의해 반환됩니다.  
+2. 해당 변수를 <xref:System.ServiceModel.Description.ClientCredentials.IssuedToken%2A> 클래스의`ClientCredentials` 속성에서 반환된 인스턴스에 설정합니다. 이 인스턴스는 <xref:System.ServiceModel.ClientBase%601.ClientCredentials%2A>에서 상속된 클라이언트의<xref:System.ServiceModel.ClientBase%601> 속성이나 <xref:System.ServiceModel.ChannelFactory.Credentials%2A>의 <xref:System.ServiceModel.ChannelFactory> 속성에 의해 반환됩니다.  
   
      [!code-csharp[c_CreateSTS#9](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_creatests/cs/source.cs#9)]
      [!code-vb[c_CreateSTS#9](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_creatests/vb/source.vb#9)]  
   
-3.  로컬 발급자의 주소가 생성자의 인수인 <xref:System.ServiceModel.Security.IssuedTokenClientCredential.LocalIssuerAddress%2A>의 새 인스턴스에 <xref:System.ServiceModel.EndpointAddress> 속성을 설정합니다.  
+3. 로컬 발급자의 주소가 생성자의 인수인 <xref:System.ServiceModel.Security.IssuedTokenClientCredential.LocalIssuerAddress%2A>의 새 인스턴스에 <xref:System.ServiceModel.EndpointAddress> 속성을 설정합니다.  
   
      [!code-csharp[c_CreateSTS#10](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_creatests/cs/source.cs#10)]
      [!code-vb[c_CreateSTS#10](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_creatests/vb/source.vb#10)]  
@@ -49,27 +49,27 @@ ms.locfileid: "59095557"
      [!code-csharp[c_CreateSTS#12](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_creatests/cs/source.cs#12)]
      [!code-vb[c_CreateSTS#12](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_creatests/vb/source.vb#12)]  
   
-4.  바인딩을 사용 하 여 로컬 발급자에 대해 설정 된 <xref:System.ServiceModel.Security.IssuedTokenClientCredential.LocalIssuerBinding%2A> 속성입니다.  
+4. 바인딩을 사용 하 여 로컬 발급자에 대해 설정 된 <xref:System.ServiceModel.Security.IssuedTokenClientCredential.LocalIssuerBinding%2A> 속성입니다.  
   
      [!code-csharp[c_CreateSTS#13](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_creatests/cs/source.cs#13)]
      [!code-vb[c_CreateSTS#13](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_creatests/vb/source.vb#13)]  
   
-5.  선택 사항입니다. 로컬 발급자에 대해 구성된 엔드포인트 동작을 <xref:System.ServiceModel.Security.IssuedTokenClientCredential.LocalIssuerChannelBehaviors%2A> 속성에서 반환된 컬렉션에 추가하여 이러한 동작을 추가합니다.  
+5. 선택 사항입니다. 로컬 발급자에 대해 구성된 엔드포인트 동작을 <xref:System.ServiceModel.Security.IssuedTokenClientCredential.LocalIssuerChannelBehaviors%2A> 속성에서 반환된 컬렉션에 추가하여 이러한 동작을 추가합니다.  
   
      [!code-csharp[c_CreateSTS#14](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_creatests/cs/source.cs#14)]
      [!code-vb[c_CreateSTS#14](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_creatests/vb/source.vb#14)]  
   
 ### <a name="to-configure-the-local-issuer-in-configuration"></a>로컬 발급자를 구성에서 구성하려면  
   
-1.  만들기를 [ \<localIssuer >](../../../../docs/framework/configure-apps/file-schema/wcf/localissuer.md) 의 자식 요소로 합니다 [ \<issuedToken >](../../../../docs/framework/configure-apps/file-schema/wcf/issuedtoken.md) 자식인 자체의 요소를 [ \<clientCredentials >](../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md) 끝점 동작에는 요소입니다.  
+1. 만들기를 [ \<localIssuer >](../../../../docs/framework/configure-apps/file-schema/wcf/localissuer.md) 의 자식 요소로 합니다 [ \<issuedToken >](../../../../docs/framework/configure-apps/file-schema/wcf/issuedtoken.md) 자식인 자체의 요소를 [ \<clientCredentials >](../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md) 끝점 동작에는 요소입니다.  
   
-2.  `address` 특성을 토큰 요청이 허용되는 로컬 발급자의 주소로 설정합니다.  
+2. `address` 특성을 토큰 요청이 허용되는 로컬 발급자의 주소로 설정합니다.  
   
-3.  `binding` 및 `bindingConfiguration` 특성을 로컬 발급자 엔드포인트와 통신할 때 사용할 적합한 바인딩을 참조하는 값으로 설정합니다.  
+3. `binding` 및 `bindingConfiguration` 특성을 로컬 발급자 엔드포인트와 통신할 때 사용할 적합한 바인딩을 참조하는 값으로 설정합니다.  
   
-4.  선택 사항입니다. 설정 된 [ \<identity >](../../../../docs/framework/configure-apps/file-schema/wcf/identity.md) 의 자식 요소로 <`localIssuer`> 요소 로컬 발급자의 id 정보를 지정 합니다.  
+4. 선택 사항입니다. 설정 된 [ \<identity >](../../../../docs/framework/configure-apps/file-schema/wcf/identity.md) 의 자식 요소로 <`localIssuer`> 요소 로컬 발급자의 id 정보를 지정 합니다.  
   
-5.  선택 사항입니다. 설정 합니다 [ \<헤더 >](../../../../docs/framework/configure-apps/file-schema/wcf/headers.md) 의 자식 요소로 <`localIssuer`> 요소 로컬 발급자 주소를 올바로 하는 데 필요한 추가 헤더를 지정 합니다.  
+5. 선택 사항입니다. 설정 합니다 [ \<헤더 >](../../../../docs/framework/configure-apps/file-schema/wcf/headers.md) 의 자식 요소로 <`localIssuer`> 요소 로컬 발급자 주소를 올바로 하는 데 필요한 추가 헤더를 지정 합니다.  
   
 ## <a name="net-framework-security"></a>.NET Framework 보안  
  지정된 바인딩에 발급자 주소와 바인딩을 지정하지 않으면 해당 바인딩을 사용하는 엔드포인트에는 로컬 발급자가 사용되지 않습니다. 로컬 발급자를 항상 사용해야 하는 클라이언트는 이러한 바인딩을 사용하지 않도록 해야 하며 발급자 주소가 `null`이 되도록 바인딩을 수정해야 합니다.  

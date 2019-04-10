@@ -2,12 +2,12 @@
 title: 마이그레이션 고려 사항(Entity Framework)
 ms.date: 03/30/2017
 ms.assetid: c85b6fe8-cc32-4642-8f0a-dc0e5a695936
-ms.openlocfilehash: 359e373476398bb26f06eb86eb13296ab05d2705
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: b6224dcf883daef7b35ef50b7556fc568e433a46
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59089889"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59310423"
 ---
 # <a name="migration-considerations-entity-framework"></a>마이그레이션 고려 사항(Entity Framework)
 [!INCLUDE[vstecado](../../../../../includes/vstecado-md.md)] Entity Framework를 사용하면 기존 응용 프로그램보다 몇 가지 이점이 있습니다. 가장 중요한 이점 중 하나는 개념적 모델을 사용하여 응용 프로그램에서 사용되는 데이터 구조를 데이터 소스의 스키마와 구분할 수 있다는 것입니다. 이렇게 하면 응용 프로그램을 적절하게 변경하지 않아도 나중에 저장소 모델이나 데이터 소스 자체를 쉽게 변경할 수 있습니다. 사용 하는 이점에 대 한 자세한 내용은 합니다 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]를 참조 하세요 [Entity Framework 개요](../../../../../docs/framework/data/adonet/ef/overview.md) 및 [엔터티 데이터 모델](../../../../../docs/framework/data/adonet/entity-data-model.md)합니다.  
@@ -31,11 +31,11 @@ ms.locfileid: "59089889"
 > [!NOTE]
 >  이러한 모든 작업이 수행 됩니다 자동으로 Visual Studio 2008 부터는 엔터티 데이터 모델 도구를 사용 하는 경우. 자세한 내용은 [방법: 엔터티 데이터 모델 마법사를 사용 하 여](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738677(v=vs.100))입니다.  
   
-1.  응용 프로그램을 업그레이드합니다.  
+1. 응용 프로그램을 업그레이드합니다.  
   
      이전 버전의 Visual Studio를 사용 하 여 만든 프로젝트 및 [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] Visual Studio 2008 SP1을 사용 하도록 업그레이드 해야 및 [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] 버전 3.5 SP1 사용 하 여 시작 합니다.  
   
-2.  모델 및 매핑을 정의합니다.  
+2. 모델 및 매핑을 정의합니다.  
   
      모델 및 매핑 파일은 개념적 모델의 엔터티, 데이터 소스의 구조(예: 테이블, 저장 프로시저 및 뷰), 엔터티와 데이터 소스 구조 간의 매핑을 정의합니다. 자세한 내용은 [방법: 수동으로 모델을 정의 및 매핑 파일](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb399785(v=vs.100))합니다.  
   
@@ -44,11 +44,11 @@ ms.locfileid: "59089889"
     > [!NOTE]
     >  엔터티 데이터 모델 디자이너를 사용하여 개념적 모델의 엔터티 이름을 기존 개체와 일치하도록 바꿀 수 있습니다. 자세한 내용은 [엔터티 데이터 모델 디자이너](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cc716685(v=vs.100))합니다.  
   
-3.  연결 문자열을 정의합니다.  
+3. 연결 문자열을 정의합니다.  
   
      [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]는 개념적 모델에 대해 쿼리를 실행할 때 특별한 형식의 연결 문자열을 사용합니다. 이 연결 문자열은 모델과 매핑 파일 및 데이터 소스에 대한 연결 정보를 캡슐화합니다. 자세한 내용은 [방법: 연결 문자열 정의](../../../../../docs/framework/data/adonet/ef/how-to-define-the-connection-string.md)합니다.  
   
-4.  Visual Studio 프로젝트를 구성 합니다.  
+4. Visual Studio 프로젝트를 구성 합니다.  
   
      에 대 한 참조 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] 어셈블리 및 모델과 매핑 파일을 Visual Studio 프로젝트에 추가 해야 합니다. 이러한 매핑 파일을 프로젝트에 추가하여 연결 문자열에 표시된 위치에 응용 프로그램과 함께 배포되도록 할 수 있습니다. 자세한 내용은 [방법: Entity Framework 프로젝트 수동 구성](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738546(v=vs.100))합니다.  
   
