@@ -10,17 +10,16 @@ helpviewer_keywords:
 - dependency properties [WPF], access
 - security [WPF], dependency properties
 ms.assetid: d10150ec-90c5-4571-8d35-84bafa2429a4
-ms.openlocfilehash: d51f8f5fd704b0c95b8e6f841b9b0ff8567899cb
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 85806ee9fb01cd2ca07697230c46a8847fdf8c6a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57364816"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59077474"
 ---
 # <a name="dependency-property-security"></a>종속성 속성 보안
 종속성 속성은 일반적으로 public 속성으로 간주됩니다. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 속성 시스템의 특성으로 인해 종속성 속성 값에 대한 보안을 보장할 수 없습니다.  
-  
-  
+
 <a name="AccessSecurity"></a>   
 ## <a name="access-and-security-of-wrappers-and-dependency-properties"></a>래퍼 및 종속성 속성의 액세스 및 보안  
  일반적으로 종속성 속성은 인스턴스에서 속성 가져오기 또는 설정을 간단하게 하는 "래퍼" [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] 속성과 함께 구현됩니다. 래퍼는 기본 구현 하는 매우 정당한 편의 메서드 <xref:System.Windows.DependencyObject.GetValue%2A> 고 <xref:System.Windows.DependencyObject.SetValue%2A> 종속성 속성과 상호 작용할 때 사용 되는 정적 호출 합니다. 또 다른 측면에서 볼 때 속성은 private 필드가 아닌 종속성 속성에서 지원하는 [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] 속성으로 노출됩니다. 래퍼에 적용되는 보안 메커니즘은 속성 시스템 동작 및 기본 종속성 속성의 액세스와 관련이 없습니다. 래퍼에 대해 보안 요청을 배치 하면 편리한 메서드의 사용만 방지 됩니다 있지만 호출 해도 <xref:System.Windows.DependencyObject.GetValue%2A> 또는 <xref:System.Windows.DependencyObject.SetValue%2A>합니다. 마찬가지로 래퍼에 보호된 액세스 또는 개인 액세스 수준을 적용해도 효과적인 보안을 제공하지는 않습니다.  
@@ -40,4 +39,5 @@ ms.locfileid: "57364816"
  요청을 적용 한 <xref:System.Windows.DependencyProperty.ValidateValueCallback%2A> 는 적절 한 보안 메커니즘이 아닙니다 속성을 설정 하지 않도록 요청 실패 시 유효성 검사 오류를 예상 합니다. 값 설정 무효화를 통해 적용 <xref:System.Windows.DependencyProperty.ValidateValueCallback%2A> 해당 호출자에 게 응용 프로그램 도메인 내에서 작동 하는 경우 악의적인 호출자가 표시도 수 있습니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [사용자 지정 종속성 속성](custom-dependency-properties.md)

@@ -5,23 +5,21 @@ helpviewer_keywords:
 - controls [WPF], TextBox
 - TextBox control [WPF], about TextBox control
 ms.assetid: 1ba6dc5b-11a7-4247-9213-36c6729ee35f
-ms.openlocfilehash: 5ddd6600493cd127f8024f23594c628476cac19e
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 577a12a0c04e5e3bfbfecb2c45263b684f0ffc17
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57361072"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59162648"
 ---
 # <a name="textbox-overview"></a>TextBox 개요
 <xref:System.Windows.Controls.TextBox> 클래스 표시 하거나 서식 없는 텍스트를 편집할 수 있습니다. 일반적인 용도 <xref:System.Windows.Controls.TextBox> 형태로 서식 없는 텍스트를 편집 하는 합니다. 예를 들어, 사용자의 이름, 전화 번호에 대 한 요청 하는 폼 등 사용 <xref:System.Windows.Controls.TextBox> 텍스트 입력 컨트롤입니다. 이 항목에서는 소개 합니다 <xref:System.Windows.Controls.TextBox> 클래스 및 둘 다에서 사용 하는 방법의 예가 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] 및 C#.  
-  
- 
-  
+
 <a name="textbox_or_richtextbox"></a>   
 ## <a name="textbox-or-richtextbox"></a>TextBox 또는 RichTextBox?  
  둘 다 <xref:System.Windows.Controls.TextBox> 고 <xref:System.Windows.Controls.RichTextBox> 사용자가 텍스트를 입력할 수 있지만 두 개의 서로 다른 시나리오에 사용 됩니다. A <xref:System.Windows.Controls.TextBox> 적은 시스템 리소스를 필요는 <xref:System.Windows.Controls.RichTextBox> 일반 텍스트만 편집 해야 하는 경우 적합 하므로 (즉, 폼에서 사용). <xref:System.Windows.Controls.RichTextBox> 는 것이 좋습니다는 사용자가 서식 있는 텍스트, 이미지, 테이블, 편집할 때나 다른 지원 되는 콘텐츠입니다. 예를 들어 이미지 문서 편집, 문서 또는 서식 지정 해야 하는 블로그, 등을 사용 하 여 훌륭하게 수행할는 <xref:System.Windows.Controls.RichTextBox>합니다. 아래 표에서 기본 기능의 <xref:System.Windows.Controls.TextBox> 고 <xref:System.Windows.Controls.TextBox>입니다.  
   
-|Control|실시간 맞춤법 검사|상황에 맞는 메뉴|서식 명령 등 <xref:System.Windows.Documents.EditingCommands.ToggleBold%2A> (Ctr + B)|<xref:System.Windows.Documents.FlowDocument> 이미지, 단락, 테이블 등과 같은 콘텐츠입니다.|  
+|컨트롤|실시간 맞춤법 검사|상황에 맞는 메뉴|서식 명령 등 <xref:System.Windows.Documents.EditingCommands.ToggleBold%2A> (Ctr + B)|<xref:System.Windows.Documents.FlowDocument> 이미지, 단락, 테이블 등과 같은 콘텐츠입니다.|  
 |-------------|------------------------------|------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|  
 |<xref:System.Windows.Controls.TextBox>|예|예|아니요|아니요.|  
 |<xref:System.Windows.Controls.RichTextBox>|예|예|예([RichTextBox 개요](richtextbox-overview.md) 참조)|예([RichTextBox 개요](richtextbox-overview.md) 참조)|  
@@ -68,5 +66,6 @@ ms.locfileid: "57361072"
  일반적으로 <xref:System.Windows.Controls.Primitives.TextBoxBase.TextChanged> 검색할 때마다 이벤트를 사용 해야의 텍스트를 <xref:System.Windows.Controls.TextBox> 또는 <xref:System.Windows.Controls.RichTextBox> 변경 대신 <xref:System.Windows.UIElement.KeyDown> 예상할 수 있듯이 합니다. 예제를 보려면 [TextBox에서 텍스트가 변경되는 시점 감지](how-to-detect-when-text-in-a-textbox-has-changed.md)를 참조하세요.  
   
 ## <a name="see-also"></a>참고자료
+
 - [방법 항목](textbox-how-to-topics.md)
 - [RichTextBox 개요](richtextbox-overview.md)

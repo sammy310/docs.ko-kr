@@ -2,12 +2,12 @@
 title: '작업 2: 워크플로 디자이너 호스트'
 ms.date: 03/30/2017
 ms.assetid: 0a29b138-270d-4846-b78e-2b875e34e501
-ms.openlocfilehash: e02134408b38e5c9aee9c59d86b1dfce032653d1
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 3f7964e907fe513679e60c18292f07c84128590b
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57708641"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59299269"
 ---
 # <a name="task-2-host-the-workflow-designer"></a>작업 2: 워크플로 디자이너 호스트
 인스턴스를 호스트 하는 절차에 설명 합니다 [!INCLUDE[wfd1](../../../includes/wfd1-md.md)] Windows Presentation Foundation (WPF) 응용 프로그램에서입니다.  
@@ -16,19 +16,19 @@ ms.locfileid: "57708641"
   
 ### <a name="to-host-the-workflow-designer"></a>워크플로 디자이너를 호스트하려면  
   
-1.  만든 HostingApplication 오픈 프로젝트 [작업 1: 새 Windows Presentation Foundation 응용 프로그램을 만드는](task-1-create-a-new-wpf-app.md)합니다.  
+1. 만든 HostingApplication 오픈 프로젝트 [작업 1: 새 Windows Presentation Foundation 응용 프로그램을 만드는](task-1-create-a-new-wpf-app.md)합니다.  
   
-2.  [!INCLUDE[wfd2](../../../includes/wfd2-md.md)]를 쉽게 사용할 수 있도록 창의 크기를 조정합니다. 이 위해 선택 **MainWindow** 디자이너를 표시 하려면 F4 키를 누릅니다.는 **속성** 창에서를 **레이아웃** 섹션을 설정 합니다 **너비** 값을 600으로 하며 **높이** 350 값으로.  
+2. [!INCLUDE[wfd2](../../../includes/wfd2-md.md)]를 쉽게 사용할 수 있도록 창의 크기를 조정합니다. 이 위해 선택 **MainWindow** 디자이너를 표시 하려면 F4 키를 누릅니다.는 **속성** 창에서를 **레이아웃** 섹션을 설정 합니다 **너비** 값을 600으로 하며 **높이** 350 값으로.  
   
-3.  선택 하 여 표 이름을 설정 합니다 **그리드** 디자이너에서 패널 (안의 상자 클릭를 **MainWindow**) 설정를 **이름** 맨 위에 있는 속성을  **속성** "추가한 다음 grid1" 창입니다.  
+3. 선택 하 여 표 이름을 설정 합니다 **그리드** 디자이너에서 패널 (안의 상자 클릭를 **MainWindow**) 설정를 **이름** 맨 위에 있는 속성을  **속성** "추가한 다음 grid1" 창입니다.  
   
-4.  에 **속성** 창에서 줄임표 (**...** ) 옆에 `ColumnDefinitions` 열려는 속성을 **컬렉션 편집기** 대화 상자.  
+4. 에 **속성** 창에서 줄임표 (**...** ) 옆에 `ColumnDefinitions` 열려는 속성을 **컬렉션 편집기** 대화 상자.  
   
-5.  에 **컬렉션 편집기** 대화 상자에서 클릭 합니다 **추가** 단추를 세 번 레이아웃에 세 개의 열을 삽입할 합니다. 첫 번째 열이 포함 됩니다는 **도구 상자**, 두 번째 열을 호스트 하는 [!INCLUDE[wfd2](../../../includes/wfd2-md.md)], 세 번째 열 속성 검사자에 사용 됩니다.  
+5. 에 **컬렉션 편집기** 대화 상자에서 클릭 합니다 **추가** 단추를 세 번 레이아웃에 세 개의 열을 삽입할 합니다. 첫 번째 열이 포함 됩니다는 **도구 상자**, 두 번째 열을 호스트 하는 [!INCLUDE[wfd2](../../../includes/wfd2-md.md)], 세 번째 열 속성 검사자에 사용 됩니다.  
   
-6.  설정의 `Width` 값 가운데 열의 속성을 "4 *"입니다.  
+6. 설정의 `Width` 값 가운데 열의 속성을 "4 *"입니다.  
   
-7.  **확인** 을 클릭하여 변경 내용을 저장합니다. 다음 XAML이 MainWindow.xaml 파일에 추가됩니다.  
+7. **확인** 을 클릭하여 변경 내용을 저장합니다. 다음 XAML이 MainWindow.xaml 파일에 추가됩니다.  
   
     ```xml  
     <Grid Name="grid1">  
@@ -40,7 +40,7 @@ ms.locfileid: "57708641"
     </Grid>  
     ```  
   
-8.  **솔루션 탐색기**MainWindow.xaml을 마우스 오른쪽 단추로 클릭 하 고 선택 **코드 보기**합니다. 다음 단계에 따라 코드를 수정합니다.  
+8. **솔루션 탐색기**MainWindow.xaml을 마우스 오른쪽 단추로 클릭 하 고 선택 **코드 보기**합니다. 다음 단계에 따라 코드를 수정합니다.  
   
     1.  다음 네임스페이스를 추가합니다.  
   
@@ -122,6 +122,7 @@ ms.locfileid: "57708641"
 10. 참조 [작업 3: 도구 상자 및 PropertyGrid 창 만들기](task-3-create-the-toolbox-and-propertygrid-panes.md) 추가 하는 방법을 알아보려면 **도구 상자** 하 고 **PropertyGrid** 재 호스트 된 워크플로 디자이너를 지원 합니다.  
   
 ## <a name="see-also"></a>참고자료
-- [워크플로 디자이너 재호스트](rehosting-the-workflow-designer.md)
-- [작업 1: 새 Windows Presentation Foundation 응용 프로그램 만들기](task-1-create-a-new-wpf-app.md)
+
+- [Workflow Designer 재호스팅](rehosting-the-workflow-designer.md)
+- [작업 1: 새 Windows Presentation Foundation 애플리케이션 만들기](task-1-create-a-new-wpf-app.md)
 - [작업 3: 도구 상자 및 PropertyGrid 창 만들기](task-3-create-the-toolbox-and-propertygrid-panes.md)

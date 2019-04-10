@@ -2,12 +2,12 @@
 title: SystemWebRouting Integration 샘플
 ms.date: 03/30/2017
 ms.assetid: f1c94802-95c4-49e4-b1e2-ee9dd126ff93
-ms.openlocfilehash: 1724fee816ddd210ffba73159596529bd4bc803e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f4f9772583bbd66d19cc59f453489965aabf74b2
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54548255"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59302246"
 ---
 # <a name="systemwebrouting-integration-sample"></a>SystemWebRouting Integration 샘플
 이 샘플에서는 호스팅 계층과 <xref:System.Web.Routing> 네임스페이스에 있는 클래스의 통합을 보여 줍니다. <xref:System.Web.Routing> 네임스페이스의 클래스를 사용하면 응용 프로그램에서 실제 리소스에 직접적으로 해당하지 않는 URL을 사용할 수 있습니다. 웹 라우팅을 사용 하 여 개발자를 실제 WCF 서비스에 다시 매핑되는 HTTP 용 가상 주소를 만들 수 있습니다. 이렇게 하면 실제 파일 또는 리소스 없이 WCF 서비스를 호스트해야 하거나 .html 또는 .aspx와 같은 파일 확장명이 포함되지 않은 URL을 사용하여 서비스에 액세스해야 하는 경우에 유용합니다. 이 샘플에서는 <xref:System.Web.Routing.RouteTable> 클래스를 사용하여 global.asax에 정의된 실행 중인 서비스에 매핑되는 가상 URI를 만드는 방법을 보여 줍니다. 
@@ -32,31 +32,31 @@ ms.locfileid: "54548255"
   
 #### <a name="to-use-this-sample"></a>이 샘플을 사용하려면  
   
-1.  WebRoutingIntegration.sln 파일을 열고 Visual Studio를 사용 합니다.  
+1. WebRoutingIntegration.sln 파일을 열고 Visual Studio를 사용 합니다.  
   
-2.  F5 키를 눌러 솔루션을 실행하고 웹 개발 서버를 시작합니다.  
+2. F5 키를 눌러 솔루션을 실행하고 웹 개발 서버를 시작합니다.  
   
      샘플의 디렉터리 목록이 나타납니다. 파일 확장명이 .svc인 파일은 없습니다.  
   
-3.  주소 표시줄에 추가할 `movies` 한다는 읽고 있으므로 URL로 `http://localhost:[port]/movies` ENTER 키를 누릅니다.  
+3. 주소 표시줄에 추가할 `movies` 한다는 읽고 있으므로 URL로 `http://localhost:[port]/movies` ENTER 키를 누릅니다.  
   
      movies 피드가 브라우저에 나타납니다.  
   
-4.  주소 표시줄에 추가할 `channels` URL로 간단 하 게 읽기 `http://localhost:[port]/channels` ENTER 키를 누릅니다.  
+4. 주소 표시줄에 추가할 `channels` URL로 간단 하 게 읽기 `http://localhost:[port]/channels` ENTER 키를 누릅니다.  
   
      channels 피드가 브라우저에 나타납니다.  
   
-5.  Alt+F4를 눌러 웹 브라우저를 닫습니다.  
+5. Alt+F4를 눌러 웹 브라우저를 닫습니다.  
   
      개발 서버가 종료 되지 않은 경우 알림 영역 아이콘을 마우스 오른쪽 단추로 클릭 하 고 선택 **중지**합니다.  
   
 #### <a name="to-use-this-sample-when-hosted-in-iis"></a>IIS에서 호스트될 때 이 샘플을 사용하려면  
   
-1.  WebRoutingIntegration.sln 파일을 열고 Visual Studio를 사용 합니다.  
+1. WebRoutingIntegration.sln 파일을 열고 Visual Studio를 사용 합니다.  
   
-2.  Ctrl+Shift+B를 눌러 프로젝트를 빌드합니다.  
+2. Ctrl+Shift+B를 눌러 프로젝트를 빌드합니다.  
   
-3.  IIS(인터넷 정보 서비스) 관리자에서 웹 응용 프로그램을 만듭니다.  
+3. IIS(인터넷 정보 서비스) 관리자에서 웹 응용 프로그램을 만듭니다.  
   
     1.  IIS 관리자를 마우스 오른쪽 단추로 클릭 합니다 **기본 웹 사이트** 선택한 **응용 프로그램 추가**합니다.  
   
@@ -66,17 +66,17 @@ ms.locfileid: "54548255"
   
     4.  **확인**을 누릅니다.  
   
-4.  웹 응용 프로그램을 마우스 오른쪽 단추로 클릭 하 고 선택 하 여 응용 프로그램을 시작 **응용 프로그램 관리** 차례로 **찾아보기**합니다.  
+4. 웹 응용 프로그램을 마우스 오른쪽 단추로 클릭 하 고 선택 하 여 응용 프로그램을 시작 **응용 프로그램 관리** 차례로 **찾아보기**합니다.  
   
-5.  주소 표시줄에 추가할 `movies` URL로 간단 하 게 읽기 `http://localhost:[port]/movies` ENTER 키를 누릅니다.  
+5. 주소 표시줄에 추가할 `movies` URL로 간단 하 게 읽기 `http://localhost:[port]/movies` ENTER 키를 누릅니다.  
   
      movies 피드가 브라우저에 나타납니다.  
   
-6.  주소 표시줄에 추가할 `channels` URL로 간단 하 게 읽기 `http://localhost:[port]/channels` ENTER 키를 누릅니다.  
+6. 주소 표시줄에 추가할 `channels` URL로 간단 하 게 읽기 `http://localhost:[port]/channels` ENTER 키를 누릅니다.  
   
      channels 피드가 브라우저에 나타납니다.  
   
-7.  Alt+F4를 눌러 웹 브라우저를 닫습니다.  
+7. Alt+F4를 눌러 웹 브라우저를 닫습니다.  
   
  이 샘플에서는 HTTP를 통해 호스트되는 서비스의 요청을 라우트하기 위해 <xref:System.Web.Routing> 네임스페이스의 클래스를 사용하여 호스팅 계층을 작성할 수 있음을 보여 줍니다.  
   
@@ -84,4 +84,5 @@ ms.locfileid: "54548255"
 >  기본 응용 프로그램 풀 버전을 업데이트 해야 [!INCLUDE[netfx40_long](../../../../includes/netfx40-long-md.md)] 버전 2로 설정 된 경우.  
   
 ## <a name="see-also"></a>참고자료
-- [AppFabric 호스팅 및 지 속성 샘플](https://go.microsoft.com/fwlink/?LinkId=193961)
+
+- [AppFabric 호스팅 및 지속성 샘플](https://go.microsoft.com/fwlink/?LinkId=193961)

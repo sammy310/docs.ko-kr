@@ -10,12 +10,12 @@ helpviewer_keywords:
 - data binding [Windows Forms], implementing
 - IBindingList interface
 ms.assetid: 834cc15c-50bc-4a8b-a610-313d6a217357
-ms.openlocfilehash: df4b009ca225b4bf4290398ccd7dd252c9189915
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 2463a9c77a9836ff251e799056cc5131bf6c99e0
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57709805"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59084930"
 ---
 # <a name="how-to-implement-the-itypedlist-interface"></a>방법: ITypedList 인터페이스 구현
 구현 된 <xref:System.ComponentModel.ITypedList> 인터페이스 바인딩 가능한 목록에 대 한 스키마 검색을 사용 하도록 설정 합니다.  
@@ -38,6 +38,7 @@ ms.locfileid: "57709805"
 -   System.Drawing 및 System.Windows.Forms 어셈블리에 대한 참조  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.ComponentModel.ITypedList>
 - <xref:System.ComponentModel.BindingList%601>
 - <xref:System.ComponentModel.IBindingList>

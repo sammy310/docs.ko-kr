@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Visual Basic code, properties
 - default properties
 ms.assetid: 68b4026e-09ef-4613-808e-f6287494ff63
-ms.openlocfilehash: f11b5a184b72df68e302094dee762ec6876a397c
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 9ca9a0ccdac3ac13429928233a0c09d58427ce74
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58829332"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59295642"
 ---
 # <a name="how-to-declare-and-call-a-default-property-in-visual-basic"></a>방법: 선언 및 Visual Basic의 기본 속성을 호출
 A *속성의 기본값을* 지정 하지 않고 코드에 액세스할 수 있는 클래스 또는 구조체 속성입니다. 코드 이름은 호출 하는 경우 클래스 또는 구조 및 제외 속성을 하 고 컨텍스트 속성에 대 한 액세스 허용, Visual Basic 있을 경우 해당 클래스 또는 구조체의 기본 속성에 대 한 액세스를 확인 합니다.  
@@ -26,37 +26,37 @@ A *속성의 기본값을* 지정 하지 않고 코드에 액세스할 수 있�
   
 ### <a name="to-declare-a-default-property"></a>기본 속성을 선언 하려면  
   
-1.  일반적인 방법으로 속성을 선언 합니다. 지정 하지 않으면 합니다 `Shared` 또는 `Private` 키워드입니다.  
+1. 일반적인 방법으로 속성을 선언 합니다. 지정 하지 않으면 합니다 `Shared` 또는 `Private` 키워드입니다.  
   
-2.  포함 된 `Default` 속성 선언에서 키워드입니다.  
+2. 포함 된 `Default` 속성 선언에서 키워드입니다.  
   
-3.  속성에 대 한 하나 이상의 매개 변수를 지정 합니다. 하나 이상의 인수를 사용 하지 않는 기본 속성을 정의할 수 없습니다.  
+3. 속성에 대 한 하나 이상의 매개 변수를 지정 합니다. 하나 이상의 인수를 사용 하지 않는 기본 속성을 정의할 수 없습니다.  
   
      [!code-vb[VbVbcnProcedures#17](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#17)]  
   
 ### <a name="to-call-a-default-property"></a>기본 속성을 호출 하려면  
   
-1.  포함 하는 클래스 또는 구조체 형식의 변수를 선언 합니다.  
+1. 포함 하는 클래스 또는 구조체 형식의 변수를 선언 합니다.  
   
      [!code-vb[VbVbcnProcedures#16](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#16)]  
   
-2.  일반적으로 포함 하는 속성 이름 식에 변수 이름만을 사용 합니다.  
+2. 일반적으로 포함 하는 속성 이름 식에 변수 이름만을 사용 합니다.  
   
      [!code-vb[VbVbcnProcedures#21](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#21)]  
   
-3.  인수 목록의 괄호를 사용 하 여 변수 이름을 뒤에 있습니다. 기본 속성을 하나 이상의 인수를 수행 해야 합니다.  
+3. 인수 목록의 괄호를 사용 하 여 변수 이름을 뒤에 있습니다. 기본 속성을 하나 이상의 인수를 수행 해야 합니다.  
   
      [!code-vb[VbVbcnProcedures#20](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#20)]  
   
-4.  기본 속성 값을 검색할 식 또는 등호 다음에 인수 목록을 사용 하 여 변수 이름으로 사용 (`=`) 대입문에 로그인 합니다.  
+4. 기본 속성 값을 검색할 식 또는 등호 다음에 인수 목록을 사용 하 여 변수 이름으로 사용 (`=`) 대입문에 로그인 합니다.  
   
      [!code-vb[VbVbcnProcedures#15](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#15)]  
   
-5.  기본 속성 값을 설정 하려면 대입문의 왼쪽에는 인수 목록을 사용 하 여 변수 이름을 사용 합니다.  
+5. 기본 속성 값을 설정 하려면 대입문의 왼쪽에는 인수 목록을 사용 하 여 변수 이름을 사용 합니다.  
   
      [!code-vb[VbVbcnProcedures#14](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#14)]  
   
-6.  다른 속성에 액세스 하는 것 처럼에 항상 기본 속성 이름은 변수 이름과 함께 지정할 수 있습니다.  
+6. 다른 속성에 액세스 하는 것 처럼에 항상 기본 속성 이름은 변수 이름과 함께 지정할 수 있습니다.  
   
      [!code-vb[VbVbcnProcedures#19](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#19)]  
   
@@ -85,11 +85,11 @@ A *속성의 기본값을* 지정 하지 않고 코드에 액세스할 수 있�
 
 - [속성 프로시저](./property-procedures.md)
 - [프로시저 매개 변수 및 인수](./procedure-parameters-and-arguments.md)
-- [Property 문](../../../../visual-basic/language-reference/statements/property-statement.md)
+- [Property Statement](../../../../visual-basic/language-reference/statements/property-statement.md)
 - [기본](../../../../visual-basic/language-reference/modifiers/default.md)
 - [Visual Basic에서 속성과 변수의 차이점](./differences-between-properties-and-variables.md)
 - [방법: 속성 만들기](./how-to-create-a-property.md)
-- [방법: 액세스 수준이 혼합된 된 속성 선언](./how-to-declare-a-property-with-mixed-access-levels.md)
+- [방법: 액세스 수준이 혼합된 속성 선언](./how-to-declare-a-property-with-mixed-access-levels.md)
 - [방법: 속성 프로시저 호출](./how-to-call-a-property-procedure.md)
 - [방법: 속성 값 입력](./how-to-put-a-value-in-a-property.md)
 - [방법: 속성에서 값 가져오기](./how-to-get-a-value-from-a-property.md)

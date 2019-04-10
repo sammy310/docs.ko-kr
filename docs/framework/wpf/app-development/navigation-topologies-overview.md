@@ -9,12 +9,12 @@ helpviewer_keywords:
 - navigation topologies [WPF]
 - dynamically-generated topology
 ms.assetid: 5d5ee837-629a-4933-869a-186dc22ac43d
-ms.openlocfilehash: 3e5cca90861ccdeaff904a34c6f484cfdd32c975
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 716cfbe7d12ccc2233d018f0346f84cf2fc5e733
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58819595"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59230865"
 ---
 # <a name="navigation-topologies-overview"></a>탐색 토폴로지 개요
 <a name="introduction"></a> 이 개요에서는의 탐색 토폴로지에 소개 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]합니다. 세 가지 일반적인 탐색 토폴로지를 샘플과 함께 차례로 설명합니다.  
@@ -141,6 +141,7 @@ ms.locfileid: "58819595"
 -   마법사가 완료되면(승인 또는 취소) 마법사가 구성하는 페이지가 저널에서 제거됩니다. 이렇게 하면 마법사의 각 인스턴스가 격리되어 잠재적인 데이터 또는 비정상 상태를 피할 수 있습니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Windows.Controls.Page>
 - <xref:System.Windows.Navigation.PageFunction%601>
 - <xref:System.Windows.Navigation.NavigationService>

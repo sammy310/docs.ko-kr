@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 3e5f36e10fffebe89b805cee3cb57e88afd4df35
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: af0b38e955ac10592dc5cd0d0e18b0cff08834af
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54745310"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59202003"
 ---
 # <a name="ibindingdisplay-interface"></a>IBindingDisplay 인터페이스
 실행 중인 응용 프로그램에 대 한 현재 바인딩 정보를 표시 하는 메서드를 제공 합니다.  
@@ -31,7 +31,7 @@ ms.locfileid: "54745310"
 |메서드|설명|  
 |------------|-----------------|  
 |[GetCurrentDisplay 메서드](../../../../docs/framework/unmanaged-api/diagnostics/ibindingdisplay-getcurrentdisplay-method.md)|현재 바인딩 표시 정보를 반환합니다.|  
-|[InitializeForProcess 메서드](../../../../docs/framework/unmanaged-api/diagnostics/ibindingdisplay-initializeforprocess-method.md)|`IBindingDisplay` 개체를 초기화합니다.|  
+|[InitializeForProcess 메서드](../../../../docs/framework/unmanaged-api/diagnostics/ibindingdisplay-initializeforprocess-method.md)|초기화는 `IBindingDisplay` 개체입니다.|  
   
 ## <a name="requirements"></a>요구 사항  
  **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
@@ -43,4 +43,5 @@ ms.locfileid: "54745310"
  **.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>참고자료
+
 - [진단 기호 저장소 인터페이스](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)

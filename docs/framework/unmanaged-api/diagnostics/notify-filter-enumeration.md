@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: fcd1d7fb1fdcd8b1ad1abf159a7828e51be392a2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 63c3ecd0ae0d9e1df62d73eb05b759093583f652
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54735768"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59142885"
 ---
 # <a name="notifyfilter-enumeration"></a>NOTIFY_FILTER 열거형
 디버거 함수에 대 한 콜백을 식별합니다. 자세한 내용은 참조는 [INotifySource2::SetNotifyFilter](../../../../docs/framework/unmanaged-api/diagnostics/inotifysource2-setnotifyfilter-method.md) 메서드.  
@@ -57,4 +57,5 @@ enum tagNOTIFY_FILTER
  **헤더:** ProtocolNotify2.idl  
   
 ## <a name="see-also"></a>참고자료
+
 - [진단 기호 저장소 열거형](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-enumerations.md)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - images [Windows Forms], changing encoder parameters
 - JPEG images [Windows Forms], setting quality level
 ms.assetid: 4b9a74e3-9504-43c1-9f28-ace651d0772e
-ms.openlocfilehash: 678e89eaa240cbe3a396c1ee3d6c18e7ceca17ee
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: de9dce1b3c15070fda268c430ce5da641efef6f4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57722293"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59130678"
 ---
 # <a name="how-to-set-jpeg-compression-level"></a>방법: JPEG 압축 수준 설정
 이미지를 디스크에 저장할 때 파일 크기를 최소화하거나 품질을 향상시키기 위해 이미지의 매개 변수를 수정해야 할 수 있습니다. 압축 수준을 수정하여 JPEG 이미지의 품질을 조정할 수 있습니다. JPEG 이미지를 저장할 때 압축 수준을 지정 하려면 만들어야 합니다는 <xref:System.Drawing.Imaging.EncoderParameters> 개체를 전달 하는 <xref:System.Drawing.Image.Save%2A> 메서드를 <xref:System.Drawing.Image> 클래스. 초기화 된 <xref:System.Drawing.Imaging.EncoderParameters> 하나로 구성 된 배열을 개체 <xref:System.Drawing.Imaging.EncoderParameter>합니다. 만들 때 합니다 <xref:System.Drawing.Imaging.EncoderParameter>를 지정 합니다 <xref:System.Drawing.Imaging.Encoder.Quality> 인코더와 원하는 압축 수준을 합니다.  
@@ -130,6 +130,7 @@ End Function
 -   **c:\\** 에 있는 `TestPhoto.jpg` 이미지 파일  
   
 ## <a name="see-also"></a>참고자료
-- [방법: 인코더에서 지원 되는 매개 변수 확인](how-to-determine-the-parameters-supported-by-an-encoder.md)
+
+- [방법: 인코더에서 지원하는 매개 변수 확인](how-to-determine-the-parameters-supported-by-an-encoder.md)
 - [비트맵의 유형](types-of-bitmaps.md)
-- [관리되는 GDI+에서 이미지 인코더 및 디코더 사용](using-image-encoders-and-decoders-in-managed-gdi.md)
+- [관리형 GDI+에서 이미지 인코더 및 디코더 사용](using-image-encoders-and-decoders-in-managed-gdi.md)

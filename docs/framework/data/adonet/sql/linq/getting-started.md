@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: db8a557a-fef8-4f4f-bb91-8cff7250ee25
-ms.openlocfilehash: 50b6d6992664f4b0a87984af8243b195fc479b8a
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
+ms.openlocfilehash: 506257c13bbaada98dffa9d3a15c834037c1d971
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56091580"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59155235"
 ---
 # <a name="getting-started"></a>시작
 사용 하 여 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]를 사용할 수는 [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)] 메모리 내 컬렉션을 액세스 하는 것 처럼 데이터베이스를 SQL에 액세스 하는 기술입니다.  
@@ -30,7 +30,8 @@ ms.locfileid: "56091580"
  마지막으로 직접 시작 하는 방법에 알아봅니다 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 프로젝트를 읽으면 [LINQ to SQL 사용을 위한 일반 단계](../../../../../../docs/framework/data/adonet/sql/linq/typical-steps-for-using-linq-to-sql.md)합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/index.md)
-- [LINQ 소개 (C#)](../../../../../csharp/programming-guide/concepts/linq/introduction-to-linq.md)
-- [LINQ 소개(Visual Basic)](../../../../../visual-basic/programming-guide/concepts/linq/introduction-to-linq.md)
+- [LINQ 소개(C#)](../../../../../csharp/programming-guide/concepts/linq/introduction-to-linq.md)
+- [LINQ (Visual Basic) 소개](../../../../../visual-basic/programming-guide/concepts/linq/introduction-to-linq.md)
 - [LINQ to SQL 개체 모델](../../../../../../docs/framework/data/adonet/sql/linq/the-linq-to-sql-object-model.md)

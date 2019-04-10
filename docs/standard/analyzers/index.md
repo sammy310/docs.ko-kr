@@ -5,8 +5,13 @@ author: billwagner
 ms.author: wiwagn
 ms.date: 01/24/2018
 ms.technology: dotnet-standard
+ms.openlocfilehash: 436cfb3904f0891f8c18bb5890563a13d65e2d1c
+ms.sourcegitcommit: d938c39afb9216db377d0f0ecdaa53936a851059
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58634247"
 ---
-
 # <a name="the-roslyn-based-analyzers"></a>Roslyn 기반 분석기
 
 Roslyn 기반 분석기는 .NET Compiler SDK(Roslyn API)를 사용해 프로젝트의 소스 코드를 분석하여 문제를 찾고 수정을 제안합니다. 분석기에 따라 버그를 일으킬 수 있는 사례에서 보안 문제, API 호환성 등에 이르는 다양한 종류의 문제를 찾습니다.

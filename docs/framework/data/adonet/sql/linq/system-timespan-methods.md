@@ -2,12 +2,12 @@
 title: System.TimeSpan 메서드
 ms.date: 03/30/2017
 ms.assetid: 9333fee8-1454-4374-855b-8c14c002f48f
-ms.openlocfilehash: a3f3c82f9f8db4b72588f165ed4d897b974eb076
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: dd693a64550293d6894e1d2abc3f651a53fc17fc
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54539911"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59126947"
 ---
 # <a name="systemtimespan-methods"></a>System.TimeSpan 메서드
 <xref:System.TimeSpan?displayProperty=nameWithType>에 대한 멤버 지원은 사용 중인 .NET Framework 및 Microsoft SQL Server의 버전에 따라 크게 다릅니다.  
@@ -37,6 +37,7 @@ ms.locfileid: "54539911"
  CLR <xref:System.TimeSpan?displayProperty=nameWithType> 형식은 더하기와 빼기를 지원하지만 SQL `TIME` 형식은 그렇지 않습니다. 이 때문에 LINQ to SQL 쿼리에서 SQL `TIME` 형식에 매핑할 때 더하기와 빼기를 시도할 경우 오류가 발생합니다. SQL 날짜 및 시간 형식 사용에 대해 기타 고려를 찾을 수 있습니다 [SQL-CLR 형식 매핑](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mapping.md)합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [쿼리 개념](../../../../../../docs/framework/data/adonet/sql/linq/query-concepts.md)
 - [개체 모델 만들기](../../../../../../docs/framework/data/adonet/sql/linq/creating-the-object-model.md)
 - [SQL-CLR 형식 매핑](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mapping.md)

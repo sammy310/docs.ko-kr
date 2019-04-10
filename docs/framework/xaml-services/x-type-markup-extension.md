@@ -14,12 +14,12 @@ helpviewer_keywords:
 - TargetType attribute [XAML Services]
 - Type markup extension in XAML [XAML Services]
 ms.assetid: e0e0ce6f-e873-49c7-8ad7-8b840eb353ec
-ms.openlocfilehash: 86e5619774cc1512e39fa2fb50f4c0ba5f1d074c
-ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
+ms.openlocfilehash: eb0adb2e8140b20c8d52eced02f177b8c3560354
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58042088"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59211636"
 ---
 # <a name="xtype-markup-extension"></a>x:Type 태그 확장
 CLR 제공 <xref:System.Type> 개체는 지정된 된 XAML 형식에 대 한 기본 형식입니다.  
@@ -80,7 +80,8 @@ CLR 제공 <xref:System.Type> 개체는 지정된 된 XAML 형식에 대 한 기
  Wpf에서 느슨한 XAML (태그 컴파일되지 않은 XAML)의 경우에 XAML 2009 기능을 사용할 수 있습니다. WPF에 대한 태그로 컴파일된 XAML 및 BAML 형식의 XAML은 현재 XAML 2009 키워드 및 기능을 지원하지 않습니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Windows.Style>
 - [스타일 지정 및 템플릿](../wpf/controls/styling-and-templating.md)
 - [XAML 개요(WPF)](../wpf/advanced/xaml-overview-wpf.md)
-- [태그 확장 및 WPF XAML](../wpf/advanced/markup-extensions-and-wpf-xaml.md)
+- [태그 확장명 및 WPF XAML](../wpf/advanced/markup-extensions-and-wpf-xaml.md)

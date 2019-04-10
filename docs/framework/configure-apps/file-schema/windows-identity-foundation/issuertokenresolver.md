@@ -3,12 +3,12 @@ title: <issuerTokenResolver>
 ms.date: 03/30/2017
 ms.assetid: f74392f6-3f5b-4880-bd8a-3a9130d31e65
 author: BrucePerlerMS
-ms.openlocfilehash: a37935fa9302493c0ecaab0f56e1414d44637af6
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 08082d2e6647f07f33df72ab79dac00c15a1cd1b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55269226"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59200820"
 ---
 # <a name="issuertokenresolver"></a>\<issuerTokenResolver>
 토큰 처리기 컬렉션의 처리기에서 사용 되는 발급자 토큰 확인자를 등록 합니다. 발급자 토큰 확인자는 들어오는 토큰 및 메시지에 서명 토큰을 확인 하는 데 사용 됩니다.  
@@ -41,7 +41,7 @@ ms.locfileid: "55269226"
   
 |특성|설명|  
 |---------------|-----------------|  
-|형식|발급자 토큰 확인자 형식을 지정합니다. 중 하나 여야 합니다는 <xref:System.IdentityModel.Tokens.IssuerTokenResolver> 클래스 또는 형식에서 파생 되는 <xref:System.IdentityModel.Tokens.IssuerTokenResolver> 클래스입니다. 필수 요소.|  
+|type|발급자 토큰 확인자 형식을 지정합니다. 중 하나 여야 합니다는 <xref:System.IdentityModel.Tokens.IssuerTokenResolver> 클래스 또는 형식에서 파생 되는 <xref:System.IdentityModel.Tokens.IssuerTokenResolver> 클래스입니다. 필수 요소.|  
   
 ### <a name="child-elements"></a>자식 요소  
  없음  
@@ -88,4 +88,5 @@ public override void LoadCustomConfiguration(System.Xml.XmlNodeList nodelist)
 ```  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.IdentityModel.Tokens.IssuerTokenResolver>

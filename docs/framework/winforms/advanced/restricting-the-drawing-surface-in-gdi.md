@@ -9,12 +9,12 @@ helpviewer_keywords:
 - clipping [Windows Forms], using GDI+
 - GDI+, restricting drawing surface
 ms.assetid: 8b5f71d9-d2f0-4540-9c41-740f90fd4c26
-ms.openlocfilehash: da12ece815d8ae9d1f974b02198498b250885843
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: d0508166f905b45789ce638b03d0747dd6fa904e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57717119"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59074965"
 ---
 # <a name="restricting-the-drawing-surface-in-gdi"></a>GDI+에서 그리기 화면 제한
 클리핑은 특정 사각형 또는 영역에 그리기를 제한 합니다. 다음 그림은 문자열 "Hello" 잘린 하트 모양의 영역을 나타냅니다.  
@@ -32,6 +32,7 @@ ms.locfileid: "57717119"
  [!code-vb[LinesCurvesAndShapes#91](~/samples/snippets/visualbasic/VS_Snippets_Winforms/LinesCurvesAndShapes/VB/Class1.vb#91)]  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Drawing.Graphics?displayProperty=nameWithType>
 - <xref:System.Drawing.Region?displayProperty=nameWithType>
 - [선, 곡선 및 도형](lines-curves-and-shapes.md)

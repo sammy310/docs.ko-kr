@@ -8,18 +8,18 @@ helpviewer_keywords:
 ms.assetid: 12fecad4-fbab-432a-bade-2f05976a2971
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e39e9b3cf83be03d9bb3a55e3741915588e755a5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7a60f03d85997d20b54366360f104519c9c75f5e
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54499579"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59343872"
 ---
 # <a name="net-framework-cryptography-model"></a>.NET Framework 암호화 모델
 .NET Framework에서는 많은 표준 암호화 알고리즘의 구현을 제공합니다. 이러한 알고리즘은 사용하기 쉽고 가능한 가장 안전한 기본 속성을 포함합니다. 또한 개체 상속, 스트림 디자인 및 구성의 .NET Framework 암호화 모델은 크게 확장할 수 있습니다.  
   
 ## <a name="object-inheritance"></a>개체 상속  
- .NET Framework 보안 시스템은 파생 클래스 상속의 확장 가능한 패턴을 구현합니다. 계층 구조는 다음과 같습니다.  
+ .NET Framework 보안 시스템은 파생 클래스 상속의 확장명 가능한 패턴을 구현합니다. 계층 구조는 다음과 같습니다.  
   
 -   <xref:System.Security.Cryptography.SymmetricAlgorithm>, <xref:System.Security.Cryptography.AsymmetricAlgorithm> 또는 <xref:System.Security.Cryptography.HashAlgorithm>과 같은 알고리즘 형식 클래스. 이 수준은 추상 클래스입니다.  
   
@@ -32,17 +32,17 @@ ms.locfileid: "54499579"
 ## <a name="how-algorithms-are-implemented-in-the-net-framework"></a>.NET Framework에서 알고리즘이 구현되는 방식  
  알고리즘에 사용할 수 있는 다양한 구현의 예로 대칭 알고리즘을 고려해 보세요. 모든 대칭 알고리즘의 기본은 <xref:System.Security.Cryptography.SymmetricAlgorithm>으로, 다음 알고리즘에 상속됩니다.  
   
-1.  <xref:System.Security.Cryptography.Aes>  
+1. <xref:System.Security.Cryptography.Aes>  
   
-2.  <xref:System.Security.Cryptography.DES>  
+2. <xref:System.Security.Cryptography.DES>  
   
-3.  <xref:System.Security.Cryptography.RC2>  
+3. <xref:System.Security.Cryptography.RC2>  
   
-4.  <xref:System.Security.Cryptography.Rijndael>  
+4. <xref:System.Security.Cryptography.Rijndael>  
   
-5.  <xref:System.Security.Cryptography.TripleDES>  
+5. <xref:System.Security.Cryptography.TripleDES>  
   
- <xref:System.Security.Cryptography.Aes>는 두 클래스 <xref:System.Security.Cryptography.AesCryptoServiceProvider> 및 <xref:System.Security.Cryptography.AesManaged>에 상속됩니다. <xref:System.Security.Cryptography.AesCryptoServiceProvider> 클래스는 Aes의 Windows CAPI(암호화 API) 구현에 대한 래퍼인 반면, <xref:System.Security.Cryptography.AesManaged> 클래스는 완전히 관리 코드로 작성됩니다. 관리되는 구현 및 CAPI 구현 외에도 세 번째 유형의 구현인 CNG(Cryptography Next Generation)가 있습니다. CNG 알고리즘의 한 예는 <xref:System.Security.Cryptography.ECDiffieHellmanCng>입니다. CNG 알고리즘은 Windows Vista 이상에서 사용할 수 있습니다.  
+ <xref:System.Security.Cryptography.Aes> 두 클래스에서 상속 됩니다. <xref:System.Security.Cryptography.AesCryptoServiceProvider> 고 <xref:System.Security.Cryptography.AesManaged>입니다. <xref:System.Security.Cryptography.AesCryptoServiceProvider> 클래스는 Aes의 Windows CAPI(암호화 API) 구현에 대한 래퍼인 반면, <xref:System.Security.Cryptography.AesManaged> 클래스는 완전히 관리 코드로 작성됩니다. 관리되는 구현 및 CAPI 구현 외에도 세 번째 유형의 구현인 CNG(Cryptography Next Generation)가 있습니다. CNG 알고리즘의 한 예는 <xref:System.Security.Cryptography.ECDiffieHellmanCng>입니다. CNG 알고리즘은 Windows Vista 이상에서 사용할 수 있습니다.  
   
  가장 적합한 구현을 선택할 수 있습니다.  관리되는 구현은 .NET Framework를 지원하는 모든 플랫폼에서 사용할 수 있습니다.  CAPI 구현은 이전 운영 체제에서 사용할 수 있으며 더 이상 개발되지 않습니다. CNG는 새로운 개발이 수행되는 최신 구현입니다. 그러나 관리되는 구현은 FIPS(Federal Information Processing Standards)에서 인증되지 않았으며 래퍼 클래스보다 느릴 수 있습니다.  
   
@@ -89,4 +89,4 @@ ms.locfileid: "54499579"
   
 ## <a name="see-also"></a>참고자료
 
-- [Cryptographic Services](../../../docs/standard/security/cryptographic-services.md)
+- [암호화 서비스](../../../docs/standard/security/cryptographic-services.md)

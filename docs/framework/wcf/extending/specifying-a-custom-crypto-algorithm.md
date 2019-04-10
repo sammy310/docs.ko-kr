@@ -2,21 +2,21 @@
 title: 사용자 지정 암호화 알고리즘 지정
 ms.date: 03/30/2017
 ms.assetid: d662a305-8e09-451d-9a59-b0f12b012f1d
-ms.openlocfilehash: 5c7bddb7e6e1696ea1cb4f8359e34a51a89fce40
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b365c3c8e74adcad03246a227d6593c49f8b3993
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54537688"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59342832"
 ---
 # <a name="specifying-a-custom-crypto-algorithm"></a>사용자 지정 암호화 알고리즘 지정
 WCF를 통해 데이터를 암호화하거나 디지털 서명을 연산화할 때 사용할 사용자 지정 암호화 알고리즘을 지정할 수 있습니다. 이렇게 하려면 다음 단계를 따릅니다.  
   
-1.  <xref:System.ServiceModel.Security.SecurityAlgorithmSuite>에서 클래스를 파생시킵니다.  
+1. 클래스 파생 <xref:System.ServiceModel.Security.SecurityAlgorithmSuite>  
   
-2.  알고리즘을 등록합니다.  
+2. 알고리즘을 등록합니다.  
   
-3.  <xref:System.ServiceModel.Security.SecurityAlgorithmSuite> 파생 클래스로 바인딩을 구성합니다.   
+3. <xref:System.ServiceModel.Security.SecurityAlgorithmSuite> 파생 클래스로 바인딩을 구성합니다.   
   
 ## <a name="derive-a-class-from-securityalgorithmsuite"></a>SecurityAlgorithmSuite에서 클래스를 파생시킵니다.  
  <xref:System.ServiceModel.Security.SecurityAlgorithmSuite>는 다양한 보안 관련 작업을 수행할 때 사용할 알고리즘을 지정할 수 있도록 하는 추상 기본 클래스입니다. 예를 들어 디지털 서명의 해시를 계산하거나 메시지를 암호화하는 작업을 수행할 때 활용됩니다. 다음 코드에서는 <xref:System.ServiceModel.Security.SecurityAlgorithmSuite>에서 클래스를 파생하는 방법을 보여 줍니다.  
@@ -126,6 +126,7 @@ WSHttpBinding binding = new WSHttpBinding();
  전체 코드 예제를 참조 합니다 [WCF 보안의 암호화 Agility](../../../../docs/framework/wcf/samples/cryptographic-agility-in-wcf-security.md) 샘플입니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [서비스 및 클라이언트에 보안 설정](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
 - [서비스에 보안 설정](../../../../docs/framework/wcf/securing-services.md)
 - [보안 개요](../../../../docs/framework/wcf/feature-details/security-overview.md)

@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 548c6007d4ed685c521676de87c5a98f56a222a4
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 8786892d591a98ddcd7f51eddf86fdbcf50f2197
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57376990"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59214873"
 ---
 # <a name="connectserverwmi-function"></a>ConnectServerWmi 함수
 DCOM 통해 지정된 컴퓨터의 WMI 네임스페이스에 대한 연결을 만듭니다.
@@ -106,7 +106,6 @@ HRESULT ConnectServerWmi (
 
 `strUser` 빈 문자열일 수 없습니다. 도메인을 지정 하는 경우 `strAuthority`, 고 해야도에 포함 되지 `strUser`, 함수 반환 또는 `WBEM_E_INVALID_PARAMETER`합니다.
 
-
 ## <a name="requirements"></a>요구 사항
 
  **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.
@@ -117,4 +116,4 @@ HRESULT ConnectServerWmi (
 
 ## <a name="see-also"></a>참고자료
 
-- [WMI 및 성능 카운터 (관리 되지 않는 API 참조)](index.md)
+- [WMI 및 성능 카운터(관리되지 않는 API 참조)](index.md)

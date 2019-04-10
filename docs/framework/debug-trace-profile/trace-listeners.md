@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 444b0d33-67ea-4c36-9e94-79c50f839025
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: cdccc0d60cb5f4bbee5da9b07072a9aa14a8fde9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 35aec3a311680e398d9f2bba94bf4c9a274c8a04
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54500737"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59137906"
 ---
 # <a name="trace-listeners"></a>추적 수신기
 **Trace**, **Debug** 및 <xref:System.Diagnostics.TraceSource>를 사용하는 경우 전송된 메시지를 수집 및 기록하는 메커니즘이 있어야 합니다. *수신기*가 추적 메시지를 수신합니다. 수신기의 목적은 추적 메시지를 수집, 저장 및 라우팅하는 것입니다. 수신기는 추적 출력을 로그, 창 또는 텍스트 파일과 같은 적절한 대상에 보냅니다.  
@@ -77,6 +77,7 @@ System.Diagnostics.Trace.Listeners.Add(
  **TraceListener** 기본 클래스에서 상속하고 해당 메서드를 사용자 지정 메서드로 재정의하는 방식으로 고유한 수신기를 정의할 수 있습니다. 개발자 정의 수신기를 만드는 방법에 대한 자세한 내용은 .NET Framework 참조에서 <xref:System.Diagnostics.TraceListener>를 참조하세요.  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Diagnostics.TextWriterTraceListener>
 - <xref:System.Diagnostics.EventLogTraceListener>
 - <xref:System.Diagnostics.DefaultTraceListener>

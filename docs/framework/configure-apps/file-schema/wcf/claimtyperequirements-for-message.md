@@ -1,13 +1,13 @@
 ---
-title: <claimTypeRequirements> 에 대한 <message>
+title: <claimTypeRequirements> for <message>
 ms.date: 03/30/2017
 ms.assetid: f95c5ecd-abb6-4b77-a6d7-a38727f4a142
-ms.openlocfilehash: 9cf77f6c026df5f78cc8ae6e6783e91f1c86e282
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: db6717022bf3af0c4922818668595dd3937e9c71
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57367455"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59106564"
 ---
 # <a name="claimtyperequirements-for-message"></a>\<claimTypeRequirements >에 대 한 \<메시지 >
 필요한 클레임 형식의 컬렉션을 지정합니다.  
@@ -17,6 +17,7 @@ ms.locfileid: "57367455"
  페더레이션 클라이언트에서 이 컬렉션은 필수 및 선택적 클레임 목록을 포함하며, 이 목록은 발급된 토큰에 대한 클라이언트의 요청에서 보안 토큰 서비스로 전송됩니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.ServiceModel.FederatedMessageSecurityOverHttp.ClaimTypeRequirements%2A>
 - <xref:System.ServiceModel.Security.Tokens.ClaimTypeRequirement>
 - <xref:System.ServiceModel.Configuration.FederatedMessageSecurityOverHttpElement.ClaimTypeRequirements%2A>

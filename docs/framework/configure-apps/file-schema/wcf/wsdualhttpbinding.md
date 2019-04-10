@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - wsDualHttpBinding Element
 ms.assetid: fd8ac4e2-5641-473b-9115-73f14ab1c065
-ms.openlocfilehash: b2023370ee248e999514090e57531eafb301c616
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 6b44f63d20e0e2ed0d2486003b15a932ba939f55
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57377204"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59155105"
 ---
 # <a name="wsdualhttpbinding"></a>\<wsDualHttpBinding>
 이중 서비스 계약 또는 SOAP 중간 매개자를 통한 통신에 사용할 수 있도록 보안이 유지되고 신뢰할 수 있으며 상호 운용할 수 있는 바인딩을 정의합니다.  
@@ -91,7 +91,7 @@ ms.locfileid: "57377204"
 |[\<bindings>](../../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)|이 요소는 표준 및 사용자 지정 바인딩의 컬렉션을 보유합니다.|  
   
 ## <a name="remarks"></a>설명  
- `WSDualHttpBinding`은 `WSHttpBinding`과 동일하게 웹 서비스 프로토콜을 지원하지만 이중 계약에만 사용할 수 있습니다. `WSDualHttpBinding`은 SOAP 보안만 지원하며 신뢰할 수 있는 메시징이 필요합니다. 이 바인딩에서는 서비스의 콜백 끝점을 제공하는 공용 URI가 클라이언트에 있어야 합니다. 이 공용 URI는 `clientBaseAddress` 특성에서 제공됩니다. 이중 바인딩은 클라이언트의 IP 주소를 서비스에 노출합니다. 클라이언트는 보안을 사용하여 신뢰하는 서비스에만 연결해야 합니다.  
+ `WSDualHttpBinding`은 `WSHttpBinding`과 동일하게 웹 서비스 프로토콜을 지원하지만 이중 계약에만 사용할 수 있습니다. `WSDualHttpBinding` 만 SOAP 보안을 지원 하며 신뢰할 수 있는 메시징이 필요 합니다. 이 바인딩에서는 서비스의 콜백 엔드포인트를 제공하는 공용 URI가 클라이언트에 있어야 합니다. 이 공용 URI는 `clientBaseAddress` 특성에서 제공됩니다. 이중 바인딩은 클라이언트의 IP 주소를 서비스에 노출합니다. 클라이언트는 보안을 사용하여 신뢰하는 서비스에만 연결해야 합니다.  
   
  이 바인딩을 사용하여 하나 이상의 SOAP 중간 매개자를 통해 안정적으로 통신할 수 있습니다.  
   
@@ -132,6 +132,7 @@ ms.locfileid: "57377204"
 ```  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.ServiceModel.WSDualHttpBinding>
 - <xref:System.ServiceModel.Configuration.WSDualHttpBindingElement>
 - [바인딩](../../../../../docs/framework/wcf/bindings.md)

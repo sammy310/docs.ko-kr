@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 7d07c6de47038d5c52d76ad8ca8e0a5684551d59
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 97f62b082db11a5f0bb930e33cb47acef76e7a04
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54491469"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59092060"
 ---
 # <a name="corparamattr-enumeration"></a>CorParamAttr 열거형
 메서드 매개 변수의 메타데이터를 설명하는 값을 포함합니다.  
@@ -50,9 +50,9 @@ typedef enum CorParamAttr {
 |------------|-----------------|  
 |`pdIn`|매개 변수를 메서드 호출으로 전달 되도록 지정 합니다.|  
 |`pdOut`|매개 변수가 전달 되도록 메서드에서 반환을 지정 합니다.|  
-|`pdOptional`|매개 변수를 선택적 요소로 지정합니다.|  
+|`pdOptional`|매개 변수가 선택 사항임을 지정 합니다.|  
 |`pdReservedMask`|공용 언어 런타임에서 내부 용도로 예약 되어 있습니다.|  
-|`pdHasDefault`|매개 변수가 기본값을 갖도록 지정합니다.|  
+|`pdHasDefault`|매개 변수 기본값을 갖도록 지정 합니다.|  
 |`pdHasFieldMarshal`|매개 변수 마샬링 정보를 지정 합니다.|  
 |`pdUnused`|사용되지 않습니다.|  
   
@@ -64,4 +64,5 @@ typedef enum CorParamAttr {
  **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>참고자료
+
 - [메타데이터 열거형](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - WPF [WPF], creating Direct3D9 content
 - Direct3D9 [WPF interoperability], creating Direct3D9 content
 ms.assetid: 1b14b823-69c4-4e8d-99e4-f6dade58f89a
-ms.openlocfilehash: e9d000ca2da9dd9b4c8a677e85bc9cca5b1b1b1d
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 38f5eb36e3e5c055c5a354a67e15cde8049a2967
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57372687"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59307732"
 ---
 # <a name="wpf-and-direct3d9-interoperation"></a>WPF 및 Direct3D9 상호 운용성
 Windows Presentation Foundation (WPF) 응용 프로그램에서 호스팅할 Direct3D9 콘텐츠를 포함할 수 있습니다. 이 항목에서는 WPF를 사용 하 여 효율적으로 상호 운용 되도록 Direct3D9 콘텐츠를 만드는 방법을 설명 합니다.  
@@ -112,13 +112,13 @@ Windows Presentation Foundation (WPF) 응용 프로그램에서 호스팅할 Dir
   
  성능 저하를 방지 하려면 다중 모니터에 맞게 코드를 작성 합니다. 다음은 다중 모니터 코드를 작성 하는 한 가지 방법은 보여 줍니다.  
   
-1.  지점을 찾는 합니다 <xref:System.Windows.Interop.D3DImage> 화면 공간에는 `Visual.ProjectToScreen` 메서드.  
+1. 지점을 찾는 합니다 <xref:System.Windows.Interop.D3DImage> 화면 공간에는 `Visual.ProjectToScreen` 메서드.  
   
-2.  사용 된 `MonitorFromPoint` GDI 메서드 시점을 표시 하는 모니터를 찾습니다.  
+2. 사용 된 `MonitorFromPoint` GDI 메서드 시점을 표시 하는 모니터를 찾습니다.  
   
-3.  사용 된 `IDirect3D9::GetAdapterMonitor` 모니터 Direct3D9 어댑터를 찾으려면 메서드는 합니다.  
+3. 사용 된 `IDirect3D9::GetAdapterMonitor` 모니터 Direct3D9 어댑터를 찾으려면 메서드는 합니다.  
   
-4.  어댑터 백 버퍼를 사용 하 여 어댑터와 동일 하 게 없는 경우 새 백 버퍼에 새 모니터 만들고 할당 하 여 <xref:System.Windows.Interop.D3DImage> 백 버퍼입니다.  
+4. 어댑터 백 버퍼를 사용 하 여 어댑터와 동일 하 게 없는 경우 새 백 버퍼에 새 모니터 만들고 할당 하 여 <xref:System.Windows.Interop.D3DImage> 백 버퍼입니다.  
   
 > [!NOTE]
 >  경우는 <xref:System.Windows.Interop.D3DImage> 여러 모니터 성능 WDDM의 경우 제외 하 고 느려질 수 및 `IDirect3D9Ex` 동일한 어댑터에 있습니다. 이 상황에서 성능을 향상 시키는 방법이 없습니다.  
@@ -148,6 +148,7 @@ Windows Presentation Foundation (WPF) 응용 프로그램에서 호스팅할 Dir
 >  WPF가 완전히 소프트웨어에서 렌더링 하는 경우 <xref:System.Windows.Interop.D3DImage> WPF 프런트 버퍼가 없기 때문에 표시 되지 않습니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Windows.Interop.D3DImage>
 - [Direct3D9 및 WPF 상호 운용성을 위한 성능 고려 사항](performance-considerations-for-direct3d9-and-wpf-interoperability.md)
 - [연습: WPF에서 호스팅할 Direct3D9 콘텐츠 만들기](walkthrough-creating-direct3d9-content-for-hosting-in-wpf.md)

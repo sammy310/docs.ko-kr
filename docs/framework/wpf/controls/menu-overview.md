@@ -5,17 +5,16 @@ helpviewer_keywords:
 - Menu control [WPF]
 - controls [WPF], Menu
 ms.assetid: 67df6de5-db96-4c71-b752-af90729a6537
-ms.openlocfilehash: d5f53603ea22b2ae12a9846ba6bdce525790ce15
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: a3250cfd3fd651cb4ed3c4fd6975f5b5c89195f9
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57360948"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59166376"
 ---
 # <a name="menu-overview"></a>Menu 개요
 <xref:System.Windows.Controls.Menu> 클래스를 사용 하면 요소와 연결 된 명령 및 이벤트 처리기를 계층적 순서로 구성할 수 있습니다. 각 <xref:System.Windows.Controls.Menu> 의 컬렉션을 포함 하는 요소 <xref:System.Windows.Controls.MenuItem> 요소입니다.  
-  
-  
+
 <a name="menu_control"></a>   
 ## <a name="menu-control"></a>Menu 컨트롤  
  <xref:System.Windows.Controls.Menu> 컨트롤에 명령 또는 응용 프로그램에 대 한 옵션을 지정 하는 항목의 목록을 제공 합니다. 일반적으로 클릭 하는 <xref:System.Windows.Controls.MenuItem> 명령을 실행 하는 응용 프로그램 또는 하위 메뉴를 엽니다.  
@@ -60,4 +59,5 @@ ms.locfileid: "57360948"
  [!code-xaml[MenuStylesSnippet#2](~/samples/snippets/csharp/VS_Snippets_Wpf/MenuStylesSnippet/CS/app.xaml#2)]  
   
 ## <a name="see-also"></a>참고자료
-- [WPF Controls Gallery Sample](https://go.microsoft.com/fwlink/?LinkID=160053)(WPF 컨트롤 갤러리 샘플)
+
+- [WPF 컨트롤 갤러리 샘플](https://go.microsoft.com/fwlink/?LinkID=160053)

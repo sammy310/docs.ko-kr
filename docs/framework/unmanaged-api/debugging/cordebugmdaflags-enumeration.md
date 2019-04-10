@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b7f20dec86a85be85472037f58a2bd2002d9be1e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 732523935eec62bffbc15705bc93c97f14c90064
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54620398"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59148423"
 ---
 # <a name="cordebugmdaflags-enumeration"></a>CorDebugMDAFlags 열거형
 MDA(관리 디버깅 도우미)가 실행된 스레드의 상태를 지정합니다.  
@@ -53,4 +53,5 @@ typedef enum CorDebugMDAFlags {
  **.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>참고자료
+
 - [디버깅 열거형](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)

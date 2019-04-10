@@ -6,15 +6,15 @@ helpviewer_keywords:
 - styling rows in ListViews implementing GridViews [WPF]
 - ListView controls [WPF], styling rows with GridViews
 ms.assetid: 2e406ba2-70a0-4e62-841f-0934859de76e
-ms.openlocfilehash: 0c8806c399959fdc1466e0839ba469881718092b
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 9af8d10c7db2d3bbe8b9443402cbb1cfeaa7edb3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57361631"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59091462"
 ---
 # <a name="how-to-style-a-row-in-a-listview-that-implements-a-gridview"></a>방법: GridView를 구현하는 ListView 행의 스타일 지정
-행 스타일을 지정 하는 방법을 보여주는이 예제는 <xref:System.Windows.Controls.ListView> 구현 하는 컨트롤을 <xref:System.Windows.Controls.GridView> <xref:System.Windows.Controls.ListView.View%2A> 모드입니다.  
+행 스타일을 지정 하는 방법을 보여주는이 예제는 <xref:System.Windows.Controls.ListView> 구현 하는 컨트롤을 <xref:System.Windows.Controls.GridView><xref:System.Windows.Controls.ListView.View%2A> 모드입니다.  
   
 ## <a name="example"></a>예제  
  행 스타일 지정할 수 있습니다는 <xref:System.Windows.Controls.ListView> 설정 하 여 컨트롤을 <xref:System.Windows.Controls.ItemsControl.ItemContainerStyle%2A> 에 <xref:System.Windows.Controls.ListView> 컨트롤. 로 표현 되는 해당 항목에 대 한 스타일 설정 <xref:System.Windows.Controls.ListViewItem> 개체입니다. 합니다 <xref:System.Windows.Controls.ItemsControl.ItemContainerStyle%2A> 참조는 <xref:System.Windows.Controls.ControlTemplate> 행 내용을 표시 하는 데 사용 되는 개체입니다.  
@@ -34,6 +34,7 @@ ms.locfileid: "57361631"
  [!code-xaml[ListViewItemStyleSnippet#GridView](~/samples/snippets/csharp/VS_Snippets_Wpf/ListViewItemStyleSnippet/CS/Window1.xaml#gridview)]  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Windows.Controls.ListView>
 - <xref:System.Windows.Controls.GridView>
 - [방법 항목](listview-how-to-topics.md)

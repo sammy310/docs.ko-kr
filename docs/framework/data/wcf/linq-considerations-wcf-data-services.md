@@ -9,18 +9,18 @@ helpviewer_keywords:
 - querying the data service [WCF Data Services]
 - WCF Data Services, querying
 ms.assetid: cc4ec9e9-348f-42a6-a78e-1cd40e370656
-ms.openlocfilehash: 8d7ec8914fe83bb34e946fd5596f161e526038b1
-ms.sourcegitcommit: c6f69b0cf149f6b54483a6d5c2ece222913f43ce
+ms.openlocfilehash: a41eb4b5df7786558a73d5a195d57c9f30e9235d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2019
-ms.locfileid: "55904615"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59192955"
 ---
 # <a name="linq-considerations-wcf-data-services"></a>LINQ 고려 사항(WCF Data Services)
 이 항목에서는 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 클라이언트를 사용할 때 LINQ 쿼리가 작성되고 실행되는 방식과 [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]을 구현하는 데이터 서비스를 LINQ로 쿼리할 경우의 제한 사항에 대한 정보를 제공합니다. 작성 및에 대 한 쿼리를 실행 하는 방법에 대 한 자세한 내용은 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]-기반 데이터 서비스 참조 [데이터 서비스 쿼리](../../../../docs/framework/data/wcf/querying-the-data-service-wcf-data-services.md)합니다.  
   
 ## <a name="composing-linq-queries"></a>LINQ 쿼리 작성  
- LINQ 쿼리를 사용하면 <xref:System.Collections.Generic.IEnumerable%601>을 구현하는 개체의 컬렉션에 대한 쿼리를 작성할 수 있습니다. 모두를 **서비스 참조 추가** Visual Studio에서 대화 상자 및 DataSvcUtil.exe 도구를 사용 하 여의 표현을 생성 한 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 에서 상속 되는 엔터티 컨테이너 클래스로 서비스 <xref:System.Data.Services.Client.DataServiceContext>, 뿐만 피드에 반환 된 엔터티를 나타내는 개체입니다. 또한 이러한 도구는 서비스에서 피드로 노출되는 컬렉션의 엔터티 컨테이너 클래스에 대한 속성도 생성합니다. 데이터 서비스를 캡슐화하는 클래스의 해당 속성은 <xref:System.Data.Services.Client.DataServiceQuery%601>을 반환합니다.  <xref:System.Data.Services.Client.DataServiceQuery%601> 클래스가 LINQ로 정의된 <xref:System.Linq.IQueryable%601> 인터페이스를 구현하기 때문에 데이터 서비스를 통해 노출되는 피드에 대해 LINQ 쿼리를 작성할 수 있으며, 이 쿼리는 클라이언트 라이브러리에 의해 실행 시 데이터 서비스로 보내지는 쿼리 요청 URI로 변환됩니다.  
+ LINQ 쿼리를 사용하면 <xref:System.Collections.Generic.IEnumerable%601>을 구현하는 개체의 집합에 대한 쿼리를 작성할 수 있습니다. 모두를 **서비스 참조 추가** Visual Studio에서 대화 상자 및 DataSvcUtil.exe 도구를 사용 하 여의 표현을 생성 한 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 에서 상속 되는 엔터티 컨테이너 클래스로 서비스 <xref:System.Data.Services.Client.DataServiceContext>, 뿐만 피드에 반환 된 엔터티를 나타내는 개체입니다. 또한 이러한 도구는 서비스에서 피드로 노출되는 모음의 엔터티 컨테이너 클래스에 대한 속성도 생성합니다. 데이터 서비스를 캡슐화하는 클래스의 해당 속성은 <xref:System.Data.Services.Client.DataServiceQuery%601>을 반환합니다.  <xref:System.Data.Services.Client.DataServiceQuery%601> 클래스가 LINQ로 정의된 <xref:System.Linq.IQueryable%601> 인터페이스를 구현하기 때문에 데이터 서비스를 통해 노출되는 피드에 대해 LINQ 쿼리를 작성할 수 있으며, 이 쿼리는 클라이언트 라이브러리에 의해 실행 시 데이터 서비스로 보내지는 쿼리 요청 URI로 변환됩니다.  
   
 > [!IMPORTANT]
 >  LINQ 구문으로 표현할 수 있는 쿼리 집합은 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 데이터 서비스에 사용되는 URI 구문에서 사용할 수 있는 것보다 광범위합니다. 쿼리를 대상 데이터 서비스의 URI에 매핑할 수 없으면 <xref:System.NotSupportedException>이 발생합니다. 자세한 내용은 참조는 [지원 되지 않는 LINQ 메서드](../../../../docs/framework/data/wcf/linq-considerations-wcf-data-services.md#unsupportedMethods) 이 항목의 합니다.  
@@ -112,8 +112,7 @@ http://localhost:12345/Northwind.svc/Orders?Orderby=ShippedDate&?filter=Freight 
   
 [!code-csharp[Astoria Northwind Client#LinqSelectMethodSpecific](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/source.cs#linqselectmethodspecific)]      
 [!code-vb[Astoria Northwind Client#LinqSelectMethodSpecific](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/source.vb#linqselectmethodspecific)]         
- 
-  
+
 > [!NOTE]
 >  `$select` 쿼리 옵션은 <xref:System.Data.Services.Client.DataServiceQuery%601.AddQueryOption%2A> 메서드를 사용하여 쿼리 URI에 추가할 수 없습니다.  LINQ <xref:System.Linq.Enumerable.Select%2A> 메서드를 사용하여 클라이언트에서 요청 URI에 `$select` 쿼리 옵션을 생성하도록 하는 것이 좋습니다.  
   
@@ -136,7 +135,7 @@ http://localhost:12345/Northwind.svc/Orders?Orderby=ShippedDate&?filter=Freight 
  위의 두 가지 예는 쿼리 URI `http://localhost:12345/northwind.svc/Orders()?$orderby=OrderDate desc&$skip=50&$top=25`로 변환됩니다.  
   
 <a name="expand"></a>   
-### <a name="expand"></a>확장  
+### <a name="expand"></a>Expand  
  [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 데이터 서비스를 쿼리할 때 쿼리의 대상 엔터티와 관련된 엔터티가 반환된 피드에 포함되도록 요청할 수 있습니다. <xref:System.Data.Services.Client.DataServiceQuery%601.Expand%2A> 메서드는 LINQ 쿼리의 대상인 엔터티 집합에 대한 <xref:System.Data.Services.Client.DataServiceQuery%601>에서 호출되며, 관련 엔터티 집합 이름은 `path` 매개 변수로 지정됩니다. 자세한 내용은 [지연 콘텐츠 로드](../../../../docs/framework/data/wcf/loading-deferred-content-wcf-data-services.md)합니다.  
   
  다음 예에서는 쿼리에서 <xref:System.Data.Services.Client.DataServiceQuery%601.Expand%2A> 메서드를 사용하는 여러 가지 동등한 방법을 보여 줍니다.  
@@ -150,8 +149,7 @@ http://localhost:12345/Northwind.svc/Orders?Orderby=ShippedDate&?filter=Freight 
 
 [!code-csharp[Astoria Northwind Client#LinqQueryExpandMethodSpecific](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/source.cs#linqqueryexpandmethodspecific)]       
 [!code-vb[Astoria Northwind Client#LinqQueryExpandMethodSpecific](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/source.vb#linqqueryexpandmethodspecific)]       
-  
-  
+
  위의 두 가지 예는 쿼리 URI `http://localhost:12345/northwind.svc/Orders()?$filter=CustomerID eq 'ALFKI'&$expand=Order_Details`로 변환됩니다.  
   
 <a name="unsupportedMethods"></a>   
@@ -213,7 +211,8 @@ http://localhost:12345/Northwind.svc/Orders?Orderby=ShippedDate&?filter=Freight 
  또한 클라이언트가 추가 CLR 함수를 계산할 수 있습니다. 클라이언트에서 계산할 수 없고 서버에서 계산하기 위해 올바른 요청 URI로 변환할 수 없는 식에 대해서는 <xref:System.NotSupportedException>이 발생합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [데이터 서비스 쿼리](../../../../docs/framework/data/wcf/querying-the-data-service-wcf-data-services.md)
-- [프로젝트 쿼리](../../../../docs/framework/data/wcf/query-projections-wcf-data-services.md)
+- [프로젝션 쿼리](../../../../docs/framework/data/wcf/query-projections-wcf-data-services.md)
 - [개체 구체화](../../../../docs/framework/data/wcf/object-materialization-wcf-data-services.md)
 - [OData: URI 규칙](https://go.microsoft.com/fwlink/?LinkID=185564)

@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Service Transaction Behavior Sample [Windows Communication Foundation]
 ms.assetid: 1a9842a3-e84d-427c-b6ac-6999cbbc2612
-ms.openlocfilehash: dafc75c9db0dfe9b51c7425a269c166182bbcc87
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: db120df1b2efd28cc484c3749bb22fc2196e9dd4
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58843034"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59339946"
 ---
 # <a name="service-transaction-behavior"></a>서비스 트랜잭션 동작
 이 샘플에서는 클라이언트에서 조정하는 트랜잭션과 ServiceBehaviorAttribute 및 OperationBehaviorAttribute의 설정을 사용하여 서비스 트랜잭션 동작을 제어하는 방법을 보여 줍니다. 이 샘플은 기반 합니다 [Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md) 계산기 서비스를 구현 하는 동시 데이터베이스 테이블에서 상태 저장 계산기 작업에 대 한 누계에 수행된 된 작업의 서버 로그를 유지 하기 위해 확장 됩니다. 서버 로그 테이블에 대한 지속적인 쓰기는 클라이언트에서 조정하는 트랜잭션의 결과에 영향을 받습니다. 즉, 클라이언트 트랜잭션이 완료되지 않은 경우 웹 서비스 트랜잭션은 데이터베이스의 업데이트가 커밋되지 않도록 합니다.  
@@ -206,17 +206,17 @@ Creating new service instance...
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>샘플을 설치, 빌드 및 실행하려면  
   
-1.  SQL Server 2005 Express Edition 또는 SQL Server 2005를 설치했는지 확인합니다. 서비스의 App.config 파일에서 데이터베이스 `connectionString` 을 설정하거나 appSettings `usingSql` 값을 `false`로 설정하여 데이터베이스 상호 작용을 비활성화할 수 있습니다.  
+1. SQL Server 2005 Express Edition 또는 SQL Server 2005를 설치했는지 확인합니다. 서비스의 App.config 파일에서 데이터베이스 `connectionString` 을 설정하거나 appSettings `usingSql` 값을 `false`로 설정하여 데이터베이스 상호 작용을 비활성화할 수 있습니다.  
   
-2.  C# 또는 Visual Basic .NET 버전의 솔루션을 빌드하려면 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)의 지침을 따릅니다.  
+2. C# 또는 Visual Basic .NET 버전의 솔루션을 빌드하려면 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)의 지침을 따릅니다.  
   
-3.  단일 또는 다중 컴퓨터 구성에서 샘플을 실행 하려면의 지침을 따릅니다 [Windows Communication Foundation 샘플 실행](../../../../docs/framework/wcf/samples/running-the-samples.md)합니다.  
+3. 단일 또는 다중 컴퓨터 구성에서 샘플을 실행 하려면의 지침을 따릅니다 [Windows Communication Foundation 샘플 실행](../../../../docs/framework/wcf/samples/running-the-samples.md)합니다.  
   
  컴퓨터에서 샘플을 실행 하는 MSDTC Microsoft Distributed Transaction Coordinator () 네트워크 트랜잭션 흐름을 사용 하 여 WsatConfig.exe 도구를 사용 하 여 Windows Communication Foundation (WCF) 트랜잭션이 네트워크를 사용 하도록 설정 하려면 구성 해야 합니다. 이 옵션을 지원 합니다.  
   
 ### <a name="to-configure-the-microsoft-distributed-transaction-coordinator-msdtc-to-support-running-the-sample-across-machines"></a>여러 컴퓨터에서 샘플을 실행할 수 있도록 MSDTC(Microsoft Distributed Transaction Coordinator)를 구성하려면  
   
-1.  서비스 컴퓨터에서 들어오는 네트워크 트랜잭션을 허용하도록 MSDTC를 구성합니다.  
+1. 서비스 컴퓨터에서 들어오는 네트워크 트랜잭션을 허용하도록 MSDTC를 구성합니다.  
   
     1.  **시작** 메뉴에서 이동할 **제어판**, 다음 **관리 도구**를 차례로 **구성 요소 서비스**.  
   
@@ -230,7 +230,7 @@ Creating new service instance...
   
     6.  **확인** 을 클릭하여 대화 상자를 닫습니다.  
   
-2.  서비스 컴퓨터와 클라이언트 컴퓨터에서 예외 응용 프로그램 목록에 Microsoft Distributed Transaction Coordinator(MSDTC)가 포함되도록 Windows 방화벽을 구성합니다.  
+2. 서비스 컴퓨터와 클라이언트 컴퓨터에서 예외 응용 프로그램 목록에 Microsoft Distributed Transaction Coordinator(MSDTC)가 포함되도록 Windows 방화벽을 구성합니다.  
   
     1.  제어판에서 Windows 방화벽 응용 프로그램을 실행합니다.  
   
@@ -242,7 +242,7 @@ Creating new service instance...
   
     5.  클릭 **확인** 닫으려면 합니다 **프로그램 추가** 대화 상자를 클릭 **확인** Windows 방화벽 애플릿을 닫습니다를 다시 합니다.  
   
-3.  클라이언트 컴퓨터에서 나가는 네트워크 트랜잭션을 허용하도록 MSDTC를 구성합니다.  
+3. 클라이언트 컴퓨터에서 나가는 네트워크 트랜잭션을 허용하도록 MSDTC를 구성합니다.  
   
     1.  **시작** 메뉴에서 이동할 **제어판**, 다음 **관리 도구**를 차례로 **구성 요소 서비스**.  
   
@@ -264,4 +264,3 @@ Creating new service instance...
 >  이 디렉터리가 없으면로 이동 [Windows Communication Foundation (WCF) 및.NET Framework 4 용 Windows WF (Workflow Foundation) 샘플](https://go.microsoft.com/fwlink/?LinkId=150780) 모든 Windows Communication Foundation (WCF)를 다운로드 하 고 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플. 이 샘플은 다음 디렉터리에 있습니다.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\Behaviors\Transactions`  
-  

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - My.Settings object [Visual Basic], reading application settings
 - application settings [Visual Basic], reading
 ms.assetid: eb3428ef-115e-49a8-a878-e0613183fee0
-ms.openlocfilehash: abee69d9959e899259aff8b8a49caea6bcd997fb
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: e7d909563ca7e991a51c2f921b5248aa587a83d7
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56975240"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58823586"
 ---
 # <a name="how-to-read-application-settings-in-visual-basic"></a>방법: Visual Basic에서 애플리케이션 설정 읽기
 `My.Settings` 개체에서 설정의 속성에 액세스하여 사용자 설정을 읽을 수 있습니다.  
@@ -26,6 +26,7 @@ ms.locfileid: "56975240"
  이 예제가 작동하려면 애플리케이션에 `String` 형식의 `Nickname` 설정이 있어야 합니다. 자세한 내용은 [애플리케이션 설정 관리(.NET)](/visualstudio/ide/managing-application-settings-dotnet)를 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목
+
 - [My.Settings 개체](../../../../visual-basic/language-reference/objects/my-settings-object.md)
 - [방법: Visual Basic에서 사용자 설정 변경](../../../../visual-basic/developing-apps/programming/app-settings/how-to-change-user-settings.md)
 - [방법: Visual Basic에서 사용자 설정 유지](../../../../visual-basic/developing-apps/programming/app-settings/how-to-persist-user-settings.md)

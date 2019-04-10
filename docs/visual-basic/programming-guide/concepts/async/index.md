@@ -2,6 +2,12 @@
 title: Async 및 Await를 사용한 비동기 프로그래밍(Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: bd7e462b-583b-4395-9c36-45aa9e61072c
+ms.openlocfilehash: 8593275371fcd97db2357211c3e221839b878527
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59324723"
 ---
 # <a name="asynchronous-programming-with-async-and-await-visual-basic"></a>Async 및 Await를 사용한 비동기 프로그래밍(Visual Basic)
 비동기 프로그래밍을 사용하여 성능 병목 현상을 방지하고 애플리케이션의 전체적인 응답성을 향상할 수 있습니다. 그러나 비동기 애플리케이션을 쓰는 일반적인 기술이 복잡하여 해당 애플리케이션을 쓰고, 디버깅하고, 유지 관리하기 어려울 수 있습니다.  
@@ -19,7 +25,7 @@ ms.assetid: bd7e462b-583b-4395-9c36-45aa9e61072c
 |----------------------|------------------------------------------------|  
 |웹 액세스|<xref:System.Net.Http.HttpClient>, <xref:Windows.Web.Syndication.SyndicationClient>|  
 |파일 작업|<xref:Windows.Storage.StorageFile>, <xref:System.IO.StreamWriter>, <xref:System.IO.StreamReader>, <xref:System.Xml.XmlReader>|  
-|이미지 작업|<xref:Windows.Media.Capture.MediaCapture>, <xref:Windows.Graphics.Imaging.BitmapEncoder>, <xref:Windows.Graphics.Imaging.BitmapDecoder>|  
+|이미지 작업|<xref:Windows.Media.Capture.MediaCapture>에서 <xref:Windows.Graphics.Imaging.BitmapEncoder>에서 <xref:Windows.Graphics.Imaging.BitmapDecoder>|  
 |WCF 프로그래밍|[동기 및 비동기 작업](../../../../framework/wcf/synchronous-and-asynchronous-operations.md)|  
 |||  
   
@@ -81,9 +87,9 @@ Dim urlContents As String = Await client.GetStringAsync()
   
 -   반환 형식은 다음 형식 중 하나입니다.  
   
-    -   메서드에 연산자 형식이 TResult인 Return 문이 있는 경우 <xref:System.Threading.Tasks.Task%601>입니다.  
+    -   <xref:System.Threading.Tasks.Task%601> 메서드는 피연산자 형식이 TResult 인 return 문이 있는지 확인 합니다.  
   
-    -   메서드에 반환 문이 포함되지 않았거나 피연산자가 없는 반환 문이 포함된 경우 <xref:System.Threading.Tasks.Task>입니다.  
+    -   <xref:System.Threading.Tasks.Task> 메서드에 반환 문이 포함 되지 않았거나 피연산자가 없는 반환 문이 하는 경우.  
   
     -   비동기 이벤트 처리기를 작성하는 경우 [Sub](../../../../visual-basic/programming-guide/language-features/procedures/sub-procedures.md)입니다.  
   
@@ -102,30 +108,30 @@ Dim urlContents As String = Await client.GetStringAsync()
   
  다이어그램의 번호는 다음 단계에 해당합니다.  
   
-1.  이벤트 처리기가 호출되어 `AccessTheWebAsync` 비동기 메서드를 기다립니다.  
+1. 이벤트 처리기가 호출되어 `AccessTheWebAsync` 비동기 메서드를 기다립니다.  
   
-2.  `AccessTheWebAsync`는 <xref:System.Net.Http.HttpClient> 인스턴스를 만들고 <xref:System.Net.Http.HttpClient.GetStringAsync%2A> 비동기 메서드를 호출하여 웹 사이트의 내용을 문자열로 다운로드합니다.  
+2. `AccessTheWebAsync` 만듭니다는 <xref:System.Net.Http.HttpClient> 인스턴스 및 호출 된 <xref:System.Net.Http.HttpClient.GetStringAsync%2A> 비동기 메서드를 문자열로 웹 사이트의 콘텐츠를 다운로드 합니다.  
   
-3.  `GetStringAsync`에서 특정 작업이 발생하여 진행이 일시 중단됩니다. 웹 사이트에서 다운로드 또는 다른 차단 작업을 수행할 때까지 기다려야 할 수 있습니다. 리소스를 차단하지 않기 위해 `GetStringAsync`는 해당 호출자인 `AccessTheWebAsync`에 제어 권한을 양도합니다.  
+3. `GetStringAsync`에서 특정 작업이 발생하여 진행이 일시 중단됩니다. 웹 사이트에서 다운로드 또는 다른 차단 작업을 수행할 때까지 기다려야 할 수 있습니다. 리소스를 차단하지 않기 위해 `GetStringAsync`는 해당 호출자인 `AccessTheWebAsync`에 제어 권한을 양도합니다.  
   
-     `GetStringAsync`는 TResult가 문자열인 <xref:System.Threading.Tasks.Task%601>를 반환하고 `AccessTheWebAsync`는 `getStringTask` 변수에 작업을 할당합니다. 이 작업은 작업이 완료될 때 실제 문자열 값을 생성하기 위한 코드와 함께 `GetStringAsync`를 호출하는 지속적인 프로세스를 나타냅니다.  
+     `GetStringAsync` 반환을 <xref:System.Threading.Tasks.Task%601> TResult가 문자열인, 및 `AccessTheWebAsync` 작업을 할당 합니다 `getStringTask` 변수입니다. 이 작업은 작업이 완료될 때 실제 문자열 값을 생성하기 위한 코드와 함께 `GetStringAsync`를 호출하는 지속적인 프로세스를 나타냅니다.  
   
-4.  `getStringTask`가 아직 대기되지 않았으므로 `AccessTheWebAsync`가 `GetStringAsync`의 최종 결과에 무관한 다른 작업을 계속할 수 있습니다. 이 작업은 동기 메서드 `DoIndependentWork`를 호출하여 나타냅니다.  
+4. `getStringTask`가 아직 대기되지 않았으므로 `AccessTheWebAsync`가 `GetStringAsync`의 최종 결과에 무관한 다른 작업을 계속할 수 있습니다. 이 작업은 동기 메서드 `DoIndependentWork`를 호출하여 나타냅니다.  
   
-5.  `DoIndependentWork`는 작업을 수행하고 호출자에게 반환하는 동기 메서드입니다.  
+5. `DoIndependentWork` 작동 하는 호출자로 반환 하는 동기 메서드입니다.  
   
-6.  `AccessTheWebAsync`에 `getStringTask` 결과 없이 수행할 수 있는 작업이 없습니다. 다음으로 `AccessTheWebAsync`는 다운로드한 문자열의 길이를 계산하여 반환하려 하지만, 메서드가 문자열을 확인할 때까지 해당 값을 계산할 수 없습니다.  
+6. `AccessTheWebAsync` 작업 결과 없이 수행할 수 있는 부족 `getStringTask`합니다. `AccessTheWebAsync` 메서드 문자열까지 계산 하 고 없지만 다운로드 한 문자열의 길이 반환 하려는 다음 해당 값을 계산할 수 없습니다.  
   
-     따라서 `AccessTheWebAsync`는 await 연산자를 사용해서 해당 프로세스를 일시 중단하고 `AccessTheWebAsync`를 호출한 메서드에 제어 권한을 양도합니다. `AccessTheWebAsync`는 호출자에게 `Task<int>`(Visual Basic의 `Task(Of Integer)`)를 반환합니다. 작업은 다운로드한 문자열의 길이인 정수 결과를 만든다는 약속을 나타냅니다.  
+     따라서 `AccessTheWebAsync`는 await 연산자를 사용해서 해당 프로세스를 일시 중단하고 `AccessTheWebAsync`를 호출한 메서드에 제어 권한을 양도합니다. `AccessTheWebAsync` 반환 된 `Task<int>` (`Task(Of Integer)` Visual Basic의) 호출자에 게 합니다. 작업은 다운로드한 문자열의 길이인 정수 결과를 만든다는 약속을 나타냅니다.  
   
     > [!NOTE]
     >  `GetStringAsync`가 대기하기 전에 `getStringTask`(및 `AccessTheWebAsync`)가 완료되면 `AccessTheWebAsync`에 컨트롤이 유지됩니다. 일시 중단 및 `AccessTheWebAsync`의 반환 비용은 호출된 비동기 프로세스(`getStringTask`)가 이미 완료되었고 AccessTheWebSync가 최종 결과를 기다릴 필요가 없다면 낭비됩니다.  
   
      호출자(이 예제의 이벤트 처리기) 내에서 처리 패턴이 계속됩니다. 호출자가 해당 결과를 기다리거나 즉시 기다리기 전에 `AccessTheWebAsync`에서 결과에 의존하지 않는 다른 작업을 수행할 수 있습니다.   `AccessTheWebAsync`에 대한 이벤트가 대기 중이며 `AccessTheWebAsync`가 `GetStringAsync`를 대기 중입니다.  
   
-7.  `GetStringAsync`가 완료되고 문자열 결과를 생성합니다. `GetStringAsync`를 호출할 경우 문자열 결과가 예상대로 반환되지 않습니다. (메서드가 이미 3단계에서 작업을 반환했습니다.) 대신 문자열 결과가 메서드 `getStringTask`의 완료를 나타내는 작업에 저장됩니다. await 연산자가 `getStringTask`에서 결과를 검색합니다. 할당 문은 검색된 결과를 `urlContents`에 할당합니다.  
+7. `GetStringAsync` 완료 하 고 문자열 결과 생성 합니다. `GetStringAsync`를 호출할 경우 문자열 결과가 예상대로 반환되지 않습니다. (메서드가 이미 3단계에서 작업을 반환했습니다.) 대신 문자열 결과가 메서드 `getStringTask`의 완료를 나타내는 작업에 저장됩니다. await 연산자가 `getStringTask`에서 결과를 검색합니다. 할당 문은 검색된 결과를 `urlContents`에 할당합니다.  
   
-8.  `AccessTheWebAsync`에 문자열 결과가 있는 경우 메서드가 문자열 길이를 계산할 수 있습니다. 그런 다음 `AccessTheWebAsync` 작업도 완료되고 대기 이벤트 처리기를 다시 시작할 수 있습니다. 이 항목 뒷부분의 전체 예에서는 이벤트 처리기가 길이 결과 값을 검색하고 출력하는지 확인할 수 있습니다.  
+8. `AccessTheWebAsync`에 문자열 결과가 있는 경우 메서드가 문자열 길이를 계산할 수 있습니다. 그런 다음 `AccessTheWebAsync` 작업도 완료되고 대기 이벤트 처리기를 다시 시작할 수 있습니다. 이 항목 뒷부분의 전체 예에서는 이벤트 처리기가 길이 결과 값을 검색하고 출력하는지 확인할 수 있습니다.  
   
  비동기 프로그래밍을 처음 접하는 사용자인 경우 동기 동작과 비동기 동작의 차이점을 살펴보세요. 비동기 메서드는 작업이 완료될 때 반환되지만(5단계) 비동기 메서드는 작업이 일시 중단될 때 반환됩니다. 비동기 메서드가 해당 작업을 완료하면 작업이 완료된 것으로 표시되고 결과가 있을 경우 작업에 저장됩니다.  
   
@@ -154,9 +160,9 @@ Dim urlContents As String = Await client.GetStringAsync()
   
  비동기 메서드는 일반적으로 `Await` 연산자를 하나 이상 가지고 있지만, `Await` 식이 없을 경우 컴파일러 오류가 발생하지 않습니다. 비동기 메서드에서 `Await` 연산자를 사용하여 일시 중단 시점을 표시하지 않는 경우 메서드가 `Async` 한정자에 상관없이 동기 메서드가 실행되는 방식으로 실행됩니다. 컴파일러는 다음 메서드에 대해 경고를 생성합니다.  
   
- `Async` 및 `Await`은 상황별 키워드입니다. 자세한 내용과 예제는 다음 항목을 참조하세요.  
+ `Async` 및 `Await` 은 상황별 키워드입니다. 자세한 내용과 예제는 다음 항목을 참조하세요.  
   
--   [비동기](../../../../visual-basic/language-reference/modifiers/async.md)  
+-   [Async](../../../../visual-basic/language-reference/modifiers/async.md)  
   
 -   [Await 연산자](../../../../visual-basic/language-reference/operators/await-operator.md)  
   
@@ -211,9 +217,9 @@ Await Task_MethodAsync()
   
  Windows 런타임 프로그래밍의 비동기 API에는 작업과 유사한 다음 반환 형식 중 하나가 있습니다.  
   
--   <xref:System.Threading.Tasks.Task%601>에 해당하는 <xref:Windows.Foundation.IAsyncOperation%601>  
+-   <xref:Windows.Foundation.IAsyncOperation%601>에 해당 하는 <xref:System.Threading.Tasks.Task%601>  
   
--   <xref:System.Threading.Tasks.Task>에 해당하는 <xref:Windows.Foundation.IAsyncAction>  
+-   <xref:Windows.Foundation.IAsyncAction>에 해당 하는 <xref:System.Threading.Tasks.Task>  
   
 -   <xref:Windows.Foundation.IAsyncActionWithProgress%601>  
   
@@ -230,15 +236,15 @@ Await Task_MethodAsync()
   
 |제목|설명|샘플|  
 |-----------|-----------------|------------|  
-|[연습: 비동기를 사용 하 여 웹 서비스에 액세스 하 고 Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)|동기 WPF 솔루션을 비동기 WPF 솔루션으로 변환하는 방법을 보여줍니다. 이 애플리케이션은 일련의 웹 사이트를 다운로드합니다.|[비동기 샘플: 웹 연습에 액세스](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f)|  
+|[연습: 비동기를 사용 하 여 웹 서비스에 액세스 하 고 Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)|동기 WPF 솔루션을 비동기 WPF 솔루션으로 변환하는 방법을 보여줍니다. 이 애플리케이션은 일련의 웹 사이트를 다운로드합니다.|[Async 샘플: 웹 연습에 액세스](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f)|  
 |[방법: Task.WhenAll (Visual Basic)를 사용 하 여 비동기 연습 확장](../../../../visual-basic/programming-guide/concepts/async/how-to-extend-the-async-walkthrough-by-using-task-whenall.md)|이전 연습에 <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType>을 추가합니다. `WhenAll`을 사용하면 모든 다운로드가 동시에 시작됩니다.||  
-|[방법: 비동기를 사용 하 여 병렬로 여러 웹 요청 만들기 및 Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await.md)|동시에 여러 작업을 시작하는 방법을 보여줍니다.|[비동기 샘플: 병렬로 여러 웹 요청 만들기](https://code.msdn.microsoft.com/Async-Make-Multiple-Web-49adb82e)|  
-|[비동기 반환 형식(Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/async-return-types.md)|비동기 메서드에서 반환할 수 있는 형식을 설명하고 각 형식이 언제 적절한가를 설명합니다.||  
-|[비동기 프로그램의 제어 흐름(Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/control-flow-in-async-programs.md)|비동기 프로그램에서 연속적 await 표현을 통한 컨트롤의 흐름을 자세히 추적합니다.|[비동기 샘플: 비동기 프로그램의 제어 흐름](https://code.msdn.microsoft.com/Async-Sample-Control-Flow-5c804fc0)|  
-|[Async 응용 프로그램 미세 조정(Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/fine-tuning-your-async-application.md)|비동기 솔루션에 다음과 같은 기능을 추가하는 방법을 보여줍니다.<br /><br /> -   [비동기 작업 또는 작업 목록 취소(Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/cancel-an-async-task-or-a-list-of-tasks.md)<br />-   [일정 기간 이후 비동기 작업 취소(Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/cancel-async-tasks-after-a-period-of-time.md)<br />-   [비동기 작업 하나가 완료되면 남은 비동기 작업 취소(Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/cancel-remaining-async-tasks-after-one-is-complete.md)<br />-   [비동기 작업을 여러 개 시작하고 완료될 때마다 처리(Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/start-multiple-async-tasks-and-process-them-as-they-complete.md)|[비동기 샘플: 애플리케이션 미세 조정](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)|  
-|[비동기 응용 프로그램에서 재진입 처리(Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/handling-reentrancy-in-async-apps.md)|비동기 작업이 실행되는 동안 현재 비동기 작업을 다시 시작하는 경우 처리 방법을 보여줍니다.||  
-|[WhenAny: .NET Framework와 Windows 런타임 간 브리징](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/jj635140(v=vs.120))|[!INCLUDE[wrt](~/includes/wrt-md.md)] 메서드에 <xref:System.Threading.Tasks.Task.WhenAny%2A>를 사용할 수 있도록 .NET Framework의 작업 형식과 [!INCLUDE[wrt](~/includes/wrt-md.md)]의 IAsyncOperations 사이의 연결 방법을 보여 줍니다.|[비동기 샘플: .NET 및 Windows 런타임 간 연결(AsTask 및 WhenAny)](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/jj635140(v=vs.120))|  
-|비동기 취소: .NET Framework와 Windows 런타임 간 브리징|[!INCLUDE[wrt](~/includes/wrt-md.md)] 메서드에 <xref:System.Threading.CancellationTokenSource>를 사용할 수 있도록 .NET Framework의 작업 형식과 [!INCLUDE[wrt](~/includes/wrt-md.md)]의 IAsyncOperations 사이의 연결 방법을 보여 줍니다.|[비동기 샘플: .NET 및 Windows 런타임 간 연결(AsTask & 취소)](https://code.msdn.microsoft.com/Async-Sample-Bridging-9479eca3)|  
+|[방법: 비동기를 사용 하 여 병렬로 여러 웹 요청 만들기 및 Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await.md)|동시에 여러 작업을 시작하는 방법을 보여줍니다.|[Async 샘플: 병렬로 여러 웹 요청 만들기](https://code.msdn.microsoft.com/Async-Make-Multiple-Web-49adb82e)|  
+|[비동기 반환 형식 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/async-return-types.md)|비동기 메서드에서 반환할 수 있는 형식을 설명하고 각 형식이 언제 적절한가를 설명합니다.||  
+|[비동기 프로그램 (Visual Basic)의 제어 흐름](../../../../visual-basic/programming-guide/concepts/async/control-flow-in-async-programs.md)|비동기 프로그램에서 연속적 await 표현을 통한 컨트롤의 흐름을 자세히 추적합니다.|[Async 샘플: 비동기 프로그램의 제어 흐름](https://code.msdn.microsoft.com/Async-Sample-Control-Flow-5c804fc0)|  
+|[Async (Visual Basic) 응용 프로그램 미세 조정](../../../../visual-basic/programming-guide/concepts/async/fine-tuning-your-async-application.md)|비동기 솔루션에 다음과 같은 기능을 추가하는 방법을 보여줍니다.<br /><br /> -   [비동기 작업 또는 작업 목록 취소(Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/cancel-an-async-task-or-a-list-of-tasks.md)<br />-   [일정 기간 이후 비동기 작업 취소(Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/cancel-async-tasks-after-a-period-of-time.md)<br />-   [비동기 작업 하나가 완료되면 남은 비동기 작업 취소(Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/cancel-remaining-async-tasks-after-one-is-complete.md)<br />-   [비동기 작업을 여러 개 시작하고 완료될 때마다 처리(Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/start-multiple-async-tasks-and-process-them-as-they-complete.md)|[Async 샘플: 응용 프로그램 미세 조정](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)|  
+|[Async (Visual Basic) 앱에서 재입력 처리](../../../../visual-basic/programming-guide/concepts/async/handling-reentrancy-in-async-apps.md)|비동기 작업이 실행되는 동안 현재 비동기 작업을 다시 시작하는 경우 처리 방법을 보여줍니다.||  
+|[WhenAny: .NET Framework와 Windows 런타임 간 브리징](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/jj635140(v=vs.120))|[!INCLUDE[wrt](~/includes/wrt-md.md)] 메서드에 <xref:System.Threading.Tasks.Task.WhenAny%2A>를 사용할 수 있도록 .NET Framework의 작업 형식과 [!INCLUDE[wrt](~/includes/wrt-md.md)]의 IAsyncOperations 사이의 연결 방법을 보여 줍니다.|[Async 샘플: .NET 및 (연결 AsTask 및 WhenAny) Windows 런타임 간 브리징](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/jj635140(v=vs.120))|  
+|비동기 취소: .NET Framework와 Windows 런타임 간 브리징|[!INCLUDE[wrt](~/includes/wrt-md.md)] 메서드에 <xref:System.Threading.CancellationTokenSource>를 사용할 수 있도록 .NET Framework의 작업 형식과 [!INCLUDE[wrt](~/includes/wrt-md.md)]의 IAsyncOperations 사이의 연결 방법을 보여 줍니다.|[Async 샘플: .NET 및 (연결 AsTask & 취소) 하는 Windows 런타임 간 브리징](https://code.msdn.microsoft.com/Async-Sample-Bridging-9479eca3)|  
 |[파일 액세스에 Async 사용(Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/using-async-for-file-access.md)|async 및 await를 사용하여 파일에 액세스하는 이점을 나열하고 보여줍니다.||  
 |[TAP(작업 기반 비동기 패턴)](../../../../standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap.md)|.NET Framework의 새로운 비동기 패턴에 대해 설명합니다. 패턴은 <xref:System.Threading.Tasks.Task> 및 <xref:System.Threading.Tasks.Task%601> 형식을 기반으로 합니다.||  
 |[비동기 Channel 9 비디오](https://channel9.msdn.com/search?term=async+&type=All)|비동기 프로그래밍에 대한 다양한 비디오로 연결되는 링크를 제공합니다.||  
@@ -310,4 +316,4 @@ End Class
 ## <a name="see-also"></a>참고자료
 
 - [Await 연산자](../../../../visual-basic/language-reference/operators/await-operator.md)
-- [비동기](../../../../visual-basic/language-reference/modifiers/async.md)
+- [Async](../../../../visual-basic/language-reference/modifiers/async.md)

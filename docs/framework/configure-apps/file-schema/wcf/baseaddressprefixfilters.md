@@ -2,12 +2,12 @@
 title: <baseAddressPrefixFilters>
 ms.date: 03/30/2017
 ms.assetid: 8cab2a9a-c51f-4283-bb60-2ad0c274fd46
-ms.openlocfilehash: 303e1d0ab9150c16cb36439940ade73cf012b2d1
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 378db238d647be2248c0303f45aece42f7ea5b31
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55261807"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59227628"
 ---
 # <a name="baseaddressprefixfilters"></a>\<baseAddressPrefixFilters>
 Windows Communication Foundation (WCF) IIS 응용 프로그램을 호스팅할 때 적합 한 인터넷 정보 서비스 (IIS) 바인딩을 선택 하기 위한 메커니즘을 제공 하는 필터를 통과 하는 요소가 지정 하는 구성의 컬렉션을 나타냅니다.  
@@ -81,6 +81,7 @@ http://test2.fabrikam.com/Service.svc
 >  필터는 와일드카드를 지원하지 않습니다. 또한 IIS에서 제공하는 baseAddress는 `baseAddressPrefixFilters` 목록에 없는 다른 체계에 바인딩되는 주소를 가질 수 있습니다. 이러한 주소는 필터링되지 않습니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.ServiceModel.Configuration.BaseAddressPrefixFilterElementCollection>
 - <xref:System.ServiceModel.Configuration.ServiceHostingEnvironmentSection>
 - <xref:System.ServiceModel.ServiceHostingEnvironment>

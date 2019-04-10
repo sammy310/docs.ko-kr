@@ -1,13 +1,13 @@
 ---
-title: <security>의 <webHttpBinding>
+title: <security> / <webHttpBinding>
 ms.date: 03/30/2017
 ms.assetid: 727cf3d2-6f56-48ad-a59f-ba423edb9c83
-ms.openlocfilehash: 7f714ffb89d5ff990239bd1a02ffaeead4ad7d91
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: b6375a64ea157df01f903901e0414a2989287aee
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57360780"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59132298"
 ---
 # <a name="security-of-webhttpbinding"></a>\<보안 >의 \<webHttpBinding >
 구성 된 끝점에 대 한 보안 요구 사항을 지정 된 [ \<wsHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md)합니다.  
@@ -43,7 +43,7 @@ ms.locfileid: "57360780"
   
 |특성|설명|  
 |---------------|-----------------|  
-|모드|끝점에서 전송 수준 보안을 사용하거나 보안을 사용하지 않는지 여부를 지정합니다. 기본값은 `None`입니다. 이 특성은 <xref:System.ServiceModel.WebHttpSecurityMode> 형식입니다.|  
+|모드|엔드포인트에서 전송 수준 보안을 사용하거나 보안을 사용하지 않는지 여부를 지정합니다. 기본값은 `None`입니다. 이 특성은 <xref:System.ServiceModel.WebHttpSecurityMode> 형식입니다.|  
   
 ## <a name="mode-attribute"></a>Mode 특성  
   
@@ -66,6 +66,7 @@ ms.locfileid: "57360780"
 |[\<webHttpBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/webhttpbinding.md)|Windows Communication Foundation (WCF) 웹 서비스 SOAP 메시지 대신 HTTP 요청에 응답 하는 끝점을 구성 하는 데 사용 되는 바인딩 요소입니다.|  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.ServiceModel.Configuration.WebHttpBindingElement>
 - <xref:System.ServiceModel.Configuration.WSHttpSecurityElement>
 - <xref:System.ServiceModel.WebHttpBinding.Security%2A>

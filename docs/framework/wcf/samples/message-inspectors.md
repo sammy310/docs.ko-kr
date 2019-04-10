@@ -2,12 +2,12 @@
 title: 메시지 검사자
 ms.date: 03/30/2017
 ms.assetid: 9bd1f305-ad03-4dd7-971f-fa1014b97c9b
-ms.openlocfilehash: 248e74e039c0ebb0b1580ec2cb4f19d713d95c51
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: c9d2c47a816e7fd8c5d219009128ed530564b81b
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58830151"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59334954"
 ---
 # <a name="message-inspectors"></a>메시지 검사자
 이 샘플에서는 클라이언트 및 서비스 메시지 검사자를 구현하고 구성하는 방법을 보여 줍니다.  
@@ -41,7 +41,7 @@ public class SchemaValidationMessageInspector : IClientMessageInspector, IDispat
   
  모든 서비스(디스패처) 메시지 검사자는 <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector> 메서드 <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector.AfterReceiveRequest%2A>와 <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector.BeforeSendReply%28System.ServiceModel.Channels.Message%40%2CSystem.Object%29>를 구현해야 합니다.  
   
- 메시지를 받아 채널 스택에서 처리한 후 서비스에 할당한 경우 deserialize하여 작업에 디스패치하기 전에 디스패처에서 <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector.AfterReceiveRequest%2A>를 호출합니다. 들어오는 메시지가 암호화된 경우 메시지 검사자에 도달하면 해당 메시지는 이미 암호가 해독되어 있습니다. 메서드는 참조 매개 변수로 전달된 `request` 메시지를 가져오며, 이를 통해 필요에 따라 메시지를 검사, 조작 또는 대체할 수 있습니다. 반환 값은 임의의 개체가 될 수 있으며 서비스에서 현재 메시지에 대한 회신을 반환할 때 <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector.BeforeSendReply%2A>에 전달되는 상관 관계 상태 개체로 사용됩니다. 이 샘플에서 <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector.AfterReceiveRequest%2A>는 메시지의 검사(유효성 검사)를 전용 로컬 메서드 `ValidateMessageBody`에 위임하며 상관 관계 상태 개체를 반환하지 않습니다. 이 메서드는 잘못된 메시지가 서비스에 전달되지 않도록 합니다.  
+ <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector.AfterReceiveRequest%2A> 호출 발송자에서 메시지 수신, 채널 스택에서 처리 및 서비스에 할당 된 경우 deserialize 하 여 작업에 디스패치하기 전에 합니다. 들어오는 메시지가 암호화된 경우 메시지 검사자에 도달하면 해당 메시지는 이미 암호가 해독되어 있습니다. 메서드는 참조 매개 변수로 전달된 `request` 메시지를 가져오며, 이를 통해 필요에 따라 메시지를 검사, 조작 또는 대체할 수 있습니다. 반환 값은 임의의 개체가 될 수 있으며 서비스에서 현재 메시지에 대한 회신을 반환할 때 <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector.BeforeSendReply%2A>에 전달되는 상관 관계 상태 개체로 사용됩니다. 이 샘플에서 <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector.AfterReceiveRequest%2A>는 메시지의 검사(유효성 검사)를 전용 로컬 메서드 `ValidateMessageBody`에 위임하며 상관 관계 상태 개체를 반환하지 않습니다. 이 메서드는 잘못된 메시지가 서비스에 전달되지 않도록 합니다.  
   
 ```  
 object IDispatchMessageInspector.AfterReceiveRequest(ref System.ServiceModel.Channels.Message request, System.ServiceModel.IClientChannel channel, System.ServiceModel.InstanceContext instanceContext)  
@@ -56,7 +56,7 @@ object IDispatchMessageInspector.AfterReceiveRequest(ref System.ServiceModel.Cha
 }  
 ```  
   
- <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector.BeforeSendReply%28System.ServiceModel.Channels.Message%40%2CSystem.Object%29>는 클라이언트로 회신을 다시 보낼 준비가 될 때마다 호출되며 단방향 메시지인 경우에는 들어오는 메시지가 처리되면 호출됩니다. 따라서 MEP에 관계없이 대칭적으로 확장을 호출할 수 있습니다. <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector.AfterReceiveRequest%2A>와 마찬가지로 메시지는 참조 매개 변수로 전달되며 검사, 수정 또는 대체할 수 있습니다. 이 샘플에서 수행되는 메시지 유효성 검사는 `ValidMessageBody` 메서드에 다시 위임되지만 이 경우 유효성 검사 오류 처리가 약간 다릅니다.  
+ <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector.BeforeSendReply%28System.ServiceModel.Channels.Message%40%2CSystem.Object%29> 회신이 들어오는 메시지를 처리 하는 경우 단방향 메시지 인 경우 또는 클라이언트에 다시 전송 될 준비가 될 때마다 호출 됩니다. 따라서 MEP에 관계없이 대칭적으로 확장을 호출할 수 있습니다. <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector.AfterReceiveRequest%2A>와 마찬가지로 메시지는 참조 매개 변수로 전달되며 검사, 수정 또는 대체할 수 있습니다. 이 샘플에서 수행되는 메시지 유효성 검사는 `ValidMessageBody` 메서드에 다시 위임되지만 이 경우 유효성 검사 오류 처리가 약간 다릅니다.  
   
  서비스에서 유효성 검사 오류가 발생하면 `ValidateMessageBody` 메서드에서 <xref:System.ServiceModel.FaultException> 파생 예외를 throw합니다. <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector.AfterReceiveRequest%2A>에서는 SOAP 오류로 자동 변환되어 클라이언트로 전달되는 서비스 모델 인프라에 이러한 예외를 넣을 수 있습니다. <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector.BeforeSendReply%2A>에서는 서비스에서 throw된 오류 예외가 메시지 검사자가 호출되기 전에 변환되므로 <xref:System.ServiceModel.FaultException> 예외를 인프라에 넣으면 안 됩니다. 따라서 다음 구현에서는 알려진 `ReplyValidationFault` 예외를 catch하고 회신 메시지를 명시적인 오류 메시지로 바꿉니다. 이 메서드는 서비스 구현에서 잘못된 메시지를 반환하지 않도록 합니다.  
   
@@ -82,7 +82,7 @@ void IDispatchMessageInspector.BeforeSendReply(ref System.ServiceModel.Channels.
   
  클라이언트 메시지 검사자는 서비스 메시지 검사자와 매우 유사합니다. <xref:System.ServiceModel.Dispatcher.IClientMessageInspector>에서 구현되어야 하는 두 가지 메서드는 <xref:System.ServiceModel.Dispatcher.IClientMessageInspector.AfterReceiveReply%2A>와 <xref:System.ServiceModel.Dispatcher.IClientMessageInspector.BeforeSendRequest%2A>입니다.  
   
- <xref:System.ServiceModel.Dispatcher.IClientMessageInspector.BeforeSendRequest%2A>는 클라이언트 응용 프로그램이나 작업 포맷터에서 메시지가 작성되면 호출됩니다. 디스패처 메시지 검사자와 마찬가지로 메시지를 검사만 하거나 완전히 바꿀 수 있습니다. 이 샘플에서 검사자는 디스패치 메시지 검사자에도 사용된 동일한 로컬 `ValidateMessageBody` 도우미 메서드에 위임합니다.  
+ <xref:System.ServiceModel.Dispatcher.IClientMessageInspector.BeforeSendRequest%2A> 클라이언트 응용 프로그램이 나 작업 포맷터에서 메시지가 작성 되 면 호출 됩니다. 디스패처 메시지 검사자와 마찬가지로 메시지를 검사만 하거나 완전히 바꿀 수 있습니다. 이 샘플에서 검사자는 디스패치 메시지 검사자에도 사용된 동일한 로컬 `ValidateMessageBody` 도우미 메서드에 위임합니다.  
   
  생성자에 지정된 대로 클라이언트 유효성 검사와 서비스 유효성 검사에는 동작 면에서 차이가 있는데, 클라이언트 유효성 검사에서는 서비스 오류 때문이 아니라 로컬에서 이러한 예외가 발생하기 때문에 사용자 코드에 들어가는 로컬 예외가 throw됩니다. 일반적으로 서비스 디스패처 검사자는 오류를 throw하고 클라이언트 검사자는 예외를 throw하는 규칙이 있습니다.  
   
@@ -398,11 +398,11 @@ catch (Exception e)
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>샘플을 설치, 빌드 및 실행하려면  
   
-1.  수행 했는지 확인 합니다 [Windows Communication Foundation 샘플에 대 한 일회성 설치 절차](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)합니다.  
+1. 수행 했는지 확인 합니다 [Windows Communication Foundation 샘플에 대 한 일회성 설치 절차](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)합니다.  
   
-2.  지침에 따라 솔루션을 빌드하려면 [Building Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)합니다.  
+2. 지침에 따라 솔루션을 빌드하려면 [Building Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)합니다.  
   
-3.  단일 또는 다중 컴퓨터 구성에서 샘플을 실행 하려면의 지침을 따릅니다 [Windows Communication Foundation 샘플 실행](../../../../docs/framework/wcf/samples/running-the-samples.md)합니다.  
+3. 단일 또는 다중 컴퓨터 구성에서 샘플을 실행 하려면의 지침을 따릅니다 [Windows Communication Foundation 샘플 실행](../../../../docs/framework/wcf/samples/running-the-samples.md)합니다.  
   
 > [!IMPORTANT]
 >  컴퓨터에 이 샘플이 이미 설치되어 있을 수도 있습니다. 계속하기 전에 다음(기본) 디렉터리를 확인하세요.  
@@ -412,4 +412,3 @@ catch (Exception e)
 >  이 디렉터리가 없으면로 이동 [Windows Communication Foundation (WCF) 및.NET Framework 4 용 Windows WF (Workflow Foundation) 샘플](https://go.microsoft.com/fwlink/?LinkId=150780) 모든 Windows Communication Foundation (WCF)를 다운로드 하 고 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플. 이 샘플은 다음 디렉터리에 있습니다.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\MessageInspectors`  
-  

@@ -2,12 +2,12 @@
 title: 형식 정의(Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 306b204a-ade5-47ef-95b5-c785d2da4a7e
-ms.openlocfilehash: 7ac27c3dd43cb83272bff991dbd713e8269ccbb5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2e068db0ce202c26cad36c8ed7adf0acdfb8e363
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54743532"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59096025"
 ---
 # <a name="type-definitions-entity-sql"></a>형식 정의(Entity SQL)
 형식 정의는 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 인라인 함수의 선언문에 사용됩니다.  
@@ -31,11 +31,11 @@ ms.locfileid: "54743532"
   
  형식 정의 옵션은 다음 중 하나입니다.  
   
--   `IdentifierName supported_type` 또는  
+-   `IdentifierName supported_type`또는  
   
--   `IdentifierName` COLLECTION(`type_definition`)  
+-   `IdentifierName` 컬렉션 (`type_definition`), 또는  
   
--   `IdentifierName` ROW(`property_definition`)  
+-   `IdentifierName` 행 (`property_definition`), 또는  
   
 -   `IdentifierName` REF(`supported_entity_type`)  
   
@@ -87,5 +87,6 @@ select Ref(x) from AdventureWorksEntities.SalesOrderHeaders as x
 ```  
   
 ## <a name="see-also"></a>참고자료
+
 - [Entity SQL 개요](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)
 - [엔터티 SQL 참조](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)

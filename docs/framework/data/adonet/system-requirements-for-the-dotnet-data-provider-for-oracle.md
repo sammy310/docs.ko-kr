@@ -2,12 +2,12 @@
 title: .NET Framework Data Provider for Oracle의 시스템 요구 사항
 ms.date: 03/30/2017
 ms.assetid: 054f76b9-1737-43f0-8160-84a00a387217
-ms.openlocfilehash: cc3fc61c5adebf67b1203897579b2f959cbc0546
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 61f8509cce248f6cc0a56900227f9758eb27c4e0
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54670874"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59111049"
 ---
 # <a name="system-requirements-for-the-net-framework-data-provider-for-oracle"></a>.NET Framework Data Provider for Oracle의 시스템 요구 사항
 .NET Framework Data Provider for Oracle에는 MDAC(Microsoft Data Access Components) 버전 2.6 이상이 필요하며 MDAC 2.8 SP1을 사용하는 것이 좋습니다.  
@@ -38,5 +38,6 @@ Unicode=True
  기능성을 위해 합니다 <xref:System.Data.OracleClient.OracleLob> 개체는.NET Framework Stream 클래스에서 상속 하 고 제공 **ReadByte** 하 고 **WriteByte** 메서드. 또한 구현 메서드를 같은 **CopyTo** 하 고 **지우기**하의 Oracle 섹션에서 작동 **LOB** 개체입니다. Oracle 클라이언트 소프트웨어는 다양 한 문자를 사용 하는 Api 제공 하는 반면 **LOB**s (**CLOB** 하 고 **NCLOB**). 그러나 이러한 API는 전체 문자에 대해서만 작동합니다. 이러한 차이로 인해 Data Provider for Oracle 구현에 대 한 지원을 **읽기** 및 **ReadByte** 바이트 단위 방식으로 u t F-16 데이터로 작업할 수 있습니다. 그러나의 다른 메서드를 **OracleLob** 개체 전체 문자 작업만 허용 합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [Oracle 및 ADO.NET](../../../../docs/framework/data/adonet/oracle-and-adonet.md)
 - [ADO.NET 관리되는 공급자 및 데이터 집합 개발자 센터](https://go.microsoft.com/fwlink/?LinkId=217917)

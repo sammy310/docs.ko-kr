@@ -8,12 +8,12 @@ helpviewer_keywords:
 - attached properties [WPF], registering
 - registering attached properties [WPF]
 ms.assetid: eb47bd94-0451-4f8d-8fb6-95f7812ac05b
-ms.openlocfilehash: 3cbbc8a1ea8419df408cda76de3459be9464a100
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 4c678a64b62b8f4db24cf39ffbafac52e56c9982
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57377718"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59137633"
 ---
 # <a name="how-to-register-an-attached-property"></a>방법: 연결된 속성 등록
 이 예제에서는 연결된 속성을 등록하고 public 접근자를 제공하여 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]과 코드의 속성을 사용하는 방법을 보여 줍니다. 연결된 속성은 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]에서 정의한 구문 개념입니다. 대부분의 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 형식에 연결된 속성도 종속성 속성으로 구현됩니다. 종속성 속성을 사용 하 여 모든 <xref:System.Windows.DependencyObject> 형식입니다.  
@@ -27,6 +27,7 @@ ms.locfileid: "57377718"
  [!code-vb[WPFAquariumSln#RegisterAttachedBubbler](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WPFAquariumSln/visualbasic/wpfaquariumobjects/class1.vb#registerattachedbubbler)]  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Windows.DependencyProperty>
 - [종속성 속성 개요](dependency-properties-overview.md)
 - [사용자 지정 종속성 속성](custom-dependency-properties.md)

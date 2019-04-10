@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2f117b9807d57847d53cf00fbb4983e187798f09
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e937690c184d810549e8ab11ef1fc2273a45c5f5
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54730856"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59115130"
 ---
 # <a name="resetsecurity-function"></a>ResetSecurity 함수
 제공된 가장 토큰을 현재 스레드에 할당합니다.   
@@ -55,4 +55,5 @@ HRESULT ResetSecurity (
  **.NET Framework 버전:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>참고자료
-- [WMI 및 성능 카운터 (관리 되지 않는 API 참조)](index.md)
+
+- [WMI 및 성능 카운터(관리되지 않는 API 참조)](index.md)

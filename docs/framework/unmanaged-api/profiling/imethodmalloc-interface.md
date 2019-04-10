@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6f5c21d329ed35f82e36c2d88ac911401799e820
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ee825da1f3f0fd72a3b47b48783f0f344af99b65
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54596022"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59077786"
 ---
 # <a name="imethodmalloc-interface"></a>IMethodMalloc 인터페이스
 새 Microsoft MSIL (intermediate language) 함수 본문에 대 한 메모리를 할당 하는 메서드를 제공 합니다.  
@@ -48,4 +48,5 @@ ms.locfileid: "54596022"
  **.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>참고자료
+
 - [프로파일링 인터페이스](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)

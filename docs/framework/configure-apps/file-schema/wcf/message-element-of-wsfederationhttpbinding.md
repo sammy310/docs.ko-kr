@@ -2,12 +2,12 @@
 title: <message> 요소 <wsFederationHttpBinding>
 ms.date: 03/30/2017
 ms.assetid: 9d710389-d9d8-4454-9bf2-da4ccda31cec
-ms.openlocfilehash: d5e5ba1785dd5c6c3aaeccd5bdd7ac4443f85661
-ms.sourcegitcommit: 01ea420eaa4bf76d5fc47673294c8881379b3369
+ms.openlocfilehash: 79739dd715d7982555e5577c921cb65156af5923
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/06/2019
-ms.locfileid: "55759121"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59223816"
 ---
 # <a name="message-element-of-wsfederationhttpbinding"></a>\<메시지 > 요소의 \<wsFederationHttpBinding >
 에 대 한 메시지 수준 보안 설정을 정의 합니다 [ \<wsFederationHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md)합니다.  
@@ -117,7 +117,7 @@ ms.locfileid: "55759121"
 |요소|설명|  
 |-------------|-----------------|  
 |[\<claimTypeRequirements>](../../../../../docs/framework/configure-apps/file-schema/wcf/claimtyperequirements-element.md)|이 바인딩에 대한 클레임 형식 컬렉션을 지정합니다. 각 요소는 <xref:System.ServiceModel.Configuration.ClaimTypeElement> 형식입니다.|  
-|issuer|보안 토큰을 발급하는 끝점을 지정합니다. 이 요소는 <xref:System.ServiceModel.Configuration.IssuedTokenParametersEndpointAddressElement> 형식입니다.|  
+|issuer|보안 토큰을 발급하는 엔드포인트를 지정합니다. 이 요소는 <xref:System.ServiceModel.Configuration.IssuedTokenParametersEndpointAddressElement> 형식입니다.|  
 |issuerMetadata|발급자의 엔드포인트 주소를 지정합니다.|  
 |[\<tokenRequestParameters>](../../../../../docs/framework/configure-apps/file-schema/wcf/tokenrequestparameters.md)|토큰 요청 매개 변수 컬렉션입니다. 각 매개 변수는 XML 요소입니다.|  
   
@@ -128,6 +128,7 @@ ms.locfileid: "55759121"
 |[\<security>](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-wsfederationhttpbinding.md)|바인딩에 대한 보안 설정을 정의합니다.|  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.ServiceModel.FederatedMessageSecurityOverHttp>
 - <xref:System.ServiceModel.Configuration.WSFederationHttpSecurityElement.Message%2A>
 - <xref:System.ServiceModel.WSFederationHttpSecurity.Message%2A>

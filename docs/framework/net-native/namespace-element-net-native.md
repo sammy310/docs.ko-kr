@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 57c614e5-18a9-4e87-bfd5-d0fe3396a192
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 647b1807957b611b9ba75ee90a7ac2257246d14c
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: c304606a27552e604bf40953f49a30a794026281
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55261583"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59150750"
 ---
 # <a name="namespace-element-net-native"></a>\<Namespace > 요소 (.NET 네이티브)
 지정된 네임스페이스의 모든 형식에 런타임 리플렉션 정책을 적용합니다.  
@@ -73,8 +73,8 @@ ms.locfileid: "55261583"
   
 |요소|설명|  
 |-------------|-----------------|  
-|[\<Application>](../../../docs/framework/net-native/application-element-net-native.md)|런타임에 해당 메타데이터를 리플렉션에 사용할 수 있는 응용 프로그램 수준 형식 및 형식 멤버에 대한 컨테이너로 사용됩니다. [\<Application>](../../../docs/framework/net-native/application-element-net-native.md) 요소는 [\<Assembly>](../../../docs/framework/net-native/assembly-element-net-native.md) 요소를 포함하지 않을 수도 있고 하나 이상 포함할 수도 있습니다.|  
-|[\<Assembly>](../../../docs/framework/net-native/assembly-element-net-native.md)|지정된 어셈블리의 모든 형식에 런타임 리플렉션 정책을 적용합니다.|  
+|[\<응용 프로그램 >](../../../docs/framework/net-native/application-element-net-native.md)|런타임에 해당 메타데이터를 리플렉션에 사용할 수 있는 응용 프로그램 수준 형식 및 형식 멤버에 대한 컨테이너로 사용됩니다. [\<Application>](../../../docs/framework/net-native/application-element-net-native.md) 요소는 [\<Assembly>](../../../docs/framework/net-native/assembly-element-net-native.md) 요소를 포함하지 않을 수도 있고 하나 이상 포함할 수도 있습니다.|  
+|[\<어셈블리 >](../../../docs/framework/net-native/assembly-element-net-native.md)|지정된 어셈블리의 모든 형식에 런타임 리플렉션 정책을 적용합니다.|  
 |[\<Library>](../../../docs/framework/net-native/library-element-net-native.md)|런타임에 해당 메타데이터를 리플렉션에 사용할 수 있는 형식 및 형식 멤버가 포함된 어셈블리를 정의합니다. [\<Library>](../../../docs/framework/net-native/library-element-net-native.md) 요소는 [\<Assembly>](../../../docs/framework/net-native/assembly-element-net-native.md) 요소를 포함하지 않을 수도 있고 하나 포함할 수도 있습니다.|  
 |`<Namespace>`|부모 네임스페이스의 모든 형식에 리플렉션 정책을 적용합니다.|  
   
@@ -84,6 +84,7 @@ ms.locfileid: "55261583"
  [\<Assembly>](../../../docs/framework/net-native/assembly-element-net-native.md) 요소의 자식인 경우 `<Namespace>` 요소는 [\<Assembly>](../../../docs/framework/net-native/assembly-element-net-native.md) 요소로 정의된 런타임 리플렉션 정책을 재정의합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [런타임 지시문 정책 설정](../../../docs/framework/net-native/runtime-directive-policy-settings.md)
 - [런타임 지시문(rd.xml) 구성 파일 참조](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
 - [런타임 지시문 요소](../../../docs/framework/net-native/runtime-directive-elements.md)

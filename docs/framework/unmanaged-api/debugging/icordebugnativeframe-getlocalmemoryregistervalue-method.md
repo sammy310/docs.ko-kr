@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: abaa543299dec74d769b91ca3b21d76863624f13
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 9b2244ec1be6fc0e5e19fac5adc7ecb38d68a0af
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57484942"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59081152"
 ---
 # <a name="icordebugnativeframegetlocalmemoryregistervalue-method"></a>ICorDebugNativeFrame::GetLocalMemoryRegisterValue 메서드
 낮은 word 및 높은 단어에 저장 됩니다 메모리 위치를 확인 하 고 지정 된 레지스터 각각이 네이티브 프레임에 대 한 지역 변수 또는 인수의 값을 가져옵니다.  
@@ -65,4 +65,3 @@ HRESULT GetLocalMemoryRegisterValue (
  **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>참고자료
-

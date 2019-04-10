@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: ddf1c83c-9d40-45e6-b04d-9828c6cbbfdc
-ms.openlocfilehash: c168fc2ceddde0f8d104ec5e562f92c9c9e487d7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a723679fe18352e115df78af72975097dc28b617
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54583537"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59162857"
 ---
 # <a name="enumerating-instances-of-sql-server-adonet"></a>SQL Server의 인스턴스 열거(ADO.NET)
 SQL Server는 현재 네트워크 내에서 SQL Server 인스턴스를 찾으려면 응용 프로그램을 허용 합니다. <xref:System.Data.Sql.SqlDataSourceEnumerator> 클래스에서는 응용 프로그램 개발자에게 이 정보를 노출시켜 표시되는 모든 서버에 대한 정보가 포함된 <xref:System.Data.DataTable>을 제공합니다. 일치는 사용자가 새 연결을 만들려고 할 때 제공 된 목록에서 사용 가능한 모든 서버를 포함 하는 드롭다운 목록을 확장 하 고 네트워크에서 사용할 서버 인스턴스의 목록을 포함 하는 테이블을 반환이 **연결 속성** 대화 상자. 표시되는 결과가 항상 완전하지는 않습니다.  
@@ -48,7 +48,7 @@ System.Data.DataTable dataTable = instance.GetDataSources();
 |**ServerName**|서버의 이름입니다.|  
 |**InstanceName**|서버 인스턴스의 이름입니다. 서버가 기본 인스턴스로 실행 중인 경우에는 비어 있습니다.|  
 |**IsClustered**|서버가 클러스터의 일부인지 여부를 나타냅니다.|  
-|**Version**|서버의 버전입니다. 예를 들어:<br /><br /> -   9.00.x ([!INCLUDE[ssVersion2005](../../../../../includes/ssversion2005-md.md)])<br />-   10.0.xx ([!INCLUDE[ssKatmai](../../../../../includes/sskatmai-md.md)])<br />-   10.50.x ([!INCLUDE[ssKilimanjaro](../../../../../includes/sskilimanjaro-md.md)])<br />-   11.0.xx (SQL Server 2012)|  
+|**버전**|서버의 버전입니다. 예를 들어:<br /><br /> -   9.00.x ([!INCLUDE[ssVersion2005](../../../../../includes/ssversion2005-md.md)])<br />-   10.0.xx ([!INCLUDE[ssKatmai](../../../../../includes/sskatmai-md.md)])<br />-   10.50.x ([!INCLUDE[ssKilimanjaro](../../../../../includes/sskilimanjaro-md.md)])<br />-   11.0.xx (SQL Server 2012)|  
   
 ## <a name="enumeration-limitations"></a>열거 제한  
  사용 가능한 모든 서버가 나열되거나 나열되지 않을 수 있습니다. 이 목록은 시간 제한 및 네트워크 트래픽 등의 요인에 따라 달라질 수 있습니다. 따라서 두 개를 연속해서 호출해도 목록이 서로 다를 수 있습니다. 동일한 네트워크의 서버만 나열됩니다. 브로드캐스트 패킷은 일반적으로 라우터를 순회하지 않기 때문에 나열된 서버를 표시하지 않을 수는 있지만 여러 호출에서 안정적입니다.  
@@ -125,5 +125,6 @@ class Program
 ```  
   
 ## <a name="see-also"></a>참고자료
+
 - [SQL Server 및 ADO.NET](../../../../../docs/framework/data/adonet/sql/index.md)
 - [ADO.NET 관리되는 공급자 및 데이터 집합 개발자 센터](https://go.microsoft.com/fwlink/?LinkId=217917)

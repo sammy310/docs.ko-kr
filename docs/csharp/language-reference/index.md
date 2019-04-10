@@ -1,13 +1,19 @@
 ---
-title: 'C# 참조'
+title: C# 참조
 ms.date: 02/14/2017
 helpviewer_keywords:
-  - 'Visual C#, language reference'
-  - 'language reference [C#]'
-  - 'Programmer''s Reference for C#'
-  - 'C# language, reference'
-  - 'reference, C# language'
+- Visual C#, language reference
+- language reference [C#]
+- Programmer's Reference for C#
+- C# language, reference
+- reference, C# language
 ms.assetid: 06de3167-c16c-4e1a-b3c5-c27841d4569a
+ms.openlocfilehash: 6862ae72b235653d4576915605f14c9e4de92bce
+ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57845420"
 ---
 # <a name="c-reference"></a>C# 참조
 이 섹션에서는 C# 키워드, 연산자, 특수 문자, 전처리기 지시문, 컴파일러 옵션 및 컴파일러 오류와 경고에 대한 참조 자료를 제공합니다.  

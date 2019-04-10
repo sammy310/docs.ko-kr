@@ -9,12 +9,12 @@ helpviewer_keywords:
 - sizing data in Grid controls [WPF]
 - Grid control [WPF], sharing sizing data of rows
 ms.assetid: a0535a6f-ff04-4b25-9912-7dd856e11044
-ms.openlocfilehash: bd0f812ce9a15628bd0bddf3a88e898311f0a9d3
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: d5ab2ac612d55c8cbc34ae6d7d9d63b9f8aa23e7
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57373129"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59190342"
 ---
 # <a name="how-to-share-sizing-properties-between-grids"></a>방법: 모눈 간 크기 조정 속성 공유
 이 예제에서는 열 크기 조정 데이터를 공유 하는 방법을 보여 줍니다 및 간에 행 <xref:System.Windows.Controls.Grid> 일관 된 크기 조정 유지 하기 위해 요소입니다.  
@@ -36,6 +36,7 @@ ms.locfileid: "57373129"
  [!code-vb[gridIssharedsizescopeProp#3](~/samples/snippets/visualbasic/VS_Snippets_Wpf/gridIssharedsizescopeProp/VisualBasic/Window1.xaml.vb#3)]  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Windows.Controls.Grid>
 - <xref:System.Windows.Controls.Grid.IsSharedSizeScope%2A>
-- [패널 개요](panels-overview.md)
+- [Panel 개요](panels-overview.md)

@@ -25,7 +25,7 @@ ms.locfileid: "55083888"
 
 # <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
 
-.NET Core 2.x는 단일 운영 체제로 Linux를 처리합니다. 지원되는 Linux 배포에 대한 단일 Linux 빌드(칩 아키텍처당)가 있습니다. 
+.NET Core 2.x는 단일 운영 체제로 Linux를 처리합니다. 지원되는 Linux 배포에 대한 단일 Linux 빌드(칩 아키텍처마다)가 있습니다. 
 
 다운로드 링크 및 자세한 내용은 [.NET Core 2.2 다운로드](https://www.microsoft.com/net/download/dotnet-core/2.2) 또는 [.NET Core 2.1 다운로드](https://www.microsoft.com/net/download/dotnet-core/2.1)를 참조하세요.
 
@@ -63,7 +63,7 @@ ms.locfileid: "55083888"
 
 # <a name="net-core-30-preview-1tabnetcore30"></a>[.NET Core 3.0 Preview 1](#tab/netcore30)
 
-.NET Core 3.0 Preview 1은 단일 운영 체제로 Linux를 처리합니다. 지원되는 Linux 배포에 대한 단일 Linux 빌드(칩 아키텍처당)가 있습니다. 
+.NET Core 3.0 Preview 1은 단일 운영 체제로 Linux를 처리합니다. 지원되는 Linux 배포에 대한 단일 Linux 빌드(칩 아키텍처마다)가 있습니다. 
 
 다운로드 링크 및 자세한 내용은 [.NET Core 3.0 다운로드](https://dotnet.microsoft.com/download/dotnet-core/3.0)를 참조하세요.
 

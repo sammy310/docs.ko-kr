@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 01e7d0b8-10f9-45c3-a4c5-53d44dc61eb8
-ms.openlocfilehash: 4b94bfd92cf586088316b03222e0bbe5c1728bc5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 794a3d8e118cadd2a2752e1bbf85ef930deb2f27
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54573558"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59138647"
 ---
 # <a name="message-security-with-a-windows-client"></a>Windows 클라이언트를 사용하는 메시지 보안
 이 시나리오에서는 메시지 보안 모드에 의해 보안이 설정 된 서버를 Windows Communication Foundation (WCF) 클라이언트를 보여 줍니다. 클라이언트와 서비스는 Windows 자격 증명을 사용하여 인증됩니다.  
@@ -41,7 +41,7 @@ ms.locfileid: "54573558"
  [!code-csharp[C_SecurityScenarios#11](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#11)]
  [!code-vb[C_SecurityScenarios#11](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#11)]  
   
-### <a name="configuration"></a>구성하기  
+### <a name="configuration"></a>구성  
  다음 구성은 서비스를 설정하는 데 코드 대신 사용할 수 있습니다.  
   
 ```xml  
@@ -77,7 +77,7 @@ ms.locfileid: "54573558"
   
 -   이 코드와 클라이언트 코드를 사용하여 독립 실행형 클라이언트를 만듭니다.  
   
--   엔드포인트 주소를 정의하지 않는 클라이언트를 만듭니다. 대신 구성 이름을 인수로 사용하는 클라이언트 생성자를 사용합니다. 예를 들면 다음과 같습니다.  
+-   엔드포인트 주소를 정의하지 않는 클라이언트를 만듭니다. 대신 구성 이름을 인수로 사용하는 클라이언트 생성자를 사용합니다. 예를 들어:  
   
      [!code-csharp[C_SecurityScenarios#0](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#0)]
      [!code-vb[C_SecurityScenarios#0](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#0)]  
@@ -88,7 +88,7 @@ ms.locfileid: "54573558"
  [!code-csharp[C_SecurityScenarios#18](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#18)]
  [!code-vb[C_SecurityScenarios#18](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#18)]  
   
-### <a name="configuration"></a>구성하기  
+### <a name="configuration"></a>구성  
  다음 구성은 클라이언트 속성을 설정하는 데 사용됩니다.  
   
 ```xml  
@@ -117,5 +117,6 @@ ms.locfileid: "54573558"
 ```  
   
 ## <a name="see-also"></a>참고자료
+
 - [보안 개요](../../../../docs/framework/wcf/feature-details/security-overview.md)
-- [Windows Server appfabric 보안 모델](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+- [Windows Server AppFabric 보안 모델](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

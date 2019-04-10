@@ -2,12 +2,12 @@
 title: 응용 프로그램 구성
 ms.date: 03/30/2017
 ms.assetid: a2f995b0-669d-4721-b00f-4561ec7eb6a4
-ms.openlocfilehash: 39d8c73809b8c2695ccebb1d69d1c016fd2313d1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 94bf5f4bbee8bb8bb462c4bf91be75d1627ec567
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54584638"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59087172"
 ---
 # <a name="configuring-your-application"></a>응용 프로그램 구성
 Windows Communication Foundation (WCF).NET 구성 시스템을 사용 하 고 컴퓨터 및 응용 프로그램 범위에서 서비스를 구성할 수 있습니다.  
@@ -30,6 +30,7 @@ Windows Communication Foundation (WCF).NET 구성 시스템을 사용 하 고 �
 >  마우스 오른쪽 단추로 클릭 하 여 Visual Studio에서 WCF 웹 서비스 프로젝트의 구성 파일을 편집 하는 경우 **솔루션 탐색기**, 있음을 합니다 **WCF 구성 편집** 상황에 맞는 메뉴 항목이 누락 되었습니다. 문제를 해결 하려면이 문제를 클릭 합니다 **도구** 메뉴에서 선택한 **WCF 서비스 구성 편집기**합니다. 그 후 구성 파일을 마우스 오른쪽 단추로 클릭 하 사용할 수는 **WCF 구성 편집** 상황에 맞는 메뉴 항목입니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [Configuration Editor 도구(SvcConfigEditor.exe)](../../../../docs/framework/wcf/configuration-editor-tool-svcconfigeditor-exe.md)
 - [서비스 구성](../../../../docs/framework/wcf/configuring-services.md)
 - [\<system.serviceModel>](../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md)

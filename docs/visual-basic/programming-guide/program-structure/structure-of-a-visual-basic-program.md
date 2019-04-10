@@ -7,12 +7,12 @@ helpviewer_keywords:
 - procedures [Visual Basic], structure
 - Visual Basic code, program structure
 ms.assetid: ad0c6531-d762-4c77-a700-de16b07b6119
-ms.openlocfilehash: 5817d4d37610c87bb7e4ade407421ddce7a3a862
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 42e366a844f9c5e80a8f617bf73dfd869608540d
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58828123"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59295772"
 ---
 # <a name="structure-of-a-visual-basic-program"></a>Visual Basic 프로그램의 구조
 Visual Basic 프로그램은 표준 구성 요소에서 빌드됩니다. A *솔루션* 하나 이상의 프로젝트를 구성 합니다. A *프로젝트* 에 하나 이상의 어셈블리를 포함할 수 있습니다. 각 *어셈블리* 하나 이상의 소스 파일에서 컴파일됩니다. A *소스 파일* 정의와 클래스, 구조체, 모듈 및 궁극적으로 모든 코드를 포함 하는 인터페이스의 구현을 제공 합니다.  
@@ -22,11 +22,11 @@ Visual Basic 프로그램은 표준 구성 요소에서 빌드됩니다. A *솔�
 ## <a name="file-level-programming-elements"></a>파일-수준 프로그래밍 요소  
  프로젝트 또는 파일을 시작 하 고 코드 편집기를 열고 올바른 순서에 이미 있는 코드가 표시 됩니다. 모든 코드를 작성할 때는 다음 순서 대로 수행 해야 합니다.  
   
-1.  `Option` 문  
+1. `Option` 문  
   
-2.  `Imports` 문  
+2. `Imports` 문  
   
-3.  `Namespace` 문 및 네임 스페이스 수준 요소  
+3. `Namespace` 문 및 네임 스페이스 수준 요소  
   
  문을 다른 순서로 입력 하면 컴파일 오류가 발생할 수 있습니다.  
   
@@ -66,9 +66,9 @@ Visual Basic 프로그램은 표준 구성 요소에서 빌드됩니다. A *솔�
   
 -   [Declare 문](../../../visual-basic/language-reference/statements/declare-statement.md)  
   
--   [Operator 문](../../../visual-basic/language-reference/statements/operator-statement.md)  
+-   [Operator Statement](../../../visual-basic/language-reference/statements/operator-statement.md)  
   
--   [Property 문](../../../visual-basic/language-reference/statements/property-statement.md)  
+-   [Property Statement](../../../visual-basic/language-reference/statements/property-statement.md)  
   
 -   [Event 문](../../../visual-basic/language-reference/statements/event-statement.md)  
   
@@ -94,6 +94,6 @@ Visual Basic 프로그램은 표준 구성 요소에서 빌드됩니다. A *솔�
   
 ## <a name="see-also"></a>참고자료
 
-- [Visual Basic의 main 프로시저](../../../visual-basic/programming-guide/program-structure/main-procedure.md)
+- [Visual Basic의 Main 프로시저](../../../visual-basic/programming-guide/program-structure/main-procedure.md)
 - [Visual Basic 명명 규칙](../../../visual-basic/programming-guide/program-structure/naming-conventions.md)
 - [Visual Basic 제한 사항](../../../visual-basic/programming-guide/program-structure/limitations.md)

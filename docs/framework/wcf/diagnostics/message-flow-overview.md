@@ -2,35 +2,35 @@
 title: 메시지 흐름 개요
 ms.date: 03/30/2017
 ms.assetid: fb0899e1-84cc-4d90-b45b-dc5a50063943
-ms.openlocfilehash: 54ffd8ec2349b2dd54ca61615b2fb1b997d02932
-ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
+ms.openlocfilehash: d75a535a601612196ef66151a4685723e048848f
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "49372787"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59312646"
 ---
 # <a name="message-flow-overview"></a>메시지 흐름 개요
 상호 연결된 서비스가 포함된 분산 시스템에서는 서비스 간의 인과 관계를 확인해야 합니다. 상태 모니터링, 문제 해결 및 근본 원인 분석과 같은 중요한 시나리오를 지원하기 위해 요청 흐름의 일부인 다양한 구성 요소를 이해하는 것이 중요합니다. 다양한 서비스 간 추적을 상호 연결할 수 있도록 하기 위해 .NET Framework 4에서는 다음 기능을 통한 지원이 추가되었습니다.
 
--   분석 추적: ETW(Event Tracing for Windows)를 사용하는 고성능의 간단한 추적 기능입니다.
+-   분석 추적: 고성능 및 낮은 간단한 추적 기능에 대 한 Windows ETW (이벤트 추적)를 사용 하 여 합니다.
 
--   WCF/WF 서비스의 종단 간 활동 모델: 이 기능은 <xref:System.ServiceModel> 및 <xref:System.Workflow.ComponentModel> 네임스페이스에서 생성되는 추적의 상관 관계를 지원합니다.
+-   WCF/WF 서비스에 대 한 종단 간 활동 모델: 이 기능에서 생성 된 추적의 상관 관계를 지원 합니다 <xref:System.ServiceModel> 고 <xref:System.Workflow.ComponentModel> 네임 스페이스입니다.
 
--   WF의 ETW 추적: 이 기능은 WF 서비스에서 생성된 추적 레코드를 사용하여 워크플로의 현재 상태 및 진행률을 볼 수 있게 합니다.
+-   WF의 ETW 추적: 이 기능은 WF 서비스에서 생성 된 추적 레코드를 사용 하 여 워크플로의 현재 상태와 진행률에 대 한 가시성을 제공.
 
  추적이나 추적 레코드에 기록되는 오류를 사용하여 코드 결함이나 잘못된 형식의 메시지를 찾을 수 있습니다. 이벤트의 메시지 헤더에 있는 Correlation 노드의 ActivityId 속성을 사용하여 오류가 발생하는 활동을 확인할 수 있습니다. 작업 ID 별로 메시지 흐름 추적을 사용 하려면 [Configuring Message Flow Tracing](../../../../docs/framework/wcf/diagnostics/etw/configuring-message-flow-tracing.md)합니다. 이 항목에서는 초보자를 위한 자습서에서 만든 프로젝트에서 메시지 흐름 추적을 사용하도록 설정하는 방법을 보여 줍니다.
 
 ### <a name="to-enable-message-flow-tracing-in-the-getting-started-tutorial"></a>초보자를 위한 자습서에서 메시지 흐름 추적을 사용하도록 설정하려면
 
-1.  클릭 하 여 이벤트 뷰어를 엽니다 **시작**를 **실행**를 입력 하 고 `eventvwr.exe`입니다.
+1. 클릭 하 여 이벤트 뷰어를 엽니다 **시작**를 **실행**를 입력 하 고 `eventvwr.exe`입니다.
 
-2.  분석 추적을 활성화 하지 않은 경우 확장 **Applications and Services Logs**를 **Microsoft**하십시오 **Windows**, **응용 프로그램 서버-응용 프로그램** . 선택 **뷰**하십시오 **분석 및 디버그 로그 표시**합니다. 마우스 오른쪽 단추로 클릭 **분석** 선택한 **로그 사용**합니다. 추적 내용을 볼 수 있도록 이벤트 뷰어를 열어 둡니다.
+2. 분석 추적을 활성화 하지 않은 경우 확장 **Applications and Services Logs**를 **Microsoft**하십시오 **Windows**, **응용 프로그램 서버-응용 프로그램** . 선택 **뷰**하십시오 **분석 및 디버그 로그 표시**합니다. 마우스 오른쪽 단추로 클릭 **분석** 선택한 **로그 사용**합니다. 추적 내용을 볼 수 있도록 이벤트 뷰어를 열어 둡니다.
 
-3.  만든 샘플을 엽니다는 [초보자를 위한 자습서](../../../../docs/framework/wcf/getting-started-tutorial.md) Visual Studio 2012에서. 서비스를 만들 수 있도록 관리자 권한으로 Visual Studio 2012을 실행 해야 하는 참고 합니다. 설치 하는 WCF 샘플에 있는 경우 열 수 있습니다 합니다 [Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md), 자습서에서 만든 완료 된 프로젝트를 포함 하는 합니다.
+3. 만든 샘플을 엽니다는 [초보자를 위한 자습서](../../../../docs/framework/wcf/getting-started-tutorial.md) Visual Studio 2012에서. 서비스를 만들 수 있도록 관리자 권한으로 Visual Studio 2012을 실행 해야 하는 참고 합니다. 설치 하는 WCF 샘플에 있는 경우 열 수 있습니다 합니다 [Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md), 자습서에서 만든 완료 된 프로젝트를 포함 하는 합니다.
 
-4.  마우스 오른쪽 단추로 클릭 합니다 **서비스** 프로젝트를 마우스 **추가**합니다 **새 항목**합니다. 선택 **응용 프로그램 구성 파일** 누릅니다 **확인**합니다.
+4. 마우스 오른쪽 단추로 클릭 합니다 **서비스** 프로젝트를 마우스 **추가**합니다 **새 항목**합니다. 선택 **응용 프로그램 구성 파일** 누릅니다 **확인**합니다.
 
-5.  이전 단계에서 만든 App.Config 파일에 다음 코드를 추가합니다.
+5. 이전 단계에서 만든 App.Config 파일에 다음 코드를 추가합니다.
 
     ```xml
     <system.serviceModel>
@@ -40,9 +40,9 @@ ms.locfileid: "49372787"
     </system.serviceModel>
     ```
 
-6.  Ctrl+F5를 눌러 서버 응용 프로그램을 디버깅하지 않고 실행합니다. 마우스 오른쪽 단추로 클릭 하 여 클라이언트 프로젝트를 실행 합니다 **클라이언트** 프로젝트 및 선택 **디버그**를 **새 인스턴스 시작**합니다.
+6. Ctrl+F5를 눌러 서버 응용 프로그램을 디버깅하지 않고 실행합니다. 마우스 오른쪽 단추로 클릭 하 여 클라이언트 프로젝트를 실행 합니다 **클라이언트** 프로젝트 및 선택 **디버그**를 **새 인스턴스 시작**합니다.
 
-7.  클라이언트에서 서버로의 이벤트를 추적하려면 Client 프로젝트의 응용 프로그램 구성 파일에 다음 코드를 추가합니다.
+7. 클라이언트에서 서버로의 이벤트를 추적하려면 Client 프로젝트의 응용 프로그램 구성 파일에 다음 코드를 추가합니다.
 
     ```xml
     <diagnostics>
@@ -50,7 +50,7 @@ ms.locfileid: "49372787"
     </diagnostics>
     ```
 
-8.  클라이언트의 Program.cs에서 다음 Using 문을 추가합니다.
+8. 클라이언트의 Program.cs에서 다음 Using 문을 추가합니다.
 
     ```csharp
     using System.Diagnostics;

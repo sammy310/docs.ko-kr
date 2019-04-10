@@ -1,19 +1,19 @@
 ---
-title: Windows Forms DataGridView 컨트롤의 데이터 형식 지정
+title: Windows Forms DataGridView 컨트롤에서 데이터 형식 지정
 ms.date: 03/30/2017
 helpviewer_keywords:
 - DataGridView control [Windows Forms], formatting data
 - data [Windows Forms], formatting in grids
 - data grids [Windows Forms], formatting data
 ms.assetid: 07bf558d-3748-42ba-8ba0-37fdef924081
-ms.openlocfilehash: 60fc567a700bdfc8cfe088f4d31a68fd5de9aa29
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: b5c055bdd12a4bede6e77233726c697de424a055
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57722050"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59158648"
 ---
-# <a name="data-formatting-in-the-windows-forms-datagridview-control"></a>Windows Forms DataGridView 컨트롤의 데이터 형식 지정
+# <a name="data-formatting-in-the-windows-forms-datagridview-control"></a>Windows Forms DataGridView 컨트롤에서 데이터 형식 지정
 <xref:System.Windows.Forms.DataGridView> 컨트롤에 셀 값 사이의 부모 열을 표시 하는 데이터 형식 자동 변환을 제공 합니다. 예를 들어, 텍스트 상자 열 날짜, 시간, 숫자 및 열거형 값의 문자열 표현을 표시 하 고 사용자가 입력 한 문자열 값 데이터 저장소에 필요한 형식으로 변환 합니다.  
   
 ## <a name="formatting-with-the-datagridviewcellstyle-class"></a>DataGridViewCellStyle 클래스를 사용 하 여 서식 지정  
@@ -32,9 +32,10 @@ ms.locfileid: "57722050"
  사용자가 지정한 값의 기본 구문 분석에 맞지 않는 요구 하는 경우를 처리할 수 있습니다는 <xref:System.Windows.Forms.DataGridView.CellParsing> 의 이벤트는 <xref:System.Windows.Forms.DataGridView> 컨트롤을 사용자 지정 구문 분석을 제공 합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridViewCellStyle>
 - [Windows Forms DataGridView 컨트롤에서 데이터 표시](displaying-data-in-the-windows-forms-datagridview-control.md)
 - [Windows Forms DataGridView 컨트롤의 셀 스타일](cell-styles-in-the-windows-forms-datagridview-control.md)
-- [방법: 형식 데이터에는 Windows Forms DataGridView 컨트롤](how-to-format-data-in-the-windows-forms-datagridview-control.md)
+- [방법: Windows Forms DataGridView 컨트롤에서 데이터 형식 지정](how-to-format-data-in-the-windows-forms-datagridview-control.md)
 - [방법: Windows Forms DataGridView 컨트롤에서 데이터 형식 사용자 지정](how-to-customize-data-formatting-in-the-windows-forms-datagridview-control.md)

@@ -2,12 +2,12 @@
 title: 관리되는 애플리케이션에서의 호스팅
 ms.date: 03/30/2017
 ms.assetid: af70132d-e9e1-4f32-b20f-f0014629758a
-ms.openlocfilehash: 0210f608be8ef7ff8b2af4b0cc36b308cd3ddbe8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 415a6fef511d7d7397a38882801e5848e2998a11
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54617241"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59218799"
 ---
 # <a name="hosting-in-a-managed-application"></a>관리되는 애플리케이션에서의 호스팅
 Windows Communication Foundation (WCF) 서비스에서 호스팅될 수 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 응용 프로그램입니다. 자체 호스팅 서비스는 배포하는 데 최소한의 인프라를 필요로 하기 때문에 가장 유연한 호스팅 옵션입니다. 그러나 것도 가장 약한 호스팅 옵션을 관리 되는 응용 프로그램에는 고급 호스팅 및 관리 기능 wcf에서 인터넷 정보 서비스 (IIS) 및 Windows 서비스 등의 다른 호스팅 옵션을 제공 하지 않기 때문입니다.  
@@ -25,5 +25,6 @@ Windows Communication Foundation (WCF) 서비스에서 호스팅될 수 [!INCLUD
  자체 호스팅을 사용 Windows Presentation Foundation (WPF) 또는 Windows Forms (WinForms)에 따라 같은 리치 클라이언트 응용 프로그램에는 다른 일반적인 시나리오입니다. 이 호스팅 옵션을 사용하면 리치 클라이언트 애플리케이션(예: [!INCLUDE[avalon2](../../../../includes/avalon2-md.md)] 및 WinForms 애플리케이션)에서 외부와 쉽게 통신할 수 있습니다. 예를 들어 피어-투-피어 공동 작업 사용 하는 클라이언트 [!INCLUDE[avalon2](../../../../includes/avalon2-md.md)] 사용자 인터페이스에 대 한도 다른 클라이언트가 연결 하 고 정보를 공유할 수 있도록 WCF 서비스를 호스팅합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [서비스 호스팅](../../../../docs/framework/wcf/hosting-services.md)
 - [초보자를 위한 자습서](../../../../docs/framework/wcf/getting-started-tutorial.md)

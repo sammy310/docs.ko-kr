@@ -1,5 +1,5 @@
 ---
-title: '방법: 종속성 속성의 소유자 형식 추가'
+title: '방법: 종속성 속성에 대한 소유자 형식 추가'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - classes [WPF], adding as owners of dependency properties
 - dependency properties [WPF], adding classes as owners of
 ms.assetid: edcce050-0576-4edb-a31a-3f909637b452
-ms.openlocfilehash: 03ffec87c98c88452aa8fde89c64646eaf48a8da
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 1b1f2b241868b02e430af82bac8e9f6a617e511b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57369593"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59217096"
 ---
-# <a name="how-to-add-an-owner-type-for-a-dependency-property"></a>방법: 종속성 속성의 소유자 형식 추가
+# <a name="how-to-add-an-owner-type-for-a-dependency-property"></a>방법: 종속성 속성에 대한 소유자 형식 추가
 이 예제에서는 다른 형식에 대해 등록 된 종속성 속성의 소유자로 클래스를 추가 하는 방법을 보여 줍니다. 이렇게 하면 합니다 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 판독기 및 속성 시스템은 모두 속성의 소유자로 추가 클래스를 인식할 수 있습니다. 필요에 따라 소유자로 추가 클래스 형식별 메타 데이터를 제공할 수 있습니다.  
   
  다음 예에서 `StateProperty` 속성으로 등록 된 `MyStateControl` 클래스입니다. 클래스 `UnrelatedStateControl` 자체의 소유자로 추가 합니다 `StateProperty` 사용 하 여를 <xref:System.Windows.DependencyProperty.AddOwner%2A> 메서드, 특히 추가 형식에 있는 종속성 속성에 대 한 새 메타 데이터에 대 한 허용 하는 시그니처를 사용 하 여 합니다. 제공 해야 하는 공지 [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] 에 표시 된 예제와 비슷한 속성에 대 한 접근자를 [종속성 속성 구현](how-to-implement-a-dependency-property.md) 다시 추가 하는 클래스에서 종속성 속성 식별자를 노출 뿐만 아니라 예 소유자입니다.  
@@ -31,5 +31,6 @@ ms.locfileid: "57369593"
 [!code-vb[PropertySystemEsoterics#UnrelatedStateControl](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PropertySystemEsoterics/visualbasic/sdksamplelibrary/class1.vb#unrelatedstatecontrol)]  
   
 ## <a name="see-also"></a>참고자료
+
 - [사용자 지정 종속성 속성](custom-dependency-properties.md)
 - [종속성 속성 개요](dependency-properties-overview.md)

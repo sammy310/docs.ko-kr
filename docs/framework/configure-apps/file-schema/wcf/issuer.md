@@ -2,12 +2,12 @@
 title: <issuer>
 ms.date: 03/30/2017
 ms.assetid: 8c49c6ae-fa1a-4179-a84b-613c3216dcde
-ms.openlocfilehash: 54f52b1496ada2573949f98e1397b3b7736078d3
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 37d935287fa7dfba640c39071295fd660f4db7c1
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55254511"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59160825"
 ---
 # <a name="issuer"></a>\<issuer>
 보안 토큰을 발급하는 STS(보안 토큰 서비스)를 지정합니다.  
@@ -50,7 +50,7 @@ ms.locfileid: "55254511"
   
 |특성|설명|  
 |---------------|-----------------|  
-|address|필수 문자열입니다. STS의 URL입니다.|  
+|주소|필수 문자열입니다. STS의 URL입니다.|  
   
 ### <a name="child-elements"></a>자식 요소  
   
@@ -66,6 +66,7 @@ ms.locfileid: "55254511"
 |[\<message>](../../../../../docs/framework/configure-apps/file-schema/wcf/message-element-of-wsfederationhttpbinding.md)|에 대 한 메시지 수준 보안 설정을 정의 합니다 [ \<wsFederationHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md) 요소입니다.|  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.ServiceModel.FederatedMessageSecurityOverHttp>
 - <xref:System.ServiceModel.Configuration.FederatedMessageSecurityOverHttpElement.Issuer%2A>
 - <xref:System.ServiceModel.Configuration.IssuedTokenParametersEndpointAddressElement>

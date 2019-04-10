@@ -5,18 +5,16 @@ helpviewer_keywords:
 - metadata [WPF], framework properties
 - framework property metadata [WPF]
 ms.assetid: 9962f380-b885-4b61-a62e-457397083fea
-ms.openlocfilehash: f313c17a278a7b51379c4da9389c01eedf4a1e62
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 2a20e5a2bdbcbb36f6f06bbbadb2a46743ca5eba
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57379278"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59314700"
 ---
 # <a name="framework-property-metadata"></a>프레임워크 속성 메타데이터
 프레임워크 속성 메타데이터는 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 아키텍처의 WPF 프레임워크 수준에 있는 것으로 간주되는 개체 요소의 속성용으로 보고됩니다. 일반적으로 WPF 프레임워크 수준 지정에서는 렌더링, 데이터 바인딩 및 속성 시스템 미세 조정과 같은 기능이 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 프레젠테이션 [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] 및 실행 파일을 통해 처리됩니다. 이러한 시스템에서 프레임워크 속성 메타데이터를 쿼리하여 특정 요소 속성의 기능별 특성을 결정합니다.  
-  
- 
-  
+
 <a name="prerequisites"></a>   
 ## <a name="prerequisites"></a>필수 구성 요소  
  이 항목에서는 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 클래스에서 기존 종속성 속성의 소비자 관점에서 종속성 속성을 이해하고 [종속성 속성 개요](dependency-properties-overview.md)를 읽었다고 가정합니다. [종속성 속성 메타데이터](dependency-property-metadata.md)도 읽어야 합니다.  
@@ -50,9 +48,9 @@ ms.locfileid: "57379278"
   
  만들려는 경우를 <xref:System.Windows.FrameworkPropertyMetadata> 인스턴스, 프레임 워크 속성 특성에 전달 하는 특정 속성에 대 한 값을 사용 하 여 해당 메타 데이터를 채우는 데는 두 가지 방법이 있습니다.  
   
-1.  사용 된 <xref:System.Windows.FrameworkPropertyMetadata> 허용 하는 생성자 시그니처를 `flags` 매개 변수입니다. 값이 필요한 모든 조합된으로이 매개 변수를 채워야 합니다 <xref:System.Windows.FrameworkPropertyMetadataOptions> 열거형 플래그입니다.  
+1. 사용 된 <xref:System.Windows.FrameworkPropertyMetadata> 허용 하는 생성자 시그니처를 `flags` 매개 변수입니다. 값이 필요한 모든 조합된으로이 매개 변수를 채워야 합니다 <xref:System.Windows.FrameworkPropertyMetadataOptions> 열거형 플래그입니다.  
   
-2.  없이 시그니처 중 하나를 사용 하 여는 `flags` 매개 변수를 각 보고 부울 속성을 설정한 후 <xref:System.Windows.FrameworkPropertyMetadata> 에 `true` 원하는 각 특성 변경에 대 한 합니다. 이 작업을 수행하는 경우 이 종속성 속성이 있는 요소를 생성하기 전에 이러한 속성을 설정해야 합니다. `flags` 매개 변수를 방지하는 동작을 허용하기 위해 부울 속성은 읽기-쓰기가 되며 여전히 메타데이터를 채우지만, 속성을 사용하기 전에 메타데이터를 적절하게 봉인해야 합니다. 따라서 메타데이터를 요청한 후에 속성을 설정하려는 것은 올바른 작업이 아닙니다.  
+2. 없이 시그니처 중 하나를 사용 하 여는 `flags` 매개 변수를 각 보고 부울 속성을 설정한 후 <xref:System.Windows.FrameworkPropertyMetadata> 에 `true` 원하는 각 특성 변경에 대 한 합니다. 이 작업을 수행하는 경우 이 종속성 속성이 있는 요소를 생성하기 전에 이러한 속성을 설정해야 합니다. `flags` 매개 변수를 방지하는 동작을 허용하기 위해 부울 속성은 읽기-쓰기가 되며 여전히 메타데이터를 채우지만, 속성을 사용하기 전에 메타데이터를 적절하게 봉인해야 합니다. 따라서 메타데이터를 요청한 후에 속성을 설정하려는 것은 올바른 작업이 아닙니다.  
   
 <a name="Framework_Property_Metadata_Merge_Behavior"></a>   
 ## <a name="framework-property-metadata-merge-behavior"></a>프레임워크 속성 메타데이터 병합 동작  
@@ -73,6 +71,7 @@ ms.locfileid: "57379278"
  이 동작을 구현 하 여 <xref:System.Windows.FrameworkPropertyMetadata.Merge%2A>, 파생 된 메타 데이터 클래스에서 재정의할 수 있습니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Windows.DependencyProperty.GetMetadata%2A>
 - [종속성 속성 메타데이터](dependency-property-metadata.md)
 - [종속성 속성 개요](dependency-properties-overview.md)

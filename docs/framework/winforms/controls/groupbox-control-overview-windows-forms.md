@@ -7,12 +7,12 @@ helpviewer_keywords:
 - GroupBox control [Windows Forms], about GroupBox control
 - grouping controls [Windows Forms], Windows Forms
 ms.assetid: 03bd8ff9-c905-4f01-9bc6-8438b11d0881
-ms.openlocfilehash: e3b4195cc24cdbdd1bc00f7a50c1717a120e7ff1
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: ba3361c8477cf72031296651af022bac3ac90281
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57722399"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59191759"
 ---
 # <a name="groupbox-control-overview-windows-forms"></a>GroupBox 컨트롤 개요(Windows Forms)
 Windows Forms <xref:System.Windows.Forms.GroupBox> 컨트롤은 다른 컨트롤에 대 한 식별 가능한 그룹화를 제공 하는 데 사용 됩니다. 일반적으로 폼 함수로 세분화 하기 그룹 상자를 사용 합니다. 예를 들어, 어떤 야간 운송 같은 메일 옵션을 지정 하는 주문 양식과 할 수 있습니다. 논리 시각적 표시를 사용자에 게 그룹 상자에서 모든 옵션을 그룹화 하 고 디자인 타임에 컨트롤을 모두 쉽게 이동할 수 있습니다-단일을 이동 하는 경우 <xref:System.Windows.Forms.GroupBox> 모든 포함 된 컨트롤이, 너무 제어 합니다.  
@@ -23,4 +23,5 @@ Windows Forms <xref:System.Windows.Forms.GroupBox> 컨트롤은 다른 컨트롤
  그러나 <xref:System.Windows.Forms.GroupBox> 제어는 비슷합니다는 <xref:System.Windows.Forms.Panel> 컨트롤만 <xref:System.Windows.Forms.GroupBox> 컨트롤, 캡션을 표시만 <xref:System.Windows.Forms.Panel> 컨트롤에서 스크롤 막대를 가질 수 있습니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [GroupBox 컨트롤](groupbox-control-windows-forms.md)

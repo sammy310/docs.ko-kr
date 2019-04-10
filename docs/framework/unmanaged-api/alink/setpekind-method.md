@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e568050a5cc94da865d656adc8a775024dab836c
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: dec04fa267c61798a3340e9d1e18150b812e9eaf
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57500046"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59092658"
 ---
 # <a name="setpekind-method"></a>SetPEKind 메서드
 이식 가능한 실행 파일 형식에 시스템별 또는 알 수 없는 컴퓨터를 결정합니다.  
@@ -57,6 +57,7 @@ HRESULT SetPEKind(
  Alink.h가 필요합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [GetPEKind 메서드](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-getpekind-method.md)
 - [IALink2 인터페이스](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
 - [IALink 인터페이스](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)

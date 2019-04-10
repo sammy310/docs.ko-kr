@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: abab67f28a5fabfc6c348af6b8b502b46510d460
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0aba49fb4a60b2e471c541a8d8531a1cbc8627f9
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54548757"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59096201"
 ---
 # <a name="osinfo-structure"></a>OSINFO 구조체
 어셈블리 또는 모듈에 대 한 운영 체제에 대 한 정보를 포함합니다.  
@@ -57,5 +57,6 @@ typedef struct {
  **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>참고자료
+
 - [메타데이터 구조체](../../../../docs/framework/unmanaged-api/metadata/metadata-structures.md)
 - [IMetaDataAssemblyEmit 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)

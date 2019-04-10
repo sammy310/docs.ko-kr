@@ -2,12 +2,12 @@
 title: Using the WCF Moniker with COM Clients
 ms.date: 03/30/2017
 ms.assetid: e2799bfe-88bd-49d7-9d6d-ac16a9b16b04
-ms.openlocfilehash: e784b40cb16177fe31f8031ea26617122b9b27db
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 14907dd3df66478e8f84b7735a84dd500855448b
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58836209"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59294849"
 ---
 # <a name="using-the-wcf-moniker-with-com-clients"></a>Using the WCF Moniker with COM Clients
 이 샘플에는 Windows Communication Foundation (WCF) 서비스 모니커를 사용 하 여 웹 서비스를 응용 프로그램 (Office VBA)에 대 한 Microsoft Office Visual Basic 또는 Visual Basic 6.0과 같은 COM 기반 개발 환경에 통합 하는 방법을 보여 줍니다. 이 샘플은 IIS(인터넷 정보 서비스)에서 호스트되는 Windows 스크립트 호스트 클라이언트(.vbs), 지원 클라이언트 라이브러리(.dll) 및 서비스 라이브러리(.dll)로 구성됩니다. 서비스는 계산기 서비스이고 COM 클라이언트는 서비스에서 수학 작업인 Add, Subtract, Multiply 및 Divide를 호출합니다. 클라이언트 동작이 메시지 상자 창에 표시됩니다.  
@@ -184,46 +184,46 @@ WScript.Echo "MEX service moniker: 9 * 81.25 = " & mexServiceMoniker.Multiply(9,
   
 #### <a name="to-set-up-and-build-the-sample"></a>샘플을 설치하고 빌드하려면  
   
-1.  수행 했는지 확인 합니다 [Windows Communication Foundation 샘플에 대 한 일회성 설치 절차](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)합니다.  
+1. 수행 했는지 확인 합니다 [Windows Communication Foundation 샘플에 대 한 일회성 설치 절차](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)합니다.  
   
-2.  C# 또는 Visual Basic .NET 버전의 솔루션을 빌드하려면 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)의 지침을 따릅니다.  
+2. C# 또는 Visual Basic .NET 버전의 솔루션을 빌드하려면 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)의 지침을 따릅니다.  
   
-3.  개발자 명령 프롬프트에서 Visual studio에서 언어별 폴더의 \client\bin 폴더를 엽니다.  
+3. 개발자 명령 프롬프트에서 Visual studio에서 언어별 폴더의 \client\bin 폴더를 엽니다.  
   
     > [!NOTE]
     >  [!INCLUDE[wv](../../../../includes/wv-md.md)], [!INCLUDE[lserver](../../../../includes/lserver-md.md)], Windows 7 또는 Windows Server 2008 R2를 사용하는 경우에는 관리자 권한으로 명령 프롬프트를 실행해야 합니다.  
   
-4.  입력 `tlbexp.exe client.dll /out:CalcProxy.tlb` dll을 tlb 파일로 내보내려면 합니다. "형식 라이브러리 내보내기 경고"가 발생할 수 있지만 제네릭 형식이 필요하지 않으므로 문제가 되지는 않습니다.  
+4. 입력 `tlbexp.exe client.dll /out:CalcProxy.tlb` dll을 tlb 파일로 내보내려면 합니다. "형식 라이브러리 내보내기 경고"가 발생할 수 있지만 제네릭 형식이 필요하지 않으므로 문제가 되지는 않습니다.  
   
-5.  입력 `regasm.exe /tlb:CalcProxy.tlb client.dll` 형식을 com에 등록 하려면 "형식 라이브러리 내보내기 경고"가 발생할 수 있지만 제네릭 형식이 필요하지 않으므로 문제가 되지는 않습니다.  
+5. 입력 `regasm.exe /tlb:CalcProxy.tlb client.dll` 형식을 com에 등록 하려면 "형식 라이브러리 내보내기 경고"가 발생할 수 있지만 제네릭 형식이 필요하지 않으므로 문제가 되지는 않습니다.  
   
-6.  입력 `gacutil.exe /i client.dll` 전역 어셈블리 캐시에 어셈블리를 추가 합니다.  
+6. 입력 `gacutil.exe /i client.dll` 전역 어셈블리 캐시에 어셈블리를 추가 합니다.  
   
 #### <a name="to-run-the-sample-on-the-same-computer"></a>단일 컴퓨터 구성에서 샘플을 실행하려면  
   
-1.  브라우저를 사용 하 여 주소에서를 입력 하 여 액세스할 수 있는 테스트: `http://localhost/servicemodelsamples/service.svc`합니다. 확인 페이지가 응답으로 표시됩니다.  
+1. 브라우저를 사용 하 여 주소에서를 입력 하 여 액세스할 수 있는 테스트: `http://localhost/servicemodelsamples/service.svc`합니다. 확인 페이지가 응답으로 표시됩니다.  
   
-2.  언어별 폴더의 \client에서 ComCalcClient.vbs를 실행합니다. 메시지 상자 창에 클라이언트 동작이 표시됩니다.  
+2. 언어별 폴더의 \client에서 ComCalcClient.vbs를 실행합니다. 메시지 상자 창에 클라이언트 동작이 표시됩니다.  
   
-3.  클라이언트와 서비스가 통신할 수 없는 경우 참조 [WCF 샘플에 대 한 문제 해결 팁](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))합니다.  
+3. 클라이언트와 서비스가 통신할 수 없는 경우 참조 [WCF 샘플에 대 한 문제 해결 팁](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))합니다.  
   
 #### <a name="to-run-the-sample-across-computers"></a>다중 컴퓨터 구성에서 샘플을 실행하려면  
   
-1.  서비스 컴퓨터에서 ServiceModelSamples라는 가상 디렉터리를 만듭니다. 샘플에 포함된 Setupvroot.bat 스크립트를 사용하여 디스크 디렉터리와 가상 디렉터리를 만들 수 있습니다  
+1. 서비스 컴퓨터에서 ServiceModelSamples라는 가상 디렉터리를 만듭니다. 샘플에 포함된 Setupvroot.bat 스크립트를 사용하여 디스크 디렉터리와 가상 디렉터리를 만들 수 있습니다  
   
-2.  %SystemDrive%\Inetpub\wwwroot\servicemodelsamples에서 서비스 프로그램 파일을 서비스 컴퓨터의 ServiceModelSamples 가상 디렉터리로 복사합니다. \bin 디렉터리에 파일을 포함해야 합니다.  
+2. %SystemDrive%\Inetpub\wwwroot\servicemodelsamples에서 서비스 프로그램 파일을 서비스 컴퓨터의 ServiceModelSamples 가상 디렉터리로 복사합니다. \bin 디렉터리에 파일을 포함해야 합니다.  
   
-3.  언어별 폴더의 \client 폴더에서 클라이언트 컴퓨터로 클라이언트 스크립트 파일을 복사합니다.  
+3. 언어별 폴더의 \client 폴더에서 클라이언트 컴퓨터로 클라이언트 스크립트 파일을 복사합니다.  
   
-4.  스크립트 파일에서 엔드포인트 정의의 주소 값을 서비스의 새 주소와 일치하도록 변경합니다. 주소에서 "localhost"에 대한 참조를 정규화된 도메인 이름으로 바꿉니다.  
+4. 스크립트 파일에서 엔드포인트 정의의 주소 값을 서비스의 새 주소와 일치하도록 변경합니다. 주소에서 "localhost"에 대한 참조를 정규화된 도메인 이름으로 바꿉니다.  
   
-5.  WSDL 파일을 클라이언트 컴퓨터로 복사합니다. WSDL 파일 serviceWsdl.xml에서 주소의 "localhost"에 대한 참조를 정규화된 도메인 이름으로 바꿉니다.  
+5. WSDL 파일을 클라이언트 컴퓨터로 복사합니다. WSDL 파일 serviceWsdl.xml에서 주소의 "localhost"에 대한 참조를 정규화된 도메인 이름으로 바꿉니다.  
   
-6.  언어별 폴더의 \client\bin 폴더에서 클라이언트 컴퓨터의 디렉터리로 Client.dll 라이브러리를 복사합니다.  
+6. 언어별 폴더의 \client\bin 폴더에서 클라이언트 컴퓨터의 디렉터리로 Client.dll 라이브러리를 복사합니다.  
   
-7.  명령 프롬프트에서 클라이언트 컴퓨터의 대상 디렉터리로 이동합니다. [!INCLUDE[wv](../../../../includes/wv-md.md)] 또는 [!INCLUDE[lserver](../../../../includes/lserver-md.md)]을 사용할 경우 관리자 권한으로 명령 프롬프트를 실행해야 합니다.  
+7. 명령 프롬프트에서 클라이언트 컴퓨터의 대상 디렉터리로 이동합니다. [!INCLUDE[wv](../../../../includes/wv-md.md)] 또는 [!INCLUDE[lserver](../../../../includes/lserver-md.md)]을 사용할 경우 관리자 권한으로 명령 프롬프트를 실행해야 합니다.  
   
-8.  입력 `tlbexp.exe client.dll /out:CalcProxy.tlb` dll을 tlb 파일로 내보내려면 합니다. "형식 라이브러리 내보내기 경고"가 발생할 수 있지만 제네릭 형식이 필요하지 않으므로 문제가 되지는 않습니다.  
+8. 입력 `tlbexp.exe client.dll /out:CalcProxy.tlb` dll을 tlb 파일로 내보내려면 합니다. "형식 라이브러리 내보내기 경고"가 발생할 수 있지만 제네릭 형식이 필요하지 않으므로 문제가 되지는 않습니다.  
   
 9. 입력 `regasm.exe /tlb:CalcProxy.tlb client.dll` 형식을 com에 등록 하려면 가 포함 된 폴더로 경로가 설정 된 확인 `regasm.exe` 명령을 실행 하기 전에 합니다.  
   
@@ -236,4 +236,3 @@ WScript.Echo "MEX service moniker: 9 * 81.25 = " & mexServiceMoniker.Multiply(9,
 #### <a name="to-clean-up-after-the-sample"></a>샘플 실행 후 정리를 수행하려면  
   
 -   보안을 위해 샘플 사용이 끝나면 설정 단계에서 부여된 가상 디렉터리 정의와 사용 권한을 제거합니다.  
-  

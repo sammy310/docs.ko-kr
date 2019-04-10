@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 23a4c1aa25f269121dc602bbeb6b864b589318be
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 951941092f67f66c5b17c8ae592569c2a8e6a675
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54745963"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59079632"
 ---
 # <a name="corpinvokemap-enumeration"></a>CorPinvokeMap 열거형
 PInvoke 호출에 대 한 옵션을 지정합니다.  
@@ -70,9 +70,9 @@ typedef enum  CorPinvokeMap {
 |`pmNoMangle`|각 멤버 이름은 지정 된 대로 사용 합니다.|  
 |`pmCharSetMask`|예약됨.|  
 |`pmCharSetNotSpec`|예약됨.|  
-|`pmCharSetAnsi`|문자열을 다중 바이트 문자열로 마샬링합니다.|  
-|`pmCharSetUnicode`|문자열을 유니코드 2바이트 문자로 마샬링합니다.|  
-|`pmCharSetAuto`|문자열을 대상 운영 체제에 맞게 자동으로 마샬링합니다. 기본값은 Windows NT, Windows 2000, Windows XP 및 Windows Server 2003 제품군;의 유니코드 기본값은 Windows 98 및 me. Windows ANSI|  
+|`pmCharSetAnsi`|문자열을 다중 바이트 문자열로 마샬링하십시오.|  
+|`pmCharSetUnicode`|문자열을 유니코드 2 바이트 문자로 마샬링하십시오.|  
+|`pmCharSetAuto`|대상 운영 체제에 맞게 문자열을 자동으로 마샬링하십시오. 기본값은 Windows NT, Windows 2000, Windows XP 및 Windows Server 2003 제품군;의 유니코드 기본값은 Windows 98 및 me. Windows ANSI|  
 |`pmBestFitUseAssem`|예약됨.|  
 |`pmBestFitEnabled`|ANSI 문자 집합에는 정확한 일치 항목이 없는 유니코드 문자의 최적된 매핑을 수행 합니다.|  
 |`pmBestFitDisabled`|유니코드 문자의 최적된 매핑을 수행 하지 않습니다. 매핑할 수 없는 모든 문자는 대체 하는 경우에 '?'입니다.|  
@@ -85,7 +85,7 @@ typedef enum  CorPinvokeMap {
 |`pmCallConvMask`|예약됨|  
 |`pmCallConvWinapi`|기본 플랫폼 호출 규칙을 사용 합니다. 예를 들어 Windows에서 기본값인 `StdCall` 한 것이 Windows CE.NET `Cdecl`합니다.|  
 |`pmCallConvCdecl`|사용 된 `Cdecl` 호출 규칙입니다. 이 경우 호출자가 스택을 정리합니다. 이렇게 하면 사용 하 여 함수를 호출할 수 있습니다. `varargs` (즉, 가변 개수의 매개 변수를 허용 하는 함수).|  
-|`pmCallConvStdcall`|사용 된 `StdCall` 호출 규칙입니다. 이 경우 호출 수신자가 스택을 정리합니다. 이는 플랫폼 호출을 사용하여 관리되지 않는 함수를 호출하는 기본 규칙입니다.|  
+|`pmCallConvStdcall`|사용 된 `StdCall` 호출 규칙입니다. 이 경우 호출 수신자가 스택을 정리합니다. 이 플랫폼을 사용 하 여 관리 되지 않는 함수를 호출할 호출에 대 한 기본 규칙입니다.|  
 |`pmCallConvThiscall`|사용 된 `ThisCall` 호출 규칙입니다. 첫 번째 매개 변수는이 경우에 `this` 포인터 레지스터 ECX에에서 저장 됩니다. 다른 매개 변수는 스택에 푸시됩니다. `ThisCall` 관리 되지 않는 DLL에서 내보낸 클래스의 메서드를 호출할 호출 규칙이 사용 됩니다.|  
 |`pmCallConvFastcall`|예약됨.|  
 |`pmMaxValue`|예약됨.|  
@@ -98,4 +98,5 @@ typedef enum  CorPinvokeMap {
  **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>참고자료
+
 - [메타데이터 열거형](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

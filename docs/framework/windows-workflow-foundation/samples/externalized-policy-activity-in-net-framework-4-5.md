@@ -1,15 +1,15 @@
 ---
-title: .NET Framework 4.5의에서 구체화 된 정책 활동
+title: .NET Framework 4.5의 구체화된 정책 작업
 ms.date: 03/30/2017
 ms.assetid: 92fd6f92-23a1-4adf-b96a-2754ea93ad3e
-ms.openlocfilehash: 2ec358dbe2ba2b60df707d1ce580bb88e4c4ba1b
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 622b0f14281d5b068700d9e4fe03485aa1a60fcb
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57706375"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59338282"
 ---
-# <a name="externalized-policy-activity-in-net-framework-45"></a>.NET Framework 4.5의에서 구체화 된 정책 활동
+# <a name="externalized-policy-activity-in-net-framework-45"></a>.NET Framework 4.5의 구체화된 정책 작업
 
 이 샘플에서는 ExternalizedPolicy4 활동을 통해 기존 실행 하는 방법을 보여 줍니다. [!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)] Windows Workflow Foundation (WF 3.5) <xref:System.Workflow.Activities.Rules.RuleSet> 개체 [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] 규칙 엔진을 사용 하 여 직접 Windows Workflow Foundation (WF 4.5) WF 3.5에서 제공 됩니다. 이 활동을 사용하여 기존 WF 3.5 <xref:System.Workflow.Activities.Rules.RuleSet>을 열고 실행할 수 있습니다. Windows Workflow Foundation의 일부로 포함 된 WF 3.5 규칙 엔진에 대 한 자세한 내용은 읽어보세요 [Windows Workflow Foundation 규칙 엔진 소개](https://go.microsoft.com/fwlink/?LinkId=166079)합니다. 마이그레이션에 대 한 자세한 규칙을 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 에 [!INCLUDE[netfx_current_short](../../../../includes/netfx-current-short-md.md)]에서 마이그레이션 지침을 참조 하세요 [마이그레이션 지침](../migration-guidance.md)합니다.
 
@@ -56,8 +56,7 @@ ExternalizedPolicy4 디자이너를 사용하면 코드를 작성하지 않고 �
 
 ## <a name="policy4-and-externalpolicy4"></a>Policy4 및 ExternalPolicy4
 
-정책 작업을 만들고 WF 4.5 워크플로에.NET Framework 3.5 RuleSet을 실행할 수 있습니다. 
-  <xref:System.Workflow.Activities.Rules.RuleSet>은 Policy4 활동 XAML 정의에 serialize된 인라인입니다. ExternalizedPolicy4 샘플에서는 .rules 파일에 포함된 기존 외부 <xref:System.Workflow.Activities.Rules.RuleSet>을 사용하는 방법을 보여 줍니다.
+정책 작업을 만들고 WF 4.5 워크플로에.NET Framework 3.5 RuleSet을 실행할 수 있습니다. <xref:System.Workflow.Activities.Rules.RuleSet>은 Policy4 활동 XAML 정의에 serialize된 인라인입니다. ExternalizedPolicy4 샘플에서는 .rules 파일에 포함된 기존 외부 <xref:System.Workflow.Activities.Rules.RuleSet>을 사용하는 방법을 보여 줍니다.
 
 ## <a name="use-this-sample"></a>이 샘플 사용
 
@@ -67,21 +66,21 @@ ExternalizedPolicy4 디자이너를 사용하면 코드를 작성하지 않고 �
 
 ### <a name="run-the-imperativecodeclientsample-application"></a>ImperativeCodeClientSample 응용 프로그램을 실행 합니다.
 
-1.  Visual Studio를 사용 하 여 엽니다는 *Policy4sample.sln* 솔루션 파일입니다.
+1. Visual Studio를 사용 하 여 엽니다는 *Policy4sample.sln* 솔루션 파일입니다.
 
-2.  **솔루션 탐색기**를 마우스 오른쪽 단추로 클릭 합니다 **ImperativeCodeClientSample** 프로젝트를 선택한 **시작 프로젝트로 설정**합니다.
+2. **솔루션 탐색기**를 마우스 오른쪽 단추로 클릭 합니다 **ImperativeCodeClientSample** 프로젝트를 선택한 **시작 프로젝트로 설정**합니다.
 
-3.  키를 눌러 프로젝트를 실행 하려면 **Ctrl**+**F5**합니다.
+3. 키를 눌러 프로젝트를 실행 하려면 **Ctrl**+**F5**합니다.
 
 ### <a name="run-the-designerclientsample-application"></a>DesignerClientSample 응용 프로그램을 실행 합니다.
 
-1.  Visual Studio를 사용 하 여 엽니다는 *Policy4sample.sln* 솔루션 파일입니다.
+1. Visual Studio를 사용 하 여 엽니다는 *Policy4sample.sln* 솔루션 파일입니다.
 
-2.  **솔루션 탐색기**를 마우스 오른쪽 단추로 클릭 합니다 **DesignerClientSample** 프로젝트를 선택한 **시작 프로젝트로 설정**합니다.
+2. **솔루션 탐색기**를 마우스 오른쪽 단추로 클릭 합니다 **DesignerClientSample** 프로젝트를 선택한 **시작 프로젝트로 설정**합니다.
 
-3.  키를 눌러 **Ctrl**+**Shift**+**B** 프로젝트를 컴파일합니다.
+3. 키를 눌러 **Ctrl**+**Shift**+**B** 프로젝트를 컴파일합니다.
 
-4.  키를 눌러 **Ctrl**+**F5** 프로젝트를 실행 합니다.
+4. 키를 눌러 **Ctrl**+**F5** 프로젝트를 실행 합니다.
 
 > [!IMPORTANT]
 > 컴퓨터에 이 샘플이 이미 설치되어 있을 수도 있습니다. 계속하기 전에 다음(기본) 디렉터리를 확인하세요.

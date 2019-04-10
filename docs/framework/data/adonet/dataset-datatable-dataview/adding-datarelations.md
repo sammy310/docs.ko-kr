@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: a4a564fb-c1c4-4135-b6c2-b030e51195e4
-ms.openlocfilehash: 9843d5231f6ed95290af6e6d2adaa384f8b47dd7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9cefc97e571f315a6a644e0a058d4283168ecb9f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54509508"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59199364"
 ---
 # <a name="adding-datarelations"></a>DataRelation 추가
 여러 <xref:System.Data.DataSet> 개체가 포함된 <xref:System.Data.DataTable>에서는 <xref:System.Data.DataRelation> 개체를 사용하여 하나의 테이블을 다른 테이블에 연관시키거나, 테이블 사이를 탐색하거나, 연관된 테이블의 자식 또는 부모 행을 반환할 수 있습니다.  
@@ -36,5 +36,6 @@ customerOrders.Relations.Add("CustOrders",
  **DataRelation** 역시를 **중첩** 속성을로 설정 하면 **true**을 부모 테이블의 관련된 행 내에서 중첩 된 자식 테이블에서 행을 사용 하면 사용 하 여 XML 요소로 작성할 경우 <xref:System.Data.DataSet.WriteXml%2A> 합니다. 자세한 내용은 [데이터 세트에서 XML 사용](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md)을 참조하세요.  
   
 ## <a name="see-also"></a>참고자료
-- [DataSet, DataTable 및 DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)
+
+- [DataSets, DataTables 및 DataViews](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)
 - [ADO.NET 관리되는 공급자 및 데이터 집합 개발자 센터](https://go.microsoft.com/fwlink/?LinkId=217917)

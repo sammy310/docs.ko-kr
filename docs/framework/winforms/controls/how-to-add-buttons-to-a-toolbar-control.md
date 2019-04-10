@@ -12,12 +12,12 @@ helpviewer_keywords:
 - examples [Windows Forms], toolbars
 - ToolBar control [Windows Forms], adding drop-down menus
 ms.assetid: 78a58a8d-1041-4e38-9219-4096fa6a5c5c
-ms.openlocfilehash: 347ca067a5ae5544351f29afe3ebcfe11d0b1e0f
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: ad4384f8cc2a1d0c15f8c7681e6e5d8bf75e4451
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57713253"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59343690"
 ---
 # <a name="how-to-add-buttons-to-a-toolbar-control"></a>방법: ToolBar 컨트롤에 단추 추가
 > [!NOTE]
@@ -29,9 +29,9 @@ ms.locfileid: "57713253"
   
 ### <a name="to-add-buttons-programmatically"></a>프로그래밍 방식으로 단추를 추가 하려면  
   
-1.  프로시저에서 추가 하 여 도구 모음 단추를 만들기는 <xref:System.Windows.Forms.ToolBar.Buttons%2A?displayProperty=nameWithType> 컬렉션입니다.  
+1. 프로시저에서 추가 하 여 도구 모음 단추를 만들기는 <xref:System.Windows.Forms.ToolBar.Buttons%2A?displayProperty=nameWithType> 컬렉션입니다.  
   
-2.  단추의 인덱스를 통해 전달 하 여 개별 단추에 대 한 속성 설정을 지정 합니다 <xref:System.Windows.Forms.ToolBar.Buttons%2A> 속성입니다.  
+2. 단추의 인덱스를 통해 전달 하 여 개별 단추에 대 한 속성 설정을 지정 합니다 <xref:System.Windows.Forms.ToolBar.Buttons%2A> 속성입니다.  
   
      아래 예제에서는 가정 된 폼을 <xref:System.Windows.Forms.ToolBar> 이미 추가 된 컨트롤입니다.  
   
@@ -149,8 +149,9 @@ ms.locfileid: "57713253"
     ```  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Windows.Forms.ToolBar>
-- [방법: 도구 모음 단추의 아이콘 정의](how-to-define-an-icon-for-a-toolbar-button.md)
-- [방법: Toolbar 단추의 메뉴 이벤트 트리거](how-to-trigger-menu-events-for-toolbar-buttons.md)
+- [방법: 도구 모음 단추에 대한 아이콘 정의](how-to-define-an-icon-for-a-toolbar-button.md)
+- [방법: Toolbar 단추에 대한 메뉴 이벤트 트리거](how-to-trigger-menu-events-for-toolbar-buttons.md)
 - [ToolBar 컨트롤 개요](toolbar-control-overview-windows-forms.md)
 - [ToolBar 컨트롤](toolbar-control-windows-forms.md)

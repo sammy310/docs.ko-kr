@@ -10,12 +10,12 @@ helpviewer_keywords:
 - XData in XAML [XAML Services]
 - x:XData XAML directive element [XAML Services]
 ms.assetid: 7ce209c2-621b-4977-b643-565f7e663534
-ms.openlocfilehash: 68468c3c10fd884cf5fb92160e3cde41dbf7d529
-ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
+ms.openlocfilehash: c8044bc341ded6ef7b03bbdf701e724654460d54
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58030270"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59125161"
 ---
 # <a name="xxdata-intrinsic-xaml-type"></a>x:XData 내장 XAML 형식
 XAML 프로덕션 내에서 XML 데이터 아일랜드 배치를 사용 하도록 설정 합니다. XML 요소 내에서 `x:XData` 것 처럼 기본 XAML 네임 스페이스의 일부 또는 모든 다른 XAML 네임 스페이스 XAML 프로세서에서 처리 되지 않아야 합니다. `x:XData` 임의의 올바른 형식의 XML을 포함할 수 있습니다.  
@@ -50,6 +50,7 @@ XAML 프로덕션 내에서 XML 데이터 아일랜드 배치를 사용 하도�
  기술적으로 보면 `x:XData` 형식의 모든 속성의 콘텐츠로 사용할 수 있습니다 <xref:System.Xml.Serialization.IXmlSerializable>합니다. 그러나 <xref:System.Windows.Data.XmlDataProvider.XmlSerializer%2A?displayProperty=nameWithType> 주로 사용 되는 구현입니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Windows.Data.XmlDataProvider>
 - [데이터 바인딩 개요](../wpf/data/data-binding-overview.md)
 - [Binding 태그 확장](../wpf/advanced/binding-markup-extension.md)

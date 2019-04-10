@@ -7,12 +7,12 @@ helpviewer_keywords:
 - controls [WPF], ScrollViewer
 - ScrollViewer control [WPF], how-to topics
 ms.assetid: 1e20804b-1d80-4b54-af41-76b3e10a6f89
-ms.openlocfilehash: 0bd8925e2449df7d86502ed3b12385eb6f786063
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: fcb7809c1025997a0e78647c32590e1abee865ce
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57367144"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59229416"
 ---
 # <a name="scrollviewer-how-to-topics"></a>ScrollViewer 방법 항목
 이 섹션의에서 항목에서는 사용 하는 방법을 보여 줍니다는 <xref:System.Windows.Controls.ScrollViewer> 응용 프로그램에서 스크롤 가능한 영역을 만드는 요소입니다.  
@@ -28,5 +28,6 @@ ms.locfileid: "57367144"
  <xref:System.Windows.Controls.ScrollViewer>  
   
 ## <a name="see-also"></a>참고자료
-- [패널 개요](panels-overview.md)
+
+- [Panel 개요](panels-overview.md)
 - [레이아웃](../advanced/layout.md)

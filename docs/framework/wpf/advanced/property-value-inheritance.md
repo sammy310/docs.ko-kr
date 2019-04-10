@@ -6,18 +6,16 @@ helpviewer_keywords:
 - value inheritance [WPF]
 - properties [WPF], value inheritance
 ms.assetid: d7c338f9-f2bf-48ed-832c-7be58ac390e4
-ms.openlocfilehash: 64cafbe2f6044c83600ef227608dee24b29e3943
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 48543d2cfc11fc33dff6239cdfd7bfcd946e986a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57359884"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59186831"
 ---
 # <a name="property-value-inheritance"></a>속성 값 상속
 속성 값 상속은 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 속성 시스템의 기능입니다. 속성 값 상속을 통해 요소 트리의 자식 요소가 부모 요소에서 특정 속성 값을 얻어 가장 근접한 부모 요소의 아무 곳에서나 설정되었을 때 해당 값을 상속합니다. 부모 요소는 속성 값 상속을 통해 값을 얻었을 수 있으므로 시스템이 완전히 페이지 루트로 되돌아갈 수 있습니다. 속성 값 상속은 기본 속성 시스템 동작이 아닙니다. 속성이 자식 요소에서 속성 값 상속을 시작하게 하려면 특정 메타데이터 설정을 사용하여 속성을 설정해야 합니다.  
-  
 
-  
 <a name="Property_Value_Inheritance_is_Containment_Inheritance"></a>   
 ## <a name="property-value-inheritance-is-containment-inheritance"></a>속성 값 상속은 포함 상속임  
  여기서 "상속"이라는 용어는 파생 클래스가 기본 클래스에서 멤버 정의를 상속하는 형식 및 일반적인 개체 지향 프로그램의 컨텍스트에서 사용하는 상속과 완전히 같은 개념은 아닙니다. 해당 상속의 의미는 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]에서도 유효합니다. 다양한 기본 클래스에 정의되는 속성은 요소로 사용될 때 파생 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 클래스의 특성으로 표시되고 코드의 멤버로 표시됩니다. 속성 값 상속의 경우 특히 요소 트리 내의 부모-자식 관계에 따라 요소 간에 속성 값을 상속하는 방식이 영향을 미칩니다. 해당 요소 트리는 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 태그에서 애플리케이션을 정의할 때 요소 내부에 다른 요소를 중첩할 경우 대부분 직접 표시됩니다. 다른 개체의 지정된 컬렉션에 개체를 추가하여 개체 트리를 프로그래밍 방식으로 만들 수도 있고 속성 값 상속은 런타임에 완료된 트리에서 동일한 방식으로 수행됩니다.  
@@ -42,6 +40,7 @@ ms.locfileid: "57359884"
  속성 상속은 요소 트리를 통과하는 방식으로 수행됩니다. 이 트리는 일반적으로 논리 트리와 비슷합니다. 그러나 포함 하는 경우 WPF 핵심 수준 개체와 같은 요소 트리를 정의 하는 태그에는 <xref:System.Windows.Media.Brush>, 불연속적인 논리 트리를 만들었습니다. 실제 논리적 트리를 통해 개념적으로 확장 되지 않습니다는 <xref:System.Windows.Media.Brush>논리적 트리는 WPF 프레임 워크 수준 개념 이기 때문입니다. 메서드를 사용 하는 경우 결과에 반영이 나타나면 <xref:System.Windows.LogicalTreeHelper>합니다. 그러나 속성 값 상속 논리 트리에서 이러한 차이 극복 하는 수 고으로 상속 가능한 속성이 연결된 된 속성 없습니다 의도적인 상속 차단 경계와 등록 된 상속 된 값을 전달할 수 있습니다 ( 는같은<xref:System.Windows.Controls.Frame>)가 발생 했습니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [종속성 속성 메타데이터](dependency-property-metadata.md)
 - [연결된 속성 개요](attached-properties-overview.md)
 - [종속성 속성 값 우선 순위](dependency-property-value-precedence.md)

@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: e53b029c-9d6d-4c0a-9cdc-5cfca8a5ca47
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d5d778ca30aa29ba883552f97e061fb1dde8d73e
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 89e8ddf9ea72db63c72bfb5393709b4c20de2a14
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55287583"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59163002"
 ---
 # <a name="event-element-net-native"></a>\<이벤트 > 요소 (.NET 네이티브)
 런타임 리플렉션 정책을 이벤트에 적용합니다.  
@@ -59,6 +59,7 @@ ms.locfileid: "55287583"
  이벤트의 정책이 명시적으로 정의되어 있지 않으면 부모 요소의 런타임 정책을 상속합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [런타임 지시문(rd.xml) 구성 파일 참조](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
 - [런타임 지시문 요소](../../../docs/framework/net-native/runtime-directive-elements.md)
 - [런타임 지시문 정책 설정](../../../docs/framework/net-native/runtime-directive-policy-settings.md)

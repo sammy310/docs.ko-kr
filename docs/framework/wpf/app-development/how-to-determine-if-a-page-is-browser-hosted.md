@@ -1,5 +1,5 @@
 ---
-title: '방법: 브라우저에서 호스팅되는 페이지 인지 확인 합니다.'
+title: '방법: 페이지가 브라우저에 호스트되는지 여부 확인'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - hosted pages in browser [WPF]
 - pages [WPF], hosted in browser
 ms.assetid: 737e0f26-8371-49b4-9579-70879e51e1aa
-ms.openlocfilehash: ebc5612f059a6cf26f2568bbc08e705b4b3014c1
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: d154de2f885101d1bd0c4613dfb1604be8acbe6a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57359993"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59107148"
 ---
-# <a name="how-to-determine-if-a-page-is-browser-hosted"></a>방법: 브라우저에서 호스팅되는 페이지 인지 확인 합니다.
+# <a name="how-to-determine-if-a-page-is-browser-hosted"></a>방법: 페이지가 브라우저에 호스트되는지 여부 확인
 확인 하는 방법을 보여 주는이 예제는 <xref:System.Windows.Controls.Page> 브라우저에서 호스팅됩니다.  
   
 ## <a name="example"></a>예제  
@@ -27,5 +27,6 @@ ms.locfileid: "57359993"
  [!code-vb[HOWTOBrowserInteropHelperSnippets#IsBrowserHostedCODE](~/samples/snippets/visualbasic/VS_Snippets_Wpf/HOWTOBrowserInteropHelperSnippets/visualbasic/page1.xaml.vb#isbrowserhostedcode)]  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Windows.Controls.Frame>
 - <xref:System.Windows.Controls.Page>

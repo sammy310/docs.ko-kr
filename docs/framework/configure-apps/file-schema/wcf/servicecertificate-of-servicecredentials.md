@@ -1,13 +1,13 @@
 ---
-title: <serviceCertificate>의 <serviceCredentials>
+title: <serviceCertificate> / <serviceCredentials>
 ms.date: 03/30/2017
 ms.assetid: 597ae6d5-4938-4950-9f5e-b2280e816182
-ms.openlocfilehash: bd2d59218ce40639ac04aa7c5cc157fe37eb9937
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 086b700b94198aa36e61289178ebbed75d33da98
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57373805"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59173565"
 ---
 # <a name="servicecertificate-of-servicecredentials"></a>\<serviceCertificate >의 \<serviceCredentials >
 메시지 보안 모드를 사용하는 클라이언트에 대한 서비스를 인증하는 데 사용할 X.509 인증서를 지정합니다.  
@@ -55,6 +55,7 @@ ms.locfileid: "57373805"
  요소를 사용 하는 방법에 대 한 자세한 내용은 참조 하세요. [방법: 클라이언트 자격 증명 값 지정](../../../../../docs/framework/wcf/how-to-specify-client-credential-values.md)합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.ServiceModel.Configuration.X509RecipientCertificateServiceElement>
 - <xref:System.ServiceModel.Configuration.ServiceCredentialsElement.ServiceCertificate%2A>
 - <xref:System.ServiceModel.Security.X509CertificateRecipientServiceCredential>

@@ -1,17 +1,17 @@
 ---
-title: <memoryCache> 요소(캐시 설정)
+title: <memoryCache> 요소 (캐시 설정)
 ms.date: 03/30/2017
 helpviewer_keywords:
 - <memoryCache> element
 - caching [.NET Framework], configuration
 - memoryCache element
 ms.assetid: 182a622f-f7cf-472d-9d0b-451d2fd94525
-ms.openlocfilehash: 25e87aa9fa4e56c5042eb25c41f6cfe1b65aea24
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: dbb46e7cf2580635add9d3100c8177c99cbae6bd
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55266379"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59126817"
 ---
 # <a name="memorycache-element-cache-settings"></a>\<memoryCache > 요소 (캐시 설정)
 <xref:System.Runtime.Caching.MemoryCache> 클래스를 기반으로 하는 캐시 구성에 사용되는 요소를 정의합니다. <xref:System.Runtime.Caching.Configuration.MemoryCacheElement> 클래스는 캐시를 구성하는 데 사용할 수 있는 [memoryCache](../../../../../docs/framework/configure-apps/file-schema/runtime/memorycache-element-cache-settings.md) 요소를 정의합니다. <xref:System.Runtime.Caching.MemoryCache> 클래스의 여러 인스턴스를 단일 애플리케이션에서 사용할 수 있습니다. 구성 파일의 각 `memoryCache` 요소에는 명명된 <xref:System.Runtime.Caching.MemoryCache> 인스턴스의 설정을 포함할 수 있습니다.  
@@ -31,7 +31,7 @@ ms.locfileid: "55266379"
 ```  
   
 ## <a name="type"></a>형식  
- <xref:System.Runtime.Caching.MemoryCache> 클래스.  
+ <xref:System.Runtime.Caching.MemoryCache> 포함됩니다.  
   
 ## <a name="attributes-and-elements"></a>특성 및 요소  
  다음 섹션에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
@@ -91,6 +91,7 @@ ms.locfileid: "55266379"
 ```  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Runtime.Caching.MemoryCache>
 - [\<system.runtime.caching > 요소 (캐시 설정)](../../../../../docs/framework/configure-apps/file-schema/runtime/system-runtime-caching-element-cache-settings.md)
 - [\<namedCaches > 요소 (캐시 설정)](../../../../../docs/framework/configure-apps/file-schema/runtime/namedcaches-element-cache-settings.md)

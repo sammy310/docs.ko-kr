@@ -10,12 +10,12 @@ helpviewer_keywords:
 - aligning [WPF], TileBrushes
 - horizontal alignment of Tilebrushes [WPF]
 ms.assetid: 65ae89bd-9246-4c9e-bde4-2fb991d4060d
-ms.openlocfilehash: d18e4a9fe4f99c1947402c252082e1580a0b22cc
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: ddef63bba7fce1bfb8d50b4f2dbaaddfa76709ce
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57352557"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59149190"
 ---
 # <a name="how-to-set-the-horizontal-and-vertical-alignment-of-a-tilebrush"></a>방법: TileBrush의 가로 및 세로 맞춤 설정
 이 예제에서는 타일에서 콘텐츠의 가로 및 세로 맞춤을 제어하는 방법을 보여 줍니다. 가로 및 세로 맞춤을 제어 하는 <xref:System.Windows.Media.TileBrush>를 사용 하 여 해당 <xref:System.Windows.Media.TileBrush.AlignmentX%2A> 및 <xref:System.Windows.Media.TileBrush.AlignmentY%2A> 속성입니다.  
@@ -73,6 +73,7 @@ ms.locfileid: "57352557"
  예제에서는 사용 <xref:System.Windows.Media.DrawingBrush> 보여 주기 위해 개체 하는 방법을 <xref:System.Windows.Media.TileBrush.AlignmentX%2A> 및 <xref:System.Windows.Media.TileBrush.AlignmentY%2A> 속성이 사용 됩니다. 이러한 속성은 모든 타일 브러시에 대 한 동일 하 게 작동 합니다. <xref:System.Windows.Media.DrawingBrush>, <xref:System.Windows.Media.ImageBrush>, 및 <xref:System.Windows.Media.VisualBrush>합니다. 타일 브러시에 대한 자세한 내용은 [이미지, 그림 및 시각적 표시로 그리기](painting-with-images-drawings-and-visuals.md)를 참조하세요.  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Windows.Media.DrawingBrush>
 - <xref:System.Windows.Media.ImageBrush>
 - <xref:System.Windows.Media.VisualBrush>

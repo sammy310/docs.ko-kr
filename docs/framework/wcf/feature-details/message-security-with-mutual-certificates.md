@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 99d7a528-7ae4-4d39-a0f9-3066ea237de0
-ms.openlocfilehash: 51795007b906a6eb71e5e03b4afef2fc83328b28
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8fc8d6d4a63b7a752fb8c26991d904761fdcebdd
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54593344"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59076024"
 ---
 # <a name="message-security-with-mutual-certificates"></a>상호 인증서를 사용하는 메시지 보안
 다음 시나리오에는 Windows Communication Foundation (WCF) 서비스 및 메시지 보안 모드를 사용 하 여 보호 하는 클라이언트를 보여 줍니다. 클라이언트 및 서비스는 인증서를 사용하여 인증됩니다.  
@@ -45,7 +45,7 @@ ms.locfileid: "54593344"
  [!code-csharp[C_SecurityScenarios#13](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#13)]
  [!code-vb[C_SecurityScenarios#13](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#13)]  
   
-### <a name="configuration"></a>구성하기  
+### <a name="configuration"></a>구성  
  다음 구성은 동일한 서비스를 만드는 데 코드 대신 사용할 수 있습니다.  
   
 ```xml  
@@ -95,7 +95,7 @@ ms.locfileid: "54593344"
   
 -   이 코드와 클라이언트 코드를 사용하여 독립 실행형 클라이언트를 만듭니다.  
   
--   엔드포인트 주소를 정의하지 않는 클라이언트를 만듭니다. 대신 구성 이름을 인수로 사용하는 클라이언트 생성자를 사용합니다. 예를 들면 다음과 같습니다.  
+-   엔드포인트 주소를 정의하지 않는 클라이언트를 만듭니다. 대신 구성 이름을 인수로 사용하는 클라이언트 생성자를 사용합니다. 예를 들어:  
   
      [!code-csharp[C_SecurityScenarios#0](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#0)]
      [!code-vb[C_SecurityScenarios#0](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#0)]  
@@ -106,7 +106,7 @@ ms.locfileid: "54593344"
  [!code-csharp[C_SecurityScenarios#20](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#20)]
  [!code-vb[C_SecurityScenarios#20](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#20)]  
   
-### <a name="configuration"></a>구성하기  
+### <a name="configuration"></a>구성  
  다음과 같이 클라이언트를 구성합니다. 클라이언트 인증서를 사용 하 여 지정 해야 합니다 [ \<clientCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/clientcertificate-of-clientcredentials-element.md)합니다. 또한 사용 하 여 서비스 인증서는 지정 된 [ \<defaultCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/defaultcertificate-element.md)합니다.  
   
 ```xml  
@@ -159,6 +159,7 @@ ms.locfileid: "54593344"
 ```  
   
 ## <a name="see-also"></a>참고자료
+
 - [보안 개요](../../../../docs/framework/wcf/feature-details/security-overview.md)
-- [Windows Server appfabric 보안 모델](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+- [Windows Server AppFabric 보안 모델](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
 - [방법: 만들기 및 개발 중 전송 보안에 대 한 WCF에서 임시 인증서 설치](https://go.microsoft.com/fwlink/?LinkId=244264)

@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - controls [WPF], listed by category
 ms.assetid: f8a1f78e-d9fa-4367-9ec6-f084577e83bb
-ms.openlocfilehash: cf9a06c4604ee71e3e98de22c6729cc4a874e741
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 26488b76608aa46b56285581e7368bf24f8b1be7
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57375573"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59127844"
 ---
 # <a name="controls-by-category"></a>컨트롤 범주
 Windows Presentation Foundation (WPF) 컨트롤은 논리적으로 여러 범주로 그룹화 할 수 있습니다. 이러한 범주를 사용하면 유사한 사용 패턴 또는 기능이 있는 컨트롤을 볼 수 있으므로 시나리오에 적절한 컨트롤을 선택할 수 있습니다.  
@@ -140,7 +140,7 @@ Windows Presentation Foundation (WPF) 컨트롤은 논리적으로 여러 범주
 -   <xref:System.Windows.Controls.ToolTip>  
   
 ## <a name="documents"></a>문서  
- [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]에는 문서를 보는 데 필요한 여러 가지 특수 컨트롤이 포함되어 있습니다. 이러한 컨트롤은 대상 사용자 시나리오를 기반으로 읽기 환경을 최적화합니다.  
+ [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 문서 보기에 대 한 몇 가지 특수 컨트롤이 포함 되어 있습니다. 이러한 컨트롤은 대상 사용자 시나리오를 기반으로 읽기 환경을 최적화합니다.  
   
 -   <xref:System.Windows.Controls.DocumentViewer>  
   
@@ -162,7 +162,7 @@ Windows Presentation Foundation (WPF) 컨트롤은 논리적으로 여러 범주
 -   <xref:System.Windows.Controls.PasswordBox>  
   
 ## <a name="media"></a>미디어  
- [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]에는 가장 인기있는 이미지 형식을 위한 [코덱]뿐만 아니라 오디오 및 비디오 콘텐츠 호스팅을 위한 통합 지원이 포함되어 있습니다.  
+ [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 가장 인기 있는 이미지 형식 [코덱] 뿐만 아니라 오디오 및 비디오 콘텐츠 호스팅을 위한 통합된 지원이 포함 되어 있습니다.  
   
 -   <xref:System.Windows.Controls.Image>  
   
@@ -178,4 +178,5 @@ Windows Presentation Foundation (WPF) 컨트롤은 논리적으로 여러 범주
 -   <xref:System.Windows.Controls.InkPresenter>  
   
 ## <a name="see-also"></a>참고자료
+
 - [컨트롤 라이브러리](control-library.md)

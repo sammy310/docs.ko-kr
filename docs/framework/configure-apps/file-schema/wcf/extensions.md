@@ -2,12 +2,12 @@
 title: <extensions>
 ms.date: 03/30/2017
 ms.assetid: bcfe5c44-04ef-4a20-96a5-90bfadf39623
-ms.openlocfilehash: feac4999438a67043899eef98bb8b49644ee30d9
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: bb0df4535560a509d6e3511815196c126a95d0c7
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55270019"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59205253"
 ---
 # <a name="extensions"></a>\<extensions>
 이 구성 요소에는 표준 검색 가능 메타데이터(EPR, ContractTypeName, BindingName, Scope 및 ListenURI)와 함께 게시되는 사용자 지정 메타데이터를 포함하는 XML 요소의 컬렉션이 포함됩니다. 다음은 이 구성 요소를 사용하는 예제입니다.  
@@ -46,4 +46,5 @@ ms.locfileid: "55270019"
 ```  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.ServiceModel.Discovery.EndpointDiscoveryBehavior>

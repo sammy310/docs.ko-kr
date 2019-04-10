@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: f2a21e3a-3b6c-4433-97f3-47ff16855ecc
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 309570fb5a159d24f5b423d96fd9987ee3bb886f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: caacee591c4df8389cea241916618f50da56b22b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54503315"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59119134"
 ---
 # <a name="thread-pool-etw-events"></a>스레드 풀 ETW 이벤트
 <a name="top"></a> 이러한 이벤트는 작업자 스레드 및 I/O 스레드에 대한 정보를 수집합니다.  
@@ -216,4 +216,5 @@ ms.locfileid: "54503315"
 |ClrInstanceID|Win:UInt16|CLR 또는 CoreCLR 인스턴스에 대한 고유 ID입니다.|  
   
 ## <a name="see-also"></a>참고자료
+
 - [CLR ETW 이벤트](../../../docs/framework/performance/clr-etw-events.md)

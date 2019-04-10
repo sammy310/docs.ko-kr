@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: f612fa5b-4b62-4593-a19e-85c9b1018dce
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b0cb166f2753b910465aabb8abd68c31c6f56ff8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a7cba2bd1dd5b83e29c7a6c192a1a7e5e2d33ecc
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54497540"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59076482"
 ---
 # <a name="stack-etw-event"></a>스택 ETW 이벤트
 스택 이벤트는 이벤트가 발생한 후 스택 추적을 생성하기 위해 다른 이벤트와 함께 사용해야 합니다. 런타임 공급자가 사용하도록 설정된 경우에 기록됩니다. 다른 런타임 이벤트가 발생할 때마다 이벤트가 발생하기 때문에 빈도가 매우 높은 이벤트입니다. 이러한 이유로 이 이벤트를 사용할 때는 주의하는 것이 좋습니다.  
@@ -21,7 +21,7 @@ ms.locfileid: "54497540"
   
 |이벤트를 발생시키기 위한 키워드|수준|  
 |-----------------------------------|-----------|  
-|`StackKeyword`(0x40000000)|LogAlways(0)|  
+|`StackKeyword` (0x40000000)|LogAlways(0)|  
   
  다음 표에서는 이벤트 정보를 보여 줍니다.  
   
@@ -40,4 +40,5 @@ ms.locfileid: "54497540"
 |스택|win:Pointer|명령 포인터의 열입니다.|  
   
 ## <a name="see-also"></a>참고자료
+
 - [CLR ETW 이벤트](../../../docs/framework/performance/clr-etw-events.md)

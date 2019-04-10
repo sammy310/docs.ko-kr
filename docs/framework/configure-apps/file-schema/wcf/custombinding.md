@@ -2,12 +2,12 @@
 title: <customBinding>
 ms.date: 03/30/2017
 ms.assetid: 9da4f960-f64e-4d8a-894d-2b09eba5ce4b
-ms.openlocfilehash: 0754991fe8a427dbaaa2b7fbafe4387e6bc6df2a
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 9ed5f25a9297edc5f921305edc009edf5076672b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57366675"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59159746"
 ---
 # <a name="custombinding"></a>\<customBinding>
 
@@ -292,7 +292,6 @@ ms.locfileid: "57366675"
 
 사용자 지정 시스템 제공 바인딩을 수정 하는 바인딩을 사용 하는 방법에 대 한 논의 참조 하세요. [방법: 시스템 제공 바인딩 사용자 지정](../../../../../docs/framework/wcf/extending/how-to-customize-a-system-provided-binding.md)합니다.
 
-
 ## <a name="see-also"></a>참고자료
 
 - <xref:System.ServiceModel.Channels.Binding>
@@ -301,7 +300,7 @@ ms.locfileid: "57366675"
 - <xref:System.ServiceModel.Channels.CustomBinding>
 - [\<binding>](../../../../../docs/framework/misc/binding.md)
 - [바인딩](../../../../../docs/framework/wcf/bindings.md)
-- [바인딩 확장](../../../../../docs/framework/wcf/extending/extending-bindings.md)
+- [바인딩 확장명](../../../../../docs/framework/wcf/extending/extending-bindings.md)
 - [사용자 지정 바인딩](../../../../../docs/framework/wcf/extending/custom-bindings.md)
 - [customBinding 요소](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)
 - [바인딩](../../../../../docs/framework/wcf/bindings.md)

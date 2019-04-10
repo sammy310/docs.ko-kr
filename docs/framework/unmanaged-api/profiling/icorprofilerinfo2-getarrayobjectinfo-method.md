@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 7fe86fbe7ee51e5f53eeea74d7d5a56046de5e00
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 5276c69da05cedcd3195a09da12ddc5b2d0fed67
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57484396"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59201275"
 ---
 # <a name="icorprofilerinfo2getarrayobjectinfo-method"></a>ICorProfilerInfo2::GetArrayObjectInfo 메서드
 배열 개체에 대 한 자세한 정보를 가져옵니다.  
@@ -52,7 +52,7 @@ HRESULT GetArrayObjectInfo(
  [out] 배열 차원의 바인딩된 아래쪽을 나타내는 각 정수를 포함 하는 배열입니다.  
   
  `ppData`  
- [out] C + + 규칙에 따라 배치 되는 배열에 대해 원시 버퍼의 주소에 대 한 포인터입니다.  
+ [out] 에 따라 배치 되는 배열에 대해 원시 버퍼의 주소에 대 한 포인터를 C++ 규칙입니다.  
   
 ## <a name="remarks"></a>설명  
  합니다 `pDimensionSizes` 고 `pDimensionLowerBounds` 병렬 배열 되므로 각 배열에 있는 동일한 인덱스에 있는 요소는 동일한 엔터티의 특성입니다.  
@@ -67,5 +67,6 @@ HRESULT GetArrayObjectInfo(
  **.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>참고자료
+
 - [ICorProfilerInfo 인터페이스](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
 - [ICorProfilerInfo2 인터페이스](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-interface.md)

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 0c08cac6fd6b467fe365989cb4d6780325bdaa90
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: c9dac5ae2f0f77c7b6d2dbd7f908f3552823735b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57501619"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59109605"
 ---
 # <a name="inotifyconnection2registernotifysource-method"></a>INotifyConnection2::RegisterNotifySource 메서드
 지정 된 알림 소스를 설치합니다.  
@@ -51,6 +51,7 @@ HRESULT RegisterNotifySource
  **헤더:** ProtocolNotify2.idl  
   
 ## <a name="see-also"></a>참고자료
+
 - [INotifyConnection2 인터페이스](../../../../docs/framework/unmanaged-api/diagnostics/inotifyconnection2-interface.md)
 - [INotifySource2 인터페이스](../../../../docs/framework/unmanaged-api/diagnostics/inotifysource2-interface.md)
 - [INotifySink2 인터페이스](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-interface.md)

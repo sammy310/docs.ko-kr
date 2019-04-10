@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 28876047-58bd-4fed-9452-c7da346d67c0
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4dc09f3e8cb926d31b21f0cc2a6442c7a6b8dec9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4bdb2035906b9383342201017b58d1d0050113b5
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54714782"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59084559"
 ---
 # <a name="invalidoverlappedtopinvoke-mda"></a>invalidOverlappedToPinvoke MDA
 `invalidOverlappedToPinvoke` MDA(관리 디버깅 도우미)는 가비지 수집 힙에서 만들어지지 않은 겹치는 포인터가 특정 Win32 함수에 전달되면 활성화됩니다.  
@@ -32,7 +32,7 @@ ms.locfileid: "54714782"
   
  다음 표에서는 이 MDA가 추적하는 함수를 보여 줍니다.  
   
-|Module|기능|  
+|Module|함수|  
 |------------|--------------|  
 |HttpApi.dll|`HttpReceiveHttpRequest`|  
 |IpHlpApi.dll|`NotifyAddrChange`|  
@@ -62,7 +62,7 @@ ms.locfileid: "54714782"
   
  `An overlapped pointer (0x00ea3430) that was not allocated on the GC heap was passed via Pinvoke to the Win32 function 'WriteFile' in module 'KERNEL32.DLL'. If the AppDomain is shut down, this can cause heap corruption when the async I/O completes. The best solution is to pass a NativeOverlapped structure retrieved from a call to System.Threading.Overlapped.Pack(). If the AppDomain exits, the CLR will keep this structure alive and pinned until the I/O completes.`  
   
-## <a name="configuration"></a>구성하기  
+## <a name="configuration"></a>구성  
   
 ```xml  
 <mdaConfig>  
@@ -73,6 +73,7 @@ ms.locfileid: "54714782"
 ```  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Runtime.InteropServices.MarshalAsAttribute>
 - [관리 디버깅 도우미를 사용하여 오류 진단](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
-- [interop 마샬링](../../../docs/framework/interop/interop-marshaling.md)
+- [Interop 마샬링](../../../docs/framework/interop/interop-marshaling.md)

@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - clients [WCF], architecture
 ms.assetid: f60d9bc5-8ade-4471-8ecf-5a07a936c82d
-ms.openlocfilehash: d67da4cedc4bd9bad468197db4a2ad60d054894a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5cb73dfeaac4f1c23724dc71b0f1f5d07fd28b5b
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54492600"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59312334"
 ---
 # <a name="wcf-client-overview"></a>WCF 클라이언트 개요
 이 섹션에서는 클라이언트 응용 프로그램에 수행할 작업, 구성, 만들기 및 Windows Communication Foundation (WCF) 클라이언트를 사용 하는 방법 및 클라이언트 응용 프로그램을 보호 하는 방법을 설명 합니다.  
@@ -20,13 +20,13 @@ ms.locfileid: "54492600"
 ## <a name="using-wcf-client-objects"></a>WCF 클라이언트 개체 사용  
  클라이언트 응용 프로그램을 다른 응용 프로그램을 사용 하 여 통신 하는 WCF 클라이언트를 사용 하는 응용 프로그램을 관리 되는 경우 클라이언트를 만들려면 WCF 서비스에 대 한 응용 프로그램에는 다음 단계가 필요 합니다.  
   
-1.  서비스 엔드포인트에 대한 서비스 계약, 바인딩 및 주소 정보를 가져옵니다.  
+1. 서비스 엔드포인트에 대한 서비스 계약, 바인딩 및 주소 정보를 가져옵니다.  
   
-2.  해당 정보를 사용 하 여 WCF 클라이언트를 만듭니다.  
+2. 해당 정보를 사용 하 여 WCF 클라이언트를 만듭니다.  
   
-3.  작업을 호출합니다.  
+3. 작업을 호출합니다.  
   
-4.  WCF 클라이언트 개체를 닫습니다.  
+4. WCF 클라이언트 개체를 닫습니다.  
   
  다음 단원에서는 이러한 단계에 대해 설명하고 다음과 같은 문제를 간략하게 소개합니다.  
   
@@ -172,5 +172,6 @@ End Interface
  WCF 클라이언트 형식은 확장 <xref:System.ServiceModel.ClientBase%601>에서 파생 되는 <xref:System.ServiceModel.IClientChannel?displayProperty=nameWithType> 기본 채널 시스템을 노출 하는 인터페이스입니다. <xref:System.ServiceModel.ChannelFactory%601?displayProperty=nameWithType> 클래스와의 대상 서비스 계약을 사용하여 서비스를 호출할 수 있습니다. 자세한 내용은 참조 하세요 [WCF 클라이언트 아키텍처](../../../docs/framework/wcf/feature-details/client-architecture.md)합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.ServiceModel.ClientBase%601?displayProperty=nameWithType>
 - <xref:System.ServiceModel.ChannelFactory%601?displayProperty=nameWithType>

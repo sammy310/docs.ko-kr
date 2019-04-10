@@ -2,12 +2,12 @@
 title: 데이터 바인딩 및 LINQ to DataSet
 ms.date: 03/30/2017
 ms.assetid: 310bff4a-32dd-4f20-a271-6dbd82912631
-ms.openlocfilehash: 91349de3b12b45e645ad4080c9fc972f28c669ca
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b081a648023aa21eea3a20ec409600d3bcbe9878
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54655779"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59073561"
 ---
 # <a name="data-binding-and-linq-to-dataset"></a>데이터 바인딩 및 LINQ to DataSet
 *데이터 바인딩* 응용 프로그램 UI와 비즈니스 논리 사이의 연결을 설정 하는 프로세스입니다. 바인딩 설정이 올바르고 데이터가 적절한 알림을 제공하는 경우 데이터 값이 변경될 때 데이터에 바인딩된 요소에 변경 사항이 자동으로 반영됩니다. <xref:System.Data.DataSet>은 포함된 데이터 소스에 관계없이 일관성 있는 관계형 프로그래밍 모델을 제공하는 데이터의 메모리 내 표현입니다. ADO.NET 2.0 <xref:System.Data.DataView>는 <xref:System.Data.DataTable>에 저장된 데이터를 정렬하고 필터링하는 데 사용됩니다. 이 기능은 데이터 바인딩 응용 프로그램에서 자주 사용됩니다. <xref:System.Data.DataView>를 사용하여 테이블의 데이터를 여러 정렬 순서로 노출시킬 수 있으며, 행 상태에 따라 또는 필터 식을 기준으로 데이터를 필터링할 수 있습니다. 에 대 한 자세한 내용은 합니다 <xref:System.Data.DataView> 개체를 참조 하십시오 [Dataview](../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataviews.md)합니다.  
@@ -36,4 +36,5 @@ ms.locfileid: "54655779"
  <xref:System.Data.DataView> 개체를 <xref:System.Windows.Forms.DataGridView>에 바인딩하는 방법을 설명합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [프로그래밍 가이드](../../../../docs/framework/data/adonet/programming-guide-linq-to-dataset.md)

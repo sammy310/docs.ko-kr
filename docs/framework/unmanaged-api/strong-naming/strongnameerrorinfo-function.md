@@ -20,12 +20,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b3d7555ec5b87957ff1c8e085a4c3ac44c660b0c
-ms.sourcegitcommit: af0a22a4eb11bbcd33baec49150d551955b50a16
+ms.openlocfilehash: 909c283b1355153ffe1aa02acfbe8acc25a7e215
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56260818"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59124100"
 ---
 # <a name="strongnameerrorinfo-function"></a>StrongNameErrorInfo 함수
 강력한 이름 함수 중 하나에 의해 발생하는 마지막 오류 코드를 가져옵니다.  
@@ -52,4 +52,3 @@ HRESULT StrongNameErrorInfo ();
  **라이브러리:** MsCorEE.dll에 리소스로 포함  
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
-  

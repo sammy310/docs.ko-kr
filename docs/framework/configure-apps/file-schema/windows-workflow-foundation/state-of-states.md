@@ -1,14 +1,14 @@
 ---
-title: <state>의 <states>
+title: <state> / <states>
 ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: ab483c7f-a091-4933-ba6b-708d96846d38
-ms.openlocfilehash: 657814eb120878cdc71cd7603d0499ff65ca50e8
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: ff75895949c50cd369e4297ea77dc21106994067
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57367091"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59073938"
 ---
 # <a name="state-of-states"></a>\<상태 >의 \<상태 >
 추적 레코드를 내보내야 할 구독된 활동의 상태를 포함하는 구성 요소입니다.  
@@ -77,6 +77,7 @@ ms.locfileid: "57367091"
 ```  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.ServiceModel.Activities.Tracking.Configuration.StateElement?displayProperty=nameWithType>
 - <xref:System.Activities.Tracking.ActivityStateQuery?displayProperty=nameWithType>
 - [워크플로 추적](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)

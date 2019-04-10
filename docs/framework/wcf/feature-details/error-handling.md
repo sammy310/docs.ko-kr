@@ -2,12 +2,12 @@
 title: 오류 처리
 ms.date: 03/30/2017
 ms.assetid: c948841a-7db9-40ae-9b78-587d216cbcaf
-ms.openlocfilehash: ddc3921fbb6b453db43ed3939134650395ade670
-ms.sourcegitcommit: af0a22a4eb11bbcd33baec49150d551955b50a16
+ms.openlocfilehash: 34f4f11176b3827ec3e4622944ffe02be5207df9
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56261155"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59300283"
 ---
 # <a name="error-handling"></a>오류 처리
 ## <a name="error-handling-in-windows-communication-foundation"></a>Windows Communication Foundation의 오류 처리  
@@ -34,15 +34,15 @@ ms.locfileid: "56261155"
   
  IErrorHandler를 사용하면 예외가 throw될 때의 응용 프로그램 동작을 명시적으로 제어할 수 있습니다. 다음 작업을 수행할 수 있습니다.  
   
-1.  클라이언트에 오류를 보낼지 여부를 결정합니다.  
+1. 클라이언트에 오류를 보낼지 여부를 결정합니다.  
   
-2.  예외를 오류로 바꿉니다.  
+2. 예외를 오류로 바꿉니다.  
   
-3.  오류를 다른 오류로 바꿉니다.  
+3. 오류를 다른 오류로 바꿉니다.  
   
-4.  로깅 또는 추적을 수행합니다.  
+4. 로깅 또는 추적을 수행합니다.  
   
-5.  다른 사용자 지정 작업을 수행합니다.  
+5. 다른 사용자 지정 작업을 수행합니다.  
   
  사용자 지정 오류 처리기를 서비스 채널 디스패처의 ErrorHandlers 속성에 추가하여 오류 처리기를 설치할 수 있습니다.  오류 처리기를 둘 이상 설치할 수 있으며 오류 처리기는 오류 처리기 컬렉션에 추가된 순서대로 호출됩니다.  
   
@@ -68,4 +68,5 @@ ms.locfileid: "56261155"
  오류 처리기를 설치하여 다른 디스패치 오류 유형과 동일한 방법으로 형식 변환 디스패치 오류를 검사할 수 있습니다. 서비스 수준 예외를 처리하기 위해 IErrorHandler 확장성 지점이 호출됩니다. 이때 호출자에게 전송될 응답을 선택하고 사용자 지정 작업 및 보고를 수행할 수 있습니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [기본 WCF 프로그래밍](../basic-wcf-programming.md)

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 708dd1e13fd999f9a3a11ce36248e82c15000bfc
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 6cba7b4a34835eb2f394aa71be8b907973cb1cd6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57479053"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59204720"
 ---
 # <a name="iclrgcmanager2setgcstartuplimitsex-method"></a>ICLRGCManager2::SetGCStartupLimitsEx 메서드
 가비지 수집 세그먼트의 크기 및 가비지 컬렉션 시스템의 0 세대의 최대 크기를 설정합니다.  
@@ -73,7 +73,8 @@ HRESULT SetGCStartupLimitsEx (
  **.NET Framework 버전:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
 ## <a name="see-also"></a>참고자료
-- [자동 메모리 관리](../../../../docs/standard/automatic-memory-management.md)
-- [가비지 수집](../../../../docs/standard/garbage-collection/index.md)
+
+- [Automatic Memory Management](../../../../docs/standard/automatic-memory-management.md)
+- [가비지 컬렉션](../../../../docs/standard/garbage-collection/index.md)
 - [ICLRControl 인터페이스](../../../../docs/framework/unmanaged-api/hosting/iclrcontrol-interface.md)
 - [ICLRGCManager2 인터페이스](../../../../docs/framework/unmanaged-api/hosting/iclrgcmanager2-interface.md)

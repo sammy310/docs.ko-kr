@@ -12,12 +12,12 @@ helpviewer_keywords:
 - x:Null markup extension [XAML Services]
 - XAML [XAML Services], x:Null markup extension
 ms.assetid: 2e3ccc21-4996-481d-91b5-3910d8b3bfa3
-ms.openlocfilehash: 34a2de71bec9b0929070aa908741de38b5904643
-ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
+ms.openlocfilehash: e46d8561b62d9137d4fed4df447338a97fc0577b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58029367"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59100810"
 ---
 # <a name="xnull-markup-extension"></a>x:Null 태그 확장
 지정 `null` XAML 멤버에 대 한 값으로.  
@@ -45,6 +45,7 @@ ms.locfileid: "58029367"
  `null` 반드시 참조 형식 종속성 속성의 초기 설정 되지 않은 값이 아닙니다. 초기 기본값 각 종속성 속성에 대해 다를 수 있습니다 및 속성별 메타 데이터에 기반 할 수 있습니다. 대부분의 종속성 속성을 받지 않는 `null` 태그 또는 유효성 검사 콜백 구현으로 인해 코드를 통해 값으로. 종속성 속성에 대 한 자세한 내용은 참조 하세요. [종속성 속성 개요](../wpf/advanced/dependency-properties-overview.md)합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Windows.DependencyProperty.UnsetValue>
 - [XAML 개요(WPF)](../wpf/advanced/xaml-overview-wpf.md)
-- [태그 확장 및 WPF XAML](../wpf/advanced/markup-extensions-and-wpf-xaml.md)
+- [태그 확장명 및 WPF XAML](../wpf/advanced/markup-extensions-and-wpf-xaml.md)

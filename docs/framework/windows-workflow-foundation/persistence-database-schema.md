@@ -2,12 +2,12 @@
 title: 지속성 데이터베이스 스키마
 ms.date: 03/30/2017
 ms.assetid: 34f69f4c-df81-4da7-b281-a525a9397a5c
-ms.openlocfilehash: 2c8d74413be64cdf88f7f1821c3678b2bcd2e2b1
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 38df4b3d629840f1b5def2eafa0d074a2b2397a2
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43515260"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59331067"
 ---
 # <a name="persistence-database-schema"></a>지속성 데이터베이스 스키마
 이 항목에서는 SQL 워크플로 인스턴스 저장소에서 지원하는 공용 뷰에 대해 설명합니다.  
@@ -30,7 +30,7 @@ ms.locfileid: "43515260"
 |ExecutionStatus|Nvarchar(450)|워크플로의 현재 실행 상태를 나타냅니다. 가능한 상태로 **Executing**, **Idle**를 **닫힘**합니다.|  
 |IsInitialized|비트|워크플로 인스턴스가 초기화되었는지 여부를 나타냅니다. 초기화된 워크플로 인스턴스는 한 번 이상 유지된 워크플로 인스턴스입니다.|  
 |IsSuspended|비트|워크플로 인스턴스가 일시 중단되었는지 여부를 나타냅니다.|  
-|IsCompleted|비트|워크플로 인스턴스의 실행이 완료되었는지 여부를 나타냅니다. **참고:** Iif 합니다 **InstanceCompletionAction** 속성이로 설정 되어 **DeleteAll**, 인스턴스가 완료 되 면 보기에서 제거 합니다.|  
+|IsCompleted|비트|워크플로 인스턴스의 실행이 완료되었는지 여부를 나타냅니다. **참고:**  Iif 합니다 **InstanceCompletionAction** 속성이 **DeleteAll**, 인스턴스가 완료 되 면 보기에서 제거 합니다.|  
 |EncodingOption|TinyInt|데이터 속성을 serialize하는 데 사용된 인코딩에 대해 설명합니다.<br /><br /> -0 – 인코딩하지 않고<br />-1 – GzipStream|  
 |ReadWritePrimitiveDataProperties|Varbinary(max)|인스턴스가 로드될 때 워크플로 런타임에 다시 제공될 serialize된 인스턴스 데이터 속성을 포함합니다.<br /><br /> 각각의 기본 속성은 네이티브 CLR 형식이며, 이는 blob를 deserialize하는 데 특별한 어셈블리가 필요하지 않음을 의미합니다.|  
 |WriteOnlyPrimitiveDataProperties|Varbinary(max)|인스턴스가 로드될 때 워크플로 런타임에 다시 제공되지 않는 serialize된 인스턴스 데이터 속성을 포함합니다.<br /><br /> 각각의 기본 속성은 네이티브 CLR 형식이며, 이는 blob를 deserialize하는 데 특별한 어셈블리가 필요하지 않음을 의미합니다.|  
@@ -40,7 +40,7 @@ ms.locfileid: "43515260"
 |IdentityPackage|Nvarchar(max)|워크플로가 만들어질 때 지정된 패키지 정보입니다(예:어셈블리 이름).|  
 |빌드|BigInt|워크플로 버전의 빌드 번호입니다.|  
 |주요함|BigInt|워크플로 버전의 주 번호입니다.|  
-|사소함|BigInt|워크플로 버전의 부 번호입니다.|  
+|부|BigInt|워크플로 버전의 부 번호입니다.|  
 |Revision|BigInt|워크플로 버전의 개정 번호입니다.|  
   
 > [!CAUTION]
@@ -60,9 +60,9 @@ ms.locfileid: "43515260"
   
  ServiceDeployments 뷰에는 삭제 트리거도 포함되어 있습니다. 적절한 사용 권한을 가진 사용자는 이 뷰에 대해 삭제 문을 실행하여 데이터베이스에서 ServiceDeployment 항목을 제거할 수 있습니다. 다음 사항에 유의합니다.  
   
-1.  이 뷰에서 항목을 삭제하려면 먼저 전체 데이터베이스를 잠궈야 하므로 이 작업은 부담이 되는 작업입니다. 이 작업은 워크플로 인스턴스가 존재하지 않는 ServiceDeployment 항목을 참조하는 일이 발생하지 않게 하려는 경우 필요합니다. 다운 시간이나 유지 관리 창에 있는 동안에만 이 뷰에서 삭제하는 작업을 수행하기 바랍니다.  
+1. 이 뷰에서 항목을 삭제하려면 먼저 전체 데이터베이스를 잠궈야 하므로 이 작업은 부담이 되는 작업입니다. 이 작업은 워크플로 인스턴스가 존재하지 않는 ServiceDeployment 항목을 참조하는 일이 발생하지 않게 하려는 경우 필요합니다. 다운 시간이나 유지 관리 창에 있는 동안에만 이 뷰에서 삭제하는 작업을 수행하기 바랍니다.  
   
-2.  항목에서 참조 하는 ServiceDeployment 행을 삭제 하려고 합니다 **인스턴스** 보기 하면 작동 하지 않습니다. 참조가 없는 ServiceDeployment 행만 삭제할 수 있습니다.  
+2. 항목에서 참조 하는 ServiceDeployment 행을 삭제 하려고 합니다 **인스턴스** 보기 하면 작동 하지 않습니다. 참조가 없는 ServiceDeployment 행만 삭제할 수 있습니다.  
   
 ## <a name="instancepromotedproperties-view"></a>InstancePromotedProperties 뷰  
  합니다 **InstancePromotedProperties** 뷰는 사용자가 지정한 모든 승격된 속성에 대 한 정보를 포함 합니다. 승격된 속성은 사용자가 인스턴스를 검색할 때 쿼리에 사용할 수 있는 고급 속성 역할을 합니다.  예를 들어, 사용자의 주문의 비용을 항상 저장 하는 PurchaseOrder 승격을를 추가할 수는 **Value1** 열입니다. 그러면 사용자는 가격이 특정 값을 초과하는 모든 구매 주문을 쿼리할 수 있습니다.  

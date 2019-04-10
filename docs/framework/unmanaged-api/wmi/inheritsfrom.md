@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 078950b4e46ea587c2f39986963ec129f4ec1f1e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0d2af1b41f47a3906c0e573c104847aa3ff36cf8
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54618385"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59158433"
 ---
 # <a name="inheritsfrom-function"></a>InheritsFrom 함수
 현재 클래스 또는 인스턴스가 지정된 부모 클래스에서 파생되는지 여부를 결정합니다.
@@ -57,7 +57,7 @@ HRESULT InheritsFrom (
 |---------|---------|---------|
 | `WBEM_S_NO_ERROR` | 0 | 현재 개체에서 상속 `wszAncestor`합니다.  |
 | `WBEM_S_FALSE` | 1 | 현재 개체에서 상속 되지 않는 `wszAncestor`합니다. |
-|`WBEM_E_INVALID_PARAMETER` | 0x80041008 | `wszAncestor`가 `null`인 경우 |
+|`WBEM_E_INVALID_PARAMETER` | 0x80041008 | `wszAncestor` `null`합니다. |
   
 ## <a name="remarks"></a>설명
 
@@ -71,4 +71,5 @@ HRESULT InheritsFrom (
  **.NET Framework 버전:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>참고자료
-- [WMI 및 성능 카운터 (관리 되지 않는 API 참조)](index.md)
+
+- [WMI 및 성능 카운터(관리되지 않는 API 참조)](index.md)

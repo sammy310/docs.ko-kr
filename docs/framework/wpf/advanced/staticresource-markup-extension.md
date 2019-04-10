@@ -8,12 +8,12 @@ helpviewer_keywords:
 - XAML [WPF], StaticResource markup extension
 - StaticResource markup extensions [WPF]
 ms.assetid: 97af044c-71f1-4617-9a94-9064b68185d2
-ms.openlocfilehash: f3fb2559510d85f6e55a4784f2b528f16737a2ab
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 8319e451268152e95326c02027157db72df631b8
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57371114"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59125148"
 ---
 # <a name="staticresource-markup-extension"></a>StaticResource 태그 확장
 에 대 한 값을 제공 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 이미 정의 된 리소스에 대 한 참조를 확인 하 여 속성 특성입니다. 해당 리소스에 대 한 조회 동작은 현재 태그에서 이전에 로드 된 리소스는 로드 시간 조회, 유사 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 페이지와 다른 응용 프로그램 소스 및 해당 리소스 값으로이 생성 되는 런타임 개체의 속성 값입니다.  
@@ -55,7 +55,7 @@ ms.locfileid: "57371114"
   
  `StaticResource` 개체 요소 구문에서 사용할 수 있습니다. 이 경우 값을 지정 하는 <xref:System.Windows.StaticResourceExtension.ResourceKey%2A> 속성이 필요 합니다.  
   
- `StaticResource` 속성을 다음과 같이 속성=값 쌍으로 지정하는 자세한 특성 사용 구문에도 <xref:System.Windows.StaticResourceExtension.ResourceKey%2A>을 사용할 수 있습니다.  
+ `StaticResource` 지정 하는 자세한 특성 사용 구문에 사용할 수는 <xref:System.Windows.StaticResourceExtension.ResourceKey%2A> 속성으로 속성 = 값 쌍:  
   
 ```xml  
 <object property="{StaticResource ResourceKey=key}" .../>  
@@ -66,11 +66,12 @@ ms.locfileid: "57371114"
   
  에 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 프로세서 구현에서이 태그 확장에 대 한 처리는 정의한는 <xref:System.Windows.StaticResourceExtension> 클래스입니다.  
   
- `StaticResource`은 태그 확장입니다. 태그 확장은 특성 값을 리터럴 값 또는 처리기 이름이 아닌 다른 값이 되도록 이스케이프해야 하는 요구 사항이 있는 경우 일반적으로 구현되며 이러한 요구 사항은 특정 형식 또는 속성에 형식 변환기를 배치하는 것보다 더 포괄적입니다. [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]의 모든 태그 확장은 특성 구문에서 { 및 } 문자를 사용합니다. 이러한 문자는 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 프로세서가 태그 확장이 특성을 처리해야 함을 인식하는 데 사용되는 규칙입니다. 자세한 내용은 [태그 확장 및 WPF XAML](markup-extensions-and-wpf-xaml.md)을 참조하세요.  
+ `StaticResource` 태그 확장입니다. 태그 확장은 특성 값을 리터럴 값 또는 처리기 이름이 아닌 다른 값이 되도록 이스케이프해야 하는 요구 사항이 있는 경우 일반적으로 구현되며 이러한 요구 사항은 특정 형식 또는 속성에 형식 변환기를 배치하는 것보다 더 포괄적입니다. [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]의 모든 태그 확장은 특성 구문에서 { 및 } 문자를 사용합니다. 이러한 문자는 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 프로세서가 태그 확장이 특성을 처리해야 함을 인식하는 데 사용되는 규칙입니다. 자세한 내용은 [태그 확장 및 WPF XAML](markup-extensions-and-wpf-xaml.md)을 참조하세요.  
   
 ## <a name="see-also"></a>참고자료
+
 - [스타일 지정 및 템플릿](../controls/styling-and-templating.md)
 - [XAML 개요(WPF)](xaml-overview-wpf.md)
-- [태그 확장 및 WPF XAML](markup-extensions-and-wpf-xaml.md)
+- [태그 확장명 및 WPF XAML](markup-extensions-and-wpf-xaml.md)
 - [XAML 리소스](xaml-resources.md)
 - [리소스 및 코드](resources-and-code.md)

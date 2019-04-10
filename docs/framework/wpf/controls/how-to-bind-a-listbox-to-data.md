@@ -6,12 +6,12 @@ helpviewer_keywords:
 - data binding [WPF], ListBox control
 - binding data [WPF], to ListBox control
 ms.assetid: de93a907-709a-44a7-84bf-578b846a3d8b
-ms.openlocfilehash: 2cbcb0fb859605c33e2d92559b4a47aa1725472c
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 4dea53a524247d18628b3e7e7b2c06906dced53d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57372883"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59106442"
 ---
 # <a name="how-to-bind-a-listbox-to-data"></a>방법: 데이터에 ListBox 바인딩
 응용 프로그램 개발자가 만들 수 있습니다 <xref:System.Windows.Controls.ListBox> 각각의 내용을 지정 하지 않고 컨트롤 <xref:System.Windows.Controls.ListBoxItem> 개별적으로 합니다. 개별 항목에 데이터를 바인딩할 데이터 바인딩을 사용할 수 있습니다.  
@@ -23,6 +23,7 @@ ms.locfileid: "57372883"
 [!code-xaml[ListBoxEvent#3](~/samples/snippets/csharp/VS_Snippets_Wpf/ListBoxEvent/CSharp/Pane1.xaml#3)]  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Windows.Controls.ListBox>
 - <xref:System.Windows.Controls.ListBoxItem>
 - [컨트롤](../advanced/optimizing-performance-controls.md)

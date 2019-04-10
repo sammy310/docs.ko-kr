@@ -2,12 +2,12 @@
 title: CASE(Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 26a47873-e87d-4ba2-9e2c-3787c21efe89
-ms.openlocfilehash: 9f41c99ab40a74a2c17e8dac207cc7887c77ba91
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e44f48d040fc77bf702759be0c53a618cd84f9fc
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54638929"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59334889"
 ---
 # <a name="case-entity-sql"></a>CASE(Entity SQL)
 `Boolean` 식 집합을 계산하여 결과를 결정합니다.  
@@ -29,13 +29,13 @@ END
  여러 WHEN `Boolean_expression` THEN `result_expression` 절을 사용할 수 있음을 나타내는 자리 표시자입니다.  
   
  THEN `result_expression`  
- `Boolean_expression` 이 `true`인 경우에 반환되는 식입니다. `result expression` 은 유효한 식입니다.  
+ `Boolean_expression` 이 `true`인 경우에 반환되는 식입니다. `result expression` 유효한 식이입니다.  
   
  ELSE `else_result_expression`  
- `true`인 비교 연산이 없는 경우 반환되는 식입니다. 이 인수가 생략되고 `true`인 비교 연산이 없는 경우 CASE는 null을 반환합니다. `else_result_expression` 은 유효한 식입니다. `else_result_expression` 과 `result_expression` 의 데이터 형식은 동일하거나 암시적으로 변환되어야 합니다.  
+ `true`인 비교 연산이 없는 경우 반환되는 식입니다. 이 인수가 생략되고 `true`인 비교 연산이 없는 경우 CASE는 null을 반환합니다. `else_result_expression` 유효한 식이입니다. `else_result_expression` 과 `result_expression` 의 데이터 형식은 동일하거나 암시적으로 변환되어야 합니다.  
   
  WHEN `Boolean_expression`  
- 검색된 CASE 형식을 사용할 때 계산되는 `Boolean` 식입니다. `Boolean_expression` 은 유효한 `Boolean` 식입니다.  
+ 검색된 CASE 형식을 사용할 때 계산되는 `Boolean` 식입니다. `Boolean_expression` 유효한 `Boolean` 식입니다.  
   
 ## <a name="return-value"></a>반환 값  
  `result_expression` 과 선택적 요소인 `else_result_expression`의 형식 집합에서 우선 순위가 가장 높은 형식을 반환합니다.  
@@ -50,13 +50,14 @@ END
 ## <a name="example"></a>예제  
  다음 Entity SQL 쿼리에서는 결과를 결정하기 위해 CASE 식을 사용하여 일련의 `Boolean` 식을 계산합니다. 쿼리는 AdventureWorks Sales 모델을 기반으로 합니다. 이 쿼리를 컴파일하고 실행하려면 다음 단계를 수행하세요.  
   
-1.  절차에 따라 [방법: PrimitiveType 결과 반환 하는 쿼리 실행](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-primitivetype-results.md)합니다.  
+1. 절차에 따라 [방법: PrimitiveType 결과 반환 하는 쿼리 실행](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-primitivetype-results.md)합니다.  
   
-2.  다음 쿼리를 `ExecutePrimitiveTypeQuery` 메서드에 인수로 전달합니다.  
+2. 다음 쿼리를 `ExecutePrimitiveTypeQuery` 메서드에 인수로 전달합니다.  
   
  [!code-csharp[DP EntityServices Concepts 2#CASE_WHEN_THEN_ELSE](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#case_when_then_else)]  
   
 ## <a name="see-also"></a>참고자료
+
 - [THEN](../../../../../../docs/framework/data/adonet/ef/language-reference/then-entity-sql.md)
-- [SELECT](../../../../../../docs/framework/data/adonet/ef/language-reference/select-entity-sql.md)
+- [선택](../../../../../../docs/framework/data/adonet/ef/language-reference/select-entity-sql.md)
 - [엔터티 SQL 참조](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)

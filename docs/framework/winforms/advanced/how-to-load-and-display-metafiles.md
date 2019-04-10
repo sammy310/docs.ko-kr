@@ -1,5 +1,5 @@
 ---
-title: '방법: 부하 및 메타 파일 표시'
+title: '방법: 메타파일 로드 및 표시'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - examples [Windows Forms], metafiles
 - metafiles [Windows Forms], displaying
 ms.assetid: 60af1714-f148-4d85-a739-0557965ffa73
-ms.openlocfilehash: 121f285a95d0169db79bdc302d80dba03b3b40c2
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 39b7251b2789c7410e1d59b4aa7990a2f73055fe
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57720045"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59229357"
 ---
-# <a name="how-to-load-and-display-metafiles"></a>방법: 부하 및 메타 파일 표시
+# <a name="how-to-load-and-display-metafiles"></a>방법: 메타파일 로드 및 표시
 <xref:System.Drawing.Imaging.Metafile> 클래스에서 상속 되는 <xref:System.Drawing.Image> 클래스, 기록, 표시 및 벡터 이미지 검사에 대 한 메서드를 제공 합니다.  
   
 ## <a name="example"></a>예제  
@@ -34,4 +34,5 @@ ms.locfileid: "57720045"
  앞의 예제는 Windows forms에서 사용하도록 설계되었으며 <xref:System.Windows.Forms.Control.Paint> 이벤트 처리기의 매개 변수인 <xref:System.Windows.Forms.PaintEventArgs> `e`가 필요합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [이미지, 비트맵, 아이콘 및 메타파일 사용](working-with-images-bitmaps-icons-and-metafiles.md)

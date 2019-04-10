@@ -8,12 +8,12 @@ helpviewer_keywords:
 - text [Windows Forms], drawing with tab stops
 - tabs [Windows Forms], drawn text
 ms.assetid: 64878f98-39ba-4303-b63f-0859ab682eeb
-ms.openlocfilehash: 76431d34504b40a299200693735a0a989127d683
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 68dbebfc4fab773fe749f9443d0c61883099d2ab
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58832309"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59197492"
 ---
 # <a name="how-to-set-tab-stops-in-drawn-text"></a>방법: 그린 텍스트에 탭 정지 설정
 호출 하 여 텍스트에 대 한 탭 정지를 설정할 수 있습니다는 <xref:System.Drawing.StringFormat.SetTabStops%2A> 메서드를 <xref:System.Drawing.StringFormat> 개체와 전달 하는 <xref:System.Drawing.StringFormat> 개체를 <xref:System.Drawing.Graphics.DrawString%2A> 메서드를 <xref:System.Drawing.Graphics> 클래스.  
@@ -38,5 +38,6 @@ ms.locfileid: "58832309"
 -   앞의 예제는 Windows Forms에서 사용 하도록 설계 되었으며 필요 <xref:System.Windows.Forms.PaintEventArgs> `e`의 매개 변수인 <xref:System.Windows.Forms.PaintEventHandler>합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [글꼴 및 텍스트 사용](using-fonts-and-text.md)
-- [방법: GDI 사용 하 여 텍스트 그리기](how-to-draw-text-with-gdi.md)
+- [방법: GDI를 사용하여 텍스트 그리기](how-to-draw-text-with-gdi.md)

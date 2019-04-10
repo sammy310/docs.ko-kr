@@ -1,5 +1,5 @@
 ---
-title: '방법: ScrollViewer가 있는 Expander 만들기'
+title: '방법: ScrollViewer를 사용하여 Expander 만들기'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - controls [WPF], Expander
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - Expander control [WPF], creating
 - controls [WPF], ScrollViewer
 ms.assetid: 2ad124d2-2406-4157-aaf2-64e067298f01
-ms.openlocfilehash: 9e7c023ec371dd6695ffba3368502e5b593c4608
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: ef0bc5d344f7d465de9209708430d3e61d40d4f7
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57369541"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59114652"
 ---
-# <a name="how-to-create-an-expander-with-a-scrollviewer"></a>방법: ScrollViewer가 있는 Expander 만들기
+# <a name="how-to-create-an-expander-with-a-scrollviewer"></a>방법: ScrollViewer를 사용하여 Expander 만들기
 만드는 방법을 보여 주는이 예제는 <xref:System.Windows.Controls.Expander> 이미지 및 텍스트와 같은 복잡 한 콘텐츠를 포함 하는 컨트롤입니다. 예제의 콘텐츠도 포함 합니다 <xref:System.Windows.Controls.Expander> 에 <xref:System.Windows.Controls.ScrollViewer> 제어 합니다.  
   
 ## <a name="example"></a>예제  
@@ -27,6 +27,7 @@ ms.locfileid: "57369541"
  [!code-csharp[ExpanderRichContent#CreateExpanderCode](~/samples/snippets/csharp/VS_Snippets_Wpf/ExpanderRichContent/CSharp/Window1.xaml.cs#createexpandercode)]  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Windows.Controls.Expander>
 - [Expander 개요](expander-overview.md)
 - [방법 항목](expander-how-to-topics.md)

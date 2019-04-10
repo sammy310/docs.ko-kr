@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b19e5ce88ea34188b2757d2a0c313341fbf1e7e6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c29656a4787c674886505a3be2508470460dfc10
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54604260"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59136528"
 ---
 # <a name="isymunmanagedmethod-interface"></a>ISymUnmanagedMethod 인터페이스
 기호 저장소 내의 메서드를 나타냅니다. 이 인터페이스는 기호 관련 특성만 형식 관련 특성 대신 메서드의 대 한 액세스를 제공합니다.  
@@ -39,10 +39,11 @@ ms.locfileid: "54604260"
 |[GetSequencePointCount 메서드](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-getsequencepointcount-method.md)|이 메서드 내에서 시퀀스 위치의 수를 가져옵니다.|  
 |[GetSequencePoints 메서드](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-getsequencepoints-method.md)|이 메서드 내에서 모든 시퀀스 위치를 가져옵니다.|  
 |[GetSourceStartEnd 메서드](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-getsourcestartend-method.md)|이 메서드의 원본에 대 한 시작 및 끝 문서 위치를 가져옵니다.|  
-|[GetToken 메서드](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-gettoken-method.md)|이 메서드에 대한 메타데이터 토큰을 반환합니다.|  
+|[GetToken 메서드](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-gettoken-method.md)|이 메서드에 대 한 메타 데이터 토큰을 반환합니다.|  
   
 ## <a name="requirements"></a>요구 사항  
  **헤더:** CorSym.idl, CorSym.h  
   
 ## <a name="see-also"></a>참고자료
+
 - [진단 기호 저장소 인터페이스](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)

@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC32098
 ms.assetid: bab05325-dde8-4621-a5f6-368b5b7b2d76
-ms.openlocfilehash: 974d2935e64151109b688f576229fb008b59b229
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: ba7348ae50965ffcf2719b20934451916c8fa95a
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58819803"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59296357"
 ---
 # <a name="type-parameters-cannot-be-used-as-qualifiers"></a>형식 매개 변수는 한정자로 사용할 수 없습니다.
 프로그래밍 요소가 형식 매개 변수를 포함 하는 한정 문자열 한정 됩니다.  
@@ -34,12 +34,12 @@ End Function
   
 ## <a name="to-correct-this-error"></a>이 오류를 해결하려면  
   
-1.  한정 문자열에서 형식 매개 변수를 제거 하거나 정의 된 형식으로 바꿉니다.  
+1. 한정 문자열에서 형식 매개 변수를 제거 하거나 정의 된 형식으로 바꿉니다.  
   
-2.  자격이 부여 되는 프로그래밍 요소를 찾기 위해 생성된 된 형식을 사용 하는 경우 추가 프로그램 논리를 사용 해야 합니다.  
+2. 자격이 부여 되는 프로그래밍 요소를 찾기 위해 생성된 된 형식을 사용 하는 경우 추가 프로그램 논리를 사용 해야 합니다.  
   
 ## <a name="see-also"></a>참고자료
 
-- [선언된 요소 참조](../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)
+- [References to Declared Elements](../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)
 - [Visual Basic의 제네릭 형식](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)
-- [형식 목록](../../../visual-basic/language-reference/statements/type-list.md)
+- [Type List](../../../visual-basic/language-reference/statements/type-list.md)

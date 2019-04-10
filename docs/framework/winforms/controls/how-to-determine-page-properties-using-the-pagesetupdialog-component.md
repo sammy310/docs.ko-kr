@@ -1,5 +1,5 @@
 ---
-title: '방법: PageSetupDialog 구성 요소를 사용 하 여 페이지 속성'
+title: '방법: PageSetupDialog 구성 요소를 사용하여 페이지 속성 설정'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - page setup
 - PageSetupDialog component
 ms.assetid: 6dae05bc-c0fd-4357-bb93-841a1631d98f
-ms.openlocfilehash: 482825c1e17811b31c3520a0280d7d0434489bf5
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 7c65eb54bb95b9a20cd1e43f0d491af47985f2e0
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57713204"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59329208"
 ---
-# <a name="how-to-determine-page-properties-using-the-pagesetupdialog-component"></a>방법: PageSetupDialog 구성 요소를 사용 하 여 페이지 속성
+# <a name="how-to-determine-page-properties-using-the-pagesetupdialog-component"></a>방법: PageSetupDialog 구성 요소를 사용하여 페이지 속성 설정
 [PageSetupDialog](pagesetupdialog-component-windows-forms.md) 구성 요소는 문서의 사용자에게 레이아웃, 용지 크기 및 기타 페이지 레이아웃 옵션을 표시합니다.  
   
  <xref:System.Drawing.Printing.PrintDocument> 클래스의 인스턴스를 지정해야 합니다(인쇄할 문서). 또한 사용자 컴퓨터에 로컬로 또는 네트워크를 통해 프린터가 설치되어 있어야 합니다. 부분적으로 이것이 <xref:System.Windows.Forms.PageSetupDialog> 구성 요소가 사용자에게 표시되는 페이지 서식 지정 옵션을 결정하는 방법이기 때문입니다.  
@@ -26,7 +26,7 @@ ms.locfileid: "57713204"
   
 ### <a name="to-set-page-properties-using-the-pagesetupdialog-component"></a>PageSetupDialog 구성 요소를 사용하여 페이지 속성을 설정하려면  
   
-1.  <xref:System.Windows.Forms.CommonDialog.ShowDialog%2A> 메서드를 사용하여 대화 상자를 표시하고, 사용할 <xref:System.Drawing.Printing.PrintDocument> 를 지정합니다.  
+1. <xref:System.Windows.Forms.CommonDialog.ShowDialog%2A> 메서드를 사용하여 대화 상자를 표시하고, 사용할 <xref:System.Drawing.Printing.PrintDocument> 를 지정합니다.  
   
      다음 예제에는 <xref:System.Windows.Forms.Button> 컨트롤의 <xref:System.Windows.Forms.Control.Click> 이벤트 처리기가 <xref:System.Windows.Forms.PageSetupDialog> 구성 요소의 인스턴스를 엽니다. <xref:System.Windows.Forms.PageSetupDialog.Document%2A> 속성에서 기존 문서가 지정되고, 해당 <xref:System.Drawing.Printing.PageSettings.Color%2A?displayProperty=nameWithType> 속성은 `false`로 설정됩니다.  
   
@@ -88,6 +88,7 @@ ms.locfileid: "57713204"
     ```  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Windows.Forms.PageSetupDialog>
 - [방법: 표준 Windows Forms 인쇄 작업 만들기](../advanced/how-to-create-standard-windows-forms-print-jobs.md)
 - [PageSetupDialog 구성 요소](pagesetupdialog-component-windows-forms.md)

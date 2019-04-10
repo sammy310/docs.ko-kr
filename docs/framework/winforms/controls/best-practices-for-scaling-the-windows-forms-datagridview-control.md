@@ -1,5 +1,5 @@
 ---
-title: Windows Forms DataGridView 컨트롤의 크기를 조정하는 최선의 방법
+title: Windows Forms DataGridView 컨트롤의 크기 조정에 대한 모범 사례
 ms.date: 03/30/2017
 helpviewer_keywords:
 - DataGridView control [Windows Forms], row sharing
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - best practices [Windows Forms], dataGridView control
 - DataGridView control [Windows Forms], scaling
 ms.assetid: 8321a8a6-6340-4fd1-b475-fa090b905aaf
-ms.openlocfilehash: 895dd132c070157355c28a935e43240f2750159e
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 76ac31e9082216d0024160c51a7495855eee5601
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57706419"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59142145"
 ---
-# <a name="best-practices-for-scaling-the-windows-forms-datagridview-control"></a>Windows Forms DataGridView 컨트롤의 크기를 조정하는 최선의 방법
+# <a name="best-practices-for-scaling-the-windows-forms-datagridview-control"></a>Windows Forms DataGridView 컨트롤의 크기 조정에 대한 모범 사례
 <xref:System.Windows.Forms.DataGridView> 컨트롤은 최대 확장성을 제공 하도록 설계 되었습니다. 많은 양의 데이터를 표시 해야 할 경우 많은 양의 메모리를 소비 하거나 (UI) 사용자 인터페이스의 응답성을 저하 시 키 지 않으려면이 항목에 설명 된 지침을 따라야 합니다. 이 항목에서는 다음과 같은 문제를 설명합니다.  
   
 -   셀 스타일을 효율적으로 사용  
@@ -136,10 +136,11 @@ ms.locfileid: "57706419"
 -   호출 하지 마십시오 합니다 `Sort(IComparer)` 오버 로드는 <xref:System.Windows.Forms.DataGridView.Sort%2A> 메서드. 사용자 지정 비교자를 사용 하 여 정렬 하면 모든 행의 공유가 됩니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Windows.Forms.DataGridView>
 - [Windows Forms DataGridView 컨트롤의 성능 조정](performance-tuning-in-the-windows-forms-datagridview-control.md)
 - [Windows Forms DataGridView 컨트롤의 가상 모드](virtual-mode-in-the-windows-forms-datagridview-control.md)
 - [Windows Forms DataGridView 컨트롤의 데이터 디스플레이 모드](data-display-modes-in-the-windows-forms-datagridview-control.md)
 - [Windows Forms DataGridView 컨트롤의 셀 스타일](cell-styles-in-the-windows-forms-datagridview-control.md)
-- [방법: Windows Forms DataGridView 컨트롤에 대 한 기본 셀 스타일 설정](how-to-set-default-cell-styles-for-the-windows-forms-datagridview-control.md)
+- [방법: Windows Forms DataGridView 컨트롤에 대한 기본 셀 스타일 설정](how-to-set-default-cell-styles-for-the-windows-forms-datagridview-control.md)
 - [Windows Forms DataGridView 컨트롤의 크기 조정 옵션](sizing-options-in-the-windows-forms-datagridview-control.md)

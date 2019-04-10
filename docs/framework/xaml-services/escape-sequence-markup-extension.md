@@ -11,14 +11,14 @@ helpviewer_keywords:
 - quotation mark (") [XAML Services]
 - escape sequence [XAML Services]
 ms.assetid: 3ce3e2ad-a868-43f9-9c98-b29561cb146e
-ms.openlocfilehash: eaee0a1f92d8b7cb3810651eda21f1cc800ebf57
-ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
+ms.openlocfilehash: 9f6743dd8a82891ac2233978550e5679130de0be
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58018543"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59182075"
 ---
-# <a name="-escape-sequence--markup-extension"></a>{} 이스케이프 시퀀스 / 태그 확장명
+# <a name="-escape-sequence--markup-extension"></a>{} 이스케이프 시퀀스/태그 확장명
 특성 값에 대 한 XAML 이스케이프 시퀀스를 제공합니다. 이스케이프 시퀀스는 리터럴로 해석 될 특성의 후속 값을 허용 합니다.  
   
 ## <a name="xaml-attribute-usage"></a>XAML 특성 사용  
@@ -59,5 +59,6 @@ ms.locfileid: "58018543"
  [!code-xaml[XLINQExample#StackPanelResources](~/samples/snippets/csharp/VS_Snippets_Wpf/XLinqExample/CSharp/Window1.xaml#stackpanelresources)]  
   
 ## <a name="see-also"></a>참고자료
-- [XAML을 위한 형식 변환기 및 태그 확장명](type-converters-and-markup-extensions-for-xaml.md)
+
+- [XAML을 위한 형식 변환기 및 태그 확장](type-converters-and-markup-extensions-for-xaml.md)
 - [XML 문자 엔터티 및 XAML](xml-character-entities-and-xaml.md)

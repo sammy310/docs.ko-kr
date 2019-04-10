@@ -3,15 +3,21 @@ title: 컬렉션 및 데이터 구조
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 helpviewer_keywords:
-  - grouping data in collections
-  - 'objects [.NET Framework], grouping in collections'
-  - 'Array class, grouping data in collections'
-  - 'threading [.NET Framework], safety'
-  - Collections classes
-  - 'collections [.NET Framework]'
+- grouping data in collections
+- objects [.NET Framework], grouping in collections
+- Array class, grouping data in collections
+- threading [.NET Framework], safety
+- Collections classes
+- collections [.NET Framework]
 ms.assetid: 60cc581f-1db5-445b-ba04-a173396bf872
 author: mairaw
 ms.author: mairaw
+ms.openlocfilehash: d6b9e3d3f5ebc122e2031dac5999a80445ee03a8
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59083843"
 ---
 # <a name="collections-and-data-structures"></a>컬렉션 및 데이터 구조
 비슷한 데이터는 컬렉션으로 저장 및 조작하면 보다 효율적으로 처리할 수 있는 경우가 많습니다. <xref:System.Array?displayProperty=nameWithType> 클래스 또는 <xref:System.Collections>, <xref:System.Collections.Generic> 및 <xref:System.Collections.Concurrent>, System.Collections.Immutable 네임스페이스의 클래스를 사용하여 컬렉션의 개별 요소 또는 일정 범위의 요소를 추가, 제거 및 수정할 수 있습니다.  
@@ -19,8 +25,7 @@ ms.author: mairaw
  컬렉션에는 제네릭 컬렉션과 제네릭이 아닌 컬렉션의 두 가지 기본 유형이 있습니다. .NET Framework 2.0에서 추가된 제네릭 컬렉션은 컴파일 타임에 형식이 안전한 컬렉션을 제공합니다. 이로 인해 제네릭 컬렉션은 일반적으로 성능이 더 뛰어납니다. 제네릭 컬렉션은 생성 시 형식 매개 변수를 허용하며, 컬렉션에서 항목을 추가하거나 제거할 때 <xref:System.Object> 형식과의 캐스팅을 수행하지 않아도 됩니다.  또한 대부분의 제네릭 컬렉션은 [!INCLUDE[win8_appstore_long](../../../includes/win8-appstore-long-md.md)] 앱에서 지원됩니다. 제네릭이 아닌 컬렉션은 항목을 <xref:System.Object>로 저장하며, 캐스팅을 수행해야 합니다. 또한 이러한 컬렉션은 대부분 [!INCLUDE[win8_appstore_long](../../../includes/win8-appstore-long-md.md)] 앱 개발용으로 지원되지 않습니다. 그러나 이전 코드에는 제네릭이 아닌 컬렉션이 포함되어 있는 경우도 있습니다.  
   
  [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)]부터 <xref:System.Collections.Concurrent> 네임스페이스의 컬렉션은 여러 스레드에서 컬렉션 항목에 액세스하기 위한 효율적이고 스레드로부터 안전한 작업을 제공합니다. System.Collections.Immutable 네임스페이스에서 사용되는 변경할 수 없는 컬렉션 클래스([NuGet 패키지](https://www.nuget.org/packages/System.Collections.Immutable))는 기본적으로 스레드로부터 안전합니다. 작업이 원본 컬렉션의 복사본에 대해 수행되며 원본 컬렉션은 수정할 수 없기 때문입니다.  
-  
-  
+
 <a name="BKMK_Commoncollectionfeatures"></a>   
 ## <a name="common-collection-features"></a>일반 컬렉션 기능  
  모든 컬렉션은 컬렉션의 항목 추가, 제거 또는 찾기를 위한 방법을 제공합니다. 또한 직접/간접적으로 <xref:System.Collections.ICollection> 인터페이스 또는 <xref:System.Collections.Generic.ICollection%601> 인터페이스 공유를 구현하는 모든 컬렉션은 다음 기능을 공유합니다.  
@@ -45,7 +50,7 @@ ms.author: mairaw
   
 -   **일관된 하한**  
   
-     컬렉션의 하한은 첫 번째 요소의 인덱스입니다. <xref:System.Collections> 네임스페이스의 모든 인덱싱된 컬렉션은 하한이 0입니다(0부터 인덱싱됨). <xref:System.Array>의 기본 하한은 0이지만 <xref:System.Array.CreateInstance%2A?displayProperty=nameWithType>를 사용하여 **Array** 클래스의 인스턴스를 만들 때 다른 하한을 정의할 수 있습니다.  
+     컬렉션의 하한은 첫 번째 요소의 인덱스입니다. <xref:System.Collections> 네임스페이스의 모든 인덱싱된 컬렉션은 하한이 0입니다(0부터 인덱싱됨). <xref:System.Array> 기본 하한은 0이지만 <xref:System.Array.CreateInstance%2A?displayProperty=nameWithType>를 사용하여 **Array** 클래스의 인스턴스를 만들 때 다른 하한을 정의할 수 있습니다.  
   
 -   **여러 스레드로부터의 액세스를 위한 동기화**(<xref:System.Collections> 클래스에만 해당됨).  
   

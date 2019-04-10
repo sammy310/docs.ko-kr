@@ -1,5 +1,5 @@
 ---
-title: '방법: 뷰의 데이터 정렬'
+title: '방법: 보기에서 데이터 정렬'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,14 +12,14 @@ helpviewer_keywords:
 - views [WPF], grouping data
 - sorting data in views [WPF]
 ms.assetid: f4c43578-01b7-4774-a953-acb95a13b94a
-ms.openlocfilehash: 41ee5cded04559acac5e7270c5e1a2450c70a5aa
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 32f73d3c3ba213778654f0d1ee7bbae16b9d845b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57377121"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59211259"
 ---
-# <a name="how-to-sort-data-in-a-view"></a>방법: 뷰의 데이터 정렬
+# <a name="how-to-sort-data-in-a-view"></a>방법: 보기에서 데이터 정렬
 이 예제에는 뷰에서 데이터를 정렬 하는 방법을 설명 합니다.  
   
 ## <a name="example"></a>예제  
@@ -37,8 +37,9 @@ ms.locfileid: "57377121"
  정렬 논리를 적용 하는 방법의 예 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]를 참조 하세요 [정렬 및 그룹 데이터를 XAML에서 뷰를 사용 하 여](how-to-sort-and-group-data-using-a-view-in-xaml.md)입니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Windows.Data.ListCollectionView.CustomSort%2A>
-- [헤더를 클릭하면 GridView 열 정렬](../controls/how-to-sort-a-gridview-column-when-a-header-is-clicked.md)
+- [머리글 클릭 시 GridView 열 정렬](../controls/how-to-sort-a-gridview-column-when-a-header-is-clicked.md)
 - [데이터 바인딩 개요](data-binding-overview.md)
-- [뷰에서 데이터 필터링](how-to-filter-data-in-a-view.md)
+- [보기에서 데이터 필터링](how-to-filter-data-in-a-view.md)
 - [방법 항목](data-binding-how-to-topics.md)

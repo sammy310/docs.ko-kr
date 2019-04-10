@@ -2,12 +2,12 @@
 title: LINQ to SQL의 보안
 ms.date: 03/30/2017
 ms.assetid: d49787f7-414e-4c71-aa33-80a5895536b1
-ms.openlocfilehash: 7730419509cd0c3530813734a98f777ddf9d9f04
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6af073a86b0feaba2fdcd9facd9474bb334096e7
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54625681"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59078146"
 ---
 # <a name="security-in-linq-to-sql"></a>LINQ to SQL의 보안
 데이터베이스에 연결할 때는 항상 보안 위험이 따릅니다. LINQ to SQL에서는 SQL Server에서 데이터를 사용하는 여러 가지 새로운 방법을 제공하지만 추가적인 보안 메커니즘은 지원하지 않습니다.  
@@ -34,5 +34,6 @@ ms.locfileid: "54625681"
 -   모든 연결 문자열의 수명과 접근할 수 있는 지점을 최소화합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [배경 정보](../../../../../../docs/framework/data/adonet/sql/linq/background-information.md)
 - [질문과 대답](../../../../../../docs/framework/data/adonet/sql/linq/frequently-asked-questions.md)

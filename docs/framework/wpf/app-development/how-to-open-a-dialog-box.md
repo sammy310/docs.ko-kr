@@ -1,5 +1,5 @@
 ---
-title: '방법: 대화 상자를 엽니다'
+title: '방법: 대화 상자 열기'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - opening dialog boxes [WPF]
 - dialog boxes [WPF], opening
 ms.assetid: 6b1557d2-da98-4ef4-9f68-4089f04ab9ea
-ms.openlocfilehash: 1182e22ad40b49ee13832c51986662373f36ee35
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 70ac31285dd22244b4bd6ad0d188d182eb6e6264
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57351985"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59084989"
 ---
-# <a name="how-to-open-a-dialog-box"></a>방법: 대화 상자를 엽니다
+# <a name="how-to-open-a-dialog-box"></a>방법: 대화 상자 열기
 이 예제에서는 대화 상자를 엽니다.  
   
 ## <a name="example"></a>예제  
@@ -28,4 +28,5 @@ ms.locfileid: "57351985"
  호출 <xref:System.Windows.Window.ShowDialog%2A> 모든 창과 사용자 입력된 이벤트를 제한 없이 사용할 수 있는 권한이 필요 합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [대화 상자 결과 반환](how-to-return-a-dialog-box-result.md)

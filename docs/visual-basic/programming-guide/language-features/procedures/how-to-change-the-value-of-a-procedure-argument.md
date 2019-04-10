@@ -13,12 +13,12 @@ helpviewer_keywords:
 - arguments [Visual Basic], ByRef
 - arguments [Visual Basic], changing value
 ms.assetid: 6fad2368-5da7-4c07-8bf8-0f4e65a1be67
-ms.openlocfilehash: 6aee795fefe36c2ad19390c0ac6d1613b2199415
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: a56bdf888163c9559b87e857abb33522c547ed45
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58837502"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59316624"
 ---
 # <a name="how-to-change-the-value-of-a-procedure-argument-visual-basic"></a>방법: (Visual Basic) 프로시저 인수의 값 변경
 프로시저를 호출 하는 경우 각 인수를 제공 하는 프로시저에 정의 된 매개 변수 중 하나에 해당 합니다. 일부 경우에 프로시저 코드 호출 코드에서 인수를 기본 값을 변경할 수 있습니다. 절차는 다른 경우에만 인수로의 자체 로컬 복사본을 변경할 수 있습니다.  
@@ -31,13 +31,13 @@ ms.locfileid: "58837502"
   
 #### <a name="to-change-the-underlying-value-of-a-procedure-argument-in-the-calling-code"></a>프로시저 인수를 호출 하는 코드의 기본 값을 변경 하려면  
   
-1.  프로시저 선언에서 지정할 [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md) 인수에 해당 하는 매개 변수에 대 한 합니다.  
+1. 프로시저 선언에서 지정할 [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md) 인수에 해당 하는 매개 변수에 대 한 합니다.  
   
-2.  호출 코드에서 수정할 수 있는 프로그래밍 요소를 인수로 전달 합니다.  
+2. 호출 코드에서 수정할 수 있는 프로그래밍 요소를 인수로 전달 합니다.  
   
-3.  호출 코드에서 인수 목록의 괄호 안에 인수를 묶지 않습니다.  
+3. 호출 코드에서 인수 목록의 괄호 안에 인수를 묶지 않습니다.  
   
-4.  프로시저 코드에서 매개 변수 이름을 사용 하 여 호출 하는 코드의 내부 요소에 값을 할당 합니다.  
+4. 프로시저 코드에서 매개 변수 이름을 사용 하 여 호출 하는 코드의 내부 요소에 값을 할당 합니다.  
   
  예제를 참조 하세요 데모를 추가 합니다.  
   
@@ -46,13 +46,13 @@ ms.locfileid: "58837502"
   
 #### <a name="to-change-the-copy-of-a-procedure-argument-in-the-procedure-code"></a>프로시저 코드에서 프로시저 인수의 복사본을 변경 하려면  
   
-1.  프로시저 선언에서 지정할 [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md) 인수에 해당 하는 매개 변수에 대 한 합니다.  
+1. 프로시저 선언에서 지정할 [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md) 인수에 해당 하는 매개 변수에 대 한 합니다.  
   
      또는  
   
      호출 코드에서 인수 목록의 괄호 안에 인수를 묶습니다. 해당 매개 변수를 지정 하는 경우에 Visual Basic에서 값으로 인수를 전달 합니다. 이렇게 하면 `ByRef`합니다.  
   
-2.  프로시저 코드에서 매개 변수 이름을 사용 하 여 로컬 복사본 인수에 값을 할당 합니다. 호출 코드에서 기본 값이 변경 되지 않습니다.  
+2. 프로시저 코드에서 매개 변수 이름을 사용 하 여 로컬 복사본 인수에 값을 할당 합니다. 호출 코드에서 기본 값이 변경 되지 않습니다.  
   
 ## <a name="example"></a>예제  
  다음 예제에서는 요소를 사용 하는 배열 변수를 받아 두 프로시저를 보여 줍니다. `increase` 프로시저 단순히 각 요소에 1을 추가 합니다. 합니다 `replace` 프로시저 매개 변수는 새 배열을 할당 `a()` 다음 각 요소에 하나를 추가 합니다.  
@@ -83,9 +83,9 @@ ms.locfileid: "58837502"
 - [프로시저 매개 변수 및 인수](./procedure-parameters-and-arguments.md)
 - [방법: 프로시저에 인수 전달](./how-to-pass-arguments-to-a-procedure.md)
 - [값 또는 참조로 인수 전달](./passing-arguments-by-value-and-by-reference.md)
-- [수정할 수 있는 인수와 수정할 수 없는 인수 사이의 차이점](./differences-between-modifiable-and-nonmodifiable-arguments.md)
+- [수정할 수 있는 인수와 수정할 수 없는 인수의 차이점](./differences-between-modifiable-and-nonmodifiable-arguments.md)
 - [인수를 값으로 전달할 때와 참조로 전달할 때의 차이점](./differences-between-passing-an-argument-by-value-and-by-reference.md)
-- [방법: 값 변경에 대해 프로시저 인수 보호](./how-to-protect-a-procedure-argument-against-value-changes.md)
-- [방법: 인수가 값으로 전달 되도록 설정](./how-to-force-an-argument-to-be-passed-by-value.md)
+- [방법: 값 변경으로부터 프로시저 인수 보호](./how-to-protect-a-procedure-argument-against-value-changes.md)
+- [방법: 인수가 값으로 전달되도록 설정](./how-to-force-an-argument-to-be-passed-by-value.md)
 - [위치 및 이름으로 인수 전달](./passing-arguments-by-position-and-by-name.md)
 - [Value Types and Reference Types](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)

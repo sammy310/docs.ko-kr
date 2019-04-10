@@ -1,5 +1,5 @@
 ---
-title: '방법: 사용 하 여 적중 테스트 영역'
+title: '방법: 영역에 적중 테스트 사용'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - hit tests [Windows Forms], using regions
 - regions [Windows Forms], hit testing
 ms.assetid: 3a4c07cb-a40a-4d14-ad35-008f531910a8
-ms.openlocfilehash: a9435724e7674fd196ad70bdfd0ab43808a53058
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 136f15f1364fb2aed791b4a61d0f11411b055967
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57709748"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59150503"
 ---
-# <a name="how-to-use-hit-testing-with-a-region"></a>방법: 사용 하 여 적중 테스트 영역
+# <a name="how-to-use-hit-testing-with-a-region"></a>방법: 영역에 적중 테스트 사용
 적중 횟수 테스트의 목적은 커서 아이콘 단추 등의 지정 된 개체에 대해 인지 여부를 확인 합니다.  
   
 ## <a name="example"></a>예제  
@@ -25,9 +25,10 @@ ms.locfileid: "57709748"
  [!code-vb[System.Drawing.MiscLegacyTopics#31](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.MiscLegacyTopics/VB/Class1.vb#31)]  
   
 ## <a name="compiling-the-code"></a>코드 컴파일  
- 앞의 예제는 Windows forms에서 사용하도록 설계되었으며 <xref:System.Windows.Forms.PaintEventHandler>의 매개 변수인 <xref:System.Windows.Forms.PaintEventArgs> `e`가 필요합니다.  
+ 앞의 예제는 Windows Forms에서 사용 하도록 설계 되었으며 필요 <xref:System.Windows.Forms.PaintEventArgs> `e`의 매개 변수인 <xref:System.Windows.Forms.PaintEventHandler>합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Drawing.Region>
 - [GDI+의 영역](regions-in-gdi.md)
-- [방법: 클리핑 영역 사용](how-to-use-clipping-with-a-region.md)
+- [방법: 영역에 클리핑 사용](how-to-use-clipping-with-a-region.md)

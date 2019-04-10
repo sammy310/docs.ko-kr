@@ -1,17 +1,17 @@
 ---
-title: Docker 앱에 대 한 내부 루프 개발 워크플로
+title: Docker 앱을 위한 내부 루프 개발 워크플로
 description: Docker 응용 프로그램의 개발에 대 한 "내부 루프" 워크플로를 알아봅니다.
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 02/15/2019
-ms.openlocfilehash: 1ed0feeec682f5a79bc38db6a101b751ea4dbc3a
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: 36fcf5769376375854c2a2631e26e8b136df0de6
+ms.sourcegitcommit: a3db1a9eafca89f95ccf361bc1833b47fbb2bb30
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57676670"
+ms.lasthandoff: 04/04/2019
+ms.locfileid: "58920911"
 ---
-# <a name="inner-loop-development-workflow-for-docker-apps"></a>Docker 앱에 대 한 내부 루프 개발 워크플로
+# <a name="inner-loop-development-workflow-for-docker-apps"></a>Docker 앱을 위한 내부 루프 개발 워크플로
 
 전체 DevOps에 걸쳐 루프 외부 워크플로 트리거하기 전에 주기, 각 개발자의 컴퓨터에서 해당 앱을 코딩, 해당 기본 설정된 언어 또는 플랫폼을 사용 하 여 및 로컬로 테스트 하 고 (그림 4-21) 시작 하는 것입니다. 있지만 모든 경우에서 해야는 중요 한 점은 공통적으로 선택 하는 언어, 프레임 워크 또는 플랫폼에 관계 없이 합니다. 이 특정 워크플로에서 항상을 개발 하 고 Docker 컨테이너를 로컬로 테스트 합니다.
 
@@ -105,7 +105,7 @@ Docker 확장을 설치 하려면 Ctrl + Shift + P를 눌러 입력 `ext install
 
 **그림 4-24** Docker 파일을 사용 하 여 추가 된 **작업 영역 명령에 Docker 추가 파일**
 
-사용할 기본 Docker 이미지를 지정 하는 DockerFile에 추가 하면 (사용 하 여 같은 `FROM microsoft/aspnetcore`). 일반적으로 사용자 지정 이미지에서 공식 리포지토리에서 얻을 수 있는 기본 이미지를 기반으로 빌드할 합니다 [Docker Hub 레지스트리에서](https://hub.docker.com/) (같은 [.NET Core에 대 한 이미지](https://hub.docker.com/r/microsoft/dotnet/) 나 [Node.js용](https://hub.docker.com/_/node/)).
+사용할 기본 Docker 이미지를 지정 하는 DockerFile에 추가 하면 (사용 하 여 같은 `FROM mcr.microsoft.com/dotnet/core/aspnet`). 일반적으로 사용자 지정 이미지에서 공식 리포지토리에서 얻을 수 있는 기본 이미지를 기반으로 빌드할 합니다 [Docker Hub 레지스트리에서](https://hub.docker.com/) (같은 [.NET Core에 대 한 이미지](https://hub.docker.com/_/microsoft-dotnet-core/) 나 [Node.js용](https://hub.docker.com/_/node/)).
 
 ***기존 공식 Docker 이미지를 사용 하 여***
 
@@ -115,7 +115,7 @@ Docker 확장을 설치 하려면 Ctrl + Shift + P를 눌러 입력 `ext install
 
 ```Dockerfile
 # Base Docker image to use  
-FROM microsoft/dotnet:2.1-aspnetcore-runtime
+FROM mcr.microsoft.com/dotnet/core/aspnet:2.1
   
 # Set the Working Directory and files to be copied to the image  
 ARG source  
@@ -129,7 +129,7 @@ EXPOSE 80
 ENTRYPOINT ["dotnet", "MyCustomMicroservice.dll"]
 ```
 
-이 경우에 기준으로 이미지 줄에 따라 공식 ASP.NET Core Docker 이미지 (Linux 및 Windows 용 다중 아키텍처)의 버전 2.1 `FROM microsoft/dotnet:2.1-aspnetcore-runtime`합니다. (이 항목에 대 한 자세한 내용은 참조는 [ASP.NET Core Docker 이미지](https://hub.docker.com/r/microsoft/aspnetcore/) 페이지와 [.NET Core Docker 이미지](https://hub.docker.com/r/microsoft/dotnet/) 페이지).
+이 경우에 기준으로 이미지 줄에 따라 공식 ASP.NET Core Docker 이미지 (Linux 및 Windows 용 다중 아키텍처)의 버전 2.1 `FROM mcr.microsoft.com/dotnet/core/aspnet:2.1`합니다. (이 항목에 대 한 자세한 내용은 참조는 [ASP.NET Core Docker 이미지](https://hub.docker.com/_/microsoft-dotnet-core-aspnet/) 페이지와 [.NET Core Docker 이미지](https://hub.docker.com/_/microsoft-dotnet-core/) 페이지).
 
 DockerFile에서 Docker (예: 포트 80) 런타임 시 사용 하는 TCP 포트로 수신 하도록 지시할 수 있습니다.
 
@@ -143,9 +143,9 @@ DockerFile에서 Docker (예: 포트 80) 런타임 시 사용 하는 TCP 포트�
 
 **다중 아키텍처 이미지 리포지토리를 사용 합니다.**
 
-리포지토리에 단일 이미지 이름에는 Linux 이미지 및 Windows 이미지 같은 플랫폼 변형을 포함할 수 있습니다. 이 기능은 여러 플랫폼 (즉, Linux 및 Windows)를 포함 하는 단일 리포지토리를 만들려면 (기본 이미지 작성자) Microsoft 같은 공급 업체입니다. 예를 들어 합니다 [microsoft/aspnetcore](https://hub.docker.com/r/microsoft/aspnetcore/) Docker Hub 레지스트리에서 리포지토리 동일한 이미지 이름을 사용 하 여 Linux 및 Windows Nano Server에 대 한 지원을 제공 합니다.
+리포지토리에 단일 이미지 이름에는 Linux 이미지 및 Windows 이미지 같은 플랫폼 변형을 포함할 수 있습니다. 이 기능은 여러 플랫폼 (즉, Linux 및 Windows)를 포함 하는 단일 리포지토리를 만들려면 (기본 이미지 작성자) Microsoft 같은 공급 업체입니다. 예를 들어 합니다 [dotnet/코어/aspnet](https://hub.docker.com/_/microsoft-dotnet-core-aspnet/) Docker Hub 레지스트리에서 리포지토리 동일한 이미지 이름을 사용 하 여 Linux 및 Windows Nano Server에 대 한 지원을 제공 합니다.
 
-끌어오기 합니다 [microsoft/aspnetcore](https://hub.docker.com/r/microsoft/aspnetcore/) 이미지 Windows 호스트에서 Linux 변형을 끌어옵니다 Linux 호스트에서 동일한 이미지 이름을 가져오는 반면 Windows 변형을 끌어옵니다.
+끌어오기 합니다 [dotnet/코어/aspnet](https://hub.docker.com/_/microsoft-dotnet-core-aspnet/) 이미지 Windows 호스트에서 Linux 변형을 끌어옵니다 Linux 호스트에서 동일한 이미지 이름을 가져오는 반면 Windows 변형을 끌어옵니다.
 
 ***기본 이미지를 처음부터 만들기***
 
@@ -216,7 +216,7 @@ Redis 서비스에서 사용 하는 [최신 공개 redis 이미지](https://hub.
 
 앱에 단일 컨테이너만 경우 Docker 호스트 (VM 또는 물리적 서버)에 배포 하 여 실행 하기만 하면 됩니다. 그러나 경우 앱은 여러 서비스로 구성 된, 해야 *구성*도 합니다. 다양 한 옵션을 확인해 보겠습니다.
 
-***옵션 a: 단일 컨테이너 또는 서비스를 실행 합니다.***
+***옵션 A: 단일 컨테이너 또는 서비스를 실행 합니다.***
 
 여기에 나와 있는 것 처럼 docker run 명령을 사용 하 여 Docker 이미지를 실행할 수 있습니다.
 
@@ -226,7 +226,7 @@ docker run -t -d -p 80:5000 cesardl/netcore-webapi-microservice-docker:first
 
 이 특정 배포에 대 한 내부 포트 5000에 포트 80에 전송 된 요청 리디렉션 수 됩니다 것입니다. 이제 응용 프로그램 호스트 수준에서 80 외부 포트에서 수신 대기 합니다.
 
-***옵션 b: 작성 및 다중 컨테이너 응용 프로그램을 실행 합니다.***
+***옵션 B: 작성 및 다중 컨테이너 응용 프로그램을 실행 합니다.***
 
 대부분의 엔터프라이즈 시나리오에서 Docker 응용 프로그램을 여러 서비스로 구성 됩니다. 이러한 경우에 실행할 수 있습니다는 `docker-compose up` 수 이전에 만든 docker compose.yml 파일을 사용 하는 명령 (그림 4-27). 이 명령을 실행의 모든 해당 관련된 컨테이너를 사용 하 여 구성 된 응용 프로그램을 배포 합니다.
 

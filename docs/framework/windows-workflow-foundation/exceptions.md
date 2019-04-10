@@ -2,16 +2,15 @@
 title: 예외
 ms.date: 03/30/2017
 ms.assetid: 065205cc-52dd-4f30-9578-b17d8d113136
-ms.openlocfilehash: 94a0a2430ffe7db47152517c742aed1c18a39e64
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 64a8338133c265ee1b4c7acbd9b4d168318b66a5
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57717273"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59145992"
 ---
 # <a name="exceptions"></a>예외
-워크플로에서 <xref:System.Activities.Statements.TryCatch> 활동을 사용하여 워크플로 실행 중에 발생하는 예외를 처리할 수 있습니다. 이러한 예외를 처리하거나 <xref:System.Activities.Statements.Rethrow> 활동을 사용하여 다시 throw할 수 있습니다. 
-  <xref:System.Activities.Statements.TryCatch.Finally%2A> 섹션의 활동은 <xref:System.Activities.Statements.TryCatch.Try%2A> 섹션 또는 <xref:System.Activities.Statements.TryCatch.Catches%2A> 섹션이 완료되면 실행됩니다. 워크플로 호스팅하는 <xref:System.Activities.WorkflowApplication> 인스턴스를 사용할 수도 있습니다는 <xref:System.Activities.WorkflowApplication.OnUnhandledException%2A> 으로 처리 되지 않은 예외를 처리할 이벤트 처리기를 <xref:System.Activities.Statements.TryCatch> 활동입니다.  
+워크플로에서 <xref:System.Activities.Statements.TryCatch> 활동을 사용하여 워크플로 실행 중에 발생하는 예외를 처리할 수 있습니다. 이러한 예외를 처리하거나 <xref:System.Activities.Statements.Rethrow> 활동을 사용하여 다시 throw할 수 있습니다. <xref:System.Activities.Statements.TryCatch.Finally%2A> 섹션의 활동은 <xref:System.Activities.Statements.TryCatch.Try%2A> 섹션 또는 <xref:System.Activities.Statements.TryCatch.Catches%2A> 섹션이 완료되면 실행됩니다. 워크플로 호스팅하는 <xref:System.Activities.WorkflowApplication> 인스턴스를 사용할 수도 있습니다는 <xref:System.Activities.WorkflowApplication.OnUnhandledException%2A> 으로 처리 되지 않은 예외를 처리할 이벤트 처리기를 <xref:System.Activities.Statements.TryCatch> 활동입니다.  
   
 ## <a name="causes-of-exceptions"></a>예외의 원인  
  워크플로에서 다음과 같은 방식으로 예외가 생성될 수 있습니다.  
@@ -46,13 +45,13 @@ ms.locfileid: "57717273"
   
 -   더 높은 수준의 <xref:System.Activities.Statements.TryCatch>에서 예외가 다시 throw되는지 여부에 관계 없이 워크플로에서 더 높은 수준의 <xref:System.Activities.Statements.TryCatch> 활동에 의해 예외가 catch됩니다.  
   
--   예외는 더 높은 수준의 <xref:System.Activities.Statements.TryCatch>에서 처리되며 워크플로 루트를 이스케이프하며 워크플로는 종료하거나 중단하는 대신 취소하도록 구성됩니다. <xref:System.Activities.WorkflowApplication>을 사용하여 호스트된 워크플로는 <xref:System.Activities.WorkflowApplication.OnUnhandledException%2A>을 처리하고 <xref:System.Activities.UnhandledExceptionAction.Cancel>을 반환하여 구성할 수 있습니다. <xref:System.Activities.WorkflowApplication.OnUnhandledException%2A>의 처리 예제는 이 항목에 이전에 제공된 것입니다. 
-  <xref:System.ServiceModel.Activities.Description.WorkflowUnhandledExceptionBehavior>을 워크플로 서비스는 사용하고 <xref:System.ServiceModel.Activities.Description.WorkflowUnhandledExceptionAction.Cancel>을 지정하여 구성할 수 있습니다. 구성의 예 <xref:System.ServiceModel.Activities.Description.WorkflowUnhandledExceptionBehavior>를 참조 하세요 [워크플로 서비스 호스트 확장성](../wcf/feature-details/workflow-service-host-extensibility.md)합니다.  
+-   예외는 더 높은 수준의 <xref:System.Activities.Statements.TryCatch>에서 처리되며 워크플로 루트를 이스케이프하며 워크플로는 종료하거나 중단하는 대신 취소하도록 구성됩니다. <xref:System.Activities.WorkflowApplication>을 사용하여 호스트된 워크플로는 <xref:System.Activities.WorkflowApplication.OnUnhandledException%2A>을 처리하고 <xref:System.Activities.UnhandledExceptionAction.Cancel>을 반환하여 구성할 수 있습니다. <xref:System.Activities.WorkflowApplication.OnUnhandledException%2A>의 처리 예제는 이 항목에 이전에 제공된 것입니다. <xref:System.ServiceModel.Activities.Description.WorkflowUnhandledExceptionBehavior>을 워크플로 서비스는 사용하고 <xref:System.ServiceModel.Activities.Description.WorkflowUnhandledExceptionAction.Cancel>을 지정하여 구성할 수 있습니다. 구성의 예 <xref:System.ServiceModel.Activities.Description.WorkflowUnhandledExceptionBehavior>를 참조 하세요 [워크플로 서비스 호스트 확장성](../wcf/feature-details/workflow-service-host-extensibility.md)합니다.  
   
 ## <a name="exception-handling-versus-compensation"></a>예외 처리와 보정 비교  
  예외 처리와 보정의 차이점은 예외 처리는 활동 실행 중에 발생하고, 보정은 활동이 완료된 이후에 발생한다는 점입니다. 예외 처리를 사용하면 활동에서 예외가 발생한 이후에 정리 작업이 가능하고, 보정을 사용하면 이전에 성공적으로 완료된 활동을 실행 취소할 수 있습니다. 자세한 내용은 [보정](compensation.md)합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Activities.Statements.TryCatch>
 - <xref:System.Activities.WorkflowApplication.OnUnhandledException%2A>
 - <xref:System.Activities.Statements.CompensableActivity>

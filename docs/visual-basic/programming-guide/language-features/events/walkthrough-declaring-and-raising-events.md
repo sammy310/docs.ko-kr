@@ -9,12 +9,12 @@ helpviewer_keywords:
 - events [Visual Basic], raising
 - raising events [Visual Basic], walkthroughs
 ms.assetid: 8ffb3be8-097d-4d3c-b71e-04555ebda2a2
-ms.openlocfilehash: 0f48c90232c00f53007e7d2f8f08e2107406ecad
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: cab6c90947eae8abeb9387535eadb2f89e71454a
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58841006"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59320693"
 ---
 # <a name="walkthrough-declaring-and-raising-events-visual-basic"></a>연습: 선언 및 발생 이벤트 (Visual Basic)
 이 연습에는 선언 하 고 라는 클래스에 이벤트를 발생 하는 방법을 보여 줍니다. `Widget`합니다. 항목을 참고할 하려는 단계를 완료 하면 [연습: 이벤트 처리](../../../../visual-basic/programming-guide/language-features/events/walkthrough-handling-events.md)에서 이벤트를 사용 하는 방법을 보여 주는 `Widget` 응용 프로그램에서 상태 정보를 제공 하는 개체입니다.  
@@ -28,11 +28,11 @@ ms.locfileid: "58841006"
   
 #### <a name="to-build-the-code-example-for-this-topic"></a>이 항목에 대 한 코드 예제를 빌드하려면  
   
-1.  새 Visual Basic Windows 응용 프로그램 프로젝트를 열고 이라는 양식을 만듭니다 `Form1`합니다.  
+1. 새 Visual Basic Windows 응용 프로그램 프로젝트를 열고 이라는 양식을 만듭니다 `Form1`합니다.  
   
-2.  두 개의 단추 및 레이블을 추가 `Form1`합니다.  
+2. 두 개의 단추 및 레이블을 추가 `Form1`합니다.  
   
-3.  다음 표에 나와 있는 것처럼 개체의 이름을 지정합니다.  
+3. 다음 표에 나와 있는 것처럼 개체의 이름을 지정합니다.  
   
     |개체|속성|설정|  
     |------------|--------------|-------------|  
@@ -40,7 +40,7 @@ ms.locfileid: "58841006"
     |`Button2`|`Text`|취소|  
     |`Label`|`(Name)`, `Text`|lblPercentDone, 0|  
   
-4.  에 **프로젝트** 메뉴 선택 **클래스 추가** 라는 클래스를 추가 하려면 `Widget.vb` 프로젝트.  
+4. 에 **프로젝트** 메뉴 선택 **클래스 추가** 라는 클래스를 추가 하려면 `Widget.vb` 프로젝트.  
   
 #### <a name="to-declare-an-event-for-the-widget-class"></a>위젯 클래스에 대 한 이벤트를 선언 하려면  
   
@@ -57,11 +57,11 @@ ms.locfileid: "58841006"
   
 #### <a name="to-raise-the-percentdone-event"></a>PercentDone 이벤트 발생  
   
-1.  에 대 한 액세스를 간소화 하는 `Timer` 이 클래스에 의해 사용 되는 속성 추가 `Imports` 클래스 모듈의 선언 섹션의 맨 위에 문을 위에 `Class Widget` 문.  
+1. 에 대 한 액세스를 간소화 하는 `Timer` 이 클래스에 의해 사용 되는 속성 추가 `Imports` 클래스 모듈의 선언 섹션의 맨 위에 문을 위에 `Class Widget` 문.  
   
      [!code-vb[VbVbcnWalkthroughDeclaringAndRaisingEvents#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnWalkthroughDeclaringAndRaisingEvents/VB/Widget.vb#2)]  
   
-2.  `Widget` 클래스에 다음 코드를 추가합니다.  
+2. `Widget` 클래스에 다음 코드를 추가합니다.  
   
      [!code-vb[VbVbcnWalkthroughDeclaringAndRaisingEvents#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnWalkthroughDeclaringAndRaisingEvents/VB/Widget.vb#3)]  
   

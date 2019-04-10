@@ -18,12 +18,12 @@ helpviewer_keywords:
 - Option Compare statement [Visual Basic]
 - text [Visual Basic], comparing
 ms.assetid: 54e8eeeb-3b0d-4fb9-acce-fbfbd5975f6e
-ms.openlocfilehash: b092d54e6cf4d8a96a35e6b1cc818fad8f26e3ae
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: e7c1e8e4431b7a653bb3a086589c35921f8001b9
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58834077"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59300634"
 ---
 # <a name="option-compare-statement"></a>Option Compare 문
 문자열 데이터를 비교할 때 사용할 기본 비교 방법을 선언합니다.  
@@ -65,11 +65,11 @@ Option Compare { Binary | Text }
   
 #### <a name="to-set-option-compare-in-the-ide"></a>IDE에서 Option Compare를 설정하려면  
   
-1.  **솔루션 탐색기**에서 프로젝트를 선택합니다. **프로젝트** 메뉴에서 **속성**을 클릭합니다.  
+1. **솔루션 탐색기**에서 프로젝트를 선택합니다. **프로젝트** 메뉴에서 **속성**을 클릭합니다.  
   
-2.  **컴파일** 탭을 클릭합니다.  
+2. **컴파일** 탭을 클릭합니다.  
   
-3.  값을 설정 합니다 **Option Compare** 상자입니다.  
+3. 값을 설정 합니다 **Option Compare** 상자입니다.  
   
  프로젝트를 만들 때를 **Option Compare** 에 설정 합니다 **컴파일** 탭으로 설정 됩니다는 **Option Compare** 에서 설정를 **옵션** 대화 상자입니다. 이 설정을 변경 하는 **도구** 메뉴에서 클릭 **옵션**합니다. **옵션** 대화 상자에서 **프로젝트 및 솔루션**을 확장하고 **VB 기본값**을 클릭합니다. 초기 기본 설정은 **VB 기본값** 됩니다 **이진**합니다.  
   

@@ -2,15 +2,15 @@
 title: WF의 컬렉션 활동
 ms.date: 03/30/2017
 ms.assetid: 2680c3e2-9902-4968-b98d-cab776103dbe
-ms.openlocfilehash: 6ce7dd348a19608d35bf448bda2e1380e5af1130
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 6e4b9ce6f967ba9405f55dbf5fd4708d3319b458
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57705257"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59133789"
 ---
 # <a name="collection-activities-in-wf"></a>WF의 컬렉션 활동
-컬렉션 활동은 워크플로에서 컬렉션 개체로 작업하는 데 사용됩니다. [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)]에는 컬렉션에서 항목을 추가 및 제거하고, 컬렉션에 항목이 있는지 테스트하고, 컬렉션을 지우는 시스템 제공 활동이 있습니다. `ExistsInCollection` 및 `RemoveFromCollection` 가 <xref:System.Activities.OutArgument%601> 형식의 <xref:System.Boolean>, 결과 나타냅니다.  
+컬렉션 활동은 워크플로에서 컬렉션 개체로 작업하는 데 사용됩니다. [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] 추가 하 고 컬렉션에서 항목을 제거, 컬렉션에서 항목의 존재를 테스트 및 컬렉션을 지우는 시스템 제공 활동에 있습니다. `ExistsInCollection` 및 `RemoveFromCollection` 가 <xref:System.Activities.OutArgument%601> 형식의 <xref:System.Boolean>, 결과 나타냅니다.  
   
 > [!IMPORTANT]
 >  기본 컬렉션 개체를 설정하기 이전에 컬렉션 활동을 실행하면 <xref:System.InvalidOperationException>이 throw되고 활동 오류가 발생합니다.  
@@ -225,7 +225,7 @@ Activity wf = new Sequence
 </Sequence>  
 ```  
   
- 위의 코드 샘플에서 <xref:Microsoft.CSharp.Activities.CSharpValue%601> 대신 <xref:Microsoft.VisualBasic.Activities.VisualBasicValue%601>을 사용하여 식을 만들 수도 있습니다.  
+ 위의 코드 샘플을 만들 수도 있습니다를 사용 하 여 <xref:Microsoft.CSharp.Activities.CSharpValue%601> 대신 <xref:Microsoft.VisualBasic.Activities.VisualBasicValue%601>  
   
 ```csharp
 Variable<ICollection<string>> fruitList = new Variable<ICollection<string>>  
@@ -426,4 +426,5 @@ Activity wf = new Sequence
 ```  
   
 ## <a name="see-also"></a>참고자료
-- [명령형 코드를 사용하여 워크플로, 활동 및 식 작성](authoring-workflows-activities-and-expressions-using-imperative-code.md)
+
+- [명령 코드를 사용하여 워크플로, 활동 및 식 작성](authoring-workflows-activities-and-expressions-using-imperative-code.md)

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - toolbars [Windows Forms], about toolbars
 - ToolBar control [Windows Forms], about ToolBar controls
 ms.assetid: d426b203-0216-4dbe-b834-1641e50a9c29
-ms.openlocfilehash: 249c5854b83a62878ecef0350e08ba4b00523aff
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 7b39c8e3dca88e968b43ba5ff14794e2e77247d1
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57708849"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59174813"
 ---
 # <a name="toolbar-control-overview-windows-forms"></a>ToolBar 컨트롤 개요(Windows Forms)
 > [!NOTE]
@@ -31,8 +31,9 @@ ms.locfileid: "57708849"
  합니다 <xref:System.Windows.Forms.ToolBar> 컨트롤을 사용 하면 추가 하 여 도구 모음을 만들 수 있습니다 <xref:System.Windows.Forms.Button> 개체를 <xref:System.Windows.Forms.ToolBar.Buttons%2A> 컬렉션입니다. 컬렉션 편집기를 사용 하 여 단추를 추가 하는 <xref:System.Windows.Forms.ToolBar> ; 각 <xref:System.Windows.Forms.Button> 둘 다 할당할 수 있지만 개체는 텍스트 또는 할당 된 이미지에 있어야 합니다. 이미지는 연결된 [ImageList](imagelist-component-windows-forms.md) 구성 요소에서 제공됩니다. 런타임에 추가 하거나에서 단추를 제거할 수 있습니다 합니다 <xref:System.Windows.Forms.ToolBar.ToolBarButtonCollection> 를 사용 하는 <xref:System.Windows.Forms.ToolBar.ToolBarButtonCollection.Add%2A> 및 <xref:System.Windows.Forms.ToolBar.ToolBarButtonCollection.Remove%2A> 메서드. 단추를 프로그래밍 하는 <xref:System.Windows.Forms.ToolBar>, 코드를 추가 하는 <xref:System.Windows.Forms.ToolBar.ButtonClick> 의 이벤트를 <xref:System.Windows.Forms.ToolBar>를 사용 하 여를 <xref:System.Windows.Forms.ToolBarButtonClickEventArgs.Button%2A> 의 속성을 <xref:System.Windows.Forms.ToolBarButtonClickEventArgs> 어떤 단추가 클릭 되었는지 확인 하려면 클래스.  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Windows.Forms.ToolBar>
 - [ToolBar 컨트롤](toolbar-control-windows-forms.md)
 - [방법: ToolBar 컨트롤에 단추 추가](how-to-add-buttons-to-a-toolbar-control.md)
-- [방법: 도구 모음 단추의 아이콘 정의](how-to-define-an-icon-for-a-toolbar-button.md)
-- [방법: Toolbar 단추의 메뉴 이벤트 트리거](how-to-trigger-menu-events-for-toolbar-buttons.md)
+- [방법: 도구 모음 단추에 대한 아이콘 정의](how-to-define-an-icon-for-a-toolbar-button.md)
+- [방법: Toolbar 단추에 대한 메뉴 이벤트 트리거](how-to-trigger-menu-events-for-toolbar-buttons.md)

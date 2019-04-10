@@ -2,37 +2,37 @@
 title: ModelItem 편집 컨텍스트 사용
 ms.date: 03/30/2017
 ms.assetid: 7f9f1ea5-0147-4079-8eca-be94f00d3aa1
-ms.openlocfilehash: d8d2e7d055099a6aedd13dd48dd78403cdff2a50
-ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
+ms.openlocfilehash: a2628bbbf2f6684e5d484b05cd5a2ac622f3b664
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57846274"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59296890"
 ---
 # <a name="using-the-modelitem-editing-context"></a>ModelItem 편집 컨텍스트 사용
-<xref:System.Activities.Presentation.Model.ModelItem> 편집 컨텍스트는 호스트 응용 프로그램이 디자이너와 통신할 때 사용하는 개체입니다. <xref:System.Activities.Presentation.EditingContext>는 사용할 수 있는 메서드 두 개(<xref:System.Activities.Presentation.EditingContext.Items%2A> 및 <xref:System.Activities.Presentation.EditingContext.Services%2A>)를 노출합니다.  
+<xref:System.Activities.Presentation.Model.ModelItem> 편집 컨텍스트는 호스트 응용 프로그램이 디자이너와 통신할 때 사용하는 개체입니다. <xref:System.Activities.Presentation.EditingContext> 두 메서드를 노출 <xref:System.Activities.Presentation.EditingContext.Items%2A> 고 <xref:System.Activities.Presentation.EditingContext.Services%2A>를 사용할 수 있는  
   
 ## <a name="the-items-collection"></a>Items 컬렉션  
  <xref:System.Activities.Presentation.EditingContext.Items%2A> 컬렉션은 호스트와 디자이너 간에 공유되는 데이터나 모든 디자이너에서 사용할 수 있는 데이터에 액세스할 때 사용됩니다. 이 컬렉션에는 <xref:System.Activities.Presentation.ContextItemManager> 클래스를 통해 액세스되는 다음 기능이 있습니다.  
   
-1.  <xref:System.Activities.Presentation.ContextItemManager.GetValue%2A>  
+1. <xref:System.Activities.Presentation.ContextItemManager.GetValue%2A>  
   
-2.  <xref:System.Activities.Presentation.ContextItemManager.Subscribe%2A>  
+2. <xref:System.Activities.Presentation.ContextItemManager.Subscribe%2A>  
   
-3.  <xref:System.Activities.Presentation.ContextItemManager.Unsubscribe%2A>  
+3. <xref:System.Activities.Presentation.ContextItemManager.Unsubscribe%2A>  
   
-4.  <xref:System.Activities.Presentation.ContextItemManager.SetValue%2A>  
+4. <xref:System.Activities.Presentation.ContextItemManager.SetValue%2A>  
   
 ## <a name="the-services-collection"></a>Services 컬렉션  
  <xref:System.Activities.Presentation.EditingContext.Services%2A> 컬렉션은 디자이너가 호스트와 상호 작용하는 데 사용하는 서비스나 모든 디자이너에서 사용하는 서비스에 액세스할 때 사용됩니다. 이 컬렉션에는 다음과 같은 중요한 메서드가 있습니다.  
   
-1.  <xref:System.Activities.Presentation.ServiceManager.Publish%2A>  
+1. <xref:System.Activities.Presentation.ServiceManager.Publish%2A>  
   
-2.  <xref:System.Activities.Presentation.ServiceManager.Subscribe%2A>  
+2. <xref:System.Activities.Presentation.ServiceManager.Subscribe%2A>  
   
-3.  <xref:System.Activities.Presentation.ServiceManager.Unsubscribe%2A>  
+3. <xref:System.Activities.Presentation.ServiceManager.Unsubscribe%2A>  
   
-4.  <xref:System.Activities.Presentation.ServiceManager.GetService%2A>  
+4. <xref:System.Activities.Presentation.ServiceManager.GetService%2A>  
   
 ## <a name="assigning-a-designer-an-activity"></a>작업에 디자이너 할당  
  작업에 사용되는 디자이너를 지정하려면 Designer 특성을 사용합니다.  

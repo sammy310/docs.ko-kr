@@ -3,12 +3,12 @@ title: 사용 하 여 Azure Table storage 시작F#
 description: Azure Table storage 또는 Azure Cosmos DB를 사용 하 여 클라우드에 구조화 된 데이터를 저장 합니다.
 author: sylvanc
 ms.date: 03/26/2018
-ms.openlocfilehash: 2b74a33023065ea809c2d7eb6202b1a254018422
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 54c777acd454e4f675175b814675c185e41ad9a4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56966010"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59086704"
 ---
 # <a name="get-started-with-azure-table-storage-and-the-azure-cosmos-db-table-api-using-f"></a>Azure Table storage와 F를 사용 하 여 Azure Cosmos DB Table API 시작\#
 
@@ -35,7 +35,6 @@ Azure Table storage 용으로 작성 된 응용 프로그램 코드 변경 없�
 ## <a name="prerequisites"></a>전제 조건
 
 이 가이드를 사용 하려면 먼저 [Azure storage 계정 만들기](/azure/storage/storage-create-storage-account) 하거나 [Azure Cosmos DB 계정](https://azure.microsoft.com/try/cosmosdb/)합니다.
-
 
 ## <a name="create-an-f-script-and-start-f-interactive"></a>만들기는 F# 스크립트 및 시작 F# 대화형
 
@@ -85,7 +84,7 @@ Azure 구성 관리자를 사용 하는 것은 선택 사항입니다. .NET Fram
 
 이제 데이터를 읽어 오고 테이블 저장소에 데이터를 기록 하는 코드를 작성할 준비가 되었습니다.
 
-### <a name="create-a-table"></a>테이블 만들기
+### <a name="create-a-table"></a>테이블 생성하기
 
 이 예제에는 아직 존재 하지 않는 경우 테이블을 만드는 방법을 보여 줍니다.
 
@@ -128,7 +127,6 @@ Azure 구성 관리자를 사용 하는 것은 선택 사항입니다. .NET Fram
 
 [!code-fsharp[TableStorage](../../../samples/snippets/fsharp/azure/table-storage.fsx#L84-L85)]
 
-
 ### <a name="retrieve-a-range-of-entities-in-a-partition"></a>파티션의 엔터티 범위 검색
 
 파티션의 모든 엔터티를 쿼리하지 않으려면 파티션 키 필터를 행 키 필터와 결합 하 여 범위를 지정할 수 있습니다. 여기에서 두 필터를 사용 하면 "Smith" 파티션의 모든 엔터티를 가져온 행 키 (이름)로 시작 하는 문자 "M" 알파벳에서 보다 이전입니다.
@@ -148,7 +146,6 @@ Azure 구성 관리자를 사용 하는 것은 선택 사항입니다. .NET Fram
 이제 결과 인쇄 합니다.
 
 [!code-fsharp[TableStorage](../../../samples/snippets/fsharp/azure/table-storage.fsx#L113-L115)]
-
 
 ### <a name="replace-an-entity"></a>엔터티 바꾸기
 

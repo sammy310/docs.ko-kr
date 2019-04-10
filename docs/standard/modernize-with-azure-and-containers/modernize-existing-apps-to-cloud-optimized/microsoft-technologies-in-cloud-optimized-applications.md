@@ -1,19 +1,19 @@
 ---
-title: 클라우드 액세스에 최적화 된 응용 프로그램에서 Microsoft 기술
-description: Azure 클라우드 및 Windows 컨테이너를 사용 하 여 기존.NET 응용 프로그램 현대화 | 클라우드 액세스에 최적화 된 응용 프로그램에서 Microsoft 기술
+title: 클라우드에 최적화된 응용 프로그램 내의 Microsoft 기술
+description: 기존.NET 응용 프로그램을 Azure 클라우드와 Windows 컨테이너를 사용하여 최신화 | 클라우드에 최적화된 응용 프로그램 내의 Microsoft 기술
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 04/28/2018
-ms.openlocfilehash: 2f1d624365c168d14e98ed175d369f6aef18e42e
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 45eeee165a1dcbfc7b6dbc5146ce2c4b2be2e643
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53153880"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59296253"
 ---
-# <a name="microsoft-technologies-in-cloud-optimized-applications"></a>클라우드 액세스에 최적화 된 응용 프로그램에서 Microsoft 기술
+# <a name="microsoft-technologies-in-cloud-optimized-applications"></a>클라우드에 최적화된 응용 프로그램 내의 Microsoft 기술
 
-다음은 도구, 기술 및 클라우드 액세스에 최적화 된 앱에 대 한 요구 사항으로 인식 되는 솔루션에 설명 합니다. 우선 순위에 따라 클라우드 최적화 요소를 한 번에 옮기거나 단계적으로 선택적으로 채택할 수 있습니다.
+다음 목록은 클라우드에 최적화된 앱의 요구 사항으로 인식되는 도구와 기술, 솔루션을 설명합니다. 우선 순위에 따라 클라우드 최적화 요소를 단계적 또는 선택적으로 채택할 수 있습니다.
 
 -   **클라우드 인프라**: 계산 플랫폼, 운영 체제, 네트워크 및 저장소를 제공 하는 인프라입니다. Microsoft Azure는이 수준에 배치 됩니다.
 
@@ -25,9 +25,9 @@ ms.locfileid: "53153880"
 
 -   **모니터링, 원격 분석 로깅 및 감사**: 모니터링 및 감사 응용 프로그램을 클라우드에서 실행 중인 컨테이너는 클라우드에 최적화 된 응용 프로그램 중요 합니다. [Azure Application Insights](https://azure.microsoft.com/services/application-insights/) 하 고 [Microsoft Operations Management Suite](https://www.microsoft.com/cloud-platform/operations-management-suite) 클라우드에 최적화 된 앱에 대 한 모니터링 및 감사를 제공 하는 주요 Microsoft 도구입니다.
 
--   **프로 비전**: 자동화 도구를 사용 하 여 인프라를 프로 비전 하 고 여러 환경 (프로덕션, 테스트, 스테이징)에 응용 프로그램을 배포할 수 도움이 됩니다. 응용 프로그램의 구성 및 환경 관리에 Chef 및 Puppet과 같은 도구를 사용할 수 있습니다. 또한이 계층 보다 간단 하 고 더 직접적인 방법을 사용 하 여 구현할 수 있습니다. 예를 들어, 도구, Azure 명령줄 인터페이스 (Azure CLI)를 사용 하 여 직접 배포 하 고 다음 연속 배포를 사용 하 릴리스 관리 파이프라인에서 [Azure DevOps 서비스](https://visualstudio.microsoft.com/team-services/)합니다.
+-   **프로 비전**: 자동화 도구를 사용 하 여 인프라를 프로 비전 하 고 여러 환경 (프로덕션, 테스트, 스테이징)에 응용 프로그램을 배포할 수 도움이 됩니다. 응용 프로그램의 구성 및 환경 관리에 Chef 및 Puppet과 같은 도구를 사용할 수 있습니다. 또한이 계층 보다 간단 하 고 더 직접적인 방법을 사용 하 여 구현할 수 있습니다. 예를 들어, 도구, Azure 명령줄 인터페이스 (Azure CLI)를 사용 하 여 직접 배포 하 고 다음 연속 배포를 사용 하 릴리스 관리 파이프라인에서 [Azure DevOps 서비스](https://azure.microsoft.com/services/devops/)합니다.
 
--   **응용 프로그램 수명 주기**: [Azure DevOps 서비스](https://visualstudio.microsoft.com/team-services/) 및 Jenkins와 같은 다른 도구는 도움이 되는 기본 제공된 자동화 서버 구현 릴리스 관리를 비롯 하 여 CI/CD 파이프라인을 합니다.
+-   **응용 프로그램 수명 주기**: [Azure DevOps 서비스](https://azure.microsoft.com/services/devops/) 및 Jenkins와 같은 다른 도구는 도움이 되는 기본 제공된 자동화 서버 구현 릴리스 관리를 비롯 하 여 CI/CD 파이프라인을 합니다.
 
 다음 섹션에서는이 장 및 관련된 연습을 런타임 계층 (Windows 컨테이너)에 대 한 세부 정보 특히 집중합니다. 지침에는 Windows Server 2016 (및 이상 버전)에서 Windows 컨테이너 Vm 및 Azure Container Instances에 배포할 수 있습니다 하는 방법을 설명 합니다. 또한 Azure App Service와 같은 고급 PaaS 플랫폼 및 Azure Service Fabric 및 Azure Kubernetes Service와 같은 오 케 스트레이 터 다룹니다.
 

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 97afc121-fb8b-465b-bab3-6d844420badb
-ms.openlocfilehash: ff1869ab17761645321d803f0f7db4bb39c992bc
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
+ms.openlocfilehash: 8063f239123ec1a2f2650adf9d76f7ceaaa50673
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56093283"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59128689"
 ---
 # <a name="retrieve-data-using-a-datareader"></a>DataReader를 사용 하 여 데이터를 검색 합니다.
 사용 하 여 데이터를 검색 하는 **DataReader**의 인스턴스를 만듭니다 합니다 **명령** 개체를 만든 다음을 **DataReader** 호출 하 여 **Command.ExecuteReader**  데이터 원본에서 행을 검색 합니다. 합니다 **DataReader** 절차적 논리 없이 효율적으로 데이터 소스에서 결과 순차적으로 처리할 수 있도록 데이터를 버퍼링 되지 않은 스트림을 제공 합니다. 합니다 **DataReader** 데이터가 메모리에 캐시 되지 않기 때문에 많은 양의 데이터를 검색 하는 경우 적합 합니다.
@@ -258,7 +258,8 @@ adapter.Fill(ds);
 >  않으려면를 **OverflowException**, 모든 변환할 Oracle NUMBER 형식 유효한.NET Framework 형식으로 값을 저장 하기 전에 처리 하는 것이 좋습니다는 <xref:System.Data.DataRow>합니다. 사용할 수는 <xref:System.Data.Common.DataAdapter.FillError> 여부를 확인 하는 이벤트를 **OverflowException** 발생 했습니다. 에 대 한 자세한 합니다 <xref:System.Data.Common.DataAdapter.FillError> 이벤트를 참조 하세요 [DataAdapter 이벤트 처리](../../../../docs/framework/data/adonet/handling-dataadapter-events.md)합니다.  
   
 ## <a name="see-also"></a>참고자료
-- [DataAdapter 및 DataReader](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)
+
+- [DataAdapters 및 DataReaders](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)
 - [명령 및 매개 변수](../../../../docs/framework/data/adonet/commands-and-parameters.md)
 - [데이터베이스 스키마 정보 검색](../../../../docs/framework/data/adonet/retrieving-database-schema-information.md)
 - [ADO.NET 관리되는 공급자 및 데이터 집합 개발자 센터](https://go.microsoft.com/fwlink/?LinkId=217917)

@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: e4ab2c4c-9433-4eba-9e9a-096de406cafb
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 98b83abce36b6e8a66ec3580af109b66b7ae09d8
-ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
+ms.openlocfilehash: aab6dad369b751b1d6a61214569cbb7d79b0e11d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55065832"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59131172"
 ---
 # <a name="common-data-types-unmanaged-api-reference"></a>공통 데이터 유형(관리되지 않는 API 참조)
 이 항목에서는 C/C++ `typedef` 문에 의해 정의되는 .NET Framework용 관리되지 않는 API에서 사용하는 단순 데이터 형식을 소개합니다. 이러한 데이터 형식은 보통 C/C++ 원시 데이터 형식의 별칭입니다. 일반적으로 이러한 데이터 형식의 값은 불투명합니다. 즉, 이러한 값은 수정하지 않고도 다른 함수나 메서드로 전달할 수 있도록 특정 함수나 메서드에서 반환됩니다.  
@@ -29,7 +29,7 @@ ms.locfileid: "55065832"
 |CORDB_CONTINUE_STATUS|`typedef DWORD CORDB_CONTINUE_STATUS;`|cordebug.h|연속 상태입니다.|  
 |CORDB_REGISTER|`typedef ULONG64 CORDB_REGISTER;`|cordebug.h|CPU 레지스터의 값입니다.|
 |FunctionID|`typedef UINT_PTR FunctionID;`|corprof.h|함수 또는 메서드의 식별자입니다.|  
-|GCHandleID|`typedef UINT_PTR GCHandleID;`|corprof.h|가비지 컬렉션 핸들입니다.|  
+|GCHandleID|`typedef UINT_PTR GCHandleID;`|corprof.h|가비지 수집 핸들입니다.|  
 |mdMethodDef|`typedef mdToken mdMethodDef;`|cordebug.h|메서드 정의 토큰입니다.|
 |mdToken|`typedef UINT32 mdToken;`|corprof.h|메타 데이터 토큰 (메타 데이터 테이블의 행)입니다.|  
 |ModuleID|`typedef UINT_PTR ModuleID;`|corprof.h|어셈블리 모듈의 식별자입니다.|  
@@ -40,4 +40,5 @@ ms.locfileid: "55065832"
 |ThreadID|`typedef UINT_PTR ThreadID;`|corprof.h|관리되는 스레드의 식별자입니다.|  
   
 ## <a name="see-also"></a>참고자료
+
 - [관리되지 않는 API 참조](../../../docs/framework/unmanaged-api/index.md)

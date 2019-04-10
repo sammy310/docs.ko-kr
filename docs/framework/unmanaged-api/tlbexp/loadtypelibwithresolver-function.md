@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a7187076eb338d5a57388d19f62e79af041ee774
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 5c14080e3ac128a6a7fbb48586f59d8a5ea4105f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57501047"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59155664"
 ---
 # <a name="loadtypelibwithresolver-function"></a>LoadTypeLibWithResolver 함수
 형식 라이브러리를 로드 하 고 제공 된 사용 [ITypeLibResolver 인터페이스](../../../../docs/framework/unmanaged-api/tlbexp/itypelibresolver-interface.md) 내부적으로 참조 된 형식 라이브러리를 해결 하려면.  
@@ -94,5 +94,6 @@ HRESULT LoadTypeLibWithResolver(
  **.NET framework 버전:** 3.5, 3.0, 2.0  
   
 ## <a name="see-also"></a>참고자료
+
 - [Tlbexp 도우미 함수](../../../../docs/framework/unmanaged-api/tlbexp/index.md)
 - [LoadTypeLibEx 함수](https://docs.microsoft.com/previous-versions/windows/desktop/api/oleauto/nf-oleauto-loadtypelibex)

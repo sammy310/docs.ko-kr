@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 0beafad4-b2c8-47f4-b342-83411d57a51f
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 0911132a705f3de89d771324cbb63e8db31bdfdb
-ms.sourcegitcommit: 5c2176883dc3107445702724a7caa7ac2f6cb0d3
+ms.openlocfilehash: 639ebe1552fd3950bd77acd7b5730b0d3bdb150f
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/03/2019
-ms.locfileid: "58890516"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59302623"
 ---
 # <a name="clr-etw-providers"></a>CLR ETW 공급자
 CLR(공용 언어 런타임)에는 런타임 공급자 및 런다운 공급자라는 두 개의 공급자가 있습니다.  
@@ -58,7 +58,7 @@ CLR(공용 언어 런타임)에는 런타임 공급자 및 런다운 공급자�
 ## <a name="etw-data-collection-using-runtime-and-rundown-providers"></a>런타임 및 런다운 공급자를 사용한 ETW 데이터 수집  
  다음 예제에서는 프로세스가 프로파일링된 창 내부 또는 외부에서 시작 또는 종료되는지에 관계없이 최소한의 영향으로 관리되는 프로세스의 기호 확인을 허용하는 방식으로 CLR 런다운 공급자를 사용하는 방법을 보여 줍니다.  
   
-1.  CLR 런타임 공급자를 사용하여 ETW 로깅 켜기:  
+1. CLR 런타임 공급자를 사용하여 ETW 로깅 켜기:  
   
     ```  
     xperf -start clr -on e13c0d23-ccbc-4e12-931b-d9cc2eee27e4:0x1CCBD:0x5 -f clr1.etl      
@@ -66,7 +66,7 @@ CLR(공용 언어 런타임)에는 런타임 공급자 및 런다운 공급자�
   
      로그는 clr1.etl 파일에 저장됩니다.  
   
-2.  프로세스를 계속 실행하는 동안 프로파일링을 중지하려면 런다운 공급자를 시작하여 `DCEnd` 이벤트를 캡처합니다.  
+2. 프로세스를 계속 실행하는 동안 프로파일링을 중지하려면 런다운 공급자를 시작하여 `DCEnd` 이벤트를 캡처합니다.  
   
     ```  
     xperf -start clrRundown -on A669021C-C450-4609-A035-5AF59AF4DF18:0xB8:0x5 -f clr2.etl      
@@ -74,14 +74,14 @@ CLR(공용 언어 런타임)에는 런타임 공급자 및 런다운 공급자�
   
      이렇게 하면 `DCEnd` 이벤트 컬렉션이 런다운 세션을 시작할 수 있습니다. 모든 이벤트가 수집되도록 30-60초 기다려야 할 수도 있습니다. 로그는 clr1.et2 파일에 저장됩니다.  
   
-3.  모든 ETW 프로파일링 끄기:  
+3. 모든 ETW 프로파일링 끄기:  
   
     ```  
     xperf -stop clrRundown   
     xperf -stop clr  
     ```  
   
-4.  프로필을 병합하여 하나의 로그 파일 만들기:  
+4. 프로필을 병합하여 하나의 로그 파일 만들기:  
   
     ```  
     xperf -merge clr1.etl clr2.etl merged.etl  
@@ -92,4 +92,5 @@ CLR(공용 언어 런타임)에는 런타임 공급자 및 런다운 공급자�
  도구는 사용자가 프로파일링 중지를 요청할 때 프로파일링을 즉시 끄지 않고 2단계와 3단계(런다운 세션을 시작한 다음 프로파일링 종료)를 실행할 수 있습니다. 도구에서 4단계를 실행할 수도 있습니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [공용 언어 런타임의 ETW 이벤트](../../../docs/framework/performance/etw-events-in-the-common-language-runtime.md)

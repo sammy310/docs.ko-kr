@@ -5,12 +5,12 @@ helpviewer_keywords:
 - properties [WPF], FocusVisualStyle
 - FocusVisualStyle property [WPF]
 ms.assetid: 363de99e-8ecc-438c-ac4a-f9147432ebd6
-ms.openlocfilehash: c4b379d3c57b6d0ae29952c23a35d7cc2cdf7f96
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 53d4984946143c15c4a2b71095529fb5ee7de4b1
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57366598"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59133551"
 ---
 # <a name="how-to-apply-a-focusvisualstyle-to-a-control"></a>방법: 컨트롤에 FocusVisualStyle 적용
 이 예제에서는 리소스에서 포커스 비주얼 스타일을 만들고 컨트롤에 스타일을 적용 하는 방법을 보여 줍니다.를 사용 하 여 <xref:System.Windows.FrameworkElement.FocusVisualStyle%2A> 속성입니다.  
@@ -27,6 +27,7 @@ ms.locfileid: "57366598"
  포커스 비주얼 스타일 테마 또는 UI를 일관 되 게 사용 해야 각 포커스 가능 요소에 대해 다른 이름을 사용 하는 대신 합니다. 자세한 내용은 참조 하세요 [컨트롤에 FocusVisualStyle 포커스 스타일 지정](styling-for-focus-in-controls-and-focusvisualstyle.md)합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Windows.FrameworkElement.FocusVisualStyle%2A>
 - [스타일 지정 및 템플릿](../controls/styling-and-templating.md)
 - [컨트롤의 포커스 스타일 지정 및 FocusVisualStyle](styling-for-focus-in-controls-and-focusvisualstyle.md)

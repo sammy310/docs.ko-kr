@@ -2,12 +2,12 @@
 title: XmlSerializer를 통한 사용자 지정 Serialization 순서
 ms.date: 03/30/2017
 ms.assetid: 975abd20-2a1d-42db-aed3-e898025ccce7
-ms.openlocfilehash: 159e8e278d7212e5f798f559dc1b51f71f74b127
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f63d460163c33c4253cf565a5755babc1030164f
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54718951"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59295038"
 ---
 # <a name="custom-serialization-order-with-xmlserializer"></a>XmlSerializer를 통한 사용자 지정 Serialization 순서
 [샘플 다운로드](https://download.microsoft.com/download/4/7/B/47B2164C-E780-4B10-8DE4-2CB5B886E0A6/Technologies/Serialization/Xml%20Serialization/CustomOrder.zip.exe)  
@@ -18,25 +18,25 @@ ms.locfileid: "54718951"
   
 ### <a name="to-build-the-sample-using-the-command-prompt"></a>명령 프롬프트를 사용하여 샘플을 빌드하려면  
   
-1.  명령 프롬프트 창을 열고 샘플에 대한 언어별 하위 디렉터리 중 하나로 이동합니다.  
+1. 명령 프롬프트 창을 열고 샘플에 대한 언어별 하위 디렉터리 중 하나로 이동합니다.  
   
-2.  명령줄에 **msbuild CustomOrder.sln**을 입력합니다.  
+2. 명령줄에 **msbuild CustomOrder.sln**을 입력합니다.  
   
 ### <a name="to-build-the-sample-using-visual-studio"></a>Visual Studio를 사용하여 샘플을 빌드하려면  
   
-1.  [!INCLUDE[fileExplorer](../../../includes/fileexplorer-md.md)]를 열고 샘플에 대한 언어별 하위 디렉터리 중 하나로 이동합니다.  
+1. [!INCLUDE[fileExplorer](../../../includes/fileexplorer-md.md)]를 열고 샘플에 대한 언어별 하위 디렉터리 중 하나로 이동합니다.  
   
-2.  CustomOrder.sln의 아이콘을 두 번 클릭하여 Visual Studio에서 파일을 엽니다.  
+2. CustomOrder.sln의 아이콘을 두 번 클릭하여 Visual Studio에서 파일을 엽니다.  
   
-3.  **빌드** 메뉴에서 **솔루션 빌드**를 선택합니다.  
+3. **빌드** 메뉴에서 **솔루션 빌드**를 선택합니다.  
   
-4.  샘플 응용 프로그램이 기본 \bin 또는 \bin\Debug 하위 디렉터리에 빌드됩니다.  
+4. 샘플 응용 프로그램이 기본 \bin 또는 \bin\Debug 하위 디렉터리에 빌드됩니다.  
   
 ## <a name="see-also"></a>참고자료
 
-- [기본 serialization](../../../docs/standard/serialization/basic-serialization.md)
-- [이진 serialization](../../../docs/standard/serialization/binary-serialization.md)
-- [특성을 사용하여 XML serialization 제어](../../../docs/standard/serialization/controlling-xml-serialization-using-attributes.md)
-- [XML serialization 소개](../../../docs/standard/serialization/introducing-xml-serialization.md)
-- [serialization](../../../docs/standard/serialization/index.md)
-- [XML 및 SOAP serialization](../../../docs/standard/serialization/xml-and-soap-serialization.md)
+- [기본 Serialization](../../../docs/standard/serialization/basic-serialization.md)
+- [이진 Serialization](../../../docs/standard/serialization/binary-serialization.md)
+- [특성을 사용하여 XML Serialization 제어](../../../docs/standard/serialization/controlling-xml-serialization-using-attributes.md)
+- [XML Serialization 소개](../../../docs/standard/serialization/introducing-xml-serialization.md)
+- [Serialization](../../../docs/standard/serialization/index.md)
+- [XML 및 SOAP Serialization](../../../docs/standard/serialization/xml-and-soap-serialization.md)

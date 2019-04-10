@@ -3,12 +3,12 @@ title: LINQ 작업
 description: 이 자습서에서는 LINQ를 사용하여 시퀀스를 생성하고, LINQ 쿼리에서 사용할 메서드를 작성하고, 즉시 계산 및 지연 계산 간을 구분하는 방법을 알아봅니다.
 ms.date: 10/29/2018
 ms.assetid: 0db12548-82cb-4903-ac88-13103d70aa77
-ms.openlocfilehash: 7613051bf5a8419244453339dd036d92249d2002
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: cfb4f53f47cc316ad6f1ee2772af27af5aee4d00
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57679656"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58815589"
 ---
 # <a name="working-with-linq"></a>LINQ 작업
 
@@ -115,7 +115,7 @@ var startingDeck = Suits().SelectMany(suit => Ranks().Select(rank => new { Suit 
 
 계속해서 지금 빌드한 샘플을 실행합니다. 데크에 있는 52개의 모든 카드가 표시됩니다. 디버거에서 이 샘플을 실행하면 `Suits()` 및 `Ranks()` 메서드가 실행되는 방식을 확인할 수 있어서 매우 유용하다는 것을 알게 될 것입니다. 각 시퀀스의 각 문자열이 필요할 때만 생성된다는 것도 명확히 알 수 있습니다.
 
-![52개의 카드를 작성하는 앱을 표시하는 콘솔 창](./media/working-with-linq/console.png)
+![52개의 카드를 작성하는 앱을 표시하는 콘솔 창](./media/working-with-linq/console-52-card-application.png)
 
 ## <a name="manipulating-the-order"></a>순서 조작
 

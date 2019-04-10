@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: fefca07f-7555-4e77-be86-3c542e928312
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d329b811e0c1377cb2d7555b3e7e30b52071eca8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: bfa11083fad7a3ccc6a208f5f0e4b68e9e1bc18c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54682030"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59098184"
 ---
 # <a name="setting-up-a-profiling-environment"></a>프로파일링 환경 설정
 > [!NOTE]
@@ -73,7 +73,7 @@ HRESULT Initialize(IUnknown *pICorProfilerInfoUnk)
  프로파일러 쿼리해야 `pICorProfilerInfoUnk` 에 대 한는 [ICorProfilerInfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md) 하거나 [ICorProfilerInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-interface.md) 인터페이스 포인터 및 프로 파일링 하는 동안 나중에 더 많은 정보를 요청할 수 있도록 저장 합니다.  
   
 ## <a name="setting-event-notifications"></a>이벤트 알림 설정  
- 그런 다음 프로파일러를 호출 합니다 [icorprofilerinfo:: Seteventmask](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-seteventmask-method.md) 알림 범주 관심을 지정 하는 방법입니다. 예를 들어 프로파일러가 함수 시작 및 종료 알림과 가비지 컬렉션 알림에만 관심이 있으면 다음을 지정합니다.  
+ 그런 다음 프로파일러를 호출 합니다 [icorprofilerinfo:: Seteventmask](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-seteventmask-method.md) 알림 범주 관심을 지정 하는 방법입니다. 예를 들어 프로파일러가 함수 시작 및 종료 알림과 가비지 수집 알림에만 관심이 있으면 다음을 지정합니다.  
   
 ```  
 ICorProfilerInfo* pInfo;  
@@ -96,4 +96,5 @@ pInfo->SetEventMask(COR_PRF_MONITOR_ENTERLEAVE | COR_PRF_MONITOR_GC)
  이 방법을 사용하면 모든 CLR 프로세스도 프로파일링됩니다. 프로파일러는 논리를 추가 해야 해당 [icorprofilercallback:: Initialize](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-initialize-method.md) 관심 현재 프로세스 인지 여부를 검색 하는 콜백 합니다. 관심이 없으면 프로파일러는 초기화를 수행하지 않고 콜백을 오류로 처리할 수 있습니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [프로파일링 개요](../../../../docs/framework/unmanaged-api/profiling/profiling-overview.md)

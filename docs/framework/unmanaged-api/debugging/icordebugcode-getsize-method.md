@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3bd21e43973d116e4383d88bd5ce90f0fbfeb1a6
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 678b7fbd595b1238b7025c22b0ed80b02ed4becd
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57471485"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59085677"
 ---
 # <a name="icordebugcodegetsize-method"></a>ICorDebugCode::GetSize 메서드
 이 "ICorDebugCode"으로 표시 되는 이진 코드를 바이트 단위로 크기를 가져옵니다.  
@@ -49,4 +49,3 @@ HRESULT GetSize (
  **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>참고자료
-

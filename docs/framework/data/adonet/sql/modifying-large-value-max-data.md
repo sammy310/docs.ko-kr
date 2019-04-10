@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 8aca5f00-d80e-4320-81b3-016d0466f7ee
-ms.openlocfilehash: c77d688afa19caf1d54adf93b9fb6cf8b1c4701d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: eb938cfae645a9cc3811f1b5a02cddef742bac89
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54493900"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59317105"
 ---
 # <a name="modifying-large-value-max-data-in-adonet"></a>ADO.NET에서 큰 값(최대값) 데이터 수정
 LOB(Large Object) 데이터 형식은 최대 행 크기 8KB를 초과하는 형식입니다. SQL Server에서는 `max`, `varchar` 및 `nvarchar` 데이터 형식에 사용할 수 있는 `varbinary` 지정자를 제공하여 2^32바이트에 이르는 큰 값도 저장할 수 있습니다. 테이블 열 및 Transact-SQL 변수에서는 `varchar(max)`, `nvarchar(max)` 또는 `varbinary(max)` 데이터 형식을 지정할 수 있습니다. ADO.NET에서는 `max`를 사용하여 `DataReader` 데이터 형식을 가져올 수 있을 뿐 아니라 특별한 처리 없이도 입력 및 출력 매개 변수 값을 모두 지정할 수 있습니다. 큰 `varchar` 데이터 형식의 경우에는 데이터를 점진적으로 검색하고 업데이트할 수 있습니다.  
@@ -21,7 +21,7 @@ LOB(Large Object) 데이터 형식은 최대 행 크기 8KB를 초과하는 형�
   
  **SQL Server 온라인 설명서**  
   
-1.  [큰 값 데이터 형식 사용](https://go.microsoft.com/fwlink/?LinkId=120498)  
+1. [큰 값 데이터 형식 사용](https://go.microsoft.com/fwlink/?LinkId=120498)  
   
 ## <a name="large-value-type-restrictions"></a>큰 값 형식 제한 사항  
  다음 제한 사항은 `max` 데이터 형식에 적용되며, 보다 작은 데이터 형식에 대해서는 존재하지 않습니다.  
@@ -33,7 +33,7 @@ LOB(Large Object) 데이터 형식은 최대 행 크기 8KB를 초과하는 형�
 -   큰 `varchar` 열은 키 열을 분할하는 데 사용할 수 없습니다.  
   
 ## <a name="working-with-large-value-types-in-transact-sql"></a>Transact-SQL에서 큰 값 형식 사용  
- Transact-SQL `OPENROWSET` 함수는 원격 데이터 연결 및 액세스를 한 번에 실행합니다. 이 함수에는 OLE DB 데이터 소스에서 원격 데이터에 액세스하는 데 필요한 모든 연결 정보가 들어 있습니다. `OPENROWSET`은 쿼리의 FROM 절에서 테이블 이름인 것처럼 참조할 수 있습니다. 또한 OLE DB 공급자의 기능에 따라 INSERT, UPDATE 또는 DELETE 문의 대상 테이블로 참조할 수도 있습니다.  
+ Transact-SQL `OPENROWSET` 함수는 원격 데이터 연결 및 액세스를 한 번에 실행합니다. 이 함수에는 OLE DB 데이터 소스에서 원격 데이터에 액세스하는 데 필요한 모든 연결 정보가 들어 있습니다. `OPENROWSET` 테이블 이름 처럼 쿼리의 FROM 절에서 참조할 수 있습니다. 또한 OLE DB 공급자의 기능에 따라 INSERT, UPDATE 또는 DELETE 문의 대상 테이블로 참조할 수도 있습니다.  
   
  `OPENROWSET` 함수에서는 `BULK` 행 집합 공급자를 추가하여 대상 테이블로 데이터를 로드하지 않고 파일에서 직접 데이터를 읽어올 수 있습니다. 따라서 간단한 INSERT SELECT 문에서 `OPENROWSET`을 사용할 수 있습니다.  
   
@@ -68,9 +68,9 @@ FROM OPENROWSET
 |조건|결과|  
 |--------|----------|  
 |식이 NULL로 설정된 경우|`@Length` 무시 됩니다에 값 *column_name* 잘렸습니다. 지정 된 `@Offset`합니다.|  
-|`@Offset`이 NULL인 경우|업데이트 작업에는 기존의 끝에 식이 추가 *column_name* 값 및 `@Length` 무시 됩니다.|  
-|`@Offset`이 column_name 값의 길이보다 큰 경우|SQL Server에서 오류를 반환합니다.|  
-|`@Length`이 NULL인 경우|업데이트 작업을 통해 `@Offset`부터 `column_name` 값 끝 사이에 있는 모든 데이터가 제거됩니다.|  
+|`@Offset` is NULL|업데이트 작업에는 기존의 끝에 식이 추가 *column_name* 값 및 `@Length` 무시 됩니다.|  
+|`@Offset` column_name 값의 길이 보다 크면|SQL Server에서 오류를 반환합니다.|  
+|`@Length` is NULL|업데이트 작업을 통해 `@Offset`부터 `column_name` 값 끝 사이에 있는 모든 데이터가 제거됩니다.|  
   
 > [!NOTE]
 >  `@Offset`과 `@Length`는 모두 음수일 수 없습니다.  
@@ -250,6 +250,7 @@ WHERE   DocumentID=@DocumentID
  [!code-vb[DataWorks LargeValueType.Param#1](../../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks LargeValueType.Param/VB/source.vb#1)]  
   
 ## <a name="see-also"></a>참고자료
+
 - [SQL Server 이진 및 큰 값 데이터](../../../../../docs/framework/data/adonet/sql/sql-server-binary-and-large-value-data.md)
 - [SQL Server 데이터 형식 매핑](../../../../../docs/framework/data/adonet/sql-server-data-type-mappings.md)
 - [ADO.NET에서 SQL Server 데이터 작업](../../../../../docs/framework/data/adonet/sql/sql-server-data-operations.md)

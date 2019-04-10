@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - CLR attributes for custom types [XAML Services]
 ms.assetid: 5dfb299a-b6e2-41b8-8694-e6ac987547f1
-ms.openlocfilehash: 80127bae06a90dccd204b0f2a4baef10732ade76
-ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
+ms.openlocfilehash: ace1b40b25bd12ff7092459e468a90f382434bf4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58039472"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59086212"
 ---
 # <a name="xaml-related-clr-attributes-for-custom-types-and-libraries"></a>사용자 지정 형식 및 라이브러리에 대한 XAML 관련 CLR 특성
 이 항목에서는.NET Framework XAML 서비스에 정의 된 공용 언어 런타임 (CLR) 특성을 설명 합니다. 또한 응용 프로그램 어셈블리 또는 형식에 대 한 XAML 관련 시나리오는.NET Framework에 정의 된 CLR 특성 다른 설명 합니다. 이러한 CLR 특성을 사용 하 여 어셈블리, 형식 또는 멤버를 설정 하면 해당 형식과 관련 된 XAML 형식 시스템 정보를 제공 합니다. 정보는 XAML 노드 스트림에서 직접 처리 하거나 전용된 XAML 판독기 및 XAML 작성기를 통해.NET Framework XAML 서비스를 사용 하는 모든 XAML 소비자에 게 제공 됩니다.  
@@ -269,5 +269,6 @@ ms.locfileid: "58039472"
 >  .NET framework XAML 서비스 XAML 관련 특성 정의 <xref:System.Windows.Markup.RootNamespaceAttribute>합니다. 이 특성은 프로젝트 시스템 지원에 대 한 어셈블리 수준 특성 및 관련이 없는 XAML 사용자 지정 형식에 대 한 합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Attribute>
 - [.NET Framework XAML 서비스에서 사용할 사용자 지정 형식 정의](defining-custom-types-for-use-with-net-framework-xaml-services.md)

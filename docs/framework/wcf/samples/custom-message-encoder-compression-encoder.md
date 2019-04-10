@@ -2,12 +2,12 @@
 title: '사용자 지정 메시지 인코더: 압축 인코더'
 ms.date: 03/30/2017
 ms.assetid: 57450b6c-89fe-4b8a-8376-3d794857bfd7
-ms.openlocfilehash: a7dd172920e88e5da51fbb9965409d1d5a03accf
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: e19894a685f511d22252d0b3a79f77b83b7fda99
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58825294"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59310501"
 ---
 # <a name="custom-message-encoder-compression-encoder"></a>사용자 지정 메시지 인코더: 압축 인코더
 이 샘플에는 Windows Communication Foundation (WCF) 플랫폼을 사용 하 여 사용자 지정 인코더를 구현 하는 방법을 보여 줍니다.  
@@ -39,9 +39,9 @@ ms.locfileid: "58825294"
   
  앞에서 설명한 대로 사용자 지정 인코더에는 몇 개의 계층이 구현됩니다. 이 각 계층 간의 관계를 더 명확하게 보여 주기 위해 서비스 시작을 위한 간단한 이벤트 순서는 다음 목록과 같습니다.  
   
-1.  서버가 시작합니다.  
+1. 서버가 시작합니다.  
   
-2.  구성 정보를 읽습니다.  
+2. 구성 정보를 읽습니다.  
   
     1.  서버 구성이 사용자 지정 구성 처리기를 등록합니다.  
   
@@ -51,11 +51,11 @@ ms.locfileid: "58825294"
   
     4.  사용자 지정 바인딩 요소가 메시지 인코더 팩터리를 만들어 반환합니다.  
   
-3.  메시지가 수신됩니다.  
+3. 메시지가 수신됩니다.  
   
-4.  메시지 인코더 팩터리는 메시지를 읽고 응답을 기록하기 위한 메시지 인코더를 반환합니다.  
+4. 메시지 인코더 팩터리는 메시지를 읽고 응답을 기록하기 위한 메시지 인코더를 반환합니다.  
   
-5.  인코더 계층이 클래스 팩터리로 구현됩니다. 인코더 클래스 팩터리만 사용자 지정 인코더에 대해 공개적으로 노출되어야 합니다. <xref:System.ServiceModel.ServiceHost> 또는 <xref:System.ServiceModel.ChannelFactory%601> 개체가 만들어질 때 바인딩 요소가 팩터리 개체를 반환합니다. 메시지 인코더는 버퍼링 모드 또는 스트리밍 모드에서 작동할 수 있습니다. 이 샘플에서는 버퍼링 모드와 스트리밍 모드를 모두 보여 줍니다.  
+5. 인코더 계층이 클래스 팩터리로 구현됩니다. 인코더 클래스 팩터리만 사용자 지정 인코더에 대해 공개적으로 노출되어야 합니다. <xref:System.ServiceModel.ServiceHost> 또는 <xref:System.ServiceModel.ChannelFactory%601> 개체가 만들어질 때 바인딩 요소가 팩터리 개체를 반환합니다. 메시지 인코더는 버퍼링 모드 또는 스트리밍 모드에서 작동할 수 있습니다. 이 샘플에서는 버퍼링 모드와 스트리밍 모드를 모두 보여 줍니다.  
   
  각 모드에 대해 추상 `ReadMessage` 클래스에 관련 `WriteMessage` 및 `MessageEncoder` 메서드가 있습니다. 인코딩 작업 중 대부분은 이 메서드에서 수행됩니다. 이 샘플은 기존 텍스트 및 이진 메시지 인코더를 래핑합니다. 따라서 샘플에서 메시지 연결 표시의 읽기 및 쓰기를 내부 인코더로 위임할 수 있고 압축 인코더가 그 결과를 압축하거나 압축을 풀 수 있습니다. 메시지 인코딩을 위한 파이프라인이 없으므로 여러 인코더를 사용 하 여 wcf에서에 대 한 유일한 모델입니다. 메시지의 압축을 풀었으면 결과 메시지는 채널 스택에서 처리하도록 스택을 따라 위로 전달됩니다. 압축 과정에서 압축된 결과 메시지는 제공된 스트림에 직접 기록됩니다.  
   
@@ -334,17 +334,17 @@ Press <ENTER> to terminate client.
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>샘플을 설치, 빌드 및 실행하려면  
   
-1.  다음 명령을 사용하여 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 4.0을 설치합니다.  
+1. 다음 명령을 사용하여 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 4.0을 설치합니다.  
   
     ```  
     %windir%\Microsoft.NET\Framework\v4.0.XXXXX\aspnet_regiis.exe /i /enable  
     ```  
   
-2.  수행 했는지 확인 합니다 [Windows Communication Foundation 샘플에 대 한 일회성 설치 절차](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)합니다.  
+2. 수행 했는지 확인 합니다 [Windows Communication Foundation 샘플에 대 한 일회성 설치 절차](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)합니다.  
   
-3.  지침에 따라 솔루션을 빌드하려면 [Building Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)합니다.  
+3. 지침에 따라 솔루션을 빌드하려면 [Building Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)합니다.  
   
-4.  단일 또는 다중 컴퓨터 구성에서 샘플을 실행 하려면의 지침을 따릅니다 [Windows Communication Foundation 샘플 실행](../../../../docs/framework/wcf/samples/running-the-samples.md)합니다.  
+4. 단일 또는 다중 컴퓨터 구성에서 샘플을 실행 하려면의 지침을 따릅니다 [Windows Communication Foundation 샘플 실행](../../../../docs/framework/wcf/samples/running-the-samples.md)합니다.  
   
 > [!IMPORTANT]
 >  컴퓨터에 이 샘플이 이미 설치되어 있을 수도 있습니다. 계속하기 전에 다음(기본) 디렉터리를 확인하세요.  
@@ -354,4 +354,3 @@ Press <ENTER> to terminate client.
 >  이 디렉터리가 없으면로 이동 [Windows Communication Foundation (WCF) 및.NET Framework 4 용 Windows WF (Workflow Foundation) 샘플](https://go.microsoft.com/fwlink/?LinkId=150780) 모든 Windows Communication Foundation (WCF)를 다운로드 하 고 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플. 이 샘플은 다음 디렉터리에 있습니다.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\MessageEncoder\Compression`  
-  

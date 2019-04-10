@@ -15,12 +15,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6a705257c150fe0272674c08c7b316ab968766cb
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 2c5296fbab71c67572718a58fedb9f89b064f816
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57475336"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59214691"
 ---
 # <a name="icorprofilercallback6getassemblyreferences-method"></a>ICorProfilerCallback6::GetAssemblyReferences 메서드
 [.NET Framework 4.5.2 이상 버전에서 지원됨]  
@@ -64,7 +64,8 @@ HRESULT GetAssemblyReferences(        [in, string] const WCHAR* wszAssemblyPath,
  **.NET Framework 버전:** [!INCLUDE[net_current_v452plus](../../../../includes/net-current-v452plus-md.md)]  
   
 ## <a name="see-also"></a>참고자료
+
 - [ICorProfilerCallback6 인터페이스](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback6-interface.md)
 - [ModuleLoadFinished 메서드](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-moduleloadfinished-method.md)
-- [COR_PRF_ASSEMBLY_REFERENCE_INFO 구조체](../../../../docs/framework/unmanaged-api/profiling/cor-prf-assembly-reference-info-structure.md)
+- [COR_PRF_ASSEMBLY_REFERENCE_INFO 구조](../../../../docs/framework/unmanaged-api/profiling/cor-prf-assembly-reference-info-structure.md)
 - [ICorProfilerAssemblyReferenceProvider 인터페이스](../../../../docs/framework/unmanaged-api/profiling/icorprofilerassemblyreferenceprovider-interface.md)

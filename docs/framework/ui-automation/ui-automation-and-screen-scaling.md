@@ -10,18 +10,18 @@ helpviewer_keywords:
 - UI (user interface), automation
 - UI Automation
 ms.assetid: 4380cad7-e509-448f-b9a5-6de042605fd4
-ms.openlocfilehash: 4b2988314afbe501623fd050a989876842f68601
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
-ms.translationtype: MT
+ms.openlocfilehash: 8c2477e5e7086e1bbfaab1e4b116c9e6bb4e2d30
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57674538"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59194068"
 ---
 # <a name="ui-automation-and-screen-scaling"></a>UI 자동화 및 화면 크기 조정
 > [!NOTE]
 >  이 설명서는 <xref:System.Windows.Automation> 네임스페이스에 정의된 관리되는 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 클래스를 사용하려는 .NET Framework 개발자를 위한 것입니다. 에 대 한 최신 정보에 대 한 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]를 참조 하세요 [Windows Automation API: UI 자동화](https://go.microsoft.com/fwlink/?LinkID=156746)합니다.  
   
- [!INCLUDE[TLA#tla_longhorn](../../../includes/tlasharptla-longhorn-md.md)] 을 통해 사용자가 [!INCLUDE[TLA#tla_dpi](../../../includes/tlasharptla-dpi-md.md)] 설정을 변경할 수 있으므로 대부분의 [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] 요소가 화면에 크게 표시됩니다. 이 기능은 [!INCLUDE[TLA#tla_win](../../../includes/tlasharptla-win-md.md)]에서 오래 전부터 사용할 수 있었지만, 이전 버전에서는 크기 조정을 애플리케이션에서 구현해야 했습니다. [!INCLUDE[TLA#tla_longhorn](../../../includes/tlasharptla-longhorn-md.md)]에서 바탕 화면 창 관리자는 자체 크기 조정을 처리하지 않는 모든 응용 프로그램에 기본 크기 조정을 수행합니다. UI 자동화 클라이언트 애플리케이션에서는 이 기능을 고려해야 합니다.  
+ [!INCLUDE[TLA#tla_longhorn](../../../includes/tlasharptla-longhorn-md.md)] 사용자가 변경할 수 있도록 합니다 [!INCLUDE[TLA#tla_dpi](../../../includes/tlasharptla-dpi-md.md)] 있으므로 대부분의 설정 [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] 요소가 화면에 크게 표시 합니다. 이 기능은 [!INCLUDE[TLA#tla_win](../../../includes/tlasharptla-win-md.md)]에서 오래 전부터 사용할 수 있었지만, 이전 버전에서는 크기 조정을 애플리케이션에서 구현해야 했습니다. [!INCLUDE[TLA#tla_longhorn](../../../includes/tlasharptla-longhorn-md.md)]에서 바탕 화면 창 관리자는 자체 크기 조정을 처리하지 않는 모든 응용 프로그램에 기본 크기 조정을 수행합니다. UI 자동화 클라이언트 애플리케이션에서는 이 기능을 고려해야 합니다.  
   
 <a name="Scaling_in_Windows_Vista"></a>   
 ## <a name="scaling-in-windows-vista"></a>Windows Vista에서 크기 조정  
@@ -76,4 +76,5 @@ ms.locfileid: "57674538"
  사용하는 애플리케이션에서 비 [!INCLUDE[TLA2#tla_dpi](../../../includes/tla2sharptla-dpi-md.md)]인식 애플리케이션과 직접 크로스 프로세스 통신을 수행하는 경우 [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)] 함수 `PhysicalToLogicalPoint` 및 `LogicalToPhysicalPoint`를 사용하여 논리적 좌표와 물리적 좌표 간을 변환했을 수 있습니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [Highlighter Sample](https://github.com/Microsoft/WPF-Samples/tree/master/Accessibility/Highlighter)

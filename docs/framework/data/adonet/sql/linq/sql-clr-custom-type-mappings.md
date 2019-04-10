@@ -2,12 +2,12 @@
 title: SQL-CLR 사용자 지정 대/소문자 매핑
 ms.date: 03/30/2017
 ms.assetid: d916c7fb-4b56-4214-acbe-5e23365047b2
-ms.openlocfilehash: 36763be3cd4845fbbd027b448098d0dafb9e448a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: bc92d54cad6a977268ef3f000c684d5f195a933d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54622513"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59140415"
 ---
 # <a name="sql-clr-custom-type-mappings"></a>SQL-CLR 사용자 지정 대/소문자 매핑
 SQL Server와 CLR(공용 언어 런타임) 간의 형식 매핑은 SQLMetal 명령줄 도구 또는 개체 관계형 디자이너(O/R 디자이너)를 사용할 때 자동으로 지정됩니다.  
@@ -32,5 +32,6 @@ SQL Server와 CLR(공용 언어 런타임) 간의 형식 매핑은 SQLMetal 명�
  데이터베이스를 변경할 경우 이러한 변경 내용이 반영되도록 DBML 파일을 업데이트해야 합니다. DBML 파일을 업데이트하는 한 가지 방법은 자동으로 새 DBML 파일이 만들어지면 형식 매핑 사용자 지정을 다시 수행하는 것입니다. 또는 새 DBML 파일과 사용자 지정된 DBML 파일 간의 차이점을 비교하여 데이터베이스 변경 내용이 반영되도록 사용자 지정 DBML 파일을 수동으로 업데이트할 수 있습니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [SQL-CLR 형식 매핑](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mapping.md)
 - [LINQ to SQL에서 코드 생성](../../../../../../docs/framework/data/adonet/sql/linq/code-generation-in-linq-to-sql.md)

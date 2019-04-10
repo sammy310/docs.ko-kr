@@ -9,12 +9,12 @@ helpviewer_keywords:
 - attributes [Windows Forms], applying
 - Windows Forms controls, applying attributes
 ms.assetid: af0a3f7f-155b-4ba1-83c4-9cf721331a06
-ms.openlocfilehash: fd41999b1cd1cde940d182f3acc505bbb92a3aa4
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: e86277c06e515b28bada3331cf4fd63e536319a4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57718547"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59079593"
 ---
 # <a name="how-to-apply-attributes-in-windows-forms-controls"></a>방법: Windows Forms 컨트롤에서 특성 적용
 구성 요소 및 디자인 환경은와 제대로 상호 작용을 런타임에 제대로 실행 하는 컨트롤을 개발 하려면 클래스 및 멤버에 특성을 올바르게 적용 해야 합니다.  
@@ -78,6 +78,7 @@ ms.locfileid: "57718547"
 -   호스팅하는 폼의 `AttributesDemoControl` 에 대 한 참조가 필요는 `AttributesDemoControl` 빌드하려면 어셈블리.  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.IComparable>
 - <xref:System.Windows.Forms.DataGridView>
 - [.NET Framework에서 사용자 지정 Windows Forms 컨트롤 개발](developing-custom-windows-forms-controls.md)

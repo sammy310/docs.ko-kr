@@ -6,12 +6,12 @@ helpviewer_keywords:
 - application configuration [.NET Framework]
 - assemblies [.NET Framework], specifying location
 ms.assetid: 1cb92bd7-6bab-44cf-8fd3-36303ce84fea
-ms.openlocfilehash: 328fe08872a2b57d0bdf87ea9be9224795ca9ad9
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.openlocfilehash: f7d09e315f2ccc7ecdcf22719ca6dce1ee1411b4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55825409"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59186292"
 ---
 # <a name="specifying-an-assemblys-location"></a>어셈블리 위치 지정
 두 가지 방법으로 어셈블리의 위치를 지정할 수 있습니다.  
@@ -66,7 +66,8 @@ ms.locfileid: "55825409"
  합니다 **privatePath** 특성 런타임에서 어셈블리에 대 한 검색 해야 하는 디렉터리를 포함 합니다. 응용 프로그램이 C:\Program Files\MyApp에 있는 경우 런타임에서 C:\Program Files\MyApp\Bin, C:\Program Files\MyApp\Bin2\Subbin 및 C:\Program Files\MyApp\Bin3 코드 베이스를 지정 하지 않는 어셈블리를 찾습니다. 에 지정 된 디렉터리가 **privatePath** 응용 프로그램 기본 디렉터리의 하위 디렉터리 여야 합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [공용 언어 런타임의 어셈블리](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)
 - [어셈블리를 사용한 프로그래밍](../../../docs/framework/app-domains/programming-with-assemblies.md)
 - [런타임에서 어셈블리를 찾는 방법](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)
-- [구성 파일을 사용 하 여 앱 구성](index.md)
+- [구성 파일을 사용하여 앱 구성](index.md)

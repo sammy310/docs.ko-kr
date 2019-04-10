@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: a15ae411-8dc2-4ca3-84d2-01c9d5f1972a
-ms.openlocfilehash: 56ebe888b816972f8d72873e4fca9f5204e6c772
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: b6778522b5757c0ece899f7465d3ab500038fc49
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58408927"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59202562"
 ---
 # <a name="serialization"></a>Serialization
 이 항목에서는 설명 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] serialization 기능입니다. 디자인 타임에 코드 생성 도중 serialization을 추가하는 방법과 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 클래스의 런타임 serialization 동작에 대한 정보가 제공됩니다.  
@@ -24,8 +24,7 @@ ms.locfileid: "58408927"
 ## <a name="overview"></a>개요  
  생성 한 코드 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 기본적으로 지연 된 로드 기능을 제공 합니다. 지연된 로드를 사용하면 중간 계층에서 매우 편리하게 데이터를 필요한 때 투명하게 로드할 수 있습니다. 그러나 지연된 로드를 원하는지 여부에 상관없이 serializer가 지연된 로드를 트리거하기 때문에 이것은 serialization에서 문제가 됩니다. 실제로 개체가 serialize될 때 모든 지연 로드된 아웃바운드 참조 아래의 전이적 닫기가 serialize됩니다.  
   
- 
-  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] serialization 기능은 주로 다음과 같은 두 개의 메커니즘을 통해 이 문제를 해결합니다.  
+ [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] serialization 기능은 주로 다음과 같은 두 개의 메커니즘을 통해 이 문제를 해결합니다.  
   
 -   지연된 로드를 해제하기 위한 <xref:System.Data.Linq.DataContext> 모드(<xref:System.Data.Linq.DataContext.ObjectTrackingEnabled%2A>). 자세한 내용은 <xref:System.Data.Linq.DataContext>을 참조하세요.  
   
@@ -74,6 +73,7 @@ ms.locfileid: "58408927"
  [!code-vb[DLinqSerialization#7](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqSerialization/vb/northwind-ser.vb#7)]  
   
 ## <a name="see-also"></a>참고자료
+
 - [배경 정보](../../../../../../docs/framework/data/adonet/sql/linq/background-information.md)
 - [SqlMetal.exe(코드 생성 도구)](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md)
-- [방법: 엔터티를 직렬화 할 수 있도록 설정](../../../../../../docs/framework/data/adonet/sql/linq/how-to-make-entities-serializable.md)
+- [방법: 직렬화 가능한 엔터티 만들기](../../../../../../docs/framework/data/adonet/sql/linq/how-to-make-entities-serializable.md)

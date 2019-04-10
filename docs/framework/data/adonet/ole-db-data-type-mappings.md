@@ -2,17 +2,17 @@
 title: OLE DB 데이터 형식 매핑
 ms.date: 03/30/2017
 ms.assetid: 04bcb259-59d3-4fd7-894d-4f0dd0c68069
-ms.openlocfilehash: 203b017234a98553a053981d8f74b2c419376e96
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 09fab7c5df99ffdb0aef6d32a8ad5ca1ed446d42
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54711735"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59100589"
 ---
 # <a name="ole-db-data-type-mappings"></a>OLE DB 데이터 형식 매핑
 다음 표에서는 .NET Framework Data Provider ADO 및 OLE DB([!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)])의 데이터 형식에 대해 유추된 <xref:System.Data.OleDb> 형식을 보여 줍니다. 또한 이 표에는 <xref:System.Data.OleDb.OleDbDataReader>의 형식화된 접근자 메서드도 나열되어 있습니다.  
   
-|ADO 형식|OLE DB 형식|[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 형식|[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]의 형식화된 접근자|  
+|ADO 형식|OLE DB 형식|[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] type|[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 형식화 된 접근자|  
 |--------------|-----------------|----------------------------------------------------------------------|--------------------------------------------------------------------------------|  
 |adBigInt|DBTYPE_I8|Int64|GetInt64()|  
 |adBinary|DBTYPE_BYTES|Byte[]|GetBytes()|  
@@ -50,5 +50,6 @@ ms.locfileid: "54711735"
  \* OLE DB 형식에 대 한 `DBTYPE_IUNKNOWN` 고 `DBTYPE_IDISPATCH`, 개체 참조는 포인터의 마샬링된 표현입니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [ADO.NET에서 데이터 검색 및 수정](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)
 - [ADO.NET 관리되는 공급자 및 데이터 집합 개발자 센터](https://go.microsoft.com/fwlink/?LinkId=217917)

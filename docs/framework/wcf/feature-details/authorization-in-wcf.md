@@ -5,12 +5,12 @@ helpviewer_keywords:
 - authorization [WCF]
 - security [WCF], authorization
 ms.assetid: 8ea0b552-af65-45b0-a157-c6c111b8ce5e
-ms.openlocfilehash: 51bf3c81962c6981affdb96261fc41211142e46d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 26aa445f3136fcb16e2eb9cdce6b245476297dfd
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54645550"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59161372"
 ---
 # <a name="authorization-in-wcf"></a>WCF에서 권한 부여
 권한 부여는 서비스나 파일과 같은 리소스에 대한 액세스 및 권한을 제어하는 프로세스입니다. 이 섹션의에서 항목에서는에 Windows Communication Foundation (WCF)에서 다양 한 방법으로 기본 작업을 수행 하는 방법을 보여 줍니다.  
@@ -19,14 +19,14 @@ ms.locfileid: "54645550"
  [Access Control 메커니즘](../../../../docs/framework/wcf/feature-details/access-control-mechanisms.md)  
  WCF 및 제안 된 사용 권한 부여 메커니즘의 간략 한 개요를 제공합니다.  
   
- [방법: PrincipalPermissionAttribute 클래스를 사용 하 여 액세스 제한](../../../../docs/framework/wcf/how-to-restrict-access-with-the-principalpermissionattribute-class.md)  
+ [방법: PrincipalPermissionAttribute 클래스를 사용하여 액세스 제한](../../../../docs/framework/wcf/how-to-restrict-access-with-the-principalpermissionattribute-class.md)  
  <xref:System.Security.Permissions.PrincipalPermissionAttribute>를 사용하여 서비스에 대한 액세스를 제한하는 프로세스를 보여 줍니다.  
   
  [방법: 서비스에서 ASP.NET 역할 공급자 사용](../../../../docs/framework/wcf/feature-details/how-to-use-the-aspnet-role-provider-with-a-service.md)  
  [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]의 역할 공급자 기능을 사용할 수 있도록 설정하는 서비스 구성에 대해 설명합니다.  
   
  [방법: 서비스에서 ASP.NET 권한 부여 관리자 역할 공급자 사용](../../../../docs/framework/wcf/feature-details/how-to-use-the-aspnet-authorization-manager-role-provider-with-a-service.md)  
- [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]은 권한 부여 관리자를 사용하여 웹 사이트의 권한을 관리할 수 있습니다. WCF 마찬가지로 활용을 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]/Authorization 관리자 클라이언트의 권한 부여를 결합 합니다.  
+ [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 웹 사이트에 대 한 권한 부여를 관리 하려면 권한 부여 관리자를 사용할 수 있습니다. WCF 마찬가지로 활용을 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]/Authorization 관리자 클라이언트의 권한 부여를 결합 합니다.  
   
  [ID 모델을 사용하여 클레임 및 권한 부여 관리](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md)  
  클레임 기반 권한 부여에 ID 모델 인프라를 사용하는 기본적인 사용법에 대해 설명합니다 .  
@@ -47,5 +47,6 @@ ms.locfileid: "54645550"
  [인증](../../../../docs/framework/wcf/feature-details/authentication-in-wcf.md)  
   
 ## <a name="see-also"></a>참고자료
+
 - [보안 개요](../../../../docs/framework/wcf/feature-details/security-overview.md)
-- [Windows Server appfabric 보안 모델](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+- [Windows Server AppFabric 보안 모델](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

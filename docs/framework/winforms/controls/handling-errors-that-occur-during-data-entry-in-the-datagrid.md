@@ -1,5 +1,5 @@
 ---
-title: '연습: Windows Forms DataGridView 컨트롤에서 데이터 입력 중에 발생 하는 오류 처리'
+title: '연습: Windows Forms DataGridView 컨트롤에서 데이터 입력 중에 발생하는 오류 처리'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,14 +12,14 @@ helpviewer_keywords:
 - error handling [Windows Forms], data entry
 - walkthroughs [Windows Forms], DataGridView control
 ms.assetid: 30a68b85-d3af-4946-83c1-1e2d010d0511
-ms.openlocfilehash: a8eb4584060924684eacc99d46b88408451f1c82
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 9e803b6450fb8c9ade4adde5bf98fb1c3c62c861
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57708238"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59313222"
 ---
-# <a name="walkthrough-handling-errors-that-occur-during-data-entry-in-the-windows-forms-datagridview-control"></a>연습: Windows Forms DataGridView 컨트롤에서 데이터 입력 중에 발생 하는 오류 처리
+# <a name="walkthrough-handling-errors-that-occur-during-data-entry-in-the-windows-forms-datagridview-control"></a>연습: Windows Forms DataGridView 컨트롤에서 데이터 입력 중에 발생하는 오류 처리
 내부 데이터 저장소에서 오류를 처리 하는 것은 데이터 입력 응용 프로그램에 필요한 기능입니다. Windows Forms <xref:System.Windows.Forms.DataGridView> 컨트롤을 사용 하면이 쉽게 노출 하 여는 <xref:System.Windows.Forms.DataGridView.DataError> 데이터 저장소는 끊어진된 비즈니스 규칙 또는 제약 조건 위반을 감지 하는 경우 발생 하는 이벤트입니다.  
   
  이 연습에서는 행을 검색 합니다는 `Customers` Northwind 샘플 데이터베이스의 테이블 및 표시를 <xref:System.Windows.Forms.DataGridView> 제어 합니다. 에 중복 된 `CustomerID` 기존 행을 편집된 하거나 새 행의 값이 검색 되는 <xref:System.Windows.Forms.DataGridView.DataError> 이벤트 발생을 표시 하 여 처리 됩니다는 <xref:System.Windows.Forms.MessageBox> 예외를 설명 하는 합니다.  
@@ -35,7 +35,7 @@ ms.locfileid: "57708238"
   
 #### <a name="to-handle-data-entry-errors-in-the-datagridview-control"></a>DataGridView 컨트롤에서 데이터 입력 오류를 처리 하려면  
   
-1.  파생 되는 클래스를 만듭니다 <xref:System.Windows.Forms.Form> 포함 된 <xref:System.Windows.Forms.DataGridView> 컨트롤 및 <xref:System.Windows.Forms.BindingSource> 구성 요소.  
+1. 파생 되는 클래스를 만듭니다 <xref:System.Windows.Forms.Form> 포함 된 <xref:System.Windows.Forms.DataGridView> 컨트롤 및 <xref:System.Windows.Forms.BindingSource> 구성 요소.  
   
      다음 코드 예제에서는 기본 초기화를 제공 하 고 포함 된 `Main` 메서드.  
   
@@ -44,7 +44,7 @@ ms.locfileid: "57708238"
     [!code-csharp[System.Windows.Forms.DataGridView.DataError#02](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.DataError/CS/errorhandling.cs#02)]
     [!code-vb[System.Windows.Forms.DataGridView.DataError#02](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.DataError/VB/errorhandling.vb#02)]  
   
-2.  데이터베이스에 연결 하는 정보를 처리 하는 것에 대 한 폼의 클래스 정의에서 메서드를 구현 합니다.  
+2. 데이터베이스에 연결 하는 정보를 처리 하는 것에 대 한 폼의 클래스 정의에서 메서드를 구현 합니다.  
   
      사용 하 여이 코드 예제는 `GetData` 채워진를 반환 하는 메서드 <xref:System.Data.DataTable> 개체입니다. 설정 해야 합니다 `connectionString` 데이터베이스에 대 한 적절 한 값으로 변수입니다.  
   
@@ -54,12 +54,12 @@ ms.locfileid: "57708238"
      [!code-csharp[System.Windows.Forms.DataGridView.DataError#30](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.DataError/CS/errorhandling.cs#30)]
      [!code-vb[System.Windows.Forms.DataGridView.DataError#30](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.DataError/VB/errorhandling.vb#30)]  
   
-3.  폼의 처리기를 구현 <xref:System.Windows.Forms.Form.Load> 초기화 하는 이벤트를 <xref:System.Windows.Forms.DataGridView> 및 <xref:System.Windows.Forms.BindingSource> 데이터 바인딩을 설정 합니다.  
+3. 폼의 처리기를 구현 <xref:System.Windows.Forms.Form.Load> 초기화 하는 이벤트를 <xref:System.Windows.Forms.DataGridView> 및 <xref:System.Windows.Forms.BindingSource> 데이터 바인딩을 설정 합니다.  
   
      [!code-csharp[System.Windows.Forms.DataGridView.DataError#10](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.DataError/CS/errorhandling.cs#10)]
      [!code-vb[System.Windows.Forms.DataGridView.DataError#10](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.DataError/VB/errorhandling.vb#10)]  
   
-4.  처리를 <xref:System.Windows.Forms.DataGridView.DataError> 이벤트에는 <xref:System.Windows.Forms.DataGridView>합니다.  
+4. 처리를 <xref:System.Windows.Forms.DataGridView.DataError> 이벤트에는 <xref:System.Windows.Forms.DataGridView>합니다.  
   
      오류에 대 한 컨텍스트는 커밋 작업 인 경우에 오류를 표시 한 <xref:System.Windows.Forms.MessageBox>합니다.  
   
@@ -89,9 +89,10 @@ ms.locfileid: "57708238"
 -   셀의 모양을 사용자 지정 합니다. 자세한 내용은 [방법: Windows Forms DataGridView 컨트롤에서 셀 모양 사용자 지정](customize-the-appearance-of-cells-in-the-datagrid.md) 고 [방법: Windows Forms DataGridView 컨트롤에 기본 셀 스타일 설정](how-to-set-default-cell-styles-for-the-windows-forms-datagridview-control.md)합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.BindingSource>
 - [Windows Forms DataGridView 컨트롤의 데이터 입력](data-entry-in-the-windows-forms-datagridview-control.md)
-- [방법: Windows Forms DataGridView 컨트롤에서 데이터 입력 중에 발생 하는 오류 처리](handle-errors-that-occur-during-data-entry-in-the-datagrid.md)
-- [연습: Windows Forms DataGridView 컨트롤의 데이터 유효성 검사](walkthrough-validating-data-in-the-windows-forms-datagridview-control.md)
+- [방법: Windows Forms DataGridView 컨트롤에서 데이터 입력 중에 발생하는 오류 처리](handle-errors-that-occur-during-data-entry-in-the-datagrid.md)
+- [연습: Windows Forms DataGridView 컨트롤에서 데이터 유효성 검사](walkthrough-validating-data-in-the-windows-forms-datagridview-control.md)
 - [연결 정보 보호](../../data/adonet/protecting-connection-information.md)

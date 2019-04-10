@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 22aaa1f3-596f-4733-93db-f4bcabcb5240
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c18919a6c48c251138a3d5e88079d3383979ef1a
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 2d2dbff544f991712ad26f2cb12d638801b5a3fb
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55266405"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59137880"
 ---
 # <a name="parameter-element-net-native"></a>\<매개 변수 > 요소 (.NET 네이티브)
 메서드에 전달된 인수의 형식에 리플렉션 정책을 적용합니다.  
@@ -68,13 +68,14 @@ ms.locfileid: "55266405"
   
 |요소|설명|  
 |-------------|-----------------|  
-|[\<Method>](../../../docs/framework/net-native/method-element-net-native.md)|생성자 또는 메서드에 런타임 리플렉션 정책을 적용합니다.|  
+|[\<메서드 >](../../../docs/framework/net-native/method-element-net-native.md)|생성자 또는 메서드에 런타임 리플렉션 정책을 적용합니다.|  
   
 ## <a name="remarks"></a>설명  
  `<Parameter>` 요소는 [\<Method>](../../../docs/framework/net-native/method-element-net-native.md) 요소의 자식이며 특정 메서드 매개 변수에 정책을 적용하는 데 사용됩니다. 특정 메서드 매개 변수는 형식이 아닌 이름으로 지정됩니다. 정책 형식을 나타내는 `Activate` 또는 `Dynamic`과 같은 특성이 하나 이상 있어야 합니다.  
   
 ## <a name="see-also"></a>참고자료
-- [\<Method> 요소](../../../docs/framework/net-native/method-element-net-native.md)
+
+- [\<메서드 > 요소](../../../docs/framework/net-native/method-element-net-native.md)
 - [런타임 지시문(rd.xml) 구성 파일 참조](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
 - [런타임 지시문 정책 설정](../../../docs/framework/net-native/runtime-directive-policy-settings.md)
 - [런타임 지시문 요소](../../../docs/framework/net-native/runtime-directive-elements.md)

@@ -2,12 +2,12 @@
 title: <serviceThrottling>
 ms.date: 03/30/2017
 ms.assetid: a337d064-1e64-4209-b4a9-db7fdb7e3eaf
-ms.openlocfilehash: 87952a92bab1ef7147100332bcef87b6f0534817
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 995ff9979096757225c9241e977f86f755955945
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55270388"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59158772"
 ---
 # <a name="servicethrottling"></a>\<serviceThrottling>
 WCF(Windows Communication Foundation) 서비스의 스로틀 메커니즘을 지정합니다.  
@@ -33,7 +33,7 @@ WCF(Windows Communication Foundation) 서비스의 스로틀 메커니즘을 지
   
 |특성|설명|  
 |---------------|-----------------|  
-|maxConcurrentCalls|<xref:System.ServiceModel.ServiceHost>에서 현재 처리되는 메시지 수를 제한하는 양의 정수입니다. 제한을 초과하는 호출은 큐에 대기합니다. 이 값을 0으로 설정하는 것은 Int32.MaxValue로 설정하는 것과 같습니다. 기본값은 16 * 프로세서 수입니다.|  
+|maxConcurrentCalls|<xref:System.ServiceModel.ServiceHost>에서 현재 처리되는 메시지 수를 제한하는 양의 정수입니다. 한도를 초과하는 호출은 대기됩니다. 이 값을 0으로 설정하는 것은 Int32.MaxValue로 설정하는 것과 같습니다. 기본값은 16 * 프로세서 수입니다.|  
 |maxConcurrentInstances|<xref:System.ServiceModel.InstanceContext>에서 한 번에 실행하는 <xref:System.ServiceModel.ServiceHost> 개체 수를 제한하는 양의 정수입니다. 추가 인스턴스 생성 요청은 큐에 대기했다가 인스턴스 수가 한도 아래로 내려가면 완료됩니다. 기본값은 maxConcurrentSessions와 MaxConcurrentCalls의 합계입니다.|  
 |maxConcurrentSessions|<xref:System.ServiceModel.ServiceHost> 개체에서 수락할 수 있는 세션 수를 제한하는 양의 정수입니다.<br /><br /> 서비스는 제한을 초과하는 연결을 수락하지만 제한 아래의 채널만 활성화되며 해당 채널에서 메시지를 읽습니다. 이 값을 0으로 설정하는 것은 Int32.MaxValue로 설정하는 것과 같습니다. 기본값은 100 * 프로세서 수입니다.|  
   
@@ -69,6 +69,7 @@ WCF(Windows Communication Foundation) 서비스의 스로틀 메커니즘을 지
 ```  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.ServiceModel.Description.ServiceThrottlingBehavior>
 - <xref:System.ServiceModel.Configuration.ServiceThrottlingElement>
 - [ServiceThrottlingBehavior를 사용하여 WCF 서비스 성능 제어](../../../../../docs/framework/wcf/feature-details/using-servicethrottlingbehavior-to-control-wcf-service-performance.md)

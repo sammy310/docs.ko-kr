@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - AJAX integration and JSON support [WCF]
 ms.assetid: 3851a8fc-d861-4ac1-873c-96af0343d3a7
-ms.openlocfilehash: 54942386bb4fb88e72a86b5e25f12cee4776a126
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a3d9c29f3223624653f2d568bb351d90334a4318
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54625642"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59137113"
 ---
 # <a name="ajax-integration-and-json-support"></a>AJAX 통합 및 JSON 지원
 ASP.NET Asynchronous JavaScript and XML (AJAX)에 대 한 Windows Communication Foundation (WCF) 지원 및 개체 JSON (JavaScript Notation) 데이터 형식에는 WCF 서비스에서 AJAX 클라이언트에 작업을 노출할 수 있습니다. AJAX 클라이언트는 웹 페이지 JavaScript 코드를 실행 하 고 HTTP 요청을 사용 하 여 이러한 WCF 서비스에 액세스 합니다. 이 단원의 항목에서는 이러한 지원에 대한 정보와 이러한 지원을 구현하는 방법에 대한 정보를 제공합니다.  
@@ -30,5 +30,6 @@ ASP.NET Asynchronous JavaScript and XML (AJAX)에 대 한 Windows Communication 
  WCF 웹 서비스에 AJAX 사용 ASP.NET 웹 서비스를 마이그레이션하는 방법을 설명 합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.ServiceModel.Activation.WebScriptServiceHostFactory>
 - [WCF 웹 HTTP 프로그래밍 모델](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)

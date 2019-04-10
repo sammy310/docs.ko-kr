@@ -1,13 +1,13 @@
 ---
-title: <schemeSettings> 요소(Uri 설정)
+title: <schemeSettings> 요소 (Uri 설정)
 ms.date: 03/30/2017
 ms.assetid: 0ae45c6e-8c4c-4c0d-8b9f-a93824648890
-ms.openlocfilehash: 06cb07b1620a603f0c0cf67a9236be143c2ec4a2
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 8dc505d8a9de4e8939372af61b23652551c36530
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55260197"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59094237"
 ---
 # <a name="schemesettings-element-uri-settings"></a>\<schemeSettings > 요소 (Uri 설정)
 특정 체계에 대해 <xref:System.Uri>가 구문 분석되는 방법을 지정합니다.  
@@ -34,7 +34,7 @@ ms.locfileid: "55260197"
 |**요소**|**설명**|  
 |-----------------|---------------------|  
 |[add](../../../../../docs/framework/configure-apps/file-schema/network/add-element-for-schemesettings-uri-settings.md)|스키마 이름에 대 한 스키마 설정을 추가합니다.|  
-|[clear](../../../../../docs/framework/configure-apps/file-schema/network/clear-element-for-schemesettings-uri-settings.md)|모든 기존 구성표 설정을 지웁니다.|  
+|[지우기](../../../../../docs/framework/configure-apps/file-schema/network/clear-element-for-schemesettings-uri-settings.md)|모든 기존 구성표 설정을 지웁니다.|  
 |[remove](../../../../../docs/framework/configure-apps/file-schema/network/remove-element-for-schemesettings-uri-settings.md)|스키마 이름에 대 한 스키마 설정을 제거합니다.|  
   
 ### <a name="parent-elements"></a>부모 요소  
@@ -84,6 +84,7 @@ ms.locfileid: "55260197"
 |비워 둘 수 있습니다.||  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Configuration.SchemeSettingElement?displayProperty=nameWithType>
 - <xref:System.Configuration.SchemeSettingElementCollection?displayProperty=nameWithType>
 - <xref:System.Configuration.UriSection?displayProperty=nameWithType>

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - My.Forms object
 - forms [Visual Basic], accessing all open
 ms.assetid: 9aaf5aaf-2012-4f97-89c7-6e62b9d17863
-ms.openlocfilehash: 44942827c4bfbaeffb3e424d8339ac6d001722ae
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 85de915f4dc9a79e0161411951062afbeb764513
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54566928"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58821688"
 ---
 # <a name="accessing-application-forms-visual-basic"></a>애플리케이션 폼 액세스(Visual Basic)
 `My.Forms` 개체는 애플리케이션 프로젝트에 선언된 각 Windows Form의 인스턴스에 액세스하는 간편한 방법을 제공합니다. `My.Application` 개체의 속성을 사용하여 애플리케이션의 시작 화면 및 기본 폼에 액세스하고 애플리케이션의 열려 있는 폼 목록을 가져올 수도 있습니다.  
@@ -28,6 +28,7 @@ ms.locfileid: "54566928"
 |애플리케이션이 시작될 때 시작 화면을 상태 정보로 업데이트합니다.|<xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.SplashScreen%2A>|  
   
 ## <a name="see-also"></a>참고 항목
+
 - <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OpenForms%2A>
 - <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.SplashScreen%2A>
 - [My.Forms 개체](../../../visual-basic/language-reference/objects/my-forms-object.md)

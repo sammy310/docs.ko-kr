@@ -29,7 +29,7 @@ ms.locfileid: "58838939"
   
  반 공변성 (covariance) 및 참조 형식에 대 한 지원 및 값 형식에 대해 지원 되지 않습니다.  
   
- Visual basic에서 대리자 형식을 지정 하지 않고 반 공변성 인터페이스의 이벤트를 선언할 수 없습니다. 또한 반 공변성 인터페이스 클래스, 열거형 또는 구조를 중첩 있을 수 없습니다. 하지만 인터페이스 중첩 수 있습니다.  
+ Visual Basic에서 대리자 형식을 지정 하지 않고 반 공변성 인터페이스의 이벤트를 선언할 수 없습니다. 또한 반 공변성 인터페이스 클래스, 열거형 또는 구조를 중첩 있을 수 없습니다. 하지만 인터페이스 중첩 수 있습니다.  
   
 ## <a name="behavior"></a>동작  
  반공변(contravariant) 형식 매개 변수가 있는 인터페이스는 해당 메서드가 인터페이스 형식 매개 변수에 지정된 형식보다 덜 파생된 형식의 인수를 사용할 수 있도록 합니다. 예를 들어 .NET Framework 4의 <xref:System.Collections.Generic.IComparer%601> 인터페이스에서 T 형식은 반공변(contravariant)이므로 `Person`가 `Employee`을 상속하는 경우 특수 변환 메서드를 사용하지 않고 `IComparer(Of Person)` 형식의 개체를 `IComparer(Of Employee)` 형식의 개체에 할당할 수 있습니다.  

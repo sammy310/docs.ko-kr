@@ -1,5 +1,5 @@
 ---
-title: '방법: 비디오로 영역 그리기'
+title: '방법: 비디오로 영역 칠하기'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - video [WPF], painting with
 - brushes [WPF], painting with a video
 ms.assetid: 04dd6600-4a6e-4b43-a93e-21cce7dfbcb8
-ms.openlocfilehash: 0756a9e87840648b55ecad4b3f1ce6e0e5452eb7
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: be09d1310847cd7214ea795a704c25d994f07b7a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57363295"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59151179"
 ---
-# <a name="how-to-paint-an-area-with-a-video"></a>방법: 비디오로 영역 그리기
+# <a name="how-to-paint-an-area-with-a-video"></a>방법: 비디오로 영역 칠하기
 이 예제에서는 미디어를 사용 하 여 영역을 그리는 방법을 보여 줍니다. 미디어를 사용 하 여 영역을 그리는 방법 중 하나를 사용 하는 것을 <xref:System.Windows.Controls.MediaElement> 와 함께 <xref:System.Windows.Media.VisualBrush>입니다. 사용 하 여는 <xref:System.Windows.Controls.MediaElement> 로드 하 고 재생할 미디어를 사용 하 여 설정 하는 <xref:System.Windows.Media.VisualBrush.Visual%2A> 의 속성을 <xref:System.Windows.Media.VisualBrush>. 사용할 수는 <xref:System.Windows.Media.VisualBrush> 로드 된 미디어를 사용 하 여 영역을 그리는 합니다.  
   
 ## <a name="example"></a>예제  
@@ -38,6 +38,7 @@ ms.locfileid: "57363295"
  응용 프로그램에 미디어 파일과 같은 콘텐츠 파일을 추가 하는 방법에 대 한 정보를 참조 하세요. [WPF 응용 프로그램 리소스, 콘텐츠 및 데이터 파일](../app-development/wpf-application-resource-content-and-data-files.md)합니다. 미디어 파일을 추가한 경우 리소스 파일 아니라 콘텐츠 파일로 추가 해야 합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Windows.Media.VisualBrush>
 - [이미지, 그림 및 시각적 표시로 그리기](painting-with-images-drawings-and-visuals.md)
 - [TileBrush 개요](tilebrush-overview.md)

@@ -8,17 +8,16 @@ helpviewer_keywords:
 - graphics [WPF], rendering
 - rendering graphics [WPF]
 ms.assetid: 6dec9657-4d8c-4e46-8c54-40fb80008265
-ms.openlocfilehash: da455adb23dd70a915e81217c6c30f2d523e001c
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: a0400ce32dc6dab2585a8d5e76ff8d416fae24c8
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58409655"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59101369"
 ---
 # <a name="wpf-graphics-rendering-overview"></a>WPF 그래픽 렌더링 개요
 이 항목에서는 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 시각적 계층에 대해 간략하게 설명합니다. 역할에 중점을 둡니다 합니다 <xref:System.Windows.Media.Visual> 의 렌더링 지원을 위한 클래스를 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 모델입니다.  
-  
-  
+
 <a name="role_of_visual_object"></a>   
 ## <a name="role-of-the-visual-object"></a>시각적 개체의 역할  
  합니다 <xref:System.Windows.Media.Visual> 클래스는 기본 추상화는 모든 <xref:System.Windows.FrameworkElement> 개체에서 파생 됩니다. 또한 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]에서 새 컨트롤을 작성하기 위한 진입점으로도 사용되며, Win32 애플리케이션 모델에서는 여러 가지 측면에서 창 핸들(HWND)로도 간주될 수 있습니다.  
@@ -178,14 +177,14 @@ DrawingGroup 작업의 순서
  통지 하는 방법을 <xref:System.Windows.Controls.Label>, <xref:System.Windows.Controls.TextBox>, 및 <xref:System.Windows.Controls.Button> 컨트롤 각각 별도 시각적 개체 계층에 표시 합니다 **시각적 트리 탐색기** XamlPad의 패널입니다. 왜냐하면 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 컨트롤을 <xref:System.Windows.Controls.ControlTemplate> 해당 컨트롤의 시각적 트리를 포함 하는 합니다. 컨트롤을 명시적으로 참조할 때는 해당 시각적 개체 계층 구조를 암시적으로 참조하게 됩니다.  
   
 ### <a name="profiling-visual-performance"></a>시각적 성능 프로파일링  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]에서는 응용 프로그램의 런타임 동작을 분석할 수 있고 적용할 수 있는 성능 최적화 형식을 판별하는 성능 프로파일링 도구 제품군을 제공합니다. Visual Profiler 도구는 애플리케이션의 시각적 트리에 직접 매핑하여 성능 데이터의 다양한 그래픽 보기를 제공합니다. 이 스크린 샷에서 Visual Profiler의 **CPU 사용량** 섹션에서는 렌더링 및 레이아웃과 같은 개체의 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 서비스 사용을 정확히 분석할 수 있습니다.  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 성능 프로 파일링 할 응용 프로그램의 런타임 동작을 분석 하 고 적용할 수 있습니다 하는 성능 최적화의 유형을 결정할 수 있는 도구 집합을 제공 합니다. Visual Profiler 도구는 애플리케이션의 시각적 트리에 직접 매핑하여 성능 데이터의 다양한 그래픽 보기를 제공합니다. 이 스크린 샷에서 Visual Profiler의 **CPU 사용량** 섹션에서는 렌더링 및 레이아웃과 같은 개체의 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 서비스 사용을 정확히 분석할 수 있습니다.  
   
  ![Visual Profiler 표시 출력](./media/wpfperf-visualprofiler-04.png "WPFPerf_VisualProfiler_04")  
 Visual Profiler 표시 출력  
   
 <a name="visual_rendering_behavior"></a>   
 ## <a name="visual-rendering-behavior"></a>시각적 개체 렌더링 동작  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]에서는 시각적 개체의 렌더링 동작에 영향을 주는 여러 기능이 도입되었습니다. 여기에는 유지 모드 그래픽, 벡터 그래픽 및 장치 독립적 그래픽이 포함됩니다.  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 시각적 개체의 렌더링 동작에 영향을 주는 여러 기능이 도입 되었습니다: 유지 모드 그래픽, 벡터 그래픽 및 장치 독립적인 그래픽입니다.  
   
 ### <a name="retained-mode-graphics"></a>유지 모드 그래픽  
  시각적 개체의 역할을 이해하기 위해서는 **직접 실행 모드**와 **유지 모드** 그래픽 시스템 간 차이를 이해하는 것이 중요합니다. GDI 또는 GDI+를 기준으로 하는 표준 Win32 애플리케이션은 직접 실행 모드 그래픽 시스템을 사용합니다. 즉, 이 애플리케이션은 창의 크기 조정이나 개체의 시각적 모양 변경과 같은 동작으로 인해 무효화되는 클라이언트 영역의 부분을 다시 그립니다.  
@@ -200,7 +199,7 @@ Visual Profiler 표시 출력
  유지 모드 그래픽을 사용할 때는 가장 큰 장점 중 하나는 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]가 애플리케이션에서 다시 그려야 하는 항목을 효율적으로 최적화할 수 있다는 것입니다. 다양한 수준의 불투명도를 갖는 복잡한 장면이 있더라도 다시 그리기를 최적화하기 위해 특수한 용도의 코드를 작성할 필요가 없습니다. 이러한 특성을 업데이트 영역의 다시 그리기 작업량을 최소화하여 적은 노력으로 애플리케이션을 최적화할 수 있는 Win32 프로그래밍 작업과 비교해 보세요. Win32 애플리케이션의 다시 그리기 최적화와 관련된 복잡성 형식의 예제를 보려면 [업데이트 영역의 다시 그리기](/windows/desktop/gdi/redrawing-in-the-update-region)를 참조하세요.  
   
 ### <a name="vector-graphics"></a>벡터 그래픽  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]에서는 **벡터 그래픽**을 해당 렌더링 데이터 형식으로 사용합니다. SVG(Scalable Vector Graphics), Windows 메타파일(.wmf) 및 트루타입 글꼴을 포함하는 벡터 그래픽은 렌더링 데이터를 저장하고 그래픽 기본형을 사용하여 이미지를 다시 만드는 방법을 설명하는 명령 목록으로 전송합니다. 예를 들어 트루타입 글꼴은 픽셀 배열이 아니라, 선, 곡선 및 명령 집합을 설명하는 윤곽선 글꼴입니다. 벡터 그래픽의 주요 이점 중 하나는 어떤 크기 및 해상도로도 조정이 가능하다는 것입니다.  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 사용 하 여 **벡터 그래픽** 해당 렌더링 데이터 형식으로 합니다. SVG(Scalable Vector Graphics), Windows 메타파일(.wmf) 및 트루타입 글꼴을 포함하는 벡터 그래픽은 렌더링 데이터를 저장하고 그래픽 기본형을 사용하여 이미지를 다시 만드는 방법을 설명하는 명령 목록으로 전송합니다. 예를 들어 트루타입 글꼴은 픽셀 배열이 아니라, 선, 곡선 및 명령 집합을 설명하는 윤곽선 글꼴입니다. 벡터 그래픽의 주요 이점 중 하나는 어떤 크기 및 해상도로도 조정이 가능하다는 것입니다.  
   
  벡터 그래픽과 달리, 비트맵 그래픽은 렌더링 데이터를 특정 해상도로 미리 렌더링된 이미지의 픽셀 단위 표현으로 저장합니다. 비트맵 그래픽과 벡터 그래픽 형식 간의 주요 차이점 중 하나에 원본 소스 이미지에 대한 충실도입니다. 예를 들어 소스 이미지의 크기를 수정한 경우 비트맵 그래픽 시스템은 이미지를 늘이지만 벡터 그래픽 시스템은 이미지의 충실도를 보존하면서 이미지 배율을 조정합니다.  
   
@@ -219,7 +218,7 @@ Visual Profiler 표시 출력
   
  모든 애플리케이션이 DPI를 인식하는 것은 아닙니다. 일부에서는 하드웨어 픽셀을 측정의 기본 단위로 사용합니다. 시스템 DPI를 변경해도 이러한 애플리케이션에는 영향이 없습니다. 많은 다른 애플리케이션에서 DPI 인식 단위를 사용하여 글꼴 크기를 설명하지만 다른 요소를 설명할 때는 픽셀을 사용합니다. 이러한 애플리케이션의 텍스트는 시스템의 DPI 설정에 따라 확장되지만 UI는 그렇지 않으므로 DPI를 너무 작거나 너무 크게 지정하면 이러한 애플리케이션에서 레이아웃 문제가 발생할 수 있습니다. 이 문제는 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]를 사용하여 개발된 애플리케이션에서는 해결되었습니다.  
   
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]에서는 하드웨어 픽셀이 아닌 장치 독립적 픽셀을 기본 측정 단위로 사용하여 자동 크기 조정을 지원합니다. 그래픽 및 텍스트는 응용 프로그램 개발자의 추가 작업 없이 적절히 확장됩니다. 다음 그림에는 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 텍스트와 그래픽이 다른 DPI 설정으로 표시되는 방식의 예가 나와 있습니다.  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 장치 독립적 픽셀의 기본 측정 단위를 하드웨어 픽셀; 대신 사용 하 여 자동 크기 조정을 지원 합니다. 응용 프로그램 개발자의 추가 작업 없이 적절히 그래픽 및 텍스트 확장 합니다. 다음 그림에는 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 텍스트와 그래픽이 다른 DPI 설정으로 표시되는 방식의 예가 나와 있습니다.  
   
  ![그래픽 및 다른 DPI 설정으로 텍스트](./media/graphicsmm-dpi-setting-examples.png "graphicsmm_dpi_setting_examples")  
 서로 다른 DPI 설정에서의 그래픽과 텍스트  
@@ -249,11 +248,12 @@ Visual Profiler 표시 출력
  [!code-vb[VisualsOverview#102](~/samples/snippets/visualbasic/VS_Snippets_Wpf/VisualsOverview/visualbasic/window1.xaml.vb#102)]  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Windows.Media.Visual>
 - <xref:System.Windows.Media.VisualTreeHelper>
 - <xref:System.Windows.Media.DrawingVisual>
-- [2차원 그래픽 및 이미징](../advanced/optimizing-performance-2d-graphics-and-imaging.md)
+- [2D 그래픽 및 이미징](../advanced/optimizing-performance-2d-graphics-and-imaging.md)
 - [시각적 계층에서 적중 테스트](hit-testing-in-the-visual-layer.md)
 - [DrawingVisual 개체 사용](using-drawingvisual-objects.md)
-- [자습서: Win32 응용 프로그램에서 시각적 개체 호스팅](tutorial-hosting-visual-objects-in-a-win32-application.md)
-- [WPF 응용 프로그램 성능 최적화](../advanced/optimizing-wpf-application-performance.md)
+- [자습서: Win32 애플리케이션에서 시각적 개체 호스팅](tutorial-hosting-visual-objects-in-a-win32-application.md)
+- [WPF 애플리케이션 성능 최적화](../advanced/optimizing-wpf-application-performance.md)

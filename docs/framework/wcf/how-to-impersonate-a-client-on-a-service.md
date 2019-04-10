@@ -9,12 +9,12 @@ helpviewer_keywords:
 - impersonation
 - WCF, security
 ms.assetid: 431db851-a75b-4009-9fe2-247243d810d3
-ms.openlocfilehash: 260ff8b2131e1ee3c42197187f7067ab9c1328d6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d58f25f279bf2baa1caa7744cea94b909f48866f
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54497506"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59310579"
 ---
 # <a name="how-to-impersonate-a-client-on-a-service"></a>방법: 서비스에서 클라이언트 가장
 Windows Communication Foundation (WCF) 서비스에서 클라이언트를 가장 하는 서비스를 클라이언트를 대신해 작업을 수행할 수 있습니다. 예를 들어, 시스템의 디렉터리 및 파일에 대한 액세스 또는 SQL Server 데이터베이스에 대한 액세스와 같이 ACL(액세스 제어 목록) 검사 관련 작업의 경우 ACL 검사는 클라이언트 사용자 계정에 대해 수행됩니다. 이 항목에서는 Windows 도메인의 클라이언트를 사용하여 클라이언트 가장 수준을 설정하는 데 필요한 기본적인 단계에 대해 설명합니다. 이와 관련된 작업 예제는 [Impersonating the Client](../../../docs/framework/wcf/samples/impersonating-the-client.md)을 참조하십시오. 클라이언트 가장에 대 한 자세한 내용은 참조 하세요. [위임 및 가장](../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md)합니다.  
@@ -24,20 +24,20 @@ Windows Communication Foundation (WCF) 서비스에서 클라이언트를 가장
   
 ### <a name="to-enable-impersonation-of-a-client-from-a-cached-windows-token-on-a-service"></a>서비스에서 캐시된 Windows 토큰에서 클라이언트 가장을 사용하려면  
   
-1.  서비스를 만듭니다. 이 기본 프로시저에 대한 자습서는 [Getting Started Tutorial](../../../docs/framework/wcf/getting-started-tutorial.md)를 참조하십시오.  
+1. 서비스를 만듭니다. 이 기본 프로시저에 대한 자습서는 [Getting Started Tutorial](../../../docs/framework/wcf/getting-started-tutorial.md)를 참조하십시오.  
   
-2.  <xref:System.ServiceModel.NetTcpBinding> 또는 <xref:System.ServiceModel.WSHttpBinding>과 같이 Windows 인증을 사용하여 세션을 만드는 바인딩을 사용합니다.  
+2. <xref:System.ServiceModel.NetTcpBinding> 또는 <xref:System.ServiceModel.WSHttpBinding>과 같이 Windows 인증을 사용하여 세션을 만드는 바인딩을 사용합니다.  
   
-3.  서비스 인터페이스의 가장을 만드는 경우 <xref:System.ServiceModel.OperationBehaviorAttribute> 클래스를 클라이언트 가장이 필요한 메서드에 적용합니다. <xref:System.ServiceModel.OperationBehaviorAttribute.Impersonation%2A> 속성을 <xref:System.ServiceModel.ImpersonationOption.Required>으로 설정합니다.  
+3. 서비스 인터페이스의 가장을 만드는 경우 <xref:System.ServiceModel.OperationBehaviorAttribute> 클래스를 클라이언트 가장이 필요한 메서드에 적용합니다. <xref:System.ServiceModel.OperationBehaviorAttribute.Impersonation%2A> 속성을 <xref:System.ServiceModel.ImpersonationOption.Required>으로 설정합니다.  
   
      [!code-csharp[c_SimpleImpersonation#2](../../../samples/snippets/csharp/VS_Snippets_CFX/c_simpleimpersonation/cs/source.cs#2)]
      [!code-vb[c_SimpleImpersonation#2](../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_simpleimpersonation/vb/source.vb#2)]  
   
 ### <a name="to-set-the-allowed-impersonation-level-on-the-client"></a>클라이언트에서 허용된 가장 수준으로 설정하려면  
   
-1.  [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)를 사용하여 서비스 클라이언트 코드를 만듭니다. 자세한 내용은 [WCF 클라이언트를 사용 하 여 액세스 서비스](../../../docs/framework/wcf/accessing-services-using-a-wcf-client.md)합니다.  
+1. [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)를 사용하여 서비스 클라이언트 코드를 만듭니다. 자세한 내용은 [WCF 클라이언트를 사용 하 여 액세스 서비스](../../../docs/framework/wcf/accessing-services-using-a-wcf-client.md)합니다.  
   
-2.  WCF 클라이언트를 만든 후 설정 합니다 <xref:System.ServiceModel.Security.WindowsClientCredential.AllowedImpersonationLevel%2A> 의 속성을 <xref:System.ServiceModel.Security.WindowsClientCredential> 클래스 중 하나를 <xref:System.Security.Principal.TokenImpersonationLevel> 열거형 값.  
+2. WCF 클라이언트를 만든 후 설정 합니다 <xref:System.ServiceModel.Security.WindowsClientCredential.AllowedImpersonationLevel%2A> 의 속성을 <xref:System.ServiceModel.Security.WindowsClientCredential> 클래스 중 하나를 <xref:System.Security.Principal.TokenImpersonationLevel> 열거형 값.  
   
     > [!NOTE]
     >  <xref:System.Security.Principal.TokenImpersonationLevel.Delegation>을 사용하려면 협상된 Kerberos 인증( *multi-leg* 또는 *multi-step* Kerberos라고도 함)을 사용해야 합니다. 이 구현 하는 방법에 대 한 참조 [보안 모범 사례](../../../docs/framework/wcf/feature-details/best-practices-for-security-in-wcf.md)합니다.  
@@ -46,7 +46,8 @@ Windows Communication Foundation (WCF) 서비스에서 클라이언트를 가장
      [!code-vb[c_SimpleImpersonation#1](../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_simpleimpersonation/vb/source.vb#1)]  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.ServiceModel.OperationBehaviorAttribute>
 - <xref:System.Security.Principal.TokenImpersonationLevel>
-- [클라이언트 가장](../../../docs/framework/wcf/samples/impersonating-the-client.md)
+- [Impersonating the Client](../../../docs/framework/wcf/samples/impersonating-the-client.md)
 - [위임 및 가장](../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md)

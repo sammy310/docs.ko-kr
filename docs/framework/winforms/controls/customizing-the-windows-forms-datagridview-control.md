@@ -5,12 +5,12 @@ helpviewer_keywords:
 - data grids [Windows Forms], customization
 - DataGridView control [Windows Forms], customization
 ms.assetid: 01ea5d4c-a736-4596-b0e9-a67a1b86e15f
-ms.openlocfilehash: 1f9c68ae85d7bad2b8cdcdaa63c1e7b46f9568ed
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: ab8d1f07c608aca4f14f5e73860f8c3e263a4610
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57703337"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59091384"
 ---
 # <a name="customizing-the-windows-forms-datagridview-control"></a>Windows Forms DataGridView 컨트롤 사용자 지정
 `DataGridView` 컨트롤 모양과 해당 셀, 행 및 열의 기본 동작 (모양 및 느낌)을 조정 하는 데 사용할 수 있는 몇 가지 속성을 제공 합니다. 그러나 기능 보다 우수한 특별 한 요구 사항이 있는 경우는 <xref:System.Windows.Forms.DataGridViewCellStyle> 클래스, 소유자 컨트롤에 대 한 그리기를 구현 하거나 수도 사용자 지정 셀, 열 및 행 키를 만들어 해당 기능을 확장 합니다.  
@@ -24,13 +24,13 @@ ms.locfileid: "57703337"
  [방법: Windows Forms DataGridView 컨트롤에서 행 모양 사용자 지정](customize-the-appearance-of-rows-in-the-datagrid.md)  
  처리 하는 방법에 설명 합니다 <xref:System.Windows.Forms.DataGridView.RowPrePaint> 및 <xref:System.Windows.Forms.DataGridView.RowPostPaint> 여러 열으로 확장 하기 위해 사용자 지정, 그라데이션 배경이 있는 행을 그리기 및 콘텐츠는 이벤트입니다.  
   
- [방법: Windows Forms DataGridView 컨트롤에서 셀 및 열은 동작과 모양을 확장 하 여 사용자 지정](customize-cells-and-columns-in-the-datagrid-by-extending-behavior.md)  
+ [방법: 동작 및 모양을 확장하여 Windows Forms DataGridView 컨트롤에서 셀 및 열 사용자 지정](customize-cells-and-columns-in-the-datagrid-by-extending-behavior.md)  
  파생 된 사용자 지정 형식을 만드는 방법을 설명 합니다 `DataGridViewCell` 고 `DataGridViewColumn` 에 마우스 포인터가 있을 때 셀을 강조 표시 하기 위해.  
   
- [방법: Windows Forms DataGridView 컨트롤의 단추 열에서 단추를 사용 하지 않도록 설정](disable-buttons-in-a-button-column-in-the-datagrid.md)  
+ [방법: Windows Forms DataGridView 컨트롤에서 단추 열의 단추를 사용하지 않도록 설정](disable-buttons-in-a-button-column-in-the-datagrid.md)  
  파생 된 사용자 지정 형식을 만드는 방법을 설명 합니다 <xref:System.Windows.Forms.DataGridViewButtonCell> 및 <xref:System.Windows.Forms.DataGridViewButtonColumn> 단추 열에서 비활성화 된 단추를 표시 하기 위해.  
   
- [방법: Windows Forms DataGridView 셀에서 컨트롤을 호스트](how-to-host-controls-in-windows-forms-datagridview-cells.md)  
+ [방법: Windows Forms DataGridView 셀에서 컨트롤 호스팅](how-to-host-controls-in-windows-forms-datagridview-cells.md)  
  구현 하는 방법에 설명 합니다 `IDataGridViewEditingControl` 인터페이스에서 파생 된 사용자 지정 형식을 만들고 `DataGridViewCell` 및 `DataGridViewColumn` 표시 하기 위해를 <xref:System.Windows.Forms.DateTimePicker> 셀 편집 모드에 있을 때이 컨트롤입니다.  
   
 ## <a name="reference"></a>참조  
@@ -50,9 +50,10 @@ ms.locfileid: "57703337"
  에 대 한 참조 설명서를 제공 합니다 <xref:System.Windows.Forms.IDataGridViewEditingControl> 인터페이스입니다.  
   
 ## <a name="related-sections"></a>관련 단원  
- [Windows Forms DataGridView 컨트롤의 기본 형식 및 스타일 지정](basic-formatting-and-styling-in-the-windows-forms-datagridview-control.md)  
+ [Windows Forms DataGridView 컨트롤에서 기본 형식 및 스타일 지정](basic-formatting-and-styling-in-the-windows-forms-datagridview-control.md)  
  컨트롤의 기본 모양과 셀 데이터의 표시 형식을 수정하는 방법을 설명하는 항목을 제공합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [DataGridView 컨트롤](datagridview-control-windows-forms.md)
 - [Windows Forms DataGridView 컨트롤의 열 형식](column-types-in-the-windows-forms-datagridview-control.md)

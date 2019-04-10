@@ -1,5 +1,5 @@
 ---
-title: '방법: Windows Forms에서 키 컬렉션 액세스'
+title: '방법: Windows Forms에서 키 컬렉션에 액세스'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - keyed collections [Windows Forms]
 - collections [Windows Forms], accessing with keys
 ms.assetid: b9b79b8b-d9bf-4f8c-b9d6-9578bc3219d3
-ms.openlocfilehash: af398e8ac051bfc89c532fe5dc216e9cfbfdc4b9
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: fdd3a56ab9a267990bb0e832c0d4cc2af9334034
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57709621"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59214042"
 ---
-# <a name="how-to-access-keyed-collections-in-windows-forms"></a>방법: Windows Forms에서 키 컬렉션 액세스
+# <a name="how-to-access-keyed-collections-in-windows-forms"></a>방법: Windows Forms에서 키 컬렉션에 액세스
 -   키로 개별 컬렉션 항목에 액세스할 수 있습니다. 이 기능은 Windows Forms 응용 프로그램에서 일반적으로 사용 되는 여러 컬렉션 클래스에 추가 되었습니다. 다음은 액세스할 수 있는 키 컬렉션에 있는 컬렉션 클래스 중 일부를 보여 줍니다.  
   
 -   <xref:System.Windows.Forms.ListView.ListViewItemCollection>  
@@ -52,5 +52,6 @@ ms.locfileid: "57709621"
      [!code-vb[System.Windows.Forms.KeyedCollectionsEx#3](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.KeyedCollectionsEx/VB/Form1.vb#3)]  
   
 ## <a name="see-also"></a>참고자료
+
 - [Windows Forms 시작](getting-started-with-windows-forms.md)
-- [방법: Windows Forms ImageList 구성 요소를 사용 하 여 이미지 추가 또는 제거](./controls/how-to-add-or-remove-images-with-the-windows-forms-imagelist-component.md)
+- [방법: Windows Forms ImageList 구성 요소를 사용하여 이미지 추가 또는 제거](./controls/how-to-add-or-remove-images-with-the-windows-forms-imagelist-component.md)

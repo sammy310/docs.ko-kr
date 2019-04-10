@@ -8,12 +8,12 @@ helpviewer_keywords:
 - unexposed members
 - managed HTML DOM [Windows Forms], accessing unexposed members
 ms.assetid: 762295bd-2355-4aa7-b43c-5bff997a33e6
-ms.openlocfilehash: 844e03891cce41566300409ad1bec67c875718a7
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 20341a44eb8a43a9d130e0b76d23b513738c6782
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57704508"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59129508"
 ---
 # <a name="accessing-unexposed-members-on-the-managed-html-document-object-model"></a>관리되는 HTML 문서 개체 모델의 노출되지 않은 멤버에 액세스
 호출 하는 클래스를 포함 하는 관리 되는 HTML 문서 개체 모델 (DOM) <xref:System.Windows.Forms.HtmlElement> 속성, 메서드 및 모든 HTML 요소에 공통 되는 이벤트를 노출 하는 합니다. 그러나 경우에 따라 해야 관리 되는 인터페이스를 직접 노출 하지 않는 멤버에 액세스 합니다. 이 항목에서는 두 가지 방법으로 노출 되지 않은 멤버를 포함 하 여 액세스 검사 [!INCLUDE[jsprjscript](../../../../includes/jsprjscript-md.md)] 및 웹 페이지 내에서 정의 하는 VBScript 함수입니다.  
@@ -72,4 +72,5 @@ ms.locfileid: "57704508"
  사용 하 여 HTML 페이지에서 정의한 모든 스크립트 함수를 호출할 수는 <xref:System.Windows.Forms.HtmlDocument.InvokeScript%2A> 메서드. HTML 요소를 반환 하는 스크립트 메서드를 하는 경우이 반환 결과를 변환 하는 캐스트를 사용할 수 있습니다는 <xref:System.Windows.Forms.HtmlElement>합니다. 세부 정보 및 예제 코드에 대 한 참조 <xref:System.Windows.Forms.HtmlDocument.InvokeScript%2A>합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [관리되는 HTML 문서 개체 모델 사용](using-the-managed-html-document-object-model.md)

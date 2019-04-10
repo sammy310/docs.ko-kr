@@ -9,12 +9,12 @@ helpviewer_keywords:
 - splines [Windows Forms], Bezier
 - GDI+, Bezier splines
 ms.assetid: 5774ce1e-87d4-4bc7-88c4-4862052781b8
-ms.openlocfilehash: 7648f7f9da72abea4bfc87603eea290614294eff
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: ff4e9eb18610b70c88e057d3d44020321bbb9f4f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57707263"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59107330"
 ---
 # <a name="b233zier-splines-in-gdi"></a>B&#233;zier GDI +의 스플라인
 베 지 어 스플라인을 네 지점에서 지정 된 곡선이: 두 끝점 (예: p1 및 p2) 및 두 개의 제어점 (c1 및 c2). 곡선 시작 된 p1 및 p2에서 끝납니다. 곡선의 제어점 통과 하지 않습니다 않지만 제어점 자석, 특정 방향으로 곡선을 가져와서 곡률 방식에 영향을 주는 역할을 합니다. 다음 그림은 끝점 및 제어점와 함께 베 지 어 곡선을 나타냅니다.  
@@ -38,6 +38,7 @@ ms.locfileid: "57707263"
  ![Paths](./media/aboutgdip02-art13.gif "Aboutgdip02_art13")  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Drawing.Graphics?displayProperty=nameWithType>
 - <xref:System.Drawing.Pen?displayProperty=nameWithType>
 - [선, 곡선 및 도형](lines-curves-and-shapes.md)

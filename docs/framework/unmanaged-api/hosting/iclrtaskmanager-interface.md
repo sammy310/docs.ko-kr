@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9012a38271afdef5e00e9e69eb9b2730834be2fa
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 19ef7cb78791496de76e5741f8254ee88563c776
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54656156"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59134661"
 ---
 # <a name="iclrtaskmanager-interface"></a>ICLRTaskManager 인터페이스
 메서드는 CLR (공용 언어 런타임) 호스트 하는 명시적으로 요청을 허용 하는 새 작업 만들기, 현재 실행 중인 작업을 가져오고 설정 언어와 작업에 대 한 문화권을 제공 합니다.  
@@ -49,6 +49,7 @@ ms.locfileid: "54656156"
  **.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>참고자료
+
 - [ICLRTask 인터페이스](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md)
 - [IHostTask 인터페이스](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md)
 - [IHostTaskManager 인터페이스](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-interface.md)

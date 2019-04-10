@@ -1,18 +1,18 @@
 ---
-title: '방법: 응용 프로그램 리소스 사용'
+title: '방법: 애플리케이션 리소스 사용'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - application resources [WPF]
 - resources [WPF], application resources
 ms.assetid: 507ea937-5191-406b-8797-0a3d9f94156d
-ms.openlocfilehash: 8712f7c9c60d43cf3d0348b7c3f2f4cbee0b93b1
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 70dff8089c4da70fdc61247a0c604cf7ee85d02b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57378888"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59088205"
 ---
-# <a name="how-to-use-application-resources"></a>방법: 응용 프로그램 리소스 사용
+# <a name="how-to-use-application-resources"></a>방법: 애플리케이션 리소스 사용
 이 예제에서는 애플리케이션 리소스를 사용하는 방법을 보여 줍니다.  
   
 ## <a name="example"></a>예제  
@@ -26,6 +26,7 @@ ms.locfileid: "57378888"
  [!code-xaml[ResourcesApplication#ConsumingPage](~/samples/snippets/csharp/VS_Snippets_Wpf/ResourcesApplication/CS/page1.xaml#consumingpage)]  
   
 ## <a name="see-also"></a>참고자료
+
 - [XAML 리소스](xaml-resources.md)
-- [응용 프로그램 관리 개요](../app-development/application-management-overview.md)
+- [애플리케이션 관리 개요](../app-development/application-management-overview.md)
 - [방법 항목](resources-how-to-topics.md)

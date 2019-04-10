@@ -10,18 +10,16 @@ helpviewer_keywords:
 - elements [WPF], initializing
 - initializing elements [WPF]
 ms.assetid: 7b8dfc9b-46ac-4ce8-b7bb-035734d688b7
-ms.openlocfilehash: f1d31a5916f0c2a1763d8f24076ae7c1000a8296
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 6f3c8611b83977431038573eb1c5c880acbefdc4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57376375"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59108968"
 ---
 # <a name="initialization-for-object-elements-not-in-an-object-tree"></a>개체 트리에 없는 개체 요소 초기화
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 초기화의 몇 가지 측면은 일반적으로 논리적 트리 또는 시각적 트리에 연결되는 요소에 의존하는 프로세스로 지연됩니다. 이 항목에서는 두 트리에 연결되지 않는 요소를 초기화하기 위해 필요할 수 있는 단계를 설명합니다.  
-  
- 
-  
+
 ## <a name="elements-and-the-logical-tree"></a>요소와 논리적 트리  
  코드에서 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 클래스의 인스턴스를 만들 때 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 클래스에 대한 개체 초기화의 몇 가지 측면은 클래스 생성자 호출 시 실행되는 코드의 일부가 아님을 알아 두어야 합니다. 특히 컨트롤 클래스의 경우 해당 컨트롤의 시각적 표현 대부분은 생성자에 정의되지 않고 컨트롤의 템플릿에 의해 정의됩니다. 템플릿의 소스는 다양할 수 있지만 대부분의 경우 템플릿은 테마 스타일에서 가져옵니다. 템플릿은 실제로 런타임에 바인딩됩니다. 즉, 컨트롤 레이아웃 준비가 될 때까지는 필요한 템플릿이 해당 컨트롤에 연결되지 않습니다. 또한 컨트롤은 루트에서 렌더링 화면에 연결되는 논리적 트리에 연결되기 전까지는 레이아웃 준비가 되지 않습니다. 모든 자식 요소의 렌더링을 논리적 트리에 정의된 대로 시작하는 것은 루트 수준 요소입니다.  
   
@@ -43,6 +41,7 @@ ms.locfileid: "57376375"
  [!code-vb[InitializeElements#Main](~/samples/snippets/visualbasic/VS_Snippets_Wpf/InitializeElements/VisualBasic/initializeelements.vb#main)]  
   
 ## <a name="see-also"></a>참고자료
+
 - [WPF의 트리](trees-in-wpf.md)
 - [WPF 그래픽 렌더링 개요](../graphics-multimedia/wpf-graphics-rendering-overview.md)
 - [XAML 개요(WPF)](xaml-overview-wpf.md)

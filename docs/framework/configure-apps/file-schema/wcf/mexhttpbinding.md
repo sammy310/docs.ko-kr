@@ -2,12 +2,12 @@
 title: <mexHttpBinding>
 ms.date: 03/30/2017
 ms.assetid: e50b2e1f-9668-41a5-8077-dee7abff9f0f
-ms.openlocfilehash: 9d37a4918101b18c3002f2dcb926b9a03e0057a2
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 1aa9512c3d0d52f8cc3c7bd7b82bcfd37c418ce7
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55266336"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59151244"
 ---
 # <a name="mexhttpbinding"></a>\<mexHttpBinding>
 HTTP를 통한 WS-MEX(WS-MetadataExchange) 메시지 교환에 사용되는 바인딩의 설정을 지정합니다.  
@@ -55,9 +55,10 @@ HTTP를 통한 WS-MEX(WS-MetadataExchange) 메시지 교환에 사용되는 바�
  기본적으로 이 바인딩은 보안이 설정되지 않은 `WSHttpBinding` 바인딩이며 대부분의 메타데이터 요청을 지원합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.ServiceModel.Description.MetadataExchangeBindings.CreateMexHttpBinding%2A>
 - <xref:System.ServiceModel.Configuration.MexHttpBindingElement>
-- [방법: 구성 파일을 사용 하는 서비스의 메타 데이터 게시](../../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-a-configuration-file.md)
+- [방법: 구성 파일을 사용하여 서비스에 대한 메타데이터 게시](../../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-a-configuration-file.md)
 - [사용자 지정 바인딩을 통해 메타데이터 게시 및 검색](../../../../../docs/framework/wcf/extending/publishing-and-retrieving-metadata-over-a-custom-binding.md)
 - [메타데이터](../../../../../docs/framework/wcf/feature-details/metadata.md)
 - [바인딩](../../../../../docs/framework/wcf/bindings.md)

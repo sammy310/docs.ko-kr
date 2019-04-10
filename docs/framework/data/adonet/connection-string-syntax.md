@@ -2,12 +2,12 @@
 title: 연결 문자열 구문
 ms.date: 05/22/2018
 ms.assetid: 0977aeee-04d1-4cce-bbed-750c77fce06e
-ms.openlocfilehash: f6cbfc9676c2c373ab833ac556cf04bb0ba15096
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4c5ed5000f075fb637915dc40e122a9337176e36
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54524548"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59084969"
 ---
 # <a name="connection-string-syntax"></a>연결 문자열 구문
 각 .NET Framework 데이터 공급자에는 `Connection`뿐 아니라 공급자별 <xref:System.Data.Common.DbConnection> 속성에서 상속되는 <xref:System.Data.Common.DbConnection.ConnectionString%2A> 개체가 있습니다. 각 공급자의 특정 연결 문자열 구문은 해당 `ConnectionString` 속성에 설명되어 있습니다. 다음 표에서는 .NET Framework에 포함되어 있는 네 개의 데이터 공급자를 보여 줍니다.  
@@ -43,7 +43,7 @@ ms.locfileid: "54524548"
 |`OracleClient`|`Integrated Security=yes;`|  
   
 > [!NOTE]
->  `Integrated Security=true` 공급자와 함께 사용하는 경우 `OleDb`이면 예외가 throw됩니다.  
+>  `Integrated Security=true` 와 함께 사용할 경우 예외를 throw 합니다 `OleDb` 공급자입니다.  
   
 ## <a name="sqlclient-connection-strings"></a>SqlClient 연결 문자열  
 <xref:System.Data.SqlClient.SqlConnection> 연결 문자열의 구문은 <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A?displayProperty=nameWithType> 속성에 설명되어 있습니다. <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A> 속성을 사용하면 SQL Server 데이터베이스에 대한 연결 문자열을 가져오거나 설정할 수 있습니다. 이전 버전의 SQL Server에 연결해야 하는 경우에는 .NET Framework Data Provider for OleDb(<xref:System.Data.OleDb>)를 사용해야 합니다. 대부분의 연결 문자열 키워드는 또한 <xref:System.Data.SqlClient.SqlConnectionStringBuilder>의 속성에 매핑됩니다.  
@@ -141,7 +141,7 @@ Provider=Microsoft.Jet.OLEDB.4.0;Data Source=d:\Northwind.mdb;Jet OLEDB:System D
 >  에 대 한 연결 정보를 제공할 수는 **OleDbConnection** 유니버설 데이터 링크 (UDL) 파일입니다; 그러나 하면 안 이렇게 합니다. UDL 파일은 암호화되지 않으므로 연결 문자열 정보를 일반 텍스트로 노출시킵니다. UDL 파일은 애플리케이션에 대해 외부 파일 기반 리소스이므로 .NET Framework를 사용하여 보호할 수 없습니다. UDL 파일이 지원 되지 않습니다 **SqlClient**합니다.  
   
 ### <a name="using-datadirectory-to-connect-to-accessjet"></a>Access/Jet          DataDirectory     
- `DataDirectory`는 `SqlClient`와 같이 사용할 수 있습니다. 또한 <xref:System.Data.OleDb> 및 <xref:System.Data.Odbc> .NET 데이터 공급자와도 같이 사용할 수 있습니다. 다음 샘플 <xref:System.Data.OleDb.OleDbConnection> 문자열에서는 응용 프로그램의 app_data 폴더에 있는 Northwind.mdb에 연결하는 데 필요한 구문을 설명합니다. 시스템 데이터베이스(System.mdw)도 같은 위치에 저장됩니다.  
+ `DataDirectory` 에 단독적이 지 않습니다 `SqlClient`합니다. 또한 <xref:System.Data.OleDb> 및 <xref:System.Data.Odbc> .NET 데이터 공급자와도 같이 사용할 수 있습니다. 다음 샘플 <xref:System.Data.OleDb.OleDbConnection> 문자열에서는 응용 프로그램의 app_data 폴더에 있는 Northwind.mdb에 연결하는 데 필요한 구문을 설명합니다. 시스템 데이터베이스(System.mdw)도 같은 위치에 저장됩니다.  
   
 ```  
 "Provider=Microsoft.Jet.OLEDB.4.0;  
@@ -195,6 +195,7 @@ Data Source=Oracle9i;User ID=*****;Password=*****;
  ODBC 연결 문자열 구문에 대한 자세한 내용은 <xref:System.Data.OracleClient.OracleConnection.ConnectionString%2A>을 참조하세요.  
   
 ## <a name="see-also"></a>참고자료
+
 - [연결 문자열](../../../../docs/framework/data/adonet/connection-strings.md)
 - [데이터 소스에 연결](../../../../docs/framework/data/adonet/connecting-to-a-data-source.md)
 - [ADO.NET 관리되는 공급자 및 데이터 집합 개발자 센터](https://go.microsoft.com/fwlink/?LinkId=217917)

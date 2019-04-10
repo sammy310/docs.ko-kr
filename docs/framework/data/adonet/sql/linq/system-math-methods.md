@@ -2,15 +2,15 @@
 title: System.Math 메서드
 ms.date: 03/30/2017
 ms.assetid: 0f299521-6f41-4720-bd70-67c93fc50948
-ms.openlocfilehash: 45a674c86fc2f19f3e273834b8cb9d6adee5b3ab
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1dae31b30962505c07c198f3bd35fceb8f400efb
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54576865"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59141715"
 ---
 # <a name="systemmath-methods"></a>System.Math 메서드
-[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]에서는 다음 <xref:System.Math> 메서드를 지원하지 않습니다.  
+[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 다음을 지원 하지 않습니다 <xref:System.Math> 메서드.  
   
 -   <xref:System.Math.DivRem%28System.Int32%2CSystem.Int32%2CSystem.Int32%40%29?displayProperty=nameWithType>  
   
@@ -23,7 +23,8 @@ ms.locfileid: "54576865"
   
  SQL에서 `ROUND` 함수는 항상 0 이상의 정수 값으로 반올림됩니다. 따라서 2.5의 경우 .NET Framework에서는 2가 되는데 반해 SQL에서는 3이 됩니다.  
   
- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]은 SQL `ROUND` 구문을 따르며 은행원의 반올림을 사용하지 않습니다.  
+ [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] sql 통과 `ROUND` 의미 체계 및 은행원의 반올림을 시도 하지 않습니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [데이터 형식 및 함수](../../../../../../docs/framework/data/adonet/sql/linq/data-types-and-functions.md)

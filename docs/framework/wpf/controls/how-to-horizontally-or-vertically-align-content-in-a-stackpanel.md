@@ -1,5 +1,5 @@
 ---
-title: '방법: StackPanel에서 콘텐츠 가로 또는 세로 맞춤'
+title: '방법: StackPanel에서 가로 또는 세로로 콘텐츠 맞춤'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - content alignment [WPF]
 - aligning [WPF], content
 ms.assetid: c1e8f962-72c8-4e7a-8670-7a2d7e021791
-ms.openlocfilehash: 6605a6a56fba587678227f5826982ec3266b153c
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 03348aa0eb5b6c1791c27683c1c6c6a5d4a8a9d4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57356297"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59186045"
 ---
-# <a name="how-to-horizontally-or-vertically-align-content-in-a-stackpanel"></a>방법: StackPanel에서 콘텐츠 가로 또는 세로 맞춤
+# <a name="how-to-horizontally-or-vertically-align-content-in-a-stackpanel"></a>방법: StackPanel에서 가로 또는 세로로 콘텐츠 맞춤
 조정 하는 방법을 보여 주는이 예제는 <xref:System.Windows.Controls.StackPanel.Orientation%2A> 내의 콘텐츠를 <xref:System.Windows.Controls.StackPanel> 요소 및 조정 하는 방법을 합니다 <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A> 및 <xref:System.Windows.FrameworkElement.VerticalAlignment%2A> 자식 콘텐츠입니다.  
   
 ## <a name="example"></a>예제  
@@ -30,8 +30,9 @@ ms.locfileid: "57356297"
  [!code-vb[StackPanelIntroSamp#2](~/samples/snippets/visualbasic/VS_Snippets_Wpf/StackPanelIntroSamp/VisualBasic/Window1.xaml.vb#2)]  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Windows.Controls.StackPanel>
 - <xref:System.Windows.Controls.ListBox>
 - <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A>
 - <xref:System.Windows.FrameworkElement.VerticalAlignment%2A>
-- [패널 개요](panels-overview.md)
+- [Panel 개요](panels-overview.md)

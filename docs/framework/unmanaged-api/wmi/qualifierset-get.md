@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 357182d6157b63f1bccf47cb43f0c78dec5875cf
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b0dc76a2732bf9c1e4f3a26fa2d045bfbcd837ec
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54625941"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59181092"
 ---
 # <a name="qualifiersetget-function"></a>QualifierSet_Get 함수
 지정한 명명된 한정자를 가져옵니다.  
@@ -67,7 +67,7 @@ HRESULT QualifierSet_Get (
 
 |상수  |값  |설명  |
 |---------|---------|---------|
-|`WBEM_E_INVALID_PARAMETER` | 0x80041008 | 매개 변수가 잘못된 경우 |
+|`WBEM_E_INVALID_PARAMETER` | 0x80041008 | 매개 변수가 잘못 되었습니다. |
 |`WBEM_E_NOT_FOUND` | 0x80041002 | 지정된 된 한정자가 없습니다. |
 |`WBEM_S_NO_ERROR` | 0 | 함수 호출이 성공 했습니다.  |
   
@@ -83,4 +83,5 @@ HRESULT QualifierSet_Get (
  **.NET Framework 버전:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>참고자료
-- [WMI 및 성능 카운터 (관리 되지 않는 API 참조)](index.md)
+
+- [WMI 및 성능 카운터(관리되지 않는 API 참조)](index.md)

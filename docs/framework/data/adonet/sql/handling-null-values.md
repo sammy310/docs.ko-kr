@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: f18b288f-b265-4bbe-957f-c6833c0645ef
-ms.openlocfilehash: cd3a9cd8cf7862bfa3128b81f5ecf6d380e20c32
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0d200ad35d3ab56bf97114b51b4f7fcc898eecdf
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54554688"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59332146"
 ---
 # <a name="handling-null-values"></a>Null 값 처리
 관계형 데이터베이스에서 null 값은 열의 값이 없거나 알 수 없을 때 사용됩니다. null은 빈 문자열(문자 또는 datetime 데이터 형식의 경우)도 아니고 0 값(숫자 데이터 형식의 경우)도 아닙니다. ANSI SQL-92 사양에서는 모든 null이 일관성 있게 처리되도록 모든 데이터 형식에 대해 null이 동일해야 함을 규정하고 있습니다. <xref:System.Data.SqlTypes> 네임스페이스에서는 <xref:System.Data.SqlTypes.INullable> 인터페이스를 구현함으로써 null 의미 체계를 제공합니다. <xref:System.Data.SqlTypes>의 각 데이터 형식마다 해당 데이터 형식의 인스턴스에 할당할 수 있는 고유의 `IsNull` 속성과 `Null` 값이 있습니다.  
@@ -35,7 +35,7 @@ ms.locfileid: "54554688"
  ![Truth Table](../../../../../docs/framework/data/adonet/sql/media/truthtable-bpuedev11.gif "TruthTable_bpuedev11")  
   
 ### <a name="understanding-the-ansinulls-option"></a>ANSI_NULLS 옵션 이해  
- <xref:System.Data.SqlTypes>는 SQL Server에서 ANSI_NULLS 옵션이 설정되어 있을 때와 동일한 의미 체계를 제공합니다. 모든 산술 연산자 (+,-, *, /, %), 비트 연산자 (~, &, &#124;), 대부분의 함수는 피연산자 또는 인수 중 하나라도 null 인 속성을 제외 하 고 null을 반환할 `IsNull`합니다.  
+ <xref:System.Data.SqlTypes> SQL Server에서 ANSI_NULLS 옵션이 설정 되어 있을 때와 동일한 의미 체계를 제공 합니다. 모든 산술 연산자 (+,-, *, /, %), 비트 연산자 (~, &, &#124;), 대부분의 함수는 피연산자 또는 인수 중 하나라도 null 인 속성을 제외 하 고 null을 반환할 `IsNull`합니다.  
   
  ANSI SQL-92 표준에서는 지원 하지 *columnName* = WHERE 절에서 NULL입니다. SQL Server에서는 ANSI_NULLS 옵션이 데이터베이스의 기본 null 허용 여부와 null 값에 대한 비교 평가를 모두 제어합니다. ANSI_NULLS를 사용하는 경우(기본값)에는 null 값을 테스트할 때 식에서 IS NULL 연산자를 사용해야 합니다. 예를 들어, 다음 비교는 ANSI_NULLS가 사용될 때 항상 알 수 없음 상태를 반환합니다.  
   
@@ -49,7 +49,7 @@ colname > NULL
 colname > @MyVariable  
 ```  
   
- null 값을 테스트하려면 IS NULL 또는 IS NOT NULL 조건부를 사용하세요. 그러면 WHERE 절이 복잡해질 수 있습니다. 예를 들어, AdventureWorks Customer 테이블의 TerritoryID 열에서는 null 값을 허용합니다. SELECT 문에서 다른 값은 물론 null 값도 테스트해야 하는 경우에는 다음과 같이 IS NULL 조건부가 포함되어야 합니다.  
+ null 값을 테스트하려면 IS NULL 또는 IS NOT NULL 조건자를 사용하세요. 그러면 WHERE 절이 복잡해질 수 있습니다. 예를 들어, AdventureWorks Customer 테이블의 TerritoryID 열에서는 null 값을 허용합니다. SELECT 문에서 다른 값은 물론 null 값도 테스트해야 하는 경우에는 다음과 같이 IS NULL 조건부가 포함되어야 합니다.  
   
 ```  
 SELECT CustomerID, AccountNumber, TerritoryID  
@@ -83,19 +83,19 @@ WHERE TerritoryID IN (1, 2, 3)
 >  `Nullable<T>` 또는 <xref:System.Nullable> 구조체는 현재 `DataSet`에서 지원되지 않습니다.  
   
 ### <a name="multiple-column-row-assignment"></a>여러 열(행) 할당  
- `DataTable.Add`, `DataTable.LoadDataRow` 또는 행으로 매핑되는 <xref:System.Data.DataRow.ItemArray%2A>를 허용하는 그 밖의 API는 'null'을 DataColumn의 기본값으로 매핑합니다. 배열의 개체가 `DbNull.Value` 또는 이에 해당하는 강력한 형식의 값을 포함하는 경우 위에서 설명한 것과 동일한 규칙이 적용됩니다.  
+ `DataTable.Add`를 `DataTable.LoadDataRow`, 또는 허용 하는 다른 Api는 <xref:System.Data.DataRow.ItemArray%2A> 행에 매핑되는, 'null'을 DataColumn의 기본값으로 매핑합니다. 배열의 개체가 `DbNull.Value` 또는 이에 해당하는 강력한 형식의 값을 포함하는 경우 위에서 설명한 것과 동일한 규칙이 적용됩니다.  
   
  또한 다음 규칙은 `DataRow.["columnName"]` null 할당의 인스턴스에도 적용됩니다.  
   
-1.  기본값 *기본* 값은 `DbNull.Value` 강력한 형식의 null 열을 적절 한 경우 강력한 형식의 null 값 제외한 모든 열에 대 한 합니다.  
+1. 기본값 *기본* 값은 `DbNull.Value` 강력한 형식의 null 열을 적절 한 경우 강력한 형식의 null 값 제외한 모든 열에 대 한 합니다.  
   
-2.  Null 값은 "xsi:nil"에서와 같이 XML 파일과의 직렬화 중에는 작성되지 않습니다.  
+2. Null 값은 "xsi:nil"에서와 같이 XML 파일과의 직렬화 중에는 작성되지 않습니다.  
   
-3.  기본값을 포함하여 null이 아닌 모든 값은 항상 XML에 대한 직렬화 중에 기록됩니다. 이 경우는 null 값(xsi:nil)이 명시적이고 기본값이 암시적인 XSD/XML 의미 체계와는 달리, 기본값이 XML에 없으면 유효성 검사 파서가 연결된 XSD 스키마에서 해당 기본값을 가져올 수 있습니다. `DataTable`의 경우에는 이와 반대로 null 값이 암시적이고 기본값이 명시적입니다.  
+3. 기본값을 포함하여 null이 아닌 모든 값은 항상 XML에 대한 직렬화 중에 기록됩니다. 이 경우는 null 값(xsi:nil)이 명시적이고 기본값이 암시적인 XSD/XML 의미 체계와는 달리, 기본값이 XML에 없으면 유효성 검사 파서가 연결된 XSD 스키마에서 해당 기본값을 가져올 수 있습니다. `DataTable`의 경우에는 이와 반대로 null 값이 암시적이고 기본값이 명시적입니다.  
   
-4.  XML 입력에서 읽어온 행에 대해 누락된 모든 열 값에는 NULL이 할당됩니다. <xref:System.Data.DataTable.NewRow%2A> 또는 이와 유사한 메서드를 사용하여 만들어진 행에는 DataColumn의 기본값이 할당됩니다.  
+4. XML 입력에서 읽어온 행에 대해 누락된 모든 열 값에는 NULL이 할당됩니다. <xref:System.Data.DataTable.NewRow%2A> 또는 이와 유사한 메서드를 사용하여 만들어진 행에는 DataColumn의 기본값이 할당됩니다.  
   
-5.  <xref:System.Data.DataRow.IsNull%2A> 메서드는 `true`와 `DbNull.Value`에 대해 모두 `INullable.Null`를 반환합니다.  
+5. <xref:System.Data.DataRow.IsNull%2A> 메서드는 `true`와 `DbNull.Value`에 대해 모두 `INullable.Null`를 반환합니다.  
   
 ## <a name="assigning-null-values"></a>Null 값 할당  
  모든 <xref:System.Data.SqlTypes> 인스턴스의 기본값은 null입니다.  
@@ -118,7 +118,7 @@ isColumnNull=True, ID=Null, Description=Null
 ```  
   
 ## <a name="comparing-null-values-with-sqltypes-and-clr-types"></a>SqlTypes 및 CLR 형식을 사용하여 Null 값 비교  
- null 값을 비교할 때는 `Equals` 메서드가 <xref:System.Data.SqlTypes>에서 null 값을 평가하는 방식과 CLR 형식을 사용하는 방식을 비교하여 그 차이를 반드시 알아야 합니다. 모든 합니다 <xref:System.Data.SqlTypes> `Equals` 메서드에서 null 값을 평가 하는 데 데이터베이스 의미 체계를 사용 합니다: 비교 결과 null 값 중 하나 또는 모두 null 인 경우. 한편, 두 `Equals`에 대해 CLR <xref:System.Data.SqlTypes> 메서드를 사용하면 둘 다 null인 경우 결과는 true입니다. 이는 CLR `String.Equals` 메서드와 같은 인스턴스 메서드 사용과 정적/공유 메서드인 `SqlString.Equals` 사용 간의 차이를 나타냅니다.  
+ null 값을 비교할 때는 `Equals` 메서드가 <xref:System.Data.SqlTypes>에서 null 값을 평가하는 방식과 CLR 형식을 사용하는 방식을 비교하여 그 차이를 반드시 알아야 합니다. 모든는 <xref:System.Data.SqlTypes>`Equals` 메서드에서 null 값을 평가 하는 데 데이터베이스 의미 체계를 사용 합니다: 비교 결과 null 값 중 하나 또는 모두 null 인 경우. 한편, 두 `Equals`에 대해 CLR <xref:System.Data.SqlTypes> 메서드를 사용하면 둘 다 null인 경우 결과는 true입니다. 이는 CLR `String.Equals` 메서드와 같은 인스턴스 메서드 사용과 정적/공유 메서드인 `SqlString.Equals` 사용 간의 차이를 나타냅니다.  
   
  다음 예제에서는 각각의 `SqlString.Equals` 메서드와 `String.Equals` 메서드에 null 값 쌍이 전달된 후 빈 문자열 쌍이 전달될 때 두 메서드의 결과 차이를 보여 줍니다.  
   
@@ -142,5 +142,6 @@ String.Equals instance method:
 ```  
   
 ## <a name="see-also"></a>참고자료
+
 - [SQL Server 데이터 형식 및 ADO.NET](../../../../../docs/framework/data/adonet/sql/sql-server-data-types.md)
 - [ADO.NET 관리되는 공급자 및 데이터 집합 개발자 센터](https://go.microsoft.com/fwlink/?LinkId=217917)

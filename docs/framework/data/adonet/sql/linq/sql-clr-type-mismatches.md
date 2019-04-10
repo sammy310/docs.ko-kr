@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 0a90c33f-7ed7-4501-ad5f-6224c5da8e9b
-ms.openlocfilehash: 0abb1bd25c40ba55806fe80b39db1ac418f3f308
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 77090a9f22dcf3d55739aa03535bee863793d858
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54700951"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59172889"
 ---
 # <a name="sql-clr-type-mismatches"></a>SQL-CLR 형식 불일치
-[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]에서는 개체 모델과 SQL Server 간의 변환을 대부분 자동화합니다. 하지만 정확한 변환이 불가능한 경우도 있습니다. 공용 언어 런타임 (CLR) 형식 및 SQL Server 데이터베이스 형식 간의 주요 이러한 불일치는 다음 섹션에 요약 되어 있습니다. 특정 형식 매핑 및 함수 변환에 대 한 자세한 정보를 찾을 수 있습니다 [SQL-CLR 형식 매핑](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mapping.md) 하 고 [데이터 형식 및 함수](../../../../../../docs/framework/data/adonet/sql/linq/data-types-and-functions.md)합니다.  
+[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 개체 모델 및 SQL Server 간의 변환을 대부분 자동화합니다. 하지만 정확한 변환이 불가능한 경우도 있습니다. 공용 언어 런타임 (CLR) 형식 및 SQL Server 데이터베이스 형식 간의 주요 이러한 불일치는 다음 섹션에 요약 되어 있습니다. 특정 형식 매핑 및 함수 변환에 대 한 자세한 정보를 찾을 수 있습니다 [SQL-CLR 형식 매핑](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mapping.md) 하 고 [데이터 형식 및 함수](../../../../../../docs/framework/data/adonet/sql/linq/data-types-and-functions.md)합니다.  
   
 ## <a name="data-types"></a>데이터 형식  
  CLR과 SQL Server 간의 변환은 쿼리가 데이터베이스로 전송될 때와 쿼리 결과가 개체 모델로 반환될 때 수행됩니다. 예를 들어 다음 Transact-SQL 쿼리에는 두 번의 값 변환이 필요합니다.  
@@ -114,11 +114,11 @@ or col1 != col2
  데이터 정렬의 `null`(`nothing`) 값은 SQL Server에서 정의됩니다. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]에서는 데이터 정렬을 변경하지 않습니다.  
   
 ### <a name="type-conversion-and-promotion"></a>형식 변환 및 확장  
- SQL은 식에서 다양한 암시적 변환을 지원합니다. C#의 유사한 식에는 명시적 캐스트가 필요합니다. 예를 들면 다음과 같습니다.  
+ SQL은 식에서 다양한 암시적 변환을 지원합니다. C#의 유사한 식에는 명시적 캐스트가 필요합니다. 예를 들어:  
   
--   명시적 캐스트 없이 SQL에서 `Nvarchar` 및 `DateTime` 형식을 비교할 수 있습니다. C#에는 명시적 변환이 필요합니다.  
+-   `Nvarchar` 및 `DateTime` 형식을; 명시적 캐스트 없이 SQL에서 비교할 수 있습니다 C# 명시적 변환이 필요 합니다.  
   
--   `Decimal`은 암시적으로 SQL의 `DateTime`으로 변환됩니다. C#은 암시적 변환을 허용하지 않습니다.  
+-   `Decimal` 암시적으로 변환할 `DateTime` sql에서입니다. C#은 암시적 변환을 허용하지 않습니다.  
   
  마찬가지로 내부 형식 집합이 다르기 때문에 Transact-SQL의 형식 우선 순위는 C#의 형식 우선 순위와 다릅니다. 실제로 우선 순위 목록 간에는 분명한 하위 집합/상위 집합 관계가 없습니다. 예를 들어 `nvarchar`를 `varchar`와 비교하면 암시적으로 `varchar` 식이 `nvarchar`로 변환됩니다. CLR은 동등한 확장 기능을 제공하지 않습니다.  
   
@@ -146,7 +146,7 @@ Where Col1 = Col2
   
  데이터 정렬 하위 절 생성을 *형식 제한* 대체할 수 없는 합니다.  
   
- 마찬가지로 형식 시스템에서 정렬 순서가 크게 다를 수 있습니다. 이러한 차이는 결과 정렬에 영향을 줍니다. <xref:System.Guid>는 모든 16바이트에서 사전순으로 정렬되는 반면(`IComparable()`), T-SQL은 node(10-15), clock-seq(8-9), time-high(6-7), time-mid(4-5), time-low(0-3)의 순서로 GUID를 비교합니다. 이러한 순서는 NT에서 생성된 GUID가 8진수 순서를 가지고 있을 때 SQL 7.0에서 정해졌습니다. 이 접근 방식을 사용하면 동일한 노드 클러스터에서 생성된 GUID가 타임스탬프에 따라 순서대로 표시됩니다. 이 접근 방식은 인덱스 작성에도 유용합니다. 임의의 IO 대신 삽입이 추가가 됩니다. 개인 정보 보호를 위해 나중에 Windows에서 순서가 스크램블되었지만 SQL에서 호환성을 유지해야 합니다. 해결 방법을 사용 하는 것 <xref:System.Data.SqlTypes.SqlGuid> 대신 <xref:System.Guid>합니다.  
+ 마찬가지로 형식 시스템에서 정렬 순서가 크게 다를 수 있습니다. 이러한 차이는 결과 정렬에 영향을 줍니다. <xref:System.Guid> 모든 16 바이트에서 사전순으로 정렬 됩니다 (`IComparable()`) T-SQL의 순서로 Guid를 비교 하는 반면,: node(10-15) clock-seq(8-9), time-high(6-7), time-mid(4-5), time-low(0-3) 합니다. 이러한 순서는 NT에서 생성된 GUID가 8진수 순서를 가지고 있을 때 SQL 7.0에서 정해졌습니다. 이 접근 방식을 사용하면 동일한 노드 클러스터에서 생성된 GUID가 타임스탬프에 따라 순서대로 표시됩니다. 이 접근 방식은 인덱스 작성에도 유용합니다. 임의의 IO 대신 삽입이 추가가 됩니다. 개인 정보 보호를 위해 나중에 Windows에서 순서가 스크램블되었지만 SQL에서 호환성을 유지해야 합니다. 해결 방법을 사용 하는 것 <xref:System.Data.SqlTypes.SqlGuid> 대신 <xref:System.Guid>합니다.  
   
 ### <a name="operator-and-function-differences"></a>연산자 및 함수 차이  
  기본적으로 비교 가능한 연산자와 함수에도 의미 체계상 미묘한 차이가 있습니다. 예를 들면 다음과 같습니다.  
@@ -157,7 +157,7 @@ Where Col1 = Col2
   
     -   느슨하게 변환 `AND` / `OR` 연산자 경우 예기치 않은 오류가 발생할 수는 C# 식을 첫 번째 피연산자의 계산 결과 기반으로 하는 두 번째 피연산자 평가에 의존 합니다.  
   
--   `Round()` 함수는 [!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)] 및 T-SQL에서 의미 체계가 다릅니다.  
+-   `Round()` 함수는 서로 다른 의미 체계에서 [!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)] 및 t-sql로 합니다.  
   
 -   문자열의 시작 인덱스가 CLR에서는 0이지만 SQL에서는 1입니다. 따라서 인덱스가 있는 모든 함수에 인덱스 변환이 필요합니다.  
   
@@ -294,4 +294,5 @@ Where Col1 + Col2 > 4
  의미 체계의 차이 외에 SQL Server 및 CLR 형식 시스템을 거치는 동안 성능에 미치는 영향도 고려해야 합니다. 큰 데이터 집합의 경우 이러한 성능 문제에 따라 응용 프로그램의 배포 가능 여부가 결정될 수 있습니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [배경 정보](../../../../../../docs/framework/data/adonet/sql/linq/background-information.md)

@@ -1,13 +1,13 @@
 ---
-title: <add>의 <knownCertificates>
+title: <add> / <knownCertificates>
 ms.date: 03/30/2017
 ms.assetid: 128aaabe-3f1a-4c3b-b59f-898d0f02910f
-ms.openlocfilehash: 022030489551bfaf48cffd4ba983bbd3c99abc87
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 3eb5bf74f909e6036154b7f5f7c6181b09fefbff
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55274289"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59077721"
 ---
 # <a name="add-of-knowncertificates"></a>\<추가 >의 \<knownCertificates >
 알려진 인증서 컬렉션에 X.509 인증서를 추가합니다.  
@@ -118,6 +118,7 @@ ms.locfileid: "55274289"
 ```  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator>
 - <xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator.AllowedAudienceUris%2A>
 - <xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator.AudienceUriMode%2A>

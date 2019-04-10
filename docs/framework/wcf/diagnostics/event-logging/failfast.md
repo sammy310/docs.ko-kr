@@ -2,12 +2,12 @@
 title: FailFast
 ms.date: 03/30/2017
 ms.assetid: 4fc4e476-997b-4166-90af-8d164f775924
-ms.openlocfilehash: 628a030444169241b700c6a266f92b783eb74bb3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 701bdcb9bb1d4523d69f55c5bba28475d26f86e6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54727419"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59105406"
 ---
 # <a name="failfast"></a>FailFast
 ID: 102  
@@ -20,5 +20,6 @@ ID: 102
  FailFast를 호출했습니다. 이 이벤트는 메시지, 스택 추적, 프로세스 이름 및 프로세스 ID를 표시합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [이벤트 로깅](../../../../../docs/framework/wcf/diagnostics/event-logging/index.md)
 - [이벤트 일반 참조](../../../../../docs/framework/wcf/diagnostics/event-logging/events-general-reference.md)

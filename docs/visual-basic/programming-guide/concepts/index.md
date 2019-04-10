@@ -2,8 +2,13 @@
 title: 프로그래밍 개념-Visual Basic
 ms.date: 02/27/2017
 ms.assetid: cc9cac84-61f6-476e-b8c7-9bae7749bd90
+ms.openlocfilehash: 4c550002e1049fb716d2836737b6c3fa5b9df4f1
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57677476"
 ---
-
 # <a name="programming-concepts-visual-basic"></a>프로그래밍 개념(Visual Basic)
 
 이 섹션에서는 Visual Basic 언어의 프로그래밍 개념을 설명합니다.

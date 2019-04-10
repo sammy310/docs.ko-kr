@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Windows Communication Foundation, security
 - WCF, security
 ms.assetid: 42055ee0-6d0c-443d-9d89-788dfc345d6d
-ms.openlocfilehash: 6cc19f7719b9cdbcd3852c99f450c1d728dc833b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 16b3afe9540f3e2953311f602408fce5412be2eb
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54745985"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59112218"
 ---
 # <a name="security-considerations-in-wcf"></a>WCF에서의 보안 고려 사항
 이 섹션의에서 항목에서는 Windows Communication Foundation (WCF) 응용 프로그램을 디자인할 때 고려해 야 할 다양 한 보안 관련 항목을 나열 합니다.  
@@ -20,7 +20,7 @@ ms.locfileid: "54745985"
  [정보 공개](../../../../docs/framework/wcf/feature-details/information-disclosure.md)  
  정보가 공개되거나 공격 받을 수 있는 다양한 방법과 이러한 문제를 줄이는 방법에 대해 설명합니다.  
   
- [권한 상승](../../../../docs/framework/wcf/feature-details/elevation-of-privilege.md)  
+ [권한 높이기](../../../../docs/framework/wcf/feature-details/elevation-of-privilege.md)  
  초기에 부여된 권한을 벗어나는 공격자 인증 권한 제공에 따른 영향 및 이에 따른 문제를 줄이는 방법에 대해 설명합니다.  
   
  [서비스 거부](../../../../docs/framework/wcf/feature-details/denial-of-service.md)  
@@ -51,4 +51,5 @@ ms.locfileid: "54745985"
  [보안 지침 및 최선의 방법](../../../../docs/framework/wcf/feature-details/security-guidance-and-best-practices.md)  
   
 ## <a name="see-also"></a>참고자료
+
 - [보안](../../../../docs/framework/wcf/feature-details/security.md)

@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6826ee1b94f9a1c48c19150271ebc84ac54dda25
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 5d4723fbf2311316184cb77c90754d7e037badcd
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57471786"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59089594"
 ---
 # <a name="getrealprocaddress-function"></a>GetRealProcAddress 함수
 사용 하는 CLR (공용 언어 런타임)의 최신 설치 버전에서 내보낸 지정 된 함수의 주소를 가져옵니다.  
@@ -50,7 +50,7 @@ HRESULT GetRealProcAddress (
 |반환 코드|설명|  
 |-----------------|-----------------|  
 |S_OK|메서드가 완료되었습니다.|  
-|E_POINTER|`ppv`가 잘못된 경우|  
+|E_POINTER|`ppv` 잘못되었습니다.|  
 |CLR_E_SHIM_RUNTIMEEXPORT|런타임에서 함수를 내보내지 않습니다.|  
   
 ## <a name="requirements"></a>요구 사항  
@@ -63,4 +63,5 @@ HRESULT GetRealProcAddress (
  **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>참고자료
+
 - [사용되지 않는 CLR 호스팅 함수](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)

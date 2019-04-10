@@ -15,12 +15,12 @@ helpviewer_keywords:
 - scaled text [WPF]
 - typography [WPF], skewed text
 ms.assetid: 0d61678a-4185-4f2a-85c6-c1d020f96fa0
-ms.openlocfilehash: be0b6a0bbe927f248be434afd15dde6a66791fe6
-ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
+ms.openlocfilehash: 46a57364e0c18cc4c9fe7884642cd0b718c20f31
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/17/2019
-ms.locfileid: "58126125"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59208672"
 ---
 # <a name="how-to-apply-transforms-to-text"></a>방법: 텍스트에 변환 적용
 변환을 통해 애플리케이션에서 텍스트 표시를 변경할 수 있습니다. 다음 예제에서 텍스트 표시에 영향을 줄 다른 형식의 렌더링 변환 사용을 <xref:System.Windows.Controls.TextBlock> 제어 합니다.  
@@ -65,4 +65,5 @@ ms.locfileid: "58126125"
 >  <xref:System.Windows.Media.Effects.DropShadowBitmapEffect> 그림자 효과 제공 하기 위한 다양 한 기능을 제공 합니다. 자세한 내용은 [그림자가 적용 된 텍스트 만들기](how-to-create-text-with-a-shadow.md)합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [텍스트에 애니메이션 적용](how-to-apply-animations-to-text.md)

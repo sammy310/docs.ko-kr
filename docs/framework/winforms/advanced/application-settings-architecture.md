@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - application settings [Windows Forms], architecture
 ms.assetid: c8eb2ad0-fac6-4ea2-9140-675a4a44d562
-ms.openlocfilehash: dd527234b90e94b5883d15b336f5e5abc9709880
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: c2a62b61cb7b31c978a84a3d3f41c24f9fafb84d
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57710682"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59312568"
 ---
 # <a name="application-settings-architecture"></a>애플리케이션 설정 아키텍처
 이 항목에서는 애플리케이션 설정 아키텍처가 작동하는 방식과 그룹화된 설정 및 설정 키와 같은 고급 아키텍처 기능에 대해 설명합니다.  
@@ -100,11 +100,11 @@ ms.locfileid: "57710682"
 ### <a name="settings-serialization"></a>설정 직렬화(Serialization)  
  때 <xref:System.Configuration.LocalFileSettingsProvider> 설정을 디스크에 저장 해야 다음 작업을 수행 합니다.  
   
-1.  리플렉션을 사용 하 여 모두에 정의 된 속성을 검사 하 여 <xref:System.Configuration.ApplicationSettingsBase> 파생 클래스를 사용 하 여 적용 되는 찾기 <xref:System.Configuration.ApplicationScopedSettingAttribute> 또는 <xref:System.Configuration.UserScopedSettingAttribute>합니다.  
+1. 리플렉션을 사용 하 여 모두에 정의 된 속성을 검사 하 여 <xref:System.Configuration.ApplicationSettingsBase> 파생 클래스를 사용 하 여 적용 되는 찾기 <xref:System.Configuration.ApplicationScopedSettingAttribute> 또는 <xref:System.Configuration.UserScopedSettingAttribute>합니다.  
   
-2.  속성을 디스크에 직렬화합니다(serialize). 먼저 호출 하려고 합니다 <xref:System.ComponentModel.TypeConverter.ConvertToString%2A> 또는 <xref:System.ComponentModel.TypeConverter.ConvertFromString%2A> 에서 연관 된 형식을 <xref:System.ComponentModel.TypeConverter>합니다. 호출하지 못하면 XML serialization을 대신 사용합니다.  
+2. 속성을 디스크에 직렬화합니다(serialize). 먼저 호출 하려고 합니다 <xref:System.ComponentModel.TypeConverter.ConvertToString%2A> 또는 <xref:System.ComponentModel.TypeConverter.ConvertFromString%2A> 에서 연관 된 형식을 <xref:System.ComponentModel.TypeConverter>합니다. 호출하지 못하면 XML serialization을 대신 사용합니다.  
   
-3.  설정의 특성에 따라 어떤 파일에 어떤 설정을 사용할지 결정합니다.  
+3. 설정의 특성에 따라 어떤 파일에 어떤 설정을 사용할지 결정합니다.  
   
  사용자 고유의 설정 클래스를 구현 하는 경우 사용할 수 있습니다 합니다 <xref:System.Configuration.SettingsSerializeAsAttribute> 사용 하 여 이진 또는 사용자 지정 serialization에 대 한 설정을 표시 하는 <xref:System.Configuration.SettingsSerializeAs> 열거형입니다. 코드에서 사용자 고유의 설정 클래스를 만드는 방법에 대 한 자세한 내용은 참조 하세요. [방법: 응용 프로그램 설정 만들기](how-to-create-application-settings.md)합니다.  
   
@@ -147,10 +147,11 @@ ms.locfileid: "57710682"
  공급자는 특성에 정의 된 설정 중 일부를 지원 하지 않아도 <xref:System.Configuration?displayProperty=nameWithType> 네임 스페이스 최소 지원 해야 하지만 <xref:System.Configuration.ApplicationScopedSettingAttribute> 및 <xref:System.Configuration.UserScopedSettingAttribute>에 지원 해야 <xref:System.Configuration.DefaultSettingValueAttribute>합니다. 지원하지 않는 특성에 대해서는 공급자가 알림 없이 실패해야 하며 예외를 throw하면 안됩니다. 하지만 설정 클래스에서 특성의 조합이 잘못를 사용 하는 경우-적용 하는 등 <xref:System.Configuration.ApplicationScopedSettingAttribute> 고 <xref:System.Configuration.UserScopedSettingAttribute> 같은 설정으로-공급자에서 예외를 throw 하 고 작업을 중단 해야 합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Configuration.ApplicationSettingsBase>
 - <xref:System.Configuration.SettingsProvider>
 - <xref:System.Configuration.LocalFileSettingsProvider>
-- [응용 프로그램 설정 개요](application-settings-overview.md)
-- [사용자 지정 컨트롤에 대한 응용 프로그램 설정](application-settings-for-custom-controls.md)
+- [애플리케이션 설정 개요](application-settings-overview.md)
+- [사용자 지정 컨트롤에 대한 애플리케이션 설정](application-settings-for-custom-controls.md)
 - [ClickOnce 및 응용 프로그램 설정](/visualstudio/deployment/clickonce-and-application-settings)
-- [응용 프로그램 설정 스키마](../../configure-apps/file-schema/application-settings-schema.md)
+- [애플리케이션 설정 스키마](../../configure-apps/file-schema/application-settings-schema.md)

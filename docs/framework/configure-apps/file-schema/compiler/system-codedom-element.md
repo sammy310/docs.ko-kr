@@ -1,5 +1,5 @@
 ---
-title: < System.codedom > 요소
+title: <system.codedom> 요소
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.codedom
@@ -9,12 +9,12 @@ helpviewer_keywords:
 - system.codedom element
 - <system.codedom> element
 ms.assetid: 672a68f7-e69f-4479-ac30-e980085ec4fe
-ms.openlocfilehash: e2c65044b99e2d5fda7025f24d1d4c4082ded4ec
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 0f47255bb4073007a847e4a8b85ccfd34100582b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55268225"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59101616"
 ---
 # <a name="systemcodedom-element"></a>\<system.codedom > 요소
 사용 가능한 언어 공급자에 대한 컴파일러 구성 설정을 지정합니다.  
@@ -46,7 +46,7 @@ ms.locfileid: "55268225"
   
 |요소|설명|  
 |-------------|-----------------|  
-|[\<구성>](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)|공용 언어 런타임 및 .NET Framework 애플리케이션에서 사용하는 모든 구성 파일의 루트 요소입니다.|  
+|[\<configuration>](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)|공용 언어 런타임 및 .NET Framework 애플리케이션에서 사용하는 모든 구성 파일의 루트 요소입니다.|  
   
 ## <a name="remarks"></a>설명  
   
@@ -88,8 +88,9 @@ ms.locfileid: "55268225"
 ```  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.CodeDom.Compiler.CompilerInfo>
 - <xref:System.CodeDom.Compiler.CodeDomProvider>
 - [구성 파일 스키마](../../../../../docs/framework/configure-apps/file-schema/index.md)
 - [컴파일러 및 언어 공급자 설정 스키마](../../../../../docs/framework/configure-apps/file-schema/compiler/index.md)
-- [\<compiler> 요소](../../../../../docs/framework/configure-apps/file-schema/compiler/compiler-element.md)
+- [\<컴파일러 > 요소](../../../../../docs/framework/configure-apps/file-schema/compiler/compiler-element.md)

@@ -9,19 +9,18 @@ helpviewer_keywords:
 - documents [WPF], annotations
 - sticky notes [WPF]
 ms.assetid: 716bf474-29bd-4c74-84a4-8e0744bdad62
-ms.openlocfilehash: a0c6260eee10487034655b5e4abbfa1f1a7bce71
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: faf2e9bbe23acfd46ee98e1f0fca01b7563ede73
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57355183"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59122449"
 ---
 # <a name="annotations-overview"></a>주석 개요
 종이 문서에 메모나 설명을 적는 것은 당연하게 받아들이는 매우 일반적인 행동입니다. 이러한 메모나 설명은 나중에 참조하기 위해 관심 있는 항목을 강조 표시하거나 정보를 첨부하기 위해 문서에 추가하는 "주석"입니다. 인쇄된 문서에 메모를 적는 것은 간단하고 일반적이지만 전자 문서에 개인적인 주석을 추가하는 기능은 대개 가능하더라도 매우 제한적입니다.  
   
  이 항목에서는 몇 가지 일반적인 유형의 주석과 스티커 메모 및 강조 표시를 검토 하 고 보여 줍니다 방법을 [!INCLUDE[TLA#tla_caf](../../../../includes/tlasharptla-caf-md.md)] 이러한 유형의 Windows Presentation Foundation (WPF) 문서를 통해 응용 프로그램에서 주석 컨트롤 볼 수 있습니다.  [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 주석을 지 원하는 문서 보기 컨트롤에 포함 <xref:System.Windows.Controls.FlowDocumentReader> 하 고 <xref:System.Windows.Controls.FlowDocumentScrollViewer>에서 파생 된 컨트롤 뿐 <xref:System.Windows.Controls.Primitives.DocumentViewerBase> 와 같은 <xref:System.Windows.Controls.DocumentViewer> 및 <xref:System.Windows.Controls.FlowDocumentPageViewer>.  
-  
-  
+
 <a name="caf1_type_stickynotes"></a>   
 ## <a name="sticky-notes"></a>스티커 메모  
  일반적인 스티커 메모는 작은 색지에 정보를 작성하여 문서에 "붙입니다". 디지털 스티커 메모는 전자 문서에 비슷한 기능을 제공하지만 입력된 텍스트, 필기 메모(예: [!INCLUDE[TLA#tla_tpc](../../../../includes/tlasharptla-tpc-md.md)] "잉크" 스트로크) 또는 웹 링크와 같이 다양한 유형의 콘텐츠를 유연하게 추가할 수 있습니다.  
@@ -65,6 +64,7 @@ ms.locfileid: "57355183"
  다른 예제 시나리오는 주석과 스티커 메모 전자 메일을 통해 문서 판독기 간에 교환할 수 있도록 하는 응용 프로그램을 포함 합니다. 이러한 애플리케이션은 이 기능을 통해 판독기에서 교환하는 주석이 포함된 페이지로 이동할 수 있습니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Windows.Controls.Primitives.DocumentViewerBase>
 - <xref:System.Windows.Controls.DocumentViewer>
 - <xref:System.Windows.Controls.FlowDocumentPageViewer>

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Windows applications [Windows Forms], accessibility
 - applications [Windows Forms], accessibility
 ms.assetid: 654c7f2f-1586-480b-9f12-9d9b8f5cc32b
-ms.openlocfilehash: 19ff49cfa465cce479a4fd5264c565cbb305c84f
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: e7bc996c3d64c0ea3ac8fca5fef759ad309f2967
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58823469"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59336657"
 ---
 # <a name="walkthrough-creating-an-accessible-windows-based-application"></a>연습: 내게 필요한 옵션이 지원되는 Windows 기반 애플리케이션 만들기
 액세스할 수 있는 애플리케이션을 만드는 것은 비즈니스에 중요한 영향을 줍니다. 많은 정부 기관에는 소프트웨어 구매와 관련된 접근성 규정이 있습니다. Certified for Windows 로고에는 접근성 요구 사항이 포함됩니다. 미국에만 3천만 명이 거주하는 것으로 추정되는 잠재 고객 중 많은 사람이 소프트웨어의 내게 필요한 옵션 기능에 따른 영향을 받습니다.  
@@ -141,7 +141,6 @@ ms.locfileid: "58823469"
     
       ![이름 텍스트 상자 및 크기와 토 핑 선택 하 여 피자 주문 양식입니다.](./media/walkthrough-creating-an-accessible-windows-based-application/visual-basic-pizza-order-form.gif)  
 
-  
 ## <a name="supporting-high-contrast-mode"></a>고대비 모드 지원  
  고대비 모드는 시각 장애가 있는 사용자에게 도움이 되는 대비 색과 글꼴 크기를 사용하여 가독성을 향상시키는 Windows 시스템 설정입니다. <xref:System.Windows.Forms.SystemInformation.HighContrast%2A> 속성 고대비 모드가 설정 되어 있는지 확인 하기 위해 제공 됩니다.  
   
@@ -159,7 +158,7 @@ ms.locfileid: "58823469"
   
 #### <a name="to-enable-high-contrast-mode-in-an-effective-way"></a>효과적인 방법으로 고대비 모드를 사용하도록 설정하려면  
   
-1.  레이블의 색을 시스템 색으로 설정하는 메서드를 만듭니다.  
+1. 레이블의 색을 시스템 색으로 설정하는 메서드를 만듭니다.  
   
     ```  
     ' Visual Basic  
@@ -189,7 +188,7 @@ ms.locfileid: "58823469"
     }  
     ```  
   
-2.  양식 생성자(Visual Basic의 `Public Sub New()`, Visual C#의 `public class Form1`)에서 `SetColorScheme` 프로시저를 호출합니다. Visual Basic에서 생성자에 액세스하려면 **Windows Form 디자이너에서 생성한 코드** 레이블이 지정된 영역을 확장해야 합니다.  
+2. 양식 생성자(Visual Basic의 `Public Sub New()`, Visual C#의 `public class Form1`)에서 `SetColorScheme` 프로시저를 호출합니다. Visual Basic에서 생성자에 액세스하려면 **Windows Form 디자이너에서 생성한 코드** 레이블이 지정된 영역을 확장해야 합니다.  
   
     ```  
     ' Visual Basic   
@@ -207,7 +206,7 @@ ms.locfileid: "58823469"
     }  
     ```  
   
-3.  적절한 서명을 사용하여 <xref:Microsoft.Win32.SystemEvents.UserPreferenceChanged> 이벤트에 응답하는 이벤트 프로시저를 만듭니다.  
+3. 적절한 서명을 사용하여 <xref:Microsoft.Win32.SystemEvents.UserPreferenceChanged> 이벤트에 응답하는 이벤트 프로시저를 만듭니다.  
   
     ```  
     ' Visual Basic  
@@ -224,7 +223,7 @@ ms.locfileid: "58823469"
     }  
     ```  
   
-4.  양식 생성자에서 `InitializeComponents` 호출 뒤에 이벤트 프로시저를 시스템 이벤트에 연결하는 코드를 추가합니다. 이 메서드는 `SetColorScheme` 프로시저를 호출합니다.  
+4. 양식 생성자에서 `InitializeComponents` 호출 뒤에 이벤트 프로시저를 시스템 이벤트에 연결하는 코드를 추가합니다. 이 메서드는 `SetColorScheme` 프로시저를 호출합니다.  
   
     ```  
     ' Visual Basic  
@@ -247,7 +246,7 @@ ms.locfileid: "58823469"
     }  
     ```  
   
-5.  폼 <xref:System.Windows.Forms.Control.Dispose%2A> 메서드에서 기본 클래스의 <xref:System.Windows.Forms.Control.Dispose%2A> 메서드 호출 앞에 코드를 추가하여 응용 프로그램이 닫힐 때 이벤트를 해제합니다. Visual Basic에서 <xref:System.Windows.Forms.Control.Dispose%2A> 메서드에 액세스하려면 Windows Form 디자이너에서 생성한 코드 레이블이 지정된 영역을 확장해야 합니다.  
+5. 폼 <xref:System.Windows.Forms.Control.Dispose%2A> 메서드에서 기본 클래스의 <xref:System.Windows.Forms.Control.Dispose%2A> 메서드 호출 앞에 코드를 추가하여 응용 프로그램이 닫힐 때 이벤트를 해제합니다. Visual Basic에서 <xref:System.Windows.Forms.Control.Dispose%2A> 메서드에 액세스하려면 Windows Form 디자이너에서 생성한 코드 레이블이 지정된 영역을 확장해야 합니다.  
   
     > [!NOTE]
     >  시스템 이벤트 코드는 주 애플리케이션과 별개인 스레드를 실행합니다. 이벤트를 해제하지 않으면 이벤트에 연결하는 코드가 프로그램이 닫힌 후에도 실행됩니다.  
@@ -282,38 +281,38 @@ ms.locfileid: "58823469"
     }  
     ```  
   
-6.  F5 키를 눌러 애플리케이션을 실행합니다.  
+6. F5 키를 눌러 애플리케이션을 실행합니다.  
   
 ## <a name="conveying-important-information-by-means-other-than-sound"></a>소리가 아닌 다른 수단으로 중요한 정보 전달  
  이 애플리케이션에서는 정보가 소리로만 전달되지 않습니다. 애플리케이션에서 소리를 사용하는 경우 다른 수단을 통해서도 정보를 제공해야 합니다.  
   
 #### <a name="to-supply-information-by-some-other-means-than-sound"></a>소리가 아닌 다른 수단으로 정보를 제공하려면  
   
-1.  Windows API 함수 FlashWindow를 사용하여 제목 표시줄을 깜박이게 만듭니다. Windows API 함수를 호출 하는 방법의 예제를 참조 하세요. [연습: Windows Api 호출](~/docs/visual-basic/programming-guide/com-interop/walkthrough-calling-windows-apis.md)합니다.  
+1. Windows API 함수 FlashWindow를 사용하여 제목 표시줄을 깜박이게 만듭니다. Windows API 함수를 호출 하는 방법의 예제를 참조 하세요. [연습: Windows Api 호출](~/docs/visual-basic/programming-guide/com-interop/walkthrough-calling-windows-apis.md)합니다.  
   
     > [!NOTE]
     >  사용자가 Windows 소리 탐지 서비스를 사용하도록 설정했을 수도 있습니다. 이 서비스는 컴퓨터의 기본 제공 스피커를 통해 시스템 소리가 재생될 때 창도 깜박이게 합니다.  
   
-2.  사용자가 응답할 수 있도록 비모달 창에 중요한 정보를 표시합니다.  
+2. 사용자가 응답할 수 있도록 비모달 창에 중요한 정보를 표시합니다.  
   
-3.  키보드 포커스를 획득하는 메시지 상자를 표시합니다. 사용자가 입력 중일 때는 이 메서드를 사용하지 마세요.  
+3. 키보드 포커스를 획득하는 메시지 상자를 표시합니다. 사용자가 입력 중일 때는 이 메서드를 사용하지 마세요.  
   
-4.  작업 표시줄의 상태 알림 영역에 상태 표시기를 표시합니다. 자세한 내용은 [Windows Forms NotifyIcon 구성 요소를 사용하여 작업 표시줄에 애플리케이션 아이콘 추가](../controls/app-icons-to-the-taskbar-with-wf-notifyicon.md)를 참조하세요.  
+4. 작업 표시줄의 상태 알림 영역에 상태 표시기를 표시합니다. 자세한 내용은 [Windows Forms NotifyIcon 구성 요소를 사용하여 작업 표시줄에 애플리케이션 아이콘 추가](../controls/app-icons-to-the-taskbar-with-wf-notifyicon.md)를 참조하세요.  
   
 ## <a name="testing-the-application"></a>애플리케이션 테스트  
  애플리케이션을 배포하기 전에 구현한 접근성 기능을 테스트해야 합니다.  
   
 #### <a name="to-test-accessibility-features"></a>접근성 기능을 테스트하려면  
   
-1.  키보드 액세스를 테스트하려면 마우스를 분리하고 키보드만 사용하여 각 기능에 대한 사용자 인터페이스를 탐색합니다. 키보드만 사용하여 모든 작업을 수행할 수 있는지 확인합니다.  
+1. 키보드 액세스를 테스트하려면 마우스를 분리하고 키보드만 사용하여 각 기능에 대한 사용자 인터페이스를 탐색합니다. 키보드만 사용하여 모든 작업을 수행할 수 있는지 확인합니다.  
   
-2.  고대비 지원을 테스트하려면 제어판의 내게 필요한 옵션 아이콘을 선택합니다. 표시 탭을 클릭하고 고대비 사용 확인란을 선택합니다. 모든 사용자 인터페이스 요소를 탐색하여 색 및 글꼴 변경 내용이 반영되었는지 확인합니다. 또한 텍스트 뒤에 그려진 이미지 또는 패턴이 생략되었는지 확인합니다.  
+2. 고대비 지원을 테스트하려면 제어판의 내게 필요한 옵션 아이콘을 선택합니다. 표시 탭을 클릭하고 고대비 사용 확인란을 선택합니다. 모든 사용자 인터페이스 요소를 탐색하여 색 및 글꼴 변경 내용이 반영되었는지 확인합니다. 또한 텍스트 뒤에 그려진 이미지 또는 패턴이 생략되었는지 확인합니다.  
   
     > [!NOTE]
     >  Windows NT 4에서는 제어판에 내게 필요한 옵션 아이콘이 없습니다. 따라서 SystemInformation.HighContrast 설정을 변경하는 이 절차는 Windows NT 4에서 작동하지 않습니다.  
   
-3.  다른 도구는 애플리케이션의 접근성 테스트에 바로 사용할 수 있습니다.  
+3. 다른 도구는 애플리케이션의 접근성 테스트에 바로 사용할 수 있습니다.  
   
-4.  키보드 포커스 노출을 테스트하려면 돋보기를 실행합니다. 돋보기를 열려면 **시작** 메뉴를 클릭하고**프로그램**, **보조프로그램**, **내게 필요한 옵션**을 차례로 가리킨 다음 **돋보기**를 클릭합니다. 키보드 탭 이동 및 마우스를 사용하여 사용자 인터페이스를 탐색합니다. **돋보기**에서 모든 탐색이 제대로 추적되는지 확인합니다.  
+4. 키보드 포커스 노출을 테스트하려면 돋보기를 실행합니다. 돋보기를 열려면 **시작** 메뉴를 클릭하고**프로그램**, **보조프로그램**, **내게 필요한 옵션**을 차례로 가리킨 다음 **돋보기**를 클릭합니다. 키보드 탭 이동 및 마우스를 사용하여 사용자 인터페이스를 탐색합니다. **돋보기**에서 모든 탐색이 제대로 추적되는지 확인합니다.  
   
-5.  화면 요소 노출을 테스트하려면 조사를 실행하고 마우스와 Tab 키를 둘 다 사용하여 각 요소에 접근합니다. 조사 창의 이름, 상태, 역할, 위치 및 값 필드에 제공된 정보가 UI의 각 개체에 대해 사용자에게 의미 있는 정보인지 확인합니다.
+5. 화면 요소 노출을 테스트하려면 조사를 실행하고 마우스와 Tab 키를 둘 다 사용하여 각 요소에 접근합니다. 조사 창의 이름, 상태, 역할, 위치 및 값 필드에 제공된 정보가 UI의 각 개체에 대해 사용자에게 의미 있는 정보인지 확인합니다.

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - radio buttons [Windows Forms], determining state
 - radio buttons [Windows Forms], about radio buttons
 ms.assetid: cd11f0c2-d098-4022-adf9-1455bc166a13
-ms.openlocfilehash: cc511a79cf70bb8df8980c8703b1ad49d15516aa
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 1210658226d9bcacbf4904fdc90a9908c34f5b73
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57704536"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59129118"
 ---
 # <a name="radiobutton-control-overview-windows-forms"></a>RadioButton 컨트롤 개요(Windows Forms)
 Windows Forms <xref:System.Windows.Forms.RadioButton> 컨트롤 사용자에 게 둘 이상의 상호 배타적인 옵션 집합을 제공 합니다. 중요 한 차이점이 있기 라디오 단추 및 확인란 마찬가지로 함수에 나타날 수 있습니다 하는 동안: 동일한 그룹의 다른 라디오 단추가 사용자가 라디오 단추를 선택 하면도 선택할 수 없습니다. 반면에 임의 개수의 확인란을 선택할 수 있습니다. 라디오 단추 그룹을 사용자 지정, "Here is 집합을 하나만 선택할 수 있습니다."  
@@ -25,11 +25,12 @@ Windows Forms <xref:System.Windows.Forms.RadioButton> 컨트롤 사용자에 게
  <xref:System.Windows.Forms.RadioButton> 제어 경우 눌러진을 선택 된 것으로 표시 되는 명령 단추 처럼 나타날 수 있습니다 합니다 <xref:System.Windows.Forms.RadioButton.Appearance%2A> 속성이 <xref:System.Windows.Forms.Appearance.Button>합니다. 라디오 단추를 사용 하 여 이미지를 표시할 수도 있습니다는 <xref:System.Windows.Forms.ButtonBase.Image%2A> 고 <xref:System.Windows.Forms.ButtonBase.ImageList%2A> 속성입니다. 자세한 내용은 [방법: 설정 하 여 표시 되는 이미지를 Windows Forms 컨트롤](how-to-set-the-image-displayed-by-a-windows-forms-control.md)합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Windows.Forms.RadioButton>
 - [Panel 컨트롤 개요](panel-control-overview-windows-forms.md)
 - [GroupBox 컨트롤 개요](groupbox-control-overview-windows-forms.md)
 - [CheckBox 컨트롤 개요](checkbox-control-overview-windows-forms.md)
-- [방법: Windows Forms 컨트롤에 대 한 액세스 키 만들기](how-to-create-access-keys-for-windows-forms-controls.md)
-- [방법: 설정 하 여 표시 되는 텍스트는 Windows Forms 컨트롤](how-to-set-the-text-displayed-by-a-windows-forms-control.md)
-- [방법: 함수 집합으로 그룹 Windows Forms RadioButton 컨트롤](how-to-group-windows-forms-radiobutton-controls-to-function-as-a-set.md)
+- [방법: Windows Forms 컨트롤에 대한 선택키 만들기](how-to-create-access-keys-for-windows-forms-controls.md)
+- [방법: Windows Forms 컨트롤에서 표시하는 텍스트 설정](how-to-set-the-text-displayed-by-a-windows-forms-control.md)
+- [방법: Windows Forms RadioButton 컨트롤을 기능 집합으로 그룹화](how-to-group-windows-forms-radiobutton-controls-to-function-as-a-set.md)
 - [RadioButton 컨트롤](radiobutton-control-windows-forms.md)

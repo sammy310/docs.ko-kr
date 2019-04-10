@@ -2,12 +2,12 @@
 title: 비교 의미 체계(Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: b36ce28a-2fe4-4236-b782-e5f7c054deae
-ms.openlocfilehash: 371999df0fb3177ecc90f9b1fa43d457a51bfd7a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6b4c4177ebd6c45e00a1ac7774e40a43e0c14a74
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54492496"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59083337"
 ---
 # <a name="comparison-semantics-entity-sql"></a>비교 의미 체계(Entity SQL)
 다음 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 연산자를 수행하면 형식 인스턴스 비교가 수반됩니다.  
@@ -66,15 +66,15 @@ ms.locfileid: "54492496"
 ## <a name="supported-combinations"></a>지원되는 조합  
  다음 표에서는 각 종류의 형식에 대해 지원되는 비교 연산자의 조합을 모두 보여 줍니다.  
   
-|**Type**|**=**<br /><br /> **\!=**|**GROUP BY**<br /><br /> **DISTINCT**|**UNION**<br /><br /> **INTERSECT**<br /><br /> **EXCEPT**<br /><br /> **SET**<br /><br /> **OVERLAPS**|**IN**|**<   <=**<br /><br /> **>   >=**|**ORDER BY**|**IS NULL**<br /><br /> **NULL이 아님**|  
+|**형식**|**=**<br /><br /> **!=**|**GROUP BY**<br /><br /> **DISTINCT**|**UNION**<br /><br /> **INTERSECT**<br /><br /> **EXCEPT**<br /><br /> **SET**<br /><br /> **OVERLAPS**|**IN**|**<   <=**<br /><br /> **>   >=**|**ORDER BY**|**IS NULL**<br /><br /> **IS NOT NULL**|  
 |-|-|-|-|-|-|-|-|  
 |엔터티 형식|Ref<sup>1</sup>|모든 속성<sup>2</sup>|모든 속성<sup>2</sup>|모든 속성<sup>2</sup>|Throw<sup>3</sup>|Throw<sup>3</sup>|Ref<sup>1</sup>|  
 |복합 형식|Throw<sup>3</sup>|Throw<sup>3</sup>|Throw<sup>3</sup>|Throw<sup>3</sup>|Throw<sup>3</sup>|Throw<sup>3</sup>|Throw<sup>3</sup>|  
 |행|모든 속성<sup>4</sup>|모든 속성<sup>4</sup>|모든 속성<sup>4</sup>|Throw<sup>3</sup>|Throw<sup>3</sup>|모든 속성<sup>4</sup>|Throw<sup>3</sup>|  
-|기본 형식|@FSHO2@공급자 고유|@FSHO2@공급자 고유|@FSHO2@공급자 고유|@FSHO2@공급자 고유|@FSHO2@공급자 고유|@FSHO2@공급자 고유|@FSHO2@공급자 고유|  
+|기본 형식|공급자별|공급자별|공급자별|공급자별|공급자별|공급자별|공급자별|  
 |Multiset|Throw<sup>3</sup>|Throw<sup>3</sup>|Throw<sup>3</sup>|Throw<sup>3</sup>|Throw<sup>3</sup>|Throw<sup>3</sup>|Throw<sup>3</sup>|  
 |Ref|예<sup>5</sup>|예<sup>5</sup>|예<sup>5</sup>|예<sup>5</sup>|Throw|Throw|예<sup>5</sup>|  
-|형식 연결<br /><br /> 형식|Throw<sup>3</sup>|Throw|Throw|Throw|Throw<sup>3</sup>|Throw<sup>3</sup>|Throw<sup>3</sup>|  
+|연결<br /><br /> type|Throw<sup>3</sup>|Throw|Throw|Throw|Throw<sup>3</sup>|Throw<sup>3</sup>|Throw<sup>3</sup>|  
   
  <sup>1</sup>지정 된 엔터티 형식 인스턴스의 참조를 암시적으로 비교 되는 다음 예와 같이:  
   
@@ -103,4 +103,5 @@ WHERE p1 != REF(p2)
  <sup>5</sup>참조의 모든 개별 요소가 비교 (엔터티 집합 이름 및 엔터티 형식의 모든 키 속성 포함).  
   
 ## <a name="see-also"></a>참고자료
+
 - [Entity SQL 개요](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)

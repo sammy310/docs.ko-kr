@@ -2,12 +2,12 @@
 title: 서비스 엔드포인트 및 큐 주소 지정
 ms.date: 03/30/2017
 ms.assetid: 7d2d59d7-f08b-44ed-bd31-913908b83d97
-ms.openlocfilehash: 7b4eca1519eeb1ed6357b625a3253105ece2b8ad
-ms.sourcegitcommit: 0069cb3de8eed4e92b2195d29e5769a76111acdd
+ms.openlocfilehash: 4064b13b00d44f90a372df5364406fb16c1da9fd
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/16/2019
-ms.locfileid: "56332522"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59172525"
 ---
 # <a name="service-endpoints-and-queue-addressing"></a>서비스 엔드포인트 및 큐 주소 지정
 이 항목에서는 클라이언트가 큐에서 읽는 서비스에 주소를 지정하는 방법 및 서비스 엔드포인트가 큐에 매핑되는 방법을 설명합니다. 참고로, 다음 그림과 클래식 Windows Communication Foundation (WCF) 응용 프로그램 배포를 대기 합니다.  
@@ -105,4 +105,5 @@ ms.locfileid: "56332522"
  `MsmqIntegrationBinding`과 함께 net.msmq:// 주소 지정을 사용할 수 없습니다. 때문에 `MsmqIntegrationBinding` 자유 형식의 MSMQ 형식 이름 주소 지정을 지원 합니다.이 바인딩을 사용 하 여 MSMQ의 멀티 캐스트 및 메일 그룹 기능을 사용 하는 WCF 서비스를 사용할 수 있습니다. 한 가지 예외의 경우는 `CustomDeadLetterQueue`을 사용할 때 `MsmqIntegrationBinding`를 지정하는 것입니다. 이 경우 net.msmq:// 형식이어야 하며, `NetMsmqBinding`을 사용하여 지정하는 방법과 비슷합니다.  
   
 ## <a name="see-also"></a>참고자료
-- [대기 중인 애플리케이션 웹 호스팅](../../../../docs/framework/wcf/feature-details/web-hosting-a-queued-application.md)
+
+- [대기 중인 응용 프로그램 웹 호스팅](../../../../docs/framework/wcf/feature-details/web-hosting-a-queued-application.md)

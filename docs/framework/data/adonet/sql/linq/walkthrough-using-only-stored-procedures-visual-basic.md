@@ -1,17 +1,17 @@
 ---
-title: '연습: 저장 프로시저 (Visual Basic)만 사용'
+title: '연습: 저장 프로시저만 사용(Visual Basic)'
 ms.date: 03/30/2017
 dev_langs:
 - vb
 ms.assetid: 5a736a30-ba66-4adb-b87c-57d19476e862
-ms.openlocfilehash: 7c696d24dd84aee568706200389839dea080d7b4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1527e3b4b614d4e700ae0c2c0fc555e14c7bc8d2
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54577402"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59314830"
 ---
-# <a name="walkthrough-using-only-stored-procedures-visual-basic"></a>연습: 저장 프로시저 (Visual Basic)만 사용
+# <a name="walkthrough-using-only-stored-procedures-visual-basic"></a>연습: 저장 프로시저만 사용(Visual Basic)
 이 연습에서는 저장 프로시저만 사용하여 데이터에 액세스하기 위한 기본 종단 간 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 시나리오를 제공합니다. 일반적으로 데이터베이스 관리자는 데이터 저장소에 액세스하는 방법을 제한하기 위해 이 방법을 사용합니다.  
   
 > [!NOTE]
@@ -62,15 +62,15 @@ ms.locfileid: "54577402"
   
 #### <a name="to-create-a-linq-to-sql-solution"></a>LINQ to SQL 솔루션을 만들려면  
   
-1.  Visual Studio의 **파일** 메뉴에서 **새 프로젝트**를 클릭합니다.  
+1. Visual Studio의 **파일** 메뉴에서 **새 프로젝트**를 클릭합니다.  
   
-2.  **새 프로젝트** 대화 상자의 **프로젝트 형식** 창에서 **Visual Basic**을 확장하고 **Windows**를 클릭합니다.  
+2. **새 프로젝트** 대화 상자의 **프로젝트 형식** 창에서 **Visual Basic**을 확장하고 **Windows**를 클릭합니다.  
   
-3.  **템플릿** 창에서 **Windows Forms 응용 프로그램**을 클릭합니다.  
+3. **템플릿** 창에서 **Windows Forms 응용 프로그램**을 클릭합니다.  
   
-4.  에 **이름을** 상자에 입력 **SprocOnlyApp**합니다.  
+4. 에 **이름을** 상자에 입력 **SprocOnlyApp**합니다.  
   
-5.  **확인**을 클릭합니다.  
+5. **확인**을 클릭합니다.  
   
      Windows Forms 디자이너가 열립니다.  
   
@@ -79,11 +79,11 @@ ms.locfileid: "54577402"
   
 #### <a name="to-add-systemdatalinqdll"></a>System.Data.Linq.dll을 추가하려면  
   
-1.  **솔루션 탐색기**, 클릭 **모든 파일 표시**합니다.  
+1. **솔루션 탐색기**, 클릭 **모든 파일 표시**합니다.  
   
-2.  **솔루션 탐색기**를 마우스 오른쪽 단추로 클릭 **참조**를 클릭 하 고 **참조 추가**합니다.  
+2. **솔루션 탐색기**를 마우스 오른쪽 단추로 클릭 **참조**를 클릭 하 고 **참조 추가**합니다.  
   
-3.  에 **참조 추가** 대화 상자, 클릭 **.NET**, 필자는 System.Data.Linq 어셈블리를 클릭 한 다음 클릭 **확인**합니다.  
+3. 에 **참조 추가** 대화 상자, 클릭 **.NET**, 필자는 System.Data.Linq 어셈블리를 클릭 한 다음 클릭 **확인**합니다.  
   
      어셈블리가 프로젝트에 추가됩니다.  
   
@@ -92,9 +92,9 @@ ms.locfileid: "54577402"
   
 #### <a name="to-add-the-northwind-code-file-to-the-project"></a>northwind 코드 파일을 프로젝트에 추가하려면  
   
-1.  **프로젝트** 메뉴에서 **기존 항목 추가**를 클릭합니다.  
+1. **프로젝트** 메뉴에서 **기존 항목 추가**를 클릭합니다.  
   
-2.  에 **기존 항목 추가** 대화 상자에서 c:\linqtest3\northwind.vb, 이동 및 클릭 **추가**합니다.  
+2. 에 **기존 항목 추가** 대화 상자에서 c:\linqtest3\northwind.vb, 이동 및 클릭 **추가**합니다.  
   
      northwind.vb 파일이 프로젝트에 추가됩니다.  
   
@@ -103,11 +103,11 @@ ms.locfileid: "54577402"
   
 #### <a name="to-create-the-database-connection"></a>데이터베이스 연결을 만들려면  
   
-1.  **솔루션 탐색기**를 마우스 오른쪽 단추로 클릭 **Form1.vb**를 클릭 하 고 **코드 보기**합니다.  
+1. **솔루션 탐색기**를 마우스 오른쪽 단추로 클릭 **Form1.vb**를 클릭 하 고 **코드 보기**합니다.  
   
-     `Class Form1`이 코드 편집기에 나타납니다.  
+     `Class Form1` 코드 편집기에 표시 됩니다.  
   
-2.  다음 코드를 `Form1` 코드 블록에 입력합니다.  
+2. 다음 코드를 `Form1` 코드 블록에 입력합니다.  
   
      [!code-vb[DLinqWalk4VB#1](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqWalk4VB/vb/Form1.vb#1)]  
   
@@ -116,42 +116,42 @@ ms.locfileid: "54577402"
   
 #### <a name="to-set-up-the-user-interface"></a>사용자 인터페이스를 설정하려면  
   
-1.  반환 하는 Windows Forms 디자이너 (**Form1.vb[Design]**).  
+1. 반환 하는 Windows Forms 디자이너 (**Form1.vb[Design]**).  
   
-2.  **보기** 메뉴에서 **도구 상자**를 클릭합니다.  
+2. **보기** 메뉴에서 **도구 상자**를 클릭합니다.  
   
      도구 상자가 열립니다.  
   
     > [!NOTE]
     >  클릭 합니다 **자동 숨기기** 압정을 나머지를 수행 하는 동안 도구 상자를 열어이 섹션의 단계입니다.  
   
-3.  두 개의 단추, 두 개의 텍스트 상자 및 두 개의 레이블을 도구 상자에서 끌어 **Form1**합니다.  
+3. 두 개의 단추, 두 개의 텍스트 상자 및 두 개의 레이블을 도구 상자에서 끌어 **Form1**합니다.  
   
      함께 나와 있는 그림과 같이 컨트롤을 정렬합니다. 확장 **Form1** 컨트롤을 쉽게 맞출 수 있도록 합니다.  
   
-4.  마우스 오른쪽 단추로 클릭 **Label1**를 클릭 하 고 **속성**합니다.  
+4. 마우스 오른쪽 단추로 클릭 **Label1**를 클릭 하 고 **속성**합니다.  
   
-5.  변경 된 **텍스트** 속성을 **Label1** 에 **Enter OrderID:** 합니다.  
+5. 변경 된 **텍스트** 속성을 **Label1** 에 **Enter OrderID:** 합니다.  
   
-6.  에 대 한 동일한 방식으로 **Label2**를 변경 합니다 **텍스트** 속성을 **Label2** 를 **Enter CustomerID:**.  
+6. 에 대 한 동일한 방식으로 **Label2**를 변경 합니다 **텍스트** 속성을 **Label2** 를 **Enter CustomerID:**.  
   
-7.  같은 방법으로 변경 합니다 **텍스트** 속성에 대 한 **Button1** 에 **Order Details**합니다.  
+7. 같은 방법으로 변경 합니다 **텍스트** 속성에 대 한 **Button1** 에 **Order Details**합니다.  
   
-8.  변경 된 **텍스트** 속성에 대 한 **Button2** 에 **Order History**합니다.  
+8. 변경 된 **텍스트** 속성에 대 한 **Button2** 에 **Order History**합니다.  
   
      모든 텍스트를 볼 수 있도록 단추 컨트롤을 넓힙니다.  
   
 #### <a name="to-handle-button-clicks"></a>단추 클릭을 처리하려면  
   
-1.  두 번 클릭 **Order Details** 에 **Form1** 만들려는 `Button1` 이벤트 처리기 및 코드 편집기를 엽니다.  
+1. 두 번 클릭 **Order Details** 에 **Form1** 만들려는 `Button1` 이벤트 처리기 및 코드 편집기를 엽니다.  
   
-2.  다음 코드를 `Button1` 처리기에 입력합니다.  
+2. 다음 코드를 `Button1` 처리기에 입력합니다.  
   
      [!code-vb[DLinqWalk4VB#2](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqWalk4VB/vb/Form1.vb#2)]  
   
-3.  이제 두 번 클릭 **Button2** 만들려는 Form1에서는 `Button2` 이벤트 처리기 및 코드 편집기를 엽니다.  
+3. 이제 두 번 클릭 **Button2** 만들려는 Form1에서는 `Button2` 이벤트 처리기 및 코드 편집기를 엽니다.  
   
-4.  다음 코드를 `Button2` 처리기에 입력합니다.  
+4. 다음 코드를 `Button2` 처리기에 입력합니다.  
   
      [!code-vb[DLinqWalk4VB#3](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqWalk4VB/vb/Form1.vb#3)]  
   
@@ -160,37 +160,38 @@ ms.locfileid: "54577402"
   
 #### <a name="to-test-the-application"></a>애플리케이션을 테스트하려면  
   
-1.  F5 키를 눌러 디버깅을 시작합니다.  
+1. F5 키를 눌러 디버깅을 시작합니다.  
   
      Form1이 나타납니다.  
   
-2.  에 **Enter OrderID** 상자에 입력 **10249** 클릭 하 고 **Order Details**합니다.  
+2. 에 **Enter OrderID** 상자에 입력 **10249** 클릭 하 고 **Order Details**합니다.  
   
      메시지 상자에는 주문 10249에 포함된 제품이 나열됩니다.  
   
      클릭 **확인** 메시지 상자를 닫습니다.  
   
-3.  에 **Enter CustomerID** 상자에 입력 `ALFKI`를 클릭 하 고 **Order History**합니다.  
+3. 에 **Enter CustomerID** 상자에 입력 `ALFKI`를 클릭 하 고 **Order History**합니다.  
   
      메시지 상자에는 고객 ALFKI에 대한 주문 기록이 나열됩니다.  
   
      클릭 **확인** 메시지 상자를 닫습니다.  
   
-4.  에 **Enter OrderID** 상자에 입력 `123`를 클릭 하 고 **Order Details**합니다.  
+4. 에 **Enter OrderID** 상자에 입력 `123`를 클릭 하 고 **Order Details**합니다.  
   
      메시지 상자에는 "No results"가 표시됩니다.  
   
      클릭 **확인** 메시지 상자를 닫습니다.  
   
-5.  에 **디버그** 메뉴에서 클릭 **디버깅을 중지**합니다.  
+5. 에 **디버그** 메뉴에서 클릭 **디버깅을 중지**합니다.  
   
      디버그 세션이 닫힙니다.  
   
-6.  실험이 끝나면 경우 클릭할 수 있습니다 **프로젝트 닫기** 에 **파일** 메뉴를 묻는 메시지가 나타나면 프로젝트를 저장 합니다.  
+6. 실험이 끝나면 경우 클릭할 수 있습니다 **프로젝트 닫기** 에 **파일** 메뉴를 묻는 메시지가 나타나면 프로젝트를 저장 합니다.  
   
 ## <a name="next-steps"></a>다음 단계  
  약간의 변경을 통해 이 프로젝트를 향상시킬 수 있습니다. 예를 들어 목록 상자에 사용 가능한 저장 프로시저를 나열하고 사용자가 실행할 프로시저를 선택하도록 만들 수 있습니다. 또한 보고서의 출력을 텍스트 파일에 스트리밍할 수 있습니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [연습으로 학습](../../../../../../docs/framework/data/adonet/sql/linq/learning-by-walkthroughs.md)
 - [저장 프로시저](../../../../../../docs/framework/data/adonet/sql/linq/stored-procedures.md)

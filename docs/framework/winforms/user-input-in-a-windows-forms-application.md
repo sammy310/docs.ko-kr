@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Windows Forms, user input
 ms.assetid: 9d61fa96-70f7-4754-885a-49a4a6316bdb
-ms.openlocfilehash: 351c1e42bb775331cbe0e2005b6bea284716de75
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 0eb39f0ecd8fcd12918b38bd77fed2ff32cac1d8
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57711930"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59124152"
 ---
 # <a name="user-input-in-a-windows-forms-application"></a>Windows Forms 응용 프로그램의 사용자 입력
 Windows Forms에서 사용자 입력은 Windows 메시지 형식으로의 응용 프로그램에 전송 됩니다. 일련의 재정의 가능한 메서드를 폼을 응용 프로그램에서 이러한 메시지를 처리 하 고 수준을 제어 합니다. 이러한 메서드는 마우스 및 키보드 메시지를 수신 하는 경우 입력 키보드 또는 마우스에 대 한 정보를 처리할 수 있는 이벤트를 발생 시킵니다. 대부분의 경우에서 Windows Forms 응용 프로그램은 이러한 이벤트를 처리 하면 모든 사용자 입력을 처리할 수 됩니다. 다른 경우에 응용 프로그램에 응용 프로그램, 폼 또는 컨트롤에 의해 수신 되기 전에 특정 메시지를 차단 하기 위해 메시지를 처리 하는 방법 중 하나를 재정의 해야 합니다.  
@@ -31,6 +31,7 @@ Windows Forms에서 사용자 입력은 Windows 메시지 형식으로의 응용
  키보드 및 마우스 메시지가 해당 유형의 메시지에만 적용 되는 재정의 가능한 메서드 집합을 추가 하 여 처리 됩니다. 자세한 내용은 [키보드 입력 작동 방식](how-keyboard-input-works.md) 하 고 [Windows Forms의 마우스 입력 방법](how-mouse-input-works-in-windows-forms.md)합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [Windows Forms에 사용자 입력](user-input-in-windows-forms.md)
 - [Windows Forms 응용 프로그램의 키보드 입력](keyboard-input-in-a-windows-forms-application.md)
 - [Windows Forms 애플리케이션의 마우스 입력](mouse-input-in-a-windows-forms-application.md)

@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - brushes [WPF], about brushes
 ms.assetid: ecea1955-420b-45c6-bf43-c1404c072c41
-ms.openlocfilehash: 12671c62a887f863bfb423cf67d7a25eed4118b2
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 14e3d095d50f41e5b20a79d76c464bcf28c99327
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57362606"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59132212"
 ---
 # <a name="wpf-brushes-overview"></a>WPF 브러시 개요
 모든 화면에 표시 되는 브러시 그려 졌 기 때문에 표시 됩니다. 예를 들어, 단추, 텍스트, 전경색 및 도형의 채우기의 배경을 설명 하는 브러시를 사용 됩니다. 이 항목에서는 사용 하 여 그리기의 개념을 소개 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 브러시 및 예제를 제공 합니다. 브러시를 사용하여 간단한 단색부터 복잡한 패턴 및 이미지 집합에 이르는 모든 방식으로 [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] 개체를 그릴 수 있습니다.  
@@ -161,6 +161,7 @@ VisualBrush를 사용 하 여 그린 사각형
  이유에 대 한 자세한 내용은 <xref:System.Windows.Media.VisualBrush> 개체가 고정 참조는 <xref:System.Windows.Media.VisualBrush> 유형 페이지.  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Windows.Media.Brush>
 - <xref:System.Windows.Media.Brushes>
 - [단색 및 그라데이션을 사용한 그리기 개요](painting-with-solid-colors-and-gradients-overview.md)
@@ -170,4 +171,4 @@ VisualBrush를 사용 하 여 그린 사각형
 - [ImageBrush 샘플](https://go.microsoft.com/fwlink/?LinkID=160005)
 - [VisualBrush 샘플](https://go.microsoft.com/fwlink/?LinkID=160049)
 - [방법 항목](brushes-how-to-topics.md)
-- [기타 성능 권장 사항](../advanced/optimizing-performance-other-recommendations.md)
+- [기타 성능 추천 사항](../advanced/optimizing-performance-other-recommendations.md)

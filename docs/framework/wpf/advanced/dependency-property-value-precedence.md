@@ -7,17 +7,16 @@ helpviewer_keywords:
 - classes [WPF], owners of dependency properties
 - metadata [WPF], dependency properties
 ms.assetid: 1fbada8e-4867-4ed1-8d97-62c07dad7ebc
-ms.openlocfilehash: 22ac109c06659741c673681ad9bfcf3e1dcc5b2e
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 9adcd19ea48d62f4fdcab3380252ae8ec8398296
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57367939"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59315688"
 ---
 # <a name="dependency-property-value-precedence"></a>종속성 속성 값 우선 순위
 <a name="introduction"></a> 이 항목에서는 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 속성 시스템의 작업 방식이 종속성 속성 값에 영향을 주는 방식을 설명하고 속성 시스템의 일면이 속성의 유효 값이 적용되는 우선 순위에 관해 설명합니다.  
-    
-  
+
 <a name="prerequisites"></a>   
 ## <a name="prerequisites"></a>전제 조건  
  이 항목에서는 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 클래스에서 기존 종속성 속성의 이용자 관점에서 종속성 속성을 이해하고 [종속성 속성 개요](dependency-properties-overview.md)를 읽었다고 가정합니다. 이 항목의 예제를 따르려면 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]을 이해하고 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 애플리케이션을 작성하는 방법도 알아야 합니다.  
@@ -40,35 +39,35 @@ ms.locfileid: "57367939"
 ## <a name="dependency-property-setting-precedence-list"></a>종속성 속성 설정 우선 순위 목록  
  다음은 속성 시스템에서 종속성 속성의 런타임 값을 할당할 때 사용하는 최종적인 순서입니다. 가장 높은 우선 순위가 가장 먼저 나열됩니다. 이 목록은 [종속성 속성 개요](dependency-properties-overview.md)에 나와 있는 일반적인 순서를 확장한 것입니다.  
   
-1.  **속성 시스템 강제 변환.** 강제 변환에 대한 자세한 내용은 이 항목의 뒷부분에 있는 [강제 변환, 애니메이션 및 기준 값](#animations)을 참조하십시오.  
+1. **속성 시스템 강제 변환 합니다.** 강제 변환에 대한 자세한 내용은 이 항목의 뒷부분에 있는 [강제 변환, 애니메이션 및 기준 값](#animations)을 참조하십시오.  
   
-2.  **활성 애니메이션 또는 보류 동작이 있는 애니메이션.** 속성 애니메이션이 실제로 효과를 발휘하려면 기준 값이 로컬로 설정된 경우에도 애니메이션되지 않은 기준 값보다 높은 우선 순위를 가질 수 있어야 합니다. 자세한 내용은 이 항목의 뒷부분에 있는 [강제 변환, 애니메이션 및 기준 값](#animations)을 참조하십시오.  
+2. **활성 애니메이션 또는 보류 동작이 있는 애니메이션.** 속성 애니메이션이 실제로 효과를 발휘하려면 기준 값이 로컬로 설정된 경우에도 애니메이션되지 않은 기준 값보다 높은 우선 순위를 가질 수 있어야 합니다. 자세한 내용은 이 항목의 뒷부분에 있는 [강제 변환, 애니메이션 및 기준 값](#animations)을 참조하십시오.  
   
-3.  **로컬 값.** 편리 하 게도 동일에서 특성 또는 속성 요소로 설정 하는 "래퍼" 속성을 통해 로컬 값을 설정할 수 있습니다 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], 또는를 호출 하 여 합니다 <xref:System.Windows.DependencyObject.SetValue%2A> [!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)] 특정 인스턴스의 속성을 사용 하 여 합니다. 바인딩이나 리소스를 사용하여 로컬 값을 설정하면 이들 각각은 직접 값을 설정한 것과 같은 우선 순위가 적용됩니다.  
+3. **로컬 값입니다.** 편리 하 게도 동일에서 특성 또는 속성 요소로 설정 하는 "래퍼" 속성을 통해 로컬 값을 설정할 수 있습니다 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], 또는를 호출 하 여 합니다 <xref:System.Windows.DependencyObject.SetValue%2A> [!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)] 특정 인스턴스의 속성을 사용 하 여 합니다. 바인딩이나 리소스를 사용하여 로컬 값을 설정하면 이들 각각은 직접 값을 설정한 것과 같은 우선 순위가 적용됩니다.  
   
-4.  **TemplatedParent 템플릿 속성.** 요소에는 <xref:System.Windows.FrameworkElement.TemplatedParent%2A> 템플릿의 일부로 만들어진 경우 (한 <xref:System.Windows.Controls.ControlTemplate> 또는 <xref:System.Windows.DataTemplate>). 적용 시기에 대한 자세한 내용은 이 항목의 뒷부분에 있는 [TemplatedParent](#templatedparent)를 참조하십시오. 템플릿 내에서는 다음과 같은 우선 순위가 적용됩니다.  
+4. **TemplatedParent 템플릿 속성입니다.** 요소에는 <xref:System.Windows.FrameworkElement.TemplatedParent%2A> 템플릿의 일부로 만들어진 경우 (한 <xref:System.Windows.Controls.ControlTemplate> 또는 <xref:System.Windows.DataTemplate>). 적용 시기에 대한 자세한 내용은 이 항목의 뒷부분에 있는 [TemplatedParent](#templatedparent)를 참조하십시오. 템플릿 내에서는 다음과 같은 우선 순위가 적용됩니다.  
   
     1.  트리거되는 <xref:System.Windows.FrameworkElement.TemplatedParent%2A> 템플릿.  
   
     2.  속성 집합 (일반적으로 통해 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 특성)에 <xref:System.Windows.FrameworkElement.TemplatedParent%2A> 템플릿.  
   
-5.  **암시적 스타일.** `Style` 속성에만 적용됩니다. `Style` 속성은 해당 요소의 유형과 일치하는 키를 가진 스타일 리소스로 채워집니다. 해당 스타일 리소스가 페이지나 애플리케이션에 있어야 합니다. 암시적 스타일 리소스의 조회는 테마로 이어지지 않습니다.  
+5. **암시적 스타일입니다.** `Style` 속성에만 적용됩니다. `Style` 속성은 해당 요소의 유형과 일치하는 키를 가진 스타일 리소스로 채워집니다. 해당 스타일 리소스가 페이지나 애플리케이션에 있어야 합니다. 암시적 스타일 리소스의 조회는 테마로 이어지지 않습니다.  
   
-6.  **스타일 트리거.** 페이지나 애플리케이션의 스타일에 있는 트리거(명시적 또는 암시적인 스타일일 수 있으나 우선 순위가 더 낮은 기본 스타일은 제외).  
+6. **스타일 트리거.** 페이지나 애플리케이션의 스타일에 있는 트리거(명시적 또는 암시적인 스타일일 수 있으나 우선 순위가 더 낮은 기본 스타일은 제외).  
   
-7.  **템플릿 트리거.** 스타일에 있는 템플릿 또는 직접 적용된 템플릿의 모든 트리거.  
+7. **템플릿 트리거입니다.** 스타일에 있는 템플릿 또는 직접 적용된 템플릿의 모든 트리거.  
   
-8.  **스타일 setter.** 값을 <xref:System.Windows.Setter> 페이지나 응용 프로그램의 스타일입니다.  
+8. **스타일 setter입니다.** 값을 <xref:System.Windows.Setter> 페이지나 응용 프로그램의 스타일입니다.  
   
-9. **기본(테마) 스타일.** 이 스타일이 적용되는 시기, 그리고 테마 스타일에 있는 템플릿과 테마 스타일의 관계에 대한 자세한 내용은 이 항목의 뒷부분에 있는 [기본(테마) 스타일](#themestyles)을 참조하십시오. 기본 스타일 내에서는 다음과 같은 우선 순위가 적용됩니다.  
+9. **기본 (테마) 스타일입니다.** 이 스타일이 적용되는 시기, 그리고 테마 스타일에 있는 템플릿과 테마 스타일의 관계에 대한 자세한 내용은 이 항목의 뒷부분에 있는 [기본(테마) 스타일](#themestyles)을 참조하십시오. 기본 스타일 내에서는 다음과 같은 우선 순위가 적용됩니다.  
   
     1.  테마 스타일의 활성 트리거.  
   
     2.  테마 스타일의 setter.  
   
-10. **상속.** 몇 가지 종속성 속성은 상위 요소에서 하위 요소로 값을 상속하므로 애플리케이션 전체에서 각 요소에 따로 설정할 필요가 없습니다. 자세한 내용은 [속성 값 상속](property-value-inheritance.md)을 참조하십시오.  
+10. **상속 합니다.** 몇 가지 종속성 속성은 상위 요소에서 하위 요소로 값을 상속하므로 애플리케이션 전체에서 각 요소에 따로 설정할 필요가 없습니다. 자세한 내용은 [속성 값 상속](property-value-inheritance.md)을 참조하십시오.  
   
-11. **종속성 속성 메타데이터의 기본값.** 종속성 속성에는 해당 속성의 속성 시스템 등록에 따라 설정된 기본값이 있을 수 있습니다. 또한 종속성 속성을 상속하는 파생 클래스에서는 유형별로 해당 메타데이터를 재정의할 수 있습니다(기본값 포함). 자세한 내용은 [종속성 속성 메타데이터](dependency-property-metadata.md)를 참조하십시오. 기본값보다 먼저 상속을 확인하므로, 상속된 속성의 경우는 상위 요소의 기본값이 하위 요소의 기본값보다 우선적으로 적용됩니다.  따라서 상속 가능한 속성이 어디에서도 설정되어 있지 않으면 하위 요소의 기본값 대신 루트나 상위에 지정된 기본값이 사용됩니다.  
+11. **종속성 속성 메타 데이터에서 기본값입니다.** 종속성 속성에는 해당 속성의 속성 시스템 등록에 따라 설정된 기본값이 있을 수 있습니다. 또한 종속성 속성을 상속하는 파생 클래스에서는 유형별로 해당 메타데이터를 재정의할 수 있습니다(기본값 포함). 자세한 내용은 [종속성 속성 메타데이터](dependency-property-metadata.md)를 참조하십시오. 기본값보다 먼저 상속을 확인하므로, 상속된 속성의 경우는 상위 요소의 기본값이 하위 요소의 기본값보다 우선적으로 적용됩니다.  따라서 상속 가능한 속성이 어디에서도 설정되어 있지 않으면 하위 요소의 기본값 대신 루트나 상위에 지정된 기본값이 사용됩니다.  
   
 <a name="templatedparent"></a>   
 ## <a name="templatedparent"></a>TemplatedParent  
@@ -78,9 +77,9 @@ ms.locfileid: "57367939"
 ## <a name="the-style-property"></a>스타일 속성  
  앞서 설명한 조회 순서 하나를 제외한 모든 가능한 종속성 속성에 적용 됩니다:는 <xref:System.Windows.FrameworkElement.Style%2A> 속성입니다. <xref:System.Windows.FrameworkElement.Style%2A> 속성은 고유한 것 없습니다 스타일을 적용할에 우선 순위 항목 5-8이 적용 되지 않습니다. 또한 애니메이션이 나 강제 변환 <xref:System.Windows.FrameworkElement.Style%2A> 권장 되지 않습니다 (및 애니메이션 <xref:System.Windows.FrameworkElement.Style%2A> 사용자 지정 애니메이션 클래스 필요). 하는 방법은 세 가지가 남습니다이 <xref:System.Windows.FrameworkElement.Style%2A> 속성을 설정할 수 있습니다.  
   
--   **명시적 스타일.** <xref:System.Windows.FrameworkElement.Style%2A> 속성이 직접 설정 됩니다. 대부분의 시나리오에서 스타일은 인라인으로 정의되지 않고 명시적 키를 통해 리소스로 참조됩니다. 이 경우는 스타일 속성 자체가 우선 순위 항목 3인 로컬 값처럼 작동합니다.  
+-   **명시적 스타일입니다.** <xref:System.Windows.FrameworkElement.Style%2A> 속성이 직접 설정 됩니다. 대부분의 시나리오에서 스타일은 인라인으로 정의되지 않고 명시적 키를 통해 리소스로 참조됩니다. 이 경우는 스타일 속성 자체가 우선 순위 항목 3인 로컬 값처럼 작동합니다.  
   
--   **암시적 스타일.** <xref:System.Windows.FrameworkElement.Style%2A> 속성이 직접 설정 되지 않습니다. 그러나는 <xref:System.Windows.FrameworkElement.Style%2A> 리소스 조회 시퀀스 (페이지, 응용 프로그램)의 일부 수준에서 존재 하 고 스타일을 적용 하는 형식과 일치 하는 리소스 키를 사용 하 여 키로 사용 됩니다. 이 경우에 <xref:System.Windows.FrameworkElement.Style%2A> 속성 자체가 항목 5 시퀀스에서 식별 하는 우선 순위에 따라 작동 합니다. 이 조건을 사용 하 여 검색할 수 있습니다 <xref:System.Windows.DependencyPropertyHelper> 에 대해 합니다 <xref:System.Windows.FrameworkElement.Style%2A> 속성을 찾고 <xref:System.Windows.BaseValueSource.ImplicitStyleReference> 결과에 합니다.  
+-   **암시적 스타일입니다.** <xref:System.Windows.FrameworkElement.Style%2A> 속성이 직접 설정 되지 않습니다. 그러나는 <xref:System.Windows.FrameworkElement.Style%2A> 리소스 조회 시퀀스 (페이지, 응용 프로그램)의 일부 수준에서 존재 하 고 스타일을 적용 하는 형식과 일치 하는 리소스 키를 사용 하 여 키로 사용 됩니다. 이 경우에 <xref:System.Windows.FrameworkElement.Style%2A> 속성 자체가 항목 5 시퀀스에서 식별 하는 우선 순위에 따라 작동 합니다. 이 조건을 사용 하 여 검색할 수 있습니다 <xref:System.Windows.DependencyPropertyHelper> 에 대해 합니다 <xref:System.Windows.FrameworkElement.Style%2A> 속성을 찾고 <xref:System.Windows.BaseValueSource.ImplicitStyleReference> 결과에 합니다.  
   
 -   **기본 스타일**, 즉 **테마 스타일.** 합니다 <xref:System.Windows.FrameworkElement.Style%2A> 속성을 직접 설정 되지 않으며 사실에 따라 읽기는 `null` 실행된 시간까지 합니다. 이 경우 스타일은 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 프레젠테이션 엔진에 포함된 런타임 테마 평가에서 옵니다.  
   
@@ -127,6 +126,7 @@ ms.locfileid: "57367939"
  <xref:System.Windows.DependencyObject.ClearValue%2A> 메서드를 손쉽게 요소에 설정 된 종속성 속성에서 로컬로 적용 된 모든 값의 선택을 취소 합니다. 그러나 호출 <xref:System.Windows.DependencyObject.ClearValue%2A> 속성을 등록할 때 메타 데이터에서 설정 된 기본값이 새 유효 값을 인지를 보장 하지 않습니다. 값의 우선 순위에 있는 다른 항목도 모두 여전히 활성 상태입니다. 로컬에서 설정된 값만 우선 순위 시퀀스에서 제거되었습니다. 예를 들어, 호출 하는 경우 <xref:System.Windows.DependencyObject.ClearValue%2A> 속성 여기서도 테마 스타일을 사용 하 여 해당 속성이 설정 되어 다음 메타 데이터 기반 기본값이 아니라 새 값으로 테마 값이 적용 됩니다. 프로세스에서 모든 속성 값 참가자를 사용 하 고 등록 된 메타 데이터 기본값으로 값을 설정 하려는 경우 명확 하 게 쿼리하여 종속성 속성 메타 데이터 및 다음 기본값 로컬로 기본 값을 사용할 수는 얻을 수 있습니다. 속성에 대 한 호출을 설정 <xref:System.Windows.DependencyObject.SetValue%2A>합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Windows.DependencyObject>
 - <xref:System.Windows.DependencyProperty>
 - [종속성 속성 개요](dependency-properties-overview.md)

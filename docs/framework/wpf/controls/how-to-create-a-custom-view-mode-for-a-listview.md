@@ -1,5 +1,5 @@
 ---
-title: '방법: ListView의 사용자 지정 뷰 모드 만들기'
+title: '방법: ListView에 대한 사용자 지정 보기 모드 만들기'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,14 +7,14 @@ dev_langs:
 helpviewer_keywords:
 - ListView controls [WPF], creating custom View mode
 ms.assetid: 71077349-eeb9-4344-ab29-b5df96df3314
-ms.openlocfilehash: 609781e9ac2db9c9beef049886617e541199e5dd
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: de11250a2e7529fba3b262e42b6714262738fa90
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57374767"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59092892"
 ---
-# <a name="how-to-create-a-custom-view-mode-for-a-listview"></a>방법: ListView의 사용자 지정 뷰 모드 만들기
+# <a name="how-to-create-a-custom-view-mode-for-a-listview"></a>방법: ListView에 대한 사용자 지정 보기 모드 만들기
 이 예제에는 사용자 지정을 만드는 방법을 보여 줍니다 <xref:System.Windows.Controls.ListView.View%2A> 에 대 한 모드는 <xref:System.Windows.Controls.ListView> 제어 합니다.  
   
 ## <a name="example"></a>예제  
@@ -43,6 +43,7 @@ ms.locfileid: "57374767"
  전체 샘플을 참조 하세요 [여러 뷰가 포함 된 ListView (C#)](https://github.com/dotnet/samples/tree/master/snippets/csharp/VS_Snippets_Wpf/ListViewCustomView/CSharp) 하거나 [여러 Views(Visual Basic)를 사용 하 여 ListView](https://github.com/dotnet/samples/tree/master/snippets/visualbasic/VS_Snippets_Wpf/ListViewCustomView/visualbasic)합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Windows.Controls.ListView>
 - <xref:System.Windows.Controls.GridView>
 - [방법 항목](listview-how-to-topics.md)

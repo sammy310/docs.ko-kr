@@ -8,12 +8,12 @@ helpviewer_keywords:
 - timelines [WPF]
 - timing events [WPF]
 ms.assetid: 597e3280-0867-4359-a97b-5b2f4149e350
-ms.openlocfilehash: 2ce4794c5f0abfc31ae9d6f813bcfd7a9d375611
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 91e335f4d5adaa5279fb16805604f2e2848eeb8b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57379577"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59167169"
 ---
 # <a name="timing-events-overview"></a>타이밍 이벤트 개요
 이 항목에서는에서 사용할 수 있는 5 가지 타이밍 이벤트를 사용 하는 방법 설명 <xref:System.Windows.Media.Animation.Timeline> 고 <xref:System.Windows.Media.Animation.Clock> 개체입니다.  
@@ -56,7 +56,7 @@ ms.locfileid: "57379577"
   
 |이벤트(event)|트리거하는 대화형 작업|기타 트리거|  
 |-----------|--------------------------------------|--------------------|  
-|**Completed**|건너뛰어서 채우기|클록이 완료됩니다.|  
+|**완료**|건너뛰어서 채우기|클록이 완료됩니다.|  
 |**CurrentGlobalSpeedInvalidated**|일시 중지, 다시 시작, 검색, 속도 비율 설정, 건너뛰어서 채우기, 중지|클록이 거꾸로 진행되거나, 가속되거나, 시작되거나, 중지됩니다.|  
 |**CurrentStateInvalidated**|시작, 건너뛰어서 채우기, 중지|클록이 시작되거나, 중지되거나, 채워집니다.|  
 |**CurrentTimeInvalidated**|시작, 검색, 건너뛰어서 채우기, 중지|클록이 진행됩니다.|  
@@ -77,6 +77,7 @@ ms.locfileid: "57379577"
  등록할 때 합니다 <xref:System.Windows.Media.Animation.Timeline.Completed> 타임 라인에서 이벤트, 예를 들어 실제로 못하도록 시스템에 대 한 등록을 <xref:System.Windows.Media.Animation.Clock.Completed> 타임 라인에 대해 만든 각 클록의 이벤트입니다. 코드에서이 이벤트 전에 등록 해야 합니다는 <xref:System.Windows.Media.Animation.Clock> ;이 타임 라인에 대해 만들어집니다 알림을 받을 수 없습니다이 고, 그렇지 합니다. 자동으로 이런 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]; 되기 전에 이벤트에 대 한 파서를 자동으로 등록 된 <xref:System.Windows.Media.Animation.Clock> 만들어집니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [애니메이션 및 타이밍 시스템 개요](animation-and-timing-system-overview.md)
 - [애니메이션 개요](animation-overview.md)
 - [타이밍 동작 개요](timing-behaviors-overview.md)

@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 4613407e-d0a8-4ef2-9f81-a6acb9fdc7d4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: be87c91b798256f3913779bdbe36f3548066018b
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 29932eb27bcd13876ea6982982e67341edb8e0de
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55253940"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59076291"
 ---
 # <a name="publisherpolicy-element"></a>\<publisherPolicy > 요소
 런타임이 게시자 정책을 적용할지를 지정합니다.  
@@ -86,6 +86,7 @@ ms.locfileid: "55253940"
 ```  
   
 ## <a name="see-also"></a>참고자료
+
 - [런타임 설정 스키마](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
 - [구성 파일 스키마](../../../../../docs/framework/configure-apps/file-schema/index.md)
 - [런타임에서 어셈블리를 찾는 방법](../../../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)

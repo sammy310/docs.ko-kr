@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 619ecf1c-1ca5-4d66-8934-62fe7aad78c6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 78c778cc4bc1172763c2473b472d02dc7b19d545
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c82d32fe5b1e62a19ff5e2920c5943f1303b2d64
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54622873"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59207034"
 ---
 # <a name="serialization-and-metadata"></a>Serialization 및 메타데이터
 앱이 개체를 serialize 및 deserialize하는 경우에는 런타임에 필요한 메타데이터가 제공되도록 런타임 지시문(.rd.xml) 파일에 항목을 추가해야 할 수 있습니다. serializer에는 두 가지 범주가 있으며 각 범주는 런타임 지시문 파일에서 서로 다른 방식으로 처리해야 합니다.  
@@ -65,7 +65,8 @@ ms.locfileid: "54622873"
  이 예제에 사용된 구문에 대한 자세한 내용은 [\<Type> 요소](../../../docs/framework/net-native/type-element-net-native.md)를 참조하세요.  
   
 ## <a name="see-also"></a>참고자료
+
 - [런타임 지시문(rd.xml) 구성 파일 참조](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
 - [런타임 지시문 요소](../../../docs/framework/net-native/runtime-directive-elements.md)
 - [\<형식 > 요소](../../../docs/framework/net-native/type-element-net-native.md)
-- [\<Namespace> 요소](../../../docs/framework/net-native/namespace-element-net-native.md)
+- [\<Namespace > 요소](../../../docs/framework/net-native/namespace-element-net-native.md)

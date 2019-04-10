@@ -1,13 +1,13 @@
 ---
-title: <security>의 <wsHttpBinding>
+title: <security> / <wsHttpBinding>
 ms.date: 03/30/2017
 ms.assetid: 8658b162-2ddf-4162-a869-aa517a42288a
-ms.openlocfilehash: 0de9ade585a2170aa1def9898581aedddc651bd7
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 68d3aa4da793e0338c2b0b704335bafce7cc3e31
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57366090"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59073951"
 ---
 # <a name="security-of-wshttpbinding"></a>\<보안 >의 \<wsHttpBinding >
 보안 기능을 나타내는 합니다 [ \<wsHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md)합니다.  
@@ -70,6 +70,7 @@ ms.locfileid: "57366090"
  WSHttpBinding 클래스는 WS-* 사양을 구현하는 서비스와 상호 운용하도록 디자인되었습니다. 이 바인딩의 전송 보안은 HTTP 또는 SSL(Secure Sockets Layer) over HTTP입니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.ServiceModel.WSHttpSecurity>
 - <xref:System.ServiceModel.WSHttpBinding.Security%2A>
 - <xref:System.ServiceModel.Configuration.WSHttpBindingElement.Security%2A>

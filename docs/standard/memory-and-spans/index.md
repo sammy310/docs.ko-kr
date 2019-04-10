@@ -3,14 +3,19 @@ title: 메모리 및 범위
 ms.date: 10/03/2018
 ms.technology: dotnet-standard
 helpviewer_keywords:
-  - Memory<T>
-  - Span<T>
-  - buffers"
-  - pipeline processing
+- Memory<T>
+- Span<T>
+- buffers"
+- pipeline processing
 author: rpetrusha
 ms.author: ronpet
+ms.openlocfilehash: 1a61f56eca242db65bd555553132450c3f8af7f6
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57680146"
 ---
-
 # <a name="memory--and-span-related-types"></a>메모리 및 범위 관련 형식
 
 .NET Core 2.1부터 .NET에는 임의 메모리의 인접한 강력한 형식의 영역을 나타내는 여러 개의 상호 연결된 형식이 포함되어 있습니다. 여기에는 다음이 포함됩니다.

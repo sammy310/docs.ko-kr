@@ -10,21 +10,20 @@ helpviewer_keywords:
 - data binding [WPF], about data binding
 - conversion for data binding [WPF]
 ms.assetid: c707c95f-7811-401d-956e-2fffd019a211
-ms.openlocfilehash: 9e55714db55168c95f744665165e333d7f2ca730
-ms.sourcegitcommit: d938c39afb9216db377d0f0ecdaa53936a851059
+ms.openlocfilehash: f849cf306f4de0cbaa7623ded4ab7045bb5112a6
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58634559"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59315324"
 ---
 # <a name="data-binding-overview"></a>데이터 바인딩 개요
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 데이터 바인딩은 응용 프로그램이 데이터를 제공하고 상호 작용할 수 있는 간단하고 일관된 방법을 제공합니다. 다양한 데이터 소스에서 [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] 개체 및 [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)]의 형태로 데이터에 요소를 바인딩할 수 있습니다. <xref:System.Windows.Controls.ContentControl>같은 <xref:System.Windows.Controls.Button> 하 고 <xref:System.Windows.Controls.ItemsControl>같은 <xref:System.Windows.Controls.ListBox> 고 <xref:System.Windows.Controls.ListView> 단일 데이터 항목의 유연한 스타일 또는 데이터 항목의 컬렉션을 사용 하도록 설정 하는 기본 제공 기능이 있습니다. 데이터를 기반으로 정렬, 필터 및 그룹 보기를 생성할 수 있습니다.  
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 데이터 바인딩 응용 프로그램 데이터와 상호 작용을 간단 하 고 일관적인 방법을 제공 합니다. 다양한 데이터 소스에서 [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] 개체 및 [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)]의 형태로 데이터에 요소를 바인딩할 수 있습니다. <xref:System.Windows.Controls.ContentControl>같은 <xref:System.Windows.Controls.Button> 하 고 <xref:System.Windows.Controls.ItemsControl>같은 <xref:System.Windows.Controls.ListBox> 고 <xref:System.Windows.Controls.ListView> 단일 데이터 항목의 유연한 스타일 또는 데이터 항목의 컬렉션을 사용 하도록 설정 하는 기본 제공 기능이 있습니다. 데이터를 기반으로 정렬, 필터 및 그룹 보기를 생성할 수 있습니다.  
   
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]의 데이터 바인딩 기능은 기본적으로 데이터 바인딩을 지원하는 광범위한 속성, 데이터의 유연한 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 표현 및 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]와 비즈니스 논리의 분명한 분리와 같은 기존 모델에 비해 여러 가지 이점이 있습니다.  
   
  이 항목에서는 먼저 기본 개념을 설명 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 데이터 바인딩 및 사용에 다음 이동 된 <xref:System.Windows.Data.Binding> 클래스 및 데이터 바인딩의 다른 기능입니다.  
-  
-  
+
 <a name="what_is_data_binding"></a>   
 ## <a name="what-is-data-binding"></a>데이터 바인딩이란?  
  데이터 바인딩은 애플리케이션 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]와 비즈니스 논리를 연결하는 프로세스입니다. 바인딩 설정이 올바르고 데이터가 적절한 알림을 제공하는 경우에는 데이터의 값이 변경될 때 데이터에 바인딩된 요소에 변경 내용이 자동으로 반영됩니다. 또한 요소에서 데이터의 외부 표현이 변경되면 내부 데이터가 자동으로 업데이트되어 변경 내용이 반영될 수 있습니다. 예를 들어, 사용자가 값을 편집 하는 경우는 <xref:System.Windows.Controls.TextBox> 요소를 기본 데이터 값이 해당 변경 내용을 반영 하도록 자동으로 업데이트 됩니다.  
@@ -33,7 +32,7 @@ ms.locfileid: "58634559"
   
  데이터 바인딩의 예는 [Data Binding Demo](https://go.microsoft.com/fwlink/?LinkID=163703)(데이터 바인딩 데모)에서 다음 애플리케이션 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]를 살펴보세요.  
   
- ![데이터 바인딩 샘플 스크린샷](./media/databinding-databindingdemo.png "DataBinding_DataBindingDemo")  
+ ![데이터 바인딩 샘플 스크린 샷](./media/databinding-databindingdemo.png "DataBinding_DataBindingDemo")  
   
  위 그림은 작업 항목 목록을 표시하는 애플리케이션의 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]입니다. 애플리케이션은 데이터 바인딩의 다음 기능을 보여 줍니다.  
   
@@ -69,7 +68,7 @@ ms.locfileid: "58634559"
   
 -   대상 속성은 종속성 속성이어야 합니다. 대부분의 <xref:System.Windows.UIElement> 속성은 종속성 속성 및 읽기 전용으로 제외한 대부분의 종속성 속성을 기본적으로 데이터 바인딩을 지원 합니다. (만 <xref:System.Windows.DependencyObject> 종속성 속성 및 모든 형식을 정의할 수 있습니다 <xref:System.Windows.UIElement>에서 파생 <xref:System.Windows.DependencyObject>.)  
   
--   그림에는 지정되지 않았지만 바인딩 소스 개체는 사용자 지정 [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] 개체로 제한되지 않습니다. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 데이터 바인딩은 [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] 개체 및 [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] 형식의 데이터를 지원합니다. 바인딩 소스 수 몇 가지 예제를 제공 하기를 <xref:System.Windows.UIElement>, 목록 개체는 [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] 연관 된 개체 [!INCLUDE[TLA#tla_adonet](../../../../includes/tlasharptla-adonet-md.md)] 포함 된 XmlNode 데이터 나 웹 서비스에 [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] 데이터. 자세한 내용은 [바인딩 소스 개요](binding-sources-overview.md)를 참조하세요.  
+-   그림에는 지정되지 않았지만 바인딩 소스 개체는 사용자 지정 [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] 개체로 제한되지 않습니다. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 데이터 바인딩 형식으로 데이터를 지 원하는 [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] 개체 및 [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)]합니다. 바인딩 소스 수 몇 가지 예제를 제공 하기를 <xref:System.Windows.UIElement>, 목록 개체는 [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] 연관 된 개체 [!INCLUDE[TLA#tla_adonet](../../../../includes/tlasharptla-adonet-md.md)] 포함 된 XmlNode 데이터 나 웹 서비스에 [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] 데이터. 자세한 내용은 [바인딩 소스 개요](binding-sources-overview.md)를 참조하세요.  
   
  다른 [!INCLUDE[TLA#tla_sdk](../../../../includes/tlasharptla-sdk-md.md)] 항목을 읽을 때 바인딩을 설정하고 있다면 바인딩 소스*에* 바인딩 대상을 바인딩하고 있다는 것을 기억하세요. 예를 들어, 일부 기본 표시 하는 경우 [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] 에서 데이터를 <xref:System.Windows.Controls.ListBox> 바인딩하는 데이터 바인딩을 사용 하 여, 프로그램 <xref:System.Windows.Controls.ListBox> 에 [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] 데이터.  
   
@@ -177,7 +176,7 @@ ms.locfileid: "58634559"
   
 -   [바인딩된 대상 속성에서 바인딩 개체 가져오기](how-to-get-the-binding-object-from-a-bound-target-property.md)  
   
--   [TextBox 텍스트의 소스를 업데이트하는 시점 제어](how-to-control-when-the-textbox-text-updates-the-source.md)  
+-   [TextBox 텍스트가 소스를 업데이트하는 시점 제어](how-to-control-when-the-textbox-text-updates-the-source.md)  
   
 <a name="data_conversion"></a>   
 ## <a name="data-conversion"></a>데이터 변환  
@@ -232,8 +231,7 @@ ms.locfileid: "58634559"
 <a name="collection_views"></a>   
 ### <a name="collection-views"></a>컬렉션 뷰  
  한 번에 <xref:System.Windows.Controls.ItemsControl> 에 바인딩된 데이터 컬렉션을 정렬, 필터 또는 데이터를 그룹화 하는 것이 좋습니다. 이 위해 구현 하는 클래스인 컬렉션 뷰를 사용할는 <xref:System.ComponentModel.ICollectionView> 인터페이스입니다.  
-  
-  
+
 #### <a name="what-are-collection-views"></a>컬렉션 뷰란?  
  컬렉션 뷰는 기본 소스 컬렉션 자체를 변경할 필요 없이 정렬, 필터 및 그룹화 쿼리에 따라 소스 컬렉션을 탐색하고 표시할 수 있는 바인딩 소스 컬렉션의 최상위에 있는 레이어입니다. 컬렉션 뷰에서는 컬렉션의 현재 항목에 대한 포인터도 유지 관리합니다. 소스 컬렉션에 구현 하는 경우는 <xref:System.Collections.Specialized.INotifyCollectionChanged> 인터페이스를 변경 된 내용이 <xref:System.Collections.Specialized.INotifyCollectionChanged.CollectionChanged> 이벤트 보기에 전파 됩니다.  
   
@@ -406,17 +404,17 @@ ms.locfileid: "58634559"
   
  *유효성 검사* 프로세스에 대한 설명은 다음과 같습니다. 이 프로세스 중에 유효성 검사 오류나 기타 오류가 발생하면 프로세스가 중단됩니다.  
   
-1.  바인딩 엔진은 모든 사용자 지정 되어 있는지 확인 <xref:System.Windows.Controls.ValidationRule> 개체는 정의 된 <xref:System.Windows.Controls.ValidationRule.ValidationStep%2A> 로 설정 된 <xref:System.Windows.Controls.ValidationStep.RawProposedValue> 에 대 한 <xref:System.Windows.Data.Binding>를 호출 하는 경우에 <xref:System.Windows.Controls.ValidationRule.Validate%2A> 각 메서드 <xref:System.Windows.Controls.ValidationRule> 그 중 하나는 오류에 실행 될 때까지 되거나 모두 통과 합니다.  
+1. 바인딩 엔진은 모든 사용자 지정 되어 있는지 확인 <xref:System.Windows.Controls.ValidationRule> 개체는 정의 된 <xref:System.Windows.Controls.ValidationRule.ValidationStep%2A> 로 설정 된 <xref:System.Windows.Controls.ValidationStep.RawProposedValue> 에 대 한 <xref:System.Windows.Data.Binding>를 호출 하는 경우에 <xref:System.Windows.Controls.ValidationRule.Validate%2A> 각 메서드 <xref:System.Windows.Controls.ValidationRule> 그 중 하나는 오류에 실행 될 때까지 되거나 모두 통과 합니다.  
   
-2.  그런 다음 바인딩 엔진은 변환기를 호출합니다(있는 경우).  
+2. 그런 다음 바인딩 엔진은 변환기를 호출합니다(있는 경우).  
   
-3.  바인딩 엔진에 모든 사용자 지정 되어 있는지 확인 변환기가 성공 하면 <xref:System.Windows.Controls.ValidationRule> 개체는 정의 된 <xref:System.Windows.Controls.ValidationRule.ValidationStep%2A> 로 설정 된 <xref:System.Windows.Controls.ValidationStep.ConvertedProposedValue> 에 대 한 <xref:System.Windows.Data.Binding>를 호출 하는 경우에 <xref:System.Windows.Controls.ValidationRule.Validate%2A> 각 메서드 <xref:System.Windows.Controls.ValidationRule> 있는 <xref:System.Windows.Controls.ValidationRule.ValidationStep%2A> 로 <xref:System.Windows.Controls.ValidationStep.ConvertedProposedValue> 모두 통과 될 때까지 또는 그 중 하나는 오류에 실행 될 때까지 합니다.  
+3. 바인딩 엔진에 모든 사용자 지정 되어 있는지 확인 변환기가 성공 하면 <xref:System.Windows.Controls.ValidationRule> 개체는 정의 된 <xref:System.Windows.Controls.ValidationRule.ValidationStep%2A> 로 설정 된 <xref:System.Windows.Controls.ValidationStep.ConvertedProposedValue> 에 대 한 <xref:System.Windows.Data.Binding>를 호출 하는 경우에 <xref:System.Windows.Controls.ValidationRule.Validate%2A> 각 메서드 <xref:System.Windows.Controls.ValidationRule> 있는 <xref:System.Windows.Controls.ValidationRule.ValidationStep%2A> 로 <xref:System.Windows.Controls.ValidationStep.ConvertedProposedValue> 모두 통과 될 때까지 또는 그 중 하나는 오류에 실행 될 때까지 합니다.  
   
-4.  바인딩 엔진은 소스 속성을 설정합니다.  
+4. 바인딩 엔진은 소스 속성을 설정합니다.  
   
-5.  바인딩 엔진은 모든 사용자 지정 되어 있는지 확인 <xref:System.Windows.Controls.ValidationRule> 개체는 정의 된 <xref:System.Windows.Controls.ValidationRule.ValidationStep%2A> 로 설정 된 <xref:System.Windows.Controls.ValidationStep.UpdatedValue> 에 대 한 <xref:System.Windows.Data.Binding>를 호출 하는 경우에 <xref:System.Windows.Controls.ValidationRule.Validate%2A> 각 메서드 <xref:System.Windows.Controls.ValidationRule> 있는 <xref:System.Windows.Controls.ValidationRule.ValidationStep%2A> 로 설정 <xref:System.Windows.Controls.ValidationStep.UpdatedValue> 모두 통과 될 때까지 또는 그 중 하나는 오류에 실행 될 때까지 합니다. 경우는 <xref:System.Windows.Controls.DataErrorValidationRule> 바인딩과 사용 하 여 연결 및 해당 <xref:System.Windows.Controls.ValidationRule.ValidationStep%2A> 기본값으로 설정 됩니다 <xref:System.Windows.Controls.ValidationStep.UpdatedValue>, <xref:System.Windows.Controls.DataErrorValidationRule> 이 시점에서 확인 됩니다. 지점 이기도 때 바인딩이 합니다 <xref:System.Windows.Data.Binding.ValidatesOnDataErrors%2A> 로 설정 `true` 확인 됩니다.  
+5. 바인딩 엔진은 모든 사용자 지정 되어 있는지 확인 <xref:System.Windows.Controls.ValidationRule> 개체는 정의 된 <xref:System.Windows.Controls.ValidationRule.ValidationStep%2A> 로 설정 된 <xref:System.Windows.Controls.ValidationStep.UpdatedValue> 에 대 한 <xref:System.Windows.Data.Binding>를 호출 하는 경우에 <xref:System.Windows.Controls.ValidationRule.Validate%2A> 각 메서드 <xref:System.Windows.Controls.ValidationRule> 있는 <xref:System.Windows.Controls.ValidationRule.ValidationStep%2A> 로 설정 <xref:System.Windows.Controls.ValidationStep.UpdatedValue> 모두 통과 될 때까지 또는 그 중 하나는 오류에 실행 될 때까지 합니다. 경우는 <xref:System.Windows.Controls.DataErrorValidationRule> 바인딩과 사용 하 여 연결 및 해당 <xref:System.Windows.Controls.ValidationRule.ValidationStep%2A> 기본값으로 설정 됩니다 <xref:System.Windows.Controls.ValidationStep.UpdatedValue>, <xref:System.Windows.Controls.DataErrorValidationRule> 이 시점에서 확인 됩니다. 지점 이기도 때 바인딩이 합니다 <xref:System.Windows.Data.Binding.ValidatesOnDataErrors%2A> 로 설정 `true` 확인 됩니다.  
   
-6.  바인딩 엔진은 모든 사용자 지정 되어 있는지 확인 <xref:System.Windows.Controls.ValidationRule> 개체는 정의 된 <xref:System.Windows.Controls.ValidationRule.ValidationStep%2A> 로 설정 된 <xref:System.Windows.Controls.ValidationStep.CommittedValue> 에 대 한 <xref:System.Windows.Data.Binding>를 호출 하는 경우에 <xref:System.Windows.Controls.ValidationRule.Validate%2A> 각 메서드 <xref:System.Windows.Controls.ValidationRule> 있는 <xref:System.Windows.Controls.ValidationRule.ValidationStep%2A> 로 설정 <xref:System.Windows.Controls.ValidationStep.CommittedValue> 모두 통과 될 때까지 또는 그 중 하나는 오류에 실행 될 때까지 합니다.  
+6. 바인딩 엔진은 모든 사용자 지정 되어 있는지 확인 <xref:System.Windows.Controls.ValidationRule> 개체는 정의 된 <xref:System.Windows.Controls.ValidationRule.ValidationStep%2A> 로 설정 된 <xref:System.Windows.Controls.ValidationStep.CommittedValue> 에 대 한 <xref:System.Windows.Data.Binding>를 호출 하는 경우에 <xref:System.Windows.Controls.ValidationRule.Validate%2A> 각 메서드 <xref:System.Windows.Controls.ValidationRule> 있는 <xref:System.Windows.Controls.ValidationRule.ValidationStep%2A> 로 설정 <xref:System.Windows.Controls.ValidationStep.CommittedValue> 모두 통과 될 때까지 또는 그 중 하나는 오류에 실행 될 때까지 합니다.  
   
  경우는 <xref:System.Windows.Controls.ValidationRule> 통과 하지 못하면 바인딩 엔진에서 만드는이 프로세스 전체에서 언제 든를 <xref:System.Windows.Controls.ValidationError> 개체에 추가 합니다를 <xref:System.Windows.Controls.Validation.Errors%2A?displayProperty=nameWithType> 바인딩된 요소의 컬렉션입니다. 엔진은 바인딩 전에 실행 합니다 <xref:System.Windows.Controls.ValidationRule> 제거 된 지정된 된 단계에서 개체 <xref:System.Windows.Controls.ValidationError> 에 추가 된는 <xref:System.Windows.Controls.Validation.Errors%2A?displayProperty=nameWithType> 해당 단계 중 바인딩된 요소의 속성에 연결 합니다. 예를 들어 경우는 <xref:System.Windows.Controls.ValidationRule> 해당 <xref:System.Windows.Controls.ValidationRule.ValidationStep%2A> 로 설정 되어 <xref:System.Windows.Controls.ValidationStep.UpdatedValue> 실패 한 유효성 검사 프로세스가 발생 하면 바인딩 엔진을 제거 하는 다음에 <xref:System.Windows.Controls.ValidationError> 하나를 호출 하기 전에 즉시 <xref:System.Windows.Controls.ValidationRule> 있는 <xref:System.Windows.Controls.ValidationRule.ValidationStep%2A> 로 설정 <xref:System.Windows.Controls.ValidationStep.UpdatedValue>.  
   
@@ -430,10 +428,11 @@ ms.locfileid: "58634559"
  연결된 된 속성을 설정할 수 있습니다 <xref:System.Diagnostics.PresentationTraceSources.TraceLevel%2A?displayProperty=nameWithType> 바인딩 관련 개체는 특정 바인딩 상태에 대 한 정보를 받을 수 있습니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Windows.Controls.DataErrorValidationRule>
 - [WPF 버전 4.5의 새로운 기능](../getting-started/whats-new.md)
 - [LINQ 쿼리 결과에 바인딩](how-to-bind-to-the-results-of-a-linq-query.md)
 - [데이터 바인딩](../advanced/optimizing-performance-data-binding.md)
 - [데이터 바인딩 데모](https://go.microsoft.com/fwlink/?LinkID=163703)
 - [방법 항목](data-binding-how-to-topics.md)
-- [ADO.NET 데이터 소스 바인딩](how-to-bind-to-an-ado-net-data-source.md)
+- [ADO.NET 데이터 소스에 바인딩](how-to-bind-to-an-ado-net-data-source.md)

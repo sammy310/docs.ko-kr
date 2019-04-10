@@ -2,12 +2,12 @@
 title: Null 의미 체계
 ms.date: 03/30/2017
 ms.assetid: a97017ae-d634-4cf3-bbaf-054a528fd683
-ms.openlocfilehash: 272c19d7ee64381baa93cb2eda1cc035c42a025d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: eb1e96ba44c5d64e8366a654c2d06d89c9b46c9a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54689093"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59172759"
 ---
 # <a name="null-semantics"></a>Null 의미 체계
 다음 표에서 다양 한 부분에 대 한 링크를 제공 합니다 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 설명서 위치 `null` (`Nothing` Visual basic에서) 문제에 설명 합니다.  
@@ -20,4 +20,5 @@ ms.locfileid: "54689093"
 |[숫자 시퀀스에서 값의 합계 계산](../../../../../../docs/framework/data/adonet/sql/linq/compute-the-sum-of-values-in-a-numeric-sequence.md)|에 대해 설명 하는 방법을 <xref:System.Linq.Enumerable.Sum%2A> 연산자를 계산 하 고 `null` (`Nothing` Visual basic에서) null만 들어 있는 시퀀스 또는 빈 시퀀스의 0 대신 합니다.|  
   
 ## <a name="see-also"></a>참고자료
+
 - [데이터 형식 및 함수](../../../../../../docs/framework/data/adonet/sql/linq/data-types-and-functions.md)

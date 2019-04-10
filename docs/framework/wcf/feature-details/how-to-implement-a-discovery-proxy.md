@@ -2,15 +2,15 @@
 title: '방법: 검색 프록시 구현'
 ms.date: 03/30/2017
 ms.assetid: 78d70e0a-f6c3-4cfb-a7ca-f66ebddadde0
-ms.openlocfilehash: 12adc7215e929bb56aafe104546eb6e58af52ddb
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b3e0b5cef01998c1e509586ba1fab3924eb7bc0b
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54608916"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59321018"
 ---
 # <a name="how-to-implement-a-discovery-proxy"></a>방법: 검색 프록시 구현
-이 항목에서는 검색 프록시를 구현하는 방법을 설명합니다. Windows Communication Foundation (WCF)에서 검색 기능에 대 한 자세한 내용은 참조 하세요. [WCF 검색 개요](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md)합니다. 검색 프록시는 <xref:System.ServiceModel.Discovery.DiscoveryProxy> 추상 클래스를 확장하는 클래스를 만들어 구현할 수 있습니다. 이 샘플에서는 많은 다른 지원 클래스가 정의되고 사용됩니다. `OnResolveAsyncResult`, `OnFindAsyncResult` 및 `AsyncResult` 이러한 클래스는 <xref:System.IAsyncResult> 인터페이스를 구현합니다. 에 대 한 자세한 내용은 <xref:System.IAsyncResult> 참조 [System.IAsyncResult 인터페이스](xref:System.IAsyncResult)합니다.
+이 항목에서는 검색 프록시를 구현하는 방법을 설명합니다. Windows Communication Foundation (WCF)에서 검색 기능에 대 한 자세한 내용은 참조 하세요. [WCF 검색 개요](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md)합니다. 검색 프록시는 <xref:System.ServiceModel.Discovery.DiscoveryProxy> 추상 클래스를 확장하는 클래스를 만들어 구현할 수 있습니다. 이 샘플에서는 많은 다른 지원 클래스가 정의되고 사용됩니다. `OnResolveAsyncResult`하십시오 `OnFindAsyncResult`, 및 `AsyncResult`합니다. 이러한 클래스는 <xref:System.IAsyncResult> 인터페이스를 구현합니다. 에 대 한 자세한 내용은 <xref:System.IAsyncResult> 참조 [System.IAsyncResult 인터페이스](xref:System.IAsyncResult)합니다.
 
  이 항목에서는 검색 프록시 구현을 크게 다음 세 부분으로 나누어서 설명합니다.
 
@@ -22,11 +22,11 @@ ms.locfileid: "54608916"
 
 ### <a name="to-create-a-new-console-application-project"></a>새 콘솔 응용 프로그램 프로젝트를 만들려면
 
-1.  Start Visual Studio 2012.
+1. Start Visual Studio 2012.
 
-2.  콘솔 응용 프로그램 프로젝트를 새로 만듭니다. 프로젝트 이름을 `DiscoveryProxy`로 지정하고 솔루션 이름을 `DiscoveryProxyExample`로 지정합니다.
+2. 콘솔 응용 프로그램 프로젝트를 새로 만듭니다. 프로젝트 이름을 `DiscoveryProxy`로 지정하고 솔루션 이름을 `DiscoveryProxyExample`로 지정합니다.
 
-3.  프로젝트에 대한 다음 참조를 추가합니다.
+3. 프로젝트에 대한 다음 참조를 추가합니다.
 
     1.  System.ServiceModel.dll
 
@@ -37,9 +37,9 @@ ms.locfileid: "54608916"
 
 ### <a name="to-implement-the-proxydiscoveryservice-class"></a>ProxyDiscoveryService 클래스를 구현하려면
 
-1.  프로젝트에 새 코드 파일을 추가하고 이름을 DiscoveryProxy.cs로 지정합니다.
+1. 프로젝트에 새 코드 파일을 추가하고 이름을 DiscoveryProxy.cs로 지정합니다.
 
-2.  DiscoveryProxy.cs에 다음 `using` 문을 추가합니다.
+2. DiscoveryProxy.cs에 다음 `using` 문을 추가합니다.
 
     ```
     using System;
@@ -49,7 +49,7 @@ ms.locfileid: "54608916"
     using System.Xml;
     ```
 
-3.  `DiscoveryProxyService`에서 <xref:System.ServiceModel.Discovery.DiscoveryProxy>를 파생시킵니다. 다음 예제와 같이 이 클래스에 `ServiceBehavior` 특성을 적용합니다.
+3. `DiscoveryProxyService`에서 <xref:System.ServiceModel.Discovery.DiscoveryProxy>를 파생시킵니다. 다음 예제와 같이 이 클래스에 `ServiceBehavior` 특성을 적용합니다.
 
     ```
     // Implement DiscoveryProxy by extending the DiscoveryProxy class and overriding the abstract methods
@@ -59,14 +59,14 @@ ms.locfileid: "54608916"
     }
     ```
 
-4.  `DiscoveryProxy` 클래스 내에서 등록된 서비스를 저장할 사전을 정의합니다.
+4. `DiscoveryProxy` 클래스 내에서 등록된 서비스를 저장할 사전을 정의합니다.
 
     ```
     // Repository to store EndpointDiscoveryMetadata.
     Dictionary<EndpointAddress, EndpointDiscoveryMetadata> onlineServices;
     ```
 
-5.  사전을 초기화하는 생성자를 정의합니다.
+5. 사전을 초기화하는 생성자를 정의합니다.
 
     ```
     public DiscoveryProxyService()
@@ -77,7 +77,7 @@ ms.locfileid: "54608916"
 
 ### <a name="to-define-the-methods-used-to-update-the-discovery-proxy-cache"></a>검색 프록시 캐시를 업데이트하는 데 사용되는 메서드를 정의하려면
 
-1.  `AddOnlineservice` 메서드를 구현하여 캐시에 서비스를 추가합니다. 이 메서드는 프록시가 알림 메시지를 받을 때마다 호출됩니다.
+1. `AddOnlineservice` 메서드를 구현하여 캐시에 서비스를 추가합니다. 이 메서드는 프록시가 알림 메시지를 받을 때마다 호출됩니다.
 
     ```
     void AddOnlineService(EndpointDiscoveryMetadata endpointDiscoveryMetadata)
@@ -91,7 +91,7 @@ ms.locfileid: "54608916"
             }
     ```
 
-2.  캐시에서 서비스를 제거하는 데 사용되는 `RemoveOnlineService` 메서드를 구현합니다.
+2. 캐시에서 서비스를 제거하는 데 사용되는 `RemoveOnlineService` 메서드를 구현합니다.
 
     ```
     void RemoveOnlineService(EndpointDiscoveryMetadata endpointDiscoveryMetadata)
@@ -108,7 +108,7 @@ ms.locfileid: "54608916"
             }
     ```
 
-3.  서비스와 사전의 서비스를 일치시킬 `MatchFromOnlineService` 메서드를 구현합니다.
+3. 서비스와 사전의 서비스를 일치시킬 `MatchFromOnlineService` 메서드를 구현합니다.
 
     ```
     void MatchFromOnlineService(FindRequestContext findRequestContext)
@@ -144,7 +144,7 @@ ms.locfileid: "54608916"
             }
     ```
 
-4.  검색 프록시가 수행하는 작업을 콘솔에 텍스트로 출력하는 `PrintDiscoveryMetadata` 메서드를 구현합니다.
+4. 검색 프록시가 수행하는 작업을 콘솔에 텍스트로 출력하는 `PrintDiscoveryMetadata` 메서드를 구현합니다.
 
     ```
     void PrintDiscoveryMetadata(EndpointDiscoveryMetadata endpointDiscoveryMetadata, string verb)
@@ -159,7 +159,7 @@ ms.locfileid: "54608916"
             }
     ```
 
-5.  DiscoveryProxyService에 다음 AsyncResult 클래스를 추가합니다. 이러한 클래스는 다양한 비동기 작업 결과를 구별하는 데 사용합니다.
+5. DiscoveryProxyService에 다음 AsyncResult 클래스를 추가합니다. 이러한 클래스는 다양한 비동기 작업 결과를 구별하는 데 사용합니다.
 
     ```
     sealed class OnOnlineAnnouncementAsyncResult : AsyncResult
@@ -225,7 +225,7 @@ ms.locfileid: "54608916"
 
 ### <a name="to-define-the-methods-that-implement-the-discovery-proxy-functionality"></a>검색 프록시 기능을 구현하는 메서드를 정의하려면
 
-1.  <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnBeginOnlineAnnouncement%2A?displayProperty=nameWithType> 메서드를 재정의합니다. 이 메서드는 검색 프록시가 온라인 알림 메시지를 받을 때 호출됩니다.
+1. <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnBeginOnlineAnnouncement%2A?displayProperty=nameWithType> 메서드를 재정의합니다. 이 메서드는 검색 프록시가 온라인 알림 메시지를 받을 때 호출됩니다.
 
     ```
     // OnBeginOnlineAnnouncement method is called when a Hello message is received by the Proxy
@@ -236,7 +236,7 @@ ms.locfileid: "54608916"
             }
     ```
 
-2.  <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnEndOnlineAnnouncement%2A?displayProperty=nameWithType> 메서드를 재정의합니다. 이 메서드는 검색 프록시가 알림 메시지 처리를 완료할 때 호출됩니다.
+2. <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnEndOnlineAnnouncement%2A?displayProperty=nameWithType> 메서드를 재정의합니다. 이 메서드는 검색 프록시가 알림 메시지 처리를 완료할 때 호출됩니다.
 
     ```
     protected override void OnEndOnlineAnnouncement(IAsyncResult result)
@@ -245,7 +245,7 @@ ms.locfileid: "54608916"
             }
     ```
 
-3.  <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnBeginOfflineAnnouncement%2A?displayProperty=nameWithType> 메서드를 재정의합니다. 이 메서드는 검색 프록시가 오프라인 알림 메시지를 받을 때 호출됩니다.
+3. <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnBeginOfflineAnnouncement%2A?displayProperty=nameWithType> 메서드를 재정의합니다. 이 메서드는 검색 프록시가 오프라인 알림 메시지를 받을 때 호출됩니다.
 
     ```
     // OnBeginOfflineAnnouncement method is called when a Bye message is received by the Proxy
@@ -256,7 +256,7 @@ ms.locfileid: "54608916"
             }
     ```
 
-4.  <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnEndOfflineAnnouncement%2A?displayProperty=nameWithType> 메서드를 재정의합니다. 이 메서드는 검색 프록시가 오프라인 알림 메시지 처리를 완료할 때 호출됩니다.
+4. <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnEndOfflineAnnouncement%2A?displayProperty=nameWithType> 메서드를 재정의합니다. 이 메서드는 검색 프록시가 오프라인 알림 메시지 처리를 완료할 때 호출됩니다.
 
     ```
     protected override void OnEndOfflineAnnouncement(IAsyncResult result)
@@ -265,7 +265,7 @@ ms.locfileid: "54608916"
             }
     ```
 
-5.  <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnBeginFind%2A?displayProperty=nameWithType> 메서드를 재정의합니다. 이 메서드는 검색 프록시가 찾기 요청을 받을 때 호출됩니다.
+5. <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnBeginFind%2A?displayProperty=nameWithType> 메서드를 재정의합니다. 이 메서드는 검색 프록시가 찾기 요청을 받을 때 호출됩니다.
 
     ```
     // OnBeginFind method is called when a Probe request message is received by the Proxy
@@ -284,7 +284,7 @@ ms.locfileid: "54608916"
     }
     ```
 
-6.  <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnEndFind%2A?displayProperty=nameWithType> 메서드를 재정의합니다. 이 메서드는 검색 프록시가 찾기 요청 처리를 완료할 때 호출됩니다.
+6. <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnEndFind%2A?displayProperty=nameWithType> 메서드를 재정의합니다. 이 메서드는 검색 프록시가 찾기 요청 처리를 완료할 때 호출됩니다.
 
     ```
     protected override void OnEndFind(IAsyncResult result)
@@ -293,7 +293,7 @@ ms.locfileid: "54608916"
             }
     ```
 
-7.  <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnBeginResolve%2A?displayProperty=nameWithType> 메서드를 재정의합니다. 이 메서드는 검색 프록시가 확인 메시지를 받을 때 호출됩니다.
+7. <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnBeginResolve%2A?displayProperty=nameWithType> 메서드를 재정의합니다. 이 메서드는 검색 프록시가 확인 메시지를 받을 때 호출됩니다.
 
     ```
     // OnBeginFind method is called when a Resolve request message is received by the Proxy
@@ -310,7 +310,7 @@ ms.locfileid: "54608916"
     }
     ```
 
-8.  <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnEndResolve%2A?displayProperty=nameWithType> 메서드를 재정의합니다. 이 메서드는 검색 프록시가 확인 메시지 처리를 완료할 때 호출됩니다.
+8. <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnEndResolve%2A?displayProperty=nameWithType> 메서드를 재정의합니다. 이 메서드는 검색 프록시가 확인 메시지 처리를 완료할 때 호출됩니다.
 
     ```
     protected override EndpointDiscoveryMetadata OnEndResolve(IAsyncResult result)
@@ -323,18 +323,18 @@ ms.locfileid: "54608916"
 
 ### <a name="to-implement-the-asyncresult-class"></a>AsyncResult 클래스를 구현하려면
 
-1.  다양한 비동기 결과 클래스를 파생시키는 데 사용되는 추상 기본 클래스 AsyncResult를 정의합니다.
+1. 다양한 비동기 결과 클래스를 파생시키는 데 사용되는 추상 기본 클래스 AsyncResult를 정의합니다.
 
-2.  AsyncResult.cs라는 새 코드 파일을 만듭니다.
+2. AsyncResult.cs라는 새 코드 파일을 만듭니다.
 
-3.  AsyncResult.cs에 다음 `using` 문을 추가합니다.
+3. AsyncResult.cs에 다음 `using` 문을 추가합니다.
 
     ```
     using System;
     using System.Threading;
     ```
 
-4.  다음 AsyncResult 클래스를 추가합니다.
+4. 다음 AsyncResult 클래스를 추가합니다.
 
     ```
     abstract class AsyncResult : IAsyncResult
@@ -487,9 +487,9 @@ ms.locfileid: "54608916"
 
 ### <a name="to-host-the-discoveryproxy"></a>DiscoveryProxy를 호스팅하려면
 
-1.  DiscoveryProxyExample 프로젝트에서 Program.cs 파일을 엽니다.
+1. DiscoveryProxyExample 프로젝트에서 Program.cs 파일을 엽니다.
 
-2.  다음 `using` 문을 추가합니다.
+2. 다음 `using` 문을 추가합니다.
 
     ```
     using System;
@@ -497,7 +497,7 @@ ms.locfileid: "54608916"
     using System.ServiceModel.Discovery;
     ```
 
-3.  `Main()` 메서드 안에서 다음 코드를 추가합니다. 그러면 `DiscoveryProxy` 클래스의 인스턴스가 만들어집니다.
+3. `Main()` 메서드 안에서 다음 코드를 추가합니다. 그러면 `DiscoveryProxy` 클래스의 인스턴스가 만들어집니다.
 
     ```
     Uri probeEndpointAddress = new Uri("net.tcp://localhost:8001/Probe");
@@ -507,7 +507,7 @@ ms.locfileid: "54608916"
                 ServiceHost proxyServiceHost = new ServiceHost(new DiscoveryProxyService());
     ```
 
-4.  다음 코드를 추가하여 검색 엔드포인트 및 알림 엔드포인트를 추가합니다.
+4. 다음 코드를 추가하여 검색 엔드포인트 및 알림 엔드포인트를 추가합니다.
 
     ```
     try
@@ -979,7 +979,7 @@ namespace Microsoft.Samples.Discovery
 
 ## <a name="see-also"></a>참고자료
 
-- [WCF 검색 개요](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md)
-- [방법: 검색 프록시에 등록할 검색 가능한 서비스를 구현 합니다.](../../../../docs/framework/wcf/feature-details/discoverable-service-that-registers-with-the-discovery-proxy.md)
-- [방법: 검색 프록시를 사용 하 여 서비스를 검색 하는 클라이언트 응용 프로그램 구현](../../../../docs/framework/wcf/feature-details/client-app-discovery-proxy-to-find-a-service.md)
+- [WCF Discovery 개요](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md)
+- [방법: 검색 프록시에 등록할 검색 가능한 서비스 구현](../../../../docs/framework/wcf/feature-details/discoverable-service-that-registers-with-the-discovery-proxy.md)
+- [방법: 검색 프록시를 사용하여 서비스를 찾는 클라이언트 애플리케이션 구현](../../../../docs/framework/wcf/feature-details/client-app-discovery-proxy-to-find-a-service.md)
 - [방법: 검색 프록시 테스트](../../../../docs/framework/wcf/feature-details/how-to-test-the-discovery-proxy.md)

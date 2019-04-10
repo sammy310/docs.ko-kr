@@ -8,12 +8,12 @@ helpviewer_keywords:
 - open figures [Windows Forms], filling
 - figures [Windows Forms], filling
 ms.assetid: 5a36b0e4-f1f4-46c0-a85a-22ae98491950
-ms.openlocfilehash: c7d193fdad554048ecd0f2cca5a83cfccbc2a403
-ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
+ms.openlocfilehash: addcf959e429974b9306353abb743bb2bb3114e4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58654083"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59174566"
 ---
 # <a name="how-to-fill-open-figures"></a>방법: 열린 그림 채우기
 전달 하 여 경로 채울 수는 <xref:System.Drawing.Drawing2D.GraphicsPath> 개체는 <xref:System.Drawing.Graphics.FillPath%2A> 메서드. <xref:System.Drawing.Graphics.FillPath%2A> 메서드는 현재 경로 대해 설정 된 채우기 모드 (대체 또는 감기)에 따라 경로 입력 합니다. 경로 모든 열린 그림 그림이 닫혀 있는 것 처럼 경로가 채워집니다. [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 시작 지점으로 해당 끝점에서 직선 그리기 하 여 그림을 닫습니다.  
@@ -32,5 +32,6 @@ ms.locfileid: "58654083"
  앞의 예제는 Windows forms에서 사용하도록 설계되었으며 <xref:System.Windows.Forms.Control.Paint> 이벤트 처리기의 매개 변수인 <xref:System.Windows.Forms.PaintEventArgs> `e`가 필요합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Drawing.Drawing2D.GraphicsPath>
 - [GDI+의 그래픽 경로](graphics-paths-in-gdi.md)

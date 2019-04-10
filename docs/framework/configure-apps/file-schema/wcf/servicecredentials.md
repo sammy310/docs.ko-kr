@@ -2,12 +2,12 @@
 title: <serviceCredentials>
 ms.date: 03/30/2017
 ms.assetid: 96db336c-4f7a-4193-81a5-910b8ffd804f
-ms.openlocfilehash: 54ac4f0aa31a4311976449d545880d825c06337d
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: d9f8fdf272962916cd08aede484e9bbde55b96a3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55256474"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59227082"
 ---
 # <a name="servicecredentials"></a>\<serviceCredentials>
 서비스를 인증하는 데 사용되는 자격 증명 및 클라이언트 자격 증명 유효성 검사 관련 설정을 지정합니다.  
@@ -67,6 +67,7 @@ ms.locfileid: "55256474"
 |[\<behavior>](../../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)|동작 요소를 지정합니다.|  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.ServiceModel.Configuration.ServiceCredentialsElement>
 - <xref:System.ServiceModel.Description.ServiceCredentials>
 - [보안 동작](../../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)

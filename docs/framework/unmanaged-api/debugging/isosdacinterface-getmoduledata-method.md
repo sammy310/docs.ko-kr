@@ -15,12 +15,12 @@ topic_type:
 - apiref
 author: hoyosjs
 ms.author: juhoyosa
-ms.openlocfilehash: ed151f998ed7d28ba7ae170839ce2fa3a1ee6135
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 128af261c429228c97d952f1f8d382f46306f711
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57490452"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59229318"
 ---
 # <a name="isosdacinterfacegetmoduledata-method"></a>ISOSDacInterface::GetModuleData 메서드
 
@@ -44,7 +44,6 @@ HRESULT GetModuleData(
 
 `data`\
 [out] 합니다 [DacpModuleData 구조](dacpmoduledata-structure.md) 로드 된 모듈의 정보를 보관 합니다.
-
 
 ## <a name="remarks"></a>설명
 

@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: cbd49732-3615-49a5-a900-f96947cdc3e6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: db9876727244d528ec3b7f1c3c9875bb5ca645b5
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 40fef845a55412e5731ec08bd1e038d6b311694c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55257774"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59111659"
 ---
 # <a name="genericparameter-element-net-native"></a>\<GenericParameter > 요소 (.NET 네이티브)
 제네릭 형식 또는 메서드의 매개 변수 형식에 정책을 적용합니다.  
@@ -68,7 +68,7 @@ ms.locfileid: "55257774"
   
 |요소|설명|  
 |-------------|-----------------|  
-|[\<Method>](../../../docs/framework/net-native/method-element-net-native.md)|생성자 또는 메서드에 런타임 리플렉션 정책을 적용합니다.|  
+|[\<메서드 >](../../../docs/framework/net-native/method-element-net-native.md)|생성자 또는 메서드에 런타임 리플렉션 정책을 적용합니다.|  
 |[\<Type>](../../../docs/framework/net-native/type-element-net-native.md)|클래스 또는 구조체와 같은 특정 형식에 런타임 리플렉션 정책을 적용합니다.|  
   
 ## <a name="remarks"></a>설명  
@@ -87,7 +87,8 @@ ms.locfileid: "55257774"
 ```  
   
 ## <a name="see-also"></a>참고자료
-- [\<Method> 요소](../../../docs/framework/net-native/method-element-net-native.md)
+
+- [\<메서드 > 요소](../../../docs/framework/net-native/method-element-net-native.md)
 - [\<형식 > 요소](../../../docs/framework/net-native/type-element-net-native.md)
 - [런타임 지시문(rd.xml) 구성 파일 참조](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
 - [런타임 지시문 정책 설정](../../../docs/framework/net-native/runtime-directive-policy-settings.md)

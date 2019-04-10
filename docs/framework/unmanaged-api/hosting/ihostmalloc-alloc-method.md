@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3104fd032f1a5de04f85a895c77cdf777df0a367
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 32499e74e8af9a865347bd800d3db4c303a7344c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57489945"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59126388"
 ---
 # <a name="ihostmallocalloc-method"></a>IHostMAlloc::Alloc 메서드
 호스트 힙에서 지정된 된 양의 메모리를 할당 하도록 요청 합니다.  
@@ -72,5 +72,6 @@ HRESULT Alloc (
  **.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>참고자료
+
 - [IHostMemoryManager 인터페이스](../../../../docs/framework/unmanaged-api/hosting/ihostmemorymanager-interface.md)
 - [IHostMalloc 인터페이스](../../../../docs/framework/unmanaged-api/hosting/ihostmalloc-interface.md)

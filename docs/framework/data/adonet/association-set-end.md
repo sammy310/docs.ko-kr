@@ -2,12 +2,12 @@
 title: 연결 집합 End
 ms.date: 03/30/2017
 ms.assetid: fe4bf1d3-047a-4a37-98c5-a66e70811346
-ms.openlocfilehash: 61dc00e6c349a25767f6221bed56ef8b65f823d9
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: 7b6c646592c1878ea30396d98b4976dc8fa0be12
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58412008"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59134630"
 ---
 # <a name="association-set-end"></a>연결 집합 End
 *연결 집합 end* 하 게 식별 하는 [엔터티 형식](../../../../docs/framework/data/adonet/entity-type.md) 하며 [엔터티 집합](../../../../docs/framework/data/adonet/entity-set.md) 끝에 [연결 집합](../../../../docs/framework/data/adonet/association-set.md). 연결 집합 End는 연결 집합의 일부로 정의되고 연결 집합에는 정확히 두 개의 연결 집합 End가 있어야 합니다.  
@@ -32,5 +32,6 @@ ms.locfileid: "58412008"
  [!code-xml[EDM_Example_Model#EntityContainerExample](../../../../samples/snippets/xml/VS_Snippets_Data/edm_example_model/xml/books.edmx#entitycontainerexample)]  
   
 ## <a name="see-also"></a>참고자료
+
 - [엔터티 데이터 모델의 주요 개념](../../../../docs/framework/data/adonet/entity-data-model-key-concepts.md)
 - [엔터티 데이터 모델](../../../../docs/framework/data/adonet/entity-data-model.md)

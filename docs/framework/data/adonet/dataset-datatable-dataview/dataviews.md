@@ -2,12 +2,12 @@
 title: 데이터 보기
 ms.date: 03/30/2017
 ms.assetid: 0fe5dfa2-c1cd-435f-90b6-b4dd2e3ef34b
-ms.openlocfilehash: bcf370e30c50bf5d992279c7abe02bfc6262ea40
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.openlocfilehash: aff4d6f648fa091130bfd9951f2a5001947b09a1
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55825877"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59215913"
 ---
 # <a name="dataviews"></a>데이터 보기
 <xref:System.Data.DataView>는 데이터 바인딩 응용 프로그램에서 자주 사용되는 기능으로, 이 기능을 사용하면 <xref:System.Data.DataTable>에 저장되어 있는 데이터에 대해 서로 다른 뷰를 만들 수 있습니다. 사용 하는 **DataView**, 서로 다른 정렬 순서를 사용 하 여 테이블의 데이터를 노출 시킬 수 있으며 행 상태 또는 필터 식을 기반으로 데이터를 필터링 할 수 있습니다.  
@@ -47,17 +47,18 @@ ms.locfileid: "55825877"
  [ASP.NET 웹 응용 프로그램](https://docs.microsoft.com/previous-versions/655cec97(v=vs.100))  
  ASP.NET 응용 프로그램, Web Forms 및 Web Services를 만들기 위한 개요 및 자세한 단계별 절차를 제공합니다.  
   
- [Windows 응용 프로그램](https://docs.microsoft.com/previous-versions/ms184421(v=vs.100))  
+ [Windows 애플리케이션](https://docs.microsoft.com/previous-versions/ms184421(v=vs.100))  
  Windows Forms 및 콘솔 응용 프로그램 작업에 대한 자세한 내용을 제공합니다.  
   
- [DataSet, DataTable 및 DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  
+ [DataSets, DataTables 및 DataViews](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  
  에 대해 설명 합니다 **데이터 집합** 개체 및 사용 하 여 응용 프로그램 데이터를 관리 하는 방법을 합니다.  
   
- [DataTable](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatables.md)  
+ [DataTables](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatables.md)  
  에 대해 설명 합니다 **DataTable** 개체와 사용 하 여 자체적으로 또는의 일부로 응용 프로그램 데이터를 관리 하는 방법을 **데이터 집합**합니다.  
   
  [ADO.NET](../../../../../docs/framework/data/adonet/index.md)  
  ADO.NET 아키텍처 및 구성 요소에 대해 설명하고, ADO.NET을 사용하여 기존 데이터 소스에 액세스하고 응용 프로그램 데이터를 관리하는 방법을 설명합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [ADO.NET 관리되는 공급자 및 데이터 집합 개발자 센터](https://go.microsoft.com/fwlink/?LinkId=217917)

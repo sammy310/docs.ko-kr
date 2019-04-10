@@ -6,12 +6,12 @@ helpviewer_keywords:
 - security glossary [WCF]
 - security terms [WCF]
 ms.assetid: 68dde024-8e51-40ba-804f-ec52d85e9ca9
-ms.openlocfilehash: 53b6abc41dda0ebbbe28afc5b631efcfc0a60668
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f0d5ecccdd48da2799e3299406f219a10f47e84d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54620388"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59158745"
 ---
 # <a name="wcf-security-terminology"></a>WCF 보안 용어
 보안을 설명할 때 사용되는 일부 용어는 생소할 수 있습니다. 이 항목에서는 일부 보안 용어에 대해 간략하게 설명하며, 모든 항목을 포괄적으로 설명하지는 않습니다.  
@@ -98,7 +98,7 @@ ms.locfileid: "54620388"
  개인 키  
  공개 키 알고리즘에 사용되는 키 쌍의 암호 부분입니다. 개인 키는 일반적으로 대칭 세션 키를 암호화하거나, 메시지에 디지털 서명을 하거나, 해당 공개 키로 암호화된 메시지를 해독하는 데 사용됩니다. "공개 키"를 참조하십시오.  
   
- process  
+ 프로세스  
  응용 프로그램이 실행되는 보안 컨텍스트입니다. 일반적으로 보안 컨텍스트는 사용자와 연관되므로, 지정된 프로세스에서 실행 중인 모든 응용 프로그램은 소유자의 권한을 사용합니다.  
   
  공개/개인 키 쌍  
@@ -182,6 +182,7 @@ ms.locfileid: "54620388"
  필수 부분을 정의하는 인증서에 대한 국제 승인 표준입니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [기본적인 Windows Communication Foundation 개념](../../../../docs/framework/wcf/fundamental-concepts.md)
 - [보안 개념](../../../../docs/framework/wcf/feature-details/security-concepts.md)
-- [Windows Server appfabric 보안 모델](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+- [Windows Server AppFabric 보안 모델](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

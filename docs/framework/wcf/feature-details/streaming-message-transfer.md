@@ -2,12 +2,12 @@
 title: 스트리밍 메시지 전송
 ms.date: 03/30/2017
 ms.assetid: 72a47a51-e5e7-4b76-b24a-299d51e0ae5a
-ms.openlocfilehash: 5a146b9f0bd2eb74b5ef4b5877e6cb925d386abc
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e58b0ce698df310a5e18bcd24201fb2e27a9c1aa
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54643821"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59136879"
 ---
 # <a name="streaming-message-transfer"></a>스트리밍 메시지 전송
 Windows Communication Foundation (WCF) 전송 메시지를 전송 하기 위한 두 가지 모드를 지원 합니다.  
@@ -47,4 +47,5 @@ Windows Communication Foundation (WCF) 전송 메시지를 전송 하기 위한 
  전송 모드를 버퍼링 전송에서 스트리밍 전송으로 변경하면 TCP 및 명명된 파이프 전송의 기본 채널 셰이프도 함께 변경됩니다. 버퍼링 전송의 기본 채널 셰이프는 <xref:System.ServiceModel.Channels.IDuplexSessionChannel>입니다. 스트리밍 전송의 기본 채널은 <xref:System.ServiceModel.Channels.IRequestChannel> 및 <xref:System.ServiceModel.Channels.IReplyChannel>입니다. 서비스 계약을 통하지 않고 이러한 전송을 직접 사용하는 기존 응용 프로그램에서 전송 모드를 변경하려면 채널 팩터리 및 수신기에 대한 예상 채널 셰이프를 변경해야 합니다.  
   
 ## <a name="see-also"></a>참고자료
-- [방법: 스트리밍을 사용 하도록 설정](../../../../docs/framework/wcf/feature-details/how-to-enable-streaming.md)
+
+- [방법: 스트리밍 사용](../../../../docs/framework/wcf/feature-details/how-to-enable-streaming.md)

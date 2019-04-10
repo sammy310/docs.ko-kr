@@ -8,12 +8,12 @@ helpviewer_keywords:
 - graphics [WPF], how-to topics
 - visual effects [WPF]
 ms.assetid: 959cb1cc-d26c-4bbc-b637-251091987288
-ms.openlocfilehash: 957040cd8202f2fa2bb1838718a49dbe028c02b1
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 3ddcb0b68e2b86393775c159a06f4c38dc7b6971
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57358793"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59230657"
 ---
 # <a name="graphics-how-to-topics"></a>그래픽 방법 항목
 다음 항목에서는의 그래픽 기능을 사용 하는 방법을 설명 합니다 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]합니다.  
@@ -23,10 +23,11 @@ ms.locfileid: "57358793"
  [PointAnimation을 사용하여 개체 위치에 애니메이션 효과 주기](how-to-animate-the-position-of-an-object-by-using-pointanimation.md)  
  [점 및 벡터 변환](how-to-transform-points-and-vectors.md)  
  [투명 효과 프레임을 WPF 애플리케이션으로 확장](extend-glass-frame-into-a-wpf-application.md)  
- [방법: 요소를 캐시 하 여 렌더링 성능 향상](how-to-improve-rendering-performance-by-caching-an-element.md)  
- [방법: 캐시 된 요소를 브러시로 사용](how-to-use-a-cached-element-as-a-brush.md)  
+ [방법: 요소를 캐시하여 렌더링 성능 향상](how-to-improve-rendering-performance-by-caching-an-element.md)  
+ [방법: 캐시된 요소를 브러시로 사용](how-to-use-a-cached-element-as-a-brush.md)  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Windows.Shapes.Shape>
 - <xref:System.Windows.Media.Transform>
 - <xref:System.Windows.Media.Imaging.BitmapImage>

@@ -12,12 +12,12 @@ helpviewer_keywords:
 - declared elements [Visual Basic], referencing
 - declared elements [Visual Basic], about declared elements
 ms.assetid: e39c0752-f19f-4d2e-a453-00df1b5fc7ee
-ms.openlocfilehash: a8a7eda2a636d7f89131d140c82ad4f3c4743211
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 744c7aed50690d5591d1e8248e121cb66ef39108
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58826680"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59296188"
 ---
 # <a name="how-to-hide-a-variable-with-the-same-name-as-your-variable-visual-basic"></a>방법: 변수 (Visual Basic) 이름이 같은 변수 숨기기
 변수를 숨길 수 있습니다 *섀도잉* 즉, 이름이 같은 변수를 사용 하 여 정의 하 여 합니다. 두 가지 방법으로 숨기려는 변수의 섀도잉할 수 있습니다.  
@@ -30,7 +30,7 @@ ms.locfileid: "58826680"
   
 #### <a name="to-hide-a-variable-by-shadowing-it-through-scope"></a>범위를 통해 여 변수를 숨기려면  
   
-1.  숨기려는 변수를 정의 하는 영역을 확인 하 고 변수를 사용 하 여 다시 지정 하는 하위 영역을 결정 합니다.  
+1. 숨기려는 변수를 정의 하는 영역을 확인 하 고 변수를 사용 하 여 다시 지정 하는 하위 영역을 결정 합니다.  
   
     |변수의 지역|다시 정의할 수 있는 허용 되는 하위 영역|  
     |-----------------------|-------------------------------------------|  
@@ -39,9 +39,9 @@ ms.locfileid: "58826680"
   
      예를 들어 해당 프로시저 내에서 프로시저 변수를 재정의할 수 없습니다는 `If`... `End If` 생성 또는 `For` 루프입니다.  
   
-2.  아직 없는 경우 하위 영역을 만듭니다.  
+2. 아직 없는 경우 하위 영역을 만듭니다.  
   
-3.  동일한 하위 지역, 내에서 쓰기를 [Dim 문](../../../../visual-basic/language-reference/statements/dim-statement.md) 숨기는 변수를 선언 합니다.  
+3. 동일한 하위 지역, 내에서 쓰기를 [Dim 문](../../../../visual-basic/language-reference/statements/dim-statement.md) 숨기는 변수를 선언 합니다.  
   
      변수 이름에도 다른 여러 가지 동일한 하위 지역 내에서 코드를 참조 하는 경우 컴파일러가 섀도잉 변수의에 대 한 참조를 확인 합니다.  
   
@@ -73,11 +73,11 @@ ms.locfileid: "58826680"
   
 #### <a name="to-hide-a-variable-by-shadowing-it-through-inheritance"></a>상속을 통해 변수를 숨기려면  
   
-1.  클래스 및 클래스 수준 (프로시저) 외부에서 숨기려는 변수가 선언 해야 합니다. 그렇지 않은 경우 상속을 통해 숨길 수 없습니다.  
+1. 클래스 및 클래스 수준 (프로시저) 외부에서 숨기려는 변수가 선언 해야 합니다. 그렇지 않은 경우 상속을 통해 숨길 수 없습니다.  
   
-2.  아직 없는 경우 변수의 클래스에서 파생 된 클래스를 정의 합니다.  
+2. 아직 없는 경우 변수의 클래스에서 파생 된 클래스를 정의 합니다.  
   
-3.  파생된 클래스 내에서 작성 한 `Dim` 문에 변수를 선언 합니다. 포함 된 [그림자](../../../../visual-basic/language-reference/modifiers/shadows.md) 선언에서 키워드입니다.  
+3. 파생된 클래스 내에서 작성 한 `Dim` 문에 변수를 선언 합니다. 포함 된 [그림자](../../../../visual-basic/language-reference/modifiers/shadows.md) 선언에서 키워드입니다.  
   
      변수 이름에도 다른 여러 가지 파생된 클래스에서 코드를 참조 하는 경우 컴파일러는 변수에 대 한 참조를 확인 합니다.  
   
@@ -105,11 +105,11 @@ ms.locfileid: "58826680"
   
 ## <a name="see-also"></a>참고자료
 
-- [선언된 요소 참조](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)
+- [References to Declared Elements](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)
 - [Visual Basic의 숨김 기능](../../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)
-- [숨기기와 재정의의 차이점](../../../../visual-basic/programming-guide/language-features/declared-elements/differences-between-shadowing-and-overriding.md)
-- [방법: 상속된 된 변수 숨기기](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-hide-an-inherited-variable.md)
-- [방법: 파생된 클래스에 의해 숨겨진 변수에 액세스](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-access-a-variable-hidden-by-a-derived-class.md)
-- [재정의](../../../../visual-basic/language-reference/modifiers/overrides.md)
+- [섀도잉과 재정의 간의 차이점](../../../../visual-basic/programming-guide/language-features/declared-elements/differences-between-shadowing-and-overriding.md)
+- [방법: 상속된 변수 숨기기](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-hide-an-inherited-variable.md)
+- [방법: 파생 클래스에 의해 숨겨진 변수에 액세스](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-access-a-variable-hidden-by-a-derived-class.md)
+- [Overrides](../../../../visual-basic/language-reference/modifiers/overrides.md)
 - [Me, My, MyBase 및 MyClass](../../../../visual-basic/programming-guide/program-structure/me-my-mybase-and-myclass.md)
 - [상속 기본 사항](../../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)

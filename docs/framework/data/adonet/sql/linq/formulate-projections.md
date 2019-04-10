@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 745742df-0eda-479b-83f8-29bd8a80db96
-ms.openlocfilehash: 9b32ee4c7745fda482561311dc116e0e38b49ab7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e1f7a7da1ab2ce0ad7d7908ecd1f896d229b8e1a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54599156"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59223305"
 ---
 # <a name="formulate-projections"></a>프로젝션 작성
 다음 예제에서는 표시 하는 방법을 `select` 문에서 C# 하 고 `Select` Visual Basic의 문 쿼리 프로젝션 구성 하는 기타 기능을 사용 하 여 결합할 수 있습니다.  
@@ -76,4 +76,5 @@ ms.locfileid: "54599156"
  [!code-vb[DLinqQueryExamples#65](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#65)]  
   
 ## <a name="see-also"></a>참고자료
+
 - [쿼리 예제](../../../../../../docs/framework/data/adonet/sql/linq/query-examples.md)

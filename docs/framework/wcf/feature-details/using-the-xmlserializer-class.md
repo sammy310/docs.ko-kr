@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - XmlSerializer [WCF], using
 ms.assetid: c680602d-39d3-44f1-bf22-8e6654ad5069
-ms.openlocfilehash: 084a31ec008d1651bb66f7d59731a21d4ef0ece7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 29ce9b165c3823d7d06008431294f67716ccf8e1
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54732858"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59105445"
 ---
 # <a name="using-the-xmlserializer-class"></a>XmlSerializer 클래스 사용
 Windows Communication Foundation (WCF) 두 가지 다른 serialization 기술을 사용 하 여 클라이언트 및 서비스, 프로세스를 serialization 이라고 간에 전송 되는 XML로 응용 프로그램에서 데이터를 변환할 수 있습니다.  
@@ -129,7 +129,7 @@ Windows Communication Foundation (WCF) 두 가지 다른 serialization 기술을
  레거시 데이터 집합 형식에도 동일한 전역 요소 선언 규칙이 적용됩니다. `XmlRootAttribute`는 사용자 지정 코드를 통해 추가된, 즉 스키마 공급자 메서드를 사용하거나 레거시 데이터 집합 형식의 경우 `XmlSchemaSet`를 통해 `GetSchema`에 추가된 전역 요소 선언을 재정의할 수 없습니다.  
   
 ### <a name="ixmlserializable-element-types"></a>IXmlSerializable 요소 형식  
- `IXmlSerializable` 요소 형식은 `IsAny` 속성이 `true`로 설정되어 있거나 스키마 공급자 메서드가 `null`을 반환하도록 합니다.  
+ `IXmlSerializable` 요소 유형 중 하나를 사용할 합니다 `IsAny` 속성으로 설정 `true` 있거나 스키마 공급자 메서드가 반환 `null`합니다.  
   
  요소 형식의 serialize 및 deserialize는 콘텐츠 형식의 serialize 및 deserialize와 유사합니다. 그러나 다음과 같은 중요한 차이가 있습니다.  
   
@@ -141,7 +141,7 @@ Windows Communication Foundation (WCF) 두 가지 다른 serialization 기술을
   
 -   생성 시 루트 이름과 네임스페이스를 지정하지 않고 최상위 수준에서 요소 형식을 serialize하는 경우 <xref:System.Runtime.Serialization.XmlObjectSerializer.WriteStartObject%2A> 및 <xref:System.Runtime.Serialization.XmlObjectSerializer.WriteEndObject%2A>에서 아무 작업도 수행하지 않으며 <xref:System.Runtime.Serialization.XmlObjectSerializer.WriteObjectContent%2A>는 `WriteXml`을 호출합니다. 이 모드에서 serialize되는 개체는 `null`일 수 없으며 다형적으로 할당할 수 없습니다. 또한 개체 그래프 유지를 활성화할 수 없고 `NetDataContractSerializer`를 사용할 수 없습니다.  
   
--   생성 시 루트 이름과 네임스페이스를 지정하지 않고 최상위 수준에서 요소 형식을 deserialize하는 경우 <xref:System.Runtime.Serialization.XmlObjectSerializer.IsStartObject%2A>가 임의 요소의 시작 부분을 찾으면 `true`를 반환합니다. <xref:System.Runtime.Serialization.XmlObjectSerializer.ReadObject%2A> 매개 변수를 `verifyObjectName`로 설정한 `true`는 실제로 개체를 읽기 전에 `IsStartObject`와 같은 방식으로 동작합니다. 그런 다음 `ReadObject`는 컨트롤을 `ReadXml` 메서드로 전달합니다.  
+-   생성 시 루트 이름과 네임스페이스를 지정하지 않고 최상위 수준에서 요소 형식을 deserialize하는 경우 <xref:System.Runtime.Serialization.XmlObjectSerializer.IsStartObject%2A>가 임의 요소의 시작 부분을 찾으면 `true`를 반환합니다. <xref:System.Runtime.Serialization.XmlObjectSerializer.ReadObject%2A> 사용 하 여 합니다 `verifyObjectName` 매개 변수 설정 `true` 와 동일한 방식으로 동작 `IsStartObject` 실제로 개체를 읽기 전에 합니다. `ReadObject` 그런 다음 컨트롤을 전달 `ReadXml` 메서드.  
   
  요소 형식과 관련해서 내보낸 스키마는 스키마 공급자 메서드가 `XmlElement`에 다른 스키마를 추가할 수 있다는 점을 제외하고 이전 단원에서 설명한 대로 <xref:System.Xml.Schema.XmlSchemaSet> 형식에 대해 콘텐츠 형식과 동일합니다. 요소 형식에 `XmlRootAttribute` 특성을 사용할 수 없으며 이러한 형식에 대해 전역 요소 선언을 내보내지 않습니다.  
   
@@ -206,10 +206,11 @@ Windows Communication Foundation (WCF) 두 가지 다른 serialization 기술을
 >  `<xmlSerializer useLegacySerializerGeneration="true"/>` 스위치는 또는 실행 컴퓨터에서.NET Framework 4.5 이상 버전 에서만 작동 합니다. 위의 `appSettings` 방법은 모든.NET Framework 버전에서 작동 합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.ServiceModel.DataContractFormatAttribute>
 - <xref:System.Runtime.Serialization.DataContractSerializer>
 - <xref:System.Xml.Serialization.XmlSerializer>
 - <xref:System.ServiceModel.MessageHeaderArrayAttribute>
 - [서비스 계약에서 데이터 전송 지정](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md)
 - [데이터 계약 사용](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)
-- [방법: 시작 시간의 WCF 클라이언트 응용 프로그램 개선 XmlSerializer를 사용 하 여](../../../../docs/framework/wcf/feature-details/startup-time-of-wcf-client-applications-using-the-xmlserializer.md)
+- [방법: XmlSerializer를 사용하여 WCF 클라이언트 애플리케이션의 시작 시간 향상](../../../../docs/framework/wcf/feature-details/startup-time-of-wcf-client-applications-using-the-xmlserializer.md)

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 5ad12f94-7459-4a93-a421-4160d1a90715
-ms.openlocfilehash: 7ba9938352b4ec5e2fe86af1173c09917e266ec2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 405a82c625853d242ca68088ffdf81b6bcd7c518
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54693839"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59209764"
 ---
 # <a name="multiple-bulk-copy-operations"></a>여러 개의 대량 복사 작업
 <xref:System.Data.SqlClient.SqlBulkCopy> 클래스의 단일 인스턴스를 사용하여 여러 대량 복사 작업을 수행할 수 있습니다. 작업 매개 변수 (예를 들어 대상 테이블의 이름) 복사본 간에 변경 하는 경우에 대 한 모든 후속 호출 전에 업데이트 해야 하는 **WriteToServer** 메서드를 다음 예제에서 설명한 대로 합니다. 명시적으로 변경하지 않는 한 모든 속성 값은 지정된 인스턴스에 대한 이전의 대량 복사 작업과 동일하게 유지됩니다.  
@@ -27,5 +27,6 @@ ms.locfileid: "54693839"
  [!code-vb[DataWorks SqlBulkCopy.ColumnMappingOrdersDetails#1](../../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SqlBulkCopy.ColumnMappingOrdersDetails/VB/source.vb#1)]  
   
 ## <a name="see-also"></a>참고자료
+
 - [SQL Server에서 대량 복사 작업](../../../../../docs/framework/data/adonet/sql/bulk-copy-operations-in-sql-server.md)
 - [ADO.NET 관리되는 공급자 및 데이터 집합 개발자 센터](https://go.microsoft.com/fwlink/?LinkId=217917)

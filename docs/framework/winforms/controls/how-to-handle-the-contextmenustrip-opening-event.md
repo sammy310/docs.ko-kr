@@ -11,12 +11,12 @@ helpviewer_keywords:
 - event handling [Windows Forms], context menus
 - shortcut menus [Windows Forms], event handling
 ms.assetid: b661b3dd-7815-4cc2-a1aa-a9a391ab3427
-ms.openlocfilehash: 179411da96362fd9ba42e2b97682f335beb894c1
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 3001480959ef90cb31048cbcf70aeff1632979fb
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57715453"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59170719"
 ---
 # <a name="how-to-handle-the-contextmenustrip-opening-event"></a>방법: ContextMenuStrip Opening 이벤트 처리
 동작을 사용자 지정할 수 있습니다 하 <xref:System.Windows.Forms.ContextMenuStrip> 처리 하 여 컨트롤을 <xref:System.Windows.Forms.ToolStripDropDown.Opening> 이벤트입니다.  
@@ -30,6 +30,7 @@ ms.locfileid: "57715453"
  설정 된 <xref:System.ComponentModel.CancelEventArgs.Cancel%2A?displayProperty=nameWithType> 속성을 `true` 메뉴 열리지 않도록 합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Windows.Forms.ContextMenuStrip>
 - <xref:System.ComponentModel.CancelEventArgs.Cancel%2A>
 - <xref:System.Windows.Forms.ToolStripDropDown>

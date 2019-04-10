@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: c08125d6-56cc-4b23-b482-813ff85dc630
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3545938d8f9a59c8f3c6d03e5e67bb5f545a4981
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 2a51b9fb485da605effbad0e81b8baf5e05e382a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55260595"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59087796"
 ---
 # <a name="userandomizedstringhashalgorithm-element"></a>\<UseRandomizedStringHashAlgorithm > 요소
 공용 언어 런타임에서 문자열에 대 한 해시 코드를 계산할지 여부를 결정 한 응용 프로그램 도메인 별로 합니다.  
@@ -96,6 +96,7 @@ String 'This is a string.' in domain 'NewDomain': 75CC8236
 ```  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.StringComparer.GetHashCode%2A?displayProperty=nameWithType>
 - <xref:System.String.GetHashCode%2A?displayProperty=nameWithType>
 - <xref:System.Object.GetHashCode%2A?displayProperty=nameWithType>

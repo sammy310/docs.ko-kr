@@ -8,12 +8,12 @@ helpviewer_keywords:
 - WCF Data Services, customizing
 - WCF Data Services, data binding
 ms.assetid: 40476b89-8941-4771-8d21-2fe430c85a9d
-ms.openlocfilehash: 159326886c69a308891dbd4318aa1ac81eab9448
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e00f46dfd9b2d1446f2c2a1ba1fdd2e5b0405c1b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54621749"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59111011"
 ---
 # <a name="how-to-customize-data-binding-behaviors-wcf-data-services"></a>방법: 데이터 바인딩 (WCF Data Services) 동작을 사용자 지정
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]를 사용하면 바인딩 컬렉션에 개체가 추가 또는 제거되거나 속성 변경이 검색될 때 <xref:System.Data.Services.Client.DataServiceCollection%601>에서 호출하는 사용자 지정 논리를 제공할 수 있습니다. 이 사용자 지정 논리로 참조 하는 메서드를 그대로 제공 됩니다 <xref:System.Func%602> 의 값을 반환 하는 대리자 `false` 때 기본 동작이 수행 되어야 하는 사용자 지정 메서드가 완료 될 때 및 `true` 후속 처리의 경우는 이벤트는 중지 되어야 합니다.  
@@ -33,4 +33,5 @@ ms.locfileid: "54621749"
  [!code-xaml[Astoria Northwind Client#WpfDataBindingCustomXaml](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/customerorderscustom.xaml#wpfdatabindingcustomxaml)]  
   
 ## <a name="see-also"></a>참고자료
+
 - [WCF Data Services 클라이언트 라이브러리](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)

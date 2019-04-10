@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9f213bcb9f87c34d23b53c2016bd841aae7c7194
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 373ff0470e2403f91534df0c0ffe4039dbb0f832
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54540279"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59112634"
 ---
 # <a name="imetadataassemblyimport-interface"></a>IMetaDataAssemblyImport 인터페이스
 어셈블리 매니페스트에 액세스하여 이를 검사하는 메서드를 제공합니다.  
@@ -55,5 +55,6 @@ ms.locfileid: "54540279"
  **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>참고자료
+
 - [메타데이터 인터페이스](../../../../docs/framework/unmanaged-api/metadata/metadata-interfaces.md)
 - [IMetaDataAssemblyEmit 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)

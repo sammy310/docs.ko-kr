@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 878d68dd690a8764ef26f5f180fabd6c22841a25
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 3fe1f93c621fd567471b9a49e4aa75cb90e6e0e7
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57466839"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59161163"
 ---
 # <a name="iclrruntimeinfoloadlibrary-method"></a>ICLRRuntimeInfo::LoadLibrary 메서드
 .NET Framework 라이브러리를 나타내는 공용 언어 런타임 (CLR)에서 로드를 [ICLRRuntimeInfo](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md) 인터페이스입니다.  
@@ -50,7 +50,7 @@ HRESULT LoadLibrary(
 |HRESULT|설명|  
 |-------------|-----------------|  
 |S_OK|메서드가 완료되었습니다.|  
-|E_POINTER|`pwzDllName` 또는 `phndModule`이 null입니다.|  
+|E_POINTER|`pwzDllName` 또는 `phndModule` null입니다.|  
 |E_OUTOFMEMORY|요청을 처리할 수 있는 메모리가 부족 합니다.|  
   
 ## <a name="remarks"></a>설명  
@@ -66,6 +66,7 @@ HRESULT LoadLibrary(
  **.NET Framework 버전:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>참고자료
+
 - [ICLRRuntimeInfo 인터페이스](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md)
 - [호스팅 인터페이스](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
 - [호스팅](../../../../docs/framework/unmanaged-api/hosting/index.md)

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - xml:space attribute [XAML Services]
 - white-space processing [XAML Services]
 ms.assetid: 5e1814f0-5b30-43d5-8c88-dede335a89d7
-ms.openlocfilehash: 20a25b36857a7116f3599e3fbbbe4b438540f782
-ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
+ms.openlocfilehash: d15bab1ad9234959048fa7b7c3fa2bbbeca5fe6e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58037046"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59193319"
 ---
 # <a name="xmlspace-handling-in-xaml"></a>XAML의 xml:space 처리
 `xml:space` 특성은 개체 요소 내에서 중요 한 공백 처리 동작을 선언 하는 XML로 정의 된 특성입니다. 이 동작 요소에 포함 된 모든 콘텐츠 (내부 텍스트)와 관련이 있는 `xml:space` 선언 되 고도 범위가 정해 집니다 자식 요소입니다.  
@@ -41,5 +41,6 @@ ms.locfileid: "58037046"
  설명은 공백을 XAML 처리에 대 한 참조 [공백 XAML 처리](whitespace-processing-in-xaml.md)합니다.  
   
 ## <a name="see-also"></a>참고자료
-- [공백에서 XAML 처리](whitespace-processing-in-xaml.md)
+
+- [XAML의 공백 처리](whitespace-processing-in-xaml.md)
 - [XAML 개요(WPF)](../wpf/advanced/xaml-overview-wpf.md)

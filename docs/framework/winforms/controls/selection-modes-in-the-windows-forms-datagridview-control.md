@@ -5,12 +5,12 @@ helpviewer_keywords:
 - selection [Windows Forms], modes in DataGridView control
 - DataGridView control [Windows Forms], selection mode
 ms.assetid: a3ebfd3d-0525-479d-9d96-d9e017289b36
-ms.openlocfilehash: 931df04bbe6b8448030e26cd2cc2c904865ac0d3
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 79e13e65938252015e43b59a962d40f20963a5df
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57717300"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59097280"
 ---
 # <a name="selection-modes-in-the-windows-forms-datagridview-control"></a>Windows Forms DataGridView 컨트롤의 선택 모드
 응용 프로그램 내에서 사용자 선택에 따라 작업을 수행 하려는 경우에 따라는 <xref:System.Windows.Forms.DataGridView> 제어 합니다. 작업에 따라 사용할 수 있는 선택 항목의 종류를 제한 하는 것이 좋습니다. 예를 들어, 응용 프로그램에서 현재 선택된 된 레코드에 대 한 보고서를 인쇄할 수 있습니다. 구성 하려는 경우에 <xref:System.Windows.Forms.DataGridView> 컨트롤 항상 행 내에서 아무 곳 이나 클릭 하 여 전체 행을 선택한 다음 이므로 한 번에 하나의 행을 선택할 수 있습니다.  
@@ -45,6 +45,7 @@ ms.locfileid: "57717300"
 >  선택된 된 셀의 프로그래밍 방식으로 사용을 보여 주는 예제 코드에서 확인할 수 있습니다는 <xref:System.Windows.Forms.DataGridView> 클래스 개요입니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridView.MultiSelect%2A>
 - <xref:System.Windows.Forms.DataGridView.SelectionMode%2A>

@@ -8,17 +8,16 @@ helpviewer_keywords:
 - geometry classes [WPF]
 - graphics [WPF], geometry classes
 ms.assetid: 9fba8934-98b7-4af6-82f6-f4ef887f963a
-ms.openlocfilehash: e002c07953320ac5e7c0854fe521896c3bca225c
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: f4f109b51ed566d1996b0c59b4ecbe51caa022cc
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57353012"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59180000"
 ---
 # <a name="geometry-overview"></a>Geometry 개요
 이 개요에서는 사용 하는 방법을 설명 합니다 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] <xref:System.Windows.Media.Geometry> 도형을 설명 하는 클래스입니다. 이 항목의 차이점도 비교해 서 설명 <xref:System.Windows.Media.Geometry> 개체 및 <xref:System.Windows.Shapes.Shape> 요소입니다.  
-  
-  
+
 <a name="wcpsdk_graphics_geometry_introduction"></a>   
 ## <a name="what-is-a-geometry"></a>기하 도형이란?  
  합니다 <xref:System.Windows.Media.Geometry> 클래스와 같은에서 파생 되는 클래스 <xref:System.Windows.Media.EllipseGeometry>를 <xref:System.Windows.Media.PathGeometry>, 및 <xref:System.Windows.Media.CombinedGeometry>, 2 차원 도형의 기 하 도형을 설명 하는 데 사용 합니다. 이러한 기하학적 설명은 화면에 그릴 도형 정의 또는 적중 테스트 및 클립 영역을 정의와 같은 다양한 용도로 사용됩니다. 애니메이션 경로를 정의하는 데도 기하 도형을 사용할 수 있습니다.  
@@ -217,11 +216,12 @@ PathGeometry
  참조 된 <xref:System.Windows.Media.Geometry> 메서드의 전체 목록은 클래스입니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Windows.Media.Geometry>
 - <xref:System.Windows.Media.PathGeometry>
 - <xref:System.Windows.Shapes.Path>
 - <xref:System.Windows.Media.GeometryDrawing>
-- [2차원 그래픽 및 이미징](../advanced/optimizing-performance-2d-graphics-and-imaging.md)
+- [2D 그래픽 및 이미징](../advanced/optimizing-performance-2d-graphics-and-imaging.md)
 - [경로 태그 구문](path-markup-syntax.md)
 - [방법 항목](geometries-how-to-topics.md)
 - [애니메이션 개요](animation-overview.md)

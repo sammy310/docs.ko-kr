@@ -8,12 +8,12 @@ helpviewer_keywords:
 - WCF, best practices
 - Windows Communication Foundation, guidelines
 ms.assetid: 5098ba46-6e8d-4e02-b0c5-d737f9fdad84
-ms.openlocfilehash: d07af0df30f46d272b81042b009fca9661bbcbe5
-ms.sourcegitcommit: 0069cb3de8eed4e92b2195d29e5769a76111acdd
+ms.openlocfilehash: 1c16c0936f729636aaa56e6e50c33e18c2b0f788
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/16/2019
-ms.locfileid: "56332418"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59181348"
 ---
 # <a name="guidelines-and-best-practices"></a>지침 및 최선의 구현 방법
 이 섹션에서는 Windows Communication Foundation (WCF) 응용 프로그램을 만들기 위한 지침을 제공 하는 항목을 포함 합니다.  
@@ -31,7 +31,7 @@ ms.locfileid: "56332418"
  [리소스 사용 제어 및 성능 향상](../../../docs/framework/wcf/controlling-resource-consumption-and-improving-performance.md)  
  과도한 리소스 사용을 방지하고 보안을 향상시키는 데 도움을 주도록 디자인된 속성에 대해 설명하고, 이러한 속성 사용에 대한 자세한 정보를 제공합니다.  
   
- [ClickOnce를 사용하여 WCF 애플리케이션 배포](../../../docs/framework/wcf/deploying-wcf-applications-with-clickonce.md)  
+ [ClickOnce를 사용하여 WCF 응용 프로그램 배포](../../../docs/framework/wcf/deploying-wcf-applications-with-clickonce.md)  
  ClickOnce 기능 사용 시 고려할 사항에 대해 설명합니다.  
   
 ## <a name="reference"></a>참조  
@@ -45,6 +45,7 @@ ms.locfileid: "56332418"
  [기본 WCF 프로그래밍](../../../docs/framework/wcf/basic-wcf-programming.md)  
   
 ## <a name="see-also"></a>참고자료
+
 - [Windows Communication Foundation 정의](../../../docs/framework/wcf/whats-wcf.md)
 - [Windows Communication Foundation (WCF) 샘플](./samples/index.md)
 - [개념적 개요](../../../docs/framework/wcf/conceptual-overview.md)

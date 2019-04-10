@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - breaking changes [Visual Basic]
 ms.assetid: 708fb176-35eb-4cbc-a6e7-a04c6e3bdaff
-ms.openlocfilehash: 630715927d2a3d9f124d321021ddb9dbea143182
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 847034503f2797cf16a944478ebf9587a6985e82
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54596750"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58834012"
 ---
 # <a name="visual-basic-breaking-changes-in-visual-studio"></a>Visual Studio의 Visual Basic 주요 변경 내용
 Visual Studio 2017 에 대한 최신 설명서는 [Visual Studio 2017 설명서](https://docs.microsoft.com/visualstudio/)를 참조하세요.
@@ -17,6 +17,7 @@ Visual Studio 2017 에 대한 최신 설명서는 [Visual Studio 2017 설명서]
 Visual Studio 2015의 Visual Basic에서 변경된 사항은 Visual Studio 2013의 Visual Basic에서 생성된 애플리케이션을 컴파일하는 데 영향을 주지 않으며, 그러한 애플리케이션의 런타임 동작을 변경하지도 않습니다.  
   
 ## <a name="see-also"></a>참고 항목
+
 - [배열](../../visual-basic/programming-guide/language-features/arrays/index.md)
 - [LINQ](../../visual-basic/programming-guide/language-features/linq/index.md)
 - [람다 식](../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)

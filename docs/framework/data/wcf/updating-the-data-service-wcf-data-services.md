@@ -8,12 +8,12 @@ helpviewer_keywords:
 - WCF Data Services, changing data
 - WCF Data Services, client library
 ms.assetid: 00d993be-ffed-4dea-baf7-6eea982cdb54
-ms.openlocfilehash: ddc9e3ec1a07e52e366ff5c17d4dd2ce3a3192a0
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5b8fa13bf5db7f3c3df97febe4bb6f9ee4c184a4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54569169"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59231294"
 ---
 # <a name="updating-the-data-service-wcf-data-services"></a>데이터 서비스 업데이트(WCF Data Services)
 사용 하는 경우는 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 클라이언트 라이브러리를 사용 하는 [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] 피드 라이브러리 클라이언트 데이터 서비스 클래스의 인스턴스로 피드의 항목을 변환 합니다. 이러한 데이터 서비스 클래스는 <xref:System.Data.Services.Client.DataServiceContext>가 속해 있는 <xref:System.Data.Services.Client.DataServiceQuery%601>를 사용하여 추적됩니다. 클라이언트는 <xref:System.Data.Services.Client.DataServiceContext>의 메서드를 사용하여 보고하는 엔터티의 변경 내용을 추적합니다. 클라이언트는 이러한 메서드를 사용하여 추가된 엔터티와 삭제된 엔터티를 추적하고 속성 값 또는 엔터티 인스턴스 간의 관계에 대한 변경 내용도 추적할 수 있습니다. 이렇게 추적된 변경 내용은 <xref:System.Data.Services.Client.DataServiceContext.SaveChanges%2A> 메서드를 호출할 때 REST 기반 작업으로 데이터 서비스에 전송됩니다.  
@@ -73,7 +73,7 @@ ms.locfileid: "54569169"
 |------------|-----------------|  
 |<xref:System.Data.Services.Client.DataServiceContext.AddRelatedObject%2A>|관련된 두 엔터티 개체 간에 새 링크를 만듭니다. 이 메서드를 호출하는 것은 <xref:System.Data.Services.Client.DataServiceContext.AddObject%2A>및 <xref:System.Data.Services.Client.DataServiceContext.AddLink%2A>를 호출하여 새로운 개체를 만들고 기존 개체에 대한 관계를 정의하는 것과 같습니다.|  
 |<xref:System.Data.Services.Client.DataServiceContext.AddLink%2A>|관련된 두 엔터티 개체 간에 새 링크를 만듭니다.|  
-|<xref:System.Data.Services.Client.DataServiceContext.SetLink%2A>|관련된 두 엔터티 개체 간의 기존 링크를 업데이트합니다. <xref:System.Data.Services.Client.DataServiceContext.SetLink%2A>는 또한 카디널리티가 0 또는 일대일(`0..1:1`)과 일대일 (`1:1`)인 링크를 삭제하는 데 사용합니다. 관련 개체를 `null`로 설정하여 링크를 업데이트할 수 있습니다.|  
+|<xref:System.Data.Services.Client.DataServiceContext.SetLink%2A>|관련된 두 엔터티 개체 간의 기존 링크를 업데이트합니다. <xref:System.Data.Services.Client.DataServiceContext.SetLink%2A> 또한 카디널리티가 0 또는 1-에-1을 사용 하 여 링크를 삭제 합니다. (`0..1:1`) 및 일대일 (`1:1`). 관련 개체를 `null`로 설정하여 링크를 업데이트할 수 있습니다.|  
 |<xref:System.Data.Services.Client.DataServiceContext.DeleteLink%2A>|<xref:System.Data.Services.Client.DataServiceContext.SaveChanges%2A> 메서드가 호출될 때 컨텍스트에서 추적 중인 링크를 삭제하도록 표시합니다. 관련 개체를 삭제하거나 먼저 기존 개체에 대한 링크를 삭제한 후 새 관련 개체에 대한 링크를 추가하여 관계를 변경할 때 이 메서드를 사용합니다.|  
 |<xref:System.Data.Services.Client.DataServiceContext.AttachLink%2A>|두 엔터티 개체 간의 기존 링크를 컨텍스트에 알립니다. 컨텍스트에서는 이 관계가 데이터 서비스에 이미 있다고 간주하고 <xref:System.Data.Services.Client.DataServiceContext.SaveChanges%2A> 메서드가 호출될 때 링크를 만들지 않습니다. 개체를 컨텍스트에 연결하고 둘 사이의 링크도 연결해야 하는 경우 이 메서드를 사용합니다. 새 관계를 정의하는 경우 <xref:System.Data.Services.Client.DataServiceContext.AddLink%2A>를 대신 사용해야 합니다.|  
 |<xref:System.Data.Services.Client.DataServiceContext.DetachLink%2A>|컨텍스트에서 지정된 링크 추적을 중지합니다. 이 메서드는 일대다( `*:*`) 관계를 삭제하는 데 사용됩니다. 1의 카디널리티를 가진 관계 링크의 경우 <xref:System.Data.Services.Client.DataServiceContext.SetLink%2A>를 대신 사용해야 합니다.|  
@@ -94,6 +94,7 @@ ms.locfileid: "54569169"
  변경 내용이 <xref:System.Data.Services.Client.DataServiceContext> 인스턴스에서 추적되기는 하지만 서버로 즉시 전송되지는 않습니다. 지정한 작업에 대해 필요한 변경을 모두 마치면 <xref:System.Data.Services.Client.DataServiceContext.SaveChanges%2A>를 호출하여 모든 변경 내용을 데이터 서비스에 전송합니다. 자세한 내용은 [데이터 서비스 컨텍스트 관리](../../../../docs/framework/data/wcf/managing-the-data-service-context-wcf-data-services.md)합니다. <xref:System.Data.Services.Client.DataServiceContext.BeginSaveChanges%2A> 및 <xref:System.Data.Services.Client.DataServiceContext.EndSaveChanges%2A> 메서드를 사용하여 변경 내용을 비동기적으로 저장할 수도 있습니다. 자세한 내용은 [비동기 작업](../../../../docs/framework/data/wcf/asynchronous-operations-wcf-data-services.md)합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [WCF Data Services 클라이언트 라이브러리](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)
 - [데이터 서비스 쿼리](../../../../docs/framework/data/wcf/querying-the-data-service-wcf-data-services.md)
 - [비동기 작업](../../../../docs/framework/data/wcf/asynchronous-operations-wcf-data-services.md)

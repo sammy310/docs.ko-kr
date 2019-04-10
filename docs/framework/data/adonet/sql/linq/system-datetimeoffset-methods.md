@@ -2,12 +2,12 @@
 title: System.DateTimeOffset 메서드
 ms.date: 03/30/2017
 ms.assetid: 25b3e5c0-7603-4a70-b3e5-2149e3da69a2
-ms.openlocfilehash: 46b1622cdc8a38544f1c8a8104abb935c9ff1269
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 288a0d99feecdeccc0d215ec3c14ec31bb3ccb54
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54637205"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59149723"
 ---
 # <a name="systemdatetimeoffset-methods"></a>System.DateTimeOffset 메서드
 개체 모델 또는 외부 매핑 파일에 매핑된 경우 LINQ to SQL에서는 LINQ to SQL 쿼리의 <xref:System.DateTimeOffset?displayProperty=nameWithType> 메서드, 연산자 및 속성 대부분을 호출할 수 있습니다.  
@@ -27,6 +27,7 @@ ms.locfileid: "54637205"
 |<xref:System.Data.Linq.SqlClient.SqlMethods.DateDiffMicrosecond%2A>|<xref:System.Data.Linq.SqlClient.SqlMethods.DateDiffMonth%2A>|<xref:System.Data.Linq.SqlClient.SqlMethods.DateDiffYear%2A>|  
   
 ## <a name="see-also"></a>참고자료
+
 - [쿼리 개념](../../../../../../docs/framework/data/adonet/sql/linq/query-concepts.md)
 - [개체 모델 만들기](../../../../../../docs/framework/data/adonet/sql/linq/creating-the-object-model.md)
 - [SQL-CLR 형식 매핑](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mapping.md)

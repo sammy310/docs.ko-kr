@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 42ed860a-a022-4682-8b7f-7c9870784671
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 53f17552a98683e4278dbdfbfa927ca3b075b225
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: af71c4916a2abdeb019e538a33ad05efa727e720
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54492288"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59137893"
 ---
 # <a name="example-troubleshooting-dynamic-programming"></a>예제: 동적 프로그래밍 문제 해결
 > [!NOTE]
@@ -61,5 +61,6 @@ AppViewModel.Current.LayoutVM.PageMap
  앱에서 `typeof(LayoutApplicationVM)` 대신 `Type.GetType("LayoutApplicationVM")`를 사용했다면 도구 체인이 `browse` 메타데이터를 보존했을 수 있습니다.  그러나 `invoke` 메타데이터는 작성되지 않았으므로 형식을 인스턴스화할 때 [MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md) 예외가 발생합니다. 이 예외를 방지하려면 `dynamic` 정책을 지정하는 형식 또는 네임스페이스에 대해 런타임 지시문을 추가해야 합니다. 런타임 지시문에 대한 자세한 내용은 [런타임 지시문(rd.xml) 구성 파일 참조](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)를 참조하세요.  
   
 ## <a name="see-also"></a>참고자료
+
 - [시작](../../../docs/framework/net-native/getting-started-with-net-native.md)
-- [예제: 데이터를 바인딩하는 경우 예외를 처리](../../../docs/framework/net-native/example-handling-exceptions-when-binding-data.md)
+- [예제: 데이터를 바인딩하는 경우 예외 처리](../../../docs/framework/net-native/example-handling-exceptions-when-binding-data.md)

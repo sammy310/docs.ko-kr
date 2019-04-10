@@ -8,12 +8,12 @@ helpviewer_keywords:
 - custom controls [Windows Forms], property methods
 - ShouldPersist method
 ms.assetid: 7b6c5e00-3771-46b4-9142-5a80d5864a5e
-ms.openlocfilehash: 2cb23220be2b4a3564c4869016c05065afe7c27c
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: f1f5a668c5d4f52ef7dd9f60a31c04f2173165f6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57704459"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59090617"
 ---
 # <a name="defining-default-values-with-the-shouldserialize-and-reset-methods"></a>ShouldSerialize 및 Reset 메서드를 사용하여 기본값 정의
 `ShouldSerialize` 및 `Reset` 가지가 선택적 속성에 대해 제공할 수 있는 속성에는 없는 경우는 간단한 기본 값입니다. 속성의 기본값에 하는 경우 적용 해야 합니다 <xref:System.ComponentModel.DefaultValueAttribute> 대신 특성 클래스 생성자에 기본값을 제공 합니다. 이러한 메커니즘 중 하나는 디자이너에서 다음 기능을 사용할 수 있습니다:  
@@ -144,6 +144,7 @@ public class MyControl : Control {
  개인 변수의 값으로 액세스 하는 경우에이 경우에서는 `MyFont` 속성은 `null`, 속성 브라우저에 표시 되지 `null`대신 표시 합니다 <xref:System.Windows.Forms.Control.Font%2A> 있지 않으면 부모 `null`, 또는 기본 <xref:System.Windows.Forms.Control.Font%2A> 에 정의 된 값 <xref:System.Windows.Forms.Control>합니다. 에 대 한 기본값에 따라서 `MyFont` 간단히 설정할 수 없습니다 및 <xref:System.ComponentModel.DefaultValueAttribute> 이 속성에 적용할 수 없습니다. 대신 합니다 `ShouldSerialize` 및 `Reset` 에 대 한 메서드를 구현 해야 합니다 `MyFont` 속성입니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [Windows Forms 컨트롤의 속성](properties-in-windows-forms-controls.md)
 - [속성 정의](defining-a-property-in-windows-forms-controls.md)
 - [속성 변경 이벤트](property-changed-events.md)

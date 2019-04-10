@@ -8,12 +8,12 @@ helpviewer_keywords:
 - TreeView control [WPF], finding a TreeViewItem
 - TreeViewItem [WPF], finding
 ms.assetid: 72ecd40c-3939-4e01-b617-5e9daa6074d9
-ms.openlocfilehash: c90db5312d58cfba18910f299386e2884fb36ce6
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 034ec2e57fb3b6a9b3a81f66f6888a68e2c113d7
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57360232"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59219046"
 ---
 # <a name="how-to-find-a-treeviewitem-in-a-treeview"></a>방법: TreeView에서 TreeViewItem 찾기
 <xref:System.Windows.Controls.TreeView> 컨트롤은 계층적 데이터를 표시 하는 편리한 방법을 제공 합니다. 경우에 <xref:System.Windows.Controls.TreeView> 데이터 원본에 바인딩되는 <xref:System.Windows.Controls.TreeView.SelectedItem%2A> 속성에는 신속 하 게 선택한 데이터 개체를 검색할 수 있는 편리한 방법을 제공 합니다. 내부 데이터 개체를 사용 하려면 일반적으로 적합 하지만 프로그래밍 방식으로 포함 하는 데이터를 조작 해야 하는 경우에 따라 <xref:System.Windows.Controls.TreeViewItem>합니다. 프로그래밍 방식으로 확장 해야 하는 예를 들어 합니다 <xref:System.Windows.Controls.TreeViewItem>에서 다른 항목을 선택 하거나를 <xref:System.Windows.Controls.TreeView>입니다.  
@@ -42,4 +42,5 @@ ms.locfileid: "57360232"
  [!code-xaml[TreeViewFindTVI#3](~/samples/snippets/csharp/VS_Snippets_Wpf/TreeViewFindTVI/CSharp/MainWindow.xaml#3)]  
   
 ## <a name="see-also"></a>참고자료
-- [TreeView의 성능 개선](how-to-improve-the-performance-of-a-treeview.md)
+
+- [TreeView 성능 향상](how-to-improve-the-performance-of-a-treeview.md)

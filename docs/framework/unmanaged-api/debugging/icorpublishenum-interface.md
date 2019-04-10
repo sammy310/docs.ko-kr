@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5206b7cd07acd76237ab72268b492782ac6e49ff
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1eac0b9fe252e476f8ff781f2181a203886d3beb
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54616721"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59160138"
 ---
 # <a name="icorpublishenum-interface"></a>ICorPublishEnum 인터페이스
 프로세스 및 응용 프로그램 도메인에 대 한 정보를 게시에 사용 되는 열거자에 대 한 추상 기본 인터페이스로 사용 합니다.  
@@ -30,7 +30,7 @@ ms.locfileid: "54616721"
   
 |메서드|설명|  
 |------------|-----------------|  
-|[Clone 메서드](../../../../docs/framework/unmanaged-api/debugging/icorpublishenum-clone-method.md)|이 `ICorPublishEnum` 개체의 복사본을 만듭니다.|  
+|[Clone 메서드](../../../../docs/framework/unmanaged-api/debugging/icorpublishenum-clone-method.md)|이 복사본을 만들고 `ICorPublishEnum` 개체입니다.|  
 |[GetCount 메서드](../../../../docs/framework/unmanaged-api/debugging/icorpublishenum-getcount-method.md)|열거형의 항목 수를 가져옵니다.|  
 |[Reset 메서드](../../../../docs/framework/unmanaged-api/debugging/icorpublishenum-reset-method.md)|열거형의 시작 부분에 커서를 이동합니다.|  
 |[Skip 메서드](../../../../docs/framework/unmanaged-api/debugging/icorpublishenum-skip-method.md)|열거형에서 항목의 지정된 된 수 만큼 앞으로 커서를 이동합니다.|  
@@ -52,5 +52,6 @@ ms.locfileid: "54616721"
  **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>참고자료
+
 - [CorpubPublish Coclass](../../../../docs/framework/unmanaged-api/debugging/corpubpublish-coclass.md)
 - [디버깅 인터페이스](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

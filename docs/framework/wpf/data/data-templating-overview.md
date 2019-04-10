@@ -10,12 +10,12 @@ helpviewer_keywords:
 - templates [WPF], data
 - data templates [WPF]
 ms.assetid: 0f4d9f8c-0230-4013-bd7b-e8e7fed01b4a
-ms.openlocfilehash: 9287656349f2a10619bfe76a36ee7855d3861cba
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 98fff9ba84f386e93549fa94fe84f7b2b0fff5fd
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57376106"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59097553"
 ---
 # <a name="data-templating-overview"></a>데이터 템플릿 개요
 WPF 데이터 템플릿 모델을 사용하면 데이터 표시를 매우 유연하게 정의할 수 있습니다. WPF 컨트롤에는 데이터 표시의 사용자 지정을 지원하는 기본 제공 기능이 있습니다. 이 항목에는 먼저 정의 하는 방법을 보여 줍니다는 <xref:System.Windows.DataTemplate> 사용자 지정 논리 및 계층적 데이터의 표시를 위한 지원 기반 템플릿의 선택과 같은 다른 데이터 템플릿 기능을 소개 합니다.  
@@ -191,9 +191,10 @@ WPF 데이터 템플릿 모델을 사용하면 데이터 표시를 매우 유연
   
  이 예제에서는 사용 하 여 보여 줍니다 <xref:System.Windows.HierarchicalDataTemplate>, 다른 목록이 포함 된 목록 데이터를 쉽게 표시할 수 있습니다. 예제 스크린샷은 다음과 같습니다.  
   
- ![HierarchicalDataTemplate 샘플 스크린샷](./media/databinding-hierarchicaldatatemplate.png "DataBinding_HierarchicalDataTemplate")  
+ ![HierarchicalDataTemplate 샘플 스크린 샷](./media/databinding-hierarchicaldatatemplate.png "DataBinding_HierarchicalDataTemplate")  
   
 ## <a name="see-also"></a>참고자료
+
 - [데이터 바인딩](../advanced/optimizing-performance-data-binding.md)
 - [DataTemplate에서 생성된 요소 찾기](how-to-find-datatemplate-generated-elements.md)
 - [스타일 지정 및 템플릿](../controls/styling-and-templating.md)

@@ -13,12 +13,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c5025f4bb6433d193ecf7dec1d8375104147e9e6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8fda98c20b42355b9f52595929bbf5b980b5b857
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54562572"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59077240"
 ---
 # <a name="icorprofilercallback6-interface"></a>ICorProfilerCallback6 인터페이스
 [.NET Framework 4.5.2 이상 버전에서 지원됨]  
@@ -41,4 +41,5 @@ ms.locfileid: "54562572"
  **.NET Framework 버전:** [!INCLUDE[net_current_v452plus](../../../../includes/net-current-v452plus-md.md)]  
   
 ## <a name="see-also"></a>참고자료
+
 - [프로파일링 인터페이스](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)

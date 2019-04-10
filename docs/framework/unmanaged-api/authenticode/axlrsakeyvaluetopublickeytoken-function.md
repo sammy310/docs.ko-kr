@@ -10,12 +10,12 @@ api_type:
 ms.assetid: d60f19fe-7bec-47ba-b60e-ba9ce66abf8c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 640940cea30b489683972debdd14b592d565ef4b
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 49476a4417e5431842f8e2ba0371c53c5c9f03e9
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57469693"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59207827"
 ---
 # <a name="axlrsakeyvaluetopublickeytoken-function"></a>\_AxlRSAKeyValueToPublicKeyToken 함수
 
@@ -42,7 +42,8 @@ HRESULT _AxlRSAKeyValueToPublicKeyToken (
  [out] 16진수로 인코딩된 공개 키 토큰을 받는 WCHAR *에 대한 포인터입니다.  
   
 ## <a name="return-value"></a>반환 값  
- 함수가 정상적으로 실행되는 경우 `S_OK`입니다. 그러지 않으면 오류 코드가 반환됩니다.  
+ `S_OK` 함수가 성공 합니다. 그러지 않으면 오류 코드가 반환됩니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [Authenticode](../../../../docs/framework/unmanaged-api/authenticode/index.md)

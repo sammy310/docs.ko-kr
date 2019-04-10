@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: f642276b-33fb-4a81-b882-8808c31ba69e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7f2de27152200ed07e5f82b5dc08613451c7aa25
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: eda4f8d3819af05b022e0633d6883cca940f67e5
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55284910"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59100264"
 ---
 # <a name="library-element-net-native"></a>\<라이브러리 > 요소 (.NET 네이티브)
 런타임에 해당 메타데이터를 리플렉션에 사용할 수 있는 형식 및 형식 멤버가 포함된 어셈블리를 정의합니다.  
@@ -42,8 +42,8 @@ ms.locfileid: "55284910"
   
 |요소|설명|  
 |-------------|-----------------|  
-|[\<Assembly>](../../../docs/framework/net-native/assembly-element-net-native.md)|특정 어셈블리의 모든 형식에 정책을 적용합니다.|  
-|[\<Namespace>](../../../docs/framework/net-native/namespace-element-net-native.md)|특정 네임스페이스의 모든 형식에 정책을 적용합니다.|  
+|[\<어셈블리 >](../../../docs/framework/net-native/assembly-element-net-native.md)|특정 어셈블리의 모든 형식에 정책을 적용합니다.|  
+|[\<Namespace >](../../../docs/framework/net-native/namespace-element-net-native.md)|특정 네임스페이스의 모든 형식에 정책을 적용합니다.|  
 |[\<Type>](../../../docs/framework/net-native/type-element-net-native.md)|클래스 또는 구조체와 같은 특정 형식에 정책을 적용합니다.|  
 |[\<TypeInstantiation>](../../../docs/framework/net-native/typeinstantiation-element-net-native.md)|생성된 제네릭 형식에 정책을 적용합니다. 예를 들어 [\<TypeInstantiation>](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) 요소를 사용하면 `List<String>` 형식에 대한 정책을 정의할 수 있습니다.|  
   
@@ -69,7 +69,8 @@ ms.locfileid: "55284910"
 ```  
   
 ## <a name="see-also"></a>참고자료
+
 - [\<응용 프로그램 > 요소](../../../docs/framework/net-native/application-element-net-native.md)
-- [\<지시문 > 요소](../../../docs/framework/net-native/directives-element-net-native.md)
+- [\<Directives> 요소](../../../docs/framework/net-native/directives-element-net-native.md)
 - [런타임 지시문(rd.xml) 구성 파일 참조](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
 - [런타임 지시문 요소](../../../docs/framework/net-native/runtime-directive-elements.md)

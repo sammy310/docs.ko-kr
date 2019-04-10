@@ -5,18 +5,16 @@ helpviewer_keywords:
 - dependency properties [WPF], read-only
 - read-only dependency properties [WPF]
 ms.assetid: f23d6ec9-3780-4c09-a2ff-b2f0a2deddf1
-ms.openlocfilehash: 9aeeab95342bce94c53e89229003f55009118f96
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 45385e3e3eb8e756008a0d9ef560e061f9a31964
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57379009"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59162425"
 ---
 # <a name="read-only-dependency-properties"></a>읽기 전용 종속성 속성
 이 항목에서는 기존 읽기 전용 종속성 속성과 사용자 지정 읽기 전용 종속성 속성을 만드는 시나리오 및 방법을 포함하여 읽기 전용 종속성 속성을 설명합니다.  
-  
 
-  
 <a name="prerequisites"></a>   
 ## <a name="prerequisites"></a>전제 조건  
  이 항목에서는 종속성 속성을 구현하는 기본 시나리오와 메타데이터가 사용자 지정 종속성 속성에 적용되는 방법을 이해하고 있다고 가정합니다. 컨텍스트는 [사용자 지정 종속성 속성](custom-dependency-properties.md) 및 [종속성 속성 메타데이터](dependency-property-metadata.md)를 참조하세요.  
@@ -44,6 +42,7 @@ ms.locfileid: "57379009"
  때문에 <xref:System.Windows.DependencyPropertyKey> 은 개인 프로필이 며 전파 되지 않습니다 코드 외부에서 속성 시스템에서 읽기 전용 종속성 속성에는 더 읽기-쓰기 종속성 속성 보다 보안을 설정 합니다. 읽기-쓰기 종속성 속성의 경우 식별 필드는 명시적 또는 암시적으로 public이므로 속성을 광범위하게 설정할 수 있습니다. 자세한 내용은 [종속성 속성 보안](dependency-property-security.md)을 참조하세요.  
   
 ## <a name="see-also"></a>참고자료
+
 - [종속성 속성 개요](dependency-properties-overview.md)
 - [사용자 지정 종속성 속성](custom-dependency-properties.md)
 - [스타일 지정 및 템플릿](../controls/styling-and-templating.md)

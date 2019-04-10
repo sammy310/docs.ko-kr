@@ -2,12 +2,12 @@
 title: DataContractResolver
 ms.date: 03/30/2017
 ms.assetid: 6c200c02-bc14-4b8d-bbab-9da31185b805
-ms.openlocfilehash: ad5436a60b5cd82b44931713d863eaeed791e264
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 981b70011979e1e0fbd8fc6b22ba54774c824342
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54723981"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59325178"
 ---
 # <a name="datacontractresolver"></a>DataContractResolver
 이 샘플에서는 <xref:System.Runtime.Serialization.DataContractResolver> 클래스를 사용하여 serialization 및 deserialization 프로세스를 사용자 지정하는 방법을 보여 줍니다. 이 샘플에서는 DataContractResolver를 사용하여 serialization 및 deserialization 중에 xsi:type 표현에 대한 CLR 형식의 매핑 방법을 보여 줍니다.
@@ -152,9 +152,9 @@ class MyDataContractResolver : DataContractResolver
 
 #### <a name="to-use-this-sample"></a>이 샘플을 사용하려면
 
-1.  DCRSample.sln 솔루션 파일을 열고 Visual Studio 2012를 사용 합니다.
+1. DCRSample.sln 솔루션 파일을 열고 Visual Studio 2012를 사용 합니다.
 
-2.  F5 키를 눌러 솔루션을 실행합니다.
+2. F5 키를 눌러 솔루션을 실행합니다.
 
 > [!IMPORTANT]
 >  컴퓨터에 이 샘플이 이미 설치되어 있을 수도 있습니다. 계속하기 전에 다음(기본) 디렉터리를 확인하세요.  
@@ -166,4 +166,5 @@ class MyDataContractResolver : DataContractResolver
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Contract\Data\DataContractResolver`  
   
 ## <a name="see-also"></a>참고자료
+
 - [데이터 계약 확인자 사용](../../../../docs/framework/wcf/feature-details/using-a-data-contract-resolver.md)

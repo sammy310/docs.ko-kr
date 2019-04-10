@@ -1,5 +1,5 @@
 ---
-title: '방법: 데이터 수집의 기본 뷰 가져오기'
+title: '방법: 데이터 컬렉션의 기본 보기 가져오기'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - data collections [WPF], creating views of
 - data binding [WPF], creating views of data collections
 ms.assetid: b641e96c-c2f6-42ea-9c5d-bac81176ad65
-ms.openlocfilehash: 28a21aae7f8a08efebfd16bacd2a2d82b04de0c1
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 746331e69ee1e5eee795a0e35202f4889b72c53f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57360071"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59222109"
 ---
-# <a name="how-to-get-the-default-view-of-a-data-collection"></a>방법: 데이터 수집의 기본 뷰 가져오기
+# <a name="how-to-get-the-default-view-of-a-data-collection"></a>방법: 데이터 컬렉션의 기본 보기 가져오기
 뷰는 동일한 데이터 수집을 정렬, 필터링 또는 그룹화 기준에 따라 다른 방법으로 볼 수 있도록 합니다. 모든 컬렉션에 바인딩 소스로 컬렉션을 지정 하는 경우 실제 바인딩 소스로 사용 되는 하나의 공유 기본 보기를 있습니다. 이 예제에는 컬렉션의 기본 보기를 가져오는 방법을 보여 줍니다.  
   
 ## <a name="example"></a>예제  
@@ -33,5 +33,6 @@ ms.locfileid: "57360071"
  컬렉션 뷰에서 제공 하는 기능의 예제를 참조 하세요. [뷰에서 데이터 정렬](how-to-sort-data-in-a-view.md)를 [뷰에서 데이터 필터링](how-to-filter-data-in-a-view.md), 및 [개체 탐색 데이터 수집 뷰의](how-to-navigate-through-the-objects-in-a-data-collectionview.md).  
   
 ## <a name="see-also"></a>참고자료
-- [XAML 데이터 정렬 및 그룹화](how-to-sort-and-group-data-using-a-view-in-xaml.md)
+
+- [XAML에서 보기를 사용하여 데이터 정렬 및 그룹화](how-to-sort-and-group-data-using-a-view-in-xaml.md)
 - [방법 항목](data-binding-how-to-topics.md)

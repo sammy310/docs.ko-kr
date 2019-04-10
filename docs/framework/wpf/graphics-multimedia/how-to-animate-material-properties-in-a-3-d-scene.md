@@ -6,12 +6,12 @@ helpviewer_keywords:
 - animation [WPF], Material properties in 3-D scenes
 - 3-D scenes [WPF], animating Material properties
 ms.assetid: 229fd6eb-7401-4992-b0c9-8b28de230c0f
-ms.openlocfilehash: 59200fa7ec7acb16c37666505143a3679d487f52
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 58e880a2828d21ee76f7fac6bdcf313e8454e65b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57358792"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59090903"
 ---
 # <a name="how-to-animate-material-properties-in-a-3-d-scene"></a>방법: 3차원 장면의 Material 속성에 애니메이션 효과 주기
 애니메이션을 적용 하는 방법을 보여 주는이 예제는 <xref:System.Windows.Media.Brush.Opacity%2A> 의 속성을 <xref:System.Windows.Media.Media3D.Material> 적용할를 [!INCLUDE[TLA#tla_3d](../../../../includes/tlasharptla-3d-md.md)] 모델.  
@@ -30,5 +30,6 @@ ms.locfileid: "57358792"
  [!code-xaml[Animation3DGallery_snip#AnimateMaterialExampleWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/Animation3DGallery_snip/CS/AnimateMaterialExample.xaml#animatematerialexamplewholepage)]  
   
 ## <a name="see-also"></a>참고자료
+
 - [3차원 장면 만들기](how-to-create-a-3-d-scene.md)
 - [3차원 그래픽 개요](3-d-graphics-overview.md)

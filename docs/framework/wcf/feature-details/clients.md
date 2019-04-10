@@ -2,12 +2,12 @@
 title: 클라이언트
 ms.date: 03/30/2017
 ms.assetid: cce50025-0318-4a5e-9ce8-c67feab83b06
-ms.openlocfilehash: aa9762e93e9cde2f33992757a6d40c9ac08b93a6
-ms.sourcegitcommit: af0a22a4eb11bbcd33baec49150d551955b50a16
+ms.openlocfilehash: aa6d415c0908845bedf7c95ed66281bc0f17eb2b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56261689"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59177504"
 ---
 # <a name="clients"></a>클라이언트
 이 섹션의에서 항목에서는 클라이언트 아키텍처를 어떻게 설명에 액세스 하려면 Windows Communication Foundation (WCF) 서비스는 WCF 클라이언트와 WCF 클라이언트에 대 한 보안 고려 사항를 구성 하는 방법입니다.  
@@ -26,4 +26,5 @@ ms.locfileid: "56261689"
  WCF 클라이언트에 대 한 보안 고려를 사항에 대해 설명합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [클라이언트 샘플](../samples/client.md)

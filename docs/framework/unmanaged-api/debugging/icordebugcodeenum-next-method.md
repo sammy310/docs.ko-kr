@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a3aeae294d92a6dc9effc7f3baa51a35e4f2b544
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 5db87cd4ad965654b63a68828cd088b8d2f7d07c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57476635"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59113050"
 ---
 # <a name="icordebugcodeenumnext-method"></a>ICorDebugCodeEnum::Next 메서드
 현재 위치부터 시작 하는 열거형에서 "ICorDebugCode" 인스턴스의 지정 된 수를 가져옵니다.  
@@ -58,5 +58,3 @@ HRESULT Next (
  **.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>참고자료
-
-

@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: 9605352c66f85b6942ba24942cb07c88bdd81f2a
+ms.sourcegitcommit: 0aca6c5d166d7961a1e354c248495645b97a1dc5
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58760641"
+---
 ### <a name="connection-pool-blocking-period-for-azure-sql-databases-is-removed"></a>Azure SQL 데이터베이스에 대한 연결 풀 차단 기간이 제거되었습니다.
 
 |   |   |

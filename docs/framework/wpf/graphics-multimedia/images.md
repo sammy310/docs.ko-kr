@@ -9,15 +9,15 @@ helpviewer_keywords:
 - images [WPF]
 - graphics [WPF], images
 ms.assetid: 2fe21d59-b444-4786-b68d-35d94e18ce0d
-ms.openlocfilehash: b59cd1c1ec2ee058811996c92e4b215c8872ff0b
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: f14c99b1c5f624fcebf2c08f0889903f258e5c68
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57372817"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59194983"
 ---
 # <a name="images"></a>이미지
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]에서는 여러 이미지 형식, 고화질 이미지 렌더링 및 코덱 확장성에 대한 기본 제공 지원을 제공합니다.  
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 여러 이미지 형식, 고화질 이미지 렌더링 및 코덱 확장성에 대 한 기본 제공 지원을 제공합니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
  [이미징 개요](imaging-overview.md)  
@@ -31,5 +31,6 @@ ms.locfileid: "57372817"
  <xref:System.Windows.Media.Imaging.BitmapSource>  
   
 ## <a name="see-also"></a>참고자료
-- [2차원 그래픽 및 이미징](../advanced/optimizing-performance-2d-graphics-and-imaging.md)
+
+- [2D 그래픽 및 이미징](../advanced/optimizing-performance-2d-graphics-and-imaging.md)
 - [그래픽 및 멀티미디어](index.md)

@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4fed0fcd806bd410c8a6817447e6fd634237624d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3ba81c208c4b49342c6a055e09ba898871db1851
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54743181"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59157614"
 ---
 # <a name="isymunmanagedsourceservermodule-interface"></a>ISymUnmanagedSourceServerModule 인터페이스
 모듈에 대 한 원본 서버 데이터를 제공합니다. 호출 하 여이 인터페이스를 가져올 `QueryInterface` 구현 하는 개체에는 [ISymUnmanagedReader](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md) 인터페이스입니다.  
@@ -36,4 +36,5 @@ ms.locfileid: "54743181"
  **헤더:** CorSym.idl, CorSym.h  
   
 ## <a name="see-also"></a>참고자료
+
 - [진단 기호 저장소 인터페이스](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)

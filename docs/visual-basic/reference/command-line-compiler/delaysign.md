@@ -6,12 +6,12 @@ helpviewer_keywords:
 - -delaysign compiler option [Visual Basic]
 - -delaysign compiler option [Visual Basic]
 ms.assetid: c76e61a4-1884-4252-9fb2-377f99caa690
-ms.openlocfilehash: ccf569aea1363d256728e122818b70284a9e250d
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 770dcad385c522a548a0c6fd3b6ef02dfbac82f5
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58830372"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59334603"
 ---
 # <a name="-delaysign"></a>-delaysign
 어셈블리를 완전히 서명할지, 아니면 부분적으로 서명할지를 지정합니다.  
@@ -37,11 +37,11 @@ ms.locfileid: "58830372"
   
 ### <a name="to-set--delaysign-in-the-visual-studio-integrated-development-environment"></a>Visual Studio 통합된 개발 환경에서-delaysign을 설정 하려면  
   
-1.  **솔루션 탐색기**에서 프로젝트를 선택합니다. **프로젝트** 메뉴에서 **속성**을 클릭합니다.   
+1. **솔루션 탐색기**에서 프로젝트를 선택합니다. **프로젝트** 메뉴에서 **속성**을 클릭합니다.   
   
-2.  **시그니처** 탭을 클릭합니다.  
+2. **시그니처** 탭을 클릭합니다.  
   
-3.  값을 설정 합니다 **서명만 연기** 상자입니다.  
+3. 값을 설정 합니다 **서명만 연기** 상자입니다.  
   
 ## <a name="see-also"></a>참고자료
 

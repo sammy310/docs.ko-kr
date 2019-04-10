@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 3abd2071-0f28-40ba-b9a0-d52bd94cd2f6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1739c2a5e15d4c120d487c849819b6439afabade
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 2ef238a2cb852ecd7fa3f0e2dbe4048ff03a4139
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55288017"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59080880"
 ---
 # <a name="impliestype-element-net-native"></a>\<ImpliesType > 요소 (.NET 네이티브)
 포함 형식 또는 메서드에 정책이 적용된 경우 해당 정책을 형식에 적용합니다.  
@@ -70,7 +70,7 @@ ms.locfileid: "55288017"
 |-------------|-----------------|  
 |[\<Type>](../../../docs/framework/net-native/type-element-net-native.md)|형식 및 모든 해당 멤버에 리플렉션 정책을 적용합니다.|  
 |[\<TypeInstantiation>](../../../docs/framework/net-native/typeinstantiation-element-net-native.md)|생성된 제네릭 형식 및 모든 해당 멤버에 리플렉션 정책을 적용합니다.|  
-|[\<Method>](../../../docs/framework/net-native/method-element-net-native.md)|메서드에 리플렉션 정책을 적용합니다.|  
+|[\<메서드 >](../../../docs/framework/net-native/method-element-net-native.md)|메서드에 리플렉션 정책을 적용합니다.|  
   
 ## <a name="remarks"></a>설명  
  `<ImpliesType>` 요소는 주로 라이브러리에서 사용되며 다음과 같은 시나리오를 해결합니다.  
@@ -111,6 +111,7 @@ ms.locfileid: "55288017"
 ```  
   
 ## <a name="see-also"></a>참고자료
+
 - [런타임 지시문(rd.xml) 구성 파일 참조](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
 - [런타임 지시문 요소](../../../docs/framework/net-native/runtime-directive-elements.md)
 - [런타임 지시문 정책 설정](../../../docs/framework/net-native/runtime-directive-policy-settings.md)

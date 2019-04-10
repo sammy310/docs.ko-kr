@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - DataGridView control [Windows Forms], virtual mode
 ms.assetid: feae5d43-2848-4b1a-8ea7-77085dc415b5
-ms.openlocfilehash: 92b45f026470f312fe788ed30e4ff8d172735a98
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: f284835578221ad1fe859f260e37bb829cd64b2d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57709486"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59124724"
 ---
 # <a name="virtual-mode-in-the-windows-forms-datagridview-control"></a>Windows Forms DataGridView 컨트롤의 가상 모드
 가상 모드를 사용 하 여 간의 상호 작용을 관리할 수 있습니다는 <xref:System.Windows.Forms.DataGridView> 컨트롤 및 사용자 지정 데이터 캐시 합니다. 가상 모드 구현 하려면 합니다 <xref:System.Windows.Forms.DataGridView.VirtualMode%2A> 속성을 `true` 하 고 하나 이상의이 항목에서 설명 하는 이벤트를 처리 합니다. 일반적으로 처리 하는 적어도 `CellValueNeeded` 컨트롤에 대 한 조회 데이터 캐시에서 값을 사용 하도록 설정 하는 이벤트입니다.  
@@ -63,9 +63,10 @@ ms.locfileid: "57709486"
  많은 양의 데이터를 효율적으로 사용 하기 위해 가상 모드를 구현 하는 경우 또한 하려는 작동 하는지 확인 하는 효율적으로 사용 하 여는 <xref:System.Windows.Forms.DataGridView> 컨트롤 자체입니다. 셀 스타일, 자동 크기 조정, 선택, 그리고 공유 하는 행의 효율적인 사용에 대 한 자세한 내용은 참조 [Windows Forms DataGridView 컨트롤의 크기 조정에 대 한 모범 사례](best-practices-for-scaling-the-windows-forms-datagridview-control.md)합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridView.VirtualMode%2A>
 - [Windows Forms DataGridView 컨트롤의 성능 조정](performance-tuning-in-the-windows-forms-datagridview-control.md)
-- [Windows Forms DataGridView 컨트롤의 크기를 조정하는 최선의 방법](best-practices-for-scaling-the-windows-forms-datagridview-control.md)
+- [Windows Forms DataGridView 컨트롤의 크기 조정에 대한 모범 사례](best-practices-for-scaling-the-windows-forms-datagridview-control.md)
 - [연습: Windows Forms DataGridView 컨트롤에서 가상 모드 구현](implementing-virtual-mode-wf-datagridview-control.md)
 - [Windows Forms DataGridView 컨트롤에서 Just-In-Time 데이터 로드를 사용하여 가상 모드 구현](implementing-virtual-mode-jit-data-loading-in-the-datagrid.md)

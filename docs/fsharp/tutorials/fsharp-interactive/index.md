@@ -1,7 +1,13 @@
 ---
-title: 'F# Interactive(fsi.exe) 참조'
-description: '에 대해 알아봅니다 하는 방법 F# Interactive (fsi.exe) 실행 하는 F# 대화형으로 나 콘솔에서 실행할 코드 F# 스크립트입니다.'
+title: F# Interactive(fsi.exe) 참조
+description: 에 대해 알아봅니다 하는 방법 F# Interactive (fsi.exe) 실행 하는 F# 대화형으로 나 콘솔에서 실행할 코드 F# 스크립트입니다.
 ms.date: 05/16/2016
+ms.openlocfilehash: 9ec780ca51eaa5ae0aa791eb509d8ad0865dc26f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59172265"
 ---
 # <a name="interactive-programming-with-f"></a>F # 사용한 대화형 프로그래밍\#
 
@@ -37,10 +43,8 @@ F# Interactive는 Visual Studio에서 실행할 때 프로젝트와 독립적으
 
 설정을 조정하여 F# Interactive 명령줄 인수(옵션)를 제어할 수 있습니다. 이렇게 하려면 **도구** 메뉴에서 **옵션...** 을 선택하고 **F# 도구**를 확장합니다. 변경 가능한 두 가지 설정은 F# Interactive 옵션과 **64비트 F# Interactive** 설정(F# Interactive를 64비트 컴퓨터에서 실행하는 경우만 해당)입니다. 이 설정은 전용 64비트 버전의 fsi.exe 또는 fsianycpu.exe(컴퓨터 아키텍처를 사용하여 32비트 또는 64비트 프로세스로 실행할지 여부를 결정)를 실행할지 여부를 결정합니다.
 
-
 ## <a name="scripting-with-f"></a>F #을 사용한 스크립팅\#
 스크립트는 파일 확장명 **.fsx** 또는 **.fsscript**를 사용합니다. 소스 코드를 컴파일한 다음 나중에 컴파일된 어셈블리를 실행하는 대신 **fsi.exe**를 실행하고 F# 소스 코드의 스크립트 파일 이름을 지정하면 F# Interactive가 코드를 읽어 실시간으로 실행합니다.
-
 
 ## <a name="differences-between-the-interactive-scripting-and-compiled-environments"></a>대화형, 스크립팅 및 컴파일된 환경의 차이점
 F# Interactive에서 코드를 컴파일할 때는 대화형으로 실행하든 스크립트를 실행하든 관계없이 **INTERACTIVE** 기호가 정의됩니다. 컴파일러에서 코드를 컴파일할 때는 **COMPILED** 기호가 정의됩니다. 따라서 컴파일된 모드와 대화형 모드에서 코드가 달라야 하는 경우 조건부 컴파일용 전처리기 지시문을 통해 사용할 코드를 결정할 수 있습니다.
@@ -54,7 +58,7 @@ F# Interactive에서 스크립트를 실행할 때는 컴파일러에서 실행�
 |**#load**|소스 파일을 읽고 컴파일한 다음 실행합니다.|
 |**#quit**|F# Interactive 세션을 종료합니다.|
 |**#r**|어셈블리를 참조합니다.|
-|**#time ["on"&#124;"off"]**|**#time** 자체는 성능 정보 표시 여부를 전환합니다. 이 지시문을 사용하도록 설정하면 F# Interactive가 해석 및 실행되는 각 코드 섹션에 대해 실제 시간, CPU 시간 및 가비지 컬렉션 정보를 측정합니다.|
+|**#time ["on"&#124;"꺼짐"]**|**#time** 자체는 성능 정보 표시 여부를 전환합니다. 이 지시문을 사용하도록 설정하면 F# Interactive가 해석 및 실행되는 각 코드 섹션에 대해 실제 시간, CPU 시간 및 가비지 컬렉션 정보를 측정합니다.|
 
 F# Interactive에서 파일 또는 경로를 지정할 때는 문자열 리터럴이 필요합니다. 따라서 파일 및 경로를 따옴표로 묶어야 하며, 일반적인 이스케이프 문자가 적용됩니다. 또한 @ 문자를 사용하여 F# Interactive가 경로를 포함하는 문자열을 축자 문자열로 해석하도록 할 수 있습니다. 그러면 F# Interactive에서 이스케이프 문자를 무시합니다.
 

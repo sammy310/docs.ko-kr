@@ -1,11 +1,16 @@
 ---
-title: 'Docker 프로덕션 환경 실행, 관리 및 모니터링'
+title: Docker 프로덕션 환경 실행, 관리 및 모니터링
 description: Microsoft 플랫폼 및 도구를 사용하여 컨테이너화된 Docker 애플리케이션 수명 주기
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 02/15/2019
+ms.openlocfilehash: 7c470a2d24b8807bdda10e1816bc5a430a5c63f1
+ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56834942"
 ---
-
 # <a name="run-manage-and-monitor-docker-production-environments"></a>Docker 프로덕션 환경 실행, 관리 및 모니터링
 
 Vision: 엔터프라이즈 응용 프로그램 고가용성 및 높은 확장성을 사용 하 여 실행 해야 합니다. IT 운영 환경 및 응용 프로그램 자체 관리 및 모니터링 하는 일을 할 수 해야 합니다.

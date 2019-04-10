@@ -1,18 +1,18 @@
 ---
-title: '방법: 지정된 된 인증 모드에 대 한 SecurityBindingElement 만들기'
+title: '방법: 지정된 인증 모드에 대한 SecurityBindingElement 만들기'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: a7c7747a-5b8c-463f-8493-7266dac75066
-ms.openlocfilehash: 62006397db3155d26a2c7bd327251b870a3b8460
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e35df9a5dacc5f281af48cec292a09b291312119
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54619930"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59124516"
 ---
-# <a name="how-to-create-a-securitybindingelement-for-a-specified-authentication-mode"></a>방법: 지정된 된 인증 모드에 대 한 SecurityBindingElement 만들기
+# <a name="how-to-create-a-securitybindingelement-for-a-specified-authentication-mode"></a>방법: 지정된 인증 모드에 대한 SecurityBindingElement 만들기
 Windows Communication Foundation (WCF)는 클라이언트 및 서비스 인증 서로 몇 가지 모드를 제공 합니다. <xref:System.ServiceModel.Channels.SecurityBindingElement> 클래스에 static 메서드를 사용하거나 다음 예제처럼 구성을 통해 이러한 인증 모드의 보안 바인딩 요소를 만들 수 있습니다.  
   
  18 가지 인증 모드에 대 한 자세한 내용은 참조 하세요. [SecurityBindingElement 인증 모드](../../../../docs/framework/wcf/feature-details/securitybindingelement-authentication-modes.md)합니다.  
@@ -27,5 +27,6 @@ Windows Communication Foundation (WCF)는 클라이언트 및 서비스 인증 �
  [!code-vb[c_CustomBindingsAuthMode#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_custombindingsauthmode/vb/source.vb#2)]  
   
 ## <a name="see-also"></a>참고자료
+
 - [SecurityBindingElement 인증 모드](../../../../docs/framework/wcf/feature-details/securitybindingelement-authentication-modes.md)
-- [방법: SecurityBindingElement를 사용 하 여 사용자 지정 바인딩 만들기](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)
+- [방법: SecurityBindingElement를 사용하여 사용자 지정 바인딩 만들기](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)

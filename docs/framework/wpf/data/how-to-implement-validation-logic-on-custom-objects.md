@@ -1,5 +1,5 @@
 ---
-title: '방법: 사용자 지정 개체의 유효성 검사 논리 구현'
+title: '방법: 사용자 지정 개체에 대한 유효성 검사 논리 구현'
 ms.date: 08/02/2018
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - implementing validation logic on custom objects [WPF]
 - custom objects [WPF], implementing validation logic on
 ms.assetid: 751fda9b-44f9-4d63-b4f2-1df07ac41e0f
-ms.openlocfilehash: e183d286e4b9cd037c352126203b1ecdcca89ebb
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 8520504757e9e9ec9557b84ca2608b4cb99daf62
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57365362"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59085924"
 ---
-# <a name="how-to-implement-validation-logic-on-custom-objects"></a>방법: 사용자 지정 개체의 유효성 검사 논리 구현
+# <a name="how-to-implement-validation-logic-on-custom-objects"></a>방법: 사용자 지정 개체에 대한 유효성 검사 논리 구현
 이 예제에서는 사용자 지정 개체에서 유효성 검사 논리를 구현 하 고 다음에 바인딩하는 방법을 보여 줍니다.  
   
 ## <a name="example"></a>예제  
@@ -33,6 +33,7 @@ ms.locfileid: "57365362"
  사용 하는 대신 또는 합니다 <xref:System.Windows.Controls.DataErrorValidationRule>를 설정할 수 있습니다 합니다 <xref:System.Windows.Data.Binding.ValidatesOnDataErrors%2A> 속성을 `true`.  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Windows.Controls.ExceptionValidationRule>
 - [바인딩 유효성 검사 구현](how-to-implement-binding-validation.md)
 - [방법 항목](data-binding-how-to-topics.md)

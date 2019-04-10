@@ -2,13 +2,18 @@
 title: Visual Basic의 배열
 ms.date: 12/06/2017
 f1_keywords:
-  - vb.Array
+- vb.Array
 helpviewer_keywords:
-  - 'arrays [Visual Basic]'
-  - 'Visual Basic, arrays'
+- arrays [Visual Basic]
+- Visual Basic, arrays
 ms.assetid: dbf29737-b589-4443-bee6-a27588d9c67e
+ms.openlocfilehash: 6b131d073e10f99feaf770fe5fd3c393551fa5a3
+ms.sourcegitcommit: 0aca6c5d166d7961a1e354c248495645b97a1dc5
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 03/30/2019
+ms.locfileid: "58675967"
 ---
-
 # <a name="arrays-in-visual-basic"></a>Visual Basic의 배열
 
 배열 라고 하는 값의 집합이 *요소*, 서로 논리적으로 관련이 있는 합니다. 예를 들어, 배열; 초등학교에서 각 학년의 학생 수가 구성 될 수 있습니다. 배열의 각 요소에는 단일 학년의 학생 수입니다. 마찬가지로, 클래스에 대 한 학생의 성적 배열을 구성 될 수 있습니다. 배열의 각 요소에는 단일 등급입니다.

@@ -1,5 +1,5 @@
 ---
-title: '방법: 펜을 사용 하 여 사각형을 그릴 수'
+title: '방법: 펜을 사용하여 사각형 그리기'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - rectangles [Windows Forms], drawing
 - pens [Windows Forms], drawing rectangles
 ms.assetid: 54a7fa14-3ad8-4d64-b424-2a12005b250c
-ms.openlocfilehash: a29cae5a360185b7fa5e70fc0181c0cfaac8fc09
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: 0e51a1e3a2d14754147dbd36f170127a7e978acd
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58463191"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59074614"
 ---
-# <a name="how-to-use-a-pen-to-draw-rectangles"></a>방법: 펜을 사용 하 여 사각형을 그릴 수
+# <a name="how-to-use-a-pen-to-draw-rectangles"></a>방법: 펜을 사용하여 사각형 그리기
 사각형을 그리려면 필요는 <xref:System.Drawing.Graphics> 개체 및 <xref:System.Drawing.Pen> 개체입니다. <xref:System.Drawing.Graphics> 개체를 제공 합니다 <xref:System.Drawing.Graphics.DrawRectangle%2A> 메서드 및 <xref:System.Drawing.Pen> 개체 저장 되는 선의 색 및 두께 같은 기능입니다.  
   
 ## <a name="example"></a>예제  
@@ -31,7 +31,8 @@ ms.locfileid: "58463191"
  [!code-vb[System.Drawing.UsingAPen#21](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingAPen/VB/Class1.vb#21)]  
   
 ## <a name="compiling-the-code"></a>코드 컴파일  
- 앞의 예제는 Windows forms에서 사용하도록 설계되었으며 <xref:System.Windows.Forms.PaintEventArgs> 이벤트 처리기의 매개 변수인 `e`<xref:System.Windows.Forms.Control.Paint>가 필요합니다.  
+ 앞의 예제는 Windows Forms에서 사용 하도록 설계 되었으며 필요 <xref:System.Windows.Forms.PaintEventArgs>`e`의 매개 변수는 <xref:System.Windows.Forms.Control.Paint> 이벤트 처리기입니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [펜을 사용하여 선과 도형 그리기](using-a-pen-to-draw-lines-and-shapes.md)

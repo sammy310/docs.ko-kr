@@ -15,15 +15,15 @@ helpviewer_keywords:
 - styles [WPF], triggers
 - styles [WPF], event triggers
 ms.assetid: 481765e5-5467-4a75-9f7b-e10e2ac410d9
-ms.openlocfilehash: 580eb2c7efd00382f7fff24984f0ce6f6d8fa027
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 3fae4993a13b02ad998668f644a80ba7c07196fa
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57370724"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59132299"
 ---
 # <a name="styling-and-templating"></a>스타일 지정 및 템플릿
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 스타일 지정 및 템플릿은 개발자와 디자이너가 시각적으로 눈에 띄는 효과를 만들고 제품에 대한 일관된 모양을 만들 수 있는 기능 모음(스타일, 템플릿, 트리거 및 스토리보드)을 나타냅니다. 개발자 및/또는 디자이너는 애플리케이션에 따라 모양을 광범위하게 사용자 지정할 수 있지만 애플리케이션 내에서 또는 애플리케이션 간에 모양을 유지 관리 및 공유하려면 강력한 스타일 지정 및 템플릿 모델이 필요합니다. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]에서 이 모델을 제공합니다.  
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 스타일 지정 및 템플릿 집합 개발자와 디자이너가 시각적으로 멋진 효과를 만들고 해당 제품에 대해 일관 된 모양을 만들려면 허용 하는 기능 (스타일, 템플릿, 트리거 및 스토리 보드)을 참조 하십시오. 개발자 및/또는 디자이너는 애플리케이션에 따라 모양을 광범위하게 사용자 지정할 수 있지만 애플리케이션 내에서 또는 애플리케이션 간에 모양을 유지 관리 및 공유하려면 강력한 스타일 지정 및 템플릿 모델이 필요합니다. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 이 모델을 제공 합니다.  
   
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 스타일 지정 모델의 또 다른 기능은 프레젠테이션과 논리의 분리입니다. 즉, 개발자가 C# 또는 Visual Basic을 사용하여 프로그래밍 논리 작업을 수행할 때 동시에 디자이너가 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]만 사용하여 애플리케이션 모양 작업을 수행할 수 있습니다.  
   
@@ -45,7 +45,7 @@ ms.locfileid: "57370724"
   
  [!code-xaml[StylingIntroSample_snippet#TextBlocks](~/samples/snippets/csharp/VS_Snippets_Wpf/StylingIntroSample_snippet/CSharp/Window1.xaml#textblocks)]  
   
- ![스타일 샘플 스크린샷](./media/stylingintro-textblocksbefore.PNG "StylingIntro_TextBlocksBefore")  
+ ![스타일 샘플 스크린 샷](./media/stylingintro-textblocksbefore.PNG "StylingIntro_TextBlocksBefore")  
   
  와 같은 속성을 설정 하 여 기본 모양을 변경할 수 있습니다 <xref:System.Windows.Controls.Control.FontSize%2A> 하 고 <xref:System.Windows.Controls.Control.FontFamily%2A>, 각 <xref:System.Windows.Controls.TextBlock> 요소에서 직접. 그러나 하려는 경우에 <xref:System.Windows.Controls.TextBlock> 일부 속성을 공유 하는 요소 만들 수 있습니다를 <xref:System.Windows.Style> 에 `Resources` 의 섹션에 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 파일을 다음과 같이:  
   
@@ -57,7 +57,7 @@ ms.locfileid: "57370724"
   
  이제는 <xref:System.Windows.Controls.TextBlock> 요소가 다음과 같이 나타납니다.  
   
- ![스타일 지정 샘플 스크린샷](./media/stylingintro-textblocksbasestyle.PNG "StylingIntro_TextBlocksBaseStyle")  
+ ![스타일 샘플 스크린 샷](./media/stylingintro-textblocksbasestyle.PNG "StylingIntro_TextBlocksBaseStyle")  
   
 ### <a name="extending-styles"></a>스타일 확장  
  두 하려는 경우가 있을 것 <xref:System.Windows.Controls.TextBlock> 와 같은 일부 속성 값을 공유 하는 요소는 <xref:System.Windows.Controls.Control.FontFamily%2A> 가운데에 맞춰진 및 <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A>, 텍스트 "내 사진" 몇 가지 추가 속성을 가질 수도 있지만. 이 작업을 수행하려면 다음과 같이 첫 번째 스타일을 기반으로 새 스타일을 만듭니다.  
@@ -165,7 +165,7 @@ ms.locfileid: "57370724"
   
  다음 그림에서 마우스는 세 번째 항목을 가리키고 있습니다.  
   
- ![스타일 지정 샘플 스크린샷](./media/stylingintro-eventtriggers.png "StylingIntro_EventTriggers")  
+ ![스타일 샘플 스크린 샷](./media/stylingintro-eventtriggers.png "StylingIntro_EventTriggers")  
   
 ### <a name="multitriggers-datatriggers-and-multidatatriggers"></a>MultiTrigger, DataTrigger 및 MultiDataTrigger  
  외에 <xref:System.Windows.Trigger> 및 <xref:System.Windows.EventTrigger>, 다른 형식의 트리거가 있습니다. <xref:System.Windows.MultiTrigger> 여러 조건에 따라 속성 값을 설정할 수 있습니다. 사용할 <xref:System.Windows.DataTrigger> 고 <xref:System.Windows.MultiDataTrigger> 조건의 속성이 데이터 바인딩된 경우입니다.  
@@ -197,6 +197,7 @@ ms.locfileid: "57370724"
  사용자 지정 컨트롤에 대한 테마를 만들 경우 [컨트롤 작성 개요](control-authoring-overview.md)의 외부 컨트롤 라이브러리 섹션을 참조하세요.  
   
 ## <a name="see-also"></a>참고자료
+
 - [WPF의 Pack URI](../app-development/pack-uris-in-wpf.md)
-- [방법: ControlTemplate에서 생성 된 요소 찾기](how-to-find-controltemplate-generated-elements.md)
+- [방법: ControlTemplate에서 생성된 요소 찾기](how-to-find-controltemplate-generated-elements.md)
 - [DataTemplate에서 생성된 요소 찾기](../data/how-to-find-datatemplate-generated-elements.md)

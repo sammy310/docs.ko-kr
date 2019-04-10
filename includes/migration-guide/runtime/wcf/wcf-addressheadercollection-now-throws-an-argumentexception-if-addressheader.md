@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: a26b8c8a6315e57e70f4810ac4f5fb7ab4ba9b58
+ms.sourcegitcommit: 0aca6c5d166d7961a1e354c248495645b97a1dc5
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58760465"
+---
 ### <a name="wcf-addressheadercollection-now-throws-an-argumentexception-if-an-addressheader-element-is-null"></a>addressHeader 요소가 null인 경우 이제 WCF AddressHeaderCollection이 ArgumentException을 throw합니다.
 
 |   |   |

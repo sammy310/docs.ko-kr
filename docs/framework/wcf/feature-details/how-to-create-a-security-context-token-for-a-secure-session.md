@@ -1,18 +1,18 @@
 ---
-title: '방법: 보안 컨텍스트 토큰이 보안 세션'
+title: '방법: 보안 세션에 대한 보안 컨텍스트 토큰 만들기'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 640676b6-c75a-4ff7-aea4-b1a1524d71b2
-ms.openlocfilehash: 3d37d3894f7e6a1146cc4f04f53512ef06911ac7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0b0da7e60cb54a1c3d6eb6d2d557f7312da1e9ce
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54620073"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59189343"
 ---
-# <a name="how-to-create-a-security-context-token-for-a-secure-session"></a>방법: 보안 컨텍스트 토큰이 보안 세션
+# <a name="how-to-create-a-security-context-token-for-a-secure-session"></a>방법: 보안 세션에 대한 보안 컨텍스트 토큰 만들기
 보안 세션에서 상태 저장 SCT(보안 컨텍스트 토큰)을 사용하면 세션에서 서비스 재활용의 영향을 받지 않을 수 있습니다. 예를 들어, 상태 비저장 SCT를 보안 세션에서 사용할 때 IIS(인터넷 정보 서비스)를 다시 설정하면 서비스와 연결된 세션 데이터가 손실됩니다. 이 세션 데이터에는 SCT 토큰 캐시가 포함되어 있습니다. 따라서 클라이언트가 서비스에 상태 비저장 SCT를 다음에 보낼 때 SCT와 연결된 키를 검색할 수 없기 때문에 오류가 반환됩니다. 그러나 상태 저장 SCT를 사용하는 경우에는 SCT와 연결된 키가 SCT에 포함됩니다. 키가 SCT에 포함되어 메시지에 포함되므로 서비스 재활용이 보안 세션에 영향을 주지 않습니다. 기본적으로 Windows Communication Foundation (WCF)는 보안 세션에서 상태 비저장 Sct를 사용합니다. 이 항목에서는 보안 세션에서 상태 저장 SCT를 사용하는 방법에 대해 자세히 설명합니다.  
   
 > [!NOTE]
@@ -110,4 +110,5 @@ ms.locfileid: "54620073"
 ```  
   
 ## <a name="see-also"></a>참고자료
+
 - [\<customBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)

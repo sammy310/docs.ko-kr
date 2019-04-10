@@ -1,5 +1,5 @@
 ---
-title: '방법: Storyboard를 사용하지 않고 속성에 애니메이션 효과 주기'
+title: '방법: 스토리보드를 사용하지 않고 속성에 애니메이션 효과 주기'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - local animation [WPF]
 - animation [WPF], non-Storyboard (local)
 ms.assetid: d411db70-4df7-487d-82bc-95a7c1b2e7f8
-ms.openlocfilehash: b76afeb0187065ff07c832363d3a52896aa36822
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 93609cdeb4d879cbec0f90096e4fa2c131a2ec5e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57371166"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59091709"
 ---
-# <a name="how-to-animate-a-property-without-using-a-storyboard"></a>방법: Storyboard를 사용하지 않고 속성에 애니메이션 효과 주기
+# <a name="how-to-animate-a-property-without-using-a-storyboard"></a>방법: 스토리보드를 사용하지 않고 속성에 애니메이션 효과 주기
 사용 하지 않고 속성에 애니메이션을 적용 하는 방법을 보여 주는이 예제는 <xref:System.Windows.Media.Animation.Storyboard>합니다.  
   
 > [!NOTE]
@@ -37,6 +37,7 @@ ms.locfileid: "57371166"
  사용 하지 않고 애니메이션 효과를 주는 다른 방법이 <xref:System.Windows.Media.Animation.Storyboard> 개체에 대 한 자세한 내용은 참조 하십시오 [속성 애니메이션 기술 개요](property-animation-techniques-overview.md)합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Windows.Media.Animation.AnimationTimeline>
 - <xref:System.Windows.Media.Animation.Animatable.BeginAnimation%2A>
 - <xref:System.Windows.Media.Animation>

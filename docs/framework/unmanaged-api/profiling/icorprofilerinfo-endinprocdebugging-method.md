@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f86c680a10a3dcb1009b4f0cedd777ab9da5ac1f
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: bcae66fd30c29a0a3c9bd0b5ffc2047efdf3788d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57501749"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59138218"
 ---
 # <a name="icorprofilerinfoendinprocdebugging-method"></a>ICorProfilerInfo::EndInprocDebugging 메서드
 프로세스의 디버깅 세션을 종료 합니다. 이 메서드는.NET Framework 버전 2.0에서에서 사용 되지 않습니다.  
@@ -53,4 +53,5 @@ HRESULT EndInprocDebugging(
  **.NET framework 버전:** 1.0  
   
 ## <a name="see-also"></a>참고자료
+
 - [ICorProfilerInfo 인터페이스](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)

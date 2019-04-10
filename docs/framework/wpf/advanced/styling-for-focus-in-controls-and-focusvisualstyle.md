@@ -6,17 +6,16 @@ helpviewer_keywords:
 - focus [WPF], visual styling
 - styles [WPF], focus visual style
 ms.assetid: 786ac576-011b-4d72-913b-558deccb9b35
-ms.openlocfilehash: 762abf9524b8dfc7903d5e33bdbe99f4d0eb7192
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 745c2174c54ed072f91a6d5eb3b43d5385e96b90
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57377047"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59172057"
 ---
 # <a name="styling-for-focus-in-controls-and-focusvisualstyle"></a>컨트롤의 포커스 스타일 지정 및 FocusVisualStyle
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]에서는 컨트롤이 키보드 포커스를 받을 때 컨트롤의 시각적 모양을 변경하는 두 가지 병렬 메커니즘을 제공합니다. 와 같은 속성에 대 한 속성 setter를 사용 하는 첫 번째 메커니즘은 <xref:System.Windows.UIElement.IsKeyboardFocused%2A> 스타일 또는 컨트롤에 적용 되는 템플릿 내에서. 두 번째 메커니즘에서는 별도 스타일을 값으로 지정 하는 것은 <xref:System.Windows.FrameworkElement.FocusVisualStyle%2A> 속성 또는 다른 UI 컨트롤의 시각적 트리를 변경 하는 것이 아니라는 컨트롤 위에 그려지는 표시기에 대 한 별도 시각적 트리를 만들고 "포커스 비주얼 스타일" 교체 하 여 요소입니다. 이 항목에서는 이러한 각 메커니즘이 적절하게 적용되는 시나리오를 설명합니다.  
-   
-  
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 키보드 포커스를 받을 때 컨트롤의 시각적 모양을 변경 하는 두 가지 병렬 메커니즘을 제공 합니다. 와 같은 속성에 대 한 속성 setter를 사용 하는 첫 번째 메커니즘은 <xref:System.Windows.UIElement.IsKeyboardFocused%2A> 스타일 또는 컨트롤에 적용 되는 템플릿 내에서. 두 번째 메커니즘에서는 별도 스타일을 값으로 지정 하는 것은 <xref:System.Windows.FrameworkElement.FocusVisualStyle%2A> 속성 또는 다른 UI 컨트롤의 시각적 트리를 변경 하는 것이 아니라는 컨트롤 위에 그려지는 표시기에 대 한 별도 시각적 트리를 만들고 "포커스 비주얼 스타일" 교체 하 여 요소입니다. 이 항목에서는 이러한 각 메커니즘이 적절하게 적용되는 시나리오를 설명합니다.  
+
 <a name="Purpose"></a>   
 ## <a name="the-purpose-of-focus-visual-style"></a>포커스 비주얼 스타일의 목적  
  포커스 비주얼 스타일 기능은 UI 요소에 대한 키보드 탐색에 따라 시각적 사용자 피드백을 추가하기 위한 공통 “개체 모델”을 제공합니다. 이 작업은 컨트롤에 새 템플릿을 적용하거나 특정 템플릿 컴퍼지션을 인식하지 않아도 가능합니다.  
@@ -77,6 +76,7 @@ ms.locfileid: "57377047"
  기본 setter 또는 트리거를 해야 모든 원인은 포커스를 변경 하는 시각적 동작을 생성 하기를 원한다 면 합니다 <xref:System.Windows.UIElement.IsFocused%2A> 종속성 속성 또는에 <xref:System.Windows.UIElement.GotFocus> 또는 <xref:System.Windows.UIElement.LostFocus> 이벤트에 대 한는 <xref:System.Windows.EventSetter>합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Windows.FrameworkElement.FocusVisualStyle%2A>
 - [스타일 지정 및 템플릿](../controls/styling-and-templating.md)
 - [포커스 개요](focus-overview.md)

@@ -2,12 +2,12 @@
 title: 여러 비동기 작업을 시작 하 고 (Visual Basic)를 완료 될 때마다 처리
 ms.date: 07/20/2015
 ms.assetid: 57ffb748-af40-4794-bedd-bdb7fea062de
-ms.openlocfilehash: 8af97658465aa8f82fe3cd01013282c767eb4ba8
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: a9a41c354993e0d362c344d523d6c4c4b6f61f10
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58816930"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59309656"
 ---
 # <a name="start-multiple-async-tasks-and-process-them-as-they-complete-visual-basic"></a>여러 비동기 작업을 시작 하 고 (Visual Basic)를 완료 될 때마다 처리
 <xref:System.Threading.Tasks.Task.WhenAny%2A?displayProperty=nameWithType>를 사용하면 시작된 순서대로 처리하는 대신 동시에 여러 작업을 시작하고 완료 시 하나씩 처리할 수 있습니다.  
@@ -20,19 +20,19 @@ ms.locfileid: "58816930"
 ## <a name="downloading-the-example"></a>예제 다운로드  
  [Async 샘플: 애플리케이션 미세 조정](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)에서 WPF(Windows Presentation Foundation) 프로젝트를 다운로드한 후, 다음 단계를 수행합니다.  
   
-1.  다운로드한 파일의 압축을 푼 다음 Visual Studio를 시작합니다.  
+1. 다운로드한 파일의 압축을 푼 다음 Visual Studio를 시작합니다.  
   
-2.  메뉴 모음에서 **파일**, **열기**, **프로젝트/솔루션**을 선택합니다.  
+2. 메뉴 모음에서 **파일**, **열기**, **프로젝트/솔루션**을 선택합니다.  
   
-3.  **프로젝트 열기** 대화 상자에서 압축을 해제한 샘플 코드가 포함된 폴더를 열고 AsyncFineTuningVB에 대한 솔루션(.sln) 파일을 엽니다.  
+3. **프로젝트 열기** 대화 상자에서 압축을 해제한 샘플 코드가 포함된 폴더를 열고 AsyncFineTuningVB에 대한 솔루션(.sln) 파일을 엽니다.  
   
-4.  **솔루션 탐색기**에서 **ProcessTasksAsTheyFinish** 프로젝트에 대한 바로 가기 메뉴를 열고 **시작 프로젝트로 설정**을 선택합니다.  
+4. **솔루션 탐색기**에서 **ProcessTasksAsTheyFinish** 프로젝트에 대한 바로 가기 메뉴를 열고 **시작 프로젝트로 설정**을 선택합니다.  
   
-5.  F5 키를 선택하여 프로젝트를 실행합니다.  
+5. F5 키를 선택하여 프로젝트를 실행합니다.  
   
      디버그하지 않고 프로젝트를 실행하려면 Ctrl+F5를 선택합니다.  
   
-6.  프로젝트를 여러 번 실행하여 다운로드한 길이가 항상 같은 순서로 표시되는지 확인합니다.  
+6. 프로젝트를 여러 번 실행하여 다운로드한 길이가 항상 같은 순서로 표시되는지 확인합니다.  
   
  프로젝트를 다운로드하지 않으려는 경우 이 항목의 끝에 있는 MainWindow.xaml.vb 파일을 검토할 수 있습니다.  
   
@@ -208,6 +208,6 @@ End Class
 ## <a name="see-also"></a>참고자료
 
 - <xref:System.Threading.Tasks.Task.WhenAny%2A>
-- [Async 응용 프로그램 미세 조정(Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/fine-tuning-your-async-application.md)
+- [Async (Visual Basic) 응용 프로그램 미세 조정](../../../../visual-basic/programming-guide/concepts/async/fine-tuning-your-async-application.md)
 - [Async 및 Await를 사용한 비동기 프로그래밍(Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/index.md)
-- [비동기 샘플: 애플리케이션 미세 조정](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)
+- [Async 샘플: 응용 프로그램 미세 조정](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: ce2f14fd-1038-458a-91e3-a078c61f0d10
-ms.openlocfilehash: 0ee0bda8c3ee46cb6e08ee415def68a4a9832617
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2621ab4db207d1b868fbe3778c30c744201b0506
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54523483"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59135254"
 ---
 # <a name="how-to-handle-composite-keys-in-queries"></a>방법: 쿼리에서 복합 키 처리
 일부 연산자는 인수를 하나만 받아들일 수 있습니다. 인수가 데이터베이스에서 둘 이상의 열을 포함하는 경우 조합을 나타내는 익명 형식을 만들어야 합니다.  
@@ -28,4 +28,5 @@ ms.locfileid: "54523483"
  [!code-vb[DLinqCompositeKeys#2](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqCompositeKeys/vb/Module1.vb#2)]  
   
 ## <a name="see-also"></a>참고자료
+
 - [쿼리 개념](../../../../../../docs/framework/data/adonet/sql/linq/query-concepts.md)

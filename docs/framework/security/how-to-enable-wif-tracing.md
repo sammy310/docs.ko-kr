@@ -3,12 +3,12 @@ title: '방법: WIF 추적 사용'
 ms.date: 03/30/2017
 ms.assetid: 271b6889-3454-46ff-96ab-9feb15e742ee
 author: BrucePerlerMS
-ms.openlocfilehash: ab59b0809008f212269e2c4b9745ccaec8c9af5d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 83382a8375538acc04d293ee938a4e845d5e8820
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54605174"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59310267"
 ---
 # <a name="how-to-enable-wif-tracing"></a>방법: WIF 추적 사용
 ## <a name="applies-to"></a>적용 대상  
@@ -55,19 +55,19 @@ ms.locfileid: "54605174"
   
 #### <a name="to-create-a-simple-aspnet-application"></a>간단한 ASP.NET 애플리케이션을 만들려면  
   
-1.  Visual Studio를 시작하고 **파일**, **새로 만들기**, **프로젝트**를 차례로 클릭합니다.  
+1. Visual Studio를 시작하고 **파일**, **새로 만들기**, **프로젝트**를 차례로 클릭합니다.  
   
-2.  **새 프로젝트** 창에서 **ASP.NET Web Forms 응용 프로그램**을 클릭합니다.  
+2. **새 프로젝트** 창에서 **ASP.NET Web Forms 응용 프로그램**을 클릭합니다.  
   
-3.  **이름**에서 `TestApp`을 입력하고 **확인**을 누릅니다.  
+3. **이름**에서 `TestApp`을 입력하고 **확인**을 누릅니다.  
   
-4.  **솔루션 탐색기**에서 **TestApp** 프로젝트를 마우스 오른쪽 단추로 클릭한 다음 **ID 및 액세스**를 선택합니다.  
+4. **솔루션 탐색기**에서 **TestApp** 프로젝트를 마우스 오른쪽 단추로 클릭한 다음 **ID 및 액세스**를 선택합니다.  
   
-5.  **ID 및 액세스** 창이 나타납니다. **공급자**에서 **로컬 개발 STS로 응용 프로그램 테스트**를 선택한 다음 **적용**을 클릭합니다.  
+5. **ID 및 액세스** 창이 나타납니다. **공급자**에서 **로컬 개발 STS로 응용 프로그램 테스트**를 선택한 다음 **적용**을 클릭합니다.  
   
-6.  새 폴더 만들기의 명명 된 **로그** 의 루트에는 **c:** 드라이브 표시: **C:\logs**  
+6. 새 폴더 만들기의 명명 된 **로그** 의 루트에는 **c:** 드라이브 표시: **C:\logs**  
   
-7.  다음 **\<system.diagnostics>** 요소를 *Web.config* 구성 파일의 닫는 **\</configSections>** 요소 바로 뒤에 추가합니다. 다음과 같이 표시됩니다.  
+7. 다음 **\<system.diagnostics>** 요소를 *Web.config* 구성 파일의 닫는 **\</configSections>** 요소 바로 뒤에 추가합니다. 다음과 같이 표시됩니다.  
   
     ```xml  
     <configuration>  
@@ -96,8 +96,8 @@ ms.locfileid: "54605174"
   
 #### <a name="to-test-your-wif-enabled-aspnet-application-for-successful-tracing"></a>성공적인 추적을 위해 WIF 사용 가능 ASP.NET 애플리케이션을 테스트하려면  
   
-1.  **F5** 키를 눌러 솔루션을 실행합니다. 기본 ASP.NET 홈페이지가 표시되고 개발 STS에서 반환되는 기본 사용자인 사용자 이름 *Terry*로 자동으로 인증되어야 합니다.  
+1. **F5** 키를 눌러 솔루션을 실행합니다. 기본 ASP.NET 홈페이지가 표시되고 개발 STS에서 반환되는 기본 사용자인 사용자 이름 *Terry*로 자동으로 인증되어야 합니다.  
   
-2.  브라우저 창을 닫고 **C:\logs** 폴더로 이동합니다. 텍스트 편집기를 사용하여 **C:\logs\WIF.xml** 파일을 엽니다.  
+2. 브라우저 창을 닫고 **C:\logs** 폴더로 이동합니다. 텍스트 편집기를 사용하여 **C:\logs\WIF.xml** 파일을 엽니다.  
   
-3.  **WIF.xml** 파일을 검사하고 **\<E2ETraceEvent>** 로 시작하는 항목이 포함되어 있는지 확인합니다. 이러한 추적에는 **\<TraceRecord>** 요소와 추적된 작업에 대한 설명이 포함됩니다(예: **SecurityToken 유효성 검사**).
+3. **WIF.xml** 파일을 검사하고 **\<E2ETraceEvent>** 로 시작하는 항목이 포함되어 있는지 확인합니다. 이러한 추적에는 **\<TraceRecord>** 요소와 추적된 작업에 대한 설명이 포함됩니다(예: **SecurityToken 유효성 검사**).

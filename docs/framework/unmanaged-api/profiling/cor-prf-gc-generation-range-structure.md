@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: bbeebc766d6e8048843a74691addd1dee90623ee
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 646c4e37a7fab503a26557f9fdfc926b1186b17b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54621706"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59216706"
 ---
 # <a name="corprfgcgenerationrange-structure"></a>COR_PRF_GC_GENERATION_RANGE 구조체
-가비지 컬렉션이 진행 중인 메모리 범위(블록)를 설명합니다.  
+가비지 수집이 진행 중인 메모리 범위(블록)를 설명합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -59,4 +59,5 @@ typedef struct COR_PRF_GC_GENERATION_RANGE {
  **.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>참고자료
+
 - [프로파일링 구조체](../../../../docs/framework/unmanaged-api/profiling/profiling-structures.md)

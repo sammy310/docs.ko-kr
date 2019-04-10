@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6773d9387ae3b91125b413dee51b0c3fcbbb1edd
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 492a60d3c8d18bec4e99ae778686fec6e8724248
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57502022"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59140571"
 ---
 # <a name="icorruntimehostunloaddomain-method"></a>ICorRuntimeHost::UnloadDomain 메서드
 현재 프로세스에서 지정 된 응용 프로그램 도메인을 언로드합니다.  
@@ -58,6 +58,7 @@ HRESULT UnloadDomain (
  **.NET framework 버전:** 1.0, 1.1  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System._AppDomain>
 - <xref:System.AppDomain>
 - [ICorRuntimeHost 인터페이스](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md)

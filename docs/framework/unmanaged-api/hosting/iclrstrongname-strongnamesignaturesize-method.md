@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 78829d647e8d5467a628bc9ba5bb877a5f13b6de
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: b0c81b51deb6affb3dd39677184ea0a4b2e6ff61
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57474490"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59219982"
 ---
 # <a name="iclrstrongnamestrongnamesignaturesize-method"></a>ICLRStrongName::StrongNameSignatureSize 메서드
 강력한 이름 서명의 크기를 반환합니다. 이 메서드는 일반적으로 기본 서명이 연기 된 어셈블리를 만들 때 파일에 예약할 공간 결정 되는 컴파일러에서 사용 됩니다.  
@@ -60,4 +60,5 @@ HRESULT StrongNameSignatureSize (
  **.NET Framework 버전:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>참고자료
+
 - [ICLRStrongName 인터페이스](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)

@@ -1,11 +1,16 @@
 ---
 title: .NET 샘플 및 자습서
-description: '.NET Core, ASP.NET Core 및 .NET에 대해 배우는 데 도움이 되는 C# 언어용 샘플 및 자습서에 대한 정보입니다.'
+description: .NET Core, ASP.NET Core 및 .NET에 대해 배우는 데 도움이 되는 C# 언어용 샘플 및 자습서에 대한 정보입니다.
 author: BillWagner
 ms.author: wiwagn
 ms.date: 04/11/2017
+ms.openlocfilehash: 265ac7aa996014ea24e9c128076e12c937de0857
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59330820"
 ---
-
 # <a name="net-samples-and-tutorials"></a>.NET 샘플 및 자습서
 
 .NET 설명서에는 .NET에 대해 설명하는 샘플 및 자습서 집합이 포함되어 있습니다. 이 항목에서는 .NET Core, ASP.NET Core 및 C# 샘플 및 자습서를 찾고, 보고, 다운로드하는 방법을 설명합니다. F# 프로그래밍 언어를 학습하기 위한 리소스는 [F# Foundation 사이트](https://fsharp.org/learn.html)에서 찾을 수 있습니다. 온라인 코드 편집기를 사용하여 C#을 살펴보는 데 관심이 있는 경우 [이 대화형 자습서](https://www.microsoft.com/net/learn/in-browser-tutorial/1)로 시작하고 [C# 대화형 자습서](../csharp/tutorials/intro-to-csharp/index.md)를 계속 진행하세요. 샘플 코드를 보고 다운로드 하는 방법에 대한 지침은 [샘플 보기 및 다운로드](#viewing-and-downloading-samples) 섹션을 참조하세요.
@@ -14,7 +19,7 @@ ms.date: 04/11/2017
 
 ### <a name="samples"></a>샘플
 
-**[dotnet 테스트를 사용한 .NET Core의 유닛 테스트](../core/testing/unit-testing-with-dotnet-test.md)**
+**[Dotnet 테스트를 사용하여 .NET Core에서 단위 테스트](../core/testing/unit-testing-with-dotnet-test.md)**
 
 이 가이드에서는 ASP.NET Core 웹앱 및 관련 단위 테스트를 만드는 방법을 보여 줍니다. 먼저 간단한 웹 서비스 앱을 만든 다음 테스트를 추가합니다. 계속해서 더 많은 테스트를 만들어 새로운 기능 구현을 안내합니다. [완료된 샘플](https://github.com/dotnet/samples/tree/master/core/getting-started/unit-testing-using-dotnet-test)은 GitHub의 dotnet/samples 리포지토리에서 사용 가능합니다.
 
@@ -107,6 +112,6 @@ ms.date: 04/11/2017
 1. 리포지토리의 폴더 내에서 샘플의 위치로 이동합니다. 샘플에 대한 링크를 따라가면 브라우저의 주소 표시줄에 샘플 위치에 대한 상대 경로가 나타납니다.
 1. 다음과 같은 몇 가지 옵션을 사용하여 샘플을 실행할 수 있습니다.
    * [dotnet CLI 도구](../core/tools/index.md) 사용: 콘솔 창에서 샘플의 폴더로 이동하고 dotnet CLI 명령을 사용합니다.
-   * [Visual Studio](https://visualstudio.microsoft.com/) 또는 [Mac용 Visual Studio](https://visualstudio.microsoft.com/vs/visual-studio-mac/) 사용: 메뉴 모음에서 **파일 > 열기 > 프로젝트/솔루션**을 선택하여 샘플을 열고 샘플 프로젝트 폴더로 이동하여 프로젝트 파일(*.csproj* 또는 *.fsproj*)을 선택합니다.
+   * [Visual Studio](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link) 또는 [Mac용 Visual Studio](https://visualstudio.microsoft.com/vs/mac/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link) 사용: 메뉴 모음에서 **파일 > 열기 > 프로젝트/솔루션**을 선택하여 샘플을 열고 샘플 프로젝트 폴더로 이동하여 프로젝트 파일(*.csproj* 또는 *.fsproj*)을 선택합니다.
    * [Visual Studio Code](https://code.visualstudio.com/) 사용: 메뉴 모음에서 **파일 > 폴더 열기**를 선택하고 샘플의 프로젝트 폴더를 선택하여 샘플을 엽니다.
    * .NET Core 프로젝트를 지원하는 다른 IDE를 사용합니다.

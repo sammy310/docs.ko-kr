@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC40029
 ms.assetid: 178452f3-5575-4da0-9d6c-53bcddb6a338
-ms.openlocfilehash: 6743a0decebb9711a4e44d09b03fe32f88ff2f72
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 063c42249abbfb506fd15311659599b4777d397f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55283480"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59101317"
 ---
 # <a name="classname-is-not-cls-compliant-because-the-interface-interfacename-it-implements-is-not-cls-compliant"></a>'\<응용 프로그램 이름 >' 때문에 CLS 규격이 아닙니다 인터페이스 '\<interfacename >'이 구현 CLS 규격이 아닙니다.
 클래스 또는 인터페이스가 `<CLSCompliant(True)>` 로 표시 또는 표시되지 않은 형식을 구현하거나 해당 형식에서 파생될 때 `<CLSCompliant(False)>` 로 표시되었습니다.  
@@ -32,5 +32,3 @@ ms.locfileid: "55283480"
 -   CLS 규격이 필요하면 다른 상속 계층 구조에서 이 형식을 정의합니다.  
   
 -   이 형식이 현재 상속 계층 구조 또는 구현 체계에 유지되어야 하는 경우 해당 정의에서 <xref:System.CLSCompliantAttribute> 를 제거하거나 `<CLSCompliant(False)>`로 표시합니다.  
-  
- 

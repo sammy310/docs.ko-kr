@@ -8,12 +8,12 @@ helpviewer_keywords:
 - WCF, security
 - ProtectionLevel property
 ms.assetid: 0c034608-a1ac-4007-8287-b1382eaa8bf2
-ms.openlocfilehash: 8ca003257f9e16075262a715aec4941d9aa4073b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 90fb844931c3af54367d0e7c14a766636cdcc71a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54564633"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59096051"
 ---
 # <a name="understanding-protection-level"></a>보호 수준 이해
 `ProtectionLevel` 및 <xref:System.ServiceModel.ServiceContractAttribute> 클래스와 같은 여러 클래스에서 볼 수 있는 <xref:System.ServiceModel.OperationContractAttribute> 속성은 메시지의 전체나 일부를 보호하는 방법을 제어합니다. 이 항목에서는 Windows Communication Foundation (WCF) 기능 및 작동 원리를 설명 합니다.  
@@ -95,6 +95,7 @@ ms.locfileid: "54564633"
  클라이언트가 `Price` 메서드를 호출할 경우 서비스로부터 회신을 받으면 예외를 throw합니다. 이는 클라이언트가 `ProtectionLevel`에 `ServiceContractAttribute`을 지정하지 않아 <xref:System.Net.Security.ProtectionLevel.EncryptAndSign> 메서드를 포함한 모든 메서드에 기본값(`Price`)을 사용하기 때문입니다. 하지만 서비스 계약에서는 보호 수준이 <xref:System.Net.Security.ProtectionLevel.Sign>으로 설정된 하나의 메서드를 정의하므로, 서비스에서 <xref:System.Net.Security.ProtectionLevel.Sign> 수준을 사용하여 값을 반환합니다. 이 경우 클라이언트에서는 서비스 응답에 대한 유효성 검사를 할 때 오류를 throw합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.ServiceModel.ServiceContractAttribute>
 - <xref:System.ServiceModel.OperationContractAttribute>
 - <xref:System.ServiceModel.FaultContractAttribute>

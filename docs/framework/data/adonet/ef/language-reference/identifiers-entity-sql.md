@@ -2,12 +2,12 @@
 title: 식별자(Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: d58a5edd-7b5c-48e1-b5d7-a326ff426aa4
-ms.openlocfilehash: 19c28eb4c883cc0d1cf18cba1751115277848208
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 702a9c69c37b572fde18dd57c44608678174fb15
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54686805"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59204902"
 ---
 # <a name="identifiers-entity-sql"></a>식별자(Entity SQL)
 식별자는 [!INCLUDE[esql](../../../../../../includes/esql-md.md)]에서 쿼리 식 별칭, 변수 참조, 개체 속성, 함수 등을 나타내는 데 사용됩니다. [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 두 종류의 식별자를 제공 합니다: 단순 식별자와 따옴표 붙은 식별자입니다.  
@@ -86,7 +86,7 @@ SELECT 1 AS X, 2 AS X …
 ```  
   
 ## <a name="scoping-rules"></a>범위 지정 규칙  
- [!INCLUDE[esql](../../../../../../includes/esql-md.md)]에서는 쿼리 언어에 특정 변수가 표시되는 시점을 결정하는 범위 지정 규칙을 정의합니다. 어떤 식이나 문에서는 새 이름을 제공합니다. 이러한 이름을 사용할 수 있는 위치 및 동일한 이름을 다른 이름으로 새로 선언하여 선행 이름을 숨길 수 있는 시점이나 위치 등을 결정하는 데 범위 지정 규칙이 적용됩니다.  
+ [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 특정 변수 쿼리 언어로 표시 되는 시점을 결정 하는 범위 지정 규칙을 정의 합니다. 어떤 식이나 문에서는 새 이름을 제공합니다. 이러한 이름을 사용할 수 있는 위치 및 동일한 이름을 다른 이름으로 새로 선언하여 선행 이름을 숨길 수 있는 시점이나 위치 등을 결정하는 데 범위 지정 규칙이 적용됩니다.  
   
  [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 쿼리에서 이름이 정의되어 있는 경우 범위 내에서 정의되어 있다고 말합니다. 범위는 쿼리의 전체 영역을 포괄합니다. 특정 범위의 모든 식이나 이름 참조에서는 해당 범위에서 정의된 이름을 볼 수 있습니다. 범위 시작 이전과 끝난 후에는 그 범위에서 정의된 이름을 참조할 수 없습니다.  
   
@@ -121,6 +121,7 @@ SELECT 1 AS X, 2 AS X …
  `AVG(t.c) becomes AVG(group..(t.c))`  
   
 ## <a name="see-also"></a>참고자료
+
 - [엔터티 SQL 참조](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
 - [Entity SQL 개요](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)
-- [입력 문자 집합](../../../../../../docs/framework/data/adonet/ef/language-reference/input-character-set-entity-sql.md)
+- [입력 문자 세트](../../../../../../docs/framework/data/adonet/ef/language-reference/input-character-set-entity-sql.md)

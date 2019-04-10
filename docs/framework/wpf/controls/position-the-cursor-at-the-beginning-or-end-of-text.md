@@ -1,5 +1,5 @@
 ---
-title: '방법: TextBox 컨트롤의 텍스트 시작 또는 끝 위치에 커서 놓기'
+title: '방법: TextBox 컨트롤에서 텍스트 시작 또는 끝에 커서 놓기'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - TextBox control [WPF], positioning cursor
 - cursor [WPF], positioning
 ms.assetid: c771a0b8-c6b4-4240-aecd-a21d0ba51a2e
-ms.openlocfilehash: e4058518e4eb56e1cd9d5fdafd792d8f8d3b77ab
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 3d7da5daf09e06938b8366e0f5f98a599cae4571
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57367845"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59186227"
 ---
-# <a name="how-to-position-the-cursor-at-the-beginning-or-end-of-text-in-a-textbox-control"></a>방법: TextBox 컨트롤의 텍스트 시작 또는 끝 위치에 커서 놓기
+# <a name="how-to-position-the-cursor-at-the-beginning-or-end-of-text-in-a-textbox-control"></a>방법: TextBox 컨트롤에서 텍스트 시작 또는 끝에 커서 놓기
 시작 또는 텍스트 내용의 끝에 커서를 배치 하는 방법을 보여 주는이 예제는 <xref:System.Windows.Controls.TextBox> 제어 합니다.  
   
 ## <a name="example"></a>예제  
@@ -37,5 +37,6 @@ ms.locfileid: "57367845"
  [!code-vb[TextBox_MiscCode#_CursorToEnd](~/samples/snippets/visualbasic/VS_Snippets_Wpf/TextBox_MiscCode/VisualBasic/Window1.xaml.vb#_cursortoend)]  
   
 ## <a name="see-also"></a>참고자료
+
 - [TextBox 개요](textbox-overview.md)
 - [RichTextBox 개요](richtextbox-overview.md)

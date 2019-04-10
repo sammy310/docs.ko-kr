@@ -6,17 +6,16 @@ helpviewer_keywords:
 - TreeView control [WPF], about TreeView control
 - Control class [WPF], TreeView
 ms.assetid: 62212512-5a5c-4864-949e-b6a6a3a52c02
-ms.openlocfilehash: 5758aead9811cdbaf7f61bbd710092f6b4474ad8
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: c0967aa506b087120c776389c2891ec9e0b0b64d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57369632"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59209075"
 ---
 # <a name="treeview-overview"></a>TreeView 개요
 <xref:System.Windows.Controls.TreeView> 컨트롤은 축소 가능한 노드를 사용 하 여 계층 구조에서 정보를 표시 하는 방법을 제공 합니다. 이 항목에서는 소개 합니다 <xref:System.Windows.Controls.TreeView> 고 <xref:System.Windows.Controls.TreeViewItem> 컨트롤 및 사용 하는 간단한 예제를 제공 합니다.  
-  
-  
+
 <a name="Simple_TreeView_Control"></a>   
 ## <a name="what-is-a-treeview"></a>TreeView란?  
  <xref:System.Windows.Controls.TreeView> <xref:System.Windows.Controls.ItemsControl> 를 사용 하 여 항목을 중첩 하 <xref:System.Windows.Controls.TreeViewItem> 컨트롤입니다. 다음 예제에서는 <xref:System.Windows.Controls.TreeView>합니다.  
@@ -74,6 +73,7 @@ ms.locfileid: "57369632"
  [!code-xaml[TreeViewDataBinding#6](~/samples/snippets/csharp/VS_Snippets_Wpf/TreeViewDataBinding/CSharp/Window1.xaml#6)]  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Windows.Controls.TreeView>
 - <xref:System.Windows.Controls.TreeViewItem>
 - [방법 항목](treeview-how-to-topics.md)

@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f61efdecfb87ed598dd9675c0b8804259849e64c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 878941f7af71fa5e3de8e38c4a68a66cb964983d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54706269"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59223162"
 ---
 # <a name="icordebugtype2-interface"></a>ICorDebugType2 인터페이스
 ICorDebugType 인터페이스는 기본 형식 또는 복합 (사용자 정의 됨) 형식의 형식 식별자를 검색 하는 확장 합니다.  
@@ -64,4 +64,5 @@ pType2->GetTypeID(&id);
  **.NET Framework 버전:** [!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]  
   
 ## <a name="see-also"></a>참고자료
+
 - [디버깅 인터페이스](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - WCF Data Services, changing data
 ms.assetid: e3f2d71d-434c-4e98-91c3-95adae4702b6
-ms.openlocfilehash: 2a515609feff343b6e917bf420a06cfb9dc468df
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6fa8e9d66fa89eb058aafd1e74164097b7f5c3a3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54614226"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59157861"
 ---
 # <a name="how-to-attach-an-existing-entity-to-the-dataservicecontext-wcf-data-services"></a>방법: 기존 엔터티를 DataServiceContext (WCF Data Services)에 연결
 엔터티의 데이터 서비스에 이미 있는 경우는 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 클라이언트 라이브러리를 사용 하면 엔터티를 직접 나타내는 개체를 연결 하는 <xref:System.Data.Services.Client.DataServiceContext> 첫 번째 하지 않고 쿼리를 실행 합니다. 자세한 내용은 [데이터 서비스 업데이트](../../../../docs/framework/data/wcf/updating-the-data-service-wcf-data-services.md)합니다.  
@@ -26,4 +26,5 @@ ms.locfileid: "54614226"
  [!code-vb[Astoria Northwind Client#AttachObject](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/source.vb#attachobject)]  
   
 ## <a name="see-also"></a>참고자료
+
 - [WCF Data Services 클라이언트 라이브러리](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)

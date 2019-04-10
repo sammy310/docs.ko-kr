@@ -9,12 +9,12 @@ helpviewer_keywords:
 - ink [WPF], selecting from custom control
 - custom controls [WPF], ink selection
 ms.assetid: 5f3a45c6-6d40-4017-9b47-933f134ceba3
-ms.openlocfilehash: 8517041fd9a1864abfb32851314a2926ddab5a3e
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 5c9b2f3d64e4cbb309772d6a1d9fa88f589df84c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57363780"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59173600"
 ---
 # <a name="how-to-select-ink-from-a-custom-control"></a>방법: 사용자 지정 컨트롤에서 잉크 선택
 추가 하 여는 <xref:System.Windows.Ink.IncrementalLassoHitTester> 사용자 지정 컨트롤에 설정할 수 있습니다. 사용자는 방식과 유사 하 게 올가미 도구를 사용 하 여 잉크를 선택할 수 있도록 컨트롤을 <xref:System.Windows.Controls.InkCanvas> 올가미를 사용 하 여 잉크를 선택 합니다.  
@@ -87,6 +87,7 @@ ms.locfileid: "57363780"
  [!code-vb[HowToSelectInk#1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/HowToSelectInk/VisualBasic/InkSelector.vb#1)]  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Windows.Ink.IncrementalLassoHitTester>
 - <xref:System.Windows.Ink.StrokeCollection>
 - <xref:System.Windows.Input.StylusPointCollection>

@@ -11,12 +11,12 @@ helpviewer_keywords:
 - overloaded operators [Visual Basic], calling
 - operator overloading
 ms.assetid: 0dce42cc-f0b0-4c14-9f62-018b21f33497
-ms.openlocfilehash: 46614ad43e7be72c8396f47ba7f5d02185f62827
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: d68781aa12ab7c1c717031ca252c5f3120649edc
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58837093"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59335487"
 ---
 # <a name="how-to-call-an-operator-procedure-visual-basic"></a>방법: 연산자 프로시저 (Visual Basic)를 호출 합니다.
 연산자 기호를 사용 하 여 식에서 연산자 프로시저를 호출 합니다. 호출 하는 변환 연산자의 경우는 [CType 함수](../../../../visual-basic/language-reference/functions/ctype-function.md) 다른 데이터 형식에서 값을 변환할 수 있습니다.  
@@ -27,19 +27,19 @@ ms.locfileid: "58837093"
   
 ### <a name="to-call-an-operator-procedure"></a>연산자 프로시저 호출  
   
-1.  일반적인 방법으로 식에서 연산자 기호를 사용 합니다.  
+1. 일반적인 방법으로 식에서 연산자 기호를 사용 합니다.  
   
-2.  연산자의 경우 및 올바른 순서로 피연산자의 데이터 형식이 적합 해야 합니다.  
+2. 연산자의 경우 및 올바른 순서로 피연산자의 데이터 형식이 적합 해야 합니다.  
   
-3.  예상 대로 연산자 식의 값에 기여 합니다.  
+3. 예상 대로 연산자 식의 값에 기여 합니다.  
   
 ### <a name="to-call-a-conversion-operator-procedure"></a>변환 연산자 프로시저 호출  
   
-1.  사용 하 여 `CType` 식 내에서.  
+1. 사용 하 여 `CType` 식 내에서.  
   
-2.  피연산자의 데이터 형식 변환에 대 한 올바른 순서에 적합 해야 합니다.  
+2. 피연산자의 데이터 형식 변환에 대 한 올바른 순서에 적합 해야 합니다.  
   
-3.  `CType` 변환 연산자 프로시저를 호출 하 고 변환 된 값을 반환 합니다.  
+3. `CType` 변환 연산자 프로시저를 호출 하 고 변환 된 값을 반환 합니다.  
   
 ## <a name="example"></a>예제  
  다음 예제에서는 두 개의 <xref:System.TimeSpan> 구조를 함께 추가 하 고 제 3의 결과 저장 <xref:System.TimeSpan> 구조입니다. <xref:System.TimeSpan> 구조는 여러 표준 연산자를 오버 로드할 연산자 프로시저를 정의 합니다.  
@@ -57,11 +57,11 @@ ms.locfileid: "58837093"
 
 - [연산자 프로시저](./operator-procedures.md)
 - [방법: 연산자 정의](./how-to-define-an-operator.md)
-- [방법: 변환 연산자를 정의 합니다.](./how-to-define-a-conversion-operator.md)
-- [Operator 문](../../../../visual-basic/language-reference/statements/operator-statement.md)
-- [확장](../../../../visual-basic/language-reference/modifiers/widening.md)
+- [방법: 변환 연산자 정의](./how-to-define-a-conversion-operator.md)
+- [Operator Statement](../../../../visual-basic/language-reference/statements/operator-statement.md)
+- [Widening](../../../../visual-basic/language-reference/modifiers/widening.md)
 - [Narrowing](../../../../visual-basic/language-reference/modifiers/narrowing.md)
 - [Structure 문](../../../../visual-basic/language-reference/statements/structure-statement.md)
-- [방법: 구조 선언](../../../../visual-basic/programming-guide/language-features/data-types/how-to-declare-a-structure.md)
+- [방법: 구조체 선언](../../../../visual-basic/programming-guide/language-features/data-types/how-to-declare-a-structure.md)
 - [암시적 변환과 명시적 변환](../../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md)
-- [확대 변환과 축소 변환](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)
+- [Widening and Narrowing Conversions](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)

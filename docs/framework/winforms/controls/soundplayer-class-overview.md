@@ -6,12 +6,12 @@ helpviewer_keywords:
 - SoundPlayer class [Windows Forms], about SoundPlayer class
 - sounds [Windows Forms], playing
 ms.assetid: fcebb938-62b9-4677-9cbe-6465bc863e22
-ms.openlocfilehash: 041e7d0170bc98797278e209fd86cff0f82db9fb
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3ff23cbfa78b803d4526e7a7c389fd5d458a967c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54690688"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59195009"
 ---
 # <a name="soundplayer-class-overview"></a>SoundPlayer 클래스 개요
 <xref:System.Media.SoundPlayer> 클래스를 사용하여 응용 프로그램에 소리를 쉽게 포함할 수 있습니다.  
@@ -32,8 +32,9 @@ ms.locfileid: "54690688"
 |<xref:System.Media.SoundPlayer.Play%2A> 메서드|에 지정 된 소리를 재생 합니다 <xref:System.Media.SoundPlayer.SoundLocation%2A> 또는 <xref:System.Media.SoundPlayer.Stream%2A> 새 스레드에서 속성입니다.|  
 |<xref:System.Media.SoundPlayer.PlaySync%2A> 메서드|에 지정 된 소리를 재생 합니다 <xref:System.Media.SoundPlayer.SoundLocation%2A> 또는 <xref:System.Media.SoundPlayer.Stream%2A> 현재 스레드의 속성입니다.|  
 |<xref:System.Media.SoundPlayer.Stop%2A> 메서드|현재 재생 중인 모든 소리를 중지합니다.|  
-|<xref:System.Media.SoundPlayer.LoadCompleted> 이벤트|소리의 로드를 시도한 후에 발생합니다.|  
+|<xref:System.Media.SoundPlayer.LoadCompleted> 이벤트(event)|소리의 로드를 시도한 후에 발생합니다.|  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Media.SoundPlayer>
 - <xref:System.Media.SystemSounds>

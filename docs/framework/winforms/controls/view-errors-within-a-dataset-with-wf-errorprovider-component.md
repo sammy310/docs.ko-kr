@@ -1,5 +1,5 @@
 ---
-title: '방법: Windows Forms ErrorProvider 구성 요소를 사용 하 여 데이터 집합에 있는 오류 보기'
+title: '방법: Windows Forms ErrorProvider 구성 요소를 사용하여 DataSet 내의 오류 보기'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - error messages [Windows Forms], viewing in datasets
 - ErrorProvider component [Windows Forms], dataset errors
 ms.assetid: cbae023f-d651-4210-bdea-bcc5f037e321
-ms.openlocfilehash: 6202ac758d2cbf599c7e48a31ed2804608c70977
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 15fbf4a3cebef1485f0c54ace36ab88f3d4289e7
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57705391"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59310449"
 ---
-# <a name="how-to-view-errors-within-a-dataset-with-the-windows-forms-errorprovider-component"></a>방법: Windows Forms ErrorProvider 구성 요소를 사용 하 여 데이터 집합에 있는 오류 보기
+# <a name="how-to-view-errors-within-a-dataset-with-the-windows-forms-errorprovider-component"></a>방법: Windows Forms ErrorProvider 구성 요소를 사용하여 DataSet 내의 오류 보기
 Windows Forms를 사용할 수 있습니다 <xref:System.Windows.Forms.ErrorProvider> 데이터 집합 또는 다른 데이터 원본 내 열 오류를 보려면 구성 요소입니다. 에 대 한는 <xref:System.Windows.Forms.ErrorProvider> 폼에서 데이터 오류를 표시 하려면 구성 요소 수 하지 않아도 컨트롤을 사용 하 여 직접 연결 합니다. 데이터 원본에 바인딩된 후 동일한 데이터 원본에 바인딩되는 컨트롤 옆에 오류 아이콘이 표시할 수 있습니다.  
   
 > [!NOTE]
@@ -24,7 +24,7 @@ Windows Forms를 사용할 수 있습니다 <xref:System.Windows.Forms.ErrorProv
   
 ### <a name="to-display-data-errors"></a>데이터 오류를 표시 하려면  
   
-1.  데이터 테이블 내에서 특정 열으로 구성 요소를 바인딩하십시오.  
+1. 데이터 테이블 내에서 특정 열으로 구성 요소를 바인딩하십시오.  
   
     ```vb  
     ' Assumes existence of DataSet1, DataTable1  
@@ -40,7 +40,7 @@ Windows Forms를 사용할 수 있습니다 <xref:System.Windows.Forms.ErrorProv
     errorProvider1.DataMember = "Customers";  
     ```  
   
-2.  설정 된 <xref:System.Windows.Forms.ErrorProvider.ContainerControl%2A> 속성을 폼입니다.  
+2. 설정 된 <xref:System.Windows.Forms.ErrorProvider.ContainerControl%2A> 속성을 폼입니다.  
   
     ```vb  
     ErrorProvider1.ContainerControl = Me  
@@ -50,7 +50,7 @@ Windows Forms를 사용할 수 있습니다 <xref:System.Windows.Forms.ErrorProv
     errorProvider1.ContainerControl = this;  
     ```  
   
-3.  열 오류를 포함 하는 행을 현재 레코드의 위치를 설정 합니다.  
+3. 열 오류를 포함 하는 행을 현재 레코드의 위치를 설정 합니다.  
   
     ```vb  
     DataTable1.Rows(5).SetColumnError("Name", "Bad data in this row.")  
@@ -63,5 +63,6 @@ Windows Forms를 사용할 수 있습니다 <xref:System.Windows.Forms.ErrorProv
     ```  
   
 ## <a name="see-also"></a>참고자료
+
 - [ErrorProvider 구성 요소 개요](errorprovider-component-overview-windows-forms.md)
-- [방법: Windows Forms ErrorProvider 구성 요소를 사용 하 여 폼 유효성에 대 한 오류 아이콘 표시](display-error-icons-for-form-validation-with-wf-errorprovider.md)
+- [방법: Windows Forms ErrorProvider 구성 요소를 사용하여 양식 유효성 오류 아이콘 표시](display-error-icons-for-form-validation-with-wf-errorprovider.md)

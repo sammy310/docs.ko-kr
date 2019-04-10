@@ -9,12 +9,12 @@ helpviewer_keywords:
 - WCF Data Services, querying
 - WCF Data Services, accessing data
 ms.assetid: 823e9444-27aa-4f1f-be8e-0486d67f54c0
-ms.openlocfilehash: da015fcd20745ef67831b7133242d66392f923e1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3283ec1661138a636914d6b1ca5e7adb5d5d52d3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54620411"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59175983"
 ---
 # <a name="querying-the-data-service-wcf-data-services"></a>데이터 서비스 쿼리(WCF Data Services)
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 클라이언트 라이브러리를 사용하면 LINQ(Language-Integrated Query) 사용을 비롯한 익숙한 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 프로그래밍 패턴을 사용하여 데이터 서비스에 대해 쿼리를 실행할 수 있습니다. 클라이언트 라이브러리는 클라이언트에서 <xref:System.Data.Services.Client.DataServiceQuery%601> 클래스의 인스턴스로 정의된 쿼리를 HTTP GET 요청 메시지로 변환합니다. 라이브러리는 응답 메시지를 받고 클라이언트 데이터 서비스 클래스의 인스턴스로 변환 합니다. 이러한 클래스는 <xref:System.Data.Services.Client.DataServiceContext>가 속해 있는 <xref:System.Data.Services.Client.DataServiceQuery%601>에 의해 추적됩니다.  
@@ -63,7 +63,7 @@ http://localhost:12345/Northwind.svc/Orders?Orderby=ShippedDate&?filter=Freight 
  자세한 내용은 [LINQ 고려 사항](../../../../docs/framework/data/wcf/linq-considerations-wcf-data-services.md)합니다.  
   
 ## <a name="adding-query-options"></a>쿼리 옵션 추가  
- 데이터 서비스 쿼리는 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]에서 제공하는 모든 쿼리 옵션을 지원합니다. 쿼리 옵션을 <xref:System.Data.Services.Client.DataServiceQuery%601.AddQueryOption%2A> 인스턴스에 추가하려면 <xref:System.Data.Services.Client.DataServiceQuery%601> 메서드를 호출합니다. <xref:System.Data.Services.Client.DataServiceQuery%601.AddQueryOption%2A>은 원래 쿼리와 동일하지만 새 쿼리 옵션 집합이 포함된 새 <xref:System.Data.Services.Client.DataServiceQuery%601> 인스턴스를 반환합니다. 다음 쿼리를 실행하면 `Orders` 값으로 필터링되고 `Freight`를 기준으로 내림차순으로 정렬된 `OrderID`가 반환됩니다.  
+ 데이터 서비스 쿼리는 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]에서 제공하는 모든 쿼리 옵션을 지원합니다. 쿼리 옵션을 <xref:System.Data.Services.Client.DataServiceQuery%601.AddQueryOption%2A> 인스턴스에 추가하려면 <xref:System.Data.Services.Client.DataServiceQuery%601> 메서드를 호출합니다. <xref:System.Data.Services.Client.DataServiceQuery%601.AddQueryOption%2A> 반환 된 새 <xref:System.Data.Services.Client.DataServiceQuery%601> 인스턴스와 원래 쿼리와 동일 하지만 새 쿼리 옵션이 설정 합니다. 다음 쿼리를 실행하면 `Orders` 값으로 필터링되고 `Freight`를 기준으로 내림차순으로 정렬된 `OrderID`가 반환됩니다.  
   
  [!code-csharp[Astoria Northwind Client#AddQueryOptionsSpecific](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/source.cs#addqueryoptionsspecific)]  
  [!code-vb[Astoria Northwind Client#AddQueryOptionsSpecific](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/source.vb#addqueryoptionsspecific)]  
@@ -99,17 +99,17 @@ http://localhost:12345/Northwind.svc/Orders?Orderby=ShippedDate&?filter=Freight 
   
  <xref:System.Data.Services.Client.QueryOperationResponse%601>에는 쿼리 결과에 대한 추가 정보에 액세스할 수 있도록 하는 다음 멤버도 있습니다.  
   
--   <xref:System.Data.Services.Client.OperationResponse.Error%2A> - 작업에서 오류가 throw된 경우 해당 오류를 가져옵니다.  
+-   <xref:System.Data.Services.Client.OperationResponse.Error%2A> -발생 하는 경우 작업에서 발생 한 오류를 가져옵니다.  
   
--   <xref:System.Data.Services.Client.OperationResponse.Headers%2A> - 쿼리 응답과 연결된 HTTP 응답 헤더의 컬렉션을 포함합니다.  
+-   <xref:System.Data.Services.Client.OperationResponse.Headers%2A> -쿼리 응답과 관련 된 HTTP 응답 헤더의 컬렉션을 포함 합니다.  
   
--   <xref:System.Data.Services.Client.QueryOperationResponse.Query%2A> - <xref:System.Data.Services.Client.DataServiceQuery%601>를 생성한 원래 <xref:System.Data.Services.Client.QueryOperationResponse%601>를 가져옵니다.  
+-   <xref:System.Data.Services.Client.QueryOperationResponse.Query%2A> -원래 가져옵니다 <xref:System.Data.Services.Client.DataServiceQuery%601> 생성 된 <xref:System.Data.Services.Client.QueryOperationResponse%601>합니다.  
   
--   <xref:System.Data.Services.Client.OperationResponse.StatusCode%2A> - 쿼리 응답의 HTTP 응답 코드를 가져옵니다.  
+-   <xref:System.Data.Services.Client.OperationResponse.StatusCode%2A> -쿼리 응답에 대 한 HTTP 응답 코드를 가져옵니다.  
   
--   <xref:System.Data.Services.Client.QueryOperationResponse%601.TotalCount%2A> - <xref:System.Data.Services.Client.DataServiceQuery%601.IncludeTotalCount%2A> 메서드가 <xref:System.Data.Services.Client.DataServiceQuery%601>에서 호출된 경우 엔터티 집합의 총 엔터티 수를 가져옵니다.  
+-   <xref:System.Data.Services.Client.QueryOperationResponse%601.TotalCount%2A> -때 가져옵니다 엔터티에서 엔터티의 총 설정 합니다 <xref:System.Data.Services.Client.DataServiceQuery%601.IncludeTotalCount%2A> 메서드를 호출한는 <xref:System.Data.Services.Client.DataServiceQuery%601>합니다.  
   
--   <xref:System.Data.Services.Client.QueryOperationResponse.GetContinuation%2A> - 결과의 다음 페이지 URI를 포함하는 <xref:System.Data.Services.Client.DataServiceQueryContinuation> 개체를 반환합니다.  
+-   <xref:System.Data.Services.Client.QueryOperationResponse.GetContinuation%2A> -반환 된 <xref:System.Data.Services.Client.DataServiceQueryContinuation> 결과의 다음 페이지의 URI를 포함 하는 개체입니다.  
   
  기본적으로 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 쿼리 URI에서 명시적으로 선택 된 데이터만 반환 합니다. 이에 따라 필요한 경우 데이터 서비스에서 추가 데이터를 명시적으로 로드하는 옵션이 제공됩니다. 데이터 서비스에서 데이터를 명시적으로 로드할 때마다 요청이 데이터 서비스로 전송됩니다. 명시적으로 로드될 수 있는 데이터에는 관련 엔터티, 페이징 응답 데이터 및 이진 데이터 스트림이 포함됩니다.  
   
@@ -124,7 +124,7 @@ http://localhost:12345/Northwind.svc/Orders?Orderby=ShippedDate&?filter=Freight 
  <xref:System.Int32> 또는 <xref:System.Int64> 메서드를 호출하여 각각 <xref:System.Linq.Enumerable.Count%2A> 또는 <xref:System.Linq.Enumerable.LongCount%2A> 값으로 집합의 총 엔터티 수만 가져올 수도 있습니다. 이러한 메서드를 호출하면 <xref:System.Data.Services.Client.QueryOperationResponse%601>가 반환되지 않고 개수 값만 반환됩니다. 자세한 내용은 [방법: 쿼리에서 반환 되는 엔터티 수를 확인할](../../../../docs/framework/data/wcf/number-of-entities-returned-by-a-query-wcf.md)합니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
- [프로젝트 쿼리](../../../../docs/framework/data/wcf/query-projections-wcf-data-services.md)  
+ [프로젝션 쿼리](../../../../docs/framework/data/wcf/query-projections-wcf-data-services.md)  
   
  [개체 구체화](../../../../docs/framework/data/wcf/object-materialization-wcf-data-services.md)  
   
@@ -134,13 +134,14 @@ http://localhost:12345/Northwind.svc/Orders?Orderby=ShippedDate&?filter=Freight 
   
  [방법: 데이터 서비스 쿼리에 쿼리 옵션 추가](../../../../docs/framework/data/wcf/how-to-add-query-options-to-a-data-service-query-wcf-data-services.md)  
   
- [방법: 쿼리에서 반환 하는 엔터티의 수 확인](../../../../docs/framework/data/wcf/number-of-entities-returned-by-a-query-wcf.md)  
+ [방법: 쿼리에서 반환하는 엔터티의 수 확인](../../../../docs/framework/data/wcf/number-of-entities-returned-by-a-query-wcf.md)  
   
- [방법: 데이터 서비스에 대 한 클라이언트 자격 증명 요청을 지정 합니다.](../../../../docs/framework/data/wcf/specify-client-creds-for-a-data-service-request-wcf.md)  
+ [방법: 데이터 서비스 요청에 대한 클라이언트 자격 증명 지정](../../../../docs/framework/data/wcf/specify-client-creds-for-a-data-service-request-wcf.md)  
   
  [방법: 클라이언트 요청의 헤더 설정](../../../../docs/framework/data/wcf/how-to-set-headers-in-the-client-request-wcf-data-services.md)  
   
- [방법: 쿼리 결과 프로젝션](../../../../docs/framework/data/wcf/how-to-project-query-results-wcf-data-services.md)  
+ [방법: 프로젝트 쿼리 결과](../../../../docs/framework/data/wcf/how-to-project-query-results-wcf-data-services.md)  
   
 ## <a name="see-also"></a>참고자료
+
 - [WCF Data Services 클라이언트 라이브러리](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)

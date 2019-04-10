@@ -2,12 +2,12 @@
 title: Entity Framework 용어
 ms.date: 03/30/2017
 ms.assetid: fa2a1bd1-6118-487b-8673-eebc66b92945
-ms.openlocfilehash: 644c1f19c0dc87ea7a9ab5fabbbd85b63ad1d1b8
-ms.sourcegitcommit: c6f69b0cf149f6b54483a6d5c2ece222913f43ce
+ms.openlocfilehash: a4befe4c45f11a59982edc9f976258f795a18cde
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2019
-ms.locfileid: "55904125"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59104171"
 ---
 # <a name="entity-framework-terminology"></a>Entity Framework 용어
 이 항목에서는 자주 참조 되는 용어를 정의 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] 설명서. 추가 정보를 볼 수 있는 관련 항목에 대한 링크가 제공됩니다.  
@@ -40,7 +40,7 @@ ms.locfileid: "55904125"
 |EntityType|키와 명명된 속성 집합을 포함하고 개념적 모델 또는 저장소 모델의 최상위 항목을 나타내는 데이터 형식의 지정입니다.<br /><br /> 자세한 내용은 [EntityType 요소 (CSDL)](/ef/ef6/modeling/designer/advanced/edmx/csdl-spec#entitytype-element-csdl) 하 고 [엔터티 형식](../../../../../docs/framework/data/adonet/entity-type.md)합니다.|  
 |명시적 로드(explicit loading)|개체가 쿼리에서 반환될 때 관련 개체가 동시에 로드되지 않습니다. 기본적으로 탐색 속성의 `Load` 메서드를 사용하여 명시적으로 요청할 때까지 관련 개체는 로드되지 않습니다.|  
 |외래 키 연결|외래 키 속성을 통해 관리되는 엔터티 간의 연결입니다.|  
-|식별 관계|주 엔터티의 기본 키가 종속 엔터티의 기본 키 일부인 관계입니다. 이러한 종류의 관계에서 종속 엔터티는 주 엔터티 없이 존재할 수 없습니다.|  
+|식별 관계|주 엔터티의 기본 키가 종속 엔터티의 기본 키에 속하는 관계입니다. 이러한 종류의 관계에서 종속 엔터티는 주 엔터티 없이 존재할 수 없습니다.|  
 |독립 연결|독립 개체에 의해 표현되고 추적되는 엔터티 간의 연결입니다.|  
 |key|엔터티 형식의 고유한 인스턴스를 식별하는 데 사용되는 속성 또는 속성 집합을 지정하는 엔터티 형식의 특성입니다. <xref:System.Data.EntityKey> 클래스에 의해 개체 계층에서 표현됩니다.<br /><br /> 자세한 내용은 [Key 요소 (CSDL)](/ef/ef6/modeling/designer/advanced/edmx/csdl-spec#key-element-csdl) 하 고 [엔터티 키](../../../../../docs/framework/data/adonet/entity-key.md)합니다.|  
 |지연 로드|개체가 쿼리에서 반환될 때 관련 개체가 동시에 로드되지 않습니다. 대신 탐색 속성에 액세스하면 관련 개체가 자동으로 로드됩니다.|  
@@ -56,7 +56,7 @@ ms.locfileid: "55904125"
 |개체 컨텍스트|개념적 모델에서 정의된 엔터티 컨테이너를 나타냅니다. 기본 데이터 소스에 대한 연결을 포함하며, 변경 내용 추적 및 ID 확인과 같은 서비스를 제공합니다. 개체 컨텍스트는 <xref:System.Data.Objects.ObjectContext> 또는 `DbContext` 클래스 인스턴스로 표현됩니다.<br /><br /> `DbContext` 일부인 합니다 [Entity Framework 5.0](https://go.microsoft.com/fwlink/?LinkId=234900)합니다. Entity Framework 5.0은 .NET Framework의 일부가 아니지만 .NET Framework 4.5에 빌드되어 있습니다. Entity Framework 5.0은로 제공 합니다 [' Entity Framework'](https://go.microsoft.com/fwlink/?LinkID=215714)[NuGet](https://go.microsoft.com/fwlink/?LinkId=232488) 패키지 있습니다. 자세한 내용은 [Entity Framework 릴리스 및 버전 관리](https://go.microsoft.com/fwlink/?LinkId=234899)합니다.|  
 |개체 계층|Entity Framework에서 사용되는 엔터티 형식 및 개체 컨텍스트 정의입니다.|  
 |개체 쿼리|개체 컨텍스트 내에서 개념적 모델에 대해 실행되어 데이터를 개체로 반환하는 쿼리입니다.<br /><br /> 자세한 내용은 [개체 쿼리](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896241(v=vs.100))합니다.|  
-|개체-관계형 매핑|관계형 데이터베이스의 데이터를 개체 지향 소프트웨어 응용 프로그램에서 사용할 수 있는 데이터 형식으로 변환하기 위한 기술입니다.<br /><br /> [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]는 저장소 모델에 정의된 관계형 데이터를 개념적 모델에 정의된 데이터 형식에 매핑하여 개체-관계형 매핑 서비스를 제공합니다.<br /><br /> 자세한 내용은 [모델링 및 매핑](../../../../../docs/framework/data/adonet/ef/modeling-and-mapping.md)합니다.|  
+|개체-관계형 매핑|관계형 데이터베이스의 데이터를 개체 지향 소프트웨어 응용 프로그램에서 사용할 수 있는 데이터 형식으로 변형하기 위한 기술입니다.<br /><br /> [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]는 저장소 모델에 정의된 관계형 데이터를 개념적 모델에 정의된 데이터 형식에 매핑하여 개체-관계형 매핑 서비스를 제공합니다.<br /><br /> 자세한 내용은 [모델링 및 매핑](../../../../../docs/framework/data/adonet/ef/modeling-and-mapping.md)합니다.|  
 |개체 서비스(Object Services)|제공 하는 서비스를 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] 응용 프로그램 코드와 같은 엔터티에서 작동할 수 있도록 [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] 개체입니다.|  
 |지속성 무시 개체|데이터 저장소와 관련된 논리가 포함되지 않은 개체입니다. POCO 엔터티라고도 합니다.|  
 |POCO|Plain Old CLR Object입니다. 다른 클래스에서 상속하거나 인터페이스를 구현하지 않는 개체입니다.|  
@@ -76,6 +76,7 @@ ms.locfileid: "55904125"
 |형식당 하나의 테이블|데이터베이스의 형식 계층 구조를 모델링하는 방법 중 하나로, 일대일 관계의 여러 테이블을 사용하여 다양한 형식을 모델링합니다.|  
   
 ## <a name="see-also"></a>참고자료
+
 - [ADO.NET Entity Framework](../../../../../docs/framework/data/adonet/ef/index.md)
 - [Entity Framework 개요](../../../../../docs/framework/data/adonet/ef/overview.md)
 - [시작](../../../../../docs/framework/data/adonet/ef/getting-started.md)

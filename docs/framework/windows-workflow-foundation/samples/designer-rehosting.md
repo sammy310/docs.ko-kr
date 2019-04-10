@@ -2,12 +2,12 @@
 title: 디자이너 재호스팅
 ms.date: 03/30/2017
 ms.assetid: b676ad31-5f64-4d84-9a36-b4d7113a2f4d
-ms.openlocfilehash: 885590604532fba76fc9ab3f6bcc69e077868403
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: b2a51014e34bf27d6f016db71d2c2eaabb906c6d
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48837360"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59328168"
 ---
 # <a name="designer-rehosting"></a>디자이너 재호스팅
 디자이너 재호스팅은 사용자 지정 응용 프로그램 내에 워크플로 디자인 캔버스를 호스트하는 방식을 가리키는 일반적인 시나리오입니다. 대부분의 사람들이 가장 잘 알고 있는 호스팅 응용 프로그램은 Visual Studio이지만, 응용 프로그램에 Workflow Designer를 표시하는 것이 유용할 수 있는 시나리오는 그 밖에도 여러 가지가 있습니다.  
@@ -40,7 +40,7 @@ ms.locfileid: "48837360"
 </Grid>  
 ```  
   
- 다음으로 이 샘플에서는 디자이너를 만들고 해당 기본 <xref:System.Activities.Presentation.WorkflowDesigner.View%2A> 및 <xref:System.Activities.Presentation.WorkflowDesigner.PropertyInspectorView%2A>를 사용자 인터페이스의 적절한 컨테이너와 연결합니다. 아래에 추가로 나와 있는 몇몇 코드 줄에 대해서는 약간의 설명이 필요합니다. <xref:System.Activities.Core.Presentation.DesignerMetadata.Register%2A> 호출은 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]에 제공되는 활동에 대한 기본 활동 디자이너를 연결하는 데 필요합니다. <xref:System.Activities.Presentation.WorkflowDesigner.Load%2A>는 편집할 WF 항목을 전달하기 위해 호출됩니다. 마지막으로, <xref:System.Activities.Presentation.WorkflowDesigner.View%2A>(기본 캔버스) 및 <xref:System.Activities.Presentation.WorkflowDesigner.PropertyInspectorView%2A>(속성 표)가 사용자 인터페이스 화면에 배치됩니다.  
+ 다음으로 이 샘플에서는 디자이너를 만들고 해당 기본 <xref:System.Activities.Presentation.WorkflowDesigner.View%2A> 및 <xref:System.Activities.Presentation.WorkflowDesigner.PropertyInspectorView%2A>를 사용자 인터페이스의 적절한 컨테이너와 연결합니다. 아래에 추가로 나와 있는 몇몇 코드 줄에 대해서는 약간의 설명이 필요합니다. <xref:System.Activities.Core.Presentation.DesignerMetadata.Register%2A> 호출은 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]에 제공되는 활동에 대한 기본 활동 디자이너를 연결하는 데 필요합니다. <xref:System.Activities.Presentation.WorkflowDesigner.Load%2A> 편집할 WF 항목을 전달 하기 위해 호출 됩니다. 마지막으로, <xref:System.Activities.Presentation.WorkflowDesigner.View%2A>(기본 캔버스) 및 <xref:System.Activities.Presentation.WorkflowDesigner.PropertyInspectorView%2A>(속성 표)가 사용자 인터페이스 화면에 배치됩니다.  
   
 ```csharp  
 protected override void OnInitialized(EventArgs e)  
@@ -114,11 +114,11 @@ protected override void OnInitialized(EventArgs e)
   
 #### <a name="using-the-sample"></a>샘플 사용  
   
-1.  Visual Studio 2010에서 DesignerRehosting.sln 솔루션을 엽니다.  
+1. Visual Studio 2010에서 DesignerRehosting.sln 솔루션을 엽니다.  
   
-2.  F5 키를 눌러 응용 프로그램을 컴파일하고 실행합니다.  
+2. F5 키를 눌러 애플리케이션을 컴파일하고 실행합니다.  
   
-3.  재호스트된 디자이너와 함께 WPF 응용 프로그램이 시작됩니다.  
+3. 재호스트된 디자이너와 함께 WPF 응용 프로그램이 시작됩니다.  
   
 > [!IMPORTANT]
 >  컴퓨터에 이 샘플이 이미 설치되어 있을 수도 있습니다. 계속하기 전에 다음(기본) 디렉터리를 확인하세요.  

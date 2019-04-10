@@ -2,12 +2,12 @@
 title: 리터럴(Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 092ef693-6e5f-41b4-b868-5b9e82928abf
-ms.openlocfilehash: 71c77a3cb91d0981614e83221ad82d17067dc321
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: bff9b1907d3424dc2e3df80480b6ab12f5ab9261
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54643106"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59209777"
 ---
 # <a name="literals-entity-sql"></a>리터럴(Entity SQL)
 이 항목에서는 리터럴에 대한 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 지원을 설명합니다.  
@@ -19,10 +19,10 @@ ms.locfileid: "54643106"
   
  위치에 대 한 규칙 자유 부동 null 리터럴을 사용할 수 있습니다 참조 하십시오 [Null 리터럴 및 형식 유추](../../../../../../docs/framework/data/adonet/ef/language-reference/null-literals-and-type-inference-entity-sql.md)합니다.  
   
-## <a name="boolean"></a>부울  
+## <a name="boolean"></a>Boolean  
  Boolean 리터럴은 `true` 및 `false` 키워드로 표시됩니다.  
   
-## <a name="integer"></a>Integer  
+## <a name="integer"></a>정수  
  Integer 리터럴은 <xref:System.Int32> 또는 <xref:System.Int64> 형식일 수 있습니다. <xref:System.Int32> 리터럴은 일련의 숫자입니다. <xref:System.Int64> 리터럴은 맨 뒤에 대문자 L이 오는 일련의 숫자입니다.  
   
 ## <a name="decimal"></a>Decimal  
@@ -102,4 +102,5 @@ GUID  '1AFC7F5C-FFA0-4741-81CF-F12EAAB822BF'
 ```  
   
 ## <a name="see-also"></a>참고자료
+
 - [Entity SQL 개요](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)

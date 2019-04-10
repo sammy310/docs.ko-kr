@@ -13,12 +13,12 @@ helpviewer_keywords:
 - pattern matching, empty strings
 - operators [Visual Basic], comparison
 ms.assetid: 19a83804-b5af-4739-928b-ac93e64e457f
-ms.openlocfilehash: ca6537d81f080120fcbea0cf083f450dce4e9f62
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: c14aa35ce15549ad9eccabe2330a7c43b6795140
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58826017"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59316273"
 ---
 # <a name="how-to-match-a-string-against-a-pattern-visual-basic"></a>방법: (Visual Basic) 패턴에 대해 문자열 비교
 식을 확인 하려는 경우는 [문자열 데이터 형식](../../../../visual-basic/language-reference/data-types/string-data-type.md) 사용 하 여 패턴을 만족 합니다 [Like Operator](../../../../visual-basic/language-reference/operators/like-operator.md)합니다.  
@@ -68,11 +68,11 @@ ms.locfileid: "58826017"
   
 #### <a name="to-match-a-character-in-the-string-expression-against-a-list-of-characters-or-no-character"></a>문자 또는 문자가 없는 목록에서 문자열 식의 문자를 검색 하려면  
   
-1.  호출를 `Like` 연산자에 동일한 두 번 문자열 식, 및 중 하나를 사용 하 여 두 호출을 연결 합니다 [또는 연산자](../../../../visual-basic/language-reference/operators/or-operator.md) 또는 [OrElse 연산자](../../../../visual-basic/language-reference/operators/orelse-operator.md)합니다.  
+1. 호출를 `Like` 연산자에 동일한 두 번 문자열 식, 및 중 하나를 사용 하 여 두 호출을 연결 합니다 [또는 연산자](../../../../visual-basic/language-reference/operators/or-operator.md) 또는 [OrElse 연산자](../../../../visual-basic/language-reference/operators/orelse-operator.md)합니다.  
   
-2.  첫 번째 패턴 문자열에 `Like` 절을 대괄호로 묶은 문자 목록을 포함 (`[ ]`).  
+2. 첫 번째 패턴 문자열에 `Like` 절을 대괄호로 묶은 문자 목록을 포함 (`[ ]`).  
   
-3.  두 번째 패턴 문자열에 `Like` 절에 두지 마십시오 임의의 위치에 해당 합니다.  
+3. 두 번째 패턴 문자열에 `Like` 절에 두지 마십시오 임의의 위치에 해당 합니다.  
   
      다음 예제에서는 7 자리 전화 번호를 테스트 `phoneNum` 정확히 3 자리 숫자에 대 한 뒤에 공백, 하이픈 (`–`), 마침표 (`.`), 문자가 없는 전혀 뒤에 정확히 4 자리 숫자입니다.  
   

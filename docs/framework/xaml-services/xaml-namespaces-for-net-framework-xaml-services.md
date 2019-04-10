@@ -2,12 +2,12 @@
 title: .NET Framework XAML 서비스의 XAML 네임스페이스
 ms.date: 03/30/2017
 ms.assetid: e4f15f13-c420-4c1e-aeab-9b6f50212047
-ms.openlocfilehash: e9d644f4f62d70a1feec0030a680067412baa5e6
-ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
+ms.openlocfilehash: dc2c424306b9ebd705f2541266e4b1e3afe94547
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58030530"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59153558"
 ---
 # <a name="xaml-namespaces-for-net-framework-xaml-services"></a>.NET Framework XAML 서비스의 XAML 네임스페이스
 XAML 네임 스페이스는 XML 네임 스페이스의 정의 확장 하는 개념입니다. XML 네임 스페이스와 마찬가지로, 정의할 수 있습니다 사용 하는 XAML 네임 스페이스는 `xmlns` 태그의 특성입니다. XAML 네임 스페이스는 XAML 노드 스트림의 다른 XAML Services Api에도 표시 됩니다. 이 항목에서는 XAML 네임 스페이스 개념을 정의 하 고 XAML 네임 스페이스를 정의할 수 있습니다 및 XAML 스키마 컨텍스트 및.NET Framework XAML 서비스의 다른 측면에서 사용 하는 방법에 대해 설명 합니다.  
@@ -64,4 +64,5 @@ XAML 네임 스페이스는 XML 네임 스페이스의 정의 확장 하는 개�
  .NET Framework XAML 서비스에서 처리 하는 XAML 네임 스페이스와 관련 된 두 개의 다른 API는 특성 <xref:System.Windows.Markup.XmlnsDefinitionAttribute> 고 <xref:System.Windows.Markup.XmlnsPrefixAttribute>입니다. 이러한 특성은 어셈블리에 적용 됩니다. <xref:System.Windows.Markup.XmlnsDefinitionAttribute> URI를 포함 하는 모든 XAML 네임 스페이스 선언 해석 하는 XAML 스키마 컨텍스트에서 사용 됩니다. <xref:System.Windows.Markup.XmlnsPrefixAttribute> 예측 가능한 접두사가 포함 된 특정 XAML 네임 스페이스를 serialize 할 수 있도록 XAML을 내보내는 도구에서 사용 됩니다. 자세한 내용은 [사용자 지정 형식 및 라이브러리에 대 한 CLR 특성 XAML-Related](xaml-related-clr-attributes-for-custom-types-and-libraries.md)합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [XAML 노드 스트림 구조 및 개념 이해](understanding-xaml-node-stream-structures-and-concepts.md)

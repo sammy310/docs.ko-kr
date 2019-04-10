@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 8d25b80e-2581-4803-bd87-a59528e3cb03
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9125ee35b081a1723f379bd3fbdec808d085c675
-ms.sourcegitcommit: b8ace47d839f943f785b89e2fff8092b0bf8f565
+ms.openlocfilehash: fd91cf0179ef9731c456b41fdc865e3eacdb33eb
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "55674453"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59132810"
 ---
 # <a name="gcserver-element"></a>\<gcServer > 요소
 공용 언어 런타임이 서버 가비지 컬렉션을 실행하는지 여부를 지정합니다.  
@@ -79,6 +79,7 @@ ms.locfileid: "55674453"
 ```  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Runtime.GCSettings.IsServerGC%2A?displayProperty=nameWithType>
 - [런타임 설정 스키마](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
 - [구성 파일 스키마](../../../../../docs/framework/configure-apps/file-schema/index.md)

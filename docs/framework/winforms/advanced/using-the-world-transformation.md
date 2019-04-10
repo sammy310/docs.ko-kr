@@ -8,12 +8,12 @@ helpviewer_keywords:
 - graphics [Windows Forms], world transformation
 - world transformation [Windows Forms], examples
 ms.assetid: 1e717711-1361-448e-aa49-0f3ec43110c9
-ms.openlocfilehash: cc6bcca42e84580199f75c64087af6d98f476d4b
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: f40d7e8cb814344365e8b88c2659751903b79d77
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57715700"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59139960"
 ---
 # <a name="using-the-world-transformation"></a>전역 변형 사용
 월드 속성인는 <xref:System.Drawing.Graphics> 클래스입니다. 월드 변형을 지정 하는 숫자는 저장 된 <xref:System.Drawing.Drawing2D.Matrix> 3 × 3 행렬을 나타내는 개체입니다. 합니다 <xref:System.Drawing.Drawing2D.Matrix> 및 <xref:System.Drawing.Graphics> 클래스에는 여러 가지 방법을 월드 변형 매트릭스에 숫자를 설정 합니다.  
@@ -42,6 +42,7 @@ ms.locfileid: "57715700"
  [!code-vb[System.Drawing.MiscLegacyTopics#14](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.MiscLegacyTopics/VB/Class1.vb#14)]  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Drawing.Drawing2D.Matrix>
-- [좌표계 및 변형](coordinate-systems-and-transformations.md)
-- [관리 GDI+에서 변형 사용](using-transformations-in-managed-gdi.md)
+- [좌표계 및 변환](coordinate-systems-and-transformations.md)
+- [관리형 GDI+에서 변환 사용](using-transformations-in-managed-gdi.md)

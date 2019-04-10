@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Freezable elements [WPF]
 - PresentationOptions prefix [WPF]
 ms.assetid: 391032dd-2fba-4804-bb8a-3b071797a9f4
-ms.openlocfilehash: 3ff4a3221392d6b247d0a486e4e1f0406f539362
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: e60c4a505db42936f188354f52edd7832fb9632b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57378863"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59074666"
 ---
 # <a name="presentationoptionsfreeze-attribute"></a>PresentationOptions:Freeze 특성
 집합의 <xref:System.Windows.Freezable.IsFrozen%2A> 상태 `true` 포함 하는에 <xref:System.Windows.Freezable> 요소입니다. 기본 동작에 대 한는 <xref:System.Windows.Freezable> 없이 `PresentationOptions:Freeze` 는 지정 된 특성 <xref:System.Windows.Freezable.IsFrozen%2A> 됩니다 `false` 로드 시간 및 일반에 의존 하는 <xref:System.Windows.Freezable> 런타임에 동작 합니다.  
@@ -42,6 +42,7 @@ ms.locfileid: "57378863"
  에 대 한 모든 값을 `Freeze` 이외의 특성 `true` (없습니다 대/소문자 구분)는 로드 시간 오류를 생성 합니다. (지정 하는 `Freeze` 특성은 `false` 오류가 되지 않지만 기본값을 설정 하므로 이미 `false` 아무 작업도 수행 하지).  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Windows.Freezable>
 - [Freezable 개체 개요](freezable-objects-overview.md)
 - [mc:Ignorable 특성](mc-ignorable-attribute.md)

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 35900aa2-5615-4174-8212-ba184c6b82fb
-ms.openlocfilehash: 8df63cb425f8e113a73fee1b0a6bd61683ed27ef
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f2bc67b4130633fba3a6e42e2b6925fc09f835c3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54578846"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59116232"
 ---
 # <a name="inserting-an-image-from-a-file"></a>파일에서 이미지 삽입
 데이터 소스의 필드 형식에 따라 BLOB(Binary Large Object)를 이진 또는 문자 데이터로 데이터베이스에 쓸 수 있습니다. BLOB는 주로 문서와 그림이 포함된 `text`, `ntext` 및 `image` 데이터 형식을 나타내는 일반적인 용어입니다.  
@@ -131,6 +131,7 @@ public static byte[] GetPhoto(string filePath)
 ```  
   
 ## <a name="see-also"></a>참고자료
+
 - [명령을 사용하여 데이터 수정](../../../../../docs/framework/data/adonet/using-commands-to-modify-data.md)
 - [이진 데이터 검색](../../../../../docs/framework/data/adonet/retrieving-binary-data.md)
 - [SQL Server 이진 및 큰 값 데이터](../../../../../docs/framework/data/adonet/sql/sql-server-binary-and-large-value-data.md)

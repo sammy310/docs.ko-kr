@@ -2,12 +2,12 @@
 title: WSDL 및 정책
 ms.date: 03/30/2017
 ms.assetid: cea87440-3519-4640-8494-b8a2b0e88c84
-ms.openlocfilehash: 1e6b315c1830602e72b4b498cd38eed8428bc5ff
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: caaa54f04bbb10ed3b3dd65b53ace633b88f9126
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54741433"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59151907"
 ---
 # <a name="wsdl-and-policy"></a>WSDL 및 정책
 이 항목에서는 Windows Communication Foundation (WCF) WSDL 1.1, Ws-policy 및 Ws-policyattachment 구현 세부 정보 뿐만 아니라 추가 Ws-policy 어설션 및 WSDL 1.1 확장 WCF에 의해 도입을 다룹니다.  
@@ -54,18 +54,18 @@ ms.locfileid: "54741433"
   
 |정책 어설션|정책 주체|설명|  
 |----------------------|--------------------|-----------------|  
-|http:HttpBasicAuthentication|끝점|엔드포인트가 HTTP 기본 인증을 사용합니다.|  
-|http:HttpDigestAuthentication|끝점|끝점이 HTTP 다이제스트 인증을 사용합니다.|  
-|http:HttpNegotiateAuthentication|끝점|끝점이 HTTP Negotiate 인증을 사용합니다.|  
-|http:HttpNtlmAuthentication|끝점|엔드포인트가 HTTP NTLM 인증을 사용합니다.|  
-|msf:Streamed|끝점|끝점이 스트리밍된 메시지 프레이밍을 사용합니다. TCP, 명명된 파이프 등의 전송에 제공되는 메시지 프레이밍 프로토콜에 이 어설션이 사용됩니다.|  
-|msf:SslTransportSecurity|끝점|엔드포인트가 메시지 프레이밍에 TLS(Transport Layer Security)를 사용합니다.|  
-|msf:WindowsTransportSecurity|엔드포인트|끝점이 메시지 프레이밍에 SPNEGO(Security Provider Negotiation)를 사용합니다.|  
-|msmq:MsmqBestEffort|끝점|최상의 보증을 제공하는 MSMQ입니다.|  
-|msmq:MsmqSession|끝점|세션 보증을 제공하는 MSMQ입니다.|  
+|http:HttpBasicAuthentication|엔드포인트|엔드포인트가 HTTP 기본 인증을 사용합니다.|  
+|http:HttpDigestAuthentication|엔드포인트|엔드포인트가 HTTP 다이제스트 인증을 사용합니다.|  
+|http:HttpNegotiateAuthentication|엔드포인트|엔드포인트가 HTTP Negotiate 인증을 사용합니다.|  
+|http:HttpNtlmAuthentication|엔드포인트|엔드포인트가 HTTP NTLM 인증을 사용합니다.|  
+|msf:Streamed|엔드포인트|엔드포인트가 스트리밍된 메시지 프레이밍을 사용합니다. TCP, 명명된 파이프 등의 전송에 제공되는 메시지 프레이밍 프로토콜에 이 어설션이 사용됩니다.|  
+|msf:SslTransportSecurity|엔드포인트|엔드포인트가 메시지 프레이밍에 TLS(Transport Layer Security)를 사용합니다.|  
+|msf:WindowsTransportSecurity|엔드포인트|엔드포인트가 메시지 프레이밍에 SPNEGO(Security Provider Negotiation)를 사용합니다.|  
+|msmq:MsmqBestEffort|엔드포인트|최상의 보증을 제공하는 MSMQ입니다.|  
+|msmq:MsmqSession|엔드포인트|세션 보증을 제공하는 MSMQ입니다.|  
 |msmq:MsmqVolatile|엔드포인트|일시적인 MSMQ입니다.|  
-|msmq:Authenticated|끝점|MSMQ 전송에 인증이 사용됩니다.|  
-|msmq:WindowsDomain|끝점|MSMQ에서 Windows 도메인 인증을 사용합니다.|  
+|msmq:Authenticated|엔드포인트|MSMQ 전송에 인증이 사용됩니다.|  
+|msmq:WindowsDomain|엔드포인트|MSMQ에서 Windows 도메인 인증을 사용합니다.|  
 |cdp:CompositeDuplex|엔드포인트|엔드포인트가 in 및 out 메시지에 두 개의 별도 통신 전송 연결을 사용합니다.|  
 |mssp:RsaToken|중첩|RSA 키 토큰 어설션입니다. 이 요구 사항은 일반적으로 보증 서명에 있는 키 정보의 일부로 직접 serialize된 RSA 키에 의해 만족됩니다.|  
 |mssp:SslContextToken|중첩|WS-Trust를 사용한 이진 TLS 핸드셰이크를 사용하여 가져온 SecurityContextToken을 사용하도록 요구합니다. 중첩 어설션에는 sp:RequireDerivedKeys, mssp:MustNotSendCancel, mssp:RequireClientCertificate가 포함됩니다.|  
@@ -73,6 +73,7 @@ ms.locfileid: "54741433"
 |mssp:RequireClientCertificate|중첩|이 선택적 요소는 클라이언트 인증서가 TLSNEGO 프로토콜의 일부로 제공되도록 하는 요구 사항을 지정합니다. 이 어설션이 있으면 클라이언트 인증서를 제공해야 합니다. 이 어설션이 없으면 클라이언트 인증서를 제공하면 안 됩니다. 이 어설션은 mssp:SslContextToken 외부에서 사용하면 안 됩니다.|  
   
 ## <a name="see-also"></a>참고자료
+
 - [사용자 지정 WSDL 게시](../../../../docs/framework/wcf/samples/custom-wsdl-publication.md)
 - [방법: 사용자 지정 WSDL 내보내기](../../../../docs/framework/wcf/extending/how-to-export-custom-wsdl.md)
 - [방법: 사용자 지정 WSDL 가져오기](../../../../docs/framework/wcf/extending/how-to-import-custom-wsdl.md)

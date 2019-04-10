@@ -7,12 +7,12 @@ helpviewer_keywords:
 - keyboard behavior [WPF], DataGrid
 - mouse behavior [WPF], DataGrid
 ms.assetid: 563b8854-ca39-4d97-8235-17eaa0f93c8d
-ms.openlocfilehash: f122eb97719182b4cad5fb0e757cd3647e575094
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6be464ce85bd3ba91dd6e6cc810ec7d04edc0c3d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54741615"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59083324"
 ---
 # <a name="default-keyboard-and-mouse-behavior-in-the-datagrid-control"></a>DataGrid 컨트롤에서의 기본 키보드 및 마우스 동작
 이 항목에서는 사용자 상호 작용 하는 방법을 설명 합니다 <xref:System.Windows.Controls.DataGrid> 키보드 및 마우스를 사용 하 여 제어 합니다.  
@@ -44,7 +44,7 @@ ms.locfileid: "54741615"
 |Ctrl+Page Up|PAGE UP과 동일 합니다.|  
 |F2|경우는 <xref:System.Windows.Controls.DataGrid.IsReadOnly%2A?displayProperty=nameWithType> 속성은 `false` 하며 <xref:System.Windows.Controls.DataGridColumn.IsReadOnly%2A?displayProperty=nameWithType> 속성이 `false` 현재 열에 대 한 현재 셀을 셀 편집 모드로 전환 합니다.|  
 |Enter 키|현재 셀 및 행 변경 내용을 커밋하고 현재 셀의 바로 아래 셀으로 포커스를 이동 합니다. 마지막 행에 포커스가 있으면 포커스가 이동 하지 않고 모든 변경 내용을 커밋합니다.|  
-|Esc 키|컨트롤 편집 모드인 경우에 편집을 취소 하 고 컨트롤에서 수행한 모든 변경 내용이 되돌립니다. 기본 데이터 원본 구현 하는 경우 <xref:System.ComponentModel.IEditableObject>, esc 키를 두 번째로 전체 행에 대 한 편집 모드를 취소 합니다.|  
+|Esc|컨트롤 편집 모드인 경우에 편집을 취소 하 고 컨트롤에서 수행한 모든 변경 내용이 되돌립니다. 기본 데이터 원본 구현 하는 경우 <xref:System.ComponentModel.IEditableObject>, esc 키를 두 번째로 전체 행에 대 한 편집 모드를 취소 합니다.|  
 |백스페이스|셀을 편집할 때 커서를 앞에 있는 문자를 삭제 합니다.|  
 |Delete|셀을 편집할 때 커서 뒤의 문자를 삭제 합니다.|  
 |Ctrl+Enter|포커스를 이동 하지 않고 현재 셀의 모든 변경 사항을 커밋합니다.|  
@@ -97,5 +97,6 @@ ms.locfileid: "54741615"
  인접 하지 않은 범위의 인접 한 행을 선택 하려면 CTRL + SHIFT은 결합할 수 있습니다. 이렇게 하려면 shift 키를 사용 하 여 첫 번째 범위를 선택 하에서 앞에서 설명한 대로 클릭 합니다. 행의 첫 번째 범위를 선택한 후 ctrl 키를 사용 + 다음 범위에서 첫 번째 행을 선택 하려면 클릭 한 다음 CTRL + SHIFT를 누른 채 다음 범위에서 마지막 행을 클릭 합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Windows.Controls.DataGrid>
 - <xref:System.Windows.Controls.DataGrid.SelectionMode%2A>

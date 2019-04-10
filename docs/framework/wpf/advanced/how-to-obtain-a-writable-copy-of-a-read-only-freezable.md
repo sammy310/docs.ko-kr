@@ -8,12 +8,12 @@ helpviewer_keywords:
 - cloning Freezable objects [WPF]
 - Freezable objects [WPF], modifiable clones
 ms.assetid: d028de61-bbe9-4d62-b656-8fe3b1b2ca24
-ms.openlocfilehash: 08b7007911d15019c043a74e093ccc0fba072fd1
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 910c5dada6ca82f68992722e4df6b35f9f7497c7
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57361618"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59206475"
 ---
 # <a name="how-to-obtain-a-writable-copy-of-a-read-only-freezable"></a>방법: 읽기 전용 Freezable의 쓰기 가능한 복사본 가져오기
 사용 하는 방법을 보여 주는이 예제는 <xref:System.Windows.Freezable.Clone%2A> 메서드는 읽기 전용의 쓰기 가능한 복사본을 만드는 <xref:System.Windows.Freezable>합니다.  
@@ -29,6 +29,7 @@ ms.locfileid: "57361618"
  에 대 한 자세한 내용은 <xref:System.Windows.Freezable> 개체를 참조 합니다 [Freezable 개체 개요](freezable-objects-overview.md)합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Windows.Freezable>
 - <xref:System.Windows.Freezable.CloneCurrentValue%2A>
 - [Freezable 개체 개요](freezable-objects-overview.md)

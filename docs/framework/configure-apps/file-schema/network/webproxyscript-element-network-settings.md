@@ -1,5 +1,5 @@
 ---
-title: <webProxyScript> 요소(네트워크 설정)
+title: <webProxyScript> 요소 (네트워크 설정)
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#webProxyScript
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - <webProxyScript> element
 - webProxyScript element
 ms.assetid: a13c26db-6218-4af3-9696-38f24b23bfac
-ms.openlocfilehash: e823d6065ea23f3a47dad6853a1b9e1237a616c9
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: e73ba86cc17fa51cbf4030f2304ab9141fcc0f26
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55257826"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59218669"
 ---
 # <a name="webproxyscript-element-network-settings"></a>\<webProxyScript > 요소 (네트워크 설정)
 웹 프록시 검색에 사용 되는 스크립트의 특성을 구성 합니다.  
@@ -47,7 +47,7 @@ ms.locfileid: "55257826"
   
 |요소|설명|  
 |-------------|-----------------|  
-|[settings](../../../../../docs/framework/configure-apps/file-schema/network/settings-element-network-settings.md)|<xref:System.Net> 네임스페이스에 대한 기본 네트워크 옵션을 구성합니다.|  
+|[설정](../../../../../docs/framework/configure-apps/file-schema/network/settings-element-network-settings.md)|<xref:System.Net> 네임스페이스에 대한 기본 네트워크 옵션을 구성합니다.|  
   
 ## <a name="remarks"></a>설명  
   
@@ -55,4 +55,5 @@ ms.locfileid: "55257826"
  이 요소는 응용 프로그램 구성 파일 또는 컴퓨터 구성 파일(Machine.config)에서 사용할 수 있습니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [네트워크 설정 스키마](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

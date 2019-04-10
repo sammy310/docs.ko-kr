@@ -1,5 +1,5 @@
 ---
-title: <listeners>에 대한 <source> 요소
+title: <listeners> 에 대 한 요소 <source>
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/sources/source/listeners
@@ -7,12 +7,12 @@ helpviewer_keywords:
 - listeners element for <source>
 - <listeners> element for <source>
 ms.assetid: a2991f43-b4d3-4614-a8e7-da392de9697f
-ms.openlocfilehash: 34085d06ec3f3b91e5efdba6220d79032baaea52
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: b15a30fb6d356f92312bf33bc1964c7922ba1383
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55266778"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59089655"
 ---
 # <a name="listeners-element-for-source"></a>\<수신기 > 요소에 대 한 \<소스 >
 추가 하거나에서 수신기를 제거 합니다 <xref:System.Diagnostics.TraceSource.Listeners%2A> 컬렉션에 대 한는 <xref:System.Diagnostics.TraceSource>합니다. 수신기는 추적 출력을 로그, 창 또는 텍스트 파일과 같은 적절 한 대상에 전달합니다.  
@@ -88,6 +88,7 @@ ms.locfileid: "55266778"
 ```  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Diagnostics.TraceListener>
 - [추적 및 디버그 설정 스키마](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)
 - [추적 수신기](../../../../../docs/framework/debug-trace-profile/trace-listeners.md)

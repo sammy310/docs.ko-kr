@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a6b5aa78efcc19f1fc50c8e9bfc5105f9afd7d50
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: d98829b29100824e5d606e23aaf287c9f6e81d69
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57495210"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59170965"
 ---
 # <a name="createapplicationcontext-function"></a>CreateApplicationContext 함수
 이 함수는.NET Framework 인프라를 지원 하며 코드에서 직접 사용할 수 없습니다.  
@@ -52,6 +52,7 @@ HRESULT CreateApplicationContext (
  **.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>참고자료
+
 - [IAssemblyCache 인터페이스](../../../../docs/framework/unmanaged-api/fusion/iassemblycache-interface.md)
 - [Fusion 전역 정적 함수](../../../../docs/framework/unmanaged-api/fusion/fusion-global-static-functions.md)
 - [전역 어셈블리 캐시](../../../../docs/framework/app-domains/gac.md)

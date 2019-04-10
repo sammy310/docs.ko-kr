@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 936bcd59cd21a4fb4c101febcefd26f3b1fdafa1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b979b5f4ee849b96cd29b6c8e2e6a8932e88c182
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54665580"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59201717"
 ---
 # <a name="icorprofilerinfo-interface"></a>ICorProfilerInfo 인터페이스
 코드 프로파일러는 CLR (공용 언어 런타임) 이벤트 모니터링 및 제어 정보를 요청 하려면와 통신 하 여 사용할 메서드를 제공 합니다.  
@@ -84,5 +84,6 @@ ms.locfileid: "54665580"
  **.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>참고자료
+
 - [프로파일링 인터페이스](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
 - [ICorProfilerInfo2 인터페이스](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-interface.md)

@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 8cd68620-dcc3-4f20-8835-c728a6820e71
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7d1ddbd9649d82ffe55c16e0657a1c020b50acbb
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 28463bfd3e54e49461d9ce785d26e5dfca62e438
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54610866"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59188965"
 ---
 # <a name="how-to-perform-lazy-initialization-of-objects"></a>방법: 개체의 초기화 지연 수행
 <xref:System.Lazy%601?displayProperty=nameWithType> 클래스는 개체의 인스턴스화 및 초기화 지연을 수행하는 작업을 간소화합니다. 지연 방식으로 개체를 초기화하면 개체가 필요하지 않을 경우 개체를 전혀 만들지 않아도 되고, 필요한 경우에도 개체에 처음 액세스할 때까지 초기화를 연기할 수 있습니다. 자세한 내용은 [초기화 지연](../../../docs/framework/performance/lazy-initialization.md)을 참조하세요.  
@@ -77,5 +77,6 @@ End Sub
  [!code-vb[CDS#13](../../../samples/snippets/visualbasic/VS_Snippets_Misc/cds/vb/lazyhowto.vb#13)]  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Threading.LazyInitializer?displayProperty=nameWithType>
 - [초기화 지연](../../../docs/framework/performance/lazy-initialization.md)

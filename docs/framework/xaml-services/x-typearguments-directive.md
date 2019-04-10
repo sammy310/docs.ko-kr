@@ -10,12 +10,12 @@ helpviewer_keywords:
 - TypeArguments attribute in XAML [XAML Services]
 - XAML [XAML Services], x:TypeArguments attribute
 ms.assetid: 86561058-d393-4a44-b5c3-993a4513ea74
-ms.openlocfilehash: 0d3edf6c7a16fc206832d8d6deff9d4ac2f69ba3
-ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
+ms.openlocfilehash: 1d1b10b4da1263843bdce5447f0716569c7700e3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58043263"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59085807"
 ---
 # <a name="xtypearguments-directive"></a>x:TypeArguments 지시문
 전달 된 제네릭 형식의 생성자에 제네릭 인수를 입력 합니다.  
@@ -82,6 +82,7 @@ xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib"
  Wpf에서 및 대상으로 할 때 [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)]와 함께 XAML 2009 기능을 사용할 수 있습니다 `x:TypeArguments` 느슨한 XAML (태그 컴파일되지 않은 XAML)에 대해서만 합니다. WPF에 대한 태그로 컴파일된 XAML 및 BAML 형식의 XAML은 현재 XAML 2009 키워드 및 기능을 지원하지 않습니다. 태그에는 XAML을 컴파일해야 하는 경우 "XAML 2006 및 WPF 일반 XAML 사용" 섹션에서 설명한 제한에서 작동 해야 합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [x:Class 지시문](x-class-directive.md)
 - [x:Type 태그 확장](x-type-markup-extension.md)
 - [공용 XAML 언어 기본 형식에 대한 기본 제공 형식](built-in-types-for-common-xaml-language-primitives.md)

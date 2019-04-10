@@ -6,12 +6,12 @@ helpviewer_keywords:
 - graphics [WPF], drawing images
 - images [WPF], drawing
 ms.assetid: df28ab41-25fb-4ab3-b51d-7f695b24f55e
-ms.openlocfilehash: 9a9a7ee32104e44997e6eaada09edaac2b1d610e
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: f9459185bf81160b45222e7d6821e0f945ada381
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57355603"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59100160"
 ---
 # <a name="how-to-draw-an-image-using-imagedrawing"></a>방법: ImageDrawing을 사용하여 이미지 그리기
 사용 하는 방법을 보여 주는이 예제는 <xref:System.Windows.Media.ImageDrawing> 이미지를 그리기 위해. <xref:System.Windows.Media.ImageDrawing> 표시할 수 있도록을 <xref:System.Windows.Media.ImageSource> 사용 하 여를 <xref:System.Windows.Media.DrawingBrush>, <xref:System.Windows.Media.DrawingImage>, 또는 <xref:System.Windows.Media.Visual>합니다. 만든 이미지를 그릴를 <xref:System.Windows.Media.ImageDrawing> 설정 및 해당 <xref:System.Windows.Media.ImageDrawing.ImageSource%2A?displayProperty=nameWithType> 고 <xref:System.Windows.Media.ImageDrawing.Rect%2A?displayProperty=nameWithType> 속성입니다. 합니다 <xref:System.Windows.Media.ImageDrawing.ImageSource%2A?displayProperty=nameWithType> 그릴 이미지를 지정 하는 속성 및 <xref:System.Windows.Media.ImageDrawing.Rect%2A?displayProperty=nameWithType> 속성 각 이미지의 크기와 위치를 지정 합니다.  
@@ -28,6 +28,7 @@ ms.locfileid: "57355603"
  사용 하지 않고 이미지를 표시 하는 간단한 방법을 보여 주는 예제 <xref:System.Windows.Media.ImageDrawing>를 참조 하세요 [Image 요소 사용](../controls/how-to-use-the-image-element.md)합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Windows.Freezable.Freeze%2A>
 - <xref:System.Windows.Controls.Image>
 - [Drawing 개체 개요](drawing-objects-overview.md)

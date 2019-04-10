@@ -10,12 +10,12 @@ helpviewer_keywords:
 - XAML [XAML Services], x:Class attribute
 - x:Class attribute [XAML Services]
 ms.assetid: bc4a3d8e-76e2-423e-a5d1-159a023e82ec
-ms.openlocfilehash: 8acc1ac099a71fbf624049b119ebe908f27cbb55
-ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
+ms.openlocfilehash: 5f7b072e90e92070dd7fda2f0ad44814009268b9
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58031227"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59199455"
 ---
 # <a name="xclass-directive"></a>x:Class 지시문
 태그와 코드 숨김 부분 클래스를 조인 하는 XAML 태그 컴파일을 구성 합니다. 코드 partial 클래스는 별도 코드 파일에 정의 된를 [!INCLUDE[TLA#tla_cls](../../../includes/tlasharptla-cls-md.md)] 언어 반면 태그 partial 클래스는 대개 XAML 컴파일하는 동안 코드 생성에서 만들어집니다.  
@@ -61,6 +61,7 @@ ms.locfileid: "58031227"
  `x:Class` Silverlight 용은 별도로 설명 됩니다. 자세한 내용은 참조 하세요. [XAML Namespace (x:) 언어 기능 (Silverlight)](https://go.microsoft.com/fwlink/?LinkId=199081)합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [x:Subclass 지시문](x-subclass-directive.md)
 - [WPF에 대한 XAML 및 사용자 지정 클래스](../wpf/advanced/xaml-and-custom-classes-for-wpf.md)
 - [x:ClassModifier 지시문](x-classmodifier-directive.md)

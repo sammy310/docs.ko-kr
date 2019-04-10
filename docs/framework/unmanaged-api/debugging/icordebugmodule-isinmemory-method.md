@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0f057896d9dd65a850c0b07e4084bc263e804d20
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: d79a8b0c3c56ffe2b8f57ec26f5942ee0d681194
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57497368"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59187592"
 ---
 # <a name="icordebugmoduleisinmemory-method"></a>ICorDebugModule::IsInMemory 메서드
 메모리에만이 모듈 있는지 여부를 나타내는 값을 가져옵니다.  
@@ -52,5 +52,3 @@ HRESULT IsInMemory(
  **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>참고자료
-
-

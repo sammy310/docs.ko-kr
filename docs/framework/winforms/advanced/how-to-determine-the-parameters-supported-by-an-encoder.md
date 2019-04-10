@@ -1,5 +1,5 @@
 ---
-title: '방법: 인코더에서 지원 되는 매개 변수 확인'
+title: '방법: 인코더에서 지원하는 매개 변수 확인'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,14 +7,14 @@ dev_langs:
 helpviewer_keywords:
 - encoder parameters [Windows Forms], determining supported
 ms.assetid: f47ae459-e3ce-4d41-a140-2f6c6aea3f44
-ms.openlocfilehash: f5af00833c8d8373444b475673709d902598d9d0
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 2626eee239d9876125340dd133c5a9b3e45c3d7e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57719704"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59204577"
 ---
-# <a name="how-to-determine-the-parameters-supported-by-an-encoder"></a>방법: 인코더에서 지원 되는 매개 변수 확인
+# <a name="how-to-determine-the-parameters-supported-by-an-encoder"></a>방법: 인코더에서 지원하는 매개 변수 확인
 품질 및 압축 수준 등의 이미지 매개 변수를 조정할 수 있지만 매개 변수는 지정 된 이미지 인코더가 지 알고 있어야 합니다. 합니다 <xref:System.Drawing.Image> 클래스를 제공 합니다 <xref:System.Drawing.Image.GetEncoderParameterList%2A> 메서드 특정 인코더에 대 한 지원 되는 이미지 매개 변수를 확인할 수 있도록 합니다. GUID를 사용 하 여 인코더를 지정 합니다. 합니다 <xref:System.Drawing.Image.GetEncoderParameterList%2A> 메서드는 배열을 반환 <xref:System.Drawing.Imaging.EncoderParameter> 개체입니다.  
   
 ## <a name="example"></a>예제  
@@ -31,6 +31,7 @@ ms.locfileid: "57719704"
 -   A <xref:System.Windows.Forms.PaintEventArgs>에서의 매개 변수인 <xref:System.Windows.Forms.PaintEventHandler>합니다.   
   
 ## <a name="see-also"></a>참고자료
-- [방법: 설치 된 인코더 나열](how-to-list-installed-encoders.md)
+
+- [방법: 설치된 인코더 나열](how-to-list-installed-encoders.md)
 - [비트맵의 유형](types-of-bitmaps.md)
-- [관리되는 GDI+에서 이미지 인코더 및 디코더 사용](using-image-encoders-and-decoders-in-managed-gdi.md)
+- [관리형 GDI+에서 이미지 인코더 및 디코더 사용](using-image-encoders-and-decoders-in-managed-gdi.md)

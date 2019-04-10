@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5e060fc62a93d98d8b86a244db1bc53a769cb31c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5a4cd4d353c22921ed3dba1dc08fe2cee7e429f8
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54717170"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59173084"
 ---
 # <a name="cordebugexceptionobjectstackframe-structure"></a>CorDebugExceptionObjectStackFrame 구조체
 예외 개체의 스택 프레임 정보를 나타냅니다.  
@@ -59,5 +59,6 @@ typedef struct CorDebugExceptionObjectStackFrame {
  **.NET Framework 버전:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
 ## <a name="see-also"></a>참고자료
+
 - [디버깅 구조체](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)
 - [디버깅](../../../../docs/framework/unmanaged-api/debugging/index.md)

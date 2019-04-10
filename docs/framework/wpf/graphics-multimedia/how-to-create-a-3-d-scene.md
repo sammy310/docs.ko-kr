@@ -8,12 +8,12 @@ helpviewer_keywords:
 - scenes [WPF], 3-D
 - 3-D scenes
 ms.assetid: adb4a598-71a2-4dd5-b677-ea3fc11b78b2
-ms.openlocfilehash: 8c9aec78bdda4f9f122b6dbefe0956ba649adf22
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 8e176cb437055787da86d56770dd71323134fa33
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57370750"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59126232"
 ---
 # <a name="how-to-create-a-3-d-scene"></a>방법: 3차원 장면 만들기
 이 예제에서는 회전 된 문서의 플랫 시트 처럼 보이는 3 차원 개체를 만드는 방법을 보여 줍니다. <xref:System.Windows.Controls.Viewport3D> 다음 구성 요소와 함께 하는 데이 간단한 3 차원 장면 만들기:  
@@ -38,4 +38,5 @@ ms.locfileid: "57370750"
  [!code-vb[3DGallery_procedural_snip#Basic3DShapeCodeExampleWholePage](~/samples/snippets/visualbasic/VS_Snippets_Wpf/3DGallery_procedural_snip/visualbasic/basic3dshapeexample.vb#basic3dshapecodeexamplewholepage)]  
   
 ## <a name="see-also"></a>참고자료
+
 - [3차원 그래픽 개요](3-d-graphics-overview.md)

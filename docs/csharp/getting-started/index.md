@@ -1,16 +1,23 @@
 ---
-title: '시작 - C# 가이드'
+title: 시작 - C# 가이드
 description: '기초 C # 개념을 빨리 배우고 .NET Core 애플리케이션을 작성할 수 있는 짧고 간단한 자습서를 찾아보세요.'
 helpviewer_keywords:
-  - 'Visual C#, getting started'
-  - 'getting started, Visual C#'
+- Visual C#, getting started
+- getting started, Visual C#
 author: rpetrusha
 ms.author: ronpet
-ms.date: 08/23/2017
+ms.date: 04/05/2019
+ms.custom: seoapril2019
+ms.openlocfilehash: 5c502c3832ca9afc30599d47d0890fae168fa998
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59130972"
 ---
 # <a name="get-started-with-c"></a>C\# 시작
 
-이 섹션에서는 C# 및 .NET Core를 사용하여 애플리케이션을 빠르게 빌드할 수 있는 짧고 간단한 자습서를 제공합니다. Visual Studio 2017 및 Visual Studio Code에 대한 시작 항목이 제공됩니다. 간단한 Hello World 애플리케이션을 빌드할 수도 있고, Visual Studio 2017을 사용하는 경우에는 다른 애플리케이션에서 사용할 수 있는 간단한 클래스 라이브러리를 빌드할 수 있습니다.
+이 섹션에서는 C# 및 .NET Core를 사용하여 애플리케이션을 빠르게 빌드할 수 있는 짧고 간단한 자습서를 제공합니다. Visual Studio 2017 및 Visual Studio Code에 대한 시작 항목이 제공됩니다. 이 문서에서는 몇 가지 프로그래밍 환경을 가정합니다. 프로그래밍이 처음인 경우 [C# 소개](../tutorials/intro-to-csharp/index.md) 대화형 자습서를 사용해 보세요.
 
 다음 항목을 사용할 수 있습니다.
 
@@ -18,7 +25,7 @@ ms.date: 08/23/2017
 
      C# 언어 및 .NET에 대해 간략히 설명합니다.
 
-* [Visual Studio 2017 RC에서 .NET Core를 사용하여 C# Hello World 애플리케이션 빌드](../../core/tutorials/with-visual-studio.md)
+* [Visual Studio 2017에서 .NET Core를 사용하여 C# Hello World 애플리케이션 빌드](../../core/tutorials/with-visual-studio.md)
 
    Visual Studio의 최신 릴리스인 Visual Studio 2017을 사용하면 Windows용 통합 개발 환경에서 애플리케이션을 코딩, 컴파일, 실행, 디버그, 프로파일링 및 게시할 수 있습니다.
 

@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6999de3e1bf1da2d306cf063647b47a2be166781
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 55934ef08b10764bb705d7c166621ec7cfcadd0a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57364421"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59108521"
 ---
 # <a name="coropenflags-enumeration"></a>CorOpenFlags 열거형
 매니페스트 파일을 열 때 메타데이터 동작을 제어하는 플래그 값을 포함합니다.  
@@ -61,7 +61,7 @@ typedef enum CorOpenFlags
 |`ofReadOnly`|읽기 및에 대 한 파일을 열 수를 나타내는에 대 한 호출 `QueryInterface` 에 대 한는 [IMetaDataEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md) 만들 수 없습니다.|  
 |`ofTakeOwnership`|호출 하 여 메모리가 할당 된 나타냅니다 [CoTaskMemAlloc](/windows/desktop/api/combaseapi/nf-combaseapi-cotaskmemalloc) 메타 데이터에서 해제 됩니다.|  
 |`ofNoTypeLib`|사용되지 않습니다. 이 플래그는 무시됩니다.|  
-|`ofNoTransform`|.winmd 파일의 자동 변환을 사용하지 않도록 설정해야 함을 나타냅니다. 즉, Windows 런타임 형식에서 .NET Framework 형식으로의 프로젝션을 사용하지 않도록 설정해야 합니다. 자세한 내용은 [Windows 런타임 및 CLR-아래는 내부적으로.NET 및 Windows 런타임](https://msdn.microsoft.com/magazine/jj651569.aspx)합니다.|  
+|`ofNoTransform`|.winmd 파일의 자동 변형을 사용하지 않도록 설정해야 함을 나타냅니다. 즉, Windows 런타임 형식에서 .NET Framework 형식으로의 프로젝션을 사용하지 않도록 설정해야 합니다. 자세한 내용은 [Windows 런타임 및 CLR-아래는 내부적으로.NET 및 Windows 런타임](https://msdn.microsoft.com/magazine/jj651569.aspx)합니다.|  
 |`ofReserved1`|내부용으로 예약됩니다.|  
 |`ofReserved2`|내부용으로 예약됩니다.|  
 |`ofReserved`|내부용으로 예약됩니다.|  
@@ -74,4 +74,5 @@ typedef enum CorOpenFlags
  **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>참고자료
+
 - [메타데이터 열거형](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

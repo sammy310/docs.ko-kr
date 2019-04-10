@@ -9,12 +9,12 @@ helpviewer_keywords:
 - images [Windows Forms], rotating
 - images [Windows Forms], skewing
 ms.assetid: a3bf97eb-63ed-425a-ba07-dcc65efb567c
-ms.openlocfilehash: dda03c9c1e1390ca6a5250471f047d3747e989e2
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 505028c491228ffdf9c11d0c71dcd5e1afdc5103
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58839914"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59114051"
 ---
 # <a name="how-to-rotate-reflect-and-skew-images"></a>방법: 이미지 회전, 반사 및 기울이기
 회전, 반사 하 고 원본 이미지의 왼쪽 위, 오른쪽 위 및 왼쪽 아래 모퉁이 대 한 대상 점을 지정 하 여 이미지를 기울일 수 있습니다. 세 개의 대상 지점 원본 사각형이 이미지는 평행 사변형에 매핑되는 3x3 유사 변형을 결정 합니다.  
@@ -46,7 +46,8 @@ ms.locfileid: "58839914"
  [!code-vb[System.Drawing.WorkingWithImages#61](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.WorkingWithImages/VB/Class1.vb#61)]  
   
 ## <a name="compiling-the-code"></a>코드 컴파일  
- 앞의 예제는 Windows forms에서 사용하도록 설계되었으며 <xref:System.Windows.Forms.PaintEventArgs> 이벤트 처리기의 매개 변수인 `e`<xref:System.Windows.Forms.Control.Paint>가 필요합니다. 바꿔야 `Stripes.bmp` 은 시스템에서 사용할 수 있는 이미지에 경로 사용 하 여 합니다.  
+ 앞의 예제는 Windows Forms에서 사용 하도록 설계 되었으며 필요 <xref:System.Windows.Forms.PaintEventArgs>`e`의 매개 변수는 <xref:System.Windows.Forms.Control.Paint> 이벤트 처리기입니다. 바꿔야 `Stripes.bmp` 은 시스템에서 사용할 수 있는 이미지에 경로 사용 하 여 합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [이미지, 비트맵, 아이콘 및 메타파일 사용](working-with-images-bitmaps-icons-and-metafiles.md)

@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: fb6d30d9-54f3-462b-8ebf-ce0440791ad5
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6f25e25f94dae1a959cbb813a44a7f4f09eaa69c
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: a4dcee3b396d9533f3169db1ea54a6cdc6086c8c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57474594"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59166148"
 ---
 # <a name="icordebugprocess6processstatechanged-method"></a>ICorDebugProcess6::ProcessStateChanged 메서드
 알립니다 [ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md) 프로세스가 실행 됩니다.  
@@ -40,5 +40,6 @@ HRESULT ProcessStateChanged(   [in] CorDebugStateChange change);
  **.NET Framework 버전:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
 ## <a name="see-also"></a>참고자료
+
 - [ICorDebugProcess6 인터페이스](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess6-interface.md)
 - [디버깅 인터페이스](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

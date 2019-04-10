@@ -2,12 +2,12 @@
 title: 종단 간 추적
 ms.date: 03/30/2017
 ms.assetid: f5ac7fc7-f97c-4313-b068-54e0c471b2aa
-ms.openlocfilehash: 4ffa97b2aa7b934a15ea676f28e527f4b8fbc8aa
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fd2964b39c758e41620fb453ddd8f61a1aa550aa
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54569065"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59092140"
 ---
 # <a name="end-to-end-tracing"></a>종단 간 추적
 종단 간 (e2e) 추적을 통해 개발자가 코드 경로가 실패 한 이유를 조사 하거나 용량 계획 및 성능 분석에 대 한 추적 정보를 제공 하는 Windows Communication Foundation (WCF) 인프라에서 코드 실행 합니다. Windows Communication Foundation (WCF) 오류의 원인을 진단 하기 위해 세 가지 상관 관계 메커니즘을 제공 합니다: 동작, 전송 및 전파 합니다.  
@@ -26,6 +26,7 @@ ms.locfileid: "54569065"
  모든 동작 추적 형식에 대한 요약 제공  
   
 ## <a name="see-also"></a>참고자료
+
 - [추적 구성](../../../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md)
 - [Service Trace Viewer를 사용하여 상호 관련된 추적 보기 및 문제 해결](../../../../../docs/framework/wcf/diagnostics/tracing/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting.md)
 - [종단 간 추적 시나리오](../../../../../docs/framework/wcf/diagnostics/tracing/end-to-end-tracing-scenarios.md)

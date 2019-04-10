@@ -8,12 +8,12 @@ helpviewer_keywords:
 - WCF Data Services, customizing
 - query interceptors [WCF Data Services]
 ms.assetid: 24b9df1b-b54b-4795-a033-edf333675de6
-ms.openlocfilehash: b5fdbaa25f55caf3de2f0591b7258d4a7dcb1b7e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a11334abc83db20bec06fd2459d7b8598f672f2f
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54586399"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59317482"
 ---
 # <a name="how-to-intercept-data-service-messages-wcf-data-services"></a>방법: (WCF Data Services) 데이터 서비스 메시지 가로채기
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]를 사용하면 사용자 지정 논리를 작업에 추가할 수 있도록 요청 메시지를 가로챌 수 있습니다. 메시지를 가로채 하려면 데이터 서비스에서 특별 한 특성이 있는 메서드를 사용 합니다. 자세한 내용은 [인터셉터](../../../../docs/framework/data/wcf/interceptors-wcf-data-services.md)합니다.  
@@ -22,23 +22,23 @@ ms.locfileid: "54586399"
   
 ### <a name="to-define-a-query-interceptor-for-the-orders-entity-set"></a>Orders 엔터티 집합에 대해 쿼리 인터셉터를 정의하려면  
   
-1.  Northwind 데이터 서비스 프로젝트에서 Northwind.svc 파일을 엽니다.  
+1. Northwind 데이터 서비스 프로젝트에서 Northwind.svc 파일을 엽니다.  
   
-2.  `Northwind` 클래스의 코드 페이지에서 다음 `using` 문(Visual Basic에서는 `Imports`)을 추가합니다.  
+2. `Northwind` 클래스의 코드 페이지에서 다음 `using` 문(Visual Basic에서는 `Imports`)을 추가합니다.  
   
      [!code-csharp[Astoria Northwind Service#UsingLinqExpressions](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind service/cs/northwind2.svc.cs#usinglinqexpressions)]
      [!code-vb[Astoria Northwind Service#UsingLinqExpressions](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind service/vb/northwind2.svc.vb#usinglinqexpressions)]  
   
-3.  `Northwind` 클래스에서 `OnQueryOrders`라는 서비스 작업 메서드를 다음과 같이 정의합니다.  
+3. `Northwind` 클래스에서 `OnQueryOrders`라는 서비스 작업 메서드를 다음과 같이 정의합니다.  
   
      [!code-csharp[Astoria Northwind Service#QueryInterceptorDef](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind service/cs/northwind2.svc.cs#queryinterceptordef)]
      [!code-vb[Astoria Northwind Service#QueryInterceptorDef](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind service/vb/northwind2.svc.vb#queryinterceptordef)]  
   
 ### <a name="to-define-a-change-interceptor-for-the-products-entity-set"></a>Products 엔터티 집합에 대해 변경 인터셉터를 정의하려면  
   
-1.  Northwind 데이터 서비스 프로젝트에서 Northwind.svc 파일을 엽니다.  
+1. Northwind 데이터 서비스 프로젝트에서 Northwind.svc 파일을 엽니다.  
   
-2.  `Northwind` 클래스에서 `OnChangeProducts`라는 서비스 작업 메서드를 다음과 같이 정의합니다.  
+2. `Northwind` 클래스에서 `OnChangeProducts`라는 서비스 작업 메서드를 다음과 같이 정의합니다.  
   
      [!code-csharp[Astoria Northwind Service#ChangeInterceptorDef](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind service/cs/northwind2.svc.cs#changeinterceptordef)]
      [!code-vb[Astoria Northwind Service#ChangeInterceptorDef](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind service/vb/northwind2.svc.vb#changeinterceptordef)]  
@@ -56,5 +56,6 @@ ms.locfileid: "54586399"
  [!code-vb[Astoria Northwind Service#ChangeInterceptor](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind service/vb/northwind2.svc.vb#changeinterceptor)]  
   
 ## <a name="see-also"></a>참고자료
+
 - [방법: 서비스 작업 정의](../../../../docs/framework/data/wcf/how-to-define-a-service-operation-wcf-data-services.md)
 - [WCF Data Services 정의](../../../../docs/framework/data/wcf/defining-wcf-data-services.md)

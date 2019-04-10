@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f833c19da1199528dceee3a4f34dea7180380023
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fb0e7a676fdbbe3cf04108266471833b28275b1b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54576436"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59083572"
 ---
 # <a name="iceefilegen-class"></a>ICeeFileGen 클래스
 기본 이식 가능한 실행 파일 (PE) 파일을 만들기 위한 기능을 제공 합니다. 인터페이스를 실행 하는 컴파일된 출력을 생성 하려면 컴파일러에서 일반적으로 사용 됩니다.  
@@ -244,4 +244,5 @@ public:
  **.NET framework 버전:** 1.0  
   
 ## <a name="see-also"></a>참고자료
+
 - [호스팅 인터페이스](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: b54f491d-196b-4279-876c-76b83ec0442c
-ms.openlocfilehash: 33f69f749934e724ee187aee2e3544f232a1b45d
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: 3efe8b8716a264848d07ecc37d4e11d07a8ba0a0
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58463932"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59172499"
 ---
 # <a name="transport-security-with-basic-authentication"></a>기본 인증을 사용하는 전송 보안
 다음 그림에는 Windows Communication Foundation (WCF) 서비스 및 클라이언트를 보여 줍니다. 서버에 SSL(Secure Sockets Layer)에 사용할 유효한 X.509 인증서가 있어야 하며 클라이언트에서 서버의 인증서를 신뢰해야 합니다. 또한 웹 서비스에는 이미 사용할 수 있는 SSL 구현이 있습니다. 자세한 내용은 기본 인증을 사용 하는 방법에 대 한 인터넷 정보 서비스 (IIS)에 대해서 [ https://go.microsoft.com/fwlink/?LinkId=83822 ](https://go.microsoft.com/fwlink/?LinkId=83822)합니다.  
@@ -40,7 +40,7 @@ ms.locfileid: "58463932"
  [!code-csharp[C_SecurityScenarios#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#1)]
  [!code-vb[C_SecurityScenarios#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#1)]  
   
-## <a name="configuration"></a>구성하기  
+## <a name="configuration"></a>구성  
  다음에서는 전송 수준 보안이 설정된 기본 인증을 사용하도록 서비스를 구성합니다.  
   
 ```xml  
@@ -80,7 +80,7 @@ ms.locfileid: "58463932"
  [!code-csharp[C_SecurityScenarios#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#2)]
  [!code-vb[C_SecurityScenarios#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#2)]  
   
-### <a name="configuration"></a>구성하기  
+### <a name="configuration"></a>구성  
  다음 코드에서는 클라이언트 구성을 보여 줍니다.  
   
 > [!NOTE]
@@ -111,10 +111,11 @@ ms.locfileid: "58463932"
 ```  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.ServiceModel.ClientBase%601.ClientCredentials%2A>
 - <xref:System.ServiceModel.Security.UserNamePasswordClientCredential>
 - [인증서 작업](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)
-- [방법: SSL 인증서로 포트 구성](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md)
+- [방법: SSL 인증서를 사용하여 포트 구성](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md)
 - [보안 개요](../../../../docs/framework/wcf/feature-details/security-overview.md)
 - [\<clientCredentials>](../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md)
-- [Windows Server appfabric 보안 모델](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+- [Windows Server AppFabric 보안 모델](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

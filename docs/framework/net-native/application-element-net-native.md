@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: b4e9b37a-059b-4076-8f56-cb3f9cef0cd9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 366878fbfbfbe3e3951095c9ad82c1260638a0cb
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 5b858b9daad22cdda6df30be7b28cdecfd275b8f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55270812"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59228304"
 ---
 # <a name="application-element-net-native"></a>\<응용 프로그램 > 요소 (.NET 네이티브)
 런타임에 메타데이터를 리플렉션에 사용할 수 있는 응용 프로그램 수준 형식 및 형식 멤버의 컨테이너로 사용되며, 앱의 모든 프로그램 요소에 대해 런타임 리플렉션 정책을 적용합니다.  
@@ -60,15 +60,15 @@ ms.locfileid: "55270812"
   
 |요소|설명|  
 |-------------|-----------------|  
-|[\<Assembly>](../../../docs/framework/net-native/assembly-element-net-native.md)|특정 어셈블리의 모든 형식에 정책을 적용합니다.|  
-|[\<Namespace>](../../../docs/framework/net-native/namespace-element-net-native.md)|특정 네임스페이스의 모든 형식에 정책을 적용합니다.|  
+|[\<어셈블리 >](../../../docs/framework/net-native/assembly-element-net-native.md)|특정 어셈블리의 모든 형식에 정책을 적용합니다.|  
+|[\<Namespace >](../../../docs/framework/net-native/namespace-element-net-native.md)|특정 네임스페이스의 모든 형식에 정책을 적용합니다.|  
 |[\<Type>](../../../docs/framework/net-native/type-element-net-native.md)|클래스 또는 구조체와 같은 특정 형식에 정책을 적용합니다.|  
 |[\<TypeInstantiation>](../../../docs/framework/net-native/typeinstantiation-element-net-native.md)|생성된 제네릭 형식에 정책을 적용합니다. 예를 들어 [\<TypeInstantiation>](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) 요소를 사용하면 `List<String>` 형식에 대한 정책을 정의할 수 있습니다.|  
-|[\<Method>](../../../docs/framework/net-native/method-element-net-native.md)|특정 형식에 대한 메서드에 정책을 적용합니다.|  
+|[\<메서드 >](../../../docs/framework/net-native/method-element-net-native.md)|특정 형식에 대한 메서드에 정책을 적용합니다.|  
 |[\<MethodInstantiation>](../../../docs/framework/net-native/methodinstantiation-element-net-native.md)|생성된 제네릭 메서드에 정책을 적용합니다.|  
-|[\<Property>](../../../docs/framework/net-native/property-element-net-native.md)|특정 형식에 대한 속성에 정책을 적용합니다.|  
-|[\<Field>](../../../docs/framework/net-native/field-element-net-native.md)|특정 형식에 대한 필드에 정책을 적용합니다.|  
-|[\<Event>](../../../docs/framework/net-native/event-element-net-native.md)|특정 형식의 이벤트에 정책을 적용합니다.|  
+|[\<속성 >](../../../docs/framework/net-native/property-element-net-native.md)|특정 형식에 대한 속성에 정책을 적용합니다.|  
+|[\<필드 >](../../../docs/framework/net-native/field-element-net-native.md)|특정 형식에 대한 필드에 정책을 적용합니다.|  
+|[\<이벤트 >](../../../docs/framework/net-native/event-element-net-native.md)|특정 형식의 이벤트에 정책을 적용합니다.|  
   
 ### <a name="parent-elements"></a>부모 요소  
   
@@ -86,7 +86,8 @@ ms.locfileid: "55270812"
 -   리플렉션, serialization 및 interop에 대한 응용 프로그램 수준 정책을 설정하는 요소로 사용. `<Application>` 요소의 특성은 애플리케이션 수준 정책을 정의하며, 이 정책은 `<Application>` 또는 [\<Library&gt;](../../../docs/framework/net-native/library-element-net-native.md) 요소로 정의된 자식 요소에 의해 재정의될 수 있습니다.  
   
 ## <a name="see-also"></a>참고자료
-- [\<라이브러리 > 요소](../../../docs/framework/net-native/library-element-net-native.md)
-- [\<지시문 > 요소](../../../docs/framework/net-native/directives-element-net-native.md)
+
+- [\<Library> 요소](../../../docs/framework/net-native/library-element-net-native.md)
+- [\<Directives> 요소](../../../docs/framework/net-native/directives-element-net-native.md)
 - [런타임 지시문 요소](../../../docs/framework/net-native/runtime-directive-elements.md)
 - [런타임 지시문(rd.xml) 구성 파일 참조](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)

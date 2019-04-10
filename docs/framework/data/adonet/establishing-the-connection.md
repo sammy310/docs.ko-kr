@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 3af512f3-87d9-4005-9e2f-abb1060ff43f
-ms.openlocfilehash: 97cae018f8cdf19da390b9586334f7c8b7f1c239
-ms.sourcegitcommit: c6f69b0cf149f6b54483a6d5c2ece222913f43ce
+ms.openlocfilehash: 7f8cca02e673339e892c16e0de99e20accdfd404
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2019
-ms.locfileid: "55903809"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59142345"
 ---
 # <a name="establishing-the-connection"></a>연결 설정
 Microsoft SQL Server에 연결하려면 .NET Framework Data Provider for SQL Server의 <xref:System.Data.SqlClient.SqlConnection> 개체를 사용합니다. OLE DB 데이터 소스에 연결하려면 .NET Framework Data Provider for OLE DB의 <xref:System.Data.OleDb.OleDbConnection> 개체를 사용합니다. ODBC 데이터 소스에 연결하려면 .NET Framework Data Provider for ODBC의 <xref:System.Data.Odbc.OdbcConnection> 개체를 사용합니다. Oracle 데이터 소스에 연결하려면 .NET Framework Data Provider for Oracle의 <xref:System.Data.OracleClient.OracleConnection> 개체를 사용합니다. 안전 하 게 저장 하 고 연결 문자열 검색을 참조 하세요 [연결 정보 보호](../../../../docs/framework/data/adonet/protecting-connection-information.md)합니다.  
@@ -143,6 +143,7 @@ nwindConn.Open();
 ```  
   
 ## <a name="see-also"></a>참고자료
+
 - [데이터 소스에 연결](../../../../docs/framework/data/adonet/connecting-to-a-data-source.md)
 - [연결 문자열](../../../../docs/framework/data/adonet/connection-strings.md)
 - [OLE DB, ODBC 및 Oracle 연결 풀링](../../../../docs/framework/data/adonet/ole-db-odbc-and-oracle-connection-pooling.md)

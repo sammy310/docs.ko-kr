@@ -2,12 +2,12 @@
 title: 개인 정보 및 데이터 보안
 ms.date: 03/30/2017
 ms.assetid: 46fa5839-adf7-4c7c-bce3-71e941fa7de9
-ms.openlocfilehash: ed408cedbd686efd29472f6f7d19ec03390164f9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3852e6034ff78b362bd67a05bd828d3033731a85
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54662142"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59081853"
 ---
 # <a name="privacy-and-data-security"></a>개인 정보 및 데이터 보안
 ADO.NET 응용 프로그램의 중요한 정보를 안전하게 보호하고 관리하는 방법은 응용 프로그램을 만드는 데 사용된 기본 제품 및 기술에 따라 다릅니다. ADO.NET은 데이터 보안이나 암호화를 위한 서비스를 직접적으로 제공하지 않습니다.  
@@ -28,6 +28,7 @@ ADO.NET 응용 프로그램의 중요한 정보를 안전하게 보호하고 관
  <xref:System.Security.SecureString> 클래스는 DPAPI(데이터 보호 API)를 사용하여 메모리 내 텍스트를 암호화하기 위한 메서드를 제공합니다. 이 경우 문자열이 더 이상 필요하지 않으면 메모리에서 삭제됩니다. `ToString`의 내용을 빠르게 읽는 데 사용할 수 있는 <xref:System.Security.SecureString> 메서드는 없습니다. 값을 제공하지 않거나 `SecureString` 개체 배열에 대한 포인터를 전달하여 <xref:System.Char>의 새 인스턴스를 초기화할 수 있습니다. 그런 다음 이 클래스의 다양한 메서드를 사용하여 문자열에 대한 작업을 수행할 수 있습니다. 자세한 내용은 다운로드 합니다 [SecureString 응용 프로그램 샘플](https://go.microsoft.com/fwlink/?LinkId=120418)를 사용 하는 방법을 보여 줍니다를 `SecureString` 에서 클래스.  
   
 ## <a name="see-also"></a>참고자료
+
 - [ADO.NET 응용 프로그램 보안](../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
 - [SQL Server 보안](../../../../docs/framework/data/adonet/sql/sql-server-security.md)
 - [ADO.NET 관리되는 공급자 및 데이터 집합 개발자 센터](https://go.microsoft.com/fwlink/?LinkId=217917)

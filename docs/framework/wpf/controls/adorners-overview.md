@@ -7,18 +7,16 @@ dev_langs:
 helpviewer_keywords:
 - adorners [WPF], about adorners
 ms.assetid: 33d4c5c2-2daf-4e45-ba9a-5b673e2b8280
-ms.openlocfilehash: 94075189d82e5d446b3058b944c789a4288c26ca
-ms.sourcegitcommit: d938c39afb9216db377d0f0ecdaa53936a851059
+ms.openlocfilehash: 6b710df45379ccce4daf340b4dbe2701d3c96604
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58634533"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59320472"
 ---
 # <a name="adorners-overview"></a>표시기 개요
 표시기는 특수 한 유형의 <xref:System.Windows.FrameworkElement>사용자에 게 시각 신호를 제공 하는 데 사용 합니다. 표시기는 다른 용도로 요소에 기능 핸들을 추가하거나 컨트롤에 대한 상태 정보를 제공하는 데 사용할 수 있습니다.  
-  
-  
-  
+
 <a name="about_Adorners"></a>   
 ## <a name="about-adorners"></a>표시기 정보  
  <xref:System.Windows.Documents.Adorner> 사용자 지정 <xref:System.Windows.FrameworkElement> 에 바인딩되는 <xref:System.Windows.UIElement>합니다. 표시기에서 렌더링 되는 <xref:System.Windows.Documents.AdornerLayer>, 위에 표시 된 요소 또는 표시 된 요소 컬렉션은 항상 있는 렌더링 표면 인 합니다. 표시기의 렌더링 렌더링 별개인는 <xref:System.Windows.UIElement> 표시기가 바인딩되는 합니다. 표시기는 일반적으로 표시한 요소의 왼쪽 위에 있는 표준 2차원 좌표 원점을 사용하여, 바인딩되어 있는 요소에 상대적으로 배치됩니다.  
@@ -33,7 +31,7 @@ ms.locfileid: "58634533"
   
 -   시각적으로 마스킹 하거나 재정의의 일부 또는 전체를 <xref:System.Windows.UIElement>입니다.  
   
- [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]는 시각적 요소를 표시하는 기본 프레임워크를 제공합니다. 다음 표에 개체 및 해당 용도를 표시할 때 사용되는 기본 유형이 나와 있습니다. 다음은 여러 사용법의 예입니다.  
+ [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 시각적 요소를 표시 하는 기본 프레임 워크를 제공 합니다. 다음 표에 개체 및 해당 용도를 표시할 때 사용되는 기본 유형이 나와 있습니다. 다음은 여러 사용법의 예입니다.  
   
 |||  
 |-|-|  
@@ -76,9 +74,9 @@ ms.locfileid: "58634533"
 ## <a name="adorning-a-single-uielement"></a>단일 UIElement 표시  
  특정에 표시기를 바인딩할 <xref:System.Windows.UIElement>, 다음이 단계를 수행 합니다.  
   
-1.  정적 메서드를 호출 <xref:System.Windows.Documents.AdornerLayer.GetAdornerLayer%2A> 가져오려는 <xref:System.Windows.Documents.AdornerLayer> 개체에 대 한는 <xref:System.Windows.UIElement> 하 합니다. <xref:System.Windows.Documents.AdornerLayer.GetAdornerLayer%2A> 지정 된 시작 하 여 시각적 트리를 차례로 <xref:System.Windows.UIElement>를 찾으면 첫 번째 표시기 계층을 반환 합니다. (표시기 계층이 없으면 메서드가 null을 반환합니다.)  
+1. 정적 메서드를 호출 <xref:System.Windows.Documents.AdornerLayer.GetAdornerLayer%2A> 가져오려는 <xref:System.Windows.Documents.AdornerLayer> 개체에 대 한는 <xref:System.Windows.UIElement> 하 합니다. <xref:System.Windows.Documents.AdornerLayer.GetAdornerLayer%2A> 지정 된 시작 하 여 시각적 트리를 차례로 <xref:System.Windows.UIElement>를 찾으면 첫 번째 표시기 계층을 반환 합니다. (표시기 계층이 없으면 메서드가 null을 반환합니다.)  
   
-2.  호출 된 <xref:System.Windows.Documents.AdornerLayer.Add%2A> 대상에 표시기를 바인딩할 메서드 <xref:System.Windows.UIElement>합니다.  
+2. 호출 된 <xref:System.Windows.Documents.AdornerLayer.Add%2A> 대상에 표시기를 바인딩할 메서드 <xref:System.Windows.UIElement>합니다.  
   
  다음 예제에서는 바인딩합니다 (위)에 <xref:System.Windows.Controls.TextBox> 라는 *myTextBox*합니다.  
   
@@ -92,9 +90,9 @@ ms.locfileid: "58634533"
 ## <a name="adorning-the-children-of-a-panel"></a>패널의 자식 표시  
  자식에 표시기를 바인딩할는 <xref:System.Windows.Controls.Panel>, 다음이 단계를 수행 합니다.  
   
-1.  호출을 `static` 메서드 <xref:System.Windows.Documents.AdornerLayer.GetAdornerLayer%2A> 자식을 하는 요소에 대 한 표시기 계층을 찾으려고 합니다.  
+1. 호출을 `static` 메서드 <xref:System.Windows.Documents.AdornerLayer.GetAdornerLayer%2A> 자식을 하는 요소에 대 한 표시기 계층을 찾으려고 합니다.  
   
-2.  부모 요소와 호출의 자식을 열거는 <xref:System.Windows.Documents.AdornerLayer.Add%2A> 표시기 각 자식 요소를 바인딩하는 방법입니다.  
+2. 부모 요소와 호출의 자식을 열거는 <xref:System.Windows.Documents.AdornerLayer.Add%2A> 표시기 각 자식 요소를 바인딩하는 방법입니다.  
   
  다음 예제에서는 바인딩합니다 (위에 표시 됨)의 자식 항목에는 <xref:System.Windows.Controls.StackPanel> 라는 *myStackPanel*합니다.  
   
@@ -102,6 +100,7 @@ ms.locfileid: "58634533"
  [!code-vb[Adorners_SimpleCircleAdorner#_AdornChildren](~/samples/snippets/visualbasic/VS_Snippets_Wpf/Adorners_SimpleCircleAdorner/VisualBasic/Window1.xaml.vb#_adornchildren)]  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Windows.Media.AdornerHitTestResult>
 - [WPF에서 Shape 및 기본 그리기 개요](../graphics-multimedia/shapes-and-basic-drawing-in-wpf-overview.md)
 - [이미지, 그림 및 시각적 표시로 그리기](../graphics-multimedia/painting-with-images-drawings-and-visuals.md)

@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f28facc8acb430de4aa255208a62c5fc61f12cd8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 10942541b781d367820301588656b2f1fc2fd006
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54727666"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59184420"
 ---
 # <a name="imetadataemit-interface"></a>IMetaDataEmit 인터페이스
 만들기, 수정 및 현재 정의 된 범위에서 어셈블리에 대 한 메타 데이터를 저장 하는 메서드를 제공 합니다. 메타 데이터 메모리에 저장 하거나 디스크에 저장 될 수 있습니다.  
@@ -90,5 +90,6 @@ ms.locfileid: "54727666"
  **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>참고자료
+
 - [메타데이터 인터페이스](../../../../docs/framework/unmanaged-api/metadata/metadata-interfaces.md)
 - [IMetaDataEmit2 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

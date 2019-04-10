@@ -2,12 +2,12 @@
 title: OLE DB 스키마 컬렉션
 ms.date: 03/30/2017
 ms.assetid: 6380c36b-658e-4d67-91e8-7131ef4a7c2c
-ms.openlocfilehash: f753f35aab0a0200da5de463a73abb9813253d11
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6dc187b0a876d9e167a74f2381db156dde2764fe
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54658457"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59164686"
 ---
 # <a name="ole-db-schema-collections"></a>OLE DB 스키마 컬렉션
 이 단원에서는 Microsoft SQL Server, Oracle 및 Microsoft Jet용 OLE DB 공급자에서 지원하는 스키마 컬렉션에 대해 설명합니다.  
@@ -25,7 +25,7 @@ ms.locfileid: "54658457"
   
 -   Catalog  
   
--   Indexes  
+-   인덱스  
   
 ### <a name="tables"></a>Tables  
   
@@ -36,7 +36,7 @@ ms.locfileid: "54658457"
 |TABLE_NAME|문자열|  
 |TABLE_TYPE|문자열|  
 |TABLE_GUID|Guid|  
-|DESCRIPTION|문자열|  
+|설명|문자열|  
 |TABLE_PROPID|Int64|  
 |DATE_CREATED|DateTime|  
 |DATE_MODIFIED|DateTime|  
@@ -72,7 +72,7 @@ ms.locfileid: "54658457"
 |DOMAIN_CATALOG|문자열|  
 |DOMAIN_SCHEMA|문자열|  
 |DOMAIN_NAME|문자열|  
-|DESCRIPTION|문자열|  
+|설명|문자열|  
 |COLUMN_LCID|Int32|  
 |COLUMN_COMPFLAGS|Int32|  
 |COLUMN_SORTID|Int32|  
@@ -88,7 +88,7 @@ ms.locfileid: "54658457"
 |PROCEDURE_NAME|문자열|  
 |PROCEDURE_TYPE|Int16|  
 |PROCEDURE_DEFINITION|문자열|  
-|DESCRIPTION|문자열|  
+|설명|문자열|  
 |DATE_CREATED|DateTime|  
 |DATE_MODIFIED|DateTime|  
   
@@ -110,7 +110,7 @@ ms.locfileid: "54658457"
 |CHARACTER_OCTET_LENGTH|Int64|  
 |NUMERIC_PRECISION|Int32|  
 |NUMERIC_SCALE|Int16|  
-|DESCRIPTION|문자열|  
+|설명|문자열|  
 |TYPE_NAME|문자열|  
 |LOCAL_TYPE_NAME|문자열|  
   
@@ -119,9 +119,9 @@ ms.locfileid: "54658457"
 |열 이름|데이터 형식|  
 |----------------|--------------|  
 |CATALOG_NAME|문자열|  
-|DESCRIPTION|문자열|  
+|설명|문자열|  
   
-### <a name="indexes"></a>Indexes  
+### <a name="indexes"></a>인덱스  
   
 |열 이름|데이터 형식|  
 |----------------|--------------|  
@@ -164,9 +164,9 @@ ms.locfileid: "54658457"
   
 -   ProcedureParameters  
   
--   뷰  
+-   보기  
   
--   Indexes  
+-   인덱스  
   
 ### <a name="tables"></a>Tables  
   
@@ -177,7 +177,7 @@ ms.locfileid: "54658457"
 |TABLE_NAME|문자열|  
 |TABLE_TYPE|문자열|  
 |TABLE_GUID|Guid|  
-|DESCRIPTION|문자열|  
+|설명|문자열|  
 |TABLE_PROPID|Int64|  
 |DATE_CREATED|DateTime|  
 |DATE_MODIFIED|DateTime|  
@@ -213,7 +213,7 @@ ms.locfileid: "54658457"
 |DOMAIN_CATALOG|문자열|  
 |DOMAIN_SCHEMA|문자열|  
 |DOMAIN_NAME|문자열|  
-|DESCRIPTION|문자열|  
+|설명|문자열|  
   
 ### <a name="procedures"></a>절차  
   
@@ -224,7 +224,7 @@ ms.locfileid: "54658457"
 |PROCEDURE_NAME|문자열|  
 |PROCEDURE_TYPE|Int16|  
 |PROCEDURE_DEFINITION|문자열|  
-|DESCRIPTION|문자열|  
+|설명|문자열|  
 |DATE_CREATED|DateTime|  
 |DATE_MODIFIED|DateTime|  
   
@@ -247,10 +247,10 @@ ms.locfileid: "54658457"
 |CHARACTER_OCTET_LENGTH|Int64|  
 |NUMERIC_PRECISION|Int32|  
 |NUMERIC_SCALE|Int16|  
-|DESCRIPTION|문자열|  
+|설명|문자열|  
 |OVERLOAD|Int16|  
   
-### <a name="views"></a>뷰  
+### <a name="views"></a>보기  
   
 |열 이름|데이터 형식|  
 |----------------|--------------|  
@@ -260,11 +260,11 @@ ms.locfileid: "54658457"
 |VIEW_DEFINITION|문자열|  
 |CHECK_OPTION|Boolean|  
 |IS_UPDATABLE|Boolean|  
-|DESCRIPTION|문자열|  
+|설명|문자열|  
 |DATE_CREATED|DateTime|  
 |DATE_MODIFIED|DateTime|  
   
-### <a name="indexes"></a>Indexes  
+### <a name="indexes"></a>인덱스  
   
 |열 이름|데이터 형식|  
 |----------------|--------------|  
@@ -303,9 +303,9 @@ ms.locfileid: "54658457"
   
 -   절차  
   
--   뷰  
+-   보기  
   
--   Indexes  
+-   인덱스  
   
 ### <a name="tables"></a>Tables  
   
@@ -316,7 +316,7 @@ ms.locfileid: "54658457"
 |TABLE_NAME|문자열|  
 |TABLE_TYPE|문자열|  
 |TABLE_GUID|Guid|  
-|DESCRIPTION|문자열|  
+|설명|문자열|  
 |TABLE_PROPID|Int64|  
 |DATE_CREATED|DateTime|  
 |DATE_MODIFIED|DateTime|  
@@ -352,7 +352,7 @@ ms.locfileid: "54658457"
 |DOMAIN_CATALOG|문자열|  
 |DOMAIN_SCHEMA|문자열|  
 |DOMAIN_NAME|문자열|  
-|DESCRIPTION|문자열|  
+|설명|문자열|  
   
 ### <a name="procedures"></a>절차  
   
@@ -363,11 +363,11 @@ ms.locfileid: "54658457"
 |PROCEDURE_NAME|문자열|  
 |PROCEDURE_TYPE|Int16|  
 |PROCEDURE_DEFINITION|문자열|  
-|DESCRIPTION|문자열|  
+|설명|문자열|  
 |DATE_CREATED|DateTime|  
 |DATE_MODIFIED|DateTime|  
   
-### <a name="views"></a>뷰  
+### <a name="views"></a>보기  
   
 |열 이름|데이터 형식|  
 |----------------|--------------|  
@@ -377,11 +377,11 @@ ms.locfileid: "54658457"
 |VIEW_DEFINITION|문자열|  
 |CHECK_OPTION|Boolean|  
 |IS_UPDATABLE|Boolean|  
-|DESCRIPTION|문자열|  
+|설명|문자열|  
 |DATE_CREATED|DateTime|  
 |DATE_MODIFIED|DateTime|  
   
-### <a name="indexes"></a>Indexes  
+### <a name="indexes"></a>인덱스  
   
 |열 이름|데이터 형식|  
 |----------------|--------------|  
@@ -409,7 +409,8 @@ ms.locfileid: "54658457"
 |CARDINALITY|Decimal|  
 |PAGES|Int32|  
 |FILTER_CONDITION|문자열|  
-|INTEGRATED|부울|  
+|INTEGRATED|Boolean|  
   
 ## <a name="see-also"></a>참고자료
+
 - [ADO.NET 관리되는 공급자 및 데이터 집합 개발자 센터](https://go.microsoft.com/fwlink/?LinkId=217917)

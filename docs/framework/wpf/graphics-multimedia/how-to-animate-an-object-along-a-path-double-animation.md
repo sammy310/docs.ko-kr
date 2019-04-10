@@ -8,12 +8,12 @@ helpviewer_keywords:
 - animation [WPF], objects along paths (double animation)
 - double animation [WPF]
 ms.assetid: 5a3c4a99-f303-42ad-a52a-e4794bb1798e
-ms.openlocfilehash: 1838b2492e7ea8a33139fdb5682362998d84a98d
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 54f345bbe6b513e3593cbf45ba190d4a44228424
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57363404"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59101447"
 ---
 # <a name="how-to-animate-an-object-along-a-path-double-animation"></a>방법: 경로를 따라 개체에 애니메이션 효과 주기(Double 애니메이션)
 사용 하는 방법을 보여 주는이 예제는 <xref:System.Windows.Media.Animation.DoubleAnimationUsingPath> 정의한 경로 따라 개체를 이동 하는 클래스는 <xref:System.Windows.Media.PathGeometry>합니다.  
@@ -35,5 +35,6 @@ ms.locfileid: "57363404"
  기하학적 경로 사용 하 여 개체를 이동 하는 또 다른 방법은 사용 하는 것을 <xref:System.Windows.Media.Animation.MatrixAnimationUsingPath> 개체입니다. 예를 들어 참조 [는 경로 따라 개체 (매트릭스 애니메이션)에 애니메이션 효과 주기](how-to-animate-an-object-along-a-path-matrix-animation.md)합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [애니메이션 개요](animation-overview.md)
 - [경로 애니메이션 방법 항목](path-animation-how-to-topics.md)

@@ -2,12 +2,12 @@
 title: 함수(Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 52b3d776-5acc-4f69-b614-5a43ce56ef9f
-ms.openlocfilehash: 88029f22cc22594d26a05ad66051378a75a6e753
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f31f829b53160da5a043617b9aa999b398859f17
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54715597"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59080607"
 ---
 # <a name="functions-entity-sql"></a>함수(Entity SQL)
 Entity SQL에서는 사용자 정의 함수, 정식 함수 및 공급자 특정 함수를 지원합니다. 사용자 정의 함수는 개념적 모델에 지정되거나 쿼리에 인라인으로 지정됩니다. 자세한 내용은 [사용자 정의 함수](../../../../../../docs/framework/data/adonet/ef/language-reference/user-defined-functions-entity-sql.md)합니다.  
@@ -24,4 +24,5 @@ Entity SQL에서는 사용자 정의 함수, 정식 함수 및 공급자 특정 
  [집계 함수](../../../../../../docs/framework/data/adonet/ef/aggregate-functions-sqlclient-for-entity-framework.md)  
   
 ## <a name="see-also"></a>참고자료
+
 - [Entity SQL 개요](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)

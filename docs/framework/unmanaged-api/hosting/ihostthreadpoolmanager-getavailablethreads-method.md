@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6f9eb28ea1a60991d047494336035aaf239b9edd
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: b4f16db1d35f8a0de1c755566e27b07bf9067dfe
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57478598"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59129196"
 ---
 # <a name="ihostthreadpoolmanagergetavailablethreads-method"></a>IHostThreadPoolManager::GetAvailableThreads 메서드
 현재 작업 항목을 처리 하 고 있지는 스레드 풀의 스레드 수를 가져옵니다.  
@@ -64,6 +64,7 @@ HRESULT GetAvailableThreads (
  **.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Threading.ThreadPool.GetAvailableThreads%2A>
 - <xref:System.Threading.ThreadPool>
 - [IHostThreadPoolManager 인터페이스](../../../../docs/framework/unmanaged-api/hosting/ihostthreadpoolmanager-interface.md)

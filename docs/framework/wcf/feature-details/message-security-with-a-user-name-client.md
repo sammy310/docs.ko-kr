@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 36335cb9-76b8-4443-92c7-44f081eabb21
-ms.openlocfilehash: 872283f55ae6f085b2cdf5c64c229b9d459b71f8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 73e984193f87b20e0e00d8ab92a7c0fd67f7968f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54701276"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59081556"
 ---
 # <a name="message-security-with-a-user-name-client"></a>사용자 이름 클라이언트를 사용하는 메시지 보안
 다음 그림에는 Windows Communication Foundation (WCF) 서비스 및 메시지 수준 보안을 사용 하 여 보호 하는 클라이언트를 보여 줍니다. 서비스는 X.509 인증서를 사용하여 인증됩니다. 클라이언트는 사용자 이름 및 암호를 사용하여 인증합니다.  
@@ -38,12 +38,12 @@ ms.locfileid: "54701276"
 -   제공된 구성을 사용하여 서비스를 만들지만 엔드포인트를 정의하지 않습니다.  
   
 ### <a name="code"></a>코드  
- 다음 코드에서는 메시지 보안을 사용하는 서비스 끝점을 만드는 방법을 보여 줍니다.  
+ 다음 코드에서는 메시지 보안을 사용하는 서비스 엔드포인트를 만드는 방법을 보여 줍니다.  
   
  [!code-csharp[C_SecurityScenarios#9](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#9)]
  [!code-vb[C_SecurityScenarios#9](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#9)]  
   
-### <a name="configuration"></a>구성하기  
+### <a name="configuration"></a>구성  
  코드 대신 다음 구성을 사용할 수 있습니다.  
   
 ```xml  
@@ -94,7 +94,7 @@ ms.locfileid: "54701276"
  [!code-csharp[C_SecurityScenarios#16](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#16)]
  [!code-vb[C_SecurityScenarios#16](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#16)]  
   
-### <a name="configuration"></a>구성하기  
+### <a name="configuration"></a>구성  
  다음 코드에서는 클라이언트를 구성합니다. 바인딩은 메시지 모드 보안으로 설정되며 클라이언트 자격 증명 형식은 `UserName`로 설정됩니다. 사용자 이름 및 암호는 코드(구성할 수 없음)를 사용해서만 지정할 수 있습니다.  
   
 ```xml  
@@ -126,8 +126,9 @@ ms.locfileid: "54701276"
 ```  
   
 ## <a name="see-also"></a>참고자료
+
 - [보안 개요](../../../../docs/framework/wcf/feature-details/security-overview.md)
-- [메시지 보안 사용자 이름](../../../../docs/framework/wcf/samples/message-security-user-name.md)
+- [Message Security User Name](../../../../docs/framework/wcf/samples/message-security-user-name.md)
 - [서비스 ID 및 인증](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)
 - [\<identity>](../../../../docs/framework/configure-apps/file-schema/wcf/identity.md)
-- [Windows Server appfabric 보안 모델](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+- [Windows Server AppFabric 보안 모델](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

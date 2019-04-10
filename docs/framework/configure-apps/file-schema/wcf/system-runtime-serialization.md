@@ -2,12 +2,12 @@
 title: <system.runtime.serialization>
 ms.date: 03/30/2017
 ms.assetid: a8cebf4c-06d2-4667-8f5b-c3e1fc90df6f
-ms.openlocfilehash: 5aa5d75e12852fe6a0e4e9a2eb4ae57d25d1022c
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: c34eba2614a354f1753d8da077f8653f2c260a97
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55272688"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59165895"
 ---
 # <a name="systemruntimeserialization"></a>\<system.runtime.serialization>
 <xref:System.Runtime.Serialization> 네임스페이스 섹션의 루트 요소를 나타내며 <xref:System.Runtime.Serialization.DataContractSerializer>의 옵션을 설정하기 위한 요소를 포함합니다.  
@@ -49,9 +49,10 @@ ms.locfileid: "55272688"
   
 |요소|설명|  
 |-------------|-----------------|  
-|[\<configuration> 요소](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)|구성의 최상위 요소입니다.|  
+|[\<구성 > 요소](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)|구성의 최상위 요소입니다.|  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Runtime.Serialization>
 - [데이터 계약 사용](../../../../../docs/framework/wcf/feature-details/using-data-contracts.md)
 - [데이터 계약 알려진 형식](../../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)

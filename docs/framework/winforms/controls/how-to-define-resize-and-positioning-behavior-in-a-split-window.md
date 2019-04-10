@@ -1,5 +1,5 @@
 ---
-title: '방법: 크기 조정 및 분할 창에서 위치 지정 동작 정의'
+title: '방법: 분할 창에서 크기 조정 및 위치 지정 동작 정의'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - splitter windows [Windows Forms], resizing
 - SplitContainer control [Windows Forms], resizing
 ms.assetid: 9bf73f36-ed2d-4a02-b15a-0770eff4fdfa
-ms.openlocfilehash: a0e16a1961e5eb7fcb81503d0ccead38e08974dc
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8cdcfdfaa135a92ed6a6e96d4a72de2c97f2493d
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54628255"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59328675"
 ---
-# <a name="how-to-define-resize-and-positioning-behavior-in-a-split-window"></a>방법: 크기 조정 및 분할 창에서 위치 지정 동작 정의
+# <a name="how-to-define-resize-and-positioning-behavior-in-a-split-window"></a>방법: 분할 창에서 크기 조정 및 위치 지정 동작 정의
 패널을 <xref:System.Windows.Forms.SplitContainer> 컨트롤 자체적으로 크기를 조정 하 고 사용자가 조작 합니다. 그러나 경우가 분할자를 프로그래밍 방식으로 제어 하려고 하면-커서가 않았고을 어느 정도는 이동할 수 있습니다.  
   
  <xref:System.Windows.Forms.SplitContainer.SplitterIncrement%2A> 속성과 다른 속성에는 <xref:System.Windows.Forms.SplitContainer> 컨트롤을 통해 정확한 요구에 맞게 사용자 인터페이스의 동작을 제어할 수 있습니다. 이러한 속성은 다음 표에 나열 됩니다.  
@@ -31,7 +31,7 @@ ms.locfileid: "54628255"
   
 ### <a name="to-define-splitcontainer-resize-behavior"></a>SplitContainer 크기 조정 동작을 정의 하려면  
   
-1.  프로시저를 설정 합니다 <xref:System.Windows.Forms.SplitContainer.SplitterIncrement%2A> 속성을 원하는 크기로 분할자의 '맞춤' 동작 이루어집니다 되도록 합니다.  
+1. 프로시저를 설정 합니다 <xref:System.Windows.Forms.SplitContainer.SplitterIncrement%2A> 속성을 원하는 크기로 분할자의 '맞춤' 동작 이루어집니다 되도록 합니다.  
   
      폼의 다음 코드 예제에서 <xref:System.Windows.Forms.Form.Load> 이벤트, 내에서 분할자는 <xref:System.Windows.Forms.SplitContainer> 컨트롤이 끌 때 10 픽셀을 이동 하도록 설정 된 합니다.  
   
@@ -64,5 +64,6 @@ ms.locfileid: "54628255"
      분할자를 왼쪽 또는 오른쪽으로 약간 이동 해야 아무런 변화가 없습니다. 그러나 마우스 포인터가 어느 방향으로든에서 10 픽셀 되 면 분할자 새 위치에 맞춰집니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Windows.Forms.SplitContainer>
 - <xref:System.Windows.Forms.SplitContainer.SplitterIncrement%2A>

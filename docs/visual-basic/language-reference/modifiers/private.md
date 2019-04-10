@@ -65,7 +65,7 @@ ms.locfileid: "58819479"
 - [보호됨](../../../visual-basic/language-reference/modifiers/protected.md)
 - [Friend](../../../visual-basic/language-reference/modifiers/friend.md)
 - [Private Protected](./private-protected.md)
-- [Protected Friend](./protected-friend.md)[액세스 수준을 Visual basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)
+- [Protected Friend](./protected-friend.md)[액세스 수준을 Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)
 - [절차](../../../visual-basic/programming-guide/language-features/procedures/index.md)
 - [구조체](../../../visual-basic/programming-guide/language-features/data-types/structures.md)
 - [개체 및 클래스](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)

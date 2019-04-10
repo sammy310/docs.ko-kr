@@ -1,13 +1,13 @@
 ---
-title: <clientCertificate>의 <serviceCredentials>
+title: <clientCertificate> / <serviceCredentials>
 ms.date: 03/30/2017
 ms.assetid: 90ad03aa-2317-43dd-8a72-6d24cdcad15c
-ms.openlocfilehash: aceb30b6354bac5c327a5f4367344e5c9608b689
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 26ebac6439a90959e3a926e6a36c9044251a4aae
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55286899"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59107991"
 ---
 # <a name="clientcertificate-of-servicecredentials"></a>\<clientCertificate >의 \<serviceCredentials >
 이중 통신 패턴에서 서비스의 클라이언트에 대한 메시지를 서명 및 암호화하는 데 사용하는 X.509 인증서를 정의합니다.  
@@ -54,6 +54,7 @@ ms.locfileid: "55286899"
  이 요소에 설정된 인증서는 `MutualCertificateDuplex` 메시지 보안 인증 모드와 함께 구성되는 바인딩용 클라이언트에 보내는 메시지를 암호화하는 데 사용합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.ServiceModel.Configuration.X509InitiatorCertificateServiceElement>
 - <xref:System.ServiceModel.Configuration.ServiceCredentialsElement.ClientCertificate%2A>
 - <xref:System.ServiceModel.Configuration.X509InitiatorCertificateServiceElement>

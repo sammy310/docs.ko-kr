@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 91c9eae4-c641-476c-a06e-d7ce39709763
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5ba1c7056cfea3386e4456c09cc0c2ef98811053
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c92d71c9862dfbdace4de2e30cf48ace7becfd0b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54507228"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59105856"
 ---
 # <a name="reflection-and-net-native"></a>리플렉션 및 .NET 네이티브
 .NET Framework의 관리 개발에서는 리플렉션 API를 통한 메타 프로그래밍이 지원됩니다. 리플렉션을 통해 앱의 개체를 검사하고, 검사를 통해 검색된 개체에 대해 메서드를 호출하고, 런타임에 새 형식을 생성하고, 기타 여러 동적 코드 시나리오를 지원할 수 있습니다. 또한 serialization과 deserialization도 지원되므로 개체의 필드 값을 유지했다가 나중에 복원할 수 있습니다. 이러한 모든 시나리오에서는 .NET Framework JIT(Just-In-Time) 컴파일러가 사용 가능한 메타데이터를 기반으로 네이티브 코드를 생성해야 합니다.  
@@ -34,5 +34,6 @@ ms.locfileid: "54507228"
 -   [런타임 지시문(rd.xml) 구성 파일 참조](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)  
   
 ## <a name="see-also"></a>참고자료
-- [.NET Native로 앱 컴파일](../../../docs/framework/net-native/index.md)
+
+- [.NET 네이티브로 앱 컴파일](../../../docs/framework/net-native/index.md)
 - [.NET 네이티브 및 컴파일](../../../docs/framework/net-native/net-native-and-compilation.md)

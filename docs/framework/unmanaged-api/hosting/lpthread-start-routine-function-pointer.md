@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8f111736f1a8115614cbeb13402f0ef75cf6038f
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 27d1837f9f9f11ad34140f50ec41aa6fe8a62160
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57479326"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59119316"
 ---
 # <a name="lpthreadstartroutine-function-pointer"></a>LPTHREAD_START_ROUTINE 함수 포인터
 스레드 실행을 시작 했음을 호스트에 알리는 함수를 가리킵니다.  
@@ -53,4 +53,5 @@ typedef DWORD (__stdcall *LPTHREAD_START_ROUTINE) (
  **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>참고자료
+
 - [사용되지 않는 CLR 호스팅 함수](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)

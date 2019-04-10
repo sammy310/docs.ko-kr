@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 4153aa18-6f56-4a0a-865b-d3da743a1d05
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 92e4f416e26e5af9124593f2bef8d8042fcfc953
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: e1d14e4ad45a4d5805187b993f2fc622a16dac09
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56966790"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59163139"
 ---
 # <a name="migrating-your-windows-store-app-to-net-native"></a>Windows 스토어 앱을 .NET 네이티브로 마이그레이션
 .NET 네이티브 개발자의 컴퓨터 또는 Windows 스토어에서 앱의 정적 컴파일을 제공합니다. 이 기능은 디바이스의 [네이티브 이미지 생성기(Ngen.exe)](../../../docs/framework/tools/ngen-exe-native-image-generator.md) 또는 JIT(Just-In-Time) 컴파일러가 Windows 스토어 앱에 대해 수행하는 동적 컴파일과는 다릅니다. 다르기는 하지만.NET 네이티브 호환성을 유지 하려고 사용 하 여 합니다 [Windows 스토어 앱 용.NET](https://docs.microsoft.com/previous-versions/windows/apps/br230302%28v=vs.140%29)합니다. 대부분의 경우.NET 네이티브를 사용 하 여.NET에 대 한 Windows 스토어 앱에서 작동 하는 것도 작동 합니다.  그러나 동작이 변경되는 경우도 있습니다. 이 문서는 다음 영역에서 표준 Windows 스토어 앱 용.NET 및.NET 네이티브 이러한 차이점에 설명 합니다.  
@@ -79,9 +79,9 @@ ms.locfileid: "56966790"
   
 -   <xref:System.RuntimeFieldHandle> 및 <xref:System.RuntimeMethodHandle> 구조체에서는 public 멤버를 사용할 수 없습니다. 이러한 형식은 LINQ, 식 트리 및 정적 배열 초기화에서만 지원됩니다.  
   
--   <xref:System.Reflection.RuntimeReflectionExtensions.GetRuntimeProperties%2A?displayProperty=nameWithType> 및 <xref:System.Reflection.RuntimeReflectionExtensions.GetRuntimeEvents%2A?displayProperty=nameWithType> 의 기본 클래스는 숨겨진 멤버를 포함하므로 명시적으로 재정의하지 않아도 재정의될 수 있습니다. 이는 다른 [RuntimeReflectionExtensions.GetRuntime*](xref:System.Reflection.RuntimeReflectionExtensions) 메서드에서도 마찬가지입니다.  
+-   <xref:System.Reflection.RuntimeReflectionExtensions.GetRuntimeProperties%2A?displayProperty=nameWithType> 및 <xref:System.Reflection.RuntimeReflectionExtensions.GetRuntimeEvents%2A?displayProperty=nameWithType> 기본 클래스의 숨겨진된 멤버를 포함 하 고 따라서 명시적으로 재정의 하지 않아도 재정의 될 수 있습니다. 이는 다른 [RuntimeReflectionExtensions.GetRuntime*](xref:System.Reflection.RuntimeReflectionExtensions) 메서드에서도 마찬가지입니다.  
   
--   byref 배열과 같은 특정 조합을 만들 때<xref:System.Type.MakeArrayType%2A?displayProperty=nameWithType> 및 <xref:System.Type.MakeByRefType%2A?displayProperty=nameWithType> 에서 오류가 발생하지 않습니다.  
+-   <xref:System.Type.MakeArrayType%2A?displayProperty=nameWithType> 및 <xref:System.Type.MakeByRefType%2A?displayProperty=nameWithType> 특정 조합 (예를 들어 byref 배열)을 만들려고 할 때 실패 하지 않습니다.  
   
 -   리플렉션을 사용하여 포인터 매개 변수가 있는 멤버를 호출할 수는 없습니다.  
   
@@ -135,17 +135,17 @@ ms.locfileid: "56966790"
   
 -   리플렉션을 사용하여 포인터 필드를 가져오거나 설정할 수는 없습니다.  
   
- **serialization**  
+ **Serialization**  
   
  <xref:System.Runtime.Serialization.KnownTypeAttribute.%23ctor%28System.String%29> 특성은 지원되지 않습니다. 대신 <xref:System.Runtime.Serialization.KnownTypeAttribute.%23ctor%28System.Type%29> 특성을 사용하세요.  
   
- **리소스**  
+ **자료**  
   
  <xref:System.Diagnostics.Tracing.EventSource> 클래스에는 지역화된 리소스를 사용할 수 없습니다. <xref:System.Diagnostics.Tracing.EventSourceAttribute.LocalizationResources%2A?displayProperty=nameWithType> 속성은 지역화된 리소스를 정의하지 않습니다.  
   
  **대리자**  
   
- `Delegate.BeginInvoke` 및 `Delegate.EndInvoke` 는 지원되지 않습니다.  
+ `Delegate.BeginInvoke` 및 `Delegate.EndInvoke` 지원 되지 않습니다.  
   
  **기타 API**  
   
@@ -153,7 +153,7 @@ ms.locfileid: "56966790"
   
 -   <xref:System.DateTime.Parse%2A?displayProperty=nameWithType> 메서드.NET 네이티브의 간단한 날짜를 포함 하는 문자열을 올바르게 구문 분석 합니다. 그러나 Microsoft 기술 자료 문서 [KB2803771](https://support.microsoft.com/kb/2803771) 및 [KB2803755](https://support.microsoft.com/kb/2803755)에서 설명하는 날짜 및 시간 구문 분석 변경 내용과의 호환성은 유지되지 않습니다.  
   
--   <xref:System.Numerics.BigInteger.ToString%2A?displayProperty=nameWithType> `("E")` .NET 네이티브에서 올바르게 반올림 됩니다. 일부 CLR 버전에서는 결과 문자열이 반올림되는 대신 잘립니다.  
+-   <xref:System.Numerics.BigInteger.ToString%2A?displayProperty=nameWithType> `("E")` is corre.NET 네이티브에서 올바르게 반올림 됩니다. 일부 CLR 버전에서는 결과 문자열이 반올림되는 대신 잘립니다.  
   
 <a name="HttpClient"></a>   
 ### <a name="httpclient-differences"></a>HttpClient의 차이점  
@@ -215,7 +215,7 @@ ms.locfileid: "56966790"
 - <xref:System.Runtime.InteropServices.UnmanagedType.SafeArray?displayProperty=nameWithType>  
 - <xref:System.Runtime.InteropServices.VarEnum?displayProperty=nameWithType>
   
- <xref:System.Runtime.InteropServices.UnmanagedType.Struct?displayProperty=nameWithType> 가 지원되기는 하지만 [IDispatch](https://docs.microsoft.com/previous-versions/windows/desktop/api/oaidl/nn-oaidl-idispatch) 또는 byref 변형에서 사용하는 경우와 같은 일부 시나리오에서는 예외가 발생됩니다.  
+ <xref:System.Runtime.InteropServices.UnmanagedType.Struct?displayProperty=nameWithType> 지원으로 사용 하는 경우 등의 일부 시나리오에서 예외를 throw 하지만 [IDispatch](https://docs.microsoft.com/previous-versions/windows/desktop/api/oaidl/nn-oaidl-idispatch) 또는 byref 변형 합니다.  
   
  사용 되지 않는 Api에 대 한 [IDispatch](https://docs.microsoft.com/previous-versions/windows/desktop/api/oaidl/nn-oaidl-idispatch) 지원을 포함 합니다.  
   
@@ -574,15 +574,11 @@ ms.locfileid: "56966790"
   
      기본 클래스의 멤버가 serialization 중에 트래버스되지 않으므로 serializer가 `InnerType` 형식을 인식하지 못합니다.  
   
--   <xref:System.Runtime.Serialization.DataContractSerializer> 및 <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> 가 <xref:System.Collections.Generic.IEnumerable%601> 인터페이스를 구현하는 클래스나 구조체를 serialize하지 못합니다. 예를 들어 다음과 같은 형식은 serialize 또는 deserialize할 수 없습니다.  
-  
-  
-  
--   <xref:System.Xml.Serialization.XmlSerializer> 가 다음 개체 값을 serialize하지 못합니다. serialize할 정확한 개체 형식을 알 수 없기 때문입니다.  
-  
-  
-  
--   <xref:System.Xml.Serialization.XmlSerializer> 는 serialize된 개체의 형식이 <xref:System.Xml.XmlQualifiedName>이면 해당 개체를 serialize 또는 deserialize할 수 없습니다.  
+-   <xref:System.Runtime.Serialization.DataContractSerializer> 및 <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> 클래스 또는 구조체를 구현 하는 직렬화에 실패 합니다 <xref:System.Collections.Generic.IEnumerable%601> 인터페이스입니다. 예를 들어 다음과 같은 형식은 serialize 또는 deserialize할 수 없습니다.  
+
+-   <xref:System.Xml.Serialization.XmlSerializer> 다음 개체 값을 serialize 하려면 serialize 할 개체의 정확한 형식을 알 수 없기 때문에 실패 합니다.  
+
+-   <xref:System.Xml.Serialization.XmlSerializer> 직렬화 또는 역직렬화 serialize 된 개체 형식의 경우 실패 <xref:System.Xml.XmlQualifiedName>합니다.  
   
 -   모든 serializer(<xref:System.Runtime.Serialization.DataContractSerializer>, <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>및 <xref:System.Xml.Serialization.XmlSerializer>)는 <xref:System.Xml.Linq.XElement?displayProperty=nameWithType> 를 포함하는 형식 또는 <xref:System.Xml.Linq.XElement>형식에 대해 serialization 코드를 생성하지 못하며, 대신 빌드 시간 오류가 표시됩니다.  
   
@@ -610,7 +606,7 @@ ms.locfileid: "56966790"
   
     -   <xref:System.Xml.Serialization.XmlSerializer.%23ctor%28System.Type%2CSystem.Xml.Serialization.XmlAttributeOverrides%2CSystem.Type%5B%5D%2CSystem.Xml.Serialization.XmlRootAttribute%2CSystem.String%29?displayProperty=nameWithType>  
   
--   <xref:System.Xml.Serialization.XmlSerializer> 는 메서드에 다음 특성이 포함된 형식에 대해 코드를 생성하지 못합니다.  
+-   <xref:System.Xml.Serialization.XmlSerializer> 메서드가 다음과 같은 특성 중 하나를 사용 하 여 특성을 사용 하는 형식에 대 한 코드를 생성 하지 못했습니다.  
   
     -   <xref:System.Runtime.Serialization.OnSerializingAttribute>  
   
@@ -620,7 +616,7 @@ ms.locfileid: "56966790"
   
     -   <xref:System.Runtime.Serialization.OnDeserializedAttribute>  
   
--   <xref:System.Xml.Serialization.XmlSerializer> 는 <xref:System.Xml.Serialization.IXmlSerializable> 사용자 지정 serialization 인터페이스를 따르지 않습니다. 이 인터페이스를 구현하는 클래스가 있는 경우 <xref:System.Xml.Serialization.XmlSerializer> 는 해당 형식을 POCO(Plain Old CLR 개체) 형식으로 간주하여 public 속성만 serialize합니다.  
+-   <xref:System.Xml.Serialization.XmlSerializer> 따르지 않습니다는 <xref:System.Xml.Serialization.IXmlSerializable> 사용자 지정 serialization 인터페이스입니다. 이 인터페이스를 구현하는 클래스가 있는 경우 <xref:System.Xml.Serialization.XmlSerializer> 는 해당 형식을 POCO(Plain Old CLR 개체) 형식으로 간주하여 public 속성만 serialize합니다.  
   
 -   일반 직렬화 <xref:System.Exception> 개체에서 잘 작동 하지 않습니다 <xref:System.Runtime.Serialization.DataContractSerializer> 및 <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>합니다.
 
@@ -651,7 +647,8 @@ ms.locfileid: "56966790"
  Windows 스토어 앱 프로젝트에 대 한 단위 테스트 라이브러리에서.NET 네이티브를 사용 하도록 설정 지원 되지 않으며 이렇게 하면 프로젝트를 빌드할 수도 있습니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [시작](../../../docs/framework/net-native/getting-started-with-net-native.md)
 - [런타임 지시문(rd.xml) 구성 파일 참조](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
-- [.NET Windows 스토어 용 앱 개요](https://docs.microsoft.com/previous-versions/windows/apps/br230302%28v=vs.140%29)
+- [Windows 스토어 앱용 .NET 개요](https://docs.microsoft.com/previous-versions/windows/apps/br230302%28v=vs.140%29)
 - [Windows 스토어 앱 및 Windows 런타임에 대한 .NET Framework 지원](../../../docs/standard/cross-platform/support-for-windows-store-apps-and-windows-runtime.md)

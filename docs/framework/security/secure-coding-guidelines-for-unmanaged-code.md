@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: a8d15139-d368-4c9c-a747-ba757781117c
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: cf9071f8b5c4569ace53b13f7b9b7282bf8e87c8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 138713c4a1397369ea18792a3b2742389b107a6b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54711975"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59143769"
 ---
 # <a name="secure-coding-guidelines-for-unmanaged-code"></a>비관리 코드에 대한 보안 코딩 지침
 일부 라이브러리 코드는 비관리 코드(예: Win32와 같은 네이티브 코드 API)를 호출해야 합니다. 이는 관리 코드에 대한 보안 경계를 벗어나야 함을 의미하므로 주의해야 합니다. 코드가 보안 중립적인 경우 코드와 코드를 호출하는 다른 코드 둘 다에 비관리 코드 권한(<xref:System.Security.Permissions.SecurityPermission> 플래그가 지정된 <xref:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode> )이 있어야 합니다.  
@@ -52,4 +52,5 @@ ms.locfileid: "54711975"
 |**unsafe**|보안이 사용되지 않는 잠재적으로 위험한 비관리 코드 진입점입니다. 개발자는 이러한 비관리 코드를 사용할 경우 각별히 주의해야 하며 다른 보호를 통해 보안 취약성을 방지해야 합니다. 이 키워드는 보안 시스템을 재정의하기 때문에 개발자가 책임을 져야 합니다.|  
   
 ## <a name="see-also"></a>참고자료
+
 - [보안 코딩 지침](../../../docs/standard/security/secure-coding-guidelines.md)

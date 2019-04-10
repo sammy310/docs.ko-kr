@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4623fecd210ac716824fdc5fede99ec40145e8d5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3476a338191a4af9cc01b7e44456f1bd20f52a10
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54498871"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59179012"
 ---
 # <a name="icorprofilerinfo2-interface"></a>ICorProfilerInfo2 인터페이스
 코드 프로파일러가 CLR (공용 언어 런타임) 이벤트 모니터링을 제어 하 고 요청 정보를 사용 하 여 통신에 사용 되는 메서드를 제공 합니다. 합니다 `ICorProfilerInfo2` 인터페이스의 확장은 합니다 [ICorProfilerInfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md) 인터페이스입니다. 즉,.NET Framework 버전 2.0 이상 버전에서 지원 되는 새 메서드를 제공 합니다.  
@@ -69,5 +69,6 @@ ms.locfileid: "54498871"
  **.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>참고자료
+
 - [프로파일링 인터페이스](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
 - [ICorProfilerInfo 인터페이스](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)

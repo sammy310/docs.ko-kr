@@ -6,12 +6,12 @@ helpviewer_keywords:
 - data grids [Windows Forms], display modes
 - DataGridView control [Windows Forms], display modes
 ms.assetid: 9755a030-3f3f-4705-a661-ba5a48a81875
-ms.openlocfilehash: 86eda82cad778978711520bc2951a7a35d133753
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 673780909f6d66168548893e99d79bbfec70a0e0
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57703071"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59079697"
 ---
 # <a name="data-display-modes-in-the-windows-forms-datagridview-control"></a>Windows Forms DataGridView 컨트롤의 데이터 디스플레이 모드
 <xref:System.Windows.Forms.DataGridView> 세 가지 모드로 컨트롤 데이터를 표시할 수 있습니다: 바인딩, 바인딩 해제 됨 및 가상. 요구 사항에 따라 가장 적합 한 모드를 선택 합니다.  
@@ -42,6 +42,7 @@ ms.locfileid: "57703071"
  가상 모드에 대 한 자세한 내용은 참조 하세요. [Windows Forms DataGridView 컨트롤에서 가상 모드](virtual-mode-in-the-windows-forms-datagridview-control.md)합니다. 가상 모드 이벤트를 사용 하는 방법을 보여 주는 예제를 참조 하세요. [연습: Forms DataGridView 컨트롤의 Windows에서 가상 모드 구현](implementing-virtual-mode-wf-datagridview-control.md)합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridView.DataSource%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.DataGridView.VirtualMode%2A?displayProperty=nameWithType>
@@ -49,7 +50,7 @@ ms.locfileid: "57703071"
 - <xref:System.Windows.Forms.DataGridViewColumn.DataPropertyName%2A?displayProperty=nameWithType>
 - [Windows Forms DataGridView 컨트롤에서 데이터 표시](displaying-data-in-the-windows-forms-datagridview-control.md)
 - [Windows Forms DataGridView 컨트롤의 열 형식](column-types-in-the-windows-forms-datagridview-control.md)
-- [연습: 만들기는 바인딩되지 않은 Windows Forms DataGridView 컨트롤](walkthrough-creating-an-unbound-windows-forms-datagridview-control.md)
+- [연습: 바인딩되지 않은 Windows Forms DataGridView 컨트롤 만들기](walkthrough-creating-an-unbound-windows-forms-datagridview-control.md)
 - [방법: Windows Forms DataGridView 컨트롤에 데이터 바인딩](how-to-bind-data-to-the-windows-forms-datagridview-control.md)
 - [Windows Forms DataGridView 컨트롤의 가상 모드](virtual-mode-in-the-windows-forms-datagridview-control.md)
 - [연습: Windows Forms DataGridView 컨트롤에서 가상 모드 구현](implementing-virtual-mode-wf-datagridview-control.md)

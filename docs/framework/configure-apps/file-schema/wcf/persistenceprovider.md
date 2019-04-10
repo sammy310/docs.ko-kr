@@ -2,12 +2,12 @@
 title: <persistenceProvider>
 ms.date: 03/30/2017
 ms.assetid: a37049c5-a7ea-4519-94f2-912eeb010380
-ms.openlocfilehash: 054991687a54ecbf95cc18f58717a4ed3e36f050
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: dc8dea0ddd1ea074c08952e3e2ebfef2d12f7183
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55260803"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59099289"
 ---
 # <a name="persistenceprovider"></a>\<persistenceProvider>
 사용할 지속성 공급자 구현 형식 및 지속성 작업에 사용할 제한 시간을 지정합니다.  
@@ -33,7 +33,7 @@ ms.locfileid: "55260803"
 |특성|설명|  
 |---------------|-----------------|  
 |persistenceOperationTimeout|지속성 작업에 사용되는 제한 시간을 지정하는 <xref:System.TimeSpan> 값입니다. 기본값은 "00: 00:30"입니다.|  
-|형식|사용할 지속성 공급자 팩터리의 형식을 지정하는 문자열입니다.|  
+|type|사용할 지속성 공급자 팩터리의 형식을 지정하는 문자열입니다.|  
   
 ### <a name="child-elements"></a>자식 요소  
  없음  
@@ -48,5 +48,6 @@ ms.locfileid: "55260803"
  이 요소는 WCF 서비스의 상태를 serialize하는 데 사용되는 지속성 공급자를 지정합니다. 이 요소는 HTTP 헤더에서 상태 정보를 전달하는 `wsHttpContextBinding`과 함께 사용되어야 합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.ServiceModel.Configuration.PersistenceProviderElement>
 - <xref:System.ServiceModel.Persistence.PersistenceProvider>

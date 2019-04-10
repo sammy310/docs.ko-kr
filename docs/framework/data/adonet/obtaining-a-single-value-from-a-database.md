@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: b38526cd-a62a-48cb-822a-e91dfa68e02d
-ms.openlocfilehash: e362a71f902739663961099cf2f43dff90b4743c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5eb81fd2a64f06f1252f71e251e58df568e7407c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54711462"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59120681"
 ---
 # <a name="obtaining-a-single-value-from-a-database"></a>데이터베이스에서 단일 값 가져오기
 테이블이나 데이터 스트림 형식보다는 단순히 단일 값인 데이터베이스 정보를 반환해야 하는 경우가 있습니다. COUNT와 같은 집계 함수의 결과 반환 하려는 하는 예를 들어 (\*), price 또는 AVG(Quantity) 합니다. 합니다 **명령** 개체를 사용 하 여 단일 값을 반환 하는 기능을 제공 합니다 **ExecuteScalar** 메서드. 합니다 **ExecuteScalar** 메서드는 스칼라 값을 결과 집합의 첫 번째 행의 첫 번째 열 값으로 반환 합니다.  
@@ -21,6 +21,7 @@ ms.locfileid: "54711462"
  [!code-vb[DataWorks SqlCommand.ExecuteScalar#1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SqlCommand.ExecuteScalar/VB/source.vb#1)]  
   
 ## <a name="see-also"></a>참고자료
+
 - [명령 및 매개 변수](../../../../docs/framework/data/adonet/commands-and-parameters.md)
 - [명령 실행](../../../../docs/framework/data/adonet/executing-a-command.md)
 - [DbConnection, DbCommand 및 DbException](../../../../docs/framework/data/adonet/dbconnection-dbcommand-and-dbexception.md)

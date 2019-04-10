@@ -8,12 +8,12 @@ helpviewer_keywords:
 - shortcut menus [Windows Forms], ContextMenuStrip control [Windows Forms]
 - ContextMenuStrip control [Windows Forms], about ContextMenuStrip control
 ms.assetid: 9787cdb3-88f1-4198-972f-eefd9524ce39
-ms.openlocfilehash: f26fcf259e9c56ffe17c7d7f5a80428ffbbb27c2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 23699c67de616ba3f535d2527a315aebe7448d3f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54712459"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59215822"
 ---
 # <a name="contextmenustrip-control-overview"></a>ContextMenuStrip 컨트롤 개요
 > [!NOTE]
@@ -27,11 +27,12 @@ ms.locfileid: "54712459"
   
 |클래스|설명|  
 |-----------|-----------------|  
-|<xref:System.Windows.Forms.ToolStripMenuItem>|<xref:System.Windows.Forms.MenuStrip> 또는 <xref:System.Windows.Forms.ContextMenuStrip>에 표시된 선택 가능한 옵션을 나타냅니다.|  
+|<xref:System.Windows.Forms.ToolStripMenuItem>|에 표시 된 선택 가능한 옵션을 나타내는 <xref:System.Windows.Forms.MenuStrip> 또는 <xref:System.Windows.Forms.ContextMenuStrip>합니다.|  
 |<xref:System.Windows.Forms.ToolStripDropDown>|사용자가 단일 항목을 클릭할 때 표시 되는 목록에서 선택할 수 있는 컨트롤을 나타냅니다는 <xref:System.Windows.Forms.ToolStripDropDownButton> 또는 더 높은 수준의 메뉴 항목입니다.|  
 |<xref:System.Windows.Forms.ToolStripDropDownItem>|파생 된 컨트롤에 대 한 기본 기능을 제공 <xref:System.Windows.Forms.ToolStripItem> 클릭할 때 드롭다운 목록 항목을 표시 하는 합니다.|  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Windows.Forms.ToolStrip>
 - <xref:System.Windows.Forms.MenuStrip>
 - <xref:System.Windows.Forms.ContextMenuStrip>

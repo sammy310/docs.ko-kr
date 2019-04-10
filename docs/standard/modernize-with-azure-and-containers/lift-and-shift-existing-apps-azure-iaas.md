@@ -1,6 +1,6 @@
 ---
-title: 앱 리프트 앤 시프트 기존.NET Azure IaaS (클라우드 인프라 지원)로
-description: Azure 클라우드 및 Windows 컨테이너를 사용 하 여 기존.NET 응용 프로그램을 현대화 합니다.
+title: 기존 .NET 앱을 Azure IaaS(클라우드 인프라 지원)로 리프트 앤 시프트하기
+description: Azure 클라우드와 Windows 컨테이너를 사용하여 기존.NET 응용 프로그램을 최신으로 변경합니다.
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 04/28/2018
@@ -11,21 +11,21 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 01/30/2019
 ms.locfileid: "55266626"
 ---
-# <a name="lift-and-shift-existing-net-apps-to-azure-iaas-cloud-infrastructure-ready"></a>앱 리프트 앤 시프트 기존.NET Azure IaaS (클라우드 인프라 지원)로
+# <a name="lift-and-shift-existing-net-apps-to-azure-iaas-cloud-infrastructure-ready"></a>기존 .NET 앱을 Azure IaaS(클라우드 인프라 지원)로 리프트 앤 시프트하기
 
 > Vision: 첫 번째 단계를 통해 온-프레미스 투자와 하드웨어 및 네트워킹 유지 관리의 총 비용을 줄이기 위해 단순히 rehost 클라우드에서 기존 응용 프로그램입니다.
 
-에 도달 하기 전에 *어떻게* 서비스 (IaaS) 플랫폼으로 Azure 인프라에 기존 응용 프로그램을 마이그레이션하기 위해 중요 한 이유를 분석 하 되 *이유* IaaS로 직접 마이그레이션하 시겠습니까 azure. 이 현대화 완성도 수준 시나리오는 기본적으로 Vm을 계속 현재 온-프레미스 인프라를 사용 하는 대신 클라우드에서 사용을 시작 하려면입니다.
+기존 응용 프로그램을 Azure 서비스 형태의 인프라(IaaS) 플랫폼으로 마이그레이션하는 *방법*을 살펴보기 전에, Azure의 IaaS로 직접 마이그레이션하려는 *이유*를 분석하는 것이 중요합니다. 이 최신화 성숙도 시나리오에서는 기본적으로 기존 온-프레미스 인프라를 사용하지 않고 클라우드의 VM을 사용합니다.
 
-분석에 다른 점은 *이유는* 만 더 많은 고급 Azure에서 관리 되는 서비스를 추가 하는 대신 순수 IaaS 클라우드로 마이그레이션하는 것이 좋습니다. 새로운 사례 수를 결정 IaaS를 처음부터 필요 합니다.
+그 밖에 분석할 점은 Azure의 고급 관리 서비스를 추가하지 않고 순수 IaaS 클라우드로 마이그레이션하려는 *이유*입니다. 처음부터 IaaS가 필요한 사례를 결정하십시오.
 
-그림 2-1 현대화 완성도에 클라우드 인프라 지원 응용 프로그램을 배치 합니다.
+다음 그림 2-1에서는 최신화 성숙도에서 클라우드 인프라 지원 응용 프로그램의 위치를 나타냅니다.
 
-![클라우드 인프라 지원 응용 프로그램 위치 지정](./media/image2-1.png)
+![클라우드 인프라 지원 응용 프로그램 위치](./media/image2-1.png)
 
-> **그림 2-1.** 클라우드 인프라 지원 응용 프로그램 위치 지정
+> **그림 2-1.** 클라우드 인프라 지원 응용 프로그램 위치
 
-## <a name="why-migrate-existing-net-web-applications-to-azure-iaas"></a>Azure IaaS로 기존.NET 웹 응용 프로그램을 마이그레이션하는 이유
+## <a name="why-migrate-existing-net-web-applications-to-azure-iaas"></a>기존.NET 웹 응용 프로그램을 Azure IaaS로 마이그레이션하는 이유
 
 이유는 초기 IaaS 수준에도 클라우드로 마이그레이션할 비용 절감 달성 하는 것입니다. 더 많은 관리 되는 인프라 서비스를 사용 하 여 조직의 하드웨어 유지 관리, 서버 또는 VM 프로 비전 및 배포 및 인프라 관리에 소요 된 투자를 줄일 수 있습니다.
 
@@ -65,9 +65,9 @@ Azure Migrate는 비즈니스에 영향을 최소화 하면서 워크 로드 수
 
 그림 2-2 Azure Migrate에서 수행 하는 모든 서버 및 응용 프로그램 연결에 대 한 기본 제공 종속성 매핑을 보여 줍니다.
 
-![클라우드 인프라 지원 응용 프로그램 위치 지정](./media/image2-2.png)
+![클라우드 인프라 지원 응용 프로그램 위치](./media/image2-2.png)
 
-> **그림 2-2입니다.** 클라우드 인프라 지원 응용 프로그램 위치 지정
+> **그림 2-2입니다.** 클라우드 인프라 지원 응용 프로그램 위치
 
 ## <a name="use-azure-site-recovery-to-migrate-your-existing-vms-to-azure-vms"></a>Azure Site Recovery를 사용 하 여 Azure Vm에 기존 Vm을 마이그레이션하려면
 
@@ -77,9 +77,9 @@ Site Recovery에도 부분적으로 하이브리드 환경에 맞게 이루어�
 
 그림 2-3 Azure Site Recovery를 사용 하 여 여러 VM 마이그레이션 실행을 보여 줍니다.
 
-![클라우드 인프라 지원 응용 프로그램 위치 지정](./media/image2-3.png)
+![클라우드 인프라 지원 응용 프로그램 위치](./media/image2-3.png)
 
-> **그림 2-3입니다.** 클라우드 인프라 지원 응용 프로그램 위치 지정
+> **그림 2-3입니다.** 클라우드 인프라 지원 응용 프로그램 위치
 
 ### <a name="additional-resources"></a>추가 자료
 

@@ -3,8 +3,11 @@ items:
   href: index.md
   items:
   - name: 산술 연산자
-    displayName: ++, --, +, -, *, /, %
+    displayName: ++, --, +, -, *, /, %, +=, -=, *=, /=, %=
     href: arithmetic-operators.md
+  - name: 부울 논리 연산자
+    displayName: '!, &&, ||, &, |, ^, &=, |=, ^='
+    href: boolean-logical-operators.md
   - name: 같음 연산자
     displayName: ==, !=
     href: equality-operators.md
@@ -24,18 +27,12 @@ items:
     href: subtraction-operator.md
   - name: '* 연산자'
     href: multiplication-operator.md
-  - name: / 연산자
-    href: arithmetic-operators.md#division-operator-
-  - name: '% 연산자'
-    href: arithmetic-operators.md#remainder-operator-
   - name: '& 연산자'
     href: and-operator.md
   - name: '| 연산자'
     href: or-operator.md
   - name: ^ 연산자
     href: xor-operator.md
-  - name: '! 연산자'
-    href: logical-negation-operator.md
   - name: ~ 연산자
     href: bitwise-complement-operator.md
   - name: = 연산자
@@ -46,22 +43,10 @@ items:
     href: greater-than-operator.md
   - name: '?: 연산자'
     href: conditional-operator.md
-  - name: ++ 연산자
-    href: arithmetic-operators.md#increment-operator-
-  - name: -- 연산자
-    href: arithmetic-operators.md#decrement-operator---
-  - name: '&& 연산자'
-    href: conditional-and-operator.md
-  - name: '|| 연산자'
-    href: conditional-or-operator.md
   - name: << 연산자
     href: left-shift-operator.md
   - name: '>> 연산자'
     href: right-shift-operator.md
-  - name: == 연산자
-    href: equality-operators.md#equality-operator-
-  - name: '!= 연산자'
-    href: equality-operators.md#inequality-operator-
   - name: <= 연산자
     href: less-than-equal-operator.md
   - name: '>= 연산자'
@@ -72,10 +57,6 @@ items:
     href: subtraction-assignment-operator.md
   - name: '*= 연산자'
     href: multiplication-assignment-operator.md
-  - name: /= 연산자
-    href: arithmetic-operators.md#compound-assignment
-  - name: '%= 연산자'
-    href: arithmetic-operators.md#compound-assignment
   - name: '&= 연산자'
     href: and-assignment-operator.md
   - name: '|= 연산자'
@@ -92,9 +73,9 @@ items:
     href: null-coalescing-operator.md
   - name: => 연산자
     href: lambda-operator.md
-ms.openlocfilehash: 9ede047a86a760150563480442a3f82ff32c4fd4
-ms.sourcegitcommit: 4a8c2b8d0df44142728b68ebc842575840476f6d
+ms.openlocfilehash: f2554167da2c1e51227d8f745496839c5c60fac2
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/28/2019
-ms.locfileid: "58545678"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59307537"

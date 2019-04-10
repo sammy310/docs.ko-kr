@@ -2,12 +2,12 @@
 title: 비동기 작업 또는 (Visual Basic) 작업 목록 취소
 ms.date: 07/20/2015
 ms.assetid: a9ee1b71-5bec-4736-a1e9-448042dd7215
-ms.openlocfilehash: deb469f2c083870fc96c9217fa862d189629df1f
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 62321a5fc011f71ed6125fbaa315573d13667488
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58834987"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59324762"
 ---
 # <a name="cancel-an-async-task-or-a-list-of-tasks-visual-basic"></a>비동기 작업 또는 (Visual Basic) 작업 목록 취소
 작업이 완료될 때까지 기다리지 않으려면 비동기 애플리케이션을 취소할 때 사용하는 단추를 설정할 수 있습니다. 이 항목의 예제에 따라 한 웹 사이트 또는 웹 사이트 목록의 콘텐츠를 다운로드하는 애플리케이션에 취소 단추를 추가할 수 있습니다.  
@@ -23,15 +23,15 @@ ms.locfileid: "58834987"
 ### <a name="downloading-the-example"></a>예제 다운로드  
  [Async 샘플: 애플리케이션 미세 조정](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)에서 WPF(Windows Presentation Foundation) 프로젝트를 다운로드한 후, 다음 단계를 수행합니다.  
   
-1.  다운로드한 파일의 압축을 푼 다음 Visual Studio를 시작합니다.  
+1. 다운로드한 파일의 압축을 푼 다음 Visual Studio를 시작합니다.  
   
-2.  메뉴 모음에서 **파일**, **열기**, **프로젝트/솔루션**을 선택합니다.  
+2. 메뉴 모음에서 **파일**, **열기**, **프로젝트/솔루션**을 선택합니다.  
   
-3.  **프로젝트 열기** 대화 상자에서 압축을 해제한 샘플 코드가 포함된 폴더를 열고 AsyncFineTuningVB에 대한 솔루션(.sln) 파일을 엽니다.  
+3. **프로젝트 열기** 대화 상자에서 압축을 해제한 샘플 코드가 포함된 폴더를 열고 AsyncFineTuningVB에 대한 솔루션(.sln) 파일을 엽니다.  
   
-4.  **솔루션 탐색기**에서 **CancelATask** 프로젝트에 대한 바로 가기 메뉴를 열고 **시작 프로젝트로 설정**을 선택합니다.  
+4. **솔루션 탐색기**에서 **CancelATask** 프로젝트에 대한 바로 가기 메뉴를 열고 **시작 프로젝트로 설정**을 선택합니다.  
   
-5.  F5 키를 선택하여 프로젝트를 실행합니다.  
+5. F5 키를 선택하여 프로젝트를 실행합니다.  
   
      디버그하지 않고 프로젝트를 실행하려면 Ctrl+F5를 선택합니다.  
   
@@ -44,7 +44,7 @@ ms.locfileid: "58834987"
   
  그런 다음 해당 프로젝트의 MainWindow.xaml.vb 파일에 다음 변경 내용의 추가 합니다.  
   
-1.  액세스하는 모든 메서드에 대한 범위 내에 있는 `CancellationTokenSource` 변수 `cts`를 선언합니다.  
+1. 액세스하는 모든 메서드에 대한 범위 내에 있는 `CancellationTokenSource` 변수 `cts`를 선언합니다.  
   
     ```vb  
     Class MainWindow  
@@ -53,7 +53,7 @@ ms.locfileid: "58834987"
         Dim cts As CancellationTokenSource  
     ```  
   
-2.  **취소** 단추에 대한 다음 이벤트 처리기를 추가합니다. 이벤트 처리기는 <xref:System.Threading.CancellationTokenSource.Cancel%2A?displayProperty=nameWithType> 메서드를 사용하여 사용자가 취소를 요청할 때 `cts`에 알려줍니다.  
+2. **취소** 단추에 대한 다음 이벤트 처리기를 추가합니다. 이벤트 처리기는 <xref:System.Threading.CancellationTokenSource.Cancel%2A?displayProperty=nameWithType> 메서드를 사용하여 사용자가 취소를 요청할 때 `cts`에 알려줍니다.  
   
     ```vb  
     ' ***Add an event handler for the Cancel button.  
@@ -65,7 +65,7 @@ ms.locfileid: "58834987"
     End Sub  
     ```  
   
-3.  이벤트 처리기에서 **시작** 단추 `startButton_Click`을 다음과 같이 변경합니다.  
+3. 이벤트 처리기에서 **시작** 단추 `startButton_Click`을 다음과 같이 변경합니다.  
   
     -   `CancellationTokenSource`, `cts`를 인스턴스화합니다.  
   
@@ -93,7 +93,7 @@ ms.locfileid: "58834987"
         End Try  
         ```  
   
-4.  `AccessTheWebAsync`에서 <xref:System.Net.Http.HttpClient> 형식에 있는 `GetAsync` 메서드의 <xref:System.Net.Http.HttpClient.GetAsync%28System.String%2CSystem.Threading.CancellationToken%29?displayProperty=nameWithType> 오버로드를 사용하여 웹 사이트의 콘텐츠를 다운로드합니다. `AccessTheWebAsync`의 <xref:System.Threading.CancellationToken> 매개 변수인 `ct`를 두 번째 인수로 전달합니다. 사용자가 **취소** 단추를 선택하면 토큰이 메시지를 전달합니다.  
+4. `AccessTheWebAsync`에서 <xref:System.Net.Http.HttpClient> 형식에 있는 `GetAsync` 메서드의 <xref:System.Net.Http.HttpClient.GetAsync%28System.String%2CSystem.Threading.CancellationToken%29?displayProperty=nameWithType> 오버로드를 사용하여 웹 사이트의 콘텐츠를 다운로드합니다. `AccessTheWebAsync`의 <xref:System.Threading.CancellationToken> 매개 변수인 `ct`를 두 번째 인수로 전달합니다. 사용자가 **취소** 단추를 선택하면 토큰이 메시지를 전달합니다.  
   
      다음 코드는 `AccessTheWebAsync`의 변경 내용을 보여 줍니다.  
   
@@ -121,7 +121,7 @@ ms.locfileid: "58834987"
     End Function  
     ```  
   
-5.  프로그램을 취소하지 않으면 다음 출력이 생성됩니다.  
+5. 프로그램을 취소하지 않으면 다음 출력이 생성됩니다.  
   
     ```  
     Ready to download.  
@@ -141,15 +141,15 @@ ms.locfileid: "58834987"
 ### <a name="downloading-the-example"></a>예제 다운로드  
  [Async 샘플: 애플리케이션 미세 조정](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)에서 WPF(Windows Presentation Foundation) 프로젝트를 다운로드한 후, 다음 단계를 수행합니다.  
   
-1.  다운로드한 파일의 압축을 푼 다음 Visual Studio를 시작합니다.  
+1. 다운로드한 파일의 압축을 푼 다음 Visual Studio를 시작합니다.  
   
-2.  메뉴 모음에서 **파일**, **열기**, **프로젝트/솔루션**을 선택합니다.  
+2. 메뉴 모음에서 **파일**, **열기**, **프로젝트/솔루션**을 선택합니다.  
   
-3.  **프로젝트 열기** 대화 상자에서 압축을 해제한 샘플 코드가 포함된 폴더를 열고 AsyncFineTuningVB에 대한 솔루션(.sln) 파일을 엽니다.  
+3. **프로젝트 열기** 대화 상자에서 압축을 해제한 샘플 코드가 포함된 폴더를 열고 AsyncFineTuningVB에 대한 솔루션(.sln) 파일을 엽니다.  
   
-4.  **솔루션 탐색기**에서 **CancelAListOfTasks** 프로젝트에 대한 바로 가기 메뉴를 열고 **시작 프로젝트로 설정**을 선택합니다.  
+4. **솔루션 탐색기**에서 **CancelAListOfTasks** 프로젝트에 대한 바로 가기 메뉴를 열고 **시작 프로젝트로 설정**을 선택합니다.  
   
-5.  F5 키를 선택하여 프로젝트를 실행합니다.  
+5. F5 키를 선택하여 프로젝트를 실행합니다.  
   
      디버그하지 않고 프로젝트를 실행하려면 Ctrl+F5를 선택합니다.  
   
@@ -158,7 +158,7 @@ ms.locfileid: "58834987"
 ### <a name="building-the-example"></a>예제 빌드  
  직접 예제를 확장하려면 "예제 다운로드" 섹션의 지침을 단계별로 따르되, **CancelATask**를 **시작 프로젝트**로 선택합니다. 해당 프로젝트에 다음 변경 내용을 추가합니다. 프로그램에서 변경 내용에는 별표가 표시됩니다.  
   
-1.  웹 주소 목록에 메서드를 추가합니다.  
+1. 웹 주소 목록에 메서드를 추가합니다.  
   
     ```vb  
     ' ***Add a method that creates a list of web addresses.  
@@ -178,14 +178,14 @@ ms.locfileid: "58834987"
     End Function  
     ```  
   
-2.  `AccessTheWebAsync`에서 메서드를 호출합니다.  
+2. `AccessTheWebAsync`에서 메서드를 호출합니다.  
   
     ```vb  
     ' ***Call SetUpURLList to make a list of web addresses.  
     Dim urlList As List(Of String) = SetUpURLList()  
     ```  
   
-3.  `AccessTheWebAsync`에서 다음 루프를 추가하여 목록에 있는 각 웹 주소를 처리합니다.  
+3. `AccessTheWebAsync`에서 다음 루프를 추가하여 목록에 있는 각 웹 주소를 처리합니다.  
   
     ```vb  
     ' ***Add a loop to process the list of web addresses.  
@@ -203,7 +203,7 @@ ms.locfileid: "58834987"
     Next  
     ```  
   
-4.  `AccessTheWebAsync`는 길이를 표시하므로 메서드가 아무것도 반환할 필요가 없습니다. return 문을 제거하고 메서드의 반환 형식을 <xref:System.Threading.Tasks.Task%601> 대신 <xref:System.Threading.Tasks.Task>로 변경합니다.  
+4. `AccessTheWebAsync`는 길이를 표시하므로 메서드가 아무것도 반환할 필요가 없습니다. return 문을 제거하고 메서드의 반환 형식을 <xref:System.Threading.Tasks.Task%601> 대신 <xref:System.Threading.Tasks.Task>로 변경합니다.  
   
     ```vb  
     Async Function AccessTheWebAsync(ct As CancellationToken) As Task  
@@ -215,7 +215,7 @@ ms.locfileid: "58834987"
     Await AccessTheWebAsync(cts.Token)  
     ```  
   
-5.  프로그램을 취소하지 않으면 다음 출력이 생성됩니다.  
+5. 프로그램을 취소하지 않으면 다음 출력이 생성됩니다.  
   
     ```  
     Length of the downloaded string: 35939.  
@@ -459,5 +459,5 @@ End Class
 - <xref:System.Threading.CancellationTokenSource>
 - <xref:System.Threading.CancellationToken>
 - [Async 및 Await를 사용한 비동기 프로그래밍(Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/index.md)
-- [Async 응용 프로그램 미세 조정(Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/fine-tuning-your-async-application.md)
-- [비동기 샘플: 애플리케이션 미세 조정](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)
+- [Async (Visual Basic) 응용 프로그램 미세 조정](../../../../visual-basic/programming-guide/concepts/async/fine-tuning-your-async-application.md)
+- [Async 샘플: 응용 프로그램 미세 조정](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)

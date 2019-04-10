@@ -1,5 +1,5 @@
 ---
-title: '방법: 폼에 ToolStripContainer 추가'
+title: '방법: 양식에 ToolStripContainer 추가'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - ToolStrip control [Windows Forms], built-in rafting
 - ToolStripContainer control [Windows Forms], adding to Windows Forms
 ms.assetid: d0f55095-a833-453e-be5a-644906d75d54
-ms.openlocfilehash: 35d35c9cf9bca2720cb6d02d602d2d7bc6740f25
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: d70c5b8f548cf325083782d6ea185c18fd2fa003
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57715323"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59216212"
 ---
-# <a name="how-to-add-a-toolstripcontainer-to-a-form"></a>방법: 폼에 ToolStripContainer 추가
+# <a name="how-to-add-a-toolstripcontainer-to-a-form"></a>방법: 양식에 ToolStripContainer 추가
 프로그래밍 방식으로 <xref:System.Windows.Forms.ToolStripContainer>를 Windows Form에 추가하고 컨트롤로 채울 수 있습니다.  
   
 ## <a name="example"></a>예제  
@@ -33,6 +33,7 @@ ms.locfileid: "57715323"
  Visual Basic 또는 Visual C#에 대 한 명령줄에서이 예제를 빌드하는 방법에 대 한 내용은 [명령줄에서 빌드](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) 하거나 [csc.exe를 사용한 명령줄 빌드](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)합니다. 또한 새 프로젝트에 코드를 붙여 넣어 Visual Studio에서이 예제를 빌드할 수 있습니다.
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Windows.Forms.ToolStripContainer>
 - [ToolStripContainer 컨트롤](toolstripcontainer-control.md)
 - [ToolStrip 컨트롤](toolstrip-control-windows-forms.md)

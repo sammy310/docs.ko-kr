@@ -1,18 +1,18 @@
 ---
-title: '방법: UIElement를 좌우 또는 상하 대칭 이동'
+title: '방법: 가로 또는 세로로 UIElement 대칭 이동'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - flipping UIElements [WPF]
 - UIElements [WPF], flipping
 ms.assetid: 02c6730f-65c0-40d5-a553-4cb663721882
-ms.openlocfilehash: 3dd9a8e2a94acf62973701094e8966c8ebff15c9
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 6b3da322493d17e4f8e36a35b9a0e40fdc9dc685
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57356353"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59215523"
 ---
-# <a name="how-to-flip-a-uielement-horizontally-or-vertically"></a>방법: UIElement를 좌우 또는 상하 대칭 이동
+# <a name="how-to-flip-a-uielement-horizontally-or-vertically"></a>방법: 가로 또는 세로로 UIElement 대칭 이동
 사용 하는 방법을 보여 주는이 예제는 <xref:System.Windows.Media.ScaleTransform> 대칭으로 배열할지를 <xref:System.Windows.UIElement> 가로나 세로 방향으로 합니다. 이 예제에서는 <xref:System.Windows.Controls.Button> 컨트롤 (유형의 <xref:System.Windows.UIElement>) 적용 하 여 대칭 이동를 <xref:System.Windows.Media.ScaleTransform> 에 해당 <xref:System.Windows.UIElement.RenderTransform%2A> 속성입니다.  
   
 ## <a name="example"></a>예제  
@@ -50,4 +50,5 @@ RenderTransformOrigin 0.5를 사용 하 여 단추 0.5
 수직 대칭 이동 된 단추  
   
 ## <a name="see-also"></a>참고자료
+
 - [Transform 개요](../graphics-multimedia/transforms-overview.md)

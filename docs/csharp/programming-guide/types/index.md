@@ -1,17 +1,23 @@
 ---
-title: '형식 - C# 프로그래밍 가이드'
+title: 형식 - C# 프로그래밍 가이드
 ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
-  - 'value types [C#]'
-  - 'reference types [C#]'
-  - 'types [C#]'
-  - 'C# language, data types'
-  - 'common type system [C#]'
-  - 'data types [C#]'
-  - 'C# language, types'
-  - 'strong typing [C#]'
+- value types [C#]
+- reference types [C#]
+- types [C#]
+- C# language, data types
+- common type system [C#]
+- data types [C#]
+- C# language, types
+- strong typing [C#]
 ms.assetid: f782d7cc-035e-4500-b1b1-36a9881130ad
+ms.openlocfilehash: 92156bcd05ba1eb559714a71a23efacfdd29fc52
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59219514"
 ---
 # <a name="types-c-programming-guide"></a>형식(C# 프로그래밍 가이드)
 ## <a name="types-variables-and-values"></a>형식, 변수 및 값  
@@ -69,8 +75,7 @@ ms.assetid: f782d7cc-035e-4500-b1b1-36a9881130ad
  다음 그림에서는 CTS에서 값 형식과 참조 형식 간의 관계를 보여 줍니다.
 
  다음 이미지에서는 CTS의 값 형식과 참조 형식을 보여줍니다. 
-  
-  
+
  ![CTS 값 형식 및 참조 형식을 보여주는 스크린샷](./media/index/value-reference-types-common-type-system.png)  
   
 > [!NOTE]
@@ -165,7 +170,7 @@ stringList.Add(4);
   
 -   [boxing 및 unboxing](../../../csharp/programming-guide/types/boxing-and-unboxing.md)  
   
--   [dynamic 형식 사용](../../../csharp/programming-guide/types/using-type-dynamic.md)  
+-   [동적 형식 사용](../../../csharp/programming-guide/types/using-type-dynamic.md)  
   
 -   [값 형식](../../../csharp/language-reference/keywords/value-types.md)  
   
@@ -185,4 +190,4 @@ stringList.Add(4);
 - [C# 참조](../../../csharp/language-reference/index.md)
 - [C# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)
 - [XML 데이터 형식 변환](../../../standard/data/xml/conversion-of-xml-data-types.md)
-- [정수 계열 형식 표](../../../csharp/language-reference/keywords/integral-types-table.md)
+- [정수 형식 표](../../../csharp/language-reference/keywords/integral-types-table.md)

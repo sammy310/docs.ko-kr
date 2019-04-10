@@ -2,12 +2,12 @@
 title: 부분 신뢰 기능 호환성
 ms.date: 03/30/2017
 ms.assetid: a36a540b-1606-4e63-88e0-b7c59e0e6ab7
-ms.openlocfilehash: 5a09d4d1ce9f9ec328c74e7f2714f1c3f702670a
-ms.sourcegitcommit: 0069cb3de8eed4e92b2195d29e5769a76111acdd
+ms.openlocfilehash: b0d9b7bd8bd5f33ca344ea5674d08507ced209f5
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/16/2019
-ms.locfileid: "56333508"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59124568"
 ---
 # <a name="partial-trust-feature-compatibility"></a>부분 신뢰 기능 호환성
 Windows Communication Foundation (WCF) 부분 신뢰 환경에서 실행 하는 경우 기능의 제한 된 하위 집합을 지원 합니다. 부분 신뢰에서 지원되는 기능은 [Supported Deployment Scenarios](../../../../docs/framework/wcf/feature-details/supported-deployment-scenarios.md) 항목에서 설명한 대로 특정 시나리오 집합을 바탕으로 설계되었습니다.  
@@ -28,7 +28,7 @@ Windows Communication Foundation (WCF) 부분 신뢰 환경에서 실행 하는 
   
 -   `[ServiceKnownType]` 특성을 사용할 때는 지정된 메서드가 `public`이어야 합니다.  
   
--   `[MessageContract]` 클래스와 해당 멤버는 `public`이어야 합니다. `[MessageContract]` 클래스는 응용 프로그램 어셈블리에 정의되어 있는 경우 `internal` 일 수 있으며 `internal` 멤버를 포함할 수 있습니다.  
+-   `[MessageContract]` 클래스와 해당 멤버 수 `public`입니다. `[MessageContract]` 클래스는 응용 프로그램 어셈블리에 정의되어 있는 경우 `internal` 일 수 있으며 `internal` 멤버를 포함할 수 있습니다.  
   
 ## <a name="system-provided-bindings"></a>시스템 제공 바인딩  
  <xref:System.ServiceModel.BasicHttpBinding> 및 <xref:System.ServiceModel.WebHttpBinding> 은 부분 신뢰 환경에서 완전히 지원됩니다. <xref:System.ServiceModel.WSHttpBinding> 은 전송 보안 모드에만 지원됩니다.  
@@ -94,7 +94,7 @@ Windows Communication Foundation (WCF) 부분 신뢰 환경에서 실행 하는 
   
  일반 동작의 예제를 참조 하세요. [방법: 엔터프라이즈에서 끝점 잠그기](../../../../docs/framework/wcf/extending/how-to-lock-down-endpoints-in-the-enterprise.md)합니다.  
   
-## <a name="configuration"></a>구성하기  
+## <a name="configuration"></a>구성  
  단, 부분적으로 신뢰할 수 있는 코드 로드할 수 있습니다 로컬에서 WCF 구성 섹션 `app.config` 파일입니다. Machine.config 또는 루트 WCF 섹션을 참조 하는 WCF 구성 섹션을 로드 하려면 web.config 파일 configurationpermission 합니다. 이 권한이 없으면 구성이 로드 되 면 WCF 구성 섹션 (동작, 바인딩) 외부 예외가 로컬 구성 파일 결과에 대 한 참조입니다.  
   
  한 가지 예외는 이 항목의 Serialization 단원에서 설명한 것처럼 serialization에 대한 알려진 형식 구성입니다.  
@@ -119,7 +119,7 @@ Windows Communication Foundation (WCF) 부분 신뢰 환경에서 실행 하는 
   
 -   <xref:System.Runtime.Serialization>  
   
--   <xref:System.IdentityModel.Claims>, <xref:System.IdentityModel.Policy>, <xref:System.IdentityModel.Selectors>및 <xref:System.IdentityModel.Tokens>가 있습니다.  
+-   <xref:System.IdentityModel.Claims>를 <xref:System.IdentityModel.Policy>, <xref:System.IdentityModel.Selectors>, 및 <xref:System.IdentityModel.Tokens>합니다.  
   
  다음 추적 소스는 지원되지 않습니다.  
   
@@ -160,6 +160,7 @@ Windows Communication Foundation (WCF) 부분 신뢰 환경에서 실행 하는 
  부분 신뢰 환경에서 실행할 때 사용할 수 없는 정보 또는 작업 부분을 검색하는 가장 좋은 방법은 리소스에 액세스하거나 `try` 블록 내의 작업을 수행한 다음 오류를 `catch` 하는 것입니다. 중복 오류를 사용 하 여 추적 파일 폭주를 방지 하려면 WCF 추적 리소스 또는 첫 번째 보안 실패 후 작업을 비활성화 합니다. 처음으로 리소스에 액세스하거나 작업을 수행할 때 실패한 각 리소스 액세스에 대해 한 가지 예외 추적이 있습니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.ServiceModel.Channels.HttpTransportBindingElement>
 - <xref:System.ServiceModel.Channels.HttpsTransportBindingElement>
 - <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement>

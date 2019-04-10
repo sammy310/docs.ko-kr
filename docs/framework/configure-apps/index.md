@@ -24,12 +24,12 @@ helpviewer_keywords:
 - configuration files [.NET Framework], machine
 - configuration files [.NET Framework], format
 ms.assetid: 86bd26d3-737e-4484-9782-19b17f34cd1f
-ms.openlocfilehash: 184be04c963116906c1dc2c0a5803814402ea8e0
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.openlocfilehash: 97dadfa8b7d32d4f0f981e50d6eb90ca74ecdaa3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55826436"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59147110"
 ---
 # <a name="configuring-apps-by-using-configuration-files"></a>구성 파일을 사용하여 앱 구성
 .NET Framework에서 개발자와 관리자는 구성 파일을 통해 응용 프로그램이 실행되는 방식을 유연하게 제어할 수 있습니다. 구성 파일은 필요에 따라 변경할 수 있는 XML 파일입니다. 관리자는 응용 프로그램에서 액세스할 수 있는 보호되는 리소스와 응용 프로그램에서 사용할 어셈블리 버전 그리고 원격 응용 프로그램과 개체의 위치를 제어할 수 있습니다. 개발자는 설정을 구성 파일에 저장할 수 있으므로, 설정이 변경될 때마다 매번 응용 프로그램을 다시 컴파일할 필요가 없습니다. 이 단원에서는 응용 프로그램 구성과 유용성에 대해 설명합니다.  
@@ -80,7 +80,7 @@ ms.locfileid: "55826436"
   
 -   Internet Explorer에서 호스팅되는 응용 프로그램.  
   
-     Internet Explorer에서 호스팅되는 응용 프로그램에 구성 파일이 있는 경우 이 파일의 위치는 다음 구문을 사용하여 `<link>` 태그에 지정됩니다.  
+     Internet Explorer에서 호스트되는 응용 프로그램에 구성 파일이 있는 경우 이 파일의 위치는 다음 구문을 사용하여 `<link>` 태그에 지정됩니다.  
   
      \<link rel="*ConfigurationFileName*" href="*location*">  
   
@@ -101,7 +101,7 @@ ms.locfileid: "55826436"
 -   사용자 정책 구성 파일: %USERPROFILE%\Application data\Microsoft\CLR security config\v*xx.xx*\Security.config  
   
 ## <a name="in-this-section"></a>섹션 내용  
- [방법: DEVPATH를 사용 하 여 어셈블리를 찾습니다](../../../docs/framework/configure-apps/how-to-locate-assemblies-by-using-devpath.md)  
+ [방법: DEVPATH를 사용하여 어셈블리 찾기](../../../docs/framework/configure-apps/how-to-locate-assemblies-by-using-devpath.md)  
  어셈블리를 검색할 때 런타임에서 DEVPATH 환경 변수를 사용하도록 지정하는 방법에 대해 설명합니다.  
   
  [어셈블리 버전 리디렉션](../../../docs/framework/configure-apps/redirect-assembly-versions.md)  
@@ -120,6 +120,7 @@ ms.locfileid: "55826436"
  시작, 런타임, 네트워크 및 구성 설정의 다른 형식에 대한 스키마 계층 구조를 설명합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [구성 파일 스키마](../../../docs/framework/configure-apps/file-schema/index.md)
 - [어셈블리 위치 지정](../../../docs/framework/configure-apps/specify-assembly-location.md)
 - [어셈블리 버전 리디렉션](../../../docs/framework/configure-apps/redirect-assembly-versions.md)

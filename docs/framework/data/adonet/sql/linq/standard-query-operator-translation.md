@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: a60c30fa-1e68-45fe-b984-f6abb9ede40e
-ms.openlocfilehash: 0b962df58092dc0d410bff4559180a5d77580545
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
+ms.openlocfilehash: 48c95411d08aefc3ecb7d8a7041ac47d44e6b9ae
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56093933"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59127948"
 ---
 # <a name="standard-query-operator-translation"></a>표준 쿼리 연산자 변환
-[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]에서는 표준 쿼리 연산자를 SQL 명령으로 변환합니다. 데이터베이스의 쿼리 프로세서는 SQL 변환에 대 한 실행 의미 체계를 결정합니다.  
+[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 표준 쿼리 연산자를 SQL 명령으로 변환 합니다. 데이터베이스의 쿼리 프로세서는 SQL 변환에 대 한 실행 의미 체계를 결정합니다.  
   
  표준 쿼리 연산자에 대해 정의 된 *시퀀스*합니다. 순서가 *정렬* 의존 하는 시퀀스의 각 요소에 대 한 참조 id 및. 자세한 내용은 [표준 쿼리 연산자 개요 (C#)](../../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md) 하거나 [표준 쿼리 연산자 개요 (Visual Basic)](../../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)합니다.  
   
@@ -24,9 +24,9 @@ ms.locfileid: "56093933"
 ## <a name="operator-support"></a>연산자 지원  
   
 ### <a name="concat"></a>Concat  
- <xref:System.Linq.Enumerable.Concat%2A> 메서드는 수신자 순서와 인수 순서가 동일한 순서 있는 다중 집합에 대해 정의됩니다. <xref:System.Linq.Enumerable.Concat%2A>는 공통 순서 이전에 다중 집합에 대해 `UNION ALL`로 작동합니다.  
+ <xref:System.Linq.Enumerable.Concat%2A> 메서드는 수신자 순서와 인수 순서가 동일한 순서 있는 다중 집합에 대해 정의됩니다. <xref:System.Linq.Enumerable.Concat%2A> 로 작동 `UNION ALL` 뒤에 공통 순서 이전에 다중 집합을 통해.  
   
- 최종 단계는 결과가 생성되기 전에 SQL에서 순서를 지정하는 단계입니다. <xref:System.Linq.Enumerable.Concat%2A>에서는 해당 인수의 순서를 유지하지 않습니다. 순서가 적절하게 지정되게 하려면 <xref:System.Linq.Enumerable.Concat%2A>에 대한 결과의 순서를 명시적으로 지정해야 합니다.  
+ 최종 단계는 결과가 생성되기 전에 SQL에서 순서를 지정하는 단계입니다. <xref:System.Linq.Enumerable.Concat%2A> 해당 인수의 순서를 유지 하지 않습니다. 순서가 적절하게 지정되게 하려면 <xref:System.Linq.Enumerable.Concat%2A>에 대한 결과의 순서를 명시적으로 지정해야 합니다.  
   
 ### <a name="intersect-except-union"></a>Intersect, Except, Union  
  <xref:System.Linq.Enumerable.Intersect%2A> 및 <xref:System.Linq.Enumerable.Except%2A> 메서드는 집합에 대해서만 잘 정의되어 있습니다. 다중 집합에 대한 의미 체계는 정의되어 있지 않습니다.  
@@ -37,7 +37,7 @@ ms.locfileid: "56093933"
  <xref:System.Linq.Enumerable.Take%2A> 및 <xref:System.Linq.Enumerable.Skip%2A> 방법이 대해서만 잘 정의 된 *순서가 지정 된 집합*합니다. 순서 없는 집합이나 다중 집합에 대한 의미 체계는 정의되어 있지 않습니다.  
   
 > [!NOTE]
->  <xref:System.Linq.Enumerable.Take%2A> 및 <xref:System.Linq.Enumerable.Skip%2A>에는 SQL Server 2000에 대한 쿼리에서 사용할 경우 몇 가지 제한이 따릅니다. 자세한 내용은 "Skip 및 Take 예외 SQL Server 2000의 에서" 항목을 참조 하세요 [문제 해결](../../../../../../docs/framework/data/adonet/sql/linq/troubleshooting.md)합니다.  
+>  <xref:System.Linq.Enumerable.Take%2A> 및 <xref:System.Linq.Enumerable.Skip%2A> SQL Server 2000에 대 한 쿼리에서 사용 하는 경우에 특정 제한이 있습니다. 자세한 내용은 "Skip 및 Take 예외 SQL Server 2000의 에서" 항목을 참조 하세요 [문제 해결](../../../../../../docs/framework/data/adonet/sql/linq/troubleshooting.md)합니다.  
   
  SQL의 순서 지정에 대한 제한 사항 때문에 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]에서는 이러한 메서드의 인수에 대한 순서 지정 작업을 메서드의 결과로 이동하려고 합니다. 예를 들어 다음 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 쿼리를 살펴보세요.  
   
@@ -71,31 +71,30 @@ ORDER BY [t0].[CustomerID]
   
 |연산자|설명|  
 |---------------|---------------|  
-|<xref:System.Linq.Enumerable.TakeWhile%2A>, <xref:System.Linq.Enumerable.SkipWhile%2A>|SQL 쿼리는 다중 집합에 대해서는 작동하지만 시퀀스에 대해서는 작동하지 않습니다. `ORDER BY`는 결과에 적용되는 마지막 절이어야 합니다. 따라서 이러한 두 메서드에 대한 일반 용도 변환이 없습니다.|  
+|<xref:System.Linq.Enumerable.TakeWhile%2A>, <xref:System.Linq.Enumerable.SkipWhile%2A>|SQL 쿼리는 다중 집합에 대해서는 작동하지만 시퀀스에 대해서는 작동하지 않습니다. `ORDER BY` 적용 되어야 합니다는 마지막 절 결과. 따라서 이러한 두 메서드에 대한 일반 용도 변환이 없습니다.|  
 |<xref:System.Linq.Enumerable.Reverse%2A>|순서 있는 집합에 대해 이 메서드의 변환이 가능하지만 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]에서 현재 변환되지 않습니다.|  
 |<xref:System.Linq.Enumerable.Last%2A>, <xref:System.Linq.Enumerable.LastOrDefault%2A>|순서 있는 집합에 대해 이러한 메서드의 변환이 가능하지만 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]에서 현재 변환되지 않습니다.|  
 |<xref:System.Linq.Enumerable.ElementAt%2A>, <xref:System.Linq.Enumerable.ElementAtOrDefault%2A>|SQL 쿼리는 다중 집합에 대해서는 작동하지만 인덱싱 가능한 시퀀스에 대해서는 작동하지 않습니다.|  
-|<xref:System.Linq.Enumerable.DefaultIfEmpty%2A>(기본 인수로 오버로드)|일반적으로 임의의 튜플에 대해 기본값을 지정할 수 없습니다. 일부 경우 외부 조인을 통해 튜플에 null 값을 지정할 수는 있습니다.|  
+|<xref:System.Linq.Enumerable.DefaultIfEmpty%2A> (기본 인수로 오버 로드)|일반적으로 임의의 튜플에 대해 기본값을 지정할 수 없습니다. 일부 경우 외부 조인을 통해 튜플에 null 값을 지정할 수는 있습니다.|  
   
 ## <a name="expression-translation"></a>식 변환  
   
 ### <a name="null-semantics"></a>Null 의미 체계  
- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]에서는 null 비교 의미 체계를 SQL에 적용하지 않습니다. 비교 연산자는 구문상 동등한 SQL 항목으로 변환됩니다. 이러한 이유로 의미 체계는 서버 또는 연결 설정에 의해 정의 된 SQL 의미 체계를 반영 합니다. 예를 들어 두 개의 null 값은 기본 SQL Server 설정에서는 같지 있지만 의미 체계를 변경 하려면 설정을 변경할 수 있습니다. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]에서는 쿼리를 변환할 때 서버 설정을 고려하지 않습니다.  
+ [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] SQL에서 null 비교 의미 체계를 적용 하지 않습니다. 비교 연산자는 구문상 동등한 SQL 항목으로 변환됩니다. 이러한 이유로 의미 체계는 서버 또는 연결 설정에 의해 정의 된 SQL 의미 체계를 반영 합니다. 예를 들어 두 개의 null 값은 기본 SQL Server 설정에서는 같지 있지만 의미 체계를 변경 하려면 설정을 변경할 수 있습니다. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 쿼리를 변환할 때 서버 설정을 고려 하지 않습니다.  
   
  리터럴 null을 사용한 비교는 해당 SQL 버전(`is null` 또는 `is not null`)으로 변환됩니다.  
   
- 데이터 정렬의 `null` 값은 SQL Server에서 정의됩니다. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]에서는 데이터 정렬을 변경하지 않습니다.  
+ 데이터 정렬의 `null` 값은 SQL Server에서 정의됩니다. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 데이터 정렬을 변경 하지 않습니다.  
   
-### <a name="aggregates"></a>집합체  
- 표준 쿼리 연산자의 집계 메서드 <xref:System.Linq.Enumerable.Sum%2A>은 빈 시퀀스 또는 null만 들어 있는 시퀀스를 0으로 계산합니다. 
-  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]에서 SQL의 의미 체계는 변경되지 않은 상태로 유지되고 <xref:System.Linq.Enumerable.Sum%2A>은 빈 시퀀스 또는 null만 들어 있는 시퀀스를 0이 아닌 `null`로 계산합니다.  
+### <a name="aggregates"></a>집계  
+ 표준 쿼리 연산자의 집계 메서드 <xref:System.Linq.Enumerable.Sum%2A>은 빈 시퀀스 또는 null만 들어 있는 시퀀스를 0으로 계산합니다. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]에서 SQL의 의미 체계는 변경되지 않은 상태로 유지되고 <xref:System.Linq.Enumerable.Sum%2A>은 빈 시퀀스 또는 null만 들어 있는 시퀀스를 0이 아닌 `null`로 계산합니다.  
   
  중간 결과에 대한 SQL 제한은 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]의 집계에 적용됩니다. 32비트 정수 수량의 <xref:System.Linq.Enumerable.Sum%2A>은 64비트 결과를 사용하여 계산되지 않습니다. 표준 쿼리 연산자 구현이 메모리 내의 해당 시퀀스에 대해 오버플로를 발생시키지 않는 경우에도 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]의 <xref:System.Linq.Enumerable.Sum%2A> 변환에 대해 오버플로가 발생할 수 있습니다.  
   
  마찬가지로 정수 값의 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]에 대한 <xref:System.Linq.Enumerable.Average%2A> 변환은 `integer`이 아닌 `double`로 계산됩니다.  
   
 ### <a name="entity-arguments"></a>엔터티 인수  
- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]에서는 엔터티 형식을 <xref:System.Linq.Enumerable.GroupBy%2A> 및 <xref:System.Linq.Enumerable.OrderBy%2A> 메서드에서 사용할 수 있습니다. 이러한 연산자 변환에서 형식 인수를 사용하는 것은 해당 형식의 모든 멤버를 지정하는 것과 동일합니다. 예를 들어 다음 코드는 동일합니다.  
+ [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 엔터티 형식에 사용할 수 있도록 합니다 <xref:System.Linq.Enumerable.GroupBy%2A> 고 <xref:System.Linq.Enumerable.OrderBy%2A> 메서드. 이러한 연산자 변환에서 형식 인수를 사용하는 것은 해당 형식의 모든 멤버를 지정하는 것과 동일합니다. 예를 들어 다음 코드는 동일합니다.  
   
  [!code-csharp[DLinqSQOTranslation#2](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqSQOTranslation/cs/Program.cs#2)]
  [!code-vb[DLinqSQOTranslation#2](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqSQOTranslation/vb/Module1.vb#2)]  
@@ -174,7 +173,7 @@ ORDER BY [t0].[CustomerID]
  이러한 SQL Server 날짜 및 시간 형식 매핑에 대 한 자세한 내용은 참조 하세요. [SQL-CLR 형식 매핑](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mapping.md)합니다.  
   
 ## <a name="sql-server-2005-support"></a>SQL Server 2005 지원  
- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]에서는 다음과 같은 SQL Server 2005 기능을 지원하지 않습니다.  
+ [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 다음 SQL Server 2005 기능을 지원 하지 않습니다.  
   
 -   SQL CLR용으로 작성된 저장 프로시저  
   
@@ -186,9 +185,9 @@ ORDER BY [t0].[CustomerID]
  [!INCLUDE[ss2k](../../../../../../includes/ss2k-md.md)]와 달리 다음과 같은 [!INCLUDE[sqprsqext](../../../../../../includes/sqprsqext-md.md)] 제한 사항이 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 지원에 적용됩니다.  
   
 ### <a name="cross-apply-and-outer-apply-operators"></a>Cross Apply 및 Outer Apply 연산자  
- 이러한 연산자는 [!INCLUDE[ss2k](../../../../../../includes/ss2k-md.md)]에서 사용할 수 없습니다. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]에서는 일련의 다시 쓰기를 시도하여 해당 연산자를 적절한 조인으로 바꿉니다.  
+ 이러한 연산자는 [!INCLUDE[ss2k](../../../../../../includes/ss2k-md.md)]에서 사용할 수 없습니다. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 일련의 적절 한 조인으로 바꾸려면 다시 쓰기를 시도 합니다.  
   
- `Cross Apply` 및 `Outer Apply`는 관계 탐색을 위해 생성됩니다. 이러한 다시 쓰기가 가능한 쿼리 집합은 잘 정의되어 있지 않습니다. 따라서 [!INCLUDE[ss2k](../../../../../../includes/ss2k-md.md)]에서 지원되는 최소 쿼리 집합은 관계 탐색을 포함하지 않는 집합입니다.  
+ `Cross Apply` 및 `Outer Apply` 관계 탐색을 위해 생성 됩니다. 이러한 다시 쓰기가 가능한 쿼리 집합은 잘 정의되어 있지 않습니다. 따라서 [!INCLUDE[ss2k](../../../../../../includes/ss2k-md.md)]에서 지원되는 최소 쿼리 집합은 관계 탐색을 포함하지 않는 집합입니다.  
   
 ### <a name="text--ntext"></a>text/ntext  
  데이터 형식 `text`  /  `ntext` 에 대 한 특정 쿼리 작업에 사용할 수 없습니다 `varchar(max)`  /  `nvarchar(max)`을에서 지원 되는 [!INCLUDE[sqprsqext](../../../../../../includes/sqprsqext-md.md)]합니다.  
@@ -196,10 +195,10 @@ ORDER BY [t0].[CustomerID]
  이 제한에 대한 해결 방법은 없습니다. 특히 `Distinct()` 또는 `text` 열에 매핑된 멤버가 들어 있는 결과에서는 `ntext`를 사용할 수 없습니다.  
   
 ### <a name="behavior-triggered-by-nested-queries"></a>중첩된 쿼리에 의해 트리거되는 동작  
- [!INCLUDE[ss2k](../../../../../../includes/ss2k-md.md)](SP4 이하) 바인더에는 중첩된 쿼리에 의해 트리거되는 몇 가지 고유한 특징이 있습니다. 이러한 작업을 트리거하는 SQL 쿼리 집합 제대로 정의 되지 않습니다. 따라서 SQL Server 예외를 일으킬 수 있는 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 쿼리 집합을 정의할 수 없습니다.  
+ [!INCLUDE[ss2k](../../../../../../includes/ss2k-md.md)] (sp4이 하) 바인더에 중첩 된 쿼리에 의해 트리거되는 몇 가지 고유한 특징이 있습니다. 이러한 작업을 트리거하는 SQL 쿼리 집합 제대로 정의 되지 않습니다. 따라서 SQL Server 예외를 일으킬 수 있는 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 쿼리 집합을 정의할 수 없습니다.  
   
 ### <a name="skip-and-take-operators"></a>Skip 및 Take 연산자  
- <xref:System.Linq.Enumerable.Take%2A> 및 <xref:System.Linq.Enumerable.Skip%2A>에는 [!INCLUDE[ss2k](../../../../../../includes/ss2k-md.md)]에 대한 쿼리에서 사용할 경우 몇 가지 제한이 따릅니다. 자세한 내용은 "Skip 및 Take 예외 SQL Server 2000의 에서" 항목을 참조 하세요 [문제 해결](../../../../../../docs/framework/data/adonet/sql/linq/troubleshooting.md)합니다.  
+ <xref:System.Linq.Enumerable.Take%2A> 및 <xref:System.Linq.Enumerable.Skip%2A> 에 대 한 쿼리에서 사용 하는 경우에 특정 제한이 [!INCLUDE[ss2k](../../../../../../includes/ss2k-md.md)]합니다. 자세한 내용은 "Skip 및 Take 예외 SQL Server 2000의 에서" 항목을 참조 하세요 [문제 해결](../../../../../../docs/framework/data/adonet/sql/linq/troubleshooting.md)합니다.  
   
 ## <a name="object-materialization"></a>개체 구체화  
  구체화에서는 하나 이상의 SQL 쿼리에서 반환한 행을 사용하여 CLR 개체를 만듭니다.  
@@ -208,7 +207,7 @@ ORDER BY [t0].[CustomerID]
   
     -   생성자  
   
-    -   프로젝션의 `ToString` 메서드  
+    -   `ToString` 프로젝션의 메서드  
   
     -   프로젝션의 형식 캐스트  
   
@@ -227,6 +226,7 @@ ORDER BY [t0].[CustomerID]
     -   <xref:System.Linq.Enumerable.ToArray%2A>  
   
 ## <a name="see-also"></a>참고자료
+
 - [참조](../../../../../../docs/framework/data/adonet/sql/linq/reference.md)
 - [시퀀스에서 요소 반환 또는 건너뛰기](../../../../../../docs/framework/data/adonet/sql/linq/return-or-skip-elements-in-a-sequence.md)
 - [두 시퀀스 연결](../../../../../../docs/framework/data/adonet/sql/linq/concatenate-two-sequences.md)

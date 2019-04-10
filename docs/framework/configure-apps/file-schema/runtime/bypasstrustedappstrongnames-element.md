@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 71b2ebf6-3843-41e2-ad52-ffa5cd083a40
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c456066eb169ab63372ceded16d60e384296c779
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 6c39d9a1e3da9cccb2f027e9597a6f2272d187ec
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55282310"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59179142"
 ---
 # <a name="bypasstrustedappstrongnames-element"></a>\<bypassTrustedAppStrongNames > 요소
 완전 신뢰에 로드 되는 완전 신뢰 어셈블리에 강력한 이름의 유효성 검사를 건너뛸지 여부를 지정 <xref:System.AppDomain>합니다.  
@@ -84,6 +84,7 @@ ms.locfileid: "55282310"
 ```  
   
 ## <a name="see-also"></a>참고자료
+
 - [런타임 설정 스키마](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
 - [구성 파일 스키마](../../../../../docs/framework/configure-apps/file-schema/index.md)
 - [방법: 강력한 이름 건너뛰기 기능 비활성화](../../../../../docs/framework/app-domains/how-to-disable-the-strong-name-bypass-feature.md)

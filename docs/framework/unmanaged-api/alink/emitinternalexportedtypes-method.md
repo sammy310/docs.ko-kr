@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6cee275dab33b847bb3a6e9839164615bdaa4a14
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: c196bcc159b18b9dc04329d817ebe16e07bb8bb7
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57502581"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59218253"
 ---
 # <a name="emitinternalexportedtypes-method"></a>EmitInternalExportedTypes 메서드
 어셈블리에 추가 하는 형식을 내보냅니다. 알려진 내부 형식이 추가 된 후이 메서드를 호출 합니다.  
@@ -46,6 +46,7 @@ HRESULT EmitInternalExportedTypes(
  Alink.h 필요  
   
 ## <a name="see-also"></a>참고자료
+
 - [IALink2 인터페이스](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
 - [IALink 인터페이스](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
 - [ALink API](../../../../docs/framework/unmanaged-api/alink/index.md)

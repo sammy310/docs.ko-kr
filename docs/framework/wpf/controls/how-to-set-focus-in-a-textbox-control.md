@@ -8,12 +8,12 @@ helpviewer_keywords:
 - focus [WPF], setting
 - TextBox control [WPF], setting focus
 ms.assetid: 24b61b45-dc2d-425e-9839-b017af7ab86f
-ms.openlocfilehash: 8c3b9881ada843d65db035835fc5f4c865a177e9
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: f4ba367ea9bdfcd6dbab7a5015472ec33adfe46f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57368482"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59115507"
 ---
 # <a name="how-to-set-focus-in-a-textbox-control"></a>방법: TextBox 컨트롤에서 포커스 설정
 사용 하는 방법을 보여 주는이 예제는 <xref:System.Windows.UIElement.Focus%2A> 에 포커스를 설정 하는 방법을 <xref:System.Windows.Controls.TextBox> 제어 합니다.  
@@ -30,6 +30,7 @@ ms.locfileid: "57368482"
  [!code-vb[TextBox_MiscCode#_FocusTextBox](~/samples/snippets/visualbasic/VS_Snippets_Wpf/TextBox_MiscCode/VisualBasic/Window1.xaml.vb#_focustextbox)]  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Windows.UIElement.Focusable%2A>
 - <xref:System.Windows.UIElement.IsFocused%2A>
 - [TextBox 개요](textbox-overview.md)

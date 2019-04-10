@@ -6,12 +6,12 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], column types
 - data grids [Windows Forms], columns
 ms.assetid: f0a0a9f1-8757-4bfd-891f-d7d12870dbed
-ms.openlocfilehash: 8fd3ad0da369702c2a5e27c0b8b9a39a71c372ac
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: a33cf4cd865921c04ef10c7fccf3a67c3d22de73
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57724572"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59115676"
 ---
 # <a name="column-types-in-the-windows-forms-datagridview-control"></a>Windows Forms DataGridView 컨트롤의 열 형식
 <xref:System.Windows.Forms.DataGridView> 컨트롤에서 해당 정보를 표시 하 여 사용자가 정보를 수정 하거나 추가할 수 있도록 여러 열 유형에 사용 합니다.  
@@ -81,6 +81,7 @@ ms.locfileid: "57724572"
  <xref:System.Windows.Forms.DataGridViewLinkColumn> 이전, 도중 및 이후에 링크의 모양 수정에 대 한 여러 속성을 제공 하는 클래스 클릭 합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridViewColumn>
 - <xref:System.Windows.Forms.DataGridViewButtonColumn>

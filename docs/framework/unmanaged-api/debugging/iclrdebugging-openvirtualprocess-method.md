@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b4ed9526dc38d72b01798215bc602fb8298c2bc3
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: a313ea62455067fb36b94d942b0ce21589677e3b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57478026"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59122579"
 ---
 # <a name="iclrdebuggingopenvirtualprocess-method"></a>ICLRDebugging::OpenVirtualProcess 메서드
 프로세스에 로드 된 공용 언어 런타임 (CLR) 모듈에 해당 하는 ICorDebugProcess 인터페이스를 가져옵니다.  
@@ -74,7 +74,7 @@ HRESULT OpenVirtualProcess(
 |HRESULT|설명|  
 |-------------|-----------------|  
 |S_OK|메서드가 완료되었습니다.|  
-|E_POINTER|`pDataTarget`가 `null`인 경우|  
+|E_POINTER|`pDataTarget` `null`합니다.|  
 |CORDBG_E_LIBRARY_PROVIDER_ERROR|합니다 [ICLRDebuggingLibraryProvider](../../../../docs/framework/unmanaged-api/debugging/iclrdebugginglibraryprovider-interface.md) 콜백 오류를 반환 하거나 유효한 핸들을 제공 하지 않습니다.|  
 |CORDBG_E_MISSING_DATA_TARGET_INTERFACE|`pDataTarget` 이 버전의 런타임이 필요한 데이터 대상 인터페이스를 구현 하지 않습니다.|  
 |CORDBG_E_NOT_CLR|표시 된 모듈이 CLR 모듈이 아닙니다. 메모리가 손상, 모듈을 사용할 수 없는 CLR 버전은 shim 된 버전 보다 최신 때문에 CLR 모듈을 검색할 수 없는 경우에이 HRESULT 반환 됩니다.|  
@@ -97,5 +97,6 @@ HRESULT OpenVirtualProcess(
  **.NET Framework 버전:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>참고자료
+
 - [디버깅 인터페이스](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
 - [디버깅](../../../../docs/framework/unmanaged-api/debugging/index.md)

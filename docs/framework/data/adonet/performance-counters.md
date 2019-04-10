@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 0b121b71-78f8-4ae2-9aa1-0b2e15778e57
-ms.openlocfilehash: e60df2b576980ecd1ff92af78cef36f025b71417
-ms.sourcegitcommit: c6f69b0cf149f6b54483a6d5c2ece222913f43ce
+ms.openlocfilehash: e7e7ba379f6f92f3ba8fba55f22c8eaec81ab1cf
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2019
-ms.locfileid: "55903786"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59133889"
 ---
 # <a name="performance-counters-in-adonet"></a>성능 카운터(ADO.NET)
 ADO.NET 2.0에는 <xref:System.Data.SqlClient> 및 <xref:System.Data.OracleClient>를 모두 지원하는 성능 카운터에 대한 확장된 지원이 추가되었습니다. 이전 버전의 ADO.NET에서 사용 가능한 <xref:System.Data.SqlClient> 성능 카운터는 더 이상 사용되지 않는 대신 이 항목에 설명할 새 성능 카운터로 대체되었습니다. ADO.NET 성능 카운터를 사용하여 응용 프로그램 상태와 응용 프로그램에서 사용하는 연결 리소스를 모니터링할 수 있습니다. 성능 카운터는 Windows 성능 카운터를 사용하여 모니터링하거나 <xref:System.Diagnostics.PerformanceCounter> 네임스페이스의 <xref:System.Diagnostics> 클래스를 사용하여 프로그래밍 방식으로 액세스할 수 있습니다.  
@@ -32,7 +32,7 @@ ADO.NET 2.0에는 <xref:System.Data.SqlClient> 및 <xref:System.Data.OracleClien
 |`NumberOfPooledConnections`|연결 풀링 인프라에서 관리되는 활성 연결 수입니다.|  
 |`NumberOfReclaimedConnections`|응용 프로그램에서 `Close` 또는 `Dispose`를 호출하지 않은 가비지 수집에서 회수된 연결 수입니다. 연결을 명시적으로 닫거나 삭제하는 것이 성능을 항상 저하시키는 것은 아닙니다.|  
 |`NumberOfStasisConnections`|현재 작업 완료 대기 중이어서 사용자 응용 프로그램에서 사용할 수 없는 연결 수입니다.|  
-|`SoftConnectsPerSecond`|연결 풀에서 끌어온 활성 연결 수입니다. **참고:**  이 성능 카운터는 기본적으로 활성화되지 않습니다. 이 성능 카운터를 사용 하려면 [해제 기본적으로 카운터 활성화](#ActivatingOffByDefault)합니다.|  
+|`SoftConnectsPerSecond`|연결 풀에서 풀링되는 활성 연결 수입니다. **참고:**  이 성능 카운터는 기본적으로 활성화되지 않습니다. 이 성능 카운터를 사용 하려면 [해제 기본적으로 카운터 활성화](#ActivatingOffByDefault)합니다.|  
 |`SoftDisconnectsPerSecond`|연결 풀로 반환되는 활성 연결 수입니다. **참고:**  이 성능 카운터는 기본적으로 활성화되지 않습니다. 이 성능 카운터를 사용 하려면 [해제 기본적으로 카운터 활성화](#ActivatingOffByDefault)합니다.|  
   
 ### <a name="connection-pool-groups-and-connection-pools"></a>연결 풀 그룹 및 연결 풀  
@@ -395,6 +395,7 @@ class Program
 ```  
 
 ## <a name="see-also"></a>참고자료
+
 - [데이터 소스에 연결](../../../../docs/framework/data/adonet/connecting-to-a-data-source.md)
 - [OLE DB, ODBC 및 Oracle 연결 풀링](../../../../docs/framework/data/adonet/ole-db-odbc-and-oracle-connection-pooling.md)
 - [ASP.NET에 대 한 성능 카운터](https://docs.microsoft.com/previous-versions/aspnet/fxk122b4(v=vs.100))

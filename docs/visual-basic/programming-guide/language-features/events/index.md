@@ -2,9 +2,15 @@
 title: 이벤트(Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
-  - 'events [Visual Basic], about events'
-  - 'events [Visual Basic]'
+- events [Visual Basic], about events
+- events [Visual Basic]
 ms.assetid: 8fb0353a-e41b-4e23-b78f-da65db832f70
+ms.openlocfilehash: 73a740d8fa9b9f293e4babb1d2edef81aaeae8aa
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57201107"
 ---
 # <a name="events-visual-basic"></a>이벤트(Visual Basic)
 일련의 순서를 실제로 실행 되는 절차로 Visual Studio 프로젝트를 시각화할 수 있지만 대부분의 프로그램은 이벤트 구동 방식-라는 외부 발생 요인에 따라 결정 됩니다 실행 흐름이 *이벤트*합니다.  

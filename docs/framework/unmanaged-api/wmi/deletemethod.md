@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fb7b800bca1957c8c324ddb9c11cb4eabb49cd24
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9eb96a75686a14182b9526a0832223c2b9abfc34
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54628489"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59136918"
 ---
 # <a name="deletemethod-function"></a>DeleteMethod 함수
 CIM 클래스 정의에서 지정된 된 메서드를 삭제합니다.
@@ -56,7 +56,7 @@ HRESULT Delete (
 |상수  |값  |설명  |
 |---------|---------|---------|
 | `WBEM_E_NOT_FOUND` | 0x80041002 | 지정된 된 메서드가 존재 하지 않습니다. |
-| `WBEM_E_OUT_OF_MEMORY` | 0x80041006 | 메모리가 부족하여 작업을 완료할 수 없는 경우 |
+| `WBEM_E_OUT_OF_MEMORY` | 0x80041006 | 메모리가 부족 하 여 작업을 완료할 수 없습니다. |
 | `WBEM_S_NO_ERROR` | 0 | 함수 호출이 성공 했습니다.  |
 
 ## <a name="remarks"></a>설명
@@ -73,4 +73,5 @@ HRESULT Delete (
  **.NET Framework 버전:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>참고자료
-- [WMI 및 성능 카운터 (관리 되지 않는 API 참조)](index.md)
+
+- [WMI 및 성능 카운터(관리되지 않는 API 참조)](index.md)

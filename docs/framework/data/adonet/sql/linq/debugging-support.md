@@ -2,23 +2,23 @@
 title: 디버깅 지원
 ms.date: 03/30/2017
 ms.assetid: 262d8e60-8e71-42d7-8340-1b5276a0ad35
-ms.openlocfilehash: e19acb4a3a5cdff29e5eee81e422be1209cf91ab
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: eab6370614bab12955c18523c8accca4089a6bc5
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54554873"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59126830"
 ---
 # <a name="debugging-support"></a>디버깅 지원
-[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]에서는 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 프로젝트에 대해 일반 디버깅을 지원합니다.  도 참조 하세요 [LINQ 디버깅](/visualstudio/debugger/debugging-linq) 하거나 [LINQ 디버깅](/visualstudio/debugger/debugging-linq)합니다.  
+[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 에 대해 일반 디버깅 지원 제공 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 프로젝트입니다.  도 참조 하세요 [LINQ 디버깅](/visualstudio/debugger/debugging-linq) 하거나 [LINQ 디버깅](/visualstudio/debugger/debugging-linq)합니다.  
   
- 또한 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]에서는 SQL 코드를 볼 수 있는 특수 도구를 제공합니다. 자세한 내용은 이 단원의 해당 항목을 참조하세요.  
+ [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] SQL 코드 보기에 대 한 특수 한 도구도 제공 합니다. 자세한 내용은 이 단원의 해당 항목을 참조하세요.  
   
 ## <a name="in-this-section"></a>섹션 내용  
- [방법: 생성 된 SQL 표시](../../../../../../docs/framework/data/adonet/sql/linq/how-to-display-generated-sql.md)  
+ [방법: 생성된 SQL 표시](../../../../../../docs/framework/data/adonet/sql/linq/how-to-display-generated-sql.md)  
  <xref:System.Data.Linq.DataContext> 속성을 사용하여 쿼리 작업을 보는 방법을 설명합니다.  
   
- [방법: 변경 집합 표시](../../../../../../docs/framework/data/adonet/sql/linq/how-to-display-a-changeset.md)  
+ [방법: ChangeSet 표시](../../../../../../docs/framework/data/adonet/sql/linq/how-to-display-a-changeset.md)  
  데이터베이스에 보내려는 변경 내용을 표시하는 방법을 설명합니다.  
   
  [방법: LINQ to SQL 명령 표시](../../../../../../docs/framework/data/adonet/sql/linq/how-to-display-linq-to-sql-commands.md)  
@@ -28,4 +28,5 @@ ms.locfileid: "54554873"
  해결하기 어려운 문제가 포함된 일반적인 시나리오를 제공합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [프로그래밍 가이드](../../../../../../docs/framework/data/adonet/sql/linq/programming-guide.md)

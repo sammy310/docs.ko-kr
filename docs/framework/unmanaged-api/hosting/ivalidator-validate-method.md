@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3c362b41d842fb9d35cc7ae9293e2e305b2af281
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 1fba06360a0c31e0a7fa3e61de9793bad14650fa
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57500436"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59127506"
 ---
 # <a name="ivalidatorvalidate-method"></a>IValidator::Validate 메서드
 지정 된 pe (이식 가능) 또는 Microsoft MSIL (intermediate language) 파일의 유효성을 검사 합니다.  
@@ -75,6 +75,3 @@ HRESULT Validate (
  **라이브러리:** MSCorEE.dll에 리소스로 포함  
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
-  
-## <a name="see-also"></a>참고자료
-

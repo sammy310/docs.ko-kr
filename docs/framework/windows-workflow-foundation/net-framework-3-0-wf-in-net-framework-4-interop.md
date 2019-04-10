@@ -2,12 +2,12 @@
 title: .NET Framework 4에서 Interop 활동과 함께 .NET Framework 3.0 WF 활동 사용
 ms.date: 03/30/2017
 ms.assetid: 71f112ba-abb0-46f7-b05f-a5d2eb9d0c5c
-ms.openlocfilehash: 386f71f21a4164f6f0ffc0ed19aab68abbe5a0b5
-ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
+ms.openlocfilehash: 33140ac85cd50140c0aa34d1986365fefc005c78
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49086689"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59329416"
 ---
 # <a name="using-net-framework-30-wf-activities-in-net-framework-4-with-the-interop-activity"></a>.NET Framework 4에서 Interop 활동과 함께 .NET Framework 3.0 WF 활동 사용
 <xref:System.Activities.Statements.Interop> 활동은 [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] 워크플로에서 [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)](WF 3.5) 활동을 래핑하는 [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)](WF 4.5) 활동입니다. WF 3 활동은 단일 리프 활동이거나 전체 활동 트리입니다. [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] 활동의 실행(취소 및 예외 처리 포함)과 지속성은 실행 중인 [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] 워크플로 인스턴스의 컨텍스트 내에서 발생합니다.  
@@ -34,22 +34,22 @@ ms.locfileid: "49086689"
 ## <a name="limitations-of-using-a-wf-3-activity-within-an-interop-activity"></a>Interop 활동에서 WF 3 활동 사용 제한  
  WF 3 시스템 제공 활동은 <xref:System.Activities.Statements.Interop> 활동에서 직접 래핑될 수 없습니다. <xref:System.Workflow.Activities.DelayActivity>와 같은 일부 WF 3 활동에서는 유사한 WF 4.5 활동이 있기 때문이고, 다른 활동에서는 활동 기능이 지원되지 않기 때문입니다. 많은 WF 3 시스템 제공 활동은 <xref:System.Activities.Statements.Interop> 활동에 의해 래핑되는 워크플로 내에서 사용될 수 있지만, 다음과 같은 제한 사항이 적용됩니다.  
   
-1.  <xref:System.ServiceModel.Activities.Send> 및 <xref:System.ServiceModel.Activities.Receive>는 <xref:System.Activities.Statements.Interop> 활동에서 사용할 수 없습니다.  
+1. <xref:System.ServiceModel.Activities.Send> 및 <xref:System.ServiceModel.Activities.Receive> 에서 사용할 수는 <xref:System.Activities.Statements.Interop> 활동입니다.  
   
-2.  <xref:System.Workflow.Activities.WebServiceInputActivity>, <xref:System.Workflow.Activities.WebServiceOutputActivity> 및 <xref:System.Workflow.Activities.WebServiceFaultActivity>는 <xref:System.Activities.Statements.Interop> 활동에서 사용할 수 없습니다.  
+2. <xref:System.Workflow.Activities.WebServiceInputActivity>를 <xref:System.Workflow.Activities.WebServiceOutputActivity>, 및 <xref:System.Workflow.Activities.WebServiceFaultActivity> 내에서 사용할 수 없습니다는 <xref:System.Activities.Statements.Interop> 활동입니다.  
   
-3.  <xref:System.Workflow.Activities.InvokeWorkflowActivity>는 <xref:System.Activities.Statements.Interop> 활동에서 사용할 수 없습니다.  
+3. <xref:System.Workflow.Activities.InvokeWorkflowActivity> 내에서 사용할 수 없습니다는 <xref:System.Activities.Statements.Interop> 활동입니다.  
   
-4.  <xref:System.Workflow.ComponentModel.SuspendActivity>는 <xref:System.Activities.Statements.Interop> 활동에서 사용할 수 없습니다.  
+4. <xref:System.Workflow.ComponentModel.SuspendActivity> 내에서 사용할 수 없습니다는 <xref:System.Activities.Statements.Interop> 활동입니다.  
   
-5.  보정 관련 활동은 <xref:System.Activities.Statements.Interop> 활동에서 사용할 수 없습니다.  
+5. 보정 관련 활동은 <xref:System.Activities.Statements.Interop> 활동에서 사용할 수 없습니다.  
   
  <xref:System.Activities.Statements.Interop> 활동에서 WF 3 활동을 사용하는 것과 관련하여 이해해야 할 몇 가지 동작이 있습니다.  
   
-1.  <xref:System.Activities.Statements.Interop> 활동에 포함된 WF 3 활동은 <xref:System.Activities.Statements.Interop> 활동을 실행하면 초기화됩니다. WF 4.5에는 워크플로 인스턴스를 실행하기 전에 이를 초기화하는 단계가 없습니다.  
+1. <xref:System.Activities.Statements.Interop> 활동에 포함된 WF 3 활동은 <xref:System.Activities.Statements.Interop> 활동을 실행하면 초기화됩니다. WF 4.5에는 워크플로 인스턴스를 실행하기 전에 이를 초기화하는 단계가 없습니다.  
   
-2.  WF 4.5 런타임은 트랜잭션이 시작되는 위치(<xref:System.Activities.Statements.Interop> 활동 내부 또는 외부)에 상관없이 트랜잭션이 시작될 때 워크플로 인스턴스 상태를 검사하지 않습니다.  
+2. WF 4.5 런타임은 트랜잭션이 시작되는 위치(<xref:System.Activities.Statements.Interop> 활동 내부 또는 외부)에 상관없이 트랜잭션이 시작될 때 워크플로 인스턴스 상태를 검사하지 않습니다.  
   
-3.  <xref:System.Activities.Statements.Interop> 활동 내의 활동에 대한 WF 3 추적 레코드가 WF 4.5 추적 참가자에게 <xref:System.Activities.Tracking.InteropTrackingRecord> 개체로 제공됩니다. <xref:System.Activities.Tracking.InteropTrackingRecord>는 <xref:System.Activities.Tracking.CustomTrackingRecord>의 파생 항목입니다.  
+3. <xref:System.Activities.Statements.Interop> 활동 내의 활동에 대한 WF 3 추적 레코드가 WF 4.5 추적 참가자에게 <xref:System.Activities.Tracking.InteropTrackingRecord> 개체로 제공됩니다. <xref:System.Activities.Tracking.InteropTrackingRecord> 파생 <xref:System.Activities.Tracking.CustomTrackingRecord>합니다.  
   
-4.  WF 3 사용자 지정 활동은 WF 3 워크플로 런타임에서와 동일한 방식으로 상호 운용 환경에서 워크플로 큐를 사용하여 데이터에 액세스할 수 있습니다. 이때 사용자 지정 활동 코드를 변경할 필요가 없습니다. 호스트에서 데이터는 <xref:System.Activities.Bookmark>를 다시 시작하여 WF 3 워크플로 큐에 배치됩니다. 책갈피 이름은 <xref:System.IComparable> 워크플로 큐 이름의 문자열 형식입니다.
+4. WF 3 사용자 지정 활동은 WF 3 워크플로 런타임에서와 동일한 방식으로 상호 운용 환경에서 워크플로 큐를 사용하여 데이터에 액세스할 수 있습니다. 이때 사용자 지정 활동 코드를 변경할 필요가 없습니다. 호스트에서 데이터는 <xref:System.Activities.Bookmark>를 다시 시작하여 WF 3 워크플로 큐에 배치됩니다. 책갈피 이름은 <xref:System.IComparable> 워크플로 큐 이름의 문자열 형식입니다.

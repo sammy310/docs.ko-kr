@@ -11,12 +11,12 @@ helpviewer_keywords:
 - inferring type information [LINQ in Visual Basic]
 - relationships [LINQ in Visual Basic]
 ms.assetid: b5ff4da5-f3fd-4a8e-aaac-1cbf52fa16f6
-ms.openlocfilehash: fd2bcfad0ae24288887500ae6286e6ac73fddac5
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 14f17e89e2a4143580b4a2ca7f9d30013ded58f9
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58822338"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59327635"
 ---
 # <a name="type-relationships-in-query-operations-visual-basic"></a>쿼리 작업의 형식 관계(Visual Basic)
 사용 되는 변수 [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] 쿼리 작업은 강력한 형식 이어야 하며 서로 호환 되어야 합니다. 강력한 형식 지정 데이터 원본, 쿼리 자체 및 쿼리 실행에 사용 됩니다. 다음 그림에서는 설명 하는 용어를 식별 하는 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 쿼리 합니다. 쿼리 부분에 대 한 자세한 내용은 참조 하세요. [기본 쿼리 작업 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/basic-query-operations.md)합니다.  
@@ -49,11 +49,11 @@ ms.locfileid: "58822338"
   
  유형은 암시적 또는 명시적으로 결정 됩니다 없이 모두 이전 코드 예제에서는 다음 관계가 있습니다.  
   
-1.  데이터 원본에 있는 요소의 형식 `names`, 범위 변수의 형식이 `name`, 쿼리에서 합니다.  
+1. 데이터 원본에 있는 요소의 형식 `names`, 범위 변수의 형식이 `name`, 쿼리에서 합니다.  
   
-2.  현재 선택 된 개체의 형식을 `name`, 쿼리 변수 형식을 결정 `mNames`합니다. 여기 `name` 문자열 이므로 쿼리 변수는 Visual Basic에서 IEnumerable (Of String).  
+2. 현재 선택 된 개체의 형식을 `name`, 쿼리 변수 형식을 결정 `mNames`합니다. 여기 `name` 문자열 이므로 쿼리 변수는 Visual Basic에서 IEnumerable (Of String).  
   
-3.  에 정의 된 쿼리 `mNames` 에서 실행 되는 `For Each` 루프입니다. 루프는 쿼리를 실행 한 결과 반복 합니다. 때문에 `mNames`실행 되는 경우 루프 반복 변수, 문자열의 시퀀스를 반환 하는 `nm`, 문자열 이기도 합니다.  
+3. 에 정의 된 쿼리 `mNames` 에서 실행 되는 `For Each` 루프입니다. 루프는 쿼리를 실행 한 결과 반복 합니다. 때문에 `mNames`실행 되는 경우 루프 반복 변수, 문자열의 시퀀스를 반환 하는 `nm`, 문자열 이기도 합니다.  
   
 ## <a name="queries-that-return-one-field-from-selected-elements"></a>선택한 요소에서 하나의 필드를 반환 하는 쿼리  
  다음 예제와 [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] 데이터 원본에서 선택한 각 요소의 부분만 포함 된 시퀀스를 반환 하는 작업을 쿼리 합니다. 쿼리는 컬렉션 `Customer` 데이터 원본으로 개체를 프로젝트에 해당 합니다 `Name` 결과의 속성입니다. 고객 이름을 문자열 이기 때문에 쿼리 출력으로 문자열 시퀀스를 생성 합니다.  
@@ -72,11 +72,11 @@ Next
   
  변수 간의 관계는 간단한 예제의 경우와 같습니다.  
   
-1.  데이터 원본에 있는 요소의 형식 `customers`, 범위 변수의 형식이 `cust`, 쿼리에서 합니다. 이 예에서 유형이 `Customer`합니다.  
+1. 데이터 원본에 있는 요소의 형식 `customers`, 범위 변수의 형식이 `cust`, 쿼리에서 합니다. 이 예에서 유형이 `Customer`합니다.  
   
-2.  `Select` 문 반환 합니다 `Name` 의 각 속성 `Customer` 개체 전체가 아니라 개체입니다. 때문에 `Name` 쿼리 변수를 문자열 `custNames`, 다시 되지 IEnumerable (Of String)의 `Customer`합니다.  
+2. `Select` 문 반환 합니다 `Name` 의 각 속성 `Customer` 개체 전체가 아니라 개체입니다. 때문에 `Name` 쿼리 변수를 문자열 `custNames`, 다시 되지 IEnumerable (Of String)의 `Customer`합니다.  
   
-3.  때문에 `custNames` 문자열의 시퀀스를 나타냅니다는 `For Each` 루프의 반복 변수도 `custName`, 문자열 이어야 합니다.  
+3. 때문에 `custNames` 문자열의 시퀀스를 나타냅니다는 `For Each` 루프의 반복 변수도 `custName`, 문자열 이어야 합니다.  
   
  지역 형식 유추를 하지 않고 앞의 예제를 쓰고 다음 예제와 같이 이해 하기에 다소 복잡 해질 것입니다.  
   
@@ -110,11 +110,11 @@ Next
   
  이전 예제에서 모든 변수에 대 한 형식을 지정 하려면 가능한 경우에 관계 ֿ ´.  
   
-1.  데이터 원본에 있는 요소의 형식은 쿼리에서 범위 변수의 형식을 다시 합니다. 이 예에서 `cust` 의 인스턴스가 `Customer`합니다.  
+1. 데이터 원본에 있는 요소의 형식은 쿼리에서 범위 변수의 형식을 다시 합니다. 이 예에서 `cust` 의 인스턴스가 `Customer`합니다.  
   
-2.  때문에 합니다 `Select` 문에서 쿼리 변수를 무명 형식이 생성 `nameCityQuery`, 익명 형식으로 암시적으로 형식화 해야 합니다. 익명 형식을 사용 가능한 이름이 없으므로 있으며 따라서 명시적으로 지정할 수 없습니다.  
+2. 때문에 합니다 `Select` 문에서 쿼리 변수를 무명 형식이 생성 `nameCityQuery`, 익명 형식으로 암시적으로 형식화 해야 합니다. 익명 형식을 사용 가능한 이름이 없으므로 있으며 따라서 명시적으로 지정할 수 없습니다.  
   
-3.  반복 변수 형식의 `For Each` 루프에는 2 단계에서 만든 익명 형식입니다. 형식에 사용 가능한 이름이 없으므로, 루프 반복 변수의 형식이 암시적으로 결정 해야 합니다.  
+3. 반복 변수 형식의 `For Each` 루프에는 2 단계에서 만든 익명 형식입니다. 형식에 사용 가능한 이름이 없으므로, 루프 반복 변수의 형식이 암시적으로 결정 해야 합니다.  
   
 ## <a name="see-also"></a>참고자료
 

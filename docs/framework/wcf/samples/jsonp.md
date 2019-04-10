@@ -2,12 +2,12 @@
 title: JSONP
 ms.date: 03/30/2017
 ms.assetid: c13b4d7b-dac7-4ffd-9f84-765c903511e1
-ms.openlocfilehash: 0e284ee6cce4ab513c03e7be402cc9c0f0c4ee1a
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: 37da57a000376f972cd6da9e04be46ddec1b7144
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48581916"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59329663"
 ---
 # <a name="jsonp"></a>JSONP
 이 샘플에서는 WCF REST 서비스에서 JSONP(JSON with Padding)를 지원하는 방법을 보여 줍니다. JSONP는 스크립트 태그를 현재 문서에서 생성함으로써 도메인의 제한 없이 스크립트를 호출하는 데 사용되는 규칙입니다. 결과는 지정된 콜백 함수를 통해 반환됩니다. JSONP는 아이디어를 기반으로 같은 태그는 `<script src="http://..." >` 모든 도메인의에서 스크립트를 평가할 수 있으며 이러한 태그로 검색 된 스크립트는 다른 함수 있습니다 이미 정의 되어 있는 범위 내에서 평가 됩니다.
@@ -64,8 +64,8 @@ Sys._json0({"__type":"Customer:#Microsoft.Samples.Jsonp","Address":"1 Example Wa
   
 #### <a name="to-run-the-sample"></a>이 샘플을 실행하려면  
   
-1.  JSONP 샘플의 솔루션을 엽니다.  
+1. JSONP 샘플의 솔루션을 엽니다.  
   
-2.  시작 하려면 F5 키를 눌러 `http://localhost:26648/JSONPClientPage.aspx` 브라우저에서 합니다.  
+2. 시작 하려면 F5 키를 눌러 `http://localhost:26648/JSONPClientPage.aspx` 브라우저에서 합니다.  
   
-3.  페이지를 로드 한 후 값으로 "Name" 및 "Address"에 대 한 텍스트 입력 채워졌는지 확인 합니다.  브라우저에서 페이지 렌더링을 완료 한 후 WCF 서비스에 대 한 호출에서 이러한 값을 제공 되었습니다.
+3. 페이지를 로드 한 후 값으로 "Name" 및 "Address"에 대 한 텍스트 입력 채워졌는지 확인 합니다.  브라우저에서 페이지 렌더링을 완료 한 후 WCF 서비스에 대 한 호출에서 이러한 값을 제공 되었습니다.

@@ -2,12 +2,12 @@
 title: 재호스팅된 워크플로 디자이너에서 새 Workflow Foundation 4.5 기능에 대한 지원
 ms.date: 03/30/2017
 ms.assetid: 1a4a4038-d8e6-41dd-99ea-93bd76286772
-ms.openlocfilehash: bed49e4a62e597c9cffd113b24551872ee1053d5
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: a7b7ed6987320314ee3fdccf0e58a8c7314fe50d
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57714946"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59324164"
 ---
 # <a name="support-for-new-workflow-foundation-45-features-in-the-rehosted-workflow-designer"></a>재호스팅된 워크플로 디자이너에서 새 Workflow Foundation 4.5 기능에 대한 지원
 Windows WF (Workflow Foundation)에서 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 는 workflow designer 환경의 몇 가지 향상 된 기능을 비롯 한 많은 새로운 기능이 도입 되었습니다. 이 항목에서는 이러한 기능 중 재호스트된 디자이너에서 지원되는 기능과 현재 지원되지 않는 기능을 자세히 설명합니다.
@@ -27,8 +27,7 @@ Windows WF (Workflow Foundation)에서 [!INCLUDE[net_v45](../../../includes/net-
 ## <a name="new-designer-capabilities"></a>새로운 디자이너 기능
 
 ### <a name="designer-search"></a>디자이너 검색
- 합니다 [빠른 찾기](whats-new-in-wf-in-dotnet.md#BKMK_QuickFind) 하 고 [파일에서 찾기](whats-new-in-wf-in-dotnet.md#BKMK_FindInFiles) 도입 된 기능 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 재 호스트 된 디자이너에서 지원 되지 않습니다. 
-  `Toolbox` 검색은 재호스트된 디자이너에서 지원됩니다. 이러한 기능에 대 한 자세한 내용은 참조 하세요. [디자이너 검색](whats-new-in-wf-in-dotnet.md#BKMK_DesignerSearch)합니다.
+ 합니다 [빠른 찾기](whats-new-in-wf-in-dotnet.md#BKMK_QuickFind) 하 고 [파일에서 찾기](whats-new-in-wf-in-dotnet.md#BKMK_FindInFiles) 도입 된 기능 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 재 호스트 된 디자이너에서 지원 되지 않습니다. `Toolbox` 검색은 재호스트된 디자이너에서 지원됩니다. 이러한 기능에 대 한 자세한 내용은 참조 하세요. [디자이너 검색](whats-new-in-wf-in-dotnet.md#BKMK_DesignerSearch)합니다.
 
 > [!WARNING]
 >  [빠른 찾기](whats-new-in-wf-in-dotnet.md#BKMK_QuickFind) 하 고 [파일에서 찾기](whats-new-in-wf-in-dotnet.md#BKMK_FindInFiles) 재 호스트 된 디자이너에서 지원 되지 않습니다.
@@ -125,14 +124,13 @@ Windows WF (Workflow Foundation)에서 [!INCLUDE[net_v45](../../../includes/net-
 ### <a name="state-machine-workflows"></a>상태 시스템 워크플로  
  상태 시스템 워크플로가.NET Framework 4.0.1의 일부로 도입 된 [Microsoft.NET Framework 4 플랫폼 업데이트 1](https://go.microsoft.com/fwlink/?LinkID=215092)합니다. 이 업데이트에는 여러 가지 새로운 클래스 및 활동이 포함되어 있으므로 개발자가 상태 시스템 워크플로를 만들 수 있었습니다. [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]에서는 이러한 클래스 및 활동이 업데이트되었습니다. 업데이트에는 다음이 포함됩니다.  
   
-1.  상태에 중단점을 설정할 수 있는 기능  
+1. 상태에 중단점을 설정할 수 있는 기능  
   
-2.  Workflow Designer에서 전환을 복사하여 붙여 넣을 수 있는 기능  
+2. Workflow Designer에서 전환을 복사하여 붙여 넣을 수 있는 기능  
   
-3.  공유 트리거 전환 작성을 위한 디자이너 지원  
+3. 공유 트리거 전환 작성을 위한 디자이너 지원  
   
-4.  
-  <xref:System.Activities.Statements.StateMachine>, <xref:System.Activities.Statements.State> 및 <xref:System.Activities.Statements.Transition>을 포함하여 상태 시스템 워크플로를 만드는 데 사용되는 활동  
+4. 활동을 포함 하는 상태 시스템 워크플로 만드는 데 사용 합니다. <xref:System.Activities.Statements.StateMachine>, <xref:System.Activities.Statements.State>, 및 <xref:System.Activities.Statements.Transition>  
   
  다음 스크린샷은에서 완료 된 상태 시스템 워크플로 [초보자를 위한 자습서](getting-started-tutorial.md) 단계 [방법: 상태 시스템 워크플로 만드는](how-to-create-a-state-machine-workflow.md)합니다.  
   
@@ -141,7 +139,7 @@ Windows WF (Workflow Foundation)에서 [!INCLUDE[net_v45](../../../includes/net-
  상태 시스템 워크플로 만드는 방법에 대 한 자세한 내용은 참조 하세요. [상태 시스템 워크플로](state-machine-workflows.md)합니다. 상태 시스템 워크플로는 재호스트된 디자이너에서 지원됩니다.  
   
 ### <a name="contract-first-workflow-development"></a>계약 중심 워크플로 개발  
- 계약 중심 워크플로 개발 도구를 사용 하면 코드에서 계약을 먼저 디자인 한 다음, Visual Studio에서 몇 번의 클릭으로 자동으로 생성 활동 템플릿을 각 작업을 나타내는 도구 상자에서 개발자. 그런 다음 이러한 활동은 계약에서 정의한 작업을 구현하는 워크플로를 만드는 데 사용됩니다. Workflow Designer는 워크플로 서비스의 유효성을 검사하여 이러한 작업을 구현하고 워크플로의 서명이 계약 서명과 일치하도록 합니다. 개발자는 워크플로 서비스와 구현된 계약 컬렉션을 연결할 수도 있습니다. 계약 중심 워크플로 서비스 개발에 대 한 자세한 내용은 참조 하세요. [방법: 기존 서비스 계약을 사용 하는 워크플로 서비스 만들기](how-to-create-a-workflow-service-that-consumes-an-existing-service-contract.md)합니다.  
+ 계약 중심 워크플로 개발 도구를 사용 하면 코드에서 계약을 먼저 디자인 한 다음, Visual Studio에서 몇 번의 클릭으로 자동으로 생성 활동 템플릿을 각 작업을 나타내는 도구 상자에서 개발자. 그런 다음 이러한 활동은 계약에서 정의한 작업을 구현하는 워크플로를 만드는 데 사용됩니다. 워크플로 디자이너는 워크플로 서비스의 유효성을 검사하여 이러한 작업을 구현하고 워크플로의 서명이 계약 서명과 일치하도록 합니다. 개발자는 워크플로 서비스와 구현된 계약 컬렉션을 연결할 수도 있습니다. 계약 중심 워크플로 서비스 개발에 대 한 자세한 내용은 참조 하세요. [방법: 기존 서비스 계약을 사용 하는 워크플로 서비스 만들기](how-to-create-a-workflow-service-that-consumes-an-existing-service-contract.md)합니다.  
   
 > [!WARNING]
 >  계약 중심 워크플로 개발은 워크플로 디자이너에서 지원되지 않습니다.

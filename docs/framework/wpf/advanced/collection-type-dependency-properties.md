@@ -10,18 +10,16 @@ helpviewer_keywords:
 - dependency properties [WPF]
 - collection-type properties [WPF]
 ms.assetid: 99f96a42-3ab7-4f64-a16b-2e10d654e97c
-ms.openlocfilehash: a2a664f0672f4585649cebad6e62635125db0983
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 9ce0b70bfdd70b47857167ff14e62ed2bbda569d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57354897"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59077461"
 ---
 # <a name="collection-type-dependency-properties"></a>컬렉션 형식 종속성 속성
 이 항목에서는 속성 형식이 컬렉션 형식인 종속성 속성을 구현하는 방법에 대한 지침과 제안된 패턴을 제공합니다.  
-  
- 
-  
+
 <a name="implementing"></a>   
 ## <a name="implementing-a-collection-type-dependency-property"></a>컬렉션 형식 종속성 속성 구현  
  종속성 속성에 대 한 일반적으로 수행 하는 구현 패턴은 정의 하는 [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] 속성에서 지 원하는 속성 래퍼를 <xref:System.Windows.DependencyProperty> 식별자 보다는 필드 또는 다른 구문입니다. 콜렉션 형식 속성을 구현할 때도 이와 동일한 패턴을 따릅니다. 그러나 컬렉션 형식 속성을 더 복잡해 패턴 컬렉션 내에 포함 된 형식이 때마다를 <xref:System.Windows.DependencyObject> 또는 <xref:System.Windows.Freezable> 클래스를 파생 합니다.  
@@ -57,6 +55,7 @@ ms.locfileid: "57354897"
  종속성 개체 컬렉션에서 하위 속성 바인딩을 사용 하려면 형식으로 컬렉션 속성을 만듭니다 <xref:System.Windows.FreezableCollection%601>, 하나라도 해당 컬렉션에 대 한 형식 제약 조건이 있는 <xref:System.Windows.DependencyObject> 클래스를 파생 합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Windows.FreezableCollection%601>
 - [WPF에 대한 XAML 및 사용자 지정 클래스](xaml-and-custom-classes-for-wpf.md)
 - [데이터 바인딩 개요](../data/data-binding-overview.md)

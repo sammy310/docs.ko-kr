@@ -7,12 +7,12 @@ helpviewer_keywords:
 - flicker [Windows Forms], reducing with double buffering
 - examples [Windows Forms], double-buffered graphics
 ms.assetid: 4f6fef99-0972-436e-9d73-0167e4033f71
-ms.openlocfilehash: 71463d7db6ae18a3dd21d6a467f3963d836fc086
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 20ec03e6b84110f7ea00c134dc18b23f233c5f58
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57707705"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59103443"
 ---
 # <a name="double-buffered-graphics"></a>이중 버퍼링 그래픽
 깜박임은 그래픽을 프로그래밍할 때 일반적으로 발생하는 문제입니다. 여러 개의 복잡한 그리기 작업이 필요한 그래픽 작업에서 렌더링된 이미지가 깜박이거나 그렇지 않고 의도하지 않은 모양이 나타날 수 있습니다. 이러한 문제를 해결하기 위해 .NET Framework에서 이중 버퍼링에 대한 액세스를 제공합니다.  
@@ -33,10 +33,11 @@ ms.locfileid: "57707705"
  사용 하 여 대 한 자세한 내용은 합니다 <xref:System.Drawing.BufferedGraphics> 클래스를 참조 하십시오 [버퍼링 된 그래픽 수동 렌더링](how-to-manually-render-buffered-graphics.md)합니다. 그래픽 렌더링에 대한 자세한 내용은 [Windows Forms의 그래픽 및 그리기](graphics-and-drawing-in-windows-forms.md)를 참조하세요.  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Drawing.BufferedGraphics>
 - <xref:System.Drawing.BufferedGraphicsContext>
 - <xref:System.Drawing.BufferedGraphicsManager>
-- [방법: 버퍼링 된 그래픽 수동 렌더링](how-to-manually-render-buffered-graphics.md)
-- [방법: 폼 및 컨트롤에 이중 버퍼링 사용 하 여 그래픽 깜빡임 줄이기](how-to-reduce-graphics-flicker-with-double-buffering-for-forms-and-controls.md)
-- [방법: 버퍼링 된 그래픽 수동 관리](how-to-manually-manage-buffered-graphics.md)
+- [방법: 버퍼링된 그래픽 수동 렌더링](how-to-manually-render-buffered-graphics.md)
+- [방법: 양식과 컨트롤에 이중 버퍼링을 사용하여 그래픽 깜빡임 줄이기](how-to-reduce-graphics-flicker-with-double-buffering-for-forms-and-controls.md)
+- [방법: 버퍼링된 그래픽 수동 관리](how-to-manually-manage-buffered-graphics.md)
 - [Windows Forms의 그래픽 및 그리기](graphics-and-drawing-in-windows-forms.md)

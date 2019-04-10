@@ -5,12 +5,12 @@ helpviewer_keywords:
 - read-only TextBox controls [WPF]
 - TextBox control read-only
 ms.assetid: e707ec59-8b22-473e-b77c-3060a237517a
-ms.openlocfilehash: 3784471020210f995c8bb0a377d56a2466d97da1
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 7f24458eb98bd669d59f15c49d1d9e3beb6833b1
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57364539"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59229838"
 ---
 # <a name="how-to-make-a-textbox-control-read-only"></a>방법: TextBox 컨트롤을 읽기 전용으로 설정
 구성 하는 방법을 보여 주는이 예제는 <xref:System.Windows.Controls.TextBox> 컨트롤이 사용자 입력 또는 수정할 수 없습니다.  
@@ -25,5 +25,6 @@ ms.locfileid: "57364539"
  기본값인 <xref:System.Windows.Controls.Primitives.TextBoxBase.IsReadOnly%2A> 됩니다 **false**합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [TextBox 개요](textbox-overview.md)
 - [RichTextBox 개요](richtextbox-overview.md)

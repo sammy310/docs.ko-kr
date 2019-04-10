@@ -5,12 +5,12 @@ helpviewer_keywords:
 - timing behaviors [WPF]
 - behaviors [WPF], timing
 ms.assetid: 5b714d46-bd46-48b8-b467-b4be89ba3091
-ms.openlocfilehash: f7c1aa81a5d3c283fdea06dd812f879f096c2ee2
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: c3403a8602cc874e993bd649851b77d7bf652cce
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57355521"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59129599"
 ---
 # <a name="timing-behaviors-overview"></a>타이밍 동작 개요
 이 항목에서는 애니메이션 및 기타의 타이밍 동작을 설명 <xref:System.Windows.Media.Animation.Timeline> 개체입니다.  
@@ -42,7 +42,7 @@ ms.locfileid: "57355521"
 |----------|-----------------|----------------|-|-|-|  
 |단순 지속 시간|타임라인이 단일 정방향 반복을 수행하는 데 걸리는 시간입니다.|<xref:System.Windows.Media.Animation.Timeline.Duration%2A>||||  
 |1회 반복|재생 되 면 및 경우에 타임 라인에 걸리는 시간의 길이 <xref:System.Windows.Media.Animation.Timeline.AutoReverse%2A> 속성이 true 이면 거꾸로 1 번만 재생 합니다.|<xref:System.Windows.Media.Animation.Timeline.Duration%2A>, <xref:System.Windows.Media.Animation.Timeline.AutoReverse%2A>||||  
-|활성 기간|지정한 모든 반복을 완료 하려면 타임 라인에 걸리는 시간의 길이 <xref:System.Windows.Media.Animation.RepeatBehavior> 속성입니다.|<xref:System.Windows.Media.Animation.Timeline.Duration%2A>, <xref:System.Windows.Media.Animation.Timeline.AutoReverse%2A>, <xref:System.Windows.Media.Animation.RepeatBehavior>||||  
+|활성 기간|지정한 모든 반복을 완료 하려면 타임 라인에 걸리는 시간의 길이 <xref:System.Windows.Media.Animation.RepeatBehavior> 속성입니다.|<xref:System.Windows.Media.Animation.Timeline.Duration%2A>에서 <xref:System.Windows.Media.Animation.Timeline.AutoReverse%2A>에서 <xref:System.Windows.Media.Animation.RepeatBehavior>||||  
   
 <a name="duration"></a>   
 ### <a name="the-duration-property"></a>Duration 속성  
@@ -123,6 +123,7 @@ ms.locfileid: "57355521"
 -   <xref:System.Windows.Media.Animation.Timeline.DecelerationRatio%2A> --비율을 지정 하는 중의 <xref:System.Windows.Media.Animation.Timeline.Duration%2A> 타임 라인의 감속 합니다. 예는 [방법: 가속 또는 감속 애니메이션](how-to-accelerate-or-decelerate-an-animation.md)합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [애니메이션 개요](animation-overview.md)
 - [애니메이션 및 타이밍 시스템 개요](animation-and-timing-system-overview.md)
 - [타이밍 이벤트 개요](timing-events-overview.md)

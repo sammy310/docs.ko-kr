@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0088ed696b2018054dc34a0b363def97c5753fe0
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 652000367c19572f73296c704047830ce1c74574
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57494092"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59231047"
 ---
 # <a name="compareassemblyidentity-function"></a>CompareAssemblyIdentity 함수
 동일한 지 여부를 확인 하려면 두 개의 어셈블리 id를 비교 합니다.  
@@ -85,5 +85,6 @@ STDAPI CompareAssemblyIdentity (
  **.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>참고자료
+
 - [Fusion 전역 정적 함수](../../../../docs/framework/unmanaged-api/fusion/fusion-global-static-functions.md)
 - [AssemblyComparisonResult 열거형](../../../../docs/framework/unmanaged-api/fusion/assemblycomparisonresult-enumeration.md)

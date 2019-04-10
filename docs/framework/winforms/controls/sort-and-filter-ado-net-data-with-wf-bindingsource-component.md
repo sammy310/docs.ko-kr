@@ -1,5 +1,5 @@
 ---
-title: '방법: Forms BindingSource 구성 요소는 Windows 사용 하 여 ADO.NET 데이터 정렬 및 필터링'
+title: '방법: Windows Forms BindingSource 구성 요소를 사용하여 ADO.NET 데이터 정렬 및 필터링'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -13,14 +13,14 @@ helpviewer_keywords:
 - data [Windows Forms], sorting
 - ADO.NET [Windows Forms]
 ms.assetid: 6c206daf-d706-4602-9dbe-435343052063
-ms.openlocfilehash: 65be2367091144945e9540c848e6131deac9d725
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 8904eff39b7278b2a185cc5e2f738ece1e8e88e4
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57703103"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59306510"
 ---
-# <a name="how-to-sort-and-filter-adonet-data-with-the-windows-forms-bindingsource-component"></a>방법: Forms BindingSource 구성 요소는 Windows 사용 하 여 ADO.NET 데이터 정렬 및 필터링
+# <a name="how-to-sort-and-filter-adonet-data-with-the-windows-forms-bindingsource-component"></a>방법: Windows Forms BindingSource 구성 요소를 사용하여 ADO.NET 데이터 정렬 및 필터링
 정렬 및 필터링 기능을 노출할 수 있습니다 <xref:System.Windows.Forms.BindingSource> 를 통해 제어 합니다 <xref:System.Windows.Forms.BindingSource.Sort%2A> 및 <xref:System.Windows.Forms.BindingSource.Filter%2A> 속성입니다. 데이터 원본의 경우에 간단한 정렬을 적용할 수 있습니다는 <xref:System.ComponentModel.IBindingList>, 및 고급 데이터 원본의 경우 정렬 및 필터링을 적용할 수 있습니다는 <xref:System.ComponentModel.IBindingListView>합니다. 합니다 <xref:System.Windows.Forms.BindingSource.Sort%2A> 속성을 사용 하려면 표준 [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] 구문: 뒤에 데이터 원본에서 데이터의 열 이름을 나타내는 문자열입니다 `ASC` 또는 `DESC` 목록을 오름차순 또는 내림차순으로 정렬할지 여부를 나타냅니다. 고급 정렬 또는 쉼표 구분 기호를 사용 하 여 각 열을 구분 하 여 여러 열 정렬을 설정할 수 있습니다. <xref:System.Windows.Forms.BindingSource.Filter%2A> 속성은 문자열 식을 사용 합니다.  
   
 > [!NOTE]
@@ -37,9 +37,9 @@ ms.locfileid: "57703103"
   
 ### <a name="to-sort-data-with-the-bindingsource"></a>BindingSource 사용 하 여 데이터를 정렬 하려면  
   
-1.  설정 합니다 <xref:System.Windows.Forms.BindingSource.Sort%2A> 속성을 원하는 열 이름 뒤에 `ASC` 또는 `DESC` 를 오름차순 또는 내림차순을 나타내는입니다.  
+1. 설정 합니다 <xref:System.Windows.Forms.BindingSource.Sort%2A> 속성을 원하는 열 이름 뒤에 `ASC` 또는 `DESC` 를 오름차순 또는 내림차순을 나타내는입니다.  
   
-2.  여러 열을 쉼표로 구분 합니다.  
+2. 여러 열을 쉼표로 구분 합니다.  
   
  [!code-csharp[System.Windows.Forms.DataConnectorFilterAndSort#12](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataConnectorFilterAndSort/CS/form1.cs#12)]
  [!code-vb[System.Windows.Forms.DataConnectorFilterAndSort#12](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataConnectorFilterAndSort/VB/form1.vb#12)]  
@@ -54,6 +54,7 @@ ms.locfileid: "57703103"
  이 예제를 실행 하려면 코드를 포함 하는 폼에 붙여 넣습니다를 <xref:System.Windows.Forms.BindingSource> 라는 `BindingSource1` 와 <xref:System.Windows.Forms.DataGridView> 라는 `dataGridView1`합니다. 처리를 <xref:System.Windows.Forms.Form.Load> 양식과 호출에 대 한 이벤트 `InitializeSortedFilteredBindingSource` load 이벤트 처리기 메서드에서 합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Windows.Forms.BindingSource.Sort%2A>
 - <xref:System.Windows.Forms.BindingSource.Filter%2A>
 - [방법: 예제 데이터베이스 설치](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/8b6y4c7s(v=vs.120))

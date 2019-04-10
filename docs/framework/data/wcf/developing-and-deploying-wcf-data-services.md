@@ -7,12 +7,12 @@ helpviewer_keywords:
 - deploying [WCF Data Services
 - developing applications [WCF Data Services]
 ms.assetid: 6557c0e3-5aea-4f6e-bc14-77ad317a168b
-ms.openlocfilehash: 826adbde9129a51f67636d51bd7714335a840525
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
+ms.openlocfilehash: a3eaea7218b3226fde43aa76bbafe602fc198947
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56093088"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59329325"
 ---
 # <a name="develop-and-deploy-wcf-data-services"></a>개발 및 WCF Data Services를 배포 합니다.
 
@@ -22,15 +22,15 @@ ms.locfileid: "56093088"
 
 WCF Data Services를 지 원하는 데이터 서비스 만들기를 사용 하는 경우는 [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]를 개발 하는 동안 다음과 같은 기본 작업을 수행 해야 합니다.
 
-1.  **데이터 모델 정의**
+1. **데이터 모델 정의**
 
      WCF Data Services는 다양 한 다양 한 런타임에 바인딩된 데이터 형식으로 관계형 데이터베이스에서 데이터 원본에서에서 데이터를 기반으로 데이터 모델을 정의할 수 있도록 데이터 서비스 공급자를 지원 합니다. 자세한 내용은 [데이터 서비스 공급자](../../../../docs/framework/data/wcf/data-services-providers-wcf-data-services.md)합니다.
 
-2.  **데이터 서비스 만들기**
+2. **데이터 서비스 만들기**
 
      가장 기본적인 데이터 서비스는 <xref:System.Data.Services.DataService%601> 클래스에서 상속하는 클래스를 엔터티 컨테이너의 네임스페이스로 정규화된 이름인 `T` 형식으로 노출합니다. 자세한 내용은 [Defining WCF Data Services](../../../../docs/framework/data/wcf/defining-wcf-data-services.md)의 개발 및 배포에 대한 정보를 제공합니다.
 
-3.  **데이터 서비스 구성**
+3. **데이터 서비스 구성**
 
      기본적으로 WCF Data Services는 엔터티 컨테이너에 의해 노출 되는 리소스에 대 한 액세스를 비활성화 합니다. <xref:System.Data.Services.DataServiceConfiguration> 인터페이스를 사용 하면 리소스에 대 한 액세스를 구성 및 서비스 작업, odata, 지원 되는 버전을 지정 하 고 일괄 처리 동작 또는 반환할 수 있는 엔터티의 최대 수와 같은 서비스 전반적인 기타 동작을 정의 하려면 단일 응답 피드에 합니다. 자세한 내용은 [데이터 서비스 구성](../../../../docs/framework/data/wcf/configuring-the-data-service-wcf-data-services.md)합니다.
 
@@ -40,14 +40,14 @@ WCF Data Services를 지 원하는 데이터 서비스 만들기를 사용 하�
 
 WCF 데이터 서비스를 개발 하는 경우는 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 응용 프로그램 또는 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Visual Studio 2015를 사용 하 여 웹 사이트를 개발 하는 동안 데이터 서비스를 실행 하는 웹 서버의 선택할 수 있습니다. 다음 웹 서버 테스트 하 고 로컬 컴퓨터의 데이터 서비스를 디버깅할 수 있도록 Visual Studio와 통합 합니다.
 
-1.  **로컬 IIS 서버**
+1. **로컬 IIS 서버**
 
      IIS(인터넷 정보 서비스)에서 실행되는 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 애플리케이션 또는 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 웹 사이트인 데이터 서비스를 만들 때 로컬 컴퓨터에서 IIS를 사용하여 데이터 서비스를 개발하고 테스트하는 것이 좋습니다. IIS에서 데이터 서비스를 실행하면 디버깅하는 동안 HTTP 요청을 쉽게 추적할 수 있습니다. 또한 IIS에서 데이터 서비스에 필요한 파일, 데이터베이스 및 기타 리소스에 액세스하는 데 필요한 권한을 미리 결정할 수도 있습니다. 데이터 서비스에서 IIS를 실행 하려면 있습니다 해야 하면 IIS 및 Windows Communication Foundation (WCF)이 설치 되 고 올바르게 구성 하 고 파일 시스템 및 데이터베이스에서 IIS 계정에 대 한 액세스를 부여 합니다. 자세한 내용은 [방법: IIS에서 실행 되는 WCF 데이터 서비스 개발](../../../../docs/framework/data/wcf/how-to-develop-a-wcf-data-service-running-on-iis.md)합니다.
 
     > [!NOTE]
     > 로컬 IIS 서버를 구성 하려면 개발 환경을 사용 하도록 설정 하려면 관리자 권한으로 Visual Studio를 실행 해야 합니다.
 
-2.  **Visual Studio 개발 서버**
+2. **Visual Studio 개발 서버**
 
      Visual Studio에 기본 제공 웹 서버인, Visual Studio 개발 서버에 대 한 기본 웹 서버는 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 프로젝트입니다. 이 웹 서버는 개발 중에 로컬 컴퓨터에서 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 프로젝트를 실행하도록 디자인되었습니다. 합니다 [WCF Data Services 퀵 스타트](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md) Visual Studio 개발 서버에서 실행 되는 데이터 서비스를 만드는 방법을 보여 줍니다.
 
@@ -68,7 +68,7 @@ WCF 데이터 서비스를 개발 하는 경우는 [!INCLUDE[vstecasp](../../../
     > [!TIP]
     > Visual Studio 개발 서버를 사용 하 여 개발 하는 동안 데이터 서비스를 테스트 하려면, 있지만 IIS를 실행 하는 웹 서버에 배포한 후 다시 테스트 해야 합니다.
 
-3.  **Microsoft Azure 개발 환경**
+3. **Microsoft Azure 개발 환경**
 
      Windows Azure Tools for Visual Studio는 통합 된 Visual Studio에서 Windows Azure 서비스를 개발 하기 위한 도구 집합을 포함 합니다. 이 도구를 사용하면 Microsoft Azure에 배포할 수 있는 데이터 서비스를 개발하고, 배포하기 전에 로컬 컴퓨터에서 데이터 서비스를 테스트할 수 있습니다. Visual Studio를 사용 하 여 Windows Azure 플랫폼에서 실행 되는 데이터 서비스를 개발 하는 경우 이러한 도구를 사용 합니다. Visual Studio 용 Windows Azure Tools를 다운로드할 수 있습니다 합니다 [Microsoft 다운로드 센터](https://go.microsoft.com/fwlink/?LinkID=201848)합니다. Windows Azure에서 실행 되는 데이터 서비스를 개발 하는 방법에 대 한 자세한 내용은 게시물을 참조 하세요 [Windows Azure에서 OData 서비스 배포](https://go.microsoft.com/fwlink/?LinkId=201847)합니다.
 
@@ -128,5 +128,5 @@ WCF Data Services에서는 데이터 서비스를 호스트하는 프로세스�
 ## <a name="see-also"></a>참고자료
 
 - [데이터 서비스 호스팅](../../../../docs/framework/data/wcf/hosting-the-data-service-wcf-data-services.md)
-- [WCF Data Services 보안](../../../../docs/framework/data/wcf/securing-wcf-data-services.md)
+- [WCF Data Services에 보안 설정](../../../../docs/framework/data/wcf/securing-wcf-data-services.md)
 - [WCF Data Services 정의](../../../../docs/framework/data/wcf/defining-wcf-data-services.md)

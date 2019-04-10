@@ -5,12 +5,12 @@ helpviewer_keywords:
 - security [XAML Services], .NET XAML services
 - XAML security [XAML Services]
 ms.assetid: 544296d4-f38e-4498-af49-c9f4dad28964
-ms.openlocfilehash: 6cd09295f9dac26011652d6b0a33318841b04072
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 124310497cc2a8e8a816ba90b2c68a16ed342ae6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54648364"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59162674"
 ---
 # <a name="xaml-security-considerations"></a>XAML 보안 고려 사항
 이 항목에서는 XAML 및.NET Framework XAML 서비스 API를 사용 하는 경우 응용 프로그램의 보안을 위한 모범 사례를 설명 합니다.  
@@ -42,4 +42,5 @@ ms.locfileid: "54648364"
  XAML에는 여러 가지 방법으로 CLR 기본 CLR 형식 시스템을 구현 하는 방법에 피어 자체 형식 시스템을 지원 합니다. 그러나 해당 형식 정보를 기반으로 하는 형식에 대 한 신뢰 결정 한다면 형식 인식의 특정 측면에 대 한 지원 형식을 CLR 형식 정보를 연기 해야 있습니다. XAML 형식 시스템의 특정 보고 기능의 일부 가상 메서드로 열려 되며 따라서 없습니다 완벽 하 게 원래.NET Framework XAML 서비스 구현에 의해 제어 때문입니다. 이러한 확장 지점을 XAML 형식 시스템은 자체 XAML의 확장성 및 기본 CLR 기반 구현 및 기본 XAML 스키마 컨텍스트 및 대체 가능한 형식 매핑 전략에 맞게 확장 가능 하기 때문에 존재 합니다. 자세한 내용은 다양 한 속성에서 특정 정보를 참조 하세요 <xref:System.Xaml.XamlType> 고 <xref:System.Xaml.XamlMember>입니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Xaml.Permissions.XamlAccessLevel>

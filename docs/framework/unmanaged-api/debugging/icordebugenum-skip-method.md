@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8e9e13c8acf4f60a7b43a9b4181bb03da8f0aa45
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 1e2d7a344cabb1ab816e4fe696ebb47276397ec3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57497017"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59095037"
 ---
 # <a name="icordebugenumskip-method"></a>ICorDebugEnum::Skip 메서드
 열거형에서 항목의 지정된 된 수 만큼 앞으로 커서를 이동합니다.  
@@ -49,4 +49,5 @@ HRESULT Skip (
  **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>참고자료
+
 - [ICorDebugEnum 인터페이스](../../../../docs/framework/unmanaged-api/debugging/icordebugenum-interface1.md)

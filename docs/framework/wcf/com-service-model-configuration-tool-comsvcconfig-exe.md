@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Windows Communication Foundation, COM+ integration
 - WCF, COM+ integration
 ms.assetid: 7717c6c2-85fc-418b-a8ed-bad8e61cec5c
-ms.openlocfilehash: 7c536c9420e94e9b8f8bc2656df284d95a9744c7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6d0967355e64640e0fd5c81f04a5bf4f33c7b3f7
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54568194"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59158667"
 ---
 # <a name="com-service-model-configuration-tool-comsvcconfigexe"></a>COM+ 서비스 모델 구성 도구(ComSvcConfig.exe)
 COM+ 서비스 모델 구성 명령줄 도구(ComSvcConfig.exe)를 사용하면 COM+ 인터페이스를 웹 서비스로 노출하도록 구성할 수 있습니다.  
@@ -95,4 +95,5 @@ ComSvcConfig.exe /list /application:OnlineStore /hosting:complus
 ```  
   
 ## <a name="see-also"></a>참고자료
-- [방법: COM + 서비스 모델 구성 도구를 사용 합니다.](../../../docs/framework/wcf/feature-details/how-to-use-the-com-service-model-configuration-tool.md)
+
+- [방법: COM+ 서비스 모델 구성 도구 사용](../../../docs/framework/wcf/feature-details/how-to-use-the-com-service-model-configuration-tool.md)

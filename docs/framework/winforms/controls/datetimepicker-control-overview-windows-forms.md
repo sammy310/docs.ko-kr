@@ -7,12 +7,12 @@ helpviewer_keywords:
 - DateTimePicker control [Windows Forms], about
 - date and time picker controls
 ms.assetid: 501af106-e9fc-4efc-b9b3-c9d8dcaf8c5c
-ms.openlocfilehash: 1d2e286e3ce91c722be24f059a874b9db5f2ba82
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 451172b51427e4932470c53737c7bc276920271c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57703177"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59173599"
 ---
 # <a name="datetimepicker-control-overview-windows-forms"></a>DateTimePicker 컨트롤 개요(Windows Forms)
 Windows Forms <xref:System.Windows.Forms.DateTimePicker> 컨트롤 날짜 또는 시간 목록에서 단일 항목을 선택할 수 있습니다. 날짜를 나타내는 데, 두 부분으로 표시: 텍스트와 목록 옆의 아래쪽 화살표를 클릭할 때 표시 되는 모눈에 표시 된 날짜를 사용 하 여 드롭다운 목록입니다. 표에서 같습니다는 <xref:System.Windows.Forms.MonthCalendar> 여러 날짜를 선택할 때 사용할 수 있는 컨트롤입니다. 에 대 한 자세한 합니다 <xref:System.Windows.Forms.MonthCalendar> 제어를 참조 하십시오 [MonthCalendar 컨트롤 개요](monthcalendar-control-overview-windows-forms.md)합니다.  
@@ -25,5 +25,6 @@ Windows Forms <xref:System.Windows.Forms.DateTimePicker> 컨트롤 날짜 또는
  컨트롤의 <xref:System.Windows.Forms.DateTimePicker.MaxDate%2A> 고 <xref:System.Windows.Forms.DateTimePicker.MinDate%2A> 속성의 날짜 및 시간 범위를 결정 합니다. <xref:System.Windows.Forms.DateTimePicker.Value%2A> 현재 날짜 및 시간에 설정 되어 속성에 포함 되어 있습니다. 자세한 내용은 [방법: 설정 및 Forms DateTimePicker 컨트롤을 Windows 사용 하 여 날짜를 반환](how-to-set-and-return-dates-with-the-windows-forms-datetimepicker-control.md)합니다. 값으로 설정 되는 네 가지 형식으로 표시할 수 있습니다 합니다 <xref:System.Windows.Forms.DateTimePicker.Format%2A> 속성: <xref:System.Windows.Forms.DateTimePickerFormat.Long>를 <xref:System.Windows.Forms.DateTimePickerFormat.Short>를 <xref:System.Windows.Forms.DateTimePickerFormat.Time>, 또는 <xref:System.Windows.Forms.DateTimePickerFormat.Custom>합니다. 사용자 지정 형식의 선택 하는 경우 설정 해야 합니다 <xref:System.Windows.Forms.DateTimePicker.CustomFormat%2A> 속성을 적절 한 문자열입니다. 자세한 내용은 [방법: Windows Forms DateTimePicker 컨트롤을 사용 하는 사용자 지정 형식에 날짜 표시](display-a-date-in-a-custom-format-with-wf-datetimepicker-control.md)합니다.  
   
 ## <a name="see-also"></a>참고자료
-- [방법: Windows Forms DateTimePicker 컨트롤을 사용 하는 사용자 지정 형식에서 날짜를 표시 합니다.](display-a-date-in-a-custom-format-with-wf-datetimepicker-control.md)
-- [방법: Windows Forms DateTimePicker 컨트롤을 포함 하는 설정 및 반환 날짜](how-to-set-and-return-dates-with-the-windows-forms-datetimepicker-control.md)
+
+- [방법: Windows Forms DateTimePicker 컨트롤을 사용하여 날짜를 사용자 지정 형식으로 표시](display-a-date-in-a-custom-format-with-wf-datetimepicker-control.md)
+- [방법: Windows Forms DateTimePicker 컨트롤을 사용하여 날짜 설정 및 반환](how-to-set-and-return-dates-with-the-windows-forms-datetimepicker-control.md)

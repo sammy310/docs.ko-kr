@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 4d05610a-0da6-4f08-acea-d54c9d6143c0
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 8425b294328d4fc7546a372b329d8fa834a088d6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 62c25b14fa7b3867bbdbcb2f1e08cc16ce349e72
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54567024"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59156080"
 ---
 # <a name="security-transparent-code-level-2"></a>보안 투명 코드, 수준 2
 <a name="top"></a>
@@ -87,7 +87,7 @@ ms.locfileid: "54567024"
 |특성 없음|특성을 지정하지 않으면 공용 언어 런타임이 투명도 규칙을 확인합니다. 보안에 중요하게 되어 상속 규칙을 위반하는 경우를 제외하고 모든 형식 및 멤버가 보안에 중요합니다.|완전히 신뢰할 수 있는 어셈블리(전역 어셈블리 캐시에 포함 또는 `AppDomain`에서 완전 신뢰로 식별됨)에서 모든 형식은 투명하고 모든 멤버는 보안 안전에 중요합니다.|  
 |`SecurityTransparent`|모든 형식 및 멤버가 투명합니다.|모든 형식 및 멤버가 투명합니다.|  
 |`SecurityCritical(SecurityCriticalScope.Everything)`|해당 사항 없음.|모든 형식 및 멤버가 보안에 중요합니다.|  
-|`SecurityCritical`|이 어셈블리에서 형식으로 도입되는 모든 코드가 중요합니다. 기타 모든 코드는 투명합니다. 가상 또는 추상 메서드를 재정의하거나 인터페이스 메서드를 구현할 경우 해당 메서드를 `SecurityCritical` 또는 `SecuritySafeCritical`로 명시적으로 주석으로 처리해야 합니다.|모든 코드가 기본적으로 투명으로 설정됩니다. 그러나 개별 형식 및 멤버는 다른 특성을 포함할 수 있습니다.|  
+|`SecurityCritical`|이 어셈블리에서 형식으로 도입되는 모든 코드가 중요합니다. 기타 모든 코드는 투명합니다. 가상 또는 추상 메서드를 재정의하거나 인터페이스 메서드를 구현할 경우 해당 메서드를 `SecurityCritical` 또는 `SecuritySafeCritical`로 명시적으로 주석을 달아야 합니다.|모든 코드가 기본적으로 투명으로 설정됩니다. 그러나 개별 형식 및 멤버는 다른 특성을 포함할 수 있습니다.|  
   
 ### <a name="type-and-member-annotation"></a>형식 및 멤버 주석  
  형식에 적용되는 보안 특성은 형식에 의해 도입되는 멤버에도 적용됩니다. 그러나 기본 클래스 또는 인터페이스 구현의 가상 또는 추상 재정의에는 적용되지 않습니다. 형식 및 멤버 수준에서 특성을 사용할 경우 다음 규칙이 적용됩니다.  
@@ -123,7 +123,7 @@ ms.locfileid: "54567024"
   
 -   형식에 대 한 규칙: 왼쪽에서 오른쪽으로 이동, 액세스 더 제한 됩니다. 파생 형식은 기본 형식 이상으로 제한적이어야 합니다.  
   
--   메서드에 대 한 규칙: 파생된 메서드는 기본 메서드에서 내게 필요한 옵션을 변경할 수 없습니다. 기본 동작의 경우 주석으로 처리되지 않은 모든 파생 메서드는 `Transparent`입니다. 재정의된 메서드가 `SecurityCritical`로 명시적으로 주석으로 처리되지 않으면 중요한 형식의 파생 항목으로 인해 예외가 throw됩니다.  
+-   메서드에 대 한 규칙: 파생된 메서드는 기본 메서드에서 내게 필요한 옵션을 변경할 수 없습니다. 기본 동작의 경우 주석으로 처리되지 않은 모든 파생 메서드는 `Transparent`입니다. 재정의된 메서드가 `SecurityCritical`로 명시적으로 주석을 달지 않으면 중요한 형식의 파생 항목으로 인해 예외가 throw됩니다.  
   
  다음 표에서는 허용되는 형식 상속 패턴을 보여 줍니다.  
   
@@ -192,5 +192,6 @@ ms.locfileid: "54567024"
  <xref:System.Security.SecurityRulesAttribute.SkipVerificationInFullTrust%2A> 속성은 기본적으로 `false`이므로 확인을 건너뛰려면 속성을 `true`로 설정해야 합니다. 이 작업은 최적화 목적으로만 수행해야 합니다. 사용 하 여 어셈블리의 투명 한 코드를 확인할 수 있는지 확인 해야 합니다 `transparent` 옵션을 [PEVerify 도구](../../../docs/framework/tools/peverify-exe-peverify-tool.md)합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [보안 투명 코드, 수준 1](../../../docs/framework/misc/security-transparent-code-level-1.md)
 - [보안 변경 내용](../../../docs/framework/security/security-changes.md)
