@@ -5,18 +5,16 @@ helpviewer_keywords:
 - multimedia [WPF]
 - media [WPF]
 ms.assetid: feb25b15-d741-4ac3-818f-1b19f63a3562
-ms.openlocfilehash: 09b830562444bd51e931a1b5013d2a803319e336
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: MT
+ms.openlocfilehash: ffdcb58cdd332f9c730e7ed367e0f8bcc56da459
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57352771"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59222096"
 ---
 # <a name="multimedia-overview"></a>멀티미디어 개요
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]의 멀티미디어 기능을 통해 오디오 및 비디오를 응용 프로그램에 통합하여 사용자 환경을 개선할 수 있습니다. 이 항목에서는 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]의 멀티미디어 기능을 소개합니다.  
-  
- 
-  
+
 <a name="mediaapi"></a>   
 ## <a name="media-api"></a>미디어 API  
  합니다 <xref:System.Windows.Controls.MediaElement> 고 <xref:System.Windows.Media.MediaPlayer> 클래스는 오디오 또는 비디오 콘텐츠를 제공 하는 데 사용 됩니다. 이러한 클래스는 대화형으로 또는 클록을 통해 제어할 수 있습니다. 이러한 클래스는 미디어 재생을 위한 [!INCLUDE[TLA#tla_wmp](../../../../includes/tlasharptla-wmp-md.md)] 10 컨트롤에서 사용할 수 있습니다. 사용하는 클래스는 시나리오에 따라 달라집니다.  
@@ -101,7 +99,7 @@ ms.locfileid: "57352771"
 ### <a name="controlling-mediaplayer"></a>MediaPlayer 제어  
  때문에 <xref:System.Windows.Media.MediaPlayer> 는 상태 비저장만 두 가지 미디어 재생을 제어할 수 있습니다.  
   
-1.  대화형 컨트롤 메서드. 독립 모드에 있을 때 진행에서 (`null` <xref:System.Windows.Media.MediaPlayer.Clock%2A> 속성).  
+1.  대화형 컨트롤 메서드. 독립 모드에서 작업 하는 경우 준비에서 (`null`<xref:System.Windows.Media.MediaPlayer.Clock%2A> 속성).  
   
 2.  <xref:System.Windows.Media.MediaClock>. 미디어에 때 적용에서 된 <xref:System.Windows.Media.MediaPlayer.Clock%2A>합니다.  
   
@@ -113,6 +111,7 @@ ms.locfileid: "57352771"
  참조 된 [Drawing 개체 개요](drawing-objects-overview.md) 에 대 한 자세한 내용은 <xref:System.Windows.Media.Drawing> 개체입니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Windows.Media.DrawingGroup>
 - [레이아웃](../advanced/layout.md)
 - [방법 항목](audio-and-video-how-to-topics.md)

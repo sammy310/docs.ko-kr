@@ -7,12 +7,12 @@ helpviewer_keywords:
 - ProgressBar control [Windows Forms], about ProgressBar control
 - progress controls [Windows Forms], about progress controls
 ms.assetid: a05d9cba-3a6a-4f8f-94b8-8ec12799fb80
-ms.openlocfilehash: db0a43534080d630323d8c1c95759fd2dcc04a85
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 24b47669cdf8ed0a8f0f936b0b3b9c354e62445f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57707946"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59227498"
 ---
 # <a name="progressbar-control-overview-windows-forms"></a>ProgressBar 컨트롤 개요(Windows Forms)
 > [!IMPORTANT]
@@ -36,5 +36,6 @@ ms.locfileid: "57707946"
 >  <xref:System.Windows.Forms.StatusStrip> 및 <xref:System.Windows.Forms.ToolStripStatusLabel> 대체 컨트롤과 기능을 추가 합니다 <xref:System.Windows.Forms.StatusBar> 및 <xref:System.Windows.Forms.StatusBarPanel> 제어; 그러나를 <xref:System.Windows.Forms.StatusBar> 및 <xref:System.Windows.Forms.StatusBarPanel> 컨트롤 하는 경우 이전 버전과 호환성 및 향후 사용을 위해 유지 됩니다 있습니다 이 옵션을 선택 합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Windows.Forms.ProgressBar>
 - [ProgressBar 컨트롤](progressbar-control-windows-forms.md)

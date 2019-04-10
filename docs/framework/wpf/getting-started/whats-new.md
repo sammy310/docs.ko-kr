@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Windows Presentation Foundation [WPF], what's new
 - WPF [WPF], what's new
 ms.assetid: db086ae4-70bb-4862-95db-2eaca5216bc3
-ms.openlocfilehash: 92f69d0f9ad962dff231308ed3f5d59a0d406792
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: MT
+ms.openlocfilehash: 5e9194dc4dc8ef3246870dc1fd71fa53d3ad143f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57368170"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59227485"
 ---
 # <a name="whats-new-in-wpf-version-45"></a>WPF 버전 4.5의 새로운 기능
 <a name="introduction"></a> 이 항목에서는의 새로운 기능과 향상 된 기능에 대 한 정보가 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 4.5 버전입니다.  
@@ -126,4 +126,5 @@ ms.locfileid: "57368170"
  WPF 4.5에서는 이벤트에 대한 태그 확장을 지원합니다.  WPF는 이벤트에 사용될 태그 확장을 정의하지 않지만 타사에서 이벤트에 사용할 수 있는 태그 확장을 만들 수 있습니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [.NET Framework의 새로운 기능](../../whats-new/index.md)

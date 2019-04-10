@@ -2,12 +2,12 @@
 title: <authentication> <clientCertificate> 요소
 ms.date: 03/30/2017
 ms.assetid: 4a55eea2-1826-4026-b911-b7cc9e9c8bfe
-ms.openlocfilehash: 6b07eae96367222907dd23968d445efd75906ea7
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: e232cde8f6838de734e37aeee3f52cd7f7e7502d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55263014"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59221204"
 ---
 # <a name="authentication-of-clientcertificate-element"></a>\<인증 >의 \<clientCertificate > 요소
 서비스에서 사용되는 클라이언트 인증서에 대한 인증 동작을 지정합니다.  
@@ -41,7 +41,7 @@ ms.locfileid: "55263014"
 |customCertificateValidatorType|선택적 문자열입니다. 사용자 지정 형식의 유효성을 검사하는 데 사용되는 형식 및 어셈블리입니다. 이 특성은 `certificateValidationMode`가 `Custom`으로 설정되어 있을 때 설정해야 합니다.|  
 |certificateValidationMode|선택적 열거형입니다. 자격 증명의 유효성을 검사하는 데 사용되는 모드 중 하나를 지정합니다. 이 특성은 <xref:System.ServiceModel.Security.X509CertificateValidationMode> 형식입니다. <xref:System.ServiceModel.Security.X509CertificateValidationMode.Custom?displayProperty=nameWithType>으로 설정되면 `customCertificateValidator`도 지정해야 합니다. 기본값은 <xref:System.ServiceModel.Security.X509CertificateValidationMode.ChainTrust?displayProperty=nameWithType>입니다.|  
 |includeWindowsGroups|선택적 부울입니다. Windows 그룹이 보안 컨텍스트에 포함될지 여부를 지정합니다. 이 특성을 `true`로 설정하면 전체 그룹이 확장되므로 성능에 영향을 줍니다. 사용자가 속한 그룹의 목록을 설정할 필요가 없으면 이 특성을 `false`로 설정합니다.|  
-|mapClientCertificateToWindowsAcccount|부울입니다. 클라이언트가 인증서를 사용하여 Windows ID에 매핑될 수 있는지 여부를 지정합니다. 이 작업을 위해서는 Active Directory를 사용할 수 있어야 합니다.|  
+|mapClientCertificateToWindowsAcccount|Boolean입니다. 클라이언트가 인증서를 사용하여 Windows ID에 매핑될 수 있는지 여부를 지정합니다. 이 작업을 위해서는 Active Directory를 사용할 수 있어야 합니다.|  
 |revocationMode|선택적 열거형입니다. RCL(해지된 인증서 목록)을 검사하는 데 사용되는 모드 중 하나입니다. 기본값은 `Online`입니다. 이 값은 HTTP 전송 보안을 사용할 때 무시됩니다.|  
 |trustedStoreLocation|선택적 열거형입니다. 시스템 저장소 위치 `LocalMachine` 또는 `CurrentUser` 중 하나입니다. 서비스 인증서가 클라이언트와 협상될 때 이 값이 사용됩니다. 에 대 한 유효성 검사를 수행 합니다 **신뢰할 수 있는 사용자** 지정한 저장소 위치에 저장 합니다. 기본값은 `CurrentUser`입니다.|  
   
@@ -105,11 +105,12 @@ ms.locfileid: "55263014"
 ```  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.ServiceModel.Security.X509ClientCertificateAuthentication>
 - <xref:System.ServiceModel.Security.X509CertificateValidationMode>
 - <xref:System.ServiceModel.Security.X509CertificateInitiatorServiceCredential.Authentication%2A>
 - <xref:System.ServiceModel.Configuration.X509InitiatorCertificateServiceElement.Authentication%2A>
 - <xref:System.ServiceModel.Configuration.X509ClientCertificateAuthenticationElement>
 - [보안 동작](../../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)
-- [방법: 사용자 지정 인증서 유효성 검사기를 사용 하는 서비스 만들기](../../../../../docs/framework/wcf/extending/how-to-create-a-service-that-employs-a-custom-certificate-validator.md)
+- [방법: 사용자 지정 인증서 유효성 검사기를 사용하는 서비스 만들기](../../../../../docs/framework/wcf/extending/how-to-create-a-service-that-employs-a-custom-certificate-validator.md)
 - [인증서 작업](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md)

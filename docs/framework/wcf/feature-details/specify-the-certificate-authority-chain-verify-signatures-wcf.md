@@ -5,12 +5,12 @@ helpviewer_keywords:
 - certificates [WCF], specifying the certificate authority certificate chain
 - certificates [WCF], verifying signatures
 ms.assetid: 7c719355-aa41-4567-80d0-5115a8cf73fd
-ms.openlocfilehash: 8d44e9f9278a212813fca5e77ebfca72734c60d6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 43296fad9519a08db5facdd220492ac70dffeca2
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54648786"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59224484"
 ---
 # <a name="how-to-specify-the-certificate-authority-certificate-chain-used-to-verify-signatures-wcf"></a>방법: (WCF) 서명을 확인 하는 데 인증서 기관 인증서 체인 지정
 Windows Communication Foundation (WCF)는 X.509 인증서를 사용 하 여 서명 된 SOAP 메시지를 받으면 기본적으로 확인 신뢰할 수 있는 인증 기관에서 X.509 인증서를 발행 하 합니다. 이렇게 하려면 인증서 저장소를 찾고 해당 인증 기관의 인증서가 신뢰할 수 있는 것으로 지정되었는지 확인합니다. 이 확인 하기 위해 WCF에 대 한 순서로 인증 기관 인증서 체인을 올바른 인증서 저장소에 설치 되어야 합니다.  
@@ -34,4 +34,5 @@ Windows Communication Foundation (WCF)는 X.509 인증서를 사용 하 여 서�
          MMC 인증서 스냅인을 사용 하는 방법에 대 한 자세한 내용은 참조 하세요. [방법: MMC 스냅인을 사용 하 여 인증서 보기](../../../../docs/framework/wcf/feature-details/how-to-view-certificates-with-the-mmc-snap-in.md)합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [인증서 작업](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)

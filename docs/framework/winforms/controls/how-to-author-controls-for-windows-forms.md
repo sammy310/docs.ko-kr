@@ -1,19 +1,19 @@
 ---
-title: '방법: Windows forms 컨트롤 작성'
+title: '방법: Windows Forms 컨트롤 작성'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - controls [Windows Forms], creating
 - UserControl class [Windows Forms], Windows Forms
 - custom controls [Windows Forms], creating
 ms.assetid: 7570e982-545b-4c3a-a7c7-55581d313400
-ms.openlocfilehash: 38416f28546f2aebc04d9ecf2c6995282b4720b8
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 5240b9aaaf4d73cb2899a9003f9658dbd8958f3c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57713417"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59224340"
 ---
-# <a name="how-to-author-controls-for-windows-forms"></a>방법: Windows forms 컨트롤 작성
+# <a name="how-to-author-controls-for-windows-forms"></a>방법: Windows Forms 컨트롤 작성
 컨트롤은 사용자와 프로그램 간의 그래픽 링크를 나타냅니다. 컨트롤은 데이터를 제공하거나 처리하고, 사용자 입력을 허용하고, 사용자 및 애플리케이션을 연결하는 다른 함수의 구성원을 합니다. 컨트롤이 기본적으로 그래픽 인터페이스를 사용하는 구성 요소이기 때문에 사용자 상호 작용을 제공할 뿐만 아니라 구성 요소가 수행하는 모든 함수를 제공할 수 있습니다. 컨트롤은 특정 목적을 수행하기 위해 만들어지며 컨트롤 작성은 다른 프로그래밍 작업입니다. 이 점을 염두하면서 다음 단계는 컨트롤 작성 프로세스의 개요를 나타냅니다. 링크는 각 단계에 대한 추가 정보를 제공합니다.  
   
 > [!NOTE]
@@ -52,10 +52,11 @@ ms.locfileid: "57713417"
 10. 컨트롤을 패키지하고 배포합니다. 자세한 내용은 참조 하세요 [Visual Studio에서 배포를 먼저 살펴보겠습니다](/visualstudio/deployment/deploying-applications-services-and-components)합니다.  
   
 ## <a name="see-also"></a>참고자료
-- [연습: Visual Basic에서 합성 컨트롤 제작](walkthrough-authoring-a-composite-control-with-visual-basic.md)
-- [연습: Visual Basic을 사용한 Windows Forms 컨트롤에서 상속](walkthrough-inheriting-from-a-windows-forms-control-with-visual-basic.md)
+
+- [연습: Visual Basic을 사용하여 복합 컨트롤 작성](walkthrough-authoring-a-composite-control-with-visual-basic.md)
+- [연습: Visual Basic을 사용하여 Windows Forms 컨트롤에서 상속](walkthrough-inheriting-from-a-windows-forms-control-with-visual-basic.md)
 - [방법: UserControl 클래스에서 상속](how-to-inherit-from-the-usercontrol-class.md)
 - [방법: Control 클래스에서 상속](how-to-inherit-from-the-control-class.md)
-- [방법: 에서 상속 하는 기존 Windows Forms 컨트롤](how-to-inherit-from-existing-windows-forms-controls.md)
+- [방법: 기존 Windows Forms 컨트롤에서 상속](how-to-inherit-from-existing-windows-forms-controls.md)
 - [방법: UserControl의 런타임 동작 테스트](how-to-test-the-run-time-behavior-of-a-usercontrol.md)
 - [사용자 지정 컨트롤의 종류](varieties-of-custom-controls.md)

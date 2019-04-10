@@ -2,12 +2,12 @@
 title: SQL Server에서 소유권 및 사용자와 스키마 분리
 ms.date: 03/30/2017
 ms.assetid: 242830c1-31b5-4427-828c-cc22ff339f30
-ms.openlocfilehash: 68a65cb950c54be9a4f9354a6ca20cbeeaafb938
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
+ms.openlocfilehash: b56a2c6f1211a11d2aa55de0cc101f6b90f7f83d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56092607"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59221862"
 ---
 # <a name="ownership-and-user-schema-separation-in-sql-server"></a>SQL Server에서 소유권 및 사용자와 스키마 분리
 SQL Server 보안의 주요 개념은 개체 소유자에게 취소할 수 없는 개체 관리 권한이 있다는 것입니다. 개체 소유자의 권한을 제거할 수 없으며 사용자가 데이터베이스의 개체를 소유하는 경우 데이터베이스에서 사용자를 삭제할 수 없습니다.  
@@ -55,9 +55,10 @@ Server.Database.DatabaseSchema.DatabaseObject
   
 |리소스|설명|  
 |--------------|-----------------|  
-|[사용자와 스키마 분리](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/ms190387(v=sql.105))|사용자 스키마 분리에서 도입된 변경 내용을 설명합니다. 새 동작, 소유권에 대한 영향, 카탈로그 뷰 및 권한이 포함되어 있습니다.|  
+|[사용자 스키마 분리](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/ms190387(v=sql.105))|사용자 스키마 분리에서 도입된 변경 내용을 설명합니다. 새 동작, 소유권에 대한 영향, 카탈로그 뷰 및 권한이 포함되어 있습니다.|  
   
 ## <a name="see-also"></a>참고자료
+
 - [ADO.NET 응용 프로그램 보안](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
 - [SQL Server의 응용 프로그램 보안 시나리오](../../../../../docs/framework/data/adonet/sql/application-security-scenarios-in-sql-server.md)
 - [SQL Server에서 인증](../../../../../docs/framework/data/adonet/sql/authentication-in-sql-server.md)

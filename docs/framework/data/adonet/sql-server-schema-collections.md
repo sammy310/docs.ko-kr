@@ -2,12 +2,12 @@
 title: SQL Server 스키마 컬렉션
 ms.date: 03/30/2017
 ms.assetid: c6403cc3-d78b-4f85-bab1-ada7a3446ec5
-ms.openlocfilehash: 2445ab2ffbe30b647e256e223f712300bcf19931
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 79bf9f1253b64863d3eabddff8c33b6ffab70f41
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54635041"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59224572"
 ---
 # <a name="sql-server-schema-collections"></a>SQL Server 스키마 컬렉션
 Microsoft .NET Framework Data Provider for SQL Server는 공통 스키마 컬렉션뿐만 아니라 다른 스키마 컬렉션도 추가적으로 지원합니다. 지원되는 스키마 컬렉션은 현재 사용하고 있는 SQL Sever 버전에 따라 조금씩 다를 수 있습니다. 확인 하려면 지원 되는 스키마 컬렉션 목록을 호출 합니다 **GetSchema** 메서드 인수 없이 또는 "metadatacollections 라는" 스키마 컬렉션 이름입니다. 그러면 지원되는 스키마 컬렉션의 목록, 각자 지원하는 제약 조건 수 및 사용하는 식별자 부분 수가 포함된 <xref:System.Data.DataTable>이 반환됩니다.  
@@ -20,7 +20,7 @@ Microsoft .NET Framework Data Provider for SQL Server는 공통 스키마 컬렉
 |dbid|Int16|데이터베이스 ID입니다.|  
 |create_date|DateTime|데이터베이스를 만든 날짜입니다.|  
   
-## <a name="foreign-keys"></a>Foreign Keys  
+## <a name="foreign-keys"></a>외래 키  
   
 |열 이름|데이터 형식|설명|  
 |----------------|--------------|-----------------|  
@@ -34,7 +34,7 @@ Microsoft .NET Framework Data Provider for SQL Server는 공통 스키마 컬렉
 |IS_DEFERRABLE|문자열|제약 조건의 지연 가능 여부를 지정합니다. NO를 반환합니다.|  
 |INITIALLY_DEFERRED|문자열|제약 조건의 초기 지연 가능 여부를 지정합니다. NO를 반환합니다.|  
   
-## <a name="indexes"></a>Indexes  
+## <a name="indexes"></a>인덱스  
   
 |열 이름|데이터 형식|설명|  
 |----------------|--------------|-----------------|  
@@ -216,7 +216,7 @@ Microsoft .NET Framework Data Provider for SQL Server는 공통 스키마 컬렉
 |createdate|DateTime|계정이 추가된 날짜입니다.|  
 |updatedate|DateTime|계정이 마지막으로 변경된 날짜입니다.|  
   
-## <a name="views"></a>뷰  
+## <a name="views"></a>보기  
   
 |열 이름|데이터 형식|설명|  
 |----------------|--------------|-----------------|  
@@ -248,13 +248,14 @@ Microsoft .NET Framework Data Provider for SQL Server는 공통 스키마 컬렉
 |version_minor|개체|보조 버전 번호입니다.|  
 |version_build|개체|빌드 번호입니다.|  
 |version_revision|개체|수정 번호입니다.|  
-|culture_info|Object|이 UDT와 연관된 문화권 정보입니다.|  
-|public_key|Object|이 어셈블리에서 사용되는 공개 키입니다.|  
-|is_fixed_length|부울|형식 길이가 항상 max_length와 같은지 여부를 지정합니다.|  
+|culture_info|개체|이 UDT와 연관된 문화권 정보입니다.|  
+|public_key|개체|이 어셈블리에서 사용되는 공개 키입니다.|  
+|is_fixed_length|Boolean|형식 길이가 항상 max_length와 같은지 여부를 지정합니다.|  
 |max_length|Int16|형식의 최대 길이(바이트)입니다.|  
 |Create_Date|DateTime|어셈블리가 만들어져 등록된 날짜입니다.|  
 |Permission_set_desc|문자열|어셈블리의 권한 집합/보안 수준 이름입니다.|  
   
 ## <a name="see-also"></a>참고자료
+
 - [데이터베이스 스키마 정보 검색](../../../../docs/framework/data/adonet/retrieving-database-schema-information.md)
 - [ADO.NET 관리되는 공급자 및 데이터 집합 개발자 센터](https://go.microsoft.com/fwlink/?LinkId=217917)

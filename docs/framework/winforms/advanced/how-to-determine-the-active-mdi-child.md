@@ -11,12 +11,12 @@ helpviewer_keywords:
 - MDI [Windows Forms], activating forms
 - MDI [Windows Forms], locating focus
 ms.assetid: 33880ec3-0207-4c2b-a616-ff140443cc0f
-ms.openlocfilehash: 95958491d624052922df9af37b188b9515480397
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 81cb9b55f53c152e755ada1803e4ba5731498627
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57714330"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59229474"
 ---
 # <a name="how-to-determine-the-active-mdi-child"></a>방법: 활성 MDI 자식 확인
 경우에 따라 현재 활성 자식 폼에 포커스가 있는 컨트롤에서 작동 하는 명령을 제공 합니다. 예를 들어 자식 폼의 텍스트 상자에서 선택한 텍스트를 클립보드로 복사 한다고 가정 합니다. 선택한 텍스트를 사용 하 여 클립보드에 복사 하는 프로시저를 만듭니다는 <xref:System.Windows.Forms.Control.Click> 표준 편집 메뉴에서 복사 메뉴 항목의 이벤트입니다.  
@@ -84,8 +84,9 @@ ms.locfileid: "57714330"
     ```  
   
 ## <a name="see-also"></a>참고자료
-- [MDI(다중 문서 인터페이스) 응용 프로그램](multiple-document-interface-mdi-applications.md)
-- [방법: MDI 부모 폼 만들기](how-to-create-mdi-parent-forms.md)
-- [방법: MDI 자식 폼 만들기](how-to-create-mdi-child-forms.md)
-- [방법: 활성 MDI 자식으로 데이터 전송](how-to-send-data-to-the-active-mdi-child.md)
-- [방법: MDI 자식 폼 정렬](how-to-arrange-mdi-child-forms.md)
+
+- [MDI 애플리케이션](multiple-document-interface-mdi-applications.md)
+- [방법: MDI 부모 양식 만들기](how-to-create-mdi-parent-forms.md)
+- [방법: MDI 자식 양식 만들기](how-to-create-mdi-child-forms.md)
+- [방법: 활성 MDI 자식으로 데이터 보내기](how-to-send-data-to-the-active-mdi-child.md)
+- [방법: MDI 자식 양식 정렬](how-to-arrange-mdi-child-forms.md)

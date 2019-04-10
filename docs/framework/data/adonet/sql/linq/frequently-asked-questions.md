@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 252ed666-0679-4eea-b71b-2f14117ef443
-ms.openlocfilehash: 009115d985c51961bffddaaa3149e15ba9a5502b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 20c5ee3667bf57328a3b6dda6e55dce4ddbbec72
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54679763"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59224047"
 ---
 # <a name="frequently-asked-questions"></a>질문과 대답
 다음 단원에서는 [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)]를 구현할 때 발생할 수 있는 일반적인 문제에 대한 해결 방법을 제시합니다.  
@@ -30,7 +30,7 @@ ms.locfileid: "54679763"
 ## <a name="database-connection-open-how-long"></a>데이터베이스 연결: 연결 시간  
  질문. 데이터베이스는 얼마 동안 연결된 상태로 유지됩니까?  
   
- 대답: 일반적으로 연결은 쿼리 결과를 사용할 때까지 유지됩니다. 모든 결과를 처리하는 데 시간이 많이 걸릴 것으로 예상되고 결과를 캐시해도 상관 없다면 쿼리에 <xref:System.Linq.Enumerable.ToList%2A>를 적용하세요. 각 개체를 한 번만 처리하는 일반적인 시나리오에서는 `DataReader` 및 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 모두에서 스트리밍 모델을 사용하는 것이 더 효과적입니다.  
+ 대답: 일반적으로 연결은 쿼리 결과를 사용할 때까지 유지됩니다. 모든 결과를 처리하는 데 시간이 많이 걸릴 것으로 예상되고 결과를 캐시해도 상관 없다면 쿼리에 <xref:System.Linq.Enumerable.ToList%2A> ¦ Àû ëÇÏ Ê Ã À. 각 개체를 한 번만 처리하는 일반적인 시나리오에서는 `DataReader` 및 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 모두에서 스트리밍 모델을 사용하는 것이 더 효과적입니다.  
   
  세부적인 연결 사용은 다음에 따라 달라집니다.  
   
@@ -50,12 +50,12 @@ ms.locfileid: "54679763"
 ## <a name="unexpected-query-results"></a>예기치 않은 쿼리 결과  
  질문. 쿼리가 예기치 않은 결과를 반환합니다. 무슨 문제가 있는지 어떻게 확인합니까?  
   
- 대답: [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]에는 생성된 SQL 코드를 검사할 수 있는 도구가 여러 가지 있습니다. 그 중에서도 <xref:System.Data.Linq.DataContext.Log%2A>가 가장 중요합니다. 자세한 내용은 [디버깅 지원](../../../../../../docs/framework/data/adonet/sql/linq/debugging-support.md)합니다.  
+ 대답: [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 생성 된 SQL 코드를 검사 하는 몇 가지 도구를 제공 합니다. 그 중에서도 <xref:System.Data.Linq.DataContext.Log%2A>가 가장 중요합니다. 자세한 내용은 [디버깅 지원](../../../../../../docs/framework/data/adonet/sql/linq/debugging-support.md)합니다.  
   
 ## <a name="unexpected-stored-procedure-results"></a>예기치 않은 저장 프로시저 결과  
  질문. `MAX()`를 사용하여 반환 값을 계산하는 저장 프로시저를 사용하고 있습니다. 저장 프로시저를 [!INCLUDE[vs_ordesigner_short](../../../../../../includes/vs-ordesigner-short-md.md)] 화면으로 끌어 오면 반환 값이 올바르지 않습니다.  
   
- 대답: [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]에서는 다음과 같은 두 가지 방법으로 데이터베이스에서 생성된 값을 저장 프로시저를 통해 반환합니다.  
+ 대답: [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 저장된 프로시저를 통해 데이터베이스에서 생성 된 값을 반환 하는 두 가지를 제공 합니다.  
   
 -   출력 결과에 이름을 지정하는 방법  
   
@@ -112,7 +112,7 @@ ms.locfileid: "54679763"
 ## <a name="avoiding-explicit-setting-of-database-generated-values-on-insert-or-update"></a>삽입 또는 업데이트 시 데이터베이스에서 생성된 값을 명시적으로 설정해야 하는 문제 방지  
  질문. 데이터베이스 테이블에 SQL `DateCreated`를 기본값으로 사용하는 `Getdate()` 열이 있습니다. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]을 사용하여 새 레코드를 삽입하려고 하면 값이 `NULL`로 설정됩니다. 데이터베이스의 기본값이 설정되어야 하지 않나요?  
   
- 대답: [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]은 ID(자동 증분)와 rowguidcol(데이터베이스에서 생성된 GUID) 및 타임스탬프 열에 대해서만 이와 같이 기본값을 적용합니다. 다른 경우 수동으로 설정 해야 <xref:System.Data.Linq.Mapping.ColumnAttribute.IsDbGenerated%2A> = `true` 하 고 <xref:System.Data.Linq.Mapping.ColumnAttribute.AutoSync%2A> = <xref:System.Data.Linq.Mapping.AutoSync.Always> / <xref:System.Data.Linq.Mapping.AutoSync.OnInsert> / <xref:System.Data.Linq.Mapping.AutoSync.OnUpdate> 속성입니다.  
+ 대답: [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] identity (자동 증분)와 rowguidcol (데이터베이스에서 생성 된 GUID) 및 timestamp 열에 대해 자동으로 이러한 상황을 처리합니다. 다른 경우 수동으로 설정 해야 <xref:System.Data.Linq.Mapping.ColumnAttribute.IsDbGenerated%2A> = `true` 하 고 <xref:System.Data.Linq.Mapping.ColumnAttribute.AutoSync%2A> = <xref:System.Data.Linq.Mapping.AutoSync.Always> / <xref:System.Data.Linq.Mapping.AutoSync.OnInsert> / <xref:System.Data.Linq.Mapping.AutoSync.OnUpdate> 속성입니다.  
   
 ## <a name="multiple-dataloadoptions"></a>여러 DataLoadOptions  
  질문. 첫 번째 로드 옵션을 덮어쓰지 않고 다른 로드 옵션을 지정할 수 있습니까?  
@@ -149,7 +149,7 @@ dlo.LoadWith<Order>(o => o.OrderDetails);
 ## <a name="sql-injection-attacks"></a>SQL 삽입 공격  
  질문. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]은 SQL 삽입 공격으로부터 어떻게 보호됩니까?  
   
- 대답: 사용자 입력을 연결하여 만든 기존 SQL 쿼리의 경우에는 SQL 삽입 공격이 상당히 큰 위협 요소였습니다. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]에서는 쿼리에 <xref:System.Data.SqlClient.SqlParameter>를 사용하여 이러한 삽입 공격을 방지합니다. 즉, 사용자 입력은 매개 변수 값으로 변환됩니다. 이 방법을 사용하면 사용자 입력을 통해 악의적인 명령이 사용되는 문제를 방지할 수 있습니다.  
+ 대답: 사용자 입력을 연결하여 만든 기존 SQL 쿼리의 경우에는 SQL 삽입 공격이 상당히 큰 위협 요소였습니다. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 사용 하 여 이러한 삽입 공격을 방지 <xref:System.Data.SqlClient.SqlParameter> 쿼리에서 합니다. 즉, 사용자 입력은 매개 변수 값으로 변환됩니다. 이 방법을 사용하면 사용자 입력을 통해 악의적인 명령이 사용되는 문제를 방지할 수 있습니다.  
   
 ## <a name="changing-read-only-flag-in-dbml-files"></a>DBML 파일에서 읽기 전용 플래그 변경  
  질문. DBML 파일에서 개체 모델을 만들 때 일부 속성의 setter를 어떻게 제거합니까?  
@@ -175,7 +175,7 @@ dlo.LoadWith<Order>(o => o.OrderDetails);
 ## <a name="mapping-data-from-multiple-tables"></a>여러 테이블의 데이터 매핑  
  질문. 사용하는 엔터티의 데이터를 여러 테이블에서 가져오는데 이러한 데이터를 어떻게 매핑합니까?  
   
- 대답: 데이터베이스에 뷰를 만들어 엔터티를 해당 뷰에 매핑할 수 있습니다. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]에서는 테이블과 마찬가지로 뷰에 대해서도 동일한 SQL을 생성합니다.  
+ 대답: 데이터베이스에 뷰를 만들어 엔터티를 해당 뷰에 매핑할 수 있습니다. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 테이블에 대해서와 마찬가지로 뷰에 대 한 동일한 SQL을 생성 합니다.  
   
 > [!NOTE]
 >  그러나 이 시나리오에서는 뷰 사용이 제한됩니다. 이 방법은 기본 뷰에서 <xref:System.Data.Linq.Table%601>에 대해 수행되는 작업을 지원하는 경우에 가장 안전하게 사용할 수 있습니다. 수행하려는 작업은 사용자 자신만이 알고 있습니다. 예를 들어, 대부분의 응용 프로그램은 읽기 전용 및 다른 많은 수행 `Create` / `Update` / `Delete` 만 사용 하 여 작업 보기에 대해 프로시저를 저장 합니다.  
@@ -190,7 +190,7 @@ dlo.LoadWith<Order>(o => o.OrderDetails);
 ## <a name="second-datacontext-is-not-updated"></a>두 번째 DataContext가 업데이트되지 않음  
  질문. <xref:System.Data.Linq.DataContext>의 인스턴스 하나를 사용하여 데이터베이스에 값을 저장했습니다. 그런데 동일한 데이터베이스에 대한 두 번째 <xref:System.Data.Linq.DataContext>에 업데이트된 값이 반영되지 않습니다. 두 번째 <xref:System.Data.Linq.DataContext> 인스턴스가 캐시된 값을 반환하는 것 같습니다.  
   
- 대답: 이 동작은 설계 시 의도된 것입니다. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]은 첫 번째 인스턴스와 동일한 인스턴스/값을 계속해서 반환합니다. 데이터를 업데이트할 경우에는 낙관적 동시성을 사용합니다. 이 경우 현재 데이터베이스 상태를 원래 데이터와 비교하여 데이터가 변경되지 않았는지 확인합니다. 데이터가 변경된 경우 충돌이 발생하고 응용 프로그램에서는 이 문제를 해결해야 합니다. 응용 프로그램에서는 한 가지 옵션으로 원래 상태를 현재 데이터베이스 상태로 다시 설정한 후 업데이트를 다시 시도합니다. 자세한 내용은 [방법: 변경 내용 충돌 관리](../../../../../../docs/framework/data/adonet/sql/linq/how-to-manage-change-conflicts.md)합니다.  
+ 대답: 이 동작은 설계 시 의도된 것입니다. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 첫 번째 인스턴스에서를 동일한 인스턴스/값을 반환 하는 계속 됩니다. 데이터를 업데이트할 경우에는 낙관적 동시성을 사용합니다. 이 경우 현재 데이터베이스 상태를 원래 데이터와 비교하여 데이터가 변경되지 않았는지 확인합니다. 데이터가 변경된 경우 충돌이 발생하고 응용 프로그램에서는 이 문제를 해결해야 합니다. 응용 프로그램에서는 한 가지 옵션으로 원래 상태를 현재 데이터베이스 상태로 다시 설정한 후 업데이트를 다시 시도합니다. 자세한 내용은 [방법: 변경 내용 충돌 관리](../../../../../../docs/framework/data/adonet/sql/linq/how-to-manage-change-conflicts.md)합니다.  
   
  <xref:System.Data.Linq.DataContext.ObjectTrackingEnabled%2A>를 false로 설정하여 캐싱 및 변경 추적을 해제할 수도 있습니다. 이렇게 하면 쿼리할 때마다 최신 값을 검색할 수 있습니다.  
   
@@ -200,6 +200,7 @@ dlo.LoadWith<Order>(o => o.OrderDetails);
  대답: 읽기 전용 모드에서는 컨텍스트에서 변경 내용을 추적하지 않습니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [참조](../../../../../../docs/framework/data/adonet/sql/linq/reference.md)
 - [문제 해결](../../../../../../docs/framework/data/adonet/sql/linq/troubleshooting.md)
 - [LINQ to SQL의 보안](../../../../../../docs/framework/data/adonet/sql/linq/security-in-linq-to-sql.md)

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - WCF Data Services, deferred content
 - WCF Data Services, loading data
 ms.assetid: 32f9b588-c832-44c4-a7e0-fcce635df59a
-ms.openlocfilehash: 3c522cd9f360430bde8a008c4c9702f01887d948
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 905cf9933b726ba570c16719c8d1883a8588254d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54555000"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59227173"
 ---
 # <a name="loading-deferred-content-wcf-data-services"></a>지연 콘텐츠 로드(WCF Data Services)
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]는 기본적으로 쿼리에서 반환되는 데이터 양을 제한합니다. 그러나 필요한 경우 데이터 서비스에서 관련 엔터티, 페이징 응답 데이터 및 이진 데이터 스트림을 포함한 추가 데이터를 명시적으로 로드할 수 있습니다. 이 항목에서는 이러한 지연된 콘텐츠를 응용 프로그램에 로드하는 방법을 설명합니다.  
@@ -27,7 +27,7 @@ ms.locfileid: "54555000"
      [!code-csharp[Astoria Northwind Client#ExpandOrderDetailsSpecific](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/source.cs#expandorderdetailsspecific)]
      [!code-vb[Astoria Northwind Client#ExpandOrderDetailsSpecific](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/source.vb#expandorderdetailsspecific)]  
   
-     [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]에서는 `$expand` 쿼리 옵션을 사용하여 단일 쿼리에 포함할 수 있는 엔터티 집합의 수를 12개로 제한합니다.  
+     [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 사용 하 여 단일 쿼리에 포함할 수 있는 엔터티 집합의 수를 12 개로 제한 합니다 `$expand` 쿼리 옵션입니다.  
   
 -   **명시적 로드**: 호출할 수 있습니다 합니다 <xref:System.Data.Services.Client.DataServiceContext.LoadProperty%2A> 메서드는 <xref:System.Data.Services.Client.DataServiceContext> 명시적으로 관련된 엔터티를 로드 하는 인스턴스. <xref:System.Data.Services.Client.DataServiceContext.LoadProperty%2A> 메서드를 호출할 때마다 데이터 서비스에 대해 별도의 요청이 만들어집니다. 다음 예제에서는 `Order_Details` 엔터티에 대한 `Orders`를 명시적으로 로드합니다.  
   
@@ -55,8 +55,9 @@ ms.locfileid: "54555000"
  자세한 내용은 [방법: 페이지 단위 결과 로드](../../../../docs/framework/data/wcf/how-to-load-paged-results-wcf-data-services.md)합니다.  
   
 ## <a name="binary-data-streams"></a>이진 데이터 스트림  
- [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]를 사용하면 BLOB(Binary Large Object) 데이터를 데이터 스트림으로 액세스할 수 있습니다. 스트리밍을 사용하면 필요할 때까지 이진 데이터 로드가 지연되며, 클라이언트가 보다 효율적으로 이 데이터를 처리할 수 있습니다. 이 기능을 사용하려면 데이터 서비스에서 <xref:System.Data.Services.Providers.IDataServiceStreamProvider> 공급자를 구현해야 합니다. 자세한 내용은 [스트리밍 공급자](../../../../docs/framework/data/wcf/streaming-provider-wcf-data-services.md)합니다. 스트리밍을 사용하도록 설정하면 엔터티 형식이 관련 이진 데이터 없이 반환됩니다. 이 경우 사용 해야 합니다는 <xref:System.Data.Services.Client.DataServiceContext.GetReadStream%2A> 메서드는 <xref:System.Data.Services.Client.DataServiceContext> 서비스에서 이진 데이터의 데이터 스트림에 액세스 하는 클래스입니다. 이와 유사하게, <xref:System.Data.Services.Client.DataServiceContext.SetSaveStream%2A> 메서드를 사용하여 엔터티의 이진 데이터를 스트림으로 추가하거나 변경할 수 있습니다. 자세한 내용은 [이진 데이터 작업](../../../../docs/framework/data/wcf/working-with-binary-data-wcf-data-services.md)합니다.  
+ [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] binary large object (BLOB) 데이터를 데이터 스트림으로 액세스할 수 있습니다. 스트리밍을 사용하면 필요할 때까지 이진 데이터 로드가 지연되며, 클라이언트가 보다 효율적으로 이 데이터를 처리할 수 있습니다. 이 기능을 사용하려면 데이터 서비스에서 <xref:System.Data.Services.Providers.IDataServiceStreamProvider> 공급자를 구현해야 합니다. 자세한 내용은 [스트리밍 공급자](../../../../docs/framework/data/wcf/streaming-provider-wcf-data-services.md)합니다. 스트리밍을 사용하도록 설정하면 엔터티 형식이 관련 이진 데이터 없이 반환됩니다. 이 경우 사용 해야 합니다는 <xref:System.Data.Services.Client.DataServiceContext.GetReadStream%2A> 메서드는 <xref:System.Data.Services.Client.DataServiceContext> 서비스에서 이진 데이터의 데이터 스트림에 액세스 하는 클래스입니다. 이와 유사하게, <xref:System.Data.Services.Client.DataServiceContext.SetSaveStream%2A> 메서드를 사용하여 엔터티의 이진 데이터를 스트림으로 추가하거나 변경할 수 있습니다. 자세한 내용은 [이진 데이터 작업](../../../../docs/framework/data/wcf/working-with-binary-data-wcf-data-services.md)합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [WCF Data Services 클라이언트 라이브러리](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)
 - [데이터 서비스 쿼리](../../../../docs/framework/data/wcf/querying-the-data-service-wcf-data-services.md)

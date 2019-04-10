@@ -2,12 +2,12 @@
 title: Service Trace Viewer 도구(SvcTraceViewer.exe)
 ms.date: 03/30/2017
 ms.assetid: 9027efd3-df8d-47ed-8bcd-f53d55ed803c
-ms.openlocfilehash: 723b1c6858f0c56d4834dc937b9f4883e22156e6
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
-ms.translationtype: MT
+ms.openlocfilehash: 4697e43ee1ae08d5eec02b042aea0ec69d6eeac4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57680388"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59213391"
 ---
 # <a name="service-trace-viewer-tool-svctraceviewerexe"></a>Service Trace Viewer 도구(SvcTraceViewer.exe)
 Windows Communication Foundation (WCF) Service Trace Viewer 도구를 사용 하면 WCF에 의해 생성 되는 진단 추적을 분석할 수 있습니다. Service Trace Viewer는 쉽게 병합, 보기 및 진단, 복구 및 WCF 서비스 문제를 확인할 수 있도록 로그에 추적 메시지를 필터링 하는 방법을 제공 합니다.  
@@ -40,7 +40,7 @@ Windows Communication Foundation (WCF) Service Trace Viewer 도구를 사용 하
   
  추적 수준은 `switchValue` 설정에 의해 제어됩니다. 다음 표에서는 사용할 수 있는 추적 수준에 대해 설명합니다.  
   
-|추적 수준|설명|  
+|추적 수준|Description|  
 |-----------------|-----------------|  
 |중요|-페일 패스트 및 이벤트 로그 항목과 추적 상관 관계 정보를 기록합니다. 다음은 Critical 수준을 사용할 수 있는 경우에 대한 일부 예제입니다.<br />-AppDomain이 처리 되지 않은 예외로 인해 다운 합니다.<br />응용 프로그램 시작 되지 않습니다.<br />-MyApp.exe 프로세스에서 발생 한 오류의 원인인 메시지입니다.|  
 |Error|-모든 예외를 기록 합니다. 다음과 같은 경우에 Error 수준을 사용할 수 있습니다.<br />잘못 된 캐스팅 오류로 인해-코드가 손상 되었습니다.<br />"끝점을 만들지 못했습니다" 예외-응용 프로그램 시작 시 실패를 일으키는 것입니다.|  
@@ -49,9 +49,7 @@ Windows Communication Foundation (WCF) Service Trace Viewer 도구를 사용 하
 |자세히|-디버그 수준 모두 사용자 코드에 대 한 추적 및 처리 합니다. 다음과 같은 경우에 이 수준을 설정합니다.<br />-알 수 없는 오류가 발생 했을 때 코드의 메서드를 호출한 합니다.<br />-잘못 된 끝점을 구성 하 고 서비스 예약 저장소의 항목이 잠겨 있기 때문에 시작 하지 못했습니다.|  
 |ActivityTracing|처리 동작과 구성 요소 간의 흐름 이벤트입니다.<br /><br /> 이 수준에서 관리자와 개발자가 같은 응용 프로그램 도메인의 응용 프로그램을 서로 연결할 수 있습니다.<br /><br /> -동작 경계 추적: 시작/중지 합니다.<br />-전송에 대 한 추적 합니다.|  
   
- 
-  `add`를 사용하여 사용할 추적 수신기의 이름과 형식을 지정할 수 있습니다. 예제 구성에서 수신기 이름은 `sdt`로 지정되고 표준 .NET Framework 추적 수신기(`System.Diagnostics.XmlWriterTraceListener`)는 형식으로 추가됩니다. 
-  `initializeData`를 사용하여 해당 수신기의 로그 파일 이름을 설정합니다. 또한 단순한 파일 이름 대신 정규화된 경로를 사용할 수 있습니다.  
+ `add`를 사용하여 사용할 추적 수신기의 이름과 형식을 지정할 수 있습니다. 예제 구성에서 수신기 이름은 `sdt`로 지정되고 표준 .NET Framework 추적 수신기(`System.Diagnostics.XmlWriterTraceListener`)는 형식으로 추가됩니다. `initializeData`를 사용하여 해당 수신기의 로그 파일 이름을 설정합니다. 또한 단순한 파일 이름 대신 정규화된 경로를 사용할 수 있습니다.  
 
 .NET Framework 4.8부터 일부 고대비 테마에서 ComboBox 컨트롤 올바른 색상으로 표시 됩니다. 다음 설정을 제거 하 여이 변경을 사용 하지 않도록 설정 수는 *svcTraceViewer.exe.config* 파일:
 
@@ -458,6 +456,7 @@ Windows Communication Foundation (WCF) Service Trace Viewer 도구를 사용 하
  아랍어 운영 체제를 사용하여 작성된 추적 로그를 여는 경우 시간 필터가 작동하지 않을 수 있습니다. 예를 들어, 2005년은 아랍어 달력으로 1427년에 해당합니다. 그러나 Service Trace Viewer 도구 필터에서 지원하는 시간 범위는 1752 이전의 날짜를 지원하지 않습니다. 즉, 필터에서 올바른 날짜를 선택하지 못할 수도 있습니다. 이 문제를 해결 하려면 사용자 지정 필터를 만들 수 있습니다 (**보기/사용자 지정 필터**) XPath 식을 사용 하 여 특정 시간 범위를 포함 합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [Service Trace Viewer를 사용하여 상호 관련된 추적 보기 및 문제 해결](../../../docs/framework/wcf/diagnostics/tracing/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting.md)
 - [추적 구성](../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md)
 - [종단 간 추적](./diagnostics/tracing/end-to-end-tracing.md)

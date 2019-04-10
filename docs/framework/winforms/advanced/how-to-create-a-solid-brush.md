@@ -10,12 +10,12 @@ helpviewer_keywords:
 - brushes [Windows Forms], examples
 - brushes [Windows Forms], creating solid
 ms.assetid: 85c3fe7d-fb1d-4591-8a9f-d75b556b90af
-ms.openlocfilehash: d7fb7c11a69cae69210dd2eece3336bc40c505c7
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: ed9ec1f52b41c83b3cc6e36dedf97f1c00db42e6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57711982"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59213443"
 ---
 # <a name="how-to-create-a-solid-brush"></a>방법: 단색 브러시 만들기
 이 예제에서는 만듭니다는 <xref:System.Drawing.SolidBrush> 에서 사용할 수 있는 개체를 <xref:System.Drawing.Graphics> 모양을 채우는 개체입니다.  
@@ -29,6 +29,7 @@ ms.locfileid: "57711982"
  호출 해야 사용을 완료 한 후 <xref:System.IDisposable.Dispose%2A> 브러시 개체와 같은 시스템 리소스를 사용 하는 개체입니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Drawing.SolidBrush>
 - <xref:System.Drawing.Brush>
 - [그래픽 프로그래밍 시작](getting-started-with-graphics-programming.md)

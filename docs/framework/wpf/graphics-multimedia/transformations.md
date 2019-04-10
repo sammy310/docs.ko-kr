@@ -16,12 +16,12 @@ helpviewer_keywords:
 - Transforms [WPF]
 - Transforms [WPF], about Transforms
 ms.assetid: 712b543f-d8b2-4dcf-ba2c-f7921c61c6fd
-ms.openlocfilehash: 614f4fac288e53677d072c6c88edfa46df18f40a
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: a0b5268d1c7e319a6144a7d551dca45bdc3e64aa
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57352453"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59227233"
 ---
 # <a name="transformations"></a>변형
 변환 하는 데 회전, 크기 조정, 변환 또는 기울이기 <xref:System.Windows.FrameworkElement> 개체입니다.  
@@ -31,6 +31,7 @@ ms.locfileid: "57352453"
  [방법 항목](transformations-how-to-topics.md)  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Windows.Media.Transform>
 - [그래픽 및 멀티미디어](index.md)
 - [WPF 그래픽 렌더링 개요](wpf-graphics-rendering-overview.md)

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 6bee5da4-adf7-42e6-8f78-63a9e5c6dbad
-ms.openlocfilehash: c04febff886dda57ed86d8410c952926d192026b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 6d8683108ebe87b8533551d212296b13630b4e19
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54632844"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59218604"
 ---
 # <a name="how-to-specify-a-client-binding-in-code"></a>방법: 코드에서 클라이언트 바인딩 지정
 이 예제에서는 계산기 서비스를 사용할 클라이언트를 만들고 해당 클라이언트에 대한 바인딩을 코드를 사용하여 명령적으로 지정합니다. 클라이언트는 `CalculatorService` 인터페이스를 구현하는 `ICalculator`에 액세스하고, 서비스 및 클라이언트 모두 <xref:System.ServiceModel.BasicHttpBinding> 클래스를 사용합니다.  
@@ -47,4 +47,5 @@ ms.locfileid: "54632844"
 5.  클라이언트를 컴파일하고 실행합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [바인딩을 사용하여 서비스 및 클라이언트 구성](../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - controls [WPF], TextBox
 - TextBox control [WPF]
 ms.assetid: 2512a277-e9d8-4de8-a12f-2bd95e8e7b60
-ms.openlocfilehash: f2a261b72fe3205c9a03292f1f6bbcebdcf8649b
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 5be472d0d4f27c7a9acc966e4d6ffbcf9d7a1b0d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57356977"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59226966"
 ---
 # <a name="textbox"></a>TextBox
 <xref:System.Windows.Controls.TextBox> 컨트롤은 WPF 응용 프로그램에서 기본 텍스트 입력에 대 한 지원을 제공 합니다.  
@@ -31,5 +31,6 @@ ms.locfileid: "57356977"
  <xref:System.Windows.Controls.PasswordBox>  
   
 ## <a name="see-also"></a>참고자료
-- [WPF Controls Gallery Sample](https://go.microsoft.com/fwlink/?LinkID=160053)(WPF 컨트롤 갤러리 샘플)
+
+- [WPF 컨트롤 갤러리 샘플](https://go.microsoft.com/fwlink/?LinkID=160053)
 - [TextBox 스타일 및 템플릿](textbox-styles-and-templates.md)

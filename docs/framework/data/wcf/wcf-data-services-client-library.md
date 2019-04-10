@@ -6,12 +6,12 @@ helpviewer_keywords:
 - DataServiceQuery class, about DataServiceQuery class
 - DataServiceContext class, about DataServiceContext class
 ms.assetid: 21075e50-8917-413e-a8ea-35a0f6e65aa5
-ms.openlocfilehash: 9af19f2ef552c5871d488c968368a9192bae9edb
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5d14a1be3cd40ace2e31fec6f44a86707e5c4476
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54656221"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59230202"
 ---
 # <a name="wcf-data-services-client-library"></a>WCF Data Services 클라이언트 라이브러리
 HTTP 요청을 보내고 데이터 서비스에서 반환하는 [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] 피드를 처리할 수 있는 응용 프로그램은 모두 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 기반 데이터 서비스와 상호 작용할 수 있습니다. 이 상호 운용성을 통해 광범위한 웹 사용 응용 프로그램에서 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 기반 서비스에 액세스할 수 있습니다. [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 사용 하면 다양 한 프로그래밍 환경을 제공 하는 클라이언트 라이브러리가 포함 되어 있습니다 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] .NET Framework 또는 Silverlight 기반 응용 프로그램에서 피드 합니다.  
@@ -48,9 +48,10 @@ HTTP 요청을 보내고 데이터 서비스에서 반환하는 [!INCLUDE[ssODat
  [데이터 서비스 컨텍스트 관리](../../../../docs/framework/data/wcf/managing-the-data-service-context-wcf-data-services.md)  
  클라이언트 라이브러리의 동작을 관리하는 옵션에 대해 설명합니다.  
   
- [이진 데이터 작업](../../../../docs/framework/data/wcf/working-with-binary-data-wcf-data-services.md)  
+ [이진 데이터 사용](../../../../docs/framework/data/wcf/working-with-binary-data-wcf-data-services.md)  
  데이터 서비스에서 데이터 스트림으로 반환하는 이진 데이터에 액세스하고 해당 데이터를 변경하는 방법에 대해 설명합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [WCF Data Services 정의](../../../../docs/framework/data/wcf/defining-wcf-data-services.md)
 - [시작](../../../../docs/framework/data/wcf/getting-started-with-wcf-data-services.md)

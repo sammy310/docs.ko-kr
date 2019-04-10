@@ -11,12 +11,12 @@ helpviewer_keywords:
 - text [Windows Forms], antialiasing
 - strings [Windows Forms], antialiasing when drawing
 ms.assetid: 48fc34f3-f236-4b01-a0cb-f0752e6d22ae
-ms.openlocfilehash: ffd8600c730baca54a9cbd098dd2f37ce5ecb728
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: 24d1b1dfbe955bcfa98a16c3be592ab837ec0182
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58464725"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59227615"
 ---
 # <a name="how-to-use-antialiasing-with-text"></a>방법: 텍스트에 앤티 앨리어싱 사용
 *앤티 앨리어싱* 그려지는 그래픽 및 텍스트의 모양을 가독성을 향상 시키는 거친 다듬기 가리킵니다. 관리 되는 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 클래스 낮은 품질의 텍스트 뿐만 아니라 고품질 앤티 앨리어싱된 텍스트를 렌더링할 수 있습니다. 일반적으로 더 높은 품질 렌더링 낮은 품질 렌더링 보다 처리 시간이 사용 합니다. 텍스트 품질 수준을 설정 하려면 설정 합니다 <xref:System.Drawing.Graphics.TextRenderingHint%2A> 의 속성을 <xref:System.Drawing.Graphics> 의 요소 중 하나에 <xref:System.Drawing.Text.TextRenderingHint> 열거형  
@@ -35,4 +35,5 @@ ms.locfileid: "58464725"
  앞의 코드 예제는 Windows Forms에서 사용 하도록 설계 되었으며 필요 <xref:System.Windows.Forms.PaintEventArgs> `e`의 매개 변수인 <xref:System.Windows.Forms.PaintEventHandler>합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [글꼴 및 텍스트 사용](using-fonts-and-text.md)

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - tile patterns [WPF], creating
 - creating [WPF], tile patterns with TileBrush
 ms.assetid: 5aa46632-3527-4668-9d8d-0375c8af28aa
-ms.openlocfilehash: 2efd070ac9ad502f2539d100fa450f95bcdddced
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: c1051b234961eee9ae740af2abac3d64c523656c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57367780"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59227407"
 ---
 # <a name="how-to-create-different-tile-patterns-with-a-tilebrush"></a>방법: TileBrush로 다른 바둑판식 배열 패턴 만들기
 사용 하는 방법을 보여 주는이 예제는 <xref:System.Windows.Media.TileBrush.TileMode%2A> 의 속성을 <xref:System.Windows.Media.TileBrush> 패턴을 만들려면.  
@@ -34,5 +34,6 @@ TileMode 속성을 사용 하 여 만든 타일 패턴
  [!code-xaml[BrushesIntroduction_snip#GraphicsMMDrawingBrushTileModeExample](~/samples/snippets/xaml/VS_Snippets_Wpf/BrushesIntroduction_snip/XAML/TileModeExample.xaml#graphicsmmdrawingbrushtilemodeexample)]  
   
 ## <a name="see-also"></a>참고자료
-- [TileBrush의 바둑판 크기 설정](how-to-set-the-tile-size-for-a-tilebrush.md)
+
+- [TileBrush의 타일 크기 설정](how-to-set-the-tile-size-for-a-tilebrush.md)
 - [이미지, 그림 및 시각적 표시로 그리기](painting-with-images-drawings-and-visuals.md)
