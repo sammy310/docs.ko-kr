@@ -6,12 +6,12 @@ helpviewer_keywords:
 - cells [Windows Forms], styles
 - data grids [Windows Forms], cell styles
 ms.assetid: dbb75ed6-8804-4232-8382-f9920c2e380c
-ms.openlocfilehash: ec2a34deb25cd5f4cf492d92129ffc61d14001ab
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 41794c5ecadbcdc0b38c7c73afc7c010a4ea6989
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59171524"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59300023"
 ---
 # <a name="cell-styles-in-the-windows-forms-datagridview-control"></a>Windows Forms DataGridView 컨트롤의 셀 스타일
 내에 있는 각 셀은 <xref:System.Windows.Forms.DataGridView> 컨트롤 고유한 스타일을 텍스트 형식으로, 배경색, 전경색, 글꼴 등을 가질 수 있습니다. 하지만 일반적으로 여러 셀은 특징이 있습니다. 특정 스타일입니다.  
@@ -65,25 +65,25 @@ ms.locfileid: "59171524"
 ## <a name="style-inheritance"></a>스타일 상속  
  각 <xref:System.Windows.Forms.DataGridViewCell> 에서 모양을 가져옵니다 해당 <xref:System.Windows.Forms.DataGridViewCell.InheritedStyle%2A> 속성입니다. 합니다 <xref:System.Windows.Forms.DataGridViewCellStyle> 이 속성에서 반환 된 개체 형식의 속성의 계층 구조에서 값을 상속 <xref:System.Windows.Forms.DataGridViewCellStyle>합니다. 순서에서이 속성은 아래 나열 된 <xref:System.Windows.Forms.DataGridViewCell.InheritedStyle%2A> 머리글이 아닌 셀에 대 한 해당 값을 가져옵니다.  
   
-1.  <xref:System.Windows.Forms.DataGridViewCell.Style%2A?displayProperty=nameWithType>  
+1. <xref:System.Windows.Forms.DataGridViewCell.Style%2A?displayProperty=nameWithType>  
   
-2.  <xref:System.Windows.Forms.DataGridViewRow.DefaultCellStyle%2A?displayProperty=nameWithType>  
+2. <xref:System.Windows.Forms.DataGridViewRow.DefaultCellStyle%2A?displayProperty=nameWithType>  
   
-3.  <xref:System.Windows.Forms.DataGridView.AlternatingRowsDefaultCellStyle%2A?displayProperty=nameWithType> (홀수 인덱스 번호가 있는 행의 셀)에 해당  
+3. <xref:System.Windows.Forms.DataGridView.AlternatingRowsDefaultCellStyle%2A?displayProperty=nameWithType> (홀수 인덱스 번호가 있는 행의 셀)에 해당  
   
-4.  <xref:System.Windows.Forms.DataGridView.RowsDefaultCellStyle%2A?displayProperty=nameWithType>  
+4. <xref:System.Windows.Forms.DataGridView.RowsDefaultCellStyle%2A?displayProperty=nameWithType>  
   
-5.  <xref:System.Windows.Forms.DataGridViewColumn.DefaultCellStyle%2A?displayProperty=nameWithType>  
+5. <xref:System.Windows.Forms.DataGridViewColumn.DefaultCellStyle%2A?displayProperty=nameWithType>  
   
-6.  <xref:System.Windows.Forms.DataGridView.DefaultCellStyle%2A?displayProperty=nameWithType>  
+6. <xref:System.Windows.Forms.DataGridView.DefaultCellStyle%2A?displayProperty=nameWithType>  
   
  행 및 열 머리글 셀에는 <xref:System.Windows.Forms.DataGridViewCell.InheritedStyle%2A> 속성은 지정 된 순서로 원본 속성의 다음 목록에서 값으로 채워집니다.  
   
-1.  <xref:System.Windows.Forms.DataGridViewCell.Style%2A?displayProperty=nameWithType>  
+1. <xref:System.Windows.Forms.DataGridViewCell.Style%2A?displayProperty=nameWithType>  
   
-2.  <xref:System.Windows.Forms.DataGridView.ColumnHeadersDefaultCellStyle%2A?displayProperty=nameWithType> 또는 <xref:System.Windows.Forms.DataGridView.RowHeadersDefaultCellStyle%2A?displayProperty=nameWithType>  
+2. <xref:System.Windows.Forms.DataGridView.ColumnHeadersDefaultCellStyle%2A?displayProperty=nameWithType> 또는 <xref:System.Windows.Forms.DataGridView.RowHeadersDefaultCellStyle%2A?displayProperty=nameWithType>  
   
-3.  <xref:System.Windows.Forms.DataGridView.DefaultCellStyle%2A?displayProperty=nameWithType>  
+3. <xref:System.Windows.Forms.DataGridView.DefaultCellStyle%2A?displayProperty=nameWithType>  
   
  다음 다이어그램에서는이 프로세스를 보여 줍니다.  
   
@@ -91,19 +91,19 @@ ms.locfileid: "59171524"
   
  또한 특정 행과 열으로 상속 된 스타일을 액세스할 수 있습니다. 열 <xref:System.Windows.Forms.DataGridViewColumn.InheritedStyle%2A> 속성은 다음 속성에서 값을 상속 합니다.  
   
-1.  <xref:System.Windows.Forms.DataGridViewColumn.DefaultCellStyle%2A?displayProperty=nameWithType>  
+1. <xref:System.Windows.Forms.DataGridViewColumn.DefaultCellStyle%2A?displayProperty=nameWithType>  
   
-2.  <xref:System.Windows.Forms.DataGridView.DefaultCellStyle%2A?displayProperty=nameWithType>  
+2. <xref:System.Windows.Forms.DataGridView.DefaultCellStyle%2A?displayProperty=nameWithType>  
   
  행 <xref:System.Windows.Forms.DataGridViewRow.InheritedStyle%2A> 속성은 다음 속성에서 값을 상속 합니다.  
   
-1.  <xref:System.Windows.Forms.DataGridViewRow.DefaultCellStyle%2A?displayProperty=nameWithType>  
+1. <xref:System.Windows.Forms.DataGridViewRow.DefaultCellStyle%2A?displayProperty=nameWithType>  
   
-2.  <xref:System.Windows.Forms.DataGridView.AlternatingRowsDefaultCellStyle%2A?displayProperty=nameWithType> (홀수 인덱스 번호가 있는 행의 셀)에 해당  
+2. <xref:System.Windows.Forms.DataGridView.AlternatingRowsDefaultCellStyle%2A?displayProperty=nameWithType> (홀수 인덱스 번호가 있는 행의 셀)에 해당  
   
-3.  <xref:System.Windows.Forms.DataGridView.RowsDefaultCellStyle%2A?displayProperty=nameWithType>  
+3. <xref:System.Windows.Forms.DataGridView.RowsDefaultCellStyle%2A?displayProperty=nameWithType>  
   
-4.  <xref:System.Windows.Forms.DataGridView.DefaultCellStyle%2A?displayProperty=nameWithType>  
+4. <xref:System.Windows.Forms.DataGridView.DefaultCellStyle%2A?displayProperty=nameWithType>  
   
  각 속성에 대 한는 <xref:System.Windows.Forms.DataGridViewCellStyle> 에서 반환 된 개체를 `InheritedStyle` 속성 값을 해당 속성이 아닌 다른 값으로 설정 하는 적절 한 목록의 첫 번째 셀 스타일에서 가져온 속성을 <xref:System.Windows.Forms.DataGridViewCellStyle> 클래스가 기본적으로.  
   

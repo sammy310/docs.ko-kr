@@ -9,12 +9,12 @@ helpviewer_keywords:
 - printing [Windows Forms], choosing printers
 - printers [Windows Forms], choosing
 ms.assetid: 63c1172b-2931-4ac0-953f-37f629494bbf
-ms.openlocfilehash: bebb879020e6e45e77f109bf9c377b7322d5e8f3
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: efd65ff6417b1a63a7f87917c4d9a95dedc464ad
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59184030"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59318808"
 ---
 # <a name="how-to-choose-the-printers-attached-to-a-users-computer-in-windows-forms"></a>방법: Windows Forms에서 사용자의 컴퓨터에 연결된 프린터 선택
 사용자는 기본 프린터 이외의 프린터를 선택하는 경우가 많습니다. <xref:System.Windows.Forms.PrintDialog> 구성 요소를 사용하면 현재 설치된 프린터 중에서 사용자가 원하는 프린터를 선택하도록 할 수 있습니다. <xref:System.Windows.Forms.PrintDialog> 구성 요소를 통해 <xref:System.Windows.Forms.DialogResult> 구성 요소의 <xref:System.Windows.Forms.PrintDialog> 가 캡처되고 프린터 선택에 사용됩니다.  
@@ -23,7 +23,7 @@ ms.locfileid: "59184030"
   
 ### <a name="to-choose-a-printer-and-then-print-a-file"></a>프린터를 선택한 다음 파일을 인쇄하려면  
   
-1.  사용 하 여 사용할 프린터를 선택 합니다 <xref:System.Windows.Forms.PrintDialog> 구성 요소입니다.  
+1. 사용 하 여 사용할 프린터를 선택 합니다 <xref:System.Windows.Forms.PrintDialog> 구성 요소입니다.  
   
      다음 코드 예제에서는 두 이벤트가 처리되고 있습니다. 첫 번째에서는 <xref:System.Windows.Forms.Button> 컨트롤의 <xref:System.Windows.Forms.Control.Click> 이벤트를 <xref:System.Windows.Forms.PrintDialog> 클래스가 인스턴스화되고 사용자가 선택한 프린터가 캡처됩니다는 <xref:System.Windows.Forms.DialogResult> 속성입니다.  
   

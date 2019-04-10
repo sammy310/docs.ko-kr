@@ -2,25 +2,25 @@
 title: '전송: WSE 3.0 TCP 상호 운용성'
 ms.date: 03/30/2017
 ms.assetid: 5f7c3708-acad-4eb3-acb9-d232c77d1486
-ms.openlocfilehash: 9b2fcc2e7d96d2cfbb3b55934fa19ec24487bce7
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: cc483e44e625534d87ea94e84fc984f0aff880f9
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59162178"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59324216"
 ---
 # <a name="transport-wse-30-tcp-interoperability"></a>전송: WSE 3.0 TCP 상호 운용성
 WSE 3.0 TCP Interoperability Transport 샘플에는 TCP 이중 세션을 사용자 지정 Windows Communication Foundation (WCF) 전송으로 구현 하는 방법을 보여 줍니다. 또한 채널 계층의 확장성을 사용하여 연결을 통해 기존에 배포된 시스템과 상호 작용할 수 있는 방법도 보여 줍니다. 다음 단계에는이 사용자 지정 WCF 전송을 작성 하는 방법을 보여 줍니다.  
   
-1.  TCP 소켓에서 시작하여 DIME 프레이밍을 사용하여 메시지 경계를 나타내는 <xref:System.ServiceModel.Channels.IDuplexSessionChannel>의 클라이언트 및 서버 구현을 만듭니다.  
+1. TCP 소켓에서 시작하여 DIME 프레이밍을 사용하여 메시지 경계를 나타내는 <xref:System.ServiceModel.Channels.IDuplexSessionChannel>의 클라이언트 및 서버 구현을 만듭니다.  
   
-2.  WSE TCP 서비스에 연결되고 클라이언트 <xref:System.ServiceModel.Channels.IDuplexSessionChannel>을 통해 프레임 메시지를 보내는 채널 팩터리를 만듭니다.  
+2. WSE TCP 서비스에 연결되고 클라이언트 <xref:System.ServiceModel.Channels.IDuplexSessionChannel>을 통해 프레임 메시지를 보내는 채널 팩터리를 만듭니다.  
   
-3.  들어오는 TCP 연결을 수락하고 해당하는 채널을 생성하도록 채널 수신기를 만듭니다.  
+3. 들어오는 TCP 연결을 수락하고 해당하는 채널을 생성하도록 채널 수신기를 만듭니다.  
   
-4.  네트워크 관련 예외가 <xref:System.ServiceModel.CommunicationException>의 적절한 파생 클래스로 정규화되는지 확인합니다.  
+4. 네트워크 관련 예외가 <xref:System.ServiceModel.CommunicationException>의 적절한 파생 클래스로 정규화되는지 확인합니다.  
   
-5.  사용자 지정 전송을 채널 스택에 추가하는 바인딩 요소를 추가합니다. 자세한 내용은 [바인딩 요소 추가]를 참조 하세요.  
+5. 사용자 지정 전송을 채널 스택에 추가하는 바인딩 요소를 추가합니다. 자세한 내용은 [바인딩 요소 추가]를 참조 하세요.  
   
 ## <a name="creating-iduplexsessionchannel"></a>IDuplexSessionChannel 만들기  
  WSE 3.0 TCP 상호 운용성 전송을 작성하는 첫 번째 단계는 <xref:System.ServiceModel.Channels.IDuplexSessionChannel> 위에 <xref:System.Net.Sockets.Socket>의 구현을 만드는 것입니다. `WseTcpDuplexSessionChannel` 파생 <xref:System.ServiceModel.Channels.ChannelBase>합니다. 메시지를 보내는 논리는 두 가지 주요 작업으로 구성 됩니다. (1) (바이트) 및 (2) 이러한 바이트를 프레이밍 및 통신 중에 보내고 메시지를 인코딩입니다.  
@@ -172,12 +172,12 @@ Symbols:
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>샘플을 설치, 빌드 및 실행하려면  
   
-1.  이 샘플을 실행하려면 WSE 3.0과 WSE `TcpSyncStockService` 샘플이 설치되어 있어야 합니다. 다운로드할 수 있습니다 [MSDN에서 WSE 3.0](https://go.microsoft.com/fwlink/?LinkId=95000)합니다.  
+1. 이 샘플을 실행하려면 WSE 3.0과 WSE `TcpSyncStockService` 샘플이 설치되어 있어야 합니다. 다운로드할 수 있습니다 [MSDN에서 WSE 3.0](https://go.microsoft.com/fwlink/?LinkId=95000)합니다.  
   
 > [!NOTE]
 >  WSE 3.0은 [!INCLUDE[lserver](../../../../includes/lserver-md.md)]에서는 지원되지 않으므로 이 운영 체제에서는 `TcpSyncStockService` 샘플을 설치하거나 실행할 수 없습니다.  
   
-1.  `TcpSyncStockService` 샘플을 설치했으면 다음 작업을 수행합니다.  
+1. `TcpSyncStockService` 샘플을 설치했으면 다음 작업을 수행합니다.  
   
     1.  Visual Studio에서 `TcpSyncStockService`를 엽니다. TcpSyncStockService 샘플은 WSE 3.0과 함께 설치되며 이 샘플 코드에 포함되어 있지 않습니다.  
   

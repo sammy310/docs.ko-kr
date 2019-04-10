@@ -2,12 +2,12 @@
 title: Windows Communication Foundation 샘플 실행
 ms.date: 03/30/2017
 ms.assetid: db8a83da-95c1-4a21-a9d2-48caeb6398ea
-ms.openlocfilehash: 32925caccee08c27e023d7ffae992e38cb496868
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: b7a719aeeba2c14e79d790dfa5cbb4090d50009a
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59209218"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59333147"
 ---
 # <a name="running-the-windows-communication-foundation-samples"></a>Windows Communication Foundation 샘플 실행
 Windows Communication Foundation (WCF) 샘플 단일 컴퓨터 또는 다중 컴퓨터 구성에서 실행할 수 있습니다. 샘플은 단일 컴퓨터 구성에서 실행할 준비가 된 상태로 제공됩니다. 다중 컴퓨터 구성에서는 샘플의 구성 파일 설정을 수정해야 합니다. 다음 절차에서는 단일 컴퓨터 및 다중 컴퓨터 구성에서 샘플을 실행하는 방법에 대해 설명합니다. IIS(인터넷 정보 서비스) 및 자체 호스팅 샘플에서 호스트되는 서비스에 적용되는 단계가 약간씩 다릅니다. 대부분의 샘플은 IIS에서 호스트됩니다. 이러한 샘플이 호스트되는 방법에 대한 자세한 내용은 샘플 추가 정보를 참조하세요.  
@@ -19,17 +19,17 @@ Windows Communication Foundation (WCF) 샘플 단일 컴퓨터 또는 다중 컴
   
 ### <a name="to-run-the-sample-on-the-same-machine"></a>단일 컴퓨터 구성에서 샘플을 실행하려면  
   
-1.  서비스가 IIS에서 호스트 되는 경우 다음 주소를 입력 하 여 브라우저를 사용 하 여 서비스에 액세스할 수 있는지 확인: `http://localhost/servicemodelsamples/service.svc`합니다. 확인 페이지가 응답으로 표시됩니다. 확인 페이지가 표시 되지 않으면, 참조 [WCF 샘플에 대 한 문제 해결 팁](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))합니다.  
+1. 서비스가 IIS에서 호스트 되는 경우 다음 주소를 입력 하 여 브라우저를 사용 하 여 서비스에 액세스할 수 있는지 확인: `http://localhost/servicemodelsamples/service.svc`합니다. 확인 페이지가 응답으로 표시됩니다. 확인 페이지가 표시 되지 않으면, 참조 [WCF 샘플에 대 한 문제 해결 팁](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))합니다.  
   
-2.  서비스가 자체 호스트될 경우 언어별 폴더의 \service\bin에서 Service.exe를 실행합니다. 서비스 콘솔 창에 서비스 동작이 표시됩니다.  
+2. 서비스가 자체 호스트될 경우 언어별 폴더의 \service\bin에서 Service.exe를 실행합니다. 서비스 콘솔 창에 서비스 동작이 표시됩니다.  
   
-3.  \Client\bin에서 Client.exe를 실행\\, 언어별 폴더입니다. 클라이언트 콘솔 창에 클라이언트 동작이 표시됩니다.  
+3. \Client\bin에서 Client.exe를 실행\\, 언어별 폴더입니다. 클라이언트 콘솔 창에 클라이언트 동작이 표시됩니다.  
   
-4.  클라이언트와 서비스가 통신할 수 없는 경우 참조 [WCF 샘플에 대 한 문제 해결 팁](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))합니다.  
+4. 클라이언트와 서비스가 통신할 수 없는 경우 참조 [WCF 샘플에 대 한 문제 해결 팁](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))합니다.  
   
 ### <a name="to-run-the-sample-across-machines"></a>다중 컴퓨터 구성에서 샘플을 실행하려면  
   
-1.  서비스가 IIS에서 호스트될 경우  
+1. 서비스가 IIS에서 호스트될 경우  
   
     1.  서비스 컴퓨터에서 ServiceModelSamples라는 가상 디렉터리를 만듭니다. 포함 된 Setupvroot.bat 배치 파일을 [Windows Communication Foundation 샘플에 대 한 일회성 설치 절차](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md) 디스크 디렉터리와 가상 디렉터리를 만드는 데 사용할 수 있습니다.  
   
@@ -47,21 +47,21 @@ Windows Communication Foundation (WCF) 샘플 단일 컴퓨터 또는 다중 컴
   
     4.  명령 프롬프트에서 Service.exe를 실행합니다.  
   
-2.  언어별 폴더의 \client\bin\ 폴더에서 클라이언트 컴퓨터로 클라이언트 프로그램 파일을 복사합니다.  
+2. 언어별 폴더의 \client\bin\ 폴더에서 클라이언트 컴퓨터로 클라이언트 프로그램 파일을 복사합니다.  
   
-3.  엔드포인트 주소를 설정합니다.  
+3. 엔드포인트 주소를 설정합니다.  
   
     1.  서비스가 도메인 계정으로 실행 중이 아닌 경우 클라이언트 구성 파일을 열고 엔드포인트 정의의 주소 값을 서비스의 새 주소와 일치하도록 변경합니다. 주소에서 "localhost"에 대한 참조를 정규화된 도메인 이름으로 바꿉니다.  
   
     2.  서비스가 도메인 계정으로 실행 중인 경우 서비스에 대해 Svcutil.exe를 실행하여 클라이언트 구성을 다시 생성합니다. Svcutil.exe를 실행 하는 방법에 대 한 자세한 내용은 참조 하세요. [Building Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)합니다. 샘플의 구성 파일 대신에 생성된 파일을 사용합니다. 생성된 구성 파일에는 추가 ID 정보가 포함되어 있고 기본 설정이기는 하지만 서비스 엔드포인트에 연결하는 데 필요한 모든 설정이 포함되어 있습니다. Id 정보에 대 한 자세한 내용은 참조 하세요. [서비스 Id 및 인증](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md), 및 [ \<identity >](../../../../docs/framework/configure-apps/file-schema/wcf/identity.md)합니다.  
   
-4.  클라이언트 컴퓨터의 명령 프롬프트에서 Client.exe를 실행합니다.  
+4. 클라이언트 컴퓨터의 명령 프롬프트에서 Client.exe를 실행합니다.  
   
 ### <a name="to-debug-a-service"></a>서비스를 디버깅하려면  
   
-1.  솔루션 (클라이언트 및 서비스)를 통해 빌드를 **빌드** 메뉴 또는 CTRL + SHIFT + B입니다.  
+1. 솔루션 (클라이언트 및 서비스)를 통해 빌드를 **빌드** 메뉴 또는 CTRL + SHIFT + B입니다.  
   
-2.  서비스가 IIS에서 호스트될 경우  
+2. 서비스가 IIS에서 호스트될 경우  
   
     1.  브라우저의 주소를 입력 하 여 서비스를 활성화 `http://localhost/servicemodelsamples/service.svc`합니다.  
   
@@ -71,9 +71,9 @@ Windows Communication Foundation (WCF) 샘플 단일 컴퓨터 또는 다중 컴
   
     4.  디버깅할 호스트 작업자 프로세스 W3wp.exe를 선택합니다(Windows XP에서는 select ASPNet_wp.exe 선택).  
   
-3.  이제 서비스 코드에서 중단점을 설정하고 예외에 중단점을 사용하도록 설정할 수 있습니다.  
+3. 이제 서비스 코드에서 중단점을 설정하고 예외에 중단점을 사용하도록 설정할 수 있습니다.  
   
-4.  클라이언트 프로젝트 항목을 마우스 오른쪽 단추로 클릭 하 고 선택 **디버그**하십시오 **새 인스턴스 시작**합니다.  
+4. 클라이언트 프로젝트 항목을 마우스 오른쪽 단추로 클릭 하 고 선택 **디버그**하십시오 **새 인스턴스 시작**합니다.  
   
 ### <a name="to-clean-up-after-the-sample"></a>샘플 실행 후 정리를 수행하려면  
   

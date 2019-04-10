@@ -10,12 +10,12 @@ helpviewer_keywords:
 - tables [Windows Forms], adding to DataGrid control
 - DataGrid control [Windows Forms], adding tables and columns
 ms.assetid: 2fe661b9-aa06-49b9-a314-a0d3cbfdcb4d
-ms.openlocfilehash: 55a8d28d04dd05d4dba7ab2b1edbcfbcce97cecb
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: cc364f3609f8041378b0b03b8e1bc8f312fade18
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59222044"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59319913"
 ---
 # <a name="how-to-add-tables-and-columns-to-the-windows-forms-datagrid-control"></a>방법: Windows Forms DataGrid 컨트롤에 테이블 및 열 추가
 > [!NOTE]
@@ -25,12 +25,12 @@ ms.locfileid: "59222044"
   
 ### <a name="to-add-a-table-and-column-to-a-datagrid-programmatically"></a>테이블 및 열을 DataGrid에 프로그래밍 방식으로 추가 하려면  
   
-1.  테이블의 데이터를 표시 하려면 먼저 바인딩해야 합니다 <xref:System.Windows.Forms.DataGrid> 데이터 집합에는 컨트롤입니다. 자세한 내용은 [방법: 데이터 소스에 Windows Forms DataGrid 컨트롤 바인딩](how-to-bind-the-windows-forms-datagrid-control-to-a-data-source.md)합니다.  
+1. 테이블의 데이터를 표시 하려면 먼저 바인딩해야 합니다 <xref:System.Windows.Forms.DataGrid> 데이터 집합에는 컨트롤입니다. 자세한 내용은 [방법: 데이터 소스에 Windows Forms DataGrid 컨트롤 바인딩](how-to-bind-the-windows-forms-datagrid-control-to-a-data-source.md)합니다.  
   
     > [!CAUTION]
     >  열 스타일을 프로그래밍 방식으로 지정할 때 항상 만들기 **DataGridColumnStyle** 개체에 추가 하는 **GridColumnStylesCollection** 개체를 추가 하기 전에  **DataGridTableStyle** 개체를 **GridTableStylesCollection** 개체입니다. 빈을 추가 하는 경우 **DataGridTableStyle** 개체를 컬렉션에 **DataGridColumnStyle** 개체를 자동으로 생성 됩니다. 새로 추가 하려고 하면 예외가 throw 될 따라서 **DataGridColumnStyle** 중복을 사용 하 여 개체 **MappingName** 값을 **GridColumnStylesCollection**개체입니다.  
   
-2.  새 테이블 스타일을 선언 하 고 해당 매핑을 이름을 설정 합니다.  
+2. 새 테이블 스타일을 선언 하 고 해당 매핑을 이름을 설정 합니다.  
   
     ```vb  
     Dim ts1 As New DataGridTableStyle()  
@@ -47,7 +47,7 @@ ms.locfileid: "59222044"
     ts1->MappingName = S"Customers";  
     ```  
   
-3.  새 열 스타일을 선언 하 고 해당 매핑 이름 및 기타 속성을 설정 합니다.  
+3. 새 열 스타일을 선언 하 고 해당 매핑 이름 및 기타 속성을 설정 합니다.  
   
     ```vb  
     Dim myDataCol As New DataGridBoolColumn()  
@@ -67,7 +67,7 @@ ms.locfileid: "59222044"
     myDataCol->MappingName = "Current";  
     ```  
   
-4.  호출을 **추가** 메서드는 **GridColumnStylesCollection** 열 테이블 스타일을 추가 하는 개체  
+4. 호출을 **추가** 메서드는 **GridColumnStylesCollection** 열 테이블 스타일을 추가 하는 개체  
   
     ```vb  
     ts1.GridColumnStyles.Add(myDataCol)  
@@ -81,7 +81,7 @@ ms.locfileid: "59222044"
     ts1->GridColumnStyles->Add(myDataCol);  
     ```  
   
-5.  호출을 **추가** 메서드는 **GridTableStylesCollection** 데이터 표에 테이블 스타일을 추가 하는 개체입니다.  
+5. 호출을 **추가** 메서드는 **GridTableStylesCollection** 데이터 표에 테이블 스타일을 추가 하는 개체입니다.  
   
     ```vb  
     DataGrid1.TableStyles.Add(ts1)  

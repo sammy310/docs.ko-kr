@@ -8,12 +8,12 @@ helpviewer_keywords:
 - service contracts [WCF], synchronous operations
 - service contracts [WCF], asynchronous operations
 ms.assetid: db8a51cb-67e6-411b-9035-e5821ed350c9
-ms.openlocfilehash: 3db7d6b072c7803d96deb17b33a06af3d55aca12
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 3d7e44a468388f6d9a8f30d7fea29ec465cd8664
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59148956"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59297709"
 ---
 # <a name="synchronous-and-asynchronous-operations"></a>동기 및 비동기 작업
 이 항목에서는 비동기 서비스 작업의 구현 및 호출에 대해 설명합니다.  
@@ -49,11 +49,11 @@ ms.locfileid: "59148956"
 ### <a name="implementing-an-asynchronous-service-operation"></a>비동기 서비스 작업 구현  
  다음 세 가지 방법 중 하나를 사용하여 비동기 작업을 구현할 수 있습니다.  
   
-1.  작업 기반 비동기 패턴  
+1. 작업 기반 비동기 패턴  
   
-2.  이벤트 기반 비동기 패턴  
+2. 이벤트 기반 비동기 패턴  
   
-3.  IAsyncResult 비동기 패턴  
+3. IAsyncResult 비동기 패턴  
   
 #### <a name="task-based-asynchronous-pattern"></a>작업 기반 비동기 패턴  
  작업 기반 비동기 패턴은 가장 쉽고 단순하기 때문에 비동기 작업을 구현하는 데 가장 선호하는 방법입니다. 이 방법을 사용하려면 서비스 작업을 구현하고 반환 형식으로 Task\<T>를 지정하면 됩니다. 여기서, T는 논리 연산에서 반환하는 형식입니다. 예를 들어:  

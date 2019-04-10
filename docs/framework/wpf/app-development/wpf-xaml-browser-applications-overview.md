@@ -10,12 +10,12 @@ helpviewer_keywords:
 - XAML browser applications (XBAP)
 - browser-hosted applications [WPF]
 ms.assetid: 3a7a86a8-75d5-4898-96b9-73da151e5e16
-ms.openlocfilehash: 5d7e3788ee05c14cc24bf5084b4c3b94b9fe98bc
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 81ae93871fa5e3fc46382ee9a1810808574fb043
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59194814"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59320134"
 ---
 # <a name="wpf-xaml-browser-applications-overview"></a>WPF XAML 브라우저 애플리케이션 개요
 <a name="introduction"></a>
@@ -100,25 +100,25 @@ ms.locfileid: "59194814"
 ### <a name="debugging-xbaps-that-use-hostscript"></a>HostScript를 사용하는 XBAP 디버깅  
  XBAP를 사용 하는 경우는 <xref:System.Windows.Interop.BrowserInteropHelper.HostScript%2A> 개체를 실행 하 고 Visual Studio에서 응용 프로그램을 디버깅할 지정 해야 하는 두 설정이 HTML 창과 통신 합니다. 애플리케이션은 원본 사이트에 대한 액세스 권한이 있어야 하고 XBAP가 포함된 HTML 페이지로 애플리케이션을 시작해야 합니다. 다음 단계는 이러한 두 설정을 확인하는 방법을 설명합니다.  
   
-1.  Visual Studio에서 프로젝트 속성을 엽니다.  
+1. Visual Studio에서 프로젝트 속성을 엽니다.  
   
-2.  **보안** 탭에서 **고급**을 클릭합니다.  
+2. **보안** 탭에서 **고급**을 클릭합니다.  
   
      고급 보안 설정 대화 상자가 나타납니다.  
   
-3.  **원본 사이트에 응용 프로그램 액세스 허용** 확인란을 선택했는지 확인한 후 **확인**을 클릭합니다.  
+3. **원본 사이트에 응용 프로그램 액세스 허용** 확인란을 선택했는지 확인한 후 **확인**을 클릭합니다.  
   
-4.  **디버그** 탭에서 **다음 URL로 브라우저 시작** 옵션을 선택하고 XBAP가 포함된 HTML 페이지의 URL을 지정합니다.  
+4. **디버그** 탭에서 **다음 URL로 브라우저 시작** 옵션을 선택하고 XBAP가 포함된 HTML 페이지의 URL을 지정합니다.  
   
-5.  Internet Explorer에서 **도구** 단추를 클릭하고 **인터넷 옵션**을 선택합니다.  
+5. Internet Explorer에서 **도구** 단추를 클릭하고 **인터넷 옵션**을 선택합니다.  
   
      인터넷 옵션 대화 상자가 나타납니다.  
   
-6.  **고급** 탭을 클릭합니다.  
+6. **고급** 탭을 클릭합니다.  
   
-7.  **보안** 아래 **설정** 목록에서 **[내 컴퓨터]에 있는 파일에서 액티브 콘텐츠가 실행되는 것을 허용** 확인란을 선택합니다.  
+7. **보안** 아래 **설정** 목록에서 **[내 컴퓨터]에 있는 파일에서 액티브 콘텐츠가 실행되는 것을 허용** 확인란을 선택합니다.  
   
-8.  **확인**을 클릭합니다.  
+8. **확인**을 클릭합니다.  
   
      변경 내용을 적용하려면 Internet Explorer를 다시 시작합니다.  
   
@@ -146,9 +146,9 @@ ms.locfileid: "59194814"
 ### <a name="creating-a-full-trust-xbap"></a>완전 신뢰 XBAP 만들기  
  XBAP에 완전 신뢰가 필요한 경우 이 권한을 사용하도록 프로젝트를 변경할 수 있습니다. 다음 단계는 완전 권한을 설정하는 방법을 설명합니다.  
   
-1.  Visual Studio에서 프로젝트 속성을 엽니다.  
+1. Visual Studio에서 프로젝트 속성을 엽니다.  
   
-2.  **보안** 탭에서 **완전 신뢰 응용 프로그램** 옵션을 선택합니다.  
+2. **보안** 탭에서 **완전 신뢰 응용 프로그램** 옵션을 선택합니다.  
   
  이 설정으로 다음이 변경됩니다.  
   

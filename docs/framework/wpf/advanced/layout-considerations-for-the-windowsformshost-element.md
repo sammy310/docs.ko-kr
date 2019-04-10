@@ -9,12 +9,12 @@ helpviewer_keywords:
 - dynamic layout [WPF interoperability]
 - device-independent pixels
 ms.assetid: 3c574597-bbde-440f-95cc-01371f1a5d9d
-ms.openlocfilehash: ff52d3bbf7bf5d9d85f7a6fd5f73d9730dde8fad
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 93aaa8e21ef483fc21297e29189d86f93fbe138a
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59168989"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59327856"
 ---
 # <a name="layout-considerations-for-the-windowsformshost-element"></a>WindowsFormsHost 요소에 대한 레이아웃 고려 사항
 이 항목에 설명 하는 방법을 <xref:System.Windows.Forms.Integration.WindowsFormsHost> 요소와 상호 작용 하는 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 레이아웃 시스템입니다.  
@@ -84,13 +84,13 @@ ms.locfileid: "59168989"
 ### <a name="sizing-algorithm"></a>크기 조정 알고리즘  
  <xref:System.Windows.Forms.Integration.WindowsFormsHost> 요소 다음 절차를 사용 하 여 호스트 된 컨트롤의 크기:  
   
-1.  합니다 <xref:System.Windows.Forms.Integration.WindowsFormsHost> 요소를 재정의 합니다 <xref:System.Windows.FrameworkElement.MeasureOverride%2A> 및 <xref:System.Windows.FrameworkElement.ArrangeOverride%2A> 메서드.  
+1. 합니다 <xref:System.Windows.Forms.Integration.WindowsFormsHost> 요소를 재정의 합니다 <xref:System.Windows.FrameworkElement.MeasureOverride%2A> 및 <xref:System.Windows.FrameworkElement.ArrangeOverride%2A> 메서드.  
   
-2.  호스팅된 컨트롤의 크기를 결정 하는 <xref:System.Windows.FrameworkElement.MeasureOverride%2A> 호스팅된 컨트롤의 메서드를 호출 <xref:System.Windows.Forms.Control.GetPreferredSize%2A> 제약 조건이 있는 메서드에 전달할 제약 조건에서 변환의 <xref:System.Windows.FrameworkElement.MeasureOverride%2A> 메서드.  
+2. 호스팅된 컨트롤의 크기를 결정 하는 <xref:System.Windows.FrameworkElement.MeasureOverride%2A> 호스팅된 컨트롤의 메서드를 호출 <xref:System.Windows.Forms.Control.GetPreferredSize%2A> 제약 조건이 있는 메서드에 전달할 제약 조건에서 변환의 <xref:System.Windows.FrameworkElement.MeasureOverride%2A> 메서드.  
   
-3.  <xref:System.Windows.FrameworkElement.ArrangeOverride%2A> 메서드는 지정 된 크기 제약 조건에 호스트 된 컨트롤을 설정 하려고 시도 합니다.  
+3. <xref:System.Windows.FrameworkElement.ArrangeOverride%2A> 메서드는 지정 된 크기 제약 조건에 호스트 된 컨트롤을 설정 하려고 시도 합니다.  
   
-4.  경우 호스팅된 컨트롤의 <xref:System.Windows.Forms.Control.Size%2A> 속성에 지정 된 제약 조건과 일치, 제약 조건에 호스트 된 컨트롤 크기가 조정 됩니다.  
+4. 경우 호스팅된 컨트롤의 <xref:System.Windows.Forms.Control.Size%2A> 속성에 지정 된 제약 조건과 일치, 제약 조건에 호스트 된 컨트롤 크기가 조정 됩니다.  
   
  경우는 <xref:System.Windows.Forms.Control.Size%2A> 속성이 지정된 된 제약 일치 하지 않습니다, 호스트 된 컨트롤에 연속 크기 조정을 지원 하지 않습니다. 예를 들어를 <xref:System.Windows.Forms.MonthCalendar> 컨트롤 불연속 크기만 허용 합니다. 이 컨트롤에 대 한 허용 되는 크기 높이 너비에 대 한 정수 (개월 수를 나타냄)으로 구성 됩니다. 이 같은 경우에는 <xref:System.Windows.Forms.Integration.WindowsFormsHost> 요소는 다음과 같이 동작 합니다.  
   

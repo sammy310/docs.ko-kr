@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 44d99680-69c7-4879-a732-f6771b334211
-ms.openlocfilehash: cc9f276cc278d4a9c376d72f1ab38d89ea6dd5b4
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: cb2319d51e0518114a04eea2fc7ab6b5a836b7ff
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59169600"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59328597"
 ---
 # <a name="how-to-insert-rows-into-the-database"></a>방법: 데이터베이스에 행 삽입
 연결 된 개체를 추가 하 여 데이터베이스에 행을 삽입할 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] <xref:System.Data.Linq.Table%601> 컬렉션과 다음 데이터베이스에 변경 내용을 제출 합니다. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 변경 내용을 적절 한 SQL에 변환 `INSERT` 명령입니다.  
@@ -24,11 +24,11 @@ ms.locfileid: "59169600"
   
 ### <a name="to-insert-a-row-into-the-database"></a>데이터베이스에 행을 삽입하려면  
   
-1.  전송할 행 데이터가 있는 새 개체를 만듭니다.  
+1. 전송할 행 데이터가 있는 새 개체를 만듭니다.  
   
-2.  새 개체를 추가 합니다 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] `Table` 데이터베이스에서 대상 테이블에 연결 된 컬렉션입니다.  
+2. 새 개체를 추가 합니다 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] `Table` 데이터베이스에서 대상 테이블에 연결 된 컬렉션입니다.  
   
-3.  데이터베이스에 변경 내용을 전송합니다.  
+3. 데이터베이스에 변경 내용을 전송합니다.  
   
 ## <a name="example"></a>예제  
  다음 코드 예제에서는 `Order` 형식의 새 개체를 만들어 적절한 값을 채웁니다. 그런 다음 새 개체를 `Order` 컬렉션에 추가합니다. 마지막으로 변경 내용을 `Orders` 테이블의 새 행으로 데이터베이스에 전송합니다.  

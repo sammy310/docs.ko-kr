@@ -2,12 +2,12 @@
 title: 동작을 사용하여 서버 쪽 동작 구현
 ms.date: 03/30/2017
 ms.assetid: 11a372db-7168-498b-80d2-9419ff557ba5
-ms.openlocfilehash: c21208b53745d0bf30d64ff827c1fb5e78a97cb4
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 4467d52df5dbb134947111e96782e257eef253e7
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59144120"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59294940"
 ---
 # <a name="using-actions-to-implement-server-side-behavior"></a>동작을 사용하여 서버 쪽 동작 구현
 
@@ -40,11 +40,11 @@ OData 동작을 통해 OData 서비스에서 검색한 리소스에 따른 동�
 ### <a name="idataserviceinvokable"></a>IDataServiceInvokable  
  이 인터페이스는 WCF Data Service 동작을 실행하는 방법을 제공합니다. IDataServiceInvokable을 구현하는 경우 다음 세 가지 작업을 수행해야 합니다.  
   
-1.  매개 변수를 캡처하고 잠재적으로 마샬링합니다.  
+1. 매개 변수를 캡처하고 잠재적으로 마샬링합니다.  
   
-2.  Invoke()가 호출될 때 동작을 실제로 구현하는 코드에 매개 변수를 디스패치합니다.  
+2. Invoke()가 호출될 때 동작을 실제로 구현하는 코드에 매개 변수를 디스패치합니다.  
   
-3.  GetResult()를 사용하여 결과를 검색할 수 있도록 Invoke()에서 결과를 저장합니다.  
+3. GetResult()를 사용하여 결과를 검색할 수 있도록 Invoke()에서 결과를 저장합니다.  
   
  매개 변수를 토큰으로 전달할 수 있습니다. 이는 실제 동작에 디스패치하기 전에 이러한 토큰을 실제 리소스로 변환(마샬링)해야 할 수 있는 경우 리소스를 나타내는 토큰과 함께 작동하는 데이터 서비스 공급자를 쓸 수 있기 때문입니다. 매개 변수를 마샬링한 후 동작이 호출될 때 발생하는 리소스에 대한 변경 내용을 디스크에 저장하고 쓸 수 있도록 매개 변수가 편집 가능한 상태여야 합니다.  
   

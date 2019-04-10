@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC36599
 ms.assetid: 17763dbe-f74f-4ccb-8086-cb7e45ec4d12
-ms.openlocfilehash: 344a813907483dcb0e9f531b54db68a88d77f3dc
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: a0b5633bb0efb3c67f73810552ef9a14ac3d0c70
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58842384"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59331652"
 ---
 # <a name="range-variable-name-can-be-inferred-only-from-a-simple-or-qualified-name-with-no-arguments"></a>범위 변수 이름은 인수가 없는 단순한 이름 또는 정규화된 이름에서만 유추할 수 있습니다.
 하나 이상의 인수를 사용 하는 프로그래밍 요소는 LINQ 쿼리에 포함 됩니다. 컴파일러는 해당 프로그래밍 요소에서 범위 변수를 유추할 수 없습니다.  
@@ -21,7 +21,7 @@ ms.locfileid: "58842384"
   
 ## <a name="to-correct-this-error"></a>이 오류를 해결하려면  
   
-1.  다음 코드 에서처럼 프로그래밍 요소에 대 한 명시적 변수 이름을 제공 합니다.  
+1. 다음 코드 에서처럼 프로그래밍 요소에 대 한 명시적 변수 이름을 제공 합니다.  
   
 ```  
 Dim query = From var1 In collection1   

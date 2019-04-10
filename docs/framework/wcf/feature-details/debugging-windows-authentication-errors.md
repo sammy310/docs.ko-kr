@@ -8,12 +8,12 @@ helpviewer_keywords:
 - WCF, authentication
 - WCF, Windows authentication
 ms.assetid: 181be4bd-79b1-4a66-aee2-931887a6d7cc
-ms.openlocfilehash: 45f4185df1c55ff40fce3e33fe5e0e497fa54654
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 28c70ca860083808c93fa58b498e22ea4e4ca6cb
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59228264"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59299451"
 ---
 # <a name="debugging-windows-authentication-errors"></a>Windows 인증 오류 디버깅
 Windows 인증을 보안 메커니즘으로 사용하면 SSPI(보안 지원 공급자 인터페이스)에서 보안 프로세스를 처리합니다. SSPI 계층에 보안 오류가 발생 하면 Windows Communication Foundation (WCF)으로 표시 됩니다. 이 항목에서는 오류 진단에 도움이 되는 프레임워크 및 일련의 질문을 제공합니다.  
@@ -25,11 +25,11 @@ Windows 인증을 보안 메커니즘으로 사용하면 SSPI(보안 지원 공�
 ## <a name="debugging-methodology"></a>디버깅 방법  
  기본 방법은 다음과 같습니다.  
   
-1.  Windows 인증 사용 여부를 결정합니다. 다른 스키마를 사용할 경우 이 항목이 적용되지 않습니다.  
+1. Windows 인증 사용 여부를 결정합니다. 다른 스키마를 사용할 경우 이 항목이 적용되지 않습니다.  
   
-2.  Windows 인증을 사용 하는 경우 Kerberos 직접 또는 Negotiate WCF 구성을 사용 하는지 여부를 결정 합니다.  
+2. Windows 인증을 사용 하는 경우 Kerberos 직접 또는 Negotiate WCF 구성을 사용 하는지 여부를 결정 합니다.  
   
-3.  구성에서 Kerberos 프로토콜을 사용할지 또는 NTLM을 사용할지 결정한 다음에는 올바른 컨텍스트에서 오류 메시지를 이해할 수 있습니다.  
+3. 구성에서 Kerberos 프로토콜을 사용할지 또는 NTLM을 사용할지 결정한 다음에는 올바른 컨텍스트에서 오류 메시지를 이해할 수 있습니다.  
   
 ### <a name="availability-of-the-kerberos-protocol-and-ntlm"></a>Kerberos 프로토콜 및 NTLM 사용 가능성  
  Kerberos SSP에는 Kerberos KDC(키 배포 센터) 역할을 하는 도메인 컨트롤러가 있어야 합니다. Kerberos 프로토콜은 클라이언트와 서비스 둘 다에서 도메인 ID를 사용하는 경우에만 사용할 수 있습니다. 다음 표에 요약된 것처럼 다른 계정 조합의 경우 NTLM이 사용됩니다.  
@@ -81,15 +81,15 @@ Windows 인증을 보안 메커니즘으로 사용하면 SSPI(보안 지원 공�
   
  자격 증명 협상이 포함된 Kerberos 프로토콜을 구현하려면 다음 단계를 수행합니다.  
   
-1.  <xref:System.ServiceModel.Security.WindowsClientCredential.AllowedImpersonationLevel%2A>을 <xref:System.Security.Principal.TokenImpersonationLevel.Delegation>으로 설정하여 위임을 구현합니다.  
+1. <xref:System.ServiceModel.Security.WindowsClientCredential.AllowedImpersonationLevel%2A>을 <xref:System.Security.Principal.TokenImpersonationLevel.Delegation>으로 설정하여 위임을 구현합니다.  
   
-2.  SSPI 협상이 필요합니다.  
+2. SSPI 협상이 필요합니다.  
   
     1.  표준 바인딩을 사용하는 경우 `NegotiateServiceCredential` 속성을 `true`로 설정합니다.  
   
     2.  사용자 지정 바인딩을 사용하는 경우 `AuthenticationMode` 요소의 `Security` 속성을 `SspiNegotiated`로 설정합니다.  
   
-3.  NTLM 사용을 허용하지 않고 Kerberos를 사용하려면 SSPI 협상이 필요합니다.  
+3. NTLM 사용을 허용하지 않고 Kerberos를 사용하려면 SSPI 협상이 필요합니다.  
   
     1.  다음 문 사용 하 여 코드에서이 수행 합니다. `ChannelFactory.Credentials.Windows.AllowNtlm = false`  
   

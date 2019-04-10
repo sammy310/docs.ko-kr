@@ -11,12 +11,12 @@ helpviewer_keywords:
 - MDI [Windows Forms], activating forms
 - MDI [Windows Forms], locating focus
 ms.assetid: 33880ec3-0207-4c2b-a616-ff140443cc0f
-ms.openlocfilehash: 81cb9b55f53c152e755ada1803e4ba5731498627
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 9b70824670b8f47a2346135cb31ad39bd55694d1
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59229474"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59300608"
 ---
 # <a name="how-to-determine-the-active-mdi-child"></a>방법: 활성 MDI 자식 확인
 경우에 따라 현재 활성 자식 폼에 포커스가 있는 컨트롤에서 작동 하는 명령을 제공 합니다. 예를 들어 자식 폼의 텍스트 상자에서 선택한 텍스트를 클립보드로 복사 한다고 가정 합니다. 선택한 텍스트를 사용 하 여 클립보드에 복사 하는 프로시저를 만듭니다는 <xref:System.Windows.Forms.Control.Click> 표준 편집 메뉴에서 복사 메뉴 항목의 이벤트입니다.  
@@ -27,7 +27,7 @@ ms.locfileid: "59229474"
   
 ### <a name="to-determine-the-active-mdi-child-to-copy-its-text-to-the-clipboard"></a>활성 MDI 자식 (해당 텍스트를 클립보드로 복사)를 확인 하려면  
   
-1.  인 메서드 내부의 활성 자식 폼의 활성 컨트롤의 텍스트를 클립보드에 복사 합니다.  
+1. 인 메서드 내부의 활성 자식 폼의 활성 컨트롤의 텍스트를 클립보드에 복사 합니다.  
   
     > [!NOTE]
     >  이 예제에서는 가정 MDI 부모 폼 (`Form1`) 포함 된 하나 이상의 MDI 자식 창에 있는 <xref:System.Windows.Forms.RichTextBox> 제어 합니다. 자세한 내용은 [MDI 부모 폼 만들기](how-to-create-mdi-parent-forms.md)합니다.  

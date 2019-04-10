@@ -13,12 +13,12 @@ helpviewer_keywords:
 - Font dialog box [Windows Forms], displaying
 - fonts [Windows Forms], selecting
 ms.assetid: 35692c1b-0937-4b7a-9207-1ae6bdc244a0
-ms.openlocfilehash: fba9caecc71c5cb77c811fc112616647c79689c6
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 40679136ea62a437009b308a8b206cf251b46222
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59220190"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59307328"
 ---
 # <a name="how-to-show-a-font-list-with-the-fontdialog-component"></a>방법: FontDialog 구성 요소를 사용하여 글꼴 목록 표시
 합니다 [FontDialog](fontdialog-component-windows-forms.md) 구성 요소 글꼴을 선택할 수 있을 뿐만 아니라 해당 가중치 및 크기와 같은 표시 요소를 변경할 수 있습니다.  
@@ -27,11 +27,11 @@ ms.locfileid: "59220190"
   
 ### <a name="to-select-font-properties-using-the-fontdialog-component"></a>FontDialog 구성 요소를 사용 하 여 글꼴 속성을 선택 하려면  
   
-1.  사용 하 여 대화 상자를 표시 합니다 <xref:System.Windows.Forms.CommonDialog.ShowDialog%2A> 메서드.  
+1. 사용 하 여 대화 상자를 표시 합니다 <xref:System.Windows.Forms.CommonDialog.ShowDialog%2A> 메서드.  
   
-2.  사용 된 <xref:System.Windows.Forms.DialogResult> 속성 대화 상자를 닫은 방법을 확인 하려면.  
+2. 사용 된 <xref:System.Windows.Forms.DialogResult> 속성 대화 상자를 닫은 방법을 확인 하려면.  
   
-3.  사용 된 <xref:System.Windows.Forms.FontDialog.Font%2A> 원하는 글꼴을 설정 하는 속성입니다.  
+3. 사용 된 <xref:System.Windows.Forms.FontDialog.Font%2A> 원하는 글꼴을 설정 하는 속성입니다.  
   
      아래 예제에서는 <xref:System.Windows.Forms.Button> 컨트롤의 <xref:System.Windows.Forms.Control.Click> 이벤트 처리기가 열립니다는 <xref:System.Windows.Forms.FontDialog> 구성 요소입니다. 경우 글꼴을 선택 하 고 사용자가 **확인**, <xref:System.Windows.Forms.FontDialog.Font%2A> 의 속성을 <xref:System.Windows.Forms.TextBox> 선택한 글꼴 폼에는 컨트롤 설정 됩니다. 이 예제에서는 폼에 가정를 <xref:System.Windows.Forms.Button> 컨트롤을 <xref:System.Windows.Forms.TextBox> 컨트롤 및 <xref:System.Windows.Forms.FontDialog> 구성 요소입니다.  
   

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - SplitContainer control [Windows Forms], Explorer-style interface
 - forms [Windows Forms], Windows Explorer type
 ms.assetid: 9a3d5f4f-5dda-4350-9ad5-57ce5976dc47
-ms.openlocfilehash: e559702d5fd7f0f56c7b2b010713e3129504746a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: dd70feaba29e29748ac56729632fa359582a6914
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59192136"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59327375"
 ---
 # <a name="how-to-create-a-windows-explorerstyle-interface-on-a-windows-form"></a>방법: Windows Form에 Windows 탐색기 스타일 인터페이스 만들기
 Windows 탐색기는 쉽게 사용할 수 있으므로 응용 프로그램에 대 한 공통 사용자 인터페이스 좋습니다.  
@@ -25,9 +25,9 @@ Windows 탐색기는 쉽게 사용할 수 있으므로 응용 프로그램에 �
   
 ### <a name="to-create-a-windows-explorer-style-windows-form"></a>Windows 탐색기 스타일 Windows 폼을 만들려면  
   
-1.  새 Windows 응용 프로그램 프로젝트를 만듭니다 (**파일** > **새로 만들기** > **프로젝트** > **Visual C#** 나 **Visual Basic** > **클래식 바탕 화면** > **Windows Forms 응용 프로그램**).  
+1. 새 Windows 응용 프로그램 프로젝트를 만듭니다 (**파일** > **새로 만들기** > **프로젝트** > **Visual C#** 나 **Visual Basic** > **클래식 바탕 화면** > **Windows Forms 응용 프로그램**).  
   
-2.  **도구 상자**:  
+2. **도구 상자**:  
   
     1.  끌어서를 <xref:System.Windows.Forms.SplitContainer> 컨트롤을 폼으로 합니다.  
   
@@ -35,14 +35,14 @@ Windows 탐색기는 쉽게 사용할 수 있으므로 응용 프로그램에 �
   
     3.  끌어서를 <xref:System.Windows.Forms.ListView> 컨트롤을 **SplitterPanel2** (의 패널 합니다 <xref:System.Windows.Forms.SplitContainer> 표시 컨트롤 **Panel2**).  
   
-3.  CTRL 키를 차례로 클릭 하 여 모든 3 가지 컨트롤을 선택 합니다. 선택 하는 경우는 <xref:System.Windows.Forms.SplitContainer> 컨트롤, 패널 대신 분할 막대를 클릭 합니다.  
+3. CTRL 키를 차례로 클릭 하 여 모든 3 가지 컨트롤을 선택 합니다. 선택 하는 경우는 <xref:System.Windows.Forms.SplitContainer> 컨트롤, 패널 대신 분할 막대를 클릭 합니다.  
   
     > [!NOTE]
     >  사용 하지 않는 합니다 **모두 선택** 명령을 합니다 **편집** 메뉴. 이렇게 하면 다음 단계에 필요한 속성에 표시 되지 것입니다 합니다 **속성** 창입니다.  
   
-4.  **속성** 창에서 <xref:System.Windows.Forms.SplitContainer.Dock%2A> 속성을 <xref:System.Windows.Forms.DockStyle.Fill>로 설정합니다.  
+4. **속성** 창에서 <xref:System.Windows.Forms.SplitContainer.Dock%2A> 속성을 <xref:System.Windows.Forms.DockStyle.Fill>로 설정합니다.  
   
-5.  F5 키를 눌러 애플리케이션을 실행합니다.  
+5. F5 키를 눌러 애플리케이션을 실행합니다.  
   
      Windows 탐색기와 비슷한 두 부분으로 구성 사용자 인터페이스를 표시 합니다.  
   

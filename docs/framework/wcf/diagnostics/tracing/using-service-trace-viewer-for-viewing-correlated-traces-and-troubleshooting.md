@@ -2,12 +2,12 @@
 title: Service Trace Viewer를 사용하여 상호 관련된 추적 보기 및 문제 해결
 ms.date: 03/30/2017
 ms.assetid: 05d2321c-8acb-49d7-a6cd-8ef2220c6775
-ms.openlocfilehash: 80a19bf1e433ffcb0dcf29a4636fb79bedaeeb61
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: dd5fe08054b3a10c1663a7dd7dab5f9de5327cbb
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59160669"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59329052"
 ---
 # <a name="using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting"></a>Service Trace Viewer를 사용하여 상호 관련된 추적 보기 및 문제 해결
 이 항목에서는 추적 데이터 형식, 추적 데이터를 보는 방법 및 Service Trace Viewer를 사용하여 응용 프로그램 문제를 해결하는 방법에 대해 설명합니다.  
@@ -152,17 +152,17 @@ ms.locfileid: "59160669"
   
  서비스에서 활동 모델 WCF 개념을 다음과 같이 매핑합니다.  
   
-1.  ServiceHost를 생성하고 엽니다. 이렇게 하면 보안의 경우 여러 호스트 관련 동작을 만들 수 있습니다.  
+1. ServiceHost를 생성하고 엽니다. 이렇게 하면 보안의 경우 여러 호스트 관련 동작을 만들 수 있습니다.  
   
-2.  Open ServiceHost 내부 및 외부로 전송하여 ServiceHost에서 각 수신기에 대한 Listen At 동작을 만듭니다.  
+2. Open ServiceHost 내부 및 외부로 전송하여 ServiceHost에서 각 수신기에 대한 Listen At 동작을 만듭니다.  
   
-3.  수신기 클라이언트에서 시작 된 통신 요청을 감지 하면 클라이언트에서 보낸 모든 바이트가 처리 되는, "Receive Bytes" 동작으로 전송 합니다. 이 동작에서 클라이언트-서비스 상호 작용 중에 발생한 연결 오류가 표시됩니다.  
+3. 수신기 클라이언트에서 시작 된 통신 요청을 감지 하면 클라이언트에서 보낸 모든 바이트가 처리 되는, "Receive Bytes" 동작으로 전송 합니다. 이 동작에서 클라이언트-서비스 상호 작용 중에 발생한 연결 오류가 표시됩니다.  
   
-4.  각 바이트 집합 수신 되는 메시지에 해당 하는,에서는 처리 "메시지 처리" 작업을 이러한 바이트는 WCF 메시지 개체를 만들겠습니다. 이 동작에서 악의적인 메시지 또는 잘못된 봉투와 관련된 오류가 표시됩니다.  
+4. 각 바이트 집합 수신 되는 메시지에 해당 하는,에서는 처리 "메시지 처리" 작업을 이러한 바이트는 WCF 메시지 개체를 만들겠습니다. 이 동작에서 악의적인 메시지 또는 잘못된 봉투와 관련된 오류가 표시됩니다.  
   
-5.  메시지가 형성되면 Process Action 동작으로 전송합니다. `propagateActivity`가 클라이언트와 서버에서 모두 `true`로 설정되는 경우 이 동작에는 클라이언트에서 정의되고 앞에서 설명한 것과 동일한 ID를 갖게 됩니다. 이 단계에서 먼저 끝점을 통해 직접적인 상관 관계의 이점을 활용 하도록 요청에 관련 된 WCF에서 내보낸 모든 추적이 응답 메시지 처리를 포함 하 여 같은 동작에 있으므로 합니다.  
+5. 메시지가 형성되면 Process Action 동작으로 전송합니다. `propagateActivity`가 클라이언트와 서버에서 모두 `true`로 설정되는 경우 이 동작에는 클라이언트에서 정의되고 앞에서 설명한 것과 동일한 ID를 갖게 됩니다. 이 단계에서 먼저 끝점을 통해 직접적인 상관 관계의 이점을 활용 하도록 요청에 관련 된 WCF에서 내보낸 모든 추적이 응답 메시지 처리를 포함 하 여 같은 동작에 있으므로 합니다.  
   
-6.  Out of process 작업에 대 한 WCF에서 내보낸 추적과 사용자 코드에서 내보낸 추적을 격리 하기 위한 "사용자 코드 실행" 작업을 만들겠습니다. 앞의 예제에서 해당 하는 경우 클라이언트가 전파 한 동작이에 없는 사용자 코드 실행"작업의"서비스가 추가 응답을 보냅니다"추적을 내보냅니다.  
+6. Out of process 작업에 대 한 WCF에서 내보낸 추적과 사용자 코드에서 내보낸 추적을 격리 하기 위한 "사용자 코드 실행" 작업을 만들겠습니다. 앞의 예제에서 해당 하는 경우 클라이언트가 전파 한 동작이에 없는 사용자 코드 실행"작업의"서비스가 추가 응답을 보냅니다"추적을 내보냅니다.  
   
  다음 그림에서 왼쪽의 첫 번째 동작은 기본 동작인 루트 동작(0000)입니다. 다음 세 동작은 ServiceHost를 여는 동작입니다. 열 5의 동작은 수신기이고, 나머지 동작(6 - 8)은 바이트 처리부터 사용자 코드 활성화까지 메시지를 처리하는 WCF입니다.  
 

@@ -11,12 +11,12 @@ helpviewer_keywords:
 - TextBox control [Windows Forms], viewing multiple lines
 - carriage return
 ms.assetid: 43173201-0b74-4067-a472-605029ca5f35
-ms.openlocfilehash: f7a0e3a14d14f0629bd9995dbecd3f0b98bea1d8
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 47404f02a753fe143dd573bdf73143416872af9d
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59190914"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59324190"
 ---
 # <a name="how-to-view-multiple-lines-in-the-windows-forms-textbox-control"></a>방법: Windows Forms TextBox 컨트롤에서 여러 줄 표시
 기본적으로 Windows Forms <xref:System.Windows.Forms.TextBox> 컨트롤을 한 줄 텍스트를 표시 하 고 스크롤 막대를 표시 하지 않습니다. 텍스트가 사용 가능한 공간 보다 긴 경우 텍스트의 일부만 표시 됩니다. 설정 하 여이 기본 동작을 변경할 수는 <xref:System.Windows.Forms.TextBox.Multiline%2A>, <xref:System.Windows.Forms.TextBoxBase.WordWrap%2A>, 및 <xref:System.Windows.Forms.TextBox.ScrollBars%2A> 속성을 적절 한 값입니다.  
@@ -29,9 +29,9 @@ ms.locfileid: "59190914"
   
 ### <a name="to-view-multiple-lines-in-the-textbox-control"></a>여러 줄 TextBox 컨트롤에서 보려면  
   
-1.  <xref:System.Windows.Forms.TextBox.Multiline%2A> 속성을 `true`으로 설정합니다. 하는 경우 <xref:System.Windows.Forms.TextBoxBase.WordWrap%2A> 는 `true` (기본값) 다음 컨트롤의 텍스트를 하나 이상의 단락 표시 되지만 그렇지 않은 경우 일부 줄 컨트롤의 가장자리에 클리핑 되는 목록으로 표시 됩니다.  
+1. <xref:System.Windows.Forms.TextBox.Multiline%2A> 속성을 `true`으로 설정합니다. 하는 경우 <xref:System.Windows.Forms.TextBoxBase.WordWrap%2A> 는 `true` (기본값) 다음 컨트롤의 텍스트를 하나 이상의 단락 표시 되지만 그렇지 않은 경우 일부 줄 컨트롤의 가장자리에 클리핑 되는 목록으로 표시 됩니다.  
   
-2.  <xref:System.Windows.Forms.TextBox.ScrollBars%2A> 속성을 적절한 값으로 설정합니다.  
+2. <xref:System.Windows.Forms.TextBox.ScrollBars%2A> 속성을 적절한 값으로 설정합니다.  
   
     |값|설명|  
     |-----------|-----------------|  
@@ -39,7 +39,7 @@ ms.locfileid: "59190914"
     |<xref:System.Windows.Forms.ScrollBars.Horizontal>|줄의 너비 보다 길 수 중 일부는 목록을 표시 하려면이 값을 사용 합니다 <xref:System.Windows.Forms.TextBox> 제어 합니다.|  
     |<xref:System.Windows.Forms.ScrollBars.Both>|목록 컨트롤의 높이 보다 길 수 있으면이 값을 사용 합니다.|  
   
-3.  <xref:System.Windows.Forms.TextBoxBase.WordWrap%2A> 속성을 적절한 값으로 설정합니다.  
+3. <xref:System.Windows.Forms.TextBoxBase.WordWrap%2A> 속성을 적절한 값으로 설정합니다.  
   
     |값|설명|  
     |-----------|-----------------|  

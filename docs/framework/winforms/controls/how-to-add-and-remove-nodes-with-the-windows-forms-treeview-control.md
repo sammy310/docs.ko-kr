@@ -11,19 +11,19 @@ helpviewer_keywords:
 - tree nodes in TreeView control
 - TreeView control [Windows Forms], adding nodes
 ms.assetid: de1b82db-4905-449a-9f59-af271a6b6673
-ms.openlocfilehash: 1849e3ae88b9805f74b2f792ad53b02aa87e6569
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 4cbb5fbdb24790a7ddbce5c38060703c7ba7024a
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59209517"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59326894"
 ---
 # <a name="how-to-add-and-remove-nodes-with-the-windows-forms-treeview-control"></a>방법: Windows Forms TreeView 컨트롤을 사용하여 노드 추가 및 제거
 Windows Forms <xref:System.Windows.Forms.TreeView> 컨트롤의 최상위 노드를 저장 합니다. 해당 <xref:System.Windows.Forms.TreeView.Nodes%2A> 컬렉션입니다. 각 <xref:System.Windows.Forms.TreeNode> 역시 자체 <xref:System.Windows.Forms.TreeNode.Nodes%2A> 해당 자식 노드를 저장 하는 컬렉션입니다. 두 컬렉션 속성은 <xref:System.Windows.Forms.TreeNodeCollection>를 추가할 수 있도록 하는 표준 컬렉션 멤버를 제거 및 단일 노드 계층 구조 수준에서 노드를 다시 정렬 제공 합니다.  
   
 ### <a name="to-add-nodes-programmatically"></a>프로그래밍 방식으로 노드를 추가 하려면  
   
-1.  사용 된 <xref:System.Windows.Forms.TreeNodeCollection.Add%2A> 트리 뷰의 메서드의 <xref:System.Windows.Forms.TreeView.Nodes%2A> 속성입니다.  
+1. 사용 된 <xref:System.Windows.Forms.TreeNodeCollection.Add%2A> 트리 뷰의 메서드의 <xref:System.Windows.Forms.TreeView.Nodes%2A> 속성입니다.  
   
     ```vb  
     ' Adds new node as a child node of the currently selected node.  
@@ -45,7 +45,7 @@ Windows Forms <xref:System.Windows.Forms.TreeView> 컨트롤의 최상위 노드
   
 ### <a name="to-remove-nodes-programmatically"></a>프로그래밍 방식으로 노드를 제거 하려면  
   
-1.  사용 된 <xref:System.Windows.Forms.TreeNodeCollection.Remove%2A> 트리 뷰의 메서드의 <xref:System.Windows.Forms.TreeView.Nodes%2A> 단일 노드를 제거 하려면 속성 또는 <xref:System.Windows.Forms.TreeNodeCollection.Clear%2A> 모든 노드를 선택 취소 하는 방법.  
+1. 사용 된 <xref:System.Windows.Forms.TreeNodeCollection.Remove%2A> 트리 뷰의 메서드의 <xref:System.Windows.Forms.TreeView.Nodes%2A> 단일 노드를 제거 하려면 속성 또는 <xref:System.Windows.Forms.TreeNodeCollection.Clear%2A> 모든 노드를 선택 취소 하는 방법.  
   
     ```vb  
     ' Removes currently selected node, or root if nothing is selected.  

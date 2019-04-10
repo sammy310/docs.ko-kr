@@ -2,12 +2,12 @@
 title: 고가용성 및 재해 복구에 대한 SqlClient 지원
 ms.date: 03/30/2017
 ms.assetid: 61e0b396-09d7-4e13-9711-7dcbcbd103a0
-ms.openlocfilehash: 744b24f0a4826c52908141183875a8a7f8c22f2b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 40054378319b81113dcb8f40cb82a8b1d02fc594
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59213794"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59307614"
 ---
 # <a name="sqlclient-support-for-high-availability-disaster-recovery"></a>고가용성 및 재해 복구에 대한 SqlClient 지원
 이 항목에서는 고가용성, 재해 복구, AlwaysOn 가용성 그룹에 대한 SqlClient 지원([!INCLUDE[net_v45](../../../../../includes/net-v45-md.md)]에 추가됨)에 대해 설명합니다.  SQL Server 2012 AlwaysOn 가용성 그룹 기능이 추가 되었습니다. AlwaysOn 가용성 그룹에 대 한 자세한 내용은 SQL Server 온라인 설명서를 참조 합니다.  
@@ -27,9 +27,9 @@ ms.locfileid: "59213794"
   
  다음 항목을 사용하여 연결 문자열 키워드를 프로그래밍 방식으로 수정할 수 있습니다.  
   
-1.  <xref:System.Data.SqlClient.SqlConnectionStringBuilder.ApplicationIntent%2A>  
+1. <xref:System.Data.SqlClient.SqlConnectionStringBuilder.ApplicationIntent%2A>  
   
-2.  <xref:System.Data.SqlClient.SqlConnectionStringBuilder.MultiSubnetFailover%2A>  
+2. <xref:System.Data.SqlClient.SqlConnectionStringBuilder.MultiSubnetFailover%2A>  
 
 > [!NOTE]
 >  설정 `MultiSubnetFailover` 하 `true` 필요 하지 않습니다 [!INCLUDE[net_v461](../../../../../includes/net-v461-md.md)] 이상 버전.
@@ -59,9 +59,9 @@ ms.locfileid: "59213794"
   
  읽기 전용 라우팅이 적용되지 않는 경우 다음과 같은 경우 보조 복제본 위치에 연결하면 실패합니다.  
   
-1.  보조 복제본 위치가 연결을 수락하도록 구성되어 있지 않은 경우  
+1. 보조 복제본 위치가 연결을 수락하도록 구성되어 있지 않은 경우  
   
-2.  응용 프로그램이 `ApplicationIntent=ReadWrite`(아래에 설명)를 사용하고 보조 복제본 위치가 읽기 전용 액세스용으로 구성되어 있는 경우  
+2. 응용 프로그램이 `ApplicationIntent=ReadWrite`(아래에 설명)를 사용하고 보조 복제본 위치가 읽기 전용 액세스용으로 구성되어 있는 경우  
   
  <xref:System.Data.SqlClient.SqlDependency> 읽기 전용 보조 복제본에서 지원 되지 않습니다.  
   
@@ -86,11 +86,11 @@ ms.locfileid: "59213794"
 ## <a name="read-only-routing"></a>읽기 전용 라우팅  
  읽기 전용 라우팅은 데이터베이스의 읽기 전용 복사본의 가용성을 유지할 수 있는 기능입니다. 읽기 전용 라우팅을 활성화하려면:  
   
-1.  AlwaysOn 가용성 그룹의 가용성 그룹 수신기에 연결해야 합니다.  
+1. AlwaysOn 가용성 그룹의 가용성 그룹 수신기에 연결해야 합니다.  
   
-2.  `ApplicationIntent` 연결 문자열 키워드를 `ReadOnly`로 설정해야 합니다.  
+2. `ApplicationIntent` 연결 문자열 키워드를 `ReadOnly`로 설정해야 합니다.  
   
-3.  읽기 전용 라우팅을 설정하려면 데이터베이스 관리자가 가용성 그룹을 구성해야 합니다.  
+3. 읽기 전용 라우팅을 설정하려면 데이터베이스 관리자가 가용성 그룹을 구성해야 합니다.  
   
  읽기 전용 라우팅을 사용하는 여러 연결 중 일부가 동일한 읽기 전용 복사본에 연결되지 않을 수 있습니다. 데이터베이스 동기화를 변경하거나 서버 라우팅 구성을 변경하면 클라이언트를 다른 읽기 전용 복사본에 연결할 수 있습니다. 모든 읽기 전용 요청을 동일한 읽기 전용 복제본에 연결하려면 가용성 그룹 수신기를 `Data Source` 연결 문자열 키워드에 전달하지 마십시오. 대신, 읽기 전용 인스턴스의 이름을 지정합니다.  
   

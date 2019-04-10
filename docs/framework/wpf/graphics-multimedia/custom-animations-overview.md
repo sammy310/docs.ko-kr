@@ -8,12 +8,12 @@ helpviewer_keywords:
 - animation [WPF], custom classes
 - custom animation classes [WPF]
 ms.assetid: 9be69d50-3384-4938-886f-08ce00e4a7a6
-ms.openlocfilehash: 78c32c8aa1cf63ad6b9c9c51d856b02ccec68384
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 268d218097233aee795154226cc6f7c3ce318f5c
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59190732"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59313946"
 ---
 # <a name="custom-animations-overview"></a>사용자 지정 애니메이션 개요
 이 항목에서는 사용자 지정 키 프레임, 애니메이션 클래스를 만들거나, 프레임당 콜백을 사용하여 애니메이션 시스템을 무시하는 방식으로 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 애니메이션 시스템을 확장하는 방법 및 시기에 대해 설명합니다.  
@@ -99,9 +99,9 @@ ms.locfileid: "59190732"
   
  권장되는 패러다임([!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 애니메이션에서 사용)은 다음 두 상속 수준을 사용하는 것입니다.  
   
-1.  만들기는 추상  *\<유형 >* AnimationBase 클래스에서 파생 되는 <xref:System.Windows.Media.Animation.AnimationTimeline>합니다. 이 클래스를 재정의 해야 합니다 <xref:System.Windows.Media.Animation.AnimationTimeline.TargetPropertyType%2A> 메서드. 또한 새 추상 메서드인 GetCurrentValueCore를 도입 하 고 재정의 <xref:System.Windows.Media.Animation.AnimationTimeline.GetCurrentValue%2A> GetCurrentValueCore 호출 기본 원본 값 및 기본 대상 값 매개 변수 형식, 유효한 지 확인 하도록 합니다.  
+1. 만들기는 추상  *\<유형 >* AnimationBase 클래스에서 파생 되는 <xref:System.Windows.Media.Animation.AnimationTimeline>합니다. 이 클래스를 재정의 해야 합니다 <xref:System.Windows.Media.Animation.AnimationTimeline.TargetPropertyType%2A> 메서드. 또한 새 추상 메서드인 GetCurrentValueCore를 도입 하 고 재정의 <xref:System.Windows.Media.Animation.AnimationTimeline.GetCurrentValue%2A> GetCurrentValueCore 호출 기본 원본 값 및 기본 대상 값 매개 변수 형식, 유효한 지 확인 하도록 합니다.  
   
-2.  상속 되는 다른 클래스 만들기에서 새  *\<형식 >* AnimationBase 클래스 재정의 및 합니다 <xref:System.Windows.Freezable.CreateInstanceCore%2A> 메서드, 도입한 GetCurrentValueCore 메서드 및 <xref:System.Windows.Media.Animation.AnimationTimeline.IsDestinationDefault%2A> 속성.  
+2. 상속 되는 다른 클래스 만들기에서 새  *\<형식 >* AnimationBase 클래스 재정의 및 합니다 <xref:System.Windows.Freezable.CreateInstanceCore%2A> 메서드, 도입한 GetCurrentValueCore 메서드 및 <xref:System.Windows.Media.Animation.AnimationTimeline.IsDestinationDefault%2A> 속성.  
   
  **대체 방법**  
   

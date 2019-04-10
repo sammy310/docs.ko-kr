@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 21726de1-61ee-4fdc-9dd0-3be49324d066
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 58edf1c6f2dca5c2b269370139533f1f8da17813
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 85cf8f32a3dbf283e75052548f5963e8a7da0ed2
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59222720"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59321057"
 ---
 # <a name="how-to-create-and-initialize-trace-listeners"></a>방법: 추적 수신기 만들기 및 초기화
 <xref:System.Diagnostics.Debug?displayProperty=nameWithType> 및 <xref:System.Diagnostics.Trace?displayProperty=nameWithType> 클래스는 메시지를 수신하고 처리하는 수신기라는 개체에 메시지를 보냅니다. 추적이나 디버깅을 사용하면 이러한 수신기 중 하나인 <xref:System.Diagnostics.DefaultTraceListener?displayProperty=nameWithType>가 자동으로 만들어지고 초기화됩니다. <xref:System.Diagnostics.Trace> 또는 <xref:System.Diagnostics.Debug> 출력을 추가 소스에 보내려면 추가 추적 수신기를 만들고 초기화해야 합니다.  
@@ -29,7 +29,7 @@ ms.locfileid: "59222720"
   
 ### <a name="to-create-and-use-a-trace-listener-by-using-a-configuration-file"></a>구성 파일을 사용하여 추적 수신기를 만들고 사용하려면  
   
-1.  응용 프로그램 구성 파일에서 추적 수신기를 선언합니다. 만드는 수신기에 다른 개체가 필요하면 이들 개체도 선언합니다. 다음 예제에서는 텍스트 파일을 `TextWriterOutput.log`에 쓰는 `myListener`라는 수신기를 만드는 방법을 보여 줍니다.  
+1. 응용 프로그램 구성 파일에서 추적 수신기를 선언합니다. 만드는 수신기에 다른 개체가 필요하면 이들 개체도 선언합니다. 다음 예제에서는 텍스트 파일을 `TextWriterOutput.log`에 쓰는 `myListener`라는 수신기를 만드는 방법을 보여 줍니다.  
   
     ```xml  
     <configuration>  
@@ -44,7 +44,7 @@ ms.locfileid: "59222720"
     </configuration>  
     ```  
   
-2.  코드에서 <xref:System.Diagnostics.Trace> 클래스를 사용하여 추적 수신기에 메시지를 씁니다.  
+2. 코드에서 <xref:System.Diagnostics.Trace> 클래스를 사용하여 추적 수신기에 메시지를 씁니다.  
   
     ```vb  
     Trace.TraceInformation("Test message.")  

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - tables [Windows Forms], adding to DataGrid control
 - DataGrid control [Windows Forms], adding tables and columns
 ms.assetid: 4a6d1b34-b696-476b-bf8a-57c6230aa9e1
-ms.openlocfilehash: 18849e61ea9af503d49e6be1894e7ebd53cce9fb
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 5e530b475745a3df7482b9ea4276f004d13ec055
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59201535"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59329962"
 ---
 # <a name="how-to-add-tables-and-columns-to-the-windows-forms-datagrid-control-using-the-designer"></a>방법: 디자이너를 사용하여 Windows Forms DataGrid 컨트롤에 테이블 및 열 추가
 
@@ -27,35 +27,35 @@ ms.locfileid: "59201535"
   
 ### <a name="to-add-a-table-to-the-datagrid-control-in-the-designer"></a>테이블을 DataGrid 컨트롤 디자이너에 추가 하려면  
   
-1.  테이블의 데이터를 표시 하려면 먼저 바인딩해야 합니다 <xref:System.Windows.Forms.DataGrid> 데이터 집합에는 컨트롤입니다. 자세한 내용은 [방법: 데이터 원본 디자이너를 사용 하 여 Windows Forms DataGrid 컨트롤을 바인딩할](bind-wf-datagrid-control-to-a-data-source-using-the-designer.md)합니다.  
+1. 테이블의 데이터를 표시 하려면 먼저 바인딩해야 합니다 <xref:System.Windows.Forms.DataGrid> 데이터 집합에는 컨트롤입니다. 자세한 내용은 [방법: 데이터 원본 디자이너를 사용 하 여 Windows Forms DataGrid 컨트롤을 바인딩할](bind-wf-datagrid-control-to-a-data-source-using-the-designer.md)합니다.  
   
-2.  선택 된 <xref:System.Windows.Forms.DataGrid> 컨트롤의 <xref:System.Windows.Forms.DataGrid.TableStyles%2A> 속성이 속성 창에서 줄임표 단추를 클릭 하 고 (![VisualStudioEllipsesButton 스크린 샷](../media/vbellipsesbutton.png "vbEllipsesButton")) 옆에 속성을 표시 합니다 **DataGridTableStyle 컬렉션 편집기**합니다.  
+2. 선택 된 <xref:System.Windows.Forms.DataGrid> 컨트롤의 <xref:System.Windows.Forms.DataGrid.TableStyles%2A> 속성이 속성 창에서 줄임표 단추를 클릭 하 고 (![VisualStudioEllipsesButton 스크린 샷](../media/vbellipsesbutton.png "vbEllipsesButton")) 옆에 속성을 표시 합니다 **DataGridTableStyle 컬렉션 편집기**합니다.  
   
-3.  컬렉션 편집기에서 클릭 **추가** 테이블 스타일을 삽입 합니다.  
+3. 컬렉션 편집기에서 클릭 **추가** 테이블 스타일을 삽입 합니다.  
   
-4.  클릭 **확인** 컬렉션 편집기를 닫고 옆 줄임표 단추를 클릭 하 여 닫은 <xref:System.Windows.Forms.DataGrid.TableStyles%2A> 속성입니다.  
+4. 클릭 **확인** 컬렉션 편집기를 닫고 옆 줄임표 단추를 클릭 하 여 닫은 <xref:System.Windows.Forms.DataGrid.TableStyles%2A> 속성입니다.  
   
      컨트롤에 바인딩된 데이터 테이블에 대 한 드롭다운 목록에 표시 됩니다 컬렉션 편집기를 열면는 <xref:System.Windows.Forms.DataGridTableStyle.MappingName%2A> 테이블 스타일의 속성입니다.  
   
-5.  에 **멤버** 상자 컬렉션 편집기의 테이블 스타일을 클릭 합니다.  
+5. 에 **멤버** 상자 컬렉션 편집기의 테이블 스타일을 클릭 합니다.  
   
-6.  에 **속성** 컬렉션 편집기 선택 상자는 <xref:System.Windows.Forms.DataGridTableStyle.MappingName%2A> 표시 하려는 테이블에 대 한 값입니다.  
+6. 에 **속성** 컬렉션 편집기 선택 상자는 <xref:System.Windows.Forms.DataGridTableStyle.MappingName%2A> 표시 하려는 테이블에 대 한 값입니다.  
   
 ### <a name="to-add-a-column-to-the-datagrid-control-in-the-designer"></a>디자이너에서 DataGrid 컨트롤에 열을 추가 하려면  
   
-1.  에 **멤버** 상자를 **DataGridTableStyle 컬렉션 편집기**, 해당 테이블 스타일을 선택 합니다. 에 **속성** 컬렉션 편집기 선택 상자는 <xref:System.Windows.Forms.DataGridTableStyle.GridColumnStyles%2A> 컬렉션, 줄임표 단추를 클릭 하 고 (![VisualStudioEllipsesButton 스크린 샷](../media/vbellipsesbutton.png " vbEllipsesButton")) 표시할 속성 옆에 **DataGridColumnStyle 컬렉션 편집기**합니다.  
+1. 에 **멤버** 상자를 **DataGridTableStyle 컬렉션 편집기**, 해당 테이블 스타일을 선택 합니다. 에 **속성** 컬렉션 편집기 선택 상자는 <xref:System.Windows.Forms.DataGridTableStyle.GridColumnStyles%2A> 컬렉션, 줄임표 단추를 클릭 하 고 (![VisualStudioEllipsesButton 스크린 샷](../media/vbellipsesbutton.png " vbEllipsesButton")) 표시할 속성 옆에 **DataGridColumnStyle 컬렉션 편집기**합니다.  
   
-2.  컬렉션 편집기에서 클릭 **추가** 열 스타일을 삽입 하거나 옆에서 아래쪽 화살표를 클릭 **추가** 열 형식을 지정할 수 있습니다.  
+2. 컬렉션 편집기에서 클릭 **추가** 열 스타일을 삽입 하거나 옆에서 아래쪽 화살표를 클릭 **추가** 열 형식을 지정할 수 있습니다.  
   
      드롭다운 목록 상자에서 선택할 수 있습니다 합니다 <xref:System.Windows.Forms.DataGridTextBoxColumn> 또는 <xref:System.Windows.Forms.DataGridBoolColumn> 형식입니다.  
   
-3.  닫으려면 확인을 클릭 합니다 **DataGridColumnStyle 컬렉션 편집기**를 닫은 다음 옆에 있는 줄임표 단추를 클릭 하 여는 <xref:System.Windows.Forms.DataGridTableStyle.GridColumnStyles%2A> 속성.  
+3. 닫으려면 확인을 클릭 합니다 **DataGridColumnStyle 컬렉션 편집기**를 닫은 다음 옆에 있는 줄임표 단추를 클릭 하 여는 <xref:System.Windows.Forms.DataGridTableStyle.GridColumnStyles%2A> 속성.  
   
      드롭다운 목록에 바인딩된 데이터 테이블의 모든 데이터 열 컬렉션 편집기를 열면 나타납니다는 <xref:System.Windows.Forms.DataGridColumnStyle.MappingName%2A> 열 스타일의 속성입니다.  
   
-4.  에 **멤버** 상자 컬렉션 편집기를 열 스타일을 클릭 합니다.  
+4. 에 **멤버** 상자 컬렉션 편집기를 열 스타일을 클릭 합니다.  
   
-5.  에 **속성** 컬렉션 편집기 선택 상자는 <xref:System.Windows.Forms.DataGridColumnStyle.MappingName%2A> 표시 하려는 열에 대 한 값입니다.  
+5. 에 **속성** 컬렉션 편집기 선택 상자는 <xref:System.Windows.Forms.DataGridColumnStyle.MappingName%2A> 표시 하려는 열에 대 한 값입니다.  
   
 ## <a name="see-also"></a>참고자료
 

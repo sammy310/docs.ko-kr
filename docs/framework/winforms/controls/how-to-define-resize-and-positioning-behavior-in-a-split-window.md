@@ -9,12 +9,12 @@ helpviewer_keywords:
 - splitter windows [Windows Forms], resizing
 - SplitContainer control [Windows Forms], resizing
 ms.assetid: 9bf73f36-ed2d-4a02-b15a-0770eff4fdfa
-ms.openlocfilehash: 4ed1d2a5230502bc598906da0db5164396986e66
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 8cdcfdfaa135a92ed6a6e96d4a72de2c97f2493d
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59217070"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59328675"
 ---
 # <a name="how-to-define-resize-and-positioning-behavior-in-a-split-window"></a>방법: 분할 창에서 크기 조정 및 위치 지정 동작 정의
 패널을 <xref:System.Windows.Forms.SplitContainer> 컨트롤 자체적으로 크기를 조정 하 고 사용자가 조작 합니다. 그러나 경우가 분할자를 프로그래밍 방식으로 제어 하려고 하면-커서가 않았고을 어느 정도는 이동할 수 있습니다.  
@@ -31,7 +31,7 @@ ms.locfileid: "59217070"
   
 ### <a name="to-define-splitcontainer-resize-behavior"></a>SplitContainer 크기 조정 동작을 정의 하려면  
   
-1.  프로시저를 설정 합니다 <xref:System.Windows.Forms.SplitContainer.SplitterIncrement%2A> 속성을 원하는 크기로 분할자의 '맞춤' 동작 이루어집니다 되도록 합니다.  
+1. 프로시저를 설정 합니다 <xref:System.Windows.Forms.SplitContainer.SplitterIncrement%2A> 속성을 원하는 크기로 분할자의 '맞춤' 동작 이루어집니다 되도록 합니다.  
   
      폼의 다음 코드 예제에서 <xref:System.Windows.Forms.Form.Load> 이벤트, 내에서 분할자는 <xref:System.Windows.Forms.SplitContainer> 컨트롤이 끌 때 10 픽셀을 이동 하도록 설정 된 합니다.  
   

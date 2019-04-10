@@ -8,12 +8,12 @@ helpviewer_keywords:
 - hosting Win32 control in WPF [WPF]
 - Win32 code [WPF], WPF interoperation
 ms.assetid: a676b1eb-fc55-4355-93ab-df840c41cea0
-ms.openlocfilehash: 1ba060fcefb2d8be24d597c7b1ccb7a79d6d5ceb
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 834160358d7b3e8e7f4c7c4f4fd06d403086e7e5
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59160695"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59307706"
 ---
 # <a name="walkthrough-hosting-a-win32-control-in-wpf"></a>연습: WPF에서 Win32 컨트롤 호스팅
 Windows Presentation Foundation (WPF) 응용 프로그램을 만들기 위한 풍부한 환경을 제공 합니다. 그러나 Win32 코드에 상당한 투자를 해야 하는 경우는 것을 더욱 효율적으로 적어도 일부 다시 사용 하는의 WPF 응용 프로그램에서 코드 보다는 완전히 다시 작성 합니다. WPF는 Win32 창의 WPF 페이지를 호스트 하기 위한 간단한 메커니즘을 제공 합니다.  
@@ -35,25 +35,25 @@ Windows Presentation Foundation (WPF) 응용 프로그램을 만들기 위한 �
   
  기본 호스팅 절차는 다음과 같습니다.  
   
-1.  창을 호스트 하는 WPF 페이지를 구현 합니다. 기술 중 하나를 만드는 것을 <xref:System.Windows.Controls.Border> 호스팅된 창의 페이지의 섹션을 예약 하는 요소입니다.  
+1. 창을 호스트 하는 WPF 페이지를 구현 합니다. 기술 중 하나를 만드는 것을 <xref:System.Windows.Controls.Border> 호스팅된 창의 페이지의 섹션을 예약 하는 요소입니다.  
   
-2.  상속 되는 컨트롤을 호스트 하는 클래스를 구현 <xref:System.Windows.Interop.HwndHost>합니다.  
+2. 상속 되는 컨트롤을 호스트 하는 클래스를 구현 <xref:System.Windows.Interop.HwndHost>합니다.  
   
-3.  해당 클래스에서 재정의 된 <xref:System.Windows.Interop.HwndHost> 클래스 멤버 <xref:System.Windows.Interop.HwndHost.BuildWindowCore%2A>합니다.  
+3. 해당 클래스에서 재정의 된 <xref:System.Windows.Interop.HwndHost> 클래스 멤버 <xref:System.Windows.Interop.HwndHost.BuildWindowCore%2A>합니다.  
   
-4.  WPF 페이지를 포함 하는 창의 자식으로 호스트 된 창을 만듭니다. 기존 WPF 프로그래밍 명시적으로 확인 하지 않아도 되지만 호스팅 페이지는 창 핸들 (HWND)을 사용 하 여를 사용 합니다. 페이지 HWND를 받게 통해 합니다 `hwndParent` 의 매개 변수는 <xref:System.Windows.Interop.HwndHost.BuildWindowCore%2A> 메서드. 호스트된 창은 이 HWND의 자식으로 만들어야 합니다.  
+4. WPF 페이지를 포함 하는 창의 자식으로 호스트 된 창을 만듭니다. 기존 WPF 프로그래밍 명시적으로 확인 하지 않아도 되지만 호스팅 페이지는 창 핸들 (HWND)을 사용 하 여를 사용 합니다. 페이지 HWND를 받게 통해 합니다 `hwndParent` 의 매개 변수는 <xref:System.Windows.Interop.HwndHost.BuildWindowCore%2A> 메서드. 호스트된 창은 이 HWND의 자식으로 만들어야 합니다.  
   
-5.  호스트 창을 만들었으면 호스트된 창의 HWND를 반환합니다. 하나 이상의 Win32 컨트롤을 호스트 하려는 경우 일반적으로 호스트 창을 HWND의 자식으로 만들 및 해당 호스트 창의 자식 컨트롤을 확인 합니다. 호스트 창에 컨트롤을 래핑하여 HWND 경계를 넘어 알림 사용 하 여 특정 Win32 문제를 처리 하는 컨트롤에서 알림을 받을 WPF 페이지는 간단한 방법을 제공 합니다.  
+5. 호스트 창을 만들었으면 호스트된 창의 HWND를 반환합니다. 하나 이상의 Win32 컨트롤을 호스트 하려는 경우 일반적으로 호스트 창을 HWND의 자식으로 만들 및 해당 호스트 창의 자식 컨트롤을 확인 합니다. 호스트 창에 컨트롤을 래핑하여 HWND 경계를 넘어 알림 사용 하 여 특정 Win32 문제를 처리 하는 컨트롤에서 알림을 받을 WPF 페이지는 간단한 방법을 제공 합니다.  
   
-6.  자식 컨트롤의 알림과 같이 호스트 창으로 전송되는 선택한 메시지를 처리합니다. 그런 경우 두 가지 방법이 있습니다.  
+6. 자식 컨트롤의 알림과 같이 호스트 창으로 전송되는 선택한 메시지를 처리합니다. 그런 경우 두 가지 방법이 있습니다.  
   
     -   호스팅 클래스에서 메시지를 처리 하려는 경우 재정의 <xref:System.Windows.Interop.HwndHost.WndProc%2A> 메서드는 <xref:System.Windows.Interop.HwndHost> 클래스입니다.  
   
     -   WPF의 메시지 처리를 처리 하려는 경우는 <xref:System.Windows.Interop.HwndHost> 클래스 <xref:System.Windows.Interop.HwndHost.MessageHook> 코드 숨김에서 이벤트입니다. 이 이벤트는 호스트된 창에서 받은 모든 메시지에 대해 발생합니다. 이 옵션을 선택 하는 경우는 여전히 재정의 해야 <xref:System.Windows.Interop.HwndHost.WndProc%2A>, 하지만 최소 구현만 필요 합니다.  
   
-7.  재정의 <xref:System.Windows.Interop.HwndHost.DestroyWindowCore%2A> 하 고 <xref:System.Windows.Interop.HwndHost.WndProc%2A> 메서드의 <xref:System.Windows.Interop.HwndHost>합니다. 충족 하기 위해 이러한 메서드를 재정의 해야 합니다는 <xref:System.Windows.Interop.HwndHost> 계약 있지만 최소 구현을 제공 해야 할 수 있습니다.  
+7. 재정의 <xref:System.Windows.Interop.HwndHost.DestroyWindowCore%2A> 하 고 <xref:System.Windows.Interop.HwndHost.WndProc%2A> 메서드의 <xref:System.Windows.Interop.HwndHost>합니다. 충족 하기 위해 이러한 메서드를 재정의 해야 합니다는 <xref:System.Windows.Interop.HwndHost> 계약 있지만 최소 구현을 제공 해야 할 수 있습니다.  
   
-8.  코드 숨김 파일에서 컨트롤 호스팅 클래스의 인스턴스를 만듭니다 및의 자식으로 설정 된 <xref:System.Windows.Controls.Border> 창을 호스트 하기 위한 요소입니다.  
+8. 코드 숨김 파일에서 컨트롤 호스팅 클래스의 인스턴스를 만듭니다 및의 자식으로 설정 된 <xref:System.Windows.Controls.Border> 창을 호스트 하기 위한 요소입니다.  
   
 9. 전송 하 여 호스팅된 창과 통신 [!INCLUDE[TLA#tla_win](../../../../includes/tlasharptla-win-md.md)] 메시지 및 해당 자식 창 컨트롤에서 보낸 알림과 같은 메시지를 처리 합니다.  
   

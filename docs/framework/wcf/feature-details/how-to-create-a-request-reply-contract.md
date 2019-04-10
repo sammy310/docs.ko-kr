@@ -2,25 +2,25 @@
 title: '방법: 요청-회신 계약 만들기'
 ms.date: 03/30/2017
 ms.assetid: 801d90da-3d45-4284-9c9f-56c8aadb4060
-ms.openlocfilehash: 9954be556df13193c290a55616ad83ef07e0af7b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 7a446db49dcc6a12b900292f1b19c9973835f2c1
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59141078"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59327479"
 ---
 # <a name="how-to-create-a-request-reply-contract"></a>방법: 요청-회신 계약 만들기
 요청-회신 계약에서는 회신을 반환하는 메서드를 지정합니다. 회신은 이 계약 조건 하의 요청에 따라 전송되고 상호 관련되어야 합니다. 메서드가 회신을 반환하지 않는 경우(C#에서는 `void`, Visual Basic에서는 `Sub`)에도 인프라에서 빈 메시지를 만들어 호출자에게 보냅니다. 빈 회신 메시지가 전송되지 않도록 하려면 작업에 대한 단방향 계약을 사용합니다.  
   
 ### <a name="to-create-a-request-reply-contract"></a>요청-회신 계약을 만들려면  
   
-1.  선택한 프로그래밍 언어로 인터페이스를 만듭니다.  
+1. 선택한 프로그래밍 언어로 인터페이스를 만듭니다.  
   
-2.  인터페이스에 <xref:System.ServiceModel.ServiceContractAttribute> 특성을 적용합니다.  
+2. 인터페이스에 <xref:System.ServiceModel.ServiceContractAttribute> 특성을 적용합니다.  
   
-3.  클라이언트가 호출할 수 있는 각 메서드에 <xref:System.ServiceModel.OperationContractAttribute> 특성을 적용합니다.  
+3. 클라이언트가 호출할 수 있는 각 메서드에 <xref:System.ServiceModel.OperationContractAttribute> 특성을 적용합니다.  
   
-4.  선택 사항입니다. 빈 회신 메시지가 전송되지 않도록 하려면 <xref:System.ServiceModel.OperationContractAttribute.IsOneWay%2A> 속성의 값을 `true`로 설정합니다. 기본적으로 모든 작업은 요청-회신 계약 하에서 수행됩니다.  
+4. 선택 사항입니다. 빈 회신 메시지가 전송되지 않도록 하려면 <xref:System.ServiceModel.OperationContractAttribute.IsOneWay%2A> 속성의 값을 `true`로 설정합니다. 기본적으로 모든 작업은 요청-회신 계약 하에서 수행됩니다.  
   
 ## <a name="example"></a>예제  
  다음 샘플에서는 `Add` 및 `Subtract` 메서드를 제공하는 계산기 서비스에 대한 계약을 정의합니다. `Multiply` 메서드는 <xref:System.ServiceModel.OperationContractAttribute> 클래스에 의해 표시되지 않으므로 계약의 일부가 아니며, 따라서 클라이언트에 액세스할 수 없습니다.  

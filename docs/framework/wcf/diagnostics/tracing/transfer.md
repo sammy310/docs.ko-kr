@@ -2,12 +2,12 @@
 title: 전송
 ms.date: 03/30/2017
 ms.assetid: dfcfa36c-d3bb-44b4-aa15-1c922c6f73e6
-ms.openlocfilehash: 8263093944cf01a38a49b52d71f7a6e54195a3c3
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 4753ec85c458a0dde3db4a6b7cdad41c69185019
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59145043"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59311021"
 ---
 # <a name="transfer"></a>전송
 이 항목에서는 Windows Communication Foundation (WCF) 동작 추적 모델에서 전송을 설명합니다.  
@@ -42,21 +42,21 @@ ms.locfileid: "59145043"
 ## <a name="activity-transfer-sequence"></a>동작 전송 시퀀스  
  올바른 형식의 동작 전송 시퀀스에는 다음 단계가 포함됩니다.  
   
-1.  새 gAId 선택으로 구성된 새 동작 시작  
+1. 새 gAId 선택으로 구성된 새 동작 시작  
   
-2.  현재 동작 ID로부터 새 gAId에 대한 Transfer 추적 내보내기  
+2. 현재 동작 ID로부터 새 gAId에 대한 Transfer 추적 내보내기  
   
-3.  TLS에서 새 ID 설정  
+3. TLS에서 새 ID 설정  
   
-4.  새 동작의 시작을 나타내기 위해 Start 추적 내보내기  
+4. 새 동작의 시작을 나타내기 위해 Start 추적 내보내기  
   
-5.  원래 동작으로 돌아가기는 다음으로 구성됩니다.  
+5. 원래 동작으로 돌아가기는 다음으로 구성됩니다.  
   
-6.  원래 gAId로 Transfer 추적 내보내기  
+6. 원래 gAId로 Transfer 추적 내보내기  
   
-7.  새 동작의 종료를 나타내기 위해 Stop 추적 내보내기  
+7. 새 동작의 종료를 나타내기 위해 Stop 추적 내보내기  
   
-8.  이전 gAId로 TLS 설정  
+8. 이전 gAId로 TLS 설정  
   
  다음 코드 예제에서는 이 작업을 수행하는 방법을 보여 줍니다. 이 샘플은 차단 호출이 새 동작으로 전송 중일 때 만들어지며, Suspend/Resume 추적을 포함한다고 가정합니다.  
   

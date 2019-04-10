@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Explorer-style applications [Windows Forms], creating
 - Windows Forms controls, filling client area
 ms.assetid: bc11f2e4-e90a-4830-b0e2-f43b6e2b8bec
-ms.openlocfilehash: 61ccad615eec81eb1aa77e6a99d48ef29ecb5be2
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: d015dce7307bec092f6da1dc5ee31691a6baf1f0
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59231528"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59317261"
 ---
 # <a name="how-to-dock-controls-on-windows-forms"></a>방법: Windows Forms에서 컨트롤 도킹
 폼의 가장자리에 컨트롤을 도킹 하거나 컨트롤의 컨테이너 (폼 또는 컨테이너 컨트롤)을 채울 수 있습니다. Windows 탐색기 창을 도킹 하는 예를 들어, 해당 <xref:System.Windows.Forms.TreeView> 창의 왼쪽에는 컨트롤 및 해당 <xref:System.Windows.Forms.ListView> 창의 왼쪽에서 오른쪽으로 컨트롤입니다. 사용 된 <xref:System.Windows.Forms.Control.Dock%2A> 표시 하는 모든 Windows Forms 컨트롤 도킹 모드를 정의 하는 속성입니다.  
@@ -23,13 +23,13 @@ ms.locfileid: "59231528"
   
 ### <a name="to-dock-a-control"></a>컨트롤을 도킹 하려면  
   
-1.  도킹 하려는 컨트롤을 선택 합니다.  
+1. 도킹 하려는 컨트롤을 선택 합니다.  
   
-2.  속성 창에서 오른쪽의 화살표를 클릭 합니다 <xref:System.Windows.Forms.Control.Dock%2A> 속성입니다.  
+2. 속성 창에서 오른쪽의 화살표를 클릭 합니다 <xref:System.Windows.Forms.Control.Dock%2A> 속성입니다.  
   
      편집기에는 일련의 가장자리와 폼의 중심을 나타내는 상자를 보여 주는 표시 됩니다.  
   
-3.  컨트롤을 도킹 하려면 폼의 가장자리를 나타내는 단추를 클릭 합니다. 컨트롤의 폼 이나 컨테이너 컨트롤의 내용을 채울 가운데 상자를 클릭 합니다. 클릭 **(없음)** 도킹을 사용 하지 않도록 설정 합니다.  
+3. 컨트롤을 도킹 하려면 폼의 가장자리를 나타내는 단추를 클릭 합니다. 컨트롤의 폼 이나 컨테이너 컨트롤의 내용을 채울 가운데 상자를 클릭 합니다. 클릭 **(없음)** 도킹을 사용 하지 않도록 설정 합니다.  
   
      컨트롤 크기가 자동으로 도킹된 된 가장자리의 경계에 맞게 조정 됩니다.  
   

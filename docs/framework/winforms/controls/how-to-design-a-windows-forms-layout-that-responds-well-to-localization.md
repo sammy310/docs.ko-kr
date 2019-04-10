@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Windows Forms, localization
 - localization [Windows Forms], Windows Forms layout
 ms.assetid: d13eff2d-701c-4b6e-8838-3885cbfb7223
-ms.openlocfilehash: 095427ce633ee6db5a448c8f3f69304ed25ab82a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 131dc688d2a742fa7a0d99ec7858d4e280c9882f
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59142599"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59310761"
 ---
 # <a name="how-to-design-a-windows-forms-layout-that-responds-well-to-localization"></a>방법: 지역화에 효과적으로 대응하는 Windows Forms 레이아웃 디자인
 지역화할 준비가 된 폼을 만들면 국제 시장에서 개발 속도를 크게 높일 수 있습니다. <xref:System.Windows.Forms.TableLayoutPanel> 컨트롤을 사용하여 <xref:System.Windows.Forms.Control.Text%2A> 속성 값 변경 때문에 컨트롤 크기가 조정될 때 정상적으로 응답하는 레이아웃을 구현할 수 있습니다.  
@@ -29,21 +29,21 @@ ms.locfileid: "59142599"
  [!code-vb[System.Windows.Forms.TableLayoutPanel.LocalizableForm#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.TableLayoutPanel.LocalizableForm/VB/localizableform.vb#1)]  
   
 ## <a name="additional-resources"></a>추가 자료
-1.  [방법: TableLayoutPanel 컨트롤에서 컨트롤 맞춤 및 늘이기](how-to-align-and-stretch-a-control-in-a-tablelayoutpanel-control.md)  
+1. [방법: TableLayoutPanel 컨트롤에서 컨트롤 맞춤 및 늘이기](how-to-align-and-stretch-a-control-in-a-tablelayoutpanel-control.md)  
   
-2.  [연습: FlowLayoutPanel을 사용하여 Windows Forms에서 컨트롤 정렬](walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel.md)  
+2. [연습: FlowLayoutPanel을 사용하여 Windows Forms에서 컨트롤 정렬](walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel.md)  
 
-3.  [방법: TableLayoutPanel 컨트롤에서 행 및 열 확장](how-to-span-rows-and-columns-in-a-tablelayoutpanel-control.md)  
+3. [방법: TableLayoutPanel 컨트롤에서 행 및 열 확장](how-to-span-rows-and-columns-in-a-tablelayoutpanel-control.md)  
   
-4.  [방법: TableLayoutPanel 컨트롤에서 열 및 행 편집](how-to-edit-columns-and-rows-in-a-tablelayoutpanel-control.md)  
+4. [방법: TableLayoutPanel 컨트롤에서 열 및 행 편집](how-to-edit-columns-and-rows-in-a-tablelayoutpanel-control.md)  
   
-5.  [연습: Windows Forms 컨트롤에서 스마트 태그를 사용하여 일반 작업 수행](performing-common-tasks-using-smart-tags-on-wf-controls.md)  
+5. [연습: Windows Forms 컨트롤에서 스마트 태그를 사용하여 일반 작업 수행](performing-common-tasks-using-smart-tags-on-wf-controls.md)  
   
-6.  [연습: TableLayoutPanel을 사용하여 Windows Forms에서 컨트롤 정렬](walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)  
+6. [연습: TableLayoutPanel을 사용하여 Windows Forms에서 컨트롤 정렬](walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)  
 
-7.  [연습: Padding, Margin 및 AutoSize 속성을 사용하여 Windows Forms 컨트롤 레이아웃](windows-forms-controls-padding-autosize.md)  
+7. [연습: Padding, Margin 및 AutoSize 속성을 사용하여 Windows Forms 컨트롤 레이아웃](windows-forms-controls-padding-autosize.md)  
   
-8.  [방법: AutoSize 속성과 TableLayoutPanel 컨트롤을 사용 하 여 Windows Forms 지역화 지원](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/1zkt8b33(v=vs.100))  
+8. [방법: AutoSize 속성과 TableLayoutPanel 컨트롤을 사용 하 여 Windows Forms 지역화 지원](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/1zkt8b33(v=vs.100))  
   
 9. [연습: 데이터 항목에 대 한 크기 조정 가능한 Windows Form 만들기](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/991eahec(v=vs.100))  
   

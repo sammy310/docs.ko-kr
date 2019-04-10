@@ -2,12 +2,12 @@
 title: '방법: 데이터베이스 데이터 형식 지정'
 ms.date: 03/30/2017
 ms.assetid: 2228fdad-7e6a-4b1b-b4d1-79d0198b7c28
-ms.openlocfilehash: bf53463be8c715fd1c599efac1b19d838be19f86
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 67f23ff06aefbcff4ba7e2eaab63d9b8493b9717
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59218045"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59333212"
 ---
 # <a name="how-to-specify-database-data-types"></a>방법: 데이터베이스 데이터 형식 지정
 사용 합니다 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] <xref:System.Data.Linq.Mapping.ColumnAttribute.DbType%2A> 속성을 <xref:System.Data.Linq.Mapping.ColumnAttribute> T-SQL 테이블 선언에는 열을 정의 하는 정확한 텍스트를 지정 하는 특성입니다.  
@@ -18,9 +18,9 @@ ms.locfileid: "59218045"
   
 ### <a name="to-specify-text-to-define-a-data-type-in-a-t-sql-table"></a>T-SQL 테이블에서 데이터 형식을 정의하기 위한 텍스트를 지정하려면  
   
-1.  <xref:System.Data.Linq.Mapping.ColumnAttribute.DbType%2A> 특성에 <xref:System.Data.Linq.Mapping.ColumnAttribute> 속성을 추가합니다.  
+1. <xref:System.Data.Linq.Mapping.ColumnAttribute.DbType%2A> 특성에 <xref:System.Data.Linq.Mapping.ColumnAttribute> 속성을 추가합니다.  
   
-2.  <xref:System.Data.Linq.Mapping.ColumnAttribute.DbType%2A> 속성 값을 T-SQL에서 사용되는 정확한 텍스트로 설정합니다.  
+2. <xref:System.Data.Linq.Mapping.ColumnAttribute.DbType%2A> 속성 값을 T-SQL에서 사용되는 정확한 텍스트로 설정합니다.  
   
 ## <a name="see-also"></a>참고자료
 

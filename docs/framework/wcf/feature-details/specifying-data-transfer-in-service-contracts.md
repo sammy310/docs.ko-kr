@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - service contracts [WCF], data transfer
 ms.assetid: 7c5a26c8-89c9-4bcb-a4bc-7131e6d01f0c
-ms.openlocfilehash: a3ac0f321a20624deea1fe382d04a8d4e1b6c510
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 88bdfe6e659e6e83365b3d17c9067581f209d154
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59135202"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59331522"
 ---
 # <a name="specifying-data-transfer-in-service-contracts"></a>서비스 계약에서 데이터 전송 지정
 Windows Communication Foundation (WCF) 메시징 인프라로 생각할 수 있습니다. 서비스 작업에서는 메시지를 받고 처리한 다음 보낼 수 있습니다. 메시지는 작업 계약을 사용하여 설명됩니다. 다음 계약을 예로 들 수 있습니다.  
@@ -566,11 +566,11 @@ Dim serviceHost As ServiceHost = New ServiceHost(GetType(IDataService))
   
  앞의 세 가지 경우(.NET 형식 유지, 개체 그래프 유지 및 `XmlObjectSerializer` 기반의 완전한 사용자 지정 serialization) 모두 사용자 지정 serializer를 연결해야 합니다. 그렇게 하려면 다음 단계를 수행합니다.  
   
-1.  <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior>에서 파생되는 고유한 동작을 작성합니다.  
+1. <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior>에서 파생되는 고유한 동작을 작성합니다.  
   
-2.  두 개의 `CreateSerializer` 메서드를 재정의하여 고유한 serializer(<xref:System.Runtime.Serialization.NetDataContractSerializer>, <xref:System.Runtime.Serialization.DataContractSerializer>가 `preserveObjectReferences`로 설정된 `true` 또는 사용자 지정 <xref:System.Runtime.Serialization.XmlObjectSerializer>)를 반환합니다.  
+2. 두 개의 `CreateSerializer` 메서드를 재정의하여 고유한 serializer(<xref:System.Runtime.Serialization.NetDataContractSerializer>, <xref:System.Runtime.Serialization.DataContractSerializer>가 `preserveObjectReferences`로 설정된 `true` 또는 사용자 지정 <xref:System.Runtime.Serialization.XmlObjectSerializer>)를 반환합니다.  
   
-3.  서비스 호스트를 열거나 클라이언트 채널을 만들기 전에 기존 <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior> 동작을 제거하고 이전 단계에서 만든 사용자 지정 파생 클래스에 연결합니다.  
+3. 서비스 호스트를 열거나 클라이언트 채널을 만들기 전에 기존 <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior> 동작을 제거하고 이전 단계에서 만든 사용자 지정 파생 클래스에 연결합니다.  
   
  고급 serialization 개념에 대 한 자세한 내용은 참조 하십시오 [Serialization 및 Deserialization](../../../../docs/framework/wcf/feature-details/serialization-and-deserialization.md)합니다.  
   

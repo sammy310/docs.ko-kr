@@ -5,31 +5,31 @@ helpviewer_keywords:
 - COM [WCF], configure service monikers
 - COM [WCF], register service monikers
 ms.assetid: e5e16c80-8a8e-4eef-af53-564933b651ef
-ms.openlocfilehash: 364329954591199c4b0d3123c662c4e124c242fc
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: dfac833cc7517af00d0264fc5d11fc83ae543569
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59141923"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59313582"
 ---
 # <a name="how-to-register-and-configure-a-service-moniker"></a>방법: 서비스 모니커 등록 및 구성
 형식화 된 계약을 사용 하 여 COM 응용 프로그램 내에서 Windows Communication Foundation (WCF) 서비스 모니커를 사용 하기 전에 필수 특성 사용된 형식이 COM에 등록 하며 필요한 바인딩을 사용 하 여 COM 응용 프로그램과 모니커를 구성 합니다. 구성입니다.  
   
 ### <a name="to-register-the-required-attributed-types-with-com"></a>필요한 특성을 사용하는 형식을 COM에 등록하려면  
   
-1.  사용 된 [ServiceModel Metadata 유틸리티 도구 (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) WCF 서비스에서 메타 데이터 계약을 검색 하는 도구입니다. 이 WCF 클라이언트 어셈블리 및 클라이언트 응용 프로그램 구성 파일에 대 한 소스 코드를 생성합니다.  
+1. 사용 된 [ServiceModel Metadata 유틸리티 도구 (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) WCF 서비스에서 메타 데이터 계약을 검색 하는 도구입니다. 이 WCF 클라이언트 어셈블리 및 클라이언트 응용 프로그램 구성 파일에 대 한 소스 코드를 생성합니다.  
   
-2.  어셈블리의 형식이 `ComVisible`로 표시되는지 확인합니다. 이렇게 하려면 Visual Studio 프로젝트의 AssemblyInfo.cs 파일에 다음 특성을 추가합니다.  
+2. 어셈블리의 형식이 `ComVisible`로 표시되는지 확인합니다. 이렇게 하려면 Visual Studio 프로젝트의 AssemblyInfo.cs 파일에 다음 특성을 추가합니다.  
   
     ```  
     [assembly: ComVisible(true)]  
     ```  
   
-3.  관리 되는 WCF 클라이언트를 강력한 이름의 어셈블리로 컴파일하십시오. 이렇게 하려면 암호화된 키 쌍으로 서명해야 합니다. 자세한 내용은 [강력한 이름으로 어셈블리 서명](https://go.microsoft.com/fwlink/?LinkId=94874) .NET Developer's Guide에 있습니다.  
+3. 관리 되는 WCF 클라이언트를 강력한 이름의 어셈블리로 컴파일하십시오. 이렇게 하려면 암호화된 키 쌍으로 서명해야 합니다. 자세한 내용은 [강력한 이름으로 어셈블리 서명](https://go.microsoft.com/fwlink/?LinkId=94874) .NET Developer's Guide에 있습니다.  
   
-4.  어셈블리 등록(Regasm.exe) 도구에 `/tlb` 옵션을 사용하여 어셈블리의 형식을 COM에 등록합니다.  
+4. 어셈블리 등록(Regasm.exe) 도구에 `/tlb` 옵션을 사용하여 어셈블리의 형식을 COM에 등록합니다.  
   
-5.  전역 어셈블리 캐시(Gacutil.exe) 도구를 사용하여 어셈블리를 전역 어셈블리 캐시에 추가합니다.  
+5. 전역 어셈블리 캐시(Gacutil.exe) 도구를 사용하여 어셈블리를 전역 어셈블리 캐시에 추가합니다.  
   
     > [!NOTE]
     >  어셈블리에 서명하고 전역 어셈블리 캐시에 추가하는 것은 선택적 단계이지만 런타임에 올바른 위치에서 어셈블리를 로드하는 프로세스를 단순화할 수 있습니다.  

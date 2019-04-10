@@ -2,12 +2,12 @@
 title: 사용자 지정 추적
 ms.date: 03/30/2017
 ms.assetid: 2d191c9f-62f4-4c63-92dd-cda917fcf254
-ms.openlocfilehash: ca53d74f31059532118f3b5d96760a25ed72b3d5
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 7e275af046013dcd76cb61c25ace1d96fd7e4b93
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59161847"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59307637"
 ---
 # <a name="custom-tracking"></a>사용자 지정 추적
 이 샘플에서는 사용자 지정 추적 참가자를 만들고 추적 데이터의 내용을 콘솔에 쓰는 방법을 보여 줍니다. 또한 사용자 정의 데이터로 채워진 <xref:System.Activities.Tracking.CustomTrackingRecord> 개체를 내보내는 방법도 보여 줍니다. 콘솔 기반 추적 참가자는 코드로 만든 추적 프로필 개체를 사용하여 워크플로에서 내보낸 <xref:System.Activities.Tracking.TrackingRecord> 개체를 필터링합니다.
@@ -133,11 +133,11 @@ context.Track(customRecord);
 
 #### <a name="to-use-this-sample"></a>이 샘플을 사용하려면
 
-1.  Visual Studio 2010을 사용 하 여 CustomTrackingSample.sln 솔루션 파일을 엽니다.
+1. Visual Studio 2010을 사용 하 여 CustomTrackingSample.sln 솔루션 파일을 엽니다.
 
-2.  Ctrl+Shift+B를 눌러 솔루션을 빌드합니다.
+2. Ctrl+Shift+B를 눌러 솔루션을 빌드합니다.
 
-3.  Ctrl+F5를 눌러 솔루션을 실행합니다.
+3. Ctrl+F5를 눌러 솔루션을 실행합니다.
 
 > [!IMPORTANT]
 >  컴퓨터에 이 샘플이 이미 설치되어 있을 수도 있습니다. 계속하기 전에 다음(기본) 디렉터리를 확인하세요.  

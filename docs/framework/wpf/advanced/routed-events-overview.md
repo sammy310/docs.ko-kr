@@ -15,12 +15,12 @@ helpviewer_keywords:
 - button set [WPF], grouped
 - bubbling [WPF]
 ms.assetid: 1a2189ae-13b4-45b0-b12c-8de2e49c29d2
-ms.openlocfilehash: a8ebb0259c1b5f73a2e0329cd1767b0431ba63a6
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: a6baf073e25635f0a6dd666d681d8bc641128ea0
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59171160"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59330456"
 ---
 # <a name="routed-events-overview"></a>라우트된 이벤트 개요
 이 항목에서는 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]에서 라우트된 이벤트의 개념을 설명합니다. 이 항목에서는 라우트된 이벤트 용어를 정의하고, 라우트된 이벤트가 요소 트리를 통해 라우트되는 방식을 설명하고, 라우트된 이벤트를 처리하는 방법을 요약하고, 자체 사용자 지정 라우트된 이벤트를 만드는 방법을 소개합니다.
@@ -204,17 +204,17 @@ ms.locfileid: "59171160"
   
  이벤트 처리 순서는 다음과 같습니다.  
   
-1.  `PreviewMouseDown` (터널링) 루트 요소입니다.  
+1. `PreviewMouseDown` (터널링) 루트 요소입니다.  
   
-2.  `PreviewMouseDown` (터널링) 중간 요소 # 1에서.  
+2. `PreviewMouseDown` (터널링) 중간 요소 # 1에서.  
   
-3.  `PreviewMouseDown` (터널링) 소스 요소 # 2에서.  
+3. `PreviewMouseDown` (터널링) 소스 요소 # 2에서.  
   
-4.  `MouseDown` (버블링) 소스 요소 # 2에서.  
+4. `MouseDown` (버블링) 소스 요소 # 2에서.  
   
-5.  `MouseDown` (버블링) 중간 요소 # 1에서.  
+5. `MouseDown` (버블링) 중간 요소 # 1에서.  
   
-6.  `MouseDown` (버블링) 루트 요소입니다.  
+6. `MouseDown` (버블링) 루트 요소입니다.  
   
  라우트된 이벤트 처리기 대리자는 두 개체인, 이벤트를 발생시킨 개체 및 처리기가 호출된 개체에 대한 참조를 제공합니다. 처리기가 호출된 개체는 `sender` 매개 변수를 통해 보고된 개체입니다. 이벤트가 처음 발생 하는 개체를 보고 합니다 <xref:System.Windows.RoutedEventArgs.Source%2A> 이벤트 데이터의 속성입니다. 라우트된 이벤트를 발생 하 고이 경우 동일한 개체에 의해 처리할 수 있습니다 여전히 `sender` 고 <xref:System.Windows.RoutedEventArgs.Source%2A> 동일 (이 경우 3 단계와 이벤트 처리 예제 목록 4를 사용 하 여).  
   

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: c8329832-bf66-4064-9034-bf39f153fc2d
-ms.openlocfilehash: 127b06b32e597f8c2ea7e2bfdb1caca850fb5e3b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: a94864563491b5bd2d50a6df59858f4b7235fd75
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59194528"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59314882"
 ---
 # <a name="accessing-services-using-a-client"></a>클라이언트를 사용하여 서비스 액세스
 클라이언트 응용 프로그램 만들기, 구성 및 서비스와 통신 하려면 WCF 클라이언트 또는 채널 개체를 사용 해야 합니다. 합니다 [WCF Client Overview](../../../../docs/framework/wcf/wcf-client-overview.md) 항목에서는 개체 및 기본 클라이언트 및 채널 개체를 만들고 사용 하는 단계를 간략하게 설명 합니다.  
@@ -83,11 +83,11 @@ ms.locfileid: "59194528"
   
  명시적 방법을 사용하는 경우 애플리케이션은 다음 단계를 순서대로 수행해야 합니다.  
   
-1.  <xref:System.ServiceModel.ClientBase%601.DisplayInitializationUI%2A?displayProperty=nameWithType> 또는 <xref:System.ServiceModel.IClientChannel.DisplayInitializationUI%2A?displayProperty=nameWithType>(또는 비동기 버전)를 호출합니다.  
+1. <xref:System.ServiceModel.ClientBase%601.DisplayInitializationUI%2A?displayProperty=nameWithType> 또는 <xref:System.ServiceModel.IClientChannel.DisplayInitializationUI%2A?displayProperty=nameWithType>(또는 비동기 버전)를 호출합니다.  
   
-2.  이니셜라이저가 반환되면 <xref:System.ServiceModel.ICommunicationObject.Open%2A> 개체 또는 <xref:System.ServiceModel.IClientChannel> 속성에서 반환된 <xref:System.ServiceModel.IClientChannel> 개체에서 <xref:System.ServiceModel.ClientBase%601.InnerChannel%2A?displayProperty=nameWithType> 메서드를 호출합니다.  
+2. 이니셜라이저가 반환되면 <xref:System.ServiceModel.ICommunicationObject.Open%2A> 개체 또는 <xref:System.ServiceModel.IClientChannel> 속성에서 반환된 <xref:System.ServiceModel.IClientChannel> 개체에서 <xref:System.ServiceModel.ClientBase%601.InnerChannel%2A?displayProperty=nameWithType> 메서드를 호출합니다.  
   
-3.  작업을 호출합니다.  
+3. 작업을 호출합니다.  
   
  프로덕션 품질 응용 프로그램에서는 명시적 방법을 사용하여 사용자 인터페이스 프로세스를 제어하는 것이 좋습니다.  
   

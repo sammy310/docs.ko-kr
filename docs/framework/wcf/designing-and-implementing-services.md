@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - defining service contracts [WCF]
 ms.assetid: 036fae20-7c55-4002-b71d-ac4466e167a3
-ms.openlocfilehash: ccac3dd26ff03f235827c4bb3135dc2028f09032
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: ad7e713ac4cbbe5bf227f4ab93e8f88684dcb0d3
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59216421"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59319679"
 ---
 # <a name="designing-and-implementing-services"></a>서비스 디자인 및 구현
 이 섹션에서는 정의 하 고 WCF 계약을 구현 하는 방법을 보여 줍니다. 서비스 계약에서는 엔드포인트가 외부와 통신하는 내용을 지정합니다. 더 구체적으로 말하면, 단방향 및 이중 request/reply와 같은 기본 메시지 교환 패턴에 구성된 특정 메시지 집합에 대한 문입니다. 서비스 계약이 논리적으로 관련된 메시지 교환 집합인 경우 서비스 작업은 단일 메시지 교환이 됩니다. 예를 들어 `Hello` 작업에서는 호출자가 인사말을 알릴 수 있도록 단일 메시지를 수락해야 하며 작업 의례에 따라 메시지를 반환하거나 반환하지 않을 수 있습니다.  
@@ -38,13 +38,13 @@ ms.locfileid: "59216421"
   
  예를 들어 구매 주문 계약에는 주문 정보 유형에 대한 입력을 수락하고 주문 식별자를 비롯한 성공 또는 실패 정보를 반환하는 `CreateOrder` 작업이 포함될 수 있습니다. 또한 주문 식별자를 수락하고 주문 상태 정보를 반환하는 `GetOrderStatus` 작업이 포함될 수 있습니다. 이러한 종류의 서비스 계약에서는 다음을 지정합니다.  
   
-1.  `CreateOrder` 및 `GetOrderStatus` 작업으로 구성된 구매 주문 계약  
+1. `CreateOrder` 및 `GetOrderStatus` 작업으로 구성된 구매 주문 계약  
   
-2.  입력 메시지와 출력 메시지를 지정한 작업  
+2. 입력 메시지와 출력 메시지를 지정한 작업  
   
-3.  이러한 메시지에서 전달할 수 있는 데이터  
+3. 이러한 메시지에서 전달할 수 있는 데이터  
   
-4.  메시지를 처리하는 데 필요한 통신 인프라에 대한 범주별 문 (예: 통신을 위해 보안이 필요한지 여부 및 필요한 보안 양식 등에 대한 세부 사항)  
+4. 메시지를 처리하는 데 필요한 통신 인프라에 대한 범주별 문 (예: 통신을 위해 보안이 필요한지 여부 및 필요한 보안 양식 등에 대한 세부 사항)  
   
  이러한 종류의 다양 한 플랫폼 (포함 하 여 Microsoft 이외의 플랫폼)에서 다른 응용 프로그램에 대 한 정보를 전달 하기 위해 XML 서비스 계약은 공개적으로에서 표현 되는 표준 XML 형식으로와 같은 [Web Services Description Language](https://go.microsoft.com/fwlink/?LinkId=94952) ( WSDL) 및 [XML 스키마](https://go.microsoft.com/fwlink/?LinkId=94953) (XSD) 중 일부입니다. 여러 플랫폼의 개발자의 경우 언어 사양에 대해 이해하고 있고 이러한 언어는 서비스에서 지원하는 공용 양식, 형식 및 프로토콜에 대해 기술함으로써 상호 운용이 가능하도록 디자인되어 있으므로, 개발자는 이러한 공개 계약 정보를 사용하여 서비스와 통신할 수 있는 응용 프로그램을 만들 수 있습니다. WCF에서 이러한 종류의 정보를 처리 하는 방법에 대 한 자세한 내용은 참조 하세요. [메타 데이터](../../../docs/framework/wcf/feature-details/metadata.md)입니다.  
   

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 420ae24e-762b-4e09-b4c3-2112c470ee49
-ms.openlocfilehash: 8b2f195b2cb4c365693dc0f250a577a93cf25eee
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 015ce896e49b3a6a932c36db867271b4ac4c64c8
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59181534"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59303481"
 ---
 # <a name="large-udts"></a>큰 UDT
 개발자는 UDT(사용자 정의 형식)를 통해 SQL Server 데이터베이스에 CLR(공용 언어 런타임) 개체를 저장하여 서버의 스칼라 형식 시스템을 확장할 수 있습니다. UDT에는 단일 SQL Server 시스템 데이터 형식으로 구성된 일반적인 별칭 데이터 형식과는 달리 여러 요소 및 동작이 포함될 수 있습니다.  
@@ -24,7 +24,7 @@ ms.locfileid: "59181534"
   
  **SQL Server 온라인 설명서**  
   
-1.  [CLR 사용자 정의 형식](https://go.microsoft.com/fwlink/?LinkId=98366)  
+1. [CLR 사용자 정의 형식](https://go.microsoft.com/fwlink/?LinkId=98366)  
   
 ## <a name="retrieving-udt-schemas-using-getschema"></a>GetSchema를 사용하여 UDT 스키마 검색  
  <xref:System.Data.SqlClient.SqlConnection.GetSchema%2A>의 <xref:System.Data.SqlClient.SqlConnection> 메서드는 데이터베이스 스키마 정보를 <xref:System.Data.DataTable>에 반환합니다. 자세한 내용은 [SQL Server 스키마 컬렉션](../../../../../docs/framework/data/adonet/sql-server-schema-collections.md)합니다.  

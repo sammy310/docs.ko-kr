@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Windows Forms, anchoring and docking WPF content
 - interoperability [WPF]
 ms.assetid: 5efb1c53-1484-43d6-aa8a-f4861b99bb8a
-ms.openlocfilehash: a9c549a9014e328e8083704971dfd5323adcea41
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 306c042fe432f0c087ceb1b5ff6b5aec0fe0bbc7
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59193202"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59327310"
 ---
 # <a name="walkthrough-arranging-wpf-content-on-windows-forms-at-design-time"></a>연습: 디자인 타임에 Windows Forms에서 WPF 콘텐츠 정렬
 이 연습에서는 기준 위치 지정 및 맞춤선과 같은 Windows Forms 레이아웃 기능을 사용하여 WPF(Windows Presentation Foundation) 컨트롤을 정렬하는 방법을 보여 줍니다.
@@ -54,38 +54,38 @@ ms.locfileid: "59193202"
   
 #### <a name="to-create-wpf-controls"></a>WPF 컨트롤을 만들려면  
   
-1.  프로젝트에 새 WPF <xref:System.Windows.Controls.UserControl>을 추가합니다. 컨트롤 형식의 기본 이름인 `UserControl1.xaml`을 사용합니다. 자세한 내용은 [연습: 디자인 타임에 Windows Forms에서 새 WPF 콘텐츠 만들기](walkthrough-creating-new-wpf-content-on-windows-forms-at-design-time.md)합니다.  
+1. 프로젝트에 새 WPF <xref:System.Windows.Controls.UserControl>을 추가합니다. 컨트롤 형식의 기본 이름인 `UserControl1.xaml`을 사용합니다. 자세한 내용은 [연습: 디자인 타임에 Windows Forms에서 새 WPF 콘텐츠 만들기](walkthrough-creating-new-wpf-content-on-windows-forms-at-design-time.md)합니다.  
   
-2.  디자인 뷰에서 `UserControl1`이 선택되었는지 확인합니다. 자세한 내용은 [방법: 선택 하 고 디자인 화면에서 요소를 이동](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/bb514527(v=vs.100))합니다.  
+2. 디자인 뷰에서 `UserControl1`이 선택되었는지 확인합니다. 자세한 내용은 [방법: 선택 하 고 디자인 화면에서 요소를 이동](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/bb514527(v=vs.100))합니다.  
   
-3.  에 **속성** 창에서 값을 설정 합니다 <xref:System.Windows.FrameworkElement.Width%2A> 및 <xref:System.Windows.FrameworkElement.Height%2A> 속성을 `200`입니다.  
+3. 에 **속성** 창에서 값을 설정 합니다 <xref:System.Windows.FrameworkElement.Width%2A> 및 <xref:System.Windows.FrameworkElement.Height%2A> 속성을 `200`입니다.  
   
-4.  <xref:System.Windows.Controls.Control.Background%2A> 속성 값을 `Blue`로 설정합니다.  
+4. <xref:System.Windows.Controls.Control.Background%2A> 속성 값을 `Blue`로 설정합니다.  
   
-5.  프로젝트를 빌드합니다.  
+5. 프로젝트를 빌드합니다.  
   
 ## <a name="hosting-wpf-controls-in-a-layout-panel"></a>레이아웃 패널에서 WPF 컨트롤 호스트  
  다른 Windows Forms 컨트롤을 사용하는 것과 동일한 방식으로 레이아웃 패널에서 WPF 컨트롤을 사용할 수 있습니다.  
   
 #### <a name="to-host-wpf-controls-in-a-layout-panel"></a>레이아웃 패널에서 WPF 컨트롤을 호스트하려면  
   
-1.  Windows Forms 디자이너에서 `Form1`을 엽니다.  
+1. Windows Forms 디자이너에서 `Form1`을 엽니다.  
   
-2.  에 **도구 상자**를 끌어를 <xref:System.Windows.Forms.TableLayoutPanel> 컨트롤을 폼으로 합니다.  
+2. 에 **도구 상자**를 끌어를 <xref:System.Windows.Forms.TableLayoutPanel> 컨트롤을 폼으로 합니다.  
   
-3.  에 <xref:System.Windows.Forms.TableLayoutPanel> 컨트롤의 스마트 태그 패널에서 선택 **마지막 행 제거**합니다.  
+3. 에 <xref:System.Windows.Forms.TableLayoutPanel> 컨트롤의 스마트 태그 패널에서 선택 **마지막 행 제거**합니다.  
   
-4.  <xref:System.Windows.Forms.TableLayoutPanel> 컨트롤을 더 큰 너비와 높이로 조정합니다.  
+4. <xref:System.Windows.Forms.TableLayoutPanel> 컨트롤을 더 큰 너비와 높이로 조정합니다.  
   
-5.  에 **도구 상자**, 두 번 클릭 `UserControl1` 의 인스턴스를 만들 `UserControl1` 의 첫 번째 셀에는 <xref:System.Windows.Forms.TableLayoutPanel> 컨트롤입니다.  
+5. 에 **도구 상자**, 두 번 클릭 `UserControl1` 의 인스턴스를 만들 `UserControl1` 의 첫 번째 셀에는 <xref:System.Windows.Forms.TableLayoutPanel> 컨트롤입니다.  
   
      `UserControl1` 인스턴스가 `elementHost1`이라는 새 <xref:System.Windows.Forms.Integration.ElementHost> 컨트롤에서 호스트됩니다.  
   
-6.  에 **도구 상자**를 두 번 클릭 `UserControl1` 의 두 번째 셀에 다른 인스턴스를 만들 수는 <xref:System.Windows.Forms.TableLayoutPanel> 컨트롤입니다.  
+6. 에 **도구 상자**를 두 번 클릭 `UserControl1` 의 두 번째 셀에 다른 인스턴스를 만들 수는 <xref:System.Windows.Forms.TableLayoutPanel> 컨트롤입니다.  
   
-7.  에 **문서 개요** 창에서 `tableLayoutPanel1`합니다. 자세한 내용은 [문서 개요 창](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/46xf4h0w(v=vs.100)#using-the-document-outline-window-for-silverlight-and-wpf)합니다.  
+7. 에 **문서 개요** 창에서 `tableLayoutPanel1`합니다. 자세한 내용은 [문서 개요 창](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/46xf4h0w(v=vs.100)#using-the-document-outline-window-for-silverlight-and-wpf)합니다.  
   
-8.  에 **속성** 창에서 값을 설정 합니다 <xref:System.Windows.Forms.Control.Padding%2A> 속성을 `10, 10, 10, 10`입니다.  
+8. 에 **속성** 창에서 값을 설정 합니다 <xref:System.Windows.Forms.Control.Padding%2A> 속성을 `10, 10, 10, 10`입니다.  
   
      두 <xref:System.Windows.Forms.Integration.ElementHost> 컨트롤 모두 새 레이아웃에 맞게 크기가 조정됩니다.  
   
@@ -94,48 +94,48 @@ ms.locfileid: "59193202"
   
 #### <a name="to-use-snaplines-to-align-wpf-controls"></a>맞춤선을 사용하여 WPF 컨트롤을 맞추려면  
   
-1.  **도구 상자**의 인스턴스를 끕니다 `UserControl1` 폼 아래 공간에 배치 하는 <xref:System.Windows.Forms.TableLayoutPanel> 컨트롤입니다.  
+1. **도구 상자**의 인스턴스를 끕니다 `UserControl1` 폼 아래 공간에 배치 하는 <xref:System.Windows.Forms.TableLayoutPanel> 컨트롤입니다.  
   
      `UserControl1` 인스턴스가 `elementHost3`이라는 새 <xref:System.Windows.Forms.Integration.ElementHost> 컨트롤에서 호스트됩니다.  
   
-2.  맞춤선을 사용하여 `elementHost3`의 왼쪽 가장자리를 <xref:System.Windows.Forms.TableLayoutPanel> 컨트롤의 왼쪽 가장자리에 맞춥니다.  
+2. 맞춤선을 사용하여 `elementHost3`의 왼쪽 가장자리를 <xref:System.Windows.Forms.TableLayoutPanel> 컨트롤의 왼쪽 가장자리에 맞춥니다.  
   
-3.  맞춤선을 사용하여 `elementHost3`의 크기를 <xref:System.Windows.Forms.TableLayoutPanel> 컨트롤과 동일한 너비로 조정합니다.  
+3. 맞춤선을 사용하여 `elementHost3`의 크기를 <xref:System.Windows.Forms.TableLayoutPanel> 컨트롤과 동일한 너비로 조정합니다.  
   
-4.  가운데 맞춤선이 컨트롤 사이에 나타날 때까지 `elementHost3`을 <xref:System.Windows.Forms.TableLayoutPanel> 컨트롤 쪽으로 이동합니다.  
+4. 가운데 맞춤선이 컨트롤 사이에 나타날 때까지 `elementHost3`을 <xref:System.Windows.Forms.TableLayoutPanel> 컨트롤 쪽으로 이동합니다.  
   
-5.  에 **속성** 여백 속성의 값을 설정 하는 창 `20, 20, 20, 20`합니다.  
+5. 에 **속성** 여백 속성의 값을 설정 하는 창 `20, 20, 20, 20`합니다.  
   
-6.  가운데 맞춤선이 다시 나타날 때까지 `elementHost3`을 <xref:System.Windows.Forms.TableLayoutPanel> 컨트롤에서 멀리 이동합니다. 이제 가운데 맞춤선이 여백 20을 나타냅니다.  
+6. 가운데 맞춤선이 다시 나타날 때까지 `elementHost3`을 <xref:System.Windows.Forms.TableLayoutPanel> 컨트롤에서 멀리 이동합니다. 이제 가운데 맞춤선이 여백 20을 나타냅니다.  
   
-7.  왼쪽 가장자리가 `elementHost1`의 왼쪽 가장자리와 맞춰질 때까지 `elementHost3`을 오른쪽으로 이동합니다.  
+7. 왼쪽 가장자리가 `elementHost1`의 왼쪽 가장자리와 맞춰질 때까지 `elementHost3`을 오른쪽으로 이동합니다.  
   
-8.  오른쪽 가장자리가 `elementHost2`의 오른쪽 가장자리와 맞춰질 때까지 `elementHost3`의 너비를 변경합니다.  
+8. 오른쪽 가장자리가 `elementHost2`의 오른쪽 가장자리와 맞춰질 때까지 `elementHost3`의 너비를 변경합니다.  
   
 ## <a name="anchoring-and-docking-wpf-controls"></a>WPF 컨트롤 고정 및 도킹  
  폼에 호스트된 WPF 컨트롤은 다른 Windows Forms 컨트롤과 동일한 고정 및 도킹 동작을 갖습니다.  
   
 #### <a name="to-anchor-and-dock-wpf-controls"></a>WPF 컨트롤을 고정 및 도킹하려면  
   
-1.  `elementHost1`를 선택합니다.  
+1. `elementHost1`를 선택합니다.  
   
-2.  에 **속성** 창에서 합니다 <xref:System.Windows.Forms.Control.Anchor%2A> 속성을 **위쪽, 아래쪽, 왼쪽, 오른쪽**합니다.  
+2. 에 **속성** 창에서 합니다 <xref:System.Windows.Forms.Control.Anchor%2A> 속성을 **위쪽, 아래쪽, 왼쪽, 오른쪽**합니다.  
   
-3.  <xref:System.Windows.Forms.TableLayoutPanel> 컨트롤을 더 큰 크기로 조정합니다.  
+3. <xref:System.Windows.Forms.TableLayoutPanel> 컨트롤을 더 큰 크기로 조정합니다.  
   
      `elementHost1` 컨트롤의 크기가 조정되어 셀을 채웁니다.  
   
-4.  `elementHost2`를 선택합니다.  
+4. `elementHost2`를 선택합니다.  
   
-5.  에 **속성** 창에서 값을 설정 합니다 <xref:System.Windows.Forms.Control.Dock%2A> 속성을 <xref:System.Windows.Forms.DockStyle.Fill>입니다.  
+5. 에 **속성** 창에서 값을 설정 합니다 <xref:System.Windows.Forms.Control.Dock%2A> 속성을 <xref:System.Windows.Forms.DockStyle.Fill>입니다.  
   
      `elementHost2` 컨트롤의 크기가 조정되어 셀을 채웁니다.  
   
-6.  <xref:System.Windows.Forms.TableLayoutPanel> 컨트롤을 선택합니다.  
+6. <xref:System.Windows.Forms.TableLayoutPanel> 컨트롤을 선택합니다.  
   
-7.  <xref:System.Windows.Forms.Control.Dock%2A> 속성의 값을 <xref:System.Windows.Forms.DockStyle.Top>로 설정합니다.  
+7. <xref:System.Windows.Forms.Control.Dock%2A> 속성의 값을 <xref:System.Windows.Forms.DockStyle.Top>로 설정합니다.  
   
-8.  `elementHost3`를 선택합니다.  
+8. `elementHost3`를 선택합니다.  
   
 9. <xref:System.Windows.Forms.Control.Dock%2A> 속성의 값을 <xref:System.Windows.Forms.DockStyle.Fill>로 설정합니다.  
   

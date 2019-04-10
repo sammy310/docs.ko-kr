@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 56d051c3-012c-42c1-9a58-7270edc624aa
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 76e442536e4c863031072adfb4d8716ca7a19aff
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: a010b2ee1de17741b2d0bdd6e7c50d5f602256ac
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59158660"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59298580"
 ---
 # <a name="how-to-compile-conditionally-with-trace-and-debug"></a>방법: 추적 및 디버그를 사용하여 조건부 컴파일
 개발 중에 응용 프로그램을 디버그하는 동안 추적 및 디버깅 출력은 둘 다 Visual Studio의 출력 창으로 이동합니다. 그러나 배포된 애플리케이션에 추적 기능을 포함하려면 **TRACE** 컴파일러 지시문을 사용하도록 설정하여 계측된 애플리케이션을 컴파일해야 합니다. 이렇게 하면 추적 코드를 응용 프로그램의 릴리스 버전으로 컴파일할 수 있습니다. **TRACE** 지시문을 사용하지 않으면 모든 추적 코드가 컴파일 중에 무시되고 배포할 실행 코드에 포함되지 않습니다.  
@@ -36,9 +36,9 @@ ms.locfileid: "59158660"
   
 ### <a name="to-change-compile-settings-from-the-property-pages-dialog-box"></a>속성 페이지 대화 상자에서 컴파일 설정을 변경하려면  
   
-1.  **솔루션 탐색기**에서 프로젝트 노드를 마우스 오른쪽 단추로 클릭합니다.  
+1. **솔루션 탐색기**에서 프로젝트 노드를 마우스 오른쪽 단추로 클릭합니다.  
   
-2.  바로 가기 메뉴에서 **속성**을 선택합니다.  
+2. 바로 가기 메뉴에서 **속성**을 선택합니다.  
   
     -   Visual Basic에서 속성 페이지의 왼쪽 창에 있는 **컴파일** 탭을 클릭하고 **고급 컴파일 옵션** 단추를 클릭하여 **고급 컴파일러 설정** 대화 상자를 표시합니다. 사용하도록 설정할 컴파일러 설정의 확인란을 선택합니다. 사용하지 않도록 설정할 설정의 확인란을 선택 취소합니다.  
   
@@ -46,7 +46,7 @@ ms.locfileid: "59158660"
   
 ### <a name="to-compile-instrumented-code-using-the-command-line"></a>명령줄을 사용하여 계측된 코드를 컴파일하려면  
   
-1.  명령줄에서 조건부 컴파일러 스위치를 설정합니다. 컴파일러는 실행 파일에 추적 및 디버그 코드를 포함합니다.  
+1. 명령줄에서 조건부 컴파일러 스위치를 설정합니다. 컴파일러는 실행 파일에 추적 및 디버그 코드를 포함합니다.  
   
      예를 들어 명령줄에 입력된 다음 컴파일러 명령은 컴파일된 실행 파일에 추적 코드를 포함합니다.  
   
@@ -71,7 +71,7 @@ ms.locfileid: "59158660"
   
 ### <a name="to-perform-conditional-compilation-using-const-or-define"></a>#CONST 또는 #define을 사용하여 조건부 컴파일을 수행하려면  
   
-1.  소스 코드 파일의 위쪽에서 프로그래밍 언어에 대한 적절한 문을 입력합니다.  
+1. 소스 코드 파일의 위쪽에서 프로그래밍 언어에 대한 적절한 문을 입력합니다.  
   
     |언어|문|결과|  
     |--------------|---------------|------------|  

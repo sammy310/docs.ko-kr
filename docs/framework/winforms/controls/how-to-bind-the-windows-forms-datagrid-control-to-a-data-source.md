@@ -14,12 +14,12 @@ helpviewer_keywords:
 - bound controls [Windows Forms]
 - data-bound controls [Windows Forms], DataGrid
 ms.assetid: 128cdb07-dfd3-4d60-9d6a-902847667c36
-ms.openlocfilehash: 80edd3718195fa3c47f7073136031cbddb13168b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 920a93894cc126f85bc6b618efbe6e9cedea4881
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59176685"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59332575"
 ---
 # <a name="how-to-bind-the-windows-forms-datagrid-control-to-a-data-source"></a>방법: 데이터 원본에 Windows Forms DataGrid 컨트롤 바인딩
 > [!NOTE]
@@ -29,7 +29,7 @@ ms.locfileid: "59176685"
   
 ### <a name="to-data-bind-the-datagrid-control-programmatically"></a>데이터 바인딩할 DataGrid 컨트롤을 프로그래밍 방식으로  
   
-1.  데이터 집합을 채우는 코드를 작성 합니다.  
+1. 데이터 집합을 채우는 코드를 작성 합니다.  
   
      데이터 원본이 데이터 집합 또는 데이터 집합 테이블을 기반으로 데이터 뷰를 폼에 데이터 집합을 채우는 코드를 추가 합니다.  
   
@@ -68,7 +68,7 @@ ms.locfileid: "59176685"
     dsCategories1->Merge(ws->GetCategories());  
     ```  
   
-2.  호출 된 <xref:System.Windows.Forms.DataGrid> 컨트롤의 <xref:System.Windows.Forms.DataGrid.SetDataBinding%2A> 메서드, 데이터 원본 및 데이터 멤버를 전달 합니다. 데이터 멤버를 명시적으로 전달 해야 하는 경우 빈 문자열을 전달 합니다.  
+2. 호출 된 <xref:System.Windows.Forms.DataGrid> 컨트롤의 <xref:System.Windows.Forms.DataGrid.SetDataBinding%2A> 메서드, 데이터 원본 및 데이터 멤버를 전달 합니다. 데이터 멤버를 명시적으로 전달 해야 하는 경우 빈 문자열을 전달 합니다.  
   
     > [!NOTE]
     >  컨트롤의 표는 처음에 바인딩하는 경우 설정할 수 있습니다 <xref:System.Windows.Forms.DataGrid.DataSource%2A> 고 <xref:System.Windows.Forms.DataGrid.DataMember%2A> 속성입니다. 그러나 설정 된 후 이러한 속성을 재설정할 수 없습니다. 따라서 것이 좋습니다는 항상 사용 하 여 <xref:System.Windows.Forms.DataGrid.SetDataBinding%2A> 메서드.  
@@ -101,7 +101,7 @@ ms.locfileid: "59176685"
     dataGrid1->SetDataBinding(dsCustomers1, "");  
     ```  
   
-3.  (선택 사항) 그리드로 해당 테이블 스타일과 열 스타일을 추가 합니다. 테이블 표시는 테이블 스타일이 없는 경우 최소한의 서식 지정 및 표시 하는 모든 열을 사용 하 여 있지만.  
+3. (선택 사항) 그리드로 해당 테이블 스타일과 열 스타일을 추가 합니다. 테이블 표시는 테이블 스타일이 없는 경우 최소한의 서식 지정 및 표시 하는 모든 열을 사용 하 여 있지만.  
   
 ## <a name="see-also"></a>참고자료
 

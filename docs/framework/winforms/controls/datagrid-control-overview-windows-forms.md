@@ -20,12 +20,12 @@ helpviewer_keywords:
 - parent table navigation in DataGrid
 - child tables [Windows Forms], dataGrid control
 ms.assetid: 85604bce-bc03-49d9-9030-dda8896c44b1
-ms.openlocfilehash: 7fdc14257d140c92cb2450fc21b44c1f95c75ba8
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 34bf38a59e4f2b1f975cf1836973d24d8a3bae32
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59189315"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59304739"
 ---
 # <a name="datagrid-control-overview-windows-forms"></a>DataGrid 컨트롤 개요(Windows Forms)
 > [!NOTE]
@@ -35,10 +35,9 @@ ms.locfileid: "59189315"
   
  <xref:System.Windows.Forms.DataGrid>가 여러 개의 관련 테이블에 바인딩되어 있고 표 형태 창에서 탐색을 사용할 수 있는 경우 표 형태 창의 각 행에 확장기가 표시됩니다. 사용자는 확장기를 통해 부모 테이블에서 자식 테이블로 이동할 수 있습니다. 노드를 클릭하면 자식 테이블이 표시되고 뒤로 단추를 클릭하면 원래 부모 테이블이 표시됩니다. 이런 방식으로 표 형태 창에 테이블 간의 계층 관계가 표시됩니다.  
   
- 다음 스크린샷은 여러 테이블을 사용 하 여 데이터에 바인딩된 DataGrid를 보여줍니다.  
+ 다음 스크린샷은 여러 테이블을 사용 하 여 데이터에 바인딩된 DataGrid를 보여 줍니다.  
   
- ![여러 테이블을 사용 하 여 데이터에 바인딩된 DataGrid](./media/vbcontrol1.gif "vbControl1")  
-여러 테이블을 가진 데이터에 바인딩된 DataGrid  
+ ![DataGrid를 보여 주는 WinForms 앱을 여러 테이블을 사용 하 여 데이터에 바인딩됩니다.](./media/datagrid-control-overview-windows-forms/datagrid-bound-multiple-tables.gif)  
   
  <xref:System.Windows.Forms.DataGrid>에서는 데이터 집합, 관련 테이블 간의 탐색, 풍부한 형식 지정 및 편집 기능을 위한 사용자 인터페이스를 제공할 수 있습니다.  
   
@@ -94,15 +93,16 @@ ms.locfileid: "59189315"
   
  <xref:System.Windows.Forms.DataGrid> 컨트롤에서 테이블을 표시하고 <xref:System.Windows.Forms.DataGrid.AllowSorting%2A> 속성이 `true`로 설정된 경우 열 머리글을 클릭하여 데이터를 다시 정렬할 수 있습니다. 사용자가 행을 추가하고 셀을 편집할 수도 있습니다.  
   
- 테이블 집합 간의 관계는 탐색의 부모/자식 구조를 사용하여 사용자에게 표시됩니다. 부모 테이블은 가장 높은 데이터 수준이고, 자식 테이블은 부모 테이블의 개별 목록에서 파생된 데이터 테이블입니다. 자식 테이블을 포함하는 각 부모 행에 확장기가 표시됩니다. 확장기를 클릭하면 자식 테이블에 대한 웹 형식의 링크 목록이 생성됩니다. 사용자가 링크를 선택하면 자식 테이블이 표시됩니다. 부모 행 표시/숨기기 아이콘을 클릭하면(![부모 행 표시&#47;숨기기 아이콘](./media/vbicon.gif "vbIcon")) 부모 표에 대한 정보를 숨기거나 사용자가 이전에 숨긴 경우 다시 표시됩니다. 사용자는 뒤로 단추를 클릭하여 이전에 표시된 테이블로 다시 이동할 수 있습니다.  
+ 테이블 집합 간의 관계는 탐색의 부모/자식 구조를 사용하여 사용자에게 표시됩니다. 부모 테이블은 가장 높은 데이터 수준이고, 자식 테이블은 부모 테이블의 개별 목록에서 파생된 데이터 테이블입니다. 자식 테이블을 포함하는 각 부모 행에 확장기가 표시됩니다. 확장기를 클릭하면 자식 테이블에 대한 웹 형식의 링크 목록이 생성됩니다. 사용자가 링크를 선택하면 자식 테이블이 표시됩니다. 부모 행 표시/숨기기 아이콘 (클릭![부모 행 표시/숨기기 아이콘](./media/datagrid-control-overview-windows-forms/show-hide-parent-rows.gif)) 부모 테이블에 대 한 정보를 숨기 거 나 사용자가 이전에 숨긴 해당 하는 경우 다시 표시 됩니다. 사용자는 뒤로 단추를 클릭하여 이전에 표시된 테이블로 다시 이동할 수 있습니다.  
   
 ## <a name="columns-and-rows"></a>열과 행  
  <xref:System.Windows.Forms.DataGrid>는 <xref:System.Windows.Forms.DataGrid> 컨트롤의 <xref:System.Windows.Forms.DataGrid.TableStyles%2A> 속성에 포함된 <xref:System.Windows.Forms.DataGridTableStyle> 개체의 컬렉션으로 구성됩니다. 테이블 스타일은 <xref:System.Windows.Forms.DataGridTableStyle>의 <xref:System.Windows.Forms.DataGridTableStyle.GridColumnStyles%2A> 속성에 포함된 <xref:System.Windows.Forms.DataGridColumnStyle> 개체의 컬렉션을 포함할 수 있습니다. 편집할 수 있습니다 합니다 <xref:System.Windows.Forms.DataGrid.TableStyles%2A> 및 <xref:System.Windows.Forms.DataGridTableStyle.GridColumnStyles%2A> 를 통해 액세스 한 컬렉션 편집기를 사용 하 여 속성을 **속성** 창.  
   
  <xref:System.Windows.Forms.DataGrid> 컨트롤과 연결된 <xref:System.Windows.Forms.DataGridTableStyle>은 <xref:System.Windows.Forms.GridTableStylesCollection>을 통해 모두 액세스할 수 있습니다. <xref:System.Windows.Forms.GridTableStylesCollection>은 디자이너에서 <xref:System.Windows.Forms.DataGridTableStyle> 컬렉션 편집기를 통해 또는 <xref:System.Windows.Forms.DataGrid> 컨트롤의 <xref:System.Windows.Forms.DataGrid.TableStyles%2A> 속성을 통해 프로그래밍 방식으로 편집할 수 있습니다.  
-  
- ![DataGrid 컨트롤에 포함 된 개체](./media/vbcolumns1.gif "vbColumns1")  
-다음 그림에서는 DataGrid 컨트롤에 포함된 개체를 보여 줍니다.  
+
+ 다음 그림에서는 DataGrid 컨트롤에 포함 된 개체를 보여 줍니다.
+
+ ![DataGrid 컨트롤에 포함 된 개체를 보여 주는 다이어그램입니다.](./media/datagrid-control-overview-windows-forms/visual-basic-columns.gif)  
   
  테이블 스타일과 열 스타일은 해당 `MappingName` 속성을 적절한 <xref:System.Data.DataTable.TableName%2A> 및 <xref:System.Data.DataColumn.ColumnName%2A> 속성으로 설정하여 <xref:System.Data.DataTable> 개체 및 <xref:System.Data.DataColumn> 개체와 동기화됩니다. 유효한 데이터 소스에 바인딩된 <xref:System.Windows.Forms.DataGrid> 컨트롤에 열 스타일이 없는 <xref:System.Windows.Forms.DataGridTableStyle>이 추가되고 해당 테이블 스타일의 <xref:System.Windows.Forms.DataGridTableStyle.MappingName%2A> 속성이 유효한 <xref:System.Data.DataTable.TableName%2A> 속성으로 설정된 경우 해당 테이블 스타일에 대한 <xref:System.Windows.Forms.DataGridColumnStyle> 개체 컬렉션이 생성됩니다. <xref:System.Data.DataTable>의 <xref:System.Data.DataTable.Columns%2A> 컬렉션에서 발견된 각 <xref:System.Data.DataColumn>에 해당하는 <xref:System.Windows.Forms.DataGridColumnStyle>이 <xref:System.Windows.Forms.GridColumnStylesCollection>에 추가됩니다. <xref:System.Windows.Forms.GridColumnStylesCollection> 통해 액세스할 수는 <xref:System.Windows.Forms.DataGridTableStyle.GridColumnStyles%2A> 의 속성을 <xref:System.Windows.Forms.DataGridTableStyle>입니다. <xref:System.Windows.Forms.GridColumnStylesCollection>의 <xref:System.Windows.Forms.GridColumnStylesCollection.Add%2A> 또는 <xref:System.Windows.Forms.GridColumnStylesCollection.Remove%2A> 메서드를 사용하여 표 형태 창에서 열을 추가하거나 삭제할 수 있습니다. 자세한 내용은 [방법: 테이블을 추가 하 고 열에는 Windows Forms DataGrid 컨트롤](how-to-add-tables-and-columns-to-the-windows-forms-datagrid-control.md) 고 [방법: 열 삭제 또는 숨기기에는 Windows Forms DataGrid 컨트롤](how-to-delete-or-hide-columns-in-the-windows-forms-datagrid-control.md)합니다.  
   

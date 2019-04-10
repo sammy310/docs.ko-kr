@@ -5,12 +5,12 @@ helpviewer_keywords:
 - custom controls [Windows Forms], application settings
 - application settings [Windows Forms], custom controls
 ms.assetid: f44afb74-76cc-44f2-890a-44b7cdc211a1
-ms.openlocfilehash: b036167c2e1a4dff557d2ef90eaa964710533410
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 69a5caef8bab45503b9f34422de8c2ba2e7f01ff
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59169743"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59317300"
 ---
 # <a name="application-settings-for-custom-controls"></a>사용자 지정 컨트롤에 대한 애플리케이션 설정
 사용자 지정 컨트롤에서 타사 응용 프로그램에서 컨트롤을 호스팅할 때 응용 프로그램 설정을 유지할 수 있도록 특정 작업을 완료 해야 합니다.  
@@ -22,9 +22,9 @@ ms.locfileid: "59169743"
   
  또한 Visual Studio와 같은 디자인 타임 환경에서 제대로 작동 하려면 사용자 지정 컨트롤에 대 한 응용 프로그램 설정에 대 한 순서에는 다음을 구현 해야 합니다.  
   
-1.  사용 하는 생성자를 사용 하 여 사용자 지정 응용 프로그램 설정 클래스를 <xref:System.ComponentModel.IComponent> 단일 매개 변수로 합니다. 저장 하 고 모든 응용 프로그램 설정을 로드할이 클래스를 사용 합니다. 이 클래스의 새 인스턴스를 만든 경우 생성자를 사용 하 여 사용자 지정 컨트롤을 전달 합니다.  
+1. 사용 하는 생성자를 사용 하 여 사용자 지정 응용 프로그램 설정 클래스를 <xref:System.ComponentModel.IComponent> 단일 매개 변수로 합니다. 저장 하 고 모든 응용 프로그램 설정을 로드할이 클래스를 사용 합니다. 이 클래스의 새 인스턴스를 만든 경우 생성자를 사용 하 여 사용자 지정 컨트롤을 전달 합니다.  
   
-2.  컨트롤 생성 및와 같은 폼의 폼에 배치 된 후이 사용자 지정 설정 클래스를 만드는 <xref:System.Windows.Forms.Form.Load> 이벤트 처리기입니다.  
+2. 컨트롤 생성 및와 같은 폼의 폼에 배치 된 후이 사용자 지정 설정 클래스를 만드는 <xref:System.Windows.Forms.Form.Load> 이벤트 처리기입니다.  
   
  사용자 지정 설정 클래스를 만드는 방법에 대 한 지침을 참조 하세요. [방법: 응용 프로그램 설정 만들기](how-to-create-application-settings.md)합니다.  
   

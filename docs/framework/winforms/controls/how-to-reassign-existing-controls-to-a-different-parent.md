@@ -6,12 +6,12 @@ helpviewer_keywords:
 - layout [Windows Forms], resizing
 - layout [Windows Forms], child controls
 ms.assetid: 5a5723ff-34e0-4b6f-a57b-be4ebe35cb34
-ms.openlocfilehash: 113afc642ca313f10062a496d2f170e3666d5043
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 2639322707c1c7e378f6d389a1dec80fd619841c
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59162246"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59328220"
 ---
 # <a name="how-to-reassign-existing-controls-to-a-different-parent"></a>방법: 다른 부모에 기존 컨트롤 다시 할당
 폼에 있는 컨트롤을 새 컨테이너 컨트롤에 할당할 수 있습니다.  
@@ -21,25 +21,25 @@ ms.locfileid: "59162246"
   
 ### <a name="to-reassign-existing-controls-to-a-different-parent"></a>기존 컨트롤을 다른 부모에 다시 할당하려면  
   
-1.  <xref:System.Windows.Forms.Button> 도구 상자 **의 세** 컨트롤을 폼으로 끌어옵니다.  
+1. <xref:System.Windows.Forms.Button> 도구 상자 **의 세** 컨트롤을 폼으로 끌어옵니다.  
   
      서로 정렬되지 않은 상태로 근처에 배치합니다.  
   
-2.  **도구 상자**에서 <xref:System.Windows.Forms.FlowLayoutPanel> 컨트롤 아이콘을 클릭합니다.  
+2. **도구 상자**에서 <xref:System.Windows.Forms.FlowLayoutPanel> 컨트롤 아이콘을 클릭합니다.  
   
      아이콘을 폼으로 끌어오지 마세요.  
   
-3.  마우스 포인터를 세 <xref:System.Windows.Forms.Button> 컨트롤 쪽으로 이동합니다.  
+3. 마우스 포인터를 세 <xref:System.Windows.Forms.Button> 컨트롤 쪽으로 이동합니다.  
   
      포인터가 <xref:System.Windows.Forms.FlowLayoutPanel> 컨트롤 아이콘이 연결된 십자형으로 바뀝니다.  
   
-4.  마우스 단추를 길게 클릭합니다.  
+4. 마우스 단추를 길게 클릭합니다.  
   
-5.  마우스 포인터를 끌어 <xref:System.Windows.Forms.FlowLayoutPanel> 컨트롤의 윤곽선을 그립니다.  
+5. 마우스 포인터를 끌어 <xref:System.Windows.Forms.FlowLayoutPanel> 컨트롤의 윤곽선을 그립니다.  
   
-6.  세 <xref:System.Windows.Forms.Button> 컨트롤 주위에 윤곽선을 그립니다.  
+6. 세 <xref:System.Windows.Forms.Button> 컨트롤 주위에 윤곽선을 그립니다.  
   
-7.  마우스 단추를 놓습니다.  
+7. 마우스 단추를 놓습니다.  
   
      이제 세 <xref:System.Windows.Forms.Button> 컨트롤이 <xref:System.Windows.Forms.FlowLayoutPanel> 컨트롤에 삽입됩니다.  
   

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 252ed666-0679-4eea-b71b-2f14117ef443
-ms.openlocfilehash: 20c5ee3667bf57328a3b6dda6e55dce4ddbbec72
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 16c06ddade79c2b3a48401f5620431e46e18f5ef
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59224047"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59323254"
 ---
 # <a name="frequently-asked-questions"></a>질문과 대답
 다음 단원에서는 [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)]를 구현할 때 발생할 수 있는 일반적인 문제에 대한 해결 방법을 제시합니다.  
@@ -156,11 +156,11 @@ dlo.LoadWith<Order>(o => o.OrderDetails);
   
  대답: 이와 같은 고급 시나리오에서는 다음과 같은 단계를 수행하세요.  
   
-1.  .dbml 파일에서 <xref:System.Data.Linq.ITable.IsReadOnly%2A> 플래그를 `True`로 변경하여 속성을 수정합니다.  
+1. .dbml 파일에서 <xref:System.Data.Linq.ITable.IsReadOnly%2A> 플래그를 `True`로 변경하여 속성을 수정합니다.  
   
-2.  부분 클래스를 추가합니다. 읽기 전용 멤버에 대해 매개 변수가 있는 생성자를 만듭니다.  
+2. 부분 클래스를 추가합니다. 읽기 전용 멤버에 대해 매개 변수가 있는 생성자를 만듭니다.  
   
-3.  기본 <xref:System.Data.Linq.Mapping.UpdateCheck> 값(<xref:System.Data.Linq.Mapping.UpdateCheck.Never>)을 검토하여 응용 프로그램에 사용할 수 있는 올바른 값인지 확인합니다.  
+3. 기본 <xref:System.Data.Linq.Mapping.UpdateCheck> 값(<xref:System.Data.Linq.Mapping.UpdateCheck.Never>)을 검토하여 응용 프로그램에 사용할 수 있는 올바른 값인지 확인합니다.  
   
     > [!CAUTION]
     >  사용 중인 경우는 [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] Visual Studio에서 변경 내용을 덮어쓸 수도 있습니다.  

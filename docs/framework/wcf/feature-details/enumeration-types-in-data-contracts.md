@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - data contracts [WCF], enumeration types
 ms.assetid: b5d694da-68cb-4b74-a5fb-75108a68ec3b
-ms.openlocfilehash: 236871ff5b8976bb9f8a27bce26195b1a84cf954
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 1837a3630424ff2a9ee4a84e9ed63f44a06bbecf
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59195880"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59309643"
 ---
 # <a name="enumeration-types-in-data-contracts"></a>데이터 계약의 열거형 형식
 데이터 계약 모델에 열거형을 표현할 수 있습니다. 이 항목에서는 프로그래밍 모델을 설명하는 여러 예를 살펴봅니다.  
@@ -79,11 +79,11 @@ ms.locfileid: "59195880"
   
  다음 단계는 플래그의 열거형 값을 보내는 경우에 적용됩니다.  
   
-1.  숫자 값에 매핑되는 열거형 멤버를 찾아 봅니다(<xref:System.Runtime.Serialization.EnumMemberAttribute> 특성 적용). 찾은 경우 해당 멤버만 포함하는 목록을 보냅니다.  
+1. 숫자 값에 매핑되는 열거형 멤버를 찾아 봅니다(<xref:System.Runtime.Serialization.EnumMemberAttribute> 특성 적용). 찾은 경우 해당 멤버만 포함하는 목록을 보냅니다.  
   
-2.  합의 각 부분에 매핑되는 열거형 멤버가 있는(각각 <xref:System.Runtime.Serialization.EnumMemberAttribute> 특성 적용) 숫자 값을 합으로 정리해 봅니다. 해당되는 모든 멤버의 목록을 보냅니다. 합니다 *greedy 알고리즘* 를 사용 하 여 그런 합을 찾이 되며 따라서 합계를 찾을 수 있는 경우에 보장할 수 없습니다. 이 문제를 방지하려면 열거형 멤버의 숫자 값이 2의 거듭제곱이어야 합니다.  
+2. 합의 각 부분에 매핑되는 열거형 멤버가 있는(각각 <xref:System.Runtime.Serialization.EnumMemberAttribute> 특성 적용) 숫자 값을 합으로 정리해 봅니다. 해당되는 모든 멤버의 목록을 보냅니다. 합니다 *greedy 알고리즘* 를 사용 하 여 그런 합을 찾이 되며 따라서 합계를 찾을 수 있는 경우에 보장할 수 없습니다. 이 문제를 방지하려면 열거형 멤버의 숫자 값이 2의 거듭제곱이어야 합니다.  
   
-3.  앞의 두 단계가 실패한 경우 숫자 값이 0이 아니면 <xref:System.Runtime.Serialization.SerializationException>이 throw됩니다. 숫자 값이 0이면 빈 목록을 보냅니다.  
+3. 앞의 두 단계가 실패한 경우 숫자 값이 0이 아니면 <xref:System.Runtime.Serialization.SerializationException>이 throw됩니다. 숫자 값이 0이면 빈 목록을 보냅니다.  
   
 ### <a name="example"></a>예제  
  다음 열거형 예는 플래그 작업에 사용할 수 있습니다.  

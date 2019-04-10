@@ -15,21 +15,21 @@ helpviewer_keywords:
 - Windows Forms controls, data binding
 - data-bound controls [Windows Forms], Windows Forms
 ms.assetid: dfd7f081-8bea-4a41-86a3-86a1934828ef
-ms.openlocfilehash: 949b63f435289d486f445bad01d0bc6cc33e6f08
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: b869898a20008343b6c6cbe4bc7e399fc86fb232
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59197193"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59306055"
 ---
 # <a name="how-to-bind-a-windows-forms-combobox-or-listbox-control-to-data"></a>방법: 데이터에 Windows Forms ComboBox 또는 ListBox 컨트롤 바인딩
 바인딩할 수 있습니다 합니다 <xref:System.Windows.Forms.ComboBox> 고 <xref:System.Windows.Forms.ListBox> 데이터베이스의 데이터를 검색 하는 등의 작업을 수행 하는 데이터를 새 데이터를 입력 하거나 기존 데이터를 편집 합니다.  
   
 ### <a name="to-bind-a-combobox-or-listbox-control"></a>ComboBox 또는 ListBox 컨트롤을 바인딩하려면  
   
-1.  설정 된 `DataSource` 속성을 데이터 원본 개체입니다. 가능한 데이터 소스를 <xref:System.Windows.Forms.BindingSource> 데이터, 데이터 테이블, 데이터 뷰, 데이터 집합에 바인딩된 데이터 보기 관리자, 배열 또는 구현 하는 클래스는 <xref:System.Collections.IList> 인터페이스입니다. 자세한 내용은 [Data Sources Supported by Windows Forms](../data-sources-supported-by-windows-forms.md)합니다.  
+1. 설정 된 `DataSource` 속성을 데이터 원본 개체입니다. 가능한 데이터 소스를 <xref:System.Windows.Forms.BindingSource> 데이터, 데이터 테이블, 데이터 뷰, 데이터 집합에 바인딩된 데이터 보기 관리자, 배열 또는 구현 하는 클래스는 <xref:System.Collections.IList> 인터페이스입니다. 자세한 내용은 [Data Sources Supported by Windows Forms](../data-sources-supported-by-windows-forms.md)합니다.  
   
-2.  테이블에 바인딩하는 경우에 설정 된 `DisplayMember` 속성을 데이터 원본에 있는 열의 이름입니다.  
+2. 테이블에 바인딩하는 경우에 설정 된 `DisplayMember` 속성을 데이터 원본에 있는 열의 이름입니다.  
   
      \- 또는 -  
   

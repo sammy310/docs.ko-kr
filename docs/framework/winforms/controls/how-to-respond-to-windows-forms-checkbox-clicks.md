@@ -12,19 +12,19 @@ helpviewer_keywords:
 - double-clicks
 - check boxes [Windows Forms], responding to events
 ms.assetid: c39f901e-8899-43b6-aa31-939cbf7089fb
-ms.openlocfilehash: 77f93dae2a91f282c6746c3fec3fb5f567cae2e3
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: ce616f45ceaa3db117c6981d2987ac09bba7b3fb
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59211987"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59319900"
 ---
 # <a name="how-to-respond-to-windows-forms-checkbox-clicks"></a>방법: Windows Forms 확인란 클릭에 응답
 Windows Forms를 클릭할 때마다 <xref:System.Windows.Forms.CheckBox> 컨트롤을 <xref:System.Windows.Forms.Control.Click> 이벤트가 발생 합니다. 확인란의 상태에 따라 몇 가지 작업을 수행 하려면 응용 프로그램을 프로그래밍할 수 있습니다.  
   
 ### <a name="to-respond-to-checkbox-clicks"></a>CheckBox 클릭에 응답  
   
-1.  에 <xref:System.Windows.Forms.Control.Click> 이벤트 처리기를 사용 하 여는 <xref:System.Windows.Forms.CheckBox.Checked%2A> 속성을 컨트롤의 상태를 확인 하 고 필요한 작업을 수행 합니다.  
+1. 에 <xref:System.Windows.Forms.Control.Click> 이벤트 처리기를 사용 하 여는 <xref:System.Windows.Forms.CheckBox.Checked%2A> 속성을 컨트롤의 상태를 확인 하 고 필요한 작업을 수행 합니다.  
   
     ```vb  
     Private Sub CheckBox1_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles CheckBox1.Click  
@@ -80,7 +80,7 @@ Windows Forms를 클릭할 때마다 <xref:System.Windows.Forms.CheckBox> 컨트
   
 ### <a name="to-determine-a-course-of-action-when-a-check-box-is-clicked"></a>클릭할 때 확인란을 작업의 과정을 확인 하려면  
   
-1.  Case 문을 사용 하 여 값을 쿼리 합니다 <xref:System.Windows.Forms.CheckBox.CheckState%2A> 일련의 동작을 결정 하는 속성입니다. 경우는 <xref:System.Windows.Forms.CheckBox.ThreeState%2A> 속성이로 설정 되어 `true`, <xref:System.Windows.Forms.CheckBox.CheckState%2A> 속성 상자를 나타내는 세 가지 가능한 값을 반환할 수 있습니다 상자 옵션을 선택 취소 되 고 또는 미 확정 상태로 상자를 표시 하는 흐리게 표시를 사용 하 여 옵션을 나타내는 모양은 제공 되지 않습니다.  
+1. Case 문을 사용 하 여 값을 쿼리 합니다 <xref:System.Windows.Forms.CheckBox.CheckState%2A> 일련의 동작을 결정 하는 속성입니다. 경우는 <xref:System.Windows.Forms.CheckBox.ThreeState%2A> 속성이로 설정 되어 `true`, <xref:System.Windows.Forms.CheckBox.CheckState%2A> 속성 상자를 나타내는 세 가지 가능한 값을 반환할 수 있습니다 상자 옵션을 선택 취소 되 고 또는 미 확정 상태로 상자를 표시 하는 흐리게 표시를 사용 하 여 옵션을 나타내는 모양은 제공 되지 않습니다.  
   
     ```vb  
     Private Sub CheckBox1_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles CheckBox1.Click  

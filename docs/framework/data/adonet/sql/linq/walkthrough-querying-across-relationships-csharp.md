@@ -2,12 +2,12 @@
 title: '연습: 관계 간 쿼리(C#)'
 ms.date: 03/30/2017
 ms.assetid: 552abeb1-18f2-4e93-a9c6-ef7b2db30c32
-ms.openlocfilehash: 52623b79492908a6c387715fef002d4b8927169c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 6bd3255b49676b61a99f8416ab71c217d342e799
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59184888"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59325373"
 ---
 # <a name="walkthrough-querying-across-relationships-c"></a>연습: 관계 간 쿼리(C#)
 이 연습에서는 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] *연결* 데이터베이스에서 외래 키 관계를 나타내는입니다.  
@@ -51,16 +51,16 @@ ms.locfileid: "59184888"
   
 #### <a name="to-access-order-objects-by-using-customer-objects"></a>Customer 개체를 사용하여 Order 개체에 액세스하려면  
   
-1.  다음 코드를 `Main` 메서드에 입력하거나 붙여넣어 이 메서드를 수정합니다.  
+1. 다음 코드를 `Main` 메서드에 입력하거나 붙여넣어 이 메서드를 수정합니다.  
   
      [!code-csharp[DLinqWalk2CS#3](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqWalk2CS/cs/Program.cs#3)]  
   
-2.  F5 키를 눌러 응용 프로그램을 디버깅합니다.  
+2. F5 키를 눌러 응용 프로그램을 디버깅합니다.  
   
     > [!NOTE]
     >  `db.Log = Console.Out;`을 주석으로 처리하여 콘솔 창에서 SQL 코드를 제거할 수 있습니다.  
   
-3.  콘솔 창에서 Enter 키를 눌러 디버깅을 중지합니다.  
+3. 콘솔 창에서 Enter 키를 눌러 디버깅을 중지합니다.  
   
 ## <a name="creating-a-strongly-typed-view-of-your-database"></a>강력한 형식의 데이터베이스 뷰 만들기  
  강력한 형식의 데이터베이스 뷰로 작업을 시작하는 것이 훨씬 더 쉽습니다. <xref:System.Data.Linq.DataContext> 개체를 강력한 형식으로 설정하면 <xref:System.Data.Linq.DataContext.GetTable%2A> 호출이 필요하지 않습니다. 강력한 형식의 <xref:System.Data.Linq.DataContext> 개체를 사용할 경우 모든 쿼리에서 강력한 형식의 테이블을 사용할 수 있습니다.  
@@ -69,21 +69,21 @@ ms.locfileid: "59184888"
   
 #### <a name="to-strongly-type-the-datacontext-object"></a>DataContext 개체를 강력한 형식으로 설정하려면  
   
-1.  `Customer` 클래스 선언 위에 다음 코드를 추가합니다.  
+1. `Customer` 클래스 선언 위에 다음 코드를 추가합니다.  
   
      [!code-csharp[DLinqWalk2CS#4](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqWalk2CS/cs/Program.cs#4)]  
   
-2.  다음과 같이 강력한 형식의 `Main`를 사용하도록 <xref:System.Data.Linq.DataContext> 메서드를 수정합니다.  
+2. 다음과 같이 강력한 형식의 `Main`를 사용하도록 <xref:System.Data.Linq.DataContext> 메서드를 수정합니다.  
   
      [!code-csharp[DLinqWalk2CS#5](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqWalk2CS/cs/Program.cs#5)]  
   
-3.  F5 키를 눌러 응용 프로그램을 디버깅합니다.  
+3. F5 키를 눌러 응용 프로그램을 디버깅합니다.  
   
      콘솔 창 출력은 다음과 같습니다.  
   
      `ID=WHITC`  
   
-4.  콘솔 창에서 Enter 키를 눌러 디버깅을 중지합니다.  
+4. 콘솔 창에서 Enter 키를 눌러 디버깅을 중지합니다.  
   
 ## <a name="next-steps"></a>다음 단계  
  다음 연습 ([연습: 데이터 조작 (C#)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-manipulating-data-csharp.md)) 데이터를 조작 하는 방법을 보여 줍니다. 다음 연습에서는 이미 완료한 이 시리즈의 연습 두 개를 저장할 필요가 없습니다.  

@@ -2,12 +2,12 @@
 title: 연습으로 학습
 ms.date: 03/30/2017
 ms.assetid: a8ae2965-6a49-4155-89b0-7fab2c488ab1
-ms.openlocfilehash: fdcc2db1507d8ee2c6d1b07a79c531267fbb5714
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 611644ce9d6f95bc4113b81bfff36ecaf9cf0b4a
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59189006"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59329312"
 ---
 # <a name="learning-by-walkthroughs"></a>연습으로 학습
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 설명서에서는 여러 연습이 제공 됩니다. 이 항목에서는 몇 가지 일반적인 연습 문제와 해결 방법을 살펴보고 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]을 배울 수 있는 여러 초급 수준 연습에 대한 링크를 제공합니다.  
@@ -53,13 +53,13 @@ ms.locfileid: "59189006"
   
 ##### <a name="to-verify-or-change-the-database-log-on"></a>데이터베이스 로그온을 확인하거나 변경하려면  
   
-1.  Windows에서 **시작** 메뉴에서 **모든 프로그램**, **Microsoft SQL Server 2005**를 가리키고 **구성 도구**, 클릭 하 고 **SQL Server 구성 관리자**합니다.  
+1. Windows에서 **시작** 메뉴에서 **모든 프로그램**, **Microsoft SQL Server 2005**를 가리키고 **구성 도구**, 클릭 하 고 **SQL Server 구성 관리자**합니다.  
   
-2.  왼쪽된 창에는 **SQL Server 구성 관리자**, 클릭 **SQL Server 2005 서비스**합니다.  
+2. 왼쪽된 창에는 **SQL Server 구성 관리자**, 클릭 **SQL Server 2005 서비스**합니다.  
   
-3.  오른쪽 창에서 마우스 오른쪽 단추로 클릭 **SQL Server (SQLEXPRESS)** 를 클릭 하 고 **속성**합니다.  
+3. 오른쪽 창에서 마우스 오른쪽 단추로 클릭 **SQL Server (SQLEXPRESS)** 를 클릭 하 고 **속성**합니다.  
   
-4.  클릭 합니다 **로그온** 탭 하 고 서버에 로그온 하려고 하는 방법을 확인 합니다.  
+4. 클릭 합니다 **로그온** 탭 하 고 서버에 로그온 하려고 하는 방법을 확인 합니다.  
   
      대부분의 경우에서 **로컬 시스템** 작동 합니다.  
   
@@ -70,9 +70,9 @@ ms.locfileid: "59189006"
   
 ##### <a name="to-enable-the-named-pipes-protocol"></a>명명된 파이프 프로토콜을 사용하도록 설정하려면  
   
-1.  왼쪽된 창에는 **SQL Server 구성 관리자**, 확장 **SQL Server 2005 네트워크 구성**, 클릭 하 고 **SQLEXPRESS에 대 한 프로토콜**합니다.  
+1. 왼쪽된 창에는 **SQL Server 구성 관리자**, 확장 **SQL Server 2005 네트워크 구성**, 클릭 하 고 **SQLEXPRESS에 대 한 프로토콜**합니다.  
   
-2.  오른쪽 창에서 확인 합니다 **명명 된 파이프** 프로토콜이 사용 됩니다. 없는 경우 마우스 오른쪽 단추로 클릭 **명명 된 파이프** 을 클릭 한 다음 **사용 하도록 설정**합니다.  
+2. 오른쪽 창에서 확인 합니다 **명명 된 파이프** 프로토콜이 사용 됩니다. 없는 경우 마우스 오른쪽 단추로 클릭 **명명 된 파이프** 을 클릭 한 다음 **사용 하도록 설정**합니다.  
   
      서비스를 중지했다가 다시 시작해야 합니다. 다음 블록의 단계를 따릅니다.  
   
@@ -81,11 +81,11 @@ ms.locfileid: "59189006"
   
 ##### <a name="to-stop-and-restart-the-service"></a>서비스를 중지했다가 다시 시작하려면  
   
-1.  왼쪽된 창에는 **SQL Server 구성 관리자**, 클릭 **SQL Server 2005 서비스**합니다.  
+1. 왼쪽된 창에는 **SQL Server 구성 관리자**, 클릭 **SQL Server 2005 서비스**합니다.  
   
-2.  오른쪽 창에서 마우스 오른쪽 단추로 클릭 **SQL Server (SQLEXPRESS)** 를 클릭 하 고 **중지**합니다.  
+2. 오른쪽 창에서 마우스 오른쪽 단추로 클릭 **SQL Server (SQLEXPRESS)** 를 클릭 하 고 **중지**합니다.  
   
-3.  마우스 오른쪽 단추로 클릭 **SQL Server (SQLEXPRESS)** 를 클릭 하 고 **다시 시작**합니다.  
+3. 마우스 오른쪽 단추로 클릭 **SQL Server (SQLEXPRESS)** 를 클릭 하 고 **다시 시작**합니다.  
   
 ## <a name="see-also"></a>참고자료
 

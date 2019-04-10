@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: c3133d53-83ed-4a4d-af8b-82edcf3831db
-ms.openlocfilehash: c43935cd53d1b58ce695164e957b4b5376d52536
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: d55c85ae0af567c5af0fd421b612809eaf5bb789
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59209816"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59318431"
 ---
 # <a name="data-retrieval-and-cud-operations-in-n-tier-applications-linq-to-sql"></a>N 계층 응용 프로그램에서 데이터 검색 및 CUD 작업(LINQ to SQL)
 Customers 또는 Orders와 같은 엔터티 개체를 네트워크상의 클라이언트로 serialize하면 해당 엔터티가 원래 데이터 컨텍스트에서 분리됩니다. 데이터 컨텍스트에서는 분리된 엔터티 개체에 대해서는 변경 내용이나 다른 개체와의 관계를 더 이상 추적하지 않습니다. 이러한 특징은 클라이언트에서 데이터를 읽기만 하는 경우에는 문제가 되지 않습니다. 또한 클라이언트가 데이터베이스에 새 행을 추가할 수 있게 하는 것도 비교적 간단합니다. 그러나 응용 프로그램에서 클라이언트가 데이터를 업데이트하거나 삭제해야 하는 경우에는 <xref:System.Data.Linq.DataContext.SubmitChanges%2A?displayProperty=nameWithType>를 호출하기 전에 새 데이터 컨텍스트에 엔터티를 연결해야 합니다. 또한 원래 값을 기준으로 낙관적 동시성 검사를 사용하는 경우에는 어떤 방법으로든 데이터베이스에 원래 엔터티와 수정된 엔터티를 모두 제공해야 합니다. `Attach` 메서드는 분리된 엔터티를 새 데이터 컨텍스트에 연결하기 위해 제공됩니다.  
@@ -394,11 +394,11 @@ public void UpdateProductInfo(Product newProd, Product originalProd)
 ### <a name="state"></a>상태  
  엔터티 개체를 <xref:System.Data.Linq.DataContext> 인스턴스에 연결하면 개체가 `PossiblyModified` 상태가 됩니다. 다음과 같은 세 가지 방법을 사용하여 연결된 개체를 강제로 `Modified` 상태로 만들 수 있습니다.  
   
-1.  개체를 수정되지 않은 상태로 연결한 다음 필드를 직접 수정합니다.  
+1. 개체를 수정되지 않은 상태로 연결한 다음 필드를 직접 수정합니다.  
   
-2.  개체의 현재 인스턴스와 원래 인스턴스를 사용하는 <xref:System.Data.Linq.Table%601.Attach%2A> 오버로드와 연결합니다. 이렇게 하면 이전 값과 새 값이 변경 추적기에 제공되므로 변경된 필드를 자동으로 인식할 수 있습니다.  
+2. 개체의 현재 인스턴스와 원래 인스턴스를 사용하는 <xref:System.Data.Linq.Table%601.Attach%2A> 오버로드와 연결합니다. 이렇게 하면 이전 값과 새 값이 변경 추적기에 제공되므로 변경된 필드를 자동으로 인식할 수 있습니다.  
   
-3.  true로 설정된 두 번째 부울 매개 변수를 사용하는 <xref:System.Data.Linq.Table%601.Attach%2A> 오버로드와 연결합니다. 이렇게 하면 원래 값을 제공하지 않고도 수정된 개체를 변경 추적기에서 인식할 수 있습니다. 이 방법을 사용하려면 개체에 버전/타임스탬프 필드가 있어야 합니다.  
+3. true로 설정된 두 번째 부울 매개 변수를 사용하는 <xref:System.Data.Linq.Table%601.Attach%2A> 오버로드와 연결합니다. 이렇게 하면 원래 값을 제공하지 않고도 수정된 개체를 변경 추적기에서 인식할 수 있습니다. 이 방법을 사용하려면 개체에 버전/타임스탬프 필드가 있어야 합니다.  
   
  자세한 내용은 [개체 상태 및 변경 내용 추적](../../../../../../docs/framework/data/adonet/sql/linq/object-states-and-change-tracking.md)합니다.  
   

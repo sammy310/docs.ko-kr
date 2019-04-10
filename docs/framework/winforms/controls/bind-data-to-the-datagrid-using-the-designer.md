@@ -6,12 +6,12 @@ helpviewer_keywords:
 - data sources [Windows Forms], binding to Windows Forms controls
 - DataGridView control [Windows Forms], data binding
 ms.assetid: f4f46009-cec2-441b-8668-6b5af057558b
-ms.openlocfilehash: 70bd2d25f848f1602fbd12a76f898f8fe902d696
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 59a025535e850cf3c773a2a078511d41058bb24c
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59200235"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59321850"
 ---
 # <a name="how-to-bind-data-to-the-windows-forms-datagridview-control-using-the-designer"></a>방법: 디자이너를 사용하여 Windows Forms DataGridView 컨트롤에 데이터 바인딩
 디자이너를 사용 하 여 연결할 수는 <xref:System.Windows.Forms.DataGridView> 데이터베이스, 비즈니스 개체 또는 웹 서비스를 포함 하는 여러 다른 종류의 데이터 소스 컨트롤입니다. 컨트롤에 자동으로 바인딩되어 컨트롤에 디자이너를 사용 하 여 데이터 원본에 바인딩하는 경우는 <xref:System.Windows.Forms.BindingSource> 데이터 소스를 나타내는 구성 요소입니다. 또한 열은 데이터 소스에서 제공하는 스키마 정보와 일치하는 컨트롤에 자동으로 생성됩니다.  
@@ -27,19 +27,19 @@ ms.locfileid: "59200235"
   
 ### <a name="to-bind-the-control-to-a-data-source"></a>데이터 소스에 컨트롤을 바인딩하려면  
   
-1.  스마트 태그 문자 모양을 클릭 (![스마트 태그 문자 모양](./media/vs-winformsmttagglyph.gif "VS_WinFormSmtTagGlyph"))의 오른쪽 위 모서리에는 <xref:System.Windows.Forms.DataGridView> 제어 합니다.  
+1. 스마트 태그 문자 모양을 클릭 (![스마트 태그 문자 모양](./media/vs-winformsmttagglyph.gif "VS_WinFormSmtTagGlyph"))의 오른쪽 위 모서리에는 <xref:System.Windows.Forms.DataGridView> 제어 합니다.  
   
-2.  **데이터 소스 선택** 옵션에서 드롭다운 화살표를 클릭합니다.  
+2. **데이터 소스 선택** 옵션에서 드롭다운 화살표를 클릭합니다.  
   
-3.  프로젝트에 데이터 소스가 아직 없는 경우 **프로젝트 데이터 소스 추가**를 클릭하고 마법사에 의해 표시된 단계를 따릅니다.  
+3. 프로젝트에 데이터 소스가 아직 없는 경우 **프로젝트 데이터 소스 추가**를 클릭하고 마법사에 의해 표시된 단계를 따릅니다.  
   
      자세한 내용은 [데이터 소스 구성 마법사](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/w4dd7z6t(v=vs.120))를 참조하세요. 새 데이터 소스은 **데이터 소스 선택** 드롭다운 창에 표시됩니다. 새 데이터 소스에 단일 데이터베이스 테이블과 같은 하나의 구성원만이 포함되는 경우 컨트롤은 해당 구성원에 자동으로 바인딩됩니다. 그렇지 않으면 다음 단계를 계속합니다.  
   
-4.  **기타 데이터 소스** 및 **프로젝트 데이터 소스** 노드가 아직 확장되지 않은 경우 확장한 다음 컨트롤을 바인딩할 데이터 소스를 선택합니다.  
+4. **기타 데이터 소스** 및 **프로젝트 데이터 소스** 노드가 아직 확장되지 않은 경우 확장한 다음 컨트롤을 바인딩할 데이터 소스를 선택합니다.  
   
-5.  데이터 원본에 둘 이상의 멤버가 포함 되어 경우와 같이 만든 경우는 <xref:System.Data.DataSet?displayProperty=nameWithType> 여러 테이블을 포함 하는 데이터 소스를 확장 하 고 바인딩할 특정 멤버를 선택 합니다.  
+5. 데이터 원본에 둘 이상의 멤버가 포함 되어 경우와 같이 만든 경우는 <xref:System.Data.DataSet?displayProperty=nameWithType> 여러 테이블을 포함 하는 데이터 소스를 확장 하 고 바인딩할 특정 멤버를 선택 합니다.  
   
-6.  마스터/세부 관계를 만들려면 합니다 **데이터 소스 선택** 잠시 드롭다운 창 <xref:System.Windows.Forms.DataGridView> 컨트롤을 확장 하 고는 <xref:System.Windows.Forms.BindingSource> 부모 테이블에 대해 생성 한 다음 목록에서 관련된 자식 테이블을 선택 표시 합니다.  
+6. 마스터/세부 관계를 만들려면 합니다 **데이터 소스 선택** 잠시 드롭다운 창 <xref:System.Windows.Forms.DataGridView> 컨트롤을 확장 하 고는 <xref:System.Windows.Forms.BindingSource> 부모 테이블에 대해 생성 한 다음 목록에서 관련된 자식 테이블을 선택 표시 합니다.  
   
     > [!NOTE]
     >  프로젝트에 데이터 소스가 이미 있으면 **데이터 소스** 창을 사용하여 데이터 양식을 만들 수도 있습니다. 자세한 내용은 [데이터 소스 창](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/6ckyxa83(v=vs.120))을 참조하세요.  

@@ -14,12 +14,12 @@ helpviewer_keywords:
 - performance troubleshooting [WPF], animation
 - animations [WPF], use of system resources
 ms.assetid: e467796b-d5d4-45a6-a108-8c5d7ff69a0f
-ms.openlocfilehash: 1337dac083ad9d52a4cfd99bddee80baebf474de
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 3a22c83eb739a735d42fa0f670716a0e75bbd54c
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59202146"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59295954"
 ---
 # <a name="animation-tips-and-tricks"></a>애니메이션에 대한 유용한 정보
 애니메이션을 사용할 때 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)], 팁 가지 및 애니메이션을 만들 수 있는 트릭 더 잘 수행 줄이도록 하 합니다.  
@@ -71,9 +71,9 @@ ms.locfileid: "59202146"
   
  첫 번째 하는 동안 두 번째 단추를 클릭 하면 <xref:System.Windows.Media.Animation.Storyboard> 는 재생 하 고, 다음 동작을 예상할 수 있습니다.  
   
-1.  첫 번째 storyboard가 끝나고 사각형의 원래 위치에 다시 애니메이션에 있으므로 <xref:System.Windows.Media.Animation.Timeline.FillBehavior%2A> 의 <xref:System.Windows.Media.Animation.FillBehavior.Stop>합니다.  
+1. 첫 번째 storyboard가 끝나고 사각형의 원래 위치에 다시 애니메이션에 있으므로 <xref:System.Windows.Media.Animation.Timeline.FillBehavior%2A> 의 <xref:System.Windows.Media.Animation.FillBehavior.Stop>합니다.  
   
-2.  두 번째 Storyboard가 적용되며, 0에 해당하는 현재 위치에서 500으로 애니메이션 효과를 줍니다.  
+2. 두 번째 Storyboard가 적용되며, 0에 해당하는 현재 위치에서 500으로 애니메이션 효과를 줍니다.  
   
  **하지만 작업이 수행 되지 않습니다.** 대신, 사각형이 원래 위치로 돌아가지 않고 계속 오른쪽으로 이동됩니다. 그 이유는 두 번째 애니메이션이 첫 번째 애니메이션의 현재 값을 시작 값으로 사용하고 해당 값에서 500으로 애니메이션 효과를 주기 때문입니다. 때문에 두 번째 애니메이션이 첫 번째를 대체 하는 경우는 <xref:System.Windows.Media.Animation.HandoffBehavior.SnapshotAndReplace><xref:System.Windows.Media.Animation.HandoffBehavior> 사용 되는 <xref:System.Windows.Media.Animation.FillBehavior> 첫 번째 애니메이션 중요 하지 않습니다.  
   

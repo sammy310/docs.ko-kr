@@ -16,12 +16,12 @@ helpviewer_keywords:
 - custom drawing
 - owner drawing
 ms.assetid: 94e7d7bd-a752-441c-b5b3-7acf98881163
-ms.openlocfilehash: 74092fdcd72c09670db53dc79d43d9d52f0dcf4b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 9b3d6b9391971d4c2d012345b96c2ed64d33a998
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59172189"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59311047"
 ---
 # <a name="how-to-custom-draw-a-toolstrip-control"></a>방법: ToolStrip 컨트롤 그리기 사용자 지정
 <xref:System.Windows.Forms.ToolStrip> 컨트롤에는 다음과 같은 연결된 렌더링(그리기) 클래스가 있습니다.  
@@ -107,11 +107,11 @@ ms.locfileid: "59172189"
   
 ### <a name="to-change-the-rendering-for-all-toolstrip-controls-in-your-application"></a>응용 프로그램의 모든 ToolStrip 컨트롤에 대한 렌더링을 변경하려면  
   
-1.  <xref:System.Windows.Forms.ToolStripManager.RenderMode%2A?displayProperty=nameWithType> 속성을 사용하여 제공된 렌더러 중 하나를 선택합니다.  
+1. <xref:System.Windows.Forms.ToolStripManager.RenderMode%2A?displayProperty=nameWithType> 속성을 사용하여 제공된 렌더러 중 하나를 선택합니다.  
   
-2.  <xref:System.Windows.Forms.ToolStripManager.Renderer%2A?displayProperty=nameWithType>를 사용하여 사용자 지정 렌더러를 할당합니다.  
+2. <xref:System.Windows.Forms.ToolStripManager.Renderer%2A?displayProperty=nameWithType>를 사용하여 사용자 지정 렌더러를 할당합니다.  
   
-3.  <xref:System.Windows.Forms.ToolStrip.RenderMode%2A?displayProperty=nameWithType>가 기본값인 <xref:System.Windows.Forms.ToolStripRenderMode.ManagerRenderMode>로 설정되었는지 확인합니다.  
+3. <xref:System.Windows.Forms.ToolStrip.RenderMode%2A?displayProperty=nameWithType>가 기본값인 <xref:System.Windows.Forms.ToolStripRenderMode.ManagerRenderMode>로 설정되었는지 확인합니다.  
   
 ### <a name="to-turn-off-the-microsoft-office-colors-for-the-entire-application"></a>전체 응용 프로그램에 대해 Microsoft Office 색을 해제하려면  
   

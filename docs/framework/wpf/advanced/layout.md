@@ -9,12 +9,12 @@ helpviewer_keywords:
 - controls [WPF], layout system
 - layout system [WPF]
 ms.assetid: 3eecdced-3623-403a-a077-7595453a9221
-ms.openlocfilehash: 7fc69ff0434a26dc196d24395bbd1e2f441008de
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 1ffc665cb7ec5893dddf4efff5021e600b16fc45
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59231125"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59330495"
 ---
 # <a name="layout"></a>레이아웃
 이 항목에서는 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 레이아웃 시스템에 대해 설명합니다. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]에서 사용자 인터페이스를 만들려면 언제, 어떻게 레이아웃을 계산해야 하는지를 이해해야 합니다.  
@@ -64,17 +64,17 @@ ms.locfileid: "59231125"
   
  때마다 자식 <xref:System.Windows.UIElement> 해당 위치를 변경할 레이아웃 시스템에 의해 새로운 단계가 트리거될 수에 합니다. 따라서 불필요한 호출로 인해 애플리케이션 성능이 저하될 수 있으므로 레이아웃 시스템을 호출할 수 있는 이벤트를 이해해야 합니다. 다음에서 레이아웃 시스템이 호출될 때 발생하는 프로세스에 대해 설명합니다.  
   
-1.  자식 <xref:System.Windows.UIElement> 먼저 핵심 속성이 측정 되도록 하 여 레이아웃 프로세스를 시작 합니다.  
+1. 자식 <xref:System.Windows.UIElement> 먼저 핵심 속성이 측정 되도록 하 여 레이아웃 프로세스를 시작 합니다.  
   
-2.  에 정의 된 속성을 크기 조정 <xref:System.Windows.FrameworkElement> 와 같은 평가 됩니다 <xref:System.Windows.FrameworkElement.Width%2A>를 <xref:System.Windows.FrameworkElement.Height%2A>, 및 <xref:System.Windows.FrameworkElement.Margin%2A>합니다.  
+2. 에 정의 된 속성을 크기 조정 <xref:System.Windows.FrameworkElement> 와 같은 평가 됩니다 <xref:System.Windows.FrameworkElement.Width%2A>를 <xref:System.Windows.FrameworkElement.Height%2A>, 및 <xref:System.Windows.FrameworkElement.Margin%2A>합니다.  
   
-3.  <xref:System.Windows.Controls.Panel>-같은 논리가 적용 됩니다 <xref:System.Windows.Controls.Dock> 방향 또는 누적 <xref:System.Windows.Controls.StackPanel.Orientation%2A>합니다.  
+3. <xref:System.Windows.Controls.Panel>-같은 논리가 적용 됩니다 <xref:System.Windows.Controls.Dock> 방향 또는 누적 <xref:System.Windows.Controls.StackPanel.Orientation%2A>합니다.  
   
-4.  모든 자식을 측정한 후에 콘텐츠가 정렬됩니다.  
+4. 모든 자식을 측정한 후에 콘텐츠가 정렬됩니다.  
   
-5.  <xref:System.Windows.Controls.Panel.Children%2A> 컬렉션이 화면에 그려집니다.  
+5. <xref:System.Windows.Controls.Panel.Children%2A> 컬렉션이 화면에 그려집니다.  
   
-6.  추가 하는 경우 프로세스가 다시 호출 됩니다 <xref:System.Windows.Controls.Panel.Children%2A> 컬렉션에 추가 됩니다을 <xref:System.Windows.FrameworkElement.LayoutTransform%2A> 적용 또는 <xref:System.Windows.UIElement.UpdateLayout%2A> 메서드가 호출 됩니다.  
+6. 추가 하는 경우 프로세스가 다시 호출 됩니다 <xref:System.Windows.Controls.Panel.Children%2A> 컬렉션에 추가 됩니다을 <xref:System.Windows.FrameworkElement.LayoutTransform%2A> 적용 또는 <xref:System.Windows.UIElement.UpdateLayout%2A> 메서드가 호출 됩니다.  
   
  이 프로세스와 해당 프로세스가 호출되는 방법은 다음 섹션에 자세히 정의되어 있습니다.  
   

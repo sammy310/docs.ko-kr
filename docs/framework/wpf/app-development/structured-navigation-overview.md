@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - structured navigation [WPF]
 ms.assetid: 025d30ef-fec5-436d-ad7a-5d5483331c26
-ms.openlocfilehash: 0544e3584e25e9f892a4df095a5c41f0f5352a17
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 0cf2a37eaa812d27dc3d111b1459c9daae72dc5a
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59161514"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59320073"
 ---
 # <a name="structured-navigation-overview"></a>구조적 탐색 개요
 호스팅될 수 있는 콘텐츠를 [!INCLUDE[TLA#tla_xbap](../../../../includes/tlasharptla-xbap-md.md)], <xref:System.Windows.Controls.Frame>, 또는 <xref:System.Windows.Navigation.NavigationWindow> 팩에서 식별할 수 있는 페이지로 구성 됩니다 [!INCLUDE[TLA#tla_uri#plural](../../../../includes/tlasharptla-urisharpplural-md.md)] 하이퍼링크 탐색 하 고 있습니다. 하이퍼링크를 통해 정의되는 페이지 및 페이지 탐색 방법의 구조를 탐색 토폴로지라고 합니다. 이 토폴로지는 다양한 애플리케이션 형식, 특히 문서를 탐색하는 애플리케이션에 적합합니다. 해당 애플리케이션의 경우 한쪽 페이지가 다른 페이지에 대해 아무것도 알 필요 없이 사용자가 페이지 사이에서 이동할 수 있습니다.  
@@ -134,9 +134,9 @@ ms.locfileid: "59161514"
 ### <a name="returning-task-result-and-task-data-from-a-task-to-a-calling-page"></a>작업에서 호출 페이지로 작업 결과 및 작업 데이터 반환  
  사용자가 [확인] 또는 [취소] 단추를 눌러 이 예제에서 보여 준 호출된 페이지 사용을 마치면 호출된 페이지가 반환해야 합니다. 호출 페이지는 호출된 페이지를 사용하여 사용자로부터 데이터를 수집했으므로 호출 페이지에는 두 가지 정보가 필요합니다.  
   
-1.  사용자가 호출된 페이지를 취소했는지 여부(이 예제에서 [확인] 또는 [취소] 단추를 눌러). 이 경우 호출 페이지는 호출 페이지가 사용자로부터 수집한 데이터를 처리할지 결정할 수 있습니다.  
+1. 사용자가 호출된 페이지를 취소했는지 여부(이 예제에서 [확인] 또는 [취소] 단추를 눌러). 이 경우 호출 페이지는 호출 페이지가 사용자로부터 수집한 데이터를 처리할지 결정할 수 있습니다.  
   
-2.  사용자가 제공한 데이터.  
+2. 사용자가 제공한 데이터.  
   
  정보를 반환할 <xref:System.Windows.Navigation.PageFunction%601> 구현 된 <xref:System.Windows.Navigation.PageFunction%601.OnReturn%2A> 메서드. 다음 코드에서는 메서드를 호출하는 방법을 보여 줍니다.  
   

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - data binding, WCF Data Services
 - WCF Data Services, data binding
 ms.assetid: 2477af0a-676f-44f7-b73d-e66208785509
-ms.openlocfilehash: 465585d93d7bb20208720dc360b2cf8e6bb5f0e4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f02c551c4382c9db03be2f4a0adbb9061fd4fe65
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54540756"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59332510"
 ---
 # <a name="how-to-bind-data-using-a-project-data-source-wcf-data-services"></a>방법: 프로젝트 데이터 원본 (WCF Data Services)를 사용 하 여 데이터 바인딩
 
@@ -23,11 +23,11 @@ WCF Data Services 클라이언트 응용 프로그램에서 생성 된 데이터
 
 ## <a name="use-a-project-data-source-in-a-wpf-window"></a>WPF 창에서 프로젝트 데이터 소스를 사용 합니다.
 
-1.  Visual Studio에서 WPF 프로젝트에서 Northwind 데이터 서비스에 대 한 참조를 추가 합니다. 자세한 내용은 [방법: 데이터 서비스 참조 추가](../../../../docs/framework/data/wcf/how-to-add-a-data-service-reference-wcf-data-services.md)합니다.
+1. Visual Studio에서 WPF 프로젝트에서 Northwind 데이터 서비스에 대 한 참조를 추가 합니다. 자세한 내용은 [방법: 데이터 서비스 참조 추가](../../../../docs/framework/data/wcf/how-to-add-a-data-service-reference-wcf-data-services.md)합니다.
 
-2.  에 **데이터 원본** 창 확장를 `Customers` 에서 노드를 **NorthwindEntities** 프로젝트 데이터 소스입니다.
+2. 에 **데이터 원본** 창 확장를 `Customers` 에서 노드를 **NorthwindEntities** 프로젝트 데이터 소스입니다.
 
-3.  클릭는 **CustomerID** 항목을 선택 **콤보 상자** 확인 하 고 끌어서 목록에서를 **CustomerID** 에서 항목을 **고객** 노드를는 디자이너입니다.
+3. 클릭는 **CustomerID** 항목을 선택 **콤보 상자** 확인 하 고 끌어서 목록에서를 **CustomerID** 에서 항목을 **고객** 노드를는 디자이너입니다.
 
      창에 대한 XAML 파일에 다음 개체 요소가 만들어집니다.
 
@@ -37,7 +37,7 @@ WCF Data Services 클라이언트 응용 프로그램에서 생성 된 데이터
 
     -   <xref:System.Windows.Controls.Label>
 
-4.  끌기 합니다 **주문** 디자이너 탐색 속성입니다.
+4. 끌기 합니다 **주문** 디자이너 탐색 속성입니다.
 
      창에 대한 XAML 파일에 다음 개체 요소가 추가로 만들어집니다.
 
@@ -45,18 +45,18 @@ WCF Data Services 클라이언트 응용 프로그램에서 생성 된 데이터
 
     -   <xref:System.Windows.Controls.DataGrid>라는 데이터 바인딩된 `ordersDataGrid` 컨트롤
 
-5.  (선택 사항) 추가 항목을 끌어 놓아 합니다 **고객** 노드에서 디자이너로 합니다.
+5. (선택 사항) 추가 항목을 끌어 놓아 합니다 **고객** 노드에서 디자이너로 합니다.
 
-6.  폼의 코드 페이지를 열고 다음 `using` 문(Visual Basic에서는 `Imports`)을 추가합니다.
+6. 폼의 코드 페이지를 열고 다음 `using` 문(Visual Basic에서는 `Imports`)을 추가합니다.
 
      [!code-csharp[Astoria Northwind Client#CustomersOrdersUsingWpf](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/customerorderswpf2.xaml.cs#customersordersusingwpf)]
 
-7.  폼을 정의하는 partial 클래스에서 <xref:System.Data.Objects.ObjectContext> 인스턴스를 만들고 `customerID` 상수를 정의하는 다음 코드를 추가합니다.
+7. 폼을 정의하는 partial 클래스에서 <xref:System.Data.Objects.ObjectContext> 인스턴스를 만들고 `customerID` 상수를 정의하는 다음 코드를 추가합니다.
 
      [!code-csharp[Astoria Northwind Client#CustomersOrdersDefinitionWpf](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/customerorderswpf2.xaml.cs#customersordersdefinitionwpf)]
      [!code-vb[Astoria Northwind Client#CustomersOrdersDefinitionWpf](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/customerorderswpf2.xaml.vb#customersordersdefinitionwpf)]
 
-8.  디자이너에서 창을 선택합니다.
+8. 디자이너에서 창을 선택합니다.
 
     > [!NOTE]
     > 창 안에 있는 콘텐츠를 선택하는 대신 창 자체를 선택해야 합니다. 창을 선택 하면 합니다 **이름** 입력란의 위쪽에 **속성** 창 창의 이름이 포함 되어야 합니다.
@@ -76,9 +76,9 @@ WCF Data Services 클라이언트 응용 프로그램에서 생성 된 데이터
 
 ## <a name="use-a-project-data-source-in-a-windows-form"></a>Windows form에서 프로젝트 데이터 소스 사용
 
-1.  에 **데이터 원본** 창 확장를 **고객** 에서 노드를 **NorthwindEntities** 프로젝트 데이터 소스입니다.
+1. 에 **데이터 원본** 창 확장를 **고객** 에서 노드를 **NorthwindEntities** 프로젝트 데이터 소스입니다.
 
-2.  클릭는 **CustomerID** 항목을 선택 **콤보 상자** 확인 하 고 끌어서 목록에서를 **CustomerID** 에서 항목을 **고객** 노드를는 디자이너입니다.
+2. 클릭는 **CustomerID** 항목을 선택 **콤보 상자** 확인 하 고 끌어서 목록에서를 **CustomerID** 에서 항목을 **고객** 노드를는 디자이너입니다.
 
      폼에 다음 컨트롤이 만들어집니다.
 
@@ -90,23 +90,23 @@ WCF Data Services 클라이언트 응용 프로그램에서 생성 된 데이터
 
     -   <xref:System.Windows.Forms.Label>
 
-3.  끌기 합니다 **주문** 탐색 속성을 폼입니다.
+3. 끌기 합니다 **주문** 탐색 속성을 폼입니다.
 
-4.  컨트롤의 `ordersBindingSource` 속성이 <xref:System.Windows.Forms.BindingSource.DataSource%2A>로 설정되고 `customersBindingSource` 속성이 <xref:System.Windows.Forms.BindingSource.DataMember%2A>로 설정된 `Customers` 컨트롤이 만들어집니다. `ordersDataGridView` 데이터 바인딩된 컨트롤도 폼에 만들어지며, 적절한 제목의 레이블 컨트롤이 함께 표시됩니다.
+4. 컨트롤의 `ordersBindingSource` 속성이 <xref:System.Windows.Forms.BindingSource.DataSource%2A>로 설정되고 `customersBindingSource` 속성이 <xref:System.Windows.Forms.BindingSource.DataMember%2A>로 설정된 `Customers` 컨트롤이 만들어집니다. `ordersDataGridView` 데이터 바인딩된 컨트롤도 폼에 만들어지며, 적절한 제목의 레이블 컨트롤이 함께 표시됩니다.
 
-5.  (선택 사항) 추가 항목을 끌어 놓아 합니다 **고객** 노드에서 디자이너로 합니다.
+5. (선택 사항) 추가 항목을 끌어 놓아 합니다 **고객** 노드에서 디자이너로 합니다.
 
-6.  폼의 코드 페이지를 열고 다음 `using` 문(Visual Basic에서는 `Imports`)을 추가합니다.
+6. 폼의 코드 페이지를 열고 다음 `using` 문(Visual Basic에서는 `Imports`)을 추가합니다.
 
      [!code-csharp[Astoria Northwind Client#CustomersOrdersUsing](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/customerorders.cs#customersordersusing)]
      [!code-vb[Astoria Northwind Client#CustomersOrdersUsing](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/customerorders.vb#customersordersusing)]
 
-7.  폼을 정의하는 partial 클래스에서 <xref:System.Data.Objects.ObjectContext> 인스턴스를 만들고 `customerID` 상수를 정의하는 다음 코드를 추가합니다.
+7. 폼을 정의하는 partial 클래스에서 <xref:System.Data.Objects.ObjectContext> 인스턴스를 만들고 `customerID` 상수를 정의하는 다음 코드를 추가합니다.
 
      [!code-csharp[Astoria Northwind Client#CustomersOrdersDefinition](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/customerorders.cs#customersordersdefinition)]
      [!code-vb[Astoria Northwind Client#CustomersOrdersDefinition](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/customerorders.vb#customersordersdefinition)]
 
-8.  폼 디자이너에서 폼을 두 번 클릭합니다.
+8. 폼 디자이너에서 폼을 두 번 클릭합니다.
 
      폼에 대한 코드 페이지가 열리고 폼의 `Load` 이벤트를 처리하는 메서드가 만들어집니다.
 

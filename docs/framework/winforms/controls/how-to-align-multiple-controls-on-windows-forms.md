@@ -7,12 +7,12 @@ helpviewer_keywords:
 - controls [Windows Forms], positioning
 - controls [Windows Forms], aligning
 ms.assetid: b7175656-f532-49e9-b0b1-177d1b40af3e
-ms.openlocfilehash: d07da72e238ef21237ca60e4d9b47240507948e5
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 262487eabb3f0ab27efe8bc7fdb31a822ed07823
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59209543"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59307745"
 ---
 # <a name="how-to-align-multiple-controls-on-windows-forms"></a>방법: Windows Forms에서 여러 컨트롤 맞춤
 Windows 기반 응용 프로그램의 사용자 인터페이스 (UI) 레이아웃 표준화를 단일 명령 사용 하 여 컨트롤의 그룹을 배치할 수 있습니다.  
@@ -22,11 +22,11 @@ Windows 기반 응용 프로그램의 사용자 인터페이스 (UI) 레이아�
   
 ### <a name="to-align-multiple-controls-on-a-form"></a>폼에 여러 컨트롤을 맞추려면  
   
-1.  컨트롤의 위치를 포함 하는 폼을 엽니다는 **Windows Forms 디자이너**합니다.  
+1. 컨트롤의 위치를 포함 하는 폼을 엽니다는 **Windows Forms 디자이너**합니다.  
   
-2.  선택한 첫 번째 컨트롤을 다른 맞춰야 할 기본 컨트롤 되도록 정렬 하려면 컨트롤을 선택 합니다.  
+2. 선택한 첫 번째 컨트롤을 다른 맞춰야 할 기본 컨트롤 되도록 정렬 하려면 컨트롤을 선택 합니다.  
   
-3.  에 **형식** 메뉴에서 **맞춤**, 사용할 수 있는 7 개 중 하나를 클릭 하 고 있습니다.  
+3. 에 **형식** 메뉴에서 **맞춤**, 사용할 수 있는 7 개 중 하나를 클릭 하 고 있습니다.  
   
 ## <a name="see-also"></a>참고자료
 

@@ -2,12 +2,12 @@
 title: 약한형 JSON Serialization 샘플
 ms.date: 03/30/2017
 ms.assetid: 0b30e501-4ef5-474d-9fad-a9d559cf9c52
-ms.openlocfilehash: 13c51c416c6efad9a168999b0751cb9c1d88baba
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: b0e9617ad5d616e8921fbf142085f2758f3e0cd4
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59205058"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59303689"
 ---
 # <a name="weakly-typed-json-serialization-sample"></a>약한형 JSON Serialization 샘플
 사용자 정의 형식을 지정된 통신 형식으로 serialize하거나 통신 형식을 사용자 정의 형식으로 다시 deserialize할 경우 서비스와 클라이언트 모두에서 지정된 사용자 정의 형식을 사용할 수 있어야 합니다. 보통 이렇게 하기 위해 이 사용자 정의 형식에 <xref:System.Runtime.Serialization.DataContractAttribute> 특성을 적용하고 해당 멤버에 <xref:System.Runtime.Serialization.DataMemberAttribute> 특성을 적용합니다. 이 메커니즘 경우에 개체 JSON (JavaScript Notation) 개체로 작업 하는 항목에 설명 된 대로 [방법: 직렬화 및 역직렬화 JSON 데이터](../../../../docs/framework/wcf/feature-details/how-to-serialize-and-deserialize-json-data.md)합니다.  
@@ -125,11 +125,11 @@ My favorite bands are Band ABC and Band XYZ.
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>샘플을 설치, 빌드 및 실행하려면  
   
-1.  수행 했는지 확인 합니다 [Windows Communication Foundation 샘플에 대 한 일회성 설치 절차](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)합니다.  
+1. 수행 했는지 확인 합니다 [Windows Communication Foundation 샘플에 대 한 일회성 설치 절차](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)합니다.  
   
-2.  [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)에 설명된 대로 WeaklyTypedJson.sln 솔루션을 빌드합니다.  
+2. [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)에 설명된 대로 WeaklyTypedJson.sln 솔루션을 빌드합니다.  
   
-3.  솔루션을 실행합니다.  
+3. 솔루션을 실행합니다.  
   
 > [!IMPORTANT]
 >  컴퓨터에 이 샘플이 이미 설치되어 있을 수도 있습니다. 계속하기 전에 다음(기본) 디렉터리를 확인하세요.  

@@ -11,12 +11,12 @@ helpviewer_keywords:
 - declared elements [Visual Basic], about declared elements
 - variables [Visual Basic], hiding inherited
 ms.assetid: 765728d9-7351-4a30-999d-b5f34f024412
-ms.openlocfilehash: 2b052b44043deba85c8b142a2bf1a684c1159809
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: ee147ecd00b88b538ace32844c42ac9c5022b2ef
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58842514"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59331704"
 ---
 # <a name="how-to-hide-an-inherited-variable-visual-basic"></a>방법: 상속된 된 변수 (Visual Basic) 숨기기
 파생된 클래스는 기본 클래스의 모든 정의 상속합니다. 기본 클래스의 요소와 동일한 이름으로 변수를 정의 하려는 경우 숨길 수 있습니다, 또는 *섀도*, 파생된 클래스에서 변수를 정의할 때 해당 기본 클래스 요소입니다. 이 작업을 수행 하는 경우 파생된 클래스에서 코드 숨김 메커니즘을 명시적으로 무시 되지 않는 한 변수를 액세스 합니다.  
@@ -25,11 +25,11 @@ ms.locfileid: "58842514"
   
 ### <a name="to-hide-an-inherited-variable"></a>상속된 된 변수를 숨기려면  
   
-1.  숨기려는 변수가 (프로시저) 외부 클래스 수준에서 선언 해야 합니다. 그렇지 않은 경우 숨길 필요가 없습니다.  
+1. 숨기려는 변수가 (프로시저) 외부 클래스 수준에서 선언 해야 합니다. 그렇지 않은 경우 숨길 필요가 없습니다.  
   
-2.  파생된 클래스 내에서 작성 한 [Dim 문](../../../../visual-basic/language-reference/statements/dim-statement.md) 변수를 선언 합니다. 상속 된 변수는 동일한 이름을 사용 합니다.  
+2. 파생된 클래스 내에서 작성 한 [Dim 문](../../../../visual-basic/language-reference/statements/dim-statement.md) 변수를 선언 합니다. 상속 된 변수는 동일한 이름을 사용 합니다.  
   
-3.  포함 된 [그림자](../../../../visual-basic/language-reference/modifiers/shadows.md) 선언에서 키워드입니다.  
+3. 포함 된 [그림자](../../../../visual-basic/language-reference/modifiers/shadows.md) 선언에서 키워드입니다.  
   
      변수 이름에도 다른 여러 가지 파생된 클래스에서 코드를 참조 하는 경우 컴파일러는 변수에 대 한 참조를 확인 합니다.  
   
@@ -57,11 +57,11 @@ ms.locfileid: "58842514"
   
 ## <a name="see-also"></a>참고자료
 
-- [선언된 요소 참조](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)
+- [References to Declared Elements](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)
 - [Visual Basic의 숨김 기능](../../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)
-- [숨기기와 재정의의 차이점](../../../../visual-basic/programming-guide/language-features/declared-elements/differences-between-shadowing-and-overriding.md)
-- [방법: 변수 이름이 같은 변수 숨기기](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-hide-a-variable-with-the-same-name-as-your-variable.md)
-- [방법: 파생된 클래스에 의해 숨겨진 변수에 액세스](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-access-a-variable-hidden-by-a-derived-class.md)
-- [재정의](../../../../visual-basic/language-reference/modifiers/overrides.md)
+- [섀도잉과 재정의 간의 차이점](../../../../visual-basic/programming-guide/language-features/declared-elements/differences-between-shadowing-and-overriding.md)
+- [방법: 사용자 변수와 이름이 같은 변수 숨기기](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-hide-a-variable-with-the-same-name-as-your-variable.md)
+- [방법: 파생 클래스에 의해 숨겨진 변수에 액세스](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-access-a-variable-hidden-by-a-derived-class.md)
+- [Overrides](../../../../visual-basic/language-reference/modifiers/overrides.md)
 - [Me, My, MyBase 및 MyClass](../../../../visual-basic/programming-guide/program-structure/me-my-mybase-and-myclass.md)
 - [상속 기본 사항](../../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)

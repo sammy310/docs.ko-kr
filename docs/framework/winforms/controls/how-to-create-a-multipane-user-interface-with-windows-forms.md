@@ -12,12 +12,12 @@ helpviewer_keywords:
 - TreeView control [Windows Forms], examples
 - Splitter control [Windows Forms], examples
 ms.assetid: e79f6bcc-3740-4d1e-b46a-c5594d9b7327
-ms.openlocfilehash: d75d96f8db216ab78e13ba5f8409ea5aa535d685
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 8650ba3b8011e50779080e31d94727609f2d08f1
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59192696"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59315156"
 ---
 # <a name="how-to-create-a-multipane-user-interface-with-windows-forms"></a>방법: Windows Forms를 사용하여 다중 창 사용자 인터페이스 만들기
 다음 절차를 사용 하 여 Microsoft Outlook에서 사용 하는 비슷한 다중 창 사용자 인터페이스를 만듭니다는 **폴더** 목록에는 **메시지** 창 및 **미리보기** 창입니다. 이 정렬 폼에 컨트롤을 도킹을 통해 주로 수행 됩니다.  
@@ -30,7 +30,7 @@ ms.locfileid: "59192696"
   
 ### <a name="to-create-an-outlook-style-user-interface-programmatically"></a>Outlook 스타일 사용자 인터페이스를 프로그래밍 방식으로 만들려면  
   
-1.  양식 내에서 사용자 인터페이스를 구성 하는 각 컨트롤을 선언 합니다. 예를 들어 사용 합니다 <xref:System.Windows.Forms.TreeView>, <xref:System.Windows.Forms.ListView>, <xref:System.Windows.Forms.SplitContainer>, 및 <xref:System.Windows.Forms.RichTextBox> Microsoft Outlook 사용자 인터페이스를 모방 하기 위해 컨트롤입니다.  
+1. 양식 내에서 사용자 인터페이스를 구성 하는 각 컨트롤을 선언 합니다. 예를 들어 사용 합니다 <xref:System.Windows.Forms.TreeView>, <xref:System.Windows.Forms.ListView>, <xref:System.Windows.Forms.SplitContainer>, 및 <xref:System.Windows.Forms.RichTextBox> Microsoft Outlook 사용자 인터페이스를 모방 하기 위해 컨트롤입니다.  
   
     ```vb  
     Private WithEvents treeView1 As System.Windows.Forms.TreeView  
@@ -50,7 +50,7 @@ ms.locfileid: "59192696"
     private System.Windows.Forms. SplitContainer splitContainer1;  
     ```  
   
-2.  사용자 인터페이스를 정의 하는 프로시저를 만듭니다. 다음 코드 형식에는 Microsoft Outlook의 사용자 인터페이스와 유사 합니다 되도록 속성을 설정 합니다. 그러나 다른 컨트롤을 사용 하 여 또는 다르게에 도킹 하 여 것 시키면는 다른 사용자 인터페이스를 만드는 것도 그만큼 용이 합니다.  
+2. 사용자 인터페이스를 정의 하는 프로시저를 만듭니다. 다음 코드 형식에는 Microsoft Outlook의 사용자 인터페이스와 유사 합니다 되도록 속성을 설정 합니다. 그러나 다른 컨트롤을 사용 하 여 또는 다르게에 도킹 하 여 것 시키면는 다른 사용자 인터페이스를 만드는 것도 그만큼 용이 합니다.  
   
     ```vb  
     Public Sub CreateOutlookUI()  
@@ -164,7 +164,7 @@ ms.locfileid: "59192696"
     }  
     ```  
   
-3.  Visual basic에서는 방금 만든 프로시저 호출을 추가 합니다 `New()` 프로시저입니다. 시각적 개체의 C#를 폼 클래스의 생성자에이 코드 줄을 추가 합니다.  
+3. Visual basic에서는 방금 만든 프로시저 호출을 추가 합니다 `New()` 프로시저입니다. 시각적 개체의 C#를 폼 클래스의 생성자에이 코드 줄을 추가 합니다.  
   
     ```vb  
     ' Add this to the New procedure.  

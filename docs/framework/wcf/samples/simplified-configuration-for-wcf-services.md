@@ -2,12 +2,12 @@
 title: WCF 서비스를 위한 단순화된 구성
 ms.date: 03/30/2017
 ms.assetid: 1e39ec25-18a3-4fdc-b6a3-9dfafbd60112
-ms.openlocfilehash: 50693062b201c9cf2e0d87f796f3e935e1fd8e66
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 47af8dcba35ba31f25597c946596b0cbcac93b4d
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59220723"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59304261"
 ---
 # <a name="simplified-configuration-for-wcf-services"></a>WCF 서비스를 위한 단순화된 구성
 이 샘플에 구현 하 여 일반적인 서비스 및 Windows Communication Foundation (WCF)를 사용 하 여 클라이언트를 구성 하는 방법을 보여 줍니다. 이 샘플은 다른 모든 기본 기술 샘플의 기준이 됩니다.  
@@ -57,11 +57,11 @@ ms.locfileid: "59220723"
   
 ### <a name="to-use-this-sample"></a>이 샘플을 사용하려면  
   
-1.  수행 했는지 확인 합니다 [Windows Communication Foundation 샘플에 대 한 일회성 설치 절차](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)합니다.  
+1. 수행 했는지 확인 합니다 [Windows Communication Foundation 샘플에 대 한 일회성 설치 절차](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)합니다.  
   
-2.  지침에 따라 솔루션을 빌드하려면 [Building Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)합니다.  
+2. 지침에 따라 솔루션을 빌드하려면 [Building Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)합니다.  
   
-3.  다음 단계에 따라 샘플을 실행합니다.  
+3. 다음 단계에 따라 샘플을 실행합니다.  
   
     1.  마우스 오른쪽 단추로 클릭 합니다 **서비스** 프로젝트를 마우스 **시작 프로젝트로 설정**을 누릅니다 **ctrl+f5**합니다.  
   

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 2144c99b-8055-4080-a5c6-1ea14335e2a3
-ms.openlocfilehash: 80340bcf25ec3299629af34f7fafe53877ad571c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 401d445e49e3712b8c59fa9bc9a2e53500a5db16
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59213300"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59331678"
 ---
 # <a name="how-to-delete-rows-from-the-database"></a>방법: 데이터베이스에서 행 삭제
 해당 제거 하 여 데이터베이스의 행을 삭제할 수 있습니다 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 해당 테이블 관련 컬렉션에서 개체입니다. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 변경 내용을 적절 한 SQL 변환 `DELETE` 명령입니다.  
@@ -32,11 +32,11 @@ ms.locfileid: "59213300"
   
 ### <a name="to-delete-a-row-in-the-database"></a>데이터베이스에서 행을 삭제하려면  
   
-1.  삭제할 행에 대한 데이터베이스를 쿼리합니다.  
+1. 삭제할 행에 대한 데이터베이스를 쿼리합니다.  
   
-2.  <xref:System.Data.Linq.Table%601.DeleteOnSubmit%2A> 메서드를 호출합니다.  
+2. <xref:System.Data.Linq.Table%601.DeleteOnSubmit%2A> 메서드를 호출합니다.  
   
-3.  데이터베이스에 변경 내용을 전송합니다.  
+3. 데이터베이스에 변경 내용을 전송합니다.  
   
 ## <a name="example"></a>예제  
  첫째 코드 예제에서는 데이터베이스에서 Order #11000에 속하는 주문 상세 정보를 쿼리하고 이러한 주문 상세 정보를 삭제하도록 표시한 다음 변경 내용을 데이터베이스에 전송합니다.  

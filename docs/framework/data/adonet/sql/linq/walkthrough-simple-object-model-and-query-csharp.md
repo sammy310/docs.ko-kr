@@ -2,12 +2,12 @@
 title: '연습: 간단한 개체 모델 및 쿼리(C#)'
 ms.date: 03/30/2017
 ms.assetid: 419961cc-92d6-45f5-ae8a-d485bdde3a37
-ms.openlocfilehash: c84666bbf509a071e536faad1c3d647ff74d179a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: dc56f1e7886a1a1391d94b512ba5c91ca8c9092a
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59155131"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59309461"
 ---
 # <a name="walkthrough-simple-object-model-and-query-c"></a>연습: 간단한 개체 모델 및 쿼리(C#)
 이 연습에서는 간단한 기본 종단 간 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 시나리오에 대해 설명합니다. 샘플 Northwind 데이터베이스의 Customers 테이블을 모델링하는 엔터티 클래스를 만듭니다. 그런 다음 단순 쿼리를 만들어 London에 있는 고객을 나열합니다.  
@@ -44,30 +44,30 @@ ms.locfileid: "59155131"
   
 #### <a name="to-create-a-linq-to-sql-solution"></a>LINQ to SQL 솔루션을 만들려면  
   
-1.  Visual studio **파일** 메뉴에서 **새로 만들기**를 클릭 하 고 **프로젝트**합니다.  
+1. Visual studio **파일** 메뉴에서 **새로 만들기**를 클릭 하 고 **프로젝트**합니다.  
   
-2.  에 **프로젝트 형식** 창의 합니다 **새 프로젝트** 대화 상자에서 클릭 **Visual C#** .  
+2. 에 **프로젝트 형식** 창의 합니다 **새 프로젝트** 대화 상자에서 클릭 **Visual C#** .  
   
-3.  **템플릿** 창에서 **콘솔 애플리케이션**을 클릭합니다.  
+3. **템플릿** 창에서 **콘솔 애플리케이션**을 클릭합니다.  
   
-4.  에 **이름을** 상자에 입력 **LinqConsoleApp**합니다.  
+4. 에 **이름을** 상자에 입력 **LinqConsoleApp**합니다.  
   
-5.  에 **위치** 상자, 프로젝트 파일을 저장할 위치를 확인 합니다.  
+5. 에 **위치** 상자, 프로젝트 파일을 저장할 위치를 확인 합니다.  
   
-6.  **확인**을 클릭합니다.  
+6. **확인**을 클릭합니다.  
   
 ## <a name="adding-linq-references-and-directives"></a>LINQ 참조 및 지시문 추가  
  이 연습에서는 프로젝트에 기본적으로 설치되어 있지 않을 수 있는 어셈블리를 사용합니다. System.Data.Linq가 프로젝트에 참조로 나열 되지 않은 경우 (확장 된 **참조** 노드에서 **솔루션 탐색기**), 다음 단계에 설명 된 대로 추가 합니다.  
   
 #### <a name="to-add-systemdatalinq"></a>System.Data.Linq를 추가하려면  
   
-1.  **솔루션 탐색기**를 마우스 오른쪽 단추로 클릭 **참조**를 클릭 하 고 **참조 추가**합니다.  
+1. **솔루션 탐색기**를 마우스 오른쪽 단추로 클릭 **참조**를 클릭 하 고 **참조 추가**합니다.  
   
-2.  에 **참조 추가** 대화 상자, 클릭 **.NET**, 필자는 System.Data.Linq 어셈블리를 클릭 한 다음 클릭 **확인**합니다.  
+2. 에 **참조 추가** 대화 상자, 클릭 **.NET**, 필자는 System.Data.Linq 어셈블리를 클릭 한 다음 클릭 **확인**합니다.  
   
      어셈블리가 프로젝트에 추가됩니다.  
   
-3.  맨 위에 있는 다음 지시문을 추가 **Program.cs**:  
+3. 맨 위에 있는 다음 지시문을 추가 **Program.cs**:  
   
      [!code-csharp[DLinqWalk1CS#1](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqWalk1CS/cs/Program.cs#1)]  
   
@@ -124,11 +124,11 @@ ms.locfileid: "59155131"
   
 #### <a name="to-execute-the-query"></a>쿼리를 실행하려면  
   
-1.  다음 코드를 `Main` 메서드의 끝(쿼리 설명 뒤)에 입력하거나 붙여넣습니다.  
+1. 다음 코드를 `Main` 메서드의 끝(쿼리 설명 뒤)에 입력하거나 붙여넣습니다.  
   
      [!code-csharp[DLinqWalk1ACS#6](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqWalk1ACS/cs/Program.cs#6)]  
   
-2.  F5 키를 눌러 응용 프로그램을 디버깅합니다.  
+2. F5 키를 눌러 응용 프로그램을 디버깅합니다.  
   
     > [!NOTE]
     >  응용 프로그램에서 런타임 오류가 발생 하면 문제 해결 섹션을 참조 [연습으로 학습](../../../../../../docs/framework/data/adonet/sql/linq/learning-by-walkthroughs.md)합니다.  
@@ -147,7 +147,7 @@ ms.locfileid: "59155131"
   
      `ID=SEVES, City=London`  
   
-3.  콘솔 창에서 Enter 키를 눌러 응용 프로그램을 닫습니다.  
+3. 콘솔 창에서 Enter 키를 눌러 응용 프로그램을 닫습니다.  
   
 ## <a name="next-steps"></a>다음 단계  
  [연습: 관계 간 쿼리 (C#)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-querying-across-relationships-csharp.md) 항목에서는이 연습에서는 끝나는 계속 합니다. 관계 간 쿼리 연습에서는 어떻게 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 비슷합니다 테이블에서 쿼리할 수 있습니다 *조인* 관계형 데이터베이스에서.  

@@ -13,12 +13,12 @@ helpviewer_keywords:
 - XBAP security [WPF]
 - Internet Explorer security settings [WPF]
 ms.assetid: ee1baea0-3611-4e36-9ad6-fcd5205376fb
-ms.openlocfilehash: 01b1b30ceca316ecebacfaf23f458f71f1953d04
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 968913a52a1d86746498aed7c97b63594d346a31
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59193670"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59313569"
 ---
 # <a name="security-wpf"></a>보안(WPF)
 <a name="introduction"></a> Windows Presentation Foundation (WPF) 독립 실행형 및 브라우저에서 호스팅된 응용 프로그램을 개발할 때 보안 모델을 고려해 야 합니다. [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 독립 실행형 응용 프로그램 무제한 권한으로 실행 ( [!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)] **FullTrust** 권한 집합) Windows Installer (.msi), XCopy를 사용 하 여 배포한 여부에 관계 없이 또는 [!INCLUDE[TLA2#tla_clickonce](../../../includes/tla2sharptla-clickonce-md.md)]합니다. ClickOnce를 포함한 부분 신뢰, 독립 실행형 WPF 애플리케이션 배포가 지원되지 않습니다. 그러나 완전 신뢰 호스트 응용 프로그램을 부분 신뢰를 만들 수 <xref:System.AppDomain> .NET Framework 추가 기능 모델을 사용 합니다. 자세한 내용은 [WPF 추가 기능 개요](./app-development/wpf-add-ins-overview.md)합니다.  
@@ -103,15 +103,15 @@ ms.locfileid: "59193670"
   
  영역 기반 별로 구성 된이 방법으로 보호할 수 있는 기능 컬렉션을 **인터넷**, **인트라넷**, **신뢰할 수 있는 사이트**, 및  **제한 된 사이트** 영역입니다. 다음 단계는 보안 설정을 구성하는 방법을 설명합니다.  
   
-1.  **제어판**을 엽니다.  
+1. **제어판**을 엽니다.  
   
-2.  클릭 **네트워크 및 인터넷** 을 클릭 한 다음 **인터넷 옵션**합니다.  
+2. 클릭 **네트워크 및 인터넷** 을 클릭 한 다음 **인터넷 옵션**합니다.  
   
      인터넷 옵션 대화 상자가 나타납니다.  
   
-3.  에 **보안** 탭에 대 한 보안 설정을 구성 하는 영역을 선택 합니다.  
+3. 에 **보안** 탭에 대 한 보안 설정을 구성 하는 영역을 선택 합니다.  
   
-4.  클릭 합니다 **사용자 지정 수준** 단추입니다.  
+4. 클릭 합니다 **사용자 지정 수준** 단추입니다.  
   
      합니다 **보안 설정** 대화 상자가 표시 되며 선택한 영역에 대 한 보안 설정을 구성할 수 있습니다.  
   

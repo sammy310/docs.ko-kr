@@ -2,12 +2,12 @@
 title: Windows 스토어 클라이언트 응용 프로그램을 사용하여 WCF 서비스에 액세스
 ms.date: 03/30/2017
 ms.assetid: e2002ef4-5dee-4a54-9d87-03b33d35fc52
-ms.openlocfilehash: 6617a8cd207b68505396db7fdb4c9d08fd759d06
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: a7d87e6014f26842c35b0d1bf5028682a4cf69e5
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59167650"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59294862"
 ---
 # <a name="accessing-wcf-services-with-a-windows-store-client-app"></a>Windows 스토어 클라이언트 응용 프로그램을 사용하여 WCF 서비스에 액세스
 Windows 8에서는 Windows 스토어 애플리케이션이라는 새로운 형식의 애플리케이션을 제공합니다. 이러한 애플리케이션은 터치 스크린 인터페이스를 바탕으로 설계되었습니다. .NET Framework 4.5에서는 Windows 스토어 애플리케이션을 사용하여 WCF 서비스를 호출할 수 있습니다.  
@@ -24,31 +24,31 @@ Windows 8에서는 Windows 스토어 애플리케이션이라는 새로운 형�
 ### <a name="supported-bindings"></a>지원되는 바인딩  
  Windows 스토어 애플리케이션에서는 다음과 같은 WCF 바인딩이 지원됩니다.  
   
-1.  <xref:System.ServiceModel.BasicHttpBinding>  
+1. <xref:System.ServiceModel.BasicHttpBinding>  
   
-2.  <xref:System.ServiceModel.NetTcpBinding>  
+2. <xref:System.ServiceModel.NetTcpBinding>  
   
-3.  <xref:System.ServiceModel.NetHttpBinding>  
+3. <xref:System.ServiceModel.NetHttpBinding>  
   
-4.  <xref:System.ServiceModel.Channels.CustomBinding>
+4. <xref:System.ServiceModel.Channels.CustomBinding>
   
  Windows 스토어 애플리케이션에서는 다음과 같은 바인딩 요소가 지원됩니다.  
   
-1.  <xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement>  
+1. <xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement>  
   
-2.  <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement>  
+2. <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement>  
   
-3.  <xref:System.ServiceModel.Channels.ConnectionOrientedTransportBindingElement>  
+3. <xref:System.ServiceModel.Channels.ConnectionOrientedTransportBindingElement>  
   
-4.  <xref:System.ServiceModel.Channels.SslStreamSecurityBindingElement>  
+4. <xref:System.ServiceModel.Channels.SslStreamSecurityBindingElement>  
   
-5.  <xref:System.ServiceModel.Channels.WindowsStreamSecurityBindingElement>  
+5. <xref:System.ServiceModel.Channels.WindowsStreamSecurityBindingElement>  
   
-6.  <xref:System.ServiceModel.Channels.TcpTransportBindingElement>  
+6. <xref:System.ServiceModel.Channels.TcpTransportBindingElement>  
   
-7.  <xref:System.ServiceModel.Channels.HttpTransportBindingElement>  
+7. <xref:System.ServiceModel.Channels.HttpTransportBindingElement>  
   
-8.  <xref:System.ServiceModel.Channels.HttpsTransportBindingElement>  
+8. <xref:System.ServiceModel.Channels.HttpsTransportBindingElement>  
   
 9. <xref:System.ServiceModel.Channels.TransportSecurityBindingElement>  
   
@@ -97,11 +97,11 @@ public partial class Service1Client : System.ServiceModel.ClientBase<MetroWcfCli
 ### <a name="serialization"></a>Serialization  
  Windows 스토어 애플리케이션에서는 다음과 같은 serializer가 지원됩니다.  
   
-1.  DataContractSerializer  
+1. DataContractSerializer  
   
-2.  DataContractJsonSerializer  
+2. DataContractJsonSerializer  
   
-3.  XmlSerializer  
+3. XmlSerializer  
   
 > [!WARNING]
 >  이제 XmlDictionaryWriter.Write(DateTime)는 DateTime 개체를 문자열로 씁니다.  
@@ -120,21 +120,21 @@ public partial class Service1Client : System.ServiceModel.ClientBase<MetroWcfCli
   
 클라이언트 자격 증명 유형은 Windows 스토어 응용 프로그램에서 지원 됩니다.
   
-1.  없음  
+1. 없음  
   
-2.  Basic  
+2. Basic  
   
-3.  Digest  
+3. Digest  
   
-4.  Negotiate  
+4. Negotiate  
   
-5.  NTLM  
+5. NTLM  
   
-6.  Windows  
+6. Windows  
   
-7.  Username(메시지 보안)  
+7. Username(메시지 보안)  
   
-8.  Windows(전송 보안)  
+8. Windows(전송 보안)  
   
  Windows 스토어 애플리케이션이 기본 Windows 자격 증명에 액세스하여 이를 보내도록 하려면 Package.appmanifest 파일 내에서 이 기능을 사용하도록 설정해야 합니다. 이 파일을 열고 기능 탭을 선택 "기본 Windows 자격 증명"을 선택 합니다. 그러면 도메인 자격 증명이 필요한 인트라넷 리소스에 애플리케이션을 연결할 수 있습니다.  
   
@@ -144,11 +144,11 @@ public partial class Service1Client : System.ServiceModel.ClientBase<MetroWcfCli
 ### <a name="misc"></a>기타  
  Windows 스토어 애플리케이션에 는 다음 클래스를 사용할 수 있습니다.  
   
-1.  <xref:System.ServiceModel.ChannelFactory>  
+1. <xref:System.ServiceModel.ChannelFactory>  
   
-2.  <xref:System.ServiceModel.DuplexChannelFactory%601>
+2. <xref:System.ServiceModel.DuplexChannelFactory%601>
   
-3.  <xref:System.ServiceModel.CallbackBehaviorAttribute>  
+3. <xref:System.ServiceModel.CallbackBehaviorAttribute>  
   
 ### <a name="defining-service-contracts"></a>서비스 계약 정의  
  태스크 기반 비동기 패턴을 사용하여 비동기 서비스 작업만 정의하는 것이 좋습니다. 그러면 서비스 작업을 호출하는 동안 Windows 스토어 애플리케이션이 응답을 유지합니다.  

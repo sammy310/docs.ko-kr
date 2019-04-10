@@ -10,12 +10,12 @@ helpviewer_keywords:
 - controls [Windows Forms], aligning on forms
 - custom controls [Windows Forms], docking using code
 ms.assetid: 5994cb59-242b-4e75-bd0e-62879c34d702
-ms.openlocfilehash: 990fc996cfb5ecf4d9fde255ad026e3f46a24718
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: beb8881dbd2aedaefe66510c2942ce6c082b9729
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59185785"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59329975"
 ---
 # <a name="how-to-align-a-control-to-the-edges-of-forms"></a>방법: 양식의 가장자리에 컨트롤 맞춤
 <xref:System.Windows.Forms.Control.Dock%2A> 속성을 설정하여 양식 가장자리에 맞춰서 컨트롤을 정렬할 수 있습니다. 이 속성은 양식에서 컨트롤의 위치를 지정합니다. <xref:System.Windows.Forms.Control.Dock%2A> 속성은 다음 값으로 설정할 수 있습니다.  
@@ -33,7 +33,7 @@ ms.locfileid: "59185785"
   
 ### <a name="to-set-the-dock-property-for-your-control-at-run-time"></a>런타임에 컨트롤에 대한 Dock 속성을 설정하려면  
   
-1.  코드에서 <xref:System.Windows.Forms.Control.Dock%2A> 속성을 적절한 값으로 설정합니다.  
+1. 코드에서 <xref:System.Windows.Forms.Control.Dock%2A> 속성을 적절한 값으로 설정합니다.  
   
     ```vb  
     ' To set the Dock property internally.  

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3889e48019f30f93a9eaa677de26445dbcc33d80
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 13bf7342157de48e0183537afea2f2e53d1498dd
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59198805"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59300309"
 ---
 # <a name="iclrtaskreset-method"></a>ICLRTask::Reset 메서드
 호스트 작업을 완료 하 고 현재 다시 사용 하려면 CLR을 사용 하도록 설정 된 CLR (공용 언어 런타임)에 게 알립니다 [ICLRTask](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md) 인스턴스를 다른 작업을 나타냅니다.  
@@ -55,15 +55,15 @@ HRESULT Reset (
 ## <a name="remarks"></a>설명  
  이전에 만든 CLR 재활용할 수 `ICLRTask` 인스턴스를 반복적으로 새로 고침 작업이 필요할 때마다 새 인스턴스를 만드는 오버 헤드를 방지 합니다. 호스트를 호출 하 여이 기능을 활성화 `ICLRTask::Reset` of [iclrtask:: Exittask](../../../../docs/framework/unmanaged-api/hosting/iclrtask-exittask-method.md) 때 작업을 완료 합니다. 다음은 요약의 일반적인 수명 주기는 `ICLRTask` 인스턴스:  
   
-1.  런타임에서 새로 만들고 `ICLRTask` 인스턴스.  
+1. 런타임에서 새로 만들고 `ICLRTask` 인스턴스.  
   
-2.  런타임 호출 [ihosttaskmanager:: Getcurrenttask](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-getcurrenttask-method.md) 현재 호스트 작업에 대 한 참조를 가져오려고 합니다.  
+2. 런타임 호출 [ihosttaskmanager:: Getcurrenttask](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-getcurrenttask-method.md) 현재 호스트 작업에 대 한 참조를 가져오려고 합니다.  
   
-3.  런타임 호출 [ihosttask:: Setclrtask](../../../../docs/framework/unmanaged-api/hosting/ihosttask-setclrtask-method.md) 호스트 작업을 사용 하 여 새 인스턴스를 연결 합니다.  
+3. 런타임 호출 [ihosttask:: Setclrtask](../../../../docs/framework/unmanaged-api/hosting/ihosttask-setclrtask-method.md) 호스트 작업을 사용 하 여 새 인스턴스를 연결 합니다.  
   
-4.  태스크를 실행 하 고 완료 합니다.  
+4. 태스크를 실행 하 고 완료 합니다.  
   
-5.  호스트를 호출 하 여 작업을 소멸 시킵니다 `ICLRTask::ExitTask`합니다.  
+5. 호스트를 호출 하 여 작업을 소멸 시킵니다 `ICLRTask::ExitTask`합니다.  
   
  `Reset` 두 가지 방법으로이 시나리오를 변경합니다. 호스트를 호출 하 여 위의 5 단계에서 `Reset` 정리 된 상태로 작업을 다시 설정 하려면 다음을 `ICLRTask` 연결 된 인스턴스 [IHostTask](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md) 인스턴스. 원하는 경우 호스트 캐시할 수도 있습니다는 `IHostTask` 인스턴스 다시 사용할 수 있도록 합니다. 위의 1 단계에서 공용 언어 런타임은 가져옵니다 재활용 된 `ICLRTask` 새 인스턴스를 만드는 대신 캐시에서.  
   

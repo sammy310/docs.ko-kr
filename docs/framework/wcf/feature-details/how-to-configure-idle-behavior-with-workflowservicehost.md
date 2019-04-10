@@ -5,19 +5,19 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 1bb93652-d687-46ff-bff6-69ecdcf97437
-ms.openlocfilehash: d3fc95e7e92d3fc7c149790d4af00a464ab427f7
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: a676f03b4e6f9dd210b843a6f3bf00c735889500
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59164023"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59330157"
 ---
 # <a name="how-to-configure-idle-behavior-with-workflowservicehost"></a>방법: WorkflowServiceHost를 사용하여 유휴 동작 구성
 워크플로 인스턴스가 <xref:System.ServiceModel.Activities.Receive> 동작을 사용하여 메시지가 전달될 때까지 기다리는 경우와 같이 워크플로는 일부 외부 자극에 의해 다시 시작되어야 하는 책갈피를 만나면 유휴 상태가 됩니다. <xref:System.ServiceModel.Activities.Description.WorkflowIdleBehavior> 서비스 인스턴스가 유휴 상태가 되는 때 사이의 시점과 인스턴스가 지속 되거나 언로드되는 시간을 지정할 수 있는 동작입니다. 이러한 기간을 설정할 수 있는 두 가지 속성이 포함되어 있습니다. <xref:System.ServiceModel.Activities.Description.WorkflowIdleBehavior.TimeToPersist%2A> 워크플로 서비스 인스턴스가 유휴 상태가 되는 경우 워크플로 서비스 인스턴스가 지속 되는 때 사이의 시간 범위를 지정 합니다. <xref:System.ServiceModel.Activities.Description.WorkflowIdleBehavior.TimeToUnload%2A> 워크플로 서비스 인스턴스가 언로드될 때 여기서 언로드 의미 인스턴스가 인스턴스 저장소에 유지 하 고 메모리에서 제거 하 고 유휴 상태가 되는 워크플로 인스턴스를 서비스 하는 때 사이의 시간 범위를 지정 합니다. 이 항목에서는 구성 파일에서 <xref:System.ServiceModel.Activities.Description.WorkflowIdleBehavior> 를 구성하는 방법에 대해 설명합니다.  
   
 ### <a name="to-configure-workflowidlebehavior"></a>WorkflowIdleBehavior를 구성하려면  
   
-1.  추가 <`workflowIdle`> 요소는 <`behavior`> 내의 요소는 <`serviceBehaviors`> 다음 예제에서와 같이 요소.  
+1. 추가 <`workflowIdle`> 요소는 <`behavior`> 내의 요소는 <`serviceBehaviors`> 다음 예제에서와 같이 요소.  
   
     ```xml  
     <behaviors>  

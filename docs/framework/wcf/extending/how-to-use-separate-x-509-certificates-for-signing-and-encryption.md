@@ -9,12 +9,12 @@ helpviewer_keywords:
 - ClientCredentials class
 - ClientCredentialsSecurityTokenManager class
 ms.assetid: 0b06ce4e-7835-4d82-8baf-d525c71a0e49
-ms.openlocfilehash: 9a6b043420554e41d0804e32313b87f05cf54631
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: f95274861f58d1581e4c5439861ebf186b1b3489
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59160942"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59332562"
 ---
 # <a name="how-to-use-separate-x509-certificates-for-signing-and-encryption"></a>방법: 서명 및 암호화에 별도의 X.509 인증서 사용
 이 항목에서는 Windows Communication Foundation (WCF) 메시지 서명 및 암호화는 클라이언트와 서비스에 대 한 다른 인증서를 사용 하도록 구성 하는 방법을 보여 줍니다.  
@@ -47,34 +47,34 @@ ms.locfileid: "59160942"
   
 ### <a name="to-use-separate-certificates-for-signing-and-encryption"></a>서명 및 암호화에 별도의 인증서를 사용하려면  
   
-1.  <xref:System.ServiceModel.Description.ClientCredentials> 클래스에서 상속되는 새로운 클라이언트 자격 증명 클래스를 정의합니다. 여러 인증서 지정을 허용하는 네 가지 새 속성인 `ClientSigningCertificate`, `ClientEncryptingCertificate`, `ServiceSigningCertificate``ServiceEncryptingCertificate`및 를 구현합니다. 또한 <xref:System.ServiceModel.Description.ClientCredentials.CreateSecurityTokenManager%2A> 메서드를 재정의하여 다음 단계에 정의된 사용자 지정된 <xref:System.ServiceModel.ClientCredentialsSecurityTokenManager> 클래스의 인스턴스를 반환합니다.  
+1. <xref:System.ServiceModel.Description.ClientCredentials> 클래스에서 상속되는 새로운 클라이언트 자격 증명 클래스를 정의합니다. 여러 인증서 지정을 허용하는 네 가지 새 속성인 `ClientSigningCertificate`, `ClientEncryptingCertificate`, `ServiceSigningCertificate``ServiceEncryptingCertificate`및 를 구현합니다. 또한 <xref:System.ServiceModel.Description.ClientCredentials.CreateSecurityTokenManager%2A> 메서드를 재정의하여 다음 단계에 정의된 사용자 지정된 <xref:System.ServiceModel.ClientCredentialsSecurityTokenManager> 클래스의 인스턴스를 반환합니다.  
   
      [!code-csharp[c_FourCerts#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_fourcerts/cs/source.cs#1)]
      [!code-vb[c_FourCerts#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_fourcerts/vb/source.vb#1)]  
   
-2.  <xref:System.ServiceModel.ClientCredentialsSecurityTokenManager> 클래스에서 상속되는 새로운 클라이언트 보안 토큰 관리자를 정의합니다. 올바른 보안 토큰 공급자를 만들기 위해 <xref:System.ServiceModel.ClientCredentialsSecurityTokenManager.CreateSecurityTokenProvider%2A> 메서드를 재정의합니다. 메시지 방향과 키 사용은 `requirement` 매개 변수(<xref:System.IdentityModel.Selectors.SecurityTokenRequirement>)를 통해 제공됩니다.  
+2. <xref:System.ServiceModel.ClientCredentialsSecurityTokenManager> 클래스에서 상속되는 새로운 클라이언트 보안 토큰 관리자를 정의합니다. 올바른 보안 토큰 공급자를 만들기 위해 <xref:System.ServiceModel.ClientCredentialsSecurityTokenManager.CreateSecurityTokenProvider%2A> 메서드를 재정의합니다. 메시지 방향과 키 사용은 `requirement` 매개 변수(<xref:System.IdentityModel.Selectors.SecurityTokenRequirement>)를 통해 제공됩니다.  
   
      [!code-csharp[c_FourCerts#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_fourcerts/cs/source.cs#2)]
      [!code-vb[c_FourCerts#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_fourcerts/vb/source.vb#2)]  
   
-3.  <xref:System.ServiceModel.Description.ServiceCredentials> 클래스에서 상속되는 새로운 서비스 자격 증명 클래스를 정의합니다. 여러 인증서 지정을 허용하는 네 가지 새 속성인 `ClientSigningCertificate`, `ClientEncryptingCertificate`, `ServiceSigningCertificate``ServiceEncryptingCertificate`및 를 구현합니다. 또한 <xref:System.ServiceModel.Description.ServiceCredentials.CreateSecurityTokenManager%2A> 메서드를 재정의하여 다음 단계에 정의된 사용자 지정된 <xref:System.ServiceModel.Security.ServiceCredentialsSecurityTokenManager> 클래스의 인스턴스를 반환합니다.  
+3. <xref:System.ServiceModel.Description.ServiceCredentials> 클래스에서 상속되는 새로운 서비스 자격 증명 클래스를 정의합니다. 여러 인증서 지정을 허용하는 네 가지 새 속성인 `ClientSigningCertificate`, `ClientEncryptingCertificate`, `ServiceSigningCertificate``ServiceEncryptingCertificate`및 를 구현합니다. 또한 <xref:System.ServiceModel.Description.ServiceCredentials.CreateSecurityTokenManager%2A> 메서드를 재정의하여 다음 단계에 정의된 사용자 지정된 <xref:System.ServiceModel.Security.ServiceCredentialsSecurityTokenManager> 클래스의 인스턴스를 반환합니다.  
   
      [!code-csharp[c_FourCerts#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_fourcerts/cs/source.cs#3)]
      [!code-vb[c_FourCerts#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_fourcerts/vb/source.vb#3)]  
   
-4.  <xref:System.ServiceModel.Security.ServiceCredentialsSecurityTokenManager> 클래스에서 상속되는 새로운 서비스 보안 토큰 관리자를 정의합니다. 전달된 메시지 방향과 키 사용에 적합한 보안 토큰 공급자를 만들기 위해 <xref:System.ServiceModel.Security.ServiceCredentialsSecurityTokenManager.CreateSecurityTokenProvider%2A> 메서드를 재정의합니다.  
+4. <xref:System.ServiceModel.Security.ServiceCredentialsSecurityTokenManager> 클래스에서 상속되는 새로운 서비스 보안 토큰 관리자를 정의합니다. 전달된 메시지 방향과 키 사용에 적합한 보안 토큰 공급자를 만들기 위해 <xref:System.ServiceModel.Security.ServiceCredentialsSecurityTokenManager.CreateSecurityTokenProvider%2A> 메서드를 재정의합니다.  
   
      [!code-csharp[c_FourCerts#4](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_fourcerts/cs/source.cs#4)]
      [!code-vb[c_FourCerts#4](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_fourcerts/vb/source.vb#4)]  
   
 ### <a name="to-use-multiple-certificates-on-the-client"></a>클라이언트에 여러 인증서를 사용하려면  
   
-1.  사용자 지정 바인딩을 만듭니다. 보안 바인딩 요소는 요청 및 응답에 서로 다른 보안 토큰 공급자를 사용할 수 있도록 이중 모드로 작동되어야 합니다. 이를 위한 한 가지 방법은 다음 코드에서와 같이 <xref:System.ServiceModel.Channels.CompositeDuplexBindingElement>를 사용하거나 이중 가능 전송을 사용하는 것입니다. 다음 단계에 정의된 사용자 지정된 <xref:System.ServiceModel.Security.IdentityVerifier>를 보안 바인딩 요소에 연결합니다. 기본 클라이언트 자격 증명을 이전에 만든 사용자 지정된 클라이언트 자격 증명으로 바꿉니다.  
+1. 사용자 지정 바인딩을 만듭니다. 보안 바인딩 요소는 요청 및 응답에 서로 다른 보안 토큰 공급자를 사용할 수 있도록 이중 모드로 작동되어야 합니다. 이를 위한 한 가지 방법은 다음 코드에서와 같이 <xref:System.ServiceModel.Channels.CompositeDuplexBindingElement>를 사용하거나 이중 가능 전송을 사용하는 것입니다. 다음 단계에 정의된 사용자 지정된 <xref:System.ServiceModel.Security.IdentityVerifier>를 보안 바인딩 요소에 연결합니다. 기본 클라이언트 자격 증명을 이전에 만든 사용자 지정된 클라이언트 자격 증명으로 바꿉니다.  
   
      [!code-csharp[c_FourCerts#5](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_fourcerts/cs/source.cs#5)]
      [!code-vb[c_FourCerts#5](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_fourcerts/vb/source.vb#5)]  
   
-2.  사용자 지정 <xref:System.ServiceModel.Security.IdentityVerifier>를 정의합니다. 요청을 암호화하고 응답을 서명하는 데 서로 다른 인증서가 사용되므로 서비스에는 여러 개의 ID가 있습니다.  
+2. 사용자 지정 <xref:System.ServiceModel.Security.IdentityVerifier>를 정의합니다. 요청을 암호화하고 응답을 서명하는 데 서로 다른 인증서가 사용되므로 서비스에는 여러 개의 ID가 있습니다.  
   
     > [!NOTE]
     >  다음 샘플에 제공된 사용자 지정 ID 검증 도구는 엔드포인트 ID 확인을 수행하지 않는 데모용이므로, 프로덕션 코드에 사용하지 않는 것이 좋습니다.  
@@ -84,7 +84,7 @@ ms.locfileid: "59160942"
   
 ### <a name="to-use-multiple-certificates-on-the-service"></a>서비스에 여러 인증서를 사용하려면  
   
-1.  사용자 지정 바인딩을 만듭니다. 보안 바인딩 요소는 요청 및 응답에 서로 다른 보안 토큰 공급자를 사용할 수 있도록 이중 모드로 작동되어야 합니다. 클라이언트와 마찬가지로, 다음 코드에서와 같이 <xref:System.ServiceModel.Channels.CompositeDuplexBindingElement>를 사용하거나 이중 가능 전송을 사용합니다. 기본 서비스 자격 증명을 이전에 만든 사용자 지정된 서비스 자격 증명으로 바꿉니다.  
+1. 사용자 지정 바인딩을 만듭니다. 보안 바인딩 요소는 요청 및 응답에 서로 다른 보안 토큰 공급자를 사용할 수 있도록 이중 모드로 작동되어야 합니다. 클라이언트와 마찬가지로, 다음 코드에서와 같이 <xref:System.ServiceModel.Channels.CompositeDuplexBindingElement>를 사용하거나 이중 가능 전송을 사용합니다. 기본 서비스 자격 증명을 이전에 만든 사용자 지정된 서비스 자격 증명으로 바꿉니다.  
   
      [!code-csharp[c_FourCerts#7](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_fourcerts/cs/source.cs#7)]
      [!code-vb[c_FourCerts#7](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_fourcerts/vb/source.vb#7)]  

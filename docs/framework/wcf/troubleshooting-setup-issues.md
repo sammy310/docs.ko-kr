@@ -2,12 +2,12 @@
 title: 설치 문제 해결
 ms.date: 03/30/2017
 ms.assetid: 1644f885-c408-4d5f-a5c7-a1a907bc8acd
-ms.openlocfilehash: 41e266ba5b54bfb37313f9588515f7ae9cc6f79d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 69242ec745f2a5b945ae64eb558070dbf0d39c10
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59153077"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59299620"
 ---
 # <a name="troubleshooting-setup-issues"></a>설치 문제 해결
 이 항목에서는 Windows Communication Foundation (WCF)가 설치 문제를 해결 하는 방법을 설명 합니다.  
@@ -30,13 +30,13 @@ ms.locfileid: "59153077"
 ## <a name="wmi-service-corruption-blocks-installation-of-the-windows-communication-foundation-wmi-provider-during-installation-of-net-framework-30-package"></a>.NET Framework 3.0 패키지 설치 시 WMI 서비스 손상으로 인해 Windows Communication Foundation WMI 공급자가 설치되지 않음  
  WMI 서비스 손상으로 인해 Windows Communication Foundation WMI 공급자가 설치되지 않을 수 있습니다. 설치 시 Windows Communication Foundation 설치 관리자가 mofcomp.exe 구성 요소를 사용하여 WCF .mof 파일을 등록할 수 없습니다. 다음과 같은 증상이 있습니다.  
   
-1.  .NET Framework 3.0 설치를 완료했지만 WCF WMI 공급자가 등록되지 않습니다.  
+1. .NET Framework 3.0 설치를 완료했지만 WCF WMI 공급자가 등록되지 않습니다.  
   
-2.  오류 이벤트가 WCF의 WMI 공급자 등록이나 mofcomp.exe 실행에 관련된 문제를 참조하는 응용 프로그램 이벤트 로그에 표시됩니다.  
+2. 오류 이벤트가 WCF의 WMI 공급자 등록이나 mofcomp.exe 실행에 관련된 문제를 참조하는 응용 프로그램 이벤트 로그에 표시됩니다.  
   
-3.  사용자의 %temp% 디렉터리에 있는 이름이 dd_wcf_retCA*인 설치 로그 파일에 WCF WMI 공급자 등록 실패에 대한 참조가 있습니다.  
+3. 사용자의 %temp% 디렉터리에 있는 이름이 dd_wcf_retCA*인 설치 로그 파일에 WCF WMI 공급자 등록 실패에 대한 참조가 있습니다.  
   
-4.  다음과 같은 예외가 이벤트 로그나 설치 추적 로그 파일에 표시됩니다.  
+4. 다음과 같은 예외가 이벤트 로그나 설치 추적 로그 파일에 표시됩니다.  
   
      ServiceModelReg [11:09:59:046]: System.ApplicationException: Unexpected result 3 executing E:\WINDOWS\system32\wbem\mofcomp.exe with "E:\WINDOWS\Microsoft.NET\Framework\v3.0\Windows Communication Foundation\ServiceModel.mof"  
   
@@ -52,7 +52,7 @@ ms.locfileid: "59153077"
   
  위에 설명한 문제를 해결하려면 다음 단계를 수행해야 합니다.  
   
-1.  실행할 [WMI Diagnosis Utility의 버전 2.0](https://go.microsoft.com/fwlink/?LinkId=94685) WMI 서비스를 복구 합니다. 이 도구를 사용 하는 방법에 대 한 자세한 내용은 참조는 [WMI Diagnosis Utility](https://go.microsoft.com/fwlink/?LinkId=94686) 항목입니다.  
+1. 실행할 [WMI Diagnosis Utility의 버전 2.0](https://go.microsoft.com/fwlink/?LinkId=94685) WMI 서비스를 복구 합니다. 이 도구를 사용 하는 방법에 대 한 자세한 내용은 참조는 [WMI Diagnosis Utility](https://go.microsoft.com/fwlink/?LinkId=94686) 항목입니다.  
   
  사용 하 여.NET Framework 3.0 설치를 복구 합니다 **프로그램 추가/제거** 애플릿을에 있는 **제어판**, 또는.NET Framework 3.0를 제거/다시 설치 하 합니다.  
   

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - documents [WPF], storage
 - documents [WPF], serialization
 ms.assetid: 4839cd87-e206-4571-803f-0200098ad37b
-ms.openlocfilehash: 519d3aa218fca734a9159503b4107bdbcfc31652
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: dbc78db0a3b6763af5270840fc56af648c7c6efc
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59215952"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59295902"
 ---
 # <a name="document-serialization-and-storage"></a>문서 serialization 및 스토리지
 Microsoft.NET Framework는 만들고 고품질 문서를 표시 하기 위한 강력한 환경을 제공 합니다.  고정 문서 및 유동 문서를 고급 모두 지 원하는 향상 된 기능은 강력한 2D 함께 보기 컨트롤을 및 3D 그래픽 기능과.NET Framework 응용 프로그램의 품질과 사용자 환경 향상할 수 있습니다.  문서의 메모리 내 표현을 유연 하 게 관리할 수.NET Framework의 핵심 기능은 이며을 효율적으로 저장 하 고 데이터 저장소에서 문서를 로드할 수 있는 거의 모든 응용 프로그램의 필요 합니다.  내부 메모리 내 표현에서 외부 데이터 저장소로 문서를 변환하는 프로세스를 serialization이라고 합니다.  데이터 저장소를 읽고 원래 메모리 내 인스턴스를 다시 만드는 역프로세스는 deserialization이라고 합니다.  
@@ -65,11 +65,11 @@ Microsoft.NET Framework는 만들고 고품질 문서를 표시 하기 위한 �
 ### <a name="creating-a-plug-in-serializer"></a>플러그 인 Serializer 만들기  
  플러그 인 serializer와 연결 serializer는 모두 노출된 동일한 공용 메서드와 이벤트를 사용하며, 동기식 또는 비동기식으로 작동하도록 비슷하게 설계될 수 있습니다.  일반적으로 플러그 인 serializer를 만들기 위해 수행하는 기본 단계는 다음 세 가지입니다.  
   
-1.  먼저 serializer를 연결 serializer로 구현하고 디버깅합니다.  처음에 테스트 애플리케이션에서 직접 컴파일 및 연결된 serializer를 만들면 테스트에 유용한 중단점 및 기타 디버그 서비스에 완벽하게 액세스할 수 있습니다.  
+1. 먼저 serializer를 연결 serializer로 구현하고 디버깅합니다.  처음에 테스트 애플리케이션에서 직접 컴파일 및 연결된 serializer를 만들면 테스트에 유용한 중단점 및 기타 디버그 서비스에 완벽하게 액세스할 수 있습니다.  
   
-2.  Serializer가 완전히 테스트 한 후는 <xref:System.Windows.Documents.Serialization.ISerializerFactory> 인터페이스 플러그 인을 만들어에 추가 됩니다.  합니다 <xref:System.Windows.Documents.Serialization.ISerializerFactory> 논리적 트리를 포함 하는 모든.NET Framework 개체에 전체 액세스를 허용 하는 인터페이스 <xref:System.Windows.UIElement> 개체를 <xref:System.Windows.Documents.IDocumentPaginatorSource>, 및 <xref:System.Windows.Media.Visual> 요소입니다.  또한 <xref:System.Windows.Documents.Serialization.ISerializerFactory> 동일한 동기 및 비동기 메서드 및 연결된 serializer에서 사용 하는 이벤트를 제공 합니다.  큰 문서는 출력하는 데 시간이 걸리므로, 비동기 작업을 통해 반응이 빠른 사용자 조작을 유지 관리하고 데이터 저장소에 문제가 발생하면 “취소” 옵션을 제공하는 것이 좋습니다.  
+2. Serializer가 완전히 테스트 한 후는 <xref:System.Windows.Documents.Serialization.ISerializerFactory> 인터페이스 플러그 인을 만들어에 추가 됩니다.  합니다 <xref:System.Windows.Documents.Serialization.ISerializerFactory> 논리적 트리를 포함 하는 모든.NET Framework 개체에 전체 액세스를 허용 하는 인터페이스 <xref:System.Windows.UIElement> 개체를 <xref:System.Windows.Documents.IDocumentPaginatorSource>, 및 <xref:System.Windows.Media.Visual> 요소입니다.  또한 <xref:System.Windows.Documents.Serialization.ISerializerFactory> 동일한 동기 및 비동기 메서드 및 연결된 serializer에서 사용 하는 이벤트를 제공 합니다.  큰 문서는 출력하는 데 시간이 걸리므로, 비동기 작업을 통해 반응이 빠른 사용자 조작을 유지 관리하고 데이터 저장소에 문제가 발생하면 “취소” 옵션을 제공하는 것이 좋습니다.  
   
-3.  플러그 인 serializer가 만들어지면 플러그 인을 배포하고 설치(및 제거)하기 위한 설치 스크립트가 구현됩니다(위의 “[플러그 인 Serializer 설치](#InstallingPluginSerializers)” 참조).  
+3. 플러그 인 serializer가 만들어지면 플러그 인을 배포하고 설치(및 제거)하기 위한 설치 스크립트가 구현됩니다(위의 “[플러그 인 Serializer 설치](#InstallingPluginSerializers)” 참조).  
   
 ## <a name="see-also"></a>참고자료
 

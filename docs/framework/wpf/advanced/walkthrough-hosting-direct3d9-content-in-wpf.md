@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Direct3D9 [WPF interoperability], hosting Direct3D9 content
 - WPF [WPF], hosting Direct3D9 content
 ms.assetid: 60983736-0ab5-42cc-8b16-e9fbde261a43
-ms.openlocfilehash: 90d0c578c6797342c667f16afdb523b1b4ad6685
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 07cfa5bed6e5af131a60a303f0702f18413043e8
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59145914"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59320235"
 ---
 # <a name="walkthrough-hosting-direct3d9-content-in-wpf"></a>연습: WPF에서 Direct3D9 콘텐츠 호스팅
 이 연습에서는 Windows Presentation Foundation (WPF) 응용 프로그램에서 호스팅할 Direct3D9 콘텐츠를 호스트 하는 방법을 보여 줍니다.  
@@ -48,9 +48,9 @@ ms.locfileid: "59145914"
   
 #### <a name="to-import-direct3d9-content"></a>Direct3D9 콘텐츠를 가져오려면  
   
-1.  코드 편집기에서 MainWindow.xaml.cs를 엽니다.  
+1. 코드 편집기에서 MainWindow.xaml.cs를 엽니다.  
   
-2.  자동으로 생성 된 코드를 다음 코드로 바꿉니다.  
+2. 자동으로 생성 된 코드를 다음 코드로 바꿉니다.  
   
      [!code-csharp[System.Windows.Interop.D3DImage#1](~/samples/snippets/csharp/VS_Snippets_Wpf/System.Windows.Interop.D3DImage/CS/window1.xaml.cs#1)]  
   
@@ -59,15 +59,15 @@ ms.locfileid: "59145914"
   
 #### <a name="to-host-the-direct3d9-content"></a>Direct3D9 콘텐츠를 호스트 하려면  
   
-1.  MainWindow.xaml에 다음 XAML을 사용 하 여 자동으로 생성 된 XAML을 대체 합니다.  
+1. MainWindow.xaml에 다음 XAML을 사용 하 여 자동으로 생성 된 XAML을 대체 합니다.  
   
      [!code-xaml[System.Windows.Interop.D3DImage#10](~/samples/snippets/csharp/VS_Snippets_Wpf/System.Windows.Interop.D3DImage/CS/window1.xaml#10)]  
   
-2.  프로젝트를 빌드합니다.  
+2. 프로젝트를 빌드합니다.  
   
-3.  Direct3D9 콘텐츠 bin/Debug 폴더를 포함 하는 DLL을 복사 합니다.  
+3. Direct3D9 콘텐츠 bin/Debug 폴더를 포함 하는 DLL을 복사 합니다.  
   
-4.  F5 키를 눌러 프로젝트를 실행합니다.  
+4. F5 키를 눌러 프로젝트를 실행합니다.  
   
      WPF 응용 프로그램 내에서 호스팅할 Direct3D9 콘텐츠 표시 됩니다.  
   

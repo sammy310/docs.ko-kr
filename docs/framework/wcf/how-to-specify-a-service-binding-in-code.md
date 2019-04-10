@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 67ab5dd8-79c1-4e62-aa75-828ea918a53a
-ms.openlocfilehash: edc7a4f5dc21a25ac9752dda60675d979fe18c69
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 9f3320b031141246a394191a1924509204707dc1
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59162360"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59303455"
 ---
 # <a name="how-to-specify-a-service-binding-in-code"></a>방법: 코드에서 서비스 바인딩 지정
 이 예제에서는 계산기 서비스에 대해 `ICalculator` 계약을 정의하고, `CalculatorService` 클래스에서 서비스를 구현한 다음 코드로 엔드포인트를 정의합니다. 이 때 서비스가 <xref:System.ServiceModel.BasicHttpBinding> 클래스를 사용하도록 지정합니다.  
@@ -21,29 +21,29 @@ ms.locfileid: "59162360"
   
 ### <a name="to-specify-in-code-to-use-the-basichttpbinding-for-the-service"></a>코드에서 서비스에 BasicHttpBinding을 사용하도록 지정하려면  
   
-1.  서비스 유형에 대한 서비스 계약을 정의합니다.  
+1. 서비스 유형에 대한 서비스 계약을 정의합니다.  
   
      [!code-csharp[C_HowTo_CodeServiceBinding#1](../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_codeservicebinding/cs/source.cs#1)]
      [!code-vb[C_HowTo_CodeServiceBinding#1](../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_howto_codeservicebinding/vb/source.vb#1)]  
   
-2.  서비스 클래스에 서비스 계약을 구현합니다.  
+2. 서비스 클래스에 서비스 계약을 구현합니다.  
   
      [!code-csharp[C_HowTo_CodeServiceBinding#2](../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_codeservicebinding/cs/source.cs#2)]
      [!code-vb[C_HowTo_CodeServiceBinding#2](../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_howto_codeservicebinding/vb/source.vb#2)]  
   
-3.  호스팅 응용 프로그램에서 서비스에 사용할 바인딩 및 서비스에 대한 기본 주소를 만듭니다.  
+3. 호스팅 응용 프로그램에서 서비스에 사용할 바인딩 및 서비스에 대한 기본 주소를 만듭니다.  
   
      [!code-csharp[C_HowTo_CodeServiceBinding#3](../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_codeservicebinding/cs/source.cs#3)]
      [!code-vb[C_HowTo_CodeServiceBinding#3](../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_howto_codeservicebinding/vb/source.vb#3)]  
   
-4.  서비스에 대한 호스트를 만들고 엔드포인트를 추가한 다음 호스트를 엽니다.  
+4. 서비스에 대한 호스트를 만들고 엔드포인트를 추가한 다음 호스트를 엽니다.  
   
      [!code-csharp[C_HowTo_CodeServiceBinding#4](../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_codeservicebinding/cs/source.cs#4)]
      [!code-vb[C_HowTo_CodeServiceBinding#4](../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_howto_codeservicebinding/vb/source.vb#4)]  
   
 ### <a name="to-modify-the-default-values-of-the-binding-properties"></a>바인딩 속성의 기본값을 수정하려면  
   
-1.  <xref:System.ServiceModel.BasicHttpBinding> 클래스의 기본 속성 값 중 하나를 수정하려면 호스트를 만들기 전에 바인딩의 속성 값을 새 값으로 설정합니다. 예를 들어, 기본 열기 및 닫기 시간 제한 값을 1분에서 2분으로 변경하려면 다음을 사용합니다.  
+1. <xref:System.ServiceModel.BasicHttpBinding> 클래스의 기본 속성 값 중 하나를 수정하려면 호스트를 만들기 전에 바인딩의 속성 값을 새 값으로 설정합니다. 예를 들어, 기본 열기 및 닫기 시간 제한 값을 1분에서 2분으로 변경하려면 다음을 사용합니다.  
   
      [!code-csharp[C_HowTo_CodeServiceBinding#5](../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_codeservicebinding/cs/source.cs#5)]
      [!code-vb[C_HowTo_CodeServiceBinding#5](../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_howto_codeservicebinding/vb/source.vb#5)]  

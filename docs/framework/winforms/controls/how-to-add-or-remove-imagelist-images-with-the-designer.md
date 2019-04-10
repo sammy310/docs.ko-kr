@@ -6,12 +6,12 @@ helpviewer_keywords:
 - ImageList component [Windows Forms], removing images
 - images [Windows Forms], adding to ImageList component
 ms.assetid: 5699b244-e37c-4d20-bc35-7441e55c1e3a
-ms.openlocfilehash: b85b4d39235d49966b5f3c108986c8dd04bed5fe
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 732267b431c5058fa7039f0fb132e6161c37d4a6
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59161527"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59303130"
 ---
 # <a name="how-to-add-or-remove-imagelist-images-with-the-designer"></a>방법: 디자이너를 사용하여 ImageList 이미지 추가 또는 제거
 이미지를 추가할 수 있습니다는 <xref:System.Windows.Forms.ImageList> 여러 가지 구성 요소입니다. 연결 된 스마트 태그를 사용 하 여 매우 신속 하 게 이미지를 추가할 수 있습니다 합니다 <xref:System.Windows.Forms.ImageList>에 다른 여러 속성을 설정 하는 경우 또는 <xref:System.Windows.Forms.ImageList>,이 더 편리할 속성 창 사용 하 여 이미지를 추가할 수 있습니다. 또한 코드를 사용 하 여 이미지를 추가할 수 있습니다. 코드를 사용 하 여 이미지를 추가 하는 방법에 대 한 자세한 내용은 참조 하세요. [방법: 제거 이미지는 Windows Forms ImageList 구성 요소 추가 또는](how-to-add-or-remove-images-with-the-windows-forms-imagelist-component.md)합니다. 채울 일반적으로 <xref:System.Windows.Forms.ImageList> 컨트롤과 연결 되지만 이것이 필요 하기 전에 이미지를 사용 하 여 구성 요소입니다.  
@@ -21,21 +21,21 @@ ms.locfileid: "59161527"
   
 ### <a name="to-add-or-remove-images-by-using-the-properties-window"></a>추가 하거나 속성 창을 사용 하 여 이미지를 제거 하려면  
   
-1.  선택 된 <xref:System.Windows.Forms.ImageList> 구성 요소를 폼에 추가 또는 합니다.  
+1. 선택 된 <xref:System.Windows.Forms.ImageList> 구성 요소를 폼에 추가 또는 합니다.  
   
-2.  속성 창에서 줄임표 단추를 클릭 합니다. (![VisualStudioEllipsesButton 스크린 샷](../media/vbellipsesbutton.png "vbEllipsesButton")) 옆에 <xref:System.Windows.Forms.ImageList.Images%2A> 속성입니다.  
+2. 속성 창에서 줄임표 단추를 클릭 합니다. (![VisualStudioEllipsesButton 스크린 샷](../media/vbellipsesbutton.png "vbEllipsesButton")) 옆에 <xref:System.Windows.Forms.ImageList.Images%2A> 속성입니다.  
   
-3.  에 **이미지 컬렉션 편집기**, 클릭 **추가** 또는 **제거** 를 추가 하 여 목록에서 이미지를 제거 합니다.  
+3. 에 **이미지 컬렉션 편집기**, 클릭 **추가** 또는 **제거** 를 추가 하 여 목록에서 이미지를 제거 합니다.  
   
 ### <a name="to-add-or-remove-images-using-the-smart-tag"></a>스마트 태그를 사용 하 여 이미지 추가 또는 제거 하려면  
   
-1.  선택 된 <xref:System.Windows.Forms.ImageList> 구성 요소를 폼에 추가 또는 합니다.  
+1. 선택 된 <xref:System.Windows.Forms.ImageList> 구성 요소를 폼에 추가 또는 합니다.  
   
-2.  스마트 태그 문자 모양을 클릭 (![스마트 태그 문자 모양](./media/vs-winformsmttagglyph.gif "VS_WinFormSmtTagGlyph"))  
+2. 스마트 태그 문자 모양을 클릭 (![스마트 태그 문자 모양](./media/vs-winformsmttagglyph.gif "VS_WinFormSmtTagGlyph"))  
   
-3.  에 **ImageList 태스크** 대화 상자에서 **이미지 선택**합니다.  
+3. 에 **ImageList 태스크** 대화 상자에서 **이미지 선택**합니다.  
   
-4.  에 **이미지 컬렉션 편집기** 클릭 **추가** 또는 **제거** 를 추가 하 여 목록에서 이미지를 제거 합니다.  
+4. 에 **이미지 컬렉션 편집기** 클릭 **추가** 또는 **제거** 를 추가 하 여 목록에서 이미지를 제거 합니다.  
   
 ## <a name="see-also"></a>참고자료
 

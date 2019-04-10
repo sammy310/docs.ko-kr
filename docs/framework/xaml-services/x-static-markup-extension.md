@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Static markup extension in XAML [XAML Services]
 - XAML [XAML Services], x:Static markup extension
 ms.assetid: 056aee79-7cdd-434f-8174-dfc856cad343
-ms.openlocfilehash: eb0c34f259220a0326238b27ab43efd3078b0bcc
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 3da2f6afc7e7ecf20c91f0badca38bc26083d3ae
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59207086"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59295712"
 ---
 # <a name="xstatic-markup-extension"></a>x:Static 태그 확장
 에 정의 된 모든 값으로 정적 코드 엔터티 참조는 [!INCLUDE[TLA#tla_cls](../../../includes/tlasharptla-cls-md.md)]– 호환 방식으로 합니다. 참조 되는 정적 속성 XAML에서 속성 값을 제공 하기 사용할 수 있습니다.  
@@ -55,13 +55,13 @@ ms.locfileid: "59207086"
 
 두 개의 다른 XAML 용도 기술적으로 가능 있습니다. 그러나 이러한 사용 가지 번거롭습니다 이기 때문에 일반적이 지 않습니다.  
 
-1.  개체 요소 구문입니다.
+1. 개체 요소 구문입니다.
 
     ```xaml
     <x:Static Member="prefix:typeName.staticMemberName" ... />
     ```
 
-2.  초기화 문자열에 대 한 명시적 멤버 속성으로 구문을 특성입니다.
+2. 초기화 문자열에 대 한 명시적 멤버 속성으로 구문을 특성입니다.
 
     ```xaml
     <object property="{x:Static Member=prefix:typeName.staticMemberName}" ... />

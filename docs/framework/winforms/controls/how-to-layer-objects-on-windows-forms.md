@@ -12,12 +12,12 @@ helpviewer_keywords:
 - controls [Windows Forms], positioning
 - z-order
 ms.assetid: 1acc4281-2976-4715-86f4-bda68134baaf
-ms.openlocfilehash: 2b02e5e1a4d9872cc89a26b25a44c226ee545a88
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 8d0abbf0f71ac176d17261a0ae863938c575bdaf
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59166012"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59311664"
 ---
 # <a name="how-to-layer-objects-on-windows-forms"></a>방법: Windows Forms에서 개체 계층화
 복잡 한 사용자 인터페이스를 만들거나 여러 문서 MDI (인터페이스) 폼을 사용할 때 더 복잡 한 UI (사용자 인터페이스) 자식 폼 및 컨트롤 계층 하려는 경우가 많습니다. 이동 컨트롤 및 windows 그룹의 컨텍스트 내에서 한 추적을 z 순서 조작할 수 있습니다. *Z 순서* 폼의 z 축 (깊이)에 따라 폼에서 컨트롤의 시각적 계층 됩니다. Z-순서의 맨 위에 있는 창에는 다른 모든 windows 겹칩니다. 다른 모든 windows 겹치는 z-순서의 맨 아래에 있는 창입니다.  
@@ -27,9 +27,9 @@ ms.locfileid: "59166012"
   
 ### <a name="to-layer-controls-at-design-time"></a>디자인 타임에 컨트롤 계층  
   
-1.  계층에 있는 컨트롤을 선택 합니다.  
+1. 계층에 있는 컨트롤을 선택 합니다.  
   
-2.  에 **형식** 메뉴에서 **순서**를 클릭 하 고 **앞으로 가져오기** 또는 **맨 뒤로 보내기**합니다.  
+2. 에 **형식** 메뉴에서 **순서**를 클릭 하 고 **앞으로 가져오기** 또는 **맨 뒤로 보내기**합니다.  
   
 ### <a name="to-layer-controls-programmatically"></a>컨트롤을 프로그래밍 방식으로 계층화  
   

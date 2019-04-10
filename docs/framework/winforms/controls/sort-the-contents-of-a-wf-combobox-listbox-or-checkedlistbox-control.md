@@ -8,12 +8,12 @@ helpviewer_keywords:
 - list boxes [Windows Forms], sorting contents
 - ListBox control [Windows Forms], sorting contents
 ms.assetid: c268e387-3d1d-4d86-a940-19f6673c8d06
-ms.openlocfilehash: 4db1c133aabe39232a891183356e9c1b712f5cc8
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: bd26d396c238bfc53858320b8f4487df84b3436a
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59150607"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59312581"
 ---
 # <a name="how-to-sort-the-contents-of-a-windows-forms-combobox-listbox-or-checkedlistbox-control"></a>방법: Windows Forms ComboBox, ListBox 또는 CheckedListBox 컨트롤의 내용 정렬
 데이터 바인딩된 경우에 Windows Forms 컨트롤 정렬 되지 않습니다. 정렬 된 데이터를 표시 하려면 정렬을 지 원하는 데이터 원본을 사용 하 여 한 후 결과 정렬할 데이터 원본입니다. 정렬을 지 원하는 데이터 원본의 데이터 뷰, 데이터 관리자, 보기 및 정렬 된 배열입니다.  
@@ -22,7 +22,7 @@ ms.locfileid: "59150607"
   
 ### <a name="to-sort-the-list"></a>목록을 정렬 하려면  
   
-1.  `Sorted` 속성을 `true`으로 설정합니다.  
+1. `Sorted` 속성을 `true`으로 설정합니다.  
   
      이 설정은 위치 정렬 된 순서 대로 모든 기존 목록 항목을 변경합니다.  
   

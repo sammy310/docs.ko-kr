@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - hosting WPF content in Windows Forms [WPF]
 ms.assetid: 0ac41286-4c1b-4b17-9196-d985cb844ce1
-ms.openlocfilehash: dfff99969943a99d30f4e00b75fb5320bb3c9ad2
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 75e60a3a9b39c0dd63a24a1e71c4823e7cb0bd74
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59219605"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59322838"
 ---
 # <a name="walkthrough-hosting-a-wpf-composite-control-in-windows-forms"></a>연습: Windows Forms에서 WPF 복합 컨트롤 호스팅
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 응용 프로그램을 만들기 위한 풍부한 환경을 제공 합니다. 그러나 상당한 투자 경우 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 코드 수 기존 확장 하는 것이 효과적인 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 응용 프로그램으로 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 처음부터 다시 작성 하는 대신 합니다. 일반적인 시나리오는 하나를 포함 하거나 더 많은 컨트롤이 구현 하는 경우 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Windows Forms 응용 프로그램 내에서. WPF 컨트롤 사용자 지정 하는 방법에 대 한 자세한 내용은 참조 하십시오 [컨트롤 사용자 지정](../controls/control-customization.md)합니다.  
@@ -40,17 +40,17 @@ ms.locfileid: "59219605"
 ### <a name="creating-the-project"></a>프로젝트 만들기  
  프로젝트를 시작하려면  
   
-1.  시작 [!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)]를 열고 합니다 **새 프로젝트** 대화 상자.  
+1. 시작 [!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)]를 열고 합니다 **새 프로젝트** 대화 상자.  
   
-2.  Visual C# 및 Windows 범주에서 선택 합니다 **WPF 사용자 정의 컨트롤 라이브러리** 템플릿.  
+2. Visual C# 및 Windows 범주에서 선택 합니다 **WPF 사용자 정의 컨트롤 라이브러리** 템플릿.  
   
-3.  새 프로젝트의 이름을 `MyControls`로 지정합니다.  
+3. 새 프로젝트의 이름을 `MyControls`로 지정합니다.  
   
-4.  위치 지정 편리 하 게 명명된 된 최상위 폴더와 같은 `WindowsFormsHostingWpfControl`합니다. 나중에 이 폴더에 호스트 애플리케이션을 넣습니다.  
+4. 위치 지정 편리 하 게 명명된 된 최상위 폴더와 같은 `WindowsFormsHostingWpfControl`합니다. 나중에 이 폴더에 호스트 애플리케이션을 넣습니다.  
   
-5.  **확인**을 클릭해 프로젝트를 만듭니다. 기본 프로젝트 포함 이라는 단일 컨트롤이 `UserControl1`합니다.  
+5. **확인**을 클릭해 프로젝트를 만듭니다. 기본 프로젝트 포함 이라는 단일 컨트롤이 `UserControl1`합니다.  
   
-6.  솔루션 탐색기에서 이름을 바꿀 `UserControl1` 에 `MyControl1`입니다.  
+6. 솔루션 탐색기에서 이름을 바꿀 `UserControl1` 에 `MyControl1`입니다.  
   
  프로젝트에는 다음과 같은 시스템 DLL에 대한 참조가 있어야 합니다. 이러한 DLL이 기본적으로 포함되지 않은 경우 프로젝트에 추가합니다.  
   
@@ -105,11 +105,11 @@ ms.locfileid: "59219605"
 ### <a name="implementing-the-code-behind-file"></a>코드 숨김 파일 구현  
  코드 숨김 파일 mycontrol1.xaml.cs에서는 다음과 같은 세 가지 필수 작업을 구현합니다.
   
-1.  사용자가 단추 중 하나를 클릭할 때 발생하는 이벤트를 처리합니다.  
+1. 사용자가 단추 중 하나를 클릭할 때 발생하는 이벤트를 처리합니다.  
   
-2.  데이터를 검색 합니다 <xref:System.Windows.Controls.TextBox> 요소를 사용자 지정 이벤트 인수 개체에 패키지 하 고 합니다.  
+2. 데이터를 검색 합니다 <xref:System.Windows.Controls.TextBox> 요소를 사용자 지정 이벤트 인수 개체에 패키지 하 고 합니다.  
   
-3.  사용자 지정을 발생 시킵니다 `OnButtonClick` 이벤트는 사용자가 완료 되 고이 호스트를 데이터를 전달 하는 호스트에 알립니다.  
+3. 사용자 지정을 발생 시킵니다 `OnButtonClick` 이벤트는 사용자가 완료 되 고이 호스트를 데이터를 전달 하는 호스트에 알립니다.  
   
  또한 컨트롤에서는 모양을 변경하는 데 사용할 수 있는 많은 수의 색 및 글꼴 속성을 노출합니다. 달리 합니다 <xref:System.Windows.Forms.Integration.WindowsFormsHost> 클래스에 사용 되는 Windows Forms 컨트롤을 호스트 하는 <xref:System.Windows.Forms.Integration.ElementHost> 클래스는 컨트롤의 표시 <xref:System.Windows.Controls.Panel.Background%2A> 속성에만 해당 합니다. 이 코드 예제에서 설명 하는 예제 사이의 유사성을 유지 하기 위해 [연습: WPF에서 Windows Forms 복합 컨트롤 호스팅](walkthrough-hosting-a-windows-forms-composite-control-in-wpf.md), 컨트롤은 나머지 속성에 직접 노출 합니다.  
   
@@ -189,25 +189,25 @@ namespace MyControls
 ### <a name="creating-the-project"></a>프로젝트 만들기  
  프로젝트를 시작하려면  
   
-1.  시작 [!INCLUDE[TLA2#tla_visualstu](../../../../includes/tla2sharptla-visualstu-md.md)]를 열고 합니다 **새 프로젝트** 대화 상자.  
+1. 시작 [!INCLUDE[TLA2#tla_visualstu](../../../../includes/tla2sharptla-visualstu-md.md)]를 열고 합니다 **새 프로젝트** 대화 상자.  
   
-2.  Visual C# 및 Windows 범주에서 선택 합니다 **Windows Forms 응용 프로그램** 템플릿.  
+2. Visual C# 및 Windows 범주에서 선택 합니다 **Windows Forms 응용 프로그램** 템플릿.  
   
-3.  새 프로젝트의 이름을 `WFHost`로 지정합니다.  
+3. 새 프로젝트의 이름을 `WFHost`로 지정합니다.  
   
-4.  위치에는 MyControls 프로젝트를 포함하는 동일한 최상위 폴더를 지정합니다.  
+4. 위치에는 MyControls 프로젝트를 포함하는 동일한 최상위 폴더를 지정합니다.  
   
-5.  **확인**을 클릭해 프로젝트를 만듭니다.  
+5. **확인**을 클릭해 프로젝트를 만듭니다.  
   
  포함 된 DLL에 대 한 참조를 추가 해야 `MyControl1` 및 기타 어셈블리입니다.  
   
-1.  솔루션 탐색기에서 프로젝트 이름을 마우스 오른쪽 단추로 누르고 **참조 추가**합니다.  
+1. 솔루션 탐색기에서 프로젝트 이름을 마우스 오른쪽 단추로 누르고 **참조 추가**합니다.  
   
-2.  클릭 합니다 **찾아보기** 탭 하 고 mycontrols.dll이 포함 된 폴더로 이동 합니다. 이 연습에서 이 폴더는 MyControls\bin\Debug입니다.  
+2. 클릭 합니다 **찾아보기** 탭 하 고 mycontrols.dll이 포함 된 폴더로 이동 합니다. 이 연습에서 이 폴더는 MyControls\bin\Debug입니다.  
   
-3.  Mycontrols.dll을 선택한 다음 클릭 **확인**합니다.  
+3. Mycontrols.dll을 선택한 다음 클릭 **확인**합니다.  
   
-4.  다음 어셈블리에 대한 참조를 추가합니다.  
+4. 다음 어셈블리에 대한 참조를 추가합니다.  
   
     -   PresentationCore  
   
@@ -222,13 +222,13 @@ namespace MyControls
 ### <a name="implementing-the-user-interface-for-the-application"></a>애플리케이션에 대한 사용자 인터페이스 구현  
  Windows Form 애플리케이션의 UI에는 WPF 복합 컨트롤과 상호 작용하는 여러 컨트롤이 포함되어 있습니다.  
   
-1.  Windows Form 디자이너에서 Form1을 엽니다.  
+1. Windows Form 디자이너에서 Form1을 엽니다.  
   
-2.  컨트롤 크기에 맞게 폼을 확장합니다.  
+2. 컨트롤 크기에 맞게 폼을 확장합니다.  
   
-3.  폼의 오른쪽 위 모퉁이에서 추가 <xref:System.Windows.Forms.Panel?displayProperty=nameWithType> 보유 하는 컨트롤을 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 복합 컨트롤입니다.  
+3. 폼의 오른쪽 위 모퉁이에서 추가 <xref:System.Windows.Forms.Panel?displayProperty=nameWithType> 보유 하는 컨트롤을 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 복합 컨트롤입니다.  
   
-4.  다음 추가 <xref:System.Windows.Forms.GroupBox?displayProperty=nameWithType> 폼에 컨트롤을 합니다.  
+4. 다음 추가 <xref:System.Windows.Forms.GroupBox?displayProperty=nameWithType> 폼에 컨트롤을 합니다.  
   
     |이름|텍스트|  
     |----------|----------|  
@@ -240,7 +240,7 @@ namespace MyControls
     |groupBox6|글꼴 두께|  
     |groupBox7|컨트롤의 데이터|  
   
-5.  다음을 추가 합니다 <xref:System.Windows.Forms.RadioButton?displayProperty=nameWithType> 컨트롤을 <xref:System.Windows.Forms.GroupBox?displayProperty=nameWithType> 컨트롤입니다.  
+5. 다음을 추가 합니다 <xref:System.Windows.Forms.RadioButton?displayProperty=nameWithType> 컨트롤을 <xref:System.Windows.Forms.GroupBox?displayProperty=nameWithType> 컨트롤입니다.  
   
     |GroupBox|이름|텍스트|  
     |--------------|----------|----------|  
@@ -261,7 +261,7 @@ namespace MyControls
     |groupBox6|radioWeightOriginal|원래 색|  
     |groupBox6|radioWeightBold|Bold|  
   
-6.  다음을 추가 합니다 <xref:System.Windows.Forms.Label?displayProperty=nameWithType> 마지막 제어 <xref:System.Windows.Forms.GroupBox?displayProperty=nameWithType>입니다. 이러한 컨트롤에서 반환한 데이터를 표시 합니다 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 복합 컨트롤입니다.  
+6. 다음을 추가 합니다 <xref:System.Windows.Forms.Label?displayProperty=nameWithType> 마지막 제어 <xref:System.Windows.Forms.GroupBox?displayProperty=nameWithType>입니다. 이러한 컨트롤에서 반환한 데이터를 표시 합니다 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 복합 컨트롤입니다.  
   
     |GroupBox|이름|텍스트|  
     |--------------|----------|----------|  
@@ -284,15 +284,15 @@ namespace MyControls
   
  합니다 `Form1_Load` 메서드 위의 코드에서 호스트 하기 위한 일반적인 절차를 보여 줍니다.는 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 제어 합니다.  
   
-1.  새 <xref:System.Windows.Forms.Integration.ElementHost> 개체입니다.  
+1. 새 <xref:System.Windows.Forms.Integration.ElementHost> 개체입니다.  
   
-2.  컨트롤의 <xref:System.Windows.Forms.Control.Dock%2A> 속성을 <xref:System.Windows.Forms.DockStyle.Fill?displayProperty=nameWithType>입니다.  
+2. 컨트롤의 <xref:System.Windows.Forms.Control.Dock%2A> 속성을 <xref:System.Windows.Forms.DockStyle.Fill?displayProperty=nameWithType>입니다.  
   
-3.  추가 합니다 <xref:System.Windows.Forms.Integration.ElementHost> 컨트롤을 <xref:System.Windows.Forms.Panel> 컨트롤의 <xref:System.Windows.Forms.Control.Controls%2A> 컬렉션입니다.  
+3. 추가 합니다 <xref:System.Windows.Forms.Integration.ElementHost> 컨트롤을 <xref:System.Windows.Forms.Panel> 컨트롤의 <xref:System.Windows.Forms.Control.Controls%2A> 컬렉션입니다.  
   
-4.  인스턴스를 만듭니다는 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 제어 합니다.  
+4. 인스턴스를 만듭니다는 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 제어 합니다.  
   
-5.  컨트롤을 할당 하 여 폼에서 복합 컨트롤을 호스트 하는 <xref:System.Windows.Forms.Integration.ElementHost> 컨트롤의 <xref:System.Windows.Forms.Integration.ElementHost.Child%2A> 속성입니다.  
+5. 컨트롤을 할당 하 여 폼에서 복합 컨트롤을 호스트 하는 <xref:System.Windows.Forms.Integration.ElementHost> 컨트롤의 <xref:System.Windows.Forms.Integration.ElementHost.Child%2A> 속성입니다.  
   
  나머지 두 줄은 `Form1_Load` 메서드는 두 가지 컨트롤 이벤트에 처리기를 연결 합니다.  
   

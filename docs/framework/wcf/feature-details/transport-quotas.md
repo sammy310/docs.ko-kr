@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - transport quotas [WCF]
 ms.assetid: 3e71dd3d-f981-4d9c-9c06-ff8abb61b717
-ms.openlocfilehash: 44bda0838689fcf8096017060be970f2291a86e0
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 12c266a473aa7c20ab35d6047fedafbfa04dac4a
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59174631"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59299308"
 ---
 # <a name="transport-quotas"></a>전송 할당량
 전송 할당량은 연결이 과도한 리소스를 사용하는 경우를 결정하는 정책 메커니즘입니다. 할당량은 할당량 값을 초과하면 추가 리소스를 사용하지 못하도록 설정된 절대 한계입니다. 전송 할당량은 악의적이거나 의도하지 않은 서비스 거부 공격을 방지합니다.  
@@ -100,9 +100,9 @@ ms.locfileid: "59174631"
 |`ReceiveTimeout`|X|X|X|  
 |`SendTimeout`|X|X|X|  
   
-1.  `MaxBufferSize` 전송 할당량은 `BasicHttp` 바인딩에서만 사용할 수 있습니다. `WSHttp` 바인딩은 스트리밍된 전송 모드를 지원하지 않는 시나리오에 적용됩니다.  
+1. `MaxBufferSize` 전송 할당량은 `BasicHttp` 바인딩에서만 사용할 수 있습니다. `WSHttp` 바인딩은 스트리밍된 전송 모드를 지원하지 않는 시나리오에 적용됩니다.  
   
-2.  전송 할당량 `MaxPendingConnections` 및 `MaxOutboundConnectionsPerEndpoint`는 `MaxConnections`라는 단일 전송 할당량에 결합됩니다.  
+2. 전송 할당량 `MaxPendingConnections` 및 `MaxOutboundConnectionsPerEndpoint`는 `MaxConnections`라는 단일 전송 할당량에 결합됩니다.  
   
 ### <a name="controlling-transport-quotas-from-configuration"></a>구성에서 전송 할당량 제어  
  응용 프로그램 구성 시 바인딩의 속성에 직접 액세스할 때와 동일한 전송 할당량을 설정할 수 있습니다. 구성 파일에서 전송 할당량의 이름은 항상 소문자로 시작합니다. 예를 들어 바인딩의 `CloseTimeout` 속성은 구성에서 `closeTimeout` 설정에 해당하고 바인딩의 `MaxConnections` 속성은 구성의 `maxConnections` 설정에 해당합니다.  

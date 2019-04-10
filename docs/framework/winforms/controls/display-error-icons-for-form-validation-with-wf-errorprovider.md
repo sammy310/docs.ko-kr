@@ -11,23 +11,23 @@ helpviewer_keywords:
 - ErrorProvider component [Windows Forms], displaying error icons
 - error messages [Windows Forms], displaying icons
 ms.assetid: 3b681a32-9db4-497b-a34b-34980eabee46
-ms.openlocfilehash: 39dd77fee36b172f6c38746bfe970094ec9edb4e
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 9487d4f82878ffefe17c576b16f654293ef01106
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59223552"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59316507"
 ---
 # <a name="how-to-display-error-icons-for-form-validation-with-the-windows-forms-errorprovider-component"></a>방법: Windows Forms ErrorProvider 구성 요소를 사용하여 양식 유효성 오류 아이콘 표시
 Windows Forms를 사용할 수 있습니다 <xref:System.Windows.Forms.ErrorProvider> 구성 요소에 잘못 된 데이터를 입력할 때 오류 아이콘을 표시 합니다. 두 개 이상의 폼의 컨트롤 간에 이동 하 여 유효성 검사 코드를 호출할 수 있어야 합니다.  
   
 ### <a name="to-display-an-error-icon-when-a-controls-value-is-invalid"></a>컨트롤의 값에 유효 하지 않을 때 오류 아이콘을 표시 하려면  
   
-1.  두 개의 컨트롤 추가-예를 들어, 텍스트 상자-Windows 폼에 있습니다.  
+1. 두 개의 컨트롤 추가-예를 들어, 텍스트 상자-Windows 폼에 있습니다.  
   
-2.  추가 <xref:System.Windows.Forms.ErrorProvider> 폼에 구성 요소입니다.  
+2. 추가 <xref:System.Windows.Forms.ErrorProvider> 폼에 구성 요소입니다.  
   
-3.  첫 번째 컨트롤을 선택 하 고 코드를 추가 하는 <xref:System.Windows.Forms.Control.Validating> 이벤트 처리기입니다. 이 코드를 제대로 실행 되려면, 절차 이벤트에 연결 되어야 합니다. 자세한 내용은 [방법: 런타임에 Windows Forms에 대 한 이벤트 처리기를 만들](../how-to-create-event-handlers-at-run-time-for-windows-forms.md)합니다.  
+3. 첫 번째 컨트롤을 선택 하 고 코드를 추가 하는 <xref:System.Windows.Forms.Control.Validating> 이벤트 처리기입니다. 이 코드를 제대로 실행 되려면, 절차 이벤트에 연결 되어야 합니다. 자세한 내용은 [방법: 런타임에 Windows Forms에 대 한 이벤트 처리기를 만들](../how-to-create-event-handlers-at-run-time-for-windows-forms.md)합니다.  
   
      다음 코드는 사용자가 입력 한; 데이터의 유효성을 테스트 데이터가 유효 하지 않은 경우는 <xref:System.Windows.Forms.ErrorProvider.SetError%2A> 메서드가 호출 됩니다. 첫 번째 인수는 <xref:System.Windows.Forms.ErrorProvider.SetError%2A> 메서드 아이콘 옆에 표시할 컨트롤을 지정 합니다. 두 번째 인수에 표시할 오류 텍스트입니다.  
   
@@ -90,7 +90,7 @@ Windows Forms를 사용할 수 있습니다 <xref:System.Windows.Forms.ErrorProv
        (this, &Form1::textBox1_Validating);  
     ```  
   
-4.  프로젝트를 실행합니다. 그 다음으로 첫 번째 컨트롤을 두 번째 탭에 (이 예제에서는 숫자가 아닌)의 잘못 된 데이터를 입력 합니다. 오류 텍스트를 보려면 마우스 포인터를 사용 하 여 오류 아이콘이 표시 되 면 해당 가리킵니다.  
+4. 프로젝트를 실행합니다. 그 다음으로 첫 번째 컨트롤을 두 번째 탭에 (이 예제에서는 숫자가 아닌)의 잘못 된 데이터를 입력 합니다. 오류 텍스트를 보려면 마우스 포인터를 사용 하 여 오류 아이콘이 표시 되 면 해당 가리킵니다.  
   
 ## <a name="see-also"></a>참고자료
 

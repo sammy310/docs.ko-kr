@@ -7,34 +7,34 @@ helpviewer_keywords:
 - controls [Windows Forms], child
 - child controls [Windows Forms], anchoring and docking
 ms.assetid: a2bcdfca-9b63-45e6-9c0e-3411015cba98
-ms.openlocfilehash: 679333186d9f9b791e5ad9c2e1cb74f69e051a62
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 255ac50ae79d6931c9b82b50677c450c0834fdea
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59168548"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59329039"
 ---
 # <a name="how-to-anchor-and-dock-child-controls-in-a-flowlayoutpanel-control"></a>방법: FlowLayoutPanel 컨트롤에서 자식 컨트롤 고정 및 도킹
 <xref:System.Windows.Forms.FlowLayoutPanel> 컨트롤은 자식 컨트롤의 <xref:System.Windows.Forms.Control.Anchor%2A> 및 <xref:System.Windows.Forms.Control.Dock%2A> 속성을 지원합니다.  
   
 ### <a name="to-anchor-and-dock-child-controls-in-a-flowlayoutpanel-control"></a>FlowLayoutPanel 컨트롤의 자식 컨트롤을 고정 및 도킹하려면  
   
-1.  폼에 <xref:System.Windows.Forms.FlowLayoutPanel> 컨트롤을 만듭니다.  
+1. 폼에 <xref:System.Windows.Forms.FlowLayoutPanel> 컨트롤을 만듭니다.  
   
-2.  설정 합니다 <xref:System.Windows.Forms.Control.Width%2A> 의 <xref:System.Windows.Forms.FlowLayoutPanel> 컨트롤을 **300**, 설정 및 해당 <xref:System.Windows.Forms.FlowLayoutPanel.FlowDirection%2A> 에 <xref:System.Windows.Forms.FlowDirection.TopDown>입니다.  
+2. 설정 합니다 <xref:System.Windows.Forms.Control.Width%2A> 의 <xref:System.Windows.Forms.FlowLayoutPanel> 컨트롤을 **300**, 설정 및 해당 <xref:System.Windows.Forms.FlowLayoutPanel.FlowDirection%2A> 에 <xref:System.Windows.Forms.FlowDirection.TopDown>입니다.  
   
-3.  두 개의 <xref:System.Windows.Forms.Button> 컨트롤을 만들어 <xref:System.Windows.Forms.FlowLayoutPanel> 컨트롤에 배치합니다.  
+3. 두 개의 <xref:System.Windows.Forms.Button> 컨트롤을 만들어 <xref:System.Windows.Forms.FlowLayoutPanel> 컨트롤에 배치합니다.  
   
-4.  설정 된 <xref:System.Windows.Forms.Control.Width%2A> 하는 첫 번째 단추의 **200**합니다.  
+4. 설정 된 <xref:System.Windows.Forms.Control.Width%2A> 하는 첫 번째 단추의 **200**합니다.  
   
-5.  두 번째 단추의 <xref:System.Windows.Forms.Control.Dock%2A> 속성을 <xref:System.Windows.Forms.DockStyle.Fill>로 설정합니다.  
+5. 두 번째 단추의 <xref:System.Windows.Forms.Control.Dock%2A> 속성을 <xref:System.Windows.Forms.DockStyle.Fill>로 설정합니다.  
   
     > [!NOTE]
     >  두 번째 단추는 첫 번째 단추와 동일한 너비를 사용합니다. <xref:System.Windows.Forms.FlowLayoutPanel> 컨트롤의 너비에 가로로 늘여지지 않습니다.  
   
-6.  두 번째 단추의 <xref:System.Windows.Forms.Control.Dock%2A> 속성을 `None`로 설정합니다. 그러면 단추가 원래 너비를 사용합니다.  
+6. 두 번째 단추의 <xref:System.Windows.Forms.Control.Dock%2A> 속성을 `None`로 설정합니다. 그러면 단추가 원래 너비를 사용합니다.  
   
-7.  두 번째 단추의 <xref:System.Windows.Forms.Control.Anchor%2A> 속성을 `Left, Right`로 설정합니다.  
+7. 두 번째 단추의 <xref:System.Windows.Forms.Control.Anchor%2A> 속성을 `Left, Right`로 설정합니다.  
   
     > [!IMPORTANT]
     >  두 번째 단추는 첫 번째 단추와 동일한 너비를 사용합니다. <xref:System.Windows.Forms.FlowLayoutPanel> 컨트롤의 너비에 가로로 늘여지지 않습니다. 이는 <xref:System.Windows.Forms.FlowLayoutPanel> 컨트롤의 고정 및 도킹에 대한 일반적인 규칙입니다. 세로 흐름 방향에서는 <xref:System.Windows.Forms.FlowLayoutPanel> 컨트롤이 폼에서 가장 넓은 자식 컨트롤의 암시된 열 너비를 계산합니다. 이 열에서 <xref:System.Windows.Forms.Control.Anchor%2A> 또는 <xref:System.Windows.Forms.Control.Dock%2A> 속성을 가진 다른 모든 컨트롤은 이 암시된 열에 맞게 맞춰지거나 늘어납니다. 이 동작은 가로 흐름 방향에서도 비슷하게 작동합니다. <xref:System.Windows.Forms.FlowLayoutPanel> 컨트롤은 행에서 가장 높은 자식 컨트롤의 암시된 행 높이를 계산하고 이 행에서 도킹 또는 고정된 모든 자식 컨트롤이 암시된 행을 채우도록 맞춰지거나 크기가 조정됩니다.  

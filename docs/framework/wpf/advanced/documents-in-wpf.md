@@ -10,12 +10,12 @@ helpviewer_keywords:
 - documents [WPF], types of
 - documents [WPF], browser-viewable
 ms.assetid: 6e8db7bc-050a-4070-aa72-bb8c46e87ff8
-ms.openlocfilehash: 9f948b6723d73dac6104439dcd6a42dce573c438
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: b4057f54934fb5c7c9bb3d4fb97fe8e197e324ad
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59169613"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59313959"
 ---
 # <a name="documents-in-wpf"></a>WPF의 문서
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 다양 한 문서 기능을 보다 쉽게 액세스 하 고 이전 세대 보다 읽기 되도록 설계 된 고품질 콘텐츠를 만들 수 있게 제공 [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)]합니다. 고급 기능 및 품질 외에도 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]에서는 문서 표시, 패키징 및 보안을 위한 통합 서비스도 제공합니다. 이 항목에서는 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 문서 형식 및 문서 패키징을 소개합니다.  
@@ -89,9 +89,9 @@ ms.locfileid: "59169613"
 #### <a name="packagedigitalsignatures"></a>PackageDigitalSignatures  
  보안을 위해는 <xref:System.IO.Packaging.PackageDigitalSignature> ("디지털 시그니처")는 패키지 내의 파트와 연결할 수 있습니다. <xref:System.IO.Packaging.PackageDigitalSignature> [509]를 통합 하는 두 기능을 제공:  
   
-1.  파트의 작성기를 식별하고 인증합니다.  
+1. 파트의 작성기를 식별하고 인증합니다.  
   
-2.  파트가 수정되지 않았는지 유효성을 검사합니다.  
+2. 파트가 수정되지 않았는지 유효성을 검사합니다.  
   
  디지털 시그니처는 파트를 수정하지 못하게 하지는 않지만, 파트를 임의 방식으로 변경하면 디지털 시그니처의 유효성 검사 확인이 실패합니다. 그러면 애플리케이션에서 파트 열기를 차단하거나 사용자에게 파트가 수정되어 안전하지 않음을 알리는 등의 적절한 조치를 수행할 수 있습니다.  
   
@@ -107,9 +107,9 @@ ms.locfileid: "59169613"
   
  패키지 관계에서는 자세한 정보를 추가하여 개별 파트 또는 전체 패키지와 연결하는 검색 가능한 방법을 제공합니다. 패키지 관계는 다음 두 개의 주요 기능에 사용합니다.  
   
-1.  파트 간 종속성 관계 정의.  
+1. 파트 간 종속성 관계 정의.  
   
-2.  메모 또는 파트와 관련된 다른 데이터를 추가하는 정보 관계 정의.  
+2. 메모 또는 파트와 관련된 다른 데이터를 추가하는 정보 관계 정의.  
   
  <xref:System.IO.Packaging.PackageRelationship> 종속성을 정의 하 고 패키지 또는 전체 패키지의 파트와 연결 된 기타 정보를 추가 하는 빠르고 검색 가능한 방법을 제공 합니다.  
   

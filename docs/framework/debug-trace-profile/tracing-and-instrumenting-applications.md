@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 773b6fc4-9013-4322-b728-5dec7a72e743
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4e97bc5f9846757e02f9e55de31bee96a9d24c2f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 6749f54db106bffaba57b7cb77cb13808175af3a
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59219215"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59298911"
 ---
 # <a name="tracing-and-instrumenting-applications"></a>응용 프로그램 추적 및 조율
 추적은 실행되는 동안 응용 프로그램의 실행을 모니터링할 수 있는 방법입니다. 개발할 때 .NET Framework 응용 프로그램에 추적 및 디버깅 계측을 추가할 수 있으며, 응용 프로그램을 개발하는 동안 및 배포한 후에 해당 계측을 모두 사용할 수 있습니다. <xref:System.Diagnostics.Trace?displayProperty=nameWithType>, <xref:System.Diagnostics.Debug?displayProperty=nameWithType> 및 <xref:System.Diagnostics.TraceSource?displayProperty=nameWithType> 클래스를 사용하여 나중에 분석할 수 있도록 오류 및 응용 프로그램 실행 정보를 로그, 텍스트 파일 또는 다른 장치에 기록할 수 있습니다.  
@@ -67,11 +67,11 @@ System.Diagnostics.Debug.WriteLine("Hello World!");
 ### <a name="phases-of-code-tracing"></a>코드 추적 단계  
  코드 추적에는 다음 세 단계가 있습니다.  
   
-1.  **계측** - 응용 프로그램에 추적 코드를 추가합니다.  
+1. **계측** - 응용 프로그램에 추적 코드를 추가합니다.  
   
-2.  **추적** - 추적 코드가 지정된 대상에 정보를 씁니다.  
+2. **추적** - 추적 코드가 지정된 대상에 정보를 씁니다.  
   
-3.  **분석** - 추적 정보를 평가하여 응용 프로그램의 문제를 식별하고 파악합니다.  
+3. **분석** - 추적 정보를 평가하여 응용 프로그램의 문제를 식별하고 파악합니다.  
   
  개발 중에 모든 디버그 및 추적 출력 메서드는 기본적으로 Visual Studio의 출력 창에 정보를 씁니다. 배포된 응용 프로그램에서 메서드는 지정된 대상에 추적 정보를 씁니다. 추적 또는 디버깅의 출력 대상을 지정하는 방법에 대한 자세한 내용은 [추적 수신기](../../../docs/framework/debug-trace-profile/trace-listeners.md)를 참조하세요.  
   
@@ -79,17 +79,17 @@ System.Diagnostics.Debug.WriteLine("Hello World!");
   
 ##### <a name="to-use-tracing-in-an-application"></a>응용 프로그램에서 추적을 사용하려면  
   
-1.  응용 프로그램을 배포한 후 온사이트에서 수신할 추적 출력을 고려합니다.  
+1. 응용 프로그램을 배포한 후 온사이트에서 수신할 추적 출력을 고려합니다.  
   
-2.  스위치 집합을 만듭니다. 자세한 내용은 [방법: 추적 스위치 구성](../../../docs/framework/debug-trace-profile/how-to-create-initialize-and-configure-trace-switches.md)합니다.  
+2. 스위치 집합을 만듭니다. 자세한 내용은 [방법: 추적 스위치 구성](../../../docs/framework/debug-trace-profile/how-to-create-initialize-and-configure-trace-switches.md)합니다.  
   
-3.  응용 프로그램 코드에 trace 문을 추가합니다.  
+3. 응용 프로그램 코드에 trace 문을 추가합니다.  
   
-4.  추적 출력을 표시할 위치를 결정하고 적절한 수신기를 추가합니다. 자세한 내용은 [추적 수신기 만들기 및 초기화](../../../docs/framework/debug-trace-profile/how-to-create-and-initialize-trace-listeners.md)를 참조하세요.  
+4. 추적 출력을 표시할 위치를 결정하고 적절한 수신기를 추가합니다. 자세한 내용은 [추적 수신기 만들기 및 초기화](../../../docs/framework/debug-trace-profile/how-to-create-and-initialize-trace-listeners.md)를 참조하세요.  
   
-5.  응용 프로그램 및 응용 프로그램에 포함된 추적 코드를 테스트 및 디버그합니다.  
+5. 응용 프로그램 및 응용 프로그램에 포함된 추적 코드를 테스트 및 디버그합니다.  
   
-6.  다음 절차 중 하나를 사용하여 응용 프로그램을 실행 코드로 컴파일합니다.  
+6. 다음 절차 중 하나를 사용하여 응용 프로그램을 실행 코드로 컴파일합니다.  
   
     -   **솔루션 탐색기**에서 **속성 페이지** 대화 상자의 **디버그** 페이지와 함께 **빌드** 메뉴를 사용합니다. 이 절차는 Visual Studio에서 컴파일할 때 사용합니다.  
   
@@ -97,11 +97,11 @@ System.Diagnostics.Debug.WriteLine("Hello World!");
   
     -   컴파일의 명령줄 메서드에 대한 **추적** 및 **디버그** 컴파일러 지시문을 사용합니다. 자세한 내용은 [추적 및 디버그를 사용한 조건부 컴파일](../../../docs/framework/debug-trace-profile/how-to-compile-conditionally-with-trace-and-debug.md)을 참조하세요. 이 절차는 명령줄에서 컴파일할 때 사용합니다.  
   
-7.  런타임 중에 문제가 발생하는 경우 적절한 추적 스위치를 설정합니다. 자세한 내용은 [추적 스위치 구성](../../../docs/framework/debug-trace-profile/how-to-create-initialize-and-configure-trace-switches.md)을 참조하세요.  
+7. 런타임 중에 문제가 발생하는 경우 적절한 추적 스위치를 설정합니다. 자세한 내용은 [추적 스위치 구성](../../../docs/framework/debug-trace-profile/how-to-create-initialize-and-configure-trace-switches.md)을 참조하세요.  
   
      추적 코드는 지정된 대상(예: 화면, 텍스트 파일 또는 이벤트 로그)에 추적 메시지를 씁니다. **Trace.Listeners** 컬렉션에 포함된 수신기의 형식에 따라 대상이 결정됩니다.  
   
-8.  추적 메시지를 분석하여 응용 프로그램의 문제를 식별하고 파악합니다.  
+8. 추적 메시지를 분석하여 응용 프로그램의 문제를 식별하고 파악합니다.  
   
 ## <a name="trace-instrumentation-and-distributed-applications"></a>추적 계측 및 분산 응용 프로그램  
  분산 응용 프로그램을 만드는 경우 사용되는 방식으로 응용 프로그램을 테스트하기 어려울 수 있습니다. 운영 체제나 웹 브라우저의 가능한 모든 조합(모든 지역화된 언어 옵션 포함)을 테스트하거나 동시에 응용 프로그램에 액세스하는 다수의 사용자를 시뮬레이션할 수 있는 개발 팀은 거의 없습니다. 이러한 상황에서는 분산 응용 프로그램이 높은 볼륨, 다양한 설정 및 고유한 최종 사용자 동작에 응답하는 방식을 테스트할 수 없습니다. 또한 분산 응용 프로그램의 많은 부분에는 이러한 부분과 직접 상호 작용하거나 해당 활동을 볼 수 있는 사용자 인터페이스가 없습니다.  

@@ -2,12 +2,12 @@
 title: 포이즌 메시지 처리
 ms.date: 03/30/2017
 ms.assetid: 8d1c5e5a-7928-4a80-95ed-d8da211b8595
-ms.openlocfilehash: 704f1a837b7d70f401eaaf7d23847b08972cff50
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: fe748ac40f03ed22cacb254ab464a6caf3d27a8c
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59146525"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59305028"
 ---
 # <a name="poison-message-handling"></a>포이즌 메시지 처리
 A *포이즌 메시지* 응용 프로그램에 배달 시도 최대 횟수를 초과한 메시지입니다. 큐 기반 응용 프로그램에서 오류로 인해 메시지를 처리할 수 없는 경우 이러한 상황이 발생할 수 있습니다. 안정성 요청을 충족하려면 대기 중인 응용 프로그램이 트랜잭션에서 메시지를 받습니다. 대기 중인 메시지를 받은 트랜잭션을 중단하면 메시지가 큐에 남으므로 새 트랜잭션에서 해당 메시지가 다시 시도됩니다. 트랜잭션의 중단 문제가 해결되지 않은 경우에는 수신 응용 프로그램이 최대 전달 시도 횟수를 초과할 때까지 같은 메시지를 받고 중단하는 루프에 갇히고, 포이즌 메시지가 발생합니다.  
@@ -66,17 +66,17 @@ A *포이즌 메시지* 응용 프로그램에 배달 시도 최대 횟수를 �
   
  응용 프로그램에서 서비스가 큐의 남은 메시지에 액세스할 수 있도록 포이즌 메시지를 포이즌 메시지 큐로 이동하는 몇 가지 포이즌 메시지 자동 처리 작업이 필요할 수 있습니다. <xref:System.ServiceModel.Configuration.MsmqBindingElementBase.ReceiveErrorHandling%2A> 설정이 <xref:System.ServiceModel.ReceiveErrorHandling.Fault>로 설정된 경우에만 오류 처리 메커니즘을 사용하여 포이즌 메시지 예외를 수신 대기할 수 있습니다. 메시지 큐 3.0의 포이즌 메시지 샘플은 이 동작을 보여 줍니다. 다음에서는 최선의 방법을 포함하여 포이즌 메시지를 처리하는 단계를 간략히 보여 줍니다.  
   
-1.  포이즌 설정이 응용 프로그램의 요구 사항을 반영하는지 확인합니다. 설정할 때 [!INCLUDE[wv](../../../../includes/wv-md.md)], [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] 및 [!INCLUDE[wxp](../../../../includes/wxp-md.md)] 간 메시지 큐 기능의 차이점을 알고 있어야 합니다.  
+1. 포이즌 설정이 응용 프로그램의 요구 사항을 반영하는지 확인합니다. 설정할 때 [!INCLUDE[wv](../../../../includes/wv-md.md)], [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] 및 [!INCLUDE[wxp](../../../../includes/wxp-md.md)] 간 메시지 큐 기능의 차이점을 알고 있어야 합니다.  
   
-2.  필요한 경우 `IErrorHandler`를 구현하여 포이즌 메시지 오류를 처리합니다. `ReceiveErrorHandling`을 `Fault`로 설정하려면 큐에서 포이즌 메시지를 제거하거나 외부 종속 문제를 해결하는 수동 메커니즘이 필요하므로 일반적인 사용법은 다음 코드처럼 `IErrorHandler`이 `ReceiveErrorHandling`로 설정된 경우 `Fault`를 구현하는 것입니다.  
+2. 필요한 경우 `IErrorHandler`를 구현하여 포이즌 메시지 오류를 처리합니다. `ReceiveErrorHandling`을 `Fault`로 설정하려면 큐에서 포이즌 메시지를 제거하거나 외부 종속 문제를 해결하는 수동 메커니즘이 필요하므로 일반적인 사용법은 다음 코드처럼 `IErrorHandler`이 `ReceiveErrorHandling`로 설정된 경우 `Fault`를 구현하는 것입니다.  
   
      [!code-csharp[S_UE_MSMQ_Poison#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_ue_msmq_poison/cs/poisonerrorhandler.cs#2)]  
   
-3.  서비스 동작에서 사용할 수 있는 `PoisonBehaviorAttribute`를 만듭니다. 이렇게 하면 디스패처에 `IErrorHandler`가 설치됩니다. 다음 코드 예제를 참조하십시오.  
+3. 서비스 동작에서 사용할 수 있는 `PoisonBehaviorAttribute`를 만듭니다. 이렇게 하면 디스패처에 `IErrorHandler`가 설치됩니다. 다음 코드 예제를 참조하십시오.  
   
      [!code-csharp[S_UE_MSMQ_Poison#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_ue_msmq_poison/cs/poisonbehaviorattribute.cs#3)]  
   
-4.  서비스에 포이즌 동작 특성으로 주석이 달려 있어야 합니다.  
+4. 서비스에 포이즌 동작 특성으로 주석이 달려 있어야 합니다.  
 
  또한 `ReceiveErrorHandling`이 `Fault`로 설정된 경우 `ServiceHost`에서 포이즌 메시지를 발생하는 데 오류가 발생합니다. 오류가 발생한 이벤트에 후크하고 서비스를 종료하며 수정 작업을 수행한 다음 다시 시작할 수 있습니다. 예를 들어 `LookupId`로 전파된 <xref:System.ServiceModel.MsmqPoisonMessageException>의 `IErrorHandler`를 기록해 둔 다음, 서비스 호스트에 오류가 발생하는 경우 `System.Messaging` API를 사용하면 `LookupId`를 사용하여 큐에서 메시지를 받고, 큐에서 메시지를 제거하고, 외부 저장소 또는 다른 큐에 메시지를 저장할 수 있습니다. 그런 다음 `ServiceHost`를 다시 시작하여 일반적인 처리를 다시 시작할 수 있습니다. 합니다 [MSMQ 4.0에서 포이즌 메시지 처리](../../../../docs/framework/wcf/samples/poison-message-handling-in-msmq-4-0.md) 이 동작을 보여 줍니다.  
   

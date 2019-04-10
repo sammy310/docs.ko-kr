@@ -7,12 +7,12 @@ helpviewer_keywords:
 - BindingSource component [Windows Forms], creating a lookup table
 - BindingSource component [Windows Forms], examples
 ms.assetid: 622fce80-879d-44be-abbf-8350ec22ca2b
-ms.openlocfilehash: b2b588a8529983699e49531f51aae8e4225e9608
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 481774e9127531bb38df0cc71ac8e7eab76da695
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59181482"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59321902"
 ---
 # <a name="how-to-create-a-lookup-table-with-the-windows-forms-bindingsource-component"></a>방법: Windows Forms BindingSource 구성 요소를 사용하여 조회 테이블 만들기
 조회 테이블은 관련 테이블의 레코드에서 데이터를 표시하는 열이 포함된 데이터 테이블입니다. 다음 절차에서는 <xref:System.Windows.Forms.ComboBox> 컨트롤을 사용하여 부모에서 자식 테이블로의 외래 키 관계로 필드를 표시합니다.  
@@ -49,21 +49,21 @@ ms.locfileid: "59181482"
   
 ### <a name="to-create-the-user-interface"></a>사용자 인터페이스를 만들려면  
   
-1.  **도구 상자**를 끌어를 <xref:System.Windows.Forms.ComboBox> 컨트롤을 폼으로 합니다.  
+1. **도구 상자**를 끌어를 <xref:System.Windows.Forms.ComboBox> 컨트롤을 폼으로 합니다.  
   
      이 컨트롤에는 부모 테이블의 열이 표시됩니다.  
   
-2.  다른 컨트롤을 끌어 자식 테이블의 세부 정보를 표시합니다. 테이블의 데이터 형식에 맞는 컨트롤을 선택해야 합니다. 자세한 내용은 [기능별 Windows Forms 컨트롤](windows-forms-controls-by-function.md)을 참조하세요.  
+2. 다른 컨트롤을 끌어 자식 테이블의 세부 정보를 표시합니다. 테이블의 데이터 형식에 맞는 컨트롤을 선택해야 합니다. 자세한 내용은 [기능별 Windows Forms 컨트롤](windows-forms-controls-by-function.md)을 참조하세요.  
   
-3.  <xref:System.Windows.Forms.BindingNavigator> 컨트롤을 폼으로 끌어 옵니다. 그러면 자식 테이블의 데이터를 탐색할 수 있습니다.  
+3. <xref:System.Windows.Forms.BindingNavigator> 컨트롤을 폼으로 끌어 옵니다. 그러면 자식 테이블의 데이터를 탐색할 수 있습니다.  
   
 ### <a name="to-connect-to-the-data-and-bind-it-to-controls"></a>데이터에 연결하여 컨트롤에 데이터를 바인딩하려면  
   
-1.  <xref:System.Windows.Forms.ComboBox>를 선택하고 스마트 작업 문자 모양을 클릭하여 스마트 작업 대화 상자를 표시합니다.  
+1. <xref:System.Windows.Forms.ComboBox>를 선택하고 스마트 작업 문자 모양을 클릭하여 스마트 작업 대화 상자를 표시합니다.  
   
-2.  **데이터 바인딩된 항목 사용**을 선택합니다.  
+2. **데이터 바인딩된 항목 사용**을 선택합니다.  
   
-3.  **데이터 소스** 드롭다운 상자 옆의 화살표를 클릭합니다. 프로젝트 또는 폼에 대해 데이터 소스를 이전에 구성한 경우 해당 데이터 소스가 표시됩니다. 표시되지 않으면 다음 단계를 완료합니다. 이 예에서는 Northwind 샘플 데이터베이스의 Customers 및 Orders 테이블을 사용하며 괄호로 묶은 부분에서 이러한 테이블을 참조합니다.  
+3. **데이터 소스** 드롭다운 상자 옆의 화살표를 클릭합니다. 프로젝트 또는 폼에 대해 데이터 소스를 이전에 구성한 경우 해당 데이터 소스가 표시됩니다. 표시되지 않으면 다음 단계를 완료합니다. 이 예에서는 Northwind 샘플 데이터베이스의 Customers 및 Orders 테이블을 사용하며 괄호로 묶은 부분에서 이러한 테이블을 참조합니다.  
   
     1.  **프로젝트 데이터 소스 추가**를 클릭하여 데이터에 연결한 다음 데이터 소스를 만듭니다.  
   
@@ -81,15 +81,15 @@ ms.locfileid: "59181482"
   
     8.  **마침**을 클릭합니다.  
   
-4.  **구성원 표시** 드롭다운 상자에서 콤보 상자에 표시할 ContactName 등의 열 이름을 선택합니다.  
+4. **구성원 표시** 드롭다운 상자에서 콤보 상자에 표시할 ContactName 등의 열 이름을 선택합니다.  
   
-5.  **값 구성원** 드롭다운 상자에서 자식 테이블에서 조회 작업을 수행할 CustomerID 등의 열을 선택합니다.  
+5. **값 구성원** 드롭다운 상자에서 자식 테이블에서 조회 작업을 수행할 CustomerID 등의 열을 선택합니다.  
   
-6.  **선택한 값** 드롭다운 상자에서 **프로젝트 데이터 소스**로 이동한 다음 부모 및 자식 테이블이 포함된 방금 만든 데이터 집합으로 이동합니다. 부모 테이블의 값 멤버인 자식 테이블의 동일 속성(예: Orders.CustomerID)을 선택합니다. 해당하는 <xref:System.Windows.Forms.BindingSource>, 데이터 집합 및 테이블 어댑터 구성 요소가 작성되어 폼에 추가됩니다.  
+6. **선택한 값** 드롭다운 상자에서 **프로젝트 데이터 소스**로 이동한 다음 부모 및 자식 테이블이 포함된 방금 만든 데이터 집합으로 이동합니다. 부모 테이블의 값 멤버인 자식 테이블의 동일 속성(예: Orders.CustomerID)을 선택합니다. 해당하는 <xref:System.Windows.Forms.BindingSource>, 데이터 집합 및 테이블 어댑터 구성 요소가 작성되어 폼에 추가됩니다.  
   
-7.  <xref:System.Windows.Forms.BindingNavigator> 컨트롤을 자식 테이블의 <xref:System.Windows.Forms.BindingSource>(예: `OrdersBindingSource`)에 바인딩합니다.  
+7. <xref:System.Windows.Forms.BindingNavigator> 컨트롤을 자식 테이블의 <xref:System.Windows.Forms.BindingSource>(예: `OrdersBindingSource`)에 바인딩합니다.  
   
-8.  <xref:System.Windows.Forms.ComboBox> 및 <xref:System.Windows.Forms.BindingNavigator> 컨트롤 이외의 컨트롤은 표시하려는 자식 테이블의 <xref:System.Windows.Forms.BindingSource>(예: `OrdersBindingSource`)의 세부 정보 필드에 바인딩합니다.  
+8. <xref:System.Windows.Forms.ComboBox> 및 <xref:System.Windows.Forms.BindingNavigator> 컨트롤 이외의 컨트롤은 표시하려는 자식 테이블의 <xref:System.Windows.Forms.BindingSource>(예: `OrdersBindingSource`)의 세부 정보 필드에 바인딩합니다.  
   
 ## <a name="see-also"></a>참고자료
 

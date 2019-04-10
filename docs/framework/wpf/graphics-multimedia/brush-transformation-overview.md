@@ -9,12 +9,12 @@ helpviewer_keywords:
 - properties [WPF], transformation
 - transformation properties of brushes [WPF]
 ms.assetid: 8b9bfc09-12fd-4cd5-b445-99949f27bc39
-ms.openlocfilehash: 0b55d2000b8a70bc42373cb976a84ff54ebc4245
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 39b3ad9bebfc56002f77ad6e9026a4446c95455b
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59169574"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59298333"
 ---
 # <a name="brush-transformation-overview"></a>브러시 변환 개요
 Brush 클래스는 두 개의 변환 속성을 제공 합니다. <xref:System.Windows.Media.Brush.Transform%2A> 고 <xref:System.Windows.Media.Brush.RelativeTransform%2A>입니다. 이러한 속성을 사용하여 브러시의 콘텐츠를 회전, 비율 크기 조정, 기울이기 및 변환할 수 있습니다. 이 항목에서는 이러한 두 속성 간의 차이점을 설명하고 사용 예제를 제공합니다.  
@@ -29,15 +29,15 @@ Brush 클래스는 두 개의 변환 속성을 제공 합니다. <xref:System.Wi
   
  브러시의에 변환을 적용할 때 <xref:System.Windows.Media.Brush.RelativeTransform%2A> 속성을 해당 출력이 그려지는 영역에 매핑되기 전에 해당 변환 브러시에 적용 됩니다. 다음 목록에서는 브러시 콘텐츠가 처리되고 변환되는 순서를 보여 줍니다.  
   
-1.  브러시의 콘텐츠를 처리합니다. 에 대 한는 <xref:System.Windows.Media.GradientBrush>, 즉, 그라데이션 영역을 결정 합니다. 에 대 한는 <xref:System.Windows.Media.TileBrush>는 <xref:System.Windows.Media.TileBrush.Viewbox%2A> 매핑되는 <xref:System.Windows.Media.TileBrush.Viewport%2A>합니다. 이것이 브러시의 출력이 됩니다.  
+1. 브러시의 콘텐츠를 처리합니다. 에 대 한는 <xref:System.Windows.Media.GradientBrush>, 즉, 그라데이션 영역을 결정 합니다. 에 대 한는 <xref:System.Windows.Media.TileBrush>는 <xref:System.Windows.Media.TileBrush.Viewbox%2A> 매핑되는 <xref:System.Windows.Media.TileBrush.Viewport%2A>합니다. 이것이 브러시의 출력이 됩니다.  
   
-2.  브러시의 출력을 1 x 1 변환 사각형에 프로젝션합니다.  
+2. 브러시의 출력을 1 x 1 변환 사각형에 프로젝션합니다.  
   
-3.  브러시의 적용 <xref:System.Windows.Media.Brush.RelativeTransform%2A>하나 포함 된 경우.  
+3. 브러시의 적용 <xref:System.Windows.Media.Brush.RelativeTransform%2A>하나 포함 된 경우.  
   
-4.  변환된 출력을 그릴 영역에 프로젝션합니다.  
+4. 변환된 출력을 그릴 영역에 프로젝션합니다.  
   
-5.  브러시의 적용 <xref:System.Windows.Media.Transform>하나 포함 된 경우.  
+5. 브러시의 적용 <xref:System.Windows.Media.Transform>하나 포함 된 경우.  
   
  때문에 <xref:System.Windows.Media.Brush.RelativeTransform%2A> 브러시의 출력이 1 x 1 사각형을 변환 중심에 매핑되고 오프셋된 값이 상대적인 것으로 표시 하는 동안 적용 됩니다. 예를 들어, 사용 하는 경우를 <xref:System.Windows.Media.RotateTransform> 가운데를 중심으로 45도 출력 브러시를 회전 하려면를 지정 합니다 <xref:System.Windows.Media.RotateTransform> 를 <xref:System.Windows.Media.RotateTransform.CenterX%2A> 0.5의 및 <xref:System.Windows.Media.RotateTransform.CenterY%2A> 0.5의 합니다.  
   
@@ -61,19 +61,19 @@ Brush 클래스는 두 개의 변환 속성을 제공 합니다. <xref:System.Wi
   
  이미지가 왜곡 됩니다, 경우에 확인 브러시 <xref:System.Windows.Media.TileBrush.Stretch%2A> 로 설정 된 <xref:System.Windows.Media.Stretch.UniformToFill>합니다. 브러시의 뒤에 상대 변형 적용 되기 때문에 이것이 <xref:System.Windows.Media.TileBrush.Viewbox%2A> 매핑되는 <xref:System.Windows.Media.TileBrush.Viewport%2A>합니다. 다음 목록에서는 프로세스의 각 단계를 설명합니다.  
   
-1.  브러시의 내용을 프로젝트 (<xref:System.Windows.Media.TileBrush.Viewbox%2A>) 기본 타일 (<xref:System.Windows.Media.TileBrush.Viewport%2A>) 브러시를 사용 하 여 <xref:System.Windows.Media.TileBrush.Stretch%2A> 설정 합니다.  
+1. 브러시의 내용을 프로젝트 (<xref:System.Windows.Media.TileBrush.Viewbox%2A>) 기본 타일 (<xref:System.Windows.Media.TileBrush.Viewport%2A>) 브러시를 사용 하 여 <xref:System.Windows.Media.TileBrush.Stretch%2A> 설정 합니다.  
   
      ![Viewbox를 뷰포트에 맞게 늘이기](./media/graphicsmm-reltransform-2-viewbox-to-viewport.png "graphicsmm_reltransform_2_viewbox_to_viewport")  
   
-2.  기본 타일을 1 x 1 변환 사각형에 프로젝션합니다.  
+2. 기본 타일을 1 x 1 변환 사각형에 프로젝션합니다.  
   
      ![뷰포트를 변환 사각형에 매핑](./media/graphicsmm-reltransform-3-output-to-transform.png "graphicsmm_reltransform_3_output_to_transform")  
   
-3.  적용 된 <xref:System.Windows.Media.RotateTransform>합니다.  
+3. 적용 된 <xref:System.Windows.Media.RotateTransform>합니다.  
   
      ![상대 변환 적용](./media/graphicsmm-reltransform-4-transform-rotate.png "graphicsmm_reltransform_4_transform_rotate")  
   
-4.  변환된 기본 타일을 그릴 영역에 프로젝션합니다.  
+4. 변환된 기본 타일을 그릴 영역에 프로젝션합니다.  
   
      ![변환된 브러시를 출력 영역으로 프로젝션](./media/graphicsmm-reltransform-5-transform-to-output.png "graphicsmm_reltransform_5_transform_to_output")  
   

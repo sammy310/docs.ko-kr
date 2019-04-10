@@ -2,12 +2,12 @@
 title: KnownAssemblyAttribute
 ms.date: 03/30/2017
 ms.assetid: b3bc7f31-95ff-46e1-8308-d206ec426f6e
-ms.openlocfilehash: 7b5484ee7b8d98ce3ac449fb9d23029f27c8932a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: d6ed22790f5abc01b44accc05e09e75d105df429
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59196868"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59325776"
 ---
 # <a name="knownassemblyattribute"></a>KnownAssemblyAttribute
 이 샘플에서는 <xref:System.Runtime.Serialization.DataContractResolver> 클래스를 사용하여 serialization 및 deserialization 프로세스를 사용자 지정하는 방법을 보여 줍니다. 또한 serialization 및 deserialization 동안 알려진 형식을 동적으로 추가하는 방법을 보여 줍니다.  
@@ -346,21 +346,21 @@ Lists combined:
   
 #### <a name="to-set-up-run-and-build-the-sample"></a>샘플을 설치, 실행 및 빌드하려면  
   
-1.  솔루션을 마우스 오른쪽 단추로 클릭 **KnownAssemblyAttribute** 선택한 **속성**합니다.  
+1. 솔루션을 마우스 오른쪽 단추로 클릭 **KnownAssemblyAttribute** 선택한 **속성**합니다.  
   
-2.  **공용 속성**를 선택 **시작 프로젝트**를 클릭 하 고 **여러 개의 시작 프로젝트**합니다.  
+2. **공용 속성**를 선택 **시작 프로젝트**를 클릭 하 고 **여러 개의 시작 프로젝트**합니다.  
   
-3.  추가 된 **시작** 작업을 합니다 **서비스** 및 **클라이언트** 프로젝트.  
+3. 추가 된 **시작** 작업을 합니다 **서비스** 및 **클라이언트** 프로젝트.  
   
-4.  클릭 **확인**, 누릅니다 **F5** 샘플을 실행 하려면.  
+4. 클릭 **확인**, 누릅니다 **F5** 샘플을 실행 하려면.  
   
-5.  응용 프로그램이 제대로 실행되지 않으면 다음 단계를 따라 사용 환경이 올바르게 설정되었는지 확인하세요.  
+5. 응용 프로그램이 제대로 실행되지 않으면 다음 단계를 따라 사용 환경이 올바르게 설정되었는지 확인하세요.  
   
-6.  수행 했는지 확인 합니다 [일회 설치 절차는 Windows Communication Foundation 샘플](https://go.microsoft.com/fwlink/?LinkId=150774)합니다.  
+6. 수행 했는지 확인 합니다 [일회 설치 절차는 Windows Communication Foundation 샘플](https://go.microsoft.com/fwlink/?LinkId=150774)합니다.  
   
-7.  지침에 따라 솔루션을 빌드하려면 [Windows Communication Foundation 샘플 빌드](https://go.microsoft.com/fwlink/?LinkId=150775)합니다.  
+7. 지침에 따라 솔루션을 빌드하려면 [Windows Communication Foundation 샘플 빌드](https://go.microsoft.com/fwlink/?LinkId=150775)합니다.  
   
-8.  단일 또는 다중 컴퓨터 구성에서 샘플을 실행 하려면의 지침을 따릅니다 [Windows Communication Foundation 샘플 실행](https://go.microsoft.com/fwlink/?LinkId=150776)합니다.  
+8. 단일 또는 다중 컴퓨터 구성에서 샘플을 실행 하려면의 지침을 따릅니다 [Windows Communication Foundation 샘플 실행](https://go.microsoft.com/fwlink/?LinkId=150776)합니다.  
   
 > [!IMPORTANT]
 >  컴퓨터에 이 샘플이 이미 설치되어 있을 수도 있습니다. 계속하기 전에 다음(기본) 디렉터리를 확인하세요.  

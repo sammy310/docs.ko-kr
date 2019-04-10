@@ -8,26 +8,26 @@ helpviewer_keywords:
 - text [Windows Forms], aligning
 - Windows Forms, aligning drawn text
 ms.assetid: 83c10a81-1a90-4b5c-98aa-2c6c4b280079
-ms.openlocfilehash: 5214ef2c69349514f05ba68cc023a7622e119e3a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 0e77e4d8eeb9d7a07115b89525ac80074afeb6e8
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59210453"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59323271"
 ---
 # <a name="how-to-align-drawn-text"></a>방법: 그린 텍스트 맞추기
 사용자 지정 그리기를 수행 하면 폼 이나 컨트롤에서 그린된 텍스트를 가운데 하려는 경우가 많습니다. 사용 하 여 그린 텍스트를 쉽게 맞출 수 있습니다 합니다 <xref:System.Drawing.Graphics.DrawString%2A> 또는 <xref:System.Windows.Forms.TextRenderer.DrawText%2A> 올바른 서식 지정 개체를 만들고 적절 한 형식 플래그를 설정 하 여 메서드.  
   
 ### <a name="to-draw-centered-text-with-gdi-drawstring"></a>그릴 GDI + (DrawString)를 사용 하 여 텍스트를 가운데  
   
-1.  사용 된 <xref:System.Drawing.StringFormat> 적절 한 <xref:System.Drawing.Graphics.DrawString%2A> 가운데 맞춤 된 텍스트를 지정 하는 방법입니다.  
+1. 사용 된 <xref:System.Drawing.StringFormat> 적절 한 <xref:System.Drawing.Graphics.DrawString%2A> 가운데 맞춤 된 텍스트를 지정 하는 방법입니다.  
   
      [!code-csharp[System.Drawing.AlignDrawnText#10](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.AlignDrawnText/CS/Form1.cs#10)]
      [!code-vb[System.Drawing.AlignDrawnText#10](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.AlignDrawnText/VB/Form1.vb#10)]  
   
 ### <a name="to-draw-centered-text-with-gdi-drawtext"></a>그릴 GDI (DrawText)를 사용 하 여 텍스트를 가운데  
   
-1.  사용 된 <xref:System.Windows.Forms.TextFormatFlags> 래핑 수 있을 뿐만 아니라 적절 한 텍스트를 가로 및 세로로 가운데 맞춤에 대 한 열거형 <xref:System.Windows.Forms.TextRenderer.DrawText%2A> 메서드.  
+1. 사용 된 <xref:System.Windows.Forms.TextFormatFlags> 래핑 수 있을 뿐만 아니라 적절 한 텍스트를 가로 및 세로로 가운데 맞춤에 대 한 열거형 <xref:System.Windows.Forms.TextRenderer.DrawText%2A> 메서드.  
   
      [!code-csharp[System.Drawing.AlignDrawnText#20](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.AlignDrawnText/CS/Form1.cs#20)]
      [!code-vb[System.Drawing.AlignDrawnText#20](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.AlignDrawnText/VB/Form1.vb#20)]  

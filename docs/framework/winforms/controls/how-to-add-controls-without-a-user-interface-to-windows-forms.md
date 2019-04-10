@@ -14,12 +14,12 @@ helpviewer_keywords:
 - Windows Forms controls, nonvisual
 - nonvisual controls [Windows Forms]
 ms.assetid: 52134d9c-cff6-4eed-8e2b-3d5eb3bd494e
-ms.openlocfilehash: 90166821181e6562d0bef3ff85f7e7a95c479be0
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 0768f811653543b3370310ccc0b59890273baf52
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59223695"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59330105"
 ---
 # <a name="how-to-add-controls-without-a-user-interface-to-windows-forms"></a>방법: Windows Forms에 사용자 인터페이스가 없는 컨트롤 추가
 보이지 않는 컨트롤 (또는 구성 요소)에 응용 프로그램 기능을 제공합니다. 다른 컨트롤과 달리 구성 요소 사용자에 게 사용자 인터페이스를 제공 하지 않으며 따라서 Windows Forms 디자이너 화면에 표시 될 필요가 없습니다. 구성 요소를 폼에 추가 되 면 Windows Forms 디자이너 구성 요소를 모두 표시 되는 폼의 맨 아래에 크기를 조정할 수 있는 트레이 표시 합니다. 컨트롤에 구성 요소 트레이에 추가 되 면 구성 요소를 선택 하 고 폼에서 다른 컨트롤과 마찬가지로 해당 속성을 설정할 수 있습니다.  
@@ -29,9 +29,9 @@ ms.locfileid: "59223695"
   
 ### <a name="to-add-a-component-to-a-windows-form"></a>Windows 폼에는 구성 요소를 추가 하려면  
   
-1.  폼을 엽니다. 자세한 내용은 [방법: Windows Forms 디자이너에서 표시할](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/w5yd62ts(v=vs.100))합니다.  
+1. 폼을 엽니다. 자세한 내용은 [방법: Windows Forms 디자이너에서 표시할](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/w5yd62ts(v=vs.100))합니다.  
   
-2.  에 **도구 상자**, 구성 요소를 클릭 하 고 폼으로 끕니다.  
+2. 에 **도구 상자**, 구성 요소를 클릭 하 고 폼으로 끕니다.  
   
      구성 요소가 구성 요소 트레이에 나타납니다.  
   
@@ -42,11 +42,11 @@ ms.locfileid: "59223695"
   
 #### <a name="to-add-a-component-to-a-windows-form-programmatically"></a>Windows 폼에 프로그래밍 방식으로 구성 요소를 추가 하려면  
   
-1.  인스턴스를 만듭니다는 <xref:System.Windows.Forms.Timer> 코드에서 클래스입니다.  
+1. 인스턴스를 만듭니다는 <xref:System.Windows.Forms.Timer> 코드에서 클래스입니다.  
   
-2.  설정 된 `Interval` 타이머의 틱 사이의 시간을 결정 하는 속성입니다.  
+2. 설정 된 `Interval` 타이머의 틱 사이의 시간을 결정 하는 속성입니다.  
   
-3.  구성 요소에 대 한 필요한 기타 속성을 구성 합니다.  
+3. 구성 요소에 대 한 필요한 기타 속성을 구성 합니다.  
   
      다음 코드를 만드는 방법을 보여 줍니다.는 <xref:System.Windows.Forms.Timer> 사용 하 여 해당 `Interval` 속성 집합입니다.  
   

@@ -11,21 +11,21 @@ helpviewer_keywords:
 - text [WPF], performance
 - glyphs [WPF]
 ms.assetid: 66b1b9a7-8618-48db-b616-c57ea4327b98
-ms.openlocfilehash: e5dfa170d2744e634ed456de491d61c0e442eb45
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 0cc1ac9adf40948a5109b37336d45a2be833e54f
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59225965"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59317209"
 ---
 # <a name="optimizing-performance-text"></a>성능 최적화: 텍스트
 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 텍스트 콘텐츠를 사용 하 여 풍부한 기능의 프레젠테이션 지원 [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] 컨트롤입니다. 일반적으로 세 가지 계층으로 텍스트 렌더링을 나눌 수 있습니다.  
   
-1.  사용 하 여 <xref:System.Windows.Documents.Glyphs> 및 <xref:System.Windows.Media.GlyphRun> 개체를 직접.  
+1. 사용 하 여 <xref:System.Windows.Documents.Glyphs> 및 <xref:System.Windows.Media.GlyphRun> 개체를 직접.  
   
-2.  사용 하 여 <xref:System.Windows.Media.FormattedText> 개체입니다.  
+2. 사용 하 여 <xref:System.Windows.Media.FormattedText> 개체입니다.  
   
-3.  와 같은 고급 컨트롤을 사용 하 여 <xref:System.Windows.Controls.TextBlock> 및 <xref:System.Windows.Documents.FlowDocument> 개체입니다.  
+3. 와 같은 고급 컨트롤을 사용 하 여 <xref:System.Windows.Controls.TextBlock> 및 <xref:System.Windows.Documents.FlowDocument> 개체입니다.  
   
  이 항목에서는 텍스트 렌더링 성능 권장 사항을 제공합니다.  
 

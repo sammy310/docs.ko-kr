@@ -14,12 +14,12 @@ helpviewer_keywords:
 - classes [WPF], mapping namespaces to
 - namespaces [WPF]
 ms.assetid: 5c0854e3-7470-435d-9fe2-93eec9d3634e
-ms.openlocfilehash: cf09415e9203c82d26bccf4e84db5607047b6f35
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: c238bd3c014c07c541bed0c8f7bc12fc5a910f1b
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59176919"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59301037"
 ---
 # <a name="xaml-namespaces-and-namespace-mapping-for-wpf-xaml"></a>WPF XAML을 위한 XAML 네임스페이스 및 네임스페이스 매핑
 이 항목에서는 WPF XAML 파일의 루트 태그에서 주로 찾을 수 있는 두 XAML 네임스페이스 매핑과 그 용도에 대해 자세하게 설명합니다. 또한 고유한 코드나 별도의 어셈블리에 정의된 요소에 사용할 수 있도록 유사한 매핑을 생성하는 방법에 대해서도 설명합니다.  
@@ -119,15 +119,15 @@ End Namespace
 ## <a name="wpf-and-assembly-loading"></a>WPF 및 어셈블리 로딩  
  WPF의 XAML 스키마 컨텍스트를 CLR 정의 개념을 사용 하는 WPF 응용 프로그램 모델을 사용 하 여 통합 <xref:System.AppDomain>합니다. 다음 순서 대로 XAML 스키마 컨텍스트 어셈블리를 로드 하거나 요소의 WPF 사용법에 따라 런타임 또는 디자인 타임에 형식을 찾을 방법을 해석 하는 방법에 대해 설명 합니다. <xref:System.AppDomain> 및 기타 요인입니다.  
   
-1.  반복 된 <xref:System.AppDomain>이름의 모든 요소와 일치 하는 이미 로드 된 어셈블리를 찾고, 로드 된 어셈블리에서 가장 최근에 시작 합니다.  
+1. 반복 된 <xref:System.AppDomain>이름의 모든 요소와 일치 하는 이미 로드 된 어셈블리를 찾고, 로드 된 어셈블리에서 가장 최근에 시작 합니다.  
   
-2.  이름이 정규화 된 경우 호출 <xref:System.Reflection.Assembly.Load%28System.String%29?displayProperty=nameWithType> 정규화 된 이름에 있습니다.  
+2. 이름이 정규화 된 경우 호출 <xref:System.Reflection.Assembly.Load%28System.String%29?displayProperty=nameWithType> 정규화 된 이름에 있습니다.  
   
-3.  약식 이름 + 정규화된 이름의 공개 키 토큰이 로드한 태그의 소스 어셈블리와 일치하는 경우 이 어셈블리를 반환합니다.  
+3. 약식 이름 + 정규화된 이름의 공개 키 토큰이 로드한 태그의 소스 어셈블리와 일치하는 경우 이 어셈블리를 반환합니다.  
   
-4.  약식 이름 + 공개 키 토큰을 사용 하 여 호출 <xref:System.Reflection.Assembly.Load%28System.String%29?displayProperty=nameWithType>합니다.  
+4. 약식 이름 + 공개 키 토큰을 사용 하 여 호출 <xref:System.Reflection.Assembly.Load%28System.String%29?displayProperty=nameWithType>합니다.  
   
-5.  이름 정규화 되지 않은, 경우 호출 <xref:System.Reflection.Assembly.LoadWithPartialName%2A?displayProperty=nameWithType>합니다.  
+5. 이름 정규화 되지 않은, 경우 호출 <xref:System.Reflection.Assembly.LoadWithPartialName%2A?displayProperty=nameWithType>합니다.  
   
  느슨한 XAML에서는 로드할 소스 어셈블리가 없으므로 3단계가 사용되지 않습니다.  
   

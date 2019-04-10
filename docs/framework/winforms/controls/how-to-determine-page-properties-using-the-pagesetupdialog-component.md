@@ -10,12 +10,12 @@ helpviewer_keywords:
 - page setup
 - PageSetupDialog component
 ms.assetid: 6dae05bc-c0fd-4357-bb93-841a1631d98f
-ms.openlocfilehash: 6eefe7dd69d02712b650d95ddf14394c10792807
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 7c65eb54bb95b9a20cd1e43f0d491af47985f2e0
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59213705"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59329208"
 ---
 # <a name="how-to-determine-page-properties-using-the-pagesetupdialog-component"></a>방법: PageSetupDialog 구성 요소를 사용하여 페이지 속성 설정
 [PageSetupDialog](pagesetupdialog-component-windows-forms.md) 구성 요소는 문서의 사용자에게 레이아웃, 용지 크기 및 기타 페이지 레이아웃 옵션을 표시합니다.  
@@ -26,7 +26,7 @@ ms.locfileid: "59213705"
   
 ### <a name="to-set-page-properties-using-the-pagesetupdialog-component"></a>PageSetupDialog 구성 요소를 사용하여 페이지 속성을 설정하려면  
   
-1.  <xref:System.Windows.Forms.CommonDialog.ShowDialog%2A> 메서드를 사용하여 대화 상자를 표시하고, 사용할 <xref:System.Drawing.Printing.PrintDocument> 를 지정합니다.  
+1. <xref:System.Windows.Forms.CommonDialog.ShowDialog%2A> 메서드를 사용하여 대화 상자를 표시하고, 사용할 <xref:System.Drawing.Printing.PrintDocument> 를 지정합니다.  
   
      다음 예제에는 <xref:System.Windows.Forms.Button> 컨트롤의 <xref:System.Windows.Forms.Control.Click> 이벤트 처리기가 <xref:System.Windows.Forms.PageSetupDialog> 구성 요소의 인스턴스를 엽니다. <xref:System.Windows.Forms.PageSetupDialog.Document%2A> 속성에서 기존 문서가 지정되고, 해당 <xref:System.Drawing.Printing.PageSettings.Color%2A?displayProperty=nameWithType> 속성은 `false`로 설정됩니다.  
   

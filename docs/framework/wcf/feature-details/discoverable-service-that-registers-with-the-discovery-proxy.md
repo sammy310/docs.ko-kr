@@ -2,36 +2,36 @@
 title: '방법: 검색 프록시에 등록할 검색 가능한 서비스 구현'
 ms.date: 03/30/2017
 ms.assetid: eb275bc1-535b-44c8-b9f3-0b75e9aa473b
-ms.openlocfilehash: 6cfafbc06fc4a7c37805fa1d158a41625390174a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 31c89aeed2577c5dd11ae59ee4a4d692210e5f37
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59177829"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59302195"
 ---
 # <a name="how-to-implement-a-discoverable-service-that-registers-with-the-discovery-proxy"></a>방법: 검색 프록시에 등록할 검색 가능한 서비스 구현
 이 항목은 검색 프록시를 구현하는 방법에 대해 설명하는 네 항목 중 두 번째 항목입니다. 이전 항목인 [방법: 검색 프록시 구현](../../../../docs/framework/wcf/feature-details/how-to-implement-a-discovery-proxy.md), 검색 프록시를 구현 합니다. 이 항목에서는 알림 메시지를 전송 하는 WCF 서비스를 만들 (`Hello` 고 `Bye`) 검색 프록시에 등록 및 검색 프록시를 사용 하 여 자체 등록을 취소 하도록 유발 합니다.
 
 ### <a name="to-define-the-service-contract"></a>서비스 계약을 정의하려면
 
-1.  `DiscoveryProxyExample` 솔루션에 `Service`라는 새 콘솔 응용 프로그램 프로젝트를 추가합니다.
+1. `DiscoveryProxyExample` 솔루션에 `Service`라는 새 콘솔 응용 프로그램 프로젝트를 추가합니다.
 
-2.  다음 어셈블리에 대한 참조를 추가합니다.
+2. 다음 어셈블리에 대한 참조를 추가합니다.
 
     1.  System.ServiceModel
 
     2.  System.ServiceModel.Discovery
 
-3.  `CalculatorService`라는 프로젝트에 새 클래스를 추가합니다.
+3. `CalculatorService`라는 프로젝트에 새 클래스를 추가합니다.
 
-4.  다음 using 문을 추가합니다.
+4. 다음 using 문을 추가합니다.
 
     ```csharp
     using System;
     using System.ServiceModel;
     ```
 
-5.  CalculatorService.cs 내에서 서비스 계약을 정의합니다.
+5. CalculatorService.cs 내에서 서비스 계약을 정의합니다.
 
     ```csharp
     // Define a service contract.
@@ -49,7 +49,7 @@ ms.locfileid: "59177829"
     }
     ```
 
-6.  CalculatorService.cs 내에서 서비스 계약을 구현합니다.
+6. CalculatorService.cs 내에서 서비스 계약을 구현합니다.
 
     ```csharp
     // Service class which implements the service contract.
@@ -91,9 +91,9 @@ ms.locfileid: "59177829"
 
 ### <a name="to-host-the-service"></a>서비스를 호스트하려면
 
-1.  프로젝트를 만들 때 생성된 Program.cs 파일을 엽니다.
+1. 프로젝트를 만들 때 생성된 Program.cs 파일을 엽니다.
 
-2.  다음 using 문을 추가합니다.
+2. 다음 using 문을 추가합니다.
 
     ```csharp
     using System;
@@ -102,7 +102,7 @@ ms.locfileid: "59177829"
     using System.ServiceModel.Discovery;
     ```
 
-3.  `Main()` 메서드 안에서 다음 코드를 추가합니다.
+3. `Main()` 메서드 안에서 다음 코드를 추가합니다.
 
     ```csharp
     // Define the base address of the service

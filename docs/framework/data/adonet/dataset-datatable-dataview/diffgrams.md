@@ -2,12 +2,12 @@
 title: DiffGram
 ms.date: 03/30/2017
 ms.assetid: 037f3991-7bbc-424b-b52e-8b03585d3e34
-ms.openlocfilehash: 1324e6536390b598ca9ef1f0cd3102f8ec49d45a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 048c5331028bbe2bb232302637dbb12bcdd2adc3
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59197999"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59313517"
 ---
 # <a name="diffgrams"></a>DiffGram
 DiffGram은 현재 및 원래의 데이터 요소 버전을 식별하는 XML 형식입니다. <xref:System.Data.DataSet>은 DiffGram 형식을 사용하여 자신의 내용을 로드하고 유지시키며 네트워크 연결을 통한 전송을 위해 이 내용을 serialize합니다. 경우는 <xref:System.Data.DataSet> 채웁니다를 정확 하 게 다시 콘텐츠를 하지만 스키마를 통하지의 필요한 모든 정보를 사용 하 여 DiffGram을 diffgram으로 기록 됩니다는 <xref:System.Data.DataSet>, 둘 다에서 열 값을 포함 하는 **원래** 하 고 **현재** 행 버전, 행 오류 정보 및 행 순서입니다.  
@@ -20,26 +20,26 @@ DiffGram은 현재 및 원래의 데이터 요소 버전을 식별하는 XML 형
   
 ### <a name="to-generate-a-diffgram"></a>Diffgram을 생성하려면  
   
-1.  Root 테이블(부모가 없는 테이블) 목록을 생성합니다.  
+1. Root 테이블(부모가 없는 테이블) 목록을 생성합니다.  
   
-2.  목록의 각 테이블 및 해당 하위 항목에 대해 첫 번째 Diffgram 섹션에 모든 행의 현재 버전을 기록합니다.  
+2. 목록의 각 테이블 및 해당 하위 항목에 대해 첫 번째 Diffgram 섹션에 모든 행의 현재 버전을 기록합니다.  
   
-3.  각 테이블에는 <xref:System.Data.DataSet>, 있으면 모든 행의 원래 버전을 작성는  **\<하기 전에 >** Diffgram의 섹션.  
+3. 각 테이블에는 <xref:System.Data.DataSet>, 있으면 모든 행의 원래 버전을 작성는  **\<하기 전에 >** Diffgram의 섹션.  
   
-4.  오류가 있는 행에 오류 내용을 기록 합니다  **\<오류 >** Diffgram의 섹션입니다.  
+4. 오류가 있는 행에 오류 내용을 기록 합니다  **\<오류 >** Diffgram의 섹션입니다.  
   
  Diffgram은 XML 파일의 시작부터 끝의 순서로 처리됩니다.  
   
 ### <a name="to-process-a-diffgram"></a>Diffgram을 처리하려면  
   
-1.  행의 현재 버전이 포함된 Diffgram의 첫 번째 섹션을 처리합니다.  
+1. 행의 현재 버전이 포함된 Diffgram의 첫 번째 섹션을 처리합니다.  
   
-2.  두 번째 프로세스 또는  **\<하기 전에 >** 의 원래 행 버전이 포함 된 섹션 수정 및 삭제 된 행입니다.  
+2. 두 번째 프로세스 또는  **\<하기 전에 >** 의 원래 행 버전이 포함 된 섹션 수정 및 삭제 된 행입니다.  
   
     > [!NOTE]
     >  행이 삭제된 것으로 표시된 경우 현재 `Cascade`의 <xref:System.Data.DataSet> 속성에 따라 삭제 작업에서 행의 하위 항목도 삭제할 수 있습니다.  
   
-3.  프로세스를  **\<오류 >** 섹션입니다. 이 섹션에서 각 항목에 대한 지정된 행과 열의 오류 정보를 설정합니다.  
+3. 프로세스를  **\<오류 >** 섹션입니다. 이 섹션에서 각 항목에 대한 지정된 행과 열의 오류 정보를 설정합니다.  
   
 > [!NOTE]
 >  <xref:System.Data.XmlWriteMode>를 Diffgram로 설정하면 대상 <xref:System.Data.DataSet>과 원래 <xref:System.Data.DataSet>의 내용이 다를 수 있습니다.  

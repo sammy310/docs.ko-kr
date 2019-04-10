@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - WPF application [WPF], building
 ms.assetid: a58696fd-bdad-4b55-9759-136dfdf8b91c
-ms.openlocfilehash: 706999cb403ecf32f5dfe8443e00dd84efdebd23
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: d1aa402ec28fc22654d8f1513366c091215fa4d4
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59184485"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59300959"
 ---
 # <a name="building-a-wpf-application-wpf"></a>WPF 애플리케이션 빌드(WPF)
 Windows Presentation Foundation (WPF) 응용 프로그램으로 빌드할 수 있습니다 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 실행 파일 (.exe), 라이브러리 (.dll) 또는 두 어셈블리 형식의 조합입니다. 이 항목에서는 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 애플리케이션을 빌드하는 방법과 빌드 프로세스의 주요 단계에 대해 설명합니다.  
@@ -57,11 +57,11 @@ Windows Presentation Foundation (WPF) 응용 프로그램으로 빌드할 수 �
   
  이 단계에서 다음 작업은 `Page` 빌드 항목인 모든 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 파일에 대해 수행됩니다.  
   
-1.  [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 파일은 태그 컴파일러에 의해 구문 분석됩니다.  
+1. [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 파일은 태그 컴파일러에 의해 구문 분석됩니다.  
   
-2.  컴파일된 표현은 해당 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]에 대해 만들어져서 obj\Release 폴더에 복사됩니다.  
+2. 컴파일된 표현은 해당 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]에 대해 만들어져서 obj\Release 폴더에 복사됩니다.  
   
-3.  새 partial 클래스의 CodeDOM 표현이 만들어져서 obj\Release 폴더에 복사됩니다.  
+3. 새 partial 클래스의 CodeDOM 표현이 만들어져서 obj\Release 폴더에 복사됩니다.  
   
  또한 모든 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 파일에 대해 언어별 코드 파일이 생성됩니다. 예를 들어, Visual Basic 프로젝트의 Page1.xaml 페이지에 대 한는 Page1.g.vb 생성 됩니다. C# 프로젝트에서의 Page1.xaml 페이지에 대해서는 Page1.g.cs 생성 됩니다. 파일 이름에 ".g"가 있으면 파일이 태그 파일(예: `Page` 또는 `Window`)의 최상위 수준 요소에 대한 partial 클래스 선언을 포함하여 생성된 코드라는 의미입니다. 사용 하는 클래스를 선언 합니다 `partial` C# 한정자 (`Extends` Visual Basic의) 클래스를 다른 위치에 대 한 다른 선언이 나타내기 위해 일반적으로 코드 숨김 파일 Page1.xaml.cs 합니다.  
   

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - application settings [Windows Forms], Windows Forms
 - application settings [Windows Forms], validating
 ms.assetid: 9f145ada-4267-436a-aa4c-c4dcffd0afb7
-ms.openlocfilehash: 2fef6c924498003bc9ea393ba2117a1cb5f2afab
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: b7aba4935756fc218a1fadaa1dd9f20a5bc3034f
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59212091"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59317892"
 ---
 # <a name="how-to-validate-application-settings"></a>방법: 애플리케이션 설정 업데이트
 이 항목에서는 애플리케이션 설정이 유지되기 전에 유효성을 검사하는 방법을 설명합니다.  
@@ -78,7 +78,7 @@ ms.locfileid: "59212091"
   
 ### <a name="to-validate-application-settings-when-a-setting-is-changing"></a>설정이 변경될 때 애플리케이션 설정 유효성을 검사하려면  
   
-1.  경우는 C# 양식이 나 컨트롤의 개발자 `Load` 이벤트에 대 한 이벤트 처리기를 추가 합니다 <xref:System.Configuration.ApplicationSettingsBase.SettingChanging> 이벤트입니다.  
+1. 경우는 C# 양식이 나 컨트롤의 개발자 `Load` 이벤트에 대 한 이벤트 처리기를 추가 합니다 <xref:System.Configuration.ApplicationSettingsBase.SettingChanging> 이벤트입니다.  
   
      -또는-  
   
@@ -97,7 +97,7 @@ ms.locfileid: "59212091"
     End Sub   
     ```  
   
-2.  이벤트 처리기를 정의하고 내부에 코드를 작성하여 생년월일에 대한 범위 검사를 수행합니다.  
+2. 이벤트 처리기를 정의하고 내부에 코드를 작성하여 생년월일에 대한 범위 검사를 수행합니다.  
   
     ```csharp  
     private void MyCustomSettings_SettingChanging(Object sender, SettingChangingEventArgs e)  
@@ -126,7 +126,7 @@ ms.locfileid: "59212091"
   
 ### <a name="to-validate-application-settings-when-a-save-occurs"></a>저장이 발생할 때 애플리케이션 설정의 유효성을 검사하려면  
   
-1.  양식이 나 컨트롤의 `Load` 이벤트에 대 한 이벤트 처리기를 추가 합니다 <xref:System.Configuration.ApplicationSettingsBase.SettingsSaving> 이벤트입니다.  
+1. 양식이 나 컨트롤의 `Load` 이벤트에 대 한 이벤트 처리기를 추가 합니다 <xref:System.Configuration.ApplicationSettingsBase.SettingsSaving> 이벤트입니다.  
   
     ```csharp  
     public void Form1_Load(Object sender, EventArgs e)   
@@ -141,7 +141,7 @@ ms.locfileid: "59212091"
     End Sub  
     ```  
   
-2.  이벤트 처리기를 정의하고 내부에 코드를 작성하여 생년월일에 대한 범위 검사를 수행합니다.  
+2. 이벤트 처리기를 정의하고 내부에 코드를 작성하여 생년월일에 대한 범위 검사를 수행합니다.  
   
     ```csharp  
     private void MyCustomSettings_SettingsSaving(Object sender, SettingsSavingEventArgs e)  

@@ -2,12 +2,12 @@
 title: MSMQ 활성화
 ms.date: 03/30/2017
 ms.assetid: e3834149-7b8c-4a54-806b-b4296720f31d
-ms.openlocfilehash: 80ce76d5cee8bb55bebdaeaea065aa41a0264bac
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: d83759f321abe7fa7e39202daadd4ceda82d8f23
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59162830"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59295681"
 ---
 # <a name="msmq-activation"></a>MSMQ 활성화
 이 샘플에서는 메시지 큐에서 읽은 WAS(Windows Process Activation Service)에서 응용 프로그램을 호스트하는 방법을 보여 줍니다. 이 샘플에서는 합니다 `netMsmqBinding` 기반으로 합니다 [양방향 통신](../../../../docs/framework/wcf/samples/two-way-communication.md) 샘플입니다. 이 경우 서비스는 웹 호스팅 응용 프로그램이고 클라이언트는 자체 호스트되며 전송된 구매 주문의 상태를 확인하기 위해 콘솔에 출력됩니다.  
@@ -215,9 +215,9 @@ Status of order 70cf9d63-3dfa-4e69-81c2-23aa4478ebed :Pending
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>샘플을 설치, 빌드 및 실행하려면  
   
-1.  WAS 활성화에 필요한 [!INCLUDE[iisver](../../../../includes/iisver-md.md)]이 설치되어 있는지 확인합니다.  
+1. WAS 활성화에 필요한 [!INCLUDE[iisver](../../../../includes/iisver-md.md)]이 설치되어 있는지 확인합니다.  
   
-2.  수행 했는지 확인 합니다 [Windows Communication Foundation 샘플에 대 한 일회성 설치 절차](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)합니다. 또한 WCF NON-HTTP activation 구성 요소를 설치 해야 합니다.  
+2. 수행 했는지 확인 합니다 [Windows Communication Foundation 샘플에 대 한 일회성 설치 절차](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)합니다. 또한 WCF NON-HTTP activation 구성 요소를 설치 해야 합니다.  
   
     1.  **시작** 메뉴에서 **제어판**을 선택합니다.  
   
@@ -229,11 +229,11 @@ Status of order 70cf9d63-3dfa-4e69-81c2-23aa4478ebed :Pending
   
     5.  확장을 **Microsoft.NET Framework 3.0** 노드와 확인 합니다 **Windows Communication Foundation 비 HTTP 활성화** 기능입니다.  
   
-3.  C# 또는 Visual Basic .NET 버전의 솔루션을 빌드하려면 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)의 지침을 따릅니다.  
+3. C# 또는 Visual Basic .NET 버전의 솔루션을 빌드하려면 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)의 지침을 따릅니다.  
   
-4.  명령 창에서 client.exe를 실행하여 클라이언트를 실행합니다. 이렇게 하면 큐가 만들어지고 메시지가 큐에 전송됩니다. 메시지를 읽는 서비스의 결과를 확인하기 위해 클라이언트를 실행된 상태로 둡니다.  
+4. 명령 창에서 client.exe를 실행하여 클라이언트를 실행합니다. 이렇게 하면 큐가 만들어지고 메시지가 큐에 전송됩니다. 메시지를 읽는 서비스의 결과를 확인하기 위해 클라이언트를 실행된 상태로 둡니다.  
   
-5.  MSMQ 활성화 서비스는 기본적으로 네트워크 서비스로 실행됩니다. 따라서 응용 프로그램을 활성화하는 데 사용되는 큐는 네트워크 서비스에 대한 수신 및 피킹 권한이 있어야 합니다. 다음과 같이 메시지 큐 MMC를 사용하여 이러한 권한을 추가할 수 있습니다.  
+5. MSMQ 활성화 서비스는 기본적으로 네트워크 서비스로 실행됩니다. 따라서 응용 프로그램을 활성화하는 데 사용되는 큐는 네트워크 서비스에 대한 수신 및 피킹 권한이 있어야 합니다. 다음과 같이 메시지 큐 MMC를 사용하여 이러한 권한을 추가할 수 있습니다.  
   
     1.  **시작** 메뉴에서 클릭 **실행**를 입력 한 다음 `Compmgmt.msc` ENTER 키를 누릅니다.  
   
@@ -245,7 +245,7 @@ Status of order 70cf9d63-3dfa-4e69-81c2-23aa4478ebed :Pending
   
     5.  에 **보안** 탭을 클릭 **추가** 미리 보기를 제공 하 고 권한을 네트워크 서비스에 수신 합니다.  
   
-6.  MSMQ 활성화를 지원하도록 WAS(Windows Process Activation Service)를 구성합니다.  
+6. MSMQ 활성화를 지원하도록 WAS(Windows Process Activation Service)를 구성합니다.  
   
      편의를 위해 다음 단계는 샘플 디렉터리에 있는 AddMsmqSiteBinding.cmd라는 배치 파일에서 구현됩니다.  
   
@@ -272,9 +272,9 @@ Status of order 70cf9d63-3dfa-4e69-81c2-23aa4478ebed :Pending
   
          이 명령을 사용 하 여 /servicemodelsamples 응용 프로그램에 사용 하 여 액세스할 수 `http://localhost/servicemodelsamples` 고 `net.msmq://localhost/servicemodelsamples`입니다.
   
-7.  아직 설정하지 않은 경우 MSMQ 활성화 서비스를 사용하도록 설정합니다. **시작** 메뉴에서 클릭 **실행**에서 형식과 `Services.msc`. 에 대 한 서비스 목록을 검색 합니다 **Net.Msmq Listener Adapter**합니다. 마우스 오른쪽 단추로 클릭 **속성**합니다. 설정 합니다 **시작 유형** 를 **자동**, 클릭 **적용** 클릭 합니다 **시작** 단추. 이 단계는 Net.Msmq Listener Adapter 서비스를 처음 사용하기 전에 한 번만 수행해야 합니다.  
+7. 아직 설정하지 않은 경우 MSMQ 활성화 서비스를 사용하도록 설정합니다. **시작** 메뉴에서 클릭 **실행**에서 형식과 `Services.msc`. 에 대 한 서비스 목록을 검색 합니다 **Net.Msmq Listener Adapter**합니다. 마우스 오른쪽 단추로 클릭 **속성**합니다. 설정 합니다 **시작 유형** 를 **자동**, 클릭 **적용** 클릭 합니다 **시작** 단추. 이 단계는 Net.Msmq Listener Adapter 서비스를 처음 사용하기 전에 한 번만 수행해야 합니다.  
   
-8.  단일 컴퓨터 또는 다중 컴퓨터 구성에서 샘플을 실행 하려면의 지침을 따릅니다 [Windows Communication Foundation 샘플 실행](../../../../docs/framework/wcf/samples/running-the-samples.md)합니다. 또한 구매 주문 전송 시에 큐의 URI에서 컴퓨터 이름이 반영되도록 구매 주문을 전송하는 클라이언트에서 코드를 변경합니다. 다음 코드를 사용합니다.  
+8. 단일 컴퓨터 또는 다중 컴퓨터 구성에서 샘플을 실행 하려면의 지침을 따릅니다 [Windows Communication Foundation 샘플 실행](../../../../docs/framework/wcf/samples/running-the-samples.md)합니다. 또한 구매 주문 전송 시에 큐의 URI에서 컴퓨터 이름이 반영되도록 구매 주문을 전송하는 클라이언트에서 코드를 변경합니다. 다음 코드를 사용합니다.  
   
     ```csharp  
     client.SubmitPurchaseOrder(po, "net.msmq://localhost/private/ServiceModelSamples/OrderStatus");  
@@ -309,7 +309,7 @@ Status of order 70cf9d63-3dfa-4e69-81c2-23aa4478ebed :Pending
   
 ### <a name="to-run-the-sample-on-a-computer-joined-to-a-workgroup"></a>작업 그룹에 가입된 컴퓨터에서 샘플을 실행하려면  
   
-1.  컴퓨터가 도메인의 일부가 아닌 경우 다음 샘플 구성과 같이 인증 모드와 보호 수준을 none으로 설정하여 전송 보안을 해제합니다.  
+1. 컴퓨터가 도메인의 일부가 아닌 경우 다음 샘플 구성과 같이 인증 모드와 보호 수준을 none으로 설정하여 전송 보안을 해제합니다.  
   
     ```xml  
     <bindings>  
@@ -321,12 +321,12 @@ Status of order 70cf9d63-3dfa-4e69-81c2-23aa4478ebed :Pending
     </bindings>  
     ```  
   
-2.  샘플을 실행하기 전에 서버와 클라이언트 모두에서 구성을 변경합니다.  
+2. 샘플을 실행하기 전에 서버와 클라이언트 모두에서 구성을 변경합니다.  
   
     > [!NOTE]
     >  `security mode`를 `None`으로 설정하는 것은 `MsmqAuthenticationMode`, `MsmqProtectionLevel` 및 `Message` 보안을 `None`으로 설정하는 것과 같습니다.  
   
-3.  작업 그룹에 가입된 컴퓨터에서 활성화를 사용하려면 활성화 서비스와 작업자 프로세스가 둘 다 특정 사용자 계정(두 경우에 동일해야 함)으로 실행되어야 하고 큐에는 해당 사용자 계정에 대한 ACL이 있어야 합니다.  
+3. 작업 그룹에 가입된 컴퓨터에서 활성화를 사용하려면 활성화 서비스와 작업자 프로세스가 둘 다 특정 사용자 계정(두 경우에 동일해야 함)으로 실행되어야 하고 큐에는 해당 사용자 계정에 대한 ACL이 있어야 합니다.  
   
      작업자 프로세스가 실행될 때 사용되는 ID를 변경하려면  
   
@@ -342,9 +342,9 @@ Status of order 70cf9d63-3dfa-4e69-81c2-23aa4478ebed :Pending
   
     2.  마우스 오른쪽 단추로 클릭 합니다 **Net.MsmqListener Adapter**, 선택한 **속성**합니다.  
   
-4.  계정을 변경 합니다 **로그온** 탭 합니다.  
+4. 계정을 변경 합니다 **로그온** 탭 합니다.  
   
-5.  작업 그룹에서 서비스는 또한 제한되지 않은 토큰을 사용하여 실행되어야 합니다. 이렇게 하려면 명령 창에서 다음을 실행합니다.  
+5. 작업 그룹에서 서비스는 또한 제한되지 않은 토큰을 사용하여 실행되어야 합니다. 이렇게 하려면 명령 창에서 다음을 실행합니다.  
   
     ```console  
     sc sidtype netmsmqactivator unrestricted  

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - DataGrid control [Windows Forms], data binding
 - cells [Windows Forms], changing DataGrid cell values
 ms.assetid: 0c7a6d00-30de-416e-8223-0a81ddb4c1f8
-ms.openlocfilehash: 27608a7fbce5e9aa815b43e1d7202fa11e52ee1c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 60ba1e9304320346d505f3f73e1ba93ff6edab63
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59175606"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59315857"
 ---
 # <a name="how-to-change-displayed-data-at-run-time-in-the-windows-forms-datagrid-control"></a>방법: 런타임에 Windows Forms DataGrid 컨트롤에 표시되는 데이터 변경
 > [!NOTE]
@@ -25,7 +25,7 @@ ms.locfileid: "59175606"
   
 ### <a name="to-change-data-programmatically"></a>프로그래밍 방식으로 데이터를 변경 하려면  
   
-1.  원하는 테이블을 지정 합니다 <xref:System.Data.DataSet> 개체 및 원하는 행 및 테이블에서 필드를 셀 새 값으로 설정 합니다.  
+1. 원하는 테이블을 지정 합니다 <xref:System.Data.DataSet> 개체 및 원하는 행 및 테이블에서 필드를 셀 새 값으로 설정 합니다.  
   
     > [!NOTE]
     >  첫 번째 테이블을 지정 하는 <xref:System.Data.DataSet> 하거나 0을 사용 하 여 테이블의 첫 번째 행.  
@@ -68,7 +68,7 @@ ms.locfileid: "59175606"
   
 ### <a name="to-change-the-datasource-programmatically"></a>데이터 소스를 프로그래밍 방식으로 변경 하려면  
   
-1.  설정 된 <xref:System.Windows.Forms.DataGrid.SetDataBinding%2A> 메서드를 데이터 원본 및 바인딩할 하려는 테이블의 이름입니다.  
+1. 설정 된 <xref:System.Windows.Forms.DataGrid.SetDataBinding%2A> 메서드를 데이터 원본 및 바인딩할 하려는 테이블의 이름입니다.  
   
      다음 예제에서는 사용 하 여 날짜 소스를 변경 하는 방법을 보여 줍니다 합니다 <xref:System.Windows.Forms.DataGrid.SetDataBinding%2A> 메서드는 [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] Pubs 데이터베이스에 있는 Authors 테이블에 연결 된 데이터 컨트롤 (adoPubsAuthors).  
   

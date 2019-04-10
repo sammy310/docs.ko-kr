@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 dev_langs:
 - vb
 ms.assetid: a7da43e3-769f-4e07-bcd6-552b8bde66f4
-ms.openlocfilehash: aa6be50e1cdb00acf79c9f9e2c49050ce7bf3b0d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: abd4941697639ec7bdda545b1ead8d57091e9e7f
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59213352"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59314661"
 ---
 # <a name="walkthrough-querying-across-relationships-visual-basic"></a>연습: 관계 간 쿼리(Visual Basic)
 이 연습에서는 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] *연결* 데이터베이스에서 외래 키 관계를 나타내는입니다.  
@@ -53,15 +53,15 @@ ms.locfileid: "59213352"
   
 #### <a name="to-access-order-objects-by-using-customer-objects"></a>Customer 개체를 사용하여 Order 개체에 액세스하려면  
   
-1.  다음 코드를 `Sub Main` 메서드에 입력하거나 붙여넣어 이 메서드를 수정합니다.  
+1. 다음 코드를 `Sub Main` 메서드에 입력하거나 붙여넣어 이 메서드를 수정합니다.  
   
      [!code-vb[DLinqWalk2VB#3](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqWalk2VB/vb/Module1.vb#3)]  
   
-2.  F5 키를 눌러 응용 프로그램을 디버깅합니다.  
+2. F5 키를 눌러 응용 프로그램을 디버깅합니다.  
   
      두 이름이 메시지 상자에 표시되며 콘솔 창에는 생성된 SQL 코드가 표시됩니다.  
   
-3.  메시지 상자를 닫아 디버깅을 중지합니다.  
+3. 메시지 상자를 닫아 디버깅을 중지합니다.  
   
 ## <a name="creating-a-strongly-typed-view-of-your-database"></a>강력한 형식의 데이터베이스 뷰 만들기  
  강력한 형식의 데이터베이스 뷰로 작업을 시작하는 것이 훨씬 더 쉽습니다. <xref:System.Data.Linq.DataContext> 개체를 강력한 형식으로 설정하면 <xref:System.Data.Linq.DataContext.GetTable%2A> 호출이 필요하지 않습니다. 강력한 형식의 <xref:System.Data.Linq.DataContext> 개체를 사용할 경우 모든 쿼리에서 강력한 형식의 테이블을 사용할 수 있습니다.  
@@ -70,23 +70,23 @@ ms.locfileid: "59213352"
   
 #### <a name="to-strongly-type-the-datacontext-object"></a>DataContext 개체를 강력한 형식으로 설정하려면  
   
-1.  `Customer` 클래스 선언 위에 다음 코드를 추가합니다.  
+1. `Customer` 클래스 선언 위에 다음 코드를 추가합니다.  
   
      [!code-vb[DLinqWalk2VB#4](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqWalk2VB/vb/Module1.vb#4)]  
   
-2.  다음과 같이 강력한 형식의 `Sub Main`를 사용하도록 <xref:System.Data.Linq.DataContext>을 수정합니다.  
+2. 다음과 같이 강력한 형식의 `Sub Main`를 사용하도록 <xref:System.Data.Linq.DataContext>을 수정합니다.  
   
      [!code-vb[DLinqWalk2VB#5](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqWalk2VB/vb/Module1.vb#5)]  
   
-3.  F5 키를 눌러 응용 프로그램을 디버깅합니다.  
+3. F5 키를 눌러 응용 프로그램을 디버깅합니다.  
   
      콘솔 창 출력은 다음과 같습니다.  
   
      `ID=WHITC`  
   
-4.  콘솔 창에서 Enter 키를 눌러 응용 프로그램을 닫습니다.  
+4. 콘솔 창에서 Enter 키를 눌러 응용 프로그램을 닫습니다.  
   
-5.  에 **파일** 메뉴에서 클릭 **모두 저장** 이 응용 프로그램을 저장 하려는 경우.  
+5. 에 **파일** 메뉴에서 클릭 **모두 저장** 이 응용 프로그램을 저장 하려는 경우.  
   
 ## <a name="next-steps"></a>다음 단계  
  다음 연습 ([연습: 데이터 조작 (Visual Basic)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-manipulating-data-visual-basic.md)) 데이터를 조작 하는 방법을 보여 줍니다. 다음 연습에서는 이미 완료한 이 시리즈의 연습 두 개를 저장할 필요가 없습니다.  

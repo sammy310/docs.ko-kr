@@ -9,12 +9,12 @@ helpviewer_keywords:
 - print jobs [Windows Forms], completing in Windows Forms
 - printing [Windows Forms], print jobs
 ms.assetid: 23ec74f7-34c5-4710-82a0-ee2914518548
-ms.openlocfilehash: f8d0f1f067efbae6e2b667328e75996179b91737
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 256b9a3d8842aaa4b032e67ebac9ca6a9e1ef34a
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59159824"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59293757"
 ---
 # <a name="how-to-complete-windows-forms-print-jobs"></a>방법: Windows Forms 인쇄 작업 완료
 자주, 워드 프로세서 및 인쇄와 관련 된 기타 응용 프로그램에 인쇄 작업을 완료 되었음을 사용자에 게 메시지를 표시 하는 옵션을 제공 합니다. 처리 하 여 Windows Forms 프로그램에서이 기능을 제공할 수 있습니다 합니다 <xref:System.Drawing.Printing.PrintDocument.EndPrint> 의 이벤트는 <xref:System.Drawing.Printing.PrintDocument> 구성 요소입니다.  
@@ -23,7 +23,7 @@ ms.locfileid: "59159824"
   
 ### <a name="to-complete-a-print-job"></a>인쇄 작업을 완료 하려면  
   
-1.  설정 합니다 <xref:System.Drawing.Printing.PrintDocument.DocumentName%2A> 의 속성을 <xref:System.Drawing.Printing.PrintDocument> 구성 요소입니다.  
+1. 설정 합니다 <xref:System.Drawing.Printing.PrintDocument.DocumentName%2A> 의 속성을 <xref:System.Drawing.Printing.PrintDocument> 구성 요소입니다.  
   
     ```vb  
     PrintDocument1.DocumentName = "MyTextFile"  
@@ -37,7 +37,7 @@ ms.locfileid: "59159824"
     printDocument1->DocumentName = "MyTextFile";  
     ```  
   
-2.  <xref:System.Drawing.Printing.PrintDocument.EndPrint> 이벤트를 처리할 코드를 작성합니다.  
+2. <xref:System.Drawing.Printing.PrintDocument.EndPrint> 이벤트를 처리할 코드를 작성합니다.  
   
      다음 코드 예제, 문서 인쇄를 되었음을 나타내는 메시지 상자가 표시 됩니다.  
   

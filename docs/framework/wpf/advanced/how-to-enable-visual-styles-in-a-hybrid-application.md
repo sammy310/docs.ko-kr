@@ -8,12 +8,12 @@ helpviewer_keywords:
 - hybrid applications [WPF interoperability]
 - visual styles [Windows Forms]
 ms.assetid: 95de9b9c-d804-405c-b2d1-49a88c1e0fe1
-ms.openlocfilehash: 76055358f9dede9749d1575a5f43d5593c1c9b51
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 7aa5208a4f378408a01a08a2f4c9dbf2edfa5243
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59176373"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59323605"
 ---
 # <a name="how-to-enable-visual-styles-in-a-hybrid-application"></a>방법: 하이브리드 애플리케이션에서 비주얼 스타일 사용
 이 항목을 사용 하도록 설정 하는 방법을 보여 줍니다 [!INCLUDE[TLA#tla_winxp](../../../../includes/tlasharptla-winxp-md.md)] 에서 비주얼 스타일을 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 에 호스트 된 컨트롤을 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-기반 응용 프로그램.  
@@ -26,25 +26,25 @@ ms.locfileid: "59176373"
   
 #### <a name="to-enable-windows-forms-visual-styles"></a>Windows Forms 시각적 스타일을 사용하려면  
   
-1.  만들기는 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 라는 응용 프로그램 프로젝트 `HostingWfWithVisualStyles`합니다.  
+1. 만들기는 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 라는 응용 프로그램 프로젝트 `HostingWfWithVisualStyles`합니다.  
   
-2.  솔루션 탐색기에서 다음 어셈블리에 대한 참조를 추가합니다.  
+2. 솔루션 탐색기에서 다음 어셈블리에 대한 참조를 추가합니다.  
   
     -   WindowsFormsIntegration  
   
     -   System.Windows.Forms  
   
-3.  도구 상자에서 두 번 클릭 합니다 <xref:System.Windows.Controls.Grid> 아이콘을를 <xref:System.Windows.Controls.Grid> 디자인 화면의 요소입니다.  
+3. 도구 상자에서 두 번 클릭 합니다 <xref:System.Windows.Controls.Grid> 아이콘을를 <xref:System.Windows.Controls.Grid> 디자인 화면의 요소입니다.  
   
-4.  속성 창에서 값을 설정 합니다 <xref:System.Windows.FrameworkElement.Height%2A> 하 고 <xref:System.Windows.FrameworkElement.Width%2A> 속성을 **자동**합니다.  
+4. 속성 창에서 값을 설정 합니다 <xref:System.Windows.FrameworkElement.Height%2A> 하 고 <xref:System.Windows.FrameworkElement.Width%2A> 속성을 **자동**합니다.  
   
-5.  디자인 뷰 또는 XAML 뷰에서 선택 된 <xref:System.Windows.Window>합니다.  
+5. 디자인 뷰 또는 XAML 뷰에서 선택 된 <xref:System.Windows.Window>합니다.  
   
-6.  속성 창에서 클릭 합니다 **이벤트** 탭 합니다.  
+6. 속성 창에서 클릭 합니다 **이벤트** 탭 합니다.  
   
-7.  두 번 클릭 하 여 <xref:System.Windows.FrameworkElement.Loaded> 이벤트입니다.
+7. 두 번 클릭 하 여 <xref:System.Windows.FrameworkElement.Loaded> 이벤트입니다.
   
-8.  MainWindow.xaml.vb 또는 MainWindow.xaml.cs에서 다음 코드를 처리 하는 <xref:System.Windows.FrameworkElement.Loaded> 이벤트입니다.  
+8. MainWindow.xaml.vb 또는 MainWindow.xaml.cs에서 다음 코드를 처리 하는 <xref:System.Windows.FrameworkElement.Loaded> 이벤트입니다.  
   
      [!code-csharp[HostingWfWithVisualStyles#11](~/samples/snippets/csharp/VS_Snippets_Wpf/HostingWfWithVisualStyles/CSharp/HostingWfWithVisualStyles/Window1.xaml.cs#11)]
      [!code-vb[HostingWfWithVisualStyles#11](~/samples/snippets/visualbasic/VS_Snippets_Wpf/HostingWfWithVisualStyles/VisualBasic/HostingWfWithVisualStyles/Window1.xaml.vb#11)]  
@@ -58,11 +58,11 @@ ms.locfileid: "59176373"
   
 #### <a name="to-disable-windows-forms-visual-styles"></a>Windows Forms 시각적 스타일을 사용하지 않으려면  
   
-1.  코드 편집기에서 MainWindow.xaml.vb 또는 MainWindow.xaml.cs를 엽니다.  
+1. 코드 편집기에서 MainWindow.xaml.vb 또는 MainWindow.xaml.cs를 엽니다.  
   
-2.  에 대 한 호출을 주석은 <xref:System.Windows.Forms.Application.EnableVisualStyles%2A> 메서드.  
+2. 에 대 한 호출을 주석은 <xref:System.Windows.Forms.Application.EnableVisualStyles%2A> 메서드.  
   
-3.  F5 키를 눌러 애플리케이션을 빌드하고 실행합니다.  
+3. F5 키를 눌러 애플리케이션을 빌드하고 실행합니다.  
   
      [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 컨트롤이 기본 시스템 스타일으로 그려집니다.  
   

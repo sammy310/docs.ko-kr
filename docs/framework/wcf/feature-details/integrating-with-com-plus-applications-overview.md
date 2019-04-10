@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Windows Communication Foundation, COM+ integration
 - WCF, COM+ integration
 ms.assetid: e481e48f-7096-40eb-9f20-7f0098412941
-ms.openlocfilehash: 7a1747860a081fbbfc54b8657d5db6b57cdf168e
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: b5294080d0cc76fdb98bc0908f4273dbb011f982
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59153246"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59328727"
 ---
 # <a name="integrating-with-com-applications-overview"></a>COM+ 응용 프로그램과 통합 개요
 Windows Communication Foundation (WCF)는 분산된 응용 프로그램을 만들기 위한 풍부한 환경을 제공 합니다. COM +에서 호스팅되는 구성 요소 기반 응용 프로그램 논리를 이미 사용 하는 경우에 다시 작성 하지 않고 기존 논리를 확장 하려면 WCF를 사용할 수 있습니다. 일반 시나리오는 웹 서비스를 통해 기존 COM+ 또는 엔터프라이즈 서비스 비즈니스 논리를 노출하려는 경우입니다.  
@@ -36,13 +36,13 @@ Windows Communication Foundation (WCF)는 분산된 응용 프로그램을 만�
   
  다음 단계는 구성 요소를 수정하지 않고 COM+ 구성 요소의 인터페이스를 웹 서비스로 노출하는 데 필요합니다.  
   
-1.  COM+ 구성 요소의 인터페이스를 웹 서비스로 노출할 수 있는지 여부를 결정합니다.  
+1. COM+ 구성 요소의 인터페이스를 웹 서비스로 노출할 수 있는지 여부를 결정합니다.  
   
-2.  적절한 호스팅 모드를 선택합니다.  
+2. 적절한 호스팅 모드를 선택합니다.  
   
-3.  COM+ 서비스 모델 구성 도구(ComSvcConfig.exe)를 사용하여 인터페이스에 대한 웹 서비스를 추가합니다. ComSvcConfig.exe를 사용 하는 방법에 대 한 자세한 내용은 참조 하세요. [방법: COM + 서비스 모델 구성 도구를 사용 하 여](../../../../docs/framework/wcf/feature-details/how-to-use-the-com-service-model-configuration-tool.md)입니다.  
+3. COM+ 서비스 모델 구성 도구(ComSvcConfig.exe)를 사용하여 인터페이스에 대한 웹 서비스를 추가합니다. ComSvcConfig.exe를 사용 하는 방법에 대 한 자세한 내용은 참조 하세요. [방법: COM + 서비스 모델 구성 도구를 사용 하 여](../../../../docs/framework/wcf/feature-details/how-to-use-the-com-service-model-configuration-tool.md)입니다.  
   
-4.  응용 프로그램 구성 파일에서 추가 서비스 설정을 구성합니다. 구성 요소를 구성 하는 방법에 대 한 자세한 내용은 참조 하세요. [방법: COM + 서비스 설정 구성](../../../../docs/framework/wcf/feature-details/how-to-configure-com-service-settings.md)합니다.  
+4. 응용 프로그램 구성 파일에서 추가 서비스 설정을 구성합니다. 구성 요소를 구성 하는 방법에 대 한 자세한 내용은 참조 하세요. [방법: COM + 서비스 설정 구성](../../../../docs/framework/wcf/feature-details/how-to-configure-com-service-settings.md)합니다.  
   
 ## <a name="supported-interfaces"></a>지원되는 인터페이스  
  웹 서비스로 노출될 수 있는 인터페이스 형식에는 몇 가지 제한이 있습니다. 다음 인터페이스 형식은 지원되지 않습니다.  
