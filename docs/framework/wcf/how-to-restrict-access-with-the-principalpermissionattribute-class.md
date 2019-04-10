@@ -9,12 +9,12 @@ helpviewer_keywords:
 - WCF, authorization
 - WCF, security
 ms.assetid: 5162f5c4-8781-4cc4-9425-bb7620eaeaf4
-ms.openlocfilehash: 2bbdcc8e5a55f9d2cdbb80bf83443f0ad8850452
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: ae2aa4c5629096ee7d888e7c4e334c3b6696db3f
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59105289"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59323319"
 ---
 # <a name="how-to-restrict-access-with-the-principalpermissionattribute-class"></a>방법: PrincipalPermissionAttribute 클래스를 사용하여 액세스 제한
 Windows 도메인 컴퓨터의 리소스에 대한 액세스 제어는 기본적인 보안 작업입니다. 예를 들어, 특정 사용자만 급여 정보와 같은 민감한 데이터를 볼 수 있어야 합니다. 이 항목에서는 사용자가 미리 정의된 그룹에 속하도록 요청하여 메서드에 대한 액세스를 제한하는 방법을 설명합니다. 작업 샘플을 보려면 [서비스 작업에 대 한 액세스 권한을 부여](../../../docs/framework/wcf/samples/authorizing-access-to-service-operations.md)합니다.  
@@ -23,25 +23,25 @@ Windows 도메인 컴퓨터의 리소스에 대한 액세스 제어는 기본적
   
 ### <a name="to-create-a-windows-group"></a>Windows 그룹을 만들려면  
   
-1.  엽니다는 **컴퓨터 관리** 콘솔.  
+1. 엽니다는 **컴퓨터 관리** 콘솔.  
   
-2.  왼쪽된 패널에서 클릭 **로컬 사용자 및 그룹**합니다.  
+2. 왼쪽된 패널에서 클릭 **로컬 사용자 및 그룹**합니다.  
   
-3.  마우스 오른쪽 단추로 클릭 **그룹**, 클릭 **새 그룹**합니다.  
+3. 마우스 오른쪽 단추로 클릭 **그룹**, 클릭 **새 그룹**합니다.  
   
-4.  에 **그룹 이름** 상자에 새 그룹의 이름을 입력 합니다.  
+4. 에 **그룹 이름** 상자에 새 그룹의 이름을 입력 합니다.  
   
-5.  에 **설명을** 상자에 새 그룹의 설명을 입력 합니다.  
+5. 에 **설명을** 상자에 새 그룹의 설명을 입력 합니다.  
   
-6.  클릭 합니다 **추가** 단추 그룹에 새 구성원을 추가 합니다.  
+6. 클릭 합니다 **추가** 단추 그룹에 새 구성원을 추가 합니다.  
   
-7.  사용자 자신을 그룹에 추가하고 다음 코드를 테스트하려면, 컴퓨터를 로그오프한 후 다시 로그온하여 그룹에 포함되어야 합니다.  
+7. 사용자 자신을 그룹에 추가하고 다음 코드를 테스트하려면, 컴퓨터를 로그오프한 후 다시 로그온하여 그룹에 포함되어야 합니다.  
   
 ### <a name="to-demand-user-membership"></a>사용자 멤버 자격을 요구하려면  
   
-1.  구현 된 서비스 계약 코드가 포함 된 Windows Communication Foundation (WCF) 코드 파일을 엽니다. 계약을 구현 하는 방법에 대 한 자세한 내용은 참조 하세요. [Implementing Service Contracts](../../../docs/framework/wcf/implementing-service-contracts.md)합니다.  
+1. 구현 된 서비스 계약 코드가 포함 된 Windows Communication Foundation (WCF) 코드 파일을 엽니다. 계약을 구현 하는 방법에 대 한 자세한 내용은 참조 하세요. [Implementing Service Contracts](../../../docs/framework/wcf/implementing-service-contracts.md)합니다.  
   
-2.  <xref:System.Security.Permissions.PrincipalPermissionAttribute> 특성을 특정 그룹에 대해 제한되어야 하는 각 메서드에 적용합니다. <xref:System.Security.Permissions.SecurityAttribute.Action%2A> 속성을 <xref:System.Security.Permissions.SecurityAction.Demand>로 설정하고 <xref:System.Security.Permissions.PrincipalPermissionAttribute.Role%2A> 속성을 그룹 이름으로 설정합니다. 예를 들어:  
+2. <xref:System.Security.Permissions.PrincipalPermissionAttribute> 특성을 특정 그룹에 대해 제한되어야 하는 각 메서드에 적용합니다. <xref:System.Security.Permissions.SecurityAttribute.Action%2A> 속성을 <xref:System.Security.Permissions.SecurityAction.Demand>로 설정하고 <xref:System.Security.Permissions.PrincipalPermissionAttribute.Role%2A> 속성을 그룹 이름으로 설정합니다. 예를 들어:  
   
      [!code-csharp[c_PrincipalPermissionAttribute#1](../../../samples/snippets/csharp/VS_Snippets_CFX/c_principalpermissionattribute/cs/source.cs#1)]
      [!code-vb[c_PrincipalPermissionAttribute#1](../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_principalpermissionattribute/vb/source.vb#1)]  
@@ -56,16 +56,16 @@ Windows 도메인 컴퓨터의 리소스에 대한 액세스 제어는 기본적
   
 #### <a name="to-control-access-using-a-certificate"></a>인증서를 사용하여 액세스를 제어하려면  
   
-1.  <xref:System.Security.Permissions.PrincipalPermissionAttribute> 클래스를 액세스를 제한할 메서드에 적용합니다.  
+1. <xref:System.Security.Permissions.PrincipalPermissionAttribute> 클래스를 액세스를 제한할 메서드에 적용합니다.  
   
-2.  특성의 동작을 <xref:System.Security.Permissions.SecurityAction.Demand?displayProperty=nameWithType>로 설정합니다.  
+2. 특성의 동작을 <xref:System.Security.Permissions.SecurityAction.Demand?displayProperty=nameWithType>로 설정합니다.  
   
-3.  `Name` 속성을 주체 이름 및 인증서 지문으로 구성된 문자열로 설정합니다. 다음 예제와 같이 두 개의 값을 세미콜론 및 공백으로 구분합니다.  
+3. `Name` 속성을 주체 이름 및 인증서 지문으로 구성된 문자열로 설정합니다. 다음 예제와 같이 두 개의 값을 세미콜론 및 공백으로 구분합니다.  
   
      [!code-csharp[c_PrincipalPermissionAttribute#2](../../../samples/snippets/csharp/VS_Snippets_CFX/c_principalpermissionattribute/cs/source.cs#2)]
      [!code-vb[c_PrincipalPermissionAttribute#2](../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_principalpermissionattribute/vb/source.vb#2)]  
   
-4.  다음 구성 예제와 같이 <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior.PrincipalPermissionMode%2A> 속성을 <xref:System.ServiceModel.Description.PrincipalPermissionMode.UseAspNetRoles>로 설정합니다.  
+4. 다음 구성 예제와 같이 <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior.PrincipalPermissionMode%2A> 속성을 <xref:System.ServiceModel.Description.PrincipalPermissionMode.UseAspNetRoles>로 설정합니다.  
   
     ```xml  
     <behaviors>  

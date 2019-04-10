@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: f814ff82-fe2b-4614-aebb-b768c3e61179
-ms.openlocfilehash: a5866bae5217b8c8ea22ba66a344b464694583ac
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 06ac34f5ba5d95bd9f000a35036cf288d3c8f7f7
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57720980"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59319926"
 ---
 # <a name="how-to-run-a-workflow"></a>방법: 워크플로 실행
 이 항목에서는 Windows Workflow Foundation 초보자 자습서의 계속 이며 워크플로 호스트를 만들고 이전에 정의 된 워크플로 실행 하는 방법을 설명 [방법: 워크플로 만드는](how-to-create-a-workflow.md) 항목입니다.
@@ -23,27 +23,27 @@ ms.locfileid: "57720980"
   
 ### <a name="to-create-the-workflow-host-project"></a>워크플로 호스트 프로젝트를 만들려면  
   
-1.  이전 솔루션을 엽니다 [방법: 활동 만들기](how-to-create-an-activity.md) Visual Studio 2012를 사용 하 여 항목입니다.  
+1. 이전 솔루션을 엽니다 [방법: 활동 만들기](how-to-create-an-activity.md) Visual Studio 2012를 사용 하 여 항목입니다.  
   
-2.  **솔루션 탐색기** 에서 **WF45GettingStartedTutorial** 솔루션을 마우스 오른쪽 단추로 클릭하고 **추가**, **새 프로젝트**를 차례로 선택합니다.  
+2. **솔루션 탐색기** 에서 **WF45GettingStartedTutorial** 솔루션을 마우스 오른쪽 단추로 클릭하고 **추가**, **새 프로젝트**를 차례로 선택합니다.  
   
     > [!TIP]
     >  **솔루션 탐색기** 창이 표시되어 있지 않으면 **보기** 메뉴에서 **솔루션 탐색기** 를 선택합니다.
 
-3.  **설치됨** 노드에서 **Visual C#**, **워크플로** (또는 **Visual Basic**, **워크플로**)를 차례로 선택합니다.
+3. **설치됨** 노드에서 **Visual C#**, **워크플로** (또는 **Visual Basic**, **워크플로**)를 차례로 선택합니다.
 
     > [!NOTE]
     >  **설치됨** 노드의 **다른 언어** 노드 아래에는 Visual Studio에서 기본 언어로 구성된 프로그래밍 언어에 따라 **Visual C#** 또는 **Visual Basic** 노드가 표시될 수 있습니다.
 
      .NET Framework 버전 드롭다운 목록에서 **.NET Framework 4.5** 가 선택되어 있는지 확인합니다. **워크플로** 목록에서 **워크플로 콘솔 응용 프로그램** 을 선택합니다. `NumberGuessWorkflowHost` 이름 **상자에** 를 입력하고 **확인**을 클릭합니다. 이렇게 하면 기본 워크플로 호스팅 지원이 포함된 시작 워크플로 애플리케이션이 만들어집니다. 이 기본 호스팅 코드를 수정하고 이를 사용하여 워크플로 애플리케이션을 실행합니다.
 
-4.  **솔루션 탐색기** 에서 새로 추가한 **NumberGuessWorkflowHost** 프로젝트를 마우스 오른쪽 단추로 클릭하고 **참조 추가**를 선택합니다. **참조 추가** 목록에서 **솔루션** 을 선택하고 **NumberGuessWorkflowActivities**옆의 확인란을 선택한 다음 **확인**을 클릭합니다.
+4. **솔루션 탐색기** 에서 새로 추가한 **NumberGuessWorkflowHost** 프로젝트를 마우스 오른쪽 단추로 클릭하고 **참조 추가**를 선택합니다. **참조 추가** 목록에서 **솔루션** 을 선택하고 **NumberGuessWorkflowActivities**옆의 확인란을 선택한 다음 **확인**을 클릭합니다.
 
-5.  **솔루션 탐색기** 에서 **Workflow1.xaml** 을 마우스 오른쪽 단추로 클릭하고 **삭제**를 선택합니다. **확인** 을 클릭하여 확인합니다.
+5. **솔루션 탐색기** 에서 **Workflow1.xaml** 을 마우스 오른쪽 단추로 클릭하고 **삭제**를 선택합니다. **확인** 을 클릭하여 확인합니다.
 
 ### <a name="to-modify-the-workflow-hosting-code"></a>워크플로 호스팅 코드를 수정하려면
 
-1.  **솔루션 탐색기** 에서 **Program.cs** 또는 **Module1.vb** 를 두 번 클릭하여 코드를 표시합니다.
+1. **솔루션 탐색기** 에서 **Program.cs** 또는 **Module1.vb** 를 두 번 클릭하여 코드를 표시합니다.
 
     > [!TIP]
     >  **솔루션 탐색기** 창이 표시되어 있지 않으면 **보기** 메뉴에서 **솔루션 탐색기** 를 선택합니다.
@@ -62,7 +62,7 @@ ms.locfileid: "57720980"
     WorkflowInvoker.Invoke(workflow1);
     ```
 
-     이 생성된 호스팅 코드에서는 <xref:System.Activities.WorkflowInvoker>를 사용합니다. <xref:System.Activities.WorkflowInvoker> 는 메서드 호출과 같은 방식으로 워크플로를 호출하기 위한 간단한 방법을 제공하며, 지속성을 사용하지 않는 워크플로에만 사용될 수 있습니다. <xref:System.Activities.WorkflowApplication> 은 수명 주기 이벤트 알림, 실행 제어, 책갈피 다시 시작 및 지속성을 비롯한 다양한 워크플로 실행 모델을 제공합니다. 이 예제에서는 책갈피를 사용하며 <xref:System.Activities.WorkflowApplication> 을 사용하여 워크플로를 호스트합니다. 기존 `using` using **또는** Imports **문 아래의** Program.cs **또는** Module1.vb **위에 다음** 또는 **Imports** 문을 추가합니다.
+     이 생성된 호스팅 코드에서는 <xref:System.Activities.WorkflowInvoker>를 사용합니다. <xref:System.Activities.WorkflowInvoker> 메서드 호출인 고 지 속성을 사용 하지 않는 워크플로에만 사용할 수 하는 경우에 따라 워크플로 호출 하는 데는 간단한 방법을 제공 합니다. <xref:System.Activities.WorkflowApplication> 수명 주기 이벤트, 실행 제어, 책갈피 다시 시작 및 지 속성에 대 한 알림을 포함 하는 워크플로 실행 하기 위한 다기능 모델을 제공 합니다. 이 예제에서는 책갈피를 사용하며 <xref:System.Activities.WorkflowApplication> 을 사용하여 워크플로를 호스트합니다. 기존 `using` using **또는** Imports **문 아래의** Program.cs **또는** Module1.vb **위에 다음** 또는 **Imports** 문을 추가합니다.
 
     ```vb
     Imports NumberGuessWorkflowActivities
@@ -86,12 +86,12 @@ ms.locfileid: "57720980"
 
 ### <a name="to-set-input-arguments-of-a-workflow"></a>워크플로의 입력 인수를 설정하려면
 
-1.  **Program.cs** 또는 **Module1.vb** 맨 위의 기존 `using` 또는 `Imports` 문 아래에 다음 문을 추가합니다.
+1. **Program.cs** 또는 **Module1.vb** 맨 위의 기존 `using` 또는 `Imports` 문 아래에 다음 문을 추가합니다.
 
      [!code-csharp[CFX_WF_GettingStarted#5](~/samples/snippets/csharp/VS_Snippets_CFX/cfx_wf_gettingstarted/cs/program.cs#5)]
      [!code-vb[CFX_WF_GettingStarted#5](~/samples/snippets/visualbasic/VS_Snippets_CFX/cfx_wf_gettingstarted/vb/module1.vb#5)]
 
-2.  새로운 <xref:System.Activities.WorkflowApplication> 을 만드는 코드 행을 코드 생성 시 매개 변수 사전을 만들어 워크플로에 전달하는 다음 코드로 바꿉니다.
+2. 새로운 <xref:System.Activities.WorkflowApplication> 을 만드는 코드 행을 코드 생성 시 매개 변수 사전을 만들어 워크플로에 전달하는 다음 코드로 바꿉니다.
 
     > [!NOTE]
     >  바꾸세요 `Workflow1` 이러한 예제의 `FlowchartNumberGuessWorkflow`를 `SequentialNumberGuessWorkflow`, 또는 `StateMachineNumberGuessWorkflow`이전에 완료 한 워크플로에 따라 [방법: 워크플로 만드는](how-to-create-a-workflow.md) 단계입니다. `Workflow1` 을 바꾸지 않으면 워크플로를 빌드하거나 실행할 때 빌드 오류가 발생합니다.
@@ -103,19 +103,19 @@ ms.locfileid: "57720980"
 
 ### <a name="to-retrieve-output-arguments-of-a-workflow"></a>워크플로의 출력 인수를 검색하려면
 
-1.  <xref:System.Activities.WorkflowApplication.Completed%2A> 처리기를 수정하여 워크플로에서 사용된 횟수를 검색하고 표시합니다.
+1. <xref:System.Activities.WorkflowApplication.Completed%2A> 처리기를 수정하여 워크플로에서 사용된 횟수를 검색하고 표시합니다.
 
      [!code-csharp[CFX_WF_GettingStarted#7](~/samples/snippets/csharp/VS_Snippets_CFX/cfx_wf_gettingstarted/cs/program.cs#7)]
      [!code-vb[CFX_WF_GettingStarted#7](~/samples/snippets/visualbasic/VS_Snippets_CFX/cfx_wf_gettingstarted/vb/module1.vb#7)]
 
 ### <a name="to-resume-a-bookmark"></a>책갈피를 다시 시작하려면
 
-1.  기존 `Main` 선언 바로 뒤 <xref:System.Threading.AutoResetEvent> 메서드 위에 다음 코드를 추가합니다.
+1. 기존 `Main` 선언 바로 뒤 <xref:System.Threading.AutoResetEvent> 메서드 위에 다음 코드를 추가합니다.
 
      [!code-csharp[CFX_WF_GettingStarted#8](~/samples/snippets/csharp/VS_Snippets_CFX/cfx_wf_gettingstarted/cs/program.cs#8)]
      [!code-vb[CFX_WF_GettingStarted#8](~/samples/snippets/visualbasic/VS_Snippets_CFX/cfx_wf_gettingstarted/vb/module1.vb#8)]
 
-2.  <xref:System.Activities.WorkflowApplication.Idle%2A> 에서 세 개의 기존 워크플로 수명 주기 처리기 바로 아래에 다음 `Main`처리기를 추가합니다.
+2. <xref:System.Activities.WorkflowApplication.Idle%2A> 에서 세 개의 기존 워크플로 수명 주기 처리기 바로 아래에 다음 `Main`처리기를 추가합니다.
 
      [!code-csharp[CFX_WF_GettingStarted#9](~/samples/snippets/csharp/VS_Snippets_CFX/cfx_wf_gettingstarted/cs/program.cs#9)]
      [!code-vb[CFX_WF_GettingStarted#9](~/samples/snippets/visualbasic/VS_Snippets_CFX/cfx_wf_gettingstarted/vb/module1.vb#9)]
@@ -125,7 +125,7 @@ ms.locfileid: "57720980"
     > [!NOTE]
     >  이 예제에서는 호스트 애플리케이션이 <xref:System.Activities.WorkflowApplication.Completed%2A> 및 <xref:System.Activities.WorkflowApplication.Idle%2A> 처리기에서 자동 재설정 이벤트를 사용하여 호스트 애플리케이션을 워크플로 진행률과 동기화합니다. 책갈피를 다시 시작하기 전에 워크플로를 차단하고 워크플로가 유휴 상태가 될 때까지 기다릴 필요는 없지만, 이 예제에서는 호스트에서 워크플로가 완료되었는지 아니면 <xref:System.Activities.Bookmark>를 사용하여 추가 사용자 입력을 대기하고 있는지 확인하기 위해 동기화 이벤트가 필요합니다. 자세한 내용은 [책갈피](bookmarks.md)합니다.
 
-3.  `WaitOne`호출을 제거한 다음, 사용자 입력을 수집하고 <xref:System.Activities.Bookmark>를 다시 시작하는 코드로 대체합니다.
+3. `WaitOne`호출을 제거한 다음, 사용자 입력을 수집하고 <xref:System.Activities.Bookmark>를 다시 시작하는 코드로 대체합니다.
 
      다음 코드 행을 제거합니다.
 
@@ -139,9 +139,9 @@ ms.locfileid: "57720980"
 
 ## <a name="BKMK_ToRunTheApplication"></a> 응용 프로그램을 빌드하고 실행하려면
 
-1.  **솔루션 탐색기** 에서 **NumberGuessWorkflowHost** 를 마우스 오른쪽 단추로 클릭하고 **시작 프로젝트로 설정**을 선택합니다.
+1. **솔루션 탐색기** 에서 **NumberGuessWorkflowHost** 를 마우스 오른쪽 단추로 클릭하고 **시작 프로젝트로 설정**을 선택합니다.
 
-2.  Ctrl+F5를 눌러 애플리케이션을 빌드하고 실행합니다. 가능한 한 적은 횟수로 숫자를 추측해 봅니다.
+2. Ctrl+F5를 눌러 애플리케이션을 빌드하고 실행합니다. 가능한 한 적은 횟수로 숫자를 추측해 봅니다.
 
      다른 스타일의 워크플로 중 하나로 애플리케이션을 시도하려면 `Workflow1` 을 만드는 코드의 <xref:System.Activities.WorkflowApplication> 을 원하는 워크플로 스타일에 따라 `FlowchartNumberGuessWorkflow`, `SequentialNumberGuessWorkflow`또는 `StateMachineNumberGuessWorkflow`로 바꿉니다.
 
@@ -166,6 +166,6 @@ ms.locfileid: "57720980"
 - [Windows Workflow Foundation 프로그래밍](programming.md)
 - [초보자를 위한 자습서](getting-started-tutorial.md)
 - [방법: 워크플로 만들기](how-to-create-a-workflow.md)
-- [방법: 만들기 및 장기 실행 워크플로 실행 합니다.](how-to-create-and-run-a-long-running-workflow.md)
+- [방법: 장기 실행 워크플로 만들기 및 실행](how-to-create-and-run-a-long-running-workflow.md)
 - [워크플로에서 입력 대기](waiting-for-input-in-a-workflow.md)
 - [워크플로 호스팅](hosting-workflows.md)

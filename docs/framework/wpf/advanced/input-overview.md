@@ -24,12 +24,12 @@ helpviewer_keywords:
 - focus [WPF]
 - mouse position [WPF]
 ms.assetid: ee5258b7-6567-415a-9b1c-c0cbe46e79ef
-ms.openlocfilehash: d8eb22c4de9dc28f332b220dd4703b0c681904f3
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 9553a66538297db9c2fa134e018f35ab9e2ddf37
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59090039"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59320017"
 ---
 # <a name="input-overview"></a>입력 개요
 <a name="introduction"></a> 합니다 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 하위 시스템은 강력한 제공 [!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)] 다양 한 장치에서에서 입력을 가져오는, 마우스, 키보드, 터치 및 스타일러스를 포함 합니다. 이 항목에서는 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]가 제공하는 서비스에 대해 설명하고 입력 시스템의 아키텍처를 살펴봅니다.
@@ -217,15 +217,15 @@ ms.locfileid: "59090039"
 
  다음 목록은 앞의 그림에서 이벤트 시퀀스를 설명합니다.
 
-1.  <xref:System.Windows.UIElement.TouchEnter> 이벤트 사용자가 요소에서 손가락을 놓고 하는 경우 한 번 발생 합니다.
+1. <xref:System.Windows.UIElement.TouchEnter> 이벤트 사용자가 요소에서 손가락을 놓고 하는 경우 한 번 발생 합니다.
 
-2.  <xref:System.Windows.UIElement.TouchDown> 이벤트가 한 번 발생 합니다.
+2. <xref:System.Windows.UIElement.TouchDown> 이벤트가 한 번 발생 합니다.
 
-3.  <xref:System.Windows.UIElement.TouchMove> 이벤트는 사용자가 손가락을 요소 내에서 여러 번 발생 합니다.
+3. <xref:System.Windows.UIElement.TouchMove> 이벤트는 사용자가 손가락을 요소 내에서 여러 번 발생 합니다.
 
-4.  <xref:System.Windows.UIElement.TouchUp> 이벤트는 사용자가 요소에서 손가락을 뗄 때 한 번 발생 합니다.
+4. <xref:System.Windows.UIElement.TouchUp> 이벤트는 사용자가 요소에서 손가락을 뗄 때 한 번 발생 합니다.
 
-5.  <xref:System.Windows.UIElement.TouchLeave> 이벤트가 한 번 발생 합니다.
+5. <xref:System.Windows.UIElement.TouchLeave> 이벤트가 한 번 발생 합니다.
 
  3개 이상의 손가락이 사용되면 각 손가락마다 이벤트가 발생합니다.
 
@@ -269,17 +269,17 @@ ms.locfileid: "59090039"
 
  다음 목록은 앞의 그림에서 이벤트 시퀀스를 설명합니다.
 
-1.  <xref:System.Windows.UIElement.ManipulationStarting> 사용자 개체에 손가락을 배치 하면 오류가 발생 합니다. 무엇 보다도이 이벤트를 통해 설정 하는 데는 <xref:System.Windows.Input.ManipulationStartingEventArgs.ManipulationContainer%2A> 속성입니다. 후속 이벤트에서 조작의 위치에 상대적인 됩니다는 <xref:System.Windows.Input.ManipulationStartingEventArgs.ManipulationContainer%2A>합니다. 이외의 이벤트에서 <xref:System.Windows.UIElement.ManipulationStarting>,이 속성은 읽기 전용 이므로 <xref:System.Windows.UIElement.ManipulationStarting> 이벤트는에이 속성을 설정할 수 있습니다.
+1. <xref:System.Windows.UIElement.ManipulationStarting> 사용자 개체에 손가락을 배치 하면 오류가 발생 합니다. 무엇 보다도이 이벤트를 통해 설정 하는 데는 <xref:System.Windows.Input.ManipulationStartingEventArgs.ManipulationContainer%2A> 속성입니다. 후속 이벤트에서 조작의 위치에 상대적인 됩니다는 <xref:System.Windows.Input.ManipulationStartingEventArgs.ManipulationContainer%2A>합니다. 이외의 이벤트에서 <xref:System.Windows.UIElement.ManipulationStarting>,이 속성은 읽기 전용 이므로 <xref:System.Windows.UIElement.ManipulationStarting> 이벤트는에이 속성을 설정할 수 있습니다.
 
-2.  <xref:System.Windows.UIElement.ManipulationStarted> 이벤트가 발생 합니다. 이 이벤트는 조작의 출처를 보고합니다.
+2. <xref:System.Windows.UIElement.ManipulationStarted> 이벤트가 발생 합니다. 이 이벤트는 조작의 출처를 보고합니다.
 
-3.  <xref:System.Windows.UIElement.ManipulationDelta> 이벤트는 사용자의 터치 스크린에서 손가락을 움직일 때마다 여러 번 발생 합니다. <xref:System.Windows.Input.ManipulationDeltaEventArgs.DeltaManipulation%2A> 의 속성을 <xref:System.Windows.Input.ManipulationDeltaEventArgs> 클래스 조작이 이동, 확장 또는 변환으로 해석할지를 보고 합니다. 바로 여기서 개체 조작 작업의 대부분이 수행됩니다.
+3. <xref:System.Windows.UIElement.ManipulationDelta> 이벤트는 사용자의 터치 스크린에서 손가락을 움직일 때마다 여러 번 발생 합니다. <xref:System.Windows.Input.ManipulationDeltaEventArgs.DeltaManipulation%2A> 의 속성을 <xref:System.Windows.Input.ManipulationDeltaEventArgs> 클래스 조작이 이동, 확장 또는 변환으로 해석할지를 보고 합니다. 바로 여기서 개체 조작 작업의 대부분이 수행됩니다.
 
-4.  <xref:System.Windows.UIElement.ManipulationInertiaStarting> 이벤트 개체를 사용 하 여 사용자의 손가락 연결이 끊어질 때 발생 합니다. 이 이벤트를 사용하면 관성이 발생하는 동안 수행되는 조작의 감속을 지정할 수 있습니다. 따라서 사용자가 선택한 여러 가지 실제 공간 또는 특성을 개체가 에뮬레이트할 수 있습니다. 예를 들어 애플리케이션에 실제 세계의 항목을 나타내는 개체가 두 개 있고 한 개체가 다른 개체보다 무거운 경우를 가정해 봅니다. 이 경우 무거운 개체가 가벼운 개체보다 더 빠르게 감속되도록 할 수 있습니다.
+4. <xref:System.Windows.UIElement.ManipulationInertiaStarting> 이벤트 개체를 사용 하 여 사용자의 손가락 연결이 끊어질 때 발생 합니다. 이 이벤트를 사용하면 관성이 발생하는 동안 수행되는 조작의 감속을 지정할 수 있습니다. 따라서 사용자가 선택한 여러 가지 실제 공간 또는 특성을 개체가 에뮬레이트할 수 있습니다. 예를 들어 애플리케이션에 실제 세계의 항목을 나타내는 개체가 두 개 있고 한 개체가 다른 개체보다 무거운 경우를 가정해 봅니다. 이 경우 무거운 개체가 가벼운 개체보다 더 빠르게 감속되도록 할 수 있습니다.
 
-5.  <xref:System.Windows.UIElement.ManipulationDelta> 관성 이벤트에 여러 번 발생 합니다. 이 이벤트는 사용자가 터치 스크린에서 손가락을 이동하고 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]에서 관성을 시뮬레이트하는 경우에 발생합니다. 다시 말해 <xref:System.Windows.UIElement.ManipulationDelta> 이전 및 이후에 발생 합니다 <xref:System.Windows.UIElement.ManipulationInertiaStarting> 이벤트입니다. 합니다 <xref:System.Windows.Input.ManipulationDeltaEventArgs.IsInertial%2A?displayProperty=nameWithType> 속성 보고서 여부를 <xref:System.Windows.UIElement.ManipulationDelta> 속성을 확인 하 고 해당 값에 따라 다른 작업을 수행할 수 있도록 관성 도중 이벤트 발생 합니다.
+5. <xref:System.Windows.UIElement.ManipulationDelta> 관성 이벤트에 여러 번 발생 합니다. 이 이벤트는 사용자가 터치 스크린에서 손가락을 이동하고 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]에서 관성을 시뮬레이트하는 경우에 발생합니다. 다시 말해 <xref:System.Windows.UIElement.ManipulationDelta> 이전 및 이후에 발생 합니다 <xref:System.Windows.UIElement.ManipulationInertiaStarting> 이벤트입니다. 합니다 <xref:System.Windows.Input.ManipulationDeltaEventArgs.IsInertial%2A?displayProperty=nameWithType> 속성 보고서 여부를 <xref:System.Windows.UIElement.ManipulationDelta> 속성을 확인 하 고 해당 값에 따라 다른 작업을 수행할 수 있도록 관성 도중 이벤트 발생 합니다.
 
-6.  <xref:System.Windows.UIElement.ManipulationCompleted> 이벤트가 조작 및 관성이 종료 될 때입니다. 즉, 이후 모든은 <xref:System.Windows.UIElement.ManipulationDelta> 이벤트가 발생할는 <xref:System.Windows.UIElement.ManipulationCompleted> 을 조작 완료 되었음을 알리는 이벤트가 발생 합니다.
+6. <xref:System.Windows.UIElement.ManipulationCompleted> 이벤트가 조작 및 관성이 종료 될 때입니다. 즉, 이후 모든은 <xref:System.Windows.UIElement.ManipulationDelta> 이벤트가 발생할는 <xref:System.Windows.UIElement.ManipulationCompleted> 을 조작 완료 되었음을 알리는 이벤트가 발생 합니다.
 
  합니다 <xref:System.Windows.UIElement> 정의 <xref:System.Windows.UIElement.ManipulationBoundaryFeedback> 이벤트입니다. 이 이벤트가 발생할 때를 <xref:System.Windows.Input.ManipulationDeltaEventArgs.ReportBoundaryFeedback%2A> 메서드는 <xref:System.Windows.UIElement.ManipulationDelta> 이벤트. <xref:System.Windows.UIElement.ManipulationBoundaryFeedback> 이벤트를 사용 하면 응용 프로그램이 나 구성 요소는 개체가 경계에 닿을 때 시각적 피드백을 제공 합니다. 예를 들어를 <xref:System.Windows.Window> 핸들 클래스는 <xref:System.Windows.UIElement.ManipulationBoundaryFeedback> 가장자리 발견 될 때 약간 이동 하도록 창에 이벤트입니다.
 

@@ -12,12 +12,12 @@ helpviewer_keywords:
 - Windows Forms controls, data binding
 - bound controls [Windows Forms]
 ms.assetid: 4e96e3d0-b1cc-4de1-8774-bc9970ec4554
-ms.openlocfilehash: a7b03ab5417eacf7962f2a05b674ceb45c7d558c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: fe54c650e1d19f36d681053c7da47e12527c5827
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59115732"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59320888"
 ---
 # <a name="how-to-bind-the-windows-forms-datagrid-control-to-a-data-source-using-the-designer"></a>방법: 디자이너를 사용하여 데이터 원본에 Windows Forms DataGrid 컨트롤 바인딩
 
@@ -37,11 +37,11 @@ ms.locfileid: "59115732"
   
 ### <a name="to-data-bind-the-datagrid-control-to-a-single-table-in-the-designer"></a>DataGrid 컨트롤을 디자이너에서 단일 테이블에 데이터 바인딩  
   
-1.  컨트롤의 설정 <xref:System.Windows.Forms.DataGrid.DataSource%2A> 속성에 바인딩할 데이터 항목을 포함 하는 개체입니다.  
+1. 컨트롤의 설정 <xref:System.Windows.Forms.DataGrid.DataSource%2A> 속성에 바인딩할 데이터 항목을 포함 하는 개체입니다.  
   
-2.  이면 데이터 원본이 데이터 집합을 설정 합니다 <xref:System.Windows.Forms.DataGrid.DataMember%2A> 속성을 바인딩할 테이블의 이름입니다.  
+2. 이면 데이터 원본이 데이터 집합을 설정 합니다 <xref:System.Windows.Forms.DataGrid.DataMember%2A> 속성을 바인딩할 테이블의 이름입니다.  
   
-3.  데이터 원본이 데이터 집합 또는 데이터 집합 테이블을 기반으로 데이터 뷰를 폼에 데이터 집합을 채우는 코드를 추가 합니다.  
+3. 데이터 원본이 데이터 집합 또는 데이터 집합 테이블을 기반으로 데이터 뷰를 폼에 데이터 집합을 채우는 코드를 추가 합니다.  
   
      사용할 정확한 코드를 데이터 집합 데이터를 가져오는 위치에 따라 달라 집니다. 일반적으로 호출 하는 데이터베이스에서 직접 데이터 집합을 채우는 경우 합니다 `Fill` 이라는 데이터 집합을 채우는 다음 코드 예제와 같이 데이터 어댑터를 메서드의 `DsCategories1`:  
   
@@ -57,17 +57,17 @@ ms.locfileid: "59115732"
     sqlDataAdapter1->Fill(dsCategories1);  
     ```  
   
-4.  (선택 사항) 그리드로 해당 테이블 스타일과 열 스타일을 추가 합니다.  
+4. (선택 사항) 그리드로 해당 테이블 스타일과 열 스타일을 추가 합니다.  
   
      테이블 표시는 테이블 스타일이 없는 경우 최소한의 서식 지정 및 표시 하는 모든 열을 사용 하 여 있지만.  
   
 ### <a name="to-data-bind-the-datagrid-control-to-multiple-tables-in-a-dataset-in-the-designer"></a>DataGrid 컨트롤을 디자이너에서 데이터 집합의 여러 테이블에 데이터 바인딩  
   
-1.  컨트롤의 설정 <xref:System.Windows.Forms.DataGrid.DataSource%2A> 속성에 바인딩할 데이터 항목을 포함 하는 개체입니다.  
+1. 컨트롤의 설정 <xref:System.Windows.Forms.DataGrid.DataSource%2A> 속성에 바인딩할 데이터 항목을 포함 하는 개체입니다.  
   
-2.  데이터 집합이 포함 된 관련된 테이블 (즉, 경우 관계를 포함)로 설정 합니다 <xref:System.Windows.Forms.DataGrid.DataMember%2A> 속성을 부모 테이블의 이름입니다.  
+2. 데이터 집합이 포함 된 관련된 테이블 (즉, 경우 관계를 포함)로 설정 합니다 <xref:System.Windows.Forms.DataGrid.DataMember%2A> 속성을 부모 테이블의 이름입니다.  
   
-3.  데이터 집합을 채우는 코드를 작성 합니다.  
+3. 데이터 집합을 채우는 코드를 작성 합니다.  
   
 ## <a name="see-also"></a>참고자료
 

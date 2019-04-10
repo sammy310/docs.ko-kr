@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - sessions [WCF]
 ms.assetid: 864ba12f-3331-4359-a359-6d6d387f1035
-ms.openlocfilehash: 433efade37d9aa07f99a212b631a571dfbc766dd
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: fc7b86f3f2c2c6276681c324dbe9a390fdfdafd4
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59095869"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59320927"
 ---
 # <a name="using-sessions"></a>세션 사용
 Windows Communication Foundation (WCF) 응용 프로그램에는 *세션* 메시지 그룹을 대화에 연결 합니다. WCF 세션에서 사용할 수 있는 세션 개체에 다릅니다. [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] 응용 프로그램을 다른 동작을 지원 하 고 다양 한 방법으로 제어 됩니다. 세션 WCF에서 사용 하도록 설정 하는 기능에 설명 응용 프로그램 및 사용 하는 방법입니다.  
@@ -53,9 +53,9 @@ Windows Communication Foundation (WCF) 응용 프로그램에는 *세션* 메시
   
  클라이언트 세션을 허용 하는 WCF 서비스 때에 다음과 같은 기능이 기본적으로 활성화 됩니다.  
   
-1.  WCF 클라이언트 개체 간의 모든 호출은 동일한 서비스 인스턴스에 의해 처리 됩니다.  
+1. WCF 클라이언트 개체 간의 모든 호출은 동일한 서비스 인스턴스에 의해 처리 됩니다.  
   
-2.  다른 세션 기반 바인딩은 추가 기능을 제공합니다.  
+2. 다른 세션 기반 바인딩은 추가 기능을 제공합니다.  
   
 ## <a name="system-provided-session-types"></a>시스템 제공 세션 유형  
  세션 기반 바인딩은 서비스 인스턴스와 특정 세션과의 기본 연결을 지원합니다. 그러나 다른 세션 기반 바인딩은 앞서 설명한 세션 기반 인스턴스 만들기를 제어할 수 있는 기능 이외에 다른 기능을 지원합니다.  

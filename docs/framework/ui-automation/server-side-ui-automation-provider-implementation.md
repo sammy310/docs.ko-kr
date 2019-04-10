@@ -6,12 +6,12 @@ helpviewer_keywords:
 - UI Automation, server-side provider implementation
 - provider implementation, UI Automation
 ms.assetid: 6acc6d08-bd67-4e2e-915c-9c1d34eb86fe
-ms.openlocfilehash: ca8471f6a25c9ef5295af0edaabcefe58114aac6
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 3b3e69d1c52b98822a4cf3b75de74466e1dc68f0
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59077292"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59320061"
 ---
 # <a name="server-side-ui-automation-provider-implementation"></a>서버 쪽 UI 자동화 공급자 구현
 > [!NOTE]
@@ -148,13 +148,13 @@ ms.locfileid: "59077292"
   
  팝업 창의 부모를 다시 지정하려면  
   
-1.  팝업 창에 대한 공급자를 만듭니다. 그러려면 팝업 창의 클래스를 미리 알고 있어야 합니다.  
+1. 팝업 창에 대한 공급자를 만듭니다. 그러려면 팝업 창의 클래스를 미리 알고 있어야 합니다.  
   
-2.  해당 팝업에 대해 평소와 같이, 고유 권한이 있는 컨트롤처럼 모든 속성과 패턴을 구현합니다.  
+2. 해당 팝업에 대해 평소와 같이, 고유 권한이 있는 컨트롤처럼 모든 속성과 패턴을 구현합니다.  
   
-3.  <xref:System.Windows.Automation.Provider.IRawElementProviderSimple.HostRawElementProvider%2A> 에서 가져온 값을 반환하도록 <xref:System.Windows.Automation.Provider.AutomationInteropProvider.HostProviderFromHandle%2A>속성을 구현합니다. 여기서 매개 변수는 팝업 창의 창 핸들입니다.  
+3. <xref:System.Windows.Automation.Provider.IRawElementProviderSimple.HostRawElementProvider%2A> 에서 가져온 값을 반환하도록 <xref:System.Windows.Automation.Provider.AutomationInteropProvider.HostProviderFromHandle%2A>속성을 구현합니다. 여기서 매개 변수는 팝업 창의 창 핸들입니다.  
   
-4.  논리 부모에서 논리 자식으로, 그리고 형제 자식 사이에 탐색이 올바르게 처리되도록 팝업 창 및 해당 상위 항목에 대해 <xref:System.Windows.Automation.Provider.IRawElementProviderFragment.Navigate%2A> 을 구현합니다.  
+4. 논리 부모에서 논리 자식으로, 그리고 형제 자식 사이에 탐색이 올바르게 처리되도록 팝업 창 및 해당 상위 항목에 대해 <xref:System.Windows.Automation.Provider.IRawElementProviderFragment.Navigate%2A> 을 구현합니다.  
   
  [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]에서 팝업 창을 발견하면 탐색이 기본값에서 재정의된다는 것을 인식하며 데스크톱의 자식 항목으로 발견된 경우에는 팝업 창으로 건너뜁니다. 대신, 조각을 통해서만 노드에 도달할 수 있습니다.  
   

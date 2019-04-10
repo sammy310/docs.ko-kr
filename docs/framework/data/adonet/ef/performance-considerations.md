@@ -2,12 +2,12 @@
 title: 성능 고려 사항(Entity Framework)
 ms.date: 03/30/2017
 ms.assetid: 61913f3b-4f42-4d9b-810f-2a13c2388a4a
-ms.openlocfilehash: d0ee92b96a22b0ecb59ee76fb2f2e9d64442ce22
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: ec7f3571f60dc7f10816cad90911e50d271a9ce1
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59087952"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59324047"
 ---
 # <a name="performance-considerations-entity-framework"></a>성능 고려 사항(Entity Framework)
 이 항목에서는 ADO.NET Entity Framework의 성능 특징에 대해 설명하고, Entity Framework 응용 프로그램의 성능 개선을 위해 고려해야 할 몇 가지 사항을 알려 줍니다.  
@@ -82,11 +82,11 @@ ms.locfileid: "59087952"
 ### <a name="query-paths"></a>쿼리 경로  
  기본적으로 <xref:System.Data.Objects.ObjectQuery%601>를 실행할 때 자체적으로 관계를 나타내는 개체는 반환되지만 관련 개체는 반환되지 않습니다. 관련 개체는 다음 세 가지 방법 중 하나로 로드할 수 있습니다.  
   
-1.  <xref:System.Data.Objects.ObjectQuery%601>가 실행되기 전에 쿼리 경로를 설정합니다.  
+1. <xref:System.Data.Objects.ObjectQuery%601>가 실행되기 전에 쿼리 경로를 설정합니다.  
   
-2.  개체가 노출하는 탐색 속성에서 `Load` 메서드를 호출합니다.  
+2. 개체가 노출하는 탐색 속성에서 `Load` 메서드를 호출합니다.  
   
-3.  <xref:System.Data.Objects.ObjectContextOptions.LazyLoadingEnabled%2A>에서 <xref:System.Data.Objects.ObjectContext> 옵션을 `true`로 설정합니다. 이 수행 됩니다 자동으로 사용 하 여 개체 계층 코드를 생성 하는 경우는 [엔터티 데이터 모델 디자이너](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cc716685(v=vs.100))합니다. 자세한 내용은 참조 [생성 된 코드 개요](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cc982041(v=vs.100))합니다.  
+3. <xref:System.Data.Objects.ObjectContextOptions.LazyLoadingEnabled%2A>에서 <xref:System.Data.Objects.ObjectContext> 옵션을 `true`로 설정합니다. 이 수행 됩니다 자동으로 사용 하 여 개체 계층 코드를 생성 하는 경우는 [엔터티 데이터 모델 디자이너](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cc716685(v=vs.100))합니다. 자세한 내용은 참조 [생성 된 코드 개요](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cc982041(v=vs.100))합니다.  
   
  사용할 옵션을 고려할 때는 데이터베이스에 대한 요청의 수와 단일 쿼리에 반환되는 데이터의 양이 서로 상쇄되는 관계임을 염두에 두어야 합니다. 자세한 내용은 [관련 개체 로드](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896272(v=vs.100))합니다.  
   
