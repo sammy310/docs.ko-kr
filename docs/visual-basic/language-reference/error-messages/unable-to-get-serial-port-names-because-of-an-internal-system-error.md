@@ -2,24 +2,24 @@
 title: 내부 시스템 오류가 발생하여 직렬 포트 이름을 가져올 수 없습니다.
 ms.date: 07/20/2015
 ms.assetid: 789a1e94-28c2-4c20-8ee4-ad65fea37812
-ms.openlocfilehash: 7a65edc06c9130675ed12c93912c2c3203e10ce1
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 04841634938a1ccd6702fd1e3e14cf379f82875f
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58825081"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59342494"
 ---
-# <a name="unable-to-get-serial-port-names-because-of-an-internal-system-error"></a><span data-ttu-id="3b711-102">내부 시스템 오류가 발생하여 직렬 포트 이름을 가져올 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="3b711-102">Unable to get serial port names because of an internal system error</span></span>
-<span data-ttu-id="3b711-103">`My.Computer.Ports.SerialPortNames` 속성을 호출할 때 내부 오류가 발생했습니다.</span><span class="sxs-lookup"><span data-stu-id="3b711-103">An internal error occurred when the `My.Computer.Ports.SerialPortNames` property was called.</span></span>  
+# <a name="unable-to-get-serial-port-names-because-of-an-internal-system-error"></a><span data-ttu-id="50511-102">내부 시스템 오류가 발생하여 직렬 포트 이름을 가져올 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="50511-102">Unable to get serial port names because of an internal system error</span></span>
+<span data-ttu-id="50511-103">`My.Computer.Ports.SerialPortNames` 속성을 호출할 때 내부 오류가 발생했습니다.</span><span class="sxs-lookup"><span data-stu-id="50511-103">An internal error occurred when the `My.Computer.Ports.SerialPortNames` property was called.</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="3b711-104">이 오류를 해결하려면</span><span class="sxs-lookup"><span data-stu-id="3b711-104">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="50511-104">이 오류를 해결하려면</span><span class="sxs-lookup"><span data-stu-id="50511-104">To correct this error</span></span>  
   
-1.  <span data-ttu-id="3b711-105">참조 [디버거 기본 사항](/visualstudio/debugger/debugger-basics) 자세한 문제 해결 정보에 대 한 합니다.</span><span class="sxs-lookup"><span data-stu-id="3b711-105">See [Debugger Basics](/visualstudio/debugger/debugger-basics) for more troubleshooting information.</span></span>  
+1. <span data-ttu-id="50511-105">참조 [디버거 기본 사항](/visualstudio/debugger/debugger-basics) 자세한 문제 해결 정보에 대 한 합니다.</span><span class="sxs-lookup"><span data-stu-id="50511-105">See [Debugger Basics](/visualstudio/debugger/debugger-basics) for more troubleshooting information.</span></span>  
   
-2.  <span data-ttu-id="3b711-106">오류가 발생한 상황을 파악하여 Microsoft 기술 지원 서비스에 문의합니다.</span><span class="sxs-lookup"><span data-stu-id="3b711-106">Note the circumstances under which the error occurred, and call Microsoft Product Support Services.</span></span>  
+2. <span data-ttu-id="50511-106">오류가 발생한 상황을 파악하여 Microsoft 기술 지원 서비스에 문의합니다.</span><span class="sxs-lookup"><span data-stu-id="50511-106">Note the circumstances under which the error occurred, and call Microsoft Product Support Services.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="3b711-107">참고자료</span><span class="sxs-lookup"><span data-stu-id="3b711-107">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="50511-107">참고자료</span><span class="sxs-lookup"><span data-stu-id="50511-107">See also</span></span>
 
 - <xref:Microsoft.VisualBasic.Devices.Ports.SerialPortNames>
-- [<span data-ttu-id="3b711-108">디버거 기본 사항</span><span class="sxs-lookup"><span data-stu-id="3b711-108">Debugger Basics</span></span>](/visualstudio/debugger/debugger-basics)
-- [<span data-ttu-id="3b711-109">의견 보내기</span><span class="sxs-lookup"><span data-stu-id="3b711-109">Talk to Us</span></span>](/visualstudio/ide/talk-to-us)
+- [<span data-ttu-id="50511-108">디버거 기본 사항</span><span class="sxs-lookup"><span data-stu-id="50511-108">Debugger Basics</span></span>](/visualstudio/debugger/debugger-basics)
+- [<span data-ttu-id="50511-109">Talk to Us</span><span class="sxs-lookup"><span data-stu-id="50511-109">Talk to Us</span></span>](/visualstudio/ide/talk-to-us)
