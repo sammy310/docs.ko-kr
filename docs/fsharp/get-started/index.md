@@ -30,5 +30,4 @@ F#을 컴퓨터에 처음 설치하거나 사용하는 방법은 여러가지 �
 F#과 .NET을 컴퓨터에 설치하고 싶지 않다면 다음과 같이 F#을 브라우저에서 시작할 수도 잆습니다.
 
 * [Azure Notebooks의 F# 소개](https://notebooks.azure.com/Microsoft/projects/2018-Intro-FSharp/html/Introduction%20to%20FSharp.ipynb)는 무료 Azure Notebooks 서비스의 [Jupyter 노트북](https://jupyter.org/)입니다. Microsoft 계정으로 로그인하면 브라우저에서 직접 해킹 할 수 있습니다!
-
 * [Fable REPL](https://fable.io/repl/)은 Fable을 사용하여 F# 코드를 JavaScript로 변환해주는 대화형의 브라우저 내에 있는 [REPL](https://fable.io/)입니다. F#의 기본부터 브라우저에서 실행되는 완벽한 비디오 게임까지 다양한 샘플을 확인하십시오!
