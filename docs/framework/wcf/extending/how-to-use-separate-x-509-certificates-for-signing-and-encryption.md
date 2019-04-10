@@ -1,5 +1,5 @@
 ---
-title: '방법: 별도 X.509 인증서를 사용 하 여 서명 및 암호화'
+title: '방법: 서명 및 암호화에 별도의 X.509 인증서 사용'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,27 +9,27 @@ helpviewer_keywords:
 - ClientCredentials class
 - ClientCredentialsSecurityTokenManager class
 ms.assetid: 0b06ce4e-7835-4d82-8baf-d525c71a0e49
-ms.openlocfilehash: 6910b7abeb6a97cce1da9655fdab99b5295cc346
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 9a6b043420554e41d0804e32313b87f05cf54631
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54500488"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59160942"
 ---
-# <a name="how-to-use-separate-x509-certificates-for-signing-and-encryption"></a>방법: 별도 X.509 인증서를 사용 하 여 서명 및 암호화
+# <a name="how-to-use-separate-x509-certificates-for-signing-and-encryption"></a>방법: 서명 및 암호화에 별도의 X.509 인증서 사용
 이 항목에서는 Windows Communication Foundation (WCF) 메시지 서명 및 암호화는 클라이언트와 서비스에 대 한 다른 인증서를 사용 하도록 구성 하는 방법을 보여 줍니다.  
   
  서명 및 암호화에 사용할 별도 인증서를 사용 하려면 사용자 지정 클라이언트 또는 서비스 자격 증명 (또는 둘 다) 만들어야 WCF 클라이언트 또는 서비스에 대 한 여러 인증서를 설정 하기 위한 API를 제공 하지 않으므로 합니다. 또한 여러 개의 인증서 정보를 활용하고 지정된 키 사용과 메시지 방향에 적합한 보안 토큰 공급자를 만들기 위해 보안 토큰 관리자도 제공되어야 합니다.  
   
  다음 다이어그램에서는 사용되는 주 클래스, 상속하는 클래스(위쪽 화살표로 표시), 특정 메서드 및 속성의 반환 형식을 보여 줍니다.  
   
--   `MyClientCredentials`는 <xref:System.ServiceModel.Description.ClientCredentials>의 사용자 지정 구현입니다.  
+-   `MyClientCredentials` 사용자 지정 구현 <xref:System.ServiceModel.Description.ClientCredentials>합니다.  
   
     -   다이어그램에 표시된 속성은 모두 <xref:System.Security.Cryptography.X509Certificates.X509Certificate2>인스턴스를 반환합니다.  
   
     -   메서드 <xref:System.ServiceModel.Description.ClientCredentials.CreateSecurityTokenManager%2A>는 `MyClientCredentialsSecurityTokenManager`인스턴스를 반환합니다.  
   
--   `MyClientCredentialsSecurityTokenManager`는 <xref:System.ServiceModel.ClientCredentialsSecurityTokenManager>의 사용자 지정 구현입니다.  
+-   `MyClientCredentialsSecurityTokenManager` 사용자 지정 구현 <xref:System.ServiceModel.ClientCredentialsSecurityTokenManager>합니다.  
   
     -   메서드 <xref:System.ServiceModel.ClientCredentialsSecurityTokenManager.CreateSecurityTokenProvider%2A>는 <xref:System.IdentityModel.Selectors.X509SecurityTokenProvider>인스턴스를 반환합니다.  
   
@@ -90,6 +90,7 @@ ms.locfileid: "54500488"
      [!code-vb[c_FourCerts#7](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_fourcerts/vb/source.vb#7)]  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.ServiceModel.Description.ClientCredentials>
 - <xref:System.ServiceModel.Description.ServiceCredentials>
 - <xref:System.ServiceModel.ClientCredentialsSecurityTokenManager>

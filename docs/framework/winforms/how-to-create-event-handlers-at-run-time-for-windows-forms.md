@@ -1,5 +1,5 @@
 ---
-title: '방법: 런타임에 Windows Forms 이벤트 처리기 만들기'
+title: '방법: 런타임 시 Windows Forms의 이벤트 처리기 만들기'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,14 +12,14 @@ helpviewer_keywords:
 - examples [Windows Forms], event handling
 - Button control [Windows Forms], event handlers
 ms.assetid: 2e7c9e1a-61fe-444d-8113-3c5bacf1c8cb
-ms.openlocfilehash: 7ebafd745290a40fa6f4f83910fb32d67cdcff75
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 3c1dca420b9e63fe8a2cb93b2e7918d9dc35e84d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57705260"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59158550"
 ---
-# <a name="how-to-create-event-handlers-at-run-time-for-windows-forms"></a>방법: 런타임에 Windows Forms 이벤트 처리기 만들기
+# <a name="how-to-create-event-handlers-at-run-time-for-windows-forms"></a>방법: 런타임 시 Windows Forms의 이벤트 처리기 만들기
 Windows Forms 디자이너를 사용하여 이벤트를 만들 수 있을 뿐만 아니라 런타임에 이벤트 처리기를 만들 수도 있습니다. 이렇게 하면 프로그램이 처음 시작될 때 이벤트 처리기를 연결하는 대신 런타임에 코드를 사용하여 조건에 따라 이벤트 처리기를 연결할 수 있습니다.  
   
 ### <a name="to-create-an-event-handler-at-run-time"></a>런타임에 이벤트 처리기를 만들려면  
@@ -73,6 +73,7 @@ Windows Forms 디자이너를 사용하여 이벤트를 만들 수 있을 뿐만
      <xref:System.ComponentModel.EventHandlerList.AddHandler%2A> 위의 Visual Basic 코드에서 설명 하는 방법에는 단추의 click 이벤트 처리기를 설정 합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [Windows Forms에서 이벤트 처리기 만들기](creating-event-handlers-in-windows-forms.md)
 - [이벤트 처리기 개요](event-handlers-overview-windows-forms.md)
 - [Visual Basic에서 상속된 이벤트 처리기 관련 문제 해결](~/docs/visual-basic/programming-guide/language-features/events/troubleshooting-inherited-event-handlers.md)

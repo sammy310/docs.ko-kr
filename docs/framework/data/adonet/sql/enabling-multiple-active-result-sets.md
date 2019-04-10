@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 576079e4-debe-4ab5-9204-fcbe2ca7a5e2
-ms.openlocfilehash: bbd70631a365c8687ad9b7ed89639e9041e4366e
-ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
-ms.translationtype: MT
+ms.openlocfilehash: 9930b0081ef67ed006e399e3e5b44e88a47933c1
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57845668"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59147552"
 ---
 # <a name="enabling-multiple-active-result-sets"></a>MARS(Multiple Active Result Sets) 사용
 MARS(Multiple Active Result Sets)는 단일 연결에서 여러 배치를 실행할 수 있도록 하는 SQL Server의 기능입니다. SQL Server에 MARS가 활성화되어 있으면 명령 개체를 사용할 때마다 연결에 세션이 추가됩니다.  
@@ -112,5 +112,6 @@ string connectionString = "Data Source=MSSQL1;" +
  응용 프로그램에서는 `SqlConnection.ServerVersion` 값을 읽어 MARS 지원 여부를 확인할 수 있습니다. SQL Server 2005의 주 번호는 9이고 SQL Server 2008의 주 번호는 10입니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [MARS(Multiple Active Result Sets)](../../../../../docs/framework/data/adonet/sql/multiple-active-result-sets-mars.md)
 - [ADO.NET 관리되는 공급자 및 데이터 집합 개발자 센터](https://go.microsoft.com/fwlink/?LinkId=217917)

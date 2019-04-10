@@ -1,5 +1,5 @@
 ---
-title: '방법: 설정 하 여 표시 되는 이미지를 Windows Forms 디자이너를 사용 하는 컨트롤'
+title: '방법: 디자이너를 사용하여 Windows Forms 컨트롤에서 표시하는 이미지 설정'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Button control [Windows Forms], images
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - examples [Windows Forms], controls
 - setting images [Windows Forms], Windows Forms controls
 ms.assetid: ae80d07a-e469-4251-90ca-df71f5852454
-ms.openlocfilehash: 265fc88fb2bb9aef0696ea0d7e707ae07084df1d
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 2e0837e4a3058db7f1086d6a8ed53136ec86c7ac
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57702259"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59153493"
 ---
-# <a name="how-to-set-the-image-displayed-by-a-windows-forms-control-using-the-designer"></a>방법: 설정 하 여 표시 되는 이미지를 Windows Forms 디자이너를 사용 하는 컨트롤
+# <a name="how-to-set-the-image-displayed-by-a-windows-forms-control-using-the-designer"></a>방법: 디자이너를 사용하여 Windows Forms 컨트롤에서 표시하는 이미지 설정
 여러 Windows Forms 컨트롤 이미지를 표시할 수 있습니다. 이미지와 같은 디스크 아이콘을 나타내는 단추 컨트롤의 용도 명확히 구분 하는 아이콘 수를 **저장할** 명령입니다. 또는 아이콘 배경 이미지를 원하는 모양을 제어할 수 있습니다.  
   
 > [!NOTE]
@@ -33,6 +33,7 @@ ms.locfileid: "57702259"
 2.  표시 하려는 이미지를 선택 합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Drawing.Image.FromFile%2A>
 - <xref:System.Drawing.Image>
 - <xref:System.Windows.Forms.Control.BackgroundImage%2A>

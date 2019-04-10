@@ -1,5 +1,5 @@
 ---
-title: '방법: Windows Forms NotifyIcon 구성 요소를 사용 하 여 작업 표시줄에 응용 프로그램 아이콘 추가'
+title: '방법: Windows Forms NotifyIcon 구성 요소를 사용하여 작업 표시줄에 애플리케이션 아이콘 추가'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -13,14 +13,14 @@ helpviewer_keywords:
 - NotifyIcon component
 - taskbar [Windows Forms], adding icons
 ms.assetid: d28c0fe6-aaf2-4df7-ad74-928d861a8510
-ms.openlocfilehash: 04f6b98a2206371a2838b3a6952feeafcd788309
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 18a78b7ecb5268463607508869e77fa163cbd06f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57714257"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59146447"
 ---
-# <a name="how-to-add-application-icons-to-the-taskbar-with-the-windows-forms-notifyicon-component"></a>방법: Windows Forms NotifyIcon 구성 요소를 사용 하 여 작업 표시줄에 응용 프로그램 아이콘 추가
+# <a name="how-to-add-application-icons-to-the-taskbar-with-the-windows-forms-notifyicon-component"></a>방법: Windows Forms NotifyIcon 구성 요소를 사용하여 작업 표시줄에 애플리케이션 아이콘 추가
 Windows Forms <xref:System.Windows.Forms.NotifyIcon> 구성 요소 작업 표시줄의 상태 알림 영역에 단일 아이콘을 표시 합니다. 여러 상태 영역에 여러 개의 아이콘을 표시 하려면 해야 <xref:System.Windows.Forms.NotifyIcon> 폼의 구성 요소입니다. 컨트롤에 대해 표시 되는 아이콘을 설정 하려면 사용 된 <xref:System.Windows.Forms.NotifyIcon.Icon%2A> 속성입니다. 코드를 작성할 수도 있습니다는 <xref:System.Windows.Forms.NotifyIcon.DoubleClick> 이벤트 처리기 아이콘을 두 번 클릭할 때 발생 하는 것입니다. 예를 들어, 표시 아이콘으로 표시 하는 백그라운드 프로세스를 구성 하려면 사용자에 대 한 대화 상자를 만들 수 있습니다.  
   
 > [!NOTE]
@@ -72,8 +72,9 @@ Windows Forms <xref:System.Windows.Forms.NotifyIcon> 구성 요소 작업 표시
     ```  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Windows.Forms.NotifyIcon>
 - <xref:System.Windows.Forms.NotifyIcon.Icon%2A>
-- [방법: Windows Forms NotifyIcon 구성 요소를 사용 하 여 바로 가기 메뉴 연결](how-to-associate-a-shortcut-menu-with-a-windows-forms-notifyicon-component.md)
+- [방법: Windows Forms NotifyIcon 구성 요소에 바로 가기 메뉴 연결](how-to-associate-a-shortcut-menu-with-a-windows-forms-notifyicon-component.md)
 - [NotifyIcon 구성 요소](notifyicon-component-windows-forms.md)
 - [NotifyIcon 구성 요소 개요](notifyicon-component-overview-windows-forms.md)

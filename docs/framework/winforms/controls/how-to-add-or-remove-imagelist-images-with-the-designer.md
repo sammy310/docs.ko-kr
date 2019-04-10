@@ -1,19 +1,19 @@
 ---
-title: '방법: 디자이너를 사용 하 여 ImageList 이미지 추가 또는 제거'
+title: '방법: 디자이너를 사용하여 ImageList 이미지 추가 또는 제거'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - ImageList component [Windows Forms], adding images
 - ImageList component [Windows Forms], removing images
 - images [Windows Forms], adding to ImageList component
 ms.assetid: 5699b244-e37c-4d20-bc35-7441e55c1e3a
-ms.openlocfilehash: 370bd05ac014b625d9581cc285daf6724f459b73
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: b85b4d39235d49966b5f3c108986c8dd04bed5fe
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57723749"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59161527"
 ---
-# <a name="how-to-add-or-remove-imagelist-images-with-the-designer"></a>방법: 디자이너를 사용 하 여 ImageList 이미지 추가 또는 제거
+# <a name="how-to-add-or-remove-imagelist-images-with-the-designer"></a>방법: 디자이너를 사용하여 ImageList 이미지 추가 또는 제거
 이미지를 추가할 수 있습니다는 <xref:System.Windows.Forms.ImageList> 여러 가지 구성 요소입니다. 연결 된 스마트 태그를 사용 하 여 매우 신속 하 게 이미지를 추가할 수 있습니다 합니다 <xref:System.Windows.Forms.ImageList>에 다른 여러 속성을 설정 하는 경우 또는 <xref:System.Windows.Forms.ImageList>,이 더 편리할 속성 창 사용 하 여 이미지를 추가할 수 있습니다. 또한 코드를 사용 하 여 이미지를 추가할 수 있습니다. 코드를 사용 하 여 이미지를 추가 하는 방법에 대 한 자세한 내용은 참조 하세요. [방법: 제거 이미지는 Windows Forms ImageList 구성 요소 추가 또는](how-to-add-or-remove-images-with-the-windows-forms-imagelist-component.md)합니다. 채울 일반적으로 <xref:System.Windows.Forms.ImageList> 컨트롤과 연결 되지만 이것이 필요 하기 전에 이미지를 사용 하 여 구성 요소입니다.  
   
 > [!NOTE]
@@ -38,6 +38,7 @@ ms.locfileid: "57723749"
 4.  에 **이미지 컬렉션 편집기** 클릭 **추가** 또는 **제거** 를 추가 하 여 목록에서 이미지를 제거 합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [이미지, 비트맵 및 메타파일](../advanced/images-bitmaps-and-metafiles.md)
-- [연습: Forms 컨트롤 Windows에서 태그를 스마트를 사용 하 여 일반적인 작업 수행](performing-common-tasks-using-smart-tags-on-wf-controls.md)
+- [연습: Windows Forms 컨트롤에서 스마트 태그를 사용하여 일반 작업 수행](performing-common-tasks-using-smart-tags-on-wf-controls.md)
 - [ImageList 구성 요소](imagelist-component-windows-forms.md)

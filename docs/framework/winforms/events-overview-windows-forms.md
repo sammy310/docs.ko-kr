@@ -9,19 +9,19 @@ helpviewer_keywords:
 - multicast event delegates
 - Windows Forms controls, events
 ms.assetid: 814a6a43-a312-4791-88d8-f75f9a4f8c4c
-ms.openlocfilehash: d02705422b088800d9f2e081d6a28924d9b84078
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 57802cad0a75ed21bba02a11fec39f821835c5ea
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57710734"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59157801"
 ---
 # <a name="events-overview-windows-forms"></a>이벤트 개요(Windows Forms)
 이벤트는 코드에서 응답, 즉 "처리"할 수 있는 작업입니다. 마우스를 클릭하거나 키를 누르는 등의 사용자 작업, 프로그램 코드 또는 시스템에 의해 이벤트가 생성될 수 있습니다.  
   
  이벤트 구동 응용 프로그램은 이벤트에 대한 응답으로 코드를 실행합니다. 각 폼과 컨트롤은 미리 정의된 이벤트 집합을 표시하며 이러한 이벤트에 대해 프로그래밍을 수행할 수 있습니다. 이러한 이벤트 중 하나가 발생할 때 연결된 이벤트 처리기에 코드가 있으면 해당 코드가 호출됩니다.  
   
- 개체에 의해 발생하는 이벤트 유형은 다양하지만 대부분의 형식은 대다수 컨트롤에 공통적으로 적용됩니다. 예를 들어 대부분의 개체는 <xref:System.Windows.Forms.Control.Click> 이벤트를 처리합니다. 사용자가 폼을 클릭하면 폼의 <xref:System.Windows.Forms.Control.Click> 이벤트 처리기에 포함된 코드가 실행됩니다.  
+ 개체에 의해 발생하는 이벤트 형식은 다양하지만 대부분의 형식은 대다수 컨트롤에 공통적으로 적용됩니다. 예를 들어 대부분의 개체는 <xref:System.Windows.Forms.Control.Click> 이벤트를 처리합니다. 사용자가 폼을 클릭하면 폼의 <xref:System.Windows.Forms.Control.Click> 이벤트 처리기에 포함된 코드가 실행됩니다.  
   
 > [!NOTE]
 >  대부분의 이벤트는 다른 이벤트와 함께 발생합니다. 예를 들어 <xref:System.Windows.Forms.Control.DoubleClick> 이벤트가 발생하는 과정에서는 <xref:System.Windows.Forms.Control.MouseDown>, <xref:System.Windows.Forms.Control.MouseUp> 및 <xref:System.Windows.Forms.Control.Click> 이벤트도 발생합니다.  
@@ -44,5 +44,6 @@ ms.locfileid: "57710734"
  대리자에는 동적 바인딩 메커니즘이 사용되므로 대리자는 런타임에 서명이 이벤트 처리기의 서명과 일치하는 모든 메서드에 바인딩될 수 있습니다. 이 기능을 사용하면 조건에 따라 bound 메서드를 설정하거나 변경하고 이벤트 처리기를 컨트롤에 동적으로 연결할 수 있습니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [Windows Forms에서 이벤트 처리기 만들기](creating-event-handlers-in-windows-forms.md)
 - [이벤트 처리기 개요](event-handlers-overview-windows-forms.md)

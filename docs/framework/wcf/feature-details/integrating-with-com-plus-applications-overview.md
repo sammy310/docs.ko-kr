@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Windows Communication Foundation, COM+ integration
 - WCF, COM+ integration
 ms.assetid: e481e48f-7096-40eb-9f20-7f0098412941
-ms.openlocfilehash: 708c23f80dc3ed0a5b134295a16a20747d555be4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 7a1747860a081fbbfc54b8657d5db6b57cdf168e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54492340"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59153246"
 ---
 # <a name="integrating-with-com-applications-overview"></a>COM+ 응용 프로그램과 통합 개요
 Windows Communication Foundation (WCF)는 분산된 응용 프로그램을 만들기 위한 풍부한 환경을 제공 합니다. COM +에서 호스팅되는 구성 요소 기반 응용 프로그램 논리를 이미 사용 하는 경우에 다시 작성 하지 않고 기존 논리를 확장 하려면 WCF를 사용할 수 있습니다. 일반 시나리오는 웹 서비스를 통해 기존 COM+ 또는 엔터프라이즈 서비스 비즈니스 논리를 노출하려는 경우입니다.  
@@ -64,7 +64,7 @@ Windows Communication Foundation (WCF)는 분산된 응용 프로그램을 만�
 ### <a name="limited-object-reference-support"></a>제한된 개체 참조 지원  
  배포된 많은 COM+ 구성 요소에서 ADO 레코드 집합 개체의 반환 등 개체를 참조 매개 변수로 사용하므로 COM+ 통합에는 개체 참조 매개 변수에 대한 제한된 지원이 포함됩니다. 지원은 `IPersistStream` COM 인터페이스를 구현하는 개체로 제한됩니다. 여기에는 ADO 레코드 집합 개체가 포함되며 응용 프로그램별 COM 개체에 대해 구현될 수 있습니다.  
   
- ComSvcConfig.exe 도구는이 지원을 사용 하려면 다음을 제공 합니다.는 **allowreferences** 스위치는 일반 메서드 서명 매개 변수를 사용 하지 않도록 설정 하는 개체 참조 매개 변수가 사용 되지 않도록 하 고 도구가 실행 되는지 확인 합니다. . 또한 <`persistableTypes`> 요소의 자식인 <`comContract`> 구성 요소 내에서 매개 변수로 전달할 개체 형식에 이름을 지정하고 식별해야 합니다.  
+ ComSvcConfig.exe 도구는이 지원을 사용 하려면 다음을 제공 합니다.는 **allowreferences** 스위치는 일반 메서드 서명 매개 변수를 사용 하지 않도록 설정 하는 개체 참조 매개 변수가 사용 되지 않도록 하 고 도구가 실행 되는지 확인 합니다. . 매개 변수로 전달 하는 개체 형식 해야 라는 및 내에서 식별할 뿐만 <`persistableTypes`>의 자식 구성 요소는 <`comContract`> 요소입니다.  
   
  이 기능을 사용하는 경우 COM+ 통합 서비스는 `IPersistStream` 인터페이스를 사용하여 개체 인스턴스를 serialize 또는 deserialize합니다. 개체 인스턴스가 `IPersistStream`을 지원하지 않으면 예외가 throw됩니다.  
   
@@ -95,11 +95,12 @@ Windows Communication Foundation (WCF)는 분산된 응용 프로그램을 만�
   
  COM+ 호스팅 및 웹 호스팅 모드의 경우 클라이언트 응용 프로그램에서 서버 프로세스가 클라이언트 사용자를 가장할 수 있도록 허용해야 합니다. 가장 수준을 설정 하 여 WCF 클라이언트에서 수행할 수 있습니다이 <xref:System.Security.Principal.TokenImpersonationLevel.Impersonation>합니다.  
   
- IIS(인터넷 정보 서비스) 또는 WAS(Windows Process Activation Service)에서 HTTP 전송을 사용하는 경우 Httpcfg.exe 도구를 사용하여 전송 엔드포인트 주소를 예약할 수 있습니다. 다른 구성에서는 필요한 서비스로 작동하는 Rogue 서비스로부터 보호하는 것이 중요합니다. Rogue 서비스가 원하는 끝점에서 시작되지 않도록 하려면 올바른 서비스가 NT 서비스로 실행되도록 구성할 수 있습니다. 이렇게 하면 올바른 서비스가 Rogue 서비스 전에 엔드포인트 주소를 클레임할 수 있습니다.  
+ IIS(인터넷 정보 서비스) 또는 WAS(Windows Process Activation Service)에서 HTTP 전송을 사용하는 경우 Httpcfg.exe 도구를 사용하여 전송 엔드포인트 주소를 예약할 수 있습니다. 다른 구성에서는 필요한 서비스로 작동하는 Rogue 서비스로부터 보호하는 것이 중요합니다. Rogue 서비스가 원하는 엔드포인트에서 시작되지 않도록 하려면 올바른 서비스가 NT 서비스로 실행되도록 구성할 수 있습니다. 이렇게 하면 올바른 서비스가 Rogue 서비스 전에 엔드포인트 주소를 클레임할 수 있습니다.  
   
  웹 호스팅 서비스로 구성 된 COM + 역할을 사용 하 여 COM + 응용 프로그램을 노출 하는 경우 "IIS 프로세스 시작 계정" 응용 프로그램의 역할 중 하나에 추가 되어야 합니다. 개체를 사용한 후 완전히 종료할 수 있으려면 일반적으로 이름이 IWAM_machinename인 이 계정을 추가해야 합니다. 계정에 추가 사용 권한을 부여하면 안 됩니다.  
   
  통합 응용 프로그램에서는 COM+ 프로세스 재활용 기능을 사용할 수 없습니다. 프로세스 재활용을 사용하도록 응용 프로그램이 구성되고 구성 요소가 COM+ 호스팅 프로세스로 실행되는 경우 서비스가 시작되지 않습니다. 웹 호스팅 In-Process 모드를 사용하는 서비스는 프로세스 재활용 설정이 적용되지 않으므로 이 요구 사항에 포함되지 않습니다.  
   
 ## <a name="see-also"></a>참고자료
-- [COM 애플리케이션과 통합 개요](../../../../docs/framework/wcf/feature-details/integrating-with-com-applications-overview.md)
+
+- [COM 응용 프로그램과 통합 개요](../../../../docs/framework/wcf/feature-details/integrating-with-com-applications-overview.md)

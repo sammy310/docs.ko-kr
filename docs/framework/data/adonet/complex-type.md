@@ -2,12 +2,12 @@
 title: 복합 형식
 ms.date: 03/30/2017
 ms.assetid: 63efbd23-11d4-4871-bc88-ad01b9837553
-ms.openlocfilehash: 4e18ecf18399f57769dcdfc77192e72ec47f5df3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9d63660c441192bbc9ecb48bb3a86030b46461cc
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54555442"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59160812"
 ---
 # <a name="complex-type"></a>복합 형식
 A *복합 형식* 에서 다양 한 구조적된 속성을 정의 하기 위한 템플릿입니다 [엔터티 형식](../../../../docs/framework/data/adonet/entity-type.md) 또는 다른 복합 형식입니다. 각 템플릿에는 다음 정보가 들어 있습니다.  
@@ -17,7 +17,7 @@ A *복합 형식* 에서 다양 한 구조적된 속성을 정의 하기 위한 
     > [!NOTE]
     >  복합 형식의 이름은 동일한 네임스페이스 내의 엔터티 형식 이름과 달라야 합니다.  
   
--   데이터를 하나 이상의 형태로 [속성](../../../../docs/framework/data/adonet/property.md)합니다. (선택적 요소)  
+-   데이터를 하나 이상의 형태로 [속성](../../../../docs/framework/data/adonet/property.md)합니다. 필요에 따라  
   
     > [!NOTE]
     >  복합 형식의 속성은 다른 복합 형식일 수 있습니다.  
@@ -38,5 +38,6 @@ A *복합 형식* 에서 다양 한 구조적된 속성을 정의 하기 위한 
  [!code-xml[EDM_Example_Model#EntityWithComplexType](../../../../samples/snippets/xml/VS_Snippets_Data/edm_example_model/xml/books3.edmx#entitywithcomplextype)]  
   
 ## <a name="see-also"></a>참고자료
+
 - [엔터티 데이터 모델의 주요 개념](../../../../docs/framework/data/adonet/entity-data-model-key-concepts.md)
 - [엔터티 데이터 모델](../../../../docs/framework/data/adonet/entity-data-model.md)

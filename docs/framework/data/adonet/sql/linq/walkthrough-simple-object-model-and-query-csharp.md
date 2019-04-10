@@ -1,15 +1,15 @@
 ---
-title: '연습: 간단한 개체 모델 및 쿼리 (C#)'
+title: '연습: 간단한 개체 모델 및 쿼리(C#)'
 ms.date: 03/30/2017
 ms.assetid: 419961cc-92d6-45f5-ae8a-d485bdde3a37
-ms.openlocfilehash: 25e23b77f6f5547a5516c6db240537cb00685edc
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: c84666bbf509a071e536faad1c3d647ff74d179a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54686870"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59155131"
 ---
-# <a name="walkthrough-simple-object-model-and-query-c"></a>연습: 간단한 개체 모델 및 쿼리 (C#)
+# <a name="walkthrough-simple-object-model-and-query-c"></a>연습: 간단한 개체 모델 및 쿼리(C#)
 이 연습에서는 간단한 기본 종단 간 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 시나리오에 대해 설명합니다. 샘플 Northwind 데이터베이스의 Customers 테이블을 모델링하는 엔터티 클래스를 만듭니다. 그런 다음 단순 쿼리를 만들어 London에 있는 고객을 나열합니다.  
   
  이 연습은 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 개념을 보여 주기 위한 코드를 중심으로 디자인되었습니다. 일반적으로 [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)]를 사용하여 개체 모델을 만듭니다.  
@@ -87,7 +87,7 @@ ms.locfileid: "54686870"
   
 -   데이터베이스의 기본 키 열을 나타내도록 `CustomerID` 속성을 지정합니다.  
   
--   전용 저장소에 `_CustomerID` 및 `_City` 필드를 지정합니다. 그러면 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]에서 비즈니스 논리가 포함된 공용 접근자를 사용하는 대신 값을 직접 저장하고 검색할 수 있습니다.  
+-   전용 저장소에 `_CustomerID` 및 `_City` 필드를 지정합니다. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 저장 하 여 비즈니스 논리가 포함 된 공용 접근자를 사용 하는 대신 직접 값을 검색 합니다.  
   
 #### <a name="to-represent-characteristics-of-two-database-columns"></a>두 데이터베이스 열의 특징을 나타내려면  
   
@@ -155,4 +155,5 @@ ms.locfileid: "54686870"
  관계 간 쿼리 연습을 수행하려면 방금 완료한 연습의 솔루션을 저장해야 합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [연습으로 학습](../../../../../../docs/framework/data/adonet/sql/linq/learning-by-walkthroughs.md)

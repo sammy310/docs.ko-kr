@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 82db7193-a860-418b-84fc-fff2fdf2e025
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: be5412e323b1c4930d7e17d09faa174885611884
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: d59f1f48be19a21ccc7ee5bb73cebfffc387fec2
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55254979"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59165063"
 ---
 # <a name="attributeimplies-element-net-native"></a>\<AttributeImplies > 요소 (.NET 네이티브)
 포함 특성이 적용되는 코드 요소에 대한 정책을 정의합니다.  
@@ -68,6 +68,7 @@ ms.locfileid: "55254979"
  리플렉션, serialization 및 interop 특성은 모두 선택적 항목이지만 하나 이상 있어야 합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [\<형식 > 요소](../../../docs/framework/net-native/type-element-net-native.md)
 - [런타임 지시문(rd.xml) 구성 파일 참조](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
 - [런타임 지시문 요소](../../../docs/framework/net-native/runtime-directive-elements.md)

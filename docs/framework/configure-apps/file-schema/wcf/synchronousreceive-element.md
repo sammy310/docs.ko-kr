@@ -2,12 +2,12 @@
 title: <synchronousReceive> 요소
 ms.date: 03/30/2017
 ms.assetid: cc070387-3d11-4b02-a952-bc08ad2df05a
-ms.openlocfilehash: f4a8868304ebae9a7ed5e6afbfb14fb2116afc49
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 20390f747c8beaccba1cfea7a9ea0ed366037ecb
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55278476"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59166545"
 ---
 # <a name="synchronousreceive-element"></a>\<synchronousReceive > 요소
 이 구성 요소는 서비스 또는 클라이언트 응용 프로그램에서 메시지 수신을 위한 런타임 동작을 지정하는 데 사용됩니다. 이 구성 요소에는 특성이나 자식 요소가 없습니다.  
@@ -43,5 +43,6 @@ ms.locfileid: "55278476"
  채널 수신기에 기본값(비동기) 대신 동기 수신을 사용하도록 지시하려면 이 동작을 사용합니다. Windows Communication Foundation (WCF)를 수락 된 각 채널에 대해 공급할 새 스레드를 발급 합니다. 채널이 많은 경우 스레드가 부족할 수 있습니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.ServiceModel.Configuration.SynchronousReceiveElement>
 - <xref:System.ServiceModel.Description.SynchronousReceiveBehavior>

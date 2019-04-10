@@ -5,12 +5,12 @@ helpviewer_keywords:
 - WCF [WCF], troubleshooting
 - Windows Communication Foundation [WCF], troubleshooting
 ms.assetid: a9ea7a53-f31a-46eb-806e-898e465a4992
-ms.openlocfilehash: 2d835b055eba6ca66b64555b44cbde64134e743f
-ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
-ms.translationtype: MT
+ms.openlocfilehash: 1d1d0ad559442ecfc595dfb8cdee112a22a77479
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "56442297"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59168133"
 ---
 # <a name="wcf-troubleshooting-quickstart"></a>WCF 문제 해결 퀵 스타트
 이 항목에서는 WCF 클라이언트 및 서비스를 개발하는 동안 발생하는 몇 가지 알려진 문제점을 나열합니다. 발생하는 문제가 이 목록에 없는 경우 서비스에 대한 추적을 구성하는 것이 좋습니다. 추적을 구성하면 추적 파일 뷰어로 보고 서비스 내에서 발생하는 예외에 대한 자세한 정보를 얻을 수 있는 추적 파일이 생성됩니다. 추적 구성에 대 한 자세한 내용은 다음을 참조 하세요. [추적 구성](../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md)합니다. 추적 파일 뷰어에 대 한 자세한 내용은 다음을 참조 하세요. [서비스 추적 뷰어 도구 (SvcTraceViewer.exe)](../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)합니다.  
@@ -23,7 +23,7 @@ ms.locfileid: "56442297"
   
 3.  [서비스와 상호 작용하는 클라이언트의 수가 약 10개를 넘으면 서비스가 새 클라이언트를 거부하기 시작합니다. 이유가 무엇입니까?](../../../docs/framework/wcf/wcf-troubleshooting-quickstart.md#BKMK_q2)  
   
-4.  [WCF 응용 프로그램의 구성 파일이 아닌 다른 위치에서 서비스 구성을 로드할 수 있습니까?](../../../docs/framework/wcf/wcf-troubleshooting-quickstart.md#BKMK_q3)  
+4.  [WCF 애플리케이션의 구성 파일이 아닌 다른 위치에서 서비스 구성을 로드할 수 있습니까?](../../../docs/framework/wcf/wcf-troubleshooting-quickstart.md#BKMK_q3)  
   
 5.  [서비스와 클라이언트는 문제없이 작동하는데 클라이언트가 다른 컴퓨터에 있으면 둘 다 제대로 작동하지 않습니다. 이유가 무엇입니까?](../../../docs/framework/wcf/wcf-troubleshooting-quickstart.md#BKMK_q4)  
   
@@ -39,7 +39,7 @@ ms.locfileid: "56442297"
   
 11. [WCF SOAP 응용 프로그램에서 WCF 웹 HTTP 응용 프로그램을 호출할 때 서비스에 다음 오류를 반환 합니다. 405 메서드가 허용 되지 않습니다](../../../docs/framework/wcf/wcf-troubleshooting-quickstart.md#BK_MK99)  
   
- [기본 주소란 무엇입니까? 엔드포인트 주소와는 어떤 관계가 있습니까?](../../../docs/framework/wcf/wcf-troubleshooting-quickstart.md#BKMK_q10)  
+ [기본 주소란 무엇입니까? 끝점 주소와는 어떤 관계가 있습니까?](../../../docs/framework/wcf/wcf-troubleshooting-quickstart.md#BKMK_q10)  
   
 <a name="bkmk_0"></a>   
 ## <a name="after-installing-windows-7-and-iis-when-i-attempt-to-browse-to-a-wcf-service-i-get-the-following-error-message-http-error-4043--not-found"></a>Windows 7 및 IIS를 설치한 후 WCF 서비스를 탐색 하려고 하는 경우는 다음과 같은 오류 메시지가: HTTP 오류 404.3 – 찾을 수 없음  
@@ -250,4 +250,5 @@ public string Echo(string input)
 ```  
   
 ## <a name="see-also"></a>참고자료
+
 - [Windows 인증 오류 디버깅](../../../docs/framework/wcf/feature-details/debugging-windows-authentication-errors.md)

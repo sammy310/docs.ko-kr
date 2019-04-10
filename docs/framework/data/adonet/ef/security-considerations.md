@@ -2,12 +2,12 @@
 title: 보안 고려 사항(Entity Framework)
 ms.date: 03/30/2017
 ms.assetid: 84758642-9b72-4447-86f9-f831fef46962
-ms.openlocfilehash: 114da13e9939131f4799dc8a3565167f516eb697
-ms.sourcegitcommit: c6f69b0cf149f6b54483a6d5c2ece222913f43ce
+ms.openlocfilehash: 1e3c1f74c1bf30da47fb38b6799bff11090cf31a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2019
-ms.locfileid: "55904140"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59161367"
 ---
 # <a name="security-considerations-entity-framework"></a>보안 고려 사항(Entity Framework)
 이 항목에서는 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] 응용 프로그램의 개발, 배포 및 실행과 관련된 보안 고려 사항에 대해 설명합니다. 또한 보안 [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] 응용 프로그램을 만들기 위한 권장 사항도 따라야 합니다. 자세한 내용은 [보안 개요](../../../../../docs/framework/data/adonet/security-overview.md)합니다.  
@@ -57,7 +57,7 @@ ms.locfileid: "55904140"
  연결이 설정된 후 보안 컨텍스트 외부로 해당 연결을 전달하면 안 됩니다. 예를 들어, 연결을 열 수 있는 권한이 있는 스레드에서 연결을 전역 위치에 저장하면 안 됩니다. 전역 위치에서 연결을 사용할 수 있으면 다른 악성 스레드에서 명시적으로 해당 권한이 부여되지 않아도 열린 연결을 사용할 수 있습니다.  
   
 #### <a name="be-aware-that-logon-information-and-passwords-may-be-visible-in-a-memory-dump"></a>메모리 덤프에서 로그온 정보와 암호를 볼 수도 있습니다.  
- 데이터 소스 로그온 및 암호 정보를 연결 문자열로 제공하는 경우 이 정보는 가비지 수집에서 리소스를 다시 사용할 때까지 메모리에 유지됩니다. 따라서 암호 문자열이 언제 메모리에서 제거되는지 확인할 수 없습니다. 응용 프로그램이 충돌할 경우 메모리 덤프 파일에 중요한 보안 정보가 포함될 수 있으며, 응용 프로그램을 실행하는 사용자와 컴퓨터에 대한 관리자 액세스 권한을 가진 모든 사용자가 메모리 덤프 파일을 볼 수 있습니다. Microsoft SQL Server 연결에 Windows 인증을 사용합니다.  
+ 데이터 소스 로그온 및 암호 정보를 연결 문자열로 제공하는 경우 이 정보는 가비지 컬렉션에서 리소스를 다시 사용할 때까지 메모리에 유지됩니다. 따라서 암호 문자열이 언제 메모리에서 제거되는지 확인할 수 없습니다. 응용 프로그램이 충돌할 경우 메모리 덤프 파일에 중요한 보안 정보가 포함될 수 있으며, 응용 프로그램을 실행하는 사용자와 컴퓨터에 대한 관리자 액세스 권한을 가진 모든 사용자가 메모리 덤프 파일을 볼 수 있습니다. Microsoft SQL Server 연결에 Windows 인증을 사용합니다.  
   
 #### <a name="grant-users-only-the-necessary-permissions-in-the-data-source"></a>데이터 소스에서 필요한 권한만 사용자에게 부여합니다.  
  데이터 소스 관리자는 필요한 권한만 사용자에게 부여해야 합니다. [!INCLUDE[esql](../../../../../includes/esql-md.md)]에서 데이터를 수정하는 DML 문(예: INSERT, UPDATE 또는 DELETE)을 지원하지 않는 경우에도 사용자가 데이터 소스에 대한 연결에 액세스할 수 있습니다. 악의적인 사용자는 이 연결을 사용하여 데이터 소스의 기본 언어로 DML 문을 실행할 수 있습니다.  
@@ -65,13 +65,13 @@ ms.locfileid: "55904140"
 #### <a name="run-applications-with-the-minimum-permissions"></a>최소 권한으로 응용 프로그램을 실행합니다.  
  관리되는 응용 프로그램이 완전 신뢰 권한으로 실행될 수 있도록 하면 [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)]에서 응용 프로그램의 컴퓨터 액세스를 제한하지 않습니다. 이로 인해 응용 프로그램에서 전체 시스템을 손상시키는 보안상 취약한 부분이 생길 수 있습니다. [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)]에서 코드 액세스 보안 및 다른 보안 메커니즘을 사용하려면 부분 신뢰 권한 및 응용 프로그램 작동에 필요한 최소 권한 집합으로 응용 프로그램을 실행해야 합니다. 다음 코드 액세스 권한은 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] 응용 프로그램에 필요한 최소 권한입니다.  
   
--   <xref:System.Security.Permissions.FileIOPermission>: 지정한 메타데이터 파일을 열 수 있는 <xref:System.Security.Permissions.FileIOPermissionAccess.Write> 또는 디렉터리에서 메타데이터 파일을 검색할 수 있는 <xref:System.Security.Permissions.FileIOPermissionAccess.PathDiscovery>  
+-   <xref:System.Security.Permissions.FileIOPermission>: <xref:System.Security.Permissions.FileIOPermissionAccess.Write> 지정 된 메타 데이터 파일을 열려면 또는 <xref:System.Security.Permissions.FileIOPermissionAccess.PathDiscovery> 메타 데이터 파일에 대 한 디렉터리를 검색 합니다.  
   
--   <xref:System.Security.Permissions.ReflectionPermission>: LINQ to Entities 쿼리를 지원할 수 있는 <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess>  
+-   <xref:System.Security.Permissions.ReflectionPermission>: <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess> LINQ to Entities 쿼리에서 지원 하도록 합니다.  
   
--   <xref:System.Transactions.DistributedTransactionPermission>: <xref:System.Security.Permissions.PermissionState.Unrestricted><xref:System.Transactions>에 참여할 수 있는 <xref:System.Transactions.Transaction>  
+-   <xref:System.Transactions.DistributedTransactionPermission>: <xref:System.Security.Permissions.PermissionState.Unrestricted> 참여 하는 <xref:System.Transactions><xref:System.Transactions.Transaction>합니다.  
   
--   <xref:System.Security.Permissions.SecurityPermission>: <xref:System.Security.Permissions.SecurityPermissionFlag.SerializationFormatter> 인터페이스를 사용하여 예외를 serialize할 수 있는 <xref:System.Runtime.Serialization.ISerializable>  
+-   <xref:System.Security.Permissions.SecurityPermission>: <xref:System.Security.Permissions.SecurityPermissionFlag.SerializationFormatter> 를 사용 하 여 예외를 serialize 하는 <xref:System.Runtime.Serialization.ISerializable> 인터페이스입니다.  
   
 -   데이터베이스 연결을 열고 같은 데이터베이스에 대해 명령을 실행할 수 있는 권한 <xref:System.Data.SqlClient.SqlClientPermission> SQL Server 데이터베이스에 대 한 합니다.  
   
@@ -98,7 +98,7 @@ ms.locfileid: "55904140"
   
      쿼리 조건자 및 매개 변수 이름에 사용되는 값에 악성 입력을 제공하여 [!INCLUDE[esql](../../../../../includes/esql-md.md)]에서 SQL 삽입 공격이 수행될 수 있습니다. SQL 삽입 공격의 위험을 방지하려면 [!INCLUDE[esql](../../../../../includes/esql-md.md)] 명령 텍스트와 함께 사용자 입력을 결합하면 안 됩니다.  
   
-     [!INCLUDE[esql](../../../../../includes/esql-md.md)] 쿼리는 해당 리터럴이 허용되는 모든 곳에서 매개 변수를 허용합니다. 외부 에이전트에서 쿼리로 직접 리터럴을 삽입하는 대신 매개 변수가 있는 쿼리를 사용해야 합니다. 사용 하 여 고려해 야 [쿼리 작성기 메서드](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896238(v=vs.100)) 안전 하 게 Entity SQL을 생성 합니다.  
+     [!INCLUDE[esql](../../../../../includes/esql-md.md)] 쿼리는 어디에서 나는 리터럴을 사용할 매개 변수를 수락 합니다. 외부 에이전트에서 쿼리로 직접 리터럴을 삽입하는 대신 매개 변수가 있는 쿼리를 사용해야 합니다. 사용 하 여 고려해 야 [쿼리 작성기 메서드](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896238(v=vs.100)) 안전 하 게 Entity SQL을 생성 합니다.  
   
 -   [!INCLUDE[linq_entities](../../../../../includes/linq-entities-md.md)] 삽입 공격:  
   
@@ -150,18 +150,19 @@ ms.locfileid: "55904140"
  루트 연산자(`~`) 및 `DataDirectory` 대체 문자열이 확인된 값이 응용 프로그램 런타임 동안 일정하게 유지되어야 하는 경우에도 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]에서는 호스트의 이러한 값 수정을 제한하지 않습니다.  
   
 #### <a name="verify-the-path-length-before-deployment"></a>배포 전에 경로 길이를 확인합니다.  
- [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] 응용 프로그램을 배포하기 전에 루트 연산자(~) 및 `DataDirectory` 대체 문자열의 값이 운영 체제의 경로 길이 제한을 초과하지 않는지 확인해야 합니다. [!INCLUDE[vstecado](../../../../../includes/vstecado-md.md)] 데이터 공급자는 경로 길이가 유효한 제한 범위 내에 있는지 확인하지 않습니다.  
+ [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] 응용 프로그램을 배포하기 전에 루트 연산자(~) 및 `DataDirectory` 대체 문자열의 값이 운영 체제의 경로 길이 제한을 초과하지 않는지 확인해야 합니다. [!INCLUDE[vstecado](../../../../../includes/vstecado-md.md)] 데이터 공급자는 경로 길이가 유효한 제한 범위 내 확인 하지 않습니다.  
   
 ## <a name="security-considerations-for-adonet-metadata"></a>ADO.NET 메타데이터의 보안 고려 사항  
  다음 보안 고려 사항은 모델 및 매핑 파일을 생성하고 사용할 때 적용됩니다.  
   
 #### <a name="do-not-expose-sensitive-information-through-logging"></a>로깅을 통해 중요한 데이터를 노출하지 않습니다.  
- [!INCLUDE[vstecado](../../../../../includes/vstecado-md.md)] 메타데이터 서비스 구성 요소는 개인 정보를 기록하지 않습니다. 액세스 제한으로 인해 반환할 수 없는 결과가 있을 경우 데이터베이스 관리 시스템과 파일 시스템에서 중요한 정보가 포함될 수 있는 예외를 발생시키는 대신 0개 결과를 반환해야 합니다.  
+ [!INCLUDE[vstecado](../../../../../includes/vstecado-md.md)] 메타 데이터 서비스 구성 요소는 개인 정보를 기록 하지 않습니다. 액세스 제한으로 인해 반환할 수 없는 결과가 있을 경우 데이터베이스 관리 시스템과 파일 시스템에서 중요한 정보가 포함될 수 있는 예외를 발생시키는 대신 0개 결과를 반환해야 합니다.  
   
 #### <a name="do-not-accept-metadataworkspace-objects-from-untrusted-sources"></a>신뢰할 수 없는 소스의 MetadataWorkspace 개체를 허용하지 않습니다.  
  응용 프로그램에서 신뢰할 수 없는 소스의 <xref:System.Data.Metadata.Edm.MetadataWorkspace> 클래스 인스턴스를 허용하면 안 됩니다. 대신, 명시적으로 작업 영역을 생성하고 해당 소스에서 채워야 합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [ADO.NET 응용 프로그램 보안](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
 - [배포 고려 사항](../../../../../docs/framework/data/adonet/ef/deployment-considerations.md)
 - [마이그레이션 고려 사항](../../../../../docs/framework/data/adonet/ef/migration-considerations.md)

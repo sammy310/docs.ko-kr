@@ -1,18 +1,18 @@
 ---
-title: '방법: 사용자 지정 클라이언트 Id 검증 도구 만들기'
+title: '방법: 사용자 지정 클라이언트 ID 검증 도구 만들기'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: f2d34e43-fa8b-46d2-91cf-d2960e13e16b
-ms.openlocfilehash: 19be92acb16ffb5e98eb39ba36a406d66e58d97b
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: MT
+ms.openlocfilehash: c7aede448fa0a759035380c533f2a9457a534bd1
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58464023"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59165830"
 ---
-# <a name="how-to-create-a-custom-client-identity-verifier"></a>방법: 사용자 지정 클라이언트 Id 검증 도구 만들기
+# <a name="how-to-create-a-custom-client-identity-verifier"></a>방법: 사용자 지정 클라이언트 ID 검증 도구 만들기
 합니다 *identity* 기능 Windows Communication Foundation (WCF)의 클라이언트에 필요한 id 서비스를 미리 지정할 수 있습니다. 서버가 클라이언트에 자신을 인증할 때마다 이 ID와 비교하여 ID가 검사됩니다. (Id 및 작동 방법의 설명에 대 한 참조 [서비스 Id 및 인증](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md).)  
   
  필요한 경우 사용자 지정 ID 검증 도구를 사용하여 확인을 사용자 지정할 수 있습니다. 예를 들어, 서비스 ID 확인 검사를 추가로 수행할 수 있습니다. 이 예에서 사용자 지정 ID 검증 도구는 서버에서 반환되는 X.509 인증서에서 추가 클레임을 검사합니다. 샘플 응용 프로그램을 참조 하세요 [Service Identity 샘플](../../../../docs/framework/wcf/samples/service-identity-sample.md)합니다.  
@@ -82,8 +82,9 @@ ms.locfileid: "58464023"
  [!code-vb[c_HowToSetCustomClientIdentity#6](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_howtosetcustomclientidentity/vb/source.vb#6)]  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.ServiceModel.ServiceAuthorizationManager>
 - <xref:System.ServiceModel.EndpointIdentity>
 - <xref:System.ServiceModel.Security.IdentityVerifier>
-- [서비스 ID 샘플](../../../../docs/framework/wcf/samples/service-identity-sample.md)
+- [Service Identity 샘플](../../../../docs/framework/wcf/samples/service-identity-sample.md)
 - [권한 부여 정책](../../../../docs/framework/wcf/samples/authorization-policy.md)

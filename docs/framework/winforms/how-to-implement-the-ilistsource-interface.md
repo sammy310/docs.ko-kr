@@ -8,12 +8,12 @@ helpviewer_keywords:
 - data binding [Windows Forms], implementing
 - IListSource interface
 ms.assetid: 63ce27aa-2e23-4fbd-8228-0c1726f6c421
-ms.openlocfilehash: ee63d092eb14bd5c8ab928852e02d30e653baf48
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: bd4e554b7e4be51847496307b50be3084d0115d5
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57713178"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59159785"
 ---
 # <a name="how-to-implement-the-ilistsource-interface"></a>방법: IListSource 인터페이스 구현
 구현 된 <xref:System.ComponentModel.IListSource> 인터페이스를 구현 하지 않는 바인딩 가능한 클래스를 만들려면 <xref:System.Collections.IList> 않지만 다른 위치에서 목록을 제공 합니다.  
@@ -39,6 +39,7 @@ ms.locfileid: "57713178"
 -   System.Drawing 및 System.Windows.Forms 어셈블리에 대한 참조  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.ComponentModel.IListSource>
 - <xref:System.ComponentModel.ITypedList>
 - <xref:System.ComponentModel.BindingList%601>

@@ -11,12 +11,12 @@ helpviewer_keywords:
 - MenuStrip control [Windows Forms], arranging items
 - ToolStripMenuItems [Windows Forms], cutting and pasting
 ms.assetid: cab9e03e-4edd-4c25-b3e3-bd1edc602bd9
-ms.openlocfilehash: 50b5fd16780147ad7592035a901d993495dcb878
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 70387a4c43b78f93a46f601eb35b7dca2083b01f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57708953"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59168339"
 ---
 # <a name="how-to-move-toolstripmenuitems"></a>방법: ToolStripMenuItems 이동
 디자인 타임으로 이동할 수 있습니다 최상위 메뉴 전체와 해당 메뉴 항목을 다른 위치로 <xref:System.Windows.Forms.MenuStrip>합니다. 최상위 메뉴 간에 개별 메뉴 항목을 이동 하거나 메뉴에서 메뉴 항목의 위치를 변경할 수도 있습니다.  
@@ -71,6 +71,7 @@ ms.locfileid: "57708953"
      잘라낸 메뉴 항목이 선택한 메뉴 항목 뒤에 삽입 됩니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Windows.Forms.MenuStrip>
 - <xref:System.Windows.Forms.ToolStripMenuItem>
 - [MenuStrip 컨트롤 개요](menustrip-control-overview-windows-forms.md)

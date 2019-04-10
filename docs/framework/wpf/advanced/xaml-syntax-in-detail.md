@@ -29,18 +29,16 @@ helpviewer_keywords:
 - attribute syntax [XAML]
 - XAML [WPF], property element syntax
 ms.assetid: 67cce290-ca26-4c41-a797-b68aabc45479
-ms.openlocfilehash: ecea2575503ad8fe4ff8a190a417bae75a7b31f7
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: MT
+ms.openlocfilehash: 98ca530da28591fec23a5036b421d02b393e83b5
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57367962"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59149307"
 ---
 # <a name="xaml-syntax-in-detail"></a>XAML 구문 정보
 이 항목에서는 XAML 구문 요소에 설명 하는 데 사용 되는 용어를 정의 합니다. 이러한 용어는 특히 및 XAML 또는 System.Xaml 수준에서 XAML 언어 지원을 사용 하도록 설정 하는 기본 XAML 개념을 사용 하는 다른 프레임 워크에 대 한 WPF 설명서에 대 한 모두이 문서의 나머지 부분에서 자주 사용 됩니다. 이 항목에서는 확장 항목에 도입 하는 기본 용어 [XAML 개요 (WPF)](xaml-overview-wpf.md)합니다.  
-  
 
-  
 <a name="the_xaml_language_specification"></a>   
 ## <a name="the-xaml-language-specification"></a>XAML 언어 사양  
  또한 여기에 정의 된 XAML 구문 용어 정의 되었거나 XAML 언어 사양 내에서 참조 합니다. XAML은 XML 기반 언어 및 또는 XML 구조적 규칙에 따라 확장 합니다. 일부의 용어를 공유 하거나 XML 언어 또는 XML 문서 개체 모델을 설명 하는 경우 일반적으로 사용 되는 용어를 기반으로 합니다.  
@@ -316,8 +314,9 @@ ms.locfileid: "57367962"
  마찬가지로 하지만 *typeName*. *memberName* 특성에 대 한 폼 *baseTypeName*. *memberName* 는 태그에서 잘못 된 스타일 및 사용 하지 않아야 합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [XAML 개요(WPF)](xaml-overview-wpf.md)
-- [XAML Namespace (x:) 언어 기능](../../xaml-services/xaml-namespace-x-language-features.md)
+- [XAML 네임스페이스(x:) 언어 기능](../../xaml-services/xaml-namespace-x-language-features.md)
 - [WPF XAML 확장](wpf-xaml-extensions.md)
 - [종속성 속성 개요](dependency-properties-overview.md)
 - [TypeConverter 및 XAML](typeconverters-and-xaml.md)

@@ -2,12 +2,12 @@
 title: 사용자 지정 추적
 ms.date: 03/30/2017
 ms.assetid: 2d191c9f-62f4-4c63-92dd-cda917fcf254
-ms.openlocfilehash: a03c36c2f060651dd7b8b9e9aff103ad2a600a4b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: ca53d74f31059532118f3b5d96760a25ed72b3d5
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54523738"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59161847"
 ---
 # <a name="custom-tracking"></a>사용자 지정 추적
 이 샘플에서는 사용자 지정 추적 참가자를 만들고 추적 데이터의 내용을 콘솔에 쓰는 방법을 보여 줍니다. 또한 사용자 정의 데이터로 채워진 <xref:System.Activities.Tracking.CustomTrackingRecord> 개체를 내보내는 방법도 보여 줍니다. 콘솔 기반 추적 참가자는 코드로 만든 추적 프로필 개체를 사용하여 워크플로에서 내보낸 <xref:System.Activities.Tracking.TrackingRecord> 개체를 필터링합니다.
@@ -18,7 +18,7 @@ ms.locfileid: "54523738"
 |구성 요소|설명|
 |---------------|-----------------|
 |추적 런타임|추적 레코드를 내보낼 인프라를 제공합니다.|
-|추적 참가자|추적 레코드를 사용합니다. [!INCLUDE[netfx40_short](../../../../includes/netfx40-short-md.md)]에는 추적 레코드를 ETW(Windows용 이벤트 추적) 이벤트로 기록하는 추적 참가자가 제공됩니다.|
+|추적 참가자|추적 레코드를 사용합니다. [!INCLUDE[netfx40_short](../../../../includes/netfx40-short-md.md)] 이벤트 추적에 대 한 Windows (ETW) 이벤트로 추적 레코드를 기록 하는 추적 참가자가 제공 됩니다.|
 |추적 프로필|추적 참가자가 워크플로 인스턴스에서 내보낸 추적 레코드의 하위 집합을 구독할 수 있도록 하는 필터링 메커니즘입니다.|
 
  다음 표에서는 워크플로 런타임에서 내보내는 추적 레코드에 대해 자세히 설명합니다.
@@ -149,4 +149,5 @@ context.Track(customRecord);
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Tracking\CustomTracking`  
   
 ## <a name="see-also"></a>참고자료
+
 - [AppFabric 모니터링 샘플](https://go.microsoft.com/fwlink/?LinkId=193959)

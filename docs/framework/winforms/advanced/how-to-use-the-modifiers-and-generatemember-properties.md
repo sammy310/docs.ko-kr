@@ -15,12 +15,12 @@ helpviewer_keywords:
 - form inheritance
 - Windows Forms, inheritance
 ms.assetid: 3381a5e4-e1a3-44e2-a765-a0b758937b85
-ms.openlocfilehash: 277d2bdebc1d3b85efb70510b8acd34ed3a91087
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 612d323305c2dbd4698c6d687fb19ec36983bde4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57710799"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59143912"
 ---
 # <a name="how-to-use-the-modifiers-and-generatemember-properties"></a>방법: Modifiers 및 GenerateMember 속성 사용
 디자인 환경에서 두 개의 속성을 제공 구성 요소를 Windows Form에 넣을 때: `GenerateMember` 고 `Modifiers`입니다. `GenerateMember` 속성 Windows Forms 디자이너 구성 요소에 대 한 멤버 변수를 생성 하는 경우를 지정 합니다. `Modifiers` 속성은 해당 멤버 변수에 할당 하는 액세스 한정자입니다. 경우의 값을 `GenerateMember` 속성은 `false`의 값은 `Modifiers` 속성이 적용 되지 않습니다.  
@@ -60,7 +60,8 @@ ms.locfileid: "57710799"
 >  기본적으로 Windows Forms 디자이너를 할당 합니다 `private` (`Friend` Visual Basic의) 처럼 컨테이너 컨트롤에는 한정자 <xref:System.Windows.Forms.Panel>합니다. 경우 베이스가 <xref:System.Windows.Forms.UserControl> 또는 <xref:System.Windows.Forms.Form> 컨테이너 컨트롤에 상속 된 컨트롤 및 폼에 새 자식 항목을 허용 하지 것입니다. 솔루션은 기본 컨테이너 컨트롤의 한정자를 변경할 `protected` 또는 `public`합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Windows.Forms.Button>
-- [Windows Forms 시각적 개체 상속](windows-forms-visual-inheritance.md)
-- [연습: 시각적 상속 설명](walkthrough-demonstrating-visual-inheritance.md)
+- [Windows Forms 시각적 상속](windows-forms-visual-inheritance.md)
+- [연습: 시각적 상속 데모](walkthrough-demonstrating-visual-inheritance.md)
 - [방법: Windows Forms 상속](how-to-inherit-windows-forms.md)

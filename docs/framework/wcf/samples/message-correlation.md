@@ -2,12 +2,12 @@
 title: 메시지 상관 관계
 ms.date: 03/30/2017
 ms.assetid: 3f62babd-c991-421f-bcd8-391655c82a1f
-ms.openlocfilehash: f60d34ba7348b75f10be326319738fd1555d42df
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 8db7793064cb94b21feee73353b9ab5e40290fb9
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54520661"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59157815"
 ---
 # <a name="message-correlation"></a>메시지 상관 관계
 이 샘플에서는 메시지 큐 (MSMQ) 응용 프로그램을 Windows Communication Foundation (WCF) 서비스에 MSMQ 메시지를 보낼 수 있습니다 하는 방법 및 메시지를 요청/응답 시나리오의 발신자와 수신자 응용 프로그램 간에 상호 연결 하는 방법을 보여 줍니다. 이 샘플에서는 msmqIntegrationBinding 바인딩을 사용합니다. 이 경우 서비스는 자체 호스팅 콘솔 응용 프로그램으로, 이를 사용하여 대기 중인 메시지를 받는 서비스를 확인할 수 있습니다. k  
@@ -313,5 +313,6 @@ static void DisplayOrderStatus()
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\MSMQIntegration\MessageCorrelation`  
   
 ## <a name="see-also"></a>참고자료
+
 - [WCF의 큐](../../../../docs/framework/wcf/feature-details/queuing-in-wcf.md)
-- [메시지 큐](https://go.microsoft.com/fwlink/?LinkId=94968)
+- [메시지 큐(영문 페이지일 수 있음)](https://go.microsoft.com/fwlink/?LinkId=94968)

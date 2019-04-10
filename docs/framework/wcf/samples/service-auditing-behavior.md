@@ -2,12 +2,12 @@
 title: Service Auditing Behavior
 ms.date: 03/30/2017
 ms.assetid: 59bf0cda-e496-4418-a3a1-2f0f6e85f8ce
-ms.openlocfilehash: e92f50005870b1c02571cebe0f532bd1810a40dc
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 5fdc213551b5a7b3474321551d7c2cb149ca978d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54574952"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59151426"
 ---
 # <a name="service-auditing-behavior"></a>Service Auditing Behavior
 이 샘플에서는 서비스 작업 중에 서비스 이벤트 감사를 활성화하기 위해 <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior>를 사용하는 방법을 보여 줍니다. 이 샘플은 기반 합니다 [Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md)합니다. 서비스와 클라이언트를 사용 하 여 구성 된 합니다 [ \<wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md)합니다. `mode` 특성을 [ \<보안 >](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md) 로 설정 되었습니다 `Message` 및 `clientCredentialType` 로 설정 된 `Windows`합니다. 이 샘플에서 클라이언트는 콘솔 응용 프로그램(.exe)이고 서비스는 IIS(인터넷 정보 서비스)를 통해 호스트됩니다.  
@@ -34,7 +34,7 @@ ms.locfileid: "54574952"
   
  샘플을 실행하면 작업 요청 및 응답이 클라이언트 콘솔 창에 표시됩니다. 클라이언트를 종료하려면 콘솔 창에서 Enter 키를 누릅니다.  
   
- 결과 감사 로그는 이벤트 뷰어를 실행하여 볼 수 있습니다. 기본적으로 Windows XP에서는 응용 프로그램 로그에서 감사 이벤트를 볼 수 있지만 Windows Server 2003 및 Windows Vista에서는 보안 로그에서 감사 이벤트를 볼 수 있습니다. Windows Server 2008 및 Windows 7에서는 응용 프로그램 및 서비스 로그에서 감사 이벤트를 볼 수 있습니다. 감사 이벤트의 위치를 설정 하 여 지정할 수는 `auditLogLocation` "Application" 또는 "보안" 특성입니다. 자세한 내용은 [방법: 보안 이벤트 감사](../../../../docs/framework/wcf/feature-details/how-to-audit-wcf-security-events.md)합니다. 이벤트가 보안 로그에 기록되면 "Success" 및 "Failure"에 대해 LocalSecurityPolicy-> Enable Object Access를 설정해야 합니다.  
+ 결과 감사 로그는 이벤트 뷰어를 실행하여 볼 수 있습니다. 기본적으로 Windows XP에서는 응용 프로그램 로그에서 감사 이벤트를 볼 수 있지만 Windows Server 2003 및 Windows Vista에서는 보안 로그에서 감사 이벤트를 볼 수 있습니다. Windows Server 2008 및 Windows 7에서는 응용 프로그램 및 서비스 로그에서 감사 이벤트를 볼 수 있습니다. 감사 이벤트의 위치를 설정 하 여 지정할 수는 `auditLogLocation` "Application" 또는 "보안" 특성입니다. 자세한 내용은 [방법: 보안 이벤트 감사](../../../../docs/framework/wcf/feature-details/how-to-audit-wcf-security-events.md)합니다. Enable Object Access "Success" 및 "Failure"에 대 한 설정 해야 localsecuritypolicy-> 보안 로그에 이벤트가 기록 됩니다.  
   
  이벤트 로그를 확인하면 감사 이벤트의 소스는 "ServiceModel Audit 3.0.0.0"입니다. 메시지 인증 감사 레코드 경우 범주는 "MessageAuthentication" 이지만 서비스 권한 부여 감사 레코드 "ServiceAuthorization" 범주  
   
@@ -51,5 +51,6 @@ ms.locfileid: "54574952"
 3.  단일 컴퓨터 또는 다중 컴퓨터 구성에서 샘플을 실행 하려면의 지침을 따릅니다 [Windows Communication Foundation 샘플 실행](../../../../docs/framework/wcf/samples/running-the-samples.md)합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [감사](../../../../docs/framework/wcf/feature-details/auditing-security-events.md)
 - [방법: 보안 이벤트 감사](../../../../docs/framework/wcf/feature-details/how-to-audit-wcf-security-events.md)

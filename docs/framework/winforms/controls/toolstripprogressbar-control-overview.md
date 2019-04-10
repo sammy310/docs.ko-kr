@@ -8,12 +8,12 @@ helpviewer_keywords:
 - progress controls [Windows Forms]
 - ToolStripProgressBar control [Windows Forms], about ToolStripProgressBar control
 ms.assetid: ec3ab522-5fe4-4b4d-a551-bc19e84f4774
-ms.openlocfilehash: 57a8c61c71fa17e1d3df309007823eab76d9efb1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 380dabe2468ae3c7d9d7303498823d847a8d119e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54528630"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59162113"
 ---
 # <a name="toolstripprogressbar-control-overview"></a>ToolStripProgressBar 컨트롤 개요
 합니다 <xref:System.Windows.Forms.ToolStripProgressBar> 래프팅 및 모든 렌더링 기능이 결합 <xref:System.Windows.Forms.ToolStrip> 일반적인 프로세스 추적 기능을 사용 하 여 컨트롤입니다. <xref:System.Windows.Forms.ToolStripProgressBar> 가장 일반적으로 호스팅하 <xref:System.Windows.Forms.StatusStrip>에 의해서도 자주를 <xref:System.Windows.Forms.ToolStrip>합니다.  
@@ -24,12 +24,13 @@ ms.locfileid: "54528630"
   
 |이름|설명|  
 |----------|-----------------|  
-|<xref:System.Windows.Forms.ToolStripProgressBar.MarqueeAnimationSpeed%2A>|각 <xref:System.Windows.Forms.ProgressBarStyle.Marquee> 표시 업데이트 사이의 지연 시간(밀리초)을 나타내는 값을 가져오거나 설정합니다.|  
-|<xref:System.Windows.Forms.ProgressBar.Maximum%2A>|이 <xref:System.Windows.Forms.ToolStripProgressBar>에 대해 정의된 범위의 상한을 가져오거나 설정합니다.|  
-|<xref:System.Windows.Forms.ToolStripProgressBar.Minimum%2A>|이 <xref:System.Windows.Forms.ToolStripProgressBar>에 대해 정의된 범위의 하한을 가져오거나 설정합니다.|  
+|<xref:System.Windows.Forms.ToolStripProgressBar.MarqueeAnimationSpeed%2A>|각 간격을 나타내는 값을 가져오거나 설정 합니다. <xref:System.Windows.Forms.ProgressBarStyle.Marquee> 시간 (밀리초)에 업데이트를 표시 합니다.|  
+|<xref:System.Windows.Forms.ProgressBar.Maximum%2A>|이 대해 정의 된 범위의 상한 값을 가져오거나 설정 합니다. <xref:System.Windows.Forms.ToolStripProgressBar>합니다.|  
+|<xref:System.Windows.Forms.ToolStripProgressBar.Minimum%2A>|이 대해 정의 된 범위의 하한값을 가져오거나 설정 합니다. <xref:System.Windows.Forms.ToolStripProgressBar>합니다.|  
 |<xref:System.Windows.Forms.ToolStripProgressBar.Style%2A>|스타일을 가져오거나는 <xref:System.Windows.Forms.ToolStripProgressBar> 사용 하 여 작업의 진행률을 표시 합니다.|  
-|<xref:System.Windows.Forms.ToolStripProgressBar.Value%2A>|<xref:System.Windows.Forms.ToolStripProgressBar>의 현재 값을 가져오거나 설정합니다.|  
-|<xref:System.Windows.Forms.ToolStripProgressBar.PerformStep%2A>|진행률 표시줄의 현재 위치를 <xref:System.Windows.Forms.ToolStripProgressBar.Step%2A> 속성의 크기만큼 진행합니다.|  
+|<xref:System.Windows.Forms.ToolStripProgressBar.Value%2A>|현재 값을 가져오거나 설정 합니다.는 <xref:System.Windows.Forms.ToolStripProgressBar>합니다.|  
+|<xref:System.Windows.Forms.ToolStripProgressBar.PerformStep%2A>|양을 기준으로 진행률 표시줄의 현재 위치를 앞으로 이동 합니다 <xref:System.Windows.Forms.ToolStripProgressBar.Step%2A> 속성입니다.|  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Windows.Forms.ToolStripProgressBar>

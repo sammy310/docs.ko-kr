@@ -2,12 +2,12 @@
 title: 명명된 형식 생성자(Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 549dea04-d93d-4c87-a292-f81b1598dbfd
-ms.openlocfilehash: f6577b49c299e1497da2692daef6d22cba1473b2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 26fb2839f0cc7d645f6ce6daea2d27e35868b63c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54626703"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59168794"
 ---
 # <a name="named-type-constructor-entity-sql"></a>명명된 형식 생성자(Entity SQL)
 엔터티 형식이나 복합 형식과 같은 개념적 모델 명목 형식의 인스턴스를 만드는 데 사용됩니다.  
@@ -47,7 +47,7 @@ ms.locfileid: "54626703"
   
  `MyModel.Person("Bill", MyModel.AddressInfo('My street address', 'Seattle', 'WA', MyModel.ZipCode('98118', '4567')))`  
   
- 다음 예제에서는 복합 형식의 속성을 null로 초기화하는 방법을 보여 줍니다.`MyModel.ZipCode(‘98118’, null)`  
+ 다음 예제에서는 null로 복합 형식의 속성을 초기화 하는 방법을 보여 줍니다.`MyModel.ZipCode(‘98118’, null)`  
   
 ## <a name="example"></a>예제  
  다음 Entity SQL 쿼리에서는 명명된 형식 생성자를 사용하여 개념적 모델 형식의 인스턴스를 만듭니다. 쿼리는 AdventureWorks Sales 모델을 기반으로 합니다. 이 쿼리를 컴파일하고 실행하려면 다음 단계를 수행하세요.  
@@ -59,5 +59,6 @@ ms.locfileid: "54626703"
  [!code-csharp[DP EntityServices Concepts 2#NAMED_TYPE_CONSTRUCTOR](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#named_type_constructor)]  
   
 ## <a name="see-also"></a>참고자료
+
 - [형식 생성](../../../../../../docs/framework/data/adonet/ef/language-reference/constructing-types-entity-sql.md)
 - [엔터티 SQL 참조](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)

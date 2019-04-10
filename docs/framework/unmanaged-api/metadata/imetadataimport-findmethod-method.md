@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 857ea06ad8aba2a6de87bdf670ad0462a2f7dde1
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 28aa8313e7ba0c071187d0f1f6d78431b16fc005
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57487289"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59164803"
 ---
 # <a name="imetadataimportfindmethod-method"></a>IMetaDataImport::FindMethod 메서드
 토큰을 가져옵니다 methoddef 묶여 있는 메서드에 대 한 지정 된 <xref:System.Type> 지정 된 이름 및 메타 데이터 서명을 하 고 있습니다.  
@@ -72,6 +72,7 @@ HRESULT FindMethod (
  **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Reflection.MethodInfo>
 - [IMetaDataImport 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
 - [IMetaDataImport2 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

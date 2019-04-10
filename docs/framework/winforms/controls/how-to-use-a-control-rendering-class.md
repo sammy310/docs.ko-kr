@@ -10,12 +10,12 @@ helpviewer_keywords:
 - visual themes [Windows Forms], applying to Windows Forms controls
 - visual styles [Windows Forms], rendering Windows Forms controls
 ms.assetid: c0125e34-cd74-4c35-818c-3e40f462b0a3
-ms.openlocfilehash: d9da43b1686f416cf2149cef07665b0a726c3b0c
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 7115c227cb24cf12a50073d0dc587524abf0cbb9
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57723155"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59163581"
 ---
 # <a name="how-to-use-a-control-rendering-class"></a>방법: 컨트롤 렌더링 클래스 사용
 이 예제를 사용 하는 방법에 설명 합니다 <xref:System.Windows.Forms.ComboBoxRenderer> 드롭다운 화살표는 콤보 상자 컨트롤을 렌더링 하는 클래스입니다. 이 예제에서는 구성의 <xref:System.Windows.Forms.Control.OnPaint%2A> 간단한 사용자 지정 컨트롤의 메서드. <xref:System.Windows.Forms.ComboBoxRenderer.IsSupported%2A?displayProperty=nameWithType> 속성 비주얼 스타일이 응용 프로그램 창의 클라이언트 영역에서 사용 되는지 여부를 결정 하는 데 사용 됩니다. 비주얼 스타일을 활성화 하는 경우 해당 <xref:System.Windows.Forms.ComboBoxRenderer.DrawDropDownButton%2A?displayProperty=nameWithType> 메서드는 비주얼 스타일;를 사용 하 여 드롭다운 화살표를 렌더링 합니다이 고, 그렇지는 <xref:System.Windows.Forms.ControlPaint.DrawComboButton%2A?displayProperty=nameWithType> 메서드 클래식 Windows 스타일의 드롭다운 화살표를 렌더링 합니다.  
@@ -35,4 +35,5 @@ ms.locfileid: "57723155"
 -   에 대 한 참조를 <xref:System?displayProperty=nameWithType>, <xref:System.Drawing?displayProperty=nameWithType>를 <xref:System.Windows.Forms?displayProperty=nameWithType>, 및 <xref:System.Windows.Forms.VisualStyles?displayProperty=nameWithType> 네임 스페이스입니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [비주얼 스타일을 사용하여 컨트롤 렌더링](rendering-controls-with-visual-styles.md)

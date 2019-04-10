@@ -3,12 +3,12 @@ title: 내 첫 번째 클레임 인식 ASP.NET 웹 애플리케이션 구축
 ms.date: 03/30/2017
 ms.assetid: 3ee8ee7f-caba-4267-9343-e313fae2876d
 author: BrucePerlerMS
-ms.openlocfilehash: 2fd5b36ffe26632240955307eb522cecdf4f1e73
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
-ms.translationtype: MT
+ms.openlocfilehash: b6be3d84a292e5f14e1cdc70a181e8fd2c065a68
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58838133"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59151374"
 ---
 # <a name="building-my-first-claims-aware-aspnet-web-application"></a>내 첫 번째 클레임 인식 ASP.NET 웹 애플리케이션 구축
 ## <a name="applies-to"></a>적용 대상  
@@ -41,11 +41,12 @@ ms.locfileid: "58838133"
   
  WIF를 사용하여 첫 번째 클레임 인식 ASP.NET 응용 프로그램을 작성하려면 다음 중 하나의 지침을 따르십시오.  
   
--   [방법: WIF를 사용 하 여 클레임 인식 ASP.NET MVC 웹 응용 프로그램 빌드](../../../docs/framework/security/how-to-build-claims-aware-aspnet-mvc-web-app-using-wif.md)  
+-   [방법: WIF를 사용하여 클레임 인식 ASP.NET MVC 웹 애플리케이션 빌드](../../../docs/framework/security/how-to-build-claims-aware-aspnet-mvc-web-app-using-wif.md)  
   
--   [방법: WIF를 사용 하 여 클레임 인식 ASP.NET Web Forms 응용 프로그램 빌드](../../../docs/framework/security/how-to-build-claims-aware-aspnet-web-forms-app-using-wif.md)  
+-   [방법: WIF를 사용하여 클레임 인식 ASP.NET Web Forms 애플리케이션 빌드](../../../docs/framework/security/how-to-build-claims-aware-aspnet-web-forms-app-using-wif.md)  
   
--   [방법: 폼 기반 인증을 사용 하 여 클레임 인식 ASP.NET 응용 프로그램 빌드](../../../docs/framework/security/claims-aware-aspnet-app-forms-authentication.md)  
+-   [방법: 양식 기반 인증을 사용하여 클레임 인식 ASP.NET 애플리케이션 빌드](../../../docs/framework/security/claims-aware-aspnet-app-forms-authentication.md)  
   
 ## <a name="see-also"></a>참고자료
+
 - [WIF 시작](../../../docs/framework/security/getting-started-with-wif.md)

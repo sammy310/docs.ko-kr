@@ -2,12 +2,12 @@
 title: 설치 문제 해결
 ms.date: 03/30/2017
 ms.assetid: 1644f885-c408-4d5f-a5c7-a1a907bc8acd
-ms.openlocfilehash: 69cc6bce08f3d98d3d63570005582bc6f50240bf
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 41e266ba5b54bfb37313f9588515f7ae9cc6f79d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54532554"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59153077"
 ---
 # <a name="troubleshooting-setup-issues"></a>설치 문제 해결
 이 항목에서는 Windows Communication Foundation (WCF)가 설치 문제를 해결 하는 방법을 설명 합니다.  
@@ -74,4 +74,5 @@ aspnet_regiis.exe -i -enable
 ```  
   
 ## <a name="see-also"></a>참고자료
+
 - [설치 지침](../../../docs/framework/wcf/samples/set-up-instructions.md)

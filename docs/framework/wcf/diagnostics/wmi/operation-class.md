@@ -1,15 +1,15 @@
 ---
-title: Operation 클래스
+title: 작업 클래스
 ms.date: 03/30/2017
 ms.assetid: b19d1496-ef06-4d0c-b2ae-e728ec00cca0
-ms.openlocfilehash: 9453d67854bb8439891661b07e3ab3aa373e23eb
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9696a7f026e54afacb5ccbfa8703a2ba617a9f3d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54668303"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59165082"
 ---
-# <a name="operation-class"></a>Operation 클래스
+# <a name="operation-class"></a>작업 클래스
 작업  
   
 ## <a name="syntax"></a>구문  
@@ -129,4 +129,5 @@ class Operation
 |네임스페이스|root\ServiceModel에 정의되어 있습니다.|  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.ServiceModel.Description.OperationDescription>

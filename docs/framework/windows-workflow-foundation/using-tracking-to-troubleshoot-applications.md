@@ -2,12 +2,12 @@
 title: 추적을 사용하여 응용 프로그램 문제 해결
 ms.date: 03/30/2017
 ms.assetid: 8851adde-c3c2-4391-9523-d8eb831490af
-ms.openlocfilehash: 1ed95a26f682fcdb609b410251fdb3f8b647016a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 62c46ca36c89c023bfc775eb76ba454c9a4162c0
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54734424"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59142066"
 ---
 # <a name="using-tracking-to-troubleshoot-applications"></a>추적을 사용하여 응용 프로그램 문제 해결
 Windows WF (Workflow Foundation)를 사용 하면 Windows Workflow Foundation 응용 프로그램 또는 서비스의 실행 세부 정보를 제공 하려면 워크플로 관련 정보를 추적할 수 있습니다. Windows Workflow Foundation 호스트는 워크플로 인스턴스를 실행 하는 동안 워크플로 이벤트를 캡처할 수 있습니다. 워크플로에서 오류나 예외가 발생 하면 처리 문제 해결 세부 정보를 추적 하는 Windows Workflow Foundation을 사용할 수 있습니다.  
@@ -52,5 +52,6 @@ Windows WF (Workflow Foundation)를 사용 하면 Windows Workflow Foundation �
  ETW 추적 참가자를 사용하여 추적을 활성화하면 오류 이벤트가 ETW 세션으로 내보내집니다. Event Viewer 이벤트 뷰어를 사용하여 이벤트를 볼 수 있습니다. 이 노드 아래에서 찾을 수 있습니다 **이벤트 뷰어-> 응용 프로그램 및 서비스 로그-> Microsoft-> Windows 응용 프로그램 서버-응용 프로그램->** 분석 채널의 합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [Windows Server App Fabric 모니터링](https://go.microsoft.com/fwlink/?LinkId=201273)
 - [App Fabric을 사용 하 여 응용 프로그램 모니터링](https://go.microsoft.com/fwlink/?LinkId=201275)

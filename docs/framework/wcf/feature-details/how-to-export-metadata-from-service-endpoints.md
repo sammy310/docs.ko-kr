@@ -1,21 +1,21 @@
 ---
-title: '방법: 서비스 끝점에서 메타 데이터 내보내기'
+title: '방법: 서비스 엔드포인트에서 메타데이터 내보내기'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: b6c4dfd0-f270-43ec-961a-e16eb6af2f2c
-ms.openlocfilehash: 86ad062f7b7ee3dd2927f8b5b103adfd719a963d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: bd6543e1e22b7a2cb0b870fe2fdb34011f0d2a4f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54529996"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59162791"
 ---
-# <a name="how-to-export-metadata-from-service-endpoints"></a>방법: 서비스 끝점에서 메타 데이터 내보내기
+# <a name="how-to-export-metadata-from-service-endpoints"></a>방법: 서비스 엔드포인트에서 메타데이터 내보내기
 이 항목에서는 서비스 엔드포인트로부터 메타데이터를 내보내는 방법에 대해 설명합니다.  
   
-### <a name="to-export-metadata-from-service-endpoints"></a>서비스 끝점에서 메타데이터를 내보내려면  
+### <a name="to-export-metadata-from-service-endpoints"></a>서비스 엔드포인트에서 메타데이터를 내보내려면  
   
 1.  새 Visual Studio Console App Project를 만듭니다. 다음 단계에 표시된 코드를 생성된 Program.cs 파일의 main() 메서드에 추가합니다.  
   
@@ -56,6 +56,7 @@ ms.locfileid: "54529996"
  Program.cs를 컴파일할 때에는 System.ServiceModel.dll을 참조하세요.  
   
 ## <a name="see-also"></a>참고자료
+
 - [메타데이터 아키텍처 개요](../../../../docs/framework/wcf/feature-details/metadata-architecture-overview.md)
 - [메타데이터 사용](../../../../docs/framework/wcf/feature-details/using-metadata.md)
-- [끝점: 주소, 바인딩 및 계약](../../../../docs/framework/wcf/feature-details/endpoints-addresses-bindings-and-contracts.md)
+- [엔드포인트: 주소, 바인딩 및 계약](../../../../docs/framework/wcf/feature-details/endpoints-addresses-bindings-and-contracts.md)

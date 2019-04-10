@@ -11,12 +11,12 @@ helpviewer_keywords:
 - linear gradient brush [WPF]
 - typography [WPF], outline effects
 ms.assetid: 4aa3cf6e-1953-4f26-8230-7c1409e5f28d
-ms.openlocfilehash: 5de1068401dac61c5de5b86604da9417e18a94ae
-ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
+ms.openlocfilehash: 237bdc097cd2a3fbfff6dd79bce401c2d091e211
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/16/2019
-ms.locfileid: "58125943"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59162230"
 ---
 # <a name="how-to-create-outlined-text"></a>방법: 윤곽선이 있는 텍스트 만들기
 대부분의 경우, 장식의 텍스트 문자열에 추가 하는 경우에 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 불연속 문자 또는 문자 모양을 컬렉션과 관련 된 텍스트를 사용 하는 응용 프로그램입니다. 예를 들어 선형 그라데이션 브러시를 만들고 적용 하는 <xref:System.Windows.Controls.Control.Foreground%2A> 의 속성을 <xref:System.Windows.Controls.TextBox> 개체입니다. 을 표시 하거나 텍스트 상자를 편집할 때 선형 그라데이션 브러시 현재 텍스트 문자열에서 문자 집합에 자동으로 적용 됩니다.  
@@ -52,7 +52,8 @@ ms.locfileid: "58125943"
  [!code-csharp[OutlineTextControlViewer#OnRender](~/samples/snippets/csharp/VS_Snippets_Wpf/OutlineTextControlViewer/CSharp/OutlineTextControl.cs#onrender)]
  [!code-vb[OutlineTextControlViewer#OnRender](~/samples/snippets/visualbasic/VS_Snippets_Wpf/OutlineTextControlViewer/visualbasic/outlinetextcontrol.vb#onrender)]  
   
-  예제 사용자 지정 사용자 컨트롤 개체의 원본에 대 한 참조 [OutlineTextControl.cs에 대 한 C# ](https://github.com/dotnet/samples/blob/master/snippets/csharp/VS_Snippets_Wpf/OutlineTextControlViewer/CSharp/OutlineTextControl.cs) 하 고 [Visual Basic OutlineTextControl.vb](https://github.com/dotnet/samples/blob/master/snippets/visualbasic/VS_Snippets_Wpf/OutlineTextControlViewer/visualbasic/outlinetextcontrol.vb). 
+  예제 사용자 지정 사용자 컨트롤 개체의 원본에 대 한 참조 [OutlineTextControl.cs에 대 한 C# ](https://github.com/dotnet/samples/blob/master/snippets/csharp/VS_Snippets_Wpf/OutlineTextControlViewer/CSharp/OutlineTextControl.cs) 하 고 [Visual basic OutlineTextControl.vb](https://github.com/dotnet/samples/blob/master/snippets/visualbasic/VS_Snippets_Wpf/OutlineTextControlViewer/visualbasic/outlinetextcontrol.vb). 
   
 ## <a name="see-also"></a>참고자료
+
 - [서식 있는 텍스트 그리기](drawing-formatted-text.md)

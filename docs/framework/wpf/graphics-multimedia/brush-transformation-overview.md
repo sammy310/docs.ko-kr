@@ -9,12 +9,12 @@ helpviewer_keywords:
 - properties [WPF], transformation
 - transformation properties of brushes [WPF]
 ms.assetid: 8b9bfc09-12fd-4cd5-b445-99949f27bc39
-ms.openlocfilehash: 81a442cc39608e6b24db1f0403e85ee627fc4244
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: MT
+ms.openlocfilehash: 0b55d2000b8a70bc42373cb976a84ff54ebc4245
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57376373"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59169574"
 ---
 # <a name="brush-transformation-overview"></a>브러시 변환 개요
 Brush 클래스는 두 개의 변환 속성을 제공 합니다. <xref:System.Windows.Media.Brush.Transform%2A> 고 <xref:System.Windows.Media.Brush.RelativeTransform%2A>입니다. 이러한 속성을 사용하여 브러시의 콘텐츠를 회전, 비율 크기 조정, 기울이기 및 변환할 수 있습니다. 이 항목에서는 이러한 두 속성 간의 차이점을 설명하고 사용 예제를 제공합니다.  
@@ -98,6 +98,7 @@ Brush 클래스는 두 개의 변환 속성을 제공 합니다. <xref:System.Wi
  이 예제는 더 큰 샘플의 일부입니다. 전체 샘플을 보려면 [브러시 샘플](https://go.microsoft.com/fwlink/?LinkID=159973)을 참조하세요. 브러시에 대한 자세한 내용은 [WPF 브러시 개요](wpf-brushes-overview.md)를 참조하세요.  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Windows.Media.Brush.Transform%2A>
 - <xref:System.Windows.Media.Brush.RelativeTransform%2A>
 - <xref:System.Windows.Media.Transform>

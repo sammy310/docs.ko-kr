@@ -2,12 +2,12 @@
 title: <mtomMessageEncoding>
 ms.date: 03/30/2017
 ms.assetid: 7865d171-cd1e-430a-8421-39cc13541d1b
-ms.openlocfilehash: 7867b99a11bc82aac4ed2cd28ec7acf8347259d3
-ms.sourcegitcommit: 01ea420eaa4bf76d5fc47673294c8881379b3369
+ms.openlocfilehash: 61b23957c56bad81598dd65b0dd68f7b44d329e5
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/06/2019
-ms.locfileid: "55759433"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59146798"
 ---
 # <a name="mtommessageencoding"></a>\<mtomMessageEncoding>
 SOAP MTOM(Message Transmission Optimization Mechanism) 기반 메시지에 사용되는 인코딩 및 메시지 버전 관리를 지정합니다.  
@@ -68,6 +68,7 @@ SOAP MTOM(Message Transmission Optimization Mechanism) 기반 메시지에 사�
 ```  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.ServiceModel.Configuration.MtomMessageEncodingElement>
 - <xref:System.ServiceModel.Channels.CustomBinding>
 - <xref:System.ServiceModel.Channels.MessageEncodingBindingElement>
@@ -75,6 +76,6 @@ SOAP MTOM(Message Transmission Optimization Mechanism) 기반 메시지에 사�
 - [메시지 인코딩](../../../../../docs/framework/configure-apps/file-schema/wcf/message-encoding.md)
 - [메시지 인코더 선택](../../../../../docs/framework/wcf/feature-details/choosing-a-message-encoder.md)
 - [바인딩](../../../../../docs/framework/wcf/bindings.md)
-- [바인딩 확장](../../../../../docs/framework/wcf/extending/extending-bindings.md)
+- [바인딩 확장명](../../../../../docs/framework/wcf/extending/extending-bindings.md)
 - [사용자 지정 바인딩](../../../../../docs/framework/wcf/extending/custom-bindings.md)
 - [\<customBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)

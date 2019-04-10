@@ -1,5 +1,5 @@
 ---
-title: '방법: 축소판 이미지 만들기'
+title: '방법: 썸네일 이미지 만들기'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - thumbnail images [Windows Forms], creating
 - images [Windows Forms], creating thumbnails
 ms.assetid: e956242a-1e5b-4217-a3cf-5f3fb45d00ba
-ms.openlocfilehash: 3ed1fb6a9a7fc8e7ded6ae0e124ca7dcbf0f3c98
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 79b6258e7e6d7f16cc7a1e32a0c99dfe0eaeaa0c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57716961"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59144016"
 ---
-# <a name="how-to-create-thumbnail-images"></a>방법: 축소판 이미지 만들기
+# <a name="how-to-create-thumbnail-images"></a>방법: 썸네일 이미지 만들기
 축소판 그림 이미지를 이미지의 작은 버전이 있습니다. 호출 하 여 썸네일 이미지를 만들 수 있습니다 합니다 <xref:System.Drawing.Image.GetThumbnailImage%2A> 메서드는 <xref:System.Drawing.Image> 개체입니다.  
   
 ## <a name="example"></a>예제  
@@ -51,5 +51,6 @@ ms.locfileid: "57716961"
      100 여 100 축소판 그림 이미지를 폼에 표시 됩니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [이미지, 비트맵 및 메타파일](images-bitmaps-and-metafiles.md)
 - [이미지, 비트맵, 아이콘 및 메타파일 사용](working-with-images-bitmaps-icons-and-metafiles.md)

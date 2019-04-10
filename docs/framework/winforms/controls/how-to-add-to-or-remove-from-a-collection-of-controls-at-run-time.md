@@ -1,5 +1,5 @@
 ---
-title: '방법: 추가 하거나 런타임 시 컨트롤 컬렉션에서 제거'
+title: '방법: 런타임에 컨트롤 컬렉션에서 컨트롤 추가 또는 제거'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,14 +12,14 @@ helpviewer_keywords:
 - run time [Windows Forms], adding controls
 - controls [Windows Forms], removing using collections
 ms.assetid: 771bf895-3d5f-469b-a324-3528f343657e
-ms.openlocfilehash: 6ec4e41f5a3bee6302996f21afa81f2b5eeb9568
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 5c963976dd787b40c3e5c6180538051cfe419540
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57720893"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59143145"
 ---
-# <a name="how-to-add-to-or-remove-from-a-collection-of-controls-at-run-time"></a>방법: 추가 하거나 런타임 시 컨트롤 컬렉션에서 제거
+# <a name="how-to-add-to-or-remove-from-a-collection-of-controls-at-run-time"></a>방법: 런타임에 컨트롤 컬렉션에서 컨트롤 추가 또는 제거
 응용 프로그램 개발의 일반적인 작업은에 컨트롤 추가 및 컨트롤을 양식의 컨테이너 컨트롤에서 제거 (같은 합니다 <xref:System.Windows.Forms.Panel> 또는 <xref:System.Windows.Forms.GroupBox> 컨트롤 또는 양식 자체). 디자인 타임에 컨트롤을 패널이나 그룹 상자로 직접 끌어 놓을 수 있습니다. 런타임 시 이러한 컨트롤은 `Controls` 컬렉션을 유지 관리하고 여기서 배치된 컨트롤을 추적합니다.  
   
 > [!NOTE]
@@ -101,5 +101,6 @@ ms.locfileid: "57720893"
     ```  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Windows.Forms.Panel>
 - [Panel 컨트롤](panel-control-windows-forms.md)

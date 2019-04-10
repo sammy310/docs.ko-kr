@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Sessions
 ms.assetid: 36e1db50-008c-4b32-8d09-b56e790b8417
-ms.openlocfilehash: 32a81ba462eccfc6f4ba2a694793895810074b7e
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
-ms.translationtype: MT
+ms.openlocfilehash: 63219feb9e8d0ae542b3ab39c932915101bd3a9d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58817036"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59143866"
 ---
 # <a name="session"></a>세션
 Session 샘플에서는 세션이 필요한 계약을 구현하는 방법을 보여 줍니다. 세션에서는 여러 작업을 수행하기 위한 컨텍스트를 제공합니다. 그러면 서비스에서 상태를 특정 세션에 연결하여 이후의 작업에서 이전 작업의 상태를 사용할 수 있게 만들 수 있습니다. 이 샘플은 기반 합니다 [Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md)를 계산기 서비스를 구현 하는 합니다. `ICalculator` 계약은 실행 결과를 유지하면서 일련의 산술 작업을 수행할 수 있도록 수정되었습니다. 이 기능은 `ICalculatorSession` 계약에 의해 정의됩니다. 서비스에서는 계산 수행을 위해 여러 서비스 작업이 호출되는 동안 클라이언트의 상태를 유지 관리합니다. 클라이언트에서는 `Result()`를 호출하여 현재 결과를 검색하고 `Clear()`를 호출하여 결과를 0으로 지울 수 있습니다.  
@@ -91,4 +91,3 @@ Press <ENTER> to terminate client.
 >  이 디렉터리가 없으면로 이동 [Windows Communication Foundation (WCF) 및.NET Framework 4 용 Windows WF (Workflow Foundation) 샘플](https://go.microsoft.com/fwlink/?LinkId=150780) 모든 Windows Communication Foundation (WCF)를 다운로드 하 고 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플. 이 샘플은 다음 디렉터리에 있습니다.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Contract\Service\Session`  
-  

@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - tracing [WCF]
 ms.assetid: 82922010-e8b3-40eb-98c4-10fc05c6d65d
-ms.openlocfilehash: f80d89d66253df310395cdfa3139e8765da24edb
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8702091c185ba3d4956d3bd5d13ca191c12fce82
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54584914"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59162883"
 ---
 # <a name="configuring-tracing"></a>추적 구성
 이 항목에서는 추적을 사용하고, 추적을 내보내도록 추적 소스를 구성하고, 추적 수준을 설정하고, 종단 간 추적 상관 관계를 지원하도록 동작 추적 및 전파를 설정하고, 추적에 액세스하도록 추적 수신기를 설정하는 방법에 대해 설명합니다.  
@@ -181,7 +181,8 @@ ms.locfileid: "54584914"
  `propagateActivity` 특성은 사용자 정의 추적 소스에 사용할 수 없습니다. 사용자 코드 동작 ID 전파를 위해 ServiceModel `ActivityTracing`은 설정하지 않고 ServiceModel `propagateActivity` 특성은 `true`로 설정해야 합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [추적](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
 - [관리 및 진단](../../../../../docs/framework/wcf/diagnostics/index.md)
 - [방법: 추적 수신기 만들기 및 초기화](https://go.microsoft.com/fwlink/?LinkId=94648)
-- [사용자 지정 TraceListener 만들기](https://go.microsoft.com/fwlink/?LinkId=96239)
+- [Creating a Custom TraceListener](https://go.microsoft.com/fwlink/?LinkId=96239)

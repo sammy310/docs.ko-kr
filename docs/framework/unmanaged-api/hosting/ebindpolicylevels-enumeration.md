@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 635cf7c4e8ff715096728414506b4a7e683727b4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b8f2b08662e719a3308a62ab5b60f5dc490f2a6a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54704214"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59142209"
 ---
 # <a name="ebindpolicylevels-enumeration"></a>EBindPolicyLevels 열거형
 어셈블리 정책 적용 또는 수정 하는 수준을 지정 하는 플래그를 제공 합니다.  
@@ -67,5 +67,6 @@ typedef enum {
  **.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>참고자료
+
 - [ICLRAssemblyIdentityManager 인터페이스](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyidentitymanager-interface.md)
 - [호스팅 열거형](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)

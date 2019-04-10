@@ -2,12 +2,12 @@
 title: 동작을 사용하여 서버 쪽 동작 구현
 ms.date: 03/30/2017
 ms.assetid: 11a372db-7168-498b-80d2-9419ff557ba5
-ms.openlocfilehash: fdff4f87e0c22baeb92ee844e0dae1fa9bef8302
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
-ms.translationtype: MT
+ms.openlocfilehash: c21208b53745d0bf30d64ff827c1fb5e78a97cb4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56092126"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59144120"
 ---
 # <a name="using-actions-to-implement-server-side-behavior"></a>동작을 사용하여 서버 쪽 동작 구현
 
@@ -17,7 +17,7 @@ OData 동작을 통해 OData 서비스에서 검색한 리소스에 따른 동�
  구현 해야 하는 서비스 동작을 구현 하는 <xref:System.IServiceProvider>, [IDataServiceActionProvider](https://docs.microsoft.com/previous-versions/dotnet/wcf-data-services/hh859915(v=vs.103)), 및 [IDataServiceInvokable](https://docs.microsoft.com/previous-versions/dotnet/wcf-data-services/hh859893(v=vs.103)) 인터페이스입니다. <xref:System.IServiceProvider> WCF Data Services를 구현 하면 [IDataServiceActionProvider](https://docs.microsoft.com/previous-versions/dotnet/wcf-data-services/hh859915(v=vs.103))합니다. [IDataServiceActionProvider](https://docs.microsoft.com/previous-versions/dotnet/wcf-data-services/hh859915(v=vs.103)) 를 만들려면 WCF Data Services를 사용 하면 찾고 설명 하 고 서비스 작업을 호출 합니다. [IDataServiceInvokable](https://docs.microsoft.com/previous-versions/dotnet/wcf-data-services/hh859893(v=vs.103)) 있으면 서비스 동작의 동작을 구현 하는 코드를 호출 하 고 결과 얻을 수 있습니다. WCF Data Services가 Per-Call WCF Services이고 서비스를 호출할 때마다 서비스의 새 인스턴스가 만들어진다는 점에 주의합니다.  서비스를 만들 때 불필요한 동작이 수행되지 않는지 확인합니다.  
   
 ### <a name="iserviceprovider"></a>IServiceProvider  
- <xref:System.IServiceProvider>는 <xref:System.IServiceProvider.GetService%2A>라는 메서드를 포함합니다. 이 메서드는 WCF Data Services에 의해 호출되어 메타데이터 서비스 공급자 및 데이터 동작 공급자를 비롯하여 여러 서비스 공급자를 가져옵니다. 데이터 서비스 동작 공급자를 묻는 메시지가 표시를 반환 하면 [IDataServiceActionProvider](https://docs.microsoft.com/previous-versions/dotnet/wcf-data-services/hh859915(v=vs.103)) 구현 합니다.  
+ <xref:System.IServiceProvider> 라는 메서드를 포함 <xref:System.IServiceProvider.GetService%2A>합니다. 이 메서드는 WCF Data Services에 의해 호출되어 메타데이터 서비스 공급자 및 데이터 동작 공급자를 비롯하여 여러 서비스 공급자를 가져옵니다. 데이터 서비스 동작 공급자를 묻는 메시지가 표시를 반환 하면 [IDataServiceActionProvider](https://docs.microsoft.com/previous-versions/dotnet/wcf-data-services/hh859915(v=vs.103)) 구현 합니다.  
   
 ### <a name="idataserviceactionprovider"></a>IDataServiceActionProvider  
  [IDataServiceActionProvider](https://docs.microsoft.com/previous-versions/dotnet/wcf-data-services/hh859915(v=vs.103)) 사용 가능한 작업에 대 한 정보를 검색할 수 있는 메서드가 포함 되어 있습니다. 구현 하는 경우 [IDataServiceActionProvider](https://docs.microsoft.com/previous-versions/dotnet/wcf-data-services/hh859915(v=vs.103)) 서비스의 구현에 의해 정의 된 서비스에 대 한 메타 데이터를 보강 됩니다 [IDataServiceActionProvider](https://docs.microsoft.com/previous-versions/dotnet/wcf-data-services/hh859915(v=vs.103)) 작업과 및 적절 하 게 이러한 작업에 디스패치를 처리 합니다.  
@@ -81,6 +81,7 @@ context.Execute(new Uri("http://MyServer/MoviesService.svc/Movies(1)/Rate"), "PO
  위의 코드 조각에서 `MoviesModel` 클래스는 Visual Studio를 사용하여 서비스 참조를 WCF Data Service에 추가하여 생성되었습니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [WCF Data Services 4.5](../../../../docs/framework/data/wcf/index.md)
 - [WCF Data Services 정의](../../../../docs/framework/data/wcf/defining-wcf-data-services.md)
 - [WCF Data Services 개발 및 배포](../../../../docs/framework/data/wcf/developing-and-deploying-wcf-data-services.md)

@@ -2,12 +2,12 @@
 title: <callbackDebug>
 ms.date: 03/30/2017
 ms.assetid: 4073feda-1857-4be4-9947-227afb847ced
-ms.openlocfilehash: 62ce1bc179c7215d4988e4c6bda08025c3d3e5de
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: a1190eb1c015ba07488ff5a5952f2f5f1b10974c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55286314"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59152271"
 ---
 # <a name="callbackdebug"></a>\<callbackDebug>
 Windows Communication Foundation (WCF) 콜백 개체에 대 한 서비스 디버깅을 지정 합니다.  
@@ -46,5 +46,6 @@ Windows Communication Foundation (WCF) 콜백 개체에 대 한 서비스 디버
 |[\<behavior>](../../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)|엔드포인트 동작을 지정합니다.|  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.ServiceModel.Configuration.CallbackDebugElement>
 - <xref:System.ServiceModel.Description.CallbackDebugBehavior>

@@ -1,5 +1,5 @@
 ---
-title: '방법: Windows Forms RichTextBox 컨트롤을 사용 하 여 웹 스타일 링크 표시'
+title: '방법: Windows Forms RichTextBox 컨트롤을 사용하여 웹 스타일 링크 표시'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - examples [Windows Forms], text boxes
 - RichTextBox control [Windows Forms], linking to Web pages
 ms.assetid: 95089a37-a202-4f7a-94ee-6ee312908851
-ms.openlocfilehash: 64a2c8d9a9f6b8a7271a659b80ca2a63c423b3bc
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 1902557e5dbdcee3c1facc18b6f5c3037c266a8e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57718525"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59148241"
 ---
-# <a name="how-to-display-web-style-links-with-the-windows-forms-richtextbox-control"></a>방법: Windows Forms RichTextBox 컨트롤을 사용 하 여 웹 스타일 링크 표시
+# <a name="how-to-display-web-style-links-with-the-windows-forms-richtextbox-control"></a>방법: Windows Forms RichTextBox 컨트롤을 사용하여 웹 스타일 링크 표시
 Windows Forms <xref:System.Windows.Forms.RichTextBox> 제어와 색이 지정 된 밑줄 웹 링크를 표시할 수 있습니다. 브라우저 창에 링크를 클릭할 때 링크 텍스트에 지정 된 웹 사이트를 표시 하는 코드를 작성할 수 있습니다.  
   
 ### <a name="to-link-to-a-web-page-with-the-richtextbox-control"></a>RichTextBox 컨트롤을 사용 하 여 웹 페이지에 연결 하려면  
@@ -117,6 +117,7 @@ Windows Forms <xref:System.Windows.Forms.RichTextBox> 제어와 색이 지정 �
     ```  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Windows.Forms.RichTextBox.DetectUrls%2A>
 - <xref:System.Windows.Forms.RichTextBox.LinkClicked>
 - <xref:System.Windows.Forms.RichTextBox>

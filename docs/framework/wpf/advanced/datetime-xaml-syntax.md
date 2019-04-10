@@ -9,17 +9,16 @@ helpviewer_keywords:
 - DateTime XAML text [WPF]
 - DateTime XAML syntax [WPF], format strings for
 ms.assetid: 5901710a-609b-40c8-9d65-f0016cd9090b
-ms.openlocfilehash: 8180064d1a500ea17568f6790e13398524eb5f36
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: d7fe5f15f79ab068e88c3fb6f7b7cac0986aa636
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57365687"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59146499"
 ---
 # <a name="datetime-xaml-syntax"></a>DateTime XAML 구문
 와 같은 일부 컨트롤 <xref:System.Windows.Controls.Calendar> 하 고 <xref:System.Windows.Controls.DatePicker>를 사용 하는 속성이 <xref:System.DateTime> 형식입니다. 일반적으로 런타임에 코드 숨김으로 이러한 컨트롤에 대해 초기 날짜 또는 시간을 지정하지만 XAML로 초기 날짜 또는 시간을 지정할 수 있습니다. WPF XAML 파서를 구문 분석을 처리 <xref:System.DateTime> 기본 제공 XAML 텍스트 구문을 사용 하 여 값입니다. 이 항목의 세부 정보를 설명 합니다 <xref:System.DateTime> XAML 텍스트 구문입니다.  
-  
-  
+
 <a name="where_datetime_xaml_syntax_is_used"></a>   
 ## <a name="when-to-use-datetime-xaml-syntax"></a>DateTime XAML 구문을 사용하는 경우  
  날짜를 항상 XAML로 설정할 필요가 없으며 이 방법이 바람직하지 않을 수도 있습니다. 예를 들어 사용할 수 있습니다는 <xref:System.DateTime.Now%2A?displayProperty=nameWithType> 속성을 초기화 하거나 실행된 시간에서 날짜를 달력 사용자 입력을 기반으로 하는 코드 숨김에 대해 모든 날짜를 조정할을 수행할 수 있습니다. 그러나 시나리오에 하드 코딩 날짜를 저장할 수 있습니다.는 <xref:System.Windows.Controls.Calendar> 고 <xref:System.Windows.Controls.DatePicker> 컨트롤 템플릿에서 합니다. <xref:System.DateTime> 이러한 시나리오에 대 한 XAML 구문을 사용 해야 합니다.  
@@ -75,4 +74,5 @@ ms.locfileid: "57365687"
  앞서 설명한 대로 <xref:System.DateTime> XAML에서 허용 되는 모든 문자열로 지정할 수 있습니다에 대 한 입력으로 <xref:System.DateTime.Parse%2A?displayProperty=nameWithType>입니다. 여기에 다른 공식화 된 형식 (예를 들어 <xref:System.Globalization.DateTimeFormatInfo.UniversalSortableDateTimePattern%2A>), 특정으로 공식화 되지 않은 형식과 <xref:System.Globalization.DateTimeFormatInfo> 폼입니다. 예를 들어 폼 `YYYY/mm/dd` 허용 되는 대 한 입력으로 <xref:System.DateTime.Parse%2A?displayProperty=nameWithType>입니다. 이 항목에서는 작동 가능한 모든 형식에 대해 설명하려고 하지 않으며 대신 간단한 날짜 패턴을 표준 사례로 권장합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [XAML 개요(WPF)](xaml-overview-wpf.md)

@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 55d6ab12-f251-4aab-aa64-aacbe9d9f974
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: aebcd2d2f2387f478c36e84dad82d90d4d70d68e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4f076cbc556c7d9feff8a226f050743cd7728622
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54554675"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59148150"
 ---
 # <a name="exceptionswallowedoncallfromcom-mda"></a>exceptionSwallowedOnCallFromCom MDA
 `exceptionSwallowedOnCallFromCOM` MDA(관리 디버깅 도우미)는 관리되지 않는 HRESULT 반환 형식이 없는 메서드를 통해 COM에서 호출된 CLR(공용 언어 런타임) 코드에서 예외가 throw되면 활성화됩니다.  
@@ -27,16 +27,16 @@ ms.locfileid: "54554675"
 ## <a name="cause"></a>원인  
  예외가 throw되었지만 해당 예외를 보고할 유효한 방법이 없습니다.  
   
-## <a name="resolution"></a>해결 방법  
+## <a name="resolution"></a>해결  
  정보 제공의 목적이며, 반드시 버그를 의미하는 것은 아닙니다.  
   
 ## <a name="effect-on-the-runtime"></a>런타임에 대한 영향  
- 이 MDA는 CLR에 아무런 영향을 미치지 않으며, 자동으로 catch된 예외에 대한 데이터를 보고할 뿐입니다.  
+ 이 MDA는 CLR에 아무런 영향을 미치지 않습니다. 자동으로 catch된 예외에 대한 데이터를 보고할 뿐입니다.  
   
 ## <a name="output"></a>출력  
  메서드 이름, 형식 이름 및 예외 메시지를 포함하는 정보 메시지입니다.  
   
-## <a name="configuration"></a>구성하기  
+## <a name="configuration"></a>구성  
   
 ```xml  
 <mdaConfig>  
@@ -47,6 +47,7 @@ ms.locfileid: "54554675"
 ```  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Runtime.InteropServices.MarshalAsAttribute>
 - [관리 디버깅 도우미를 사용하여 오류 진단](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
-- [interop 마샬링](../../../docs/framework/interop/interop-marshaling.md)
+- [Interop 마샬링](../../../docs/framework/interop/interop-marshaling.md)

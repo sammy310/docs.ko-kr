@@ -5,12 +5,12 @@ helpviewer_keywords:
 - ToolStrip control [Windows Forms], aligning items
 - toolbars [Windows Forms], positioning items
 ms.assetid: 11fd7c5b-ee5c-4993-9a11-89127ff0aa7a
-ms.openlocfilehash: 66f0a4215baa55fcc7156017e06e7f6364b3eb3a
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: bf5034a2cafab57997d68bb52d36bc319dfab22e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57709733"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59155028"
 ---
 # <a name="how-to-position-a-toolstripitem-on-a-toolstrip"></a>방법: ToolStrip에 ToolStripItem 배치
 이동 하거나 추가할 수 있습니다는 <xref:System.Windows.Forms.ToolStripItem> 의 왼쪽 또는 오른쪽에는 <xref:System.Windows.Forms.ToolStrip>합니다.  
@@ -24,6 +24,7 @@ ms.locfileid: "57709733"
 1.  설정 합니다 <xref:System.Windows.Forms.ToolStripItemAlignment> 의 속성을 <xref:System.Windows.Forms.ToolStripItem> 에 <xref:System.Windows.Forms.ToolStripItemAlignment.Right>.  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Windows.Forms.ToolStripItem>
 - <xref:System.Windows.Forms.ToolStripItemAlignment>
 - <xref:System.Windows.Forms.ToolStripItemAlignment.Left>

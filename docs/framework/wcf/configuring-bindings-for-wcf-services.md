@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - binding configuration [WCF]
 ms.assetid: 99a85fd8-f7eb-4a84-a93e-7721b37d415c
-ms.openlocfilehash: 52f93acacec434ce6f7ba93678615c104aa94b24
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 009011100af86e315aa41beb822b1448e2f21b25
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54704045"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59150451"
 ---
 # <a name="configuring-bindings-for-windows-communication-foundation-services"></a>Windows Communication Foundation 서비스에 대한 바인딩 구성
 응용 프로그램을 만들 때 응용 프로그램의 배포 후 관리자에게 결정을 맡겨야 할 경우가 있습니다. 예를 들어, 서비스 주소 또는 URI(Uniform Resource Identifier)가 무엇인지 미리 알 수 없는 경우가 있습니다. 주소를 하드 코딩하는 대신 관리자가 서비스를 작성한 후에 이를 수행하도록 하는 것이 좋습니다. 이러한 유연성은 구성을 통해 수행됩니다.  
@@ -58,7 +58,7 @@ ms.locfileid: "54704045"
 </service>  
 ```  
   
- 이 예제에서 `name` 특성은 구성의 서비스 형식을 나타냅니다. `HelloWorld` 계약을 사용하여 코드에 서비스를 만드는 경우 서비스는 예제 구성에 정의된 모든 끝점으로 초기화됩니다. 어셈블리에는 하나의 서비스 계약을 구현 하는 경우는 `name` 서비스 가능한 형식만 사용 하기 때문에 특성을 생략할 수 있습니다. 특성에는 `Namespace.Class, AssemblyName, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null` 형식으로 된 문자열만 있습니다.  
+ 이 예제에서 `name` 특성은 구성의 서비스 형식을 나타냅니다. `HelloWorld` 계약을 사용하여 코드에 서비스를 만드는 경우 서비스는 예제 구성에 정의된 모든 끝점으로 초기화됩니다. 어셈블리에는 하나의 서비스 계약을 구현 하는 경우는 `name` 서비스 가능한 형식만 사용 하기 때문에 특성을 생략할 수 있습니다. 특성은 형식에서 이어야 하는 문자열로 사용 `Namespace.Class, AssemblyName, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null`  
   
  `address` 특성은 다른 끝점이 서비스와 통신하는 데 사용하는 URI를 지정합니다. URI는 절대 경로 또는 상대 경로일 수 있습니다. 상대 주소가 제공되는 경우 호스트는 바인딩에 사용된 전송 체계에 적합한 기본 주소를 제공합니다. 주소가 구성되지 않으면 해당 엔드포인트의 주소를 기본 주소로 가정합니다.  
   
@@ -162,6 +162,7 @@ ms.locfileid: "54704045"
 ```  
   
 ## <a name="see-also"></a>참고자료
+
 - [단순화된 구성](../../../docs/framework/wcf/simplified-configuration.md)
 - [시스템 제공 바인딩](../../../docs/framework/wcf/system-provided-bindings.md)
 - [엔드포인트 만들기 개요](../../../docs/framework/wcf/endpoint-creation-overview.md)

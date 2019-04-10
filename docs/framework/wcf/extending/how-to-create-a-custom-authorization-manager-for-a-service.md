@@ -1,5 +1,5 @@
 ---
-title: '방법: 서비스에 대 한 사용자 지정 권한 부여 관리자 만들기'
+title: '방법: 서비스에 대한 사용자 지정 권한 부여 관리자 만들기'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - Windows Communication Foundation, extending
 - OperationRequirement class
 ms.assetid: 6214afde-44c1-4bf5-ba07-5ad6493620ea
-ms.openlocfilehash: 571c1d66bcf1ea62972eb1be3fd694964581db38
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: MT
+ms.openlocfilehash: 6a168902b79bd27345c9d9e2371947cc9d64233c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58465141"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59156496"
 ---
-# <a name="how-to-create-a-custom-authorization-manager-for-a-service"></a>방법: 서비스에 대 한 사용자 지정 권한 부여 관리자 만들기
+# <a name="how-to-create-a-custom-authorization-manager-for-a-service"></a>방법: 서비스에 대한 사용자 지정 권한 부여 관리자 만들기
 Windows Communication Foundation (WCF)에서 Id 모델 인프라를 확장할 수 있는 클레임 기반 권한 부여 모델을 지원합니다. 클레임은 토큰에서 추출되어 사용자 지정 권한 부여 정책에 의해 선택적으로 처리된 다음,<xref:System.IdentityModel.Policy.AuthorizationContext>에 배치됩니다. 권한 부여 관리자는 <xref:System.IdentityModel.Policy.AuthorizationContext>에서 클레임을 검사하여 권한 부여 결정을 내립니다.  
   
  기본적으로 권한 부여는 <xref:System.ServiceModel.ServiceAuthorizationManager> 클래스에서 결정되지만, 사용자 지정 권한 부여 관리자를 만들어 이러한 결정을 재정의할 수 있습니다. 사용자 지정 권한 부여 관리자를 만들려면 <xref:System.ServiceModel.ServiceAuthorizationManager>에서 파생되는 클래스를 만든 다음 <xref:System.ServiceModel.ServiceAuthorizationManager.CheckAccessCore%2A> 메서드를 구현합니다. 권한 부여는 <xref:System.ServiceModel.ServiceAuthorizationManager.CheckAccessCore%2A> 메서드에서 결정되며, 액세스가 허용되면 `true`를 반환하고 액세스가 거부되면 `false`를 반환합니다.  
@@ -118,5 +118,6 @@ Windows Communication Foundation (WCF)에서 Id 모델 인프라를 확장할 �
  [!code-vb[c_CustomAuthMgr#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customauthmgr/vb/c_customauthmgr.vb#2)]  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.ServiceModel.ServiceAuthorizationManager>
 - [권한 부여 정책](../../../../docs/framework/wcf/samples/authorization-policy.md)

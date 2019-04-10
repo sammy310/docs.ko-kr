@@ -2,12 +2,12 @@
 title: MSMQ 활성화
 ms.date: 03/30/2017
 ms.assetid: e3834149-7b8c-4a54-806b-b4296720f31d
-ms.openlocfilehash: 0b3d90ed756b2bb2b9bebc0ac9e36789a80df1d7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 80ce76d5cee8bb55bebdaeaea065aa41a0264bac
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54745443"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59162830"
 ---
 # <a name="msmq-activation"></a>MSMQ 활성화
 이 샘플에서는 메시지 큐에서 읽은 WAS(Windows Process Activation Service)에서 응용 프로그램을 호스트하는 방법을 보여 줍니다. 이 샘플에서는 합니다 `netMsmqBinding` 기반으로 합니다 [양방향 통신](../../../../docs/framework/wcf/samples/two-way-communication.md) 샘플입니다. 이 경우 서비스는 웹 호스팅 응용 프로그램이고 클라이언트는 자체 호스트되며 전송된 구매 주문의 상태를 확인하기 위해 콘솔에 출력됩니다.  
@@ -30,7 +30,7 @@ ms.locfileid: "54745443"
   
  클라이언트는 트랜잭션의 범위 내에서 서비스에 구매 주문을 보냅니다. 서비스는 트랜잭션의 주문을 수신하고 처리합니다. 그런 다음 서비스는 주문 상태와 함께 클라이언트를 콜백합니다. 양방향 통신을 쉽게 수행하기 위해 클라이언트와 서비스는 둘 다 큐를 사용하여 구매 주문과 주문 상태를 큐에 삽입합니다.  
   
- 서비스 계약 `IOrderProcessor`는 큐를 사용하는 단방향 서비스 작업을 정의합니다. 이 서비스 작업은 회신 끝점을 사용하여 주문 상태를 클라이언트에게 보냅니다. 회신 엔드포인트의 주소는 주문 상태를 클라이언트에게 다시 보내는 데 사용되는 큐의 URI입니다. 주문 처리 응용 프로그램에서 이 계약을 구현합니다.  
+ 서비스 계약 `IOrderProcessor`는 큐를 사용하는 단방향 서비스 작업을 정의합니다. 이 서비스 작업은 회신 엔드포인트를 사용하여 주문 상태를 클라이언트에게 보냅니다. 회신 엔드포인트의 주소는 주문 상태를 클라이언트에게 다시 보내는 데 사용되는 큐의 URI입니다. 주문 처리 응용 프로그램에서 이 계약을 구현합니다.  
   
 ```csharp  
 [ServiceContract(Namespace="http://Microsoft.ServiceModel.Samples")]  
@@ -85,7 +85,7 @@ public class OrderProcessorService : IOrderProcessor
  MSMQ 큐 이름은 구성 파일의 appSettings 섹션에 지정됩니다. 서비스의 엔드포인트는 구성 파일의 System.serviceModel 섹션에 정의됩니다.  
   
 > [!NOTE]
->  MSMQ 큐 이름 및 끝점 주소는 약간 다른 주소 지정 규칙을 사용합니다. MSMQ 큐 이름은 로컬 컴퓨터에 점(.)을, 그 경로에는 백슬래시 구분 기호를 사용합니다. WCF 끝점 주소에서는 net.msmq 지정: 체계를 "localhost"를 사용 하 여 로컬 컴퓨터 및 해당 경로에 슬래시를 사용 합니다. 원격 컴퓨터에서 호스트되는 큐에서 읽으려면 "." 및 "localhost"를 원격 컴퓨터 이름으로 바꿉니다.  
+>  MSMQ 큐 이름 및 엔드포인트 주소는 약간 다른 주소 지정 규칙을 사용합니다. MSMQ 큐 이름은 로컬 컴퓨터에 점(.)을, 그 경로에는 백슬래시 구분 기호를 사용합니다. WCF 끝점 주소에서는 net.msmq 지정: 체계를 "localhost"를 사용 하 여 로컬 컴퓨터 및 해당 경로에 슬래시를 사용 합니다. 원격 컴퓨터에서 호스트되는 큐에서 읽으려면 "." 및 "localhost"를 원격 컴퓨터 이름으로 바꿉니다.  
   
  클래스 이름을 가진 .svc 파일은 WAS에서 서비스 코드를 호스트하는 데 사용됩니다.  
   
@@ -351,4 +351,5 @@ Status of order 70cf9d63-3dfa-4e69-81c2-23aa4478ebed :Pending
     ```  
   
 ## <a name="see-also"></a>참고자료
-- [AppFabric 호스팅 및 지 속성 샘플](https://go.microsoft.com/fwlink/?LinkId=193961)
+
+- [AppFabric 호스팅 및 지속성 샘플](https://go.microsoft.com/fwlink/?LinkId=193961)

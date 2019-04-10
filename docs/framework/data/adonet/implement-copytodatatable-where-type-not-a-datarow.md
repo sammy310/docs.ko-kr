@@ -1,16 +1,16 @@
 ---
-title: '방법: 위치에서 CopyToDataTable 구현<T> 제네릭 형식 T가 DataRow 없습니다'
+title: '방법: 제네릭 형식 T가 DataRow가 아닌 CopyToDataTable<T> 구현'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: b27b52cf-6172-485f-a75c-70ff9c5a2bd4
-ms.openlocfilehash: 1f79bd421d4c504556074468f8ab7e032d3eca43
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: MT
+ms.openlocfilehash: 4ec609ac38b3fa91a4b11b93e24b465f48696a9e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57372865"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59159234"
 ---
 # <a name="how-to-implement-copytodatatablet-where-the-generic-type-t-is-not-a-datarow"></a>방법: 위치에서 CopyToDataTable 구현\<T >는 제네릭 형식 T가 DataRow 없습니다
 대개 <xref:System.Data.DataTable> 개체는 데이터 바인딩에 사용됩니다. <xref:System.Data.DataTableExtensions.CopyToDataTable%2A> 메서드는 쿼리 결과를 받아서 나중에 데이터 바인딩에 사용할 수 있도록 데이터를 <xref:System.Data.DataTable>에 복사합니다. 하지만 <xref:System.Data.DataTableExtensions.CopyToDataTable%2A> 메서드는 제네릭 매개 변수 <xref:System.Collections.Generic.IEnumerable%601>가 `T` 형식인 <xref:System.Data.DataRow> 소스에서만 작동합니다. 이 제한은 유용하지만 이로 인해 일련의 스칼라 형식, 익명 형식을 프로젝션하는 쿼리 또는 테이블 조인을 수행하는 쿼리에서 테이블을 만들지 못하게 됩니다.  
@@ -74,5 +74,6 @@ public class ObjectShredder<T>
 ```
   
 ## <a name="see-also"></a>참고자료
+
 - [쿼리에서 DataTable 만들기](../../../../docs/framework/data/adonet/creating-a-datatable-from-a-query-linq-to-dataset.md)
 - [프로그래밍 가이드](../../../../docs/framework/data/adonet/programming-guide-linq-to-dataset.md)

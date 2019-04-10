@@ -2,12 +2,12 @@
 title: 구성 샘플
 ms.date: 03/30/2017
 ms.assetid: 75515b4a-8d70-44c8-99e0-7423df41380e
-ms.openlocfilehash: b999c84fc6fd4d1a367b4e1476de8376858008a2
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
-ms.translationtype: MT
+ms.openlocfilehash: 6ceea71e4adc4e8c25ca624ca8adb6e08713a93b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58814395"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59158706"
 ---
 # <a name="configuration-sample"></a>구성 샘플
 이 샘플에서는 구성 파일을 사용하여 서비스를 검색 가능하게 만드는 방법을 보여 줍니다.  
@@ -268,4 +268,3 @@ behaviorConfiguration="endpointBehaviorConfiguration"
 3.  빌드 디렉터리에서 서비스 실행 파일을 실행합니다.  
   
 4.  클라이언트 실행 파일을 실행합니다. 클라이언트에서 서비스를 찾을 수 있는지 확인합니다.  
-  

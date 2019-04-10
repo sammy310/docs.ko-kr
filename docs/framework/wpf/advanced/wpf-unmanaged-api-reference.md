@@ -1,15 +1,15 @@
 ---
-title: WPF 관리 되지 않는 API 참조
+title: WPF 비관리형 API 참조
 ms.date: 03/30/2017
 ms.assetid: 2a2e8274-6556-46a2-80d3-a1812903cbcf
-ms.openlocfilehash: 9a33f8624f609a19e3c2f7f8958097a3e9b1114e
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 5a9a122f8df9786b457291b955c15bddb39696a4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57366493"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59160643"
 ---
-# <a name="wpf-unmanaged-api-reference"></a>WPF 관리 되지 않는 API 참조
+# <a name="wpf-unmanaged-api-reference"></a>WPF 비관리형 API 참조
 Windows Presentation Foundation (WPF) 라이브러리는 다양 한 내부 에서만 사용을 위해 사용 되는 관리 되지 않는 함수를 노출 합니다. 또한 사용자 코드에서 호출 되지 해야 합니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
@@ -23,4 +23,5 @@ Windows Presentation Foundation (WPF) 라이브러리는 다양 한 내부 에�
  [SetFakeActiveWindow 함수](setfakeactivewindow-function-wpf-unmanaged-api-reference.md)  
   
 ## <a name="see-also"></a>참고자료
+
 - [고급](index.md)

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - animation [WPF], properties [WPF], methods for
 - properties [WPF], methods for animating
 ms.assetid: 74f61413-f8c0-4e75-bf04-951886426c8b
-ms.openlocfilehash: b03c450b84a376de5c5c7d3582c01a31bc417a11
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: MT
+ms.openlocfilehash: 5ec401aea139a868b3633afce4c74558aafcaa1e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57366779"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59165440"
 ---
 # <a name="property-animation-techniques-overview"></a>속성 애니메이션 기술 개요
 이 항목에서는 storyboard, 로컬 애니메이션, 클록 및 프레임당 애니메이션 등, 속성에 애니메이션 효과를 주는 다양한 접근 방법을 설명합니다.  
@@ -56,10 +56,10 @@ ms.locfileid: "57366779"
   
 |storyboard 시작 방법...|인스턴스별|스타일|컨트롤 템플릿|데이터 템플릿|예제|  
 |--------------------------------|-------------------|-----------|----------------------|-------------------|-------------|  
-|<xref:System.Windows.Media.Animation.BeginStoryboard> 및 <xref:System.Windows.EventTrigger>|예|예|예|예|[Storyboard를 사용하여 속성에 애니메이션 효과 주기](how-to-animate-a-property-by-using-a-storyboard.md)|  
-|<xref:System.Windows.Media.Animation.BeginStoryboard> 속성 <xref:System.Windows.Trigger>|아니요|예|예|예|[속성 값이 변경될 때 애니메이션 트리거](how-to-trigger-an-animation-when-a-property-value-changes.md)|  
+|<xref:System.Windows.Media.Animation.BeginStoryboard> 및 <xref:System.Windows.EventTrigger>|예|예|예|예|[스토리보드를 사용하여 속성에 애니메이션 효과 주기](how-to-animate-a-property-by-using-a-storyboard.md)|  
+|<xref:System.Windows.Media.Animation.BeginStoryboard> 속성 <xref:System.Windows.Trigger>|아니요|예|예|예|[속성 값 변경 시 애니메이션 트리거](how-to-trigger-an-animation-when-a-property-value-changes.md)|  
 |<xref:System.Windows.Media.Animation.BeginStoryboard> 및 <xref:System.Windows.DataTrigger>|아니요|예|예|예|[방법: 데이터가 변경 될 때 애니메이션 트리거](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/aa970679(v=vs.90))|  
-|<xref:System.Windows.Media.Animation.Storyboard.Begin%2A> 메서드|예|아니요|아니요|아니요|[Storyboard를 사용하여 속성에 애니메이션 효과 주기](how-to-animate-a-property-by-using-a-storyboard.md)|  
+|<xref:System.Windows.Media.Animation.Storyboard.Begin%2A> 메서드|예|아니요|아니요|아니요|[스토리보드를 사용하여 속성에 애니메이션 효과 주기](how-to-animate-a-property-by-using-a-storyboard.md)|  
   
  에 대 한 자세한 내용은 <xref:System.Windows.Media.Animation.Storyboard> 개체를 참조 합니다 [Storyboard 개요](storyboards-overview.md)합니다.  
   
@@ -122,6 +122,7 @@ ms.locfileid: "57366779"
  자세한 내용은 참조는 <xref:System.Windows.Media.CompositionTarget.Rendering> 페이지입니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [애니메이션 개요](animation-overview.md)
 - [Storyboard 개요](storyboards-overview.md)
 - [애니메이션 및 타이밍 시스템 개요](animation-and-timing-system-overview.md)

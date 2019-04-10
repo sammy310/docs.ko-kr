@@ -1,5 +1,5 @@
 ---
-title: <clear>의 <listeners>에 대한 <source> 요소
+title: <clear> 요소에 대 한 <listeners> 에 대 한 <source>
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/sources/source/listeners/clear
@@ -7,12 +7,12 @@ helpviewer_keywords:
 - <clear> element for <listeners> for <source>
 - clear element for <listeners> for <source>
 ms.assetid: 76796bb2-9c0b-4526-8135-8bf18b16d8d9
-ms.openlocfilehash: ee4d5f1880cf6b7aac871149bf7bf59a06903bf2
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 63d3bb272fcdbee2c59b0569c85f8183cdac8666
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55286743"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59158355"
 ---
 # <a name="clear-element-for-listeners-for-source"></a>\<지우기 > 요소에 대 한 \<수신기 >에 대 한 \<소스 >
 추적 소스의 `Listeners` 컬렉션을 지웁니다.  
@@ -85,6 +85,7 @@ ms.locfileid: "55286743"
 ```  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Diagnostics.TraceSource>
 - <xref:System.Diagnostics.TraceListener>
 - [추적 및 디버그 설정 스키마](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)

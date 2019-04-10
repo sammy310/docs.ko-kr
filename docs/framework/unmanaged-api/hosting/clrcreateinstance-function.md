@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a9b4e9149fa50a951f2a56c83412e42fe86b9563
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 3571e2698b980b12b89a5b689efb868a34a3ef71
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57501203"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59167663"
 ---
 # <a name="clrcreateinstance-function"></a>CLRCreateInstance 함수
 세 가지 인터페이스 중 하나를 제공 합니다. [ICLRMetaHost](../../../../docs/framework/unmanaged-api/hosting/iclrmetahost-interface.md)하십시오 [ICLRMetaHostPolicy](../../../../docs/framework/unmanaged-api/hosting/iclrmetahostpolicy-interface.md), 또는 [ICLRDebugging](../../../../docs/framework/unmanaged-api/debugging/iclrdebugging-interface.md)합니다.  
@@ -53,7 +53,7 @@ HRESULT CLRCreateInstance(
 |HRESULT|설명|  
 |-------------|-----------------|  
 |S_OK|메서드가 완료되었습니다.|  
-|E_POINTER|`ppInterface`가 null입니다.|  
+|E_POINTER|`ppInterface` null입니다.|  
   
 ## <a name="remarks"></a>설명  
  다음 테이블에 대 한 지원 되는 조합을 보여 줍니다 `clsid` 고 `riid`입니다.  
@@ -92,4 +92,5 @@ hr = CLRCreateInstance (CLSID_CLRDebugging, IID_ICLRDebugging,
  **.NET Framework 버전:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>참고자료
+
 - [호스팅](../../../../docs/framework/unmanaged-api/hosting/index.md)

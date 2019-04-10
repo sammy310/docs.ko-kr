@@ -2,12 +2,12 @@
 title: Service Trace Viewer를 사용하여 상호 관련된 추적 보기 및 문제 해결
 ms.date: 03/30/2017
 ms.assetid: 05d2321c-8acb-49d7-a6cd-8ef2220c6775
-ms.openlocfilehash: fc1b75d7f2d97103f99b9dbf0fa8cbbfbe2270cd
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: MT
+ms.openlocfilehash: 80a19bf1e433ffcb0dcf29a4636fb79bedaeeb61
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58465063"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59160669"
 ---
 # <a name="using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting"></a>Service Trace Viewer를 사용하여 상호 관련된 추적 보기 및 문제 해결
 이 항목에서는 추적 데이터 형식, 추적 데이터를 보는 방법 및 Service Trace Viewer를 사용하여 응용 프로그램 문제를 해결하는 방법에 대해 설명합니다.  
@@ -169,8 +169,7 @@ ms.locfileid: "58465063"
  다음 이미지에는 WCF 서비스 작업의 그래프 뷰를 보여 줍니다.   
 
  ![스크린 샷의 Trace Viewer WCF 서비스 동작의 목록을 표시 합니다.](./media/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting/wcf-service-activities.gif)  
-  
-  
+
  다음 스크린 샷에서는 클라이언트와 서비스 모두의 동작을 보여 주고 여러 프로세스에 걸쳐 Process Action Add 동작을 강조 표시합니다(주황색). 화살표는 클라이언트와 서비스가 보내고 받은 요청 및 응답 메시지를 서로 연결합니다. Process Action의 추적이 그래프에서 프로세스 간에 구분되어 있지만 오른쪽 위 패널에 같은 동작의 일부로 표시되어 있습니다. 이 패널에서 보낸 메시지에 대한 클라이언트 추적을 확인한 다음 받고 처리한 메시지에 대한 서비스 추적을 확인할 수 있습니다.  
   
  다음 이미지는 모두 WCF 클라이언트 및 서비스 동작 그래프 보기를 표시 합니다.  
@@ -189,8 +188,7 @@ ms.locfileid: "58465063"
   
   다음 이미지에는 문제 원인을 찾으려면 빨간색 또는 노란색 작업을 선택 하는 방법을 보여 줍니다.   
  ![문제 원인을 찾기 위한 빨간색 또는 노란색 작업의 스크린샷.](./media/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting/service-trace-viewer.gif)  
- 
-  
+
  오른쪽 위 패널에서는 왼쪽에서 선택한 동작에 대한 추적을 검사할 수 있습니다. 그런 다음 이 패널에서 빨간색 또는 노란색 추적을 검사하고 이들 추적이 상호 연결된 방식을 볼 수 있습니다. 앞의 그래프에서는 동일한 Process Action 동작에서 클라이언트와 서비스 모두에 대한 경고 추적을 볼 수 있습니다.  
   
  이러한 추적이 오류의 근본 원인을 제공하지 않으면 왼쪽 패널에서 선택한 동작(여기서는 Process action)을 두 번 클릭하여 그래프를 사용할 수 있습니다. 그러면 관련된 동작이 있는 그래프가 표시됩니다. 확장할 수 있습니다 다음 관련된 활동 ("+" 기호 클릭) 관련된 작업에서 빨간색 이나 노란색에서 첫 번째로 내보낸된 추적을 찾으려고 합니다. 문제의 근본 원인을 추적할 때까지 빨간색 또는 노란색 추적 바로 전에 발생한 동작을 계속 확장하면서 관련된 동작이나 엔드포인트 간의 메시지 흐름으로의 전송을 살펴 봅니다.  
@@ -207,6 +205,7 @@ ms.locfileid: "58465063"
 문제 해결을 시작 하려면 빨간색 또는 노란색 메시지 추적을 선택 하 고 근본 원인을 추적을 두 번 클릭 합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [종단 간 추적 시나리오](../../../../../docs/framework/wcf/diagnostics/tracing/end-to-end-tracing-scenarios.md)
 - [Service Trace Viewer 도구(SvcTraceViewer.exe)](../../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)
 - [추적](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)

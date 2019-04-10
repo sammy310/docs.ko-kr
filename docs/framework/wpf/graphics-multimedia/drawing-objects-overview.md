@@ -9,18 +9,16 @@ helpviewer_keywords:
 - Drawing objects [WPF]
 - DrawingGroup objects [WPF]
 ms.assetid: 9b5ce5c0-e204-4320-a7a8-0b2210d62f88
-ms.openlocfilehash: 3589ba1d13c4ec57cfcec8c52b61556344e8def2
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: MT
+ms.openlocfilehash: 51ff0317172d545c746d35808d7c672e9586eeae
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57368339"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59144029"
 ---
 # <a name="drawing-objects-overview"></a>Drawing 개체 개요
 이 항목에서는 소개 <xref:System.Windows.Media.Drawing> 개체 및 도형, 비트맵, 텍스트 및 미디어를 효율적으로 그리는 데 사용 하는 방법에 설명 합니다. 사용 하 여 <xref:System.Windows.Media.Drawing> 클립 아트를 만들 때 개체를 사용 하 여 그리는 <xref:System.Windows.Media.DrawingBrush>를 사용 하 여 또는 <xref:System.Windows.Media.Visual> 개체.  
-  
- 
-  
+
 <a name="whatisadrawingsection"></a>   
 ## <a name="what-is-a-drawing-object"></a>그리기 개체란?  
  <xref:System.Windows.Media.Drawing> 도형, 비트맵, 비디오 또는 텍스트 줄 같은 보이는 콘텐츠를 설명 하는 개체입니다. 그리기 형식마다 다른 콘텐츠 형식을 설명합니다. 다음은 여러 그리기 개체 형식을 보여 주는 목록입니다.  
@@ -234,9 +232,10 @@ DrawingBrush에 GeometryDrawing 사용
  [!code-csharp[DrawingMiscSnippets_snip#GraphicsMMRetrieveDrawings](~/samples/snippets/csharp/VS_Snippets_Wpf/DrawingMiscSnippets_snip/CSharp/EnumerateDrawingsExample.xaml.cs#graphicsmmretrievedrawings)]  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Windows.Media.Drawing>
 - <xref:System.Windows.Media.DrawingGroup>
-- [2차원 그래픽 및 이미징](../advanced/optimizing-performance-2d-graphics-and-imaging.md)
+- [2D 그래픽 및 이미징](../advanced/optimizing-performance-2d-graphics-and-imaging.md)
 - [이미지, 그림 및 시각적 표시로 그리기](painting-with-images-drawings-and-visuals.md)
 - [Geometry 개요](geometry-overview.md)
 - [WPF에서 Shape 및 기본 그리기 개요](shapes-and-basic-drawing-in-wpf-overview.md)

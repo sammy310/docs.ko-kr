@@ -1,15 +1,15 @@
 ---
-title: '방법: MetadataExchangeClient를 사용 하 여 메타 데이터를 검색 합니다.'
+title: '방법: MetadataExchangeClient를 사용하여 메타데이터 검색'
 ms.date: 03/30/2017
 ms.assetid: 0754e9dc-13c5-45c2-81b5-f3da466e5a87
-ms.openlocfilehash: 8f99fcf8a355001908c31c383201da8db78c6d24
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: ec4177e71c7d46dc5c908f01a051dc5a0df6baa4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54708768"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59168625"
 ---
-# <a name="how-to-use-metadataexchangeclient-to-retrieve-metadata"></a>방법: MetadataExchangeClient를 사용 하 여 메타 데이터를 검색 합니다.
+# <a name="how-to-use-metadataexchangeclient-to-retrieve-metadata"></a>방법: MetadataExchangeClient를 사용하여 메타데이터 검색
 WS-MetadataExchange(MEX) 프로토콜을 사용하여 메타데이터를 다운로드하려면 <xref:System.ServiceModel.Description.MetadataExchangeClient> 클래스를 사용합니다. 검색된 메타데이터 파일은 <xref:System.ServiceModel.Description.MetadataSet> 개체로 반환됩니다. 반환된 <xref:System.ServiceModel.Description.MetadataSet> 개체에는 <xref:System.ServiceModel.Description.MetadataSection> 개체의 컬렉션이 들어 있으며, 각 개체에는 특정 메타데이터 언어와 식별자가 포함되어 있습니다. 반환된 메타데이터는 파일로 작성할 수 있으며, 반환된 메타데이터에 WSDL(웹 서비스 기술 언어) 문서가 있는 경우에는 <xref:System.ServiceModel.Description.WsdlImporter>를 사용하여 메타데이터를 가져올 수 있습니다.  
   
  주소를 사용하는 <xref:System.ServiceModel.Description.MetadataExchangeClient> 생성자는 주소의 URI(Uniform Resource Identifier) 체계와 일치하는 <xref:System.ServiceModel.Description.MetadataExchangeBindings> 정적 클래스의 바인딩을 사용합니다. 또는 사용할 바인딩을 명시적으로 지정할 수 있도록 하는 <xref:System.ServiceModel.Description.MetadataExchangeClient> 생성자를 사용할 수 있습니다. 지정된 바인딩을 사용하여 모든 메타데이터 참조를 확인할 수 있습니다.  
@@ -36,6 +36,7 @@ WS-MetadataExchange(MEX) 프로토콜을 사용하여 메타데이터를 다운�
  이 코드 예제를 컴파일하려면 System.ServiceModel.dll 어셈블리를 참조하여 <xref:System.ServiceModel.Description> 네임스페이스를 가져와야 합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.ServiceModel.Description.MetadataResolver>
 - <xref:System.ServiceModel.Description.MetadataExchangeClient>
 - <xref:System.ServiceModel.Description.WsdlImporter>

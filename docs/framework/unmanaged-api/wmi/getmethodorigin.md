@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 76f449e52168001a2aaac6cbc3707361cf7f809a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 193caa894b8697a65e8821c01a63dde9cc5b5ccc
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54582466"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59153714"
 ---
 # <a name="getmethodorigin-function"></a>GetMethodOrigin 함수
 메서드가 선언되는 클래스를 결정합니다.
@@ -79,4 +79,5 @@ HRESULT GetMethodOrigin (
  **.NET Framework 버전:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>참고자료
-- [WMI 및 성능 카운터 (관리 되지 않는 API 참조)](index.md)
+
+- [WMI 및 성능 카운터(관리되지 않는 API 참조)](index.md)

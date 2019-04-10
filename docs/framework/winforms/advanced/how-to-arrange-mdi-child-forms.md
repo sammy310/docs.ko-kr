@@ -8,12 +8,12 @@ helpviewer_keywords:
 - child forms [Windows Forms], arranging
 - MDI [Windows Forms], arranging child forms
 ms.assetid: a0786378-3206-4ccc-898e-7d3b38cc5089
-ms.openlocfilehash: 3d67da6330cdceaf975c62b474c1580b853a2676
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 60cba801446d043fa8c0b36d97628e9b0f8df11d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57711901"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59160110"
 ---
 # <a name="how-to-arrange-mdi-child-forms"></a>방법: MDI 자식 양식 정렬
 응용 프로그램에는 바둑판식 배열, 계단식 배열, 정렬 등 열려 있는 MDI 자식 폼의 레이아웃을 제어하는 작업을 위한 메뉴 명령이 있는 경우가 많습니다. <xref:System.Windows.Forms.Form.LayoutMdi%2A> 메서드를 <xref:System.Windows.Forms.MdiLayout> 열거형 값 중 하나와 함께 사용하여 MDI 부모 폼에서 자식 폼을 다시 정렬할 수 있습니다.  
@@ -48,8 +48,9 @@ ms.locfileid: "57711901"
     ```  
   
 ## <a name="see-also"></a>참고자료
-- [MDI(다중 문서 인터페이스) 응용 프로그램](multiple-document-interface-mdi-applications.md)
-- [방법: MDI 부모 폼 만들기](how-to-create-mdi-parent-forms.md)
-- [방법: MDI 자식 폼 만들기](how-to-create-mdi-child-forms.md)
+
+- [MDI 애플리케이션](multiple-document-interface-mdi-applications.md)
+- [방법: MDI 부모 양식 만들기](how-to-create-mdi-parent-forms.md)
+- [방법: MDI 자식 양식 만들기](how-to-create-mdi-child-forms.md)
 - [방법: 활성 MDI 자식 확인](how-to-determine-the-active-mdi-child.md)
-- [방법: 활성 MDI 자식으로 데이터 전송](how-to-send-data-to-the-active-mdi-child.md)
+- [방법: 활성 MDI 자식으로 데이터 보내기](how-to-send-data-to-the-active-mdi-child.md)

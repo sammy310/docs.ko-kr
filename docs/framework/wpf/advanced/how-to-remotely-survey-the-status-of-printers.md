@@ -11,12 +11,12 @@ helpviewer_keywords:
 - remotely surveying printer status [WPF]
 - status [WPF], printers [WPF], surveying remotely
 ms.assetid: d6324759-8292-4c23-9584-9c708887dc94
-ms.openlocfilehash: 6eba3c5edd9095a25c0a387a3b37f68e3799d1c3
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: MT
+ms.openlocfilehash: 4ebcb2e4f85d30ea1ce24584c69def5b0d1297c1
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57359707"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59143548"
 ---
 # <a name="how-to-remotely-survey-the-status-of-printers"></a>방법: 원격으로 프린터 상태 조사
 중간 규모 및 대규모 기업에는 언제든지 종이 걸림이나 용지 부족 또는 다른 문제 상황으로 인해 여러 프린터가 작동하지 않을 수 있습니다. 다양 한 프린터 속성에서 노출 된 [!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)] Microsoft.NET Framework의 프린터의 상태를 신속 하 게 설문 조사를 수행 하기 위한 수단을 제공 합니다.  
@@ -74,6 +74,7 @@ ms.locfileid: "57359707"
  [!code-vb[PrinterStatusSurvey#UsingStartAndUntilTimes](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PrinterStatusSurvey/visualbasic/program.vb#usingstartanduntiltimes)]  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Printing.PrintQueue.StartTimeOfDay%2A>
 - <xref:System.Printing.PrintQueue.UntilTimeOfDay%2A>
 - <xref:System.DateTime>
@@ -84,6 +85,6 @@ ms.locfileid: "57359707"
 - <xref:System.Printing.LocalPrintServer>
 - <xref:System.Printing.EnumeratedPrintQueueTypes>
 - <xref:System.Printing.PrintQueue>
-- [& 연산자 (C# 참조)](~/docs/csharp/language-reference/operators/and-operator.md)
+- [& 연산자(C# 참조)](~/docs/csharp/language-reference/operators/and-operator.md)
 - [WPF의 문서](documents-in-wpf.md)
 - [인쇄 개요](printing-overview.md)

@@ -1,5 +1,5 @@
 ---
-title: '방법: 응용 프로그램 설정 만들기'
+title: '방법: 애플리케이션 설정 만들기'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - application settings [Windows Forms], Windows Forms
 - application settings [Windows Forms], creating
 ms.assetid: 1e7aa347-af75-41e5-89ca-f53cab704f72
-ms.openlocfilehash: d540715c0b4c69b2981cc65f55b0fa950c5a4eaf
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: a6b63e5e48e64491e5f33e7aec4abf92ccf48708
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57721244"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59166402"
 ---
-# <a name="how-to-create-application-settings"></a>방법: 응용 프로그램 설정 만들기
+# <a name="how-to-create-application-settings"></a>방법: 애플리케이션 설정 만들기
 관리 코드를 사용하여 새 응용 프로그램 설정을 만들고, 이러한 설정이 런타임에 자동으로 로드 및 저장되도록 폼의 속성이나 폼의 컨트롤에 바인딩할 수 있습니다.  
   
  다음 절차에서는 <xref:System.Configuration.ApplicationSettingsBase>에서 파생되는 래퍼 클래스를 수동으로 만듭니다. 노출하려는 각 응용 프로그램 설정에 대한 공개적으로 액세스 가능한 속성을 이 클래스에 추가합니다.  
@@ -47,7 +47,8 @@ ms.locfileid: "57721244"
  기본 설정 공급자인 <xref:System.Configuration.LocalFileSettingsProvider>는 정보를 구성 파일에 일반 텍스트로 저장합니다. 이 경우 보안이 운영 체제에서 현재 사용자에 대해 제공하는 파일 액세스 보안으로 제한됩니다. 이 때문에 구성 파일에 정보를 저장할 때는 주의해야 합니다. 예를 들어 응용 프로그램 설정은 일반적으로 응용 프로그램의 데이터 저장소를 가리키는 연결 문자열을 저장하는 데 사용됩니다. 그러나 보안 문제 때문에 이러한 문자열은 암호를 포함하지 않아야 합니다. 연결 문자열에 대한 자세한 내용은 <xref:System.Configuration.SpecialSetting>을 참조하세요.  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Configuration.SpecialSettingAttribute>
 - <xref:System.Configuration.LocalFileSettingsProvider>
-- [응용 프로그램 설정 개요](application-settings-overview.md)
-- [방법: 응용 프로그램 설정 유효성 검사](how-to-validate-application-settings.md)
+- [애플리케이션 설정 개요](application-settings-overview.md)
+- [방법: 애플리케이션 설정 업데이트](how-to-validate-application-settings.md)

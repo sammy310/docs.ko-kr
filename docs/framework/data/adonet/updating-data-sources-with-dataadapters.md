@@ -1,18 +1,18 @@
 ---
-title: DataAdapter로 데이터 원본 업데이트
+title: DataAdapters로 데이터 원본 업데이트
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: d1bd9a8c-0e29-40e3-bda8-d89176b72fb1
-ms.openlocfilehash: 6989204fac64fc18cae547e272f6d52004c3af69
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 548e374fbabee57e756d06e5cb56a59f8e97a47c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54728832"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59153597"
 ---
-# <a name="updating-data-sources-with-dataadapters"></a>DataAdapter로 데이터 원본 업데이트
+# <a name="updating-data-sources-with-dataadapters"></a>DataAdapters로 데이터 원본 업데이트
 `Update`의 <xref:System.Data.Common.DataAdapter> 메서드를 호출하면 <xref:System.Data.DataSet>의 변경 내용이 데이터 소스에 다시 적용됩니다. `Update` 메서드는 `Fill` 메서드와 마찬가지로 `DataSet`의 인스턴스, 선택적 <xref:System.Data.DataTable> 개체 또는 `DataTable` 이름을 인수로 사용합니다. `DataSet` 인스턴스는 변경 내용을 포함하는 `DataSet`이며 `DataTable`은 변경 내용을 검색할 테이블을 식별합니다. `DataTable`을 지정하지 않으면 `DataTable`의 첫 번째 `DataSet`이 사용됩니다.  
   
  `Update` 메서드를 호출하면 `DataAdapter`가 변경 내용을 분석하여 INSERT, UPDATE, DELETE 등의 적절한 명령을 실행합니다. `DataAdapter`에 대한 변경 사항이 발견되면 <xref:System.Data.DataRow>는 <xref:System.Data.Common.DbDataAdapter.InsertCommand%2A>, <xref:System.Data.Common.DbDataAdapter.UpdateCommand%2A> 또는 <xref:System.Data.Common.DbDataAdapter.DeleteCommand%2A>를 사용하여 변경 내용을 처리합니다. 이로써 가능한 경우 디자인 타임에 저장 프로시저를 사용하여 명령 구문을 지정함으로써 ADO.NET 응용 프로그램의 성능을 최대화할 수 있습니다. `Update`를 호출하기 전에 명령을 명시적으로 설정해야 합니다. `Update`를 호출했는데 삭제된 행에 대한 `DeleteCommand`가 없는 경우와 같이 특정 업데이트에 사용할 적절한 명령이 없으면 예외가 throw됩니다.  
@@ -46,7 +46,7 @@ ms.locfileid: "54728832"
   
  호출할 때 발생할 수 있는 예외를 처리 하는 `Update` 메서드를 사용할 수는 `RowUpdated` 발생 하는 행 업데이트 오류에 응답 하는 이벤트 (참조 [DataAdapter 이벤트 처리](../../../../docs/framework/data/adonet/handling-dataadapter-events.md))를 설정할 수 있습니다 `DataAdapter.ContinueUpdateOnError` 에`true` 호출 하기 전에 `Update`에 저장 된 오류 정보에 응답 합니다 `RowError` 업데이트가 완료 되 면 특정 행의 속성 (참조 [행 오류 정보](../../../../docs/framework/data/adonet/dataset-datatable-dataview/row-error-information.md)).  
   
- **참고** 호출 `AcceptChanges` 에 `DataSet`, `DataTable`, 또는 `DataRow` 모든 `Original` 에 대 한 값을 `DataRow` 을 덮어쓸 수는 `Current` 에 대 한 값는 `DataRow`합니다. 행을 고유하게 식별하는 필드 값을 수정한 경우 `AcceptChanges`를 호출하면 `Original` 값이 데이터 소스의 값과 더 이상 일치하지 않습니다. `AcceptChanges`는 `DataAdapter`의 Update 메서드를 호출하는 동안 각 행에 대해 자동으로 호출됩니다. 먼저 `AcceptChangesDuringUpdate`의 `DataAdapter` 속성을 false로 설정하거나 `RowUpdated` 이벤트에 대한 이벤트 처리기를 만들고 <xref:System.Data.Common.RowUpdatedEventArgs.Status%2A>를 <xref:System.Data.UpdateStatus.SkipCurrentRow>로 설정하면 Update 메서드를 호출할 때 원래 값을 보존할 수 있습니다. 자세한 내용은 [데이터 집합 콘텐츠 병합](../../../../docs/framework/data/adonet/dataset-datatable-dataview/merging-dataset-contents.md) 하 고 [DataAdapter 이벤트 처리](../../../../docs/framework/data/adonet/handling-dataadapter-events.md)합니다.  
+ **참고** 호출 `AcceptChanges` 에 `DataSet`, `DataTable`, 또는 `DataRow` 모든 `Original` 에 대 한 값을 `DataRow` 을 덮어쓸 수는 `Current` 에 대 한 값는 `DataRow`합니다. 행을 고유하게 식별하는 필드 값을 수정한 경우 `AcceptChanges`를 호출하면 `Original` 값이 데이터 소스의 값과 더 이상 일치하지 않습니다. `AcceptChanges` Update 메서드를 호출 하는 동안 각 행에 대해 자동으로 호출을 `DataAdapter`입니다. 먼저 `AcceptChangesDuringUpdate`의 `DataAdapter` 속성을 false로 설정하거나 `RowUpdated` 이벤트에 대한 이벤트 처리기를 만들고 <xref:System.Data.Common.RowUpdatedEventArgs.Status%2A>를 <xref:System.Data.UpdateStatus.SkipCurrentRow>로 설정하면 Update 메서드를 호출할 때 원래 값을 보존할 수 있습니다. 자세한 내용은 [데이터 집합 콘텐츠 병합](../../../../docs/framework/data/adonet/dataset-datatable-dataview/merging-dataset-contents.md) 하 고 [DataAdapter 이벤트 처리](../../../../docs/framework/data/adonet/handling-dataadapter-events.md)합니다.  
   
 ## <a name="example"></a>예제  
  다음 예제에서는 명시적으로 설정 하 여 수정 된 행에 대 한 업데이트를 수행 하는 방법을 보여 줍니다는 `UpdateCommand` 의 한 `DataAdapter` 호출 및 해당 `Update` 메서드. UPDATE 문의 WHERE 절에 지정된 매개 변수는 `Original`의 `SourceColumn` 값을 사용하도록 설정되어 있습니다. `Current` 값이 수정되어 데이터 소스에 있는 값과 일치하지 않을 수 있기 때문에 이 설정은 매우 중요합니다. `Original` 값은 데이터 소스에서 `DataTable`을 채우는 데 사용한 값입니다.  
@@ -369,9 +369,10 @@ class Program {
 ```  
   
 ## <a name="see-also"></a>참고자료
-- [DataAdapter 및 DataReader](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)
+
+- [DataAdapters 및 DataReaders](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)
 - [행 상태 및 행 버전](../../../../docs/framework/data/adonet/dataset-datatable-dataview/row-states-and-row-versions.md)
 - [AcceptChanges 및 RejectChanges](../../../../docs/framework/data/adonet/dataset-datatable-dataview/acceptchanges-and-rejectchanges.md)
-- [데이터 집합 콘텐츠 병합](../../../../docs/framework/data/adonet/dataset-datatable-dataview/merging-dataset-contents.md)
+- [데이터 세트 콘텐츠 병합](../../../../docs/framework/data/adonet/dataset-datatable-dataview/merging-dataset-contents.md)
 - [ID 또는 일련 번호 값 검색](../../../../docs/framework/data/adonet/retrieving-identity-or-autonumber-values.md)
 - [ADO.NET 관리되는 공급자 및 데이터 집합 개발자 센터](https://go.microsoft.com/fwlink/?LinkId=217917)

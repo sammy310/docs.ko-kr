@@ -2,12 +2,12 @@
 title: SQL Server 데이터 형식 및 ADO.NET
 ms.date: 03/30/2017
 ms.assetid: 81b43550-23e8-43bb-b460-7eb8ac825c33
-ms.openlocfilehash: 14a3c8b2f520efce96667b2028405ca36ed17a28
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 90589f54728ad5e887b96f37f96ff31928c680ce
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54741511"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59168417"
 ---
 # <a name="sql-server-data-types-and-adonet"></a>SQL Server 데이터 형식 및 ADO.NET
 SQL Server와 .NET Framework는 서로 다른 형식 시스템을 기반으로 하기 때문에 데이터가 손실될 가능성이 있습니다. .NET Framework Data Provider for SQL Server(<xref:System.Data.SqlClient>)에서는 데이터 무결성을 유지하기 위해 SQL Server 데이터로 작업할 때 형식화된 접근자 메서드를 제공합니다. <xref:System.Data.SqlDbType> 클래스의 열거형을 사용하여 <xref:System.Data.SqlClient.SqlParameter> 데이터 형식을 지정할 수 있습니다.  
@@ -20,10 +20,10 @@ SQL Server와 .NET Framework는 서로 다른 형식 시스템을 기반으로 �
   
  **SQL Server 온라인 설명서**  
   
-1.  [데이터 형식 (데이터베이스 엔진)](https://go.microsoft.com/fwlink/?LinkID=107468)  
+1.  [데이터 형식(데이터베이스 엔진)](https://go.microsoft.com/fwlink/?LinkID=107468)  
   
 ## <a name="in-this-section"></a>섹션 내용  
- [SqlTypes 및 DataSet](../../../../../docs/framework/data/adonet/sql/sqltypes-and-the-dataset.md)  
+ [SqlType 및 DataSet](../../../../../docs/framework/data/adonet/sql/sqltypes-and-the-dataset.md)  
  `SqlTypes`의 `DataSet`에 대한 형식 지원에 대해 설명합니다.  
   
  [Null 값 처리](../../../../../docs/framework/data/adonet/sql/handling-null-values.md)  
@@ -55,6 +55,7 @@ SQL Server와 .NET Framework는 서로 다른 형식 시스템을 기반으로 �
  `DbType` 열거형과 해당 멤버 전체에 대해 설명합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [SQL Server 데이터 형식 매핑](../../../../../docs/framework/data/adonet/sql-server-data-type-mappings.md)
 - [매개 변수 및 매개 변수 데이터 형식 구성](../../../../../docs/framework/data/adonet/configuring-parameters-and-parameter-data-types.md)
 - [테이블 반환 매개 변수](../../../../../docs/framework/data/adonet/sql/table-valued-parameters.md)

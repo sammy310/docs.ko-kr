@@ -2,12 +2,12 @@
 title: 포이즌 메시지 처리
 ms.date: 03/30/2017
 ms.assetid: 8d1c5e5a-7928-4a80-95ed-d8da211b8595
-ms.openlocfilehash: ec7603e547c065b4b86f2c81650c6e8a2ce09e6f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 704f1a837b7d70f401eaaf7d23847b08972cff50
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54745807"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59146525"
 ---
 # <a name="poison-message-handling"></a>포이즌 메시지 처리
 A *포이즌 메시지* 응용 프로그램에 배달 시도 최대 횟수를 초과한 메시지입니다. 큐 기반 응용 프로그램에서 오류로 인해 메시지를 처리할 수 없는 경우 이러한 상황이 발생할 수 있습니다. 안정성 요청을 충족하려면 대기 중인 응용 프로그램이 트랜잭션에서 메시지를 받습니다. 대기 중인 메시지를 받은 트랜잭션을 중단하면 메시지가 큐에 남으므로 새 트랜잭션에서 해당 메시지가 다시 시도됩니다. 트랜잭션의 중단 문제가 해결되지 않은 경우에는 수신 응용 프로그램이 최대 전달 시도 횟수를 초과할 때까지 같은 메시지를 받고 중단하는 루프에 갇히고, 포이즌 메시지가 발생합니다.  
@@ -21,9 +21,9 @@ A *포이즌 메시지* 응용 프로그램에 배달 시도 최대 횟수를 �
   
 -   `ReceiveRetryCount`. 응용 프로그램 큐에서 응용 프로그램으로 메시지 전달을 다시 시도하는 최대 횟수를 나타내는 정수 값입니다. 기본값은 5입니다. 이 값은 데이터베이스의 임시 교착 상태처럼 문제 해결을 즉시 다시 시도하는 경우 충분합니다.  
   
--   `MaxRetryCycles`. 최대 재시도 주기 수를 나타내는 정수 값입니다. 재시도 주기는 응용 프로그램 큐에서 재시도 하위 큐로 메시지를 전송하고, 구성 가능한 지연 시간 이후 재시도 하위 큐에서 전달을 다시 시도할 응용 프로그램 큐로 메시지를 다시 전송하는 것으로 구성됩니다. 기본값은 2입니다. [!INCLUDE[wv](../../../../includes/wv-md.md)]에서는 메시지가 최대 (`ReceiveRetryCount` +1) * (`MaxRetryCycles` + 1)회까지 시도됩니다. `MaxRetryCycles`는 [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] 및 [!INCLUDE[wxp](../../../../includes/wxp-md.md)]에서 무시됩니다.  
+-   `MaxRetryCycles`. 최대 재시도 주기 수를 나타내는 정수 값입니다. 재시도 주기는 응용 프로그램 큐에서 재시도 하위 큐로 메시지를 전송하고, 구성 가능한 지연 시간 이후 재시도 하위 큐에서 전달을 다시 시도할 응용 프로그램 큐로 메시지를 다시 전송하는 것으로 구성됩니다. 기본값은 2입니다. [!INCLUDE[wv](../../../../includes/wv-md.md)]에서는 메시지가 최대 (`ReceiveRetryCount` +1) * (`MaxRetryCycles` + 1)회까지 시도됩니다. `MaxRetryCycles` 무시 됩니다 [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] 고 [!INCLUDE[wxp](../../../../includes/wxp-md.md)]입니다.  
   
--   `RetryCycleDelay`. 재시도 주기 사이의 지연 시간입니다. 기본값은 30분입니다. `MaxRetryCycles` 및 `RetryCycleDelay`는 함께 정기적인 지연 시간 이후 재시도로 문제를 해결하는 문제 해결 메커니즘을 제공합니다. 예를 들면, 이 핸들은 SQL Server의 보류 중인 트랜잭션 커밋에 설정된 잠긴 행을 처리합니다.  
+-   `RetryCycleDelay`. 재시도 주기 사이의 지연 시간입니다. 기본값은 30분입니다. `MaxRetryCycles` 및 `RetryCycleDelay` 함께 정기적인 지연 시간 이후 재시도 문제를 해결 하 고 문제를 해결 하는 메커니즘을 제공 합니다. 예를 들면, 이 핸들은 SQL Server의 보류 중인 트랜잭션 커밋에 설정된 잠긴 행을 처리합니다.  
   
 -   `ReceiveErrorHandling`. 최대 재시도 횟수만큼 시도한 후에 전달하지 못한 메시지에 대해 수행할 작업을 나타내는 열거입니다. 이 값은 Fault, Drop, Reject 및 Move일 수 있습니다. 기본 옵션은 Fault입니다.  
   
@@ -77,9 +77,7 @@ A *포이즌 메시지* 응용 프로그램에 배달 시도 최대 횟수를 �
      [!code-csharp[S_UE_MSMQ_Poison#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_ue_msmq_poison/cs/poisonbehaviorattribute.cs#3)]  
   
 4.  서비스에 포이즌 동작 특성으로 주석이 달려 있어야 합니다.  
-  
-  
-  
+
  또한 `ReceiveErrorHandling`이 `Fault`로 설정된 경우 `ServiceHost`에서 포이즌 메시지를 발생하는 데 오류가 발생합니다. 오류가 발생한 이벤트에 후크하고 서비스를 종료하며 수정 작업을 수행한 다음 다시 시작할 수 있습니다. 예를 들어 `LookupId`로 전파된 <xref:System.ServiceModel.MsmqPoisonMessageException>의 `IErrorHandler`를 기록해 둔 다음, 서비스 호스트에 오류가 발생하는 경우 `System.Messaging` API를 사용하면 `LookupId`를 사용하여 큐에서 메시지를 받고, 큐에서 메시지를 제거하고, 외부 저장소 또는 다른 큐에 메시지를 저장할 수 있습니다. 그런 다음 `ServiceHost`를 다시 시작하여 일반적인 처리를 다시 시작할 수 있습니다. 합니다 [MSMQ 4.0에서 포이즌 메시지 처리](../../../../docs/framework/wcf/samples/poison-message-handling-in-msmq-4-0.md) 이 동작을 보여 줍니다.  
   
 ## <a name="transaction-time-out-and-poison-messages"></a>트랜잭션 제한 시간 및 포이즌 메시지  
@@ -94,7 +92,7 @@ A *포이즌 메시지* 응용 프로그램에 배달 시도 최대 횟수를 �
  메시지가 포이즌 메시지가 되고 일괄 처리에 포함되면 전체 일괄 처리가 롤백되고 채널이 한 번에 하나의 메시지를 반환합니다. 일괄 처리 하는 방법에 대 한 자세한 내용은 참조 하세요. [트랜잭션에서 메시지 일괄 처리](../../../../docs/framework/wcf/feature-details/batching-messages-in-a-transaction.md)  
   
 ## <a name="poison-message-handling-for-messages-in-a-poison-queue"></a>포이즌 큐의 메시지에 대한 포이즌 메시지 처리  
- 메시지가 포이즌 메시지 큐에 놓이면 포이즌 메시지 처리가 종료되지 않습니다. 포이즌 메시지 큐의 메시지를 읽고 처리해야 합니다. 최종 포이즌 하위 큐에서 메시지를 읽을 때 포이즌 메시지 처리 설정의 하위 집합을 사용할 수 있습니다. `ReceiveRetryCount` 및 `ReceiveErrorHandling` 설정을 적용할 수 있습니다. `ReceiveErrorHandling`은 Drop, Reject 또는 Fault로 설정할 수 있습니다. `MaxRetryCycles`이 Move로 설정되면 `ReceiveErrorHandling`가 무시되고 예외가 throw됩니다.  
+ 메시지가 포이즌 메시지 큐에 놓이면 포이즌 메시지 처리가 종료되지 않습니다. 포이즌 메시지 큐의 메시지를 읽고 처리해야 합니다. 최종 포이즌 하위 큐에서 메시지를 읽을 때 포이즌 메시지 처리 설정의 하위 집합을 사용할 수 있습니다. `ReceiveRetryCount` 및 `ReceiveErrorHandling` 설정을 적용할 수 있습니다. `ReceiveErrorHandling`은 Drop, Reject 또는 Fault로 설정할 수 있습니다. `MaxRetryCycles` 무시 됩니다 하는 경우 예외가 throw 되 고 `ReceiveErrorHandling` Move로 설정 합니다.  
   
 ## <a name="windows-vista-windows-server-2003-and-windows-xp-differences"></a>Windows Vista, Windows Server 2003 및 Windows XP의 차이점  
  앞에서 설명한 대로 포이즌 메시지 처리 설정의 일부만 [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] 및 [!INCLUDE[wxp](../../../../includes/wxp-md.md)]에 적용됩니다. [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)], [!INCLUDE[wxp](../../../../includes/wxp-md.md)] 및 [!INCLUDE[wv](../../../../includes/wv-md.md)]에서 메시지 큐의 주요 차이점은 포이즌 메시지 처리와 관련된 것입니다.  
@@ -106,6 +104,7 @@ A *포이즌 메시지* 응용 프로그램에 배달 시도 최대 횟수를 �
 -   [!INCLUDE[wv](../../../../includes/wv-md.md)]의 메시지 큐는 메시지 전달 시도 횟수를 보관하는 메시지 속성을 지원합니다. 이 중단 횟수 속성은 [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] 및 [!INCLUDE[wxp](../../../../includes/wxp-md.md)]에서 사용할 수 없습니다. WCF는이 속성 하지 않을 수도 정확한 값을 팜에 있는 둘 이상의 WCF 서비스에서 동일한 메시지를 읽으면 되므로 중단 횟수가 메모리에 유지 합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [큐 개요](../../../../docs/framework/wcf/feature-details/queues-overview.md)
 - [Windows Vista, Windows Server 2003 및 Windows XP의 큐 기능 차이점](../../../../docs/framework/wcf/feature-details/diff-in-queue-in-vista-server-2003-windows-xp.md)
 - [계약 및 서비스에서 오류 지정 및 처리](../../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)

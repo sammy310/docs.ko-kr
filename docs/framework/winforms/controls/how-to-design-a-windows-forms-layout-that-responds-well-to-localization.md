@@ -1,5 +1,5 @@
 ---
-title: '방법: 지역화에 효과적으로 대응 하는 Windows Forms 레이아웃 디자인'
+title: '방법: 지역화에 효과적으로 대응하는 Windows Forms 레이아웃 디자인'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,16 +10,15 @@ helpviewer_keywords:
 - Windows Forms, localization
 - localization [Windows Forms], Windows Forms layout
 ms.assetid: d13eff2d-701c-4b6e-8838-3885cbfb7223
-ms.openlocfilehash: ff88d876ffc05c85c6d3c1011df776b814ed7aea
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 095427ce633ee6db5a448c8f3f69304ed25ab82a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57709720"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59142599"
 ---
-# <a name="how-to-design-a-windows-forms-layout-that-responds-well-to-localization"></a>방법: 지역화에 효과적으로 대응 하는 Windows Forms 레이아웃 디자인
-지역화할 준비가 된 폼을 만들면 국제 시장에서 개발 속도를 크게 높일 수 있습니다. 
-  <xref:System.Windows.Forms.TableLayoutPanel> 컨트롤을 사용하여 <xref:System.Windows.Forms.Control.Text%2A> 속성 값 변경 때문에 컨트롤 크기가 조정될 때 정상적으로 응답하는 레이아웃을 구현할 수 있습니다.  
+# <a name="how-to-design-a-windows-forms-layout-that-responds-well-to-localization"></a>방법: 지역화에 효과적으로 대응하는 Windows Forms 레이아웃 디자인
+지역화할 준비가 된 폼을 만들면 국제 시장에서 개발 속도를 크게 높일 수 있습니다. <xref:System.Windows.Forms.TableLayoutPanel> 컨트롤을 사용하여 <xref:System.Windows.Forms.Control.Text%2A> 속성 값 변경 때문에 컨트롤 크기가 조정될 때 정상적으로 응답하는 레이아웃을 구현할 수 있습니다.  
   
 ## <a name="example"></a>예제  
  이 폼에서는 표시된 문자열 값을 다른 언어로 번역할 때 비례하여 조정되는 레이아웃을 만드는 방법을 보여 줍니다. 이 번역 프로세스를 *지역화*라고 합니다. 자세한 내용은 [지역화](../../../standard/globalization-localization/localization.md)를 참조하세요.  
@@ -30,19 +29,19 @@ ms.locfileid: "57709720"
  [!code-vb[System.Windows.Forms.TableLayoutPanel.LocalizableForm#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.TableLayoutPanel.LocalizableForm/VB/localizableform.vb#1)]  
   
 ## <a name="additional-resources"></a>추가 자료
-1.  [방법: 에서 맞춤 및 늘이기 컨트롤을 TableLayoutPanel 컨트롤](how-to-align-and-stretch-a-control-in-a-tablelayoutpanel-control.md)  
+1.  [방법: TableLayoutPanel 컨트롤에서 컨트롤 맞춤 및 늘이기](how-to-align-and-stretch-a-control-in-a-tablelayoutpanel-control.md)  
   
-2.  [연습: FlowLayoutPanel을 사용 하 여 Windows Forms에서 컨트롤 정렬](walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel.md)  
+2.  [연습: FlowLayoutPanel을 사용하여 Windows Forms에서 컨트롤 정렬](walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel.md)  
 
-3.  [방법: TableLayoutPanel 컨트롤의 행과 열 확장](how-to-span-rows-and-columns-in-a-tablelayoutpanel-control.md)  
+3.  [방법: TableLayoutPanel 컨트롤에서 행 및 열 확장](how-to-span-rows-and-columns-in-a-tablelayoutpanel-control.md)  
   
-4.  [방법: TableLayoutPanel 컨트롤의 열과 행 편집](how-to-edit-columns-and-rows-in-a-tablelayoutpanel-control.md)  
+4.  [방법: TableLayoutPanel 컨트롤에서 열 및 행 편집](how-to-edit-columns-and-rows-in-a-tablelayoutpanel-control.md)  
   
-5.  [연습: Forms 컨트롤 Windows에서 태그를 스마트를 사용 하 여 일반적인 작업 수행](performing-common-tasks-using-smart-tags-on-wf-controls.md)  
+5.  [연습: Windows Forms 컨트롤에서 스마트 태그를 사용하여 일반 작업 수행](performing-common-tasks-using-smart-tags-on-wf-controls.md)  
   
-6.  [연습: TableLayoutPanel을 사용 하 여 Windows Forms에서 컨트롤 정렬](walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)  
+6.  [연습: TableLayoutPanel을 사용하여 Windows Forms에서 컨트롤 정렬](walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)  
 
-7.  [연습: Windows Forms 컨트롤 Padding, Margins 및 AutoSize 속성을 사용 하 여 레이아웃](windows-forms-controls-padding-autosize.md)  
+7.  [연습: Padding, Margin 및 AutoSize 속성을 사용하여 Windows Forms 컨트롤 레이아웃](windows-forms-controls-padding-autosize.md)  
   
 8.  [방법: AutoSize 속성과 TableLayoutPanel 컨트롤을 사용 하 여 Windows Forms 지역화 지원](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/1zkt8b33(v=vs.100))  
   
@@ -56,6 +55,7 @@ ms.locfileid: "57709720"
  Visual Basic 또는 Visual C#에 대 한 명령줄에서이 예제를 빌드하는 방법에 대 한 내용은 [명령줄에서 빌드](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) 하거나 [csc.exe를 사용한 명령줄 빌드](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)합니다. 또한 새 프로젝트에 코드를 붙여 넣어 Visual Studio에서이 예제를 빌드할 수 있습니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Windows.Forms.TableLayoutPanel>
 - <xref:System.Windows.Forms.FlowLayoutPanel>
 - [지역화](../../../standard/globalization-localization/localization.md)

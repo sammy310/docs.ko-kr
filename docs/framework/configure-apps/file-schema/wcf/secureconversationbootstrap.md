@@ -2,12 +2,12 @@
 title: <secureConversationBootstrap>
 ms.date: 03/30/2017
 ms.assetid: 66b46f95-fa2d-4b5b-b6ce-0572ab0cdd50
-ms.openlocfilehash: c4e9ad3845f8ceef51cd4474b5f3f61b85f12754
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: e39458e7e0bac15429ad3d34c4fbba0f55d254f7
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55279892"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59167000"
 ---
 # <a name="secureconversationbootstrap"></a>\<secureConversationBootstrap>
 보안 대화 서비스 개시에 사용되는 기본값을 지정합니다.  
@@ -57,7 +57,7 @@ ms.locfileid: "55279892"
 |`requireDerivedKeys`|키를 원본 증명 키에서 파생할 수 있는지 여부를 지정하는 부울 값입니다. 기본값은 `true`입니다.|  
 |`requireSecurityContextCancellation`|더 이상 필요하지 않은 보안 컨텍스트를 취소 및 종료할지 여부를 지정하는 부울 값입니다. 기본값은 `true`입니다.|  
 |`requireSignatureConfirmation`|WS-Security 시그니처 확인을 사용할 수 있는지 여부를 지정하는 부울 값입니다. `true`로 설정되면 응답자는 메시지 시그니처를 확인합니다. 기본값은 `false`입니다.<br /><br /> 서비스가 요청을 완전히 인식하고 응답하는지 확인하기 위해 시그니처 확인이 사용됩니다.|  
-|`securityHeaderLayout`|보안 헤더의 요소 순서를 지정합니다. 올바른 값은 다음과 같습니다.<br /><br /> -Strict. 일반적인 “사용 전 선언” 원칙에 따라 항목이 보안 헤더에 추가됩니다.<br />-명확 하지 않습니다. 항목은 WSS를 확인 하는 순서로 보안 헤더에 추가 됩니다. SOAP 메시지 보안입니다.<br />-   LaxWithTimestampFirst. 항목은 WSS를 확인 하는 순서로 보안 헤더에 추가 됩니다. SOAP 메시지 보안 점을 제외 하 고 보안 헤더의 첫 번째 요소는 wsse: timestamp 요소 여야 합니다.<br />-   LaxWithTimestampLast. 항목은 WSS를 확인 하는 순서로 보안 헤더에 추가 됩니다. SOAP 메시지 보안 점을 제외 하 고 보안 헤더의 마지막 요소는 wsse: timestamp 요소 여야 합니다.<br /><br /> 기본값은 Strict입니다.<br /><br /> 이 요소는 <xref:System.ServiceModel.Channels.SecurityHeaderLayout> 형식입니다.|  
+|`securityHeaderLayout`|보안 헤더의 요소 순서를 지정합니다. 올바른 값은 다음과 같습니다.<br /><br /> -Strict. 일반적인 “사용 전 선언” 원칙에 따라 항목이 보안 헤더에 추가됩니다.<br />-명확 하지 않습니다. WSS: SOAP 메시지 보안을 확인하는 순서로 항목이 보안 헤더에 추가됩니다. 추가됩니다.<br />-   LaxWithTimestampFirst. WSS: SOAP 메시지 보안을 확인하는 순서로 항목이 보안 헤더에 추가됩니다. 단, 보안 헤더의 첫 번째 요소는 wsse:Timestamp 요소여야 합니다.<br />-   LaxWithTimestampLast. WSS: SOAP 메시지 보안을 확인하는 순서로 항목이 보안 헤더에 추가됩니다. 단, 보안 헤더의 마지막 요소는 wsse:Timestamp 요소여야 합니다.<br /><br /> 기본값은 Strict입니다.<br /><br /> 이 요소는 <xref:System.ServiceModel.Channels.SecurityHeaderLayout> 형식입니다.|  
   
 ### <a name="child-elements"></a>자식 요소  
   
@@ -74,13 +74,14 @@ ms.locfileid: "55279892"
 |[\<security>](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md)|사용자 지정 바인딩에 대한 보안 옵션을 지정합니다.|  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.ServiceModel.Configuration.LocalServiceSecuritySettingsElement>
 - <xref:System.ServiceModel.Channels.SecurityBindingElement.LocalServiceSettings%2A>
 - <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings>
 - <xref:System.ServiceModel.Channels.CustomBinding>
 - [바인딩](../../../../../docs/framework/wcf/bindings.md)
-- [바인딩 확장](../../../../../docs/framework/wcf/extending/extending-bindings.md)
+- [바인딩 확장명](../../../../../docs/framework/wcf/extending/extending-bindings.md)
 - [사용자 지정 바인딩](../../../../../docs/framework/wcf/extending/custom-bindings.md)
 - [\<customBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)
-- [방법: SecurityBindingElement를 사용 하 여 사용자 지정 바인딩 만들기](../../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)
-- [사용자 지정 바인딩 보안](../../../../../docs/framework/wcf/samples/custom-binding-security.md)
+- [방법: SecurityBindingElement를 사용하여 사용자 지정 바인딩 만들기](../../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)
+- [Custom Binding Security](../../../../../docs/framework/wcf/samples/custom-binding-security.md)

@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b1ee5044c2223d3ff90cf10b53cad4e1b353d87c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c54b2af6e7a200db89bfd7335868a629d7a886fc
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54726512"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59141312"
 ---
 # <a name="cordebuguserstate-enumeration"></a>CorDebugUserState 열거형
 스레드의 사용자 상태를 나타냅니다.  
@@ -52,7 +52,7 @@ typedef enum CorDebugUserState {
 |`USER_UNSTARTED`|스레드 실행을 시작 되지 않았습니다.|  
 |`USER_STOPPED`|스레드가 종료 되었습니다.|  
 |`USER_WAIT_SLEEP_JOIN`|스레드가 다른 스레드가 작업을 완료 되기를 기다리고 있습니다.|  
-|`USER_SUSPENDED`|스레드가 일시 중단되었습니다.|  
+|`USER_SUSPENDED`|스레드가 일시 중단 되었습니다.|  
 |`USER_UNSAFE_POINT`|안전 하지 않은 지점에서 스레드가 됩니다. 즉, 스레드는 실행 지점에서 가비지 수집을 차단할 수 있는입니다.<br /><br /> 디버그 안전 하지 않은 지점에서 이벤트를 디스패치할 수 있습니다 하지만 안전 하지 않은 지점에서 스레드를 일시 중단 가능성이 하면 교착 상태가 스레드가 재개 될 때까지 합니다. 안전 하 고 안전 하지 않은 지점 시간 (JIT) 및 가비지 수집 구현에서 결정 됩니다.|  
 |`USER_THREADPOOL`|스레드가는 스레드 풀의 경우|  
   
@@ -71,4 +71,5 @@ typedef enum CorDebugUserState {
  **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>참고자료
+
 - [디버깅 열거형](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)

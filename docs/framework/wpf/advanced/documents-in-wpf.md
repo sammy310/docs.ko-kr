@@ -10,20 +10,19 @@ helpviewer_keywords:
 - documents [WPF], types of
 - documents [WPF], browser-viewable
 ms.assetid: 6e8db7bc-050a-4070-aa72-bb8c46e87ff8
-ms.openlocfilehash: 20d90f96647989be35bf2c9cdf6243e8e868cd1e
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: MT
+ms.openlocfilehash: 9f948b6723d73dac6104439dcd6a42dce573c438
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57361371"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59169613"
 ---
 # <a name="documents-in-wpf"></a>WPF의 문서
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]에서는 이전 세대의 [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)]보다 더 쉽게 액세스하고 읽도록 설계된 고품질 콘텐츠를 만들 수 있는 다양한 문서 기능을 제공합니다. 고급 기능 및 품질 외에도 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]에서는 문서 표시, 패키징 및 보안을 위한 통합 서비스도 제공합니다. 이 항목에서는 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 문서 형식 및 문서 패키징을 소개합니다.  
-  
-  
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 다양 한 문서 기능을 보다 쉽게 액세스 하 고 이전 세대 보다 읽기 되도록 설계 된 고품질 콘텐츠를 만들 수 있게 제공 [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)]합니다. 고급 기능 및 품질 외에도 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]에서는 문서 표시, 패키징 및 보안을 위한 통합 서비스도 제공합니다. 이 항목에서는 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 문서 형식 및 문서 패키징을 소개합니다.  
+
 <a name="types_of_documents"></a>   
 ## <a name="types-of-documents"></a>문서 종류  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]에서는 용도에 따라 문서를 두 개의 광범위한 범주로 구분합니다. 이러한 문서 범주를 “고정 문서”와 “유동 문서”라고 합니다.  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 문서; 의도 한 용도에 따라 두 가지 범주로 나눕니다. 이러한 문서 범주는 "고정된 문서"와 "유동 문서입니다." 라고 합니다.  
   
  고정 문서는 사용된 디스플레이 또는 프린터 하드웨어와 무관하게 정확한 [!INCLUDE[TLA#tla_wys](../../../../includes/tlasharptla-wys-md.md)] 프레젠테이션이 필요한 애플리케이션용으로 설계되었습니다. 일반적으로 고정 문서는 데스크톱 출판, 워드 프로세싱 및 양식 레이아웃에 사용되며, 이 경우 원래 페이지 디자인을 고수하는 것이 중요합니다. 고정 문서에서는 사용 중인 디스플레이나 인쇄 디바이스와 무관하게 콘텐츠 요소의 정확한 위치를 레이아웃의 일부로 유지합니다. 예를 들어, 96dpi 디스플레이에 보이는 고정 문서 페이지는 600dpi 레이저 프린터로 출력할 때와 4800dpi 사진 식자기로 출력할 때 모두 똑같이 표시됩니다. 어느 경우에든 페이지 레이아웃은 동일하며, 문서 품질은 각 디바이스의 기능에 따라 최대화됩니다.  
   
@@ -54,7 +53,7 @@ ms.locfileid: "57361371"
   
 <a name="text_in_the_user_interface"></a>   
 ### <a name="text-in-the-user-interface"></a>사용자 인터페이스의 텍스트  
- 문서에 텍스트를 추가하는 외에도 양식과 같은 애플리케이션 UI에서 명확하게 텍스트를 사용할 수 있습니다. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]에서는 화면에 텍스트를 그리는 데 사용하는 여러 컨트롤이 포함되어 있습니다. 각 컨트롤은 다른 시나리오를 대상으로 하며 고유 기능 및 제한 사항 목록을 가지고 있습니다. 일반적으로 <xref:System.Windows.Controls.TextBlock> 제한 된 텍스트 지원이의 간략 한 문장과 같이 필요한 경우 요소를 사용 해야는 [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]합니다. <xref:System.Windows.Controls.Label> 최소 텍스트 지원이 필요할 때 사용할 수 있습니다. 자세한 내용은 [TextBlock 개요](../controls/textblock-overview.md)를 참조하세요.  
+ 문서에 텍스트를 추가하는 외에도 양식과 같은 애플리케이션 UI에서 명확하게 텍스트를 사용할 수 있습니다. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 화면에 텍스트를 그리기 위한 여러 컨트롤이 포함 되어 있습니다. 각 컨트롤은 다른 시나리오를 대상으로 하며 고유 기능 및 제한 사항 목록을 가지고 있습니다. 일반적으로 <xref:System.Windows.Controls.TextBlock> 제한 된 텍스트 지원이의 간략 한 문장과 같이 필요한 경우 요소를 사용 해야는 [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]합니다. <xref:System.Windows.Controls.Label> 최소 텍스트 지원이 필요할 때 사용할 수 있습니다. 자세한 내용은 [TextBlock 개요](../controls/textblock-overview.md)를 참조하세요.  
   
 <a name="packaging"></a>   
 ## <a name="document-packaging"></a>문서 패키징  
@@ -62,7 +61,7 @@ ms.locfileid: "57361371"
   
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 패키지 아키텍처는 다음과 같은 여러 주요 기술의 기반 역할을 합니다.  
   
--   [!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)]를 준수하는 [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] 문서.  
+-   [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] 문서를 준수 하는 [!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)]합니다.  
   
 -   Microsoft Office “12” Open XML 형식 문서(.docx).  
   
@@ -124,7 +123,7 @@ ms.locfileid: "57361371"
   
 <a name="XPS_Documents"></a>   
 ## <a name="xps-documents"></a>XPS 문서  
- [!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)] 문서는 렌더링에 필요한 모든 리소스 및 정보와 함께 하나 이상의 고정 문서를 포함하는 패키지입니다.  [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)]도 기본 [!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)] 인쇄 스풀 파일 형식입니다.  <xref:System.Windows.Xps.Packaging.XpsDocument> 표준 ZIP 데이터 집합에 저장 되 고 XML 및 이미지 및 글꼴 파일 같은 이진 구성 요소의 조합을 포함할 수 있습니다. [PackageRelationships](#PackageRelationships)는 문서를 완전하게 렌더링하는 데 필요한 리소스와 콘텐츠 사이의 종속성을 정의하는 데 사용합니다.  <xref:System.Windows.Xps.Packaging.XpsDocument> 디자인은 여러 용도 지 원하는 고품질 단일 문서 솔루션을 제공 합니다.  
+ [!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)] 문서는 모든 리소스 및 렌더링에 필요한 정보와 함께 하나 이상의 고정 문서를 포함 하는 패키지입니다.  [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] 도 기본 [!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)] 인쇄 스풀 파일 형식입니다.  <xref:System.Windows.Xps.Packaging.XpsDocument> 표준 ZIP 데이터 집합에 저장 되 고 XML 및 이미지 및 글꼴 파일 같은 이진 구성 요소의 조합을 포함할 수 있습니다. [PackageRelationships](#PackageRelationships)는 문서를 완전하게 렌더링하는 데 필요한 리소스와 콘텐츠 사이의 종속성을 정의하는 데 사용합니다.  <xref:System.Windows.Xps.Packaging.XpsDocument> 디자인은 여러 용도 지 원하는 고품질 단일 문서 솔루션을 제공 합니다.  
   
 -   고정 문서 콘텐츠와 리소스를 읽고 쓰며, 이식 가능하고 배포하기 쉬운 단일 파일로 저장.  
   
@@ -135,6 +134,7 @@ ms.locfileid: "57361371"
 -   [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] 호환 가능 프린터에 직접 문서 라우팅.  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Windows.Documents.FixedDocument>
 - <xref:System.Windows.Documents.FlowDocument>
 - <xref:System.Windows.Xps.Packaging.XpsDocument>
@@ -145,4 +145,4 @@ ms.locfileid: "57361371"
 - [텍스트](optimizing-performance-text.md)
 - [유동 문서 개요](flow-document-overview.md)
 - [인쇄 개요](printing-overview.md)
-- [문서 serialization 및 저장소](document-serialization-and-storage.md)
+- [문서 serialization 및 스토리지](document-serialization-and-storage.md)

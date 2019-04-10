@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ec4a486b9dfb72c05a9e614fca22626dd84a83f7
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 979d14b4c404c3bf12c427bd5b8b1d4997805e7b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57468464"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59160682"
 ---
 # <a name="isymunmanagedwriterremaptoken-method"></a>ISymUnmanagedWriter::RemapToken 메서드
 메타 데이터를 내보낼 때 메타 데이터 토큰을 다시 매핑할 된 기호 작성기를에 알립니다. 기호 작성기가 이전 토큰 기호 저장소에 저장 하는 경우에 업데이트를 하거나 새 값 또는를 사용 하 여 저장된 된 토큰이 읽기 단계를 다시 매핑할 해당 기호 판독기에 대 한 맵을 저장 해야 합니다.  
@@ -49,4 +49,5 @@ HRESULT RemapToken(
  **헤더:** CorSym.idl, CorSym.h  
   
 ## <a name="see-also"></a>참고자료
+
 - [ISymUnmanagedWriter 인터페이스](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)

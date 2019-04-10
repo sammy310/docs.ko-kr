@@ -6,12 +6,12 @@ helpviewer_keywords:
 - x:FieldModifier attribute [XAML Services]
 - XAML [XAML Services], x:FieldModifier attribute
 ms.assetid: ed427cd4-2f35-4d24-bd2f-0fa7b71ec248
-ms.openlocfilehash: 27ff9d027f5ff5155543097b7f0f0c2839387fe5
-ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
+ms.openlocfilehash: c20564bcf8a25b1b59887fbefe6419671e0d6c03
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58042443"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59144549"
 ---
 # <a name="xfieldmodifier-directive"></a>x:FieldModifier 지시문
 명명 된 개체 참조에 대 한 필드 정의 된 XAML 컴파일 동작을 수정 <xref:System.Reflection.TypeAttributes.Public?displayProperty=nameWithType> 대신 액세스는 <xref:System.Reflection.TypeAttributes.NotPublic?displayProperty=nameWithType> 기본 동작입니다.  
@@ -26,7 +26,7 @@ ms.locfileid: "58042443"
   
 |||  
 |-|-|  
-|*공용*|정확한 문자열 지정 전달할 <xref:System.Reflection.TypeAttributes.Public?displayProperty=nameWithType> 비교 <xref:System.Reflection.TypeAttributes.NotPublic?displayProperty=nameWithType> 사용 되는 코드 숨김 프로그래밍 언어에 따라 달라 집니다. 설명 부분을 참조하세요.|  
+|*Public*|정확한 문자열 지정 전달할 <xref:System.Reflection.TypeAttributes.Public?displayProperty=nameWithType> 비교 <xref:System.Reflection.TypeAttributes.NotPublic?displayProperty=nameWithType> 사용 되는 코드 숨김 프로그래밍 언어에 따라 달라 집니다. 설명 부분을 참조하세요.|  
   
 ## <a name="dependencies"></a>종속성  
  XAML 프로덕션에 사용 하는 경우 `x:FieldModifier` 어디서 나 해당 XAML 프로덕션의 루트 요소를 선언 해야 합니다는 [X:class 지시문](x-class-directive.md)합니다.  
@@ -51,8 +51,9 @@ ms.locfileid: "58042443"
  기본적으로 루트 요소에 대 한 partial 클래스는 공용 필드 그러나 있습니다 수 있도록 public이 아닌를 사용 하 여 합니다 [X:classmodifier 지시문](x-classmodifier-directive.md)합니다. 합니다 [X:classmodifier 지시문](x-classmodifier-directive.md) 루트 요소 클래스의 인스턴스 액세스 수준에도 영향을 줍니다. 모두 넣을 수 있습니다 `x:Name` 하 고 `x:FieldModifier` 루트에서 요소에 있지만이 public 필드의 복사본을 만듭니다는 true 루트 요소 클래스 액세스 수준으로 여전히 루트 요소에 의해 제어 [X:classmodifier 지시문](x-classmodifier-directive.md)합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [WPF에 대한 XAML 및 사용자 지정 클래스](../wpf/advanced/xaml-and-custom-classes-for-wpf.md)
 - [WPF의 코드 숨김 및 XAML](../wpf/advanced/code-behind-and-xaml-in-wpf.md)
 - [x:Name 지시문](x-name-directive.md)
-- [WPF 응용 프로그램 빌드(WPF)](../wpf/app-development/building-a-wpf-application-wpf.md)
+- [WPF 애플리케이션 빌드(WPF)](../wpf/app-development/building-a-wpf-application-wpf.md)
 - [x:ClassModifier 지시문](x-classmodifier-directive.md)

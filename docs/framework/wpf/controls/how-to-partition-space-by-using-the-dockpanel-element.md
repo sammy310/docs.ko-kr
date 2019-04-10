@@ -10,12 +10,12 @@ helpviewer_keywords:
 - DockPanel control [WPF], partitioning space
 - partitioning space [WPF]
 ms.assetid: a219b9e5-b205-4438-89b5-0a137ac463ab
-ms.openlocfilehash: f76e3d7f928faebedcaf199eb6dc1e8fdccde640
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: ab51270644bf370944ebc933c765b40c528681c5
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57363386"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59158888"
 ---
 # <a name="how-to-partition-space-by-using-the-dockpanel-element"></a>방법: DockPanel 요소를 사용하여 공간 분할
 다음 예제에서는 간단한 [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] 프레임 워크를 사용 하는 <xref:System.Windows.Controls.DockPanel> 요소입니다. <xref:System.Windows.Controls.DockPanel> 자식 요소에 사용 가능한 공간을 분할 합니다.  
@@ -36,5 +36,6 @@ ms.locfileid: "57363386"
  ![일반적인 DockPanel 시나리오](./media/panel-intro-dockpanel.PNG "panel_intro_dockpanel")  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Windows.Controls.DockPanel>
-- [패널 개요](panels-overview.md)
+- [Panel 개요](panels-overview.md)

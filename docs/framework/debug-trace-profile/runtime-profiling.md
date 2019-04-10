@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: ccd68284-f3a8-47b8-bc3f-92e5fe3a1640
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 17530537e6d74b247aaf8708efed28ef169f9d57
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 036744362c414fe51c919b59c693d447c92a87c9
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54491248"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59141390"
 ---
 # <a name="runtime-profiling"></a>런타임 프로파일링
 프로파일링은 모든 개발 또는 배포 시나리오에서 성능 데이터를 수집하는 방법입니다. 이 섹션은 애플리케이션 성능에 대한 정보를 수집하려는 개발자 및 시스템 관리자를 위한 것입니다.  
@@ -67,4 +67,5 @@ ms.locfileid: "54491248"
 |<xref:System.Diagnostics.PerformanceCounterType?displayProperty=nameWithType>|`NextValue` 에 대한 `PerformanceCounter`메서드를 계산하는 수식을 지정합니다.|  
   
 ## <a name="see-also"></a>참고자료
+
 - [성능 카운터](../../../docs/framework/debug-trace-profile/performance-counters.md)

@@ -1,18 +1,18 @@
 ---
-title: '방법: 개체 메서드로 모델 정의 함수를 호출 합니다.'
+title: '방법: 개체 메서드로 모델 정의 함수 호출'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 33bae8a8-4ed8-4a1f-85d1-c62ff288cc61
-ms.openlocfilehash: 3b145c3d2b262729fae9a03b7930b286f7641d36
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
-ms.translationtype: MT
+ms.openlocfilehash: 2b3e25187d2865a8e754c553f8057c3c8e3cff37
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55825721"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59151231"
 ---
-# <a name="how-to-call-model-defined-functions-as-object-methods"></a>방법: 개체 메서드로 모델 정의 함수를 호출 합니다.
+# <a name="how-to-call-model-defined-functions-as-object-methods"></a>방법: 개체 메서드로 모델 정의 함수 호출
 이 항목에서는 모델 정의 함수를 <xref:System.Data.Objects.ObjectContext> 개체의 메서드 또는 사용자 지정 클래스의 정적 메서드로 호출하는 방법에 대해 설명합니다. A *모델 정의 함수* 는 개념적 모델에 정의 된 함수입니다. 이 항목의 절차에서는 이러한 함수를 LINQ to Entities 쿼리에서 호출하는 대신 직접 호출하는 방법에 대해 설명합니다. Linq에서 to Entities 쿼리에서 모델 정의 함수를 호출 하는 방법에 대 한 내용은 [방법: 쿼리에서 모델 정의 함수 호출](../../../../../../docs/framework/data/adonet/ef/language-reference/how-to-call-model-defined-functions-in-queries.md)합니다.  
   
  모델 정의 함수를 <xref:System.Data.Objects.ObjectContext> 메서드 또는 사용자 지정 클래스의 정적 메서드로 호출하려면 먼저 메서드를 <xref:System.Data.Objects.DataClasses.EdmFunctionAttribute>가 있는 모델 정의 함수로 매핑해야 합니다. 그러나 <xref:System.Data.Objects.ObjectContext> 클래스의 메서드를 정의하는 경우에는 <xref:System.Data.Objects.ObjectContext.QueryProvider%2A> 속성을 사용하여 LINQ 공급자를 노출해야 하고, 사용자 지정 클래스의 정적 메서드를 정의하는 경우에는 <xref:System.Linq.IQueryable.Provider%2A> 속성을 사용하여 LINQ 공급자를 노출해야 합니다. 자세한 내용은 다음 절차 아래에 나오는 예제를 참조하세요.  
@@ -82,7 +82,7 @@ ms.locfileid: "55825721"
  [!code-vb[DP L2E Methods on ObjectContext#9](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/dp l2e methods on objectcontext/vb/module1.vb#9)]  
   
 ## <a name="example"></a>예제  
- **사용자 지정 클래스의 정적 메서드로 모델 정의 함수를 호출합니다.**  
+ **모델 정의 함수를 사용자 지정 클래스의 정적 메서드로 호출**  
   
  다음 예제에서는 모델 정의 함수를 사용자 지정 클래스의 정적 메서드로 호출하는 방법에 대해 설명합니다. 이 예제에서는 사용 된 [AdventureWorks Sales 모델](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks)합니다.  
   
@@ -106,6 +106,7 @@ ms.locfileid: "55825721"
  [!code-vb[DP L2E Methods on ObjectContext#6](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/dp l2e methods on objectcontext/vb/module1.vb#6)]  
   
 ## <a name="see-also"></a>참고자료
+
 - [.edmx 파일 개요](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cc982042(v=vs.100))
 - [LINQ to Entities에서 쿼리](../../../../../../docs/framework/data/adonet/ef/language-reference/queries-in-linq-to-entities.md)
 - [LINQ to Entities 쿼리에서 함수 호출](../../../../../../docs/framework/data/adonet/ef/language-reference/calling-functions-in-linq-to-entities-queries.md)

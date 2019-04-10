@@ -11,12 +11,12 @@ helpviewer_keywords:
 - CurrencyManager class [Windows Forms], navigating Windows Forms data
 - data [Windows Forms], navigating
 ms.assetid: 97360f7b-b181-4084-966a-4c62518f735b
-ms.openlocfilehash: 920f6d6206a8f33a912d8a7d1b46a3047ed874bc
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: fb5747ec3c6b640821e4875d86273467eeb922df
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57725339"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59154598"
 ---
 # <a name="how-to-navigate-data-in-windows-forms"></a>방법: Windows Forms에서 데이터 탐색
 Windows 응용 프로그램에서 데이터 원본에서 레코드를 탐색 하는 가장 쉬운 방법은에 바인딩하는 것을 <xref:System.Windows.Forms.BindingSource> 데이터 원본 및 다음 바인딩 컨트롤을 구성 요소는 <xref:System.Windows.Forms.BindingSource>합니다. 기본 제공 탐색 메서드를 사용 합니다는 <xref:System.Windows.Forms.BindingSource> 이러한를 <xref:System.Windows.Forms.BindingSource.MoveNext%2A>를 <xref:System.Windows.Forms.BindingSource.MoveLast%2A>를 <xref:System.Windows.Forms.BindingSource.MovePrevious%2A> 및 <xref:System.Windows.Forms.BindingSource.MoveFirst%2A>합니다. 이러한 메서드를 사용 하 여 조정 됩니다 합니다 <xref:System.Windows.Forms.BindingSource.Position%2A> 및 <xref:System.Windows.Forms.BindingSource.Current%2A> 의 속성을 <xref:System.Windows.Forms.BindingSource> 적절 하 게 합니다. 또한 항목을 찾을 설정 하 여 현재 항목으로 설정 된 <xref:System.Windows.Forms.BindingSource.Position%2A> 속성입니다.  
@@ -51,6 +51,7 @@ Windows 응용 프로그램에서 데이터 원본에서 레코드를 탐색 하
      [!code-vb[System.Windows.Forms.NavigatingData#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.NavigatingData/VB/Form1.vb#2)]  
   
 ## <a name="see-also"></a>참고자료
+
 - [Windows Forms에서 지원하는 데이터 소스](data-sources-supported-by-windows-forms.md)
 - [Windows Forms 데이터 바인딩의 변경 알림](change-notification-in-windows-forms-data-binding.md)
 - [데이터 바인딩 및 Windows Forms](data-binding-and-windows-forms.md)

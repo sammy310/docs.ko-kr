@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 8ae3712f-ef5e-41a1-9ea9-b3d0399439f1
-ms.openlocfilehash: 9cad6c798856fb77023bb52c528b9294f5f6d0bc
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 30dd3a54092c5b30cdd8dfd2917b6ea57edd7086
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54656182"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59153623"
 ---
 # <a name="local-transactions"></a>로컬 트랜잭션
 [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)]의 트랜잭션은 여러 작업을 바인딩하여 하나의 작업 단위로 실행하려는 경우에 사용합니다. 예를 들어 응용 프로그램이 두 가지 작업을 수행한다고 가정합니다. 먼저 응용 프로그램에서 주문 정보로 테이블을 업데이트합니다. 그런 다음, 응용 프로그램에서 재고 정보가 포함된 테이블을 업데이트하고 주문이 들어온 품목을 차변에 기입합니다. 두 작업이 실패 하면 다음 두 업데이트가 모두 롤백됩니다.  
@@ -48,6 +48,7 @@ ms.locfileid: "54656182"
  [!code-vb[DataWorks SqlTransaction.Local#1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SqlTransaction.Local/VB/source.vb#1)]  
   
 ## <a name="see-also"></a>참고자료
+
 - [트랜잭션 및 동시성](../../../../docs/framework/data/adonet/transactions-and-concurrency.md)
 - [분산 트랜잭션](../../../../docs/framework/data/adonet/distributed-transactions.md)
 - [SQL Server와의 System.Transactions 통합](../../../../docs/framework/data/adonet/system-transactions-integration-with-sql-server.md)

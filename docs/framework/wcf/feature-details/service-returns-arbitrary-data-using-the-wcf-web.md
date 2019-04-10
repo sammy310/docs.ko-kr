@@ -1,15 +1,15 @@
 ---
-title: '방법: WCF 웹 HTTP 프로그래밍 모델을 사용 하 여 임의의 데이터를 반환 하는 서비스 만들기'
+title: '방법: WCF 웹 HTTP 프로그래밍 모델을 사용하여 임의의 데이터를 반환하는 서비스 만들기'
 ms.date: 03/30/2017
 ms.assetid: 0283955a-b4ae-458d-ad9e-6fbb6f529e3d
-ms.openlocfilehash: 187db6d3c19373270b25000029f51aa70a81afd5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: f5735f4d596e17afc32b1419e9f41fd8a56af410
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54576397"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59157485"
 ---
-# <a name="how-to-create-a-service-that-returns-arbitrary-data-using-the-wcf-web-http-programming-model"></a>방법: WCF 웹 HTTP 프로그래밍 모델을 사용 하 여 임의의 데이터를 반환 하는 서비스 만들기
+# <a name="how-to-create-a-service-that-returns-arbitrary-data-using-the-wcf-web-http-programming-model"></a>방법: WCF 웹 HTTP 프로그래밍 모델을 사용하여 임의의 데이터를 반환하는 서비스 만들기
 서비스 작업에서 데이터가 반환되는 방법을 개발자가 완전히 제어해야 하는 경우가 있습니다. 이 경우 서비스 작업을 WCF에서 지원 되지 않습니다 형식으로 데이터를 반환 해야 합니다. 이 항목에서는 이러한 서비스를 만들려면 WCF 웹 HTTP 프로그래밍 모델을 사용 하 여 설명 합니다. 이 서비스에는 스트림을 반환하는 하나의 작업이 있습니다.  
   
 ### <a name="to-implement-the-service-contract"></a>서비스 계약을 구현하려면  
@@ -51,7 +51,7 @@ ms.locfileid: "54576397"
        }  
     ```  
   
-     밑에서 두 번째에 있는 코드 줄 `WebOperationContext.Current.OutgoingResponse.ContentType = "image/jpeg";`를 보십시오.  
+     두 번째 코드의 마지막 줄을 확인 합니다. `WebOperationContext.Current.OutgoingResponse.ContentType = "image/jpeg";`  
   
      이 콘텐츠 형식 헤더를 설정 합니다 `"image/jpeg"`합니다. 이 샘플에서는 .jpg 파일을 반환하는 방법을 보여 주지만 코드를 수정하여 필요한 모든 종류의 데이터를 원하는 형식으로 반환할 수 있습니다. 이 작업은 데이터를 검색 또는 생성한 다음 스트림에 작성해야 합니다.  
   
@@ -176,4 +176,5 @@ namespace RawImageService
 -   샘플 코드를 컴파일할 때 System.ServiceModel.dll 및 System.ServiceModel.Web.dll을 참조합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [WCF 웹 HTTP 프로그래밍 모델](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)

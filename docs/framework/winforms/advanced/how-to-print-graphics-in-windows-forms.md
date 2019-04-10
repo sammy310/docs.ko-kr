@@ -1,5 +1,5 @@
 ---
-title: '방법: Windows Forms의 그래픽 인쇄'
+title: '방법: Windows Forms에서 그래픽 인쇄'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - graphics [Windows Forms], printing
 - printing [Windows Forms], graphics
 ms.assetid: 32b891e6-52ff-4fea-a9ff-2ce5db20a4c6
-ms.openlocfilehash: cb8c9f291103915c82fb31af5c6668fbd0648f66
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: ab2a230b7c6e303d712df058f450334b50c8a676
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57721316"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59167208"
 ---
-# <a name="how-to-print-graphics-in-windows-forms"></a>방법: Windows Forms의 그래픽 인쇄
+# <a name="how-to-print-graphics-in-windows-forms"></a>방법: Windows Forms에서 그래픽 인쇄
 대부분의 경우 Windows 기반 응용 프로그램의 그래픽 인쇄 하려고 합니다. <xref:System.Drawing.Graphics> 클래스는 화면이 나 프린터와 같은 장치에 개체를 그리기 위한 메서드를 제공 합니다.  
   
 ### <a name="to-print-graphics"></a>그래픽을 인쇄 하려면  
@@ -67,6 +67,7 @@ ms.locfileid: "57721316"
     ```  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Drawing.Graphics>
 - <xref:System.Drawing.Brush>
 - [Windows Forms 인쇄 지원](windows-forms-print-support.md)

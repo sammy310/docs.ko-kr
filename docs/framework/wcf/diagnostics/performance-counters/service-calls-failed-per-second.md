@@ -2,12 +2,12 @@
 title: '서비스: Calls Failed Per Second'
 ms.date: 03/30/2017
 ms.assetid: 5a2c7939-107d-4f0c-b43c-e02e079e8a9d
-ms.openlocfilehash: a043cf30fa67707aca3edf50cf23372ade5e5a42
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d87d5f06d0c9a3849ec80a3d1c7badefde7cf372
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54559894"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59167494"
 ---
 # <a name="service-calls-failed-per-second"></a>서비스: Calls Failed Per Second
 카운터 이름: Calls Failed Per Second.  
@@ -26,4 +26,5 @@ ms.locfileid: "54559894"
  이 서비스에 처리되지 않은 예외가 있을 때마다 이 카운터가 증가합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [계약 및 서비스에서 오류 지정 및 처리](../../../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)

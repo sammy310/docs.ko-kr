@@ -1,5 +1,5 @@
 ---
-title: '방법: 디자인 타임에 Windows Form의 컨트롤에 도구 설명 설정'
+title: '방법: 디자인 타임에 Windows Form의 컨트롤에 대한 도구 설명 설정'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - tooltips [Windows Forms], for controls
 - examples [Windows Forms], tooltips
 ms.assetid: c4b60637-4c0a-44c2-a103-f66dff887936
-ms.openlocfilehash: 541e50a8ee9c5338acc7c5e347549fd03a0f6323
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: d2bca517e98a8258d4f510c64593de2ad9646e13
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57710721"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59157607"
 ---
-# <a name="how-to-set-tooltips-for-controls-on-a-windows-form-at-design-time"></a>방법: 디자인 타임에 Windows Form의 컨트롤에 도구 설명 설정
+# <a name="how-to-set-tooltips-for-controls-on-a-windows-form-at-design-time"></a>방법: 디자인 타임에 Windows Form의 컨트롤에 대한 도구 설명 설정
 설정할 수 있습니다는 <xref:System.Windows.Forms.ToolTip> Windows Forms 디자이너 또는 코드에서 문자열입니다. 에 대 한 자세한 내용은 합니다 <xref:System.Windows.Forms.ToolTip> 구성 요소를 참조 하세요 [ToolTip 구성 요소 개요](tooltip-component-overview-windows-forms.md)합니다.  
   
 > [!NOTE]
@@ -77,6 +77,7 @@ ms.locfileid: "57710721"
 2.  에 **속성** 창에서 텍스트를 삭제 합니다 **ToolTip1의 도구 설명**합니다.  
 
 ## <a name="see-also"></a>참고자료
+
 - [ToolTip 구성 요소 개요](tooltip-component-overview-windows-forms.md)
 - [방법: Windows Forms ToolTip 구성 요소의 지연 변경](how-to-change-the-delay-of-the-windows-forms-tooltip-component.md)
 - [ToolTip 구성 요소](tooltip-component-windows-forms.md)

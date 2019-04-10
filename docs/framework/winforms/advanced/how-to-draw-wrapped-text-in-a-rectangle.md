@@ -9,12 +9,12 @@ helpviewer_keywords:
 - text [Windows Forms], drawing in a rectangle
 - strings [Windows Forms], drawing in a rectangle
 ms.assetid: e1fb432a-dc90-48b5-9b6b-acc14507133d
-ms.openlocfilehash: 35eca2fc0fe40db1b590f4c599baee01c9a9faf3
-ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
-ms.translationtype: MT
+ms.openlocfilehash: ae6ceb2ca3e541be1d7dd3e5a61a6e52b27e93c3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58654532"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59152791"
 ---
 # <a name="how-to-draw-wrapped-text-in-a-rectangle"></a>방법: 사각형 안에 줄 바꿈된 텍스트 그리기
 사용 하 여 사각형 안에 줄 바꿈된 텍스트를 그릴 수 있습니다는 <xref:System.Drawing.Graphics.DrawString%2A> 메서드의 오버 로드는 <xref:System.Drawing.Graphics> 사용 하는 클래스를 <xref:System.Drawing.Rectangle> 또는 <xref:System.Drawing.RectangleF> 매개 변수입니다. 사용할 수도 있습니다는 <xref:System.Drawing.Brush> 및 <xref:System.Drawing.Font>합니다.  
@@ -45,7 +45,8 @@ ms.locfileid: "58654532"
 -   <xref:System.Windows.Forms.PaintEventArgs> `e`에서의 매개 변수인 <xref:System.Windows.Forms.PaintEventHandler>합니다.  
   
 ## <a name="see-also"></a>참고자료
-- [방법: GDI 사용 하 여 텍스트 그리기](how-to-draw-text-with-gdi.md)
+
+- [방법: GDI를 사용하여 텍스트 그리기](how-to-draw-text-with-gdi.md)
 - [글꼴 및 텍스트 사용](using-fonts-and-text.md)
 - [방법: 글꼴 패밀리 및 글꼴 만들기](how-to-construct-font-families-and-fonts.md)
-- [방법: 지정된 된 위치에 텍스트 그리기](how-to-draw-text-at-a-specified-location.md)
+- [방법: 지정된 위치에 텍스트 그리기](how-to-draw-text-at-a-specified-location.md)

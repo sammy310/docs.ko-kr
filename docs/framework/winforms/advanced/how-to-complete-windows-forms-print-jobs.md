@@ -1,5 +1,5 @@
 ---
-title: '방법: 전체 Windows Forms 인쇄 작업'
+title: '방법: Windows Forms 인쇄 작업 완료'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - print jobs [Windows Forms], completing in Windows Forms
 - printing [Windows Forms], print jobs
 ms.assetid: 23ec74f7-34c5-4710-82a0-ee2914518548
-ms.openlocfilehash: 1ae20e4fdc3a4fc3de8c462c355bcc700eddf22e
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: f8d0f1f067efbae6e2b667328e75996179b91737
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57711735"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59159824"
 ---
-# <a name="how-to-complete-windows-forms-print-jobs"></a>방법: 전체 Windows Forms 인쇄 작업
+# <a name="how-to-complete-windows-forms-print-jobs"></a>방법: Windows Forms 인쇄 작업 완료
 자주, 워드 프로세서 및 인쇄와 관련 된 기타 응용 프로그램에 인쇄 작업을 완료 되었음을 사용자에 게 메시지를 표시 하는 옵션을 제공 합니다. 처리 하 여 Windows Forms 프로그램에서이 기능을 제공할 수 있습니다 합니다 <xref:System.Drawing.Printing.PrintDocument.EndPrint> 의 이벤트는 <xref:System.Drawing.Printing.PrintDocument> 구성 요소입니다.  
   
  다음 절차를 수행 하려면 사용 하 여 Windows 기반 응용 프로그램을 만들었다고는 <xref:System.Drawing.Printing.PrintDocument> 구성 요소에 표준 방식의 Windows 기반 응용 프로그램에서 인쇄를 사용 하도록 설정 합니다. 사용 하 여 Windows Forms에서 인쇄에 대 한 자세한 내용은 합니다 <xref:System.Drawing.Printing.PrintDocument> 구성 요소 참조 [방법: 표준 Windows Forms 인쇄 작업 만들기](how-to-create-standard-windows-forms-print-jobs.md)합니다.  
@@ -81,5 +81,6 @@ ms.locfileid: "57711735"
     ```  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Drawing.Printing.PrintDocument>
 - [Windows Forms 인쇄 지원](windows-forms-print-support.md)

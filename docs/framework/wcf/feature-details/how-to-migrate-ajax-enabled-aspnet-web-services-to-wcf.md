@@ -2,12 +2,12 @@
 title: '방법: AJAX 사용 ASP.NET 웹 서비스를 WCF로 마이그레이션'
 ms.date: 03/30/2017
 ms.assetid: 1428df4d-b18f-4e6d-bd4d-79ab3dd5147c
-ms.openlocfilehash: 3c7052a67e756ae0c3fa1692c3ed746419384de4
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
-ms.translationtype: MT
+ms.openlocfilehash: dfbb32a751623fb1e3753cfd8bbbaf5910d571b2
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58410942"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59143002"
 ---
 # <a name="how-to-migrate-ajax-enabled-aspnet-web-services-to-wcf"></a>방법: AJAX 사용 ASP.NET 웹 서비스를 WCF로 마이그레이션
 이 항목에 해당 하는 AJAX 지원 Windows Communication Foundation (WCF) 서비스에 기본 ASP.NET AJAX 서비스를 마이그레이션하는 절차를 간략하게 설명 합니다. ASP.NET AJAX 서비스의 기능적 WCF 버전을 만드는 방법을 보여 줍니다. 두 서비스는 함께 사용할 수 있습니다 또는 WCF 서비스는 ASP.NET AJAX 서비스를 바꾸는 데 사용할 수 있습니다.
@@ -175,8 +175,7 @@ namespace ASPHello
 }
 ```
 
- 
-  <xref:System.Xml.XmlDocument> 형식은 <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>를 통해 serialize할 수 없으므로 <xref:System.Xml.Serialization.XmlSerializer>에서 지원하지 않습니다. 대신 <xref:System.Xml.Linq.XDocument> 형식을 사용하거나 <xref:System.Xml.XmlDocument.DocumentElement%2A>를 serialize할 수 있습니다.
+ <xref:System.Xml.XmlDocument> 형식은 <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>를 통해 serialize할 수 없으므로 <xref:System.Xml.Serialization.XmlSerializer>에서 지원하지 않습니다. 대신 <xref:System.Xml.Linq.XDocument> 형식을 사용하거나 <xref:System.Xml.XmlDocument.DocumentElement%2A>를 serialize할 수 있습니다.
 
  업그레이드 하는 ASMX 웹 서비스, side-by-side-WCF 서비스를 마이그레이션할 경우 클라이언트에서 동일한 이름으로 두 개의 형식 매핑 방지 합니다. 이 경우 같은 형식을 <xref:System.Web.Services.WebMethodAttribute> 및 <xref:System.ServiceModel.ServiceContractAttribute>에서 사용하면 serializer에 예외가 발생합니다.
 
@@ -184,8 +183,7 @@ namespace ASPHello
 
 -   ASMX 웹 서비스는 먼저 추가 되 면 WCF 서비스의 메서드를 호출 하면에서 예외가 발생 <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> 웹 서비스 스타일 정의 프록시 순서가 우선 하므로 합니다.
 
- 
-  <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>와 ASP.NET AJAX <xref:System.Web.Script.Serialization.JavaScriptSerializer>의 동작에는 상당한 차이점이 있습니다. 예를 들어, <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>는 키/값 쌍의 배열로 사전을 나타내고, ASP.NET AJAX <xref:System.Web.Script.Serialization.JavaScriptSerializer>는 실제 JSON 개체로 사전을 나타냅니다. 따라서 ASP.NET AJAX에서 사전은 다음과 같이 나타납니다.
+ <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>와 ASP.NET AJAX <xref:System.Web.Script.Serialization.JavaScriptSerializer>의 동작에는 상당한 차이점이 있습니다. 예를 들어, <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>는 키/값 쌍의 배열로 사전을 나타내고, ASP.NET AJAX <xref:System.Web.Script.Serialization.JavaScriptSerializer>는 실제 JSON 개체로 사전을 나타냅니다. 따라서 ASP.NET AJAX에서 사전은 다음과 같이 나타납니다.
 
 ```
 Dictionary<string, int> d = new Dictionary<string, int>();
@@ -195,28 +193,25 @@ d.Add("two", 2);
 
  이 사전은 다음 목록에 표시된 것처럼 JSON 개체로 표현됩니다.
 
--   
-  <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>에 의한 [{"Key":"one","Value":1},{"Key":"two","Value":2}]
+-   [{"Key": "일", "Value": 1}, {"키": "two", "Value": 2}] 하 여는 <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>
 
 -   {"one": 1, "two": 2} ASP.NET ajax <xref:System.Web.Script.Serialization.JavaScriptSerializer>
 
- 
-  <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>는 키 유형이 문자열이 아닌 사전을 처리할 수 있다는 점에서 훨씬 강력합니다. 반면 <xref:System.Web.Script.Serialization.JavaScriptSerializer>는 키 유형이 문자열이 아닌 사전을 처리할 수 없습니다. 그러나 후자가 JSON에 더 적합합니다.
+ <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>는 키 유형이 문자열이 아닌 사전을 처리할 수 있다는 점에서 훨씬 강력합니다. 반면 <xref:System.Web.Script.Serialization.JavaScriptSerializer>는 키 유형이 문자열이 아닌 사전을 처리할 수 없습니다. 그러나 후자가 JSON에 더 적합합니다.
 
  이 두 serializer의 중요한 차이점이 다음 표에 요약되어 있습니다.
 
 |차이의 범주|DataContractJsonSerializer|ASP.NET AJAX JavaScriptSerializer|
 |-----------------------------|--------------------------------|---------------------------------------|
 |빈 버퍼(새 바이트[0])를 <xref:System.Object> 또는 <xref:System.Uri> 또는 다른 클래스로 deserialize함|SerializationException|null|
-|
-  <xref:System.DBNull.Value>의 serialization|{} (또는 {"__type": "#System"})|Null|
+|serialization <xref:System.DBNull.Value>|{} (또는 {"__type": "#System"})|Null|
 |[Serializable] 형식의 private 멤버 serialization|serialize됨|serialize되지 않음|
-|
-  <xref:System.Runtime.Serialization.ISerializable> 형식의 .public 속성 serialization|serialize되지 않음|serialize됨|
+|<xref:System.Runtime.Serialization.ISerializable> 형식의 .public 속성 serialization|serialize되지 않음|serialize됨|
 |JSON "확장명"|개체 멤버 이름({"a":"hello"})에 따옴표를 사용해야 하는 JSON 사양 준수|따옴표가 없는 개체 멤버 이름({a:"hello"}) 지원|
-|<xref:System.DateTime> UTC(협정 세계시)|형식을 지원 하지 않는 "\\/Date(123456789U)\\/" 또는 "\\/날짜\\(\d+ (U&#124;(\\+\\-[\d{4}]))?\\) \\\\/)".|지원 형식 "\\/Date(123456789U)\\/" 및 "\\/날짜\\(\d+ (U&#124;(\\+\\-[\d{4}]))?\\) \\ \\/) "형식을 DateTime 값으로.|
+|<xref:System.DateTime> UTC (Coordinated Universal Time)|형식을 지원 하지 않는 "\\/Date(123456789U)\\/" 또는 "\\/날짜\\(\d+ (U&#124;(\\+\\-[\d{4}]))?\\) \\\\/)".|지원 형식 "\\/Date(123456789U)\\/" 및 "\\/날짜\\(\d+ (U&#124;(\\+\\-[\d{4}]))?\\) \\ \\/) "형식을 DateTime 값으로.|
 |사전의 표현|KeyValuePair의 배열을\<K, V >, 문자열이 아닌 키 유형을 처리 합니다.|실제 JSON 개체로 문자열인 키 유형만 처리합니다.|
 |이스케이프된 문자|항상 이스케이프 슬래시(/)가 포함되고, "\n"과 같이 이스케이프되지 않은 잘못된 JSON 문자는 사용할 수 없습니다.|DateTime 값에 이스케이프 슬래시(/)가 포함됩니다.|
 
 ## <a name="see-also"></a>참고자료
-- [방법: 구성을 사용 하 여 ASP.NET AJAX 끝점 추가](../../../../docs/framework/wcf/feature-details/how-to-use-configuration-to-add-an-aspnet-ajax-endpoint.md)
+
+- [방법: 구성을 사용하여 ASP.NET AJAX 엔드포인트 추가](../../../../docs/framework/wcf/feature-details/how-to-use-configuration-to-add-an-aspnet-ajax-endpoint.md)

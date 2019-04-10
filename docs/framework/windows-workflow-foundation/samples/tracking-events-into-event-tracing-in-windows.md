@@ -2,12 +2,12 @@
 title: Windows에서 이벤트 추적으로 이벤트 추적
 ms.date: 03/30/2017
 ms.assetid: f812659b-0943-45ff-9430-4defa733182b
-ms.openlocfilehash: ceb981f4fac70155f740ac482bf9d49a51ed7970
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 6384c74aa245db490d04fa95f37bd860dfb9bad9
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54592863"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59166532"
 ---
 # <a name="tracking-events-into-event-tracing-in-windows"></a>Windows에서 이벤트 추적으로 이벤트 추적
 이 샘플에는 Windows WF (Workflow Foundation) 워크플로 서비스에서 추적을 사용 하도록 설정 하 고 추적에서 이벤트 추적에 대 한 Windows (ETW) 이벤트를 내보내는 방법을 보여 줍니다. 이 샘플에서는 ETW 추적 참가자(<xref:System.Activities.Tracking.EtwTrackingParticipant>)를 사용하여 워크플로 추적 레코드를 ETW로 내보냅니다.
@@ -20,7 +20,7 @@ ms.locfileid: "54592863"
 |구성 요소|설명|
 |---------------|-----------------|
 |추적 런타임|추적 레코드를 내보낼 인프라를 제공합니다.|
-|추적 참가자|추적 레코드에 액세스합니다. [!INCLUDE[netfx_current_short](../../../../includes/netfx-current-short-md.md)]에는 추적 레코드를 ETW(Windows용 이벤트 추적) 이벤트로 기록하는 추적 참가자가 제공됩니다.|
+|추적 참가자|추적 레코드에 액세스합니다. [!INCLUDE[netfx_current_short](../../../../includes/netfx-current-short-md.md)] 이벤트 추적에 대 한 Windows (ETW) 이벤트로 추적 레코드를 기록 하는 추적 참가자가 제공 됩니다.|
 |추적 프로필|추적 참가자가 워크플로 인스턴스에서 내보낸 추적 레코드의 하위 집합을 구독할 수 있도록 하는 필터링 메커니즘입니다.|
 
  다음 표에서는 워크플로 런타임에서 내보내는 추적 레코드에 대해 자세히 설명합니다.
@@ -150,4 +150,5 @@ ms.locfileid: "54592863"
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Tracking\EtwTracking`  
   
 ## <a name="see-also"></a>참고자료
+
 - [AppFabric 모니터링 샘플](https://go.microsoft.com/fwlink/?LinkId=193959)

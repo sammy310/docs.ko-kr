@@ -2,12 +2,12 @@
 title: System.ServiceModel.Channels.MsmqMessageRejected
 ms.date: 03/30/2017
 ms.assetid: 9b7c10a7-2af6-44a2-8b1a-90bba0c7cf26
-ms.openlocfilehash: 87d6e6fc3205fff9bd977ebe77004dfa489098cb
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4feeb1b57d79c7445d51f5d688b0a9f55e761542
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54681224"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59143392"
 ---
 # <a name="systemservicemodelchannelsmsmqmessagerejected"></a>System.ServiceModel.Channels.MsmqMessageRejected
 MSMQ에서 메시지를 거부했습니다.  
@@ -22,8 +22,9 @@ MSMQ에서 메시지를 거부했습니다.
  참조 [MQMarkMessageRejected](https://go.microsoft.com/fwlink/?LinkID=99548) MSMQ에서 거부 된 메시지가 의미 하는 바를 대 한 자세한 내용은 합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [추적](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
-- [추적을 사용하여 애플리케이션 문제 해결](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)
+- [추적을 사용하여 응용 프로그램 문제 해결](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)
 - [관리 및 진단](../../../../../docs/framework/wcf/diagnostics/index.md)
 - [포이즌 메시지 처리](https://go.microsoft.com/fwlink/?LinkID=99546)
 - [MQMarkMessageRejected](https://go.microsoft.com/fwlink/?LinkID=99548)

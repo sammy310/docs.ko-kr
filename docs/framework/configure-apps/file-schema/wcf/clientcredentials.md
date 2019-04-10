@@ -2,12 +2,12 @@
 title: <clientCredentials>
 ms.date: 03/30/2017
 ms.assetid: 1e6eef0d-a34e-4d74-b0f7-f65d2181858d
-ms.openlocfilehash: 7ee49d6960864826dc74fbff629f502fcc70b4bf
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: ebe976df9af0c316e95a1e089412e57a575a6df1
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55254810"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59157237"
 ---
 # <a name="clientcredentials"></a>\<clientCredentials>
 클라이언트를 서비스에 인증하는 데 사용되는 자격 증명을 지정합니다.  
@@ -69,6 +69,7 @@ ms.locfileid: "55254810"
  클라이언트 자격 증명은 상호 인증이 필요한 경우 서비스에 대해 클라이언트를 인증하는 데 사용됩니다. 또한 이 구성 섹션은 클라이언트가 서비스 인증서를 사용하여 서비스에 대한 메시지 보안을 유지해야 하는 경우 서비스 인증서를 지정하는 데 사용할 수 있습니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.ServiceModel.Configuration.ClientCredentialsElement>
 - <xref:System.ServiceModel.Description.ClientCredentials>
 - [보안 동작](../../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)

@@ -1,5 +1,5 @@
 ---
-title: '방법: 사용자 지정 보안 토큰 공급자 만들기'
+title: '방법: 사용자 지정 보안 토큰 공급 기업 만들기'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,14 +7,14 @@ dev_langs:
 helpviewer_keywords:
 - security [WCF], providing credentials
 ms.assetid: db8cb478-aa43-478b-bf97-c6489ad7c7fd
-ms.openlocfilehash: 1a81f6eac5648406f50d9600b030828551b21c56
-ms.sourcegitcommit: af0a22a4eb11bbcd33baec49150d551955b50a16
-ms.translationtype: MT
+ms.openlocfilehash: dd9b53b50f76ec80232a5fb8624e2b1701f9760d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56261350"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59140168"
 ---
-# <a name="how-to-create-a-custom-security-token-provider"></a>방법: 사용자 지정 보안 토큰 공급자 만들기
+# <a name="how-to-create-a-custom-security-token-provider"></a>방법: 사용자 지정 보안 토큰 공급 기업 만들기
 이 항목에서는 사용자 지정 보안 토큰 공급자를 사용하여 새 토큰 형식을 만드는 방법과 공급자를 사용자 지정 보안 토큰 관리자와 통합하는 방법에 대해 설명합니다.  
   
 > [!NOTE]
@@ -53,6 +53,7 @@ ms.locfileid: "56261350"
  [!code-vb[c_CustomTokenProvider#0](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customtokenprovider/vb/source.vb#0)]  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.IdentityModel.Selectors.SecurityTokenProvider>
 - <xref:System.IdentityModel.Selectors.SecurityTokenRequirement>
 - <xref:System.IdentityModel.Selectors.SecurityTokenManager>

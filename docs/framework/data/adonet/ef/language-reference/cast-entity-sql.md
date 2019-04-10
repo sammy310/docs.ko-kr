@@ -2,12 +2,12 @@
 title: CAST(Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 07b6d750-dfd4-48a9-b86c-3badcbba6f70
-ms.openlocfilehash: 4d04347025de53add09f50646f1e2934b7959048
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: afa92cc46aba9def65dddd490a2df3350c163af9
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54568543"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59143164"
 ---
 # <a name="cast-entity-sql"></a>CAST(Entity SQL)
 데이터 형식의 식을 다른 형식의 식으로 변환합니다.  
@@ -23,7 +23,7 @@ CAST ( expression AS data_type )
  `data_type`으로 변환 가능한 유효한 식입니다.  
   
  `data_type`  
- 대상 시스템 제공 데이터 형식입니다. 기본(스칼라) 형식이어야 합니다. 사용되는 `data_type`은 쿼리 공간에 따라 달라집니다. 쿼리가 <xref:System.Data.EntityClient.EntityCommand>로 실행되는 경우 데이터 형식은 개념적 모델에 정의된 형식입니다. 자세한 내용은 [CSDL Specification](../../../../../../docs/framework/data/adonet/ef/language-reference/csdl-specification.md)을 참조하십시오. 쿼리가 <xref:System.Data.Objects.ObjectQuery%601>로 실행되는 경우 데이터 형식은 CLR(공용 언어 런타임) 형식입니다.  
+ 대상 시스템 제공 데이터 형식입니다. 기본(스칼라) 형식이어야 합니다. 사용되는 `data_type` 은 쿼리 공간에 따라 달라집니다. 쿼리가 <xref:System.Data.EntityClient.EntityCommand>로 실행되는 경우 데이터 형식은 개념적 모델에 정의된 형식입니다. 자세한 내용은 [CSDL Specification](../../../../../../docs/framework/data/adonet/ef/language-reference/csdl-specification.md)을 참조하십시오. 쿼리가 <xref:System.Data.Objects.ObjectQuery%601>로 실행되는 경우 데이터 형식은 CLR(공용 언어 런타임) 형식입니다.  
   
 ## <a name="return-value"></a>반환 값  
  `data_type`와 동일한 값을 반환합니다.  
@@ -60,4 +60,5 @@ CAST( e as T )
  [!code-csharp[DP EntityServices Concepts 2#CAST](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#cast)]  
   
 ## <a name="see-also"></a>참고자료
+
 - [엔터티 SQL 참조](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)

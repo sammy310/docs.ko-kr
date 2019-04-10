@@ -1,5 +1,5 @@
 ---
-title: '방법: 올바른 위치에 있는 자식 테이블에서 선택한 행을 유지 합니다.'
+title: '방법: 자식 테이블에서 선택된 행이 올바른 위치에 유지되도록 설정'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -16,14 +16,14 @@ helpviewer_keywords:
 - child tables row selection
 - current child position
 ms.assetid: c5fa2562-43a4-46fa-a604-52d8526a87bd
-ms.openlocfilehash: 930d0dc28a4ab0e34a6229a4b74617084918a275
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 514931b0d2da6a70d9a2206fb71ec85525ede978
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57713464"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59149112"
 ---
-# <a name="how-to-ensure-the-selected-row-in-a-child-table-remains-at-the-correct-position"></a>방법: 올바른 위치에 있는 자식 테이블에서 선택한 행을 유지 합니다.
+# <a name="how-to-ensure-the-selected-row-in-a-child-table-remains-at-the-correct-position"></a>방법: 자식 테이블에서 선택된 행이 올바른 위치에 유지되도록 설정
 Windows Forms에서 데이터 바인딩을 사용할 때 부모/자식 또는 마스터/세부 정보 뷰에 데이터를 표시하는 경우가 많습니다. 이는 동일한 소스의 데이터가 두 컨트롤에 표시되는 데이터 바인딩 시나리오를 가리킵니다. 한 컨트롤에서 선택 항목을 변경하면 두 번째 컨트롤에 표시되는 데이터가 변경됩니다. 예를 들어 첫 번째 컨트롤에는 고객 목록이 포함되고 두 번째 컨트롤에는 첫 번째 컨트롤에서 선택한 고객과 관련된 주문 목록이 포함될 수 있습니다.  
   
  .NET Framework 버전 2.0부터 부모/자식 뷰에 데이터를 표시하는 경우 자식 테이블에서 현재 선택된 행이 테이블의 첫 번째 행으로 다시 설정되지 않도록 추가 단계를 수행해야 할 수도 있습니다. 이 작업을 수행하려면 자식 테이블 위치를 캐시하고 부모 테이블이 변경된 후 다시 설정해야 합니다. 일반적으로 자식 다시 설정은 부모 테이블의 행에 있는 필드가 처음 변경될 때 발생합니다.  
@@ -42,8 +42,7 @@ Windows Forms에서 데이터 바인딩을 사용할 때 부모/자식 또는 �
      [!code-csharp[System.Windows.Forms.CurrencyManagerReset#2](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.CurrencyManagerReset/CS/Form1.cs#2)]
      [!code-vb[System.Windows.Forms.CurrencyManagerReset#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.CurrencyManagerReset/VB/Form1.vb#2)]  
   
-4.  부모 통화 관리자에 대한 부모 목록의 <xref:System.Windows.Forms.BindingManagerBase.CurrentChanged> 이벤트를 처리합니다. 처리기에서 캐싱 시나리오가 아님을 나타내는 부울 값을 설정합니다. 
-  <xref:System.Windows.Forms.BindingManagerBase.CurrentChanged>가 발생하는 경우 부모에 대한 변경 내용은 항목 값 변경이 아니라 목록 위치 변경입니다.  
+4.  부모 통화 관리자에 대한 부모 목록의 <xref:System.Windows.Forms.BindingManagerBase.CurrentChanged> 이벤트를 처리합니다. 처리기에서 캐싱 시나리오가 아님을 나타내는 부울 값을 설정합니다. <xref:System.Windows.Forms.BindingManagerBase.CurrentChanged>가 발생하는 경우 부모에 대한 변경 내용은 항목 값 변경이 아니라 목록 위치 변경입니다.  
   
      [!code-csharp[System.Windows.Forms.CurrencyManagerReset#5](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.CurrencyManagerReset/CS/Form1.cs#5)]
      [!code-vb[System.Windows.Forms.CurrencyManagerReset#5](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.CurrencyManagerReset/VB/Form1.vb#5)]  
@@ -85,6 +84,7 @@ Windows Forms에서 데이터 바인딩을 사용할 때 부모/자식 또는 �
  Visual Basic 또는 Visual C#에 대 한이 예제에서는 명령줄에서 빌드하는 방법에 대 한 정보를 참조 하세요 [명령줄에서 빌드](../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) 하거나 [csc.exe를 사용한 명령줄 빌드](../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)합니다. 또한 새 프로젝트에 코드를 붙여 넣어 Visual Studio에서이 예제를 빌드할 수 있습니다.  
   
 ## <a name="see-also"></a>참고자료
-- [방법: 여러 컨트롤을 확인 동일한 데이터 소스에 바인딩된 동기화 된 상태로 유지](multiple-controls-bound-to-data-source-synchronized.md)
+
+- [방법: 동일한 데이터 소스에 바인딩된 여러 컨트롤의 동기화 상태가 유지되도록 설정](multiple-controls-bound-to-data-source-synchronized.md)
 - [BindingSource 구성 요소](./controls/bindingsource-component.md)
 - [데이터 바인딩 및 Windows Forms](data-binding-and-windows-forms.md)

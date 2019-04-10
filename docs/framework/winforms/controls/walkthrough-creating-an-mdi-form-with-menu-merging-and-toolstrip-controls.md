@@ -14,12 +14,12 @@ helpviewer_keywords:
 - MDI forms [Windows Forms], creating
 - MDI forms [Windows Forms], walkthroughs
 ms.assetid: fbab4221-74af-42d0-bbf4-3c97f7b2e544
-ms.openlocfilehash: 49d9b10d8a87af1c3600756efe8dba3f81df90a6
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 9c4195cc6f26dd10f22bacb5bcba9ca2a078499c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57717143"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59160630"
 ---
 # <a name="walkthrough-creating-an-mdi-form-with-menu-merging-and-toolstrip-controls"></a>연습: 메뉴 병합 및 ToolStrip 컨트롤을 사용하여 MDI 양식 만들기
 <xref:System.Windows.Forms?displayProperty=nameWithType> 네임스페이스는 MDI(다중 문서 인터페이스) 응용 프로그램을 지원하고 <xref:System.Windows.Forms.MenuStrip> 컨트롤은 메뉴 병합을 지원합니다. MDI 폼은 <xref:System.Windows.Forms.ToolStrip> 컨트롤일 수도 있습니다.  
@@ -205,10 +205,11 @@ ms.locfileid: "57717143"
 -   제공에 <xref:System.Windows.Forms.ToolStrip> 전문적인 모양 제어 합니다. 자세한 내용은 [방법: 응용 프로그램에 대 한 ToolStrip 렌더러 설정](how-to-set-the-toolstrip-renderer-for-an-application.md)합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Windows.Forms.MenuStrip>
 - <xref:System.Windows.Forms.ToolStrip>
 - <xref:System.Windows.Forms.StatusStrip>
-- [방법: MDI 부모 폼 만들기](../advanced/how-to-create-mdi-parent-forms.md)
-- [방법: MDI 자식 폼 만들기](../advanced/how-to-create-mdi-child-forms.md)
-- [방법: MDI 드롭 다운 메뉴에 MenuStrip 삽입](how-to-insert-a-menustrip-into-an-mdi-drop-down-menu-windows-forms.md)
+- [방법: MDI 부모 양식 만들기](../advanced/how-to-create-mdi-parent-forms.md)
+- [방법: MDI 자식 양식 만들기](../advanced/how-to-create-mdi-child-forms.md)
+- [방법: MDI 드롭다운 메뉴에 MenuStrip 삽입](how-to-insert-a-menustrip-into-an-mdi-drop-down-menu-windows-forms.md)
 - [ToolStrip 컨트롤](toolstrip-control-windows-forms.md)

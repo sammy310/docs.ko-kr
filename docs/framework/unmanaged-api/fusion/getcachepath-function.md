@@ -18,12 +18,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: dc29c5f975424e3dbe91e206f6a05f830d760398
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: cf23a8f1893aa0f992d554d3c7533c3dc42f4e95
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57472653"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59150984"
 ---
 # <a name="getcachepath-function"></a>GetCachePath 함수
 지정된 된 플래그를 사용 하 여 캐시 된 어셈블리에 경로 가져옵니다.  
@@ -56,5 +56,6 @@ HRESULT GetCachePath (
  **.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>참고자료
+
 - [ASM_CACHE_FLAGS 열거형](../../../../docs/framework/unmanaged-api/fusion/asm-cache-flags-enumeration.md)
 - [Fusion 전역 정적 함수](../../../../docs/framework/unmanaged-api/fusion/fusion-global-static-functions.md)

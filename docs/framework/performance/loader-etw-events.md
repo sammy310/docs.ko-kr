@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: cb403cc6-56f8-4609-b467-cdfa09f07909
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 3878821840adc272829f57fbac090e958619f3fb
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 87ec70b2b27c8886ac9b567498d75f9294437bed
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54579006"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59141533"
 ---
 # <a name="loader-etw-events"></a>로더 ETW 이벤트
 <a name="top"></a> 이들 이벤트는 응용 프로그램 도메인, 어셈블리 및 모듈 로드 및 언로드와 관련된 정보를 수집합니다.  
@@ -21,7 +21,7 @@ ms.locfileid: "54579006"
   
  로더 이벤트는 다음으로 다시 구분됩니다.  
   
--   [응용 프로그램 도메인 이벤트](#application_domain_events)  
+-   [애플리케이션 도메인 이벤트](#application_domain_events)  
   
 -   [CLR 로더 어셈블리 이벤트](#clr_loader_assembly_events)  
   
@@ -45,7 +45,7 @@ ms.locfileid: "54579006"
   
 |이벤트|이벤트 ID|설명|  
 |-----------|--------------|-----------------|  
-|`AppDomainLoad_V1` (모든 응용 프로그램 도메인에 대해 기록됨)|156|프로세스 수명 중에 애플리케이션 도메인이 만들어질 때마다 발생합니다.|  
+|`AppDomainLoad_V1` (모든 응용 프로그램 도메인에 대 한 로그)|156|프로세스 수명 중에 애플리케이션 도메인이 만들어질 때마다 발생합니다.|  
 |`AppDomainUnLoad_V1`|157|프로세스 수명 중에 애플리케이션 도메인이 삭제될 때마다 발생합니다.|  
 |`AppDomainDCStart_V1`|157|시작 런다운 중에 애플리케이션 도메인을 열거합니다.|  
 |`AppDomainDCEnd_V1`|158|끝 런다운 중에 애플리케이션 도메인을 열거합니다.|  
@@ -213,4 +213,5 @@ ms.locfileid: "54579006"
  모듈 범위 이벤트는 ETW 수준이 4보다 크거나 같으면 발생하고 정보 제공 이벤트로 분류됩니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [CLR ETW 이벤트](../../../docs/framework/performance/clr-etw-events.md)

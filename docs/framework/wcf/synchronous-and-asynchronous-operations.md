@@ -8,12 +8,12 @@ helpviewer_keywords:
 - service contracts [WCF], synchronous operations
 - service contracts [WCF], asynchronous operations
 ms.assetid: db8a51cb-67e6-411b-9035-e5821ed350c9
-ms.openlocfilehash: a35f4543543aa9023fd43de1757975c7ada87da9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 3db7d6b072c7803d96deb17b33a06af3d55aca12
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54529124"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59148956"
 ---
 # <a name="synchronous-and-asynchronous-operations"></a>동기 및 비동기 작업
 이 항목에서는 비동기 서비스 작업의 구현 및 호출에 대해 설명합니다.  
@@ -172,7 +172,7 @@ await simpleServiceClient.SampleMethodTaskAsync("hello, world");
 svcutil http://localhost:8000/servicemodelsamples/service/mex /async /tcv:Version35  
 ```  
   
- 그러면 Svcutil.exe는 호출 애플리케이션이 응답을 받고 적절한 작업을 수행하기 위한 이벤트 처리기를 구현하고 할당할 수 있는 이벤트 인프라를 사용하여 WCF 클라이언트 클래스를 생성합니다. 전체 예제를 참조 하세요. [방법: 서비스 작업을 비동기적으로 호출](../../../docs/framework/wcf/feature-details/how-to-call-wcf-service-operations-asynchronously.md)합니다.  
+ 그러면 Svcutil.exe는 호출 애플리케이션이 응답을 받고 적절한 작업을 수행하기 위한 이벤트 처리기를 구현하고 할당할 수 있는 이벤트 인프라를 사용하여 WCF 클라이언트 클래스를 생성합니다. 전체 예제는 [방법: 서비스 작업을 비동기적으로 호출](../../../docs/framework/wcf/feature-details/how-to-call-wcf-service-operations-asynchronously.md)합니다.  
   
  그러나 이벤트 기반 비동기 모델은 [!INCLUDE[netfx35_long](../../../includes/netfx35-long-md.md)]에서만 사용할 수 있으며, <xref:System.ServiceModel.ChannelFactory%601?displayProperty=nameWithType>를 사용하여 WCF 클라이언트 채널이 만들어진 경우에는 [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)]에서도 지원되지 않습니다. WCF 클라이언트 채널 개체가 있는 경우 <xref:System.IAsyncResult?displayProperty=nameWithType> 개체를 사용하여 작업을 비동기적으로 호출해야 합니다. 이 방법을 사용하려면 다음 예제와 같이 [ServiceModel Metadata 유틸리티 도구(Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)에서 **/async** 명령 옵션을 지정합니다.  
   
@@ -193,5 +193,6 @@ svcutil http://localhost:8000/servicemodelsamples/service/mex /async
  메시지 개체를 `Result` 속성으로 받고 반환된 값을 해당 개체의 속성으로 포함하려면 **/messageContract** 명령 옵션을 사용합니다. 이렇게 하면 응답 메시지를 `Result` 개체의 <xref:System.EventArgs> 속성으로 반환하는 서명이 생성됩니다. 모든 내부 반환 값은 응답 메시지 개체의 속성이 됩니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.ServiceModel.OperationContractAttribute.IsOneWay%2A>
 - <xref:System.ServiceModel.OperationContractAttribute.AsyncPattern%2A>

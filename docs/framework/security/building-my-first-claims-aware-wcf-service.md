@@ -3,12 +3,12 @@ title: 내 첫 번째 클레임 인식 WCF 서비스 구축
 ms.date: 03/30/2017
 ms.assetid: e0e6d091-9a97-4888-8f2c-cbcee42d90ee
 author: BrucePerlerMS
-ms.openlocfilehash: c982fae4fdbdd4963c92b17b609d517056c34b95
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
-ms.translationtype: MT
+ms.openlocfilehash: 82ce5441463989507872750eb025899b8f80adee
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58825770"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59144468"
 ---
 # <a name="building-my-first-claims-aware-wcf-service"></a>내 첫 번째 클레임 인식 WCF 서비스 구축
 ## <a name="applies-to"></a>적용 대상  
@@ -41,4 +41,5 @@ ms.locfileid: "58825770"
  WIF를 사용 하 여 첫 번째 클레임 인식 WCF 서비스를 빌드하려면 참조 [방법: WCF 웹 서비스 응용 프로그램에 WIF 사용](../../../docs/framework/security/how-to-enable-wif-for-a-wcf-web-service-application.md)합니다.
   
 ## <a name="see-also"></a>참고자료
+
 - [WIF 시작](../../../docs/framework/security/getting-started-with-wif.md)

@@ -2,12 +2,12 @@
 title: 인스턴싱 초기화
 ms.date: 03/30/2017
 ms.assetid: 154d049f-2140-4696-b494-c7e53f6775ef
-ms.openlocfilehash: ec44276d56b0a914c742a5a709f2207f8111e57b
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
-ms.translationtype: MT
+ms.openlocfilehash: 553272c9059b41eac7d8807ef7a283edbfb8f791
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58827915"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59142378"
 ---
 # <a name="instancing-initialization"></a>인스턴싱 초기화
 이 샘플을 확장 합니다 [풀링](../../../../docs/framework/wcf/samples/pooling.md) 인터페이스를 정의 하 여 샘플 `IObjectControl`, 활성화 및 비활성화 하 여 개체의 초기화를 사용자 지정 하는 합니다. 클라이언트에서는 개체를 풀로 반환하는 메서드와 개체를 풀로 반환하지 않는 메서드를 호출합니다.  
@@ -154,7 +154,7 @@ if (activeObjectsCount == 0)
   
  이 샘플에서는 사용자 지정 특성을 사용합니다. <xref:System.ServiceModel.ServiceHost>가 생성되면 이는 서비스의 형식 정의에 사용된 특성을 확인하고 사용 가능한 동작을 서비스 설명의 동작 컬렉션에 추가합니다.  
   
- 합니다 <xref:System.ServiceModel.Description.IServiceBehavior> 인터페이스에는: <xref:System.ServiceModel.Description.IServiceBehavior.Validate%2A> `,` <xref:System.ServiceModel.Description.IServiceBehavior.AddBindingParameters%2A> `,` 고 <xref:System.ServiceModel.Description.IServiceBehavior.ApplyDispatchBehavior%2A>입니다. WCF에서 이러한 메서드를 호출 하는 경우는 <xref:System.ServiceModel.ServiceHost> 초기화 하는 중입니다. <xref:System.ServiceModel.Description.IServiceBehavior.Validate%2A?displayProperty=nameWithType>가 먼저 호출되어 서비스에 일관성을 검사할 수 있게 해 줍니다. <xref:System.ServiceModel.Description.IServiceBehavior.AddBindingParameters%2A?displayProperty=nameWithType>이 다음으로 호출됩니다. 이 메서드는 고급 시나리오에서만 필요합니다. <xref:System.ServiceModel.Description.IServiceBehavior.ApplyDispatchBehavior%2A?displayProperty=nameWithType>가 마지막으로 호출되며 런타임 구성을 담당합니다. 다음 매개 변수가 <xref:System.ServiceModel.Description.IServiceBehavior.ApplyDispatchBehavior%2A?displayProperty=nameWithType>에 전달됩니다.  
+ 합니다 <xref:System.ServiceModel.Description.IServiceBehavior> 인터페이스에는: <xref:System.ServiceModel.Description.IServiceBehavior.Validate%2A>`,` <xref:System.ServiceModel.Description.IServiceBehavior.AddBindingParameters%2A>`,` 고 <xref:System.ServiceModel.Description.IServiceBehavior.ApplyDispatchBehavior%2A>입니다. WCF에서 이러한 메서드를 호출 하는 경우는 <xref:System.ServiceModel.ServiceHost> 초기화 하는 중입니다. <xref:System.ServiceModel.Description.IServiceBehavior.Validate%2A?displayProperty=nameWithType> 먼저; 라고 서비스를에 일관성을 검사할 수 있습니다. <xref:System.ServiceModel.Description.IServiceBehavior.AddBindingParameters%2A?displayProperty=nameWithType> 다음으로 호출 됩니다. 이 메서드는 고급 시나리오 에서만 필요. <xref:System.ServiceModel.Description.IServiceBehavior.ApplyDispatchBehavior%2A?displayProperty=nameWithType> 가 마지막으로 호출 하 고 런타임 구성을 담당 합니다. 다음 매개 변수가 <xref:System.ServiceModel.Description.IServiceBehavior.ApplyDispatchBehavior%2A?displayProperty=nameWithType>에 전달됩니다.  
   
 -   `Description`: 이 매개 변수는 전체 서비스에 대 한 서비스 설명을 제공합니다. 이 매개 변수를 사용하여 서비스의 엔드포인트, 계약, 바인딩 및 그 외 서비스와 관련된 데이터에 대한 설명 데이터를 검사할 수 있습니다.  
   
@@ -203,7 +203,7 @@ public class PoolService : IPoolService
 ## <a name="hooking-activation-and-deactivation"></a>활성화 및 비활성화 후크  
  개체 풀링의 주요 목적은 만들고 초기화하는 데 비교적 자원이 많이 사용되는 수명이 짧은 개체를 최적화하는 데 있습니다. 따라서 개체 풀링을 제대로 사용하면 응용 프로그램의 성능을 현저히 향상시킬 수 있습니다. 풀에서 개체가 반환되기 때문에 생성자는 한 번만 호출됩니다. 반면 일부 응용 프로그램의 경우는 단일 컨텍스트 동안 사용된 리소스를 초기화하고 정리할 수 있도록 일정 수준의 제어가 필요합니다. 예를 들어 일련의 계산에 사용되는 개체는 다음 계산을 처리하기 전에 private 필드를 재설정할 수 있습니다. 엔터프라이즈 서비스에서는 개체 개발자가 `Activate` 기본 클래스의 `Deactivate` 및 <xref:System.EnterpriseServices.ServicedComponent> 메서드를 재정의할 수 있도록 하여 이러한 종류의 컨텍스트별 초기화를 사용하도록 설정합니다.  
   
- 개체 풀은 풀에서 개체를 반환하기 바로 전에 `Activate` 메서드를 호출합니다. 개체가 풀로 다시 돌아갈 때 `Deactivate`가 호출됩니다. <xref:System.EnterpriseServices.ServicedComponent> 기본 클래스에는 또한 개체를 계속 풀링할 수 있는지 여부를 풀에 알리는 데 사용되는 `boolean`라는 `CanBePooled` 속성이 있습니다.  
+ 개체 풀은 풀에서 개체를 반환하기 바로 전에 `Activate` 메서드를 호출합니다. `Deactivate` 개체 풀으로 반환 될 때 호출 됩니다. <xref:System.EnterpriseServices.ServicedComponent> 기본 클래스에는 또한 개체를 계속 풀링할 수 있는지 여부를 풀에 알리는 데 사용되는 `boolean`라는 `CanBePooled` 속성이 있습니다.  
   
  이 기능을 모방하기 위해 이 샘플에서는 이전에 언급된 멤버가 있는 공용 인터페이스(`IObjectControl`)를 선언합니다. 그런 다음 이 인터페이스는 컨텍스트별 초기화를 제공하는 데 사용되는 서비스 클래스에 의해 구현됩니다. 이러한 요구 사항에 맞게 <xref:System.ServiceModel.Dispatcher.IInstanceProvider> 구현을 수정해야 합니다. 이제 가져올 때마다 개체를 호출 하 여 합니다 `GetInstance` 메서드를 확인 해야 합니다는 개체가 구현 하는지 `IObjectControl.` 그렇지 않으면 호출 해야 합니다는 `Activate` 메서드 적절 하 게 합니다.  
   
@@ -264,4 +264,3 @@ else if (pool.Count < minPoolSize)
 >  이 디렉터리가 없으면로 이동 [Windows Communication Foundation (WCF) 및.NET Framework 4 용 Windows WF (Workflow Foundation) 샘플](https://go.microsoft.com/fwlink/?LinkId=150780) 모든 Windows Communication Foundation (WCF)를 다운로드 하 고 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플. 이 샘플은 다음 디렉터리에 있습니다.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Instancing\Initialization`  
-  

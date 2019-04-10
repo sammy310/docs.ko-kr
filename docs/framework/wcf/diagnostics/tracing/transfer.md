@@ -2,12 +2,12 @@
 title: 전송
 ms.date: 03/30/2017
 ms.assetid: dfcfa36c-d3bb-44b4-aa15-1c922c6f73e6
-ms.openlocfilehash: d6ca1f8471fb1513263354e2369891bf9ffcb583
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 8263093944cf01a38a49b52d71f7a6e54195a3c3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54552923"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59145043"
 ---
 # <a name="transfer"></a>전송
 이 항목에서는 Windows Communication Foundation (WCF) 동작 추적 모델에서 전송을 설명합니다.  
@@ -21,7 +21,7 @@ ms.locfileid: "54552923"
 <source name="System.ServiceModel" switchValue="Verbose,ActivityTracing">  
 ```  
   
-## <a name="using-transfer-to-correlate-activities-within-endpoints"></a>끝점 내에서 동작을 상호 연결하기 위해 전송 사용  
+## <a name="using-transfer-to-correlate-activities-within-endpoints"></a>엔드포인트 내에서 동작을 상호 연결하기 위해 전송 사용  
  동작 및 전송은 사용자가 오류의 근본 원인을 찾도록 도와줍니다. 예를 들어 동작 M과 N 간에 각각 구성 요소 M과 N에서 전송을 주고 받을 때 M으로 전송을 되돌린 직후에 N에서 충돌이 발생하면 M으로 보내는 N의 전달 데이터로 인해 오류가 발생했다고 결론을 내릴 수 있습니다.  
   
  M과 N 간에 컨트롤의 흐름이 있을 때 Transfer 추적이 동작 M으로부터 동작 N으로 내보내집니다. 예를 들어 동작의 경계를 넘나드는 메서드 호출로 인해 N은 M에 대한 일부 작업을 수행합니다. N이 이미 존재하거나 만들어졌을 수 있습니다. N이 M에 대한 일부 작업을 수행하는 새 동작일 경우 N이 M에 의해 생성됩니다.  
@@ -103,6 +103,7 @@ ts.TraceEvent(TraceEventType.Resume, 667, "Resume: Activity " + i-1);
 ```  
   
 ## <a name="see-also"></a>참고자료
+
 - [추적 구성](../../../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md)
 - [Service Trace Viewer를 사용하여 상호 관련된 추적 보기 및 문제 해결](../../../../../docs/framework/wcf/diagnostics/tracing/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting.md)
 - [종단 간 추적 시나리오](../../../../../docs/framework/wcf/diagnostics/tracing/end-to-end-tracing-scenarios.md)

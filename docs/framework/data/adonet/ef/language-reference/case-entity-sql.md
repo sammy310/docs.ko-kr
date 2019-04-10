@@ -2,12 +2,12 @@
 title: CASE(Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 26a47873-e87d-4ba2-9e2c-3787c21efe89
-ms.openlocfilehash: 9f41c99ab40a74a2c17e8dac207cc7887c77ba91
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 65d038564683e0a97939cabc7081be3341f4542d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54638929"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59162804"
 ---
 # <a name="case-entity-sql"></a>CASE(Entity SQL)
 `Boolean` 식 집합을 계산하여 결과를 결정합니다.  
@@ -29,13 +29,13 @@ END
  여러 WHEN `Boolean_expression` THEN `result_expression` 절을 사용할 수 있음을 나타내는 자리 표시자입니다.  
   
  THEN `result_expression`  
- `Boolean_expression` 이 `true`인 경우에 반환되는 식입니다. `result expression` 은 유효한 식입니다.  
+ `Boolean_expression` 이 `true`인 경우에 반환되는 식입니다. `result expression` 유효한 식이입니다.  
   
  ELSE `else_result_expression`  
- `true`인 비교 연산이 없는 경우 반환되는 식입니다. 이 인수가 생략되고 `true`인 비교 연산이 없는 경우 CASE는 null을 반환합니다. `else_result_expression` 은 유효한 식입니다. `else_result_expression` 과 `result_expression` 의 데이터 형식은 동일하거나 암시적으로 변환되어야 합니다.  
+ `true`인 비교 연산이 없는 경우 반환되는 식입니다. 이 인수가 생략되고 `true`인 비교 연산이 없는 경우 CASE는 null을 반환합니다. `else_result_expression` 유효한 식이입니다. `else_result_expression` 과 `result_expression` 의 데이터 형식은 동일하거나 암시적으로 변환되어야 합니다.  
   
  WHEN `Boolean_expression`  
- 검색된 CASE 형식을 사용할 때 계산되는 `Boolean` 식입니다. `Boolean_expression` 은 유효한 `Boolean` 식입니다.  
+ 검색된 CASE 형식을 사용할 때 계산되는 `Boolean` 식입니다. `Boolean_expression` 유효한 `Boolean` 식입니다.  
   
 ## <a name="return-value"></a>반환 값  
  `result_expression` 과 선택적 요소인 `else_result_expression`의 형식 집합에서 우선 순위가 가장 높은 형식을 반환합니다.  
@@ -57,6 +57,7 @@ END
  [!code-csharp[DP EntityServices Concepts 2#CASE_WHEN_THEN_ELSE](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#case_when_then_else)]  
   
 ## <a name="see-also"></a>참고자료
+
 - [THEN](../../../../../../docs/framework/data/adonet/ef/language-reference/then-entity-sql.md)
-- [SELECT](../../../../../../docs/framework/data/adonet/ef/language-reference/select-entity-sql.md)
+- [선택](../../../../../../docs/framework/data/adonet/ef/language-reference/select-entity-sql.md)
 - [엔터티 SQL 참조](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)

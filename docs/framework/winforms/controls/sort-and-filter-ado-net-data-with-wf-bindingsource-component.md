@@ -1,5 +1,5 @@
 ---
-title: '방법: Forms BindingSource 구성 요소는 Windows 사용 하 여 ADO.NET 데이터 정렬 및 필터링'
+title: '방법: Windows Forms BindingSource 구성 요소를 사용하여 ADO.NET 데이터 정렬 및 필터링'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -13,14 +13,14 @@ helpviewer_keywords:
 - data [Windows Forms], sorting
 - ADO.NET [Windows Forms]
 ms.assetid: 6c206daf-d706-4602-9dbe-435343052063
-ms.openlocfilehash: 65be2367091144945e9540c848e6131deac9d725
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 1f8a5e9be40c8a2d00b05ea42097e397afd0e1b6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57703103"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59163256"
 ---
-# <a name="how-to-sort-and-filter-adonet-data-with-the-windows-forms-bindingsource-component"></a>방법: Forms BindingSource 구성 요소는 Windows 사용 하 여 ADO.NET 데이터 정렬 및 필터링
+# <a name="how-to-sort-and-filter-adonet-data-with-the-windows-forms-bindingsource-component"></a>방법: Windows Forms BindingSource 구성 요소를 사용하여 ADO.NET 데이터 정렬 및 필터링
 정렬 및 필터링 기능을 노출할 수 있습니다 <xref:System.Windows.Forms.BindingSource> 를 통해 제어 합니다 <xref:System.Windows.Forms.BindingSource.Sort%2A> 및 <xref:System.Windows.Forms.BindingSource.Filter%2A> 속성입니다. 데이터 원본의 경우에 간단한 정렬을 적용할 수 있습니다는 <xref:System.ComponentModel.IBindingList>, 및 고급 데이터 원본의 경우 정렬 및 필터링을 적용할 수 있습니다는 <xref:System.ComponentModel.IBindingListView>합니다. 합니다 <xref:System.Windows.Forms.BindingSource.Sort%2A> 속성을 사용 하려면 표준 [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] 구문: 뒤에 데이터 원본에서 데이터의 열 이름을 나타내는 문자열입니다 `ASC` 또는 `DESC` 목록을 오름차순 또는 내림차순으로 정렬할지 여부를 나타냅니다. 고급 정렬 또는 쉼표 구분 기호를 사용 하 여 각 열을 구분 하 여 여러 열 정렬을 설정할 수 있습니다. <xref:System.Windows.Forms.BindingSource.Filter%2A> 속성은 문자열 식을 사용 합니다.  
   
 > [!NOTE]
@@ -54,6 +54,7 @@ ms.locfileid: "57703103"
  이 예제를 실행 하려면 코드를 포함 하는 폼에 붙여 넣습니다를 <xref:System.Windows.Forms.BindingSource> 라는 `BindingSource1` 와 <xref:System.Windows.Forms.DataGridView> 라는 `dataGridView1`합니다. 처리를 <xref:System.Windows.Forms.Form.Load> 양식과 호출에 대 한 이벤트 `InitializeSortedFilteredBindingSource` load 이벤트 처리기 메서드에서 합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Windows.Forms.BindingSource.Sort%2A>
 - <xref:System.Windows.Forms.BindingSource.Filter%2A>
 - [방법: 예제 데이터베이스 설치](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/8b6y4c7s(v=vs.120))

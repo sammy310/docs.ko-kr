@@ -2,12 +2,12 @@
 title: Entity FrameworkTypes용 SqlClient
 ms.date: 03/30/2017
 ms.assetid: f2a95ead-c845-4e97-9fb3-04b444f7ed81
-ms.openlocfilehash: b121020c8779cfb3959425b1019eaf085b97d6cf
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: eb12bde1e319fde5adf20ad6cd54f8776aeda31d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54505188"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59147662"
 ---
 # <a name="sqlclient-for-entity-frameworktypes"></a>Entity FrameworkTypes용 SqlClient
 .NET Framework Data Provider for SQL Server(SqlClient) 공급자 매니페스트 파일에는 공급자 기본 형식의 목록, 각 형식의 패싯, 개념적 모델과 저장소 모델 기본 형식 간의 매핑, 개념적 모델과 저장소 모델 기본 형식 간의 승격과 변환 규칙이 포함되어 있습니다.  
@@ -16,13 +16,13 @@ ms.locfileid: "54505188"
   
 |공급자 형식<br /><br /> name|공급자 형식<br /><br /> 특성|`EDMSimpleType`<br /><br /> name|패싯|  
 |----------------------------|----------------------------------|------------------------------|------------|  
-|`bit`|해당 없음|`Edm.Boolean`|해당 없음|  
-|`tinyint`|해당 없음|`Edm.Byte`|해당 없음|  
-|`smallint`|해당 없음|`Edm.Int16`|해당 없음|  
-|`int`|해당 없음|`Edm.Int32`|해당 없음|  
-|`bigint`|해당 없음|`Edm.Int64`|해당 없음|  
-|`float`|해당 없음|`Edm.Double`|해당 없음|  
-|`real`|해당 없음|`Edm.Double`|해당 없음|  
+|`bit`|N/A|`Edm.Boolean`|N/A|  
+|`tinyint`|N/A|`Edm.Byte`|N/A|  
+|`smallint`|N/A|`Edm.Int16`|N/A|  
+|`int`|N/A|`Edm.Int32`|N/A|  
+|`bigint`|N/A|`Edm.Int64`|N/A|  
+|`float`|N/A|`Edm.Double`|N/A|  
+|`real`|N/A|`Edm.Double`|N/A|  
 |`decimal`|N/A|`Edm.Decimal`|전체 자릿수:<br /><br /> -최소: 1<br /><br /> -최대: 38<br /><br /> -기본: 18<br /><br /> -상수: False<br /><br /> 확장:<br /><br /> -최소: 0<br /><br /> -최대: 38<br /><br /> -기본: 0<br /><br /> -상수: False|  
 |`numeric`|N/A|`Edm.Decimal`|전체 자릿수:<br /><br /> -최소: 1<br /><br /> -최대: 38<br /><br /> -기본: 18<br /><br /> -상수: False<br /><br /> 확장:<br /><br /> -최소: 0<br /><br /> -최대: 38<br /><br /> -기본: 0<br /><br /> -상수: False|  
 |`smallmoney`|N/A|`Edm.Decimal`|전체 자릿수:<br /><br /> -기본: 10<br /><br /> -상수: True<br /><br /> 확장:<br /><br /> -기본: 4<br /><br /> -상수: True|  
@@ -51,4 +51,5 @@ ms.locfileid: "54505188"
 |`xml`|같음 비교 가능한: False<br /><br /> 순서를 비교할 수 있습니다. False|`Edm.String`|MaxLength:<br /><br /> -기본: 1073741823<br /><br /> -상수: True<br /><br /> 유니코드:<br /><br /> -기본: True<br /><br /> -상수: True<br /><br /> FixedLength:<br /><br /> -기본: False<br /><br /> -상수: True|  
   
 ## <a name="see-also"></a>참고자료
+
 - [CSDL, SSDL 및 MSL 사양](../../../../../docs/framework/data/adonet/ef/language-reference/csdl-ssdl-and-msl-specifications.md)

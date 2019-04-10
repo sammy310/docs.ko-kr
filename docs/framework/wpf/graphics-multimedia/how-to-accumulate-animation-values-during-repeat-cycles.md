@@ -1,18 +1,18 @@
 ---
-title: '방법: 주기가 반복되는 동안 애니메이션 값 누적'
+title: '방법: 반복 주기 동안 애니메이션 값 누적'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - accumulating animation values across repeating cycles [WPF]
 - animation [WPF], accumulating values across repeating cycles
 ms.assetid: 548df369-c7cc-4dab-b569-08b95ced2e7e
-ms.openlocfilehash: e38e1601e2f4eeab2b53918924bc21e05163d948
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 4b739883322751e2df86e13bfd07249abdb10a08
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57357263"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59146018"
 ---
-# <a name="how-to-accumulate-animation-values-during-repeat-cycles"></a>방법: 주기가 반복되는 동안 애니메이션 값 누적
+# <a name="how-to-accumulate-animation-values-during-repeat-cycles"></a>방법: 반복 주기 동안 애니메이션 값 누적
 사용 하는 방법을 보여 주는이 예제는 <xref:System.Windows.Media.Animation.DoubleAnimation.IsCumulative%2A> 반복 주기에 대해 애니메이션 값 누적 하는 속성입니다.  
   
 ## <a name="example"></a>예제  
@@ -33,6 +33,7 @@ ms.locfileid: "57357263"
  [!code-xaml[timingbehaviors_snip#IsCumulativeWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/timingbehaviors_snip/CSharp/IsCumulativeExample.xaml#iscumulativewholepage)]  
   
 ## <a name="see-also"></a>참고자료
+
 - [애니메이션 시작 값에 애니메이션 출력 값 추가](how-to-add-an-animation-output-value-to-an-animation-starting-value.md)
 - [애니메이션 반복](how-to-repeat-an-animation.md)
 - [애니메이션 개요](animation-overview.md)

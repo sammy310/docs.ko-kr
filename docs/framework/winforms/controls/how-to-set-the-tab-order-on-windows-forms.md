@@ -10,12 +10,12 @@ helpviewer_keywords:
 - controls [Windows Forms], setting tab order
 - Windows Forms, setting tab order
 ms.assetid: 71fa8e76-0472-414b-ad3c-0f90166e0ad7
-ms.openlocfilehash: 3f566dfb5dbc118c5a6be7f874b5b4857756075a
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: cd86757d43d7d57dc7777422086a7b7a96b6611e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57705881"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59162126"
 ---
 # <a name="how-to-set-the-tab-order-on-windows-forms"></a>방법: Windows Forms에서 탭 순서 설정
 탭 순서는 사용자가 이동 포커스 한 컨트롤에서 다른 탭 키를 눌러 순서가 있습니다. 각 폼 자체 탭 순서를 있습니다. 기본적으로 탭 순서가 컨트롤을 만든 순서와 동일 합니다. 탭 순서 번호는 0부터 시작 합니다.  
@@ -55,6 +55,7 @@ ms.locfileid: "57705881"
     >  라디오 단추 그룹에는 런타임 시 중지 하는 단일 탭을 있습니다. 선택한 단추 (사용 하 여 단추, 해당 <xref:System.Windows.Forms.RadioButton.Checked%2A> 속성이로 설정 `true`)에 해당 <xref:System.Windows.Forms.Control.TabStop%2A> 속성 자동 설정 됩니다 `true`반면 다른 단추 해당 <xref:System.Windows.Forms.Control.TabStop%2A> 속성이로 설정 `false`합니다. 그룹화에 대 한 자세한 내용은 <xref:System.Windows.Forms.RadioButton> 컨트롤을 참조 하세요 [집합으로 함수에 Windows Forms RadioButton 컨트롤 그룹화](how-to-group-windows-forms-radiobutton-controls-to-function-as-a-set.md)합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [Windows Forms 컨트롤](index.md)
 - [Windows Forms에서 컨트롤 정렬](arranging-controls-on-windows-forms.md)
 - [Windows Forms에 사용할 수 있는 컨트롤](controls-to-use-on-windows-forms.md)

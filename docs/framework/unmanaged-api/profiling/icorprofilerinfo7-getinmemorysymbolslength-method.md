@@ -11,12 +11,12 @@ api_type:
 ms.assetid: d62c4a4c-8a62-45aa-8f01-a8387cf36159
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 550acc8d696cbd9e82d05e09c48a8c929af23673
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 422fdfef6bea40e0f4bcc7447df8dba1eab2896e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57487478"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59146096"
 ---
 # <a name="icorprofilerinfo7getinmemorysymbolslength-method"></a>ICorProfilerInfo7::GetInMemorySymbolsLength Method
 [.NET Framework 4.6.1 이상 버전에서 지원됨]  
@@ -60,4 +60,5 @@ HRESULT GetInMemorySymbolsLength(
  **.NET Framework 버전:** [!INCLUDE[net_current_v461plus](../../../../includes/net-current-v461plus-md.md)]  
   
 ## <a name="see-also"></a>참고자료
+
 - [ICorProfilerInfo7 인터페이스](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo7-interface.md)
