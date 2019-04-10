@@ -1,5 +1,5 @@
 ---
-title: '방법: Windows Forms 단추를 취소 단추로 지정'
+title: '방법: Windows Forms Button을 취소 단추로 지정'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - buttons [Windows Forms], cancel buttons
 - Button control [Windows Forms], designating as cancel button
 ms.assetid: 252f0834-e54b-44d9-96f7-ee5f50e94f2c
-ms.openlocfilehash: f8eacea0d21159d30d48e48be3093ddf8ca3d7d7
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: ad95a527ea72858cc106c87d8712110e018e97b2
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57722385"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59231437"
 ---
-# <a name="how-to-designate-a-windows-forms-button-as-the-cancel-button"></a>방법: Windows Forms 단추를 취소 단추로 지정
+# <a name="how-to-designate-a-windows-forms-button-as-the-cancel-button"></a>방법: Windows Forms Button을 취소 단추로 지정
 모든 Windows Form에 지정할 수 있습니다는 <xref:System.Windows.Forms.Button> 취소 단추를 제어 합니다. 사용자에 관계 없이 폼에서 다른 컨트롤에 포커스가 ESC 키를 누를 때마다 취소 단추를 클릭 합니다. 신속 하 게 조치를 커밋하지 않고 작업을 종료할 수 있도록 프로그래밍할 때 일반적으로 이러한 단추를 사용 합니다.  
   
 ### <a name="to-designate-the-cancel-button"></a>취소 단추를 지정 하려면  
@@ -45,6 +45,7 @@ ms.locfileid: "57722385"
     ```  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Windows.Forms.Form.CancelButton%2A>
 - [Button 컨트롤 개요](button-control-overview-windows-forms.md)
 - [Windows Forms Button 컨트롤 선택 방법](ways-to-select-a-windows-forms-button-control.md)

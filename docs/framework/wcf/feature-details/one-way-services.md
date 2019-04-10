@@ -6,12 +6,12 @@ helpviewer_keywords:
 - WCF [WCF], one-way service contracts
 - service contracts [WCF], defining one-way
 ms.assetid: 19053a36-4492-45a3-bfe6-0365ee0205a3
-ms.openlocfilehash: ad285b5a0fa37867b1b80b3d7293a976fbd12c61
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 011bca07890e706b86f2a0b1dbf11acf77058548
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54527798"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59231281"
 ---
 # <a name="one-way-services"></a>단방향 서비스
 서비스 작업의 기본 동작은 요청-회신 패턴입니다. 요청-회신 패턴의 경우 서비스 작업이 `void` 메서드로 코드에 표현된 경우에도 클라이언트에서 회신 메시지를 기다립니다. 단방향 작업을 사용하는 경우 하나의 메시지만 전송됩니다. 수신자는 회신 메시지를 보내지 않으며 발신자도 메시지를 기다리지 않습니다.  
@@ -55,4 +55,5 @@ public interface IOneWayCalculator
  따라서 서비스와 클라이언트의 여러 가지 컨트롤을 검사한 다음 응용 프로그램 시나리오를 테스트하여 서비스 또는 클라이언트에 대한 최상의 구성을 결정하는 것이 좋습니다. 예를 들어, 세션 사용으로 인해 서비스에서 메시지 처리가 차단되는 경우 각 메시지가 다른 서비스 인스턴스에 의해 처리될 수 있도록 <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A?displayProperty=nameWithType> 속성을 <xref:System.ServiceModel.InstanceContextMode.PerCall>로 설정하고, 한 번에 둘 이상의 스레드에서 메시지를 디스패치할 수 있도록 <xref:System.ServiceModel.ServiceBehaviorAttribute.ConcurrencyMode%2A>를 <xref:System.ServiceModel.ConcurrencyMode.Multiple>로 설정합니다. 또 다른 방법은 서비스 및 클라이언트 바인딩의 읽기 할당량을 늘리는 것입니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [단방향](../../../../docs/framework/wcf/samples/one-way.md)

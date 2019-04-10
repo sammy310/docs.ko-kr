@@ -9,12 +9,12 @@ helpviewer_keywords:
 - controls [WPF], layout system
 - layout system [WPF]
 ms.assetid: 3eecdced-3623-403a-a077-7595453a9221
-ms.openlocfilehash: 4c967bf34c66cd2dcc4365a2a3ec214c9bac5623
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: MT
+ms.openlocfilehash: 7fc69ff0434a26dc196d24395bbd1e2f441008de
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58464569"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59231125"
 ---
 # <a name="layout"></a>레이아웃
 이 항목에서는 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 레이아웃 시스템에 대해 설명합니다. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]에서 사용자 인터페이스를 만들려면 언제, 어떻게 레이아웃을 계산해야 하는지를 이해해야 합니다.  
@@ -149,8 +149,9 @@ ms.locfileid: "58464569"
  요소의 측정 방법과 정렬 방법을 이해하는 것이 레이아웃을 이해하기 위한 첫 단계입니다. 자세한 내용은 사용 가능한 <xref:System.Windows.Controls.Panel> 요소를 참조 하세요 [Panel 개요](../controls/panels-overview.md)합니다. 레이아웃에 영향을 줄 수 있는 다양한 배치 속성을 더 잘 이해하려면 [맞춤, 여백 및 안쪽 여백 개요](alignment-margins-and-padding-overview.md)를 참조하세요. 사용자 지정의 예 <xref:System.Windows.Controls.Panel> 요소를 참조 하세요 [사용자 지정 방사형 패널 샘플](https://go.microsoft.com/fwlink/?LinkID=159982)합니다. 간단한 응용 프로그램에서 모두 함께 배치할 준비가 되었을 때 참조 [연습: 내 첫 WPF 데스크톱 응용 프로그램](../getting-started/walkthrough-my-first-wpf-desktop-application.md)합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Windows.FrameworkElement>
 - <xref:System.Windows.UIElement>
-- [패널 개요](../controls/panels-overview.md)
+- [Panel 개요](../controls/panels-overview.md)
 - [맞춤, 여백 및 안쪽 여백 개요](alignment-margins-and-padding-overview.md)
 - [레이아웃 및 디자인](optimizing-performance-layout-and-design.md)
