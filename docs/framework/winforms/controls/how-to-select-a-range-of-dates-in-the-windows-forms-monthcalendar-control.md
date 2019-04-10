@@ -11,19 +11,19 @@ helpviewer_keywords:
 - calendars [Windows Forms], selecting date range
 - MonthCalendar control [Windows Forms], selecting date range
 ms.assetid: 95d9ab95-b0f8-4c19-9f63-b5cd4593a5d0
-ms.openlocfilehash: 0e032a6285c43d7e96c7d59444da6d6598bd8100
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 82d0499cb40f79a3110b8432fbee66774bcc14a7
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59129950"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59332237"
 ---
-# <a name="how-to-select-a-range-of-dates-in-the-windows-forms-monthcalendar-control"></a><span data-ttu-id="1736e-102">방법: Windows Forms MonthCalendar 컨트롤에서 날짜 범위 선택</span><span class="sxs-lookup"><span data-stu-id="1736e-102">How to: Select a Range of Dates in the Windows Forms MonthCalendar Control</span></span>
-<span data-ttu-id="1736e-103">Windows Forms의 중요 한 기능은 <xref:System.Windows.Forms.MonthCalendar> 컨트롤은 사용자가 날짜 범위를 선택할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="1736e-103">An important feature of the Windows Forms <xref:System.Windows.Forms.MonthCalendar> control is that the user can select a range of dates.</span></span> <span data-ttu-id="1736e-104">이 기능은의 날짜 선택 기능 개선 된는 <xref:System.Windows.Forms.DateTimePicker> 만 사용자가 단일 날짜/시간 값을 선택할 수 있도록 하는 컨트롤입니다.</span><span class="sxs-lookup"><span data-stu-id="1736e-104">This feature is an improvement over the date-selection feature of the <xref:System.Windows.Forms.DateTimePicker> control, which only enables the user to select a single date/time value.</span></span> <span data-ttu-id="1736e-105">날짜 범위를 설정 하거나 속성을 사용 하 여 사용자가 설정한 선택 범위를 가져올 수는 <xref:System.Windows.Forms.MonthCalendar> 제어 합니다.</span><span class="sxs-lookup"><span data-stu-id="1736e-105">You can set a range of dates or get a selection range set by the user by using properties of the <xref:System.Windows.Forms.MonthCalendar> control.</span></span> <span data-ttu-id="1736e-106">다음 코드 예제에서는 선택 범위를 설정 하는 방법에 설명 합니다.</span><span class="sxs-lookup"><span data-stu-id="1736e-106">The following code example demonstrates how to set a selection range.</span></span>  
+# <a name="how-to-select-a-range-of-dates-in-the-windows-forms-monthcalendar-control"></a><span data-ttu-id="cae8b-102">방법: Windows Forms MonthCalendar 컨트롤에서 날짜 범위 선택</span><span class="sxs-lookup"><span data-stu-id="cae8b-102">How to: Select a Range of Dates in the Windows Forms MonthCalendar Control</span></span>
+<span data-ttu-id="cae8b-103">Windows Forms의 중요 한 기능은 <xref:System.Windows.Forms.MonthCalendar> 컨트롤은 사용자가 날짜 범위를 선택할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="cae8b-103">An important feature of the Windows Forms <xref:System.Windows.Forms.MonthCalendar> control is that the user can select a range of dates.</span></span> <span data-ttu-id="cae8b-104">이 기능은의 날짜 선택 기능 개선 된는 <xref:System.Windows.Forms.DateTimePicker> 만 사용자가 단일 날짜/시간 값을 선택할 수 있도록 하는 컨트롤입니다.</span><span class="sxs-lookup"><span data-stu-id="cae8b-104">This feature is an improvement over the date-selection feature of the <xref:System.Windows.Forms.DateTimePicker> control, which only enables the user to select a single date/time value.</span></span> <span data-ttu-id="cae8b-105">날짜 범위를 설정 하거나 속성을 사용 하 여 사용자가 설정한 선택 범위를 가져올 수는 <xref:System.Windows.Forms.MonthCalendar> 제어 합니다.</span><span class="sxs-lookup"><span data-stu-id="cae8b-105">You can set a range of dates or get a selection range set by the user by using properties of the <xref:System.Windows.Forms.MonthCalendar> control.</span></span> <span data-ttu-id="cae8b-106">다음 코드 예제에서는 선택 범위를 설정 하는 방법에 설명 합니다.</span><span class="sxs-lookup"><span data-stu-id="cae8b-106">The following code example demonstrates how to set a selection range.</span></span>  
   
-### <a name="to-select-a-range-of-dates"></a><span data-ttu-id="1736e-107">날짜 범위 선택</span><span class="sxs-lookup"><span data-stu-id="1736e-107">To select a range of dates</span></span>  
+### <a name="to-select-a-range-of-dates"></a><span data-ttu-id="cae8b-107">날짜 범위 선택</span><span class="sxs-lookup"><span data-stu-id="cae8b-107">To select a range of dates</span></span>  
   
-1.  <span data-ttu-id="1736e-108">만들 <xref:System.DateTime> 범위에서 첫 번째 및 마지막 날짜를 나타내는 개체입니다.</span><span class="sxs-lookup"><span data-stu-id="1736e-108">Create <xref:System.DateTime> objects that represent the first and last dates in a range.</span></span>  
+1. <span data-ttu-id="cae8b-108">만들 <xref:System.DateTime> 범위에서 첫 번째 및 마지막 날짜를 나타내는 개체입니다.</span><span class="sxs-lookup"><span data-stu-id="cae8b-108">Create <xref:System.DateTime> objects that represent the first and last dates in a range.</span></span>  
   
     ```vb  
     Dim projectStart As Date = New DateTime(2001, 2, 13)  
@@ -40,7 +40,7 @@ ms.locfileid: "59129950"
     DateTime projectEnd = DateTime(2001, 2, 28);  
     ```  
   
-2.  <span data-ttu-id="1736e-109"><xref:System.Windows.Forms.MonthCalendar.SelectionRange%2A> 속성을 설정합니다.</span><span class="sxs-lookup"><span data-stu-id="1736e-109">Set the <xref:System.Windows.Forms.MonthCalendar.SelectionRange%2A> property.</span></span>  
+2. <span data-ttu-id="cae8b-109"><xref:System.Windows.Forms.MonthCalendar.SelectionRange%2A> 속성을 설정합니다.</span><span class="sxs-lookup"><span data-stu-id="cae8b-109">Set the <xref:System.Windows.Forms.MonthCalendar.SelectionRange%2A> property.</span></span>  
   
     ```vb  
     MonthCalendar1.SelectionRange = New SelectionRange(projectStart, projectEnd)  
@@ -55,9 +55,9 @@ ms.locfileid: "59129950"
        SelectionRange(projectStart, projectEnd);  
     ```  
   
-     <span data-ttu-id="1736e-110">– 또는 –</span><span class="sxs-lookup"><span data-stu-id="1736e-110">–or–</span></span>  
+     <span data-ttu-id="cae8b-110">– 또는 –</span><span class="sxs-lookup"><span data-stu-id="cae8b-110">–or–</span></span>  
   
-     <span data-ttu-id="1736e-111"><xref:System.Windows.Forms.MonthCalendar.SelectionStart%2A> 및 <xref:System.Windows.Forms.MonthCalendar.SelectionEnd%2A> 속성을 설정합니다.</span><span class="sxs-lookup"><span data-stu-id="1736e-111">Set the <xref:System.Windows.Forms.MonthCalendar.SelectionStart%2A> and <xref:System.Windows.Forms.MonthCalendar.SelectionEnd%2A> properties.</span></span>  
+     <span data-ttu-id="cae8b-111"><xref:System.Windows.Forms.MonthCalendar.SelectionStart%2A> 및 <xref:System.Windows.Forms.MonthCalendar.SelectionEnd%2A> 속성을 설정합니다.</span><span class="sxs-lookup"><span data-stu-id="cae8b-111">Set the <xref:System.Windows.Forms.MonthCalendar.SelectionStart%2A> and <xref:System.Windows.Forms.MonthCalendar.SelectionEnd%2A> properties.</span></span>  
   
     ```vb  
     MonthCalendar1.SelectionStart = projectStart  
@@ -74,9 +74,9 @@ ms.locfileid: "59129950"
     monthCalendar1->SelectionEnd = projectEnd;  
     ```  
   
-## <a name="see-also"></a><span data-ttu-id="1736e-112">참고자료</span><span class="sxs-lookup"><span data-stu-id="1736e-112">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="cae8b-112">참고자료</span><span class="sxs-lookup"><span data-stu-id="cae8b-112">See also</span></span>
 
-- [<span data-ttu-id="1736e-113">MonthCalendar 컨트롤</span><span class="sxs-lookup"><span data-stu-id="1736e-113">MonthCalendar Control</span></span>](monthcalendar-control-windows-forms.md)
-- [<span data-ttu-id="1736e-114">방법: Windows Forms MonthCalendar 컨트롤의 모양 변경</span><span class="sxs-lookup"><span data-stu-id="1736e-114">How to: Change the Windows Forms MonthCalendar Control's Appearance</span></span>](how-to-change-monthcalendar-control-appearance.md)
-- [<span data-ttu-id="1736e-115">방법: Windows Forms MonthCalendar 컨트롤을 사용하여 특정 날짜를 굵게 표시</span><span class="sxs-lookup"><span data-stu-id="1736e-115">How to: Display Specific Days in Bold with the Windows Forms MonthCalendar Control</span></span>](display-specific-days-in-bold-with-wf-monthcalendar-control.md)
-- [<span data-ttu-id="1736e-116">방법: Windows Forms MonthCalendar 컨트롤에서 여러 달 표시</span><span class="sxs-lookup"><span data-stu-id="1736e-116">How to: Display More than One Month in the Windows Forms MonthCalendar Control</span></span>](display-more-than-one-month-wf-monthcalendar-control.md)
+- [<span data-ttu-id="cae8b-113">MonthCalendar 컨트롤</span><span class="sxs-lookup"><span data-stu-id="cae8b-113">MonthCalendar Control</span></span>](monthcalendar-control-windows-forms.md)
+- [<span data-ttu-id="cae8b-114">방법: Windows Forms MonthCalendar 컨트롤의 모양 변경</span><span class="sxs-lookup"><span data-stu-id="cae8b-114">How to: Change the Windows Forms MonthCalendar Control's Appearance</span></span>](how-to-change-monthcalendar-control-appearance.md)
+- [<span data-ttu-id="cae8b-115">방법: Windows Forms MonthCalendar 컨트롤을 사용하여 특정 날짜를 굵게 표시</span><span class="sxs-lookup"><span data-stu-id="cae8b-115">How to: Display Specific Days in Bold with the Windows Forms MonthCalendar Control</span></span>](display-specific-days-in-bold-with-wf-monthcalendar-control.md)
+- [<span data-ttu-id="cae8b-116">방법: Windows Forms MonthCalendar 컨트롤에서 여러 달 표시</span><span class="sxs-lookup"><span data-stu-id="cae8b-116">How to: Display More than One Month in the Windows Forms MonthCalendar Control</span></span>](display-more-than-one-month-wf-monthcalendar-control.md)

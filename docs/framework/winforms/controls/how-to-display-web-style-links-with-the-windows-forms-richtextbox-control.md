@@ -10,30 +10,30 @@ helpviewer_keywords:
 - examples [Windows Forms], text boxes
 - RichTextBox control [Windows Forms], linking to Web pages
 ms.assetid: 95089a37-a202-4f7a-94ee-6ee312908851
-ms.openlocfilehash: 1902557e5dbdcee3c1facc18b6f5c3037c266a8e
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: faaa48051c80b6dfd330f15f72a38297ff2d1b9f
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59148241"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59301882"
 ---
-# <a name="how-to-display-web-style-links-with-the-windows-forms-richtextbox-control"></a><span data-ttu-id="0ad2e-102">방법: Windows Forms RichTextBox 컨트롤을 사용하여 웹 스타일 링크 표시</span><span class="sxs-lookup"><span data-stu-id="0ad2e-102">How to: Display Web-Style Links with the Windows Forms RichTextBox Control</span></span>
-<span data-ttu-id="0ad2e-103">Windows Forms <xref:System.Windows.Forms.RichTextBox> 제어와 색이 지정 된 밑줄 웹 링크를 표시할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="0ad2e-103">The Windows Forms <xref:System.Windows.Forms.RichTextBox> control can display Web links as colored and underlined.</span></span> <span data-ttu-id="0ad2e-104">브라우저 창에 링크를 클릭할 때 링크 텍스트에 지정 된 웹 사이트를 표시 하는 코드를 작성할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="0ad2e-104">You can write code that opens a browser window showing the Web site specified in the link text when the link is clicked.</span></span>  
+# <a name="how-to-display-web-style-links-with-the-windows-forms-richtextbox-control"></a><span data-ttu-id="3ebb4-102">방법: Windows Forms RichTextBox 컨트롤을 사용하여 웹 스타일 링크 표시</span><span class="sxs-lookup"><span data-stu-id="3ebb4-102">How to: Display Web-Style Links with the Windows Forms RichTextBox Control</span></span>
+<span data-ttu-id="3ebb4-103">Windows Forms <xref:System.Windows.Forms.RichTextBox> 제어와 색이 지정 된 밑줄 웹 링크를 표시할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="3ebb4-103">The Windows Forms <xref:System.Windows.Forms.RichTextBox> control can display Web links as colored and underlined.</span></span> <span data-ttu-id="3ebb4-104">브라우저 창에 링크를 클릭할 때 링크 텍스트에 지정 된 웹 사이트를 표시 하는 코드를 작성할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="3ebb4-104">You can write code that opens a browser window showing the Web site specified in the link text when the link is clicked.</span></span>  
   
-### <a name="to-link-to-a-web-page-with-the-richtextbox-control"></a><span data-ttu-id="0ad2e-105">RichTextBox 컨트롤을 사용 하 여 웹 페이지에 연결 하려면</span><span class="sxs-lookup"><span data-stu-id="0ad2e-105">To link to a Web page with the RichTextBox control</span></span>  
+### <a name="to-link-to-a-web-page-with-the-richtextbox-control"></a><span data-ttu-id="3ebb4-105">RichTextBox 컨트롤을 사용 하 여 웹 페이지에 연결 하려면</span><span class="sxs-lookup"><span data-stu-id="3ebb4-105">To link to a Web page with the RichTextBox control</span></span>  
   
-1.  <span data-ttu-id="0ad2e-106">설정 된 <xref:System.Windows.Forms.RichTextBox.Text%2A> 속성을 유효한 URL이 포함 된 문자열 (예를 들어, "http://www.microsoft.com/").</span><span class="sxs-lookup"><span data-stu-id="0ad2e-106">Set the <xref:System.Windows.Forms.RichTextBox.Text%2A> property to a string that includes a valid URL (for example, "http://www.microsoft.com/").</span></span>  
+1. <span data-ttu-id="3ebb4-106">설정 된 <xref:System.Windows.Forms.RichTextBox.Text%2A> 속성을 유효한 URL이 포함 된 문자열 (예를 들어, "http://www.microsoft.com/").</span><span class="sxs-lookup"><span data-stu-id="3ebb4-106">Set the <xref:System.Windows.Forms.RichTextBox.Text%2A> property to a string that includes a valid URL (for example, "http://www.microsoft.com/").</span></span>  
   
-2.  <span data-ttu-id="0ad2e-107">있는지 확인 합니다 <xref:System.Windows.Forms.RichTextBox.DetectUrls%2A> 속성이 `true` (기본값).</span><span class="sxs-lookup"><span data-stu-id="0ad2e-107">Make sure the <xref:System.Windows.Forms.RichTextBox.DetectUrls%2A> property is set to `true` (the default).</span></span>  
+2. <span data-ttu-id="3ebb4-107">있는지 확인 합니다 <xref:System.Windows.Forms.RichTextBox.DetectUrls%2A> 속성이 `true` (기본값).</span><span class="sxs-lookup"><span data-stu-id="3ebb4-107">Make sure the <xref:System.Windows.Forms.RichTextBox.DetectUrls%2A> property is set to `true` (the default).</span></span>  
   
-3.  <span data-ttu-id="0ad2e-108">새 전역 인스턴스를 만들고는 <xref:System.Diagnostics.Process> 개체입니다.</span><span class="sxs-lookup"><span data-stu-id="0ad2e-108">Create a new global instance of the <xref:System.Diagnostics.Process> object.</span></span>  
+3. <span data-ttu-id="3ebb4-108">새 전역 인스턴스를 만들고는 <xref:System.Diagnostics.Process> 개체입니다.</span><span class="sxs-lookup"><span data-stu-id="3ebb4-108">Create a new global instance of the <xref:System.Diagnostics.Process> object.</span></span>  
   
-4.  <span data-ttu-id="0ad2e-109">에 대 한 이벤트 처리기를 작성 합니다 <xref:System.Windows.Forms.RichTextBox.LinkClicked> 브라우저에 원하는 텍스트를 전송 하는 이벤트입니다.</span><span class="sxs-lookup"><span data-stu-id="0ad2e-109">Write an event handler for the <xref:System.Windows.Forms.RichTextBox.LinkClicked> event that sends the browser the desired text.</span></span>  
+4. <span data-ttu-id="3ebb4-109">에 대 한 이벤트 처리기를 작성 합니다 <xref:System.Windows.Forms.RichTextBox.LinkClicked> 브라우저에 원하는 텍스트를 전송 하는 이벤트입니다.</span><span class="sxs-lookup"><span data-stu-id="3ebb4-109">Write an event handler for the <xref:System.Windows.Forms.RichTextBox.LinkClicked> event that sends the browser the desired text.</span></span>  
   
-     <span data-ttu-id="0ad2e-110">아래 예제에서는 <xref:System.Windows.Forms.RichTextBox.LinkClicked> 이벤트에 지정 된 URL Internet Explorer의 인스턴스를 열고는 <xref:System.Windows.Forms.RichTextBox.Text%2A> 의 속성은 <xref:System.Windows.Forms.RichTextBox> 컨트롤.</span><span class="sxs-lookup"><span data-stu-id="0ad2e-110">In the example below, the <xref:System.Windows.Forms.RichTextBox.LinkClicked> event opens an instance of Internet Explorer to the URL specified in the <xref:System.Windows.Forms.RichTextBox.Text%2A> property of the <xref:System.Windows.Forms.RichTextBox> control.</span></span> <span data-ttu-id="0ad2e-111">이 예에서는 가정 된 폼을 <xref:System.Windows.Forms.RichTextBox> 제어 합니다.</span><span class="sxs-lookup"><span data-stu-id="0ad2e-111">This example assumes a form with a <xref:System.Windows.Forms.RichTextBox> control.</span></span>  
+     <span data-ttu-id="3ebb4-110">아래 예제에서는 <xref:System.Windows.Forms.RichTextBox.LinkClicked> 이벤트에 지정 된 URL Internet Explorer의 인스턴스를 열고는 <xref:System.Windows.Forms.RichTextBox.Text%2A> 의 속성은 <xref:System.Windows.Forms.RichTextBox> 컨트롤.</span><span class="sxs-lookup"><span data-stu-id="3ebb4-110">In the example below, the <xref:System.Windows.Forms.RichTextBox.LinkClicked> event opens an instance of Internet Explorer to the URL specified in the <xref:System.Windows.Forms.RichTextBox.Text%2A> property of the <xref:System.Windows.Forms.RichTextBox> control.</span></span> <span data-ttu-id="3ebb4-111">이 예에서는 가정 된 폼을 <xref:System.Windows.Forms.RichTextBox> 제어 합니다.</span><span class="sxs-lookup"><span data-stu-id="3ebb4-111">This example assumes a form with a <xref:System.Windows.Forms.RichTextBox> control.</span></span>  
   
     > [!IMPORTANT]
-    >  <span data-ttu-id="0ad2e-112">호출에는 <xref:System.Diagnostics.Process.Start%2A?displayProperty=nameWithType> 메서드를 접하게 되는 <xref:System.Security.SecurityException> 권한 부족으로 인해 부분 신뢰 컨텍스트에서 코드를 실행 하는 경우 예외.</span><span class="sxs-lookup"><span data-stu-id="0ad2e-112">In calling the <xref:System.Diagnostics.Process.Start%2A?displayProperty=nameWithType> method, you will encounter a <xref:System.Security.SecurityException> exception if you are running the code in a partial-trust context because of insufficient privileges.</span></span> <span data-ttu-id="0ad2e-113">자세한 내용은 [코드 액세스 보안 기본 사항](../../misc/code-access-security-basics.md)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="0ad2e-113">For more information, see [Code Access Security Basics](../../misc/code-access-security-basics.md).</span></span>  
+    >  <span data-ttu-id="3ebb4-112">호출에는 <xref:System.Diagnostics.Process.Start%2A?displayProperty=nameWithType> 메서드를 접하게 되는 <xref:System.Security.SecurityException> 권한 부족으로 인해 부분 신뢰 컨텍스트에서 코드를 실행 하는 경우 예외.</span><span class="sxs-lookup"><span data-stu-id="3ebb4-112">In calling the <xref:System.Diagnostics.Process.Start%2A?displayProperty=nameWithType> method, you will encounter a <xref:System.Security.SecurityException> exception if you are running the code in a partial-trust context because of insufficient privileges.</span></span> <span data-ttu-id="3ebb4-113">자세한 내용은 [코드 액세스 보안 기본 사항](../../misc/code-access-security-basics.md)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="3ebb4-113">For more information, see [Code Access Security Basics](../../misc/code-access-security-basics.md).</span></span>  
   
     ```vb  
     Public p As New System.Diagnostics.Process  
@@ -74,13 +74,13 @@ ms.locfileid: "59148241"
        }  
     ```  
   
-     <span data-ttu-id="0ad2e-114">([!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) 프로세스를 초기화 해야 `p`, 폼의 생성자에서 다음 문을 포함 하 여 수행할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="0ad2e-114">([!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) You must initialize process `p`, which you can do by including the following statement in the constructor of your form:</span></span>  
+     <span data-ttu-id="3ebb4-114">([!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) 프로세스를 초기화 해야 `p`, 폼의 생성자에서 다음 문을 포함 하 여 수행할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="3ebb4-114">([!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) You must initialize process `p`, which you can do by including the following statement in the constructor of your form:</span></span>  
   
     ```cpp  
     p = gcnew System::Diagnostics::Process();  
     ```  
   
-     <span data-ttu-id="0ad2e-115">(Visual C# [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) 이벤트 처리기를 등록 하려면 폼의 생성자에 다음 코드를 추가 합니다.</span><span class="sxs-lookup"><span data-stu-id="0ad2e-115">(Visual C#, [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) Place the following code in the form's constructor to register the event handler.</span></span>  
+     <span data-ttu-id="3ebb4-115">(Visual C# [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) 이벤트 처리기를 등록 하려면 폼의 생성자에 다음 코드를 추가 합니다.</span><span class="sxs-lookup"><span data-stu-id="3ebb4-115">(Visual C#, [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) Place the following code in the form's constructor to register the event handler.</span></span>  
   
     ```csharp  
     this.richTextBox1.LinkClicked += new   
@@ -94,7 +94,7 @@ ms.locfileid: "59148241"
        (this, &Form1::richTextBox1_LinkClicked);  
     ```  
   
-     <span data-ttu-id="0ad2e-116">즉시 작업을 마친 후 만든 프로세스를 중지 하는 것이 반드시 합니다.</span><span class="sxs-lookup"><span data-stu-id="0ad2e-116">It is important to immediately stop the process you have created once you have finished working with it.</span></span> <span data-ttu-id="0ad2e-117">위에 나오는 코드를 참조 하는 프로세스를 중지 하는 코드 다음과 같습니다.</span><span class="sxs-lookup"><span data-stu-id="0ad2e-117">Referring to the code presented above, your code to stop the process might look like this:</span></span>  
+     <span data-ttu-id="3ebb4-116">즉시 작업을 마친 후 만든 프로세스를 중지 하는 것이 반드시 합니다.</span><span class="sxs-lookup"><span data-stu-id="3ebb4-116">It is important to immediately stop the process you have created once you have finished working with it.</span></span> <span data-ttu-id="3ebb4-117">위에 나오는 코드를 참조 하는 프로세스를 중지 하는 코드 다음과 같습니다.</span><span class="sxs-lookup"><span data-stu-id="3ebb4-117">Referring to the code presented above, your code to stop the process might look like this:</span></span>  
   
     ```vb  
     Public Sub StopWebProcess()  
@@ -116,10 +116,10 @@ ms.locfileid: "59148241"
     }  
     ```  
   
-## <a name="see-also"></a><span data-ttu-id="0ad2e-118">참고자료</span><span class="sxs-lookup"><span data-stu-id="0ad2e-118">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="3ebb4-118">참고자료</span><span class="sxs-lookup"><span data-stu-id="3ebb4-118">See also</span></span>
 
 - <xref:System.Windows.Forms.RichTextBox.DetectUrls%2A>
 - <xref:System.Windows.Forms.RichTextBox.LinkClicked>
 - <xref:System.Windows.Forms.RichTextBox>
-- [<span data-ttu-id="0ad2e-119">RichTextBox 컨트롤</span><span class="sxs-lookup"><span data-stu-id="0ad2e-119">RichTextBox Control</span></span>](richtextbox-control-windows-forms.md)
-- [<span data-ttu-id="0ad2e-120">Windows Forms에 사용할 수 있는 컨트롤</span><span class="sxs-lookup"><span data-stu-id="0ad2e-120">Controls to Use on Windows Forms</span></span>](controls-to-use-on-windows-forms.md)
+- [<span data-ttu-id="3ebb4-119">RichTextBox 컨트롤</span><span class="sxs-lookup"><span data-stu-id="3ebb4-119">RichTextBox Control</span></span>](richtextbox-control-windows-forms.md)
+- [<span data-ttu-id="3ebb4-120">Windows Forms에 사용할 수 있는 컨트롤</span><span class="sxs-lookup"><span data-stu-id="3ebb4-120">Controls to Use on Windows Forms</span></span>](controls-to-use-on-windows-forms.md)

@@ -5,51 +5,51 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 1f5ce46b-e259-4bc9-a0b9-89d06fc9341c
-ms.openlocfilehash: 681312f4fcc76b275697024a45503f5c4cf89a4b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: a0f845ad0d8ca461f8ab0b3188a72e87c589add2
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59208542"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59319367"
 ---
-# <a name="trusted-subsystem"></a><span data-ttu-id="80bad-102">신뢰할 수 있는 하위 시스템</span><span class="sxs-lookup"><span data-stu-id="80bad-102">Trusted Subsystem</span></span>
-<span data-ttu-id="80bad-103">클라이언트는 네트워크에 분산되어 있는 하나 이상의 웹 서비스에 액세스합니다.</span><span class="sxs-lookup"><span data-stu-id="80bad-103">A client accesses one or more Web services that are distributed across a network.</span></span> <span data-ttu-id="80bad-104">웹 서비스는 데이터베이스 또는 기타 웹 서비스와 같은 추가 리소스에 대한 액세스가 해당 웹 서비스의 비즈니스 논리에 캡슐화되도록 디자인되어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="80bad-104">The Web services are designed so that access to additional resources (such as databases or other Web services) is encapsulated in the business logic of the Web service.</span></span> <span data-ttu-id="80bad-105">이러한 리소스는 권한이 없는 액세스로부터 보호되어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="80bad-105">These resources must be protected against unauthorized access.</span></span> <span data-ttu-id="80bad-106">다음 그림은 신뢰할 수 있는 하위 시스템 프로세스를 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="80bad-106">The following illustration depicts a trusted subsystem process.</span></span>  
+# <a name="trusted-subsystem"></a><span data-ttu-id="44b6e-102">신뢰할 수 있는 하위 시스템</span><span class="sxs-lookup"><span data-stu-id="44b6e-102">Trusted Subsystem</span></span>
+<span data-ttu-id="44b6e-103">클라이언트는 네트워크에 분산되어 있는 하나 이상의 웹 서비스에 액세스합니다.</span><span class="sxs-lookup"><span data-stu-id="44b6e-103">A client accesses one or more Web services that are distributed across a network.</span></span> <span data-ttu-id="44b6e-104">웹 서비스는 데이터베이스 또는 기타 웹 서비스와 같은 추가 리소스에 대한 액세스가 해당 웹 서비스의 비즈니스 논리에 캡슐화되도록 디자인되어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="44b6e-104">The Web services are designed so that access to additional resources (such as databases or other Web services) is encapsulated in the business logic of the Web service.</span></span> <span data-ttu-id="44b6e-105">이러한 리소스는 권한이 없는 액세스로부터 보호되어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="44b6e-105">These resources must be protected against unauthorized access.</span></span> <span data-ttu-id="44b6e-106">다음 그림은 신뢰할 수 있는 하위 시스템 프로세스를 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="44b6e-106">The following illustration depicts a trusted subsystem process.</span></span>  
   
- <span data-ttu-id="80bad-107">![하위 시스템을 신뢰할 수 있는](../../../../docs/framework/wcf/feature-details/media/wcfc-trustedsubsystemc.gif "wcfc_TrustedSubsystemc")</span><span class="sxs-lookup"><span data-stu-id="80bad-107">![Trusted subsystem](../../../../docs/framework/wcf/feature-details/media/wcfc-trustedsubsystemc.gif "wcfc_TrustedSubsystemc")</span></span>  
+ <span data-ttu-id="44b6e-107">![하위 시스템을 신뢰할 수 있는](../../../../docs/framework/wcf/feature-details/media/wcfc-trustedsubsystemc.gif "wcfc_TrustedSubsystemc")</span><span class="sxs-lookup"><span data-stu-id="44b6e-107">![Trusted subsystem](../../../../docs/framework/wcf/feature-details/media/wcfc-trustedsubsystemc.gif "wcfc_TrustedSubsystemc")</span></span>  
   
- <span data-ttu-id="80bad-108">그림에서처럼 다음 단계에서는 신뢰할 수 있는 하위 시스템 프로세스에 대해 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="80bad-108">The following steps describe the trusted subsystem process as illustrated:</span></span>  
+ <span data-ttu-id="44b6e-108">그림에서처럼 다음 단계에서는 신뢰할 수 있는 하위 시스템 프로세스에 대해 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="44b6e-108">The following steps describe the trusted subsystem process as illustrated:</span></span>  
   
-1.  <span data-ttu-id="80bad-109">클라이언트는 자격 증명과 함께 신뢰할 수 있는 하위 시스템에 대한 요청을 제출합니다.</span><span class="sxs-lookup"><span data-stu-id="80bad-109">The client submits a request to the trusted subsystem, along with credentials.</span></span>  
+1. <span data-ttu-id="44b6e-109">클라이언트는 자격 증명과 함께 신뢰할 수 있는 하위 시스템에 대한 요청을 제출합니다.</span><span class="sxs-lookup"><span data-stu-id="44b6e-109">The client submits a request to the trusted subsystem, along with credentials.</span></span>  
   
-2.  <span data-ttu-id="80bad-110">신뢰할 수 있는 하위 시스템은 사용자를 인증하고 사용자에게 권한을 부여합니다.</span><span class="sxs-lookup"><span data-stu-id="80bad-110">The trusted subsystem authenticates and authorizes the user.</span></span>  
+2. <span data-ttu-id="44b6e-110">신뢰할 수 있는 하위 시스템은 사용자를 인증하고 사용자에게 권한을 부여합니다.</span><span class="sxs-lookup"><span data-stu-id="44b6e-110">The trusted subsystem authenticates and authorizes the user.</span></span>  
   
-3.  <span data-ttu-id="80bad-111">신뢰할 수 있는 하위 시스템은 원격 리소스로 요청 메시지를 보냅니다.</span><span class="sxs-lookup"><span data-stu-id="80bad-111">The trusted subsystem sends a request message to the remote resource.</span></span> <span data-ttu-id="80bad-112">이 요청은 신뢰할 수 있는 하위 시스템 또는 신뢰할 수 있는 하위 시스템 프로세스가 실행 중인 서비스 계정에 대한 자격 증명과 함께 보내집니다.</span><span class="sxs-lookup"><span data-stu-id="80bad-112">This request is accompanied by the credentials for the trusted subsystem (or the service account under which the trusted subsystem process is being executed).</span></span>  
+3. <span data-ttu-id="44b6e-111">신뢰할 수 있는 하위 시스템은 원격 리소스로 요청 메시지를 보냅니다.</span><span class="sxs-lookup"><span data-stu-id="44b6e-111">The trusted subsystem sends a request message to the remote resource.</span></span> <span data-ttu-id="44b6e-112">이 요청은 신뢰할 수 있는 하위 시스템 또는 신뢰할 수 있는 하위 시스템 프로세스가 실행 중인 서비스 계정에 대한 자격 증명과 함께 보내집니다.</span><span class="sxs-lookup"><span data-stu-id="44b6e-112">This request is accompanied by the credentials for the trusted subsystem (or the service account under which the trusted subsystem process is being executed).</span></span>  
   
-4.  <span data-ttu-id="80bad-113">백 엔드 리소스는 신뢰할 수 있는 하위 시스템을 인증하고 해당 시스템에 권한을 부여합니다.</span><span class="sxs-lookup"><span data-stu-id="80bad-113">The back-end resource authenticates and authorizes the trusted subsystem.</span></span> <span data-ttu-id="80bad-114">그런 다음 해당 요청을 처리하고 신뢰할 수 있는 하위 시스템에 대한 응답을 보냅니다.</span><span class="sxs-lookup"><span data-stu-id="80bad-114">It then processes the request and issues a response to the trusted subsystem.</span></span>  
+4. <span data-ttu-id="44b6e-113">백 엔드 리소스는 신뢰할 수 있는 하위 시스템을 인증하고 해당 시스템에 권한을 부여합니다.</span><span class="sxs-lookup"><span data-stu-id="44b6e-113">The back-end resource authenticates and authorizes the trusted subsystem.</span></span> <span data-ttu-id="44b6e-114">그런 다음 해당 요청을 처리하고 신뢰할 수 있는 하위 시스템에 대한 응답을 보냅니다.</span><span class="sxs-lookup"><span data-stu-id="44b6e-114">It then processes the request and issues a response to the trusted subsystem.</span></span>  
   
-5.  <span data-ttu-id="80bad-115">신뢰할 수 있는 하위 시스템은 해당 응답을 처리하고 클라이언트에 자체 응답을 보냅니다.</span><span class="sxs-lookup"><span data-stu-id="80bad-115">The trusted subsystem processes the response and issues its own response to the client.</span></span>  
+5. <span data-ttu-id="44b6e-115">신뢰할 수 있는 하위 시스템은 해당 응답을 처리하고 클라이언트에 자체 응답을 보냅니다.</span><span class="sxs-lookup"><span data-stu-id="44b6e-115">The trusted subsystem processes the response and issues its own response to the client.</span></span>  
   
-|<span data-ttu-id="80bad-116">특성</span><span class="sxs-lookup"><span data-stu-id="80bad-116">Characteristic</span></span>|<span data-ttu-id="80bad-117">설명</span><span class="sxs-lookup"><span data-stu-id="80bad-117">Description</span></span>|  
+|<span data-ttu-id="44b6e-116">특성</span><span class="sxs-lookup"><span data-stu-id="44b6e-116">Characteristic</span></span>|<span data-ttu-id="44b6e-117">설명</span><span class="sxs-lookup"><span data-stu-id="44b6e-117">Description</span></span>|  
 |--------------------|-----------------|  
-|<span data-ttu-id="80bad-118">보안 모드</span><span class="sxs-lookup"><span data-stu-id="80bad-118">Security Mode</span></span>|<span data-ttu-id="80bad-119">메시지</span><span class="sxs-lookup"><span data-stu-id="80bad-119">Message</span></span>|  
-|<span data-ttu-id="80bad-120">상호 운용성</span><span class="sxs-lookup"><span data-stu-id="80bad-120">Interoperability</span></span>|<span data-ttu-id="80bad-121">Windows Communication Foundation (WCF)만 합니다.</span><span class="sxs-lookup"><span data-stu-id="80bad-121">Windows Communication Foundation (WCF) only.</span></span>|  
-|<span data-ttu-id="80bad-122">인증(서비스)</span><span class="sxs-lookup"><span data-stu-id="80bad-122">Authentication (service)</span></span>|<span data-ttu-id="80bad-123">보안 토큰 서비스는 클라이언트를 인증하고 클라이언트에게 권한을 부여합니다.</span><span class="sxs-lookup"><span data-stu-id="80bad-123">Security token service authenticates and authorizes clients.</span></span>|  
-|<span data-ttu-id="80bad-124">인증(클라이언트)</span><span class="sxs-lookup"><span data-stu-id="80bad-124">Authentication (client)</span></span>|<span data-ttu-id="80bad-125">신뢰할 수 있는 하위 시스템은 클라이언트를 인증하고, 리소스는 신뢰할 수 있는 하위 시스템 서비스를 인증합니다.</span><span class="sxs-lookup"><span data-stu-id="80bad-125">The trusted subsystem authenticates the client and the resource authenticates the trusted subsystem service.</span></span>|  
-|<span data-ttu-id="80bad-126">무결성</span><span class="sxs-lookup"><span data-stu-id="80bad-126">Integrity</span></span>|<span data-ttu-id="80bad-127">예</span><span class="sxs-lookup"><span data-stu-id="80bad-127">Yes</span></span>|  
-|<span data-ttu-id="80bad-128">기밀성</span><span class="sxs-lookup"><span data-stu-id="80bad-128">Confidentiality</span></span>|<span data-ttu-id="80bad-129">예</span><span class="sxs-lookup"><span data-stu-id="80bad-129">Yes</span></span>|  
-|<span data-ttu-id="80bad-130">전송</span><span class="sxs-lookup"><span data-stu-id="80bad-130">Transport</span></span>|<span data-ttu-id="80bad-131">클라이언트와 신뢰할 수 있는 하위 시스템 서비스 간의 HTTP입니다.</span><span class="sxs-lookup"><span data-stu-id="80bad-131">HTTP between client and the trusted subsystem service.</span></span><br /><br /> <span data-ttu-id="80bad-132">신뢰할 수 있는 하위 시스템 서비스와 리소스(백 엔드 서비스) 간의 NET.TCP입니다.</span><span class="sxs-lookup"><span data-stu-id="80bad-132">NET.TCP between trusted subsystem service and the resource (back-end service).</span></span>|  
-|<span data-ttu-id="80bad-133">바인딩</span><span class="sxs-lookup"><span data-stu-id="80bad-133">Binding</span></span>|<xref:System.ServiceModel.WSHttpBinding> <span data-ttu-id="80bad-134">and <xref:System.ServiceModel.NetTcpBinding>[\<wsFederationHttpBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md)</span><span class="sxs-lookup"><span data-stu-id="80bad-134">and <xref:System.ServiceModel.NetTcpBinding>[\<wsFederationHttpBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md)</span></span>|  
+|<span data-ttu-id="44b6e-118">보안 모드</span><span class="sxs-lookup"><span data-stu-id="44b6e-118">Security Mode</span></span>|<span data-ttu-id="44b6e-119">메시지</span><span class="sxs-lookup"><span data-stu-id="44b6e-119">Message</span></span>|  
+|<span data-ttu-id="44b6e-120">상호 운용성</span><span class="sxs-lookup"><span data-stu-id="44b6e-120">Interoperability</span></span>|<span data-ttu-id="44b6e-121">Windows Communication Foundation (WCF)만 합니다.</span><span class="sxs-lookup"><span data-stu-id="44b6e-121">Windows Communication Foundation (WCF) only.</span></span>|  
+|<span data-ttu-id="44b6e-122">인증(서비스)</span><span class="sxs-lookup"><span data-stu-id="44b6e-122">Authentication (service)</span></span>|<span data-ttu-id="44b6e-123">보안 토큰 서비스는 클라이언트를 인증하고 클라이언트에게 권한을 부여합니다.</span><span class="sxs-lookup"><span data-stu-id="44b6e-123">Security token service authenticates and authorizes clients.</span></span>|  
+|<span data-ttu-id="44b6e-124">인증(클라이언트)</span><span class="sxs-lookup"><span data-stu-id="44b6e-124">Authentication (client)</span></span>|<span data-ttu-id="44b6e-125">신뢰할 수 있는 하위 시스템은 클라이언트를 인증하고, 리소스는 신뢰할 수 있는 하위 시스템 서비스를 인증합니다.</span><span class="sxs-lookup"><span data-stu-id="44b6e-125">The trusted subsystem authenticates the client and the resource authenticates the trusted subsystem service.</span></span>|  
+|<span data-ttu-id="44b6e-126">무결성</span><span class="sxs-lookup"><span data-stu-id="44b6e-126">Integrity</span></span>|<span data-ttu-id="44b6e-127">예</span><span class="sxs-lookup"><span data-stu-id="44b6e-127">Yes</span></span>|  
+|<span data-ttu-id="44b6e-128">기밀성</span><span class="sxs-lookup"><span data-stu-id="44b6e-128">Confidentiality</span></span>|<span data-ttu-id="44b6e-129">예</span><span class="sxs-lookup"><span data-stu-id="44b6e-129">Yes</span></span>|  
+|<span data-ttu-id="44b6e-130">전송</span><span class="sxs-lookup"><span data-stu-id="44b6e-130">Transport</span></span>|<span data-ttu-id="44b6e-131">클라이언트와 신뢰할 수 있는 하위 시스템 서비스 간의 HTTP입니다.</span><span class="sxs-lookup"><span data-stu-id="44b6e-131">HTTP between client and the trusted subsystem service.</span></span><br /><br /> <span data-ttu-id="44b6e-132">신뢰할 수 있는 하위 시스템 서비스와 리소스(백 엔드 서비스) 간의 NET.TCP입니다.</span><span class="sxs-lookup"><span data-stu-id="44b6e-132">NET.TCP between trusted subsystem service and the resource (back-end service).</span></span>|  
+|<span data-ttu-id="44b6e-133">바인딩</span><span class="sxs-lookup"><span data-stu-id="44b6e-133">Binding</span></span>|<xref:System.ServiceModel.WSHttpBinding> <span data-ttu-id="44b6e-134">and <xref:System.ServiceModel.NetTcpBinding>[\<wsFederationHttpBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md)</span><span class="sxs-lookup"><span data-stu-id="44b6e-134">and <xref:System.ServiceModel.NetTcpBinding>[\<wsFederationHttpBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md)</span></span>|  
   
-## <a name="resource-back-end-service"></a><span data-ttu-id="80bad-135">리소스(백 엔드 서비스)</span><span class="sxs-lookup"><span data-stu-id="80bad-135">Resource (Back-End Service)</span></span>  
+## <a name="resource-back-end-service"></a><span data-ttu-id="44b6e-135">리소스(백 엔드 서비스)</span><span class="sxs-lookup"><span data-stu-id="44b6e-135">Resource (Back-End Service)</span></span>  
   
-### <a name="code"></a><span data-ttu-id="80bad-136">코드</span><span class="sxs-lookup"><span data-stu-id="80bad-136">Code</span></span>  
- <span data-ttu-id="80bad-137">다음 코드에서는 TCP 전송 프로토콜에서 전송 보안을 사용하는 리소스의 서비스 엔드포인트를 만드는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="80bad-137">The following code shows how to create a service endpoint for the resource, which uses transport security over the TCP transport protocol.</span></span>  
+### <a name="code"></a><span data-ttu-id="44b6e-136">코드</span><span class="sxs-lookup"><span data-stu-id="44b6e-136">Code</span></span>  
+ <span data-ttu-id="44b6e-137">다음 코드에서는 TCP 전송 프로토콜에서 전송 보안을 사용하는 리소스의 서비스 엔드포인트를 만드는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="44b6e-137">The following code shows how to create a service endpoint for the resource, which uses transport security over the TCP transport protocol.</span></span>  
   
  [!code-csharp[TrustedSubSystemsResource#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/trustedsubsystemsresource/cs/source.cs#1)]
  [!code-vb[TrustedSubSystemsResource#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/trustedsubsystemsresource/vb/source.vb#1)]  
   
-### <a name="configuration"></a><span data-ttu-id="80bad-138">구성</span><span class="sxs-lookup"><span data-stu-id="80bad-138">Configuration</span></span>  
- <span data-ttu-id="80bad-139">다음 구성에서는 구성을 사용하여 동일한 엔드포인트를 설정합니다.</span><span class="sxs-lookup"><span data-stu-id="80bad-139">The following configuration sets up the same endpoint using configuration.</span></span>  
+### <a name="configuration"></a><span data-ttu-id="44b6e-138">구성</span><span class="sxs-lookup"><span data-stu-id="44b6e-138">Configuration</span></span>  
+ <span data-ttu-id="44b6e-139">다음 구성에서는 구성을 사용하여 동일한 엔드포인트를 설정합니다.</span><span class="sxs-lookup"><span data-stu-id="44b6e-139">The following configuration sets up the same endpoint using configuration.</span></span>  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8" ?>  
@@ -87,21 +87,21 @@ ms.locfileid: "59208542"
 </configuration>  
 ```  
   
-## <a name="trusted-subsystem"></a><span data-ttu-id="80bad-140">신뢰할 수 있는 하위 시스템</span><span class="sxs-lookup"><span data-stu-id="80bad-140">Trusted Subsystem</span></span>  
+## <a name="trusted-subsystem"></a><span data-ttu-id="44b6e-140">신뢰할 수 있는 하위 시스템</span><span class="sxs-lookup"><span data-stu-id="44b6e-140">Trusted Subsystem</span></span>  
   
-### <a name="code"></a><span data-ttu-id="80bad-141">코드</span><span class="sxs-lookup"><span data-stu-id="80bad-141">Code</span></span>  
- <span data-ttu-id="80bad-142">다음 코드에서는 HTTP 프로토콜에서 메시지 보안을 사용하는 신뢰할 수 있는 하위 시스템에 대한 서비스 엔드포인트와 인증용 사용자 이름 및 암호를 만드는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="80bad-142">The following code shows how to create a service endpoint for the trusted subsystem that uses message security over the HTTP protocol and a user name and password for authentication.</span></span>  
+### <a name="code"></a><span data-ttu-id="44b6e-141">코드</span><span class="sxs-lookup"><span data-stu-id="44b6e-141">Code</span></span>  
+ <span data-ttu-id="44b6e-142">다음 코드에서는 HTTP 프로토콜에서 메시지 보안을 사용하는 신뢰할 수 있는 하위 시스템에 대한 서비스 엔드포인트와 인증용 사용자 이름 및 암호를 만드는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="44b6e-142">The following code shows how to create a service endpoint for the trusted subsystem that uses message security over the HTTP protocol and a user name and password for authentication.</span></span>  
   
  [!code-csharp[TrustedSubSystems#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/trustedsubsystems/cs/source.cs#1)]
  [!code-vb[TrustedSubSystems#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/trustedsubsystems/vb/source.vb#1)]  
   
- <span data-ttu-id="80bad-143">다음 코드에서는 TCP 전송 프로토콜에서 전송 보안을 사용하여 백 엔드 서비스와 통신하는 신뢰할 수 있는 하위 시스템의 서비스를 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="80bad-143">The following code shows a service in a trusted subsystem that communicates with a back-end service using transport security over the TCP transport protocol.</span></span>  
+ <span data-ttu-id="44b6e-143">다음 코드에서는 TCP 전송 프로토콜에서 전송 보안을 사용하여 백 엔드 서비스와 통신하는 신뢰할 수 있는 하위 시스템의 서비스를 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="44b6e-143">The following code shows a service in a trusted subsystem that communicates with a back-end service using transport security over the TCP transport protocol.</span></span>  
   
  [!code-csharp[TrustedSubSystems#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/trustedsubsystems/cs/source.cs#2)]
  [!code-vb[TrustedSubSystems#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/trustedsubsystems/vb/source.vb#2)]  
   
-### <a name="configuration"></a><span data-ttu-id="80bad-144">구성</span><span class="sxs-lookup"><span data-stu-id="80bad-144">Configuration</span></span>  
- <span data-ttu-id="80bad-145">다음 구성에서는 구성을 사용하여 동일한 엔드포인트를 설정합니다.</span><span class="sxs-lookup"><span data-stu-id="80bad-145">The following configuration sets up the same endpoint using configuration.</span></span> <span data-ttu-id="80bad-146">두 개의 바인딩 note: 하나는 신뢰할 수 있는 하위 시스템에서 호스팅되는 서비스를 보호 하 고 신뢰할 수 있는 하위 시스템과 백 엔드 서비스 사이의 통신 다른 합니다.</span><span class="sxs-lookup"><span data-stu-id="80bad-146">Note the two bindings: One secures the service hosted in the trusted subsystem and the other communicates between the trusted subsystem and the back-end service.</span></span>  
+### <a name="configuration"></a><span data-ttu-id="44b6e-144">구성</span><span class="sxs-lookup"><span data-stu-id="44b6e-144">Configuration</span></span>  
+ <span data-ttu-id="44b6e-145">다음 구성에서는 구성을 사용하여 동일한 엔드포인트를 설정합니다.</span><span class="sxs-lookup"><span data-stu-id="44b6e-145">The following configuration sets up the same endpoint using configuration.</span></span> <span data-ttu-id="44b6e-146">두 개의 바인딩 note: 하나는 신뢰할 수 있는 하위 시스템에서 호스팅되는 서비스를 보호 하 고 신뢰할 수 있는 하위 시스템과 백 엔드 서비스 사이의 통신 다른 합니다.</span><span class="sxs-lookup"><span data-stu-id="44b6e-146">Note the two bindings: One secures the service hosted in the trusted subsystem and the other communicates between the trusted subsystem and the back-end service.</span></span>  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8" ?>  
@@ -163,16 +163,16 @@ ms.locfileid: "59208542"
 </configuration>  
 ```  
   
-## <a name="client"></a><span data-ttu-id="80bad-147">클라이언트</span><span class="sxs-lookup"><span data-stu-id="80bad-147">Client</span></span>  
+## <a name="client"></a><span data-ttu-id="44b6e-147">클라이언트</span><span class="sxs-lookup"><span data-stu-id="44b6e-147">Client</span></span>  
   
-### <a name="code"></a><span data-ttu-id="80bad-148">코드</span><span class="sxs-lookup"><span data-stu-id="80bad-148">Code</span></span>  
- <span data-ttu-id="80bad-149">다음 코드에서는 HTTP 프로토콜에서 메시지 보안을 사용하여 신뢰할 수 있는 하위 시스템과 통신하는 클라이언트와 인증용 사용자 이름 및 암호를 만드는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="80bad-149">The following code shows how to create the client that communicates with the trusted subsystem by using message security over the HTTP protocol and a user name and password for authentication.</span></span>  
+### <a name="code"></a><span data-ttu-id="44b6e-148">코드</span><span class="sxs-lookup"><span data-stu-id="44b6e-148">Code</span></span>  
+ <span data-ttu-id="44b6e-149">다음 코드에서는 HTTP 프로토콜에서 메시지 보안을 사용하여 신뢰할 수 있는 하위 시스템과 통신하는 클라이언트와 인증용 사용자 이름 및 암호를 만드는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="44b6e-149">The following code shows how to create the client that communicates with the trusted subsystem by using message security over the HTTP protocol and a user name and password for authentication.</span></span>  
   
  [!code-csharp[TrustedSubSystemsClient#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/trustedsubsystemsclient/cs/source.cs#1)]
  [!code-vb[TrustedSubSystemsClient#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/trustedsubsystemsclient/vb/source.vb#1)]  
   
-### <a name="configuration"></a><span data-ttu-id="80bad-150">구성</span><span class="sxs-lookup"><span data-stu-id="80bad-150">Configuration</span></span>  
- <span data-ttu-id="80bad-151">다음 코드에서는 HTTP 프로토콜에서 메시지 보안을 사용하고, 인증용 사용자 이름과 암호를 사용하도록 클라이언트를 구성합니다.</span><span class="sxs-lookup"><span data-stu-id="80bad-151">The following code configures the client to use message security over the HTTP protocol and a user name and password for authentication.</span></span> <span data-ttu-id="80bad-152">사용자 이름 및 암호는 코드(구성할 수 없음)를 사용해서만 지정할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="80bad-152">The user name and password can only be specified using code (it is not configurable).</span></span>  
+### <a name="configuration"></a><span data-ttu-id="44b6e-150">구성</span><span class="sxs-lookup"><span data-stu-id="44b6e-150">Configuration</span></span>  
+ <span data-ttu-id="44b6e-151">다음 코드에서는 HTTP 프로토콜에서 메시지 보안을 사용하고, 인증용 사용자 이름과 암호를 사용하도록 클라이언트를 구성합니다.</span><span class="sxs-lookup"><span data-stu-id="44b6e-151">The following code configures the client to use message security over the HTTP protocol and a user name and password for authentication.</span></span> <span data-ttu-id="44b6e-152">사용자 이름 및 암호는 코드(구성할 수 없음)를 사용해서만 지정할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="44b6e-152">The user name and password can only be specified using code (it is not configurable).</span></span>  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8" ?>  
@@ -210,7 +210,7 @@ ms.locfileid: "59208542"
 </configuration>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="80bad-153">참고자료</span><span class="sxs-lookup"><span data-stu-id="80bad-153">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="44b6e-153">참고자료</span><span class="sxs-lookup"><span data-stu-id="44b6e-153">See also</span></span>
 
-- [<span data-ttu-id="80bad-154">보안 개요</span><span class="sxs-lookup"><span data-stu-id="80bad-154">Security Overview</span></span>](../../../../docs/framework/wcf/feature-details/security-overview.md)
-- [<span data-ttu-id="80bad-155">Windows Server AppFabric 보안 모델</span><span class="sxs-lookup"><span data-stu-id="80bad-155">Security Model for Windows Server App Fabric</span></span>](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+- [<span data-ttu-id="44b6e-154">보안 개요</span><span class="sxs-lookup"><span data-stu-id="44b6e-154">Security Overview</span></span>](../../../../docs/framework/wcf/feature-details/security-overview.md)
+- [<span data-ttu-id="44b6e-155">Windows Server AppFabric 보안 모델</span><span class="sxs-lookup"><span data-stu-id="44b6e-155">Security Model for Windows Server App Fabric</span></span>](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
