@@ -2,23 +2,24 @@
 title: SQL Server의 XML 데이터
 ms.date: 03/30/2017
 ms.assetid: 9849d319-f518-4e3d-a7cd-f8fdcaaa1d4d
-ms.openlocfilehash: 71933640f2b333aa4be40416db346b5accf2ae73
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 75e5f24b0532a1d0da2cfcd4bdc39658db3cee35
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54725625"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59158719"
 ---
-# <a name="xml-data-in-sql-server"></a><span data-ttu-id="61394-102">SQL Server의 XML 데이터</span><span class="sxs-lookup"><span data-stu-id="61394-102">XML Data in SQL Server</span></span>
-<span data-ttu-id="61394-103">SQL Server에서는 .NET Framework 내에 SQLXML의 기능을 노출합니다.</span><span class="sxs-lookup"><span data-stu-id="61394-103">SQL Server exposes the functionality of SQLXML inside the .NET Framework.</span></span> <span data-ttu-id="61394-104">개발자는 SQL Server 인스턴스에서 XML 데이터에 액세스하고 데이터를 .NET Framework 환경으로 가져와 처리한 다음 업데이트를 다시 SQL Server로 보내는 응용 프로그램을 작성할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="61394-104">Developers can write applications that access XML data from an instance of SQL Server, bring the data into the .NET Framework environment, process the data, and send the updates back to SQL Server.</span></span> <span data-ttu-id="61394-105">SQL Server에서는 데이터 저장소 및 데이터 검색을 위한 매개 변수 값을 비롯하여 여러 가지 방식으로 XML 데이터를 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="61394-105">XML data can be used in several ways in SQL Server, including data storage, and as parameter values for retrieving data.</span></span> <span data-ttu-id="61394-106">합니다 **SqlXml** .NET Framework의 클래스는 SQL Server 내의 XML 열에 저장 된 데이터로 작업 하기 위한 클라이언트 쪽 지원을 제공 합니다.</span><span class="sxs-lookup"><span data-stu-id="61394-106">The **SqlXml** class in the .NET Framework provides the client-side support for working with data stored in an XML column within SQL Server.</span></span> <span data-ttu-id="61394-107">자세한 내용은 SQL Server 온라인 설명서의 "SQLXML Managed Classes"를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="61394-107">For more information, see "SQLXML Managed Classes" in SQL Server Books Online.</span></span>  
+# <a name="xml-data-in-sql-server"></a><span data-ttu-id="e82ce-102">SQL Server의 XML 데이터</span><span class="sxs-lookup"><span data-stu-id="e82ce-102">XML Data in SQL Server</span></span>
+<span data-ttu-id="e82ce-103">SQL Server에서는 .NET Framework 내에 SQLXML의 기능을 노출합니다.</span><span class="sxs-lookup"><span data-stu-id="e82ce-103">SQL Server exposes the functionality of SQLXML inside the .NET Framework.</span></span> <span data-ttu-id="e82ce-104">개발자는 SQL Server 인스턴스에서 XML 데이터에 액세스하고 데이터를 .NET Framework 환경으로 가져와 처리한 다음 업데이트를 다시 SQL Server로 보내는 응용 프로그램을 작성할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="e82ce-104">Developers can write applications that access XML data from an instance of SQL Server, bring the data into the .NET Framework environment, process the data, and send the updates back to SQL Server.</span></span> <span data-ttu-id="e82ce-105">SQL Server에서는 데이터 저장소 및 데이터 검색을 위한 매개 변수 값을 비롯하여 여러 가지 방식으로 XML 데이터를 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="e82ce-105">XML data can be used in several ways in SQL Server, including data storage, and as parameter values for retrieving data.</span></span> <span data-ttu-id="e82ce-106">합니다 **SqlXml** .NET Framework의 클래스는 SQL Server 내의 XML 열에 저장 된 데이터로 작업 하기 위한 클라이언트 쪽 지원을 제공 합니다.</span><span class="sxs-lookup"><span data-stu-id="e82ce-106">The **SqlXml** class in the .NET Framework provides the client-side support for working with data stored in an XML column within SQL Server.</span></span> <span data-ttu-id="e82ce-107">자세한 내용은 SQL Server 온라인 설명서의 "SQLXML Managed Classes"를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="e82ce-107">For more information, see "SQLXML Managed Classes" in SQL Server Books Online.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="61394-108">섹션 내용</span><span class="sxs-lookup"><span data-stu-id="61394-108">In This Section</span></span>  
- [<span data-ttu-id="61394-109">SQL XML 열 값</span><span class="sxs-lookup"><span data-stu-id="61394-109">SQL XML Column Values</span></span>](../../../../../docs/framework/data/adonet/sql/sql-xml-column-values.md)  
- <span data-ttu-id="61394-110">SQL Server에서 XML 데이터를 검색하고 검색한 데이터로 작업하는 방법을 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="61394-110">Demonstrates how to retrieve and work with XML data retrieved from SQL Server.</span></span>  
+## <a name="in-this-section"></a><span data-ttu-id="e82ce-108">섹션 내용</span><span class="sxs-lookup"><span data-stu-id="e82ce-108">In This Section</span></span>  
+ [<span data-ttu-id="e82ce-109">SQL XML 열 값</span><span class="sxs-lookup"><span data-stu-id="e82ce-109">SQL XML Column Values</span></span>](../../../../../docs/framework/data/adonet/sql/sql-xml-column-values.md)  
+ <span data-ttu-id="e82ce-110">SQL Server에서 XML 데이터를 검색하고 검색한 데이터로 작업하는 방법을 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="e82ce-110">Demonstrates how to retrieve and work with XML data retrieved from SQL Server.</span></span>  
   
- [<span data-ttu-id="61394-111">XML 값을 매개 변수로 지정</span><span class="sxs-lookup"><span data-stu-id="61394-111">Specifying XML Values as Parameters</span></span>](../../../../../docs/framework/data/adonet/sql/specifying-xml-values-as-parameters.md)  
- <span data-ttu-id="61394-112">XML 데이터를 매개 변수로 명령에 전달하는 방법을 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="61394-112">Demonstrates how to pass XML data as a parameter to a command.</span></span>  
+ [<span data-ttu-id="e82ce-111">XML 값을 매개 변수로 지정</span><span class="sxs-lookup"><span data-stu-id="e82ce-111">Specifying XML Values as Parameters</span></span>](../../../../../docs/framework/data/adonet/sql/specifying-xml-values-as-parameters.md)  
+ <span data-ttu-id="e82ce-112">XML 데이터를 매개 변수로 명령에 전달하는 방법을 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="e82ce-112">Demonstrates how to pass XML data as a parameter to a command.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="61394-113">참고자료</span><span class="sxs-lookup"><span data-stu-id="61394-113">See also</span></span>
-- [<span data-ttu-id="61394-114">SQL Server 및 ADO.NET</span><span class="sxs-lookup"><span data-stu-id="61394-114">SQL Server and ADO.NET</span></span>](../../../../../docs/framework/data/adonet/sql/index.md)
-- [<span data-ttu-id="61394-115">ADO.NET 관리되는 공급자 및 데이터 집합 개발자 센터</span><span class="sxs-lookup"><span data-stu-id="61394-115">ADO.NET Managed Providers and DataSet Developer Center</span></span>](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a><span data-ttu-id="e82ce-113">참고자료</span><span class="sxs-lookup"><span data-stu-id="e82ce-113">See also</span></span>
+
+- [<span data-ttu-id="e82ce-114">SQL Server 및 ADO.NET</span><span class="sxs-lookup"><span data-stu-id="e82ce-114">SQL Server and ADO.NET</span></span>](../../../../../docs/framework/data/adonet/sql/index.md)
+- [<span data-ttu-id="e82ce-115">ADO.NET 관리되는 공급자 및 데이터 집합 개발자 센터</span><span class="sxs-lookup"><span data-stu-id="e82ce-115">ADO.NET Managed Providers and DataSet Developer Center</span></span>](https://go.microsoft.com/fwlink/?LinkId=217917)
