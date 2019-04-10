@@ -16,43 +16,44 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 27899994a048c7000746a2e92516776fd23f8e2e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b9519f7c2df5cf078bac6be038275527d7741edb
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54624394"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59152167"
 ---
-# <a name="iclrgcmanager-interface"></a><span data-ttu-id="e8d17-102">ICLRGCManager 인터페이스</span><span class="sxs-lookup"><span data-stu-id="e8d17-102">ICLRGCManager Interface</span></span>
-<span data-ttu-id="e8d17-103">공용 언어 런타임의 가비지 컬렉션 시스템과 상호 작용 하는 데 사용 하는 메서드를 제공 합니다.</span><span class="sxs-lookup"><span data-stu-id="e8d17-103">Provides methods that allow a host to interact with the common language runtime's garbage collection system.</span></span>  
+# <a name="iclrgcmanager-interface"></a><span data-ttu-id="ddb44-102">ICLRGCManager 인터페이스</span><span class="sxs-lookup"><span data-stu-id="ddb44-102">ICLRGCManager Interface</span></span>
+<span data-ttu-id="ddb44-103">공용 언어 런타임의 가비지 컬렉션 시스템과 상호 작용 하는 데 사용 하는 메서드를 제공 합니다.</span><span class="sxs-lookup"><span data-stu-id="ddb44-103">Provides methods that allow a host to interact with the common language runtime's garbage collection system.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="e8d17-104">부터 합니다 [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)]를 사용할 수는 [ICLRGCManager2::SetGCStartupLimitsEx](../../../../docs/framework/unmanaged-api/hosting/iclrgcmanager2-setgcstartuplimitsex-method.md) 가비지 수집 세그먼트의 크기 및 가비지 컬렉션 시스템의 0 세대의 최대 크기 값에 큰 설정 하는 방법 보다는 `DWORD` 에 의해 적용 되는 제한 된 [SetGCStartupLimits](../../../../docs/framework/unmanaged-api/hosting/iclrgcmanager-setgcstartuplimits-method.md) 메서드.</span><span class="sxs-lookup"><span data-stu-id="e8d17-104">Starting with the [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)], you can use the [ICLRGCManager2::SetGCStartupLimitsEx](../../../../docs/framework/unmanaged-api/hosting/iclrgcmanager2-setgcstartuplimitsex-method.md) method to set the size of a garbage collection segment and the maximum size of the garbage collection system's generation 0 to values greater than the `DWORD` limit that is imposed by the [SetGCStartupLimits](../../../../docs/framework/unmanaged-api/hosting/iclrgcmanager-setgcstartuplimits-method.md) method.</span></span>  
+>  <span data-ttu-id="ddb44-104">부터 합니다 [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)]를 사용할 수는 [ICLRGCManager2::SetGCStartupLimitsEx](../../../../docs/framework/unmanaged-api/hosting/iclrgcmanager2-setgcstartuplimitsex-method.md) 가비지 수집 세그먼트의 크기 및 가비지 컬렉션 시스템의 0 세대의 최대 크기 값에 큰 설정 하는 방법 보다는 `DWORD` 에 의해 적용 되는 제한 된 [SetGCStartupLimits](../../../../docs/framework/unmanaged-api/hosting/iclrgcmanager-setgcstartuplimits-method.md) 메서드.</span><span class="sxs-lookup"><span data-stu-id="ddb44-104">Starting with the [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)], you can use the [ICLRGCManager2::SetGCStartupLimitsEx](../../../../docs/framework/unmanaged-api/hosting/iclrgcmanager2-setgcstartuplimitsex-method.md) method to set the size of a garbage collection segment and the maximum size of the garbage collection system's generation 0 to values greater than the `DWORD` limit that is imposed by the [SetGCStartupLimits](../../../../docs/framework/unmanaged-api/hosting/iclrgcmanager-setgcstartuplimits-method.md) method.</span></span>  
   
-## <a name="methods"></a><span data-ttu-id="e8d17-105">메서드</span><span class="sxs-lookup"><span data-stu-id="e8d17-105">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="ddb44-105">메서드</span><span class="sxs-lookup"><span data-stu-id="ddb44-105">Methods</span></span>  
   
-|<span data-ttu-id="e8d17-106">메서드</span><span class="sxs-lookup"><span data-stu-id="e8d17-106">Method</span></span>|<span data-ttu-id="e8d17-107">설명</span><span class="sxs-lookup"><span data-stu-id="e8d17-107">Description</span></span>|  
+|<span data-ttu-id="ddb44-106">메서드</span><span class="sxs-lookup"><span data-stu-id="ddb44-106">Method</span></span>|<span data-ttu-id="ddb44-107">설명</span><span class="sxs-lookup"><span data-stu-id="ddb44-107">Description</span></span>|  
 |------------|-----------------|  
-|[<span data-ttu-id="e8d17-108">Collect 메서드</span><span class="sxs-lookup"><span data-stu-id="e8d17-108">Collect Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrgcmanager-collect-method.md)|<span data-ttu-id="e8d17-109">지정된 된 세대의 가비지 수집을 강제로 수행 합니다.</span><span class="sxs-lookup"><span data-stu-id="e8d17-109">Forces a garbage collection for the specified generation.</span></span>|  
-|[<span data-ttu-id="e8d17-110">GetStats 메서드</span><span class="sxs-lookup"><span data-stu-id="e8d17-110">GetStats Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrgcmanager-getstats-method.md)|<span data-ttu-id="e8d17-111">가비지 컬렉션 시스템에 대 한 현재 통계의 집합을 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="e8d17-111">Gets a set of current statistics about the garbage collection system.</span></span>|  
-|[<span data-ttu-id="e8d17-112">SetGCStartupLimits 메서드</span><span class="sxs-lookup"><span data-stu-id="e8d17-112">SetGCStartupLimits Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrgcmanager-setgcstartuplimits-method.md)|<span data-ttu-id="e8d17-113">가비지 수집 세그먼트의 크기 및 가비지 컬렉션 시스템의 0 세대의 최대 크기를 설정합니다.</span><span class="sxs-lookup"><span data-stu-id="e8d17-113">Sets the size of a garbage collection segment and the maximum size of the garbage collection system's generation 0.</span></span>|  
+|[<span data-ttu-id="ddb44-108">Collect 메서드</span><span class="sxs-lookup"><span data-stu-id="ddb44-108">Collect Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrgcmanager-collect-method.md)|<span data-ttu-id="ddb44-109">지정된 된 세대의 가비지 수집을 강제로 수행 합니다.</span><span class="sxs-lookup"><span data-stu-id="ddb44-109">Forces a garbage collection for the specified generation.</span></span>|  
+|[<span data-ttu-id="ddb44-110">GetStats 메서드</span><span class="sxs-lookup"><span data-stu-id="ddb44-110">GetStats Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrgcmanager-getstats-method.md)|<span data-ttu-id="ddb44-111">가비지 컬렉션 시스템에 대 한 현재 통계의 집합을 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="ddb44-111">Gets a set of current statistics about the garbage collection system.</span></span>|  
+|[<span data-ttu-id="ddb44-112">SetGCStartupLimits 메서드</span><span class="sxs-lookup"><span data-stu-id="ddb44-112">SetGCStartupLimits Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrgcmanager-setgcstartuplimits-method.md)|<span data-ttu-id="ddb44-113">가비지 수집 세그먼트의 크기 및 가비지 컬렉션 시스템의 0 세대의 최대 크기를 설정합니다.</span><span class="sxs-lookup"><span data-stu-id="ddb44-113">Sets the size of a garbage collection segment and the maximum size of the garbage collection system's generation 0.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="e8d17-114">설명</span><span class="sxs-lookup"><span data-stu-id="e8d17-114">Remarks</span></span>  
- <span data-ttu-id="e8d17-115">관리 되는 가비지 수집 메커니즘을 구현 하는 CLR (공용 언어 런타임) <xref:System.GC> 형식입니다.</span><span class="sxs-lookup"><span data-stu-id="e8d17-115">The common language runtime (CLR) implements its garbage collection mechanism with the managed <xref:System.GC> type.</span></span> <span data-ttu-id="e8d17-116">가비지 컬렉션 시스템에 대 한 자세한 내용은 참조 하세요. [가비지 수집](../../../../docs/standard/garbage-collection/index.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="e8d17-116">For more information about the garbage collection system, see [Garbage Collection](../../../../docs/standard/garbage-collection/index.md).</span></span>  
+## <a name="remarks"></a><span data-ttu-id="ddb44-114">설명</span><span class="sxs-lookup"><span data-stu-id="ddb44-114">Remarks</span></span>  
+ <span data-ttu-id="ddb44-115">관리 되는 가비지 수집 메커니즘을 구현 하는 CLR (공용 언어 런타임) <xref:System.GC> 형식입니다.</span><span class="sxs-lookup"><span data-stu-id="ddb44-115">The common language runtime (CLR) implements its garbage collection mechanism with the managed <xref:System.GC> type.</span></span> <span data-ttu-id="ddb44-116">가비지 컬렉션 시스템에 대 한 자세한 내용은 참조 하세요. [가비지 수집](../../../../docs/standard/garbage-collection/index.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="ddb44-116">For more information about the garbage collection system, see [Garbage Collection](../../../../docs/standard/garbage-collection/index.md).</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="e8d17-117">요구 사항</span><span class="sxs-lookup"><span data-stu-id="e8d17-117">Requirements</span></span>  
- <span data-ttu-id="e8d17-118">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="e8d17-118">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="ddb44-117">요구 사항</span><span class="sxs-lookup"><span data-stu-id="ddb44-117">Requirements</span></span>  
+ <span data-ttu-id="ddb44-118">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="ddb44-118">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="e8d17-119">**헤더:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="e8d17-119">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="ddb44-119">**헤더:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="ddb44-119">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="e8d17-120">**라이브러리:** MSCorEE.dll에 리소스로 포함</span><span class="sxs-lookup"><span data-stu-id="e8d17-120">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="ddb44-120">**라이브러리:** MSCorEE.dll에 리소스로 포함</span><span class="sxs-lookup"><span data-stu-id="ddb44-120">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="e8d17-121">**.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="e8d17-121">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ **<span data-ttu-id="ddb44-121">.NET Framework 버전:</span><span class="sxs-lookup"><span data-stu-id="ddb44-121">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="e8d17-122">참고자료</span><span class="sxs-lookup"><span data-stu-id="e8d17-122">See also</span></span>
-- [<span data-ttu-id="e8d17-123">자동 메모리 관리</span><span class="sxs-lookup"><span data-stu-id="e8d17-123">Automatic Memory Management</span></span>](../../../../docs/standard/automatic-memory-management.md)
-- [<span data-ttu-id="e8d17-124">COR_GC_STATS 구조체</span><span class="sxs-lookup"><span data-stu-id="e8d17-124">COR_GC_STATS Structure</span></span>](../../../../docs/framework/unmanaged-api/hosting/cor-gc-stats-structure.md)
-- [<span data-ttu-id="e8d17-125">ICLRControl 인터페이스</span><span class="sxs-lookup"><span data-stu-id="e8d17-125">ICLRControl Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrcontrol-interface.md)
-- [<span data-ttu-id="e8d17-126">CLR 호스팅 인터페이스</span><span class="sxs-lookup"><span data-stu-id="e8d17-126">CLR Hosting Interfaces</span></span>](../../../../docs/framework/unmanaged-api/hosting/clr-hosting-interfaces.md)
-- [<span data-ttu-id="e8d17-127">호스팅 인터페이스</span><span class="sxs-lookup"><span data-stu-id="e8d17-127">Hosting Interfaces</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
-- [<span data-ttu-id="e8d17-128">호스팅</span><span class="sxs-lookup"><span data-stu-id="e8d17-128">Hosting</span></span>](../../../../docs/framework/unmanaged-api/hosting/index.md)
+## <a name="see-also"></a><span data-ttu-id="ddb44-122">참고자료</span><span class="sxs-lookup"><span data-stu-id="ddb44-122">See also</span></span>
+
+- [<span data-ttu-id="ddb44-123">Automatic Memory Management</span><span class="sxs-lookup"><span data-stu-id="ddb44-123">Automatic Memory Management</span></span>](../../../../docs/standard/automatic-memory-management.md)
+- [<span data-ttu-id="ddb44-124">COR_GC_STATS 구조체</span><span class="sxs-lookup"><span data-stu-id="ddb44-124">COR_GC_STATS Structure</span></span>](../../../../docs/framework/unmanaged-api/hosting/cor-gc-stats-structure.md)
+- [<span data-ttu-id="ddb44-125">ICLRControl 인터페이스</span><span class="sxs-lookup"><span data-stu-id="ddb44-125">ICLRControl Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrcontrol-interface.md)
+- [<span data-ttu-id="ddb44-126">CLR 호스팅 인터페이스</span><span class="sxs-lookup"><span data-stu-id="ddb44-126">CLR Hosting Interfaces</span></span>](../../../../docs/framework/unmanaged-api/hosting/clr-hosting-interfaces.md)
+- [<span data-ttu-id="ddb44-127">호스팅 인터페이스</span><span class="sxs-lookup"><span data-stu-id="ddb44-127">Hosting Interfaces</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
+- [<span data-ttu-id="ddb44-128">호스팅</span><span class="sxs-lookup"><span data-stu-id="ddb44-128">Hosting</span></span>](../../../../docs/framework/unmanaged-api/hosting/index.md)

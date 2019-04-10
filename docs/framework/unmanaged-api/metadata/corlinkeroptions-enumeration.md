@@ -16,17 +16,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 0a072e124343641c9f75fb9f924a6409efc8e1d4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: dc0554ed89d21607978d059b26c4ad69e59a2d4c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54719939"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59166636"
 ---
-# <a name="corlinkeroptions-enumeration"></a><span data-ttu-id="ebdce-102">CorLinkerOptions 열거형</span><span class="sxs-lookup"><span data-stu-id="ebdce-102">CorLinkerOptions Enumeration</span></span>
-<span data-ttu-id="ebdce-103">메타데이터 링커 옵션을 선택하는 플래그를 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="ebdce-103">Specifies flags to select options for the metadata linker.</span></span>  
+# <a name="corlinkeroptions-enumeration"></a><span data-ttu-id="997eb-102">CorLinkerOptions 열거형</span><span class="sxs-lookup"><span data-stu-id="997eb-102">CorLinkerOptions Enumeration</span></span>
+<span data-ttu-id="997eb-103">메타데이터 링커 옵션을 선택하는 플래그를 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="997eb-103">Specifies flags to select options for the metadata linker.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="ebdce-104">구문</span><span class="sxs-lookup"><span data-stu-id="ebdce-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="997eb-104">구문</span><span class="sxs-lookup"><span data-stu-id="997eb-104">Syntax</span></span>  
   
 ```  
 typedef enum CorLinkerOptions {  
@@ -35,19 +35,20 @@ typedef enum CorLinkerOptions {
 } CorLinkerOptions;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="ebdce-105">멤버</span><span class="sxs-lookup"><span data-stu-id="ebdce-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="997eb-105">멤버</span><span class="sxs-lookup"><span data-stu-id="997eb-105">Members</span></span>  
   
-|<span data-ttu-id="ebdce-106">멤버</span><span class="sxs-lookup"><span data-stu-id="ebdce-106">Member</span></span>|<span data-ttu-id="ebdce-107">설명</span><span class="sxs-lookup"><span data-stu-id="ebdce-107">Description</span></span>|  
+|<span data-ttu-id="997eb-106">멤버</span><span class="sxs-lookup"><span data-stu-id="997eb-106">Member</span></span>|<span data-ttu-id="997eb-107">설명</span><span class="sxs-lookup"><span data-stu-id="997eb-107">Description</span></span>|  
 |------------|-----------------|  
-|`MDAssembly`|<span data-ttu-id="ebdce-108">전용 형식 및 전역 함수 유지 되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="ebdce-108">The private types and global functions are not preserved.</span></span>|  
-|`MDNetModule`|<span data-ttu-id="ebdce-109">전용 형식 및 전역 함수 유지 됩니다.</span><span class="sxs-lookup"><span data-stu-id="ebdce-109">The private types and global functions are preserved.</span></span>|  
+|`MDAssembly`|<span data-ttu-id="997eb-108">전용 형식 및 전역 함수 유지 되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="997eb-108">The private types and global functions are not preserved.</span></span>|  
+|`MDNetModule`|<span data-ttu-id="997eb-109">전용 형식 및 전역 함수 유지 됩니다.</span><span class="sxs-lookup"><span data-stu-id="997eb-109">The private types and global functions are preserved.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="ebdce-110">요구 사항</span><span class="sxs-lookup"><span data-stu-id="ebdce-110">Requirements</span></span>  
- <span data-ttu-id="ebdce-111">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="ebdce-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="997eb-110">요구 사항</span><span class="sxs-lookup"><span data-stu-id="997eb-110">Requirements</span></span>  
+ <span data-ttu-id="997eb-111">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="997eb-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="ebdce-112">**헤더:** CorHdr.h</span><span class="sxs-lookup"><span data-stu-id="ebdce-112">**Header:** CorHdr.h</span></span>  
+ <span data-ttu-id="997eb-112">**헤더:** CorHdr.h</span><span class="sxs-lookup"><span data-stu-id="997eb-112">**Header:** CorHdr.h</span></span>  
   
- <span data-ttu-id="ebdce-113">**.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="ebdce-113">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ **<span data-ttu-id="997eb-113">.NET Framework 버전:</span><span class="sxs-lookup"><span data-stu-id="997eb-113">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="ebdce-114">참고자료</span><span class="sxs-lookup"><span data-stu-id="ebdce-114">See also</span></span>
-- [<span data-ttu-id="ebdce-115">메타데이터 열거형</span><span class="sxs-lookup"><span data-stu-id="ebdce-115">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+## <a name="see-also"></a><span data-ttu-id="997eb-114">참고자료</span><span class="sxs-lookup"><span data-stu-id="997eb-114">See also</span></span>
+
+- [<span data-ttu-id="997eb-115">메타데이터 열거형</span><span class="sxs-lookup"><span data-stu-id="997eb-115">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

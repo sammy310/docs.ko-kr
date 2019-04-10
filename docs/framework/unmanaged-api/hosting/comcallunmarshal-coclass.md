@@ -16,17 +16,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5a404448c45a37d50794ceae9a9bf8ff6af08eeb
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2f17a88a90905006432ae8c5dc040277124c947b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54574575"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59166883"
 ---
-# <a name="comcallunmarshal-coclass"></a><span data-ttu-id="744ae-102">ComCallUnmarshal Coclass</span><span class="sxs-lookup"><span data-stu-id="744ae-102">ComCallUnmarshal Coclass</span></span>
-<span data-ttu-id="744ae-103">인터페이스 포인터의 마샬링을 관리에 대 한 인터페이스를 제공 합니다.</span><span class="sxs-lookup"><span data-stu-id="744ae-103">Provides interfaces for managing the marshaling of interface pointers.</span></span>  
+# <a name="comcallunmarshal-coclass"></a><span data-ttu-id="0faba-102">ComCallUnmarshal Coclass</span><span class="sxs-lookup"><span data-stu-id="0faba-102">ComCallUnmarshal Coclass</span></span>
+<span data-ttu-id="0faba-103">인터페이스 포인터의 마샬링을 관리에 대 한 인터페이스를 제공 합니다.</span><span class="sxs-lookup"><span data-stu-id="0faba-103">Provides interfaces for managing the marshaling of interface pointers.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="744ae-104">구문</span><span class="sxs-lookup"><span data-stu-id="744ae-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="0faba-104">구문</span><span class="sxs-lookup"><span data-stu-id="0faba-104">Syntax</span></span>  
   
 ```  
 coclass ComCallUnmarshal {  
@@ -34,20 +34,21 @@ coclass ComCallUnmarshal {
 };  
 ```  
   
-## <a name="interfaces"></a><span data-ttu-id="744ae-105">인터페이스</span><span class="sxs-lookup"><span data-stu-id="744ae-105">Interfaces</span></span>  
+## <a name="interfaces"></a><span data-ttu-id="0faba-105">인터페이스</span><span class="sxs-lookup"><span data-stu-id="0faba-105">Interfaces</span></span>  
   
-|<span data-ttu-id="744ae-106">인터페이스</span><span class="sxs-lookup"><span data-stu-id="744ae-106">Interface</span></span>|<span data-ttu-id="744ae-107">설명</span><span class="sxs-lookup"><span data-stu-id="744ae-107">Description</span></span>|  
+|<span data-ttu-id="0faba-106">인터페이스</span><span class="sxs-lookup"><span data-stu-id="0faba-106">Interface</span></span>|<span data-ttu-id="0faba-107">설명</span><span class="sxs-lookup"><span data-stu-id="0faba-107">Description</span></span>|  
 |---------------|-----------------|  
-|`IMarshal`|<span data-ttu-id="744ae-108">만들기, 초기화 및 관리 클라이언트 프로세스에서 프록시에 대 한 메서드를 제공 합니다.</span><span class="sxs-lookup"><span data-stu-id="744ae-108">Provides methods for creating, initializing, and managing a proxy in a client process.</span></span>|  
+|`IMarshal`|<span data-ttu-id="0faba-108">만들기, 초기화 및 관리 클라이언트 프로세스에서 프록시에 대 한 메서드를 제공 합니다.</span><span class="sxs-lookup"><span data-stu-id="0faba-108">Provides methods for creating, initializing, and managing a proxy in a client process.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="744ae-109">요구 사항</span><span class="sxs-lookup"><span data-stu-id="744ae-109">Requirements</span></span>  
- <span data-ttu-id="744ae-110">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="744ae-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="0faba-109">요구 사항</span><span class="sxs-lookup"><span data-stu-id="0faba-109">Requirements</span></span>  
+ <span data-ttu-id="0faba-110">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="0faba-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="744ae-111">**헤더:** MSCorEE.idl</span><span class="sxs-lookup"><span data-stu-id="744ae-111">**Header:** MSCorEE.idl</span></span>  
+ <span data-ttu-id="0faba-111">**헤더:** MSCorEE.idl</span><span class="sxs-lookup"><span data-stu-id="0faba-111">**Header:** MSCorEE.idl</span></span>  
   
- <span data-ttu-id="744ae-112">**라이브러리:** MSCorEE.dll에 리소스로 포함</span><span class="sxs-lookup"><span data-stu-id="744ae-112">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="0faba-112">**라이브러리:** MSCorEE.dll에 리소스로 포함</span><span class="sxs-lookup"><span data-stu-id="0faba-112">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="744ae-113">**.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="744ae-113">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ **<span data-ttu-id="0faba-113">.NET Framework 버전:</span><span class="sxs-lookup"><span data-stu-id="0faba-113">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="744ae-114">참고자료</span><span class="sxs-lookup"><span data-stu-id="744ae-114">See also</span></span>
-- [<span data-ttu-id="744ae-115">호스팅 Coclass</span><span class="sxs-lookup"><span data-stu-id="744ae-115">Hosting Coclasses</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-coclasses.md)
+## <a name="see-also"></a><span data-ttu-id="0faba-114">참고자료</span><span class="sxs-lookup"><span data-stu-id="0faba-114">See also</span></span>
+
+- [<span data-ttu-id="0faba-115">호스팅 Coclass</span><span class="sxs-lookup"><span data-stu-id="0faba-115">Hosting Coclasses</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-coclasses.md)

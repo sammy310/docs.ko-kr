@@ -17,35 +17,36 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: aa72c136e98f80df6d2868c447e1c535ae61af06
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 47ff178cc9ab798593848e56fc7bba8ac82ae295
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54739630"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59154234"
 ---
-# <a name="idebuggerthreadcontrolthreadisblockingfordebugger-method"></a><span data-ttu-id="c6383-102">IDebuggerThreadControl::ThreadIsBlockingForDebugger 메서드</span><span class="sxs-lookup"><span data-stu-id="c6383-102">IDebuggerThreadControl::ThreadIsBlockingForDebugger Method</span></span>
-<span data-ttu-id="c6383-103">이 콜백은 보내는 스레드가 호스트에 알리는 디버깅 서비스 내에서 블록입니다.</span><span class="sxs-lookup"><span data-stu-id="c6383-103">Notifies the host that the thread that is sending this callback is about to block within the debugging services.</span></span>  
+# <a name="idebuggerthreadcontrolthreadisblockingfordebugger-method"></a><span data-ttu-id="652d9-102">IDebuggerThreadControl::ThreadIsBlockingForDebugger 메서드</span><span class="sxs-lookup"><span data-stu-id="652d9-102">IDebuggerThreadControl::ThreadIsBlockingForDebugger Method</span></span>
+<span data-ttu-id="652d9-103">이 콜백은 보내는 스레드가 호스트에 알리는 디버깅 서비스 내에서 블록입니다.</span><span class="sxs-lookup"><span data-stu-id="652d9-103">Notifies the host that the thread that is sending this callback is about to block within the debugging services.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="c6383-104">구문</span><span class="sxs-lookup"><span data-stu-id="c6383-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="652d9-104">구문</span><span class="sxs-lookup"><span data-stu-id="652d9-104">Syntax</span></span>  
   
 ```  
 HRESULT ThreadIsBlockingForDebugger ( );  
 ```  
   
-## <a name="remarks"></a><span data-ttu-id="c6383-105">설명</span><span class="sxs-lookup"><span data-stu-id="c6383-105">Remarks</span></span>  
- <span data-ttu-id="c6383-106">`ThreadIsBlockingForDebugger` 메서드는 항상 런타임 스레드에서 호출 합니다.</span><span class="sxs-lookup"><span data-stu-id="c6383-106">The `ThreadIsBlockingForDebugger` method will always be called on a runtime thread.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="652d9-105">설명</span><span class="sxs-lookup"><span data-stu-id="652d9-105">Remarks</span></span>  
+ <span data-ttu-id="652d9-106">`ThreadIsBlockingForDebugger` 메서드는 항상 런타임 스레드에서 호출 합니다.</span><span class="sxs-lookup"><span data-stu-id="652d9-106">The `ThreadIsBlockingForDebugger` method will always be called on a runtime thread.</span></span>  
   
- <span data-ttu-id="c6383-107">`ThreadIsBlockingForDebugger` 메서드 사용 하면 호스트가 해당 스레드는 차단 하는 동안 다른 작업을 수행할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="c6383-107">The `ThreadIsBlockingForDebugger` method gives the host an opportunity to perform another action while the thread blocks.</span></span>  
+ <span data-ttu-id="652d9-107">`ThreadIsBlockingForDebugger` 메서드 사용 하면 호스트가 해당 스레드는 차단 하는 동안 다른 작업을 수행할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="652d9-107">The `ThreadIsBlockingForDebugger` method gives the host an opportunity to perform another action while the thread blocks.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="c6383-108">요구 사항</span><span class="sxs-lookup"><span data-stu-id="c6383-108">Requirements</span></span>  
- <span data-ttu-id="c6383-109">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="c6383-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="652d9-108">요구 사항</span><span class="sxs-lookup"><span data-stu-id="652d9-108">Requirements</span></span>  
+ <span data-ttu-id="652d9-109">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="652d9-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="c6383-110">**헤더:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="c6383-110">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="652d9-110">**헤더:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="652d9-110">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="c6383-111">**라이브러리:** MSCorEE.dll에 리소스로 포함</span><span class="sxs-lookup"><span data-stu-id="c6383-111">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="652d9-111">**라이브러리:** MSCorEE.dll에 리소스로 포함</span><span class="sxs-lookup"><span data-stu-id="652d9-111">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="c6383-112">**.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="c6383-112">**NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ **<span data-ttu-id="652d9-112">.NET Framework 버전:</span><span class="sxs-lookup"><span data-stu-id="652d9-112">NET Framework Versions:</span></span>** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="c6383-113">참고자료</span><span class="sxs-lookup"><span data-stu-id="c6383-113">See also</span></span>
-- [<span data-ttu-id="c6383-114">IDebuggerThreadControl 인터페이스</span><span class="sxs-lookup"><span data-stu-id="c6383-114">IDebuggerThreadControl Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/idebuggerthreadcontrol-interface.md)
+## <a name="see-also"></a><span data-ttu-id="652d9-113">참고자료</span><span class="sxs-lookup"><span data-stu-id="652d9-113">See also</span></span>
+
+- [<span data-ttu-id="652d9-114">IDebuggerThreadControl 인터페이스</span><span class="sxs-lookup"><span data-stu-id="652d9-114">IDebuggerThreadControl Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/idebuggerthreadcontrol-interface.md)

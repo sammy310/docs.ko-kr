@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b3a67a92204ffc2041d4ea11c8551064582b7c15
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b7cfc1917604644090f7f9aebb6c5184269f04b2
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54544967"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59144809"
 ---
-# <a name="icordebugobjectvaluegetmanagedcopy-method"></a><span data-ttu-id="78348-102">ICorDebugObjectValue::GetManagedCopy 메서드</span><span class="sxs-lookup"><span data-stu-id="78348-102">ICorDebugObjectValue::GetManagedCopy Method</span></span>
-<span data-ttu-id="78348-103">`GetManagedCopy`는 사용되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="78348-103">`GetManagedCopy` is obsolete.</span></span> <span data-ttu-id="78348-104">이 메서드를 호출 하지 마세요.</span><span class="sxs-lookup"><span data-stu-id="78348-104">Do not call this method.</span></span>  
+# <a name="icordebugobjectvaluegetmanagedcopy-method"></a><span data-ttu-id="4eb2c-102">ICorDebugObjectValue::GetManagedCopy 메서드</span><span class="sxs-lookup"><span data-stu-id="4eb2c-102">ICorDebugObjectValue::GetManagedCopy Method</span></span>
+`GetManagedCopy` <span data-ttu-id="4eb2c-103">사용 되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="4eb2c-103">is obsolete.</span></span> <span data-ttu-id="4eb2c-104">이 메서드를 호출 하지 마세요.</span><span class="sxs-lookup"><span data-stu-id="4eb2c-104">Do not call this method.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="78348-105">구문</span><span class="sxs-lookup"><span data-stu-id="78348-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="4eb2c-105">구문</span><span class="sxs-lookup"><span data-stu-id="4eb2c-105">Syntax</span></span>  
   
 ```  
 HRESULT GetManagedCopy (  
@@ -35,9 +35,7 @@ HRESULT GetManagedCopy (
 );  
 ```  
   
-## <a name="requirements"></a><span data-ttu-id="78348-106">요구 사항</span><span class="sxs-lookup"><span data-stu-id="78348-106">Requirements</span></span>  
- <span data-ttu-id="78348-107">**헤더:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="78348-107">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="4eb2c-106">요구 사항</span><span class="sxs-lookup"><span data-stu-id="4eb2c-106">Requirements</span></span>  
+ <span data-ttu-id="4eb2c-107">**헤더:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="4eb2c-107">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="78348-108">참고자료</span><span class="sxs-lookup"><span data-stu-id="78348-108">See also</span></span>
-
-
+## <a name="see-also"></a><span data-ttu-id="4eb2c-108">참고자료</span><span class="sxs-lookup"><span data-stu-id="4eb2c-108">See also</span></span>

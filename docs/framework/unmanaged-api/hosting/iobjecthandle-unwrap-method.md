@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5539d77b93be1f56102970e9febe6f63599d78e7
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 4c18607d5373b415228846350a3dd0637ade1b45
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57502971"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59150802"
 ---
-# <a name="iobjecthandleunwrap-method"></a><span data-ttu-id="c595b-102">IObjectHandle::Unwrap 메서드</span><span class="sxs-lookup"><span data-stu-id="c595b-102">IObjectHandle::Unwrap Method</span></span>
-<span data-ttu-id="c595b-103">간접 참조의 값으로 마샬링된 개체를 래핑 해제 됩니다.</span><span class="sxs-lookup"><span data-stu-id="c595b-103">Unwraps a marshal-by-value object from indirection.</span></span>  
+# <a name="iobjecthandleunwrap-method"></a><span data-ttu-id="9964e-102">IObjectHandle::Unwrap 메서드</span><span class="sxs-lookup"><span data-stu-id="9964e-102">IObjectHandle::Unwrap Method</span></span>
+<span data-ttu-id="9964e-103">간접 참조의 값으로 마샬링된 개체를 래핑 해제 됩니다.</span><span class="sxs-lookup"><span data-stu-id="9964e-103">Unwraps a marshal-by-value object from indirection.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="c595b-104">구문</span><span class="sxs-lookup"><span data-stu-id="c595b-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="9964e-104">구문</span><span class="sxs-lookup"><span data-stu-id="9964e-104">Syntax</span></span>  
   
 ```  
 HRESULT Unwrap (  
@@ -35,18 +35,15 @@ HRESULT Unwrap (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="c595b-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="c595b-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="9964e-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="9964e-105">Parameters</span></span>  
  `ppv`  
- <span data-ttu-id="c595b-106">[out] 래핑 해제할 개체에 대 한 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="c595b-106">[out] A pointer to the object to be unwrapped.</span></span>  
+ <span data-ttu-id="9964e-106">[out] 래핑 해제할 개체에 대 한 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="9964e-106">[out] A pointer to the object to be unwrapped.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="c595b-107">요구 사항</span><span class="sxs-lookup"><span data-stu-id="c595b-107">Requirements</span></span>  
- <span data-ttu-id="c595b-108">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="c595b-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="9964e-107">요구 사항</span><span class="sxs-lookup"><span data-stu-id="9964e-107">Requirements</span></span>  
+ <span data-ttu-id="9964e-108">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="9964e-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="c595b-109">**헤더:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="c595b-109">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="9964e-109">**헤더:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="9964e-109">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="c595b-110">**라이브러리:** MSCorEE.dll에 리소스로 포함</span><span class="sxs-lookup"><span data-stu-id="c595b-110">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="9964e-110">**라이브러리:** MSCorEE.dll에 리소스로 포함</span><span class="sxs-lookup"><span data-stu-id="9964e-110">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="c595b-111">**.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="c595b-111">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
-  
-## <a name="see-also"></a><span data-ttu-id="c595b-112">참고자료</span><span class="sxs-lookup"><span data-stu-id="c595b-112">See also</span></span>
-
+ **<span data-ttu-id="9964e-111">.NET Framework 버전:</span><span class="sxs-lookup"><span data-stu-id="9964e-111">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  

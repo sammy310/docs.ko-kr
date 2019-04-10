@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ddb40c3265b3f42514d9dbd6f620a783089a4fad
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 596888a8eb4a55c4cfe594b1911f17f6d32f56d2
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57481182"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59165934"
 ---
-# <a name="imetadataemitsettypedefprops-method"></a><span data-ttu-id="d0751-102">IMetaDataEmit::SetTypeDefProps 메서드</span><span class="sxs-lookup"><span data-stu-id="d0751-102">IMetaDataEmit::SetTypeDefProps Method</span></span>
-<span data-ttu-id="d0751-103">설정에 대 한 이전 호출에서 정의 된 형식 기능의 [imetadataemit:: Definetypedef](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definetypedef-method.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="d0751-103">Sets features of a type defined by a prior call to [IMetaDataEmit::DefineTypeDef](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definetypedef-method.md).</span></span>  
+# <a name="imetadataemitsettypedefprops-method"></a><span data-ttu-id="b64e8-102">IMetaDataEmit::SetTypeDefProps 메서드</span><span class="sxs-lookup"><span data-stu-id="b64e8-102">IMetaDataEmit::SetTypeDefProps Method</span></span>
+<span data-ttu-id="b64e8-103">설정에 대 한 이전 호출에서 정의 된 형식 기능의 [imetadataemit:: Definetypedef](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definetypedef-method.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="b64e8-103">Sets features of a type defined by a prior call to [IMetaDataEmit::DefineTypeDef](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definetypedef-method.md).</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="d0751-104">구문</span><span class="sxs-lookup"><span data-stu-id="d0751-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="b64e8-104">구문</span><span class="sxs-lookup"><span data-stu-id="b64e8-104">Syntax</span></span>  
   
 ```  
 HRESULT SetTypeDefProps (  
@@ -38,28 +38,29 @@ HRESULT SetTypeDefProps (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="d0751-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="d0751-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="b64e8-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="b64e8-105">Parameters</span></span>  
  `td`  
- <span data-ttu-id="d0751-106">[in] `mdTypeDef` 토큰에 대 한 원래 호출에서 얻은 [imetadataemit:: Definetypedef](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definetypedef-method.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="d0751-106">[in] An `mdTypeDef` token obtained from original call to [IMetaDataEmit::DefineTypeDef](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definetypedef-method.md).</span></span>  
+ <span data-ttu-id="b64e8-106">[in] `mdTypeDef` 토큰에 대 한 원래 호출에서 얻은 [imetadataemit:: Definetypedef](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definetypedef-method.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="b64e8-106">[in] An `mdTypeDef` token obtained from original call to [IMetaDataEmit::DefineTypeDef](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definetypedef-method.md).</span></span>  
   
  `dwTypeDefFlags`  
- <span data-ttu-id="d0751-107">[in] `TypeDef` 특성입니다.</span><span class="sxs-lookup"><span data-stu-id="d0751-107">[in] `TypeDef` attributes.</span></span> <span data-ttu-id="d0751-108">이 비트 마스크의 `CorTypeAttr` 값입니다.</span><span class="sxs-lookup"><span data-stu-id="d0751-108">This is a bitmask of `CorTypeAttr` values.</span></span>  
+ <span data-ttu-id="b64e8-107">[in] `TypeDef` 특성입니다.</span><span class="sxs-lookup"><span data-stu-id="b64e8-107">[in] `TypeDef` attributes.</span></span> <span data-ttu-id="b64e8-108">이 비트 마스크의 `CorTypeAttr` 값입니다.</span><span class="sxs-lookup"><span data-stu-id="b64e8-108">This is a bitmask of `CorTypeAttr` values.</span></span>  
   
  `tkExtends`  
- <span data-ttu-id="d0751-109">[in] `mdToken` 기본 클래스입니다.</span><span class="sxs-lookup"><span data-stu-id="d0751-109">[in] The `mdToken` of the base class.</span></span> <span data-ttu-id="d0751-110">에 대 한 이전 호출에서 가져온 [imetadataemit:: Defineimporttype](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineimporttype-method.md), 또는 `null`합니다.</span><span class="sxs-lookup"><span data-stu-id="d0751-110">Obtained from a previous call to [IMetaDataEmit::DefineImportType](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineimporttype-method.md), or `null`.</span></span>  
+ <span data-ttu-id="b64e8-109">[in] `mdToken` 기본 클래스입니다.</span><span class="sxs-lookup"><span data-stu-id="b64e8-109">[in] The `mdToken` of the base class.</span></span> <span data-ttu-id="b64e8-110">에 대 한 이전 호출에서 가져온 [imetadataemit:: Defineimporttype](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineimporttype-method.md), 또는 `null`합니다.</span><span class="sxs-lookup"><span data-stu-id="b64e8-110">Obtained from a previous call to [IMetaDataEmit::DefineImportType](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineimporttype-method.md), or `null`.</span></span>  
   
  `rtkImplements[]`  
- <span data-ttu-id="d0751-111">[in] 이 형식이 구현 하는 인터페이스에 대 한 토큰의 배열입니다.</span><span class="sxs-lookup"><span data-stu-id="d0751-111">[in] An array of tokens for the interfaces that this type implements.</span></span> <span data-ttu-id="d0751-112">이러한 `mdTypeRef` 를 사용 하 여 토큰을 가져오는 [imetadataemit:: Defineimporttype](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineimporttype-method.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="d0751-112">These `mdTypeRef` tokens are obtained using [IMetaDataEmit::DefineImportType](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineimporttype-method.md).</span></span> <span data-ttu-id="d0751-113">배열의 마지막 요소 여야 합니다 `mdTokenNil`합니다.</span><span class="sxs-lookup"><span data-stu-id="d0751-113">The last element of the array is must be `mdTokenNil`.</span></span>  
+ <span data-ttu-id="b64e8-111">[in] 이 형식이 구현 하는 인터페이스에 대 한 토큰의 배열입니다.</span><span class="sxs-lookup"><span data-stu-id="b64e8-111">[in] An array of tokens for the interfaces that this type implements.</span></span> <span data-ttu-id="b64e8-112">이러한 `mdTypeRef` 를 사용 하 여 토큰을 가져오는 [imetadataemit:: Defineimporttype](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineimporttype-method.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="b64e8-112">These `mdTypeRef` tokens are obtained using [IMetaDataEmit::DefineImportType](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineimporttype-method.md).</span></span> <span data-ttu-id="b64e8-113">배열의 마지막 요소 여야 합니다 `mdTokenNil`합니다.</span><span class="sxs-lookup"><span data-stu-id="b64e8-113">The last element of the array is must be `mdTokenNil`.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="d0751-114">요구 사항</span><span class="sxs-lookup"><span data-stu-id="d0751-114">Requirements</span></span>  
- <span data-ttu-id="d0751-115">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="d0751-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="b64e8-114">요구 사항</span><span class="sxs-lookup"><span data-stu-id="b64e8-114">Requirements</span></span>  
+ <span data-ttu-id="b64e8-115">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="b64e8-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="d0751-116">**헤더:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="d0751-116">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="b64e8-116">**헤더:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="b64e8-116">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="d0751-117">**라이브러리:** MSCorEE.dll에서 리소스로 사용</span><span class="sxs-lookup"><span data-stu-id="d0751-117">**Library:** Used as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="b64e8-117">**라이브러리:** MSCorEE.dll에서 리소스로 사용</span><span class="sxs-lookup"><span data-stu-id="b64e8-117">**Library:** Used as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="d0751-118">**.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="d0751-118">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ **<span data-ttu-id="b64e8-118">.NET Framework 버전:</span><span class="sxs-lookup"><span data-stu-id="b64e8-118">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="d0751-119">참고자료</span><span class="sxs-lookup"><span data-stu-id="d0751-119">See also</span></span>
-- [<span data-ttu-id="d0751-120">IMetaDataEmit 인터페이스</span><span class="sxs-lookup"><span data-stu-id="d0751-120">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
-- [<span data-ttu-id="d0751-121">IMetaDataEmit2 인터페이스</span><span class="sxs-lookup"><span data-stu-id="d0751-121">IMetaDataEmit2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+## <a name="see-also"></a><span data-ttu-id="b64e8-119">참고자료</span><span class="sxs-lookup"><span data-stu-id="b64e8-119">See also</span></span>
+
+- [<span data-ttu-id="b64e8-120">IMetaDataEmit 인터페이스</span><span class="sxs-lookup"><span data-stu-id="b64e8-120">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
+- [<span data-ttu-id="b64e8-121">IMetaDataEmit2 인터페이스</span><span class="sxs-lookup"><span data-stu-id="b64e8-121">IMetaDataEmit2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

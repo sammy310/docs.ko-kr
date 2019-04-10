@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 26e6efff403f7fa10e1d96ffb3bf0f4b9ab3a96d
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 28b240159c36b03b2c476f56f7e6ad7b33f20649
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57465857"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59142351"
 ---
-# <a name="isymunmanagedreader2getmethodsindocument-method"></a><span data-ttu-id="8e367-102">ISymUnmanagedReader2::GetMethodsInDocument 메서드</span><span class="sxs-lookup"><span data-stu-id="8e367-102">ISymUnmanagedReader2::GetMethodsInDocument Method</span></span>
-<span data-ttu-id="8e367-103">제공 된 문서의 줄 정보가 있는 모든 메서드를 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="8e367-103">Gets every method that has line information in the provided document.</span></span>  
+# <a name="isymunmanagedreader2getmethodsindocument-method"></a><span data-ttu-id="15c43-102">ISymUnmanagedReader2::GetMethodsInDocument 메서드</span><span class="sxs-lookup"><span data-stu-id="15c43-102">ISymUnmanagedReader2::GetMethodsInDocument Method</span></span>
+<span data-ttu-id="15c43-103">제공 된 문서의 줄 정보가 있는 모든 메서드를 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="15c43-103">Gets every method that has line information in the provided document.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="8e367-104">구문</span><span class="sxs-lookup"><span data-stu-id="8e367-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="15c43-104">구문</span><span class="sxs-lookup"><span data-stu-id="15c43-104">Syntax</span></span>  
   
 ```  
 HRESULT GetMethodsInDocument(  
@@ -38,24 +38,25 @@ HRESULT GetMethodsInDocument(
         length_is(*pcMethod)] ISymUnmanagedMethod* pRetVal[]);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="8e367-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="8e367-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="15c43-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="15c43-105">Parameters</span></span>  
  `document`  
- <span data-ttu-id="8e367-106">[in] 문서에 대 한 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="8e367-106">[in] A pointer to the document.</span></span>  
+ <span data-ttu-id="15c43-106">[in] 문서에 대 한 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="15c43-106">[in] A pointer to the document.</span></span>  
   
  `cMethod`  
- <span data-ttu-id="8e367-107">[in] A `ULONG32` 의 크기를 나타내는 `pRetVal` 배열입니다.</span><span class="sxs-lookup"><span data-stu-id="8e367-107">[in] A `ULONG32` that indicates the size of the  `pRetVal` array.</span></span>  
+ <span data-ttu-id="15c43-107">[in] A `ULONG32` 의 크기를 나타내는 `pRetVal` 배열입니다.</span><span class="sxs-lookup"><span data-stu-id="15c43-107">[in] A `ULONG32` that indicates the size of the  `pRetVal` array.</span></span>  
   
  `pcMethod`  
- <span data-ttu-id="8e367-108">[out] 에 대 한 포인터를 `ULONG32` 메서드를 포함 하는 데 필요한 버퍼의 크기를 받는 합니다.</span><span class="sxs-lookup"><span data-stu-id="8e367-108">[out] A pointer to a `ULONG32` that receives the size of the buffer required to contain the methods.</span></span>  
+ <span data-ttu-id="15c43-108">[out] 에 대 한 포인터를 `ULONG32` 메서드를 포함 하는 데 필요한 버퍼의 크기를 받는 합니다.</span><span class="sxs-lookup"><span data-stu-id="15c43-108">[out] A pointer to a `ULONG32` that receives the size of the buffer required to contain the methods.</span></span>  
   
  `pRetVal`  
- <span data-ttu-id="8e367-109">[out] 메서드를 수신 하는 버퍼에 대 한 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="8e367-109">[out] A pointer to the buffer that receives the methods.</span></span>  
+ <span data-ttu-id="15c43-109">[out] 메서드를 수신 하는 버퍼에 대 한 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="15c43-109">[out] A pointer to the buffer that receives the methods.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="8e367-110">반환 값</span><span class="sxs-lookup"><span data-stu-id="8e367-110">Return Value</span></span>  
- <span data-ttu-id="8e367-111">메서드가 성공 하면 s_ok이 고 그렇지 않으면 E_FAIL 또는 일부 다른 오류 코드입니다.</span><span class="sxs-lookup"><span data-stu-id="8e367-111">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="15c43-110">반환 값</span><span class="sxs-lookup"><span data-stu-id="15c43-110">Return Value</span></span>  
+ <span data-ttu-id="15c43-111">메서드가 성공 하면 s_ok이 고 그렇지 않으면 E_FAIL 또는 일부 다른 오류 코드입니다.</span><span class="sxs-lookup"><span data-stu-id="15c43-111">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="8e367-112">요구 사항</span><span class="sxs-lookup"><span data-stu-id="8e367-112">Requirements</span></span>  
- <span data-ttu-id="8e367-113">**헤더:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="8e367-113">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="15c43-112">요구 사항</span><span class="sxs-lookup"><span data-stu-id="15c43-112">Requirements</span></span>  
+ <span data-ttu-id="15c43-113">**헤더:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="15c43-113">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="8e367-114">참고자료</span><span class="sxs-lookup"><span data-stu-id="8e367-114">See also</span></span>
-- [<span data-ttu-id="8e367-115">ISymUnmanagedReader2 인터페이스</span><span class="sxs-lookup"><span data-stu-id="8e367-115">ISymUnmanagedReader2 Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader2-interface.md)
+## <a name="see-also"></a><span data-ttu-id="15c43-114">참고자료</span><span class="sxs-lookup"><span data-stu-id="15c43-114">See also</span></span>
+
+- [<span data-ttu-id="15c43-115">ISymUnmanagedReader2 인터페이스</span><span class="sxs-lookup"><span data-stu-id="15c43-115">ISymUnmanagedReader2 Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader2-interface.md)

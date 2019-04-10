@@ -8,27 +8,28 @@ helpviewer_keywords:
 - rendering support with Visual objects [WPF]
 - visual layer [WPF]
 ms.assetid: ac550423-60a3-43e6-a0bc-d65ef026e0cb
-ms.openlocfilehash: 0328b5da837fa11a6c2b7dba9ae761a1e88729bb
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: f41f9cf2b6deb30f5f1960cfab6e898f7032901e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57376935"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59142690"
 ---
-# <a name="visual-layer-programming-how-to-topics"></a><span data-ttu-id="0c30c-102">시각적 계층 프로그래밍 방법 항목</span><span class="sxs-lookup"><span data-stu-id="0c30c-102">Visual Layer Programming How-to Topics</span></span>
-<span data-ttu-id="0c30c-103">이 섹션의에서 항목에서는 컴퍼지션 적중 테스트 및 하위 수준에 대 한 시각적 계층을 사용 하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="0c30c-103">The topics in this section demonstrate how to use the visual layer for hit-testing and low-level composition.</span></span>  
+# <a name="visual-layer-programming-how-to-topics"></a><span data-ttu-id="c0140-102">시각적 계층 프로그래밍 방법 항목</span><span class="sxs-lookup"><span data-stu-id="c0140-102">Visual Layer Programming How-to Topics</span></span>
+<span data-ttu-id="c0140-103">이 섹션의에서 항목에서는 컴퍼지션 적중 테스트 및 하위 수준에 대 한 시각적 계층을 사용 하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="c0140-103">The topics in this section demonstrate how to use the visual layer for hit-testing and low-level composition.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="0c30c-104">섹션 내용</span><span class="sxs-lookup"><span data-stu-id="0c30c-104">In This Section</span></span>  
- [<span data-ttu-id="0c30c-105">시각적 요소의 오프셋 가져오기</span><span class="sxs-lookup"><span data-stu-id="0c30c-105">Get the Offset of a Visual</span></span>](how-to-get-the-offset-of-a-visual.md)  
- [<span data-ttu-id="0c30c-106">시각적 요소의 그리기 콘텐츠 열거</span><span class="sxs-lookup"><span data-stu-id="0c30c-106">Enumerate Drawing Content of a Visual</span></span>](how-to-enumerate-drawing-content-of-a-visual.md)  
- [<span data-ttu-id="0c30c-107">시각적 요소의 기하 도형 적중 테스트</span><span class="sxs-lookup"><span data-stu-id="0c30c-107">Hit Test Geometry in a Visual</span></span>](how-to-hit-test-geometry-in-a-visual.md)  
- [<span data-ttu-id="0c30c-108">기하 도형을 매개 변수로 사용하여 적중 테스트</span><span class="sxs-lookup"><span data-stu-id="0c30c-108">Hit Test Using Geometry as a Parameter</span></span>](how-to-hit-test-using-geometry-as-a-parameter.md)  
- [<span data-ttu-id="0c30c-109">Win32 호스트 컨테이너를 사용하여 적중 테스트</span><span class="sxs-lookup"><span data-stu-id="0c30c-109">Hit Test Using a Win32 Host Container</span></span>](how-to-hit-test-using-a-win32-host-container.md)  
- [<span data-ttu-id="0c30c-110">CompositionTarget을 사용하여 프레임별 간격에 렌더링</span><span class="sxs-lookup"><span data-stu-id="0c30c-110">Render on a Per Frame Interval Using CompositionTarget</span></span>](how-to-render-on-a-per-frame-interval-using-compositiontarget.md)  
+## <a name="in-this-section"></a><span data-ttu-id="c0140-104">섹션 내용</span><span class="sxs-lookup"><span data-stu-id="c0140-104">In This Section</span></span>  
+ [<span data-ttu-id="c0140-105">시각적 개체의 오프셋 가져오기</span><span class="sxs-lookup"><span data-stu-id="c0140-105">Get the Offset of a Visual</span></span>](how-to-get-the-offset-of-a-visual.md)  
+ [<span data-ttu-id="c0140-106">시각적 개체의 그리기 콘텐츠 열거</span><span class="sxs-lookup"><span data-stu-id="c0140-106">Enumerate Drawing Content of a Visual</span></span>](how-to-enumerate-drawing-content-of-a-visual.md)  
+ [<span data-ttu-id="c0140-107">시각적 개체의 기하 도형 적중 테스트</span><span class="sxs-lookup"><span data-stu-id="c0140-107">Hit Test Geometry in a Visual</span></span>](how-to-hit-test-geometry-in-a-visual.md)  
+ [<span data-ttu-id="c0140-108">기하 도형을 매개 변수로 사용하여 적중 테스트</span><span class="sxs-lookup"><span data-stu-id="c0140-108">Hit Test Using Geometry as a Parameter</span></span>](how-to-hit-test-using-geometry-as-a-parameter.md)  
+ [<span data-ttu-id="c0140-109">Win32 호스트 컨테이너를 사용하여 적중 테스트</span><span class="sxs-lookup"><span data-stu-id="c0140-109">Hit Test Using a Win32 Host Container</span></span>](how-to-hit-test-using-a-win32-host-container.md)  
+ [<span data-ttu-id="c0140-110">CompositionTarget을 사용하여 프레임별 간격에 렌더링</span><span class="sxs-lookup"><span data-stu-id="c0140-110">Render on a Per Frame Interval Using CompositionTarget</span></span>](how-to-render-on-a-per-frame-interval-using-compositiontarget.md)  
   
-## <a name="see-also"></a><span data-ttu-id="0c30c-111">참고자료</span><span class="sxs-lookup"><span data-stu-id="0c30c-111">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="c0140-111">참고자료</span><span class="sxs-lookup"><span data-stu-id="c0140-111">See also</span></span>
+
 - <xref:System.Windows.Media.Visual>
 - <xref:System.Windows.Media.VisualTreeHelper>
 - <xref:System.Windows.Media.DrawingVisual>
-- [<span data-ttu-id="0c30c-112">WPF 그래픽 렌더링 개요</span><span class="sxs-lookup"><span data-stu-id="0c30c-112">WPF Graphics Rendering Overview</span></span>](wpf-graphics-rendering-overview.md)
-- [<span data-ttu-id="0c30c-113">그래픽 및 멀티미디어</span><span class="sxs-lookup"><span data-stu-id="0c30c-113">Graphics and Multimedia</span></span>](index.md)
+- [<span data-ttu-id="c0140-112">WPF 그래픽 렌더링 개요</span><span class="sxs-lookup"><span data-stu-id="c0140-112">WPF Graphics Rendering Overview</span></span>](wpf-graphics-rendering-overview.md)
+- [<span data-ttu-id="c0140-113">그래픽 및 멀티미디어</span><span class="sxs-lookup"><span data-stu-id="c0140-113">Graphics and Multimedia</span></span>](index.md)

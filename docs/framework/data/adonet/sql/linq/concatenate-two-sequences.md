@@ -5,32 +5,33 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 76767e7c-0607-4e1d-9ca2-a94f311f45eb
-ms.openlocfilehash: 831905ca5a712bcb80d5bab1aef61a81d2ade1b2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a2f2510cb334f4e22a7b0c6015a0a93b4dc11579
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54734280"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59142781"
 ---
-# <a name="concatenate-two-sequences"></a><span data-ttu-id="0de23-102">두 시퀀스 연결</span><span class="sxs-lookup"><span data-stu-id="0de23-102">Concatenate Two Sequences</span></span>
-<span data-ttu-id="0de23-103"><xref:System.Linq.Queryable.Concat%2A> 연산자를 사용하여 두 시퀀스를 연결합니다.</span><span class="sxs-lookup"><span data-stu-id="0de23-103">Use the <xref:System.Linq.Queryable.Concat%2A> operator to concatenate two sequences.</span></span>  
+# <a name="concatenate-two-sequences"></a><span data-ttu-id="02bfe-102">두 시퀀스 연결</span><span class="sxs-lookup"><span data-stu-id="02bfe-102">Concatenate Two Sequences</span></span>
+<span data-ttu-id="02bfe-103"><xref:System.Linq.Queryable.Concat%2A> 연산자를 사용하여 두 시퀀스를 연결합니다.</span><span class="sxs-lookup"><span data-stu-id="02bfe-103">Use the <xref:System.Linq.Queryable.Concat%2A> operator to concatenate two sequences.</span></span>  
   
- <span data-ttu-id="0de23-104"><xref:System.Linq.Queryable.Concat%2A> 연산자는 수신자와 인수의 순서가 동일하게 정렬된 다중 집합에 대해 정의되어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="0de23-104">The <xref:System.Linq.Queryable.Concat%2A> operator is defined for ordered multisets where the orders of the receiver and the argument are the same.</span></span>  
+ <span data-ttu-id="02bfe-104"><xref:System.Linq.Queryable.Concat%2A> 연산자는 수신자와 인수의 순서가 동일하게 정렬된 다중 집합에 대해 정의되어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="02bfe-104">The <xref:System.Linq.Queryable.Concat%2A> operator is defined for ordered multisets where the orders of the receiver and the argument are the same.</span></span>  
   
- <span data-ttu-id="0de23-105">SQL의 정렬은 결과 생성 전에 수행되는 최종 단계입니다.</span><span class="sxs-lookup"><span data-stu-id="0de23-105">Ordering in SQL is the final step before results are produced.</span></span> <span data-ttu-id="0de23-106">이러한 이유로 인해 <xref:System.Linq.Queryable.Concat%2A> 연산자는 `UNION ALL`을 사용하여 구현되며 해당 인수의 순서를 유지하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="0de23-106">For this reason, the <xref:System.Linq.Queryable.Concat%2A> operator is implemented by using `UNION ALL` and does not preserve the order of its arguments.</span></span> <span data-ttu-id="0de23-107">결과에 정렬을 올바르게 하려면 결과를 명시적으로 정렬해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="0de23-107">To make sure ordering is correct in the results, make sure to explicitly order the results.</span></span>  
+ <span data-ttu-id="02bfe-105">SQL의 정렬은 결과 생성 전에 수행되는 최종 단계입니다.</span><span class="sxs-lookup"><span data-stu-id="02bfe-105">Ordering in SQL is the final step before results are produced.</span></span> <span data-ttu-id="02bfe-106">이러한 이유로 인해 <xref:System.Linq.Queryable.Concat%2A> 연산자는 `UNION ALL`을 사용하여 구현되며 해당 인수의 순서를 유지하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="02bfe-106">For this reason, the <xref:System.Linq.Queryable.Concat%2A> operator is implemented by using `UNION ALL` and does not preserve the order of its arguments.</span></span> <span data-ttu-id="02bfe-107">결과에 정렬을 올바르게 하려면 결과를 명시적으로 정렬해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="02bfe-107">To make sure ordering is correct in the results, make sure to explicitly order the results.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="0de23-108">예제</span><span class="sxs-lookup"><span data-stu-id="0de23-108">Example</span></span>  
- <span data-ttu-id="0de23-109">이 예제에서는 <xref:System.Linq.Queryable.Concat%2A>을 사용하여 모든 `Customer`와 `Employee`에 대한 전화 번호 및 팩스 번호의 시퀀스를 반환합니다.</span><span class="sxs-lookup"><span data-stu-id="0de23-109">This example uses <xref:System.Linq.Queryable.Concat%2A> to return a sequence of all `Customer` and `Employee` telephone and fax numbers.</span></span>  
+## <a name="example"></a><span data-ttu-id="02bfe-108">예제</span><span class="sxs-lookup"><span data-stu-id="02bfe-108">Example</span></span>  
+ <span data-ttu-id="02bfe-109">이 예제에서는 <xref:System.Linq.Queryable.Concat%2A>을 사용하여 모든 `Customer`와 `Employee`에 대한 전화 번호 및 팩스 번호의 시퀀스를 반환합니다.</span><span class="sxs-lookup"><span data-stu-id="02bfe-109">This example uses <xref:System.Linq.Queryable.Concat%2A> to return a sequence of all `Customer` and `Employee` telephone and fax numbers.</span></span>  
   
  [!code-csharp[DLinqQueryExamples#39](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryExamples/cs/Program.cs#39)]
  [!code-vb[DLinqQueryExamples#39](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#39)]  
   
-## <a name="example"></a><span data-ttu-id="0de23-110">예제</span><span class="sxs-lookup"><span data-stu-id="0de23-110">Example</span></span>  
- <span data-ttu-id="0de23-111">이 예제에서는 <xref:System.Linq.Queryable.Concat%2A>을 사용하여 모든 `Customer`와 `Employee`에 대한 이름 및 전화 번호 매핑의 시퀀스를 반환합니다.</span><span class="sxs-lookup"><span data-stu-id="0de23-111">This example uses <xref:System.Linq.Queryable.Concat%2A> to return a sequence of all `Customer` and `Employee` name and telephone number mappings.</span></span>  
+## <a name="example"></a><span data-ttu-id="02bfe-110">예제</span><span class="sxs-lookup"><span data-stu-id="02bfe-110">Example</span></span>  
+ <span data-ttu-id="02bfe-111">이 예제에서는 <xref:System.Linq.Queryable.Concat%2A>을 사용하여 모든 `Customer`와 `Employee`에 대한 이름 및 전화 번호 매핑의 시퀀스를 반환합니다.</span><span class="sxs-lookup"><span data-stu-id="02bfe-111">This example uses <xref:System.Linq.Queryable.Concat%2A> to return a sequence of all `Customer` and `Employee` name and telephone number mappings.</span></span>  
   
  [!code-csharp[DLinqQueryExamples#40](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryExamples/cs/Program.cs#40)]
  [!code-vb[DLinqQueryExamples#40](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#40)]  
   
-## <a name="see-also"></a><span data-ttu-id="0de23-112">참고자료</span><span class="sxs-lookup"><span data-stu-id="0de23-112">See also</span></span>
-- [<span data-ttu-id="0de23-113">쿼리 예제</span><span class="sxs-lookup"><span data-stu-id="0de23-113">Query Examples</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/query-examples.md)
-- [<span data-ttu-id="0de23-114">표준 쿼리 연산자 변환</span><span class="sxs-lookup"><span data-stu-id="0de23-114">Standard Query Operator Translation</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/standard-query-operator-translation.md)
+## <a name="see-also"></a><span data-ttu-id="02bfe-112">참고자료</span><span class="sxs-lookup"><span data-stu-id="02bfe-112">See also</span></span>
+
+- [<span data-ttu-id="02bfe-113">쿼리 예제</span><span class="sxs-lookup"><span data-stu-id="02bfe-113">Query Examples</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/query-examples.md)
+- [<span data-ttu-id="02bfe-114">표준 쿼리 연산자 변환</span><span class="sxs-lookup"><span data-stu-id="02bfe-114">Standard Query Operator Translation</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/standard-query-operator-translation.md)

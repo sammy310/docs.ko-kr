@@ -1,38 +1,39 @@
 ---
-title: '방법: Popup에 애니메이션 효과 주기'
+title: '방법: 팝업에 애니메이션 효과 주기'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Popup control [WPF], animating
 - animation [WPF], Popup controls
 ms.assetid: acaa2a0a-6137-4efd-9cd1-75ece222e390
-ms.openlocfilehash: ed5edf298e59d6a9adddc03fc21de1900c7ee8e9
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: b70d9c4cb1bca26a6c77d3a7c50add517ca8ef92
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57372843"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59150113"
 ---
-# <a name="how-to-animate-a-popup"></a><span data-ttu-id="1a534-102">방법: Popup에 애니메이션 효과 주기</span><span class="sxs-lookup"><span data-stu-id="1a534-102">How to: Animate a Popup</span></span>
-<span data-ttu-id="1a534-103">두 가지 방법으로 애니메이션 효과를 보여 주는이 예제는 <xref:System.Windows.Controls.Primitives.Popup> 제어 합니다.</span><span class="sxs-lookup"><span data-stu-id="1a534-103">This example shows two ways to animate a <xref:System.Windows.Controls.Primitives.Popup> control.</span></span>  
+# <a name="how-to-animate-a-popup"></a><span data-ttu-id="d4ef1-102">방법: 팝업에 애니메이션 효과 주기</span><span class="sxs-lookup"><span data-stu-id="d4ef1-102">How to: Animate a Popup</span></span>
+<span data-ttu-id="d4ef1-103">두 가지 방법으로 애니메이션 효과를 보여 주는이 예제는 <xref:System.Windows.Controls.Primitives.Popup> 제어 합니다.</span><span class="sxs-lookup"><span data-stu-id="d4ef1-103">This example shows two ways to animate a <xref:System.Windows.Controls.Primitives.Popup> control.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="1a534-104">예제</span><span class="sxs-lookup"><span data-stu-id="1a534-104">Example</span></span>  
- <span data-ttu-id="1a534-105">다음 예제에서는 합니다 <xref:System.Windows.Controls.Primitives.PopupAnimation> 속성의 값을 <xref:System.Windows.Controls.Primitives.PopupAnimation.Slide>, 있어는 <xref:System.Windows.Controls.Primitives.Popup> "슬라이드-in"으로 표시 되는 경우.</span><span class="sxs-lookup"><span data-stu-id="1a534-105">The following example sets the <xref:System.Windows.Controls.Primitives.PopupAnimation> property to a value of <xref:System.Windows.Controls.Primitives.PopupAnimation.Slide>, which causes the <xref:System.Windows.Controls.Primitives.Popup> to "slide-in" when it appears.</span></span>  
+## <a name="example"></a><span data-ttu-id="d4ef1-104">예제</span><span class="sxs-lookup"><span data-stu-id="d4ef1-104">Example</span></span>  
+ <span data-ttu-id="d4ef1-105">다음 예제에서는 합니다 <xref:System.Windows.Controls.Primitives.PopupAnimation> 속성의 값을 <xref:System.Windows.Controls.Primitives.PopupAnimation.Slide>, 있어는 <xref:System.Windows.Controls.Primitives.Popup> "슬라이드-in"으로 표시 되는 경우.</span><span class="sxs-lookup"><span data-stu-id="d4ef1-105">The following example sets the <xref:System.Windows.Controls.Primitives.PopupAnimation> property to a value of <xref:System.Windows.Controls.Primitives.PopupAnimation.Slide>, which causes the <xref:System.Windows.Controls.Primitives.Popup> to "slide-in" when it appears.</span></span>  
   
- <span data-ttu-id="1a534-106">순환 하려면를 <xref:System.Windows.Controls.Primitives.Popup>, 지정 하는이 예제는 <xref:System.Windows.Media.RotateTransform> 에 <xref:System.Windows.UIElement.RenderTransform%2A> 속성을는 <xref:System.Windows.Controls.Canvas>의 자식 요소는는 <xref:System.Windows.Controls.Primitives.Popup>.</span><span class="sxs-lookup"><span data-stu-id="1a534-106">In order to rotate the <xref:System.Windows.Controls.Primitives.Popup>, this example assigns a <xref:System.Windows.Media.RotateTransform> to the <xref:System.Windows.UIElement.RenderTransform%2A> property on the <xref:System.Windows.Controls.Canvas>, which is the child element of the <xref:System.Windows.Controls.Primitives.Popup>.</span></span>  
+ <span data-ttu-id="d4ef1-106">순환 하려면를 <xref:System.Windows.Controls.Primitives.Popup>, 지정 하는이 예제는 <xref:System.Windows.Media.RotateTransform> 에 <xref:System.Windows.UIElement.RenderTransform%2A> 속성을는 <xref:System.Windows.Controls.Canvas>의 자식 요소는는 <xref:System.Windows.Controls.Primitives.Popup>.</span><span class="sxs-lookup"><span data-stu-id="d4ef1-106">In order to rotate the <xref:System.Windows.Controls.Primitives.Popup>, this example assigns a <xref:System.Windows.Media.RotateTransform> to the <xref:System.Windows.UIElement.RenderTransform%2A> property on the <xref:System.Windows.Controls.Canvas>, which is the child element of the <xref:System.Windows.Controls.Primitives.Popup>.</span></span>  
   
- <span data-ttu-id="1a534-107">제대로 작동 하려면 변환에 대 한 예제 설정 해야 합니다 <xref:System.Windows.Controls.Primitives.Popup.AllowsTransparency%2A> 속성을 `true`입니다.</span><span class="sxs-lookup"><span data-stu-id="1a534-107">For the transform to work correctly, the example must set the <xref:System.Windows.Controls.Primitives.Popup.AllowsTransparency%2A> property to `true`.</span></span> <span data-ttu-id="1a534-108">또한를 <xref:System.Windows.FrameworkElement.Margin%2A> 에 <xref:System.Windows.Controls.Canvas> 내용에 대 한 충분 한 공간을 지정 해야 합니다는 <xref:System.Windows.Controls.Primitives.Popup> 회전 하 합니다.</span><span class="sxs-lookup"><span data-stu-id="1a534-108">In addition, the <xref:System.Windows.FrameworkElement.Margin%2A> on the <xref:System.Windows.Controls.Canvas> content must specify enough space for the <xref:System.Windows.Controls.Primitives.Popup> to rotate.</span></span>  
+ <span data-ttu-id="d4ef1-107">제대로 작동 하려면 변환에 대 한 예제 설정 해야 합니다 <xref:System.Windows.Controls.Primitives.Popup.AllowsTransparency%2A> 속성을 `true`입니다.</span><span class="sxs-lookup"><span data-stu-id="d4ef1-107">For the transform to work correctly, the example must set the <xref:System.Windows.Controls.Primitives.Popup.AllowsTransparency%2A> property to `true`.</span></span> <span data-ttu-id="d4ef1-108">또한를 <xref:System.Windows.FrameworkElement.Margin%2A> 에 <xref:System.Windows.Controls.Canvas> 내용에 대 한 충분 한 공간을 지정 해야 합니다는 <xref:System.Windows.Controls.Primitives.Popup> 회전 하 합니다.</span><span class="sxs-lookup"><span data-stu-id="d4ef1-108">In addition, the <xref:System.Windows.FrameworkElement.Margin%2A> on the <xref:System.Windows.Controls.Canvas> content must specify enough space for the <xref:System.Windows.Controls.Primitives.Popup> to rotate.</span></span>  
   
  [!code-xaml[AnimatedPopup#RotateTransform2](~/samples/snippets/csharp/VS_Snippets_Wpf/AnimatedPopup/CS/Window1.xaml#rotatetransform2)]  
   
- <span data-ttu-id="1a534-109">다음 예제에서는 어떻게를 <xref:System.Windows.Controls.Primitives.ButtonBase.Click> 발생 하는 이벤트 때를 <xref:System.Windows.Controls.Button> 를 클릭 하면 트리거는 <xref:System.Windows.Media.Animation.Storyboard> 애니메이션을 시작 하는.</span><span class="sxs-lookup"><span data-stu-id="1a534-109">The following example shows how a <xref:System.Windows.Controls.Primitives.ButtonBase.Click> event, which occurs when a <xref:System.Windows.Controls.Button> is clicked, triggers the <xref:System.Windows.Media.Animation.Storyboard> that starts the animation.</span></span>  
+ <span data-ttu-id="d4ef1-109">다음 예제에서는 어떻게를 <xref:System.Windows.Controls.Primitives.ButtonBase.Click> 발생 하는 이벤트 때를 <xref:System.Windows.Controls.Button> 를 클릭 하면 트리거는 <xref:System.Windows.Media.Animation.Storyboard> 애니메이션을 시작 하는.</span><span class="sxs-lookup"><span data-stu-id="d4ef1-109">The following example shows how a <xref:System.Windows.Controls.Primitives.ButtonBase.Click> event, which occurs when a <xref:System.Windows.Controls.Button> is clicked, triggers the <xref:System.Windows.Media.Animation.Storyboard> that starts the animation.</span></span>  
   
  [!code-xaml[AnimatedPopup#RotateTransform1](~/samples/snippets/csharp/VS_Snippets_Wpf/AnimatedPopup/CS/Window1.xaml#rotatetransform1)]  
   
-## <a name="see-also"></a><span data-ttu-id="1a534-110">참고자료</span><span class="sxs-lookup"><span data-stu-id="1a534-110">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="d4ef1-110">참고자료</span><span class="sxs-lookup"><span data-stu-id="d4ef1-110">See also</span></span>
+
 - <xref:System.Windows.UIElement.RenderTransform%2A>
 - <xref:System.Windows.Controls.Primitives.BulletDecorator>
 - <xref:System.Windows.Media.RotateTransform>
 - <xref:System.Windows.Media.Animation.Storyboard>
 - <xref:System.Windows.Controls.Primitives.Popup>
-- [<span data-ttu-id="1a534-111">방법 항목</span><span class="sxs-lookup"><span data-stu-id="1a534-111">How-to Topics</span></span>](popup-how-to-topics.md)
-- [<span data-ttu-id="1a534-112">팝업 개요</span><span class="sxs-lookup"><span data-stu-id="1a534-112">Popup Overview</span></span>](popup-overview.md)
+- [<span data-ttu-id="d4ef1-111">방법 항목</span><span class="sxs-lookup"><span data-stu-id="d4ef1-111">How-to Topics</span></span>](popup-how-to-topics.md)
+- [<span data-ttu-id="d4ef1-112">Popup 개요</span><span class="sxs-lookup"><span data-stu-id="d4ef1-112">Popup Overview</span></span>](popup-overview.md)

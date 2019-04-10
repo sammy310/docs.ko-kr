@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a3fc0d59bfb8a5b5c41955b52ae3f2ea99fbc46e
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: d204ec29304fe0c4596950cd17c48d0c1d2ac616
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57502438"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59152622"
 ---
-# <a name="imetadatadispenserexfindassembly-method"></a><span data-ttu-id="e0e31-102">IMetaDataDispenserEx::FindAssembly 메서드</span><span class="sxs-lookup"><span data-stu-id="e0e31-102">IMetaDataDispenserEx::FindAssembly Method</span></span>
-<span data-ttu-id="e0e31-103">이 메서드가 구현되지 않았습니다.</span><span class="sxs-lookup"><span data-stu-id="e0e31-103">This method is not implemented.</span></span> <span data-ttu-id="e0e31-104">를 호출 하는 경우 E_NOTIMPL을 반환 합니다.</span><span class="sxs-lookup"><span data-stu-id="e0e31-104">If called, it returns E_NOTIMPL.</span></span>  
+# <a name="imetadatadispenserexfindassembly-method"></a><span data-ttu-id="b3e35-102">IMetaDataDispenserEx::FindAssembly 메서드</span><span class="sxs-lookup"><span data-stu-id="b3e35-102">IMetaDataDispenserEx::FindAssembly Method</span></span>
+<span data-ttu-id="b3e35-103">이 메서드가 구현되지 않았습니다.</span><span class="sxs-lookup"><span data-stu-id="b3e35-103">This method is not implemented.</span></span> <span data-ttu-id="b3e35-104">를 호출 하는 경우 E_NOTIMPL을 반환 합니다.</span><span class="sxs-lookup"><span data-stu-id="b3e35-104">If called, it returns E_NOTIMPL.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="e0e31-105">구문</span><span class="sxs-lookup"><span data-stu-id="e0e31-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="b3e35-105">구문</span><span class="sxs-lookup"><span data-stu-id="b3e35-105">Syntax</span></span>  
   
 ```  
 HRESULT FindAssembly(  
@@ -41,37 +41,38 @@ HRESULT FindAssembly(
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="e0e31-106">매개 변수</span><span class="sxs-lookup"><span data-stu-id="e0e31-106">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="b3e35-106">매개 변수</span><span class="sxs-lookup"><span data-stu-id="b3e35-106">Parameters</span></span>  
  `szAppBase`  
- <span data-ttu-id="e0e31-107">[in] 사용 되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="e0e31-107">[in] Not used.</span></span>  
+ <span data-ttu-id="b3e35-107">[in] 사용 되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="b3e35-107">[in] Not used.</span></span>  
   
  `szPrivateBin`  
- <span data-ttu-id="e0e31-108">[in] 사용 되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="e0e31-108">[in] Not used.</span></span>  
+ <span data-ttu-id="b3e35-108">[in] 사용 되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="b3e35-108">[in] Not used.</span></span>  
   
  `szGlobalBin`  
- <span data-ttu-id="e0e31-109">[in] 사용 되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="e0e31-109">[in] Not used.</span></span>  
+ <span data-ttu-id="b3e35-109">[in] 사용 되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="b3e35-109">[in] Not used.</span></span>  
   
  `szAssemblyName`  
- <span data-ttu-id="e0e31-110">[in] 어셈블리를 찾을 수입니다.</span><span class="sxs-lookup"><span data-stu-id="e0e31-110">[in] The assembly to be found.</span></span>  
+ <span data-ttu-id="b3e35-110">[in] 어셈블리를 찾을 수입니다.</span><span class="sxs-lookup"><span data-stu-id="b3e35-110">[in] The assembly to be found.</span></span>  
   
  `szName`  
- <span data-ttu-id="e0e31-111">[out] 어셈블리의 단순한 이름입니다.</span><span class="sxs-lookup"><span data-stu-id="e0e31-111">[out] The simple name of the assembly.</span></span>  
+ <span data-ttu-id="b3e35-111">[out] 어셈블리의 단순한 이름입니다.</span><span class="sxs-lookup"><span data-stu-id="b3e35-111">[out] The simple name of the assembly.</span></span>  
   
  `cchName`  
- <span data-ttu-id="e0e31-112">[in] 크기 (바이트)의 `szName`합니다.</span><span class="sxs-lookup"><span data-stu-id="e0e31-112">[in] The size, in bytes, of `szName`.</span></span>  
+ <span data-ttu-id="b3e35-112">[in] 크기 (바이트)의 `szName`합니다.</span><span class="sxs-lookup"><span data-stu-id="b3e35-112">[in] The size, in bytes, of `szName`.</span></span>  
   
  `pcName`  
- <span data-ttu-id="e0e31-113">[out] 에 실제로 반환 된 문자 수가 `szName`합니다.</span><span class="sxs-lookup"><span data-stu-id="e0e31-113">[out] The number of characters actually returned in `szName`.</span></span>  
+ <span data-ttu-id="b3e35-113">[out] 에 실제로 반환 된 문자 수가 `szName`합니다.</span><span class="sxs-lookup"><span data-stu-id="b3e35-113">[out] The number of characters actually returned in `szName`.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="e0e31-114">요구 사항</span><span class="sxs-lookup"><span data-stu-id="e0e31-114">Requirements</span></span>  
- <span data-ttu-id="e0e31-115">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="e0e31-115">**Platform:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="b3e35-114">요구 사항</span><span class="sxs-lookup"><span data-stu-id="b3e35-114">Requirements</span></span>  
+ <span data-ttu-id="b3e35-115">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="b3e35-115">**Platform:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="e0e31-116">**헤더:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="e0e31-116">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="b3e35-116">**헤더:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="b3e35-116">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="e0e31-117">**라이브러리:** MsCorEE.dll에서 리소스로 사용</span><span class="sxs-lookup"><span data-stu-id="e0e31-117">**Library:** Used as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="b3e35-117">**라이브러리:** MsCorEE.dll에서 리소스로 사용</span><span class="sxs-lookup"><span data-stu-id="b3e35-117">**Library:** Used as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="e0e31-118">**.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="e0e31-118">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ **<span data-ttu-id="b3e35-118">.NET Framework 버전:</span><span class="sxs-lookup"><span data-stu-id="b3e35-118">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="e0e31-119">참고자료</span><span class="sxs-lookup"><span data-stu-id="e0e31-119">See also</span></span>
-- [<span data-ttu-id="e0e31-120">IMetaDataDispenserEx 인터페이스</span><span class="sxs-lookup"><span data-stu-id="e0e31-120">IMetaDataDispenserEx Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenserex-interface.md)
-- [<span data-ttu-id="e0e31-121">IMetaDataDispenser 인터페이스</span><span class="sxs-lookup"><span data-stu-id="e0e31-121">IMetaDataDispenser Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-interface.md)
+## <a name="see-also"></a><span data-ttu-id="b3e35-119">참고자료</span><span class="sxs-lookup"><span data-stu-id="b3e35-119">See also</span></span>
+
+- [<span data-ttu-id="b3e35-120">IMetaDataDispenserEx 인터페이스</span><span class="sxs-lookup"><span data-stu-id="b3e35-120">IMetaDataDispenserEx Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenserex-interface.md)
+- [<span data-ttu-id="b3e35-121">IMetaDataDispenser 인터페이스</span><span class="sxs-lookup"><span data-stu-id="b3e35-121">IMetaDataDispenser Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-interface.md)

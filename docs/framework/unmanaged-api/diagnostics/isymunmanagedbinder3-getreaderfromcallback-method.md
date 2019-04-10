@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 50684c37e38161bb18a1e923db3e33acb8fabce7
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 9487cf89d87b5f373302dc49a08c4fabb719e746
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57492870"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59160773"
 ---
-# <a name="isymunmanagedbinder3getreaderfromcallback-method"></a><span data-ttu-id="1188a-102">ISymUnmanagedBinder3::GetReaderFromCallback 메서드</span><span class="sxs-lookup"><span data-stu-id="1188a-102">ISymUnmanagedBinder3::GetReaderFromCallback Method</span></span>
-<span data-ttu-id="1188a-103">구현 하거나 콜백을 통해 하거나 제공할 수 있습니다는 `IID_IDiaReadExeAtRVACallback` 또는 `IID_IDiaReadExeAtOffsetCallback` 메모리에서 디버그 디렉터리 정보를 얻을 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="1188a-103">Allows the user to implement or supply via callback either an `IID_IDiaReadExeAtRVACallback` or `IID_IDiaReadExeAtOffsetCallback` to obtain the debug directory information from memory.</span></span>  
+# <a name="isymunmanagedbinder3getreaderfromcallback-method"></a><span data-ttu-id="eb6e0-102">ISymUnmanagedBinder3::GetReaderFromCallback 메서드</span><span class="sxs-lookup"><span data-stu-id="eb6e0-102">ISymUnmanagedBinder3::GetReaderFromCallback Method</span></span>
+<span data-ttu-id="eb6e0-103">구현 하거나 콜백을 통해 하거나 제공할 수 있습니다는 `IID_IDiaReadExeAtRVACallback` 또는 `IID_IDiaReadExeAtOffsetCallback` 메모리에서 디버그 디렉터리 정보를 얻을 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="eb6e0-103">Allows the user to implement or supply via callback either an `IID_IDiaReadExeAtRVACallback` or `IID_IDiaReadExeAtOffsetCallback` to obtain the debug directory information from memory.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="1188a-104">구문</span><span class="sxs-lookup"><span data-stu-id="1188a-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="eb6e0-104">구문</span><span class="sxs-lookup"><span data-stu-id="eb6e0-104">Syntax</span></span>  
   
 ```  
 HRESULT GetReaderFromCallback(  
@@ -39,30 +39,31 @@ HRESULT GetReaderFromCallback(
     [out,retval] ISymUnmanagedReader  **pRetVal);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="1188a-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="1188a-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="eb6e0-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="eb6e0-105">Parameters</span></span>  
  `importer`  
- <span data-ttu-id="1188a-106">[in] 메타 데이터 가져오기 인터페이스 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="1188a-106">[in] A pointer to the metadata import interface.</span></span>  
+ <span data-ttu-id="eb6e0-106">[in] 메타 데이터 가져오기 인터페이스 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="eb6e0-106">[in] A pointer to the metadata import interface.</span></span>  
   
  `fileName`  
- <span data-ttu-id="1188a-107">[in] 파일 이름에 대 한 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="1188a-107">[in] A pointer to the file name.</span></span>  
+ <span data-ttu-id="eb6e0-107">[in] 파일 이름에 대 한 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="eb6e0-107">[in] A pointer to the file name.</span></span>  
   
  `searchPath`  
- <span data-ttu-id="1188a-108">[in] 검색 경로에 대 한 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="1188a-108">[in] A pointer to the search path.</span></span>  
+ <span data-ttu-id="eb6e0-108">[in] 검색 경로에 대 한 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="eb6e0-108">[in] A pointer to the search path.</span></span>  
   
  `searchPolicy`  
- <span data-ttu-id="1188a-109">[in] 값을 [CorSymSearchPolicyAttributes](../../../../docs/framework/unmanaged-api/diagnostics/corsymsearchpolicyattributes-enumeration.md) 기호 판독기를 검색할 때 사용 되는 정책을 지정 하는 열거형입니다.</span><span class="sxs-lookup"><span data-stu-id="1188a-109">[in] A value of the [CorSymSearchPolicyAttributes](../../../../docs/framework/unmanaged-api/diagnostics/corsymsearchpolicyattributes-enumeration.md) enumeration that specifies the policy to be used when doing a search for a symbol reader.</span></span>  
+ <span data-ttu-id="eb6e0-109">[in] 값을 [CorSymSearchPolicyAttributes](../../../../docs/framework/unmanaged-api/diagnostics/corsymsearchpolicyattributes-enumeration.md) 기호 판독기를 검색할 때 사용 되는 정책을 지정 하는 열거형입니다.</span><span class="sxs-lookup"><span data-stu-id="eb6e0-109">[in] A value of the [CorSymSearchPolicyAttributes](../../../../docs/framework/unmanaged-api/diagnostics/corsymsearchpolicyattributes-enumeration.md) enumeration that specifies the policy to be used when doing a search for a symbol reader.</span></span>  
   
  `callback`  
- <span data-ttu-id="1188a-110">[in] 콜백 함수에 대 한 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="1188a-110">[in] A pointer to the callback function.</span></span>  
+ <span data-ttu-id="eb6e0-110">[in] 콜백 함수에 대 한 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="eb6e0-110">[in] A pointer to the callback function.</span></span>  
   
  `pRetVal`  
- <span data-ttu-id="1188a-111">[out] 설정 된 포인터를 반환 [ISymUnmanagedReader](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md) 인터페이스입니다.</span><span class="sxs-lookup"><span data-stu-id="1188a-111">[out] A pointer that is set to the returned [ISymUnmanagedReader](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md) interface.</span></span>  
+ <span data-ttu-id="eb6e0-111">[out] 설정 된 포인터를 반환 [ISymUnmanagedReader](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md) 인터페이스입니다.</span><span class="sxs-lookup"><span data-stu-id="eb6e0-111">[out] A pointer that is set to the returned [ISymUnmanagedReader](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md) interface.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="1188a-112">반환 값</span><span class="sxs-lookup"><span data-stu-id="1188a-112">Return Value</span></span>  
- <span data-ttu-id="1188a-113">메서드가 성공 하면 s_ok이 고 그렇지 않으면 E_FAIL 또는 일부 다른 오류 코드입니다.</span><span class="sxs-lookup"><span data-stu-id="1188a-113">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="eb6e0-112">반환 값</span><span class="sxs-lookup"><span data-stu-id="eb6e0-112">Return Value</span></span>  
+ <span data-ttu-id="eb6e0-113">메서드가 성공 하면 s_ok이 고 그렇지 않으면 E_FAIL 또는 일부 다른 오류 코드입니다.</span><span class="sxs-lookup"><span data-stu-id="eb6e0-113">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="1188a-114">요구 사항</span><span class="sxs-lookup"><span data-stu-id="1188a-114">Requirements</span></span>  
- <span data-ttu-id="1188a-115">**헤더:** CorSym.idl</span><span class="sxs-lookup"><span data-stu-id="1188a-115">**Header:** CorSym.idl</span></span>  
+## <a name="requirements"></a><span data-ttu-id="eb6e0-114">요구 사항</span><span class="sxs-lookup"><span data-stu-id="eb6e0-114">Requirements</span></span>  
+ <span data-ttu-id="eb6e0-115">**헤더:** CorSym.idl</span><span class="sxs-lookup"><span data-stu-id="eb6e0-115">**Header:** CorSym.idl</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="1188a-116">참고자료</span><span class="sxs-lookup"><span data-stu-id="1188a-116">See also</span></span>
-- [<span data-ttu-id="1188a-117">ISymUnmanagedBinder3 인터페이스</span><span class="sxs-lookup"><span data-stu-id="1188a-117">ISymUnmanagedBinder3 Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder3-interface.md)
+## <a name="see-also"></a><span data-ttu-id="eb6e0-116">참고자료</span><span class="sxs-lookup"><span data-stu-id="eb6e0-116">See also</span></span>
+
+- [<span data-ttu-id="eb6e0-117">ISymUnmanagedBinder3 인터페이스</span><span class="sxs-lookup"><span data-stu-id="eb6e0-117">ISymUnmanagedBinder3 Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder3-interface.md)

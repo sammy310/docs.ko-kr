@@ -1,20 +1,20 @@
 ---
-title: '방법: 서비스 임의의 데이터를 허용 하는 WCF REST 프로그래밍 모델을 사용 하 여 만들기'
+title: '방법: WCF REST 프로그래밍 모델을 사용하여 임의의 데이터를 허용하는 서비스 만들기'
 ms.date: 03/30/2017
 ms.assetid: e566c15a-b600-4e4a-be3a-4af43e767dae
-ms.openlocfilehash: 8728afbe5ebfe31d619b311f521eb1012a0dc323
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: c03450c66cf8de14d6c638550a510a91593c45b6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54667000"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59144081"
 ---
-# <a name="how-to-create-a-service-that-accepts-arbitrary-data-using-the-wcf-rest-programming-model"></a><span data-ttu-id="fae10-102">방법: 서비스 임의의 데이터를 허용 하는 WCF REST 프로그래밍 모델을 사용 하 여 만들기</span><span class="sxs-lookup"><span data-stu-id="fae10-102">How to: Create a Service That Accepts Arbitrary Data using the WCF REST Programming Model</span></span>
-<span data-ttu-id="fae10-103">서비스 작업에서 데이터가 반환되는 방법을 개발자가 완전히 제어해야 하는 경우가 있습니다.</span><span class="sxs-lookup"><span data-stu-id="fae10-103">Sometimes developers must have full control of how data is returned from a service operation.</span></span> <span data-ttu-id="fae10-104">이 경우 데이터 형식에서 지원 되지 않습니다. byWCF 서비스 작업을 반환 해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="fae10-104">This is the case when a service operation must return data in a format not supported byWCF.</span></span> <span data-ttu-id="fae10-105">이 항목에서는 WCF REST 프로그래밍 모델을 사용 하 여 임의의 데이터를 받는 서비스를 만드는 것을 설명 합니다.</span><span class="sxs-lookup"><span data-stu-id="fae10-105">This topic discusses using the WCF REST Programming Model to create a service that receives arbitrary data.</span></span>  
+# <a name="how-to-create-a-service-that-accepts-arbitrary-data-using-the-wcf-rest-programming-model"></a><span data-ttu-id="fbc53-102">방법: WCF REST 프로그래밍 모델을 사용하여 임의의 데이터를 허용하는 서비스 만들기</span><span class="sxs-lookup"><span data-stu-id="fbc53-102">How to: Create a Service That Accepts Arbitrary Data using the WCF REST Programming Model</span></span>
+<span data-ttu-id="fbc53-103">서비스 작업에서 데이터가 반환되는 방법을 개발자가 완전히 제어해야 하는 경우가 있습니다.</span><span class="sxs-lookup"><span data-stu-id="fbc53-103">Sometimes developers must have full control of how data is returned from a service operation.</span></span> <span data-ttu-id="fbc53-104">이 경우 데이터 형식에서 지원 되지 않습니다. byWCF 서비스 작업을 반환 해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="fbc53-104">This is the case when a service operation must return data in a format not supported byWCF.</span></span> <span data-ttu-id="fbc53-105">이 항목에서는 WCF REST 프로그래밍 모델을 사용 하 여 임의의 데이터를 받는 서비스를 만드는 것을 설명 합니다.</span><span class="sxs-lookup"><span data-stu-id="fbc53-105">This topic discusses using the WCF REST Programming Model to create a service that receives arbitrary data.</span></span>  
   
-### <a name="to-implement-the-service-contract"></a><span data-ttu-id="fae10-106">서비스 계약을 구현하려면</span><span class="sxs-lookup"><span data-stu-id="fae10-106">To implement the service contract</span></span>  
+### <a name="to-implement-the-service-contract"></a><span data-ttu-id="fbc53-106">서비스 계약을 구현하려면</span><span class="sxs-lookup"><span data-stu-id="fbc53-106">To implement the service contract</span></span>  
   
-1.  <span data-ttu-id="fae10-107">서비스 계약을 정의합니다.</span><span class="sxs-lookup"><span data-stu-id="fae10-107">Define the service contract.</span></span> <span data-ttu-id="fae10-108">임의의 데이터를 받는 작업에는 <xref:System.IO.Stream> 형식의 매개 변수가 있어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="fae10-108">The operation that receives the arbitrary data must have a parameter of type <xref:System.IO.Stream>.</span></span> <span data-ttu-id="fae10-109">또한 이 매개 변수는 요청 본문에서 전달된 유일한 매개 변수여야 합니다.</span><span class="sxs-lookup"><span data-stu-id="fae10-109">In addition, this parameter must be the only parameter passed in the body of the request.</span></span> <span data-ttu-id="fae10-110">다음 예제에서 설명하는 작업은 파일 이름 매개 변수도 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="fae10-110">The operation described in this example also takes a filename parameter.</span></span> <span data-ttu-id="fae10-111">이 매개 변수는 요청 URL 내에서 전달됩니다.</span><span class="sxs-lookup"><span data-stu-id="fae10-111">This parameter is passed within the URL of the request.</span></span> <span data-ttu-id="fae10-112"><xref:System.UriTemplate>에서 <xref:System.ServiceModel.Web.WebInvokeAttribute>을 지정하여 URI 내에서 매개 변수가 전달되도록 지정할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="fae10-112">You can specify that a parameter is passed within the URL by specifying a <xref:System.UriTemplate> in the <xref:System.ServiceModel.Web.WebInvokeAttribute>.</span></span> <span data-ttu-id="fae10-113">URI를 호출 하는 데이 경우이 메서드는 "UploadFile/Some-filename"에서 종료 합니다.</span><span class="sxs-lookup"><span data-stu-id="fae10-113">In this case the URI used to call this method ends in "UploadFile/Some-Filename".</span></span> <span data-ttu-id="fae10-114">URI 템플릿의 "{filename}" 부분은 작업을 호출 하는 데 사용 하는 URI 내에서 작업의 파일 이름 매개 변수가 전달 되도록 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="fae10-114">The "{filename}" portion of the URI template specifies that the filename parameter for the operation is passed within the URI used to call the operation.</span></span>  
+1.  <span data-ttu-id="fbc53-107">서비스 계약을 정의합니다.</span><span class="sxs-lookup"><span data-stu-id="fbc53-107">Define the service contract.</span></span> <span data-ttu-id="fbc53-108">임의의 데이터를 받는 작업에는 <xref:System.IO.Stream> 형식의 매개 변수가 있어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="fbc53-108">The operation that receives the arbitrary data must have a parameter of type <xref:System.IO.Stream>.</span></span> <span data-ttu-id="fbc53-109">또한 이 매개 변수는 요청 본문에서 전달된 유일한 매개 변수여야 합니다.</span><span class="sxs-lookup"><span data-stu-id="fbc53-109">In addition, this parameter must be the only parameter passed in the body of the request.</span></span> <span data-ttu-id="fbc53-110">다음 예제에서 설명하는 작업은 파일 이름 매개 변수도 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="fbc53-110">The operation described in this example also takes a filename parameter.</span></span> <span data-ttu-id="fbc53-111">이 매개 변수는 요청 URL 내에서 전달됩니다.</span><span class="sxs-lookup"><span data-stu-id="fbc53-111">This parameter is passed within the URL of the request.</span></span> <span data-ttu-id="fbc53-112"><xref:System.UriTemplate>에서 <xref:System.ServiceModel.Web.WebInvokeAttribute>을 지정하여 URI 내에서 매개 변수가 전달되도록 지정할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="fbc53-112">You can specify that a parameter is passed within the URL by specifying a <xref:System.UriTemplate> in the <xref:System.ServiceModel.Web.WebInvokeAttribute>.</span></span> <span data-ttu-id="fbc53-113">URI를 호출 하는 데이 경우이 메서드는 "UploadFile/Some-filename"에서 종료 합니다.</span><span class="sxs-lookup"><span data-stu-id="fbc53-113">In this case the URI used to call this method ends in "UploadFile/Some-Filename".</span></span> <span data-ttu-id="fbc53-114">URI 템플릿의 "{filename}" 부분은 작업을 호출 하는 데 사용 하는 URI 내에서 작업의 파일 이름 매개 변수가 전달 되도록 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="fbc53-114">The "{filename}" portion of the URI template specifies that the filename parameter for the operation is passed within the URI used to call the operation.</span></span>  
   
     ```csharp  
      [ServiceContract]  
@@ -25,7 +25,7 @@ ms.locfileid: "54667000"
     }  
     ```  
   
-2.  <span data-ttu-id="fae10-115">서비스 계약을 구현합니다.</span><span class="sxs-lookup"><span data-stu-id="fae10-115">Implement the service contract.</span></span> <span data-ttu-id="fae10-116">계약에는 스트림의 임의의 데이터 파일을 받는 `UploadFile`메서드만 있습니다.</span><span class="sxs-lookup"><span data-stu-id="fae10-116">The contract has only one method, `UploadFile` that receives a file of arbitrary data in a stream.</span></span> <span data-ttu-id="fae10-117">작업은 읽은 바이트 수를 계산하는 스트림을 읽고 나서 파일 이름과 읽은 바이트 수를 표시합니다.</span><span class="sxs-lookup"><span data-stu-id="fae10-117">The operation reads the stream counting the number of bytes read and then displays the filename and the number of bytes read.</span></span>  
+2.  <span data-ttu-id="fbc53-115">서비스 계약을 구현합니다.</span><span class="sxs-lookup"><span data-stu-id="fbc53-115">Implement the service contract.</span></span> <span data-ttu-id="fbc53-116">계약에는 스트림의 임의의 데이터 파일을 받는 `UploadFile`메서드만 있습니다.</span><span class="sxs-lookup"><span data-stu-id="fbc53-116">The contract has only one method, `UploadFile` that receives a file of arbitrary data in a stream.</span></span> <span data-ttu-id="fbc53-117">작업은 읽은 바이트 수를 계산하는 스트림을 읽고 나서 파일 이름과 읽은 바이트 수를 표시합니다.</span><span class="sxs-lookup"><span data-stu-id="fbc53-117">The operation reads the stream counting the number of bytes read and then displays the filename and the number of bytes read.</span></span>  
   
     ```csharp  
     public class RawDataService : IReceiveData  
@@ -44,9 +44,9 @@ ms.locfileid: "54667000"
     }  
     ```  
   
-### <a name="to-host-the-service"></a><span data-ttu-id="fae10-118">서비스를 호스트하려면</span><span class="sxs-lookup"><span data-stu-id="fae10-118">To host the service</span></span>  
+### <a name="to-host-the-service"></a><span data-ttu-id="fbc53-118">서비스를 호스트하려면</span><span class="sxs-lookup"><span data-stu-id="fbc53-118">To host the service</span></span>  
   
-1.  <span data-ttu-id="fae10-119">서비스를 호스트할 콘솔 응용 프로그램을 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="fae10-119">Create a console application to host the service.</span></span>  
+1.  <span data-ttu-id="fbc53-119">서비스를 호스트할 콘솔 응용 프로그램을 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="fbc53-119">Create a console application to host the service.</span></span>  
   
     ```csharp  
     class Program  
@@ -57,47 +57,47 @@ ms.locfileid: "54667000"
     }  
     ```  
   
-2.  <span data-ttu-id="fae10-120">`Main` 메서드 내에 서비스의 기본 주소를 저장할 변수를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="fae10-120">Create a variable to hold the base address for the service within the `Main` method.</span></span>  
+2.  <span data-ttu-id="fbc53-120">`Main` 메서드 내에 서비스의 기본 주소를 저장할 변수를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="fbc53-120">Create a variable to hold the base address for the service within the `Main` method.</span></span>  
   
     ```csharp  
     string baseAddress = "http://" + Environment.MachineName + ":8000/Service";  
     ```  
   
-3.  <span data-ttu-id="fae10-121">서비스 클래스 및 기본 주소를 지정하는 서비스에 대한 <xref:System.ServiceModel.ServiceHost> 인스턴스를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="fae10-121">Create a <xref:System.ServiceModel.ServiceHost> instance for the service that specifies the service class and the base address.</span></span>  
+3.  <span data-ttu-id="fbc53-121">서비스 클래스 및 기본 주소를 지정하는 서비스에 대한 <xref:System.ServiceModel.ServiceHost> 인스턴스를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="fbc53-121">Create a <xref:System.ServiceModel.ServiceHost> instance for the service that specifies the service class and the base address.</span></span>  
   
     ```csharp  
     ServiceHost host = new ServiceHost(typeof(RawDataService), new Uri(baseAddress));  
     ```  
   
-4.  <span data-ttu-id="fae10-122"><xref:System.ServiceModel.WebHttpBinding>및 <xref:System.ServiceModel.Description.WebHttpBehavior>계약을 지정하는 엔드포인트를 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="fae10-122">Add an endpoint that specifies the contract, <xref:System.ServiceModel.WebHttpBinding>, and <xref:System.ServiceModel.Description.WebHttpBehavior>.</span></span>  
+4.  <span data-ttu-id="fbc53-122"><xref:System.ServiceModel.WebHttpBinding>및 <xref:System.ServiceModel.Description.WebHttpBehavior>계약을 지정하는 엔드포인트를 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="fbc53-122">Add an endpoint that specifies the contract, <xref:System.ServiceModel.WebHttpBinding>, and <xref:System.ServiceModel.Description.WebHttpBehavior>.</span></span>  
   
     ```csharp  
     host.AddServiceEndpoint(typeof(IReceiveData), new WebHttpBinding(), "").Behaviors.Add(new WebHttpBehavior());  
     ```  
   
-5.  <span data-ttu-id="fae10-123">서비스 호스트를 엽니다.</span><span class="sxs-lookup"><span data-stu-id="fae10-123">Open the service host.</span></span> <span data-ttu-id="fae10-124">이제 서비스에서 요청을 받을 준비가 되었습니다.</span><span class="sxs-lookup"><span data-stu-id="fae10-124">The service is now ready to receive requests.</span></span>  
+5.  <span data-ttu-id="fbc53-123">서비스 호스트를 엽니다.</span><span class="sxs-lookup"><span data-stu-id="fbc53-123">Open the service host.</span></span> <span data-ttu-id="fbc53-124">이제 서비스에서 요청을 받을 준비가 되었습니다.</span><span class="sxs-lookup"><span data-stu-id="fbc53-124">The service is now ready to receive requests.</span></span>  
   
     ```csharp  
     host.Open();  
     Console.WriteLine("Host opened");  
     ```  
   
-### <a name="to-call-the-service-programmatically"></a><span data-ttu-id="fae10-125">서비스를 프로그래밍 방식으로 호출하려면</span><span class="sxs-lookup"><span data-stu-id="fae10-125">To call the service programmatically</span></span>  
+### <a name="to-call-the-service-programmatically"></a><span data-ttu-id="fbc53-125">서비스를 프로그래밍 방식으로 호출하려면</span><span class="sxs-lookup"><span data-stu-id="fbc53-125">To call the service programmatically</span></span>  
   
-1.  <span data-ttu-id="fae10-126">서비스를 호출하는 데 사용되는 URI를 사용하여 <xref:System.Net.HttpWebRequest>를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="fae10-126">Create a <xref:System.Net.HttpWebRequest> with the URI used to call the service.</span></span> <span data-ttu-id="fae10-127">이 코드에서 기본 주소는 `"/UploadFile/Text"`와 결합됩니다.</span><span class="sxs-lookup"><span data-stu-id="fae10-127">In this code, the base address is combined with `"/UploadFile/Text"`.</span></span> <span data-ttu-id="fae10-128">URI의 `"UploadFile"` 부분은 호출할 작업을 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="fae10-128">The `"UploadFile"` portion of the URI specifies the operation to call.</span></span> <span data-ttu-id="fae10-129">URI의 `"Test.txt"` 부분은 `UploadFile` 작업에 전달할 파일 이름 매개 변수를 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="fae10-129">The `"Test.txt"` portion of the URI specifies the filename parameter to pass to the `UploadFile` operation.</span></span> <span data-ttu-id="fae10-130">이러한 항목 모두 작업 계약에 적용된 <xref:System.UriTemplate>에 매핑됩니다.</span><span class="sxs-lookup"><span data-stu-id="fae10-130">Both of these items map to the <xref:System.UriTemplate> applied to the operation contract.</span></span>  
+1.  <span data-ttu-id="fbc53-126">서비스를 호출하는 데 사용되는 URI를 사용하여 <xref:System.Net.HttpWebRequest>를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="fbc53-126">Create a <xref:System.Net.HttpWebRequest> with the URI used to call the service.</span></span> <span data-ttu-id="fbc53-127">이 코드에서 기본 주소는 `"/UploadFile/Text"`와 결합됩니다.</span><span class="sxs-lookup"><span data-stu-id="fbc53-127">In this code, the base address is combined with `"/UploadFile/Text"`.</span></span> <span data-ttu-id="fbc53-128">URI의 `"UploadFile"` 부분은 호출할 작업을 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="fbc53-128">The `"UploadFile"` portion of the URI specifies the operation to call.</span></span> <span data-ttu-id="fbc53-129">URI의 `"Test.txt"` 부분은 `UploadFile` 작업에 전달할 파일 이름 매개 변수를 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="fbc53-129">The `"Test.txt"` portion of the URI specifies the filename parameter to pass to the `UploadFile` operation.</span></span> <span data-ttu-id="fbc53-130">이러한 항목 모두 작업 계약에 적용된 <xref:System.UriTemplate>에 매핑됩니다.</span><span class="sxs-lookup"><span data-stu-id="fbc53-130">Both of these items map to the <xref:System.UriTemplate> applied to the operation contract.</span></span>  
   
     ```csharp  
     HttpWebRequest req = (HttpWebRequest)HttpWebRequest.Create(baseAddress + "/UploadFile/Test.txt");  
     ```  
   
-2.  <span data-ttu-id="fae10-131"><xref:System.Net.HttpWebRequest.Method%2A>의 <xref:System.Net.HttpWebRequest> 속성을 `POST`로 설정하고 <xref:System.Net.HttpWebRequest.ContentType%2A> 속성을 `"text/plain"`으로 설정합니다.</span><span class="sxs-lookup"><span data-stu-id="fae10-131">Set the <xref:System.Net.HttpWebRequest.Method%2A> property of the <xref:System.Net.HttpWebRequest> to `POST` and the <xref:System.Net.HttpWebRequest.ContentType%2A> property to `"text/plain"`.</span></span> <span data-ttu-id="fae10-132">이렇게 하면 코드가 데이터를 보내고 있으며 데이터가 일반 텍스트 형식이라는 사실을 서비스에게 알립니다.</span><span class="sxs-lookup"><span data-stu-id="fae10-132">This tells the service that the code is sending data and that data is in plain text.</span></span>  
+2.  <span data-ttu-id="fbc53-131"><xref:System.Net.HttpWebRequest.Method%2A>의 <xref:System.Net.HttpWebRequest> 속성을 `POST`로 설정하고 <xref:System.Net.HttpWebRequest.ContentType%2A> 속성을 `"text/plain"`으로 설정합니다.</span><span class="sxs-lookup"><span data-stu-id="fbc53-131">Set the <xref:System.Net.HttpWebRequest.Method%2A> property of the <xref:System.Net.HttpWebRequest> to `POST` and the <xref:System.Net.HttpWebRequest.ContentType%2A> property to `"text/plain"`.</span></span> <span data-ttu-id="fbc53-132">이렇게 하면 코드가 데이터를 보내고 있으며 데이터가 일반 텍스트 형식이라는 사실을 서비스에게 알립니다.</span><span class="sxs-lookup"><span data-stu-id="fbc53-132">This tells the service that the code is sending data and that data is in plain text.</span></span>  
   
     ```csharp  
     req.Method = "POST";  
     req.ContentType = "text/plain";  
     ```  
   
-3.  <span data-ttu-id="fae10-133"><xref:System.Net.HttpWebRequest.GetRequestStream%2A>을 호출하여 요청 스트림을 가져오고, 읽을 데이터를 만들고, 해당 데이터를 요청 스트림에 작성하고, 스트림을 닫습니다.</span><span class="sxs-lookup"><span data-stu-id="fae10-133">Call <xref:System.Net.HttpWebRequest.GetRequestStream%2A> to get the request stream, create the data to send, write that data to the request stream, and close the stream.</span></span>  
+3.  <span data-ttu-id="fbc53-133"><xref:System.Net.HttpWebRequest.GetRequestStream%2A>을 호출하여 요청 스트림을 가져오고, 읽을 데이터를 만들고, 해당 데이터를 요청 스트림에 작성하고, 스트림을 닫습니다.</span><span class="sxs-lookup"><span data-stu-id="fbc53-133">Call <xref:System.Net.HttpWebRequest.GetRequestStream%2A> to get the request stream, create the data to send, write that data to the request stream, and close the stream.</span></span>  
   
     ```csharp  
     Stream reqStream = req.GetRequestStream();  
@@ -110,21 +110,21 @@ ms.locfileid: "54667000"
     reqStream.Close();  
     ```  
   
-4.  <span data-ttu-id="fae10-134"><xref:System.Net.HttpWebRequest.GetResponse%2A>를 호출하여 서비스에서 요청을 가져오고 응답 데이터를 콘솔에 표시합니다.</span><span class="sxs-lookup"><span data-stu-id="fae10-134">Get the response from the service by calling <xref:System.Net.HttpWebRequest.GetResponse%2A> and display the response data to the console.</span></span>  
+4.  <span data-ttu-id="fbc53-134"><xref:System.Net.HttpWebRequest.GetResponse%2A>를 호출하여 서비스에서 요청을 가져오고 응답 데이터를 콘솔에 표시합니다.</span><span class="sxs-lookup"><span data-stu-id="fbc53-134">Get the response from the service by calling <xref:System.Net.HttpWebRequest.GetResponse%2A> and display the response data to the console.</span></span>  
   
     ```csharp  
     HttpWebResponse resp = (HttpWebResponse)req.GetResponse();  
     Console.WriteLine("Client: Receive Response HTTP/{0} {1} {2}", resp.ProtocolVersion, (int)resp.StatusCode, resp.StatusDescription);  
     ```  
   
-5.  <span data-ttu-id="fae10-135">서비스 호스트를 닫습니다.</span><span class="sxs-lookup"><span data-stu-id="fae10-135">Close the service host.</span></span>  
+5.  <span data-ttu-id="fbc53-135">서비스 호스트를 닫습니다.</span><span class="sxs-lookup"><span data-stu-id="fbc53-135">Close the service host.</span></span>  
   
     ```csharp  
     host.Close();  
     ```  
   
-## <a name="example"></a><span data-ttu-id="fae10-136">예제</span><span class="sxs-lookup"><span data-stu-id="fae10-136">Example</span></span>  
- <span data-ttu-id="fae10-137">다음은 이 예제에 해당되는 전체 코드 목록입니다.</span><span class="sxs-lookup"><span data-stu-id="fae10-137">The following is a complete listing of the code for this example.</span></span>  
+## <a name="example"></a><span data-ttu-id="fbc53-136">예제</span><span class="sxs-lookup"><span data-stu-id="fbc53-136">Example</span></span>  
+ <span data-ttu-id="fbc53-137">다음은 이 예제에 해당되는 전체 코드 목록입니다.</span><span class="sxs-lookup"><span data-stu-id="fbc53-137">The following is a complete listing of the code for this example.</span></span>  
   
 ```csharp  
 using System;  
@@ -189,11 +189,12 @@ namespace ReceiveRawData
 }  
 ```  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="fae10-138">코드 컴파일</span><span class="sxs-lookup"><span data-stu-id="fae10-138">Compiling the Code</span></span>  
+## <a name="compiling-the-code"></a><span data-ttu-id="fbc53-138">코드 컴파일</span><span class="sxs-lookup"><span data-stu-id="fbc53-138">Compiling the Code</span></span>  
   
--   <span data-ttu-id="fae10-139">코드를 컴파일할 때 System.ServiceModel.dll 및 System.ServiceModel.Web.dll을 참조합니다.</span><span class="sxs-lookup"><span data-stu-id="fae10-139">When compiling the code reference System.ServiceModel.dll and System.ServiceModel.Web.dll</span></span>  
+-   <span data-ttu-id="fbc53-139">코드를 컴파일할 때 System.ServiceModel.dll 및 System.ServiceModel.Web.dll을 참조합니다.</span><span class="sxs-lookup"><span data-stu-id="fbc53-139">When compiling the code reference System.ServiceModel.dll and System.ServiceModel.Web.dll</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="fae10-140">참고자료</span><span class="sxs-lookup"><span data-stu-id="fae10-140">See also</span></span>
-- [<span data-ttu-id="fae10-141">UriTemplate 및 UriTemplateTable</span><span class="sxs-lookup"><span data-stu-id="fae10-141">UriTemplate and UriTemplateTable</span></span>](../../../../docs/framework/wcf/feature-details/uritemplate-and-uritemplatetable.md)
-- [<span data-ttu-id="fae10-142">WCF 웹 HTTP 프로그래밍 모델</span><span class="sxs-lookup"><span data-stu-id="fae10-142">WCF Web HTTP Programming Model</span></span>](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)
-- [<span data-ttu-id="fae10-143">WCF 웹 HTTP 프로그래밍 모델 개요</span><span class="sxs-lookup"><span data-stu-id="fae10-143">WCF Web HTTP Programming Model Overview</span></span>](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model-overview.md)
+## <a name="see-also"></a><span data-ttu-id="fbc53-140">참고자료</span><span class="sxs-lookup"><span data-stu-id="fbc53-140">See also</span></span>
+
+- [<span data-ttu-id="fbc53-141">UriTemplate 및 UriTemplateTable</span><span class="sxs-lookup"><span data-stu-id="fbc53-141">UriTemplate and UriTemplateTable</span></span>](../../../../docs/framework/wcf/feature-details/uritemplate-and-uritemplatetable.md)
+- [<span data-ttu-id="fbc53-142">WCF 웹 HTTP 프로그래밍 모델</span><span class="sxs-lookup"><span data-stu-id="fbc53-142">WCF Web HTTP Programming Model</span></span>](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)
+- [<span data-ttu-id="fbc53-143">WCF 웹 HTTP 프로그래밍 모델 개요</span><span class="sxs-lookup"><span data-stu-id="fbc53-143">WCF Web HTTP Programming Model Overview</span></span>](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model-overview.md)

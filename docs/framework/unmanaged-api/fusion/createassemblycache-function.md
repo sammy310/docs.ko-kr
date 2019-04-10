@@ -18,17 +18,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6327c9d7dee548957a569b587faefe3d6d9cb1b9
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: bf78ded62f11b336d9f5fe0f3a205275ae37189b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57497771"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59157406"
 ---
-# <a name="createassemblycache-function"></a><span data-ttu-id="49289-102">CreateAssemblyCache 함수</span><span class="sxs-lookup"><span data-stu-id="49289-102">CreateAssemblyCache Function</span></span>
-<span data-ttu-id="49289-103">새 포인터를 가져옵니다 [IAssemblyCache](../../../../docs/framework/unmanaged-api/fusion/iassemblycache-interface.md) 전역 어셈블리 캐시를 나타내는 인스턴스입니다.</span><span class="sxs-lookup"><span data-stu-id="49289-103">Gets a pointer to a new [IAssemblyCache](../../../../docs/framework/unmanaged-api/fusion/iassemblycache-interface.md) instance that represents the global assembly cache.</span></span>  
+# <a name="createassemblycache-function"></a><span data-ttu-id="b58af-102">CreateAssemblyCache 함수</span><span class="sxs-lookup"><span data-stu-id="b58af-102">CreateAssemblyCache Function</span></span>
+<span data-ttu-id="b58af-103">새 포인터를 가져옵니다 [IAssemblyCache](../../../../docs/framework/unmanaged-api/fusion/iassemblycache-interface.md) 전역 어셈블리 캐시를 나타내는 인스턴스입니다.</span><span class="sxs-lookup"><span data-stu-id="b58af-103">Gets a pointer to a new [IAssemblyCache](../../../../docs/framework/unmanaged-api/fusion/iassemblycache-interface.md) instance that represents the global assembly cache.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="49289-104">구문</span><span class="sxs-lookup"><span data-stu-id="49289-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="b58af-104">구문</span><span class="sxs-lookup"><span data-stu-id="b58af-104">Syntax</span></span>  
   
 ```  
 HRESULT CreateAssemblyCache (  
@@ -37,23 +37,24 @@ HRESULT CreateAssemblyCache (
  );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="49289-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="49289-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="b58af-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="b58af-105">Parameters</span></span>  
  `ppAsmCache`  
- <span data-ttu-id="49289-106">[out] 반환 된 `IAssemblyCache` 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="49289-106">[out] The returned `IAssemblyCache` pointer.</span></span>  
+ <span data-ttu-id="b58af-106">[out] 반환 된 `IAssemblyCache` 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="b58af-106">[out] The returned `IAssemblyCache` pointer.</span></span>  
   
  `dwReserved`  
- <span data-ttu-id="49289-107">[in] 향후 확장성을 위해 예약 되어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="49289-107">[in] Reserved for future extensibility.</span></span> <span data-ttu-id="49289-108">`dwReserved` 0 (영) 이어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="49289-108">`dwReserved` must be 0 (zero).</span></span>  
+ <span data-ttu-id="b58af-107">[in] 향후 확장성을 위해 예약 되어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="b58af-107">[in] Reserved for future extensibility.</span></span> `dwReserved` <span data-ttu-id="b58af-108">0 (영) 이어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="b58af-108">must be 0 (zero).</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="49289-109">요구 사항</span><span class="sxs-lookup"><span data-stu-id="49289-109">Requirements</span></span>  
- <span data-ttu-id="49289-110">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="49289-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="b58af-109">요구 사항</span><span class="sxs-lookup"><span data-stu-id="b58af-109">Requirements</span></span>  
+ <span data-ttu-id="b58af-110">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="b58af-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="49289-111">**헤더:** Fusion.h</span><span class="sxs-lookup"><span data-stu-id="49289-111">**Header:** Fusion.h</span></span>  
+ <span data-ttu-id="b58af-111">**헤더:** Fusion.h</span><span class="sxs-lookup"><span data-stu-id="b58af-111">**Header:** Fusion.h</span></span>  
   
- <span data-ttu-id="49289-112">**라이브러리:** MsCorEE.dll에 리소스로 포함</span><span class="sxs-lookup"><span data-stu-id="49289-112">**Library:** Included as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="b58af-112">**라이브러리:** MsCorEE.dll에 리소스로 포함</span><span class="sxs-lookup"><span data-stu-id="b58af-112">**Library:** Included as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="49289-113">**.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="49289-113">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ **<span data-ttu-id="b58af-113">.NET Framework 버전:</span><span class="sxs-lookup"><span data-stu-id="b58af-113">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="49289-114">참고자료</span><span class="sxs-lookup"><span data-stu-id="49289-114">See also</span></span>
-- [<span data-ttu-id="49289-115">IAssemblyCache 인터페이스</span><span class="sxs-lookup"><span data-stu-id="49289-115">IAssemblyCache Interface</span></span>](../../../../docs/framework/unmanaged-api/fusion/iassemblycache-interface.md)
-- [<span data-ttu-id="49289-116">Fusion 전역 정적 함수</span><span class="sxs-lookup"><span data-stu-id="49289-116">Fusion Global Static Functions</span></span>](../../../../docs/framework/unmanaged-api/fusion/fusion-global-static-functions.md)
-- [<span data-ttu-id="49289-117">전역 어셈블리 캐시</span><span class="sxs-lookup"><span data-stu-id="49289-117">Global Assembly Cache</span></span>](../../../../docs/framework/app-domains/gac.md)
+## <a name="see-also"></a><span data-ttu-id="b58af-114">참고자료</span><span class="sxs-lookup"><span data-stu-id="b58af-114">See also</span></span>
+
+- [<span data-ttu-id="b58af-115">IAssemblyCache 인터페이스</span><span class="sxs-lookup"><span data-stu-id="b58af-115">IAssemblyCache Interface</span></span>](../../../../docs/framework/unmanaged-api/fusion/iassemblycache-interface.md)
+- [<span data-ttu-id="b58af-116">Fusion 전역 정적 함수</span><span class="sxs-lookup"><span data-stu-id="b58af-116">Fusion Global Static Functions</span></span>](../../../../docs/framework/unmanaged-api/fusion/fusion-global-static-functions.md)
+- [<span data-ttu-id="b58af-117">전역 어셈블리 캐시</span><span class="sxs-lookup"><span data-stu-id="b58af-117">Global Assembly Cache</span></span>](../../../../docs/framework/app-domains/gac.md)

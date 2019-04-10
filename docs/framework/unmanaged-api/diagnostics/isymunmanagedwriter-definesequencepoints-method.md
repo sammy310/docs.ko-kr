@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4210dedd77c6ab041189fa287e192bb7038080b2
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 735b33ac1f049f8d4d3740239e7c34a6fa16dd32
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57491417"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59146941"
 ---
-# <a name="isymunmanagedwriterdefinesequencepoints-method"></a><span data-ttu-id="f36c2-102">ISymUnmanagedWriter::DefineSequencePoints 메서드</span><span class="sxs-lookup"><span data-stu-id="f36c2-102">ISymUnmanagedWriter::DefineSequencePoints Method</span></span>
-<span data-ttu-id="f36c2-103">현재 메서드 내에서 시퀀스 위치 그룹을 정의합니다.</span><span class="sxs-lookup"><span data-stu-id="f36c2-103">Defines a group of sequence points within the current method.</span></span> <span data-ttu-id="f36c2-104">각 시작 줄 및 시작 열 메서드 내에서 문의 시작을 정의 합니다.</span><span class="sxs-lookup"><span data-stu-id="f36c2-104">Each starting line and starting column define the start of a statement within a method.</span></span> <span data-ttu-id="f36c2-105">각 끝 줄과 끝 열 메서드 내에서 문의 끝을 정의 합니다.</span><span class="sxs-lookup"><span data-stu-id="f36c2-105">Each ending line and ending column define the end of a statement within a method.</span></span> <span data-ttu-id="f36c2-106">배열은 오프셋의 오름차순으로 정렬 되어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="f36c2-106">The arrays should be sorted in increasing order of offsets.</span></span> <span data-ttu-id="f36c2-107">오프셋은 항상 메서드 바이트의 시작 부분에서 측정 됩니다.</span><span class="sxs-lookup"><span data-stu-id="f36c2-107">The offset is always measured from the start of the method, in bytes.</span></span>  
+# <a name="isymunmanagedwriterdefinesequencepoints-method"></a><span data-ttu-id="f80a8-102">ISymUnmanagedWriter::DefineSequencePoints 메서드</span><span class="sxs-lookup"><span data-stu-id="f80a8-102">ISymUnmanagedWriter::DefineSequencePoints Method</span></span>
+<span data-ttu-id="f80a8-103">현재 메서드 내에서 시퀀스 위치 그룹을 정의합니다.</span><span class="sxs-lookup"><span data-stu-id="f80a8-103">Defines a group of sequence points within the current method.</span></span> <span data-ttu-id="f80a8-104">각 시작 줄 및 시작 열 메서드 내에서 문의 시작을 정의 합니다.</span><span class="sxs-lookup"><span data-stu-id="f80a8-104">Each starting line and starting column define the start of a statement within a method.</span></span> <span data-ttu-id="f80a8-105">각 끝 줄과 끝 열 메서드 내에서 문의 끝을 정의 합니다.</span><span class="sxs-lookup"><span data-stu-id="f80a8-105">Each ending line and ending column define the end of a statement within a method.</span></span> <span data-ttu-id="f80a8-106">배열은 오프셋의 오름차순으로 정렬 되어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="f80a8-106">The arrays should be sorted in increasing order of offsets.</span></span> <span data-ttu-id="f80a8-107">오프셋은 항상 메서드 바이트의 시작 부분에서 측정 됩니다.</span><span class="sxs-lookup"><span data-stu-id="f80a8-107">The offset is always measured from the start of the method, in bytes.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="f36c2-108">구문</span><span class="sxs-lookup"><span data-stu-id="f36c2-108">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="f80a8-108">구문</span><span class="sxs-lookup"><span data-stu-id="f80a8-108">Syntax</span></span>  
   
 ```  
 HRESULT DefineSequencePoints(  
@@ -40,33 +40,34 @@ HRESULT DefineSequencePoints(
     [in, size_is(spCount)] ULONG32     endColumns[]);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="f36c2-109">매개 변수</span><span class="sxs-lookup"><span data-stu-id="f36c2-109">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="f80a8-109">매개 변수</span><span class="sxs-lookup"><span data-stu-id="f80a8-109">Parameters</span></span>  
  `document`  
- <span data-ttu-id="f36c2-110">[in] 시퀀스 위치를 정의 하는 문서 개체입니다.</span><span class="sxs-lookup"><span data-stu-id="f36c2-110">[in] The document object for which the sequence points are being defined.</span></span>  
+ <span data-ttu-id="f80a8-110">[in] 시퀀스 위치를 정의 하는 문서 개체입니다.</span><span class="sxs-lookup"><span data-stu-id="f80a8-110">[in] The document object for which the sequence points are being defined.</span></span>  
   
  `spCount`  
- <span data-ttu-id="f36c2-111">[in] `ULONG32` 각각의 크기를 나타내는 합니다 `offsets`, `lines`, `columns`, `endLines`, 및 `endColumns` 버퍼입니다.</span><span class="sxs-lookup"><span data-stu-id="f36c2-111">[in] A `ULONG32` that indicates the size of each of the `offsets`, `lines`, `columns`, `endLines`, and `endColumns` buffers.</span></span>  
+ <span data-ttu-id="f80a8-111">[in] `ULONG32` 각각의 크기를 나타내는 합니다 `offsets`, `lines`, `columns`, `endLines`, 및 `endColumns` 버퍼입니다.</span><span class="sxs-lookup"><span data-stu-id="f80a8-111">[in] A `ULONG32` that indicates the size of each of the `offsets`, `lines`, `columns`, `endLines`, and `endColumns` buffers.</span></span>  
   
  `offsets`  
- <span data-ttu-id="f36c2-112">[in] 메서드의 시작 부분에서 측정 한 시퀀스 위치 오프셋입니다.</span><span class="sxs-lookup"><span data-stu-id="f36c2-112">[in] The offset of the sequence points measured from the beginning of the method.</span></span>  
+ <span data-ttu-id="f80a8-112">[in] 메서드의 시작 부분에서 측정 한 시퀀스 위치 오프셋입니다.</span><span class="sxs-lookup"><span data-stu-id="f80a8-112">[in] The offset of the sequence points measured from the beginning of the method.</span></span>  
   
  `lines`  
- <span data-ttu-id="f36c2-113">[in] 시퀀스 위치의 시작 줄 번호입니다.</span><span class="sxs-lookup"><span data-stu-id="f36c2-113">[in] The starting line numbers of the sequence points.</span></span>  
+ <span data-ttu-id="f80a8-113">[in] 시퀀스 위치의 시작 줄 번호입니다.</span><span class="sxs-lookup"><span data-stu-id="f80a8-113">[in] The starting line numbers of the sequence points.</span></span>  
   
  `columns`  
- <span data-ttu-id="f36c2-114">[in] 시퀀스 위치의 시작 열 번호를 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="f36c2-114">[in] The starting column numbers of the sequence points.</span></span>  
+ <span data-ttu-id="f80a8-114">[in] 시퀀스 위치의 시작 열 번호를 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="f80a8-114">[in] The starting column numbers of the sequence points.</span></span>  
   
  `endLines`  
- <span data-ttu-id="f36c2-115">[in] 시퀀스 위치의 끝 줄 번호를 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="f36c2-115">[in] The ending line numbers of the sequence points.</span></span> <span data-ttu-id="f36c2-116">이 매개 변수는 선택적 요소입니다.</span><span class="sxs-lookup"><span data-stu-id="f36c2-116">This parameter is optional.</span></span>  
+ <span data-ttu-id="f80a8-115">[in] 시퀀스 위치의 끝 줄 번호를 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="f80a8-115">[in] The ending line numbers of the sequence points.</span></span> <span data-ttu-id="f80a8-116">이 매개 변수는 선택적 요소입니다.</span><span class="sxs-lookup"><span data-stu-id="f80a8-116">This parameter is optional.</span></span>  
   
  `endColumns`  
- <span data-ttu-id="f36c2-117">[in] 시퀀스 위치의 끝 열 번호를 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="f36c2-117">[in] The ending column numbers of the sequence points.</span></span> <span data-ttu-id="f36c2-118">이 매개 변수는 선택적 요소입니다.</span><span class="sxs-lookup"><span data-stu-id="f36c2-118">This parameter is optional.</span></span>  
+ <span data-ttu-id="f80a8-117">[in] 시퀀스 위치의 끝 열 번호를 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="f80a8-117">[in] The ending column numbers of the sequence points.</span></span> <span data-ttu-id="f80a8-118">이 매개 변수는 선택적 요소입니다.</span><span class="sxs-lookup"><span data-stu-id="f80a8-118">This parameter is optional.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="f36c2-119">반환 값</span><span class="sxs-lookup"><span data-stu-id="f36c2-119">Return Value</span></span>  
- <span data-ttu-id="f36c2-120">메서드가 성공 하면 s_ok이 고 그렇지 않으면 E_FAIL 또는 일부 다른 오류 코드입니다.</span><span class="sxs-lookup"><span data-stu-id="f36c2-120">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="f80a8-119">반환 값</span><span class="sxs-lookup"><span data-stu-id="f80a8-119">Return Value</span></span>  
+ <span data-ttu-id="f80a8-120">메서드가 성공 하면 s_ok이 고 그렇지 않으면 E_FAIL 또는 일부 다른 오류 코드입니다.</span><span class="sxs-lookup"><span data-stu-id="f80a8-120">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="f36c2-121">요구 사항</span><span class="sxs-lookup"><span data-stu-id="f36c2-121">Requirements</span></span>  
- <span data-ttu-id="f36c2-122">**헤더:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="f36c2-122">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="f80a8-121">요구 사항</span><span class="sxs-lookup"><span data-stu-id="f80a8-121">Requirements</span></span>  
+ <span data-ttu-id="f80a8-122">**헤더:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="f80a8-122">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="f36c2-123">참고자료</span><span class="sxs-lookup"><span data-stu-id="f36c2-123">See also</span></span>
-- [<span data-ttu-id="f36c2-124">ISymUnmanagedWriter 인터페이스</span><span class="sxs-lookup"><span data-stu-id="f36c2-124">ISymUnmanagedWriter Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)
+## <a name="see-also"></a><span data-ttu-id="f80a8-123">참고자료</span><span class="sxs-lookup"><span data-stu-id="f80a8-123">See also</span></span>
+
+- [<span data-ttu-id="f80a8-124">ISymUnmanagedWriter 인터페이스</span><span class="sxs-lookup"><span data-stu-id="f80a8-124">ISymUnmanagedWriter Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)

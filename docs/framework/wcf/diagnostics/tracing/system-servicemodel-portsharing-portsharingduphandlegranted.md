@@ -2,20 +2,21 @@
 title: System.ServiceModel.PortSharing.PortSharingDupHandleGranted
 ms.date: 03/30/2017
 ms.assetid: dde8a393-f31a-4e6d-b483-001b389e2df9
-ms.openlocfilehash: a025c8f331fd3280f1b406cdd949f7ec9f451735
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a497461452f0212175f63fc9e90c1887d5cc131a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54508290"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59152336"
 ---
-# <a name="systemservicemodelportsharingportsharingduphandlegranted"></a><span data-ttu-id="873c5-102">System.ServiceModel.PortSharing.PortSharingDupHandleGranted</span><span class="sxs-lookup"><span data-stu-id="873c5-102">System.ServiceModel.PortSharing.PortSharingDupHandleGranted</span></span>
-<span data-ttu-id="873c5-103">System.ServiceModel.PortSharing.PortSharingDupHandleGranted</span><span class="sxs-lookup"><span data-stu-id="873c5-103">System.ServiceModel.PortSharing.PortSharingDupHandleGranted</span></span>  
+# <a name="systemservicemodelportsharingportsharingduphandlegranted"></a><span data-ttu-id="f0ec1-102">System.ServiceModel.PortSharing.PortSharingDupHandleGranted</span><span class="sxs-lookup"><span data-stu-id="f0ec1-102">System.ServiceModel.PortSharing.PortSharingDupHandleGranted</span></span>
+<span data-ttu-id="f0ec1-103">System.ServiceModel.PortSharing.PortSharingDupHandleGranted</span><span class="sxs-lookup"><span data-stu-id="f0ec1-103">System.ServiceModel.PortSharing.PortSharingDupHandleGranted</span></span>  
   
-## <a name="description"></a><span data-ttu-id="873c5-104">설명</span><span class="sxs-lookup"><span data-stu-id="873c5-104">Description</span></span>  
- <span data-ttu-id="873c5-105">지정한 SID의 지정한 서비스 계정에 대해 PROCESS_DUP_HANDLE 액세스 권한이 부여되었습니다.</span><span class="sxs-lookup"><span data-stu-id="873c5-105">The PROCESS_DUP_HANDLE access right has been granted to the specified service's account with the specified SID.</span></span>  
+## <a name="description"></a><span data-ttu-id="f0ec1-104">설명</span><span class="sxs-lookup"><span data-stu-id="f0ec1-104">Description</span></span>  
+ <span data-ttu-id="f0ec1-105">지정한 SID의 지정한 서비스 계정에 대해 PROCESS_DUP_HANDLE 액세스 권한이 부여되었습니다.</span><span class="sxs-lookup"><span data-stu-id="f0ec1-105">The PROCESS_DUP_HANDLE access right has been granted to the specified service's account with the specified SID.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="873c5-106">참고자료</span><span class="sxs-lookup"><span data-stu-id="873c5-106">See also</span></span>
-- [<span data-ttu-id="873c5-107">추적</span><span class="sxs-lookup"><span data-stu-id="873c5-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
-- [<span data-ttu-id="873c5-108">추적을 사용하여 애플리케이션 문제 해결</span><span class="sxs-lookup"><span data-stu-id="873c5-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)
-- [<span data-ttu-id="873c5-109">관리 및 진단</span><span class="sxs-lookup"><span data-stu-id="873c5-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a><span data-ttu-id="f0ec1-106">참고자료</span><span class="sxs-lookup"><span data-stu-id="f0ec1-106">See also</span></span>
+
+- [<span data-ttu-id="f0ec1-107">추적</span><span class="sxs-lookup"><span data-stu-id="f0ec1-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
+- [<span data-ttu-id="f0ec1-108">추적을 사용하여 응용 프로그램 문제 해결</span><span class="sxs-lookup"><span data-stu-id="f0ec1-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)
+- [<span data-ttu-id="f0ec1-109">관리 및 진단</span><span class="sxs-lookup"><span data-stu-id="f0ec1-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)

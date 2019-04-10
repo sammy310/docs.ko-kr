@@ -16,17 +16,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 084f0bbab130cd4e7334184fe9baa322c0487942
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 628ca1b555d80319312450d784981cfed1bda947
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54616773"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59160448"
 ---
-# <a name="corerrorifemitoutoforder-enumeration"></a><span data-ttu-id="2195e-102">CorErrorIfEmitOutOfOrder 열거형</span><span class="sxs-lookup"><span data-stu-id="2195e-102">CorErrorIfEmitOutOfOrder Enumeration</span></span>
-<span data-ttu-id="2195e-103">메타데이터를 내보내는 순서가 잘못되었을 때 오류 메시지가 생성되어야 하는 조건을 나타내는 플래그 값을 포함합니다.</span><span class="sxs-lookup"><span data-stu-id="2195e-103">Contains flag values that indicate the conditions under which an error message should be generated when metadata is emitted out of order.</span></span>  
+# <a name="corerrorifemitoutoforder-enumeration"></a><span data-ttu-id="7e9e3-102">CorErrorIfEmitOutOfOrder 열거형</span><span class="sxs-lookup"><span data-stu-id="7e9e3-102">CorErrorIfEmitOutOfOrder Enumeration</span></span>
+<span data-ttu-id="7e9e3-103">메타데이터를 내보내는 순서가 잘못되었을 때 오류 메시지가 생성되어야 하는 조건을 나타내는 플래그 값을 포함합니다.</span><span class="sxs-lookup"><span data-stu-id="7e9e3-103">Contains flag values that indicate the conditions under which an error message should be generated when metadata is emitted out of order.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="2195e-104">구문</span><span class="sxs-lookup"><span data-stu-id="2195e-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="7e9e3-104">구문</span><span class="sxs-lookup"><span data-stu-id="7e9e3-104">Syntax</span></span>  
   
 ```  
 typedef enum CorErrorIfEmitOutOfOrder {  
@@ -43,25 +43,26 @@ typedef enum CorErrorIfEmitOutOfOrder {
 } CorErrorIfEmitOutOfOrder;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="2195e-105">멤버</span><span class="sxs-lookup"><span data-stu-id="2195e-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="7e9e3-105">멤버</span><span class="sxs-lookup"><span data-stu-id="7e9e3-105">Members</span></span>  
   
-|<span data-ttu-id="2195e-106">멤버</span><span class="sxs-lookup"><span data-stu-id="2195e-106">Member</span></span>|<span data-ttu-id="2195e-107">설명</span><span class="sxs-lookup"><span data-stu-id="2195e-107">Description</span></span>|  
+|<span data-ttu-id="7e9e3-106">멤버</span><span class="sxs-lookup"><span data-stu-id="7e9e3-106">Member</span></span>|<span data-ttu-id="7e9e3-107">설명</span><span class="sxs-lookup"><span data-stu-id="7e9e3-107">Description</span></span>|  
 |------------|-----------------|  
-|`MDErrorOutOfOrderDefault`|<span data-ttu-id="2195e-108">오류 메시지를 생성 하지 않는 기본 동작을 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="2195e-108">Indicates the default behavior, which does not generate error messages.</span></span>|  
-|`MDErrorOutOfOrderNone`|<span data-ttu-id="2195e-109">컴파일러 오류 메시지를 생성 하지 해야 함을 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="2195e-109">Indicates that the compiler should not generate error messages.</span></span>|  
-|`MDErrorOutOfOrderAll`|<span data-ttu-id="2195e-110">필드, 속성, 이벤트, 메서드, 하는 경우 컴파일러 오류 메시지를 생성할지 또는 매개 변수 순서가 내보내집니다 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="2195e-110">Indicates that the compiler should generate an error message when a field, property, event, method, or parameter is emitted out of order.</span></span>|  
-|`MDMethodOutOfOrder`|<span data-ttu-id="2195e-111">메서드는 내보내는 순서가 잘못 되었을 때 컴파일러에서 오류 메시지를 생성 해야 함을 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="2195e-111">Indicates that the compiler should generate an error message when a method is emitted out of order.</span></span>|  
-|`MDFieldOutOfOrder`|<span data-ttu-id="2195e-112">필드는 내보내는 순서가 잘못 되었을 때 컴파일러에서 오류 메시지를 생성 해야 함을 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="2195e-112">Indicates that the compiler should generate an error message when a field is emitted out of order.</span></span>|  
-|`MDParamOutOfOrder`|<span data-ttu-id="2195e-113">매개 변수가 잘못 된 순서로 경우 컴파일러에서 오류 메시지를 생성 해야 함을 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="2195e-113">Indicates that the compiler should generate an error message when a parameter is emitted out of order.</span></span>|  
-|`MDPropertyOutOfOrder`|<span data-ttu-id="2195e-114">속성은 내보내는 순서가 잘못 되었을 때 컴파일러에서 오류 메시지를 생성 해야 함을 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="2195e-114">Indicates that the compiler should generate an error message when a property is emitted out of order.</span></span>|  
-|`MDEventOutOfOrder`|<span data-ttu-id="2195e-115">이벤트의 순서가 내보내집니다 때 컴파일러에서 오류 메시지를 생성 해야 함을 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="2195e-115">Indicates that the compiler should generate an error message when an event is emitted out of order.</span></span>|  
+|`MDErrorOutOfOrderDefault`|<span data-ttu-id="7e9e3-108">오류 메시지를 생성 하지 않는 기본 동작을 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="7e9e3-108">Indicates the default behavior, which does not generate error messages.</span></span>|  
+|`MDErrorOutOfOrderNone`|<span data-ttu-id="7e9e3-109">컴파일러 오류 메시지를 생성 하지 해야 함을 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="7e9e3-109">Indicates that the compiler should not generate error messages.</span></span>|  
+|`MDErrorOutOfOrderAll`|<span data-ttu-id="7e9e3-110">필드, 속성, 이벤트, 메서드, 하는 경우 컴파일러 오류 메시지를 생성할지 또는 매개 변수 순서가 내보내집니다 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="7e9e3-110">Indicates that the compiler should generate an error message when a field, property, event, method, or parameter is emitted out of order.</span></span>|  
+|`MDMethodOutOfOrder`|<span data-ttu-id="7e9e3-111">메서드는 내보내는 순서가 잘못 되었을 때 컴파일러에서 오류 메시지를 생성 해야 함을 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="7e9e3-111">Indicates that the compiler should generate an error message when a method is emitted out of order.</span></span>|  
+|`MDFieldOutOfOrder`|<span data-ttu-id="7e9e3-112">필드는 내보내는 순서가 잘못 되었을 때 컴파일러에서 오류 메시지를 생성 해야 함을 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="7e9e3-112">Indicates that the compiler should generate an error message when a field is emitted out of order.</span></span>|  
+|`MDParamOutOfOrder`|<span data-ttu-id="7e9e3-113">매개 변수가 잘못 된 순서로 경우 컴파일러에서 오류 메시지를 생성 해야 함을 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="7e9e3-113">Indicates that the compiler should generate an error message when a parameter is emitted out of order.</span></span>|  
+|`MDPropertyOutOfOrder`|<span data-ttu-id="7e9e3-114">속성은 내보내는 순서가 잘못 되었을 때 컴파일러에서 오류 메시지를 생성 해야 함을 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="7e9e3-114">Indicates that the compiler should generate an error message when a property is emitted out of order.</span></span>|  
+|`MDEventOutOfOrder`|<span data-ttu-id="7e9e3-115">이벤트의 순서가 내보내집니다 때 컴파일러에서 오류 메시지를 생성 해야 함을 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="7e9e3-115">Indicates that the compiler should generate an error message when an event is emitted out of order.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="2195e-116">요구 사항</span><span class="sxs-lookup"><span data-stu-id="2195e-116">Requirements</span></span>  
- <span data-ttu-id="2195e-117">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="2195e-117">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="7e9e3-116">요구 사항</span><span class="sxs-lookup"><span data-stu-id="7e9e3-116">Requirements</span></span>  
+ <span data-ttu-id="7e9e3-117">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="7e9e3-117">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="2195e-118">**헤더:** CorHdr.h</span><span class="sxs-lookup"><span data-stu-id="2195e-118">**Header:** CorHdr.h</span></span>  
+ <span data-ttu-id="7e9e3-118">**헤더:** CorHdr.h</span><span class="sxs-lookup"><span data-stu-id="7e9e3-118">**Header:** CorHdr.h</span></span>  
   
- <span data-ttu-id="2195e-119">**.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="2195e-119">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ **<span data-ttu-id="7e9e3-119">.NET Framework 버전:</span><span class="sxs-lookup"><span data-stu-id="7e9e3-119">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="2195e-120">참고자료</span><span class="sxs-lookup"><span data-stu-id="2195e-120">See also</span></span>
-- [<span data-ttu-id="2195e-121">메타데이터 열거형</span><span class="sxs-lookup"><span data-stu-id="2195e-121">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+## <a name="see-also"></a><span data-ttu-id="7e9e3-120">참고자료</span><span class="sxs-lookup"><span data-stu-id="7e9e3-120">See also</span></span>
+
+- [<span data-ttu-id="7e9e3-121">메타데이터 열거형</span><span class="sxs-lookup"><span data-stu-id="7e9e3-121">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

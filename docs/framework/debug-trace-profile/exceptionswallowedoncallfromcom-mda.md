@@ -11,32 +11,32 @@ helpviewer_keywords:
 ms.assetid: 55d6ab12-f251-4aab-aa64-aacbe9d9f974
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: aebcd2d2f2387f478c36e84dad82d90d4d70d68e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4f076cbc556c7d9feff8a226f050743cd7728622
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54554675"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59148150"
 ---
-# <a name="exceptionswallowedoncallfromcom-mda"></a><span data-ttu-id="1f843-102">exceptionSwallowedOnCallFromCom MDA</span><span class="sxs-lookup"><span data-stu-id="1f843-102">exceptionSwallowedOnCallFromCom MDA</span></span>
-<span data-ttu-id="1f843-103">`exceptionSwallowedOnCallFromCOM` MDA(관리 디버깅 도우미)는 관리되지 않는 HRESULT 반환 형식이 없는 메서드를 통해 COM에서 호출된 CLR(공용 언어 런타임) 코드에서 예외가 throw되면 활성화됩니다.</span><span class="sxs-lookup"><span data-stu-id="1f843-103">The `exceptionSwallowedOnCallFromCOM` managed debugging assistant (MDA) is activated when an exception is thrown from common language runtime (CLR) code called from COM via a method that does not have an unmanaged HRESULT return type.</span></span>  
+# <a name="exceptionswallowedoncallfromcom-mda"></a><span data-ttu-id="4472a-102">exceptionSwallowedOnCallFromCom MDA</span><span class="sxs-lookup"><span data-stu-id="4472a-102">exceptionSwallowedOnCallFromCom MDA</span></span>
+<span data-ttu-id="4472a-103">`exceptionSwallowedOnCallFromCOM` MDA(관리 디버깅 도우미)는 관리되지 않는 HRESULT 반환 형식이 없는 메서드를 통해 COM에서 호출된 CLR(공용 언어 런타임) 코드에서 예외가 throw되면 활성화됩니다.</span><span class="sxs-lookup"><span data-stu-id="4472a-103">The `exceptionSwallowedOnCallFromCOM` managed debugging assistant (MDA) is activated when an exception is thrown from common language runtime (CLR) code called from COM via a method that does not have an unmanaged HRESULT return type.</span></span>  
   
-## <a name="symptoms"></a><span data-ttu-id="1f843-104">증상</span><span class="sxs-lookup"><span data-stu-id="1f843-104">Symptoms</span></span>  
- <span data-ttu-id="1f843-105">COM에서 관리되는 구성 요소에 대한 호출이 FALSE 또는 0 값으로 반환됩니다.</span><span class="sxs-lookup"><span data-stu-id="1f843-105">A call to a managed component from COM returns with a value of FALSE or 0.</span></span> <span data-ttu-id="1f843-106">또는 메서드의 반환 형식이 void인 경우 메서드 실행 중에 예외가 throw되었음을 나타내는 표시가 없을 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="1f843-106">Alternatively, if the method has a void return type, there may be no indication that an exception was thrown during the execution of the method.</span></span> <span data-ttu-id="1f843-107">이 경우 예외가 자동으로 catch되고 실행이 COM 호출자에 반환됩니다.</span><span class="sxs-lookup"><span data-stu-id="1f843-107">In this case, the exception will be silently caught and execution will return to the COM caller.</span></span>  
+## <a name="symptoms"></a><span data-ttu-id="4472a-104">증상</span><span class="sxs-lookup"><span data-stu-id="4472a-104">Symptoms</span></span>  
+ <span data-ttu-id="4472a-105">COM에서 관리되는 구성 요소에 대한 호출이 FALSE 또는 0 값으로 반환됩니다.</span><span class="sxs-lookup"><span data-stu-id="4472a-105">A call to a managed component from COM returns with a value of FALSE or 0.</span></span> <span data-ttu-id="4472a-106">또는 메서드의 반환 형식이 void인 경우 메서드 실행 중에 예외가 throw되었음을 나타내는 표시가 없을 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="4472a-106">Alternatively, if the method has a void return type, there may be no indication that an exception was thrown during the execution of the method.</span></span> <span data-ttu-id="4472a-107">이 경우 예외가 자동으로 catch되고 실행이 COM 호출자에 반환됩니다.</span><span class="sxs-lookup"><span data-stu-id="4472a-107">In this case, the exception will be silently caught and execution will return to the COM caller.</span></span>  
   
-## <a name="cause"></a><span data-ttu-id="1f843-108">원인</span><span class="sxs-lookup"><span data-stu-id="1f843-108">Cause</span></span>  
- <span data-ttu-id="1f843-109">예외가 throw되었지만 해당 예외를 보고할 유효한 방법이 없습니다.</span><span class="sxs-lookup"><span data-stu-id="1f843-109">An exception was thrown, but there is no valid way to report it.</span></span>  
+## <a name="cause"></a><span data-ttu-id="4472a-108">원인</span><span class="sxs-lookup"><span data-stu-id="4472a-108">Cause</span></span>  
+ <span data-ttu-id="4472a-109">예외가 throw되었지만 해당 예외를 보고할 유효한 방법이 없습니다.</span><span class="sxs-lookup"><span data-stu-id="4472a-109">An exception was thrown, but there is no valid way to report it.</span></span>  
   
-## <a name="resolution"></a><span data-ttu-id="1f843-110">해결 방법</span><span class="sxs-lookup"><span data-stu-id="1f843-110">Resolution</span></span>  
- <span data-ttu-id="1f843-111">정보 제공의 목적이며, 반드시 버그를 의미하는 것은 아닙니다.</span><span class="sxs-lookup"><span data-stu-id="1f843-111">Informational only, not necessarily indicative of a bug.</span></span>  
+## <a name="resolution"></a><span data-ttu-id="4472a-110">해결</span><span class="sxs-lookup"><span data-stu-id="4472a-110">Resolution</span></span>  
+ <span data-ttu-id="4472a-111">정보 제공의 목적이며, 반드시 버그를 의미하는 것은 아닙니다.</span><span class="sxs-lookup"><span data-stu-id="4472a-111">Informational only, not necessarily indicative of a bug.</span></span>  
   
-## <a name="effect-on-the-runtime"></a><span data-ttu-id="1f843-112">런타임에 대한 영향</span><span class="sxs-lookup"><span data-stu-id="1f843-112">Effect on the Runtime</span></span>  
- <span data-ttu-id="1f843-113">이 MDA는 CLR에 아무런 영향을 미치지 않으며,</span><span class="sxs-lookup"><span data-stu-id="1f843-113">This MDA has no effect on the CLR.</span></span> <span data-ttu-id="1f843-114">자동으로 catch된 예외에 대한 데이터를 보고할 뿐입니다.</span><span class="sxs-lookup"><span data-stu-id="1f843-114">It only reports data about silently caught exceptions.</span></span>  
+## <a name="effect-on-the-runtime"></a><span data-ttu-id="4472a-112">런타임에 대한 영향</span><span class="sxs-lookup"><span data-stu-id="4472a-112">Effect on the Runtime</span></span>  
+ <span data-ttu-id="4472a-113">이 MDA는 CLR에 아무런 영향을 미치지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="4472a-113">This MDA has no effect on the CLR.</span></span> <span data-ttu-id="4472a-114">자동으로 catch된 예외에 대한 데이터를 보고할 뿐입니다.</span><span class="sxs-lookup"><span data-stu-id="4472a-114">It only reports data about silently caught exceptions.</span></span>  
   
-## <a name="output"></a><span data-ttu-id="1f843-115">출력</span><span class="sxs-lookup"><span data-stu-id="1f843-115">Output</span></span>  
- <span data-ttu-id="1f843-116">메서드 이름, 형식 이름 및 예외 메시지를 포함하는 정보 메시지입니다.</span><span class="sxs-lookup"><span data-stu-id="1f843-116">Informational message containing the method name, type name, and exception message.</span></span>  
+## <a name="output"></a><span data-ttu-id="4472a-115">출력</span><span class="sxs-lookup"><span data-stu-id="4472a-115">Output</span></span>  
+ <span data-ttu-id="4472a-116">메서드 이름, 형식 이름 및 예외 메시지를 포함하는 정보 메시지입니다.</span><span class="sxs-lookup"><span data-stu-id="4472a-116">Informational message containing the method name, type name, and exception message.</span></span>  
   
-## <a name="configuration"></a><span data-ttu-id="1f843-117">구성하기</span><span class="sxs-lookup"><span data-stu-id="1f843-117">Configuration</span></span>  
+## <a name="configuration"></a><span data-ttu-id="4472a-117">구성</span><span class="sxs-lookup"><span data-stu-id="4472a-117">Configuration</span></span>  
   
 ```xml  
 <mdaConfig>  
@@ -46,7 +46,8 @@ ms.locfileid: "54554675"
 </mdaConfig>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="1f843-118">참고자료</span><span class="sxs-lookup"><span data-stu-id="1f843-118">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="4472a-118">참고자료</span><span class="sxs-lookup"><span data-stu-id="4472a-118">See also</span></span>
+
 - <xref:System.Runtime.InteropServices.MarshalAsAttribute>
-- [<span data-ttu-id="1f843-119">관리 디버깅 도우미를 사용하여 오류 진단</span><span class="sxs-lookup"><span data-stu-id="1f843-119">Diagnosing Errors with Managed Debugging Assistants</span></span>](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
-- [<span data-ttu-id="1f843-120">interop 마샬링</span><span class="sxs-lookup"><span data-stu-id="1f843-120">Interop Marshaling</span></span>](../../../docs/framework/interop/interop-marshaling.md)
+- [<span data-ttu-id="4472a-119">관리 디버깅 도우미를 사용하여 오류 진단</span><span class="sxs-lookup"><span data-stu-id="4472a-119">Diagnosing Errors with Managed Debugging Assistants</span></span>](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
+- [<span data-ttu-id="4472a-120">Interop 마샬링</span><span class="sxs-lookup"><span data-stu-id="4472a-120">Interop Marshaling</span></span>](../../../docs/framework/interop/interop-marshaling.md)

@@ -7,22 +7,23 @@ helpviewer_keywords:
 - controls [WPF], DocumentViewer
 - DocumentViewer control [WPF]
 ms.assetid: c21eb322-d6b3-474b-ab05-94527bd1b0fa
-ms.openlocfilehash: dd87b81dbfc412168566f5b58bb2040c0e05b080
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: cc9031a19cb49736cf039d53d02ff2bc571ff978
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57365427"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59167858"
 ---
-# <a name="documentviewer"></a><span data-ttu-id="d32dc-102">DocumentViewer</span><span class="sxs-lookup"><span data-stu-id="d32dc-102">DocumentViewer</span></span>
-<span data-ttu-id="d32dc-103"><xref:System.Windows.Controls.DocumentViewer> 컨트롤을 보려면 사용 <xref:System.Windows.Documents.FixedDocument> 콘텐츠 (같은 [!INCLUDE[TLA#tla_metro](../../../../includes/tlasharptla-metro-md.md)] 문서) 페이지를 매긴 형식에서.</span><span class="sxs-lookup"><span data-stu-id="d32dc-103">The <xref:System.Windows.Controls.DocumentViewer> control is used to view <xref:System.Windows.Documents.FixedDocument> content (such as [!INCLUDE[TLA#tla_metro](../../../../includes/tlasharptla-metro-md.md)] documents) in a paginated format.</span></span>  
+# <a name="documentviewer"></a><span data-ttu-id="72cbb-102">DocumentViewer</span><span class="sxs-lookup"><span data-stu-id="72cbb-102">DocumentViewer</span></span>
+<span data-ttu-id="72cbb-103"><xref:System.Windows.Controls.DocumentViewer> 컨트롤을 보려면 사용 <xref:System.Windows.Documents.FixedDocument> 콘텐츠 (같은 [!INCLUDE[TLA#tla_metro](../../../../includes/tlasharptla-metro-md.md)] 문서) 페이지를 매긴 형식에서.</span><span class="sxs-lookup"><span data-stu-id="72cbb-103">The <xref:System.Windows.Controls.DocumentViewer> control is used to view <xref:System.Windows.Documents.FixedDocument> content (such as [!INCLUDE[TLA#tla_metro](../../../../includes/tlasharptla-metro-md.md)] documents) in a paginated format.</span></span>  
   
-## <a name="reference"></a><span data-ttu-id="d32dc-104">참조</span><span class="sxs-lookup"><span data-stu-id="d32dc-104">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="72cbb-104">참조</span><span class="sxs-lookup"><span data-stu-id="72cbb-104">Reference</span></span>  
  <xref:System.Windows.Controls.DocumentViewer>  
   
  <xref:System.Windows.Documents.FixedDocument>  
   
-## <a name="see-also"></a><span data-ttu-id="d32dc-105">참고자료</span><span class="sxs-lookup"><span data-stu-id="d32dc-105">See also</span></span>
-- [<span data-ttu-id="d32dc-106">문서</span><span class="sxs-lookup"><span data-stu-id="d32dc-106">Documents</span></span>](../advanced/documents.md)
-- [<span data-ttu-id="d32dc-107">문서 serialization 및 저장소</span><span class="sxs-lookup"><span data-stu-id="d32dc-107">Document Serialization and Storage</span></span>](../advanced/document-serialization-and-storage.md)
-- [<span data-ttu-id="d32dc-108">인쇄 개요</span><span class="sxs-lookup"><span data-stu-id="d32dc-108">Printing Overview</span></span>](../advanced/printing-overview.md)
+## <a name="see-also"></a><span data-ttu-id="72cbb-105">참고자료</span><span class="sxs-lookup"><span data-stu-id="72cbb-105">See also</span></span>
+
+- [<span data-ttu-id="72cbb-106">문서</span><span class="sxs-lookup"><span data-stu-id="72cbb-106">Documents</span></span>](../advanced/documents.md)
+- [<span data-ttu-id="72cbb-107">문서 serialization 및 스토리지</span><span class="sxs-lookup"><span data-stu-id="72cbb-107">Document Serialization and Storage</span></span>](../advanced/document-serialization-and-storage.md)
+- [<span data-ttu-id="72cbb-108">인쇄 개요</span><span class="sxs-lookup"><span data-stu-id="72cbb-108">Printing Overview</span></span>](../advanced/printing-overview.md)

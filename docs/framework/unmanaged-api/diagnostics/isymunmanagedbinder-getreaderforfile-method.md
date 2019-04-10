@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 53558e1b76d5bb22ff2af3b8d7d9e4006072775b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0414cadca910f3290f96a841e3f807f0de469606
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54734286"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59145966"
 ---
-# <a name="isymunmanagedbindergetreaderforfile-method"></a><span data-ttu-id="00037-102">ISymUnmanagedBinder::GetReaderForFile 메서드</span><span class="sxs-lookup"><span data-stu-id="00037-102">ISymUnmanagedBinder::GetReaderForFile Method</span></span>
-<span data-ttu-id="00037-103">지정 된 메타 데이터 인터페이스 및 파일 이름을 올바른 반환 [ISymUnmanagedReader](isymunmanagedreader-interface.md) 모듈과 관련 디버깅 기호를 읽는 인터페이스입니다.</span><span class="sxs-lookup"><span data-stu-id="00037-103">Given a metadata interface and a file name, returns the correct [ISymUnmanagedReader](isymunmanagedreader-interface.md) interface that will read the debugging symbols associated with the module.</span></span>  
+# <a name="isymunmanagedbindergetreaderforfile-method"></a><span data-ttu-id="21c31-102">ISymUnmanagedBinder::GetReaderForFile 메서드</span><span class="sxs-lookup"><span data-stu-id="21c31-102">ISymUnmanagedBinder::GetReaderForFile Method</span></span>
+<span data-ttu-id="21c31-103">지정 된 메타 데이터 인터페이스 및 파일 이름을 올바른 반환 [ISymUnmanagedReader](isymunmanagedreader-interface.md) 모듈과 관련 디버깅 기호를 읽는 인터페이스입니다.</span><span class="sxs-lookup"><span data-stu-id="21c31-103">Given a metadata interface and a file name, returns the correct [ISymUnmanagedReader](isymunmanagedreader-interface.md) interface that will read the debugging symbols associated with the module.</span></span>  
   
- <span data-ttu-id="00037-104">이 메서드는 실행 파일 옆에 있는 경우에 프로그램 데이터베이스 (PDB) 파일을 열립니다.</span><span class="sxs-lookup"><span data-stu-id="00037-104">This method will open the program database (PDB) file only if it is next to the executable file.</span></span> <span data-ttu-id="00037-105">보안상의 이유로이 변경 되었습니다.</span><span class="sxs-lookup"><span data-stu-id="00037-105">This change has been made for security purposes.</span></span> <span data-ttu-id="00037-106">PDB 파일에 대 한 보다 광범위 한 검색을 할 경우 사용 합니다 [ISymUnmanagedBinder2::GetReaderForFile2](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder2-getreaderforfile2-method.md) 메서드.</span><span class="sxs-lookup"><span data-stu-id="00037-106">If you need a more extensive search for the PDB file, use the [ISymUnmanagedBinder2::GetReaderForFile2](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder2-getreaderforfile2-method.md) method.</span></span>  
+ <span data-ttu-id="21c31-104">이 메서드는 실행 파일 옆에 있는 경우에 프로그램 데이터베이스 (PDB) 파일을 열립니다.</span><span class="sxs-lookup"><span data-stu-id="21c31-104">This method will open the program database (PDB) file only if it is next to the executable file.</span></span> <span data-ttu-id="21c31-105">보안상의 이유로이 변경 되었습니다.</span><span class="sxs-lookup"><span data-stu-id="21c31-105">This change has been made for security purposes.</span></span> <span data-ttu-id="21c31-106">PDB 파일에 대 한 보다 광범위 한 검색을 할 경우 사용 합니다 [ISymUnmanagedBinder2::GetReaderForFile2](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder2-getreaderforfile2-method.md) 메서드.</span><span class="sxs-lookup"><span data-stu-id="21c31-106">If you need a more extensive search for the PDB file, use the [ISymUnmanagedBinder2::GetReaderForFile2](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder2-getreaderforfile2-method.md) method.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="00037-107">구문</span><span class="sxs-lookup"><span data-stu-id="00037-107">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="21c31-107">구문</span><span class="sxs-lookup"><span data-stu-id="21c31-107">Syntax</span></span>  
   
 ```  
 HRESULT GetReaderForFile(  
@@ -39,25 +39,26 @@ HRESULT GetReaderForFile(
     [out, retval] ISymUnmanagedReader  **pRetVal);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="00037-108">매개 변수</span><span class="sxs-lookup"><span data-stu-id="00037-108">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="21c31-108">매개 변수</span><span class="sxs-lookup"><span data-stu-id="21c31-108">Parameters</span></span>  
  `importer`  
- <span data-ttu-id="00037-109">[in] 메타 데이터 가져오기 인터페이스 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="00037-109">[in] A pointer to the metadata import interface.</span></span>  
+ <span data-ttu-id="21c31-109">[in] 메타 데이터 가져오기 인터페이스 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="21c31-109">[in] A pointer to the metadata import interface.</span></span>  
   
  `fileName`  
- <span data-ttu-id="00037-110">[in] 파일 이름에 대 한 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="00037-110">[in] A pointer to the file name.</span></span>  
+ <span data-ttu-id="21c31-110">[in] 파일 이름에 대 한 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="21c31-110">[in] A pointer to the file name.</span></span>  
   
  `searchPath`  
- <span data-ttu-id="00037-111">[in] 검색 경로에 대 한 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="00037-111">[in] A pointer to the search path.</span></span>  
+ <span data-ttu-id="21c31-111">[in] 검색 경로에 대 한 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="21c31-111">[in] A pointer to the search path.</span></span>  
   
  `pRetVal`  
- <span data-ttu-id="00037-112">[out] 설정 된 포인터를 반환 [ISymUnmanagedReader](isymunmanagedreader-interface.md) 인터페이스입니다.</span><span class="sxs-lookup"><span data-stu-id="00037-112">[out] A pointer that is set to the returned [ISymUnmanagedReader](isymunmanagedreader-interface.md) interface.</span></span>  
+ <span data-ttu-id="21c31-112">[out] 설정 된 포인터를 반환 [ISymUnmanagedReader](isymunmanagedreader-interface.md) 인터페이스입니다.</span><span class="sxs-lookup"><span data-stu-id="21c31-112">[out] A pointer that is set to the returned [ISymUnmanagedReader](isymunmanagedreader-interface.md) interface.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="00037-113">반환 값</span><span class="sxs-lookup"><span data-stu-id="00037-113">Return Value</span></span>  
- <span data-ttu-id="00037-114">메서드가 성공 하면 s_ok이 고 그렇지 않으면 E_FAIL 또는 일부 다른 오류 코드입니다.</span><span class="sxs-lookup"><span data-stu-id="00037-114">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="21c31-113">반환 값</span><span class="sxs-lookup"><span data-stu-id="21c31-113">Return Value</span></span>  
+ <span data-ttu-id="21c31-114">메서드가 성공 하면 s_ok이 고 그렇지 않으면 E_FAIL 또는 일부 다른 오류 코드입니다.</span><span class="sxs-lookup"><span data-stu-id="21c31-114">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="00037-115">요구 사항</span><span class="sxs-lookup"><span data-stu-id="00037-115">Requirements</span></span>  
- <span data-ttu-id="00037-116">**헤더:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="00037-116">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="21c31-115">요구 사항</span><span class="sxs-lookup"><span data-stu-id="21c31-115">Requirements</span></span>  
+ <span data-ttu-id="21c31-116">**헤더:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="21c31-116">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="00037-117">참고자료</span><span class="sxs-lookup"><span data-stu-id="00037-117">See also</span></span>
-- [<span data-ttu-id="00037-118">ISymUnmanagedBinder 인터페이스</span><span class="sxs-lookup"><span data-stu-id="00037-118">ISymUnmanagedBinder Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder-interface.md)
-- [<span data-ttu-id="00037-119">GetReaderForFile2 메서드</span><span class="sxs-lookup"><span data-stu-id="00037-119">GetReaderForFile2 Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder2-getreaderforfile2-method.md)
+## <a name="see-also"></a><span data-ttu-id="21c31-117">참고자료</span><span class="sxs-lookup"><span data-stu-id="21c31-117">See also</span></span>
+
+- [<span data-ttu-id="21c31-118">ISymUnmanagedBinder 인터페이스</span><span class="sxs-lookup"><span data-stu-id="21c31-118">ISymUnmanagedBinder Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder-interface.md)
+- [<span data-ttu-id="21c31-119">GetReaderForFile2 메서드</span><span class="sxs-lookup"><span data-stu-id="21c31-119">GetReaderForFile2 Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder2-getreaderforfile2-method.md)
