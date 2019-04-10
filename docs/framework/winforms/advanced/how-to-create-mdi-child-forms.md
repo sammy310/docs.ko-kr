@@ -9,12 +9,12 @@ helpviewer_keywords:
 - MDI [Windows Forms], creating forms
 - child forms
 ms.assetid: 164b69bb-2eca-4339-ada3-0679eb2c6dda
-ms.openlocfilehash: 83f94830eec1d82112719a48e8ea98e2503f4542
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 73f2004470d5d1da04199af75832cefd6348ce18
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59124529"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59342481"
 ---
 # <a name="how-to-create-mdi-child-forms"></a>방법: MDI 자식 양식 만들기
 MDI 자식 폼의 중요 한 요소는 [다중 문서 MDI (인터페이스) 응용 프로그램](multiple-document-interface-mdi-applications.md)같이 이러한 사용자 상호 작용의 중심 이므로 합니다.  
@@ -26,17 +26,17 @@ MDI 자식 폼의 중요 한 요소는 [다중 문서 MDI (인터페이스) 응�
   
 ### <a name="to-create-mdi-child-forms"></a>MDI 자식 폼을 만들려면  
   
-1.  새 Windows Forms 프로젝트를 만듭니다. **속성 Windows** 폼에 대 한 설정 해당 <xref:System.Windows.Forms.Form.IsMdiContainer%2A> 속성을 `true`, 및 `WindowsState` 속성을 `Maximized`입니다.  
+1. 새 Windows Forms 프로젝트를 만듭니다. **속성 Windows** 폼에 대 한 설정 해당 <xref:System.Windows.Forms.Form.IsMdiContainer%2A> 속성을 `true`, 및 `WindowsState` 속성을 `Maximized`입니다.  
   
      그러면 폼이 자식 창의 MDI 컨테이너로 지정됩니다.  
   
-2.  `Toolbox`에서 <xref:System.Windows.Forms.MenuStrip> 컨트롤을 폼으로 끌어서 놓습니다. 설정 해당 `Text` 속성을 **파일**합니다.  
+2. `Toolbox`에서 <xref:System.Windows.Forms.MenuStrip> 컨트롤을 폼으로 끌어서 놓습니다. 설정 해당 `Text` 속성을 **파일**합니다.  
   
-3.  옆에 있는 줄임표 (...)를 **항목** 속성과 클릭 **추가** 두 자식 도구 스트립 메뉴 항목을 추가 합니다. 설정 합니다 `Text` 이러한 항목에 대 한 속성 **새로 만들기** 하 고 **창**합니다.  
+3. 옆에 있는 줄임표 (...)를 **항목** 속성과 클릭 **추가** 두 자식 도구 스트립 메뉴 항목을 추가 합니다. 설정 합니다 `Text` 이러한 항목에 대 한 속성 **새로 만들기** 하 고 **창**합니다.  
   
-4.  **솔루션 탐색기**프로젝트를 마우스 오른쪽 단추로 클릭, 가리킨 **추가**를 선택한 후 **새 항목 추가**합니다.  
+4. **솔루션 탐색기**프로젝트를 마우스 오른쪽 단추로 클릭, 가리킨 **추가**를 선택한 후 **새 항목 추가**합니다.  
   
-5.  에 **새 항목 추가** 대화 상자에서 **Windows 폼** (Visual Basic 또는 Visual C#) 또는 **Windows Forms 응용 프로그램 (.NET)** (에서 [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) 합니다 에서 **템플릿** 창입니다. 에 **이름을** 상자에서 폼의 이름을 **Form2**합니다. 클릭 합니다 **열려** 프로젝트에 폼을 추가 하려면 단추입니다.  
+5. 에 **새 항목 추가** 대화 상자에서 **Windows 폼** (Visual Basic 또는 Visual C#) 또는 **Windows Forms 응용 프로그램 (.NET)** (에서 [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) 합니다 에서 **템플릿** 창입니다. 에 **이름을** 상자에서 폼의 이름을 **Form2**합니다. 클릭 합니다 **열려** 프로젝트에 폼을 추가 하려면 단추입니다.  
   
     > [!NOTE]
     >  이 단계에서 만든 MDI 자식 폼은 표준 Windows Form입니다. 따라서 폼의 투명도를 제어할 수 있는 <xref:System.Windows.Forms.Form.Opacity%2A> 속성이 있습니다. 그러나 <xref:System.Windows.Forms.Form.Opacity%2A> 속성은 최상위 창에 사용하도록 설계되었습니다. 그리기 문제가 발생할 수 있으므로 MDI 자식 폼에는 사용하지 마세요.  
@@ -45,13 +45,13 @@ MDI 자식 폼의 중요 한 요소는 [다중 문서 MDI (인터페이스) 응�
   
      합니다 **Windows Forms 디자이너** 열리는지 **Form2**합니다.  
   
-6.  **도구 상자**를 끌어를 **RichTextBox** 컨트롤을 폼입니다.  
+6. **도구 상자**를 끌어를 **RichTextBox** 컨트롤을 폼입니다.  
   
-7.  에 **속성** 창에서 합니다 `Anchor` 속성을 **위쪽, 왼쪽** 및 `Dock` 속성을 **채우기**합니다.  
+7. 에 **속성** 창에서 합니다 `Anchor` 속성을 **위쪽, 왼쪽** 및 `Dock` 속성을 **채우기**합니다.  
   
      이렇게 하면 폼의 크기를 조정하는 경우에도 <xref:System.Windows.Forms.RichTextBox> 컨트롤이 MDI 자식 폼의 영역을 완전히 채웁니다.  
   
-8.  두 번 클릭 합니다 **새로 만들기** 만들려는 메뉴 항목을 <xref:System.Windows.Forms.Control.Click> 에 대 한 이벤트 처리기입니다.  
+8. 두 번 클릭 합니다 **새로 만들기** 만들려는 메뉴 항목을 <xref:System.Windows.Forms.Control.Click> 에 대 한 이벤트 처리기입니다.  
   
 9. 사용자가 클릭할 때 새 MDI 자식 폼을 만들려면 다음과 비슷한 코드를 삽입 합니다 **새로 만들기** 메뉴 항목입니다.  
   

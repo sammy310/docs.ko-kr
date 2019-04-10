@@ -2,19 +2,19 @@
 title: '방법: WorkflowServiceHost를 사용하여 추적 구성'
 ms.date: 03/30/2017
 ms.assetid: ed1485fe-7529-4351-bca3-8bb915260b17
-ms.openlocfilehash: dc6a89505c788183ed5d53df986c0f545c0d5533
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: e0631cdb47bc88f7f588f4dfe6c44ea3d44f4e60
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59226549"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59336566"
 ---
 # <a name="how-to-configure-tracking-with-workflowservicehost"></a>방법: WorkflowServiceHost를 사용하여 추적 구성
 이 항목에서는 [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]에서 호스트되는 <xref:System.ServiceModel.Activities.WorkflowServiceHost> 워크플로에 대해 추적을 구성하는 방법에 대해 설명합니다. 이러한 추적 기능은 Web.config 파일에서 서비스 동작을 지정하여 구성됩니다.  
   
 ### <a name="configure-tracking-in-configuration"></a>구성에서 추적 구성  
   
-1.  추가 합니다 <xref:System.Activities.Tracking.EtwTrackingParticipant> 를 사용 하 여는 <`behavior`> 다음 예제에서와 같이 구성 파일의 요소입니다.  
+1. 추가 합니다 <xref:System.Activities.Tracking.EtwTrackingParticipant> 를 사용 하 여는 <`behavior`> 다음 예제에서와 같이 구성 파일의 요소입니다.  
   
     ```xml  
     <behaviors>  
@@ -56,7 +56,7 @@ ms.locfileid: "59226549"
   
 ### <a name="configure-tracking-in-code"></a>코드에서 추적 구성  
   
-1.  다음 예제와 같이 코드에서 <xref:System.Activities.Tracking.EtwTrackingParticipant> 동작을 사용하여 <xref:System.ServiceModel.Activities.Description.EtwTrackingBehavior>를 추가합니다.  
+1. 다음 예제와 같이 코드에서 <xref:System.Activities.Tracking.EtwTrackingParticipant> 동작을 사용하여 <xref:System.ServiceModel.Activities.Description.EtwTrackingBehavior>를 추가합니다.  
   
     ```csharp  
     host.Description.Behaviors.Add(new EtwTrackingBehavior { ProfileName = "Sample Tracking Profile" });  

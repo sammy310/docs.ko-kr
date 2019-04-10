@@ -6,12 +6,12 @@ helpviewer_keywords:
 - animation [WPF], size changes with key frames
 - size changes [WPF], animating with key frames
 ms.assetid: 86bd2950-d4c9-4ec4-aa8d-7dc3ccadded4
-ms.openlocfilehash: a7adb16297f50e191628344d7e25d41f38a97861
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 0629b6600444bd172af451fd7e970bff894d8047
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59180234"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59342370"
 ---
 # <a name="how-to-animate-size-changes-by-using-key-frames"></a>방법: 키 프레임을 사용하여 크기 변경에 애니메이션 효과 주기
 이 예제에서는 키 프레임을 사용하여 크기 변경에 애니메이션 효과를 주는 방법을 보여 줍니다.  
@@ -19,11 +19,11 @@ ms.locfileid: "59180234"
 ## <a name="example"></a>예제  
  다음 예제에서는 합니다 <xref:System.Windows.Media.Animation.SizeAnimationUsingKeyFrames> 클래스에 애니메이션 효과를 합니다 <xref:System.Windows.Media.ArcSegment.Size%2A> 의 속성은 <xref:System.Windows.Media.ArcSegment>. 이 애니메이션은 다음과 같은 방식으로 세 가지 키 프레임을 사용합니다.  
   
-1.  애니메이션의 처음 1/2 초 동안의 인스턴스를 사용 하 여는 <xref:System.Windows.Media.Animation.LinearSizeKeyFrame> 클래스를 점차적으로 원호의 크기를 늘립니다. 과 같은 선형 키 프레임 <xref:System.Windows.Media.Animation.LinearSizeKeyFrame> 값 사이 매끄러운 선형 전환을 만듭니다.  
+1. 애니메이션의 처음 1/2 초 동안의 인스턴스를 사용 하 여는 <xref:System.Windows.Media.Animation.LinearSizeKeyFrame> 클래스를 점차적으로 원호의 크기를 늘립니다. 과 같은 선형 키 프레임 <xref:System.Windows.Media.Animation.LinearSizeKeyFrame> 값 사이 매끄러운 선형 전환을 만듭니다.  
   
-2.  0.5 초가 고 끝에 다음의 인스턴스를 사용 하는 <xref:System.Windows.Media.Animation.DiscreteSizeKeyFrame> 클래스를 갑자기 원호의 크기를 늘립니다. 과 같은 불연속 키 프레임 <xref:System.Windows.Media.Animation.DiscreteSizeKeyFrame> 크기 변화를 갑자기 발생 되며 미묘 하지, 즉 값 간에 갑작스러운 이동을 만듭니다.  
+2. 0.5 초가 고 끝에 다음의 인스턴스를 사용 하는 <xref:System.Windows.Media.Animation.DiscreteSizeKeyFrame> 클래스를 갑자기 원호의 크기를 늘립니다. 과 같은 불연속 키 프레임 <xref:System.Windows.Media.Animation.DiscreteSizeKeyFrame> 크기 변화를 갑자기 발생 되며 미묘 하지, 즉 값 간에 갑작스러운 이동을 만듭니다.  
   
-3.  마지막 2 초 동안의 인스턴스를 사용 하는 <xref:System.Windows.Media.Animation.SplineSizeKeyFrame> 클래스 원호의 크기를 늘립니다. 과 같은 스플라인 키 프레임 <xref:System.Windows.Media.Animation.SplineSizeKeyFrame> 의 값에 따라 값 사이 가변 전환을 만듭니다는 <xref:System.Windows.Media.Animation.SplineSizeKeyFrame.KeySpline%2A> 속성입니다. 이 예제에서 원호의 크기는 처음에는 느리게 증가했다가 시간 세그먼트가 끝나면서 기하급수적으로 증가합니다.  
+3. 마지막 2 초 동안의 인스턴스를 사용 하는 <xref:System.Windows.Media.Animation.SplineSizeKeyFrame> 클래스 원호의 크기를 늘립니다. 과 같은 스플라인 키 프레임 <xref:System.Windows.Media.Animation.SplineSizeKeyFrame> 의 값에 따라 값 사이 가변 전환을 만듭니다는 <xref:System.Windows.Media.Animation.SplineSizeKeyFrame.KeySpline%2A> 속성입니다. 이 예제에서 원호의 크기는 처음에는 느리게 증가했다가 시간 세그먼트가 끝나면서 기하급수적으로 증가합니다.  
   
  [!code-xaml[keyframes_snip#SizeAnimationUsingKeyFramesWholePage](~/samples/snippets/xaml/VS_Snippets_Wpf/keyframes_snip/XAML/SizeAnimationUsingKeyFramesExample.xaml#sizeanimationusingkeyframeswholepage)]  
   

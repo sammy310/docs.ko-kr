@@ -13,12 +13,12 @@ helpviewer_keywords:
 - icons [Windows Forms], toolbar buttons
 - ToolBar control [Windows Forms], adding icons to buttons
 ms.assetid: 84db98b4-8566-49ce-b2c8-1fd66a5eb3a0
-ms.openlocfilehash: 0d4a17528ca3eb81f93419491766e370be551b1e
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 2c1c3d8529662c1e1f1a3d28e3853d31f5d940ed
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59153129"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59336510"
 ---
 # <a name="how-to-define-an-icon-for-a-toolbar-button"></a>방법: 도구 모음 단추에 대한 아이콘 정의
 > [!NOTE]
@@ -28,11 +28,11 @@ ms.locfileid: "59153129"
   
 ### <a name="to-set-an-icon-for-a-toolbar-button-programmatically"></a>도구 모음 단추의 아이콘을 프로그래밍 방식으로 설정 하려면  
   
-1.  프로시저에서 인스턴스화하는 <xref:System.Windows.Forms.ImageList> 구성 요소 및 <xref:System.Windows.Forms.ToolBar> 제어 합니다.  
+1. 프로시저에서 인스턴스화하는 <xref:System.Windows.Forms.ImageList> 구성 요소 및 <xref:System.Windows.Forms.ToolBar> 제어 합니다.  
   
-2.  동일한 프로시저를 할당 하려면 이미지를 <xref:System.Windows.Forms.ImageList> 구성 요소입니다.  
+2. 동일한 프로시저를 할당 하려면 이미지를 <xref:System.Windows.Forms.ImageList> 구성 요소입니다.  
   
-3.  동일한 프로시저를 할당 합니다 <xref:System.Windows.Forms.ImageList> 컨트롤을 <xref:System.Windows.Forms.ToolBar> 제어 하 고 할당을 <xref:System.Windows.Forms.ToolBarButton.ImageIndex%2A> 개별 도구 모음 단추 속성.  
+3. 동일한 프로시저를 할당 합니다 <xref:System.Windows.Forms.ImageList> 컨트롤을 <xref:System.Windows.Forms.ToolBar> 제어 하 고 할당을 <xref:System.Windows.Forms.ToolBarButton.ImageIndex%2A> 개별 도구 모음 단추 속성.  
   
      다음 코드 예제에서는 이미지의 위치 설정 된 경로 **내 문서** 폴더입니다. 이렇게 하면 수 없으므로 Windows 운영 체제를 실행 하는 대부분의 컴퓨터는이 디렉터리를 포함 합니다. 또한 최소한의 시스템 액세스 수준을 가진 사용자가 안전하게 애플리케이션을 실행할 수 있습니다. 아래 예제에서는 가정 된 폼을 <xref:System.Windows.Forms.PictureBox> 이미 추가 된 컨트롤입니다.  
   

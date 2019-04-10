@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Windows Communication Foundation, extending
 - OperationRequirement class
 ms.assetid: 6214afde-44c1-4bf5-ba07-5ad6493620ea
-ms.openlocfilehash: 6a168902b79bd27345c9d9e2371947cc9d64233c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: e3d0143cd68bc94c6ff07e65ca5a3c8971b45f23
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59156496"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59337840"
 ---
 # <a name="how-to-create-a-custom-authorization-manager-for-a-service"></a>방법: 서비스에 대한 사용자 지정 권한 부여 관리자 만들기
 Windows Communication Foundation (WCF)에서 Id 모델 인프라를 확장할 수 있는 클레임 기반 권한 부여 모델을 지원합니다. 클레임은 토큰에서 추출되어 사용자 지정 권한 부여 정책에 의해 선택적으로 처리된 다음,<xref:System.IdentityModel.Policy.AuthorizationContext>에 배치됩니다. 권한 부여 관리자는 <xref:System.IdentityModel.Policy.AuthorizationContext>에서 클레임을 검사하여 권한 부여 결정을 내립니다.  
@@ -28,12 +28,12 @@ Windows Communication Foundation (WCF)에서 Id 모델 인프라를 확장할 �
   
 ### <a name="to-create-a-custom-authorization-manager"></a>사용자 지정 권한 부여 관리자를 만들려면  
   
-1.  <xref:System.ServiceModel.ServiceAuthorizationManager> 클래스에서 클래스를 파생시킵니다.  
+1. <xref:System.ServiceModel.ServiceAuthorizationManager> 클래스에서 클래스를 파생시킵니다.  
   
      [!code-csharp[c_CustomAuthMgr#5](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customauthmgr/cs/c_customauthmgr.cs#5)]
      [!code-vb[c_CustomAuthMgr#5](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customauthmgr/vb/c_customauthmgr.vb#5)]  
   
-2.  <xref:System.ServiceModel.ServiceAuthorizationManager.CheckAccessCore%28System.ServiceModel.OperationContext%29> 메서드를 재정의합니다.  
+2. <xref:System.ServiceModel.ServiceAuthorizationManager.CheckAccessCore%28System.ServiceModel.OperationContext%29> 메서드를 재정의합니다.  
   
      <xref:System.ServiceModel.OperationContext> 메서드에 전달되는 <xref:System.ServiceModel.ServiceAuthorizationManager.CheckAccessCore%28System.ServiceModel.OperationContext%29>를 사용하여 권한 부여 결정을 내립니다.  
   
@@ -44,7 +44,7 @@ Windows Communication Foundation (WCF)에서 Id 모델 인프라를 확장할 �
   
 ### <a name="to-register-a-custom-authorization-manager-using-code"></a>코드를 사용하여 사용자 지정 권한 부여 관리자를 등록하려면  
   
-1.  사용자 지정 권한 부여 관리자의 인스턴스를 만들어 <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior.ServiceAuthorizationManager%2A> 속성에 할당합니다.  
+1. 사용자 지정 권한 부여 관리자의 인스턴스를 만들어 <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior.ServiceAuthorizationManager%2A> 속성에 할당합니다.  
   
      <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior> 속성을 사용하여 <xref:System.ServiceModel.ServiceHostBase.Authorization%2A>에 액세스할 수 있습니다.  
   
@@ -55,17 +55,17 @@ Windows Communication Foundation (WCF)에서 Id 모델 인프라를 확장할 �
   
 ### <a name="to-register-a-custom-authorization-manager-using-configuration"></a>구성을 사용하여 사용자 지정 권한 부여 관리자를 등록하려면  
   
-1.  서비스에 대한 구성 파일을 엽니다.  
+1. 서비스에 대한 구성 파일을 엽니다.  
   
-2.  추가 된 [ \<serviceAuthorization >](../../../../docs/framework/configure-apps/file-schema/wcf/serviceauthorization-element.md) 에 [ \<동작 >](../../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md)합니다.  
+2. 추가 된 [ \<serviceAuthorization >](../../../../docs/framework/configure-apps/file-schema/wcf/serviceauthorization-element.md) 에 [ \<동작 >](../../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md)합니다.  
   
      에 [ \<serviceAuthorization >](../../../../docs/framework/configure-apps/file-schema/wcf/serviceauthorization-element.md), 추가 `serviceAuthorizationManagerType` 특성 및 사용자 지정 권한 부여 관리자를 나타내는 형식에 해당 값을 설정 합니다.  
   
-3.  클라이언트와 서비스 간의 통신을 보안하는 바인딩을 추가합니다.  
+3. 클라이언트와 서비스 간의 통신을 보안하는 바인딩을 추가합니다.  
   
      이 통신에 대해 선택된 바인딩에 따라 <xref:System.IdentityModel.Policy.AuthorizationContext>에 추가되는 클레임이 결정되고, 사용자 지정 권한 부여 관리자는 이 클레임을 사용하여 권한 부여 결정을 내립니다. 시스템 제공 바인딩에 대 한 자세한 내용은 참조 하세요. [System-Provided Bindings](../../../../docs/framework/wcf/system-provided-bindings.md)합니다.  
   
-4.  동작 서비스 끝점을 추가 하 여 연결을 [ \<서비스 >](../../../../docs/framework/configure-apps/file-schema/wcf/service.md) 요소 값을 설정 하 고는 `behaviorConfiguration` 특성에 대 한 이름 특성의 값으로는 [ \<동작 >](../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-servicebehaviors.md) 요소입니다.  
+4. 동작 서비스 끝점을 추가 하 여 연결을 [ \<서비스 >](../../../../docs/framework/configure-apps/file-schema/wcf/service.md) 요소 값을 설정 하 고는 `behaviorConfiguration` 특성에 대 한 이름 특성의 값으로는 [ \<동작 >](../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-servicebehaviors.md) 요소입니다.  
   
      서비스 끝점을 구성 하는 방법에 대 한 자세한 내용은 참조 하세요. [방법: 구성에서 서비스 끝점을 만드는](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-configuration.md)합니다.  
   

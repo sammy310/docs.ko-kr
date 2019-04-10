@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - dispatcher extensions [WCF]
 ms.assetid: d0ad15ac-fa12-4f27-80e8-7ac2271e5985
-ms.openlocfilehash: df726d71880d135adb883f834acfa9839641eae3
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: ac20e24eb9148ed9d403b7a9c2c260009f39d492
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59162726"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59335032"
 ---
 # <a name="extending-dispatchers"></a>디스패처 확장
 디스패처는 기본 채널에서 들어오는 메시지를 끌어와서 응용 프로그램 코드에서 이를 메서드 호출로 변환하여 결과를 다시 호출자에게 보내는 역할을 합니다. 디스패처 확장을 사용하여 이 처리를 수정할 수 있습니다.  메시지의 내용 또는 매개 변수를 검사하거나 수정하는 메시지 또는 매개 변수 검사자를 구현할 수 있습니다.  메시지가 작업으로 라우트되는 방식을 변경하거나 일부 다른 기능을 제공할 수 있습니다.  
@@ -76,13 +76,13 @@ ms.locfileid: "59162726"
   
  <xref:System.ServiceModel.Dispatcher.DispatchRuntime> 클래스에 의해 노출되는 디스패처 확장성의 네 가지 기본 영역은 다음과 같습니다.  
   
-1.  채널 구성 요소에서는 <xref:System.ServiceModel.Dispatcher.DispatchRuntime> 속성 및 <xref:System.ServiceModel.Dispatcher.DispatchRuntime.ChannelDispatcher%2A> 속성에서 반환하는 연관된 채널 디스패처의 속성을 사용하여 채널 디스패처가 채널을 허용하고 닫는 방법을 사용자 지정합니다. 이 범주에는 <xref:System.ServiceModel.Dispatcher.ChannelDispatcher.ChannelInitializers%2A> 및 <xref:System.ServiceModel.Dispatcher.DispatchRuntime.InputSessionShutdownHandlers%2A> 속성이 포함됩니다.  
+1. 채널 구성 요소에서는 <xref:System.ServiceModel.Dispatcher.DispatchRuntime> 속성 및 <xref:System.ServiceModel.Dispatcher.DispatchRuntime.ChannelDispatcher%2A> 속성에서 반환하는 연관된 채널 디스패처의 속성을 사용하여 채널 디스패처가 채널을 허용하고 닫는 방법을 사용자 지정합니다. 이 범주에는 <xref:System.ServiceModel.Dispatcher.ChannelDispatcher.ChannelInitializers%2A> 및 <xref:System.ServiceModel.Dispatcher.DispatchRuntime.InputSessionShutdownHandlers%2A> 속성이 포함됩니다.  
   
-2.  메시지 구성 요소는 처리되는 메시지별로 사용자 지정됩니다. 이 범주에는 <xref:System.ServiceModel.Dispatcher.DispatchRuntime.MessageInspectors%2A>, <xref:System.ServiceModel.Dispatcher.DispatchRuntime.OperationSelector%2A>, <xref:System.ServiceModel.Dispatcher.DispatchRuntime.Operations%2A> 및 <xref:System.ServiceModel.Dispatcher.ChannelDispatcher.ErrorHandlers%2A> 속성이 포함됩니다.  
+2. 메시지 구성 요소는 처리되는 메시지별로 사용자 지정됩니다. 이 범주에는 <xref:System.ServiceModel.Dispatcher.DispatchRuntime.MessageInspectors%2A>, <xref:System.ServiceModel.Dispatcher.DispatchRuntime.OperationSelector%2A>, <xref:System.ServiceModel.Dispatcher.DispatchRuntime.Operations%2A> 및 <xref:System.ServiceModel.Dispatcher.ChannelDispatcher.ErrorHandlers%2A> 속성이 포함됩니다.  
   
-3.  인스턴스 구성 요소는 해당 서비스 형식 인스턴스의 생성, 수명, 삭제를 사용자 지정합니다. 서비스 개체 수명에 대한 자세한 내용은 <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A> 속성을 참조하세요. 이 범주에는 <xref:System.ServiceModel.Dispatcher.DispatchRuntime.InstanceContextInitializers%2A> 및 <xref:System.ServiceModel.Dispatcher.DispatchRuntime.InstanceProvider%2A> 속성이 포함됩니다.  
+3. 인스턴스 구성 요소는 해당 서비스 형식 인스턴스의 생성, 수명, 삭제를 사용자 지정합니다. 서비스 개체 수명에 대한 자세한 내용은 <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A> 속성을 참조하세요. 이 범주에는 <xref:System.ServiceModel.Dispatcher.DispatchRuntime.InstanceContextInitializers%2A> 및 <xref:System.ServiceModel.Dispatcher.DispatchRuntime.InstanceProvider%2A> 속성이 포함됩니다.  
   
-4.  보안 관련 구성 요소는 다음과 같은 속성을 사용할 수 있습니다.  
+4. 보안 관련 구성 요소는 다음과 같은 속성을 사용할 수 있습니다.  
   
     -   <xref:System.ServiceModel.Dispatcher.DispatchRuntime.SecurityAuditLogLocation%2A> 감사 이벤트를 쓰는 위치를 나타냅니다.  
   

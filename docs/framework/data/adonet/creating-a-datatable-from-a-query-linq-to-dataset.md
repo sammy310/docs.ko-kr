@@ -5,25 +5,25 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 1b97afeb-03f8-41e2-8eb3-58aff65f7d18
-ms.openlocfilehash: 0f750f2d23430691016fc2cf1e5e9d44d80da2a9
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: b25de14267bc31ad0ac5e3f51d4cd964b5a0535f
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59204083"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59342533"
 ---
 # <a name="creating-a-datatable-from-a-query-linq-to-dataset"></a>쿼리에서 DataTable 만들기(LINQ to DataSet)
 데이터 바인딩에는 일반적으로 <xref:System.Data.DataTable> 개체가 사용됩니다. <xref:System.Data.DataTableExtensions.CopyToDataTable%2A> 메서드는 쿼리 결과를 받아서 나중에 데이터 바인딩에 사용할 수 있도록 데이터를 <xref:System.Data.DataTable>에 복사합니다. 데이터 작업이 수행되면 새 <xref:System.Data.DataTable>이 소스 <xref:System.Data.DataTable>에 다시 병합됩니다.  
   
  <xref:System.Data.DataTableExtensions.CopyToDataTable%2A> 메서드는 다음 프로세스를 사용하여 쿼리에서 <xref:System.Data.DataTable>을 만듭니다.  
   
-1.  <xref:System.Data.DataTableExtensions.CopyToDataTable%2A> 메서드는 소스 테이블(<xref:System.Data.DataTable> 인터페이스를 구현한 <xref:System.Data.DataTable> 개체)에서 <xref:System.Linq.IQueryable%601>을 복제합니다. <xref:System.Collections.IEnumerable> 소스는 일반적으로 [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] 식 또는 메서드 쿼리를 통해 만들어집니다.  
+1. <xref:System.Data.DataTableExtensions.CopyToDataTable%2A> 메서드는 소스 테이블(<xref:System.Data.DataTable> 인터페이스를 구현한 <xref:System.Data.DataTable> 개체)에서 <xref:System.Linq.IQueryable%601>을 복제합니다. <xref:System.Collections.IEnumerable> 소스는 일반적으로 [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] 식 또는 메서드 쿼리를 통해 만들어집니다.  
   
-2.  복제된 <xref:System.Data.DataTable>의 스키마는 소스 테이블의 첫 번째 열거된 <xref:System.Data.DataRow> 개체 열을 통해 작성되며 복제된 테이블의 이름은 소스 테이블 이름에 "query"라는 단어를 추가하여 지정됩니다.  
+2. 복제된 <xref:System.Data.DataTable>의 스키마는 소스 테이블의 첫 번째 열거된 <xref:System.Data.DataRow> 개체 열을 통해 작성되며 복제된 테이블의 이름은 소스 테이블 이름에 "query"라는 단어를 추가하여 지정됩니다.  
   
-3.  소스 테이블에서 각 행의 내용은 새 <xref:System.Data.DataRow> 개체에 복사된 다음 복제 테이블에 삽입됩니다. <xref:System.Data.DataRow.RowState%2A> 및 <xref:System.Data.DataRow.RowError%2A> 속성은 복사 작업 동안 유지됩니다. 소스의 <xref:System.ArgumentException> 개체가 다른 테이블의 개체이면 <xref:System.Data.DataRow>이 throw됩니다.  
+3. 소스 테이블에서 각 행의 내용은 새 <xref:System.Data.DataRow> 개체에 복사된 다음 복제 테이블에 삽입됩니다. <xref:System.Data.DataRow.RowState%2A> 및 <xref:System.Data.DataRow.RowError%2A> 속성은 복사 작업 동안 유지됩니다. 소스의 <xref:System.ArgumentException> 개체가 다른 테이블의 개체이면 <xref:System.Data.DataRow>이 throw됩니다.  
   
-4.  쿼리 가능한 입력 테이블의 모든 <xref:System.Data.DataTable> 개체가 복사된 후 복제된 <xref:System.Data.DataRow>이 반환됩니다. 소스 시퀀스에 <xref:System.Data.DataRow> 개체가 없는 경우 이 메서드는 빈 <xref:System.Data.DataTable>을 반환합니다.  
+4. 쿼리 가능한 입력 테이블의 모든 <xref:System.Data.DataTable> 개체가 복사된 후 복제된 <xref:System.Data.DataRow>이 반환됩니다. 소스 시퀀스에 <xref:System.Data.DataRow> 개체가 없는 경우 이 메서드는 빈 <xref:System.Data.DataTable>을 반환합니다.  
   
  <xref:System.Data.DataTableExtensions.CopyToDataTable%2A> 메서드를 호출하면 실행할 소스 테이블에 쿼리가 바인딩됩니다.  
   

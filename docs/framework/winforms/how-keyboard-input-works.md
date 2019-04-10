@@ -6,12 +6,12 @@ helpviewer_keywords:
 - keyboards [Windows Forms], keyboard input
 - Windows Forms, keyboard input
 ms.assetid: 9a29433c-a180-49bb-b74c-d187786584c8
-ms.openlocfilehash: 4335798395a3b73dbcb2546a6fadac3d8efedb64
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: ddc2f3338b231ab3ae59e65bc82c00bb8f663540
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59204746"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59342175"
 ---
 # <a name="how-keyboard-input-works"></a>키보드 입력 작동 방식
 Windows Forms에서는 Windows 메시지에 대한 응답으로 키보드 이벤트를 발생시켜 키보드 입력을 처리합니다. 대부분의 Windows Forms 애플리케이션에서는 키보드 이벤트를 처리하여 키보드 입력을 단독으로 처리합니다. 그러나 키가 컨트롤에 도달하기 전에 키를 가로채는 등의 고급 키보드 입력 시나리오를 구현하려면 키보드 메시지가 작동하는 방식을 알아야 합니다. 이 항목에서는 Windows Forms에서 인식하는 키 데이터 형식을 설명하고 키보드 메시지가 라우팅되는 방법에 대한 개요를 설명합니다. 키보드 이벤트에 대한 자세한 내용은 [키보드 이벤트 사용](using-keyboard-events.md)을 참조하세요.  
@@ -22,13 +22,13 @@ Windows Forms에서는 Windows 메시지에 대한 응답으로 키보드 이벤
 ## <a name="order-of-keyboard-events"></a>키보드 이벤트의 순서  
  앞에서 설명한 대로 한 컨트롤에서 발생할 수 있는 키보드 관련 이벤트는 세 가지입니다. 다음 시퀀스는 키보드 이벤트의 일반적인 순서를 보여 줍니다.  
   
-1.  사용자가 "a" 키, 키가 전처리 되 디스패치 된 및 <xref:System.Windows.Forms.Control.KeyDown> 이벤트가 발생 합니다.  
+1. 사용자가 "a" 키, 키가 전처리 되 디스패치 된 및 <xref:System.Windows.Forms.Control.KeyDown> 이벤트가 발생 합니다.  
   
-2.  "A" 키를 보유 하는 사용자, 디스패치, 해당 키가 전처리 및 <xref:System.Windows.Forms.Control.KeyPress> 이벤트가 발생 합니다.  
+2. "A" 키를 보유 하는 사용자, 디스패치, 해당 키가 전처리 및 <xref:System.Windows.Forms.Control.KeyPress> 이벤트가 발생 합니다.  
   
      이 이벤트는 사용자가 키를 누르고 있을 때 여러 차례 발생합니다.  
   
-3.  "A" 키, 키가 전처리 되 고 사용자 릴리스에서 디스패치 및 <xref:System.Windows.Forms.Control.KeyUp> 이벤트가 발생 합니다.  
+3. "A" 키, 키가 전처리 되 고 사용자 릴리스에서 디스패치 및 <xref:System.Windows.Forms.Control.KeyUp> 이벤트가 발생 합니다.  
   
 ## <a name="preprocessing-keys"></a>키 전처리  
  다른 메시지와 마찬가지로 키보드 메시지에서 처리 되는 <xref:System.Windows.Forms.Control.WndProc%2A> 양식이 나 컨트롤의 메서드. 그러나 키보드 하기 전에 메시지를 처리 합니다 <xref:System.Windows.Forms.Control.PreProcessMessage%2A> 메서드 특수 문자 키와 실제 키를 처리 하도록 재정의할 수 있는 하나 이상의 메서드를 호출 합니다. 이러한 메서드를 재정의하여 컨트롤에서 메시지를 처리하기 전에 특정 키를 감지하고 필터링할 수 있습니다. 다음 표에서는 수행할 작업과 이와 관련하여 발생하는 메서드를 메서드 발생 순서에 따라 보여 줍니다.  

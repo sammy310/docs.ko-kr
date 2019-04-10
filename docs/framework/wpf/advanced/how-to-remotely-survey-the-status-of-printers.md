@@ -11,12 +11,12 @@ helpviewer_keywords:
 - remotely surveying printer status [WPF]
 - status [WPF], printers [WPF], surveying remotely
 ms.assetid: d6324759-8292-4c23-9584-9c708887dc94
-ms.openlocfilehash: 4ebcb2e4f85d30ea1ce24584c69def5b0d1297c1
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: dc187a4ea120661e8118ce79a966d3d4a3b40711
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59143548"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59340791"
 ---
 # <a name="how-to-remotely-survey-the-status-of-printers"></a>방법: 원격으로 프린터 상태 조사
 중간 규모 및 대규모 기업에는 언제든지 종이 걸림이나 용지 부족 또는 다른 문제 상황으로 인해 여러 프린터가 작동하지 않을 수 있습니다. 다양 한 프린터 속성에서 노출 된 [!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)] Microsoft.NET Framework의 프린터의 상태를 신속 하 게 설문 조사를 수행 하기 위한 수단을 제공 합니다.  
@@ -24,11 +24,11 @@ ms.locfileid: "59143548"
 ## <a name="example"></a>예제  
  이러한 종류의 유틸리티를 만드는 주요 단계는 다음과 같습니다.  
   
-1.  모든 인쇄 서버 목록을 가져옵니다.  
+1. 모든 인쇄 서버 목록을 가져옵니다.  
   
-2.  서버를 반복하여 해당 인쇄 큐를 쿼리합니다.  
+2. 서버를 반복하여 해당 인쇄 큐를 쿼리합니다.  
   
-3.  서버 루프의 각 단계 내에서 모든 서버 큐를 반복하고 큐가 현재 작동하지 않는다는 것을 나타내는 각 속성을 읽습니다.  
+3. 서버 루프의 각 단계 내에서 모든 서버 큐를 반복하고 큐가 현재 작동하지 않는다는 것을 나타내는 각 속성을 읽습니다.  
   
  아래의 코드는 일련의 코드 조각입니다. 편의를 위해 이 예제에서는 인쇄 서버의 CRLF로 구분된 목록이 있다고 가정합니다. 변수의 `fileOfPrintServers` 되는 <xref:System.IO.StreamReader> 이 파일에 대 한 개체입니다. 호출 자체 줄에 각 서버 이름 이므로 <xref:System.IO.StreamReader.ReadLine%2A> 다음 서버의 이름을 가져오고 이동는 <xref:System.IO.StreamReader>의 다음 줄의 시작 부분에는 커서입니다.  
   

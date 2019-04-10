@@ -9,12 +9,12 @@ helpviewer_keywords:
 - -optioncompare compiler option [Visual Basic]
 - /optioncompare compiler option [Visual Basic]
 ms.assetid: 7237b766-b44d-4cc5-9a3c-885348a7d9e4
-ms.openlocfilehash: 0c23a74f91cd6666a0c4bef5ea67c58430c511b8
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: b88cba4d16c5a770a72b47868d11b16cbba6cae8
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58819419"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59340440"
 ---
 # <a name="-optioncompare"></a>-optioncompare
 문자열 비교 방법을 지정합니다.  
@@ -38,11 +38,11 @@ ms.locfileid: "58819419"
   
 ### <a name="to-set--optioncompare-in-the-visual-studio-ide"></a>-Optioncompare Visual Studio IDE에서 설정 하려면  
   
-1.  **솔루션 탐색기**에서 프로젝트를 선택합니다. **프로젝트** 메뉴에서 **속성**을 클릭합니다.   
+1. **솔루션 탐색기**에서 프로젝트를 선택합니다. **프로젝트** 메뉴에서 **속성**을 클릭합니다.   
   
-2.  **컴파일** 탭을 클릭합니다.  
+2. **컴파일** 탭을 클릭합니다.  
   
-3.  값을 수정 합니다 **Option Compare** 상자입니다.  
+3. 값을 수정 합니다 **Option Compare** 상자입니다.  
   
 ### <a name="to-set--optioncompare-programmatically"></a>-Optioncompare를 프로그래밍 방식으로 설정 하려면  
   
@@ -63,4 +63,4 @@ vbc -optioncompare:binary projFile.vb
 - [-optioninfer](../../../visual-basic/reference/command-line-compiler/optioninfer.md)
 - [샘플 컴파일 명령줄](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
 - [Option Compare 문](../../../visual-basic/language-reference/statements/option-compare-statement.md)
-- [옵션 대화 상자, 프로젝트, Visual Basic 기본값](/visualstudio/ide/reference/visual-basic-defaults-projects-options-dialog-box)
+- [옵션 대화 상자, 프로젝트, VB 기본값](/visualstudio/ide/reference/visual-basic-defaults-projects-options-dialog-box)

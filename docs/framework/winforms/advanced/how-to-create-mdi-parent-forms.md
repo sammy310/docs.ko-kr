@@ -5,12 +5,12 @@ helpviewer_keywords:
 - parent forms
 - MDI [Windows Forms], creating forms
 ms.assetid: 12c71221-2377-4bb6-b10b-7b4b300fd462
-ms.openlocfilehash: 120a7d45e01b0460f0c5e50896f58d026c4c3b9f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: d3ec2e16f06169790711c92c9d445ae93ee50c95
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59216316"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59338659"
 ---
 # <a name="how-to-create-mdi-parent-forms"></a>방법: MDI 부모 양식 만들기
 > [!IMPORTANT]
@@ -20,20 +20,20 @@ ms.locfileid: "59216316"
   
 ### <a name="to-create-an-mdi-parent-form-at-design-time"></a>디자인 타임에 MDI 부모 폼을 만들려면  
   
-1.  Windows 애플리케이션 프로젝트를 만듭니다.  
+1. Windows 애플리케이션 프로젝트를 만듭니다.  
   
-2.  에 **속성** 창에서 설정 합니다 <xref:System.Windows.Forms.Form.IsMdiContainer%2A> 속성을 **true**합니다.  
+2. 에 **속성** 창에서 설정 합니다 <xref:System.Windows.Forms.Form.IsMdiContainer%2A> 속성을 **true**합니다.  
   
      그러면 폼이 자식 창의 MDI 컨테이너로 지정됩니다.  
   
     > [!NOTE]
     >  **속성** 창에서 속성을 설정하는 중에 원하는 경우 `WindowState` 속성을 **Maximized**(최대화)로 설정할 수도 있습니다. 부모 양식을 최대화하면 MDI 자식 창을 가장 쉽게 조작할 수 있기 때문입니다. 또한 MDI 부모 폼에는 <xref:System.Windows.Forms.Control.BackColor%2A?displayProperty=nameWithType> 속성을 사용하여 설정하는 배경색이 아니라 Windows 시스템 제어판에 설정된 시스템 색이 선택됩니다.  
   
-3.  **도구 상자**에서 **MenuStrip** 컨트롤을 양식으로 끌어옵니다. **텍스트** 속성을 **새로 만들기(&N)** 및 **닫기(&C)** 라는 하위 항목이 있는 **파일(&F)** 로 설정하여 최상위 메뉴 항목을 만듭니다. **창(&W)** 이라는 최상위 메뉴 항목도 만듭니다.  
+3. **도구 상자**에서 **MenuStrip** 컨트롤을 양식으로 끌어옵니다. **텍스트** 속성을 **새로 만들기(&N)** 및 **닫기(&C)** 라는 하위 항목이 있는 **파일(&F)** 로 설정하여 최상위 메뉴 항목을 만듭니다. **창(&W)** 이라는 최상위 메뉴 항목도 만듭니다.  
   
      런타임에 첫 번째 메뉴가 작성되고 메뉴 항목은 숨겨지며 두 번째 메뉴는 열려 있는 MDI 자식 창을 추적합니다. 이제 MDI 부모 창이 만들어졌습니다.  
   
-4.  **F5** 키를 눌러 응용 프로그램을 실행합니다. MDI 부모 폼 내에서 작동 하는 MDI 자식 창을 만드는 방법에 대 한 내용은 [방법: MDI 자식 폼 만들기](how-to-create-mdi-child-forms.md)합니다.  
+4. **F5** 키를 눌러 응용 프로그램을 실행합니다. MDI 부모 폼 내에서 작동 하는 MDI 자식 창을 만드는 방법에 대 한 내용은 [방법: MDI 자식 폼 만들기](how-to-create-mdi-child-forms.md)합니다.  
   
 ## <a name="see-also"></a>참고자료
 

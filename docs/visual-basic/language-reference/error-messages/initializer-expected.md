@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30996
 ms.assetid: 6e183fe0-8888-43ed-a062-01571079455f
-ms.openlocfilehash: 77cfeb57bc313ded2d2c4d5a0c59041c5c19f515
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 0795fdc1c4b177e13979d7555cd7588217b8cb4c
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58826082"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59334967"
 ---
 # <a name="initializer-expected"></a>이니셜라이저가 필요합니다.
 초기화 목록의 비어 있는 경우 다음 예제에서와 같이 개체 이니셜라이저를 사용 하 여 클래스의 인스턴스를 선언 하려고 했습니다.  
@@ -29,9 +29,9 @@ ms.locfileid: "58826082"
   
 ## <a name="to-correct-this-error"></a>이 오류를 해결하려면  
   
-1.  하나 이상의 필드 또는 속성 이니셜라이저에서을 초기화 하 하거나 개체 이니셜라이저를 사용 하지 마십시오.  
+1. 하나 이상의 필드 또는 속성 이니셜라이저에서을 초기화 하 하거나 개체 이니셜라이저를 사용 하지 마십시오.  
   
 ## <a name="see-also"></a>참고자료
 
-- [개체 이니셜라이저: 명명 된 형식과 익명 형식](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)
-- [방법: 개체 이니셜라이저를 사용 하 여 개체 선언](../../../visual-basic/programming-guide/language-features/objects-and-classes/how-to-declare-an-object-by-using-an-object-initializer.md)
+- [개체 이니셜라이저: 명명된 형식 및 무명 형식](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)
+- [방법: 개체 이니셜라이저를 사용하여 개체 선언](../../../visual-basic/programming-guide/language-features/objects-and-classes/how-to-declare-an-object-by-using-an-object-initializer.md)

@@ -13,12 +13,12 @@ helpviewer_keywords:
 - ink collection plug-in
 - plug-ins [WPF], for ink
 ms.assetid: c85fcad1-cb50-4431-847c-ac4145a35c89
-ms.openlocfilehash: 8089c857d2406f8cfb357ba2efe188ad84605541
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 80e7ef202c46a23069766512cf4e67bb21a49564
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57377029"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59335324"
 ---
 # <a name="the-ink-threading-model"></a>잉크 스레딩 모델
 Tablet pc 잉크의 이점 중 하나는 마치 많은 쓰기와 같은 일반 펜과 종이 사용 하 여 것입니다.  태블릿 펜이를 위해 마우스 않으며 사용자가 쓸 때 잉크를 렌더링 하는 보다 훨씬 빠른 속도로 입력된 데이터를 수집 합니다.  차단 될 수 있으므로 응용 프로그램의 사용자 인터페이스 (UI) 스레드에서 펜 데이터와 렌더링 잉크를 수집 하기 위한 충분 하지 않습니다.  이 해결 하는 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 사용자 잉크를 쓸 때 응용 프로그램에서는 두 개의 추가 스레드를 사용 합니다.  
@@ -38,7 +38,7 @@ Tablet pc 잉크의 이점 중 하나는 마치 많은 쓰기와 같은 일반 �
   
  ![스트로크를 그리는 동안 스레딩 모델입니다. ](./media/inkthreading-drawingink.png "InkThreading_DrawingInk")  
   
-1.  사용자가 스트로크를 그리는 동안 발생 하는 작업  
+1. 사용자가 스트로크를 그리는 동안 발생 하는 작업  
   
     1.  사용자가 스트로크를 그릴, 펜 스레드에서 스타일러스 지점을 제공 합니다.  스타일러스 플러그 인을 포함 하는 <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer>와 펜 스레드에서 스타일러스 지점을 적용 하기 전에 수정 하 게는 <xref:System.Windows.Controls.InkCanvas> 를 수신 합니다.  
   
@@ -46,7 +46,7 @@ Tablet pc 잉크의 이점 중 하나는 마치 많은 쓰기와 같은 일반 �
   
     3.  <xref:System.Windows.Controls.InkCanvas> 스타일러스 포인트 UI 스레드를 수신 합니다.  
   
-2.  사용자가 스트로크를 종료 한 후 발생 하는 작업  
+2. 사용자가 스트로크를 종료 한 후 발생 하는 작업  
   
     1.  사용자가 스트로크를 그리는 마치면 합니다 <xref:System.Windows.Controls.InkCanvas> 만듭니다를 <xref:System.Windows.Ink.Stroke> 개체에 추가 합니다는 <xref:System.Windows.Controls.InkPresenter>를 정적으로 렌더링 하는 합니다.  
   
@@ -61,13 +61,13 @@ Tablet pc 잉크의 이점 중 하나는 마치 많은 쓰기와 같은 일반 �
   
  이전 다이어그램에서 다음과 같은 동작이 수행 됩니다.  
   
-1.  `StylusPlugin1` x에 대 한 값을 수정 하 고 y입니다.  
+1. `StylusPlugin1` x에 대 한 값을 수정 하 고 y입니다.  
   
-2.  <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> 수정 된 스타일러스 지점을 받고 동적 렌더링 스레드에서 렌더링 합니다.  
+2. <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> 수정 된 스타일러스 지점을 받고 동적 렌더링 스레드에서 렌더링 합니다.  
   
-3.  `StylusPlugin2` 수정된 된 스타일러스 포인트를 수신 하 고 추가 x에 대 한 값을 수정 하 고 y입니다.  
+3. `StylusPlugin2` 수정된 된 스타일러스 포인트를 수신 하 고 추가 x에 대 한 값을 수정 하 고 y입니다.  
   
-4.  응용 프로그램 스타일러스 지점을 수집 하 고 사용자가 스트로크를 끝내는 정적으로 스트로크를 렌더링 합니다.  
+4. 응용 프로그램 스타일러스 지점을 수집 하 고 사용자가 스트로크를 끝내는 정적으로 스트로크를 렌더링 합니다.  
   
  가정 `stylusPlugin1` 스타일러스 지점이 사각형에 제한 및 `stylusPlugin2` 오른쪽으로 스타일러스 포인트를 변환 합니다.  앞의 시나리오에는 <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> 제한 스타일러스 포인트를 받지만 번역 된 스타일러스 지점이 없습니다.  사용자가 스트로크를 그리면 사각형의 경계 내 스트로크 렌더링 되지만 사용자가 펜을 뗄 때까지 변환할 스트로크 표시 되지 않습니다.  
   
@@ -83,15 +83,15 @@ Tablet pc 잉크의 이점 중 하나는 마치 많은 쓰기와 같은 일반 �
   
  ![잉크 스레딩 다이어그램](./media/inkthreading-visualtree.png "InkThreading_VisualTree")  
   
-1.  사용자가 스트로크를 시작 합니다.  
+1. 사용자가 스트로크를 시작 합니다.  
   
     1.  <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> 시각적 트리를 만듭니다.  
   
-2.  사용자가 스트로크를 그리고 있습니다.  
+2. 사용자가 스트로크를 그리고 있습니다.  
   
     1.  <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> 시각적 트리를 만듭니다.  
   
-3.  사용자가 스트로크를 종료 합니다.  
+3. 사용자가 스트로크를 종료 합니다.  
   
     1.  <xref:System.Windows.Controls.InkPresenter> 스트로크 해당 시각적 트리를 추가 합니다.  
   

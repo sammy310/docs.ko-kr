@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 8ae3712f-ef5e-41a1-9ea9-b3d0399439f1
-ms.openlocfilehash: 30dd3a54092c5b30cdd8dfd2917b6ea57edd7086
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: e139cafa168b0a6851e5d8474e6bb4db94f36e9a
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59153623"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59339153"
 ---
 # <a name="local-transactions"></a>로컬 트랜잭션
 [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)]의 트랜잭션은 여러 작업을 바인딩하여 하나의 작업 단위로 실행하려는 경우에 사용합니다. 예를 들어 응용 프로그램이 두 가지 작업을 수행한다고 가정합니다. 먼저 응용 프로그램에서 주문 정보로 테이블을 업데이트합니다. 그런 다음, 응용 프로그램에서 재고 정보가 포함된 테이블을 업데이트하고 주문이 들어온 품목을 차변에 기입합니다. 두 작업이 실패 하면 다음 두 업데이트가 모두 롤백됩니다.  
@@ -34,13 +34,13 @@ ms.locfileid: "59153623"
 ## <a name="example"></a>예제  
  다음 단계를 사용하여 트랜잭션을 수행합니다.  
   
-1.  <xref:System.Data.SqlClient.SqlConnection.BeginTransaction%2A> 개체의 <xref:System.Data.SqlClient.SqlConnection> 메서드를 호출하여 트랜잭션의 시작을 표시합니다. <xref:System.Data.SqlClient.SqlConnection.BeginTransaction%2A> 메서드는 트랜잭션에 대한 참조를 반환합니다. 이 참조는 트랜잭션에 인리스트먼트된 <xref:System.Data.SqlClient.SqlCommand> 개체에 할당됩니다.  
+1. <xref:System.Data.SqlClient.SqlConnection.BeginTransaction%2A> 개체의 <xref:System.Data.SqlClient.SqlConnection> 메서드를 호출하여 트랜잭션의 시작을 표시합니다. <xref:System.Data.SqlClient.SqlConnection.BeginTransaction%2A> 메서드는 트랜잭션에 대한 참조를 반환합니다. 이 참조는 트랜잭션에 인리스트먼트된 <xref:System.Data.SqlClient.SqlCommand> 개체에 할당됩니다.  
   
-2.  `Transaction`의 <xref:System.Data.SqlClient.SqlCommand.Transaction%2A> 속성에 실행할 <xref:System.Data.SqlClient.SqlCommand> 개체를 할당합니다. `Transaction` 개체를 `Transaction` 개체의 `Command` 속성에 할당하지 않은 상태에서 활성 트랜잭션 연결로 명령을 실행하면 예외가 throw됩니다.  
+2. `Transaction`의 <xref:System.Data.SqlClient.SqlCommand.Transaction%2A> 속성에 실행할 <xref:System.Data.SqlClient.SqlCommand> 개체를 할당합니다. `Transaction` 개체를 `Transaction` 개체의 `Command` 속성에 할당하지 않은 상태에서 활성 트랜잭션 연결로 명령을 실행하면 예외가 throw됩니다.  
   
-3.  명령을 실행합니다.  
+3. 명령을 실행합니다.  
   
-4.  <xref:System.Data.SqlClient.SqlTransaction.Commit%2A> 개체의 <xref:System.Data.SqlClient.SqlTransaction> 메서드를 호출하여 트랜잭션을 완료하거나 <xref:System.Data.SqlClient.SqlTransaction.Rollback%2A> 메서드를 호출하여 트랜잭션을 종료합니다. <xref:System.Data.SqlClient.SqlTransaction.Commit%2A> 또는 <xref:System.Data.SqlClient.SqlTransaction.Rollback%2A> 메서드가 실행되기 전에 연결이 닫히거나 삭제되면 트랜잭션이 롤백됩니다.  
+4. <xref:System.Data.SqlClient.SqlTransaction.Commit%2A> 개체의 <xref:System.Data.SqlClient.SqlTransaction> 메서드를 호출하여 트랜잭션을 완료하거나 <xref:System.Data.SqlClient.SqlTransaction.Rollback%2A> 메서드를 호출하여 트랜잭션을 종료합니다. <xref:System.Data.SqlClient.SqlTransaction.Commit%2A> 또는 <xref:System.Data.SqlClient.SqlTransaction.Rollback%2A> 메서드가 실행되기 전에 연결이 닫히거나 삭제되면 트랜잭션이 롤백됩니다.  
   
  다음 코드 예제에서는 Microsoft SQL Server와 [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)]을 사용하여 트랜잭션 논리를 설명합니다.  
   

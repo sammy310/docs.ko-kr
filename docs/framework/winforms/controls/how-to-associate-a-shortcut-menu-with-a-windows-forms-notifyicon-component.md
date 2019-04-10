@@ -10,12 +10,12 @@ helpviewer_keywords:
 - NotifyIcon component [Windows Forms], associating shortcut menus
 - shortcut menus [Windows Forms], for background processes
 ms.assetid: d68f3926-08d3-4f7d-949f-1981b29cf188
-ms.openlocfilehash: 702a848631ce45c0efcb8eadfdf64074b454ac7d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: f2a086cc25eb6996b2643742a887bccf481916d6
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59097992"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59337060"
 ---
 # <a name="how-to-associate-a-shortcut-menu-with-a-windows-forms-notifyicon-component"></a>방법: Windows Forms NotifyIcon 구성 요소에 바로 가기 메뉴 연결
 > [!NOTE]
@@ -28,23 +28,23 @@ ms.locfileid: "59097992"
   
 ### <a name="to-associate-a-shortcut-menu-with-the-notifyicon-component-at-design-time"></a>NotifyIcon 구성 요소를 사용 하 여 디자인 타임에 바로 가기 메뉴를 연결 하려면  
   
-1.  추가 <xref:System.Windows.Forms.NotifyIcon> 구성 요소를 폼에 같은 중요 한 속성을 설정 하 고는 <xref:System.Windows.Forms.NotifyIcon.Icon%2A> 및 <xref:System.Windows.Forms.NotifyIcon.Visible%2A> 속성입니다.  
+1. 추가 <xref:System.Windows.Forms.NotifyIcon> 구성 요소를 폼에 같은 중요 한 속성을 설정 하 고는 <xref:System.Windows.Forms.NotifyIcon.Icon%2A> 및 <xref:System.Windows.Forms.NotifyIcon.Visible%2A> 속성입니다.  
   
      자세한 내용은 [방법: Forms NotifyIcon 구성 요소는 Windows 사용 하 여 작업 표시줄에 응용 프로그램 아이콘 추가](app-icons-to-the-taskbar-with-wf-notifyicon.md)합니다.  
   
-2.  추가 된 <xref:System.Windows.Forms.ContextMenu> Windows 폼에 구성 요소입니다.  
+2. 추가 된 <xref:System.Windows.Forms.ContextMenu> Windows 폼에 구성 요소입니다.  
   
      런타임에 사용할 수 있도록 하려는 명령을 나타내는 바로 가기 메뉴에 메뉴 항목을 추가 합니다. 액세스 키와 같은 이러한 새 메뉴 항목 메뉴 향상 된 기능을 추가할 수 있는 좋은 기회 이기도 합니다.  
   
-3.  설정 합니다 <xref:System.Windows.Forms.NotifyIcon.ContextMenu%2A> 의 속성을 <xref:System.Windows.Forms.NotifyIcon> 구성 요소를 추가 하는 바로 가기 메뉴.  
+3. 설정 합니다 <xref:System.Windows.Forms.NotifyIcon.ContextMenu%2A> 의 속성을 <xref:System.Windows.Forms.NotifyIcon> 구성 요소를 추가 하는 바로 가기 메뉴.  
   
      이 속성이 설정 된 작업 표시줄에서 아이콘을 클릭 하면 바로 가기 메뉴를 표시 됩니다.  
   
 ### <a name="to-associate-a-shortcut-menu-with-the-notifyicon-component-programmatically"></a>NotifyIcon 구성 요소를 사용 하 여 바로 가기 메뉴를 프로그래밍 방식으로 연결 하려면  
   
-1.  인스턴스를 만듭니다는 <xref:System.Windows.Forms.NotifyIcon> 클래스 및 <xref:System.Windows.Forms.ContextMenu> 속성 설정은 응용 프로그램에 필요한 모든 클래스 (<xref:System.Windows.Forms.NotifyIcon.Icon%2A> 및 <xref:System.Windows.Forms.NotifyIcon.Visible%2A> 에 대 한 속성을 <xref:System.Windows.Forms.NotifyIcon> 구성 요소, 메뉴 항목에 대 한는 <xref:System.Windows.Forms.ContextMenu> 구성 요소)입니다.  
+1. 인스턴스를 만듭니다는 <xref:System.Windows.Forms.NotifyIcon> 클래스 및 <xref:System.Windows.Forms.ContextMenu> 속성 설정은 응용 프로그램에 필요한 모든 클래스 (<xref:System.Windows.Forms.NotifyIcon.Icon%2A> 및 <xref:System.Windows.Forms.NotifyIcon.Visible%2A> 에 대 한 속성을 <xref:System.Windows.Forms.NotifyIcon> 구성 요소, 메뉴 항목에 대 한는 <xref:System.Windows.Forms.ContextMenu> 구성 요소)입니다.  
   
-2.  설정 합니다 <xref:System.Windows.Forms.NotifyIcon.ContextMenu%2A> 의 속성을 <xref:System.Windows.Forms.NotifyIcon> 구성 요소를 추가 하는 바로 가기 메뉴.  
+2. 설정 합니다 <xref:System.Windows.Forms.NotifyIcon.ContextMenu%2A> 의 속성을 <xref:System.Windows.Forms.NotifyIcon> 구성 요소를 추가 하는 바로 가기 메뉴.  
   
      이 속성이 설정 된 작업 표시줄에서 아이콘을 클릭 하면 바로 가기 메뉴를 표시 됩니다.  
   

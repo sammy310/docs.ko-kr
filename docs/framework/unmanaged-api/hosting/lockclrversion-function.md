@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 571a676496683ba3251f13c41600bb017e1ced5d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 91bb1a9416e577dbb5cc96e8be87033c53232811
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59156106"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59336696"
 ---
 # <a name="lockclrversion-function"></a>LockClrVersion 함수
 호스트가 명시적으로 CLR을 초기화 하기 전에 프로세스 내에서 사용할는 버전의 CLR (공용 언어 런타임)을 결정할 수 있습니다.  
@@ -66,11 +66,11 @@ typedef HRESULT ( __stdcall *FLockClrVersionCallback ) ();
   
  다음 단계는 런타임 초기화 시 발생합니다.  
   
-1.  호스트 호출 [CorBindToRuntimeEx](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md) 또는 다른 런타임 초기화 함수 중 하나입니다. 또는 호스트 COM 개체 활성화를 사용 하 여 런타임을 초기화할 수 없습니다.  
+1. 호스트 호출 [CorBindToRuntimeEx](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md) 또는 다른 런타임 초기화 함수 중 하나입니다. 또는 호스트 COM 개체 활성화를 사용 하 여 런타임을 초기화할 수 없습니다.  
   
-2.  런타임에서 호출 하 여 지정 된 함수는 `hostCallback` 매개 변수입니다.  
+2. 런타임에서 호출 하 여 지정 된 함수는 `hostCallback` 매개 변수입니다.  
   
-3.  지정 된 함수의 `hostCallback` 다음 호출 시퀀스를 사용 하는 합니다.  
+3. 지정 된 함수의 `hostCallback` 다음 호출 시퀀스를 사용 하는 합니다.  
   
     -   에 지정 된 함수는 `pBeginHostSetup` 매개 변수입니다.  
   

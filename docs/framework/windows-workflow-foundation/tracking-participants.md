@@ -2,12 +2,12 @@
 title: 추적 참가자
 ms.date: 03/30/2017
 ms.assetid: f13e360c-eeb7-4a49-98a0-8f6a52d64f68
-ms.openlocfilehash: 334815c3c928790569846d02d87e9d1dbba889ef
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 6c42712300baa6d7e12b9a29d94c925caaad5141
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59138829"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59340180"
 ---
 # <a name="tracking-participants"></a>추적 참가자
 추적 참가자는 워크플로 개발자가 <xref:System.Activities.Tracking.InteropTrackingRecord.TrackingRecord%2A> 개체에 액세스하여 처리할 수 있는 확장성 지점입니다. [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] 이벤트 추적에 대 한 Windows (ETW) 이벤트로 추적 레코드를 기록 하는 표준 추적 참가자가 포함 되어 있습니다. 표준 참가자가 요구 사항에 맞지 않는 경우 사용자 지정 추적 참가자를 작성할 수도 있습니다.  
@@ -81,13 +81,13 @@ ms.locfileid: "59138829"
   
 #### <a name="to-enable-viewing-the-tracking-records-in-event-viewer"></a>이벤트 뷰어에서 추적 레코드 보기를 사용하려면  
   
-1.  이벤트 뷰어(EVENTVWR.EXE)를 시작합니다.  
+1. 이벤트 뷰어(EVENTVWR.EXE)를 시작합니다.  
   
-2.  선택 **이벤트 뷰어, 응용 프로그램 및 서비스 로그, Windows, Microsoft 응용 프로그램 서버-응용 프로그램**합니다.  
+2. 선택 **이벤트 뷰어, 응용 프로그램 및 서비스 로그, Windows, Microsoft 응용 프로그램 서버-응용 프로그램**합니다.  
   
-3.  마우스 오른쪽 단추로 클릭 하 고 있는지 **보기, 분석 및 디버그 로그 표시** 을 선택 합니다. 그렇지 않으면 옆에 체크 표시가 나타나도록 이 항목을 선택합니다. 표시 된 **분석**, **성능**, 및 **디버그** 로그.  
+3. 마우스 오른쪽 단추로 클릭 하 고 있는지 **보기, 분석 및 디버그 로그 표시** 을 선택 합니다. 그렇지 않으면 옆에 체크 표시가 나타나도록 이 항목을 선택합니다. 표시 된 **분석**, **성능**, 및 **디버그** 로그.  
   
-4.  마우스 오른쪽 단추로 클릭 합니다 **분석** 로그를 선택한 **로그 사용**합니다. 로그는 %SystemRoot%\System32\Winevt\Logs\Microsoft-Windows-Application Server-Applications%4Analytic.etl 파일에 있습니다.  
+4. 마우스 오른쪽 단추로 클릭 합니다 **분석** 로그를 선택한 **로그 사용**합니다. 로그는 %SystemRoot%\System32\Winevt\Logs\Microsoft-Windows-Application Server-Applications%4Analytic.etl 파일에 있습니다.  
   
 ## <a name="custom-tracking-participant"></a>사용자 지정 추적 참가자  
  추적 참가자 API를 사용하면 워크플로 런타임에서 내보낸 추적 레코드를 처리하기 위한 사용자 지정 논리를 포함할 수 있는 사용자 제공 추적 참가자를 사용하여 추적 런타임을 확장할 수 있습니다. 사용자 지정 추적 참가자를 기록하려면 개발자가 `Track` 클래스에서 <xref:System.Activities.Tracking.TrackingParticipant> 메서드를 구현해야 합니다. 이 메서드는 워크플로 런타임에서 추적 레코드를 내보낼 때 호출됩니다.  

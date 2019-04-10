@@ -11,12 +11,12 @@ helpviewer_keywords:
 - GetDayBold event
 - MonthCalendar control [Windows Forms], dates displayed in bold
 ms.assetid: 8b20db5b-8118-4825-90e8-2c45c186ac7d
-ms.openlocfilehash: cf3ec21aa0272f60599f5659d78214120bcfcaf8
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 27b19e47d108b9af43a6d8882264d62c726ffe56
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59073704"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59343270"
 ---
 # <a name="how-to-display-specific-days-in-bold-with-the-windows-forms-monthcalendar-control"></a>방법: Windows Forms MonthCalendar 컨트롤을 사용하여 특정 날짜를 굵게 표시
 Windows Forms <xref:System.Windows.Forms.MonthCalendar> 반복적으로 또는 단일 날짜로 컨트롤 굵은 글꼴로 일 표시할 수 있습니다. 주말과 휴일 등의 특정 날짜에 주목 하도록이 수행할 수 있습니다.  
@@ -25,7 +25,7 @@ Windows Forms <xref:System.Windows.Forms.MonthCalendar> 반복적으로 또는 �
   
 ### <a name="to-make-a-date-appear-in-bold-type"></a>날짜를 굵게 표시 하려면  
   
-1.  만들기는 <xref:System.DateTime> 개체입니다.  
+1. 만들기는 <xref:System.DateTime> 개체입니다.  
   
     ```vb  
     Dim myVacation1 As Date = New DateTime(2001, 6, 10)  
@@ -42,7 +42,7 @@ Windows Forms <xref:System.Windows.Forms.MonthCalendar> 반복적으로 또는 �
     DateTime myVacation2 = DateTime(2001, 6, 17);  
     ```  
   
-2.  호출 하 여 하나의 날짜를 굵게 합니다 <xref:System.Windows.Forms.MonthCalendar.AddBoldedDate%2A>, <xref:System.Windows.Forms.MonthCalendar.AddAnnuallyBoldedDate%2A>, 또는 <xref:System.Windows.Forms.MonthCalendar.AddMonthlyBoldedDate%2A> 메서드의 <xref:System.Windows.Forms.MonthCalendar> 제어 합니다.  
+2. 호출 하 여 하나의 날짜를 굵게 합니다 <xref:System.Windows.Forms.MonthCalendar.AddBoldedDate%2A>, <xref:System.Windows.Forms.MonthCalendar.AddAnnuallyBoldedDate%2A>, 또는 <xref:System.Windows.Forms.MonthCalendar.AddMonthlyBoldedDate%2A> 메서드의 <xref:System.Windows.Forms.MonthCalendar> 제어 합니다.  
   
     ```vb  
     MonthCalendar1.AddBoldedDate(myVacation1)  
@@ -80,7 +80,7 @@ Windows Forms <xref:System.Windows.Forms.MonthCalendar> 반복적으로 또는 �
   
 ### <a name="to-make-a-date-appear-in-the-regular-font"></a>일반 글꼴로 표시할 날짜를 확인 합니다.  
   
-1.  호출 하 여 일반 글꼴로 표시 단일 굵게 표시 된 날짜를 확인 합니다 <xref:System.Windows.Forms.MonthCalendar.RemoveBoldedDate%2A>, <xref:System.Windows.Forms.MonthCalendar.RemoveAnnuallyBoldedDate%2A>, 또는 <xref:System.Windows.Forms.MonthCalendar.RemoveMonthlyBoldedDate%2A> 메서드.  
+1. 호출 하 여 일반 글꼴로 표시 단일 굵게 표시 된 날짜를 확인 합니다 <xref:System.Windows.Forms.MonthCalendar.RemoveBoldedDate%2A>, <xref:System.Windows.Forms.MonthCalendar.RemoveAnnuallyBoldedDate%2A>, 또는 <xref:System.Windows.Forms.MonthCalendar.RemoveMonthlyBoldedDate%2A> 메서드.  
   
     ```vb  
     MonthCalendar1.RemoveBoldedDate(myVacation1)  
@@ -113,7 +113,7 @@ Windows Forms <xref:System.Windows.Forms.MonthCalendar> 반복적으로 또는 �
     monthCalendar1->RemoveAllBoldedDates();  
     ```  
   
-2.  호출 하 여 글꼴의 모양을 업데이트는 <xref:System.Windows.Forms.MonthCalendar.UpdateBoldedDates%2A> 메서드.  
+2. 호출 하 여 글꼴의 모양을 업데이트는 <xref:System.Windows.Forms.MonthCalendar.UpdateBoldedDates%2A> 메서드.  
   
     ```vb  
     MonthCalendar1.UpdateBoldedDates()  

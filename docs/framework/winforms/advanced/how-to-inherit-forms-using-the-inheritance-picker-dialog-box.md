@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Inheritance Picker dialog box
 - inherited forms [Windows Forms], creating
 ms.assetid: 969b4c04-12aa-4297-93a2-0ae747447823
-ms.openlocfilehash: 74dfd1bb2c47a8e377a2ed74934f742dff6cd64a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 5ae1c236835141b10bc704cd39f55de6e3e974b0
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59212286"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59342094"
 ---
 # <a name="how-to-inherit-forms-using-the-inheritance-picker-dialog-box"></a>방법: 상속 선택 대화 상자를 사용하여 양식 상속
 양식이나 다른 개체를 상속하는 가장 쉬운 방법은 **상속 선택** 대화 상자를 사용하는 것입니다. 이 대화 상자에서는 다른 솔루션에서 이미 만든 코드 또는 UI(사용자 인터페이스)를 활용할 수 있습니다.  
@@ -23,23 +23,23 @@ ms.locfileid: "59212286"
   
 ### <a name="to-create-a-windows-form-inherited-from-an-existing-form-by-using-the-inheritance-picker"></a>상속 선택을 사용하여 기존 폼에서 상속된 Windows Form을 만들려면  
   
-1.  **프로젝트** 메뉴에서 **Windows Form 추가**를 선택합니다.  
+1. **프로젝트** 메뉴에서 **Windows Form 추가**를 선택합니다.  
   
      **새 항목 추가** 대화 상자가 열립니다.  
   
-2.  검색을 **상속 된 폼** searchbox 또는 클릭 하 여 템플릿을 **Windows Forms** 범주를 선택 하 고 이름에 **이름** 상자입니다. **추가** 단추를 클릭하여 계속합니다.  
+2. 검색을 **상속 된 폼** searchbox 또는 클릭 하 여 템플릿을 **Windows Forms** 범주를 선택 하 고 이름에 **이름** 상자입니다. **추가** 단추를 클릭하여 계속합니다.  
   
      **상속 선택** 대화 상자가 열립니다. 현재 프로젝트에 이미 양식이 포함되어 있는 경우 **상속 선택** 대화 상자에 표시됩니다.  
   
-3.  다른 어셈블리의 양식에서 상속하려면 **찾아보기** 단추를 클릭합니다.  
+3. 다른 어셈블리의 양식에서 상속하려면 **찾아보기** 단추를 클릭합니다.  
   
-4.  **상속받을 구성 요소를 포함하는 파일을 선택하세요.** 대화 상자 내에서 원하는 양식이나 모듈이 포함된 프로젝트로 이동합니다.  
+4. **상속받을 구성 요소를 포함하는 파일을 선택하세요.** 대화 상자 내에서 원하는 양식이나 모듈이 포함된 프로젝트로 이동합니다.  
   
-5.  .exe 또는 .dll 파일의 이름을 클릭하여 선택하고 **열기** 단추를 클릭합니다.  
+5. .exe 또는 .dll 파일의 이름을 클릭하여 선택하고 **열기** 단추를 클릭합니다.  
   
      그러면 구성 요소와 구성 요소가 있는 프로젝트가 나열된 **상속 선택** 대화 상자로 돌아갑니다.  
   
-6.  구성 요소를 선택합니다.  
+6. 구성 요소를 선택합니다.  
   
      **솔루션 탐색기**에서 구성 요소가 프로젝트에 추가됩니다. UI가 있는 경우 상속 된 양식의 일부인 컨트롤 문자 모양으로 표시 됩니다 (![스크린샷 Visual Basic 상속 기호.](./media/how-to-inherit-forms-using-the-inheritance-picker-dialog-box/visual-basic-inheritance-glyph.gif))를 선택 하면 컨트롤에는 보안 수준을 나타내는 테두리가 포함을 슈퍼 클래스로 지정 된 형식입니다. 다른 보안 수준에 해당하는 동작은 아래 표에 나열되어 있습니다.  
   

@@ -2,31 +2,31 @@
 title: '전송: UDP'
 ms.date: 03/30/2017
 ms.assetid: 738705de-ad3e-40e0-b363-90305bddb140
-ms.openlocfilehash: 59bcfc376c2fada5f94f462cecbf3d5363def48d
-ms.sourcegitcommit: 0069cb3de8eed4e92b2195d29e5769a76111acdd
+ms.openlocfilehash: 8d72ab5c7d8c461cd2ce4d4003d449ac9fe7e807
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/16/2019
-ms.locfileid: "56332821"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59334668"
 ---
 # <a name="transport-udp"></a>전송: UDP
 UDP 전송 샘플을 UDP 유니캐스트 및 멀티 캐스트를 사용자 지정 Windows Communication Foundation (WCF) 전송으로 구현 하는 방법에 설명 합니다. 이 샘플에서는 채널 프레임 워크를 사용 하 여 WCF 모범 사례를 따르면 wcf에서 사용자 지정 전송을 만드는 권장된 절차를 설명 합니다. 사용자 지정 전송을 만드는 단계는 다음과 같습니다.  
   
-1.  채널의 결정 [메시지 교환 패턴](#MessageExchangePatterns) (IOutputChannel, IInputChannel, IDuplexChannel, IRequestChannel 또는 IReplyChannel) ChannelFactory 및 ChannelListener에서 지원 됩니다. 그런 다음 이러한 인터페이스의 세션 변형을 지원할지 여부를 결정합니다.  
+1. 채널의 결정 [메시지 교환 패턴](#MessageExchangePatterns) (IOutputChannel, IInputChannel, IDuplexChannel, IRequestChannel 또는 IReplyChannel) ChannelFactory 및 ChannelListener에서 지원 됩니다. 그런 다음 이러한 인터페이스의 세션 변형을 지원할지 여부를 결정합니다.  
   
-2.  메시지 교환 패턴을 지원하는 채널 팩터리 및 수신기를 만듭니다.  
+2. 메시지 교환 패턴을 지원하는 채널 팩터리 및 수신기를 만듭니다.  
   
-3.  네트워크 관련 예외가 <xref:System.ServiceModel.CommunicationException>의 적절한 파생 클래스로 정규화되는지 확인합니다.  
+3. 네트워크 관련 예외가 <xref:System.ServiceModel.CommunicationException>의 적절한 파생 클래스로 정규화되는지 확인합니다.  
   
-4.  추가 된 [ \<바인딩 >](../../../../docs/framework/misc/binding.md) 사용자 지정 전송을 채널 스택에 추가 하는 요소입니다. 자세한 내용은 [바인딩 요소 추가](#AddingABindingElement)합니다.  
+4. 추가 된 [ \<바인딩 >](../../../../docs/framework/misc/binding.md) 사용자 지정 전송을 채널 스택에 추가 하는 요소입니다. 자세한 내용은 [바인딩 요소 추가](#AddingABindingElement)합니다.  
   
-5.  새 바인딩 요소가 구성 시스템에 노출되도록 바인딩 요소 확장명 섹션을 추가합니다.  
+5. 새 바인딩 요소가 구성 시스템에 노출되도록 바인딩 요소 확장명 섹션을 추가합니다.  
   
-6.  기능을 다른 엔드포인트에 전달하도록 메타데이터 확장을 추가합니다.  
+6. 기능을 다른 엔드포인트에 전달하도록 메타데이터 확장을 추가합니다.  
   
-7.  올바르게 정의된 프로필에 따라 바인딩 요소 스택을 미리 구성하는 바인딩을 추가합니다. 자세한 내용은 [표준 바인딩 추가](#AddingAStandardBinding)합니다.  
+7. 올바르게 정의된 프로필에 따라 바인딩 요소 스택을 미리 구성하는 바인딩을 추가합니다. 자세한 내용은 [표준 바인딩 추가](#AddingAStandardBinding)합니다.  
   
-8.  바인딩이 구성 시스템에 노출되도록 바인딩 섹션 및 바인딩 구성 요소를 추가합니다. 자세한 내용은 [구성 지원 추가](#AddingConfigurationSupport)합니다.  
+8. 바인딩이 구성 시스템에 노출되도록 바인딩 섹션 및 바인딩 구성 요소를 추가합니다. 자세한 내용은 [구성 지원 추가](#AddingConfigurationSupport)합니다.  
   
 <a name="MessageExchangePatterns"></a>   
 ## <a name="message-exchange-patterns"></a>메시지 교환 패턴  
@@ -185,9 +185,9 @@ if (soapBinding != null)
   
  Svcutil.exe를 실행하는 경우 Svcutil.exe에서 WSDL 가져오기 확장을 로드하는 방법은 두 가지가 있습니다.  
   
-1.  Svcutil.exe는 /SvcutilConfig을 사용 하 여 구성 파일에:\<파일 >.  
+1. Svcutil.exe는 /SvcutilConfig을 사용 하 여 구성 파일에:\<파일 >.  
   
-2.  Svcutil.exe와 동일한 디렉터리에 있는 Svcutil.exe.config에 구성 섹션을 추가합니다.  
+2. Svcutil.exe와 동일한 디렉터리에 있는 Svcutil.exe.config에 구성 섹션을 추가합니다.  
   
  `UdpBindingElementImporter` 형식은 `IWsdlImportExtension` 인터페이스를 구현합니다. `ImportEndpoint` 메서드는 WSDL 포트로부터 주소를 가져옵니다.  
   
@@ -247,9 +247,9 @@ AddWSAddressingAssertion(context, encodingBindingElement.MessageVersion.Addressi
   
  그런 다음 등록된 클래스(`IPolicyImporterExtension`)로부터 `UdpBindingElementImporter`을 구현합니다. `ImportPolicy()`에서는 네임스페이스의 어설션을 검토하면서 전송 생성을 위한 어설션을 처리하고 멀티캐스트인지 여부를 확인합니다. 또한 처리하는 어설션을 바인딩 어설션 목록에서 제거해야 합니다. 다시 한 번 말하지만 Svcutil.exe를 실행할 때 통합하는 방법은 두 가지가 있습니다.  
   
-1.  Svcutil.exe는 /SvcutilConfig을 사용 하 여 구성 파일에:\<파일 >.  
+1. Svcutil.exe는 /SvcutilConfig을 사용 하 여 구성 파일에:\<파일 >.  
   
-2.  Svcutil.exe와 동일한 디렉터리에 있는 Svcutil.exe.config에 구성 섹션을 추가합니다.  
+2. Svcutil.exe와 동일한 디렉터리에 있는 Svcutil.exe.config에 구성 섹션을 추가합니다.  
   
 <a name="AddingAStandardBinding"></a>   
 ## <a name="adding-a-standard-binding"></a>표준 바인딩 추가  
@@ -466,11 +466,11 @@ svcutil http://localhost:8000/udpsample/ /reference:UdpTranport\bin\UdpTransport
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>샘플을 설치, 빌드 및 실행하려면  
   
-1.  지침에 따라 솔루션을 빌드하려면 [Building Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)합니다.  
+1. 지침에 따라 솔루션을 빌드하려면 [Building Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)합니다.  
   
-2.  단일 또는 다중 컴퓨터 구성에서 샘플을 실행 하려면의 지침을 따릅니다 [Windows Communication Foundation 샘플 실행](../../../../docs/framework/wcf/samples/running-the-samples.md)합니다.  
+2. 단일 또는 다중 컴퓨터 구성에서 샘플을 실행 하려면의 지침을 따릅니다 [Windows Communication Foundation 샘플 실행](../../../../docs/framework/wcf/samples/running-the-samples.md)합니다.  
   
-3.  앞의 "UDP 테스트 서비스 및 클라이언트" 단원을 참조하십시오.  
+3. 앞의 "UDP 테스트 서비스 및 클라이언트" 단원을 참조하십시오.  
   
 > [!IMPORTANT]
 >  컴퓨터에 이 샘플이 이미 설치되어 있을 수도 있습니다. 계속하기 전에 다음(기본) 디렉터리를 확인하세요.  

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - TextElement content model [WPF]
 - flow content elements [WPF], TextElement content model
 ms.assetid: d0a7791c-b090-438c-812f-b9d009d83ee9
-ms.openlocfilehash: ecb9441bc63eae41cfbbadf3bf81b0e5392bd0cb
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 990642d288481fff8eeef900a86070d54790f151
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59125122"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59336189"
 ---
 # <a name="textelement-content-model-overview"></a>TextElement 콘텐츠 모델 개요
 에 대 한 지원 되는 콘텐츠를 설명 하는이 콘텐츠 모델 개요를 <xref:System.Windows.Documents.TextElement>입니다. 합니다 <xref:System.Windows.Documents.Paragraph> 클래스의 형식인 <xref:System.Windows.Documents.TextElement>합니다. 콘텐츠 모델은 어떤 개체/요소가 다른 개체/요소에 포함될 수 있는지를 설명합니다. 이 개요에서 파생 된 개체에 사용 된 콘텐츠 모델 요약 <xref:System.Windows.Documents.TextElement>합니다. 자세한 내용은 [유동 문서 개요](flow-document-overview.md)합니다.  
@@ -27,7 +27,7 @@ ms.locfileid: "59125122"
   
  위의 다이어그램에서 볼 수 있듯이 요소에 허용 된 자식은 결정 되지 않습니다 반드시 여부는 파생 된 클래스에서 여는 <xref:System.Windows.Documents.Block> 클래스 또는 <xref:System.Windows.Documents.Inline> 클래스입니다. 예를 들어를 <xref:System.Windows.Documents.Span> (을 <xref:System.Windows.Documents.Inline>-파생 클래스) 하나만 사용할 수 있습니다 <xref:System.Windows.Documents.Inline> 자식 요소를 하지만 <xref:System.Windows.Documents.Figure> (도 <xref:System.Windows.Documents.Inline>-파생 클래스) 하나만 사용할 수 있습니다 <xref:System.Windows.Documents.Block> 자식 요소. 그러므로 이 다이어그램은 다른 요소에 포함될 수 있는 요소를 신속하게 판별하는 데 유용합니다. 예를 들어 다이어그램을 사용해 보겠습니다의 유동 콘텐츠를 생성 하는 방법을 결정 하는 <xref:System.Windows.Controls.RichTextBox>합니다.  
   
-1.  A <xref:System.Windows.Controls.RichTextBox> 포함 해야 합니다는 <xref:System.Windows.Documents.FlowDocument> 는 포함 해야 합니다는 <xref:System.Windows.Documents.Block>-파생 개체입니다. 이전 다이어그램에 해당하는 세그먼트는 다음과 같습니다.  
+1. A <xref:System.Windows.Controls.RichTextBox> 포함 해야 합니다는 <xref:System.Windows.Documents.FlowDocument> 는 포함 해야 합니다는 <xref:System.Windows.Documents.Block>-파생 개체입니다. 이전 다이어그램에 해당하는 세그먼트는 다음과 같습니다.  
   
      ![다이어그램: RichTextBox 포함 규칙](./media/flow-ovw-schemawalkthrough1.png "Flow_Ovw_SchemaWalkThrough1")  
   
@@ -35,7 +35,7 @@ ms.locfileid: "59125122"
   
      [!code-xaml[FlowOvwSnippets_snip#SchemaWalkThrough1](~/samples/snippets/csharp/VS_Snippets_Wpf/FlowOvwSnippets_snip/CS/MiscSnippets.xaml#schemawalkthrough1)]  
   
-2.  다이어그램에 따라 몇 가지 <xref:System.Windows.Documents.Block> 요소를 비롯 하 여 선택할 <xref:System.Windows.Documents.Paragraph>, <xref:System.Windows.Documents.Section>, <xref:System.Windows.Documents.Table>, <xref:System.Windows.Documents.List>, 및 <xref:System.Windows.Documents.BlockUIContainer> (위 다이어그램의 블록 파생 클래스 참조). 다루겠습니다는 <xref:System.Windows.Documents.Table>합니다. 위의 다이어그램에 따라를 <xref:System.Windows.Documents.Table> 포함을 <xref:System.Windows.Documents.TableRowGroup> 포함 된 <xref:System.Windows.Documents.TableRow> 요소를 포함 하는 <xref:System.Windows.Documents.TableCell> 요소를 포함 하는 <xref:System.Windows.Documents.Block>-파생 개체입니다. 다음은 해당 세그먼트를 <xref:System.Windows.Documents.Table> 위의 다이어그램에서 가져옵니다.  
+2. 다이어그램에 따라 몇 가지 <xref:System.Windows.Documents.Block> 요소를 비롯 하 여 선택할 <xref:System.Windows.Documents.Paragraph>, <xref:System.Windows.Documents.Section>, <xref:System.Windows.Documents.Table>, <xref:System.Windows.Documents.List>, 및 <xref:System.Windows.Documents.BlockUIContainer> (위 다이어그램의 블록 파생 클래스 참조). 다루겠습니다는 <xref:System.Windows.Documents.Table>합니다. 위의 다이어그램에 따라를 <xref:System.Windows.Documents.Table> 포함을 <xref:System.Windows.Documents.TableRowGroup> 포함 된 <xref:System.Windows.Documents.TableRow> 요소를 포함 하는 <xref:System.Windows.Documents.TableCell> 요소를 포함 하는 <xref:System.Windows.Documents.Block>-파생 개체입니다. 다음은 해당 세그먼트를 <xref:System.Windows.Documents.Table> 위의 다이어그램에서 가져옵니다.  
   
      ![다이어그램: 부모&#47;테이블에 대 한 자식 스키마](./media/flow-ovw-schemawalkthrough2.png "Flow_Ovw_SchemaWalkThrough2")  
   
@@ -43,7 +43,7 @@ ms.locfileid: "59125122"
   
      [!code-xaml[FlowOvwSnippets_snip#SchemaWalkThrough2](~/samples/snippets/csharp/VS_Snippets_Wpf/FlowOvwSnippets_snip/CS/MiscSnippets.xaml#schemawalkthrough2)]  
   
-3.  다시 하나 이상의 <xref:System.Windows.Documents.Block> 요소가 <xref:System.Windows.Documents.TableCell>합니다. 간단하게 셀 안에 텍스트를 배치해 보겠습니다. 이렇게 하려면 사용 하 여는 <xref:System.Windows.Documents.Paragraph> 사용 하 여는 <xref:System.Windows.Documents.Run> 요소입니다. 다음은 것을 보여 주는 다이어그램의 해당 세그먼트는 <xref:System.Windows.Documents.Paragraph> 걸릴 수 있습니다는 <xref:System.Windows.Documents.Inline> 요소가 <xref:System.Windows.Documents.Run> (을 <xref:System.Windows.Documents.Inline> 요소) 일반 텍스트만 사용할 수 있습니다.  
+3. 다시 하나 이상의 <xref:System.Windows.Documents.Block> 요소가 <xref:System.Windows.Documents.TableCell>합니다. 간단하게 셀 안에 텍스트를 배치해 보겠습니다. 이렇게 하려면 사용 하 여는 <xref:System.Windows.Documents.Paragraph> 사용 하 여는 <xref:System.Windows.Documents.Run> 요소입니다. 다음은 것을 보여 주는 다이어그램의 해당 세그먼트는 <xref:System.Windows.Documents.Paragraph> 걸릴 수 있습니다는 <xref:System.Windows.Documents.Inline> 요소가 <xref:System.Windows.Documents.Run> (을 <xref:System.Windows.Documents.Inline> 요소) 일반 텍스트만 사용할 수 있습니다.  
   
      ![다이어그램: 부모&#47;자식 스키마를 단락의](./media/flow-ovw-schemawalkthrough3.png "Flow_Ovw_SchemaWalkThrough3")  
   

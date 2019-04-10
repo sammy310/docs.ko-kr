@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Toolbox [Windows Forms], populating
 - custom components [Windows Forms], adding to Toolbox
 ms.assetid: 2fa1e3e8-6b9f-42b2-97c0-2be57444dba4
-ms.openlocfilehash: a1d138bcdc2c4637cd6aa035360ff258d3fe7100
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 6ecf69350b8337dc6049b73251809192b47dc2fb
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59178791"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59338100"
 ---
 # <a name="walkthrough-automatically-populating-the-toolbox-with-custom-components"></a>연습: 사용자 지정 구성 요소로 도구 상자 자동 채우기
 구성 요소는 현재 열려 있는 솔루션의 프로젝트에서 정의 된 경우는 자동으로 나타나는 합니다 **도구 상자**, 작업이 사용자가 필요 하지 않습니다. 채울 수도 있습니다는 **도구 상자** 사용 하 여 사용자 지정 구성 요소를 사용 하 여 합니다 [선택 도구 상자 항목 대화 상자 (Visual Studio)](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/dyca0t6t(v=vs.100)), 하지만 **도구 상자** 고려 솔루션에 있는 항목의 다음 특성을 모두 사용 하 여 출력을 빌드하십시오.  
@@ -45,31 +45,31 @@ ms.locfileid: "59178791"
   
 #### <a name="to-create-the-project"></a>프로젝트를 만들려면  
   
-1.  라는 Windows 기반 응용 프로그램 프로젝트를 만듭니다 `ToolboxExample` (**파일** > **New** > **프로젝트**  >  **Visual C#** 나 **Visual Basic** > **클래식 데스크톱** > **Windows Forms 응용 프로그램**).  
+1. 라는 Windows 기반 응용 프로그램 프로젝트를 만듭니다 `ToolboxExample` (**파일** > **New** > **프로젝트**  >  **Visual C#** 나 **Visual Basic** > **클래식 데스크톱** > **Windows Forms 응용 프로그램**).  
   
-2.  프로젝트에 새 구성 요소를 추가 합니다. 이를 `DemoComponent`라고 합니다.  
+2. 프로젝트에 새 구성 요소를 추가 합니다. 이를 `DemoComponent`라고 합니다.  
   
      자세한 내용은 [방법: 새 프로젝트 항목 추가](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/w0572c5b(v=vs.100))합니다.  
   
-3.  프로젝트를 빌드합니다.  
+3. 프로젝트를 빌드합니다.  
   
-4.  **도구** 메뉴를 클릭 합니다 **옵션** 항목. 클릭 **일반** 아래에서 **Windows Forms 디자이너** 항목을 확인 합니다 **AutoToolboxPopulate** 옵션을 설정 **True**합니다.  
+4. **도구** 메뉴를 클릭 합니다 **옵션** 항목. 클릭 **일반** 아래에서 **Windows Forms 디자이너** 항목을 확인 합니다 **AutoToolboxPopulate** 옵션을 설정 **True**합니다.  
   
 ## <a name="creating-an-instance-of-a-custom-component"></a>사용자 지정 구성 요소 인스턴스 만들기  
  다음 단계는 양식의 사용자 지정 구성 요소의 인스턴스를 만드는 것입니다. 때문에 합니다 **도구 상자** 자동으로 새 구성 요소에 대 한 계정,이 다른 구성 요소나 컨트롤을 만드는 것 만큼 쉽습니다.  
   
 #### <a name="to-create-an-instance-of-a-custom-component"></a>사용자 지정 구성 요소의 인스턴스를 만들려면  
   
-1.  프로젝트의 폼을 엽니다는 **Forms 디자이너**합니다.  
+1. 프로젝트의 폼을 엽니다는 **Forms 디자이너**합니다.  
   
-2.  에 **도구 상자**, 이라는 새 탭을 클릭 **ToolboxExample 구성 요소**합니다.  
+2. 에 **도구 상자**, 이라는 새 탭을 클릭 **ToolboxExample 구성 요소**합니다.  
   
      탭을 클릭 하면 표시 됩니다 **DemoComponent**합니다.  
   
     > [!NOTE]
     >  성능상의 이유로, 자동으로 채워진 영역의 구성 요소를 **도구 상자** 사용자 지정 비트맵을 표시 하지 않습니다 및 <xref:System.Drawing.ToolboxBitmapAttribute> 지원 되지 않습니다. 사용자 지정 구성 요소에 대 한 아이콘을 표시 하는 **도구 상자**를 사용 하 여를 **도구 상자 항목 선택** 대화 상자 요소를 로드 합니다.  
   
-3.  구성 요소를 양식에 끌어다 놓습니다.  
+3. 구성 요소를 양식에 끌어다 놓습니다.  
   
      구성 요소 인스턴스의 생성 되어에 추가 합니다 **구성 요소 트레이에**합니다.  
   
@@ -78,15 +78,15 @@ ms.locfileid: "59178791"
   
 #### <a name="to-experiment-with-the-effect-on-the-toolbox-of-unloading-and-reloading-components"></a>구성 요소를 다시 로드 및 언로드의 도구 상자에 대 한 효과 사용 하 여 실험  
   
-1.  솔루션에서 프로젝트를 언로드하십시오.  
+1. 솔루션에서 프로젝트를 언로드하십시오.  
   
      언로드 프로젝트에 대 한 자세한 내용은 참조 하세요. [방법: 프로젝트 다시 로드 및 언로드](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/tt479x1t(v=vs.100))합니다. 저장 하 라는 메시지가 나타나면 선택할 **예**합니다.  
   
-2.  새 **Windows 응용 프로그램** 프로젝트를 솔루션입니다. 폼을 엽니다는 **디자이너**합니다.  
+2. 새 **Windows 응용 프로그램** 프로젝트를 솔루션입니다. 폼을 엽니다는 **디자이너**합니다.  
   
      합니다 **ToolboxExample 구성 요소** 탭에서 이전 프로젝트는 이제 사라집니다.  
   
-3.  다시 로드를 `ToolboxExample` 프로젝트입니다.  
+3. 다시 로드를 `ToolboxExample` 프로젝트입니다.  
   
      합니다 **ToolboxExample 구성 요소** 탭 이제 다시 나타납니다.  
   

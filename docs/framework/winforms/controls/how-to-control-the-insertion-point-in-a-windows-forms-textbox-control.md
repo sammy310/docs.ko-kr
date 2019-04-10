@@ -10,12 +10,12 @@ helpviewer_keywords:
 - insertion points [Windows Forms], TextBox controls
 - text boxes [Windows Forms], controlling insertion point
 ms.assetid: 5bee7d34-5121-429e-ab1f-d8ff67bc74c1
-ms.openlocfilehash: 1fa6e8a3642086f81d0a62502d801ec6ade9b3d1
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 43fdb023f19aa988dfef3dcd68443d6f59808472
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59110718"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59341324"
 ---
 # <a name="how-to-control-the-insertion-point-in-a-windows-forms-textbox-control"></a>방법: Windows Forms TextBox 컨트롤에서 삽입 지점 제어
 경우는 Windows Forms <xref:System.Windows.Forms.TextBox> 컨트롤의 포커스를 처음 받을, 기존 텍스트의 왼쪽에 텍스트 상자 내에서 기본 삽입 됩니다. 키보드 또는 마우스를 사용 하 여 커서를 이동할 수 있습니다. 텍스트 상자를 잃고 포커스를 다시 얻은 후, 하는 경우 아무 곳에 나 사용자 마지막으로 저장할 삽입 지점이 됩니다.  
@@ -24,9 +24,9 @@ ms.locfileid: "59110718"
   
 ### <a name="to-control-the-insertion-point-in-a-textbox-control"></a>TextBox 컨트롤의 삽입 지점 제어  
   
-1.  <xref:System.Windows.Forms.TextBoxBase.SelectionStart%2A> 속성을 적절한 값으로 설정합니다. 0에 바로 첫 번째 문자의 왼쪽에 삽입 지점을 넣습니다.  
+1. <xref:System.Windows.Forms.TextBoxBase.SelectionStart%2A> 속성을 적절한 값으로 설정합니다. 0에 바로 첫 번째 문자의 왼쪽에 삽입 지점을 넣습니다.  
   
-2.  (선택 사항) 설정 된 <xref:System.Windows.Forms.TextBoxBase.SelectionLength%2A> 속성을 선택 하려는 텍스트의 길이입니다.  
+2. (선택 사항) 설정 된 <xref:System.Windows.Forms.TextBoxBase.SelectionLength%2A> 속성을 선택 하려는 텍스트의 길이입니다.  
   
      아래 코드는 항상 0으로 삽입 포인터를 반환합니다. 합니다 `TextBox1_Enter` 이벤트 처리기에 대 한 자세한 내용은 컨트롤에 바인딩할 수 해야을 참조 하십시오 [Windows Forms에서 이벤트 처리기 만들기](../creating-event-handlers-in-windows-forms.md)합니다.  
   

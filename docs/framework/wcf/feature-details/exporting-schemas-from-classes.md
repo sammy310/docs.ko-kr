@@ -8,12 +8,12 @@ helpviewer_keywords:
 - XsdDataContractExporter class
 - XsdDataContractImporter class
 ms.assetid: bb57b962-70c1-45a9-93d5-e721e340a13f
-ms.openlocfilehash: f69fb25df4ed2af79cc5ffa59f0969a1616d38ca
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: dcbccbea279796fdaec1227b7575cf39e47f9e4f
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59185438"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59336878"
 ---
 # <a name="exporting-schemas-from-classes"></a>클래스에서 스키마 내보내기
 데이터 계약 모델에 사용되는 클래스에서 XSD(XML 스키마 정의 언어) 스키마를 생성하려면 <xref:System.Runtime.Serialization.XsdDataContractExporter> 클래스를 사용합니다. 이 항목에서는 스키마를 만드는 프로세스에 대해 설명합니다.  
@@ -25,20 +25,20 @@ ms.locfileid: "59185438"
   
 #### <a name="to-export-schemas"></a>스키마를 내보내려면  
   
-1.  <xref:System.Runtime.Serialization.XsdDataContractExporter>의 인스턴스를 만듭니다.  
+1. <xref:System.Runtime.Serialization.XsdDataContractExporter>의 인스턴스를 만듭니다.  
   
-2.  선택 사항입니다. 생성자에 <xref:System.Xml.Schema.XmlSchemaSet> 를 포함하여 전달합니다. 이 경우 스키마를 내보내는 중 생성된 스키마는 빈 <xref:System.Xml.Schema.XmlSchemaSet> 로 시작하지 않고 이 <xref:System.Xml.Schema.XmlSchemaSet>인스턴스에 추가됩니다.  
+2. 선택 사항입니다. 생성자에 <xref:System.Xml.Schema.XmlSchemaSet> 를 포함하여 전달합니다. 이 경우 스키마를 내보내는 중 생성된 스키마는 빈 <xref:System.Xml.Schema.XmlSchemaSet> 로 시작하지 않고 이 <xref:System.Xml.Schema.XmlSchemaSet>인스턴스에 추가됩니다.  
   
-3.  선택 사항입니다. <xref:System.Runtime.Serialization.XsdDataContractExporter.CanExport%2A> 메서드 중 하나를 호출합니다. 메서드에 따라 지정된 형식을 내보낼 수 있는지 여부가 결정됩니다. 이 메서드는 다음 단계의 `Export` 메서드와 동일한 오버로드를 갖습니다.  
+3. 선택 사항입니다. <xref:System.Runtime.Serialization.XsdDataContractExporter.CanExport%2A> 메서드 중 하나를 호출합니다. 메서드에 따라 지정된 형식을 내보낼 수 있는지 여부가 결정됩니다. 이 메서드는 다음 단계의 `Export` 메서드와 동일한 오버로드를 갖습니다.  
   
-4.  <xref:System.Runtime.Serialization.XsdDataContractExporter.Export%2A> 메서드 중 하나를 호출합니다. <xref:System.Type>, <xref:System.Collections.Generic.List%601> 개체의 `Type` 또는 <xref:System.Collections.Generic.List%601> 개체의 <xref:System.Reflection.Assembly> 을 사용하는 세 가지 오버로드가 있습니다. 마지막 경우에서는 지정된 모든 어셈블리의 모든 형식을 내보냅니다.  
+4. <xref:System.Runtime.Serialization.XsdDataContractExporter.Export%2A> 메서드 중 하나를 호출합니다. <xref:System.Type>, <xref:System.Collections.Generic.List%601> 개체의 `Type` 또는 <xref:System.Collections.Generic.List%601> 개체의 <xref:System.Reflection.Assembly> 을 사용하는 세 가지 오버로드가 있습니다. 마지막 경우에서는 지정된 모든 어셈블리의 모든 형식을 내보냅니다.  
   
      `Export` 메서드를 여러 번 호출하면 동일한 `XmlSchemaSet`에 여러 항목이 추가됩니다. 형식이 이미 있으면 `XmlSchemaSet` 에 생성되지 않습니다. 따라서 `Export` 클래스의 여러 인스턴스를 만드는 경우 동일한 `XsdDataContractExporter` 에서 `XsdDataContractExporter` 를 여러 번 호출하는 것이 좋습니다. 이렇게 하면 중복 스키마 형식이 생성되지 않습니다.  
   
     > [!NOTE]
     >  내보내기 중 오류가 발생할 경우 `XmlSchemaSet` 상태를 예측할 수 없습니다.  
   
-5.  <xref:System.Xml.Schema.XmlSchemaSet> 속성을 통해 <xref:System.Runtime.Serialization.XsdDataContractExporter.Schemas%2A> 에 액세스합니다.  
+5. <xref:System.Xml.Schema.XmlSchemaSet> 속성을 통해 <xref:System.Runtime.Serialization.XsdDataContractExporter.Schemas%2A> 에 액세스합니다.  
   
 ## <a name="export-options"></a>내보내기 옵션  
  <xref:System.Runtime.Serialization.XsdDataContractExporter.Options%2A> 의 <xref:System.Runtime.Serialization.XsdDataContractExporter> 속성을 <xref:System.Runtime.Serialization.ExportOptions> 클래스로 설정하여 내보내기 프로세스의 다양한 측면을 제어할 수 있습니다. 특히 다음 옵션을 설정할 수 있습니다.  

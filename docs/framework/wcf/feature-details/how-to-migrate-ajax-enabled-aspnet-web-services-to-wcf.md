@@ -2,12 +2,12 @@
 title: '방법: AJAX 사용 ASP.NET 웹 서비스를 WCF로 마이그레이션'
 ms.date: 03/30/2017
 ms.assetid: 1428df4d-b18f-4e6d-bd4d-79ab3dd5147c
-ms.openlocfilehash: dfbb32a751623fb1e3753cfd8bbbaf5910d571b2
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 6114fa90b10a5d0cacb60a7ad40f63fae776e174
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59143002"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59337424"
 ---
 # <a name="how-to-migrate-ajax-enabled-aspnet-web-services-to-wcf"></a>방법: AJAX 사용 ASP.NET 웹 서비스를 WCF로 마이그레이션
 이 항목에 해당 하는 AJAX 지원 Windows Communication Foundation (WCF) 서비스에 기본 ASP.NET AJAX 서비스를 마이그레이션하는 절차를 간략하게 설명 합니다. ASP.NET AJAX 서비스의 기능적 WCF 버전을 만드는 방법을 보여 줍니다. 두 서비스는 함께 사용할 수 있습니다 또는 WCF 서비스는 ASP.NET AJAX 서비스를 바꾸는 데 사용할 수 있습니다.
@@ -26,21 +26,21 @@ ms.locfileid: "59143002"
 
 ### <a name="to-create-and-test-the-aspnet-web-service-application"></a>ASP.NET 웹 서비스 응용 프로그램을 만들고 테스트하려면
 
-1.  Visual Studio 2012를 엽니다.
+1. Visual Studio 2012를 엽니다.
 
-2.  **파일** 메뉴에서 **새로 만들기**, 다음 **프로젝트**, 다음 **웹**를 선택한 후 **ASP.NET 웹 서비스 응용 프로그램** .
+2. **파일** 메뉴에서 **새로 만들기**, 다음 **프로젝트**, 다음 **웹**를 선택한 후 **ASP.NET 웹 서비스 응용 프로그램** .
 
-3.  프로젝트 이름을 `ASPHello` 누릅니다 **확인**합니다.
+3. 프로젝트 이름을 `ASPHello` 누릅니다 **확인**합니다.
 
-4.  이 서비스에서 AJAX를 사용하려면 Service1.asmx.cs 파일에서 `System.Web.Script.Services.ScriptService]`가 포함된 행의 주석 처리를 제거합니다.
+4. 이 서비스에서 AJAX를 사용하려면 Service1.asmx.cs 파일에서 `System.Web.Script.Services.ScriptService]`가 포함된 행의 주석 처리를 제거합니다.
 
-5.  **빌드** 메뉴에서 **솔루션 빌드**합니다.
+5. **빌드** 메뉴에서 **솔루션 빌드**합니다.
 
-6.  **디버그** 메뉴에서 **디버깅하지 않고 시작**을 선택합니다.
+6. **디버그** 메뉴에서 **디버깅하지 않고 시작**을 선택합니다.
 
-7.  생성된 웹 페이지에서 `HelloWorld` 작업을 선택합니다.
+7. 생성된 웹 페이지에서 `HelloWorld` 작업을 선택합니다.
 
-8.  클릭 합니다 **Invoke** 단추를 `HelloWorld` 테스트 페이지. 다음과 같은 XML 응답을 받게 됩니다.
+8. 클릭 합니다 **Invoke** 단추를 `HelloWorld` 테스트 페이지. 다음과 같은 XML 응답을 받게 됩니다.
 
     ```xml
     <?xml version="1.0" encoding="utf-8" ?>
@@ -53,13 +53,13 @@ ms.locfileid: "59143002"
 
 ### <a name="to-create-an-equivalent-wcf-ajax-service-application"></a>동등한 WCF AJAX 서비스 응용 프로그램을 만들려면
 
-1.  마우스 오른쪽 단추로 클릭 합니다 **ASPHello** 프로젝트를 마우스 **추가**, 다음 **새 항목**를 차례로 **AJAX 사용 WCF 서비스**합니다.
+1. 마우스 오른쪽 단추로 클릭 합니다 **ASPHello** 프로젝트를 마우스 **추가**, 다음 **새 항목**를 차례로 **AJAX 사용 WCF 서비스**합니다.
 
-2.  서비스의 이름을 `WCFHello` 누릅니다 **추가**합니다.
+2. 서비스의 이름을 `WCFHello` 누릅니다 **추가**합니다.
 
-3.  WCFHello.svc.cs 파일을 엽니다.
+3. WCFHello.svc.cs 파일을 엽니다.
 
-4.  Service1.asmx.cs에서 복사의 다음 구현과 `HelloWorld` 작업 합니다.
+4. Service1.asmx.cs에서 복사의 다음 구현과 `HelloWorld` 작업 합니다.
 
     ```
     public string HelloWorld()
@@ -68,7 +68,7 @@ ms.locfileid: "59143002"
     }
     ```
 
-5.  구현을 붙여넣기는 `HelloWorld` WCFHello.svc.cs 파일에 다음 코드 대신에 작업을 합니다.
+5. 구현을 붙여넣기는 `HelloWorld` WCFHello.svc.cs 파일에 다음 코드 대신에 작업을 합니다.
 
     ```
     public void DoWork()
@@ -78,7 +78,7 @@ ms.locfileid: "59143002"
     }
     ```
 
-6.  지정 된 `Namespace` 에 대 한 특성 <xref:System.ServiceModel.ServiceContractAttribute> 으로 `WCFHello`입니다.
+6. 지정 된 `Namespace` 에 대 한 특성 <xref:System.ServiceModel.ServiceContractAttribute> 으로 `WCFHello`입니다.
 
     ```
     [ServiceContract(Namespace="WCFHello")]
@@ -87,7 +87,7 @@ ms.locfileid: "59143002"
     { … }
     ```
 
-7.  추가 <xref:System.ServiceModel.Web.WebInvokeAttribute> 에 `HelloWorld` 설정 하 고 작업을 <xref:System.ServiceModel.Web.WebInvokeAttribute.ResponseFormat%2A> 반환할 속성 <xref:System.ServiceModel.Web.WebMessageFormat.Xml>. 이 속성을 설정하지 않은 경우 기본 반환 형식은 <xref:System.ServiceModel.Web.WebMessageFormat.Json>입니다.
+7. 추가 <xref:System.ServiceModel.Web.WebInvokeAttribute> 에 `HelloWorld` 설정 하 고 작업을 <xref:System.ServiceModel.Web.WebInvokeAttribute.ResponseFormat%2A> 반환할 속성 <xref:System.ServiceModel.Web.WebMessageFormat.Xml>. 이 속성을 설정하지 않은 경우 기본 반환 형식은 <xref:System.ServiceModel.Web.WebMessageFormat.Json>입니다.
 
     ```
     [OperationContract]
@@ -98,7 +98,7 @@ ms.locfileid: "59143002"
     }
     ```
 
-8.  **빌드** 메뉴에서 **솔루션 빌드**합니다.
+8. **빌드** 메뉴에서 **솔루션 빌드**합니다.
 
 9. WCFHello.svc 파일을 열고 들어오고 합니다 **디버그** 메뉴에서 **디버깅 하지 않고 시작**합니다.
 

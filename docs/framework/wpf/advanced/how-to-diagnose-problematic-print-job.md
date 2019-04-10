@@ -10,12 +10,12 @@ helpviewer_keywords:
 - print jobs [WPF], troubleshooting
 - print jobs [WPF], diagnosing problems
 ms.assetid: b081a170-84c6-48f9-a487-5766a8d58a82
-ms.openlocfilehash: 3c21798527df15730a62c04422ecd9e57b74abe7
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: fc38d239720b5d5a8e159f91749b03512568cd9b
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59211044"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59338477"
 ---
 # <a name="how-to-diagnose-problematic-print-job"></a>방법: 인쇄 작업 문제 진단
 네트워크 관리자는 사용자로부터 인쇄 작업이 인쇄되지 않거나 느리게 인쇄되는 문제에 대한 불만을 흔히 처리합니다. 다양 한 인쇄 작업 속성에서 노출 된 [!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)] Microsoft.NET Framework의 인쇄 작업의 신속한 원격 진단을 수행 하기 위한 수단을 제공 합니다.  
@@ -23,7 +23,7 @@ ms.locfileid: "59211044"
 ## <a name="example"></a>예제  
  이러한 종류의 유틸리티를 만드는 주요 단계는 다음과 같습니다.  
   
-1.  사용자가 불만족하는 인쇄 작업을 식별합니다. 사용자는 흔히 이런 작업을 정확하게 수행할 수 없습니다. 인쇄 서버 또는 프린터의 이름을 모를 수 있습니다. 설정에서 사용한 것과 다른 용어로 프린터의 위치를 설명할 수 있습니다 해당 <xref:System.Printing.PrintQueue.Location%2A> 속성입니다. 따라서 사용자가 현재 제출한 작업 목록을 생성하는 것이 좋습니다. 둘 이상인 경우 사용자와 인쇄 시스템 관리자 간의 통신을 사용하여 문제가 있는 작업을 찾을 수 있습니다. 하위단계는 다음과 같습니다.  
+1. 사용자가 불만족하는 인쇄 작업을 식별합니다. 사용자는 흔히 이런 작업을 정확하게 수행할 수 없습니다. 인쇄 서버 또는 프린터의 이름을 모를 수 있습니다. 설정에서 사용한 것과 다른 용어로 프린터의 위치를 설명할 수 있습니다 해당 <xref:System.Printing.PrintQueue.Location%2A> 속성입니다. 따라서 사용자가 현재 제출한 작업 목록을 생성하는 것이 좋습니다. 둘 이상인 경우 사용자와 인쇄 시스템 관리자 간의 통신을 사용하여 문제가 있는 작업을 찾을 수 있습니다. 하위단계는 다음과 같습니다.  
   
     1.  모든 인쇄 서버 목록을 가져옵니다.  
   
@@ -33,7 +33,7 @@ ms.locfileid: "59211044"
   
     4.  큐 루프의 각 단계 내에서 해당 작업을 반복하고 불만이 있는 사용자가 제출한 작업에 대한 식별 정보를 수집합니다.  
   
-2.  인쇄 작업 문제를 식별하는 경우 관련 속성을 검사하여 문제가 무엇인지를 확인합니다. 예를 들어 작업이 오류 상태이거나 작업이 인쇄되기 전에 큐를 제공하는 프린터가 오프라인으로 전환되었는지와 같은 문제입니다.  
+2. 인쇄 작업 문제를 식별하는 경우 관련 속성을 검사하여 문제가 무엇인지를 확인합니다. 예를 들어 작업이 오류 상태이거나 작업이 인쇄되기 전에 큐를 제공하는 프린터가 오프라인으로 전환되었는지와 같은 문제입니다.  
   
  아래 코드는 일련의 코드 예제입니다. 첫 번째 코드 예제는 인쇄 대기열을 통한 루프를 포함합니다. (위의 1c 단계.) 변수의 `myPrintQueues` 되는 <xref:System.Printing.PrintQueueCollection> 현재 인쇄 서버에 대 한 개체입니다.  
   

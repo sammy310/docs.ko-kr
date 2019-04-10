@@ -14,12 +14,12 @@ helpviewer_keywords:
 - tables [Windows Forms], formatting in DataGrid control
 - formatting [Windows Forms]
 ms.assetid: a50fcc3b-8abf-47ec-9029-7f268af4ddb1
-ms.openlocfilehash: a07fde63463d209e0006de9be677636f19fd93a8
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 8e5c41d6f146e6abef8d7670e6191b587ac86c92
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59147903"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59336124"
 ---
 # <a name="how-to-format-the-windows-forms-datagrid-control"></a>방법: Windows Forms DataGrid 컨트롤 서식 지정
 > [!NOTE]
@@ -33,7 +33,7 @@ ms.locfileid: "59147903"
   
 ### <a name="to-establish-a-default-style-for-the-datagrid-control"></a>DataGrid 컨트롤에 대 한 기본 스타일을 설정 하려면  
   
-1.  다음 속성을 적절 하 게 설정 합니다.  
+1. 다음 속성을 적절 하 게 설정 합니다.  
   
     |속성|설명|  
     |--------------|-----------------|  
@@ -68,19 +68,19 @@ ms.locfileid: "59147903"
   
 ### <a name="to-set-the-table-and-column-style-of-a-data-table-programmatically"></a>데이터 테이블의 테이블 및 열 스타일을 프로그래밍 방식으로 설정 하려면  
   
-1.  새 테이블 스타일을 만들고 해당 속성을 설정 합니다.  
+1. 새 테이블 스타일을 만들고 해당 속성을 설정 합니다.  
   
-2.  열 스타일을 만들고 해당 속성을 설정 합니다.  
+2. 열 스타일을 만들고 해당 속성을 설정 합니다.  
   
-3.  테이블 스타일의 열 스타일 컬렉션에 열 스타일을 추가 합니다.  
+3. 테이블 스타일의 열 스타일 컬렉션에 열 스타일을 추가 합니다.  
   
-4.  데이터 그리드 테이블 스타일 컬렉션에 테이블 스타일을 추가 합니다.  
+4. 데이터 그리드 테이블 스타일 컬렉션에 테이블 스타일을 추가 합니다.  
   
-5.  아래 예제에서의 새 인스턴스를 만듭니다 <xref:System.Windows.Forms.DataGridTableStyle> 설정 및 해당 <xref:System.Windows.Forms.DataGridTableStyle.MappingName%2A> 속성입니다.  
+5. 아래 예제에서의 새 인스턴스를 만듭니다 <xref:System.Windows.Forms.DataGridTableStyle> 설정 및 해당 <xref:System.Windows.Forms.DataGridTableStyle.MappingName%2A> 속성입니다.  
   
-6.  새 인스턴스를 만듭니다는 **GridColumnStyle** 설정 하 고 해당 **MappingName** (및 일부 다른 레이아웃 및 표시 속성).  
+6. 새 인스턴스를 만듭니다는 **GridColumnStyle** 설정 하 고 해당 **MappingName** (및 일부 다른 레이아웃 및 표시 속성).  
   
-7.  만들려는 각 열 스타일에 대해 2 ~ 6 단계를 반복 합니다.  
+7. 만들려는 각 열 스타일에 대해 2 ~ 6 단계를 반복 합니다.  
   
      다음 예제에서는 어떻게를 <xref:System.Windows.Forms.DataGridTextBoxColumn> 열에 표시 되는 이름 이므로 만들어집니다. 열 스타일을 추가 하는 또한 합니다 <xref:System.Windows.Forms.GridColumnStylesCollection> 테이블 스타일의 테이블 스타일을 추가 하 고는 <xref:System.Windows.Forms.GridTableStylesCollection> 데이터 그리드입니다.  
   
