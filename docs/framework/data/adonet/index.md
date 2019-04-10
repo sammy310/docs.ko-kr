@@ -2,12 +2,12 @@
 title: ADO.NET
 ms.date: 03/30/2017
 ms.assetid: 5b96ed06-9759-4966-a797-a1d5f6ee50ca
-ms.openlocfilehash: 86d4d4628313ff248618f37637b0a25e80820b06
-ms.sourcegitcommit: c6f69b0cf149f6b54483a6d5c2ece222913f43ce
+ms.openlocfilehash: 4105aaba92c73206e7a162415e3bc245507f40e3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2019
-ms.locfileid: "55903615"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59191915"
 ---
 # <a name="adonet"></a>ADO.NET
 ADO.NET은 .NET Framework 프로그래머에게 데이터 액세스 서비스를 노출하는 클래스 집합입니다. ADO.NET은 분산된 데이터 공유 응용 프로그램을 만들기 위한 다양한 구성 요소를 제공합니다. 또한 관계형, XML 및 응용 프로그램 데이터에 대한 액세스를 제공하는 .NET Framework의 핵심 부분입니다. ADO.NET은 응용 프로그램, 도구, 언어 또는 인터넷 브라우저에서 사용되는 중간 계층 비즈니스 개체 및 프런트 엔드 데이터베이스 클라이언트 만들기를 포함하여 다양한 개발 요구 사항을 지원합니다.  
@@ -28,7 +28,7 @@ ADO.NET은 .NET Framework 프로그래머에게 데이터 액세스 서비스를
  [ADO.NET에서 데이터 형식 매핑](../../../../docs/framework/data/adonet/data-type-mappings-in-ado-net.md)  
  .NET Framework 데이터 형식과 .NET Framework 데이터 공급자 간의 데이터 형식 매핑에 대해 설명합니다.  
   
- [DataSet, DataTable 및 DataView](../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  
+ [DataSets, DataTables 및 DataViews](../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  
  `DataSets`, 형식화된 `DataSets`, `DataTables` 및 `DataViews`를 만들고 사용하는 방법에 대해 설명합니다.  
   
  [LINQ to DataSet](../../../../docs/framework/data/adonet/linq-to-dataset.md)  
@@ -60,5 +60,6 @@ ADO.NET은 .NET Framework 프로그래머에게 데이터 액세스 서비스를
  .NET 샘플 및 자습서의 목록을 제공합니다.
   
 ## <a name="see-also"></a>참고자료
+
 - [Visual Studio에서 데이터 액세스](/visualstudio/data-tools/accessing-data-in-visual-studio)
 - [ADO.NET 관리되는 공급자 및 데이터 집합 개발자 센터](https://go.microsoft.com/fwlink/?LinkId=217917)

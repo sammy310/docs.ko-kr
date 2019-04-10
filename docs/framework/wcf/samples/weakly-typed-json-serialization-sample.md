@@ -2,12 +2,12 @@
 title: 약한형 JSON Serialization 샘플
 ms.date: 03/30/2017
 ms.assetid: 0b30e501-4ef5-474d-9fad-a9d559cf9c52
-ms.openlocfilehash: 370030671a6a8c6709567bf070411543722ab8d8
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
-ms.translationtype: MT
+ms.openlocfilehash: 13c51c416c6efad9a168999b0751cb9c1d88baba
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58842670"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59205058"
 ---
 # <a name="weakly-typed-json-serialization-sample"></a>약한형 JSON Serialization 샘플
 사용자 정의 형식을 지정된 통신 형식으로 serialize하거나 통신 형식을 사용자 정의 형식으로 다시 deserialize할 경우 서비스와 클라이언트 모두에서 지정된 사용자 정의 형식을 사용할 수 있어야 합니다. 보통 이렇게 하기 위해 이 사용자 정의 형식에 <xref:System.Runtime.Serialization.DataContractAttribute> 특성을 적용하고 해당 멤버에 <xref:System.Runtime.Serialization.DataMemberAttribute> 특성을 적용합니다. 이 메커니즘 경우에 개체 JSON (JavaScript Notation) 개체로 작업 하는 항목에 설명 된 대로 [방법: 직렬화 및 역직렬화 JSON 데이터](../../../../docs/framework/wcf/feature-details/how-to-serialize-and-deserialize-json-data.md)합니다.  
@@ -58,7 +58,7 @@ ms.locfileid: "58842670"
   
  이 과정이 부담이 될 수 있으며, 클라이언트에서 두 개 이상의 JSON 개체를 처리해야 하는 경우 특히 그렇습니다.  
   
- 이 샘플에서 제공하는 `JsonObject` 형식은 deserialize된 JSON 개체의 약한 형식의 표현을 소개합니다. `JsonObject` 는 JSON 개체와 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 사전 간의 자연 매핑 및 JSON 배열과 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 배열 간의 매핑에 의존합니다. 다음 코드에서는 `JsonObject` 형식을 보여 줍니다.  
+ 이 샘플에서 제공하는 `JsonObject` 형식은 deserialize된 JSON 개체의 약한 형식의 표현을 소개합니다. `JsonObject` JSON 개체 사이의 자연적인 매핑에 의존 하 고 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 사전 및 JSON 배열 간의 매핑 및 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 배열입니다. 다음 코드에서는 `JsonObject` 형식을 보여 줍니다.  
   
 ```  
 // Instantiation of JsonObject json omitted  
@@ -139,4 +139,3 @@ My favorite bands are Band ABC and Band XYZ.
 >  이 디렉터리가 없으면로 이동 [Windows Communication Foundation (WCF) 및.NET Framework 4 용 Windows WF (Workflow Foundation) 샘플](https://go.microsoft.com/fwlink/?LinkId=150780) 모든 Windows Communication Foundation (WCF)를 다운로드 하 고 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플. 이 샘플은 다음 디렉터리에 있습니다.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Scenario\Ajax\WeaklyTypedJson`  
-  

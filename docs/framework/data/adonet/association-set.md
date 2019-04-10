@@ -2,12 +2,12 @@
 title: 연결 집합(association set)
 ms.date: 03/30/2017
 ms.assetid: a65247b6-ce59-44ea-974c-14ae20a7995f
-ms.openlocfilehash: 2eaa4d3c70e0efbf9705b4285d1abd4753bd1db9
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: af9297d9c827b12ed8611e99930234511f7f661c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58411267"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59204486"
 ---
 # <a name="association-set"></a>연결 집합(association set)
 *연결 집합* 는 대 한 논리적 컨테이너 [연결](../../../../docs/framework/data/adonet/association-type.md) 동일한 형식의 인스턴스. 연결 집합은 데이터 모델링 구문이 아니므로 데이터 또는 관계의 구조를 설명하지 않습니다. 대신 연결 집합은 연결 인스턴스를 그룹화하여 데이터 저장소에 매핑할 수 있도록 호스팅 또는 저장소 환경(예: 공용 언어 런타임 또는 SQL Server 데이터베이스)에 대한 구문을 제공합니다.  
@@ -35,12 +35,12 @@ ms.locfileid: "58411267"
   
  [!code-xml[EDM_Example_Model#EntityContainerExample](../../../../samples/snippets/xml/VS_Snippets_Data/edm_example_model/xml/books.edmx#entitycontainerexample)]  
   
- 여러 연결당 연결 집합에 없는 두 개의 연결 집합 공유로 정의 하는 것이 불가능 한 [연결 집합 end](../../../../docs/framework/data/adonet/association-set-end.md)합니다. 다음 CSDL에서는 `WrittenBy` 연결에 대한 두 개의 연결 집합이 있는 엔터티 컨테이너를 정의합니다. 
-  `Book` 및 `Author` 엔터티 형식에 대해 엔터티 집합이 여러 개 정의되었으며 어떤 연결 집합도 연결 집합 End를 공유하지 않습니다.  
+ 여러 연결당 연결 집합에 없는 두 개의 연결 집합 공유로 정의 하는 것이 불가능 한 [연결 집합 end](../../../../docs/framework/data/adonet/association-set-end.md)합니다. 다음 CSDL에서는 `WrittenBy` 연결에 대한 두 개의 연결 집합이 있는 엔터티 컨테이너를 정의합니다. `Book` 및 `Author` 엔터티 형식에 대해 엔터티 집합이 여러 개 정의되었으며 어떤 연결 집합도 연결 집합 End를 공유하지 않습니다.  
   
  [!code-xml[EDM_Example_Model#MultipleAssociationSets](../../../../samples/snippets/xml/VS_Snippets_Data/edm_example_model/xml/books3.edmx#multipleassociationsets)]  
   
 ## <a name="see-also"></a>참고자료
+
 - [엔터티 데이터 모델의 주요 개념](../../../../docs/framework/data/adonet/entity-data-model-key-concepts.md)
 - [엔터티 데이터 모델](../../../../docs/framework/data/adonet/entity-data-model.md)
 - [외래 키 속성](../../../../docs/framework/data/adonet/foreign-key-property.md)

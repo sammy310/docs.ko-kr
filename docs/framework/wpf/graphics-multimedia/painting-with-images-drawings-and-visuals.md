@@ -12,17 +12,16 @@ helpviewer_keywords:
 - brushes [WPF], painting with images
 - brushes [WPF], painting with visuals
 ms.assetid: 779aac3f-8d41-49d8-8130-768244aa2240
-ms.openlocfilehash: bb66c34a847f78f7921ae925d0c3d0640c11aeec
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 826c5a0656a9a7e7cff0e96fc6755c5c9c717993
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57361327"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59204200"
 ---
 # <a name="painting-with-images-drawings-and-visuals"></a>이미지, 그림 및 시각적 표시로 그리기
 이 항목에서는 사용 하는 방법을 설명 <xref:System.Windows.Media.ImageBrush>, <xref:System.Windows.Media.DrawingBrush>, 및 <xref:System.Windows.Media.VisualBrush> 이미지를 사용 하 여 영역을 그릴 개체를 <xref:System.Windows.Media.Drawing>, 또는 <xref:System.Windows.Media.Visual>합니다.  
-    
-  
+
 <a name="prereqs"></a>   
 ## <a name="prerequisites"></a>전제 조건  
  이 항목을 이해하려면 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]에서 제공하는 다양한 형식의 브러시와 해당 기본 기능에 대해 잘 알고 있어야 합니다. 소개 내용을 보려면 [WPF 브러시 개요](wpf-brushes-overview.md)를 참조하세요.  
@@ -135,6 +134,7 @@ DrawingBrush로 그린 개체
  바둑판식 배열 기능에 대 한 자세한 내용은 <xref:System.Windows.Media.TileBrush> 개체를 참조 합니다 [TileBrush 개요](tilebrush-overview.md)합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Windows.Media.ImageBrush>
 - <xref:System.Windows.Media.DrawingBrush>
 - <xref:System.Windows.Media.VisualBrush>

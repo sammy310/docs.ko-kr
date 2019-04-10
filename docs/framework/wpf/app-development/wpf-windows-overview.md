@@ -28,20 +28,19 @@ helpviewer_keywords:
 - modal dialog boxes [WPF]
 - displaying XAML pages [WPF]
 ms.assetid: 737d04ec-8861-46c3-8d44-fa11d3528d23
-ms.openlocfilehash: ab9b36857e2508190a212844f3c6b53d777c0552
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: MT
+ms.openlocfilehash: c3bd76c893c2055f94e321e9c888848d344efa15
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58466220"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59166935"
 ---
 # <a name="wpf-windows-overview"></a>WPF 창 개요
 Windows 통해 Windows Presentation Foundation (WPF) 독립 실행형 응용 프로그램을 사용 하 여 사용자 상호 작용 합니다. 창의 기본 용도는 데이터를 시각화하는 콘텐츠를 호스트하고 사용자가 데이터와 상호 작용할 수 있도록 하는 것입니다. 독립 실행형 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 응용 프로그램을 사용 하 여 자체 창을 제공 합니다 <xref:System.Windows.Window> 클래스입니다. 이 항목에서는 소개 <xref:System.Windows.Window> 만들고 독립 실행형 응용 프로그램의 창 관리의 기본적인 내용을 다루기 전에 합니다.  
   
 > [!NOTE]
 >  브라우저에서 호스팅된 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 응용 프로그램을 만들 [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)] 및 느슨한 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] 페이지 자체 창을 제공 하지 않습니다. 제공 하는 windows에서 호스트 되는 대신 [!INCLUDE[TLA#tla_iegeneric](../../../../includes/tlasharptla-iegeneric-md.md)]합니다. 참조 [WPF XAML 브라우저 응용 프로그램 개요](wpf-xaml-browser-applications-overview.md)합니다.  
-  
-  
+
 <a name="TheWindowClass"></a>   
 ## <a name="the-window-class"></a>Window 클래스  
  다음 그림에서는 창에 구성 하는 부분을 보여 줍니다.  
@@ -109,9 +108,9 @@ Windows 통해 Windows Presentation Foundation (WPF) 독립 실행형 응용 프
 ## <a name="configuring-a-window-definition-for-msbuild"></a>MSBuild에 대해 창 정의 구성  
  창을 구현 하는 방법에 대 한 구성 하는 방법 결정 [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)]합니다. 모두 사용 하 여 정의 된 창에 대 한 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 태그와 코드 숨김을:  
   
--   [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 마크업 파일으로 구성 됩니다 [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] `Page` 항목입니다.  
+-   [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 마크업 파일으로 구성 된 [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)]`Page` 항목입니다.  
   
--   코드 숨김 파일으로 구성 됩니다 [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] `Compile` 항목입니다.  
+-   코드 숨김 파일으로 구성 된 [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)]`Compile` 항목입니다.  
   
  다음 그림은이 [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] 프로젝트 파일입니다.  
   
@@ -130,8 +129,7 @@ Windows 통해 Windows Presentation Foundation (WPF) 독립 실행형 응용 프
 <a name="WindowLifetime"></a>   
 ## <a name="window-lifetime"></a>창 수명  
  다른 클래스와 마찬가지로 창에는 창이 열린 후 처음 인스턴스화될 때 시작하여, 열린 후 활성화 및 비활성화되고 최종적으로 닫힐 때까지의 기간인 수명이 있습니다.  
-  
-  
+
 <a name="Opening_a_Window"></a>   
 ### <a name="opening-a-window"></a>창 열기  
  창을 열려면 먼저 다음 예제에서 설명하는 것처럼 창의 인스턴스를 만듭니다.  
@@ -258,9 +256,8 @@ Windows 통해 Windows Presentation Foundation (WPF) 독립 실행형 응용 프
   
  [!code-csharp[WindowClosingSnippets](~/samples/snippets/csharp/VS_Snippets_Wpf/WindowClosingSnippets/CSharp/DataWindow.xaml.cs)]
  [!code-vb[WindowClosingSnippets](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WindowClosingSnippets/visualbasic/datawindow.xaml.vb)]  
- 
-  
- <xref:System.Windows.Window.Closing> 이벤트 처리기에 전달 됩니다는 <xref:System.ComponentModel.CancelEventArgs>를 구현 하는 합니다 `Boolean` <xref:System.ComponentModel.CancelEventArgs.Cancel%2A> 속성을 설정 하는 `true` 창 닫기를 방지 하기 위해.  
+
+ <xref:System.Windows.Window.Closing> 이벤트 처리기에 전달 됩니다는 <xref:System.ComponentModel.CancelEventArgs>를 구현 하는 합니다 `Boolean`<xref:System.ComponentModel.CancelEventArgs.Cancel%2A> 속성을 설정 하는 `true` 창 닫기를 방지 하기 위해.  
   
  경우 <xref:System.Windows.Window.Closing> 처리 되지 않은 또는 처리는 되었지만 취소 되지 않은, 창이 닫힙니다. 창이 실제로 닫히기 직전 <xref:System.Windows.Window.Closed> 발생 합니다. 이 시점에서는 창 닫기를 방지할 수 없습니다.  
   
@@ -275,7 +272,7 @@ Windows 통해 Windows Presentation Foundation (WPF) 독립 실행형 응용 프
   
 -   기본 응용 프로그램 창이 닫혀 있는 및 <xref:System.Windows.Application.ShutdownMode%2A> 는 <xref:System.Windows.ShutdownMode.OnMainWindowClose>합니다.  
   
--   <xref:System.Windows.Application.Shutdown%2A>가 호출된 경우  
+-   <xref:System.Windows.Application.Shutdown%2A> 가 호출 됩니다.  
   
 > [!NOTE]
 >  창을 닫은 뒤에는 다시 열 수 없습니다.  
@@ -296,7 +293,7 @@ Windows 통해 Windows Presentation Foundation (WPF) 독립 실행형 응용 프
   
  초기 위치를 지정할 수도 있습니다는 <xref:System.Windows.Window> 먼저 표시 되 면 설정 하 여 합니다 <xref:System.Windows.Window.WindowStartupLocation%2A> 속성을 다음 중 하나로 <xref:System.Windows.WindowStartupLocation> 열거형 값:  
   
--   <xref:System.Windows.WindowStartupLocation.CenterOwner>(기본값)  
+-   <xref:System.Windows.WindowStartupLocation.CenterOwner> (기본값)  
   
 -   <xref:System.Windows.WindowStartupLocation.CenterScreen>  
   
@@ -384,7 +381,7 @@ Windows 통해 Windows Presentation Foundation (WPF) 독립 실행형 응용 프
   
  창의 상태를 설정 하 여 구성할 수 있습니다 해당 <xref:System.Windows.Window.WindowState%2A> 속성을 다음 중 하나를 가질 수 있는 <xref:System.Windows.WindowState> 열거형 값:  
   
--   <xref:System.Windows.WindowState.Normal>(기본값)  
+-   <xref:System.Windows.WindowState.Normal> (기본값)  
   
 -   <xref:System.Windows.WindowState.Maximized>  
   
@@ -401,8 +398,7 @@ Windows 통해 Windows Presentation Foundation (WPF) 독립 실행형 응용 프
  단추, 레이블 및 텍스트 상자와 같은 창 특정 콘텐츠를 창에 추가하여 창의 클라이언트 영역의 모양을 변경할 수 있습니다. 비클라이언트 영역을 구성 하려면 <xref:System.Windows.Window> 비롯 한 여러 속성을 제공 <xref:System.Windows.Window.Icon%2A> 창의 아이콘을 설정 하 고 <xref:System.Windows.Window.Title%2A> 제목을 설정 하 합니다.  
   
  또한 창의 크기 조정 모드, 창 스타일 및 바탕 화면 작업 표시줄에 단추로 표시될 것인지 여부를 구성하여 비클라이언트 영역 테두리의 모양과 동작을 변경할 수도 있습니다.  
-  
-  
+
 <a name="Resize_Mode"></a>   
 ### <a name="resize-mode"></a>크기 조정 모드  
  에 따라는 <xref:System.Windows.Window.WindowStyle%2A> 제어할 수 있습니다. 속성을 하는 방법 (및 여부) 사용자가 창의 크기를 조정할 수 있습니다. 선택한 창 스타일 사용자 여부 마우스로 테두리를 끌어 창의 조정할 수 있는지 여부를 영향을 줍니다 합니다 **최소화**를 **최대화**, 및 **크기를 조정** 단추 비클라이언트 영역에 표시 및 나타나는 경우, 사용할 수 있는지 여부입니다.  
@@ -413,7 +409,7 @@ Windows 통해 Windows Presentation Foundation (WPF) 독립 실행형 응용 프
   
 -   <xref:System.Windows.ResizeMode.CanMinimize>  
   
--   <xref:System.Windows.ResizeMode.CanResize>(기본값)  
+-   <xref:System.Windows.ResizeMode.CanResize> (기본값)  
   
 -   <xref:System.Windows.ResizeMode.CanResizeWithGrip>  
   
@@ -431,7 +427,7 @@ Windows 통해 Windows Presentation Foundation (WPF) 독립 실행형 응용 프
   
 -   <xref:System.Windows.WindowStyle.None>  
   
--   <xref:System.Windows.WindowStyle.SingleBorderWindow>(기본값)  
+-   <xref:System.Windows.WindowStyle.SingleBorderWindow> (기본값)  
   
 -   <xref:System.Windows.WindowStyle.ThreeDBorderWindow>  
   
@@ -484,9 +480,10 @@ Windows 통해 Windows Presentation Foundation (WPF) 독립 실행형 응용 프
  대화 상자는 기능 수행을 위해 사용자로부터 정보를 수집할 때 많이 사용됩니다. 예를 들어 사용자 하려고 할 때 파일을 열도록 합니다 **파일 열기** 대화 상자가 사용자 로부터 파일 이름을 가져오려면 응용 프로그램에서 일반적으로 표시 됩니다. 자세한 내용은 [대화 상자 개요](dialog-boxes-overview.md)를 참조하세요.  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Windows.Window>
 - <xref:System.Windows.MessageBox>
 - <xref:System.Windows.Navigation.NavigationWindow>
 - <xref:System.Windows.Application>
 - [대화 상자 개요](dialog-boxes-overview.md)
-- [WPF 응용 프로그램 빌드](building-a-wpf-application-wpf.md)
+- [WPF 애플리케이션 빌드](building-a-wpf-application-wpf.md)
