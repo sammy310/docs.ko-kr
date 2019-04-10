@@ -7,33 +7,34 @@ dev_langs:
 helpviewer_keywords:
 - PrintSystemObject [WPF], getting properties
 ms.assetid: 43560f28-183d-41c1-b9d1-de7c2552273e
-ms.openlocfilehash: b03be30422a93980ecdbcdbd428600fd41abd824
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: MT
+ms.openlocfilehash: b9ca7444b2c49f4563ff0d7baef8b2d250a7f331
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57367585"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59215276"
 ---
-# <a name="how-to-get-print-system-object-properties-without-reflection"></a><span data-ttu-id="c79fb-102">방법: 리플렉션을 사용하지 않고 인쇄 시스템 개체 속성 가져오기</span><span class="sxs-lookup"><span data-stu-id="c79fb-102">How to: Get Print System Object Properties Without Reflection</span></span>
-<span data-ttu-id="c79fb-103">개체의 속성 (및 해당 속성의 형식)를 항목별로 정리 하는 데 리플렉션을 사용 하면 응용 프로그램 성능이 느려질 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="c79fb-103">Using reflection to itemize the properties (and the types of those properties) on an object can slow application performance.</span></span> <span data-ttu-id="c79fb-104"><xref:System.Printing.IndexedProperties> 네임 스페이스는 리플렉션을 사용 하 여이 정보를 가져올 수 있는 방법을 제공 합니다.</span><span class="sxs-lookup"><span data-stu-id="c79fb-104">The <xref:System.Printing.IndexedProperties> namespace provides a means to getting this information with using reflection.</span></span>  
+# <a name="how-to-get-print-system-object-properties-without-reflection"></a><span data-ttu-id="f7274-102">방법: 리플렉션을 사용하지 않고 인쇄 시스템 개체 속성 가져오기</span><span class="sxs-lookup"><span data-stu-id="f7274-102">How to: Get Print System Object Properties Without Reflection</span></span>
+<span data-ttu-id="f7274-103">개체의 속성 (및 해당 속성의 형식)를 항목별로 정리 하는 데 리플렉션을 사용 하면 응용 프로그램 성능이 느려질 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="f7274-103">Using reflection to itemize the properties (and the types of those properties) on an object can slow application performance.</span></span> <span data-ttu-id="f7274-104"><xref:System.Printing.IndexedProperties> 네임 스페이스는 리플렉션을 사용 하 여이 정보를 가져올 수 있는 방법을 제공 합니다.</span><span class="sxs-lookup"><span data-stu-id="f7274-104">The <xref:System.Printing.IndexedProperties> namespace provides a means to getting this information with using reflection.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="c79fb-105">예제</span><span class="sxs-lookup"><span data-stu-id="c79fb-105">Example</span></span>  
- <span data-ttu-id="c79fb-106">이 작업을 수행 하는 단계는 다음과 같습니다.</span><span class="sxs-lookup"><span data-stu-id="c79fb-106">The steps for doing this are as follows.</span></span>  
+## <a name="example"></a><span data-ttu-id="f7274-105">예제</span><span class="sxs-lookup"><span data-stu-id="f7274-105">Example</span></span>  
+ <span data-ttu-id="f7274-106">이 작업을 수행 하는 단계는 다음과 같습니다.</span><span class="sxs-lookup"><span data-stu-id="f7274-106">The steps for doing this are as follows.</span></span>  
   
-1.  <span data-ttu-id="c79fb-107">형식의 인스턴스를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="c79fb-107">Create an instance of the type.</span></span> <span data-ttu-id="c79fb-108">형식은 아래 예에는 <xref:System.Printing.PrintQueue> Microsoft.NET Framework 하지만 거의 동일한 코드와 함께 제공 되는 형식에서 파생 된 형식에 대해 작동 합니다 <xref:System.Printing.PrintSystemObject>합니다.</span><span class="sxs-lookup"><span data-stu-id="c79fb-108">In the example below, the type is the <xref:System.Printing.PrintQueue> type that ships with Microsoft .NET Framework, but nearly identical code should work for types that you derive from <xref:System.Printing.PrintSystemObject>.</span></span>  
+1.  <span data-ttu-id="f7274-107">형식의 인스턴스를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="f7274-107">Create an instance of the type.</span></span> <span data-ttu-id="f7274-108">형식은 아래 예에는 <xref:System.Printing.PrintQueue> Microsoft.NET Framework 하지만 거의 동일한 코드와 함께 제공 되는 형식에서 파생 된 형식에 대해 작동 합니다 <xref:System.Printing.PrintSystemObject>합니다.</span><span class="sxs-lookup"><span data-stu-id="f7274-108">In the example below, the type is the <xref:System.Printing.PrintQueue> type that ships with Microsoft .NET Framework, but nearly identical code should work for types that you derive from <xref:System.Printing.PrintSystemObject>.</span></span>  
   
-2.  <span data-ttu-id="c79fb-109">만들기는 <xref:System.Printing.IndexedProperties.PrintPropertyDictionary> 형식에서 <xref:System.Printing.PrintSystemObject.PropertiesCollection%2A>합니다.</span><span class="sxs-lookup"><span data-stu-id="c79fb-109">Create a <xref:System.Printing.IndexedProperties.PrintPropertyDictionary> from the type's <xref:System.Printing.PrintSystemObject.PropertiesCollection%2A>.</span></span> <span data-ttu-id="c79fb-110">합니다 <xref:System.Collections.DictionaryEntry.Value%2A> 이 사전의 각 항목의 속성에서 파생 된 형식의 개체인 <xref:System.Printing.IndexedProperties.PrintProperty>합니다.</span><span class="sxs-lookup"><span data-stu-id="c79fb-110">The <xref:System.Collections.DictionaryEntry.Value%2A> property of each entry in this dictionary is an object of one of the types derived from <xref:System.Printing.IndexedProperties.PrintProperty>.</span></span>  
+2.  <span data-ttu-id="f7274-109">만들기는 <xref:System.Printing.IndexedProperties.PrintPropertyDictionary> 형식에서 <xref:System.Printing.PrintSystemObject.PropertiesCollection%2A>합니다.</span><span class="sxs-lookup"><span data-stu-id="f7274-109">Create a <xref:System.Printing.IndexedProperties.PrintPropertyDictionary> from the type's <xref:System.Printing.PrintSystemObject.PropertiesCollection%2A>.</span></span> <span data-ttu-id="f7274-110">합니다 <xref:System.Collections.DictionaryEntry.Value%2A> 이 사전의 각 항목의 속성에서 파생 된 형식의 개체인 <xref:System.Printing.IndexedProperties.PrintProperty>합니다.</span><span class="sxs-lookup"><span data-stu-id="f7274-110">The <xref:System.Collections.DictionaryEntry.Value%2A> property of each entry in this dictionary is an object of one of the types derived from <xref:System.Printing.IndexedProperties.PrintProperty>.</span></span>  
   
-3.  <span data-ttu-id="c79fb-111">사전 멤버를 열거 합니다.</span><span class="sxs-lookup"><span data-stu-id="c79fb-111">Enumerate the members of the dictionary.</span></span> <span data-ttu-id="c79fb-112">각각에 대해 다음을 수행 합니다.</span><span class="sxs-lookup"><span data-stu-id="c79fb-112">For each of them, do the following.</span></span>  
+3.  <span data-ttu-id="f7274-111">사전 멤버를 열거 합니다.</span><span class="sxs-lookup"><span data-stu-id="f7274-111">Enumerate the members of the dictionary.</span></span> <span data-ttu-id="f7274-112">각각에 대해 다음을 수행 합니다.</span><span class="sxs-lookup"><span data-stu-id="f7274-112">For each of them, do the following.</span></span>  
   
-4.  <span data-ttu-id="c79fb-113">위로 캐스팅 하려면 각 항목의 값이 <xref:System.Printing.IndexedProperties.PrintProperty> 만드는 데 사용 하 고는 <xref:System.Printing.IndexedProperties.PrintProperty> 개체입니다.</span><span class="sxs-lookup"><span data-stu-id="c79fb-113">Up-cast the value of each entry to <xref:System.Printing.IndexedProperties.PrintProperty> and use it to create a <xref:System.Printing.IndexedProperties.PrintProperty> object.</span></span>  
+4.  <span data-ttu-id="f7274-113">위로 캐스팅 하려면 각 항목의 값이 <xref:System.Printing.IndexedProperties.PrintProperty> 만드는 데 사용 하 고는 <xref:System.Printing.IndexedProperties.PrintProperty> 개체입니다.</span><span class="sxs-lookup"><span data-stu-id="f7274-113">Up-cast the value of each entry to <xref:System.Printing.IndexedProperties.PrintProperty> and use it to create a <xref:System.Printing.IndexedProperties.PrintProperty> object.</span></span>  
   
-5.  <span data-ttu-id="c79fb-114">형식을 가져오는 합니다 <xref:System.Printing.IndexedProperties.PrintProperty.Value%2A> 각를 <xref:System.Printing.IndexedProperties.PrintProperty> 개체입니다.</span><span class="sxs-lookup"><span data-stu-id="c79fb-114">Get the type of the <xref:System.Printing.IndexedProperties.PrintProperty.Value%2A> of each of the <xref:System.Printing.IndexedProperties.PrintProperty> object.</span></span>  
+5.  <span data-ttu-id="f7274-114">형식을 가져오는 합니다 <xref:System.Printing.IndexedProperties.PrintProperty.Value%2A> 각를 <xref:System.Printing.IndexedProperties.PrintProperty> 개체입니다.</span><span class="sxs-lookup"><span data-stu-id="f7274-114">Get the type of the <xref:System.Printing.IndexedProperties.PrintProperty.Value%2A> of each of the <xref:System.Printing.IndexedProperties.PrintProperty> object.</span></span>  
   
  [!code-csharp[GetPrintObjectPropertyTypesWithoutReflection#ShowPropertyTypesWithoutReflection](~/samples/snippets/csharp/VS_Snippets_Wpf/GetPrintObjectPropertyTypesWithoutReflection/CSharp/Program.cs#showpropertytypeswithoutreflection)]
  [!code-vb[GetPrintObjectPropertyTypesWithoutReflection#ShowPropertyTypesWithoutReflection](~/samples/snippets/visualbasic/VS_Snippets_Wpf/GetPrintObjectPropertyTypesWithoutReflection/visualbasic/program.vb#showpropertytypeswithoutreflection)]  
   
-## <a name="see-also"></a><span data-ttu-id="c79fb-115">참고자료</span><span class="sxs-lookup"><span data-stu-id="c79fb-115">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="f7274-115">참고자료</span><span class="sxs-lookup"><span data-stu-id="f7274-115">See also</span></span>
+
 - <xref:System.Printing.IndexedProperties.PrintProperty>
 - <xref:System.Printing.PrintSystemObject>
 - <xref:System.Printing.IndexedProperties>
@@ -41,5 +42,5 @@ ms.locfileid: "57367585"
 - <xref:System.Printing.LocalPrintServer>
 - <xref:System.Printing.PrintQueue>
 - <xref:System.Collections.DictionaryEntry>
-- [<span data-ttu-id="c79fb-116">WPF의 문서</span><span class="sxs-lookup"><span data-stu-id="c79fb-116">Documents in WPF</span></span>](documents-in-wpf.md)
-- [<span data-ttu-id="c79fb-117">인쇄 개요</span><span class="sxs-lookup"><span data-stu-id="c79fb-117">Printing Overview</span></span>](printing-overview.md)
+- [<span data-ttu-id="f7274-116">WPF의 문서</span><span class="sxs-lookup"><span data-stu-id="f7274-116">Documents in WPF</span></span>](documents-in-wpf.md)
+- [<span data-ttu-id="f7274-117">인쇄 개요</span><span class="sxs-lookup"><span data-stu-id="f7274-117">Printing Overview</span></span>](printing-overview.md)

@@ -1,5 +1,5 @@
 ---
-title: bypasslist의 <clear> 요소(네트워크 설정)
+title: <clear> Bypasslist (네트워크 설정)에 대 한 요소
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/defaultProxy/bypasslist/clear
@@ -10,51 +10,51 @@ helpviewer_keywords:
 - <bypasslist>, clear element
 - bypasslist, clear element
 ms.assetid: 301584ca-a914-4100-b180-3b288d3b099e
-ms.openlocfilehash: b3a1d8a0801168283f83160242c4e9d7e151f847
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 7499d15f1d57887ffc3e78b83ed686c0c0f46cf4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55276343"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59203524"
 ---
-# <a name="clear-element-for-bypasslist-network-settings"></a><span data-ttu-id="ed133-102">\<지우기 > bypasslist (네트워크 설정)에 대 한 요소</span><span class="sxs-lookup"><span data-stu-id="ed133-102">\<clear> Element for bypasslist (Network Settings)</span></span>
-<span data-ttu-id="ed133-103">프록시 무시 목록을 지웁니다.</span><span class="sxs-lookup"><span data-stu-id="ed133-103">Clears the proxy bypass list.</span></span>  
+# <a name="clear-element-for-bypasslist-network-settings"></a><span data-ttu-id="8c9d8-102">\<지우기 > bypasslist (네트워크 설정)에 대 한 요소</span><span class="sxs-lookup"><span data-stu-id="8c9d8-102">\<clear> Element for bypasslist (Network Settings)</span></span>
+<span data-ttu-id="8c9d8-103">프록시 무시 목록을 지웁니다.</span><span class="sxs-lookup"><span data-stu-id="8c9d8-103">Clears the proxy bypass list.</span></span>  
   
- <span data-ttu-id="ed133-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="ed133-104">\<configuration></span></span>  
-<span data-ttu-id="ed133-105">\<system.net></span><span class="sxs-lookup"><span data-stu-id="ed133-105">\<system.net></span></span>  
-<span data-ttu-id="ed133-106">\<defaultProxy></span><span class="sxs-lookup"><span data-stu-id="ed133-106">\<defaultProxy></span></span>  
-<span data-ttu-id="ed133-107">\<bypasslist></span><span class="sxs-lookup"><span data-stu-id="ed133-107">\<bypasslist></span></span>  
-<span data-ttu-id="ed133-108">\<clear></span><span class="sxs-lookup"><span data-stu-id="ed133-108">\<clear></span></span>  
+ <span data-ttu-id="8c9d8-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="8c9d8-104">\<configuration></span></span>  
+<span data-ttu-id="8c9d8-105">\<system.net></span><span class="sxs-lookup"><span data-stu-id="8c9d8-105">\<system.net></span></span>  
+<span data-ttu-id="8c9d8-106">\<defaultProxy></span><span class="sxs-lookup"><span data-stu-id="8c9d8-106">\<defaultProxy></span></span>  
+<span data-ttu-id="8c9d8-107">\<bypasslist></span><span class="sxs-lookup"><span data-stu-id="8c9d8-107">\<bypasslist></span></span>  
+<span data-ttu-id="8c9d8-108">\<clear></span><span class="sxs-lookup"><span data-stu-id="8c9d8-108">\<clear></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="ed133-109">구문</span><span class="sxs-lookup"><span data-stu-id="ed133-109">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="8c9d8-109">구문</span><span class="sxs-lookup"><span data-stu-id="8c9d8-109">Syntax</span></span>  
   
 ```xml  
 <clear/>  
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="ed133-110">특성 및 요소</span><span class="sxs-lookup"><span data-stu-id="ed133-110">Attributes and Elements</span></span>  
- <span data-ttu-id="ed133-111">다음 섹션에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="ed133-111">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="8c9d8-110">특성 및 요소</span><span class="sxs-lookup"><span data-stu-id="8c9d8-110">Attributes and Elements</span></span>  
+ <span data-ttu-id="8c9d8-111">다음 섹션에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="8c9d8-111">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="ed133-112">특성</span><span class="sxs-lookup"><span data-stu-id="ed133-112">Attributes</span></span>  
- <span data-ttu-id="ed133-113">없음</span><span class="sxs-lookup"><span data-stu-id="ed133-113">None.</span></span>  
+### <a name="attributes"></a><span data-ttu-id="8c9d8-112">특성</span><span class="sxs-lookup"><span data-stu-id="8c9d8-112">Attributes</span></span>  
+ <span data-ttu-id="8c9d8-113">없음</span><span class="sxs-lookup"><span data-stu-id="8c9d8-113">None.</span></span>  
   
-### <a name="child-elements"></a><span data-ttu-id="ed133-114">자식 요소</span><span class="sxs-lookup"><span data-stu-id="ed133-114">Child Elements</span></span>  
- <span data-ttu-id="ed133-115">없음</span><span class="sxs-lookup"><span data-stu-id="ed133-115">None.</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="8c9d8-114">자식 요소</span><span class="sxs-lookup"><span data-stu-id="8c9d8-114">Child Elements</span></span>  
+ <span data-ttu-id="8c9d8-115">없음</span><span class="sxs-lookup"><span data-stu-id="8c9d8-115">None.</span></span>  
   
-### <a name="parent-elements"></a><span data-ttu-id="ed133-116">부모 요소</span><span class="sxs-lookup"><span data-stu-id="ed133-116">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="8c9d8-116">부모 요소</span><span class="sxs-lookup"><span data-stu-id="8c9d8-116">Parent Elements</span></span>  
   
-|<span data-ttu-id="ed133-117">**요소**</span><span class="sxs-lookup"><span data-stu-id="ed133-117">**Element**</span></span>|<span data-ttu-id="ed133-118">**설명**</span><span class="sxs-lookup"><span data-stu-id="ed133-118">**Description**</span></span>|  
+|**<span data-ttu-id="8c9d8-117">요소</span><span class="sxs-lookup"><span data-stu-id="8c9d8-117">Element</span></span>**|**<span data-ttu-id="8c9d8-118">설명</span><span class="sxs-lookup"><span data-stu-id="8c9d8-118">Description</span></span>**|  
 |-----------------|---------------------|  
-|[<span data-ttu-id="ed133-119">bypasslist</span><span class="sxs-lookup"><span data-stu-id="ed133-119">bypasslist</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/bypasslist-element-network-settings.md)|<span data-ttu-id="ed133-120">프록시를 사용 하지 않는 주소를 설명 하는 정규식 집합을 제공 합니다.</span><span class="sxs-lookup"><span data-stu-id="ed133-120">Provides a set of regular expressions that describe addresses that do not use a proxy.</span></span>|  
+|[<span data-ttu-id="8c9d8-119">bypasslist</span><span class="sxs-lookup"><span data-stu-id="8c9d8-119">bypasslist</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/bypasslist-element-network-settings.md)|<span data-ttu-id="8c9d8-120">프록시를 사용 하지 않는 주소를 설명 하는 정규식 집합을 제공 합니다.</span><span class="sxs-lookup"><span data-stu-id="8c9d8-120">Provides a set of regular expressions that describe addresses that do not use a proxy.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="ed133-121">설명</span><span class="sxs-lookup"><span data-stu-id="ed133-121">Remarks</span></span>  
- <span data-ttu-id="ed133-122">`clear` 요소 무시 목록에서 모든 항목을 제거 합니다.</span><span class="sxs-lookup"><span data-stu-id="ed133-122">The `clear` element clears all entries from the bypass list.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="8c9d8-121">설명</span><span class="sxs-lookup"><span data-stu-id="8c9d8-121">Remarks</span></span>  
+ <span data-ttu-id="8c9d8-122">`clear` 요소 무시 목록에서 모든 항목을 제거 합니다.</span><span class="sxs-lookup"><span data-stu-id="8c9d8-122">The `clear` element clears all entries from the bypass list.</span></span>  
   
-## <a name="configuration-files"></a><span data-ttu-id="ed133-123">구성 파일</span><span class="sxs-lookup"><span data-stu-id="ed133-123">Configuration Files</span></span>  
- <span data-ttu-id="ed133-124">이 요소는 응용 프로그램 구성 파일 또는 컴퓨터 구성 파일(Machine.config)에서 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="ed133-124">This element can be used in the application configuration file or the machine configuration file (Machine.config).</span></span>  
+## <a name="configuration-files"></a><span data-ttu-id="8c9d8-123">구성 파일</span><span class="sxs-lookup"><span data-stu-id="8c9d8-123">Configuration Files</span></span>  
+ <span data-ttu-id="8c9d8-124">이 요소는 응용 프로그램 구성 파일 또는 컴퓨터 구성 파일(Machine.config)에서 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="8c9d8-124">This element can be used in the application configuration file or the machine configuration file (Machine.config).</span></span>  
   
-## <a name="example"></a><span data-ttu-id="ed133-125">예제</span><span class="sxs-lookup"><span data-stu-id="ed133-125">Example</span></span>  
- <span data-ttu-id="ed133-126">다음 예제에서는 바이패스 목록에는 지우고 바이패스 목록에 두 개의 주소를 추가 합니다.</span><span class="sxs-lookup"><span data-stu-id="ed133-126">The following example clears the bypass list and then adds two addresses to the bypass list.</span></span> <span data-ttu-id="ed133-127">첫 번째는 contoso.com 도메인의 모든 서버에 대 한 프록시를 무시합니다. 두 번째 192.168 사용 하 여 IP 주소가 시작 되는 모든 서버에 대 한 프록시를 무시 합니다.</span><span class="sxs-lookup"><span data-stu-id="ed133-127">The first bypasses the proxy for all servers in the contoso.com domain; the second bypasses the proxy for all servers whose IP address begins with 192.168.</span></span>  
+## <a name="example"></a><span data-ttu-id="8c9d8-125">예제</span><span class="sxs-lookup"><span data-stu-id="8c9d8-125">Example</span></span>  
+ <span data-ttu-id="8c9d8-126">다음 예제에서는 바이패스 목록에는 지우고 바이패스 목록에 두 개의 주소를 추가 합니다.</span><span class="sxs-lookup"><span data-stu-id="8c9d8-126">The following example clears the bypass list and then adds two addresses to the bypass list.</span></span> <span data-ttu-id="8c9d8-127">첫 번째는 contoso.com 도메인의 모든 서버에 대 한 프록시를 무시합니다. 두 번째 192.168 사용 하 여 IP 주소가 시작 되는 모든 서버에 대 한 프록시를 무시 합니다.</span><span class="sxs-lookup"><span data-stu-id="8c9d8-127">The first bypasses the proxy for all servers in the contoso.com domain; the second bypasses the proxy for all servers whose IP address begins with 192.168.</span></span>  
   
 ```xml  
 <configuration>  
@@ -70,6 +70,7 @@ ms.locfileid: "55276343"
 </configuration>   
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="ed133-128">참고자료</span><span class="sxs-lookup"><span data-stu-id="ed133-128">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="8c9d8-128">참고자료</span><span class="sxs-lookup"><span data-stu-id="8c9d8-128">See also</span></span>
+
 - <xref:System.Net.WebProxy?displayProperty=nameWithType>
-- [<span data-ttu-id="ed133-129">네트워크 설정 스키마</span><span class="sxs-lookup"><span data-stu-id="ed133-129">Network Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+- [<span data-ttu-id="8c9d8-129">네트워크 설정 스키마</span><span class="sxs-lookup"><span data-stu-id="8c9d8-129">Network Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

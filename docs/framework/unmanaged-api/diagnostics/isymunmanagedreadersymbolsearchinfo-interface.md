@@ -16,25 +16,26 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4a6eb99de44c2d3f1afe6dda2d6ec895ec57c617
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2a872774b1c4510c8d0325c59ae7678c867c1aff
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54635005"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59216810"
 ---
-# <a name="isymunmanagedreadersymbolsearchinfo-interface"></a><span data-ttu-id="fa254-102">ISymUnmanagedReaderSymbolSearchInfo 인터페이스</span><span class="sxs-lookup"><span data-stu-id="fa254-102">ISymUnmanagedReaderSymbolSearchInfo Interface</span></span>
-<span data-ttu-id="fa254-103">기호 검색 정보를 가져오는 메서드를 제공 합니다.</span><span class="sxs-lookup"><span data-stu-id="fa254-103">Provides methods that get symbol search information.</span></span> <span data-ttu-id="fa254-104">호출 하 여이 인터페이스를 가져올 `QueryInterface` 구현 하는 개체에는 [ISymUnmanagedReader](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md) 인터페이스입니다.</span><span class="sxs-lookup"><span data-stu-id="fa254-104">Obtain this interface by calling `QueryInterface` on an object that implements the [ISymUnmanagedReader](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md) interface.</span></span>  
+# <a name="isymunmanagedreadersymbolsearchinfo-interface"></a><span data-ttu-id="38b4c-102">ISymUnmanagedReaderSymbolSearchInfo 인터페이스</span><span class="sxs-lookup"><span data-stu-id="38b4c-102">ISymUnmanagedReaderSymbolSearchInfo Interface</span></span>
+<span data-ttu-id="38b4c-103">기호 검색 정보를 가져오는 메서드를 제공 합니다.</span><span class="sxs-lookup"><span data-stu-id="38b4c-103">Provides methods that get symbol search information.</span></span> <span data-ttu-id="38b4c-104">호출 하 여이 인터페이스를 가져올 `QueryInterface` 구현 하는 개체에는 [ISymUnmanagedReader](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md) 인터페이스입니다.</span><span class="sxs-lookup"><span data-stu-id="38b4c-104">Obtain this interface by calling `QueryInterface` on an object that implements the [ISymUnmanagedReader](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md) interface.</span></span>  
   
-## <a name="methods"></a><span data-ttu-id="fa254-105">메서드</span><span class="sxs-lookup"><span data-stu-id="fa254-105">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="38b4c-105">메서드</span><span class="sxs-lookup"><span data-stu-id="38b4c-105">Methods</span></span>  
   
-|<span data-ttu-id="fa254-106">메서드</span><span class="sxs-lookup"><span data-stu-id="fa254-106">Method</span></span>|<span data-ttu-id="fa254-107">설명</span><span class="sxs-lookup"><span data-stu-id="fa254-107">Description</span></span>|  
+|<span data-ttu-id="38b4c-106">메서드</span><span class="sxs-lookup"><span data-stu-id="38b4c-106">Method</span></span>|<span data-ttu-id="38b4c-107">설명</span><span class="sxs-lookup"><span data-stu-id="38b4c-107">Description</span></span>|  
 |------------|-----------------|  
-|[<span data-ttu-id="fa254-108">GetSymbolSearchInfo 메서드</span><span class="sxs-lookup"><span data-stu-id="fa254-108">GetSymbolSearchInfo Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreadersymbolsearchinfo-getsymbolsearchinfo-method.md)|<span data-ttu-id="fa254-109">기호 검색 정보를 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="fa254-109">Gets symbol search information.</span></span>|  
-|[<span data-ttu-id="fa254-110">GetSymbolSearchInfoCount 메서드</span><span class="sxs-lookup"><span data-stu-id="fa254-110">GetSymbolSearchInfoCount Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreadersymbolsearchinfo-getsymbolsearchinfocount-method.md)|<span data-ttu-id="fa254-111">정보를 검색 하는 기호 수를 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="fa254-111">Gets a count of symbol search information.</span></span>|  
+|[<span data-ttu-id="38b4c-108">GetSymbolSearchInfo 메서드</span><span class="sxs-lookup"><span data-stu-id="38b4c-108">GetSymbolSearchInfo Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreadersymbolsearchinfo-getsymbolsearchinfo-method.md)|<span data-ttu-id="38b4c-109">기호 검색 정보를 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="38b4c-109">Gets symbol search information.</span></span>|  
+|[<span data-ttu-id="38b4c-110">GetSymbolSearchInfoCount 메서드</span><span class="sxs-lookup"><span data-stu-id="38b4c-110">GetSymbolSearchInfoCount Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreadersymbolsearchinfo-getsymbolsearchinfocount-method.md)|<span data-ttu-id="38b4c-111">정보를 검색 하는 기호 수를 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="38b4c-111">Gets a count of symbol search information.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="fa254-112">요구 사항</span><span class="sxs-lookup"><span data-stu-id="fa254-112">Requirements</span></span>  
- <span data-ttu-id="fa254-113">**헤더:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="fa254-113">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="38b4c-112">요구 사항</span><span class="sxs-lookup"><span data-stu-id="38b4c-112">Requirements</span></span>  
+ <span data-ttu-id="38b4c-113">**헤더:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="38b4c-113">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="fa254-114">참고자료</span><span class="sxs-lookup"><span data-stu-id="fa254-114">See also</span></span>
-- [<span data-ttu-id="fa254-115">진단 기호 저장소 인터페이스</span><span class="sxs-lookup"><span data-stu-id="fa254-115">Diagnostics Symbol Store Interfaces</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)
+## <a name="see-also"></a><span data-ttu-id="38b4c-114">참고자료</span><span class="sxs-lookup"><span data-stu-id="38b4c-114">See also</span></span>
+
+- [<span data-ttu-id="38b4c-115">진단 기호 저장소 인터페이스</span><span class="sxs-lookup"><span data-stu-id="38b4c-115">Diagnostics Symbol Store Interfaces</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)

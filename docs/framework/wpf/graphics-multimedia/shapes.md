@@ -14,21 +14,22 @@ helpviewer_keywords:
 - stretchable Shapes [WPF]
 - Shape objects [WPF]
 ms.assetid: 893253b8-c2df-4f22-961d-cbc533d64c79
-ms.openlocfilehash: 5c4f76ee753ed6caa30d15a51c341a2edb64011d
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: c25e26130adc7f012d375f35a173a4b5dc9871f0
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57350711"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59217772"
 ---
-# <a name="shapes"></a><span data-ttu-id="3b68d-102">도형</span><span class="sxs-lookup"><span data-stu-id="3b68d-102">Shapes</span></span>
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] <span data-ttu-id="3b68d-103">사용 하 여 기본 모양 그리기에 대 한 지원을 제공 합니다 <xref:System.Windows.Shapes.Shape> 클래스입니다.</span><span class="sxs-lookup"><span data-stu-id="3b68d-103">provides support for drawing basic shapes using the <xref:System.Windows.Shapes.Shape> class.</span></span> <span data-ttu-id="3b68d-104">Shape 개체에서 파생 <xref:System.Windows.FrameworkElement> 이와 같이 레이아웃 시스템에 참여 하 고 사용 하 여 단순히 그릴 수 있습니다 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]합니다.</span><span class="sxs-lookup"><span data-stu-id="3b68d-104">Shape objects derive from <xref:System.Windows.FrameworkElement> and as such, participate in the layout system and can be drawn simply using [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)].</span></span>  
+# <a name="shapes"></a><span data-ttu-id="72bdc-102">도형</span><span class="sxs-lookup"><span data-stu-id="72bdc-102">Shapes</span></span>
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] <span data-ttu-id="72bdc-103">사용 하 여 기본 모양 그리기에 대 한 지원을 제공 합니다 <xref:System.Windows.Shapes.Shape> 클래스입니다.</span><span class="sxs-lookup"><span data-stu-id="72bdc-103">provides support for drawing basic shapes using the <xref:System.Windows.Shapes.Shape> class.</span></span> <span data-ttu-id="72bdc-104">Shape 개체에서 파생 <xref:System.Windows.FrameworkElement> 이와 같이 레이아웃 시스템에 참여 하 고 사용 하 여 단순히 그릴 수 있습니다 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]합니다.</span><span class="sxs-lookup"><span data-stu-id="72bdc-104">Shape objects derive from <xref:System.Windows.FrameworkElement> and as such, participate in the layout system and can be drawn simply using [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)].</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="3b68d-105">섹션 내용</span><span class="sxs-lookup"><span data-stu-id="3b68d-105">In This Section</span></span>  
- [<span data-ttu-id="3b68d-106">WPF에서 Shape 및 기본 그리기 개요</span><span class="sxs-lookup"><span data-stu-id="3b68d-106">Shapes and Basic Drawing in WPF Overview</span></span>](shapes-and-basic-drawing-in-wpf-overview.md)  
- [<span data-ttu-id="3b68d-107">방법 항목</span><span class="sxs-lookup"><span data-stu-id="3b68d-107">How-to Topics</span></span>](shapes-how-to-topics.md)  
+## <a name="in-this-section"></a><span data-ttu-id="72bdc-105">섹션 내용</span><span class="sxs-lookup"><span data-stu-id="72bdc-105">In This Section</span></span>  
+ [<span data-ttu-id="72bdc-106">WPF에서 Shape 및 기본 그리기 개요</span><span class="sxs-lookup"><span data-stu-id="72bdc-106">Shapes and Basic Drawing in WPF Overview</span></span>](shapes-and-basic-drawing-in-wpf-overview.md)  
+ [<span data-ttu-id="72bdc-107">방법 항목</span><span class="sxs-lookup"><span data-stu-id="72bdc-107">How-to Topics</span></span>](shapes-how-to-topics.md)  
   
-## <a name="see-also"></a><span data-ttu-id="3b68d-108">참고자료</span><span class="sxs-lookup"><span data-stu-id="3b68d-108">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="72bdc-108">참고자료</span><span class="sxs-lookup"><span data-stu-id="72bdc-108">See also</span></span>
+
 - <xref:System.Windows.Shapes.Shape>
-- [<span data-ttu-id="3b68d-109">2차원 그래픽 및 이미징</span><span class="sxs-lookup"><span data-stu-id="3b68d-109">2D Graphics and Imaging</span></span>](../advanced/optimizing-performance-2d-graphics-and-imaging.md)
-- [<span data-ttu-id="3b68d-110">그래픽 및 멀티미디어</span><span class="sxs-lookup"><span data-stu-id="3b68d-110">Graphics and Multimedia</span></span>](index.md)
+- [<span data-ttu-id="72bdc-109">2D 그래픽 및 이미징</span><span class="sxs-lookup"><span data-stu-id="72bdc-109">2D Graphics and Imaging</span></span>](../advanced/optimizing-performance-2d-graphics-and-imaging.md)
+- [<span data-ttu-id="72bdc-110">그래픽 및 멀티미디어</span><span class="sxs-lookup"><span data-stu-id="72bdc-110">Graphics and Multimedia</span></span>](index.md)

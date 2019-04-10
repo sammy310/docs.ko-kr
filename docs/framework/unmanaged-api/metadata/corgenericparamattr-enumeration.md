@@ -16,17 +16,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: cf73f382c1da15e0285ee95be9e8bce39575ae0a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0aa9b84c9e16811f799a3cd2ad096508db3f7d34
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54557364"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59220502"
 ---
-# <a name="corgenericparamattr-enumeration"></a><span data-ttu-id="b68f3-102">CorGenericParamAttr 열거형</span><span class="sxs-lookup"><span data-stu-id="b68f3-102">CorGenericParamAttr Enumeration</span></span>
-<span data-ttu-id="b68f3-103">설명 하는 값을 포함 합니다 <xref:System.Type> 호출에서 사용된 된 제네릭 형식에 대 한 매개 변수 [IMetaDataEmit2::DefineGenericParam](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-definegenericparam-method.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="b68f3-103">Contains values that describe the <xref:System.Type> parameters for generic types, as used in calls to [IMetaDataEmit2::DefineGenericParam](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-definegenericparam-method.md).</span></span>  
+# <a name="corgenericparamattr-enumeration"></a><span data-ttu-id="b4f44-102">CorGenericParamAttr 열거형</span><span class="sxs-lookup"><span data-stu-id="b4f44-102">CorGenericParamAttr Enumeration</span></span>
+<span data-ttu-id="b4f44-103">설명 하는 값을 포함 합니다 <xref:System.Type> 호출에서 사용된 된 제네릭 형식에 대 한 매개 변수 [IMetaDataEmit2::DefineGenericParam](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-definegenericparam-method.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="b4f44-103">Contains values that describe the <xref:System.Type> parameters for generic types, as used in calls to [IMetaDataEmit2::DefineGenericParam](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-definegenericparam-method.md).</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="b68f3-104">구문</span><span class="sxs-lookup"><span data-stu-id="b68f3-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="b4f44-104">구문</span><span class="sxs-lookup"><span data-stu-id="b4f44-104">Syntax</span></span>  
   
 ```  
 typedef enum CorGenericParamAttr {  
@@ -45,26 +45,27 @@ typedef enum CorGenericParamAttr {
 } CorGenericParamAttr;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="b68f3-105">멤버</span><span class="sxs-lookup"><span data-stu-id="b68f3-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="b4f44-105">멤버</span><span class="sxs-lookup"><span data-stu-id="b4f44-105">Members</span></span>  
   
-|<span data-ttu-id="b68f3-106">멤버</span><span class="sxs-lookup"><span data-stu-id="b68f3-106">Member</span></span>|<span data-ttu-id="b68f3-107">설명</span><span class="sxs-lookup"><span data-stu-id="b68f3-107">Description</span></span>|  
+|<span data-ttu-id="b4f44-106">멤버</span><span class="sxs-lookup"><span data-stu-id="b4f44-106">Member</span></span>|<span data-ttu-id="b4f44-107">설명</span><span class="sxs-lookup"><span data-stu-id="b4f44-107">Description</span></span>|  
 |------------|-----------------|  
-|`gpVarianceMask`|<span data-ttu-id="b68f3-108">매개 변수 분산 인터페이스 및 대리자에 제네릭 매개 변수에 적용 됩니다.</span><span class="sxs-lookup"><span data-stu-id="b68f3-108">Parameter variance applies only to generic parameters for interfaces and delegates.</span></span>|  
-|`gpNonVariant`|<span data-ttu-id="b68f3-109">분산이 없음을 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="b68f3-109">Indicates the absence of variance.</span></span>|  
-|`gpCovariant`|<span data-ttu-id="b68f3-110">공변성 (covariance)을 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="b68f3-110">Indicates covariance.</span></span>|  
-|`gpContravariant`|<span data-ttu-id="b68f3-111">반 공변성을 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="b68f3-111">Indicates contravariance.</span></span>|  
-|`gpSpecialConstraintMask`|<span data-ttu-id="b68f3-112">모든 특수 제약 조건을 적용할 수 <xref:System.Type> 매개 변수입니다.</span><span class="sxs-lookup"><span data-stu-id="b68f3-112">Special constraints can apply to any <xref:System.Type> parameter.</span></span>|  
-|`gpNoSpecialConstraint`|<span data-ttu-id="b68f3-113">제약 조건이 없는 적용 된다고 합니다 <xref:System.Type> 매개 변수입니다.</span><span class="sxs-lookup"><span data-stu-id="b68f3-113">Indicates that no constraint applies to the <xref:System.Type> parameter.</span></span>|  
-|`gpReferenceTypeConstraint`|<span data-ttu-id="b68f3-114">나타내는 <xref:System.Type> 매개 변수는 참조 형식 이어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="b68f3-114">Indicates that the <xref:System.Type> parameter must be a reference type.</span></span>|  
-|`gpNotNullableValueTypeConstraint`|<span data-ttu-id="b68f3-115">나타내는 <xref:System.Type> 매개 변수는 null 값을 사용할 수 없는 값 형식 이어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="b68f3-115">Indicates that the <xref:System.Type> parameter must be a value type that cannot be a null value.</span></span>|  
-|`gpDefaultConstructorConstraint`|<span data-ttu-id="b68f3-116">나타내는 <xref:System.Type> 매개 변수는 매개 변수가 없는 기본 public 생성자를 있어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="b68f3-116">Indicates that the <xref:System.Type> parameter must have a default public constructor that takes no parameters.</span></span>|  
+|`gpVarianceMask`|<span data-ttu-id="b4f44-108">매개 변수 분산 인터페이스 및 대리자에 제네릭 매개 변수에 적용 됩니다.</span><span class="sxs-lookup"><span data-stu-id="b4f44-108">Parameter variance applies only to generic parameters for interfaces and delegates.</span></span>|  
+|`gpNonVariant`|<span data-ttu-id="b4f44-109">분산이 없음을 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="b4f44-109">Indicates the absence of variance.</span></span>|  
+|`gpCovariant`|<span data-ttu-id="b4f44-110">공변성 (covariance)을 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="b4f44-110">Indicates covariance.</span></span>|  
+|`gpContravariant`|<span data-ttu-id="b4f44-111">반 공변성을 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="b4f44-111">Indicates contravariance.</span></span>|  
+|`gpSpecialConstraintMask`|<span data-ttu-id="b4f44-112">모든 특수 제약 조건을 적용할 수 <xref:System.Type> 매개 변수입니다.</span><span class="sxs-lookup"><span data-stu-id="b4f44-112">Special constraints can apply to any <xref:System.Type> parameter.</span></span>|  
+|`gpNoSpecialConstraint`|<span data-ttu-id="b4f44-113">제약 조건이 없는 적용 된다고 합니다 <xref:System.Type> 매개 변수입니다.</span><span class="sxs-lookup"><span data-stu-id="b4f44-113">Indicates that no constraint applies to the <xref:System.Type> parameter.</span></span>|  
+|`gpReferenceTypeConstraint`|<span data-ttu-id="b4f44-114">나타내는 <xref:System.Type> 매개 변수는 참조 형식 이어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="b4f44-114">Indicates that the <xref:System.Type> parameter must be a reference type.</span></span>|  
+|`gpNotNullableValueTypeConstraint`|<span data-ttu-id="b4f44-115">나타내는 <xref:System.Type> 매개 변수는 null 값을 사용할 수 없는 값 형식 이어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="b4f44-115">Indicates that the <xref:System.Type> parameter must be a value type that cannot be a null value.</span></span>|  
+|`gpDefaultConstructorConstraint`|<span data-ttu-id="b4f44-116">나타내는 <xref:System.Type> 매개 변수는 매개 변수가 없는 기본 public 생성자를 있어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="b4f44-116">Indicates that the <xref:System.Type> parameter must have a default public constructor that takes no parameters.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="b68f3-117">요구 사항</span><span class="sxs-lookup"><span data-stu-id="b68f3-117">Requirements</span></span>  
- <span data-ttu-id="b68f3-118">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="b68f3-118">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="b4f44-117">요구 사항</span><span class="sxs-lookup"><span data-stu-id="b4f44-117">Requirements</span></span>  
+ <span data-ttu-id="b4f44-118">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="b4f44-118">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="b68f3-119">**헤더:** CorHdr.h</span><span class="sxs-lookup"><span data-stu-id="b68f3-119">**Header:** CorHdr.h</span></span>  
+ <span data-ttu-id="b4f44-119">**헤더:** CorHdr.h</span><span class="sxs-lookup"><span data-stu-id="b4f44-119">**Header:** CorHdr.h</span></span>  
   
- <span data-ttu-id="b68f3-120">**.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="b68f3-120">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ **<span data-ttu-id="b4f44-120">.NET Framework 버전:</span><span class="sxs-lookup"><span data-stu-id="b4f44-120">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="b68f3-121">참고자료</span><span class="sxs-lookup"><span data-stu-id="b68f3-121">See also</span></span>
-- [<span data-ttu-id="b68f3-122">메타데이터 열거형</span><span class="sxs-lookup"><span data-stu-id="b68f3-122">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+## <a name="see-also"></a><span data-ttu-id="b4f44-121">참고자료</span><span class="sxs-lookup"><span data-stu-id="b4f44-121">See also</span></span>
+
+- [<span data-ttu-id="b4f44-122">메타데이터 열거형</span><span class="sxs-lookup"><span data-stu-id="b4f44-122">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

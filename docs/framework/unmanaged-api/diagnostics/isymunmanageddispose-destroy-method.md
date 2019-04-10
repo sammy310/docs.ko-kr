@@ -17,27 +17,28 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6a4a0bac056c7c88a491ac05a17b662ace833df1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 51d2f0aedffdd88974a8184954ecbb9a231b70c6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54614460"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59213679"
 ---
-# <a name="isymunmanageddisposedestroy-method"></a><span data-ttu-id="d6ad6-102">ISymUnmanagedDispose::Destroy 메서드</span><span class="sxs-lookup"><span data-stu-id="d6ad6-102">ISymUnmanagedDispose::Destroy Method</span></span>
-<span data-ttu-id="d6ad6-103">이 인해 기본 개체가 모든 내부 참조를 해제 하 고 모든 후속 메서드 호출에서 오류를 반환 합니다.</span><span class="sxs-lookup"><span data-stu-id="d6ad6-103">Causes the underlying object to release all internal references and return failure on any subsequent method calls.</span></span>  
+# <a name="isymunmanageddisposedestroy-method"></a><span data-ttu-id="2d6a9-102">ISymUnmanagedDispose::Destroy 메서드</span><span class="sxs-lookup"><span data-stu-id="2d6a9-102">ISymUnmanagedDispose::Destroy Method</span></span>
+<span data-ttu-id="2d6a9-103">이 인해 기본 개체가 모든 내부 참조를 해제 하 고 모든 후속 메서드 호출에서 오류를 반환 합니다.</span><span class="sxs-lookup"><span data-stu-id="2d6a9-103">Causes the underlying object to release all internal references and return failure on any subsequent method calls.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="d6ad6-104">구문</span><span class="sxs-lookup"><span data-stu-id="d6ad6-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="2d6a9-104">구문</span><span class="sxs-lookup"><span data-stu-id="2d6a9-104">Syntax</span></span>  
   
 ```  
 HRESULT Destroy();  
 ```  
   
-## <a name="return-value"></a><span data-ttu-id="d6ad6-105">반환 값</span><span class="sxs-lookup"><span data-stu-id="d6ad6-105">Return Value</span></span>  
- <span data-ttu-id="d6ad6-106">메서드가 성공 하면 s_ok이 고 그렇지 않으면 E_FAIL 또는 일부 다른 오류 코드입니다.</span><span class="sxs-lookup"><span data-stu-id="d6ad6-106">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="2d6a9-105">반환 값</span><span class="sxs-lookup"><span data-stu-id="2d6a9-105">Return Value</span></span>  
+ <span data-ttu-id="2d6a9-106">메서드가 성공 하면 s_ok이 고 그렇지 않으면 E_FAIL 또는 일부 다른 오류 코드입니다.</span><span class="sxs-lookup"><span data-stu-id="2d6a9-106">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="d6ad6-107">요구 사항</span><span class="sxs-lookup"><span data-stu-id="d6ad6-107">Requirements</span></span>  
- <span data-ttu-id="d6ad6-108">**헤더:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="d6ad6-108">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="2d6a9-107">요구 사항</span><span class="sxs-lookup"><span data-stu-id="2d6a9-107">Requirements</span></span>  
+ <span data-ttu-id="2d6a9-108">**헤더:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="2d6a9-108">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="d6ad6-109">참고자료</span><span class="sxs-lookup"><span data-stu-id="d6ad6-109">See also</span></span>
-- [<span data-ttu-id="d6ad6-110">ISymUnmanagedDispose 인터페이스</span><span class="sxs-lookup"><span data-stu-id="d6ad6-110">ISymUnmanagedDispose Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddispose-interface.md)
+## <a name="see-also"></a><span data-ttu-id="2d6a9-109">참고자료</span><span class="sxs-lookup"><span data-stu-id="2d6a9-109">See also</span></span>
+
+- [<span data-ttu-id="2d6a9-110">ISymUnmanagedDispose 인터페이스</span><span class="sxs-lookup"><span data-stu-id="2d6a9-110">ISymUnmanagedDispose Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddispose-interface.md)

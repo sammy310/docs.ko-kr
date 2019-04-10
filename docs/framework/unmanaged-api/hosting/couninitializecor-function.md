@@ -17,24 +17,25 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: dca4fd4a4d20627bef8f7fedd5a801ba07e8e19b
-ms.sourcegitcommit: 79066169e93d9d65203028b21983574ad9dcf6b4
+ms.openlocfilehash: 0845c4d493cb3c750931a0ae2ad92b628a255c0c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57212081"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59202718"
 ---
-# <a name="couninitializecor-function"></a><span data-ttu-id="e0e81-102">CoUninitializeCor 함수</span><span class="sxs-lookup"><span data-stu-id="e0e81-102">CoUninitializeCor Function</span></span>
-<span data-ttu-id="e0e81-103">`CoUninitializeCor`는 사용되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="e0e81-103">`CoUninitializeCor` is obsolete.</span></span>  
+# <a name="couninitializecor-function"></a><span data-ttu-id="ef7f8-102">CoUninitializeCor 함수</span><span class="sxs-lookup"><span data-stu-id="ef7f8-102">CoUninitializeCor Function</span></span>
+`CoUninitializeCor` <span data-ttu-id="ef7f8-103">사용 되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="ef7f8-103">is obsolete.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="e0e81-104">구문</span><span class="sxs-lookup"><span data-stu-id="e0e81-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="ef7f8-104">구문</span><span class="sxs-lookup"><span data-stu-id="ef7f8-104">Syntax</span></span>  
   
 ```  
 STDAPI_(void) CoUninitializeCor(void);  
 ```  
   
-## <a name="remarks"></a><span data-ttu-id="e0e81-105">설명</span><span class="sxs-lookup"><span data-stu-id="e0e81-105">Remarks</span></span>  
- <span data-ttu-id="e0e81-106">공용 언어 런타임 프로세스에서 언로드할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="e0e81-106">The common language runtime cannot be unloaded from a process.</span></span> <span data-ttu-id="e0e81-107">런타임에 실행 중인 프로세스에서 완전히 제거 하려면 해당 프로세스를 종료 해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="e0e81-107">To completely remove the runtime from a running process, you must shut down that process.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="ef7f8-105">설명</span><span class="sxs-lookup"><span data-stu-id="ef7f8-105">Remarks</span></span>  
+ <span data-ttu-id="ef7f8-106">공용 언어 런타임 프로세스에서 언로드할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="ef7f8-106">The common language runtime cannot be unloaded from a process.</span></span> <span data-ttu-id="ef7f8-107">런타임에 실행 중인 프로세스에서 완전히 제거 하려면 해당 프로세스를 종료 해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="ef7f8-107">To completely remove the runtime from a running process, you must shut down that process.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="e0e81-108">참고자료</span><span class="sxs-lookup"><span data-stu-id="e0e81-108">See also</span></span>
-- [<span data-ttu-id="e0e81-109">메타데이터 전역 정적 함수</span><span class="sxs-lookup"><span data-stu-id="e0e81-109">Metadata Global Static Functions</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-global-static-functions.md)
+## <a name="see-also"></a><span data-ttu-id="ef7f8-108">참고자료</span><span class="sxs-lookup"><span data-stu-id="ef7f8-108">See also</span></span>
+
+- [<span data-ttu-id="ef7f8-109">메타데이터 전역 정적 함수</span><span class="sxs-lookup"><span data-stu-id="ef7f8-109">Metadata Global Static Functions</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-global-static-functions.md)

@@ -8,52 +8,52 @@ helpviewer_keywords:
 - <cryptoClasses> element
 - cryptoClasses element
 ms.assetid: 290d5f96-946d-4f02-babb-1d31ec0b8295
-ms.openlocfilehash: aa649a0ea83279a1b2bdb2dff33794002b8a6b7d
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 7a03729f075645a230c660ff4c6469e0f5f3a51e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55274071"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59220320"
 ---
-# <a name="cryptoclasses-element"></a><span data-ttu-id="77876-102">\<cryptoClasses > 요소</span><span class="sxs-lookup"><span data-stu-id="77876-102">\<cryptoClasses> Element</span></span>
-<span data-ttu-id="77876-103">[\<nameEntry>](../../../../../docs/framework/configure-apps/file-schema/cryptography/nameentry-element.md) 요소에 있는 이름에 매핑되는 암호화 클래스의 목록이 포함되어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="77876-103">Contains a list of cryptography classes that have a mapping to a friendly name in the [\<nameEntry>](../../../../../docs/framework/configure-apps/file-schema/cryptography/nameentry-element.md) element.</span></span>  
+# <a name="cryptoclasses-element"></a><span data-ttu-id="98dfa-102">\<cryptoClasses > 요소</span><span class="sxs-lookup"><span data-stu-id="98dfa-102">\<cryptoClasses> Element</span></span>
+<span data-ttu-id="98dfa-103">[\<nameEntry>](../../../../../docs/framework/configure-apps/file-schema/cryptography/nameentry-element.md) 요소에 있는 이름에 매핑되는 암호화 클래스의 목록이 포함되어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="98dfa-103">Contains a list of cryptography classes that have a mapping to a friendly name in the [\<nameEntry>](../../../../../docs/framework/configure-apps/file-schema/cryptography/nameentry-element.md) element.</span></span>  
   
- <span data-ttu-id="77876-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="77876-104">\<configuration></span></span>  
-<span data-ttu-id="77876-105">\<mscorlib></span><span class="sxs-lookup"><span data-stu-id="77876-105">\<mscorlib></span></span>  
-<span data-ttu-id="77876-106">\<cryptographySettings></span><span class="sxs-lookup"><span data-stu-id="77876-106">\<cryptographySettings></span></span>  
-<span data-ttu-id="77876-107">\<cryptoNameMapping></span><span class="sxs-lookup"><span data-stu-id="77876-107">\<cryptoNameMapping></span></span>  
-<span data-ttu-id="77876-108">\<cryptoClasses></span><span class="sxs-lookup"><span data-stu-id="77876-108">\<cryptoClasses></span></span>  
+ <span data-ttu-id="98dfa-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="98dfa-104">\<configuration></span></span>  
+<span data-ttu-id="98dfa-105">\<mscorlib></span><span class="sxs-lookup"><span data-stu-id="98dfa-105">\<mscorlib></span></span>  
+<span data-ttu-id="98dfa-106">\<cryptographySettings></span><span class="sxs-lookup"><span data-stu-id="98dfa-106">\<cryptographySettings></span></span>  
+<span data-ttu-id="98dfa-107">\<cryptoNameMapping></span><span class="sxs-lookup"><span data-stu-id="98dfa-107">\<cryptoNameMapping></span></span>  
+<span data-ttu-id="98dfa-108">\<cryptoClasses></span><span class="sxs-lookup"><span data-stu-id="98dfa-108">\<cryptoClasses></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="77876-109">구문</span><span class="sxs-lookup"><span data-stu-id="77876-109">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="98dfa-109">구문</span><span class="sxs-lookup"><span data-stu-id="98dfa-109">Syntax</span></span>  
   
 ```xml  
 <cryptoClasses>   
 </cryptoClasses>  
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="77876-110">특성 및 요소</span><span class="sxs-lookup"><span data-stu-id="77876-110">Attributes and Elements</span></span>  
- <span data-ttu-id="77876-111">다음 섹션에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="77876-111">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="98dfa-110">특성 및 요소</span><span class="sxs-lookup"><span data-stu-id="98dfa-110">Attributes and Elements</span></span>  
+ <span data-ttu-id="98dfa-111">다음 섹션에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="98dfa-111">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="77876-112">특성</span><span class="sxs-lookup"><span data-stu-id="77876-112">Attributes</span></span>  
- <span data-ttu-id="77876-113">없음</span><span class="sxs-lookup"><span data-stu-id="77876-113">None.</span></span>  
+### <a name="attributes"></a><span data-ttu-id="98dfa-112">특성</span><span class="sxs-lookup"><span data-stu-id="98dfa-112">Attributes</span></span>  
+ <span data-ttu-id="98dfa-113">없음</span><span class="sxs-lookup"><span data-stu-id="98dfa-113">None.</span></span>  
   
-### <a name="child-elements"></a><span data-ttu-id="77876-114">자식 요소</span><span class="sxs-lookup"><span data-stu-id="77876-114">Child Elements</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="98dfa-114">자식 요소</span><span class="sxs-lookup"><span data-stu-id="98dfa-114">Child Elements</span></span>  
   
-|<span data-ttu-id="77876-115">요소</span><span class="sxs-lookup"><span data-stu-id="77876-115">Element</span></span>|<span data-ttu-id="77876-116">설명</span><span class="sxs-lookup"><span data-stu-id="77876-116">Description</span></span>|  
+|<span data-ttu-id="98dfa-115">요소</span><span class="sxs-lookup"><span data-stu-id="98dfa-115">Element</span></span>|<span data-ttu-id="98dfa-116">설명</span><span class="sxs-lookup"><span data-stu-id="98dfa-116">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="77876-117">\<cryptoClass></span><span class="sxs-lookup"><span data-stu-id="77876-117">\<cryptoClass></span></span>](../../../../../docs/framework/configure-apps/file-schema/cryptography/cryptoclass-element.md)|<span data-ttu-id="77876-118">**\<nameEntry>** 요소에 있는 이름에 매핑되는 암호화 클래스가 포함되어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="77876-118">Contains a cryptography class that has a mapping to a friendly name in the **\<nameEntry>** element.</span></span>|  
+|[<span data-ttu-id="98dfa-117">\<cryptoClass></span><span class="sxs-lookup"><span data-stu-id="98dfa-117">\<cryptoClass></span></span>](../../../../../docs/framework/configure-apps/file-schema/cryptography/cryptoclass-element.md)|<span data-ttu-id="98dfa-118">**\<nameEntry>** 요소에 있는 이름에 매핑되는 암호화 클래스가 포함되어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="98dfa-118">Contains a cryptography class that has a mapping to a friendly name in the **\<nameEntry>** element.</span></span>|  
   
-### <a name="parent-elements"></a><span data-ttu-id="77876-119">부모 요소</span><span class="sxs-lookup"><span data-stu-id="77876-119">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="98dfa-119">부모 요소</span><span class="sxs-lookup"><span data-stu-id="98dfa-119">Parent Elements</span></span>  
   
-|<span data-ttu-id="77876-120">요소</span><span class="sxs-lookup"><span data-stu-id="77876-120">Element</span></span>|<span data-ttu-id="77876-121">설명</span><span class="sxs-lookup"><span data-stu-id="77876-121">Description</span></span>|  
+|<span data-ttu-id="98dfa-120">요소</span><span class="sxs-lookup"><span data-stu-id="98dfa-120">Element</span></span>|<span data-ttu-id="98dfa-121">설명</span><span class="sxs-lookup"><span data-stu-id="98dfa-121">Description</span></span>|  
 |-------------|-----------------|  
-|`configuration`|<span data-ttu-id="77876-122">공용 언어 런타임 및 .NET Framework 애플리케이션에서 사용하는 모든 구성 파일의 루트 요소입니다.</span><span class="sxs-lookup"><span data-stu-id="77876-122">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span>|  
-|`cryptographySettings`|<span data-ttu-id="77876-123">암호화 설정이 포함되어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="77876-123">Contains cryptography settings.</span></span>|  
-|`cryptoNameMapping`|<span data-ttu-id="77876-124">이름에 대한 클래스의 매핑이 포함되어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="77876-124">Contains mappings of classes to friendly names.</span></span>|  
-|`mscorlib`|<span data-ttu-id="77876-125">포함 된 `cryptographySettings` 요소입니다.</span><span class="sxs-lookup"><span data-stu-id="77876-125">Contains the `cryptographySettings` element.</span></span>|  
+|`configuration`|<span data-ttu-id="98dfa-122">공용 언어 런타임 및 .NET Framework 애플리케이션에서 사용하는 모든 구성 파일의 루트 요소입니다.</span><span class="sxs-lookup"><span data-stu-id="98dfa-122">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span>|  
+|`cryptographySettings`|<span data-ttu-id="98dfa-123">암호화 설정이 포함되어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="98dfa-123">Contains cryptography settings.</span></span>|  
+|`cryptoNameMapping`|<span data-ttu-id="98dfa-124">이름에 대한 클래스의 매핑이 포함되어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="98dfa-124">Contains mappings of classes to friendly names.</span></span>|  
+|`mscorlib`|<span data-ttu-id="98dfa-125">포함 된 `cryptographySettings` 요소입니다.</span><span class="sxs-lookup"><span data-stu-id="98dfa-125">Contains the `cryptographySettings` element.</span></span>|  
   
-## <a name="example"></a><span data-ttu-id="77876-126">예제</span><span class="sxs-lookup"><span data-stu-id="77876-126">Example</span></span>  
- <span data-ttu-id="77876-127">다음 방법을 보여 주는 예제는  **\<cryptoClass >** 암호화 클래스를 참조 하 고 런타임 구성 요소입니다.</span><span class="sxs-lookup"><span data-stu-id="77876-127">The following example shows how use the **\<cryptoClass>** element to reference a cryptography class and to configure the runtime.</span></span> <span data-ttu-id="77876-128">"RSA" 문자열을 전달할 수 있습니다는 <xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A?displayProperty=nameWithType> 메서드 및 사용법을 <xref:System.Security.Cryptography.AsymmetricAlgorithm.Create%2A> 반환 하는 방법을 `MyCryptoRSAClass` 개체입니다.</span><span class="sxs-lookup"><span data-stu-id="77876-128">You can then pass the string "RSA" to the <xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A?displayProperty=nameWithType> method and use the <xref:System.Security.Cryptography.AsymmetricAlgorithm.Create%2A> method to return a `MyCryptoRSAClass` object.</span></span>  
+## <a name="example"></a><span data-ttu-id="98dfa-126">예제</span><span class="sxs-lookup"><span data-stu-id="98dfa-126">Example</span></span>  
+ <span data-ttu-id="98dfa-127">다음 방법을 보여 주는 예제는  **\<cryptoClass >** 암호화 클래스를 참조 하 고 런타임 구성 요소입니다.</span><span class="sxs-lookup"><span data-stu-id="98dfa-127">The following example shows how use the **\<cryptoClass>** element to reference a cryptography class and to configure the runtime.</span></span> <span data-ttu-id="98dfa-128">"RSA" 문자열을 전달할 수 있습니다는 <xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A?displayProperty=nameWithType> 메서드 및 사용법을 <xref:System.Security.Cryptography.AsymmetricAlgorithm.Create%2A> 반환 하는 방법을 `MyCryptoRSAClass` 개체입니다.</span><span class="sxs-lookup"><span data-stu-id="98dfa-128">You can then pass the string "RSA" to the <xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A?displayProperty=nameWithType> method and use the <xref:System.Security.Cryptography.AsymmetricAlgorithm.Create%2A> method to return a `MyCryptoRSAClass` object.</span></span>  
   
 ```xml  
 <configuration>  
@@ -76,10 +76,11 @@ ms.locfileid: "55274071"
 </configuration>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="77876-129">참고자료</span><span class="sxs-lookup"><span data-stu-id="77876-129">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="98dfa-129">참고자료</span><span class="sxs-lookup"><span data-stu-id="98dfa-129">See also</span></span>
+
 - <xref:System.Security.Cryptography>
-- [<span data-ttu-id="77876-130">구성 파일 스키마</span><span class="sxs-lookup"><span data-stu-id="77876-130">Configuration File Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/index.md)
-- [<span data-ttu-id="77876-131">암호화 설정 스키마</span><span class="sxs-lookup"><span data-stu-id="77876-131">Cryptography Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/cryptography/index.md)
-- [<span data-ttu-id="77876-132">Cryptographic Services</span><span class="sxs-lookup"><span data-stu-id="77876-132">Cryptographic Services</span></span>](../../../../../docs/standard/security/cryptographic-services.md)
-- [<span data-ttu-id="77876-133">System.Security.Cryptography.CryptoConfig.CreateFromName</span><span class="sxs-lookup"><span data-stu-id="77876-133">System.Security.Cryptography.CryptoConfig.CreateFromName</span></span>](Overload:System.Security.Cryptography.CryptoConfig.CreateFromName)
-- [<span data-ttu-id="77876-134">암호화 클래스 구성</span><span class="sxs-lookup"><span data-stu-id="77876-134">Configuring Cryptography Classes</span></span>](../../../../../docs/framework/configure-apps/configure-cryptography-classes.md)
+- [<span data-ttu-id="98dfa-130">구성 파일 스키마</span><span class="sxs-lookup"><span data-stu-id="98dfa-130">Configuration File Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/index.md)
+- [<span data-ttu-id="98dfa-131">암호화 설정 스키마</span><span class="sxs-lookup"><span data-stu-id="98dfa-131">Cryptography Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/cryptography/index.md)
+- [<span data-ttu-id="98dfa-132">암호화 서비스</span><span class="sxs-lookup"><span data-stu-id="98dfa-132">Cryptographic Services</span></span>](../../../../../docs/standard/security/cryptographic-services.md)
+- [<span data-ttu-id="98dfa-133">System.Security.Cryptography.CryptoConfig.CreateFromName</span><span class="sxs-lookup"><span data-stu-id="98dfa-133">System.Security.Cryptography.CryptoConfig.CreateFromName</span></span>](Overload:System.Security.Cryptography.CryptoConfig.CreateFromName)
+- [<span data-ttu-id="98dfa-134">암호화 클래스 구성</span><span class="sxs-lookup"><span data-stu-id="98dfa-134">Configuring Cryptography Classes</span></span>](../../../../../docs/framework/configure-apps/configure-cryptography-classes.md)

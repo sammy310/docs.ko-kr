@@ -10,33 +10,34 @@ api_type:
 - COM
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a6c480af921fb0259ef85beec8d8f65bdd430522
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e1711def5e2aa41fd63912361ef8250ad160fb88
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54689313"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59227758"
 ---
-# <a name="icorprofilercallback9-interface"></a><span data-ttu-id="19e7f-102">ICorProfilerCallback9 인터페이스</span><span class="sxs-lookup"><span data-stu-id="19e7f-102">ICorProfilerCallback9 Interface</span></span>
-<span data-ttu-id="19e7f-103">[.NET Framework 4.7.2 이상 버전에서 지원 됨]</span><span class="sxs-lookup"><span data-stu-id="19e7f-103">[Supported in the .NET Framework 4.7.2 and later versions]</span></span>  
+# <a name="icorprofilercallback9-interface"></a><span data-ttu-id="5912a-102">ICorProfilerCallback9 인터페이스</span><span class="sxs-lookup"><span data-stu-id="5912a-102">ICorProfilerCallback9 Interface</span></span>
+<span data-ttu-id="5912a-103">[.NET Framework 4.7.2 이상 버전에서 지원 됨]</span><span class="sxs-lookup"><span data-stu-id="5912a-103">[Supported in the .NET Framework 4.7.2 and later versions]</span></span>  
 
- <span data-ttu-id="19e7f-104">서브 클래스 [ICorProfilerCallback8](icorprofilercallback8-interface.md) 동적 메서드 가비지 수집 되 고 이후에 언로드 되었음을 프로파일러에 알리기 위해 공용 언어 런타임에서 사용 되는 콜백 메서드를 제공 하는 합니다.</span><span class="sxs-lookup"><span data-stu-id="19e7f-104">A subclass of [ICorProfilerCallback8](icorprofilercallback8-interface.md) that provides a callback method used by the common language runtime to notify the profiler that a dynamic method has been garbage collected and subsequently unloaded.</span></span>  
+ <span data-ttu-id="5912a-104">서브 클래스 [ICorProfilerCallback8](icorprofilercallback8-interface.md) 동적 메서드 가비지 수집 되 고 이후에 언로드 되었음을 프로파일러에 알리기 위해 공용 언어 런타임에서 사용 되는 콜백 메서드를 제공 하는 합니다.</span><span class="sxs-lookup"><span data-stu-id="5912a-104">A subclass of [ICorProfilerCallback8](icorprofilercallback8-interface.md) that provides a callback method used by the common language runtime to notify the profiler that a dynamic method has been garbage collected and subsequently unloaded.</span></span>  
   
-## <a name="methods"></a><span data-ttu-id="19e7f-105">메서드</span><span class="sxs-lookup"><span data-stu-id="19e7f-105">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="5912a-105">메서드</span><span class="sxs-lookup"><span data-stu-id="5912a-105">Methods</span></span>  
   
-|<span data-ttu-id="19e7f-106">메서드</span><span class="sxs-lookup"><span data-stu-id="19e7f-106">Method</span></span>|<span data-ttu-id="19e7f-107">설명</span><span class="sxs-lookup"><span data-stu-id="19e7f-107">Description</span></span>|  
+|<span data-ttu-id="5912a-106">메서드</span><span class="sxs-lookup"><span data-stu-id="5912a-106">Method</span></span>|<span data-ttu-id="5912a-107">설명</span><span class="sxs-lookup"><span data-stu-id="5912a-107">Description</span></span>|  
 |------------|-----------------|  
-|[<span data-ttu-id="19e7f-108">DynamicMethodUnloaded 메서드</span><span class="sxs-lookup"><span data-stu-id="19e7f-108">DynamicMethodUnloaded Method</span></span>](ICorProfilerCallback9-dynamicmethodunloaded-method.md)|<span data-ttu-id="19e7f-109">동적 메서드 가비지 수집 되 고 이후에 언로드 되었음을 프로파일러에 알립니다.</span><span class="sxs-lookup"><span data-stu-id="19e7f-109">Notifies the profiler that a dynamic method has been garbage collected and subsequently unloaded.</span></span>|  
+|[<span data-ttu-id="5912a-108">DynamicMethodUnloaded 메서드</span><span class="sxs-lookup"><span data-stu-id="5912a-108">DynamicMethodUnloaded Method</span></span>](ICorProfilerCallback9-dynamicmethodunloaded-method.md)|<span data-ttu-id="5912a-109">동적 메서드 가비지 수집 되 고 이후에 언로드 되었음을 프로파일러에 알립니다.</span><span class="sxs-lookup"><span data-stu-id="5912a-109">Notifies the profiler that a dynamic method has been garbage collected and subsequently unloaded.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="19e7f-110">요구 사항</span><span class="sxs-lookup"><span data-stu-id="19e7f-110">Requirements</span></span>  
- <span data-ttu-id="19e7f-111">**플랫폼:** [시스템 요구 사항](../../get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="19e7f-111">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="5912a-110">요구 사항</span><span class="sxs-lookup"><span data-stu-id="5912a-110">Requirements</span></span>  
+ <span data-ttu-id="5912a-111">**플랫폼:** [시스템 요구 사항](../../get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="5912a-111">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="19e7f-112">**헤더:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="19e7f-112">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="5912a-112">**헤더:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="5912a-112">**Header:** CorProf.idl, CorProf.h</span></span>  
   
-<span data-ttu-id="19e7f-113">**.NET Framework 버전:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span><span class="sxs-lookup"><span data-stu-id="19e7f-113">**.NET Framework Versions:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span></span>  
+**<span data-ttu-id="5912a-113">.NET Framework 버전:</span><span class="sxs-lookup"><span data-stu-id="5912a-113">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
 
-## <a name="see-also"></a><span data-ttu-id="19e7f-114">참고자료</span><span class="sxs-lookup"><span data-stu-id="19e7f-114">See also</span></span>
-- [<span data-ttu-id="19e7f-115">프로파일링 인터페이스</span><span class="sxs-lookup"><span data-stu-id="19e7f-115">Profiling Interfaces</span></span>](profiling-interfaces.md)
-- [<span data-ttu-id="19e7f-116">ICorProfilerCallback8 인터페이스</span><span class="sxs-lookup"><span data-stu-id="19e7f-116">ICorProfilerCallback8 Interface</span></span>](icorprofilercallback9-interface.md)
-- [<span data-ttu-id="19e7f-117">ICorProfilerCallback8.DynamicMethodJITCompilationStarted 메서드</span><span class="sxs-lookup"><span data-stu-id="19e7f-117">ICorProfilerCallback8.DynamicMethodJITCompilationStarted method</span></span>](icorprofilercallback8-dynamicmethodjitcompilationstarted-method.md)
-- [<span data-ttu-id="19e7f-118">ICorProfilerCallback8.DynamicMethodJITCompilationFinished 메서드</span><span class="sxs-lookup"><span data-stu-id="19e7f-118">ICorProfilerCallback8.DynamicMethodJITCompilationFinished method</span></span>](icorprofilercallback8-dynamicmethodjitcompilationfinished-method.md)
+## <a name="see-also"></a><span data-ttu-id="5912a-114">참고자료</span><span class="sxs-lookup"><span data-stu-id="5912a-114">See also</span></span>
+
+- [<span data-ttu-id="5912a-115">프로파일링 인터페이스</span><span class="sxs-lookup"><span data-stu-id="5912a-115">Profiling Interfaces</span></span>](profiling-interfaces.md)
+- [<span data-ttu-id="5912a-116">ICorProfilerCallback8 인터페이스</span><span class="sxs-lookup"><span data-stu-id="5912a-116">ICorProfilerCallback8 Interface</span></span>](icorprofilercallback9-interface.md)
+- [<span data-ttu-id="5912a-117">ICorProfilerCallback8.DynamicMethodJITCompilationStarted 메서드</span><span class="sxs-lookup"><span data-stu-id="5912a-117">ICorProfilerCallback8.DynamicMethodJITCompilationStarted method</span></span>](icorprofilercallback8-dynamicmethodjitcompilationstarted-method.md)
+- [<span data-ttu-id="5912a-118">ICorProfilerCallback8.DynamicMethodJITCompilationFinished 메서드</span><span class="sxs-lookup"><span data-stu-id="5912a-118">ICorProfilerCallback8.DynamicMethodJITCompilationFinished method</span></span>](icorprofilercallback8-dynamicmethodjitcompilationfinished-method.md)

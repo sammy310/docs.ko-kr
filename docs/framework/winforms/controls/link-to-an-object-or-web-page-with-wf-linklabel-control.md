@@ -1,5 +1,5 @@
 ---
-title: '방법: Windows Forms LinkLabel 컨트롤을 사용 하 여 페이지를 웹 또는 개체에 연결'
+title: '방법: Windows Forms LinkLabel 컨트롤을 사용하여 개체 또는 웹 페이지에 연결'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -15,23 +15,23 @@ helpviewer_keywords:
 - LinkLabel control [Windows Forms], linking to object or Web page
 - LinkLabel control [Windows Forms], examples
 ms.assetid: 6c91c975-3cb7-4504-82f0-fc6255f8fb85
-ms.openlocfilehash: 34d6807b874596bd46f11ff90052ab85cc93b5d5
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 49d53e068ea35b663affac79f689a8688763fac2
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57705192"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59222733"
 ---
-# <a name="how-to-link-to-an-object-or-web-page-with-the-windows-forms-linklabel-control"></a><span data-ttu-id="c0c77-102">방법: Windows Forms LinkLabel 컨트롤을 사용 하 여 페이지를 웹 또는 개체에 연결</span><span class="sxs-lookup"><span data-stu-id="c0c77-102">How to: Link to an Object or Web Page with the Windows Forms LinkLabel Control</span></span>
-<span data-ttu-id="c0c77-103">Windows Forms <xref:System.Windows.Forms.LinkLabel> 컨트롤을 사용 하면 폼의 웹 스타일 링크를 만들 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="c0c77-103">The Windows Forms <xref:System.Windows.Forms.LinkLabel> control allows you to create Web-style links on your form.</span></span> <span data-ttu-id="c0c77-104">링크를 클릭할 때 링크를 방문한 나타내기 위해 색을 변경할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="c0c77-104">When the link is clicked, you can change its color to indicate the link has been visited.</span></span> <span data-ttu-id="c0c77-105">색 변경에 대 한 자세한 내용은 참조 하세요. [방법: Windows Forms LinkLabel 컨트롤의 모양을 변경](how-to-change-the-appearance-of-the-windows-forms-linklabel-control.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="c0c77-105">For more information on changing the color, see [How to: Change the Appearance of the Windows Forms LinkLabel Control](how-to-change-the-appearance-of-the-windows-forms-linklabel-control.md).</span></span>  
+# <a name="how-to-link-to-an-object-or-web-page-with-the-windows-forms-linklabel-control"></a><span data-ttu-id="66857-102">방법: Windows Forms LinkLabel 컨트롤을 사용하여 개체 또는 웹 페이지에 연결</span><span class="sxs-lookup"><span data-stu-id="66857-102">How to: Link to an Object or Web Page with the Windows Forms LinkLabel Control</span></span>
+<span data-ttu-id="66857-103">Windows Forms <xref:System.Windows.Forms.LinkLabel> 컨트롤을 사용 하면 폼의 웹 스타일 링크를 만들 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="66857-103">The Windows Forms <xref:System.Windows.Forms.LinkLabel> control allows you to create Web-style links on your form.</span></span> <span data-ttu-id="66857-104">링크를 클릭할 때 링크를 방문한 나타내기 위해 색을 변경할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="66857-104">When the link is clicked, you can change its color to indicate the link has been visited.</span></span> <span data-ttu-id="66857-105">색 변경에 대 한 자세한 내용은 참조 하세요. [방법: Windows Forms LinkLabel 컨트롤의 모양을 변경](how-to-change-the-appearance-of-the-windows-forms-linklabel-control.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="66857-105">For more information on changing the color, see [How to: Change the Appearance of the Windows Forms LinkLabel Control](how-to-change-the-appearance-of-the-windows-forms-linklabel-control.md).</span></span>  
   
-## <a name="linking-to-another-form"></a><span data-ttu-id="c0c77-106">다른 폼에 링크</span><span class="sxs-lookup"><span data-stu-id="c0c77-106">Linking to Another Form</span></span>  
+## <a name="linking-to-another-form"></a><span data-ttu-id="66857-106">다른 폼에 링크</span><span class="sxs-lookup"><span data-stu-id="66857-106">Linking to Another Form</span></span>  
   
-#### <a name="to-link-to-another-form-with-a-linklabel-control"></a><span data-ttu-id="c0c77-107">LinkLabel 컨트롤을 사용 하 여 다른 형식으로 연결 하려면</span><span class="sxs-lookup"><span data-stu-id="c0c77-107">To link to another form with a LinkLabel control</span></span>  
+#### <a name="to-link-to-another-form-with-a-linklabel-control"></a><span data-ttu-id="66857-107">LinkLabel 컨트롤을 사용 하 여 다른 형식으로 연결 하려면</span><span class="sxs-lookup"><span data-stu-id="66857-107">To link to another form with a LinkLabel control</span></span>  
   
-1.  <span data-ttu-id="c0c77-108">설정 된 <xref:System.Windows.Forms.LinkLabel.Text%2A> 을 적절 한 캡션에 속성입니다.</span><span class="sxs-lookup"><span data-stu-id="c0c77-108">Set the <xref:System.Windows.Forms.LinkLabel.Text%2A> property to an appropriate caption.</span></span>  
+1.  <span data-ttu-id="66857-108">설정 된 <xref:System.Windows.Forms.LinkLabel.Text%2A> 을 적절 한 캡션에 속성입니다.</span><span class="sxs-lookup"><span data-stu-id="66857-108">Set the <xref:System.Windows.Forms.LinkLabel.Text%2A> property to an appropriate caption.</span></span>  
   
-2.  <span data-ttu-id="c0c77-109">설정 된 <xref:System.Windows.Forms.LinkLabel.LinkArea%2A> 속성을 캡션의 어느 부분을 링크로 표시 됩니다.</span><span class="sxs-lookup"><span data-stu-id="c0c77-109">Set the <xref:System.Windows.Forms.LinkLabel.LinkArea%2A> property to determine which part of the caption will be indicated as a link.</span></span> <span data-ttu-id="c0c77-110">표시 되는 링크 레이블의 모양과 관련 된 속성에 따라 달라 집니다.</span><span class="sxs-lookup"><span data-stu-id="c0c77-110">How it is indicated depends on the appearance-related properties of the link label.</span></span> <span data-ttu-id="c0c77-111"><xref:System.Windows.Forms.LinkLabel.LinkArea%2A> 나타내는 값을 <xref:System.Windows.Forms.LinkLabel.LinkArea%2A> 두 숫자, 시작 문자 위치와 문자 개수를 포함 하는 개체입니다.</span><span class="sxs-lookup"><span data-stu-id="c0c77-111">The <xref:System.Windows.Forms.LinkLabel.LinkArea%2A> value is represented by a <xref:System.Windows.Forms.LinkLabel.LinkArea%2A> object containing two numbers, the starting character position and the number of characters.</span></span> <span data-ttu-id="c0c77-112"><xref:System.Windows.Forms.LinkLabel.LinkArea%2A> 속성 창에서 또는 코드에서 다음과 유사한 방식으로 속성을 설정할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="c0c77-112">The <xref:System.Windows.Forms.LinkLabel.LinkArea%2A> property can be set in the Properties window or in code in a manner similar to the following:</span></span>  
+2.  <span data-ttu-id="66857-109">설정 된 <xref:System.Windows.Forms.LinkLabel.LinkArea%2A> 속성을 캡션의 어느 부분을 링크로 표시 됩니다.</span><span class="sxs-lookup"><span data-stu-id="66857-109">Set the <xref:System.Windows.Forms.LinkLabel.LinkArea%2A> property to determine which part of the caption will be indicated as a link.</span></span> <span data-ttu-id="66857-110">표시 되는 링크 레이블의 모양과 관련 된 속성에 따라 달라 집니다.</span><span class="sxs-lookup"><span data-stu-id="66857-110">How it is indicated depends on the appearance-related properties of the link label.</span></span> <span data-ttu-id="66857-111"><xref:System.Windows.Forms.LinkLabel.LinkArea%2A> 나타내는 값을 <xref:System.Windows.Forms.LinkLabel.LinkArea%2A> 두 숫자, 시작 문자 위치와 문자 개수를 포함 하는 개체입니다.</span><span class="sxs-lookup"><span data-stu-id="66857-111">The <xref:System.Windows.Forms.LinkLabel.LinkArea%2A> value is represented by a <xref:System.Windows.Forms.LinkLabel.LinkArea%2A> object containing two numbers, the starting character position and the number of characters.</span></span> <span data-ttu-id="66857-112"><xref:System.Windows.Forms.LinkLabel.LinkArea%2A> 속성 창에서 또는 코드에서 다음과 유사한 방식으로 속성을 설정할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="66857-112">The <xref:System.Windows.Forms.LinkLabel.LinkArea%2A> property can be set in the Properties window or in code in a manner similar to the following:</span></span>  
   
     ```vb  
     ' In this code example, the link area has been set to begin  
@@ -54,10 +54,10 @@ ms.locfileid: "57705192"
     linkLabel1->LinkArea = LinkArea(0,8);  
     ```  
   
-3.  <span data-ttu-id="c0c77-113"><xref:System.Windows.Forms.LinkLabel.LinkClicked> 이벤트 처리기를 호출 합니다 <xref:System.Windows.Forms.Form.Show%2A> 프로젝트에서 다른 폼을 열고 설정 하는 메서드를 <xref:System.Windows.Forms.LinkLabel.LinkVisited%2A> 속성을 `true`합니다.</span><span class="sxs-lookup"><span data-stu-id="c0c77-113">In the <xref:System.Windows.Forms.LinkLabel.LinkClicked> event handler, invoke the <xref:System.Windows.Forms.Form.Show%2A> method to open another form in the project, and set the <xref:System.Windows.Forms.LinkLabel.LinkVisited%2A> property to `true`.</span></span>  
+3.  <span data-ttu-id="66857-113"><xref:System.Windows.Forms.LinkLabel.LinkClicked> 이벤트 처리기를 호출 합니다 <xref:System.Windows.Forms.Form.Show%2A> 프로젝트에서 다른 폼을 열고 설정 하는 메서드를 <xref:System.Windows.Forms.LinkLabel.LinkVisited%2A> 속성을 `true`합니다.</span><span class="sxs-lookup"><span data-stu-id="66857-113">In the <xref:System.Windows.Forms.LinkLabel.LinkClicked> event handler, invoke the <xref:System.Windows.Forms.Form.Show%2A> method to open another form in the project, and set the <xref:System.Windows.Forms.LinkLabel.LinkVisited%2A> property to `true`.</span></span>  
   
     > [!NOTE]
-    >  <span data-ttu-id="c0c77-114">인스턴스를 <xref:System.Windows.Forms.LinkLabelLinkClickedEventArgs> 클래스에 대 한 참조를 전달 합니다 <xref:System.Windows.Forms.LinkLabel> 캐스팅 하지 않아도 되므로 클릭 한 컨트롤을 `sender` 개체.</span><span class="sxs-lookup"><span data-stu-id="c0c77-114">An instance of the <xref:System.Windows.Forms.LinkLabelLinkClickedEventArgs> class carries a reference to the <xref:System.Windows.Forms.LinkLabel> control that was clicked, so there is no need to cast the `sender` object.</span></span>  
+    >  <span data-ttu-id="66857-114">인스턴스를 <xref:System.Windows.Forms.LinkLabelLinkClickedEventArgs> 클래스에 대 한 참조를 전달 합니다 <xref:System.Windows.Forms.LinkLabel> 캐스팅 하지 않아도 되므로 클릭 한 컨트롤을 `sender` 개체.</span><span class="sxs-lookup"><span data-stu-id="66857-114">An instance of the <xref:System.Windows.Forms.LinkLabelLinkClickedEventArgs> class carries a reference to the <xref:System.Windows.Forms.LinkLabel> control that was clicked, so there is no need to cast the `sender` object.</span></span>  
   
     ```vb  
     Protected Sub LinkLabel1_LinkClicked(ByVal Sender As System.Object, _  
@@ -92,19 +92,19 @@ ms.locfileid: "57705192"
        }  
     ```  
   
-## <a name="linking-to-a-web-page"></a><span data-ttu-id="c0c77-115">웹 페이지에 연결</span><span class="sxs-lookup"><span data-stu-id="c0c77-115">Linking to a Web Page</span></span>  
- <span data-ttu-id="c0c77-116"><xref:System.Windows.Forms.LinkLabel> 컨트롤 기본 브라우저를 사용 하 여 웹 페이지를 표시 하려면 사용할 수도 있습니다.</span><span class="sxs-lookup"><span data-stu-id="c0c77-116">The <xref:System.Windows.Forms.LinkLabel> control can also be used to display a Web page with the default browser.</span></span>  
+## <a name="linking-to-a-web-page"></a><span data-ttu-id="66857-115">웹 페이지에 연결</span><span class="sxs-lookup"><span data-stu-id="66857-115">Linking to a Web Page</span></span>  
+ <span data-ttu-id="66857-116"><xref:System.Windows.Forms.LinkLabel> 컨트롤 기본 브라우저를 사용 하 여 웹 페이지를 표시 하려면 사용할 수도 있습니다.</span><span class="sxs-lookup"><span data-stu-id="66857-116">The <xref:System.Windows.Forms.LinkLabel> control can also be used to display a Web page with the default browser.</span></span>  
   
-#### <a name="to-start-internet-explorer-and-link-to-a-web-page-with-a-linklabel-control"></a><span data-ttu-id="c0c77-117">LinkLabel 컨트롤을 사용 하 여 웹 페이지 링크와 Internet Explorer를 시작 하려면</span><span class="sxs-lookup"><span data-stu-id="c0c77-117">To start Internet Explorer and link to a Web page with a LinkLabel control</span></span>  
+#### <a name="to-start-internet-explorer-and-link-to-a-web-page-with-a-linklabel-control"></a><span data-ttu-id="66857-117">LinkLabel 컨트롤을 사용 하 여 웹 페이지 링크와 Internet Explorer를 시작 하려면</span><span class="sxs-lookup"><span data-stu-id="66857-117">To start Internet Explorer and link to a Web page with a LinkLabel control</span></span>  
   
-1.  <span data-ttu-id="c0c77-118">설정 된 <xref:System.Windows.Forms.LinkLabel.Text%2A> 을 적절 한 캡션에 속성입니다.</span><span class="sxs-lookup"><span data-stu-id="c0c77-118">Set the <xref:System.Windows.Forms.LinkLabel.Text%2A> property to an appropriate caption.</span></span>  
+1.  <span data-ttu-id="66857-118">설정 된 <xref:System.Windows.Forms.LinkLabel.Text%2A> 을 적절 한 캡션에 속성입니다.</span><span class="sxs-lookup"><span data-stu-id="66857-118">Set the <xref:System.Windows.Forms.LinkLabel.Text%2A> property to an appropriate caption.</span></span>  
   
-2.  <span data-ttu-id="c0c77-119">설정 된 <xref:System.Windows.Forms.LinkLabel.LinkArea%2A> 속성을 캡션의 어느 부분을 링크로 표시 됩니다.</span><span class="sxs-lookup"><span data-stu-id="c0c77-119">Set the <xref:System.Windows.Forms.LinkLabel.LinkArea%2A> property to determine which part of the caption will be indicated as a link.</span></span>  
+2.  <span data-ttu-id="66857-119">설정 된 <xref:System.Windows.Forms.LinkLabel.LinkArea%2A> 속성을 캡션의 어느 부분을 링크로 표시 됩니다.</span><span class="sxs-lookup"><span data-stu-id="66857-119">Set the <xref:System.Windows.Forms.LinkLabel.LinkArea%2A> property to determine which part of the caption will be indicated as a link.</span></span>  
   
-3.  <span data-ttu-id="c0c77-120">에 <xref:System.Windows.Forms.LinkLabel.LinkClicked> 설정 하는 두 번째 프로시저를 호출 하는 이벤트 처리기는 예외 처리 블록 도중를 <xref:System.Windows.Forms.LinkLabel.LinkVisited%2A> 속성을 `true` 사용 하는 <xref:System.Diagnostics.Process.Start%2A> URL을 사용 하 여 기본 브라우저를 시작 하는 방법.</span><span class="sxs-lookup"><span data-stu-id="c0c77-120">In the <xref:System.Windows.Forms.LinkLabel.LinkClicked> event handler, in the midst of an exception-handling block, call a second procedure that sets the <xref:System.Windows.Forms.LinkLabel.LinkVisited%2A> property to `true` and uses the <xref:System.Diagnostics.Process.Start%2A> method to start the default browser with a URL.</span></span> <span data-ttu-id="c0c77-121">사용 하는 <xref:System.Diagnostics.Process.Start%2A> 에 대 한 참조를 추가 해야 하는 메서드를 <xref:System.Diagnostics?displayProperty=nameWithType> 네임 스페이스입니다.</span><span class="sxs-lookup"><span data-stu-id="c0c77-121">To use the <xref:System.Diagnostics.Process.Start%2A> method you need to add a reference to the <xref:System.Diagnostics?displayProperty=nameWithType> namespace.</span></span>  
+3.  <span data-ttu-id="66857-120">에 <xref:System.Windows.Forms.LinkLabel.LinkClicked> 설정 하는 두 번째 프로시저를 호출 하는 이벤트 처리기는 예외 처리 블록 도중를 <xref:System.Windows.Forms.LinkLabel.LinkVisited%2A> 속성을 `true` 사용 하는 <xref:System.Diagnostics.Process.Start%2A> URL을 사용 하 여 기본 브라우저를 시작 하는 방법.</span><span class="sxs-lookup"><span data-stu-id="66857-120">In the <xref:System.Windows.Forms.LinkLabel.LinkClicked> event handler, in the midst of an exception-handling block, call a second procedure that sets the <xref:System.Windows.Forms.LinkLabel.LinkVisited%2A> property to `true` and uses the <xref:System.Diagnostics.Process.Start%2A> method to start the default browser with a URL.</span></span> <span data-ttu-id="66857-121">사용 하는 <xref:System.Diagnostics.Process.Start%2A> 에 대 한 참조를 추가 해야 하는 메서드를 <xref:System.Diagnostics?displayProperty=nameWithType> 네임 스페이스입니다.</span><span class="sxs-lookup"><span data-stu-id="66857-121">To use the <xref:System.Diagnostics.Process.Start%2A> method you need to add a reference to the <xref:System.Diagnostics?displayProperty=nameWithType> namespace.</span></span>  
   
     > [!IMPORTANT]
-    >  <span data-ttu-id="c0c77-122">아래 코드는 부분 신뢰 환경에서 실행 됩니다 (같은 공유 드라이브에) 때 JIT 컴파일러가 실패는 `VisitLink` 메서드가 호출 됩니다.</span><span class="sxs-lookup"><span data-stu-id="c0c77-122">If the code below is run in a partial-trust environment (such as on a shared drive), the JIT compiler fails when the `VisitLink` method is called.</span></span> <span data-ttu-id="c0c77-123">`System.Diagnostics.Process.Start` 문이 실패 하는 링크 요청 다시 발생 합니다.</span><span class="sxs-lookup"><span data-stu-id="c0c77-123">The `System.Diagnostics.Process.Start` statement causes a link demand that fails.</span></span> <span data-ttu-id="c0c77-124">예외를 catch 하 여 때는 `VisitLink` 메서드가 호출 되 면 아래 코드를 JIT 컴파일러에 실패 하면 오류를 정상적으로 처리를 보장 합니다.</span><span class="sxs-lookup"><span data-stu-id="c0c77-124">By catching the exception when the `VisitLink` method is called, the code below ensures that if the JIT compiler fails, the error is handled gracefully.</span></span>  
+    >  <span data-ttu-id="66857-122">아래 코드는 부분 신뢰 환경에서 실행 됩니다 (같은 공유 드라이브에) 때 JIT 컴파일러가 실패는 `VisitLink` 메서드가 호출 됩니다.</span><span class="sxs-lookup"><span data-stu-id="66857-122">If the code below is run in a partial-trust environment (such as on a shared drive), the JIT compiler fails when the `VisitLink` method is called.</span></span> <span data-ttu-id="66857-123">`System.Diagnostics.Process.Start` 문이 실패 하는 링크 요청 다시 발생 합니다.</span><span class="sxs-lookup"><span data-stu-id="66857-123">The `System.Diagnostics.Process.Start` statement causes a link demand that fails.</span></span> <span data-ttu-id="66857-124">예외를 catch 하 여 때는 `VisitLink` 메서드가 호출 되 면 아래 코드를 JIT 컴파일러에 실패 하면 오류를 정상적으로 처리를 보장 합니다.</span><span class="sxs-lookup"><span data-stu-id="66857-124">By catching the exception when the `VisitLink` method is called, the code below ensures that if the JIT compiler fails, the error is handled gracefully.</span></span>  
   
     ```vb  
     Private Sub LinkLabel1_LinkClicked(ByVal sender As System.Object, _  
@@ -178,8 +178,9 @@ ms.locfileid: "57705192"
        }  
     ```  
   
-## <a name="see-also"></a><span data-ttu-id="c0c77-125">참고자료</span><span class="sxs-lookup"><span data-stu-id="c0c77-125">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="66857-125">참고자료</span><span class="sxs-lookup"><span data-stu-id="66857-125">See also</span></span>
+
 - <xref:System.Diagnostics.Process.Start%2A?displayProperty=nameWithType>
-- [<span data-ttu-id="c0c77-126">LinkLabel 컨트롤 개요</span><span class="sxs-lookup"><span data-stu-id="c0c77-126">LinkLabel Control Overview</span></span>](linklabel-control-overview-windows-forms.md)
-- [<span data-ttu-id="c0c77-127">방법: Windows Forms LinkLabel 컨트롤의 모양 변경</span><span class="sxs-lookup"><span data-stu-id="c0c77-127">How to: Change the Appearance of the Windows Forms LinkLabel Control</span></span>](how-to-change-the-appearance-of-the-windows-forms-linklabel-control.md)
-- [<span data-ttu-id="c0c77-128">LinkLabel 컨트롤</span><span class="sxs-lookup"><span data-stu-id="c0c77-128">LinkLabel Control</span></span>](linklabel-control-windows-forms.md)
+- [<span data-ttu-id="66857-126">LinkLabel 컨트롤 개요</span><span class="sxs-lookup"><span data-stu-id="66857-126">LinkLabel Control Overview</span></span>](linklabel-control-overview-windows-forms.md)
+- [<span data-ttu-id="66857-127">방법: Windows Forms LinkLabel 컨트롤의 모양 변경</span><span class="sxs-lookup"><span data-stu-id="66857-127">How to: Change the Appearance of the Windows Forms LinkLabel Control</span></span>](how-to-change-the-appearance-of-the-windows-forms-linklabel-control.md)
+- [<span data-ttu-id="66857-128">LinkLabel 컨트롤</span><span class="sxs-lookup"><span data-stu-id="66857-128">LinkLabel Control</span></span>](linklabel-control-windows-forms.md)

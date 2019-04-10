@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ed9536280f64ae1400faff8d0029e5ccd51c90ee
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: edd9407f05e30eb420e83fb042c2412e99b0a022
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54732442"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59222590"
 ---
-# <a name="icordebugmodulegetfunctionfromrva-method"></a><span data-ttu-id="7e5a3-102">ICorDebugModule::GetFunctionFromRVA 메서드</span><span class="sxs-lookup"><span data-stu-id="7e5a3-102">ICorDebugModule::GetFunctionFromRVA Method</span></span>
-<span data-ttu-id="7e5a3-103">이 메서드는 현재 버전의.NET Framework에서 구현 되지에.</span><span class="sxs-lookup"><span data-stu-id="7e5a3-103">This method has not been implemented in the current version of the .NET Framework.</span></span>  
+# <a name="icordebugmodulegetfunctionfromrva-method"></a><span data-ttu-id="d887b-102">ICorDebugModule::GetFunctionFromRVA 메서드</span><span class="sxs-lookup"><span data-stu-id="d887b-102">ICorDebugModule::GetFunctionFromRVA Method</span></span>
+<span data-ttu-id="d887b-103">이 메서드는 현재 버전의.NET Framework에서 구현 되지에.</span><span class="sxs-lookup"><span data-stu-id="d887b-103">This method has not been implemented in the current version of the .NET Framework.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="7e5a3-104">구문</span><span class="sxs-lookup"><span data-stu-id="7e5a3-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="d887b-104">구문</span><span class="sxs-lookup"><span data-stu-id="d887b-104">Syntax</span></span>  
   
 ```  
 HRESULT GetFunctionFromRVA(  
@@ -36,9 +36,7 @@ HRESULT GetFunctionFromRVA(
 );  
 ```  
   
-## <a name="requirements"></a><span data-ttu-id="7e5a3-105">요구 사항</span><span class="sxs-lookup"><span data-stu-id="7e5a3-105">Requirements</span></span>  
- <span data-ttu-id="7e5a3-106">**헤더:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="7e5a3-106">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="d887b-105">요구 사항</span><span class="sxs-lookup"><span data-stu-id="d887b-105">Requirements</span></span>  
+ <span data-ttu-id="d887b-106">**헤더:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="d887b-106">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="7e5a3-107">참고자료</span><span class="sxs-lookup"><span data-stu-id="7e5a3-107">See also</span></span>
-
-
+## <a name="see-also"></a><span data-ttu-id="d887b-107">참고자료</span><span class="sxs-lookup"><span data-stu-id="d887b-107">See also</span></span>

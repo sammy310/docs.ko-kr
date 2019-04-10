@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 14a8acc2e3babd376cb9754d35ce8fc5eaa1fd7c
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: a3dcb1327ad50761a8268e8adc7b1e976cae0b3a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57492324"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59200300"
 ---
-# <a name="isymunmanagedwriter3openmethod2-method"></a><span data-ttu-id="4a27b-102">ISymUnmanagedWriter3::OpenMethod2 메서드</span><span class="sxs-lookup"><span data-stu-id="4a27b-102">ISymUnmanagedWriter3::OpenMethod2 Method</span></span>
-<span data-ttu-id="4a27b-103">메서드를 열고 하 고 이미지의 해당 실제 섹션 오프셋을 제공 합니다.</span><span class="sxs-lookup"><span data-stu-id="4a27b-103">Opens a method and provides its real section offset in the image.</span></span>  
+# <a name="isymunmanagedwriter3openmethod2-method"></a><span data-ttu-id="7846e-102">ISymUnmanagedWriter3::OpenMethod2 메서드</span><span class="sxs-lookup"><span data-stu-id="7846e-102">ISymUnmanagedWriter3::OpenMethod2 Method</span></span>
+<span data-ttu-id="7846e-103">메서드를 열고 하 고 이미지의 해당 실제 섹션 오프셋을 제공 합니다.</span><span class="sxs-lookup"><span data-stu-id="7846e-103">Opens a method and provides its real section offset in the image.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="4a27b-104">구문</span><span class="sxs-lookup"><span data-stu-id="4a27b-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="7846e-104">구문</span><span class="sxs-lookup"><span data-stu-id="7846e-104">Syntax</span></span>  
   
 ```  
 HRESULT OpenMethod2(   
@@ -36,22 +36,23 @@ HRESULT OpenMethod2(
     [in] ULONG32 offset);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="4a27b-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="4a27b-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="7846e-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="7846e-105">Parameters</span></span>  
  `method`  
- <span data-ttu-id="4a27b-106">[in] 열려는 메서드에 대 한 메타 데이터 토큰입니다.</span><span class="sxs-lookup"><span data-stu-id="4a27b-106">[in] The metadata token for the method to be opened.</span></span>  
+ <span data-ttu-id="7846e-106">[in] 열려는 메서드에 대 한 메타 데이터 토큰입니다.</span><span class="sxs-lookup"><span data-stu-id="7846e-106">[in] The metadata token for the method to be opened.</span></span>  
   
  `isect`  
- <span data-ttu-id="4a27b-107">[in] 이미지 섹션 오프셋입니다.</span><span class="sxs-lookup"><span data-stu-id="4a27b-107">[in] The section offset in the image.</span></span>  
+ <span data-ttu-id="7846e-107">[in] 이미지 섹션 오프셋입니다.</span><span class="sxs-lookup"><span data-stu-id="7846e-107">[in] The section offset in the image.</span></span>  
   
  `offset`  
- <span data-ttu-id="4a27b-108">[in] 이미지 오프셋입니다.</span><span class="sxs-lookup"><span data-stu-id="4a27b-108">[in] The offset in the image.</span></span>  
+ <span data-ttu-id="7846e-108">[in] 이미지 오프셋입니다.</span><span class="sxs-lookup"><span data-stu-id="7846e-108">[in] The offset in the image.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="4a27b-109">반환 값</span><span class="sxs-lookup"><span data-stu-id="4a27b-109">Return Value</span></span>  
- <span data-ttu-id="4a27b-110">메서드가 성공 하면 s_ok이 고 그렇지 않으면 E_FAIL 또는 일부 다른 오류 코드입니다.</span><span class="sxs-lookup"><span data-stu-id="4a27b-110">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="7846e-109">반환 값</span><span class="sxs-lookup"><span data-stu-id="7846e-109">Return Value</span></span>  
+ <span data-ttu-id="7846e-110">메서드가 성공 하면 s_ok이 고 그렇지 않으면 E_FAIL 또는 일부 다른 오류 코드입니다.</span><span class="sxs-lookup"><span data-stu-id="7846e-110">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="4a27b-111">요구 사항</span><span class="sxs-lookup"><span data-stu-id="4a27b-111">Requirements</span></span>  
- <span data-ttu-id="4a27b-112">**헤더:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="4a27b-112">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="7846e-111">요구 사항</span><span class="sxs-lookup"><span data-stu-id="7846e-111">Requirements</span></span>  
+ <span data-ttu-id="7846e-112">**헤더:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="7846e-112">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="4a27b-113">참고자료</span><span class="sxs-lookup"><span data-stu-id="4a27b-113">See also</span></span>
-- [<span data-ttu-id="4a27b-114">ISymUnmanagedWriter3 인터페이스</span><span class="sxs-lookup"><span data-stu-id="4a27b-114">ISymUnmanagedWriter3 Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter3-interface.md)
-- [<span data-ttu-id="4a27b-115">OpenMethod 메서드</span><span class="sxs-lookup"><span data-stu-id="4a27b-115">OpenMethod Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-openmethod-method.md)
+## <a name="see-also"></a><span data-ttu-id="7846e-113">참고자료</span><span class="sxs-lookup"><span data-stu-id="7846e-113">See also</span></span>
+
+- [<span data-ttu-id="7846e-114">ISymUnmanagedWriter3 인터페이스</span><span class="sxs-lookup"><span data-stu-id="7846e-114">ISymUnmanagedWriter3 Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter3-interface.md)
+- [<span data-ttu-id="7846e-115">OpenMethod 메서드</span><span class="sxs-lookup"><span data-stu-id="7846e-115">OpenMethod Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-openmethod-method.md)

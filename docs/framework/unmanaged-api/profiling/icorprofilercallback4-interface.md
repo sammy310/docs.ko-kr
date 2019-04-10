@@ -16,39 +16,40 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a96aadcec6cb3c4f4680499585bf1c950bc5ddd4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3eb1f46900199db65be5d14c56bfc0b6f55bf269
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54525312"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59205136"
 ---
-# <a name="icorprofilercallback4-interface"></a><span data-ttu-id="70040-102">ICorProfilerCallback4 인터페이스</span><span class="sxs-lookup"><span data-stu-id="70040-102">ICorProfilerCallback4 Interface</span></span>
-<span data-ttu-id="70040-103">프로파일러에 대 한 정보를 전달 하는 CLR (공용 언어 런타임)를 사용 하는 콜백 메서드를 제공 합니다.</span><span class="sxs-lookup"><span data-stu-id="70040-103">Provides callback methods that the common language runtime (CLR) uses to communicate information to the profiler.</span></span>  
+# <a name="icorprofilercallback4-interface"></a><span data-ttu-id="02894-102">ICorProfilerCallback4 인터페이스</span><span class="sxs-lookup"><span data-stu-id="02894-102">ICorProfilerCallback4 Interface</span></span>
+<span data-ttu-id="02894-103">프로파일러에 대 한 정보를 전달 하는 CLR (공용 언어 런타임)를 사용 하는 콜백 메서드를 제공 합니다.</span><span class="sxs-lookup"><span data-stu-id="02894-103">Provides callback methods that the common language runtime (CLR) uses to communicate information to the profiler.</span></span>  
   
-## <a name="methods"></a><span data-ttu-id="70040-104">메서드</span><span class="sxs-lookup"><span data-stu-id="70040-104">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="02894-104">메서드</span><span class="sxs-lookup"><span data-stu-id="02894-104">Methods</span></span>  
   
-|<span data-ttu-id="70040-105">메서드</span><span class="sxs-lookup"><span data-stu-id="70040-105">Method</span></span>|<span data-ttu-id="70040-106">설명</span><span class="sxs-lookup"><span data-stu-id="70040-106">Description</span></span>|  
+|<span data-ttu-id="02894-105">메서드</span><span class="sxs-lookup"><span data-stu-id="02894-105">Method</span></span>|<span data-ttu-id="02894-106">설명</span><span class="sxs-lookup"><span data-stu-id="02894-106">Description</span></span>|  
 |------------|-----------------|  
-|[<span data-ttu-id="70040-107">GetReJITParameters 메서드</span><span class="sxs-lookup"><span data-stu-id="70040-107">GetReJITParameters Method</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-getrejitparameters-method.md)|<span data-ttu-id="70040-108">코드 프로파일러를 새 다시 컴파일된 메서드 본문에 대 한 대체 코드 생성 플래그를 설정할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="70040-108">Allows the code profiler to set alternate code generation flags for a new recompiled method body.</span></span>|  
-|[<span data-ttu-id="70040-109">MovedReferences2 메서드</span><span class="sxs-lookup"><span data-stu-id="70040-109">MovedReferences2 Method</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-movedreferences2-method.md)|<span data-ttu-id="70040-110">압축 가비지 컬렉션의 결과로 힙에 있는 개체의 새 레이아웃을 보고합니다.</span><span class="sxs-lookup"><span data-stu-id="70040-110">Reports the new layout of objects in the heap as a result of a compacting garbage collection.</span></span>|  
-|[<span data-ttu-id="70040-111">ReJITCompilationFinished 메서드</span><span class="sxs-lookup"><span data-stu-id="70040-111">ReJITCompilationFinished Method</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-rejitcompilationfinished-method.md)|<span data-ttu-id="70040-112">Just-in-time (JIT) 컴파일러는 함수를 다시 컴파일하면 되었음을 프로파일러에 알립니다.</span><span class="sxs-lookup"><span data-stu-id="70040-112">Notifies the profiler that the just-in-time (JIT) compiler has finished the recompilation of a function.</span></span>|  
-|[<span data-ttu-id="70040-113">ReJITCompilationStarted 메서드</span><span class="sxs-lookup"><span data-stu-id="70040-113">ReJITCompilationStarted Method</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-rejitcompilationstarted-method.md)|<span data-ttu-id="70040-114">함수를 다시 컴파일 (JIT)-just-in-time 컴파일러가 시작 했음을 프로파일러에 알립니다.</span><span class="sxs-lookup"><span data-stu-id="70040-114">Notifies the profiler that the just-in-time (JIT) compiler has started to recompile a function.</span></span>|  
-|[<span data-ttu-id="70040-115">ReJITError 메서드</span><span class="sxs-lookup"><span data-stu-id="70040-115">ReJITError Method</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-rejiterror-method.md)|<span data-ttu-id="70040-116">다시 컴파일을 요청을 처리 하는 동안 발생 한 오류를 보고 합니다.</span><span class="sxs-lookup"><span data-stu-id="70040-116">Reports an error encountered while processing a recompile request.</span></span>|  
-|[<span data-ttu-id="70040-117">SurvivingReferences2 메서드</span><span class="sxs-lookup"><span data-stu-id="70040-117">SurvivingReferences2 Method</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-survivingreferences2-method.md)|<span data-ttu-id="70040-118">비압축 가비지 컬렉션의 결과로 힙에 있는 개체의 레이아웃을 보고합니다.</span><span class="sxs-lookup"><span data-stu-id="70040-118">Reports the layout of objects in the heap as a result of a non-compacting garbage collection.</span></span>|  
+|[<span data-ttu-id="02894-107">GetReJITParameters 메서드</span><span class="sxs-lookup"><span data-stu-id="02894-107">GetReJITParameters Method</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-getrejitparameters-method.md)|<span data-ttu-id="02894-108">코드 프로파일러를 새 다시 컴파일된 메서드 본문에 대 한 대체 코드 생성 플래그를 설정할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="02894-108">Allows the code profiler to set alternate code generation flags for a new recompiled method body.</span></span>|  
+|[<span data-ttu-id="02894-109">MovedReferences2 메서드</span><span class="sxs-lookup"><span data-stu-id="02894-109">MovedReferences2 Method</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-movedreferences2-method.md)|<span data-ttu-id="02894-110">압축 가비지 컬렉션의 결과로 힙에 있는 개체의 새 레이아웃을 보고합니다.</span><span class="sxs-lookup"><span data-stu-id="02894-110">Reports the new layout of objects in the heap as a result of a compacting garbage collection.</span></span>|  
+|[<span data-ttu-id="02894-111">ReJITCompilationFinished 메서드</span><span class="sxs-lookup"><span data-stu-id="02894-111">ReJITCompilationFinished Method</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-rejitcompilationfinished-method.md)|<span data-ttu-id="02894-112">Just-in-time (JIT) 컴파일러는 함수를 다시 컴파일하면 되었음을 프로파일러에 알립니다.</span><span class="sxs-lookup"><span data-stu-id="02894-112">Notifies the profiler that the just-in-time (JIT) compiler has finished the recompilation of a function.</span></span>|  
+|[<span data-ttu-id="02894-113">ReJITCompilationStarted 메서드</span><span class="sxs-lookup"><span data-stu-id="02894-113">ReJITCompilationStarted Method</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-rejitcompilationstarted-method.md)|<span data-ttu-id="02894-114">함수를 다시 컴파일 (JIT)-just-in-time 컴파일러가 시작 했음을 프로파일러에 알립니다.</span><span class="sxs-lookup"><span data-stu-id="02894-114">Notifies the profiler that the just-in-time (JIT) compiler has started to recompile a function.</span></span>|  
+|[<span data-ttu-id="02894-115">ReJITError 메서드</span><span class="sxs-lookup"><span data-stu-id="02894-115">ReJITError Method</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-rejiterror-method.md)|<span data-ttu-id="02894-116">다시 컴파일을 요청을 처리 하는 동안 발생 한 오류를 보고 합니다.</span><span class="sxs-lookup"><span data-stu-id="02894-116">Reports an error encountered while processing a recompile request.</span></span>|  
+|[<span data-ttu-id="02894-117">SurvivingReferences2 메서드</span><span class="sxs-lookup"><span data-stu-id="02894-117">SurvivingReferences2 Method</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-survivingreferences2-method.md)|<span data-ttu-id="02894-118">비압축 가비지 수집의 결과로 힙에 있는 개체의 레이아웃을 보고합니다.</span><span class="sxs-lookup"><span data-stu-id="02894-118">Reports the layout of objects in the heap as a result of a non-compacting garbage collection.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="70040-119">설명</span><span class="sxs-lookup"><span data-stu-id="70040-119">Remarks</span></span>  
+## <a name="remarks"></a><span data-ttu-id="02894-119">설명</span><span class="sxs-lookup"><span data-stu-id="02894-119">Remarks</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="70040-120">요구 사항</span><span class="sxs-lookup"><span data-stu-id="70040-120">Requirements</span></span>  
- <span data-ttu-id="70040-121">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="70040-121">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="02894-120">요구 사항</span><span class="sxs-lookup"><span data-stu-id="02894-120">Requirements</span></span>  
+ <span data-ttu-id="02894-121">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="02894-121">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="70040-122">**헤더:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="70040-122">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="02894-122">**헤더:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="02894-122">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="70040-123">**라이브러리:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="70040-123">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="02894-123">**라이브러리:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="02894-123">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="70040-124">**.NET Framework 버전:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="70040-124">**.NET Framework Versions:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span></span>  
+ **<span data-ttu-id="02894-124">.NET Framework 버전:</span><span class="sxs-lookup"><span data-stu-id="02894-124">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="70040-125">참고자료</span><span class="sxs-lookup"><span data-stu-id="70040-125">See also</span></span>
-- [<span data-ttu-id="70040-126">ICorProfilerCallback2 인터페이스</span><span class="sxs-lookup"><span data-stu-id="70040-126">ICorProfilerCallback2 Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-interface.md)
-- [<span data-ttu-id="70040-127">프로파일링 인터페이스</span><span class="sxs-lookup"><span data-stu-id="70040-127">Profiling Interfaces</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
-- [<span data-ttu-id="70040-128">ICorProfilerInfo 인터페이스</span><span class="sxs-lookup"><span data-stu-id="70040-128">ICorProfilerInfo Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
+## <a name="see-also"></a><span data-ttu-id="02894-125">참고자료</span><span class="sxs-lookup"><span data-stu-id="02894-125">See also</span></span>
+
+- [<span data-ttu-id="02894-126">ICorProfilerCallback2 인터페이스</span><span class="sxs-lookup"><span data-stu-id="02894-126">ICorProfilerCallback2 Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-interface.md)
+- [<span data-ttu-id="02894-127">프로파일링 인터페이스</span><span class="sxs-lookup"><span data-stu-id="02894-127">Profiling Interfaces</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
+- [<span data-ttu-id="02894-128">ICorProfilerInfo 인터페이스</span><span class="sxs-lookup"><span data-stu-id="02894-128">ICorProfilerInfo Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)

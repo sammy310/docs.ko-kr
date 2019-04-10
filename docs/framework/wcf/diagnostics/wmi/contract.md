@@ -2,17 +2,17 @@
 title: Contract1
 ms.date: 03/30/2017
 ms.assetid: aa00f6b3-7e1f-4213-841a-206463fca20b
-ms.openlocfilehash: c602ea2b708fced37c5b309596fe2312be21e741
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 10789f9a2940c239ae20c8fd1e9d48bca0e820ed
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54603562"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59201093"
 ---
-# <a name="contract"></a><span data-ttu-id="d843a-102">계약</span><span class="sxs-lookup"><span data-stu-id="d843a-102">Contract</span></span>
-<span data-ttu-id="d843a-103">계약</span><span class="sxs-lookup"><span data-stu-id="d843a-103">Contract</span></span>  
+# <a name="contract"></a><span data-ttu-id="d9616-102">계약</span><span class="sxs-lookup"><span data-stu-id="d9616-102">Contract</span></span>
+<span data-ttu-id="d9616-103">계약</span><span class="sxs-lookup"><span data-stu-id="d9616-103">Contract</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="d843a-104">구문</span><span class="sxs-lookup"><span data-stu-id="d843a-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="d9616-104">구문</span><span class="sxs-lookup"><span data-stu-id="d9616-104">Syntax</span></span>  
   
 ```csharp
 class Contract  
@@ -29,80 +29,81 @@ class Contract
 };  
 ```  
   
-## <a name="methods"></a><span data-ttu-id="d843a-105">메서드</span><span class="sxs-lookup"><span data-stu-id="d843a-105">Methods</span></span>  
- <span data-ttu-id="d843a-106">Contract 클래스는 메서드를 정의하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="d843a-106">The Contract class does not define any methods.</span></span>  
+## <a name="methods"></a><span data-ttu-id="d9616-105">메서드</span><span class="sxs-lookup"><span data-stu-id="d9616-105">Methods</span></span>  
+ <span data-ttu-id="d9616-106">Contract 클래스는 메서드를 정의하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="d9616-106">The Contract class does not define any methods.</span></span>  
   
-## <a name="properties"></a><span data-ttu-id="d843a-107">속성</span><span class="sxs-lookup"><span data-stu-id="d843a-107">Properties</span></span>  
- <span data-ttu-id="d843a-108">Contract 클래스에는 다음 속성이 있습니다.</span><span class="sxs-lookup"><span data-stu-id="d843a-108">The Contract class has the following properties:</span></span>  
+## <a name="properties"></a><span data-ttu-id="d9616-107">속성</span><span class="sxs-lookup"><span data-stu-id="d9616-107">Properties</span></span>  
+ <span data-ttu-id="d9616-108">Contract 클래스에는 다음 속성이 있습니다.</span><span class="sxs-lookup"><span data-stu-id="d9616-108">The Contract class has the following properties:</span></span>  
   
-### <a name="appdomainid"></a><span data-ttu-id="d843a-109">AppDomainId</span><span class="sxs-lookup"><span data-stu-id="d843a-109">AppDomainId</span></span>  
- <span data-ttu-id="d843a-110">데이터 형식: sint32</span><span class="sxs-lookup"><span data-stu-id="d843a-110">Data type: sint32</span></span>  
+### <a name="appdomainid"></a><span data-ttu-id="d9616-109">AppDomainId</span><span class="sxs-lookup"><span data-stu-id="d9616-109">AppDomainId</span></span>  
+ <span data-ttu-id="d9616-110">데이터 형식: sint32</span><span class="sxs-lookup"><span data-stu-id="d9616-110">Data type: sint32</span></span>  
   
- <span data-ttu-id="d843a-111">액세스 형식: 읽기 전용</span><span class="sxs-lookup"><span data-stu-id="d843a-111">Access type: Read-only</span></span>  
+ <span data-ttu-id="d9616-111">액세스 형식: 읽기 전용</span><span class="sxs-lookup"><span data-stu-id="d9616-111">Access type: Read-only</span></span>  
   
- <span data-ttu-id="d843a-112">계약을 호스팅하는 appdomain의 appdomain ID입니다.</span><span class="sxs-lookup"><span data-stu-id="d843a-112">The appdomain id of the appdomain that hosts the contract.</span></span>  
+ <span data-ttu-id="d9616-112">계약을 호스팅하는 appdomain의 appdomain ID입니다.</span><span class="sxs-lookup"><span data-stu-id="d9616-112">The appdomain id of the appdomain that hosts the contract.</span></span>  
   
-### <a name="behaviors"></a><span data-ttu-id="d843a-113">동작</span><span class="sxs-lookup"><span data-stu-id="d843a-113">Behaviors</span></span>  
- <span data-ttu-id="d843a-114">데이터 형식: 동작 배열</span><span class="sxs-lookup"><span data-stu-id="d843a-114">Data type: Behavior array</span></span>  
+### <a name="behaviors"></a><span data-ttu-id="d9616-113">동작</span><span class="sxs-lookup"><span data-stu-id="d9616-113">Behaviors</span></span>  
+ <span data-ttu-id="d9616-114">데이터 형식: 동작 배열</span><span class="sxs-lookup"><span data-stu-id="d9616-114">Data type: Behavior array</span></span>  
   
- <span data-ttu-id="d843a-115">액세스 형식: 읽기 전용</span><span class="sxs-lookup"><span data-stu-id="d843a-115">Access type: Read-only</span></span>  
+ <span data-ttu-id="d9616-115">액세스 형식: 읽기 전용</span><span class="sxs-lookup"><span data-stu-id="d9616-115">Access type: Read-only</span></span>  
   
- <span data-ttu-id="d843a-116">이 계약과 연결된 동작입니다.</span><span class="sxs-lookup"><span data-stu-id="d843a-116">The behaviors associated with this contract.</span></span>  
+ <span data-ttu-id="d9616-116">이 계약과 연결된 동작입니다.</span><span class="sxs-lookup"><span data-stu-id="d9616-116">The behaviors associated with this contract.</span></span>  
   
-### <a name="name"></a><span data-ttu-id="d843a-117">이름</span><span class="sxs-lookup"><span data-stu-id="d843a-117">Name</span></span>  
- <span data-ttu-id="d843a-118">데이터 형식: string</span><span class="sxs-lookup"><span data-stu-id="d843a-118">Data type: string</span></span>  
+### <a name="name"></a><span data-ttu-id="d9616-117">이름</span><span class="sxs-lookup"><span data-stu-id="d9616-117">Name</span></span>  
+ <span data-ttu-id="d9616-118">데이터 형식: string</span><span class="sxs-lookup"><span data-stu-id="d9616-118">Data type: string</span></span>  
   
- <span data-ttu-id="d843a-119">액세스 형식: 읽기 전용</span><span class="sxs-lookup"><span data-stu-id="d843a-119">Access type: Read-only</span></span>  
+ <span data-ttu-id="d9616-119">액세스 형식: 읽기 전용</span><span class="sxs-lookup"><span data-stu-id="d9616-119">Access type: Read-only</span></span>  
   
- <span data-ttu-id="d843a-120">WSDL에 있는 계약의 이름입니다.</span><span class="sxs-lookup"><span data-stu-id="d843a-120">The name of the contract in WSDL.</span></span>  
+ <span data-ttu-id="d9616-120">WSDL에 있는 계약의 이름입니다.</span><span class="sxs-lookup"><span data-stu-id="d9616-120">The name of the contract in WSDL.</span></span>  
   
-### <a name="namespace"></a><span data-ttu-id="d843a-121">네임스페이스</span><span class="sxs-lookup"><span data-stu-id="d843a-121">Namespace</span></span>  
- <span data-ttu-id="d843a-122">데이터 형식: string</span><span class="sxs-lookup"><span data-stu-id="d843a-122">Data type: string</span></span>  
+### <a name="namespace"></a><span data-ttu-id="d9616-121">네임스페이스</span><span class="sxs-lookup"><span data-stu-id="d9616-121">Namespace</span></span>  
+ <span data-ttu-id="d9616-122">데이터 형식: string</span><span class="sxs-lookup"><span data-stu-id="d9616-122">Data type: string</span></span>  
   
- <span data-ttu-id="d843a-123">액세스 형식: 읽기 전용</span><span class="sxs-lookup"><span data-stu-id="d843a-123">Access type: Read-only</span></span>  
+ <span data-ttu-id="d9616-123">액세스 형식: 읽기 전용</span><span class="sxs-lookup"><span data-stu-id="d9616-123">Access type: Read-only</span></span>  
   
- <span data-ttu-id="d843a-124">WSDL에 있는 `portType` 요소의 네임스페이스입니다.</span><span class="sxs-lookup"><span data-stu-id="d843a-124">The namespace of the `portType` element in WSDL.</span></span>  
+ <span data-ttu-id="d9616-124">WSDL에 있는 `portType` 요소의 네임스페이스입니다.</span><span class="sxs-lookup"><span data-stu-id="d9616-124">The namespace of the `portType` element in WSDL.</span></span>  
   
-### <a name="operations"></a><span data-ttu-id="d843a-125">작업</span><span class="sxs-lookup"><span data-stu-id="d843a-125">Operations</span></span>  
- <span data-ttu-id="d843a-126">데이터 형식: 작업 배열</span><span class="sxs-lookup"><span data-stu-id="d843a-126">Data type: Operation array</span></span>  
+### <a name="operations"></a><span data-ttu-id="d9616-125">작업</span><span class="sxs-lookup"><span data-stu-id="d9616-125">Operations</span></span>  
+ <span data-ttu-id="d9616-126">데이터 형식: 작업 배열</span><span class="sxs-lookup"><span data-stu-id="d9616-126">Data type: Operation array</span></span>  
   
- <span data-ttu-id="d843a-127">액세스 형식: 읽기 전용</span><span class="sxs-lookup"><span data-stu-id="d843a-127">Access type: Read-only</span></span>  
+ <span data-ttu-id="d9616-127">액세스 형식: 읽기 전용</span><span class="sxs-lookup"><span data-stu-id="d9616-127">Access type: Read-only</span></span>  
   
- <span data-ttu-id="d843a-128">이 계약의 작업입니다.</span><span class="sxs-lookup"><span data-stu-id="d843a-128">The operations of this contract.</span></span>  
+ <span data-ttu-id="d9616-128">이 계약의 작업입니다.</span><span class="sxs-lookup"><span data-stu-id="d9616-128">The operations of this contract.</span></span>  
   
-### <a name="processid"></a><span data-ttu-id="d843a-129">ProcessId</span><span class="sxs-lookup"><span data-stu-id="d843a-129">ProcessId</span></span>  
- <span data-ttu-id="d843a-130">데이터 형식: sint32</span><span class="sxs-lookup"><span data-stu-id="d843a-130">Data type: sint32</span></span>  
+### <a name="processid"></a><span data-ttu-id="d9616-129">ProcessId</span><span class="sxs-lookup"><span data-stu-id="d9616-129">ProcessId</span></span>  
+ <span data-ttu-id="d9616-130">데이터 형식: sint32</span><span class="sxs-lookup"><span data-stu-id="d9616-130">Data type: sint32</span></span>  
   
- <span data-ttu-id="d843a-131">액세스 형식: 읽기 전용</span><span class="sxs-lookup"><span data-stu-id="d843a-131">Access type: Read-only</span></span>  
+ <span data-ttu-id="d9616-131">액세스 형식: 읽기 전용</span><span class="sxs-lookup"><span data-stu-id="d9616-131">Access type: Read-only</span></span>  
   
- <span data-ttu-id="d843a-132">계약을 호스팅하는 프로세스의 프로세스 ID입니다.</span><span class="sxs-lookup"><span data-stu-id="d843a-132">The process Id of the process that hosts the contract.</span></span>  
+ <span data-ttu-id="d9616-132">계약을 호스팅하는 프로세스의 프로세스 ID입니다.</span><span class="sxs-lookup"><span data-stu-id="d9616-132">The process Id of the process that hosts the contract.</span></span>  
   
-### <a name="ref"></a><span data-ttu-id="d843a-133">ref</span><span class="sxs-lookup"><span data-stu-id="d843a-133">ref</span></span>  
- <span data-ttu-id="d843a-134">데이터 형식: 계약</span><span class="sxs-lookup"><span data-stu-id="d843a-134">Data type: Contract</span></span>  
+### <a name="ref"></a><span data-ttu-id="d9616-133">ref</span><span class="sxs-lookup"><span data-stu-id="d9616-133">ref</span></span>  
+ <span data-ttu-id="d9616-134">데이터 형식: 계약</span><span class="sxs-lookup"><span data-stu-id="d9616-134">Data type: Contract</span></span>  
   
- <span data-ttu-id="d843a-135">액세스 형식: 읽기 전용</span><span class="sxs-lookup"><span data-stu-id="d843a-135">Access type: Read-only</span></span>  
+ <span data-ttu-id="d9616-135">액세스 형식: 읽기 전용</span><span class="sxs-lookup"><span data-stu-id="d9616-135">Access type: Read-only</span></span>  
   
- <span data-ttu-id="d843a-136">계약이 이중 계약인 경우 콜백의 형식입니다.</span><span class="sxs-lookup"><span data-stu-id="d843a-136">The type of callback when the contract is a duplex contract.</span></span>  
+ <span data-ttu-id="d9616-136">계약이 이중 계약인 경우 콜백의 형식입니다.</span><span class="sxs-lookup"><span data-stu-id="d9616-136">The type of callback when the contract is a duplex contract.</span></span>  
   
-### <a name="sessionmode"></a><span data-ttu-id="d843a-137">SessionMode</span><span class="sxs-lookup"><span data-stu-id="d843a-137">SessionMode</span></span>  
- <span data-ttu-id="d843a-138">데이터 형식: string</span><span class="sxs-lookup"><span data-stu-id="d843a-138">Data type: string</span></span>  
+### <a name="sessionmode"></a><span data-ttu-id="d9616-137">SessionMode</span><span class="sxs-lookup"><span data-stu-id="d9616-137">SessionMode</span></span>  
+ <span data-ttu-id="d9616-138">데이터 형식: string</span><span class="sxs-lookup"><span data-stu-id="d9616-138">Data type: string</span></span>  
   
- <span data-ttu-id="d843a-139">액세스 형식: 읽기 전용</span><span class="sxs-lookup"><span data-stu-id="d843a-139">Access type: Read-only</span></span>  
+ <span data-ttu-id="d9616-139">액세스 형식: 읽기 전용</span><span class="sxs-lookup"><span data-stu-id="d9616-139">Access type: Read-only</span></span>  
   
- <span data-ttu-id="d843a-140">계약에서 채널 세션을 사용하기 위해 이 계약과 연결된 바인딩이 필요한지 여부를 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="d843a-140">Indicates whether the contract requires the binding associated with this contract to use channel sessions.</span></span>  
+ <span data-ttu-id="d9616-140">계약에서 채널 세션을 사용하기 위해 이 계약과 연결된 바인딩이 필요한지 여부를 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="d9616-140">Indicates whether the contract requires the binding associated with this contract to use channel sessions.</span></span>  
   
-### <a name="type"></a><span data-ttu-id="d843a-141">형식</span><span class="sxs-lookup"><span data-stu-id="d843a-141">Type</span></span>  
- <span data-ttu-id="d843a-142">데이터 형식: string</span><span class="sxs-lookup"><span data-stu-id="d843a-142">Data type: string</span></span>  
+### <a name="type"></a><span data-ttu-id="d9616-141">형식</span><span class="sxs-lookup"><span data-stu-id="d9616-141">Type</span></span>  
+ <span data-ttu-id="d9616-142">데이터 형식: string</span><span class="sxs-lookup"><span data-stu-id="d9616-142">Data type: string</span></span>  
   
- <span data-ttu-id="d843a-143">액세스 형식: 읽기 전용</span><span class="sxs-lookup"><span data-stu-id="d843a-143">Access type: Read-only</span></span>  
+ <span data-ttu-id="d9616-143">액세스 형식: 읽기 전용</span><span class="sxs-lookup"><span data-stu-id="d9616-143">Access type: Read-only</span></span>  
   
- <span data-ttu-id="d843a-144">계약의 형식입니다.</span><span class="sxs-lookup"><span data-stu-id="d843a-144">The type of the contract.</span></span>  
+ <span data-ttu-id="d9616-144">계약의 형식입니다.</span><span class="sxs-lookup"><span data-stu-id="d9616-144">The type of the contract.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="d843a-145">요구 사항</span><span class="sxs-lookup"><span data-stu-id="d843a-145">Requirements</span></span>  
+## <a name="requirements"></a><span data-ttu-id="d9616-145">요구 사항</span><span class="sxs-lookup"><span data-stu-id="d9616-145">Requirements</span></span>  
   
-|<span data-ttu-id="d843a-146">MOF</span><span class="sxs-lookup"><span data-stu-id="d843a-146">MOF</span></span>|<span data-ttu-id="d843a-147">Servicemodel.mof에 선언되어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="d843a-147">Declared in Servicemodel.mof.</span></span>|  
+|<span data-ttu-id="d9616-146">MOF</span><span class="sxs-lookup"><span data-stu-id="d9616-146">MOF</span></span>|<span data-ttu-id="d9616-147">Servicemodel.mof에 선언되어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="d9616-147">Declared in Servicemodel.mof.</span></span>|  
 |---------|-----------------------------------|  
-|<span data-ttu-id="d843a-148">네임스페이스</span><span class="sxs-lookup"><span data-stu-id="d843a-148">Namespace</span></span>|<span data-ttu-id="d843a-149">root\ServiceModel에 정의되어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="d843a-149">Defined in root\ServiceModel</span></span>|  
+|<span data-ttu-id="d9616-148">네임스페이스</span><span class="sxs-lookup"><span data-stu-id="d9616-148">Namespace</span></span>|<span data-ttu-id="d9616-149">root\ServiceModel에 정의되어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="d9616-149">Defined in root\ServiceModel</span></span>|  
   
-## <a name="see-also"></a><span data-ttu-id="d843a-150">참고자료</span><span class="sxs-lookup"><span data-stu-id="d843a-150">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="d9616-150">참고자료</span><span class="sxs-lookup"><span data-stu-id="d9616-150">See also</span></span>
+
 - <xref:System.ServiceModel.Description.ContractDescription>

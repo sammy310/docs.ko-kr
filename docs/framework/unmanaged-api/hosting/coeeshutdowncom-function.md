@@ -20,38 +20,39 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d990d63a007240ab0bd0240f7b45fed52e2a2129
-ms.sourcegitcommit: 79066169e93d9d65203028b21983574ad9dcf6b4
+ms.openlocfilehash: 8ddef35b1b707cc5c962402e880923dca7d4d9d6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57212250"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59208152"
 ---
-# <a name="coeeshutdowncom-function"></a><span data-ttu-id="6b5bc-102">CoEEShutDownCOM 함수</span><span class="sxs-lookup"><span data-stu-id="6b5bc-102">CoEEShutDownCOM Function</span></span>
-<span data-ttu-id="6b5bc-103">CLR (공용 언어 런타임) 런타임 호출 가능 래퍼 (RCW) 내에서 보유 하는 모든 인터페이스 포인터가 해제 되도록 합니다.</span><span class="sxs-lookup"><span data-stu-id="6b5bc-103">Forces the common language runtime (CLR) to release all interface pointers it holds inside runtime callable wrappers (RCW).</span></span> <span data-ttu-id="6b5bc-104">이 효과가 모든 RCW 캐시를 해제 합니다.</span><span class="sxs-lookup"><span data-stu-id="6b5bc-104">This has the effect of releasing all RCW caches.</span></span> <span data-ttu-id="6b5bc-105">이 전역 함수에서 사용 되지 않습니다는 [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)]합니다.</span><span class="sxs-lookup"><span data-stu-id="6b5bc-105">This global function is deprecated in the [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)].</span></span> <span data-ttu-id="6b5bc-106">대신, 특정 런타임에 대 한 진입점을 사용 합니다.</span><span class="sxs-lookup"><span data-stu-id="6b5bc-106">Instead, use the entry point for a specific runtime.</span></span>  
+# <a name="coeeshutdowncom-function"></a><span data-ttu-id="f8c77-102">CoEEShutDownCOM 함수</span><span class="sxs-lookup"><span data-stu-id="f8c77-102">CoEEShutDownCOM Function</span></span>
+<span data-ttu-id="f8c77-103">CLR (공용 언어 런타임) 런타임 호출 가능 래퍼 (RCW) 내에서 보유 하는 모든 인터페이스 포인터가 해제 되도록 합니다.</span><span class="sxs-lookup"><span data-stu-id="f8c77-103">Forces the common language runtime (CLR) to release all interface pointers it holds inside runtime callable wrappers (RCW).</span></span> <span data-ttu-id="f8c77-104">이 효과가 모든 RCW 캐시를 해제 합니다.</span><span class="sxs-lookup"><span data-stu-id="f8c77-104">This has the effect of releasing all RCW caches.</span></span> <span data-ttu-id="f8c77-105">이 전역 함수에서 사용 되지 않습니다는 [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)]합니다.</span><span class="sxs-lookup"><span data-stu-id="f8c77-105">This global function is deprecated in the [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)].</span></span> <span data-ttu-id="f8c77-106">대신, 특정 런타임에 대 한 진입점을 사용 합니다.</span><span class="sxs-lookup"><span data-stu-id="f8c77-106">Instead, use the entry point for a specific runtime.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="6b5bc-107">구문</span><span class="sxs-lookup"><span data-stu-id="6b5bc-107">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="f8c77-107">구문</span><span class="sxs-lookup"><span data-stu-id="f8c77-107">Syntax</span></span>  
   
 ```  
 void CoEEShutDownCOM ();  
 ```  
   
-## <a name="remarks"></a><span data-ttu-id="6b5bc-108">설명</span><span class="sxs-lookup"><span data-stu-id="6b5bc-108">Remarks</span></span>  
- <span data-ttu-id="6b5bc-109">`CoEEShutDownCOM` 함수는 먼저 모든 컨텍스트 및 모든 캐시에 있는 모든 Rcw를 해제 하 고 다음 설치 프로그램에서 기존의 모든 중지 알림을 제거 합니다.</span><span class="sxs-lookup"><span data-stu-id="6b5bc-109">The `CoEEShutDownCOM` function first releases all the RCWs in all contexts and in all caches, and then removes any tear-down notification existing in setup.</span></span> <span data-ttu-id="6b5bc-110">DLL 언로드 없습니다 발생합니다.</span><span class="sxs-lookup"><span data-stu-id="6b5bc-110">No DLL unloading occurs.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="f8c77-108">설명</span><span class="sxs-lookup"><span data-stu-id="f8c77-108">Remarks</span></span>  
+ <span data-ttu-id="f8c77-109">`CoEEShutDownCOM` 함수는 먼저 모든 컨텍스트 및 모든 캐시에 있는 모든 Rcw를 해제 하 고 다음 설치 프로그램에서 기존의 모든 중지 알림을 제거 합니다.</span><span class="sxs-lookup"><span data-stu-id="f8c77-109">The `CoEEShutDownCOM` function first releases all the RCWs in all contexts and in all caches, and then removes any tear-down notification existing in setup.</span></span> <span data-ttu-id="f8c77-110">DLL 언로드 없습니다 발생합니다.</span><span class="sxs-lookup"><span data-stu-id="f8c77-110">No DLL unloading occurs.</span></span>  
   
 > [!CAUTION]
->  <span data-ttu-id="6b5bc-111">이 함수는 모든 런타임을 프로세스로 로드 되는 영향을 줍니다.</span><span class="sxs-lookup"><span data-stu-id="6b5bc-111">This function affects all runtimes that are loaded into the process.</span></span>  
+>  <span data-ttu-id="f8c77-111">이 함수는 모든 런타임을 프로세스로 로드 되는 영향을 줍니다.</span><span class="sxs-lookup"><span data-stu-id="f8c77-111">This function affects all runtimes that are loaded into the process.</span></span>  
   
- <span data-ttu-id="6b5bc-112">부터는 [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)], 영향을 주려는 특정 런타임에서이 함수에 대 한 진입점을 호출 합니다.</span><span class="sxs-lookup"><span data-stu-id="6b5bc-112">Beginning with the [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)], call the entry point for this function on the specific runtime you want to affect.</span></span> <span data-ttu-id="6b5bc-113">진입점을 가져오려면 호출 합니다 [iclrruntimeinfo:: Getprocaddress](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-getprocaddress-method.md) 메서드 "CoEEShutDownCOM"를 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="6b5bc-113">To get the entry point, call the [ICLRRuntimeInfo::GetProcAddress](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-getprocaddress-method.md) method and specify "CoEEShutDownCOM".</span></span>  
+ <span data-ttu-id="f8c77-112">부터는 [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)], 영향을 주려는 특정 런타임에서이 함수에 대 한 진입점을 호출 합니다.</span><span class="sxs-lookup"><span data-stu-id="f8c77-112">Beginning with the [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)], call the entry point for this function on the specific runtime you want to affect.</span></span> <span data-ttu-id="f8c77-113">진입점을 가져오려면 호출 합니다 [iclrruntimeinfo:: Getprocaddress](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-getprocaddress-method.md) 메서드 "CoEEShutDownCOM"를 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="f8c77-113">To get the entry point, call the [ICLRRuntimeInfo::GetProcAddress](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-getprocaddress-method.md) method and specify "CoEEShutDownCOM".</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="6b5bc-114">요구 사항</span><span class="sxs-lookup"><span data-stu-id="6b5bc-114">Requirements</span></span>  
- <span data-ttu-id="6b5bc-115">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="6b5bc-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="f8c77-114">요구 사항</span><span class="sxs-lookup"><span data-stu-id="f8c77-114">Requirements</span></span>  
+ <span data-ttu-id="f8c77-115">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="f8c77-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="6b5bc-116">**헤더:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="6b5bc-116">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="f8c77-116">**헤더:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="f8c77-116">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="6b5bc-117">**라이브러리:** MsCorEE.dll에 리소스로 포함</span><span class="sxs-lookup"><span data-stu-id="6b5bc-117">**Library:** Included as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="f8c77-117">**라이브러리:** MsCorEE.dll에 리소스로 포함</span><span class="sxs-lookup"><span data-stu-id="f8c77-117">**Library:** Included as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="6b5bc-118">**.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="6b5bc-118">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ **<span data-ttu-id="f8c77-118">.NET Framework 버전:</span><span class="sxs-lookup"><span data-stu-id="f8c77-118">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="6b5bc-119">참고자료</span><span class="sxs-lookup"><span data-stu-id="6b5bc-119">See also</span></span>
-- [<span data-ttu-id="6b5bc-120">메타데이터 전역 정적 함수</span><span class="sxs-lookup"><span data-stu-id="6b5bc-120">Metadata Global Static Functions</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-global-static-functions.md)
+## <a name="see-also"></a><span data-ttu-id="f8c77-119">참고자료</span><span class="sxs-lookup"><span data-stu-id="f8c77-119">See also</span></span>
+
+- [<span data-ttu-id="f8c77-120">메타데이터 전역 정적 함수</span><span class="sxs-lookup"><span data-stu-id="f8c77-120">Metadata Global Static Functions</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-global-static-functions.md)

@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5bb5586271c252879b503dd093c88380197d5bce
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: e32af790c755f65b5435455c326d011656da19ed
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57479729"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59198376"
 ---
-# <a name="icorprofilercallbackassemblyloadfinished-method"></a><span data-ttu-id="ad8a3-102">ICorProfilerCallback::AssemblyLoadFinished 메서드</span><span class="sxs-lookup"><span data-stu-id="ad8a3-102">ICorProfilerCallback::AssemblyLoadFinished Method</span></span>
-<span data-ttu-id="ad8a3-103">어셈블리 로드 되었음을 프로파일러에 알립니다.</span><span class="sxs-lookup"><span data-stu-id="ad8a3-103">Notifies the profiler that an assembly has finished loading.</span></span>  
+# <a name="icorprofilercallbackassemblyloadfinished-method"></a><span data-ttu-id="187a5-102">ICorProfilerCallback::AssemblyLoadFinished 메서드</span><span class="sxs-lookup"><span data-stu-id="187a5-102">ICorProfilerCallback::AssemblyLoadFinished Method</span></span>
+<span data-ttu-id="187a5-103">어셈블리 로드 되었음을 프로파일러에 알립니다.</span><span class="sxs-lookup"><span data-stu-id="187a5-103">Notifies the profiler that an assembly has finished loading.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="ad8a3-104">구문</span><span class="sxs-lookup"><span data-stu-id="ad8a3-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="187a5-104">구문</span><span class="sxs-lookup"><span data-stu-id="187a5-104">Syntax</span></span>  
   
 ```  
 HRESULT AssemblyLoadFinished(  
@@ -35,26 +35,27 @@ HRESULT AssemblyLoadFinished(
     [in] HRESULT    hrStatus);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="ad8a3-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="ad8a3-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="187a5-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="187a5-105">Parameters</span></span>  
  `assemblyId`  
- <span data-ttu-id="ad8a3-106">[in] 로드 된 어셈블리를 식별 합니다.</span><span class="sxs-lookup"><span data-stu-id="ad8a3-106">[in] Identifies the assembly that was loaded.</span></span>  
+ <span data-ttu-id="187a5-106">[in] 로드 된 어셈블리를 식별 합니다.</span><span class="sxs-lookup"><span data-stu-id="187a5-106">[in] Identifies the assembly that was loaded.</span></span>  
   
  `hrStatus`  
- <span data-ttu-id="ad8a3-107">[in] 어셈블리 로딩을 성공적으로 완료 여부를 나타내는 HRESULT입니다.</span><span class="sxs-lookup"><span data-stu-id="ad8a3-107">[in] An HRESULT that indicates whether the assembly finished loading successfully.</span></span>  
+ <span data-ttu-id="187a5-107">[in] 어셈블리 로딩을 성공적으로 완료 여부를 나타내는 HRESULT입니다.</span><span class="sxs-lookup"><span data-stu-id="187a5-107">[in] An HRESULT that indicates whether the assembly finished loading successfully.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="ad8a3-108">설명</span><span class="sxs-lookup"><span data-stu-id="ad8a3-108">Remarks</span></span>  
- <span data-ttu-id="ad8a3-109">값 `assemblyId` 될 때까지 정보 요청에 적합 하지 않습니다는 `AssemblyLoadFinished` 메서드가 호출 됩니다.</span><span class="sxs-lookup"><span data-stu-id="ad8a3-109">The value of `assemblyId` is not valid for an information request until the `AssemblyLoadFinished` method is called.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="187a5-108">설명</span><span class="sxs-lookup"><span data-stu-id="187a5-108">Remarks</span></span>  
+ <span data-ttu-id="187a5-109">값 `assemblyId` 될 때까지 정보 요청에 적합 하지 않습니다는 `AssemblyLoadFinished` 메서드가 호출 됩니다.</span><span class="sxs-lookup"><span data-stu-id="187a5-109">The value of `assemblyId` is not valid for an information request until the `AssemblyLoadFinished` method is called.</span></span>  
   
- <span data-ttu-id="ad8a3-110">일부 어셈블리를 로드 한 후 계속 사용할 수는 `AssemblyLoadFinished` 콜백 합니다.</span><span class="sxs-lookup"><span data-stu-id="ad8a3-110">Some parts of loading the assembly might continue after the `AssemblyLoadFinished` callback.</span></span> <span data-ttu-id="ad8a3-111">오류 HRESULT에서 `hrStatus` 오류가 발생 했음을 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="ad8a3-111">A failure HRESULT in `hrStatus` indicates a failure.</span></span> <span data-ttu-id="ad8a3-112">그러나 성공 HRESULT에서 `hrStatus` 어셈블리 로드에 대 한 첫 번째 부분 성공 했다는 것만 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="ad8a3-112">However, a success HRESULT in `hrStatus` indicates only that the first part of loading the assembly has succeeded.</span></span>  
+ <span data-ttu-id="187a5-110">일부 어셈블리를 로드 한 후 계속 사용할 수는 `AssemblyLoadFinished` 콜백 합니다.</span><span class="sxs-lookup"><span data-stu-id="187a5-110">Some parts of loading the assembly might continue after the `AssemblyLoadFinished` callback.</span></span> <span data-ttu-id="187a5-111">오류 HRESULT에서 `hrStatus` 오류가 발생 했음을 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="187a5-111">A failure HRESULT in `hrStatus` indicates a failure.</span></span> <span data-ttu-id="187a5-112">그러나 성공 HRESULT에서 `hrStatus` 어셈블리 로드에 대 한 첫 번째 부분 성공 했다는 것만 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="187a5-112">However, a success HRESULT in `hrStatus` indicates only that the first part of loading the assembly has succeeded.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="ad8a3-113">요구 사항</span><span class="sxs-lookup"><span data-stu-id="ad8a3-113">Requirements</span></span>  
- <span data-ttu-id="ad8a3-114">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="ad8a3-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="187a5-113">요구 사항</span><span class="sxs-lookup"><span data-stu-id="187a5-113">Requirements</span></span>  
+ <span data-ttu-id="187a5-114">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="187a5-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="ad8a3-115">**헤더:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="ad8a3-115">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="187a5-115">**헤더:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="187a5-115">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="ad8a3-116">**라이브러리:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="ad8a3-116">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="187a5-116">**라이브러리:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="187a5-116">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="ad8a3-117">**.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="ad8a3-117">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ **<span data-ttu-id="187a5-117">.NET Framework 버전:</span><span class="sxs-lookup"><span data-stu-id="187a5-117">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="ad8a3-118">참고자료</span><span class="sxs-lookup"><span data-stu-id="ad8a3-118">See also</span></span>
-- [<span data-ttu-id="ad8a3-119">ICorProfilerCallback 인터페이스</span><span class="sxs-lookup"><span data-stu-id="ad8a3-119">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+## <a name="see-also"></a><span data-ttu-id="187a5-118">참고자료</span><span class="sxs-lookup"><span data-stu-id="187a5-118">See also</span></span>
+
+- [<span data-ttu-id="187a5-119">ICorProfilerCallback 인터페이스</span><span class="sxs-lookup"><span data-stu-id="187a5-119">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)

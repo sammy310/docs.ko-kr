@@ -2,52 +2,53 @@
 title: BETWEEN(Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 4dcdd754-ae01-4e78-bf28-8a117fb2b73e
-ms.openlocfilehash: cface8ab50e53f21293ad54ea6961c7e308080b3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 2c411fd7fcac9d98323d5fcfb1874f98bc664991
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54690694"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59225263"
 ---
-# <a name="between-entity-sql"></a><span data-ttu-id="0d6d8-102">BETWEEN(Entity SQL)</span><span class="sxs-lookup"><span data-stu-id="0d6d8-102">BETWEEN (Entity SQL)</span></span>
-<span data-ttu-id="0d6d8-103">식의 결과 값이 지정된 범위에 속하는지 여부를 결정합니다.</span><span class="sxs-lookup"><span data-stu-id="0d6d8-103">Determines whether an expression results in a value in a specified range.</span></span> <span data-ttu-id="0d6d8-104">[!INCLUDE[esql](../../../../../../includes/esql-md.md)] BETWEEN 식의 기능은 Transact-SQL BETWEEN 식의 기능과 동일합니다.</span><span class="sxs-lookup"><span data-stu-id="0d6d8-104">The [!INCLUDE[esql](../../../../../../includes/esql-md.md)] BETWEEN expression has the same functionality as the Transact-SQL BETWEEN expression.</span></span>  
+# <a name="between-entity-sql"></a><span data-ttu-id="61ad4-102">BETWEEN(Entity SQL)</span><span class="sxs-lookup"><span data-stu-id="61ad4-102">BETWEEN (Entity SQL)</span></span>
+<span data-ttu-id="61ad4-103">식의 결과 값이 지정된 범위에 속하는지 여부를 결정합니다.</span><span class="sxs-lookup"><span data-stu-id="61ad4-103">Determines whether an expression results in a value in a specified range.</span></span> <span data-ttu-id="61ad4-104">[!INCLUDE[esql](../../../../../../includes/esql-md.md)] BETWEEN 식의 기능은 Transact-SQL BETWEEN 식의 기능과 동일합니다.</span><span class="sxs-lookup"><span data-stu-id="61ad4-104">The [!INCLUDE[esql](../../../../../../includes/esql-md.md)] BETWEEN expression has the same functionality as the Transact-SQL BETWEEN expression.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="0d6d8-105">구문</span><span class="sxs-lookup"><span data-stu-id="0d6d8-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="61ad4-105">구문</span><span class="sxs-lookup"><span data-stu-id="61ad4-105">Syntax</span></span>  
   
 ```  
 expression [ NOT ] BETWEEN begin_expression AND end_expression    
 ```  
   
-## <a name="arguments"></a><span data-ttu-id="0d6d8-106">인수</span><span class="sxs-lookup"><span data-stu-id="0d6d8-106">Arguments</span></span>  
+## <a name="arguments"></a><span data-ttu-id="61ad4-106">인수</span><span class="sxs-lookup"><span data-stu-id="61ad4-106">Arguments</span></span>  
  `expression`  
- <span data-ttu-id="0d6d8-107">`begin_expression`과 `end_expression`으로 정의된 범위 내에서 테스트할 모든 유효한 식입니다.</span><span class="sxs-lookup"><span data-stu-id="0d6d8-107">Any valid expression to test for in the range defined by `begin_expression` and `end_expression`.</span></span> <span data-ttu-id="0d6d8-108">`expression`의 형식은 `begin_expression`과 `end_expression` 두 가지 모두의 형식과 같아야 합니다.</span><span class="sxs-lookup"><span data-stu-id="0d6d8-108">`expression` must be the same type as both `begin_expression` and `end_expression`.</span></span>  
+ <span data-ttu-id="61ad4-107">`begin_expression`과 `end_expression`으로 정의된 범위 내에서 테스트할 모든 유효한 식입니다.</span><span class="sxs-lookup"><span data-stu-id="61ad4-107">Any valid expression to test for in the range defined by `begin_expression` and `end_expression`.</span></span> `expression` <span data-ttu-id="61ad4-108">두 가지 모두 동일한 형식 이어야 합니다 `begin_expression` 고 `end_expression`입니다.</span><span class="sxs-lookup"><span data-stu-id="61ad4-108">must be the same type as both `begin_expression` and `end_expression`.</span></span>  
   
  `begin_expression`  
- <span data-ttu-id="0d6d8-109">모든 유효한 식입니다.</span><span class="sxs-lookup"><span data-stu-id="0d6d8-109">Any valid expression.</span></span> <span data-ttu-id="0d6d8-110">`begin_expression`의 형식은 `expression`과 `end_expression` 두 가지 모두의 형식과 같아야 합니다.</span><span class="sxs-lookup"><span data-stu-id="0d6d8-110">`begin_expression` must be the same type as both `expression` and `end_expression`.</span></span> <span data-ttu-id="0d6d8-111">`begin_expression`은 `end_expression`보다 작아야 합니다. 그렇지 않으면 반환 값이 무효화됩니다.</span><span class="sxs-lookup"><span data-stu-id="0d6d8-111">`begin_expression` should be less than `end_expression`, else the return value will be negated.</span></span>  
+ <span data-ttu-id="61ad4-109">모든 유효한 식입니다.</span><span class="sxs-lookup"><span data-stu-id="61ad4-109">Any valid expression.</span></span> `begin_expression` <span data-ttu-id="61ad4-110">두 가지 모두 동일한 형식 이어야 합니다 `expression` 고 `end_expression`입니다.</span><span class="sxs-lookup"><span data-stu-id="61ad4-110">must be the same type as both `expression` and `end_expression`.</span></span> `begin_expression` <span data-ttu-id="61ad4-111">해야 미만 `end_expression`, 그렇지 않으면 반환 값이 무효화 됩니다.</span><span class="sxs-lookup"><span data-stu-id="61ad4-111">should be less than `end_expression`, else the return value will be negated.</span></span>  
   
  `end_expression`  
- <span data-ttu-id="0d6d8-112">모든 유효한 식입니다.</span><span class="sxs-lookup"><span data-stu-id="0d6d8-112">Any valid expression.</span></span> <span data-ttu-id="0d6d8-113">`end_expression`의 형식은 `expression`과 `begin_expression` 두 가지 모두의 형식과 같아야 합니다.</span><span class="sxs-lookup"><span data-stu-id="0d6d8-113">`end_expression` must be the same type as both `expression` and `begin_expression`.</span></span>  
+ <span data-ttu-id="61ad4-112">모든 유효한 식입니다.</span><span class="sxs-lookup"><span data-stu-id="61ad4-112">Any valid expression.</span></span> `end_expression` <span data-ttu-id="61ad4-113">두 가지 모두 동일한 형식 이어야 합니다 `expression` 고 `begin_expression`입니다.</span><span class="sxs-lookup"><span data-stu-id="61ad4-113">must be the same type as both `expression` and `begin_expression`.</span></span>  
   
- <span data-ttu-id="0d6d8-114">NOT</span><span class="sxs-lookup"><span data-stu-id="0d6d8-114">NOT</span></span>  
- <span data-ttu-id="0d6d8-115">BETWEEN의 결과를 무효화하도록 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="0d6d8-115">Specifies that the result of BETWEEN be negated.</span></span>  
+ <span data-ttu-id="61ad4-114">NOT</span><span class="sxs-lookup"><span data-stu-id="61ad4-114">NOT</span></span>  
+ <span data-ttu-id="61ad4-115">BETWEEN의 결과를 무효화하도록 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="61ad4-115">Specifies that the result of BETWEEN be negated.</span></span>  
   
- <span data-ttu-id="0d6d8-116">AND</span><span class="sxs-lookup"><span data-stu-id="0d6d8-116">AND</span></span>  
- <span data-ttu-id="0d6d8-117">`expression`이 `begin_expression`과 `end_expression` 범위 내에 있어야 함을 나타내는 자리 표시자 역할을 합니다.</span><span class="sxs-lookup"><span data-stu-id="0d6d8-117">Acts as a placeholder that indicates `expression` should be within the range indicated by `begin_expression` and `end_expression`.</span></span>  
+ <span data-ttu-id="61ad4-116">AND</span><span class="sxs-lookup"><span data-stu-id="61ad4-116">AND</span></span>  
+ <span data-ttu-id="61ad4-117">`expression`이 `begin_expression`과 `end_expression` 범위 내에 있어야 함을 나타내는 자리 표시자 역할을 합니다.</span><span class="sxs-lookup"><span data-stu-id="61ad4-117">Acts as a placeholder that indicates `expression` should be within the range indicated by `begin_expression` and `end_expression`.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="0d6d8-118">반환 값</span><span class="sxs-lookup"><span data-stu-id="0d6d8-118">Return Value</span></span>  
- <span data-ttu-id="0d6d8-119">`true`이 `expression`과 `begin_expression`이 가리키는 범위에 있으면 `end_expression`이고, 그렇지 않으면 `false`입니다.</span><span class="sxs-lookup"><span data-stu-id="0d6d8-119">`true` if `expression` is between the range indicated by `begin_expression` and `end_expression`; otherwise, `false`.</span></span> <span data-ttu-id="0d6d8-120">`null`이 `expression`이거나 `null` 또는 `begin_expression`이 `end_expression`이면 `null`이 반환됩니다.</span><span class="sxs-lookup"><span data-stu-id="0d6d8-120">`null` will be returned if `expression` is `null` or if `begin_expression` or `end_expression` is `null`.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="61ad4-118">반환 값</span><span class="sxs-lookup"><span data-stu-id="61ad4-118">Return Value</span></span>  
+ `true` <span data-ttu-id="61ad4-119">하는 경우 `expression` 범위 사이 `begin_expression` 하 고 `end_expression`이 고, 그렇지 않으면 `false`합니다.</span><span class="sxs-lookup"><span data-stu-id="61ad4-119">if `expression` is between the range indicated by `begin_expression` and `end_expression`; otherwise, `false`.</span></span> `null` <span data-ttu-id="61ad4-120">경우에 반환 됩니다 `expression` 됩니다 `null` 이거나 `begin_expression` 또는 `end_expression` 는 `null`.</span><span class="sxs-lookup"><span data-stu-id="61ad4-120">will be returned if `expression` is `null` or if `begin_expression` or `end_expression` is `null`.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="0d6d8-121">설명</span><span class="sxs-lookup"><span data-stu-id="0d6d8-121">Remarks</span></span>  
- <span data-ttu-id="0d6d8-122">범위에서 해당 시작 값과 끝 값을 제외하려면 BETWEEN 대신 보다 큼(>) 및 보다 작음(<) 연산자를 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="0d6d8-122">To specify an exclusive range, use the greater than (>) and less than (<) operators instead of BETWEEN.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="61ad4-121">설명</span><span class="sxs-lookup"><span data-stu-id="61ad4-121">Remarks</span></span>  
+ <span data-ttu-id="61ad4-122">배타적 범위를 지정 하려면 BETWEEN 대신 보다 큼 (>) 및 미만 (<) 연산자를 사용 합니다.</span><span class="sxs-lookup"><span data-stu-id="61ad4-122">To specify an exclusive range, use the greater than (>) and less than (<) operators instead of BETWEEN.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="0d6d8-123">예제</span><span class="sxs-lookup"><span data-stu-id="0d6d8-123">Example</span></span>  
- <span data-ttu-id="0d6d8-124">다음 Entity SQL 쿼리에서는 BETWEEN 연산자를 사용하여 식의 결과 값이 지정된 범위에 속하는지 여부를 결정합니다.</span><span class="sxs-lookup"><span data-stu-id="0d6d8-124">The following Entity SQL query uses BETWEEN operator to determine whether an expression results in a value in a specified range.</span></span> <span data-ttu-id="0d6d8-125">쿼리는 AdventureWorks Sales 모델을 기반으로 합니다.</span><span class="sxs-lookup"><span data-stu-id="0d6d8-125">The query is based on the AdventureWorks Sales Model.</span></span> <span data-ttu-id="0d6d8-126">이 쿼리를 컴파일하고 실행하려면 다음 단계를 수행하세요.</span><span class="sxs-lookup"><span data-stu-id="0d6d8-126">To compile and run this query, follow these steps:</span></span>  
+## <a name="example"></a><span data-ttu-id="61ad4-123">예제</span><span class="sxs-lookup"><span data-stu-id="61ad4-123">Example</span></span>  
+ <span data-ttu-id="61ad4-124">다음 Entity SQL 쿼리에서는 BETWEEN 연산자를 사용하여 식의 결과 값이 지정된 범위에 속하는지 여부를 결정합니다.</span><span class="sxs-lookup"><span data-stu-id="61ad4-124">The following Entity SQL query uses BETWEEN operator to determine whether an expression results in a value in a specified range.</span></span> <span data-ttu-id="61ad4-125">쿼리는 AdventureWorks Sales 모델을 기반으로 합니다.</span><span class="sxs-lookup"><span data-stu-id="61ad4-125">The query is based on the AdventureWorks Sales Model.</span></span> <span data-ttu-id="61ad4-126">이 쿼리를 컴파일하고 실행하려면 다음 단계를 수행하세요.</span><span class="sxs-lookup"><span data-stu-id="61ad4-126">To compile and run this query, follow these steps:</span></span>  
   
-1.  <span data-ttu-id="0d6d8-127">절차에 따라 [방법: StructuralType 결과 반환 하는 쿼리 실행](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="0d6d8-127">Follow the procedure in [How to: Execute a Query that Returns StructuralType Results](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md).</span></span>  
+1.  <span data-ttu-id="61ad4-127">절차에 따라 [방법: StructuralType 결과 반환 하는 쿼리 실행](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="61ad4-127">Follow the procedure in [How to: Execute a Query that Returns StructuralType Results](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md).</span></span>  
   
-2.  <span data-ttu-id="0d6d8-128">다음 쿼리를 `ExecuteStructuralTypeQuery` 메서드에 인수로 전달합니다.</span><span class="sxs-lookup"><span data-stu-id="0d6d8-128">Pass the following query as an argument to the `ExecuteStructuralTypeQuery` method:</span></span>  
+2.  <span data-ttu-id="61ad4-128">다음 쿼리를 `ExecuteStructuralTypeQuery` 메서드에 인수로 전달합니다.</span><span class="sxs-lookup"><span data-stu-id="61ad4-128">Pass the following query as an argument to the `ExecuteStructuralTypeQuery` method:</span></span>  
   
  [!code-csharp[DP EntityServices Concepts 2#BETWEEN](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#between)]  
   
-## <a name="see-also"></a><span data-ttu-id="0d6d8-129">참고자료</span><span class="sxs-lookup"><span data-stu-id="0d6d8-129">See also</span></span>
-- [<span data-ttu-id="0d6d8-130">엔터티 SQL 참조</span><span class="sxs-lookup"><span data-stu-id="0d6d8-130">Entity SQL Reference</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
+## <a name="see-also"></a><span data-ttu-id="61ad4-129">참고자료</span><span class="sxs-lookup"><span data-stu-id="61ad4-129">See also</span></span>
+
+- [<span data-ttu-id="61ad4-130">엔터티 SQL 참조</span><span class="sxs-lookup"><span data-stu-id="61ad4-130">Entity SQL Reference</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)

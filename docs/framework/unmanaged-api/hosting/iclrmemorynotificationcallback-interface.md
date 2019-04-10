@@ -16,34 +16,35 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b3167d288a57575af85a9cb50f5c0cd82c8e9cc9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c98ece9d60571034f3298f15897b10c4d8fb06f4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54702797"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59212156"
 ---
-# <a name="iclrmemorynotificationcallback-interface"></a><span data-ttu-id="8831d-102">ICLRMemoryNotificationCallback 인터페이스</span><span class="sxs-lookup"><span data-stu-id="8831d-102">ICLRMemoryNotificationCallback Interface</span></span>
-<span data-ttu-id="8831d-103">호스트가 Win32의 비슷한 방법을 사용 하 여 메모리 부족 상태를 보고할 수 있도록 `CreateMemoryResourceNotification` 함수입니다.</span><span class="sxs-lookup"><span data-stu-id="8831d-103">Allows the host to report memory pressure conditions using an approach similar to that of the Win32 `CreateMemoryResourceNotification` function.</span></span>  
+# <a name="iclrmemorynotificationcallback-interface"></a><span data-ttu-id="169f9-102">ICLRMemoryNotificationCallback 인터페이스</span><span class="sxs-lookup"><span data-stu-id="169f9-102">ICLRMemoryNotificationCallback Interface</span></span>
+<span data-ttu-id="169f9-103">호스트가 Win32의 비슷한 방법을 사용 하 여 메모리 부족 상태를 보고할 수 있도록 `CreateMemoryResourceNotification` 함수입니다.</span><span class="sxs-lookup"><span data-stu-id="169f9-103">Allows the host to report memory pressure conditions using an approach similar to that of the Win32 `CreateMemoryResourceNotification` function.</span></span>  
   
-## <a name="methods"></a><span data-ttu-id="8831d-104">메서드</span><span class="sxs-lookup"><span data-stu-id="8831d-104">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="169f9-104">메서드</span><span class="sxs-lookup"><span data-stu-id="169f9-104">Methods</span></span>  
   
-|<span data-ttu-id="8831d-105">메서드</span><span class="sxs-lookup"><span data-stu-id="8831d-105">Method</span></span>|<span data-ttu-id="8831d-106">설명</span><span class="sxs-lookup"><span data-stu-id="8831d-106">Description</span></span>|  
+|<span data-ttu-id="169f9-105">메서드</span><span class="sxs-lookup"><span data-stu-id="169f9-105">Method</span></span>|<span data-ttu-id="169f9-106">설명</span><span class="sxs-lookup"><span data-stu-id="169f9-106">Description</span></span>|  
 |------------|-----------------|  
-|[<span data-ttu-id="8831d-107">OnMemoryNotification 메서드</span><span class="sxs-lookup"><span data-stu-id="8831d-107">OnMemoryNotification Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrmemorynotificationcallback-onmemorynotification-method.md)|<span data-ttu-id="8831d-108">컴퓨터의 메모리 로드 된 CLR (공용 언어 런타임을)에 알립니다.</span><span class="sxs-lookup"><span data-stu-id="8831d-108">Notifies the common language runtime (CLR) of the memory load on the computer.</span></span>|  
+|[<span data-ttu-id="169f9-107">OnMemoryNotification 메서드</span><span class="sxs-lookup"><span data-stu-id="169f9-107">OnMemoryNotification Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrmemorynotificationcallback-onmemorynotification-method.md)|<span data-ttu-id="169f9-108">컴퓨터의 메모리 로드 된 CLR (공용 언어 런타임을)에 알립니다.</span><span class="sxs-lookup"><span data-stu-id="169f9-108">Notifies the common language runtime (CLR) of the memory load on the computer.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="8831d-109">설명</span><span class="sxs-lookup"><span data-stu-id="8831d-109">Remarks</span></span>  
- <span data-ttu-id="8831d-110">호스트가 사용 하는 `ICLRMemoryNotificationCallback` 는 CLR 메모리 리소스를 해제 하는 요청에 대 한 인터페이스입니다.</span><span class="sxs-lookup"><span data-stu-id="8831d-110">The host uses the `ICLRMemoryNotificationCallback` interface to request that the CLR free memory resources.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="169f9-109">설명</span><span class="sxs-lookup"><span data-stu-id="169f9-109">Remarks</span></span>  
+ <span data-ttu-id="169f9-110">호스트가 사용 하는 `ICLRMemoryNotificationCallback` 는 CLR 메모리 리소스를 해제 하는 요청에 대 한 인터페이스입니다.</span><span class="sxs-lookup"><span data-stu-id="169f9-110">The host uses the `ICLRMemoryNotificationCallback` interface to request that the CLR free memory resources.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="8831d-111">요구 사항</span><span class="sxs-lookup"><span data-stu-id="8831d-111">Requirements</span></span>  
- <span data-ttu-id="8831d-112">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="8831d-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="169f9-111">요구 사항</span><span class="sxs-lookup"><span data-stu-id="169f9-111">Requirements</span></span>  
+ <span data-ttu-id="169f9-112">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="169f9-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="8831d-113">**헤더:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="8831d-113">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="169f9-113">**헤더:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="169f9-113">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="8831d-114">**라이브러리:** MSCorEE.dll에 리소스로 포함</span><span class="sxs-lookup"><span data-stu-id="8831d-114">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="169f9-114">**라이브러리:** MSCorEE.dll에 리소스로 포함</span><span class="sxs-lookup"><span data-stu-id="169f9-114">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="8831d-115">**.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="8831d-115">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ **<span data-ttu-id="169f9-115">.NET Framework 버전:</span><span class="sxs-lookup"><span data-stu-id="169f9-115">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="8831d-116">참고자료</span><span class="sxs-lookup"><span data-stu-id="8831d-116">See also</span></span>
-- [<span data-ttu-id="8831d-117">IHostMemoryManager 인터페이스</span><span class="sxs-lookup"><span data-stu-id="8831d-117">IHostMemoryManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostmemorymanager-interface.md)
-- [<span data-ttu-id="8831d-118">호스팅 인터페이스</span><span class="sxs-lookup"><span data-stu-id="8831d-118">Hosting Interfaces</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
+## <a name="see-also"></a><span data-ttu-id="169f9-116">참고자료</span><span class="sxs-lookup"><span data-stu-id="169f9-116">See also</span></span>
+
+- [<span data-ttu-id="169f9-117">IHostMemoryManager 인터페이스</span><span class="sxs-lookup"><span data-stu-id="169f9-117">IHostMemoryManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostmemorymanager-interface.md)
+- [<span data-ttu-id="169f9-118">호스팅 인터페이스</span><span class="sxs-lookup"><span data-stu-id="169f9-118">Hosting Interfaces</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)

@@ -2,23 +2,23 @@
 title: <binaryMessageEncoding>
 ms.date: 03/30/2017
 ms.assetid: e4ae3cd4-6b67-4ce1-af4b-9400e0a38dba
-ms.openlocfilehash: b6914a195ba0e1934f7a586f5f6bae703a4bb1f9
-ms.sourcegitcommit: b8ace47d839f943f785b89e2fff8092b0bf8f565
+ms.openlocfilehash: e02ed6ef79fcf52bbe9c33bd9b36a14113e19d1d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "55675324"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59228382"
 ---
-# <a name="binarymessageencoding"></a><span data-ttu-id="0326a-101">\<binaryMessageEncoding></span><span class="sxs-lookup"><span data-stu-id="0326a-101">\<binaryMessageEncoding></span></span>
-<span data-ttu-id="0326a-102">통신 중에 WCF(Windows Communication Foundation) 메시지를 이진 형식으로 인코딩하는 이진 메시지 인코더를 정의합니다.</span><span class="sxs-lookup"><span data-stu-id="0326a-102">Defines a binary message encoder that encodes Windows Communication Foundation (WCF) messages in binary on the wire.</span></span>  
+# <a name="binarymessageencoding"></a><span data-ttu-id="ffe44-101">\<binaryMessageEncoding></span><span class="sxs-lookup"><span data-stu-id="ffe44-101">\<binaryMessageEncoding></span></span>
+<span data-ttu-id="ffe44-102">통신 중에 WCF(Windows Communication Foundation) 메시지를 이진 형식으로 인코딩하는 이진 메시지 인코더를 정의합니다.</span><span class="sxs-lookup"><span data-stu-id="ffe44-102">Defines a binary message encoder that encodes Windows Communication Foundation (WCF) messages in binary on the wire.</span></span>  
   
- <span data-ttu-id="0326a-103">\<system.serviceModel></span><span class="sxs-lookup"><span data-stu-id="0326a-103">\<system.serviceModel></span></span>  
-<span data-ttu-id="0326a-104">\<bindings></span><span class="sxs-lookup"><span data-stu-id="0326a-104">\<bindings></span></span>  
-<span data-ttu-id="0326a-105">\<customBinding></span><span class="sxs-lookup"><span data-stu-id="0326a-105">\<customBinding></span></span>  
-<span data-ttu-id="0326a-106">\<binding></span><span class="sxs-lookup"><span data-stu-id="0326a-106">\<binding></span></span>  
-<span data-ttu-id="0326a-107">\<binaryMessageEncoding></span><span class="sxs-lookup"><span data-stu-id="0326a-107">\<binaryMessageEncoding></span></span>  
+ <span data-ttu-id="ffe44-103">\<system.serviceModel></span><span class="sxs-lookup"><span data-stu-id="ffe44-103">\<system.serviceModel></span></span>  
+<span data-ttu-id="ffe44-104">\<bindings></span><span class="sxs-lookup"><span data-stu-id="ffe44-104">\<bindings></span></span>  
+<span data-ttu-id="ffe44-105">\<customBinding></span><span class="sxs-lookup"><span data-stu-id="ffe44-105">\<customBinding></span></span>  
+<span data-ttu-id="ffe44-106">\<binding></span><span class="sxs-lookup"><span data-stu-id="ffe44-106">\<binding></span></span>  
+<span data-ttu-id="ffe44-107">\<binaryMessageEncoding></span><span class="sxs-lookup"><span data-stu-id="ffe44-107">\<binaryMessageEncoding></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="0326a-108">구문</span><span class="sxs-lookup"><span data-stu-id="0326a-108">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="ffe44-108">구문</span><span class="sxs-lookup"><span data-stu-id="ffe44-108">Syntax</span></span>  
   
 ```xml  
 <binaryMessageEncoding maxReadPoolSize="Integer"
@@ -27,36 +27,36 @@ ms.locfileid: "55675324"
                        messageVersion="Soap11Addressing10/Soap12Addressing10" />
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="0326a-109">특성 및 요소</span><span class="sxs-lookup"><span data-stu-id="0326a-109">Attributes and Elements</span></span>  
- <span data-ttu-id="0326a-110">다음 섹션에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="0326a-110">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="ffe44-109">특성 및 요소</span><span class="sxs-lookup"><span data-stu-id="ffe44-109">Attributes and Elements</span></span>  
+ <span data-ttu-id="ffe44-110">다음 섹션에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="ffe44-110">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="0326a-111">특성</span><span class="sxs-lookup"><span data-stu-id="0326a-111">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="ffe44-111">특성</span><span class="sxs-lookup"><span data-stu-id="ffe44-111">Attributes</span></span>  
   
-|<span data-ttu-id="0326a-112">특성</span><span class="sxs-lookup"><span data-stu-id="0326a-112">Attribute</span></span>|<span data-ttu-id="0326a-113">설명</span><span class="sxs-lookup"><span data-stu-id="0326a-113">Description</span></span>|  
+|<span data-ttu-id="ffe44-112">특성</span><span class="sxs-lookup"><span data-stu-id="ffe44-112">Attribute</span></span>|<span data-ttu-id="ffe44-113">설명</span><span class="sxs-lookup"><span data-stu-id="ffe44-113">Description</span></span>|  
 |---------------|-----------------|  
-|<span data-ttu-id="0326a-114">maxReadPoolSize</span><span class="sxs-lookup"><span data-stu-id="0326a-114">maxReadPoolSize</span></span>|<span data-ttu-id="0326a-115">새 판독기를 할당하지 않고 동시에 읽을 수 있는 메시지 수를 정의하는 정수입니다.</span><span class="sxs-lookup"><span data-stu-id="0326a-115">An integer that defines how many messages can be read simultaneously without allocating new readers.</span></span> <span data-ttu-id="0326a-116">풀 크기가 커지면 작업 집합이 커지는 단점이 있지만 동작이 많을 경우의 시스템 안정성이 높아집니다.</span><span class="sxs-lookup"><span data-stu-id="0326a-116">Larger pool sizes make the system more tolerant to activity spikes at the cost of a larger working set.</span></span> <span data-ttu-id="0326a-117">기본값은 64입니다.</span><span class="sxs-lookup"><span data-stu-id="0326a-117">The default is 64.</span></span>|  
-|<span data-ttu-id="0326a-118">maxSessionSize</span><span class="sxs-lookup"><span data-stu-id="0326a-118">maxSessionSize</span></span>|<span data-ttu-id="0326a-119">인코딩에 사용되는 버퍼의 크기(바이트)를 설정하는 양의 정수입니다.</span><span class="sxs-lookup"><span data-stu-id="0326a-119">A positive integer that sets the size, in bytes, of the buffer used for encoding.</span></span> <span data-ttu-id="0326a-120">버퍼가 크면 작업 집합의 크기 문제가 생기지만 인코딩 속도가 빨라집니다.</span><span class="sxs-lookup"><span data-stu-id="0326a-120">A larger buffer increases encoding speed at the expense of the size of the working set.</span></span> <span data-ttu-id="0326a-121">기본값은 2048입니다.</span><span class="sxs-lookup"><span data-stu-id="0326a-121">The default is 2048.</span></span>|  
-|<span data-ttu-id="0326a-122">maxWritePoolSize</span><span class="sxs-lookup"><span data-stu-id="0326a-122">maxWritePoolSize</span></span>|<span data-ttu-id="0326a-123">새 작성기를 할당하지 않고 동시에 보낼 수 있는 메시지 수를 정의하는 정수입니다.</span><span class="sxs-lookup"><span data-stu-id="0326a-123">An integer that defines how many messages can be sent simultaneously without allocating new writers.</span></span> <span data-ttu-id="0326a-124">풀 크기가 커지면 작업 집합이 커지는 단점이 있지만 동작이 많을 경우의 시스템 안정성이 높아집니다.</span><span class="sxs-lookup"><span data-stu-id="0326a-124">Larger pool sizes make the system more tolerant to activity spikes at the cost of a larger working set.</span></span> <span data-ttu-id="0326a-125">기본값은 16입니다.</span><span class="sxs-lookup"><span data-stu-id="0326a-125">The default is 16.</span></span>|  
-|<span data-ttu-id="0326a-126">messageVersion</span><span class="sxs-lookup"><span data-stu-id="0326a-126">messageVersion</span></span>|<span data-ttu-id="0326a-127">사용되거나 필요한 SOAP 메시지 및 WS-Addressing 버전을 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="0326a-127">Specifies the SOAP message and WS-Addressing versions that are used or expected.</span></span>|  
+|<span data-ttu-id="ffe44-114">maxReadPoolSize</span><span class="sxs-lookup"><span data-stu-id="ffe44-114">maxReadPoolSize</span></span>|<span data-ttu-id="ffe44-115">새 판독기를 할당하지 않고 동시에 읽을 수 있는 메시지 수를 정의하는 정수입니다.</span><span class="sxs-lookup"><span data-stu-id="ffe44-115">An integer that defines how many messages can be read simultaneously without allocating new readers.</span></span> <span data-ttu-id="ffe44-116">풀 크기가 커지면 작업 집합이 커지는 단점이 있지만 동작이 많을 경우의 시스템 안정성이 높아집니다.</span><span class="sxs-lookup"><span data-stu-id="ffe44-116">Larger pool sizes make the system more tolerant to activity spikes at the cost of a larger working set.</span></span> <span data-ttu-id="ffe44-117">기본값은 64입니다.</span><span class="sxs-lookup"><span data-stu-id="ffe44-117">The default is 64.</span></span>|  
+|<span data-ttu-id="ffe44-118">maxSessionSize</span><span class="sxs-lookup"><span data-stu-id="ffe44-118">maxSessionSize</span></span>|<span data-ttu-id="ffe44-119">인코딩에 사용되는 버퍼의 크기(바이트)를 설정하는 양의 정수입니다.</span><span class="sxs-lookup"><span data-stu-id="ffe44-119">A positive integer that sets the size, in bytes, of the buffer used for encoding.</span></span> <span data-ttu-id="ffe44-120">버퍼가 크면 작업 집합의 크기 문제가 생기지만 인코딩 속도가 빨라집니다.</span><span class="sxs-lookup"><span data-stu-id="ffe44-120">A larger buffer increases encoding speed at the expense of the size of the working set.</span></span> <span data-ttu-id="ffe44-121">기본값은 2048입니다.</span><span class="sxs-lookup"><span data-stu-id="ffe44-121">The default is 2048.</span></span>|  
+|<span data-ttu-id="ffe44-122">maxWritePoolSize</span><span class="sxs-lookup"><span data-stu-id="ffe44-122">maxWritePoolSize</span></span>|<span data-ttu-id="ffe44-123">새 작성기를 할당하지 않고 동시에 보낼 수 있는 메시지 수를 정의하는 정수입니다.</span><span class="sxs-lookup"><span data-stu-id="ffe44-123">An integer that defines how many messages can be sent simultaneously without allocating new writers.</span></span> <span data-ttu-id="ffe44-124">풀 크기가 커지면 작업 집합이 커지는 단점이 있지만 동작이 많을 경우의 시스템 안정성이 높아집니다.</span><span class="sxs-lookup"><span data-stu-id="ffe44-124">Larger pool sizes make the system more tolerant to activity spikes at the cost of a larger working set.</span></span> <span data-ttu-id="ffe44-125">기본값은 16입니다.</span><span class="sxs-lookup"><span data-stu-id="ffe44-125">The default is 16.</span></span>|  
+|<span data-ttu-id="ffe44-126">messageVersion</span><span class="sxs-lookup"><span data-stu-id="ffe44-126">messageVersion</span></span>|<span data-ttu-id="ffe44-127">사용되거나 필요한 SOAP 메시지 및 WS-Addressing 버전을 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="ffe44-127">Specifies the SOAP message and WS-Addressing versions that are used or expected.</span></span>|  
   
-### <a name="child-elements"></a><span data-ttu-id="0326a-128">자식 요소</span><span class="sxs-lookup"><span data-stu-id="0326a-128">Child Elements</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="ffe44-128">자식 요소</span><span class="sxs-lookup"><span data-stu-id="ffe44-128">Child Elements</span></span>  
   
-|<span data-ttu-id="0326a-129">요소</span><span class="sxs-lookup"><span data-stu-id="0326a-129">Element</span></span>|<span data-ttu-id="0326a-130">설명</span><span class="sxs-lookup"><span data-stu-id="0326a-130">Description</span></span>|  
+|<span data-ttu-id="ffe44-129">요소</span><span class="sxs-lookup"><span data-stu-id="ffe44-129">Element</span></span>|<span data-ttu-id="ffe44-130">설명</span><span class="sxs-lookup"><span data-stu-id="ffe44-130">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="0326a-131">[\<readerQuotas>](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms731325(v=vs.100))</span><span class="sxs-lookup"><span data-stu-id="0326a-131">[\<readerQuotas>](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms731325(v=vs.100))</span></span>|<span data-ttu-id="0326a-132">이 바인딩으로 구성된 엔드포인트에서 처리할 수 있는 SOAP 메시지의 복잡성에 대한 제약 조건을 정의합니다.</span><span class="sxs-lookup"><span data-stu-id="0326a-132">Defines the constraints on the complexity of SOAP messages that can be processed by endpoints configured with this binding.</span></span> <span data-ttu-id="0326a-133">이 요소는 <xref:System.ServiceModel.Configuration.XmlDictionaryReaderQuotasElement> 형식입니다.</span><span class="sxs-lookup"><span data-stu-id="0326a-133">This element is of type <xref:System.ServiceModel.Configuration.XmlDictionaryReaderQuotasElement>.</span></span>|  
+|[<span data-ttu-id="ffe44-131">\<readerQuotas></span><span class="sxs-lookup"><span data-stu-id="ffe44-131">\<readerQuotas></span></span>](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms731325(v=vs.100))|<span data-ttu-id="ffe44-132">이 바인딩으로 구성된 엔드포인트에서 처리할 수 있는 SOAP 메시지의 복잡성에 대한 제약 조건을 정의합니다.</span><span class="sxs-lookup"><span data-stu-id="ffe44-132">Defines the constraints on the complexity of SOAP messages that can be processed by endpoints configured with this binding.</span></span> <span data-ttu-id="ffe44-133">이 요소는 <xref:System.ServiceModel.Configuration.XmlDictionaryReaderQuotasElement> 형식입니다.</span><span class="sxs-lookup"><span data-stu-id="ffe44-133">This element is of type <xref:System.ServiceModel.Configuration.XmlDictionaryReaderQuotasElement>.</span></span>|  
   
-### <a name="parent-elements"></a><span data-ttu-id="0326a-134">부모 요소</span><span class="sxs-lookup"><span data-stu-id="0326a-134">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="ffe44-134">부모 요소</span><span class="sxs-lookup"><span data-stu-id="ffe44-134">Parent Elements</span></span>  
   
-|<span data-ttu-id="0326a-135">요소</span><span class="sxs-lookup"><span data-stu-id="0326a-135">Element</span></span>|<span data-ttu-id="0326a-136">설명</span><span class="sxs-lookup"><span data-stu-id="0326a-136">Description</span></span>|  
+|<span data-ttu-id="ffe44-135">요소</span><span class="sxs-lookup"><span data-stu-id="ffe44-135">Element</span></span>|<span data-ttu-id="ffe44-136">설명</span><span class="sxs-lookup"><span data-stu-id="ffe44-136">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="0326a-137">\<binding></span><span class="sxs-lookup"><span data-stu-id="0326a-137">\<binding></span></span>](../../../../../docs/framework/misc/binding.md)|<span data-ttu-id="0326a-138">사용자 지정 바인딩의 모든 바인딩 기능을 정의합니다.</span><span class="sxs-lookup"><span data-stu-id="0326a-138">Defines all binding capabilities of the custom binding.</span></span>|  
+|[<span data-ttu-id="ffe44-137">\<binding></span><span class="sxs-lookup"><span data-stu-id="ffe44-137">\<binding></span></span>](../../../../../docs/framework/misc/binding.md)|<span data-ttu-id="ffe44-138">사용자 지정 바인딩의 모든 바인딩 기능을 정의합니다.</span><span class="sxs-lookup"><span data-stu-id="ffe44-138">Defines all binding capabilities of the custom binding.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="0326a-139">설명</span><span class="sxs-lookup"><span data-stu-id="0326a-139">Remarks</span></span>  
- <span data-ttu-id="0326a-140">인코딩은 메시지를 바이트 시퀀스로 변형하는 프로세스입니다.</span><span class="sxs-lookup"><span data-stu-id="0326a-140">Encoding is the process of transforming a message into a sequence of bytes.</span></span> <span data-ttu-id="0326a-141">디코딩은 역프로세스입니다.</span><span class="sxs-lookup"><span data-stu-id="0326a-141">Decoding is the reverse process.</span></span> <span data-ttu-id="0326a-142">Windows Communication Foundation (WCF)에 세 가지 유형의 SOAP 메시지에 대 한 인코딩을 포함 됩니다. 텍스트, 이진 및 (MTOM) Message Transmission Optimization Mechanism 합니다.</span><span class="sxs-lookup"><span data-stu-id="0326a-142">Windows Communication Foundation (WCF) includes three types of encoding for SOAP messages: Text, Binary and Message Transmission Optimization Mechanism (MTOM).</span></span>  
+## <a name="remarks"></a><span data-ttu-id="ffe44-139">설명</span><span class="sxs-lookup"><span data-stu-id="ffe44-139">Remarks</span></span>  
+ <span data-ttu-id="ffe44-140">인코딩은 메시지를 바이트 시퀀스로 변형하는 프로세스입니다.</span><span class="sxs-lookup"><span data-stu-id="ffe44-140">Encoding is the process of transforming a message into a sequence of bytes.</span></span> <span data-ttu-id="ffe44-141">디코딩은 역프로세스입니다.</span><span class="sxs-lookup"><span data-stu-id="ffe44-141">Decoding is the reverse process.</span></span> <span data-ttu-id="ffe44-142">Windows Communication Foundation (WCF)에 세 가지 유형의 SOAP 메시지에 대 한 인코딩을 포함 됩니다. 텍스트, 이진 및 (MTOM) Message Transmission Optimization Mechanism 합니다.</span><span class="sxs-lookup"><span data-stu-id="ffe44-142">Windows Communication Foundation (WCF) includes three types of encoding for SOAP messages: Text, Binary and Message Transmission Optimization Mechanism (MTOM).</span></span>  
   
- <span data-ttu-id="0326a-143">`binaryMessageEncoding` 요소는 XML에 대한 .NET 이진 형식을 지정하며, 사용할 SOAP 및 WS-Addressing 버전과 문자 인코딩을 지정하는 옵션을 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="0326a-143">The `binaryMessageEncoding` element specifies the .NET Binary Format for XML and has options to specify the character encoding and the SOAP and WS-Addressing version to be used.</span></span> <span data-ttu-id="0326a-144">이진 메시지 인코더는 통신 중에 WCF(Windows Communication Foundation) 메시지를 이진 형식으로 인코딩합니다.</span><span class="sxs-lookup"><span data-stu-id="0326a-144">The binary message encoder encodes Windows Communication Foundation (WCF) messages in binary on the wire.</span></span> <span data-ttu-id="0326a-145">이 인코딩은 전송 속도가 매우 빠르지만 WS-\* 표준과 호환되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="0326a-145">While this encoding results in very fast transmission of messages, interoperability based on the WS-\* standards is lost.</span></span>  
+ <span data-ttu-id="ffe44-143">`binaryMessageEncoding` 요소는 XML에 대한 .NET 이진 형식을 지정하며, 사용할 SOAP 및 WS-Addressing 버전과 문자 인코딩을 지정하는 옵션을 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="ffe44-143">The `binaryMessageEncoding` element specifies the .NET Binary Format for XML and has options to specify the character encoding and the SOAP and WS-Addressing version to be used.</span></span> <span data-ttu-id="ffe44-144">이진 메시지 인코더는 통신 중에 WCF(Windows Communication Foundation) 메시지를 이진 형식으로 인코딩합니다.</span><span class="sxs-lookup"><span data-stu-id="ffe44-144">The binary message encoder encodes Windows Communication Foundation (WCF) messages in binary on the wire.</span></span> <span data-ttu-id="ffe44-145">이 인코딩은 전송 속도가 매우 빠르지만 WS-\* 표준과 호환되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="ffe44-145">While this encoding results in very fast transmission of messages, interoperability based on the WS-\* standards is lost.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="0326a-146">예제</span><span class="sxs-lookup"><span data-stu-id="0326a-146">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="ffe44-146">예제</span><span class="sxs-lookup"><span data-stu-id="ffe44-146">Example</span></span>  
   
 ```xml  
 <binaryMessageEncoding maxReadPoolSize="211"
@@ -64,14 +64,15 @@ ms.locfileid: "55675324"
                        maxSessionSize="3141" />
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="0326a-147">참고자료</span><span class="sxs-lookup"><span data-stu-id="0326a-147">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="ffe44-147">참고자료</span><span class="sxs-lookup"><span data-stu-id="ffe44-147">See also</span></span>
+
 - <xref:System.ServiceModel.Configuration.BinaryMessageEncodingElement>
 - <xref:System.ServiceModel.Channels.CustomBinding>
 - <xref:System.ServiceModel.Channels.MessageEncodingBindingElement>
 - <xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement>
-- [<span data-ttu-id="0326a-148">메시지 인코딩</span><span class="sxs-lookup"><span data-stu-id="0326a-148">Message Encoding</span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/message-encoding.md)
-- [<span data-ttu-id="0326a-149">메시지 인코더 선택</span><span class="sxs-lookup"><span data-stu-id="0326a-149">Choosing a Message Encoder</span></span>](../../../../../docs/framework/wcf/feature-details/choosing-a-message-encoder.md)
-- [<span data-ttu-id="0326a-150">바인딩</span><span class="sxs-lookup"><span data-stu-id="0326a-150">Bindings</span></span>](../../../../../docs/framework/wcf/bindings.md)
-- [<span data-ttu-id="0326a-151">바인딩 확장</span><span class="sxs-lookup"><span data-stu-id="0326a-151">Extending Bindings</span></span>](../../../../../docs/framework/wcf/extending/extending-bindings.md)
-- [<span data-ttu-id="0326a-152">사용자 지정 바인딩</span><span class="sxs-lookup"><span data-stu-id="0326a-152">Custom Bindings</span></span>](../../../../../docs/framework/wcf/extending/custom-bindings.md)
-- [<span data-ttu-id="0326a-153">\<customBinding></span><span class="sxs-lookup"><span data-stu-id="0326a-153">\<customBinding></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)
+- [<span data-ttu-id="ffe44-148">메시지 인코딩</span><span class="sxs-lookup"><span data-stu-id="ffe44-148">Message Encoding</span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/message-encoding.md)
+- [<span data-ttu-id="ffe44-149">메시지 인코더 선택</span><span class="sxs-lookup"><span data-stu-id="ffe44-149">Choosing a Message Encoder</span></span>](../../../../../docs/framework/wcf/feature-details/choosing-a-message-encoder.md)
+- [<span data-ttu-id="ffe44-150">바인딩</span><span class="sxs-lookup"><span data-stu-id="ffe44-150">Bindings</span></span>](../../../../../docs/framework/wcf/bindings.md)
+- [<span data-ttu-id="ffe44-151">바인딩 확장명</span><span class="sxs-lookup"><span data-stu-id="ffe44-151">Extending Bindings</span></span>](../../../../../docs/framework/wcf/extending/extending-bindings.md)
+- [<span data-ttu-id="ffe44-152">사용자 지정 바인딩</span><span class="sxs-lookup"><span data-stu-id="ffe44-152">Custom Bindings</span></span>](../../../../../docs/framework/wcf/extending/custom-bindings.md)
+- [<span data-ttu-id="ffe44-153">\<customBinding></span><span class="sxs-lookup"><span data-stu-id="ffe44-153">\<customBinding></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)

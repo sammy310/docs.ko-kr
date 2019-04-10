@@ -17,41 +17,42 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: eed86f37ccab2d7eefead4997362fb82d310a1d1
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 64c212d064ad658678926690d1e680afe27c7c99
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57502379"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59219241"
 ---
-# <a name="iclrmetahostexitprocess-method"></a><span data-ttu-id="d46dc-102">ICLRMetaHost::ExitProcess 메서드</span><span class="sxs-lookup"><span data-stu-id="d46dc-102">ICLRMetaHost::ExitProcess Method</span></span>
-<span data-ttu-id="d46dc-103">로드 된 모든 런타임을 정상적으로 종료 하 고 프로세스를 종료 합니다.</span><span class="sxs-lookup"><span data-stu-id="d46dc-103">Attempts to shut down all loaded runtimes gracefully and then terminates the process.</span></span> <span data-ttu-id="d46dc-104">대체는 [CorExitProcess](../../../../docs/framework/unmanaged-api/hosting/corexitprocess-function.md) 함수입니다.</span><span class="sxs-lookup"><span data-stu-id="d46dc-104">Supersedes the [CorExitProcess](../../../../docs/framework/unmanaged-api/hosting/corexitprocess-function.md) function.</span></span>  
+# <a name="iclrmetahostexitprocess-method"></a><span data-ttu-id="7c0e3-102">ICLRMetaHost::ExitProcess 메서드</span><span class="sxs-lookup"><span data-stu-id="7c0e3-102">ICLRMetaHost::ExitProcess Method</span></span>
+<span data-ttu-id="7c0e3-103">로드 된 모든 런타임을 정상적으로 종료 하 고 프로세스를 종료 합니다.</span><span class="sxs-lookup"><span data-stu-id="7c0e3-103">Attempts to shut down all loaded runtimes gracefully and then terminates the process.</span></span> <span data-ttu-id="7c0e3-104">대체는 [CorExitProcess](../../../../docs/framework/unmanaged-api/hosting/corexitprocess-function.md) 함수입니다.</span><span class="sxs-lookup"><span data-stu-id="7c0e3-104">Supersedes the [CorExitProcess](../../../../docs/framework/unmanaged-api/hosting/corexitprocess-function.md) function.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="d46dc-105">구문</span><span class="sxs-lookup"><span data-stu-id="d46dc-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="7c0e3-105">구문</span><span class="sxs-lookup"><span data-stu-id="7c0e3-105">Syntax</span></span>  
   
 ```  
 HRESULT ExitProcess (  
     [in] INT32 iExitCode);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="d46dc-106">매개 변수</span><span class="sxs-lookup"><span data-stu-id="d46dc-106">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="7c0e3-106">매개 변수</span><span class="sxs-lookup"><span data-stu-id="7c0e3-106">Parameters</span></span>  
  `iExitCode`  
- <span data-ttu-id="d46dc-107">[in] 프로세스 종료 코드입니다.</span><span class="sxs-lookup"><span data-stu-id="d46dc-107">[in] The exit code for the process.</span></span>  
+ <span data-ttu-id="7c0e3-107">[in] 프로세스 종료 코드입니다.</span><span class="sxs-lookup"><span data-stu-id="7c0e3-107">[in] The exit code for the process.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="d46dc-108">반환 값</span><span class="sxs-lookup"><span data-stu-id="d46dc-108">Return Value</span></span>  
- <span data-ttu-id="d46dc-109">이 메서드가 반환 하지 않으므로 해당 반환 값이 정의 되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="d46dc-109">This method never returns, so its return value is undefined.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="7c0e3-108">반환 값</span><span class="sxs-lookup"><span data-stu-id="7c0e3-108">Return Value</span></span>  
+ <span data-ttu-id="7c0e3-109">이 메서드가 반환 하지 않으므로 해당 반환 값이 정의 되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="7c0e3-109">This method never returns, so its return value is undefined.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="d46dc-110">설명</span><span class="sxs-lookup"><span data-stu-id="d46dc-110">Remarks</span></span>  
+## <a name="remarks"></a><span data-ttu-id="7c0e3-110">설명</span><span class="sxs-lookup"><span data-stu-id="7c0e3-110">Remarks</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="d46dc-111">요구 사항</span><span class="sxs-lookup"><span data-stu-id="d46dc-111">Requirements</span></span>  
- <span data-ttu-id="d46dc-112">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="d46dc-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="7c0e3-111">요구 사항</span><span class="sxs-lookup"><span data-stu-id="7c0e3-111">Requirements</span></span>  
+ <span data-ttu-id="7c0e3-112">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="7c0e3-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="d46dc-113">**헤더:** MetaHost.h</span><span class="sxs-lookup"><span data-stu-id="d46dc-113">**Header:** MetaHost.h</span></span>  
+ <span data-ttu-id="7c0e3-113">**헤더:** MetaHost.h</span><span class="sxs-lookup"><span data-stu-id="7c0e3-113">**Header:** MetaHost.h</span></span>  
   
- <span data-ttu-id="d46dc-114">**라이브러리:** MSCorEE.dll에 리소스로 포함</span><span class="sxs-lookup"><span data-stu-id="d46dc-114">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="7c0e3-114">**라이브러리:** MSCorEE.dll에 리소스로 포함</span><span class="sxs-lookup"><span data-stu-id="7c0e3-114">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="d46dc-115">**.NET Framework 버전:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="d46dc-115">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
+ **<span data-ttu-id="7c0e3-115">.NET Framework 버전:</span><span class="sxs-lookup"><span data-stu-id="7c0e3-115">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="d46dc-116">참고자료</span><span class="sxs-lookup"><span data-stu-id="d46dc-116">See also</span></span>
-- [<span data-ttu-id="d46dc-117">ICLRMetaHost 인터페이스</span><span class="sxs-lookup"><span data-stu-id="d46dc-117">ICLRMetaHost Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrmetahost-interface.md)
-- [<span data-ttu-id="d46dc-118">호스팅</span><span class="sxs-lookup"><span data-stu-id="d46dc-118">Hosting</span></span>](../../../../docs/framework/unmanaged-api/hosting/index.md)
+## <a name="see-also"></a><span data-ttu-id="7c0e3-116">참고자료</span><span class="sxs-lookup"><span data-stu-id="7c0e3-116">See also</span></span>
+
+- [<span data-ttu-id="7c0e3-117">ICLRMetaHost 인터페이스</span><span class="sxs-lookup"><span data-stu-id="7c0e3-117">ICLRMetaHost Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrmetahost-interface.md)
+- [<span data-ttu-id="7c0e3-118">호스팅</span><span class="sxs-lookup"><span data-stu-id="7c0e3-118">Hosting</span></span>](../../../../docs/framework/unmanaged-api/hosting/index.md)
