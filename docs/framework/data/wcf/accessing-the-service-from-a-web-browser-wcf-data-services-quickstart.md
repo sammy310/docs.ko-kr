@@ -2,12 +2,12 @@
 title: 웹 브라우저에서 서비스 액세스(WCF Data Services 빠른 시작)
 ms.date: 03/30/2017
 ms.assetid: 5a6fa180-3094-4e6e-ba2b-8c80975d18d1
-ms.openlocfilehash: 15a74e47774c532e75eca8a60a1af3a3e4f03f58
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ebeda2805f3393b298e43aa4dcc601298ce176f6
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54591645"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59330326"
 ---
 # <a name="accessing-the-service-from-a-web-browser-wcf-data-services-quickstart"></a>웹 브라우저에서 서비스 액세스(WCF Data Services 빠른 시작)
 
@@ -18,16 +18,16 @@ WCF Data Services 빠른 시작의 두 번째 작업입니다. 이 작업에서�
 
 ## <a name="to-request-the-default-service-document-by-using-internet-explorer"></a>Internet Explorer를 사용하여 기본 서비스 문서를 요청하려면
 
-1.  Internet Explorer에서에서 **도구** 메뉴를 선택 **인터넷 옵션**를 클릭 합니다 **콘텐츠** 탭을 클릭 **설정**, 선택을취소하고 **피드 보기를 켜려면**합니다.
+1. Internet Explorer에서에서 **도구** 메뉴를 선택 **인터넷 옵션**를 클릭 합니다 **콘텐츠** 탭을 클릭 **설정**, 선택을취소하고 **피드 보기를 켜려면**합니다.
 
      이렇게 하면 피드 읽기가 사용되지 않습니다. 이 기능을 사용하지 않도록 설정하지 않으면 웹 브라우저에서 원시 XML 데이터를 표시하지 않고 반환된 AtomPub 인코딩 문서를 XML 피드로 처리합니다.
 
     > [!NOTE]
     > 브라우저에서 피드를 원시 XML 데이터로 표시할 수 없는 경우 피드를 페이지의 소스 코드로 볼 수 있어야 합니다.
 
-2.  키를 눌러 Visual Studio에서의 **F5** 응용 프로그램 디버깅을 시작 하는 키입니다.
+2. 키를 눌러 Visual Studio에서의 **F5** 응용 프로그램 디버깅을 시작 하는 키입니다.
 
-3.  로컬 컴퓨터에서 웹 브라우저를 엽니다. 주소 표시줄에 다음 URI를 입력합니다.
+3. 로컬 컴퓨터에서 웹 브라우저를 엽니다. 주소 표시줄에 다음 URI를 입력합니다.
 
     ```
     http://localhost:12345/northwind.svc
@@ -37,7 +37,7 @@ WCF Data Services 빠른 시작의 두 번째 작업입니다. 이 작업에서�
 
 ## <a name="to-access-entity-set-resources-from-a-web-browser"></a>웹 브라우저에서 엔터티 집합 리소스에 액세스하려면
 
-1.  웹 브라우저의 주소 표시줄에 다음 URI를 입력합니다.
+1. 웹 브라우저의 주소 표시줄에 다음 URI를 입력합니다.
 
     ```
     http://localhost:12345/northwind.svc/Customers
@@ -45,7 +45,7 @@ WCF Data Services 빠른 시작의 두 번째 작업입니다. 이 작업에서�
 
      Northwind 샘플 데이터베이스의 모든 고객 집합이 반환됩니다.
 
-2.  웹 브라우저의 주소 표시줄에 다음 URI를 입력합니다.
+2. 웹 브라우저의 주소 표시줄에 다음 URI를 입력합니다.
 
     ```
     http://localhost:12345/northwind.svc/Customers('ALFKI')
@@ -53,7 +53,7 @@ WCF Data Services 빠른 시작의 두 번째 작업입니다. 이 작업에서�
 
      특정 고객 `ALFKI`의 엔터티 인스턴스가 반환됩니다.
 
-3.  웹 브라우저의 주소 표시줄에 다음 URI를 입력합니다.
+3. 웹 브라우저의 주소 표시줄에 다음 URI를 입력합니다.
 
     ```
     http://localhost:12345/northwind.svc/Customers('ALFKI')/Orders
@@ -61,7 +61,7 @@ WCF Data Services 빠른 시작의 두 번째 작업입니다. 이 작업에서�
 
      고객과 주문 간의 관계가 이동되어 특정 고객 `ALFKI`에 대한 모든 주문 집합이 반환됩니다.
 
-4.  웹 브라우저의 주소 표시줄에 다음 URI를 입력합니다.
+4. 웹 브라우저의 주소 표시줄에 다음 URI를 입력합니다.
 
     ```
     http://localhost:12345/northwind.svc/Customers('ALFKI')/Orders?$filter=OrderID eq 10643
@@ -78,4 +78,4 @@ WCF Data Services는 브라우저가 HTTP GET 요청을 보냅니다 지정 된 
 
 ## <a name="see-also"></a>참고자료
 
-- [데이터 서비스 리소스에 액세스](../../../../docs/framework/data/wcf/accessing-data-service-resources-wcf-data-services.md)
+- [데이터 서비스 리소스 액세스](../../../../docs/framework/data/wcf/accessing-data-service-resources-wcf-data-services.md)

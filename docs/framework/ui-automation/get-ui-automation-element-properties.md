@@ -8,12 +8,12 @@ helpviewer_keywords:
 - properties, retrieving
 - UI Automation, retrieving properties of elements
 ms.assetid: 09576b1a-291f-435c-980e-dee32d899ae1
-ms.openlocfilehash: f04381bae2ebed5f0f65b4c6b4043c86ac7f63ae
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 93e0fba4288ba3231bfed45252bdaa78892d008c
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59078384"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59330768"
 ---
 # <a name="get-ui-automation-element-properties"></a>UI 자동화 요소 속성 가져오기
 > [!NOTE]
@@ -23,15 +23,15 @@ ms.locfileid: "59078384"
   
 ### <a name="get-a-current-property-value"></a>현재 속성 값을 가져오려면  
   
-1.  가져오기는 <xref:System.Windows.Automation.AutomationElement> 가져오려는 속성이 있습니다.  
+1. 가져오기는 <xref:System.Windows.Automation.AutomationElement> 가져오려는 속성이 있습니다.  
   
-2.  호출 <xref:System.Windows.Automation.AutomationElement.GetCurrentPropertyValue%2A>, 검색 또는 <xref:System.Windows.Automation.AutomationElement.Current%2A> 속성 구조 및 해당 멤버 중 하나에서 값을 가져옵니다.  
+2. 호출 <xref:System.Windows.Automation.AutomationElement.GetCurrentPropertyValue%2A>, 검색 또는 <xref:System.Windows.Automation.AutomationElement.Current%2A> 속성 구조 및 해당 멤버 중 하나에서 값을 가져옵니다.  
   
 ### <a name="get-a-cached-property-value"></a>캐시 된 속성 값을 가져오려면  
   
-1.  가져오기는 <xref:System.Windows.Automation.AutomationElement> 가져오려는 속성이 있습니다. 속성에 지정 해야 합니다는 <xref:System.Windows.Automation.CacheRequest>합니다.  
+1. 가져오기는 <xref:System.Windows.Automation.AutomationElement> 가져오려는 속성이 있습니다. 속성에 지정 해야 합니다는 <xref:System.Windows.Automation.CacheRequest>합니다.  
   
-2.  호출 <xref:System.Windows.Automation.AutomationElement.GetCachedPropertyValue%2A>, 검색 또는 <xref:System.Windows.Automation.AutomationElement.Cached%2A> 속성 구조 및 해당 멤버 중 하나에서 값을 가져옵니다.  
+2. 호출 <xref:System.Windows.Automation.AutomationElement.GetCachedPropertyValue%2A>, 검색 또는 <xref:System.Windows.Automation.AutomationElement.Cached%2A> 속성 구조 및 해당 멤버 중 하나에서 값을 가져옵니다.  
   
 ## <a name="example"></a>예제  
  다음 예제에서는 현재 속성을 검색 하는 다양 한 방법은 <xref:System.Windows.Automation.AutomationElement>합니다.  

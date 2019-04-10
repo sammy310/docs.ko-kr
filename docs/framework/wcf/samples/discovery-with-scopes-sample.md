@@ -2,12 +2,12 @@
 title: 범위 샘플을 사용한 검색
 ms.date: 03/30/2017
 ms.assetid: 6a37a754-6b8c-4ebe-bdf2-d4f0520271d5
-ms.openlocfilehash: 553a7adbe2d6daf29d4acf76990503df09c3bff1
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 9ad20e63e00464ed615620b9d0ec83fb90d07444
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59122709"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59328090"
 ---
 # <a name="discovery-with-scopes-sample"></a>범위 샘플을 사용한 검색
 이 샘플에서는 범위를 사용하여 검색 가능한 엔드포인트를 분류하는 방법과 <xref:System.ServiceModel.Discovery.DiscoveryClient>를 사용하여 엔드포인트에 대한 비동기 검색을 수행하는 방법을 보여 줍니다. 이 샘플의 서비스에서는 엔드포인트 검색 동작을 추가하고 이를 사용하여 엔드포인트에 범위를 추가하고 엔드포인트의 검색 기능을 제어하여 각 엔드포인트에 대한 검색을 사용자 지정하는 방법을 보여 줍니다. 이 샘플의 클라이언트에서는 <xref:System.ServiceModel.Discovery.DiscoveryClient>를 만들고 <xref:System.ServiceModel.Discovery.FindCriteria>에 범위를 추가하는 방식으로 검색 매개 변수를 세부적으로 조정하여 범위를 포함하는 방법을 보여 줍니다. 이 샘플에서는 클라이언트가 종료 조건을 추가하여 응답을 제한하는 방법도 보여 줍니다.  
@@ -20,13 +20,13 @@ ms.locfileid: "59122709"
   
 #### <a name="to-use-this-sample"></a>이 샘플을 사용하려면  
   
-1.  이 샘플에서는 HTTP 엔드포인트를 사용하며 이 샘플을 실행하려면 적절한 URL ACL을 추가해야 합니다. 참조 [HTTP 및 HTTPS 구성](https://go.microsoft.com/fwlink/?LinkId=70353) 세부 정보에 대 한 합니다. 높은 권한으로 다음 명령을 실행하면 적절한 ACL이 추가됩니다. 명령이 작동 하지 않는 경우 다음 인수의 도메인과 사용자 이름을 대체 하려는 경우: `netsh http add urlacl url=http://+:8000/ user=%DOMAIN%\%UserName%`  
+1. 이 샘플에서는 HTTP 엔드포인트를 사용하며 이 샘플을 실행하려면 적절한 URL ACL을 추가해야 합니다. 참조 [HTTP 및 HTTPS 구성](https://go.microsoft.com/fwlink/?LinkId=70353) 세부 정보에 대 한 합니다. 높은 권한으로 다음 명령을 실행하면 적절한 ACL이 추가됩니다. 명령이 작동 하지 않는 경우 다음 인수의 도메인과 사용자 이름을 대체 하려는 경우: `netsh http add urlacl url=http://+:8000/ user=%DOMAIN%\%UserName%`  
   
-2.  솔루션을 빌드합니다.  
+2. 솔루션을 빌드합니다.  
   
-3.  빌드 디렉터리에서 서비스 실행 파일을 실행합니다.  
+3. 빌드 디렉터리에서 서비스 실행 파일을 실행합니다.  
   
-4.  클라이언트 실행 파일을 실행합니다. 클라이언트에서 서비스를 찾을 수 있는지 확인합니다.  
+4. 클라이언트 실행 파일을 실행합니다. 클라이언트에서 서비스를 찾을 수 있는지 확인합니다.  
   
 > [!IMPORTANT]
 >  컴퓨터에 이 샘플이 이미 설치되어 있을 수도 있습니다. 계속하기 전에 다음(기본) 디렉터리를 확인하세요.  

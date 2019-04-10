@@ -2,12 +2,12 @@
 title: Serialization 바인더 사용
 ms.date: 03/30/2017
 ms.assetid: ab46c087-200c-45bf-9c95-5a6cda6e8b98
-ms.openlocfilehash: 5fd90febac8c75df9fa2472e4aab591a5630076e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 47a1974386927316ea9230ec27cf647d7245c44a
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33503160"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59329845"
 ---
 # <a name="usage-of-serialization-binder"></a>Serialization 바인더 사용
 이 샘플에서는 <xref:System.Runtime.Serialization.SerializationBinder>를 사용하여 제네릭 형식이 serialize될 때 이 형식의 버전을 변경하는 방법을 보여 줍니다.  
@@ -24,10 +24,10 @@ ms.locfileid: "33503160"
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>샘플을 설치, 빌드 및 실행하려면  
   
-1.  클라이언트를 실행 하려면 SBGenericsVTS 솔루션을 마우스 오른쪽 단추로 클릭 (6 프로젝트)를 클릭 한 **속성**합니다.  
+1. 클라이언트를 실행 하려면 SBGenericsVTS 솔루션을 마우스 오른쪽 단추로 클릭 (6 개 프로젝트)를 선택한 **속성**합니다.  
   
-2.  **공용 속성**선택, **시작 프로젝트**을 선택한 후 **여러 개의 시작 프로젝트**합니다.  
+2. **공용 속성**를 선택 **시작 프로젝트**을 선택한 후 **여러 개의 시작 프로젝트**합니다.  
   
-3.  선택 **서버** 먼저 **Client20** 차례로 **Client40**합니다. 선택 된 **시작** 이 세 가지 프로젝트 작업과 나머지로 설정 **None**합니다.  
+3. 선택 **Server** 먼저 **Client20** 차례로 **Client40**합니다. 선택 된 **시작** 이 세 가지 프로젝트 작업과 나머지 **None**합니다.  
   
-4.  클릭 **확인** 한 다음 f5 키를 눌러 샘플을 실행 합니다.
+4. 클릭 **확인** 한 다음 f5 키를 눌러 샘플을 실행 합니다.

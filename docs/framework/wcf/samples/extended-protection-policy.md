@@ -2,12 +2,12 @@
 title: 확장된 보호 정책
 ms.date: 03/30/2017
 ms.assetid: e2616a10-317e-4c34-8023-0c015a80a82f
-ms.openlocfilehash: 59a377a94978741f3f116bab819dff77d8b0fee4
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 645b48b3c7ce3daaaedac372ba5ba6fd5edfc8f8
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43785455"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59328753"
 ---
 # <a name="extended-protection-policy"></a>확장된 보호 정책
 확장된 보호는 MITM(Man-In-The-Middle, 메시지 가로채기) 공격을 방지하기 위한 보안 이니셔티브입니다. MITM 공격은 공격자가 클라이언트의 자격 증명을 가로채 서버로 전달하는 보안 위협입니다.  
@@ -26,31 +26,31 @@ ms.locfileid: "43785455"
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>샘플을 설치, 빌드 및 실행하려면  
   
-1.  인터넷 정보 서비스에서 설치 **제어판**, **프로그램 추가/제거**하십시오 **Windows 기능**.  
+1. 인터넷 정보 서비스에서 설치 **제어판**, **프로그램 추가/제거**하십시오 **Windows 기능**.  
   
-2.  설치 **Windows 인증** 에 **Windows 기능**, **인터넷 정보 서비스**하십시오 **World Wide Web 서비스**,  **보안**, 및 **Windows 인증**합니다.  
+2. 설치 **Windows 인증** 에 **Windows 기능**, **인터넷 정보 서비스**하십시오 **World Wide Web 서비스**,  **보안**, 및 **Windows 인증**합니다.  
   
-3.  설치 **Windows Communication Foundation HTTP Activation** 에 **Windows 기능**를 **Microsoft.NET Framework 3.5.1**, 및 **Windows 통신 Foundation HTTP Activation**합니다.  
+3. 설치 **Windows Communication Foundation HTTP Activation** 에 **Windows 기능**를 **Microsoft.NET Framework 3.5.1**, 및 **Windows 통신 Foundation HTTP Activation**합니다.  
   
-4.  이 샘플을 사용하려면 클라이언트에서 서버와의 보안 채널을 설정해야 하므로, IIS(인터넷 정보 서비스) 관리자에서 설치할 수 있는 서버 인증서가 있어야 합니다.  
+4. 이 샘플을 사용하려면 클라이언트에서 서버와의 보안 채널을 설정해야 하므로, IIS(인터넷 정보 서비스) 관리자에서 설치할 수 있는 서버 인증서가 있어야 합니다.  
   
     1.  IIS 관리자를 엽니다. 열기 **서버 인증서**에 표시 되는 **기능 보기** 루트 노드 (컴퓨터 이름)를 선택한 경우를 탭 합니다.  
   
     2.  이 샘플을 테스트하기 위해 자체 서명된 인증서를 만듭니다. Internet Explorer에서 인증서가 안전하지 않다는 메시지가 표시되지 않도록 하려면 인증서를 신뢰할 수 있는 인증서 루트 인증 기관 저장소에 설치합니다.  
   
-5.  엽니다는 **작업** 기본 웹 사이트에 대 한 창. 클릭 **사이트를 편집**하십시오 **바인딩**합니다. HTTPS가 아직 없으면 포트 번호 443을 사용하여 HTTPS를 형식으로 추가합니다. 이전 단계에서 만든 SSL 인증서를 할당합니다.  
+5. 엽니다는 **작업** 기본 웹 사이트에 대 한 창. 클릭 **사이트를 편집**하십시오 **바인딩**합니다. HTTPS가 아직 없으면 포트 번호 443을 사용하여 HTTPS를 형식으로 추가합니다. 이전 단계에서 만든 SSL 인증서를 할당합니다.  
   
-6.  서비스를 빌드합니다. 그러면 IIS에 가상 디렉터리가 만들어지고 서비스를 웹에서 호스트하는 데 필요한 .dll, .svc 및 .config 파일이 복사됩니다.  
+6. 서비스를 빌드합니다. 그러면 IIS에 가상 디렉터리가 만들어지고 서비스를 웹에서 호스트하는 데 필요한 .dll, .svc 및 .config 파일이 복사됩니다.  
   
-7.  IIS 관리자를 엽니다. 가상 디렉터리를 마우스 오른쪽 단추로 클릭 (**ExtendedProtection**), 이전 단계에서 만든 합니다. 선택 **응용 프로그램으로 변환**합니다.  
+7. IIS 관리자를 엽니다. 가상 디렉터리를 마우스 오른쪽 단추로 클릭 (**ExtendedProtection**), 이전 단계에서 만든 합니다. 선택 **응용 프로그램으로 변환**합니다.  
   
-8.  엽니다는 **인증** IIS 관리자에서이 가상 디렉터리 및 사용에 대 한 모듈 **Windows 인증**합니다.  
+8. 엽니다는 **인증** IIS 관리자에서이 가상 디렉터리 및 사용에 대 한 모듈 **Windows 인증**합니다.  
   
 9. 오픈 **고급 설정** 아래에서 **Windows 인증** 이 가상 디렉터리에 대 한로 설정 **필요**합니다.  
   
 10. 브라우저 창에서 정규화된 도메인 이름을 제공하여 HTTPS URL에 액세스하면 서비스를 테스트할 수 있습니다. 원격 컴퓨터에서 이 URL에 액세스하려면 들어오는 모든 HTTP 및 HTTPS 연결에 대해 방화벽이 열려 있는지 확인합니다.  
   
-11. 클라이언트 구성 파일을 열고 `<<full_machine_name>>`을 대체하는 끝점 주소 특성 또는 클라이언트의 정규화된 도메인 이름을 제공합니다.  
+11. 클라이언트 구성 파일을 열고 `<<full_machine_name>>`을 대체하는 엔드포인트 주소 특성 또는 클라이언트의 정규화된 도메인 이름을 제공합니다.  
   
 12. 클라이언트를 실행합니다. 클라이언트가 서비스와 통신하며, 이때 보안 채널이 설정되고 확장된 보호가 사용됩니다.  
   

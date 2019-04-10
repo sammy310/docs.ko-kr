@@ -10,12 +10,12 @@ helpviewer_keywords:
 - printers [WPF], availability
 - print jobs [WPF], timing
 ms.assetid: 7e9c8ec1-abf6-4b3d-b1c6-33b35d3c4063
-ms.openlocfilehash: dab836af8ba3d177719d910142cd93f8f6de0002
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 7eed5400744f1010cbf52dc8d3b3d0bc24aa4371
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59099861"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59326868"
 ---
 # <a name="how-to-discover-whether-a-print-job-can-be-printed-at-this-time-of-day"></a>방법: 특정 시간에 인쇄 작업을 인쇄할 수 있는지 확인
 인쇄 대기열 항상 사용할 수 없는 하루 24 시간에 대 한 합니다. 하루 중 특정 시간에 사용할 수 없도록 설정할 수 있는 시작 및 종료 시간 속성을 갖습니다. 예를 들어, 오후 5 시 이후에 특정 부서 에서만 단독으로 사용에 대 한 프린터를 예약 합니다.이 기능은 사용할 수 있습니다. 해당 학과 사용 되는 다른 큐에서는 다른 부서에서 프린터를 처리 해야 합니다. 선호 하는 방식된 부서에 대 한 큐 수를 설정할 수 있지만 항상 사용 가능한, 다른 부서에 대 한 큐 오후 5 시 이후에 사용할 수 없게 설정할 수 됩니다.  
@@ -29,9 +29,9 @@ ms.locfileid: "59099861"
   
  이러한 종류의 함수에 대 한 두 가지 주요 단계는 다음과 같습니다.  
   
-1.  읽기를 <xref:System.Printing.PrintQueue.StartTimeOfDay%2A> 및 <xref:System.Printing.PrintQueue.UntilTimeOfDay%2A> 의 속성을 <xref:System.Printing.PrintQueue> 현재 시간 사이 인지 여부를 확인 합니다.  
+1. 읽기를 <xref:System.Printing.PrintQueue.StartTimeOfDay%2A> 및 <xref:System.Printing.PrintQueue.UntilTimeOfDay%2A> 의 속성을 <xref:System.Printing.PrintQueue> 현재 시간 사이 인지 여부를 확인 합니다.  
   
-2.  읽기를 <xref:System.Printing.PrintSystemJobInfo.StartTimeOfDay%2A> 및 <xref:System.Printing.PrintSystemJobInfo.UntilTimeOfDay%2A> 의 속성을 <xref:System.Printing.PrintSystemJobInfo> 현재 시간 사이 인지 여부를 확인 합니다.  
+2. 읽기를 <xref:System.Printing.PrintSystemJobInfo.StartTimeOfDay%2A> 및 <xref:System.Printing.PrintSystemJobInfo.UntilTimeOfDay%2A> 의 속성을 <xref:System.Printing.PrintSystemJobInfo> 현재 시간 사이 인지 여부를 확인 합니다.  
   
  이러한 속성은 한다는 사실에서 문제가 발생 하지만 <xref:System.DateTime> 개체입니다. 대신 이들은 <xref:System.Int32> 자정 이후의 시간 (분) 수와 시간을 나타내는 개체입니다. 또한이 아닌 경우 자정 현재 표준 시간대, UTC (협정 세계시) 자정에  
   
