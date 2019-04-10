@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: ff226ce3-f6b5-47a1-8d22-dc78b67e07f5
-ms.openlocfilehash: c49d28f42dec311d4a0c35a7115b00d989411358
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 67c1307bb18b3e86e05b56f4853a39f6831ab9cc
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59073717"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59313595"
 ---
 # <a name="sqldependency-in-an-aspnet-application"></a>ASP.NET 응용 프로그램에서 SqlDependency
 이 단원의 예제에서는 ASP.NET <xref:System.Data.SqlClient.SqlDependency> 개체를 활용하여 <xref:System.Web.Caching.SqlCacheDependency>를 간접적으로 사용하는 방법을 보여 줍니다. <xref:System.Web.Caching.SqlCacheDependency> 개체에서는 <xref:System.Data.SqlClient.SqlDependency>를 사용하여 알림을 수신하고 캐시를 올바르게 업데이트합니다.  
@@ -24,11 +24,11 @@ ms.locfileid: "59073717"
 ## <a name="creating-the-sample-application"></a>샘플 응용 프로그램 만들기  
  샘플 응용 프로그램을 만들고 실행하려면 다음 단계를 따르세요.  
   
-1.  새 ASP.NET 웹 사이트를 만듭니다.  
+1. 새 ASP.NET 웹 사이트를 만듭니다.  
   
-2.  <xref:System.Web.UI.WebControls.Label> 및 <xref:System.Web.UI.WebControls.GridView> 컨트롤을 Default.aspx 페이지에 추가합니다.  
+2. <xref:System.Web.UI.WebControls.Label> 및 <xref:System.Web.UI.WebControls.GridView> 컨트롤을 Default.aspx 페이지에 추가합니다.  
   
-3.  페이지의 클래스 모듈을 열고 다음 지시문을 추가합니다.  
+3. 페이지의 클래스 모듈을 열고 다음 지시문을 추가합니다.  
   
     ```vb  
     Option Strict On  
@@ -42,12 +42,12 @@ ms.locfileid: "59073717"
     using System.Web.Caching;  
     ```  
   
-4.  페이지의 `Page_Load` 이벤트에 다음 코드를 추가합니다.  
+4. 페이지의 `Page_Load` 이벤트에 다음 코드를 추가합니다.  
   
      [!code-csharp[DataWorks SqlDependency.AspNet#1](../../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks SqlDependency.AspNet/CS/Default.aspx.cs#1)]
      [!code-vb[DataWorks SqlDependency.AspNet#1](../../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SqlDependency.AspNet/VB/Default.aspx.vb#1)]  
   
-5.  `GetConnectionString` 및 `GetSQL`의 두 가지 도우미 메서드를 추가합니다. 정의된 연결 문자열은 통합 보안을 사용합니다. 사용 중인 계정에 필요한 데이터베이스 권한이 올바르며 있는지 확인 해야 샘플 데이터베이스 **AdventureWorks**, 알림을 사용 하도록 설정 했습니다.
+5. `GetConnectionString` 및 `GetSQL`의 두 가지 도우미 메서드를 추가합니다. 정의된 연결 문자열은 통합 보안을 사용합니다. 사용 중인 계정에 필요한 데이터베이스 권한이 올바르며 있는지 확인 해야 샘플 데이터베이스 **AdventureWorks**, 알림을 사용 하도록 설정 했습니다.
   
      [!code-csharp[DataWorks SqlDependency.AspNet#2](../../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks SqlDependency.AspNet/CS/Default.aspx.cs#2)]
      [!code-vb[DataWorks SqlDependency.AspNet#2](../../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SqlDependency.AspNet/VB/Default.aspx.vb#2)]  

@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: f6ebb1a1-f2ca-49b9-92c9-0150940cf6e6
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d86c590f2d5fe6bc970c2f8ac6de43d3e8485650
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: fbc381395720b6b63a8cdfb44c55808d4608e77f
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44183147"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58831984"
 ---
 # <a name="xml-integration-with-relational-data-and-adonet"></a>XML과 관계형 데이터 및 ADO.NET의 통합
 **XmlDataDocument** 클래스는 **XmlDocument**의 파생 클래스이며 XML 데이터를 포함합니다. **XmlDataDocument**의 이점은 관계형 데이터와 계층형 데이터 간을 연결해 준다는 것입니다. **XmlDocument**는 **DataSet**에 바인딩할 수 있는 클래스입니다. 이러한 두 클래스는 모두 클래스에 포함된 데이터의 변경 내용을 동기화할 수 있습니다. **DataSet**에 바인딩된 **XmlDocument**를 통해 XML을 관계형 데이터와 통합할 수 있으므로 데이터를 XML 또는 관계형 형식으로 나타낼 필요가 없습니다. 데이터를 두 가지 형식으로 나타낼 수 있으며 한 가지 형식으로만 제약되지 않습니다.  
@@ -27,13 +27,13 @@ ms.locfileid: "44183147"
   
  **XmlDataDocument**는 **XslTransform**을 지원할 뿐 아니라 **XPath** 쿼리 및 유효성 검사를 위해 관계형 데이터를 노출합니다.  기본적으로 관계형 데이터에 대해 모든 XML 서비스를 사용할 수 있으며 XML 신뢰도를 떨어뜨리지 않으면서 구조적으로 투영된 XML에 대해 컨트롤 바인딩, 코드 생성 등과 같은 관계형 기능을 사용할 수 있습니다.  
   
- **XmlDataDocument**는 **XmlDocument**에서 상속되므로 W3C DOM의 구현을 제공합니다. **XmlDataDocument**가 **DataSet**과 연관되어 있고 DataSet 내부에 해당 데이터 하위 집합을 저장하므로 DataSet은 **XmlDocument**의 용도를 제한하거나 변경하지 않습니다. **XmlDocument**를 사용하도록 작성된 코드는 **XmlDataDocument**에 대해서도 동일하게 작동됩니다. **DataSet**은 테이블, 열, 관계 및 제약 조건을 정의하여 동일한 데이터를 관계형으로 표시하는 독립 실행형, 메모리 내 사용자 데이터 저장소입니다.  
+ **XmlDataDocument**는 **XmlDocument**에서 상속되므로 W3C DOM의 구현을 제공합니다. **XmlDataDocument**가 **DataSet**과 연관되어 있고 DataSet 내부에 해당 데이터 하위 세트를 저장하므로 DataSet은 **XmlDocument**의 용도를 제한하거나 변경하지 않습니다. **XmlDocument**를 사용하도록 작성된 코드는 **XmlDataDocument**에 대해서도 동일하게 작동됩니다. **DataSet**은 테이블, 열, 관계 및 제약 조건을 정의하여 동일한 데이터를 관계형으로 표시하는 독립 실행형, 메모리 내 사용자 데이터 저장소입니다.  
   
- 다음 그림은 XML 데이터의 **DataSet** 및 **XmlDataDocument**와의 다양한 연관성을 보여줍니다.  
+ 다음 그림은 XML 데이터의 **DataSet** 및 **XmlDataDocument**와의 다양한 연관성을 보여줍니다. 
   
- ![XML DataSet](../../../../docs/standard/data/xml/media/xmlintegrationwithrelationaldataandadodotnet.gif "xmlIntegrationWithRelationalDataAndADOdotNet")  
+ ![XML DataSet와의 다양한 연관성을 보여주는 다이어그램.](./media/xml-integration-with-relational-data-and-adonet/xml-integration-relational-data-adodotnet.gif)  
   
- 이 그림은 XML 데이터를 **DataSet**으로 직접 로드할 수 있으며 이를 통해 XML을 관계형 방식으로 직접 조작할 수 있음을 보여줍니다. 또는 XML을 **XmlDataDocument**에 해당하는 DOM의 파생 클래스로 로드할 수 있으며, 나중에 로드하여 **DataSet**과 동기화할 수 있습니다. **DataSet** 및 **XmlDataDocument**는 단일 데이터 집합에 대해 동기화되므로 한 저장소에서 데이터를 변경하면 해당 변경 내용이 다른 저장소에 반영됩니다.  
+ 이 그림은 XML 데이터를 **DataSet**으로 직접 로드할 수 있으며 이를 통해 XML을 관계형 방식으로 직접 조작할 수 있음을 보여줍니다. 또는 XML을 **XmlDataDocument**에 해당하는 DOM의 파생 클래스로 로드할 수 있으며, 나중에 로드하여 **DataSet**과 동기화할 수 있습니다. **DataSet** 및 **XmlDataDocument**는 단일 데이터 세트에 대해 동기화되므로 한 저장소에서 데이터를 변경하면 해당 변경 내용이 다른 저장소에 반영됩니다.  
   
  **XmlDataDocument**는 **XmlDocument**에서 모든 편집 및 탐색 기능을 상속합니다. **DataSet**과 동기화된 **XmlDataDocument** 및 해당하는 상속된 기능을 사용하는 것이 **DataSet**으로 XML을 직접 로드하는 것보다 더 적절한 옵션인 경우가 있습니다. 다음 표에서는 **DataSet**을 로드하는 데 사용할 방법을 선택할 때 고려해야 할 항목을 보여줍니다.  
   
@@ -49,4 +49,4 @@ ms.locfileid: "44183147"
   
 ## <a name="see-also"></a>참고 항목
 
-- [데이터 집합에서 XML 사용](../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md)
+- [데이터 세트에서 XML 사용](../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md)

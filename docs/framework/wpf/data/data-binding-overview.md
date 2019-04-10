@@ -10,12 +10,12 @@ helpviewer_keywords:
 - data binding [WPF], about data binding
 - conversion for data binding [WPF]
 ms.assetid: c707c95f-7811-401d-956e-2fffd019a211
-ms.openlocfilehash: a11118f0fad98d7c719951b97d7ad2b431e7af6d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: f849cf306f4de0cbaa7623ded4ab7045bb5112a6
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59081270"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59315324"
 ---
 # <a name="data-binding-overview"></a>데이터 바인딩 개요
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 데이터 바인딩 응용 프로그램 데이터와 상호 작용을 간단 하 고 일관적인 방법을 제공 합니다. 다양한 데이터 소스에서 [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] 개체 및 [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)]의 형태로 데이터에 요소를 바인딩할 수 있습니다. <xref:System.Windows.Controls.ContentControl>같은 <xref:System.Windows.Controls.Button> 하 고 <xref:System.Windows.Controls.ItemsControl>같은 <xref:System.Windows.Controls.ListBox> 고 <xref:System.Windows.Controls.ListView> 단일 데이터 항목의 유연한 스타일 또는 데이터 항목의 컬렉션을 사용 하도록 설정 하는 기본 제공 기능이 있습니다. 데이터를 기반으로 정렬, 필터 및 그룹 보기를 생성할 수 있습니다.  
@@ -404,17 +404,17 @@ ms.locfileid: "59081270"
   
  *유효성 검사* 프로세스에 대한 설명은 다음과 같습니다. 이 프로세스 중에 유효성 검사 오류나 기타 오류가 발생하면 프로세스가 중단됩니다.  
   
-1.  바인딩 엔진은 모든 사용자 지정 되어 있는지 확인 <xref:System.Windows.Controls.ValidationRule> 개체는 정의 된 <xref:System.Windows.Controls.ValidationRule.ValidationStep%2A> 로 설정 된 <xref:System.Windows.Controls.ValidationStep.RawProposedValue> 에 대 한 <xref:System.Windows.Data.Binding>를 호출 하는 경우에 <xref:System.Windows.Controls.ValidationRule.Validate%2A> 각 메서드 <xref:System.Windows.Controls.ValidationRule> 그 중 하나는 오류에 실행 될 때까지 되거나 모두 통과 합니다.  
+1. 바인딩 엔진은 모든 사용자 지정 되어 있는지 확인 <xref:System.Windows.Controls.ValidationRule> 개체는 정의 된 <xref:System.Windows.Controls.ValidationRule.ValidationStep%2A> 로 설정 된 <xref:System.Windows.Controls.ValidationStep.RawProposedValue> 에 대 한 <xref:System.Windows.Data.Binding>를 호출 하는 경우에 <xref:System.Windows.Controls.ValidationRule.Validate%2A> 각 메서드 <xref:System.Windows.Controls.ValidationRule> 그 중 하나는 오류에 실행 될 때까지 되거나 모두 통과 합니다.  
   
-2.  그런 다음 바인딩 엔진은 변환기를 호출합니다(있는 경우).  
+2. 그런 다음 바인딩 엔진은 변환기를 호출합니다(있는 경우).  
   
-3.  바인딩 엔진에 모든 사용자 지정 되어 있는지 확인 변환기가 성공 하면 <xref:System.Windows.Controls.ValidationRule> 개체는 정의 된 <xref:System.Windows.Controls.ValidationRule.ValidationStep%2A> 로 설정 된 <xref:System.Windows.Controls.ValidationStep.ConvertedProposedValue> 에 대 한 <xref:System.Windows.Data.Binding>를 호출 하는 경우에 <xref:System.Windows.Controls.ValidationRule.Validate%2A> 각 메서드 <xref:System.Windows.Controls.ValidationRule> 있는 <xref:System.Windows.Controls.ValidationRule.ValidationStep%2A> 로 <xref:System.Windows.Controls.ValidationStep.ConvertedProposedValue> 모두 통과 될 때까지 또는 그 중 하나는 오류에 실행 될 때까지 합니다.  
+3. 바인딩 엔진에 모든 사용자 지정 되어 있는지 확인 변환기가 성공 하면 <xref:System.Windows.Controls.ValidationRule> 개체는 정의 된 <xref:System.Windows.Controls.ValidationRule.ValidationStep%2A> 로 설정 된 <xref:System.Windows.Controls.ValidationStep.ConvertedProposedValue> 에 대 한 <xref:System.Windows.Data.Binding>를 호출 하는 경우에 <xref:System.Windows.Controls.ValidationRule.Validate%2A> 각 메서드 <xref:System.Windows.Controls.ValidationRule> 있는 <xref:System.Windows.Controls.ValidationRule.ValidationStep%2A> 로 <xref:System.Windows.Controls.ValidationStep.ConvertedProposedValue> 모두 통과 될 때까지 또는 그 중 하나는 오류에 실행 될 때까지 합니다.  
   
-4.  바인딩 엔진은 소스 속성을 설정합니다.  
+4. 바인딩 엔진은 소스 속성을 설정합니다.  
   
-5.  바인딩 엔진은 모든 사용자 지정 되어 있는지 확인 <xref:System.Windows.Controls.ValidationRule> 개체는 정의 된 <xref:System.Windows.Controls.ValidationRule.ValidationStep%2A> 로 설정 된 <xref:System.Windows.Controls.ValidationStep.UpdatedValue> 에 대 한 <xref:System.Windows.Data.Binding>를 호출 하는 경우에 <xref:System.Windows.Controls.ValidationRule.Validate%2A> 각 메서드 <xref:System.Windows.Controls.ValidationRule> 있는 <xref:System.Windows.Controls.ValidationRule.ValidationStep%2A> 로 설정 <xref:System.Windows.Controls.ValidationStep.UpdatedValue> 모두 통과 될 때까지 또는 그 중 하나는 오류에 실행 될 때까지 합니다. 경우는 <xref:System.Windows.Controls.DataErrorValidationRule> 바인딩과 사용 하 여 연결 및 해당 <xref:System.Windows.Controls.ValidationRule.ValidationStep%2A> 기본값으로 설정 됩니다 <xref:System.Windows.Controls.ValidationStep.UpdatedValue>, <xref:System.Windows.Controls.DataErrorValidationRule> 이 시점에서 확인 됩니다. 지점 이기도 때 바인딩이 합니다 <xref:System.Windows.Data.Binding.ValidatesOnDataErrors%2A> 로 설정 `true` 확인 됩니다.  
+5. 바인딩 엔진은 모든 사용자 지정 되어 있는지 확인 <xref:System.Windows.Controls.ValidationRule> 개체는 정의 된 <xref:System.Windows.Controls.ValidationRule.ValidationStep%2A> 로 설정 된 <xref:System.Windows.Controls.ValidationStep.UpdatedValue> 에 대 한 <xref:System.Windows.Data.Binding>를 호출 하는 경우에 <xref:System.Windows.Controls.ValidationRule.Validate%2A> 각 메서드 <xref:System.Windows.Controls.ValidationRule> 있는 <xref:System.Windows.Controls.ValidationRule.ValidationStep%2A> 로 설정 <xref:System.Windows.Controls.ValidationStep.UpdatedValue> 모두 통과 될 때까지 또는 그 중 하나는 오류에 실행 될 때까지 합니다. 경우는 <xref:System.Windows.Controls.DataErrorValidationRule> 바인딩과 사용 하 여 연결 및 해당 <xref:System.Windows.Controls.ValidationRule.ValidationStep%2A> 기본값으로 설정 됩니다 <xref:System.Windows.Controls.ValidationStep.UpdatedValue>, <xref:System.Windows.Controls.DataErrorValidationRule> 이 시점에서 확인 됩니다. 지점 이기도 때 바인딩이 합니다 <xref:System.Windows.Data.Binding.ValidatesOnDataErrors%2A> 로 설정 `true` 확인 됩니다.  
   
-6.  바인딩 엔진은 모든 사용자 지정 되어 있는지 확인 <xref:System.Windows.Controls.ValidationRule> 개체는 정의 된 <xref:System.Windows.Controls.ValidationRule.ValidationStep%2A> 로 설정 된 <xref:System.Windows.Controls.ValidationStep.CommittedValue> 에 대 한 <xref:System.Windows.Data.Binding>를 호출 하는 경우에 <xref:System.Windows.Controls.ValidationRule.Validate%2A> 각 메서드 <xref:System.Windows.Controls.ValidationRule> 있는 <xref:System.Windows.Controls.ValidationRule.ValidationStep%2A> 로 설정 <xref:System.Windows.Controls.ValidationStep.CommittedValue> 모두 통과 될 때까지 또는 그 중 하나는 오류에 실행 될 때까지 합니다.  
+6. 바인딩 엔진은 모든 사용자 지정 되어 있는지 확인 <xref:System.Windows.Controls.ValidationRule> 개체는 정의 된 <xref:System.Windows.Controls.ValidationRule.ValidationStep%2A> 로 설정 된 <xref:System.Windows.Controls.ValidationStep.CommittedValue> 에 대 한 <xref:System.Windows.Data.Binding>를 호출 하는 경우에 <xref:System.Windows.Controls.ValidationRule.Validate%2A> 각 메서드 <xref:System.Windows.Controls.ValidationRule> 있는 <xref:System.Windows.Controls.ValidationRule.ValidationStep%2A> 로 설정 <xref:System.Windows.Controls.ValidationStep.CommittedValue> 모두 통과 될 때까지 또는 그 중 하나는 오류에 실행 될 때까지 합니다.  
   
  경우는 <xref:System.Windows.Controls.ValidationRule> 통과 하지 못하면 바인딩 엔진에서 만드는이 프로세스 전체에서 언제 든를 <xref:System.Windows.Controls.ValidationError> 개체에 추가 합니다를 <xref:System.Windows.Controls.Validation.Errors%2A?displayProperty=nameWithType> 바인딩된 요소의 컬렉션입니다. 엔진은 바인딩 전에 실행 합니다 <xref:System.Windows.Controls.ValidationRule> 제거 된 지정된 된 단계에서 개체 <xref:System.Windows.Controls.ValidationError> 에 추가 된는 <xref:System.Windows.Controls.Validation.Errors%2A?displayProperty=nameWithType> 해당 단계 중 바인딩된 요소의 속성에 연결 합니다. 예를 들어 경우는 <xref:System.Windows.Controls.ValidationRule> 해당 <xref:System.Windows.Controls.ValidationRule.ValidationStep%2A> 로 설정 되어 <xref:System.Windows.Controls.ValidationStep.UpdatedValue> 실패 한 유효성 검사 프로세스가 발생 하면 바인딩 엔진을 제거 하는 다음에 <xref:System.Windows.Controls.ValidationError> 하나를 호출 하기 전에 즉시 <xref:System.Windows.Controls.ValidationRule> 있는 <xref:System.Windows.Controls.ValidationRule.ValidationStep%2A> 로 설정 <xref:System.Windows.Controls.ValidationStep.UpdatedValue>.  
   

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - classes [WPF], owners of dependency properties
 - metadata [WPF], dependency properties
 ms.assetid: 1fbada8e-4867-4ed1-8d97-62c07dad7ebc
-ms.openlocfilehash: 03ac9c59495d5eb95851df98f85eadc3d1a329ba
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 9adcd19ea48d62f4fdcab3380252ae8ec8398296
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59117762"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59315688"
 ---
 # <a name="dependency-property-value-precedence"></a>종속성 속성 값 우선 순위
 <a name="introduction"></a> 이 항목에서는 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 속성 시스템의 작업 방식이 종속성 속성 값에 영향을 주는 방식을 설명하고 속성 시스템의 일면이 속성의 유효 값이 적용되는 우선 순위에 관해 설명합니다.  
@@ -39,25 +39,25 @@ ms.locfileid: "59117762"
 ## <a name="dependency-property-setting-precedence-list"></a>종속성 속성 설정 우선 순위 목록  
  다음은 속성 시스템에서 종속성 속성의 런타임 값을 할당할 때 사용하는 최종적인 순서입니다. 가장 높은 우선 순위가 가장 먼저 나열됩니다. 이 목록은 [종속성 속성 개요](dependency-properties-overview.md)에 나와 있는 일반적인 순서를 확장한 것입니다.  
   
-1.  **속성 시스템 강제 변환 합니다.** 강제 변환에 대한 자세한 내용은 이 항목의 뒷부분에 있는 [강제 변환, 애니메이션 및 기준 값](#animations)을 참조하십시오.  
+1. **속성 시스템 강제 변환 합니다.** 강제 변환에 대한 자세한 내용은 이 항목의 뒷부분에 있는 [강제 변환, 애니메이션 및 기준 값](#animations)을 참조하십시오.  
   
-2.  **활성 애니메이션 또는 보류 동작이 있는 애니메이션.** 속성 애니메이션이 실제로 효과를 발휘하려면 기준 값이 로컬로 설정된 경우에도 애니메이션되지 않은 기준 값보다 높은 우선 순위를 가질 수 있어야 합니다. 자세한 내용은 이 항목의 뒷부분에 있는 [강제 변환, 애니메이션 및 기준 값](#animations)을 참조하십시오.  
+2. **활성 애니메이션 또는 보류 동작이 있는 애니메이션.** 속성 애니메이션이 실제로 효과를 발휘하려면 기준 값이 로컬로 설정된 경우에도 애니메이션되지 않은 기준 값보다 높은 우선 순위를 가질 수 있어야 합니다. 자세한 내용은 이 항목의 뒷부분에 있는 [강제 변환, 애니메이션 및 기준 값](#animations)을 참조하십시오.  
   
-3.  **로컬 값입니다.** 편리 하 게도 동일에서 특성 또는 속성 요소로 설정 하는 "래퍼" 속성을 통해 로컬 값을 설정할 수 있습니다 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], 또는를 호출 하 여 합니다 <xref:System.Windows.DependencyObject.SetValue%2A> [!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)] 특정 인스턴스의 속성을 사용 하 여 합니다. 바인딩이나 리소스를 사용하여 로컬 값을 설정하면 이들 각각은 직접 값을 설정한 것과 같은 우선 순위가 적용됩니다.  
+3. **로컬 값입니다.** 편리 하 게도 동일에서 특성 또는 속성 요소로 설정 하는 "래퍼" 속성을 통해 로컬 값을 설정할 수 있습니다 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], 또는를 호출 하 여 합니다 <xref:System.Windows.DependencyObject.SetValue%2A> [!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)] 특정 인스턴스의 속성을 사용 하 여 합니다. 바인딩이나 리소스를 사용하여 로컬 값을 설정하면 이들 각각은 직접 값을 설정한 것과 같은 우선 순위가 적용됩니다.  
   
-4.  **TemplatedParent 템플릿 속성입니다.** 요소에는 <xref:System.Windows.FrameworkElement.TemplatedParent%2A> 템플릿의 일부로 만들어진 경우 (한 <xref:System.Windows.Controls.ControlTemplate> 또는 <xref:System.Windows.DataTemplate>). 적용 시기에 대한 자세한 내용은 이 항목의 뒷부분에 있는 [TemplatedParent](#templatedparent)를 참조하십시오. 템플릿 내에서는 다음과 같은 우선 순위가 적용됩니다.  
+4. **TemplatedParent 템플릿 속성입니다.** 요소에는 <xref:System.Windows.FrameworkElement.TemplatedParent%2A> 템플릿의 일부로 만들어진 경우 (한 <xref:System.Windows.Controls.ControlTemplate> 또는 <xref:System.Windows.DataTemplate>). 적용 시기에 대한 자세한 내용은 이 항목의 뒷부분에 있는 [TemplatedParent](#templatedparent)를 참조하십시오. 템플릿 내에서는 다음과 같은 우선 순위가 적용됩니다.  
   
     1.  트리거되는 <xref:System.Windows.FrameworkElement.TemplatedParent%2A> 템플릿.  
   
     2.  속성 집합 (일반적으로 통해 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 특성)에 <xref:System.Windows.FrameworkElement.TemplatedParent%2A> 템플릿.  
   
-5.  **암시적 스타일입니다.** `Style` 속성에만 적용됩니다. `Style` 속성은 해당 요소의 유형과 일치하는 키를 가진 스타일 리소스로 채워집니다. 해당 스타일 리소스가 페이지나 애플리케이션에 있어야 합니다. 암시적 스타일 리소스의 조회는 테마로 이어지지 않습니다.  
+5. **암시적 스타일입니다.** `Style` 속성에만 적용됩니다. `Style` 속성은 해당 요소의 유형과 일치하는 키를 가진 스타일 리소스로 채워집니다. 해당 스타일 리소스가 페이지나 애플리케이션에 있어야 합니다. 암시적 스타일 리소스의 조회는 테마로 이어지지 않습니다.  
   
-6.  **스타일 트리거.** 페이지나 애플리케이션의 스타일에 있는 트리거(명시적 또는 암시적인 스타일일 수 있으나 우선 순위가 더 낮은 기본 스타일은 제외).  
+6. **스타일 트리거.** 페이지나 애플리케이션의 스타일에 있는 트리거(명시적 또는 암시적인 스타일일 수 있으나 우선 순위가 더 낮은 기본 스타일은 제외).  
   
-7.  **템플릿 트리거입니다.** 스타일에 있는 템플릿 또는 직접 적용된 템플릿의 모든 트리거.  
+7. **템플릿 트리거입니다.** 스타일에 있는 템플릿 또는 직접 적용된 템플릿의 모든 트리거.  
   
-8.  **스타일 setter입니다.** 값을 <xref:System.Windows.Setter> 페이지나 응용 프로그램의 스타일입니다.  
+8. **스타일 setter입니다.** 값을 <xref:System.Windows.Setter> 페이지나 응용 프로그램의 스타일입니다.  
   
 9. **기본 (테마) 스타일입니다.** 이 스타일이 적용되는 시기, 그리고 테마 스타일에 있는 템플릿과 테마 스타일의 관계에 대한 자세한 내용은 이 항목의 뒷부분에 있는 [기본(테마) 스타일](#themestyles)을 참조하십시오. 기본 스타일 내에서는 다음과 같은 우선 순위가 적용됩니다.  
   

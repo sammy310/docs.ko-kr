@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 62f404a5-13ea-4b93-a29f-55b74a16c9d3
-ms.openlocfilehash: 3cd679c5bb869a648eecf9702182129d9719d141
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 414be4a5bdbd1fe5d65475efcd5e72606b73685f
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59098925"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59312828"
 ---
 # <a name="handling-datatable-events"></a>DataTable 이벤트 처리
 <xref:System.Data.DataTable> 개체는 응용 프로그램에서 처리할 수 있는 일련의 이벤트를 제공합니다. 다음 표에서는 `DataTable` 이벤트에 대해 설명합니다.  
@@ -47,21 +47,21 @@ ms.locfileid: "59098925"
 ## <a name="sequence-of-operations"></a>작업 순서  
  다음은 `DataRow`가 추가, 수정 또는 삭제되는 경우의 작업 순서입니다.  
   
-1.  제안된 레코드를 만들고 변경 내용을 적용합니다.  
+1. 제안된 레코드를 만들고 변경 내용을 적용합니다.  
   
-2.  식이 아닌 열의 제약 조건을 검사합니다.  
+2. 식이 아닌 열의 제약 조건을 검사합니다.  
   
-3.  가능한 경우 `RowChanging` 또는 `RowDeleting` 이벤트를 발생시킵니다.  
+3. 가능한 경우 `RowChanging` 또는 `RowDeleting` 이벤트를 발생시킵니다.  
   
-4.  제안된 레코드를 현재 레코드로 설정합니다.  
+4. 제안된 레코드를 현재 레코드로 설정합니다.  
   
-5.  관련된 인덱스를 업데이트합니다.  
+5. 관련된 인덱스를 업데이트합니다.  
   
-6.  관련 `ListChanged` 개체에 대해 `DataView` 이벤트를 발생시키고, 관련 `PropertyChanged` 개체에 대해 `DataRowView` 이벤트를 발생시킵니다.  
+6. 관련 `ListChanged` 개체에 대해 `DataView` 이벤트를 발생시키고, 관련 `PropertyChanged` 개체에 대해 `DataRowView` 이벤트를 발생시킵니다.  
   
-7.  모든 식 열을 계산합니다. 단, 열의 제약 조건 검사는 지금 수행하지 않습니다.  
+7. 모든 식 열을 계산합니다. 단, 열의 제약 조건 검사는 지금 수행하지 않습니다.  
   
-8.  식 열 계산 결과에 영향을 받은 관련 `ListChanged` 개체에 대해 `DataView` 이벤트를 발생시키고, 관련 `PropertyChanged` 개체에 대해 `DataRowView` 이벤트를 발생시킵니다.  
+8. 식 열 계산 결과에 영향을 받은 관련 `ListChanged` 개체에 대해 `DataView` 이벤트를 발생시키고, 관련 `PropertyChanged` 개체에 대해 `DataRowView` 이벤트를 발생시킵니다.  
   
 9. 가능한 경우 `RowChanged` 또는 `RowDeleted` 이벤트를 발생시킵니다.  
   

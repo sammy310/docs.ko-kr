@@ -6,12 +6,12 @@ title: .NET 설명서
 description: C#, Visual Basic 및 F#을 사용하는 모든 플랫폼에서 .NET을 사용하여 다양한 애플리케이션을 만드는 방법을 알아보세요. API 참조, 샘플 코드, 자습서 등을 찾아보세요.
 ms.custom: updateeachrelease
 ms.date: 12/04/2018
-ms.openlocfilehash: 31e810246528c99a665128d3535b92dbfcb4352d
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: 132cab6f7c196f88fdc02259e55d0fcb5fbbfd10
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58464517"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59297270"
 ---
 <!-- markdownlint-disable MD033 -->
 <div id="main" class="v2">
@@ -231,8 +231,8 @@ ms.locfileid: "58464517"
                                             </div>
                                             <div class="cardText">
                                                 <h3><a href="/dotnet/machine-learning">ML.NET 가이드</a></h3>
-                                                <p><a href="/dotnet/machine-learning/tutorials">자습서</a></p>
-                                                <p><a href="/dotnet/machine-learning/resources">리소스</a></p>
+                                                <p><a href="/dotnet/machine-learning/index#tutorials">자습서</a></p>
+                                                <p><a href="/dotnet/machine-learning/index#resources">자료</a></p>
                                                 <p><a href="/dotnet/machine-learning/resources/glossary">용어</a></p>
                                                 <p><a href="/dotnet/api?view=ml-dotnet">ML.NET API 참조</a></p>
                                             </div>
@@ -434,7 +434,7 @@ ms.locfileid: "58464517"
                         </ul>
                     </li>
                     <li>
-                        <a href="#mobile">모바일</a>
+                        <a href="#mobile">휴대폰</a>
                         <ul id="mobile" class="cardsC">
                             <li>
                                 <a href="/xamarin/ios">
@@ -496,7 +496,7 @@ ms.locfileid: "58464517"
                         </ul>
                     </li>
                     <li>
-                        <a href="#desktop">데스크톱</a>
+                        <a href="#desktop">바탕 화면</a>
                         <ul id="desktop" class="cardsC">
                             <li>
                                 <a href="/uwp">
@@ -582,7 +582,7 @@ ms.locfileid: "58464517"
                         <a href="#gaming">게임</a>
                         <ul id="gaming" class="cardsC">
                             <li>
-                                <a href="https://visualstudio.microsoft.com/vs/features/game-development/">
+                                <a href="https://visualstudio.microsoft.com/vs/features/game-development/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link">
                                     <div class="cardSize">
                                         <div class="cardPadding">
                                             <div class="card">

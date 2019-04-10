@@ -7,12 +7,12 @@ helpviewer_keywords:
 - white-space processing in XAML [XAML Services]
 - characters [XAML Services], East Asian
 ms.assetid: cc9cc377-7544-4fd0-b65b-117b90bb0b23
-ms.openlocfilehash: ca628a366b000b23a2abe38b1c8b7272299bff16
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: dadfab948aff73714a2cf253100f89de3b4a2d57
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59102234"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59294927"
 ---
 # <a name="white-space-processing-in-xaml"></a>XAML의 공백 처리
 XAML에 대 한 언어 규칙에 따르면 해당 유효 공백에서 처리 되어야 합니다는 [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] 프로세서 구현 합니다. 이 항목에서는 이들 XAML 언어 규칙에 대해 설명합니다. 정의한 추가 공백 처리도 문서화 된 [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] XAML 프로세서 및 serialization에 대 한 XAML 작성기 구현의 합니다.  
@@ -25,15 +25,15 @@ XAML에 대 한 언어 규칙에 따르면 해당 유효 공백에서 처리 되
 ## <a name="white-space-normalization"></a>공백 정규화  
  기본적으로 다음 공백 정규화는 발생 경우를 [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] 프로세서 프로세스는 [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] 파일:  
   
-1.  동아시아 문자 사이에서 줄 바꿈 문자가 제거됩니다. 이 용어의 정의에 대해서는 이 항목의 뒷부분에서 "동아시아 문자" 섹션을 참조하세요.  
+1. 동아시아 문자 사이에서 줄 바꿈 문자가 제거됩니다. 이 용어의 정의에 대해서는 이 항목의 뒷부분에서 "동아시아 문자" 섹션을 참조하세요.  
   
-2.  모든 공백 문자 (공백, 줄 바꿈, 탭) 공간으로 변환 됩니다.  
+2. 모든 공백 문자 (공백, 줄 바꿈, 탭) 공간으로 변환 됩니다.  
   
-3.  모든 연속 공백은 삭제되고 공백 하나로 대체됩니다.  
+3. 모든 연속 공백은 삭제되고 공백 하나로 대체됩니다.  
   
-4.  시작 태그 바로 뒤의 공백은 삭제됩니다.  
+4. 시작 태그 바로 뒤의 공백은 삭제됩니다.  
   
-5.  종료 태그 바로 앞의 공백은 삭제됩니다.  
+5. 종료 태그 바로 앞의 공백은 삭제됩니다.  
   
  "기본값"은 [xml:space](xml-space-handling-in-xaml.md) 특성의 기본값으로 나타내는 상태에 해당합니다.  
   

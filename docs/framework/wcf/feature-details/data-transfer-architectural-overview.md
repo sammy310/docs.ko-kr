@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - data transfer [WCF], architectural overview
 ms.assetid: 343c2ca2-af53-4936-a28c-c186b3524ee9
-ms.openlocfilehash: bb903f6d182c7a8be915daf67a4df30475cfae62
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 22d2ce71d850fc799304cadf7e8d7d8af2670d5d
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59127460"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59315883"
 ---
 # <a name="data-transfer-architectural-overview"></a>데이터 전송 아키텍처 개요
 Windows Communication Foundation (WCF) 메시징 인프라로 생각할 수 있습니다. WCF는 메시지를 받고, 처리하고, 추가 작업을 위해 사용자 코드로 디스패치하거나, 사용자 코드에서 제공된 데이터로부터 메시지를 생성하고 이 메시지를 대상에 전달할 수 있습니다. 고급 개발자를 대상으로 한 이 항목에서는 메시지 및 포함된 데이터를 처리하기 위한 아키텍처에 대해 설명합니다. 데이터를 주고 받는 방법을 보다 간단하게, 작업에 초점을 두고 설명하는 내용은 [Specifying Data Transfer in Service Contracts](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md)을 참조하십시오.  
@@ -107,15 +107,15 @@ Windows Communication Foundation (WCF) 메시징 인프라로 생각할 수 있�
   
  이렇게 하려면 전체 `Message` 인스턴스와 하나의 XML Infoset 간에 매핑이 정의되어야 합니다. 이러한 매핑은 실제로 존재 합니다. WCF는 SOAP 표준을 사용 하 여이 매핑을 정의. `Message` 인스턴스를 XML Infoset으로 작성할 때, 결과 Infoset은 해당 메시지가 포함된 유효한 SOAP 봉투입니다. 따라서 `WriteMessage` 는 일반적으로 다음 단계를 수행합니다.  
   
-1.  SOAP 봉투 요소 열기 태그를 씁니다.  
+1. SOAP 봉투 요소 열기 태그를 씁니다.  
   
-2.  SOAP 헤더 요소 열기 태그를 쓰고, 모든 헤더를 작성하고, 헤더 요소를 닫습니다.  
+2. SOAP 헤더 요소 열기 태그를 쓰고, 모든 헤더를 작성하고, 헤더 요소를 닫습니다.  
   
-3.  SOAP 본문 요소 열기 태그를 씁니다.  
+3. SOAP 본문 요소 열기 태그를 씁니다.  
   
-4.  `WriteBodyContents` 또는 동등한 메서드를 호출하여 본문을 작성합니다.  
+4. `WriteBodyContents` 또는 동등한 메서드를 호출하여 본문을 작성합니다.  
   
-5.  본문 및 봉투 요소를 닫습니다.  
+5. 본문 및 봉투 요소를 닫습니다.  
   
  이전 단계는 SOAP 표준과 밀접하게 연관되어 있습니다. 여러 버전의 SOAP가 존재하기 때문에 발생하는 문제가 있습니다. 예를 들어 사용 중인 SOAP 버전을 모르면 SOAP 봉투 요소를 올바르게 작성할 수 없습니다. 또한 복잡한 SOAP별 매핑을 완전히 해제하는 것이 좋은 경우도 있습니다.  
   
@@ -170,11 +170,11 @@ Windows Communication Foundation (WCF) 메시징 인프라로 생각할 수 있�
   
  이를 위해 <xref:System.Xml.IStreamProvider> 인터페이스가 사용됩니다. 인터페이스에는 작성할 스트림을 반환하는 <xref:System.Xml.IStreamProvider.GetStream> 메서드가 있습니다. <xref:System.ServiceModel.Channels.Message.OnWriteBodyContents%28System.Xml.XmlDictionaryWriter%29> 에서 스트리밍된 메시지 본문을 쓰는 올바른 방법은 다음과 같습니다.  
   
-1.  스트림 앞에 필요한 정보를 씁니다(예: 여는 XML 태그).  
+1. 스트림 앞에 필요한 정보를 씁니다(예: 여는 XML 태그).  
   
-2.  쓸 스트림을 반환하는 `WriteValue` 구현과 함께 <xref:System.Xml.XmlDictionaryWriter> 를 사용하는 <xref:System.Xml.IStreamProvider>에서 `IStreamProvider` 오버로드를 호출합니다.  
+2. 쓸 스트림을 반환하는 `WriteValue` 구현과 함께 <xref:System.Xml.XmlDictionaryWriter> 를 사용하는 <xref:System.Xml.IStreamProvider>에서 `IStreamProvider` 오버로드를 호출합니다.  
   
-3.  스트림 뒤에 필요한 정보를 씁니다(예: 닫는 XML 태그).  
+3. 스트림 뒤에 필요한 정보를 씁니다(예: 닫는 XML 태그).  
   
  이 방법을 사용하면 <xref:System.Xml.IStreamProvider.GetStream> 을 호출하고 스트리밍된 데이터를 작성할 때 XML 작성기를 선택할 수 있습니다. 예를 들어 텍스트 및 이진 XML 작성기는 이를 즉각 호출하고 시작 및 끝 태그 사이에서 스트리밍된 콘텐츠를 작성합니다. MTOM 작성기는 메시지의 적절한 일부를 쓸 준비가 되면 나중에 <xref:System.Xml.IStreamProvider.GetStream> 을 호출할지 결정할 수 있습니다.  
   

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - custom controls [Windows Forms], exposing properties
 - constituent controls
 ms.assetid: 5c1ec98b-aa48-4823-986e-4712551cfdf1
-ms.openlocfilehash: 750caa1f45f870e63a5b7ccbe0c309e6fb0b3178
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 44b96218e674c754a1985f2f22a36707cd1776b6
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59106355"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59294914"
 ---
 # <a name="how-to-expose-properties-of-constituent-controls"></a>방법: Constituent 컨트롤의 속성 공개
 복합 컨트롤을 구성 하는 컨트롤 이라고 *구성 요소 컨트롤*합니다. 이러한 컨트롤은 일반적으로 전용으로 선언 및 하므로 개발자가 액세스할 수 없습니다. 미래의 사용자에 게 이러한 컨트롤의 속성을 제공 하려는 경우에 사용자에 게 노출 해야 있습니다. 사용자 컨트롤에서 속성을 만들고 사용 하 여 구성 요소 컨트롤의 속성을 노출 합니다 `get` 및 `set` 구성 요소 컨트롤의 개인 속성에 변경 내용을 적용 하려면 해당 속성의 접근자입니다.  
@@ -51,11 +51,11 @@ public Color ButtonColor
   
 ### <a name="to-expose-a-property-of-a-constituent-control"></a>구성 요소 컨트롤의 속성을 노출 하려면  
   
-1.  사용자 정의 컨트롤에 대 한 공용 속성을 만듭니다.  
+1. 사용자 정의 컨트롤에 대 한 공용 속성을 만듭니다.  
   
-2.  에 `get` 섹션의 속성을 노출 하려는 속성의 값을 검색 하는 코드를 작성 합니다.  
+2. 에 `get` 섹션의 속성을 노출 하려는 속성의 값을 검색 하는 코드를 작성 합니다.  
   
-3.  에 `set` 섹션 속성의 구성 요소 컨트롤 노출 된 속성에 속성의 값을 전달 하는 코드를 작성 합니다.  
+3. 에 `set` 섹션 속성의 구성 요소 컨트롤 노출 된 속성에 속성의 값을 전달 하는 코드를 작성 합니다.  
   
 ## <a name="see-also"></a>참고자료
 

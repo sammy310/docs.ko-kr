@@ -2,12 +2,12 @@
 title: <bindings>
 ms.date: 01/22/2018
 ms.assetid: b62cd369-5409-4030-8490-9759a462dd3a
-ms.openlocfilehash: 7cafd8c1ba96a4fa1014f3570413b4bb83f69766
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 479941593b1abefe637525703140b02917c6692b
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57474724"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59316793"
 ---
 # <a name="bindings"></a>\<bindings>
 
@@ -29,15 +29,15 @@ ms.locfileid: "57474724"
   
  스택에서 요소가 나타나는 순서는 작업이 메시지에 적용되는 순서이므로 중요합니다. 다음과 같은 스택 요소 순서를 사용해야 합니다.  
   
-1.  Transactions(선택적)  
+1. Transactions(선택적)  
   
-2.  Reliable messaging (선택적)  
+2. Reliable messaging (선택적)  
   
-3.  Security(선택적)  
+3. Security(선택적)  
   
-4.  인코더  
+4. 인코더  
   
-5.  전송  
+5. 전송  
   
  사용자 지정 바인딩은 `name` 특성으로 식별됩니다. 사용자 지정 바인딩에 대 한 자세한 내용은 참조 하세요. [사용자 지정 바인딩을](../../../../../docs/framework/wcf/extending/custom-bindings.md)합니다.  
   

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - smart tags
 - designer actions
 ms.assetid: cac337e6-00f6-4584-80f4-75728f5ea113
-ms.openlocfilehash: 3b20e903ce7eef7c69f55328f459d52537a1e85d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: a93402be30cb461ac6a0ed9daa4a684598a85da1
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59132069"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59318249"
 ---
 # <a name="walkthrough-performing-common-tasks-using-smart-tags-on-windows-forms-controls"></a>연습: Windows Forms 컨트롤에서 스마트 태그를 사용하여 일반 작업 수행
 Windows Forms 응용 프로그램에 대 한 폼 및 컨트롤을 구성할 때에 반복적으로 수행 하는 많은 작업이 있습니다. 다음은 발생 하는 일반적으로 수행된 하는 작업의 일부입니다.  
@@ -44,26 +44,26 @@ Windows Forms 응용 프로그램에 대 한 폼 및 컨트롤을 구성할 때�
   
 #### <a name="to-create-the-project"></a>프로젝트를 만들려면  
   
-1.  "SmartTagsExample" 이라는 Windows 기반 응용 프로그램 프로젝트를 만듭니다 (**파일** > **새로 만들기** > **프로젝트**  >   **Visual C#** 나 **Visual Basic** > **클래식 바탕 화면** > **Windows Forms 응용 프로그램**).  
+1. "SmartTagsExample" 이라는 Windows 기반 응용 프로그램 프로젝트를 만듭니다 (**파일** > **새로 만들기** > **프로젝트**  >   **Visual C#** 나 **Visual Basic** > **클래식 바탕 화면** > **Windows Forms 응용 프로그램**).  
   
-2.  폼을 선택 합니다 **Windows Forms 디자이너**합니다.  
+2. 폼을 선택 합니다 **Windows Forms 디자이너**합니다.  
   
 ## <a name="using-smart-tags"></a>스마트 태그를 사용 하 여  
  스마트 태그는 항상 사용자에 게 제공 하는 컨트롤에 디자인 타임에 사용할 수 있습니다.  
   
 #### <a name="to-use-smart-tags"></a>스마트 태그를 사용 하려면  
   
-1.  끌어서를 <xref:System.Windows.Forms.TabControl> 에서 합니다 **도구 상자** 폼입니다. 스마트 태그 문자 모양을 확인 (![스마트 태그 문자 모양](./media/vs-winformsmttagglyph.gif "VS_WinFormSmtTagGlyph"))의 측면에 표시 되는 <xref:System.Windows.Forms.TabControl>합니다.  
+1. 끌어서를 <xref:System.Windows.Forms.TabControl> 에서 합니다 **도구 상자** 폼입니다. 스마트 태그 문자 모양을 확인 (![스마트 태그 문자 모양](./media/vs-winformsmttagglyph.gif "VS_WinFormSmtTagGlyph"))의 측면에 표시 되는 <xref:System.Windows.Forms.TabControl>합니다.  
   
-2.  스마트 태그 문자 모양을 클릭 합니다. 문자 모양이 옆에 나타나는 바로 가기 메뉴에서 선택 합니다 **추가 탭** 항목입니다. 탭 페이지를 새로 추가할 관찰 된 <xref:System.Windows.Forms.TabControl>합니다.  
+2. 스마트 태그 문자 모양을 클릭 합니다. 문자 모양이 옆에 나타나는 바로 가기 메뉴에서 선택 합니다 **추가 탭** 항목입니다. 탭 페이지를 새로 추가할 관찰 된 <xref:System.Windows.Forms.TabControl>합니다.  
   
-3.  <xref:System.Windows.Forms.TableLayoutPanel> 도구 상자 **에서** 컨트롤을 폼으로 끌어다 놓습니다.  
+3. <xref:System.Windows.Forms.TableLayoutPanel> 도구 상자 **에서** 컨트롤을 폼으로 끌어다 놓습니다.  
   
-4.  스마트 태그 문자 모양을 클릭 합니다. 문자 모양이 옆에 나타나는 바로 가기 메뉴에서 선택 합니다 **열 추가** 항목입니다. 새 열을 추가할 관찰 된 <xref:System.Windows.Forms.TableLayoutPanel> 제어 합니다.  
+4. 스마트 태그 문자 모양을 클릭 합니다. 문자 모양이 옆에 나타나는 바로 가기 메뉴에서 선택 합니다 **열 추가** 항목입니다. 새 열을 추가할 관찰 된 <xref:System.Windows.Forms.TableLayoutPanel> 제어 합니다.  
   
-5.  <xref:System.Windows.Forms.SplitContainer> 도구 상자 **에서** 컨트롤을 폼으로 끌어다 놓습니다.  
+5. <xref:System.Windows.Forms.SplitContainer> 도구 상자 **에서** 컨트롤을 폼으로 끌어다 놓습니다.  
   
-6.  스마트 태그 문자 모양을 클릭 합니다. 문자 모양이 옆에 나타나는 바로 가기 메뉴에서 선택 합니다 **가로 분할자 방향** 항목입니다. 확인 된 <xref:System.Windows.Forms.SplitContainer> 컨트롤의 분할 막대는 이제 가로 방향입니다.  
+6. 스마트 태그 문자 모양을 클릭 합니다. 문자 모양이 옆에 나타나는 바로 가기 메뉴에서 선택 합니다 **가로 분할자 방향** 항목입니다. 확인 된 <xref:System.Windows.Forms.SplitContainer> 컨트롤의 분할 막대는 이제 가로 방향입니다.  
   
 ## <a name="see-also"></a>참고자료
 

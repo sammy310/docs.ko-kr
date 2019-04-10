@@ -5,12 +5,12 @@ helpviewer_keywords:
 - metadata [WPF], framework properties
 - framework property metadata [WPF]
 ms.assetid: 9962f380-b885-4b61-a62e-457397083fea
-ms.openlocfilehash: b6bacf6f0c27b123d36f17510d84e5ef5e2cf122
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 2a20e5a2bdbcbb36f6f06bbbadb2a46743ca5eba
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59108708"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59314700"
 ---
 # <a name="framework-property-metadata"></a>프레임워크 속성 메타데이터
 프레임워크 속성 메타데이터는 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 아키텍처의 WPF 프레임워크 수준에 있는 것으로 간주되는 개체 요소의 속성용으로 보고됩니다. 일반적으로 WPF 프레임워크 수준 지정에서는 렌더링, 데이터 바인딩 및 속성 시스템 미세 조정과 같은 기능이 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 프레젠테이션 [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] 및 실행 파일을 통해 처리됩니다. 이러한 시스템에서 프레임워크 속성 메타데이터를 쿼리하여 특정 요소 속성의 기능별 특성을 결정합니다.  
@@ -48,9 +48,9 @@ ms.locfileid: "59108708"
   
  만들려는 경우를 <xref:System.Windows.FrameworkPropertyMetadata> 인스턴스, 프레임 워크 속성 특성에 전달 하는 특정 속성에 대 한 값을 사용 하 여 해당 메타 데이터를 채우는 데는 두 가지 방법이 있습니다.  
   
-1.  사용 된 <xref:System.Windows.FrameworkPropertyMetadata> 허용 하는 생성자 시그니처를 `flags` 매개 변수입니다. 값이 필요한 모든 조합된으로이 매개 변수를 채워야 합니다 <xref:System.Windows.FrameworkPropertyMetadataOptions> 열거형 플래그입니다.  
+1. 사용 된 <xref:System.Windows.FrameworkPropertyMetadata> 허용 하는 생성자 시그니처를 `flags` 매개 변수입니다. 값이 필요한 모든 조합된으로이 매개 변수를 채워야 합니다 <xref:System.Windows.FrameworkPropertyMetadataOptions> 열거형 플래그입니다.  
   
-2.  없이 시그니처 중 하나를 사용 하 여는 `flags` 매개 변수를 각 보고 부울 속성을 설정한 후 <xref:System.Windows.FrameworkPropertyMetadata> 에 `true` 원하는 각 특성 변경에 대 한 합니다. 이 작업을 수행하는 경우 이 종속성 속성이 있는 요소를 생성하기 전에 이러한 속성을 설정해야 합니다. `flags` 매개 변수를 방지하는 동작을 허용하기 위해 부울 속성은 읽기-쓰기가 되며 여전히 메타데이터를 채우지만, 속성을 사용하기 전에 메타데이터를 적절하게 봉인해야 합니다. 따라서 메타데이터를 요청한 후에 속성을 설정하려는 것은 올바른 작업이 아닙니다.  
+2. 없이 시그니처 중 하나를 사용 하 여는 `flags` 매개 변수를 각 보고 부울 속성을 설정한 후 <xref:System.Windows.FrameworkPropertyMetadata> 에 `true` 원하는 각 특성 변경에 대 한 합니다. 이 작업을 수행하는 경우 이 종속성 속성이 있는 요소를 생성하기 전에 이러한 속성을 설정해야 합니다. `flags` 매개 변수를 방지하는 동작을 허용하기 위해 부울 속성은 읽기-쓰기가 되며 여전히 메타데이터를 채우지만, 속성을 사용하기 전에 메타데이터를 적절하게 봉인해야 합니다. 따라서 메타데이터를 요청한 후에 속성을 설정하려는 것은 올바른 작업이 아닙니다.  
   
 <a name="Framework_Property_Metadata_Merge_Behavior"></a>   
 ## <a name="framework-property-metadata-merge-behavior"></a>프레임워크 속성 메타데이터 병합 동작  

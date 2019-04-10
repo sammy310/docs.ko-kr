@@ -12,12 +12,12 @@ helpviewer_keywords:
 - columns [Windows Forms], deleting in data grids
 - DataGrid control [Windows Forms], hiding columns
 ms.assetid: bcd0dd96-6687-4c48-b0e1-d5287b93ac91
-ms.openlocfilehash: e6e8a4a5908d890d34ab6de952917cd97be2b433
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: d3f1f013cbb5e41c997014f556602b01bab62914
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59120148"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59297514"
 ---
 # <a name="how-to-delete-or-hide-columns-in-the-windows-forms-datagrid-control"></a>방법: Windows Forms DataGrid 컨트롤에서 열 삭제 또는 숨기기
 > [!NOTE]
@@ -32,13 +32,13 @@ ms.locfileid: "59120148"
   
 ### <a name="to-delete-a-column-from-the-datagrid-programmatically"></a>프로그래밍 방식으로 DataGrid에서 열을 삭제 하려면  
   
-1.  폼의 선언 영역에서의 새 인스턴스를 선언 합니다 <xref:System.Windows.Forms.DataGridTableStyle> 클래스입니다.  
+1. 폼의 선언 영역에서의 새 인스턴스를 선언 합니다 <xref:System.Windows.Forms.DataGridTableStyle> 클래스입니다.  
   
-2.  설정 된 <xref:System.Windows.Forms.DataGridTableStyle.MappingName%2A?displayProperty=nameWithType> 테이블 스타일을 적용 하려는 데이터 원본에 대 한 속성입니다. 다음 예제에서는 <xref:System.Windows.Forms.DataGrid.DataMember%2A?displayProperty=nameWithType> 이미 설정 되었다고 가정 하는 속성입니다.  
+2. 설정 된 <xref:System.Windows.Forms.DataGridTableStyle.MappingName%2A?displayProperty=nameWithType> 테이블 스타일을 적용 하려는 데이터 원본에 대 한 속성입니다. 다음 예제에서는 <xref:System.Windows.Forms.DataGrid.DataMember%2A?displayProperty=nameWithType> 이미 설정 되었다고 가정 하는 속성입니다.  
   
-3.  새 추가 <xref:System.Windows.Forms.DataGridTableStyle> datagrid의 테이블 스타일 컬렉션 개체입니다.  
+3. 새 추가 <xref:System.Windows.Forms.DataGridTableStyle> datagrid의 테이블 스타일 컬렉션 개체입니다.  
   
-4.  호출 된 <xref:System.Windows.Forms.GridColumnStylesCollection.RemoveAt%2A> 메서드를 <xref:System.Windows.Forms.DataGrid>의 <xref:System.Windows.Forms.DataGridTableStyle.GridColumnStyles%2A> 컬렉션을 삭제 하는 열의 열 인덱스를 지정 하 합니다.  
+4. 호출 된 <xref:System.Windows.Forms.GridColumnStylesCollection.RemoveAt%2A> 메서드를 <xref:System.Windows.Forms.DataGrid>의 <xref:System.Windows.Forms.DataGridTableStyle.GridColumnStyles%2A> 컬렉션을 삭제 하는 열의 열 인덱스를 지정 하 합니다.  
   
     ```vb  
     ' Declare a new DataGridTableStyle in the  
@@ -79,13 +79,13 @@ ms.locfileid: "59120148"
   
 ### <a name="to-hide-a-column-in-the-datagrid-programmatically"></a>프로그래밍 방식으로 DataGrid의 열을 숨기려면  
   
-1.  폼의 선언 영역에서의 새 인스턴스를 선언 합니다 <xref:System.Windows.Forms.DataGridTableStyle> 클래스입니다.  
+1. 폼의 선언 영역에서의 새 인스턴스를 선언 합니다 <xref:System.Windows.Forms.DataGridTableStyle> 클래스입니다.  
   
-2.  설정 합니다 <xref:System.Windows.Forms.DataGridTableStyle.MappingName%2A> 의 속성을 <xref:System.Windows.Forms.DataGridTableStyle> 테이블 스타일을 적용 하려는 데이터 원본에 합니다. 다음 코드 예제에서는 <xref:System.Windows.Forms.DataGrid.DataMember%2A?displayProperty=nameWithType> 이미 설정 되었다고 가정 하는 속성입니다.  
+2. 설정 합니다 <xref:System.Windows.Forms.DataGridTableStyle.MappingName%2A> 의 속성을 <xref:System.Windows.Forms.DataGridTableStyle> 테이블 스타일을 적용 하려는 데이터 원본에 합니다. 다음 코드 예제에서는 <xref:System.Windows.Forms.DataGrid.DataMember%2A?displayProperty=nameWithType> 이미 설정 되었다고 가정 하는 속성입니다.  
   
-3.  새 추가 <xref:System.Windows.Forms.DataGridTableStyle> datagrid의 테이블 스타일 컬렉션 개체입니다.  
+3. 새 추가 <xref:System.Windows.Forms.DataGridTableStyle> datagrid의 테이블 스타일 컬렉션 개체입니다.  
   
-4.  설정 하 여 열을 숨기려면 해당 `Width` 속성을 0, 열을 숨기려면 열 인덱스를 지정 합니다.  
+4. 설정 하 여 열을 숨기려면 해당 `Width` 속성을 0, 열을 숨기려면 열 인덱스를 지정 합니다.  
   
     ```vb  
     ' Declare a new DataGridTableStyle in the  

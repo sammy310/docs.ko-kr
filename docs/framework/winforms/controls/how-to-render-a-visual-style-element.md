@@ -10,25 +10,25 @@ helpviewer_keywords:
 - professional appearance [Windows Forms], applying to elements of Windows Forms applications
 - visual styles [Windows Forms], rendering Windows Forms controls
 ms.assetid: a207781b-1baa-4ce9-b788-1e951bd4b5df
-ms.openlocfilehash: 44218ee1f3879a3f9ac5a1e1b049c28a5463820e
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 57c2bc5722f77338225d70b514345344211656dc
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59099835"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59312399"
 ---
 # <a name="how-to-render-a-visual-style-element"></a>방법: 비주얼 스타일 요소 렌더링
 합니다 <xref:System.Windows.Forms.VisualStyles?displayProperty=nameWithType> 네임 스페이스는 <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> Windows 사용자를 나타내는 개체 인터페이스 (UI) 요소 비주얼 스타일에서 지원 합니다. 이 항목에서는 사용 하는 방법에 설명 합니다 <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer> 렌더링 하는 클래스를 <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> 나타내는 **로그 오프** 및 **종료** 시작 메뉴의 단추입니다.  
   
 ### <a name="to-render-a-visual-style-element"></a>비주얼 스타일 요소 렌더링  
   
-1.  만들기는 <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer> 그릴 원하는 요소를 설정 합니다. 사용 된 <xref:System.Windows.Forms.Application.RenderWithVisualStyles%2A?displayProperty=nameWithType> 속성 및 <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer.IsElementDefined%2A?displayProperty=nameWithType> 메서드, <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer.%23ctor%2A> 생성자 비주얼 스타일을 사용할 수 없거나 정의 되어 있지 않은 경우 예외가 throw 됩니다.  
+1. 만들기는 <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer> 그릴 원하는 요소를 설정 합니다. 사용 된 <xref:System.Windows.Forms.Application.RenderWithVisualStyles%2A?displayProperty=nameWithType> 속성 및 <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer.IsElementDefined%2A?displayProperty=nameWithType> 메서드, <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer.%23ctor%2A> 생성자 비주얼 스타일을 사용할 수 없거나 정의 되어 있지 않은 경우 예외가 throw 됩니다.  
   
      [!code-cpp[System.Windows.Forms.VisualStyles.VisualStyleRenderer_Simple#4](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.VisualStyles.VisualStyleRenderer_Simple/cpp/form1.cpp#4)]
      [!code-csharp[System.Windows.Forms.VisualStyles.VisualStyleRenderer_Simple#4](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.VisualStyles.VisualStyleRenderer_Simple/CS/form1.cs#4)]
      [!code-vb[System.Windows.Forms.VisualStyles.VisualStyleRenderer_Simple#4](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.VisualStyles.VisualStyleRenderer_Simple/VB/form1.vb#4)]  
   
-2.  호출을 <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer.DrawBackground%2A> 메서드를 요소는 렌더링는 <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer> 현재 나타냅니다.  
+2. 호출을 <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer.DrawBackground%2A> 메서드를 요소는 렌더링는 <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer> 현재 나타냅니다.  
   
      [!code-cpp[System.Windows.Forms.VisualStyles.VisualStyleRenderer_Simple#6](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.VisualStyles.VisualStyleRenderer_Simple/cpp/form1.cpp#6)]
      [!code-csharp[System.Windows.Forms.VisualStyles.VisualStyleRenderer_Simple#6](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.VisualStyles.VisualStyleRenderer_Simple/CS/form1.cs#6)]

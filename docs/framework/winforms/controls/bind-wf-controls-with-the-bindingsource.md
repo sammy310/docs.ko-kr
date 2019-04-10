@@ -6,12 +6,12 @@ helpviewer_keywords:
 - BindingSource component [Windows Forms], binding controls
 - data binding [Windows Forms], BindingSource component
 ms.assetid: 391ae170-de5c-40f8-8233-91cb2ee4683a
-ms.openlocfilehash: 4e6b85e1d1ca667f4ec189a7b2549667db24f10d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: a4f87303954494e8e32d32e68fb3f1244f25680a
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59074659"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59304560"
 ---
 # <a name="how-to-bind-windows-forms-controls-with-the-bindingsource-component-using-the-designer"></a>방법: 디자이너를 사용하여 Windows Forms 컨트롤에서 BindingSource 구성 요소 바인딩
 폼에 컨트롤을 추가 하 고 응용 프로그램에 대 한 사용자 인터페이스를 확인한 후 런타임 시 사용자가 변경 하 고 수 응용 프로그램과 관련 된 데이터를 저장 되도록 데이터 원본에 컨트롤을 바인딩할 수 있습니다.  
@@ -27,9 +27,9 @@ ms.locfileid: "59074659"
   
 ### <a name="to-bind-a-control-at-design-time"></a>디자인 타임에 컨트롤을 바인딩하려면  
   
-1.  끌어서를 <xref:System.Windows.Forms.TextBox> 컨트롤을 폼입니다.  
+1. 끌어서를 <xref:System.Windows.Forms.TextBox> 컨트롤을 폼입니다.  
   
-2.  에 **속성** 창:  
+2. 에 **속성** 창:  
   
     1.  확장 된 **(DataBindings)** 노드.  
   
@@ -39,17 +39,17 @@ ms.locfileid: "59074659"
   
          프로젝트 또는 폼에 대 한 데이터 소스를 이전에 구성 하는 경우 표시 됩니다.  
   
-3.  **프로젝트 데이터 소스 추가**를 클릭하여 데이터에 연결한 다음 데이터 소스를 만듭니다.  
+3. **프로젝트 데이터 소스 추가**를 클릭하여 데이터에 연결한 다음 데이터 소스를 만듭니다.  
   
-4.  **데이터 소스 구성 마법사** 시작 페이지에서 **다음**을 클릭합니다.  
+4. **데이터 소스 구성 마법사** 시작 페이지에서 **다음**을 클릭합니다.  
   
-5.  에 **데이터 소스 형식 선택** 페이지에서 **데이터베이스**합니다.  
+5. 에 **데이터 소스 형식 선택** 페이지에서 **데이터베이스**합니다.  
   
-6.  에 **데이터 연결 선택** 페이지의 사용 가능한 연결 목록에서 데이터 연결을 선택 합니다. 원하는 데이터 연결 선택 사용할 수 없으면 **새 연결** 는 새 데이터 연결을 만듭니다.  
+6. 에 **데이터 연결 선택** 페이지의 사용 가능한 연결 목록에서 데이터 연결을 선택 합니다. 원하는 데이터 연결 선택 사용할 수 없으면 **새 연결** 는 새 데이터 연결을 만듭니다.  
   
-7.  선택 **예, 연결을 저장 합니다** 응용 프로그램 구성 파일에서 연결 문자열을 저장 합니다.  
+7. 선택 **예, 연결을 저장 합니다** 응용 프로그램 구성 파일에서 연결 문자열을 저장 합니다.  
   
-8.  애플리케이션에 바인딩할 데이터베이스 개체를 선택합니다. 이 예제의 경우 하려는 테이블의 필드를 선택 합니다 <xref:System.Windows.Forms.TextBox> 표시 합니다.  
+8. 애플리케이션에 바인딩할 데이터베이스 개체를 선택합니다. 이 예제의 경우 하려는 테이블의 필드를 선택 합니다 <xref:System.Windows.Forms.TextBox> 표시 합니다.  
   
 9. 원하는 경우 기본 데이터 세트 이름을 바꿉니다.  
   

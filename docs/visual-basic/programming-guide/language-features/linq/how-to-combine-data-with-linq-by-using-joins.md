@@ -9,12 +9,12 @@ helpviewer_keywords:
 - joining [LINQ in Visual Basic]
 - queries [LINQ in Visual Basic], how-to topics
 ms.assetid: 5b00a478-035b-41c6-8918-be1a97728396
-ms.openlocfilehash: dde627edfeb1d4473c9d2e01b9ff83c580a0f122
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 127e1afa7707f31584e93f3d4b08e865d7fcedf6
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58822689"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59319601"
 ---
 # <a name="how-to-combine-data-with-linq-by-using-joins-visual-basic"></a>방법: 조인 (Visual Basic)를 사용 하 여 데이터와 LINQ 결합
 Visual Basic에서 제공 합니다 `Join` 고 `Group Join` 쿼리 절을 사용 하면 컬렉션 간의 공통 값을 기반으로 하는 여러 컬렉션의 콘텐츠를 결합할 수 있습니다. 이러한 값 이라고 *키* 값입니다. 관계형 데이터베이스 개념에 익숙한 개발자는 `Join` INNER JOIN으로 절 및 `Group Join` 으로 효과적으로 LEFT OUTER JOIN 절.  
@@ -25,9 +25,9 @@ Visual Basic에서 제공 합니다 `Join` 고 `Group Join` 쿼리 절을 사용
   
 #### <a name="to-create-a-project-that-contains-sample-data-and-types"></a>샘플 데이터 및 유형을 포함 하는 프로젝트를 만들려면  
   
-1.  이 항목의 샘플을 실행 하려면 Visual Studio를 열고 새 Visual Basic 콘솔 응용 프로그램 프로젝트를 추가 합니다. Visual Basic에서 생성 된 Module1.vb 파일을 두 번 클릭 합니다.  
+1. 이 항목의 샘플을 실행 하려면 Visual Studio를 열고 새 Visual Basic 콘솔 응용 프로그램 프로젝트를 추가 합니다. Visual Basic에서 생성 된 Module1.vb 파일을 두 번 클릭 합니다.  
   
-2.  이 항목에서는 사용 샘플은 `Person` 및 `Pet` 유형 및 다음 코드 예제에서 데이터입니다. 이 코드는 기본 복사 `Module1` Visual Basic에서 생성 하는 모듈입니다.  
+2. 이 항목에서는 사용 샘플은 `Person` 및 `Pet` 유형 및 다음 코드 예제에서 데이터입니다. 이 코드는 기본 복사 `Module1` Visual Basic에서 생성 하는 모듈입니다.  
   
      [!code-vb[VbLINQHowTos#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQHowTos/VB/Module1.vb#1)]  
     [!code-vb[VbLINQHowTos#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQHowTos/VB/Module1.vb#2)]  
@@ -43,7 +43,7 @@ Visual Basic에서 제공 합니다 `Join` 고 `Group Join` 쿼리 절을 사용
   
 #### <a name="to-perform-an-inner-join-by-using-the-join-clause"></a>Join 절을 사용 하 여 Inner Join을 수행 하려면  
   
-1.  다음 코드를 추가 합니다 `Module1` 모두 암시적 및 명시적 내부 조인 예제를 볼 프로젝트에서 모듈입니다.  
+1. 다음 코드를 추가 합니다 `Module1` 모두 암시적 및 명시적 내부 조인 예제를 볼 프로젝트에서 모듈입니다.  
   
      [!code-vb[VbLINQHowTos#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQHowTos/VB/Module1.vb#4)]  
   
@@ -56,7 +56,7 @@ Visual Basic에서 제공 합니다 `Join` 고 `Group Join` 쿼리 절을 사용
   
 #### <a name="to-perform-a-left-outer-join-by-using-the-group-join-clause"></a>Group Join 절을 사용 하 여 Left Outer Join을 수행 하려면  
   
-1.  다음 코드를 추가 합니다 `Module1` 그룹화 된 왼쪽된 외부 조인 및 그룹화 되지 않은 왼쪽된 외부 조인을 둘 다의 예제를 보려면 프로젝트에서 모듈입니다.  
+1. 다음 코드를 추가 합니다 `Module1` 그룹화 된 왼쪽된 외부 조인 및 그룹화 되지 않은 왼쪽된 외부 조인을 둘 다의 예제를 보려면 프로젝트에서 모듈입니다.  
   
      [!code-vb[VbLINQHowTos#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQHowTos/VB/Module1.vb#3)]  
   
@@ -65,7 +65,7 @@ Visual Basic에서 제공 합니다 `Join` 고 `Group Join` 쿼리 절을 사용
   
 #### <a name="to-perform-a-join-by-using-a-composite-key"></a>복합 키를 사용 하 여 조인 수행  
   
-1.  다음 코드를 추가 합니다 `Module1` 의 복합 키를 사용 하는 조인 예제를 보려면 프로젝트에서 모듈입니다.  
+1. 다음 코드를 추가 합니다 `Module1` 의 복합 키를 사용 하는 조인 예제를 보려면 프로젝트에서 모듈입니다.  
   
      [!code-vb[VbLINQHowTos#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQHowTos/VB/Module1.vb#5)]  
   
@@ -73,11 +73,11 @@ Visual Basic에서 제공 합니다 `Join` 고 `Group Join` 쿼리 절을 사용
   
 #### <a name="to-add-code-to-run-the-examples"></a>예제를 실행 하는 코드를 추가 하려면  
   
-1.  대체는 `Sub Main` 에 `Module1` 이 항목의 예제를 실행 하려면 다음 코드를 사용 하 여 프로젝트에서 모듈입니다.  
+1. 대체는 `Sub Main` 에 `Module1` 이 항목의 예제를 실행 하려면 다음 코드를 사용 하 여 프로젝트에서 모듈입니다.  
   
      [!code-vb[VbLINQHowTos#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQHowTos/VB/Module1.vb#6)]  
   
-2.  F5 키를 눌러 예제를 실행 합니다.  
+2. F5 키를 눌러 예제를 실행 합니다.  
   
 ## <a name="see-also"></a>참고자료
 

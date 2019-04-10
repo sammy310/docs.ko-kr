@@ -4,12 +4,12 @@ description: docker-compose.yml을 사용하여 다중 컨테이너 애플리케
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/02/2018
-ms.openlocfilehash: df185950d8155d61b60c9b54e3a8751ec3980408
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: 4f4918a6f26a617fad38c7955415c4ff559a9187
+ms.sourcegitcommit: a3db1a9eafca89f95ccf361bc1833b47fbb2bb30
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58463529"
+ms.lasthandoff: 04/04/2019
+ms.locfileid: "58920781"
 ---
 # <a name="defining-your-multi-container-application-with-docker-composeyml"></a>docker-compose.yml을 사용하여 다중 컨테이너 애플리케이션 정의
 
@@ -433,7 +433,7 @@ docker-compose는 .env 파일의 각 줄이 \<변수\>=\<값\> 형식이 되도�
 인터넷에서 원본의 Docker 및 .NET Core를 탐색하는 경우 원본을 컨테이너에 복사하여 Docker 이미지를 빌드하는 것의 용이함을 보여 주는 Dockerfile을 찾을 수 있습니다. 이러한 예제는 간단한 구성을 사용하는 것을 제안합니다. 애플리케이션과 함께 제공되는 환경으로 Docker 이미지를 가질 수 있습니다. 다음 예제에서는 이 맥락에서 간단한 Dockerfile을 보여 줍니다.
 
 ```Dockerfile
-FROM microsoft/dotnet
+FROM mcr.microsoft.com/dotnet/core/sdk:2.2
 WORKDIR /app
 ENV ASPNETCORE_URLS http://+:80
 EXPOSE 80
@@ -446,7 +446,7 @@ ENTRYPOINT ["dotnet", "run"]
 
 컨테이너 및 마이크로 서비스 모델에서 컨테이너를 지속적으로 시작하고 있습니다. 컨테이너를 사용하는 일반적인 방법은 컨테이너가 삭제 가능하므로 중지 중인 컨테이너를 다시 시작하지 않습니다. 오케스트레이터(예: Kubernetes 및 Azure Service Fabric)는 단순히 이미지의 새 인스턴스를 만듭니다. 즉, 인스턴스화 프로세스의 속도가 더 빨라지도록 빌드될 때 애플리케이션을 미리 컴파일하여 최적화해야 합니다. 컨테이너가 시작될 때 실행할 준비가 되어야 합니다. .NET Core 및 Docker에 대한 다양한 블로그 게시물에 나와 있는 것처럼 dotnet CLI에서 `dotnet restore` and `dotnet build` 명령을 사용하여 런타임 시 복원 및 컴파일해서는 안 됩니다.
 
-.NET 팀은 .NET Core 및 ASP.NET Core를 컨테이너 최적화된 프레임워크로 만들도록 중요한 작업을 수행하고 있습니다. .NET Core는 작은 메모리 공간을 가진 경량 프레임워크일 뿐만 아니라, 팀은 세가지 주요 시나리오에 최적화된 Docker 이미지를 중점적으로 사용해 *microsoft/dotnet*에서 버전 2.1 부터 Docker 허브 레지스트리에 게시했습니다.
+.NET 팀은 .NET Core 및 ASP.NET Core를 컨테이너 최적화된 프레임워크로 만들도록 중요한 작업을 수행하고 있습니다. .NET Core는 작은 메모리 공간을 가진 경량 프레임워크일 뿐만 아니라, 팀은 세 가지 주요 시나리오에 최적화된 Docker 이미지를 중점적으로 사용해 *dotnet/core*에서 버전 2.1부터 Docker 허브 레지스트리에 게시했습니다.
 
 1. **개발**: 여기서 우선 순위는 변경 사항을 신속하게 반복하고 디버그할 수 있는 기능이며, 크기는 부차적 문제입니다.
 
@@ -454,11 +454,12 @@ ENTRYPOINT ["dotnet", "run"]
 
 3. **프로덕션**: 컨테이너의 빠른 배포 및 시작에 중점을 두는 경우 이러한 이미지는 애플리케이션을 실행하는 데 필요한 이진 파일 및 콘텐츠로 제한됩니다.
 
-이를 위해.NET 팀은 [microsoft/dotnet](https://hub.docker.com/r/microsoft/dotnet/)(Docker 허브)에서 세 가지 기본 변형을 제공합니다.
+이를 위해 .NET 팀은 [dotnet/core](https://hub.docker.com/_/microsoft-dotnet-core/)(Docker 허브)에서 네 가지 기본 변형을 제공합니다.
 
-1. **sdk**: 개발 및 빌드 시나리오용.
-2. **런타임**: 프로덕션 시나리오용 및
-3. **runtime-deps**: [자체 포함된 애플리케이션](../../../core/deploying/index.md#self-contained-deployments-scd)의 프로덕션 시나리오용.
+1. **sdk**: 개발 및 빌드 시나리오용
+1. **aspnet**: ASP.NET 프로덕션 시나리오용
+1. **runtime**: .NET 프로덕션 시나리오용
+1. **runtime-deps**: [자체 포함된 애플리케이션](../../../core/deploying/index.md#self-contained-deployments-scd)의 프로덕션 시나리오용.
 
 빠른 시작을 위해 런타임 이미지도 자동으로 aspnetcore\_urls를 포트 80으로 설정하고 Ngen을 사용하여 어셈블리의 네이티브 이미지 캐시를 만듭니다.
 

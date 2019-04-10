@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 4354e5eb-dd45-469d-97fb-1c495705ee59
-ms.openlocfilehash: 4558a5b26903fb53c60fccf3df806f7cf67f9845
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: cc2e25183649f6a95e7862520ccc5719f201277a
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59119667"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59311489"
 ---
 # <a name="how-to-call-custom-database-functions"></a>방법: 사용자 지정 데이터베이스 함수 호출
 이 항목에서는 LINQ to Entities 쿼리 내에서 데이터베이스에 정의된 사용자 지정 함수를 호출하는 방법에 대해 설명합니다.  
@@ -21,17 +21,17 @@ ms.locfileid: "59119667"
   
 ### <a name="to-call-custom-functions-that-are-defined-in-the-database"></a>데이터베이스에 정의되어 있는 사용자 지정 함수를 호출하려면  
   
-1.  데이터베이스에서 사용자 지정 함수를 만듭니다.  
+1. 데이터베이스에서 사용자 지정 함수를 만듭니다.  
   
      SQL Server의 사용자 지정 함수를 만드는 방법에 대 한 자세한 내용은 참조 하세요. [CREATE FUNCTION (Transact SQL)](https://go.microsoft.com/fwlink/?LinkID=139871)합니다.  
   
-2.  .edmx 파일의 SSDL(저장소 스키마 정의 언어)에서 함수를 선언합니다. 함수의 이름은 데이터베이스에 선언된 함수의 이름과 같아야 합니다.  
+2. .edmx 파일의 SSDL(저장소 스키마 정의 언어)에서 함수를 선언합니다. 함수의 이름은 데이터베이스에 선언된 함수의 이름과 같아야 합니다.  
   
      자세한 내용은 [함수 요소 (SSDL)](/ef/ef6/modeling/designer/advanced/edmx/ssdl-spec#function-element-ssdl)합니다.  
   
-3.  해당되는 메서드를 응용 프로그램 코드의 클래스에 추가하고 <xref:System.Data.Objects.DataClasses.EdmFunctionAttribute>를 메서드에 적용합니다. 특성의 <xref:System.Data.Objects.DataClasses.EdmFunctionAttribute.NamespaceName%2A> 매개 변수는 개념적 모델의 네임스페이스 이름이고, 특성의 <xref:System.Data.Objects.DataClasses.EdmFunctionAttribute.FunctionName%2A> 매개 변수는 개념적 모델의 함수 이름입니다. LINQ에서 함수 이름을 확인할 때는 대/소문자가 구분됩니다.  
+3. 해당되는 메서드를 응용 프로그램 코드의 클래스에 추가하고 <xref:System.Data.Objects.DataClasses.EdmFunctionAttribute>를 메서드에 적용합니다. 특성의 <xref:System.Data.Objects.DataClasses.EdmFunctionAttribute.NamespaceName%2A> 매개 변수는 개념적 모델의 네임스페이스 이름이고, 특성의 <xref:System.Data.Objects.DataClasses.EdmFunctionAttribute.FunctionName%2A> 매개 변수는 개념적 모델의 함수 이름입니다. LINQ에서 함수 이름을 확인할 때는 대/소문자가 구분됩니다.  
   
-4.  LINQ to Entities 쿼리에서 메서드를 호출합니다.  
+4. LINQ to Entities 쿼리에서 메서드를 호출합니다.  
   
 ## <a name="example"></a>예제  
  다음 예제에서는 LINQ to Entities 쿼리 내에서 사용자 지정 데이터베이스 함수를 호출하는 방법에 대해 설명합니다. 이 예제에서는 School 모델을 사용합니다. School 모델에 대 한 정보를 참조 하세요 [School 샘플 데이터베이스 만들기](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb399731(v=vs.100)) 하 고 [School.edmx 파일 생성](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb399739(v=vs.100))합니다.  

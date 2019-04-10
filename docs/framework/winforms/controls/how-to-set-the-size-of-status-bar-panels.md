@@ -10,12 +10,12 @@ helpviewer_keywords:
 - status bars [Windows Forms], setting panel size
 - panels [Windows Forms], setting size in status bars
 ms.assetid: a01bee43-d9eb-4954-84e6-45a93532d08d
-ms.openlocfilehash: c6c9d6570e9b5c2f6d4eee0262c3d90e29e4b493
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: efd3074aaf018e7226c484061cbacb2eac0be820
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59131062"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59311905"
 ---
 # <a name="how-to-set-the-size-of-status-bar-panels"></a>방법: 상태 표시줄 패널의 크기 설정
 > [!NOTE]
@@ -25,7 +25,7 @@ ms.locfileid: "59131062"
   
 ### <a name="to-set-the-size-of-a-panel"></a>패널의 크기를 설정 하려면  
   
-1.  프로시저를 설정 합니다 <xref:System.Windows.Forms.StatusBarPanel.AutoSize%2A>, <xref:System.Windows.Forms.StatusBarPanel.MinWidth%2A>, 및 <xref:System.Windows.Forms.StatusBarPanel.Width%2A> 속성 (또는 하위 집합 여기) 상태 표시줄에 대 한 인덱스를 사용 하 여 패널을 통해 전달를 <xref:System.Windows.Forms.StatusBar.Panels%2A> 속성은 <xref:System.Windows.Forms.StatusBarPanel> 컬렉션.  
+1. 프로시저를 설정 합니다 <xref:System.Windows.Forms.StatusBarPanel.AutoSize%2A>, <xref:System.Windows.Forms.StatusBarPanel.MinWidth%2A>, 및 <xref:System.Windows.Forms.StatusBarPanel.Width%2A> 속성 (또는 하위 집합 여기) 상태 표시줄에 대 한 인덱스를 사용 하 여 패널을 통해 전달를 <xref:System.Windows.Forms.StatusBar.Panels%2A> 속성은 <xref:System.Windows.Forms.StatusBarPanel> 컬렉션.  
   
     ```vb  
     Public Sub SetStatusBarPanelSize()  
