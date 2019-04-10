@@ -15,12 +15,12 @@ helpviewer_keywords:
 - mouse [Windows Forms], events
 - MouseUp event
 ms.assetid: 8cf0070d-793b-4876-b09e-d20d28280fab
-ms.openlocfilehash: 62309bb9965d1aa538e211dc66c44876671e0242
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 671e37c7d6dc40046d6d717d7785b03b6b545c7e
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59134981"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59333680"
 ---
 # <a name="mouse-events-in-windows-forms"></a>Windows Forms의 마우스 이벤트
 마우스 입력을 처리하는 경우 일반적으로 마우스 포인터의 위치와 마우스 단추의 상태를 알아야 합니다. 이 항목에서는 마우스 이벤트에서 이 정보를 가져오는 방법을 자세히 설명하고 Windows Forms 컨트롤에서 마우스 클릭 이벤트가 발생하는 순서를 설명합니다. 목록 및 설명은 모든 마우스 이벤트를 참조 하세요 [Windows Forms의 마우스 입력 방법](how-mouse-input-works-in-windows-forms.md)합니다.  도 참조 하세요 [이벤트 처리기 개요 (Windows Forms)](event-handlers-overview-windows-forms.md) 하 고 [이벤트 개요 (Windows Forms)](events-overview-windows-forms.md)합니다.  
@@ -36,31 +36,31 @@ ms.locfileid: "59134981"
 ## <a name="standard-click-event-behavior"></a>표준 클릭 이벤트 동작  
  마우스 클릭 이벤트를 적절한 순서로 처리하려는 경우 Windows Forms 컨트롤에서 클릭 이벤트가 발생하는 순서를 알아야 합니다. 개별 컨트롤에 대한 다음 목록에 명시된 경우를 제외하고 모든 Windows Forms 컨트롤은 어떤 마우스 단추인지에 관계없이 마우스 단추를 눌렀다 놓는 순서대로 클릭 이벤트를 발생시킵니다. 다음 목록에서는 마우스 단추 한 번 클릭에 대해 발생하는 이벤트 순서를 보여 줍니다.  
   
-1.  <xref:System.Windows.Forms.Control.MouseDown> 합니다.  
+1. <xref:System.Windows.Forms.Control.MouseDown> 합니다.  
   
-2.  <xref:System.Windows.Forms.Control.Click> 합니다.  
+2. <xref:System.Windows.Forms.Control.Click> 합니다.  
   
-3.  <xref:System.Windows.Forms.Control.MouseClick> 합니다.  
+3. <xref:System.Windows.Forms.Control.MouseClick> 합니다.  
   
-4.  <xref:System.Windows.Forms.Control.MouseUp> 합니다.  
+4. <xref:System.Windows.Forms.Control.MouseUp> 합니다.  
   
  다음은 마우스 단추 두 번 클릭에 대해 발생하는 이벤트 순서입니다.  
   
-1.  <xref:System.Windows.Forms.Control.MouseDown> 합니다.  
+1. <xref:System.Windows.Forms.Control.MouseDown> 합니다.  
   
-2.  <xref:System.Windows.Forms.Control.Click> 합니다.  
+2. <xref:System.Windows.Forms.Control.Click> 합니다.  
   
-3.  <xref:System.Windows.Forms.Control.MouseClick> 합니다.  
+3. <xref:System.Windows.Forms.Control.MouseClick> 합니다.  
   
-4.  <xref:System.Windows.Forms.Control.MouseUp> 합니다.  
+4. <xref:System.Windows.Forms.Control.MouseUp> 합니다.  
   
-5.  <xref:System.Windows.Forms.Control.MouseDown> 합니다.  
+5. <xref:System.Windows.Forms.Control.MouseDown> 합니다.  
   
-6.  <xref:System.Windows.Forms.Control.DoubleClick> 합니다. 해당 컨트롤에 대한 <xref:System.Windows.Forms.ControlStyles.StandardDoubleClick> 스타일 비트가 `true`로 설정되었는지 여부에 따라 달라질 수 있습니다. <xref:System.Windows.Forms.ControlStyles>를 설정하는 방법에 대한 자세한 내용은 <xref:System.Windows.Forms.Control.SetStyle%2A> 메서드를 참조하세요.  
+6. <xref:System.Windows.Forms.Control.DoubleClick> 합니다. 해당 컨트롤에 대한 <xref:System.Windows.Forms.ControlStyles.StandardDoubleClick> 스타일 비트가 `true`로 설정되었는지 여부에 따라 달라질 수 있습니다. <xref:System.Windows.Forms.ControlStyles>를 설정하는 방법에 대한 자세한 내용은 <xref:System.Windows.Forms.Control.SetStyle%2A> 메서드를 참조하세요.  
   
-7.  <xref:System.Windows.Forms.Control.MouseDoubleClick> 합니다.  
+7. <xref:System.Windows.Forms.Control.MouseDoubleClick> 합니다.  
   
-8.  <xref:System.Windows.Forms.Control.MouseUp> 합니다.  
+8. <xref:System.Windows.Forms.Control.MouseUp> 합니다.  
   
  클릭 이벤트는 마우스의 순서를 보여 주는 코드 예제에 대 한 내용은 [방법: 사용자 입력 처리 이벤트에 Windows Forms 컨트롤](how-to-handle-user-input-events-in-windows-forms-controls.md)합니다.  
   
@@ -122,21 +122,21 @@ ms.locfileid: "59134981"
 ### <a name="painting-behavior-of-toggle-controls"></a>토글 컨트롤의 그리기 동작  
  <xref:System.Windows.Forms.ButtonBase> 클래스에서 파생되는 컨트롤과 같은 토글 컨트롤은 마우스 클릭 이벤트와 결합되어 다음과 같은 고유한 그리기 동작을 제공합니다.  
   
-1.  사용자가 마우스 단추를 누릅니다.  
+1. 사용자가 마우스 단추를 누릅니다.  
   
-2.  컨트롤이 눌린 상태로 그려집니다.  
+2. 컨트롤이 눌린 상태로 그려집니다.  
   
-3.  <xref:System.Windows.Forms.Control.MouseDown> 이벤트가 발생합니다.  
+3. <xref:System.Windows.Forms.Control.MouseDown> 이벤트가 발생합니다.  
   
-4.  사용자가 마우스 단추를 놓습니다.  
+4. 사용자가 마우스 단추를 놓습니다.  
   
-5.  컨트롤이 올려진 상태로 그려집니다.  
+5. 컨트롤이 올려진 상태로 그려집니다.  
   
-6.  <xref:System.Windows.Forms.Control.Click> 이벤트가 발생합니다.  
+6. <xref:System.Windows.Forms.Control.Click> 이벤트가 발생합니다.  
   
-7.  <xref:System.Windows.Forms.Control.MouseClick> 이벤트가 발생합니다.  
+7. <xref:System.Windows.Forms.Control.MouseClick> 이벤트가 발생합니다.  
   
-8.  <xref:System.Windows.Forms.Control.MouseUp> 이벤트가 발생합니다.  
+8. <xref:System.Windows.Forms.Control.MouseUp> 이벤트가 발생합니다.  
   
     > [!NOTE]
     >  사용자가 마우스 단추를 누른 동안 토글 컨트롤에서 포인터를 이동하는 경우(예: 누른 동안 <xref:System.Windows.Forms.Button> 컨트롤에서 마우스 이동) 토글 컨트롤이 올려진 상태로 그려지고 <xref:System.Windows.Forms.Control.MouseUp> 이벤트만 발생합니다. 이런 상황에서는 <xref:System.Windows.Forms.Control.Click> 또는 <xref:System.Windows.Forms.Control.MouseClick> 이벤트가 발생하지 않습니다.  

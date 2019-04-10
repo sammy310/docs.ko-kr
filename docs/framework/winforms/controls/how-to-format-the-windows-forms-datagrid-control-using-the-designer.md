@@ -1,5 +1,5 @@
 ---
-title: '방법: 디자이너를 사용 하 여 Windows Forms DataGrid 컨트롤 서식 지정'
+title: '방법: 디자이너를 사용하여 Windows Forms DataGrid 컨트롤 서식 지정'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - columns [Windows Forms], DataGrid controls
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - tables [Windows Forms], formatting in DataGrid control
 - formatting [Windows Forms]
 ms.assetid: 533b9814-6124-49dc-9fda-085f1502609f
-ms.openlocfilehash: 92939f1bdddaca1d743116a4ae4ee9da657abf19
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: fbe2aa724274022446498a89618f37787f0fa8bd
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57725365"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59333576"
 ---
-# <a name="how-to-format-the-windows-forms-datagrid-control-using-the-designer"></a>방법: 디자이너를 사용 하 여 Windows Forms DataGrid 컨트롤 서식 지정
+# <a name="how-to-format-the-windows-forms-datagrid-control-using-the-designer"></a>방법: 디자이너를 사용하여 Windows Forms DataGrid 컨트롤 서식 지정
 
 > [!NOTE]
 >  <xref:System.Windows.Forms.DataGridView> 컨트롤은 <xref:System.Windows.Forms.DataGrid> 컨트롤을 대체하고 여기에 다른 기능을 추가하여 새로 도입된 컨트롤이지만 이전 버전과의 호환성 및 이후 사용 가능성을 고려하여 <xref:System.Windows.Forms.DataGrid> 컨트롤을 계속 유지하도록 선택할 수 있습니다. 자세한 내용은 [Windows Forms DataGridView 및 DataGrid 컨트롤의 차이점](differences-between-the-windows-forms-datagridview-and-datagrid-controls.md)을 참조하십시오.  
@@ -40,9 +40,9 @@ ms.locfileid: "57725365"
   
 ### <a name="to-establish-a-default-style-for-the-datagrid-control"></a>DataGrid 컨트롤에 대 한 기본 스타일을 설정 하려면  
   
-1.  <xref:System.Windows.Forms.DataGrid> 컨트롤을 선택합니다.  
+1. <xref:System.Windows.Forms.DataGrid> 컨트롤을 선택합니다.  
   
-2.  에 **속성** 창 적절 하 게 다음 속성을 설정 합니다.  
+2. 에 **속성** 창 적절 하 게 다음 속성을 설정 합니다.  
   
     |속성|설명|  
     |--------------|-----------------|  
@@ -77,21 +77,21 @@ ms.locfileid: "57725365"
 
 ### <a name="to-set-the-table-and-column-style-of-a-data-table-at-design-time"></a>디자인 타임에 데이터 테이블의 테이블 및 열 스타일을 설정 하려면
 
-1.  선택 된 <xref:System.Windows.Forms.DataGrid> 양식에 컨트롤입니다.
+1. 선택 된 <xref:System.Windows.Forms.DataGrid> 양식에 컨트롤입니다.
 
-2.  에 **속성** 창에서 합니다 <xref:System.Windows.Forms.DataGrid.TableStyles%2A> 속성을 클릭 합니다 **줄임표** (![VisualStudioEllipsesButton 스크린 샷](../media/vbellipsesbutton.png " vbEllipsesButton")) 단추입니다.
+2. 에 **속성** 창에서 합니다 <xref:System.Windows.Forms.DataGrid.TableStyles%2A> 속성을 클릭 합니다 **줄임표** (![VisualStudioEllipsesButton 스크린 샷](../media/vbellipsesbutton.png " vbEllipsesButton")) 단추입니다.
 
-3.  에 **DataGridTableStyle 컬렉션 편집기** 대화 상자, 클릭 **추가** 테이블 스타일 컬렉션에 추가 하려면.
+3. 에 **DataGridTableStyle 컬렉션 편집기** 대화 상자, 클릭 **추가** 테이블 스타일 컬렉션에 추가 하려면.
 
      사용 하 여 합니다 **DataGridTableStyle 컬렉션 편집기**를 추가할 수 있습니다 하 고 테이블 스타일에 대 한 매핑의 이름을 제거 테이블 스타일과 집합 표시 및 레이아웃 속성을 설정 합니다.
 
-4.  설정 된 <xref:System.Windows.Forms.DataGridTableStyle.MappingName%2A> 속성을 각 테이블 스타일에 대 한 매핑 이름입니다.
+4. 설정 된 <xref:System.Windows.Forms.DataGridTableStyle.MappingName%2A> 속성을 각 테이블 스타일에 대 한 매핑 이름입니다.
 
      매핑 이름 테이블을 사용 하 여 사용 되는 테이블 스타일 지정에 사용 됩니다.
 
-5.  에 **DataGridTableStyle 컬렉션 편집기**를 선택 합니다 <xref:System.Windows.Forms.DataGridTableStyle.GridColumnStyles%2A> 속성 줄임표 단추를 클릭 하 고 (![VisualStudioEllipsesButton 스크린 샷](../media/vbellipsesbutton.png "vbEllipsesButton ")).
+5. 에 **DataGridTableStyle 컬렉션 편집기**를 선택 합니다 <xref:System.Windows.Forms.DataGridTableStyle.GridColumnStyles%2A> 속성 줄임표 단추를 클릭 하 고 (![VisualStudioEllipsesButton 스크린 샷](../media/vbellipsesbutton.png "vbEllipsesButton ")).
 
-6.  에 **DataGridColumnStyle 컬렉션 편집기** 대화 상자에서 만든 테이블 스타일을 열 스타일을 추가 합니다.
+6. 에 **DataGridColumnStyle 컬렉션 편집기** 대화 상자에서 만든 테이블 스타일을 열 스타일을 추가 합니다.
 
      사용 하 여 합니다 **DataGridColumnStyle 컬렉션 편집기**, 추가 및 열 스타일을 제거, 표시 및 레이아웃 속성을 설정 하 고 설정할 수는 매핑 이름 및 열 데이터에 대 한 문자열 서식 지정 합니다.
 
@@ -103,5 +103,5 @@ ms.locfileid: "57725365"
 - <xref:System.Windows.Forms.GridTableStylesCollection>
 - <xref:System.Windows.Forms.GridColumnStylesCollection>
 - <xref:System.Windows.Forms.DataGrid>
-- [방법: Windows Forms DataGrid 컨트롤에서 열 숨기기 또는 삭제](how-to-delete-or-hide-columns-in-the-windows-forms-datagrid-control.md)
+- [방법: Windows Forms DataGrid 컨트롤에서 열 삭제 또는 숨기기](how-to-delete-or-hide-columns-in-the-windows-forms-datagrid-control.md)
 - [DataGrid 컨트롤](datagrid-control-windows-forms.md)

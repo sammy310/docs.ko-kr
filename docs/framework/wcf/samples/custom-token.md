@@ -2,12 +2,12 @@
 title: Custom Token
 ms.date: 03/30/2017
 ms.assetid: e7fd8b38-c370-454f-ba3e-19759019f03d
-ms.openlocfilehash: 3632738ce7afaa5f458dfe26eb562cd70c2e2896
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: fbde7d1006cabddafa7e03fdee0e3493416001da
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59201769"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59334447"
 ---
 # <a name="custom-token"></a>Custom Token
 이 샘플에는 Windows Communication Foundation (WCF) 응용 프로그램에 사용자 지정 토큰 구현을 추가 하는 방법을 보여 줍니다. 이 예제에서는 클라이언트 신용 카드에 대한 정보를 서비스에 안전하게 전달하기 위해 `CreditCardToken`을 사용합니다. 이 토큰은 WS-Security 메시지 헤더로 전달되고 메시지 본문 및 다른 메시지 헤더와 함께 대칭 보안 바인딩 요소를 사용하여 서명 및 암호화됩니다. 이 방법은 기본 제공 토큰이 충분하지 않은 경우 유용합니다. 이 샘플에서는 기본 제공 토큰 중 하나를 사용하는 대신 사용자 지정 보안 토큰을 서비스에 제공하는 방법을 보여 줍니다. 이 서비스는 요청-회신 통신 패턴을 정의하는 계약을 구현합니다.
@@ -588,38 +588,38 @@ string GetCallerCreditCardNumber()
 
 #### <a name="to-set-up-and-build-the-sample"></a>샘플을 설치하고 빌드하려면
 
-1.  수행 했는지 확인 합니다 [Windows Communication Foundation 샘플에 대 한 일회성 설치 절차](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)합니다.
+1. 수행 했는지 확인 합니다 [Windows Communication Foundation 샘플에 대 한 일회성 설치 절차](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)합니다.
 
-2.  지침에 따라 솔루션을 빌드하려면 [Building Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)합니다.
+2. 지침에 따라 솔루션을 빌드하려면 [Building Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)합니다.
 
 #### <a name="to-run-the-sample-on-the-same-computer"></a>단일 컴퓨터 구성에서 샘플을 실행하려면
 
-1.  관리자 권한으로 Visual Studio 2012 명령 프롬프트 창을 열고 샘플 설치 폴더에서 Setup.bat를 실행. 이 작업은 샘플 실행에 필요한 모든 인증서를 설치합니다. Makecert.exe가 있는 폴더가 경로에 포함되는지 확인합니다.
+1. 관리자 권한으로 Visual Studio 2012 명령 프롬프트 창을 열고 샘플 설치 폴더에서 Setup.bat를 실행. 이 작업은 샘플 실행에 필요한 모든 인증서를 설치합니다. Makecert.exe가 있는 폴더가 경로에 포함되는지 확인합니다.
 
 > [!NOTE]
 >  샘플 사용을 마쳤으면 Cleanup.bat를 실행하여 인증서를 제거해야 합니다. 다른 보안 샘플에도 동일한 인증서가 사용됩니다.  
   
-1.  client\bin 디렉터리에서 Client.exe를 실행합니다. 클라이언트 콘솔 애플리케이션에 클라이언트 동작이 표시됩니다.  
+1. client\bin 디렉터리에서 Client.exe를 실행합니다. 클라이언트 콘솔 애플리케이션에 클라이언트 동작이 표시됩니다.  
   
-2.  클라이언트와 서비스가 통신할 수 없는 경우 참조 [WCF 샘플에 대 한 문제 해결 팁](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))합니다.  
+2. 클라이언트와 서비스가 통신할 수 없는 경우 참조 [WCF 샘플에 대 한 문제 해결 팁](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))합니다.  
   
 #### <a name="to-run-the-sample-across-computer"></a>다중 컴퓨터 구성에서 샘플을 실행하려면  
   
-1.  서비스 컴퓨터에 서비스 이진 파일용 디렉터리를 만듭니다.  
+1. 서비스 컴퓨터에 서비스 이진 파일용 디렉터리를 만듭니다.  
   
-2.  서비스 프로그램 파일을 서비스 컴퓨터의 서비스 디렉터리에 복사합니다. CreditCardFile.txt를 복사해야 합니다. 그렇지 않으면 클라이언트에서 보내진 신용 카드 정보의 유효성을 신용 카드 인증자에서 검사할 수 없습니다. Setup.bat 및 Cleanup.bat 파일도 서비스 컴퓨터로 복사합니다.  
+2. 서비스 프로그램 파일을 서비스 컴퓨터의 서비스 디렉터리에 복사합니다. CreditCardFile.txt를 복사해야 합니다. 그렇지 않으면 클라이언트에서 보내진 신용 카드 정보의 유효성을 신용 카드 인증자에서 검사할 수 없습니다. Setup.bat 및 Cleanup.bat 파일도 서비스 컴퓨터로 복사합니다.  
   
-3.  컴퓨터의 정규화된 도메인 이름을 포함하는 주체 이름을 가진 서버 인증서가 있어야 합니다. `%SERVER_NAME%` 변수를 서비스가 호스트되는 컴퓨터의 정규화된 이름으로 변경할 경우 Setup.bat를 사용하여 이러한 서버 인증서를 만들 수 있습니다. Setup.bat 파일을 실행 해야 하는 개발자 명령 프롬프트에서 Visual Studio에 대 한 참고 관리자 권한으로 열립니다.  
+3. 컴퓨터의 정규화된 도메인 이름을 포함하는 주체 이름을 가진 서버 인증서가 있어야 합니다. `%SERVER_NAME%` 변수를 서비스가 호스트되는 컴퓨터의 정규화된 이름으로 변경할 경우 Setup.bat를 사용하여 이러한 서버 인증서를 만들 수 있습니다. Setup.bat 파일을 실행 해야 하는 개발자 명령 프롬프트에서 Visual Studio에 대 한 참고 관리자 권한으로 열립니다.  
   
-4.  서버 인증서를 클라이언트의 CurrentUser-TrustedPeople 저장소에 복사합니다. 신뢰할 수 있는 발급자에 의해 서버 인증서가 발급되지 않은 경우에만 이 작업을 수행해야 합니다.  
+4. 서버 인증서를 클라이언트의 CurrentUser-TrustedPeople 저장소에 복사합니다. 신뢰할 수 있는 발급자에 의해 서버 인증서가 발급되지 않은 경우에만 이 작업을 수행해야 합니다.  
   
-5.  EchoServiceHost.cs 파일에서 인증서 주체 이름의 값을 변경하여 localhost 대신 정규화된 컴퓨터 이름을 지정합니다.  
+5. EchoServiceHost.cs 파일에서 인증서 주체 이름의 값을 변경하여 localhost 대신 정규화된 컴퓨터 이름을 지정합니다.  
   
-6.  언어별 폴더의 \client\bin\ 폴더에서 클라이언트 프로그램 파일을 클라이언트 컴퓨터로 복사합니다.  
+6. 언어별 폴더의 \client\bin\ 폴더에서 클라이언트 프로그램 파일을 클라이언트 컴퓨터로 복사합니다.  
   
-7.  Client.cs 파일에서 엔드포인트의 주소 값을 서비스의 새 주소와 일치하도록 변경합니다.  
+7. Client.cs 파일에서 엔드포인트의 주소 값을 서비스의 새 주소와 일치하도록 변경합니다.  
   
-8.  Client.cs 파일에서 서비스 X.509 인증서의 주체 이름을 localhost 대신 원격 호스트의 정규화된 컴퓨터 이름과 일치하도록 변경합니다.  
+8. Client.cs 파일에서 서비스 X.509 인증서의 주체 이름을 localhost 대신 원격 호스트의 정규화된 컴퓨터 이름과 일치하도록 변경합니다.  
   
 9. 클라이언트 컴퓨터의 명령 프롬프트 창에서 Client.exe를 실행합니다.  
   
@@ -627,4 +627,4 @@ string GetCallerCreditCardNumber()
   
 #### <a name="to-clean-up-after-the-sample"></a>샘플 실행 후 정리를 수행하려면  
   
-1.  샘플 실행을 완료했으면 샘플 폴더에서 Cleanup.bat를 실행합니다.  
+1. 샘플 실행을 완료했으면 샘플 폴더에서 Cleanup.bat를 실행합니다.  
