@@ -1,5 +1,5 @@
 ---
-title: Service Fabric에 Windows 컨테이너를 배포하는 경우
+title: Service Fabric에 Windows 컨테이너를 배포 하는 경우
 description: Azure 클라우드와 Windows 컨테이너를 사용하여 기존 .NET 응용 프로그램 최신화 | Service Fabric에 Windows 컨테이너를 배포하는 경우
 author: CESARDELATORRE
 ms.author: wiwagn
