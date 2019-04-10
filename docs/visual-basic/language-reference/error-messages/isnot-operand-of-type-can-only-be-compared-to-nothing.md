@@ -7,21 +7,21 @@ f1_keywords:
 helpviewer_keywords:
 - BC32128
 ms.assetid: 1155b23a-ad75-4bab-b9da-73f35c767a36
-ms.openlocfilehash: be2a3239b2ca520c4051a1504f91a766b4401a05
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: f19b8cd5f80ba9fd6d1f5a9162b04ee409e24e28
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58834025"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59311892"
 ---
-# <a name="isnot-operand-of-type-typename-can-only-be-compared-to-nothing-because-typename-is-a-nullable-type"></a><span data-ttu-id="3be91-102">'typename'이(가) nullable 형식이므로 'typename' 형식의 'IsNot' 피연산자는 'Nothing'과(와)만 비교할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="3be91-102">'IsNot' operand of type 'typename' can only be compared to 'Nothing', because 'typename' is a nullable type</span></span>
-<span data-ttu-id="3be91-103">Nullable로 선언 된 변수를 식으로 비교 된 이외의 `Nothing` 를 사용 하 여 `IsNot` 연산자입니다.</span><span class="sxs-lookup"><span data-stu-id="3be91-103">A variable declared as nullable has been compared to an expression other than `Nothing` using the `IsNot` operator.</span></span>  
+# <a name="isnot-operand-of-type-typename-can-only-be-compared-to-nothing-because-typename-is-a-nullable-type"></a><span data-ttu-id="02482-102">'typename'이(가) nullable 형식이므로 'typename' 형식의 'IsNot' 피연산자는 'Nothing'과(와)만 비교할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="02482-102">'IsNot' operand of type 'typename' can only be compared to 'Nothing', because 'typename' is a nullable type</span></span>
+<span data-ttu-id="02482-103">Nullable로 선언 된 변수를 식으로 비교 된 이외의 `Nothing` 를 사용 하 여 `IsNot` 연산자입니다.</span><span class="sxs-lookup"><span data-stu-id="02482-103">A variable declared as nullable has been compared to an expression other than `Nothing` using the `IsNot` operator.</span></span>  
   
- <span data-ttu-id="3be91-104">**오류 ID:** BC32128</span><span class="sxs-lookup"><span data-stu-id="3be91-104">**Error ID:** BC32128</span></span>  
+ <span data-ttu-id="02482-104">**오류 ID:** BC32128</span><span class="sxs-lookup"><span data-stu-id="02482-104">**Error ID:** BC32128</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="3be91-105">이 오류를 해결하려면</span><span class="sxs-lookup"><span data-stu-id="3be91-105">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="02482-105">이 오류를 해결하려면</span><span class="sxs-lookup"><span data-stu-id="02482-105">To correct this error</span></span>  
   
-1.  <span data-ttu-id="3be91-106">`Nothing` 연산자를 사용하여 nullable 형식을 `IsNot` 이외의 식과 비교하려면 다음 예제와 같이 nullable 형식에서 `GetType` 메서드를 호출하고 그 결과를 식과 비교합니다.</span><span class="sxs-lookup"><span data-stu-id="3be91-106">To compare a nullable type to an expression other than `Nothing` by using the `IsNot` operator, call the `GetType` method on the nullable type and compare the result to the expression, as shown in the following example.</span></span>  
+1. <span data-ttu-id="02482-106">`Nothing` 연산자를 사용하여 nullable 형식을 `IsNot` 이외의 식과 비교하려면 다음 예제와 같이 nullable 형식에서 `GetType` 메서드를 호출하고 그 결과를 식과 비교합니다.</span><span class="sxs-lookup"><span data-stu-id="02482-106">To compare a nullable type to an expression other than `Nothing` by using the `IsNot` operator, call the `GetType` method on the nullable type and compare the result to the expression, as shown in the following example.</span></span>  
   
 ```vb  
 Dim number? As Integer = 5  
@@ -33,7 +33,7 @@ If number IsNot Nothing Then
 End If  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="3be91-107">참고자료</span><span class="sxs-lookup"><span data-stu-id="3be91-107">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="02482-107">참고자료</span><span class="sxs-lookup"><span data-stu-id="02482-107">See also</span></span>
 
-- [<span data-ttu-id="3be91-108">Nullable 값 형식</span><span class="sxs-lookup"><span data-stu-id="3be91-108">Nullable Value Types</span></span>](../../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md)
-- [<span data-ttu-id="3be91-109">IsNot 연산자</span><span class="sxs-lookup"><span data-stu-id="3be91-109">IsNot Operator</span></span>](../../../visual-basic/language-reference/operators/isnot-operator.md)
+- [<span data-ttu-id="02482-108">Nullable 값 형식</span><span class="sxs-lookup"><span data-stu-id="02482-108">Nullable Value Types</span></span>](../../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md)
+- [<span data-ttu-id="02482-109">IsNot 연산자</span><span class="sxs-lookup"><span data-stu-id="02482-109">IsNot Operator</span></span>](../../../visual-basic/language-reference/operators/isnot-operator.md)

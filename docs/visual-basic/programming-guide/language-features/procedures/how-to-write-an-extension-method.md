@@ -6,33 +6,33 @@ helpviewer_keywords:
 - writing extension methods [Visual Basic]
 - extension methods [Visual Basic]
 ms.assetid: fb2739cc-958d-4ef4-a38b-214a74c93413
-ms.openlocfilehash: d6f8b85945bd400d1f4b54a50260d72c750add8b
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 00d62d275f7afc06e066a375dc1ffcd74b23c9ed
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58819119"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59313764"
 ---
-# <a name="how-to-write-an-extension-method-visual-basic"></a><span data-ttu-id="4b8f5-102">방법: 확장명 메서드 (Visual Basic) 작성</span><span class="sxs-lookup"><span data-stu-id="4b8f5-102">How to: Write an Extension Method (Visual Basic)</span></span>
-<span data-ttu-id="4b8f5-103">확장 메서드를 사용 하면 기존 클래스에 메서드를 추가할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="4b8f5-103">Extension methods enable you to add methods to an existing class.</span></span> <span data-ttu-id="4b8f5-104">해당 클래스의 인스턴스인 것 처럼 확장 메서드를 호출할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="4b8f5-104">The extension method can be called as if it were an instance of that class.</span></span>  
+# <a name="how-to-write-an-extension-method-visual-basic"></a><span data-ttu-id="7bc99-102">방법: 확장명 메서드 (Visual Basic) 작성</span><span class="sxs-lookup"><span data-stu-id="7bc99-102">How to: Write an Extension Method (Visual Basic)</span></span>
+<span data-ttu-id="7bc99-103">확장 메서드를 사용 하면 기존 클래스에 메서드를 추가할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="7bc99-103">Extension methods enable you to add methods to an existing class.</span></span> <span data-ttu-id="7bc99-104">해당 클래스의 인스턴스인 것 처럼 확장 메서드를 호출할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="7bc99-104">The extension method can be called as if it were an instance of that class.</span></span>  
   
-### <a name="to-define-an-extension-method"></a><span data-ttu-id="4b8f5-105">확장 메서드를 정의 하려면</span><span class="sxs-lookup"><span data-stu-id="4b8f5-105">To define an extension method</span></span>  
+### <a name="to-define-an-extension-method"></a><span data-ttu-id="7bc99-105">확장 메서드를 정의 하려면</span><span class="sxs-lookup"><span data-stu-id="7bc99-105">To define an extension method</span></span>  
   
-1.  <span data-ttu-id="4b8f5-106">Visual Studio에서 새 또는 기존 Visual Basic 응용 프로그램을 엽니다.</span><span class="sxs-lookup"><span data-stu-id="4b8f5-106">Open a new or existing Visual Basic application in Visual Studio.</span></span>  
+1. <span data-ttu-id="7bc99-106">Visual Studio에서 새 또는 기존 Visual Basic 응용 프로그램을 엽니다.</span><span class="sxs-lookup"><span data-stu-id="7bc99-106">Open a new or existing Visual Basic application in Visual Studio.</span></span>  
   
-2.  <span data-ttu-id="4b8f5-107">확장 메서드를 정의 하려는 파일의 맨 위에 있는 다음 import 문을 포함 합니다.</span><span class="sxs-lookup"><span data-stu-id="4b8f5-107">At the top of the file in which you want to define an extension method, include the following import statement:</span></span>  
+2. <span data-ttu-id="7bc99-107">확장 메서드를 정의 하려는 파일의 맨 위에 있는 다음 import 문을 포함 합니다.</span><span class="sxs-lookup"><span data-stu-id="7bc99-107">At the top of the file in which you want to define an extension method, include the following import statement:</span></span>  
   
     ```  
     Imports System.Runtime.CompilerServices  
     ```  
   
-3.  <span data-ttu-id="4b8f5-108">기존 또는 새 응용 프로그램에서 모듈 내에서 확장 특성을 사용 하 여 메서드 정의 시작 합니다.</span><span class="sxs-lookup"><span data-stu-id="4b8f5-108">Within a module in your new or existing application, begin the method definition with the extension attribute:</span></span>  
+3. <span data-ttu-id="7bc99-108">기존 또는 새 응용 프로그램에서 모듈 내에서 확장 특성을 사용 하 여 메서드 정의 시작 합니다.</span><span class="sxs-lookup"><span data-stu-id="7bc99-108">Within a module in your new or existing application, begin the method definition with the extension attribute:</span></span>  
   
     ```  
     <Extension()>  
     ```  
   
-4.  <span data-ttu-id="4b8f5-109">일반적인 방법으로 메서드를 선언 합니다 점을 제외 하 고 되는 첫 번째 매개 변수 형식의 확장 하려는 데이터 형식 이어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="4b8f5-109">Declare your method in the ordinary way, except that the type of the first parameter must be the data type you want to extend.</span></span>  
+4. <span data-ttu-id="7bc99-109">일반적인 방법으로 메서드를 선언 합니다 점을 제외 하 고 되는 첫 번째 매개 변수 형식의 확장 하려는 데이터 형식 이어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="7bc99-109">Declare your method in the ordinary way, except that the type of the first parameter must be the data type you want to extend.</span></span>  
   
     ```  
     <Extension()>   
@@ -41,8 +41,8 @@ ms.locfileid: "58819119"
     End Sub  
     ```  
   
-## <a name="example"></a><span data-ttu-id="4b8f5-110">예제</span><span class="sxs-lookup"><span data-stu-id="4b8f5-110">Example</span></span>  
- <span data-ttu-id="4b8f5-111">다음 예제에서는 모듈의 확장 메서드를 선언 `StringExtensions`합니다.</span><span class="sxs-lookup"><span data-stu-id="4b8f5-111">The following example declares an extension method in module `StringExtensions`.</span></span> <span data-ttu-id="4b8f5-112">두 번째 모듈 `Module1`을 가져옵니다 `StringExtensions` 메서드를 호출 합니다.</span><span class="sxs-lookup"><span data-stu-id="4b8f5-112">A second module, `Module1`, imports `StringExtensions` and calls the method.</span></span> <span data-ttu-id="4b8f5-113">확장 메서드를 호출 했을 때 범위에 있어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="4b8f5-113">The extension method must be in scope when it is called.</span></span> <span data-ttu-id="4b8f5-114">확장 메서드 `PrintAndPunctuate` 확장 된 <xref:System.String> 매개 변수로 전송 문장 부호 기호는 문자열 뒤에 문자열 인스턴스를 표시 하는 메서드를 사용 하 여 클래스입니다.</span><span class="sxs-lookup"><span data-stu-id="4b8f5-114">Extension method `PrintAndPunctuate` extends the <xref:System.String> class with a method that displays the string instance followed by a string of punctuation symbols sent in as a parameter.</span></span>  
+## <a name="example"></a><span data-ttu-id="7bc99-110">예제</span><span class="sxs-lookup"><span data-stu-id="7bc99-110">Example</span></span>  
+ <span data-ttu-id="7bc99-111">다음 예제에서는 모듈의 확장 메서드를 선언 `StringExtensions`합니다.</span><span class="sxs-lookup"><span data-stu-id="7bc99-111">The following example declares an extension method in module `StringExtensions`.</span></span> <span data-ttu-id="7bc99-112">두 번째 모듈 `Module1`을 가져옵니다 `StringExtensions` 메서드를 호출 합니다.</span><span class="sxs-lookup"><span data-stu-id="7bc99-112">A second module, `Module1`, imports `StringExtensions` and calls the method.</span></span> <span data-ttu-id="7bc99-113">확장 메서드를 호출 했을 때 범위에 있어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="7bc99-113">The extension method must be in scope when it is called.</span></span> <span data-ttu-id="7bc99-114">확장 메서드 `PrintAndPunctuate` 확장 된 <xref:System.String> 매개 변수로 전송 문장 부호 기호는 문자열 뒤에 문자열 인스턴스를 표시 하는 메서드를 사용 하 여 클래스입니다.</span><span class="sxs-lookup"><span data-stu-id="7bc99-114">Extension method `PrintAndPunctuate` extends the <xref:System.String> class with a method that displays the string instance followed by a string of punctuation symbols sent in as a parameter.</span></span>  
   
 ```vb  
 ' Declarations will typically be in a separate module.  
@@ -75,16 +75,16 @@ Module Module1
 End Module  
 ```  
   
- <span data-ttu-id="4b8f5-115">메서드 중 하나만 호출 두 개의 매개 변수를 사용 하 여 정의 확인할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="4b8f5-115">Notice that the method is defined with two parameters and called with only one.</span></span> <span data-ttu-id="4b8f5-116">첫 번째 매개 변수를 `aString`, 메서드의 정의에 바인딩되어 `example`, 인스턴스의 `String` 메서드를 호출 하는 합니다.</span><span class="sxs-lookup"><span data-stu-id="4b8f5-116">The first parameter, `aString`, in the method definition is bound to `example`, the instance of `String` that calls the method.</span></span> <span data-ttu-id="4b8f5-117">예제 출력은 다음과 같습니다.</span><span class="sxs-lookup"><span data-stu-id="4b8f5-117">The output of the example is as follows:</span></span>  
+ <span data-ttu-id="7bc99-115">메서드 중 하나만 호출 두 개의 매개 변수를 사용 하 여 정의 확인할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="7bc99-115">Notice that the method is defined with two parameters and called with only one.</span></span> <span data-ttu-id="7bc99-116">첫 번째 매개 변수를 `aString`, 메서드의 정의에 바인딩되어 `example`, 인스턴스의 `String` 메서드를 호출 하는 합니다.</span><span class="sxs-lookup"><span data-stu-id="7bc99-116">The first parameter, `aString`, in the method definition is bound to `example`, the instance of `String` that calls the method.</span></span> <span data-ttu-id="7bc99-117">예제 출력은 다음과 같습니다.</span><span class="sxs-lookup"><span data-stu-id="7bc99-117">The output of the example is as follows:</span></span>  
   
  `Hello?`  
   
  `Hello!!!!`  
   
-## <a name="see-also"></a><span data-ttu-id="4b8f5-118">참고자료</span><span class="sxs-lookup"><span data-stu-id="4b8f5-118">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="7bc99-118">참고자료</span><span class="sxs-lookup"><span data-stu-id="7bc99-118">See also</span></span>
 
 - <xref:System.Runtime.CompilerServices.ExtensionAttribute>
-- [<span data-ttu-id="4b8f5-119">확장명 메서드</span><span class="sxs-lookup"><span data-stu-id="4b8f5-119">Extension Methods</span></span>](./extension-methods.md)
-- [<span data-ttu-id="4b8f5-120">Module 문</span><span class="sxs-lookup"><span data-stu-id="4b8f5-120">Module Statement</span></span>](../../../../visual-basic/language-reference/statements/module-statement.md)
-- [<span data-ttu-id="4b8f5-121">프로시저 매개 변수 및 인수</span><span class="sxs-lookup"><span data-stu-id="4b8f5-121">Procedure Parameters and Arguments</span></span>](./procedure-parameters-and-arguments.md)
-- [<span data-ttu-id="4b8f5-122">Visual Basic의 범위</span><span class="sxs-lookup"><span data-stu-id="4b8f5-122">Scope in Visual Basic</span></span>](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)
+- [<span data-ttu-id="7bc99-119">확장명 메서드</span><span class="sxs-lookup"><span data-stu-id="7bc99-119">Extension Methods</span></span>](./extension-methods.md)
+- [<span data-ttu-id="7bc99-120">Module 문</span><span class="sxs-lookup"><span data-stu-id="7bc99-120">Module Statement</span></span>](../../../../visual-basic/language-reference/statements/module-statement.md)
+- [<span data-ttu-id="7bc99-121">프로시저 매개 변수 및 인수</span><span class="sxs-lookup"><span data-stu-id="7bc99-121">Procedure Parameters and Arguments</span></span>](./procedure-parameters-and-arguments.md)
+- [<span data-ttu-id="7bc99-122">Visual Basic의 범위</span><span class="sxs-lookup"><span data-stu-id="7bc99-122">Scope in Visual Basic</span></span>](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)

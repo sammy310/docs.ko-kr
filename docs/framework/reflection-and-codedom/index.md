@@ -7,29 +7,28 @@ helpviewer_keywords:
 ms.assetid: f78ec137-df0e-48c9-a7a0-5f6a1055f011
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b5607d6b1583063663bcac46aeec563408348621
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.openlocfilehash: a190e238992313e498e28217587029041f386040
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56219038"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59226523"
 ---
-# <a name="dynamic-programming-in-the-net-framework"></a><span data-ttu-id="9e06e-102">.NET Framework의 동적 프로그래밍</span><span class="sxs-lookup"><span data-stu-id="9e06e-102">Dynamic Programming in the .NET Framework</span></span>
-<span data-ttu-id="9e06e-103">설명서의 이 섹션에서는 .NET Framework에서의 동적 프로그래밍에 대한 정보를 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="9e06e-103">This section of the documentation provides information about dynamic programming in the .NET Framework.</span></span>  
+# <a name="dynamic-programming-in-the-net-framework"></a><span data-ttu-id="67c59-102">.NET Framework의 동적 프로그래밍</span><span class="sxs-lookup"><span data-stu-id="67c59-102">Dynamic Programming in the .NET Framework</span></span>
+<span data-ttu-id="67c59-103">설명서의 이 섹션에서는 .NET Framework에서의 동적 프로그래밍에 대한 정보를 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="67c59-103">This section of the documentation provides information about dynamic programming in the .NET Framework.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="9e06e-104">섹션 내용</span><span class="sxs-lookup"><span data-stu-id="9e06e-104">In This Section</span></span>  
- [<span data-ttu-id="9e06e-105">리플렉션</span><span class="sxs-lookup"><span data-stu-id="9e06e-105">Reflection</span></span>](../../../docs/framework/reflection-and-codedom/reflection.md)  
- <span data-ttu-id="9e06e-106">리플렉션을 사용하여 런타임에 개체 작업을 하는 방법을 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="9e06e-106">Describes how to use reflection to work with objects at run time.</span></span>  
+## <a name="in-this-section"></a><span data-ttu-id="67c59-104">섹션 내용</span><span class="sxs-lookup"><span data-stu-id="67c59-104">In This Section</span></span>  
+ [<span data-ttu-id="67c59-105">반사</span><span class="sxs-lookup"><span data-stu-id="67c59-105">Reflection</span></span>](../../../docs/framework/reflection-and-codedom/reflection.md)  
+ <span data-ttu-id="67c59-106">리플렉션을 사용하여 런타임에 개체 작업을 하는 방법을 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="67c59-106">Describes how to use reflection to work with objects at run time.</span></span>  
   
- [<span data-ttu-id="9e06e-107">동적 메서드 및 어셈블리 내보내기</span><span class="sxs-lookup"><span data-stu-id="9e06e-107">Emitting Dynamic Methods and Assemblies</span></span>](../../../docs/framework/reflection-and-codedom/emitting-dynamic-methods-and-assemblies.md)  
- <span data-ttu-id="9e06e-108">Reflection.Emit를 사용하여 런타임에 메서드 및 어셈블리를 만드는 방법을 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="9e06e-108">Describes how to create methods and assemblies at run time by using Reflection.Emit.</span></span>  
+ [<span data-ttu-id="67c59-107">동적 메서드 및 어셈블리 생성</span><span class="sxs-lookup"><span data-stu-id="67c59-107">Emitting Dynamic Methods and Assemblies</span></span>](../../../docs/framework/reflection-and-codedom/emitting-dynamic-methods-and-assemblies.md)  
+ <span data-ttu-id="67c59-108">Reflection.Emit를 사용하여 런타임에 메서드 및 어셈블리를 만드는 방법을 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="67c59-108">Describes how to create methods and assemblies at run time by using Reflection.Emit.</span></span>  
   
- [<span data-ttu-id="9e06e-109">동적 언어 런타임 개요</span><span class="sxs-lookup"><span data-stu-id="9e06e-109">Dynamic Language Runtime Overview</span></span>](../../../docs/framework/reflection-and-codedom/dynamic-language-runtime-overview.md)  
- <span data-ttu-id="9e06e-110">동적 언어 런타임의 기능을 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="9e06e-110">Describes the features of the dynamic language runtime.</span></span>  
+ [<span data-ttu-id="67c59-109">동적 언어 런타임 개요</span><span class="sxs-lookup"><span data-stu-id="67c59-109">Dynamic Language Runtime Overview</span></span>](../../../docs/framework/reflection-and-codedom/dynamic-language-runtime-overview.md)  
+ <span data-ttu-id="67c59-110">동적 언어 런타임의 기능을 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="67c59-110">Describes the features of the dynamic language runtime.</span></span>  
   
- [<span data-ttu-id="9e06e-111">동적 소스 코드 생성 및 컴파일</span><span class="sxs-lookup"><span data-stu-id="9e06e-111">Dynamic Source Code Generation and Compilation</span></span>](../../../docs/framework/reflection-and-codedom/dynamic-source-code-generation-and-compilation.md)  
- <span data-ttu-id="9e06e-112">동적 소스 코드를 생성하고 컴파일하는 방법을 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="9e06e-112">Describes how to generate and compile dynamic source code.</span></span>  
+ [<span data-ttu-id="67c59-111">동적 소스 코드 생성 및 컴파일</span><span class="sxs-lookup"><span data-stu-id="67c59-111">Dynamic Source Code Generation and Compilation</span></span>](../../../docs/framework/reflection-and-codedom/dynamic-source-code-generation-and-compilation.md)  
+ <span data-ttu-id="67c59-112">동적 소스 코드를 생성하고 컴파일하는 방법을 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="67c59-112">Describes how to generate and compile dynamic source code.</span></span>  
   
-## <a name="related-sections"></a><span data-ttu-id="9e06e-113">관련 단원</span><span class="sxs-lookup"><span data-stu-id="9e06e-113">Related Sections</span></span>  
- [<span data-ttu-id="9e06e-114">개발 가이드</span><span class="sxs-lookup"><span data-stu-id="9e06e-114">Development Guide</span></span>](../../../docs/framework/development-guide.md)  
-  
+## <a name="related-sections"></a><span data-ttu-id="67c59-113">관련 단원</span><span class="sxs-lookup"><span data-stu-id="67c59-113">Related Sections</span></span>  
+ [<span data-ttu-id="67c59-114">개발 가이드</span><span class="sxs-lookup"><span data-stu-id="67c59-114">Development Guide</span></span>](../../../docs/framework/development-guide.md)  
