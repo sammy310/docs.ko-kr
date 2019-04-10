@@ -2,38 +2,38 @@
 title: < (보다 작음) (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 1fc2a039-3ad6-4b3c-b41d-09932e803f86
-ms.openlocfilehash: 0373dc2d066252d76cd3d4408790404ca70ab701
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 1ca1cbdf1282782295b659393e8f54aae3ec5649
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59105172"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59320446"
 ---
-# <a name="-less-than-entity-sql"></a><span data-ttu-id="53084-102">\<(보다 작음)(Entity SQL)</span><span class="sxs-lookup"><span data-stu-id="53084-102">\< (Less Than) (Entity SQL)</span></span>
-<span data-ttu-id="53084-103">두 식을 비교하여 왼쪽 식의 값이 오른쪽 식의 값보다 작은지 여부를 결정합니다.</span><span class="sxs-lookup"><span data-stu-id="53084-103">Compares two expressions to determine whether the left expression has a value less than the right expression.</span></span>  
+# <a name="-less-than-entity-sql"></a><span data-ttu-id="176dc-102">\<(보다 작음)(Entity SQL)</span><span class="sxs-lookup"><span data-stu-id="176dc-102">\< (Less Than) (Entity SQL)</span></span>
+<span data-ttu-id="176dc-103">두 식을 비교하여 왼쪽 식의 값이 오른쪽 식의 값보다 작은지 여부를 결정합니다.</span><span class="sxs-lookup"><span data-stu-id="176dc-103">Compares two expressions to determine whether the left expression has a value less than the right expression.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="53084-104">구문</span><span class="sxs-lookup"><span data-stu-id="53084-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="176dc-104">구문</span><span class="sxs-lookup"><span data-stu-id="176dc-104">Syntax</span></span>  
   
 ```  
 expression < expression  
 ```  
   
-## <a name="arguments"></a><span data-ttu-id="53084-105">인수</span><span class="sxs-lookup"><span data-stu-id="53084-105">Arguments</span></span>  
+## <a name="arguments"></a><span data-ttu-id="176dc-105">인수</span><span class="sxs-lookup"><span data-stu-id="176dc-105">Arguments</span></span>  
  `expression`  
- <span data-ttu-id="53084-106">모든 유효한 식입니다.</span><span class="sxs-lookup"><span data-stu-id="53084-106">Any valid expression.</span></span> <span data-ttu-id="53084-107">비교할 두 식 모두 데이터 형식이 암시적으로 변환 가능해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="53084-107">Both expressions must have implicitly convertible data types.</span></span>  
+ <span data-ttu-id="176dc-106">모든 유효한 식입니다.</span><span class="sxs-lookup"><span data-stu-id="176dc-106">Any valid expression.</span></span> <span data-ttu-id="176dc-107">비교할 두 식 모두 데이터 형식이 암시적으로 변환 가능해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="176dc-107">Both expressions must have implicitly convertible data types.</span></span>  
   
-## <a name="result-types"></a><span data-ttu-id="53084-108">결과 형식</span><span class="sxs-lookup"><span data-stu-id="53084-108">Result Types</span></span>  
- `true` <span data-ttu-id="53084-109">왼쪽된 식에 값이 오른쪽 식; 보다 작은 경우 그렇지 않으면 `false`합니다.</span><span class="sxs-lookup"><span data-stu-id="53084-109">if the left expression has a value less than the right expression; otherwise, `false`.</span></span>  
+## <a name="result-types"></a><span data-ttu-id="176dc-108">결과 형식</span><span class="sxs-lookup"><span data-stu-id="176dc-108">Result Types</span></span>  
+ `true` <span data-ttu-id="176dc-109">왼쪽된 식에 값이 오른쪽 식; 보다 작은 경우 그렇지 않으면 `false`합니다.</span><span class="sxs-lookup"><span data-stu-id="176dc-109">if the left expression has a value less than the right expression; otherwise, `false`.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="53084-110">예제</span><span class="sxs-lookup"><span data-stu-id="53084-110">Example</span></span>  
- <span data-ttu-id="53084-111">다음 Entity SQL 쿼리는 < 비교 연산자를 통해 두 식을 비교하여 왼쪽 식의 값이 오른쪽 식의 값보다 작은지 여부를 결정합니다.</span><span class="sxs-lookup"><span data-stu-id="53084-111">The following Entity SQL query uses < comparison operator to compare two expressions to determine whether the left expression has a value less than the right expression.</span></span> <span data-ttu-id="53084-112">쿼리는 AdventureWorks Sales 모델을 기반으로 합니다.</span><span class="sxs-lookup"><span data-stu-id="53084-112">The query is based on the AdventureWorks Sales Model.</span></span> <span data-ttu-id="53084-113">이 쿼리를 컴파일하고 실행하려면 다음 단계를 수행하세요.</span><span class="sxs-lookup"><span data-stu-id="53084-113">To compile and run this query, follow these steps:</span></span>  
+## <a name="example"></a><span data-ttu-id="176dc-110">예제</span><span class="sxs-lookup"><span data-stu-id="176dc-110">Example</span></span>  
+ <span data-ttu-id="176dc-111">다음 Entity SQL 쿼리는 < 비교 연산자를 통해 두 식을 비교하여 왼쪽 식의 값이 오른쪽 식의 값보다 작은지 여부를 결정합니다.</span><span class="sxs-lookup"><span data-stu-id="176dc-111">The following Entity SQL query uses < comparison operator to compare two expressions to determine whether the left expression has a value less than the right expression.</span></span> <span data-ttu-id="176dc-112">쿼리는 AdventureWorks Sales 모델을 기반으로 합니다.</span><span class="sxs-lookup"><span data-stu-id="176dc-112">The query is based on the AdventureWorks Sales Model.</span></span> <span data-ttu-id="176dc-113">이 쿼리를 컴파일하고 실행하려면 다음 단계를 수행하세요.</span><span class="sxs-lookup"><span data-stu-id="176dc-113">To compile and run this query, follow these steps:</span></span>  
   
-1.  <span data-ttu-id="53084-114">절차에 따라 [방법: StructuralType 결과 반환 하는 쿼리 실행](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="53084-114">Follow the procedure in [How to: Execute a Query that Returns StructuralType Results](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md).</span></span>  
+1. <span data-ttu-id="176dc-114">절차에 따라 [방법: StructuralType 결과 반환 하는 쿼리 실행](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="176dc-114">Follow the procedure in [How to: Execute a Query that Returns StructuralType Results](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md).</span></span>  
   
-2.  <span data-ttu-id="53084-115">다음 쿼리를 `ExecuteStructuralTypeQuery` 메서드에 인수로 전달합니다.</span><span class="sxs-lookup"><span data-stu-id="53084-115">Pass the following query as an argument to the `ExecuteStructuralTypeQuery` method:</span></span>  
+2. <span data-ttu-id="176dc-115">다음 쿼리를 `ExecuteStructuralTypeQuery` 메서드에 인수로 전달합니다.</span><span class="sxs-lookup"><span data-stu-id="176dc-115">Pass the following query as an argument to the `ExecuteStructuralTypeQuery` method:</span></span>  
   
  [!code-csharp[DP EntityServices Concepts 2#LESS](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#less)]  
   
-## <a name="see-also"></a><span data-ttu-id="53084-116">참고자료</span><span class="sxs-lookup"><span data-stu-id="53084-116">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="176dc-116">참고자료</span><span class="sxs-lookup"><span data-stu-id="176dc-116">See also</span></span>
 
-- [<span data-ttu-id="53084-117">엔터티 SQL 참조</span><span class="sxs-lookup"><span data-stu-id="53084-117">Entity SQL Reference</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
+- [<span data-ttu-id="176dc-117">엔터티 SQL 참조</span><span class="sxs-lookup"><span data-stu-id="176dc-117">Entity SQL Reference</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
