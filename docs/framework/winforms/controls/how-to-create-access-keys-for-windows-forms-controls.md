@@ -20,19 +20,19 @@ helpviewer_keywords:
 - access keys [Windows Forms], Windows Forms
 - ALT key
 ms.assetid: 4faa0991-28ec-4eca-91db-51dc2cd6a7ac
-ms.openlocfilehash: fefd322afb938453ec1ea23e8ff6de9f9ae2a851
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: e6c829553163359301bad2cd896fc43562ee8069
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59141637"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59334460"
 ---
-# <a name="how-to-create-access-keys-for-windows-forms-controls"></a><span data-ttu-id="8a942-102">방법: Windows Forms 컨트롤에 대한 선택키 만들기</span><span class="sxs-lookup"><span data-stu-id="8a942-102">How to: Create Access Keys for Windows Forms Controls</span></span>
-<span data-ttu-id="8a942-103">*선택키가* 은 메뉴, 메뉴 항목 또는 예: 단추 컨트롤의 레이블 텍스트에 밑줄이 그어진된 문자입니다.</span><span class="sxs-lookup"><span data-stu-id="8a942-103">An *access key* is an underlined character in the text of a menu, menu item, or the label of a control such as a button.</span></span> <span data-ttu-id="8a942-104">액세스 키가 있는 사용자 수 "단추를 클릭" 미리 정의 된 액세스 키를 사용 하 여 함께에서 ALT 키를 눌러.</span><span class="sxs-lookup"><span data-stu-id="8a942-104">With an access key, the user can "click" a button by pressing the ALT key in combination with the predefined access key.</span></span> <span data-ttu-id="8a942-105">예를 들어, 단추 폼을 인쇄 하는 프로시저를 실행 하는 경우 및 해당 `Text` 속성 "Print", "P" 문자로 하면 문자에는 런타임에 단추 텍스트에 밑줄이 표시 된 "P" 전에 앰퍼샌드를 추가 합니다.</span><span class="sxs-lookup"><span data-stu-id="8a942-105">For example, if a button runs a procedure to print a form, and therefore its `Text` property is set to "Print," adding an ampersand before the letter "P" causes the letter "P" to be underlined in the button text at run time.</span></span> <span data-ttu-id="8a942-106">ALT + P를 눌러 단추와 연결 된 명령을 실행할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="8a942-106">The user can run the command associated with the button by pressing ALT+P.</span></span> <span data-ttu-id="8a942-107">포커스를 받을 수 있는 컨트롤에 대 한 액세스 키를 사용할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="8a942-107">You cannot have an access key for a control that cannot receive focus.</span></span>  
+# <a name="how-to-create-access-keys-for-windows-forms-controls"></a><span data-ttu-id="da46c-102">방법: Windows Forms 컨트롤에 대한 선택키 만들기</span><span class="sxs-lookup"><span data-stu-id="da46c-102">How to: Create Access Keys for Windows Forms Controls</span></span>
+<span data-ttu-id="da46c-103">*선택키가* 은 메뉴, 메뉴 항목 또는 예: 단추 컨트롤의 레이블 텍스트에 밑줄이 그어진된 문자입니다.</span><span class="sxs-lookup"><span data-stu-id="da46c-103">An *access key* is an underlined character in the text of a menu, menu item, or the label of a control such as a button.</span></span> <span data-ttu-id="da46c-104">액세스 키가 있는 사용자 수 "단추를 클릭" 미리 정의 된 액세스 키를 사용 하 여 함께에서 ALT 키를 눌러.</span><span class="sxs-lookup"><span data-stu-id="da46c-104">With an access key, the user can "click" a button by pressing the ALT key in combination with the predefined access key.</span></span> <span data-ttu-id="da46c-105">예를 들어, 단추 폼을 인쇄 하는 프로시저를 실행 하는 경우 및 해당 `Text` 속성 "Print", "P" 문자로 하면 문자에는 런타임에 단추 텍스트에 밑줄이 표시 된 "P" 전에 앰퍼샌드를 추가 합니다.</span><span class="sxs-lookup"><span data-stu-id="da46c-105">For example, if a button runs a procedure to print a form, and therefore its `Text` property is set to "Print," adding an ampersand before the letter "P" causes the letter "P" to be underlined in the button text at run time.</span></span> <span data-ttu-id="da46c-106">ALT + P를 눌러 단추와 연결 된 명령을 실행할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="da46c-106">The user can run the command associated with the button by pressing ALT+P.</span></span> <span data-ttu-id="da46c-107">포커스를 받을 수 있는 컨트롤에 대 한 액세스 키를 사용할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="da46c-107">You cannot have an access key for a control that cannot receive focus.</span></span>  
   
-### <a name="to-create-an-access-key-for-a-control"></a><span data-ttu-id="8a942-108">컨트롤에 대 한 액세스 키를 만들려면</span><span class="sxs-lookup"><span data-stu-id="8a942-108">To create an access key for a control</span></span>  
+### <a name="to-create-an-access-key-for-a-control"></a><span data-ttu-id="da46c-108">컨트롤에 대 한 액세스 키를 만들려면</span><span class="sxs-lookup"><span data-stu-id="da46c-108">To create an access key for a control</span></span>  
   
-1.  <span data-ttu-id="8a942-109">설정 된 `Text` 앰퍼샌드를 포함 하는 문자열 (&) 문자 바로 가기로 속성입니다.</span><span class="sxs-lookup"><span data-stu-id="8a942-109">Set the `Text` property to a string that includes an ampersand (&) before the letter that will be the shortcut.</span></span>  
+1. <span data-ttu-id="da46c-109">설정 된 `Text` 앰퍼샌드를 포함 하는 문자열 (&) 문자 바로 가기로 속성입니다.</span><span class="sxs-lookup"><span data-stu-id="da46c-109">Set the `Text` property to a string that includes an ampersand (&) before the letter that will be the shortcut.</span></span>  
   
     ```vb  
     ' Set the letter "P" as an access key.  
@@ -50,11 +50,11 @@ ms.locfileid: "59141637"
     ```  
   
     > [!NOTE]
-    >  <span data-ttu-id="8a942-110">앰퍼샌드 캡션을 액세스 키를 만들지 않고를 넣으려면 두 앰퍼샌드 (& &).</span><span class="sxs-lookup"><span data-stu-id="8a942-110">To include an ampersand in a caption without creating an access key, include two ampersands (&&).</span></span> <span data-ttu-id="8a942-111">단일 앰퍼샌드 캡션의 나타나고 문자가 없는 밑줄이 표시 되 면 됩니다.</span><span class="sxs-lookup"><span data-stu-id="8a942-111">A single ampersand is displayed in the caption and no characters are underlined.</span></span>  
+    >  <span data-ttu-id="da46c-110">앰퍼샌드 캡션을 액세스 키를 만들지 않고를 넣으려면 두 앰퍼샌드 (& &).</span><span class="sxs-lookup"><span data-stu-id="da46c-110">To include an ampersand in a caption without creating an access key, include two ampersands (&&).</span></span> <span data-ttu-id="da46c-111">단일 앰퍼샌드 캡션의 나타나고 문자가 없는 밑줄이 표시 되 면 됩니다.</span><span class="sxs-lookup"><span data-stu-id="da46c-111">A single ampersand is displayed in the caption and no characters are underlined.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="8a942-112">참고자료</span><span class="sxs-lookup"><span data-stu-id="8a942-112">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="da46c-112">참고자료</span><span class="sxs-lookup"><span data-stu-id="da46c-112">See also</span></span>
 
 - <xref:System.Windows.Forms.Button>
-- [<span data-ttu-id="8a942-113">방법: Windows Forms 단추 클릭에 응답</span><span class="sxs-lookup"><span data-stu-id="8a942-113">How to: Respond to Windows Forms Button Clicks</span></span>](how-to-respond-to-windows-forms-button-clicks.md)
-- [<span data-ttu-id="8a942-114">방법: Windows Forms 컨트롤에서 표시하는 텍스트 설정</span><span class="sxs-lookup"><span data-stu-id="8a942-114">How to: Set the Text Displayed by a Windows Forms Control</span></span>](how-to-set-the-text-displayed-by-a-windows-forms-control.md)
-- [<span data-ttu-id="8a942-115">개별 Windows Forms 컨트롤 레이블 지정 및 바로 가기 제공</span><span class="sxs-lookup"><span data-stu-id="8a942-115">Labeling Individual Windows Forms Controls and Providing Shortcuts to Them</span></span>](labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md)
+- [<span data-ttu-id="da46c-113">방법: Windows Forms 단추 클릭에 응답</span><span class="sxs-lookup"><span data-stu-id="da46c-113">How to: Respond to Windows Forms Button Clicks</span></span>](how-to-respond-to-windows-forms-button-clicks.md)
+- [<span data-ttu-id="da46c-114">방법: Windows Forms 컨트롤에서 표시하는 텍스트 설정</span><span class="sxs-lookup"><span data-stu-id="da46c-114">How to: Set the Text Displayed by a Windows Forms Control</span></span>](how-to-set-the-text-displayed-by-a-windows-forms-control.md)
+- [<span data-ttu-id="da46c-115">개별 Windows Forms 컨트롤 레이블 지정 및 바로 가기 제공</span><span class="sxs-lookup"><span data-stu-id="da46c-115">Labeling Individual Windows Forms Controls and Providing Shortcuts to Them</span></span>](labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md)
