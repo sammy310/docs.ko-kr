@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 012cd9fdf23206f57662c854692ba53f403b727f
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: ce6df232f3793b8b61d9fa7c18c9c90ca9fa3900
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57471604"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59184719"
 ---
-# <a name="imetadataemit2definemethodspec-method"></a><span data-ttu-id="e1998-102">IMetaDataEmit2::DefineMethodSpec 메서드</span><span class="sxs-lookup"><span data-stu-id="e1998-102">IMetaDataEmit2::DefineMethodSpec Method</span></span>
-<span data-ttu-id="e1998-103">메서드의 제네릭 인스턴스를 만들고 정의 하는 토큰을 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="e1998-103">Creates a generic instance of a method, and gets a token to the definition.</span></span>  
+# <a name="imetadataemit2definemethodspec-method"></a><span data-ttu-id="8f259-102">IMetaDataEmit2::DefineMethodSpec 메서드</span><span class="sxs-lookup"><span data-stu-id="8f259-102">IMetaDataEmit2::DefineMethodSpec Method</span></span>
+<span data-ttu-id="8f259-103">메서드의 제네릭 인스턴스를 만들고 정의 하는 토큰을 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="8f259-103">Creates a generic instance of a method, and gets a token to the definition.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="e1998-104">구문</span><span class="sxs-lookup"><span data-stu-id="e1998-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="8f259-104">구문</span><span class="sxs-lookup"><span data-stu-id="8f259-104">Syntax</span></span>  
   
 ```  
 HRESULT DefineMethodSpec (  
@@ -38,28 +38,29 @@ HRESULT DefineMethodSpec (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="e1998-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="e1998-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="8f259-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="8f259-105">Parameters</span></span>  
  `tkParent`  
- <span data-ttu-id="e1998-106">[in] 제네릭 인스턴스를 만들려고 하는 방법에 대 한 토큰입니다.</span><span class="sxs-lookup"><span data-stu-id="e1998-106">[in] A token for the method of which to create the generic instance.</span></span> <span data-ttu-id="e1998-107">토큰 형식 이어야 합니다 `mdMethodDef` 또는 `mdMemberRef`합니다.</span><span class="sxs-lookup"><span data-stu-id="e1998-107">The token must be of type `mdMethodDef` or `mdMemberRef`.</span></span>  
+ <span data-ttu-id="8f259-106">[in] 제네릭 인스턴스를 만들려고 하는 방법에 대 한 토큰입니다.</span><span class="sxs-lookup"><span data-stu-id="8f259-106">[in] A token for the method of which to create the generic instance.</span></span> <span data-ttu-id="8f259-107">토큰 형식 이어야 합니다 `mdMethodDef` 또는 `mdMemberRef`합니다.</span><span class="sxs-lookup"><span data-stu-id="8f259-107">The token must be of type `mdMethodDef` or `mdMemberRef`.</span></span>  
   
  `pvSigBlob`  
- <span data-ttu-id="e1998-108">[in] 메서드의 이진 COM + 서명에 대 한 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="e1998-108">[in] A pointer to the binary COM+ signature of the method.</span></span>  
+ <span data-ttu-id="8f259-108">[in] 메서드의 이진 COM + 서명에 대 한 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="8f259-108">[in] A pointer to the binary COM+ signature of the method.</span></span>  
   
  `cbSibBlob`  
- <span data-ttu-id="e1998-109">[in] 크기 (바이트)의 `pvSigBlob`합니다.</span><span class="sxs-lookup"><span data-stu-id="e1998-109">[in] The size, in bytes, of `pvSigBlob`.</span></span>  
+ <span data-ttu-id="8f259-109">[in] 크기 (바이트)의 `pvSigBlob`합니다.</span><span class="sxs-lookup"><span data-stu-id="8f259-109">[in] The size, in bytes, of `pvSigBlob`.</span></span>  
   
  `pmi`  
- <span data-ttu-id="e1998-110">[out] 메서드의 메타 데이터 서명 정의 하는 토큰입니다.</span><span class="sxs-lookup"><span data-stu-id="e1998-110">[out] A token to the metadata signature definition of the method.</span></span>  
+ <span data-ttu-id="8f259-110">[out] 메서드의 메타 데이터 서명 정의 하는 토큰입니다.</span><span class="sxs-lookup"><span data-stu-id="8f259-110">[out] A token to the metadata signature definition of the method.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="e1998-111">요구 사항</span><span class="sxs-lookup"><span data-stu-id="e1998-111">Requirements</span></span>  
- <span data-ttu-id="e1998-112">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="e1998-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="8f259-111">요구 사항</span><span class="sxs-lookup"><span data-stu-id="8f259-111">Requirements</span></span>  
+ <span data-ttu-id="8f259-112">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="8f259-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="e1998-113">**헤더:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="e1998-113">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="8f259-113">**헤더:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="8f259-113">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="e1998-114">**라이브러리:** MsCorEE.dll에서 리소스로 사용</span><span class="sxs-lookup"><span data-stu-id="e1998-114">**Library:** Used as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="8f259-114">**라이브러리:** MsCorEE.dll에서 리소스로 사용</span><span class="sxs-lookup"><span data-stu-id="8f259-114">**Library:** Used as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="e1998-115">**.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="e1998-115">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ **<span data-ttu-id="8f259-115">.NET Framework 버전:</span><span class="sxs-lookup"><span data-stu-id="8f259-115">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="e1998-116">참고자료</span><span class="sxs-lookup"><span data-stu-id="e1998-116">See also</span></span>
-- [<span data-ttu-id="e1998-117">IMetaDataEmit2 인터페이스</span><span class="sxs-lookup"><span data-stu-id="e1998-117">IMetaDataEmit2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
-- [<span data-ttu-id="e1998-118">IMetaDataEmit 인터페이스</span><span class="sxs-lookup"><span data-stu-id="e1998-118">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
+## <a name="see-also"></a><span data-ttu-id="8f259-116">참고자료</span><span class="sxs-lookup"><span data-stu-id="8f259-116">See also</span></span>
+
+- [<span data-ttu-id="8f259-117">IMetaDataEmit2 인터페이스</span><span class="sxs-lookup"><span data-stu-id="8f259-117">IMetaDataEmit2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+- [<span data-ttu-id="8f259-118">IMetaDataEmit 인터페이스</span><span class="sxs-lookup"><span data-stu-id="8f259-118">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)

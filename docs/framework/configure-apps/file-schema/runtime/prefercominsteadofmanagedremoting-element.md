@@ -7,63 +7,63 @@ helpviewer_keywords:
 ms.assetid: a279a42a-c415-4e79-88cf-64244ebda613
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f143429c1f579ae98a03fd69a8cf3dcdd26ad2c2
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: c5b0a394500dbea0d557a33ea8d2e169c2c6561f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55260364"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59195672"
 ---
-# <a name="prefercominsteadofmanagedremoting-element"></a><span data-ttu-id="cc485-102">\<PreferComInsteadOfManagedRemoting > 요소</span><span class="sxs-lookup"><span data-stu-id="cc485-102">\<PreferComInsteadOfManagedRemoting> Element</span></span>
-<span data-ttu-id="cc485-103">런타임에서 사용할지 여부를 COM interop 원격 대신 모든 호출에 대 한 응용 프로그램 도메인 경계에 걸쳐 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="cc485-103">Specifies whether the runtime will use COM interop instead of remoting for all calls across application domain boundaries.</span></span>  
+# <a name="prefercominsteadofmanagedremoting-element"></a><span data-ttu-id="c0402-102">\<PreferComInsteadOfManagedRemoting > 요소</span><span class="sxs-lookup"><span data-stu-id="c0402-102">\<PreferComInsteadOfManagedRemoting> Element</span></span>
+<span data-ttu-id="c0402-103">런타임에서 사용할지 여부를 COM interop 원격 대신 모든 호출에 대 한 응용 프로그램 도메인 경계에 걸쳐 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="c0402-103">Specifies whether the runtime will use COM interop instead of remoting for all calls across application domain boundaries.</span></span>  
   
- <span data-ttu-id="cc485-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="cc485-104">\<configuration></span></span>  
-<span data-ttu-id="cc485-105">\<runtime></span><span class="sxs-lookup"><span data-stu-id="cc485-105">\<runtime></span></span>  
-<span data-ttu-id="cc485-106">\<PreferComInsteadOfManagedRemoting></span><span class="sxs-lookup"><span data-stu-id="cc485-106">\<PreferComInsteadOfManagedRemoting></span></span>  
+ <span data-ttu-id="c0402-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="c0402-104">\<configuration></span></span>  
+<span data-ttu-id="c0402-105">\<runtime></span><span class="sxs-lookup"><span data-stu-id="c0402-105">\<runtime></span></span>  
+<span data-ttu-id="c0402-106">\<PreferComInsteadOfManagedRemoting></span><span class="sxs-lookup"><span data-stu-id="c0402-106">\<PreferComInsteadOfManagedRemoting></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="cc485-107">구문</span><span class="sxs-lookup"><span data-stu-id="cc485-107">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="c0402-107">구문</span><span class="sxs-lookup"><span data-stu-id="c0402-107">Syntax</span></span>  
   
 ```xml  
 <PreferComInsteadOfManagedRemoting enabled="true|false"/>  
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="cc485-108">특성 및 요소</span><span class="sxs-lookup"><span data-stu-id="cc485-108">Attributes and Elements</span></span>  
- <span data-ttu-id="cc485-109">다음 섹션에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="cc485-109">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="c0402-108">특성 및 요소</span><span class="sxs-lookup"><span data-stu-id="c0402-108">Attributes and Elements</span></span>  
+ <span data-ttu-id="c0402-109">다음 섹션에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="c0402-109">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="cc485-110">특성</span><span class="sxs-lookup"><span data-stu-id="cc485-110">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="c0402-110">특성</span><span class="sxs-lookup"><span data-stu-id="c0402-110">Attributes</span></span>  
   
-|<span data-ttu-id="cc485-111">특성</span><span class="sxs-lookup"><span data-stu-id="cc485-111">Attribute</span></span>|<span data-ttu-id="cc485-112">설명</span><span class="sxs-lookup"><span data-stu-id="cc485-112">Description</span></span>|  
+|<span data-ttu-id="c0402-111">특성</span><span class="sxs-lookup"><span data-stu-id="c0402-111">Attribute</span></span>|<span data-ttu-id="c0402-112">설명</span><span class="sxs-lookup"><span data-stu-id="c0402-112">Description</span></span>|  
 |---------------|-----------------|  
-|`enabled`|<span data-ttu-id="cc485-113">필수 특성입니다.</span><span class="sxs-lookup"><span data-stu-id="cc485-113">Required attribute.</span></span><br /><br /> <span data-ttu-id="cc485-114">런타임에서 사용할지 여부를 COM interop 원격 대신 응용 프로그램 도메인 경계를 넘어 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="cc485-114">Indicates whether the runtime will use COM interop instead of remoting across application domain boundaries.</span></span>|  
+|`enabled`|<span data-ttu-id="c0402-113">필수 특성입니다.</span><span class="sxs-lookup"><span data-stu-id="c0402-113">Required attribute.</span></span><br /><br /> <span data-ttu-id="c0402-114">런타임에서 사용할지 여부를 COM interop 원격 대신 응용 프로그램 도메인 경계를 넘어 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="c0402-114">Indicates whether the runtime will use COM interop instead of remoting across application domain boundaries.</span></span>|  
   
-## <a name="enabled-attribute"></a><span data-ttu-id="cc485-115">enabled 특성</span><span class="sxs-lookup"><span data-stu-id="cc485-115">enabled Attribute</span></span>  
+## <a name="enabled-attribute"></a><span data-ttu-id="c0402-115">enabled 특성</span><span class="sxs-lookup"><span data-stu-id="c0402-115">enabled Attribute</span></span>  
   
-|<span data-ttu-id="cc485-116">값</span><span class="sxs-lookup"><span data-stu-id="cc485-116">Value</span></span>|<span data-ttu-id="cc485-117">설명</span><span class="sxs-lookup"><span data-stu-id="cc485-117">Description</span></span>|  
+|<span data-ttu-id="c0402-116">값</span><span class="sxs-lookup"><span data-stu-id="c0402-116">Value</span></span>|<span data-ttu-id="c0402-117">설명</span><span class="sxs-lookup"><span data-stu-id="c0402-117">Description</span></span>|  
 |-----------|-----------------|  
-|`false`|<span data-ttu-id="cc485-118">런타임에서 응용 프로그램 도메인 경계를 넘어 remoting을 사용 합니다.</span><span class="sxs-lookup"><span data-stu-id="cc485-118">The runtime will use remoting across application domain boundaries.</span></span> <span data-ttu-id="cc485-119">이 값이 기본값입니다.</span><span class="sxs-lookup"><span data-stu-id="cc485-119">This is the default.</span></span>|  
-|`true`|<span data-ttu-id="cc485-120">런타임에 응용 프로그램 도메인 경계를 넘어 COM interop를 사용 합니다.</span><span class="sxs-lookup"><span data-stu-id="cc485-120">The runtime will use COM interop across application domain boundaries.</span></span>|  
+|`false`|<span data-ttu-id="c0402-118">런타임에서 응용 프로그램 도메인 경계를 넘어 remoting을 사용 합니다.</span><span class="sxs-lookup"><span data-stu-id="c0402-118">The runtime will use remoting across application domain boundaries.</span></span> <span data-ttu-id="c0402-119">이 값이 기본값입니다.</span><span class="sxs-lookup"><span data-stu-id="c0402-119">This is the default.</span></span>|  
+|`true`|<span data-ttu-id="c0402-120">런타임에 응용 프로그램 도메인 경계를 넘어 COM interop를 사용 합니다.</span><span class="sxs-lookup"><span data-stu-id="c0402-120">The runtime will use COM interop across application domain boundaries.</span></span>|  
   
-### <a name="child-elements"></a><span data-ttu-id="cc485-121">자식 요소</span><span class="sxs-lookup"><span data-stu-id="cc485-121">Child Elements</span></span>  
- <span data-ttu-id="cc485-122">없음</span><span class="sxs-lookup"><span data-stu-id="cc485-122">None.</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="c0402-121">자식 요소</span><span class="sxs-lookup"><span data-stu-id="c0402-121">Child Elements</span></span>  
+ <span data-ttu-id="c0402-122">없음</span><span class="sxs-lookup"><span data-stu-id="c0402-122">None.</span></span>  
   
-### <a name="parent-elements"></a><span data-ttu-id="cc485-123">부모 요소</span><span class="sxs-lookup"><span data-stu-id="cc485-123">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="c0402-123">부모 요소</span><span class="sxs-lookup"><span data-stu-id="c0402-123">Parent Elements</span></span>  
   
-|<span data-ttu-id="cc485-124">요소</span><span class="sxs-lookup"><span data-stu-id="cc485-124">Element</span></span>|<span data-ttu-id="cc485-125">설명</span><span class="sxs-lookup"><span data-stu-id="cc485-125">Description</span></span>|  
+|<span data-ttu-id="c0402-124">요소</span><span class="sxs-lookup"><span data-stu-id="c0402-124">Element</span></span>|<span data-ttu-id="c0402-125">설명</span><span class="sxs-lookup"><span data-stu-id="c0402-125">Description</span></span>|  
 |-------------|-----------------|  
-|`configuration`|<span data-ttu-id="cc485-126">공용 언어 런타임 및 .NET Framework 애플리케이션에서 사용하는 모든 구성 파일의 루트 요소입니다.</span><span class="sxs-lookup"><span data-stu-id="cc485-126">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span>|  
-|`runtime`|<span data-ttu-id="cc485-127">어셈블리 바인딩 및 가비지 컬렉션에 대한 정보를 포함합니다.</span><span class="sxs-lookup"><span data-stu-id="cc485-127">Contains information about assembly binding and garbage collection.</span></span>|  
+|`configuration`|<span data-ttu-id="c0402-126">공용 언어 런타임 및 .NET Framework 애플리케이션에서 사용하는 모든 구성 파일의 루트 요소입니다.</span><span class="sxs-lookup"><span data-stu-id="c0402-126">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span>|  
+|`runtime`|<span data-ttu-id="c0402-127">어셈블리 바인딩 및 가비지 컬렉션에 대한 정보를 포함합니다.</span><span class="sxs-lookup"><span data-stu-id="c0402-127">Contains information about assembly binding and garbage collection.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="cc485-128">설명</span><span class="sxs-lookup"><span data-stu-id="cc485-128">Remarks</span></span>  
- <span data-ttu-id="cc485-129">설정한 경우 합니다 `enabled` 특성을 `true`, 런타임에서 다음과 같이 동작:</span><span class="sxs-lookup"><span data-stu-id="cc485-129">When you set the `enabled` attribute to `true`, the runtime behaves as follows:</span></span>  
+## <a name="remarks"></a><span data-ttu-id="c0402-128">설명</span><span class="sxs-lookup"><span data-stu-id="c0402-128">Remarks</span></span>  
+ <span data-ttu-id="c0402-129">설정한 경우 합니다 `enabled` 특성을 `true`, 런타임에서 다음과 같이 동작:</span><span class="sxs-lookup"><span data-stu-id="c0402-129">When you set the `enabled` attribute to `true`, the runtime behaves as follows:</span></span>  
   
--   <span data-ttu-id="cc485-130">런타임에서 호출 하지 않습니다 [iunknown:: Queryinterface](https://go.microsoft.com/fwlink/?LinkID=144867) 에 대 한는 [IManagedObject](../../../../../docs/framework/unmanaged-api/hosting/imanagedobject-interface.md) 인터페이스는 [IUnknown](https://go.microsoft.com/fwlink/?LinkId=148003) 인터페이스는 COM 인터페이스를 통해 도메인을 입력 합니다.</span><span class="sxs-lookup"><span data-stu-id="cc485-130">The runtime does not call [IUnknown::QueryInterface](https://go.microsoft.com/fwlink/?LinkID=144867) for an [IManagedObject](../../../../../docs/framework/unmanaged-api/hosting/imanagedobject-interface.md) interface when an [IUnknown](https://go.microsoft.com/fwlink/?LinkId=148003) interface enters the domain through a COM interface.</span></span> <span data-ttu-id="cc485-131">구문 대신에 [런타임 호출 가능 래퍼](../../../../../docs/framework/interop/runtime-callable-wrapper.md) (RCW) 개체 주위 합니다.</span><span class="sxs-lookup"><span data-stu-id="cc485-131">Instead, it constructs a [Runtime Callable Wrapper](../../../../../docs/framework/interop/runtime-callable-wrapper.md) (RCW) around the object.</span></span>  
+-   <span data-ttu-id="c0402-130">런타임에서 호출 하지 않습니다 [iunknown:: Queryinterface](https://go.microsoft.com/fwlink/?LinkID=144867) 에 대 한는 [IManagedObject](../../../../../docs/framework/unmanaged-api/hosting/imanagedobject-interface.md) 인터페이스는 [IUnknown](https://go.microsoft.com/fwlink/?LinkId=148003) 인터페이스는 COM 인터페이스를 통해 도메인을 입력 합니다.</span><span class="sxs-lookup"><span data-stu-id="c0402-130">The runtime does not call [IUnknown::QueryInterface](https://go.microsoft.com/fwlink/?LinkID=144867) for an [IManagedObject](../../../../../docs/framework/unmanaged-api/hosting/imanagedobject-interface.md) interface when an [IUnknown](https://go.microsoft.com/fwlink/?LinkId=148003) interface enters the domain through a COM interface.</span></span> <span data-ttu-id="c0402-131">구문 대신에 [런타임 호출 가능 래퍼](../../../../../docs/framework/interop/runtime-callable-wrapper.md) (RCW) 개체 주위 합니다.</span><span class="sxs-lookup"><span data-stu-id="c0402-131">Instead, it constructs a [Runtime Callable Wrapper](../../../../../docs/framework/interop/runtime-callable-wrapper.md) (RCW) around the object.</span></span>  
   
--   <span data-ttu-id="cc485-132">런타임에서 받으면 E_NOINTERFACE가 반환 됩니다를 `QueryInterface` 에 대 한 호출는 [IManagedObject](../../../../../docs/framework/unmanaged-api/hosting/imanagedobject-interface.md) 인터페이스에 대 한 [COM 호출 가능 래퍼](../../../../../docs/framework/interop/com-callable-wrapper.md) (CCW)는이 도메인에 만들어졌습니다.</span><span class="sxs-lookup"><span data-stu-id="cc485-132">The runtime returns E_NOINTERFACE when it receives a `QueryInterface` call for an [IManagedObject](../../../../../docs/framework/unmanaged-api/hosting/imanagedobject-interface.md) interface for any [COM Callable Wrapper](../../../../../docs/framework/interop/com-callable-wrapper.md) (CCW) that has been created in this domain.</span></span>  
+-   <span data-ttu-id="c0402-132">런타임에서 받으면 E_NOINTERFACE가 반환 됩니다를 `QueryInterface` 에 대 한 호출는 [IManagedObject](../../../../../docs/framework/unmanaged-api/hosting/imanagedobject-interface.md) 인터페이스에 대 한 [COM 호출 가능 래퍼](../../../../../docs/framework/interop/com-callable-wrapper.md) (CCW)는이 도메인에 만들어졌습니다.</span><span class="sxs-lookup"><span data-stu-id="c0402-132">The runtime returns E_NOINTERFACE when it receives a `QueryInterface` call for an [IManagedObject](../../../../../docs/framework/unmanaged-api/hosting/imanagedobject-interface.md) interface for any [COM Callable Wrapper](../../../../../docs/framework/interop/com-callable-wrapper.md) (CCW) that has been created in this domain.</span></span>  
   
- <span data-ttu-id="cc485-133">이러한 두 가지 동작 COM에 대 한 모든 호출 응용 프로그램 도메인 경계 사용 COM에서 관리 되는 개체 사이의 원격 대신 COM interop 인터페이스를 확인 합니다.</span><span class="sxs-lookup"><span data-stu-id="cc485-133">These two behaviors ensure that all calls over COM interfaces between managed objects across application domain boundaries use COM and COM interop instead of remoting.</span></span>  
+ <span data-ttu-id="c0402-133">이러한 두 가지 동작 COM에 대 한 모든 호출 응용 프로그램 도메인 경계 사용 COM에서 관리 되는 개체 사이의 원격 대신 COM interop 인터페이스를 확인 합니다.</span><span class="sxs-lookup"><span data-stu-id="c0402-133">These two behaviors ensure that all calls over COM interfaces between managed objects across application domain boundaries use COM and COM interop instead of remoting.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="cc485-134">예제</span><span class="sxs-lookup"><span data-stu-id="cc485-134">Example</span></span>  
- <span data-ttu-id="cc485-135">다음 예와 런타임에서 COM을 사용 해야 함을 지정 하는 방법을 interop 격리 경계를 넘어:</span><span class="sxs-lookup"><span data-stu-id="cc485-135">The following example shows how to specify that the runtime should use COM interop across isolation boundaries:</span></span>  
+## <a name="example"></a><span data-ttu-id="c0402-134">예제</span><span class="sxs-lookup"><span data-stu-id="c0402-134">Example</span></span>  
+ <span data-ttu-id="c0402-135">다음 예와 런타임에서 COM을 사용 해야 함을 지정 하는 방법을 interop 격리 경계를 넘어:</span><span class="sxs-lookup"><span data-stu-id="c0402-135">The following example shows how to specify that the runtime should use COM interop across isolation boundaries:</span></span>  
   
 ```xml  
 <configuration>  
@@ -73,6 +73,7 @@ ms.locfileid: "55260364"
 </configuration>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="cc485-136">참고자료</span><span class="sxs-lookup"><span data-stu-id="cc485-136">See also</span></span>
-- [<span data-ttu-id="cc485-137">런타임 설정 스키마</span><span class="sxs-lookup"><span data-stu-id="cc485-137">Runtime Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
-- [<span data-ttu-id="cc485-138">구성 파일 스키마</span><span class="sxs-lookup"><span data-stu-id="cc485-138">Configuration File Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/index.md)
+## <a name="see-also"></a><span data-ttu-id="c0402-136">참고자료</span><span class="sxs-lookup"><span data-stu-id="c0402-136">See also</span></span>
+
+- [<span data-ttu-id="c0402-137">런타임 설정 스키마</span><span class="sxs-lookup"><span data-stu-id="c0402-137">Runtime Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
+- [<span data-ttu-id="c0402-138">구성 파일 스키마</span><span class="sxs-lookup"><span data-stu-id="c0402-138">Configuration File Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/index.md)

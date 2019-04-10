@@ -16,17 +16,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ef51ad511d1b7d8064d4bd141e2952bf723afff7
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: f968d84ae695eb1da127538ebdc5e4f55d6ebf39
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57501684"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59183159"
 ---
-# <a name="corexemain2-function"></a><span data-ttu-id="2e494-102">_CorExeMain2 함수</span><span class="sxs-lookup"><span data-stu-id="2e494-102">_CorExeMain2 Function</span></span>
-<span data-ttu-id="2e494-103">지정된 된 메모리 매핑된 코드에서 진입점을 실행합니다.</span><span class="sxs-lookup"><span data-stu-id="2e494-103">Executes the entry point in the specified memory-mapped code.</span></span> <span data-ttu-id="2e494-104">이 함수는 운영 체제 로더에 의해 호출 됩니다.</span><span class="sxs-lookup"><span data-stu-id="2e494-104">This function is called by the operating system loader.</span></span>  
+# <a name="corexemain2-function"></a><span data-ttu-id="9d707-102">_CorExeMain2 함수</span><span class="sxs-lookup"><span data-stu-id="9d707-102">_CorExeMain2 Function</span></span>
+<span data-ttu-id="9d707-103">지정된 된 메모리 매핑된 코드에서 진입점을 실행합니다.</span><span class="sxs-lookup"><span data-stu-id="9d707-103">Executes the entry point in the specified memory-mapped code.</span></span> <span data-ttu-id="9d707-104">이 함수는 운영 체제 로더에 의해 호출 됩니다.</span><span class="sxs-lookup"><span data-stu-id="9d707-104">This function is called by the operating system loader.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="2e494-105">구문</span><span class="sxs-lookup"><span data-stu-id="2e494-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="9d707-105">구문</span><span class="sxs-lookup"><span data-stu-id="9d707-105">Syntax</span></span>  
   
 ```  
 __int32 STDMETHODCALLTYPE _CorExeMain2 (  
@@ -38,30 +38,31 @@ __int32 STDMETHODCALLTYPE _CorExeMain2 (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="2e494-106">매개 변수</span><span class="sxs-lookup"><span data-stu-id="2e494-106">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="9d707-106">매개 변수</span><span class="sxs-lookup"><span data-stu-id="9d707-106">Parameters</span></span>  
  `pUnmappedPE`  
- <span data-ttu-id="2e494-107">[in] 메모리 매핑된 코드에 대 한 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="2e494-107">[in] A pointer to the memory-mapped code.</span></span>  
+ <span data-ttu-id="9d707-107">[in] 메모리 매핑된 코드에 대 한 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="9d707-107">[in] A pointer to the memory-mapped code.</span></span>  
   
  `cUnmappedPE`  
- <span data-ttu-id="2e494-108">[in] 요소 수가 `pUnmappedPE` 보유할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="2e494-108">[in] The number of elements `pUnmappedPE` can hold.</span></span>  
+ <span data-ttu-id="9d707-108">[in] 요소 수가 `pUnmappedPE` 보유할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="9d707-108">[in] The number of elements `pUnmappedPE` can hold.</span></span>  
   
  `pImageNameIn`  
- <span data-ttu-id="2e494-109">[in] 실행 가능 이미지의 이름에 대 한 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="2e494-109">[in] A pointer to the name of the executable image.</span></span>  
+ <span data-ttu-id="9d707-109">[in] 실행 가능 이미지의 이름에 대 한 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="9d707-109">[in] A pointer to the name of the executable image.</span></span>  
   
  `pLoadersFileName`  
- <span data-ttu-id="2e494-110">[in] 로더에서 파일의 이름입니다.</span><span class="sxs-lookup"><span data-stu-id="2e494-110">[in] The name of the loader file.</span></span>  
+ <span data-ttu-id="9d707-110">[in] 로더에서 파일의 이름입니다.</span><span class="sxs-lookup"><span data-stu-id="9d707-110">[in] The name of the loader file.</span></span>  
   
  `pCmdLine`  
- <span data-ttu-id="2e494-111">[in] 명령줄 매개 변수, 있는 경우입니다.</span><span class="sxs-lookup"><span data-stu-id="2e494-111">[in] Command-line parameters, if any.</span></span>  
+ <span data-ttu-id="9d707-111">[in] 명령줄 매개 변수, 있는 경우입니다.</span><span class="sxs-lookup"><span data-stu-id="9d707-111">[in] Command-line parameters, if any.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="2e494-112">요구 사항</span><span class="sxs-lookup"><span data-stu-id="2e494-112">Requirements</span></span>  
- <span data-ttu-id="2e494-113">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="2e494-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="9d707-112">요구 사항</span><span class="sxs-lookup"><span data-stu-id="9d707-112">Requirements</span></span>  
+ <span data-ttu-id="9d707-113">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="9d707-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="2e494-114">**헤더:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="2e494-114">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="9d707-114">**헤더:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="9d707-114">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="2e494-115">**라이브러리:** MsCorEE.dll에 리소스로 포함</span><span class="sxs-lookup"><span data-stu-id="2e494-115">**Library:** Included as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="9d707-115">**라이브러리:** MsCorEE.dll에 리소스로 포함</span><span class="sxs-lookup"><span data-stu-id="9d707-115">**Library:** Included as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="2e494-116">**.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="2e494-116">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ **<span data-ttu-id="9d707-116">.NET Framework 버전:</span><span class="sxs-lookup"><span data-stu-id="9d707-116">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="2e494-117">참고자료</span><span class="sxs-lookup"><span data-stu-id="2e494-117">See also</span></span>
-- [<span data-ttu-id="2e494-118">메타데이터 전역 정적 함수</span><span class="sxs-lookup"><span data-stu-id="2e494-118">Metadata Global Static Functions</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-global-static-functions.md)
+## <a name="see-also"></a><span data-ttu-id="9d707-117">참고자료</span><span class="sxs-lookup"><span data-stu-id="9d707-117">See also</span></span>
+
+- [<span data-ttu-id="9d707-118">메타데이터 전역 정적 함수</span><span class="sxs-lookup"><span data-stu-id="9d707-118">Metadata Global Static Functions</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-global-static-functions.md)

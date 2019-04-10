@@ -8,28 +8,29 @@ helpviewer_keywords:
 - text [WPF], typography
 - typography [WPF]
 ms.assetid: e4ef38db-b7d1-4bda-87ab-8bb738440ddc
-ms.openlocfilehash: f9257414a90cd3d4f64653893c5fa6e19963ad3d
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: d8073ff272dd4c295dba11096126a535621727d0
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57369554"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59195516"
 ---
-# <a name="typography"></a><span data-ttu-id="812c2-102">입력 체계</span><span class="sxs-lookup"><span data-stu-id="812c2-102">Typography</span></span>
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] <span data-ttu-id="812c2-103">텍스트 콘텐츠의 풍부한 표현에 대 한 지원이 포함 됩니다.</span><span class="sxs-lookup"><span data-stu-id="812c2-103">includes support for rich presentation of text content.</span></span> <span data-ttu-id="812c2-104">[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]의 텍스트는 [!INCLUDE[TLA#tla_ct](../../../../includes/tlasharptla-ct-md.md)]을 사용하여 렌더링되어 텍스트의 명확성 및 가독성이 향상됩니다.</span><span class="sxs-lookup"><span data-stu-id="812c2-104">Text in [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] is rendered using [!INCLUDE[TLA#tla_ct](../../../../includes/tlasharptla-ct-md.md)], which enhances the clarity and readability of text.</span></span> [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <span data-ttu-id="812c2-105">도 지원 [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] 하 여 정의 된 것 이상의 추가 기능을 제공 하는 글꼴을 [!INCLUDE[TLA#tla_truetype](../../../../includes/tlasharptla-truetype-md.md)] 형식입니다.</span><span class="sxs-lookup"><span data-stu-id="812c2-105">also supports [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] fonts, which provide additional capabilities beyond those defined by the [!INCLUDE[TLA#tla_truetype](../../../../includes/tlasharptla-truetype-md.md)] format.</span></span>  
+# <a name="typography"></a><span data-ttu-id="2ec1b-102">입력 체계</span><span class="sxs-lookup"><span data-stu-id="2ec1b-102">Typography</span></span>
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] <span data-ttu-id="2ec1b-103">텍스트 콘텐츠의 풍부한 표현에 대 한 지원이 포함 됩니다.</span><span class="sxs-lookup"><span data-stu-id="2ec1b-103">includes support for rich presentation of text content.</span></span> <span data-ttu-id="2ec1b-104">[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]의 텍스트는 [!INCLUDE[TLA#tla_ct](../../../../includes/tlasharptla-ct-md.md)]을 사용하여 렌더링되어 텍스트의 명확성 및 가독성이 향상됩니다.</span><span class="sxs-lookup"><span data-stu-id="2ec1b-104">Text in [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] is rendered using [!INCLUDE[TLA#tla_ct](../../../../includes/tlasharptla-ct-md.md)], which enhances the clarity and readability of text.</span></span> [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <span data-ttu-id="2ec1b-105">도 지원 [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] 하 여 정의 된 것 이상의 추가 기능을 제공 하는 글꼴을 [!INCLUDE[TLA#tla_truetype](../../../../includes/tlasharptla-truetype-md.md)] 형식입니다.</span><span class="sxs-lookup"><span data-stu-id="2ec1b-105">also supports [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] fonts, which provide additional capabilities beyond those defined by the [!INCLUDE[TLA#tla_truetype](../../../../includes/tlasharptla-truetype-md.md)] format.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="812c2-106">섹션 내용</span><span class="sxs-lookup"><span data-stu-id="812c2-106">In This Section</span></span>  
- [<span data-ttu-id="812c2-107">WPF의 입력 체계</span><span class="sxs-lookup"><span data-stu-id="812c2-107">Typography in WPF</span></span>](typography-in-wpf.md)  
- [<span data-ttu-id="812c2-108">ClearType 개요</span><span class="sxs-lookup"><span data-stu-id="812c2-108">ClearType Overview</span></span>](cleartype-overview.md)  
- [<span data-ttu-id="812c2-109">ClearType 레지스트리 설정</span><span class="sxs-lookup"><span data-stu-id="812c2-109">ClearType Registry Settings</span></span>](cleartype-registry-settings.md)  
- [<span data-ttu-id="812c2-110">서식 있는 텍스트 그리기</span><span class="sxs-lookup"><span data-stu-id="812c2-110">Drawing Formatted Text</span></span>](drawing-formatted-text.md)  
- [<span data-ttu-id="812c2-111">고급 텍스트 서식 지정</span><span class="sxs-lookup"><span data-stu-id="812c2-111">Advanced Text Formatting</span></span>](advanced-text-formatting.md)  
- [<span data-ttu-id="812c2-112">글꼴</span><span class="sxs-lookup"><span data-stu-id="812c2-112">Fonts</span></span>](fonts-wpf.md)  
- [<span data-ttu-id="812c2-113">문자 모양</span><span class="sxs-lookup"><span data-stu-id="812c2-113">Glyphs</span></span>](glyphs.md)  
- [<span data-ttu-id="812c2-114">방법 항목</span><span class="sxs-lookup"><span data-stu-id="812c2-114">How-to Topics</span></span>](typography-how-to-topics.md)  
+## <a name="in-this-section"></a><span data-ttu-id="2ec1b-106">섹션 내용</span><span class="sxs-lookup"><span data-stu-id="2ec1b-106">In This Section</span></span>  
+ [<span data-ttu-id="2ec1b-107">WPF의 입력 체계</span><span class="sxs-lookup"><span data-stu-id="2ec1b-107">Typography in WPF</span></span>](typography-in-wpf.md)  
+ [<span data-ttu-id="2ec1b-108">ClearType 개요</span><span class="sxs-lookup"><span data-stu-id="2ec1b-108">ClearType Overview</span></span>](cleartype-overview.md)  
+ [<span data-ttu-id="2ec1b-109">ClearType 레지스트리 설정</span><span class="sxs-lookup"><span data-stu-id="2ec1b-109">ClearType Registry Settings</span></span>](cleartype-registry-settings.md)  
+ [<span data-ttu-id="2ec1b-110">서식 있는 텍스트 그리기</span><span class="sxs-lookup"><span data-stu-id="2ec1b-110">Drawing Formatted Text</span></span>](drawing-formatted-text.md)  
+ [<span data-ttu-id="2ec1b-111">고급 텍스트 서식 지정</span><span class="sxs-lookup"><span data-stu-id="2ec1b-111">Advanced Text Formatting</span></span>](advanced-text-formatting.md)  
+ [<span data-ttu-id="2ec1b-112">글꼴</span><span class="sxs-lookup"><span data-stu-id="2ec1b-112">Fonts</span></span>](fonts-wpf.md)  
+ [<span data-ttu-id="2ec1b-113">문자 모양</span><span class="sxs-lookup"><span data-stu-id="2ec1b-113">Glyphs</span></span>](glyphs.md)  
+ [<span data-ttu-id="2ec1b-114">방법 항목</span><span class="sxs-lookup"><span data-stu-id="2ec1b-114">How-to Topics</span></span>](typography-how-to-topics.md)  
   
-## <a name="see-also"></a><span data-ttu-id="812c2-115">참고자료</span><span class="sxs-lookup"><span data-stu-id="812c2-115">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="2ec1b-115">참고자료</span><span class="sxs-lookup"><span data-stu-id="2ec1b-115">See also</span></span>
+
 - <xref:System.Windows.Documents.Typography>
-- [<span data-ttu-id="812c2-116">WPF의 문서</span><span class="sxs-lookup"><span data-stu-id="812c2-116">Documents in WPF</span></span>](documents-in-wpf.md)
-- [<span data-ttu-id="812c2-117">OpenType 글꼴 기능</span><span class="sxs-lookup"><span data-stu-id="812c2-117">OpenType Font Features</span></span>](opentype-font-features.md)
-- [<span data-ttu-id="812c2-118">WPF 응용 프로그램 성능 최적화</span><span class="sxs-lookup"><span data-stu-id="812c2-118">Optimizing WPF Application Performance</span></span>](optimizing-wpf-application-performance.md)
+- [<span data-ttu-id="2ec1b-116">WPF의 문서</span><span class="sxs-lookup"><span data-stu-id="2ec1b-116">Documents in WPF</span></span>](documents-in-wpf.md)
+- [<span data-ttu-id="2ec1b-117">OpenType 글꼴 기능</span><span class="sxs-lookup"><span data-stu-id="2ec1b-117">OpenType Font Features</span></span>](opentype-font-features.md)
+- [<span data-ttu-id="2ec1b-118">WPF 애플리케이션 성능 최적화</span><span class="sxs-lookup"><span data-stu-id="2ec1b-118">Optimizing WPF Application Performance</span></span>](optimizing-wpf-application-performance.md)

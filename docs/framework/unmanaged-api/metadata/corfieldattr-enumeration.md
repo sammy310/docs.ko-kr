@@ -16,17 +16,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 7b07388b7f7385e93a6ca891e8ea98a2ce69763c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 432e202eb8db105e8d56d3d36cdc8001bac5320c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54576017"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59182379"
 ---
-# <a name="corfieldattr-enumeration"></a><span data-ttu-id="712fc-102">CorFieldAttr 열거형</span><span class="sxs-lookup"><span data-stu-id="712fc-102">CorFieldAttr Enumeration</span></span>
-<span data-ttu-id="712fc-103">필드에 대한 메타데이터를 설명하는 값을 포함합니다.</span><span class="sxs-lookup"><span data-stu-id="712fc-103">Contains values that describe metadata about a field.</span></span>  
+# <a name="corfieldattr-enumeration"></a><span data-ttu-id="b8773-102">CorFieldAttr 열거형</span><span class="sxs-lookup"><span data-stu-id="b8773-102">CorFieldAttr Enumeration</span></span>
+<span data-ttu-id="b8773-103">필드에 대한 메타데이터를 설명하는 값을 포함합니다.</span><span class="sxs-lookup"><span data-stu-id="b8773-103">Contains values that describe metadata about a field.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="712fc-104">구문</span><span class="sxs-lookup"><span data-stu-id="712fc-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="b8773-104">구문</span><span class="sxs-lookup"><span data-stu-id="b8773-104">Syntax</span></span>  
   
 ```  
 typedef enum CorFieldAttr {  
@@ -58,36 +58,37 @@ typedef enum CorFieldAttr {
 } CorFieldAttr;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="712fc-105">멤버</span><span class="sxs-lookup"><span data-stu-id="712fc-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="b8773-105">멤버</span><span class="sxs-lookup"><span data-stu-id="b8773-105">Members</span></span>  
   
-|<span data-ttu-id="712fc-106">멤버</span><span class="sxs-lookup"><span data-stu-id="712fc-106">Member</span></span>|<span data-ttu-id="712fc-107">설명</span><span class="sxs-lookup"><span data-stu-id="712fc-107">Description</span></span>|  
+|<span data-ttu-id="b8773-106">멤버</span><span class="sxs-lookup"><span data-stu-id="b8773-106">Member</span></span>|<span data-ttu-id="b8773-107">설명</span><span class="sxs-lookup"><span data-stu-id="b8773-107">Description</span></span>|  
 |------------|-----------------|  
-|`fdFieldAccessMask`|<span data-ttu-id="712fc-108">내게 필요한 옵션 정보를 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="712fc-108">Specifies accessibility information.</span></span>|  
-|`fdPrivateScope`|<span data-ttu-id="712fc-109">필드를 참조할 수 없도록 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="712fc-109">Specifies that the field cannot be referenced.</span></span>|  
-|`fdPrivate`|<span data-ttu-id="712fc-110">필드에 해당 부모 형식에 의해서만 액세스할 수 있는지를 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="712fc-110">Specifies that the field is accessible only by its parent type.</span></span>|  
-|`fdFamANDAssem`|<span data-ttu-id="712fc-111">필드에 해당 어셈블리의 파생된 클래스에서 액세스할 수 있는지를 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="712fc-111">Specifies that the field is accessible by derived classes in its assembly.</span></span>|  
-|`fdAssembly`|<span data-ttu-id="712fc-112">필드에 해당 어셈블리의 모든 형식에서 액세스할 수 있는지를 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="712fc-112">Specifies that the field is accessible by all types in its assembly.</span></span>|  
-|`fdFamily`|<span data-ttu-id="712fc-113">필드는 해당 형식에 의해서만 액세스할 수 있습니다 하 고 파생 클래스를 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="712fc-113">Specifies that the field is accessible only by its type and derived classes.</span></span>|  
-|`fdFamORAssem`|<span data-ttu-id="712fc-114">필드에 해당 어셈블리의 모든 형식 및 파생된 클래스에서 액세스할 수 있는지를 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="712fc-114">Specifies that the field is accessible by derived classes and by all types in its assembly.</span></span>|  
-|`fdPublic`|<span data-ttu-id="712fc-115">필드에이 범위의 표시 여부를 사용 하 여 모든 형식에서 액세스할 수 있는지를 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="712fc-115">Specifies that the field is accessible by all types with visibility of this scope.</span></span>|  
-|`fdStatic`|<span data-ttu-id="712fc-116">해당 형식의 멤버 대신 인스턴스 멤버가 필드 임을 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="712fc-116">Specifies that the field is a member of its type rather than an instance member.</span></span>|  
-|`fdInitOnly`|<span data-ttu-id="712fc-117">초기화 한 후 필드를 변경할 수 없습니다 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="712fc-117">Specifies that the field cannot be changed after it is initialized.</span></span>|  
-|`fdLiteral`|<span data-ttu-id="712fc-118">필드 값은 컴파일 타임 상수 임을 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="712fc-118">Specifies that the field value is a compile-time constant.</span></span>|  
-|`fdNotSerialized`|<span data-ttu-id="712fc-119">해당 형식이 원격 필드가 직렬화 되지 않습니다 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="712fc-119">Specifies that the field is not serialized when its type is remoted.</span></span>|  
-|`fdSpecialName`|<span data-ttu-id="712fc-120">필드가 특별 하 고 이름과 설명 하는지 지정 하는 방법입니다.</span><span class="sxs-lookup"><span data-stu-id="712fc-120">Specifies that the field is special, and that its name describes how.</span></span>|  
-|`fdPinvokeImpl`|<span data-ttu-id="712fc-121">필드 구현이 PInvoke를 통해 전달 되는 것을 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="712fc-121">Specifies that the field implementation is forwarded through PInvoke.</span></span>|  
-|`fdReservedMask`|<span data-ttu-id="712fc-122">공용 언어 런타임에서 내부 용도로 예약 되어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="712fc-122">Reserved for internal use by the common language runtime.</span></span>|  
-|`fdRTSpecialName`|<span data-ttu-id="712fc-123">공용 언어 런타임 메타 데이터 내부 Api 인코딩을 확인 하도록 이름을 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="712fc-123">Specifies that the common language runtime metadata internal APIs should check the encoding of the name.</span></span>|  
-|`fdHasFieldMarshal`|<span data-ttu-id="712fc-124">필드에 마샬링 정보가 포함 되도록 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="712fc-124">Specifies that the field contains marshaling information.</span></span>|  
-|`fdHasDefault`|<span data-ttu-id="712fc-125">필드가 기본값을 갖도록 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="712fc-125">Specifies that the field has a default value.</span></span>|  
-|`fdHasFieldRVA`|<span data-ttu-id="712fc-126">필드의 상대 가상 주소를 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="712fc-126">Specifies that the field has a relative virtual address.</span></span>|  
+|`fdFieldAccessMask`|<span data-ttu-id="b8773-108">내게 필요한 옵션 정보를 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="b8773-108">Specifies accessibility information.</span></span>|  
+|`fdPrivateScope`|<span data-ttu-id="b8773-109">필드는 참조할 수 없음을 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="b8773-109">Specifies that the field cannot be referenced.</span></span>|  
+|`fdPrivate`|<span data-ttu-id="b8773-110">필드에 해당 부모 형식에 의해서만 액세스할 수 있는지를 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="b8773-110">Specifies that the field is accessible only by its parent type.</span></span>|  
+|`fdFamANDAssem`|<span data-ttu-id="b8773-111">필드에 해당 어셈블리의 파생된 클래스에서 액세스할 수 있는지를 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="b8773-111">Specifies that the field is accessible by derived classes in its assembly.</span></span>|  
+|`fdAssembly`|<span data-ttu-id="b8773-112">필드에 해당 어셈블리의 모든 형식에서 액세스할 수 있는지를 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="b8773-112">Specifies that the field is accessible by all types in its assembly.</span></span>|  
+|`fdFamily`|<span data-ttu-id="b8773-113">필드는 해당 형식에 의해서만 액세스할 수 있습니다 하 고 파생 클래스를 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="b8773-113">Specifies that the field is accessible only by its type and derived classes.</span></span>|  
+|`fdFamORAssem`|<span data-ttu-id="b8773-114">필드에 해당 어셈블리의 모든 형식 및 파생된 클래스에서 액세스할 수 있는지를 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="b8773-114">Specifies that the field is accessible by derived classes and by all types in its assembly.</span></span>|  
+|`fdPublic`|<span data-ttu-id="b8773-115">필드에이 범위의 표시 여부를 사용 하 여 모든 형식에서 액세스할 수 있는지를 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="b8773-115">Specifies that the field is accessible by all types with visibility of this scope.</span></span>|  
+|`fdStatic`|<span data-ttu-id="b8773-116">해당 형식의 멤버 대신 인스턴스 멤버가 필드 임을 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="b8773-116">Specifies that the field is a member of its type rather than an instance member.</span></span>|  
+|`fdInitOnly`|<span data-ttu-id="b8773-117">초기화 한 후 필드를 변경할 수 없습니다 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="b8773-117">Specifies that the field cannot be changed after it is initialized.</span></span>|  
+|`fdLiteral`|<span data-ttu-id="b8773-118">필드 값은 컴파일 타임 상수 임을 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="b8773-118">Specifies that the field value is a compile-time constant.</span></span>|  
+|`fdNotSerialized`|<span data-ttu-id="b8773-119">해당 형식이 원격 필드가 직렬화 되지 않습니다 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="b8773-119">Specifies that the field is not serialized when its type is remoted.</span></span>|  
+|`fdSpecialName`|<span data-ttu-id="b8773-120">필드가 특별 하 고 이름과 설명 하는지 지정 하는 방법입니다.</span><span class="sxs-lookup"><span data-stu-id="b8773-120">Specifies that the field is special, and that its name describes how.</span></span>|  
+|`fdPinvokeImpl`|<span data-ttu-id="b8773-121">필드 구현이 PInvoke를 통해 전달 되는 것을 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="b8773-121">Specifies that the field implementation is forwarded through PInvoke.</span></span>|  
+|`fdReservedMask`|<span data-ttu-id="b8773-122">공용 언어 런타임에서 내부 용도로 예약 되어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="b8773-122">Reserved for internal use by the common language runtime.</span></span>|  
+|`fdRTSpecialName`|<span data-ttu-id="b8773-123">공용 언어 런타임 메타 데이터 내부 Api 인코딩을 확인 하도록 이름을 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="b8773-123">Specifies that the common language runtime metadata internal APIs should check the encoding of the name.</span></span>|  
+|`fdHasFieldMarshal`|<span data-ttu-id="b8773-124">필드에 마샬링 정보가 포함 되도록 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="b8773-124">Specifies that the field contains marshaling information.</span></span>|  
+|`fdHasDefault`|<span data-ttu-id="b8773-125">필드 기본값을 갖도록 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="b8773-125">Specifies that the field has a default value.</span></span>|  
+|`fdHasFieldRVA`|<span data-ttu-id="b8773-126">필드의 상대 가상 주소를 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="b8773-126">Specifies that the field has a relative virtual address.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="712fc-127">요구 사항</span><span class="sxs-lookup"><span data-stu-id="712fc-127">Requirements</span></span>  
- <span data-ttu-id="712fc-128">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="712fc-128">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="b8773-127">요구 사항</span><span class="sxs-lookup"><span data-stu-id="b8773-127">Requirements</span></span>  
+ <span data-ttu-id="b8773-128">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="b8773-128">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="712fc-129">**헤더:** CorHdr.h</span><span class="sxs-lookup"><span data-stu-id="712fc-129">**Header:** CorHdr.h</span></span>  
+ <span data-ttu-id="b8773-129">**헤더:** CorHdr.h</span><span class="sxs-lookup"><span data-stu-id="b8773-129">**Header:** CorHdr.h</span></span>  
   
- <span data-ttu-id="712fc-130">**.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="712fc-130">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ **<span data-ttu-id="b8773-130">.NET Framework 버전:</span><span class="sxs-lookup"><span data-stu-id="b8773-130">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="712fc-131">참고자료</span><span class="sxs-lookup"><span data-stu-id="712fc-131">See also</span></span>
-- [<span data-ttu-id="712fc-132">메타데이터 열거형</span><span class="sxs-lookup"><span data-stu-id="712fc-132">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+## <a name="see-also"></a><span data-ttu-id="b8773-131">참고자료</span><span class="sxs-lookup"><span data-stu-id="b8773-131">See also</span></span>
+
+- [<span data-ttu-id="b8773-132">메타데이터 열거형</span><span class="sxs-lookup"><span data-stu-id="b8773-132">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

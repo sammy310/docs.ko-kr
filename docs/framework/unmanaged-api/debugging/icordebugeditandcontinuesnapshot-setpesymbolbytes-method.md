@@ -17,15 +17,16 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3a898b20a92ea3256635a64332e4f86dcd92dd69
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3691d8015f514cc20e63ad62f45e7317f56f72fb
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54524080"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59182093"
 ---
-# <a name="icordebugeditandcontinuesnapshotsetpesymbolbytes-method"></a><span data-ttu-id="85a9a-102">ICorDebugEditAndContinueSnapshot::SetPESymbolBytes 메서드</span><span class="sxs-lookup"><span data-stu-id="85a9a-102">ICorDebugEditAndContinueSnapshot::SetPESymbolBytes Method</span></span>
-<span data-ttu-id="85a9a-103">`SetPESymbolBytes`는 사용되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="85a9a-103">`SetPESymbolBytes` is obsolete.</span></span> <span data-ttu-id="85a9a-104">이 메서드를 호출 하지 마세요.</span><span class="sxs-lookup"><span data-stu-id="85a9a-104">Do not call this method.</span></span>  
+# <a name="icordebugeditandcontinuesnapshotsetpesymbolbytes-method"></a><span data-ttu-id="2736e-102">ICorDebugEditAndContinueSnapshot::SetPESymbolBytes 메서드</span><span class="sxs-lookup"><span data-stu-id="2736e-102">ICorDebugEditAndContinueSnapshot::SetPESymbolBytes Method</span></span>
+`SetPESymbolBytes` <span data-ttu-id="2736e-103">사용 되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="2736e-103">is obsolete.</span></span> <span data-ttu-id="2736e-104">이 메서드를 호출 하지 마세요.</span><span class="sxs-lookup"><span data-stu-id="2736e-104">Do not call this method.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="85a9a-105">참고자료</span><span class="sxs-lookup"><span data-stu-id="85a9a-105">See also</span></span>
-- [<span data-ttu-id="85a9a-106">디버깅 인터페이스</span><span class="sxs-lookup"><span data-stu-id="85a9a-106">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+## <a name="see-also"></a><span data-ttu-id="2736e-105">참고자료</span><span class="sxs-lookup"><span data-stu-id="2736e-105">See also</span></span>
+
+- [<span data-ttu-id="2736e-106">디버깅 인터페이스</span><span class="sxs-lookup"><span data-stu-id="2736e-106">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

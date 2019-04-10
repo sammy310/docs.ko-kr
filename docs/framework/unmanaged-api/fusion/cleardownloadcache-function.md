@@ -18,31 +18,32 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8b3b04fa42b78164025058bd35af37a5176d51ba
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 84ec75fb2a994543ba9ead84c41abc304c420053
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54565698"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59182977"
 ---
-# <a name="cleardownloadcache-function"></a><span data-ttu-id="c202c-102">ClearDownloadCache 함수</span><span class="sxs-lookup"><span data-stu-id="c202c-102">ClearDownloadCache Function</span></span>
-<span data-ttu-id="c202c-103">다운로드 한 어셈블리를 전역 어셈블리 캐시를 지웁니다.</span><span class="sxs-lookup"><span data-stu-id="c202c-103">Clears the global assembly cache of downloaded assemblies.</span></span>  
+# <a name="cleardownloadcache-function"></a><span data-ttu-id="71f9b-102">ClearDownloadCache 함수</span><span class="sxs-lookup"><span data-stu-id="71f9b-102">ClearDownloadCache Function</span></span>
+<span data-ttu-id="71f9b-103">다운로드 한 어셈블리를 전역 어셈블리 캐시를 지웁니다.</span><span class="sxs-lookup"><span data-stu-id="71f9b-103">Clears the global assembly cache of downloaded assemblies.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="c202c-104">구문</span><span class="sxs-lookup"><span data-stu-id="c202c-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="71f9b-104">구문</span><span class="sxs-lookup"><span data-stu-id="71f9b-104">Syntax</span></span>  
   
 ```  
 HRESULT ClearDownloadCache ();  
 ```  
   
-## <a name="requirements"></a><span data-ttu-id="c202c-105">요구 사항</span><span class="sxs-lookup"><span data-stu-id="c202c-105">Requirements</span></span>  
- <span data-ttu-id="c202c-106">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="c202c-106">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="71f9b-105">요구 사항</span><span class="sxs-lookup"><span data-stu-id="71f9b-105">Requirements</span></span>  
+ <span data-ttu-id="71f9b-106">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="71f9b-106">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="c202c-107">**헤더:** Fusion.h</span><span class="sxs-lookup"><span data-stu-id="c202c-107">**Header:** Fusion.h</span></span>  
+ <span data-ttu-id="71f9b-107">**헤더:** Fusion.h</span><span class="sxs-lookup"><span data-stu-id="71f9b-107">**Header:** Fusion.h</span></span>  
   
- <span data-ttu-id="c202c-108">**라이브러리:** Fusion.dll 및 Mscorwks.dll 합니다.</span><span class="sxs-lookup"><span data-stu-id="c202c-108">**Library:** Fusion.dll and Mscorwks.dll.</span></span> <span data-ttu-id="c202c-109">올바른 버전의.NET Framework 대상 지정 하는 데 Mscorwks.dll 대신 Fusion.dll를 사용 합니다.</span><span class="sxs-lookup"><span data-stu-id="c202c-109">Use Fusion.dll instead of Mscorwks.dll to ensure that you target the correct version of the .NET Framework.</span></span>  
+ <span data-ttu-id="71f9b-108">**라이브러리:** Fusion.dll 및 Mscorwks.dll 합니다.</span><span class="sxs-lookup"><span data-stu-id="71f9b-108">**Library:** Fusion.dll and Mscorwks.dll.</span></span> <span data-ttu-id="71f9b-109">올바른 버전의.NET Framework 대상 지정 하는 데 Mscorwks.dll 대신 Fusion.dll를 사용 합니다.</span><span class="sxs-lookup"><span data-stu-id="71f9b-109">Use Fusion.dll instead of Mscorwks.dll to ensure that you target the correct version of the .NET Framework.</span></span>  
   
- <span data-ttu-id="c202c-110">**.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="c202c-110">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ **<span data-ttu-id="71f9b-110">.NET Framework 버전:</span><span class="sxs-lookup"><span data-stu-id="71f9b-110">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="c202c-111">참고자료</span><span class="sxs-lookup"><span data-stu-id="c202c-111">See also</span></span>
-- [<span data-ttu-id="c202c-112">Fusion 전역 정적 함수</span><span class="sxs-lookup"><span data-stu-id="c202c-112">Fusion Global Static Functions</span></span>](../../../../docs/framework/unmanaged-api/fusion/fusion-global-static-functions.md)
-- [<span data-ttu-id="c202c-113">전역 어셈블리 캐시</span><span class="sxs-lookup"><span data-stu-id="c202c-113">Global Assembly Cache</span></span>](../../../../docs/framework/app-domains/gac.md)
+## <a name="see-also"></a><span data-ttu-id="71f9b-111">참고자료</span><span class="sxs-lookup"><span data-stu-id="71f9b-111">See also</span></span>
+
+- [<span data-ttu-id="71f9b-112">Fusion 전역 정적 함수</span><span class="sxs-lookup"><span data-stu-id="71f9b-112">Fusion Global Static Functions</span></span>](../../../../docs/framework/unmanaged-api/fusion/fusion-global-static-functions.md)
+- [<span data-ttu-id="71f9b-113">전역 어셈블리 캐시</span><span class="sxs-lookup"><span data-stu-id="71f9b-113">Global Assembly Cache</span></span>](../../../../docs/framework/app-domains/gac.md)

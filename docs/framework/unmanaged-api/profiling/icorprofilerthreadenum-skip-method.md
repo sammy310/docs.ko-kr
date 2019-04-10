@@ -17,47 +17,48 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 90d9935da313b85e336dc8cb2e461b2d88db8db8
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: cce96e8c6d046beba9e45c7121bf68444fd51c95
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57482017"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59173344"
 ---
-# <a name="icorprofilerthreadenumskip-method"></a><span data-ttu-id="19b83-102">ICorProfilerThreadEnum::Skip 메서드</span><span class="sxs-lookup"><span data-stu-id="19b83-102">ICorProfilerThreadEnum::Skip Method</span></span>
-<span data-ttu-id="19b83-103">지정한 개수의 요소를 건너뛰도록 현재 위치에서 열거자의 커서를 진행합니다.</span><span class="sxs-lookup"><span data-stu-id="19b83-103">Advances the enumerator's cursor from its current position to skip the specified number of elements.</span></span>  
+# <a name="icorprofilerthreadenumskip-method"></a><span data-ttu-id="0a22e-102">ICorProfilerThreadEnum::Skip 메서드</span><span class="sxs-lookup"><span data-stu-id="0a22e-102">ICorProfilerThreadEnum::Skip Method</span></span>
+<span data-ttu-id="0a22e-103">지정한 개수의 요소를 건너뛰도록 현재 위치에서 열거자의 커서를 진행합니다.</span><span class="sxs-lookup"><span data-stu-id="0a22e-103">Advances the enumerator's cursor from its current position to skip the specified number of elements.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="19b83-104">구문</span><span class="sxs-lookup"><span data-stu-id="19b83-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="0a22e-104">구문</span><span class="sxs-lookup"><span data-stu-id="0a22e-104">Syntax</span></span>  
   
 ```  
 HRESULT Skip (    [in] ULONG celt  
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="19b83-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="19b83-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="0a22e-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="0a22e-105">Parameters</span></span>  
  `celt`  
- <span data-ttu-id="19b83-106">[in] 건너뛸 요소의 수입니다.</span><span class="sxs-lookup"><span data-stu-id="19b83-106">[in] The number of elements to be skipped.</span></span>  
+ <span data-ttu-id="0a22e-106">[in] 건너뛸 요소의 수입니다.</span><span class="sxs-lookup"><span data-stu-id="0a22e-106">[in] The number of elements to be skipped.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="19b83-107">반환 값</span><span class="sxs-lookup"><span data-stu-id="19b83-107">Return Value</span></span>  
- <span data-ttu-id="19b83-108">이 메서드는 다음과 같은 특정 HRESULT뿐만 아니라 메서드 오류를 나타내는 HRESULT 오류도 반환합니다.</span><span class="sxs-lookup"><span data-stu-id="19b83-108">This method returns the following specific HRESULTs as well as HRESULT errors that indicate method failure.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="0a22e-107">반환 값</span><span class="sxs-lookup"><span data-stu-id="0a22e-107">Return Value</span></span>  
+ <span data-ttu-id="0a22e-108">이 메서드는 다음과 같은 특정 HRESULT뿐만 아니라 메서드 오류를 나타내는 HRESULT 오류도 반환합니다.</span><span class="sxs-lookup"><span data-stu-id="0a22e-108">This method returns the following specific HRESULTs as well as HRESULT errors that indicate method failure.</span></span>  
   
-|<span data-ttu-id="19b83-109">HRESULT</span><span class="sxs-lookup"><span data-stu-id="19b83-109">HRESULT</span></span>|<span data-ttu-id="19b83-110">설명</span><span class="sxs-lookup"><span data-stu-id="19b83-110">Description</span></span>|  
+|<span data-ttu-id="0a22e-109">HRESULT</span><span class="sxs-lookup"><span data-stu-id="0a22e-109">HRESULT</span></span>|<span data-ttu-id="0a22e-110">설명</span><span class="sxs-lookup"><span data-stu-id="0a22e-110">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="19b83-111">S_OK</span><span class="sxs-lookup"><span data-stu-id="19b83-111">S_OK</span></span>|<span data-ttu-id="19b83-112">`celt` 요소를 건너뛰었습니다.</span><span class="sxs-lookup"><span data-stu-id="19b83-112">`celt` elements were skipped.</span></span>|  
-|<span data-ttu-id="19b83-113">S_FALSE</span><span class="sxs-lookup"><span data-stu-id="19b83-113">S_FALSE</span></span>|<span data-ttu-id="19b83-114">미만의 `celt` 요소가 더 이상 있는지를 나타내는 요소를 건너뜁니다.</span><span class="sxs-lookup"><span data-stu-id="19b83-114">Fewer than `celt` elements were skipped, which indicates that there are no more elements.</span></span>|  
+|<span data-ttu-id="0a22e-111">S_OK</span><span class="sxs-lookup"><span data-stu-id="0a22e-111">S_OK</span></span>|`celt` <span data-ttu-id="0a22e-112">요소를 건너뛰었습니다.</span><span class="sxs-lookup"><span data-stu-id="0a22e-112">elements were skipped.</span></span>|  
+|<span data-ttu-id="0a22e-113">S_FALSE</span><span class="sxs-lookup"><span data-stu-id="0a22e-113">S_FALSE</span></span>|<span data-ttu-id="0a22e-114">미만의 `celt` 요소가 더 이상 있는지를 나타내는 요소를 건너뜁니다.</span><span class="sxs-lookup"><span data-stu-id="0a22e-114">Fewer than `celt` elements were skipped, which indicates that there are no more elements.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="19b83-115">설명</span><span class="sxs-lookup"><span data-stu-id="19b83-115">Remarks</span></span>  
- <span data-ttu-id="19b83-116">이 열거자의이 커서의 새 위치는 (현재 위치) + `celt`합니다.</span><span class="sxs-lookup"><span data-stu-id="19b83-116">The new position of this enumerator's cursor is (current position) + `celt`.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="0a22e-115">설명</span><span class="sxs-lookup"><span data-stu-id="0a22e-115">Remarks</span></span>  
+ <span data-ttu-id="0a22e-116">이 열거자의이 커서의 새 위치는 (현재 위치) + `celt`합니다.</span><span class="sxs-lookup"><span data-stu-id="0a22e-116">The new position of this enumerator's cursor is (current position) + `celt`.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="19b83-117">요구 사항</span><span class="sxs-lookup"><span data-stu-id="19b83-117">Requirements</span></span>  
- <span data-ttu-id="19b83-118">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="19b83-118">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="0a22e-117">요구 사항</span><span class="sxs-lookup"><span data-stu-id="0a22e-117">Requirements</span></span>  
+ <span data-ttu-id="0a22e-118">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="0a22e-118">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="19b83-119">**헤더:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="19b83-119">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="0a22e-119">**헤더:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="0a22e-119">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="19b83-120">**라이브러리:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="19b83-120">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="0a22e-120">**라이브러리:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="0a22e-120">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="19b83-121">**.NET Framework 버전:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="19b83-121">**.NET Framework Versions:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span></span>  
+ **<span data-ttu-id="0a22e-121">.NET Framework 버전:</span><span class="sxs-lookup"><span data-stu-id="0a22e-121">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="19b83-122">참고자료</span><span class="sxs-lookup"><span data-stu-id="19b83-122">See also</span></span>
-- [<span data-ttu-id="19b83-123">ICorProfilerThreadEnum 인터페이스</span><span class="sxs-lookup"><span data-stu-id="19b83-123">ICorProfilerThreadEnum Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerthreadenum-interface.md)
-- [<span data-ttu-id="19b83-124">프로파일링 인터페이스</span><span class="sxs-lookup"><span data-stu-id="19b83-124">Profiling Interfaces</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
+## <a name="see-also"></a><span data-ttu-id="0a22e-122">참고자료</span><span class="sxs-lookup"><span data-stu-id="0a22e-122">See also</span></span>
+
+- [<span data-ttu-id="0a22e-123">ICorProfilerThreadEnum 인터페이스</span><span class="sxs-lookup"><span data-stu-id="0a22e-123">ICorProfilerThreadEnum Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerthreadenum-interface.md)
+- [<span data-ttu-id="0a22e-124">프로파일링 인터페이스</span><span class="sxs-lookup"><span data-stu-id="0a22e-124">Profiling Interfaces</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)

@@ -19,39 +19,40 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0c6887d390ded1846e201711c9278663b9ff2888
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b7407db297a827004c851b904b2da8652778cb08
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54520274"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59177491"
 ---
-# <a name="corexemain-function"></a><span data-ttu-id="04cd8-102">_CorExeMain 함수</span><span class="sxs-lookup"><span data-stu-id="04cd8-102">_CorExeMain Function</span></span>
-<span data-ttu-id="04cd8-103">CLR (공용 언어 런타임)을 초기화 하 고 실행 가능한 어셈블리의 CLR 헤더에서 관리 되는 진입점을 찾습니다 실행을 시작 합니다.</span><span class="sxs-lookup"><span data-stu-id="04cd8-103">Initializes the common language runtime (CLR), locates the managed entry point in the executable assembly's CLR header, and begins execution.</span></span>  
+# <a name="corexemain-function"></a><span data-ttu-id="a74e8-102">_CorExeMain 함수</span><span class="sxs-lookup"><span data-stu-id="a74e8-102">_CorExeMain Function</span></span>
+<span data-ttu-id="a74e8-103">CLR (공용 언어 런타임)을 초기화 하 고 실행 가능한 어셈블리의 CLR 헤더에서 관리 되는 진입점을 찾습니다 실행을 시작 합니다.</span><span class="sxs-lookup"><span data-stu-id="a74e8-103">Initializes the common language runtime (CLR), locates the managed entry point in the executable assembly's CLR header, and begins execution.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="04cd8-104">구문</span><span class="sxs-lookup"><span data-stu-id="04cd8-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="a74e8-104">구문</span><span class="sxs-lookup"><span data-stu-id="a74e8-104">Syntax</span></span>  
   
 ```  
 __int32 STDMETHODCALLTYPE _CorExeMain ();  
 ```  
   
-## <a name="remarks"></a><span data-ttu-id="04cd8-105">설명</span><span class="sxs-lookup"><span data-stu-id="04cd8-105">Remarks</span></span>  
- <span data-ttu-id="04cd8-106">이 함수는 관리 되는 실행 가능한 어셈블리에서 생성 된 프로세스에서 로더에 의해 호출 됩니다.</span><span class="sxs-lookup"><span data-stu-id="04cd8-106">This function is called by the loader in processes created from managed executable assemblies.</span></span> <span data-ttu-id="04cd8-107">로더가 DLL 어셈블리에 대 한 호출을 [_CorDllMain](../../../../docs/framework/unmanaged-api/hosting/cordllmain-function.md) 함수를 대신 합니다.</span><span class="sxs-lookup"><span data-stu-id="04cd8-107">For DLL assemblies, the loader calls the [_CorDllMain](../../../../docs/framework/unmanaged-api/hosting/cordllmain-function.md) function instead.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="a74e8-105">설명</span><span class="sxs-lookup"><span data-stu-id="a74e8-105">Remarks</span></span>  
+ <span data-ttu-id="a74e8-106">이 함수는 관리 되는 실행 가능한 어셈블리에서 생성 된 프로세스에서 로더에 의해 호출 됩니다.</span><span class="sxs-lookup"><span data-stu-id="a74e8-106">This function is called by the loader in processes created from managed executable assemblies.</span></span> <span data-ttu-id="a74e8-107">로더가 DLL 어셈블리에 대 한 호출을 [_CorDllMain](../../../../docs/framework/unmanaged-api/hosting/cordllmain-function.md) 함수를 대신 합니다.</span><span class="sxs-lookup"><span data-stu-id="a74e8-107">For DLL assemblies, the loader calls the [_CorDllMain](../../../../docs/framework/unmanaged-api/hosting/cordllmain-function.md) function instead.</span></span>  
   
- <span data-ttu-id="04cd8-108">운영 체제 로더는 이미지 파일에 지정 된 진입점에 관계 없이이 메서드를 호출 합니다.</span><span class="sxs-lookup"><span data-stu-id="04cd8-108">The operating system loader calls this method regardless of the entry point specified in the image file.</span></span>  
+ <span data-ttu-id="a74e8-108">운영 체제 로더는 이미지 파일에 지정 된 진입점에 관계 없이이 메서드를 호출 합니다.</span><span class="sxs-lookup"><span data-stu-id="a74e8-108">The operating system loader calls this method regardless of the entry point specified in the image file.</span></span>  
   
- <span data-ttu-id="04cd8-109">Windows 98, Windows ME, Windows NT 및 Windows 2000에는 `_CorExeMain` 함수 픽스업에 운영 체제 로더를 통해 간접적으로 호출 됩니다.</span><span class="sxs-lookup"><span data-stu-id="04cd8-109">In Windows 98, Windows ME, Windows NT, and Windows 2000, the `_CorExeMain` function is called indirectly through a fixup in the operating system loader.</span></span> <span data-ttu-id="04cd8-110">다른 모든 버전의 Windows에서는 운영 체제 로더에 의해 직접 호출 됩니다.</span><span class="sxs-lookup"><span data-stu-id="04cd8-110">In all other versions of Windows, it is called directly by the operating system loader.</span></span>  
+ <span data-ttu-id="a74e8-109">Windows 98, Windows ME, Windows NT 및 Windows 2000에는 `_CorExeMain` 함수 픽스업에 운영 체제 로더를 통해 간접적으로 호출 됩니다.</span><span class="sxs-lookup"><span data-stu-id="a74e8-109">In Windows 98, Windows ME, Windows NT, and Windows 2000, the `_CorExeMain` function is called indirectly through a fixup in the operating system loader.</span></span> <span data-ttu-id="a74e8-110">다른 모든 버전의 Windows에서는 운영 체제 로더에 의해 직접 호출 됩니다.</span><span class="sxs-lookup"><span data-stu-id="a74e8-110">In all other versions of Windows, it is called directly by the operating system loader.</span></span>  
   
- <span data-ttu-id="04cd8-111">자세한 내용은 주의 섹션을 참조 합니다 [_CorValidateImage](../../../../docs/framework/unmanaged-api/hosting/corvalidateimage-function.md) 항목입니다.</span><span class="sxs-lookup"><span data-stu-id="04cd8-111">For additional information, see the Remarks section in the [_CorValidateImage](../../../../docs/framework/unmanaged-api/hosting/corvalidateimage-function.md) topic.</span></span>  
+ <span data-ttu-id="a74e8-111">자세한 내용은 주의 섹션을 참조 합니다 [_CorValidateImage](../../../../docs/framework/unmanaged-api/hosting/corvalidateimage-function.md) 항목입니다.</span><span class="sxs-lookup"><span data-stu-id="a74e8-111">For additional information, see the Remarks section in the [_CorValidateImage](../../../../docs/framework/unmanaged-api/hosting/corvalidateimage-function.md) topic.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="04cd8-112">요구 사항</span><span class="sxs-lookup"><span data-stu-id="04cd8-112">Requirements</span></span>  
- <span data-ttu-id="04cd8-113">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="04cd8-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="a74e8-112">요구 사항</span><span class="sxs-lookup"><span data-stu-id="a74e8-112">Requirements</span></span>  
+ <span data-ttu-id="a74e8-113">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="a74e8-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="04cd8-114">**헤더:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="04cd8-114">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="a74e8-114">**헤더:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="a74e8-114">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="04cd8-115">**라이브러리:** MsCorEE.dll에 리소스로 포함</span><span class="sxs-lookup"><span data-stu-id="04cd8-115">**Library:** Included as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="a74e8-115">**라이브러리:** MsCorEE.dll에 리소스로 포함</span><span class="sxs-lookup"><span data-stu-id="a74e8-115">**Library:** Included as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="04cd8-116">**.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="04cd8-116">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ **<span data-ttu-id="a74e8-116">.NET Framework 버전:</span><span class="sxs-lookup"><span data-stu-id="a74e8-116">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="04cd8-117">참고자료</span><span class="sxs-lookup"><span data-stu-id="04cd8-117">See also</span></span>
-- [<span data-ttu-id="04cd8-118">메타데이터 전역 정적 함수</span><span class="sxs-lookup"><span data-stu-id="04cd8-118">Metadata Global Static Functions</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-global-static-functions.md)
+## <a name="see-also"></a><span data-ttu-id="a74e8-117">참고자료</span><span class="sxs-lookup"><span data-stu-id="a74e8-117">See also</span></span>
+
+- [<span data-ttu-id="a74e8-118">메타데이터 전역 정적 함수</span><span class="sxs-lookup"><span data-stu-id="a74e8-118">Metadata Global Static Functions</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-global-static-functions.md)

@@ -8,47 +8,48 @@ helpviewer_keywords:
 - font families [Windows Forms], constructing
 - fonts [Windows Forms], constructing
 ms.assetid: d3a4a223-9492-4b54-9afd-db1c31c3cefd
-ms.openlocfilehash: b651671e525ae5cfc365a392b96d258ac835a21c
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 0a9dcd00d4bc3e64ae4fc9a1d4884fac18521825
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57708557"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59181222"
 ---
-# <a name="how-to-construct-font-families-and-fonts"></a><span data-ttu-id="6beb1-102">방법: 글꼴 패밀리 및 글꼴 만들기</span><span class="sxs-lookup"><span data-stu-id="6beb1-102">How to: Construct Font Families and Fonts</span></span>
-[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] <span data-ttu-id="6beb1-103">글꼴 서체 하지만 다양 한 스타일을 사용 하 여 글꼴 패밀리로 그룹화합니다.</span><span class="sxs-lookup"><span data-stu-id="6beb1-103">groups fonts with the same typeface but different styles into font families.</span></span> <span data-ttu-id="6beb1-104">예를 들어, 굴림 글꼴 패밀리에는 다음 글꼴을 포함 되어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="6beb1-104">For example, the Arial font family contains the following fonts:</span></span>  
+# <a name="how-to-construct-font-families-and-fonts"></a><span data-ttu-id="f4fa9-102">방법: 글꼴 패밀리 및 글꼴 만들기</span><span class="sxs-lookup"><span data-stu-id="f4fa9-102">How to: Construct Font Families and Fonts</span></span>
+[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] <span data-ttu-id="f4fa9-103">글꼴 서체 하지만 다양 한 스타일을 사용 하 여 글꼴 패밀리로 그룹화합니다.</span><span class="sxs-lookup"><span data-stu-id="f4fa9-103">groups fonts with the same typeface but different styles into font families.</span></span> <span data-ttu-id="f4fa9-104">예를 들어, 굴림 글꼴 패밀리에는 다음 글꼴을 포함 되어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="f4fa9-104">For example, the Arial font family contains the following fonts:</span></span>  
   
--   <span data-ttu-id="6beb1-105">Arial 일반</span><span class="sxs-lookup"><span data-stu-id="6beb1-105">Arial Regular</span></span>  
+-   <span data-ttu-id="f4fa9-105">Arial 일반</span><span class="sxs-lookup"><span data-stu-id="f4fa9-105">Arial Regular</span></span>  
   
--   <span data-ttu-id="6beb1-106">Arial 굵게</span><span class="sxs-lookup"><span data-stu-id="6beb1-106">Arial Bold</span></span>  
+-   <span data-ttu-id="f4fa9-106">Arial 굵게</span><span class="sxs-lookup"><span data-stu-id="f4fa9-106">Arial Bold</span></span>  
   
--   <span data-ttu-id="6beb1-107">Arial 기울임꼴</span><span class="sxs-lookup"><span data-stu-id="6beb1-107">Arial Italic</span></span>  
+-   <span data-ttu-id="f4fa9-107">Arial 기울임꼴</span><span class="sxs-lookup"><span data-stu-id="f4fa9-107">Arial Italic</span></span>  
   
--   <span data-ttu-id="6beb1-108">Arial 굵은 기울임꼴</span><span class="sxs-lookup"><span data-stu-id="6beb1-108">Arial Bold Italic</span></span>  
+-   <span data-ttu-id="f4fa9-108">Arial 굵은 기울임꼴</span><span class="sxs-lookup"><span data-stu-id="f4fa9-108">Arial Bold Italic</span></span>  
   
- [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] <span data-ttu-id="6beb1-109">패밀리를 구성 하려면 네 가지 스타일을 사용 하 여: 일반, 굵게, 기울임꼴 및 굵은 기울임꼴 등입니다.</span><span class="sxs-lookup"><span data-stu-id="6beb1-109">uses four styles to form families: regular, bold, italic, and bold italic.</span></span> <span data-ttu-id="6beb1-110">형용사와 같은 *범위를 좁힐* 하 고 *반올림* 스타일; 간주 되지 않습니다 이들은 제품군 이름 부분을 대신 합니다.</span><span class="sxs-lookup"><span data-stu-id="6beb1-110">Adjectives such as *narrow* and *rounded* are not considered styles; rather they are part of the family name.</span></span> <span data-ttu-id="6beb1-111">예를 들어, 굴림는 다음 멤버로 구성 된 글꼴 패밀리:</span><span class="sxs-lookup"><span data-stu-id="6beb1-111">For example, Arial Narrow is a font family with the following members:</span></span>  
+ [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] <span data-ttu-id="f4fa9-109">패밀리를 구성 하려면 네 가지 스타일을 사용 하 여: 일반, 굵게, 기울임꼴 및 굵은 기울임꼴 등입니다.</span><span class="sxs-lookup"><span data-stu-id="f4fa9-109">uses four styles to form families: regular, bold, italic, and bold italic.</span></span> <span data-ttu-id="f4fa9-110">형용사와 같은 *범위를 좁힐* 하 고 *반올림* 스타일; 간주 되지 않습니다 이들은 제품군 이름 부분을 대신 합니다.</span><span class="sxs-lookup"><span data-stu-id="f4fa9-110">Adjectives such as *narrow* and *rounded* are not considered styles; rather they are part of the family name.</span></span> <span data-ttu-id="f4fa9-111">예를 들어, 굴림는 다음 멤버로 구성 된 글꼴 패밀리:</span><span class="sxs-lookup"><span data-stu-id="f4fa9-111">For example, Arial Narrow is a font family with the following members:</span></span>  
   
--   <span data-ttu-id="6beb1-112">Arial 좁은 일반</span><span class="sxs-lookup"><span data-stu-id="6beb1-112">Arial Narrow Regular</span></span>  
+-   <span data-ttu-id="f4fa9-112">Arial 좁은 일반</span><span class="sxs-lookup"><span data-stu-id="f4fa9-112">Arial Narrow Regular</span></span>  
   
--   <span data-ttu-id="6beb1-113">굵게 아미</span><span class="sxs-lookup"><span data-stu-id="6beb1-113">Arial Narrow Bold</span></span>  
+-   <span data-ttu-id="f4fa9-113">굵게 아미</span><span class="sxs-lookup"><span data-stu-id="f4fa9-113">Arial Narrow Bold</span></span>  
   
--   <span data-ttu-id="6beb1-114">Arial 좁은 기울임꼴</span><span class="sxs-lookup"><span data-stu-id="6beb1-114">Arial Narrow Italic</span></span>  
+-   <span data-ttu-id="f4fa9-114">Arial 좁은 기울임꼴</span><span class="sxs-lookup"><span data-stu-id="f4fa9-114">Arial Narrow Italic</span></span>  
   
--   <span data-ttu-id="6beb1-115">Arial 좁은 굵은 기울임꼴</span><span class="sxs-lookup"><span data-stu-id="6beb1-115">Arial Narrow Bold Italic</span></span>  
+-   <span data-ttu-id="f4fa9-115">Arial 좁은 굵은 기울임꼴</span><span class="sxs-lookup"><span data-stu-id="f4fa9-115">Arial Narrow Bold Italic</span></span>  
   
- <span data-ttu-id="6beb1-116">사용 하 여 텍스트를 그리려면 먼저 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]를 구성 해야를 <xref:System.Drawing.FontFamily> 개체 및 <xref:System.Drawing.Font> 개체입니다.</span><span class="sxs-lookup"><span data-stu-id="6beb1-116">Before you can draw text with [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)], you need to construct a <xref:System.Drawing.FontFamily> object and a <xref:System.Drawing.Font> object.</span></span> <span data-ttu-id="6beb1-117"><xref:System.Drawing.FontFamily> 개체 (예: Arial) 서체를 지정 하며 <xref:System.Drawing.Font> 개체 크기, 스타일 및 단위를 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="6beb1-117">The <xref:System.Drawing.FontFamily> object specifies the typeface (for example, Arial), and the <xref:System.Drawing.Font> object specifies the size, style, and units.</span></span>  
+ <span data-ttu-id="f4fa9-116">사용 하 여 텍스트를 그리려면 먼저 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]를 구성 해야를 <xref:System.Drawing.FontFamily> 개체 및 <xref:System.Drawing.Font> 개체입니다.</span><span class="sxs-lookup"><span data-stu-id="f4fa9-116">Before you can draw text with [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)], you need to construct a <xref:System.Drawing.FontFamily> object and a <xref:System.Drawing.Font> object.</span></span> <span data-ttu-id="f4fa9-117"><xref:System.Drawing.FontFamily> 개체 (예: Arial) 서체를 지정 하며 <xref:System.Drawing.Font> 개체 크기, 스타일 및 단위를 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="f4fa9-117">The <xref:System.Drawing.FontFamily> object specifies the typeface (for example, Arial), and the <xref:System.Drawing.Font> object specifies the size, style, and units.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="6beb1-118">예제</span><span class="sxs-lookup"><span data-stu-id="6beb1-118">Example</span></span>  
- <span data-ttu-id="6beb1-119">다음 예제에서는 일반 스타일 Arial 글꼴 크기를 16 픽셀을 생성합니다.</span><span class="sxs-lookup"><span data-stu-id="6beb1-119">The following example constructs a regular style Arial font with a size of 16 pixels.</span></span> <span data-ttu-id="6beb1-120">다음 코드에서는 첫 번째 인수에 전달 합니다 <xref:System.Drawing.Font.%23ctor%2A> 생성자를 <xref:System.Drawing.FontFamily> 개체입니다.</span><span class="sxs-lookup"><span data-stu-id="6beb1-120">In the following code, the first argument passed to the <xref:System.Drawing.Font.%23ctor%2A> constructor is the <xref:System.Drawing.FontFamily> object.</span></span> <span data-ttu-id="6beb1-121">두 번째 인수는 네 번째 인수에 의해 식별 되는 단위로 측정 되는 글꼴 크기를 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="6beb1-121">The second argument specifies the size of the font measured in units identified by the fourth argument.</span></span> <span data-ttu-id="6beb1-122">세 번째 인수는 스타일을 식별합니다.</span><span class="sxs-lookup"><span data-stu-id="6beb1-122">The third argument identifies the style.</span></span>  
+## <a name="example"></a><span data-ttu-id="f4fa9-118">예제</span><span class="sxs-lookup"><span data-stu-id="f4fa9-118">Example</span></span>  
+ <span data-ttu-id="f4fa9-119">다음 예제에서는 일반 스타일 Arial 글꼴 크기를 16 픽셀을 생성합니다.</span><span class="sxs-lookup"><span data-stu-id="f4fa9-119">The following example constructs a regular style Arial font with a size of 16 pixels.</span></span> <span data-ttu-id="f4fa9-120">다음 코드에서는 첫 번째 인수에 전달 합니다 <xref:System.Drawing.Font.%23ctor%2A> 생성자를 <xref:System.Drawing.FontFamily> 개체입니다.</span><span class="sxs-lookup"><span data-stu-id="f4fa9-120">In the following code, the first argument passed to the <xref:System.Drawing.Font.%23ctor%2A> constructor is the <xref:System.Drawing.FontFamily> object.</span></span> <span data-ttu-id="f4fa9-121">두 번째 인수는 네 번째 인수에 의해 식별 되는 단위로 측정 되는 글꼴 크기를 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="f4fa9-121">The second argument specifies the size of the font measured in units identified by the fourth argument.</span></span> <span data-ttu-id="f4fa9-122">세 번째 인수는 스타일을 식별합니다.</span><span class="sxs-lookup"><span data-stu-id="f4fa9-122">The third argument identifies the style.</span></span>  
   
- <span data-ttu-id="6beb1-123"><xref:System.Drawing.GraphicsUnit.Pixel> 멤버인 합니다 <xref:System.Drawing.GraphicsUnit> 열거형 및 <xref:System.Drawing.FontStyle.Regular> 멤버인는 <xref:System.Drawing.FontStyle> 열거형입니다.</span><span class="sxs-lookup"><span data-stu-id="6beb1-123"><xref:System.Drawing.GraphicsUnit.Pixel> is a member of the <xref:System.Drawing.GraphicsUnit> enumeration, and <xref:System.Drawing.FontStyle.Regular> is a member of the <xref:System.Drawing.FontStyle> enumeration.</span></span>  
+ <xref:System.Drawing.GraphicsUnit.Pixel> <span data-ttu-id="f4fa9-123">멤버인 합니다 <xref:System.Drawing.GraphicsUnit> 열거형 및 <xref:System.Drawing.FontStyle.Regular> 멤버인는 <xref:System.Drawing.FontStyle> 열거형입니다.</span><span class="sxs-lookup"><span data-stu-id="f4fa9-123">is a member of the <xref:System.Drawing.GraphicsUnit> enumeration, and <xref:System.Drawing.FontStyle.Regular> is a member of the <xref:System.Drawing.FontStyle> enumeration.</span></span>  
   
  [!code-csharp[System.Drawing.FontsAndText#61](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.FontsAndText/CS/Class1.cs#61)]
  [!code-vb[System.Drawing.FontsAndText#61](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.FontsAndText/VB/Class1.vb#61)]  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="6beb1-124">코드 컴파일</span><span class="sxs-lookup"><span data-stu-id="6beb1-124">Compiling the Code</span></span>  
- <span data-ttu-id="6beb1-125">앞의 예제는 Windows forms에서 사용하도록 설계되었으며 <xref:System.Windows.Forms.PaintEventArgs>의 매개 변수인 `e`<xref:System.Windows.Forms.PaintEventHandler>가 필요합니다.</span><span class="sxs-lookup"><span data-stu-id="6beb1-125">The preceding example is designed for use with Windows Forms, and it requires <xref:System.Windows.Forms.PaintEventArgs>`e`, which is a parameter of <xref:System.Windows.Forms.PaintEventHandler>.</span></span>  
+## <a name="compiling-the-code"></a><span data-ttu-id="f4fa9-124">코드 컴파일</span><span class="sxs-lookup"><span data-stu-id="f4fa9-124">Compiling the Code</span></span>  
+ <span data-ttu-id="f4fa9-125">앞의 예제는 Windows Forms에서 사용 하도록 설계 되었으며 필요 <xref:System.Windows.Forms.PaintEventArgs>`e`에서의 매개 변수인 <xref:System.Windows.Forms.PaintEventHandler>합니다.</span><span class="sxs-lookup"><span data-stu-id="f4fa9-125">The preceding example is designed for use with Windows Forms, and it requires <xref:System.Windows.Forms.PaintEventArgs>`e`, which is a parameter of <xref:System.Windows.Forms.PaintEventHandler>.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="6beb1-126">참고자료</span><span class="sxs-lookup"><span data-stu-id="6beb1-126">See also</span></span>
-- [<span data-ttu-id="6beb1-127">글꼴 및 텍스트 사용</span><span class="sxs-lookup"><span data-stu-id="6beb1-127">Using Fonts and Text</span></span>](using-fonts-and-text.md)
-- [<span data-ttu-id="6beb1-128">Windows Forms의 그래픽 및 그리기</span><span class="sxs-lookup"><span data-stu-id="6beb1-128">Graphics and Drawing in Windows Forms</span></span>](graphics-and-drawing-in-windows-forms.md)
+## <a name="see-also"></a><span data-ttu-id="f4fa9-126">참고자료</span><span class="sxs-lookup"><span data-stu-id="f4fa9-126">See also</span></span>
+
+- [<span data-ttu-id="f4fa9-127">글꼴 및 텍스트 사용</span><span class="sxs-lookup"><span data-stu-id="f4fa9-127">Using Fonts and Text</span></span>](using-fonts-and-text.md)
+- [<span data-ttu-id="f4fa9-128">Windows Forms의 그래픽 및 그리기</span><span class="sxs-lookup"><span data-stu-id="f4fa9-128">Graphics and Drawing in Windows Forms</span></span>](graphics-and-drawing-in-windows-forms.md)

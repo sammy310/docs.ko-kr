@@ -3,25 +3,25 @@ title: <activityScheduledQueries>
 ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: ca6e82f1-54f2-48d6-899c-9873065b5547
-ms.openlocfilehash: e6891144d613623b199e7279aa091d4d7cbe4445
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 7217fb886cc96e1ad19f96e2c6542277cfc7979e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55284559"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59175762"
 ---
-# <a name="activityscheduledqueries"></a><span data-ttu-id="68fe6-101">\<activityScheduledQueries></span><span class="sxs-lookup"><span data-stu-id="68fe6-101">\<activityScheduledQueries></span></span>
-<span data-ttu-id="68fe6-102">부모 활동에 의해 실행이 예약된 활동을 추적하는 데 사용되는 쿼리의 컬렉션을 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="68fe6-102">Represents a collection of queries that are used to track an activity scheduled for execution by a parent activity.</span></span> <span data-ttu-id="68fe6-103">추적 참가자가 활동 예약 레코드를 구독하려면 쿼리가 필요합니다.</span><span class="sxs-lookup"><span data-stu-id="68fe6-103">The query is necessary for a tracking participant to subscribe to activity scheduled records.</span></span>  
+# <a name="activityscheduledqueries"></a><span data-ttu-id="6ce1a-101">\<activityScheduledQueries></span><span class="sxs-lookup"><span data-stu-id="6ce1a-101">\<activityScheduledQueries></span></span>
+<span data-ttu-id="6ce1a-102">부모 활동에 의해 실행이 예약된 활동을 추적하는 데 사용되는 쿼리의 컬렉션을 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="6ce1a-102">Represents a collection of queries that are used to track an activity scheduled for execution by a parent activity.</span></span> <span data-ttu-id="6ce1a-103">추적 참가자가 활동 예약 레코드를 구독하려면 쿼리가 필요합니다.</span><span class="sxs-lookup"><span data-stu-id="6ce1a-103">The query is necessary for a tracking participant to subscribe to activity scheduled records.</span></span>  
   
- <span data-ttu-id="68fe6-104">추적 프로필 쿼리에 대 한 자세한 내용은 참조 하세요. [추적 프로필](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)</span><span class="sxs-lookup"><span data-stu-id="68fe6-104">For more information on tracking profile queries, see [Tracking Profiles](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)</span></span>  
+ <span data-ttu-id="6ce1a-104">추적 프로필 쿼리에 대 한 자세한 내용은 참조 하세요. [추적 프로필](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)</span><span class="sxs-lookup"><span data-stu-id="6ce1a-104">For more information on tracking profile queries, see [Tracking Profiles](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)</span></span>  
   
-<span data-ttu-id="68fe6-105">\<system.serviceModel></span><span class="sxs-lookup"><span data-stu-id="68fe6-105">\<system.serviceModel></span></span>  
-<span data-ttu-id="68fe6-106">\<tracking></span><span class="sxs-lookup"><span data-stu-id="68fe6-106">\<tracking></span></span>  
-<span data-ttu-id="68fe6-107">\<trackingProfile></span><span class="sxs-lookup"><span data-stu-id="68fe6-107">\<trackingProfile></span></span>  
-<span data-ttu-id="68fe6-108">\<workflow></span><span class="sxs-lookup"><span data-stu-id="68fe6-108">\<workflow></span></span>  
-<span data-ttu-id="68fe6-109">\<activityScheduledQueries></span><span class="sxs-lookup"><span data-stu-id="68fe6-109">\<activityScheduledQueries></span></span>  
+<span data-ttu-id="6ce1a-105">\<system.serviceModel></span><span class="sxs-lookup"><span data-stu-id="6ce1a-105">\<system.serviceModel></span></span>  
+<span data-ttu-id="6ce1a-106">\<tracking></span><span class="sxs-lookup"><span data-stu-id="6ce1a-106">\<tracking></span></span>  
+<span data-ttu-id="6ce1a-107">\<trackingProfile></span><span class="sxs-lookup"><span data-stu-id="6ce1a-107">\<trackingProfile></span></span>  
+<span data-ttu-id="6ce1a-108">\<workflow></span><span class="sxs-lookup"><span data-stu-id="6ce1a-108">\<workflow></span></span>  
+<span data-ttu-id="6ce1a-109">\<activityScheduledQueries></span><span class="sxs-lookup"><span data-stu-id="6ce1a-109">\<activityScheduledQueries></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="68fe6-110">구문</span><span class="sxs-lookup"><span data-stu-id="68fe6-110">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="6ce1a-110">구문</span><span class="sxs-lookup"><span data-stu-id="6ce1a-110">Syntax</span></span>  
   
 ```xml  
 <tracking>
@@ -36,26 +36,27 @@ ms.locfileid: "55284559"
 </tracking>  
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="68fe6-111">특성 및 요소</span><span class="sxs-lookup"><span data-stu-id="68fe6-111">Attributes and Elements</span></span>  
- <span data-ttu-id="68fe6-112">다음 섹션에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="68fe6-112">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="6ce1a-111">특성 및 요소</span><span class="sxs-lookup"><span data-stu-id="6ce1a-111">Attributes and Elements</span></span>  
+ <span data-ttu-id="6ce1a-112">다음 섹션에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="6ce1a-112">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="68fe6-113">특성</span><span class="sxs-lookup"><span data-stu-id="68fe6-113">Attributes</span></span>  
- <span data-ttu-id="68fe6-114">없음</span><span class="sxs-lookup"><span data-stu-id="68fe6-114">None.</span></span>  
+### <a name="attributes"></a><span data-ttu-id="6ce1a-113">특성</span><span class="sxs-lookup"><span data-stu-id="6ce1a-113">Attributes</span></span>  
+ <span data-ttu-id="6ce1a-114">없음</span><span class="sxs-lookup"><span data-stu-id="6ce1a-114">None.</span></span>  
   
-### <a name="child-elements"></a><span data-ttu-id="68fe6-115">자식 요소</span><span class="sxs-lookup"><span data-stu-id="68fe6-115">Child Elements</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="6ce1a-115">자식 요소</span><span class="sxs-lookup"><span data-stu-id="6ce1a-115">Child Elements</span></span>  
   
-|<span data-ttu-id="68fe6-116">요소</span><span class="sxs-lookup"><span data-stu-id="68fe6-116">Element</span></span>|<span data-ttu-id="68fe6-117">설명</span><span class="sxs-lookup"><span data-stu-id="68fe6-117">Description</span></span>|  
+|<span data-ttu-id="6ce1a-116">요소</span><span class="sxs-lookup"><span data-stu-id="6ce1a-116">Element</span></span>|<span data-ttu-id="6ce1a-117">설명</span><span class="sxs-lookup"><span data-stu-id="6ce1a-117">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="68fe6-118">\<activityScheduledQuery></span><span class="sxs-lookup"><span data-stu-id="68fe6-118">\<activityScheduledQuery></span></span>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/activityscheduledquery.md)|<span data-ttu-id="68fe6-119">부모 활동에 의해 실행이 예약된 활동을 추적하는 데 사용되는 쿼리입니다.</span><span class="sxs-lookup"><span data-stu-id="68fe6-119">A query that is used to track an activity scheduled for execution by a parent activity.</span></span>|  
+|[<span data-ttu-id="6ce1a-118">\<activityScheduledQuery></span><span class="sxs-lookup"><span data-stu-id="6ce1a-118">\<activityScheduledQuery></span></span>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/activityscheduledquery.md)|<span data-ttu-id="6ce1a-119">부모 활동에 의해 실행이 예약된 활동을 추적하는 데 사용되는 쿼리입니다.</span><span class="sxs-lookup"><span data-stu-id="6ce1a-119">A query that is used to track an activity scheduled for execution by a parent activity.</span></span>|  
   
-### <a name="parent-elements"></a><span data-ttu-id="68fe6-120">부모 요소</span><span class="sxs-lookup"><span data-stu-id="68fe6-120">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="6ce1a-120">부모 요소</span><span class="sxs-lookup"><span data-stu-id="6ce1a-120">Parent Elements</span></span>  
   
-|<span data-ttu-id="68fe6-121">요소</span><span class="sxs-lookup"><span data-stu-id="68fe6-121">Element</span></span>|<span data-ttu-id="68fe6-122">설명</span><span class="sxs-lookup"><span data-stu-id="68fe6-122">Description</span></span>|  
+|<span data-ttu-id="6ce1a-121">요소</span><span class="sxs-lookup"><span data-stu-id="6ce1a-121">Element</span></span>|<span data-ttu-id="6ce1a-122">설명</span><span class="sxs-lookup"><span data-stu-id="6ce1a-122">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="68fe6-123">\<workflow></span><span class="sxs-lookup"><span data-stu-id="68fe6-123">\<workflow></span></span>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/workflow.md)|<span data-ttu-id="68fe6-124">로 식별 되는 특정 워크플로에 대 한 모든 쿼리를 포함 하는 구성 요소를 **activityDefinitionId** 속성입니다.</span><span class="sxs-lookup"><span data-stu-id="68fe6-124">A configuration element that contains all queries for a specific workflow identified by the **activityDefinitionId** property.</span></span>|  
+|[<span data-ttu-id="6ce1a-123">\<workflow></span><span class="sxs-lookup"><span data-stu-id="6ce1a-123">\<workflow></span></span>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/workflow.md)|<span data-ttu-id="6ce1a-124">로 식별 되는 특정 워크플로에 대 한 모든 쿼리를 포함 하는 구성 요소를 **activityDefinitionId** 속성입니다.</span><span class="sxs-lookup"><span data-stu-id="6ce1a-124">A configuration element that contains all queries for a specific workflow identified by the **activityDefinitionId** property.</span></span>|  
   
-## <a name="see-also"></a><span data-ttu-id="68fe6-125">참고자료</span><span class="sxs-lookup"><span data-stu-id="68fe6-125">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="6ce1a-125">참고자료</span><span class="sxs-lookup"><span data-stu-id="6ce1a-125">See also</span></span>
+
 - <xref:System.ServiceModel.Activities.Tracking.Configuration.ActivityScheduledQueryElementCollection?displayProperty=nameWithType>
 - <xref:System.Activities.Tracking.ActivityScheduledQuery?displayProperty=nameWithType>
-- [<span data-ttu-id="68fe6-126">워크플로 추적</span><span class="sxs-lookup"><span data-stu-id="68fe6-126">Workflow Tracking and Tracing</span></span>](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)
-- [<span data-ttu-id="68fe6-127">추적 프로필</span><span class="sxs-lookup"><span data-stu-id="68fe6-127">Tracking Profiles</span></span>](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)
+- [<span data-ttu-id="6ce1a-126">워크플로 추적</span><span class="sxs-lookup"><span data-stu-id="6ce1a-126">Workflow Tracking and Tracing</span></span>](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)
+- [<span data-ttu-id="6ce1a-127">추적 프로필</span><span class="sxs-lookup"><span data-stu-id="6ce1a-127">Tracking Profiles</span></span>](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)

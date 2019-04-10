@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 459691354ec12f61c7ab321fe832d8fc802a36d9
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: cad7b319a20bce09779821af6f50aea086880c26
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57494300"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59187345"
 ---
-# <a name="ihostcontrolgethostmanager-method"></a><span data-ttu-id="78eed-102">IHostControl::GetHostManager 메서드</span><span class="sxs-lookup"><span data-stu-id="78eed-102">IHostControl::GetHostManager Method</span></span>
-<span data-ttu-id="78eed-103">지정 된 인터페이스의 호스트의 구현에 대 한 인터페이스 포인터를 가져옵니다 `IID`합니다.</span><span class="sxs-lookup"><span data-stu-id="78eed-103">Gets an interface pointer to the host's implementation of the interface with the specified `IID`.</span></span>  
+# <a name="ihostcontrolgethostmanager-method"></a><span data-ttu-id="726ce-102">IHostControl::GetHostManager 메서드</span><span class="sxs-lookup"><span data-stu-id="726ce-102">IHostControl::GetHostManager Method</span></span>
+<span data-ttu-id="726ce-103">지정 된 인터페이스의 호스트의 구현에 대 한 인터페이스 포인터를 가져옵니다 `IID`합니다.</span><span class="sxs-lookup"><span data-stu-id="726ce-103">Gets an interface pointer to the host's implementation of the interface with the specified `IID`.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="78eed-104">구문</span><span class="sxs-lookup"><span data-stu-id="78eed-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="726ce-104">구문</span><span class="sxs-lookup"><span data-stu-id="726ce-104">Syntax</span></span>  
   
 ```  
 HRESULT GetHostManager (  
@@ -36,59 +36,60 @@ HRESULT GetHostManager (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="78eed-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="78eed-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="726ce-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="726ce-105">Parameters</span></span>  
  `riid`  
- <span data-ttu-id="78eed-106">[in] `IID` 는 CLR (공용 언어 런타임)에 대 한 쿼리 하는 인터페이스입니다.</span><span class="sxs-lookup"><span data-stu-id="78eed-106">[in] The `IID` of the interface that the common language runtime (CLR) is querying for.</span></span>  
+ <span data-ttu-id="726ce-106">[in] `IID` 는 CLR (공용 언어 런타임)에 대 한 쿼리 하는 인터페이스입니다.</span><span class="sxs-lookup"><span data-stu-id="726ce-106">[in] The `IID` of the interface that the common language runtime (CLR) is querying for.</span></span>  
   
  `ppObject`  
- <span data-ttu-id="78eed-107">[out] 호스트가 구현한 인터페이스 또는 호스트는이 인터페이스를 지원 하지 않는 경우 null 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="78eed-107">[out] A pointer to the host-implemented interface, or null if the host does not support this interface.</span></span>  
+ <span data-ttu-id="726ce-107">[out] 호스트가 구현한 인터페이스 또는 호스트는이 인터페이스를 지원 하지 않는 경우 null 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="726ce-107">[out] A pointer to the host-implemented interface, or null if the host does not support this interface.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="78eed-108">반환 값</span><span class="sxs-lookup"><span data-stu-id="78eed-108">Return Value</span></span>  
+## <a name="return-value"></a><span data-ttu-id="726ce-108">반환 값</span><span class="sxs-lookup"><span data-stu-id="726ce-108">Return Value</span></span>  
   
-|<span data-ttu-id="78eed-109">HRESULT</span><span class="sxs-lookup"><span data-stu-id="78eed-109">HRESULT</span></span>|<span data-ttu-id="78eed-110">설명</span><span class="sxs-lookup"><span data-stu-id="78eed-110">Description</span></span>|  
+|<span data-ttu-id="726ce-109">HRESULT</span><span class="sxs-lookup"><span data-stu-id="726ce-109">HRESULT</span></span>|<span data-ttu-id="726ce-110">설명</span><span class="sxs-lookup"><span data-stu-id="726ce-110">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="78eed-111">S_OK</span><span class="sxs-lookup"><span data-stu-id="78eed-111">S_OK</span></span>|<span data-ttu-id="78eed-112">`GetHostManager` 성공적으로 반환 합니다.</span><span class="sxs-lookup"><span data-stu-id="78eed-112">`GetHostManager` returned successfully.</span></span>|  
-|<span data-ttu-id="78eed-113">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="78eed-113">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="78eed-114">CLR이 로드 된 프로세스에 또는 CLR 상태인는 관리 코드를 실행 하거나 호출을 처리할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="78eed-114">The CLR has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
-|<span data-ttu-id="78eed-115">HOST_E_TIMEOUT</span><span class="sxs-lookup"><span data-stu-id="78eed-115">HOST_E_TIMEOUT</span></span>|<span data-ttu-id="78eed-116">호출 시간이 초과 되었습니다.</span><span class="sxs-lookup"><span data-stu-id="78eed-116">The call timed out.</span></span>|  
-|<span data-ttu-id="78eed-117">HOST_E_NOT_OWNER</span><span class="sxs-lookup"><span data-stu-id="78eed-117">HOST_E_NOT_OWNER</span></span>|<span data-ttu-id="78eed-118">호출자가 잠금을 소유 하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="78eed-118">The caller does not own the lock.</span></span>|  
-|<span data-ttu-id="78eed-119">HOST_E_ABANDONED</span><span class="sxs-lookup"><span data-stu-id="78eed-119">HOST_E_ABANDONED</span></span>|<span data-ttu-id="78eed-120">이벤트가 차단 된 스레드가 취소 된 또는 파이버를 대기 하 고 있습니다.</span><span class="sxs-lookup"><span data-stu-id="78eed-120">An event was canceled while a blocked thread or fiber was waiting on it.</span></span>|  
-|<span data-ttu-id="78eed-121">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="78eed-121">E_FAIL</span></span>|<span data-ttu-id="78eed-122">알 수 없는 치명적인 오류가 발생 했습니다.</span><span class="sxs-lookup"><span data-stu-id="78eed-122">An unknown catastrophic failure occurred.</span></span> <span data-ttu-id="78eed-123">메서드 E_FAIL을 반환 하는 경우 CLR은 프로세스 내에서 사용할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="78eed-123">When a method returns E_FAIL, the CLR is no longer usable within the process.</span></span> <span data-ttu-id="78eed-124">메서드를 호스트 하는 데 대 한 후속 호출 HOST_E_CLRNOTAVAILABLE를 반환 합니다.</span><span class="sxs-lookup"><span data-stu-id="78eed-124">Subsequent calls to hosting methods return HOST_E_CLRNOTAVAILABLE.</span></span>|  
-|<span data-ttu-id="78eed-125">E_INVALIDARG</span><span class="sxs-lookup"><span data-stu-id="78eed-125">E_INVALIDARG</span></span>|<span data-ttu-id="78eed-126">요청 된 `IID` 올바르지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="78eed-126">The requested `IID` is not valid.</span></span>|  
-|<span data-ttu-id="78eed-127">E_NOINTERFACE</span><span class="sxs-lookup"><span data-stu-id="78eed-127">E_NOINTERFACE</span></span>|<span data-ttu-id="78eed-128">요청한 인터페이스가 지원 되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="78eed-128">The requested interface is not supported.</span></span>|  
+|<span data-ttu-id="726ce-111">S_OK</span><span class="sxs-lookup"><span data-stu-id="726ce-111">S_OK</span></span>|`GetHostManager` <span data-ttu-id="726ce-112">성공적으로 반환 합니다.</span><span class="sxs-lookup"><span data-stu-id="726ce-112">returned successfully.</span></span>|  
+|<span data-ttu-id="726ce-113">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="726ce-113">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="726ce-114">CLR이 로드 된 프로세스에 또는 CLR 상태인는 관리 코드를 실행 하거나 호출을 처리할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="726ce-114">The CLR has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
+|<span data-ttu-id="726ce-115">HOST_E_TIMEOUT</span><span class="sxs-lookup"><span data-stu-id="726ce-115">HOST_E_TIMEOUT</span></span>|<span data-ttu-id="726ce-116">호출 시간이 초과 되었습니다.</span><span class="sxs-lookup"><span data-stu-id="726ce-116">The call timed out.</span></span>|  
+|<span data-ttu-id="726ce-117">HOST_E_NOT_OWNER</span><span class="sxs-lookup"><span data-stu-id="726ce-117">HOST_E_NOT_OWNER</span></span>|<span data-ttu-id="726ce-118">호출자가 잠금을 소유 하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="726ce-118">The caller does not own the lock.</span></span>|  
+|<span data-ttu-id="726ce-119">HOST_E_ABANDONED</span><span class="sxs-lookup"><span data-stu-id="726ce-119">HOST_E_ABANDONED</span></span>|<span data-ttu-id="726ce-120">이벤트가 차단 된 스레드가 취소 된 또는 파이버를 대기 하 고 있습니다.</span><span class="sxs-lookup"><span data-stu-id="726ce-120">An event was canceled while a blocked thread or fiber was waiting on it.</span></span>|  
+|<span data-ttu-id="726ce-121">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="726ce-121">E_FAIL</span></span>|<span data-ttu-id="726ce-122">알 수 없는 치명적인 오류가 발생 했습니다.</span><span class="sxs-lookup"><span data-stu-id="726ce-122">An unknown catastrophic failure occurred.</span></span> <span data-ttu-id="726ce-123">메서드 E_FAIL을 반환 하는 경우 CLR은 프로세스 내에서 사용할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="726ce-123">When a method returns E_FAIL, the CLR is no longer usable within the process.</span></span> <span data-ttu-id="726ce-124">메서드를 호스트 하는 데 대 한 후속 호출 HOST_E_CLRNOTAVAILABLE를 반환 합니다.</span><span class="sxs-lookup"><span data-stu-id="726ce-124">Subsequent calls to hosting methods return HOST_E_CLRNOTAVAILABLE.</span></span>|  
+|<span data-ttu-id="726ce-125">E_INVALIDARG</span><span class="sxs-lookup"><span data-stu-id="726ce-125">E_INVALIDARG</span></span>|<span data-ttu-id="726ce-126">요청 된 `IID` 올바르지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="726ce-126">The requested `IID` is not valid.</span></span>|  
+|<span data-ttu-id="726ce-127">E_NOINTERFACE</span><span class="sxs-lookup"><span data-stu-id="726ce-127">E_NOINTERFACE</span></span>|<span data-ttu-id="726ce-128">요청한 인터페이스가 지원 되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="726ce-128">The requested interface is not supported.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="78eed-129">설명</span><span class="sxs-lookup"><span data-stu-id="78eed-129">Remarks</span></span>  
- <span data-ttu-id="78eed-130">CLR 다음 인터페이스 중 하나 이상을 지원 하는지 여부를 확인 하려면 호스트를 쿼리 합니다.</span><span class="sxs-lookup"><span data-stu-id="78eed-130">The CLR queries the host to determine whether it supports one or more of the following interfaces:</span></span>  
+## <a name="remarks"></a><span data-ttu-id="726ce-129">설명</span><span class="sxs-lookup"><span data-stu-id="726ce-129">Remarks</span></span>  
+ <span data-ttu-id="726ce-130">CLR 다음 인터페이스 중 하나 이상을 지원 하는지 여부를 확인 하려면 호스트를 쿼리 합니다.</span><span class="sxs-lookup"><span data-stu-id="726ce-130">The CLR queries the host to determine whether it supports one or more of the following interfaces:</span></span>  
   
--   [<span data-ttu-id="78eed-131">IHostMemoryManager</span><span class="sxs-lookup"><span data-stu-id="78eed-131">IHostMemoryManager</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostmemorymanager-interface.md)  
+-   [<span data-ttu-id="726ce-131">IHostMemoryManager</span><span class="sxs-lookup"><span data-stu-id="726ce-131">IHostMemoryManager</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostmemorymanager-interface.md)  
   
--   [<span data-ttu-id="78eed-132">IHostTaskManager</span><span class="sxs-lookup"><span data-stu-id="78eed-132">IHostTaskManager</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-interface.md)  
+-   [<span data-ttu-id="726ce-132">IHostTaskManager</span><span class="sxs-lookup"><span data-stu-id="726ce-132">IHostTaskManager</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-interface.md)  
   
--   [<span data-ttu-id="78eed-133">IHostThreadPoolManager</span><span class="sxs-lookup"><span data-stu-id="78eed-133">IHostThreadPoolManager</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostthreadpoolmanager-interface.md)  
+-   [<span data-ttu-id="726ce-133">IHostThreadPoolManager</span><span class="sxs-lookup"><span data-stu-id="726ce-133">IHostThreadPoolManager</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostthreadpoolmanager-interface.md)  
   
--   [<span data-ttu-id="78eed-134">IHostIoCompletionManager</span><span class="sxs-lookup"><span data-stu-id="78eed-134">IHostIoCompletionManager</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostiocompletionmanager-interface.md)  
+-   [<span data-ttu-id="726ce-134">IHostIoCompletionManager</span><span class="sxs-lookup"><span data-stu-id="726ce-134">IHostIoCompletionManager</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostiocompletionmanager-interface.md)  
   
--   [<span data-ttu-id="78eed-135">IHostSyncManager</span><span class="sxs-lookup"><span data-stu-id="78eed-135">IHostSyncManager</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostsyncmanager-interface.md)  
+-   [<span data-ttu-id="726ce-135">IHostSyncManager</span><span class="sxs-lookup"><span data-stu-id="726ce-135">IHostSyncManager</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostsyncmanager-interface.md)  
   
--   [<span data-ttu-id="78eed-136">IHostAssemblyManager</span><span class="sxs-lookup"><span data-stu-id="78eed-136">IHostAssemblyManager</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostassemblymanager-interface.md)  
+-   [<span data-ttu-id="726ce-136">IHostAssemblyManager</span><span class="sxs-lookup"><span data-stu-id="726ce-136">IHostAssemblyManager</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostassemblymanager-interface.md)  
   
--   [<span data-ttu-id="78eed-137">IHostGCManager</span><span class="sxs-lookup"><span data-stu-id="78eed-137">IHostGCManager</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostgcmanager-interface.md)  
+-   [<span data-ttu-id="726ce-137">IHostGCManager</span><span class="sxs-lookup"><span data-stu-id="726ce-137">IHostGCManager</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostgcmanager-interface.md)  
   
--   [<span data-ttu-id="78eed-138">IHostPolicyManager</span><span class="sxs-lookup"><span data-stu-id="78eed-138">IHostPolicyManager</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostpolicymanager-interface.md)  
+-   [<span data-ttu-id="726ce-138">IHostPolicyManager</span><span class="sxs-lookup"><span data-stu-id="726ce-138">IHostPolicyManager</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostpolicymanager-interface.md)  
   
--   [<span data-ttu-id="78eed-139">IHostSecurityManager</span><span class="sxs-lookup"><span data-stu-id="78eed-139">IHostSecurityManager</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostsecuritymanager-interface.md)  
+-   [<span data-ttu-id="726ce-139">IHostSecurityManager</span><span class="sxs-lookup"><span data-stu-id="726ce-139">IHostSecurityManager</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostsecuritymanager-interface.md)  
   
- <span data-ttu-id="78eed-140">호스트에서 지정된 된 인터페이스를 지 원하는 경우 설정 `ppObject` 를 해당 인터페이스의 구현입니다.</span><span class="sxs-lookup"><span data-stu-id="78eed-140">If the host supports the specified interface, it sets `ppObject` to its implementation of that interface.</span></span> <span data-ttu-id="78eed-141">그렇지 않은 경우 설정 `ppObject` null로 합니다.</span><span class="sxs-lookup"><span data-stu-id="78eed-141">Otherwise, it sets `ppObject` to null.</span></span>  
+ <span data-ttu-id="726ce-140">호스트에서 지정된 된 인터페이스를 지 원하는 경우 설정 `ppObject` 를 해당 인터페이스의 구현입니다.</span><span class="sxs-lookup"><span data-stu-id="726ce-140">If the host supports the specified interface, it sets `ppObject` to its implementation of that interface.</span></span> <span data-ttu-id="726ce-141">그렇지 않은 경우 설정 `ppObject` null로 합니다.</span><span class="sxs-lookup"><span data-stu-id="726ce-141">Otherwise, it sets `ppObject` to null.</span></span>  
   
- <span data-ttu-id="78eed-142">CLR에서 호출 하지 않습니다 `Release` 를 종료 하는 경우에 호스트 관리자에서.</span><span class="sxs-lookup"><span data-stu-id="78eed-142">The CLR does not call `Release` on host managers, even when you shut it down.</span></span>  
+ <span data-ttu-id="726ce-142">CLR에서 호출 하지 않습니다 `Release` 를 종료 하는 경우에 호스트 관리자에서.</span><span class="sxs-lookup"><span data-stu-id="726ce-142">The CLR does not call `Release` on host managers, even when you shut it down.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="78eed-143">요구 사항</span><span class="sxs-lookup"><span data-stu-id="78eed-143">Requirements</span></span>  
- <span data-ttu-id="78eed-144">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="78eed-144">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="726ce-143">요구 사항</span><span class="sxs-lookup"><span data-stu-id="726ce-143">Requirements</span></span>  
+ <span data-ttu-id="726ce-144">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="726ce-144">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="78eed-145">**헤더:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="78eed-145">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="726ce-145">**헤더:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="726ce-145">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="78eed-146">**라이브러리:** MSCorEE.dll에 리소스로 포함</span><span class="sxs-lookup"><span data-stu-id="78eed-146">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="726ce-146">**라이브러리:** MSCorEE.dll에 리소스로 포함</span><span class="sxs-lookup"><span data-stu-id="726ce-146">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="78eed-147">**.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="78eed-147">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ **<span data-ttu-id="726ce-147">.NET Framework 버전:</span><span class="sxs-lookup"><span data-stu-id="726ce-147">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="78eed-148">참고자료</span><span class="sxs-lookup"><span data-stu-id="78eed-148">See also</span></span>
-- [<span data-ttu-id="78eed-149">IHostControl 인터페이스</span><span class="sxs-lookup"><span data-stu-id="78eed-149">IHostControl Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostcontrol-interface.md)
+## <a name="see-also"></a><span data-ttu-id="726ce-148">참고자료</span><span class="sxs-lookup"><span data-stu-id="726ce-148">See also</span></span>
+
+- [<span data-ttu-id="726ce-149">IHostControl 인터페이스</span><span class="sxs-lookup"><span data-stu-id="726ce-149">IHostControl Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostcontrol-interface.md)

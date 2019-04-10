@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 956de98fca1caec0ac1b94afc7251f9741246f94
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: a8a979e86dbe52577d0b58089015338e4a87750d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57494781"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59193878"
 ---
-# <a name="icorruntimehostmapfile-method"></a><span data-ttu-id="146b0-102">ICorRuntimeHost::MapFile 메서드</span><span class="sxs-lookup"><span data-stu-id="146b0-102">ICorRuntimeHost::MapFile Method</span></span>
-<span data-ttu-id="146b0-103">지정된 된 파일을 메모리에 매핑됩니다.</span><span class="sxs-lookup"><span data-stu-id="146b0-103">Maps the specified file into memory.</span></span> <span data-ttu-id="146b0-104">이 메서드는 사용되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="146b0-104">This method is obsolete.</span></span>  
+# <a name="icorruntimehostmapfile-method"></a><span data-ttu-id="5d9c7-102">ICorRuntimeHost::MapFile 메서드</span><span class="sxs-lookup"><span data-stu-id="5d9c7-102">ICorRuntimeHost::MapFile Method</span></span>
+<span data-ttu-id="5d9c7-103">지정된 된 파일을 메모리에 매핑됩니다.</span><span class="sxs-lookup"><span data-stu-id="5d9c7-103">Maps the specified file into memory.</span></span> <span data-ttu-id="5d9c7-104">이 메서드는 사용되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="5d9c7-104">This method is obsolete.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="146b0-105">구문</span><span class="sxs-lookup"><span data-stu-id="146b0-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="5d9c7-105">구문</span><span class="sxs-lookup"><span data-stu-id="5d9c7-105">Syntax</span></span>  
   
 ```  
 HRESULT MapFile(  
@@ -36,21 +36,22 @@ HRESULT MapFile(
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="146b0-106">매개 변수</span><span class="sxs-lookup"><span data-stu-id="146b0-106">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="5d9c7-106">매개 변수</span><span class="sxs-lookup"><span data-stu-id="5d9c7-106">Parameters</span></span>  
  `hFile`  
- <span data-ttu-id="146b0-107">[in] 매핑할 파일의 핸들입니다.</span><span class="sxs-lookup"><span data-stu-id="146b0-107">[in] The handle of the file to be mapped.</span></span>  
+ <span data-ttu-id="5d9c7-107">[in] 매핑할 파일의 핸들입니다.</span><span class="sxs-lookup"><span data-stu-id="5d9c7-107">[in] The handle of the file to be mapped.</span></span>  
   
  `hMapAddress`  
- <span data-ttu-id="146b0-108">[out] 매핑 파일을 시작 하는 시작 메모리 주소입니다.</span><span class="sxs-lookup"><span data-stu-id="146b0-108">[out] The starting memory address at which to begin mapping the file.</span></span>  
+ <span data-ttu-id="5d9c7-108">[out] 매핑 파일을 시작 하는 시작 메모리 주소입니다.</span><span class="sxs-lookup"><span data-stu-id="5d9c7-108">[out] The starting memory address at which to begin mapping the file.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="146b0-109">요구 사항</span><span class="sxs-lookup"><span data-stu-id="146b0-109">Requirements</span></span>  
- <span data-ttu-id="146b0-110">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="146b0-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="5d9c7-109">요구 사항</span><span class="sxs-lookup"><span data-stu-id="5d9c7-109">Requirements</span></span>  
+ <span data-ttu-id="5d9c7-110">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="5d9c7-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="146b0-111">**헤더:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="146b0-111">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="5d9c7-111">**헤더:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="5d9c7-111">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="146b0-112">**라이브러리:** MSCorEE.dll에 리소스로 포함</span><span class="sxs-lookup"><span data-stu-id="146b0-112">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="5d9c7-112">**라이브러리:** MSCorEE.dll에 리소스로 포함</span><span class="sxs-lookup"><span data-stu-id="5d9c7-112">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="146b0-113">**.NET framework 버전:** 1.0, 1.1</span><span class="sxs-lookup"><span data-stu-id="146b0-113">**.NET Framework Version:** 1.0, 1.1</span></span>  
+ <span data-ttu-id="5d9c7-113">**.NET framework 버전:** 1.0, 1.1</span><span class="sxs-lookup"><span data-stu-id="5d9c7-113">**.NET Framework Version:** 1.0, 1.1</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="146b0-114">참고자료</span><span class="sxs-lookup"><span data-stu-id="146b0-114">See also</span></span>
-- [<span data-ttu-id="146b0-115">ICorRuntimeHost 인터페이스</span><span class="sxs-lookup"><span data-stu-id="146b0-115">ICorRuntimeHost Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md)
+## <a name="see-also"></a><span data-ttu-id="5d9c7-114">참고자료</span><span class="sxs-lookup"><span data-stu-id="5d9c7-114">See also</span></span>
+
+- [<span data-ttu-id="5d9c7-115">ICorRuntimeHost 인터페이스</span><span class="sxs-lookup"><span data-stu-id="5d9c7-115">ICorRuntimeHost Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md)

@@ -2,16 +2,17 @@
 title: 보안 협상 및 시간 제한
 ms.date: 03/30/2017
 ms.assetid: 02a428f1-84e5-4d28-a11f-53ce31d63196
-ms.openlocfilehash: 38dce9bd6587850a5e3327600bb8bc13c48b93e1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a02c9d7b42eadf9a5ce9af8022fe292d6c23249c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54592616"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59180650"
 ---
-# <a name="security-negotiation-and-timeouts"></a><span data-ttu-id="f2339-102">보안 협상 및 시간 제한</span><span class="sxs-lookup"><span data-stu-id="f2339-102">Security Negotiation and Timeouts</span></span>
-<span data-ttu-id="f2339-103">클라이언트와 서비스 인증 하는 경우 Windows Communication Foundation (WCF) 인증의 일부로 서비스 자격 증명을 협상 하는 위치 모드를 지원 합니다.</span><span class="sxs-lookup"><span data-stu-id="f2339-103">When clients and services authenticate, Windows Communication Foundation (WCF) supports a mode where the service credential is negotiated as part of authentication.</span></span> <span data-ttu-id="f2339-104">이러한 시나리오에서는 서비스 자격 증명을 클라이언트에 전파하기 위해 클라이언트와 서비스 간에 잠재적 다중 교환이 발생합니다.</span><span class="sxs-lookup"><span data-stu-id="f2339-104">In such scenarios, a potentially multi-leg exchange occurs between the client and the service to propagate the service credential to the client.</span></span> <span data-ttu-id="f2339-105"><xref:System.ServiceModel.Channels.LocalServiceSecuritySettings.NegotiationTimeout%2A> 속성을 통해 다중 교환이 완료되는 데 걸리는 시간이 제어됩니다.</span><span class="sxs-lookup"><span data-stu-id="f2339-105">The <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings.NegotiationTimeout%2A> property controls how long the multi-leg exchange can take to complete.</span></span> <span data-ttu-id="f2339-106">하지만 이 시간 제한은 실제로 교환이 단일 요청 응답 시간보다 더 걸린 경우에만 적용됩니다.</span><span class="sxs-lookup"><span data-stu-id="f2339-106">However, this timeout only applies if the exchange actually takes more that a single request-response.</span></span> <span data-ttu-id="f2339-107">협상이 단일 라운드트립에서 완료되는 경우에는 시간 제한이 적용되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="f2339-107">In cases where the negotiation completes in a single round trip, the timeout does not apply.</span></span>  
+# <a name="security-negotiation-and-timeouts"></a><span data-ttu-id="2d7ca-102">보안 협상 및 시간 제한</span><span class="sxs-lookup"><span data-stu-id="2d7ca-102">Security Negotiation and Timeouts</span></span>
+<span data-ttu-id="2d7ca-103">클라이언트와 서비스 인증 하는 경우 Windows Communication Foundation (WCF) 인증의 일부로 서비스 자격 증명을 협상 하는 위치 모드를 지원 합니다.</span><span class="sxs-lookup"><span data-stu-id="2d7ca-103">When clients and services authenticate, Windows Communication Foundation (WCF) supports a mode where the service credential is negotiated as part of authentication.</span></span> <span data-ttu-id="2d7ca-104">이러한 시나리오에서는 서비스 자격 증명을 클라이언트에 전파하기 위해 클라이언트와 서비스 간에 잠재적 다중 교환이 발생합니다.</span><span class="sxs-lookup"><span data-stu-id="2d7ca-104">In such scenarios, a potentially multi-leg exchange occurs between the client and the service to propagate the service credential to the client.</span></span> <span data-ttu-id="2d7ca-105"><xref:System.ServiceModel.Channels.LocalServiceSecuritySettings.NegotiationTimeout%2A> 속성을 통해 다중 교환이 완료되는 데 걸리는 시간이 제어됩니다.</span><span class="sxs-lookup"><span data-stu-id="2d7ca-105">The <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings.NegotiationTimeout%2A> property controls how long the multi-leg exchange can take to complete.</span></span> <span data-ttu-id="2d7ca-106">하지만 이 시간 제한은 실제로 교환이 단일 요청 응답 시간보다 더 걸린 경우에만 적용됩니다.</span><span class="sxs-lookup"><span data-stu-id="2d7ca-106">However, this timeout only applies if the exchange actually takes more that a single request-response.</span></span> <span data-ttu-id="2d7ca-107">협상이 단일 라운드트립에서 완료되는 경우에는 시간 제한이 적용되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="2d7ca-107">In cases where the negotiation completes in a single round trip, the timeout does not apply.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="f2339-108">참고자료</span><span class="sxs-lookup"><span data-stu-id="f2339-108">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="2d7ca-108">참고자료</span><span class="sxs-lookup"><span data-stu-id="2d7ca-108">See also</span></span>
+
 - <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings>
-- [<span data-ttu-id="f2339-109">방법: 최대 클럭 오차 설정</span><span class="sxs-lookup"><span data-stu-id="f2339-109">How to: Set a Max Clock Skew</span></span>](../../../../docs/framework/wcf/feature-details/how-to-set-a-max-clock-skew.md)
+- [<span data-ttu-id="2d7ca-109">방법: 최대 클럭 오차 설정</span><span class="sxs-lookup"><span data-stu-id="2d7ca-109">How to: Set a Max Clock Skew</span></span>](../../../../docs/framework/wcf/feature-details/how-to-set-a-max-clock-skew.md)

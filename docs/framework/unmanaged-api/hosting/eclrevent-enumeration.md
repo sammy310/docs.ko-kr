@@ -16,17 +16,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d66e010340d186eed2222ae2ba8cfb24b8e8d7b0
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 13d564be68d6b49a1616be97710312f33f828d48
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54658574"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59176347"
 ---
-# <a name="eclrevent-enumeration"></a><span data-ttu-id="e078e-102">EClrEvent 열거형</span><span class="sxs-lookup"><span data-stu-id="e078e-102">EClrEvent Enumeration</span></span>
-<span data-ttu-id="e078e-103">호스트 콜백을 등록할 수 있는 공용 언어 런타임 (CLR) 이벤트를 설명 합니다.</span><span class="sxs-lookup"><span data-stu-id="e078e-103">Describes the common language runtime (CLR) events for which the host can register callbacks.</span></span>  
+# <a name="eclrevent-enumeration"></a><span data-ttu-id="db19d-102">EClrEvent 열거형</span><span class="sxs-lookup"><span data-stu-id="db19d-102">EClrEvent Enumeration</span></span>
+<span data-ttu-id="db19d-103">호스트 콜백을 등록할 수 있는 공용 언어 런타임 (CLR) 이벤트를 설명 합니다.</span><span class="sxs-lookup"><span data-stu-id="db19d-103">Describes the common language runtime (CLR) events for which the host can register callbacks.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="e078e-104">구문</span><span class="sxs-lookup"><span data-stu-id="e078e-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="db19d-104">구문</span><span class="sxs-lookup"><span data-stu-id="db19d-104">Syntax</span></span>  
   
 ```  
 typedef enum {  
@@ -37,32 +37,33 @@ typedef enum {
 } EClrEvent;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="e078e-105">멤버</span><span class="sxs-lookup"><span data-stu-id="e078e-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="db19d-105">멤버</span><span class="sxs-lookup"><span data-stu-id="db19d-105">Members</span></span>  
   
-|<span data-ttu-id="e078e-106">멤버</span><span class="sxs-lookup"><span data-stu-id="e078e-106">Member</span></span>|<span data-ttu-id="e078e-107">설명</span><span class="sxs-lookup"><span data-stu-id="e078e-107">Description</span></span>|  
+|<span data-ttu-id="db19d-106">멤버</span><span class="sxs-lookup"><span data-stu-id="db19d-106">Member</span></span>|<span data-ttu-id="db19d-107">설명</span><span class="sxs-lookup"><span data-stu-id="db19d-107">Description</span></span>|  
 |------------|-----------------|  
-|`Event_ClrDisabled`|<span data-ttu-id="e078e-108">CLR 오류를 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="e078e-108">Specifies a fatal CLR error.</span></span>|  
-|`Event_DomainUnload`|<span data-ttu-id="e078e-109">특정 언로드한다 지정 <xref:System.AppDomain>합니다.</span><span class="sxs-lookup"><span data-stu-id="e078e-109">Specifies the unloading of a particular <xref:System.AppDomain>.</span></span>|  
-|`Event_MDAFired`|<span data-ttu-id="e078e-110">관리 디버깅 도우미 (MDA) 메시지에 생성 되었음을 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="e078e-110">Specifies that a Managed Debugging Assistant (MDA) message has been generated.</span></span>|  
-|`Event_StackOverflow`|<span data-ttu-id="e078e-111">스택 오버플로 오류가 발생을 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="e078e-111">Specifies that a stack overflow error has occurred.</span></span>|  
+|`Event_ClrDisabled`|<span data-ttu-id="db19d-108">CLR 오류를 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="db19d-108">Specifies a fatal CLR error.</span></span>|  
+|`Event_DomainUnload`|<span data-ttu-id="db19d-109">특정 언로드한다 지정 <xref:System.AppDomain>합니다.</span><span class="sxs-lookup"><span data-stu-id="db19d-109">Specifies the unloading of a particular <xref:System.AppDomain>.</span></span>|  
+|`Event_MDAFired`|<span data-ttu-id="db19d-110">관리 디버깅 도우미 (MDA) 메시지에 생성 되었음을 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="db19d-110">Specifies that a Managed Debugging Assistant (MDA) message has been generated.</span></span>|  
+|`Event_StackOverflow`|<span data-ttu-id="db19d-111">스택 오버플로 오류가 발생을 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="db19d-111">Specifies that a stack overflow error has occurred.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="e078e-112">설명</span><span class="sxs-lookup"><span data-stu-id="e078e-112">Remarks</span></span>  
- <span data-ttu-id="e078e-113">호스트에 설명 된 이벤트 형식에 대 한 콜백을 등록할 수 있습니다 `EClrEvent` 의 메서드를 호출 하 여 합니다 [ICLROnEventManager](../../../../docs/framework/unmanaged-api/hosting/iclroneventmanager-interface.md) 인터페이스입니다.</span><span class="sxs-lookup"><span data-stu-id="e078e-113">The host can register callbacks for any of the event types described by `EClrEvent` by calling methods of the [ICLROnEventManager](../../../../docs/framework/unmanaged-api/hosting/iclroneventmanager-interface.md) interface.</span></span> <span data-ttu-id="e078e-114">호스트를 호출 하 여이 인터페이스에 대 한 포인터를 가져옵니다 합니다 [iclrcontrol:: Getclrmanager](../../../../docs/framework/unmanaged-api/hosting/iclrcontrol-getclrmanager-method.md) 메서드.</span><span class="sxs-lookup"><span data-stu-id="e078e-114">The host gets a pointer to this interface by calling the [ICLRControl::GetCLRManager](../../../../docs/framework/unmanaged-api/hosting/iclrcontrol-getclrmanager-method.md) method.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="db19d-112">설명</span><span class="sxs-lookup"><span data-stu-id="db19d-112">Remarks</span></span>  
+ <span data-ttu-id="db19d-113">호스트에 설명 된 이벤트 형식에 대 한 콜백을 등록할 수 있습니다 `EClrEvent` 의 메서드를 호출 하 여 합니다 [ICLROnEventManager](../../../../docs/framework/unmanaged-api/hosting/iclroneventmanager-interface.md) 인터페이스입니다.</span><span class="sxs-lookup"><span data-stu-id="db19d-113">The host can register callbacks for any of the event types described by `EClrEvent` by calling methods of the [ICLROnEventManager](../../../../docs/framework/unmanaged-api/hosting/iclroneventmanager-interface.md) interface.</span></span> <span data-ttu-id="db19d-114">호스트를 호출 하 여이 인터페이스에 대 한 포인터를 가져옵니다 합니다 [iclrcontrol:: Getclrmanager](../../../../docs/framework/unmanaged-api/hosting/iclrcontrol-getclrmanager-method.md) 메서드.</span><span class="sxs-lookup"><span data-stu-id="db19d-114">The host gets a pointer to this interface by calling the [ICLRControl::GetCLRManager](../../../../docs/framework/unmanaged-api/hosting/iclrcontrol-getclrmanager-method.md) method.</span></span>  
   
- <span data-ttu-id="e078e-115">합니다 `Event_CLRDisabled` 및 `Event_DomainUnload` 이벤트가 두 번 이상 및는 언로드 또는 CLR의 비활성화를 알리기 위해 서로 다른 여러 스레드에서 발생할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="e078e-115">The `Event_CLRDisabled` and `Event_DomainUnload` events can be raised more than once and from different threads to signal an unload or the disabling of the CLR.</span></span>  
+ <span data-ttu-id="db19d-115">합니다 `Event_CLRDisabled` 및 `Event_DomainUnload` 이벤트가 두 번 이상 및는 언로드 또는 CLR의 비활성화를 알리기 위해 서로 다른 여러 스레드에서 발생할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="db19d-115">The `Event_CLRDisabled` and `Event_DomainUnload` events can be raised more than once and from different threads to signal an unload or the disabling of the CLR.</span></span>  
   
- <span data-ttu-id="e078e-116">합니다 `Event_MDAFired` 이벤트를 생성 시킵니다는 [MDAInfo](../../../../docs/framework/unmanaged-api/hosting/mdainfo-structure.md) MDA 메시지의 세부 정보를 포함 하는 인스턴스.</span><span class="sxs-lookup"><span data-stu-id="e078e-116">The `Event_MDAFired` event raises the creation of an [MDAInfo](../../../../docs/framework/unmanaged-api/hosting/mdainfo-structure.md) instance that contains the details of the MDA message.</span></span> <span data-ttu-id="e078e-117">Mda에 대 한 자세한 내용은 참조 하세요. [관리 디버깅 도우미를 사용 하 여 오류 진단](../../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="e078e-117">For more information about MDAs, see [Diagnosing Errors with Managed Debugging Assistants](../../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md).</span></span>  
+ <span data-ttu-id="db19d-116">합니다 `Event_MDAFired` 이벤트를 생성 시킵니다는 [MDAInfo](../../../../docs/framework/unmanaged-api/hosting/mdainfo-structure.md) MDA 메시지의 세부 정보를 포함 하는 인스턴스.</span><span class="sxs-lookup"><span data-stu-id="db19d-116">The `Event_MDAFired` event raises the creation of an [MDAInfo](../../../../docs/framework/unmanaged-api/hosting/mdainfo-structure.md) instance that contains the details of the MDA message.</span></span> <span data-ttu-id="db19d-117">Mda에 대 한 자세한 내용은 참조 하세요. [관리 디버깅 도우미를 사용 하 여 오류 진단](../../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="db19d-117">For more information about MDAs, see [Diagnosing Errors with Managed Debugging Assistants](../../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md).</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="e078e-118">요구 사항</span><span class="sxs-lookup"><span data-stu-id="e078e-118">Requirements</span></span>  
- <span data-ttu-id="e078e-119">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="e078e-119">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="db19d-118">요구 사항</span><span class="sxs-lookup"><span data-stu-id="db19d-118">Requirements</span></span>  
+ <span data-ttu-id="db19d-119">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="db19d-119">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="e078e-120">**헤더:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="e078e-120">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="db19d-120">**헤더:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="db19d-120">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="e078e-121">**라이브러리:** MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="e078e-121">**Library:** MSCorEE.dll</span></span>  
+ <span data-ttu-id="db19d-121">**라이브러리:** MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="db19d-121">**Library:** MSCorEE.dll</span></span>  
   
- <span data-ttu-id="e078e-122">**.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="e078e-122">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ **<span data-ttu-id="db19d-122">.NET Framework 버전:</span><span class="sxs-lookup"><span data-stu-id="db19d-122">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="e078e-123">참고자료</span><span class="sxs-lookup"><span data-stu-id="e078e-123">See also</span></span>
-- [<span data-ttu-id="e078e-124">IActionOnCLREvent 인터페이스</span><span class="sxs-lookup"><span data-stu-id="e078e-124">IActionOnCLREvent Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iactiononclrevent-interface.md)
-- [<span data-ttu-id="e078e-125">ICLRControl 인터페이스</span><span class="sxs-lookup"><span data-stu-id="e078e-125">ICLRControl Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrcontrol-interface.md)
-- [<span data-ttu-id="e078e-126">호스팅 열거형</span><span class="sxs-lookup"><span data-stu-id="e078e-126">Hosting Enumerations</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)
+## <a name="see-also"></a><span data-ttu-id="db19d-123">참고자료</span><span class="sxs-lookup"><span data-stu-id="db19d-123">See also</span></span>
+
+- [<span data-ttu-id="db19d-124">IActionOnCLREvent 인터페이스</span><span class="sxs-lookup"><span data-stu-id="db19d-124">IActionOnCLREvent Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iactiononclrevent-interface.md)
+- [<span data-ttu-id="db19d-125">ICLRControl 인터페이스</span><span class="sxs-lookup"><span data-stu-id="db19d-125">ICLRControl Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrcontrol-interface.md)
+- [<span data-ttu-id="db19d-126">호스팅 열거형</span><span class="sxs-lookup"><span data-stu-id="db19d-126">Hosting Enumerations</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)

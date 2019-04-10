@@ -9,18 +9,18 @@ helpviewer_keywords:
 ms.assetid: 8cd68620-dcc3-4f20-8835-c728a6820e71
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7d1ddbd9649d82ffe55c16e0657a1c020b50acbb
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 28463bfd3e54e49461d9ce785d26e5dfca62e438
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54610866"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59188965"
 ---
-# <a name="how-to-perform-lazy-initialization-of-objects"></a><span data-ttu-id="e9194-102">방법: 개체의 초기화 지연 수행</span><span class="sxs-lookup"><span data-stu-id="e9194-102">How to: Perform Lazy Initialization of Objects</span></span>
-<span data-ttu-id="e9194-103"><xref:System.Lazy%601?displayProperty=nameWithType> 클래스는 개체의 인스턴스화 및 초기화 지연을 수행하는 작업을 간소화합니다.</span><span class="sxs-lookup"><span data-stu-id="e9194-103">The <xref:System.Lazy%601?displayProperty=nameWithType> class simplifies the work of performing lazy initialization and instantiation of objects.</span></span> <span data-ttu-id="e9194-104">지연 방식으로 개체를 초기화하면 개체가 필요하지 않을 경우 개체를 전혀 만들지 않아도 되고, 필요한 경우에도 개체에 처음 액세스할 때까지 초기화를 연기할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="e9194-104">By initializing objects in a lazy manner, you can avoid having to create them at all if they are never needed, or you can postpone their initialization until they are first accessed.</span></span> <span data-ttu-id="e9194-105">자세한 내용은 [초기화 지연](../../../docs/framework/performance/lazy-initialization.md)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="e9194-105">For more information, see [Lazy Initialization](../../../docs/framework/performance/lazy-initialization.md).</span></span>  
+# <a name="how-to-perform-lazy-initialization-of-objects"></a><span data-ttu-id="f61aa-102">방법: 개체의 초기화 지연 수행</span><span class="sxs-lookup"><span data-stu-id="f61aa-102">How to: Perform Lazy Initialization of Objects</span></span>
+<span data-ttu-id="f61aa-103"><xref:System.Lazy%601?displayProperty=nameWithType> 클래스는 개체의 인스턴스화 및 초기화 지연을 수행하는 작업을 간소화합니다.</span><span class="sxs-lookup"><span data-stu-id="f61aa-103">The <xref:System.Lazy%601?displayProperty=nameWithType> class simplifies the work of performing lazy initialization and instantiation of objects.</span></span> <span data-ttu-id="f61aa-104">지연 방식으로 개체를 초기화하면 개체가 필요하지 않을 경우 개체를 전혀 만들지 않아도 되고, 필요한 경우에도 개체에 처음 액세스할 때까지 초기화를 연기할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="f61aa-104">By initializing objects in a lazy manner, you can avoid having to create them at all if they are never needed, or you can postpone their initialization until they are first accessed.</span></span> <span data-ttu-id="f61aa-105">자세한 내용은 [초기화 지연](../../../docs/framework/performance/lazy-initialization.md)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="f61aa-105">For more information, see [Lazy Initialization](../../../docs/framework/performance/lazy-initialization.md).</span></span>  
   
-## <a name="example"></a><span data-ttu-id="e9194-106">예제</span><span class="sxs-lookup"><span data-stu-id="e9194-106">Example</span></span>  
- <span data-ttu-id="e9194-107">다음 예제에서는 <xref:System.Lazy%601>로 값을 초기화하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="e9194-107">The following example shows how to initialize a value with <xref:System.Lazy%601>.</span></span> <span data-ttu-id="e9194-108">`someCondition` 변수를 true 또는 false로 설정하는 일부 기타 코드에 따라 지연 변수가 필요하지 않을 수 있다고 가정합니다.</span><span class="sxs-lookup"><span data-stu-id="e9194-108">Assume that the lazy variable might not be needed, depending on some other code that sets the `someCondition` variable to true or false.</span></span>  
+## <a name="example"></a><span data-ttu-id="f61aa-106">예제</span><span class="sxs-lookup"><span data-stu-id="f61aa-106">Example</span></span>  
+ <span data-ttu-id="f61aa-107">다음 예제에서는 <xref:System.Lazy%601>로 값을 초기화하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="f61aa-107">The following example shows how to initialize a value with <xref:System.Lazy%601>.</span></span> <span data-ttu-id="f61aa-108">`someCondition` 변수를 true 또는 false로 설정하는 일부 기타 코드에 따라 지연 변수가 필요하지 않을 수 있다고 가정합니다.</span><span class="sxs-lookup"><span data-stu-id="f61aa-108">Assume that the lazy variable might not be needed, depending on some other code that sets the `someCondition` variable to true or false.</span></span>  
   
 ```vb  
 Dim someCondition As Boolean = False  
@@ -70,12 +70,13 @@ End Sub
   }  
 ```  
   
-## <a name="example"></a><span data-ttu-id="e9194-109">예제</span><span class="sxs-lookup"><span data-stu-id="e9194-109">Example</span></span>  
- <span data-ttu-id="e9194-110">다음 예제에서는 <xref:System.Threading.ThreadLocal%601?displayProperty=nameWithType> 클래스를 사용하여 현재 스레드의 현재 개체 인스턴스에만 표시되는 형식을 초기화하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="e9194-110">The following example shows how to use the <xref:System.Threading.ThreadLocal%601?displayProperty=nameWithType> class to initialize a type that is visible only to the current object instance on the current thread.</span></span>  
+## <a name="example"></a><span data-ttu-id="f61aa-109">예제</span><span class="sxs-lookup"><span data-stu-id="f61aa-109">Example</span></span>  
+ <span data-ttu-id="f61aa-110">다음 예제에서는 <xref:System.Threading.ThreadLocal%601?displayProperty=nameWithType> 클래스를 사용하여 현재 스레드의 현재 개체 인스턴스에만 표시되는 형식을 초기화하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="f61aa-110">The following example shows how to use the <xref:System.Threading.ThreadLocal%601?displayProperty=nameWithType> class to initialize a type that is visible only to the current object instance on the current thread.</span></span>  
   
  [!code-csharp[CDS#13](../../../samples/snippets/csharp/VS_Snippets_Misc/cds/cs/cds2.cs#13)]
  [!code-vb[CDS#13](../../../samples/snippets/visualbasic/VS_Snippets_Misc/cds/vb/lazyhowto.vb#13)]  
   
-## <a name="see-also"></a><span data-ttu-id="e9194-111">참고자료</span><span class="sxs-lookup"><span data-stu-id="e9194-111">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="f61aa-111">참고자료</span><span class="sxs-lookup"><span data-stu-id="f61aa-111">See also</span></span>
+
 - <xref:System.Threading.LazyInitializer?displayProperty=nameWithType>
-- [<span data-ttu-id="e9194-112">초기화 지연</span><span class="sxs-lookup"><span data-stu-id="e9194-112">Lazy Initialization</span></span>](../../../docs/framework/performance/lazy-initialization.md)
+- [<span data-ttu-id="f61aa-112">초기화 지연</span><span class="sxs-lookup"><span data-stu-id="f61aa-112">Lazy Initialization</span></span>](../../../docs/framework/performance/lazy-initialization.md)

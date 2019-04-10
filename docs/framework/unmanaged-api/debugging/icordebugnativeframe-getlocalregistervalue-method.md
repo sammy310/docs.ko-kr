@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8e6512871bf9a5cb0219a470267d1be4ecd403b3
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: f53c8290271391e52176f8364b592ce6b46faf71
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57478364"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59195945"
 ---
-# <a name="icordebugnativeframegetlocalregistervalue-method"></a><span data-ttu-id="fe1c2-102">ICorDebugNativeFrame::GetLocalRegisterValue 메서드</span><span class="sxs-lookup"><span data-stu-id="fe1c2-102">ICorDebugNativeFrame::GetLocalRegisterValue Method</span></span>
-<span data-ttu-id="fe1c2-103">네이티브 프레임에 대 한 지정된 된 레지스터에 저장 된 로컬 변수 또는 인수의 값을 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="fe1c2-103">Gets the value of an argument or local variable that is stored in the specified register for this native frame.</span></span>  
+# <a name="icordebugnativeframegetlocalregistervalue-method"></a><span data-ttu-id="52ad8-102">ICorDebugNativeFrame::GetLocalRegisterValue 메서드</span><span class="sxs-lookup"><span data-stu-id="52ad8-102">ICorDebugNativeFrame::GetLocalRegisterValue Method</span></span>
+<span data-ttu-id="52ad8-103">네이티브 프레임에 대 한 지정된 된 레지스터에 저장 된 로컬 변수 또는 인수의 값을 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="52ad8-103">Gets the value of an argument or local variable that is stored in the specified register for this native frame.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="fe1c2-104">구문</span><span class="sxs-lookup"><span data-stu-id="fe1c2-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="52ad8-104">구문</span><span class="sxs-lookup"><span data-stu-id="52ad8-104">Syntax</span></span>  
   
 ```  
 HRESULT GetLocalRegisterValue (  
@@ -38,30 +38,29 @@ HRESULT GetLocalRegisterValue (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="fe1c2-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="fe1c2-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="52ad8-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="52ad8-105">Parameters</span></span>  
  `reg`  
- <span data-ttu-id="fe1c2-106">[in] 값을 포함 하는 레지스터를 지정 하는 "CorDebugRegister" 열거형의 값입니다.</span><span class="sxs-lookup"><span data-stu-id="fe1c2-106">[in] A value of the "CorDebugRegister" enumeration that specifies the register containing the value.</span></span>  
+ <span data-ttu-id="52ad8-106">[in] 값을 포함 하는 레지스터를 지정 하는 "CorDebugRegister" 열거형의 값입니다.</span><span class="sxs-lookup"><span data-stu-id="52ad8-106">[in] A value of the "CorDebugRegister" enumeration that specifies the register containing the value.</span></span>  
   
  `cbSigBlob`  
- <span data-ttu-id="fe1c2-107">[in] 참조 하는 이진 메타 데이터 서명의 크기를 지정 하는 정수를 `pvSigBlob` 매개 변수입니다.</span><span class="sxs-lookup"><span data-stu-id="fe1c2-107">[in] An integer that specifies the size of the binary metadata signature which is referenced by the `pvSigBlob` parameter.</span></span>  
+ <span data-ttu-id="52ad8-107">[in] 참조 하는 이진 메타 데이터 서명의 크기를 지정 하는 정수를 `pvSigBlob` 매개 변수입니다.</span><span class="sxs-lookup"><span data-stu-id="52ad8-107">[in] An integer that specifies the size of the binary metadata signature which is referenced by the `pvSigBlob` parameter.</span></span>  
   
  `pvSigBlob`  
- <span data-ttu-id="fe1c2-108">[in] `PCCOR_SIGNATURE` 이진 메타 데이터 서명의 값의 형식 가리키는 값입니다.</span><span class="sxs-lookup"><span data-stu-id="fe1c2-108">[in] A `PCCOR_SIGNATURE` value that points to the binary metadata signature of the value's type.</span></span>  
+ <span data-ttu-id="52ad8-108">[in] `PCCOR_SIGNATURE` 이진 메타 데이터 서명의 값의 형식 가리키는 값입니다.</span><span class="sxs-lookup"><span data-stu-id="52ad8-108">[in] A `PCCOR_SIGNATURE` value that points to the binary metadata signature of the value's type.</span></span>  
   
  `ppValue`  
- <span data-ttu-id="fe1c2-109">[out] 지정된 된 레지스터에 저장 된 검색된 된 값을 나타내는 "ICorDebugValue" 개체의 주소에 대 한 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="fe1c2-109">[out] A pointer to the address of an "ICorDebugValue" object representing the retrieved value that is stored in the specified register.</span></span>  
+ <span data-ttu-id="52ad8-109">[out] 지정된 된 레지스터에 저장 된 검색된 된 값을 나타내는 "ICorDebugValue" 개체의 주소에 대 한 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="52ad8-109">[out] A pointer to the address of an "ICorDebugValue" object representing the retrieved value that is stored in the specified register.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="fe1c2-110">설명</span><span class="sxs-lookup"><span data-stu-id="fe1c2-110">Remarks</span></span>  
- <span data-ttu-id="fe1c2-111">`GetLocalRegisterValue` 네이티브 프레임이 또는-just-in-time (JIT) 메서드를 사용할 수 있습니다-프레임 컴파일됩니다.</span><span class="sxs-lookup"><span data-stu-id="fe1c2-111">The `GetLocalRegisterValue` method can be used either in a native frame or a just-in-time (JIT)-compiled frame.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="52ad8-110">설명</span><span class="sxs-lookup"><span data-stu-id="52ad8-110">Remarks</span></span>  
+ <span data-ttu-id="52ad8-111">`GetLocalRegisterValue` 네이티브 프레임이 또는-just-in-time (JIT) 메서드를 사용할 수 있습니다-프레임 컴파일됩니다.</span><span class="sxs-lookup"><span data-stu-id="52ad8-111">The `GetLocalRegisterValue` method can be used either in a native frame or a just-in-time (JIT)-compiled frame.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="fe1c2-112">요구 사항</span><span class="sxs-lookup"><span data-stu-id="fe1c2-112">Requirements</span></span>  
- <span data-ttu-id="fe1c2-113">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="fe1c2-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="52ad8-112">요구 사항</span><span class="sxs-lookup"><span data-stu-id="52ad8-112">Requirements</span></span>  
+ <span data-ttu-id="52ad8-113">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="52ad8-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="fe1c2-114">**헤더:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="fe1c2-114">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="52ad8-114">**헤더:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="52ad8-114">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="fe1c2-115">**라이브러리:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="fe1c2-115">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="52ad8-115">**라이브러리:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="52ad8-115">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="fe1c2-116">**.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="fe1c2-116">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ **<span data-ttu-id="52ad8-116">.NET Framework 버전:</span><span class="sxs-lookup"><span data-stu-id="52ad8-116">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="fe1c2-117">참고자료</span><span class="sxs-lookup"><span data-stu-id="fe1c2-117">See also</span></span>
-
+## <a name="see-also"></a><span data-ttu-id="52ad8-117">참고자료</span><span class="sxs-lookup"><span data-stu-id="52ad8-117">See also</span></span>

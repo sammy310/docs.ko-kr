@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 498dd5f8242b4db29d2bb292e01001f9240e6fc3
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 7fa83f55a03ebfff9ae88217b01c86272bf0de93
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57481003"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59178973"
 ---
-# <a name="iclrstrongnamestrongnamegetblobfromimage-method"></a><span data-ttu-id="ffe66-102">ICLRStrongName::StrongNameGetBlobFromImage 메서드</span><span class="sxs-lookup"><span data-stu-id="ffe66-102">ICLRStrongName::StrongNameGetBlobFromImage Method</span></span>
-<span data-ttu-id="ffe66-103">지정된 메모리 주소에 있는 어셈블리 이미지의 이진 표현을 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="ffe66-103">Gets a binary representation of the assembly image at the specified memory address.</span></span>  
+# <a name="iclrstrongnamestrongnamegetblobfromimage-method"></a><span data-ttu-id="a3a55-102">ICLRStrongName::StrongNameGetBlobFromImage 메서드</span><span class="sxs-lookup"><span data-stu-id="a3a55-102">ICLRStrongName::StrongNameGetBlobFromImage Method</span></span>
+<span data-ttu-id="a3a55-103">지정된 메모리 주소에 있는 어셈블리 이미지의 이진 표현을 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="a3a55-103">Gets a binary representation of the assembly image at the specified memory address.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="ffe66-104">구문</span><span class="sxs-lookup"><span data-stu-id="ffe66-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="a3a55-104">구문</span><span class="sxs-lookup"><span data-stu-id="a3a55-104">Syntax</span></span>  
   
 ```  
 HRESULT StrongNameGetBlobFromImage (  
@@ -38,31 +38,32 @@ HRESULT StrongNameGetBlobFromImage (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="ffe66-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="ffe66-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="a3a55-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="a3a55-105">Parameters</span></span>  
  `pbBase`  
- <span data-ttu-id="ffe66-106">[in] 매핑된 어셈블리 매니페스트에 대 한 메모리 주소입니다.</span><span class="sxs-lookup"><span data-stu-id="ffe66-106">[in] The memory address of the mapped assembly manifest.</span></span>  
+ <span data-ttu-id="a3a55-106">[in] 매핑된 어셈블리 매니페스트에 대 한 메모리 주소입니다.</span><span class="sxs-lookup"><span data-stu-id="a3a55-106">[in] The memory address of the mapped assembly manifest.</span></span>  
   
  `dwLength`  
- <span data-ttu-id="ffe66-107">[in] 크기 (바이트)의 이미지 `pbBase`합니다.</span><span class="sxs-lookup"><span data-stu-id="ffe66-107">[in] The size, in bytes, of the image at `pbBase`.</span></span>  
+ <span data-ttu-id="a3a55-107">[in] 크기 (바이트)의 이미지 `pbBase`합니다.</span><span class="sxs-lookup"><span data-stu-id="a3a55-107">[in] The size, in bytes, of the image at `pbBase`.</span></span>  
   
  `pbBlob`  
- <span data-ttu-id="ffe66-108">[in] 이미지의 이진 표현을 포함 하는 버퍼입니다.</span><span class="sxs-lookup"><span data-stu-id="ffe66-108">[in] A buffer to contain the binary representation of the image.</span></span>  
+ <span data-ttu-id="a3a55-108">[in] 이미지의 이진 표현을 포함 하는 버퍼입니다.</span><span class="sxs-lookup"><span data-stu-id="a3a55-108">[in] A buffer to contain the binary representation of the image.</span></span>  
   
  `pcbBlob`  
- <span data-ttu-id="ffe66-109">[out에서] 최대 크기 (바이트), 요청한 `pbBlob`합니다.</span><span class="sxs-lookup"><span data-stu-id="ffe66-109">[in, out] The requested maximum size, in bytes, of `pbBlob`.</span></span> <span data-ttu-id="ffe66-110">실제 크기를 바이트 단위로 반환 될 때의 `pbBlob`합니다.</span><span class="sxs-lookup"><span data-stu-id="ffe66-110">Upon return, the actual size, in bytes, of `pbBlob`.</span></span>  
+ <span data-ttu-id="a3a55-109">[out에서] 최대 크기 (바이트), 요청한 `pbBlob`합니다.</span><span class="sxs-lookup"><span data-stu-id="a3a55-109">[in, out] The requested maximum size, in bytes, of `pbBlob`.</span></span> <span data-ttu-id="a3a55-110">실제 크기를 바이트 단위로 반환 될 때의 `pbBlob`합니다.</span><span class="sxs-lookup"><span data-stu-id="a3a55-110">Upon return, the actual size, in bytes, of `pbBlob`.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="ffe66-111">반환 값</span><span class="sxs-lookup"><span data-stu-id="ffe66-111">Return Value</span></span>  
- <span data-ttu-id="ffe66-112">`S_OK` 메서드가 성공적으로 완료 하는 경우 그렇지 않으면 실패를 나타내는 HRESULT 값을 (참조 [일반적인 HRESULT 값](https://go.microsoft.com/fwlink/?LinkId=213878) 목록에 대 한).</span><span class="sxs-lookup"><span data-stu-id="ffe66-112">`S_OK` if the method completed successfully; otherwise, an HRESULT value that indicates failure (see [Common HRESULT Values](https://go.microsoft.com/fwlink/?LinkId=213878) for a list).</span></span>  
+## <a name="return-value"></a><span data-ttu-id="a3a55-111">반환 값</span><span class="sxs-lookup"><span data-stu-id="a3a55-111">Return Value</span></span>  
+ `S_OK` <span data-ttu-id="a3a55-112">메서드가 성공적으로 완료 하는 경우 그렇지 않으면 실패를 나타내는 HRESULT 값을 (참조 [일반적인 HRESULT 값](https://go.microsoft.com/fwlink/?LinkId=213878) 목록에 대 한).</span><span class="sxs-lookup"><span data-stu-id="a3a55-112">if the method completed successfully; otherwise, an HRESULT value that indicates failure (see [Common HRESULT Values](https://go.microsoft.com/fwlink/?LinkId=213878) for a list).</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="ffe66-113">요구 사항</span><span class="sxs-lookup"><span data-stu-id="ffe66-113">Requirements</span></span>  
- <span data-ttu-id="ffe66-114">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="ffe66-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="a3a55-113">요구 사항</span><span class="sxs-lookup"><span data-stu-id="a3a55-113">Requirements</span></span>  
+ <span data-ttu-id="a3a55-114">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="a3a55-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="ffe66-115">**헤더:** MetaHost.h</span><span class="sxs-lookup"><span data-stu-id="ffe66-115">**Header:** MetaHost.h</span></span>  
+ <span data-ttu-id="a3a55-115">**헤더:** MetaHost.h</span><span class="sxs-lookup"><span data-stu-id="a3a55-115">**Header:** MetaHost.h</span></span>  
   
- <span data-ttu-id="ffe66-116">**라이브러리:** MSCorEE.dll에 리소스로 포함</span><span class="sxs-lookup"><span data-stu-id="ffe66-116">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="a3a55-116">**라이브러리:** MSCorEE.dll에 리소스로 포함</span><span class="sxs-lookup"><span data-stu-id="a3a55-116">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="ffe66-117">**.NET Framework 버전:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="ffe66-117">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
+ **<span data-ttu-id="a3a55-117">.NET Framework 버전:</span><span class="sxs-lookup"><span data-stu-id="a3a55-117">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="ffe66-118">참고자료</span><span class="sxs-lookup"><span data-stu-id="ffe66-118">See also</span></span>
-- [<span data-ttu-id="ffe66-119">StrongNameGetBlob 메서드</span><span class="sxs-lookup"><span data-stu-id="ffe66-119">StrongNameGetBlob Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamegetblob-method.md)
-- [<span data-ttu-id="ffe66-120">ICLRStrongName 인터페이스</span><span class="sxs-lookup"><span data-stu-id="ffe66-120">ICLRStrongName Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)
+## <a name="see-also"></a><span data-ttu-id="a3a55-118">참고자료</span><span class="sxs-lookup"><span data-stu-id="a3a55-118">See also</span></span>
+
+- [<span data-ttu-id="a3a55-119">StrongNameGetBlob 메서드</span><span class="sxs-lookup"><span data-stu-id="a3a55-119">StrongNameGetBlob Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamegetblob-method.md)
+- [<span data-ttu-id="a3a55-120">ICLRStrongName 인터페이스</span><span class="sxs-lookup"><span data-stu-id="a3a55-120">ICLRStrongName Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)

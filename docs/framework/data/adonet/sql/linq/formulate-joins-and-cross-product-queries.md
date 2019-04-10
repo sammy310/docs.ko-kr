@@ -5,79 +5,80 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: d8072ede-0521-4670-9bec-1778ceeb875b
-ms.openlocfilehash: a06c7d451d9ad2856092910065f1195a86c737ab
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b0037f56947a86627ee9ea84369527aec859a0f8
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54548519"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59180513"
 ---
-# <a name="formulate-joins-and-cross-product-queries"></a><span data-ttu-id="64abe-102">방법: 조인 및 교차곱 쿼리 작성</span><span class="sxs-lookup"><span data-stu-id="64abe-102">Formulate Joins and Cross-Product Queries</span></span>
-<span data-ttu-id="64abe-103">다음 예제에서는 여러 테이블의 결과를 결합하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="64abe-103">The following examples show how to combine results from multiple tables.</span></span>  
+# <a name="formulate-joins-and-cross-product-queries"></a><span data-ttu-id="19f42-102">방법: 조인 및 교차곱 쿼리 작성</span><span class="sxs-lookup"><span data-stu-id="19f42-102">Formulate Joins and Cross-Product Queries</span></span>
+<span data-ttu-id="19f42-103">다음 예제에서는 여러 테이블의 결과를 결합하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="19f42-103">The following examples show how to combine results from multiple tables.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="64abe-104">예제</span><span class="sxs-lookup"><span data-stu-id="64abe-104">Example</span></span>  
- <span data-ttu-id="64abe-105">외래 키 탐색을 사용 하 여 다음 예제는 `From` Visual Basic의 절 (`from` 절 C#) London에 있는 고객에 대 한 모든 주문을 선택 합니다.</span><span class="sxs-lookup"><span data-stu-id="64abe-105">The following example uses foreign key navigation in the `From` clause in Visual Basic (`from` clause in C#) to select all orders for customers in London.</span></span>  
+## <a name="example"></a><span data-ttu-id="19f42-104">예제</span><span class="sxs-lookup"><span data-stu-id="19f42-104">Example</span></span>  
+ <span data-ttu-id="19f42-105">외래 키 탐색을 사용 하 여 다음 예제는 `From` Visual Basic의 절 (`from` 절 C#) London에 있는 고객에 대 한 모든 주문을 선택 합니다.</span><span class="sxs-lookup"><span data-stu-id="19f42-105">The following example uses foreign key navigation in the `From` clause in Visual Basic (`from` clause in C#) to select all orders for customers in London.</span></span>  
   
  [!code-csharp[DLinqQueryExamples#47](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryExamples/cs/Program.cs#47)]
  [!code-vb[DLinqQueryExamples#47](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#47)]  
   
-## <a name="example"></a><span data-ttu-id="64abe-106">예제</span><span class="sxs-lookup"><span data-stu-id="64abe-106">Example</span></span>  
- <span data-ttu-id="64abe-107">외래 키 탐색을 사용 하 여 다음 예제에서는 합니다 `Where` Visual Basic의 절 (`where` 절 C#) 품절 아웃에 대해 필터링 할 `Products` 인 `Supplier` United States에.</span><span class="sxs-lookup"><span data-stu-id="64abe-107">The following example uses foreign key navigation in the `Where` clause in Visual Basic (`where` clause in C#) to filter for out-of-stock `Products` whose `Supplier` is in the United States.</span></span>  
+## <a name="example"></a><span data-ttu-id="19f42-106">예제</span><span class="sxs-lookup"><span data-stu-id="19f42-106">Example</span></span>  
+ <span data-ttu-id="19f42-107">외래 키 탐색을 사용 하 여 다음 예제에서는 합니다 `Where` Visual Basic의 절 (`where` 절 C#) 품절 아웃에 대해 필터링 할 `Products` 인 `Supplier` United States에.</span><span class="sxs-lookup"><span data-stu-id="19f42-107">The following example uses foreign key navigation in the `Where` clause in Visual Basic (`where` clause in C#) to filter for out-of-stock `Products` whose `Supplier` is in the United States.</span></span>  
   
  [!code-csharp[DLinqQueryExamples#48](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryExamples/cs/Program.cs#48)]
  [!code-vb[DLinqQueryExamples#48](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#48)]  
   
-## <a name="example"></a><span data-ttu-id="64abe-108">예제</span><span class="sxs-lookup"><span data-stu-id="64abe-108">Example</span></span>  
- <span data-ttu-id="64abe-109">다음 예제에서는에서 외래 키 탐색 합니다 `From` Visual Basic의 절 (`from` 절 C#) Seattle에 있는 직원과 그들의 지역을 나열 하 합니다.</span><span class="sxs-lookup"><span data-stu-id="64abe-109">The following example uses foreign key navigation in the `From` clause in Visual Basic (`from` clause in C#) to filter for employees in Seattle and to list their territories.</span></span>  
+## <a name="example"></a><span data-ttu-id="19f42-108">예제</span><span class="sxs-lookup"><span data-stu-id="19f42-108">Example</span></span>  
+ <span data-ttu-id="19f42-109">다음 예제에서는에서 외래 키 탐색 합니다 `From` Visual Basic의 절 (`from` 절 C#) Seattle에 있는 직원과 그들의 지역을 나열 하 합니다.</span><span class="sxs-lookup"><span data-stu-id="19f42-109">The following example uses foreign key navigation in the `From` clause in Visual Basic (`from` clause in C#) to filter for employees in Seattle and to list their territories.</span></span>  
   
  [!code-csharp[DLinqQueryExamples#49](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryExamples/cs/Program.cs#49)]  
   
-## <a name="example"></a><span data-ttu-id="64abe-110">예제</span><span class="sxs-lookup"><span data-stu-id="64abe-110">Example</span></span>  
- <span data-ttu-id="64abe-111">외래 키 탐색을 사용 하 여 다음 예제는 `Select` Visual Basic의 절 (`select` 절 C#) 다른 직원을 보고 하는 위치와 같은 직원이 있는의 직원 쌍을 필터링 할 `City`합니다.</span><span class="sxs-lookup"><span data-stu-id="64abe-111">The following example uses foreign key navigation in the `Select` clause in Visual Basic (`select` clause in C#) to filter for pairs of employees where one employee reports to the other and where both employees are from the same `City`.</span></span>  
+## <a name="example"></a><span data-ttu-id="19f42-110">예제</span><span class="sxs-lookup"><span data-stu-id="19f42-110">Example</span></span>  
+ <span data-ttu-id="19f42-111">외래 키 탐색을 사용 하 여 다음 예제는 `Select` Visual Basic의 절 (`select` 절 C#) 다른 직원을 보고 하는 위치와 같은 직원이 있는의 직원 쌍을 필터링 할 `City`합니다.</span><span class="sxs-lookup"><span data-stu-id="19f42-111">The following example uses foreign key navigation in the `Select` clause in Visual Basic (`select` clause in C#) to filter for pairs of employees where one employee reports to the other and where both employees are from the same `City`.</span></span>  
   
  [!code-csharp[DLinqQueryExamples#50](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryExamples/cs/Program.cs#50)]
  [!code-vb[DLinqQueryExamples#50](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#50)]  
   
-## <a name="example"></a><span data-ttu-id="64abe-112">예제</span><span class="sxs-lookup"><span data-stu-id="64abe-112">Example</span></span>  
- <span data-ttu-id="64abe-113">다음 Visual Basic 예제에서는 모든 고객과 주문에 대 한 조회 하 고, 고객에 게 주문을 일치 하면 해당 목록의 모든 고객에 대 한 연락처 이름이 제공 되도록 합니다.</span><span class="sxs-lookup"><span data-stu-id="64abe-113">The following Visual Basic example looks for all customers and orders, makes sure that the orders are matched to customers, and guarantees that for every customer in that list, a contact name is provided.</span></span>  
+## <a name="example"></a><span data-ttu-id="19f42-112">예제</span><span class="sxs-lookup"><span data-stu-id="19f42-112">Example</span></span>  
+ <span data-ttu-id="19f42-113">다음 Visual Basic 예제에서는 모든 고객과 주문에 대 한 조회 하 고, 고객에 게 주문을 일치 하면 해당 목록의 모든 고객에 대 한 연락처 이름이 제공 되도록 합니다.</span><span class="sxs-lookup"><span data-stu-id="19f42-113">The following Visual Basic example looks for all customers and orders, makes sure that the orders are matched to customers, and guarantees that for every customer in that list, a contact name is provided.</span></span>  
   
  [!code-vb[DLinqQueryExamples#50v](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#50v)]  
   
-## <a name="example"></a><span data-ttu-id="64abe-114">예제</span><span class="sxs-lookup"><span data-stu-id="64abe-114">Example</span></span>  
- <span data-ttu-id="64abe-115">다음 예제에서는 두 테이블과 두 테이블에서 가져온 프로젝트 결과를 명시적으로 조인합니다.</span><span class="sxs-lookup"><span data-stu-id="64abe-115">The following example explicitly joins two tables and projects results from both tables.</span></span>  
+## <a name="example"></a><span data-ttu-id="19f42-114">예제</span><span class="sxs-lookup"><span data-stu-id="19f42-114">Example</span></span>  
+ <span data-ttu-id="19f42-115">다음 예제에서는 두 테이블과 두 테이블에서 가져온 프로젝트 결과를 명시적으로 조인합니다.</span><span class="sxs-lookup"><span data-stu-id="19f42-115">The following example explicitly joins two tables and projects results from both tables.</span></span>  
   
  [!code-csharp[DLinqQueryExamples#51](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryExamples/cs/Program.cs#51)]
  [!code-vb[DLinqQueryExamples#51](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#51)]  
   
-## <a name="example"></a><span data-ttu-id="64abe-116">예제</span><span class="sxs-lookup"><span data-stu-id="64abe-116">Example</span></span>  
- <span data-ttu-id="64abe-117">다음 예제에서는 세 테이블과 각 테이블에서 가져온 프로젝트 결과를 명시적으로 조인합니다.</span><span class="sxs-lookup"><span data-stu-id="64abe-117">The following example explicitly joins three tables and projects results from each of them.</span></span>  
+## <a name="example"></a><span data-ttu-id="19f42-116">예제</span><span class="sxs-lookup"><span data-stu-id="19f42-116">Example</span></span>  
+ <span data-ttu-id="19f42-117">다음 예제에서는 세 테이블과 각 테이블에서 가져온 프로젝트 결과를 명시적으로 조인합니다.</span><span class="sxs-lookup"><span data-stu-id="19f42-117">The following example explicitly joins three tables and projects results from each of them.</span></span>  
   
  [!code-csharp[DLinqQueryExamples#52](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryExamples/cs/Program.cs#52)]
  [!code-vb[DLinqQueryExamples#52](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#52)]  
   
-## <a name="example"></a><span data-ttu-id="64abe-118">예제</span><span class="sxs-lookup"><span data-stu-id="64abe-118">Example</span></span>  
- <span data-ttu-id="64abe-119">다음 예제에서는 `LEFT OUTER JOIN`를 사용하여 `DefaultIfEmpty()`을 얻는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="64abe-119">The following example shows how to achieve a `LEFT OUTER JOIN` by using `DefaultIfEmpty()`.</span></span> <span data-ttu-id="64abe-120">`DefaultIfEmpty()`에 `Order`가 없는 경우 `Employee` 메서드는 null을 반환합니다.</span><span class="sxs-lookup"><span data-stu-id="64abe-120">The `DefaultIfEmpty()` method returns null when there is no `Order` for the `Employee`.</span></span>  
+## <a name="example"></a><span data-ttu-id="19f42-118">예제</span><span class="sxs-lookup"><span data-stu-id="19f42-118">Example</span></span>  
+ <span data-ttu-id="19f42-119">다음 예제에서는 `LEFT OUTER JOIN`를 사용하여 `DefaultIfEmpty()`을 얻는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="19f42-119">The following example shows how to achieve a `LEFT OUTER JOIN` by using `DefaultIfEmpty()`.</span></span> <span data-ttu-id="19f42-120">`DefaultIfEmpty()`에 `Order`가 없는 경우 `Employee` 메서드는 null을 반환합니다.</span><span class="sxs-lookup"><span data-stu-id="19f42-120">The `DefaultIfEmpty()` method returns null when there is no `Order` for the `Employee`.</span></span>  
   
  [!code-csharp[DLinqQueryExamples#53](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryExamples/cs/Program.cs#53)]
  [!code-vb[DLinqQueryExamples#53](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#53)]  
   
-## <a name="example"></a><span data-ttu-id="64abe-121">예제</span><span class="sxs-lookup"><span data-stu-id="64abe-121">Example</span></span>  
- <span data-ttu-id="64abe-122">다음 예제에서는 조인으로 인해 생성된 `let` 식을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="64abe-122">The following example projects a `let` expression resulting from a join.</span></span>  
+## <a name="example"></a><span data-ttu-id="19f42-121">예제</span><span class="sxs-lookup"><span data-stu-id="19f42-121">Example</span></span>  
+ <span data-ttu-id="19f42-122">다음 예제에서는 조인으로 인해 생성된 `let` 식을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="19f42-122">The following example projects a `let` expression resulting from a join.</span></span>  
   
  [!code-csharp[DLinqQueryExamples#54](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryExamples/cs/Program.cs#54)]
  [!code-vb[DLinqQueryExamples#54](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#54)]  
   
-## <a name="example"></a><span data-ttu-id="64abe-123">예제</span><span class="sxs-lookup"><span data-stu-id="64abe-123">Example</span></span>  
- <span data-ttu-id="64abe-124">다음 예제에서는 복합 키와 함께 사용된 `join`을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="64abe-124">The following example shows a `join` with a composite key.</span></span>  
+## <a name="example"></a><span data-ttu-id="19f42-123">예제</span><span class="sxs-lookup"><span data-stu-id="19f42-123">Example</span></span>  
+ <span data-ttu-id="19f42-124">다음 예제에서는 복합 키와 함께 사용된 `join`을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="19f42-124">The following example shows a `join` with a composite key.</span></span>  
   
  [!code-csharp[DLinqQueryExamples#55](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryExamples/cs/Program.cs#55)]
  [!code-vb[DLinqQueryExamples#55](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#55)]  
   
-## <a name="example"></a><span data-ttu-id="64abe-125">예제</span><span class="sxs-lookup"><span data-stu-id="64abe-125">Example</span></span>  
- <span data-ttu-id="64abe-126">다음 예제에서는 한 면이 nullable이고 다른 면은 nullable이 아닌 `join`을 생성하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="64abe-126">The following example shows how to construct a `join` where one side is nullable and the other is not.</span></span>  
+## <a name="example"></a><span data-ttu-id="19f42-125">예제</span><span class="sxs-lookup"><span data-stu-id="19f42-125">Example</span></span>  
+ <span data-ttu-id="19f42-126">다음 예제에서는 한 면이 nullable이고 다른 면은 nullable이 아닌 `join`을 생성하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="19f42-126">The following example shows how to construct a `join` where one side is nullable and the other is not.</span></span>  
   
  [!code-csharp[DLinqQueryExamples#56](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryExamples/cs/Program.cs#56)]
  [!code-vb[DLinqQueryExamples#56](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#56)]  
   
-## <a name="see-also"></a><span data-ttu-id="64abe-127">참고자료</span><span class="sxs-lookup"><span data-stu-id="64abe-127">See also</span></span>
-- [<span data-ttu-id="64abe-128">쿼리 예제</span><span class="sxs-lookup"><span data-stu-id="64abe-128">Query Examples</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/query-examples.md)
+## <a name="see-also"></a><span data-ttu-id="19f42-127">참고자료</span><span class="sxs-lookup"><span data-stu-id="19f42-127">See also</span></span>
+
+- [<span data-ttu-id="19f42-128">쿼리 예제</span><span class="sxs-lookup"><span data-stu-id="19f42-128">Query Examples</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/query-examples.md)

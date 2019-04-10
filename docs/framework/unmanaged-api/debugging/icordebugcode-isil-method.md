@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 78f246f90e7e3b7c9fff984092a0b5eefcba5a13
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: a82606d90444c2d543065287780e42da4f8b4943
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57478065"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59180689"
 ---
-# <a name="icordebugcodeisil-method"></a><span data-ttu-id="f50f1-102">ICorDebugCode::IsIL 메서드</span><span class="sxs-lookup"><span data-stu-id="f50f1-102">ICorDebugCode::IsIL Method</span></span>
-<span data-ttu-id="f50f1-103">이 "ICorDebugCode" MSIL (Microsoft intermediate language)에서 컴파일된 코드를 나타내는지 여부를 나타내는 값을 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="f50f1-103">Gets a value that indicates whether this "ICorDebugCode" represents code that was compiled in Microsoft intermediate language (MSIL).</span></span>  
+# <a name="icordebugcodeisil-method"></a><span data-ttu-id="08336-102">ICorDebugCode::IsIL 메서드</span><span class="sxs-lookup"><span data-stu-id="08336-102">ICorDebugCode::IsIL Method</span></span>
+<span data-ttu-id="08336-103">이 "ICorDebugCode" MSIL (Microsoft intermediate language)에서 컴파일된 코드를 나타내는지 여부를 나타내는 값을 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="08336-103">Gets a value that indicates whether this "ICorDebugCode" represents code that was compiled in Microsoft intermediate language (MSIL).</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="f50f1-104">구문</span><span class="sxs-lookup"><span data-stu-id="f50f1-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="08336-104">구문</span><span class="sxs-lookup"><span data-stu-id="08336-104">Syntax</span></span>  
   
 ```  
 HRESULT IsIL (  
@@ -35,18 +35,17 @@ HRESULT IsIL (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="f50f1-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="f50f1-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="08336-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="08336-105">Parameters</span></span>  
  `pbIL`  
- <span data-ttu-id="f50f1-106">[out] `true` 이 `ICorDebugCode` 이 고, 그렇지 않으면 MSIL에 컴파일된 코드를 나타내는 `false`합니다.</span><span class="sxs-lookup"><span data-stu-id="f50f1-106">[out] `true` if this `ICorDebugCode` represents code that was compiled in MSIL; otherwise, `false`.</span></span>  
+ <span data-ttu-id="08336-106">[out] `true` 이 `ICorDebugCode` 이 고, 그렇지 않으면 MSIL에 컴파일된 코드를 나타내는 `false`합니다.</span><span class="sxs-lookup"><span data-stu-id="08336-106">[out] `true` if this `ICorDebugCode` represents code that was compiled in MSIL; otherwise, `false`.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="f50f1-107">요구 사항</span><span class="sxs-lookup"><span data-stu-id="f50f1-107">Requirements</span></span>  
- <span data-ttu-id="f50f1-108">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="f50f1-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="08336-107">요구 사항</span><span class="sxs-lookup"><span data-stu-id="08336-107">Requirements</span></span>  
+ <span data-ttu-id="08336-108">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="08336-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="f50f1-109">**헤더:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="f50f1-109">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="08336-109">**헤더:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="08336-109">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="f50f1-110">**라이브러리:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="f50f1-110">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="08336-110">**라이브러리:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="08336-110">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="f50f1-111">**.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="f50f1-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ **<span data-ttu-id="08336-111">.NET Framework 버전:</span><span class="sxs-lookup"><span data-stu-id="08336-111">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="f50f1-112">참고자료</span><span class="sxs-lookup"><span data-stu-id="f50f1-112">See also</span></span>
-
+## <a name="see-also"></a><span data-ttu-id="08336-112">참고자료</span><span class="sxs-lookup"><span data-stu-id="08336-112">See also</span></span>

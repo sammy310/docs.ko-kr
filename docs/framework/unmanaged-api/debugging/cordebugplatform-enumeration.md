@@ -16,17 +16,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d8cbf09ab4ad0192902a964d55a050685b024284
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 03b6f1b29157889d0e84e5dddc94d5e3ae27efce
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54574302"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59180943"
 ---
-# <a name="cordebugplatform-enumeration"></a><span data-ttu-id="034f2-102">CorDebugPlatform 열거형</span><span class="sxs-lookup"><span data-stu-id="034f2-102">CorDebugPlatform Enumeration</span></span>
-<span data-ttu-id="034f2-103">사용 되는 대상 플랫폼 값을 제공 합니다 [icordebugdatatarget:: Getplatform](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget-getplatform-method.md) 메서드.</span><span class="sxs-lookup"><span data-stu-id="034f2-103">Provides target platform values that are used by the [ICorDebugDataTarget::GetPlatform](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget-getplatform-method.md) method.</span></span>  
+# <a name="cordebugplatform-enumeration"></a><span data-ttu-id="eb3b5-102">CorDebugPlatform 열거형</span><span class="sxs-lookup"><span data-stu-id="eb3b5-102">CorDebugPlatform Enumeration</span></span>
+<span data-ttu-id="eb3b5-103">사용 되는 대상 플랫폼 값을 제공 합니다 [icordebugdatatarget:: Getplatform](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget-getplatform-method.md) 메서드.</span><span class="sxs-lookup"><span data-stu-id="eb3b5-103">Provides target platform values that are used by the [ICorDebugDataTarget::GetPlatform](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget-getplatform-method.md) method.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="034f2-104">구문</span><span class="sxs-lookup"><span data-stu-id="034f2-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="eb3b5-104">구문</span><span class="sxs-lookup"><span data-stu-id="eb3b5-104">Syntax</span></span>  
   
 ```  
 typedef enum CorDebugPlatform  
@@ -41,28 +41,29 @@ typedef enum CorDebugPlatform
 } CorDebugPlatform;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="034f2-105">멤버</span><span class="sxs-lookup"><span data-stu-id="034f2-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="eb3b5-105">멤버</span><span class="sxs-lookup"><span data-stu-id="eb3b5-105">Members</span></span>  
   
-|<span data-ttu-id="034f2-106">멤버</span><span class="sxs-lookup"><span data-stu-id="034f2-106">Member</span></span>|<span data-ttu-id="034f2-107">설명</span><span class="sxs-lookup"><span data-stu-id="034f2-107">Description</span></span>|  
+|<span data-ttu-id="eb3b5-106">멤버</span><span class="sxs-lookup"><span data-stu-id="eb3b5-106">Member</span></span>|<span data-ttu-id="eb3b5-107">설명</span><span class="sxs-lookup"><span data-stu-id="eb3b5-107">Description</span></span>|  
 |------------|-----------------|  
-|<span data-ttu-id="034f2-108">CORDB_PLATFORM_WINDOWS_X86</span><span class="sxs-lookup"><span data-stu-id="034f2-108">CORDB_PLATFORM_WINDOWS_X86</span></span>|<span data-ttu-id="034f2-109">대상 플랫폼이 Intel x86 하드웨어에서 실행되는 Windows입니다.</span><span class="sxs-lookup"><span data-stu-id="034f2-109">The target platform is Windows running on Intel x86 hardware.</span></span>|  
-|<span data-ttu-id="034f2-110">CORDB_PLATFORM_WINDOWS_AMD64</span><span class="sxs-lookup"><span data-stu-id="034f2-110">CORDB_PLATFORM_WINDOWS_AMD64</span></span>|<span data-ttu-id="034f2-111">대상 플랫폼이 AMD64 또는 Intel EM64T 하드웨어에서 실행되는 64비트 Windows입니다.</span><span class="sxs-lookup"><span data-stu-id="034f2-111">The target platform is 64 bit Windows running on AMD64 or Intel EM64T hardware.</span></span>|  
-|<span data-ttu-id="034f2-112">CORDB_PLATFORM_WINDOWS_IA64</span><span class="sxs-lookup"><span data-stu-id="034f2-112">CORDB_PLATFORM_WINDOWS_IA64</span></span>|<span data-ttu-id="034f2-113">대상 플랫폼이 Intel IA-64 하드웨어에서 실행되는 32비트 Windows입니다.</span><span class="sxs-lookup"><span data-stu-id="034f2-113">The target platform is 32 bit Windows running on Intel IA-64 hardware.</span></span>|  
-|<span data-ttu-id="034f2-114">CORDB_PLATFORM_MAC_PPC</span><span class="sxs-lookup"><span data-stu-id="034f2-114">CORDB_PLATFORM_MAC_PPC</span></span>|<span data-ttu-id="034f2-115">대상 플랫폼이 PowerPC 하드웨어에서 실행 되는 Macintosh 운영 체제는입니다.</span><span class="sxs-lookup"><span data-stu-id="034f2-115">The target platform is the Macintosh operating system running on PowerPC hardware.</span></span>|  
-|<span data-ttu-id="034f2-116">CORDB_PLATFORM_MAC_X86</span><span class="sxs-lookup"><span data-stu-id="034f2-116">CORDB_PLATFORM_MAC_X86</span></span>|<span data-ttu-id="034f2-117">대상 플랫폼이 Intel x86 하드웨어에서 실행 하는 Macintosh 운영 체제는입니다.</span><span class="sxs-lookup"><span data-stu-id="034f2-117">The target platform is the Macintosh operating system running on Intel x86 hardware.</span></span>|  
-|<span data-ttu-id="034f2-118">CORDB_PLATFORM_WINDOWS_ARM</span><span class="sxs-lookup"><span data-stu-id="034f2-118">CORDB_PLATFORM_WINDOWS_ARM</span></span>|<span data-ttu-id="034f2-119">대상 플랫폼이 Windows ARM 하드웨어에서 실행 되는 Macintosh 운영 체제는입니다.</span><span class="sxs-lookup"><span data-stu-id="034f2-119">The target platform is the Macintosh operating system running on Windows ARM hardware.</span></span>|  
-|<span data-ttu-id="034f2-120">CORDB_PLATFORM_MAC_AMD64</span><span class="sxs-lookup"><span data-stu-id="034f2-120">CORDB_PLATFORM_MAC_AMD64</span></span>|<span data-ttu-id="034f2-121">대상 플랫폼이 AMD64 하드웨어에서 실행 되는 Macintosh 운영 체제는입니다.</span><span class="sxs-lookup"><span data-stu-id="034f2-121">The target platform is the Macintosh operating system running on AMD64 hardware.</span></span>|  
+|<span data-ttu-id="eb3b5-108">CORDB_PLATFORM_WINDOWS_X86</span><span class="sxs-lookup"><span data-stu-id="eb3b5-108">CORDB_PLATFORM_WINDOWS_X86</span></span>|<span data-ttu-id="eb3b5-109">대상 플랫폼이 Intel x86 하드웨어에서 실행되는 Windows입니다.</span><span class="sxs-lookup"><span data-stu-id="eb3b5-109">The target platform is Windows running on Intel x86 hardware.</span></span>|  
+|<span data-ttu-id="eb3b5-110">CORDB_PLATFORM_WINDOWS_AMD64</span><span class="sxs-lookup"><span data-stu-id="eb3b5-110">CORDB_PLATFORM_WINDOWS_AMD64</span></span>|<span data-ttu-id="eb3b5-111">대상 플랫폼이 AMD64 또는 Intel EM64T 하드웨어에서 실행되는 64비트 Windows입니다.</span><span class="sxs-lookup"><span data-stu-id="eb3b5-111">The target platform is 64 bit Windows running on AMD64 or Intel EM64T hardware.</span></span>|  
+|<span data-ttu-id="eb3b5-112">CORDB_PLATFORM_WINDOWS_IA64</span><span class="sxs-lookup"><span data-stu-id="eb3b5-112">CORDB_PLATFORM_WINDOWS_IA64</span></span>|<span data-ttu-id="eb3b5-113">대상 플랫폼이 Intel IA-64 하드웨어에서 실행되는 32비트 Windows입니다.</span><span class="sxs-lookup"><span data-stu-id="eb3b5-113">The target platform is 32 bit Windows running on Intel IA-64 hardware.</span></span>|  
+|<span data-ttu-id="eb3b5-114">CORDB_PLATFORM_MAC_PPC</span><span class="sxs-lookup"><span data-stu-id="eb3b5-114">CORDB_PLATFORM_MAC_PPC</span></span>|<span data-ttu-id="eb3b5-115">대상 플랫폼이 PowerPC 하드웨어에서 실행 되는 Macintosh 운영 체제는입니다.</span><span class="sxs-lookup"><span data-stu-id="eb3b5-115">The target platform is the Macintosh operating system running on PowerPC hardware.</span></span>|  
+|<span data-ttu-id="eb3b5-116">CORDB_PLATFORM_MAC_X86</span><span class="sxs-lookup"><span data-stu-id="eb3b5-116">CORDB_PLATFORM_MAC_X86</span></span>|<span data-ttu-id="eb3b5-117">대상 플랫폼이 Intel x86 하드웨어에서 실행 하는 Macintosh 운영 체제는입니다.</span><span class="sxs-lookup"><span data-stu-id="eb3b5-117">The target platform is the Macintosh operating system running on Intel x86 hardware.</span></span>|  
+|<span data-ttu-id="eb3b5-118">CORDB_PLATFORM_WINDOWS_ARM</span><span class="sxs-lookup"><span data-stu-id="eb3b5-118">CORDB_PLATFORM_WINDOWS_ARM</span></span>|<span data-ttu-id="eb3b5-119">대상 플랫폼이 Windows ARM 하드웨어에서 실행 되는 Macintosh 운영 체제는입니다.</span><span class="sxs-lookup"><span data-stu-id="eb3b5-119">The target platform is the Macintosh operating system running on Windows ARM hardware.</span></span>|  
+|<span data-ttu-id="eb3b5-120">CORDB_PLATFORM_MAC_AMD64</span><span class="sxs-lookup"><span data-stu-id="eb3b5-120">CORDB_PLATFORM_MAC_AMD64</span></span>|<span data-ttu-id="eb3b5-121">대상 플랫폼이 AMD64 하드웨어에서 실행 되는 Macintosh 운영 체제는입니다.</span><span class="sxs-lookup"><span data-stu-id="eb3b5-121">The target platform is the Macintosh operating system running on AMD64 hardware.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="034f2-122">요구 사항</span><span class="sxs-lookup"><span data-stu-id="034f2-122">Requirements</span></span>  
- <span data-ttu-id="034f2-123">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="034f2-123">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="eb3b5-122">요구 사항</span><span class="sxs-lookup"><span data-stu-id="eb3b5-122">Requirements</span></span>  
+ <span data-ttu-id="eb3b5-123">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="eb3b5-123">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="034f2-124">**헤더:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="034f2-124">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="eb3b5-124">**헤더:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="eb3b5-124">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="034f2-125">**라이브러리:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="034f2-125">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="eb3b5-125">**라이브러리:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="eb3b5-125">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="034f2-126">**.NET Framework 버전:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="034f2-126">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
+ **<span data-ttu-id="eb3b5-126">.NET Framework 버전:</span><span class="sxs-lookup"><span data-stu-id="eb3b5-126">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
- <span data-ttu-id="034f2-127">`CORDB_PLATFORM_WINDOWS_ARM` 및 `CORDB_PLATFORM_MAC_AMD64` 멤버는 .NET Framework 4.5.2 이상 버전에서 사용 가능합니다.</span><span class="sxs-lookup"><span data-stu-id="034f2-127">The `CORDB_PLATFORM_WINDOWS_ARM` and `CORDB_PLATFORM_MAC_AMD64` members are available in the .NET Framework 4.5.2 and later versions.</span></span>  
+ <span data-ttu-id="eb3b5-127">`CORDB_PLATFORM_WINDOWS_ARM` 및 `CORDB_PLATFORM_MAC_AMD64` 멤버는 .NET Framework 4.5.2 이상 버전에서 사용 가능합니다.</span><span class="sxs-lookup"><span data-stu-id="eb3b5-127">The `CORDB_PLATFORM_WINDOWS_ARM` and `CORDB_PLATFORM_MAC_AMD64` members are available in the .NET Framework 4.5.2 and later versions.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="034f2-128">참고자료</span><span class="sxs-lookup"><span data-stu-id="034f2-128">See also</span></span>
-- [<span data-ttu-id="034f2-129">디버깅 열거형</span><span class="sxs-lookup"><span data-stu-id="034f2-129">Debugging Enumerations</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
+## <a name="see-also"></a><span data-ttu-id="eb3b5-128">참고자료</span><span class="sxs-lookup"><span data-stu-id="eb3b5-128">See also</span></span>
+
+- [<span data-ttu-id="eb3b5-129">디버깅 열거형</span><span class="sxs-lookup"><span data-stu-id="eb3b5-129">Debugging Enumerations</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)

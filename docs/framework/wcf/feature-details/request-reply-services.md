@@ -7,17 +7,17 @@ helpviewer_keywords:
 - WCF [WCF], request-reply services
 - request-reply contracts [WCF]
 ms.assetid: 2fa710f1-47f4-4598-b063-3ab3bd22ebba
-ms.openlocfilehash: a8d9ee30df5198335b15d2d7130d853f4dd73a18
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1ff11b1cae4ec8f6fe886a55cb0add27831048d0
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54516657"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59177816"
 ---
-# <a name="request-reply-services"></a><span data-ttu-id="7cd96-102">요청-회신 서비스</span><span class="sxs-lookup"><span data-stu-id="7cd96-102">Request-Reply Services</span></span>
-<span data-ttu-id="7cd96-103">요청-회신 서비스는 Windows Communication Foundation (WCF)에서 작업 계약의 기본 형식입니다.</span><span class="sxs-lookup"><span data-stu-id="7cd96-103">Request-reply services are the default type of operation contract in Windows Communication Foundation (WCF).</span></span> <span data-ttu-id="7cd96-104">클라이언트는 서비스 작업에 대한 호출을 만들고 서비스로부터 응답을 기다립니다.</span><span class="sxs-lookup"><span data-stu-id="7cd96-104">Clients make calls to service operations and wait for a response from the service.</span></span> <span data-ttu-id="7cd96-105">사용자는 서비스 작업에 대한 호출을 동기적으로(클라이언트가 서비스 또는 호출 시간으로부터 응답을 받을 때까지 차단하는 경우) 또는 비동기적으로(클라이언트가 서비스 작업에 대한 호출을 만들고, 작업을 계속하고, 다른 스레드의 서비스로부터 응답을 받는 경우) 수행할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="7cd96-105">You can perform calls to a service operation either synchronously, where the client blocks until it receives a response from the service or the call times, or asynchronously, where the client makes a call to the service operation, continues working, and receives the response from the service on another thread.</span></span>  
+# <a name="request-reply-services"></a><span data-ttu-id="68ff0-102">요청-회신 서비스</span><span class="sxs-lookup"><span data-stu-id="68ff0-102">Request-Reply Services</span></span>
+<span data-ttu-id="68ff0-103">요청-회신 서비스는 Windows Communication Foundation (WCF)에서 작업 계약의 기본 형식입니다.</span><span class="sxs-lookup"><span data-stu-id="68ff0-103">Request-reply services are the default type of operation contract in Windows Communication Foundation (WCF).</span></span> <span data-ttu-id="68ff0-104">클라이언트는 서비스 작업에 대한 호출을 만들고 서비스로부터 응답을 기다립니다.</span><span class="sxs-lookup"><span data-stu-id="68ff0-104">Clients make calls to service operations and wait for a response from the service.</span></span> <span data-ttu-id="68ff0-105">사용자는 서비스 작업에 대한 호출을 동기적으로(클라이언트가 서비스 또는 호출 시간으로부터 응답을 받을 때까지 차단하는 경우) 또는 비동기적으로(클라이언트가 서비스 작업에 대한 호출을 만들고, 작업을 계속하고, 다른 스레드의 서비스로부터 응답을 받는 경우) 수행할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="68ff0-105">You can perform calls to a service operation either synchronously, where the client blocks until it receives a response from the service or the call times, or asynchronously, where the client makes a call to the service operation, continues working, and receives the response from the service on another thread.</span></span>  
   
- <span data-ttu-id="7cd96-106">요청-회신 서비스 계약을 만들려면 다음 샘플 코드에서처럼 서비스 계약을 정의하고 <xref:System.ServiceModel.OperationContractAttribute> 클래스를 각 작업에 적용합니다.</span><span class="sxs-lookup"><span data-stu-id="7cd96-106">To create a request-reply service contract, define your service contract, and apply the <xref:System.ServiceModel.OperationContractAttribute> class to each operation, as shown in the following sample code.</span></span>  
+ <span data-ttu-id="68ff0-106">요청-회신 서비스 계약을 만들려면 다음 샘플 코드에서처럼 서비스 계약을 정의하고 <xref:System.ServiceModel.OperationContractAttribute> 클래스를 각 작업에 적용합니다.</span><span class="sxs-lookup"><span data-stu-id="68ff0-106">To create a request-reply service contract, define your service contract, and apply the <xref:System.ServiceModel.OperationContractAttribute> class to each operation, as shown in the following sample code.</span></span>  
   
 ```  
 [ServiceContract(Namespace="http://Microsoft.ServiceModel.Samples")]  
@@ -28,8 +28,9 @@ public interface IRequestReplyCalculator
 }  
 ```  
   
- <span data-ttu-id="7cd96-107">기본 동작이므로 <xref:System.ServiceModel.OperationContractAttribute.IsOneWay%2A> 속성을 `false`로 설정할 필요가 없습니다.</span><span class="sxs-lookup"><span data-stu-id="7cd96-107">You do not have to set the  <xref:System.ServiceModel.OperationContractAttribute.IsOneWay%2A> property to `false` because this is the default behavior.</span></span>  
+ <span data-ttu-id="68ff0-107">기본 동작이므로 <xref:System.ServiceModel.OperationContractAttribute.IsOneWay%2A> 속성을 `false`로 설정할 필요가 없습니다.</span><span class="sxs-lookup"><span data-stu-id="68ff0-107">You do not have to set the  <xref:System.ServiceModel.OperationContractAttribute.IsOneWay%2A> property to `false` because this is the default behavior.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="7cd96-108">참고자료</span><span class="sxs-lookup"><span data-stu-id="7cd96-108">See also</span></span>
-- [<span data-ttu-id="7cd96-109">단방향 서비스</span><span class="sxs-lookup"><span data-stu-id="7cd96-109">One-Way Services</span></span>](../../../../docs/framework/wcf/feature-details/one-way-services.md)
-- [<span data-ttu-id="7cd96-110">이중 서비스</span><span class="sxs-lookup"><span data-stu-id="7cd96-110">Duplex Services</span></span>](../../../../docs/framework/wcf/feature-details/duplex-services.md)
+## <a name="see-also"></a><span data-ttu-id="68ff0-108">참고자료</span><span class="sxs-lookup"><span data-stu-id="68ff0-108">See also</span></span>
+
+- [<span data-ttu-id="68ff0-109">단방향 서비스</span><span class="sxs-lookup"><span data-stu-id="68ff0-109">One-Way Services</span></span>](../../../../docs/framework/wcf/feature-details/one-way-services.md)
+- [<span data-ttu-id="68ff0-110">이중 서비스</span><span class="sxs-lookup"><span data-stu-id="68ff0-110">Duplex Services</span></span>](../../../../docs/framework/wcf/feature-details/duplex-services.md)
