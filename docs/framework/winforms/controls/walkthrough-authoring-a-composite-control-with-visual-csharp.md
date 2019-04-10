@@ -8,12 +8,12 @@ helpviewer_keywords:
 - user controls [C#]
 - custom controls [Windows Forms], creating
 ms.assetid: f88481a8-c746-4a36-9479-374ce5f2e91f
-ms.openlocfilehash: 48d29c12407f7364794040f4fccd351156244a69
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 2f8c295e961fdf62a14b7e63ab990e8f99379cfd
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57723636"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59177382"
 ---
 # <a name="walkthrough-authoring-a-composite-control-with-visual-c"></a>연습: Visual c#에서 복합 컨트롤 제작\#
 복합 컨트롤은 사용자 지정 그래픽 인터페이스를 만들고 재사용할 수 있는 방법을 제공합니다. 복합 컨트롤은 기본적으로 시각적 표현이 있는 구성 요소입니다. 따라서 사용자 입력의 유효성을 검사하고 표시 속성을 수정하거나 작성자가 요구하는 다른 작업을 수행하여 기능을 확장할 수 있는 하나 이상의 Windows Forms 컨트롤, 구성 요소 또는 코드 블록으로 구성할 수 있습니다. 복합 컨트롤은 다른 컨트롤과 동일한 방식으로 Windows Forms에 배치할 수 있습니다. 이 연습의 첫 번째 부분에서는 `ctlClock`이라는 간단한 복합 컨트롤을 만듭니다. 두 번째 부분에서는 상속을 통해 `ctlClock`의 기능을 확장합니다.  
@@ -30,7 +30,7 @@ ms.locfileid: "57723636"
   
 2.  Visual C# 프로젝트의 목록에서 선택 합니다 **Windows Forms 컨트롤 라이브러리** 프로젝트 템플릿, 형식 `ctlClockLib` 에 **이름** 상자를 선택한 다음 클릭 **확인**합니다.  
   
-     프로젝트 이름, `ctlClockLib`는 기본적으로 루트 네임스페이스에도 할당됩니다. 루트 네임스페이스는 어셈블리에서 구성 요소의 이름을 정규화하는 데 사용됩니다. 예를 들어 두 어셈블리에서 `ctlClock`이라는 구성 요소를 제공하면 `ctlClockLib.ctlClock.`을 사용하여 `ctlClock` 구성 요소를 지정할 수 있습니다.  
+     프로젝트 이름, `ctlClockLib`는 기본적으로 루트 네임스페이스에도 할당됩니다. 루트 네임스페이스는 어셈블리에서 구성 요소의 이름을 정규화하는 데 사용됩니다. 예를 들어, 명명 된 구성 요소를 제공 하는 두 명의 어셈블리가 `ctlClock`를 지정할 수 있습니다 프로그램 `ctlClock` 구성 요소를 사용 하 여 `ctlClockLib.ctlClock.`  
   
 3.  솔루션 탐색기에서 **UserControl1.cs**를 마우스 오른쪽 단추로 클릭한 다음 **이름 바꾸기**를 클릭합니다. 파일 이름을 `ctlClock.cs`로 변경합니다. 코드 요소 “UserControl1”에 대한 모든 참조 이름을 변경할지 묻는 메시지가 표시되면 **예** 단추를 클릭합니다.  
   
@@ -248,9 +248,9 @@ ms.locfileid: "57723636"
     |속성|설정|  
     |--------------|-------------|  
     |**이름**|`lblAlarm`|  
-    |**텍스트**|**Alarm!**|  
+    |**텍스트**|**경고!**|  
     |**TextAlign**|`MiddleCenter`|  
-    |**Visible**|`false`|  
+    |**표시**|`false`|  
   
 ### <a name="adding-the-alarm-functionality"></a>경보 기능 추가  
  이전 프로시저에서는 복합 컨트롤에서 경보 기능을 설정하는 속성 및 컨트롤을 추가했습니다. 이 프로시저에서는 현재 시간을 경보 시간과 비교하여 같으면 깜박이는 코드를 추가합니다. `ctlClock`의 `timer1_Tick` 메소드를 재정의하고 코드를 더 추가하여 `ctlClock`의 모든 고유 기능을 유지하면서 `ctlAlarmClock`의 기능을 확장합니다.  
@@ -370,7 +370,7 @@ ms.locfileid: "57723636"
     |`label1`|**텍스트**|`(blank space)`|  
     ||**이름**|`lblTest`|  
     |`dateTimePicker1`|**이름**|`dtpTest`|  
-    ||**Format**|<xref:System.Windows.Forms.DateTimePickerFormat.Time>|  
+    ||**형식**|<xref:System.Windows.Forms.DateTimePickerFormat.Time>|  
   
 10. 디자이너에서 **dtpTest**를 두 번 클릭합니다.  
   
@@ -405,6 +405,7 @@ ms.locfileid: "57723636"
      이 연습에서 여러 가지 주요 개념을 살펴보았습니다. 컨트롤 및 구성 요소를 복합 컨트롤 컨테이너에 결합하여 복합 컨트롤을 만드는 방법을 배웠습니다. 컨트롤에 속성을 추가하고 사용자 지정 기능을 작성하는 코드를 작성하는 방법도 알아봤습니다. 마지막 섹션에서는 상속성을 통해 지정된 복합 컨트롤의 기능을 확장하고 해당 메서드를 재정의하여 호스트 메서드의 기능을 수정해보았습니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [사용자 지정 컨트롤의 종류](varieties-of-custom-controls.md)
-- [방법: 컨트롤에 표시 된 도구 상자 항목 선택 대화 상자](how-to-display-a-control-in-the-choose-toolbox-items-dialog-box.md)
-- [연습: 시각적 개체를 사용 하 여 Windows Forms 컨트롤에서 상속C#](walkthrough-inheriting-from-a-windows-forms-control-with-visual-csharp.md)
+- [방법: 도구 상자 항목 선택 대화 상자에 컨트롤 표시](how-to-display-a-control-in-the-choose-toolbox-items-dialog-box.md)
+- [연습: Visual C#을 사용하여 Windows Forms 컨트롤에서 상속](walkthrough-inheriting-from-a-windows-forms-control-with-visual-csharp.md)

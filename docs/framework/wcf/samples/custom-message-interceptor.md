@@ -2,12 +2,12 @@
 title: 사용자 지정 메시지 인터셉터
 ms.date: 03/30/2017
 ms.assetid: 73f20972-53f8-475a-8bfe-c133bfa225b0
-ms.openlocfilehash: 789b3a2003ab96a9658eab7c092067e6110a46cd
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
-ms.translationtype: MT
+ms.openlocfilehash: c756b9947b48fbf7cd902bf570c6d29f52fdaad6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58824782"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59181417"
 ---
 # <a name="custom-message-interceptor"></a>사용자 지정 메시지 인터셉터
 이 샘플에서는 채널 확장성 모델의 사용 방법을 보여 줍니다. 특히 채널 팩터리 및 채널 수신기를 만드는 사용자 지정 바인딩 요소를 구현하여 런타임 스택의 특정 지점에서 들어오고 보내는 모든 메시지를 가로채는 방법을 보여 줍니다. 또한 이 샘플에는 이 사용자 지정 팩터리의 사용을 보여 주는 클라이언트와 서버도 포함되어 있습니다.  
@@ -160,4 +160,3 @@ Dangerous wind detected! Reported speed (70) is greater than 64 kph.
 4.  단일 또는 다중 컴퓨터 구성에서 샘플을 실행 하려면의 지침을 따릅니다 [Windows Communication Foundation 샘플 실행](../../../../docs/framework/wcf/samples/running-the-samples.md)합니다.  
   
 5.  먼저 Service.exe를 실행한 다음 Client.exe를 실행하고 두 콘솔 창의 출력을 확인합니다.  
-  

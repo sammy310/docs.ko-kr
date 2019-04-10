@@ -2,12 +2,12 @@
 title: WS Transport With Message Credential
 ms.date: 03/30/2017
 ms.assetid: 0d092f3a-b309-439b-920b-66d8f46a0e3c
-ms.openlocfilehash: 31c1ed5d4b62c0f0b4c0c149629bb84a7dab6f01
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
-ms.translationtype: MT
+ms.openlocfilehash: 3afa13b90bc4ad85eed818212d8e307fb2c5fa68
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58826212"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59172460"
 ---
 # <a name="ws-transport-with-message-credential"></a>WS Transport With Message Credential
 이 샘플에서는 메시지로 전달되는 클라이언트 자격 증명과 SSL 전송 보안을 조합하여 사용하는 방법을 보여 줍니다. 이 샘플에서는 `wsHttpBinding` 바인딩을 사용합니다.  
@@ -96,4 +96,3 @@ Press <ENTER> to terminate client.
 3.  C# 또는 Visual Basic .NET 버전의 솔루션을 빌드하려면 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)의 지침을 따릅니다.  
   
 4.  단일 또는 다중 컴퓨터 구성에서 샘플을 실행 하려면의 지침을 따릅니다 [Windows Communication Foundation 샘플 실행](../../../../docs/framework/wcf/samples/running-the-samples.md)합니다.  
-  

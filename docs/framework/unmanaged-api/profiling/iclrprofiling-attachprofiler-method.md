@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 7fcbc75d17f0c154671d5997d7e6cbb59ef8440e
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 0e3898fb836409df3b685d985d0d72ab63230a93
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57469003"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59174176"
 ---
 # <a name="iclrprofilingattachprofiler-method"></a>ICLRProfiling::AttachProfiler 메서드
 지정한 프로파일러를 지정된 프로세스에 연결합니다.  
@@ -50,12 +50,10 @@ HRESULT AttachProfiler(
  [in] 로드할 프로파일러의 CLSID에 대한 포인터입니다. 트리거 프로세스는 `AttachProfiler`가 반환된 후 이 메모리를 다시 사용할 수 있습니다.  
   
  `wszProfilerPath`  
- [in] 로드할 프로파일러 DLL 파일의 전체 경로입니다. 이 문자열에는 null 종결자를 포함하여 260자 이하가 포함되어야 합니다. 
-  `wszProfilerPath`가 null 또는 빈 문자열인 경우 CLR(공용 언어 런타임)은 `pClsidProfiler`가 가리키는 CLSID를 레지스트리에서 찾아 프로파일러 DLL 파일의 위치를 찾으려고 합니다.  
+ [in] 로드할 프로파일러 DLL 파일의 전체 경로입니다. 이 문자열에는 null 종결자를 포함하여 260자 이하가 포함되어야 합니다. `wszProfilerPath`가 null 또는 빈 문자열인 경우 CLR(공용 언어 런타임)은 `pClsidProfiler`가 가리키는 CLSID를 레지스트리에서 찾아 프로파일러 DLL 파일의 위치를 찾으려고 합니다.  
   
  `pvClientData`  
- [in] 프로파일러에 전달할 데이터에 대 한 포인터를 [ICorProfilerCallback3::InitializeForAttach](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback3-initializeforattach-method.md) 메서드. 트리거 프로세스는 `AttachProfiler`가 반환된 후 이 메모리를 다시 사용할 수 있습니다. 
-  `pvClientData`가 null이면 `cbClientData`는 0이어야 합니다.  
+ [in] 프로파일러에 전달할 데이터에 대 한 포인터를 [ICorProfilerCallback3::InitializeForAttach](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback3-initializeforattach-method.md) 메서드. 트리거 프로세스는 `AttachProfiler`가 반환된 후 이 메모리를 다시 사용할 수 있습니다. `pvClientData`가 null이면 `cbClientData`는 0이어야 합니다.  
   
  `cbClientData`  
  [in] `pvClientData`가 가리키는 데이터의 크기(바이트)입니다.  
@@ -93,6 +91,7 @@ HRESULT AttachProfiler(
  **.NET Framework 버전:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>참고자료
+
 - [ICorProfilerCallback 인터페이스](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
 - [ICorProfilerInfo3 인터페이스](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-interface.md)
 - [프로파일링 인터페이스](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)

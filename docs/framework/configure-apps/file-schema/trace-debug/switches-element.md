@@ -9,12 +9,12 @@ helpviewer_keywords:
 - switches element
 - trace switches, <switches> element
 ms.assetid: 4cf36786-b89a-40e2-a0f1-86bb9b783343
-ms.openlocfilehash: afd0e955698dfc7ff3d5c843dd8db10f648265b8
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 44f5c918f19f84daf827ad4e8f3b6bfbc3e9f439
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55254667"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59196530"
 ---
 # <a name="switches-element"></a>\<스위치 > 요소
 추적 스위치 및 추적 스위치가 설정된 수준이 포함되어 있습니다.  
@@ -67,6 +67,7 @@ ms.locfileid: "55254667"
 ```  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Diagnostics.Switch>
 - <xref:System.Diagnostics.TraceSwitch>
 - <xref:System.Diagnostics.BooleanSwitch>

@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 0beafad4-b2c8-47f4-b342-83411d57a51f
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 0911132a705f3de89d771324cbb63e8db31bdfdb
-ms.sourcegitcommit: 5c2176883dc3107445702724a7caa7ac2f6cb0d3
-ms.translationtype: MT
+ms.openlocfilehash: 2d7757b50eedb25247b11fced3d4f9567691c380
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/03/2019
-ms.locfileid: "58890516"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59188606"
 ---
 # <a name="clr-etw-providers"></a>CLR ETW 공급자
 CLR(공용 언어 런타임)에는 런타임 공급자 및 런다운 공급자라는 두 개의 공급자가 있습니다.  
@@ -92,4 +92,5 @@ CLR(공용 언어 런타임)에는 런타임 공급자 및 런다운 공급자�
  도구는 사용자가 프로파일링 중지를 요청할 때 프로파일링을 즉시 끄지 않고 2단계와 3단계(런다운 세션을 시작한 다음 프로파일링 종료)를 실행할 수 있습니다. 도구에서 4단계를 실행할 수도 있습니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [공용 언어 런타임의 ETW 이벤트](../../../docs/framework/performance/etw-events-in-the-common-language-runtime.md)

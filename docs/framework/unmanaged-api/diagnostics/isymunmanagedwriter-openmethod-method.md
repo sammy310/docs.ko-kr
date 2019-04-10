@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 3e6ee68fe3ffed0ae19c2f528a49a863b99fa7f7
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: b05ba185a9ad4ab076d29d7d609734d41677b760
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57499552"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59194788"
 ---
 # <a name="isymunmanagedwriteropenmethod-method"></a>ISymUnmanagedWriter::OpenMethod 메서드
 정보는 기호를 내보내는 메서드를 엽니다. 지정된 된 메서드 호출 시퀀스 위치, 매개 변수 및 어휘 범위를 정의 하는 최신 방법이 됩니다. 전체 메서드 주위에 암시적 어휘 범위가 있습니다. 이전에 닫힌 하는 메서드를 다시 열 때 해당 메서드에 대 한 모든 이전에 정의 된 기호를 지웁니다. 한 번에 하나만 open 메서드가 있을 수 있습니다.  
@@ -45,6 +45,7 @@ HRESULT OpenMethod(
  **헤더:** CorSym.idl, CorSym.h  
   
 ## <a name="see-also"></a>참고자료
+
 - [ISymUnmanagedWriter 인터페이스](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)
 - [CloseMethod 메서드](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-closemethod-method.md)
 - [OpenMethod2 메서드](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter3-openmethod2-method.md)

@@ -1,17 +1,17 @@
 ---
-title: '연습: 저장 프로시저 (Visual Basic)만 사용'
+title: '연습: 저장 프로시저만 사용(Visual Basic)'
 ms.date: 03/30/2017
 dev_langs:
 - vb
 ms.assetid: 5a736a30-ba66-4adb-b87c-57d19476e862
-ms.openlocfilehash: 7c696d24dd84aee568706200389839dea080d7b4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 686d1797666c36f47d1ab0244754bbf2daf97eaf
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54577402"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59188580"
 ---
-# <a name="walkthrough-using-only-stored-procedures-visual-basic"></a>연습: 저장 프로시저 (Visual Basic)만 사용
+# <a name="walkthrough-using-only-stored-procedures-visual-basic"></a>연습: 저장 프로시저만 사용(Visual Basic)
 이 연습에서는 저장 프로시저만 사용하여 데이터에 액세스하기 위한 기본 종단 간 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 시나리오를 제공합니다. 일반적으로 데이터베이스 관리자는 데이터 저장소에 액세스하는 방법을 제한하기 위해 이 방법을 사용합니다.  
   
 > [!NOTE]
@@ -105,7 +105,7 @@ ms.locfileid: "54577402"
   
 1.  **솔루션 탐색기**를 마우스 오른쪽 단추로 클릭 **Form1.vb**를 클릭 하 고 **코드 보기**합니다.  
   
-     `Class Form1`이 코드 편집기에 나타납니다.  
+     `Class Form1` 코드 편집기에 표시 됩니다.  
   
 2.  다음 코드를 `Form1` 코드 블록에 입력합니다.  
   
@@ -192,5 +192,6 @@ ms.locfileid: "54577402"
  약간의 변경을 통해 이 프로젝트를 향상시킬 수 있습니다. 예를 들어 목록 상자에 사용 가능한 저장 프로시저를 나열하고 사용자가 실행할 프로시저를 선택하도록 만들 수 있습니다. 또한 보고서의 출력을 텍스트 파일에 스트리밍할 수 있습니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [연습으로 학습](../../../../../../docs/framework/data/adonet/sql/linq/learning-by-walkthroughs.md)
 - [저장 프로시저](../../../../../../docs/framework/data/adonet/sql/linq/stored-procedures.md)

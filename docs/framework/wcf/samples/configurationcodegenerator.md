@@ -2,12 +2,12 @@
 title: ConfigurationCodeGenerator
 ms.date: 03/30/2017
 ms.assetid: 3913aae8-165f-4014-9262-7fe426f90cb2
-ms.openlocfilehash: a481fe1e3c3aedd74f0e1546259b4eeeb9bed118
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
-ms.translationtype: MT
+ms.openlocfilehash: 7625060cd0512bb7498a931d7b93a731e52c9f00
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58821935"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59195191"
 ---
 # <a name="configurationcodegenerator"></a>ConfigurationCodeGenerator
 ConfigurationCodeGenerator는 구성 시스템에 사용자 지정 채널 구현을 노출하는 데 사용할 수 있는 도구입니다. 이를 통해 사용자 지정 채널의 사용자가 `NetTcpBinding`을 사용하여 `TcpTransportBindingElement` 등의 시스템 제공 바인딩이나 사용자 지정 바인딩을 구성하는 것과 같은 방법으로 .config 파일을 사용하여 채널을 구성할 수 있습니다.  
@@ -49,4 +49,3 @@ ConfigurationCodeGenerator는 구성 시스템에 사용자 지정 채널 구현
          /Sb을 지정 하는 경우: 옵션은 CodeToAddTo\<*YourStdBinding*> 표준 바인딩을 구현 하는 클래스에 수동으로 추가 해야 하는 코드가 있습니다.  
   
      SampleConfig.xml 파일에는 이전의 1단계 또는 2단계에 정의된 처리기를 등록하는 구성 파일에 추가해야 할 구성 코드가 포함되어 있습니다.  
-  

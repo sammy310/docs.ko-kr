@@ -1,5 +1,5 @@
 ---
-title: '방법: Windows Forms ListView 컨트롤을 사용 하 여 열에 하위 항목 표시'
+title: '방법: Windows Forms ListView 컨트롤을 사용하여 열에 하위 항목 표시'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - ListView control [Windows Forms], adding ListSubItems
 - subitems
 ms.assetid: e465f044-cde7-4fd9-a687-788a73a0f554
-ms.openlocfilehash: ecdb16087ff5788723b7d562cebd08551df87deb
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: defa8aa736927c9076eb2410d6d914a8f7550d03
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57713070"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59183720"
 ---
-# <a name="how-to-display-subitems-in-columns-with-the-windows-forms-listview-control"></a>방법: Windows Forms ListView 컨트롤을 사용 하 여 열에 하위 항목 표시
+# <a name="how-to-display-subitems-in-columns-with-the-windows-forms-listview-control"></a>방법: Windows Forms ListView 컨트롤을 사용하여 열에 하위 항목 표시
 Windows Forms <xref:System.Windows.Forms.ListView> 컨트롤 추가 텍스트 또는 세부 정보 뷰에서 각 항목에 대 한 하위 항목을 표시할 수 있습니다. 첫 번째 열에는 예를 들어 직원 번호 항목 텍스트를 표시합니다. 두 번째, 두 번째, 첫 번째, 세 번째 및 이후의 열에 표시 하 고 후속 관련 된 하위 항목입니다.  
   
 ### <a name="to-add-subitems-to-a-list-item"></a>목록 항목에 하위 항목을 추가 하려면  
@@ -30,8 +30,9 @@ Windows Forms <xref:System.Windows.Forms.ListView> 컨트롤 추가 텍스트 �
      [!code-vb[System.Windows.Forms.ListViewLegacyTopics#61](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ListViewLegacyTopics/VB/Class1.vb#61)]  
   
 ## <a name="see-also"></a>참고자료
+
 - [ListView 컨트롤 개요](listview-control-overview-windows-forms.md)
-- [방법: Windows Forms ListView 컨트롤을 사용 하 여 항목 추가 및 제거](how-to-add-and-remove-items-with-the-windows-forms-listview-control.md)
+- [방법: Windows Forms ListView 컨트롤을 사용하여 항목 추가 및 제거](how-to-add-and-remove-items-with-the-windows-forms-listview-control.md)
 - [방법: Windows Forms ListView 컨트롤에 열 추가](how-to-add-columns-to-the-windows-forms-listview-control.md)
-- [방법: Windows Forms ListView 컨트롤에 대 한 아이콘을 표시 합니다.](how-to-display-icons-for-the-windows-forms-listview-control.md)
-- [방법: TreeView 또는 ListView 컨트롤 (Windows Forms)에 사용자 지정 정보 추가](add-custom-information-to-a-treeview-or-listview-control-wf.md)
+- [방법: Windows Forms ListView 컨트롤에 대한 아이콘 표시](how-to-display-icons-for-the-windows-forms-listview-control.md)
+- [방법: TreeView 또는 ListView 컨트롤에 사용자 지정 정보 추가(Windows Forms)](add-custom-information-to-a-treeview-or-listview-control-wf.md)

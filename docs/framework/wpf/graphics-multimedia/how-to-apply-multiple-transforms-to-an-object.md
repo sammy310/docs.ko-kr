@@ -10,12 +10,12 @@ helpviewer_keywords:
 - graphics [WPF], grouping Transform objects
 - TransformGroup [WPF]
 ms.assetid: 98cd1921-12bc-4bf5-8193-529228fb7402
-ms.openlocfilehash: 19fc87f04ca111f1fd0b6d7a4784fd96b464eb22
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 26dcd4a64fc7aa2c3cb9cc599ceaef292efb1b6a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57363664"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59192766"
 ---
 # <a name="how-to-apply-multiple-transforms-to-an-object"></a>방법: 개체에 다중 변환 적용
 사용 하는 방법을 보여 주는이 예제는 <xref:System.Windows.Media.TransformGroup> 둘 이상의 그룹에 <xref:System.Windows.Media.Transform> 개체를 단일 복합 <xref:System.Windows.Media.Transform>합니다.  
@@ -29,7 +29,8 @@ ms.locfileid: "57363664"
  [!code-vb[Transforms_Procedural_snip#MultipleTransformsCodeExampleWholePage](~/samples/snippets/visualbasic/VS_Snippets_Wpf/Transforms_Procedural_snip/VisualBasic/MultipleTransformsExample.vb#multipletransformscodeexamplewholepage)]  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Windows.UIElement.RenderTransform%2A>
 - <xref:System.Windows.Media.TransformGroup>
 - [Transform 개요](transforms-overview.md)
-- [2차원 변환 샘플](https://go.microsoft.com/fwlink/?LinkID=158252)
+- [2 차원 변환 샘플](https://go.microsoft.com/fwlink/?LinkID=158252)

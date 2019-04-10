@@ -6,12 +6,12 @@ helpviewer_keywords:
 - animation [WPF], size changes with key frames
 - size changes [WPF], animating with key frames
 ms.assetid: 86bd2950-d4c9-4ec4-aa8d-7dc3ccadded4
-ms.openlocfilehash: 967537bb1828d323f1dcaa8d049604a1a6e30fa4
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: MT
+ms.openlocfilehash: a7adb16297f50e191628344d7e25d41f38a97861
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57374191"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59180234"
 ---
 # <a name="how-to-animate-size-changes-by-using-key-frames"></a>방법: 키 프레임을 사용하여 크기 변경에 애니메이션 효과 주기
 이 예제에서는 키 프레임을 사용하여 크기 변경에 애니메이션 효과를 주는 방법을 보여 줍니다.  
@@ -30,6 +30,7 @@ ms.locfileid: "57374191"
  전체 샘플을 보려면 [키 프레임 애니메이션 샘플](https://go.microsoft.com/fwlink/?LinkID=160012)을 참조하세요.  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Windows.Media.Animation.SizeAnimationUsingKeyFrames>
 - <xref:System.Windows.Media.ArcSegment.Size%2A>
 - <xref:System.Windows.Media.ArcSegment>

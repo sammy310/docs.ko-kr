@@ -1,5 +1,5 @@
 ---
-title: '방법: 디자이너를 사용 하 여 Windows Forms DataGridView 컨트롤에 대 한 기본 셀 스타일 및 데이터 형식 설정'
+title: '방법: 디자이너를 사용하여 Windows Forms DataGridView 컨트롤에 대한 기본 셀 스타일 및 데이터 형식 설정'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - DataGridView control [Windows Forms], cell styles
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - data formats
 - data [Windows Forms], setting formats
 ms.assetid: fc6da49f-8942-41da-b49f-b2afc38cc656
-ms.openlocfilehash: 44180c1d8e7f6fd29778ef6b9f5bd5e333c3ece2
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 0e5664707d12fd45c73f3585d07660fc732965fb
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57702349"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59179896"
 ---
-# <a name="how-to-set-default-cell-styles-and-data-formats-for-the-windows-forms-datagridview-control-using-the-designer"></a>방법: 디자이너를 사용 하 여 Windows Forms DataGridView 컨트롤에 대 한 기본 셀 스타일 및 데이터 형식 설정
+# <a name="how-to-set-default-cell-styles-and-data-formats-for-the-windows-forms-datagridview-control-using-the-designer"></a>방법: 디자이너를 사용하여 Windows Forms DataGridView 컨트롤에 대한 기본 셀 스타일 및 데이터 형식 설정
 <xref:System.Windows.Forms.DataGridView> 제어를 사용 하면 기본 셀 스타일을 지정 하 고 셀 및에 대 한 전체 컨트롤, 특정 열, 행 및 열 머리글에 대 한 원장 효과 만드는 행을 교대로 반복 되는 데이터 형식입니다. 전체 컨트롤에 대해 설정 하는 기본 스타일은 기본적으로 스타일 교대로 반복 되는 행과 열에 대 한 설정 재정의 됩니다. 또한 개별 행 및 셀에 대 한 코드에서 설정 하는 스타일에는 기본 스타일을 재정의 합니다.  
   
  셀 스타일에 대 한 자세한 내용은 참조 하세요. [Windows Forms DataGridView 컨트롤의 셀 스타일](cell-styles-in-the-windows-forms-datagridview-control.md)합니다. 행을 교대로 반복 되는 스타일을 설정 하려면 참조 [방법: Windows Forms 디자이너를 사용 하 여 DataGridView 컨트롤에 대 한 행 스타일 교대로 반복 되는 설정](set-alternating-row-styles-for-the-datagrid-using-the-designer.md)합니다.  
@@ -60,6 +60,7 @@ ms.locfileid: "57702349"
 4.  바인딩하는 경우는 <xref:System.Windows.Forms.DataGridView> null 값을 포함 하 여 입력을 가능성이 있는 데이터 소스에 컨트롤을 **Null 값** 입력란입니다. 셀 값이 null 참조 같음이 값이 표시 됩니다 (`Nothing` Visual basic에서) 또는 <xref:System.DBNull.Value?displayProperty=nameWithType>합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridViewCellStyle>
 - <xref:System.Windows.Forms.DataGridView.DefaultCellStyle%2A?displayProperty=nameWithType>
@@ -67,6 +68,6 @@ ms.locfileid: "57702349"
 - <xref:System.Windows.Forms.DataGridViewColumn.DefaultCellStyle%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.DataGridViewCellStyle.Format%2A?displayProperty=nameWithType>
 - [Windows Forms DataGridView 컨트롤의 셀 스타일](cell-styles-in-the-windows-forms-datagridview-control.md)
-- [방법: 디자이너를 사용 하 여 Windows Forms DataGridView 컨트롤에 대 한 행 스타일 교대로 반복 되는 설정](set-alternating-row-styles-for-the-datagrid-using-the-designer.md)
-- [방법: Windows Forms 애플리케이션 프로젝트 만들기](/visualstudio/ide/step-1-create-a-windows-forms-application-project)
+- [방법: 디자이너를 사용하여 Windows Forms DataGridView 컨트롤에 대한 대체 행 스타일 설정](set-alternating-row-styles-for-the-datagrid-using-the-designer.md)
+- [방법: Windows Forms 응용 프로그램 프로젝트 만들기](/visualstudio/ide/step-1-create-a-windows-forms-application-project)
 - [방법: Windows Forms에 컨트롤 추가](how-to-add-controls-to-windows-forms.md)

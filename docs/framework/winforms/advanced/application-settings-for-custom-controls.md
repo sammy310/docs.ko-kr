@@ -5,12 +5,12 @@ helpviewer_keywords:
 - custom controls [Windows Forms], application settings
 - application settings [Windows Forms], custom controls
 ms.assetid: f44afb74-76cc-44f2-890a-44b7cdc211a1
-ms.openlocfilehash: d12caf9ed2cb80d837080badab436b2e9b0b3728
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: b036167c2e1a4dff557d2ef90eaa964710533410
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57714348"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59169743"
 ---
 # <a name="application-settings-for-custom-controls"></a>사용자 지정 컨트롤에 대한 애플리케이션 설정
 사용자 지정 컨트롤에서 타사 응용 프로그램에서 컨트롤을 호스팅할 때 응용 프로그램 설정을 유지할 수 있도록 특정 작업을 완료 해야 합니다.  
@@ -46,6 +46,7 @@ ms.locfileid: "57714348"
  에 대 한 값을 제공 하지 않는 컨트롤의 모든 인스턴스 <xref:System.Configuration.ApplicationSettingsBase.SettingsKey%2A> 동일한 설정을 공유 합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Configuration.ApplicationSettingsBase>
 - <xref:System.Configuration.IPersistComponentSettings>
-- [응용 프로그램 설정 아키텍처](application-settings-architecture.md)
+- [애플리케이션 설정 아키텍처](application-settings-architecture.md)

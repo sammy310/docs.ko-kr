@@ -2,12 +2,12 @@
 title: 엔터티 데이터 모델
 ms.date: 03/30/2017
 ms.assetid: 2dda3d5b-4582-4ba0-a91d-fcd7a1498137
-ms.openlocfilehash: f6f3d02a27ce9df152753b7aeec9ceb251bca532
-ms.sourcegitcommit: c6f69b0cf149f6b54483a6d5c2ece222913f43ce
+ms.openlocfilehash: 8e96890d97f652295a3fdb67c48ec37710280eec
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2019
-ms.locfileid: "55904825"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59197921"
 ---
 # <a name="entity-data-model"></a>엔터티 데이터 모델
 EDM(엔터티 데이터 모델)은 저장된 폼에 관계없이 데이터 구조를 설명하는 개념 집합입니다. EDM은 Peter Chen이 1976년에 설명한 엔터티-관계 모델에서 차용하지만 엔터티-관계 모델을 기반으로 하여 기존의 사용을 확장합니다.  
@@ -16,38 +16,38 @@ EDM(엔터티 데이터 모델)은 저장된 폼에 관계없이 데이터 구�
   
  `conceptual model`은 엔터티 및 관계로서의 특정 데이터 구조 표현이며, 일반적으로 EDM의 개념을 구현하는 DSL(Domain-Specific Language)에서 정의됩니다. [개념 스키마 정의 언어 (CSDL)](../../../../docs/framework/data/adonet/ef/language-reference/csdl-specification.md) 은 이러한 도메인 특정 언어의 예입니다. 개념적 모델에서 설명되는 엔터티와 관계를 응용 프로그램의 개체 및 연결 추상화로 간주할 수 있습니다. 이렇게 하면 개발자가 저장소 스키마에 대해 염려하지 않고 개념적 모델에 집중할 수 있으며 효율성과 유지 관리 기능을 고려하여 코드를 작성할 수 있습니다. 한편, 저장소 스키마 디자이너는 효율적인 데이터 액세스, 저장 및 확장성에 집중할 수 있습니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  이 단원의 항목에서는 엔터티 데이터 모델의 개념에 대해 설명합니다. EDM을 구현하는 모든 DSL에는 여기에 설명된 개념이 포함되어야 합니다. 유의 합니다 [ADO.NET Entity Framework](../../../../docs/framework/data/adonet/ef/index.md) CSDL을 사용 하 여 개념적 모델을 정의 합니다. 자세한 내용은 [CSDL Specification](../../../../docs/framework/data/adonet/ef/language-reference/csdl-specification.md)을 참조하십시오.  
   
  [엔터티 데이터 모델의 주요 개념](../../../../docs/framework/data/adonet/entity-data-model-key-concepts.md)  
   
- [엔터티 데이터 모델: 네임 스페이스](../../../../docs/framework/data/adonet/entity-data-model-namespaces.md)  
+ [엔터티 데이터 모델: 네임스페이스](../../../../docs/framework/data/adonet/entity-data-model-namespaces.md)  
   
  [엔터티 데이터 모델: 기본 데이터 형식](../../../../docs/framework/data/adonet/entity-data-model-primitive-data-types.md)  
   
  [엔터티 데이터 모델: 상속](../../../../docs/framework/data/adonet/entity-data-model-inheritance.md)  
   
- [연결 끝](../../../../docs/framework/data/adonet/association-end.md)  
+ [연결 End](../../../../docs/framework/data/adonet/association-end.md)  
   
- [연결 끝 다중성](../../../../docs/framework/data/adonet/association-end-multiplicity.md)  
+ [연결 End 복합성](../../../../docs/framework/data/adonet/association-end-multiplicity.md)  
   
- [연결 집합](../../../../docs/framework/data/adonet/association-set.md)  
+ [연결 집합(association set)](../../../../docs/framework/data/adonet/association-set.md)  
   
- [연결 집합 끝](../../../../docs/framework/data/adonet/association-set-end.md)  
+ [연결 집합 End](../../../../docs/framework/data/adonet/association-set-end.md)  
   
  [연결 형식](../../../../docs/framework/data/adonet/association-type.md)  
   
  [복합 형식](../../../../docs/framework/data/adonet/complex-type.md)  
   
- [엔터티 컨테이너](../../../../docs/framework/data/adonet/entity-container.md)  
+ [엔터티 컨테이너(entity container)](../../../../docs/framework/data/adonet/entity-container.md)  
   
  [엔터티 키](../../../../docs/framework/data/adonet/entity-key.md)  
   
  [엔터티 집합](../../../../docs/framework/data/adonet/entity-set.md)  
   
- [엔터티 형식](../../../../docs/framework/data/adonet/entity-type.md)  
+ [엔터티 형식(entity type)](../../../../docs/framework/data/adonet/entity-type.md)  
   
- [facet](../../../../docs/framework/data/adonet/facet.md)  
+ [패싯](../../../../docs/framework/data/adonet/facet.md)  
   
  [외래 키 속성](../../../../docs/framework/data/adonet/foreign-key-property.md)  
   
@@ -55,13 +55,14 @@ EDM(엔터티 데이터 모델)은 저장된 폼에 관계없이 데이터 구�
   
  [모델 정의 함수](../../../../docs/framework/data/adonet/model-defined-function.md)  
   
- [탐색 속성](../../../../docs/framework/data/adonet/navigation-property.md)  
+ [탐색 속성(navigation property)](../../../../docs/framework/data/adonet/navigation-property.md)  
   
  [속성](../../../../docs/framework/data/adonet/property.md)  
   
  [참조 무결성 제약 조건](../../../../docs/framework/data/adonet/referential-integrity-constraint.md)  
   
 ## <a name="see-also"></a>참고자료
+
 - [ADO.NET 엔터티 데이터 모델 도구](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb399249(v=vs.100))
 - [.edmx 파일 개요](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cc982042(v=vs.100))
 - [CSDL 사양](../../../../docs/framework/data/adonet/ef/language-reference/csdl-specification.md)

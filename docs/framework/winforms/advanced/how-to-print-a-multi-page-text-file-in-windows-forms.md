@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Windows Forms, printing text
 - printing [Windows Forms], text
 ms.assetid: 362427f8-03d4-4826-b49f-60ab066ad322
-ms.openlocfilehash: f2f91fbaab7fb999a2243e13be9af0bbff0e41ac
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 69fe58292eda2bb283488252f571d3c3691f6392
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57714140"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59192183"
 ---
 # <a name="how-to-print-a-multi-page-text-file-in-windows-forms"></a>방법: Windows Forms에서 다중 페이지 텍스트 파일 인쇄
 Windows 기반 애플리케이션에서 텍스트를 인쇄하는 것은 매우 일반적입니다. <xref:System.Drawing.Graphics> 클래스는 화면이나 프린터와 같은 장치에 개체(그래픽 또는 텍스트)를 그리기 위한 메서드를 제공합니다.  
@@ -61,6 +61,7 @@ Windows 기반 애플리케이션에서 텍스트를 인쇄하는 것은 매우 
 -   Visual Basic 또는 Visual C#에 대 한 명령줄에서이 예제를 빌드하는 방법에 대 한 내용은 [명령줄에서 빌드](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) 하거나 [csc.exe를 사용한 명령줄 빌드](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)합니다. 또한 새 프로젝트에 코드를 붙여 넣어 Visual Studio에서이 예제를 빌드할 수 있습니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Drawing.Graphics>
 - <xref:System.Drawing.Brush>
 - [Windows Forms 인쇄 지원](windows-forms-print-support.md)

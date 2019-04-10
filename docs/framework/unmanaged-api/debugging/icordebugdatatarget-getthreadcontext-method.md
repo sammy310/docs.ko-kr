@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c0d579ffe6bf0722365e789ba3a43ce1dce06fac
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 2db073f6bde3ded27f8e1aa41bfcb87e764745f1
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57502997"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59174969"
 ---
 # <a name="icordebugdatatargetgetthreadcontext-method"></a>ICorDebugDataTarget::GetThreadContext 메서드
 지정 된 스레드에 대 한 현재 스레드 컨텍스트를 반환합니다.  
@@ -63,6 +63,7 @@ HRESULT GetThreadContext(
  **.NET Framework 버전:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>참고자료
+
 - [ICorDebugDataTarget 인터페이스](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget-interface.md)
 - [디버깅 인터페이스](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
 - [디버깅](../../../../docs/framework/unmanaged-api/debugging/index.md)

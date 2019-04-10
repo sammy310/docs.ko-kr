@@ -1,5 +1,5 @@
 ---
-title: '방법: SaveFileDialog 구성 요소를 사용 하 여 파일 저장'
+title: '방법: SaveFileDialog 구성 요소를 사용하여 파일 저장'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - files [Windows Forms], saving
 - OpenFile method [Windows Forms], saving files with SaveFileDialog component
 ms.assetid: 02e8f409-b83f-4707-babb-e71f6b223d90
-ms.openlocfilehash: 2a6f21f79f56c1fcad4c94ec89cbf7dc43b19638
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 3394acbb26fff4c099ad746a3dc63e663374716a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57719431"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59176802"
 ---
-# <a name="how-to-save-files-using-the-savefiledialog-component"></a>방법: SaveFileDialog 구성 요소를 사용 하 여 파일 저장
+# <a name="how-to-save-files-using-the-savefiledialog-component"></a>방법: SaveFileDialog 구성 요소를 사용하여 파일 저장
 <xref:System.Windows.Forms.SaveFileDialog> 구성 요소 파일 시스템을 찾아서 선택한 파일을 저장할 수 있습니다. 대화 상자에서 사용자가 선택한 파일의 경로와 이름을 반환합니다. 그러나 실제로 디스크에 파일을 쓰는 코드를 작성해야 합니다.  
   
 ### <a name="to-save-a-file-using-the-savefiledialog-component"></a>SaveFileDialog 구성 요소를 사용하여 파일을 저장하려면  
@@ -178,5 +178,6 @@ ms.locfileid: "57719431"
     >  와 같은 특정 컨트롤을 <xref:System.Windows.Forms.RichTextBox> 제어, 파일을 저장할 수 있습니다. 자세한 내용은 [Windows Forms 대화 상자의 필수 코드](https://go.microsoft.com/fwlink/?LinkID=102575) MSDN Online Library 기술 문서의 "SaveFileDialog 구성 요소" 섹션을 참조하세요.  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Windows.Forms.SaveFileDialog>
 - [SaveFileDialog 구성 요소](savefiledialog-component-windows-forms.md)

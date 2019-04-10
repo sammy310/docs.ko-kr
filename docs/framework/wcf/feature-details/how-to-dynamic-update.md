@@ -2,12 +2,12 @@
 title: '방법: 동적 업데이트'
 ms.date: 03/30/2017
 ms.assetid: 9b8f6e0d-edab-4a7e-86e3-8c66bebc64bb
-ms.openlocfilehash: a021e6b550baf8fb7034a163179e0626bf42cfb6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 3ae446da5e19b0c4c0c121d44892e4a13ec70dd6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54736600"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59190992"
 ---
 # <a name="how-to-dynamic-update"></a>방법: 동적 업데이트
 이 항목에서는 라우팅 구성을 만들고 동적으로 업데이트하는 데 필요한 기본 단계에 대해 간략하게 설명합니다. 이 예제에서는 구성 파일에서 초기 라우팅 구성을 가져오고 이 구성을 사용하여 모든 메시지를 regularCalc 계산기 서비스에 라우트합니다. 그러나 이 구성은 대상 엔드포인트를 roundingCalc 서비스로 변경하기 위해 이후에 프로그래밍 방식으로 업데이트됩니다.  
@@ -297,4 +297,5 @@ namespace Microsoft.Samples.AdvancedFilters
 ```  
   
 ## <a name="see-also"></a>참고자료
+
 - [라우팅 서비스](../../../../docs/framework/wcf/samples/routing-services.md)

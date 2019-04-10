@@ -2,12 +2,12 @@
 title: Token Authenticator
 ms.date: 03/30/2017
 ms.assetid: 84382f2c-f6b1-4c32-82fa-aebc8f6064db
-ms.openlocfilehash: 1e0ab9a7c1cd1b5d92556973928a014957f51918
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
-ms.translationtype: MT
+ms.openlocfilehash: 027f6c55cb0390084f1a7926a5c79d8591090df6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58824223"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59193410"
 ---
 # <a name="token-authenticator"></a>Token Authenticator
 이 샘플에서는 사용자 지정 토큰 인증자를 구현하는 방법을 보여 줍니다. Windows Communication Foundation (WCF)에서 토큰 인증자를 자체 일관성을 토큰과 연결 된 id를 인증 확인 메시지와 함께 사용 되는 토큰의 유효성 검사에 사용 됩니다.
@@ -366,4 +366,3 @@ static void DisplayIdentityInformation()
 #### <a name="to-clean-up-after-the-sample"></a>샘플 실행 후 정리를 수행하려면  
   
 1.  샘플 실행을 완료했으면 샘플 폴더에서 Cleanup.bat를 실행합니다.  
-  

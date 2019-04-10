@@ -2,12 +2,12 @@
 title: 서비스 디버그 동작
 ms.date: 03/30/2017
 ms.assetid: 9d8fd3fb-dc39-427a-8235-336a7e7162ba
-ms.openlocfilehash: 4eac577775074abf8c5f35c73dfa3286a75c2744
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
-ms.translationtype: MT
+ms.openlocfilehash: d97ff2d2290d58c0217add306718329a282abbff
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58835776"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59192211"
 ---
 # <a name="service-debug-behavior"></a>서비스 디버그 동작
 이 샘플에서는 서비스 디버그 동작 설정을 구성하는 방법을 보여 줍니다. 샘플을 기반으로 합니다 [Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md)를 구현 하는 `ICalculator` 서비스 계약입니다. 이 샘플에서는 구성 파일에 서비스 디버그 동작을 명시적으로 정의합니다. 또한 코드에서 명령적으로 정의할 수 있습니다.  
@@ -58,4 +58,3 @@ ms.locfileid: "58835776"
 >  이 디렉터리가 없으면로 이동 [Windows Communication Foundation (WCF) 및.NET Framework 4 용 Windows WF (Workflow Foundation) 샘플](https://go.microsoft.com/fwlink/?LinkId=150780) 모든 Windows Communication Foundation (WCF)를 다운로드 하 고 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플. 이 샘플은 다음 디렉터리에 있습니다.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\Behaviors\ServiceDebug`  
-  

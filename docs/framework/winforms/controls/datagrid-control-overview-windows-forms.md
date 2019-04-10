@@ -20,12 +20,12 @@ helpviewer_keywords:
 - parent table navigation in DataGrid
 - child tables [Windows Forms], dataGrid control
 ms.assetid: 85604bce-bc03-49d9-9030-dda8896c44b1
-ms.openlocfilehash: 33f6e5f7929c5a4231c0779964db177f45af6743
-ms.sourcegitcommit: 68eb5c4928e2b082f178a42c16f73fedf52c2ab8
-ms.translationtype: MT
+ms.openlocfilehash: 7fdc14257d140c92cb2450fc21b44c1f95c75ba8
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/05/2019
-ms.locfileid: "59055211"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59189315"
 ---
 # <a name="datagrid-control-overview-windows-forms"></a>DataGrid 컨트롤 개요(Windows Forms)
 > [!NOTE]
@@ -140,6 +140,7 @@ ms.locfileid: "59055211"
  <xref:System.Windows.Forms.Control.MouseDown>, <xref:System.Windows.Forms.Control.Enter> 및 <xref:System.Windows.Forms.DataGrid.Scroll>과 같은 일반적인 컨트롤 이벤트 외에도 <xref:System.Windows.Forms.DataGrid> 컨트롤은 표 형태 창 내의 편집 및 탐색과 관련된 이벤트를 지원합니다. <xref:System.Windows.Forms.DataGrid.CurrentCell%2A> 속성은 선택된 셀을 확인합니다. 사용자가 새로운 셀로 이동하면 <xref:System.Windows.Forms.DataGrid.CurrentCellChanged> 이벤트가 발생합니다. 사용자가 부모/자식 관계를 통해 새 테이블로 이동하면 <xref:System.Windows.Forms.DataGrid.Navigate> 이벤트가 발생합니다. 사용자가 자식 테이블을 보고 있을 때 뒤로 단추를 클릭하면 <xref:System.Windows.Forms.DataGrid.BackButtonClick> 이벤트가 발생하고, 부모 행 표시/숨기기 아이콘을 클릭하면 <xref:System.Windows.Forms.DataGrid.ShowParentDetailsButtonClick> 이벤트가 발생합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [DataGrid 컨트롤](datagrid-control-windows-forms.md)
 - [방법: 데이터 원본에 Windows Forms DataGrid 컨트롤 바인딩](how-to-bind-the-windows-forms-datagrid-control-to-a-data-source.md)
 - [방법: Windows Forms DataGrid 컨트롤에 테이블 및 열 추가](how-to-add-tables-and-columns-to-the-windows-forms-datagrid-control.md)

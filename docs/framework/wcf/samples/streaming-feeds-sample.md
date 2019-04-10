@@ -2,12 +2,12 @@
 title: 스트리밍 피드 샘플
 ms.date: 03/30/2017
 ms.assetid: 1f1228c0-daaa-45f0-b93e-c4a158113744
-ms.openlocfilehash: a2bbc51593b4f1c3655d2e1d0df7f14d0005d68c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: cc09d4c7d0e9ff75806c1c5e9d3ec1ef77507638
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54631364"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59172447"
 ---
 # <a name="streaming-feeds-sample"></a>스트리밍 피드 샘플
 이 샘플에서는 많은 수의 항목이 포함된 배포 피드를 관리하는 방법을 보여 줍니다. 서버에서 이 샘플은 항목을 네트워크 스트림에 쓰기 바로 전까지 피드 내에 개별 <xref:System.ServiceModel.Syndication.SyndicationItem> 개체를 만드는 동작을 지연시키는 방법을 보여 줍니다.  
@@ -119,4 +119,5 @@ private IEnumerable<SyndicationItem> DelayReadItems(XmlReader reader, Syndicatio
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Syndication\StreamingFeeds`  
   
 ## <a name="see-also"></a>참고자료
+
 - [독립형 진단 피드](../../../../docs/framework/wcf/samples/stand-alone-diagnostics-feed-sample.md)

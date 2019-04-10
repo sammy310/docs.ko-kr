@@ -7,12 +7,12 @@ helpviewer_keywords:
 - automatic sizing
 - AutoSizeMode property
 ms.assetid: 62fd82a2-9565-4f65-925b-9d1e66dc4e7d
-ms.openlocfilehash: 2fc06bef2434e87b7fbd3ec79e7671c4e32b7b3b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6d5c4a22f186ddc5811c4a4d5e79776decea9e50
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54649832"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59173630"
 ---
 # <a name="autosize-property-overview"></a>AutoSize 속성 개요
 합니다 <xref:System.Windows.Forms.Control.AutoSize%2A> 속성으로 지정 된 값을 사용 하도록 필요한 경우 해당 크기를 변경 하려면 컨트롤을 사용 하면는 <xref:System.Windows.Forms.Control.PreferredSize%2A> 속성입니다. 설정 하 여 특정 컨트롤에 대 한 크기 조정 동작을 조정 합니다 `AutoSizeMode` 속성입니다.  
@@ -67,6 +67,7 @@ ms.locfileid: "54649832"
 >  Windows Forms 디자이너 그림자의 생산성을 극대화 하는 <xref:System.Windows.Forms.Control.AutoSize%2A> 에 대 한 속성을 <xref:System.Windows.Forms.Form> 클래스. 디자인 타임에 폼 것 처럼 동작 합니다 <xref:System.Windows.Forms.Control.AutoSize%2A> 속성이 `false`해당 실제 설정에 관계 없이 합니다. 런타임 시에 특별 한 조정 없이 이루어집니다, 그리고 및 <xref:System.Windows.Forms.Control.AutoSize%2A> 속성이 적용 되는지 속성 설정으로 지정 된 대로 합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Windows.Forms.Control.AutoSize%2A>
 - <xref:System.Windows.Forms.Control.PreferredSize%2A>
 - <xref:System.Windows.Forms.Control.GetPreferredSize%2A>

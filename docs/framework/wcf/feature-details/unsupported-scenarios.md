@@ -2,12 +2,12 @@
 title: 지원되지 않는 시나리오
 ms.date: 03/30/2017
 ms.assetid: 72027d0f-146d-40c5-9d72-e94392c8bb40
-ms.openlocfilehash: 381175a95b696145df8a1e19b9a40f2e697eef1e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 12012f3e0c0c3b0d10c5faebfb2de881f5de3917
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54631267"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59178778"
 ---
 # <a name="unsupported-scenarios"></a>지원되지 않는 시나리오
 다양 한 이유로 Windows Communication Foundation (WCF)는 일부 특정 보안 시나리오를 지원 하지 않습니다. 예를 들어 [!INCLUDE[wxp](../../../../includes/wxp-md.md)] Home Edition SSPI 또는 Kerberos 인증 프로토콜을 구현 하지 않으며 WCF 지원 하지 않습니다 해당 플랫폼에서 Windows 인증을 사용 하 여 서비스를 실행 합니다. Windows XP Home Edition에서 WCF를 실행 하는 경우 사용자 이름/암호 및 HTTP/HTTPS 통합된 인증과 같은 다른 인증 메커니즘이 지원 됩니다.  
@@ -30,7 +30,7 @@ ms.locfileid: "54631267"
   
  상태 기반 SCT는 사용자 지정 바인딩을 통해서만 만들 수 있습니다. 자세한 내용은 [방법: 보안 컨텍스트를 만들 보안 세션에 대 한 토큰](../../../../docs/framework/wcf/feature-details/how-to-create-a-security-context-token-for-a-secure-session.md).) 코드에서 <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> 또는 <xref:System.ServiceModel.Channels.AsymmetricSecurityBindingElement> 메서드를 사용하여 보안 바인딩 요소(<xref:System.ServiceModel.Channels.SecurityBindingElement.CreateSspiNegotiationBindingElement%28System.Boolean%29?displayProperty=nameWithType> 또는 <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateSecureConversationBindingElement%28System.ServiceModel.Channels.SecurityBindingElement%2CSystem.Boolean%29?displayProperty=nameWithType>)를 만들고 `requireCancellation` 매개 변수를 `false`로 설정하여 토큰을 사용하도록 설정합니다. 매개 변수는 SCT 캐싱을 참조합니다. 값을 `false`로 설정하면 상태 기반 SCT 기능을 사용할 수 있습니다.  
   
- 또는 구성에서 <`customBinding`>을 만든 다음 <`security`> 요소를 추가하고 `authenticationMode` 특성을 SecureConversation으로 설정하고 `requireSecurityContextCancellation` 특성을 `true`로 설정하여 토큰을 사용하도록 설정합니다.  
+ 또는 구성에서 토큰으로 활성화 되어 만들기는 <`customBinding`>, 추가 <`security`> 요소와 설정의 `authenticationMode` 특성을 SecureConversation 및 `requireSecurityContextCancellation` 특성을 `true`합니다.  
   
 > [!NOTE]
 >  앞의 요구 사항은 각기 고유합니다. 예를 들어, <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateKerberosBindingElement%2A>는 Windows ID를 생성하는 바인딩 요소를 만들지만 SCT를 설정하지 않습니다. 따라서 `Required`에서 [!INCLUDE[wxp](../../../../includes/wxp-md.md)] 옵션을 설정하여 사용할 수 있습니다.  
@@ -75,7 +75,7 @@ ms.locfileid: "54631267"
 ## <a name="message-security-fails-if-using-aspnet-impersonation-and-aspnet-compatibility-is-required"></a>ASP.NET 가장 및 ASP.NET 호환성을 사용해야 하는 경우 메시지 보안 실패  
  WCF는 클라이언트 인증을 방해할 수 있으므로 다음 설정 조합을 지원 하지 않습니다.  
   
--   [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 가장이 사용됩니다. 이 작업은 Web.config 파일에서 <`identity`> 요소의 `impersonate` 특성을 `true`로 설정하여 수행합니다.  
+-   [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 가장이 사용 됩니다. 설정 하 여 Web.config 파일에 이렇게 합니다 `impersonate` 특성을 <`identity`> 요소를 `true`합니다.  
   
 -   [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 호환성 모드를 설정 하 여 사용 합니다 `aspNetCompatibilityEnabled` 특성을 [ \<serviceHostingEnvironment >](../../../../docs/framework/configure-apps/file-schema/wcf/servicehostingenvironment.md) 를 `true`.  
   
@@ -109,9 +109,10 @@ ms.locfileid: "54631267"
  문제를 해결하려면 가져오기를 실행한 후 클라이언트에서 직접 바인딩을 수정합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [보안 고려 사항](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md)
 - [정보 공개](../../../../docs/framework/wcf/feature-details/information-disclosure.md)
-- [권한 상승](../../../../docs/framework/wcf/feature-details/elevation-of-privilege.md)
+- [권한 높이기](../../../../docs/framework/wcf/feature-details/elevation-of-privilege.md)
 - [서비스 거부](../../../../docs/framework/wcf/feature-details/denial-of-service.md)
 - [변조](../../../../docs/framework/wcf/feature-details/tampering.md)
 - [재생 공격](../../../../docs/framework/wcf/feature-details/replay-attacks.md)

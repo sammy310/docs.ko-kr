@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2059657a6f4543ee29d795ecae7b93b72876fdf4
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 81da8052b79047933b4afc6d5686029465d83eba
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57474633"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59191499"
 ---
 # <a name="ihosttaskmanagerleaveruntime-method"></a>IHostTaskManager::LeaveRuntime 메서드
 현재 실행 중인 작업의 CLR (공용 언어 런타임)을 유지 하 고 비관리 코드는 호스트에 알립니다.  
@@ -76,6 +76,7 @@ HRESULT LeaveRuntime (
  **.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>참고자료
+
 - [ICLRTask 인터페이스](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md)
 - [ICLRTaskManager 인터페이스](../../../../docs/framework/unmanaged-api/hosting/iclrtaskmanager-interface.md)
 - [IHostTask 인터페이스](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md)

@@ -8,18 +8,16 @@ helpviewer_keywords:
 - 3-D transformations
 - transformations [WPF], 3-D
 ms.assetid: e45e555d-ac1e-4b36-aced-e433afe7f27f
-ms.openlocfilehash: 578c8061271e08e4eac1ec5f11c84e63a3fa37bd
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: bbb3c413148bd2e2ab8de8a1a725f2d9a8acf2f6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57361891"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59190633"
 ---
 # <a name="3-d-transformations-overview"></a>3차원 변환 개요
 이 항목에서는 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 그래픽 시스템에서 3차원 모델에 변환을 적용하는 방법을 설명합니다. 변환을 사용하면 개발자가 해당 항목을 정의하는 기준 값을 변경하지 않고도 모델의 위치, 크기 및 방향을 변경할 수 있습니다.  
-  
 
-  
 ## <a name="3-d-coordinate-space"></a>3차원 좌표 공간  
  3 차원 그래픽 콘텐츠 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 요소에 캡슐화 되어 <xref:System.Windows.Controls.Viewport3D>, 2 차원 요소 구조에 참여할 수 있는 합니다. 그래픽 시스템에서는 Viewport3D를 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]의 다른 많은 요소처럼 2차원 시각적 요소로 처리합니다. Viewport3D는 3차원 장면을 보여 주는 창(뷰포트)으로 작동합니다. 보다 정확히 말해 이는 3차원 장면이 프로젝션되는 표면입니다.  동일한 장면 그래프에서 Viewport3D를 다른 2차원 그리기 개체와 함께 사용할 수 있지만 Viewport3D 내에서 2차원 및 3차원 개체가 상호 침투할 수 없습니다. 다음에서 설명하는 좌표 공간은 Viewport3D 요소에 의해 포함됩니다.  
   
@@ -106,6 +104,7 @@ ScaleCenter 예제
  카메라도 모델이므로 카메라 속성 또한 변환할 수 있습니다.  카메라 위치나 평면 거리를 변환하면 결과적으로 전체 장면 프로젝션을 변환하여 장면의 모양을 확실히 변경할 수 있지만 이와 같은 방법으로 얻는 효과 대부분은 장면에서 모델의 위치에 적용하는 변환만큼의 "시각적" 효과를 만들 수 없습니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [3차원 그래픽 개요](3-d-graphics-overview.md)
 - [Transform 개요](transforms-overview.md)
-- [2차원 변환 샘플](https://go.microsoft.com/fwlink/?LinkID=158252)
+- [2 차원 변환 샘플](https://go.microsoft.com/fwlink/?LinkID=158252)

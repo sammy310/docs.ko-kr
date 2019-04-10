@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 5c5450ea-6af1-4b75-a267-613d0ac54707
-ms.openlocfilehash: 759a5dd4cecbaf804d1ccf29fa504c2f5e1ad7f8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9fa6e4114e9579079705700708840f2814b03b99
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54566741"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59186877"
 ---
 # <a name="specifying-service-run-time-behavior"></a>서비스 런타임 동작 지정
 서비스 계약을 디자인([Designing Service Contracts](../../../docs/framework/wcf/designing-service-contracts.md)) 서비스 계약을 구현([Implementing Service Contracts](../../../docs/framework/wcf/implementing-service-contracts.md))했으면 서비스 런타임의 작업 동작을 구성할 수 있습니다. 이 항목에서는 시스템 제공 서비스와 작업 동작에 대해 설명하고, 새 동작을 만들기 위해 추가 정보를 찾을 수 있는 위치에 대해 설명합니다. 일부 동작은 특성으로 적용되지만 대부분은 애플리케이션 구성 파일을 사용하여 적용되거나 프로그래밍 방식으로 적용됩니다. 서비스 응용 프로그램을 구성 하는 방법에 대 한 자세한 내용은 참조 하세요. [서비스 구성](../../../docs/framework/wcf/configuring-services.md)합니다.  
@@ -121,5 +121,6 @@ ms.locfileid: "54566741"
 -   <xref:System.ServiceModel.TransactionFlowAttribute>. 서비스 작업에서 트랜잭션 헤더를 허용하는 수준을 지정합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [서비스 구성](../../../docs/framework/wcf/configuring-services.md)
 - [방법: 서비스 인스턴스 만들기 제어](../../../docs/framework/wcf/feature-details/how-to-control-service-instancing.md)

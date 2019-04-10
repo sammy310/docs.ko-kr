@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Windows Forms, anchoring and docking WPF content
 - interoperability [WPF]
 ms.assetid: 5efb1c53-1484-43d6-aa8a-f4861b99bb8a
-ms.openlocfilehash: 0738d1522c8ade8f026a3bf69fbff0bc2c2d6d85
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: a9c549a9014e328e8083704971dfd5323adcea41
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57712463"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59193202"
 ---
 # <a name="walkthrough-arranging-wpf-content-on-windows-forms-at-design-time"></a>연습: 디자인 타임에 Windows Forms에서 WPF 콘텐츠 정렬
 이 연습에서는 기준 위치 지정 및 맞춤선과 같은 Windows Forms 레이아웃 기능을 사용하여 WPF(Windows Presentation Foundation) 컨트롤을 정렬하는 방법을 보여 줍니다.
@@ -148,11 +148,12 @@ ms.locfileid: "57712463"
      자세한 내용은 [방법: TableLayoutPanel 컨트롤의 자식 컨트롤 고정 및 도킹](../controls/how-to-anchor-and-dock-child-controls-in-a-tablelayoutpanel-control.md)합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Windows.Forms.Integration.ElementHost>
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost>
-- [방법: TableLayoutPanel 컨트롤의 자식 컨트롤 고정 및 도킹](../controls/how-to-anchor-and-dock-child-controls-in-a-tablelayoutpanel-control.md)
-- [방법: 디자인 타임에 컨트롤을 폼의 가장자리에 맞춤](../controls/how-to-align-a-control-to-the-edges-of-forms-at-design-time.md)
-- [연습: 맞춤선을 사용 하 여 Windows Forms에서 컨트롤 정렬](../controls/walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)
+- [방법: TableLayoutPanel 컨트롤에서 자식 컨트롤 고정 및 도킹](../controls/how-to-anchor-and-dock-child-controls-in-a-tablelayoutpanel-control.md)
+- [방법: 디자인 타임에 양식의 가장자리에 컨트롤 맞춤](../controls/how-to-align-a-control-to-the-edges-of-forms-at-design-time.md)
+- [연습: Windows Forms에서 맞춤선을 사용하여 컨트롤 정렬](../controls/walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)
 - [마이그레이션 및 상호 운용성](../../wpf/advanced/migration-and-interoperability.md)
 - [WPF 컨트롤 사용](using-wpf-controls.md)
 - [Visual Studio에서 XAML 디자인](/visualstudio/designers/designing-xaml-in-visual-studio)

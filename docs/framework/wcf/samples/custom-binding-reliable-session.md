@@ -2,12 +2,12 @@
 title: 사용자 지정 바인딩 신뢰할 수 있는 세션
 ms.date: 03/30/2017
 ms.assetid: c5fcd409-246f-4f3e-b3f1-629506ca4c04
-ms.openlocfilehash: d970f4a84f51755db16d84d22178c343624de03f
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
-ms.translationtype: MT
+ms.openlocfilehash: d419a5793abd6c89b4cddb3b5d3c3359361d5b5b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58824769"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59172421"
 ---
 # <a name="custom-binding-reliable-session"></a>사용자 지정 바인딩 신뢰할 수 있는 세션
 사용자 지정 바인딩은 개별 바인딩 요소의 순서 있는 목록에 의해 정의됩니다. 이 샘플에서는 특히 신뢰할 수 있는 세션을 사용하도록 설정하는 것을 비롯하여 다양한 전송 및 메시지 인코딩 요소와 함께 사용자 지정 바인딩을 구성하는 방법을 보여 줍니다.  
@@ -122,4 +122,3 @@ Press <ENTER> to terminate client.
     ... />  
     <compositeDuplex clientBaseAddress="http://client_machine_name:8000/myClient/" />  
     ```  
-  

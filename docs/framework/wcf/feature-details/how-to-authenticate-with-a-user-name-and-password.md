@@ -1,17 +1,17 @@
 ---
-title: '방법: 사용자 이름 및 암호를 사용 하 여 인증'
+title: '방법: 사용자 이름 및 암호를 사용하여 인증'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - authentication [WCF], user name and password
 ms.assetid: a5415be2-0ef3-464c-9f76-c255cb8165a4
-ms.openlocfilehash: f6939659249ea40e97f340771017d0587ec6a08f
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
-ms.translationtype: MT
+ms.openlocfilehash: 08703209fd465f87e9dbc5e81a6ed90a4056324c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58412268"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59174137"
 ---
-# <a name="how-to-authenticate-with-a-user-name-and-password"></a>방법: 사용자 이름 및 암호를 사용 하 여 인증
+# <a name="how-to-authenticate-with-a-user-name-and-password"></a>방법: 사용자 이름 및 암호를 사용하여 인증
 
 이 항목에서는 Windows 도메인 사용자 이름 및 암호를 사용 하 여 클라이언트를 인증 하는 Windows Communication Foundation (WCF) 서비스를 사용 하도록 설정 하는 방법에 설명 합니다. 여기에서는 실행 중이면서 자체 호스팅된 서비스가 있는 것으로 가정합니다. 기본 자체 호스팅된 WCF 서비스 참조를 만드는 예제 [초보자를 위한 자습서](../../../../docs/framework/wcf/getting-started-tutorial.md)합니다. 이 항목은 코드에 서비스가 구성된 것으로 가정합니다. 구성 파일을 사용 하 여 유사한 서비스를 구성 하는 예제를 참조 하는 참조 하려는 경우 [메시지 보안 사용자 이름](../../../../docs/framework/wcf/samples/message-security-user-name.md)  
   
@@ -21,8 +21,7 @@ ms.locfileid: "58412268"
   
 ## <a name="to-configure-a-wcf-service-to-authenticate-using-windows-domain-username-and-password"></a>Windows 도메인 사용자 이름 및 암호를 사용 하 여 인증 하는 WCF 서비스를 구성 하려면
   
-1.  
-  <xref:System.ServiceModel.WSHttpBinding>의 인스턴스를 만들고, 바인딩의 보안 모드를 <xref:System.ServiceModel.WSHttpSecurity.Message?displayProperty=nameWithType>로 설정하고, 바인딩의 `ClientCredentialType`을 <xref:System.ServiceModel.MessageCredentialType.UserName?displayProperty=nameWithType>으로 설정한 다음, 아래 코드와 같이 구성된 바인딩을 사용하여 서비스 엔드포인트를 서비스 호스트에 추가합니다.  
+1.  <xref:System.ServiceModel.WSHttpBinding>의 인스턴스를 만들고, 바인딩의 보안 모드를 <xref:System.ServiceModel.WSHttpSecurity.Message?displayProperty=nameWithType>로 설정하고, 바인딩의 `ClientCredentialType`을 <xref:System.ServiceModel.MessageCredentialType.UserName?displayProperty=nameWithType>으로 설정한 다음, 아래 코드와 같이 구성된 바인딩을 사용하여 서비스 엔드포인트를 서비스 호스트에 추가합니다.  
   
     ```  
     // ...  
@@ -84,6 +83,7 @@ ms.locfileid: "58412268"
     ```  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.ServiceModel.WSHttpBinding>
 - <xref:System.ServiceModel.WSHttpSecurity>
 - <xref:System.ServiceModel.SecurityMode>
@@ -93,5 +93,5 @@ ms.locfileid: "58412268"
 - <xref:System.ServiceModel.WSHttpSecurity.Mode%2A>
 - <xref:System.ServiceModel.HttpTransportSecurity.ClientCredentialType%2A>
 - [기본 인증을 사용하는 전송 보안](../../../../docs/framework/wcf/feature-details/transport-security-with-basic-authentication.md)
-- [분산 애플리케이션 보안](../../../../docs/framework/wcf/feature-details/distributed-application-security.md)
+- [분산 응용 프로그램 보안](../../../../docs/framework/wcf/feature-details/distributed-application-security.md)
 - [\<wsHttpBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md)

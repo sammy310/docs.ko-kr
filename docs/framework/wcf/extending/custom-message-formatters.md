@@ -2,12 +2,12 @@
 title: 사용자 지정 메시지 포맷터
 ms.date: 03/30/2017
 ms.assetid: c07435f3-5214-4791-8961-2c2b61306d71
-ms.openlocfilehash: e1633bdd3959ba812251ef1b78bcd0e83b2060c6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: af1596c65fc87a68bc3dc2ab5ab2d82133e0fed4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54612770"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59196244"
 ---
 # <a name="custom-message-formatters"></a>사용자 지정 메시지 포맷터
 메시지 내용은 응용 프로그램에 편리한 형식이 아닌 XML 형식인 경우가 많습니다. 응용 프로그램은 속성을 가져오고 설정하여 개체를 조작합니다. Windows Communication Foundation (WCF)를 사용 합니다 *데이터 계약* 변환할는 <xref:System.ServiceModel.Channels.Message> 개체로 응용 프로그램에서 쉽게 처리 하는 개체입니다. 이러한 프로세스를 serialization 및 deserialization이라고 합니다. 전송 계층에서 메시지 통신 형식에 대해 수행하는 관련 없는 프로세스인 serialization 및 deserialization을 설명하는 데에도 동일한 용어가 사용됩니다.  
@@ -33,6 +33,7 @@ ms.locfileid: "54612770"
  사용자 지정 포맷터를 서비스 응용 프로그램에 삽입하려면 작업 동작을 사용하여 <xref:System.ServiceModel.Dispatcher.IDispatchMessageFormatter> 개체를 <xref:System.ServiceModel.Dispatcher.DispatchOperation.Formatter%2A> 속성에 할당합니다. 동작에 대 한 정보를 참조 하세요 [구성 및 동작을 사용 하 여 런타임 확장](../../../../docs/framework/wcf/extending/configuring-and-extending-the-runtime-with-behaviors.md)합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.ServiceModel.Dispatcher.IClientMessageFormatter>
 - <xref:System.ServiceModel.Dispatcher.IDispatchMessageFormatter>
 - [동작을 사용하여 런타임 구성 및 확장](../../../../docs/framework/wcf/extending/configuring-and-extending-the-runtime-with-behaviors.md)

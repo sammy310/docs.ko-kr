@@ -2,12 +2,12 @@
 title: '작업 3: 도구 상자 및 PropertyGrid 창 만들기'
 ms.date: 03/30/2017
 ms.assetid: 72c1546a-eed5-4f0f-a616-719a163414f4
-ms.openlocfilehash: 45819577c39185a5d95da81521cd541087a64efc
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: a03a4204d6f112d8a94b48dd5a295dc4ff8354a7
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57721226"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59175047"
 ---
 # <a name="task-3-create-the-toolbox-and-propertygrid-panes"></a>작업 3: 도구 상자 및 PropertyGrid 창 만들기
 이 작업을 만듭니다는 **도구 상자** 및 **PropertyGrid** 창에 다시 호스트 된 추가 [!INCLUDE[wfd1](../../../includes/wfd1-md.md)]합니다.  
@@ -213,6 +213,7 @@ namespace HostingApplication
 ```  
   
 ## <a name="see-also"></a>참고자료
-- [워크플로 디자이너 재호스트](rehosting-the-workflow-designer.md)
-- [작업 1: 새 Windows Presentation Foundation 응용 프로그램 만들기](task-1-create-a-new-wpf-app.md)
+
+- [Workflow Designer 재호스팅](rehosting-the-workflow-designer.md)
+- [작업 1: 새 Windows Presentation Foundation 애플리케이션 만들기](task-1-create-a-new-wpf-app.md)
 - [작업 2: 워크플로 디자이너 호스트](task-2-host-the-workflow-designer.md)

@@ -2,12 +2,12 @@
 title: Membership and Role Provider
 ms.date: 03/30/2017
 ms.assetid: 0d11a31c-e75f-4fcf-9cf4-b7f26e056bcd
-ms.openlocfilehash: eb2c8a5bbe10d91a29ed040e89163279434c8f8f
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
-ms.translationtype: MT
+ms.openlocfilehash: 195940bea9c0fc8b26b6b49eadc1927ff156c514
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58839758"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59176945"
 ---
 # <a name="membership-and-role-provider"></a>Membership and Role Provider
 Membership and Role Provider 샘플에서는 서비스에서 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 멤버 자격 및 역할 공급자를 사용하여 클라이언트를 인증하고 권한을 부여하는 방법을 보여 줍니다.  
@@ -197,4 +197,3 @@ Membership and Role Provider 샘플에서는 서비스에서 [!INCLUDE[vstecasp]
     ```  
     certmgr.exe -add -r LocalMachine -s My -c -n %SERVER_NAME% -r CurrentUser -s TrustedPeople  
     ```  
-  

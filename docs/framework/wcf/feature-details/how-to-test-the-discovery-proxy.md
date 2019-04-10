@@ -2,12 +2,12 @@
 title: '방법: 검색 프록시 테스트'
 ms.date: 03/30/2017
 ms.assetid: d96e3fa2-3c42-4e5d-8244-2694081bdc32
-ms.openlocfilehash: 3c159481813266386706b34d172bbf9614a8253d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 13d2e8ca46e634e3b27c8eb967d89d860df1c72d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54590515"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59176282"
 ---
 # <a name="how-to-test-the-discovery-proxy"></a>방법: 검색 프록시 테스트
 이 항목은 검색 프록시를 구현하는 방법에 대해 설명하는 네 항목 중 네 번째 항목입니다. 이전 항목인 [방법: 검색 프록시를 사용 하 여 서비스를 검색 하는 클라이언트 응용 프로그램을 구현](../../../../docs/framework/wcf/feature-details/client-app-discovery-proxy-to-find-a-service.md), 검색 프록시를 사용 하 여 서비스를 찾으려면 다음 서비스를 호출 하는 WCF 클라이언트 응용 프로그램을 구현 합니다. 이 항목에서는 검색 프록시, 서비스 및 클라이언트 응용 프로그램이 올바로 작동하는지 확인하는 방법에 대해 설명합니다.  
@@ -51,7 +51,8 @@ ms.locfileid: "54590515"
 3.  검색 프록시를 종료합니다.  
   
 ## <a name="see-also"></a>참고자료
-- [WCF 검색 개요](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md)
+
+- [WCF Discovery 개요](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md)
 - [방법: 검색 프록시 구현](../../../../docs/framework/wcf/feature-details/how-to-implement-a-discovery-proxy.md)
-- [방법: 검색 프록시에 등록할 검색 가능한 서비스를 구현 합니다.](../../../../docs/framework/wcf/feature-details/discoverable-service-that-registers-with-the-discovery-proxy.md)
-- [방법: 검색 프록시를 사용 하 여 서비스를 검색 하는 클라이언트 응용 프로그램 구현](../../../../docs/framework/wcf/feature-details/client-app-discovery-proxy-to-find-a-service.md)
+- [방법: 검색 프록시에 등록할 검색 가능한 서비스 구현](../../../../docs/framework/wcf/feature-details/discoverable-service-that-registers-with-the-discovery-proxy.md)
+- [방법: 검색 프록시를 사용하여 서비스를 찾는 클라이언트 애플리케이션 구현](../../../../docs/framework/wcf/feature-details/client-app-discovery-proxy-to-find-a-service.md)

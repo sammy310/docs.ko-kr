@@ -12,12 +12,12 @@ helpviewer_keywords:
 - tree nodes in TreeView control [Windows Forms], determining node clicked
 - TreeView control [Windows Forms], determining node clicked
 ms.assetid: 06a4a191-d918-42af-9f49-956c93eff261
-ms.openlocfilehash: 1bc883cca2ef7fa7abd65362da054251513af76a
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 073b953d2a39b27081020c56399ea3beae2083e5
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57713919"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59189575"
 ---
 # <a name="how-to-determine-which-treeview-node-was-clicked-windows-forms"></a>방법: (Windows Forms) 클릭 한 TreeView 노드 확인
 Windows Forms를 사용 하 여 작업할 때 <xref:System.Windows.Forms.TreeView> 컨트롤 일반적인 작업을 결정 하는 것 노드 클릭 되었는지 및 적절 하 게 응답 합니다.  
@@ -59,4 +59,5 @@ Windows Forms를 사용 하 여 작업할 때 <xref:System.Windows.Forms.TreeVie
     >  사용할 수 있습니다는 <xref:System.Windows.Forms.MouseEventArgs> 의 <xref:System.Windows.Forms.Control.MouseDown> 또는 <xref:System.Windows.Forms.Control.MouseUp> 가져올 이벤트를 <xref:System.Drawing.Point.X%2A> 및 <xref:System.Drawing.Point.Y%2A> 좌표 값을 <xref:System.Drawing.Point> 클릭이 발생 합니다. 그런 다음 사용 합니다 <xref:System.Windows.Forms.TreeView> 컨트롤의 <xref:System.Windows.Forms.TreeView.GetNodeAt%2A> 노드를 클릭 했는지 확인 하는 방법.  
   
 ## <a name="see-also"></a>참고자료
+
 - [TreeView 컨트롤](treeview-control-windows-forms.md)

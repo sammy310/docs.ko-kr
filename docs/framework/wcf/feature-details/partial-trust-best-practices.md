@@ -2,12 +2,12 @@
 title: 부분 신뢰를 위한 최선의 방법
 ms.date: 03/30/2017
 ms.assetid: 0d052bc0-5b98-4c50-8bb5-270cc8a8b145
-ms.openlocfilehash: d63c9de4b1ea935b35f718056d191689f28c3813
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c83c36020cfd5b41e99ff9eeb7968d0b5df909a6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54640110"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59184082"
 ---
 # <a name="partial-trust-best-practices"></a>부분 신뢰를 위한 최선의 방법
 이 항목에서는 부분 신뢰 환경에서 Windows Communication Foundation (WCF)를 실행 하는 경우 모범 사례를 설명 합니다.  
@@ -29,7 +29,7 @@ ms.locfileid: "54640110"
   
 -   `OnSerializing`, `OnSerialized`, `OnDeserializing` 및 `OnDeserialized`와 같은 serialization 이벤트를 처리하는 메서드는 public으로 선언해야 합니다. 그러나 <xref:System.Runtime.Serialization.IDeserializationCallback.OnDeserialization%28System.Object%29>의 명시적 구현과 암시적 구현이 모두 지원됩니다.  
   
--   `[DataContract]`가 deserialization을 수행하는 동안 새로 인스턴스화된 개체의 생성자를 호출하지 않으므로 <xref:System.Security.AllowPartiallyTrustedCallersAttribute>로 표시된 어셈블리에서 구현한 <xref:System.Runtime.Serialization.DataContractSerializer> 형식은 형식 생성자에서 보안 관련 작업을 수행해서는 안 됩니다. 특히 다음과 같은 일반적인 보안 기술은 `[DataContract]` 형식에 사용해서는 안 됩니다.  
+-   `[DataContract]` 어셈블리에 구현 된 형식으로 표시 합니다 <xref:System.Security.AllowPartiallyTrustedCallersAttribute> 로 형식 생성자에서 보안 관련 작업을 수행 하지 않아야 합니다 <xref:System.Runtime.Serialization.DataContractSerializer> 역직렬화 하는 동안 새로 인스턴스화된 개체의 생성자를 호출 하지 않습니다. 특히 다음과 같은 일반적인 보안 기술은 `[DataContract]` 형식에 사용해서는 안 됩니다.  
   
 -   형식 생성자를 internal 또는 private으로 설정하여 부분 신뢰 액세스를 제한하려고 시도하는 보안 기술  
   
@@ -66,5 +66,6 @@ ms.locfileid: "54640110"
  가장 좋은 방법은 <xref:System.Security.PermissionSet.Assert%2A>, <xref:System.Security.PermissionSet.PermitOnly%2A> 또는 <xref:System.Security.PermissionSet.Deny%2A>를 호출하여 스레드 관련 권한 컨텍스트를 만들지 않는 것입니다. 대신 응용 프로그램 자체에 권한을 부여하거나 거부하면 <xref:System.Security.PermissionSet.Assert%2A>, <xref:System.Security.PermissionSet.Deny%2A> 또는 <xref:System.Security.PermissionSet.PermitOnly%2A>가 필요하지 않습니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Runtime.Serialization.DataContractSerializer>
 - <xref:System.Xml.Serialization.IXmlSerializable>

@@ -13,12 +13,12 @@ helpviewer_keywords:
 - XBAP security [WPF]
 - Internet Explorer security settings [WPF]
 ms.assetid: ee1baea0-3611-4e36-9ad6-fcd5205376fb
-ms.openlocfilehash: 84f7e0f1174a048d650741075344de3158c2994e
-ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
-ms.translationtype: MT
+ms.openlocfilehash: 01b1b30ceca316ecebacfaf23f458f71f1953d04
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58654317"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59193670"
 ---
 # <a name="security-wpf"></a>보안(WPF)
 <a name="introduction"></a> Windows Presentation Foundation (WPF) 독립 실행형 및 브라우저에서 호스팅된 응용 프로그램을 개발할 때 보안 모델을 고려해 야 합니다. [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 독립 실행형 응용 프로그램 무제한 권한으로 실행 ( [!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)] **FullTrust** 권한 집합) Windows Installer (.msi), XCopy를 사용 하 여 배포한 여부에 관계 없이 또는 [!INCLUDE[TLA2#tla_clickonce](../../../includes/tla2sharptla-clickonce-md.md)]합니다. ClickOnce를 포함한 부분 신뢰, 독립 실행형 WPF 애플리케이션 배포가 지원되지 않습니다. 그러나 완전 신뢰 호스트 응용 프로그램을 부분 신뢰를 만들 수 <xref:System.AppDomain> .NET Framework 추가 기능 모델을 사용 합니다. 자세한 내용은 [WPF 추가 기능 개요](./app-development/wpf-add-ins-overview.md)합니다.  
@@ -37,11 +37,11 @@ ms.locfileid: "58654317"
   
 -   [WebBrowser 컨트롤 및 기능 컨트롤](#webbrowser_control_and_feature_controls)  
   
--   [부분적으로 신뢰할 수 있는 클라이언트 응용 프로그램에 대한 APTCA 어셈블리를 사용하지 않도록 설정](#APTCA)  
+-   [부분적으로 신뢰할 수 있는 클라이언트 애플리케이션에 대한 APTCA 어셈블리를 사용하지 않도록 설정](#APTCA)  
   
--   [XAML 사용 완화 파일에 대한 샌드박스 동작](#LooseContentSandboxing)  
+-   [느슨한 XAML 파일에 대한 샌드박스 동작](#LooseContentSandboxing)  
   
--   [보안을 승격하는 WPF 응용 프로그램 개발을 위한 리소스](#BestPractices)  
+-   [보안을 승격하는 WPF 애플리케이션 개발을 위한 리소스](#BestPractices)  
   
 <a name="SafeTopLevelNavigation"></a>   
 ## <a name="safe-navigation"></a>안전한 탐색  
@@ -266,16 +266,17 @@ ms.locfileid: "58654317"
   
 |영역|리소스|  
 |----------|--------------|  
-|관리 코드|[응용 프로그램에 대한 패턴 및 사례 보안 지침](https://go.microsoft.com/fwlink/?LinkId=117426)|  
+|관리 코드|[패턴 및 응용 프로그램에 대 한 사례 보안 지침](https://go.microsoft.com/fwlink/?LinkId=117426)|  
 |[!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)]|[코드 액세스 보안](../misc/code-access-security.md)|  
 |[!INCLUDE[TLA2#tla_clickonce](../../../includes/tla2sharptla-clickonce-md.md)]|[ClickOnce 보안 및 배포](/visualstudio/deployment/clickonce-security-and-deployment)|  
 |[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]|[WPF 부분 신뢰 보안](wpf-partial-trust-security.md)|  
   
 ## <a name="see-also"></a>참고자료
+
 - [WPF 부분 신뢰 보안](wpf-partial-trust-security.md)
 - [WPF 보안 전략 - 플랫폼 보안](wpf-security-strategy-platform-security.md)
 - [WPF 보안 전략 - 보안 엔지니어링](wpf-security-strategy-security-engineering.md)
-- [응용 프로그램에 대한 패턴 및 사례 보안 지침](https://go.microsoft.com/fwlink/?LinkId=117426)
+- [패턴 및 응용 프로그램에 대 한 사례 보안 지침](https://go.microsoft.com/fwlink/?LinkId=117426)
 - [코드 액세스 보안](../misc/code-access-security.md)
 - [ClickOnce 보안 및 배포](/visualstudio/deployment/clickonce-security-and-deployment)
 - [XAML 개요(WPF)](./advanced/xaml-overview-wpf.md)

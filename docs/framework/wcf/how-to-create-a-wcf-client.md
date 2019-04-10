@@ -5,12 +5,12 @@ helpviewer_keywords:
 - clients [WCF], running
 - WCF clients [WCF], running
 ms.assetid: a67884cc-1c4b-416b-8c96-5c954099f19f
-ms.openlocfilehash: 0f7f622221e6612ecdb0ea04084d81e923218a5c
-ms.sourcegitcommit: d938c39afb9216db377d0f0ecdaa53936a851059
+ms.openlocfilehash: a16a0ccabfd0f9fbe69db1ea88d4613185f3c1da
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58634065"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59174371"
 ---
 # <a name="tutorial-create-a-windows-communication-foundation-client"></a>자습서: Windows Communication Foundation 클라이언트 만들기
 
@@ -30,7 +30,6 @@ WCF 응용 프로그램을 만드는 다음 작업을 WCF 서비스에서 메타
 > [!div class="checklist"]
 > - 만들고 WCF 클라이언트에 대 한 콘솔 앱 프로젝트를 구성 합니다.
 > - 프록시 클래스와 구성 파일을 생성 하는 WCF 서비스에 대 한 서비스 참조를 추가 합니다.
-
 
 ## <a name="create-a-windows-communication-foundation-client"></a>Windows Communication Foundation 클라이언트 만들기
 
@@ -67,7 +66,6 @@ WCF 응용 프로그램을 만드는 다음 작업을 WCF 서비스에서 메타
    3. 선택 **CalculatorService** 여 확장 하 고 서비스에서 구현 되는 서비스 계약을 표시 합니다. 기본값을 그대로 두고 **Namespace** 선택한 **확인**합니다.
 
       Visual Studio에서 새 항목을 추가 합니다 **연결 된 서비스** 폴더에는 **GettingStartedClient** 프로젝트입니다. 
-
 
 ### <a name="servicemodel-metadata-utility-tool"></a>ServiceModel Metadata 유틸리티 도구
 
@@ -129,5 +127,3 @@ svcutil.exe /language:vb /out:generatedProxy.vb /config:app.config http://localh
 
 > [!div class="nextstepaction"]
 > [자습서: WCF 클라이언트를 사용 합니다.](how-to-use-a-wcf-client.md)
-
-

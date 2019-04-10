@@ -6,12 +6,12 @@ helpviewer_keywords:
 - cells [Windows Forms], styles
 - data grids [Windows Forms], cell styles
 ms.assetid: dbb75ed6-8804-4232-8382-f9920c2e380c
-ms.openlocfilehash: a22fc29d2cab21977c0411a440b847b426fb5915
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: ec2a34deb25cd5f4cf492d92129ffc61d14001ab
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57712283"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59171524"
 ---
 # <a name="cell-styles-in-the-windows-forms-datagridview-control"></a>Windows Forms DataGridView 컨트롤의 셀 스타일
 내에 있는 각 셀은 <xref:System.Windows.Forms.DataGridView> 컨트롤 고유한 스타일을 텍스트 형식으로, 배경색, 전경색, 글꼴 등을 가질 수 있습니다. 하지만 일반적으로 여러 셀은 특징이 있습니다. 특정 스타일입니다.  
@@ -145,6 +145,7 @@ ms.locfileid: "57712283"
 >  셀에 저장 된 값을 캐시 <xref:System.Windows.Forms.DataGridViewCell.Style%2A> 속성은 특정 스타일 값이 설정 되어 있는지 여부에 관계 없이 중요 합니다. 스타일 설정을 일시적으로 바꿔야 하는 경우 원래 "설정 안 함" 상태로 복원 셀 스타일 설정 상위 수준에서 상속 하는 다시 이동 됩니다 것을 확인 합니다. 스타일의 상속 여부에 관계 없이 셀에 대해 적용할 실제 스타일을 결정 해야 할 경우 사용 하 여 셀의 <xref:System.Windows.Forms.DataGridViewCell.InheritedStyle%2A> 속성입니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridViewCellStyle>
 - <xref:System.Windows.Forms.DataGridView.AlternatingRowsDefaultCellStyle%2A?displayProperty=nameWithType>
@@ -162,6 +163,6 @@ ms.locfileid: "57712283"
 - <xref:System.Windows.Forms.DataGridView.CellStyleContentChanged?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.DataGridView.RowPrePaint?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.DataGridView.RowPostPaint?displayProperty=nameWithType>
-- [Windows Forms DataGridView 컨트롤의 기본 형식 및 스타일 지정](basic-formatting-and-styling-in-the-windows-forms-datagridview-control.md)
-- [방법: Windows Forms DataGridView 컨트롤에 대 한 기본 셀 스타일 설정](how-to-set-default-cell-styles-for-the-windows-forms-datagridview-control.md)
-- [Windows Forms DataGridView 컨트롤의 데이터 형식 지정](data-formatting-in-the-windows-forms-datagridview-control.md)
+- [Windows Forms DataGridView 컨트롤에서 기본 형식 및 스타일 지정](basic-formatting-and-styling-in-the-windows-forms-datagridview-control.md)
+- [방법: Windows Forms DataGridView 컨트롤에 대한 기본 셀 스타일 설정](how-to-set-default-cell-styles-for-the-windows-forms-datagridview-control.md)
+- [Windows Forms DataGridView 컨트롤에서 데이터 형식 지정](data-formatting-in-the-windows-forms-datagridview-control.md)

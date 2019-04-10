@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 61f9448735f5d26d122ed44c4f41c4fd2a9f7478
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f70e7958cc9ac198738ed72732fe7b6563c89067
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54614304"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59175424"
 ---
 # <a name="iclrcontrol-interface"></a>ICLRControl 인터페이스
 참조 하는 데 사용 하는 CLR (공용 언어 런타임)의 측면을 구성 하는 메서드를 제공 합니다.  
@@ -43,6 +43,7 @@ ms.locfileid: "54614304"
  **.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>참고자료
+
 - [ICLRAssemblyIdentityManager 인터페이스](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyidentitymanager-interface.md)
 - [ICLRDebugManager 인터페이스](../../../../docs/framework/unmanaged-api/hosting/iclrdebugmanager-interface.md)
 - [ICLRGCManager 인터페이스](../../../../docs/framework/unmanaged-api/hosting/iclrgcmanager-interface.md)

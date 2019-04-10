@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3293c3b0d5fa4615c351949afdb1acf8cd560b5e
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 1c30115a23f7f73662c9b3f4f4a09d45478ad687
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57480717"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59187293"
 ---
 # <a name="icordebuginternalframe2getframeaddress-method"></a>ICorDebugInternalFrame2::GetFrameAddress 메서드
 내부 프레임의 스택 주소를 반환합니다.  
@@ -44,7 +44,7 @@ HRESULT GetFrameAddress([out] CORDB_ADDRESS *pAddress);
 |-------------|-----------------|  
 |S_OK|내부 프레임의 주소 반환 되었습니다.|  
 |E_FAIL|내부 프레임의 주소를 반환 하지 못했습니다.|  
-|E_INVALIDARG|`pAddress`가 `null`인 경우|  
+|E_INVALIDARG|`pAddress` `null`합니다.|  
   
 ## <a name="remarks"></a>설명  
  반환 된 값 `pAddress` 스택의 다른 프레임을 기준으로 내부 프레임의 위치를 확인할 수 있습니다. IA-64 기반 컴퓨터에도 내부 프레임만 스택에 있으며 백업 저장소에 해당 포인터가 없습니다.  
@@ -59,6 +59,7 @@ HRESULT GetFrameAddress([out] CORDB_ADDRESS *pAddress);
  **.NET Framework 버전:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>참고자료
+
 - [ICorDebugInternalFrame2 인터페이스](../../../../docs/framework/unmanaged-api/debugging/icordebuginternalframe2-interface.md)
 - [디버깅 인터페이스](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
 - [디버깅](../../../../docs/framework/unmanaged-api/debugging/index.md)

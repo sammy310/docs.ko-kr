@@ -1,5 +1,5 @@
 ---
-title: '방법: Windows Forms 응용 프로그램에서 글꼴 구성표 변경에 응답'
+title: '방법: Windows Forms 애플리케이션에서 글꼴 구성표 변경 내용에 대응'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,14 +7,14 @@ dev_langs:
 helpviewer_keywords:
 - Windows Forms, font scheme changes
 ms.assetid: 4db27702-22e7-43bf-a07d-9a004549853c
-ms.openlocfilehash: 4c34a65ed8ddabfb99451e055048502cb7617e4f
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 85770687ecfad690a251eafec9051c4c20f45dd2
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57715973"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59182106"
 ---
-# <a name="how-to-respond-to-font-scheme-changes-in-a-windows-forms-application"></a>방법: Windows Forms 응용 프로그램에서 글꼴 구성표 변경에 응답
+# <a name="how-to-respond-to-font-scheme-changes-in-a-windows-forms-application"></a>방법: Windows Forms 애플리케이션에서 글꼴 구성표 변경 내용에 대응
 Windows 운영 체제에서 사용자 크게 또는 작게 표시 기본 글꼴을 확인 하려면 시스템 글꼴 설정을 변경할 수 있습니다. 이러한 글꼴 설정을 변경 하는 것이 더 큰 형식 해당 화면에 텍스트를 읽이 필요는 시각 장애가 있는 사용자에 대 한 중요 합니다. 글꼴 구성표 변경 될 때마다 양식 및 포함 된 모든 텍스트의 크기를 늘리거나 줄여 이러한 변경에 반응 하는 Windows Forms 응용 프로그램을 조정할 수 있습니다. 동적으로 글꼴 크기의 변경 내용을 수용 하기 위해 폼을 하려는 경우에 폼에 코드를 추가할 수 있습니다.  
   
  일반적으로 Windows Forms에서 사용 된 기본 글꼴은 글꼴에서 반환 되는 <xref:Microsoft.Win32> 네임 스페이스 호출 `GetStockObject(DEFAULT_GUI_FONT)`합니다. 이 호출에서 반환 되는 글꼴 화면 해상도 변경 하는 경우에 변경 됩니다. 코드에서 기본 글꼴을 변경 해야 다음 절차 에서처럼 <xref:System.Drawing.SystemFonts.IconTitleFont%2A> 글꼴 크기의 변경 내용에 응답 합니다.  
@@ -65,5 +65,6 @@ Windows 운영 체제에서 사용자 크게 또는 작게 표시 기본 글꼴�
  에 대 한 호출을 포함 하는이 코드 예제에서 constructer `InitializeComponent`, Visual Studio에서 새 Windows Forms 프로젝트를 만들 때 정의 합니다. 명령줄에서 응용 프로그램을 작성 하는 경우이 코드 줄을 제거 합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Windows.Forms.ContainerControl.PerformAutoScale%2A>
 - [Windows Forms의 자동 크기 조정](automatic-scaling-in-windows-forms.md)

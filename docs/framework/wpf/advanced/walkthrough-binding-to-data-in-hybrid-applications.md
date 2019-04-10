@@ -1,5 +1,5 @@
 ---
-title: '연습: 하이브리드 응용 프로그램에서 데이터 바인딩'
+title: '연습: 하이브리드 애플리케이션에서 데이터에 바인딩'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - hybrid applications [WPF interoperability]
 - data binding [WPF interoperability]
 ms.assetid: 18997e71-745a-4425-9c69-2cbce1d8669e
-ms.openlocfilehash: 378ebd5a402006d7e7a88029ced62f812f620aeb
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: MT
+ms.openlocfilehash: d497dfd5580f1d2741e0edafa86e9dd39ec374ec
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57377744"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59191993"
 ---
-# <a name="walkthrough-binding-to-data-in-hybrid-applications"></a>연습: 하이브리드 응용 프로그램에서 데이터 바인딩
+# <a name="walkthrough-binding-to-data-in-hybrid-applications"></a>연습: 하이브리드 애플리케이션에서 데이터에 바인딩
 사용 하 여 기본 데이터에 대 한 액세스를 사용 하 여 사용자에 게 제공 하는 데 필수적입니다 데이터 소스 컨트롤에 바인딩 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 또는 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]합니다. 이 연습에서는 모두 포함 하는 하이브리드 응용 프로그램에서 데이터 바인딩을 사용 하는 방법을 보여 줍니다 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 고 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 컨트롤입니다.  
   
  이 연습에서 설명하는 작업은 다음과 같습니다.  
@@ -174,6 +174,7 @@ ms.locfileid: "57377744"
 10. F5 키를 눌러 애플리케이션을 빌드하고 실행합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Windows.Forms.Integration.ElementHost>
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost>
 - [Visual Studio에서 XAML 디자인](/visualstudio/designers/designing-xaml-in-visual-studio)

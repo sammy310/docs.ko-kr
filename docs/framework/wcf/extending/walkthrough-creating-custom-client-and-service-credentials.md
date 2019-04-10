@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 2b5ba5c3-0c6c-48e9-9e46-54acaec443ba
-ms.openlocfilehash: 5688fbbe2c40e7cd30517fb53fe21ae3d0630f22
-ms.sourcegitcommit: af0a22a4eb11bbcd33baec49150d551955b50a16
-ms.translationtype: MT
+ms.openlocfilehash: 4a69cf01519ea21f61e0c142039e4d2fe9a3c0e1
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56261541"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59191694"
 ---
 # <a name="walkthrough-creating-custom-client-and-service-credentials"></a>연습: 사용자 지정 클라이언트 및 서비스 자격 증명 만들기
 이 항목에서는 사용자 지정 클라이언트와 서비스 자격 증명을 구현하는 방법 및 응용 프로그램 코드로부터 사용자 지정 자격 증명을 사용하는 방법을 보여 줍니다.  
@@ -40,7 +40,7 @@ ms.locfileid: "56261541"
 ## <a name="first-in-a-series"></a>시리즈의 첫 번째 단계  
  사용자 지정 자격 증명 클래스를 만드는 이므로 첫 번째 단계만에 프로 비전 하는 자격 증명, 보안 토큰 serialization 또는 인증에 대 한 WCF 동작을 변경 하려면 자격 증명을 사용자 지정에 대 한 이유는 합니다. 이 단원의 다른 항목에서는 사용자 지정 serializer 및 인증자를 만드는 방법에 대해 설명합니다. 이와 관련하여 사용자 지정 자격 증명 클래스를 만드는 것이 이 시리즈의 첫 번째 항목입니다. 후속 작업(사용자 지정 serializer 및 인증자 만들기)은 사용자 지정 자격 증명을 만든 이후에야 수행할 수 있습니다. 이 항목을 기초로 한 추가 항목은 다음과 같습니다.  
   
--   [방법: 사용자 지정 보안 토큰 공급자 만들기](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-provider.md)  
+-   [방법: 사용자 지정 보안 토큰 공급 기업 만들기](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-provider.md)  
   
 -   [방법: 사용자 지정 보안 토큰 인증자 만들기](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-authenticator.md)  
   
@@ -179,12 +179,13 @@ ms.locfileid: "56261541"
  위의 "`To create a configuration handler for custom client credentials`" 및 "`To register and use a custom client credentials configuration handler in the application configuration`" 절차에서 설명된 단계를 사용하여 구성에 대한 지원을 추가합니다. 유일한 차이점은 구성 처리기에 대한 기본 클래스로 <xref:System.ServiceModel.Configuration.ServiceCredentialsElement> 클래스 대신에 <xref:System.ServiceModel.Configuration.ClientCredentialsElement> 클래스를 사용하는 것입니다. 그런 다음 사용자 지정 서비스 자격 증명 요소는 시스템 제공 `<serviceCredentials>` 요소가 사용될 때 사용할 수 있습니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.ServiceModel.Description.ClientCredentials>
 - <xref:System.ServiceModel.Description.ServiceCredentials>
 - <xref:System.ServiceModel.Security.SecurityCredentialsManager>
 - <xref:System.IdentityModel.Selectors.SecurityTokenManager>
 - <xref:System.ServiceModel.Configuration.ClientCredentialsElement>
 - <xref:System.ServiceModel.Configuration.ServiceCredentialsElement>
-- [방법: 사용자 지정 보안 토큰 공급자 만들기](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-provider.md)
+- [방법: 사용자 지정 보안 토큰 공급 기업 만들기](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-provider.md)
 - [방법: 사용자 지정 보안 토큰 인증자 만들기](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-authenticator.md)
 - [방법: 사용자 지정 토큰 만들기](../../../../docs/framework/wcf/extending/how-to-create-a-custom-token.md)

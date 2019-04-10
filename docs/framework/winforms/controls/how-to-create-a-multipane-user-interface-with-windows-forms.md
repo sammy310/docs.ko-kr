@@ -1,5 +1,5 @@
 ---
-title: '방법: Windows Forms로 다중 창 사용자 인터페이스 만들기'
+title: '방법: Windows Forms를 사용하여 다중 창 사용자 인터페이스 만들기'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,14 +12,14 @@ helpviewer_keywords:
 - TreeView control [Windows Forms], examples
 - Splitter control [Windows Forms], examples
 ms.assetid: e79f6bcc-3740-4d1e-b46a-c5594d9b7327
-ms.openlocfilehash: 4db424b27af09dcb7def0051fba070fe9ccf0491
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: d75d96f8db216ab78e13ba5f8409ea5aa535d685
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57721972"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59192696"
 ---
-# <a name="how-to-create-a-multipane-user-interface-with-windows-forms"></a>방법: Windows Forms로 다중 창 사용자 인터페이스 만들기
+# <a name="how-to-create-a-multipane-user-interface-with-windows-forms"></a>방법: Windows Forms를 사용하여 다중 창 사용자 인터페이스 만들기
 다음 절차를 사용 하 여 Microsoft Outlook에서 사용 하는 비슷한 다중 창 사용자 인터페이스를 만듭니다는 **폴더** 목록에는 **메시지** 창 및 **미리보기** 창입니다. 이 정렬 폼에 컨트롤을 도킹을 통해 주로 수행 됩니다.  
   
  컨트롤을 고정 하면 부모 컨테이너의 가장자리 컨트롤은 고정 시킬 확인할 수 있습니다. 따라서 설정 하는 경우는 <xref:System.Windows.Forms.SplitContainer.Dock%2A> 속성을 <xref:System.Windows.Forms.DockStyle.Right>, 컨트롤의 오른쪽 가장자리 부모 컨트롤의 오른쪽 가장자리에 도킹 됩니다. 또한 컨트롤의 도킹된 가장자리 컨테이너 컨트롤과의 일치 하도록 크기가 조정 됩니다. 방법에 대 한 자세한 내용은 <xref:System.Windows.Forms.SplitContainer.Dock%2A> 속성을 참조 하십시오 [방법: Windows Forms에서 컨트롤을 도킹](how-to-dock-controls-on-windows-forms.md)합니다.  
@@ -177,6 +177,7 @@ ms.locfileid: "57721972"
     ```  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Windows.Forms.SplitContainer>
 - [SplitContainer 컨트롤](splitcontainer-control-windows-forms.md)
-- [방법: 디자이너를 사용 하 여 Windows Forms로 다중 창 사용자 인터페이스 만들기](create-a-multipane-user-interface-with-wf-using-the-designer.md)
+- [방법: 디자이너를 사용하여 Windows Forms에서 다중 창 사용자 인터페이스 만들기](create-a-multipane-user-interface-with-wf-using-the-designer.md)

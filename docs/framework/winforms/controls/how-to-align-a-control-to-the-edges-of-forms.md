@@ -1,5 +1,5 @@
 ---
-title: '방법: 컨트롤을 폼의 가장자리에 맞춤'
+title: '방법: 양식의 가장자리에 컨트롤 맞춤'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - controls [Windows Forms], aligning on forms
 - custom controls [Windows Forms], docking using code
 ms.assetid: 5994cb59-242b-4e75-bd0e-62879c34d702
-ms.openlocfilehash: 33a3b2e996bdab280eb7a4cd8ad7c59ccb1a1bd2
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 990fc996cfb5ecf4d9fde255ad026e3f46a24718
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57713893"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59185785"
 ---
-# <a name="how-to-align-a-control-to-the-edges-of-forms"></a>방법: 컨트롤을 폼의 가장자리에 맞춤
+# <a name="how-to-align-a-control-to-the-edges-of-forms"></a>방법: 양식의 가장자리에 컨트롤 맞춤
 <xref:System.Windows.Forms.Control.Dock%2A> 속성을 설정하여 양식 가장자리에 맞춰서 컨트롤을 정렬할 수 있습니다. 이 속성은 양식에서 컨트롤의 위치를 지정합니다. <xref:System.Windows.Forms.Control.Dock%2A> 속성은 다음 값으로 설정할 수 있습니다.  
   
 |설정|컨트롤에 대한 영향|  
@@ -50,9 +50,10 @@ ms.locfileid: "57713893"
     ```  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Windows.Forms.Control.Dock%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.Control.Anchor%2A?displayProperty=nameWithType>
 - [.NET Framework에서 사용자 지정 Windows Forms 컨트롤 개발](developing-custom-windows-forms-controls.md)
-- [방법: FlowLayoutPanel 컨트롤의 자식 컨트롤 고정 및 도킹](how-to-anchor-and-dock-child-controls-in-a-flowlayoutpanel-control.md)
-- [방법: TableLayoutPanel 컨트롤의 자식 컨트롤 고정 및 도킹](how-to-anchor-and-dock-child-controls-in-a-tablelayoutpanel-control.md)
+- [방법: FlowLayoutPanel 컨트롤에서 자식 컨트롤 고정 및 도킹](how-to-anchor-and-dock-child-controls-in-a-flowlayoutpanel-control.md)
+- [방법: TableLayoutPanel 컨트롤에서 자식 컨트롤 고정 및 도킹](how-to-anchor-and-dock-child-controls-in-a-tablelayoutpanel-control.md)
 - [AutoSize 속성 개요](autosize-property-overview.md)

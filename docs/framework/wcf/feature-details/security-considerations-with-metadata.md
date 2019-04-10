@@ -2,12 +2,12 @@
 title: 메타데이터 관련 보안 고려 사항
 ms.date: 03/30/2017
 ms.assetid: e78ef8ab-4f63-4656-ab93-b1deab2666d5
-ms.openlocfilehash: 2e1ad9f3c7d2a77ec6237bf1fc12c0d1a67181ad
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: 0dc060475f868923e8c7e4c87ef43ef5912c7ac5
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58411915"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59172967"
 ---
 # <a name="security-considerations-with-metadata"></a>메타데이터 관련 보안 고려 사항
 메타 데이터 기능에서 Windows Communication Foundation (WCF)을 사용 하는 경우 게시, 검색 및 서비스 메타 데이터를 사용 하 여 보안 문제를 고려 합니다.  
@@ -26,8 +26,7 @@ ms.locfileid: "58411915"
  서비스 메타데이터를 보안되지 않은 방식으로 검색하면 해당 서비스 메타데이터가 변조되거나 스푸핑될 수 있습니다. 조작된 메타데이터는 클라이언트를 악의적인 서비스로 리디렉션하거나, 손상된 보안 설정을 포함하거나, 악의적인 XML 구조를 포함할 수 있습니다. 메타데이터 문서는 클 수 있으며 자주 파일 시스템에 저장됩니다. 변조 및 스푸핑으로부터 보호하려면 가능한 경우 보안 바인딩을 사용하여 서비스 메타데이터를 요청합니다.  
   
 ## <a name="using-safe-techniques-for-processing-metadata"></a>안전한 메타데이터 처리 기술 사용  
- 서비스 메타데이터는 WS-MEX(MetadataExchange) 등의 표준화된 프로토콜을 사용하여 네트워크를 통해 서비스에서 자주 검색됩니다. 많은 메타데이터 형식에는 추가 메타데이터를 가리키는 참조 메커니즘이 있습니다. 
-  <xref:System.ServiceModel.Description.MetadataExchangeClient> 형식은 WSDL(웹 서비스 기술 언어) 문서, XML 스키마 및 MEX 문서의 참조를 자동으로 처리합니다. 검색된 메타데이터로 만든 <xref:System.ServiceModel.Description.MetadataSet> 개체의 크기는 사용된 <xref:System.ServiceModel.Description.MetadataExchangeClient.MaximumResolvedReferences%2A> 인스턴스의 <xref:System.ServiceModel.Description.MetadataExchangeClient> 값과 해당 `MaxReceivedMessageSize` 인스턴스에서 사용하는 바인딩의 <xref:System.ServiceModel.Description.MetadataExchangeClient> 값에 정비례합니다. 이 할당량을 시나리오에 적합한 값으로 설정합니다.  
+ 서비스 메타데이터는 WS-MEX(MetadataExchange) 등의 표준화된 프로토콜을 사용하여 네트워크를 통해 서비스에서 자주 검색됩니다. 많은 메타데이터 형식에는 추가 메타데이터를 가리키는 참조 메커니즘이 있습니다. <xref:System.ServiceModel.Description.MetadataExchangeClient> 형식은 WSDL(웹 서비스 기술 언어) 문서, XML 스키마 및 MEX 문서의 참조를 자동으로 처리합니다. 검색된 메타데이터로 만든 <xref:System.ServiceModel.Description.MetadataSet> 개체의 크기는 사용된 <xref:System.ServiceModel.Description.MetadataExchangeClient.MaximumResolvedReferences%2A> 인스턴스의 <xref:System.ServiceModel.Description.MetadataExchangeClient> 값과 해당 `MaxReceivedMessageSize` 인스턴스에서 사용하는 바인딩의 <xref:System.ServiceModel.Description.MetadataExchangeClient> 값에 정비례합니다. 이 할당량을 시나리오에 적합한 값으로 설정합니다.  
   
  Wcf에서 서비스 메타 데이터는 XML로 처리 됩니다. 응용 프로그램이 XML 문서를 처리할 때 악의적인 XML 구조로부터 보호되어야 합니다. 사용 된 <xref:System.Xml.XmlDictionaryReader> 사용 하 여 XML을 처리할 때 적절 한 할당량을 설정할 수도 합니다 <xref:System.Xml.XmlTextReader.DtdProcessing%2A> 속성을 <xref:System.Xml.DtdProcessing.Prohibit>.  
   
@@ -40,5 +39,6 @@ ms.locfileid: "58411915"
  서비스의 응용 프로그램 구성 파일은 메타데이터 게시 방법과 게시 여부를 제어할 수 있습니다. 적절한 ACL로 응용 프로그램 구성 파일을 보호하여 공격자가 이러한 설정을 수정할 수 없도록 하는 것이 좋습니다.  
   
 ## <a name="see-also"></a>참고자료
-- [방법: 메타 데이터 끝점 보안](../../../../docs/framework/wcf/feature-details/how-to-secure-metadata-endpoints.md)
+
+- [방법: 메타데이터 엔드포인트 보안](../../../../docs/framework/wcf/feature-details/how-to-secure-metadata-endpoints.md)
 - [보안](../../../../docs/framework/wcf/feature-details/security.md)

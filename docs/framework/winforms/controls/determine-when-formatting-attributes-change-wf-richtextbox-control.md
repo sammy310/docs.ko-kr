@@ -1,5 +1,5 @@
 ---
-title: '방법: Windows Forms RichTextBox 컨트롤의 특성 변경의 형식을 지정할 때를 결정 합니다.'
+title: '방법: Windows Forms RichTextBox 컨트롤에서 서식 특성의 변경 시기 확인'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - text boxes [Windows Forms], determining font changes
 - SelChange event
 ms.assetid: bdfed015-f77a-41e5-b38f-f8629b2fa166
-ms.openlocfilehash: e463ac0fd77a31e4e11cb440f64ec0d4694af61f
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: e35ebb7c90be00a814d465af3546de2bcd11c5de
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57722024"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59183948"
 ---
-# <a name="how-to-determine-when-formatting-attributes-change-in-the-windows-forms-richtextbox-control"></a>방법: Windows Forms RichTextBox 컨트롤의 특성 변경의 형식을 지정할 때를 결정 합니다.
+# <a name="how-to-determine-when-formatting-attributes-change-in-the-windows-forms-richtextbox-control"></a>방법: Windows Forms RichTextBox 컨트롤에서 서식 특성의 변경 시기 확인
 Windows Forms의 일반적인 용도 <xref:System.Windows.Forms.RichTextBox> 글꼴 옵션 등 단락 스타일 특성을 사용 하 여 텍스트 서식을 제어 하는 합니다. 응용 프로그램 대부분의 워드프로세싱 응용 프로그램과 마찬가지로 도구 모음을 표시 하기 위해 서식 지정 하는 텍스트의 모든 변경 내용을 추적할 수 해야 합니다.  
   
 ### <a name="to-respond-to-changes-in-formatting-attributes"></a>서식 특성의 변경 내용에 응답  
@@ -81,6 +81,7 @@ Windows Forms의 일반적인 용도 <xref:System.Windows.Forms.RichTextBox> 글
     ```  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Windows.Forms.RichTextBox.SelectionChanged>
 - <xref:System.Windows.Forms.RichTextBox>
 - [RichTextBox 컨트롤](richtextbox-control-windows-forms.md)

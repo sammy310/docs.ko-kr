@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 2a58cba0ce4672a479cf5af9467d024a1b1562fc
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: abbd35fe390cc09951b762a5fd671d2d34a57c6c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57474292"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59177894"
 ---
 # <a name="imetadataimportfindmemberref-method"></a>IMetaDataImport::FindMemberRef 메서드
 지정 된로 묶인 멤버에 대 한 MemberRef 토큰에 대 한 포인터는 참조를 가져옵니다 <xref:System.Type> 지정 된 이름 및 메타 데이터 서명을 하 고 있습니다.  
@@ -72,5 +72,6 @@ HRESULT FindMemberRef (
  **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>참고자료
+
 - [IMetaDataImport 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
 - [IMetaDataImport2 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

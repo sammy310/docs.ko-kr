@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - metadata [WCF]
 ms.assetid: 66a61bd0-18d3-4e7e-bf8b-177a10ac2f60
-ms.openlocfilehash: 515bb3cb074fde1fb4631f6e273dab11c55ae19a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 10b93f94a5a5193513e20eed4571aaf8f6c882a5
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54629705"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59174020"
 ---
 # <a name="metadata"></a>메타데이터
 Windows Communication Foundation (WCF) 내보내기, 게시, 검색 및 서비스 메타 데이터 가져오기에 대 한 인프라를 제공 합니다. WCF 서비스 메타 데이터를 사용 하 여 Svcutil.exe와 같은 도구를 자동으로 서비스에 액세스 하기 위한 클라이언트 코드를 생성할 수 있도록 서비스의 끝점과 상호 작용 하는 방법을 설명 합니다.  
@@ -37,4 +37,5 @@ Windows Communication Foundation (WCF) 내보내기, 게시, 검색 및 서비�
  서비스 메타데이터를 처리할 때 중요한 보안 고려 사항에 대해 설명합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [메타데이터 시스템 확장](../../../../docs/framework/wcf/extending/extending-the-metadata-system.md)

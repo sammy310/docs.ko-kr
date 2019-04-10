@@ -1,5 +1,5 @@
 ---
-title: '방법: 하이브리드 응용 프로그램에서 비주얼 스타일 사용'
+title: '방법: 하이브리드 애플리케이션에서 비주얼 스타일 사용'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - hybrid applications [WPF interoperability]
 - visual styles [Windows Forms]
 ms.assetid: 95de9b9c-d804-405c-b2d1-49a88c1e0fe1
-ms.openlocfilehash: 9588a2e2d839af43ffe4397303c4a45cad5af2e5
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: MT
+ms.openlocfilehash: 76055358f9dede9749d1575a5f43d5593c1c9b51
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57371920"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59176373"
 ---
-# <a name="how-to-enable-visual-styles-in-a-hybrid-application"></a>방법: 하이브리드 응용 프로그램에서 비주얼 스타일 사용
+# <a name="how-to-enable-visual-styles-in-a-hybrid-application"></a>방법: 하이브리드 애플리케이션에서 비주얼 스타일 사용
 이 항목을 사용 하도록 설정 하는 방법을 보여 줍니다 [!INCLUDE[TLA#tla_winxp](../../../../includes/tlasharptla-winxp-md.md)] 에서 비주얼 스타일을 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 에 호스트 된 컨트롤을 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-기반 응용 프로그램.  
   
  응용 프로그램을 호출 하는 경우는 <xref:System.Windows.Forms.Application.EnableVisualStyles%2A> 메서드를 대부분의 프로그램 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 응용 프로그램에서 실행 될 때 컨트롤에서 시각적 스타일을 사용할지 자동으로 [!INCLUDE[TLA#tla_winxp](../../../../includes/tlasharptla-winxp-md.md)]입니다. 자세한 내용은 [비주얼 스타일을 사용 하 여 컨트롤 렌더링](../../winforms/controls/rendering-controls-with-visual-styles.md)합니다.  
@@ -67,6 +67,7 @@ ms.locfileid: "57371920"
      [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 컨트롤이 기본 시스템 스타일으로 그려집니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Windows.Forms.Application.EnableVisualStyles%2A>
 - <xref:System.Windows.Forms.VisualStyles>
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost>

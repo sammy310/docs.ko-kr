@@ -1,5 +1,5 @@
 ---
-title: '방법: 응용 프로그램 지역화'
+title: '방법: 애플리케이션 지역화'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - LocBaml tool [WPF]
 - applications [WPF], localizing
 ms.assetid: 5001227e-9326-48a4-9dcd-ba1b89ee6653
-ms.openlocfilehash: 777d0fa9217b647b9ee9bd952addaa83b5f825fc
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: MT
+ms.openlocfilehash: 6bc2d5c45ef6f8626e51f9f760ec299db19627d9
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57374117"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59171576"
 ---
-# <a name="how-to-localize-an-application"></a>방법: 응용 프로그램 지역화
+# <a name="how-to-localize-an-application"></a>방법: 애플리케이션 지역화
 이 자습서에서는 LocBaml 도구를 사용하여 지역화된 애플리케이션을 만드는 방법을 설명합니다.  
   
 > [!NOTE]
@@ -210,5 +210,6 @@ ms.locfileid: "57374117"
  지금까지 LocBaml 도구를 사용하는 방법에 대한 기본 사항을 알아보았습니다.  Uid를 포함하는 파일을 만들 수 있어야 합니다. LocBaml 도구를 통해 파일을 구문 분석하여 지역화할 수 있는 콘텐츠를 추출할 수 있어야 하며, 콘텐츠가 번역된 후 번역된 콘텐츠를 병합하는 .resources.dll 파일을 생성할 수 있어야 합니다. 이 항목에 가능한 모든 세부 정보가 포함되어 있지는 않지만 이제 LocBaml를 애플리케이션 지역화에 사용하는 데 필요한 지식을 습득했습니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [WPF의 전역화](globalization-for-wpf.md)
 - [자동 레이아웃 사용 개요](use-automatic-layout-overview.md)

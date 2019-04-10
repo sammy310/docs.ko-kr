@@ -10,12 +10,12 @@ helpviewer_keywords:
 - message boxes [WPF]
 - modal dialog boxes [WPF]
 ms.assetid: 0d23d544-a393-4a02-a3aa-d8cd5d3d6511
-ms.openlocfilehash: 14ed5655f31c8c73e6d7b8e987d1856fc869c9de
-ms.sourcegitcommit: d938c39afb9216db377d0f0ecdaa53936a851059
+ms.openlocfilehash: 162414dbd4b0f5e15eceaf73c87c122701fefc4e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58634455"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59177413"
 ---
 # <a name="dialog-boxes-overview"></a>대화 상자 개요
 독립 실행형 응용 프로그램에는 일반적으로는 응용 프로그램이 작동 하 고를 통해 해당 데이터를 처리 하는 기능을 노출 합니다. 기본 데이터를 표시 하는 주 창이 있는 [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] 메뉴 모음, 도구 모음 및 상태 표시줄과 같은 메커니즘입니다. 특수 애플리케이션에는 다음을 수행하는 추가 창이 표시될 수도 있습니다.  
@@ -33,9 +33,7 @@ ms.locfileid: "58634455"
  A *모덜리스* 대화 상자에서 다른 한편으로 해도 사용자가 열려 있는 동안 다른 창을 활성화할 합니다. 예를 들어, 사용자가 문서에서 특정 단어를 찾으려고 할 때 주 창에서 사용자가 찾으려는 단어를 입력할 대화 상자를 열 때가 많습니다. 단어를 찾는다고 해서 사용자가 문서를 편집하지 못하게 되는 것은 아니기 때문에 대화 상자를 모덜로 설정할 필요가 없습니다. 모덜리스 대화 상자를 **닫습니다** 대화 상자를 닫으려면 단추와 같은 특정 기능을 실행 하기 위한 추가 단추를 제공할 수 있습니다를 **다음 찾기** 찾으려면 다음 단추는 단어 word 검색 조건과 일치 합니다.  
   
  Windows Presentation Foundation (WPF)를 사용 하면 여러 유형의 메시지 상자, 일반 대화 상자 및 사용자 지정 대화 상자를 포함 하 여 대화 상자를 만들 수 있습니다. 이 항목에서는 각각에 대해 설명 하며 [대화 상자 샘플](https://go.microsoft.com/fwlink/?LinkID=159984) 일치 하는 예제를 제공 합니다.  
-  
- 
-  
+
 <a name="Message_Boxes"></a>   
 ## <a name="message-boxes"></a>메시지 상자  
  A *메시지 상자* 는 텍스트 정보를 표시 하 고 사용자가 단추를 사용 하 여 결정을 내릴 수 있도록 사용할 수 있는 대화 상자. 다음 그림에는 텍스트 정보를 표시하고, 질문을 하고, 질문에 대답할 때 사용할 세 개의 단추를 사용자에게 제공하는 메시지 상자가 있습니다.  
@@ -47,7 +45,7 @@ ms.locfileid: "58634455"
  [!code-csharp[DialogBoxesOverviewSnippets#MsgBoxConfigureCODEBEHIND](~/samples/snippets/csharp/VS_Snippets_Wpf/DialogBoxesOverviewSnippets/CSharp/Window1.xaml.cs#msgboxconfigurecodebehind)]
  [!code-vb[DialogBoxesOverviewSnippets#MsgBoxConfigureCODEBEHIND](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DialogBoxesOverviewSnippets/VisualBasic/window1.xaml.vb#msgboxconfigurecodebehind)]  
   
- 메시지 상자를 표시 하려면 호출을 `static` <xref:System.Windows.MessageBox.Show%2A> 메서드를 다음 코드 에서처럼 합니다.  
+ 메시지 상자를 표시 하려면 호출을 `static`<xref:System.Windows.MessageBox.Show%2A> 메서드를 다음 코드 에서처럼 합니다.  
   
  [!code-csharp[DialogBoxesOverviewSnippets#MsgBoxShowCODEBEHIND](~/samples/snippets/csharp/VS_Snippets_Wpf/DialogBoxesOverviewSnippets/CSharp/Window1.xaml.cs#msgboxshowcodebehind)]
  [!code-vb[DialogBoxesOverviewSnippets#MsgBoxShowCODEBEHIND](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DialogBoxesOverviewSnippets/VisualBasic/window1.xaml.vb#msgboxshowcodebehind)]  
@@ -65,7 +63,7 @@ ms.locfileid: "58634455"
   
 <a name="Common_Dialogs"></a>   
 ## <a name="common-dialog-boxes"></a>일반 대화 상자  
- [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)]에서는 파일을 열고, 파일을 저장하고, 인쇄하는 등의 용도로 사용되는 대화 상자를 비롯하여 모든 응용 프로그램에서 공통되는, 다양한 재사용 가능 대화 상자를 구현합니다. 이러한 대화 상자는 운영 체제에서 구현되므로 운영 체제에서 실행되는 모든 애플리케이션에서 공유할 수 있어 사용자 경험의 일관성에 도움이 됩니다. 운영 체제에서 제공되는 대화 상자를 사용자가 한 애플리케이션에서 익히고 나면 다른 애플리케이션에서 대화 상자의 사용 방법을 다시 익힐 필요가 없습니다. 이러한 대화 상자는 모든 응용 프로그램에 사용할 수 있고 라고 일관 된 사용자 경험에 도움이 되므로 *공용 대화 상자*합니다.  
+ [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] 다양 한 파일 열기, 파일 저장 및 인쇄에 대 한 대화 상자를 포함 하는 모든 응용 프로그램에 공통 되는 재사용 가능 대화 상자를 구현 합니다. 이러한 대화 상자는 운영 체제에서 구현되므로 운영 체제에서 실행되는 모든 애플리케이션에서 공유할 수 있어 사용자 경험의 일관성에 도움이 됩니다. 운영 체제에서 제공되는 대화 상자를 사용자가 한 애플리케이션에서 익히고 나면 다른 애플리케이션에서 대화 상자의 사용 방법을 다시 익힐 필요가 없습니다. 이러한 대화 상자는 모든 응용 프로그램에 사용할 수 있고 라고 일관 된 사용자 경험에 도움이 되므로 *공용 대화 상자*합니다.  
   
  Windows Presentation Foundation (WPF) 캡슐화 열려 있는 파일, 파일을 저장 및 인쇄 일반 대화 상자 및 독립 실행형 응용 프로그램에서 사용 하 여 관리 되는 클래스로 노출 합니다. 이 항목에서는 각각의 개요를 간략하게 제공합니다.  
   
@@ -210,7 +208,7 @@ ms.locfileid: "58634455"
   
  ![잘못 된 왼쪽된 여백 값 주위에 빨간색 테두리를 사용 하 여 여백 대화 상자입니다.](./media/dialog-boxes-overview/invalid-left-margin-dialog.png)  
   
- [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]에서는 사용자가 유효한 데이터를 입력할 때까지 사용자를 잘못된 데이터로 제한하지 않습니다. 대화 상자에서 좋은 동작입니다. 사용자는 데이터의 유효성에 관계없이 대화 상자에서 컨트롤을 자유롭게 탐색할 수 있어야 합니다. 그러나이 경우 잘못 된 데이터 및 키를 눌러 입력할 수 있는 합니다 **확인** 단추입니다. 따라서이 코드에서는 대화 상자에서 모든 컨트롤의 유효성을 검사 하려면 상자는 **확인** 처리 하 여 단추를 누를 <xref:System.Windows.Controls.Primitives.ButtonBase.Click> 이벤트입니다.  
+ [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 유효한 데이터를 입력할 때까지 잘못 된 컨트롤에 사용자를 제한 하지 않습니다. 대화 상자에서 좋은 동작입니다. 사용자는 데이터의 유효성에 관계없이 대화 상자에서 컨트롤을 자유롭게 탐색할 수 있어야 합니다. 그러나이 경우 잘못 된 데이터 및 키를 눌러 입력할 수 있는 합니다 **확인** 단추입니다. 따라서이 코드에서는 대화 상자에서 모든 컨트롤의 유효성을 검사 하려면 상자는 **확인** 처리 하 여 단추를 누를 <xref:System.Windows.Controls.Primitives.ButtonBase.Click> 이벤트입니다.  
   
  [!code-csharp[DialogBoxSample#MarginsDialogBoxValidationCODEBEHIND1](~/samples/snippets/csharp/VS_Snippets_Wpf/DialogBoxSample/CSharp/MarginsDialogBox.xaml.cs#marginsdialogboxvalidationcodebehind1)]
  [!code-vb[DialogBoxSample#MarginsDialogBoxValidationCODEBEHIND1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DialogBoxSample/VisualBasic/MarginsDialogBox.xaml.vb#marginsdialogboxvalidationcodebehind1)]  
@@ -345,6 +343,7 @@ ms.locfileid: "58634455"
 [!code-vb[DialogBoxSample#FindDialogCloseCODEBEHIND2](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DialogBoxSample/VisualBasic/FindDialogBox.xaml.vb#finddialogclosecodebehind2)]  
   
 ## <a name="see-also"></a>참고자료
-- [팝업 개요](../controls/popup-overview.md)
+
+- [Popup 개요](../controls/popup-overview.md)
 - [대화 상자 샘플](https://go.microsoft.com/fwlink/?LinkID=159984)
 - [ColorPicker 사용자 지정 컨트롤 샘플](https://go.microsoft.com/fwlink/?LinkID=159977)

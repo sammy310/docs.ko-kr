@@ -15,12 +15,12 @@ helpviewer_keywords:
 - button set [WPF], grouped
 - bubbling [WPF]
 ms.assetid: 1a2189ae-13b4-45b0-b12c-8de2e49c29d2
-ms.openlocfilehash: b0db690bfd1a0cabf3060067ea23cf01acf3251d
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: MT
+ms.openlocfilehash: a8ebb0259c1b5f73a2e0329cd1767b0431ba63a6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57379213"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59171160"
 ---
 # <a name="routed-events-overview"></a>라우트된 이벤트 개요
 이 항목에서는 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]에서 라우트된 이벤트의 개념을 설명합니다. 이 항목에서는 라우트된 이벤트 용어를 정의하고, 라우트된 이벤트가 요소 트리를 통해 라우트되는 방식을 설명하고, 라우트된 이벤트를 처리하는 방법을 요약하고, 자체 사용자 지정 라우트된 이벤트를 만드는 방법을 소개합니다.
@@ -195,7 +195,7 @@ ms.locfileid: "57379213"
 ## <a name="wpf-input-events"></a>WPF 입력 이벤트  
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 플랫폼 내에서 라우트된 이벤트가 자주 사용되는 한 가지 응용 프로그램은 입력 이벤트와 관련됩니다. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]에서 터널링 라우트된 이벤트에는 규칙에 따라 "Preview"라는 단어가 접두사로 추가됩니다. 입력 이벤트는 보통 쌍으로 제공되고, 쌍 중 하나는 버블링 이벤트가 되고 다른 하나는 터널링 이벤트가 됩니다. 예를 들어 합니다 <xref:System.Windows.ContentElement.KeyDown> 이벤트 및 <xref:System.Windows.ContentElement.PreviewKeyDown> 이벤트에서 동일한 시그니처의 버블링 입력된 이벤트가 되 고 전자 있고는 후자 터널링 입력 이벤트입니다. 입력 이벤트에 버블링 버전만 포함되거나 직접 라우트된 버전만 포함되는 경우도 있습니다. 문서의 라우트된 이벤트 항목에서는 라우트된 이벤트가 있는 경우 대체 라우트 전략을 통해 비슷한 라우트된 이벤트를 상호 참조하고 관리되는 참조 페이지의 섹션에서는 각 라우트된 이벤트의 라우트 전략을 설명합니다.  
   
- 쌍으로 제공되는 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 입력 이벤트는 마우스 단추 누르기와 같은 입력의 단일 사용자 작업이 해당 쌍의 라우트된 이벤트를 둘 다 순차적으로 발생시키도록 구현됩니다. 먼저 터널링 이벤트가 발생하고 경로를 이동합니다. 그 다음에 버블링 이벤트가 발생하고 경로를 이동합니다. 두 이벤트는 문자 그대로 동일한 이벤트 데이터 인스턴스를 공유 하기 때문에 <xref:System.Windows.UIElement.RaiseEvent%2A> 버블링 이벤트를 발생 시키는 구현 클래스에서 메서드 호출이 터널링 이벤트의 이벤트 데이터를 수신 대기 하 고 발생된 한 새 이벤트에서이 다시 사용 합니다. 터널링 이벤트에 대한 처리기가 있는 수신기는 우선적으로 라우트된 이벤트를 처리됨으로 표시할 수 있습니다(클래스 처리기 우선, 그 다음에 인스턴스 처리기). 터널링 경로에 따라 있는 요소가 라우트된 이벤트를 처리됨으로 표시한 경우 버블링 이벤트에 대한 이미 처리된 이벤트 데이터가 전송되고 해당하는 버블링 입력 이벤트에 대한 일반 연결된 처리기는 호출되지 않습니다. 표면적으로는 처리된 버블링 이벤트가 발생하지 않은 경우처럼 보입니다. 이 처리 동작은 컨트롤 합치기에 유용합니다. 이 경우 모든 적중 테스트 기반 입력 이벤트나 포커스 기반 입력 이벤트를 복합 부분이 아닌 최종 컨트롤이 보고하도록 할 수 있습니다. 최종 컨트롤 요소는 합치기에서 루트에 더 근접하므로 터널링 이벤트를 먼저 클래스에서 처리하고 라우트된 이벤트를 컨트롤에 대한 관련성이 더 높은 이벤트(컨트롤 클래스를 지원하는 코드의 일부)로 “대체”할 수 있습니다.  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 쌍으로 제공 하는 입력된 이벤트는 마우스 단추 누르기와 같은 입력의 단일 사용자 작업을 순서 대로 쌍의 두 라우트된 이벤트를 발생 되도록 구현 됩니다. 먼저 터널링 이벤트가 발생하고 경로를 이동합니다. 그 다음에 버블링 이벤트가 발생하고 경로를 이동합니다. 두 이벤트는 문자 그대로 동일한 이벤트 데이터 인스턴스를 공유 하기 때문에 <xref:System.Windows.UIElement.RaiseEvent%2A> 버블링 이벤트를 발생 시키는 구현 클래스에서 메서드 호출이 터널링 이벤트의 이벤트 데이터를 수신 대기 하 고 발생된 한 새 이벤트에서이 다시 사용 합니다. 터널링 이벤트에 대한 처리기가 있는 수신기는 우선적으로 라우트된 이벤트를 처리됨으로 표시할 수 있습니다(클래스 처리기 우선, 그 다음에 인스턴스 처리기). 터널링 경로에 따라 있는 요소가 라우트된 이벤트를 처리됨으로 표시한 경우 버블링 이벤트에 대한 이미 처리된 이벤트 데이터가 전송되고 해당하는 버블링 입력 이벤트에 대한 일반 연결된 처리기는 호출되지 않습니다. 표면적으로는 처리된 버블링 이벤트가 발생하지 않은 경우처럼 보입니다. 이 처리 동작은 컨트롤 합치기에 유용합니다. 이 경우 모든 적중 테스트 기반 입력 이벤트나 포커스 기반 입력 이벤트를 복합 부분이 아닌 최종 컨트롤이 보고하도록 할 수 있습니다. 최종 컨트롤 요소는 합치기에서 루트에 더 근접하므로 터널링 이벤트를 먼저 클래스에서 처리하고 라우트된 이벤트를 컨트롤에 대한 관련성이 더 높은 이벤트(컨트롤 클래스를 지원하는 코드의 일부)로 “대체”할 수 있습니다.  
   
  입력 이벤트 처리가 적용되는 방식에 대한 그림으로 다음 입력 이벤트 예제를 살펴보겠습니다. 다음 트리 그림에서 `leaf element #2`는 `PreviewMouseDown` 및 `MouseDown` 이벤트의 소스입니다.  
   
@@ -204,17 +204,17 @@ ms.locfileid: "57379213"
   
  이벤트 처리 순서는 다음과 같습니다.  
   
-1.  루트 요소의 `PreviewMouseDown`(터널링).  
+1.  `PreviewMouseDown` (터널링) 루트 요소입니다.  
   
-2.  중간 요소 #1의 `PreviewMouseDown`(터널링).  
+2.  `PreviewMouseDown` (터널링) 중간 요소 # 1에서.  
   
-3.  소스 요소 #2의 `PreviewMouseDown`(터널링).  
+3.  `PreviewMouseDown` (터널링) 소스 요소 # 2에서.  
   
-4.  소스 요소 #2의 `MouseDown`(버블링).  
+4.  `MouseDown` (버블링) 소스 요소 # 2에서.  
   
-5.  중간 요소 #1의 `MouseDown`(버블링).  
+5.  `MouseDown` (버블링) 중간 요소 # 1에서.  
   
-6.  루트 요소의 `MouseDown`(버블링).  
+6.  `MouseDown` (버블링) 루트 요소입니다.  
   
  라우트된 이벤트 처리기 대리자는 두 개체인, 이벤트를 발생시킨 개체 및 처리기가 호출된 개체에 대한 참조를 제공합니다. 처리기가 호출된 개체는 `sender` 매개 변수를 통해 보고된 개체입니다. 이벤트가 처음 발생 하는 개체를 보고 합니다 <xref:System.Windows.RoutedEventArgs.Source%2A> 이벤트 데이터의 속성입니다. 라우트된 이벤트를 발생 하 고이 경우 동일한 개체에 의해 처리할 수 있습니다 여전히 `sender` 고 <xref:System.Windows.RoutedEventArgs.Source%2A> 동일 (이 경우 3 단계와 이벤트 처리 예제 목록 4를 사용 하 여).  
   
@@ -245,6 +245,7 @@ ms.locfileid: "57379213"
  이 항목에서는 기본 개념을 설명하고 다양한 기본 요소 및 컨트롤에 이미 있는 라우트된 이벤트에 응답하는 방법 및 시점에 대한 지침을 제공하는 관점에서 주로 라우트된 이벤트를 살펴봅니다. 하지만 특수화된 이벤트 데이터 클래스 및 대리자와 같은 모든 필요한 지원과 함께 사용자 지정 클래스에서 자체 라우트된 이벤트를 만들 수 있습니다. 라우트된 이벤트 소유자는 클래스일 수 있지만 라우트된 이벤트에 의해 발생 하 고 처리 해야 <xref:System.Windows.UIElement> 또는 <xref:System.Windows.ContentElement> 유용 하 게 파생 된 클래스입니다. 사용자 지정 이벤트에 대한 자세한 내용은 [사용자 지정 라우트된 이벤트 만들기](how-to-create-a-custom-routed-event.md)를 참조하세요.  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Windows.EventManager>
 - <xref:System.Windows.RoutedEvent>
 - <xref:System.Windows.RoutedEventArgs>

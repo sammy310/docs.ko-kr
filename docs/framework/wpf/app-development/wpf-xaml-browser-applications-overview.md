@@ -10,12 +10,12 @@ helpviewer_keywords:
 - XAML browser applications (XBAP)
 - browser-hosted applications [WPF]
 ms.assetid: 3a7a86a8-75d5-4898-96b9-73da151e5e16
-ms.openlocfilehash: a9ac7fcc3ea4da699111ac288a5786e9f9f8b572
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
-ms.translationtype: MT
+ms.openlocfilehash: 5d7e3788ee05c14cc24bf5084b4c3b94b9fe98bc
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58410163"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59194814"
 ---
 # <a name="wpf-xaml-browser-applications-overview"></a>WPF XAML 브라우저 애플리케이션 개요
 <a name="introduction"></a>
@@ -23,7 +23,7 @@ ms.locfileid: "58410163"
   
  이 항목에는 다음과 같은 단원이 포함되어 있습니다.  
   
--   [새 XBAP(XAML 브라우저 응용 프로그램) 만들기](#creating_a_new_xaml_browser_application_xbap)  
+-   [새 XBAP(XAML 브라우저 애플리케이션) 만들기](#creating_a_new_xaml_browser_application_xbap)  
   
 -   [XBAP 배포](#deploying_a_xbap)  
   
@@ -187,5 +187,6 @@ ms.locfileid: "58410163"
  또한 ClickOnce 다운로드 시퀀스의 동시성을 향상 된 시작 시간이 10%까지 향상 됩니다. ClickOnce 다운로드 하 고 유효성을 검사 한 후 매니페스트, 응용 프로그램 다운로드가 시작 되 고 진행률 표시줄을 업데이트 하기 시작 합니다.  
   
 ## <a name="see-also"></a>참고자료
-- [Visual Studio를 구성하여 웹 서비스를 호출하는 XAML 브라우저 응용 프로그램 디버깅](configure-vs-to-debug-a-xaml-browser-to-call-a-web-service.md)
-- [WPF 응용 프로그램 배포](deploying-a-wpf-application-wpf.md)
+
+- [Visual Studio를 구성하여 웹 서비스를 호출하는 XAML 브라우저 애플리케이션 디버깅](configure-vs-to-debug-a-xaml-browser-to-call-a-web-service.md)
+- [WPF 애플리케이션 배포](deploying-a-wpf-application-wpf.md)

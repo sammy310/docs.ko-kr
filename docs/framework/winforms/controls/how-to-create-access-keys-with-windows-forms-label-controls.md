@@ -1,5 +1,5 @@
 ---
-title: '방법: Windows Forms Label 컨트롤을 사용 하 여 액세스 키 만들기'
+title: '방법: Windows Forms Label 컨트롤을 사용하여 선택키 만들기'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -17,14 +17,14 @@ helpviewer_keywords:
 - keyboard shortcuts [Windows Forms], creating for controls
 - access keys [Windows Forms], Windows Forms
 ms.assetid: 5ee8f823-80be-4a4f-96a4-412671e2e306
-ms.openlocfilehash: 227880ad15e452df3f05807c41f3923cccb6fe3a
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: ff603ee784978a8b2bab2cccd4610fc50b45d477
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57708303"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59171719"
 ---
-# <a name="how-to-create-access-keys-with-windows-forms-label-controls"></a>방법: Windows Forms Label 컨트롤을 사용 하 여 액세스 키 만들기
+# <a name="how-to-create-access-keys-with-windows-forms-label-controls"></a>방법: Windows Forms Label 컨트롤을 사용하여 선택키 만들기
 Windows Forms <xref:System.Windows.Forms.Label> 다른 컨트롤에 대 한 액세스 키를 정의 하려면 컨트롤을 사용할 수 있습니다. Label 컨트롤의 액세스 키를 정의할 때 사용자 ALT 키와 탭 순서에서 오는 컨트롤에 포커스를 이동 하도록 지정 하는 문자를 누를 수 있습니다. 레이블 포커스를 받을 수 없습니다 때문에 포커스가 탭 순서의 다음 컨트롤로 자동으로 이동 합니다. 이 기술을 사용 하 여 액세스 키 텍스트 상자, 콤보 상자, 목록 상자 및 데이터 표를 할당 합니다.  
   
 ### <a name="to-assign-an-access-key-to-a-control-with-a-label"></a>레이블 컨트롤에 액세스 키를 할당 하려면  
@@ -64,6 +64,7 @@ Windows Forms <xref:System.Windows.Forms.Label> 다른 컨트롤에 대 한 액�
     ```  
   
 ## <a name="see-also"></a>참고자료
+
 - [방법: 내용에 맞게 Windows Forms Label 컨트롤 크기 조정](how-to-size-a-windows-forms-label-control-to-fit-its-contents.md)
 - [Label 컨트롤 개요](label-control-overview-windows-forms.md)
-- [레이블 컨트롤](label-control-windows-forms.md)
+- [Label 컨트롤](label-control-windows-forms.md)

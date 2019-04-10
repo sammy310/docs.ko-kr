@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: c8329832-bf66-4064-9034-bf39f153fc2d
-ms.openlocfilehash: 03b37dae72be0ffa589159b2aedc2ac16e35139e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 127b06b32e597f8c2ea7e2bfdb1caca850fb5e3b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54583209"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59194528"
 ---
 # <a name="accessing-services-using-a-client"></a>클라이언트를 사용하여 서비스 액세스
 클라이언트 응용 프로그램 만들기, 구성 및 서비스와 통신 하려면 WCF 클라이언트 또는 채널 개체를 사용 해야 합니다. 합니다 [WCF Client Overview](../../../../docs/framework/wcf/wcf-client-overview.md) 항목에서는 개체 및 기본 클라이언트 및 채널 개체를 만들고 사용 하는 단계를 간략하게 설명 합니다.  
@@ -94,10 +94,11 @@ ms.locfileid: "54583209"
  암시적 방법을 사용하는 애플리케이션은 사용자 인터페이스 이니셜라이저를 호출하지만, 애플리케이션 사용자가 바인딩에 대한 전송 시간 제한 내에 응답하지 않을 경우 사용자 인터페이스가 반환될 때 예외가 throw됩니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [이중 서비스](../../../../docs/framework/wcf/feature-details/duplex-services.md)
-- [방법: 단방향를 사용 하 여 서비스에 액세스 및 요청-회신 계약](../../../../docs/framework/wcf/feature-details/how-to-access-wcf-services-with-one-way-and-request-reply-contracts.md)
-- [방법: 이중 계약을와 함께 access Services](../../../../docs/framework/wcf/feature-details/how-to-access-services-with-a-duplex-contract.md)
-- [방법: WSE 3.0 액세스 서비스](../../../../docs/framework/wcf/feature-details/how-to-access-a-wse-3-0-service-with-a-wcf-client.md)
+- [방법: 단방향 및 요청-회신 계약을 사용하여 서비스 액세스](../../../../docs/framework/wcf/feature-details/how-to-access-wcf-services-with-one-way-and-request-reply-contracts.md)
+- [방법: 이중 계약을 사용하여 서비스 액세스](../../../../docs/framework/wcf/feature-details/how-to-access-services-with-a-duplex-contract.md)
+- [방법: WSE 3.0 서비스 액세스](../../../../docs/framework/wcf/feature-details/how-to-access-a-wse-3-0-service-with-a-wcf-client.md)
 - [방법: ChannelFactory 사용](../../../../docs/framework/wcf/feature-details/how-to-use-the-channelfactory.md)
-- [방법: 서비스 작업을 비동기적으로 호출](../../../../docs/framework/wcf/feature-details/how-to-call-wcf-service-operations-asynchronously.md)
+- [방법: 비동기적으로 서비스 작업 호출](../../../../docs/framework/wcf/feature-details/how-to-call-wcf-service-operations-asynchronously.md)
 - [중간 계층 클라이언트 응용 프로그램](../../../../docs/framework/wcf/feature-details/middle-tier-client-applications.md)

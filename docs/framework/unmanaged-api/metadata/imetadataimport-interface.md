@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e4241f2057ce77713f91e969eda7765739613333
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c6a65eae91bf3b44fc2b49588ead5ed178d7326f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54732845"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59180403"
 ---
 # <a name="imetadataimport-interface"></a>IMetaDataImport 인터페이스
 PE(이식 가능) 파일이나 형식 라이브러리 또는 독립 실행형 런타임 메타데이터 이진과 같은 기타 소스에서 기존 메타데이터를 가져오고 조작하는 메서드를 제공합니다.  
@@ -114,5 +114,6 @@ PE(이식 가능) 파일이나 형식 라이브러리 또는 독립 실행형 �
  **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>참고자료
+
 - [메타데이터 인터페이스](../../../../docs/framework/unmanaged-api/metadata/metadata-interfaces.md)
 - [IMetaDataImport2 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

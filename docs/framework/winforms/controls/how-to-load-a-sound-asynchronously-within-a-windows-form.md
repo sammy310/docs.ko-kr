@@ -9,12 +9,12 @@ helpviewer_keywords:
 - sounds [Windows Forms], loading on separate threads
 - threading [Windows Forms], sounds
 ms.assetid: 3b6a9296-1d5e-4d52-a4ba-94366d6fe302
-ms.openlocfilehash: 8240e26ea0133aa091354d29f52d0692499d7765
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 1d710f1e6d3b208365d5b1eb2524fbeeaa673c2d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57718300"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59185759"
 ---
 # <a name="how-to-load-a-sound-asynchronously-within-a-windows-form"></a>방법: Windows Form에서 비동기적으로 소리 로드
 다음 코드 예제는 URL에서 소리를 비동기적으로 로드한 다음 새 스레드에서 재생합니다.  
@@ -53,6 +53,7 @@ ms.locfileid: "57718300"
  파일 이름을 바탕으로 파일 내용을 판단하면 안 됩니다. 예를 들어 `Form1.vb` 파일이 Visual Basic 소스 파일이 아닐 수도 있습니다. 애플리케이션에서 데이터를 사용하기 전에 모든 입력을 확인해야 합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Media.SoundPlayer.LoadAsync%2A>
 - <xref:System.Media.SoundPlayer.LoadCompleted>
 - <xref:System.Media.SoundPlayer.Play%2A>

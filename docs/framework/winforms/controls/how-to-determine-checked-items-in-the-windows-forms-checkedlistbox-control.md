@@ -9,12 +9,12 @@ helpviewer_keywords:
 - check boxes [Windows Forms], determining checked state
 - CheckedListBox control [Windows Forms], determining checked state
 ms.assetid: 178b477d-27c9-489c-8914-44a9623a4d41
-ms.openlocfilehash: 2936a64338f47107b11b5f6eb85c5e94707bf926
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 0cfb34d058486c44ffb01e6c105134e3ca4c2175
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57707965"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59184680"
 ---
 # <a name="how-to-determine-checked-items-in-the-windows-forms-checkedlistbox-control"></a>방법: Windows Forms CheckedListBox 컨트롤에서 선택한 항목 확인
 Windows Forms에서 데이터를 표시할 때 <xref:System.Windows.Forms.CheckedListBox> 컨트롤을 반복할 수 있습니다 하거나 컬렉션에 저장 합니다 <xref:System.Windows.Forms.CheckedListBox.CheckedItems%2A> 속성 또는 사용 하 여 목록을 단계별로 <xref:System.Windows.Forms.CheckedListBox.GetItemChecked%2A> 선택한 항목을 확인 하는 방법. 합니다 <xref:System.Windows.Forms.CheckedListBox.GetItemChecked%2A> 메서드 항목 인덱스 번호를 인수로 받아서 반환 `true` 또는 `false`합니다. 예상 하는 것을 달리 합니다 <xref:System.Windows.Forms.ListBox.SelectedItems%2A> 및 <xref:System.Windows.Forms.ListBox.SelectedIndices%2A> 결정 하는 항목 강조 표시 되어; 속성에서 선택한 항목을 결정 하지 않습니다.  
@@ -112,4 +112,5 @@ Windows Forms에서 데이터를 표시할 때 <xref:System.Windows.Forms.Checke
     ```  
   
 ## <a name="see-also"></a>참고자료
-- [옵션 목록 표시에 사용된 Windows Forms 컨트롤](windows-forms-controls-used-to-list-options.md)
+
+- [옵션 목록 표시에 사용하는 Windows Forms 컨트롤](windows-forms-controls-used-to-list-options.md)

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - tab controls [Windows Forms], tab order
 - tab pages [Windows Forms], adding controls
 ms.assetid: b092532e-7346-469f-b9a1-897f9bea4fb7
-ms.openlocfilehash: 6eb509fd10a5000a5423d624cec5b6d126990d73
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: b42845ab996c0985fe6a48ac588e6d706905faac
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57723949"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59195854"
 ---
 # <a name="how-to-add-a-control-to-a-tab-page"></a>방법: 탭 페이지에 컨트롤 추가
 Windows Forms를 사용할 수 있습니다 <xref:System.Windows.Forms.TabControl> 구성 된 방식으로 다른 컨트롤을 표시 합니다. 다음 절차에는 첫 번째 탭에 단추를 추가 하는 방법을 보여 줍니다. 탭 페이지의 레이블 부분에 아이콘을 추가 하는 방법에 대 한 내용은 [방법: Windows Forms TabControl의 모양 변경](how-to-change-the-appearance-of-the-windows-forms-tabcontrol.md)합니다.  
@@ -29,8 +29,9 @@ Windows Forms를 사용할 수 있습니다 <xref:System.Windows.Forms.TabContro
      [!code-vb[TabPageControlCollectionHowToAdd#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/tabpagecontrolcollectionhowtoadd/vb/add.vb#1)]  
   
 ## <a name="see-also"></a>참고자료
+
 - [TabControl 컨트롤](tabcontrol-control-windows-forms.md)
 - [TabControl 컨트롤 개요](tabcontrol-control-overview-windows-forms.md)
 - [방법: Windows Forms TabControl의 모양 변경](how-to-change-the-appearance-of-the-windows-forms-tabcontrol.md)
-- [방법: 탭 페이지를 사용 하지 않도록 설정](how-to-disable-tab-pages.md)
-- [방법: Windows Forms TabControl 사용 하 여 탭 추가 및 제거](how-to-add-and-remove-tabs-with-the-windows-forms-tabcontrol.md)
+- [방법: 탭 페이지를 사용하지 않도록 설정](how-to-disable-tab-pages.md)
+- [방법: Windows Forms TabControl을 사용하여 탭 추가 및 제거](how-to-add-and-remove-tabs-with-the-windows-forms-tabcontrol.md)

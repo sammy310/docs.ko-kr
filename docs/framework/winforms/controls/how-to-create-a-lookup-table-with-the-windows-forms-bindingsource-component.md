@@ -1,5 +1,5 @@
 ---
-title: '방법: Windows Forms BindingSource 구성 요소를 사용 하 여 조회 테이블 만들기'
+title: '방법: Windows Forms BindingSource 구성 요소를 사용하여 조회 테이블 만들기'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - lookup tables
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - BindingSource component [Windows Forms], creating a lookup table
 - BindingSource component [Windows Forms], examples
 ms.assetid: 622fce80-879d-44be-abbf-8350ec22ca2b
-ms.openlocfilehash: de61369f9fcc7493dbc3197d91c58cec9e926c13
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: b2b588a8529983699e49531f51aae8e4225e9608
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57723922"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59181482"
 ---
-# <a name="how-to-create-a-lookup-table-with-the-windows-forms-bindingsource-component"></a>방법: Windows Forms BindingSource 구성 요소를 사용 하 여 조회 테이블 만들기
+# <a name="how-to-create-a-lookup-table-with-the-windows-forms-bindingsource-component"></a>방법: Windows Forms BindingSource 구성 요소를 사용하여 조회 테이블 만들기
 조회 테이블은 관련 테이블의 레코드에서 데이터를 표시하는 열이 포함된 데이터 테이블입니다. 다음 절차에서는 <xref:System.Windows.Forms.ComboBox> 컨트롤을 사용하여 부모에서 자식 테이블로의 외래 키 관계로 필드를 표시합니다.  
   
  이러한 두 테이블과 해당 관계를 쉽게 표시하기 위해 아래의 부모 및 자식 테이블 예제를 사용합니다.  
@@ -92,6 +92,7 @@ ms.locfileid: "57723922"
 8.  <xref:System.Windows.Forms.ComboBox> 및 <xref:System.Windows.Forms.BindingNavigator> 컨트롤 이외의 컨트롤은 표시하려는 자식 테이블의 <xref:System.Windows.Forms.BindingSource>(예: `OrdersBindingSource`)의 세부 정보 필드에 바인딩합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Windows.Forms.BindingSource>
 - [BindingSource 구성 요소](bindingsource-component.md)
 - [ComboBox 컨트롤](combobox-control-windows-forms.md)

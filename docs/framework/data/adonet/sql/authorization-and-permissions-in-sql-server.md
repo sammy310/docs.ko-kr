@@ -2,12 +2,12 @@
 title: SQL Server에서 권한 부여 및 권한
 ms.date: 03/30/2017
 ms.assetid: d340405c-91f4-4837-a3cc-a238ee89888a
-ms.openlocfilehash: 5d1ea7a9ad451db67e7a51c3485f98e03fd40690
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 398041d678ba3e4ae5a36dd7714fd2a9bfee1b40
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54510015"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59185863"
 ---
 # <a name="authorization-and-permissions-in-sql-server"></a>SQL Server에서 권한 부여 및 권한
 데이터베이스 개체를 만들 때는 사용자가 해당 개체에 액세스할 수 있도록 권한을 명시적으로 부여해야 합니다. 모든 보안 개체에는 권한 문을 통해 보안 주체에게 부여할 수 있는 권한이 있습니다.  
@@ -56,12 +56,13 @@ ms.locfileid: "54510015"
   
 |리소스|설명|  
 |--------------|-----------------|  
-|[권한](/sql/relational-databases/security/permissions-database-engine)|권한 계층 구조, 카탈로그 뷰, 고정 서버 역할 및 데이터베이스 역할의 권한에 대해 설명하는 항목을 제공합니다.|
+|[사용 권한](/sql/relational-databases/security/permissions-database-engine)|권한 계층 구조, 카탈로그 뷰, 고정 서버 역할 및 데이터베이스 역할의 권한에 대해 설명하는 항목을 제공합니다.|
   
 ## <a name="see-also"></a>참고자료
+
 - [ADO.NET 응용 프로그램 보안](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
 - [SQL Server의 응용 프로그램 보안 시나리오](../../../../../docs/framework/data/adonet/sql/application-security-scenarios-in-sql-server.md)
 - [SQL Server에서 인증](../../../../../docs/framework/data/adonet/sql/authentication-in-sql-server.md)
 - [SQL Server의 서버 및 데이터베이스 역할](../../../../../docs/framework/data/adonet/sql/server-and-database-roles-in-sql-server.md)
-- [SQL Server에서 소유권 및 사용자 스키마 분리](../../../../../docs/framework/data/adonet/sql/ownership-and-user-schema-separation-in-sql-server.md)
+- [SQL Server에서 소유권 및 사용자와 스키마 분리](../../../../../docs/framework/data/adonet/sql/ownership-and-user-schema-separation-in-sql-server.md)
 - [ADO.NET 관리되는 공급자 및 데이터 집합 개발자 센터](https://go.microsoft.com/fwlink/?LinkId=217917)

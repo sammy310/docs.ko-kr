@@ -8,12 +8,12 @@ helpviewer_keywords:
 - XsdDataContractExporter class
 - XsdDataContractImporter class
 ms.assetid: bb57b962-70c1-45a9-93d5-e721e340a13f
-ms.openlocfilehash: 320d0ab4f90c446632225f3d3aabbfc2767f19a8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: f69fb25df4ed2af79cc5ffa59f0969a1616d38ca
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54526966"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59185438"
 ---
 # <a name="exporting-schemas-from-classes"></a>클래스에서 스키마 내보내기
 데이터 계약 모델에 사용되는 클래스에서 XSD(XML 스키마 정의 언어) 스키마를 생성하려면 <xref:System.Runtime.Serialization.XsdDataContractExporter> 클래스를 사용합니다. 이 항목에서는 스키마를 만드는 프로세스에 대해 설명합니다.  
@@ -21,7 +21,7 @@ ms.locfileid: "54526966"
 ## <a name="the-export-process"></a>내보내기 프로세스  
  스키마 내보내기 프로세스는 하나 이상의 형식으로 시작되고 해당 형식의 XML 프로젝션을 설명하는 <xref:System.Xml.Schema.XmlSchemaSet> 를 생성합니다.  
   
- `XmlSchemaSet`는 XSD 스키마 문서 집합을 나타내는 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] SOM(Schema Object Model)의 일부입니다. `XmlSchemaSet`에서 XSD 문서를 만들려면 <xref:System.Xml.Schema.XmlSchemaSet.Schemas%2A> 클래스의 `XmlSchemaSet` 속성에서 스키마 컬렉션을 사용합니다. 그런 다음 <xref:System.Xml.Schema.XmlSchema> 를 사용하여 각 <xref:System.Xml.Serialization.XmlSerializer>개체를 serialize합니다.  
+ `XmlSchemaSet` 는 XSD 스키마 문서 집합을 나타내는 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]SOM(Schema Object Model)의 일부입니다. `XmlSchemaSet`에서 XSD 문서를 만들려면 <xref:System.Xml.Schema.XmlSchemaSet.Schemas%2A> 클래스의 `XmlSchemaSet` 속성에서 스키마 컬렉션을 사용합니다. 그런 다음 <xref:System.Xml.Schema.XmlSchema> 를 사용하여 각 <xref:System.Xml.Serialization.XmlSerializer>개체를 serialize합니다.  
   
 #### <a name="to-export-schemas"></a>스키마를 내보내려면  
   
@@ -50,15 +50,16 @@ ms.locfileid: "54526966"
 ## <a name="helper-methods"></a>도우미 메서드  
  스키마를 내보내는 기본 역할 외에도 `XsdDataContractExporter` 는 형식에 대한 정보를 제공하는 몇 가지 유용한 도우미 메서드를 제공합니다. 여기에는 다음이 포함됩니다.  
   
--   <xref:System.Runtime.Serialization.XsdDataContractExporter.GetRootElementName%2A> 메서드를 호출하여 생성됩니다. 이 메서드는 `Type` 을 받아서 이 형식이 루트 개체로 serialize된 경우에 사용되는 루트 요소 이름과 네임스페이스를 나타내는 <xref:System.Xml.XmlQualifiedName> 을 반환합니다.  
+-   <xref:System.Runtime.Serialization.XsdDataContractExporter.GetRootElementName%2A> 메서드를 재정의합니다. 이 메서드는 `Type` 을 받아서 이 형식이 루트 개체로 serialize된 경우에 사용되는 루트 요소 이름과 네임스페이스를 나타내는 <xref:System.Xml.XmlQualifiedName> 을 반환합니다.  
   
--   <xref:System.Runtime.Serialization.XsdDataContractExporter.GetSchemaTypeName%2A> 메서드를 호출하여 생성됩니다. 이 메서드는 `Type` 을 받아서 이 형식을 스키마로 내보낸 경우에 사용되는 XSD 스키마 형식의 이름을 나타내는 <xref:System.Xml.XmlQualifiedName> 을 반환합니다. 스키마에 익명 형식으로 나타나는 <xref:System.Xml.Serialization.IXmlSerializable> 형식에 대해 이 메서드는 `null`을 반환합니다.  
+-   <xref:System.Runtime.Serialization.XsdDataContractExporter.GetSchemaTypeName%2A> 메서드를 재정의합니다. 이 메서드는 `Type` 을 받아서 이 형식을 스키마로 내보낸 경우에 사용되는 XSD 스키마 형식의 이름을 나타내는 <xref:System.Xml.XmlQualifiedName> 을 반환합니다. 스키마에 익명 형식으로 나타나는 <xref:System.Xml.Serialization.IXmlSerializable> 형식에 대해 이 메서드는 `null`을 반환합니다.  
   
--   <xref:System.Runtime.Serialization.XsdDataContractExporter.GetSchemaType%2A> 메서드를 호출하여 생성됩니다. 이 메서드는 스키마에 익명 형식으로 나타나는 <xref:System.Xml.Serialization.IXmlSerializable> 형식에서만 작동하고 다른 모든 형식에 대해 `null` 을 반환합니다. 익명 형식의 경우 이 메서드는 지정된 <xref:System.Xml.Schema.XmlSchemaType> 을 나타내는 `Type`을 반환합니다.  
+-   <xref:System.Runtime.Serialization.XsdDataContractExporter.GetSchemaType%2A> 메서드를 재정의합니다. 이 메서드는 스키마에 익명 형식으로 나타나는 <xref:System.Xml.Serialization.IXmlSerializable> 형식에서만 작동하고 다른 모든 형식에 대해 `null` 을 반환합니다. 익명 형식의 경우 이 메서드는 지정된 <xref:System.Xml.Schema.XmlSchemaType> 을 나타내는 `Type`을 반환합니다.  
   
  내보내기 옵션은 이러한 모든 메서드에 영향을 줍니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Runtime.Serialization.DataContractSerializer>
 - <xref:System.Runtime.Serialization.XsdDataContractImporter>
 - <xref:System.Runtime.Serialization.XsdDataContractExporter>

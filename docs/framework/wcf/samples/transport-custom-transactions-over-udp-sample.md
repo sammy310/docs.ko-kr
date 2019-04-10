@@ -2,12 +2,12 @@
 title: '전송: UDP 샘플에의 한 사용자 지정 트랜잭션'
 ms.date: 03/30/2017
 ms.assetid: 6cebf975-41bd-443e-9540-fd2463c3eb23
-ms.openlocfilehash: 931cedfeb5604b00ec1cf3f4d2742e2dff2eacca
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 283e35b7701a6f95aa000cdd0acabaad81142bc8
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54552212"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59174280"
 ---
 # <a name="transport-custom-transactions-over-udp-sample"></a>전송: UDP 샘플에의 한 사용자 지정 트랜잭션
 이 샘플은 기반는 [전송 합니다. UDP](../../../../docs/framework/wcf/samples/transport-udp.md) Windows Communication Foundation (WCF)에서 샘플[전송 확장성](../../../../docs/framework/wcf/samples/transport-extensibility.md)합니다. 이 샘플은 사용자 지정 트랜잭션 흐름을 지원하도록 UDP 전송 샘플을 확장하고 <xref:System.ServiceModel.Channels.TransactionMessageProperty> 속성의 사용 방법을 보여 줍니다.  
@@ -46,7 +46,7 @@ byte[] txmsgBuffer =                TransactionMessageBuffer.WriteTransactionMes
 int bytesSent = this.socket.SendTo(txmsgBuffer, 0, txmsgBuffer.Length, SocketFlags.None, this.remoteEndPoint);  
 ```  
   
- `TransactionMessageBuffer.WriteTransactionMessageBuffer`는 현재 트랜잭션의 전파 토큰을 메시지 엔터티와 병합하고 이를 버퍼에 배치하는 새로운 기능이 포함된 도우미 메서드입니다.  
+ `TransactionMessageBuffer.WriteTransactionMessageBuffer` 메시지 엔터티를 사용 하 여 현재 트랜잭션의 전파 토큰을 병합 하 고 버퍼에 배치 하는 새 기능을 포함 하는 도우미 메서드입니다.  
   
  사용자 지정 트랜잭션 흐름 전송의 경우 클라이언트 구현 알아야 트랜잭션 흐름이 필요한 서비스 작업 및 WCF에이 정보를 전달 합니다. 또한 사용자 트랜잭션을 전송 계층으로 전송하기 위한 메커니즘도 있어야 합니다. 이 샘플 "WCF 메시지 검사자"를 사용 하 여이 정보를 얻을 수 있습니다. 여기서 구현된 `TransactionFlowInspector`라는 클라이언트 메시지 검사자는 다음 작업을 수행합니다.  
   
@@ -159,7 +159,7 @@ count = listenSocket.EndReceiveFrom(result, ref dummy);
 // read the transaction and message                       TransactionMessageBuffer.ReadTransactionMessageBuffer(buffer, count, out transaction, out msg);  
 ```  
   
- `TransactionMessageBuffer.ReadTransactionMessageBuffer()`는 `TransactionMessageBuffer.WriteTransactionMessageBuffer()`가 수행한 serialization 프로세스를 반대로 하는 도우미 메서드입니다.  
+ `TransactionMessageBuffer.ReadTransactionMessageBuffer()` 수행한 serialization 프로세스를 반대로 하는 도우미 메서드입니다 `TransactionMessageBuffer.WriteTransactionMessageBuffer()`합니다.  
   
  트랜잭션이 이동하면 `TransactionMessageProperty`의 메시지에 추가됩니다.  
   
@@ -237,7 +237,7 @@ if (transaction != null)
     svcutil http://localhost:8000/udpsample/ /reference:UdpTranport\bin\UdpTransport.dll /svcutilConfig:svcutil.exe.config  
     ```  
   
-10. Svcutil.exe는 `sampleProfileUdpBinding`에 대한 바인딩 확장 구성을 생성하지 않으므로 직접 추가해야 합니다.  
+10. Svcutil.exe는 `sampleProfileUdpBinding`에 대한 바인딩 확장명 구성을 생성하지 않으므로 직접 추가해야 합니다.  
   
     ```xml  
     <configuration>  
@@ -263,4 +263,5 @@ if (transaction != null)
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Transactions\TransactionMessagePropertyUDPTransport`  
   
 ## <a name="see-also"></a>참고자료
+
 - [전송: UDP](../../../../docs/framework/wcf/samples/transport-udp.md)

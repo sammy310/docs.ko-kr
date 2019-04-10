@@ -2,12 +2,12 @@
 title: 필터 선택
 ms.date: 03/30/2017
 ms.assetid: 67ab5af9-b9d9-4300-b3b1-41abb5a1fd10
-ms.openlocfilehash: f634363a3f8b69b38fd4d313c42de4d742d94acc
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 76875cd56f74bd555133253beda97b30ee3fa90a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54514195"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59174033"
 ---
 # <a name="choosing-a-filter"></a>필터 선택
 라우팅 서비스를 구성할 때는 올바른 메시지 필터를 선택하고 수신하는 메시지와 정확히 일치하도록 메시지 필터를 구성해야 합니다. 선택한 필터가 과도하게 광범위하거나 올바르게 구성되지 않은 경우 메시지가 잘못 라우트됩니다. 필터가 너무 제한적인 경우에는 일부 메시지에 유효한 경로가 제공되지 않을 수 있습니다.  
@@ -136,5 +136,6 @@ XPathMessageFilter xpath1=new XPathMessageFilter("//ns:element");
  XPath 쿼리를 디자인 하는 방법에 대 한 자세한 내용은 참조 하십시오 [XPath 구문을](https://go.microsoft.com/fwlink/?LinkId=164592)합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [메시지 필터](../../../../docs/framework/wcf/feature-details/message-filters.md)
 - [방법: 필터 사용](../../../../docs/framework/wcf/feature-details/how-to-use-filters.md)

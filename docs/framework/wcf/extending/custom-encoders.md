@@ -2,12 +2,12 @@
 title: 사용자 지정 인코더
 ms.date: 03/30/2017
 ms.assetid: fa0e1d7f-af36-4bf4-aac9-cd4eab95bc4f
-ms.openlocfilehash: 7b68725346a2de23d405ed21ead93e3a6a8374e6
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: 7602e18a03f73f66dfd028d810c003db0b6653bb
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58411371"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59190576"
 ---
 # <a name="custom-encoders"></a>사용자 지정 인코더
 이 항목에서는 사용자 지정 인코더를 만드는 방법을 설명합니다.  
@@ -38,8 +38,7 @@ ms.locfileid: "58411371"
   
  바인딩 요소는 이진, MTOM 또는 텍스트 <xref:System.ServiceModel.Channels.MessageEncoderFactory>를 만듭니다. 팩터리는 이진, MTOM 또는 텍스트 <xref:System.ServiceModel.Channels.MessageEncoderFactory> 인스턴스를 만듭니다. 일반적으로 인스턴스는 하나만 있습니다. 그러나 세션을 사용하는 경우에는 세션마다 다른 인코더가 제공될 수 있습니다. 이진 인코더는 이를 사용하여 동적 사전을 조정합니다(XML 인프라 참조).  
   
- 
-  <xref:System.ServiceModel.Channels.MessageEncoder.ReadMessage%2A> 및 <xref:System.ServiceModel.Channels.MessageEncoder.WriteMessage%2A> 메서드는 인코더의 핵심입니다. 이러한 메서드를 사용하면 스트림 또는 <xref:System.Byte> 배열에서 메시지를 읽을 수 있습니다. 전송이 버퍼링 모드에서 작동할 때는 바이트 배열이 사용됩니다. 메시지는 항상 스트림에 기록됩니다. 메시지를 버퍼링해야 하는 경우 전송은 버퍼링을 수행하는 스트림을 제공합니다.  
+ <xref:System.ServiceModel.Channels.MessageEncoder.ReadMessage%2A> 및 <xref:System.ServiceModel.Channels.MessageEncoder.WriteMessage%2A> 메서드는 인코더의 핵심입니다. 이러한 메서드를 사용하면 스트림 또는 <xref:System.Byte> 배열에서 메시지를 읽을 수 있습니다. 전송이 버퍼링 모드에서 작동할 때는 바이트 배열이 사용됩니다. 메시지는 항상 스트림에 기록됩니다. 메시지를 버퍼링해야 하는 경우 전송은 버퍼링을 수행하는 스트림을 제공합니다.  
   
  나머지 멤버는 지원 콘텐츠, 미디어 유형 및 <xref:System.ServiceModel.Channels.MessageEncoder.MessageVersion%2A>과 함께 작동합니다. 전송에서는 이러한 인코더 메서드를 호출하여 들어오는 메시지를 디코딩할 수 있는지 여부를 테스트하거나 보내는 메시지가 이 인코더에 유효한지를 확인합니다.  
   
@@ -51,7 +50,7 @@ ms.locfileid: "58411371"
 ### <a name="pooling"></a>Pooling  
  각 인코더 구현에서는 가능한 한 많이 풀링하려고 합니다. 관리 코드의 성능을 향상시키기 위한 주요 방법은 할당을 줄이는 것입니다. 이 풀링을 수행하기 위해 구현에서는 `SynchronizedPool` 클래스를 사용합니다. C# 파일에는 이 클래스에서 사용하는 추가 최적화에 대한 설명이 포함되어 있습니다.  
   
- <xref:System.Xml.XmlDictionaryReader> 및 <xref:System.Xml.XmlDictionaryWriter> 인스턴스를 풀링하고 다시 초기화하여 각 메시지의 새 인스턴스가 할당되지 않도록 합니다. 판독기의 경우 `OnClose`가 호출될 때 `Close()` 콜백이 판독기를 회수합니다. 인코더는 또한 메시지를 구성할 때 사용된 일부 메시지 상태 개체를 재활용합니다. 이러한 풀의 크기는 `MaxReadPoolSize`에서 파생된 세 가지 각 클래스에 대한 `MaxWritePoolSize` 및 <xref:System.ServiceModel.Channels.MessageEncodingBindingElement> 속성으로 구성할 수 있습니다.  
+ <xref:System.Xml.XmlDictionaryReader> 및 <xref:System.Xml.XmlDictionaryWriter> 인스턴스 풀링되 고 각 메시지에 대 한 새로 할당 되지 않도록 다시 초기화 됩니다. 판독기의 경우 `OnClose`가 호출될 때 `Close()` 콜백이 판독기를 회수합니다. 인코더는 또한 메시지를 구성할 때 사용된 일부 메시지 상태 개체를 재활용합니다. 이러한 풀의 크기는 `MaxReadPoolSize`에서 파생된 세 가지 각 클래스에 대한 `MaxWritePoolSize` 및 <xref:System.ServiceModel.Channels.MessageEncodingBindingElement> 속성으로 구성할 수 있습니다.  
   
 ### <a name="binary-encoding"></a>이진 인코딩  
  이진 인코딩에서 세션을 사용하는 경우 동적 사전 문자열을 메시지 수신자에게 전달해야 합니다. 이 작업은 동적 사전 문자열을 메시지의 접두사로 지정하여 수행합니다. 수신자는 문자열을 제거하여 세션에 추가한 다음 메시지를 처리합니다. 사전 문자열을 올바르게 전달하려면 전송을 버퍼링해야 합니다.  
@@ -61,8 +60,7 @@ ms.locfileid: "58411371"
  동적 사전 키를 처리하는 이외에도 성공적으로 버퍼링된 메시지를 고유한 방식으로 수신합니다. 이진 인코더는 문서에 대한 판독기를 만들어 문서를 처리하는 대신 내부 `MessagePatterns` 클래스를 사용하여 이진 스트림을 해체합니다. 개념은 대부분의 메시지를 특정 헤더 집합이 WCF에 의해 생성 된 순서 대로 표시 되는 것입니다. 패턴 시스템은 필요에 따라 메시지를 분리합니다. 성공하면 XML을 구문 분석하지 않고 <xref:System.ServiceModel.Channels.MessageHeaders> 개체를 초기화합니다. 실패하면 표준 메서드로 변경됩니다.  
   
 ### <a name="mtom-encoding"></a>MTOM 인코딩  
- 
-  <xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement> 클래스에는 <xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement.MaxBufferSize%2A>라는 추가 구성 속성이 있습니다. 이 속성은 메시지를 읽는 동안 버퍼링할 수 있는 데이터의 크기에 대한 상한을 지정합니다. 모든 MIME 부분을 단일 메시지로 다시 어셈블하려면 XML Infoset(정보 집합) 또는 다른 MIME 부분을 버퍼링해야 할 수도 있습니다.  
+ <xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement> 클래스에는 <xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement.MaxBufferSize%2A>라는 추가 구성 속성이 있습니다. 이 속성은 메시지를 읽는 동안 버퍼링할 수 있는 데이터의 크기에 대한 상한을 지정합니다. 모든 MIME 부분을 단일 메시지로 다시 어셈블하려면 XML Infoset(정보 집합) 또는 다른 MIME 부분을 버퍼링해야 할 수도 있습니다.  
   
  HTTP에서 올바로 작동하기 위해 내부 MTOM 메시지 인코더 클래스는 내부 `GetContentType` 및 public이며 재정의 가능한 `WriteMessage`에 대한 몇 가지 내부 API를 제공합니다. HTTP 헤더의 값과 MIME 헤더의 값이 일치하려면 더 많은 통신이 수행되어야 합니다.  
   
@@ -81,9 +79,9 @@ ms.locfileid: "58411371"
   
 -   재정의해야 하는 이 클래스의 주요 메서드는 다음과 같습니다.  
   
--   <xref:System.ServiceModel.Channels.MessageEncoder.WriteMessage%2A> - <xref:System.ServiceModel.Channels.MessageEncodingBindingElement> 개체를 가져와서 <xref:System.IO.Stream> 개체에 씁니다.  
+-   <xref:System.ServiceModel.Channels.MessageEncoder.WriteMessage%2A> 사용 하는 한 <xref:System.ServiceModel.Channels.MessageEncodingBindingElement> 개체 및에 씁니다를 <xref:System.IO.Stream> 개체입니다.  
   
--   <xref:System.ServiceModel.Channels.MessageEncoder.ReadMessage%2A> - <xref:System.IO.Stream> 개체와 최대 헤더 크기를 가져오고 <xref:System.ServiceModel.Channels.Message> 개체를 반환합니다.  
+-   <xref:System.ServiceModel.Channels.MessageEncoder.ReadMessage%2A> 사용 하는 한 <xref:System.IO.Stream> 개체와 최대 헤더 크기를 반환을 <xref:System.ServiceModel.Channels.Message> 개체입니다.  
   
  이러한 메서드에 작성하는 코드로, 표준 전송 프로토콜과 사용자 지정 인코딩 간의 변환을 처리합니다.  
   
@@ -94,6 +92,7 @@ ms.locfileid: "58411371"
  WCF를 사용 하 여 제공 된 샘플 코드를 사용 하 여이 프로세스를 보여 주는 두 개의 샘플이 있습니다. [사용자 지정 메시지 인코더: 사용자 지정 텍스트 인코더](../../../../docs/framework/wcf/samples/custom-message-encoder-custom-text-encoder.md) 고 [사용자 지정 메시지 인코더: 압축 인코더](../../../../docs/framework/wcf/samples/custom-message-encoder-compression-encoder.md)합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.ServiceModel.Channels.MessageEncodingBindingElement>
 - <xref:System.ServiceModel.Channels.MessageEncoderFactory>
 - <xref:System.ServiceModel.Channels.MessageEncoder>

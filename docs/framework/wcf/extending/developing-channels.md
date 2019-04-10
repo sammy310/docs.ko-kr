@@ -2,12 +2,12 @@
 title: 채널 개발
 ms.date: 03/30/2017
 ms.assetid: 0513af9f-a0c2-457b-9a50-5b6bfee48513
-ms.openlocfilehash: 74a54972ffa7d00d702a2339665d18acdcbf93ef
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 1922f5158d72bc5bc443e92c6eabb28510dec0ae
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54519140"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59175203"
 ---
 # <a name="developing-channels"></a>채널 개발
 Windows Communication Foundation (WCF)를 사용 하 여 사용할 수 있는 프로토콜 또는 전송 채널을 개발 하려면 응용 프로그램 계층에는 여러 단계가 필요 합니다. 이 항목에서는 이러한 단계에 대해 설명하고 자세한 내용을 참조할 수 있는 구체적인 항목을 알려 줍니다. 이 항목에 나와 있는 다양 한 형식과 채널 모델을 이해 하려면 [채널 모델 개요](../../../../docs/framework/wcf/extending/channel-model-overview.md)합니다. 완전 한 전송 채널 샘플을 보려면 [전송 합니다. UDP](../../../../docs/framework/wcf/samples/transport-udp.md).  
@@ -34,4 +34,5 @@ Windows Communication Foundation (WCF)를 사용 하 여 사용할 수 있는 �
 4.  바인딩이 구성 시스템에 노출되도록 바인딩 섹션 및 바인딩 구성 요소를 추가합니다. 자세한 내용은 [구성 및 메타 데이터 지원을](../../../../docs/framework/wcf/extending/configuration-and-metadata-support.md)합니다.  
   
 ## <a name="see-also"></a>참고자료
-- [바인딩 확장](../../../../docs/framework/wcf/extending/extending-bindings.md)
+
+- [바인딩 확장명](../../../../docs/framework/wcf/extending/extending-bindings.md)

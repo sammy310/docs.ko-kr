@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - transport quotas [WCF]
 ms.assetid: 3e71dd3d-f981-4d9c-9c06-ff8abb61b717
-ms.openlocfilehash: 0664dbb70df61c0f68d34c4ab364db6623805bfa
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 44bda0838689fcf8096017060be970f2291a86e0
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54542771"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59174631"
 ---
 # <a name="transport-quotas"></a>전송 할당량
 전송 할당량은 연결이 과도한 리소스를 사용하는 경우를 결정하는 정책 메커니즘입니다. 할당량은 할당량 값을 초과하면 추가 리소스를 사용하지 못하도록 설정된 절대 한계입니다. 전송 할당량은 악의적이거나 의도하지 않은 서비스 거부 공격을 방지합니다.  
@@ -54,7 +54,7 @@ ms.locfileid: "54542771"
 ## <a name="setting-transport-quotas"></a>전송 할당량 설정  
  전송 할당량은 전송 바인딩 요소, 전송 바인딩, 응용 프로그램 구성 또는 호스트 정책을 통해 설정됩니다. 이 문서에서는 호스트 정책을 통한 전송 설정에 대해서는 설명하지 않습니다. 호스트 정책 할당량에 대한 설정에 대해서는 기본 전송 설명서를 참조하십시오. 합니다 [HTTP 및 HTTPS 구성](../../../../docs/framework/wcf/feature-details/configuring-http-and-https.md) Http.sys 드라이버에 대 한 할당량 설정에 설명 합니다. HTTP, TCP/IP 및 명명된 파이프 연결과 관련하여 Windows 제한 구성에 대한 자세한 내용은 Microsoft 기술 자료를 검색하십시오.  
   
- 기타 유형의 할당량은 전송에 간접적으로 적용됩니다. 메시지를 바이트로 변환하기 위해 전송에서 사용하는 메시지 인코더에서 자체 할당량 설정을 구성할 수 있습니다. 그러나 이러한 할당량은 사용하는 전송 형식에 독립적입니다.  
+ 기타 유형의 할당량은 전송에 간접적으로 적용됩니다. 메시지를 바이트로 변형하기 위해 전송에서 사용하는 메시지 인코더에서 자체 할당량 설정을 구성할 수 있습니다. 그러나 이러한 할당량은 사용하는 전송 형식에 독립적입니다.  
   
 ### <a name="controlling-transport-quotas-from-the-binding-element"></a>바인딩 요소에서 전송 할당량 제어  
  바인딩 요소를 통한 전송 할당량 설정은 전송 동작 제어 시 뛰어난 유연성을 제공합니다. Close, Open, Receive 및 Send 작업에 대한 기본 시간 제한은 채널 작성 시 바인딩에서 가져옵니다.  
@@ -108,6 +108,7 @@ ms.locfileid: "54542771"
  응용 프로그램 구성 시 바인딩의 속성에 직접 액세스할 때와 동일한 전송 할당량을 설정할 수 있습니다. 구성 파일에서 전송 할당량의 이름은 항상 소문자로 시작합니다. 예를 들어 바인딩의 `CloseTimeout` 속성은 구성에서 `closeTimeout` 설정에 해당하고 바인딩의 `MaxConnections` 속성은 구성의 `maxConnections` 설정에 해당합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.ServiceModel.Channels.HttpsTransportBindingElement>
 - <xref:System.ServiceModel.Channels.HttpTransportBindingElement>
 - <xref:System.ServiceModel.Channels.TcpTransportBindingElement>

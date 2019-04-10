@@ -1,18 +1,18 @@
 ---
-title: '방법: X.509 인증서를 사용 하 여 서비스에 보안 설정'
+title: '방법: X.509 인증서를 사용하여 서비스 보안'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 2d06c2aa-d0d7-4e5e-ad7e-77416aa1c10b
-ms.openlocfilehash: d96897b9b11419bba8a6ef9d3c9579a62e19ee20
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 6757d6375cbe1662b8bd7beb8a7562be166bc414
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54686493"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59181508"
 ---
-# <a name="how-to-secure-a-service-with-an-x509-certificate"></a>방법: X.509 인증서를 사용 하 여 서비스에 보안 설정
+# <a name="how-to-secure-a-service-with-an-x509-certificate"></a>방법: X.509 인증서를 사용하여 서비스 보안
 X.509 인증서를 사용 하 여 서비스를 보안은 대부분의 바인딩은 Windows Communication Foundation (WCF)에서 사용 하는 기본 기술입니다. 이 항목에서는 X.509 인증서와 함께 자체 호스팅된 서비스를 구성하는 단계에 대해 설명합니다.  
   
  필수 구성 요소는 서버를 인증하는 데 사용할 수 있는 유효한 인증서입니다. 인증서는 신뢰할 수 있는 인증 기관에 의해 서버에 발급되어야 합니다. 인증서가 유효하지 않은 경우, 서비스를 사용하려고 시도하는 클라이언트에서 해당 서비스를 신뢰할 수 없으며, 결과적으로 연결이 되지 않습니다. 인증서를 사용 하는 방법에 대 한 자세한 내용은 참조 하세요. [Working with Certificates](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)합니다.  
@@ -83,4 +83,5 @@ X.509 인증서를 사용 하 여 서비스를 보안은 대부분의 바인딩�
 -   <xref:System.Runtime.Serialization>  
   
 ## <a name="see-also"></a>참고자료
+
 - [인증서 작업](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)

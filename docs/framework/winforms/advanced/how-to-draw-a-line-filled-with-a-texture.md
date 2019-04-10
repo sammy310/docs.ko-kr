@@ -9,12 +9,12 @@ helpviewer_keywords:
 - lines [Windows Forms], texture
 - drawing lines [Windows Forms], texture
 ms.assetid: dc9118cc-f3c2-42e5-8173-f46d41d18fd5
-ms.openlocfilehash: 82fc553e2a2fc9d1e8161c0f0dfef9190668e48c
-ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
+ms.openlocfilehash: c0f90c298f48aeb96893bb09241faddc08d8a49d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58653758"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59186909"
 ---
 # <a name="how-to-draw-a-line-filled-with-a-texture"></a>방법: 질감으로 채워진 선 그리기
 대신 단색을 사용 하 여 줄을 그릴 텍스처를 사용 하 여 줄을 그릴 수 있습니다. 선 및 곡선 질감으로 그릴 만들기를 <xref:System.Drawing.TextureBrush> 개체를 전달 <xref:System.Drawing.TextureBrush> 개체를 <xref:System.Drawing.Pen.%23ctor%2A> 생성자. 질감 브러시와 연결 된 비트맵은 평면 (눈에 보이지 않게) 타일을 사용 하 고 스트로크 펜의 바둑판식으로 배열 된 질감의 특정 픽셀을 얻는 펜은 직선이 나 곡선을 그릴 때 키를 누릅니다.  
@@ -33,5 +33,6 @@ ms.locfileid: "58653758"
  Windows Form 만들기 및 폼의 처리 <xref:System.Windows.Forms.Control.Paint> 이벤트입니다. 앞의 코드를 붙여를 <xref:System.Windows.Forms.Control.Paint> 이벤트 처리기입니다. 대체 `Texture.jpg` 를 시스템에서 사용할 이미지를 사용 하 여 합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [펜을 사용하여 선과 도형 그리기](using-a-pen-to-draw-lines-and-shapes.md)
 - [Windows Forms의 그래픽 및 그리기](graphics-and-drawing-in-windows-forms.md)

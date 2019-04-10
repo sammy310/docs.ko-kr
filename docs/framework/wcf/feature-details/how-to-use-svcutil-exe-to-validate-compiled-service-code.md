@@ -1,15 +1,15 @@
 ---
-title: '방법: Svcutil.exe를 사용 하 여 컴파일된 서비스 코드 유효성 검사'
+title: '방법: Svcutil.exe를 사용하여 컴파일된 서비스 코드 유효성 검사'
 ms.date: 03/30/2017
 ms.assetid: d0d820fb-41c2-45b8-8f22-0fa5aeebbbaa
-ms.openlocfilehash: a06cf57fce883753af4686b294396d6d6da73a13
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 1e90d71d5831ccf262315ebf9c1deb99b386e224
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54531930"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59196413"
 ---
-# <a name="how-to-use-svcutilexe-to-validate-compiled-service-code"></a>방법: Svcutil.exe를 사용 하 여 컴파일된 서비스 코드 유효성 검사
+# <a name="how-to-use-svcutilexe-to-validate-compiled-service-code"></a>방법: Svcutil.exe를 사용하여 컴파일된 서비스 코드 유효성 검사
 사용할 수는 [ServiceModel Metadata 유틸리티 도구 (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) 서비스를 호스팅하지 않고 서비스 구현과 구성에서 오류를 검색 하 합니다.  
   
 ### <a name="to-validate-a-service"></a>서비스의 유효성을 검사하려면  
@@ -36,4 +36,5 @@ svcutil /validate /serviceName:myServiceName myServiceHost.exe
 ```  
   
 ## <a name="see-also"></a>참고자료
+
 - [ServiceModel Metadata 유틸리티 도구(Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)

@@ -1,15 +1,15 @@
 ---
-title: '방법: 메시징 활동을 사용 하 여 워크플로 서비스 만들기'
+title: '방법: 메시징 활동을 사용하여 워크플로 서비스 만들기'
 ms.date: 03/30/2017
 ms.assetid: 53d094e2-6901-4aa1-88b8-024b27ccf78b
-ms.openlocfilehash: 83e96a91348cd8f703801252109bd474df58a679
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: MT
+ms.openlocfilehash: d40273fe637e673456453ba72bdf6da282505488
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58466207"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59192830"
 ---
-# <a name="how-to-create-a-workflow-service-with-messaging-activities"></a>방법: 메시징 활동을 사용 하 여 워크플로 서비스 만들기
+# <a name="how-to-create-a-workflow-service-with-messaging-activities"></a>방법: 메시징 활동을 사용하여 워크플로 서비스 만들기
 이 항목에서는 메시징 작업을 사용하여 간단한 워크플로 서비스를 만드는 방법을 보여 줍니다. 이 항목에서는 서비스가 메시징 작업만으로 구성된 워크플로 서비스를 만드는 방법에 중점을 둡니다. 실제 서비스의 워크플로에는 다른 많은 작업이 포함되어 있습니다. 이 항목의 서비스에서는 문자열을 받아서 호출자에게 반환하는 Echo라는 하나의 작업을 구현합니다. 이 항목은 시리즈로 된 두 항목 중 첫 번째 항목입니다. 다음 항목에서는 [방법: 서비스는 워크플로 응용 프로그램에서 액세스](../../../../docs/framework/wcf/feature-details/how-to-access-a-service-from-a-workflow-application.md) 이 항목에서 만든 서비스를 호출할 수 있는 워크플로 응용 프로그램을 만드는 방법에 설명 합니다.  
   
 ### <a name="to-create-a-workflow-service-project"></a>워크플로 서비스 프로젝트를 만들려면  
@@ -90,6 +90,7 @@ ms.locfileid: "58466207"
 4.  계속 진행 합니다 [방법: 서비스는 워크플로 응용 프로그램에서 액세스](../../../../docs/framework/wcf/feature-details/how-to-access-a-service-from-a-workflow-application.md) 항목에서는이 서비스를 호출 하는 워크플로 클라이언트를 만듭니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [워크플로 서비스](../../../../docs/framework/wcf/feature-details/workflow-services.md)
 - [워크플로 서비스 호스팅 개요](../../../../docs/framework/wcf/feature-details/hosting-workflow-services-overview.md)
-- [메시징 작업](../../../../docs/framework/wcf/feature-details/messaging-activities.md)
+- [메시징 활동](../../../../docs/framework/wcf/feature-details/messaging-activities.md)

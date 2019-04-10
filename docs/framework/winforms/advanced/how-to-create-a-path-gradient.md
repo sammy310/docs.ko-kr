@@ -9,12 +9,12 @@ helpviewer_keywords:
 - gradients [Windows Forms], creating path
 - graphics paths [Windows Forms], creating gradient
 ms.assetid: 1948e834-e104-481c-b71d-d8aa9e4d106e
-ms.openlocfilehash: cbbffa7b9250c5e489a95f687ea58eaf2a08d1bf
-ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
+ms.openlocfilehash: 31a8c68f382f81da2acac363bba6c8822e535770
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/16/2019
-ms.locfileid: "58126229"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59186097"
 ---
 # <a name="how-to-create-a-path-gradient"></a>방법: 경로 그라데이션 만들기
 <xref:System.Drawing.Drawing2D.PathGradientBrush> 클래스 점진적으로 색을 변경 하 여 셰이프를 입력 하는 방식을 사용자 지정할 수 있습니다. 예를 들어 경로의 센터에 대 한 한 가지 색 및 경로 경계에 다른 색을 지정할 수 있습니다. 또한 각 패스의 경계를 따라 여러 지점에 대 한 별도 색을 지정할 수 있습니다.  
@@ -111,4 +111,5 @@ ms.locfileid: "58126229"
  앞의 예제에서는 Windows Forms에서 사용 하도록 설계 되었으며 필요할 <xref:System.Windows.Forms.PaintEventArgs> `e`의 매개 변수는 <xref:System.Windows.Forms.Control.Paint> 이벤트 처리기입니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [그라데이션 브러시를 사용하여 도형 채우기](using-a-gradient-brush-to-fill-shapes.md)

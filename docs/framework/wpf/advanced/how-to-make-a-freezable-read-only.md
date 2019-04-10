@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - Freezable objects [WPF], making read-only
 ms.assetid: 6c544b7d-d3c9-4736-aa90-4b8728234ccb
-ms.openlocfilehash: 874724584b44c17ff6c01331295cfa1a60978d54
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 9b7102db4de0df7183355e50e3b372eac30d81b3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57360353"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59191451"
 ---
 # <a name="how-to-make-a-freezable-read-only"></a>방법: Freezable을 읽기 전용으로 설정
 확인 하는 방법을 보여 주는이 예제는 <xref:System.Windows.Freezable> 를 호출 하 여 읽기 전용으로 해당 <xref:System.Windows.Freezable.Freeze%2A> 메서드.  
@@ -36,6 +36,7 @@ ms.locfileid: "57360353"
  에 대 한 자세한 내용은 <xref:System.Windows.Freezable> 개체를 참조 합니다 [Freezable 개체 개요](freezable-objects-overview.md)합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Windows.Freezable>
 - <xref:System.Windows.Freezable.CanFreeze%2A>
 - <xref:System.Windows.Freezable.Freeze%2A>

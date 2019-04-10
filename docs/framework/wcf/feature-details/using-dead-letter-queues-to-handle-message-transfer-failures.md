@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 9e891c6a-d960-45ea-904f-1a00e202d61a
-ms.openlocfilehash: b8dae094655e7bf2a52848d449a5f604f846e052
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2f15bf569da6127d6c9d27be255590ce3784d7a5
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54497094"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59174618"
 ---
 # <a name="using-dead-letter-queues-to-handle-message-transfer-failures"></a>배달 못 한 편지 큐를 사용하여 메시지 전송 오류 처리
 대기 중인 메시지를 배달하지 못할 수 있습니다. 이러한 실패 메시지는 배달 못 한 편지 큐에 기록됩니다. 네트워크 오류, 삭제된 큐, 꽉 찬 큐, 인증 오류 또는 정시 배달 실패와 같은 이유로 인해 배달 실패가 발생할 수 있습니다.  
@@ -61,19 +61,16 @@ ms.locfileid: "54497094"
  [!code-vb[S_DeadLetter#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/s_deadletter/vb/client.vb#1)]  
   
  다음은 클라이언트 구성 파일의 코드입니다.  
-  
-  
-  
+
  다음은 배달 못 한 편지 큐의 메시지를 처리하는 서비스의 코드입니다.  
   
  [!code-csharp[S_DeadLetter#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_deadletter/cs/dlservice.cs#3)]
  [!code-vb[S_DeadLetter#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/s_deadletter/vb/dlservice.vb#3)]  
   
  다음은 배달 못 한 편지 큐 서비스 구성 파일의 코드입니다.  
-  
-  
-  
+
 ## <a name="see-also"></a>참고자료
+
 - [큐 개요](../../../../docs/framework/wcf/feature-details/queues-overview.md)
-- [방법: 대기 중인 메시지와 WCF 끝점 교환](../../../../docs/framework/wcf/feature-details/how-to-exchange-queued-messages-with-wcf-endpoints.md)
+- [방법: WCF 엔드포인트와 대기 중인 메시지 교환](../../../../docs/framework/wcf/feature-details/how-to-exchange-queued-messages-with-wcf-endpoints.md)
 - [포이즌 메시지 처리](../../../../docs/framework/wcf/feature-details/poison-message-handling.md)

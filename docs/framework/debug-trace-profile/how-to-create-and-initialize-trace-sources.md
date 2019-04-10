@@ -1,5 +1,5 @@
 ---
-title: '방법: 추적 소스 생성 및 초기화'
+title: '방법: 추적 소스 만들기 및 초기화'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,15 +11,15 @@ helpviewer_keywords:
 ms.assetid: f88dda6f-5fda-45be-9b3c-745a9b708c4d
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d6b888e349159a51cc1d1d6bfac2791d413d015a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 346fb3399993246eb8d90f7fa900ab382ae12c71
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54570098"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59194892"
 ---
-# <a name="how-to-create-and-initialize-trace-sources"></a>방법: 추적 소스 생성 및 초기화
-<xref:System.Diagnostics.TraceSource> 클래스는 애플리케이션과 연결될 수 있는 추적을 만들기 위해 애플리케이션에서 사용됩니다. <xref:System.Diagnostics.TraceSource>는 추적 이벤트, 추적 데이터 및 문제 정보 추적을 쉽게 할 수 있도록 추적 메서드를 제공합니다. 구성 파일을 사용하거나 사용하지 않고 <xref:System.Diagnostics.TraceSource>에서 추적 출력을 만들고 초기화할 수 있습니다. 이 항목에서는 두 가지 옵션 모두에 대한 지침을 제공합니다. 하지만 구성 파일을 사용하여 런타임에 추적 소스에 의해 생성되는 추적을 쉽게 재구성하는 것이 좋습니다.  
+# <a name="how-to-create-and-initialize-trace-sources"></a>방법: 추적 소스 만들기 및 초기화
+<xref:System.Diagnostics.TraceSource> 클래스는 응용 프로그램과 연결될 수 있는 추적을 만들기 위해 응용 프로그램에서 사용됩니다. <xref:System.Diagnostics.TraceSource> 문제 정보 추적 이벤트를 쉽게 추적, 추적 데이터를 사용할 수 있는 추적 메서드를 제공 합니다. 구성 파일을 사용하거나 사용하지 않고 <xref:System.Diagnostics.TraceSource>에서 추적 출력을 만들고 초기화할 수 있습니다. 이 항목에서는 두 가지 옵션 모두에 대한 지침을 제공합니다. 하지만 구성 파일을 사용하여 런타임에 추적 소스에 의해 생성되는 추적을 쉽게 재구성하는 것이 좋습니다.  
   
 ### <a name="to-create-and-initialize-a-trace-source-using-a-configuration-file"></a>구성 파일을 사용하여 추적 소스를 만들고 초기화하려면  
   
@@ -79,6 +79,7 @@ ms.locfileid: "54570098"
      [!code-vb[TraceSourceExample2#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/tracesourceexample2/vb/program.vb#1)]  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Diagnostics.TraceSource>
 - <xref:System.Diagnostics.TextWriterTraceListener>
 - <xref:System.Diagnostics.ConsoleTraceListener>

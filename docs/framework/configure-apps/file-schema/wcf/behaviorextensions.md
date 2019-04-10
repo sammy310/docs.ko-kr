@@ -2,12 +2,12 @@
 title: <behaviorExtensions>
 ms.date: 03/30/2017
 ms.assetid: 59f2791a-c78f-40d7-aa80-0d9cd10135d9
-ms.openlocfilehash: b3554db2ee037eceb43126968a02e826b65928a0
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 81ce9bb0e55fe4570f8a21187d9df80ea22393fe
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55285918"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59191421"
 ---
 # <a name="behaviorextensions"></a>\<behaviorExtensions>
 동작 확장을 사용하면 사용자 정의 동작 요소를 만들 수 있습니다. 이러한 요소는 표준 WCF(Windows Communication Foundation) 동작 요소 구성과 함께 사용할 수 있습니다. `behaviorExtensions` 섹션은 구성에 사용할 수 있도록 요소를 정의합니다. 다음은 일반적인 동작 확장 예제입니다.  
@@ -52,5 +52,6 @@ ms.locfileid: "55285918"
  자세한 내용은 [런타임 어셈블리를 찾는 방법](https://go.microsoft.com/fwlink/?LinkId=95336) 고 <xref:System.AppDomain.TypeResolve>입니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.ServiceModel.Configuration.BehaviorExtensionElement>
 - [동작을 사용하여 런타임 구성 및 확장](../../../../../docs/framework/wcf/extending/configuring-and-extending-the-runtime-with-behaviors.md)

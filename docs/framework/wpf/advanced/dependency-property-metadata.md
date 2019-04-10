@@ -7,18 +7,16 @@ helpviewer_keywords:
 - metadata [WPF], for dependency properties
 - overriding metadata [WPF]
 ms.assetid: d01ed009-b722-41bf-b82f-fe1a8cdc50dd
-ms.openlocfilehash: 7a9f4c2c8c9ff6c315b9d7189d5e859a902c3e4d
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 98f8c6611340c89409697918ff8a16eaabe3c7a3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57352934"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59170367"
 ---
 # <a name="dependency-property-metadata"></a>종속성 속성 메타데이터
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 속성 시스템에는 리플렉션이나 일반적인 [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] 특성을 통해 속성에 대해 보고할 수 있는 수준을 넘어서는 메타데이터 보고 시스템이 포함됩니다. 또한 종속성 속성에 대한 메타데이터는 종속성 속성을 정의하는 클래스에서 고유하게 할당하고, 종속성 속성이 다른 클래스에 추가될 때 변경하며, 정의하는 기본 클래스에서 종속성 속성을 상속하는 모든 파생 클래스에서 구체적으로 재정의할 수 있습니다.  
-  
- 
-  
+
 <a name="prerequisites"></a>   
 ## <a name="prerequisites"></a>전제 조건  
  이 항목에서는 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 클래스에서 기존 종속성 속성의 소비자 관점에서 종속성 속성을 이해하고 [종속성 속성 개요](dependency-properties-overview.md)를 읽었다고 가정합니다. 이 항목의 예제를 따르려면 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]을 이해하고 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 애플리케이션을 작성하는 방법도 알아야 합니다.  
@@ -92,6 +90,7 @@ ms.locfileid: "57352934"
  호출할 수 있습니다 <xref:System.Windows.DependencyProperty.AddOwner%2A> 소유자 클래스에 의해 연결된 된 속성으로 정의 된 종속성 속성에 대 한 합니다. 일반적으로 이 작업은 이전에 연결된 속성을 연결되지 않은 종속성 속성으로 노출하기 위해 수행합니다. 다음 노출 됩니다 합니다 <xref:System.Windows.DependencyProperty.AddOwner%2A> 반환 값으로는 `public static readonly` 종속성 속성 식별자로 사용 하 여에 대 한 필드 및 속성 멤버 테이블에 표시 되 고 연결 되지 않은 속성을 지 원하는 적절 한 "래퍼" 속성을 정의 클래스에서 사용 합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Windows.PropertyMetadata>
 - <xref:System.Windows.DependencyObject>
 - <xref:System.Windows.DependencyProperty>

@@ -11,12 +11,12 @@ helpviewer_keywords:
 - PictureBox control [Windows Forms], picture size and alignment
 - pictures [Windows Forms], controlling placement in PictureBox control [Windows Forms]
 ms.assetid: d0b332a3-fae2-4891-957c-dc3e17743326
-ms.openlocfilehash: 021cb448e5dbcb3ea1405d5cedaed1ae6d4f1b53
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 5d817d34e47253b2e35afa7bb41c59eea06e1f94
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57709804"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59178830"
 ---
 # <a name="how-to-modify-the-size-or-placement-of-a-picture-at-run-time-windows-forms"></a>방법: 런타임에 (Windows Forms) 크기 또는 그림의 위치 수정
 Windows Forms를 사용 하는 경우 <xref:System.Windows.Forms.PictureBox> 컨트롤을 폼에 설정할 수 있습니다는 <xref:System.Windows.Forms.PictureBox.SizeMode%2A> 되도록 속성:  
@@ -83,8 +83,9 @@ Windows Forms를 사용 하는 경우 <xref:System.Windows.Forms.PictureBox> 컨
     ```  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Windows.Forms.PictureBox>
-- [방법: 디자이너를 사용 하 여 그림 로드](how-to-load-a-picture-using-the-designer-windows-forms.md)
+- [방법: 디자이너를 사용하여 그림 로드](how-to-load-a-picture-using-the-designer-windows-forms.md)
 - [PictureBox 컨트롤 개요](picturebox-control-overview-windows-forms.md)
 - [방법: 런타임에 그림 설정](how-to-set-pictures-at-run-time-windows-forms.md)
 - [PictureBox 컨트롤](picturebox-control-windows-forms.md)

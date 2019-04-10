@@ -10,21 +10,22 @@ helpviewer_keywords:
 - GlyphRunDrawing objects [WPF]
 - glyphs [WPF]
 ms.assetid: d5d9274c-23b3-4859-8869-6e64403c9ca7
-ms.openlocfilehash: 03c05d45fae22273429b9ec80e2dcbbb22e82d65
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: a887e83babd6126d298170c6aead45c5370c1916
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57353181"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59193150"
 ---
 # <a name="glyphs"></a>문자 모양
 문자 모양을 화면에 그릴 문자를 하위 수준 표현 됩니다. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 가로채 고 텍스트 서식 지정 후 유지 하려는 고객에 대 한 문자 모양에 대 한 직접 액세스를 제공 합니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
  [GlyphRun 개체 및 Glyphs 요소 소개](introduction-to-the-glyphrun-object-and-glyphs-element.md)  
-  [방법: 문자 모양을 사용 하는 텍스트를 그립니다.](draw-text-using-glyphs.md)  
+  [방법: 문자 모양을 사용하여 텍스트 그리기](draw-text-using-glyphs.md)  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Windows.Media.GlyphRun>
 - <xref:System.Windows.Media.DrawingContext.DrawText%2A>
 - <xref:System.Windows.Documents.Glyphs>

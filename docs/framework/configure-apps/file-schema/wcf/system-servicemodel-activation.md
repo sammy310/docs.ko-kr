@@ -2,12 +2,12 @@
 title: <system.serviceModel.activation>
 ms.date: 03/30/2017
 ms.assetid: c0cae85f-56cb-4030-8807-6f96edff8d2d
-ms.openlocfilehash: ddb9c03c2d4ec17198719544fba9da989a6b0eb4
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: b29f7173b4d75ec9adff37449d3d56266f01a03c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55271150"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59196192"
 ---
 # <a name="systemservicemodelactivation"></a>\<system.serviceModel.activation>
 이 구성 섹션은 SMSvcHost.exe 도구에 대한 구성 설정을 나타냅니다. 해당 구성 요소는 SMSvcHost.exe.config 파일에서 구성할 수 있습니다. 특히 여기에는 구성해야 하는 모든 시스템 수준의 설정이 포함됩니다.  
@@ -61,4 +61,5 @@ ms.locfileid: "55271150"
 ```  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.ServiceModel.Activation.Configuration>

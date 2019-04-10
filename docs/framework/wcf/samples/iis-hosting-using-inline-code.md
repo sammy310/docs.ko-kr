@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Web hosted service
 - IIS Hosting Using Inline Code Sample [Windows Communication Foundation]
 ms.assetid: 56fe3687-a34b-4661-8e30-b33770f413fa
-ms.openlocfilehash: 776fa01d78c59d38a55de969a10096c22f34e9e5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 4fa4c7ff92252733fcff65e4fc3ab3c6b3624181
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54588473"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59186890"
 ---
 # <a name="iis-hosting-using-inline-code"></a>인라인 코드를 사용한 IIS 호스팅
 이 샘플에서는 IIS(인터넷 정보 서비스)에서 호스팅하는 서비스를 구현하는 방법을 보여 줍니다. 여기서 서비스 코드는 .svc 파일에 인라인으로 포함되어 있으며 필요할 때 컴파일됩니다. 또한 서비스 코드를 응용 프로그램의 \App_Code 디렉터리에 있는 소스 코드 파일에서 직접 구현하거나 \bin에 배포된 어셈블리로 컴파일할 수 있습니다. 이 샘플에서는 이러한 기술은 보여 주지 않습니다.  
@@ -95,4 +95,5 @@ Press <ENTER> to terminate client.
 4.  단일 컴퓨터 또는 다중 컴퓨터 구성에서 샘플을 실행 하려면의 지침을 따릅니다 [Windows Communication Foundation 샘플 실행](../../../../docs/framework/wcf/samples/running-the-samples.md)합니다. 이 서비스를 호출할 수 있는 클라이언트 응용 프로그램을 만드는 방법의 예제를 참조 하세요. [방법: 클라이언트를 만드는](../../../../docs/framework/wcf/how-to-create-a-wcf-client.md)합니다.  
   
 ## <a name="see-also"></a>참고자료
-- [AppFabric 호스팅 및 지 속성 샘플](https://go.microsoft.com/fwlink/?LinkId=193961)
+
+- [AppFabric 호스팅 및 지속성 샘플](https://go.microsoft.com/fwlink/?LinkId=193961)

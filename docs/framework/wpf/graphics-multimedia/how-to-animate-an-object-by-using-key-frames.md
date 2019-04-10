@@ -5,12 +5,12 @@ helpviewer_keywords:
 - animation [WPF], objects with key frames
 - key frames [WPF], animating objects with
 ms.assetid: b1f15ba9-cac7-4cea-8699-5c6b55c05c5e
-ms.openlocfilehash: 1e0e464adf70aeeaecb522d328d3087ca66a530c
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: MT
+ms.openlocfilehash: 0b2b517410c6cbc4f3deca13e5948c8de583fd3d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57368560"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59177803"
 ---
 # <a name="how-to-animate-an-object-by-using-key-frames"></a>방법: 키 프레임을 사용하여 개체에 애니메이션 효과 주기
 이 예제에서는입니다 개체에 애니메이션을 적용 하는 방법을 보여 주는이 예제는 <xref:System.Windows.Controls.Page.Background%2A> 의 속성을 <xref:System.Windows.Controls.Page> 키 프레임을 사용 하 여 컨트롤을 합니다.  
@@ -34,6 +34,7 @@ ms.locfileid: "57368560"
  전체 샘플을 보려면 [키 프레임 애니메이션 샘플](https://go.microsoft.com/fwlink/?LinkID=160012)을 참조하세요.  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Windows.Media.Animation.ObjectAnimationUsingKeyFrames>
 - <xref:System.Windows.Controls.Page.Background%2A>
 - <xref:System.Windows.Controls.Page>

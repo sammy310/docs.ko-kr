@@ -2,12 +2,12 @@
 title: 메시지 보안을 사용하여 메시지에 보안 설정
 ms.date: 03/30/2017
 ms.assetid: a17ebe67-836b-4c52-9a81-2c3d58e225ee
-ms.openlocfilehash: 4432540bfb6238be5b3e102283d6b67bebad07bd
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: cf014c8aa972c45140a523573b9806996062b40f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54610953"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59172005"
 ---
 # <a name="securing-messages-using-message-security"></a>메시지 보안을 사용하여 메시지에 보안 설정
 이 섹션에서는 사용 하는 경우 WCF 메시지 보안에 설명 <xref:System.ServiceModel.NetMsmqBinding>합니다.  
@@ -64,6 +64,7 @@ ms.locfileid: "54610953"
  전송 보안과 메시지 보안을 모두 사용하는 경우에는 전송과 SOAP 메시지 수준 모두에서 메시지 보호에 사용되는 인증서가 같아야 합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [전송 보안을 사용하여 메시지에 보안 설정](../../../../docs/framework/wcf/feature-details/securing-messages-using-transport-security.md)
 - [메시지 큐에 대한 메시지 보안](../../../../docs/framework/wcf/samples/message-security-over-message-queuing.md)
 - [보안 개념](../../../../docs/framework/wcf/feature-details/security-concepts.md)

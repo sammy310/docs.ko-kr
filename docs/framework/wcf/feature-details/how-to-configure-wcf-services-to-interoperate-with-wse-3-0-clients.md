@@ -1,15 +1,15 @@
 ---
-title: '방법: Wse 3.0 클라이언트 상호 운용 하도록 WCF 서비스 구성'
+title: '방법: WSE 3.0 클라이언트와 상호 운용하도록 WCF 서비스 구성'
 ms.date: 03/30/2017
 ms.assetid: 0f38c4a0-49a6-437c-bdde-ad1d138d3c4a
-ms.openlocfilehash: d42e2d4c0bf4c708f2dbb27d14d1adddc3fead41
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 24c44f415eff8518bcd73696c5cd9302371ad0c0
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54635795"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59177296"
 ---
-# <a name="how-to-configure-wcf-services-to-interoperate-with-wse-30-clients"></a>방법: Wse 3.0 클라이언트 상호 운용 하도록 WCF 서비스 구성
+# <a name="how-to-configure-wcf-services-to-interoperate-with-wse-30-clients"></a>방법: WSE 3.0 클라이언트와 상호 운용하도록 WCF 서비스 구성
 Windows Communication Foundation (WCF) 서비스는 WCF 서비스가 Ws-addressing 사양의 2004 년 8 월 버전을 사용 하도록 구성 된 경우 Microsoft.NET (WSE) 클라이언트에 대 한 Web Services Enhancements 3.0과 유선 수준으로 호환 됩니다.  
   
 ### <a name="to-enable-a-wcf-service-to-interoperate-with-wse-30-clients"></a>WCF 서비스가 WSE 3.0 클라이언트와 상호 운용하도록 하려면  
@@ -91,4 +91,5 @@ Windows Communication Foundation (WCF) 서비스는 WCF 서비스가 Ws-addressi
 ```  
   
 ## <a name="see-also"></a>참고자료
+
 - [방법: 시스템 제공 바인딩 사용자 지정](../../../../docs/framework/wcf/extending/how-to-customize-a-system-provided-binding.md)

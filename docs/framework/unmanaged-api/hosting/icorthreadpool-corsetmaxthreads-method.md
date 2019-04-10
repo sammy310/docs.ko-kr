@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6c7cb97acbf089221f498ce9edcafb114ddeef27
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 48d84d5c45ea8e1af1da44480410692d46162810
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54496900"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59198246"
 ---
 # <a name="icorthreadpoolcorsetmaxthreads-method"></a>ICorThreadpool::CorSetMaxThreads 메서드
 이 메서드는 .NET Framework 인프라를 지원하며 사용자 코드에서 직접 사용할 수 없습니다.  
@@ -46,4 +46,5 @@ HRESULT CorSetMaxThreads (
  **.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>참고자료
+
 - [ICorThreadpool 인터페이스](../../../../docs/framework/unmanaged-api/hosting/icorthreadpool-interface.md)

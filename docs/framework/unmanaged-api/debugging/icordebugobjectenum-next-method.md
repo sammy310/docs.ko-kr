@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4db5b6c6d54729363cd734840926f97d89aa4bfa
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 6998be3daf0ab6a6290a3400b96c32227df3e022
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57489295"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59175094"
 ---
 # <a name="icordebugobjectenumnext-method"></a>ICorDebugObjectEnum::Next 메서드
 현재 위치부터 시작 하는 열거형에서 지정 된 개수의 개체의 상대 가상 주소를 Rva ()를 가져옵니다.  
@@ -58,4 +58,3 @@ HRESULT Next (
  **.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>참고자료
-

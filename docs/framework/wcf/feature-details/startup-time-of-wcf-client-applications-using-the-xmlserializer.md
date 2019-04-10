@@ -1,15 +1,15 @@
 ---
-title: '방법: 시작 시간의 WCF 클라이언트 응용 프로그램 개선 XmlSerializer를 사용 하 여'
+title: '방법: XmlSerializer를 사용하여 WCF 클라이언트 애플리케이션의 시작 시간 향상'
 ms.date: 03/30/2017
 ms.assetid: 21093451-0bc3-4b1a-9a9d-05f7f71fa7d0
-ms.openlocfilehash: fb98919fe6d0ec67e5fea8c483e4993f2632267f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: dfc3dc8247a25442511d422192fea4f49bee5d92
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54503133"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59169808"
 ---
-# <a name="how-to-improve-the-startup-time-of-wcf-client-applications-using-the-xmlserializer"></a>방법: 시작 시간의 WCF 클라이언트 응용 프로그램 개선 XmlSerializer를 사용 하 여
+# <a name="how-to-improve-the-startup-time-of-wcf-client-applications-using-the-xmlserializer"></a>방법: XmlSerializer를 사용하여 WCF 클라이언트 애플리케이션의 시작 시간 향상
 <xref:System.Xml.Serialization.XmlSerializer>를 사용하여 serialize할 수 있는 데이터 형식을 사용하는 서비스 및 클라이언트 응용 프로그램은 런타임에 해당 데이터 형식에 대한 serialization 코드를 생성하고 컴파일합니다. 이로 인해 시작 시 성능이 저하될 수 있습니다.  
   
 > [!NOTE]
@@ -87,4 +87,5 @@ svcutil /t:xmlserializer myContractLibrary.exe
 ```  
   
 ## <a name="see-also"></a>참고자료
+
 - [ServiceModel Metadata 유틸리티 도구(Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)

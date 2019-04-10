@@ -2,12 +2,12 @@
 title: LIKE(Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 8300e6d2-875b-481e-9ef4-e1e7c12d46fa
-ms.openlocfilehash: 406e660efcc351df3fd2720a5d13d8398d1a8216
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 8f210c83a8220f11a5e0a461c8b72466f00a4e37
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54536973"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59197713"
 ---
 # <a name="like-entity-sql"></a>LIKE(Entity SQL)
 특정 문자 `String`이 지정된 패턴과 일치하는지 여부를 결정합니다.  
@@ -32,19 +32,19 @@ match [NOT] LIKE pattern [ESCAPE escape]
  LIKE의 결과를 부정하도록 지정합니다.  
   
 ## <a name="return-value"></a>반환 값  
- `true`이 패턴과 일치하면 `string`이고, 그렇지 않으면 `false`입니다.  
+ `true` 경우는 `string` 패턴과 일치 하 고, 그렇지 않으면 `false`합니다.  
   
 ## <a name="remarks"></a>설명  
- LIKE 연산자를 사용하는 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 식의 계산은 같음을 필터 조건으로 사용하는 식과 동일한 방법으로 이루어집니다. 하지만, LIKE 연산자를 사용하는 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 식에는 리터럴과 와일드카드 문자 모두가 포함될 수 있습니다.  
+ [!INCLUDE[esql](../../../../../../includes/esql-md.md)] LIKE 연산자를 사용 하는 식이 같음을 필터 조건으로 사용 하는 식으로 동일한 방식으로 거의 계산 됩니다. 하지만, LIKE 연산자를 사용하는 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 식에는 리터럴과 와일드카드 문자 모두가 포함될 수 있습니다.  
   
  다음 표에서는 패턴 `string`의 구문을 설명합니다.  
   
 |와일드카드 문자|설명|예제|  
 |------------------------|-----------------|-------------|  
 |%|문자 0개 이상으로 이루어진 임의의 `string`입니다.|`title like '%computer%'` 단어 포함 된 모든 제목을 찾습니다 `"computer"` 제목에 있습니다.|  
-|_(밑줄)|임의의 단일 문자입니다.|`firstname like '_ean'`은 Dean이나 Sean처럼 `"ean`"으로 끝나면서 4문자로 이루어진 이름을 찾습니다.|  
-|[ ]|지정된 범위([a-f]) 또는 집합([abcdef]) 내의 임의의 단일 문자입니다.|`lastname like '[C-P]arsen'`은 Carsen이나 Larsen처럼 C와 P 사이의 단일 문자로 시작되고 "arsen"으로 끝나는 성을 찾습니다.|  
-|[^]|지정된 범위([^a-f]) 또는 집합([^abcdef])에 속하지 않는 임의의 단일 문자입니다.|`lastname like 'de[^l]%'`는 "de"로 시작되고 그 다음 문자에 "l"이 포함되지 않는 성을 모두 찾습니다.|  
+|_(밑줄)|임의의 단일 문자입니다.|`firstname like '_ean'` 모든 4 문자로 이루어진 이름을 찾습니다 끝나야 `"ean`, "Dean 이나 Sean 등입니다.|  
+|[ ]|지정된 범위([a-f]) 또는 집합([abcdef]) 내의 임의의 단일 문자입니다.|`lastname like '[C-P]arsen'` 으로 성을 찾습니다 되 고 "arsen"으로 끝나는 C와은 Carsen 이나 Larsen P 사이의 단일 문자로 시작 합니다.|  
+|[^]|지정된 범위([^a-f]) 또는 집합([^abcdef])에 속하지 않는 임의의 단일 문자입니다.|`lastname like 'de[^l]%'` "de"로 시작 하 고 그 다음 문자 "l"을 포함 하지 않는 성을 찾습니다.|  
   
 > [!NOTE]
 >  [!INCLUDE[esql](../../../../../../includes/esql-md.md)] LIKE 연산자와 ESCAPE 절은 `System.DateTime` 또는 `System.Guid` 값에 적용할 수 없습니다.  
@@ -75,4 +75,5 @@ match [NOT] LIKE pattern [ESCAPE escape]
  [!code-csharp[DP EntityServices Concepts 2#LIKE](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#like)]  
   
 ## <a name="see-also"></a>참고자료
+
 - [엔터티 SQL 참조](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)

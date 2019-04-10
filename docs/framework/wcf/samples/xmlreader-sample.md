@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - XML Reader
 ms.assetid: 60e5848d-7d9c-4ea5-bed9-22758c9ac16c
-ms.openlocfilehash: fc25f2fccdc7becb8989c3cabe8b7b82d865fa13
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
-ms.translationtype: MT
+ms.openlocfilehash: 261bc371ce9a6da09ef49f0ddd1274be5757c7bf
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58834519"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59194672"
 ---
 # <a name="xmlreader-sample"></a>XmlReader 샘플
 XmlReader 샘플에서는 <xref:System.Xml.XmlReader>를 사용하는 메시지 본문의 처리를 보여 줍니다. 샘플을 기반으로 합니다 [Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md)를 계산기 서비스를 구현 하는 합니다. 더할 값의 배열이 포함된 메시지를 받는 서비스 작업인 `Sum`이 추가되었습니다. 이 서비스는 <xref:System.Xml.XmlReader>를 사용하여 메시지를 읽습니다.  
@@ -108,4 +108,3 @@ Press <ENTER> to terminate client.
 >  이 디렉터리가 없으면로 이동 [Windows Communication Foundation (WCF) 및.NET Framework 4 용 Windows WF (Workflow Foundation) 샘플](https://go.microsoft.com/fwlink/?LinkId=150780) 모든 Windows Communication Foundation (WCF)를 다운로드 하 고 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플. 이 샘플은 다음 디렉터리에 있습니다.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Contract\Message\XmlReader`  
-  

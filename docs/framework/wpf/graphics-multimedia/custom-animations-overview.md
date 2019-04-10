@@ -8,12 +8,12 @@ helpviewer_keywords:
 - animation [WPF], custom classes
 - custom animation classes [WPF]
 ms.assetid: 9be69d50-3384-4938-886f-08ce00e4a7a6
-ms.openlocfilehash: 0ab553f6ac22813533710e8b2ed7a3be31f6914d
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: MT
+ms.openlocfilehash: 78c32c8aa1cf63ad6b9c9c51d856b02ccec68384
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57358524"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59190732"
 ---
 # <a name="custom-animations-overview"></a>사용자 지정 애니메이션 개요
 이 항목에서는 사용자 지정 키 프레임, 애니메이션 클래스를 만들거나, 프레임당 콜백을 사용하여 애니메이션 시스템을 무시하는 방식으로 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 애니메이션 시스템을 확장하는 방법 및 시기에 대해 설명합니다.  
@@ -124,6 +124,7 @@ ms.locfileid: "57358524"
  자세한 내용은 참조는 <xref:System.Windows.Media.CompositionTarget.Rendering> 페이지입니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Windows.Media.Animation.AnimationTimeline>
 - <xref:System.Windows.Media.Animation.IKeyFrame>
 - [속성 애니메이션 기술 개요](property-animation-techniques-overview.md)

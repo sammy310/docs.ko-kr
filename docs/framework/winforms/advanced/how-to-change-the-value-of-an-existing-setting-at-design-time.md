@@ -5,12 +5,12 @@ helpviewer_keywords:
 - application settings [Windows Forms], design time
 - application settings [Windows Forms], changing
 ms.assetid: 5da91272-ad7e-49e7-9d1f-eb64439a1e4d
-ms.openlocfilehash: f9a7f5aefc07bb9700e0b0b59684e5882d7109b2
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 00c1a58bd58b67f35d6e5782f53eb15693485ca5
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57722700"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59194242"
 ---
 # <a name="how-to-change-the-value-of-an-existing-setting-at-design-time"></a>방법: 디자인 타임에 기존 설정 값 변경
 프로젝트에 기존 설정의 값을 편집 하려면 Visual Studio를 사용할 수 있습니다.  
@@ -32,6 +32,7 @@ ms.locfileid: "57722700"
 3.  설정 디자이너에서 값을 변경 하 고 값 열에 새 값을 입력 하려면 원하는 설정을 찾습니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [응용 프로그램 설정 및 사용자 설정 사용](using-application-settings-and-user-settings.md)
 - [방법: 디자인 타임에 새 설정 만들기](how-to-create-a-new-setting-at-design-time.md)
-- [응용 프로그램 설정 개요](application-settings-overview.md)
+- [애플리케이션 설정 개요](application-settings-overview.md)

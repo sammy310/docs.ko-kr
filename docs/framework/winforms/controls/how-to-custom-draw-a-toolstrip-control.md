@@ -16,21 +16,21 @@ helpviewer_keywords:
 - custom drawing
 - owner drawing
 ms.assetid: 94e7d7bd-a752-441c-b5b3-7acf98881163
-ms.openlocfilehash: d9a58dbaeae3f0cd165d72b8fd281b903ad9cca2
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 74092fdcd72c09670db53dc79d43d9d52f0dcf4b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57705755"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59172189"
 ---
 # <a name="how-to-custom-draw-a-toolstrip-control"></a>방법: ToolStrip 컨트롤 그리기 사용자 지정
 <xref:System.Windows.Forms.ToolStrip> 컨트롤에는 다음과 같은 연결된 렌더링(그리기) 클래스가 있습니다.  
   
--   <xref:System.Windows.Forms.ToolStripSystemRenderer>는 운영 체제의 모양 및 스타일을 제공합니다.  
+-   <xref:System.Windows.Forms.ToolStripSystemRenderer> 모양 및 운영 체제의 스타일을 제공합니다.  
   
--   <xref:System.Windows.Forms.ToolStripProfessionalRenderer>는 Microsoft Office의 모양 및 스타일을 제공합니다.  
+-   <xref:System.Windows.Forms.ToolStripProfessionalRenderer> 모양 및 Microsoft office 스타일을 제공합니다.  
   
--   <xref:System.Windows.Forms.ToolStripRenderer>는 다른 두 렌더링 클래스에 대한 추상 기본 클래스입니다.  
+-   <xref:System.Windows.Forms.ToolStripRenderer> 다른 두 렌더링 클래스에 대 한 추상 기본 클래스가입니다.  
   
  <xref:System.Windows.Forms.ToolStrip>에 대한 사용자 지정 그리기(소유자 그리기라고도 함)를 수행하기 위해 렌더러 클래스 중 하나를 재정의하고 렌더링 논리의 한 측면을 변경할 수 있습니다.  
   
@@ -134,9 +134,10 @@ ms.locfileid: "57705755"
     ```  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Windows.Forms.ToolStripSystemRenderer>
 - <xref:System.Windows.Forms.ToolStripProfessionalRenderer>
 - <xref:System.Windows.Forms.ToolStripRenderer>
-- [소유자 그리기 지원이 기본 제공되는 컨트롤](controls-with-built-in-owner-drawing-support.md)
-- [방법: 만들기 및 사용자 지정 렌더러를 Windows Forms의 ToolStrip 컨트롤에 대 한 설정](create-and-set-a-custom-renderer-for-the-toolstrip-control-in-wf.md)
+- [소유자가 그린 기본 제공 컨트롤 지원](controls-with-built-in-owner-drawing-support.md)
+- [방법: Windows Forms에서 ToolStrip 컨트롤에 대한 사용자 지정 렌더러 만들기 및 설정](create-and-set-a-custom-renderer-for-the-toolstrip-control-in-wf.md)
 - [ToolStrip 컨트롤 개요](toolstrip-control-overview-windows-forms.md)

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 5280e816-ae17-48c4-8de0-a1e6895dd8f0
-ms.openlocfilehash: 3991c16e00f1cbb4f8c1f2c8391f89ea51c1e6f2
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: MT
+ms.openlocfilehash: de6608d0b3fc0ba4113b8fa7c65881983aabf0c8
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58463802"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59189302"
 ---
 # <a name="how-to-create-a-sequential-workflow"></a>방법: 순차 워크플로 만들기
 기본 제공 활동뿐 아니라 사용자 지정 활동에서도 워크플로를 구성할 수 있습니다. 이 항목에서는 같은 모두 기본 제공 활동을 사용 하는 워크플로 만드는 방법을 단계별로 합니다 <xref:System.Activities.Statements.Sequence> 활동 및 사용자 지정 활동을 이전 [방법: 활동 만들기](how-to-create-an-activity.md) 항목입니다. 이 워크플로는 숫자 추측 게임을 모델링합니다.  
@@ -158,10 +158,11 @@ ms.locfileid: "58463802"
      워크플로 실행 하는 방법에 대 한 지침은 다음 항목을 참조 하십시오 [방법: 워크플로 실행](how-to-run-a-workflow.md)합니다. 이미 완료 하는 경우는 [방법: 워크플로 실행](how-to-run-a-workflow.md) 이 단계에서 순차 워크플로 사용 하 여 실행 하려는 워크플로의 다른 스타일을 사용 하 여 단계를 건너 뛰 세요 합니다 [빌드 및 응용 프로그램을 실행 하려면](how-to-run-a-workflow.md#BKMK_ToRunTheApplication) 부분 [하는 방법: 워크플로 실행](how-to-run-a-workflow.md)합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Activities.Statements.Flowchart>
 - <xref:System.Activities.Statements.FlowDecision>
 - [Windows Workflow Foundation 프로그래밍](programming.md)
 - [워크플로 디자인](designing-workflows.md)
 - [초보자를 위한 자습서](getting-started-tutorial.md)
-- [방법: 활동 만들기](how-to-create-an-activity.md)
+- [방법: 작업 만들기](how-to-create-an-activity.md)
 - [방법: 워크플로 실행](how-to-run-a-workflow.md)

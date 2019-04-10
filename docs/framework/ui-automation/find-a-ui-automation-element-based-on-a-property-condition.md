@@ -8,12 +8,12 @@ helpviewer_keywords:
 - elements, finding by property conditions
 - UI Automation, finding elements by property conditions
 ms.assetid: 3acaee5a-6ce8-4c3e-81c8-67e59eb74477
-ms.openlocfilehash: 83d3a36d08463cedf46c176208625e76907db2d8
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: a5e775c69a4dd520d8148bfc790cc00428d9d15e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57675110"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59175515"
 ---
 # <a name="find-a-ui-automation-element-based-on-a-property-condition"></a>속성 조건을 기반으로 UI 자동화 요소 찾기
 > [!NOTE]
@@ -31,6 +31,7 @@ ms.locfileid: "57675110"
  [!code-vb[InvokePatternApp#1100](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/InvokePatternApp/VisualBasic/Client.vb#1100)]  
   
 ## <a name="see-also"></a>참고자료
+
 - [InvokePattern 및 ExpandCollapsePattern 메뉴 항목 샘플](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms771636(v=vs.90))
 - [UI 자동화 요소 가져오기](../../../docs/framework/ui-automation/obtaining-ui-automation-elements.md)
 - [AutomationID 속성 사용](../../../docs/framework/ui-automation/use-the-automationid-property.md)

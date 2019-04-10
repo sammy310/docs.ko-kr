@@ -14,17 +14,16 @@ helpviewer_keywords:
 - classes [WPF], mapping namespaces to
 - namespaces [WPF]
 ms.assetid: 5c0854e3-7470-435d-9fe2-93eec9d3634e
-ms.openlocfilehash: 5921824ddbd52c264affd4822ed626d5d38b80a1
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: MT
+ms.openlocfilehash: cf09415e9203c82d26bccf4e84db5607047b6f35
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57366610"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59176919"
 ---
 # <a name="xaml-namespaces-and-namespace-mapping-for-wpf-xaml"></a>WPF XAML을 위한 XAML 네임스페이스 및 네임스페이스 매핑
 이 항목에서는 WPF XAML 파일의 루트 태그에서 주로 찾을 수 있는 두 XAML 네임스페이스 매핑과 그 용도에 대해 자세하게 설명합니다. 또한 고유한 코드나 별도의 어셈블리에 정의된 요소에 사용할 수 있도록 유사한 매핑을 생성하는 방법에 대해서도 설명합니다.  
-  
-  
+
 ## <a name="what-is-a-xaml-namespace"></a>XAML 네임스페이스의 정의  
  XAML 네임스페이스는 XML 네임스페이스 개념을 확장한 것입니다. XAML 네임스페이스를 지정하는 데는 XML 네임스페이스 구문, 네임스페이스 식별자로 URI를 사용하는 규칙이 적용되며 동일한 태그 소스의 여러 네임스페이스를 참조하기 위한 수단을 제공하는 접두사가 사용됩니다. XML 네임스페이스의 XAML 정의에 추가된 주요 개념에 따르면 XAML 네임스페이스는 태그 사용의 고유성 범위를 보장하고, 태그 엔터티가 특정 CLR 네임스페이스 및 참조되는 어셈블리에 의해 지원되는 방식에 영향을 줍니다. 이러한 지원 방식은 XAML 스키마 컨텍스트라는 개념에 의해서도 영향을 받습니다. 그러나 WPF에서 XAML 네임스페이스를 처리하려는 경우에는 일반적으로 기본 XAML 네임스페이스, XAML 언어 네임스페이스 및 추가적인 다른 XAML 네임스페이스 등의 XAML 네임스페이스를 XAML 태그에 의해 특정 지원 CLR 네임스페이스 및 참조되는 어셈블리에 직접 매핑되는 것으로 간주할 수 있습니다.  
   
@@ -48,9 +47,9 @@ ms.locfileid: "57366610"
   
  구문에는 다음과 같은 명명된 토큰과 값을 사용할 수 있습니다.  
   
- `clr-namespace:` 요소로 노출되는 공용 형식을 포함하는 어셈블리 내에서 선언된 CLR 네임스페이스입니다.  
+ `clr-namespace:` 요소로 노출 되는 공용 형식을 포함 하는 어셈블리 내에서 CLR 네임 스페이스 선언 합니다.  
   
- `assembly=` 참조된 [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] 네임스페이스 일부 또는 전체를 포함하는 어셈블리입니다. 이 값은 일반적으로 경로가 아니라 어셈블리의 이름이며 .dll 또는 .exe와 같은 확장명을 포함하지 않습니다. 해당 어셈블리의 경로는 매핑하려는 XAML을 포함하는 프로젝트 파일에서 프로젝트 참조로 설정해야 합니다. 버전 관리 및 강력한 이름 서명을 통합 하기 위해 합니다 `assembly` 값일 수는 문자열에 정의 된 대로 <xref:System.Reflection.AssemblyName>, 간단한 문자열 이름 대신 합니다.  
+ `assembly=` 참조 된의 일부 또는 전부를 포함 하는 어셈블리 [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] 네임 스페이스입니다. 이 값은 일반적으로 경로가 아니라 어셈블리의 이름이며 .dll 또는 .exe와 같은 확장명을 포함하지 않습니다. 해당 어셈블리의 경로는 매핑하려는 XAML을 포함하는 프로젝트 파일에서 프로젝트 참조로 설정해야 합니다. 버전 관리 및 강력한 이름 서명을 통합 하기 위해 합니다 `assembly` 값일 수는 문자열에 정의 된 대로 <xref:System.Reflection.AssemblyName>, 간단한 문자열 이름 대신 합니다.  
   
  `clr-namespace` 토큰과 해당 값을 구분하는 문자는 콜론(:)이지만, `assembly` 토큰과 해당 값을 구분하는 문자는 등호(=)입니다. 이 두 토큰 간을 구분하는 데 사용되는 문자는 세미콜론입니다. 또한 없는 공백을 어디서 나 선언에서.  
   
@@ -100,7 +99,7 @@ End Namespace
 ```  
   
 ### <a name="mapping-to-current-assemblies"></a>현재 어셈블리에 매핑  
- 사용자 지정 클래스를 참조하는 응용 프로그램 코드와 동일한 어셈블리 내에서 `clr-namespace` 참조를 정의하는 경우에는 `assembly`를 생략할 수 있습니다. 등호 다음에 문자열 토큰 없이 `assembly=`를 지정하는 구문도 이와 동일합니다.  
+ `assembly` 경우 생략할 수 있습니다는 `clr-namespace` 참조 된 사용자 지정 클래스를 참조 하는 응용 프로그램 코드와 동일한 어셈블리 내에서 정의 하 고 있습니다. 등호 다음에 문자열 토큰 없이 `assembly=`를 지정하는 구문도 이와 동일합니다.  
   
  사용자 지정 클래스는 동일한 어셈블리에 정의된 경우 페이지의 루트 요소로 사용할 수 없습니다. partial 클래스는 매핑할 필요가 없으며 애플리케이션에서 페이지의 partial 클래스가 아닌 클래스 중 XAML에서 요소로 참조하려는 클래스만 매핑하면 됩니다.  
   
@@ -113,9 +112,9 @@ End Namespace
 ## <a name="designer-namespaces-and-other-prefixes-from-xaml-templates"></a>XAML 템플릿의 디자이너 네임스페이스 및 기타 접두사  
  여러 가지 WPF XAML 개발 환경 및/또는 디자인 도구를 사용하는 경우 XAML 태그 내에 다른 XAML 네임스페이스 및 접두사가 정의되어 있을 수 있습니다.  
   
- [!INCLUDE[wpfdesigner_current_long](../../../../includes/wpfdesigner-current-long-md.md)]에서는 일반적으로 접두사 `d:`에 매핑되는 디자이너 네임스페이스를 사용합니다. 최신 WPF용 프로젝트 템플릿의 경우 [!INCLUDE[wpfdesigner_current_long](../../../../includes/wpfdesigner-current-long-md.md)]와 다른 디자인 환경 간의 XAML 교환을 지원하기 위해 이 XAML 네임스페이스가 미리 매핑되어 있을 수 있습니다. 이 디자인 XAML 네임스페이스는 디자이너에서 XAML 기반 UI를 왕복하는 동안 디자인 상태를 계속 유지하는 데 사용됩니다. 또한 디자이너에서 런타임 데이터 소스를 사용할 수 있게 하는 `d:IsDataSource` 등의 기능에도 사용됩니다.  
+ [!INCLUDE[wpfdesigner_current_long](../../../../includes/wpfdesigner-current-long-md.md)] 일반적으로 접두사에 매핑되는 디자이너 네임 스페이스를 사용 하 여 `d:`입니다. 최신 WPF용 프로젝트 템플릿의 경우 [!INCLUDE[wpfdesigner_current_long](../../../../includes/wpfdesigner-current-long-md.md)]와 다른 디자인 환경 간의 XAML 교환을 지원하기 위해 이 XAML 네임스페이스가 미리 매핑되어 있을 수 있습니다. 이 디자인 XAML 네임스페이스는 디자이너에서 XAML 기반 UI를 왕복하는 동안 디자인 상태를 계속 유지하는 데 사용됩니다. 또한 디자이너에서 런타임 데이터 소스를 사용할 수 있게 하는 `d:IsDataSource` 등의 기능에도 사용됩니다.  
   
- 매핑되는 또 다른 접두사로 `mc:`이 있을 수 있습니다. `mc:`은 태그 호환성을 위해 사용되며, XAML에 반드시 필요하지는 않은 태그 호환성 패턴을 활용합니다. 일정 범위 내에서 태그 호환성 기능은 프레임워크 간 또는 지원 구현의 여러 경계를 넘어 XAML을 교환하는 데 사용될 수 있으며, XAML 스키마 컨텍스트 간에 작업하고 디자이너에서 제한된 모드에 대해 호환성을 제공하는 데 사용될 수 있습니다. 태그 호환성 개념 및 관련성 WPF에 대 한 자세한 내용은 참조 하세요. [태그 호환성 (mc:) 언어 기능](markup-compatibility-mc-language-features.md)합니다.  
+ 매핑되는 또 다른 접두사로 `mc:`이 있을 수 있습니다. `mc:` 태그 호환성을 위해 이며 반드시 XAML 관련 되지 않은 태그 호환성 패턴을 활용 합니다. 일정 범위 내에서 태그 호환성 기능은 프레임워크 간 또는 지원 구현의 여러 경계를 넘어 XAML을 교환하는 데 사용될 수 있으며, XAML 스키마 컨텍스트 간에 작업하고 디자이너에서 제한된 모드에 대해 호환성을 제공하는 데 사용될 수 있습니다. 태그 호환성 개념 및 관련성 WPF에 대 한 자세한 내용은 참조 하세요. [태그 호환성 (mc:) 언어 기능](markup-compatibility-mc-language-features.md)합니다.  
   
 ## <a name="wpf-and-assembly-loading"></a>WPF 및 어셈블리 로딩  
  WPF의 XAML 스키마 컨텍스트를 CLR 정의 개념을 사용 하는 WPF 응용 프로그램 모델을 사용 하 여 통합 <xref:System.AppDomain>합니다. 다음 순서 대로 XAML 스키마 컨텍스트 어셈블리를 로드 하거나 요소의 WPF 사용법에 따라 런타임 또는 디자인 타임에 형식을 찾을 방법을 해석 하는 방법에 대해 설명 합니다. <xref:System.AppDomain> 및 기타 요인입니다.  
@@ -137,5 +136,6 @@ End Namespace
  BAML도 정규화되지 않은 어셈블리 이름을 포함해서는 안되지만 PresentationBuildTask를 통해 생성된 컴파일된 BAML에서는 모든 단계를 사용합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [XML 네임 스페이스 이해](https://go.microsoft.com/fwlink/?LinkId=98069)
 - [XAML 개요(WPF)](xaml-overview-wpf.md)

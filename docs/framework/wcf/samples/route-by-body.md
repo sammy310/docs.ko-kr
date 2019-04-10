@@ -2,12 +2,12 @@
 title: 본문에 의한 경로
 ms.date: 03/30/2017
 ms.assetid: 07a6fc3b-c360-42e0-b663-3d0f22cf4502
-ms.openlocfilehash: fe201161ebed66b8444c23229a6907be329d3641
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
-ms.translationtype: MT
+ms.openlocfilehash: 3f6be962db2d07bef3a7adc714e9f4e72d621d37
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58835130"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59172318"
 ---
 # <a name="route-by-body"></a>본문에 의한 경로
 이 샘플에서는 SOAP 작업이 있는 메시지 개체를 수락하는 서비스를 구현하는 방법을 보여 줍니다. 이 샘플은 기반 합니다 [Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md) 계산기 서비스를 구현 하는 합니다. 서비스는 `Calculate` 요청 매개 변수를 받아 <xref:System.ServiceModel.Channels.Message> 응답을 반환하는 단일 <xref:System.ServiceModel.Channels.Message> 작업을 구현합니다.  
@@ -35,7 +35,7 @@ ms.locfileid: "58835130"
     }  
 ```  
   
- 계약이 지정되면 서비스에서는 작업 사이에서 메시지를 디스패치할 수 있도록 사용자 지정 디스패치 동작 `DispatchByBodyBehavior`를 요청합니다. 이 디스패치 동작 초기화는 `DispatchByBodyElementOperationSelector` 각 래퍼 요소의 QName에서 지정 된 작업 이름의 테이블을 사용 하 여 사용자 지정 작업 선택기입니다. `DispatchByBodyElementOperationSelector`는 본문의 첫 번째 자식에 대한 시작 태그를 살펴보고 이전에 설명한 테이블을 사용하여 작업을 선택합니다.  
+ 계약이 지정되면 서비스에서는 작업 사이에서 메시지를 디스패치할 수 있도록 사용자 지정 디스패치 동작 `DispatchByBodyBehavior`를 요청합니다. 이 디스패치 동작 초기화는 `DispatchByBodyElementOperationSelector` 각 래퍼 요소의 QName에서 지정 된 작업 이름의 테이블을 사용 하 여 사용자 지정 작업 선택기입니다. `DispatchByBodyElementOperationSelector` 본문의 첫 번째 자식의 시작 태그를 확인 하 고 앞에서 언급 한 테이블을 사용 하는 작업을 선택 합니다.  
   
  클라이언트는 서비스를 사용 하 여 내보낸 WSDL 로부터 자동으로 생성 된 프록시를 사용 하 여 [ServiceModel Metadata 유틸리티 도구 (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)합니다.  
   
@@ -72,4 +72,3 @@ Press <ENTER> to terminate client.
 >  이 디렉터리가 없으면로 이동 [Windows Communication Foundation (WCF) 및.NET Framework 4 용 Windows WF (Workflow Foundation) 샘플](https://go.microsoft.com/fwlink/?LinkId=150780) 모든 Windows Communication Foundation (WCF)를 다운로드 하 고 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플. 이 샘플은 다음 디렉터리에 있습니다.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Interop\RouteByBody`  
-  

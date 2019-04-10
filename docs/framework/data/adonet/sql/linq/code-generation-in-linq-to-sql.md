@@ -2,12 +2,12 @@
 title: LINQ to SQL에서 코드 생성
 ms.date: 03/30/2017
 ms.assetid: ddcbdaa1-e7fa-4d85-a379-313b49965c07
-ms.openlocfilehash: 01ba89f2161430b046eb6f3151bc33dbd659b0d8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 48035b0f7b4a8c9a37fade5dfc2e2c45ea779dba
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54627969"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59174891"
 ---
 # <a name="code-generation-in-linq-to-sql"></a>LINQ to SQL에서 코드 생성
 데이터베이스를 나타내는 코드는 [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] 또는 SQLMetal 명령줄 도구를 사용하여 생성할 수 있습니다. 두 경우 모두 다음과 같은 세 단계로 코드가 생성됩니다.  
@@ -270,6 +270,7 @@ elementFormDefault="qualified" >
 ```  
   
 ## <a name="see-also"></a>참고자료
+
 - [배경 정보](../../../../../../docs/framework/data/adonet/sql/linq/background-information.md)
 - [외부 매핑](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md)
 - [방법: 외부 파일로 개체 모델 생성](../../../../../../docs/framework/data/adonet/sql/linq/how-to-generate-the-object-model-as-an-external-file.md)

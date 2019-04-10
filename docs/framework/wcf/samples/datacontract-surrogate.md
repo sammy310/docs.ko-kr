@@ -2,12 +2,12 @@
 title: DataContract 서로게이트
 ms.date: 03/30/2017
 ms.assetid: b0188f3c-00a9-4cf0-a887-a2284c8fb014
-ms.openlocfilehash: 33d5db0251d22ff2fac05c475903eca7dcb3e0fb
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
-ms.translationtype: MT
+ms.openlocfilehash: 663f168ebbba2238be814791fd0d75e211a469ce
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58828058"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59196426"
 ---
 # <a name="datacontract-surrogate"></a>DataContract 서로게이트
 이 샘플에서는 데이터 계약 서로게이트 클래스를 사용하여 serialization, deserialization, 스키마 내보내기 및 스키마 가져오기와 같은 프로세스를 사용자 지정할 수 있는 방법에 대해 설명합니다. 이 샘플에는 데이터 serialize 되 고 Windows Communication Foundation (WCF) 클라이언트와 서비스 간에 전송 되는 클라이언트 및 서버 시나리오에서 서로게이트를 사용 하는 방법을 보여 줍니다.  
@@ -268,4 +268,3 @@ public void ExportContract(WsdlExporter exporter, WsdlContractConversionContext 
 >  이 디렉터리가 없으면로 이동 [Windows Communication Foundation (WCF) 및.NET Framework 4 용 Windows WF (Workflow Foundation) 샘플](https://go.microsoft.com/fwlink/?LinkId=150780) 모든 Windows Communication Foundation (WCF)를 다운로드 하 고 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플. 이 샘플은 다음 디렉터리에 있습니다.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\DataContract`  
-  

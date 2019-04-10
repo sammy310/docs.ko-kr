@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - configuring HTTP [WCF]
 ms.assetid: b0c29a86-bc0c-41b3-bc1e-4eb5bb5714d4
-ms.openlocfilehash: 25ca96104ef8a63a7c6988f6dfba309e9aa44a9b
-ms.sourcegitcommit: facefcacd7ae2e5645e463bc841df213c505ffd4
-ms.translationtype: MT
+ms.openlocfilehash: 3decf955748b156b8eff4b5286a70e67d8ac14ad
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "55738931"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59195152"
 ---
 # <a name="configuring-http-and-https"></a>HTTP 및 HTTPS 구성
 WCF 서비스 및 클라이언트는 HTTP 및 HTTPS를 통해 통신할 수 있습니다. HTTP/HTTPS 설정은 IIS(인터넷 정보 서비스)나 명령줄 도구를 사용하여 구성합니다. WCF 서비스가 IIS 아래에서 호스팅되거나 IIS에서 inetmgr.exe 도구를 사용하여 HTTP 또는 HTTPS 설정을 구성할 수 있는 경우입니다. WCF 서비스가 자체 호스팅되는 경우 HTTP 또는 HTTPS 설정은 명령줄 도구를 사용하여 구성됩니다.  
@@ -18,7 +18,7 @@ WCF 서비스 및 클라이언트는 HTTP 및 HTTPS를 통해 통신할 수 있�
   
  HTTP 설정 구성에 사용하는 도구는 컴퓨터에서 실행되고 있는 운영 체제에 따라 다릅니다.  
   
- 실행 하는 경우 [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] 또는 [!INCLUDE[wxp](../../../../includes/wxp-md.md)]를 HttpCfg.exe 도구를 사용 합니다. [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)]이 도구를 자동으로 설치합니다. 실행 하는 경우 [!INCLUDE[wxp](../../../../includes/wxp-md.md)]에서 도구를 다운로드할 수 있습니다 [Windows XP 서비스 팩 2 지원 도구](https://go.microsoft.com/fwlink/?LinkId=88606)합니다. 자세한 내용은 [Httpcfg 개요](https://go.microsoft.com/fwlink/?LinkId=88605)합니다.  
+ 실행 하는 경우 [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] 또는 [!INCLUDE[wxp](../../../../includes/wxp-md.md)]를 HttpCfg.exe 도구를 사용 합니다. [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] 이 도구를 자동으로 설치 합니다. 실행 하는 경우 [!INCLUDE[wxp](../../../../includes/wxp-md.md)]에서 도구를 다운로드할 수 있습니다 [Windows XP 서비스 팩 2 지원 도구](https://go.microsoft.com/fwlink/?LinkId=88606)합니다. 자세한 내용은 [Httpcfg 개요](https://go.microsoft.com/fwlink/?LinkId=88605)합니다.  
   
  실행 하는 경우 [!INCLUDE[wv](../../../../includes/wv-md.md)] Windows 7, 이러한 설정을 구성 하 고 Netsh.exe 도구를 사용 하 여 또는입니다.  
   
@@ -38,7 +38,7 @@ httpcfg set urlacl /u {http://URL:Port/ | https://URL:Port/} /a ACL
   
  `/u` 매개 변수는 `set urlacl`을 사용하는 경우 필요합니다. 이 매개 변수는 만들고 있는 예약에 대한 레코드 키 역할을 수행하는 정규화된 URL이 포함된 문자열을 사용합니다.  
   
- `/a` 매개 변수도 `set urlacl`을 사용하는 경우 필요합니다. 이 매개 변수는 SDDL(Security Descriptor Definition Language) 문자열 형식의 ACL(액세스 제어 목록)이 포함된 문자열을 사용합니다.  
+ `/a` 매개 변수도 `set urlacl`을 사용하는 경우 필요합니다. 이 매개 변수는 SDDL(Security Descriptor Definition Language) 문자열 형식의 ACL(Access Control 목록)이 포함된 문자열을 사용합니다.  
   
  다음에서는 이 명령을 사용하는 예를 보여 줍니다.  
   
@@ -91,5 +91,6 @@ netsh http add iplisten ipaddress=0.0.0.0:8000
  IIS는 [!INCLUDE[wxp](../../../../includes/wxp-md.md)]에서 포트 공유를 지원하지 않습니다. IIS를 실행 하 고 WCF 서비스가 동일한 포트를 사용 하 여 네임 스페이스를 사용 하려고 하는 경우 WCF 서비스가 시작 되지 않습니다. IIS 및 WCF 모두 기본적으로 포트 80을 사용 합니다. 서비스 중 하나에 대 한 포트 할당을 변경 하거나 IP 수신 대기 목록을 사용 하 여 WCF 서비스를 IIS에서 사용 되지 네트워크 어댑터에 할당 합니다. HTTP Server API를 사용할 수 있도록 IIS 6.0 이상이 다시 디자인되었습니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.ServiceModel.WSDualHttpBinding>
-- [방법: SSL 인증서로 포트 구성](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md)
+- [방법: SSL 인증서를 사용하여 포트 구성](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md)

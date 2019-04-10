@@ -15,12 +15,12 @@ helpviewer_keywords:
 - Windows Forms controls, data binding
 - data-bound controls [Windows Forms], Windows Forms
 ms.assetid: dfd7f081-8bea-4a41-86a3-86a1934828ef
-ms.openlocfilehash: c8eb224cbb8ec7ab271edaed8bb25f9cc7fb8ddc
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 949b63f435289d486f445bad01d0bc6cc33e6f08
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57709928"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59197193"
 ---
 # <a name="how-to-bind-a-windows-forms-combobox-or-listbox-control-to-data"></a>방법: 데이터에 Windows Forms ComboBox 또는 ListBox 컨트롤 바인딩
 바인딩할 수 있습니다 합니다 <xref:System.Windows.Forms.ComboBox> 고 <xref:System.Windows.Forms.ListBox> 데이터베이스의 데이터를 검색 하는 등의 작업을 수행 하는 데이터를 새 데이터를 입력 하거나 기존 데이터를 편집 합니다.  
@@ -54,8 +54,9 @@ ms.locfileid: "57709928"
     >  구현 하지 않는 데이터 소스에 바인딩한 경우는 <xref:System.ComponentModel.IBindingList> 인터페이스를 <xref:System.Collections.ArrayList>, 바인딩된 컨트롤의 데이터는 데이터 원본 업데이트 될 때 업데이트 되지 것입니다. 예를 들어 있는 경우 콤보 상자에 바인딩된를 <xref:System.Collections.ArrayList> 데이터에 추가 됩니다는 <xref:System.Collections.ArrayList>, 이러한 새 항목 콤보 상자에 표시 되지 것입니다. 그러나 콤보 상자를 호출 하 여 업데이트를 강제로 지정할 수 있습니다는 <xref:System.Windows.Forms.BindingManagerBase.SuspendBinding%2A> 하 고 <xref:System.Windows.Forms.BindingManagerBase.ResumeBinding%2A> 의 인스턴스에 대 한 메서드는 <xref:System.Windows.Forms.BindingContext> 컨트롤이 바인딩되는 클래스입니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Windows.Forms.ComboBox>
 - <xref:System.Windows.Forms.ListBox>
 - [Windows Forms 데이터 바인딩](../windows-forms-data-binding.md)
 - [데이터 바인딩 및 Windows Forms](../data-binding-and-windows-forms.md)
-- [옵션 목록 표시에 사용된 Windows Forms 컨트롤](windows-forms-controls-used-to-list-options.md)
+- [옵션 목록 표시에 사용하는 Windows Forms 컨트롤](windows-forms-controls-used-to-list-options.md)

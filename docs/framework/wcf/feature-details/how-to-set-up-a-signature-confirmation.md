@@ -8,12 +8,12 @@ helpviewer_keywords:
 - signature confirmation
 - WCF, security
 ms.assetid: 2424c137-c7c2-4aa9-8d5d-a066e12fefda
-ms.openlocfilehash: 5163436f75e403ee7f682cdbe378922657116063
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 78ad6a88d5c123272e1796f1a75e2bd226bfc8f5
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54513619"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59176165"
 ---
 # <a name="how-to-set-up-a-signature-confirmation"></a>방법: 서명 확인 설정
 *서명 확인* 받은 회신이 발신자의 원본 메시지에 대 한 응답에서 생성 된는 되도록 메시지 개시자에 대 한 메커니즘입니다. 서명 확인은 WS-Security 1.1 사양에서 정의됩니다. 엔드포인트가 WS-Security 1.0을 지원할 경우, 서명 확인을 사용할 수 없습니다.  
@@ -67,8 +67,9 @@ ms.locfileid: "54513619"
  [!code-vb[c_SignatureConfirmation#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_signatureconfirmation/vb/source.vb#1)]  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement>
 - <xref:System.ServiceModel.Channels.AsymmetricSecurityBindingElement>
 - <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateMutualCertificateBindingElement%2A>
-- [방법: SecurityBindingElement를 사용 하 여 사용자 지정 바인딩 만들기](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)
-- [방법: 지정된 된 인증 모드에 대 한 SecurityBindingElement 만들기](../../../../docs/framework/wcf/feature-details/how-to-create-a-securitybindingelement-for-a-specified-authentication-mode.md)
+- [방법: SecurityBindingElement를 사용하여 사용자 지정 바인딩 만들기](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)
+- [방법: 지정된 인증 모드에 대한 SecurityBindingElement 만들기](../../../../docs/framework/wcf/feature-details/how-to-create-a-securitybindingelement-for-a-specified-authentication-mode.md)

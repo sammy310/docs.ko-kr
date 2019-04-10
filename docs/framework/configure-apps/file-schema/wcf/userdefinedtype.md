@@ -2,12 +2,12 @@
 title: <userDefinedType>
 ms.date: 03/30/2017
 ms.assetid: 0f70ec06-8249-4f0c-9f49-b4df59985fb8
-ms.openlocfilehash: a69571f5d34c2f844662f3d70ca67a2fb8ed0291
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 46beb88cedf051ed1683161b6ed9b37273ed01f1
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55284689"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59182141"
 ---
 # <a name="userdefinedtype"></a>\<userDefinedType>
 서비스 계약에 포함될 UDT(사용자 정의 형식)를 나타냅니다.  
@@ -91,9 +91,10 @@ ms.locfileid: "55284689"
  서비스가 초기화될 때 통합 런타임에서는 지정된 형식을 찾아 지정된 계약의 알려진 형식 컬렉션에 이를 추가합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.ServiceModel.Configuration.ComContractElement.UserDefinedTypes%2A>
 - <xref:System.ServiceModel.Configuration.ComUdtElementCollection>
 - <xref:System.ServiceModel.Configuration.ComUdtElement>
 - [\<comContracts>](../../../../../docs/framework/configure-apps/file-schema/wcf/comcontracts.md)
-- [COM+ 애플리케이션과 통합](../../../../../docs/framework/wcf/feature-details/integrating-with-com-plus-applications.md)
-- [방법: COM + 서비스 설정 구성](../../../../../docs/framework/wcf/feature-details/how-to-configure-com-service-settings.md)
+- [COM+ 응용 프로그램과 통합](../../../../../docs/framework/wcf/feature-details/integrating-with-com-plus-applications.md)
+- [방법: COM+ 서비스 설정 구성](../../../../../docs/framework/wcf/feature-details/how-to-configure-com-service-settings.md)

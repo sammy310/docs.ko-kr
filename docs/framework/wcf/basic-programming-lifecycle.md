@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - service creation [WCF]
 ms.assetid: 7cf21bfe-23bd-46aa-8033-609f851dbf76
-ms.openlocfilehash: d5322dfca1aa006ba2fc85b5dedebd09941f9c0e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 32586ad3ec62630e6abafd33b385788c20155b28
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54499225"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59178492"
 ---
 # <a name="basic-programming-lifecycle"></a>기본 프로그래밍 수명 주기
 Windows Communication Foundation (WCF) 응용 프로그램이 다른 응용 프로그램 플랫폼 또는 인터넷을 통해 컴퓨터의 동일한 지 여부를 통신할 수 있습니다. 이 항목에서는 WCF 응용 프로그램을 빌드하는 데 필요한 작업을 간략하게 설명 합니다. 작업 샘플 응용 프로그램을 참조 하세요 [초보자를 위한 자습서](../../../docs/framework/wcf/getting-started-tutorial.md)합니다.  
@@ -32,4 +32,5 @@ Windows Communication Foundation (WCF) 응용 프로그램이 다른 응용 프�
  서비스 계약 개발에 익숙한 控 制 참조할 수 있습니다 [확장성 소개](../../../docs/framework/wcf/introduction-to-extensibility.md)합니다. 서비스에 문제가 있으면 확인 [WCF 문제 해결 퀵 스타트](../../../docs/framework/wcf/wcf-troubleshooting-quickstart.md) 다른 같은 문제나 비슷한 문제가 있는지 확인 합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [서비스 계약 구현](../../../docs/framework/wcf/implementing-service-contracts.md)

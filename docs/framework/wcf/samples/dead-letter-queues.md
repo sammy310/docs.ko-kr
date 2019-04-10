@@ -2,12 +2,12 @@
 title: 배달 못 한 편지 큐
 ms.date: 03/30/2017
 ms.assetid: ff664f33-ad02-422c-9041-bab6d993f9cc
-ms.openlocfilehash: 5877d7ae0c38b82053da87907c54c70ef11bd543
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
-ms.translationtype: MT
+ms.openlocfilehash: 2a6ed86b04cd110dcf71efb1a6b0560fc5d45467
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58837860"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59177933"
 ---
 # <a name="dead-letter-queues"></a>배달 못 한 편지 큐
 이 샘플에서는 배달에 실패한 메시지를 처리하는 방법을 보여 줍니다. 기반이 되는 [트랜잭션 된 MSMQ 바인딩](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md) 샘플입니다. 이 샘플에서는 `netMsmqBinding` 바인딩을 사용합니다. 이 서비스는 자체적으로 호스트되는 콘솔 응용 프로그램으로서 이를 사용하여 서비스에서 대기된 메시지를 받는 것을 볼 수 있습니다.
@@ -24,7 +24,7 @@ ms.locfileid: "58837860"
 
  `NetMsmqBinding` 바인딩에서 배달 못 한 편지 큐는 다음과 같은 속성으로 표현됩니다.
 
--   <xref:System.ServiceModel.MsmqBindingBase.DeadLetterQueue%2A> 속성은 클라이언트에 필요한 배달 못 한 편지 큐의 종류를 표현합니다. 이 열거형에는 다음과 같은 값이 있습니다.
+-   <xref:System.ServiceModel.MsmqBindingBase.DeadLetterQueue%2A> 클라이언트에 필요한 배달 못 한 편지 큐의 종류를 표현 하는 속성입니다. 이 열거형에는 다음과 같은 값이 있습니다.
 
 -   `None`: 배달 못 한 편지 큐는 클라이언트가 필요 합니다.
 
@@ -32,7 +32,7 @@ ms.locfileid: "58837860"
 
 -   `Custom`: 사용 하 여 지정 된 사용자 지정 배달 못 한 편지 큐는 <xref:System.ServiceModel.MsmqBindingBase.CustomDeadLetterQueue%2A> 속성은 배달 못 한 메시지를 저장 하는 데 사용 됩니다. 이 기능은 [!INCLUDE[wv](../../../../includes/wv-md.md)]에서만 사용할 수 있습니다. 이 기능은 응용 프로그램이 동일한 컴퓨터에서 실행되는 다른 응용 프로그램과 배달 못 한 편지 큐를 공유하지 않고 고유한 배달 못 한 편지 큐를 사용해야 하는 경우에 사용됩니다.
 
--   <xref:System.ServiceModel.MsmqBindingBase.CustomDeadLetterQueue%2A> 속성은 배달 못 한 편지 큐로 사용할 특정 큐를 표현합니다. 이 속성은 [!INCLUDE[wv](../../../../includes/wv-md.md)]에서만 사용할 수 있습니다.
+-   <xref:System.ServiceModel.MsmqBindingBase.CustomDeadLetterQueue%2A> 배달 못 한 편지 큐로 사용할 특정 큐를 표현 하는 속성입니다. 이 속성은 [!INCLUDE[wv](../../../../includes/wv-md.md)]에서만 사용할 수 있습니다.
 
  이 샘플에서 클라이언트는 트랜잭션 범위 내에서 서비스로 일괄 처리 메시지를 보내고 이러한 메시지의 "TTL(Time-To-Live)" 값을 임의로 낮게 지정합니다(약 2초). 또한 클라이언트는 사용자 지정 배달 못 한 편지 큐를 지정하여 만료된 메시지를 큐에 삽입하는 데 사용합니다.
 
@@ -360,4 +360,3 @@ Processing Purchase Order: 97897eff-f926-4057-a32b-af8fb11b9bf9
 >  이 디렉터리가 없으면로 이동 [Windows Communication Foundation (WCF) 및.NET Framework 4 용 Windows WF (Workflow Foundation) 샘플](https://go.microsoft.com/fwlink/?LinkId=150780) 모든 Windows Communication Foundation (WCF)를 다운로드 하 고 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플. 이 샘플은 다음 디렉터리에 있습니다.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\Net\MSMQ\DeadLetter`  
-  

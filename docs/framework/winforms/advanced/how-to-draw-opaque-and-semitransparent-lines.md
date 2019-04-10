@@ -10,12 +10,12 @@ helpviewer_keywords:
 - lines [Windows Forms], drawing alpha blended
 - alpha blending [Windows Forms], drawing lines
 ms.assetid: 8f2508af-f495-4223-b5cc-646cbbb520eb
-ms.openlocfilehash: 210916bbaf437d8f71b07e8107eb0cdc0989ea42
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: 7408722dc13e83828cfca3f0615a2730e3c53461
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58465622"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59188268"
 ---
 # <a name="how-to-draw-opaque-and-semitransparent-lines"></a>방법: 불투명 및 반투명 선 그리기
 선을 그리는 경우 <xref:System.Drawing.Pen> 개체를 <xref:System.Drawing.Graphics> 클래스의 <xref:System.Drawing.Graphics.DrawLine%2A> 메서드에 전달해야 합니다. <xref:System.Drawing.Pen.%23ctor%2A> 생성자의 매개 변수 중 하나는 <xref:System.Drawing.Color> 개체입니다. 불투명 선을 그리려면 색의 알파 구성 요소를 255로 설정합니다. 반투명 선을 그리려면 알파 구성 요소를 1에서 254 사이의 임의 값으로 설정합니다.  
@@ -33,9 +33,10 @@ ms.locfileid: "58465622"
  ![불투명 및 반투명 출력을 보여 주는 그림](./media/how-to-draw-opaque-and-semitransparent-lines/opaque-semitransparent-lines.png)  
 
 ## <a name="compiling-the-code"></a>코드 컴파일  
- 앞의 예제는 Windows forms에서 사용하도록 설계되었으며 <xref:System.Windows.Forms.PaintEventArgs> 이벤트 처리기의 매개 변수인 `e`<xref:System.Windows.Forms.Control.Paint>가 필요합니다.  
+ 앞의 예제는 Windows Forms에서 사용 하도록 설계 되었으며 필요 <xref:System.Windows.Forms.PaintEventArgs>`e`의 매개 변수는 <xref:System.Windows.Forms.Control.Paint> 이벤트 처리기입니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [선 및 채우기 알파 혼합](alpha-blending-lines-and-fills.md)
-- [방법: 컨트롤에 투명 한 배경을 제공합니다](../controls/how-to-give-your-control-a-transparent-background.md)
-- [방법: 불투명 및 반투명 브러시를 사용 하 여 그리기](how-to-draw-with-opaque-and-semitransparent-brushes.md)
+- [방법: 컨트롤에 투명한 배경 적용](../controls/how-to-give-your-control-a-transparent-background.md)
+- [방법: 불투명 및 반투명 브러시를 사용하여 그리기](how-to-draw-with-opaque-and-semitransparent-brushes.md)

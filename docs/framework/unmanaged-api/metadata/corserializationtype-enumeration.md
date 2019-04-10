@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 70d2d4ed0d2b923b1095fd0ce898330c319fa5cf
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 15b1f6be2dac6bc7566852791ac22e495949521c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54637374"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59179632"
 ---
 # <a name="corserializationtype-enumeration"></a>CorSerializationType 열거형
 공용 언어 런타임에 의해 개체가 serialize 되는 방식을 지정 합니다.  
@@ -88,4 +88,5 @@ typedef enum CorSerializationType {
  **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>참고자료
+
 - [메타데이터 열거형](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

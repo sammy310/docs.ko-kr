@@ -6,12 +6,12 @@ helpviewer_keywords:
 - control types, CheckBox
 - UI Automation, CheckBox control type
 ms.assetid: 9c2a0e70-3a39-4ba9-96ea-a7fe531fae9f
-ms.openlocfilehash: b997703fced354024fc075dc21df70cfed26d29c
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: c8fad81e65e5e5e070b011ece1cbbdefa40f4a45
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57676007"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59193982"
 ---
 # <a name="ui-automation-support-for-the-checkbox-control-type"></a>CheckBox 컨트롤 형식에 대한 UI 자동화 지원
 > [!NOTE]
@@ -62,20 +62,21 @@ ms.locfileid: "57676007"
 ## <a name="required-ui-automation-events"></a>필요한 UI 자동화 이벤트  
  다음 표에서는 모든 확인란 컨트롤에서 지원되는 데 필요한 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 이벤트를 나열하여 보여줍니다. 이벤트에 대한 자세한 내용은 [UI Automation Events Overview](../../../docs/framework/ui-automation/ui-automation-events-overview.md)를 참조하세요.  
   
-|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 이벤트|Support(지원)|노트|  
+|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 이벤트(event)|Support(지원)|노트|  
 |---------------------------------------------------------------------------------|-------------|-----------|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationFocusChangedEvent>|필수|없음|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty> 속성 변경 이벤트.|필수|없음|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsOffscreenProperty> 속성 변경 이벤트.|필수|없음|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsEnabledProperty> 속성 변경 이벤트.|필수|없음|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty> 속성 변경 이벤트입니다.|필수|없음|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsOffscreenProperty> 속성 변경 이벤트입니다.|필수|없음|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsEnabledProperty> 속성 변경 이벤트입니다.|필수|없음|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.StructureChangedEvent>|필수|없음|  
-|<xref:System.Windows.Automation.TogglePatternIdentifiers.ToggleStateProperty> 속성 변경 이벤트.|필수|없음|  
+|<xref:System.Windows.Automation.TogglePatternIdentifiers.ToggleStateProperty> 속성 변경 이벤트입니다.|필수|없음|  
   
 <a name="Default_Action"></a>   
 ## <a name="default-action"></a>기본 작업  
  확인란의 기본 작업은 라디오 단추가 포커스를 받도록 하고 현재 상태를 설정/해제하는 것입니다. 앞에서 설명한 대로, 확인란은 사용자에게 2차 옵션 (예/아니오), (설정/해제) 또는 3차 옵션 (설정, 해제, 비활성)을 제공합니다. 확인란이 2차 옵션을 제공하는 경우, 기본 작업을 통해 "설정" 상태를 "해제"로 바꾸거나 "해제" 상태를 "설정"으로 바꿉니다. 3차 옵션을 제공하는 확인란에서, 기본 작업은 사용자가 컨트롤에 연속적인 마우스 클릭을 보낸 것처럼 동일한 순서대로 확인란의 상태를 순환합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Windows.Automation.ControlType.CheckBox>
 - [UI 자동화 컨트롤 형식 개요](../../../docs/framework/ui-automation/ui-automation-control-types-overview.md)
 - [UI 자동화 개요](../../../docs/framework/ui-automation/ui-automation-overview.md)

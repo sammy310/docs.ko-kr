@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 9edd6b71-0fa5-4649-ae1d-ac1c12541019
-ms.openlocfilehash: dbb45b890ddfab3f771d4b4a8932f970036b346d
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
-ms.translationtype: MT
+ms.openlocfilehash: e07fd6598d6b2d1bbd52e5e6735264821b8986bf
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55828295"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59180247"
 ---
 # <a name="consuming-a-dataset-from-an-xml-web-service"></a>XML Web Service에서 데이터 집합 사용
 <xref:System.Data.DataSet>은 인터넷에서 데이터 전송을 쉽게 할 수 있도록 비연결 디자인으로 설계되었습니다. 합니다 **데이터 집합** 는 "직렬화"에 대 한 입력으로 지정할 수도 있고 추가 코딩 없이 XML Web services에서 출력의 콘텐츠를 스트리밍하는 데 필요한 합니다 **데이터 집합** XML 웹 서비스에서 클라이언트 및 백 합니다. **데이터 집합** DiffGram 형식을 사용 하 여 XML 스트림을로 암시적으로 변환, 네트워크를 통해 보내고 다음으로 XML 스트림에서 재구성을 **데이터 집합** 수신측에 합니다. 이렇게 하여 간단하고 융통성 있는 방법으로 XML Web services를 사용하여 관계형 데이터를 전송하고 반환할 수 있습니다. DiffGram 형식에 대 한 자세한 내용은 참조 하세요. [Diffgram](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/diffgrams.md)합니다.  
@@ -260,11 +260,12 @@ ms.locfileid: "55828295"
     ```  
   
 ## <a name="see-also"></a>참고자료
+
 - [ADO.NET](../../../../../docs/framework/data/adonet/index.md)
-- [DataSet, DataTable 및 DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)
-- [DataTable](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatables.md)
-- [DataAdapter에서 데이터 집합 채우기](../../../../../docs/framework/data/adonet/populating-a-dataset-from-a-dataadapter.md)
-- [DataAdapter로 데이터 원본 업데이트](../../../../../docs/framework/data/adonet/updating-data-sources-with-dataadapters.md)
+- [DataSets, DataTables 및 DataViews](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)
+- [DataTables](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatables.md)
+- [DataAdapter에서 DataSet 채우기](../../../../../docs/framework/data/adonet/populating-a-dataset-from-a-dataadapter.md)
+- [DataAdapters로 데이터 원본 업데이트](../../../../../docs/framework/data/adonet/updating-data-sources-with-dataadapters.md)
 - [DataAdapter 매개 변수](../../../../../docs/framework/data/adonet/dataadapter-parameters.md)
-- [웹 서비스 기술 언어 도구 (Wsdl.exe)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/7h3ystb6(v=vs.100))
+- [웹 서비스 기술 언어 도구(Wsdl.exe)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/7h3ystb6(v=vs.100))
 - [ADO.NET 관리되는 공급자 및 데이터 집합 개발자 센터](https://go.microsoft.com/fwlink/?LinkId=217917)

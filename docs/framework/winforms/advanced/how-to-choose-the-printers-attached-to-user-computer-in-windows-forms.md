@@ -1,5 +1,5 @@
 ---
-title: '방법: Windows Forms에서 사용자의 컴퓨터에 연결 된 프린터를 선택 합니다.'
+title: '방법: Windows Forms에서 사용자의 컴퓨터에 연결된 프린터 선택'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - printing [Windows Forms], choosing printers
 - printers [Windows Forms], choosing
 ms.assetid: 63c1172b-2931-4ac0-953f-37f629494bbf
-ms.openlocfilehash: 8c29a90cf4aa7380297cc2776123fb353b07d8c5
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: bebb879020e6e45e77f109bf9c377b7322d5e8f3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57702735"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59184030"
 ---
-# <a name="how-to-choose-the-printers-attached-to-a-users-computer-in-windows-forms"></a>방법: Windows Forms에서 사용자의 컴퓨터에 연결 된 프린터를 선택 합니다.
+# <a name="how-to-choose-the-printers-attached-to-a-users-computer-in-windows-forms"></a>방법: Windows Forms에서 사용자의 컴퓨터에 연결된 프린터 선택
 사용자는 기본 프린터 이외의 프린터를 선택하는 경우가 많습니다. <xref:System.Windows.Forms.PrintDialog> 구성 요소를 사용하면 현재 설치된 프린터 중에서 사용자가 원하는 프린터를 선택하도록 할 수 있습니다. <xref:System.Windows.Forms.PrintDialog> 구성 요소를 통해 <xref:System.Windows.Forms.DialogResult> 구성 요소의 <xref:System.Windows.Forms.PrintDialog> 가 캡처되고 프린터 선택에 사용됩니다.  
   
  다음 절차에서는 텍스트 파일이 기본 프린터로 인쇄되도록 선택되었습니다. 그런 다음 <xref:System.Windows.Forms.PrintDialog> 클래스가 인스턴스화됩니다.  
@@ -107,4 +107,5 @@ ms.locfileid: "57702735"
     ```  
   
 ## <a name="see-also"></a>참고자료
+
 - [Windows Forms 인쇄 지원](windows-forms-print-support.md)

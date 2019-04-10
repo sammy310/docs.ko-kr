@@ -8,12 +8,12 @@ helpviewer_keywords:
 - WCF Data Services, binary data
 - WCF Data Services, streams
 ms.assetid: aeccc45c-d5c5-4671-ad63-a492ac8043ac
-ms.openlocfilehash: 44507d8e746584ecf8efaa0b361d1707eae50156
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 82a773623c1941320aa155dd5bd937d318c1238a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54570592"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59170328"
 ---
 # <a name="working-with-binary-data-wcf-data-services"></a>이진 데이터 작업(WCF Data Services)
 합니다 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 클라이언트 라이브러리를 사용 하면 검색에서 이진 데이터를 업데이트 하는 [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] 다음 방법 중 하나로 피드:  
@@ -67,5 +67,6 @@ ms.locfileid: "54570592"
 >  <xref:System.Data.Services.Client.DataServiceContext.SetSaveStream%2A>을 호출하면 <xref:System.Data.Services.Client.DataServiceContext.SaveChanges%2A>를 호출할 때까지 데이터 서비스로 스트림이 전송되지 않습니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [WCF Data Services 클라이언트 라이브러리](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)
 - [컨트롤에 데이터 바인딩](../../../../docs/framework/data/wcf/binding-data-to-controls-wcf-data-services.md)

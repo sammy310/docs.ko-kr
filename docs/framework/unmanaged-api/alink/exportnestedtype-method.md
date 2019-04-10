@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 49dc456df684d6905370ee6ab8c8883449bea990
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: ff159cf794d566be6478ef890c769a0ac72c9b25
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57498044"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59176607"
 ---
 # <a name="exportnestedtype-method"></a>ExportNestedType 메서드
 내보낼 수 있도록 중첩 된 형식을 지정합니다. 합니다 [ExportType 메서드](../../../../docs/framework/unmanaged-api/alink/exporttype-method.md) 내보내기 중첩 형식 수도 있지만이 메서드는 더 빠릅니다.  
@@ -70,6 +70,7 @@ HRESULT ExportNestedType(
  Alink.h 필요  
   
 ## <a name="see-also"></a>참고자료
+
 - [IALink 인터페이스](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
 - [IALink2 인터페이스](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
 - [ALink API](../../../../docs/framework/unmanaged-api/alink/index.md)

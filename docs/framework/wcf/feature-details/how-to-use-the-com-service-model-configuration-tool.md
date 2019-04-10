@@ -1,17 +1,17 @@
 ---
-title: '방법: COM + 서비스 모델 구성 도구를 사용 합니다.'
+title: '방법: COM+ 서비스 모델 구성 도구 사용'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - COM+ [WCF], using service model configuration tool
 ms.assetid: 7e68cd8d-5fda-4641-b92f-290db874376e
-ms.openlocfilehash: 528e46a47daa6df865308592eb41658369a74b6e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 0dc126cf6528504cacd18ae29c31541833ddb5f8
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54736249"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59196894"
 ---
-# <a name="how-to-use-the-com-service-model-configuration-tool"></a>방법: COM + 서비스 모델 구성 도구를 사용 합니다.
+# <a name="how-to-use-the-com-service-model-configuration-tool"></a>방법: COM+ 서비스 모델 구성 도구 사용
 적절한 호스팅 모드를 선택한 다음 COM+ 서비스 모델 구성 명령줄 도구(ComSvcConfig.exe)를 사용하여 웹 서비스로 노출될 응용 프로그램 인터페이스를 구성합니다.  
   
 > [!NOTE]
@@ -110,4 +110,5 @@ ms.locfileid: "54736249"
     ```  
   
 ## <a name="see-also"></a>참고자료
-- [COM+ 애플리케이션과 통합 개요](../../../../docs/framework/wcf/feature-details/integrating-with-com-plus-applications-overview.md)
+
+- [COM+ 응용 프로그램과 통합 개요](../../../../docs/framework/wcf/feature-details/integrating-with-com-plus-applications-overview.md)

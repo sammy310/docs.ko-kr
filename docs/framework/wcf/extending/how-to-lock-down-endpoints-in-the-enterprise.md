@@ -1,15 +1,15 @@
 ---
-title: '방법: 엔터프라이즈에서 끝점 잠그기'
+title: '방법: 엔터프라이즈에서 엔드포인트 잠그기'
 ms.date: 03/30/2017
 ms.assetid: 1b7eaab7-da60-4cf7-9d6a-ec02709cf75d
-ms.openlocfilehash: 5392db25c0e3ae0051a892831dd013063389d863
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 9bfd077abf0956f014c78a7c398670822724f7e5
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54663081"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59181365"
 ---
-# <a name="how-to-lock-down-endpoints-in-the-enterprise"></a>방법: 엔터프라이즈에서 끝점 잠그기
+# <a name="how-to-lock-down-endpoints-in-the-enterprise"></a>방법: 엔터프라이즈에서 엔드포인트 잠그기
 대형 엔터프라이즈에서는 응용 프로그램을 엔터프라이즈 보안 정책에 따라 개발해야 하는 경우가 종종 있습니다. 다음 항목에서는 개발 컴퓨터에 설치 된 모든 Windows Communication Foundation (WCF) 클라이언트 응용 프로그램의 유효성을 검사 하는 클라이언트 끝점 유효성 검사기를 설치 하는 방법을 설명 합니다.  
   
  클라이언트에이 끝점 동작이 추가 되므로 유효성 검사기에서 클라이언트 유효성 검사기를가 하는 예에서 [ \<commonBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/commonbehaviors.md) 합니다 machine.config 파일의 섹션입니다. WCF는 클라이언트 응용 프로그램에 대해서만 일반 끝점 동작만 로드 하 고 서비스 응용 프로그램에 대해서만 일반 서비스 동작을 로드 합니다. 서비스 응용 프로그램에 동일한 유효성 검사기를 설치하려면 유효성 검사기가 서비스 동작이어야 합니다. 자세한 내용은 참조는 [ \<commonBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/commonbehaviors.md) 섹션입니다.  
@@ -64,5 +64,6 @@ ms.locfileid: "54663081"
  구성 파일 요소를 암호화할 수도 있습니다. 자세한 내용은 참고 항목 단원을 참조하세요.  
   
 ## <a name="see-also"></a>참고자료
-- [DPAPI를 사용 하 여 구성 파일 요소 암호화](https://go.microsoft.com/fwlink/?LinkId=94954)
-- [RSA를 사용 하 여 구성 파일 요소 암호화](https://go.microsoft.com/fwlink/?LinkId=94955)
+
+- [How To: Encrypt Configuration Sections in ASP.NET 2.0 Using DPAPI](https://go.microsoft.com/fwlink/?LinkId=94954)
+- [How To: Encrypt Configuration Sections in ASP.NET 2.0 Using RSA](https://go.microsoft.com/fwlink/?LinkId=94955)

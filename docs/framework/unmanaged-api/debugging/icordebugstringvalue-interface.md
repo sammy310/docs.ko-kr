@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cff85a77b113440c2274910cae8ef93419d1bc1b
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 6709b14ce8e7bc131f9feb7a277fb41851ee4352
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56965360"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59173994"
 ---
 # <a name="icordebugstringvalue-interface"></a>ICorDebugStringValue 인터페이스
 문자열 값에 적용 되는 ICorDebugHeapValue의 하위 클래스.  
@@ -48,4 +48,5 @@ ms.locfileid: "56965360"
  **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>참고자료
+
 - [디버깅 인터페이스](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

@@ -2,12 +2,12 @@
 title: 쿼리 식
 description: LINQ에 대 한 쿼리 식 지원에 대해 알아봅니다는 F# 프로그래밍 언어입니다.
 ms.date: 05/16/2016
-ms.openlocfilehash: 1a6450bdcec4240fac58f6c27af2298dfd7f45a2
-ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
+ms.openlocfilehash: 3e5be7f81d7e15953142186be3aca64e68ded2a5
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58654824"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59191569"
 ---
 # <a name="query-expressions"></a>쿼리 식
 
@@ -501,9 +501,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 ## <a name="comparison-of-transact-sql-and-f-query-expressions"></a>Transact-SQL과 F# 쿼리 식 비교
 다음 표에서 몇 가지 일반적인 Transact SQL 쿼리 및에 해당 하는 F#입니다. 또한이 테이블의 코드 앞의 테이블 및 형식 공급자를 설정 하려면 동일한 초기 코드 같은 데이터베이스를 가정 합니다.
 
-
 ### <a name="table-2-transact-sql-and-f-query-expressions"></a>표 2입니다. Transact-SQL 및 F# 쿼리 식
-
 
 <table style="width:100%">
   <tr>
@@ -698,7 +696,7 @@ query {
 </code></pre>
 
 </td></tr><tr><td>
-<code>LIKE</code>와 <code>TOP</code>을 참조하세요.<br/>
+<code>LIKE</code> 및 <code>TOP</code>를 참조하세요.<br/>
 
 <pre><code class="lang-sql">-- '_e%' matches strings where the second character is 'e'
 SELECT TOP 2 * FROM Student
@@ -821,7 +819,7 @@ query {
 }
 </code></pre>
 
-</td></tr><tr><td><code>JOIN</code> 사용 하 여 <code>COUNT</code><br/>
+</td></tr><tr><td><code>JOIN</code> 다음 문자열로 바꾸세요. <code>COUNT</code><br/>
 
 <pre><code class="lang-sql">SELECT COUNT( * ) FROM Student
 JOIN CourseSelection
@@ -1277,7 +1275,6 @@ let num =
     }
 printfn "Last number: %d" num
 
-
 open Microsoft.FSharp.Linq
 
 printfn "\nlastOrDefault query operator."
@@ -1477,7 +1474,6 @@ query {
     select number
 }
 |> Seq.iter (fun number -> printfn "Number = %d" number)
-
 
 printfn "\n sumBy query operator"
 query {
@@ -1869,12 +1865,9 @@ query {
 ```
 --> Referenced 'C:\Program Files (x86)\Reference Assemblies\Microsoft\FSharp\3.0\Runtime\v4.0\Type Providers\FSharp.Data.TypeProviders.dll'
 
-
 --> Referenced 'C:\Windows\Microsoft.NET\Framework\v4.0.30319\System.Data.dll'
 
-
 --> Referenced 'C:\Windows\Microsoft.NET\Framework\v4.0.30319\System.Data.Linq.dll'
-
 
 contains query operator
 Binding session to 'C:\Users\ghogen\AppData\Local\Temp\tmp5E3C.dll'...

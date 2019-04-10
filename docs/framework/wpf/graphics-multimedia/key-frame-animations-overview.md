@@ -6,12 +6,12 @@ helpviewer_keywords:
 - key frames [WPF], about key-frame animations
 - multiple animation target values [WPF]
 ms.assetid: 10028f97-bb63-41fc-b8ad-663dac7ea203
-ms.openlocfilehash: a4606b73835087a406d989960d7a6e24ad218769
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: MT
+ms.openlocfilehash: caad7d5694139729ebe89e686ea70a981a0a94d2
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57362983"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59191590"
 ---
 # <a name="key-frame-animations-overview"></a>키 프레임 애니메이션 개요
 이 항목에서는 키 프레임 애니메이션을 소개합니다. 키 프레임 애니메이션을 사용하면 두 개 이상의 대상 값을 사용하여 애니메이션 효과를 주고 애니메이션의 보간 방법을 제어할 수 있습니다.  
@@ -50,7 +50,7 @@ ms.locfileid: "57362983"
   
  여기서 *\<Type>* 은 클래스가 애니메이션을 적용하는 값의 형식입니다.  
   
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]에서는 다음 키 프레임 애니메이션 클래스를 제공합니다.  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 다음 키 프레임 애니메이션 클래스를 제공합니다.  
   
 |속성 형식|해당 From/To/By 애니메이션 클래스|지원되는 보간 방법|  
 |-------------------|------------------------------------------------|-------------------------------------|  
@@ -284,6 +284,7 @@ ms.locfileid: "57362983"
 8.  즉, 해결된 시간 (기본 키), 순서 및 (보조 키)를 선언 순서 대로 키 프레임 정렬, 확인 된 키 프레임을 기반으로 안정적인 정렬을 사용 <xref:System.Windows.Media.Animation.KeyTime> 값입니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Windows.Media.Animation.KeyTime>
 - <xref:System.Windows.Media.Animation.KeySpline>
 - <xref:System.Windows.Media.Animation.Timeline>

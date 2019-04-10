@@ -2,12 +2,12 @@
 title: 사용자 지정 WSDL 게시
 ms.date: 03/30/2017
 ms.assetid: 3b3e8103-2c95-4db3-a05b-46aa8e9d4d29
-ms.openlocfilehash: 211f3d80917e490748e5d0445ff3dfad9ce29047
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
-ms.translationtype: MT
+ms.openlocfilehash: beae9dfcbedabeff09f733113edbe5635d27b075
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58831430"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59197258"
 ---
 # <a name="custom-wsdl-publication"></a>사용자 지정 WSDL 게시
 이 샘플을 통해 다음을 수행하는 방법을 알 수 있습니다.  
@@ -303,4 +303,3 @@ public interface ICalculator
 >  이 디렉터리가 없으면로 이동 [Windows Communication Foundation (WCF) 및.NET Framework 4 용 Windows WF (Workflow Foundation) 샘플](https://go.microsoft.com/fwlink/?LinkId=150780) 모든 Windows Communication Foundation (WCF)를 다운로드 하 고 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플. 이 샘플은 다음 디렉터리에 있습니다.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Metadata\WsdlDocumentation`  
-  

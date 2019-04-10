@@ -11,12 +11,12 @@ helpviewer_keywords:
 - walkthroughs [Windows Forms], visual inheritance
 - Windows Forms, inheritance
 ms.assetid: 01966086-3142-450e-8210-3fd4cb33f591
-ms.openlocfilehash: fa6da3248f315ad1916e6a7fdc6b0b24ca9e98a3
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
-ms.translationtype: MT
+ms.openlocfilehash: 932df915ab55d8141e64836961dd636d3d5da241
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58816319"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59174605"
 ---
 # <a name="walkthrough-demonstrating-visual-inheritance"></a>연습: 시각적 상속 데모
 시각적 상속을 통해 기본 폼의 컨트롤을 보고 새 컨트롤을 추가할 수 있습니다. 이 연습에서는 기본 폼을 만들고 클래스 라이브러리로 컴파일합니다. 이 클래스 라이브러리를 다른 프로젝트로 가져와 기본 폼에서 상속하는 새 양식을 만듭니다. 이 연습에서는 다음 작업을 수행하는 방법을 배웁니다.  
@@ -164,6 +164,7 @@ ms.locfileid: "58816319"
  사용자 정의 컨트롤의 상속도 거의 동일한 방식으로 작동합니다. 새 클래스 라이브러리 프로젝트를 열고 사용자 정의 컨트롤을 추가합니다. 구성 요소 컨트롤을 배치하고 프로젝트를 컴파일합니다. 다른 새 클래스 라이브러리 프로젝트를 열고 컴파일된 클래스 라이브러리에 대한 참조를 추가합니다. 또한 상속된 된 컨트롤을 추가 해 보세요 (통해는 **새 항목 추가** 대화 상자) 프로젝트에 사용 하는 **상속 선택**합니다. 사용자 정의 컨트롤을 추가 하 고 변경 합니다 `Inherits` (`:` Visual C#) 문입니다. 자세한 내용은 [방법: Windows Forms 상속](how-to-inherit-windows-forms.md)합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [방법: Windows Forms 상속](how-to-inherit-windows-forms.md)
-- [Windows Forms 시각적 개체 상속](windows-forms-visual-inheritance.md)
+- [Windows Forms 시각적 상속](windows-forms-visual-inheritance.md)
 - [Windows Forms](../index.md)

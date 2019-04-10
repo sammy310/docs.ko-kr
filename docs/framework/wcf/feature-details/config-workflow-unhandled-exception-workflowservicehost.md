@@ -1,15 +1,15 @@
 ---
-title: '방법: 워크플로 구성 합니다. 처리 되지 않은 예외 동작 WorkflowServiceHost 사용 하 여'
+title: '방법: WorkflowServiceHost를 사용하여 워크플로의 처리되지 않은 예외 동작 구성'
 ms.date: 03/30/2017
 ms.assetid: 51b25c86-292c-43e4-8d13-273d2badc8ad
-ms.openlocfilehash: 9a13bb9390e891295491722898bd780bc1cac587
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 8f7fe203a4198aa98e8aee1be3a12e4d72a066f8
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54636159"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59175411"
 ---
-# <a name="how-to-configure-workflow-unhandled-exception-behavior-with-workflowservicehost"></a>방법: 워크플로 구성 합니다. 처리 되지 않은 예외 동작 WorkflowServiceHost 사용 하 여
+# <a name="how-to-configure-workflow-unhandled-exception-behavior-with-workflowservicehost"></a>방법: WorkflowServiceHost를 사용하여 워크플로의 처리되지 않은 예외 동작 구성
 <xref:System.ServiceModel.Activities.Description.WorkflowUnhandledExceptionBehavior>는 <xref:System.ServiceModel.Activities.WorkflowServiceHost>에서 호스팅되는 워크플로 내에서 처리되지 않은 예외가 발생할 경우 수행할 작업을 지정할 수 있도록 하는 동작입니다. 이 항목에서는 구성 파일에서 이 동작을 구성하는 방법을 보여 줍니다.  
   
 ### <a name="to-configure-workflowunhandledexceptionbehavior"></a>WorkflowUnhandledExceptionBehavior를 구성하려면  
@@ -52,5 +52,6 @@ ms.locfileid: "54636159"
      에 대 한 자세한 내용은 <xref:System.ServiceModel.Activities.Description.WorkflowUnhandledExceptionBehavior>를 참조 하세요 [워크플로 서비스 호스트 확장성](../../../../docs/framework/wcf/feature-details/workflow-service-host-extensibility.md)합니다.  
   
 ## <a name="see-also"></a>참고자료
-- [워크플로 서비스 호스트 확장성](../../../../docs/framework/wcf/feature-details/workflow-service-host-extensibility.md)
+
+- [워크플로 서비스 호스트 확장](../../../../docs/framework/wcf/feature-details/workflow-service-host-extensibility.md)
 - [워크플로 서비스](../../../../docs/framework/wcf/feature-details/workflow-services.md)
