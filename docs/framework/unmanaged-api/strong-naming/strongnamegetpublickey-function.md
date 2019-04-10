@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 89aaf70b6809ca00b1c8df8b99a4e08e7d86a3a1
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: e0e38a85b688d66e9f44bd8026bb4c9e141a6eb7
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57492350"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59229292"
 ---
-# <a name="strongnamegetpublickey-function"></a><span data-ttu-id="c5b71-102">StrongNameGetPublicKey 함수</span><span class="sxs-lookup"><span data-stu-id="c5b71-102">StrongNameGetPublicKey Function</span></span>
-<span data-ttu-id="c5b71-103">개인/공개 키 쌍에서 공개 키를 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="c5b71-103">Gets the public key from a private/public key pair.</span></span> <span data-ttu-id="c5b71-104">암호화 서비스 공급자 (CSP) 내에서 키 컨테이너 이름으로 또는 원시 바이트 컬렉션으로 키 쌍을 제공할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="c5b71-104">The key pair can be supplied either as a key container name within a cryptographic service provider (CSP) or as a raw collection of bytes.</span></span>  
+# <a name="strongnamegetpublickey-function"></a><span data-ttu-id="35fdd-102">StrongNameGetPublicKey 함수</span><span class="sxs-lookup"><span data-stu-id="35fdd-102">StrongNameGetPublicKey Function</span></span>
+<span data-ttu-id="35fdd-103">개인/공개 키 쌍에서 공개 키를 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="35fdd-103">Gets the public key from a private/public key pair.</span></span> <span data-ttu-id="35fdd-104">암호화 서비스 공급자 (CSP) 내에서 키 컨테이너 이름으로 또는 원시 바이트 컬렉션으로 키 쌍을 제공할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="35fdd-104">The key pair can be supplied either as a key container name within a cryptographic service provider (CSP) or as a raw collection of bytes.</span></span>  
   
- <span data-ttu-id="c5b71-105">이 함수는 더 이상 사용 되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="c5b71-105">This function has been deprecated.</span></span> <span data-ttu-id="c5b71-106">사용 된 [iclrstrongname:: Strongnamegetpublickey](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamegetpublickey-method.md) 메서드 대신 합니다.</span><span class="sxs-lookup"><span data-stu-id="c5b71-106">Use the [ICLRStrongName::StrongNameGetPublicKey](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamegetpublickey-method.md) method instead.</span></span>  
+ <span data-ttu-id="35fdd-105">이 함수는 더 이상 사용 되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="35fdd-105">This function has been deprecated.</span></span> <span data-ttu-id="35fdd-106">사용 된 [iclrstrongname:: Strongnamegetpublickey](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamegetpublickey-method.md) 메서드 대신 합니다.</span><span class="sxs-lookup"><span data-stu-id="35fdd-106">Use the [ICLRStrongName::StrongNameGetPublicKey](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamegetpublickey-method.md) method instead.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="c5b71-107">구문</span><span class="sxs-lookup"><span data-stu-id="c5b71-107">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="35fdd-107">구문</span><span class="sxs-lookup"><span data-stu-id="35fdd-107">Syntax</span></span>  
   
 ```  
 BOOLEAN StrongNameGetPublicKey (   
@@ -41,45 +41,46 @@ BOOLEAN StrongNameGetPublicKey (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="c5b71-108">매개 변수</span><span class="sxs-lookup"><span data-stu-id="c5b71-108">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="35fdd-108">매개 변수</span><span class="sxs-lookup"><span data-stu-id="35fdd-108">Parameters</span></span>  
  `szKeyContainer`  
- <span data-ttu-id="c5b71-109">[in] 공개/개인 키 쌍을 포함 하는 키 컨테이너의 이름입니다.</span><span class="sxs-lookup"><span data-stu-id="c5b71-109">[in] The name of the key container that contains the public/private key pair.</span></span> <span data-ttu-id="c5b71-110">하는 경우 `pbKeyBlob` 이 null 이면 `szKeyContainer` CSP 내에서 유효한 컨테이너를 지정 해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="c5b71-110">If `pbKeyBlob` is null, `szKeyContainer` must specify a valid container within the CSP.</span></span> <span data-ttu-id="c5b71-111">이 경우 `StrongNameGetPublicKey` 컨테이너에 저장 된 키 쌍에서 공개 키를 추출 합니다.</span><span class="sxs-lookup"><span data-stu-id="c5b71-111">In this case, `StrongNameGetPublicKey` extracts the public key from the key pair stored in the container.</span></span>  
+ <span data-ttu-id="35fdd-109">[in] 공개/개인 키 쌍을 포함 하는 키 컨테이너의 이름입니다.</span><span class="sxs-lookup"><span data-stu-id="35fdd-109">[in] The name of the key container that contains the public/private key pair.</span></span> <span data-ttu-id="35fdd-110">하는 경우 `pbKeyBlob` 이 null 이면 `szKeyContainer` CSP 내에서 유효한 컨테이너를 지정 해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="35fdd-110">If `pbKeyBlob` is null, `szKeyContainer` must specify a valid container within the CSP.</span></span> <span data-ttu-id="35fdd-111">이 경우 `StrongNameGetPublicKey` 컨테이너에 저장 된 키 쌍에서 공개 키를 추출 합니다.</span><span class="sxs-lookup"><span data-stu-id="35fdd-111">In this case, `StrongNameGetPublicKey` extracts the public key from the key pair stored in the container.</span></span>  
   
- <span data-ttu-id="c5b71-112">경우 `pbKeyBlob` null이 아니면 키 쌍 가정 키 binary large object (BLOB)에 포함 되어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="c5b71-112">If `pbKeyBlob` is not null, the key pair is assumed to be contained in the key binary large object (BLOB).</span></span>  
+ <span data-ttu-id="35fdd-112">경우 `pbKeyBlob` null이 아니면 키 쌍 가정 키 binary large object (BLOB)에 포함 되어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="35fdd-112">If `pbKeyBlob` is not null, the key pair is assumed to be contained in the key binary large object (BLOB).</span></span>  
   
- <span data-ttu-id="c5b71-113">키에는 1024 비트 adleman의 Rivest-Shamir (RSA) 키를 서명 해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="c5b71-113">The keys must be 1024-bit Rivest-Shamir-Adleman (RSA) signing keys.</span></span> <span data-ttu-id="c5b71-114">다른 종류의 키이 이번에 지원 됩니다.</span><span class="sxs-lookup"><span data-stu-id="c5b71-114">No other types of keys are supported at this time.</span></span>  
+ <span data-ttu-id="35fdd-113">키에는 1024 비트 adleman의 Rivest-Shamir (RSA) 키를 서명 해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="35fdd-113">The keys must be 1024-bit Rivest-Shamir-Adleman (RSA) signing keys.</span></span> <span data-ttu-id="35fdd-114">다른 종류의 키이 이번에 지원 됩니다.</span><span class="sxs-lookup"><span data-stu-id="35fdd-114">No other types of keys are supported at this time.</span></span>  
   
  `pbKeyBlob`  
- <span data-ttu-id="c5b71-115">[in] 공개/개인 키 쌍에 대 한 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="c5b71-115">[in] A pointer to the public/private key pair.</span></span> <span data-ttu-id="c5b71-116">이 쌍이 win32 만들어진 형식을 `CryptExportKey` 함수입니다.</span><span class="sxs-lookup"><span data-stu-id="c5b71-116">This pair is in the format created by the Win32 `CryptExportKey` function.</span></span> <span data-ttu-id="c5b71-117">하는 경우 `pbKeyBlob` 가 null 이면 지정 된 키 컨테이너 `szKeyContainer` 키 쌍을 포함 하도록 간주 됩니다.</span><span class="sxs-lookup"><span data-stu-id="c5b71-117">If `pbKeyBlob` is null, the key container specified by `szKeyContainer` is assumed to contain the key pair.</span></span>  
+ <span data-ttu-id="35fdd-115">[in] 공개/개인 키 쌍에 대 한 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="35fdd-115">[in] A pointer to the public/private key pair.</span></span> <span data-ttu-id="35fdd-116">이 쌍이 win32 만들어진 형식을 `CryptExportKey` 함수입니다.</span><span class="sxs-lookup"><span data-stu-id="35fdd-116">This pair is in the format created by the Win32 `CryptExportKey` function.</span></span> <span data-ttu-id="35fdd-117">하는 경우 `pbKeyBlob` 가 null 이면 지정 된 키 컨테이너 `szKeyContainer` 키 쌍을 포함 하도록 간주 됩니다.</span><span class="sxs-lookup"><span data-stu-id="35fdd-117">If `pbKeyBlob` is null, the key container specified by `szKeyContainer` is assumed to contain the key pair.</span></span>  
   
  `cbKeyBlob`  
- <span data-ttu-id="c5b71-118">[in] 크기 (바이트)의 `pbKeyBlob`합니다.</span><span class="sxs-lookup"><span data-stu-id="c5b71-118">[in] The size, in bytes, of `pbKeyBlob`.</span></span>  
+ <span data-ttu-id="35fdd-118">[in] 크기 (바이트)의 `pbKeyBlob`합니다.</span><span class="sxs-lookup"><span data-stu-id="35fdd-118">[in] The size, in bytes, of `pbKeyBlob`.</span></span>  
   
  `ppbPublicKeyBlob`  
- <span data-ttu-id="c5b71-119">[out] 반환 된 공개 키 BLOB입니다.</span><span class="sxs-lookup"><span data-stu-id="c5b71-119">[out] The returned public key BLOB.</span></span> <span data-ttu-id="c5b71-120">`ppbPublicKeyBlob` 매개 변수는 공용 언어 런타임에 의해 할당 되 고 호출자에 게 반환 합니다.</span><span class="sxs-lookup"><span data-stu-id="c5b71-120">The `ppbPublicKeyBlob` parameter is allocated by the common language runtime and returned to the caller.</span></span> <span data-ttu-id="c5b71-121">호출자에 게 사용 하 여 메모리를 해제 해야 합니다 [StrongNameFreeBuffer](../../../../docs/framework/unmanaged-api/strong-naming/strongnamefreebuffer-function.md) 함수입니다.</span><span class="sxs-lookup"><span data-stu-id="c5b71-121">The caller must free the memory by using the [StrongNameFreeBuffer](../../../../docs/framework/unmanaged-api/strong-naming/strongnamefreebuffer-function.md) function.</span></span>  
+ <span data-ttu-id="35fdd-119">[out] 반환 된 공개 키 BLOB입니다.</span><span class="sxs-lookup"><span data-stu-id="35fdd-119">[out] The returned public key BLOB.</span></span> <span data-ttu-id="35fdd-120">`ppbPublicKeyBlob` 매개 변수는 공용 언어 런타임에 의해 할당 되 고 호출자에 게 반환 합니다.</span><span class="sxs-lookup"><span data-stu-id="35fdd-120">The `ppbPublicKeyBlob` parameter is allocated by the common language runtime and returned to the caller.</span></span> <span data-ttu-id="35fdd-121">호출자에 게 사용 하 여 메모리를 해제 해야 합니다 [StrongNameFreeBuffer](../../../../docs/framework/unmanaged-api/strong-naming/strongnamefreebuffer-function.md) 함수입니다.</span><span class="sxs-lookup"><span data-stu-id="35fdd-121">The caller must free the memory by using the [StrongNameFreeBuffer](../../../../docs/framework/unmanaged-api/strong-naming/strongnamefreebuffer-function.md) function.</span></span>  
   
  `pcbPublicKeyBlob`  
- <span data-ttu-id="c5b71-122">[out] 반환 된 공개 키 BLOB의 크기입니다.</span><span class="sxs-lookup"><span data-stu-id="c5b71-122">[out] The size of the returned public key BLOB.</span></span>  
+ <span data-ttu-id="35fdd-122">[out] 반환 된 공개 키 BLOB의 크기입니다.</span><span class="sxs-lookup"><span data-stu-id="35fdd-122">[out] The size of the returned public key BLOB.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="c5b71-123">반환 값</span><span class="sxs-lookup"><span data-stu-id="c5b71-123">Return Value</span></span>  
- <span data-ttu-id="c5b71-124">`true` 성공적으로 완료 됩니다. 그렇지 않으면 `false`합니다.</span><span class="sxs-lookup"><span data-stu-id="c5b71-124">`true` on successful completion; otherwise, `false`.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="35fdd-123">반환 값</span><span class="sxs-lookup"><span data-stu-id="35fdd-123">Return Value</span></span>  
+ `true` <span data-ttu-id="35fdd-124">성공적으로 완료 됩니다. 그렇지 않으면 `false`합니다.</span><span class="sxs-lookup"><span data-stu-id="35fdd-124">on successful completion; otherwise, `false`.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="c5b71-125">설명</span><span class="sxs-lookup"><span data-stu-id="c5b71-125">Remarks</span></span>  
- <span data-ttu-id="c5b71-126">공개 키에 포함 된 [PublicKeyBlob](../../../../docs/framework/unmanaged-api/strong-naming/publickeyblob-structure.md) 구조입니다.</span><span class="sxs-lookup"><span data-stu-id="c5b71-126">The public key is contained in a [PublicKeyBlob](../../../../docs/framework/unmanaged-api/strong-naming/publickeyblob-structure.md) structure.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="35fdd-125">설명</span><span class="sxs-lookup"><span data-stu-id="35fdd-125">Remarks</span></span>  
+ <span data-ttu-id="35fdd-126">공개 키에 포함 된 [PublicKeyBlob](../../../../docs/framework/unmanaged-api/strong-naming/publickeyblob-structure.md) 구조입니다.</span><span class="sxs-lookup"><span data-stu-id="35fdd-126">The public key is contained in a [PublicKeyBlob](../../../../docs/framework/unmanaged-api/strong-naming/publickeyblob-structure.md) structure.</span></span>  
   
- <span data-ttu-id="c5b71-127">경우는 `StrongNameGetPublicKey` 함수가 성공적으로 완료으로 호출 되지 않으면 합니다 [StrongNameErrorInfo](../../../../docs/framework/unmanaged-api/strong-naming/strongnameerrorinfo-function.md) 마지막 생성 된 오류를 검색 하는 함수입니다.</span><span class="sxs-lookup"><span data-stu-id="c5b71-127">If the `StrongNameGetPublicKey` function does not complete successfully, call the [StrongNameErrorInfo](../../../../docs/framework/unmanaged-api/strong-naming/strongnameerrorinfo-function.md) function to retrieve the last generated error.</span></span>  
+ <span data-ttu-id="35fdd-127">경우는 `StrongNameGetPublicKey` 함수가 성공적으로 완료으로 호출 되지 않으면 합니다 [StrongNameErrorInfo](../../../../docs/framework/unmanaged-api/strong-naming/strongnameerrorinfo-function.md) 마지막 생성 된 오류를 검색 하는 함수입니다.</span><span class="sxs-lookup"><span data-stu-id="35fdd-127">If the `StrongNameGetPublicKey` function does not complete successfully, call the [StrongNameErrorInfo](../../../../docs/framework/unmanaged-api/strong-naming/strongnameerrorinfo-function.md) function to retrieve the last generated error.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="c5b71-128">요구 사항</span><span class="sxs-lookup"><span data-stu-id="c5b71-128">Requirements</span></span>  
- <span data-ttu-id="c5b71-129">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="c5b71-129">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="35fdd-128">요구 사항</span><span class="sxs-lookup"><span data-stu-id="35fdd-128">Requirements</span></span>  
+ <span data-ttu-id="35fdd-129">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="35fdd-129">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="c5b71-130">**헤더:** StrongName.h</span><span class="sxs-lookup"><span data-stu-id="c5b71-130">**Header:** StrongName.h</span></span>  
+ <span data-ttu-id="35fdd-130">**헤더:** StrongName.h</span><span class="sxs-lookup"><span data-stu-id="35fdd-130">**Header:** StrongName.h</span></span>  
   
- <span data-ttu-id="c5b71-131">**라이브러리:** MsCorEE.dll에 리소스로 포함</span><span class="sxs-lookup"><span data-stu-id="c5b71-131">**Library:** Included as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="35fdd-131">**라이브러리:** MsCorEE.dll에 리소스로 포함</span><span class="sxs-lookup"><span data-stu-id="35fdd-131">**Library:** Included as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="c5b71-132">**.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="c5b71-132">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ **<span data-ttu-id="35fdd-132">.NET Framework 버전:</span><span class="sxs-lookup"><span data-stu-id="35fdd-132">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="c5b71-133">참고자료</span><span class="sxs-lookup"><span data-stu-id="c5b71-133">See also</span></span>
-- [<span data-ttu-id="c5b71-134">StrongNameGetPublicKey 메서드</span><span class="sxs-lookup"><span data-stu-id="c5b71-134">StrongNameGetPublicKey Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamegetpublickey-method.md)
-- [<span data-ttu-id="c5b71-135">StrongNameTokenFromPublicKey 메서드</span><span class="sxs-lookup"><span data-stu-id="c5b71-135">StrongNameTokenFromPublicKey Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnametokenfrompublickey-method.md)
-- [<span data-ttu-id="c5b71-136">ICLRStrongName 인터페이스</span><span class="sxs-lookup"><span data-stu-id="c5b71-136">ICLRStrongName Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)
-- [<span data-ttu-id="c5b71-137">PublicKeyBlob 구조체</span><span class="sxs-lookup"><span data-stu-id="c5b71-137">PublicKeyBlob Structure</span></span>](../../../../docs/framework/unmanaged-api/strong-naming/publickeyblob-structure.md)
+## <a name="see-also"></a><span data-ttu-id="35fdd-133">참고자료</span><span class="sxs-lookup"><span data-stu-id="35fdd-133">See also</span></span>
+
+- [<span data-ttu-id="35fdd-134">StrongNameGetPublicKey 메서드</span><span class="sxs-lookup"><span data-stu-id="35fdd-134">StrongNameGetPublicKey Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamegetpublickey-method.md)
+- [<span data-ttu-id="35fdd-135">StrongNameTokenFromPublicKey 메서드</span><span class="sxs-lookup"><span data-stu-id="35fdd-135">StrongNameTokenFromPublicKey Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnametokenfrompublickey-method.md)
+- [<span data-ttu-id="35fdd-136">ICLRStrongName 인터페이스</span><span class="sxs-lookup"><span data-stu-id="35fdd-136">ICLRStrongName Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)
+- [<span data-ttu-id="35fdd-137">PublicKeyBlob 구조체</span><span class="sxs-lookup"><span data-stu-id="35fdd-137">PublicKeyBlob Structure</span></span>](../../../../docs/framework/unmanaged-api/strong-naming/publickeyblob-structure.md)

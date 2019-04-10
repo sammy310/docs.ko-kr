@@ -2,20 +2,20 @@
 title: '방법: 서로 다른 파일 (LINQ) (Visual Basic)의 콘텐츠 조인'
 ms.date: 06/27/2018
 ms.assetid: e7530857-c467-41ea-9730-84e6b1065a4d
-ms.openlocfilehash: 4183a27ead8f8570091bb369d75147af7aebd23b
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.openlocfilehash: 91337e6a20329cbf3d4d6f0d30a2d604e80474a9
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55827749"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59301115"
 ---
-# <a name="how-to-join-content-from-dissimilar-files-linq-visual-basic"></a><span data-ttu-id="f9c5b-102">방법: 서로 다른 파일 (LINQ) (Visual Basic)의 콘텐츠 조인</span><span class="sxs-lookup"><span data-stu-id="f9c5b-102">How to: Join Content from Dissimilar Files (LINQ) (Visual Basic)</span></span>
+# <a name="how-to-join-content-from-dissimilar-files-linq-visual-basic"></a><span data-ttu-id="a64b6-102">방법: 서로 다른 파일 (LINQ) (Visual Basic)의 콘텐츠 조인</span><span class="sxs-lookup"><span data-stu-id="a64b6-102">How to: Join Content from Dissimilar Files (LINQ) (Visual Basic)</span></span>
 
-<span data-ttu-id="f9c5b-103">이 예제에서는 일치하는 키로 사용되는 공통 값을 공유하는 두 개의 쉼표로 구분된 파일의 데이터를 조인하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="f9c5b-103">This example shows how to join data from two comma-delimited files that share a common value that is used as a matching key.</span></span> <span data-ttu-id="f9c5b-104">이 방법은 두 스프레드시트나 한 스프레드시트와 다른 형식으로 된 파일의 데이터를 하나의 새 파일로 결합해야 하는 경우에 유용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="f9c5b-104">This technique can be useful if you have to combine data from two spreadsheets, or from a spreadsheet and from a file that has another format, into a new file.</span></span> <span data-ttu-id="f9c5b-105">모든 종류의 구조적 텍스트에서 작동하도록 예제를 수정할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="f9c5b-105">You can modify the example to work with any kind of structured text.</span></span>  
+<span data-ttu-id="a64b6-103">이 예제에서는 일치하는 키로 사용되는 공통 값을 공유하는 두 개의 쉼표로 구분된 파일의 데이터를 조인하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="a64b6-103">This example shows how to join data from two comma-delimited files that share a common value that is used as a matching key.</span></span> <span data-ttu-id="a64b6-104">이 방법은 두 스프레드시트나 한 스프레드시트와 다른 형식으로 된 파일의 데이터를 하나의 새 파일로 결합해야 하는 경우에 유용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="a64b6-104">This technique can be useful if you have to combine data from two spreadsheets, or from a spreadsheet and from a file that has another format, into a new file.</span></span> <span data-ttu-id="a64b6-105">모든 종류의 구조적 텍스트에서 작동하도록 예제를 수정할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="a64b6-105">You can modify the example to work with any kind of structured text.</span></span>  
   
-## <a name="to-create-the-data-files"></a><span data-ttu-id="f9c5b-106">데이터 파일을 만들려면</span><span class="sxs-lookup"><span data-stu-id="f9c5b-106">To create the data files</span></span>
+## <a name="to-create-the-data-files"></a><span data-ttu-id="a64b6-106">데이터 파일을 만들려면</span><span class="sxs-lookup"><span data-stu-id="a64b6-106">To create the data files</span></span>
   
-1.  <span data-ttu-id="f9c5b-107">다음 줄을 scores.csv 파일에 복사하고 파일을 프로젝트 폴더에 저장합니다.</span><span class="sxs-lookup"><span data-stu-id="f9c5b-107">Copy the following lines into a file that is named scores.csv and save it to your project folder.</span></span> <span data-ttu-id="f9c5b-108">파일은 스프레드시트 데이터를 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="f9c5b-108">The file represents spreadsheet data.</span></span> <span data-ttu-id="f9c5b-109">열 1은 학생 ID이고, 열 2-5는 시험 점수입니다.</span><span class="sxs-lookup"><span data-stu-id="f9c5b-109">Column 1 is the student's ID, and columns 2 through 5 are test scores.</span></span>  
+1. <span data-ttu-id="a64b6-107">다음 줄을 scores.csv 파일에 복사하고 파일을 프로젝트 폴더에 저장합니다.</span><span class="sxs-lookup"><span data-stu-id="a64b6-107">Copy the following lines into a file that is named scores.csv and save it to your project folder.</span></span> <span data-ttu-id="a64b6-108">파일은 스프레드시트 데이터를 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="a64b6-108">The file represents spreadsheet data.</span></span> <span data-ttu-id="a64b6-109">열 1은 학생 ID이고, 열 2-5는 시험 점수입니다.</span><span class="sxs-lookup"><span data-stu-id="a64b6-109">Column 1 is the student's ID, and columns 2 through 5 are test scores.</span></span>  
   
     ```  
     111, 97, 92, 81, 60  
@@ -32,7 +32,7 @@ ms.locfileid: "55827749"
     122, 94, 92, 91, 91  
     ```  
   
-2.  <span data-ttu-id="f9c5b-110">다음 줄을 names.csv 파일에 복사하고 파일을 프로젝트 폴더에 저장합니다.</span><span class="sxs-lookup"><span data-stu-id="f9c5b-110">Copy the following lines into a file that is named names.csv and save it to your project folder.</span></span> <span data-ttu-id="f9c5b-111">파일은 학생의 성, 이름 및 학생 ID를 포함하는 스프레드시트를 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="f9c5b-111">The file represents a spreadsheet that contains the student's last name, first name, and student ID.</span></span>  
+2. <span data-ttu-id="a64b6-110">다음 줄을 names.csv 파일에 복사하고 파일을 프로젝트 폴더에 저장합니다.</span><span class="sxs-lookup"><span data-stu-id="a64b6-110">Copy the following lines into a file that is named names.csv and save it to your project folder.</span></span> <span data-ttu-id="a64b6-111">파일은 학생의 성, 이름 및 학생 ID를 포함하는 스프레드시트를 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="a64b6-111">The file represents a spreadsheet that contains the student's last name, first name, and student ID.</span></span>  
   
     ```  
     Omelchenko,Svetlana,111  
@@ -49,7 +49,7 @@ ms.locfileid: "55827749"
     Tucker,Michael,122  
     ```  
   
-## <a name="example"></a><span data-ttu-id="f9c5b-112">예제</span><span class="sxs-lookup"><span data-stu-id="f9c5b-112">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="a64b6-112">예제</span><span class="sxs-lookup"><span data-stu-id="a64b6-112">Example</span></span>  
 
 ```vb
 Imports System.Collections.Generic
@@ -120,15 +120,15 @@ End Class
 ' 12 total names in list 
 ```  
 
-## <a name="compiling-the-code"></a><span data-ttu-id="f9c5b-113">코드 컴파일</span><span class="sxs-lookup"><span data-stu-id="f9c5b-113">Compiling the code</span></span>
+## <a name="compiling-the-code"></a><span data-ttu-id="a64b6-113">코드 컴파일</span><span class="sxs-lookup"><span data-stu-id="a64b6-113">Compiling the code</span></span>
 
-<span data-ttu-id="f9c5b-114">다음 옵션 중 하나를 대상으로 하는 프로젝트를 만들고 컴파일합니다.</span><span class="sxs-lookup"><span data-stu-id="f9c5b-114">Create and compile a project that targets one of the following options:</span></span>
+<span data-ttu-id="a64b6-114">다음 옵션 중 하나를 대상으로 하는 프로젝트를 만들고 컴파일합니다.</span><span class="sxs-lookup"><span data-stu-id="a64b6-114">Create and compile a project that targets one of the following options:</span></span>
 
-- <span data-ttu-id="f9c5b-115">System.Core.dll에 대한 참조를 포함한 .NET Framework 버전 3.5</span><span class="sxs-lookup"><span data-stu-id="f9c5b-115">.NET Framework version 3.5 with a reference to System.Core.dll.</span></span>
-- <span data-ttu-id="f9c5b-116">.NET Framework 버전 4.0 이상</span><span class="sxs-lookup"><span data-stu-id="f9c5b-116">.NET Framework version 4.0 or higher.</span></span>
-- <span data-ttu-id="f9c5b-117">.NET Core 버전 1.0 이상</span><span class="sxs-lookup"><span data-stu-id="f9c5b-117">.NET Core version 1.0 or higher.</span></span>
+- <span data-ttu-id="a64b6-115">System.Core.dll에 대한 참조를 포함한 .NET Framework 버전 3.5</span><span class="sxs-lookup"><span data-stu-id="a64b6-115">.NET Framework version 3.5 with a reference to System.Core.dll.</span></span>
+- <span data-ttu-id="a64b6-116">.NET Framework 버전 4.0 이상</span><span class="sxs-lookup"><span data-stu-id="a64b6-116">.NET Framework version 4.0 or higher.</span></span>
+- <span data-ttu-id="a64b6-117">.NET Core 버전 1.0 이상</span><span class="sxs-lookup"><span data-stu-id="a64b6-117">.NET Core version 1.0 or higher.</span></span>
   
-## <a name="see-also"></a><span data-ttu-id="f9c5b-118">참고자료</span><span class="sxs-lookup"><span data-stu-id="f9c5b-118">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="a64b6-118">참고자료</span><span class="sxs-lookup"><span data-stu-id="a64b6-118">See also</span></span>
 
-- [<span data-ttu-id="f9c5b-119">LINQ 및 문자열 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="f9c5b-119">LINQ and Strings (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)
-- [<span data-ttu-id="f9c5b-120">LINQ 및 파일 디렉터리(Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="f9c5b-120">LINQ and File Directories (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)
+- [<span data-ttu-id="a64b6-119">LINQ 및 문자열 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="a64b6-119">LINQ and Strings (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)
+- [<span data-ttu-id="a64b6-120">LINQ 및 파일 디렉터리 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="a64b6-120">LINQ and File Directories (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)

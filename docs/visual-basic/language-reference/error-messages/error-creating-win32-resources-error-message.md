@@ -1,5 +1,5 @@
 ---
-title: Win32 리소스를 만드는 동안 오류가 발생했습니다. <error message>
+title: 'Win32 리소스를 만드는 오류: <error message>'
 ms.date: 07/20/2015
 f1_keywords:
 - bc30136
@@ -7,25 +7,25 @@ f1_keywords:
 helpviewer_keywords:
 - BC30136
 ms.assetid: 05a813e4-9d65-4ce8-be8f-7ca20bbba2af
-ms.openlocfilehash: 653169dfe0e590181d3ee225e77d71e9dbe11ccd
-ms.sourcegitcommit: 01ea420eaa4bf76d5fc47673294c8881379b3369
+ms.openlocfilehash: 19572e3a20c3d9392560d434bebb8f70ca144297
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/06/2019
-ms.locfileid: "55759069"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59304846"
 ---
-# <a name="error-creating-win32-resources-error-message"></a><span data-ttu-id="59cb5-102">Win32 리소스를 만드는 동안 오류 발생: \<오류 메시지 ></span><span class="sxs-lookup"><span data-stu-id="59cb5-102">Error creating Win32 resources: \<error message></span></span>
-<span data-ttu-id="59cb5-103">Visual Basic 컴파일러는 매니페스트를 사용 하 여 어셈블리를 생성 하려면 어셈블리 링커 (Al.exe, Alink 라고도)를 호출 합니다.</span><span class="sxs-lookup"><span data-stu-id="59cb5-103">The Visual Basic compiler calls the Assembly Linker (Al.exe, also known as Alink) to generate an assembly with a manifest.</span></span> <span data-ttu-id="59cb5-104">링커가 메모리 내 리소스를 만드는 동안 오류를 보고했습니다.</span><span class="sxs-lookup"><span data-stu-id="59cb5-104">The linker has reported an error creating an in-memory resource.</span></span> <span data-ttu-id="59cb5-105">환경에 문제가 있거나 컴퓨터의 메모리가 부족할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="59cb5-105">This might be a problem with the environment, or your computer might be low on memory.</span></span>  
+# <a name="error-creating-win32-resources-error-message"></a><span data-ttu-id="c9d50-102">Win32 리소스를 만드는 동안 오류 발생: \<오류 메시지 ></span><span class="sxs-lookup"><span data-stu-id="c9d50-102">Error creating Win32 resources: \<error message></span></span>
+<span data-ttu-id="c9d50-103">Visual Basic 컴파일러는 매니페스트를 사용 하 여 어셈블리를 생성 하려면 어셈블리 링커 (Al.exe, Alink 라고도)를 호출 합니다.</span><span class="sxs-lookup"><span data-stu-id="c9d50-103">The Visual Basic compiler calls the Assembly Linker (Al.exe, also known as Alink) to generate an assembly with a manifest.</span></span> <span data-ttu-id="c9d50-104">링커가 메모리 내 리소스를 만드는 동안 오류를 보고했습니다.</span><span class="sxs-lookup"><span data-stu-id="c9d50-104">The linker has reported an error creating an in-memory resource.</span></span> <span data-ttu-id="c9d50-105">환경에 문제가 있거나 컴퓨터의 메모리가 부족할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="c9d50-105">This might be a problem with the environment, or your computer might be low on memory.</span></span>  
   
- <span data-ttu-id="59cb5-106">**오류 ID:** BC30136</span><span class="sxs-lookup"><span data-stu-id="59cb5-106">**Error ID:** BC30136</span></span>  
+ <span data-ttu-id="c9d50-106">**오류 ID:** BC30136</span><span class="sxs-lookup"><span data-stu-id="c9d50-106">**Error ID:** BC30136</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="59cb5-107">이 오류를 해결하려면</span><span class="sxs-lookup"><span data-stu-id="59cb5-107">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="c9d50-107">이 오류를 해결하려면</span><span class="sxs-lookup"><span data-stu-id="c9d50-107">To correct this error</span></span>  
   
-1.  <span data-ttu-id="59cb5-108">따옴표 붙은 오류 메시지를 확인 하 고 항목을 참조 하십시오 [Al.exe](../../../framework/tools/al-exe-assembly-linker.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="59cb5-108">Examine the quoted error message and consult the topic [Al.exe](../../../framework/tools/al-exe-assembly-linker.md).</span></span> <span data-ttu-id="59cb5-109">추가 설명과 권장 사항을 합니다.</span><span class="sxs-lookup"><span data-stu-id="59cb5-109">for further explanation and advice.</span></span>  
+1. <span data-ttu-id="c9d50-108">따옴표 붙은 오류 메시지를 확인 하 고 항목을 참조 하십시오 [Al.exe](../../../framework/tools/al-exe-assembly-linker.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="c9d50-108">Examine the quoted error message and consult the topic [Al.exe](../../../framework/tools/al-exe-assembly-linker.md).</span></span> <span data-ttu-id="c9d50-109">추가 설명과 권장 사항을 합니다.</span><span class="sxs-lookup"><span data-stu-id="c9d50-109">for further explanation and advice.</span></span>  
   
-2.  <span data-ttu-id="59cb5-110">오류가 계속 발생하면 해당 상황에 대한 정보를 수집하여 Microsoft 기술 지원 서비스에 알립니다.</span><span class="sxs-lookup"><span data-stu-id="59cb5-110">If the error persists, gather information about the circumstances and notify Microsoft Product Support Services.</span></span>  
+2. <span data-ttu-id="c9d50-110">오류가 계속 발생하면 해당 상황에 대한 정보를 수집하여 Microsoft 기술 지원 서비스에 알립니다.</span><span class="sxs-lookup"><span data-stu-id="c9d50-110">If the error persists, gather information about the circumstances and notify Microsoft Product Support Services.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="59cb5-111">참고자료</span><span class="sxs-lookup"><span data-stu-id="59cb5-111">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="c9d50-111">참고자료</span><span class="sxs-lookup"><span data-stu-id="c9d50-111">See also</span></span>
 
-- [<span data-ttu-id="59cb5-112">Al.exe</span><span class="sxs-lookup"><span data-stu-id="59cb5-112">Al.exe</span></span>](../../../framework/tools/al-exe-assembly-linker.md)
-- [<span data-ttu-id="59cb5-113">의견 보내기</span><span class="sxs-lookup"><span data-stu-id="59cb5-113">Talk to Us</span></span>](/visualstudio/ide/talk-to-us)
+- [<span data-ttu-id="c9d50-112">Al.exe</span><span class="sxs-lookup"><span data-stu-id="c9d50-112">Al.exe</span></span>](../../../framework/tools/al-exe-assembly-linker.md)
+- [<span data-ttu-id="c9d50-113">Talk to Us</span><span class="sxs-lookup"><span data-stu-id="c9d50-113">Talk to Us</span></span>](/visualstudio/ide/talk-to-us)
