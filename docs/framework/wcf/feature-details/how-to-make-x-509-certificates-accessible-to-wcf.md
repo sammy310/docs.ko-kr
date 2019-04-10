@@ -1,5 +1,5 @@
 ---
-title: '방법: X.509 인증서를 WCF에 액세스할 수 있도록 설정'
+title: '방법: WCF에 액세스할 수 있는 X.509 인증서 만들기'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - certificates [WCF], making X.509 certificates accessible to WCF
 - X.509 certificates [WCF], making accessible to WCF
 ms.assetid: a54e407c-c2b5-4319-a648-60e43413664b
-ms.openlocfilehash: 7c90d5b0541edfc11145d9373c2554ee4595a7b1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 85f572f021f1613e0a2bb70cc090f58d2833182e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54741885"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59219917"
 ---
-# <a name="how-to-make-x509-certificates-accessible-to-wcf"></a>방법: X.509 인증서를 WCF에 액세스할 수 있도록 설정
+# <a name="how-to-make-x509-certificates-accessible-to-wcf"></a>방법: WCF에 액세스할 수 있는 X.509 인증서 만들기
 X.509 인증서에 Windows Communication Foundation (WCF)에 액세스할 수 있도록 하려면 응용 프로그램 코드에는 인증서 저장소 이름 및 위치를 지정 해야 합니다. 상황에 따라, X.509 인증서와 연결된 개인 키를 포함하는 파일에 대한 액세스가 프로세스 ID에 필요할 수 있습니다. 인증서 저장소에서 X.509 인증서와 연결 된 개인 키를 가져오려면 WCF 권한이 있어야 합니다. 기본적으로 소유자와 시스템 계정에서만 인증서의 개인 키에 액세스할 수 있습니다.  
   
 ### <a name="to-make-x509-certificates-accessible-to-wcf"></a>WCF에서 X.509 인증서에 액세스할 수 있도록 설정하려면  
@@ -71,6 +71,7 @@ X.509 인증서에 Windows Communication Foundation (WCF)에 액세스할 수 �
         ```  
   
 ## <a name="see-also"></a>참고자료
+
 - [FindPrivateKey](../../../../docs/framework/wcf/samples/findprivatekey.md)
-- [방법: 인증서의 지문 검색](../../../../docs/framework/wcf/feature-details/how-to-retrieve-the-thumbprint-of-a-certificate.md)
+- [방법: 인증서 지문 검색](../../../../docs/framework/wcf/feature-details/how-to-retrieve-the-thumbprint-of-a-certificate.md)
 - [인증서 작업](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)

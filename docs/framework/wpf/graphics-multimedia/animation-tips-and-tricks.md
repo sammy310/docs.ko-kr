@@ -14,12 +14,12 @@ helpviewer_keywords:
 - performance troubleshooting [WPF], animation
 - animations [WPF], use of system resources
 ms.assetid: e467796b-d5d4-45a6-a108-8c5d7ff69a0f
-ms.openlocfilehash: e8b2a6b5386ec33ad8aa5281d808bb7089149764
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: MT
+ms.openlocfilehash: 1337dac083ad9d52a4cfd99bddee80baebf474de
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57362437"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59202146"
 ---
 # <a name="animation-tips-and-tricks"></a>애니메이션에 대한 유용한 정보
 애니메이션을 사용할 때 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)], 팁 가지 및 애니메이션을 만들 수 있는 트릭 더 잘 수행 줄이도록 하 합니다.  
@@ -75,10 +75,10 @@ ms.locfileid: "57362437"
   
 2.  두 번째 Storyboard가 적용되며, 0에 해당하는 현재 위치에서 500으로 애니메이션 효과를 줍니다.  
   
- **그러나 이 작업이 수행되지 않습니다.** 대신, 사각형이 원래 위치로 돌아가지 않고 계속 오른쪽으로 이동됩니다. 그 이유는 두 번째 애니메이션이 첫 번째 애니메이션의 현재 값을 시작 값으로 사용하고 해당 값에서 500으로 애니메이션 효과를 주기 때문입니다. 때문에 두 번째 애니메이션이 첫 번째를 대체 하는 경우는 <xref:System.Windows.Media.Animation.HandoffBehavior.SnapshotAndReplace> <xref:System.Windows.Media.Animation.HandoffBehavior> 사용 되는 <xref:System.Windows.Media.Animation.FillBehavior> 첫 번째 애니메이션 중요 하지 않습니다.  
+ **하지만 작업이 수행 되지 않습니다.** 대신, 사각형이 원래 위치로 돌아가지 않고 계속 오른쪽으로 이동됩니다. 그 이유는 두 번째 애니메이션이 첫 번째 애니메이션의 현재 값을 시작 값으로 사용하고 해당 값에서 500으로 애니메이션 효과를 주기 때문입니다. 때문에 두 번째 애니메이션이 첫 번째를 대체 하는 경우는 <xref:System.Windows.Media.Animation.HandoffBehavior.SnapshotAndReplace><xref:System.Windows.Media.Animation.HandoffBehavior> 사용 되는 <xref:System.Windows.Media.Animation.FillBehavior> 첫 번째 애니메이션 중요 하지 않습니다.  
   
 #### <a name="fillbehavior-and-the-completed-event"></a>FillBehavior 및 Completed 이벤트  
- 다음 예제는 다른 시나리오를 보여 줍니다.는 <xref:System.Windows.Media.Animation.FillBehavior.Stop> <xref:System.Windows.Media.Animation.Timeline.FillBehavior%2A> 아무 효과도 없는 것 같습니다. 이 예제에서는 Storyboard 애니메이션 효과를 사용 하는 다시 합니다 <xref:System.Windows.Media.TranslateTransform.X%2A> 의 속성을 <xref:System.Windows.Media.TranslateTransform> 0에서 350. 그러나이 예제에서는 등록 된 <xref:System.Windows.Media.Animation.Timeline.Completed> 이벤트입니다.  
+ 다음 예제는 다른 시나리오를 보여 줍니다.는 <xref:System.Windows.Media.Animation.FillBehavior.Stop><xref:System.Windows.Media.Animation.Timeline.FillBehavior%2A> 아무 효과도 없는 것 같습니다. 이 예제에서는 Storyboard 애니메이션 효과를 사용 하는 다시 합니다 <xref:System.Windows.Media.TranslateTransform.X%2A> 의 속성을 <xref:System.Windows.Media.TranslateTransform> 0에서 350. 그러나이 예제에서는 등록 된 <xref:System.Windows.Media.Animation.Timeline.Completed> 이벤트입니다.  
   
  [!code-xaml[AnimationTipsAndTricksSample_snip#FillBehaviorTipStoryboardCButton](~/samples/snippets/csharp/VS_Snippets_Wpf/AnimationTipsAndTricksSample_snip/CSharp/FillBehaviorTip.xaml#fillbehaviortipstoryboardcbutton)]  
   
@@ -116,7 +116,7 @@ ms.locfileid: "57362437"
  속성에 애니메이션을 적용 하는 다른 방법에 대 한 자세한 내용은 참조 하세요. [속성 애니메이션 기술 개요](property-animation-techniques-overview.md)합니다.  
   
 ### <a name="using-the-compose-handoffbehavior-consumes-system-resources"></a>Compose HandoffBehavior를 사용하여 시스템 리소스 소비  
- 적용 하는 경우는 <xref:System.Windows.Media.Animation.Storyboard>, <xref:System.Windows.Media.Animation.AnimationTimeline>, 또는 <xref:System.Windows.Media.Animation.AnimationClock> 사용 하 여 속성을 <xref:System.Windows.Media.Animation.HandoffBehavior.Compose> <xref:System.Windows.Media.Animation.HandoffBehavior>모든 <xref:System.Windows.Media.Animation.Clock> 타이밍 시스템 것입니다; 속성을 사용 하 여 이전에 연결 된 개체를 계속 시스템 리소스를 사용 하 자동으로 이러한 클록을 제거 합니다.  
+ 적용 하는 경우는 <xref:System.Windows.Media.Animation.Storyboard>, <xref:System.Windows.Media.Animation.AnimationTimeline>, 또는 <xref:System.Windows.Media.Animation.AnimationClock> 사용 하 여 속성을 <xref:System.Windows.Media.Animation.HandoffBehavior.Compose><xref:System.Windows.Media.Animation.HandoffBehavior>모든 <xref:System.Windows.Media.Animation.Clock> 개체 속성과 연관 된 이전에 시스템 리소스를 소비 계속; 타이밍 시스템은 이러한 클록을 제거 하지 않습니다 자동으로 합니다.  
   
  많은 수의 시계를 사용 하 여 적용 하는 경우 성능 문제를 방지 하려면 <xref:System.Windows.Media.Animation.HandoffBehavior.Compose>를 완성 한 후 애니메이션된 속성에서 구성 중인 클록을 제거 해야 합니다. 여러 가지 방법으로 클록을 제거할 수 있습니다.  
   
@@ -129,4 +129,5 @@ ms.locfileid: "57362437"
  클록 개체에 대 한 자세한 내용은 참조 하세요. [애니메이션 및 타이밍 시스템 개요](animation-and-timing-system-overview.md)합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [애니메이션 개요](animation-overview.md)

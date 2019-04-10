@@ -1,17 +1,17 @@
 ---
-title: '예제: 데이터를 바인딩하는 경우 예외를 처리'
+title: '예제: 데이터를 바인딩하는 경우 예외 처리'
 ms.date: 03/30/2017
 ms.assetid: bd63ed96-9853-46dc-ade5-7bd1b0f39110
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9610eb6088a59e4f577ea6dfe679130b44988645
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 25b2117de40bbe7ba36fab028526116fc01ae09b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54725716"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59199897"
 ---
-# <a name="example-handling-exceptions-when-binding-data"></a>예제: 데이터를 바인딩하는 경우 예외를 처리
+# <a name="example-handling-exceptions-when-binding-data"></a>예제: 데이터를 바인딩하는 경우 예외 처리
 > [!NOTE]
 >  이 항목은 시험판 소프트웨어인 .NET Native Developer Preview를 참조합니다. 이 Preview 버전은 [Microsoft Connect 웹 사이트](https://go.microsoft.com/fwlink/?LinkId=394611)에서 다운로드할 수 있습니다(등록 필요).  
   
@@ -57,8 +57,9 @@ Windows_UI_Xaml!DirectUI::PropertyPathListener::ConnectPathStep+0x113
 ## <a name="could-the-code-be-rewritten-to-not-use-reflection"></a>리플렉션을 사용하지 않도록 코드 다시 작성 가능 여부 확인  
  데이터 바인딩에서는 리플렉션을 많이 사용하므로 리플렉션을 사용하지 않도록 코드를 변경하기는 어렵습니다.  
   
- 그러나 `ViewModel`을 XAML 페이지로 지정하여 도구 체인이 컴파일 시간에 속성 바인딩을 올바른 형식과 연결하고, 런타임 지시문을 사용하지 않고 메타데이터를 유지하도록 할 수는 있습니다.  예를 들어, 적용할 수 있습니다는 <xref:Windows.UI.Xaml.Data.BindableAttribute?displayProperty=nameWithType> 속성에는 특성입니다. 이렇게 하면 XAML 컴파일러가 필요한 조회 정보를 생성하고 Default.rd.xml 파일에서 런타임 지시문이 필요하도록 설정하지 않습니다.  
+ 그러나 `ViewModel`을 XAML 페이지로 지정하여 도구 체인이 컴파일 타임에 속성 바인딩을 올바른 형식과 연결하고, 런타임 지시문을 사용하지 않고 메타데이터를 유지하도록 할 수는 있습니다.  예를 들어, 적용할 수 있습니다는 <xref:Windows.UI.Xaml.Data.BindableAttribute?displayProperty=nameWithType> 속성에는 특성입니다. 이렇게 하면 XAML 컴파일러가 필요한 조회 정보를 생성하고 Default.rd.xml 파일에서 런타임 지시문이 필요하도록 설정하지 않습니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [시작](../../../docs/framework/net-native/getting-started-with-net-native.md)
 - [예제: 동적 프로그래밍 문제 해결](../../../docs/framework/net-native/example-troubleshooting-dynamic-programming.md)

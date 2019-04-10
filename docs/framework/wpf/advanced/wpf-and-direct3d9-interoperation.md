@@ -7,12 +7,12 @@ helpviewer_keywords:
 - WPF [WPF], creating Direct3D9 content
 - Direct3D9 [WPF interoperability], creating Direct3D9 content
 ms.assetid: 1b14b823-69c4-4e8d-99e4-f6dade58f89a
-ms.openlocfilehash: e9d000ca2da9dd9b4c8a677e85bc9cca5b1b1b1d
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: MT
+ms.openlocfilehash: 04a668ea18177d2a174569f064d9102239dd5e7d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57372687"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59199325"
 ---
 # <a name="wpf-and-direct3d9-interoperation"></a>WPF 및 Direct3D9 상호 운용성
 Windows Presentation Foundation (WPF) 응용 프로그램에서 호스팅할 Direct3D9 콘텐츠를 포함할 수 있습니다. 이 항목에서는 WPF를 사용 하 여 효율적으로 상호 운용 되도록 Direct3D9 콘텐츠를 만드는 방법을 설명 합니다.  
@@ -148,6 +148,7 @@ Windows Presentation Foundation (WPF) 응용 프로그램에서 호스팅할 Dir
 >  WPF가 완전히 소프트웨어에서 렌더링 하는 경우 <xref:System.Windows.Interop.D3DImage> WPF 프런트 버퍼가 없기 때문에 표시 되지 않습니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Windows.Interop.D3DImage>
 - [Direct3D9 및 WPF 상호 운용성을 위한 성능 고려 사항](performance-considerations-for-direct3d9-and-wpf-interoperability.md)
 - [연습: WPF에서 호스팅할 Direct3D9 콘텐츠 만들기](walkthrough-creating-direct3d9-content-for-hosting-in-wpf.md)

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: da9ae70056e3ef5d6d9e03fde1dcf8775e5d118e
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: a95b6b7e20bbcd86dedf187c932f2cf74d37cdab
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57498954"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59199182"
 ---
 # <a name="iclrruntimeinfogetprocaddress-method"></a>ICLRRuntimeInfo::GetProcAddress 메서드
 이 인터페이스와 연결 된 공용 언어 런타임 (CLR)에서 내보낸 지정 된 함수의 주소를 가져옵니다.  
@@ -50,7 +50,7 @@ HRESULT GetProcAddress(
 |HRESULT|설명|  
 |-------------|-----------------|  
 |S_OK|메서드가 완료되었습니다.|  
-|E_POINTER|`pszProcName` 또는 `ppProc`이 null입니다.|  
+|E_POINTER|`pszProcName` 또는 `ppProc` null입니다.|  
 |CLR_E_SHIM_RUNTIMEEXPORT|지정된 된 함수는 내보낸된 함수가 아닙니다.|  
   
 ## <a name="remarks"></a>설명  
@@ -66,6 +66,7 @@ HRESULT GetProcAddress(
  **.NET Framework 버전:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>참고자료
+
 - [ICLRRuntimeInfo 인터페이스](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md)
 - [호스팅 인터페이스](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
 - [호스팅](../../../../docs/framework/unmanaged-api/hosting/index.md)

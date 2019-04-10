@@ -1,19 +1,19 @@
 ---
-title: '방법: 디자이너를 사용 하 여 Windows Forms DataGrid 컨트롤에 테이블과 열 추가'
+title: '방법: 디자이너를 사용하여 Windows Forms DataGrid 컨트롤에 테이블 및 열 추가'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - columns [Windows Forms], adding to DataGrid control
 - tables [Windows Forms], adding to DataGrid control
 - DataGrid control [Windows Forms], adding tables and columns
 ms.assetid: 4a6d1b34-b696-476b-bf8a-57c6230aa9e1
-ms.openlocfilehash: 741da635ec187d8605a9f67aa010ff49a83ba86b
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 18849e61ea9af503d49e6be1894e7ebd53cce9fb
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57725352"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59201535"
 ---
-# <a name="how-to-add-tables-and-columns-to-the-windows-forms-datagrid-control-using-the-designer"></a>방법: 디자이너를 사용 하 여 Windows Forms DataGrid 컨트롤에 테이블과 열 추가
+# <a name="how-to-add-tables-and-columns-to-the-windows-forms-datagrid-control-using-the-designer"></a>방법: 디자이너를 사용하여 Windows Forms DataGrid 컨트롤에 테이블 및 열 추가
 
 > [!NOTE]
 >  <xref:System.Windows.Forms.DataGridView> 컨트롤은 <xref:System.Windows.Forms.DataGrid> 컨트롤을 대체하고 여기에 다른 기능을 추가하여 새로 도입된 컨트롤이지만 이전 버전과의 호환성 및 이후 사용 가능성을 고려하여 <xref:System.Windows.Forms.DataGrid> 컨트롤을 계속 유지하도록 선택할 수 있습니다. 자세한 내용은 [Windows Forms DataGridView 및 DataGrid 컨트롤의 차이점](differences-between-the-windows-forms-datagridview-and-datagrid-controls.md)을 참조하십시오.  
@@ -58,5 +58,6 @@ ms.locfileid: "57725352"
 5.  에 **속성** 컬렉션 편집기 선택 상자는 <xref:System.Windows.Forms.DataGridColumnStyle.MappingName%2A> 표시 하려는 열에 대 한 값입니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [DataGrid 컨트롤](datagrid-control-windows-forms.md)
-- [방법: Windows Forms DataGrid 컨트롤에서 열 숨기기 또는 삭제](how-to-delete-or-hide-columns-in-the-windows-forms-datagrid-control.md)
+- [방법: Windows Forms DataGrid 컨트롤에서 열 삭제 또는 숨기기](how-to-delete-or-hide-columns-in-the-windows-forms-datagrid-control.md)

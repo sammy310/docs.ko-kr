@@ -1,5 +1,5 @@
 ---
-title: '방법: Windows Forms RichTextBox 컨트롤을 사용 하 여 파일을 저장 합니다.'
+title: '방법: Windows Forms RichTextBox 컨트롤을 사용하여 파일 저장'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -15,14 +15,14 @@ helpviewer_keywords:
 - .rtf files [Windows Forms], saving in RichTextBox control
 - text files [Windows Forms], saving from RichTextBox control
 ms.assetid: 4a58ec19-84d1-4383-9110-298c06adcfca
-ms.openlocfilehash: c9a5d471a58c646c786cf441ee7d7ec235788f10
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: a646d9b04bbe824d093b106f5cfcb0f1703c6e21
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57723035"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59213534"
 ---
-# <a name="how-to-save-files-with-the-windows-forms-richtextbox-control"></a>방법: Windows Forms RichTextBox 컨트롤을 사용 하 여 파일을 저장 합니다.
+# <a name="how-to-save-files-with-the-windows-forms-richtextbox-control"></a>방법: Windows Forms RichTextBox 컨트롤을 사용하여 파일 저장
 Windows Forms <xref:System.Windows.Forms.RichTextBox> 컨트롤 몇 가지 형식 중 하나에 표시 될 정보를 작성할 수 있습니다.  
   
 -   일반 텍스트  
@@ -88,6 +88,7 @@ Windows Forms <xref:System.Windows.Forms.RichTextBox> 컨트롤 몇 가지 형�
     >  이 예제에서는 파일이 아직 없는 경우 새 파일을 만듭니다. 응용 프로그램 파일을 만드는 경우, 해당 응용 프로그램 폴더에 대 한 만들기 액세스를 해야 합니다. 권한은 액세스 제어 목록을 사용하여 설정됩니다. 파일이 이미 있는 경우 응용 프로그램 권한인 쓰기 권한만 필요 합니다. 가능한 경우에 파일을 배포 하는 동안 만듭니다 및만 단일 파일에 대 한 읽기 액세스 권한을 부여 작성 하기 보다는 폴더에 대 한 액세스 더 안전 합니다. 또한 루트 폴더나 Program Files 폴더보다 사용자 폴더에 데이터를 쓰는 것이 더 안전합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Windows.Forms.RichTextBox.SaveFile%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.RichTextBox>
 - [RichTextBox 컨트롤](richtextbox-control-windows-forms.md)

@@ -1,18 +1,18 @@
 ---
-title: '방법: 채널 팩터리를 사용 하 여 비동기로 작업 호출'
+title: '방법: 채널 팩터리를 사용하여 비동기적으로 작업 호출'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: cc17dd47-b9ad-451c-a362-e36e0aac7ba0
-ms.openlocfilehash: e266dbf3fed2c1f1bcadd010e2ad6dfd0804230d
-ms.sourcegitcommit: af0a22a4eb11bbcd33baec49150d551955b50a16
-ms.translationtype: MT
+ms.openlocfilehash: 0662b82661e4fb3cde85930c2c4544f541d3a2a8
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56260649"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59202731"
 ---
-# <a name="how-to-call-operations-asynchronously-using-a-channel-factory"></a>방법: 채널 팩터리를 사용 하 여 비동기로 작업 호출
+# <a name="how-to-call-operations-asynchronously-using-a-channel-factory"></a>방법: 채널 팩터리를 사용하여 비동기적으로 작업 호출
 이 항목에서는 <xref:System.ServiceModel.ChannelFactory%601> 기반 클라이언트 응용 프로그램을 사용하여 클라이언트에서 서비스 작업에 비동기적으로 액세스하는 방법에 대해 설명합니다. 서비스를 호출하기 위해 <xref:System.ServiceModel.ClientBase%601?displayProperty=nameWithType> 개체를 사용하는 경우 이벤트 구동 비동기 호출 모델을 사용할 수 있습니다. 자세한 내용은 [방법: 서비스 작업을 비동기적으로 호출](../../../../docs/framework/wcf/feature-details/how-to-call-wcf-service-operations-asynchronously.md)합니다. 이벤트 기반 비동기 호출 모델에 대 한 자세한 내용은 참조 하세요. [이벤트 기반 비동기 패턴 (EAP)](../../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-eap.md).)  
   
  이 항목에서 설명하는 서비스에서는 `ICalculator` 인터페이스를 구현합니다. 클라이언트는 이 인터페이스의 작업을 비동기적으로 호출할 수 있는데, 이는 `Add` 등의 작업이 호출을 시작하는 `BeginAdd`와 작업 완료 시 결과를 검색하는 `EndAdd`라는 두 개의 메서드로 나뉨을 의미합니다. 서비스에서 작업을 비동기적으로 구현 하는 방법을 보여 주는 예제를 참조 하세요. [방법: 비동기 서비스 작업 구현](../../../../docs/framework/wcf/how-to-implement-an-asynchronous-service-operation.md)합니다. 동기 및 비동기 작업에 대 한 자세한 내용은 참조 하세요 [동기 및 비동기 작업](../../../../docs/framework/wcf/synchronous-and-asynchronous-operations.md)합니다.  
@@ -46,4 +46,3 @@ ms.locfileid: "56260649"
   
  [!code-csharp[C_How_To_CF_Async#4](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_how_to_cf_async/cs/service.cs#4)]
  [!code-vb[C_How_To_CF_Async#4](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_how_to_cf_async/vb/service.vb#4)]  
-  

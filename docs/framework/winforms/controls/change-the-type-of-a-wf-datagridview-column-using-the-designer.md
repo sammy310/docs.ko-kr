@@ -1,5 +1,5 @@
 ---
-title: '방법: 디자이너를 사용 하 여 Windows Forms Datagridview 컨트롤의 형식 변경'
+title: '방법: 디자이너를 사용하여 Windows Forms DataGridView 열의 형식 변경'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Windows Forms, columns
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], changing column type
 - data [Windows Forms], displaying
 ms.assetid: 7f994d45-600d-4190-a187-35803214b40c
-ms.openlocfilehash: 99728e473223f3393cc9d09f38728cf873a95c99
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: f42bfe9b407e8f81c0eaf5a654d246f7b83567c9
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57718820"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59208555"
 ---
-# <a name="how-to-change-the-type-of-a-windows-forms-datagridview-column-using-the-designer"></a>방법: 디자이너를 사용 하 여 Windows Forms Datagridview 컨트롤의 형식 변경
+# <a name="how-to-change-the-type-of-a-windows-forms-datagridview-column-using-the-designer"></a>방법: 디자이너를 사용하여 Windows Forms DataGridView 열의 형식 변경
 Windows Forms에 이미 추가 된 열의 형식을 변경 하는 경우가 <xref:System.Windows.Forms.DataGridView> 제어 합니다. 예를 들어, 다음 유형의 데이터 원본에 컨트롤을 바인딩하는 경우 자동으로 생성 되는 열 중 일부를 수정 하는 것이 좋습니다. 표시할 테이블에 열이 관련된 테이블의 행에 외래 키가 포함 된 경우에 유용 합니다. 이 경우 다음 관련된 테이블에서 보다 의미 있는 값을 표시 하는 콤보 상자 열을 사용 하 여 이러한 외래 키는 표시 되는 텍스트 상자 열을 대체 하는 것이 좋습니다.  
   
  다음 절차를 수행 하려면을 **Windows 응용 프로그램** 포함 하는 양식을 사용 하 여 프로젝트를 <xref:System.Windows.Forms.DataGridView> 제어 합니다. 이러한 프로젝트 설정에 대 한 자세한 내용은 [방법: Windows Forms 응용 프로그램 프로젝트를 만듭니다](/visualstudio/ide/step-1-create-a-windows-forms-application-project) 고 [방법: Windows Forms에 컨트롤 추가](how-to-add-controls-to-windows-forms.md)합니다.  
@@ -34,7 +34,8 @@ Windows Forms에 이미 추가 된 열의 형식을 변경 하는 경우가 <xre
     >  `ColumnType` 속성은 열 형식을 나타내는 클래스를 나타내는 디자인 타임 전용 속성입니다. 열 클래스에서 정의 하는 실제 속성이 아닙니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridViewColumn>
-- [방법: Windows Forms 애플리케이션 프로젝트 만들기](/visualstudio/ide/step-1-create-a-windows-forms-application-project)
+- [방법: Windows Forms 응용 프로그램 프로젝트 만들기](/visualstudio/ide/step-1-create-a-windows-forms-application-project)
 - [방법: Windows Forms에 컨트롤 추가](how-to-add-controls-to-windows-forms.md)

@@ -1,5 +1,5 @@
 ---
-title: '방법: 클래스 또는 구조체에 대 한 기본 데이터 계약 만들기'
+title: '방법: 클래스 또는 구조체에 대한 기본 데이터 계약 만들기'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - DataContractAttribute class
 - data contracts [WCF], creating for a class or structure
 ms.assetid: bc464889-3070-4a2f-91d2-e788a0f686a7
-ms.openlocfilehash: 29105b7f3177403aacf5f8e628f2dceda4e26354
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: b46273c468891aa2b18c04adc1ee035c98255ded
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54747871"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59220515"
 ---
-# <a name="how-to-create-a-basic-data-contract-for-a-class-or-structure"></a>방법: 클래스 또는 구조체에 대 한 기본 데이터 계약 만들기
+# <a name="how-to-create-a-basic-data-contract-for-a-class-or-structure"></a>방법: 클래스 또는 구조체에 대한 기본 데이터 계약 만들기
 이 항목에서는 클래스 또는 구조를 사용하여 데이터 계약을 만드는 기본 단계를 보여 줍니다. 데이터 계약 및 사용 방법에 대 한 자세한 내용은 참조 하세요. [Using Data Contracts](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)합니다.  
   
  기본 Windows Communication Foundation (WCF) 서비스 및 클라이언트를 만드는 단계를 안내 하는 자습서의 경우에 대 한 참조를 [초보자를 위한 자습서](../../../../docs/framework/wcf/getting-started-tutorial.md)합니다. 기본 서비스 및 클라이언트 구성 된 작업 샘플 응용 프로그램을 참조 하세요 [Basic Data Contract](../../../../docs/framework/wcf/samples/basic-data-contract.md)합니다.  
@@ -37,6 +37,7 @@ ms.locfileid: "54747871"
  [!code-vb[DataContractAttribute#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/datacontractattribute/vb/overview.vb#2)]  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Runtime.Serialization.DataContractAttribute>
 - <xref:System.Runtime.Serialization.DataMemberAttribute>
 - [데이터 계약 사용](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)

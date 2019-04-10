@@ -20,12 +20,12 @@ helpviewer_keywords:
 - quotation mark (") [XAML Services]
 - less-than (<) character [XAML Services]
 ms.assetid: 6896d0ce-74f7-420a-9ab4-de9bbf390e8d
-ms.openlocfilehash: 3fefbe9696ba7618dc811c6ac8f600bb6322dad5
-ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
+ms.openlocfilehash: b4621da21200e6c9e2b174a0e2ba508a4f6bab92
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58048054"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59228200"
 ---
 # <a name="xml-character-entities-and-xaml"></a>XML 문자 엔터티 및 XAML
 XAML은 특수 문자를 위해 XML에 정의된 문자 엔터티를 사용합니다. 이 항목에서는 일부 특정 문자 엔터티 및 XAML의 다른 XML 개념에 대한 일반적인 고려 사항을 설명합니다.  
@@ -46,7 +46,7 @@ XAML은 특수 문자를 위해 XML에 정의된 문자 엔터티를 사용합�
   
 |문자|엔터티|노트|  
 |---------------|------------|-----------|  
-|&(앰퍼샌드)|\&amp;|특성 값 및 요소의 콘텐츠에 대해 모두 사용해야 합니다.|  
+|& (앰퍼샌드)|\&amp;|특성 값 및 요소의 콘텐츠에 대해 모두 사용해야 합니다.|  
 |> (큰-문자)|\&gt;|특성 값을 사용 해야 하지만 >으로 요소의 콘텐츠로 허용 됩니다 < 오지 않을 합니다.|  
 |< (작은-문자)|\&lt;|특성 값을 사용 해야 하지만 \< 으로 요소의 콘텐츠로 허용 됩니다 > 따르지 않습니다.|  
 |"(곧은 따옴표)|\&quot;|특성 값에 대해 사용해야 하지만 곧은 따옴표(")는 요소의 콘텐츠로 허용됩니다. 특성 값을 곧은 작은따옴표(')나 곧은 큰따옴표(")로 묶을 수 있습니다. 둘 중 어느 것이 먼저 나오든 이들 문자는 특성 값 포함을 정의하며, 대체 따옴표를 값 내부 리터럴로 사용할 수 있습니다.|  
@@ -63,7 +63,8 @@ XAML은 특수 문자를 위해 XML에 정의된 문자 엔터티를 사용합�
  XAML은 XML 처리 명령을 XML 사양에 따라 처리합니다. 이 사양에서는 이 명령을 거쳐야 한다고 지정합니다. .NET Framework XAML 서비스에서 처리 하는 XAML 처리 지침을 사용 하지 않습니다. XAML을 사용하는 다른 기존 프레임워크에서도 XAML의 처리 명령을 사용하지 않습니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [XAML 개요(WPF)](../wpf/advanced/xaml-overview-wpf.md)
-- [태그 확장 및 WPF XAML](../wpf/advanced/markup-extensions-and-wpf-xaml.md)
+- [태그 확장명 및 WPF XAML](../wpf/advanced/markup-extensions-and-wpf-xaml.md)
 - [XamlName 문법](xamlname-grammar.md)
-- [공백에서 XAML 처리](whitespace-processing-in-xaml.md)
+- [XAML의 공백 처리](whitespace-processing-in-xaml.md)

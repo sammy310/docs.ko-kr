@@ -2,12 +2,12 @@
 title: '방법: 프로그래밍 방식으로 WCF 서비스 및 클라이언트에 검색 기능 추가'
 ms.date: 03/30/2017
 ms.assetid: 4f7ae7ab-6fc8-4769-9730-c14d43f7b9b1
-ms.openlocfilehash: a0240d09c07a23c2c578008885e5bca00169acdd
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 821e45d41a1a91b6884a73abcbdf3ea04e938e25
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54643132"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59224210"
 ---
 # <a name="how-to-programmatically-add-discoverability-to-a-wcf-service-and-client"></a>방법: 프로그래밍 방식으로 WCF 서비스 및 클라이언트에 검색 기능 추가
 이 항목에서는 Windows Communication Foundation (WCF) 서비스를 검색할 수 있도록 설정 하는 방법에 설명 합니다. 기반이 되는 [Self-host](https://go.microsoft.com/fwlink/?LinkId=145523) 샘플입니다.  
@@ -58,7 +58,7 @@ ms.locfileid: "54643132"
   
 1.  `DiscoveryClientApp`라는 솔루션에 새 콘솔 응용 프로그램을 추가합니다.  
   
-2.  `System.ServiceModel.dll` 및 `System.ServiceModel.Discovery.dll`에 대한 참조를 추가합니다.  
+2.  에 대 한 참조를 추가 `System.ServiceModel.dll` 및 `System.ServiceModel.Discovery.dll`  
   
 3.  GeneratedClient.cs 및 App.config 파일을 기본 클라이언트 프로젝트에서 새 DiscoveryClientApp 프로젝트로 복사합니다. 이렇게 하려면 파일을 마우스 오른쪽 단추로 합니다 **솔루션 탐색기**를 선택 **복사**를 선택한 후는 **DiscoveryClientApp** 선택한프로젝트를마우스오른쪽단추로클릭**붙여넣기**합니다.  
   
@@ -341,5 +341,6 @@ namespace DiscoveryClientApp
 ```  
 
 ## <a name="see-also"></a>참고자료
-- [WCF 검색 개요](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md)
-- [WCF 검색 개체 모델](../../../../docs/framework/wcf/feature-details/wcf-discovery-object-model.md)
+
+- [WCF Discovery 개요](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md)
+- [WCF Discovery 개체 모델](../../../../docs/framework/wcf/feature-details/wcf-discovery-object-model.md)

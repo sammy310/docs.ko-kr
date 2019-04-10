@@ -2,12 +2,12 @@
 title: Oracle REF CURSOR
 ms.date: 03/30/2017
 ms.assetid: c6b25b8b-0bdd-41b2-9c7c-661f070c2247
-ms.openlocfilehash: 4dd0a78fafe63197987938021195723e3eed0885
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b23b0f07d7755fed820481a3ad1fe831ae3f5224
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54740998"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59213170"
 ---
 # <a name="oracle-ref-cursors"></a>Oracle REF CURSOR
 .NET Framework Data Provider for Oracle은 Oracle 지원 **REF CURSOR** 데이터 형식입니다. Oracle REF CURSOR를 사용하는 데이터 공급자를 사용할 경우 다음 동작을 고려해야 합니다.  
@@ -36,12 +36,13 @@ ms.locfileid: "54740998"
  [OracleDataReader의 REF CURSOR 매개 변수](../../../../docs/framework/data/adonet/ref-cursor-parameters-in-an-oracledatareader.md)  
  값을 읽고 REF CURSOR 매개 변수를 반환 하는 PL/SQL 저장 프로시저를 실행 하는 방법에 설명 된 **OracleDataReader**합니다.  
   
- [OracleDataReader를 사용하여 여러 REF CURSOR에서 데이터 검색](../../../../docs/framework/data/adonet/retrieving-data-from-multiple-ref-cursors.md)  
+ [OracleDataReader를 사용하여 여러 Multiple REF CURSOR에서 데이터 검색](../../../../docs/framework/data/adonet/retrieving-data-from-multiple-ref-cursors.md)  
  사용 하 여 값을 읽고 두 개의 REF CURSOR 매개 변수를 반환 하는 PL/SQL 저장 프로시저를 실행 하는 방법에 설명 된 **OracleDataReader**합니다.  
   
- [하나 이상의 REF CURSOR를 사용하여 데이터 세트 채우기](../../../../docs/framework/data/adonet/filling-a-dataset-using-one-or-more-ref-cursors.md)  
+ [하나 이상의 REF CURSOR를 사용하여 데이터 집합 필터링](../../../../docs/framework/data/adonet/filling-a-dataset-using-one-or-more-ref-cursors.md)  
  두 개의 REF CURSOR 매개 변수를 반환하는 PL/SQL 저장 프로시저를 실행하여 반환되는 행으로 <xref:System.Data.DataSet>을 채우는 방법을 보여 줍니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [Oracle 및 ADO.NET](../../../../docs/framework/data/adonet/oracle-and-adonet.md)
 - [ADO.NET 관리되는 공급자 및 데이터 집합 개발자 센터](https://go.microsoft.com/fwlink/?LinkId=217917)

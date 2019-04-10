@@ -2,12 +2,12 @@
 title: 개체 참조
 ms.date: 03/30/2017
 ms.assetid: 7a93d260-91c3-4448-8f7a-a66fb562fc23
-ms.openlocfilehash: 4965ddab23f0f6c64edd3d71e97ba3293d2f69ce
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 393a6cb446d8216659c2b2f63b21754c37291ca7
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54577635"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59203004"
 ---
 # <a name="object-references"></a>개체 참조
 이 샘플에서는 서버와 클라이언트 간에 개체를 참조로 전달하는 방법을 보여 줍니다. 샘플에서는 시뮬레이트된 *사교*합니다. 인맥 네트워크는 친구 목록을 포함하는 `Person` 클래스로 구성되며, 이 목록의 친구는 `Person` 클래스의 인스턴스이며 자체적으로도 친구 목록을 가지고 있습니다. 이를 기반으로 개체 그래프가 생성됩니다. 서비스는 이러한 인맥 네트워크에 대한 작업을 노출합니다.  
@@ -114,5 +114,6 @@ public List<Person> GetCommonFriends(List<Person> people)
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Contract\Data\ObjectReferences`  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Runtime.Serialization.DataContractAttribute.IsReference%2A>
 - [상호 운영 가능한 개체 참조](../../../../docs/framework/wcf/feature-details/interoperable-object-references.md)

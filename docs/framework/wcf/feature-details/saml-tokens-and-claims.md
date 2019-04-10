@@ -10,12 +10,12 @@ helpviewer_keywords:
 - issued tokens
 - SAML token
 ms.assetid: 930b6e34-9eab-4e95-826c-4e06659bb977
-ms.openlocfilehash: 2fbb1f520a1497ef5aa3227d038b3759b8327eda
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: f1f7a15d1457390bf77f5e53c7fd657304725df6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54714999"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59218214"
 ---
 # <a name="saml-tokens-and-claims"></a>SAML 토큰 및 클레임
 SAML security Assertions Markup Language () *토큰* 클레임의 XML 표현 됩니다. Windows Communication Foundation (WCF) 페더레이션된 보안 시나리오에서 사용 하 여 SAML 토큰에는 기본적으로 *발급 된 토큰*합니다.  
@@ -43,11 +43,12 @@ SAML security Assertions Markup Language () *토큰* 클레임의 XML 표현 됩
  메시지에서 SAML 토큰을 받으면 SAML 토큰의 여러 문이 <xref:System.IdentityModel.Policy.IAuthorizationPolicy>에 배치되는 <xref:System.IdentityModel.Policy.AuthorizationContext> 개체로 변경됩니다. 각 SAML 문의 클레임은 <xref:System.IdentityModel.Policy.AuthorizationContext.ClaimSets%2A>의 <xref:System.IdentityModel.Policy.AuthorizationContext> 속성에서 반환하며, 사용자 인증 및 권한 부여 여부를 결정하기 위해 검사할 수 있습니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.IdentityModel.Policy.AuthorizationContext>
 - <xref:System.IdentityModel.Policy.IAuthorizationPolicy>
 - <xref:System.IdentityModel.Claims.ClaimSet>
 - [페더레이션](../../../../docs/framework/wcf/feature-details/federation.md)
-- [방법: 페더레이션된 클라이언트 만들기](../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)
+- [방법: 페더레이션 클라이언트 만들기](../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)
 - [방법: 페더레이션 서비스에서 자격 증명 구성](../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)
 - [ID 모델을 사용하여 클레임 및 권한 부여 관리](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md)
 - [클레임 및 토큰](../../../../docs/framework/wcf/feature-details/claims-and-tokens.md)

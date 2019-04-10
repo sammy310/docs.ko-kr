@@ -1,17 +1,17 @@
 ---
-title: '방법: 응용 프로그램 간에 끌어서 놓기 작업 수행'
+title: '방법: 애플리케이션 간에 끌어서 놓기 작업 수행'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - drag and drop [Windows Forms], between applications
 ms.assetid: fa347436-2b12-4dd6-8507-59d7241f6a06
-ms.openlocfilehash: 1e9556a69f3f5da4a47c5f5b1a6043a9a73dd8ff
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: f7fecf2f90c56e5ac10ea5929f1c23b25bf181bc
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57713439"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59221758"
 ---
-# <a name="how-to-perform-drag-and-drop-operations-between-applications"></a>방법: 응용 프로그램 간에 끌어서 놓기 작업 수행
+# <a name="how-to-perform-drag-and-drop-operations-between-applications"></a>방법: 애플리케이션 간에 끌어서 놓기 작업 수행
 응용 프로그램 간 끌어서 놓기 작업 수행은 두 응용 프로그램이 <xref:System.Windows.Forms.DragEventArgs.AllowedEffect%2A> 및 <xref:System.Windows.Forms.DragEventArgs.Effect%2A> 속성 간에 설정된 “계약"에 따른 행동을 포함하는 경우 응용 프로그램 내에서 이 작업을 사용하도록 설정하는 방법과 다르지 않습니다.  
   
  다음 절차에서는 생성한 Windows 기반 응용 프로그램 및 응용 프로그램 간 끌어서 놓기 작업을 수행하는 Windows 운영 체제에 포함된 워드 패드 워드 프로세서를 사용합니다. 워드 패드는 끌어서 놓기 작업을 성공적으로 완료하도록 효과를 수행하기 위한 코트를 작성하는 Windows 기반 응용 프로그램인 텍스트 끌어서 놓기 효과를 허용하는 특정 설정이 있습니다.  
@@ -39,6 +39,7 @@ ms.locfileid: "57713439"
      또한 워드 패드에 끌어서 놓는 텍스트 스트링을 허용하기 위한 <xref:System.Windows.Forms.TextBox> 컨트롤을 구성할 수 있습니다. 자세한 내용은 [연습: Windows Forms에서 끌어서 놓기 작업 수행](walkthrough-performing-a-drag-and-drop-operation-in-windows-forms.md)합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [방법: 클립보드에 데이터 추가](how-to-add-data-to-the-clipboard.md)
 - [방법: 클립보드에서 데이터 검색](how-to-retrieve-data-from-the-clipboard.md)
 - [끌어서 놓기 작업 및 클립보드 지원](drag-and-drop-operations-and-clipboard-support.md)

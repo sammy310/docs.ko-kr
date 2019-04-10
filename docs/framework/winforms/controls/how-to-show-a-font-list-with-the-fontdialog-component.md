@@ -1,5 +1,5 @@
 ---
-title: '방법: FontDialog 구성 요소를 사용 하 여 글꼴 목록 표시'
+title: '방법: FontDialog 구성 요소를 사용하여 글꼴 목록 표시'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -13,14 +13,14 @@ helpviewer_keywords:
 - Font dialog box [Windows Forms], displaying
 - fonts [Windows Forms], selecting
 ms.assetid: 35692c1b-0937-4b7a-9207-1ae6bdc244a0
-ms.openlocfilehash: 4036b6e12d8c4df2c4edfd5df293160d9197b61a
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: fba9caecc71c5cb77c811fc112616647c79689c6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57717065"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59220190"
 ---
-# <a name="how-to-show-a-font-list-with-the-fontdialog-component"></a>방법: FontDialog 구성 요소를 사용 하 여 글꼴 목록 표시
+# <a name="how-to-show-a-font-list-with-the-fontdialog-component"></a>방법: FontDialog 구성 요소를 사용하여 글꼴 목록 표시
 합니다 [FontDialog](fontdialog-component-windows-forms.md) 구성 요소 글꼴을 선택할 수 있을 뿐만 아니라 해당 가중치 및 크기와 같은 표시 요소를 변경할 수 있습니다.  
   
  대화 상자에서 선택한 글꼴에 반환 되는 <xref:System.Windows.Forms.FontDialog.Font%2A> 속성입니다. 따라서 사용자가 선택한 글꼴의 활용 속성 읽기 하기만 됩니다.  
@@ -77,5 +77,6 @@ ms.locfileid: "57717065"
     ```  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Windows.Forms.FontDialog>
 - [FontDialog 구성 요소](fontdialog-component-windows-forms.md)

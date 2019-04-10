@@ -1,5 +1,5 @@
 ---
-title: '방법: Toolbar 단추의 메뉴 이벤트 트리거'
+title: '방법: Toolbar 단추에 대한 메뉴 이벤트 트리거'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - ToolBar control [Windows Forms], coding button click events
 - toolbars [Windows Forms], click event handlers
 ms.assetid: 98374f70-993d-4ca4-89fb-48fea6ce5b45
-ms.openlocfilehash: b6d0404f22c7db72b096ef130d9a9f4815db4059
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 5256185104f7d22514eac2db93856d7c58f51fb6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57707549"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59228356"
 ---
-# <a name="how-to-trigger-menu-events-for-toolbar-buttons"></a>방법: Toolbar 단추의 메뉴 이벤트 트리거
+# <a name="how-to-trigger-menu-events-for-toolbar-buttons"></a>방법: Toolbar 단추에 대한 메뉴 이벤트 트리거
 > [!NOTE]
 >  <xref:System.Windows.Forms.ToolStrip> 컨트롤은 <xref:System.Windows.Forms.ToolBar> 컨트롤을 대체하고 여기에 다른 기능을 추가하여 새로 도입된 컨트롤이지만 이전 버전과의 호환성 및 이후 사용 가능성을 고려하여 <xref:System.Windows.Forms.ToolBar> 컨트롤을 계속 유지하도록 선택할 수 있습니다.  
   
@@ -135,7 +135,8 @@ ms.locfileid: "57707549"
     ```  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Windows.Forms.ToolBar>
 - [방법: ToolBar 컨트롤에 단추 추가](how-to-add-buttons-to-a-toolbar-control.md)
-- [방법: 도구 모음 단추의 아이콘 정의](how-to-define-an-icon-for-a-toolbar-button.md)
+- [방법: 도구 모음 단추에 대한 아이콘 정의](how-to-define-an-icon-for-a-toolbar-button.md)
 - [ToolBar 컨트롤](toolbar-control-windows-forms.md)

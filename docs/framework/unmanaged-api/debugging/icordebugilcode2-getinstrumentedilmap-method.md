@@ -14,12 +14,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1f2e481942586e1e5ea6364370ff1385db134dd3
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 4197b018ea85402762a8591b40f3503c02af3974
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57475686"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59222876"
 ---
 # <a name="icordebugilcode2getinstrumentedilmap-method"></a>ICorDebugILCode2::GetInstrumentedILMap 메서드
 [.NET Framework 4.5.2 이상 버전에서 지원됨]  
@@ -38,7 +38,7 @@ HRESULT GetInstrumentedILMap(
   
 ## <a name="parameters"></a>매개 변수  
  cMap  
- [in] `map` 배열의 저장소 용량입니다. 자세한 내용은 설명 부분을 참조하십시오.  
+ [in] `map` 배열의 저장소 용량입니다. 자세한 내용은 설명 부분을 참조하세요.  
   
  pcMap  
  [out] 맵 배열에 기록 COR_IL_MAP 값의 수입니다.  
@@ -49,8 +49,7 @@ HRESULT GetInstrumentedILMap(
 ## <a name="remarks"></a>설명  
  프로파일러를 호출 하 여 매핑을 설정 하는 경우는 [icorprofilerinfo:: Setilinstrumentedcodemap](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-setilinstrumentedcodemap-method.md) 메서드를 디버거 매핑을 검색 하 고 스택에 대 한 오프셋 IL을 계산할 때 내부적으로 매핑을 사용할 때이 메서드를 호출할 수 추적 및 변수 수명입니다.  
   
- 하는 경우 `cMap` 가 0 및 `pcMap` 이 아닌**null**, `pcMap` 사용 가능한 COR_IL_MAP 값의 수로 설정 됩니다. 
-  `cMap`은 값이 0이 아닌 경우 `map` 배열의 저장소 용량을 나타냅니다. 메서드는 반환 될 때 `map` 의 최대값을 포함 `cMap` 항목 및 `pcMap` 에 실제로 기록 된 COR_IL_MAP 값의 수로 설정 되는 `map` 배열입니다.  
+ 하는 경우 `cMap` 가 0 및 `pcMap` 이 아닌**null**, `pcMap` 사용 가능한 COR_IL_MAP 값의 수로 설정 됩니다. `cMap`은 값이 0이 아닌 경우 `map` 배열의 저장소 용량을 나타냅니다. 메서드는 반환 될 때 `map` 의 최대값을 포함 `cMap` 항목 및 `pcMap` 에 실제로 기록 된 COR_IL_MAP 값의 수로 설정 되는 `map` 배열입니다.  
   
  IL이 계측되지 않았거나 프로파일러가 매핑을 제공하지 않은 경우 이 메서드는 `S_OK`를 반환하고 `pcMap`을 0으로 설정합니다.  
   
@@ -64,6 +63,7 @@ HRESULT GetInstrumentedILMap(
  **.NET Framework 버전:** [!INCLUDE[net_current_v452plus](../../../../includes/net-current-v452plus-md.md)]  
   
 ## <a name="see-also"></a>참고자료
+
 - [ICorProfilerInfo::SetILInstrumentedCodeMap](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-setilinstrumentedcodemap-method.md)
 - [ICorDebugILCode2 인터페이스](../../../../docs/framework/unmanaged-api/debugging/icordebugilcode2-interface.md)
 - [디버깅 인터페이스](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

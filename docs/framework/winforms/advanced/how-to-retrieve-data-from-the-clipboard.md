@@ -8,12 +8,12 @@ helpviewer_keywords:
 - pasting Clipboard data
 - Clipboard [Windows Forms], retrieving data
 ms.assetid: 99612537-2c8a-449f-aab5-2b3b28d656e7
-ms.openlocfilehash: 0ed79197190e9f646b5f94ff56e62b19fe4f366a
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: aca110339c94afd5442aed5a2481964b456154f3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57723857"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59201613"
 ---
 # <a name="how-to-retrieve-data-from-the-clipboard"></a>방법: 클립보드에서 데이터 검색
 <xref:System.Windows.Forms.Clipboard> 클래스는 Windows 운영 체제 클립보드 기능과 상호 작용 하는 데 사용할 수 있는 메서드를 제공 합니다. 많은 응용 프로그램 데이터에 대 한 임시 저장소로 클립보드를 사용 합니다. 예를 들어 워드 프로세서 잘라내기 및 붙여넣기 작업 중 클립보드를 사용합니다. 클립보드 다른 응용 프로그램에서 정보를 전송할 때도 유용 합니다.  
@@ -57,5 +57,6 @@ ms.locfileid: "57723857"
     [!code-vb[System.Windows.Forms.Clipboard#100](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Clipboard/vb/form1.vb#100)]  
   
 ## <a name="see-also"></a>참고자료
+
 - [끌어서 놓기 작업 및 클립보드 지원](drag-and-drop-operations-and-clipboard-support.md)
 - [방법: 클립보드에 데이터 추가](how-to-add-data-to-the-clipboard.md)

@@ -1,5 +1,5 @@
 ---
-title: '방법: Windows Forms CheckBox 클릭에 응답'
+title: '방법: Windows Forms 확인란 클릭에 응답'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,14 +12,14 @@ helpviewer_keywords:
 - double-clicks
 - check boxes [Windows Forms], responding to events
 ms.assetid: c39f901e-8899-43b6-aa31-939cbf7089fb
-ms.openlocfilehash: fff08bebf4e0eeea7dff8146ed8805e9d71247da
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 77f93dae2a91f282c6746c3fec3fb5f567cae2e3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57724508"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59211987"
 ---
-# <a name="how-to-respond-to-windows-forms-checkbox-clicks"></a>방법: Windows Forms CheckBox 클릭에 응답
+# <a name="how-to-respond-to-windows-forms-checkbox-clicks"></a>방법: Windows Forms 확인란 클릭에 응답
 Windows Forms를 클릭할 때마다 <xref:System.Windows.Forms.CheckBox> 컨트롤을 <xref:System.Windows.Forms.Control.Click> 이벤트가 발생 합니다. 확인란의 상태에 따라 몇 가지 작업을 수행 하려면 응용 프로그램을 프로그래밍할 수 있습니다.  
   
 ### <a name="to-respond-to-checkbox-clicks"></a>CheckBox 클릭에 응답  
@@ -136,7 +136,8 @@ Windows Forms를 클릭할 때마다 <xref:System.Windows.Forms.CheckBox> 컨트
     >  경우는 <xref:System.Windows.Forms.CheckBox.ThreeState%2A> 속성이로 설정 된 `true`, <xref:System.Windows.Forms.CheckBox.Checked%2A> 속성에서 반환 `true` 둘 다에 대해 <xref:System.Windows.Forms.CheckState.Checked> 및 <xref:System.Windows.Forms.CheckState.Indeterminate>합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Windows.Forms.CheckBox>
 - [CheckBox 컨트롤 개요](checkbox-control-overview-windows-forms.md)
-- [방법: Windows Forms CheckBox 컨트롤을 사용 하 여 옵션 설정](how-to-set-options-with-windows-forms-checkbox-controls.md)
+- [방법: Windows Forms CheckBox 컨트롤을 사용하여 옵션 설정](how-to-set-options-with-windows-forms-checkbox-controls.md)
 - [CheckBox 컨트롤](checkbox-control-windows-forms.md)

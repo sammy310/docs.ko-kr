@@ -1,5 +1,5 @@
 ---
-title: '방법: 활성 MDI 자식으로 데이터 전송'
+title: '방법: 활성 MDI 자식으로 데이터 보내기'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - Clipboard [Windows Forms], pasting
 - Clipboard [Windows Forms], getting data from
 ms.assetid: 1047d2fe-1235-46db-aad9-563aea1d743b
-ms.openlocfilehash: a89956595ff98e8cda717c90a3f96c95abc8118a
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 0ffe87d55f7325f77bd33bdbf5d5fbab9f321f93
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57707406"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59203329"
 ---
-# <a name="how-to-send-data-to-the-active-mdi-child"></a>방법: 활성 MDI 자식으로 데이터 전송
+# <a name="how-to-send-data-to-the-active-mdi-child"></a>방법: 활성 MDI 자식으로 데이터 보내기
 컨텍스트 내에서 종종 [다중 문서 MDI (인터페이스) 응용 프로그램](multiple-document-interface-mdi-applications.md), 사용자 데이터를 클립보드에서 MDI 응용 프로그램에 붙여 넣는 같은 활성 자식 창에 데이터를 전송 해야 합니다.  
   
 > [!NOTE]
@@ -92,8 +92,9 @@ ms.locfileid: "57707406"
     ```  
   
 ## <a name="see-also"></a>참고자료
-- [MDI(다중 문서 인터페이스) 응용 프로그램](multiple-document-interface-mdi-applications.md)
-- [방법: MDI 부모 폼 만들기](how-to-create-mdi-parent-forms.md)
-- [방법: MDI 자식 폼 만들기](how-to-create-mdi-child-forms.md)
+
+- [MDI 애플리케이션](multiple-document-interface-mdi-applications.md)
+- [방법: MDI 부모 양식 만들기](how-to-create-mdi-parent-forms.md)
+- [방법: MDI 자식 양식 만들기](how-to-create-mdi-child-forms.md)
 - [방법: 활성 MDI 자식 확인](how-to-determine-the-active-mdi-child.md)
-- [방법: MDI 자식 폼 정렬](how-to-arrange-mdi-child-forms.md)
+- [방법: MDI 자식 양식 정렬](how-to-arrange-mdi-child-forms.md)

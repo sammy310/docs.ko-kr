@@ -2,12 +2,12 @@
 title: Entity SQL 빠른 참조
 ms.date: 03/30/2017
 ms.assetid: e53dad9e-5e83-426e-abb4-be3e78e3d6dc
-ms.openlocfilehash: 20d8d1cb1e4b5cbf37dffcce6a7e79c2a4c265d3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b4e3eaf8abd82b63fa2663b47f878ecfa9584897
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54539405"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59207073"
 ---
 # <a name="entity-sql-quick-reference"></a>Entity SQL 빠른 참조
 이 항목에서는 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 쿼리에 대한 빠른 참조를 제공합니다. 이 항목의 쿼리는 AdventureWorks Sales 모델을 기반으로 합니다.  
@@ -48,7 +48,7 @@ DATETIME '2006-12-25 01:01'
 |-----------|  
 |12/25/2006 1:01:00 AM|  
   
-### <a name="integer"></a>Integer  
+### <a name="integer"></a>정수  
  Integer 리터럴은 Int32(123), UInt32(123U), Int64(123L) 및 UInt64(123UL) 형식일 수 있습니다.  
   
  예제:  
@@ -103,11 +103,11 @@ SELECT VALUE product FROM AdventureWorksEntities.Product AS product WHERE produc
   
  출력:  
   
-|ProductID|name|ProductNumber|…|  
+|ProductID|이름|ProductNumber|…|  
 |---------------|----------|-------------------|-------|  
 |842|Touring-Panniers, Large|PA-T100|…|  
   
-### <a name="object"></a>Object  
+### <a name="object"></a>개체  
  [형식 생성자 라는](../../../../../../docs/framework/data/adonet/ef/language-reference/named-type-constructor-entity-sql.md) 와 같은 명명 된 사용자 정의 개체를 생성 `person("abc", 12)`합니다.  
   
  예제:  
@@ -316,7 +316,7 @@ SELECT a.AddressID, (SELECT VALUE DEREF(v) FROM
 ## <a name="select-value-and-select"></a>SELECT VALUE 및 SELECT  
   
 ### <a name="select-value"></a>SELECT VALUE  
- [!INCLUDE[esql](../../../../../../includes/esql-md.md)]에서는 암시적 행 생성을 건너뛰도록 SELECT VALUE 절을 제공합니다. SELECT VALUE 절에 하나의 항목만 지정할 수 있습니다. 이러한 절은 사용 되는 SELECT 절의 항목 주위에 없는 행 래퍼가 생성 하 고 원하는 모양의 컬렉션이 만들어질 수 있습니다 예를 들어: `SELECT VALUE a`합니다.  
+ [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 암시적 행 생성을 건너뛰도록 SELECT VALUE 절을 제공 합니다. SELECT VALUE 절에 하나의 항목만 지정할 수 있습니다. 이러한 절은 사용 되는 SELECT 절의 항목 주위에 없는 행 래퍼가 생성 하 고 원하는 모양의 컬렉션이 만들어질 수 있습니다 예를 들어: `SELECT VALUE a`합니다.  
   
  예제:  
   
@@ -334,7 +334,7 @@ SELECT VALUE p.Name FROM AdventureWorksEntities.Product as p
 |...|  
   
 ### <a name="select"></a>선택  
- [!INCLUDE[esql](../../../../../../includes/esql-md.md)]에서는 임의의 행을 만드는 행 생성자도 제공합니다. SELECT는 `SELECT a, b, c`와 같이 프로젝션의 요소를 하나 이상 사용하며 필드가 있는 데이터 레코드를 생성합니다.  
+ [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 또한 임의의 행을 만드는 행 생성자를 제공 합니다. SELECT는 `SELECT a, b, c`와 같이 프로젝션의 요소를 하나 이상 사용하며 필드가 있는 데이터 레코드를 생성합니다.  
   
  예제:  
   
@@ -363,5 +363,6 @@ CASE WHEN AVG({25,12,11}) < 100 THEN TRUE ELSE FALSE END
 |TRUE|  
   
 ## <a name="see-also"></a>참고자료
+
 - [엔터티 SQL 참조](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
 - [Entity SQL 개요](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)

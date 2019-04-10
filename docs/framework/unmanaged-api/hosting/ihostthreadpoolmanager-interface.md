@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b7fc0a271a9c62406d2942f387a5458e21211116
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2e7976740a79efda8e5ab569f2efb55444012c5d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54522728"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59220372"
 ---
 # <a name="ihostthreadpoolmanager-interface"></a>IHostThreadPoolManager 인터페이스
 CLR (공용 언어 런타임) 스레드 풀을 구성 하 고 작업 항목을 스레드 풀 큐에 사용할 수 있는 메서드를 제공 합니다.  
@@ -50,6 +50,7 @@ CLR (공용 언어 런타임) 스레드 풀을 구성 하 고 작업 항목을 �
  **.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Threading>
 - <xref:System.Threading.ThreadPool>
 - [호스팅 인터페이스](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)

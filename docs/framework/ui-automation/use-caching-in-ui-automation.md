@@ -1,5 +1,5 @@
 ---
-title: UI 자동화의 캐싱 사용
+title: UI 자동화에서 캐싱 사용
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - caching, UI Automation
 - UI Automation, caching
 ms.assetid: ec722dff-6009-4279-b86a-e18d3fa94ebf
-ms.openlocfilehash: 0c12b8347e0dfe239189a7e1d1569aaf2dabc0a2
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
-ms.translationtype: MT
+ms.openlocfilehash: 41c1aa0e2a5219cdb40ba6d79c2a55bbf8568322
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57675500"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59211415"
 ---
-# <a name="use-caching-in-ui-automation"></a>UI 자동화의 캐싱 사용
+# <a name="use-caching-in-ui-automation"></a>UI 자동화에서 캐싱 사용
 > [!NOTE]
 >  이 설명서는 <xref:System.Windows.Automation> 네임스페이스에 정의된 관리되는 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 클래스를 사용하려는 .NET Framework 개발자를 위한 것입니다. 에 대 한 최신 정보에 대 한 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]를 참조 하세요 [Windows Automation API: UI 자동화](https://go.microsoft.com/fwlink/?LinkID=156746)합니다.  
   
@@ -64,4 +64,5 @@ ms.locfileid: "57675500"
  [!code-vb[UIAClient_snip#108](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/UIAClient_snip/VisualBasic/ClientForm.vb#108)]  
   
 ## <a name="see-also"></a>참고자료
+
 - [UI 자동화 클라이언트의 캐싱](../../../docs/framework/ui-automation/caching-in-ui-automation-clients.md)

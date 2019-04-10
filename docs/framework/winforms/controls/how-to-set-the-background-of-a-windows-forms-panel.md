@@ -11,12 +11,12 @@ helpviewer_keywords:
 - Panel control [Windows Forms], background
 - colors [Windows Forms], Windows Forms Panel controls
 ms.assetid: 096cbd8d-45cc-47b8-b1ef-a27f60ea8be0
-ms.openlocfilehash: b0cf7666e6d969b3d02d13e86eb45904307d3ce3
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 289a91481c832a36b4b77d56ba6b18921ef02d5b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57722687"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59228010"
 ---
 # <a name="how-to-set-the-background-of-a-windows-forms-panel"></a>방법: Windows Forms 패널의 배경 설정
 Windows Forms <xref:System.Windows.Forms.Panel> 컨트롤 배경색 및 배경 이미지를 표시할 수 있습니다. <xref:System.Windows.Forms.Control.BackColor%2A> 속성 레이블 및 라디오 단추와 같은 포함된 된 컨트롤에 대 한 배경색을 설정 합니다. 경우는 <xref:System.Windows.Forms.Control.BackgroundImage%2A> 속성을 설정 하지 않으면는 <xref:System.Windows.Forms.Control.BackColor%2A> 선택은 전체 패널을 채웁니다. 경우는 <xref:System.Windows.Forms.Control.BackgroundImage%2A> 속성이 설정 되 면 이미지에 포함 된 컨트롤 뒤에 표시 됩니다.  
@@ -68,6 +68,7 @@ Windows Forms <xref:System.Windows.Forms.Panel> 컨트롤 배경색 및 배경 �
     ```  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Windows.Forms.Control.BackColor%2A>
 - <xref:System.Windows.Forms.Control.BackgroundImage%2A>
 - [Panel 컨트롤](panel-control-windows-forms.md)

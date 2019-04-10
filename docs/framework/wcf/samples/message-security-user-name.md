@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - WS Security
 ms.assetid: c63cfc87-6b20-4949-93b3-bcd4b732b0a2
-ms.openlocfilehash: 05067d02258b23bf2e0fae6318aacc7a7a99dc84
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
-ms.translationtype: MT
+ms.openlocfilehash: 93c74a2bdf6954d45b68299389c01ccc115b9200
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58822676"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59207346"
 ---
 # <a name="message-security-user-name"></a>Message Security User Name
 이 샘플에서는 클라이언트에 대해 사용자 이름 인증과 함께 WS-Security를 사용하고 서버의 X.509v3 인증서를 사용하는 서버 인증을 요구하는 응용 프로그램을 구현하는 방법을 보여 줍니다. 클라이언트와 서버 간의 모든 응용 프로그램 메시지는 서명 및 암호화됩니다. 기본적으로 클라이언트에 의해 제공되는 사용자 이름과 암호는 유효한 Windows 계정에 로그온하는 데 사용됩니다. 이 샘플은 기반 합니다 [WSHttpBinding](../../../../docs/framework/wcf/samples/wshttpbinding.md)합니다. 이 샘플은 IIS(인터넷 정보 서비스)에 의해 호스트되는 클라이언트 콘솔 프로그램(Client.exe) 및 서비스 라이브러리(Service.dll)로 구성됩니다. 이 서비스는 요청-회신 통신 패턴을 정의하는 계약을 구현합니다.  
@@ -222,7 +222,7 @@ Press <ENTER> to terminate client.
   
 5.  서버에서 실행 `setup.bat service` 관리자 권한으로 연 Visual Studio 용 개발자 명령 프롬프트에서. 실행 중인 `setup.bat` 사용 하 여는 `service` 인수가 컴퓨터의 정규화 된 도메인 이름 서비스 인증서를 만들고 Service.cer 이라는 파일로 서비스 인증서를 내보냅니다.  
   
-6.  컴퓨터의 정규화된 도메인 이름과 일치하는 새 인증서 이름이 serviceCertificate 요소의 findValue 특성에 반영되도록 Web.config를 편집합니다`.`  
+6.  컴퓨터의 정규화 된 도메인 이름으로 동일한 (serviceCertificate 요소의 findValue 특성)에 새 인증서 이름을 반영 되도록 Web.config를 편집 합니다.`.`  
   
 7.  서비스 디렉터리에서 클라이언트 컴퓨터의 클라이언트 디렉터리로 Service.cer 파일을 복사합니다.  
   
@@ -238,4 +238,3 @@ Press <ENTER> to terminate client.
   
     > [!NOTE]
     >  다중 컴퓨터 구성에서 이 샘플을 실행할 경우에는 이 스크립트로 클라이언트의 서비스 인증서를 제거할 수 없습니다. 컴퓨터 인증서를 사용 하는 Windows Communication Foundation (WCF) 샘플을 실행 하는 경우에 CurrentUser-TrustedPeople 저장소에에서 설치 된 서비스 인증서를 선택 취소 해야 합니다. 이 작업을 수행 하려면 다음 명령을 사용 합니다. `certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>` 예를 들어: `certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`합니다.  
-  

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 35b99240a99341ddf78ab43c444b503702af66c9
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 57ddbd8c6935f2c0275c132e30ea175c6f198fac
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57479170"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59200092"
 ---
 # <a name="imetadataimportgetmethodsemantics-method"></a>IMetaDataImport::GetMethodSemantics 메서드
 토큰 쌍을 이루는 속성과 지정한 MethodDef 토큰이 참조 하는 메서드 및 이벤트 지정한 eventprop 참조 간의 관계를 나타내는 플래그를 가져옵니다.  
@@ -60,5 +60,6 @@ HRESULT GetMethodSemantics (
  **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>참고자료
+
 - [IMetaDataImport 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
 - [IMetaDataImport2 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

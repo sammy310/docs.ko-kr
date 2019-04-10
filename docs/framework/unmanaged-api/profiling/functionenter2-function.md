@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9fb9dd56cb19b62543d14ae02fe6f198c0164107
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 825da3a09f8b8013ffecaedfee0dce2362c8a7b0
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57468821"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59227810"
 ---
 # <a name="functionenter2-function"></a>FunctionEnter2 함수
 제어 함수에 전달 되 고 및 프레임과 함수 인수는 스택에 대 한 정보를 제공 하는 프로파일러에 알립니다. 이 함수를 대체 합니다 [FunctionEnter](../../../../docs/framework/unmanaged-api/profiling/functionenter-function.md) 함수입니다.  
@@ -79,6 +79,7 @@ void __stdcall FunctionEnter2 (
  **.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>참고자료
+
 - [FunctionLeave2 함수](../../../../docs/framework/unmanaged-api/profiling/functionleave2-function.md)
 - [FunctionTailcall2 함수](../../../../docs/framework/unmanaged-api/profiling/functiontailcall2-function.md)
 - [SetEnterLeaveFunctionHooks2 메서드](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-setenterleavefunctionhooks2-method.md)

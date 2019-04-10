@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4709d1b8126436d4400c788891960100915cd1bc
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: d6575acfb1f75cbc8e3d59ddca5fea0953274cf2
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56971439"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59206462"
 ---
 # <a name="icordebugreferencevalue-interface"></a>ICorDebugReferenceValue 인터페이스
 개체에 대 한 참조는 값을 관리 하는 메서드를 제공 합니다. (즉,이 메서드는 대 한 포인터를 관리 하는 합니다.) 이 인터페이스는 "ICorDebugValue"를 구현합니다.  
@@ -54,6 +54,5 @@ ms.locfileid: "56971439"
  **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>참고자료
-
 
 - [디버깅 인터페이스](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

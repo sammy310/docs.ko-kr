@@ -5,19 +5,19 @@ helpviewer_keywords:
 - WPF [WPF], about application development
 - application development [WPF], about
 ms.assetid: 2996ce5e-81e9-49ae-881b-952db3dd1b7e
-ms.openlocfilehash: 979a5324fe9cb6c3469660e061d5df7f312ef2c4
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 3b7e1d04173741088935104e8d4225691927a27b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57365129"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59211064"
 ---
 # <a name="application-development"></a>애플리케이션 개발
 <a name="introduction"></a> Windows Presentation Foundation (WPF)은 다음 유형의 응용 프로그램 개발에 사용할 수 있는 프레젠테이션 프레임 워크:  
   
 -   독립 실행형 애플리케이션(클라이언트 컴퓨터에 설치되어 실행되는 실행 가능한 어셈블리로 빌드된 전형적인 [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] 애플리케이션)  
   
--   [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)](실행 가능한 어셈블리로 빌드되고 [!INCLUDE[TLA#tla_ie](../../../../includes/tlasharptla-ie-md.md)] 또는 Mozilla Firefox와 같은 웹 브라우저에서 호스트하는 탐색 페이지로 구성된 응용 프로그램)  
+-   [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)] (실행 가능한 어셈블리로 빌드되고와 같은 웹 브라우저에서 호스트 되는 탐색 페이지로 구성 된 응용 프로그램 [!INCLUDE[TLA#tla_ie](../../../../includes/tlasharptla-ie-md.md)] 또는 Mozilla Firefox).  
   
 -   사용자 지정 컨트롤 라이브러리(재사용 가능한 컨트롤을 포함하는 실행 불가능한 어셈블리)  
   
@@ -27,9 +27,7 @@ ms.locfileid: "57365129"
 >  Windows 서비스에서 WPF 유형을 사용해서는 안 됩니다. Windows 서비스에서 이러한 기능을 사용하려고 하면 예상대로 작동하지 않을 수 있습니다.  
   
  이 애플리케이션 집합을 빌드하려면 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]에서 서비스 호스트를 구현합니다. 이 항목에서 이러한 서비스의 개요를 제공하며 자세한 정보를 찾을 수 있습니다.  
-  
 
-  
 <a name="Application_Management"></a>   
 ## <a name="application-management"></a>애플리케이션 관리  
  실행 가능한 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 애플리케이션에는 일반적으로 다음을 포함하는 핵심 기능 집합이 필요합니다.  
@@ -74,7 +72,7 @@ ms.locfileid: "57365129"
   
  자세한 내용은 [WPF 창 개요](wpf-windows-overview.md)를 참조하세요.  
   
- <xref:System.Windows.Window>는 대화 상자로 알려진 특별한 유형의 창을 만드는 기능을 지원합니다. 모달 및 모덜리스 유형의 대화 상자를 모두 만들 수 있습니다.  
+ <xref:System.Windows.Window> 창 대화 상자로 알려진 특별 한 유형의 만드는 기능을 지원 합니다. 모달 및 모덜리스 유형의 대화 상자를 모두 만들 수 있습니다.  
   
  여러 응용 프로그램을 일관 된 사용자 환경 및 재사용성의 이점과 편의상에 대 한 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 세 가지 일반적인 Windows 대화 상자를 표시: <xref:Microsoft.Win32.OpenFileDialog>를 <xref:Microsoft.Win32.SaveFileDialog>, 및 <xref:System.Windows.Controls.PrintDialog>합니다.  
   
@@ -84,7 +82,7 @@ ms.locfileid: "57365129"
   
 <a name="Navigation"></a>   
 ## <a name="navigation"></a>탐색  
- [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]에서는 페이지(<xref:System.Windows.Controls.Page>) 및 하이퍼링크(<xref:System.Windows.Documents.Hyperlink>)를 통한 웹 스타일 탐색을 지원합니다. 다음을 포함한 다양한 방법으로 탐색을 구현할 수 있습니다.  
+ [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 페이지를 사용 하 여 웹 스타일 탐색을 지 원하는 (<xref:System.Windows.Controls.Page>) 및 하이퍼링크 (<xref:System.Windows.Documents.Hyperlink>). 다음을 포함한 다양한 방법으로 탐색을 구현할 수 있습니다.  
   
 -   웹 브라우저에 호스트되는 독립 실행형 페이지  
   
@@ -96,7 +94,7 @@ ms.locfileid: "57365129"
   
  탐색을 쉽게 하려면 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]에서 다음을 구현합니다.  
   
--   응용 프로그램 내 탐색을 지원하기 위해 <xref:System.Windows.Controls.Frame>, <xref:System.Windows.Navigation.NavigationWindow>, [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)]에서 사용되는 탐색 요청을 처리하기 위한 공유 탐색 엔진 <xref:System.Windows.Navigation.NavigationService>  
+-   <xref:System.Windows.Navigation.NavigationService>에서 사용 되는 탐색 요청 처리를 위한 공유 탐색 엔진 <xref:System.Windows.Controls.Frame>, <xref:System.Windows.Navigation.NavigationWindow>, 및 [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] 내부의 응용 프로그램 탐색을 지원 하려면.  
   
 -   탐색을 시작하는 탐색 메서드  
   
@@ -106,11 +104,11 @@ ms.locfileid: "57365129"
   
  자세한 내용은 [탐색 개요](navigation-overview.md)를 참조하세요.  
   
- [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]는 구조적 탐색이라고 알려진 특별한 유형의 탐색도 지원합니다. 구조적 탐색을 사용하여 호출 함수와 일치하는 구조적이고 예측 가능한 방식으로 데이터를 반환하는 하나 이상의 페이지를 호출할 수 있습니다. 이 기능은 <xref:System.Windows.Navigation.PageFunction%601> 클래스에 따라 달라지며 [구조적 탐색 개요](structured-navigation-overview.md)에 자세히 설명되어 있습니다. <xref:System.Windows.Navigation.PageFunction%601>은 복잡한 탐색 토폴로지 생성을 간소화하는 역할도 합니다. 이러한 탐색 토폴로지에 대한 설명은 [탐색 토폴로지 개요](navigation-topologies-overview.md)에 나와 있습니다.  
+ [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 또한 특수 한 유형의 구조적된 탐색 이라고 하는 탐색을 지원 합니다. 구조적 탐색을 사용하여 호출 함수와 일치하는 구조적이고 예측 가능한 방식으로 데이터를 반환하는 하나 이상의 페이지를 호출할 수 있습니다. 이 기능은 <xref:System.Windows.Navigation.PageFunction%601> 클래스에 따라 달라지며 [구조적 탐색 개요](structured-navigation-overview.md)에 자세히 설명되어 있습니다. <xref:System.Windows.Navigation.PageFunction%601> 설명 하는 복잡 한 탐색 토폴로지 생성을 간소화 하는 역할도 [탐색 토폴로지 개요](navigation-topologies-overview.md)합니다.  
   
 <a name="Hosting"></a>   
 ## <a name="hosting"></a>호스팅  
- [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)]는 [!INCLUDE[TLA#tla_ie](../../../../includes/tlasharptla-ie-md.md)] 또는 Firefox에 호스트될 수 있습니다. 각 호스팅 모델에는 [호스팅](hosting-wpf-applications.md)에서 다루는 고유한 고려 사항 및 제약 조건 집합이 있습니다.  
+ [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] 호스팅될 수 [!INCLUDE[TLA#tla_ie](../../../../includes/tlasharptla-ie-md.md)] 또는 Firefox. 각 호스팅 모델에는 [호스팅](hosting-wpf-applications.md)에서 다루는 고유한 고려 사항 및 제약 조건 집합이 있습니다.  
   
 <a name="Build_and_Deploy"></a>   
 ## <a name="build-and-deploy"></a>빌드 및 배포  

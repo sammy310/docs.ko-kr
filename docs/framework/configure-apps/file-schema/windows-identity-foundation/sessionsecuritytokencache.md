@@ -3,12 +3,12 @@ title: <sessionSecurityTokenCache>
 ms.date: 03/30/2017
 ms.assetid: d43e676c-0153-485c-ab31-0257a2db7507
 author: BrucePerlerMS
-ms.openlocfilehash: 697c20d1f526cb376c2430f0006349f7d8f9b2f1
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 5c68fe618f965f364a3716c3bc65de5e165b12ec
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55257943"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59207801"
 ---
 # <a name="sessionsecuritytokencache"></a>\<sessionSecurityTokenCache>
 서비스 또는 보안 토큰 처리기 컬렉션을 사용 하 여 세션 토큰에 대 한 캐시를 등록합니다.  
@@ -38,7 +38,7 @@ ms.locfileid: "55257943"
   
 |특성|설명|  
 |---------------|-----------------|  
-|형식|형식에서 파생 되는 <xref:System.IdentityModel.Tokens.SessionSecurityTokenCache> 클래스입니다.|  
+|type|형식에서 파생 되는 <xref:System.IdentityModel.Tokens.SessionSecurityTokenCache> 클래스입니다.|  
   
 ### <a name="child-elements"></a>자식 요소  
  없음  
@@ -62,4 +62,5 @@ ms.locfileid: "55257943"
 ```  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.IdentityModel.Tokens.SessionSecurityTokenCache>

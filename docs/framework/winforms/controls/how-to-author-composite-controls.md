@@ -1,5 +1,5 @@
 ---
-title: '방법: 복합 컨트롤 제작'
+title: '방법: 복합 컨트롤 작성'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - UserControl class [Windows Forms], creating composite controls
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - user controls [Windows Forms], inheriting from
 - composite controls [Windows Forms], creating
 ms.assetid: 79c9cf05-5ab6-4a18-886d-88a64748b098
-ms.openlocfilehash: cd82200706c98df18b1b9f464ebd62d797eea960
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 2157ef85cb26ad422a8ff3ff5149af373be1c055
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57724456"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59210245"
 ---
-# <a name="how-to-author-composite-controls"></a>방법: 복합 컨트롤 제작
+# <a name="how-to-author-composite-controls"></a>방법: 복합 컨트롤 작성
 여러 가지 방법으로 복합 컨트롤을 사용할 수 있습니다. Windows 데스크톱 애플리케이션 프로젝트의 일부로 작성하고 프로젝트의 양식에서만 사용할 수 있습니다. 또는 Windows 컨트롤 라이브러리 프로젝트에서 작성하고 프로젝트를 어셈블리로 컴파일하고 다른 프로젝트에서 컨트롤을 사용할 수 있습니다. 상속하고 시각적 상속을 사용하여 특별한 목적을 위해 신속하게 사용자 지정할 수도 있습니다.  
   
 > [!NOTE]
@@ -79,10 +79,11 @@ ms.locfileid: "57724456"
      DLL의 복합 컨트롤에서 상속된 구성 요소 컨트롤을 볼 수 있으며 **한정자** 속성이 **공용**인 컨트롤의 속성을 변경할 수 있습니다. **한정자** 속성이 **개인**인 컨트롤의 속성을 변경할 수 없습니다.  
   
 ## <a name="see-also"></a>참고자료
-- [연습: Visual Basic에서 합성 컨트롤 제작](walkthrough-authoring-a-composite-control-with-visual-basic.md)
-- [연습: 시각적 개체를 사용 하 여 복합 컨트롤 제작C#](walkthrough-authoring-a-composite-control-with-visual-csharp.md)
-- [연습: Visual Basic을 사용한 Windows Forms 컨트롤에서 상속](walkthrough-inheriting-from-a-windows-forms-control-with-visual-basic.md)
-- [연습: 시각적 개체를 사용 하 여 Windows Forms 컨트롤에서 상속C#](walkthrough-inheriting-from-a-windows-forms-control-with-visual-csharp.md)
+
+- [연습: Visual Basic을 사용하여 복합 컨트롤 작성](walkthrough-authoring-a-composite-control-with-visual-basic.md)
+- [연습: Visual C#에서 복합 컨트롤 제작](walkthrough-authoring-a-composite-control-with-visual-csharp.md)
+- [연습: Visual Basic을 사용하여 Windows Forms 컨트롤에서 상속](walkthrough-inheriting-from-a-windows-forms-control-with-visual-basic.md)
+- [연습: Visual C#을 사용하여 Windows Forms 컨트롤에서 상속](walkthrough-inheriting-from-a-windows-forms-control-with-visual-csharp.md)
 - [컨트롤 형식 권장 사항](control-type-recommendations.md)
-- [방법: Windows forms 컨트롤 작성](how-to-author-controls-for-windows-forms.md)
+- [방법: Windows Forms 컨트롤 작성](how-to-author-controls-for-windows-forms.md)
 - [사용자 지정 컨트롤의 종류](varieties-of-custom-controls.md)

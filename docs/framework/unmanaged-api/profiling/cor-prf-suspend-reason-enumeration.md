@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b40533553ccd7a3339a8a3ee0c8b47879efd38ef
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 21533b5173bcd91d0c944fbde4eafc9817de8315
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54742463"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59220060"
 ---
 # <a name="corprfsuspendreason-enumeration"></a>COR_PRF_SUSPEND_REASON 열거형
 런타임이 일시 중단 되는 이유를 나타냅니다.  
@@ -66,4 +66,5 @@ typedef enum {
  **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>참고자료
+
 - [프로파일링 열거형](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)

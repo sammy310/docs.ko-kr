@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a098afe1702e9559a2784ea0716a0a61216e9fd4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e7f29c365e9f6ba85f85ceb232f7af89446af2a1
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54535218"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59213053"
 ---
 # <a name="endmethodenumeration-function"></a>EndMethodEnumeration 함수
 에 대 한 호출을 시작 하는 열거형 시퀀스를 종료 합니다 [BeginMethodEnumeration 함수](beginmethodenumeration.md)합니다.  
@@ -68,4 +68,5 @@ HRESULT EndMethodEnumeration (
  **.NET Framework 버전:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>참고자료
-- [WMI 및 성능 카운터 (관리 되지 않는 API 참조)](index.md)
+
+- [WMI 및 성능 카운터(관리되지 않는 API 참조)](index.md)

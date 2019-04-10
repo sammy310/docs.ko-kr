@@ -1,18 +1,18 @@
 ---
-title: '방법: WSE3.0 서비스와 상호 운용 하도록 WCF 클라이언트 구성'
+title: '방법: WSE3.0 서비스와 상호 운용하도록 WCF 클라이언트 구성'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 3dadd7f1-d207-4ea5-a73b-3e8aa44407f8
-ms.openlocfilehash: 345677f992491022a12fb03981f644343e405dfe
-ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
-ms.translationtype: MT
+ms.openlocfilehash: 0136fa7c3a51a7d64340c6251e9f5eb63017ffd4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55066456"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59220697"
 ---
-# <a name="how-to-configure-a-wcf-client-to-interoperate-with-wse30-services"></a>방법: WSE3.0 서비스와 상호 운용 하도록 WCF 클라이언트 구성
+# <a name="how-to-configure-a-wcf-client-to-interoperate-with-wse30-services"></a>방법: WSE3.0 서비스와 상호 운용하도록 WCF 클라이언트 구성
 Windows Communication Foundation (WCF) 클라이언트 WCF 클라이언트가 2004 년 8 월 버전의 Ws-addressing 사양 사용 하도록 구성 된 경우 Microsoft.NET (WSE) 서비스에 대 한 Web Services Enhancements 3.0과 유선 수준으로 호환 됩니다.  
   
 ### <a name="to-configure-a-wcf-client-to-interoperate-with-a-wse-30-web-service"></a>WSE 3.0 웹 서비스와 상호 운용하도록 WCF 클라이언트를 구성하려면  
@@ -57,11 +57,11 @@ Windows Communication Foundation (WCF) 클라이언트 WCF 클라이언트가 20
   
 ## <a name="example"></a>예제  
  다음 코드 예제에서는 WSE 3.0 턴키 보안 어설션의 속성에 해당하는 속성을 노출하는 사용자 지정 바인딩을 정의합니다. 라고 하는 사용자 지정 바인딩 `WseHttpBinding`, WCF 클라이언트에 대 한 바인딩 속성을 지정 하려면 사용 됩니다.  
-  
-  
+
 [!code-csharp[c_WCFClientToWSEService#0](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_wcfclienttowseservice/cs/client.cs#0)]
 [!code-vb[c_WCFClientToWSEService#0](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_wcfclienttowseservice/vb/client.vb#0)]  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.ServiceModel.Channels.Binding>
-- [WSE와의 상호 운용](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms752257%28v=vs.90%29)
+- [Interoperating with WSE](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms752257%28v=vs.90%29)

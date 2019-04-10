@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: e5e673f4-9b44-45ae-aaea-c504d1cc5d3e
-ms.openlocfilehash: 0f19e08aba36d2e93033fb944efe848d4e1125e8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f4dfccad23bf5d15f5cbd0a33e76a136417e13ea
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54732780"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59204161"
 ---
 # <a name="navigating-datarelations"></a>DataRelation 탐색
 <xref:System.Data.DataRelation>의 기본 기능 중 하나는 <xref:System.Data.DataTable> 내에서 <xref:System.Data.DataSet>를 하나씩 탐색할 수 있도록 하는 것입니다. 이 모두를 검색할 수 있습니다 관련 <xref:System.Data.DataRow> 개체를 **DataTable** 단일 주어 지 면 **DataRow** 연관 **DataTable**합니다. 예를 들어, 설정한 후에 **DataRelation** 고객 테이블 사이의 orders 테이블을 사용 하 여 특정 고객 행에 대 한 모든 주문 행을 검색할 수 있습니다 **GetChildRows**.  
@@ -50,5 +50,6 @@ Customer ID: NORTS
  [!code-vb[DataWorks Data.DataTableNavigation#1](../../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks Data.DataTableNavigation/VB/source.vb#1)]  
   
 ## <a name="see-also"></a>참고자료
-- [DataSet, DataTable 및 DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)
+
+- [DataSets, DataTables 및 DataViews](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)
 - [ADO.NET 관리되는 공급자 및 데이터 집합 개발자 센터](https://go.microsoft.com/fwlink/?LinkId=217917)

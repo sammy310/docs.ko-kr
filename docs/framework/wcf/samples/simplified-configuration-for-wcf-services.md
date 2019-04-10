@@ -2,12 +2,12 @@
 title: WCF 서비스를 위한 단순화된 구성
 ms.date: 03/30/2017
 ms.assetid: 1e39ec25-18a3-4fdc-b6a3-9dfafbd60112
-ms.openlocfilehash: c0d5f46e6ace71ad4732f8d387b3289b1d4105e6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 50693062b201c9cf2e0d87f796f3e935e1fd8e66
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54516371"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59220723"
 ---
 # <a name="simplified-configuration-for-wcf-services"></a>WCF 서비스를 위한 단순화된 구성
 이 샘플에 구현 하 여 일반적인 서비스 및 Windows Communication Foundation (WCF)를 사용 하 여 클라이언트를 구성 하는 방법을 보여 줍니다. 이 샘플은 다른 모든 기본 기술 샘플의 기준이 됩니다.  
@@ -79,5 +79,6 @@ ms.locfileid: "54516371"
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\ConfigSimplificationIn40`  
   
 ## <a name="see-also"></a>참고자료
+
 - [AppFabric 관리 샘플](https://go.microsoft.com/fwlink/?LinkId=193960)
 - [단순화된 구성](../../../../docs/framework/wcf/simplified-configuration.md)

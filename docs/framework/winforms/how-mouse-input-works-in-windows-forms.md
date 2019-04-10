@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Windows Forms, mouse input
 - mouse [Windows Forms], input
 ms.assetid: 48fc5240-75a6-44bf-9fce-6aa21b49705a
-ms.openlocfilehash: 7817b6a414f313cd2891fe0e124e230643b06e07
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: c9193ffa9ef34f1e43a92feec230fa2282264147
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57725328"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59203017"
 ---
 # <a name="how-mouse-input-works-in-windows-forms"></a>Windows Forms에서 마우스 입력이 작동하는 방식
 수신 및 마우스 입력을 처리는 모든 Windows 응용 프로그램의 중요 한 부분입니다. 응용 프로그램에서 작업을 수행 하려면 마우스 이벤트를 처리할 수도 있고 적중 테스트를 수행 하려면 마우스 위치 정보 또는 기타 작업을 사용할 수 있습니다. 또한 응용 프로그램에서 컨트롤 마우스 입력을 처리 하는 방식을 변경할 수 있습니다. 이 항목에서는 detail 및 마우스에 대 한 시스템 설정을 변경 하는 방법에서 이러한 마우스 이벤트를 설명 합니다. 마우스를 사용 하 여 제공 되는 데이터에 대 한 자세한 정보에 대 한 이벤트와 순서는 마우스 클릭 이벤트가 발생 하는, 참조 [Windows Forms의 마우스 이벤트](mouse-events-in-windows-forms.md)합니다.  
@@ -53,6 +53,7 @@ ms.locfileid: "57725328"
 |<xref:System.Windows.Forms.SystemInformation.MouseWheelScrollLines%2A>|마우스 휠을 돌릴 때 스크롤되는 줄 수를 가져옵니다.|  
   
 ## <a name="see-also"></a>참고자료
+
 - [Windows Forms 애플리케이션의 마우스 입력](mouse-input-in-a-windows-forms-application.md)
 - [Windows Forms의 마우스 캡처](mouse-capture-in-windows-forms.md)
 - [Windows Forms의 마우스 포인터](mouse-pointers-in-windows-forms.md)

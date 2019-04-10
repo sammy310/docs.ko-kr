@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3254b449c06ad54bca438905ec1c413338f87e69
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: abe967195694dd61b4af18fb4eebbc3caad2ef4f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54737009"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59205864"
 ---
 # <a name="iclrstrongname-interface"></a>ICLRStrongName 인터페이스
 강력한 이름의 어셈블리를 서명 하는 기본 전역 정적 함수를 제공 합니다. 모든 `ICLRStrongName` 메서드는 표준 COM HRESULTs를 반환 합니다.  
@@ -69,5 +69,6 @@ ms.locfileid: "54737009"
  **.NET Framework 버전:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>참고자료
+
 - [호스팅 인터페이스](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
 - [호스팅](../../../../docs/framework/unmanaged-api/hosting/index.md)

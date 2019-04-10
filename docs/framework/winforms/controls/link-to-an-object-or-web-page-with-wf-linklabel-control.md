@@ -1,5 +1,5 @@
 ---
-title: '방법: Windows Forms LinkLabel 컨트롤을 사용 하 여 페이지를 웹 또는 개체에 연결'
+title: '방법: Windows Forms LinkLabel 컨트롤을 사용하여 개체 또는 웹 페이지에 연결'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -15,14 +15,14 @@ helpviewer_keywords:
 - LinkLabel control [Windows Forms], linking to object or Web page
 - LinkLabel control [Windows Forms], examples
 ms.assetid: 6c91c975-3cb7-4504-82f0-fc6255f8fb85
-ms.openlocfilehash: 34d6807b874596bd46f11ff90052ab85cc93b5d5
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 49d53e068ea35b663affac79f689a8688763fac2
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57705192"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59222733"
 ---
-# <a name="how-to-link-to-an-object-or-web-page-with-the-windows-forms-linklabel-control"></a>방법: Windows Forms LinkLabel 컨트롤을 사용 하 여 페이지를 웹 또는 개체에 연결
+# <a name="how-to-link-to-an-object-or-web-page-with-the-windows-forms-linklabel-control"></a>방법: Windows Forms LinkLabel 컨트롤을 사용하여 개체 또는 웹 페이지에 연결
 Windows Forms <xref:System.Windows.Forms.LinkLabel> 컨트롤을 사용 하면 폼의 웹 스타일 링크를 만들 수 있습니다. 링크를 클릭할 때 링크를 방문한 나타내기 위해 색을 변경할 수 있습니다. 색 변경에 대 한 자세한 내용은 참조 하세요. [방법: Windows Forms LinkLabel 컨트롤의 모양을 변경](how-to-change-the-appearance-of-the-windows-forms-linklabel-control.md)합니다.  
   
 ## <a name="linking-to-another-form"></a>다른 폼에 링크  
@@ -179,6 +179,7 @@ Windows Forms <xref:System.Windows.Forms.LinkLabel> 컨트롤을 사용 하면 �
     ```  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Diagnostics.Process.Start%2A?displayProperty=nameWithType>
 - [LinkLabel 컨트롤 개요](linklabel-control-overview-windows-forms.md)
 - [방법: Windows Forms LinkLabel 컨트롤의 모양 변경](how-to-change-the-appearance-of-the-windows-forms-linklabel-control.md)

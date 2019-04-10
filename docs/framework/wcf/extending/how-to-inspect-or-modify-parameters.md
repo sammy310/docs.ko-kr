@@ -1,18 +1,18 @@
 ---
-title: '방법: 검사 하거나 매개 변수를 수정 합니다.'
+title: '방법: 매개 변수 검사 또는 수정'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: ab6c0ac7-aac4-45ba-93d6-a0e9afd1756f
-ms.openlocfilehash: 329e25b31deb1761d8522636675fe3160cad9e15
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 1238c81e2607da6fc5e742aacd1b1dcc69996a8b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54721206"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59209946"
 ---
-# <a name="how-to-inspect-or-modify-parameters"></a>방법: 검사 하거나 매개 변수를 수정 합니다.
+# <a name="how-to-inspect-or-modify-parameters"></a>방법: 매개 변수 검사 또는 수정
 검사 하거나 구현 하 여 Windows Communication Foundation (WCF) 클라이언트 개체 또는 WCF 서비스에서 단일 작업에 대 한 들어오는 메시지나 나가는 메시지를 수정할 수는 <xref:System.ServiceModel.Dispatcher.IParameterInspector?displayProperty=nameWithType> 인터페이스와 클라이언트 또는 서비스 런타임에 삽입 하 합니다. 일반적으로 작업 동작을 사용하여 단일 작업에 매개 변수 검사자를 추가하지만, 다른 동작을 사용하여 더 넓은 범위의 런타임에 쉬운 액세스를 제공할 수도 있습니다. 자세한 내용은 [확장 클라이언트](../../../../docs/framework/wcf/extending/extending-clients.md) 하 고 [디스패처 확장](../../../../docs/framework/wcf/extending/extending-dispatchers.md)합니다.  
   
 ### <a name="inspecting-or-modifying-parameters"></a>매개 변수 검사 또는 수정  
@@ -41,4 +41,5 @@ ms.locfileid: "54721206"
  [!code-xml[Interceptors#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/interceptors/cs/client.exe.config#3)]  
   
 ## <a name="see-also"></a>참고자료
+
 - [동작을 사용하여 런타임 구성 및 확장](../../../../docs/framework/wcf/extending/configuring-and-extending-the-runtime-with-behaviors.md)

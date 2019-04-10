@@ -2,12 +2,12 @@
 title: 배포 고려 사항(Entity Framework)
 ms.date: 03/30/2017
 ms.assetid: 3a847a22-4eb8-4565-b18b-453bbca070db
-ms.openlocfilehash: 683f5e9b43bceb09d6354079fd9f7fcb7ed09eac
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.openlocfilehash: 7ab3827a9f2072f6f4b0c34f3801ee5dff2821d3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55828087"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59199598"
 ---
 # <a name="deployment-considerations-entity-framework"></a>배포 고려 사항(Entity Framework)
 이 항목에서는 데이터 액세스를 위해 ADO.NET Entity Framework를 사용하는 응용 프로그램 배포에 대한 정보를 제공합니다. Entity Framework에 대 한 자세한 내용은 참조 하세요. [Getting Started](../../../../../docs/framework/data/adonet/ef/getting-started.md)합니다.  
@@ -29,5 +29,6 @@ ms.locfileid: "55828087"
 -   Entity Framework는 .NET Framework의 구성 요소이므로 .NET Framework 사용권 계약에 허용된 대로 응용 프로그램과 함께 재배포할 수 있습니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [ADO.NET Entity Framework](../../../../../docs/framework/data/adonet/ef/index.md)
 - [개발 및 배포 고려 사항](../../../../../docs/framework/data/adonet/ef/development-and-deployment-considerations.md)

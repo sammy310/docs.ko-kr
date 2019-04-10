@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f0b9c76ca2c39fcba5a4d0519fc099d0a9d51ec2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f2ea67c6e4d860d41cfe67aaab73babb51f3ce45
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54721232"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59210661"
 ---
 # <a name="icordebugguidtotypeenum-interface"></a>ICorDebugGuidToTypeEnum 인터페이스
 Guid의 집합과 ICorDebugType 인스턴스에 의해 표현 되는 해당 형식 간의 매핑을 정의 하는 열거자를 제공 합니다. 이 인터페이스는 ICorDebugEnum 인터페이스에서 메서드를 상속합니다.  
@@ -45,4 +45,5 @@ Guid의 집합과 ICorDebugType 인스턴스에 의해 표현 되는 해당 형�
  **.NET Framework 버전:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
 ## <a name="see-also"></a>참고자료
+
 - [디버깅 인터페이스](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

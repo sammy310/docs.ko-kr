@@ -1,5 +1,5 @@
 ---
-title: '방법: 간격 및 Windows Forms에서 ToolStrip 항목의 맞춤 변경'
+title: '방법: Windows Forms에서 ToolStrip 항목의 간격 및 맞춤 변경'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - examples [Windows Forms], toolbars
 - toolbars [Windows Forms], aligning items
 ms.assetid: cd483466-0f49-43df-addf-e2b5fcd64027
-ms.openlocfilehash: 954087fa893baf3aa623c912efb081491304d3fb
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 2e569f7254c2436a7c05eeeb139bf75bf61f900e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57719444"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59213313"
 ---
-# <a name="how-to-change-the-spacing-and-alignment-of-toolstrip-items-in-windows-forms"></a>방법: 간격 및 Windows Forms에서 ToolStrip 항목의 맞춤 변경
+# <a name="how-to-change-the-spacing-and-alignment-of-toolstrip-items-in-windows-forms"></a>방법: Windows Forms에서 ToolStrip 항목의 간격 및 맞춤 변경
 합니다 <xref:System.Windows.Forms.ToolStrip> 컨트롤 크기 조정 간격 등의 레이아웃 기능을 완벽 하 게 지원 <xref:System.Windows.Forms.ToolStripItem> 의 서로 상대적인, 컨트롤 배열을 컨트롤에 <xref:System.Windows.Forms.ToolStrip>, 및 간격을 기준으로 컨트롤의는 <xref:System.Windows.Forms.ToolStrip>합니다.  
   
  때문에 기본값인 합니다 <xref:System.Windows.Forms.ToolStripItem.AutoSize%2A> 속성은 `true`, 컨트롤의 크기가 자동으로 설정 하지 않으면를 <xref:System.Windows.Forms.ToolStripItem.AutoSize%2A> 속성을 `false`입니다.  
@@ -80,6 +80,7 @@ ms.locfileid: "57719444"
     ```  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Windows.Forms.ToolStrip>
 - <xref:System.Windows.Forms.Control.Layout>
 - <xref:System.Windows.Forms.ToolStrip.LayoutCompleted>

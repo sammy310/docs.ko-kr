@@ -5,19 +5,19 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 82293d7f-471a-4549-8f19-0be890e7b074
-ms.openlocfilehash: 110b8ffe2fb3e00d7a6787e32d066f62126ebf9a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: a1b2627c8e9899a122f27dc652f8c91230fed0b3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54617189"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59225133"
 ---
 # <a name="how-to-specify-client-credential-values"></a>방법: 클라이언트 자격 증명 값 지정
 Windows Communication Foundation (WCF)를 사용 하는, 서비스 클라이언트가 서비스에 인증 하는 방법을 지정할 수 있습니다. 예를 들면 서비스는 클라이언트가 인증서를 사용하여 인증하도록 규정할 수 있습니다.  
   
 ### <a name="to-determine-the-client-credential-type"></a>클라이언트 자격 증명 형식을 결정하려면  
   
-1.  서비스의 메타데이터 끝점에서 메타데이터를 검색합니다. 메타데이터는 보통 사용자가 선택한 프로그래밍 언어로 된 클라이언트 코드(기본적으로 Visual C#)와 XML 구성 파일의 두 파일로 구성됩니다. 메타데이터를 검색하는 방법 중 하나는 Svcutil.exe 도구를 사용해 클라이언트 코드와 클라이언트 구성을 반환하는 것입니다. 자세한 내용은 [메타 데이터 가져오기](../../../docs/framework/wcf/feature-details/retrieving-metadata.md) 하 고 [ServiceModel Metadata 유틸리티 도구 (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)합니다.  
+1.  서비스의 메타데이터 엔드포인트에서 메타데이터를 검색합니다. 메타데이터는 보통 사용자가 선택한 프로그래밍 언어로 된 클라이언트 코드(기본적으로 Visual C#)와 XML 구성 파일의 두 파일로 구성됩니다. 메타데이터를 검색하는 방법 중 하나는 Svcutil.exe 도구를 사용해 클라이언트 코드와 클라이언트 구성을 반환하는 것입니다. 자세한 내용은 [메타 데이터 가져오기](../../../docs/framework/wcf/feature-details/retrieving-metadata.md) 하 고 [ServiceModel Metadata 유틸리티 도구 (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)합니다.  
   
 2.  XML 구성 파일을 엽니다. Svcutil.exe 도구를 사용하는 경우 이 파일의 기본 이름은 Output.config입니다.  
   
@@ -92,6 +92,7 @@ Windows Communication Foundation (WCF)를 사용 하는, 서비스 클라이언�
     ```  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.ServiceModel.NetTcpBinding>
 - <xref:System.ServiceModel.Security.X509CertificateRecipientServiceCredential.SetCertificate%2A>
 - <xref:System.ServiceModel.Security.X509CertificateRecipientServiceCredential>

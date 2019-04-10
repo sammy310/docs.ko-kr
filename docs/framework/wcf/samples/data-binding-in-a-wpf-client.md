@@ -2,12 +2,12 @@
 title: Wndows Presentation Foundation 클라이언트에서 데이터 바인딩
 ms.date: 03/30/2017
 ms.assetid: bb8c8293-5973-4aef-9b07-afeff5d3293c
-ms.openlocfilehash: c8382df188c7a2e47394ec73741c1e583f46fba6
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
-ms.translationtype: MT
+ms.openlocfilehash: 2687e406743a8f503175a8775b25c76630aea9b7
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58839017"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59223175"
 ---
 # <a name="data-binding-in-a-windows-presentation-foundation-client"></a>Wndows Presentation Foundation 클라이언트에서 데이터 바인딩
 이 샘플에서는 WPF(Windows Presentation Foundation) 클라이언트에서 데이터 바인딩을 사용하는 방법을 보여 줍니다. 샘플은 클라이언트에 반환 될 앨범 배열을 무작위로 생성 하는 Windows Communication Foundation (WCF) 서비스를 사용 합니다. 각 앨범에는 이름, 가격 및 앨범 트랙 목록이 있습니다. 앨범 트랙에는 이름과 기간이 있습니다. 서비스에서 반환 되는 정보를 Windows Presentation Foundation (WPF) 클라이언트에서 제공 하는 사용자 인터페이스 (UI)에 자동으로 바인딩됩니다.  
@@ -81,4 +81,3 @@ void client_GetAlbumListCompleted(object sender, GetAlbumListCompletedEventArgs 
 >  이 디렉터리가 없으면로 이동 [Windows Communication Foundation (WCF) 및.NET Framework 4 용 Windows WF (Workflow Foundation) 샘플](https://go.microsoft.com/fwlink/?LinkId=150780) 모든 Windows Communication Foundation (WCF)를 다운로드 하 고 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플. 이 샘플은 다음 디렉터리에 있습니다.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Scenario\DataBinding\WPFDataBinding`  
-  

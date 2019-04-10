@@ -2,12 +2,12 @@
 title: 워크플로 추적
 ms.date: 03/30/2017
 ms.assetid: 18737989-0502-4367-b5f6-617ebfb77c96
-ms.openlocfilehash: f8b454437631b4711360ddf0c1196cafca13b5ff
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 92497768e7e8d720cdcc7c8f2c7c04b4dfcc47b4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54627176"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59224938"
 ---
 # <a name="workflow-tracing"></a>워크플로 추적
 워크플로 추적을 사용하면 .NET Framework 추적 수신기를 통해 진단 정보를 캡처할 수 있습니다. 추적은 응용 프로그램에서 문제가 발견되면 사용하도록 설정했다가 문제가 해결되면 다시 사용하지 않도록 설정할 수 있습니다. 워크플로에 대한 디버그 추적을 두 가지 방법으로 활성화할 수 있습니다. 이벤트 추적 뷰어를 사용하여 구성하거나 <xref:System.Diagnostics>를 사용하여 추적 이벤트를 파일로 보낼 수 있습니다.  
@@ -23,7 +23,7 @@ ms.locfileid: "54627176"
   
 4.  기본 분석 추적 버퍼 크기는 겨우 4KB이므로 이 크기를 32KB로 늘리는 것이 좋습니다. 이렇게 하려면 다음 단계를 수행합니다.  
   
-    1.  현재 프레임워크 디렉터리(예: C:\Windows\Microsoft.NET\Framework\v4.0.21203)에서 `wevtutil um Microsoft.Windows.ApplicationServer.Applications.man` 명령을 실행합니다.  
+    1.  현재 프레임 워크 디렉터리 (예를 들어 C:\Windows\Microsoft.NET\Framework\v4.0.21203)에서 다음 명령을 실행 합니다. `wevtutil um Microsoft.Windows.ApplicationServer.Applications.man`  
   
     2.  변경 된 \<bufferSize > 32 Windows.ApplicationServer.Applications.man 파일의 값입니다.  
   
@@ -35,7 +35,7 @@ ms.locfileid: "54627176"
                   </channel>  
         ```  
   
-    3.  현재 프레임워크 디렉터리(예: C:\Windows\Microsoft.NET\Framework\v4.0.21203)에서 `wevtutil im Microsoft.Windows.ApplicationServer.Applications.man` 명령을 실행합니다.  
+    3.  현재 프레임 워크 디렉터리 (예를 들어 C:\Windows\Microsoft.NET\Framework\v4.0.21203)에서 다음 명령을 실행 합니다. `wevtutil im Microsoft.Windows.ApplicationServer.Applications.man`  
   
 > [!NOTE]
 >  .NET Framework 4 Client Profile을 사용 하는 경우.NET Framework 4 디렉터리에서 다음 명령을 실행 하 여 ETW 매니페스트를 먼저 등록 해야 합니다. `ServiceModelReg.exe –i –c:etw`  
@@ -70,5 +70,6 @@ ms.locfileid: "54627176"
 ```  
   
 ## <a name="see-also"></a>참고자료
+
 - [Windows Server App Fabric 모니터링](https://go.microsoft.com/fwlink/?LinkId=201273)
 - [App Fabric을 사용 하 여 응용 프로그램 모니터링](https://go.microsoft.com/fwlink/?LinkId=201275)

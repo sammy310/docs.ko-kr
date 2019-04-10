@@ -1,5 +1,5 @@
 ---
-title: '방법: 그린된 텍스트 맞추기'
+title: '방법: 그린 텍스트 맞추기'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - text [Windows Forms], aligning
 - Windows Forms, aligning drawn text
 ms.assetid: 83c10a81-1a90-4b5c-98aa-2c6c4b280079
-ms.openlocfilehash: ab97ab713067af26455fa4261bbddaf900ec91b8
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 5214ef2c69349514f05ba68cc023a7622e119e3a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57725261"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59210453"
 ---
-# <a name="how-to-align-drawn-text"></a>방법: 그린된 텍스트 맞추기
+# <a name="how-to-align-drawn-text"></a>방법: 그린 텍스트 맞추기
 사용자 지정 그리기를 수행 하면 폼 이나 컨트롤에서 그린된 텍스트를 가운데 하려는 경우가 많습니다. 사용 하 여 그린 텍스트를 쉽게 맞출 수 있습니다 합니다 <xref:System.Drawing.Graphics.DrawString%2A> 또는 <xref:System.Windows.Forms.TextRenderer.DrawText%2A> 올바른 서식 지정 개체를 만들고 적절 한 형식 플래그를 설정 하 여 메서드.  
   
 ### <a name="to-draw-centered-text-with-gdi-drawstring"></a>그릴 GDI + (DrawString)를 사용 하 여 텍스트를 가운데  
@@ -33,9 +33,10 @@ ms.locfileid: "57725261"
      [!code-vb[System.Drawing.AlignDrawnText#20](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.AlignDrawnText/VB/Form1.vb#20)]  
   
 ## <a name="compiling-the-code"></a>코드 컴파일  
- 앞의 코드 예제 Windows Forms에서 사용 하도록 설계 되었으며 필요할 <xref:System.Windows.Forms.PaintEventArgs> `e`의 매개 변수인 <xref:System.Windows.Forms.PaintEventHandler>합니다.  
+ 앞의 코드 예제 Windows Forms에서 사용 하도록 설계 되었으며 필요할 <xref:System.Windows.Forms.PaintEventArgs>`e`에서의 매개 변수인 <xref:System.Windows.Forms.PaintEventHandler>합니다.  
   
 ## <a name="see-also"></a>참고자료
-- [방법: GDI 사용 하 여 텍스트 그리기](how-to-draw-text-with-gdi.md)
+
+- [방법: GDI를 사용하여 텍스트 그리기](how-to-draw-text-with-gdi.md)
 - [글꼴 및 텍스트 사용](using-fonts-and-text.md)
 - [방법: 글꼴 패밀리 및 글꼴 만들기](how-to-construct-font-families-and-fonts.md)

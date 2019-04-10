@@ -2,12 +2,12 @@
 title: 변수 및 인수 추적
 ms.date: 03/30/2017
 ms.assetid: 8f3d9d30-d899-49aa-b7ce-a8d0d32c4ff0
-ms.openlocfilehash: 4e59a6838d93a57302f0c894445ab9da5d4252ac
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: ef2d6111d5c123ac6c684df09f03398340a5522c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54625213"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59231040"
 ---
 # <a name="variable-and-argument-tracking"></a>변수 및 인수 추적
 워크플로 실행을 추적할 때 데이터를 추출하는 것이 유용할 때가 많습니다. 이 기능은 추적 레코드 사후 실행에 액세스할 때 추가 컨텍스트를 제공합니다. [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)]에서는 추적을 통해 워크플로의 활동 범위 내에서 표시 변수 또는 인수를 추출할 수 있습니다. 추적 프로필을 사용하여 데이터를 쉽게 추출할 수 있습니다.  
@@ -47,5 +47,6 @@ ms.locfileid: "54625213"
 3.  사용자 지정 추적 참가자는 변수 또는 인수에 저장된 중요한 정보가 WF 코드를 통해 공개되지 않도록 해야 합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [Windows Server App Fabric 모니터링](https://go.microsoft.com/fwlink/?LinkId=201273)
 - [App Fabric을 사용 하 여 응용 프로그램 모니터링](https://go.microsoft.com/fwlink/?LinkId=201275)

@@ -2,12 +2,12 @@
 title: 고가용성 및 재해 복구에 대한 SqlClient 지원
 ms.date: 03/30/2017
 ms.assetid: 61e0b396-09d7-4e13-9711-7dcbcbd103a0
-ms.openlocfilehash: 50f2e4c46fbb8c043237aac90ffee98112b8cefa
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 744b24f0a4826c52908141183875a8a7f8c22f2b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54609124"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59213794"
 ---
 # <a name="sqlclient-support-for-high-availability-disaster-recovery"></a>고가용성 및 재해 복구에 대한 SqlClient 지원
 이 항목에서는 고가용성, 재해 복구, AlwaysOn 가용성 그룹에 대한 SqlClient 지원([!INCLUDE[net_v45](../../../../../includes/net-v45-md.md)]에 추가됨)에 대해 설명합니다.  SQL Server 2012 AlwaysOn 가용성 그룹 기능이 추가 되었습니다. AlwaysOn 가용성 그룹에 대 한 자세한 내용은 SQL Server 온라인 설명서를 참조 합니다.  
@@ -63,7 +63,7 @@ ms.locfileid: "54609124"
   
 2.  응용 프로그램이 `ApplicationIntent=ReadWrite`(아래에 설명)를 사용하고 보조 복제본 위치가 읽기 전용 액세스용으로 구성되어 있는 경우  
   
- <xref:System.Data.SqlClient.SqlDependency>는 읽기 전용 보조 복제본에서 지원되지 않습니다.  
+ <xref:System.Data.SqlClient.SqlDependency> 읽기 전용 보조 복제본에서 지원 되지 않습니다.  
   
  주 복제본이 읽기 전용 작업을 거부하도록 구성되어 있고 연결 문자열에 `ApplicationIntent=ReadOnly`가 포함되어 있으면 연결이 실패합니다.  
   
@@ -75,27 +75,28 @@ ms.locfileid: "54609124"
  AG의 주 데이터베이스에서 데이터베이스 미러링이 사용되는 경우 가용성 그룹 수신기 대신 주 데이터베이스에 연결되는 연결 문자열에 `MultiSubnetFailover=True`를 사용하면 드라이버에서 오류를 반환합니다.  
   
 ## <a name="specifying-application-intent"></a>응용 프로그램 의도 지정  
- `ApplicationIntent=ReadOnly`인 경우 클라이언트는 AlwaysOn 사용 데이터베이스에 연결할 때 읽기 작업을 요청합니다. 서버는 연결할 때와 USE 데이터베이스 문을 수행할 때 AlwaysOn 사용 데이터베이스에만 의도를 적용합니다.  
+ `ApplicationIntent=ReadOnly`인 경우 클라이언트는 AlwaysOn이 설정된 데이터베이스에 연결할 때 읽기 작업을 요청합니다. 서버는 연결 시 그리고 USE 데이터베이스 문 중에 AlwaysOn이 설정된 데이터베이스에 한하여 의도를 강제 적용합니다.  
   
  레거시 읽기 전용 데이터베이스에는 `ApplicationIntent` 키워드를 사용할 수 없습니다.  
   
- 데이터베이스는 대상 AlwaysOn 데이터베이스에 대한 읽기 작업을 허용하거나 허용하지 않을 수 있습니다. `ALLOW_CONNECTIONS` 및 `PRIMARY_ROLE``SECONDARY_ROLE` 문의 [!INCLUDE[tsql](../../../../../includes/tsql-md.md)] 절을 사용하여 이를 수행할 수 있습니다.  
+ 데이터베이스는 대상 AlwaysOn 데이터베이스에 대한 읽기 작업을 허용하거나 허용하지 않을 수 있습니다. (으로 수행 됩니다 합니다 `ALLOW_CONNECTIONS` 절을 `PRIMARY_ROLE` 및 `SECONDARY_ROLE`[!INCLUDE[tsql](../../../../../includes/tsql-md.md)] 문.)  
   
  `ApplicationIntent` 키워드를 사용하여 읽기 전용 라우팅을 사용하도록 설정할 수 있습니다.  
   
 ## <a name="read-only-routing"></a>읽기 전용 라우팅  
- 읽기 전용 라우팅은 데이터베이스의 읽기 전용 복제본의 가용성을 보장할 수 있는 기능입니다. 읽기 전용 라우팅을 사용하도록 설정하려면  
+ 읽기 전용 라우팅은 데이터베이스의 읽기 전용 복사본의 가용성을 유지할 수 있는 기능입니다. 읽기 전용 라우팅을 활성화하려면:  
   
 1.  AlwaysOn 가용성 그룹의 가용성 그룹 수신기에 연결해야 합니다.  
   
 2.  `ApplicationIntent` 연결 문자열 키워드를 `ReadOnly`로 설정해야 합니다.  
   
-3.  읽기 전용 라우팅을 사용할 수 있도록 데이터베이스 관리자가 가용성 그룹을 구성해야 합니다.  
+3.  읽기 전용 라우팅을 설정하려면 데이터베이스 관리자가 가용성 그룹을 구성해야 합니다.  
   
- 읽기 전용 라우팅을 사용하는 여러 연결이 모두 동일한 읽기 전용 복제본에 연결되지 않을 수 있습니다. 데이터베이스 동기화 또는 서버 라우팅 구성의 변경으로 인해 클라이언트가 서로 다른 읽기 전용 복제본에 연결될 수 있습니다. 모든 읽기 전용 요청을 동일한 읽기 전용 복제본에 연결하도록 하려면 가용성 그룹 수신기를 `Data Source` 연결 문자열 키워드에 전달하지 마십시오. 대신 읽기 전용 인스턴스의 이름을 지정하십시오.  
+ 읽기 전용 라우팅을 사용하는 여러 연결 중 일부가 동일한 읽기 전용 복사본에 연결되지 않을 수 있습니다. 데이터베이스 동기화를 변경하거나 서버 라우팅 구성을 변경하면 클라이언트를 다른 읽기 전용 복사본에 연결할 수 있습니다. 모든 읽기 전용 요청을 동일한 읽기 전용 복제본에 연결하려면 가용성 그룹 수신기를 `Data Source` 연결 문자열 키워드에 전달하지 마십시오. 대신, 읽기 전용 인스턴스의 이름을 지정합니다.  
   
- 읽기 전용 라우팅은 먼저 주 복제본에 연결한 다음 사용 가능한 최상의 읽기 가능 보조 복제본을 찾으므로 읽기 전용 라우팅의 경우 주 복제본에 연결하는 경우보다 시간이 더 걸릴 수 있습니다. 따라서 로그인 제한 시간을 늘려야 합니다.  
+ 읽기 전용 라우팅은 먼저 주 데이터베이스에 연결한 후 사용 가능한 최선의 읽기 가능한 보조 데이터베이스를 검색하기 때문에 주 데이터베이스에 연결할 때보다 시간이 더 많이 걸릴 수 있습니다. 따라서 로그인 제한 시간을 늘려야 합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [SQL Server 기능 및 ADO.NET](../../../../../docs/framework/data/adonet/sql/sql-server-features-and-adonet.md)
 - [ADO.NET 관리되는 공급자 및 데이터 집합 개발자 센터](https://go.microsoft.com/fwlink/?LinkId=217917)

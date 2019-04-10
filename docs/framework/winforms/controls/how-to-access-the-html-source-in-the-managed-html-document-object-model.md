@@ -1,5 +1,5 @@
 ---
-title: '방법: 관리 되는 HTML 문서 개체 모델에서 HTML 원본에 액세스'
+title: '방법: 관리형 HTML 문서 개체 모델에서 HTML 원본 액세스'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - managed HTML DOM
 - HTML [Windows Forms], accessing in Windows Forms
 ms.assetid: 53db79fa-8a5e-448e-88c2-f54ace3860b6
-ms.openlocfilehash: b9122e2c5bebdde2e04507973ccfeb924d0ad23e
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 98341270ffdb7788aa5c2713682d7d836bde220e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57723649"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59203264"
 ---
-# <a name="how-to-access-the-html-source-in-the-managed-html-document-object-model"></a>방법: 관리 되는 HTML 문서 개체 모델에서 HTML 원본에 액세스
+# <a name="how-to-access-the-html-source-in-the-managed-html-document-object-model"></a>방법: 관리형 HTML 문서 개체 모델에서 HTML 원본 액세스
 <xref:System.Windows.Forms.WebBrowser.DocumentStream%2A> 컨트롤의 <xref:System.Windows.Forms.WebBrowser.DocumentText%2A> 및 <xref:System.Windows.Forms.WebBrowser> 속성은 현재 문서의 HTML을 처음 표시되었을 때의 상태로 반환합니다. 그러나 <xref:System.Windows.Forms.HtmlElement.AppendChild%2A> 및 <xref:System.Windows.Forms.HtmlElement.InnerHtml%2A>과 같은 메서드 및 속성 호출을 사용하여 페이지를 수정하는 경우 <xref:System.Windows.Forms.WebBrowser.DocumentStream%2A> 및 <xref:System.Windows.Forms.WebBrowser.DocumentText%2A>를 호출해도 해당 변경 내용이 표시되지 않습니다. DOM의 최신 HTML 소스를 가져오려면 HTML 요소에 대해 <xref:System.Windows.Forms.HtmlElement.OuterHtml%2A> 속성을 호출해야 합니다.  
   
  다음 절차에서는 동적 소스를 검색하여 별도의 바로 가기 메뉴에 표시하는 방법을 보여줍니다.  
@@ -46,5 +46,6 @@ ms.locfileid: "57723649"
  검색을 시도하기 전에 항상 <xref:System.Windows.Forms.WebBrowser.Document%2A>의 값을 테스트해야 합니다. 현재 페이지의 로드가 완료되지 않으면 <xref:System.Windows.Forms.WebBrowser.Document%2A> 또는 하나 이상의 해당 자식 개체가 초기화되지 않을 수 있습니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [관리되는 HTML 문서 개체 모델 사용](using-the-managed-html-document-object-model.md)
 - [WebBrowser 컨트롤 개요](webbrowser-control-overview.md)

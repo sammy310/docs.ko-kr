@@ -1,13 +1,13 @@
 ---
-title: <transport>의 <netNamedPipeBinding>
+title: <transport> / <netNamedPipeBinding>
 ms.date: 03/30/2017
 ms.assetid: d9eff52d-4bde-4586-b56a-b0ec24611f8d
-ms.openlocfilehash: 9bcaae68051be2976b97989657efe53cf7a2718a
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: a6d3dd2c24e90bdcdc6520e62dcc1dbe7ce797f9
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55263457"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59199832"
 ---
 # <a name="transport-of-netnamedpipebinding"></a>\<전송 >의 \<netNamedPipeBinding >
 명명된 파이프에 대한 전송 보안 설정을 정의합니다.  
@@ -38,7 +38,7 @@ ms.locfileid: "55263457"
   
 |특성|설명|  
 |---------------|-----------------|  
-|protectionLevel|명명된 파이프의 보호 수준을 정의합니다. 메시지 서명은 메시지 전송 과정에서 제3자가 메시지를 위조할 수 있는 위험을 줄입니다. 암호화는 전송 과정에서 데이터 수준의 개인 정보 보호를 제공합니다. 유효한 값은 다음과 같습니다.<br /><br /> -None. 보호되지 않습니다.<br />기호: 메시지가 서명됩니다.<br />-   EncryptAndSign: 메시지가 암호화되고 서명됩니다.<br /><br /> 기본값은 EncryptAndSign입니다.|  
+|protectionLevel|명명된 파이프의 보호 수준을 정의합니다. 메시지에 서명하면 전송 중인 메시지를 제3자가 손상할 위험을 줄일 수 있습니다. 암호화는 전송 중에 데이터 수준에서 개인 정보를 보호합니다. 유효한 값은 다음과 같습니다.<br /><br /> -None. 보호되지 않습니다.<br />기호: 메시지가 서명됩니다.<br />-   EncryptAndSign: 메시지가 암호화되고 서명됩니다.<br /><br /> 기본값은 EncryptAndSign입니다.|  
   
 ### <a name="child-elements"></a>자식 요소  
  없음  
@@ -50,6 +50,7 @@ ms.locfileid: "55263457"
 |[\<security>](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-netnamedpipebinding.md)|바인딩에 대한 보안 설정을 정의합니다.|  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.ServiceModel.NamedPipeTransportSecurity>
 - <xref:System.ServiceModel.Configuration.NetNamedPipeSecurityElement.Transport%2A>
 - <xref:System.ServiceModel.NetNamedPipeSecurity.Transport%2A>

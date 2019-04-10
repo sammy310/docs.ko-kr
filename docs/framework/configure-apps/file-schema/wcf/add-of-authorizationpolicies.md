@@ -1,16 +1,16 @@
 ---
-title: <add>의 <authorizationPolicies>
+title: <add> / <authorizationPolicies>
 ms.date: 03/30/2017
 ms.assetid: 613a03d8-4384-4556-bce2-8c23286c0bb0
-ms.openlocfilehash: 6a1a7d6b1ef9732e015536d8a78c058fe348113f
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 532f7f1a74cb3af24d7a1bc26046be901f3cf025
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55255499"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59205240"
 ---
 # <a name="add-of-authorizationpolicies"></a>\<추가 >의 \<authorizationPolicies >
-클레임 변형에 대한 권한 부여 정책을 지정합니다.  
+클레임 변환에 대한 권한 부여 정책을 지정합니다.  
   
  \<system.ServiceModel>  
 \<behaviors>  
@@ -52,6 +52,7 @@ ms.locfileid: "55255499"
  각 인증 정책에는 문자열에 해당하는 단일 필수 `policyType` 특성이 포함되어 있습니다. 이 특성은 한 입력 클레임 집합을 다른 클레임 집합으로 변환할 수 있도록 하는 인증 정책을 지정합니다. 그에 따라 액세스 제어가 부여되거나 거부됩니다. 권한 부여 정책이 작동 하는 방법에 대 한 자세한 내용은 참조 하세요. <xref:System.IdentityModel.Policy.IAuthorizationPolicy> 하 고 [권한 부여 정책](../../../../../docs/framework/wcf/samples/authorization-policy.md)합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.ServiceModel.Configuration.ServiceAuthorizationElement>
 - <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior.ExternalAuthorizationPolicies%2A>
 - <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior>
@@ -59,7 +60,7 @@ ms.locfileid: "55255499"
 - <xref:System.ServiceModel.Configuration.ServiceAuthorizationElement.AuthorizationPolicies%2A>
 - <xref:System.ServiceModel.Configuration.AuthorizationPolicyTypeElementCollection>
 - <xref:System.IdentityModel.Policy.IAuthorizationPolicy>
-- [서비스 작업에 대한 액세스 승인](../../../../../docs/framework/wcf/samples/authorizing-access-to-service-operations.md)
-- [방법: 서비스에 대 한 사용자 지정 권한 부여 관리자 만들기](../../../../../docs/framework/wcf/extending/how-to-create-a-custom-authorization-manager-for-a-service.md)
+- [Authorizing Access to Service Operations](../../../../../docs/framework/wcf/samples/authorizing-access-to-service-operations.md)
+- [방법: 서비스에 대한 사용자 지정 권한 부여 관리자 만들기](../../../../../docs/framework/wcf/extending/how-to-create-a-custom-authorization-manager-for-a-service.md)
 - [\<add>](../../../../../docs/framework/configure-apps/file-schema/wcf/add-of-authorizationpolicies.md)
 - [권한 부여 정책](../../../../../docs/framework/wcf/samples/authorization-policy.md)

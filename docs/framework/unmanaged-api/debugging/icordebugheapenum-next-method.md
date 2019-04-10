@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3a9e423a35ba8c592bbfd806f9087a88ee251e76
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 4bd993eb26f26818117a20d376c3331f88c46b26
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57502289"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59214353"
 ---
 # <a name="icordebugheapenumnext-method"></a>ICorDebugHeapEnum::Next 메서드
 지정 된 개수를 가져옵니다 [COR_HEAPOBJECT](../../../../docs/framework/unmanaged-api/debugging/cor-heapobject-structure.md) 관리 되는 힙의 개체에 대 한 정보가 포함 된 인스턴스.  
@@ -59,5 +59,6 @@ HRESULT Next(
  **.NET Framework 버전:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
 ## <a name="see-also"></a>참고자료
+
 - [ICorDebugHeapEnum 인터페이스](../../../../docs/framework/unmanaged-api/debugging/icordebugheapenum-interface.md)
 - [디버깅 인터페이스](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

@@ -2,12 +2,12 @@
 title: SQL Server에서 쿼리 알림
 ms.date: 03/30/2017
 ms.assetid: 0f0ba1a1-3180-4af8-87f7-c795dc8f8f55
-ms.openlocfilehash: 166471658ccd1ef48db2ac1647f74ea696f3263d
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
-ms.translationtype: MT
+ms.openlocfilehash: 2a564ba1e06741523b9b3a005be86b13339889ec
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56092295"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59203680"
 ---
 # <a name="query-notifications-in-sql-server"></a>SQL Server에서 쿼리 알림
 쿼리 알림은 Service Broker 인프라를 기반으로 하며 데이터가 변경된 경우 응용 프로그램에 이를 알릴 수 있습니다. 이 기능은 웹 응용 프로그램 같이 데이터베이스의 정보 캐시를 제공하고 원본 데이터가 변경되면 알림을 받아야 하는 응용 프로그램에 매우 유용합니다.  
@@ -30,9 +30,9 @@ ms.locfileid: "56092295"
   
 -   [쿼리 알림 사용](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/ms175110(v=sql.105))  
   
--   [알림에 대 한 쿼리 만들기](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/ms181122(v=sql.105))  
+-   [알림에 대한 쿼리 만들기](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/ms181122(v=sql.105))  
   
--   [개발 (Service Broker)](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/bb522889(v=sql.105))  
+-   [Developer's Guide (Service Broker)](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/bb522889(v=sql.105))  
   
 -   [Service Broker 개발자 정보 센터](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/ms166100(v=sql.105))  
   
@@ -42,7 +42,7 @@ ms.locfileid: "56092295"
  [쿼리 알림 사용](../../../../../docs/framework/data/adonet/sql/enabling-query-notifications.md)  
  쿼리 알림 활성화 및 사용에 필요한 요구 사항 등 쿼리 알림 사용 방법을 설명합니다.  
   
- [ASP.NET 애플리케이션의 SqlDependency](../../../../../docs/framework/data/adonet/sql/sqldependency-in-an-aspnet-app.md)  
+ [ASP.NET 응용 프로그램에서 SqlDependency](../../../../../docs/framework/data/adonet/sql/sqldependency-in-an-aspnet-app.md)  
  ASP.NET 응용 프로그램에서 쿼리 알림을 사용하는 방법에 대해 설명합니다.  
   
  [SqlDependency로 변경 내용 감지](../../../../../docs/framework/data/adonet/sql/detecting-changes-with-sqldependency.md)  
@@ -53,16 +53,15 @@ ms.locfileid: "56092295"
   
 ## <a name="reference"></a>참조  
  <xref:System.Data.Sql.SqlNotificationRequest>  
- 
-  <xref:System.Data.Sql.SqlNotificationRequest> 클래스와 해당 멤버 전체에 대해 설명합니다.  
+ <xref:System.Data.Sql.SqlNotificationRequest> 클래스와 해당 멤버 전체에 대해 설명합니다.  
   
  <xref:System.Data.SqlClient.SqlDependency>  
  <xref:System.Data.SqlClient.SqlDependency> 클래스와 해당 멤버 전체에 대해 설명합니다.  
   
  <xref:System.Web.Caching.SqlCacheDependency>  
- 
-  <xref:System.Web.Caching.SqlCacheDependency> 클래스와 해당 멤버 전체에 대해 설명합니다.  
+ <xref:System.Web.Caching.SqlCacheDependency> 클래스와 해당 멤버 전체에 대해 설명합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [SQL Server 및 ADO.NET](../../../../../docs/framework/data/adonet/sql/index.md)
 - [ADO.NET 관리되는 공급자 및 데이터 집합 개발자 센터](https://go.microsoft.com/fwlink/?LinkId=217917)

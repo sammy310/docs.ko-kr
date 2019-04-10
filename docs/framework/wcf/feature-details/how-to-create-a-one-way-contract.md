@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 85084cd9-31cc-4e95-b667-42ef01336622
-ms.openlocfilehash: f7636d7013c236e0c51e5326a84ae47f2f98e283
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: a4996dc963c572e2aeb14b9b366af33b8f23d480
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54693625"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59208659"
 ---
 # <a name="how-to-create-a-one-way-contract"></a>방법: 단방향 계약 만들기
 이 항목에서는 단방향 계약을 사용하는 메서드를 만드는 기본 단계를 보여 줍니다. 이러한 메서드는 클라이언트에서 Windows Communication Foundation (WCF) 서비스에서 작업을 호출 하지만 회신을 기대 하지 않습니다. 이러한 형식의 계약은 예를 들어 여러 구독자에게 알림을 게시하는 데 사용될 수 있습니다. 또한 이중(양방향) 계약을 만들 때 단방향 계약을 사용할 수 있으며 이를 통해 클라이언트 및 서버가 각각 독립적으로 통신하므로 서로 호출을 시작할 수 있습니다. 특히 이 기능을 통해 서버는 클라이언트가 이벤트로 처리할 수 있는 클라이언트에 대한 단방향 호출을 만들 수 있습니다. 단방향 메서드 지정에 대한 자세한 내용은 <xref:System.ServiceModel.OperationContractAttribute.IsOneWay%2A> 속성 및 <xref:System.ServiceModel.OperationContractAttribute> 클래스를 참조하십시오.  
@@ -32,6 +32,7 @@ ms.locfileid: "54693625"
  [!code-vb[S_Service_Session#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/s_service_session/vb/service.vb#1)]  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.ServiceModel.ServiceContractAttribute>
 - <xref:System.ServiceModel.OperationContractAttribute>
 - [서비스 디자인 및 구현](../../../../docs/framework/wcf/designing-and-implementing-services.md)

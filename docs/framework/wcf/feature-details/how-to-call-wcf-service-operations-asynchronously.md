@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 0face17f-43ca-417b-9b33-737c0fc360df
-ms.openlocfilehash: 19b09c9ec789419f2774207b051b8ee488b6725d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 9a7bd1d67d9730c75e3f3f3b1eeb59f5d2d3c49a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54625551"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59204837"
 ---
 # <a name="how-to-call-wcf-service-operations-asynchronously"></a>방법: WCF 서비스 작업을 비동기적으로 호출
 이 항목에서는 클라이언트에서 서비스 작업에 비동기적으로 액세스하는 방법에 대해 설명합니다. 이 항목에서 설명하는 서비스에서는 `ICalculator` 인터페이스를 구현합니다. 클라이언트는 이벤트 구동 비동기 호출 모델을 사용하여 이 인터페이스에서 작업을 비동기적으로 호출할 수 있습니다. (이벤트 기반 비동기 호출 모델에 대 한 자세한 내용은 참조 하세요. [이벤트 기반 비동기 패턴을 사용한 다중 스레드 프로그래밍](https://go.microsoft.com/fwlink/?LinkId=248184)). 서비스에서 작업을 비동기적으로 구현 하는 방법을 보여 주는 예제를 참조 하세요. [방법: 비동기 서비스 작업 구현](../../../../docs/framework/wcf/how-to-implement-an-asynchronous-service-operation.md)합니다. 동기 및 비동기 작업에 대 한 자세한 내용은 참조 하세요. [동기 및 비동기 작업](../../../../docs/framework/wcf/synchronous-and-asynchronous-operations.md)합니다.  
@@ -64,4 +64,5 @@ ms.locfileid: "54625551"
  [!code-vb[EventAsync#6](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/eventasync/vb/client.vb#6)]  
   
 ## <a name="see-also"></a>참고자료
+
 - [방법: 비동기 서비스 작업 구현](../../../../docs/framework/wcf/how-to-implement-an-asynchronous-service-operation.md)

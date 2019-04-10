@@ -2,12 +2,12 @@
 title: 숫자 및 비교 연산자
 ms.date: 03/30/2017
 ms.assetid: 25b4a26a-06f2-4f80-87a9-76705ed46197
-ms.openlocfilehash: e2bdc55cd6c2203bc96d0766e5e53a57294d4d7e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9b31fd2d819afbb1e589ad74f23ec139830c68b8
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54554714"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59212169"
 ---
 # <a name="numeric-and-comparison-operators"></a>숫자 및 비교 연산자
 산술 및 비교 연산자는 CLR(공용 언어 런타임) 예외에서 다음과 같이 예상대로 동작합니다.  
@@ -19,13 +19,13 @@ ms.locfileid: "54554714"
 -   증가 및 감소 연산자를 SQL에서 복제할 수 없는 식에 사용하면 예기치 않은 결과가 발생할 수 있기 때문에 두 연산자는 지원되지 않습니다.  
   
 ## <a name="supported-operators"></a>지원되는 연산자  
- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]에서는 다음 연산자를 지원합니다.  
+ [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 다음 연산자를 지원합니다.  
   
 -   기본 산술 연산자:  
   
     -   `+`  
   
-    -   `-`(빼기)  
+    -   `-` (빼기)  
   
     -   `*`  
   
@@ -33,13 +33,13 @@ ms.locfileid: "54554714"
   
     -   `\`(Visual Basic 정수 나누기)  
   
-    -   `%`(Visual Basic `Mod`)  
+    -   `%` (Visual Basic `Mod`)  
   
     -   `<<`  
   
     -   `>>`  
   
-    -   `-`(단항 부정 연산자)  
+    -   `-` (단항 부정 연산자)  
   
 -   기본 비교 연산자:  
   
@@ -58,6 +58,7 @@ ms.locfileid: "54554714"
     -   `>=`  
   
 ## <a name="see-also"></a>참고자료
+
 - [데이터 형식 및 함수](../../../../../../docs/framework/data/adonet/sql/linq/data-types-and-functions.md)
 - [C# 연산자](../../../../../../docs/csharp/language-reference/operators/index.md)
 - [연산자](../../../../../visual-basic/language-reference/operators/index.md)

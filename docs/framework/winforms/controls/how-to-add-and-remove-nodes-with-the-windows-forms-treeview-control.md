@@ -1,5 +1,5 @@
 ---
-title: '방법: 추가 하 고 Windows Forms TreeView 컨트롤을 사용 하 여 노드를 제거 합니다.'
+title: '방법: Windows Forms TreeView 컨트롤을 사용하여 노드 추가 및 제거'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - tree nodes in TreeView control
 - TreeView control [Windows Forms], adding nodes
 ms.assetid: de1b82db-4905-449a-9f59-af271a6b6673
-ms.openlocfilehash: d0a77f55e28055ef097f0b4604c316f7751abdbe
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 1849e3ae88b9805f74b2f792ad53b02aa87e6569
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57702687"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59209517"
 ---
-# <a name="how-to-add-and-remove-nodes-with-the-windows-forms-treeview-control"></a>방법: 추가 하 고 Windows Forms TreeView 컨트롤을 사용 하 여 노드를 제거 합니다.
+# <a name="how-to-add-and-remove-nodes-with-the-windows-forms-treeview-control"></a>방법: Windows Forms TreeView 컨트롤을 사용하여 노드 추가 및 제거
 Windows Forms <xref:System.Windows.Forms.TreeView> 컨트롤의 최상위 노드를 저장 합니다. 해당 <xref:System.Windows.Forms.TreeView.Nodes%2A> 컬렉션입니다. 각 <xref:System.Windows.Forms.TreeNode> 역시 자체 <xref:System.Windows.Forms.TreeNode.Nodes%2A> 해당 자식 노드를 저장 하는 컬렉션입니다. 두 컬렉션 속성은 <xref:System.Windows.Forms.TreeNodeCollection>를 추가할 수 있도록 하는 표준 컬렉션 멤버를 제거 및 단일 노드 계층 구조 수준에서 노드를 다시 정렬 제공 합니다.  
   
 ### <a name="to-add-nodes-programmatically"></a>프로그래밍 방식으로 노드를 추가 하려면  
@@ -71,9 +71,10 @@ Windows Forms <xref:System.Windows.Forms.TreeView> 컨트롤의 최상위 노드
     ```  
   
 ## <a name="see-also"></a>참고자료
+
 - [TreeView 컨트롤](treeview-control-windows-forms.md)
 - [TreeView 컨트롤 개요](treeview-control-overview-windows-forms.md)
-- [방법: Windows Forms TreeView 컨트롤의 아이콘 설정](how-to-set-icons-for-the-windows-forms-treeview-control.md)
-- [방법: Windows Forms TreeView 컨트롤의 노드 전체 반복](how-to-iterate-through-all-nodes-of-a-windows-forms-treeview-control.md)
-- [방법: 클릭 한 TreeView 노드 확인](how-to-determine-which-treeview-node-was-clicked-windows-forms.md)
-- [방법: TreeView 또는 ListView 컨트롤 (Windows Forms)에 사용자 지정 정보 추가](add-custom-information-to-a-treeview-or-listview-control-wf.md)
+- [방법: Windows Forms TreeView 컨트롤에 대한 아이콘 설정](how-to-set-icons-for-the-windows-forms-treeview-control.md)
+- [방법: Windows Forms TreeView 컨트롤의 모든 노드 반복](how-to-iterate-through-all-nodes-of-a-windows-forms-treeview-control.md)
+- [방법: 클릭한 TreeView 노드 확인](how-to-determine-which-treeview-node-was-clicked-windows-forms.md)
+- [방법: TreeView 또는 ListView 컨트롤에 사용자 지정 정보 추가(Windows Forms)](add-custom-information-to-a-treeview-or-listview-control-wf.md)

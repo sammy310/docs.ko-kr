@@ -10,12 +10,12 @@ helpviewer_keywords:
 - print jobs [WPF], troubleshooting
 - print jobs [WPF], diagnosing problems
 ms.assetid: b081a170-84c6-48f9-a487-5766a8d58a82
-ms.openlocfilehash: babd601bb29fc2aa9c906921082a18942f6649c0
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: MT
+ms.openlocfilehash: 3c21798527df15730a62c04422ecd9e57b74abe7
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57369710"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59211044"
 ---
 # <a name="how-to-diagnose-problematic-print-job"></a>방법: 인쇄 작업 문제 진단
 네트워크 관리자는 사용자로부터 인쇄 작업이 인쇄되지 않거나 느리게 인쇄되는 문제에 대한 불만을 흔히 처리합니다. 다양 한 인쇄 작업 속성에서 노출 된 [!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)] Microsoft.NET Framework의 인쇄 작업의 신속한 원격 진단을 수행 하기 위한 수단을 제공 합니다.  
@@ -82,10 +82,11 @@ ms.locfileid: "57369710"
  [!code-vb[DiagnoseProblematicPrintJob#HandlePausedJob](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/visualbasic/program.vb#handlepausedjob)]  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Printing.PrintJobStatus>
 - <xref:System.Printing.PrintSystemJobInfo>
 - <xref:System.FlagsAttribute>
 - <xref:System.Printing.PrintQueue>
-- [& 연산자 (C# 참조)](~/docs/csharp/language-reference/operators/and-operator.md)
+- [& 연산자(C# 참조)](~/docs/csharp/language-reference/operators/and-operator.md)
 - [WPF의 문서](documents-in-wpf.md)
 - [인쇄 개요](printing-overview.md)

@@ -2,12 +2,12 @@
 title: <identity>
 ms.date: 03/30/2017
 ms.assetid: c1d2ae56-e231-4a07-9c3f-9f13381dc0d8
-ms.openlocfilehash: 5b5248f4cb8bdcd15b553fa14351013e78d422d9
-ms.sourcegitcommit: b8ace47d839f943f785b89e2fff8092b0bf8f565
+ms.openlocfilehash: 0f5eace346fd0ed2c0532fb602585c4593d97291
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "55675402"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59220359"
 ---
 # <a name="identity"></a>\<identity>
 ID 요소를 사용하면 클라이언트 개발자가 서비스에 필요한 ID를 디자인 타임에 지정할 수 있습니다. 클라이언트와 서비스 간의 핸드셰이크 프로세스에서 Windows Communication Foundation (WCF) 인프라는 되도록 예상 되는 서비스가이 요소의 값과 일치의 id 및 인증 될 수 있습니다. 자세한 내용은 [서비스 Id 및 인증](../../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)합니다.  
@@ -43,7 +43,7 @@ ID 요소를 사용하면 클라이언트 개발자가 서비스에 필요한 ID
   
 |요소|설명|  
 |-------------|-----------------|  
-|certificate|X.509 인증서의 설정을 지정합니다. 이 요소는 <xref:System.ServiceModel.Configuration.CertificateElement> 형식입니다. 이 요소에는 이 인증서로 인코딩된 값을 지정하는 문자열인 `encodedValue` 특성이 포함되어 있습니다.|  
+|인증서|X.509 인증서의 설정을 지정합니다. 이 요소는 <xref:System.ServiceModel.Configuration.CertificateElement> 형식입니다. 이 요소에는 이 인증서로 인코딩된 값을 지정하는 문자열인 `encodedValue` 특성이 포함되어 있습니다.|  
 |certificateReference|X.509 인증서 유효성 검사의 설정을 지정합니다. 이 요소는 <xref:System.ServiceModel.Configuration.CertificateReferenceElement> 형식입니다.|  
 |dns|서비스를 인증하는 데 사용되는 X.509 인증서의 DNS를 지정합니다. 이 요소에는 문자열인 `value` 특성이 포함되며 실제 ID가 포함됩니다.|  
 |rsa|클라이언트에 서비스를 인증하는 데 사용되는 X.509 인증서의 RSA 필드 값을 지정합니다. 이 요소에는 문자열인 `value` 특성이 포함되며 실제 ID가 포함됩니다.|  
@@ -63,8 +63,9 @@ ID 요소를 사용하면 클라이언트 개발자가 서비스에 필요한 ID
 |[\<localIssuer>](../../../../../docs/framework/configure-apps/file-schema/wcf/localissuer.md)|로컬 STS(보안 토큰 서비스)를 지정합니다.|  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.ServiceModel.Configuration.IdentityElement>
 - <xref:System.ServiceModel.EndpointAddress>
 - <xref:System.ServiceModel.EndpointAddress.Identity%2A>
 - [서비스 ID 및 인증](../../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)
-- [끝점: 주소, 바인딩 및 계약](../../../../../docs/framework/wcf/feature-details/endpoints-addresses-bindings-and-contracts.md)
+- [엔드포인트: 주소, 바인딩 및 계약](../../../../../docs/framework/wcf/feature-details/endpoints-addresses-bindings-and-contracts.md)

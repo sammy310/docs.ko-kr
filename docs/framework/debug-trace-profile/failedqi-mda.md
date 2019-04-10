@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 902dc863-34b3-477c-b433-b8a6bb6133c6
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9a3338595e8b541fcda93b091eeddf17919a483c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0ac478644561d2aab13d10811987d8d02c8d7608
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54614395"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59217629"
 ---
 # <a name="failedqi-mda"></a>failedQI MDA
 `failedQI` MDA(관리 디버깅 도우미)는 런타임이 RCW(런타임 호출 가능 래퍼)를 대신하여 COM 인터페이스 포인터에서 `QueryInterface`를 호출할 때 활성화되며 `QueryInterface` 호출이 실패합니다.  
@@ -40,7 +40,7 @@ ms.locfileid: "54614395"
 ## <a name="output"></a>출력  
  인터페이스의 관리되는 이름, 인터페이스의 GUID 및 실패 HRESULT입니다.  
   
-## <a name="configuration"></a>구성하기  
+## <a name="configuration"></a>구성  
   
 ```xml  
 <mdaConfig>  
@@ -51,6 +51,7 @@ ms.locfileid: "54614395"
 ```  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Runtime.InteropServices.MarshalAsAttribute>
 - [관리 디버깅 도우미를 사용하여 오류 진단](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
-- [interop 마샬링](../../../docs/framework/interop/interop-marshaling.md)
+- [Interop 마샬링](../../../docs/framework/interop/interop-marshaling.md)

@@ -1,17 +1,17 @@
 ---
-title: '연습: 데이터 조작 (Visual Basic)'
+title: '연습: 데이터 조작(Visual Basic)'
 ms.date: 03/30/2017
 dev_langs:
 - vb
 ms.assetid: 1f6a54f6-ec33-452a-a37d-48122207bf14
-ms.openlocfilehash: 0eab5fe5c9455badb7f538307cb827391b254a95
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 34049f113ce9da0ed1c4cc63fd53093a0775bbad
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54626929"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59208308"
 ---
-# <a name="walkthrough-manipulating-data-visual-basic"></a>연습: 데이터 조작 (Visual Basic)
+# <a name="walkthrough-manipulating-data-visual-basic"></a>연습: 데이터 조작(Visual Basic)
 이 연습에서는 데이터베이스의 데이터를 추가, 수정 및 삭제하기 위한 기본 종단 간 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 시나리오를 제공합니다. Northwind 샘플 데이터베이스의 복사본을 사용하여 고객을 추가하고, 고객의 이름을 변경하고, 주문을 삭제합니다.  
   
  [!INCLUDE[note_settings_general](../../../../../../includes/note-settings-general-md.md)]  
@@ -187,4 +187,5 @@ ms.locfileid: "54626929"
 >  변경 내용을 전송하여 새 고객을 추가한 후에는 동일한 고객을 있는 그대로 다시 추가할 수 없으므로 이 솔루션을 있는 그대로 다시 실행할 수 없습니다. 솔루션을 다시 실행하려면 추가할 고객 ID의 값을 변경합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [연습으로 학습](../../../../../../docs/framework/data/adonet/sql/linq/learning-by-walkthroughs.md)

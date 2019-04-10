@@ -6,12 +6,12 @@ helpviewer_keywords:
 - ExpandCollapse control pattern
 - control patterns, ExpandCollapse
 ms.assetid: 1dbabb8c-0d68-47c1-a35e-1c01cb01af26
-ms.openlocfilehash: ddc2219b0ef6593b6bfa9ab40936cc7b0fff120b
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: ff07f5264ccb3ec699e3676a2e9ba64443b2875f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57678386"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59211662"
 ---
 # <a name="implementing-the-ui-automation-expandcollapse-control-pattern"></a>UI 자동화 ExpandCollapse 컨트롤 패턴 구현
 > [!NOTE]
@@ -32,7 +32,7 @@ ms.locfileid: "57678386"
   
 -   컨트롤의 <xref:System.Windows.Automation.ExpandCollapseState> 가 <xref:System.Windows.Automation.ExpandCollapseState.LeafNode>로 설정되어 있으면 모든 <xref:System.Windows.Automation.ExpandCollapsePattern> 기능이 컨트롤에 대해 비활성화되고 이 컨트롤 패턴을 사용하여 가져올 수 있는 유일한 정보는 <xref:System.Windows.Automation.ExpandCollapseState>입니다. 나중에 자식 개체를 추가하면 <xref:System.Windows.Automation.ExpandCollapseState> 가 변경되고 <xref:System.Windows.Automation.ExpandCollapsePattern> 기능이 활성화됩니다.  
   
--   <xref:System.Windows.Automation.ExpandCollapseState> 는 직계 자식 개체의 표시 유형을 나타내며, 모든 하위 개체의 표시 유형을 나타내지는 않습니다.  
+-   <xref:System.Windows.Automation.ExpandCollapseState> 만; 직계 자식 개체의 표시 유형을 참조합니다. 모든 하위 개체의 표시 유형을 참조 하지 않습니다.  
   
 -   확장 및 축소는 컨트롤 관련 기능입니다. 다음은 이 동작의 예입니다.  
   
@@ -64,9 +64,10 @@ ms.locfileid: "57678386"
 |<xref:System.InvalidOperationException>|중 하나 <xref:System.Windows.Automation.ExpandCollapsePattern.Expand%2A> 나 <xref:System.Windows.Automation.ExpandCollapsePattern.Collapse%2A> 될 때 호출 되는 <xref:System.Windows.Automation.ExpandCollapseState>  =  <xref:System.Windows.Automation.ExpandCollapseState.LeafNode>합니다.|  
   
 ## <a name="see-also"></a>참고자료
+
 - [UI 자동화 컨트롤 패턴 개요](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)
 - [UI 자동화 공급자의 컨트롤 패턴 지원](../../../docs/framework/ui-automation/support-control-patterns-in-a-ui-automation-provider.md)
 - [클라이언트용 UI 자동화 컨트롤 패턴](../../../docs/framework/ui-automation/ui-automation-control-patterns-for-clients.md)
 - [TreeWalker를 사용하여 UI 자동화 요소 간 탐색](../../../docs/framework/ui-automation/navigate-among-ui-automation-elements-with-treewalker.md)
 - [UI 자동화 트리 개요](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)
-- [UI 자동화의 캐싱 사용](../../../docs/framework/ui-automation/use-caching-in-ui-automation.md)
+- [UI 자동화에서 캐싱 사용](../../../docs/framework/ui-automation/use-caching-in-ui-automation.md)

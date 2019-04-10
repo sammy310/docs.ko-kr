@@ -2,12 +2,12 @@
 title: <binaryMessageEncoding>
 ms.date: 03/30/2017
 ms.assetid: e4ae3cd4-6b67-4ce1-af4b-9400e0a38dba
-ms.openlocfilehash: b6914a195ba0e1934f7a586f5f6bae703a4bb1f9
-ms.sourcegitcommit: b8ace47d839f943f785b89e2fff8092b0bf8f565
+ms.openlocfilehash: e02ed6ef79fcf52bbe9c33bd9b36a14113e19d1d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "55675324"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59228382"
 ---
 # <a name="binarymessageencoding"></a>\<binaryMessageEncoding>
 통신 중에 WCF(Windows Communication Foundation) 메시지를 이진 형식으로 인코딩하는 이진 메시지 인코더를 정의합니다.  
@@ -65,6 +65,7 @@ ms.locfileid: "55675324"
 ```  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.ServiceModel.Configuration.BinaryMessageEncodingElement>
 - <xref:System.ServiceModel.Channels.CustomBinding>
 - <xref:System.ServiceModel.Channels.MessageEncodingBindingElement>
@@ -72,6 +73,6 @@ ms.locfileid: "55675324"
 - [메시지 인코딩](../../../../../docs/framework/configure-apps/file-schema/wcf/message-encoding.md)
 - [메시지 인코더 선택](../../../../../docs/framework/wcf/feature-details/choosing-a-message-encoder.md)
 - [바인딩](../../../../../docs/framework/wcf/bindings.md)
-- [바인딩 확장](../../../../../docs/framework/wcf/extending/extending-bindings.md)
+- [바인딩 확장명](../../../../../docs/framework/wcf/extending/extending-bindings.md)
 - [사용자 지정 바인딩](../../../../../docs/framework/wcf/extending/custom-bindings.md)
 - [\<customBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)

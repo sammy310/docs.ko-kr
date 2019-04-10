@@ -8,12 +8,12 @@ helpviewer_keywords:
 - dynamic properties
 - user preferences [Windows Forms], tracking
 ms.assetid: 0dd8bca5-a6bf-4ac4-8eec-5725d08b38dc
-ms.openlocfilehash: eac8c932e9f661933f943a507485a170dc6b6132
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: b603e81a342652a6639f54a78fb998cda5fdc35a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57713066"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59203628"
 ---
 # <a name="application-settings-overview"></a>애플리케이션 설정 개요
 이 항목은 애플리케이션 및 사용자를 대신하여 설정 데이터를 만들고 저장하는 방법을 설명합니다.  
@@ -48,13 +48,14 @@ ms.locfileid: "57713066"
  <xref:System.Windows.Forms.Binding> 클래스를 사용하여 프로그래밍 방식으로 폼과 컨트롤의 속성에 설정을 바인딩할 수도 있습니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Configuration.ApplicationSettingsBase>
 - <xref:System.Configuration.SettingsProvider>
 - <xref:System.Configuration.LocalFileSettingsProvider>
 - <xref:System.Configuration.IPersistComponentSettings>
-- [방법: 응용 프로그램 설정 유효성 검사](how-to-validate-application-settings.md)
-- [응용 프로그램 설정 관리(.NET)](/visualstudio/ide/managing-application-settings-dotnet)
-- [방법: 사용 하 여 런타임에 설정 읽기C#](how-to-read-settings-at-run-time-with-csharp.md)
+- [방법: 애플리케이션 설정 업데이트](how-to-validate-application-settings.md)
+- [애플리케이션 설정 관리(.NET)](/visualstudio/ide/managing-application-settings-dotnet)
+- [방법: C#을 사용하여 런타임에 설정 읽기](how-to-read-settings-at-run-time-with-csharp.md)
 - [응용 프로그램 설정 및 사용자 설정 사용](using-application-settings-and-user-settings.md)
-- [응용 프로그램 설정 아키텍처](application-settings-architecture.md)
-- [사용자 지정 컨트롤에 대한 응용 프로그램 설정](application-settings-for-custom-controls.md)
+- [애플리케이션 설정 아키텍처](application-settings-architecture.md)
+- [사용자 지정 컨트롤에 대한 애플리케이션 설정](application-settings-for-custom-controls.md)

@@ -2,12 +2,12 @@
 title: Windows Communication Foundation 샘플 실행
 ms.date: 03/30/2017
 ms.assetid: db8a83da-95c1-4a21-a9d2-48caeb6398ea
-ms.openlocfilehash: aec7d7f9ce0a6db5d20bce47ab313f4248e86c88
-ms.sourcegitcommit: bef803e2025642df39f2f1e046767d89031e0304
-ms.translationtype: MT
+ms.openlocfilehash: 32925caccee08c27e023d7ffae992e38cb496868
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56304676"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59209218"
 ---
 # <a name="running-the-windows-communication-foundation-samples"></a>Windows Communication Foundation 샘플 실행
 Windows Communication Foundation (WCF) 샘플 단일 컴퓨터 또는 다중 컴퓨터 구성에서 실행할 수 있습니다. 샘플은 단일 컴퓨터 구성에서 실행할 준비가 된 상태로 제공됩니다. 다중 컴퓨터 구성에서는 샘플의 구성 파일 설정을 수정해야 합니다. 다음 절차에서는 단일 컴퓨터 및 다중 컴퓨터 구성에서 샘플을 실행하는 방법에 대해 설명합니다. IIS(인터넷 정보 서비스) 및 자체 호스팅 샘플에서 호스트되는 서비스에 적용되는 단계가 약간씩 다릅니다. 대부분의 샘플은 IIS에서 호스트됩니다. 이러한 샘플이 호스트되는 방법에 대한 자세한 내용은 샘플 추가 정보를 참조하세요.  
@@ -43,15 +43,15 @@ Windows Communication Foundation (WCF) 샘플 단일 컴퓨터 또는 다중 컴
   
     2.  언어별 폴더의 \service\bin\ 폴더에서 서비스 컴퓨터로 서비스 프로그램 파일을 복사합니다.  
   
-    3.  서비스 구성 파일에서 끝점 정의의 주소 값을 서비스의 새 주소와 일치하도록 변경합니다. 주소에서 "localhost"에 대한 참조를 정규화된 도메인 이름으로 바꿉니다.  
+    3.  서비스 구성 파일에서 엔드포인트 정의의 주소 값을 서비스의 새 주소와 일치하도록 변경합니다. 주소에서 "localhost"에 대한 참조를 정규화된 도메인 이름으로 바꿉니다.  
   
     4.  명령 프롬프트에서 Service.exe를 실행합니다.  
   
 2.  언어별 폴더의 \client\bin\ 폴더에서 클라이언트 컴퓨터로 클라이언트 프로그램 파일을 복사합니다.  
   
-3.  끝점 주소를 설정합니다.  
+3.  엔드포인트 주소를 설정합니다.  
   
-    1.  서비스가 도메인 계정으로 실행 중이 아닌 경우 클라이언트 구성 파일을 열고 끝점 정의의 주소 값을 서비스의 새 주소와 일치하도록 변경합니다. 주소에서 "localhost"에 대한 참조를 정규화된 도메인 이름으로 바꿉니다.  
+    1.  서비스가 도메인 계정으로 실행 중이 아닌 경우 클라이언트 구성 파일을 열고 엔드포인트 정의의 주소 값을 서비스의 새 주소와 일치하도록 변경합니다. 주소에서 "localhost"에 대한 참조를 정규화된 도메인 이름으로 바꿉니다.  
   
     2.  서비스가 도메인 계정으로 실행 중인 경우 서비스에 대해 Svcutil.exe를 실행하여 클라이언트 구성을 다시 생성합니다. Svcutil.exe를 실행 하는 방법에 대 한 자세한 내용은 참조 하세요. [Building Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)합니다. 샘플의 구성 파일 대신에 생성된 파일을 사용합니다. 생성된 구성 파일에는 추가 ID 정보가 포함되어 있고 기본 설정이기는 하지만 서비스 엔드포인트에 연결하는 데 필요한 모든 설정이 포함되어 있습니다. Id 정보에 대 한 자세한 내용은 참조 하세요. [서비스 Id 및 인증](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md), 및 [ \<identity >](../../../../docs/framework/configure-apps/file-schema/wcf/identity.md)합니다.  
   
@@ -80,5 +80,6 @@ Windows Communication Foundation (WCF) 샘플 단일 컴퓨터 또는 다중 컴
 -   보안을 위해 서비스가 IIS에서 호스트될 경우 샘플 사용이 끝나면 설정 단계에서 부여된 가상 디렉터리 정의와 사용 권한을 제거합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [Windows Communication Foundation 샘플 빌드](../../../../docs/framework/wcf/samples/building-the-samples.md)
 - [WCF 샘플에 대 한 문제 해결 팁](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))

@@ -1,5 +1,5 @@
 ---
-title: '방법: 캐시 된 요소를 브러시로 사용'
+title: '방법: 캐시된 요소를 브러시로 사용'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - BitmapCache [WPF], using
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - BitmapCacheBrush [WPF], using
 - CacheMode [WPF], using
 ms.assetid: d36e944a-866e-4baf-98c4-fd6a75f6fdd0
-ms.openlocfilehash: 008bec87390a807ae2b4797af8b86aaf59c92ef5
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 78df242c7f00b69e36ea4ab6751f51509d9e2220
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57372492"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59229370"
 ---
-# <a name="how-to-use-a-cached-element-as-a-brush"></a>방법: 캐시 된 요소를 브러시로 사용
+# <a name="how-to-use-a-cached-element-as-a-brush"></a>방법: 캐시된 요소를 브러시로 사용
 사용 하 여는 <xref:System.Windows.Media.BitmapCacheBrush> 클래스를 효율적으로 캐시 된 요소를 다시 사용 합니다. 새 인스턴스를 만들고 요소를 캐시 하려면 합니다 <xref:System.Windows.Media.BitmapCache> 클래스 및 요소에 할당할 <xref:System.Windows.UIElement.CacheMode%2A> 속성입니다.  
   
 ## <a name="example"></a>예제  
@@ -23,7 +23,8 @@ ms.locfileid: "57372492"
  [!code-xaml[System.Windows.Media.BitmapCacheBrush#_BitmapCacheBrushXAML](~/samples/snippets/csharp/VS_Snippets_Wpf/system.windows.media.bitmapcachebrush/cs/window1.xaml#_bitmapcachebrushxaml)]  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Windows.Media.BitmapCache>
 - <xref:System.Windows.Media.BitmapCacheBrush>
 - <xref:System.Windows.UIElement.CacheMode%2A>
-- [방법: 요소를 캐시 하 여 렌더링 성능 향상](how-to-improve-rendering-performance-by-caching-an-element.md)
+- [방법: 요소를 캐시하여 렌더링 성능 향상](how-to-improve-rendering-performance-by-caching-an-element.md)

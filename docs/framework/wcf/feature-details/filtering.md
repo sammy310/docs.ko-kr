@@ -2,12 +2,12 @@
 title: 필터링
 ms.date: 03/30/2017
 ms.assetid: 4002946c-e34a-4356-8cfb-e25912a4be63
-ms.openlocfilehash: 735fd4252bb1740c149659f6c6fe81f18285914a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 667cc1cc95208c5c653ec4088d69ae105a2f8889
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54626110"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59214600"
 ---
 # <a name="filtering"></a>필터링
 Windows Communication Foundation (WCF) 필터링 시스템 선언적 필터를 사용 메시지를 일치 시키고 운영 결정을 내릴 수 있습니다. 필터를 사용하여 메시지 일부를 검사하고 메시지를 통해 수행할 작업을 결정할 수 있습니다. 예를 들어, 큐 프로세스에서는 XPath 1.0 쿼리를 사용하여 알려진 헤더의 우선 순위 요소를 검사함으로써 메시지를 큐의 앞으로 이동할지 여부를 결정할 수 있습니다.  
@@ -84,4 +84,5 @@ Windows Communication Foundation (WCF) 필터링 시스템 선언적 필터를 �
 -   `EndpointAddress`에 지정된 대로 <xref:System.ServiceModel.Dispatcher.EndpointAddressMessageFilter>의 나머지 엔드포인트 매개 변수.  
   
 ## <a name="see-also"></a>참고자료
+
 - [데이터 전송 및 Serialization](../../../../docs/framework/wcf/feature-details/data-transfer-and-serialization.md)

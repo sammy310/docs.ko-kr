@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - data binding [WPF], PriorityBinding class
 ms.assetid: d63b65ab-b3e9-4322-9aa8-1450f8d89532
-ms.openlocfilehash: cf21041a7f3d5b75803378cf05768ee6f1008fdd
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: aaf2caff1e2684e08c7eb65125536f1070203d70
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57354598"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59207567"
 ---
 # <a name="how-to-implement-prioritybinding"></a>방법: PriorityBinding 구현
 <xref:System.Windows.Data.PriorityBinding> [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 바인딩 목록을 지정 하 여 작동 합니다. 바인딩 목록은 가장 낮은 우선 순위를 높은 우선 순위에서 정렬 되어 있습니다. 가장 높은 우선 순위 바인딩 값을 반환 하는 경우 성공적으로 처리 될 때 다음 있습니다 되지 목록에 다른 바인딩을 처리 해야 합니다. 우선 순위가 높은 바인딩이 평가할 오래 걸리는 경우 수, 더 높은 우선 순위의 바인딩 값을 성공적으로 반환 될 때까지 다음 우선 순위가 가장 높은 값을 성공적으로 반환 하는 사용 됩니다.  
@@ -45,6 +45,7 @@ ms.locfileid: "57354598"
  참조 <xref:System.Windows.Data.PriorityBinding> 바인딩에서 성공적인 반환 값 간주 되는 항목에 대 한 정보에 대 한 합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Windows.Data.Binding.IsAsync%2A?displayProperty=nameWithType>
 - [데이터 바인딩 개요](data-binding-overview.md)
 - [방법 항목](data-binding-how-to-topics.md)

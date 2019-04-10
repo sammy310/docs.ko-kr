@@ -2,12 +2,12 @@
 title: ASMX 웹 서비스와의 상호 운영성
 ms.date: 03/30/2017
 ms.assetid: a7c11f0a-9e68-4f03-a6b1-39cf478d1a89
-ms.openlocfilehash: bef5239a52787629986eada60341cc121b22ba34
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
-ms.translationtype: MT
+ms.openlocfilehash: 71bc7f0828e7ab1fbf97bc3b009418c1a763cbf4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58843528"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59214977"
 ---
 # <a name="interoperating-with-asmx-web-services"></a>ASMX 웹 서비스와의 상호 운영성
 이 샘플에는 Windows Communication Foundation (WCF) 클라이언트 응용 프로그램을 기존 ASMX 웹 서비스와 통합 하는 방법을 보여 줍니다.  
@@ -130,4 +130,3 @@ Press <ENTER> to terminate client.
 >  이 디렉터리가 없으면로 이동 [Windows Communication Foundation (WCF) 및.NET Framework 4 용 Windows WF (Workflow Foundation) 샘플](https://go.microsoft.com/fwlink/?LinkId=150780) 모든 Windows Communication Foundation (WCF)를 다운로드 하 고 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플. 이 샘플은 다음 디렉터리에 있습니다.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Client\Interop\ASMX`  
-  

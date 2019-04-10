@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - bindings [WCF], using
 ms.assetid: c39479c3-0766-4a17-ba4c-97a74607f392
-ms.openlocfilehash: 45a904eb9e38b13fc3502264f4659bfd25465630
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
-ms.translationtype: MT
+ms.openlocfilehash: 8080451d64f74629451c6ca66fb27d93c9f29ed8
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58410422"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59209504"
 ---
 # <a name="using-bindings-to-configure-services-and-clients"></a>바인딩을 사용하여 서비스 및 클라이언트 구성
 바인딩은 엔드포인트에 연결하는 데 필요한 통신 세부 사항을 지정하는 개체입니다. 보다 구체적으로, 바인딩에는 해당 엔드포인트가나 클라이언트 채널에 사용할 전송, 통신 형식(메시지 인코딩) 및 프로토콜의 고유 정보를 정의하여 클라이언트 또는 서비스 런타임을 만드는 데 사용되는 구성 정보가 들어 있습니다. 작동 하는 Windows Communication Foundation (WCF) 서비스를 만들려면 각 끝점에 서비스 바인딩이 필요 합니다. 이 항목에서는 바인딩 정의, 바인딩이 정의되는 방법 및 엔드포인트에 대해 특정 바인딩이 지정되는 방법에 대해 설명합니다.  
@@ -57,6 +57,7 @@ ms.locfileid: "58410422"
 -   [자습서: Windows Communication Foundation 클라이언트 만들기](../../../docs/framework/wcf/how-to-create-a-wcf-client.md) 구성을 사용 하 여 클라이언트를 만드는 예제를 제공 합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [엔드포인트 만들기 개요](../../../docs/framework/wcf/endpoint-creation-overview.md)
 - [방법: 구성에서 서비스 바인딩 지정](../../../docs/framework/wcf/how-to-specify-a-service-binding-in-configuration.md)
 - [방법: 코드에서 서비스 바인딩 지정](../../../docs/framework/wcf/how-to-specify-a-service-binding-in-code.md)

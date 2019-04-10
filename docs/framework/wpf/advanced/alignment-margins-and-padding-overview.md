@@ -10,17 +10,16 @@ helpviewer_keywords:
 - padding [WPF]
 - aligning [WPF]
 ms.assetid: 9c6a2009-9b86-4e40-8605-0a2664dc3973
-ms.openlocfilehash: eef28a178f11ea23ac23183c9ec7eb06b7f18a29
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 58af8848a6b8a5e4ded453831f5a7ef985548492
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57355412"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59209166"
 ---
 # <a name="alignment-margins-and-padding-overview"></a>맞춤, 여백 및 안쪽 여백 개요
 <xref:System.Windows.FrameworkElement> 클래스는 자식 요소의 위치를 정확 하 게 하는 데 사용 되는 몇 가지 속성을 노출 합니다. 이 항목에서는 가장 중요 한 속성의 4 설명: <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A>, <xref:System.Windows.FrameworkElement.Margin%2A>를 <xref:System.Windows.Controls.Border.Padding%2A>, 및 <xref:System.Windows.FrameworkElement.VerticalAlignment%2A>합니다. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 응용 프로그램에서의 요소 위치를 제어하기 위한 기반을 제공하기 때문에 이 속성의 결과를 이해하는 것이 중요합니다.  
-  
-  
+
 <a name="wcpsdk_layout_amp_introduction"></a>   
 ## <a name="introduction-to-element-positioning"></a>요소 위치 지정 소개  
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]를 사용하여 요소를 배치하는 방법은 여러 가지가 있습니다. 그러나 적합 한 레이아웃을 달성 넘어 오른쪽 선택 <xref:System.Windows.Controls.Panel> 요소입니다. 위치 세부적으로 제어할 이해 해야 합니다 <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A>, <xref:System.Windows.FrameworkElement.Margin%2A>, <xref:System.Windows.Controls.Border.Padding%2A>, 및 <xref:System.Windows.FrameworkElement.VerticalAlignment%2A> 속성입니다.  
@@ -142,10 +141,11 @@ ms.locfileid: "57355412"
  자세하게 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 레이아웃을 설명하는 추가 리소스를 사용할 수 있습니다. 합니다 [Panel 개요](../controls/panels-overview.md) 다양 한 방법에 대 한 자세한 정보를 포함 하는 항목 <xref:System.Windows.Controls.Panel> 요소입니다. 항목 [연습: 내 첫 WPF 데스크톱 응용 프로그램](../getting-started/walkthrough-my-first-wpf-desktop-application.md) 레이아웃 요소를 사용 하 여 구성 요소를 배치 하 고 해당 작업을 데이터 소스에 바인딩할 고급 기법을 소개 합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Windows.FrameworkElement>
 - <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A>
 - <xref:System.Windows.FrameworkElement.VerticalAlignment%2A>
 - <xref:System.Windows.FrameworkElement.Margin%2A>
-- [패널 개요](../controls/panels-overview.md)
+- [Panel 개요](../controls/panels-overview.md)
 - [레이아웃](layout.md)
 - [WPF 레이아웃 갤러리 샘플](https://go.microsoft.com/fwlink/?LinkID=160054)

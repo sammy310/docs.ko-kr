@@ -1,5 +1,5 @@
 ---
-title: '방법: TableLayoutPanel 컨트롤의 자식 컨트롤 고정 및 도킹'
+title: '방법: TableLayoutPanel 컨트롤에서 자식 컨트롤 고정 및 도킹'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,14 +12,14 @@ helpviewer_keywords:
 - child controls [Windows Forms], anchoring and docking
 - TableLayoutPanel control [Windows Forms], child controls
 ms.assetid: 0d267c35-25f1-49b8-8976-c64e8f0ddc0b
-ms.openlocfilehash: a4fcb4e527825a9946861a46dc336db227e52296
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: dbd5d04bc1a4505fd2cb75913110199080ca6323
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57709625"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59200261"
 ---
-# <a name="how-to-anchor-and-dock-child-controls-in-a-tablelayoutpanel-control"></a>방법: TableLayoutPanel 컨트롤의 자식 컨트롤 고정 및 도킹
+# <a name="how-to-anchor-and-dock-child-controls-in-a-tablelayoutpanel-control"></a>방법: TableLayoutPanel 컨트롤에서 자식 컨트롤 고정 및 도킹
 <xref:System.Windows.Forms.TableLayoutPanel> 컨트롤은 자식 컨트롤의 <xref:System.Windows.Forms.Control.Anchor%2A> 및 <xref:System.Windows.Forms.Control.Dock%2A> 속성을 지원합니다.  
   
 ### <a name="to-align-a-child-control-in-a-tablelayoutpanel-cell"></a>TableLayoutPanel 셀에서 자식 컨트롤을 맞추려면  
@@ -28,8 +28,7 @@ ms.locfileid: "57709625"
   
 2.  값을 설정 합니다 <xref:System.Windows.Forms.TableLayoutPanel> 컨트롤의 <xref:System.Windows.Forms.TableLayoutPanel.ColumnCount%2A> 하 고 <xref:System.Windows.Forms.TableLayoutPanel.RowCount%2A> 속성을 **1**합니다.  
   
-3.  <xref:System.Windows.Forms.TableLayoutPanel> 컨트롤에 <xref:System.Windows.Forms.Button> 컨트롤을 만듭니다. 
-  <xref:System.Windows.Forms.Button>이 셀의 왼쪽 위 모퉁이에 배치됩니다.  
+3.  <xref:System.Windows.Forms.TableLayoutPanel> 컨트롤에 <xref:System.Windows.Forms.Button> 컨트롤을 만듭니다. <xref:System.Windows.Forms.Button>이 셀의 왼쪽 위 모퉁이에 배치됩니다.  
   
 4.  <xref:System.Windows.Forms.Button> 컨트롤의 <xref:System.Windows.Forms.Control.Anchor%2A> 속성 값을 `Left`로 변경합니다. <xref:System.Windows.Forms.Button>이 이동하여 셀의 왼쪽 테두리에 맞춰집니다.  
   
@@ -86,5 +85,6 @@ ms.locfileid: "57709625"
  Visual Basic 또는 Visual C#에 대 한 명령줄에서이 예제를 빌드하는 방법에 대 한 내용은 [명령줄에서 빌드](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) 하거나 [csc.exe를 사용한 명령줄 빌드](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)합니다. 또한 새 프로젝트에 코드를 붙여 넣어 Visual Studio에서이 예제를 빌드할 수 있습니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Windows.Forms.TableLayoutPanel>
 - [TableLayoutPanel 컨트롤](tablelayoutpanel-control-windows-forms.md)

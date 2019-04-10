@@ -6,12 +6,12 @@ helpviewer_keywords:
 - keyboards [Windows Forms], keyboard input
 - Windows Forms, keyboard input
 ms.assetid: 9a29433c-a180-49bb-b74c-d187786584c8
-ms.openlocfilehash: a7965c1dcf36e956abd7930b8ff0154b13173b76
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 4335798395a3b73dbcb2546a6fadac3d8efedb64
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57718027"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59204746"
 ---
 # <a name="how-keyboard-input-works"></a>키보드 입력 작동 방식
 Windows Forms에서는 Windows 메시지에 대한 응답으로 키보드 이벤트를 발생시켜 키보드 입력을 처리합니다. 대부분의 Windows Forms 애플리케이션에서는 키보드 이벤트를 처리하여 키보드 입력을 단독으로 처리합니다. 그러나 키가 컨트롤에 도달하기 전에 키를 가로채는 등의 고급 키보드 입력 시나리오를 구현하려면 키보드 메시지가 작동하는 방식을 알아야 합니다. 이 항목에서는 Windows Forms에서 인식하는 키 데이터 형식을 설명하고 키보드 메시지가 라우팅되는 방법에 대한 개요를 설명합니다. 키보드 이벤트에 대한 자세한 내용은 [키보드 이벤트 사용](using-keyboard-events.md)을 참조하세요.  
@@ -63,12 +63,13 @@ Windows Forms에서는 Windows 메시지에 대한 응답으로 키보드 이벤
 |작업|메서드|  
 |----------|------------|  
 |탐색 키를 가로채 고 발생 한 <xref:System.Windows.Forms.Control.KeyDown> 이벤트입니다. Tab 키와 Enter 키를 텍스트 상자에서 처리하려는 경우를 예를 들어보겠습니다.|<xref:System.Windows.Forms.Control.IsInputKey%2A>을 재정의합니다. **참고:**  처리할 수 있습니다 합니다 <xref:System.Windows.Forms.Control.PreviewKeyDown> 이벤트 집합과 <xref:System.Windows.Forms.PreviewKeyDownEventArgs.IsInputKey%2A> 의 합니다 <xref:System.Windows.Forms.PreviewKeyDownEventArgs> 에 `true` 키 또는 키에 대 한 합니다.|  
-|컨트롤에서 특수 입력 키나 탐색 키에 대한 처리를 수행합니다. 예를 들어 목록 컨트롤에서 화살표 키를 사용하여 선택한 항목을 변경할 수 있습니다.|<xref:System.Windows.Forms.Control.ProcessDialogKey%2A>를 재정의합니다.|  
+|컨트롤에서 특수 입력 키나 탐색 키에 대한 처리를 수행합니다. 예를 들어 목록 컨트롤에서 화살표 키를 사용하여 선택한 항목을 변경할 수 있습니다.|재정의 <xref:System.Windows.Forms.Control.ProcessDialogKey%2A>|  
 |탐색 키를 가로채 고 발생 한 <xref:System.Windows.Forms.Control.KeyPress> 이벤트입니다. 예를 들어 스핀 상자 컨트롤에서 화살표 키를 여러 차례 눌러 항목 전체를 빠르게 진행할 수 있습니다.|<xref:System.Windows.Forms.Control.IsInputChar%2A>을 재정의합니다.|  
-|중 특수 입력 키나 탐색 처리를 수행는 <xref:System.Windows.Forms.Control.KeyPress> 이벤트입니다. 예를 들어, 목록 컨트롤에서 "r" 키를 누른 채로 r 문자로 시작하는 항목 사이를 건너뛸 수 있습니다.|<xref:System.Windows.Forms.Control.ProcessDialogChar%2A>를 재정의합니다.|  
+|중 특수 입력 키나 탐색 처리를 수행는 <xref:System.Windows.Forms.Control.KeyPress> 이벤트입니다. 예를 들어, 목록 컨트롤에서 "r" 키를 누른 채로 r 문자로 시작하는 항목 사이를 건너뛸 수 있습니다.|재정의 <xref:System.Windows.Forms.Control.ProcessDialogChar%2A>|  
 |사용자 지정 니모닉 처리를 수행합니다. 예를 들어 도구 모음에 포함된, 소유자가 그린 단추의 니모닉을 처리할 수 있습니다.|<xref:System.Windows.Forms.Control.ProcessMnemonic%2A>을 재정의합니다.|  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Windows.Forms.Keys>
 - <xref:System.Windows.Forms.Control.WndProc%2A>
 - <xref:System.Windows.Forms.Control.PreProcessMessage%2A>

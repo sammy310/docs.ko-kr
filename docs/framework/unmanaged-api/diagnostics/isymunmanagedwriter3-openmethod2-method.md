@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 14a8acc2e3babd376cb9754d35ce8fc5eaa1fd7c
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: a3dcb1327ad50761a8268e8adc7b1e976cae0b3a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57492324"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59200300"
 ---
 # <a name="isymunmanagedwriter3openmethod2-method"></a>ISymUnmanagedWriter3::OpenMethod2 메서드
 메서드를 열고 하 고 이미지의 해당 실제 섹션 오프셋을 제공 합니다.  
@@ -53,5 +53,6 @@ HRESULT OpenMethod2(
  **헤더:** CorSym.idl, CorSym.h  
   
 ## <a name="see-also"></a>참고자료
+
 - [ISymUnmanagedWriter3 인터페이스](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter3-interface.md)
 - [OpenMethod 메서드](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-openmethod-method.md)

@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 85b24196-b6c6-4bda-9de3-47180bd6ff96
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b588ec9dffcc4e759b40c7c472f48ab325167943
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: cc33018f68f9634a29e2f5c52123a0215b446de7
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54660881"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59228967"
 ---
 # <a name="icordebugsymbolprovider-interface"></a>ICorDebugSymbolProvider 인터페이스
 디버그 기호 정보를 검색하는 데 사용할 수 있는 메서드를 제공합니다.  
@@ -45,5 +45,6 @@ ms.locfileid: "54660881"
  **.NET Framework 버전:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
 ## <a name="see-also"></a>참고자료
+
 - [디버깅 인터페이스](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
 - [디버깅](../../../../docs/framework/unmanaged-api/debugging/index.md)

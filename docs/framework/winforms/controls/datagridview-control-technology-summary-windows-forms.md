@@ -5,12 +5,12 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], about DataGridView control
 - data grids [Windows Forms], about data grids
 ms.assetid: 094498c3-a126-4a3f-83fe-f69e96c7717b
-ms.openlocfilehash: 9a1738e8be0471e24744a440fee10e5b1152ab10
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: ca8268137f2a154c782388d0f13cdd02504cbb64
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57717637"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59217421"
 ---
 # <a name="datagridview-control-technology-summary-windows-forms"></a>DataGridView 컨트롤 기술 요약(Windows Forms)
 이 항목에서는 `DataGridView` 제어 및 이를 사용하도록 지원하는 클래스에 대한 정보를 요약하여 설명합니다.  
@@ -61,6 +61,7 @@ ms.locfileid: "57717637"
  합니다 <xref:System.Windows.Forms.DataGridView> 제어와 함께에서 작업할 수는 <xref:System.Windows.Forms.BindingSource> 구성 요소입니다. 이 구성 요소는 폼의 기본 데이터 원본으로 설계 되었습니다. 간의 상호 작용을 관리할 수는 <xref:System.Windows.Forms.DataGridView> 제어 및 데이터에 관계 없이 해당 데이터 원본에 대 한 원본 유형입니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [DataGridView 컨트롤 개요](datagridview-control-overview-windows-forms.md)
 - [DataGridView 컨트롤 아키텍처](datagridview-control-architecture-windows-forms.md)
 - [연결 정보 보호](../../data/adonet/protecting-connection-information.md)

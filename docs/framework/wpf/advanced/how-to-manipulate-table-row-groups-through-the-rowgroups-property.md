@@ -1,5 +1,5 @@
 ---
-title: '방법: RowGroups 속성을 통한 표의 행 그룹 조작'
+title: '방법: RowGroups 속성을 통해 테이블의 행 그룹 조작'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - documents [WPF], manipulating row groups through RowGroups property
 - properties [WPF], RowGroups [WPF], manipulating row groups
 ms.assetid: ea61440f-08ae-44ed-b314-5716aaaae3ed
-ms.openlocfilehash: e456aab0d36ae611f3bfe4974aa3603efff27379
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: edc5fbe552a04387fc3f152cb53444605d142624
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57351972"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59209972"
 ---
-# <a name="how-to-manipulate-a-tables-row-groups-through-the-rowgroups-property"></a>방법: RowGroups 속성을 통한 표의 행 그룹 조작
+# <a name="how-to-manipulate-a-tables-row-groups-through-the-rowgroups-property"></a>방법: RowGroups 속성을 통해 테이블의 행 그룹 조작
 이 예제에서는 테이블의 행 그룹을 통해 수행할 수 있는 보다 일반적인 작업 중 일부는 <xref:System.Windows.Documents.Table.RowGroups%2A> 속성입니다.  
   
 ## <a name="example"></a>예제  
@@ -84,6 +84,7 @@ ms.locfileid: "57351972"
  [!code-vb[TableSnippets2#_Table_RowGroups_Clear](~/samples/snippets/visualbasic/VS_Snippets_Wpf/TableSnippets2/visualbasic/window1.xaml.vb#_table_rowgroups_clear)]  
   
 ## <a name="see-also"></a>참고자료
-- [방법: Inlines 속성을 통한 유동 콘텐츠 요소 조작](how-to-manipulate-table-row-groups-through-the-rowgroups-property.md)
-- [Blocks 속성을 통한 FlowDocument 조작](how-to-manipulate-a-flowdocument-through-the-blocks-property.md)
+
+- [방법: Inlines 속성을 통해 유동 콘텐츠 요소 조작](how-to-manipulate-table-row-groups-through-the-rowgroups-property.md)
+- [Blocks 속성을 통해 FlowDocument 조작](how-to-manipulate-a-flowdocument-through-the-blocks-property.md)
 - [Columns 속성을 통해 테이블의 열 조작](how-to-manipulate-table-columns-through-the-columns-property.md)

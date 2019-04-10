@@ -2,12 +2,12 @@
 title: <baseAddresses>
 ms.date: 03/30/2017
 ms.assetid: 78918102-2898-46e0-9ea8-6b8afe65603e
-ms.openlocfilehash: dc4b31e729f9037da101bdf3e6cde28e91b1a070
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 7d0afd638e9a311b69ff47b6789d5fde093945ba
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55277019"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59212104"
 ---
 # <a name="baseaddresses"></a>\<baseAddresses>
 자체 호스팅 환경의 서비스 호스트에 대한 기준 주소인 `baseAddress` 요소의 컬렉션을 나타냅니다. 기준 주소가 있는 경우 기준 주소에 대한 상대 주소로 엔드포인트를 구성할 수 있습니다.  
@@ -48,6 +48,7 @@ ms.locfileid: "55277019"
 |[\<host>](../../../../../docs/framework/configure-apps/file-schema/wcf/host.md)|서비스 호스트의 설정을 지정하는 구성 요소입니다.|  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.ServiceModel.Configuration.HostElement>
 - <xref:System.ServiceModel.ServiceHost>
 - <xref:System.ServiceModel.ServiceHostBase.BaseAddresses%2A>

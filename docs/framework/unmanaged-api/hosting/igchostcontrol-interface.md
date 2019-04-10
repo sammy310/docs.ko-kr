@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d23a8d494c3f3e2e94bb309ab1c2141e527f2f48
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 050b515e91517efe5b4dc4e391ace4fba5876727
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54696479"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59215536"
 ---
 # <a name="igchostcontrol-interface"></a>IGCHostControl 인터페이스
 가비지 수집기가 호스트의 가상 메모리 한계를 변경 하려면 요청할 수 있는 메서드를 제공 합니다.  
@@ -42,4 +42,5 @@ ms.locfileid: "54696479"
  **.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>참고자료
+
 - [호스팅 인터페이스](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)

@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 6e00af10-42f3-4235-8415-1bb2db78394e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a731a54771f3ac589031e856539ba0c21ca22778
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
-ms.translationtype: MT
+ms.openlocfilehash: 9fa6b9aa2b2c427c86da5204a446cc60eadd1bb7
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55270492"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59201015"
 ---
 # <a name="legacyimpersonationpolicy-element"></a>\<legacyImpersonationPolicy > 요소
 현재 스레드의 실행 컨텍스트 흐름 설정과 관계없이 Windows ID가 비동기 지점 간을 흐르지 않도록 지정합니다.  
@@ -116,6 +116,7 @@ ms.locfileid: "55270492"
 ```  
   
 ## <a name="see-also"></a>참고자료
+
 - [런타임 설정 스키마](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
 - [구성 파일 스키마](../../../../../docs/framework/configure-apps/file-schema/index.md)
 - [\<alwaysFlowImpersonationPolicy > 요소](../../../../../docs/framework/configure-apps/file-schema/runtime/alwaysflowimpersonationpolicy-element.md)

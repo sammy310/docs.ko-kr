@@ -1,19 +1,19 @@
 ---
-title: '방법: 바인딩된 컨트롤 만들기 및 표시 되는 데이터 형식'
+title: '방법: 바인딩된 컨트롤 만들기 및 표시된 데이터 서식 지정'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - data [Windows Forms], formatting
 - bound controls [Windows Forms], creating
 - bound controls [Windows Forms], formatting data
 ms.assetid: d5a56228-899d-41d9-8af8-87b3f4ec2f94
-ms.openlocfilehash: 8b1256c1389c6a55f405f0be0d137a8ad170dbec
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 0f56fc5fa345cbe4584b61ae2622dfb0dfb35be8
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57710500"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59225536"
 ---
-# <a name="how-to-create-a-bound-control-and-format-the-displayed-data"></a>방법: 바인딩된 컨트롤 만들기 및 표시 되는 데이터 형식
+# <a name="how-to-create-a-bound-control-and-format-the-displayed-data"></a>방법: 바인딩된 컨트롤 만들기 및 표시된 데이터 서식 지정
 Windows Forms 데이터 바인딩 데이터 바인딩된 컨트롤을 사용 하 여 표시 되는 데이터의 서식을 지정할 수 있습니다 합니다 **서식 지정 및 고급 바인딩** 대화 상자.  
   
 > [!NOTE]
@@ -55,6 +55,7 @@ Windows Forms 데이터 바인딩 데이터 바인딩된 컨트롤을 사용 하
 8.  클릭 **확인** 닫으려면 합니다 **서식 지정 및 고급 바인딩** 대화 상자 및 속성 창에 반환 합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [방법: Windows Form에 단순 바인딩된 컨트롤 만들기](how-to-create-a-simple-bound-control-on-a-windows-form.md)
 - [Windows Forms에서 사용자 입력 유효성 검사](user-input-validation-in-windows-forms.md)
 - [Windows Forms 데이터 바인딩](windows-forms-data-binding.md)

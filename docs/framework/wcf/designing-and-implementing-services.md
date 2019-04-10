@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - defining service contracts [WCF]
 ms.assetid: 036fae20-7c55-4002-b71d-ac4466e167a3
-ms.openlocfilehash: 51cdcc4789ac553c2775c89d6124cf90624b8747
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: ccac3dd26ff03f235827c4bb3135dc2028f09032
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54716054"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59216421"
 ---
 # <a name="designing-and-implementing-services"></a>서비스 디자인 및 구현
 이 섹션에서는 정의 하 고 WCF 계약을 구현 하는 방법을 보여 줍니다. 서비스 계약에서는 엔드포인트가 외부와 통신하는 내용을 지정합니다. 더 구체적으로 말하면, 단방향 및 이중 request/reply와 같은 기본 메시지 교환 패턴에 구성된 특정 메시지 집합에 대한 문입니다. 서비스 계약이 논리적으로 관련된 메시지 교환 집합인 경우 서비스 작업은 단일 메시지 교환이 됩니다. 예를 들어 `Hello` 작업에서는 호출자가 인사말을 알릴 수 있도록 단일 메시지를 수락해야 하며 작업 의례에 따라 메시지를 반환하거나 반환하지 않을 수 있습니다.  
@@ -55,7 +55,7 @@ ms.locfileid: "54716054"
  계약을 디자인 하는 방법에 대 한 자세한 내용은 참조 하세요. [Designing Service Contracts](../../../docs/framework/wcf/designing-service-contracts.md)합니다. 계약을 구현 하는 방법에 대 한 자세한 내용은 참조 하세요. [Implementing Service Contracts](../../../docs/framework/wcf/implementing-service-contracts.md)합니다.  
   
 ### <a name="messages-up-front-and-center"></a>중심적 역할의 메시지  
- RPC(원격 프로시저 호출) 스타일의 메서드 서명에 익숙한 경우에는 관리되는 인터페이스, 클래스 및 메서드를 사용하여 서비스 작업을 모델링하는 것이 수월합니다. 이러한 서명에서는 매개 변수를 메서드에 전달하고 반환 값을 받는 것이 개체나 다른 형식의 코드로부터 기능을 요청하는 일반적인 방법입니다. 예를 들어, Visual Basic 및 c + + COM과 같은 관리 되는 언어를 사용 하 여 프로그래머에 게 적용할 수는 RPC 스타일의 방법에 대 한 지식을 (개체 또는 인터페이스를 사용 하 여) 여부 WCF 서비스 계약 만들기에 내재 된 문제가 발생 하지 않고 RPC 스타일 분산 개체 시스템입니다. 서비스 지향은 RPC 프로그래밍 경험의 친숙함과 편리함은 유지하면서 느슨하게 결합된 메시지 기반 프로그래밍의 이점을 제공합니다.  
+ RPC(원격 프로시저 호출) 스타일의 메서드 서명에 익숙한 경우에는 관리되는 인터페이스, 클래스 및 메서드를 사용하여 서비스 작업을 모델링하는 것이 수월합니다. 이러한 서명에서는 매개 변수를 메서드에 전달하고 반환 값을 받는 것이 개체나 다른 형식의 코드로부터 기능을 요청하는 일반적인 방법입니다. 사용 하 여 프로그래머에 게 Visual Basic과 같은 언어를 관리 하는 예를 들어, 및 C++ COM에 적용할 수는 RPC 스타일의 방법에 대 한 지식을 (개체 또는 인터페이스를 사용 하 여) 여부 WCF 서비스 계약의 생성 문제를 경험 하지 않고 RPC 스타일의 분산 개체 시스템입니다. 서비스 지향은 RPC 프로그래밍 경험의 친숙함과 편리함은 유지하면서 느슨하게 결합된 메시지 기반 프로그래밍의 이점을 제공합니다.  
   
  대부분의 프로그래머는 Microsoft MSMQ와 같은 메시지 큐, .NET Framework의 <xref:System.Messaging> 네임스페이스 또는 HTTP 요청 시의 비구조적 XML 전송과 같은 메시지 기반 응용 프로그램의 프로그래밍 인터페이스에 더 친숙합니다. 메시지 수준의 프로그래밍에 대 한 자세한 내용은 참조 하세요. [Using Message Contracts](../../../docs/framework/wcf/feature-details/using-message-contracts.md)하십시오 [서비스 채널 수준 프로그래밍](../../../docs/framework/wcf/extending/service-channel-level-programming.md), 및 [POX응용프로그램과상호운용성](../../../docs/framework/wcf/feature-details/interoperability-with-pox-applications.md).  
   
@@ -67,5 +67,6 @@ ms.locfileid: "54716054"
  이러한 추가 요구 사항 프로세스는 디자인, 구현, 구성 및 Windows Communication Foundation (WCF) 서비스 응용 프로그램을 호스트 하는 동안 주의 해야 합니다. 예를 들어 세션 지원이 필요함을 계약에서 지정할 수 있습니다. 이 경우, 해당 계약 요구 사항을 지원하도록 바인딩을 구성해야 하며 그렇지 않으면 서비스 구현이 이루어지지 않습니다. 또는 Windows 통합 인증을 요구하는 서비스가 IIS(인터넷 정보 서비스)에서 호스팅되는 경우 해당 서비스가 있는 웹 응용 프로그램에는 Windows 통합 인증을 사용하도록 설정되고 익명 지원은 해제되어야 합니다. 다른 유형의 서비스 호스트 응용 프로그램에 미치는 영향에 대 한 자세한 내용은 참조 하세요. [호스팅 서비스](../../../docs/framework/wcf/hosting-services.md)합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [서비스 계약 디자인](../../../docs/framework/wcf/designing-service-contracts.md)
 - [서비스 계약 구현](../../../docs/framework/wcf/implementing-service-contracts.md)

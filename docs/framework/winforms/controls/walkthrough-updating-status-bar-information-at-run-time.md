@@ -11,12 +11,12 @@ helpviewer_keywords:
 - StatusBar control [Windows Forms], refreshing panels
 - panels [Windows Forms], refreshing status bar
 ms.assetid: cc2abb06-c082-49f7-a5a3-2fd1bbcb58d1
-ms.openlocfilehash: 3ad76899f86013e3395b5b7859538c4c59c9b1ee
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 61fb68a43132b350b62f073ca8683fada3be52d8
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57716467"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59225770"
 ---
 # <a name="walkthrough-updating-status-bar-information-at-run-time"></a>연습: 런타임에 상태 표시줄 정보 업데이트
 > [!IMPORTANT]
@@ -85,8 +85,9 @@ ms.locfileid: "57716467"
     >  상태 표시줄에 시계가 나타나는 데 약 30초가 소요됩니다. 가능한 가장 정확한 시간을 가져옵니다. 반대로 시계가 더 빨리 표시 되도록 줄일 수 있습니다의 값을 <xref:System.Windows.Forms.Timer.Interval%2A> 이전 절차의 7 단계에서 설정한 속성입니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Windows.Forms.StatusBar>
 - <xref:System.Windows.Forms.ToolStripStatusLabel>
 - [방법: StatusBar 컨트롤에 패널 추가](how-to-add-panels-to-a-statusbar-control.md)
-- [방법: Windows Forms StatusBar 컨트롤에서 패널 클릭 확인](determine-which-panel-wf-statusbar-control-was-clicked.md)
+- [방법: Windows Forms StatusBar 컨트롤에서 클릭한 패널 확인](determine-which-panel-wf-statusbar-control-was-clicked.md)
 - [StatusBar 컨트롤 개요](statusbar-control-overview-windows-forms.md)

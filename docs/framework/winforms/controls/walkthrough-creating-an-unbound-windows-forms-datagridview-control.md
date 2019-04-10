@@ -1,5 +1,5 @@
 ---
-title: '연습: 만들기는 바인딩되지 않은 Windows Forms DataGridView 컨트롤'
+title: '연습: 바인딩되지 않은 Windows Forms DataGridView 컨트롤 만들기'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - data [Windows Forms], unbound
 - walkthroughs [Windows Forms], DataGridView control
 ms.assetid: 5a8d6afa-1b4b-4b24-8db8-501086ffdebe
-ms.openlocfilehash: ebbfeaa2d6a7734aa0f2b214be65e64111d28ac0
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 375ac3bd3a178cc059239cf84209ebbf5d6aca11
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57708115"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59220580"
 ---
-# <a name="walkthrough-creating-an-unbound-windows-forms-datagridview-control"></a>연습: 만들기는 바인딩되지 않은 Windows Forms DataGridView 컨트롤
+# <a name="walkthrough-creating-an-unbound-windows-forms-datagridview-control"></a>연습: 바인딩되지 않은 Windows Forms DataGridView 컨트롤 만들기
 데이터베이스에서 발생 하지 않는 테이블 형식 데이터를 표시 하려면 자주 좋습니다. 예를 들어 다음 문자열의 2 차원 배열의 내용을 표시 하는 것이 좋습니다. <xref:System.Windows.Forms.DataGridView> 클래스는 데이터 원본에 바인딩하지 않고 데이터를 표시 하는 쉽고 고도로 사용자 지정 가능한 방법을 제공 합니다. 이 연습을 채우는 방법을 보여는 <xref:System.Windows.Forms.DataGridView> 제어 하 고 추가 및 삭제 "바인딩되지 않은" 모드의 행을 관리 합니다. 기본적으로 사용자는 새 행을 추가할 수 있습니다. 행 추가 방지 하려면 설정 합니다 <xref:System.Windows.Forms.DataGridView.AllowUserToAddRows%2A> 속성은 `false`합니다.  
   
  이 항목의 코드를 단일 목록으로 복사하려면 [방법: 바인딩되지 않은 Windows Forms DataGridView 컨트롤 만들기](how-to-create-an-unbound-windows-forms-datagridview-control.md)합니다.  
@@ -93,6 +93,7 @@ ms.locfileid: "57708115"
 -   셀의 모양을 사용자 지정 합니다. 자세한 내용은 [방법: Windows Forms DataGridView 컨트롤에서 셀 모양 사용자 지정](customize-the-appearance-of-cells-in-the-datagrid.md) 고 [방법: Windows Forms DataGridView 컨트롤에 기본 셀 스타일 설정](how-to-set-default-cell-styles-for-the-windows-forms-datagridview-control.md)합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Windows.Forms.DataGridView>
 - [Windows Forms DataGridView 컨트롤에서 데이터 표시](displaying-data-in-the-windows-forms-datagridview-control.md)
 - [방법: 바인딩되지 않은 Windows Forms DataGridView 컨트롤 만들기](how-to-create-an-unbound-windows-forms-datagridview-control.md)

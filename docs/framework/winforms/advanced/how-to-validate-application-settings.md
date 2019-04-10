@@ -1,5 +1,5 @@
 ---
-title: '방법: 응용 프로그램 설정 유효성 검사'
+title: '방법: 애플리케이션 설정 업데이트'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - application settings [Windows Forms], Windows Forms
 - application settings [Windows Forms], validating
 ms.assetid: 9f145ada-4267-436a-aa4c-c4dcffd0afb7
-ms.openlocfilehash: 96323e0edd643e20338bd10a9eb1744c3b0aef2f
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 2fef6c924498003bc9ea393ba2117a1cb5f2afab
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57705833"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59212091"
 ---
-# <a name="how-to-validate-application-settings"></a>방법: 응용 프로그램 설정 유효성 검사
+# <a name="how-to-validate-application-settings"></a>방법: 애플리케이션 설정 업데이트
 이 항목에서는 애플리케이션 설정이 유지되기 전에 유효성을 검사하는 방법을 설명합니다.  
   
  애플리케이션 설정이 강력한 형식이기 때문에 사용자가 지정된 설정에 잘못된 형식의 데이터를 할당할 수 없다는 점이 어느 정도 보장됩니다. 그러나 사용자가 설정에 허용 가능한 범위 밖의 값을 할당하려고 시도할 수 있습니다(예: 미래의 생년월일 제공). <xref:System.Configuration.ApplicationSettingsBase>에서 모든 응용 프로그램 설정 클래스의 부모 클래스는 이러한 범위 검사를 사용 하도록 설정 하려면 4 개의 이벤트를 노출 합니다. 이러한 이벤트를 처리하면 모든 유효성 검사 코드를 프로젝트 전체에 분산하지 않고 단일 위치에 배치합니다.  
@@ -161,5 +161,6 @@ ms.locfileid: "57705833"
     ```  
   
 ## <a name="see-also"></a>참고자료
+
 - [Windows Forms에서 이벤트 처리기 만들기](../creating-event-handlers-in-windows-forms.md)
-- [방법: 응용 프로그램 설정 만들기](how-to-create-application-settings.md)
+- [방법: 애플리케이션 설정 만들기](how-to-create-application-settings.md)

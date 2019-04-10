@@ -10,12 +10,12 @@ helpviewer_keywords:
 - validation of PrintTickets [WPF]
 - PrintTicket [WPF], validation
 ms.assetid: 4fe2d501-d0b0-4fef-86af-6ffe6c162532
-ms.openlocfilehash: 2be08f5d3c2cd82e50569a105e3fa15f12ad352c
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: MT
+ms.openlocfilehash: 750234a7073b3931b4f3ce5674f3989fe119c50c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57355170"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59199949"
 ---
 # <a name="how-to-validate-and-merge-printtickets"></a>방법: PrintTicket 유효성 검사 및 병합
 합니다 [!INCLUDE[TLA#tla_win](../../../../includes/tlasharptla-win-md.md)] [Print Schema](https://go.microsoft.com/fwlink/?LinkId=186397) 융통성 있고 확장 가능한 포함 <xref:System.Printing.PrintCapabilities> 및 <xref:System.Printing.PrintTicket> 요소입니다. 이전 인쇄 장치 기능을 항목별로 정리 하 고 후자 지정이 장치 문서, 개별 문서 또는 개별 페이지의 특정 시퀀스에 대해 해당 기능을 어떻게 사용 해야 합니다.  
@@ -57,6 +57,7 @@ ms.locfileid: "57355170"
  [!code-vb[PrintTicketManagment#UIForMergeAndValidatePTUtility](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PrintTicketManagment/visualbasic/printticket.vb#uiformergeandvalidateptutility)]  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Printing.PrintCapabilities>
 - <xref:System.Printing.PrintTicket>
 - <xref:System.Printing.PrintServer.GetPrintQueues%2A>

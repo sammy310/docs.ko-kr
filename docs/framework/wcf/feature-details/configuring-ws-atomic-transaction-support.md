@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - WS-AT protocol [WCF], configuring WS-Atomic Transaction
 ms.assetid: cb9f1c9c-1439-4172-b9bc-b01c3e09ac48
-ms.openlocfilehash: bc21cba7889652a8b485d101205b15d6f189d12d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 8fe76cfa0dbcd8bc7ef8248ac798a8b45bf87201
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54592434"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59203537"
 ---
 # <a name="configuring-ws-atomic-transaction-support"></a>WS-Atomic Transaction 지원 구성
 이 항목에서는 WS-AT 구성 유틸리티를 사용하여 WS-AT(WS-AtomicTransaction) 지원을 구성하는 방법에 대해 설명합니다.  
@@ -119,5 +119,6 @@ ms.locfileid: "54592434"
 -   31: 자세한 정보  
   
 ## <a name="see-also"></a>참고자료
+
 - [WS-AtomicTransaction 구성 유틸리티(wsatConfig.exe)](../../../../docs/framework/wcf/ws-atomictransaction-configuration-utility-wsatconfig-exe.md)
 - [WS-AtomicTransaction 구성 MMC 스냅인](../../../../docs/framework/wcf/ws-atomictransaction-configuration-mmc-snap-in.md)

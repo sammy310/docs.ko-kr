@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - PrintSystemObject [WPF], getting properties
 ms.assetid: 43560f28-183d-41c1-b9d1-de7c2552273e
-ms.openlocfilehash: b03be30422a93980ecdbcdbd428600fd41abd824
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: MT
+ms.openlocfilehash: b9ca7444b2c49f4563ff0d7baef8b2d250a7f331
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57367585"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59215276"
 ---
 # <a name="how-to-get-print-system-object-properties-without-reflection"></a>방법: 리플렉션을 사용하지 않고 인쇄 시스템 개체 속성 가져오기
 개체의 속성 (및 해당 속성의 형식)를 항목별로 정리 하는 데 리플렉션을 사용 하면 응용 프로그램 성능이 느려질 수 있습니다. <xref:System.Printing.IndexedProperties> 네임 스페이스는 리플렉션을 사용 하 여이 정보를 가져올 수 있는 방법을 제공 합니다.  
@@ -34,6 +34,7 @@ ms.locfileid: "57367585"
  [!code-vb[GetPrintObjectPropertyTypesWithoutReflection#ShowPropertyTypesWithoutReflection](~/samples/snippets/visualbasic/VS_Snippets_Wpf/GetPrintObjectPropertyTypesWithoutReflection/visualbasic/program.vb#showpropertytypeswithoutreflection)]  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Printing.IndexedProperties.PrintProperty>
 - <xref:System.Printing.PrintSystemObject>
 - <xref:System.Printing.IndexedProperties>

@@ -13,12 +13,12 @@ helpviewer_keywords:
 - Drawing objects [WPF]
 - DrawingGroup objects [WPF]
 ms.assetid: 6ab1fe6b-3eed-4432-a248-b487e7234e5b
-ms.openlocfilehash: 32efbd44579622fddba95d162261633a1af6d277
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 975fafebe255d5ff4848fde2c0b0ff08b68d4f7b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57364582"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59206410"
 ---
 # <a name="drawings"></a>Drawing
 <xref:System.Windows.Media.Drawing> 개체는 도형, 이미지 또는 텍스트를 효율적으로 그리는 데 사용 됩니다. 사용 하 여 그릴 때 사용 되는 그리기를 <xref:System.Windows.Media.DrawingBrush> 프로그래밍할 <xref:System.Windows.Media.Visual> 개체입니다.  
@@ -28,8 +28,9 @@ ms.locfileid: "57364582"
   [방법 항목](drawings-how-to-topics.md)  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Windows.Media.Drawing>
-- [2차원 그래픽 및 이미징](../advanced/optimizing-performance-2d-graphics-and-imaging.md)
+- [2D 그래픽 및 이미징](../advanced/optimizing-performance-2d-graphics-and-imaging.md)
 - [WPF 그래픽 렌더링 개요](wpf-graphics-rendering-overview.md)
 - [WPF에서 Shape 및 기본 그리기 개요](shapes-and-basic-drawing-in-wpf-overview.md)
 - [그래픽 및 멀티미디어](index.md)

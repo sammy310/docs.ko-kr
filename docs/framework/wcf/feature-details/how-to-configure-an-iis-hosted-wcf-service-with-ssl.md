@@ -1,15 +1,15 @@
 ---
-title: '방법: SSL을 사용 하 여 IIS에서 호스팅되는 WCF 서비스를 구성 합니다.'
+title: '방법: SSL을 사용하여 IIS에서 호스팅되는 WCF 서비스 구성'
 ms.date: 03/30/2017
 ms.assetid: df2fe31f-a4bb-4024-92ca-b74ba055e038
-ms.openlocfilehash: ca7343f14215d89b29636776437f5e4a6a8089a1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 336c3800fc033cc12bd9c3fe168ae219b72cab91
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54639980"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59214120"
 ---
-# <a name="how-to-configure-an-iis-hosted-wcf-service-with-ssl"></a>방법: SSL을 사용 하 여 IIS에서 호스팅되는 WCF 서비스를 구성 합니다.
+# <a name="how-to-configure-an-iis-hosted-wcf-service-with-ssl"></a>방법: SSL을 사용하여 IIS에서 호스팅되는 WCF 서비스 구성
 이 항목에서는 HTTP 전송 보안을 사용하도록 IIS에서 호스트되는 WCF 서비스를 설정하는 방법에 대해 설명합니다. HTTP 전송 보안에는 IIS에 등록할 SSL 인증서가 필요합니다. SSL 인증서가 없는 경우에는 IIS를 사용하여 테스트 인증서를 생성할 수 있습니다. 그런 다음 SSL 바인딩을 웹 사이트에 추가하고 웹 사이트의 인증 속성을 구성해야 합니다. 마지막으로, HTTPS를 사용하도록 WCF 서비스를 구성해야 합니다.  
   
 ### <a name="creating-a-self-signed-certificate"></a>자체 서명된 인증서 만들기  
@@ -145,7 +145,8 @@ ms.locfileid: "54639980"
 ```  
   
 ## <a name="see-also"></a>참고자료
-- [인터넷 정보 서비스에서 호스팅](../../../../docs/framework/wcf/feature-details/hosting-in-internet-information-services.md)
+
+- [인터넷 정보 서비스에서의 호스팅](../../../../docs/framework/wcf/feature-details/hosting-in-internet-information-services.md)
 - [인터넷 정보 서비스 호스팅 지침](../../../../docs/framework/wcf/samples/internet-information-service-hosting-instructions.md)
 - [인터넷 정보 서비스 호스팅을 위한 최선의 방법](../../../../docs/framework/wcf/feature-details/internet-information-services-hosting-best-practices.md)
 - [인라인 코드를 사용한 IIS 호스팅](../../../../docs/framework/wcf/samples/iis-hosting-using-inline-code.md)

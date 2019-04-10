@@ -1,5 +1,5 @@
 ---
-title: '방법: 관리 되는 HTML 문서 개체 모델에 액세스'
+title: '방법: 관리형 HTML 문서 개체 모델 액세스'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - HTML DOM [Windows Forms], accessing
 - managed HTML DOM [Windows Forms], accessing
 ms.assetid: 40fa5cd5-1ed8-42f6-a93f-9ac01608bbeb
-ms.openlocfilehash: f2e2593b161a0dc072f0ecaa872bfa9ab83ac24c
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 591d1f4d0b1ebe63b06a30cd01e18addc580d393
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57715947"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59205019"
 ---
-# <a name="how-to-access-the-managed-html-document-object-model"></a>방법: 관리 되는 HTML 문서 개체 모델에 액세스
+# <a name="how-to-access-the-managed-html-document-object-model"></a>방법: 관리형 HTML 문서 개체 모델 액세스
 다음과 같은 두 가지 유형의 애플리케이션에서 관리되는 HTML DOM(문서 개체 모델)에 액세스할 수 있습니다.  
   
 -   관리되는 <xref:System.Windows.Forms.WebBrowser> 컨트롤을 호스팅하는 Windows Forms 응용 프로그램(.exe). 이러한 두 가지 기술은 서로를 보완하며 <xref:System.Windows.Forms.WebBrowser> 컨트롤을 통해 사용자에게 페이지를 표시하고 HTML DOM을 통해 문서의 논리 구조를 나타냅니다.  
@@ -46,4 +46,5 @@ ms.locfileid: "57715947"
 1.  관리되는 HTML DOM에 액세스하려면 응용 프로그램 또는 <xref:System.Windows.Forms.UserControl>을 완전히 신뢰해야 합니다. [!INCLUDE[ndptecclick](../../../../includes/ndptecclick-md.md)]를 사용하여 Windows Forms 응용 프로그램을 배포하는 경우 권한 상승 또는 신뢰할 수 있는 응용 프로그램 배포를 통해 완전 신뢰를 요청할 수 있습니다. 자세한 내용은 [ClickOnce 응용 프로그램 보안](/visualstudio/deployment/securing-clickonce-applications)을 참조하세요.  
   
 ## <a name="see-also"></a>참고자료
+
 - [관리되는 HTML 문서 개체 모델 사용](using-the-managed-html-document-object-model.md)

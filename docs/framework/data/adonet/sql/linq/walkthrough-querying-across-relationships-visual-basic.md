@@ -1,17 +1,17 @@
 ---
-title: '연습: 관계 간 쿼리 (Visual Basic)'
+title: '연습: 관계 간 쿼리(Visual Basic)'
 ms.date: 03/30/2017
 dev_langs:
 - vb
 ms.assetid: a7da43e3-769f-4e07-bcd6-552b8bde66f4
-ms.openlocfilehash: 2246ad1f9f36af2f8f4383647ccb97ee7be3b64b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: aa6be50e1cdb00acf79c9f9e2c49050ce7bf3b0d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54585473"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59213352"
 ---
-# <a name="walkthrough-querying-across-relationships-visual-basic"></a>연습: 관계 간 쿼리 (Visual Basic)
+# <a name="walkthrough-querying-across-relationships-visual-basic"></a>연습: 관계 간 쿼리(Visual Basic)
 이 연습에서는 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] *연결* 데이터베이스에서 외래 키 관계를 나타내는입니다.  
   
  [!INCLUDE[note_settings_general](../../../../../../includes/note-settings-general-md.md)]  
@@ -42,7 +42,7 @@ ms.locfileid: "54585473"
 ## <a name="annotating-the-customer-class"></a>Customer 클래스에 주석 지정  
  이 단계에서는 `Customer` 클래스에 대한 관계를 나타내기 위해 `Order` 클래스에 주석을 지정합니다. 어느 방향으로든 관계를 정의하여 링크를 충분히 만들 수 있으므로 이 추가 작업이 반드시 필요한 것은 아닙니다. 그러나 이 주석을 추가하면 어느 방향으로나 개체를 쉽게 탐색할 수 있습니다.  
   
-#### <a name="to-annotate-the-customer-class"></a>Customer 클래스에 주석을 지정하려면  
+#### <a name="to-annotate-the-customer-class"></a>Customer 클래스에 주석을 달려면  
   
 -   `Customer` 클래스에 다음 코드를 입력하거나 붙여넣습니다.  
   
@@ -92,4 +92,5 @@ ms.locfileid: "54585473"
  다음 연습 ([연습: 데이터 조작 (Visual Basic)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-manipulating-data-visual-basic.md)) 데이터를 조작 하는 방법을 보여 줍니다. 다음 연습에서는 이미 완료한 이 시리즈의 연습 두 개를 저장할 필요가 없습니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [연습으로 학습](../../../../../../docs/framework/data/adonet/sql/linq/learning-by-walkthroughs.md)

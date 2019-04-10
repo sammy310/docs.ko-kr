@@ -2,12 +2,12 @@
 title: 보안 유효성 검사
 ms.date: 03/30/2017
 ms.assetid: 48dcd496-0c4f-48ce-8b9b-0e25b77ffa58
-ms.openlocfilehash: 594f7588f81ce04cef9e1f7f04a7ad9d75ce7a19
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: b6e97b7b8662a13628bd8b0b353e4d28c0c84a9f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54699768"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59202874"
 ---
 # <a name="security-validation"></a>보안 유효성 검사
 이 샘플에서는 사용자 지정 동작을 통해 컴퓨터에 있는 서비스의 유효성을 검사하여 특정 기준을 충족하는지 확인하는 방법을 보여 줍니다. 이 샘플에서는 서비스의 각 엔드포인트를 검사하여 보안 바인딩 요소가 포함되어 있는지 확인하는 방식으로 사용자 지정 동작을 통해 서비스의 유효성을 검사합니다. 이 샘플은 기반 합니다 [Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md)합니다.  
@@ -107,4 +107,5 @@ public void Validate(ServiceDescription serviceDescription,
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Management\ServiceValidation`  
   
 ## <a name="see-also"></a>참고자료
+
 - [AppFabric 모니터링 샘플](https://go.microsoft.com/fwlink/?LinkId=193959)

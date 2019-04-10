@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 5f050181-8fdd-4a4e-9d16-f84c22a88a97
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ed019dc4f1e6b99c9fa1d001c94af45802336ba6
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 06e07c41d398c0792094b4481a38c69b2ba73004
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57715518"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59208282"
 ---
 # <a name="runtime-exceptions-in-net-native-apps"></a>.NET 네이티브 앱의 런타임 예외
 디버그 및 릴리스 구성이 완전히 다르므로 해당 대상 플랫폼에서 유니버설 Windows 플랫폼 앱의 릴리스 빌드를 테스트하는 것이 중요합니다. 기본적으로 디버그 구성에서는 .NET 핵심 런타임을 사용하여 앱을 컴파일하지만 릴리스 구성에서는 .NET 네이티브를 사용하여 앱을 네이티브 코드로 컴파일합니다.  
@@ -60,5 +60,6 @@ Additional information: Value does not fall within the expected range.
  전체 스택을 얻으려면 디버그 빌드를 대신 실행합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [.NET 네이티브 Windows 유니버설 앱 디버깅](https://devblogs.microsoft.com/devops/debugging-net-native-windows-universal-apps/)
 - [시작](../../../docs/framework/net-native/getting-started-with-net-native.md)

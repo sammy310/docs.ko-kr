@@ -1,5 +1,5 @@
 ---
-title: <servicePointManager> 요소(네트워크 설정)
+title: <servicePointManager> 요소 (네트워크 설정)
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#servicePointManager
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - servicePointManager element
 - <servicePointManager> element
 ms.assetid: 6e5def51-3646-4ef6-a7bd-c69151321bec
-ms.openlocfilehash: 3a18f9eb3d38ef272b7a4df58d8588b622662184
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 407ed85de109a671030eccff8ddd92af91628014
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55277552"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59202211"
 ---
 # <a name="servicepointmanager-element-network-settings"></a>\<servicePointManager > 요소 (네트워크 설정)
 네트워크 리소스에 대 한 연결을 구성합니다.  
@@ -67,6 +67,7 @@ ms.locfileid: "55277552"
  이 요소는 응용 프로그램 구성 파일 또는 컴퓨터 구성 파일(Machine.config)에서 사용할 수 있습니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Net.ServicePointManager>
 - <xref:System.Net.Security.EncryptionPolicy>
 - [네트워크 설정 스키마](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

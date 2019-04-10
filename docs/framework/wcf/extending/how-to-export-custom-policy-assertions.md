@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 99030386-43b0-4f7b-866d-17ea307f5cbd
-ms.openlocfilehash: 0fe97e381bea19458df50e1eb94f2027a6a95d4e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 4e3835b0d699d58eb55e06ed3ade1328ec30b2ef
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54721272"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59213629"
 ---
 # <a name="how-to-export-custom-policy-assertions"></a>방법: 사용자 지정 정책 어설션 내보내기
 정책 어설션은 서비스 엔드포인트의 기능 및 요구 사항에 대해 설명합니다. 서비스 응용 프로그램은 서비스 메타데이터에서 사용자 지정 정책 어설션을 사용하여 엔드포인트, 바인딩 또는 계약 사용자 지정 정보에 대해 클라이언트 응용 프로그램과 통신할 수 있습니다. Windows Communication Foundation (WCF)를 사용 하면 끝점, 작업 또는 기능 또는 사용자가 통신 하는 요구 사항에 따라 메시지 제목의 WSDL 바인딩에 연결 된 정책 식의 어설션을 내보낼 수 있습니다.  
@@ -50,6 +50,7 @@ ms.locfileid: "54721272"
      [!code-vb[s_imperative#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/s_imperative/vb/service.vb#1)]  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.ServiceModel.Description.IPolicyImportExtension>
 - <xref:System.ServiceModel.Description.IPolicyExportExtension>
 - [방법: 사용자 지정 정책 어설션 가져오기](../../../../docs/framework/wcf/extending/how-to-import-custom-policy-assertions.md)

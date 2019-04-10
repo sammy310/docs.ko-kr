@@ -1,5 +1,5 @@
 ---
-title: '방법: TableLayoutPanel 컨트롤의 열과 행 편집'
+title: '방법: TableLayoutPanel 컨트롤에서 열 및 행 편집'
 ms.date: 03/30/2017
 f1_keywords:
 - net.ComponentModel.StyleCollectionEditor
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - TableLayoutPanel control [Windows Forms], editing
 - rows [Windows Forms], editing
 ms.assetid: c367ed43-40dc-49eb-9e0f-ba70e83dfec0
-ms.openlocfilehash: 40129deed1f43480b7bde59ef8a67f4561af5d38
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: eb194052ecd78d585f251789730a1f9855c509d9
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57724689"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59201964"
 ---
-# <a name="how-to-edit-columns-and-rows-in-a-tablelayoutpanel-control"></a>방법: TableLayoutPanel 컨트롤의 열과 행 편집
+# <a name="how-to-edit-columns-and-rows-in-a-tablelayoutpanel-control"></a>방법: TableLayoutPanel 컨트롤에서 열 및 행 편집
 컬렉션 편집기를 사용할 수는 <xref:System.Windows.Forms.TableLayoutPanel> 호출을 **열 및 행 스타일** 대화 상자에서 행과 컨트롤의 열을 편집 하려면.  
   
 > [!NOTE]
@@ -44,5 +44,6 @@ ms.locfileid: "57724689"
 8.  행 또는 열을 제거 하려면 클릭 합니다 **제거** 에서 현재 선택한 항목을 삭제 하려면 단추를 **멤버** 목록입니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Windows.Forms.SizeType>
 - [TableLayoutPanel 컨트롤](tablelayoutpanel-control-windows-forms.md)

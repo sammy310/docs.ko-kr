@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 3bd3d411ad6fe7f65d1eeb25754794704752009e
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: d14d542a8c1d8adeaf56dc1564e8e10121cd4064
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57488359"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59224223"
 ---
 # <a name="isymunmanagedwritersetuserentrypoint-method"></a>ISymUnmanagedWriter::SetUserEntryPoint 메서드
 이 모듈에 대 한 진입점을 되는 사용자 정의 메서드를 지정 합니다. 예를 들어이 진입점에는 main 전에 컴파일러에서 생성 된 스텁이 대신 사용자의 기본 메서드 수 있습니다.  
@@ -45,4 +45,5 @@ HRESULT SetUserEntryPoint(
  **헤더:** CorSym.idl, CorSym.h  
   
 ## <a name="see-also"></a>참고자료
+
 - [ISymUnmanagedWriter 인터페이스](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)

@@ -2,12 +2,12 @@
 title: '작업 2: 워크플로 디자이너 호스트'
 ms.date: 03/30/2017
 ms.assetid: 0a29b138-270d-4846-b78e-2b875e34e501
-ms.openlocfilehash: e02134408b38e5c9aee9c59d86b1dfce032653d1
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 4129d53f73c590535dcbee576cea91e7ad3ff37f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57708641"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59218708"
 ---
 # <a name="task-2-host-the-workflow-designer"></a>작업 2: 워크플로 디자이너 호스트
 인스턴스를 호스트 하는 절차에 설명 합니다 [!INCLUDE[wfd1](../../../includes/wfd1-md.md)] Windows Presentation Foundation (WPF) 응용 프로그램에서입니다.  
@@ -122,6 +122,7 @@ ms.locfileid: "57708641"
 10. 참조 [작업 3: 도구 상자 및 PropertyGrid 창 만들기](task-3-create-the-toolbox-and-propertygrid-panes.md) 추가 하는 방법을 알아보려면 **도구 상자** 하 고 **PropertyGrid** 재 호스트 된 워크플로 디자이너를 지원 합니다.  
   
 ## <a name="see-also"></a>참고자료
-- [워크플로 디자이너 재호스트](rehosting-the-workflow-designer.md)
-- [작업 1: 새 Windows Presentation Foundation 응용 프로그램 만들기](task-1-create-a-new-wpf-app.md)
+
+- [Workflow Designer 재호스팅](rehosting-the-workflow-designer.md)
+- [작업 1: 새 Windows Presentation Foundation 애플리케이션 만들기](task-1-create-a-new-wpf-app.md)
 - [작업 3: 도구 상자 및 PropertyGrid 창 만들기](task-3-create-the-toolbox-and-propertygrid-panes.md)

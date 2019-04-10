@@ -2,12 +2,12 @@
 title: 가상 디렉터리 설치 지침
 ms.date: 03/30/2017
 ms.assetid: 3c62cab5-81a4-48b6-ac8c-9ce33a85a157
-ms.openlocfilehash: 0f32fd6d65db529ba1015dedd98f99efd7f408c4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 7999a040dc14d75a34b75f320982dd3118eae670
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54588111"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59225588"
 ---
 # <a name="virtual-directory-setup-instructions"></a>가상 디렉터리 설치 지침
 Windows Communication Foundation (WCF) 샘플은 %SystemDrive%\inetpub\wwwroot\servicemodelsamples 폴더에 매핑되어 있는 servicemodelsamples 라는 공용 가상 디렉터리를 공유 합니다.  
@@ -59,9 +59,9 @@ Windows Communication Foundation (WCF) 샘플은 %SystemDrive%\inetpub\wwwroot\s
   
 7.  기본적으로 다음 확인란이 선택되어 있습니다.  
   
-    -   **Read**  
+    -   **읽기**  
   
-    -   **스크립트 실행 (예: ASP)**  
+    -   **스크립트 실행(예: ASP)**  
   
 8.  클릭 **다음**를 클릭 하 고 **마침** 마법사를 완료 합니다.  
   
@@ -84,7 +84,7 @@ Windows Communication Foundation (WCF) 샘플은 %SystemDrive%\inetpub\wwwroot\s
   
 2.  기본적으로 다음 확인란이 선택되어 있습니다.  
   
-    -   **Read**  
+    -   **읽기**  
   
     -   **방문 기록**  
   
@@ -191,4 +191,5 @@ Windows Communication Foundation (WCF) 샘플은 %SystemDrive%\inetpub\wwwroot\s
     3.  에 **그룹** 열에 있는지 여부를 확인에 대 한 값 **ASPNET** 가 "Users"로 지정 합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [인터넷 정보 서비스 호스팅 지침](../../../../docs/framework/wcf/samples/internet-information-service-hosting-instructions.md)

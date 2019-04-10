@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 773b6fc4-9013-4322-b728-5dec7a72e743
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5947f1e84bc5b1f35f0bd479a9fc879dbe63c9f2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 4e97bc5f9846757e02f9e55de31bee96a9d24c2f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54547818"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59219215"
 ---
 # <a name="tracing-and-instrumenting-applications"></a>응용 프로그램 추적 및 조율
 추적은 실행되는 동안 응용 프로그램의 실행을 모니터링할 수 있는 방법입니다. 개발할 때 .NET Framework 응용 프로그램에 추적 및 디버깅 계측을 추가할 수 있으며, 응용 프로그램을 개발하는 동안 및 배포한 후에 해당 계측을 모두 사용할 수 있습니다. <xref:System.Diagnostics.Trace?displayProperty=nameWithType>, <xref:System.Diagnostics.Debug?displayProperty=nameWithType> 및 <xref:System.Diagnostics.TraceSource?displayProperty=nameWithType> 클래스를 사용하여 나중에 분석할 수 있도록 오류 및 응용 프로그램 실행 정보를 로그, 텍스트 파일 또는 다른 장치에 기록할 수 있습니다.  
@@ -123,7 +123,7 @@ System.Diagnostics.Debug.WriteLine("Hello World!");
 |메서드|출력|  
 |------------|------------|  
 |**Assert**|지정된 텍스트 또는 지정되지 않은 경우 호출 스택입니다. **Assert** 문에서 인수로 지정된 조건이 **false**인 경우에만 출력이 기록됩니다.|  
-|**Fail**|지정된 텍스트 또는 지정되지 않은 경우 호출 스택입니다.|  
+|**실패**|지정된 텍스트 또는 지정되지 않은 경우 호출 스택입니다.|  
 |**Write**|지정된 텍스트입니다.|  
 |**WriteIf**|**WriteIf** 문에서 인수로 지정된 조건이 충족되는 경우 지정된 텍스트입니다.|  
 |**WriteLine**|지정된 텍스트와 캐리지 리턴입니다.|  
@@ -142,14 +142,15 @@ System.Diagnostics.Debug.WriteLine("Hello World!");
  ASP.NET 응용 프로그램을 배포하기 전에 추적 및 디버깅을 사용하지 않도록 설정하지 않으면 응용 프로그램이 해당 정보를 노출하여 악성 프로그램에서 악용될 수 있습니다. 자세한 내용은 [방법: 추적 및 디버그를 사용한 조건부 컴파일](../../../docs/framework/debug-trace-profile/how-to-compile-conditionally-with-trace-and-debug.md)하십시오 [컴파일 및 빌드](/visualstudio/ide/compiling-and-building-in-visual-studio), 및 [방법: 만들기, 초기화 및 추적 스위치 구성](../../../docs/framework/debug-trace-profile/how-to-create-initialize-and-configure-trace-switches.md)합니다. IIS(인터넷 정보 서비스)를 통해 디버깅을 구성할 수도 있습니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Diagnostics.Trace>
 - <xref:System.Diagnostics.TraceSource>
 - [코드 계약](../../../docs/framework/debug-trace-profile/code-contracts.md)
-- [C#, F#, and Visual Basic Project Types](/visualstudio/debugger/debugging-preparation-csharp-f-hash-and-visual-basic-project-types)(C#, F# 및 Visual Basic 프로젝트 형식)
-- [방법: 응용 프로그램 코드에 Trace 문 추가](../../../docs/framework/debug-trace-profile/how-to-add-trace-statements-to-application-code.md)
-- [방법: 추적 및 디버그를 사용한 조건부 컴파일](../../../docs/framework/debug-trace-profile/how-to-compile-conditionally-with-trace-and-debug.md)
-- [방법: 만들기, 초기화 및 추적 스위치 구성](../../../docs/framework/debug-trace-profile/how-to-create-initialize-and-configure-trace-switches.md)
-- [방법: 추적 소스 생성 및 초기화](../../../docs/framework/debug-trace-profile/how-to-create-and-initialize-trace-sources.md)
+- [C#, F# 및 Visual Basic 프로젝트 형식](/visualstudio/debugger/debugging-preparation-csharp-f-hash-and-visual-basic-project-types)
+- [방법: 애플리케이션 코드에 추적 문 추가](../../../docs/framework/debug-trace-profile/how-to-add-trace-statements-to-application-code.md)
+- [방법: 추적 및 디버그를 사용하여 조건부 컴파일](../../../docs/framework/debug-trace-profile/how-to-compile-conditionally-with-trace-and-debug.md)
+- [방법: 추적 스위치 만들기, 초기화 및 구성](../../../docs/framework/debug-trace-profile/how-to-create-initialize-and-configure-trace-switches.md)
+- [방법: 추적 소스 만들기 및 초기화](../../../docs/framework/debug-trace-profile/how-to-create-and-initialize-trace-sources.md)
 - [방법: 추적 수신기와 함께 TraceSource 및 필터 사용](../../../docs/framework/debug-trace-profile/how-to-use-tracesource-and-filters-with-trace-listeners.md)
 - [추적 수신기](../../../docs/framework/debug-trace-profile/trace-listeners.md)
 - [추적 스위치](../../../docs/framework/debug-trace-profile/trace-switches.md)

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 1b97afeb-03f8-41e2-8eb3-58aff65f7d18
-ms.openlocfilehash: fd2b639f98dbb381cf4bea70cc790fd99ebf185f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 0f750f2d23430691016fc2cf1e5e9d44d80da2a9
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54708352"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59204083"
 ---
 # <a name="creating-a-datatable-from-a-query-linq-to-dataset"></a>쿼리에서 DataTable 만들기(LINQ to DataSet)
 데이터 바인딩에는 일반적으로 <xref:System.Data.DataTable> 개체가 사용됩니다. <xref:System.Data.DataTableExtensions.CopyToDataTable%2A> 메서드는 쿼리 결과를 받아서 나중에 데이터 바인딩에 사용할 수 있도록 데이터를 <xref:System.Data.DataTable>에 복사합니다. 데이터 작업이 수행되면 새 <xref:System.Data.DataTable>이 소스 <xref:System.Data.DataTable>에 다시 병합됩니다.  
@@ -75,6 +75,7 @@ ms.locfileid: "54708352"
  [!code-vb[DP Custom CopyToDataTable Examples#LoadScalarSequence](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP Custom CopyToDataTable Examples/VB/Module1.vb#loadscalarsequence)]  
   
 ## <a name="see-also"></a>참고자료
+
 - [프로그래밍 가이드](../../../../docs/framework/data/adonet/programming-guide-linq-to-dataset.md)
-- [제네릭 Field 및 SetField 메서드](../../../../docs/framework/data/adonet/generic-field-and-setfield-methods-linq-to-dataset.md)
+- [제네릭 필드 및 SetField 메서드](../../../../docs/framework/data/adonet/generic-field-and-setfield-methods-linq-to-dataset.md)
 - [LINQ to DataSet 예제](../../../../docs/framework/data/adonet/linq-to-dataset-examples.md)

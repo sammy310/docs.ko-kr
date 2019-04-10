@@ -15,12 +15,12 @@ helpviewer_keywords:
 - feature security requirements [WPF]
 - managing permissions [WPF]
 ms.assetid: ef2c0810-1dbf-4511-babd-1fab95b523b5
-ms.openlocfilehash: c0391099d02933cb8a32a2e134dad949034138ad
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 75ebf605e9abb844e7a713b448aefe2ec4cd1a27
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57371634"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59218383"
 ---
 # <a name="wpf-partial-trust-security"></a>WPF 부분 신뢰 보안
 <a name="introduction"></a> 일반적으로 악의적인 손상을 방지하기 위해 중요한 시스템 리소스에 직접 액세스하지 않도록 인터넷 응용 프로그램을 제한해야 합니다. 기본적으로 [!INCLUDE[TLA#tla_html](../../../includes/tlasharptla-html-md.md)] 되며 클라이언트 쪽 스크립트 언어인 중요 한 시스템 리소스에 액세스할 수 없습니다. Windows Presentation Foundation (WPF) 브라우저에서 호스팅된 응용 프로그램은 브라우저에서 시작할 수 있으므로 비슷한 일련의 제한 사항에 따라야 합니다. 이러한 제한 사항이 적용 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 둘 다에 의존 [!INCLUDE[TLA#tla_cas](../../../includes/tlasharptla-cas-md.md)] 하 고 [!INCLUDE[TLA#tla_clickonce](../../../includes/tlasharptla-clickonce-md.md)] (참조 [WPF 보안 전략-플랫폼 보안](wpf-security-strategy-platform-security.md)). 기본적으로 브라우저에서 호스팅된 응용 프로그램 요청 인터넷 영역 [!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)] 인터넷, 로컬 인트라넷 또는 로컬 컴퓨터에서 실행 되는 여부에 관계 없이 사용 권한 집합입니다. 전체 권한 집합보다 적은 권한으로 실행하는 애플리케이션은 부분 신뢰로 실행된다고 할 수 있습니다.  
@@ -164,6 +164,7 @@ ms.locfileid: "57371634"
  또는 모든 보안 영역에서 완전 신뢰 배포를 위한 ClickOnce 신뢰 배포 모델을 사용할 수 있습니다. 자세한 내용은 [Trusted Application Deployment Overview](/visualstudio/deployment/trusted-application-deployment-overview) 하 고 [보안](security-wpf.md)합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [보안](security-wpf.md)
 - [WPF 보안 전략 - 플랫폼 보안](wpf-security-strategy-platform-security.md)
 - [WPF 보안 전략 - 보안 엔지니어링](wpf-security-strategy-security-engineering.md)

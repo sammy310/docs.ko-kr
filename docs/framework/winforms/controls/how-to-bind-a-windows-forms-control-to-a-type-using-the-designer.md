@@ -1,19 +1,19 @@
 ---
-title: '방법: 디자이너를 사용 하 여 형식에는 Windows Forms 컨트롤 바인딩'
+title: '방법: 디자이너를 사용하여 형식에 Windows Forms 컨트롤 바인딩'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - controls [Windows Forms], binding to a type
 - BindingSource component [Windows Forms], binding to a type
 - types [Windows Forms], binding controls to
 ms.assetid: 5ab984b5-c2d0-4638-a572-1c84013e8746
-ms.openlocfilehash: 29a28052b149f565e47a2e0366ed6845b83234ba
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: b2b10b443581a261a753c9f9d940a774159dc9d6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57712099"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59202302"
 ---
-# <a name="how-to-bind-a-windows-forms-control-to-a-type-using-the-designer"></a>방법: 디자이너를 사용 하 여 형식에는 Windows Forms 컨트롤 바인딩
+# <a name="how-to-bind-a-windows-forms-control-to-a-type-using-the-designer"></a>방법: 디자이너를 사용하여 형식에 Windows Forms 컨트롤 바인딩
 데이터와 상호 작용하는 컨트롤을 빌드하는 경우 때로는 개체가 아니라 형식에 컨트롤을 바인딩해야 합니다. 데이터를 사용할 수 없지만 데이터 바인딩된 컨트롤에서 형식의 공용 인터페이스에서 가져온 데이터를 표시하려는 경우 일반적으로 디자인 타임에 컨트롤을 형식에 바인딩해야 합니다. 다음 절차에는 새로 만드는 방법을 보여 줍니다 <xref:System.Windows.Forms.BindingSource> 즉 형식, 바인딩 및 다음 형식의 속성 중 하나를 바인딩하는 방법의 <xref:System.Windows.Forms.TextBox.Text%2A> 의 속성을 <xref:System.Windows.Forms.TextBox>입니다.  
   
 ### <a name="to-bind-the-bindingsource-to-a-type"></a>BindingSource를 형식에 바인딩하려면  
@@ -52,6 +52,7 @@ ms.locfileid: "57712099"
 4.  에 **DataSource UI 형식 편집기**, 노드를 확장 합니다를 <xref:System.Windows.Forms.BindingSource> 에 바인딩하려는 바인딩된 형식의 속성을 선택 하 고 이전에 추가 <xref:System.Windows.Forms.TextBox.Text%2A> 속성의는 <xref:System.Windows.Forms.TextBox>.  
   
 ## <a name="see-also"></a>참고자료
+
 - [BindingSource 구성 요소](bindingsource-component.md)
-- [방법: 형식에는 Windows Forms 컨트롤 바인딩](how-to-bind-a-windows-forms-control-to-a-type.md)
+- [방법: 형식에 Windows Forms 컨트롤 바인딩](how-to-bind-a-windows-forms-control-to-a-type.md)
 - [Visual Studio에서 데이터에 컨트롤 바인딩](/visualstudio/data-tools/bind-controls-to-data-in-visual-studio)

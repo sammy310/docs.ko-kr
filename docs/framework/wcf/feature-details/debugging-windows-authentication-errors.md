@@ -8,12 +8,12 @@ helpviewer_keywords:
 - WCF, authentication
 - WCF, Windows authentication
 ms.assetid: 181be4bd-79b1-4a66-aee2-931887a6d7cc
-ms.openlocfilehash: a68a291b1974e86c9a4f16f9d90a879649076533
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 45f4185df1c55ff40fce3e33fe5e0e497fa54654
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54595138"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59228264"
 ---
 # <a name="debugging-windows-authentication-errors"></a>Windows 인증 오류 디버깅
 Windows 인증을 보안 메커니즘으로 사용하면 SSPI(보안 지원 공급자 인터페이스)에서 보안 프로세스를 처리합니다. SSPI 계층에 보안 오류가 발생 하면 Windows Communication Foundation (WCF)으로 표시 됩니다. 이 항목에서는 오류 진단에 도움이 되는 프레임워크 및 일련의 질문을 제공합니다.  
@@ -91,7 +91,7 @@ Windows 인증을 보안 메커니즘으로 사용하면 SSPI(보안 지원 공�
   
 3.  NTLM 사용을 허용하지 않고 Kerberos를 사용하려면 SSPI 협상이 필요합니다.  
   
-    1.  `ChannelFactory.Credentials.Windows.AllowNtlm = false` 문과 함께 코드에서 이 작업을 수행합니다.  
+    1.  다음 문 사용 하 여 코드에서이 수행 합니다. `ChannelFactory.Credentials.Windows.AllowNtlm = false`  
   
     2.  `allowNtlm` 특성을 `false`로 설정하여 구성 파일에서 이 작업을 수행할 수도 있습니다. 이 특성에 포함 된 [ \<windows >](../../../../docs/framework/configure-apps/file-schema/wcf/windows-of-clientcredentials-element.md)합니다.  
   
@@ -145,6 +145,7 @@ Windows 인증을 보안 메커니즘으로 사용하면 SSPI(보안 지원 공�
  응용 프로그램을 한 컴퓨터에서 개발하여 다른 컴퓨터에 배포하고 서로 다른 계정 형식을 사용하여 각 컴퓨터에서 인증을 수행하면 동작이 동일하지 않을 수 있습니다. 예를 들어 `SSPI Negotiated` 인증 모드를 사용하여 Windows XP Pro 컴퓨터에서 응용 프로그램을 개발할 경우 로컬 사용자 계정을 사용하여 인증하면 NTLM 프로토콜이 사용됩니다. 응용 프로그램 개발을 마친 후 도메인 계정으로 실행되는 Windows Server 2003 컴퓨터에 해당 서비스를 배포하면 클라이언트에서는 Kerberos 및 도메인 컨트롤러를 사용할 것이므로 해당 서비스를 인증할 수 없습니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.ServiceModel.Security.WindowsClientCredential>
 - <xref:System.ServiceModel.Security.WindowsServiceCredential>
 - <xref:System.ServiceModel.Security.WindowsClientCredential>

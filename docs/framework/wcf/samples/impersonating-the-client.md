@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Impersonating the Client Sample [Windows Communication Foundation]
 - impersonation, Windows Communication Foundation sample
 ms.assetid: 8bd974e1-90db-4152-95a3-1d4b1a7734f8
-ms.openlocfilehash: 8338d04382e77c231232ca2080c21e8732a683b7
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
-ms.translationtype: MT
+ms.openlocfilehash: bd03ddb2478d8f9938a8c89c04f536a81e9e24da
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58836131"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59202471"
 ---
 # <a name="impersonating-the-client"></a>Impersonating the Client
 Impersonation 샘플에서는 서비스가 호출자를 대신하여 시스템 리소스에 액세스할 수 있도록 서비스에서 호출자 응용 프로그램을 가장하는 방법을 보여 줍니다.  
@@ -124,4 +124,3 @@ client.ClientCredentials.Windows.AllowedImpersonationLevel = TokenImpersonationL
      그런 다음 암호를 묻는 메시지가 나타납니다. 이전에 지정한 계정에 대한 암호를 입력합니다.  
   
 5.  클라이언트를 다른 자격 증명으로 실행하기 전과 후의 ID에 주의합니다.  
-  

@@ -1,19 +1,19 @@
 ---
-title: '방법: 디자이너를 사용 하 여 Windows Forms DataGridView 컨트롤에 데이터 바인딩'
+title: '방법: 디자이너를 사용하여 Windows Forms DataGridView 컨트롤에 데이터 바인딩'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Windows Forms controls, binding to a data source
 - data sources [Windows Forms], binding to Windows Forms controls
 - DataGridView control [Windows Forms], data binding
 ms.assetid: f4f46009-cec2-441b-8668-6b5af057558b
-ms.openlocfilehash: 8c90366111957f27a6bd86035013eba00426f46b
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 70bd2d25f848f1602fbd12a76f898f8fe902d696
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57718508"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59200235"
 ---
-# <a name="how-to-bind-data-to-the-windows-forms-datagridview-control-using-the-designer"></a>방법: 디자이너를 사용 하 여 Windows Forms DataGridView 컨트롤에 데이터 바인딩
+# <a name="how-to-bind-data-to-the-windows-forms-datagridview-control-using-the-designer"></a>방법: 디자이너를 사용하여 Windows Forms DataGridView 컨트롤에 데이터 바인딩
 디자이너를 사용 하 여 연결할 수는 <xref:System.Windows.Forms.DataGridView> 데이터베이스, 비즈니스 개체 또는 웹 서비스를 포함 하는 여러 다른 종류의 데이터 소스 컨트롤입니다. 컨트롤에 자동으로 바인딩되어 컨트롤에 디자이너를 사용 하 여 데이터 원본에 바인딩하는 경우는 <xref:System.Windows.Forms.BindingSource> 데이터 소스를 나타내는 구성 요소입니다. 또한 열은 데이터 소스에서 제공하는 스키마 정보와 일치하는 컨트롤에 자동으로 생성됩니다.  
   
  열을 생성한 후에 사용자 요구에 맞게 수정할 수 있습니다. 예를 들어 표시하지 않아도 되는 열을 제거하거나 숨길 수 있습니다. 열을 다시 정렬하거나 열 형식을 수정할 수도 있습니다. 열을 수정하는 방법에 대한 자세한 내용은 [참고 항목] 섹션에 나열된 항목을 참조하세요.  
@@ -45,18 +45,19 @@ ms.locfileid: "57718508"
     >  프로젝트에 데이터 소스가 이미 있으면 **데이터 소스** 창을 사용하여 데이터 양식을 만들 수도 있습니다. 자세한 내용은 [데이터 소스 창](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/6ckyxa83(v=vs.120))을 참조하세요.  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.BindingSource>
 - <xref:System.Windows.Forms.DataGridView.DataMember%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.DataGridView.DataSource%2A?displayProperty=nameWithType>
 - [방법: 데이터베이스의 데이터에 연결](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/fxk9yw1t(v=vs.120))
-- [방법: 추가 하 고 디자이너를 사용 하 여 Windows Forms DataGridView 컨트롤에서 열을 제거 합니다.](add-and-remove-columns-in-the-datagrid-using-the-designer.md)
-- [방법: 디자이너를 사용 하 여 Windows Forms DataGridView 컨트롤에서 열 순서 변경](change-the-order-of-columns-in-the-datagrid-using-the-designer.md)
-- [방법: 디자이너를 사용 하 여 Windows Forms Datagridview 컨트롤의 형식 변경](change-the-type-of-a-wf-datagridview-column-using-the-designer.md)
-- [방법: 디자이너를 사용 하 여 Windows Forms DataGridView 컨트롤에서 열 고정](freeze-columns-in-the-datagrid-using-the-designer.md)
-- [방법: 디자이너를 사용 하 여 Windows Forms DataGridView 컨트롤에서 열 숨기기](hide-columns-in-the-datagrid-using-the-designer.md)
-- [방법: 디자이너를 사용 하 여 Windows Forms DataGridView 컨트롤의 읽기 전용으로 열 만들기](make-columns-read-only-in-the-datagrid-using-the-designer.md)
-- [방법: Windows Forms 애플리케이션 프로젝트 만들기](/visualstudio/ide/step-1-create-a-windows-forms-application-project)
+- [방법: 디자이너를 사용하여 Windows Forms DataGridView 컨트롤에서 열 추가 및 제거](add-and-remove-columns-in-the-datagrid-using-the-designer.md)
+- [방법: 디자이너를 사용하여 Windows Forms DataGridView 컨트롤에서 열 순서 변경](change-the-order-of-columns-in-the-datagrid-using-the-designer.md)
+- [방법: 디자이너를 사용하여 Windows Forms DataGridView 열의 형식 변경](change-the-type-of-a-wf-datagridview-column-using-the-designer.md)
+- [방법: 디자이너를 사용하여 Windows Forms DataGridView 컨트롤에서 열 고정](freeze-columns-in-the-datagrid-using-the-designer.md)
+- [방법: 디자이너를 사용하여 Windows Forms DataGridView 컨트롤에서 열 숨기기](hide-columns-in-the-datagrid-using-the-designer.md)
+- [방법: 디자이너를 사용하여 Windows Forms DataGridView 컨트롤에서 열을 읽기 전용으로 설정](make-columns-read-only-in-the-datagrid-using-the-designer.md)
+- [방법: Windows Forms 응용 프로그램 프로젝트 만들기](/visualstudio/ide/step-1-create-a-windows-forms-application-project)
 - [방법: Windows Forms에 컨트롤 추가](how-to-add-controls-to-windows-forms.md)
 - [데이터 소스 창](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/6ckyxa83(v=vs.120))
 - [방법: Windows Forms 응용 프로그램에서 관련된 데이터 표시](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/57tx3hhe(v=vs.120))

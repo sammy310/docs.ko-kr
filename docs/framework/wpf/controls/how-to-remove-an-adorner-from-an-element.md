@@ -1,5 +1,5 @@
 ---
-title: '방법: 요소에서 표시기 제거'
+title: '방법: 요소에서 표시기(Adorner) 제거'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,14 +7,14 @@ dev_langs:
 helpviewer_keywords:
 - adorners [WPF], removing
 ms.assetid: 97cf4d9f-0596-429e-8526-32a30aa4ae99
-ms.openlocfilehash: 0c74fe9ed1e7190ce4ff26a7dbae1413f950ba7e
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 256dd6fa0117f88aec2ef6b60c6dcd4c33b57855
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57374078"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59212403"
 ---
-# <a name="how-to-remove-an-adorner-from-an-element"></a>방법: 요소에서 표시기 제거
+# <a name="how-to-remove-an-adorner-from-an-element"></a>방법: 요소에서 표시기(Adorner) 제거
 이 예제에서는 프로그래밍 방식으로 지정 된 특정 표시기를 제거 하는 방법을 보여 줍니다 <xref:System.Windows.UIElement>합니다.  
   
 ## <a name="example"></a>예제  
@@ -30,4 +30,5 @@ ms.locfileid: "57374078"
  [!code-vb[AdornersMiscCode#_RemoveSpecificAdornerShort](~/samples/snippets/visualbasic/VS_Snippets_Wpf/AdornersMiscCode/visualbasic/window1.xaml.vb#_removespecificadornershort)]  
   
 ## <a name="see-also"></a>참고자료
+
 - [표시기 개요](adorners-overview.md)

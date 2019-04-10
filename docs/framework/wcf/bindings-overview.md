@@ -4,23 +4,23 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - bindings [WCF], overview
 ms.assetid: cfb5842f-e0f9-4c56-a015-f2b33f258232
-ms.openlocfilehash: 7d617400fe5c07e8c9754e322960f31a350f62e5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: c450de0eb3eead3a2d3b21c3635caa71d92ce07f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54657417"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59212806"
 ---
 # <a name="windows-communication-foundation-bindings-overview"></a>Windows Communication Foundation 바인딩 개요
 바인딩에 Windows Communication Foundation (WCF) 서비스의 끝점에 연결 하는 데 필요한 통신 세부 정보를 지정 하는 데 사용 되는 개체입니다. WCF 서비스에서 각 끝점에 대해 바인딩을 올바로 지정 필요 합니다. 이 항목에서는 통신 세부 정보 바인딩을 정의 하는 바인딩, 바인딩 종류는 WCF에 포함 된 및 끝점에 대 한 바인딩을 지정할 수 있습니다 하는 방법의 요소 형식에 설명 합니다.  
   
 ## <a name="what-a-binding-defines"></a>바인딩이 정의하는 내용  
- 바인딩의 정보는 매우 기본적이거나 매우 복잡할 수 있습니다. 가장 기본적인 바인딩은 끝점에 연결하는 데 사용해야 하는 HTTP 등의 전송 프로토콜만 지정합니다. 보다 일반적으로, 엔드포인트 연결 방법과 관련해서 바인딩에 포함되는 정보는 다음 범주 중 하나에 해당합니다.  
+ 바인딩의 정보는 매우 기본적이거나 매우 복잡할 수 있습니다. 가장 기본적인 바인딩은 엔드포인트에 연결하는 데 사용해야 하는 HTTP 등의 전송 프로토콜만 지정합니다. 보다 일반적으로, 엔드포인트 연결 방법과 관련해서 바인딩에 포함되는 정보는 다음 범주 중 하나에 해당합니다.  
   
  프로토콜  
  신뢰할 수 있는 메시징 기능 또는 트랜잭션 컨텍스트 흐름 설정 중 하나인 사용되는 보안 메커니즘을 결정합니다.  
   
- Encoding  
+ 인코딩  
  메시지 인코딩(예: 텍스트 또는 이진)을 결정합니다.  
   
  전송  
@@ -45,7 +45,7 @@ ms.locfileid: "54657417"
  모든 WCF에서 제공 바인딩 중 설명이 포함 된 전체 목록을 참조 하세요 [System-Provided Bindings](../../../docs/framework/wcf/system-provided-bindings.md)합니다.  
   
 ## <a name="using-your-own-bindings"></a>고유한 바인딩 사용  
- 포함된 시스템 제공 바인딩에 서비스 응용 프로그램에 필요한 올바른 기능 조합이 없는 경우 고유한 바인딩을 만들 수 있습니다. 이렇게 하는 데는 두 가지 방법이 있습니다. <xref:System.ServiceModel.Channels.CustomBinding> 개체를 사용하여 기존의 바인딩 요소에서 새 바인딩을 만들거나 <xref:System.ServiceModel.Channels.Binding> 바인딩에서 파생하여 완전한 사용자 지정 바인딩을 만들 수 있습니다. 이러한 두 가지 방법을 사용 하 여 고유한 바인딩을 만드는 방법에 대 한 자세한 내용은 참조 하세요. [사용자 지정 바인딩](../../../docs/framework/wcf/extending/custom-bindings.md) 하 고 [Creating User-Defined 바인딩](../../../docs/framework/wcf/extending/creating-user-defined-bindings.md)합니다.  
+ 포함된 시스템 제공 바인딩에 서비스 응용 프로그램에 필요한 올바른 기능 조합이 없는 경우 고유한 바인딩을 만들 수 있습니다. 그런 경우 두 가지 방법이 있습니다. <xref:System.ServiceModel.Channels.CustomBinding> 개체를 사용하여 기존의 바인딩 요소에서 새 바인딩을 만들거나 <xref:System.ServiceModel.Channels.Binding> 바인딩에서 파생하여 완전한 사용자 지정 바인딩을 만들 수 있습니다. 이러한 두 가지 방법을 사용 하 여 고유한 바인딩을 만드는 방법에 대 한 자세한 내용은 참조 하세요. [사용자 지정 바인딩](../../../docs/framework/wcf/extending/custom-bindings.md) 하 고 [Creating User-Defined 바인딩](../../../docs/framework/wcf/extending/creating-user-defined-bindings.md)합니다.  
   
 ## <a name="using-bindings"></a>바인딩 사용  
  바인딩 사용은 다음 두 가지 기본 단계로 이루어집니다.  
@@ -58,4 +58,5 @@ ms.locfileid: "54657417"
  두 가지 방법, 즉 코드 또는 구성을 통해 바인딩을 정의할 수 있습니다. 이러한 두 접근 방법은 시스템 제공 바인딩을 사용하든 사용자 지정 바인딩을 사용하든 관계가 없습니다. 일반적으로 코드를 사용하면 디자인 타임에 바인딩 정의를 완전히 제어할 수 있습니다. 시스템 관리자 또는 WCF 서비스 또는 서비스 응용 프로그램을 다시 컴파일하지 않고도 바인딩의 매개 변수를 변경 하는 클라이언트의 사용자 허용 다른 한편으로 구성을 사용 합니다. WCF 응용 프로그램을 배포 하는 특정 컴퓨터 요구 사항을 예측할 방법이 없기 때문에이 유연성은 바람직한 경우가 많습니다. 바인딩(및 주소 지정) 정보를 코드와 구분하면 응용 프로그램을 다시 컴파일하거나 다시 배포하지 않고도 해당 정보를 변경할 수 있습니다. 코드에 정의된 바인딩은 구성에 지정된 바인딩 후에 만들어지므로 코드에 정의된 바인딩이 구성에 정의된 모든 바인딩을 덮어쓸 수 있습니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [바인딩을 사용하여 서비스 및 클라이언트 구성](../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)

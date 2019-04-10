@@ -1,5 +1,5 @@
 ---
-title: '방법: WSFederationHttpBinding에서 보안 세션을 사용 하지 않도록 설정'
+title: '방법: WSFederationHttpBinding에서 보안 세션을 사용하지 않도록 설정'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - WCF, federation
 - federation
 ms.assetid: 675fa143-6a4e-4be3-8afc-673334ab55ec
-ms.openlocfilehash: 8c03bb9601ecbaaf8694d1df26ba43e34434ac47
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 809626d0d6d69d22f09b0f10210cfda7a033ac3d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54720030"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59211805"
 ---
-# <a name="how-to-disable-secure-sessions-on-a-wsfederationhttpbinding"></a>방법: WSFederationHttpBinding에서 보안 세션을 사용 하지 않도록 설정
+# <a name="how-to-disable-secure-sessions-on-a-wsfederationhttpbinding"></a>방법: WSFederationHttpBinding에서 보안 세션을 사용하지 않도록 설정
 일부 서비스에서 페더레이션 자격 증명을 필요로 하지만 보안 세션을 지원하지 않을 수도 있습니다. 이 경우 보안 세션 기능을 사용하지 않도록 설정해야 합니다. <xref:System.ServiceModel.WSHttpBinding>과 달리 <xref:System.ServiceModel.WSFederationHttpBinding> 클래스에서는 서비스와 통신할 때 보안 세션을 사용하지 않도록 설정할 수 없습니다. 대신 보안 세션 설정을 부트스트랩으로 대체하는 사용자 지정 바인딩을 만들어야 합니다.  
   
  이 항목에서는 <xref:System.ServiceModel.WSFederationHttpBinding>에 포함된 바인딩 요소를 수정하여 사용자 지정 바인딩을 만드는 방법을 보여 줍니다. 보안 세션을 사용하지 않는 점만 제외하고 결과는 <xref:System.ServiceModel.WSFederationHttpBinding>과 동일합니다.  
@@ -43,4 +43,5 @@ ms.locfileid: "54720030"
 -   코드 예제를 컴파일하려면 System.ServiceModel.dll 어셈블리를 참조하는 프로젝트를 만듭니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [바인딩 및 보안](../../../../docs/framework/wcf/feature-details/bindings-and-security.md)

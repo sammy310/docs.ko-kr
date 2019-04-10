@@ -9,12 +9,12 @@ helpviewer_keywords:
 - WCF Data Services, client library
 - data binding, WCF Data Services
 ms.assetid: b32e1d49-c214-4cb1-867e-88fbb3d08c8d
-ms.openlocfilehash: 1207a25a6718fddf9d18206a4cc09089806edecc
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8e6b0d9c9b5d2b473aebc00063bd0a343b8708c6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54538533"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59226666"
 ---
 # <a name="binding-data-to-controls-wcf-data-services"></a>컨트롤에 데이터 바인딩(WCF Data Services)
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]를 사용하면 `ComboBox`, `ListView` 등의 컨트롤을 <xref:System.Data.Services.Client.DataServiceCollection%601> 클래스 인스턴스에 바인딩할 수 있습니다. <xref:System.Collections.ObjectModel.ObservableCollection%601> 클래스에서 상속되는 이 컬렉션에는 [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] 피드의 데이터가 포함됩니다. 이 클래스는 항목이 추가 또는 제거될 때 알림을 제공하는 동적 데이터 컬렉션을 나타냅니다. 인스턴스를 사용 하는 경우 <xref:System.Data.Services.Client.DataServiceCollection%601> 데이터 바인딩에 대 한는 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 하 여 추적 되는 개체가 되도록 이러한 이벤트를 처리 하는 클라이언트 라이브러리는 <xref:System.Data.Services.Client.DataServiceContext> 바인딩된 UI 요소의 데이터와 동기화 된 상태로 유지 합니다.  
@@ -81,12 +81,12 @@ ms.locfileid: "54538533"
   
  새 <xref:System.Data.Services.Client.DataServiceCollection%601> 인스턴스를 만드는 경우 바인딩된 개체가 변경될 때 발생하는 이벤트를 처리하는 메서드에 대리자를 정의하는 다음 매개 변수를 지정할 수 있습니다.  
   
--   `entityChanged` - 바인딩된 개체의 속성이 변경될 때 호출되는 메서드입니다. 이 <xref:System.Func%602> 대리자는 <xref:System.Data.Services.Client.EntityChangedParams> 개체를 받아들이고 <xref:System.Data.Services.Client.DataServiceContext.UpdateObject%2A>에서 <xref:System.Data.Services.Client.DataServiceContext>를 호출하는 기본 동작이 수행되어야 하는지 여부를 나타내는 부울 값을 반환합니다.  
+-   `entityChanged` -바인딩된 개체의 속성이 변경 될 때 호출 되는 메서드. 이 <xref:System.Func%602> 대리자는 <xref:System.Data.Services.Client.EntityChangedParams> 개체를 받아들이고 <xref:System.Data.Services.Client.DataServiceContext.UpdateObject%2A>에서 <xref:System.Data.Services.Client.DataServiceContext>를 호출하는 기본 동작이 수행되어야 하는지 여부를 나타내는 부울 값을 반환합니다.  
   
--   `entityCollectionChanged` - 개체가 바인딩 컬렉션에 추가 또는 제거될 때 호출되는 메서드입니다. 이 <xref:System.Func%602> 대리자는 <xref:System.Data.Services.Client.EntityCollectionChangedParams> 개체를 받아들이고 <xref:System.Data.Services.Client.DataServiceContext.AddObject%2A> 작업에 대해 <xref:System.Collections.Specialized.NotifyCollectionChangedAction.Add>를 호출하거나 <xref:System.Data.Services.Client.DataServiceContext.DeleteObject%2A>에서 <xref:System.Collections.Specialized.NotifyCollectionChangedAction.Remove> 작업에 대해 <xref:System.Data.Services.Client.DataServiceContext>를 호출하는 기본 동작이 수행되어야 하는지 여부를 나타내는 부울 값을 반환합니다.  
+-   `entityCollectionChanged` -개체를 추가 하거나 바인딩 컬렉션에서 제거할 때 호출 되는 메서드. 이 <xref:System.Func%602> 대리자는 <xref:System.Data.Services.Client.EntityCollectionChangedParams> 개체를 받아들이고 <xref:System.Data.Services.Client.DataServiceContext.AddObject%2A> 작업에 대해 <xref:System.Collections.Specialized.NotifyCollectionChangedAction.Add>를 호출하거나 <xref:System.Data.Services.Client.DataServiceContext.DeleteObject%2A>에서 <xref:System.Collections.Specialized.NotifyCollectionChangedAction.Remove> 작업에 대해 <xref:System.Data.Services.Client.DataServiceContext>를 호출하는 기본 동작이 수행되어야 하는지 여부를 나타내는 부울 값을 반환합니다.  
   
 > [!NOTE]
->  [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]는 이러한 대리자에 구현한 사용자 지정 동작의 유효성 검사를 수행하지 않습니다.  
+>  [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 이러한 대리자에 구현한 사용자 지정 동작의 유효성을 검사 하지를 수행 합니다.  
   
  다음 예제에서 <xref:System.Collections.Specialized.NotifyCollectionChangedAction.Remove> 작업은 <xref:System.Data.Services.Client.DataServiceContext.DeleteLink%2A> 및 <xref:System.Data.Services.Client.DataServiceContext.DeleteObject%2A> 메서드를 호출하여 삭제된 `Orders_Details` 엔터티에 속하는 `Orders` 엔터티를 제거하도록 사용자 지정됩니다. 이 사용자 지정 작업은 부모 엔터티가 삭제될 때 종속 엔터티가 자동으로 삭제되지 않으므로 수행됩니다.  
   
@@ -101,18 +101,19 @@ ms.locfileid: "54538533"
 ## <a name="data-binding-with-custom-client-data-classes"></a>사용자 지정 클라이언트 데이터 클래스를 사용하여 데이터 바인딩  
  개체를 <xref:System.Data.Services.Client.DataServiceCollection%601>으로 로드할 수 있으려면 개체 자체에서 <xref:System.ComponentModel.INotifyPropertyChanged> 인터페이스를 구현해야 합니다. 데이터 서비스에서 사용 하는 경우 생성 되는 클라이언트 클래스를 **서비스 참조 추가** 대화 상자 또는 [DataSvcUtil.exe](../../../../docs/framework/data/wcf/wcf-data-service-client-utility-datasvcutil-exe.md) 도구는이 인터페이스를 구현 합니다. 고유한 클라이언트 데이터 클래스를 제공하는 경우 데이터 바인딩에 다른 컬렉션 형식을 사용해야 합니다. 개체가 변경되면 데이터 바인딩된 컨트롤에서 이벤트를 처리하여 <xref:System.Data.Services.Client.DataServiceContext> 클래스의 다음 메서드를 호출해야 합니다.  
   
--   <xref:System.Data.Services.Client.DataServiceContext.AddObject%2A> - 새 개체가 컬렉션에 추가된 경우  
+-   <xref:System.Data.Services.Client.DataServiceContext.AddObject%2A> -새 개체를 컬렉션에 추가 되는 경우.  
   
--   <xref:System.Data.Services.Client.DataServiceContext.DeleteObject%2A> - 개체가 컬렉션에서 제거된 경우  
+-   <xref:System.Data.Services.Client.DataServiceContext.DeleteObject%2A> -개체가 컬렉션에서 제거 될 때입니다.  
   
--   <xref:System.Data.Services.Client.DataServiceContext.UpdateObject%2A> - 컬렉션에 있는 개체의 속성이 변경된 경우  
+-   <xref:System.Data.Services.Client.DataServiceContext.UpdateObject%2A> -컬렉션의 개체 속성이 변경 될 경우.  
   
--   <xref:System.Data.Services.Client.DataServiceContext.AddLink%2A> - 개체가 관련 개체의 컬렉션에 추가된 경우  
+-   <xref:System.Data.Services.Client.DataServiceContext.AddLink%2A> -개체가 관련된 개체의 컬렉션에 추가 되는 경우.  
   
--   <xref:System.Data.Services.Client.DataServiceContext.SetLink%2A> - 개체가 관련 개체의 컬렉션에 추가된 경우  
+-   <xref:System.Data.Services.Client.DataServiceContext.SetLink%2A> -개체가 관련된 개체의 컬렉션에 추가 되는 경우.  
   
  자세한 내용은 [데이터 서비스 업데이트](../../../../docs/framework/data/wcf/updating-the-data-service-wcf-data-services.md)합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [방법: 수동으로 클라이언트 데이터 서비스 클래스 생성](../../../../docs/framework/data/wcf/how-to-manually-generate-client-data-service-classes-wcf-data-services.md)
 - [방법: 데이터 서비스 참조 추가](../../../../docs/framework/data/wcf/how-to-add-a-data-service-reference-wcf-data-services.md)

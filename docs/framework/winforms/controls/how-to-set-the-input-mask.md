@@ -1,19 +1,19 @@
 ---
-title: '방법: 입력된 마스크 설정'
+title: '방법: 입력 마스크 설정'
 ms.date: 03/30/2017
 f1_keywords:
 - net.ComponentModel.MaskPropertyEditor
 helpviewer_keywords:
 - MaskedTextBox control [Windows Forms]
 ms.assetid: 779b3a12-cd74-4e58-b46e-04983bda5b2c
-ms.openlocfilehash: 53bb8d0e301f83c25ab292b1cb6324dd5f21f100
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 14591b313b0ba4fc2a0a30a45c693147f00050b5
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57702362"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59207547"
 ---
-# <a name="how-to-set-the-input-mask"></a>방법: 입력된 마스크 설정
+# <a name="how-to-set-the-input-mask"></a>방법: 입력 마스크 설정
 마스킹된 텍스트 상자 컨트롤에는 수락 하거나 거부 하는 사용자 입력에 대 한 선언적 구문을 지 원하는 향상 된 텍스트 상자 컨트롤이입니다. 마스크 속성을 설정 하면 응용 프로그램에 사용자 지정 유효성 검사 논리를 작성 하지 않고 허용 되는 사용자 입력을 지정할 수 있습니다. 자세한 내용은의 설명 섹션을 참조 하십시오.는 <xref:System.Windows.Forms.MaskedTextBox> 클래스입니다.  
   
 ## <a name="setting-the-mask-property-manually"></a>마스크 속성을 수동으로 설정  
@@ -64,4 +64,5 @@ ms.locfileid: "57702362"
      마스크에 입력 합니다 **마스크** 속성에는 **속성** 창입니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [연습: MaskedTextBox 컨트롤 사용](walkthrough-working-with-the-maskedtextbox-control.md)

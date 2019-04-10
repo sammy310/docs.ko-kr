@@ -9,12 +9,12 @@ helpviewer_keywords:
 - animation [WPF], Doubles with key frames
 - key frames [WPF], animating Doubles with
 ms.assetid: 3a1a7dba-7694-4907-8a2f-3408baebfa82
-ms.openlocfilehash: fe2efdada43e5dd6aced730ab59d9dd004899822
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: MT
+ms.openlocfilehash: 33d567b1bb91060a5b0e1da67236a27815262474
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57353688"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59208783"
 ---
 # <a name="how-to-animate-a-double-by-using-key-frames"></a>방법: 키 프레임을 사용하여 Double에 애니메이션 효과 주기
 이 예제에서는 사용 하는 속성의 값에 애니메이션 효과 <xref:System.Double> 키 프레임을 사용 하 여 합니다.  
@@ -37,6 +37,7 @@ ms.locfileid: "57353688"
  다른 애니메이션 예제를 사용 하 여 일관성을 위해이 예제의 코드 버전 사용을 <xref:System.Windows.Media.Animation.Storyboard> 적용할 개체는 <xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames>합니다. 또는 코드에서 단일 애니메이션을 적용할 때 간단 하 게 사용 합니다 <xref:System.Windows.Media.Animation.Animatable.BeginAnimation%2A> 사용 하는 대신 메서드를 <xref:System.Windows.Media.Animation.Storyboard>입니다. 예제를 보려면 [Storyboard를 사용하지 않고 속성에 애니메이션 효과 주기](how-to-animate-a-property-without-using-a-storyboard.md)를 참조하세요.  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames>
 - <xref:System.Windows.Shapes.Rectangle>
 - <xref:System.Windows.Media.Animation.LinearDoubleKeyFrame>

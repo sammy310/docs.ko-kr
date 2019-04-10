@@ -3,12 +3,12 @@ title: <issuerNameRegistry>
 ms.date: 03/30/2017
 ms.assetid: 58b39d12-c953-40c4-88af-d7eb3343ca28
 author: BrucePerlerMS
-ms.openlocfilehash: db4e0492772d6fd0e155843422b7350aa630f713
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: ae263a4590cc523c64306ff5d53e54b5190ca510
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57369684"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59202523"
 ---
 # <a name="issuernameregistry"></a>\<issuerNameRegistry>
 토큰 처리기 컬렉션의 처리기에서 사용 되는 발급자 이름 레지스트리를 구성 합니다.  
@@ -78,5 +78,6 @@ ms.locfileid: "57369684"
 ```  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.IdentityModel.Tokens.IssuerNameRegistry>
 - <xref:System.IdentityModel.Tokens.ConfigurationBasedIssuerNameRegistry>
