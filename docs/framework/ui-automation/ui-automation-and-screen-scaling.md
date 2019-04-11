@@ -10,12 +10,12 @@ helpviewer_keywords:
 - UI (user interface), automation
 - UI Automation
 ms.assetid: 4380cad7-e509-448f-b9a5-6de042605fd4
-ms.openlocfilehash: 8c2477e5e7086e1bbfaab1e4b116c9e6bb4e2d30
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 18cb28de04737973876e70cdb7b87e720836bcba
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59194068"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59332693"
 ---
 # <a name="ui-automation-and-screen-scaling"></a>UI 자동화 및 화면 크기 조정
 > [!NOTE]
@@ -58,14 +58,14 @@ ms.locfileid: "59194068"
   
  솔루션은 두 부분으로 구성됩니다.  
   
-1.  먼저 클라이언트 애플리케이션이 [!INCLUDE[TLA2#tla_dpi](../../../includes/tla2sharptla-dpi-md.md)]를 인식하도록 설정합니다. 이렇게 하려면 시작 시에 [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)] 함수 `SetProcessDPIAware` 를 호출합니다. 관리 코드에서, 다음 선언을 통해 이 함수를 사용할 수 있습니다.  
+1. 먼저 클라이언트 애플리케이션이 [!INCLUDE[TLA2#tla_dpi](../../../includes/tla2sharptla-dpi-md.md)]를 인식하도록 설정합니다. 이렇게 하려면 시작 시에 [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)] 함수 `SetProcessDPIAware` 를 호출합니다. 관리 코드에서, 다음 선언을 통해 이 함수를 사용할 수 있습니다.  
   
      [!code-csharp[Highlighter#101](../../../samples/snippets/csharp/VS_Snippets_Wpf/Highlighter/CSharp/NativeMethods.cs#101)]
      [!code-vb[Highlighter#101](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/Highlighter/VisualBasic/NativeMethods.vb#101)]  
   
      이 함수는 전체 프로세스를 dpi 인식 프로세스에 속하는 모든 창이 확장 되지 않음을 의미 합니다. 에 [Highlighter Sample](https://github.com/Microsoft/WPF-Samples/tree/master/Accessibility/Highlighter), 예를 들어 강조 표시 사각형을 구성 하는 4 개의 windows은 UI 자동화를 논리적 좌표가 아닌에서 가져온 물리적 좌표입니다. 샘플 dpi를 인식 하지 경우, 96 dpi 아닌 환경에서 배치가 잘못 될 수 있는 바탕 화면에서 강조 표시를 논리적 좌표에 그려질 합니다.  
   
-2.  커서 좌표를 가져오려면 [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)] 함수 `GetPhysicalCursorPos`를 호출합니다. 다음 예제에서는 이 함수를 선언하고 사용하는 방법을 보여 줍니다.  
+2. 커서 좌표를 가져오려면 [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)] 함수 `GetPhysicalCursorPos`를 호출합니다. 다음 예제에서는 이 함수를 선언하고 사용하는 방법을 보여 줍니다.  
   
      [!code-csharp[UIAClient_snip#185](../../../samples/snippets/csharp/VS_Snippets_Wpf/UIAClient_snip/CSharp/ClientForm.cs#185)]
      [!code-vb[UIAClient_snip#185](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/UIAClient_snip/VisualBasic/ClientForm.vb#185)]  
