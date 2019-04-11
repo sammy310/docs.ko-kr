@@ -24,12 +24,12 @@ helpviewer_keywords:
 - programmatic navigation [WPF]
 - hyperlinks [WPF]
 ms.assetid: 86ad2143-606a-4e34-bf7e-51a2594248b8
-ms.openlocfilehash: feccd6978d0a3cf8db60bbd505826433c93e3276
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 826cfc0ea7f681e1f7cbe858008c24a4941f0e11
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59227199"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59335084"
 ---
 # <a name="navigation-overview"></a>탐색 개요
 Windows Presentation Foundation (WPF)는 두 가지 유형의 응용 프로그램에서 사용할 수 있는 브라우저 스타일 탐색을 지 원하는: 독립 실행형 응용 프로그램 및 [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)]합니다. 탐색을 위한 패키지 콘텐츠에 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 제공 된 <xref:System.Windows.Controls.Page> 클래스. 간에 이동할 수 있습니다 <xref:System.Windows.Controls.Page> 간에 선언적으로 사용 하 여는 <xref:System.Windows.Documents.Hyperlink>, 또는 사용 하 여 프로그래밍 방식으로 <xref:System.Windows.Navigation.NavigationService>합니다. [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 탐색 했던 페이지를 기억 하는 데 해당 페이지로 돌아옵니다 저널을 사용 합니다.  
@@ -353,13 +353,13 @@ Windows Presentation Foundation (WPF)는 두 가지 유형의 응용 프로그�
   
  기본적으로 각각에 대 한 텍스트 <xref:System.Windows.Controls.Page> 에 나타나는 합니다 **최근 페이지** 목록을 [!INCLUDE[TLA2#tla_ie](../../../../includes/tla2sharptla-ie-md.md)] 는 [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] 에 대 한는 <xref:System.Windows.Controls.Page>합니다. 대부분의 경우 이는 사용자에게 특히 의미가 없습니다. 다행히도 다음 옵션 중 하나를 사용하여 텍스트를 변경할 수 있습니다.  
   
-1.  연결 된 `JournalEntry.Name` 특성 값입니다.  
+1. 연결 된 `JournalEntry.Name` 특성 값입니다.  
   
-2.  `Page.Title` 특성 값입니다.  
+2. `Page.Title` 특성 값입니다.  
   
-3.  합니다 `Page.WindowTitle` 특성 값 및 [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] 현재 <xref:System.Windows.Controls.Page>합니다.  
+3. 합니다 `Page.WindowTitle` 특성 값 및 [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] 현재 <xref:System.Windows.Controls.Page>합니다.  
   
-4.  현재 [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)]에 대한 <xref:System.Windows.Controls.Page>입니다. (기본값)  
+4. 현재 [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)]에 대한 <xref:System.Windows.Controls.Page>입니다. (기본값)  
   
  옵션이 나열되는 순서는 텍스트를 찾는 우선 순위와 일치합니다. 예를 들어 경우 `JournalEntry.Name` 설정, 다른 값이 무시 됩니다.  
   
@@ -429,19 +429,19 @@ Windows Presentation Foundation (WPF)는 두 가지 유형의 응용 프로그�
   
  다행 스럽게도 저널 지에서 데이터를 기억 하기 위해 <xref:System.Windows.Controls.Page> 컨트롤 데이터를 포함 하 여 탐색 합니다. 각각에 대 한 업무 일지 항목 특히 <xref:System.Windows.Controls.Page> 연결 된 임시 컨테이너 역할을 <xref:System.Windows.Controls.Page> 상태입니다. 다음 단계에서는이 지원을 사용 하는 방법을 간략하게 설명 때를 <xref:System.Windows.Controls.Page> 에서 탐색:  
   
-1.  현재 항목 <xref:System.Windows.Controls.Page> 저널에 추가 됩니다.  
+1. 현재 항목 <xref:System.Windows.Controls.Page> 저널에 추가 됩니다.  
   
-2.  상태는 <xref:System.Windows.Controls.Page> 뒤로 스택에 추가 되는 페이지에 대 한 저널 항목과 함께 저장 됩니다.  
+2. 상태는 <xref:System.Windows.Controls.Page> 뒤로 스택에 추가 되는 페이지에 대 한 저널 항목과 함께 저장 됩니다.  
   
-3.  새 <xref:System.Windows.Controls.Page> 가 탐색 됩니다.  
+3. 새 <xref:System.Windows.Controls.Page> 가 탐색 됩니다.  
   
  때 페이지 <xref:System.Windows.Controls.Page> 는 뒤로 탐색 하 여 저널을 사용 하 여 다음 단계를 수행 합니다.  
   
-1.  <xref:System.Windows.Controls.Page> (뒤로 스택의 맨 위 저널 항목) 인스턴스화됩니다.  
+1. <xref:System.Windows.Controls.Page> (뒤로 스택의 맨 위 저널 항목) 인스턴스화됩니다.  
   
-2.  합니다 <xref:System.Windows.Controls.Page> 에 대 한 저널 항목과 함께 저장 된 상태를 사용 하 여 새로 고쳐집니다는 <xref:System.Windows.Controls.Page>합니다.  
+2. 합니다 <xref:System.Windows.Controls.Page> 에 대 한 저널 항목과 함께 저장 된 상태를 사용 하 여 새로 고쳐집니다는 <xref:System.Windows.Controls.Page>합니다.  
   
-3.  <xref:System.Windows.Controls.Page> 가 다시 탐색 합니다.  
+3. <xref:System.Windows.Controls.Page> 가 다시 탐색 합니다.  
   
  [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 다음 컨트롤에서 사용 하는 경우이 지원을 자동으로 사용 된 <xref:System.Windows.Controls.Page>:  
   

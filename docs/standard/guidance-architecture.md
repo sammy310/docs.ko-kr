@@ -30,6 +30,6 @@ ms.locfileid: "57379590"
 
 이 가이드는 마이크로 서비스 기반 애플리케이션을 개발하고 컨테이너를 사용하여 해당 애플리케이션을 관리하는 방법을 소개합니다. 또한 .NET Core와 Docker 컨테이너를 사용하여 아키텍처를 설계하고 구현하는 방법을 설명합니다.
 
-## <a name="serverless-apps-architecture-patterns-and-azure-implementationserverless-architectureindexmd"></a>[서버리스 앱: 아키텍처, 패턴 및 Azure 구현](serverless-architecture/index.md)
+## <a name="serverless-apps-architecture-patterns-and-azure-implementationserverless-architectureindexmd"></a>[서버리스 앱: 아키텍처 및 패턴, Azure 구현](serverless-architecture/index.md)
 
 Azure를 활용한 예제를 통해 서버리스 애플리케이션을 빌드하기 위한 가이드입니다. 다양한 아키텍처와 함께 서버리스의 디자인 방법과 장점 및 해결해야 할 문제에 대해 알아보고, 서비스리 앱의 시나리오와 사용 사례를 제공합니다.

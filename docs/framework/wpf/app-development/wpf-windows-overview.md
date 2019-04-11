@@ -28,12 +28,12 @@ helpviewer_keywords:
 - modal dialog boxes [WPF]
 - displaying XAML pages [WPF]
 ms.assetid: 737d04ec-8861-46c3-8d44-fa11d3528d23
-ms.openlocfilehash: c3bd76c893c2055f94e321e9c888848d344efa15
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 5acebf0f88f3147bf274818f11697b480146701a
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59166935"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59296123"
 ---
 # <a name="wpf-windows-overview"></a>WPF 창 개요
 Windows 통해 Windows Presentation Foundation (WPF) 독립 실행형 응용 프로그램을 사용 하 여 사용자 상호 작용 합니다. 창의 기본 용도는 데이터를 시각화하는 콘텐츠를 호스트하고 사용자가 데이터와 상호 작용할 수 있도록 하는 것입니다. 독립 실행형 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 응용 프로그램을 사용 하 여 자체 창을 제공 합니다 <xref:System.Windows.Window> 클래스입니다. 이 항목에서는 소개 <xref:System.Windows.Window> 만들고 독립 실행형 응용 프로그램의 창 관리의 기본적인 내용을 다루기 전에 합니다.  
@@ -348,23 +348,23 @@ Windows 통해 Windows Presentation Foundation (WPF) 독립 실행형 응용 프
   
  **높이 속성:**  
   
-1.  <xref:System.Windows.FrameworkElement.MinHeight%2A?displayProperty=nameWithType>
+1. <xref:System.Windows.FrameworkElement.MinHeight%2A?displayProperty=nameWithType>
   
-2.  <xref:System.Windows.FrameworkElement.MaxHeight%2A?displayProperty=nameWithType>
+2. <xref:System.Windows.FrameworkElement.MaxHeight%2A?displayProperty=nameWithType>
   
-3.  <xref:System.Windows.SizeToContent.Height?displayProperty=nameWithType>/<xref:System.Windows.SizeToContent.WidthAndHeight?displayProperty=nameWithType>
+3. <xref:System.Windows.SizeToContent.Height?displayProperty=nameWithType>/<xref:System.Windows.SizeToContent.WidthAndHeight?displayProperty=nameWithType>
   
-4.  <xref:System.Windows.FrameworkElement.Height%2A?displayProperty=nameWithType>  
+4. <xref:System.Windows.FrameworkElement.Height%2A?displayProperty=nameWithType>  
   
  **너비 속성:**  
   
-1.  <xref:System.Windows.FrameworkElement.MinWidth%2A?displayProperty=nameWithType>
+1. <xref:System.Windows.FrameworkElement.MinWidth%2A?displayProperty=nameWithType>
   
-2.  <xref:System.Windows.FrameworkElement.MaxWidth%2A?displayProperty=nameWithType>
+2. <xref:System.Windows.FrameworkElement.MaxWidth%2A?displayProperty=nameWithType>
   
-3.  <xref:System.Windows.SizeToContent.Width?displayProperty=nameWithType>/<xref:System.Windows.SizeToContent.WidthAndHeight?displayProperty=nameWithType>
+3. <xref:System.Windows.SizeToContent.Width?displayProperty=nameWithType>/<xref:System.Windows.SizeToContent.WidthAndHeight?displayProperty=nameWithType>
   
-4.  <xref:System.Windows.FrameworkElement.Width%2A?displayProperty=nameWithType>  
+4. <xref:System.Windows.FrameworkElement.Width%2A?displayProperty=nameWithType>  
   
  최대화 되었을 때를 사용 하 여 관리 되는 우선 순위는 창의 크기를 확인할 수도 있습니다는 <xref:System.Windows.Window.WindowState%2A> 속성입니다.  
   

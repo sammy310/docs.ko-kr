@@ -9,12 +9,12 @@ helpviewer_keywords:
 - loading non-resource files
 - application management [WPF]
 ms.assetid: 43adb517-21a7-4df3-98e8-09e9cdf764c4
-ms.openlocfilehash: a36cdf9f8cce935c8310e2ce9ffc79f67d077fe6
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 4e005ea96df45da8326386f8b43aa5640ce810b1
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59225146"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59344353"
 ---
 # <a name="pack-uris-in-wpf"></a>WPF의 Pack URI
 Windows Presentation Foundation (WPF), [!INCLUDE[TLA#tla_uri#plural](../../../../includes/tlasharptla-urisharpplural-md.md)] 식별 하 고 다음을 비롯 한 다양 한 방식 파일을 로드 하는 데 사용 됩니다.  
@@ -234,15 +234,15 @@ Windows Presentation Foundation (WPF), [!INCLUDE[TLA#tla_uri#plural](../../../..
   
  형식의 파일을 확인 하기 위해 팩을 [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] 를 참조 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 확인 [!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)] 로컬 어셈블리와 같은 경험적 접근을 사용 하 여 콘텐츠 파일에서 리소스 파일:  
   
-1.  프로브에 대 한 어셈블리 메타 데이터를 <xref:System.Windows.Resources.AssemblyAssociatedContentFileAttribute> 팩은 일치 하는 특성 [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)]합니다.  
+1. 프로브에 대 한 어셈블리 메타 데이터를 <xref:System.Windows.Resources.AssemblyAssociatedContentFileAttribute> 팩은 일치 하는 특성 [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)]합니다.  
   
-2.  경우는 <xref:System.Windows.Resources.AssemblyAssociatedContentFileAttribute> 특성이 있으면 pack 경로의 [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] 콘텐츠 파일을 가리킵니다.  
+2. 경우는 <xref:System.Windows.Resources.AssemblyAssociatedContentFileAttribute> 특성이 있으면 pack 경로의 [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] 콘텐츠 파일을 가리킵니다.  
   
-3.  경우는 <xref:System.Windows.Resources.AssemblyAssociatedContentFileAttribute> 특성이 없으면 로컬 어셈블리로 컴파일되는 리소스 파일 집합을 조사 합니다.  
+3. 경우는 <xref:System.Windows.Resources.AssemblyAssociatedContentFileAttribute> 특성이 없으면 로컬 어셈블리로 컴파일되는 리소스 파일 집합을 조사 합니다.  
   
-4.  팩의 경로 일치 하는 리소스 파일이 있으면 [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] 발견 되는 팩 경로의 [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] 리소스 파일을 가리킵니다.  
+4. 팩의 경로 일치 하는 리소스 파일이 있으면 [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] 발견 되는 팩 경로의 [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] 리소스 파일을 가리킵니다.  
   
-5.  리소스가 없는 경우, 내부적으로 만든 <xref:System.Uri> 올바르지 않습니다.  
+5. 리소스가 없는 경우, 내부적으로 만든 <xref:System.Uri> 올바르지 않습니다.  
   
  [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] 해결 방법에 대 한 적용 되지 않습니다 [!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)] 는 다음을 참조 하십시오.  
   
