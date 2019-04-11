@@ -1,6 +1,6 @@
 ---
 title: 클라우드에서 DevOps 도구와 CI/CD 파이프라인을 사용하여 앱의 수명 주기 최신화
-description: Azure 클라우드 및 Windows 컨테이너를 사용 하 여 기존.NET 응용 프로그램 현대화 | CI/CD 파이프라인 및 클라우드에서 DevOps 도구를 사용 하 여 앱의 수명 주기 현대화
+description: Azure 클라우드와 Windows 컨테이너를 사용하여 기존 .NET 응용 프로그램 최신화 | 클라우드에서 DevOps 도구와 CI/CD 파이프라인를 사용하여 앱의 수명 주기 최신화
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 04/30/2018
