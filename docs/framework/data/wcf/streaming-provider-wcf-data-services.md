@@ -10,12 +10,12 @@ helpviewer_keywords:
 - streaming data provider [WCF Data Services]
 - WCF Data Services, streams
 ms.assetid: f0978fe4-5f9f-42aa-a5c2-df395d7c9495
-ms.openlocfilehash: c2e51133850a59de2b68164870f909ef50d47b69
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.openlocfilehash: 615443bee67d7ca69d25193404055b7299a58507
+ms.sourcegitcommit: 680a741667cf6859de71586a0caf6be14f4f7793
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59298879"
+ms.lasthandoff: 04/12/2019
+ms.locfileid: "59517592"
 ---
 # <a name="streaming-provider-wcf-data-services"></a>스트리밍 공급자(WCF Data Services)
 데이터 서비스에서 BLOB(Binary Large Object) 데이터를 노출할 수 있습니다. 이 이진 데이터는 비디오 및 오디오 스트림, 이미지, 문서 파일 또는 다른 형식의 이진 미디어를 나타낼 수 있습니다. 데이터 모델의 엔터티에 이진 속성이 하나 이상 포함되어 있는 경우 데이터 서비스가 이 이진 데이터를 응답 피드의 항목 안에 base-64로 인코딩하여 반환합니다. 로드 하 고 이러한 방식으로 큰 이진 데이터를 직렬화 하는 작업 성능에 영향 때문에 [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] 이진 데이터가 속한 엔터티와 독립적으로 검색 하는 메커니즘을 정의 합니다. 이 작업은 엔터티의 이진 데이터를 하나 이상의 데이터 스트림으로 구분하여 수행됩니다.  
@@ -46,7 +46,7 @@ ms.locfileid: "59298879"
  **Entity Framework 공급자**  
  엔터티가 미디어 링크 항목임을 나타내려면 다음 예제와 같이 개념적 모델의 엔터티 형식 정의에 `HasStream` 특성을 추가합니다.  
   
- [!code-xml[Astoria Photo Streaming Service#HasStream](../../../../samples/snippets/xml/VS_Snippets_Misc/astoria photo streaming service/xml/photodata.edmx#hasstream)]  
+ [!code-xml[Astoria Photo Streaming Service#HasStream](../../../../samples/snippets/xml/VS_Snippets_Misc/astoria_photo_streaming_service/xml/photodata.edmx#hasstream)]  
   
  또한 데이터 모델을 정의하는 .edmx 또는 .csdl 파일의 루트나 엔터티에 `xmlns:m=http://schemas.microsoft.com/ado/2007/08/dataservices/metadata` 네임스페이스를 추가해야 합니다.  
   
@@ -74,8 +74,8 @@ ms.locfileid: "59298879"
 ## <a name="creating-the-streaming-data-service"></a>스트리밍 데이터 서비스 만들기  
  [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 런타임에 <xref:System.Data.Services.Providers.IDataServiceStreamProvider> 구현에 대한 액세스 권한을 제공하려면 만든 데이터 서비스에서 <xref:System.IServiceProvider> 인터페이스도 구현해야 합니다. 다음 예제에서는 <xref:System.IServiceProvider.GetService%2A>를 구현하는 `PhotoServiceStreamProvider` 클래스의 인스턴스를 반환하기 위해 <xref:System.Data.Services.Providers.IDataServiceStreamProvider> 메서드를 구현하는 방법을 보여 줍니다.  
   
- [!code-csharp[Astoria Photo Streaming Service#PhotoServiceStreamingProvider](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria photo streaming service/cs/photodata.svc.cs#photoservicestreamingprovider)]
- [!code-vb[Astoria Photo Streaming Service#PhotoServiceStreamingProvider](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria photo streaming service/vb/photodata.svc.vb#photoservicestreamingprovider)]  
+ [!code-csharp[Astoria Photo Streaming Service#PhotoServiceStreamingProvider](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_photo_streaming_service/cs/photodata.svc.cs#photoservicestreamingprovider)]
+ [!code-vb[Astoria Photo Streaming Service#PhotoServiceStreamingProvider](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_photo_streaming_service/vb/photodata.svc.vb#photoservicestreamingprovider)]  
   
  데이터 서비스를 만드는 방법에 대 한 일반 정보를 참조 하세요. [데이터 서비스 구성](../../../../docs/framework/data/wcf/configuring-the-data-service-wcf-data-services.md)합니다.  
   
@@ -129,4 +129,4 @@ ms.locfileid: "59298879"
 
 - [Data Services 공급자](../../../../docs/framework/data/wcf/data-services-providers-wcf-data-services.md)
 - [사용자 지정 데이터 서비스 공급자](../../../../docs/framework/data/wcf/custom-data-service-providers-wcf-data-services.md)
-- [이진 데이터 사용](../../../../docs/framework/data/wcf/working-with-binary-data-wcf-data-services.md)
+- [이진 데이터 작업](../../../../docs/framework/data/wcf/working-with-binary-data-wcf-data-services.md)

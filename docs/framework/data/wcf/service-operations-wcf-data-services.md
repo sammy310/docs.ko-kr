@@ -8,15 +8,15 @@ helpviewer_keywords:
 - service operations [WCF Data Services]
 - WCF Data Services, service operations
 ms.assetid: 583a690a-e60f-4990-8991-d6efce069d76
-ms.openlocfilehash: b63c6d8f3a5a949299a925a321ca8f01c67b1d8f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: c5514bf32bfe03a65d7d171a500dd5d4cfde35ff
+ms.sourcegitcommit: 680a741667cf6859de71586a0caf6be14f4f7793
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59211974"
+ms.lasthandoff: 04/12/2019
+ms.locfileid: "59517410"
 ---
 # <a name="service-operations-wcf-data-services"></a>서비스 작업(WCF Data Services)
-[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 서버에서 메서드를 노출 하기 위해 데이터 서비스에 서비스 작업을 정의할 수 있습니다. 다른 데이터 서비스 리소스와 마찬가지로 서비스 작업도 URI로 주소가 지정됩니다. 서비스 작업을 사용하면 유효성 검사 논리 구현, 역할 기반 보안 적용 또는 특수 쿼리 기능 노출 등을 위해 데이터 서비스에 비즈니스 논리를 노출할 수 있습니다. 서비스 작업은 <xref:System.Data.Services.DataService%601>에서 파생되는 데이터 서비스 클래스에 추가된 메서드입니다. 다른 모든 데이터 서비스 리소스와 마찬가지로 서비스 작업 메서드에 매개 변수를 제공할 수 있습니다. 예를 들어, 다음 서비스 작업 URI (기반 합니다 [퀵 스타트](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md) 데이터 서비스) 값을 전달 `London` 에 `city` 매개 변수:  
+[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]를 사용하면 데이터 서비스에 서버의 메서드를 노출하는 서비스 작업을 정의할 수 있습니다. 다른 데이터 서비스 리소스와 마찬가지로 서비스 작업도 URI로 주소가 지정됩니다. 서비스 작업을 사용하면 유효성 검사 논리 구현, 역할 기반 보안 적용 또는 특수 쿼리 기능 노출 등을 위해 데이터 서비스에 비즈니스 논리를 노출할 수 있습니다. 서비스 작업은 <xref:System.Data.Services.DataService%601>에서 파생되는 데이터 서비스 클래스에 추가된 메서드입니다. 다른 모든 데이터 서비스 리소스와 마찬가지로 서비스 작업 메서드에 매개 변수를 제공할 수 있습니다. 예를 들어, 다음 서비스 작업 URI (기반 합니다 [퀵 스타트](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md) 데이터 서비스) 값을 전달 `London` 에 `city` 매개 변수:  
   
 ```  
 http://localhost:12345/Northwind.svc/GetOrdersByCity?city='London'  
@@ -24,8 +24,8 @@ http://localhost:12345/Northwind.svc/GetOrdersByCity?city='London'
   
  이 서비스 작업의 정의는 다음과 같습니다.  
   
- [!code-csharp[Astoria Northwind Service#ServiceOperationDef](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind service/cs/northwind2.svc.cs#serviceoperationdef)]
- [!code-vb[Astoria Northwind Service#ServiceOperationDef](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind service/vb/northwind2.svc.vb#serviceoperationdef)]  
+ [!code-csharp[Astoria Northwind Service#ServiceOperationDef](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_service/cs/northwind2.svc.cs#serviceoperationdef)]
+ [!code-vb[Astoria Northwind Service#ServiceOperationDef](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_service/vb/northwind2.svc.vb#serviceoperationdef)]  
   
  <xref:System.Data.Services.DataService%601.CurrentDataSource%2A>의 <xref:System.Data.Services.DataService%601>를 사용하여 데이터 서비스에서 사용하는 데이터 소스에 직접 액세스할 수 있습니다. 자세한 내용은 [방법: 서비스 작업 정의](../../../../docs/framework/data/wcf/how-to-define-a-service-operation-wcf-data-services.md)합니다.  
   
@@ -42,7 +42,7 @@ http://localhost:12345/Northwind.svc/GetOrdersByCity?city='London'
   
 -   메서드는 다음 중 하나를 반환해야 합니다.  
   
-    -   `void` (`Nothing` Visual basic에서)  
+    -   `void`(Visual Basic에서는 `Nothing`)  
   
     -   <xref:System.Collections.Generic.IEnumerable%601>  
   
@@ -58,9 +58,9 @@ http://localhost:12345/Northwind.svc/GetOrdersByCity?city='London'
   
 -   메서드에 `[WebGet]` 또는 `[WebInvoke]` 특성으로 주석을 달아야 합니다.  
   
-    -   `[WebGet]` GET 요청을 사용 하 여 호출할 메서드를 사용 하도록 설정 합니다.  
+    -   `[WebGet]`을 사용하면 GET 요청을 통해 메서드를 호출할 수 있습니다.  
   
-    -   `[WebInvoke(Method = "POST")]` POST 요청을 사용 하 여 호출할 메서드를 사용 하도록 설정 합니다. 다른 <xref:System.ServiceModel.Web.WebInvokeAttribute> 메서드는 지원되지 않습니다.  
+    -   `[WebInvoke(Method = "POST")]`을 사용하면 POST 요청을 통해 메서드를 호출할 수 있습니다. 다른 <xref:System.ServiceModel.Web.WebInvokeAttribute> 메서드는 지원되지 않습니다.  
   
 -   메서드의 반환 값이 엔터티 컬렉션이 아니라 단일 엔터티가 되도록 지정하는 <xref:System.Data.Services.SingleResultAttribute>를 서비스 작업에 주석으로 추가할 수도 있습니다. 이 특성은 응답의 결과 serialization과 추가 탐색 속성 통과가 URI에 표시되는 방식을 제어합니다. 예를 들어 AtomPub serialization을 사용할 경우 단일 리소스 형식 인스턴스는 entry 요소로 나타나고 인스턴스 집합은 feed 요소로 나타납니다.  
   
@@ -77,7 +77,7 @@ http://localhost:12345/Northwind.svc/GetOrdersByState?state='CA'&includeItems=tr
   
 |유효한 반환 형식|URI 규칙|  
 |------------------------|---------------|  
-|`void` (`Nothing` Visual basic에서)<br /><br /> 또는<br /><br /> 엔터티 형식<br /><br /> 또는<br /><br /> 기본 형식|URI는 서비스 작업의 이름에 해당하는 단일 경로 세그먼트여야 합니다. 쿼리 옵션은 허용되지 않습니다.|  
+|`void`(Visual Basic에서는 `Nothing`)<br /><br /> 또는<br /><br /> 엔터티 형식<br /><br /> 또는<br /><br /> 기본 형식|URI는 서비스 작업의 이름에 해당하는 단일 경로 세그먼트여야 합니다. 쿼리 옵션은 허용되지 않습니다.|  
 |<xref:System.Collections.Generic.IEnumerable%601>|URI는 서비스 작업의 이름에 해당하는 단일 경로 세그먼트여야 합니다. 결과 형식이 <xref:System.Linq.IQueryable%601> 형식이 아니므로 쿼리 옵션은 허용되지 않습니다.|  
 |<xref:System.Linq.IQueryable%601>|서비스 작업의 이름에 해당하는 경로 외에도 쿼리 경로 세그먼트가 허용됩니다. 쿼리 옵션도 허용됩니다.|  
   
@@ -90,8 +90,8 @@ http://localhost:12345/Northwind.svc/GetOrdersByCity?city='London'&$expand=Order
 ## <a name="service-operations-access-control"></a>서비스 작업 액세스 제어  
  서비스 전반에 걸친 서비스 작업의 표시는 <xref:System.Data.Services.IDataServiceConfiguration.SetServiceOperationAccessRule%2A> 클래스의 <xref:System.Data.Services.IDataServiceConfiguration> 메서드에 의해 제어되며, 이는 엔터티 집합의 표시가 <xref:System.Data.Services.IDataServiceConfiguration.SetEntitySetAccessRule%2A> 메서드를 사용하여 제어되는 방식과 상당 부분 유사합니다. 예를 들어, 데이터 서비스 정의의 다음 코드 줄은 `CustomersByCity` 서비스 작업에 액세스할 수 있도록 합니다.  
   
- [!code-csharp[Astoria Northwind Service#ServiceOperationConfig](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind service/cs/northwind2.svc.cs#serviceoperationconfig)]
- [!code-vb[Astoria Northwind Service#ServiceOperationConfig](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind service/vb/northwind2.svc.vb#serviceoperationconfig)]  
+ [!code-csharp[Astoria Northwind Service#ServiceOperationConfig](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_service/cs/northwind2.svc.cs#serviceoperationconfig)]
+ [!code-vb[Astoria Northwind Service#ServiceOperationConfig](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_service/vb/northwind2.svc.vb#serviceoperationconfig)]  
   
 > [!NOTE]
 >  서비스 작업의 반환 형식이 기본 엔터티 집합에 대한 액세스를 제한하여 숨겨진 경우에는 클라이언트 응용 프로그램에서 서비스 작업을 사용할 수 없습니다.  
@@ -101,8 +101,8 @@ http://localhost:12345/Northwind.svc/GetOrdersByCity?city='London'&$expand=Order
 ## <a name="raising-exceptions"></a>예외 발생  
  데이터 서비스 실행에서 예외를 발생시킬 때마다 <xref:System.Data.Services.DataServiceException> 클래스를 사용하는 것이 좋습니다. 그 이유는 데이터 서비스 런타임이 이 예외 개체의 속성을 HTTP 응답 메시지에 올바르게 매핑하는 방법을 알기 때문입니다. 서비스 작업에서 <xref:System.Data.Services.DataServiceException>을 발생시키면 반환된 예외가 <xref:System.Reflection.TargetInvocationException>으로 래핑됩니다. <xref:System.Data.Services.DataServiceException>을 묶지 않고 기본 <xref:System.Reflection.TargetInvocationException>을 반환하려면 다음 예제와 같이 <xref:System.Data.Services.DataService%601.HandleException%2A>에 <xref:System.Data.Services.DataService%601> 메서드를 재정의하고 <xref:System.Data.Services.DataServiceException>에서 <xref:System.Reflection.TargetInvocationException>을 추출해서 최상위 오류로 반환해야 합니다.  
   
- [!code-csharp[Astoria Northwind Service#HandleExceptions](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind service/cs/northwind2.svc.cs#handleexceptions)]
- [!code-vb[Astoria Northwind Service#HandleExceptions](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind service/vb/northwind2.svc.vb#handleexceptions)]  
+ [!code-csharp[Astoria Northwind Service#HandleExceptions](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_service/cs/northwind2.svc.cs#handleexceptions)]
+ [!code-vb[Astoria Northwind Service#HandleExceptions](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_service/vb/northwind2.svc.vb#handleexceptions)]  
   
 ## <a name="see-also"></a>참고자료
 
