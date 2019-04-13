@@ -13,7 +13,7 @@ ms.locfileid: "57846261"
 ---
 # <a name="walkthroughs-and-technical-get-started-overview"></a>기술 개요와 실습
 
-이 전자책의 크기를 제한하기 위해 추가적인 기술 설명서와 실습의 전체 내용은 GitHub 리포지토리를 활용하도록 구성되어 있습니다. 이 장에서 설명하는 실습에서는 Windows 컨테이너를 기반으로하는 다양한 환경의 단계별 설치와 Azure 배포에 대해 설명합니다.
+이 전자책의 분량이 너무 방대해지는 것을 피하고자, 추가적인 기술 설명서와 실습의 전체 내용은 GitHub 리포지토리를 활용하도록 구성되어 있습니다. 이 장에서 설명하는 실습 온라인 시리즈에서는 Windows 컨테이너를 기반으로 하는 다양한 환경의 단계별 설치와 Azure 배포에 대해 설명합니다.
 
 다음 섹션에서는 각 연습에 대해 해당 목표 및 고급 시각 및 관련 된 작업의 다이어그램을 제공을 설명 합니다. 자체 연습을 가져올 수 있습니다에 *eShopModernizing* apps GitHub 리포지토리 wiki에서 [ https://github.com/dotnet-architecture/eShopModernizing/wiki ](https://github.com/dotnet-architecture/eShopModernizing/wiki)합니다.
 
