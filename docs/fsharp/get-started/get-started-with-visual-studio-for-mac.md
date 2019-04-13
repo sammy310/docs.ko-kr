@@ -1,6 +1,6 @@
 ---
-title: 시작 F# Mac 용 Visual Studio에서
-description: 사용 하는 방법을 알아봅니다 F# mac 용 Visual Studio를 사용 하 여
+title: Mac 용 Visual Studio에서 F# 시작
+description: Mac 용 Visual Studio에서 F#을 사용하는 방법을 알아봅니다  
 ms.date: 07/03/2018
 ms.openlocfilehash: a6997f139d7e6c5fdf77878442db0b0b75b3d727
 ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
@@ -9,53 +9,53 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 04/09/2019
 ms.locfileid: "59331873"
 ---
-# <a name="get-started-with-f-in-visual-studio-for-mac"></a>시작 F# Mac 용 Visual Studio에서
+# <a name="get-started-with-f-in-visual-studio-for-mac"></a>Mac 용 Visual Studio에서 F# 시작 
 
-F#시각적 개체 및 F# Mac IDE 용 도구 Visual Studio에서 지원 됩니다. 했는지 [설치 된 Mac 용 Visual Studio](install-fsharp.md#install-f-with-visual-studio-for-mac)합니다.
+F#과 F# Visual 도구가 Mac IDE용 Visual Studio에서 지원 됩니다. [Mac용 Visual Studio의 설치](install-fsharp.md#install-f-with-visual-studio-for-mac)를 확인 합니다.
 
 ## <a name="creating-a-console-application"></a>콘솔 응용 프로그램 만들기
 
-Mac 용 Visual Studio에서 가장 기본적인 프로젝트 중 하나에 콘솔 응용 프로그램입니다.  방법은 다음과 같습니다.  Mac 용 Visual Studio가 열리면:
+Mac 용 Visual Studio에서 가장 기본적인 프로젝트 중 하나는 콘솔 응용 프로그램입니다. 방법은 다음과 같습니다. Mac 용 Visual Studio를 열고
 
-1. 에 **파일** 메뉴에서 **새 솔루션**합니다.
+1. **파일** 메뉴에서 **새 솔루션**을 선택 합니다.
 
-2. 새 프로젝트 대화 상자에서 콘솔 응용 프로그램에 대 한 2 개의 다른 템플릿이 있습니다.  다른 하나는.NET Framework를 대상으로 하는.NET-> 합니다.  .NET Core는 다른 템플릿에->.NET Core를 대상으로 하는 앱입니다.  이 문서의 목적을 위해 템플릿 작동 해야 합니다.
+2. 새 프로젝트 대화 상자에 두 개의 다른 콘솔 응용 프로그램 템플릿이 존재 합니다. 기타 -> .NET에는 .NET Framework를 대상으로 하는 템플릿이 존재 합니다. 나머지 템플릿은 .NET Core -> App에 존재하며 .NET Core를 대상으로 합니다. 이 템플릿은 이 문서의 목적에 맞게 동작 합니다.
 
-3. 콘솔 앱을 변경 C# 를 F# 필요한 경우.  선택 된 **다음** 앞으로 이동 하려면 단추!  
+3. 필요에 따라 콘솔 앱을 C#에서 F#으로 변경 합니다. 다음으로 진행하기 위해 **다음**버튼을 선택 합니다.  
 
-4. 프로젝트에 이름을 지정 하 고 앱에 대해 원하는 옵션을 선택 합니다.  선택한 옵션을 기반으로 생성 되는 디렉터리 구조에 표시 되는 화면의 측면에 미리 보기 창, 표시 합니다.  
+4. 프로젝트 이름을 지정하고 앱에서 사용할 옵션을 선택 합니다. 화면 측면의 미리 보기 창에는 선택한 옵션을 기반으로 생성될 디렉터리 구조가 표시됩니다.
 
-5. **만들기**를 클릭합니다.  이제는 F# 솔루션 탐색기에서 프로젝트입니다.
+5. **만들기**를 클릭합니다. 이제는 솔루션 탐색기에서 F# 프로젝트를 볼 수 있습니다.
 
 ## <a name="writing-your-code"></a>코드 작성
 
-보겠습니다 먼저 일부 코드를 작성 하 여 시작 하세요.  했는지를 `Program.fs` 파일 열려 있는 경우 및 다음 해당 콘텐츠를 다음으로 바꿉니다.
+먼저 코드 작성으로 시작 하세요. `Program.fs` 파일을 열고 다음 내용으로 변경합니다. 
 
 [!code-fsharp[HelloSquare](../../../samples/snippets/fsharp/getting-started/hello-square.fs)]
 
-이전 코드 샘플에서는 함수 `square` 명명 된 입력을 가져와서는 정의한 `x` 을 단독으로 곱합니다.  때문에 F# 사용 하 여 [Typeinference](../language-reference/type-inference.md), 형식의 `x` 지정할 필요가 없습니다.  F# 컴파일러 곱하기 유효 형식에 대 한 이해 및 형식을 할당 합니다 `x` 하는 방법에 따라 `square` 라고 합니다.  위로 가져가면 `square`, 다음과 같이 표시 됩니다.
+이 코드 샘플에서는 입력으로 `x`를 가져와 자신과 곱셈하도록 정의된 `square`함수가 정의되어 있습니다. F#에서는 [Typeinference](../language-reference/type-inference.md)를 사용하기 때문에 `x`의 형식을 지정할 필요가 없습니다. F# 컴파일러는 곱셈에서 유효한 형식을 이해하고 `square`가 호출되는 방식에 따라 `x`의 형식을 할당 합니다. `square` 위로 마우스를 가져가면 다음과 같이 표시 됩니다.
 
 ```
 val square: x:int -> int
 ```
 
-이 함수 형식 시그니처 라고 합니다.  다음과 같이 읽을 수 있습니다. "정사각형은 명명 된 정수를 사용 하는 함수 x는 정수를 생성 하 고".  컴파일러 했습니다 보면 `square` 를 `int` 형식 곱하기에서 제네릭 없기 때문에 이것이-지금은 *모든* 형식 이지만 대신 제네릭 형식의 폐쇄형 집합입니다.  F# 선택 하는 컴파일러 `int` 지금은 지점 하지만 조정 됩니다 형식 시그니처 호출 하는 경우 `square` 다른 입력 형식에 같은 `float`합니다.
+이것을 함수 형식 시그니처라고 합니다. 다음과 같이 "square는 정수 x를 사용하고 정수를 생성하는 함수"라고 읽을 수 있습니다. 컴파일러가 `square`를 `int`형식으로 지정한 것에 주목하십시오. 곱셈은 *모든* 형식에서 제네릭이 아니라, 폐쇄형 집합 형식에서 제네릭이기 때문입니다. F# 컴파일러에서 지금은 `int`를 선택하지만, `float` 같은 다른 입력 형식으로 `square`를 호출 하는 경우는 형식 시그니처가 조정됩니다.
 
-다른 함수를 `main`, 정의 된으로 데코 레이트 된는 `EntryPoint` 하기가 특성은 F# 컴파일러는 프로그램 실행을 시작 해야 합니다.  다른 동일한 규칙을 따릅니다 [C 스타일 프로그래밍 언어](https://en.wikipedia.org/wiki/Entry_point#C_and_C.2B.2B), 여기서이 함수에 명령줄 인수를 전달할 수 있습니다 및 정수 코드가 반환 됩니다 (일반적으로 `0`).
+그 밖에 `main` 함수가 정의되고 F# 컴파일러에게 프로그램 수행이 시작되는 곳이라는 것을 알려주는 `EntryPoint`속성이 데코레이트 되었습니다. 함수에 명령줄 인수를 전달하고 정수 코드를 반환(일반적으로 `0`)하는 [C 스타일 프로그래밍 언어](https://en.wikipedia.org/wiki/Entry_point#C_and_C.2B.2B)와 동일한 규칙을 따릅니다.
 
-이 함수를 호출 하는 것은 `square` 의 인수를 사용 하 여 함수 `12`합니다.  F# 컴파일러에는 다음 형식의 할당 `square` 되도록 `int -> int` (사용 하는 함수,는 `int` 생성 및는 `int`).  에 대 한 호출 `printfn` 은 형식 문자열에 지정 된 해당 하는 매개 변수를 C 스타일 프로그래밍 언어와 유사한 형식 문자열을 사용 하는 서식이 지정 된 인쇄 기능 및 다음 결과 새 줄을 출력 합니다.
+이 함수에서는 인수로 `12`를 사용하여 `square` 함수를 호출 합니다. F# 컴파일러에는 `square`의 형식을 `int -> int`가 되도록 할당합니다(이 것이 `int`를 가지고 `int`를 생성하는 함수다). `printfn` 호출은 서식이 지정된 출력기능으로, C 스타일 프로그래밍 언어와 유사한 형식 문자열을 사용하고, 형식 문자열의 서식이 지정된 매개 변수와 결과를 새로운 라인에 출력 합니다.
 
 ## <a name="running-your-code"></a>코드 실행
 
-코드를 실행 하 고 클릭 하 여 결과 볼 수 있습니다 **실행할** 최상위 메뉴에서 차례로 **디버깅 하지 않고 시작**합니다.  이 디버깅 하지 않고 프로그램을 실행 및 결과 볼 수 있습니다.
+최상단 메뉴에서 **실행**과 **디버깅하지 않고 시작**을 순서대로 클릭하여 코드를 실행하고 그 결과를 확인할 수 있습니다. 이렇게 하면 디버깅을 하지 않고 프로그램을 실행하여 그 결과 볼 수 있습니다.
 
-이제 Mac 용 Visual Studio를 나타나게 하는 콘솔 창에 출력 한 다음을 표시 됩니다.
+이제 Mac 용 Visual Studio의 콘솔 창에서 다음 내용이 표시되는 것을 볼 수 있습니다.
 
 ```
 12 squared is 144!
 ```
 
-지금까지  첫 번째 만든 F# 작성 하는 Mac 용 Visual Studio에서 프로젝트를 F# 함수, 함수 및 일부 결과를 보려면 프로젝트를 실행 하는 호출의 결과 인쇄 합니다.
+축하합니다. 지금까지 Mac 용 Visual Studio에서 프로젝트 첫 번째 F# 프로젝트를 만들고, 함수를 호출하면 그 결과를 출력하는 F# 함수를 작성하고, 결과를 확인하기 위해 실행해 보았습니다.
 
 ## <a name="using-f-interactive"></a>사용 하 여 F# 대화형
 
