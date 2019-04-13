@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - data contracts [WCF], equivalence
 ms.assetid: f06f3c7e-c235-4ec1-b200-68142edf1ed1
-ms.openlocfilehash: ca74650428c4536cd21694a49b74370b07c77667
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a526a58ef801e91775756e6a84a94a066d32d284
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54708937"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59214938"
 ---
 # <a name="data-contract-equivalence"></a>데이터 계약 동등성
 클라이언트가 서비스에 특정 형식의 데이터를 성공적으로 보내거나, 서비스에서 클라이언트에 데이터를 성공적으로 보내기 위해, 보낸 형식이 받는 측에 반드시 있어야 하는 것은 아닙니다. 두 형식의 데이터 계약이 일치하기만 하면 됩니다. (경우에 따라 엄격한 대응이 필요 하지 않은에서 설명 했 듯이 [데이터 계약 버전 관리](../../../../docs/framework/wcf/feature-details/data-contract-versioning.md).)  
@@ -61,6 +61,7 @@ ms.locfileid: "54708937"
  응용 프로그램 간에 매개 변수 및 반환 값을 전달할 때 필요한 형식이 인터페이스이면 <xref:System.Object> 형식의 예상 형식과 동등합니다. 모든 형식이 궁극적으로 <xref:System.Object>에서 파생되기 때문에 모든 데이터 계약은 궁극적으로 <xref:System.Object>에 대한 데이터 계약에서 파생됩니다. 따라서 인터페이스가 필요할 때 모든 데이터 계약 형식을 전달할 수 있습니다. 인터페이스를 사용 하 여 성공적으로 작동 하려면 추가 단계가 필요 자세한 내용은 [데이터 계약 알려진 형식을](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Runtime.Serialization.DataContractAttribute>
 - <xref:System.Runtime.Serialization.DataMemberAttribute>
 - [데이터 멤버 순서](../../../../docs/framework/wcf/feature-details/data-member-order.md)

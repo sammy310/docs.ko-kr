@@ -5,17 +5,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 62f404a5-13ea-4b93-a29f-55b74a16c9d3
-ms.openlocfilehash: ef9fcd31253283248dfe773ac4dde4fcbb358a2c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 414be4a5bdbd1fe5d65475efcd5e72606b73685f
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54660985"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59312828"
 ---
 # <a name="handling-datatable-events"></a>DataTable 이벤트 처리
 <xref:System.Data.DataTable> 개체는 응용 프로그램에서 처리할 수 있는 일련의 이벤트를 제공합니다. 다음 표에서는 `DataTable` 이벤트에 대해 설명합니다.  
   
-|Event|설명|  
+|이벤트(event)|설명|  
 |-----------|-----------------|  
 |<xref:System.Data.DataTable.Initialized>|<xref:System.Data.DataTable.EndInit%2A>의 `DataTable` 메서드가 호출된 후에 발생합니다. 이 이벤트는 기본적으로 디자인 타임 시나리오를 지원하는 데 사용됩니다.|  
 |<xref:System.Data.DataTable.ColumnChanged>|<xref:System.Data.DataColumn>에서 값이 성공적으로 변경된 후에 발생합니다.|  
@@ -47,21 +47,21 @@ ms.locfileid: "54660985"
 ## <a name="sequence-of-operations"></a>작업 순서  
  다음은 `DataRow`가 추가, 수정 또는 삭제되는 경우의 작업 순서입니다.  
   
-1.  제안된 레코드를 만들고 변경 내용을 적용합니다.  
+1. 제안된 레코드를 만들고 변경 내용을 적용합니다.  
   
-2.  식이 아닌 열의 제약 조건을 검사합니다.  
+2. 식이 아닌 열의 제약 조건을 검사합니다.  
   
-3.  가능한 경우 `RowChanging` 또는 `RowDeleting` 이벤트를 발생시킵니다.  
+3. 가능한 경우 `RowChanging` 또는 `RowDeleting` 이벤트를 발생시킵니다.  
   
-4.  제안된 레코드를 현재 레코드로 설정합니다.  
+4. 제안된 레코드를 현재 레코드로 설정합니다.  
   
-5.  관련된 인덱스를 업데이트합니다.  
+5. 관련된 인덱스를 업데이트합니다.  
   
-6.  관련 `ListChanged` 개체에 대해 `DataView` 이벤트를 발생시키고, 관련 `PropertyChanged` 개체에 대해 `DataRowView` 이벤트를 발생시킵니다.  
+6. 관련 `ListChanged` 개체에 대해 `DataView` 이벤트를 발생시키고, 관련 `PropertyChanged` 개체에 대해 `DataRowView` 이벤트를 발생시킵니다.  
   
-7.  모든 식 열을 계산합니다. 단, 열의 제약 조건 검사는 지금 수행하지 않습니다.  
+7. 모든 식 열을 계산합니다. 단, 열의 제약 조건 검사는 지금 수행하지 않습니다.  
   
-8.  식 열 계산 결과에 영향을 받은 관련 `ListChanged` 개체에 대해 `DataView` 이벤트를 발생시키고, 관련 `PropertyChanged` 개체에 대해 `DataRowView` 이벤트를 발생시킵니다.  
+8. 식 열 계산 결과에 영향을 받은 관련 `ListChanged` 개체에 대해 `DataView` 이벤트를 발생시키고, 관련 `PropertyChanged` 개체에 대해 `DataRowView` 이벤트를 발생시킵니다.  
   
 9. 가능한 경우 `RowChanged` 또는 `RowDeleted` 이벤트를 발생시킵니다.  
   
@@ -80,7 +80,8 @@ ms.locfileid: "54660985"
  [!code-vb[DataWorks DataTable.Events#1](../../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks DataTable.Events/VB/source.vb#1)]  
   
 ## <a name="see-also"></a>참고자료
+
 - [DataTable에서 데이터 조작](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/manipulating-data-in-a-datatable.md)
 - [DataAdapter 이벤트 처리](../../../../../docs/framework/data/adonet/handling-dataadapter-events.md)
-- [데이터 집합 이벤트 처리](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/handling-dataset-events.md)
+- [데이터 세트 이벤트 처리](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/handling-dataset-events.md)
 - [ADO.NET 관리되는 공급자 및 데이터 집합 개발자 센터](https://go.microsoft.com/fwlink/?LinkId=217917)

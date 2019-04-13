@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bbb2bf681ed05728a015456e0e4c37157a55f755
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2c7b9b25673685dde8b75702c80f525515917ae1
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54699755"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59078709"
 ---
 # <a name="cordebugexceptionflags-enumeration"></a>CorDebugExceptionFlags 열거형
 예외에 대한 추가 정보를 제공합니다.  
@@ -55,4 +55,5 @@ typedef enum CorDebugExceptionFlags {
  **.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>참고자료
+
 - [디버깅 열거형](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)

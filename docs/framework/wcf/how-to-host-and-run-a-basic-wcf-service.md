@@ -8,12 +8,12 @@ helpviewer_keywords:
 - WCF services [WCF]
 - WCF services [WCF], running
 ms.assetid: 31774d36-923b-4e2d-812e-aa190127266f
-ms.openlocfilehash: 38fd9b89e2719be8ce4d33b1b50f68171d587369
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: ad9536b1f27ba3945bf76d0474de4825033a1e8b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58410097"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59197908"
 ---
 # <a name="tutorial-host-and-run-a-basic-windows-communication-foundation-service"></a>자습서: 기본 Windows Communication Foundation 서비스 호스트 및 실행
 
@@ -30,7 +30,6 @@ WCF 응용 프로그램을 만드는 다음 작업 콘솔 응용 프로그램에
 > - WCF 서비스를 호스트 하는 코드를 추가 합니다.
 > - 구성 파일을 업데이트 합니다.
 > - WCF 서비스를 시작 하 고 확인 실행 됩니다.
-
 
 ## <a name="create-and-configure-a-console-app-project-for-hosting-the-service"></a>서비스를 호스트 하는 것에 대 한 콘솔 앱 프로젝트 만들기 및 구성
 
@@ -176,7 +175,6 @@ WCF 응용 프로그램을 만드는 다음 작업 콘솔 응용 프로그램에
     
     이 코드의 작동 방식에 대 한 자세한 내용은 [프로그램 단계 호스팅 서비스](#service-hosting-program-steps)합니다.
 
-
 2. 프로젝트 속성을 업데이트 합니다.
 
    1. 에 **솔루션 탐색기** 창에서 합니다 **GettingStartedHost** 폴더를 선택한 후 **속성** 바로 가기 메뉴에서.
@@ -189,7 +187,6 @@ WCF 응용 프로그램을 만드는 다음 작업 콘솔 응용 프로그램에
 
    3. **파일** 메뉴에서 **모두 저장**합니다.
 
-
 ## <a name="verify-the-service-is-working"></a>서비스가 작동 확인
 
 1. 솔루션을 빌드하고 실행 합니다 **GettingStartedHost** 콘솔 Visual Studio 내부에서 응용 프로그램입니다. 
@@ -200,7 +197,6 @@ WCF 응용 프로그램을 만드는 다음 작업 콘솔 응용 프로그램에
    
    > [!NOTE]
    > 이와 같은 서비스에는 수신 대기 하는 것에 대 한 컴퓨터에서 HTTP 주소를 등록할 수 있는 권한이 필요 합니다. 관리자 계정에는 이 권한이 있지만, 관리자 이외의 계정에는 HTTP 네임스페이스에 대한 권한을 부여해야 합니다. 네임스페이스 예약을 구성하는 방법에 대한 자세한 내용은 [HTTP 및 HTTPS 구성](feature-details/configuring-http-and-https.md)을 참조하세요. 
-
 
 ## <a name="service-hosting-program-steps"></a>서비스 호스팅 프로그램 단계
 
@@ -223,7 +219,6 @@ WCF 응용 프로그램을 만드는 다음 작업 콘솔 응용 프로그램에
 > WCF 서비스 라이브러리에 추가 하면 서비스 호스트를 시작 하 여 디버깅 하는 경우 Visual Studio를 해당을 호스팅합니다. 충돌을 방지 하려면 호스팅 WCF 서비스 라이브러리에서 Visual Studio를 방지할 수 있습니다. 
 > 1. 선택 된 **GettingStartedLib** 프로젝트 **솔루션 탐색기** 선택한 **속성** 바로 가기 메뉴에서.
 > 2. 선택 **WCF 옵션** 의 선택을 취소 **WCF 서비스 호스트 시작 동일한 솔루션의 다른 프로젝트를 디버깅할 때**합니다.
-
 
 ## <a name="next-steps"></a>다음 단계
 

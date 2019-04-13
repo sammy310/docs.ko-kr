@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 396b875a-d203-4ebe-a3a1-6a330d962e95
-ms.openlocfilehash: 9adbb4166d713cea0344c9fa58ce85e5afce086d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3f8e13c6983b6c3a88bc1d9f559f7fac3d6342d9
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54717913"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59110086"
 ---
 # <a name="duplex-services"></a>이중 서비스
 이중 서비스 계약은 양쪽 엔드포인트에서 메시지를 다른 사용자에게 독립적으로 전송할 수 있는 메시지 교환 패턴입니다. 따라서 이중 서비스에서는 클라이언트 엔드포인트로 메시지를 보내 이벤트와 비슷한 동작을 제공할 수 있습니다. 이중 통신은 클라이언트가 서비스에 연결할 때 이루어지며, 서비스에서 클라이언트로 메시지를 다시 보낼 수 있는 채널을 제공합니다. 이중 서비스의 이벤트와 비슷한 동작은 세션 내에서만 작동합니다.  
@@ -40,9 +40,7 @@ ms.locfileid: "54717913"
  서비스의 구성은 세션 통신 및 이중 통신 모두를 지원하는 바인딩을 제공하도록 설정되어야 합니다. `wsDualHttpBinding` 요소는 세션 통신을 지원하며 각 방향에 대해 하나씩, 이중 HTTP 연결을 제공하여 이중 통신을 허용합니다.  
   
  클라이언트에서는 다음 샘플 구성과 같이 서버가 클라이언트에 연결하는 데 사용할 수 있는 주소를 구성해야 합니다.  
-  
-  
-  
+
 > [!NOTE]
 >  보안 대화를 사용하여 인증할 수 없는 이중이 아닌 클라이언트는 일반적으로 <xref:System.ServiceModel.Security.MessageSecurityException>을 throw합니다. 그러나 보안 대화를 사용하는 이중 클라이언트가 인증할 수 없는 경우 클라이언트는 대신 <xref:System.TimeoutException>을 수신합니다.  
   
@@ -90,6 +88,7 @@ binding.ClientBaseAddress = New Uri("http://localhost:8000/DuplexTestUsingCode/C
 >  이중 모델에서는 서비스나 클라이언트가 채널을 닫을 때를 자동으로 감지하지 않습니다. 따라서 클라이언트가 예기치 않게 종료되는 경우 기본적으로 클라이언트가 알림을 받지 못하고, 클라이언트가 예기치 않게 종료되는 경우에는 서비스가 알림을 받지 못합니다. 클라이언트와 서비스는 선택하는 경우 서로에게 알리도록 자체 프로토콜을 구현할 수 있습니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [이중](../../../../docs/framework/wcf/samples/duplex.md)
 - [클라이언트 런타임 동작 지정](../../../../docs/framework/wcf/specifying-client-run-time-behavior.md)
-- [방법: 채널 팩터리를 만들고 관리 채널을 만들고 사용](../../../../docs/framework/wcf/feature-details/how-to-create-a-channel-factory-and-use-it-to-create-and-manage-channels.md)
+- [방법: 채널 팩터리를 만들어 채널을 만들고 관리하는 데 사용](../../../../docs/framework/wcf/feature-details/how-to-create-a-channel-factory-and-use-it-to-create-and-manage-channels.md)

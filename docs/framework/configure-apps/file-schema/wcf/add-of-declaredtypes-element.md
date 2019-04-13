@@ -7,12 +7,12 @@ helpviewer_keywords:
 - DataContractSerializer
 - DataContractAttribute
 ms.assetid: c3d37ae4-8f1c-463f-b195-658c5a7e90a1
-ms.openlocfilehash: e6aab0b1eca340e212c34e2d25b9b84984dcc7a0
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 9b280a63e85beac3231bc1a414430239bea4a1f8
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55255512"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59111516"
 ---
 # <a name="add-of-declaredtypes-element"></a>\<추가 >의 \<declaredTypes > 요소
 deserialization을 수행하는 동안 <xref:System.Runtime.Serialization.DataContractSerializer>에서 사용하는 형식을 추가합니다. 선언된 각 형식에는 선언된 형식의 필드 또는 속성으로 반환되는 알려진 형식이 포함됩니다.  
@@ -40,7 +40,7 @@ deserialization을 수행하는 동안 <xref:System.Runtime.Serialization.DataCo
   
 |특성|설명|  
 |---------------|-----------------|  
-|형식|필수 문자열 특성입니다.<br /><br /> 형식 이름(네임스페이스 포함), 어셈블리 이름, 버전 번호, 문화권 및 공개 키 토큰을 지정합니다.|  
+|type|필수 문자열 특성입니다.<br /><br /> 형식 이름(네임스페이스 포함), 어셈블리 이름, 버전 번호, 문화권 및 공개 키 토큰을 지정합니다.|  
   
 ### <a name="child-elements"></a>자식 요소  
   
@@ -76,6 +76,7 @@ deserialization을 수행하는 동안 <xref:System.Runtime.Serialization.DataCo
 ```  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Runtime.Serialization.DataContractSerializer>
 - [데이터 계약 알려진 형식](../../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)
 - [\<dataContractSerializer>](../../../../../docs/framework/configure-apps/file-schema/wcf/datacontractserializer-element.md)

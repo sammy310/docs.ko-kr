@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 32bf25140da66448bda1a8827aa40942d896d53f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: dda284fc86f0a82472c59d6bab08fd4a87364723
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54734953"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59225978"
 ---
 # <a name="imetadatadispenser-interface"></a>IMetaDataDispenser 인터페이스
 새 메타 데이터 범위를 만들거나 기존 실험 열기 방법을 제공 합니다.  
@@ -44,5 +44,6 @@ ms.locfileid: "54734953"
  **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>참고자료
+
 - [IMetaDataDispenserEx 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenserex-interface.md)
 - [메타데이터 인터페이스](../../../../docs/framework/unmanaged-api/metadata/metadata-interfaces.md)

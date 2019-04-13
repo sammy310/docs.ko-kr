@@ -4,12 +4,12 @@ description: 컨테이너화된 .NET 애플리케이션을 위한 .NET 마이크
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 01/07/2019
-ms.openlocfilehash: 9e1d07e48d88376efb5fbdbdadc999c8dcd5082d
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 14a0fb7cd9ecb8dfd5369da6f6bd5b47b4aea37a
+ms.sourcegitcommit: a3db1a9eafca89f95ccf361bc1833b47fbb2bb30
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57374910"
+ms.lasthandoff: 04/04/2019
+ms.locfileid: "58921301"
 ---
 # <a name="what-os-to-target-with-net-containers"></a>.NET 컨테이너에서 대상으로 지정할 OS
 
@@ -38,20 +38,20 @@ Dockerfile 파일에 이미지 이름을 추가할 때는 다음 예제에서처
 </thead>
 <tbody>
 <tr>
-<td>microsoft/dotnet:2.2-runtime</td>
+<td>mcr.microsoft.com/dotnet/core/runtime:2.2</td>
 <td>.NET Core 2.2 다중 아키텍처: Docker 호스트에 따라 Linux 및 Windows Nano Server를 지원합니다.</td>
 </tr>
 <tr class="odd">
-<td>microsoft/dotnet:2.2-aspnetcore-runtime</td>
+<td>mcr.microsoft.com/dotnet/core/aspnet:2.2</td>
 <td><p>ASP.NET Core 2.2 다중 아키텍처: Docker 호스트에 따라 Linux 및 Windows Nano Server를 지원합니다.</p>
 <p>aspnetcore 이미지에는 ASP.NET Core에 대한 몇 가지 최적화가 있습니다.</p></td>
 </tr>
 <tr class="even">
-<td>microsoft/dotnet:2.2-aspnetcore-runtime-alpine</td>
+<td>mcr.microsoft.com/dotnet/core/aspnet:2.2-alpine</td>
 <td>Linux Alpine distro의 .NET Core 2.2 런타임 전용</td>
 </tr>
 <tr class="odd">
-<td>microsoft/dotnet:2.2-aspnetcore-runtime-nanoserver-1803</td>
+<td>mcr.microsoft.com/dotnet/core/aspnet:2.2-nanoserver-1803</td>
 <td>Windows Nano Server(Windows Server 버전 1803)의 .NET Core 2.2 런타임 전용</td>
 </tr>
 </tbody>

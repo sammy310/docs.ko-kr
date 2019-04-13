@@ -1,13 +1,13 @@
 ---
-title: <certificateReference> 에 대한 <identity>
+title: <certificateReference> for <identity>
 ms.date: 03/30/2017
 ms.assetid: ac359c65-c22d-42d2-97de-db53b77cebdb
-ms.openlocfilehash: 44bfb2fd77c4f4db6f7fede296b1cdb74e8d5e7c
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 3b7779ac00c2fca6300c12ac18ff2d5f6b868424
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57351946"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59138816"
 ---
 # <a name="certificatereference-for-identity"></a>\<certificateReference >에 대 한 \<identity >
 X.509 인증서 유효성 검사의 설정을 지정합니다. 이 id 가진 끝점과 연결 하는 안전한 Windows Communication Foundation (WCF) 클라이언트는 서버가 나타내는 클레임이이 id 생성에 사용 되는 id 클레임을 포함 하는 것을 확인 합니다.  
@@ -49,6 +49,7 @@ X.509 인증서 유효성 검사의 설정을 지정합니다. 이 id 가진 끝
 |[\<identity>](../../../../../docs/framework/configure-apps/file-schema/wcf/identity.md)|한 엔드포인트에서 다른 엔드포인트와 메시지를 교환할 때 상대 엔드포인트를 인증할 수 있도록 하는 설정을 지정합니다.|  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.ServiceModel.Configuration.CertificateReferenceElement>
 - <xref:System.ServiceModel.Configuration.IdentityElement>
 - <xref:System.ServiceModel.EndpointAddress>

@@ -1,5 +1,5 @@
 ---
-title: <defaultFtpCachePolicy> 요소(네트워크 설정)
+title: <defaultFtpCachePolicy> 요소 (네트워크 설정)
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#defaultFtpCachePolicy
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - <defaultFtpCachePolicy> element
 - defaultFtpCachePolicy element
 ms.assetid: 0eb0c5cb-dd97-484d-8614-785e88877abb
-ms.openlocfilehash: eda246c93660c1a37f7db3a6a38144a44a0ae1d3
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 36d174beea58ff96674bd873bfbcb8be89591669
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55279710"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59132537"
 ---
 # <a name="defaultftpcachepolicy-element-network-settings"></a>\<defaultFtpCachePolicy > 요소 (네트워크 설정)
 FTP 캐싱 활성화 되어 있는지 여부를 나타내고 기본 캐싱 정책은 설명 설명 합니다.  
@@ -51,7 +51,7 @@ FTP 캐싱 활성화 되어 있는지 여부를 나타내고 기본 캐싱 정�
 |`Revalidate`|캐시 된 리소스의 타임 스탬프 서버에서 리소스의 타임 스탬프와 동일한 경우 캐시 된 리소스를 반환 합니다. 이 고, 그렇지 리소스 다운로드 서버에서 캐시에 저장 되어 호출자에 게 반환 합니다.|  
 |`Reload`|서버에서 리소스를 다운로드, 캐시에 저장 하 고 호출자에 게 리소스를 반환 합니다.|  
 |`NoCacheNoStore`|캐시 된 리소스가 있는 경우 삭제 됩니다. 리소스는 서버에서 다운로드 되 고 호출자에 게 반환 됩니다.|  
-|`Revalidate`|캐시된 리소스 복사본의 타임스탬프가 서버에 있는 리소스의 타임스탬프와 동일하면 캐시된 리소스 복사본을 사용하여 요청을 만족시키고, 그렇지 않으면 서버에서 리소스를 다운로드하여 호출자에게 제공한 다음 캐시에 저장합니다.|  
+|`Revalidate`|타임 스탬프 서버에서 리소스의 타임 스탬프와 동일한 경우 리소스의 캐시 된 복사본을 사용 하 여 요청을 만족 시킵니다. 이 고, 그렇지 리소스는 서버에서 다운로드, 호출자에 게 표시 되 고 캐시에 저장 합니다.|  
   
 ### <a name="child-elements"></a>자식 요소  
  없음  
@@ -80,6 +80,7 @@ FTP 캐싱 활성화 되어 있는지 여부를 나타내고 기본 캐싱 정�
 ```  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Net.Cache>
 - <xref:System.Net.WebRequest>
 - <xref:System.Net.Cache.RequestCacheLevel>

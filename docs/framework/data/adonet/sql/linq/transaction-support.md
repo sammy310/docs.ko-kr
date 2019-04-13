@@ -2,12 +2,12 @@
 title: 트랜잭션 지원
 ms.date: 03/30/2017
 ms.assetid: 8cceb26e-8d36-4365-8967-58e2e89e0187
-ms.openlocfilehash: f53a6081102991c73543b4cd76365f7e2c0faf89
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 519ddab069cf3c4ca1ccfa7b203769b8102db844
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54517203"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59196165"
 ---
 # <a name="transaction-support"></a>트랜잭션 지원
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 세 가지 고유한 트랜잭션 모델이 지원합니다. 이러한 모델을 검사가 수행되는 순서대로 나열하면 다음과 같습니다.  
@@ -24,5 +24,6 @@ ms.locfileid: "54517203"
  <xref:System.Data.Linq.DataContext.SubmitChanges%2A>를 호출할 경우 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]은 호출이 <xref:System.Transactions.Transaction>의 범위에 있는지 또는 `Transaction` 속성(`IDbTransaction`)이 사용자가 시작한 로컬 트랜잭션으로 설정되었는지 여부를 확인합니다. 어떠한 트랜잭션도 찾지 못한 경우 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]은 로컬 트랜잭션(`IDbTransaction`)을 시작하고 이를 사용하여 생성된 SQL 명령을 실행합니다. 모든 SQL 명령이 성공적으로 완료되면 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]은 로컬 트랜잭션을 커밋하고 반환됩니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [배경 정보](../../../../../../docs/framework/data/adonet/sql/linq/background-information.md)
-- [방법: 트랜잭션을 사용 하 여 대괄호 데이터 전송](../../../../../../docs/framework/data/adonet/sql/linq/how-to-bracket-data-submissions-by-using-transactions.md)
+- [방법: 트랜잭션을 사용하여 대괄호로 묶은 데이터 전송](../../../../../../docs/framework/data/adonet/sql/linq/how-to-bracket-data-submissions-by-using-transactions.md)

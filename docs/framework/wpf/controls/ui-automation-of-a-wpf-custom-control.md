@@ -10,20 +10,18 @@ helpviewer_keywords:
 - custom controls [WPF], improving accessibility
 - UI Automation [WPF], using with custom controls
 ms.assetid: 47b310fc-fbd5-4ce2-a606-22d04c6d4911
-ms.openlocfilehash: 2587a3b4e38aed507688cc86f0e179b3acbb1672
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 0d663acc195b36fdc95c196f2233ae997fbd9195
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57358329"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59132771"
 ---
 # <a name="ui-automation-of-a-wpf-custom-control"></a>WPF 사용자 지정 컨트롤의 UI 자동화
-[!INCLUDE[TLA#tla_uiautomation](../../../../includes/tlasharptla-uiautomation-md.md)]에서는 자동화 클라이언트가 다양한 플랫폼 및 프레임워크의 사용자 인터페이스를 검사하거나 운영하는 데 사용할 수 있는 일반화된 단일 인터페이스를 제공합니다. [!INCLUDE[TLA2#tla_uiautomation](../../../../includes/tla2sharptla-uiautomation-md.md)]를 통해 품질 보증(테스트) 코드 및 화면 읽기 프로그램과 같은 접근성 응용 프로그램은 사용자 인터페이스 요소를 검사하고 다른 코드에서 해당 요소에 대한 사용자 상호 작용을 시뮬레이트할 수 있습니다. 모든 플랫폼에서 [!INCLUDE[TLA2#tla_uiautomation](../../../../includes/tla2sharptla-uiautomation-md.md)]에 대한 자세한 내용은 접근성을 참조하세요.  
+[!INCLUDE[TLA#tla_uiautomation](../../../../includes/tlasharptla-uiautomation-md.md)] 자동화 클라이언트가 다양 한 플랫폼 및 프레임 워크의 사용자 인터페이스를 작동 하거나 검사 하는 데 사용할 수 있는 일반화 된 단일 인터페이스를 제공 합니다. [!INCLUDE[TLA2#tla_uiautomation](../../../../includes/tla2sharptla-uiautomation-md.md)] 품질 보증 (테스트) 코드와 사용자 인터페이스 요소를 검사 하 고 다른 코드에서 상호 작용은 사용자를 시뮬레이션할 화면 읽기 프로그램과 같은 접근성 응용 프로그램을 사용 하도록 설정 합니다. 모든 플랫폼에서 [!INCLUDE[TLA2#tla_uiautomation](../../../../includes/tla2sharptla-uiautomation-md.md)]에 대한 자세한 내용은 접근성을 참조하세요.  
   
  이 항목에서는 WPF 애플리케이션에서 실행되는 사용자 지정 컨트롤에 대한 서버 쪽 UI 자동화 공급자를 구현하는 방법을 설명합니다. WPF는 사용자 인터페이스 요소의 트리에 대응하는 피어 자동화 개체의 트리를 통해 [!INCLUDE[TLA2#tla_uiautomation](../../../../includes/tla2sharptla-uiautomation-md.md)]를 지원합니다. 접근성 기능을 제공하는 애플리케이션 및 테스트 코드는 자동화 피어 개체를 직접 사용(in-process 코드의 경우)하거나 [!INCLUDE[TLA2#tla_uiautomation](../../../../includes/tla2sharptla-uiautomation-md.md)]에서 제공하는 일반화된 인터페이스를 통해 사용할 수 있습니다.  
-  
- 
-  
+
 <a name="AutomationPeerClasses"></a>   
 ## <a name="automation-peer-classes"></a>자동화 피어 클래스  
  WPF 컨트롤 지원 [!INCLUDE[TLA2#tla_uiautomation](../../../../includes/tla2sharptla-uiautomation-md.md)] 에서 파생 되는 피어 클래스 트리를 통해 <xref:System.Windows.Automation.Peers.AutomationPeer>합니다. 규칙에 따라 피어 클래스 이름은 컨트롤 클래스 이름으로 시작하고 "AutomationPeer"로 끝납니다. 예를 들어 <xref:System.Windows.Automation.Peers.ButtonAutomationPeer> 에 대 한 피어 클래스는 <xref:System.Windows.Controls.Button> 컨트롤 클래스입니다. 피어 클래스는 [!INCLUDE[TLA2#tla_uiautomation](../../../../includes/tla2sharptla-uiautomation-md.md)] 컨트롤 형식과 거의 동일하지만 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 요소와 관련됩니다. [!INCLUDE[TLA2#tla_uiautomation](../../../../includes/tla2sharptla-uiautomation-md.md)] 인터페이스를 통해 WPF 응용 프로그램에 액세스하는 자동화 코드는 자동화 피어를 직접 사용하지 않지만 동일한 프로세스 공간의 자동화 코드는 자동화 피어를 직접 사용할 수 있습니다.  
@@ -155,6 +153,7 @@ End Class
  [!code-vb[CustomControlNumericUpDown#RaiseEventFromControl](~/samples/snippets/visualbasic/VS_Snippets_Wpf/CustomControlNumericUpDown/visualbasic/customcontrollibrary/numericupdown.vb#raiseeventfromcontrol)]  
   
 ## <a name="see-also"></a>참고자료
+
 - [UI 자동화 개요](../../ui-automation/ui-automation-overview.md)
 - [테마 및 UI 자동화 지원 샘플이 있는 NumericUpDown 사용자 지정 컨트롤](https://go.microsoft.com/fwlink/?LinkID=160025)
 - [서버 쪽 UI 자동화 공급자 구현](../../ui-automation/server-side-ui-automation-provider-implementation.md)

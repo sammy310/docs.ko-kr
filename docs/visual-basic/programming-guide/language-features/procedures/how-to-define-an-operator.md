@@ -13,12 +13,12 @@ helpviewer_keywords:
 - return values [Visual Basic], Operator procedures
 - operator overloading
 ms.assetid: d4b0e253-092a-4e6e-9fe2-01f562140a29
-ms.openlocfilehash: 3a09657ee7a79b7f590adba0e4fb0c04a8e89043
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 14aa25de78eb357f8474d3828aa45e48e7a4f9c7
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58843645"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59126115"
 ---
 # <a name="how-to-define-an-operator-visual-basic"></a>방법: 연산자 (Visual Basic)를 정의 합니다.
 클래스 또는 구조체를 정의한 경우에 표준 연산자의 동작을 정의할 수 있습니다 (같은 `*`, `<>`, 또는 `And`) 클래스 또는 구조체 형식의 하나 또는 두 피연산자 모두가 하는 경우.  
@@ -35,15 +35,14 @@ ms.locfileid: "58843645"
  구조를 테스트할 수 있습니다 `height` 다음 코드를 사용 합니다.  
   
  [!code-vb[VbVbcnProcedures#26](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#26)]  
-  
-  
+
 ## <a name="see-also"></a>참고자료
 
 - [연산자 프로시저](./operator-procedures.md)
-- [방법: 변환 연산자를 정의 합니다.](./how-to-define-a-conversion-operator.md)
+- [방법: 변환 연산자 정의](./how-to-define-a-conversion-operator.md)
 - [방법: 연산자 프로시저 호출](./how-to-call-an-operator-procedure.md)
-- [방법: 연산자를 정의 하는 클래스를 사용 합니다.](./how-to-use-a-class-that-defines-operators.md)
-- [Operator 문](../../../../visual-basic/language-reference/statements/operator-statement.md)
+- [방법: 연산자를 정의하는 클래스 사용](./how-to-use-a-class-that-defines-operators.md)
+- [Operator Statement](../../../../visual-basic/language-reference/statements/operator-statement.md)
 - [Structure 문](../../../../visual-basic/language-reference/statements/structure-statement.md)
-- [방법: 구조 선언](../../../../visual-basic/programming-guide/language-features/data-types/how-to-declare-a-structure.md)
+- [방법: 구조체 선언](../../../../visual-basic/programming-guide/language-features/data-types/how-to-declare-a-structure.md)
 - [Mod 연산자](../../../../visual-basic/language-reference/operators/mod-operator.md)

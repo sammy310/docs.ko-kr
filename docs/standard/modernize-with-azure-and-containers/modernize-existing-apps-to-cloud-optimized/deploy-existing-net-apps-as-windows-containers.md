@@ -1,25 +1,25 @@
 ---
-title: 기존.NET 앱을 Windows 컨테이너로 배포
-description: Azure 클라우드 및 Windows 컨테이너를 사용 하 여 기존.NET 응용 프로그램 현대화 | 기존.NET 앱을 Windows 컨테이너로 배포
+title: 기존 .NET 앱을 Windows 컨테이너로 배포
+description: Azure 클라우드와 Windows 컨테이너를 사용하여 기존 .NET 응용 프로그램 최신화 | 기존 .NET 앱을 Windows 컨테이너로 배포
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 04/29/2018
-ms.openlocfilehash: 646acc6fd14c1ff85593dbf6074f0d03d86f04bd
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 9d84924317e7c6e3dd4386f851ee902e2b5a7caf
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53143760"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59216667"
 ---
-# <a name="deploy-existing-net-apps-as-windows-containers"></a>기존.NET 앱을 Windows 컨테이너로 배포
+# <a name="deploy-existing-net-apps-as-windows-containers"></a>기존 .NET 앱을 Windows 컨테이너로 배포
 
-Windows 컨테이너를 기반으로 하는 배포 클라우드 액세스에 최적화 된 응용 프로그램 및 클라우드 네이티브 응용 프로그램에 적용할 수 있습니다.
+Windows 컨테이너를 기반으로 하는 배포는 클라우드에 최적화된 응용 프로그램과 클라우드 네이티브 응용 프로그램에 적용할 수 있습니다.
 
-그러나이 가이드 및 다음 섹션에서는 특히 대부분 중점적으로 설명에 대 한 Windows 컨테이너를 사용 하 여 *클라우드에 최적화* 응용 프로그램을 재설계 필요가 없는 응용 프로그램입니다.
+그러나 이 가이드와 특히 다음 절에서는 응용 프로그램을 재설계하지 않아도 되는 *클라우드에 최적화*된 응용 프로그램에 대한 Windows 컨테이너 사용을 중점적으로 설명합니다.
 
 ## <a name="what-are-containers-linux-or-windows"></a>컨테이너 란? (Linux 또는 Windows)
 
-컨테이너는 격리 된 자체 패키지로 응용 프로그램을 마무리 하는 방법입니다. 해당 컨테이너에서 응용 프로그램은 응용 프로그램 또는 컨테이너 외부에 있는 프로세스 영향을 받지 않습니다. 모든 응용 프로그램 같이 달라 집니다 실행에 성공적으로 프로세스는 컨테이너 내에서. 컨테이너가 있습니다 이동 하는 아무 곳에 나 응용 프로그램의 요구 사항을 항상 충족 된다를 직접 종속성을 기준으로 하므로 (라이브러리 종속성, 런타임 및 등)를 실행 하는 데 필요한 모든 항목이 함께 제공 되는 것입니다.
+컨테이너는 응용 프로그램을 격리된 자체 패키지로 마무리하는 방법입니다. 해당 컨테이너에서 응용 프로그램은 컨테이너 외부에 있는 응용 프로그램 또는 프로세스의 영향을 받지 않습니다. 응용 프로그램이 하나의 프로세스로 성공적으로 실행되는 데 의존하는 모든 것이 컨테이너 내부에 있습니다. 컨테이너가 이동할 수 있는 곳이라면, 직접 종속성 측면에서 응용 프로그램의 요구사항이 충족됩니다.실행에 필요한 모든 항목(라이브러리 종속성, 런타임 등)이 함께 번들되기 때문입니다.
 
 컨테이너의 주요 특징 한다는 점입니다 환경 같은 서로 다른 배포에서 필요한 모든 종속성이 있는 컨테이너 자체 제공 되기 때문입니다. 컴퓨터에 응용 프로그램을 디버그할 수 있으며 동일한 환경의 사용 하 여 다른 컴퓨터에 배포할 수 있습니다.
 
@@ -134,7 +134,6 @@ Hyper-v 격리 없이 Windows 컨테이너를 실행 하는 것은 런타임에 
 -   **인포 그래픽: Microsoft 및 컨테이너**
 
     [https://info.microsoft.com/rs/157-GQE-382/images/Container%20infographic%201.4.17.pdf](https://info.microsoft.com/rs/157-GQE-382/images/Container%20infographic%201.4.17.pdf)
-
 
 ## <a name="the-container-ecosystem-in-azure"></a>Azure에서 컨테이너 에코 시스템
 

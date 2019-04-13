@@ -7,12 +7,12 @@ helpviewer_keywords:
 - list boxes [Windows Forms], about list boxes
 - ListBox control [Windows Forms], about ListBox control
 ms.assetid: 37ea226b-6fc8-4c70-936a-c6af4e0cad4c
-ms.openlocfilehash: 2bba90f704458e1c724328feccaaf6f04b98ecb4
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: f70246d4a4d158815ee9662036eca8edeb891d85
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57723987"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59104203"
 ---
 # <a name="listbox-control-overview-windows-forms"></a>ListBox 컨트롤 개요(Windows Forms)
 Windows Forms <xref:System.Windows.Forms.ListBox> 컨트롤 사용자 하나 이상의 항목을 선택할 수 있는 목록이 표시 됩니다. 스크롤 막대를 자동으로 추가 됩니다 총 항목 수가 표시 될 수 있는 수를 초과 하면는 <xref:System.Windows.Forms.ListBox> 제어 합니다. 경우는 <xref:System.Windows.Forms.ListBox.MultiColumn%2A> 속성이 `true`, 여러 열에 있는 항목을 표시 하는 목록 상자 및 가로 스크롤 막대를 표시 합니다. 경우는 <xref:System.Windows.Forms.ListBox.MultiColumn%2A> 속성이 `false`, 단일 열에 있는 항목을 표시 하는 목록 상자 및 세로 스크롤 막대가 표시 됩니다. 때 <xref:System.Windows.Forms.ListBox.ScrollAlwaysVisible%2A> 로 설정 된 `true`, 스크롤 막대 항목 개수에 관계 없이 표시 됩니다. <xref:System.Windows.Forms.ListBox.SelectionMode%2A> 속성 결정 한 번에 목록 항목의 개수를 선택할 수 있습니다.  
@@ -23,11 +23,12 @@ Windows Forms <xref:System.Windows.Forms.ListBox> 컨트롤 사용자 하나 이
  항목을 추가 하거나 삭제할를 <xref:System.Windows.Forms.ListBox> 컨트롤을 사용 합니다 <xref:System.Windows.Forms.ListBox.ObjectCollection.Add%2A>, <xref:System.Windows.Forms.ListBox.ObjectCollection.Insert%2A>, <xref:System.Windows.Forms.ListBox.ObjectCollection.Clear%2A> 또는 <xref:System.Windows.Forms.ListBox.ObjectCollection.Remove%2A> 메서드. 사용 하 여 목록에 항목을 추가할 수는 또는 <xref:System.Windows.Forms.ListBox.Items%2A> 디자인 타임 속성입니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Windows.Forms.ListBox>
-- [방법: 추가 및 제거할 항목을 Windows Forms ComboBox, ListBox 또는 CheckedListBox 컨트롤](add-and-remove-items-from-a-wf-combobox.md)
-- [방법: Windows의 내용을 정렬할 Forms ComboBox, ListBox 또는 CheckedListBox 컨트롤](sort-the-contents-of-a-wf-combobox-listbox-or-checkedlistbox-control.md)
+- [방법: Windows Forms ComboBox, ListBox 또는 CheckedListBox 컨트롤에서 항목 추가 및 제거](add-and-remove-items-from-a-wf-combobox.md)
+- [방법: Windows Forms ComboBox, ListBox 또는 CheckedListBox 컨트롤의 내용 정렬](sort-the-contents-of-a-wf-combobox-listbox-or-checkedlistbox-control.md)
 - [방법: 데이터에 Windows Forms ComboBox 또는 ListBox 컨트롤 바인딩](how-to-bind-a-windows-forms-combobox-or-listbox-control-to-data.md)
 - [ComboBox 컨트롤 개요](combobox-control-overview-windows-forms.md)
 - [CheckedListBox 컨트롤 개요](checkedlistbox-control-overview-windows-forms.md)
-- [옵션 목록 표시에 사용된 Windows Forms 컨트롤](windows-forms-controls-used-to-list-options.md)
-- [방법: Windows Forms ComboBox, ListBox 또는 CheckedListBox 컨트롤에 대 한 조회 테이블 만들기](create-a-lookup-table-for-a-wf-combobox-listbox.md)
+- [옵션 목록 표시에 사용하는 Windows Forms 컨트롤](windows-forms-controls-used-to-list-options.md)
+- [방법: Windows Forms ComboBox, ListBox 또는 CheckedListBox 컨트롤에 대한 조회 테이블 만들기](create-a-lookup-table-for-a-wf-combobox-listbox.md)

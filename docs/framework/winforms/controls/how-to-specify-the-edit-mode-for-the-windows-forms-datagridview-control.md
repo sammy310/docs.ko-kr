@@ -1,5 +1,5 @@
 ---
-title: '방법: Windows Forms DataGridView 컨트롤에 대 한 편집 모드 지정'
+title: '방법: Windows Forms DataGridView 컨트롤에 대한 편집 모드 지정'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], edit mode
 - data grids [Windows Forms], edit mode
 ms.assetid: 93e117e8-94c4-411b-ba31-645e475ed85c
-ms.openlocfilehash: 00c5bb85eb1b238371e58a631d90b69a41c49140
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 7cb9278cd311d211ef95df238b930970ae472d05
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57725309"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59080399"
 ---
-# <a name="how-to-specify-the-edit-mode-for-the-windows-forms-datagridview-control"></a>방법: Windows Forms DataGridView 컨트롤에 대 한 편집 모드 지정
+# <a name="how-to-specify-the-edit-mode-for-the-windows-forms-datagridview-control"></a>방법: Windows Forms DataGridView 컨트롤에 대한 편집 모드 지정
 기본적으로 사용자의 현재 내용을 편집할 수 있습니다 <xref:System.Windows.Forms.DataGridView> 에 입력 하거나 F2 키를 눌러 텍스트 상자 셀입니다. 그러면 셀 편집 모드에서 다음 조건이 모두 충족 될 경우:  
   
 -   데이터 원본 편집을 지원 합니다.  
@@ -42,10 +42,10 @@ ms.locfileid: "57725309"
   
 -   `dataGridView1`이라는 <xref:System.Windows.Forms.DataGridView> 컨트롤  
   
--   
-  <xref:System> 및 <xref:System.Windows.Forms> 어셈블리에 대한 참조  
+-   <xref:System> 및 <xref:System.Windows.Forms> 어셈블리에 대한 참조  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridView.EditMode%2A?displayProperty=nameWithType>
 - [Windows Forms DataGridView 컨트롤의 데이터 입력](data-entry-in-the-windows-forms-datagridview-control.md)

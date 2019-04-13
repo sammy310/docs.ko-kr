@@ -7,12 +7,12 @@ helpviewer_keywords:
 - inheritance [Visual Basic], walkthroughs
 - derived classes [Visual Basic], COM reusability
 ms.assetid: f8e7263a-de13-48d1-b67c-ca1adf3544d9
-ms.openlocfilehash: ee7258a78ad0a434bfad08eebd596a8b889e2304
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 0b3977e73e3b2aa9e80e2dab08d15035283b8387
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58826173"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59334148"
 ---
 # <a name="walkthrough-implementing-inheritance-with-com-objects-visual-basic"></a>연습: COM 개체 (Visual Basic)를 사용한 상속 구현
 Visual Basic 클래스를 파생 시킬 수 있습니다 `Public` 이전 버전의 Visual Basic에서 생성 된 COM 개체의 클래스입니다. 속성 및 COM 개체에서 상속 된 클래스의 메서드를 재정의 하거나 속성 처럼 오버 로드 및 다른 기본 클래스의 메서드를 재정의 또는 오버 로드 될 수 있습니다. COM 개체에서 상속 다시 컴파일하지 않으려는 기존 클래스 라이브러리가 있는 경우에 유용 합니다.  
@@ -23,26 +23,26 @@ Visual Basic 클래스를 파생 시킬 수 있습니다 `Public` 이전 버전�
   
 ### <a name="to-build-the-com-object-that-is-used-in-this-walkthrough"></a>이 연습에 사용 되는 COM 개체를 만들려면  
   
-1.  Visual Basic 6.0의 새로운 ActiveX DLL 프로젝트를 엽니다. 라는 프로젝트를 `Project1` 만들어집니다. 여기에 명명 된 클래스가 `Class1`합니다.  
+1. Visual Basic 6.0의 새로운 ActiveX DLL 프로젝트를 엽니다. 라는 프로젝트를 `Project1` 만들어집니다. 여기에 명명 된 클래스가 `Class1`합니다.  
   
-2.  에 **프로젝트 탐색기**를 마우스 오른쪽 단추로 클릭 **Project1**를 클릭 하 고 **Project1 속성**합니다. 합니다 **프로젝트 속성** 대화 상자가 표시 됩니다.  
+2. 에 **프로젝트 탐색기**를 마우스 오른쪽 단추로 클릭 **Project1**를 클릭 하 고 **Project1 속성**합니다. 합니다 **프로젝트 속성** 대화 상자가 표시 됩니다.  
   
-3.  에 **일반** 탭의 **프로젝트 속성** 대화 상자에서 프로젝트 이름을 입력 하 여 변경 `ComObject1` 에서 **프로젝트 이름** 필드.  
+3. 에 **일반** 탭의 **프로젝트 속성** 대화 상자에서 프로젝트 이름을 입력 하 여 변경 `ComObject1` 에서 **프로젝트 이름** 필드.  
   
-4.  에 **프로젝트 탐색기**를 마우스 오른쪽 단추로 클릭 `Class1`를 클릭 하 고 **속성**합니다. 합니다 **속성** 클래스에 대 한 창이 표시 됩니다.  
+4. 에 **프로젝트 탐색기**를 마우스 오른쪽 단추로 클릭 `Class1`를 클릭 하 고 **속성**합니다. 합니다 **속성** 클래스에 대 한 창이 표시 됩니다.  
   
-5.  변경 된 `Name` 속성을 `MathFunctions`입니다.  
+5. 변경 된 `Name` 속성을 `MathFunctions`입니다.  
   
-6.  에 **프로젝트 탐색기**를 마우스 오른쪽 단추로 클릭 `MathFunctions`를 클릭 하 고 **코드 보기**합니다. 합니다 **코드 편집기** 표시 됩니다.  
+6. 에 **프로젝트 탐색기**를 마우스 오른쪽 단추로 클릭 `MathFunctions`를 클릭 하 고 **코드 보기**합니다. 합니다 **코드 편집기** 표시 됩니다.  
   
-7.  속성 값을 보유 하는 로컬 변수를 추가 합니다.  
+7. 속성 값을 보유 하는 로컬 변수를 추가 합니다.  
   
     ```  
     ' Local variable to hold property value  
     Private mvarProp1 As Integer  
     ```  
   
-8.  속성 추가 `Let` 속성과 `Get` 속성 프로시저:  
+8. 속성 추가 `Let` 속성과 `Get` 속성 프로시저:  
   
     ```  
     Public Property Let Prop1(ByVal vData As Integer)  
@@ -76,31 +76,31 @@ Visual Basic 클래스를 파생 시킬 수 있습니다 `Public` 이전 버전�
   
 #### <a name="to-use-a-com-object-with-visual-basic-2005-and-later-versions"></a>Visual Basic 2005 및 이후 버전을 사용 하 여 COM 개체를 사용 하려면  
   
-1.  새 Visual Basic Windows 애플리케이션 프로젝트를 엽니다.  
+1. 새 Visual Basic Windows 애플리케이션 프로젝트를 엽니다.  
   
-2.  **프로젝트** 메뉴에서 **참조 추가**를 클릭합니다.  
+2. **프로젝트** 메뉴에서 **참조 추가**를 클릭합니다.  
   
      **참조 추가** 대화 상자가 표시됩니다.  
   
-3.  에 **COM** 탭을 두 번 클릭 `ComObject1` 에 **구성 요소 이름** 나열 하 고 클릭 **확인**합니다.  
+3. 에 **COM** 탭을 두 번 클릭 `ComObject1` 에 **구성 요소 이름** 나열 하 고 클릭 **확인**합니다.  
   
-4.  **프로젝트** 메뉴에서 **새 항목 추가**를 클릭합니다.  
+4. **프로젝트** 메뉴에서 **새 항목 추가**를 클릭합니다.  
   
      **새 항목 추가** 대화 상자가 표시됩니다.  
   
-5.  에 **템플릿을** 창 클릭 **클래스**합니다.  
+5. 에 **템플릿을** 창 클릭 **클래스**합니다.  
   
      기본 파일 이름을 `Class1.vb`에 나타나는 합니다 **이름** 필드. MathClass.vb 클릭을이 필드를 변경 **추가**합니다. 라는 클래스를 이렇게 `MathClass`, 해당 코드를 표시 합니다.  
   
-6.  맨 위에 다음 코드를 추가 `MathClass` COM 클래스에서 상속 하도록 합니다.  
+6. 맨 위에 다음 코드를 추가 `MathClass` COM 클래스에서 상속 하도록 합니다.  
   
      [!code-vb[VbVbalrInterop#31](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrInterop/VB/Class1.vb#31)]  
   
-7.  다음 코드를 추가 하 여 기본 클래스의 public 메서드를 오버 로드 `MathClass`:  
+7. 다음 코드를 추가 하 여 기본 클래스의 public 메서드를 오버 로드 `MathClass`:  
   
      [!code-vb[VbVbalrInterop#32](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrInterop/VB/Class1.vb#32)]  
   
-8.  다음 코드를 추가 하 여 상속된 된 클래스를 확장할 `MathClass`:  
+8. 다음 코드를 추가 하 여 상속된 된 클래스를 확장할 `MathClass`:  
   
      [!code-vb[VbVbalrInterop#33](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrInterop/VB/Class1.vb#33)]  
   
@@ -108,13 +108,13 @@ Visual Basic 클래스를 파생 시킬 수 있습니다 `Public` 이전 버전�
   
 #### <a name="to-test-the-inherited-class"></a>상속된 된 클래스를 테스트 하려면  
   
-1.  시작 폼에 단추를 추가 하 고 해당 코드를 보려면 두 번 클릭 합니다.  
+1. 시작 폼에 단추를 추가 하 고 해당 코드를 보려면 두 번 클릭 합니다.  
   
-2.  단추의 `Click` 이벤트 처리기 프로시저의 인스턴스를 만드는 다음 코드를 추가 `MathClass` 오버 로드 된 메서드를 호출 합니다.  
+2. 단추의 `Click` 이벤트 처리기 프로시저의 인스턴스를 만드는 다음 코드를 추가 `MathClass` 오버 로드 된 메서드를 호출 합니다.  
   
      [!code-vb[VbVbalrInterop#34](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrInterop/VB/Class1.vb#34)]  
   
-3.  F5 키를 눌러 프로젝트를 실행 합니다.  
+3. F5 키를 눌러 프로젝트를 실행 합니다.  
   
  폼에 단추를 클릭할 때 합니다 `AddNumbers` 메서드를 먼저 호출 `Short` 데이터 형식 숫자 Visual Basic 기본 클래스에서 적절 한 메서드를 선택 합니다. 두 번째 호출은 `AddNumbers` 에서 오버 로드 메서드에 전달 됩니다 `MathClass`합니다. 세 번째 호출은 호출은 `SubtractNumbers` 메서드를 클래스를 확장 합니다. 기본 클래스의 속성을 설정 하 고 값이 표시 됩니다.  
   
@@ -132,5 +132,5 @@ Visual Basic 클래스를 파생 시킬 수 있습니다 `Public` 이전 버전�
 ## <a name="see-also"></a>참고자료
 
 - [.NET Framework 응용 프로그램의 COM 상호 운용성](../../../visual-basic/programming-guide/com-interop/com-interoperability-in-net-framework-applications.md)
-- [Inherits 문](../../../visual-basic/language-reference/statements/inherits-statement.md)
+- [Inherits Statement](../../../visual-basic/language-reference/statements/inherits-statement.md)
 - [Short 데이터 형식](../../../visual-basic/language-reference/data-types/short-data-type.md)

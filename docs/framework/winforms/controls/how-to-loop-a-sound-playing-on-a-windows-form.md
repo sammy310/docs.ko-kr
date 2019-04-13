@@ -1,5 +1,5 @@
 ---
-title: '방법: Windows Form에서 소리 재생 반복'
+title: '방법: Windows Form에서 재생되는 소리 반복'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - sounds [Windows Forms], looping
 - playing sounds [Windows Forms], looping
 ms.assetid: ea95dd46-10a3-46c0-8263-4b205f00df7f
-ms.openlocfilehash: 43fcc472960cc3f2432d3872160d9ace4c617836
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: a74acbbbcb5646a35de54a6000a0feae30f145a5
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57719275"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59188515"
 ---
-# <a name="how-to-loop-a-sound-playing-on-a-windows-form"></a>방법: Windows Form에서 소리 재생 반복
+# <a name="how-to-loop-a-sound-playing-on-a-windows-form"></a>방법: Windows Form에서 재생되는 소리 반복
 다음 코드 예제에서는 반복해서 소리를 재생합니다. `stopPlayingButton_Click` 이벤트 처리기의 코드가 실행되면 현재 재생되는 모든 소리가 중지됩니다. 소리가 재생되지 않으면 아무것도 발생하지 않습니다.  
   
 ## <a name="example"></a>예제  
@@ -54,6 +54,7 @@ ms.locfileid: "57719275"
  파일 이름을 바탕으로 파일 내용을 판단하면 안 됩니다. 예를 들어 Form1.vb 파일이 Visual Basic 소스 파일이 아닐 수도 있습니다. 애플리케이션에서 데이터를 사용하기 전에 모든 입력을 확인해야 합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Media.SoundPlayer.PlayLooping%2A>
 - [방법: Windows Form에서 소리 재생](how-to-play-a-sound-from-a-windows-form.md)
 - [SoundPlayer 클래스 개요](soundplayer-class-overview.md)

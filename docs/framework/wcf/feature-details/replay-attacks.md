@@ -2,12 +2,12 @@
 title: 재생 공격
 ms.date: 03/30/2017
 ms.assetid: 7a17e040-93cd-4432-81b9-9f62fec78c8f
-ms.openlocfilehash: bceaa1bb723144ee4e3b534aa1537acdc7f65fc3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fefcb533cedb5405736ecda70c6879ebe00b8b49
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54712079"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59186760"
 ---
 # <a name="replay-attacks"></a>재생 공격
 A *재생 공격* 공격자가 두 당사자 간에 메시지 스트림을 복사 하 고 하나 이상의 당사자에 게 스트림을 재생 하는 경우 발생 합니다. 완화되지 않은 경우 공격을 받기 쉬운 컴퓨터는 스트림을 올바른 메시지로 처리하여 항목에 대한 중복 주문과 같은 잘못된 결과의 범위에 있게 됩니다.  
@@ -37,9 +37,10 @@ A *재생 공격* 공격자가 두 당사자 간에 메시지 스트림을 복�
 -   전송 수준 보안을 사용하도록 서비스를 구성합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [보안 고려 사항](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md)
 - [정보 공개](../../../../docs/framework/wcf/feature-details/information-disclosure.md)
-- [권한 상승](../../../../docs/framework/wcf/feature-details/elevation-of-privilege.md)
+- [권한 높이기](../../../../docs/framework/wcf/feature-details/elevation-of-privilege.md)
 - [서비스 거부](../../../../docs/framework/wcf/feature-details/denial-of-service.md)
 - [변조](../../../../docs/framework/wcf/feature-details/tampering.md)
 - [지원되지 않는 시나리오](../../../../docs/framework/wcf/feature-details/unsupported-scenarios.md)

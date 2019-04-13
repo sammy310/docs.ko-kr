@@ -1,5 +1,5 @@
 ---
-title: '방법: Windows Forms의 그래픽 인쇄'
+title: '방법: Windows Forms에서 그래픽 인쇄'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,21 +9,21 @@ helpviewer_keywords:
 - graphics [Windows Forms], printing
 - printing [Windows Forms], graphics
 ms.assetid: 32b891e6-52ff-4fea-a9ff-2ce5db20a4c6
-ms.openlocfilehash: cb8c9f291103915c82fb31af5c6668fbd0648f66
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 55459482d0994c581164128b17c08a7ca90d0717
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57721316"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59339101"
 ---
-# <a name="how-to-print-graphics-in-windows-forms"></a>방법: Windows Forms의 그래픽 인쇄
+# <a name="how-to-print-graphics-in-windows-forms"></a>방법: Windows Forms에서 그래픽 인쇄
 대부분의 경우 Windows 기반 응용 프로그램의 그래픽 인쇄 하려고 합니다. <xref:System.Drawing.Graphics> 클래스는 화면이 나 프린터와 같은 장치에 개체를 그리기 위한 메서드를 제공 합니다.  
   
 ### <a name="to-print-graphics"></a>그래픽을 인쇄 하려면  
   
-1.  추가 된 <xref:System.Drawing.Printing.PrintDocument> 폼에 구성 요소입니다.  
+1. 추가 된 <xref:System.Drawing.Printing.PrintDocument> 폼에 구성 요소입니다.  
   
-2.  에 <xref:System.Drawing.Printing.PrintDocument.PrintPage> 이벤트 처리기를 사용 하 여는 <xref:System.Drawing.Printing.PrintPageEventArgs.Graphics%2A> 의 속성은 <xref:System.Drawing.Printing.PrintPageEventArgs> 프린터에 인쇄 하는 그래픽의 종류에 지시 하는 클래스입니다.  
+2. 에 <xref:System.Drawing.Printing.PrintDocument.PrintPage> 이벤트 처리기를 사용 하 여는 <xref:System.Drawing.Printing.PrintPageEventArgs.Graphics%2A> 의 속성은 <xref:System.Drawing.Printing.PrintPageEventArgs> 프린터에 인쇄 하는 그래픽의 종류에 지시 하는 클래스입니다.  
   
      다음 코드 예제는 경계 사각형 내에서 파란색 타원을 만드는 데 사용 하는 이벤트 처리기를 보여줍니다. 다음 위치와 크기를 사각형에: 100부터 150 250의 너비와 높이 250.  
   
@@ -67,6 +67,7 @@ ms.locfileid: "57721316"
     ```  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Drawing.Graphics>
 - <xref:System.Drawing.Brush>
 - [Windows Forms 인쇄 지원](windows-forms-print-support.md)

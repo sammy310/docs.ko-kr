@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Windows Communication Foundation [WCF], reliable sessions
 - service contracts [WCF], reliable services
 ms.assetid: 07814ed0-0775-47f2-987b-d8134fdd5099
-ms.openlocfilehash: a3a53cb26ffb0e5934982c1c9f367115177b9b59
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a617100e46d4bcafb9325efa99c255f2f8ee5981
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54559400"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59216771"
 ---
 # <a name="reliable-services"></a>신뢰할 수 있는 서비스
 큐 및 신뢰할 수 있는 세션은 신뢰할 수 있는 메시징을 구현 하는 Windows Communication Foundation (WCF) 기능. 이 항목에서는 WCF의 신뢰할 수 있는 메시징 기능을 설명 합니다.  
@@ -45,5 +45,6 @@ ms.locfileid: "54559400"
  큐 간의 안전한 메시지 전송과 결합된 분리를 통해, 느슨하게 결합된 응용 프로그램이 안전하게 통신할 수 있습니다. 신뢰할 수 있는 세션과 달리 소스와 대상은 동시에 실행될 필요가 없습니다. 따라서 소스의 메시지 생산율과 대상의 메시지 소비율이 맞지 않을 경우, 큐가 부하 평준화 메커니즘으로 효과적으로 사용될 수 있습니다. 큐에 대 한 자세한 내용은 참조 하세요. [WCF의 큐](../../../docs/framework/wcf/feature-details/queues-in-wcf.md)합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [신뢰할 수 있는 세션 개요](../../../docs/framework/wcf/feature-details/reliable-sessions-overview.md)
 - [WCF의 큐](../../../docs/framework/wcf/feature-details/queuing-in-wcf.md)

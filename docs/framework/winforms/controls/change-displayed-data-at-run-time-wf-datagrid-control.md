@@ -1,5 +1,5 @@
 ---
-title: '방법: 런타임에 Windows Forms DataGrid 컨트롤에서 표시 된 데이터 변경'
+title: '방법: 런타임에 Windows Forms DataGrid 컨트롤에 표시되는 데이터 변경'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - DataGrid control [Windows Forms], data binding
 - cells [Windows Forms], changing DataGrid cell values
 ms.assetid: 0c7a6d00-30de-416e-8223-0a81ddb4c1f8
-ms.openlocfilehash: 3ba23dd3966591777c7e354f79dd45ec4530955a
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 60ba1e9304320346d505f3f73e1ba93ff6edab63
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57714959"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59315857"
 ---
-# <a name="how-to-change-displayed-data-at-run-time-in-the-windows-forms-datagrid-control"></a>방법: 런타임에 Windows Forms DataGrid 컨트롤에서 표시 된 데이터 변경
+# <a name="how-to-change-displayed-data-at-run-time-in-the-windows-forms-datagrid-control"></a>방법: 런타임에 Windows Forms DataGrid 컨트롤에 표시되는 데이터 변경
 > [!NOTE]
 >  <xref:System.Windows.Forms.DataGridView> 컨트롤은 <xref:System.Windows.Forms.DataGrid> 컨트롤을 대체하고 여기에 다른 기능을 추가하여 새로 도입된 컨트롤이지만 이전 버전과의 호환성 및 이후 사용 가능성을 고려하여 <xref:System.Windows.Forms.DataGrid> 컨트롤을 계속 유지하도록 선택할 수 있습니다. 자세한 내용은 [Windows Forms DataGridView 및 DataGrid 컨트롤의 차이점](differences-between-the-windows-forms-datagridview-and-datagrid-controls.md)을 참조하십시오.  
   
@@ -25,7 +25,7 @@ ms.locfileid: "57714959"
   
 ### <a name="to-change-data-programmatically"></a>프로그래밍 방식으로 데이터를 변경 하려면  
   
-1.  원하는 테이블을 지정 합니다 <xref:System.Data.DataSet> 개체 및 원하는 행 및 테이블에서 필드를 셀 새 값으로 설정 합니다.  
+1. 원하는 테이블을 지정 합니다 <xref:System.Data.DataSet> 개체 및 원하는 행 및 테이블에서 필드를 셀 새 값으로 설정 합니다.  
   
     > [!NOTE]
     >  첫 번째 테이블을 지정 하는 <xref:System.Data.DataSet> 하거나 0을 사용 하 여 테이블의 첫 번째 행.  
@@ -68,7 +68,7 @@ ms.locfileid: "57714959"
   
 ### <a name="to-change-the-datasource-programmatically"></a>데이터 소스를 프로그래밍 방식으로 변경 하려면  
   
-1.  설정 된 <xref:System.Windows.Forms.DataGrid.SetDataBinding%2A> 메서드를 데이터 원본 및 바인딩할 하려는 테이블의 이름입니다.  
+1. 설정 된 <xref:System.Windows.Forms.DataGrid.SetDataBinding%2A> 메서드를 데이터 원본 및 바인딩할 하려는 테이블의 이름입니다.  
   
      다음 예제에서는 사용 하 여 날짜 소스를 변경 하는 방법을 보여 줍니다 합니다 <xref:System.Windows.Forms.DataGrid.SetDataBinding%2A> 메서드는 [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] Pubs 데이터베이스에 있는 Authors 테이블에 연결 된 데이터 컨트롤 (adoPubsAuthors).  
   
@@ -94,7 +94,8 @@ ms.locfileid: "57714959"
     ```  
   
 ## <a name="see-also"></a>참고자료
-- [ADO.NET 데이터 세트](../../data/adonet/ado-net-datasets.md)
-- [방법: Windows Forms DataGrid 컨트롤에서 열 숨기기 또는 삭제](how-to-delete-or-hide-columns-in-the-windows-forms-datagrid-control.md)
-- [방법: Windows Forms DataGrid 컨트롤에 테이블과 열 추가](how-to-add-tables-and-columns-to-the-windows-forms-datagrid-control.md)
-- [방법: 데이터 소스에 Windows Forms DataGrid 컨트롤 바인딩](how-to-bind-the-windows-forms-datagrid-control-to-a-data-source.md)
+
+- [ADO.NET 데이터 집합](../../data/adonet/ado-net-datasets.md)
+- [방법: Windows Forms DataGrid 컨트롤에서 열 삭제 또는 숨기기](how-to-delete-or-hide-columns-in-the-windows-forms-datagrid-control.md)
+- [방법: Windows Forms DataGrid 컨트롤에 테이블 및 열 추가](how-to-add-tables-and-columns-to-the-windows-forms-datagrid-control.md)
+- [방법: 데이터 원본에 Windows Forms DataGrid 컨트롤 바인딩](how-to-bind-the-windows-forms-datagrid-control-to-a-data-source.md)

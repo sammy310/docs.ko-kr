@@ -9,12 +9,12 @@ helpviewer_keywords:
 - data binding [WPF], converting bound data
 - binding data [WPF], converting bound data
 ms.assetid: b00aaa19-c6df-4c3b-a9fd-88a0b488df2b
-ms.openlocfilehash: c98f8e4e5c837e6fbbe836a9eb2f228d2d689542
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 40699bec1c6cd775f7f8495b7a49eda15fb2ed83
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57352298"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59093802"
 ---
 # <a name="how-to-convert-bound-data"></a>방법: 바인딩된 데이터 변환
 이 예제에는 바인딩에 사용 되는 데이터에 변환을 적용 하는 방법을 보여 줍니다.  
@@ -38,6 +38,7 @@ ms.locfileid: "57352298"
  위의 예제에서 참조 된 스타일 리소스는이 항목에 표시 되지 않은 리소스 섹션에 정의 됩니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [바인딩 유효성 검사 구현](how-to-implement-binding-validation.md)
 - [데이터 바인딩 개요](data-binding-overview.md)
 - [방법 항목](data-binding-how-to-topics.md)

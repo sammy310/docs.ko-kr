@@ -3,12 +3,12 @@ title: 분기 및 루프 - C# 소개 자습서
 description: 분기 및 루프에 관한 이 자습서에서는 C# 코드를 작성하여 문을 반복적으로 실행하기 위한 조건부 분기 및 루프를 지원하는 언어 구문을 살펴봅니다.
 ms.date: 10/31/2017
 ms.custom: mvc
-ms.openlocfilehash: c9e2ede3ee8632304a86efdf25bb2a8db5354a13
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: ad5891c11c516a7c5e3d46bea9c17c85b4a8536e
+ms.sourcegitcommit: a3db1a9eafca89f95ccf361bc1833b47fbb2bb30
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57677788"
+ms.lasthandoff: 04/04/2019
+ms.locfileid: "58920950"
 ---
 # <a name="learn-conditional-logic-with-branch-and-loop-statements"></a>분기 및 루프 문이 포함된 조건부 논리 알아보기
 
@@ -249,7 +249,7 @@ for(int index = 0; index < 10; index++)
 
 “분기 및 루프” 자습서를 완료했습니다.
 
-자체 개발 환경에서 [문자열 보간](interpolated-strings-local.md) 자습서를 계속할 수 있습니다.
+자체 개발 환경에서 [배열 및 컬렉션](arrays-and-collections.md) 자습서를 계속할 수 있습니다.
 
 다음 항목에서는 해당 개념에 대해 더 자세히 알아볼 수 있습니다.
 

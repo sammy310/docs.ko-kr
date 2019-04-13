@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Windows Forms, controls by function
 - Windows Forms controls, list of
 ms.assetid: 5e65a6c3-5d6f-480d-beb8-b28f865f07e3
-ms.openlocfilehash: bdfb2d5a3ce45deb471aaa465c35b82e738a128b
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 3a82642c985b7ec1cee885cdda7b054adbe3dfee
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57717923"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59115481"
 ---
 # <a name="windows-forms-controls-by-function"></a>기능별 Windows Forms 컨트롤
 Windows Forms 컨트롤 및 다양 한 기능을 수행 하는 구성 요소를 제공 합니다. 다음 표에서 Windows Forms 컨트롤 및 일반 함수에 따라 구성 요소를 나열합니다. 또한 컨트롤을 여러 개 있는 동일한 기능을 제공 하는 경우 권장 되는 컨트롤을 대체 하는 컨트롤에 대 한 메모와 함께 나열 됩니다. 별도 후속 테이블의 대체 컨트롤과 해당 권장 되는 대체를 사용 하 여 나열 됩니다.  
@@ -21,7 +21,7 @@ Windows Forms 컨트롤 및 다양 한 기능을 수행 하는 구성 요소를 
   
 ## <a name="recommended-controls-and-components-by-function"></a>권장 되는 컨트롤 및 함수에 의해 구성 요소  
   
-|기능|Control|설명|  
+|함수|컨트롤|설명|  
 |--------------|-------------|-----------------|  
 |데이터 표시|<xref:System.Windows.Forms.DataGridView> 컨트롤|<xref:System.Windows.Forms.DataGridView> 컨트롤은 데이터를 표시 하기 위한 사용자 지정 가능한 테이블을 제공 합니다. <xref:System.Windows.Forms.DataGridView> 클래스에는 셀, 행, 열 및 테두리의 사용자 지정할 수 있습니다. **참고:**  합니다 <xref:System.Windows.Forms.DataGridView> 컨트롤에서 누락 된 다양 한 기본 및 고급 기능을 제공 합니다 <xref:System.Windows.Forms.DataGrid> 제어 합니다. 자세한 내용은 참조 하세요. [DataGrid 컨트롤과 Windows Forms DataGridView을는 간 차이점](differences-between-the-windows-forms-datagridview-and-datagrid-controls.md)|  
 |데이터 바인딩 및 탐색|<xref:System.Windows.Forms.BindingSource> 구성 요소|통화 관리, 변경 알림 및 기타 서비스를 제공 하 여 데이터를 폼에 컨트롤 바인딩을 간소화 합니다.|  
@@ -74,7 +74,7 @@ Windows Forms 컨트롤 및 다양 한 기능을 수행 하는 구성 요소를 
   
 ## <a name="superseded-controls-and-components-by-function"></a>컨트롤 및 함수에 의해 구성 요소를 대체합니다.  
   
-|기능|대체 된 컨트롤|권장된 교체|  
+|함수|대체 된 컨트롤|권장된 교체|  
 |--------------|------------------------|-----------------------------|  
 |데이터 표시|<xref:System.Windows.Forms.DataGrid>|<xref:System.Windows.Forms.DataGridView>|  
 |정보 표시 (읽기 전용 컨트롤)|<xref:System.Windows.Forms.StatusBar>|<xref:System.Windows.Forms.StatusStrip>|  
@@ -85,5 +85,6 @@ Windows Forms 컨트롤 및 다양 한 기능을 수행 하는 구성 요소를 
 |폼 레이아웃|<xref:System.Windows.Forms.Splitter>|<xref:System.Windows.Forms.SplitContainer>|  
   
 ## <a name="see-also"></a>참고자료
+
 - [Windows Forms에 사용할 수 있는 컨트롤](controls-to-use-on-windows-forms.md)
 - [.NET Framework에서 사용자 지정 Windows Forms 컨트롤 개발](developing-custom-windows-forms-controls.md)

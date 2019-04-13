@@ -5,12 +5,12 @@ helpviewer_keywords:
 - data grids [Windows Forms], default functionality in DataGridView control
 - DataGridView control [Windows Forms], default functionality
 ms.assetid: 4405f697-cad1-4839-9bcd-8ddb09d9f00e
-ms.openlocfilehash: 0c0d24111a2fdf856ff1f4ce154ec85afbbd61ee
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 26633b0abaa8c1c2916153b2236ecf9e4982fd68
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57719665"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59208867"
 ---
 # <a name="default-functionality-in-the-windows-forms-datagridview-control"></a>Windows Forms DataGridView 컨트롤의 기본 기능
 Windows Forms <xref:System.Windows.Forms.DataGridView> 컨트롤은 상당한 양의 기본 기능을 사용 하 여 사용자를 제공 합니다.  
@@ -47,5 +47,6 @@ Windows Forms <xref:System.Windows.Forms.DataGridView> 컨트롤은 상당한 �
 -   열 머리글을 마우스 오른쪽 단추로 클릭할 때 기본 데이터를 기준으로 행을 자동으로 정렬 합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Windows.Forms.DataGridView>
 - [DataGridView 컨트롤](datagridview-control-windows-forms.md)

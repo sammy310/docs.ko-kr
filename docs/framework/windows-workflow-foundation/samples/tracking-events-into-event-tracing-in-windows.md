@@ -2,12 +2,12 @@
 title: Windows에서 이벤트 추적으로 이벤트 추적
 ms.date: 03/30/2017
 ms.assetid: f812659b-0943-45ff-9430-4defa733182b
-ms.openlocfilehash: ceb981f4fac70155f740ac482bf9d49a51ed7970
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 129b82da068251d87bd9b0ca029b7e5a1c274936
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54592863"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59300647"
 ---
 # <a name="tracking-events-into-event-tracing-in-windows"></a>Windows에서 이벤트 추적으로 이벤트 추적
 이 샘플에는 Windows WF (Workflow Foundation) 워크플로 서비스에서 추적을 사용 하도록 설정 하 고 추적에서 이벤트 추적에 대 한 Windows (ETW) 이벤트를 내보내는 방법을 보여 줍니다. 이 샘플에서는 ETW 추적 참가자(<xref:System.Activities.Tracking.EtwTrackingParticipant>)를 사용하여 워크플로 추적 레코드를 ETW로 내보냅니다.
@@ -20,7 +20,7 @@ ms.locfileid: "54592863"
 |구성 요소|설명|
 |---------------|-----------------|
 |추적 런타임|추적 레코드를 내보낼 인프라를 제공합니다.|
-|추적 참가자|추적 레코드에 액세스합니다. [!INCLUDE[netfx_current_short](../../../../includes/netfx-current-short-md.md)]에는 추적 레코드를 ETW(Windows용 이벤트 추적) 이벤트로 기록하는 추적 참가자가 제공됩니다.|
+|추적 참가자|추적 레코드에 액세스합니다. [!INCLUDE[netfx_current_short](../../../../includes/netfx-current-short-md.md)] 이벤트 추적에 대 한 Windows (ETW) 이벤트로 추적 레코드를 기록 하는 추적 참가자가 제공 됩니다.|
 |추적 프로필|추적 참가자가 워크플로 인스턴스에서 내보낸 추적 레코드의 하위 집합을 구독할 수 있도록 하는 필터링 메커니즘입니다.|
 
  다음 표에서는 워크플로 런타임에서 내보내는 추적 레코드에 대해 자세히 설명합니다.
@@ -39,33 +39,33 @@ ms.locfileid: "54592863"
 
 #### <a name="to-use-this-sample"></a>이 샘플을 사용하려면
 
-1.  Visual Studio 2010을 사용 하 여 EtwTrackingParticipantSample.sln 솔루션 파일을 엽니다.
+1. Visual Studio 2010을 사용 하 여 EtwTrackingParticipantSample.sln 솔루션 파일을 엽니다.
 
-2.  Ctrl+Shift+B를 눌러 솔루션을 빌드합니다.
+2. Ctrl+Shift+B를 눌러 솔루션을 빌드합니다.
 
-3.  F5 키를 눌러 솔루션을 실행합니다.
+3. F5 키를 눌러 솔루션을 실행합니다.
 
      기본적으로 서비스 포트를 수신 대기 53797 (http://localhost:53797/SampleWorkflowService.xamlx)합니다.
 
-4.  [!INCLUDE[fileExplorer](../../../../includes/fileexplorer-md.md)]를 사용하여 WCF 테스트 클라이언트를 엽니다.
+4. [!INCLUDE[fileExplorer](../../../../includes/fileexplorer-md.md)]를 사용하여 WCF 테스트 클라이언트를 엽니다.
 
      WCF 테스트 클라이언트 (WcfTestClient.exe)에 \<Visual Studio 2010 설치 폴더 > \Common7\IDE\ 폴더입니다.
 
      기본 Visual Studio 2010 설치 폴더는 C:\Program Files\Microsoft Visual Studio 10.0입니다.
 
-5.  WCF 테스트 클라이언트에서 선택 **추가 서비스** 에서 합니다 **파일** 메뉴.
+5. WCF 테스트 클라이언트에서 선택 **추가 서비스** 에서 합니다 **파일** 메뉴.
 
      입력 상자에 엔드포인트 주소를 추가합니다. 기본값은 `http://localhost:53797/SampleWorkflowService.xamlx`입니다.
 
-6.  이벤트 뷰어 애플리케이션을 엽니다.
+6. 이벤트 뷰어 애플리케이션을 엽니다.
 
      서비스를 호출 하기 전에 이벤트 뷰어를 시작 합니다 **시작** 메뉴에서 **실행** 에 입력 `eventvwr.exe`. 이벤트 로그가 워크플로 서비스에서 내보낸 추적 이벤트를 수신 대기하고 있는지 확인합니다.
 
-7.  이동할 이벤트 뷰어의 트리 뷰에서 **이벤트 뷰어**하십시오 **Applications and Services Logs**, 및 **Microsoft**. 마우스 오른쪽 단추로 클릭 **Microsoft** 선택한 **뷰** 차례로 **분석 및 디버그 로그 표시** 사용 분석 및 디버그 로그
+7. 이동할 이벤트 뷰어의 트리 뷰에서 **이벤트 뷰어**하십시오 **Applications and Services Logs**, 및 **Microsoft**. 마우스 오른쪽 단추로 클릭 **Microsoft** 선택한 **뷰** 차례로 **분석 및 디버그 로그 표시** 사용 분석 및 디버그 로그
 
      있는지 확인 합니다 **분석 및 디버그 로그 표시** 옵션을 선택 합니다.
 
-8.  이동할 이벤트 뷰어의 트리 뷰에서 **이벤트 뷰어**, **Applications and Services Logs**를 **Microsoft**를 **Windows**합니다  **응용 프로그램 서버-응용 프로그램**합니다. 마우스 오른쪽 단추로 클릭 **분석** 선택한 **로그 사용** 사용 하도록 설정 합니다 **분석** 로그 합니다.
+8. 이동할 이벤트 뷰어의 트리 뷰에서 **이벤트 뷰어**, **Applications and Services Logs**를 **Microsoft**를 **Windows**합니다  **응용 프로그램 서버-응용 프로그램**합니다. 마우스 오른쪽 단추로 클릭 **분석** 선택한 **로그 사용** 사용 하도록 설정 합니다 **분석** 로그 합니다.
 
 9. `GetData`를 두 번 클릭하여 WCF 테스트 클라이언트로 서비스를 테스트합니다.
 
@@ -123,13 +123,13 @@ ms.locfileid: "54592863"
 
 #### <a name="to-clean-up-optional"></a>정리하려면(옵션)
 
-1.  이벤트 뷰어를 엽니다.
+1. 이벤트 뷰어를 엽니다.
 
-2.  이동할 **이벤트 뷰어**, **Applications and Services Logs**합니다 **Microsoft**를 **Windows**, **응용 프로그램 서버-응용 프로그램**합니다. 마우스 오른쪽 단추로 클릭 **분석** 선택한 **로그 사용 안 함**합니다.
+2. 이동할 **이벤트 뷰어**, **Applications and Services Logs**합니다 **Microsoft**를 **Windows**, **응용 프로그램 서버-응용 프로그램**합니다. 마우스 오른쪽 단추로 클릭 **분석** 선택한 **로그 사용 안 함**합니다.
 
-3.  이동할 **이벤트 뷰어**, **Applications and Services Logs**합니다 **Microsoft**를 **Windows**, **응용 프로그램 서버-응용 프로그램**합니다. 마우스 오른쪽 단추로 클릭 **분석** 선택한 **로그 지우기**합니다.
+3. 이동할 **이벤트 뷰어**, **Applications and Services Logs**합니다 **Microsoft**를 **Windows**, **응용 프로그램 서버-응용 프로그램**합니다. 마우스 오른쪽 단추로 클릭 **분석** 선택한 **로그 지우기**합니다.
 
-4.  선택 된 **의 선택을 취소** 이벤트를 지우려면 옵션입니다.
+4. 선택 된 **의 선택을 취소** 이벤트를 지우려면 옵션입니다.
 
 ## <a name="known-issue"></a>알려진 문제
 
@@ -150,4 +150,5 @@ ms.locfileid: "54592863"
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Tracking\EtwTracking`  
   
 ## <a name="see-also"></a>참고자료
+
 - [AppFabric 모니터링 샘플](https://go.microsoft.com/fwlink/?LinkId=193959)

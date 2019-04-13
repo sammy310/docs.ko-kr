@@ -9,24 +9,24 @@ helpviewer_keywords:
 - providers, UI Automation
 - UI Automation, clients
 ms.assetid: 69eebd8b-39ed-40e7-93cc-4457c4caf746
-ms.openlocfilehash: 9ffb00f6327c95fe9e10dc39db72da1c29382201
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: ae780da7d6c6d45cb791333e5f0edcf0690f297b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57674590"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59183744"
 ---
 # <a name="ui-automation-events-overview"></a>UI 자동화 이벤트 개요
 > [!NOTE]
 >  이 설명서는 <xref:System.Windows.Automation> 네임스페이스에 정의된 관리되는 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 클래스를 사용하려는 .NET Framework 개발자를 위한 것입니다. 에 대 한 최신 정보에 대 한 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]를 참조 하세요 [Windows Automation API: UI 자동화](https://go.microsoft.com/fwlink/?LinkID=156746)합니다.  
   
- [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] 이벤트 알림은 화면 판독기 및 화면 돋보기 같은 보조 기술의 핵심 기능입니다. 이러한 UI 자동화 클라이언트는 [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] 에서 상황이 발생하면 UI 자동화 공급자에서 생기는 이벤트를 추적하고 이 정보를 사용해 최종 사용자에게 알립니다.  
+ [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] 이벤트 알림은 화면 판독기 및 화면 돋보기 같은 보조 기술에 대 한 주요 기능입니다. 이러한 UI 자동화 클라이언트는 [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] 에서 상황이 발생하면 UI 자동화 공급자에서 생기는 이벤트를 추적하고 이 정보를 사용해 최종 사용자에게 알립니다.  
   
  클라이언트가 이벤트 알림에 가입했는지 여부에 따라 공급자 애플리케이션에서 선택적으로 이벤트를 발생시키거나 이벤트 수신 가입한 클라이언트가 없는 경우 이벤트를 전혀 발생시키지 않도록 하면 효율성이 향상됩니다.  
   
 <a name="Types_of_Events"></a>   
 ## <a name="types-of-events"></a>이벤트 유형  
- [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 이벤트는 다음 범주로 구분됩니다.  
+ [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 이벤트는 다음 범주로 구분 됩니다.  
   
 |이벤트(event)|설명|  
 |-----------|-----------------|  
@@ -39,7 +39,7 @@ ms.locfileid: "57674590"
   
  다음 이벤트는 UI의 상태가 변경되지 않은 경우에도 발생할 수 있습니다.  
   
--   `AutomationPropertyChangedEvent` (변경된 속성에 따라 다름)  
+-   `AutomationPropertyChangedEvent` (변경 된 속성)에 따라 다름  
   
 -   `ElementSelectedEvent`  
   
@@ -49,7 +49,7 @@ ms.locfileid: "57674590"
   
 <a name="UI_Automation_Event_Identifiers"></a>   
 ## <a name="ui-automation-event-identifiers"></a>UI 자동화 이벤트 식별자  
- [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] 이벤트는 <xref:System.Windows.Automation.AutomationEvent> 개체에 의해 식별됩니다. <xref:System.Windows.Automation.AutomationIdentifier.Id%2A> 속성에는 이런 종류의 이벤트를 고유하게 식별하는 값이 포함되어 있습니다.  
+ [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] 이벤트에 의해 식별 됩니다 <xref:System.Windows.Automation.AutomationEvent> 개체입니다. <xref:System.Windows.Automation.AutomationIdentifier.Id%2A> 속성에는 이런 종류의 이벤트를 고유하게 식별하는 값이 포함되어 있습니다.  
   
  <xref:System.Windows.Automation.AutomationIdentifier.Id%2A> 에 가능한 값은 이벤트 인수에 사용되는 형식과 함께 다음 표에 나와 있습니다. 클라이언트 및 공급자에서 사용되는 식별자는 서로 다른 클래스에서 나온, 이름이 같은 필드입니다.  
   
@@ -82,6 +82,7 @@ ms.locfileid: "57674590"
  이벤트 식별자 목록은 [UI Automation Events for Clients](../../../docs/framework/ui-automation/ui-automation-events-for-clients.md)를 참조하세요.  
   
 ## <a name="see-also"></a>참고자료
-- [클라이언트용 UI 자동화 이벤트](../../../docs/framework/ui-automation/ui-automation-events-for-clients.md)
+
+- [클라이언트에 대한 UI 자동화 이벤트](../../../docs/framework/ui-automation/ui-automation-events-for-clients.md)
 - [서버 쪽 UI 자동화 공급자 구현](../../../docs/framework/ui-automation/server-side-ui-automation-provider-implementation.md)
 - [UI 자동화 이벤트 구독](../../../docs/framework/ui-automation/subscribe-to-ui-automation-events.md)

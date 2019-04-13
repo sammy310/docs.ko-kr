@@ -8,12 +8,12 @@ helpviewer_keywords:
 - optionstrict compiler option [Visual Basic]
 - /optionstrict compiler option [Visual Basic]
 ms.assetid: c7b10086-0fa4-49db-b3c8-4ae0db5957da
-ms.openlocfilehash: 5479c312ae7eb7a166803a6e1238806aae9bd656
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: e18fe451ea4a80ac959ed61b66394920f8bf177f
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58835663"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59336085"
 ---
 # <a name="-optionstrict"></a>-optionstrict
 암시적 형식 변환을 제한 하려면 엄격한 형식 의미 체계를 적용 합니다.  
@@ -39,11 +39,11 @@ ms.locfileid: "58835663"
   
 ### <a name="to-set--optionstrict-in-the-visual-studio-ide"></a>-Optionstrict Visual Studio IDE에서 설정 하려면  
   
-1.  **솔루션 탐색기**에서 프로젝트를 선택합니다. 에 **프로젝트** 메뉴에서 클릭 **속성입니다.**   
+1. **솔루션 탐색기**에서 프로젝트를 선택합니다. 에 **프로젝트** 메뉴에서 클릭 **속성입니다.**   
   
-2.  **컴파일** 탭을 클릭합니다.  
+2. **컴파일** 탭을 클릭합니다.  
   
-3.  값을 수정 합니다 **Option Strict** 상자입니다.  
+3. 값을 수정 합니다 **Option Strict** 상자입니다.  
   
 ### <a name="to-set--optionstrict-programmatically"></a>-Optionstrict를 프로그래밍 방식으로 설정 하려면  
   
@@ -63,7 +63,7 @@ vbc -optionstrict+ test.vb
 - [-optionexplicit](../../../visual-basic/reference/command-line-compiler/optionexplicit.md)
 - [-optioninfer](../../../visual-basic/reference/command-line-compiler/optioninfer.md)
 - [-nowarn](../../../visual-basic/reference/command-line-compiler/nowarn.md)
-- [-warnaserror (Visual Basic)](../../../visual-basic/reference/command-line-compiler/warnaserror.md)
+- [-warnaserror(Visual Basic)](../../../visual-basic/reference/command-line-compiler/warnaserror.md)
 - [샘플 컴파일 명령줄](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
 - [Option Strict 문](../../../visual-basic/language-reference/statements/option-strict-statement.md)
-- [옵션 대화 상자, 프로젝트, Visual Basic 기본값](/visualstudio/ide/reference/visual-basic-defaults-projects-options-dialog-box)
+- [옵션 대화 상자, 프로젝트, VB 기본값](/visualstudio/ide/reference/visual-basic-defaults-projects-options-dialog-box)

@@ -1,13 +1,13 @@
 ---
-title: '방법: JSON 데이터 serialize 및 Deserialize'
+title: '방법: JSON 데이터 직렬화 및 역직렬화'
 ms.date: 03/25/2019
 ms.assetid: 88abc1fb-8196-4ee3-a23b-c6934144d1dd
-ms.openlocfilehash: c5da34b6ab7953dbff62ca757ba08d0c7364b4cf
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: 7edce66a23021fa03a6f98b3b847a5b671c17124
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58465206"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59336956"
 ---
 # <a name="how-to-serialize-and-deserialize-json-data"></a>방법: JSON 데이터 serialize 및 deserialize
 JSON(JavaScript Object Notation)은 클라이언트 브라우저 및 AJAX 사용 웹 서비스 간에 소량의 데이터를 신속하게 교환할 수 있는 효율적인 데이터 인코딩 형식입니다.  
@@ -23,7 +23,7 @@ JSON(JavaScript Object Notation)은 클라이언트 브라우저 및 AJAX 사용
   
 ## <a name="to-define-the-data-contract-for-a-person-type"></a>사용자 형식에 대 한 데이터 계약을 정의 하려면 
   
-1.  `Person`를 클래스에 연결하고 <xref:System.Runtime.Serialization.DataContractAttribute> 특성을 serialize할 멤버에 연결하여 <xref:System.Runtime.Serialization.DataMemberAttribute>에 대한 데이터 계약을 정의합니다. 데이터 계약에 대 한 자세한 내용은 참조 하세요. [서비스 계약 디자인](../designing-service-contracts.md)합니다.  
+1. `Person`를 클래스에 연결하고 <xref:System.Runtime.Serialization.DataContractAttribute> 특성을 serialize할 멤버에 연결하여 <xref:System.Runtime.Serialization.DataMemberAttribute>에 대한 데이터 계약을 정의합니다. 데이터 계약에 대 한 자세한 내용은 참조 하세요. [서비스 계약 디자인](../designing-service-contracts.md)합니다.  
   
     ```csharp  
     [DataContract]  
@@ -39,7 +39,7 @@ JSON(JavaScript Object Notation)은 클라이언트 브라우저 및 AJAX 사용
   
 ## <a name="to-serialize-an-instance-of-type-person-to-json"></a>형식 Person의 인스턴스를 JSON으로 serialize하려면  
   
-1.  `Person` 형식의 인스턴스를 만듭니다.  
+1. `Person` 형식의 인스턴스를 만듭니다.  
   
     ```csharp  
     Person p = new Person();  
@@ -47,20 +47,20 @@ JSON(JavaScript Object Notation)은 클라이언트 브라우저 및 AJAX 사용
     p.age = 42;  
     ```  
   
-2.  Serialize 된 `Person` 개체를 사용 하 여 메모리 스트림으로 <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>합니다.  
+2. Serialize 된 `Person` 개체를 사용 하 여 메모리 스트림으로 <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>합니다.  
   
     ```csharp  
     MemoryStream stream1 = new MemoryStream();  
     DataContractJsonSerializer ser = new DataContractJsonSerializer(typeof(Person));  
     ```  
   
-3.  <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer.WriteObject%2A> 메서드를 사용하여 JSON 데이터를 스트림에 씁니다.  
+3. <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer.WriteObject%2A> 메서드를 사용하여 JSON 데이터를 스트림에 씁니다.  
   
     ```csharp  
     ser.WriteObject(stream1, p);  
     ```  
   
-4.  JSON 출력을 표시합니다.  
+4. JSON 출력을 표시합니다.  
   
     ```csharp  
     stream1.Position = 0;  
@@ -71,14 +71,14 @@ JSON(JavaScript Object Notation)은 클라이언트 브라우저 및 AJAX 사용
   
 ## <a name="to-deserialize-an-instance-of-type-person-from-json"></a>JSON에서 형식 Person의 인스턴스를 deserialize하려면  
   
-1.  `Person`의 <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer.ReadObject%2A> 메서드를 사용하여 JSON 인코딩된 데이터를 <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>의 새 인스턴스로 deserialize합니다.  
+1. `Person`의 <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer.ReadObject%2A> 메서드를 사용하여 JSON 인코딩된 데이터를 <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>의 새 인스턴스로 deserialize합니다.  
   
     ```csharp  
     stream1.Position = 0;  
     Person p2 = (Person)ser.ReadObject(stream1);  
     ```  
   
-2.  결과를 표시합니다.  
+2. 결과를 표시합니다.  
   
     ```csharp  
     Console.WriteLine($"Deserialized back, got name={p2.name}, age={p2.age}");  
@@ -136,5 +136,6 @@ public class TestDuplicateDataDerived : TestDuplicateDataBase
 ```  
   
 ## <a name="see-also"></a>참고자료
+
 - [독립 실행형 JSON serialization](stand-alone-json-serialization.md)
 - [JSON에 대 한 지원 및 기타 데이터 전송 형식](support-for-json-and-other-data-transfer-formats.md)

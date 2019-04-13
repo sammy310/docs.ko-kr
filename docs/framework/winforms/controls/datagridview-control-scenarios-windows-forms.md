@@ -6,12 +6,12 @@ helpviewer_keywords:
 - data grids [Windows Forms], about data grids
 - DataGridView control [Windows Forms], scenarios
 ms.assetid: 09a5fd05-3447-47ec-a4ec-6082a2b7f0dd
-ms.openlocfilehash: 882b210a19f1ec5515bd7f37ccc55343f84767bc
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 52c448f21be056e6166334785943356039baf3ad
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57721313"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59175294"
 ---
 # <a name="datagridview-control-scenarios-windows-forms"></a>DataGridView 컨트롤 시나리오(Windows Forms)
 사용 하 여는 <xref:System.Windows.Forms.DataGridView> 컨트롤, 다양 한 데이터 원본에서에서 테이블 형식 데이터를 표시할 수 있습니다. 간단한 용도로 수동으로 채울 수 있습니다는 <xref:System.Windows.Forms.DataGridView> 제어를 통해 직접 데이터를 조작 합니다. 그러나 일반적으로 외부 데이터 원본에 데이터를 저장할을 통해 컨트롤을 바인딩하는 <xref:System.Windows.Forms.BindingSource> 구성 요소입니다.  
@@ -87,5 +87,6 @@ ms.locfileid: "57721313"
 -   기본 제공 열 형식으로 제공 되지 않는 호스트 컨트롤에 고유한 셀 및 열 클래스를 구현할 수 있습니다. 자세한 내용은 [방법: DataGridView 셀에서 Windows Forms 컨트롤 호스팅](how-to-host-controls-in-windows-forms-datagridview-cells.md)합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Windows.Forms.DataGridView>
 - [DataGridView 컨트롤 개요](datagridview-control-overview-windows-forms.md)

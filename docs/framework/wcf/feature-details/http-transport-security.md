@@ -2,12 +2,12 @@
 title: HTTP 전송 보안
 ms.date: 03/30/2017
 ms.assetid: d3439262-c58e-4d30-9f2b-a160170582bb
-ms.openlocfilehash: 26d72bf234e66ccbf60305d7681f181077589ed0
-ms.sourcegitcommit: facefcacd7ae2e5645e463bc841df213c505ffd4
+ms.openlocfilehash: b7415dcc1e6c4a5d47d9e7b6e70a86ab1b898783
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "55739516"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59113804"
 ---
 # <a name="http-transport-security"></a>HTTP 전송 보안
 HTTP를 전송으로 사용하는 경우 SSL(Secure Sockets Layer) 구현에서 보안을 제공합니다. SSL은 서비스를 클라이언트에 인증한 다음 채널에 기밀성(암호화)을 제공하기 위해 인터넷에서 널리 사용됩니다. 이 항목에서는 SSL 작동 원리 및 Windows Communication Foundation (WCF)에서 구현 되는 방법을 설명 합니다.  
@@ -53,5 +53,6 @@ HTTP를 전송으로 사용하는 경우 SSL(Secure Sockets Layer) 구현에서 
  HttpCfg.exe 도구를 사용 하 여 X.509 인증서로 포트를 설정 하는 방법에 대 한 자세한 내용은 참조 하세요. [방법: SSL 인증서로 포트 구성](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md)합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [전송 보안](../../../../docs/framework/wcf/feature-details/transport-security.md)
 - [메시지 보안](../../../../docs/framework/wcf/feature-details/message-security-in-wcf.md)

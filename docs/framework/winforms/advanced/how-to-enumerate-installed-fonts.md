@@ -1,5 +1,5 @@
 ---
-title: '방법: 설치 된 글꼴 열거'
+title: '방법: 설치된 글꼴 열거'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - fonts [Windows Forms], enumerating installed
 - examples [Windows Forms], fonts
 ms.assetid: 26d74ef5-0f39-4eeb-8d20-00e66e014abe
-ms.openlocfilehash: e56f06d6f7a762a1ef1ff85fa30751ea64f9f14b
-ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
+ms.openlocfilehash: 92f27399cce9e03a4679c8a34fbdafcf28c32252
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58653745"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59155014"
 ---
-# <a name="how-to-enumerate-installed-fonts"></a>방법: 설치 된 글꼴 열거
+# <a name="how-to-enumerate-installed-fonts"></a>방법: 설치된 글꼴 열거
 합니다 <xref:System.Drawing.Text.InstalledFontCollection> 클래스에서 상속 된 <xref:System.Drawing.Text.FontCollection> 추상 기본 클래스입니다. 사용할 수는 <xref:System.Drawing.Text.InstalledFontCollection> 컴퓨터에 설치 된 글꼴을 열거 하는 개체입니다. 합니다 <xref:System.Drawing.Text.FontCollection.Families%2A> 의 속성을 <xref:System.Drawing.Text.InstalledFontCollection> 개체의 배열이 <xref:System.Drawing.FontFamily> 개체입니다.  
   
 ## <a name="example"></a>예제  
@@ -32,4 +32,5 @@ ms.locfileid: "58653745"
  앞의 예제는 Windows Forms에서 사용 하도록 설계 되었으며 필요 <xref:System.Windows.Forms.PaintEventArgs> `e`의 매개 변수인 <xref:System.Windows.Forms.PaintEventHandler>합니다. 또한 가져와야는 <xref:System.Drawing.Text> 네임 스페이스입니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [글꼴 및 텍스트 사용](using-fonts-and-text.md)

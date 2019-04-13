@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - best practices [WCF], security
 ms.assetid: 3639de41-1fa7-4875-a1d7-f393e4c8bd69
-ms.openlocfilehash: 1c615e2bdff0f361bef305157f635c86782c6039
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f0305807e76ca27e1979aa23bf0797c505fee566
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54531969"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59166129"
 ---
 # <a name="best-practices-for-security-in-wcf"></a>WCF 보안을 위한 최선의 방법
 다음 섹션에는 WCF(Windows Communication Foundation)를 사용하여 보안 애플리케이션을 만들 때 고려할 최선의 방법이 나열되어 있습니다. 보안에 대한 자세한 내용은 [보안 관련 고려 사항](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md), [데이터에 대한 보안 고려 사항](../../../../docs/framework/wcf/feature-details/security-considerations-for-data.md) 및 [메타데이터 관련 보안 고려 사항](../../../../docs/framework/wcf/feature-details/security-considerations-with-metadata.md)을 참조하세요.  
@@ -57,6 +57,7 @@ ms.locfileid: "54531969"
  사용자 지정 바인딩을 만들 때는 <xref:System.ServiceModel.Channels.SecurityBindingElement.IncludeTimestamp%2A>를 `true`로 설정해야 합니다. 그렇지 않을 경우 <xref:System.ServiceModel.Channels.SecurityBindingElement.IncludeTimestamp%2A>가 `false`로 설정되어 있고 클라이언트가 X509 인증서와 같은 비동기 키 기반 토큰을 사용하는 경우 메시지가 서명되지 않습니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [보안 고려 사항](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md)
 - [데이터에 대한 보안 고려 사항](../../../../docs/framework/wcf/feature-details/security-considerations-for-data.md)
 - [메타데이터 관련 보안 고려 사항](../../../../docs/framework/wcf/feature-details/security-considerations-with-metadata.md)

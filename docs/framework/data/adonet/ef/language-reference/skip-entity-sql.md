@@ -2,12 +2,12 @@
 title: SKIP(Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: e2139412-8ea4-451b-8f10-91af18dfa3ec
-ms.openlocfilehash: b17f73f97d32f151ed4f51b025c0c5a7a97393bb
-ms.sourcegitcommit: c6f69b0cf149f6b54483a6d5c2ece222913f43ce
+ms.openlocfilehash: e8ef529ea8d2be2ef8eb3a2eb606e7ca8bf13f0a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2019
-ms.locfileid: "55904177"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59147877"
 ---
 # <a name="skip-entity-sql"></a>SKIP(Entity SQL)
 ORDER BY 절의 SKIP 하위 절을 사용하여 물리적 페이징을 수행할 수 있습니다. SKIP 절은 ORDER BY 절과 별도로 사용할 수 없습니다.  
@@ -36,6 +36,7 @@ ORDER BY 절의 SKIP 하위 절을 사용하여 물리적 페이징을 수행할
  합니다 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 쿼리 [방법: 쿼리 결과 통해 페이지](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738702(v=vs.100)) SKIP과 함께 ORDER BY 연산자를 사용 하 여 SELECT 문에서 반환 된 개체에서 사용 되는 정렬 순서를 지정 합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [ORDER BY](../../../../../../docs/framework/data/adonet/ef/language-reference/order-by-entity-sql.md)
 - [방법: 쿼리 결과 페이징](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738702(v=vs.100))
 - [페이징](../../../../../../docs/framework/data/adonet/ef/language-reference/paging-entity-sql.md)

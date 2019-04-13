@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Shared
 - BC30369
 ms.assetid: 39d9466b-c1f3-4406-91a5-3d6c52d23a3d
-ms.openlocfilehash: fc54bbf8053c07cc3b48a762b6f1c60344de9921
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: aad068b5857eb956ded63fa2a57cb163d3cf5c58
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58822575"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59322695"
 ---
 # <a name="cannot-refer-to-an-instance-member-of-a-class-from-within-a-shared-method-or-shared-member-initializer-without-an-explicit-instance-of-the-class"></a>클래스의 명시적 인스턴스가 없는 공유 메서드 또는 공유 멤버 이니셜라이저에서는 클래스의 인스턴스 멤버를 참조할 수 없습니다.
 공유 프로시저 내에서 클래스의 공유 되지 않은 멤버를 참조 하려고 했습니다. 다음 예제에서는 이러한 상황을 보여 줍니다.  
@@ -37,12 +37,12 @@ End Class
   
 ## <a name="to-correct-this-error"></a>이 오류를 해결하려면  
   
-1.  멤버 클래스의 모든 인스턴스 간에 공유 하거나 각 인스턴스에 대 한 개별 유지 여부를 결정 합니다.  
+1. 멤버 클래스의 모든 인스턴스 간에 공유 하거나 각 인스턴스에 대 한 개별 유지 여부를 결정 합니다.  
   
-2.  모든 인스턴스 간에 공유 멤버의 단일 복사본을 원한다 면 추가 된 `Shared` 멤버 선언에는 키워드입니다. 유지 된 `Shared` 프로시저 선언에서 키워드입니다.  
+2. 모든 인스턴스 간에 공유 멤버의 단일 복사본을 원한다 면 추가 된 `Shared` 멤버 선언에는 키워드입니다. 유지 된 `Shared` 프로시저 선언에서 키워드입니다.  
   
-3.  멤버의 개별 자체 복사본을 각 인스턴스를 원하는 경우 지정 하지 않으면 `Shared` 멤버 선언에 대 한 합니다. 제거 된 `Shared` 프로시저 선언에서 키워드입니다.  
+3. 멤버의 개별 자체 복사본을 각 인스턴스를 원하는 경우 지정 하지 않으면 `Shared` 멤버 선언에 대 한 합니다. 제거 된 `Shared` 프로시저 선언에서 키워드입니다.  
   
 ## <a name="see-also"></a>참고자료
 
-- [공유](../../../visual-basic/language-reference/modifiers/shared.md)
+- [Shared](../../../visual-basic/language-reference/modifiers/shared.md)

@@ -2,15 +2,15 @@
 title: 집계 함수(Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: acfd3149-f519-4c6e-8fe1-b21d243a0e58
-ms.openlocfilehash: e606d0e355bb715cfa0536ad9e33f08f5f692951
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 113c19078feeca24a0817e52f8eb0d04537b0684
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54492054"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59104925"
 ---
 # <a name="aggregate-functions-entity-sql"></a>집계 함수(Entity SQL)
-집계는 컬렉션을 그룹 작업의 일부분인 스칼라로 압축하는 언어 구문입니다. [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 집계의 형식은 다음 두 가지입니다.  
+집계는 컬렉션을 그룹 작업의 일부분인 스칼라로 압축하는 언어 구문입니다. [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 집계는 두 가지 형태로 제공 합니다.  
   
 -   [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 식의 어디서 나 사용할 수 있는 컬렉션 함수. 이 함수는 프로젝션의 집계 함수를 사용하며 컬렉션에 대한 해당 동작을 예측합니다. 컬렉션 함수는 [!INCLUDE[esql](../../../../../../includes/esql-md.md)]에서 집계를 지정하는 데 주로 사용되는 모드입니다.  
   
@@ -40,7 +40,8 @@ ms.locfileid: "54492054"
   
  `select avg(ol.Quantity) from LOB.OrderLines as ol group by 1`  
   
- GROUP BY 절에서 사용되는 식은 WHERE 절 식에 표시되는 동일한 이름 결정 범위를 사용하여 계산됩니다.  
+ GROUP BY 절에서 사용되는 식은 WHERE 절 식에 표시되는 동일한 이름 확인 범위를 사용하여 계산됩니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [함수](../../../../../../docs/framework/data/adonet/ef/language-reference/functions-entity-sql.md)

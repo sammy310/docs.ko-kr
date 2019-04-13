@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Font dialog box
 - FontDialog component [Windows Forms], about FontDialog component
 ms.assetid: daf46e57-1b4b-4b7a-bad0-b50ca7ba75dc
-ms.openlocfilehash: 26bfb561c1050438b78c4ae0a3e6e8da32458cdd
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 7f140807bf4b42e530302190042e729c59248e7f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57725040"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59098561"
 ---
 # <a name="fontdialog-component-overview-windows-forms"></a>FontDialog 구성 요소 개요(Windows Forms)
 Windows Forms <xref:System.Windows.Forms.FontDialog> 구성 요소는 표준 Windows 미리 구성 된 대화 상자 **글꼴** 시스템에 현재 설치 된 글꼴을 노출 하는 데 사용 되는 대화 상자. 글꼴 선택 대화 상자를 직접 구성 하는 대신에 대 한 간단한 솔루션으로 Windows 기반 응용 프로그램 내에서 사용 합니다.  
@@ -24,5 +24,6 @@ Windows Forms <xref:System.Windows.Forms.FontDialog> 구성 요소는 표준 Win
  구성 요소에 다양 한 모양을 구성 하는 속성입니다. 대화 상자 선택 항목을 설정 하는 속성은 <xref:System.Windows.Forms.FontDialog.Font%2A> 고 <xref:System.Windows.Forms.FontDialog.Color%2A>입니다. 합니다 <xref:System.Windows.Forms.FontDialog.Font%2A> 글꼴, 스타일, 크기, 스크립트 및 효과; 속성 설정 예를 들어 `Arial, 10pt, style=Italic, Strikeout`합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Windows.Forms.FontDialog>
 - [FontDialog 구성 요소](fontdialog-component-windows-forms.md)

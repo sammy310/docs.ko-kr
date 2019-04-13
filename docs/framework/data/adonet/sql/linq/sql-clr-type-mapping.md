@@ -2,12 +2,12 @@
 title: SQL-CLR 형식 매핑
 ms.date: 07/23/2018
 ms.assetid: 4ed76327-54a7-414b-82a9-7579bfcec04b
-ms.openlocfilehash: 5c8c6456d108975ec927e28ac80c8dcca1567b46
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a2c70f5243dc3506a26824c83beb3ff454482f10
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54617345"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59152492"
 ---
 # <a name="sql-clr-type-mapping"></a>SQL-CLR 형식 매핑
 LINQ to SQL에서 관계형 데이터베이스의 데이터 모델은 사용자가 선택한 프로그래밍 언어로 표현되는 개체 모델에 매핑됩니다. 응용 프로그램을 실행하면 LINQ to SQL에서는 개체 모델의 통합 언어 쿼리를 SQL로 변환하여 실행을 위해 데이터베이스로 전송합니다. 데이터베이스에서 결과가 반환되면 LINQ to SQL에서는 해당 결과를 사용자의 프로그래밍 언어로 작업할 수 있는 개체로 다시 변환합니다.  
@@ -104,7 +104,7 @@ LINQ to SQL에서 관계형 데이터베이스의 데이터 모델은 사용자�
   
  다음 표에는 개체 모델 또는 외부 매핑 파일에 정의된 CLR 형식에 매핑되도록 만들 SQL 열의 형식을 정의하기 위해 <xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType> 메서드에서 사용하는 기본 형식 매핑이 나와 있습니다.  
   
-|CLR 형식|<xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType>에서 사용하는 기본 SQL Server 형식|  
+|CLR 형식|사용 하는 기본 SQL Server 형식 <xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType>|  
 |--------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|  
 |<xref:System.Boolean?displayProperty=nameWithType>|`BIT`|  
 |<xref:System.Byte?displayProperty=nameWithType>|`TINYINT`|  
@@ -142,12 +142,12 @@ LINQ to SQL에서 관계형 데이터베이스의 데이터 모델은 사용자�
   
  다음 표에는 개체 모델 또는 외부 매핑 파일에 정의된 CLR 형식에 매핑되도록 만들 SQL 열의 형식을 정의하기 위해 <xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType> 메서드에서 사용하는 기본 형식 매핑이 나와 있습니다.  
   
-|CLR 형식|<xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType>에서 사용하는 기본 SQL Server 형식|  
+|CLR 형식|사용 하는 기본 SQL Server 형식 <xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType>|  
 |--------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|  
 |<xref:System.Char?displayProperty=nameWithType>|`NCHAR(1)`|  
 |<xref:System.String?displayProperty=nameWithType>|`NVARCHAR(4000)`|  
 |<xref:System.Char?displayProperty=nameWithType>[]|`NVARCHAR(4000)`|  
-|`Parse()` 및 `ToString()`을 구현하는 사용자 지정 형식|`NVARCHAR(MAX)`|  
+|구현 하는 사용자 지정 형식 `Parse()` 및 `ToString()`|`NVARCHAR(MAX)`|  
   
  이 외에도 여러 가지 텍스트 기반 및 XML 매핑을 선택할 수 있지만 일부의 경우에는 데이터베이스 관련 변환 과정에서 오버플로 또는 데이터 손실 예외가 발생할 수 있습니다. 자세한 내용은 참조는 [형식 매핑 런타임 동작 매트릭스](#BehaviorMatrix)합니다.  
   
@@ -185,7 +185,7 @@ LINQ to SQL에서 관계형 데이터베이스의 데이터 모델은 사용자�
   
  다음 표에는 개체 모델 또는 외부 매핑 파일에 정의된 CLR 형식에 매핑되도록 만들 SQL 열의 형식을 정의하기 위해 <xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType> 메서드에서 사용하는 기본 형식 매핑이 나와 있습니다.  
   
-|CLR 형식|<xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType>에서 사용하는 기본 SQL Server 형식|  
+|CLR 형식|사용 하는 기본 SQL Server 형식 <xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType>|  
 |--------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|  
 |<xref:System.DateTime?displayProperty=nameWithType>|`DATETIME`|  
 |<xref:System.DateTimeOffset?displayProperty=nameWithType>|`DATETIMEOFFSET`|  
@@ -199,7 +199,7 @@ LINQ to SQL에서 관계형 데이터베이스의 데이터 모델은 사용자�
 ### <a name="systemdatetime"></a>System.Datetime  
  CLR <xref:System.DateTime?displayProperty=nameWithType> 형식의 범위 및 전체 자릿수는 `DATETIME` 메서드의 기본 형식 매핑인 SQL Server <xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType> 형식의 범위 및 전체 자릿수보다 큽니다. `DATETIME`의 범위를 벗어나는 날짜와 관련된 예외가 발생하지 않도록 하려면 Microsoft SQL Server 2008부터 사용할 수 있는 `DATETIME2`를 사용하세요. `DATETIME2` 범위 및 CLR의 전체 자릿수에 맞출 수 <xref:System.DateTime?displayProperty=nameWithType>입니다.  
   
- SQL Server 날짜에는 CLR에서 지원되는 기능인 <xref:System.TimeZone> 개념이 없습니다. 원래 <xref:System.TimeZone> 정보에 관계없이 <xref:System.TimeZone> 값은 <xref:System.DateTimeKind> 변환 없이 데이터베이스에 있는 그대로 저장됩니다. <xref:System.DateTime> 값이 데이터베이스에서 검색될 경우 해당 값은 <xref:System.DateTime>가 <xref:System.DateTimeKind>로 지정되어 <xref:System.DateTimeKind.Unspecified>에 있는 그대로 로드됩니다. 지원에 대 한 자세한 내용은 <xref:System.DateTime?displayProperty=nameWithType> 메서드를 참조 하세요 [System.DateTime 메서드](../../../../../../docs/framework/data/adonet/sql/linq/system-datetime-methods.md)합니다.  
+ SQL Server 날짜에는 CLR에서 지원되는 기능인 <xref:System.TimeZone> 개념이 없습니다. <xref:System.TimeZone> 값 없이 데이터베이스에 그대로 저장 됩니다 <xref:System.TimeZone> 원래에 관계 없이 변환 <xref:System.DateTimeKind> 정보입니다. <xref:System.DateTime> 값이 데이터베이스에서 검색될 경우 해당 값은 <xref:System.DateTime>가 <xref:System.DateTimeKind>로 지정되어 <xref:System.DateTimeKind.Unspecified>에 있는 그대로 로드됩니다. 지원에 대 한 자세한 내용은 <xref:System.DateTime?displayProperty=nameWithType> 메서드를 참조 하세요 [System.DateTime 메서드](../../../../../../docs/framework/data/adonet/sql/linq/system-datetime-methods.md)합니다.  
   
 ### <a name="systemtimespan"></a>System.TimeSpan  
  Microsoft SQL Server 2008 및 .NET Framework 3.5 SP1에서는 CLR <xref:System.TimeSpan?displayProperty=nameWithType> 형식을 SQL Server `TIME` 형식에 매핑할 수 있습니다. 그러나 CLR <xref:System.TimeSpan?displayProperty=nameWithType>에서 지원되는 범위와 SQL Server `TIME` 형식에서 지원되는 범위에는 상당한 차이가 있습니다. 0보다 작거나 23:59:59.9999999시간보다 큰 값을 SQL `TIME`에 매핑하면 오버플로 예외가 발생합니다. 자세한 내용은 [System.TimeSpan 메서드](../../../../../../docs/framework/data/adonet/sql/linq/system-timespan-methods.md)합니다.  
@@ -221,7 +221,7 @@ LINQ to SQL에서 관계형 데이터베이스의 데이터 모델은 사용자�
   
  다음 표에는 개체 모델 또는 외부 매핑 파일에 정의된 CLR 형식에 매핑되도록 만들 SQL 열의 형식을 정의하기 위해 <xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType> 메서드에서 사용하는 기본 형식 매핑이 나와 있습니다.  
   
-|CLR 형식|<xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType>에서 사용하는 기본 SQL Server 형식|  
+|CLR 형식|사용 하는 기본 SQL Server 형식 <xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType>|  
 |--------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|  
 |<xref:System.Data.Linq.Binary?displayProperty=nameWithType>|`VARBINARY(MAX)`|  
 |<xref:System.Byte?displayProperty=nameWithType>|`VARBINARY(MAX)`|  
@@ -249,7 +249,7 @@ LINQ to SQL에서 관계형 데이터베이스의 데이터 모델은 사용자�
   
  다음 표에는 개체 모델 또는 외부 매핑 파일에 정의된 CLR 형식에 매핑되도록 만들 SQL 열의 형식을 정의하기 위해 <xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType> 메서드에서 사용하는 기본 형식 매핑이 나와 있습니다.  
   
-|CLR 형식|<xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType>에서 사용하는 기본 SQL Server 형식|  
+|CLR 형식|사용 하는 기본 SQL Server 형식 <xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType>|  
 |--------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|  
 |<xref:System.Guid?displayProperty=nameWithType>|`UNIQUEIDENTIFIER`|  
 |<xref:System.Object?displayProperty=nameWithType>|`SQL_VARIANT`|  
@@ -257,6 +257,7 @@ LINQ to SQL에서 관계형 데이터베이스의 데이터 모델은 사용자�
  LINQ to SQL에서는 이러한 기타 형식에 대해 여기에 나와 있는 것 이외의 형식 매핑은 지원하지 않습니다.  자세한 내용은 참조는 [형식 매핑 런타임 동작 매트릭스](#BehaviorMatrix)합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [특성 기반 매핑](../../../../../../docs/framework/data/adonet/sql/linq/attribute-based-mapping.md)
 - [외부 매핑](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md)
 - [데이터 형식 및 함수](../../../../../../docs/framework/data/adonet/sql/linq/data-types-and-functions.md)

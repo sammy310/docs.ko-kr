@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 7b1414f01c942a02fe984bc39475bd1451171d79
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 7b1fe219c4c852792390b48b0ea4d38adb702281
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57480691"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59218890"
 ---
 # <a name="functionleave-function"></a>FunctionLeave 함수
 호출자에 게 반환 하려고 하는 함수는 프로파일러에 알립니다.  
@@ -64,6 +64,7 @@ void __stdcall FunctionLeave (
  **.NET framework 버전:** 1.1, 1.0  
   
 ## <a name="see-also"></a>참고자료
+
 - [FunctionEnter2 함수](../../../../docs/framework/unmanaged-api/profiling/functionenter2-function.md)
 - [FunctionLeave2 함수](../../../../docs/framework/unmanaged-api/profiling/functionleave2-function.md)
 - [FunctionTailcall2 함수](../../../../docs/framework/unmanaged-api/profiling/functiontailcall2-function.md)

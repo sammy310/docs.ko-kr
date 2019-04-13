@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30154
 ms.assetid: 259afdfa-3608-4760-adcb-88ec0da5020d
-ms.openlocfilehash: 485680a2984a29037b2836fcba13cf1aa1e2e699
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 86b0d46e0e27b2fd8d1fccb37f4a3c45e95f5f63
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58822754"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59295330"
 ---
 # <a name="type1typename-must-implement-membername-for-interface-interfacename"></a>\<type1 >'\<typename >'를 구현 해야 합니다 '\<membername >' 인터페이스에 대 한 '\<interfacename >'
 '\<typename >'를 구현 해야 합니다 '\<membername >' 인터페이스에 대 한 '\<interfacename >'입니다. 속성을 구현 일치 해야 합니다 'ReadOnly '/' WriteOnly' 지정 자가 있습니다.  
@@ -23,17 +23,17 @@ ms.locfileid: "58822754"
   
 ## <a name="to-correct-this-error"></a>이 오류를 해결하려면  
   
-1.  동일한 이름 및 서명을 인터페이스에 정의 된 멤버를 선언 합니다. 포함 해야 적어도 `End Function`, `End Sub`, 또는 `End Property` 문입니다.  
+1. 동일한 이름 및 서명을 인터페이스에 정의 된 멤버를 선언 합니다. 포함 해야 적어도 `End Function`, `End Sub`, 또는 `End Property` 문입니다.  
   
-2.  추가 `Implements` 의 끝에 절을 `Function`, `Sub`, `Property`, 또는 `Event` 문입니다. 예를 들어:  
+2. 추가 `Implements` 의 끝에 절을 `Function`, `Sub`, `Property`, 또는 `Event` 문입니다. 예를 들어:  
   
     ```  
     Public Event ItHappened() Implements IBaseInterface.ItHappened  
     ```  
   
-3.  속성을 구현할 때 했는지 `ReadOnly` 또는 `WriteOnly` 인터페이스 정의 처럼 동일한 방식으로 사용 됩니다.  
+3. 속성을 구현할 때 했는지 `ReadOnly` 또는 `WriteOnly` 인터페이스 정의 처럼 동일한 방식으로 사용 됩니다.  
   
-4.  속성을 구현할 때 선언 `Get` 고 `Set` 프로시저를 적절 하 게 합니다.  
+4. 속성을 구현할 때 선언 `Get` 고 `Set` 프로시저를 적절 하 게 합니다.  
   
 ## <a name="see-also"></a>참고자료
 

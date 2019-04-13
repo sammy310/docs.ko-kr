@@ -3,12 +3,12 @@ title: <argument>
 ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: a7144d53-8023-4e90-971f-895e016fd58a
-ms.openlocfilehash: e386ad261422904d3f33385bb80bdb8c1ac029b9
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: a920d60d703fe262bee96d75c420c526d54f88ab
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57371181"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59210648"
 ---
 # <a name="argument"></a>\<argument>
 활동 상태 쿼리와 연결된 인수를 나타내는 구성 요소입니다.  
@@ -77,6 +77,7 @@ ms.locfileid: "57371181"
 ```  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.ServiceModel.Activities.Tracking.Configuration.ArgumentElement?displayProperty=nameWithType>
 - <xref:System.Activities.Tracking.ActivityStateQuery?displayProperty=nameWithType>
 - [워크플로 추적](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)

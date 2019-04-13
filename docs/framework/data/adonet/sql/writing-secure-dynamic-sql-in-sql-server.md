@@ -2,15 +2,15 @@
 title: SQL Server에서 동적 보안 SQL 작성
 ms.date: 03/30/2017
 ms.assetid: df5512b0-c249-40d2-82f9-f9a2ce6665bc
-ms.openlocfilehash: 446a9f6a49b376f04d1c82d45463d567d89116d8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 236fd925740d37c2cccabfcebfb7fcb46361489d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54745612"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59107356"
 ---
 # <a name="writing-secure-dynamic-sql-in-sql-server"></a>SQL Server에서 동적 보안 SQL 작성
-SQL 삽입은 악의적 사용자가 유효한 입력 대신 Transact-SQL 문을 입력하는 데 사용하는 프로세스입니다. 이러한 공격으로 인해 입력이 유효성 검사를 거치지 않고 서버로 직접 전달되고 응용 프로그램이 삽입된 코드를 실행하면 데이터가 손상되거나 파괴될 수 있습니다.  
+SQL 삽입은 악의적 사용자가 유효한 입력 대신 Transact-SQL 문을 입력하는 데 사용하는 프로세스입니다. 이러한 공격으로 인해 입력이 유효성 검사를 거치지 않고 서버로 직접 전달되고 응용 프로그램이 삽입된 코드를 실행하면 데이터가 손상되거나 제거될 수 있습니다.  
   
  SQL Server는 구문상 유효한 쿼리가 수신되면 모두 실행하기 때문에 SQL 문을 생성하는 모든 프로시저에 삽입 취약성이 있는지 검토해야 합니다. 매개 변수화된 데이터인 경우에도 숙련된 공격자에 의해 조작될 가능성이 있습니다. 동적 SQL을 사용하는 경우 쿼리 문자열에는 매개 변수 값을 직접 포함하지 않도록 하고 명령은 매개 변수화해야 합니다.  
   
@@ -67,6 +67,7 @@ SQL 삽입은 악의적 사용자가 유효한 입력 대신 Transact-SQL 문을
 |[저장 프로시저](/sql/relational-databases/stored-procedures/stored-procedures-database-engine) 및 [SQL 삽입](/sql/relational-databases/security/sql-injection)(SQL Server 온라인 설명서)|저장 프로시저를 만드는 방법과 SQL 삽입이 작동하는 방식을 설명하는 항목입니다.|  
   
 ## <a name="see-also"></a>참고자료
+
 - [ADO.NET 응용 프로그램 보안](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
 - [SQL Server 보안 개요](../../../../../docs/framework/data/adonet/sql/overview-of-sql-server-security.md)
 - [SQL Server의 응용 프로그램 보안 시나리오](../../../../../docs/framework/data/adonet/sql/application-security-scenarios-in-sql-server.md)

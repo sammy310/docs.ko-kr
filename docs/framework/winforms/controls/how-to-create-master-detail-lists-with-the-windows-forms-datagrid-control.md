@@ -10,14 +10,14 @@ helpviewer_keywords:
 - DataGrid control [Windows Forms], master-details lists
 - related tables [Windows Forms], displaying in DataGrid control
 ms.assetid: 20388c6a-94f9-4d96-be18-8c200491247f
-ms.openlocfilehash: 8f247fb3e61abe46b3bb9c74a3b984310d2b99b3
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 92b4a7d9513ce0ec9b7c02f57c23fa4267fb26ad
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57715466"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59302415"
 ---
-# <a name="how-to-create-masterdetail-lists-with-the-windows-forms-datagrid-control"></a>방법: Windows Forms DataGrid 컨트롤을 사용 하 여 마스터/세부 목록 만들기
+# <a name="how-to-create-masterdetail-lists-with-the-windows-forms-datagrid-control"></a>방법: Windows Forms DataGrid 컨트롤을 사용하여 마스터/세부 목록 만들기
 > [!NOTE]
 >  <xref:System.Windows.Forms.DataGridView> 컨트롤은 <xref:System.Windows.Forms.DataGrid> 컨트롤을 대체하고 여기에 다른 기능을 추가하여 새로 도입된 컨트롤이지만 이전 버전과의 호환성 및 이후 사용 가능성을 고려하여 <xref:System.Windows.Forms.DataGrid> 컨트롤을 계속 유지하도록 선택할 수 있습니다. 자세한 내용은 [Windows Forms DataGridView 및 DataGrid 컨트롤의 차이점](differences-between-the-windows-forms-datagridview-and-datagrid-controls.md)을 참조하십시오.  
   
@@ -25,17 +25,17 @@ ms.locfileid: "57715466"
   
 ### <a name="to-set-a-masterdetail-relationship-programmatically"></a>마스터/세부 관계를 프로그래밍 방식으로 설정 하려면  
   
-1.  두 개의 새 만들려면 <xref:System.Windows.Forms.DataGrid> 컨트롤과 해당 속성을 설정 합니다.  
+1. 두 개의 새 만들려면 <xref:System.Windows.Forms.DataGrid> 컨트롤과 해당 속성을 설정 합니다.  
   
-2.  데이터 집합에 테이블을 추가 합니다.  
+2. 데이터 집합에 테이블을 추가 합니다.  
   
-3.  형식의 변수 선언 <xref:System.Data.DataRelation> 만들려는 관계를 나타내는입니다.  
+3. 형식의 변수 선언 <xref:System.Data.DataRelation> 만들려는 관계를 나타내는입니다.  
   
-4.  테이블, 열 및 두 테이블을 연결 해 주는 항목 및 관계의 이름을 지정 하 여 관계를 인스턴스화하십시오.  
+4. 테이블, 열 및 두 테이블을 연결 해 주는 항목 및 관계의 이름을 지정 하 여 관계를 인스턴스화하십시오.  
   
-5.  에 대 한 관계를 추가 합니다 <xref:System.Data.DataSet> 개체의 <xref:System.Data.DataSet.Relations%2A> 컬렉션입니다.  
+5. 에 대 한 관계를 추가 합니다 <xref:System.Data.DataSet> 개체의 <xref:System.Data.DataSet.Relations%2A> 컬렉션입니다.  
   
-6.  사용 하 여는 <xref:System.Windows.Forms.DataGrid.SetDataBinding%2A> 메서드를 <xref:System.Windows.Forms.DataGrid> 각 표를 바인딩하는 <xref:System.Data.DataSet>합니다.  
+6. 사용 하 여는 <xref:System.Windows.Forms.DataGrid.SetDataBinding%2A> 메서드를 <xref:System.Windows.Forms.DataGrid> 각 표를 바인딩하는 <xref:System.Data.DataSet>합니다.  
   
      다음 예제에서는 이전에 생성 된의 Customers 및 Orders 테이블 간 마스터/세부 관계를 설정 하는 방법을 보여 줍니다 <xref:System.Data.DataSet> (`ds`).  
   
@@ -71,6 +71,7 @@ ms.locfileid: "57715466"
     ```  
   
 ## <a name="see-also"></a>참고자료
+
 - [DataGrid 컨트롤](datagrid-control-windows-forms.md)
 - [DataGrid 컨트롤 개요](datagrid-control-overview-windows-forms.md)
-- [방법: 데이터 소스에 Windows Forms DataGrid 컨트롤 바인딩](how-to-bind-the-windows-forms-datagrid-control-to-a-data-source.md)
+- [방법: 데이터 원본에 Windows Forms DataGrid 컨트롤 바인딩](how-to-bind-the-windows-forms-datagrid-control-to-a-data-source.md)

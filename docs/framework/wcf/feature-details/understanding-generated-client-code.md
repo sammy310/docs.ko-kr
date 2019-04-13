@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: c3f6e4b0-1131-4c94-aa39-a197c5c2f2ca
-ms.openlocfilehash: 929b0ee8b0904d43f44857e8051ff52fc04a4f82
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 226b77d1c638ec4f8505140332ad35d4029ef0b0
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54734450"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59189161"
 ---
 # <a name="understanding-generated-client-code"></a>생성된 클라이언트 코드 이해
 [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) 는 클라이언트 응용 프로그램을 빌드하는 데 사용할 클라이언트 응용 프로그램 구성 파일과 클라이언트 코드를 생성합니다. 이 항목에서는 표준 서비스 계약 시나리오를 위해 생성된 코드 예제를 간략히 살펴 봅니다. 생성된 된 코드를 사용 하 여 클라이언트 응용 프로그램을 작성 하는 방법에 대 한 자세한 내용은 참조 하세요. [WCF Client Overview](../../../../docs/framework/wcf/wcf-client-overview.md)합니다.  
@@ -81,4 +81,5 @@ ms.locfileid: "54734450"
  [!code-csharp[C_GeneratedCodeFiles#13](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_generatedcodefiles/cs/proxycode.cs#13)]  
   
 ## <a name="see-also"></a>참고자료
+
 - [WCF 클라이언트 개요](../../../../docs/framework/wcf/wcf-client-overview.md)

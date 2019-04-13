@@ -2,29 +2,29 @@
 title: '방법: 파일이 어셈블리 (Visual Basic) 인지 확인 합니다.'
 ms.date: 07/20/2015
 ms.assetid: de26f410-9bd1-4b55-a343-cc82f81684be
-ms.openlocfilehash: b8627c64398afdef00fde71121f870b337ac072f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 47ac7f29509af86819006a4394ca661140b95ab0
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54520092"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59316065"
 ---
 # <a name="how-to-determine-if-a-file-is-an-assembly-visual-basic"></a>방법: 파일이 어셈블리 (Visual Basic) 인지 확인 합니다.
 파일은 관리되고 해당 메타데이터에 어셈블리 항목을 포함하는 경우에만 어셈블리입니다. 어셈블리 및 메타데이터에 대한 자세한 내용은 [어셈블리 매니페스트](../../../../framework/app-domains/assembly-manifest.md) 항목을 참조하세요.  
   
 ## <a name="how-to-manually-determine-if-a-file-is-an-assembly"></a>파일이 어셈블리인지 수동으로 확인하는 방법  
   
-1.  [Ildasm.exe(IL 디스어셈블러)](../../../../framework/tools/ildasm-exe-il-disassembler.md)를 시작합니다.  
+1. [Ildasm.exe(IL 디스어셈블러)](../../../../framework/tools/ildasm-exe-il-disassembler.md)를 시작합니다.  
   
-2.  테스트하려는 파일을 로드합니다.  
+2. 테스트하려는 파일을 로드합니다.  
   
-3.  **ILDASM**에서 파일이 PE(이식 가능) 파일이 아니라고 보고하는 경우에는 어셈블리가 아닙니다. 자세한 내용은 항목을 참조 하세요. [방법: 어셈블리 콘텐츠 보기](../../../../framework/app-domains/how-to-view-assembly-contents.md)를 참조하세요.  
+3. **ILDASM**에서 파일이 PE(이식 가능) 파일이 아니라고 보고하는 경우에는 어셈블리가 아닙니다. 자세한 내용은 항목 [방법: 어셈블리 콘텐츠 보기](../../../../framework/app-domains/how-to-view-assembly-contents.md)를 참조하세요.  
   
 ## <a name="how-to-programmatically-determine-if-a-file-is-an-assembly"></a>파일이 어셈블리인지 프로그래밍 방식으로 확인하는 방법  
   
-1.  테스트하는 파일의 전체 파일 경로와 이름을 전달하여 <xref:System.Reflection.AssemblyName.GetAssemblyName%2A> 메서드를 호출합니다.  
+1. 테스트하는 파일의 전체 파일 경로와 이름을 전달하여 <xref:System.Reflection.AssemblyName.GetAssemblyName%2A> 메서드를 호출합니다.  
   
-2.  <xref:System.BadImageFormatException> 예외가 throw되는 경우 파일이 어셈블리가 아닙니다.  
+2. <xref:System.BadImageFormatException> 예외가 throw되는 경우 파일이 어셈블리가 아닙니다.  
   
 ## <a name="example"></a>예  
  이 예제에서는 DLL을 테스트하여 어셈블리인지 확인합니다.  

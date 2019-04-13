@@ -1,5 +1,5 @@
 ---
-title: '방법: 경로를 따라 개체에 애니메이션 효과 주기(오프셋이 누적된 매트릭스 애니메이션)'
+title: '방법: 경로를 따라 개체에 애니메이션 효과 주기(오프셋이 누적된 Matrix 애니메이션)'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - animation [WPF], objects along paths (matrix animation with offset accumulation)
 - matrix animation with offset accumulation [WPF]
 ms.assetid: 1bca90ef-9832-4128-8ed6-62908e7ec146
-ms.openlocfilehash: 859a3556bc29d2b30572be03708ebab80ce692fb
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 3e7b892e2a2215d26512850477844d71bce7fe09
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57351606"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59207372"
 ---
-# <a name="how-to-animate-an-object-along-a-path-matrix-animation-with-offset-accumulation"></a>방법: 경로를 따라 개체에 애니메이션 효과 주기(오프셋이 누적된 매트릭스 애니메이션)
+# <a name="how-to-animate-an-object-along-a-path-matrix-animation-with-offset-accumulation"></a>방법: 경로를 따라 개체에 애니메이션 효과 주기(오프셋이 누적된 Matrix 애니메이션)
 사용 하는 방법을 보여 주는이 예제는 <xref:System.Windows.Media.Animation.MatrixAnimationUsingPath> 클래스 경로 따라 개체에 애니메이션 효과 주고의 오프셋이 누적 애니메이션이 반복 됨에 따라 값입니다.  
   
 ## <a name="example"></a>예제  
@@ -34,5 +34,6 @@ ms.locfileid: "57351606"
  전체 샘플을 참조 하세요 [경로 애니메이션 샘플](https://go.microsoft.com/fwlink/?LinkID=160028)합니다. 애니메이션을 적용 하는 방법을 보여 주는 예제는 <xref:System.Windows.Media.Matrix> 오프셋된 누적 없이 경로 따라 값을 참조 하십시오 [는 경로 따라 개체 (매트릭스 애니메이션)에 애니메이션 효과 주기](how-to-animate-an-object-along-a-path-matrix-animation.md)합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [애니메이션 개요](animation-overview.md)
 - [경로 애니메이션 방법 항목](path-animation-how-to-topics.md)

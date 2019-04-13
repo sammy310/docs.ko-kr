@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cae8f326a293a40164120dc17c13e451c4e93f1f
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 80402234d9374fa4f16e1f8bb315536a9bdfb2c2
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57489438"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59081517"
 ---
 # <a name="iassemblynameisequal-method"></a>IAssemblyName::IsEqual 메서드
 지정 된 결정 [IAssemblyName](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md) 개체와 같으면이 `IAssemblyName`지정된 된 비교 플래그에 따라 합니다.  
@@ -51,5 +51,6 @@ HRESULT IsEqual (
  **.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>참고자료
+
 - [IAssemblyName 인터페이스](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md)
 - [Fusion 열거형](../../../../docs/framework/unmanaged-api/fusion/fusion-enumerations.md)

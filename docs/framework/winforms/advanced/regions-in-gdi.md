@@ -9,12 +9,12 @@ helpviewer_keywords:
 - drawing [Windows Forms], regions
 - regions
 ms.assetid: 52184f9b-16dd-4bbd-85be-029112644ceb
-ms.openlocfilehash: 31c0e4b1509c478786d075b127f0b181d5cdd1c6
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 33d4f4ecca7b9d777fa4eab5b6d031de10f03ccc
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57724975"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59076031"
 ---
 # <a name="regions-in-gdi"></a>GDI+의 영역
 영역은 출력 장치의 표시 영역의 일부입니다. 지역 (단일 사각형) 단순 또는 복합 (다각형 및 닫힌된 곡선의 조합) 수 있습니다. 다음 그림에서는 두 지역: 사각형에서 생성 된 하나 및 다른 경로에서 생성 합니다.  
@@ -40,6 +40,7 @@ ms.locfileid: "57724975"
  [!code-vb[LinesCurvesAndShapes#61](~/samples/snippets/visualbasic/VS_Snippets_Winforms/LinesCurvesAndShapes/VB/Class1.vb#61)]  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Drawing.Region?displayProperty=nameWithType>
 - [선, 곡선 및 도형](lines-curves-and-shapes.md)
 - [영역 사용](using-regions.md)

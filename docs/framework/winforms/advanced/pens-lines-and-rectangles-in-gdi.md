@@ -17,12 +17,12 @@ helpviewer_keywords:
 - examples [Windows Forms], GDI+
 - lines [Windows Forms], dashed
 ms.assetid: 30b25aae-e3eb-4479-bdb8-187cf651fc84
-ms.openlocfilehash: 91f41fb4acf5ec174bd76498a70aed3dcda076f9
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 84752773c0b56d9684dc31620d463d4ddccf9dad
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57705742"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59078228"
 ---
 # <a name="pens-lines-and-rectangles-in-gdi"></a>GDI+의 펜, 선 및 사각형
 있는 선을 그리려면 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 만들어야를 <xref:System.Drawing.Graphics> 개체 및 <xref:System.Drawing.Pen> 개체입니다. 합니다 <xref:System.Drawing.Graphics> 실제로 그리기를 수행 하는 메서드를 제공 하는 개체 및 <xref:System.Drawing.Pen> 개체 선 색, 너비 및 스타일 같은 특성을 저장 합니다.  
@@ -68,9 +68,10 @@ ms.locfileid: "57705742"
  <xref:System.Drawing.Rectangle> 개체에 메서드와 속성을 조작 하 고 사각형에 대 한 정보를 수집 합니다. 예를 들어 합니다 <xref:System.Drawing.Rectangle.Inflate%2A> 및 <xref:System.Drawing.Rectangle.Offset%2A> 메서드 사각형의 위치와 크기를 변경 합니다. 합니다 <xref:System.Drawing.Rectangle.IntersectsWith%2A> 메서드를 알려 사각형 다른 인스턴스와 교차 하는지 여부 사각형을 지정 및 <xref:System.Drawing.Rectangle.Contains%2A> 메서드 알려 사각형 내에서 지정된 된 지점 인지 합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Drawing.Graphics?displayProperty=nameWithType>
 - <xref:System.Drawing.Pen?displayProperty=nameWithType>
 - <xref:System.Drawing.Rectangle?displayProperty=nameWithType>
 - [방법: 펜 만들기](how-to-create-a-pen.md)
-- [방법: Windows Form에 선 그리기](how-to-draw-a-line-on-a-windows-form.md)
+- [방법: Windows Form에서 선 그리기](how-to-draw-a-line-on-a-windows-form.md)
 - [방법: 윤곽선이 있는 도형 그리기](how-to-draw-an-outlined-shape.md)

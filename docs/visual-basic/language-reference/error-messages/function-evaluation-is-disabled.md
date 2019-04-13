@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30957
 ms.assetid: 561e593a-f50a-4b72-a708-4cab60ec7b28
-ms.openlocfilehash: d024420fbbc3efbd3d19bb58c9379eacbafac5d3
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: bc4d05e52434cf62fa90671d29b407c83114b5d2
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58820739"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59315779"
 ---
 # <a name="function-evaluation-is-disabled-because-a-previous-function-evaluation-timed-out"></a>이전 함수 실행 시간이 초과되었으므로 함수를 실행할 수 없습니다.
 함수 평가 이전 함수 실행 시간이 초과 되어 비활성화 됩니다. 함수 실행을 다시 활성화 하려면 다시 단계별로 실행 하거나 디버깅 다시 시작 합니다.  
@@ -27,9 +27,9 @@ ms.locfileid: "58820739"
   
 ## <a name="to-correct-this-error"></a>이 오류를 해결하려면  
   
-1.  가능한 경우 이전 함수 실행 던 및 시간 초과 원인을 결정 합니다. 그렇지 않은 경우이 오류가 다시 발생할 수 있습니다.  
+1. 가능한 경우 이전 함수 실행 던 및 시간 초과 원인을 결정 합니다. 그렇지 않은 경우이 오류가 다시 발생할 수 있습니다.  
   
-2.  디버거를 다시 실행 하거나 종료 하 고 디버깅을 다시 시작 합니다.  
+2. 디버거를 다시 실행 하거나 종료 하 고 디버깅을 다시 시작 합니다.  
   
 ## <a name="see-also"></a>참고자료
 

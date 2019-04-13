@@ -8,12 +8,12 @@ helpviewer_keywords:
 - dialog boxes [WPF], creating
 - Grid control [WPF], creating [WPF], dialog box
 ms.assetid: d6ac3d51-844b-4d29-96d8-81a696a7b960
-ms.openlocfilehash: 57edaa173b85bc06c6859b08d3edec281e1b8942
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 0ade908e92e552017acb9ba242ccba2c28c3c995
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57372862"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59149528"
 ---
 # <a name="how-to-build-a-standard-ui-dialog-box-by-using-grid"></a>방법: Grid를 사용하여 표준 UI 대화 상자 빌드
 이 예제에는 표준을 만드는 방법을 보여 줍니다 [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] 를 사용 하 여 대화 상자는 <xref:System.Windows.Controls.Grid> 요소입니다.  
@@ -33,7 +33,8 @@ ms.locfileid: "57372862"
  [!code-vb[GridRunDialog#1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/GridRunDialog/VisualBasic/grid_vb.vb#1)]  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Windows.Controls.Grid>
 - <xref:System.Windows.GridUnitType>
-- [패널 개요](panels-overview.md)
+- [Panel 개요](panels-overview.md)
 - [방법 항목](grid-how-to-topics.md)

@@ -2,12 +2,12 @@
 title: 추적 및 메시지 로깅에 권장되는 설정
 ms.date: 03/30/2017
 ms.assetid: c6aca6e8-704e-4779-a9ef-50c46850249e
-ms.openlocfilehash: dff4b20547cccca628ac76afc890a2817e838907
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fa6dc74a26f6a76591a15c549a892f31a65c521e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54585213"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59132368"
 ---
 # <a name="recommended-settings-for-tracing-and-message-logging"></a>추적 및 메시지 로깅에 권장되는 설정
 이 항목에서는 다른 운영 환경에 권장되는 추적 및 메시지 로깅 설정에 대해 설명합니다.  
@@ -113,4 +113,5 @@ logman stop mytrace -ets
 ```  
   
 ## <a name="see-also"></a>참고자료
-- [진단에 WMI(Windows Management Instrumentation) 사용](../../../../../docs/framework/wcf/diagnostics/wmi/index.md)
+
+- [진단에 Windows Management Instrumentation 사용](../../../../../docs/framework/wcf/diagnostics/wmi/index.md)

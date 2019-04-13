@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 510ef77f217cdd6e3441e3d6684d431fc31307fd
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b0625dc72d44485dbb69b42cba5387085d1862bb
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54698923"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59210427"
 ---
 # <a name="stacktracesimplecontext-structure"></a>StackTrace_SimpleContext 구조체
 전체 `CONTEXT` 구조체 대신 사용할 수 있는 단순 컨텍스트를 제공합니다.  
@@ -57,5 +57,6 @@ struct StackTrace_SimpleContext
  **.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>참고자료
+
 - [디버깅 구조체](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)
 - [디버깅](../../../../docs/framework/unmanaged-api/debugging/index.md)

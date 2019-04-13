@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c1a9df30ae11b13c052c75b05b0850d9f4754620
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: e17a6846ba0276ec7ba423ab25e3f11baf278d03
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57470096"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59098756"
 ---
 # <a name="imetadataemitsetrva-method"></a>IMetaDataEmit::SetRVA 메서드
 지정 된 메서드의 상대 가상 주소를 설정합니다.  
@@ -53,5 +53,6 @@ HRESULT SetRVA (
  **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>참고자료
+
 - [IMetaDataEmit 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
 - [IMetaDataEmit2 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - animation [WPF], paths
 - path animations [WPF]
 ms.assetid: 979c732c-df74-47a6-be96-8e07b3707d53
-ms.openlocfilehash: c8e628e11debadb88c365ac95d355f1ee641bdbc
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 195af217ddf3a78a0ef1bb54957a65b6ce62deae
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57367858"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59182470"
 ---
 # <a name="path-animations-overview"></a>경로 애니메이션 개요
 <a name="introduction"></a> 이 항목에서는 기하학적 경로를 사용하여 출력 값을 생성할 수 있도록 하는 경로 애니메이션을 소개합니다. 경로 애니메이션은 복잡한 경로를 따라 개체를 이동하고 회전하는 데 유용합니다.  
@@ -49,13 +49,13 @@ ms.locfileid: "57367858"
   
  여기서 *\<Type>* 은 클래스가 애니메이션을 적용하는 값의 형식입니다.  
   
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]에서는 다음 경로 애니메이션 클래스를 제공합니다.  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 다음 경로 애니메이션 클래스를 제공합니다.  
   
 |속성 형식|해당 경로 애니메이션 클래스|예제|  
 |-------------------|----------------------------------------|-------------|  
 |<xref:System.Double>|<xref:System.Windows.Media.Animation.DoubleAnimationUsingPath>|[경로를 따라 개체에 애니메이션 효과 주기(Double 애니메이션)](how-to-animate-an-object-along-a-path-double-animation.md)|  
 |<xref:System.Windows.Media.Matrix>|<xref:System.Windows.Media.Animation.MatrixAnimationUsingPath>|[경로를 따라 개체에 애니메이션 효과 주기(Matrix 애니메이션)](how-to-animate-an-object-along-a-path-matrix-animation.md)|  
-|<xref:System.Windows.Point>|<xref:System.Windows.Media.Animation.PointAnimationUsingPath>|[경로를 따라 개체에 애니메이션 효과 주기(포인트 애니메이션)](how-to-animate-an-object-along-a-path-point-animation.md)|  
+|<xref:System.Windows.Point>|<xref:System.Windows.Media.Animation.PointAnimationUsingPath>|[경로를 따라 개체에 애니메이션 효과 주기(Point 애니메이션)](how-to-animate-an-object-along-a-path-point-animation.md)|  
   
  A <xref:System.Windows.Media.Animation.MatrixAnimationUsingPath> 생성 <xref:System.Windows.Media.Matrix> 에서 값을 해당 <xref:System.Windows.Media.Animation.MatrixAnimationUsingPath.PathGeometry%2A>합니다. 와 함께 사용할 경우는 <xref:System.Windows.Media.MatrixTransform>, <xref:System.Windows.Media.Animation.MatrixAnimationUsingPath> 경로 따라 개체를 이동할 수 있습니다. 설정 하는 경우를 <xref:System.Windows.Media.Animation.MatrixAnimationUsingPath.DoesRotateWithTangent%2A> 의 속성을 <xref:System.Windows.Media.Animation.MatrixAnimationUsingPath> 를 `true`, 개체가 경로의 곡선을 따라 회전 합니다.  
   
@@ -90,6 +90,7 @@ ms.locfileid: "57367858"
  에 사용 되는 경로 구문에 대 한 자세한 내용은 합니다 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 예제에서는 참조를 [경로 태그 구문](path-markup-syntax.md) 개요.  
   
 ## <a name="see-also"></a>참고자료
+
 - [경로 애니메이션 샘플](https://go.microsoft.com/fwlink/?LinkID=160028)
 - [경로 태그 구문](path-markup-syntax.md)
 - [경로 애니메이션 방법 항목](path-animation-how-to-topics.md)

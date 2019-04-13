@@ -4,17 +4,16 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - base elements [WPF]
 ms.assetid: 2c997092-72c6-4767-bc84-74267f4eee72
-ms.openlocfilehash: a7ed16690172f2720424807325150ea3db5d5caa
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 0cd69a4d2d6087c1ebf93bb5931511f32a4c9c5f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57372830"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59110060"
 ---
 # <a name="base-elements-overview"></a>기본 요소 개요
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 클래스에는 [!INCLUDE[TLA2#tla_sdk](../../../../includes/tla2sharptla-sdk-md.md)] 설명서에서 일반적으로 기본 요소 클래스라고 하는 네 가지 클래스에서 파생된 클래스가 많습니다. 이러한 클래스는 <xref:System.Windows.UIElement>, <xref:System.Windows.FrameworkElement>를 <xref:System.Windows.ContentElement>, 및 <xref:System.Windows.FrameworkContentElement>합니다. 합니다 <xref:System.Windows.DependencyObject> 둘 다의 공통 기본 클래스 이므로 클래스와도 관련 <xref:System.Windows.UIElement> 및 <xref:System.Windows.ContentElement>  
- 
-  
+
 <a name="base_apis"></a>   
 ## <a name="base-element-apis-in-wpf-classes"></a>WPF 클래스의 기본 요소 API  
  둘 다 <xref:System.Windows.UIElement> 하 고 <xref:System.Windows.ContentElement> 에서 파생 된 <xref:System.Windows.DependencyObject>, 약간 다른 경로 통해. 이 수준에서 분할 방법을 사용 하 여 처리를 <xref:System.Windows.UIElement> 또는 <xref:System.Windows.ContentElement> 사용자 인터페이스 및 응용 프로그램에서 사용 목적 무엇에 사용 됩니다. <xref:System.Windows.UIElement> 역시 <xref:System.Windows.Media.Visual> 내부 하위 수준 그래픽 지원을 노출 하는 클래스는 해당 클래스 계층 구조는 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]합니다. <xref:System.Windows.Media.Visual> 독립적인 직사각형 화면 영역을 정의 하 여 렌더링 프레임 워크를 제공 합니다. 실제로 <xref:System.Windows.UIElement> 대형 개체 모델을 지 원하는 요소 렌더링 하기 위한 것 이며 레이아웃 영역 직사각형 화면 영역으로 표현할 수 있는 콘텐츠 모델은 더 개방적 일 다른 있도록을입니다 요소의 조합을 나타냅니다. <xref:System.Windows.ContentElement> 파생 되지 않습니다 <xref:System.Windows.Media.Visual>;는 해당 모델을 <xref:System.Windows.ContentElement> 판독기 또는 다음 요소를 해석 및 전체를 생성 하는 뷰어와 같은 다른 작업에 의해 사용할 수 <xref:System.Windows.Media.Visual> 에 대 한 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 사용할 합니다. 특정 <xref:System.Windows.UIElement> 클래스 콘텐츠 호스트는: 하나 이상의 호스팅과 렌더링을 제고 <xref:System.Windows.ContentElement> 클래스 (<xref:System.Windows.Controls.DocumentViewer> 이러한 클래스의 예로). <xref:System.Windows.ContentElement> 다소 작은 개체 모델을 사용 하 여 요소에 대 한 기본 클래스와는 더 많이 처리 텍스트, 정보 또는 문서는 콘텐츠 내에서 호스팅될 수로 사용 됩니다.는 <xref:System.Windows.UIElement>합니다.  
@@ -94,10 +93,11 @@ ms.locfileid: "57372830"
   
  <xref:System.Windows.Media.Animation.Animatable> 가 <xref:System.Windows.Freezable> 특히 애니메이션 컨트롤 계층과 일부 유틸리티 멤버 현재 애니메이션이 적용 된 속성이 구별할 수 있도록에서 추가 되는 속성과 클래스를 파생 합니다.  
   
-### <a name="control"></a>Control  
+### <a name="control"></a>컨트롤  
  <xref:System.Windows.Controls.Control> 컨트롤 또는 구성 요소는 기술에 따라 다양 하 게 표현 되는 개체의 형식에 대 한 의도 한 기본 클래스가입니다. 일반적으로 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 컨트롤 클래스는 UI 컨트롤을 직접 나타내거나 컨트롤 컴퍼지션에 밀접하게 참여하는 클래스입니다. 기본 기능이 있는 <xref:System.Windows.Controls.Control> 컨트롤 템플릿 기능입니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Windows.Controls.Control>
 - [종속성 속성 개요](dependency-properties-overview.md)
 - [컨트롤 제작 개요](../controls/control-authoring-overview.md)

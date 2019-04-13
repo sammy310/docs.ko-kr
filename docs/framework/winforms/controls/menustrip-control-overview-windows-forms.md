@@ -7,12 +7,12 @@ helpviewer_keywords:
 - MenuStrip control [Windows Forms], about MenuStrip control
 - menus [Windows Forms], creating
 ms.assetid: f45516e5-bf01-4468-b851-d45f4c33c055
-ms.openlocfilehash: 41688dce0e645b643d7a10a5cf330f1f3a5f9cc8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7cd761697a09205294727043efc6cf73816803ce
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54653712"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59144354"
 ---
 # <a name="menustrip-control-overview-windows-forms"></a>MenuStrip 컨트롤 개요(Windows Forms)
 메뉴는 공통적인 주제로 별로 그룹화 되는 명령 키를 눌러 사용자에 게는 기능을 노출 합니다.  
@@ -42,19 +42,20 @@ ms.locfileid: "54653712"
 |<xref:System.Windows.Forms.Form.IsMdiContainer%2A?displayProperty=nameWithType>|폼이 MDI 자식 폼의 컨테이너 인지 여부를 나타내는 값을 가져오거나 설정 합니다.|  
 |<xref:System.Windows.Forms.MenuStrip.ShowItemToolTips%2A>|도구 설명에 표시 되는지 여부를 나타내는 값을 가져오거나 설정 합니다.는 <xref:System.Windows.Forms.MenuStrip>합니다.|  
 |<xref:System.Windows.Forms.MenuStrip.CanOverflow%2A>|<xref:System.Windows.Forms.MenuStrip>에서 오버플로 기능을 지원하는지를 나타내는 값을 가져오거나 설정합니다.|  
-|<xref:System.Windows.Forms.ToolStripMenuItem.ShortcutKeys%2A>|<xref:System.Windows.Forms.ToolStripMenuItem>에 연결된 바로 가기 키를 가져오거나 설정합니다.|  
-|<xref:System.Windows.Forms.ToolStripMenuItem.ShowShortcutKeys%2A>|<xref:System.Windows.Forms.ToolStripMenuItem>에 연결된 바로 가기 키가 <xref:System.Windows.Forms.ToolStripMenuItem> 옆에 표시되는지 여부를 나타내는 값을 가져오거나 설정합니다.|  
+|<xref:System.Windows.Forms.ToolStripMenuItem.ShortcutKeys%2A>|연결 된 바로 가기 키를 가져오거나 설정 합니다.는 <xref:System.Windows.Forms.ToolStripMenuItem>합니다.|  
+|<xref:System.Windows.Forms.ToolStripMenuItem.ShowShortcutKeys%2A>|연결 된 바로 가기 키 여부를 나타내는 값을 가져오거나 설정 합니다 <xref:System.Windows.Forms.ToolStripMenuItem> 옆에 표시 됩니다는 <xref:System.Windows.Forms.ToolStripMenuItem>합니다.|  
   
  다음 표에서 중요 한 <xref:System.Windows.Forms.MenuStrip> 도우미 클래스입니다.  
   
 |클래스|설명|  
 |-----------|-----------------|  
-|<xref:System.Windows.Forms.ToolStripMenuItem>|<xref:System.Windows.Forms.MenuStrip> 또는 <xref:System.Windows.Forms.ContextMenuStrip>에 표시된 선택 가능한 옵션을 나타냅니다.|  
+|<xref:System.Windows.Forms.ToolStripMenuItem>|에 표시 된 선택 가능한 옵션을 나타내는 <xref:System.Windows.Forms.MenuStrip> 또는 <xref:System.Windows.Forms.ContextMenuStrip>합니다.|  
 |<xref:System.Windows.Forms.ContextMenuStrip>|바로 가기 메뉴를 나타냅니다.|  
 |<xref:System.Windows.Forms.ToolStripDropDown>|사용자가 클릭할 때 표시 되는 목록에서 단일 항목을 선택할 수 있도록 하는 컨트롤을 나타냅니다는 <xref:System.Windows.Forms.ToolStripDropDownButton> 또는 더 높은 수준의 메뉴 항목입니다.|  
 |<xref:System.Windows.Forms.ToolStripDropDownItem>|파생 된 컨트롤에 대 한 기본 기능을 제공 <xref:System.Windows.Forms.ToolStripItem> 클릭할 때 드롭다운 목록 항목을 표시 하는 합니다.|  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Windows.Forms.ToolStrip>
 - <xref:System.Windows.Forms.MenuStrip>
 - <xref:System.Windows.Forms.ContextMenuStrip>

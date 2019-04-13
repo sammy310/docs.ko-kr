@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f46aeed0a303278fd67265e471bfa13b43cede12
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4474269688094ea6c81b06659727acfb9c2ad6c3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54680191"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59095713"
 ---
 # <a name="isymencunmanagedmethod-interface"></a>ISymENCUnmanagedMethod 인터페이스
 편집 하며 계속 하기 기능에 대 한 정보를 제공합니다.  
@@ -40,4 +40,5 @@ ms.locfileid: "54680191"
  **헤더:** CorSym.idl, CorSym.h  
   
 ## <a name="see-also"></a>참고자료
+
 - [진단 기호 저장소 인터페이스](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)

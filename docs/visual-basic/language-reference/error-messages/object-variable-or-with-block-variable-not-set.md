@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrID91
 ms.assetid: 2f03e611-f0ed-465c-99a2-a816e034faa3
-ms.openlocfilehash: 1b24bec6dd7c4b5af10349cf523d9a7e93b385fe
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: b2c0c47b359e218111c1629ea574303a6d663046
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58831659"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59297930"
 ---
 # <a name="object-variable-or-with-block-variable-not-set"></a>Object 변수 또는 With 블록 변수가 설정되지 않았습니다.
 잘못 된 개체 변수는 참조 됩니다.   여러 가지 원인에 의해 이런 오류가 발생할 수 있습니다.  
@@ -36,7 +36,7 @@ ms.locfileid: "58831659"
   
 ## <a name="to-correct-this-error"></a>이 오류를 해결하려면  
   
-1.  설정할 `Option Strict` 에 `On` 파일의 시작 부분에 다음 코드를 추가 하 여:  
+1. 설정할 `Option Strict` 에 `On` 파일의 시작 부분에 다음 코드를 추가 하 여:  
   
 ```vb  
 Option Strict On  
@@ -44,13 +44,13 @@ Option Strict On
 
      When you run the project, a compiler error will appear in the **Error List** for any variable that was specified without a type.  
   
-2.  사용 하도록 설정 하지 않으려면 `Option Strict`, 형식을 사용 하지 않고 지정 된 변수에 대 한 코드 검색 (`Dim x` 대신 `Dim x As String`) 의도 된 형식 선언에 추가 합니다.  
+2. 사용 하도록 설정 하지 않으려면 `Option Strict`, 형식을 사용 하지 않고 지정 된 변수에 대 한 코드 검색 (`Dim x` 대신 `Dim x As String`) 의도 된 형식 선언에 추가 합니다.  
   
-3.  에 설정 된 개체 변수에 참조 되지 있는지 `Nothing`합니다.  키워드에 대 한 코드 검색 `Nothing`, 개체 설정 되지 않도록 코드를 수정 하 고 `Nothing` 참조 한 후 될 때까지 합니다.  
+3. 에 설정 된 개체 변수에 참조 되지 있는지 `Nothing`합니다.  키워드에 대 한 코드 검색 `Nothing`, 개체 설정 되지 않도록 코드를 수정 하 고 `Nothing` 참조 한 후 될 때까지 합니다.  
   
-4.  액세스 하기 전에 모든 배열 변수는 차원이 구분 해야 합니다. 배열을 처음 만들 때 차원을 할당 하거나 (`Dim x(5) As String` 대신 `Dim x() As String`)를 사용할지를 `ReDim` 처음으로 액세스 하기 전에 배열의 차수를 설정 하려면 키워드입니다.  
+4. 액세스 하기 전에 모든 배열 변수는 차원이 구분 해야 합니다. 배열을 처음 만들 때 차원을 할당 하거나 (`Dim x(5) As String` 대신 `Dim x() As String`)를 사용할지를 `ReDim` 처음으로 액세스 하기 전에 배열의 차수를 설정 하려면 키워드입니다.  
   
-5.  있는지 확인 하 `With` 블록을 실행 하 여 초기화를 `With` 문 진입점입니다.  
+5. 있는지 확인 하 `With` 블록을 실행 하 여 초기화를 `With` 문 진입점입니다.  
   
 ## <a name="see-also"></a>참고자료
 

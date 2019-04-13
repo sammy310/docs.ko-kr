@@ -2,12 +2,12 @@
 title: SQL Server에서 저장 프로시저를 사용하여 권한 관리
 ms.date: 03/30/2017
 ms.assetid: 08fa34e8-2ffa-470d-ba62-e511a5f8558e
-ms.openlocfilehash: 92752df75390c4f672f4a0cc1dd48ec7c07f6265
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0688157b45892cacb73f858dffb93836da9fc91d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54546506"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59229994"
 ---
 # <a name="managing-permissions-with-stored-procedures-in-sql-server"></a>SQL Server에서 저장 프로시저를 사용하여 권한 관리
 데이터베이스 주변을 방어하는 여러 줄을 작성하는 한 가지 방법은 저장 프로시저 또는 사용자 정의 함수를 사용하여 모든 데이터 액세스를 구현하는 것입니다. 테이블과 같은 원본 개체에 대한 모든 권한을 취소하거나 거부하고 저장 프로시저에 EXECUTE 권한을 부여합니다. 그러면 효율적으로 데이터 및 데이터베이스 개체 주변에 보안 경계를 만듭니다.  
@@ -57,6 +57,7 @@ ms.locfileid: "54546506"
 |[저장 프로시저](/sql/relational-databases/stored-procedures/stored-procedures-database-engine) 및 [SQL 삽입](https://go.microsoft.com/fwlink/?LinkId=98234)(SQL Server 온라인 설명서)|저장 프로시저를 만드는 방법과 SQL 삽입이 작동하는 방식을 설명하는 항목입니다.|  
   
 ## <a name="see-also"></a>참고자료
+
 - [ADO.NET 응용 프로그램 보안](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
 - [SQL Server 보안 개요](../../../../../docs/framework/data/adonet/sql/overview-of-sql-server-security.md)
 - [SQL Server의 응용 프로그램 보안 시나리오](../../../../../docs/framework/data/adonet/sql/application-security-scenarios-in-sql-server.md)

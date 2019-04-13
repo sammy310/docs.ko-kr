@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30149
 ms.assetid: 29d1b7f4-dca7-478c-bbe7-c657f342c183
-ms.openlocfilehash: b8bcb16798284a09608ba6942226ef07c6859d4f
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 432f089bc77928308820d7456d930fba8dc513f7
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58824206"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59304911"
 ---
 # <a name="type1typename-must-implement-methodname-for-interface-interfacename"></a>\<type1 >'\<typename >'를 구현 해야 합니다 '\<methodname >' 인터페이스에 대 한 '\<interfacename >'
 클래스 또는 구조체는 인터페이스를 구현 하지만 인터페이스에 의해 정의 된 프로시저를 구현 하지 않습니다. 인터페이스의 모든 멤버를 구현 해야 합니다.  
@@ -21,9 +21,9 @@ ms.locfileid: "58824206"
   
 ## <a name="to-correct-this-error"></a>이 오류를 해결하려면  
   
-1.  동일한 이름 및 서명을 인터페이스에 정의 된 대로 사용 하 여 프로시저를 선언 합니다. 포함 해야 적어도 `End Function` 또는 `End Sub` 문입니다.  
+1. 동일한 이름 및 서명을 인터페이스에 정의 된 대로 사용 하 여 프로시저를 선언 합니다. 포함 해야 적어도 `End Function` 또는 `End Sub` 문입니다.  
   
-2.  추가 `Implements` 의 끝에 절을 `Function` 또는 `Sub` 문입니다. 예를 들어:  
+2. 추가 `Implements` 의 끝에 절을 `Function` 또는 `Sub` 문입니다. 예를 들어:  
   
     ```  
     Public Sub DoSomething() Implements IBaseInterface.DoSomething  

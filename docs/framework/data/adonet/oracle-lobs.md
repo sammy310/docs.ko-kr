@@ -2,12 +2,12 @@
 title: Oracle LOB
 ms.date: 03/30/2017
 ms.assetid: 272e8e1e-a31f-475a-8c2a-ae8e1286bdab
-ms.openlocfilehash: faf7ec75334f20742ff9d27f029d88bfaca9efd4
-ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
+ms.openlocfilehash: 3f4550344ee09620ae17de5bfcba36b3075a0f47
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57845845"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59135670"
 ---
 # <a name="oracle-lobs"></a>Oracle LOB
 .NET Framework Data Provider for Oracle 포함 합니다 <xref:System.Data.OracleClient.OracleLob> Oracle을 사용 하 여 작업에 사용 되는 클래스 **LOB** 데이터 형식입니다.  
@@ -248,5 +248,6 @@ tx.Commit();
 ```  
   
 ## <a name="see-also"></a>참고자료
+
 - [Oracle 및 ADO.NET](../../../../docs/framework/data/adonet/oracle-and-adonet.md)
 - [ADO.NET 관리되는 공급자 및 데이터 집합 개발자 센터](https://go.microsoft.com/fwlink/?LinkId=217917)

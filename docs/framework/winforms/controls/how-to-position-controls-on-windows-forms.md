@@ -1,5 +1,5 @@
 ---
-title: '방법: Windows Forms에서 컨트롤 위치'
+title: '방법: Windows Forms에서 컨트롤 배치'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -15,14 +15,14 @@ helpviewer_keywords:
 - snaplines
 - controls [Windows Forms], positioning
 ms.assetid: 4693977e-34a4-4f19-8221-68c3120c2b2b
-ms.openlocfilehash: 0503deb3fbb6dc157d8796580ece847bbfb8edfb
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: a0b97073b2f9363a64bfc4a4ede7ffa69e2bce42
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57723103"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59334005"
 ---
-# <a name="how-to-position-controls-on-windows-forms"></a>방법: Windows Forms에서 컨트롤 위치
+# <a name="how-to-position-controls-on-windows-forms"></a>방법: Windows Forms에서 컨트롤 배치
 컨트롤의 위치, Windows Forms 디자이너를 사용 하거나 지정 된 <xref:System.Windows.Forms.Control.Location%2A> 속성입니다.  
   
 > [!NOTE]
@@ -37,9 +37,9 @@ ms.locfileid: "57723103"
   
 ### <a name="to-position-a-control-using-the-properties-window"></a>속성 창을 사용 하 여 컨트롤 위치  
   
-1.  배치 하려는 컨트롤을 클릭 합니다.  
+1. 배치 하려는 컨트롤을 클릭 합니다.  
   
-2.  에 **속성** 창에 대 한 형식 값을 <xref:System.Windows.Forms.Control.Location%2A> 속성을 해당 컨테이너 내의 컨트롤을 배치 하는 쉼표로 구분 된 합니다.  
+2. 에 **속성** 창에 대 한 형식 값을 <xref:System.Windows.Forms.Control.Location%2A> 속성을 해당 컨테이너 내의 컨트롤을 배치 하는 쉼표로 구분 된 합니다.  
   
      첫 번째 숫자 (X)가; 컨테이너의 왼쪽된 테두리의 거리 두 번째 숫자 (Y)는 픽셀 컨테이너 영역의 위쪽 테두리의 거리입니다.  
   
@@ -48,7 +48,7 @@ ms.locfileid: "57723103"
   
 ### <a name="to-position-a-control-programmatically"></a>컨트롤을 프로그래밍 방식으로 배치 하려면  
   
-1.  설정 된 <xref:System.Windows.Forms.Control.Location%2A> 컨트롤의 속성을 <xref:System.Drawing.Point>입니다.  
+1. 설정 된 <xref:System.Windows.Forms.Control.Location%2A> 컨트롤의 속성을 <xref:System.Drawing.Point>입니다.  
   
     ```vb  
     Button1.Location = New Point(100, 100)  
@@ -62,7 +62,7 @@ ms.locfileid: "57723103"
     button1->Location = Point(100, 100);  
     ```  
   
-2.  컨트롤 위치의 X 좌표를 변경를 사용 하는 <xref:System.Windows.Forms.Control.Left%2A> 하위 속성입니다.  
+2. 컨트롤 위치의 X 좌표를 변경를 사용 하는 <xref:System.Windows.Forms.Control.Left%2A> 하위 속성입니다.  
   
     ```vb  
     Button1.Left = 300  
@@ -78,7 +78,7 @@ ms.locfileid: "57723103"
   
 ### <a name="to-increment-a-controls-location-programmatically"></a>컨트롤의 위치를 프로그래밍 방식으로 증가  
   
-1.  설정 된 <xref:System.Windows.Forms.Control.Left%2A> 하위 컨트롤의 X 좌표를 늘립니다.  
+1. 설정 된 <xref:System.Windows.Forms.Control.Left%2A> 하위 컨트롤의 X 좌표를 늘립니다.  
   
     ```vb  
     Button1.Left += 200  
@@ -96,10 +96,11 @@ ms.locfileid: "57723103"
     >  사용 하 여는 <xref:System.Windows.Forms.Control.Location%2A> 설정할 컨트롤의 X 및 Y 속성을 동시에 배치 합니다. 사용 하 여 컨트롤의 위치를 개별적으로 설정 하려면 <xref:System.Windows.Forms.Control.Left%2A> (**X**) 또는 <xref:System.Windows.Forms.Control.Top%2A> (**Y**) 하위 속성입니다. X 및 Y 좌표를 암시적으로 설정 하지 마십시오는 <xref:System.Drawing.Point> 이 구조는 단추의 좌표 복사본을 포함 하기 때문에 단추 위치를 나타내는 구조체입니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [Windows Forms 컨트롤](index.md)
-- [연습: 맞춤선을 사용 하 여 Windows Forms에서 컨트롤 정렬](walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)
-- [연습: TableLayoutPanel을 사용 하 여 Windows Forms에서 컨트롤 정렬](walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)
-- [연습: FlowLayoutPanel을 사용 하 여 Windows Forms에서 컨트롤 정렬](walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel.md)
+- [연습: Windows Forms에서 맞춤선을 사용하여 컨트롤 정렬](walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)
+- [연습: TableLayoutPanel을 사용하여 Windows Forms에서 컨트롤 정렬](walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)
+- [연습: FlowLayoutPanel을 사용하여 Windows Forms에서 컨트롤 정렬](walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel.md)
 - [Windows Forms에서 컨트롤 정렬](arranging-controls-on-windows-forms.md)
 - [개별 Windows Forms 컨트롤 레이블 지정 및 바로 가기 제공](labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md)
 - [Windows Forms에 사용할 수 있는 컨트롤](controls-to-use-on-windows-forms.md)

@@ -5,23 +5,23 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 03a9fc62-2d24-491a-9fe6-d6bdb6dcb131
-ms.openlocfilehash: 0223e21702c2a108740341c331f93b85f271cf8a
-ms.sourcegitcommit: 2b986afe4ce9e13bbeec929c9737757eb61de60e
+ms.openlocfilehash: f821088375bf1df01e75de5e0c226334baca113f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "56664811"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59074029"
 ---
 # <a name="net-framework-data-providers"></a>.NET Framework 데이터 공급자
-[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 데이터 공급자는 데이터베이스에 연결하고 명령을 실행하며 결과를 검색하는 데 사용됩니다. 검색된 결과는 곧바로 처리되거나 <xref:System.Data.DataSet> 에 저장되어 필요한 경우 사용자에게 노출되거나 여러 소스의 데이터와 함께 사용되거나 계층 간에 원격으로 사용됩니다. [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 데이터 공급자는 간단하여 데이터 소스와 사용자 코드 간에 최소의 계층을 만들며 기능 저하 없이 성능을 향상시킵니다.  
+[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 데이터 공급자는 데이터베이스에 연결하고 명령을 실행하며 결과를 검색하는 데 사용됩니다. 검색된 결과는 곧바로 처리되거나 <xref:System.Data.DataSet> 에 저장되어 필요한 경우 사용자에게 노출되거나 여러 소스의 데이터와 함께 사용되거나 계층 간에 원격으로 사용됩니다. [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 데이터 공급자는 경량 만들기는 데이터 소스와 사용자 코드 간에 최소의 계층 기능 저하 없이 성능을 향상 시킵니다.  
   
  다음 표에서는 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]에 포함되어 있는 데이터 공급자를 보여 줍니다.  
   
-|[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 데이터 공급자|설명|  
+|[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 데이터 공급자(data provider)|설명|  
 |-------------------------------------------------------------------------------|-----------------|  
 |[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Data Provider for SQL Server|Microsoft SQL Server에 대한 데이터 액세스를 제공합니다. <xref:System.Data.SqlClient> 네임스페이스를 사용합니다.|  
 |[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Data Provider for OLE DB|OLE DB를 사용하여 노출된 데이터 소스에서 사용합니다. <xref:System.Data.OleDb> 네임스페이스를 사용합니다.|  
-|[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]Data Provider for ODBC|OLE DB를 사용하여 노출된 데이터 소스에서 사용합니다. <xref:System.Data.Odbc> 네임스페이스를 사용합니다.|  
+|[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Data Provider for ODBC|OLE DB를 사용하여 노출된 데이터 소스에서 사용합니다. <xref:System.Data.Odbc> 네임스페이스를 사용합니다.|  
 |[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Data Provider for Oracle|Oracle 데이터 소스에서 사용합니다. [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Data Provider for Oracle은 Oracle 클라이언트 소프트웨어 버전 8.1.7 이상을 지원하며 <xref:System.Data.OracleClient> 네임스페이스를 사용합니다.|  
 |EntityClient 공급자|EDM(엔터티 데이터 모델) 애플리케이션에 대한 데이터 액세스를 제공합니다. <xref:System.Data.EntityClient> 네임스페이스를 사용합니다.|  
 |[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Data Provider for SQL Server Compact 4.0입니다.|Microsoft SQL Server Compact 4.0에 대 한 데이터 액세스를 제공합니다. [System.Data.SqlServerCe](https://docs.microsoft.com/previous-versions/sql/compact/sql-server-compact-4.0/ec4st0e3(v=vs.100)) 네임스페이스를 사용합니다.|  
@@ -89,7 +89,7 @@ using System.Data.SqlClient;
   
  [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Data Provider for OLE DB는 MSDASQL(OLE DB Provider for ODBC)과 같이 사용할 수 없습니다. [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)]을 사용하여 ODBC 데이터 소스에 액세스하려면 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Data Provider for ODBC를 사용하세요.  
   
- [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Data Provider for OLE DB 클래스는 <xref:System.Data.OleDb> 네임스페이스에 있습니다. 다음 코드 예제에서는 `System.Data.OleDb` 네임스페이스를 애플리케이션에 포함하는 방법을 보여 줍니다.  
+ [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Data Provider for OLE DB 클래스에는 <xref:System.Data.OleDb> 네임 스페이스입니다. 다음 코드 예제에서는 `System.Data.OleDb` 네임스페이스를 애플리케이션에 포함하는 방법을 보여 줍니다.  
   
 ```vb  
 Imports System.Data.OleDb  
@@ -110,7 +110,7 @@ using System.Data.OleDb;
 |Microsoft ODBC for Oracle|  
 |Microsoft Access Driver(*.mdb)|  
   
- [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Data Provider for ODBC 클래스는 <xref:System.Data.Odbc> 네임스페이스에 있습니다.  
+ [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Data Provider for ODBC 클래스에는 <xref:System.Data.Odbc> 네임 스페이스입니다.  
   
  다음 코드 예제에서는 `System.Data.Odbc` 네임스페이스를 애플리케이션에 포함하는 방법을 보여 줍니다.  
   
@@ -130,7 +130,7 @@ using System.Data.Odbc;
   
  [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Data Provider for Oracle을 사용하여 Oracle 데이터 소스에 연결하려면 시스템에 Oracle 클라이언트 소프트웨어 8.1.7 이상 버전이 있어야 합니다.  
   
- [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Data Provider for Oracle 클래스는 <xref:System.Data.OracleClient> 네임스페이스에 있으며 `System.Data.OracleClient.dll` 어셈블리에 포함되어 있습니다. 데이터 공급자를 사용하는 애플리케이션을 컴파일할 때 `System.Data.dll` 과 `System.Data.OracleClient.dll` 을 모두 참조해야 합니다.  
+ [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Data Provider for Oracle 클래스에 있는 합니다 <xref:System.Data.OracleClient> 에 포함 된 네임 스페이스는 `System.Data.OracleClient.dll` 어셈블리입니다. 데이터 공급자를 사용하는 애플리케이션을 컴파일할 때 `System.Data.dll` 과 `System.Data.OracleClient.dll` 을 모두 참조해야 합니다.  
   
  다음 코드 예제에서는 `System.Data.OracleClient` 네임스페이스를 애플리케이션에 포함하는 방법을 보여 줍니다.  
   
@@ -151,13 +151,14 @@ using System.Data.OracleClient;
 |--------------|-----------|  
 |[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Data Provider for SQL Server|Microsoft SQL Server를 사용 하는 중간 계층 응용 프로그램에 대 한 것이 좋습니다.<br /><br /> Microsoft Database Engine (MSDE) 또는 SQL Server를 사용 하는 단일 계층 응용 프로그램에 대 한 것이 좋습니다.<br /><br /> OLE DB 공급자 사용에 대 한 SQL Server (SQLOLEDB) 사용 하 여 보다 권장 된 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Data Provider for OLE DB입니다.|  
 |[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Data Provider for OLE DB|SQL server는 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Data Provider for SQL Server는이 공급자 대신 것이 좋습니다.<br /><br /> Microsoft Access 데이터베이스를 사용하는 단일 계층 애플리케이션에 권장됩니다. 중간 계층 애플리케이션에는 Access 데이터베이스를 사용하지 않는 것이 좋습니다.|  
-|[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]Data Provider for ODBC|ODBC 데이터 소스를 사용하는 중간 및 단일 계층 애플리케이션에 권장됩니다.|  
+|[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Data Provider for ODBC|ODBC 데이터 소스를 사용하는 중간 및 단일 계층 애플리케이션에 권장됩니다.|  
 |[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Data Provider for Oracle|Oracle 데이터 소스를 사용하는 중간 및 단일 계층 애플리케이션에 권장됩니다.|  
   
 ## <a name="entityclient-provider"></a>EntityClient 공급자  
  EntityClient 공급자는 EDM(엔터티 데이터 모델)을 기반으로 데이터에 액세스하는 데 사용됩니다. EntityClient 공급자는 다른 .NET Framework 데이터 공급자와 달리 데이터 소스와 직접 상호 작용하지 않고 대신 Entity SQL을 사용하여 기본 데이터 공급자와 통신합니다. 자세한 내용은 [Entity Framework 용 EntityClient 공급자](./ef/entityclient-provider-for-the-entity-framework.md)합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [ADO.NET 개요](../../../../docs/framework/data/adonet/ado-net-overview.md)
 - [ADO.NET에서 데이터 검색 및 수정](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)
 - [ADO.NET 관리되는 공급자 및 데이터 집합 개발자 센터](https://go.microsoft.com/fwlink/?LinkId=217917)

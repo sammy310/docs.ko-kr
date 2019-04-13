@@ -3,12 +3,12 @@ title: <workflowIdle>
 ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: b2ef703c-3e01-4213-9d2e-c14c7dba94d2
-ms.openlocfilehash: af8a2568eb13bb3007065c4b4a3564aae27de7ac
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 1dc186f5899935dab43c0d33894e659c4b19748c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55280932"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59201119"
 ---
 # <a name="workflowidle"></a>\<workflowIdle>
 유휴 워크플로 인스턴스가 언로드되고 유지되는 시간을 제어하는 서비스 동작입니다.  
@@ -52,5 +52,6 @@ ms.locfileid: "55280932"
 |[\<동작 >의 \<serviceBehaviors >](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/behavior-of-servicebehaviors-of-workflow.md)|동작 요소를 지정합니다.|  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.ServiceModel.Activities.Description.WorkflowIdleBehavior>
 - <xref:System.ServiceModel.Activities.Configuration.WorkflowIdleElement>

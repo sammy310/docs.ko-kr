@@ -6,12 +6,12 @@ helpviewer_keywords:
 - attributes [Windows Forms], application settings
 - wrapper classes [Windows Forms], application settings
 ms.assetid: 53caa66c-a9fb-43a5-953c-ad092590098d
-ms.openlocfilehash: cfbaac8ad9a8576d076ed34059fb62e9e0a91ebc
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: f945d8e6918c271eeb5fdf3cf9c357b1c2bbca66
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57714660"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59079645"
 ---
 # <a name="application-settings-attributes"></a>애플리케이션 설정 특성
 응용 프로그램 설정 아키텍처는 응용 프로그램 설정 래퍼 클래스 또는 해당 개별 속성에 적용할 수 있는 여러 특성을 제공 합니다. 이러한 특성은 맞게 사용자 지정 래퍼 명시 된 요구 사항에 기능을 조절 하기 위해 종종 특별히 설정 공급자를 응용 프로그램 설정 인프라에서 런타임에 검사 합니다.  
@@ -38,7 +38,8 @@ ms.locfileid: "57714660"
  *클래스* 특성을 응용 프로그램 설정 래퍼 클래스에만 적용 되어야 함을 나타냅니다. *속성* 특성 설정 속성에만 적용할된 수 있음을 나타냅니다. *둘 다* 각 수준에서 특성을 적용할 수 있음을 나타냅니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Configuration.ApplicationSettingsBase>
 - <xref:System.Configuration.SettingsProvider>
-- [응용 프로그램 설정 아키텍처](application-settings-architecture.md)
-- [방법: 응용 프로그램 설정 만들기](how-to-create-application-settings.md)
+- [애플리케이션 설정 아키텍처](application-settings-architecture.md)
+- [방법: 애플리케이션 설정 만들기](how-to-create-application-settings.md)

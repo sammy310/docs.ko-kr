@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: caa71820-8058-4b6a-93a2-25ee757d92d3
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d83270d0e7f5dabff8402f5f81dae20d4457d147
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 82fcddd7a3f89a92cc79285930b30342333fbec2
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54604250"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59112400"
 ---
 # <a name="isymunmanagedasyncmethodpropertieswriter-interface"></a>ISymUnmanagedAsyncMethodPropertiesWriter 인터페이스
 이 기능을 사용 하면 각 메서드 기호에 대 한 선택적 async 메서드 정보를 정의할 수 있습니다. 가 열린된 메서드를 사용 하 여 항상 사용 즉, 호출 사이 합니다 [OpenMethod 메서드](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-openmethod-method.md) 하며 [CloseMethod 메서드](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-closemethod-method.md)합니다.  
@@ -33,4 +33,5 @@ ms.locfileid: "54604250"
  **헤더:** CorSym.idl, CorSym.h  
   
 ## <a name="see-also"></a>참고자료
+
 - [진단 기호 저장소 인터페이스](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)

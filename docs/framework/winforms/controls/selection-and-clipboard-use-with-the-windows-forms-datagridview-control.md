@@ -9,12 +9,12 @@ helpviewer_keywords:
 - data grids [Windows Forms], selecting cells
 - DataGridView control [Windows Forms], selecting cells
 ms.assetid: 82cffcad-8b30-4897-bddb-c3a79d751b83
-ms.openlocfilehash: 61f3eee6f4690e9bd9141f2eeb6de330bac87550
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 1836fbc1887082ca685c49bef2bc42bdb167578f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57715375"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59105858"
 ---
 # <a name="selection-and-clipboard-use-with-the-windows-forms-datagridview-control"></a>Windows Forms DataGridView 컨트롤에서 선택 및 클립보드 사용
 `DataGridView` 컨트롤에서는 다양 한 사용자가 셀, 행 및 열을 선택할 수는 방법을 구성 하기 위한 옵션을 제공 합니다. 예를 들어, 설정할 수 있습니다. 단일 또는 여러 선택 영역, 전체 행 또는 열의 셀을 클릭할 때 선택 또는 전체 행 또는 열을 선택할 사용자가 머리글을 클릭할 경우에 셀 선택 영역도 있습니다. 선택에 대 한 고유한 사용자 인터페이스를 제공 하려는 경우에 일반적인 선택을 사용 하지 않도록 설정 하 고 모든 선택 항목을 프로그래밍 방식으로 처리할 수 있습니다. 또한 사용자가 선택한 값을 클립보드에 복사할 수 있습니다.  
@@ -29,7 +29,7 @@ ms.locfileid: "57715375"
  [방법: Windows Forms DataGridView 컨트롤에서 선택한 셀, 행 및 열 가져오기](selected-cells-rows-and-columns-datagridview.md)  
  선택한 셀, 행 및 열 컬렉션을 사용 하는 방법을 설명 합니다.  
   
- [방법: Windows Forms DataGridView 컨트롤에서 여러 셀을 클립보드에 복사 하는 사용자를 사용 하도록 설정](enable-users-to-copy-multiple-cells-to-the-clipboard-datagridview.md)  
+ [방법: 사용자가 Windows Forms DataGridView 컨트롤에서 여러 셀을 클립보드에 복사할 수 있도록 설정](enable-users-to-copy-multiple-cells-to-the-clipboard-datagridview.md)  
  컨트롤의 클립보드 지원을 사용 하도록 설정 하는 방법에 설명 합니다.  
   
 ## <a name="reference"></a>참조  
@@ -52,5 +52,6 @@ ms.locfileid: "57715375"
  에 대 한 참조 설명서를 제공 합니다 <xref:System.Windows.Forms.DataGridViewSelectedColumnCollection> 클래스입니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [DataGridView 컨트롤](datagridview-control-windows-forms.md)
-- [Windows Forms DataGridView 컨트롤에서의 기본 키보드 및 마우스 처리](default-keyboard-and-mouse-handling-in-the-windows-forms-datagridview-control.md)
+- [Windows Forms DataGridView 컨트롤의 기본 키보드 및 마우스 처리](default-keyboard-and-mouse-handling-in-the-windows-forms-datagridview-control.md)

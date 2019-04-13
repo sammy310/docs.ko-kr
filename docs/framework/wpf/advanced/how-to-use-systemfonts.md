@@ -9,12 +9,12 @@ helpviewer_keywords:
 - fonts [WPF], system fonts
 - classes [WPF], SystemFonts
 ms.assetid: 3f46a4ec-2225-408a-8123-8838a8f7057a
-ms.openlocfilehash: 5ed44da316ddee5ea3a83262f913da571bf75276
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 5976bc0cb8b34e68d5e89dd70a608d7e52ded332
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57378966"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59216784"
 ---
 # <a name="how-to-use-systemfonts"></a>방법: SystemFonts 사용
 정적 리소스를 사용 하는 방법을 보여 주는이 예제는 <xref:System.Windows.SystemFonts> 스타일 또는 단추를 사용자 지정 하기 위해 클래스입니다.  
@@ -37,8 +37,9 @@ ms.locfileid: "57378966"
  [!code-vb[SystemRes_snip#FontResourcesCode](~/samples/snippets/visualbasic/VS_Snippets_Wpf/SystemRes_snip/VisualBasic/Pane1.xaml.vb#fontresourcescode)]  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Windows.SystemFonts>
-- [시스템 브러시로 영역 그리기](../graphics-multimedia/how-to-paint-an-area-with-a-system-brush.md)
+- [시스템 브러시로 영역 칠하기](../graphics-multimedia/how-to-paint-an-area-with-a-system-brush.md)
 - [SystemParameters 사용](how-to-use-systemparameters.md)
 - [시스템 글꼴 키 사용](how-to-use-system-fonts-keys.md)
 - [방법 항목](resources-how-to-topics.md)

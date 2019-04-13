@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: d38ff268-a2ee-434e-b504-d570880e0289
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 8442b8723476984b90f740beac912688719f1791
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2bb2b0dd95877fc6492f6d23a19c14688cd78f7c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54689837"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59133824"
 ---
 # <a name="application-domain-resource-monitoring-arm-etw-events"></a>ARM(응용 프로그램 도메인 리소스 모니터링) ETW 이벤트
 <a name="top"></a> 이들 이벤트는 응용 프로그램 도메인 상태에 대한 자세한 진단 정보를 제공합니다. 이들 이벤트를 사용하거나 애플리케이션 도메인 리소스 모니터링(ARM) 기능을 사용하여 같은 정보를 얻을 수 있습니다.  
@@ -157,4 +157,5 @@ ms.locfileid: "54689837"
 |ClrInstanceID|win:UInt16|CLR 또는 CoreCLR 인스턴스에 대한 고유 ID입니다.|  
   
 ## <a name="see-also"></a>참고자료
+
 - [CLR ETW 이벤트](../../../docs/framework/performance/clr-etw-events.md)

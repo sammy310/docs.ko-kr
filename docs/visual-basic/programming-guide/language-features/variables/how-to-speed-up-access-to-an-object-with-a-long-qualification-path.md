@@ -8,12 +8,12 @@ helpviewer_keywords:
 - With block
 - object variables [Visual Basic], accessing
 ms.assetid: 3eb7657f-c9fe-4e05-8bc3-4bb14d5ae585
-ms.openlocfilehash: b10876c22d2f6dd5832baa0d498db7c4205a3fcb
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 94c838a69aab9fcae9dc0c79b6038ee90e2369e7
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58816293"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59299139"
 ---
 # <a name="how-to-speed-up-access-to-an-object-with-a-long-qualification-path-visual-basic"></a>방법: 정규화 경로가 긴 (Visual Basic)를 사용 하 여 개체에 대 한 액세스 속도
 여러 메서드 및 속성을 정규화 된 경로 필요로 하는 개체에 자주 액세스 하지는 정규화 된 경로 반복 하 여 코드 속도 수 있습니다.  
@@ -22,13 +22,13 @@ ms.locfileid: "58816293"
   
 ### <a name="to-speed-up-access-to-a-heavily-qualified-object-by-assigning-it-to-a-variable"></a>변수에 할당 하 여 과도 하 게 정규화 된 개체에 대 한 액세스 속도  
   
-1.  자주 액세스 하는 개체 유형의 변수를 선언 합니다. 선언의 초기화 부분에는 정규화 된 경로 지정 합니다.  
+1. 자주 액세스 하는 개체 유형의 변수를 선언 합니다. 선언의 초기화 부분에는 정규화 된 경로 지정 합니다.  
   
     ```  
     Dim ctrlActv As Control = someForm.ActiveForm.ActiveControl  
     ```  
   
-2.  개체의 멤버에 액세스 하는 변수를 사용 합니다.  
+2. 개체의 멤버에 액세스 하는 변수를 사용 합니다.  
   
     ```  
     ctrlActv.Text = "Test"  
@@ -38,13 +38,13 @@ ms.locfileid: "58816293"
   
 ### <a name="to-speed-up-access-to-a-heavily-qualified-object-by-using-a-withend-with-block"></a>With를 사용 하 여 액세스를 과도 하 게 정규화 된 개체를 가속화 하는 중... End 블록  
   
-1.  정규화 된 경로에 배치 된 `With` 문.  
+1. 정규화 된 경로에 배치 된 `With` 문.  
   
     ```  
     With someForm.ActiveForm.ActiveControl  
     ```  
   
-2.  내에서 개체의 멤버에 액세스 합니다 `With` 차단 하기 전에 `End With` 문.  
+2. 내에서 개체의 멤버에 액세스 합니다 `With` 차단 하기 전에 `End With` 문.  
   
     ```  
         .Text = "Test"  

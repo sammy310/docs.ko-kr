@@ -5,18 +5,16 @@ helpviewer_keywords:
 - multimedia [WPF]
 - media [WPF]
 ms.assetid: feb25b15-d741-4ac3-818f-1b19f63a3562
-ms.openlocfilehash: 09b830562444bd51e931a1b5013d2a803319e336
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 66cb28fce9485898711b9029baf8a17dd9b2c011
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57352771"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59340492"
 ---
 # <a name="multimedia-overview"></a>멀티미디어 개요
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]의 멀티미디어 기능을 통해 오디오 및 비디오를 응용 프로그램에 통합하여 사용자 환경을 개선할 수 있습니다. 이 항목에서는 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]의 멀티미디어 기능을 소개합니다.  
-  
- 
-  
+
 <a name="mediaapi"></a>   
 ## <a name="media-api"></a>미디어 API  
  합니다 <xref:System.Windows.Controls.MediaElement> 고 <xref:System.Windows.Media.MediaPlayer> 클래스는 오디오 또는 비디오 콘텐츠를 제공 하는 데 사용 됩니다. 이러한 클래스는 대화형으로 또는 클록을 통해 제어할 수 있습니다. 이러한 클래스는 미디어 재생을 위한 [!INCLUDE[TLA#tla_wmp](../../../../includes/tlasharptla-wmp-md.md)] 10 컨트롤에서 사용할 수 있습니다. 사용하는 클래스는 시나리오에 따라 달라집니다.  
@@ -79,13 +77,13 @@ ms.locfileid: "57352771"
   
  합니다 <xref:System.Windows.Controls.MediaElement.LoadedBehavior%2A> 고 <xref:System.Windows.Controls.MediaElement.UnloadedBehavior%2A> 속성은 미디어 재생을 제어 하는 유일한 방법은 없습니다. 클록 모드에서 클록 제어할 수는 <xref:System.Windows.Controls.MediaElement> 대화형 컨트롤 메서드를 제어할 때 및 합니다 <xref:System.Windows.Controls.MediaElement.LoadedBehavior%2A> 는 <xref:System.Windows.Controls.MediaState.Manual>합니다. <xref:System.Windows.Controls.MediaElement> 다음과 같은 우선 순위를 평가 하 여 컨트롤에 대 한이 경합을 처리 합니다.  
   
-1.  <xref:System.Windows.Controls.MediaElement.UnloadedBehavior%2A>. 미디어가 언로드될 때 적용됩니다. 이렇게 하면 기본적으로 모든 미디어 리소스가 해제 되는 경우에을 <xref:System.Windows.Media.MediaClock> 연관 된는 <xref:System.Windows.Controls.MediaElement>합니다.  
+1. <xref:System.Windows.Controls.MediaElement.UnloadedBehavior%2A>. 미디어가 언로드될 때 적용됩니다. 이렇게 하면 기본적으로 모든 미디어 리소스가 해제 되는 경우에을 <xref:System.Windows.Media.MediaClock> 연관 된는 <xref:System.Windows.Controls.MediaElement>합니다.  
   
-2.  <xref:System.Windows.Media.MediaClock>. 미디어에 때 적용에서 된 <xref:System.Windows.Controls.MediaElement.Clock%2A>합니다. 미디어가 언로드될 경우는 <xref:System.Windows.Media.MediaClock> 으로 적용 합니다 <xref:System.Windows.Controls.MediaElement.UnloadedBehavior%2A> 는 <xref:System.Windows.Controls.MediaState.Manual>합니다. 클록 모드의 로드 동작을 항상 재정의 <xref:System.Windows.Controls.MediaElement>합니다.  
+2. <xref:System.Windows.Media.MediaClock>. 미디어에 때 적용에서 된 <xref:System.Windows.Controls.MediaElement.Clock%2A>합니다. 미디어가 언로드될 경우는 <xref:System.Windows.Media.MediaClock> 으로 적용 합니다 <xref:System.Windows.Controls.MediaElement.UnloadedBehavior%2A> 는 <xref:System.Windows.Controls.MediaState.Manual>합니다. 클록 모드의 로드 동작을 항상 재정의 <xref:System.Windows.Controls.MediaElement>합니다.  
   
-3.  <xref:System.Windows.Controls.MediaElement.LoadedBehavior%2A>. 미디어가 로드될 때 적용됩니다.  
+3. <xref:System.Windows.Controls.MediaElement.LoadedBehavior%2A>. 미디어가 로드될 때 적용됩니다.  
   
-4.  대화형 컨트롤 메서드. 경우를 배치할 <xref:System.Windows.Controls.MediaElement.LoadedBehavior%2A> 는 <xref:System.Windows.Controls.MediaState.Manual>합니다. 사용할 수 있는 컨트롤 메서드는 <xref:System.Windows.Controls.MediaElement.Play%2A>, <xref:System.Windows.Controls.MediaElement.Pause%2A>를 <xref:System.Windows.Controls.MediaElement.Close%2A>, 및 <xref:System.Windows.Controls.MediaElement.Stop%2A>합니다.  
+4. 대화형 컨트롤 메서드. 경우를 배치할 <xref:System.Windows.Controls.MediaElement.LoadedBehavior%2A> 는 <xref:System.Windows.Controls.MediaState.Manual>합니다. 사용할 수 있는 컨트롤 메서드는 <xref:System.Windows.Controls.MediaElement.Play%2A>, <xref:System.Windows.Controls.MediaElement.Pause%2A>를 <xref:System.Windows.Controls.MediaElement.Close%2A>, 및 <xref:System.Windows.Controls.MediaElement.Stop%2A>합니다.  
   
 ### <a name="displaying-a-mediaelement"></a>MediaElement 표시  
  표시 하는 <xref:System.Windows.Controls.MediaElement> 렌더링할 콘텐츠가 있어야 하 고 더 해당 <xref:System.Windows.FrameworkElement.ActualWidth%2A> 및 <xref:System.Windows.FrameworkElement.ActualHeight%2A> 속성 콘텐츠가 로드 될 때까지 0으로 설정 합니다. 오디오 전용 콘텐츠의 경우 이러한 속성은 항상 0입니다. 비디오 콘텐츠의 경우에 대 한는 <xref:System.Windows.Controls.MediaElement.MediaOpened> 이벤트가 발생 합니다 <xref:System.Windows.FrameworkElement.ActualWidth%2A> 및 <xref:System.Windows.FrameworkElement.ActualHeight%2A> 가 로드 된 미디어의 크기를 보고 합니다. 즉, 미디어가 로드 될 때까지 합니다 <xref:System.Windows.Controls.MediaElement> 의 실제 공간을 차지 하지 것입니다는 [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] 하지 않는 한를 <xref:System.Windows.FrameworkElement.Width%2A> 또는 <xref:System.Windows.FrameworkElement.Height%2A> 속성이 설정 됩니다.  
@@ -101,9 +99,9 @@ ms.locfileid: "57352771"
 ### <a name="controlling-mediaplayer"></a>MediaPlayer 제어  
  때문에 <xref:System.Windows.Media.MediaPlayer> 는 상태 비저장만 두 가지 미디어 재생을 제어할 수 있습니다.  
   
-1.  대화형 컨트롤 메서드. 독립 모드에 있을 때 진행에서 (`null` <xref:System.Windows.Media.MediaPlayer.Clock%2A> 속성).  
+1. 대화형 컨트롤 메서드. 독립 모드에서 작업 하는 경우 준비에서 (`null`<xref:System.Windows.Media.MediaPlayer.Clock%2A> 속성).  
   
-2.  <xref:System.Windows.Media.MediaClock>. 미디어에 때 적용에서 된 <xref:System.Windows.Media.MediaPlayer.Clock%2A>합니다.  
+2. <xref:System.Windows.Media.MediaClock>. 미디어에 때 적용에서 된 <xref:System.Windows.Media.MediaPlayer.Clock%2A>합니다.  
   
 ### <a name="displaying-a-mediaplayer"></a>MediaPlayer 표시  
  기술적으로 <xref:System.Windows.Media.MediaPlayer> 물리적 표현이 없기 때문에 표시할 수 없습니다. 그러나에서 미디어를 제공 하 사용할 수는 <xref:System.Windows.Media.Drawing> 를 사용 하 여를 <xref:System.Windows.Media.VideoDrawing> 클래스입니다. 다음 예제에서는 사용을 <xref:System.Windows.Media.VideoDrawing> 미디어를 표시 합니다.  
@@ -113,6 +111,7 @@ ms.locfileid: "57352771"
  참조 된 [Drawing 개체 개요](drawing-objects-overview.md) 에 대 한 자세한 내용은 <xref:System.Windows.Media.Drawing> 개체입니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Windows.Media.DrawingGroup>
 - [레이아웃](../advanced/layout.md)
 - [방법 항목](audio-and-video-how-to-topics.md)

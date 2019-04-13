@@ -2,12 +2,12 @@
 title: WCF 웹 HTTP 형식 지정
 ms.date: 03/30/2017
 ms.assetid: e2414896-5463-41cd-b0a6-026a713eac2c
-ms.openlocfilehash: e3db2be1a4f40bc0ae85c3d42faca20cef5308d4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f3d3a2d992f234c690f3fb87514b700a6596a5fe
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54698741"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59331041"
 ---
 # <a name="wcf-web-http-formatting"></a>WCF 웹 HTTP 형식 지정
 WCF 웹 HTTP 프로그래밍 모델을 사용하면 서비스 작업의 응답을 반환하는 데 사용할 수 있는 가장 적절한 형식을 동적으로 결정할 수 있습니다. 적절한 형식을 결정하는 데 지원되는 방법은 자동 형식 지정과 명시적 형식 지정, 두 가지가 있습니다.  
@@ -15,13 +15,13 @@ WCF 웹 HTTP 프로그래밍 모델을 사용하면 서비스 작업의 응답�
 ## <a name="automatic-formatting"></a>자동 서식 지정  
  자동 형식 지정을 사용하도록 설정하면 자동 형식 지정이 응답을 반환하는 가장 적절한 형식을 선택합니다. 자동 형식 지정은 다음을 순서대로 확인하여 가장 적절한 형식을 결정합니다.  
   
-1.  요청 메시지의 Accept 헤더에 있는 미디어 유형  
+1. 요청 메시지의 Accept 헤더에 있는 미디어 유형  
   
-2.  요청 메시지의 콘텐츠 형식  
+2. 요청 메시지의 콘텐츠 형식  
   
-3.  작업의 기본 형식 설정  
+3. 작업의 기본 형식 설정  
   
-4.  WebHttpBehavior의 기본 형식 설정  
+4. WebHttpBehavior의 기본 형식 설정  
   
  요청 메시지에 Accept 헤더를 포함 하는 경우 지원 되는 형식에 대 한 Windows Communication Foundation (WCF) 인프라를 검색 합니다. `Accept` 헤더가 해당 미디어 유형의 우선 순위를 지정하는 경우 이러한 우선 순위는 무시되지 않습니다. `Accept` 헤더에서 적절한 형식을 찾지 못할 경우 요청 메시지의 콘텐츠 형식이 사용됩니다. 적절한 콘텐츠 형식이 지정되지 않은 경우 작업의 기본 형식 설정이 사용됩니다. 기본 형식은 `ResponseFormat` 및 <xref:System.ServiceModel.Web.WebGetAttribute> 특성의 <xref:System.ServiceModel.Web.WebInvokeAttribute> 매개 변수를 사용하여 설정됩니다. 작업의 기본 형식이 지정되지 않은 경우 <xref:System.ServiceModel.Description.WebHttpBehavior.DefaultOutgoingResponseFormat%2A> 속성의 값이 사용됩니다. 자동 형식은 <xref:System.ServiceModel.Description.WebHttpBehavior.AutomaticFormatSelectionEnabled%2A> 속성에 의해 결정됩니다. 이 속성이 `true`로 설정되면 WCF 인프라가 사용할 가장 적절한 형식을 결정합니다. 기본적으로 자동 형식 선택은 이전 버전과의 호환성을 위해 사용되지 않습니다. 자동 형식 선택은 프로그래밍 방식이나 구성을 통해 사용하도록 설정할 수 있습니다. 다음 예제에서는 코드에서 자동 형식 선택을 사용하도록 설정하는 방법을 보여 줍니다.  
   
@@ -164,6 +164,7 @@ public class Service : IService
 ```  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.UriTemplate>
 - <xref:System.UriTemplateMatch>
 - [WCF 웹 HTTP 프로그래밍 모델](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)

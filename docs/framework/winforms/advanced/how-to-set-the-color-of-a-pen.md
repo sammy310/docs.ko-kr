@@ -9,12 +9,12 @@ helpviewer_keywords:
 - pens [Windows Forms], setting color
 - colored pens
 ms.assetid: a9df06f9-a6d5-4d9b-a2d1-583943540775
-ms.openlocfilehash: a2645112950be88cbc569e0be7889c0f1019223d
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: dc067f5a131951bf3af7adc68e11b948d40fc0ca
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57710389"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59213417"
 ---
 # <a name="how-to-set-the-color-of-a-pen"></a>방법: 펜 색 설정
 이 예제에서는 기존 색이 달라 <xref:System.Drawing.Pen> 개체  
@@ -33,6 +33,7 @@ ms.locfileid: "57710389"
  호출 해야 <xref:System.Drawing.Pen.Dispose%2A> 시스템 리소스를 사용 하는 개체에 (같은 <xref:System.Drawing.Pen> 개체)을 사용 하 여 작업을 마친 후 합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Drawing.Pen>
 - [그래픽 프로그래밍 시작](getting-started-with-graphics-programming.md)
 - [방법: 펜 만들기](how-to-create-a-pen.md)

@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - hosting services [WCF], IIS
 ms.assetid: ddae14e8-143c-442d-b660-2046809b2d43
-ms.openlocfilehash: edf3927fb9fdbd9855561b32aec2a425d7ee0638
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9cb67a30ca5453142f906be918b891ac959cdaf2
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54680910"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59180020"
 ---
 # <a name="hosting-in-internet-information-services"></a>인터넷 정보 서비스에서의 호스팅
 Windows Communication Foundation (WCF) 서비스를 호스트 하는 한 가지 옵션은 인터넷 정보 서비스 (IIS) 응용 프로그램 내에서. 이 호스팅 모델은 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 및 ASP.NET 웹 서비스(ASMX) 웹 서비스에서 사용되는 모델과 비슷합니다.  
@@ -19,7 +19,7 @@ Windows Communication Foundation (WCF) 서비스를 호스트 하는 한 가지 
   
 -   [!INCLUDE[wxpsp2](../../../../includes/wxpsp2-md.md)]의 IIS 5.1. 이 환경은 [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)]과 같은 서버 운영 체제에서 나중에 배포되는 IIS에서 호스트되는 응용 프로그램의 설계 및 개발에 유용합니다.  
   
--   [!INCLUDE[iis601](../../../../includes/iis601-md.md)]의 [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)]. [!INCLUDE[iis601](../../../../includes/iis601-md.md)]은 향상된 확장성, 신뢰성 및 응용 프로그램 격리 기능을 지원하는 고급 프로세스 모델을 제공합니다. 이 환경은 HTTP 통신을 단독으로 사용 하는 WCF 서비스의 프로덕션 배포에 적합 합니다.  
+-   [!INCLUDE[iis601](../../../../includes/iis601-md.md)] [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)]합니다. [!INCLUDE[iis601](../../../../includes/iis601-md.md)] 향상 된 확장성, 안정성 및 응용 프로그램 격리를 제공 하는 고급 프로세스 모델을 제공 합니다. 이 환경은 HTTP 통신을 단독으로 사용 하는 WCF 서비스의 프로덕션 배포에 적합 합니다.  
   
 -   [!INCLUDE[wv](../../../../includes/wv-md.md)] 및 [!INCLUDE[lserver](../../../../includes/lserver-md.md)]의 IIS 7.0. IIS 7.0은 [!INCLUDE[iis601](../../../../includes/iis601-md.md)]과 동일한 고급 프로세스 모델을 제공하지만 WAS(Windows Process Activation Service)를 사용하여 HTTP 이외의 프로토콜을 통해 활성화 및 네트워크 통신을 수행할 수 있습니다. 이 환경 (HTTP, net.tcp, net.pipe 및 net.msmq 포함)는 WCF에서 지 원하는 모든 네트워크 프로토콜을 통해 통신 하는 WCF 서비스의 개발에 적합 합니다. WAS에 대 한 자세한 내용은 참조 하세요. [Windows Process Activation Service에서 호스팅](../../../../docs/framework/wcf/feature-details/hosting-in-windows-process-activation-service.md)합니다.  
   
@@ -57,7 +57,8 @@ Windows Communication Foundation (WCF) 서비스를 호스트 하는 한 가지 
  WCF 서비스 일 수 있습니다 하거나--함께 호스팅 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 또는 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 호환 모드는 서비스에서 제공 하는 기능을 완전히 활용을 걸릴 수 있습니다는 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 웹 응용 프로그램 플랫폼입니다. 이러한 기능 설명은 참조 하세요 [WCF 서비스 및 ASP.NET](../../../../docs/framework/wcf/feature-details/wcf-services-and-aspnet.md)합니다.  
   
 ## <a name="see-also"></a>참고자료
-- [ServiceHostFactory를 사용하여 호스팅 확장](../../../../docs/framework/wcf/extending/extending-hosting-using-servicehostfactory.md)
+
+- [ServiceHostFactory를 사용하여 호스팅 확장명](../../../../docs/framework/wcf/extending/extending-hosting-using-servicehostfactory.md)
 - [인터넷 정보 서비스에서 호스트하는 WCF 서비스 배포](../../../../docs/framework/wcf/feature-details/deploying-an-internet-information-services-hosted-wcf-service.md)
 - [WCF 서비스 및 ASP.NET](../../../../docs/framework/wcf/feature-details/wcf-services-and-aspnet.md)
 - [인터넷 정보 서비스 호스팅을 위한 최선의 방법](../../../../docs/framework/wcf/feature-details/internet-information-services-hosting-best-practices.md)

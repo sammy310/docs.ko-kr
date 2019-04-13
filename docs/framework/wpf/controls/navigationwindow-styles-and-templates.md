@@ -9,12 +9,12 @@ helpviewer_keywords:
 - styles [WPF], NavigationWindow
 - templates [WPF], NavigationWindow
 ms.assetid: 3656055e-3222-43c8-b868-fd0c90cc31a3
-ms.openlocfilehash: 586af00dee64cdc9eae1a9c927d079502b0b009a
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 32d8aac99d40693e66c7b52a6c7d2c116d2f3baf
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57363486"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59225809"
 ---
 # <a name="navigationwindow-styles-and-templates"></a>NavigationWindow 스타일 및 템플릿
 이 항목에서는 스타일 및 템플릿에 대해 설명 합니다 <xref:System.Windows.Navigation.NavigationWindow> 제어 합니다. 기본값을 수정할 수 있습니다 <xref:System.Windows.Controls.ControlTemplate> 고유한 모양을 제어할 수 있습니다. 자세한 내용은 [ControlTemplate을 만들어 기존 컨트롤의 모양 사용자 지정](customizing-the-appearance-of-an-existing-control.md)을 참조하세요.  
@@ -48,6 +48,7 @@ ms.locfileid: "57363486"
  전체 샘플을 보려면 [Styling with ControlTemplates Sample](https://github.com/Microsoft/WPF-Samples/tree/master/Styles%20&%20Templates/IntroToStylingAndTemplating)(ControlTemplate으로 스타일 지정 샘플)을 참조하세요.  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Windows.FrameworkElement.Style%2A>
 - <xref:System.Windows.Controls.ControlTemplate>
 - [Control 스타일 및 템플릿](control-styles-and-templates.md)

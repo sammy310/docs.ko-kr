@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3eb57295b72dade0bb396b3caa724b21722b26db
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ae31506d4ba34bf262f49bc2321c6cfcd30f1b60
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54743506"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59197323"
 ---
 # <a name="icordebugremotetarget-interface"></a>ICorDebugRemoteTarget 인터페이스
 개발자가 CLR(공용 언어 런타임) 환경에서 Silverlight 기반 응용 프로그램을 디버깅하는 데 사용할 수 있는 메서드를 제공합니다.  
@@ -60,6 +60,7 @@ interface ICorDebugRemoteTarget  : IUnknown
  **.NET framework 버전:** 3.5 SP1  
   
 ## <a name="see-also"></a>참고자료
+
 - [ICorDebugRemote 인터페이스](../../../../docs/framework/unmanaged-api/debugging/icordebugremote-interface.md)
 - [ICorDebug 인터페이스](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)
 - [디버깅 인터페이스](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

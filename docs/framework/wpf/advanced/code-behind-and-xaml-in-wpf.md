@@ -5,19 +5,19 @@ helpviewer_keywords:
 - XAML [WPF], code-behind
 - code-behind files [WPF], XAML
 ms.assetid: 9df6d3c9-aed3-471c-af36-6859b19d999f
-ms.openlocfilehash: 6980e6cf90b584e96255293affc019ebca9ad561
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 4a77060661cb0d71b0209cbcdeba23ffc2c6e5c7
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57369320"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59088577"
 ---
 # <a name="code-behind-and-xaml-in-wpf"></a>WPF의 코드 숨김 및 XAML
 <a name="introduction"></a> 코드 숨김 태그 정의 된 개체와 결합 되는 코드를 설명 하는 용어는 때를 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 페이지는 태그 컴파일된 합니다. 이 항목에서는 코드에 대 한 대체 인라인 코드 메커니즘 및 코드 숨김에 대 한 요구 사항 설명 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]합니다.  
   
  이 항목에는 다음과 같은 단원이 포함되어 있습니다.  
   
--   [필수 조건](#Prerequisites)  
+-   [전제 조건](#Prerequisites)  
   
 -   [코드 숨김 및 XAML 언어](#codebehind_and_the_xaml_language)  
   
@@ -59,7 +59,8 @@ ms.locfileid: "57369320"
  인라인 코드의 사용을 제한 하거나 방지를 고려해 야 합니다. 아키텍처 및 코딩 개념 측면에서 태그와 코드 숨김 간의 분리를 유지 관리 하는 유지 디자이너와 개발자 역할 훨씬 고유 합니다. 자세한 기술 수준에서 인라인 코드에 작성 하는 코드 좋지 않을 수 있습니다를 작성 하려면 항상 쓸 때문에 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 생성 된 partial 클래스 및 기본 XML 네임 스페이스 매핑을 사용할 수 있습니다. 추가할 수 없으므로 `using` 문, 정규화 해야 많은 [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] 를 호출 하 합니다. 기본값 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 전부는 아니지만 대부분의 매핑을 포함 [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] 에 있는 네임 스페이스는 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 어셈블리 형식 및 다른 CLR 네임 스페이스 내에 포함 된 멤버에 대 한 호출을 정규화 해야 합니다. 도 정의할 수 없습니다 partial 클래스 이외의 다른 항목에서 인라인 코드를 참조 하는 모든 사용자 코드 엔터티 멤버 또는 변수로 생성 된 partial 클래스 내에 있어야 합니다. 다른 언어 프로그래밍 같은 특정 기능이 매크로 또는 `#ifdef` 전역 변수 또는 빌드 변수 로부터 사용할 수 없는 합니다. 자세한 내용은 [X:code 내장 XAML 형식](../../xaml-services/x-code-intrinsic-xaml-type.md)합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [XAML 개요(WPF)](xaml-overview-wpf.md)
 - [x:Code 내장 XAML 형식](../../xaml-services/x-code-intrinsic-xaml-type.md)
-- [WPF 응용 프로그램 빌드](../app-development/building-a-wpf-application-wpf.md)
+- [WPF 애플리케이션 빌드](../app-development/building-a-wpf-application-wpf.md)
 - [XAML 구문 정보](xaml-syntax-in-detail.md)

@@ -12,12 +12,12 @@ helpviewer_keywords:
 - groups
 - groups [Windows Forms], in Windows Forms controls
 ms.assetid: 610416a1-8da4-436c-af19-5f19e654769b
-ms.openlocfilehash: a14d4560a229e62bc0759b6b4eab8087eb53f030
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: f616436671da449e4f7b47c0a5d0c1b576584a1a
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57722960"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59312308"
 ---
 # <a name="how-to-group-items-in-a-windows-forms-listview-control"></a>방법: Windows Forms ListView 컨트롤에서 항목 그룹화
 그룹화 기능을 사용 하 여는 <xref:System.Windows.Forms.ListView> 컨트롤 그룹의 관련된 항목 집합을 표시할 수 있습니다. 이러한 그룹은 화면에서 그룹 제목을 포함 하는 행 그룹 머리글에 의해 구분 됩니다. 사용할 수 있습니다 <xref:System.Windows.Forms.ListView> 그룹 날짜 또는 기타 논리 그룹으로 항목을 사전순으로 그룹화 하 여 보다 쉽게 긴 목록 이동 되도록 합니다. 다음 이미지에서는 일부 그룹화 된 항목을 보여 줍니다.  
@@ -32,14 +32,14 @@ ListView 항목 그룹화
   
 ### <a name="to-add-groups"></a>그룹을 추가 하려면  
   
-1.  <xref:System.Windows.Forms.ListViewGroupCollection.Add%2A> 컬렉션의 <xref:System.Windows.Forms.ListView.Groups%2A> 메서드를 사용합니다.  
+1. <xref:System.Windows.Forms.ListViewGroupCollection.Add%2A> 컬렉션의 <xref:System.Windows.Forms.ListView.Groups%2A> 메서드를 사용합니다.  
   
      [!code-csharp[System.Windows.Forms.ListViewLegacyTopics#21](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ListViewLegacyTopics/CS/Class1.cs#21)]
      [!code-vb[System.Windows.Forms.ListViewLegacyTopics#21](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ListViewLegacyTopics/VB/Class1.vb#21)]  
   
 ### <a name="to-remove-groups"></a>그룹을 제거 하려면  
   
-1.  사용 된 <xref:System.Windows.Forms.ListViewGroupCollection.RemoveAt%2A> 또는 <xref:System.Windows.Forms.ListViewGroupCollection.Clear%2A> 메서드의 <xref:System.Windows.Forms.ListView.Groups%2A> 컬렉션입니다.  
+1. 사용 된 <xref:System.Windows.Forms.ListViewGroupCollection.RemoveAt%2A> 또는 <xref:System.Windows.Forms.ListViewGroupCollection.Clear%2A> 메서드의 <xref:System.Windows.Forms.ListView.Groups%2A> 컬렉션입니다.  
   
      합니다 <xref:System.Windows.Forms.ListViewGroupCollection.RemoveAt%2A> 메서드는 단일 그룹을 제거, <xref:System.Windows.Forms.ListViewGroupCollection.Clear%2A> 메서드 목록에서 모든 그룹을 제거 합니다.  
   
@@ -51,15 +51,16 @@ ListView 항목 그룹화
   
 ### <a name="to-assign-items-to-groups-or-move-items-between-groups"></a>항목 그룹을 할당 하거나 항목 그룹 사이 이동  
   
-1.  설정 된 <xref:System.Windows.Forms.ListViewItem.Group%2A?displayProperty=nameWithType> 개별 항목의 속성입니다.  
+1. 설정 된 <xref:System.Windows.Forms.ListViewItem.Group%2A?displayProperty=nameWithType> 개별 항목의 속성입니다.  
   
      [!code-csharp[System.Windows.Forms.ListViewLegacyTopics#23](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ListViewLegacyTopics/CS/Class1.cs#23)]
      [!code-vb[System.Windows.Forms.ListViewLegacyTopics#23](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ListViewLegacyTopics/VB/Class1.vb#23)]  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Windows.Forms.ListView>
 - <xref:System.Windows.Forms.ListView.Groups%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.ListViewGroup>
 - [ListView 컨트롤](listview-control-windows-forms.md)
 - [ListView 컨트롤 개요](listview-control-overview-windows-forms.md)
-- [방법: Windows Forms ListView 컨트롤을 사용 하 여 항목 추가 및 제거](how-to-add-and-remove-items-with-the-windows-forms-listview-control.md)
+- [방법: Windows Forms ListView 컨트롤을 사용하여 항목 추가 및 제거](how-to-add-and-remove-items-with-the-windows-forms-listview-control.md)

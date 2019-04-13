@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f15e4c9b2421b9d2cafdbabf5f9ca12d1b8b9493
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 64d7f138094e03ca76ec78a50a6f37aa3d9ca2f0
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57492703"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59091735"
 ---
 # <a name="isymunmanagedreadergetmethodsfromdocumentposition-method"></a>ISymUnmanagedReader::GetMethodsFromDocumentPosition 메서드
 문서에서 지정된 된 위치에 중단점을 포함 하는 각 메서드의 배열을 반환 합니다.  
@@ -66,4 +66,5 @@ HRESULT GetMethodsFromDocumentPosition (
  **헤더:** CorSym.idl, CorSym.h  
   
 ## <a name="see-also"></a>참고자료
+
 - [ISymUnmanagedReader 인터페이스](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)

@@ -2,12 +2,12 @@
 title: WCF 개발 도구 사용
 ms.date: 03/30/2017
 ms.assetid: 054adb87-c244-4d5a-83d1-0b2b44bd454b
-ms.openlocfilehash: e9a398ac6914582d299658e3e45d17ea5468917d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1ffa3be4a6b8976ab978ea995e8b2c1faaacf0ae
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54712092"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59144640"
 ---
 # <a name="using-the-wcf-development-tools"></a>WCF 개발 도구 사용
 이 섹션에서는 WCFservice 개발을 활용할 수 있는 Visual Studio 개발 도구를 설명 합니다.  
@@ -43,6 +43,7 @@ netsh http add urlacl url=http://+:8001/MyService user=<domain>\<user>
  Netsh.exe에 대 한 자세한 내용은 참조 하세요. [Netsh.exe 도구 및 명령줄 스위치를 사용 하는 방법을](https://go.microsoft.com/fwlink/?LinkId=97877)합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [WCF Visual Studio 템플릿](../../../docs/framework/wcf/wcf-vs-templates.md)
 - [WCF 서비스 호스트(WcfSvcHost.exe)](../../../docs/framework/wcf/wcf-service-host-wcfsvchost-exe.md)
 - [WCF 테스트 클라이언트(WcfTestClient.exe)](../../../docs/framework/wcf/wcf-test-client-wcftestclient-exe.md)

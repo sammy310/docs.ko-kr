@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c4c3487f39d4f4c667ec9eb4705e17ccf29d9a4c
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 4352d006c95a5b85341625220e6c7e62a86b482a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57490387"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59178089"
 ---
 # <a name="functiontailcall3withinfo-function"></a>FunctionTailcall3WithInfo 함수
 현재 실행 중인 함수를 다른 함수에 대 한 마무리 호출이 수행 하려고 하는 프로파일러에 알립니다 및 전달할 수 있는 핸들을 제공 합니다 [ICorProfilerInfo3::GetFunctionTailcall3Info 메서드](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-getfunctiontailcall3info-method.md) 를 검색 하는 스택 프레임입니다.  
@@ -66,6 +66,7 @@ void __stdcall FunctionTailcall3WithInfo(
  **.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>참고자료
+
 - [FunctionEnter3](../../../../docs/framework/unmanaged-api/profiling/functionenter3-function.md)
 - [FunctionLeave3](../../../../docs/framework/unmanaged-api/profiling/functionleave3-function.md)
 - [FunctionTailcall3](../../../../docs/framework/unmanaged-api/profiling/functiontailcall3-function.md)

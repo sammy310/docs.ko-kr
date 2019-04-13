@@ -2,17 +2,16 @@
 title: F# 형식
 description: 에 사용 되는 유형에 대해 알아봅니다 F# 방법과 F# 형식 이름이 지정 되 고 설명 합니다.
 ms.date: 05/16/2016
-ms.openlocfilehash: bdbb89dc751970ac31fe102df009f0bff6388e52
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: b48376c80b48df210bf7bc699a769d40fec60864
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "33565591"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59193592"
 ---
 # <a name="f-types"></a>F# 형식
 
 이 항목에서 사용 되는 형식에 설명 합니다 F# 방법과 F# 형식 이름이 지정 되 고 설명 합니다.
-
 
 ## <a name="summary-of-f-types"></a>요약 F# 형식
 일부 형식으로 간주 됩니다 *기본 형식*를 부울 형식과 같은 `bool` 및 바이트 및 문자 형식을 포함 하는 다양 한 크기의 정수 계열 및 부동 소수점 형식입니다. 이러한 형식에 설명 되어 있습니다 [기본 형식](primitive-types.md)합니다.
@@ -27,34 +26,30 @@ ms.locfileid: "33565591"
 
 F#염두에서 함수형 프로그래밍을 사용 하 여 설계 된 유용한 컬렉션 형식을 제공 합니다. 이 컬렉션 형식을 사용 스타일의 기능 보다는 코드를 작성할 수 있습니다. 자세한 내용은 [ F# 컬렉션 형식](fsharp-collection-types.md)합니다.
 
-
 ## <a name="syntax-for-types"></a>형식에 대 한 구문
 F# 코드를 자주 작성 해야 할 형식 이름을 확인 해야 합니다. 모든 형식에는 구문 형식 및 형식 주석을, 추상 메서드 선언, 대리자 선언, 서명 및 다른 구문에 이러한 구문 형식을 사용 합니다. 인터프리터에서 새 프로그램 구문의 선언할 때마다 인터프리터는 해당 형식에 대 한 구문 및 구문 이름을 인쇄 합니다. 이 구문은 사용자 정의 형식에 대 한 식별자로만 또는 기본 제공 식별자와 이러한 수 있습니다 `int` 또는 `string`, 보다 복잡 한 형식에 대 한 구문은 복잡 하지만 합니다.
 
 다음 표에서 구문에 대 한 측면을 보여 줍니다. F# 형식입니다.
 
-
-
 |형식|형식 구문|예제|
 |----|-----------|--------|
 |기본 형식|*type-name*|`int`<br /><br />`float`<br /><br />`string`|
 |집계 유형 (클래스, 구조체, 공용 구조체, 레코드, 열거형 및 등)|*type-name*|`System.DateTime`<br /><br />`Color`|
-|형식 약어|*형식 약어-이름*|`bigint`|
-|정규화 된 형식|*namespaces.type 이름*<br /><br />또는<br /><br />*modules.type 이름*<br /><br />또는<br /><br />*namespaces.modules.type 이름*|`System.IO.StreamWriter`|
-|array|*형식 이름*또는<br /><br />*형식 이름* 배열|`int[]`<br /><br />`array<int>`<br /><br />`int array`|
-|2 차원 배열|*형식 이름*[,]|`int[,]`<br /><br />`float[,]`|
-|3 차원 배열|*형식 이름*[,]|`float[,,]`|
+|형식 약어|*type-abbreviation-name*|`bigint`|
+|정규화 된 형식|*namespaces.type-name*<br /><br />또는<br /><br />*modules.type-name*<br /><br />또는<br /><br />*namespaces.modules.type-name*|`System.IO.StreamWriter`|
+|array|*type-name*[] or<br /><br />*type-name* array|`int[]`<br /><br />`array<int>`<br /><br />`int array`|
+|2 차원 배열|*type-name*[,]|`int[,]`<br /><br />`float[,]`|
+|3 차원 배열|*type-name*[,,]|`float[,,]`|
 |tuple|*형식 name1* &#42; *형식-name2* 하는 중...|예를 들어 `(1,'b',3)` 형식이 `int * char * int`|
-|제네릭 형식(generic type)|*형식 매개 변수* *제네릭 형식 이름*<br /><br />또는<br /><br />*제네릭 형식 이름을*&lt;*형식-매개 변수-목록*&gt;|`'a list`<br /><br />`list<'a>`<br /><br />`Dictionary<'key, 'value>`|
-|생성 된 형식 (제공 되는 특정 형식 인수가 있는 제네릭 형식)|*형식 인수* *제네릭 형식 이름*<br /><br />또는<br /><br />*제네릭 형식 이름을*&lt;*형식 인수 목록*&gt;|`int option`<br /><br />`string list`<br /><br />`int ref`<br /><br />`option<int>`<br /><br />`list<string>`<br /><br />`ref<int>`<br /><br />`Dictionary<int, string>`|
-|단일 매개 변수가 있는 함수 형식|*매개 변수-type1*  - &gt; *반환 형식*|사용 하는 함수는 `int` 반환을 `string` 형식이 `int -> string`|
-|여러 매개 변수가 있는 함수 형식|*매개 변수-type1*  - &gt; *매개 변수-type2*  - &gt; ...-&gt; *반환 형식*|사용 하는 함수는 `int` 와 `float` 반환을 `string` 형식이 `int -> float -> string`|
-|매개 변수로 고차 함수|(*함수 형식*)|`List.map` 형식이 `('a -> 'b) -> 'a list -> 'b list`|
+|제네릭 형식(generic type)|*type-parameter* *generic-type-name*<br /><br />또는<br /><br />*generic-type-name*&lt;*type-parameter-list*&gt;|`'a list`<br /><br />`list<'a>`<br /><br />`Dictionary<'key, 'value>`|
+|생성 된 형식 (제공 되는 특정 형식 인수가 있는 제네릭 형식)|*type-argument* *generic-type-name*<br /><br />또는<br /><br />*generic-type-name*&lt;*type-argument-list*&gt;|`int option`<br /><br />`string list`<br /><br />`int ref`<br /><br />`option<int>`<br /><br />`list<string>`<br /><br />`ref<int>`<br /><br />`Dictionary<int, string>`|
+|단일 매개 변수가 있는 함수 형식|*parameter-type1* -&gt; *return-type*|사용 하는 함수는 `int` 반환을 `string` 형식이 `int -> string`|
+|여러 매개 변수가 있는 함수 형식|*parameter-type1* -&gt; *parameter-type2* -&gt; ... -&gt; *return-type*|사용 하는 함수는 `int` 와 `float` 반환을 `string` 형식이 `int -> float -> string`|
+|매개 변수로 고차 함수|(*function-type*)|`List.map` 형식이 `('a -> 'b) -> 'a list -> 'b list`|
 |대리자(delegate)|대리자 *함수 형식*|`delegate of unit -> int`|
-|유연한 형식|#*형식 이름*|`#System.Windows.Forms.Control`<br /><br />`#seq<int>`|
+|유연한 형식|#*type-name*|`#System.Windows.Forms.Control`<br /><br />`#seq<int>`|
 
 ## <a name="related-topics"></a>관련 항목
-
 
 |항목|설명|
 |-----|-----------|

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cf7480eaa0fa38651d139a2fa9d533b43dbdce1b
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 795392bc50d4b7c5eeb82b98230a52156f273f15
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57496471"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59187371"
 ---
 # <a name="icordebugcreateprocess-method"></a>ICorDebug::CreateProcess 메서드
 디버거의 제어 기본 스레드 및 프로세스를 시작합니다.  
@@ -102,4 +102,5 @@ HRESULT CreateProcess (
  **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>참고자료
+
 - [ICorDebug 인터페이스](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)

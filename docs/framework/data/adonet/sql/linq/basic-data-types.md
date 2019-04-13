@@ -2,12 +2,12 @@
 title: 기본 데이터 형식
 ms.date: 03/30/2017
 ms.assetid: eca2c472-9548-4800-bd31-5d8d9f11752b
-ms.openlocfilehash: b05bc69bdd6eea15806b8d928487da2c3f6503b5
-ms.sourcegitcommit: 4a8c2b8d0df44142728b68ebc842575840476f6d
+ms.openlocfilehash: 00d5c6d866453fe9ece7f2e22a579aa43c09c23e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/28/2019
-ms.locfileid: "58545704"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59072885"
 ---
 # <a name="basic-data-types"></a>기본 데이터 형식
 LINQ to SQL 쿼리는 Microsoft SQL Server에서 실행되기 전에 Transact-SQL로 변환됩니다. 따라서 LINQ to SQL에서는 SQL Server에서 기본 데이터 형식에 대해 지원하는 기본 제공 함수 대부분을 지원합니다.  
@@ -23,5 +23,6 @@ LINQ to SQL 쿼리는 Microsoft SQL Server에서 실행되기 전에 Transact-SQ
 -   연산자가 같습니다. `IS` 상속 매핑을 사용 하는 경우 연산자는 지원 되는 번역 합니다. 개체가 특정 엔터티 형식인지 여부를 확인하기 위해 판별자 열을 직접 테스트하는 대신에 사용되어 판별자 열에 대한 확인으로 변환됩니다. Visual Basic에 대 한 자세한 내용은 및 C# 연산자는 참조 [Is 연산자](~/docs/visual-basic/language-reference/operators/is-operator.md) 하 고 [은](~/docs/csharp/language-reference/keywords/is.md).  
   
 ## <a name="see-also"></a>참고자료
+
 - [SQL-CLR 형식 매핑](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mapping.md)
 - [데이터 형식 및 함수](../../../../../../docs/framework/data/adonet/sql/linq/data-types-and-functions.md)

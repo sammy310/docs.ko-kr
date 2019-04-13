@@ -8,12 +8,12 @@ helpviewer_keywords:
 - animation [WPF], objects along paths (matrix animation)
 - matrix animation [WPF]
 ms.assetid: 7000e697-1414-468c-b915-cf66062fc49e
-ms.openlocfilehash: c0c4f1fad5ab6b8d30e6809aa866b4629d08af23
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: ab15126680b7d8c6936246a7dae2f67c7541233b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57363737"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59190927"
 ---
 # <a name="how-to-animate-an-object-along-a-path-matrix-animation"></a>방법: 경로를 따라 개체에 애니메이션 효과 주기(Matrix 애니메이션)
 사용 하는 방법을 보여 주는이 예제는 <xref:System.Windows.Media.Animation.MatrixAnimationUsingPath> 클래스에서 정의 된 경로 따라 개체에 애니메이션 효과를 <xref:System.Windows.Media.PathGeometry>합니다.  
@@ -35,6 +35,7 @@ ms.locfileid: "57363737"
  전체 샘플을 참조 하세요 [경로 애니메이션 샘플](https://go.microsoft.com/fwlink/?LinkID=160028)합니다. 기하학적 경로 대 한 자세한 내용은 참조는 [기 하 도형 개요](geometry-overview.md)합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [애니메이션 개요](animation-overview.md)
 - [경로 애니메이션 샘플](https://go.microsoft.com/fwlink/?LinkID=160028)
 - [경로 애니메이션 방법 항목](path-animation-how-to-topics.md)

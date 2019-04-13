@@ -1,5 +1,5 @@
 ---
-title: '방법: Windows Form에 텍스트 그리기'
+title: '방법: Windows Form에서 텍스트 그리기'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - forms [Windows Forms], drawing text
 - text [Windows Forms], drawing
 ms.assetid: 5d2447a9-21a1-4adc-b954-5516f2bb9b2c
-ms.openlocfilehash: ed7aa89c3bd3751ed93f5bda33a26a8309d39143
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: ae7749deedba03f0a63bb74099d071d5da4fe27e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57703506"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59172980"
 ---
-# <a name="how-to-draw-text-on-a-windows-form"></a>방법: Windows Form에 텍스트 그리기
+# <a name="how-to-draw-text-on-a-windows-form"></a>방법: Windows Form에서 텍스트 그리기
 다음 코드 예제를 사용 하는 방법을 보여 줍니다 합니다 <xref:System.Drawing.Graphics.DrawString%2A> 메서드는 <xref:System.Drawing.Graphics> 폼에 텍스트를 그리는 합니다. 사용할 수 있습니다 <xref:System.Windows.Forms.TextRenderer> 폼에 텍스트를 그리기 위한 합니다. 자세한 내용은 [방법: GDI 사용 하 여 텍스트 그리기](how-to-draw-text-with-gdi.md)합니다.  
   
 ## <a name="example"></a>예제  
@@ -33,6 +33,7 @@ ms.locfileid: "57703506"
 -   Arial 글꼴이 설치 되지 않았습니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Drawing.Graphics.DrawString%2A>
 - <xref:System.Windows.Forms.TextRenderer.DrawText%2A>
 - <xref:System.Drawing.StringFormat.FormatFlags%2A>
@@ -40,4 +41,4 @@ ms.locfileid: "57703506"
 - <xref:System.Windows.Forms.TextFormatFlags>
 - <xref:System.Windows.Forms.Control.OnPaint%2A>
 - [그래픽 프로그래밍 시작](getting-started-with-graphics-programming.md)
-- [방법: GDI 사용 하 여 텍스트 그리기](how-to-draw-text-with-gdi.md)
+- [방법: GDI를 사용하여 텍스트 그리기](how-to-draw-text-with-gdi.md)

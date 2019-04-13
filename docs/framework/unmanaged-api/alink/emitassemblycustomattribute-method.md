@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 69914bce7ed322d90cfbd03dd611e2b745dfe066
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 67073f04cfe981dd383369029d9a4b436929a0a6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57470040"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59117847"
 ---
 # <a name="emitassemblycustomattribute-method"></a>EmitAssemblyCustomAttribute 메서드
 어셈블리 수준 사용자 지정 특성을 설정 하려면 호출 합니다.  
@@ -70,6 +70,7 @@ HRESULT EmitAssemblyCustomAttribute(
  Alink.h 필요  
   
 ## <a name="see-also"></a>참고자료
+
 - [IALink 인터페이스](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
 - [IALink2 인터페이스](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
 - [ALink API](../../../../docs/framework/unmanaged-api/alink/index.md)

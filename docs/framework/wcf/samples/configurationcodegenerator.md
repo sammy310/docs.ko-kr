@@ -2,12 +2,12 @@
 title: ConfigurationCodeGenerator
 ms.date: 03/30/2017
 ms.assetid: 3913aae8-165f-4014-9262-7fe426f90cb2
-ms.openlocfilehash: a481fe1e3c3aedd74f0e1546259b4eeeb9bed118
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 97197926db0b44f1ad36e2eba6ab6bec42eced33
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58821935"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59342013"
 ---
 # <a name="configurationcodegenerator"></a>ConfigurationCodeGenerator
 ConfigurationCodeGenerator는 구성 시스템에 사용자 지정 채널 구현을 노출하는 데 사용할 수 있는 도구입니다. 이를 통해 사용자 지정 채널의 사용자가 `NetTcpBinding`을 사용하여 `TcpTransportBindingElement` 등의 시스템 제공 바인딩이나 사용자 지정 바인딩을 구성하는 것과 같은 방법으로 .config 파일을 사용하여 채널을 구성할 수 있습니다.  
@@ -16,13 +16,13 @@ ConfigurationCodeGenerator는 구성 시스템에 사용자 지정 채널 구현
   
 ### <a name="to-build-the-tool"></a>도구를 빌드하려면  
   
-1.  지침에 따라 솔루션을 빌드하려면 [Building Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)합니다.  
+1. 지침에 따라 솔루션을 빌드하려면 [Building Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)합니다.  
   
-2.  솔루션을 빌드하면 하나의 파일을 생성 합니다. ConfigurationCodeGenerator.exe. SampleRun.cmd 파일에는이 도구에 대 한 클래스를 사용 하는 방법을 보여 주는 샘플 명령줄을 [전송 합니다. UDP](../../../../docs/framework/wcf/samples/transport-udp.md) 샘플입니다.  
+2. 솔루션을 빌드하면 하나의 파일을 생성 합니다. ConfigurationCodeGenerator.exe. SampleRun.cmd 파일에는이 도구에 대 한 클래스를 사용 하는 방법을 보여 주는 샘플 명령줄을 [전송 합니다. UDP](../../../../docs/framework/wcf/samples/transport-udp.md) 샘플입니다.  
   
 ### <a name="to-run-the-tool"></a>도구를 실행하려면  
   
-1.  사용자 지정 `BindingElement` 형식과 사용자 지정 `Binding` 형식이 모두 있는 경우 명령 프롬프트에서 다음을 입력합니다.  
+1. 사용자 지정 `BindingElement` 형식과 사용자 지정 `Binding` 형식이 모두 있는 경우 명령 프롬프트에서 다음을 입력합니다.  
   
     ```  
     ConfigurationCodeGenerator.exe /be:YourCustomBindingElementTypeName /sb:YourCustomStdBindingTypeName /dll:TheAssemblyWhereTheseTypesAreDefined  
@@ -49,4 +49,3 @@ ConfigurationCodeGenerator는 구성 시스템에 사용자 지정 채널 구현
          /Sb을 지정 하는 경우: 옵션은 CodeToAddTo\<*YourStdBinding*> 표준 바인딩을 구현 하는 클래스에 수동으로 추가 해야 하는 코드가 있습니다.  
   
      SampleConfig.xml 파일에는 이전의 1단계 또는 2단계에 정의된 처리기를 등록하는 구성 파일에 추가해야 할 구성 코드가 포함되어 있습니다.  
-  

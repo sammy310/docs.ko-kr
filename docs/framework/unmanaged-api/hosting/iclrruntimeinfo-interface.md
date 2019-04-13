@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c4789d5cad8bbb4f7dc6f5fcedc56be3bf74703b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 213fa9fda6b154d4548b4163cc7b5890bfcfb49c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54520193"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59186994"
 ---
 # <a name="iclrruntimeinfo-interface"></a>ICLRRuntimeInfo 인터페이스
 버전, 디렉터리 및 부하 상태를 포함 하 여 특정 공용 언어 런타임 (CLR)에 대 한 정보를 반환 하는 메서드를 제공 합니다. 이 인터페이스는 또한 런타임을 초기화 하지 않고 런타임 관련 기능을 제공 합니다. 여기에 런타임 상대적 [LoadLibrary](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-loadlibrary-method.md) 메서드를 모듈의 특정 런타임 [GetProcAddress](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-getprocaddress-method.md) 메서드를 통해 런타임 제공한 인터페이스는 [GetInterface](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-getinterface-method.md)메서드.  
@@ -53,5 +53,6 @@ ms.locfileid: "54520193"
  **.NET Framework 버전:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>참고자료
+
 - [호스팅 인터페이스](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
 - [호스팅](../../../../docs/framework/unmanaged-api/hosting/index.md)

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 576079e4-debe-4ab5-9204-fcbe2ca7a5e2
-ms.openlocfilehash: bbd70631a365c8687ad9b7ed89639e9041e4366e
-ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
+ms.openlocfilehash: 633aaa4a9540d0895252e56dbeabd97200081fc9
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57845668"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59304404"
 ---
 # <a name="enabling-multiple-active-result-sets"></a>MARS(Multiple Active Result Sets) 사용
 MARS(Multiple Active Result Sets)는 단일 연결에서 여러 배치를 실행할 수 있도록 하는 SQL Server의 기능입니다. SQL Server에 MARS가 활성화되어 있으면 명령 개체를 사용할 때마다 연결에 세션이 추가됩니다.  
@@ -102,15 +102,16 @@ string connectionString = "Data Source=MSSQL1;" +
   
  다음은 이 시나리오를 처리하기 위한 세 가지 옵션입니다.  
   
-1.  판독기를 만든 후 트랜잭션을 시작하여 트랜잭션의 일부가 되지 않도록 합니다. 그러면 모든 업데이트 작업이 고유한 트랜잭션이 됩니다.  
+1. 판독기를 만든 후 트랜잭션을 시작하여 트랜잭션의 일부가 되지 않도록 합니다. 그러면 모든 업데이트 작업이 고유한 트랜잭션이 됩니다.  
   
-2.  판독기가 닫히면 모든 작업을 커밋합니다. 그러면 배치가 상당 부분 업데이트될 수 있습니다.  
+2. 판독기가 닫히면 모든 작업을 커밋합니다. 그러면 배치가 상당 부분 업데이트될 수 있습니다.  
   
-3.  MARS를 사용하는 대신 명령 개체마다 개별 연결을 사용하세요.  
+3. MARS를 사용하는 대신 명령 개체마다 개별 연결을 사용하세요.  
   
 ### <a name="detecting-mars-support"></a>MARS 지원 검색  
  응용 프로그램에서는 `SqlConnection.ServerVersion` 값을 읽어 MARS 지원 여부를 확인할 수 있습니다. SQL Server 2005의 주 번호는 9이고 SQL Server 2008의 주 번호는 10입니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [MARS(Multiple Active Result Sets)](../../../../../docs/framework/data/adonet/sql/multiple-active-result-sets-mars.md)
 - [ADO.NET 관리되는 공급자 및 데이터 집합 개발자 센터](https://go.microsoft.com/fwlink/?LinkId=217917)

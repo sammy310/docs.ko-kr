@@ -1,5 +1,5 @@
 ---
-title: '연습: ListView 및 TreeView 컨트롤이 디자이너를 사용 하 여 된 탐색기 스타일 인터페이스 만들기'
+title: '연습: 디자이너를 사용하여 ListView 및 TreeView 컨트롤에서 탐색기 스타일 인터페이스 만들기'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -13,14 +13,14 @@ helpviewer_keywords:
 - ListView control [Windows Forms], explorer style interface
 - ListView control [Windows Forms], explorer-style interface
 ms.assetid: 9e5e7721-19e2-4890-b273-a43589fe99ff
-ms.openlocfilehash: a849eae086c3507bbaf7050afd2e0496ab5a970e
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 8192151aa7cd5eddd99d39adb485e460074fdb99
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57716987"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59332120"
 ---
-# <a name="walkthrough-creating-an-explorer-style-interface-with-the-listview-and-treeview-controls-using-the-designer"></a>연습: ListView 및 TreeView 컨트롤이 디자이너를 사용 하 여 된 탐색기 스타일 인터페이스 만들기
+# <a name="walkthrough-creating-an-explorer-style-interface-with-the-listview-and-treeview-controls-using-the-designer"></a>연습: 디자이너를 사용하여 ListView 및 TreeView 컨트롤에서 탐색기 스타일 인터페이스 만들기
 Visual Studio의 이점 중 하나는 짧은 시간 안에 전문적으로 보이는 Windows Forms 응용 프로그램을 만들 수 있습니다. 일반적인 시나리오를 사용 하 여 사용자 인터페이스 (UI)를 만드는 것 <xref:System.Windows.Forms.ListView> 및 <xref:System.Windows.Forms.TreeView> 와 비슷한 Windows 운영 체제의 Windows 탐색기 기능을 제어 합니다. Windows 탐색기는 사용자의 컴퓨터에서 파일 및 폴더의 계층 구조를 표시합니다.  
   
 > [!NOTE]
@@ -28,27 +28,27 @@ Visual Studio의 이점 중 하나는 짧은 시간 안에 전문적으로 보�
   
 ### <a name="to-create-the-form-containing-a-listview-and-treeview-control"></a>ListView 및 TreeView 컨트롤이 포함 된 폼을 만들려면  
   
-1.  **파일** 메뉴에서 **새로 만들기**를 가리킨 다음 **프로젝트**를 클릭합니다.  
+1. **파일** 메뉴에서 **새로 만들기**를 가리킨 다음 **프로젝트**를 클릭합니다.  
   
-2.  에 **새 프로젝트** 대화 상자에서 다음을 수행 합니다.  
+2. 에 **새 프로젝트** 대화 상자에서 다음을 수행 합니다.  
   
     1.  범주를 선택 하거나 **Visual Basic** 하거나 **Visual C#** 합니다.  
   
     2.  템플릿 목록에서 선택 **Windows Forms 응용 프로그램**합니다.  
   
-3.  **확인**을 클릭합니다. 새 Windows Forms 프로젝트가 생성 됩니다.  
+3. **확인**을 클릭합니다. 새 Windows Forms 프로젝트가 생성 됩니다.  
   
-4.  추가 된 <xref:System.Windows.Forms.SplitContainer> 컨트롤을 폼 및 설정 해당 <xref:System.Windows.Forms.SplitContainer.Dock%2A> 속성을 <xref:System.Windows.Forms.DockStyle.Fill>입니다.  
+4. 추가 된 <xref:System.Windows.Forms.SplitContainer> 컨트롤을 폼 및 설정 해당 <xref:System.Windows.Forms.SplitContainer.Dock%2A> 속성을 <xref:System.Windows.Forms.DockStyle.Fill>입니다.  
   
-5.  추가 <xref:System.Windows.Forms.ImageList> 라는 `imageList1` 폼을 사용 하 여 두 개의 이미지를 추가 하려면 속성 창: 폴더 이미지 및 문서 이미지를 지정 된 순서로 합니다.  
+5. 추가 <xref:System.Windows.Forms.ImageList> 라는 `imageList1` 폼을 사용 하 여 두 개의 이미지를 추가 하려면 속성 창: 폴더 이미지 및 문서 이미지를 지정 된 순서로 합니다.  
   
-6.  추가 <xref:System.Windows.Forms.TreeView> 라는 컨트롤 `treeview1` 폼에 왼쪽에 배치 하 고는 <xref:System.Windows.Forms.SplitContainer> 컨트롤입니다. 에 대 한 속성 창의 `treeView1` 다음을 수행 합니다.  
+6. 추가 <xref:System.Windows.Forms.TreeView> 라는 컨트롤 `treeview1` 폼에 왼쪽에 배치 하 고는 <xref:System.Windows.Forms.SplitContainer> 컨트롤입니다. 에 대 한 속성 창의 `treeView1` 다음을 수행 합니다.  
   
     1.  <xref:System.Windows.Forms.Control.Dock%2A> 속성을 <xref:System.Windows.Forms.DockStyle.Fill>으로 설정합니다.  
   
-    2.  <xref:System.Windows.Forms.TreeView.ImageList%2A> 속성을 `imagelist1.`로 설정합니다.  
+    2.  설정 된 <xref:System.Windows.Forms.TreeView.ImageList%2A> 속성 `imagelist1.`  
   
-7.  추가 <xref:System.Windows.Forms.ListView> 라는 컨트롤 `listView1` 폼에 오른쪽에 놓습니다는 <xref:System.Windows.Forms.SplitContainer> 제어 합니다. 에 대 한 속성 창의 `listview1` 다음을 수행 합니다.  
+7. 추가 <xref:System.Windows.Forms.ListView> 라는 컨트롤 `listView1` 폼에 오른쪽에 놓습니다는 <xref:System.Windows.Forms.SplitContainer> 제어 합니다. 에 대 한 속성 창의 `listview1` 다음을 수행 합니다.  
   
     1.  <xref:System.Windows.Forms.Control.Dock%2A> 속성을 <xref:System.Windows.Forms.DockStyle.Fill>으로 설정합니다.  
   
@@ -56,9 +56,9 @@ Visual Studio의 이점 중 하나는 짧은 시간 안에 전문적으로 보�
   
     3.  줄임표를 클릭 하 여 ColumnHeader 컬렉션 편집기를 엽니다 (![VisualStudioEllipsesButton 스크린 샷](../media/vbellipsesbutton.png "vbEllipsesButton"))에 <xref:System.Windows.Forms.ListView.Columns%2A> 속성**합니다.** 세 개의 열을 추가 하 고 설정 자신의 <xref:System.Windows.Forms.ColumnHeader.Text%2A> 속성을 `Name`를 `Type`, 및 `Last Modified`, 각각. **확인** 을 클릭하여 대화 상자를 닫습니다.  
   
-    4.  <xref:System.Windows.Forms.ListView.SmallImageList%2A> 속성을 `imageList1.`로 설정합니다.  
+    4.  설정 된 <xref:System.Windows.Forms.ListView.SmallImageList%2A> 속성 `imageList1.`  
   
-8.  채우는 코드를 구현 합니다 <xref:System.Windows.Forms.TreeView> 노드 및 하위 노드를 사용 하 여 합니다. 이 코드를 추가 하 여 `Form1` 클래스입니다.  
+8. 채우는 코드를 구현 합니다 <xref:System.Windows.Forms.TreeView> 노드 및 하위 노드를 사용 하 여 합니다. 이 코드를 추가 하 여 `Form1` 클래스입니다.  
   
      [!code-csharp[System.Windows.Forms.ExplorerStyleInterface#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ExplorerStyleInterface/CS/Form1.cs#1)]
      [!code-vb[System.Windows.Forms.ExplorerStyleInterface#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ExplorerStyleInterface/VB/Form1.vb#1)]  
@@ -94,16 +94,17 @@ Visual Studio의 이점 중 하나는 짧은 시간 안에 전문적으로 보�
 ## <a name="next-steps"></a>다음 단계  
  이 응용 프로그램 사용할 수 있습니다 하는 방법의 예를 제공 <xref:System.Windows.Forms.TreeView> 고 <xref:System.Windows.Forms.ListView> 함께 제어 합니다. 이러한 컨트롤에 대 한 자세한 내용은 다음 항목을 참조 하세요.  
   
--   [방법: TreeView 또는 ListView 컨트롤 (Windows Forms)에 사용자 지정 정보 추가](add-custom-information-to-a-treeview-or-listview-control-wf.md)  
+-   [방법: TreeView 또는 ListView 컨트롤에 사용자 지정 정보 추가(Windows Forms)](add-custom-information-to-a-treeview-or-listview-control-wf.md)  
   
 -   [방법: ListView 컨트롤에 검색 기능 추가](how-to-add-search-capabilities-to-a-listview-control.md)  
   
 -   [방법: TreeView 노드에 바로 가기 메뉴 연결](how-to-attach-a-shortcut-menu-to-a-treeview-node.md)  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Windows.Forms.ListView>
 - <xref:System.Windows.Forms.TreeView>
 - [ListView 컨트롤](listview-control-windows-forms.md)
-- [방법: 추가 하 고 Windows Forms TreeView 컨트롤을 사용 하 여 노드를 제거 합니다.](how-to-add-and-remove-nodes-with-the-windows-forms-treeview-control.md)
-- [방법: Windows Forms ListView 컨트롤을 사용 하 여 항목 추가 및 제거](how-to-add-and-remove-items-with-the-windows-forms-listview-control.md)
+- [방법: Windows Forms TreeView 컨트롤을 사용하여 노드 추가 및 제거](how-to-add-and-remove-nodes-with-the-windows-forms-treeview-control.md)
+- [방법: Windows Forms ListView 컨트롤을 사용하여 항목 추가 및 제거](how-to-add-and-remove-items-with-the-windows-forms-listview-control.md)
 - [방법: Windows Forms ListView 컨트롤에 열 추가](how-to-add-columns-to-the-windows-forms-listview-control.md)

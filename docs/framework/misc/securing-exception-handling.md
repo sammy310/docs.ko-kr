@@ -11,15 +11,15 @@ helpviewer_keywords:
 ms.assetid: 1f3da743-9742-47ff-96e6-d0dd1e9e1c19
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c406edcef393d3c2b9e4cf6dbeee9d572c0951f4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: bc8cd20a4183ffd002f1399b6b50c8956208a21b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54679385"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59173681"
 ---
 # <a name="securing-exception-handling"></a>예외 처리 보안
-Visual c + + 및 Visual Basic에서는 전에 스택에서 추가 필터 식을 실행할 **마지막** 문입니다. **catch** 블록에 연결 된 후 실행 되는 필터는 **마지막으로** 문. 자세한 내용은 [사용자 필터 예외](../../../docs/standard/exceptions/using-user-filtered-exception-handlers.md)합니다. 이 섹션에서는이 주문의 보안 문제를 검사합니다. 필터 문 순서를 보여 주는 다음 의사 코드 예제 및 **마지막** 문을 실행 합니다.  
+시각적 개체의 C++ 하기 전에 Visual Basic의 경우 스택에서 추가 필터 식을 실행 **마지막** 문입니다. **catch** 블록에 연결 된 후 실행 되는 필터는 **마지막으로** 문. 자세한 내용은 [사용자 필터 예외](../../../docs/standard/exceptions/using-user-filtered-exception-handlers.md)합니다. 이 섹션에서는이 주문의 보안 문제를 검사합니다. 필터 문 순서를 보여 주는 다음 의사 코드 예제 및 **마지막** 문을 실행 합니다.  
   
 ```cpp  
 void Main()   
@@ -161,4 +161,5 @@ YourObject.YourMethod()
 ```  
   
 ## <a name="see-also"></a>참고자료
+
 - [보안 코딩 지침](../../../docs/standard/security/secure-coding-guidelines.md)

@@ -2,12 +2,12 @@
 title: 컨텍스트 교환 프로토콜
 ms.date: 03/30/2017
 ms.assetid: 3dfd38e0-ae52-491c-94f4-7a862b9843d4
-ms.openlocfilehash: b1c2b293f8e23f9bc43fba32551233d92666793e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a6bc0ac45282d94a6aea8dbbdb5a7d34163c692e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54494771"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59217005"
 ---
 # <a name="context-exchange-protocol"></a>컨텍스트 교환 프로토콜
 이 섹션에서는.NET Framework 버전 3.5 Windows Communication Foundation (WCF) 릴리스에서 새로 도입 된 컨텍스트 교환 프로토콜을 설명 합니다. 클라이언트 채널에서는 이 프로토콜을 사용하여 서비스에서 제공되는 컨텍스트를 수락하고, 동일한 클라이언트 채널 인스턴스를 통해 보내는 해당 서비스에 대한 모든 후속 요청에 이 컨텍스트를 적용합니다. 컨텍스트 교환 프로토콜 구현의 서버와 클라이언트 간에 컨텍스트를 전파 하는 데 다음 두 메커니즘 중 하나를 사용할 수 있습니다.: HTTP 쿠키 또는 SOAP 헤더입니다.  
@@ -68,4 +68,5 @@ ms.locfileid: "54494771"
     ```  
   
 ## <a name="see-also"></a>참고자료
+
 - [웹 서비스 프로토콜 상호 운용성 가이드](../../../../docs/framework/wcf/feature-details/web-services-protocols-interoperability-guide.md)

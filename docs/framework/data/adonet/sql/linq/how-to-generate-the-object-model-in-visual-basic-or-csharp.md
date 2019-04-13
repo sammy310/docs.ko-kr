@@ -1,13 +1,13 @@
 ---
-title: '방법: Visual Basic의 개체 모델을 생성 또는C#'
+title: '방법: Visual Basic 또는 C#에서 개체 모델 생성'
 ms.date: 03/30/2017
 ms.assetid: a0c73b33-5650-420c-b9dc-f49310c201ee
-ms.openlocfilehash: 2e60905cc7bf30421a48288378b136bad5f7ee83
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 8752a28b9bcfd068afcfc5d33c3097f26cf0f231
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56974604"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59225367"
 ---
 # <a name="how-to-generate-the-object-model-in-visual-basic-or-c"></a>방법: Visual Basic 또는 C에서 개체 모델 생성\#
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]에서 사용자 프로그래밍 언어의 개체 모델은 관계형 데이터베이스에 매핑됩니다. 두 가지 도구는 자동으로 생성 되는 Visual Basic에 사용할 수 있는 또는 C# 기존 데이터베이스의 메타 데이터에서 모델입니다.  
@@ -36,10 +36,11 @@ sqlmetal /code:northwind.cs /language:csharp "c:\northwnd.mdf" /sprocs /function
 ```  
   
 ## <a name="see-also"></a>참고자료
+
 - [프로그래밍 가이드](../../../../../../docs/framework/data/adonet/sql/linq/programming-guide.md)
 - [LINQ to SQL 개체 모델](../../../../../../docs/framework/data/adonet/sql/linq/the-linq-to-sql-object-model.md)
 - [연습으로 학습](../../../../../../docs/framework/data/adonet/sql/linq/learning-by-walkthroughs.md)
-- [방법: 코드 편집기를 사용 하 여 엔터티 클래스 사용자 지정](../../../../../../docs/framework/data/adonet/sql/linq/how-to-customize-entity-classes-by-using-the-code-editor.md)
+- [방법: 코드 편집기를 사용하여 엔터티 클래스 사용자 지정](../../../../../../docs/framework/data/adonet/sql/linq/how-to-customize-entity-classes-by-using-the-code-editor.md)
 - [특성 기반 매핑](../../../../../../docs/framework/data/adonet/sql/linq/attribute-based-mapping.md)
 - [SqlMetal.exe(코드 생성 도구)](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md)
 - [외부 매핑](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md)

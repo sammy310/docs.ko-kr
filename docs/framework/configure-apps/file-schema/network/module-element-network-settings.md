@@ -1,5 +1,5 @@
 ---
-title: <module> 요소(네트워크 설정)
+title: <module> 요소 (네트워크 설정)
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#module
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - module element
 - <module> element
 ms.assetid: 10318725-9666-4d65-ab61-b94c64e59f13
-ms.openlocfilehash: 4658af3f55bddb5f5a748db5366c53f1d2733983
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 0d108f2350d82666e3dc24f0f6854fe64ea4755f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55268199"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59084117"
 ---
 # <a name="module-element-network-settings"></a>\<모듈 > 요소 (네트워크 설정)
 응용 프로그램에 새 프록시 모듈을 추가합니다.  
@@ -73,5 +73,6 @@ ms.locfileid: "55268199"
 ```  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Net.IWebProxy?displayProperty=nameWithType>
 - [네트워크 설정 스키마](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

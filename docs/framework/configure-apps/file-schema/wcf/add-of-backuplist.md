@@ -1,13 +1,13 @@
 ---
-title: <add>의 <backupList>
+title: <add> / <backupList>
 ms.date: 03/30/2017
 ms.assetid: bc5939fc-314a-4ea4-a533-c96958da7173
-ms.openlocfilehash: e61ee275a7e98f13370504f5f15fdbe62a8221bd
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 03bf1bbb8156e4722d987e171d9034747ac6bb61
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55285794"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59089538"
 ---
 # <a name="add-of-backuplist"></a>\<추가 >의 \<backupList >
 백업 엔드포인트 요소를 정의하는 구성 요소를 나타냅니다.  
@@ -49,7 +49,8 @@ ms.locfileid: "55285794"
   
 |요소|설명|  
 |-------------|-----------------|  
-|[\<routing>](../../../../../docs/framework/configure-apps/file-schema/wcf/routing.md)|원하는 경우 기본 끝점에 연결할 수 없습니다를 사용 하도록 라우팅 서비스는 끝점의 목록을 포함 합니다.|  
+|[\<라우팅 >](../../../../../docs/framework/configure-apps/file-schema/wcf/routing.md)|원하는 경우 기본 끝점에 연결할 수 없습니다를 사용 하도록 라우팅 서비스는 끝점의 목록을 포함 합니다.|  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.ServiceModel.Routing.Configuration.BackupEndpointElement?displayProperty=nameWithType>

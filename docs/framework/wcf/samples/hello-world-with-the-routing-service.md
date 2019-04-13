@@ -2,21 +2,21 @@
 title: Hello World 라우팅 서비스
 ms.date: 03/30/2017
 ms.assetid: 0f4b0d5b-6522-4ad5-9f3a-baa78316d7d1
-ms.openlocfilehash: d560a8e871846f608cc90ec2f4f298c0db710e2a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 37d2eaffa1ca5a4cce27c4950d00987828a61196
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54691777"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59329741"
 ---
 # <a name="hello-world-with-the-routing-service"></a>Hello World 라우팅 서비스
 이 샘플에서는 Windows Communication Foundation (WCF) 라우팅 서비스를 보여 줍니다. 라우팅 서비스는 쉽게 응용 프로그램에 내용 기반 라우터를 포함 하는 WCF 구성 요소입니다. 이 샘플에는 라우팅 서비스를 사용 하 여 통신 하도록 표준 WCF 계산기 샘플을 조정 됩니다. 이 샘플에서 계산기 클라이언트는 라우터에 의해 노출된 엔드포인트로 메시지를 보내도록 구성되어 있습니다. 라우팅 서비스는 전송된 모든 메시지를 승인하고 이를 계산기 서비스에 해당하는 엔드포인트에 전달하도록 구성되어 있습니다. 따라서 클라이언트에서 보내는 메시지는 라우터가 받아 실제 계산기 서비스로 다시 라우트합니다. 계산기 서비스에서 보내는 메시지는 다시 라우터로 전송되고 라우터는 이를 다시 계산기 클라이언트에 전달합니다.
 
 ### <a name="to-use-this-sample"></a>이 샘플을 사용하려면
 
-1.  HelloRoutingService.sln을 열고 Visual Studio 2012를 사용 합니다.
+1. HelloRoutingService.sln을 열고 Visual Studio 2012를 사용 합니다.
 
-2.  F5 또는 Ctrl+Shift+B를 누릅니다.
+2. F5 또는 Ctrl+Shift+B를 누릅니다.
 
     > [!NOTE]
     >  F5 키를 누르면 계산기 클라이언트가 자동으로 시작됩니다. Ctrl+Shift+B(빌드)를 누를 경우에는 다음 응용 프로그램을 직접 시작해야 합니다.
@@ -25,7 +25,7 @@ ms.locfileid: "54691777"
     > 2.  계산기 서비스(./CalculatorService/bin/service.exe)
     > 3.  라우팅 서비스(./RoutingService/bin/RoutingService.exe)
 
-3.  Enter 키를 눌러 클라이언트를 시작합니다.
+3. Enter 키를 눌러 클라이언트를 시작합니다.
 
      다음과 같은 내용이 출력됩니다.
 
@@ -58,4 +58,5 @@ ms.locfileid: "54691777"
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\RoutingServices\HelloRoutingService`  
   
 ## <a name="see-also"></a>참고자료
-- [AppFabric 호스팅 및 지 속성 샘플](https://go.microsoft.com/fwlink/?LinkId=193961)
+
+- [AppFabric 호스팅 및 지속성 샘플](https://go.microsoft.com/fwlink/?LinkId=193961)

@@ -25,7 +25,7 @@ ms.locfileid: "58920807"
 
 | | |
 |---------|---------|
-| [COM Interop](../../../visual-basic/programming-guide/com-interop/index.md) | Visual basic에서 COM 개체, ActiveX 컨트롤, Win32 Dll, 관리 되는 개체 및 COM 개체의 상속을 포함 하 여 COM 상호 운용성을 다루는 항목에 대 한 링크를 제공 합니다. |
+| [COM Interop](../../../visual-basic/programming-guide/com-interop/index.md) | Visual Basic에서 COM 개체, ActiveX 컨트롤, Win32 Dll, 관리 되는 개체 및 COM 개체의 상속을 포함 하 여 COM 상호 운용성을 다루는 항목에 대 한 링크를 제공 합니다. |
 | [비관리 코드와의 상호 운용](../../../framework/interop/index.md) | 간단 하 게 관리 및 비관리 코드 간의 상호 작용 문제 중 일부를 설명 하 고 추가 연구에 대 한 링크를 제공 합니다. |
 | [COM 래퍼](../../../framework/interop/com-wrappers.md) | COM 메서드를 호출 하는 관리 되는 코드를 허용 하는 런타임 호출 가능 래퍼 및 COM 클라이언트가.NET 개체 메서드를 호출 하도록 허용 하는 COM 호출 가능 래퍼에 설명 합니다. |
 | [고급 수준의 COM 상호 운용성](../../../framework/interop/index.md) | 래퍼, 예외, 상속, 스레딩, 이벤트, 변환 및 마샬링 관련 하 여 COM 상호 운용성을 다루는 항목에 대 한 링크를 제공 합니다. |

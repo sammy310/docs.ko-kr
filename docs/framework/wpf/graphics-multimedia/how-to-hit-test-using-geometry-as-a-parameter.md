@@ -9,12 +9,12 @@ helpviewer_keywords:
 - visual objects [WPF], hit tests on
 - Geometry objects [WPF], hit tests on visual objects [WPF]
 ms.assetid: 6c8bdbf2-19e0-4fbb-bf89-c1252b2ebc61
-ms.openlocfilehash: 3d6f4190a5b5c8410a6be01d2645df9c123f9ac4
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: 73420d6ae1386676ed900e91b3951df9e0934db8
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58410617"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59100966"
 ---
 # <a name="how-to-hit-test-using-geometry-as-a-parameter"></a>방법: 기하 도형을 매개 변수로 사용하여 적중 테스트
 사용 하 여 시각적 개체에서 적중 횟수 테스트를 수행 하는 방법을 보여 주는이 예제는 <xref:System.Windows.Media.Geometry> 적중 테스트 매개 변수입니다.  
@@ -38,5 +38,6 @@ ms.locfileid: "58410617"
 >  합니다 <xref:System.Windows.Media.HitTestResult> 교차 세부 사항이 때 콜백이 호출 되지 해야 <xref:System.Windows.Media.IntersectionDetail.Empty>합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [시각적 계층에서 적중 테스트](hit-testing-in-the-visual-layer.md)
-- [시각적 요소의 기하 도형 적중 테스트](how-to-hit-test-geometry-in-a-visual.md)
+- [시각적 개체의 기하 도형 적중 테스트](how-to-hit-test-geometry-in-a-visual.md)

@@ -2,12 +2,12 @@
 title: HTTP 인증 이해
 ms.date: 03/30/2017
 ms.assetid: 9376309a-39e3-4819-b47b-a73982b57620
-ms.openlocfilehash: 77fbed8cae070285925bcdc13c76fe28c3cb13cb
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 430b0ddb98514b605178124f331e5152605a2b89
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54525796"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59206397"
 ---
 # <a name="understanding-http-authentication"></a>HTTP 인증 이해
 인증은 클라이언트가 리소스에 액세스할 자격이 있는지 여부를 식별하는 프로세스입니다. HTTP 프로토콜에서는 보안 리소스에 대한 액세스를 협상하기 위해 인증을 지원합니다.  
@@ -36,6 +36,7 @@ ms.locfileid: "54525796"
 -   서버는 WWW-Authentication 헤더에 수락할 준비가 되지 않았거나 보호된 리소스를 제대로 보호하지 않는 스키마를 제공하면 안 됩니다. 클라이언트는 서버에서 제공하는 인증 스키마 중에서 자유롭게 선택할 수 있습니다. 일부 클라이언트는 기본적으로 약한 인증 스키마나 서버 목록의 첫 번째 인증 스키마를 사용합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [전송 보안 개요](../../../../docs/framework/wcf/feature-details/transport-security-overview.md)
 - [전송 보안을 통해 가장 사용](../../../../docs/framework/wcf/feature-details/using-impersonation-with-transport-security.md)
 - [위임 및 가장](../../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md)

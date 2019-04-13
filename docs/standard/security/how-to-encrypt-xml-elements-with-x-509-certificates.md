@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 761f1c66-631c-47af-aa86-ad9c50cfa453
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 060bc53efa175314e00f487776c43124c39f33c0
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 890216fa8cc9915ffa640b6330994c5f1ee2e611
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56970976"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59327336"
 ---
 # <a name="how-to-encrypt-xml-elements-with-x509-certificates"></a>방법: X.509 인증서로 XML 요소 암호화
 <xref:System.Security.Cryptography.Xml> 네임스페이스의 클래스를 사용하여 XML 문서 내의 요소를 암호화할 수 있습니다.  XML 암호화는 데이터가 쉽게 읽혀질 염려 없이 암호화된 XML 데이터를 교환하거나 저장하는 표준 방법입니다.  XML 암호화 표준에 대 한 자세한 내용은 World Wide Web Consortium (W3C) 사양을 참조에 있는 XML 암호화에 대 한 <https://www.w3.org/TR/xmldsig-core/>합니다.  
@@ -36,43 +36,43 @@ ms.locfileid: "56970976"
   
 ### <a name="to-encrypt-an-xml-element-with-an-x509-certificate"></a>X.509 인증서로 XML 요소를 암호화하려면  
   
-1.  [인증서 생성 도구(Makecert.exe)](/windows/desktop/SecCrypto/makecert)를 사용하여 테스트 X.509 인증서를 생성하고 로컬 사용자 저장소에 넣습니다.  교환 키를 생성해야 하며 키를 내보낼 수 있도록 설정해야 합니다. 다음 명령을 실행합니다.  
+1. [인증서 생성 도구(Makecert.exe)](/windows/desktop/SecCrypto/makecert)를 사용하여 테스트 X.509 인증서를 생성하고 로컬 사용자 저장소에 넣습니다.  교환 키를 생성해야 하며 키를 내보낼 수 있도록 설정해야 합니다. 다음 명령을 실행합니다.  
   
     ```  
     makecert -r -pe -n "CN=XML_ENC_TEST_CERT" -b 01/01/2005 -e 01/01/2010 -sky exchange -ss my  
     ```  
   
-2.  <xref:System.Security.Cryptography.X509Certificates.X509Store> 개체를 만들고 초기화하여 현재 사용자 저장소를 엽니다.  
+2. <xref:System.Security.Cryptography.X509Certificates.X509Store> 개체를 만들고 초기화하여 현재 사용자 저장소를 엽니다.  
   
      [!code-csharp[HowToEncryptXMLElementX509#2](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToEncryptXMLElementX509/cs/sample.cs#2)]
      [!code-vb[HowToEncryptXMLElementX509#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToEncryptXMLElementX509/vb/sample.vb#2)]  
   
-3.  읽기 전용 모드로 저장소를 엽니다.  
+3. 읽기 전용 모드로 저장소를 엽니다.  
   
      [!code-csharp[HowToEncryptXMLElementX509#3](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToEncryptXMLElementX509/cs/sample.cs#3)]
      [!code-vb[HowToEncryptXMLElementX509#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToEncryptXMLElementX509/vb/sample.vb#3)]  
   
-4.  저장소에 있는 모든 인증서를 사용하여 <xref:System.Security.Cryptography.X509Certificates.X509Certificate2Collection>을 초기화합니다.  
+4. 저장소에 있는 모든 인증서를 사용하여 <xref:System.Security.Cryptography.X509Certificates.X509Certificate2Collection>을 초기화합니다.  
   
      [!code-csharp[HowToEncryptXMLElementX509#4](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToEncryptXMLElementX509/cs/sample.cs#4)]
      [!code-vb[HowToEncryptXMLElementX509#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToEncryptXMLElementX509/vb/sample.vb#4)]  
   
-5.  저장소에 있는 인증서를 열거하고 해당 이름을 가진 인증서를 찾습니다.  이 예제에서 인증서의 이름은 `"CN=XML_ENC_TEST_CERT"`입니다.  
+5. 저장소에 있는 인증서를 열거하고 해당 이름을 가진 인증서를 찾습니다.  이 예제에서 인증서의 이름은 `"CN=XML_ENC_TEST_CERT"`입니다.  
   
      [!code-csharp[HowToEncryptXMLElementX509#5](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToEncryptXMLElementX509/cs/sample.cs#5)]
      [!code-vb[HowToEncryptXMLElementX509#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToEncryptXMLElementX509/vb/sample.vb#5)]  
   
-6.  인증서를 찾은 후 저장소를 닫습니다.  
+6. 인증서를 찾은 후 저장소를 닫습니다.  
   
      [!code-csharp[HowToEncryptXMLElementX509#6](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToEncryptXMLElementX509/cs/sample.cs#6)]
      [!code-vb[HowToEncryptXMLElementX509#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToEncryptXMLElementX509/vb/sample.vb#6)]  
   
-7.  디스크에서 XML 파일을 로드하여 <xref:System.Xml.XmlDocument> 개체를 만듭니다.  <xref:System.Xml.XmlDocument> 개체는 암호화할 XML 요소를 포함합니다.  
+7. 디스크에서 XML 파일을 로드하여 <xref:System.Xml.XmlDocument> 개체를 만듭니다.  <xref:System.Xml.XmlDocument> 개체는 암호화할 XML 요소를 포함합니다.  
   
      [!code-csharp[HowToEncryptXMLElementX509#7](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToEncryptXMLElementX509/cs/sample.cs#7)]
      [!code-vb[HowToEncryptXMLElementX509#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToEncryptXMLElementX509/vb/sample.vb#7)]  
   
-8.  <xref:System.Xml.XmlDocument> 개체에서 지정된 요소를 찾고 암호화할 요소를 나타내는 <xref:System.Xml.XmlElement> 개체를 새로 만듭니다.  이 예제에서는 `"creditcard"` 요소가 암호화됩니다.  
+8. <xref:System.Xml.XmlDocument> 개체에서 지정된 요소를 찾고 암호화할 요소를 나타내는 <xref:System.Xml.XmlElement> 개체를 새로 만듭니다.  이 예제에서는 `"creditcard"` 요소가 암호화됩니다.  
   
      [!code-csharp[HowToEncryptXMLElementX509#8](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToEncryptXMLElementX509/cs/sample.cs#8)]
      [!code-vb[HowToEncryptXMLElementX509#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToEncryptXMLElementX509/vb/sample.vb#8)]  

@@ -1,5 +1,5 @@
 ---
-title: '방법: ListView의 각 항목에 대한 MouseDoubleClick 이벤트 처리'
+title: '방법: ListView에서 각 항목에 대한 MouseDoubleClick 이벤트 처리'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,14 +7,14 @@ dev_langs:
 helpviewer_keywords:
 - ListView controls [WPF], MouseDoubleClick event
 ms.assetid: 81b39369-655a-4585-ac58-4640e5bb8fed
-ms.openlocfilehash: a4a93ffdf7c9cf2737c41a7fd196d8cfff716ea1
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 443e5c620ef5bf240d3e317f0234aac0b29b456f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57377203"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59145082"
 ---
-# <a name="how-to-handle-the-mousedoubleclick-event-for-each-item-in-a-listview"></a>방법: ListView의 각 항목에 대한 MouseDoubleClick 이벤트 처리
+# <a name="how-to-handle-the-mousedoubleclick-event-for-each-item-in-a-listview"></a>방법: ListView에서 각 항목에 대한 MouseDoubleClick 이벤트 처리
 항목에 대해 이벤트를 처리 하는 <xref:System.Windows.Controls.ListView>, 각 이벤트 처리기를 추가 해야 <xref:System.Windows.Controls.ListViewItem>합니다. 경우는 <xref:System.Windows.Controls.ListView> 바인딩된 데이터 원본에 명시적으로 만들지를 <xref:System.Windows.Controls.ListViewItem>, 추가 하 여 각 항목에 대 한 이벤트를 처리할 수 있지만 <xref:System.Windows.EventSetter> 의 스타일을 <xref:System.Windows.Controls.ListViewItem>.  
   
 ## <a name="example"></a>예제  
@@ -33,6 +33,7 @@ ms.locfileid: "57377203"
 >  바인딩하는 것이 일반적 이지만 <xref:System.Windows.Controls.ListView> 데이터 원본에 각 이벤트 처리기를 추가할 스타일을 사용할 수 있습니다 <xref:System.Windows.Controls.ListViewItem> 는 비-데이터 바인딩된 <xref:System.Windows.Controls.ListView> 명시적으로 만드는 하는지 여부에 관계 없이 <xref:System.Windows.Controls.ListViewItem>합니다.  에 대 한 자세한 정보에 대 한 명시적 및 암시적으로 생성 <xref:System.Windows.Controls.ListViewItem> 컨트롤을 참조 하세요. <xref:System.Windows.Controls.ItemsControl>합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Xml.XmlElement>
 - [데이터 바인딩 개요](../data/data-binding-overview.md)
 - [스타일 지정 및 템플릿](styling-and-templating.md)

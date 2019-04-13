@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d0fb4c98ff2c8b071f05b42aefed61485001e97f
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: a6c715183d3ae04130b729a9680335d65959836a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57480327"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59104067"
 ---
 # <a name="isframeworkassembly-function"></a>IsFrameworkAssembly 함수
 지정된 된 어셈블리 관리 되는지 여부를 나타내는 값을 가져옵니다.  
@@ -61,4 +61,5 @@ HRESULT IsFrameworkAssembly (
  **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
   
 ## <a name="see-also"></a>참고자료
+
 - [Fusion 전역 정적 함수](../../../../docs/framework/unmanaged-api/fusion/fusion-global-static-functions.md)

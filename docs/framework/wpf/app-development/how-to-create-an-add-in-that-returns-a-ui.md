@@ -9,19 +9,19 @@ helpviewer_keywords:
 - implementing add-in pipeline segments [WPF]
 - add-in [WPF], returns a UI
 ms.assetid: 57f274b7-4c66-4b72-92eb-81939a393776
-ms.openlocfilehash: bf69a22f60724513122b5f17c5dd55bffc1fe561
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: faed11bb02037ea42b31402d431e1bcdd8b70339
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57364881"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59115754"
 ---
 # <a name="how-to-create-an-add-in-that-returns-a-ui"></a>방법: UI를 반환하는 추가 기능 만들기
 이 예제에서는 WPF 독립 실행형 응용 프로그램 호스트에는 Windows Presentation Foundation (WPF)를 반환 하는 추가 기능을 만드는 방법을 보여 줍니다.  
   
  추가 기능에서 WPF 사용자 컨트롤에 해당 하는 UI를 반환 합니다. 이 사용자 정의 컨트롤의 콘텐츠는 클릭했을 때 메시지 상자를 표시하는 하나의 단추입니다. 독립 실행형 WPF 응용 프로그램 추가 기능에서 호스트 하 고 주 응용 프로그램 창의 콘텐츠로 (추가 기능에서 반환 된) 사용자 정의 컨트롤을 표시 합니다.  
   
- **필수 조건**  
+ **전제 조건**  
   
  이 예제는이 시나리오를 사용 하도록 설정 하는.NET Framework 추가 기능 모델에 WPF 확장을 강조 표시 하 고 다음을 가정 합니다.  
   
@@ -31,8 +31,7 @@ ms.locfileid: "57364881"
   
 ## <a name="example"></a>예제  
  WPF UI를 반환 하는 추가 기능에서 만들려는 각 파이프라인 세그먼트에 추가 하 고 호스트 응용 프로그램에 대 한 특정 코드가 필요 합니다.  
-    
-  
+
 <a name="Contract"></a>   
 ## <a name="implementing-the-contract-pipeline-segment"></a>계약 파이프라인 세그먼트 구현  
  메서드는 UI를 반환 하는 것에 대 한 계약으로 정의 해야 하며 해당 반환 값 형식 이어야 합니다 <xref:System.AddIn.Contract.INativeHandleContract>합니다. 보여 합니다 `GetAddInUI` 메서드는 `IWPFAddInContract` 다음 코드에서 계약입니다.  
@@ -90,5 +89,6 @@ ms.locfileid: "57364881"
  [!code-vb[SimpleAddInReturnsAUISample#GetUICode](~/samples/snippets/visualbasic/VS_Snippets_Wpf/SimpleAddInReturnsAUISample/VisualBasic/Host/MainWindow.xaml.vb#getuicode)]  
   
 ## <a name="see-also"></a>참고자료
+
 - [추가 기능 및 확장성](/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100))
 - [WPF 추가 기능 개요](wpf-add-ins-overview.md)

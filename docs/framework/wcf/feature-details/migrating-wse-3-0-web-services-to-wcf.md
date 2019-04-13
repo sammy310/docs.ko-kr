@@ -2,12 +2,12 @@
 title: WSE 3.0 웹 서비스를 WCF로 마이그레이션
 ms.date: 03/30/2017
 ms.assetid: 7bc5fff7-a2b2-4dbc-86cc-ecf73653dcdc
-ms.openlocfilehash: 30b9d1fa3c8b2123b3a71465f9ccebf722740d0d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a691e8f63e34f60f26d1a96a975dbe062bd59c96
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54668252"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59180611"
 ---
 # <a name="migrating-wse-30-web-services-to-wcf"></a>WSE 3.0 웹 서비스를 WCF로 마이그레이션
 마이그레이션 WSE 3.0 웹 서비스를 Windows Communication Foundation (WCF)의 이점을 성능 향상된 등 지원 추가 전송, 추가 보안 시나리오 및 WS-* 사양입니다. WSE 3.0에서 WCF로 마이그레이션된 웹 서비스는 최대 200% ~ 400% 성능 향상을 경험할 수 있습니다. WCF에서 지 원하는 전송에 대 한 자세한 내용은 참조 하세요. [전송 선택](../../../../docs/framework/wcf/feature-details/choosing-a-transport.md)합니다. WCF를 지 원하는 시나리오의 목록을 참조 하세요 [일반적인 보안 시나리오](../../../../docs/framework/wcf/feature-details/common-security-scenarios.md)합니다. WCF에서 지원 되는 사양의 목록을 참조 하세요 [웹 서비스 프로토콜 상호 운용성 가이드](../../../../docs/framework/wcf/feature-details/web-services-protocols-interoperability-guide.md)합니다.  
@@ -123,7 +123,8 @@ ms.locfileid: "54668252"
  WCF에서 WSE 3.0 사용자 지정 전송에 해당 하는이 채널 확장 합니다. 채널 확장 만들기에 대 한 자세한 내용은 참조 하세요 [채널 계층 확장](../../../../docs/framework/wcf/extending/extending-the-channel-layer.md)합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [기본 프로그래밍 수명 주기](../../../../docs/framework/wcf/basic-programming-lifecycle.md)
 - [사용자 지정 바인딩](../../../../docs/framework/wcf/extending/custom-bindings.md)
-- [방법: SecurityBindingElement를 사용 하 여 사용자 지정 바인딩 만들기](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)
-- [방법: 지정된 된 인증 모드에 대 한 SecurityBindingElement 만들기](../../../../docs/framework/wcf/feature-details/how-to-create-a-securitybindingelement-for-a-specified-authentication-mode.md)
+- [방법: SecurityBindingElement를 사용하여 사용자 지정 바인딩 만들기](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)
+- [방법: 지정된 인증 모드에 대한 SecurityBindingElement 만들기](../../../../docs/framework/wcf/feature-details/how-to-create-a-securitybindingelement-for-a-specified-authentication-mode.md)

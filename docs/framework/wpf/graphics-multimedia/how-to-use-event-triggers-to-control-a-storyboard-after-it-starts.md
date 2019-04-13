@@ -1,19 +1,19 @@
 ---
-title: '방법: Storyboard를 시작한 후 이벤트 트리거를 사용하여 제어'
+title: '방법: 스토리보드가 시작되면 이벤트 트리거를 사용하여 제어'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - triggers [WPF], controlling Storyboards
 - event triggers [WPF], controlling Storyboards
 - Storyboards [WPF], controlling after start
 ms.assetid: 3b115594-6a93-4972-b24d-61aa16f1c15f
-ms.openlocfilehash: d0b25f56caf3f25b6e649c05ecf1cbe50046dd93
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: d444349f8bc9236e1d15f484f35b1326c77e2425
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57362372"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59170653"
 ---
-# <a name="how-to-use-event-triggers-to-control-a-storyboard-after-it-starts"></a>방법: Storyboard를 시작한 후 이벤트 트리거를 사용하여 제어
+# <a name="how-to-use-event-triggers-to-control-a-storyboard-after-it-starts"></a>방법: 스토리보드가 시작되면 이벤트 트리거를 사용하여 제어
 제어 하는 방법을 보여 주는이 예제는 <xref:System.Windows.Media.Animation.Storyboard> 시작 합니다. 시작 하는 <xref:System.Windows.Media.Animation.Storyboard> 를 사용 하 여 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]를 사용 하 여 <xref:System.Windows.Media.Animation.BeginStoryboard>, 개체 및 속성에 애니메이션을 적용 하 고 시작한 다음 스토리 보드에 애니메이션을 배포 하는 합니다. 제공 하는 경우 <xref:System.Windows.Media.Animation.BeginStoryboard> 이름을 지정 하 여 해당 <xref:System.Windows.Media.Animation.BeginStoryboard.Name%2A> 속성을 만들면 제어 가능한 storyboard입니다. 제어할 수 있습니다 다음 대화형으로 스토리 보드 시작 된 후.  
   
  와 함께 다음 스토리 보드 작업을 사용 하 여 <xref:System.Windows.EventTrigger> storyboard를 제어 하는 개체입니다.  
@@ -40,12 +40,13 @@ ms.locfileid: "57362372"
  추가 예제를 보려면 합니다 [애니메이션 예제 갤러리](https://go.microsoft.com/fwlink/?LinkID=159969)합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Windows.Media.Animation.ResumeStoryboard>
 - <xref:System.Windows.Media.Animation.SetStoryboardSpeedRatio>
 - <xref:System.Windows.Media.Animation.SkipStoryboardToFill>
 - <xref:System.Windows.Media.Animation.PauseStoryboard>
 - <xref:System.Windows.Media.Animation.StopStoryboard>
 - <xref:System.Windows.Media.Animation.SeekStoryboard>
-- [대화형 메서드를 사용하여 이미 시작된 Storyboard 제어](how-to-control-a-storyboard-after-it-starts.md)
+- [대화형 메서드를 사용하여 이미 시작된 스토리보드 제어](how-to-control-a-storyboard-after-it-starts.md)
 - [애니메이션 개요](animation-overview.md)
 - [Storyboard 개요](storyboards-overview.md)

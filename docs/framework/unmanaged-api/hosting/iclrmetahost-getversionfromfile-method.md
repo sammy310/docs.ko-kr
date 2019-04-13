@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e1c8f5ea20d00d692e0eea0cba93ec4e73038e8a
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 2a6c7fd48269a3e8291a548b3e13efe5c8e70652
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57497446"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59150815"
 ---
 # <a name="iclrmetahostgetversionfromfile-method"></a>ICLRMetaHost::GetVersionFromFile 메서드
 파일 경로가 지정 된 어셈블리의 원래.net 컴파일 버전을 (메타 데이터에 저장 됨)을 가져옵니다. 이 메서드를 대체 합니다 [GetFileVersion](../../../../docs/framework/unmanaged-api/hosting/getfileversion-function.md) 함수입니다.  
@@ -58,7 +58,7 @@ HRESULT GetVersionFromFile (
 |HRESULT|설명|  
 |-------------|-----------------|  
 |S_OK|메서드가 완료되었습니다.|  
-|E_POINTER|`pwzbuffer` 또는 `pcchBuffer`이 null입니다.|  
+|E_POINTER|`pwzbuffer` 또는 `pcchBuffer` null입니다.|  
 |HRESULT_FROM_WIN32(ERROR_INSUFFICIENT_BUFFER)|버퍼가 너무 작습니다.|  
   
 ## <a name="requirements"></a>요구 사항  
@@ -71,5 +71,6 @@ HRESULT GetVersionFromFile (
  **.NET Framework 버전:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>참고자료
+
 - [ICLRMetaHost 인터페이스](../../../../docs/framework/unmanaged-api/hosting/iclrmetahost-interface.md)
 - [호스팅](../../../../docs/framework/unmanaged-api/hosting/index.md)

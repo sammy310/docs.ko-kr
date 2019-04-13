@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 61660a668e152accee7557c8663e8eec77a953ce
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e2f474317493b3aac421ca1270ff461b97cfe027
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54711683"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59125946"
 ---
 # <a name="icorprofilercallback-interface"></a>ICorProfilerCallback 인터페이스
 코드 프로파일러는 프로파일러가 구독 한 이벤트가 발생할 때 알릴는 CLR (공용 언어 런타임)에서 사용 되는 메서드를 제공 합니다.  
@@ -120,6 +120,7 @@ ms.locfileid: "54711683"
  **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>참고자료
+
 - [프로파일링 인터페이스](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
 - [ICorProfilerCallback2 인터페이스](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-interface.md)
 - [ICorProfilerCallback3 인터페이스](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback3-interface.md)

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - TypeName function
 - objects [Visual Basic], type determining
 ms.assetid: d95e7ad1-cd63-41d6-9a28-d7a1380d49c1
-ms.openlocfilehash: 625ddb8fc153708a80e8cf475f48d595efbe4df2
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 4014bef2e0c27a0f6a684bc1ed95019f392062a5
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58842631"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59302714"
 ---
 # <a name="determining-object-type-visual-basic"></a>개체 형식 확인(Visual Basic)
 일반 개체 변수 (즉, 변수 선언으로 `Object`) 모든 클래스의 개체를에서 저장할 수 있습니다. 형식의 변수를 사용 하는 경우 `Object`, 개체의 클래스를 기반으로 하는 다른 작업을 수행 해야; 예를 들어, 일부 개체 수 지원 하지는 특정 속성 또는 메서드. Visual Basic에서 어떤 유형의 개체를 개체 변수에 저장 됨을 결정 하는 두 가지 방법을 제공 합니다:는 `TypeName` 함수 및 `TypeOf...Is` 연산자입니다.  
@@ -36,11 +36,11 @@ ms.locfileid: "58842631"
   
 #### <a name="to-run-the-example"></a>예제를 실행하려면  
   
-1.  새 Windows 응용 프로그램 프로젝트를 만들고 추가 <xref:System.Windows.Forms.Button> 컨트롤을 <xref:System.Windows.Forms.CheckBox> 컨트롤 및 <xref:System.Windows.Forms.RadioButton> 컨트롤을 폼입니다.  
+1. 새 Windows 응용 프로그램 프로젝트를 만들고 추가 <xref:System.Windows.Forms.Button> 컨트롤을 <xref:System.Windows.Forms.CheckBox> 컨트롤 및 <xref:System.Windows.Forms.RadioButton> 컨트롤을 폼입니다.  
   
-2.  폼에 단추에서 호출 된 `TestObject` 프로시저입니다.  
+2. 폼에 단추에서 호출 된 `TestObject` 프로시저입니다.  
   
-3.  폼에 다음 코드를 추가 합니다.  
+3. 폼에 다음 코드를 추가 합니다.  
   
      [!code-vb[VbVbalrOOP#95](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#95)]  
   
@@ -48,7 +48,7 @@ ms.locfileid: "58842631"
 
 - <xref:Microsoft.VisualBasic.Information.TypeName%2A>
 - [문자열 이름을 사용하여 속성 또는 메서드 호출](../../../../visual-basic/programming-guide/language-features/early-late-binding/calling-a-property-or-method-using-a-string-name.md)
-- [Object 데이터 형식](../../../../visual-basic/language-reference/data-types/object-data-type.md)
+- [Object Data Type](../../../../visual-basic/language-reference/data-types/object-data-type.md)
 - [If...Then...Else 문](../../../../visual-basic/language-reference/statements/if-then-else-statement.md)
 - [String 데이터 형식](../../../../visual-basic/language-reference/data-types/string-data-type.md)
 - [Integer 데이터 형식](../../../../visual-basic/language-reference/data-types/integer-data-type.md)

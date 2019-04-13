@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7b3b29be2bab2d1b4cea5dcec89e31d4720be769
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5cb9aa09447acf28f1ed10ba409ce936cdb4f84a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54576878"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59085040"
 ---
 # <a name="icordebugcode3-interface"></a>ICorDebugCode3 인터페이스
 관리 되는 반환 값에 대 한 정보를 제공 하는 "ICorDebugCode" 및 "ICorDebugCode2"를 확장 하는 메서드를 제공 합니다.  
@@ -47,8 +47,6 @@ ms.locfileid: "54576878"
  **.NET Framework 버전:** [!INCLUDE[net_current_v451plus](../../../../includes/net-current-v451plus-md.md)]  
   
 ## <a name="see-also"></a>참고자료
-
-
 
 - [ICorDebugILFrame3 인터페이스](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe3-interface.md)
 - [디버깅 인터페이스](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

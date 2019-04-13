@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: fd6db0b8-c29c-48ff-b768-31d28e7a148c
-ms.openlocfilehash: 38129996949bcfbd938038743897d1db5910fdfe
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7b8d7cf8ab2335c064062ed3ab4072d81e8042fe
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54653904"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59189120"
 ---
 # <a name="how-to-resolve-conflicts-by-overwriting-database-values"></a>방법: 데이터베이스 값을 덮어써서 충돌 해결
 변경 내용을 전송하기 전에 예상 데이터베이스 값과 실제 데이터베이스 값의 차이점을 조정하려면 <xref:System.Data.Linq.RefreshMode.KeepCurrentValues>를 사용하여 데이터베이스 값을 덮어씁니다. 자세한 내용은 참조 하세요. [낙관적 동시성: 개요](../../../../../../docs/framework/data/adonet/sql/linq/optimistic-concurrency-overview.md)합니다.  
@@ -21,7 +21,7 @@ ms.locfileid: "54653904"
 ## <a name="example"></a>예제  
  이 시나리오에서는 User1이 변경 내용을 전송하려 하는 경우 User2가 그 동안에 Assistant 열과 Department 열을 변경했기 때문에 <xref:System.Data.Linq.ChangeConflictException> 예외가 throw됩니다. 다음 표에서는 상황을 보여 줍니다.  
   
-||Manager|Assistant|Department|  
+||관리자가|Assistant|Department|  
 |------|-------------|---------------|----------------|  
 |User1과 User2가 쿼리했을 때 원래 데이터베이스 상태|Alfreds|Maria|Sales|  
 |User1이 변경 내용 전송 준비|Alfred||Marketing|  
@@ -31,7 +31,7 @@ ms.locfileid: "54653904"
   
  User1이 <xref:System.Data.Linq.RefreshMode.KeepCurrentValues>를 사용하여 문제를 해결하는 경우 데이터베이스의 결과는 다음 테이블과 같습니다.  
   
-||Manager|Assistant|Department|  
+||관리자가|Assistant|Department|  
 |------|-------------|---------------|----------------|  
 |충돌 해결 후 변경된 상태|Alfred<br /><br /> (User1이 전송한 값)|Maria<br /><br /> (원래 값)|Marketing<br /><br /> (User1이 전송한 값)|  
   
@@ -41,4 +41,5 @@ ms.locfileid: "54653904"
  [!code-vb[System.Data.Linq.RefreshMode#2](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/system.data.linq.refreshmode/vb/module1.vb#2)]  
   
 ## <a name="see-also"></a>참고자료
-- [방법: 변경 내용 충돌 관리](../../../../../../docs/framework/data/adonet/sql/linq/how-to-manage-change-conflicts.md)
+
+- [방법: 변경 충돌 관리](../../../../../../docs/framework/data/adonet/sql/linq/how-to-manage-change-conflicts.md)

@@ -2,12 +2,12 @@
 title: <udpBinding>
 ms.date: 03/30/2017
 ms.assetid: fa291901-8340-45c6-9c44-5d9281c70bc3
-ms.openlocfilehash: 1b2c4615445a906d1c48f386288a3d21e1e1f470
-ms.sourcegitcommit: 01ea420eaa4bf76d5fc47673294c8881379b3369
+ms.openlocfilehash: 84a5bc763f898b3d323a6cee468c6e22d27d85a0
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/06/2019
-ms.locfileid: "55758731"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59229604"
 ---
 # <a name="udpbinding"></a>\<udpBinding>
 <xref:System.ServiceModel.UdpBinding> 바인딩을 구성하는 데 사용되는 구성 요소입니다.  
@@ -53,7 +53,7 @@ ms.locfileid: "55758731"
 |`closeTimeout`|닫기 작업을 완료하기 위해 제공된 시간 간격을 지정하는 <xref:System.TimeSpan> 값입니다. 이 값은 <xref:System.TimeSpan.Zero>보다 크거나 같아야 합니다. 기본값은 00:01:00입니다.|  
 |`duplicateMessageHistoryLength`|중복 메시지 기록 길이를 지정하는 정수 값입니다.|  
 |`maxBufferPoolSize`|채널에서 메시지를 수신하는 메시지 버퍼 관리자가 사용하도록 할당된 최대 메모리를 지정하는 정수 값입니다. 기본값은 524288(0x80000)바이트입니다.|  
-|`maxBufferSize`|이 바인딩으로 구성된 끝점에 대해 메시지가 처리되는 동안 해당 메시지를 저장하는 버퍼의 최대 크기(바이트)를 지정하는 정수 값입니다. 기본값은 65,536바이트입니다.|  
+|`maxBufferSize`|이 바인딩으로 구성된 엔드포인트에 대해 메시지가 처리되는 동안 해당 메시지를 저장하는 버퍼의 최대 크기(바이트)를 지정하는 정수 값입니다. 기본값은 65,536바이트입니다.|  
 |`maxPendingMessagesTotalSize`|수신되었으나 개별 채널 인스턴스의 입력 큐에서 아직 제거되지 않은 최대 메시지 수를 지정하는 정수 값입니다.|  
 |`maxReceivedMessageSize`|이 바인딩으로 구성된 채널에서 받을 수 있는 메시지(헤더 포함)의 최대 메시지 크기(바이트)를 정의하는 양의 정수입니다. 수신자에게 너무 큰 메시지를 보낸 발신자에게는 SOAP 오류가 발생합니다. 수신자는 메시지를 삭제하고 추적 로그에 이벤트 항목을 만듭니다. 기본값은 65,536바이트입니다.|  
 |`maxRetransmitCount`|메시지를 재전송하는 최대 횟수를 지정하는 정수 값입니다.|  
@@ -81,7 +81,7 @@ ms.locfileid: "55758731"
  UdpBinding을 사용하면 WCF 서비스가 UDP 전송을 통해 통신할 수 있습니다. 여기서 클라이언트는 서비스에 메시지를 보냅니다 응답을 예상 하지 "fire and forget" 메시지 교환을 허용 합니다.  
   
 ## <a name="example"></a>예제  
- 다음 예제에서는 <<xref:System.ServiceModel.UdpBinding>> 요소를 사용하여 `udpBinding`을 구성하는 방법을 보여 줍니다.  
+ 다음 예제에서는 구성 방법을 보여 줍니다.는 <xref:System.ServiceModel.UdpBinding> 를 사용 하는 <`udpBinding`> 요소.  
   
 ```xml  
 <udpBinding>
@@ -104,6 +104,7 @@ ms.locfileid: "55758731"
 ```  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.ServiceModel.Channels.Binding>
 - <xref:System.ServiceModel.Channels.BindingElement>
 - <xref:System.ServiceModel.BasicHttpBinding>

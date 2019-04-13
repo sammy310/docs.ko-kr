@@ -9,12 +9,12 @@ helpviewer_keywords:
 - WCF Data Services, client library
 - data binding, WCF Data Services
 ms.assetid: b32e1d49-c214-4cb1-867e-88fbb3d08c8d
-ms.openlocfilehash: 1207a25a6718fddf9d18206a4cc09089806edecc
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fb2a7c8e1cf3fbae4c6417dab492343ead991204
+ms.sourcegitcommit: 680a741667cf6859de71586a0caf6be14f4f7793
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54538533"
+ms.lasthandoff: 04/12/2019
+ms.locfileid: "59517878"
 ---
 # <a name="binding-data-to-controls-wcf-data-services"></a>컨트롤에 데이터 바인딩(WCF Data Services)
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]를 사용하면 `ComboBox`, `ListView` 등의 컨트롤을 <xref:System.Data.Services.Client.DataServiceCollection%601> 클래스 인스턴스에 바인딩할 수 있습니다. <xref:System.Collections.ObjectModel.ObservableCollection%601> 클래스에서 상속되는 이 컬렉션에는 [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] 피드의 데이터가 포함됩니다. 이 클래스는 항목이 추가 또는 제거될 때 알림을 제공하는 동적 데이터 컬렉션을 나타냅니다. 인스턴스를 사용 하는 경우 <xref:System.Data.Services.Client.DataServiceCollection%601> 데이터 바인딩에 대 한는 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 하 여 추적 되는 개체가 되도록 이러한 이벤트를 처리 하는 클라이언트 라이브러리는 <xref:System.Data.Services.Client.DataServiceContext> 바인딩된 UI 요소의 데이터와 동기화 된 상태로 유지 합니다.  
@@ -29,21 +29,21 @@ ms.locfileid: "54538533"
   
  다음 예제에서는 제공된 <xref:System.Data.Services.Client.DataServiceCollection%601> 및 관련 주문과 함께 모든 고객을 반환하는 <xref:System.Data.Services.Client.DataServiceContext>를 기반으로 <xref:System.Data.Services.Client.DataServiceQuery%601> 인스턴스를 만드는 방법을 보여 줍니다.  
   
- [!code-csharp[Astoria Northwind Client#CustomersOrders2Binding](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/customerorders2.cs#customersorders2binding)]
- [!code-vb[Astoria Northwind Client#CustomersOrders2Binding](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/customerorders2.vb#customersorders2binding)]  
+ [!code-csharp[Astoria Northwind Client#CustomersOrders2Binding](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/customerorders2.cs#customersorders2binding)]
+ [!code-vb[Astoria Northwind Client#CustomersOrders2Binding](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/customerorders2.vb#customersorders2binding)]  
   
 ## <a name="binding-data-to-windows-presentation-foundation-elements"></a>Windows Presentation Foundation 요소에 데이터 바인딩  
  <xref:System.Data.Services.Client.DataServiceCollection%601> 클래스는 <xref:System.Collections.ObjectModel.ObservableCollection%601> 클래스에서 상속하기 때문에 바인딩에 <xref:System.Collections.ObjectModel.ObservableCollection%601> 클래스를 사용할 때처럼 WPF(Windows Presentation Foundation) 응용 프로그램의 요소 또는 컨트롤에 개체를 바인딩할 수 있습니다. 자세한 내용은 [데이터 바인딩 (Windows Presentation Foundation)](../../../../docs/framework/wpf/data/data-binding-wpf.md)합니다. 데이터 서비스 데이터를 WPF 컨트롤에 바인딩하는 한 가지 방법은 요소의 `DataContext` 속성을 쿼리 결과가 포함된 <xref:System.Data.Services.Client.DataServiceCollection%601> 클래스 인스턴스로 설정하는 것입니다. 이 경우 <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A> 속성을 사용하여 컨트롤의 개체 소스를 설정합니다. <xref:System.Windows.Controls.ItemsControl.DisplayMemberPath%2A> 속성을 사용하면 표시할 바인딩된 개체의 속성을 지정할 수 있습니다. 탐색 속성에서 반환된 관련 개체에 요소를 바인딩하는 경우 <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A> 속성의 정의된 바인딩에 경로를 포함합니다. 이 경로는 부모 컨트롤의 <xref:System.Windows.FrameworkElement.DataContext%2A> 속성에 설정된 루트 개체에 상대적입니다. 다음 예제에서는 <xref:System.Windows.FrameworkElement.DataContext%2A> 요소의 <xref:System.Windows.Controls.StackPanel> 속성을 설정하여 부모 컨트롤을 고객 개체의 <xref:System.Data.Services.Client.DataServiceCollection%601>에 바인딩합니다.  
   
- [!code-csharp[Astoria Northwind Client#MasterDetailBinding](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/customerorderscustom.xaml.cs#masterdetailbinding)]
- [!code-csharp[Astoria Northwind Client#MasterDetailBinding](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/customerorderswpf.xaml.cs#masterdetailbinding)]
- [!code-vb[Astoria Northwind Client#MasterDetailBinding](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/customerorderscustom.xaml.vb#masterdetailbinding)]
- [!code-vb[Astoria Northwind Client#MasterDetailBinding](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/customerorderswpf.xaml.vb#masterdetailbinding)]
- [!code-vb[Astoria Northwind Client#MasterDetailBinding](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/customerorderscustom2.xaml.vb#masterdetailbinding)]  
+ [!code-csharp[Astoria Northwind Client#MasterDetailBinding](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/customerorderscustom.xaml.cs#masterdetailbinding)]
+ [!code-csharp[Astoria Northwind Client#MasterDetailBinding](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/customerorderswpf.xaml.cs#masterdetailbinding)]
+ [!code-vb[Astoria Northwind Client#MasterDetailBinding](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/customerorderscustom.xaml.vb#masterdetailbinding)]
+ [!code-vb[Astoria Northwind Client#MasterDetailBinding](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/customerorderswpf.xaml.vb#masterdetailbinding)]
+ [!code-vb[Astoria Northwind Client#MasterDetailBinding](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/customerorderscustom2.xaml.vb#masterdetailbinding)]  
   
  다음 예제에서는 자식 <xref:System.Windows.Controls.DataGrid> 및 <xref:System.Windows.Controls.ComboBox> 컨트롤의 XAML 바인딩 정의를 보여 줍니다.  
   
- [!code-xaml[Astoria Northwind Client#MasterDetailXaml](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/customerorderswpf.xaml#masterdetailxaml)]  
+ [!code-xaml[Astoria Northwind Client#MasterDetailXaml](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/customerorderswpf.xaml#masterdetailxaml)]  
   
  자세한 내용은 [방법: Windows Presentation Foundation 요소에 데이터 바인딩](../../../../docs/framework/data/wcf/bind-data-to-wpf-elements-wcf-data-services.md)합니다.  
   
@@ -57,16 +57,16 @@ ms.locfileid: "54538533"
   
  다음 예제에서는 <xref:System.Data.Services.Client.DataServiceCollection%601>을 <xref:System.Windows.Forms.ComboBox> 컨트롤에 바인딩합니다.  
   
- [!code-csharp[Astoria Northwind Client#CustomersOrdersDataBindingSpecific](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/customerorders.cs#customersordersdatabindingspecific)]
- [!code-vb[Astoria Northwind Client#CustomersOrdersDataBindingSpecific](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/customerorders.vb#customersordersdatabindingspecific)]  
+ [!code-csharp[Astoria Northwind Client#CustomersOrdersDataBindingSpecific](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/customerorders.cs#customersordersdatabindingspecific)]
+ [!code-vb[Astoria Northwind Client#CustomersOrdersDataBindingSpecific](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/customerorders.vb#customersordersdatabindingspecific)]  
   
  사용 하는 경우는 **서비스 참조 추가** 에서 생성 된 클라이언트 데이터 서비스 클래스를 데이터 소스도 즉 만들어집니다 프로젝트를 생성 하는 대화 상자 기반 <xref:System.Data.Services.Client.DataServiceContext>입니다. 이 데이터 소스를 사용 하 여 UI 요소나 컨트롤에서 항목을 끌어 하면 데이터 서비스에서 데이터를 표시 하는 만들 수 있습니다 합니다 **데이터 원본** 디자이너 창입니다. 이러한 항목은 데이터 소스에 바인딩된 응용 프로그램 UI의 요소가 됩니다. 자세한 내용은 [방법: 프로젝트 데이터 원본을 사용 하 여 데이터를 바인딩할](../../../../docs/framework/data/wcf/how-to-bind-data-using-a-project-data-source-wcf-data-services.md)합니다.  
   
 ## <a name="binding-paged-data"></a>페이징 데이터 바인딩  
  단일 응답 메시지에 반환되는 쿼리된 데이터 양을 제한하도록 데이터 서비스를 구성할 수 있습니다. 자세한 내용은 [데이터 서비스 구성](../../../../docs/framework/data/wcf/configuring-the-data-service-wcf-data-services.md)합니다. 데이터 서비스에서 응답 데이터를 페이징하는 경우 각 응답에 다음 결과 페이지를 반환하는 데 사용되는 링크가 포함됩니다. 자세한 내용은 [지연 콘텐츠 로드](../../../../docs/framework/data/wcf/loading-deferred-content-wcf-data-services.md)합니다. 이 경우 다음 예제와 같이 <xref:System.Data.Services.Client.DataServiceCollection%601.Load%2A> 속성에서 가져온 URI를 전달하여 <xref:System.Data.Services.Client.DataServiceCollection%601>의 <xref:System.Data.Services.Client.DataServiceQueryContinuation.NextLinkUri%2A> 메서드를 호출함으로써 명시적으로 페이지를 로드해야 합니다.  
   
- [!code-csharp[Astoria Northwind Client#BindPagedDataSpecific](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/customerorderswpf3.xaml.cs#bindpageddataspecific)]
- [!code-vb[Astoria Northwind Client#BindPagedDataSpecific](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/customerorderswpf3.xaml.vb#bindpageddataspecific)]  
+ [!code-csharp[Astoria Northwind Client#BindPagedDataSpecific](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/customerorderswpf3.xaml.cs#bindpageddataspecific)]
+ [!code-vb[Astoria Northwind Client#BindPagedDataSpecific](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/customerorderswpf3.xaml.vb#bindpageddataspecific)]  
   
  관련 개체도 유사한 방식으로 로드됩니다. 자세한 내용은 [방법: Windows Presentation Foundation 요소에 데이터 바인딩](../../../../docs/framework/data/wcf/bind-data-to-wpf-elements-wcf-data-services.md)합니다.  
   
@@ -90,9 +90,9 @@ ms.locfileid: "54538533"
   
  다음 예제에서 <xref:System.Collections.Specialized.NotifyCollectionChangedAction.Remove> 작업은 <xref:System.Data.Services.Client.DataServiceContext.DeleteLink%2A> 및 <xref:System.Data.Services.Client.DataServiceContext.DeleteObject%2A> 메서드를 호출하여 삭제된 `Orders_Details` 엔터티에 속하는 `Orders` 엔터티를 제거하도록 사용자 지정됩니다. 이 사용자 지정 작업은 부모 엔터티가 삭제될 때 종속 엔터티가 자동으로 삭제되지 않으므로 수행됩니다.  
   
- [!code-csharp[Astoria Northwind Client#CustomersOrdersDeleteRelated](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/customerorderscustom.xaml.cs#customersordersdeleterelated)]
- [!code-vb[Astoria Northwind Client#CustomersOrdersDeleteRelated](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/customerorderscustom.xaml.vb#customersordersdeleterelated)]
- [!code-vb[Astoria Northwind Client#CustomersOrdersDeleteRelated](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/customerorderscustom2.xaml.vb#customersordersdeleterelated)]  
+ [!code-csharp[Astoria Northwind Client#CustomersOrdersDeleteRelated](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/customerorderscustom.xaml.cs#customersordersdeleterelated)]
+ [!code-vb[Astoria Northwind Client#CustomersOrdersDeleteRelated](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/customerorderscustom.xaml.vb#customersordersdeleterelated)]
+ [!code-vb[Astoria Northwind Client#CustomersOrdersDeleteRelated](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/customerorderscustom2.xaml.vb#customersordersdeleterelated)]  
   
  자세한 내용은 [방법: 데이터 바인딩 동작 사용자 지정](../../../../docs/framework/data/wcf/how-to-customize-data-binding-behaviors-wcf-data-services.md)합니다.  
   
@@ -114,5 +114,6 @@ ms.locfileid: "54538533"
  자세한 내용은 [데이터 서비스 업데이트](../../../../docs/framework/data/wcf/updating-the-data-service-wcf-data-services.md)합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [방법: 수동으로 클라이언트 데이터 서비스 클래스 생성](../../../../docs/framework/data/wcf/how-to-manually-generate-client-data-service-classes-wcf-data-services.md)
 - [방법: 데이터 서비스 참조 추가](../../../../docs/framework/data/wcf/how-to-add-a-data-service-reference-wcf-data-services.md)

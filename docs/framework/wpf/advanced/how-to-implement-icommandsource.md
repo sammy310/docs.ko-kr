@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - ICommandSource interfaces [WPF], implementing
 ms.assetid: 7452dd39-6e11-44bf-806a-31d87f3772ac
-ms.openlocfilehash: 42395d2916d58b2119cfe41ca154f258c3b0ec58
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 218a17f221598ac29213bd28a0f04adb16bc933b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57361462"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59107369"
 ---
 # <a name="how-to-implement-icommandsource"></a>방법: ICommandSource 구현
 이 예제에는 구현 하 여 명령 소스를 만드는 방법을 보여 줍니다 <xref:System.Windows.Input.ICommandSource>합니다.  명령 소스는 명령을 호출 하는 방법을 인식 하는 개체입니다.  합니다 <xref:System.Windows.Input.ICommandSource> 세 가지 멤버를 노출 하는 인터페이스: <xref:System.Windows.Input.ICommandSource.Command%2A>를 <xref:System.Windows.Input.ICommandSource.CommandParameter%2A>, 및 <xref:System.Windows.Input.ICommandSource.CommandTarget%2A>합니다.  <xref:System.Windows.Input.ICommandSource.Command%2A> 호출 되는 명령이입니다. <xref:System.Windows.Input.ICommandSource.CommandParameter%2A> 명령 소스에서 명령을 처리 하는 메서드로 전달 되는 사용자 정의 데이터 형식입니다. <xref:System.Windows.Input.ICommandSource.CommandTarget%2A> 는 명령이 실행 되는 개체입니다.  
@@ -59,6 +59,7 @@ ms.locfileid: "57361462"
  [!code-vb[ImplementICommandSource#ImplementICommandExecute](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ImplementICommandSource/visualbasic/commandslider.vb#implementicommandexecute)]  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Windows.Input.ICommandSource>
 - <xref:System.Windows.Input.ICommand>
 - <xref:System.Windows.Input.RoutedCommand>

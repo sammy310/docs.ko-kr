@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: 72acd0029d0189de1c724856572957f111b9d18f
+ms.sourcegitcommit: 0aca6c5d166d7961a1e354c248495645b97a1dc5
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58760393"
+---
 ## <a name="installation-instructions"></a>설치 지침 
 
 **Visual Studio 설치 관리자**에서 **.NET Compiler Platform SDK**를 찾는 두 가지 방법이 있습니다.

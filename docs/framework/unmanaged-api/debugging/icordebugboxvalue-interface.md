@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f7238574334b599c7922693c7e9a476a51785491
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 1a9a647a9c77a3c1f82ae3691e2a5e5b2f544cad
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56967331"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59221966"
 ---
 # <a name="icordebugboxvalue-interface"></a>ICorDebugBoxValue 인터페이스
 
@@ -48,4 +48,5 @@ Boxed 값 클래스 개체를 나타내는 "ICorDebugHeapValue"의 하위 클래
  **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>참고자료
+
 - [디버깅 인터페이스](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

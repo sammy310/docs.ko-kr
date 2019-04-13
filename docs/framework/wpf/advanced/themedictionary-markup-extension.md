@@ -8,12 +8,12 @@ helpviewer_keywords:
 - ThemeDictionary markup extension [WPF]
 - XAML [WPF], ThemeDictionary markup extension
 ms.assetid: aa75e10b-13dd-4989-972d-51bab63a05e2
-ms.openlocfilehash: 0bc4b2a11927bd2551dc322c5a856ade9a85c8b7
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: ad2248c791fadc5363d90ff496d5e040f6036ab3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57364803"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59132095"
 ---
 # <a name="themedictionary-markup-extension"></a>ThemeDictionary 태그 확장
 타사 컨트롤을 통합하는 사용자 지정 컨트롤 작성자 또는 애플리케이션이 컨트롤 스타일 지정에 사용할 테마별 리소스 사전을 로드하는 방법을 제공합니다.  
@@ -49,9 +49,9 @@ ms.locfileid: "57364803"
   
  특성 구문은 이러한 태그 확장에 가장 많이 사용되는 구문입니다. `ThemeDictionary` 식별자 문자열 다음에 나오는 문자열 토큰은 기본 <xref:System.Windows.ThemeDictionaryExtension.AssemblyName%2A> 확장 클래스의 <xref:System.Windows.ThemeDictionaryExtension> 값으로 할당됩니다.  
   
- `ThemeDictionary`는 개체 요소 구문에서 사용될 수도 있습니다. 이 경우 값을 지정 하는 <xref:System.Windows.ThemeDictionaryExtension.AssemblyName%2A> 속성이 필요 합니다.  
+ `ThemeDictionary` 개체 요소 구문에서 사용할 수도 있습니다. 이 경우 값을 지정 하는 <xref:System.Windows.ThemeDictionaryExtension.AssemblyName%2A> 속성이 필요 합니다.  
   
- `ThemeDictionary` 속성을 다음과 같이 속성=값 쌍으로 지정하는 자세한 특성 사용 구문에도 <xref:System.Windows.Markup.StaticExtension.Member%2A>을 사용할 수 있습니다.  
+ `ThemeDictionary` 지정 하는 자세한 특성 사용 구문에 사용할 수는 <xref:System.Windows.Markup.StaticExtension.Member%2A> 속성으로 속성 = 값 쌍:  
   
 ```xml  
 <object property="{ThemeDictionary AssemblyName=assemblyUri}" .../>  
@@ -62,10 +62,11 @@ ms.locfileid: "57364803"
   
  에 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 프로세서 구현에서이 태그 확장에 대 한 처리는 정의한는 <xref:System.Windows.ThemeDictionaryExtension> 클래스입니다.  
   
- `ThemeDictionary`은 태그 확장입니다. 태그 확장은 특성 값을 리터럴 값 또는 처리기 이름이 아닌 다른 값이 되도록 이스케이프해야 하는 요구 사항이 있는 경우 일반적으로 구현되며 이러한 요구 사항은 특정 형식 또는 속성에 형식 변환기를 배치하는 것보다 더 포괄적입니다. [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]의 모든 태그 확장은 특성 구문에서 { 및 } 문자를 사용합니다. 이러한 문자는 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 프로세서가 태그 확장이 특성을 처리해야 함을 인식하는 데 사용되는 규칙입니다. 자세한 내용은 [태그 확장 및 WPF XAML](markup-extensions-and-wpf-xaml.md)을 참조하세요.  
+ `ThemeDictionary` 태그 확장입니다. 태그 확장은 특성 값을 리터럴 값 또는 처리기 이름이 아닌 다른 값이 되도록 이스케이프해야 하는 요구 사항이 있는 경우 일반적으로 구현되며 이러한 요구 사항은 특정 형식 또는 속성에 형식 변환기를 배치하는 것보다 더 포괄적입니다. [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]의 모든 태그 확장은 특성 구문에서 { 및 } 문자를 사용합니다. 이러한 문자는 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 프로세서가 태그 확장이 특성을 처리해야 함을 인식하는 데 사용되는 규칙입니다. 자세한 내용은 [태그 확장 및 WPF XAML](markup-extensions-and-wpf-xaml.md)을 참조하세요.  
   
 ## <a name="see-also"></a>참고자료
+
 - [스타일 지정 및 템플릿](../controls/styling-and-templating.md)
 - [XAML 개요(WPF)](xaml-overview-wpf.md)
-- [태그 확장 및 WPF XAML](markup-extensions-and-wpf-xaml.md)
-- [WPF 응용 프로그램 리소스, 콘텐츠 및 데이터 파일](../app-development/wpf-application-resource-content-and-data-files.md)
+- [태그 확장명 및 WPF XAML](markup-extensions-and-wpf-xaml.md)
+- [WPF 애플리케이션 리소스, 콘텐츠 및 데이터 파일](../app-development/wpf-application-resource-content-and-data-files.md)

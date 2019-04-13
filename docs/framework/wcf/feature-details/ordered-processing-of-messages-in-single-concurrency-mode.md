@@ -2,12 +2,12 @@
 title: 단일 동시성 모델에서 메시지의 순서 지정 처리
 ms.date: 03/30/2017
 ms.assetid: a90f5662-a796-46cd-ae33-30a4072838af
-ms.openlocfilehash: c9f2460a1def19212d3ba866b0b443830e9b69bb
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 785c2953e57eaf967209b0d9e52ab85a3a99c450
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54745851"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59229721"
 ---
 # <a name="ordered-processing-of-messages-in-single-concurrency-mode"></a>단일 동시성 모델에서 메시지의 순서 지정 처리
 WCF는 기본 채널 세션 없는 메시지 처리 되는 순서에 대 한 보증도 하지 않습니다.  예를 들어 MsmqInputChannel 없는 세션 채널을 사용 하는 WCF 서비스는 순서 대로 메시지를 처리 하는 데 실패 합니다. 개발자 처리 동작에 순서를 사용할 수 있지만 세션을 사용 하려면 여기서 몇 가지 경우가 있습니다. 이 항목에서는 서비스가 단일 동시성 모델에서 실행되고 있을 때 이 동작을 구성하는 방법을 설명합니다.  
@@ -26,5 +26,6 @@ WCF는 기본 채널 세션 없는 메시지 처리 되는 순서에 대 한 보
  <xref:System.ServiceModel.ServiceBehaviorAttribute.ConcurrencyMode%2A>가 다른 값으로 설정되면 <xref:System.InvalidOperationException>이 throw됩니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [세션, 인스턴스 및 동시성](../../../../docs/framework/wcf/feature-details/sessions-instancing-and-concurrency.md)
 - [동시성](../../../../docs/framework/wcf/samples/concurrency.md)

@@ -2,12 +2,12 @@
 title: Basic Serialization 기술 샘플
 ms.date: 03/30/2017
 ms.assetid: 9d824e16-08d1-4a36-bc7f-2388c1f75f34
-ms.openlocfilehash: 43e69ce90b86053badad91b62ec288378e63e2ed
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: dc190a93e45bf2b682aff0158ccd42bc09762d9a
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54681705"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59315012"
 ---
 # <a name="basic-serialization-technology-sample"></a>Basic Serialization 기술 샘플
 [샘플 다운로드](https://download.microsoft.com/download/4/7/B/47B2164C-E780-4B10-8DE4-2CB5B886E0A6/Technologies/Serialization/Runtime%20Serialization/Basic.zip.exe)  
@@ -18,25 +18,25 @@ ms.locfileid: "54681705"
   
 ### <a name="to-build-the-sample-using-the-command-prompt"></a>명령 프롬프트를 사용하여 샘플을 빌드하려면  
   
-1.  명령 프롬프트를 사용하여 Technologies\Serialization\Runtime Serialization\Basic 디렉터리 아래의 언어별 하위 디렉터리 중 하나로 이동합니다.  
+1. 명령 프롬프트를 사용하여 Technologies\Serialization\Runtime Serialization\Basic 디렉터리 아래의 언어별 하위 디렉터리 중 하나로 이동합니다.  
   
-2.  선택한 프로그래밍 언어에 따라 **msbuild SerializationCS.sln**, **msbuild SerializationJSL.sln** 또는 **msbuild SerializationVB.sln**을 명령줄에 입력합니다.  
+2. 선택한 프로그래밍 언어에 따라 **msbuild SerializationCS.sln**, **msbuild SerializationJSL.sln** 또는 **msbuild SerializationVB.sln**을 명령줄에 입력합니다.  
   
 ### <a name="to-build-the-sample-using-visual-studio"></a>Visual Studio를 사용하여 샘플을 빌드하려면  
   
-1.  [!INCLUDE[fileExplorer](../../../includes/fileexplorer-md.md)]를 열고 샘플에 대한 언어별 하위 디렉터리 중 하나로 이동합니다.  
+1. [!INCLUDE[fileExplorer](../../../includes/fileexplorer-md.md)]를 열고 샘플에 대한 언어별 하위 디렉터리 중 하나로 이동합니다.  
   
-2.  선택한 프로그래밍 언어에 따라 RemotingIPCCS.sln, RemotingIPCJSL.sln 또는 RemotingIPCVB.sln 파일의 아이콘을 두 번 클릭하여 Visual Studio에서 파일을 엽니다.  
+2. 선택한 프로그래밍 언어에 따라 RemotingIPCCS.sln, RemotingIPCJSL.sln 또는 RemotingIPCVB.sln 파일의 아이콘을 두 번 클릭하여 Visual Studio에서 파일을 엽니다.  
   
-3.  **빌드** 메뉴에서 **솔루션 빌드**를 선택합니다.  
+3. **빌드** 메뉴에서 **솔루션 빌드**를 선택합니다.  
   
  샘플 응용 프로그램이 기본 \bin 또는 \bin\Debug 하위 디렉터리에 빌드됩니다.  
   
 ### <a name="to-run-the-sample"></a>이 샘플을 실행하려면  
   
-1.  빌드된 실행 파일이 있는 디렉터리로 이동합니다.  
+1. 빌드된 실행 파일이 있는 디렉터리로 이동합니다.  
   
-2.  원하는 매개 변수 값과 함께 **Serialization.exe**를 명령줄에 입력합니다.  
+2. 원하는 매개 변수 값과 함께 **Serialization.exe**를 명령줄에 입력합니다.  
   
     > [!NOTE]
     >  이 샘플은 콘솔 응용 프로그램을 빌드합니다. 출력을 보려면 명령 프롬프트를 사용하여 시작해야 합니다.  
@@ -64,19 +64,19 @@ ms.locfileid: "54681705"
   
 -   런타임 serialization  
   
-    -   <xref:System.Runtime.Serialization.IFormatter> 또는 <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> 개체를 참조하기 위해 <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter>가 사용됩니다.  
+    -   <xref:System.Runtime.Serialization.IFormatter> 참조 하는 데 사용 된 <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> 또는 <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter> 개체입니다.  
   
-    -   연결된 목록을 스트림에 이진 형식으로 serialize하기 위해 <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter>가 사용됩니다. 이진 포맷터는 <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> 형식에서만 인식할 수 있는 형식을 사용하지만, 데이터가 간결해지는 장점이 있습니다.  
+    -   <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> 연결된 된 목록을 스트림에 이진 형식으로 serialize 하는 데 사용 합니다. 이진 포맷터는 <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> 형식에서만 인식할 수 있는 형식을 사용하지만, 데이터가 간결해지는 장점이 있습니다.  
   
-    -   연결된 목록을 스트림에 SOAP 형식으로 serialize하기 위해 <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter>가 사용됩니다. SOAP는 표준 형식입니다.  
+    -   <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter> 연결된 된 목록을 스트림에 SOAP 형식으로 serialize 하는 데 사용 합니다. SOAP는 표준 형식입니다.  
   
 -   스트림 I/O  
   
-    -   serialize 및 deserialize를 위해 <xref:System.IO.Stream>이 사용됩니다. 이 샘플에서 사용되는 특정 스트림 형식은 <xref:System.IO.FileStream> 형식입니다. 그러나 serialization에는 <xref:System.IO.Stream>에서 파생되는 모든 형식을 사용할 수 있습니다.  
+    -   <xref:System.IO.Stream> Serialize 및 deserialize 하는 데 사용 합니다. 이 샘플에서 사용되는 특정 스트림 형식은 <xref:System.IO.FileStream> 형식입니다. 그러나 serialization에는 <xref:System.IO.Stream>에서 파생되는 모든 형식을 사용할 수 있습니다.  
   
-    -   디스크에 파일을 생성하고 디스크의 파일을 읽기 위한 <xref:System.IO.File> 개체를 만들기 위해 <xref:System.IO.FileStream>이 사용됩니다.  
+    -   <xref:System.IO.File> 만드는 데 <xref:System.IO.FileStream> 읽고 디스크에 파일 만들기에 대 한 개체입니다.  
   
-    -   연결된 목록을 serialize 및 deserialize하기 위해 <xref:System.IO.FileStream>이 사용됩니다.  
+    -   <xref:System.IO.FileStream> serialize 및 deserialize 되어 연결 된 목록을 사용 합니다.  
   
 ## <a name="see-also"></a>참고자료
 
@@ -91,9 +91,9 @@ ms.locfileid: "54681705"
 - <xref:System.Runtime.Serialization.IFormatter>
 - <xref:System.SerializableAttribute>
 - <xref:System.Xml.Serialization>
-- [기본 serialization](../../../docs/standard/serialization/basic-serialization.md)
-- [이진 serialization](../../../docs/standard/serialization/binary-serialization.md)
-- [특성을 사용하여 XML serialization 제어](../../../docs/standard/serialization/controlling-xml-serialization-using-attributes.md)
-- [XML serialization 소개](../../../docs/standard/serialization/introducing-xml-serialization.md)
-- [serialization](../../../docs/standard/serialization/index.md)
-- [XML 및 SOAP serialization](../../../docs/standard/serialization/xml-and-soap-serialization.md)
+- [기본 Serialization](../../../docs/standard/serialization/basic-serialization.md)
+- [이진 Serialization](../../../docs/standard/serialization/binary-serialization.md)
+- [특성을 사용하여 XML Serialization 제어](../../../docs/standard/serialization/controlling-xml-serialization-using-attributes.md)
+- [XML Serialization 소개](../../../docs/standard/serialization/introducing-xml-serialization.md)
+- [Serialization](../../../docs/standard/serialization/index.md)
+- [XML 및 SOAP Serialization](../../../docs/standard/serialization/xml-and-soap-serialization.md)

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - mc:ProcessContent attribute
 - XAML [WPF], mc:ProcessContent attribute
 ms.assetid: acd9a6ef-b7ca-4146-abb6-60f3b366e9ec
-ms.openlocfilehash: 432df80fca58311d1c0931d9ba3b224fc9e271ff
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 03439a2c4a1a4de375e90d0e5121e690541e2f0f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57375391"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59219332"
 ---
 # <a name="mcignorable-attribute"></a>mc:Ignorable 특성
 지정 [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] 여는 태그 파일에서 발생 하는 네임 스페이스 접두사를 무시할 수 있습니다는 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 프로세서. 합니다 `mc:Ignorable` 특성에 대 한 및 사용자 지정 네임 스페이스 매핑에 대 한 태그 호환성 지원 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 버전 관리 합니다.  
@@ -46,7 +46,7 @@ ms.locfileid: "57375391"
   
 |||  
 |-|-|  
-|*ignorablePrefix, ignorablePrefix1, etc.*|XML 1.0 사양에 따라 모든 유효한 접두사 문자열입니다.|  
+|*ignorablePrefix, ignorablePrefix1 등입니다.*|XML 1.0 사양에 따라 모든 유효한 접두사 문자열입니다.|  
 |*ignorableUri*|XML 1.0 사양에 따라 네임 스페이스를 지정 하는 것에 대 한 모든 유효한 URI입니다.|  
 |*ThisElementCanBeIgnored*|무시할 수 있는 요소 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] 내부 형식을 확인할 수 없는 경우 프로세서 구현 합니다.|  
   
@@ -66,6 +66,7 @@ ms.locfileid: "57375391"
  합니다 [!INCLUDE[TLA#tla_mcxmlnsv1](../../../../includes/tlasharptla-mcxmlnsv1-md.md)] 다른 요소와의이 영역 내에서 다루지 않는 특성을 정의 하는 네임 스페이스는 [!INCLUDE[TLA#tla_sdk](../../../../includes/tlasharptla-sdk-md.md)]합니다. 자세한 내용은 [XML 태그 호환성 사양](/office/open-xml/introduction-to-markup-compatibility#markup-compatibility-in-the-open-xml-file-formats-specification)합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Windows.Markup.XamlReader>
 - [PresentationOptions:Freeze 특성](presentationoptions-freeze-attribute.md)
 - [XAML 개요(WPF)](xaml-overview-wpf.md)

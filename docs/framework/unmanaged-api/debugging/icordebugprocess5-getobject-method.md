@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 56b5796a6edb3d9fb7e0dc1072951a93a6e508a3
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 35fdcd4bc3c9dbf6408f501256ce0df0174f9374
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57502516"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59135657"
 ---
 # <a name="icordebugprocess5getobject-method"></a>ICorDebugProcess5::GetObject 메서드
 "ICorDebugObjectValue" 개체를 개체 주소를 변환합니다.  
@@ -56,5 +56,6 @@ HRESULT GetObject(
  **.NET Framework 버전:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
 ## <a name="see-also"></a>참고자료
+
 - [ICorDebugProcess5 인터페이스](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-interface.md)
 - [디버깅 인터페이스](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

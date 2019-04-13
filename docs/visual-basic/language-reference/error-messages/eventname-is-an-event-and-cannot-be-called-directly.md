@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC32022
 ms.assetid: 4dcfcb8d-a9fa-46a7-a034-29d9ff3a59b3
-ms.openlocfilehash: eb0b40a80d37788bcab32791d7ed701a77505371
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: bf900566bdb4ecf8d8961a12b5dd67ba426caf27
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58831446"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59305600"
 ---
 # <a name="eventname-is-an-event-and-cannot-be-called-directly"></a>'\<eventname >'은 (는) 이벤트 및 직접 호출할 수 없습니다.
 ' <`eventname`>'은 (는) 이벤트 및 이므로 직접 호출할 수 없습니다. 사용 된 `RaiseEvent` 이벤트를 발생 시키는 문입니다.  
@@ -23,7 +23,7 @@ ms.locfileid: "58831446"
   
 ## <a name="to-correct-this-error"></a>이 오류를 해결하려면  
   
-1.  사용 하 여를 `RaiseEvent` 문을 이벤트 신호를 보내고 처리 하는 프로시저를 호출 합니다.  
+1. 사용 하 여를 `RaiseEvent` 문을 이벤트 신호를 보내고 처리 하는 프로시저를 호출 합니다.  
   
 ## <a name="see-also"></a>참고자료
 

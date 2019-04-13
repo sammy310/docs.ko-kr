@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 370c16d5-db7b-43e3-945b-ccaab35b739b
-ms.openlocfilehash: 130b5338b14bc7c1f36feb620d549295867ef64e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d1d52e048ee54ce967215ad134d5bcff2983103e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54527772"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59113622"
 ---
 # <a name="table-valued-parameters"></a>테이블 반환 매개 변수
 테이블 반환 매개 변수를 사용하면 클라이언트 응용 프로그램에서 여러 행 데이터를 반복적인 라운드트립이나 데이터 처리를 위한 특수한 서버측 논리를 사용하지 않고도 SQL Server로 쉽게 마샬링할 수 있습니다. 또한 테이블 반환 매개 변수를 사용하면 클라이언트 응용 프로그램에서 데이터 행을 캡슐화하여 매개 변수화된 단일 명령을 통해 데이터를 서버에 보낼 수 있습니다. 들어오는 데이터 행은 테이블 변수에 저장되며, 이러한 테이블 변수에 대해서는 [!INCLUDE[tsql](../../../../../includes/tsql-md.md)]을 사용하여 작업할 수 있습니다.  
@@ -273,6 +273,7 @@ insertCommand.ExecuteNonQuery()
 ```  
   
 ## <a name="see-also"></a>참고자료
+
 - [매개 변수 및 매개 변수 데이터 형식 구성](../../../../../docs/framework/data/adonet/configuring-parameters-and-parameter-data-types.md)
 - [명령 및 매개 변수](../../../../../docs/framework/data/adonet/commands-and-parameters.md)
 - [DataAdapter 매개 변수](../../../../../docs/framework/data/adonet/dataadapter-parameters.md)

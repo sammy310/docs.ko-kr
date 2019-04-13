@@ -11,7 +11,7 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 12/10/2018
 ms.locfileid: "53151067"
 ---
-# <a name="reasons-to-modernize-existing-net-apps-to-cloud-optimized-applications"></a>기존 .NET 앱을 클라우드 최적화된 응용 프로그램으로 최신화하는 이유
+# <a name="reasons-to-modernize-existing-net-apps-to-cloud-optimized-applications"></a>기존.NET 앱을 클라우드에 최적화된 응용 프로그램으로 최신화하는 이유
 
 클라우드에 최적화된 응용 프로그램을 사용하여 고객에게 신뢰할 수 있는 응용 프로그램을 신속하고 반복적으로 제공할 수 있습니다. 플랫폼에 앱 운영 복잡성을 맡기고 필수적인 민첩성와 안정성을 얻으세요.
 
@@ -21,7 +21,7 @@ ms.locfileid: "53151067"
 
 결론적으로 조직에서 클라우드에 최적화된 응용 프로그램을 만들고 관리한다면, 솔루션을 고객의 손에 빠르게 전달하고 관련성이 높은 새로운 아이디어를 출시할 수 있습니다.
 
-## <a name="cloud-optimized-application-principles-and-tenets"></a>클라우드에 최적화된 응용 프로그램 원칙과 개념
+## <a name="cloud-optimized-application-principles-and-tenets"></a>클라우드에 최적화된 응용 프로그램 원칙과 개념 
 
 클라우드에서 향상 된 기능 대부분에 초점을 맞춘 두 가지 목표를 충족: 비용을 줄이고 민첩성을 개선 하 여 비즈니스 성장을 개선 합니다. 이러한 목표를 프로세스가 간소화 되 고 해제 하 고 응용 프로그램을 제공 하는 경우 마찰을 줄이는에서 얻을 수 있습니다.
 

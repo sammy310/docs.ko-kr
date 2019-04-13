@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 145f92badf39b6456a82df8f7de23f1784d2ce50
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: fd7d63596690e2a5d0bc26448884ec09ecd63231
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57495743"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59129521"
 ---
 # <a name="closeenum-method"></a>CloseEnum 메서드
 표시 된 열거형을 닫고 연결 된 리소스를 해제 합니다.  
@@ -46,6 +46,7 @@ HRESULT CloseEnum(
  Alink.h 필요  
   
 ## <a name="see-also"></a>참고자료
+
 - [IALink 인터페이스](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
 - [IALink2 인터페이스](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
 - [ALink API](../../../../docs/framework/unmanaged-api/alink/index.md)

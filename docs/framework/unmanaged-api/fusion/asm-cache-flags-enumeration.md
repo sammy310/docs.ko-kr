@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 29388f7a83182fe3149a9df364a0f4721232012d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 619643eb50abc75fd10d59b38767013b2617c8cf
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54585330"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59077779"
 ---
 # <a name="asmcacheflags-enumeration"></a>ASM_CACHE_FLAGS 열거형
 표현 되는 어셈블리의 소스를 나타냅니다 [IAssemblyCacheItem](../../../../docs/framework/unmanaged-api/fusion/iassemblycacheitem-interface.md) 전역 어셈블리 캐시에 있습니다.  
@@ -58,6 +58,7 @@ typedef enum {
  **.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>참고자료
+
 - [GetCachePath 함수](../../../../docs/framework/unmanaged-api/fusion/getcachepath-function.md)
 - [IAssemblyCacheItem 인터페이스](../../../../docs/framework/unmanaged-api/fusion/iassemblycacheitem-interface.md)
 - [Fusion 열거형](../../../../docs/framework/unmanaged-api/fusion/fusion-enumerations.md)

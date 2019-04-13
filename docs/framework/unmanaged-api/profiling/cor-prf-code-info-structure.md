@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e83dbb234cf1cacc0e18d4e42bccb427eb54f14c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 56734a9971759b78a835917c4914cf55edaa47a4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54617254"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59103287"
 ---
 # <a name="corprfcodeinfo-structure"></a>COR_PRF_CODE_INFO 구조체
 메모리 내에 저장된 연속하는 네이티브 코드 블록 하나를 나타냅니다.  
@@ -52,4 +52,5 @@ typedef struct _COR_PRF_CODE_INFO {
  **.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>참고자료
+
 - [프로파일링 구조체](../../../../docs/framework/unmanaged-api/profiling/profiling-structures.md)

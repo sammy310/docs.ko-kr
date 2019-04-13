@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - authentication [WCF], specifying the identity of a service
 ms.assetid: a4c8f52c-5b30-45c4-a545-63244aba82be
-ms.openlocfilehash: 5d168cbecf4f6a0c075a66ff1dd4b50b154d985c
-ms.sourcegitcommit: 79066169e93d9d65203028b21983574ad9dcf6b4
+ms.openlocfilehash: f33144c320b3648f9e201505a34ed8f1ecd5965b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57212523"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59145628"
 ---
 # <a name="service-identity-and-authentication"></a>서비스 ID 및 인증
 서비스의 *종단점 id* 서비스 설명 언어 WSDL (웹 서비스)에서 생성 된 값입니다. 모든 클라이언트에 전파되는 이 값은 서비스를 인증하는 데 사용합니다. 클라이언트가 엔드포인트에 대한 통신을 시작하고 서비스가 클라이언트에 대해 인증되면 클라이언트는 엔드포인트 ID 값과 엔드포인트 인증 프로세스에서 반환된 실제 값을 비교합니다. 두 값이 일치하는 경우 클라이언트는 예상 서비스 엔드포인트에 연결됩니다. 이 함수에 대해 보호할 *피싱* 클라이언트가 악성 서비스에서 호스팅되는 끝점에 리디렉션되지 하지 못하도록 하 여 합니다.  
@@ -54,13 +54,9 @@ ms.locfileid: "57212523"
   
 ## <a name="using-the-identity-element-in-configuration"></a>사용 하 여 \<identity > 구성에서 요소  
  이전에 `Certificate,`에 표시된 바인딩에서 클라이언트 자격 증명 형식을 변경하면 생성된 WSDL에 다음 코드에 표시된 ID 값에 대한 Base64로 serialize된 X.509 인증서가 포함됩니다. 이는 Windows 이외의 모든 클라이언트 자격 증명 형식에 대한 기본값입니다.  
-  
-  
-  
+
  기본 서비스 id의 값을 변경 하거나 id 형식을 사용 하 여 변경할 수는 `<identity>` 코드에서 id를 설정 하거나 구성에서 요소입니다. 다음 구성 코드에서는 값 `contoso.com`으로 DNS(Domain Name System) ID를 설정합니다.  
-  
-  
-  
+
 ## <a name="setting-identity-programmatically"></a>프로그래밍 방식으로 ID 설정  
  서비스가 없습니다 identity (id)를 명시적으로 지정 하려면 WCF가 자동으로 결정 되기 때문에. 그러나 WCF 허용 필요한 경우 끝점에서 id를 지정할 수 있습니다. 다음 코드에서는 특정 DNS ID를 사용하여 새 서비스 엔드포인트를 추가합니다.  
   
@@ -69,16 +65,12 @@ ms.locfileid: "57212523"
   
 ## <a name="specifying-identity-at-the-client"></a>클라이언트에서 ID 지정  
  디자인 타임에 클라이언트 개발자는 일반적으로 사용 합니다 [ServiceModel Metadata 유틸리티 도구 (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) 클라이언트 구성을 생성 하 합니다. 생성된 구성 파일(클라이언트에서 사용)에는 서버 ID가 포함되어 있습니다. 예를 들어, 다음 코드는 앞의 예제에서처럼 DNS ID를 지정하는 서비스에서 생성됩니다. 클라이언트 엔드포인트 ID 값은 서비스 값과 일치합니다. 이 경우 클라이언트가 서비스에 대한 Windows(Kerberos) 자격 증명을 받을 때 값은 `contoso.com`이 됩니다.  
-  
-  
-  
+
  Windows 대신 서비스가 Certificate를 클라이언트 자격 증명 형식으로 지정하는 경우 인증서의 DNS 속성 값은 `contoso.com`이 됩니다. 또는 DNS 속성이 `null`인 경우 인증서의 주체 이름은 `contoso.com`이어야 합니다.  
   
 #### <a name="using-a-specific-value-for-identity"></a>ID에 대해 특정 값 사용  
  다음 클라이언트 구성 파일에서는 서비스 ID가 특정 값이 되는 방법을 보여 줍니다. 다음 예제에서 클라이언트는 두 개의 엔드포인트와 통신할 수 있습니다. 첫 번째 끝점은 인증서 지문으로 식별되고 두 번째는 인증서 RSA 키로 식별됩니다. 즉, 공개 키/개인 키 쌍만 포함하는 신뢰할 수 있는 기관에서 발급하지 않은 인증서입니다.  
-  
-  
-  
+
 ## <a name="identity-checking-at-run-time"></a>런타임에 ID 검사  
  디자인 타임에 클라이언트 개발자는 메타데이터를 통해 서버 ID를 확인합니다. 런타임에 서비스에서 엔드포인트를 호출하기 전에 ID 검사가 수행됩니다.  
   
@@ -113,11 +105,12 @@ ms.locfileid: "57212523"
  바인딩 스택 하는 방법에 대 한 자세한 내용은 요소 올바르게 사용자 지정 바인딩에 대 한 참조 [Creating User-Defined 바인딩](../../../../docs/framework/wcf/extending/creating-user-defined-bindings.md)합니다. 사용 하 여 사용자 지정 바인딩을 만드는 방법에 대 한 자세한 내용은 합니다 <xref:System.ServiceModel.Channels.SecurityBindingElement>를 참조 [방법: 지정된 된 인증 모드에 대 한 SecurityBindingElement 만들기](../../../../docs/framework/wcf/feature-details/how-to-create-a-securitybindingelement-for-a-specified-authentication-mode.md)합니다.  
   
 ## <a name="see-also"></a>참고자료
-- [방법: SecurityBindingElement를 사용 하 여 사용자 지정 바인딩 만들기](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)
-- [방법: 지정된 된 인증 모드에 대 한 SecurityBindingElement 만들기](../../../../docs/framework/wcf/feature-details/how-to-create-a-securitybindingelement-for-a-specified-authentication-mode.md)
-- [방법: 사용자 지정 클라이언트 Id 검증 도구 만들기](../../../../docs/framework/wcf/extending/how-to-create-a-custom-client-identity-verifier.md)
+
+- [방법: SecurityBindingElement를 사용하여 사용자 지정 바인딩 만들기](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)
+- [방법: 지정된 인증 모드에 대한 SecurityBindingElement 만들기](../../../../docs/framework/wcf/feature-details/how-to-create-a-securitybindingelement-for-a-specified-authentication-mode.md)
+- [방법: 사용자 지정 클라이언트 ID 검증 도구 만들기](../../../../docs/framework/wcf/extending/how-to-create-a-custom-client-identity-verifier.md)
 - [자격 증명 형식 선택](../../../../docs/framework/wcf/feature-details/selecting-a-credential-type.md)
 - [인증서 작업](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)
 - [ServiceModel Metadata 유틸리티 도구(Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)
 - [사용자 정의 바인딩 만들기](../../../../docs/framework/wcf/extending/creating-user-defined-bindings.md)
-- [방법: 인증서의 지문 검색](../../../../docs/framework/wcf/feature-details/how-to-retrieve-the-thumbprint-of-a-certificate.md)
+- [방법: 인증서 지문 검색](../../../../docs/framework/wcf/feature-details/how-to-retrieve-the-thumbprint-of-a-certificate.md)

@@ -2,12 +2,12 @@
 title: ADO.NET 기술 옵션 및 지침
 ms.date: 03/30/2017
 ms.assetid: c8577281-38e6-4ce5-b036-572039a4c3d8
-ms.openlocfilehash: b24e06fef52397a550717893876e1e1cf33f371f
-ms.sourcegitcommit: 2b986afe4ce9e13bbeec929c9737757eb61de60e
+ms.openlocfilehash: 0d0e8f7bd779ce7a8290594887630dd192301fe1
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "56664798"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59212533"
 ---
 # <a name="adonet-technology-options-and-guidelines"></a>ADO.NET 기술 옵션 및 지침
 ADO.NET 데이터 플랫폼은 여러 릴리스에 걸쳐 만들어진 전략으로, 개발자가 개념적 엔터티 데이터 모델을 기반으로 프로그래밍할 수 있도록 하여 필요한 코딩 및 유지 관리 작업을 줄일 수 있도록 합니다. 이 플랫폼에는 ADO.NET Entity Framework와 관련 기술이 포함됩니다.  
@@ -37,9 +37,10 @@ ADO.NET 데이터 플랫폼은 여러 릴리스에 걸쳐 만들어진 전략으
  LINQ to SQL은 .NET Framework 클래스를 사용하여 SQL Server 데이터베이스를 모델링할 수 있도록 하는 OR/M(개체 관계형 매핑) 구현입니다. LINQ to SQL을 사용하면 LINQ를 사용하여 데이터베이스를 쿼리할 수 있으며 데이터베이스에서 데이터를 업데이트, 삽입 및 삭제할 수 있습니다. LINQ to SQL은 트랜잭션, 뷰, 저장 프로시저 등을 지원하며 데이터 유효성 검사 및 비즈니스 논리 규칙을 데이터 모델에 통합할 수 있는 간단한 방법을 제공합니다. O/R 디자이너(개체 관계형 디자이너)를 사용하면 데이터베이스의 개체를 기반으로 하는 엔터티 클래스 및 연결을 모델링할 수 있습니다. 자세한 내용은 [Visual Studio의 LINQ to SQL 도구](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2)를 참조하세요.  
   
 ## <a name="wcf-data-services"></a>WCF Data Services  
- [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]는 웹 또는 인트라넷에 데이터 서비스를 배포합니다. 데이터는 엔터티 데이터 모델의 사양에 따라 엔터티와 관계로 구조화됩니다. 이 모델에 배포되는 데이터는 표준 HTTP 프로토콜로 주소를 지정할 수 있습니다. 자세한 내용은 [WCF Data Services 4.5](../../../../docs/framework/data/wcf/index.md)를 참조하세요.  
+ [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 웹 또는 인트라넷용 데이터 서비스를 배포합니다. 데이터는 엔터티 데이터 모델의 사양에 따라 엔터티와 관계로 구조화됩니다. 이 모델에 배포되는 데이터는 표준 HTTP 프로토콜로 주소를 지정할 수 있습니다. 자세한 내용은 [WCF Data Services 4.5](../../../../docs/framework/data/wcf/index.md)를 참조하세요.  
   
 ## <a name="see-also"></a>참고자료
+
 - [ADO.NET 개요](../../../../docs/framework/data/adonet/ado-net-overview.md)
 - [ADO.NET의 새로운 기능](../../../../docs/framework/data/adonet/whats-new.md)
 - [ADO.NET 관리되는 공급자 및 데이터 집합 개발자 센터](https://go.microsoft.com/fwlink/?LinkId=217917)

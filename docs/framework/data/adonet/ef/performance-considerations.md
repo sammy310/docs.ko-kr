@@ -2,12 +2,12 @@
 title: 성능 고려 사항(Entity Framework)
 ms.date: 03/30/2017
 ms.assetid: 61913f3b-4f42-4d9b-810f-2a13c2388a4a
-ms.openlocfilehash: 4b6d3d4dbf801a7b0cc378482ad4d0d29a915be3
-ms.sourcegitcommit: c6f69b0cf149f6b54483a6d5c2ece222913f43ce
+ms.openlocfilehash: ec7f3571f60dc7f10816cad90911e50d271a9ce1
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2019
-ms.locfileid: "55904808"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59324047"
 ---
 # <a name="performance-considerations-entity-framework"></a>성능 고려 사항(Entity Framework)
 이 항목에서는 ADO.NET Entity Framework의 성능 특징에 대해 설명하고, Entity Framework 응용 프로그램의 성능 개선을 위해 고려해야 할 몇 가지 사항을 알려 줍니다.  
@@ -76,17 +76,17 @@ ms.locfileid: "55904808"
   
  Entity Framework에 의해 자동으로 생성된 명령은 데이터베이스 개발자가 명시적으로 작성한 유사 명령보다 복잡할 수 있습니다. 데이터 소스에 대해 실행된 명령에 명시적 제어가 필요한 경우 테이블 반환 함수 또는 저장 프로시저에 대한 매핑을 정의하는 것이 좋습니다.  
   
-#### <a name="relationships"></a>Relationships  
+#### <a name="relationships"></a>관계  
  최적의 쿼리 성능을 위해 엔터티 간 관계를 엔터티 모델의 연결과 데이터 소스의 논리적 관계로 정의해야 합니다.  
   
 ### <a name="query-paths"></a>쿼리 경로  
  기본적으로 <xref:System.Data.Objects.ObjectQuery%601>를 실행할 때 자체적으로 관계를 나타내는 개체는 반환되지만 관련 개체는 반환되지 않습니다. 관련 개체는 다음 세 가지 방법 중 하나로 로드할 수 있습니다.  
   
-1.  <xref:System.Data.Objects.ObjectQuery%601>가 실행되기 전에 쿼리 경로를 설정합니다.  
+1. <xref:System.Data.Objects.ObjectQuery%601>가 실행되기 전에 쿼리 경로를 설정합니다.  
   
-2.  개체가 노출하는 탐색 속성에서 `Load` 메서드를 호출합니다.  
+2. 개체가 노출하는 탐색 속성에서 `Load` 메서드를 호출합니다.  
   
-3.  <xref:System.Data.Objects.ObjectContextOptions.LazyLoadingEnabled%2A>에서 <xref:System.Data.Objects.ObjectContext> 옵션을 `true`로 설정합니다. 이 수행 됩니다 자동으로 사용 하 여 개체 계층 코드를 생성 하는 경우는 [엔터티 데이터 모델 디자이너](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cc716685(v=vs.100))합니다. 자세한 내용은 참조 [생성 된 코드 개요](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cc982041(v=vs.100))합니다.  
+3. <xref:System.Data.Objects.ObjectContextOptions.LazyLoadingEnabled%2A>에서 <xref:System.Data.Objects.ObjectContext> 옵션을 `true`로 설정합니다. 이 수행 됩니다 자동으로 사용 하 여 개체 계층 코드를 생성 하는 경우는 [엔터티 데이터 모델 디자이너](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cc716685(v=vs.100))합니다. 자세한 내용은 참조 [생성 된 코드 개요](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cc982041(v=vs.100))합니다.  
   
  사용할 옵션을 고려할 때는 데이터베이스에 대한 요청의 수와 단일 쿼리에 반환되는 데이터의 양이 서로 상쇄되는 관계임을 염두에 두어야 합니다. 자세한 내용은 [관련 개체 로드](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896272(v=vs.100))합니다.  
   
@@ -147,11 +147,12 @@ ms.locfileid: "55904808"
 ## <a name="performance-data"></a>성능 데이터  
  Entity Framework에 대 한 일부 성능 데이터에 다음 포스트에 게시 되는 [ADO.NET 팀 블로그](https://go.microsoft.com/fwlink/?LinkId=91905):  
   
--   [ADO.NET Entity Framework-1 부의 성능 알아보기](https://go.microsoft.com/fwlink/?LinkId=123907)  
+-   [Exploring the Performance of the ADO.NET Entity Framework - Part 1](https://go.microsoft.com/fwlink/?LinkId=123907)  
   
--   [ADO.NET Entity Framework – 2 부의 성능 알아보기](https://go.microsoft.com/fwlink/?LinkId=123909)  
+-   [Exploring the Performance of the ADO.NET Entity Framework – Part 2](https://go.microsoft.com/fwlink/?LinkId=123909)  
   
--   [ADO.NET Entity Framework 성능 비교](https://go.microsoft.com/fwlink/?LinkID=123913)  
+-   [ADO.NET Entity Framework Performance Comparison](https://go.microsoft.com/fwlink/?LinkID=123913)  
   
 ## <a name="see-also"></a>참고자료
+
 - [개발 및 배포 고려 사항](../../../../../docs/framework/data/adonet/ef/development-and-deployment-considerations.md)

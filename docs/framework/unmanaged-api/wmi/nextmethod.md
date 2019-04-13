@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2ebe6924dfe1a4aa640ef8ccd7b4047c1d137948
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2b3667f7371131a4c1394ba5ca619d1f605c89ce
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54640045"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59190888"
 ---
 # <a name="nextmethod-function"></a>NextMethod 함수
 에 대 한 호출을 시작 하는 열거형의 다음 메서드를 검색 [BeginMethodEnumeration](beginmethodenumeration.md)합니다.  
@@ -79,7 +79,7 @@ HRESULT NextMethod (
 
 ## <a name="example"></a>예제
 
-C + + 예제를 참조 합니다 [IWbemClassObject::NextMethod](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-nextmethod) 메서드.
+에 대 한는 C++ 예제를 참조 합니다 [IWbemClassObject::NextMethod](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-nextmethod) 메서드.
 
 ## <a name="requirements"></a>요구 사항  
  **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
@@ -89,4 +89,5 @@ C + + 예제를 참조 합니다 [IWbemClassObject::NextMethod](/windows/desktop
  **.NET Framework 버전:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>참고자료
-- [WMI 및 성능 카운터 (관리 되지 않는 API 참조)](index.md)
+
+- [WMI 및 성능 카운터(관리되지 않는 API 참조)](index.md)

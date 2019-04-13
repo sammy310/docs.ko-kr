@@ -1,5 +1,5 @@
 ---
-title: '성능 최적화: 응용 프로그램 리소스'
+title: '성능 최적화: 애플리케이션 리소스'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - application resources [WPF], performance
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - brushes [WPF], performance
 - sharing brushes without copying [WPF]
 ms.assetid: 62b88488-c08e-4804-b7de-a1c34fbe929c
-ms.openlocfilehash: 921a67a24464ff5ac782045ae022f7766f32d579
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 362d0f0fd3282365e5e05dcd43c49a9fd2ddc9a7
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57352401"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59139427"
 ---
-# <a name="optimizing-performance-application-resources"></a>성능 최적화: 응용 프로그램 리소스
+# <a name="optimizing-performance-application-resources"></a>성능 최적화: 애플리케이션 리소스
 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 이 기능을 사용 하면 비슷한 형식의 요소 간에 일관 된 모양이 나 동작을 지원할 수 있도록 응용 프로그램 리소스를 공유할 수 있습니다. 이 항목에서는 몇 가지 권장 사항이 도움이 될 수 있는이 영역에서 응용 프로그램의 성능을 향상 합니다.  
   
  리소스에 대한 자세한 내용은 [XAML 리소스](xaml-resources.md)를 참조하세요.  
@@ -43,12 +43,13 @@ ms.locfileid: "57352401"
  [!code-xaml[Performance#PerformanceSnippet8](~/samples/snippets/csharp/VS_Snippets_Wpf/Performance/CSharp/DynamicResource.xaml#performancesnippet8)]  
   
 ## <a name="see-also"></a>참고자료
-- [WPF 응용 프로그램 성능 최적화](optimizing-wpf-application-performance.md)
-- [애플리케이션 성능 계획](planning-for-application-performance.md)
-- [하드웨어 이용](optimizing-performance-taking-advantage-of-hardware.md)
+
+- [WPF 애플리케이션 성능 최적화](optimizing-wpf-application-performance.md)
+- [응용 프로그램 성능 계획](planning-for-application-performance.md)
+- [하드웨어 활용](optimizing-performance-taking-advantage-of-hardware.md)
 - [레이아웃 및 디자인](optimizing-performance-layout-and-design.md)
-- [2차원 그래픽 및 이미징](optimizing-performance-2d-graphics-and-imaging.md)
+- [2D 그래픽 및 이미징](optimizing-performance-2d-graphics-and-imaging.md)
 - [개체 동작](optimizing-performance-object-behavior.md)
 - [텍스트](optimizing-performance-text.md)
 - [데이터 바인딩](optimizing-performance-data-binding.md)
-- [기타 성능 권장 사항](optimizing-performance-other-recommendations.md)
+- [기타 성능 추천 사항](optimizing-performance-other-recommendations.md)

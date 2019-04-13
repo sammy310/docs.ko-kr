@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - handling faults [WCF], sending
 ms.assetid: 7be6fb96-ce2a-450b-aebe-f932c6a4bc5d
-ms.openlocfilehash: 63a761b4a79743b0d4a03392ced465c3105db9bd
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2757f98066931ca1b5e3ef147cee2c819ee22606
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54602535"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59195061"
 ---
 # <a name="sending-and-receiving-faults"></a>오류 보내기 및 받기
 SOAP 오류는 오류 조건 정보를 서비스에서 클라이언트로 전달하고 이중 클라이언트의 경우에는 상호 운용 가능한 방식으로 클라이언트에서 서비스로 전달합니다. 일반적으로 서비스는 사용자 지정 오류 내용을 정의하고 이들을 반환할 수 있는 작업을 지정합니다. (자세한 내용은 [정 및 지정 오류](../../../docs/framework/wcf/defining-and-specifying-faults.md).) 이 항목에서는 해당 오류 조건이 발생한 경우 서비스 또는 이중 클라이언트가 그러한 오류를 보낼 수 있는 방법과 클라이언트 또는 서비스 응용 프로그램이 이러한 오류를 처리하는 방법에 대해 설명합니다. Windows Communication Foundation (WCF) 응용 프로그램의 오류 처리 개요를 참조 하세요 [지정 및 계약 및 서비스에서 오류 처리](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)합니다.  
@@ -51,15 +51,15 @@ SOAP 오류는 오류 조건 정보를 서비스에서 클라이언트로 전달
   
 -   <xref:System.ServiceModel.CommunicationException>  
   
- 작업이 지정된 제한 시간을 초과하면 <xref:System.TimeoutException> 개체가 throw됩니다.  
+ <xref:System.TimeoutException> 개체는 작업이 지정된 된 제한 시간을 초과 하는 경우에 throw 됩니다.  
   
- 서비스나 클라이언트에 복구할 수 있는 통신 오류 조건이 있는 경우 <xref:System.ServiceModel.CommunicationException> 개체가 throw됩니다.  
+ <xref:System.ServiceModel.CommunicationException> 개체는 서비스 또는 클라이언트에 일부 복구할 수 있는 통신 오류 조건이 있을 때 throw 됩니다.  
   
  <xref:System.ServiceModel.CommunicationException> 클래스에는 두 가지 중요한 파생 형식인 <xref:System.ServiceModel.FaultException>과 제네릭 <xref:System.ServiceModel.FaultException%601> 형식이 있습니다.  
   
- 수신자가 작업 계약에 예상되지 않거나 지정되지 않은 오류를 받으면 <xref:System.ServiceModel.FaultException> 예외가 throw됩니다. 일반적으로 이러한 예외는 응용 프로그램이 디버깅 중이고 서비스의 <xref:System.ServiceModel.Description.ServiceDebugBehavior.IncludeExceptionDetailInFaults%2A?displayProperty=nameWithType> 속성이 `true`로 설정된 경우 발생합니다.  
+ <xref:System.ServiceModel.FaultException> 예외가 예상 되지 않거나 작업 계약에 지정 된 오류를 받으면 일반적으로이 경우 디버깅 중인 응용 프로그램 및 서비스에는 <xref:System.ServiceModel.Description.ServiceDebugBehavior.IncludeExceptionDetailInFaults%2A?displayProperty=nameWithType> 속성이 설정 `true`합니다.  
   
- 양방향 작업(즉, <xref:System.ServiceModel.FaultException%601>가 <xref:System.ServiceModel.OperationContractAttribute>로 설정된 <xref:System.ServiceModel.OperationContractAttribute.IsOneWay%2A> 특성이 있는 메서드)에 대한 응답으로 작업 계약에 지정된 오류를 받은 경우 클라이언트에서 `false` 예외가 throw됩니다.  
+ <xref:System.ServiceModel.FaultException%601> 양방향 작업에 대 한 응답으로 작업 계약에 지정 된 오류를 받을 때 클라이언트에서 예외가 throw 됩니다 (즉, 메서드는 <xref:System.ServiceModel.OperationContractAttribute> 특성과 <xref:System.ServiceModel.OperationContractAttribute.IsOneWay%2A> 로 `false`).  
   
 > [!NOTE]
 >  WCF 서비스를에 하는 경우는 <xref:System.ServiceModel.ServiceBehaviorAttribute.IncludeExceptionDetailInFaults%2A?displayProperty=nameWithType> 또는 <xref:System.ServiceModel.Description.ServiceDebugBehavior.IncludeExceptionDetailInFaults%2A?displayProperty=nameWithType> 속성으로 설정 `true` 클라이언트는이으로 선언 되지 않은 오류가 <xref:System.ServiceModel.FaultException%601> 형식의 <xref:System.ServiceModel.ExceptionDetail>합니다. 클라이언트는 이러한 특정 오류를 catch하거나 <xref:System.ServiceModel.FaultException>에 대한 catch 블록의 오류를 처리할 수 있습니다.  
@@ -105,8 +105,9 @@ SOAP 오류는 오류 조건 정보를 서비스에서 클라이언트로 전달
  [!code-vb[FaultContractAttribute#3](../../../samples/snippets/visualbasic/VS_Snippets_CFX/faultcontractattribute/vb/client.vb#3)]  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.ServiceModel.FaultException>
 - <xref:System.ServiceModel.FaultException%601>
 - <xref:System.ServiceModel.CommunicationException?displayProperty=nameWithType>
 - [예상되는 예외](../../../docs/framework/wcf/samples/expected-exceptions.md)
-- [WCF 클라이언트 리소스를 해제 하려면 중단 및 닫기 사용](../../../docs/framework/wcf/samples/use-close-abort-release-wcf-client-resources.md)
+- [닫기 및 중단을 사용하여 WCF 클라이언트 리소스 해제](../../../docs/framework/wcf/samples/use-close-abort-release-wcf-client-resources.md)

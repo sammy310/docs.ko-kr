@@ -5,12 +5,12 @@ helpviewer_keywords:
 - UI Automation caching in clients
 - caching, UI Automation clients
 ms.assetid: 94c15031-4975-43cc-bcd5-c9439ed21c9c
-ms.openlocfilehash: 003928d718579948a9baf188d02a7847edb676e1
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: 4c403fa6f0de34e970eb0c74df13d807e92f8a05
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57676865"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59175827"
 ---
 # <a name="caching-in-ui-automation-clients"></a>UI 자동화 클라이언트의 캐싱
 > [!NOTE]
@@ -70,7 +70,7 @@ ms.locfileid: "57676865"
   
  요청된 속성이 캐시에 없는 경우 예외가 발생합니다.  
   
- <xref:System.Windows.Automation.AutomationElement.Cached%2A>와 마찬가지로, <xref:System.Windows.Automation.AutomationElement.Current%2A>는 개별 속성을 구조의 멤버로 노출합니다. 하지만 이 구조를 검색할 필요는 없습니다. 개별 속성에 직접 액세스할 수 있습니다. 예를 들어, <xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.Name%2A> 가 `element.Cached.Name`인 `element` 에서 <xref:System.Windows.Automation.AutomationElement>속성을 가져올 수 있습니다.  
+ <xref:System.Windows.Automation.AutomationElement.Cached%2A>같은 <xref:System.Windows.Automation.AutomationElement.Current%2A>, 개별 속성을 구조의 멤버로 노출 합니다. 하지만 이 구조를 검색할 필요는 없습니다. 개별 속성에 직접 액세스할 수 있습니다. 예를 들어, <xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.Name%2A> 가 `element.Cached.Name`인 `element` 에서 <xref:System.Windows.Automation.AutomationElement>속성을 가져올 수 있습니다.  
   
 <a name="Retrieving_Cached_Control_Patterns"></a>   
 ## <a name="retrieving-cached-control-patterns"></a>캐시된 컨트롤 패턴 검색  
@@ -102,6 +102,7 @@ ms.locfileid: "57676865"
  캐시를 업데이트해도 기존 <xref:System.Windows.Automation.AutomationElement> 참조의 속성이 변경되지 않습니다.  
   
 ## <a name="see-also"></a>참고자료
-- [클라이언트용 UI 자동화 이벤트](../../../docs/framework/ui-automation/ui-automation-events-for-clients.md)
-- [UI 자동화의 캐싱 사용](../../../docs/framework/ui-automation/use-caching-in-ui-automation.md)
+
+- [클라이언트에 대한 UI 자동화 이벤트](../../../docs/framework/ui-automation/ui-automation-events-for-clients.md)
+- [UI 자동화에서 캐싱 사용](../../../docs/framework/ui-automation/use-caching-in-ui-automation.md)
 - [FetchTimer 샘플](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms771456(v=vs.90))

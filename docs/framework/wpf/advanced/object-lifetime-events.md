@@ -24,25 +24,23 @@ helpviewer_keywords:
 - startup events [WPF]
 - lifetime events of objects [WPF]
 ms.assetid: face6fc7-465b-4502-bfe5-e88d2e729a78
-ms.openlocfilehash: b5f38492fff9aa87094542b174becc54ee324a78
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 8ecc3f716061dfd08ac95652d1a9d8e06e26d949
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57371491"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59175794"
 ---
 # <a name="object-lifetime-events"></a>개체 수명 이벤트
 이 항목에서는 생성, 사용 및 소멸 등의 개체 수명 단계를 나타내는 특정 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 이벤트에 대해 설명합니다.  
-  
 
-  
 <a name="prerequisites"></a>   
 ## <a name="prerequisites"></a>전제 조건  
  이 항목에서는 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 클래스의 기존 종속성 속성의 소비자 관점에서 종속성 속성을 이해하고 [종속성 속성 개요](dependency-properties-overview.md) 항목을 읽었다고 가정합니다. 이 항목의 예제를 따르려면 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]([XAML 개요(WPF)](xaml-overview-wpf.md) 참조)과 함께 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 애플리케이션을 작성하는 방법을 알아야 합니다.  
   
 <a name="intro"></a>   
 ## <a name="object-lifetime-events"></a>개체 수명 이벤트  
- Microsoft.NET Framework 관리 코드의 모든 개체와 유사한 수명, 생성, 사용 및 소멸 단계의 집합을 통해 이동합니다. 또한 많은 개체에는 소멸 단계의 일부로 발생하는 종료 단계가 있습니다. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 개체, 특히 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]가 요소로 식별하는 시각적 개체에는 개체 수명의 공통 단계 집합이 있습니다. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 프로그래밍 및 응용 프로그램 모델은 이러한 단계를 일련의 이벤트로 노출합니다. 수명 이벤트와 관련하여 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]에는 일반적인 요소, 창 요소, 탐색 호스트 및 애플리케이션 개체 등 네 가지 기본 유형의 개체가 있습니다. Windows 및 탐색 호스트도 시각적 개체(요소)의 더 큰 그룹에 속합니다. 이 항목에서는 모든 요소에 공통적으로 적용되는 수명 이벤트에 대해 설명한 다음 애플리케이션 정의, 창 또는 탐색 호스트에 적용되는 특정 이벤트를 소개합니다.  
+ Microsoft.NET Framework 관리 코드의 모든 개체와 유사한 수명, 생성, 사용 및 소멸 단계의 집합을 통해 이동합니다. 또한 많은 개체에는 소멸 단계의 일부로 발생하는 종료 단계가 있습니다. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 개체, 특히 시각적 개체는 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 식별 요소로 개체 수명의 공통 단계 집합이 있습니다. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 프로그래밍 및 응용 프로그램 모델은 이러한 단계를 일련의 이벤트로 노출합니다. 수명 이벤트와 관련하여 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]에는 일반적인 요소, 창 요소, 탐색 호스트 및 애플리케이션 개체 등 네 가지 기본 유형의 개체가 있습니다. Windows 및 탐색 호스트도 시각적 개체(요소)의 더 큰 그룹에 속합니다. 이 항목에서는 모든 요소에 공통적으로 적용되는 수명 이벤트에 대해 설명한 다음 애플리케이션 정의, 창 또는 탐색 호스트에 적용되는 특정 이벤트를 소개합니다.  
   
 <a name="common_events"></a>   
 ## <a name="common-lifetime-events-for-elements"></a>요소에 대한 공통 수명 이벤트  
@@ -75,5 +73,6 @@ ms.locfileid: "57371491"
 -   <xref:System.Windows.Controls.Page>하십시오 <xref:System.Windows.Navigation.NavigationWindow>, 및 <xref:System.Windows.Controls.Frame>: [탐색 개요](../app-development/navigation-overview.md)합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [종속성 속성 값 우선 순위](dependency-property-value-precedence.md)
 - [라우트된 이벤트 개요](routed-events-overview.md)

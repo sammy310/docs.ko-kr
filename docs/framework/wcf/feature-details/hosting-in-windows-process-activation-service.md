@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - hosting services [WCF], WAS
 ms.assetid: d2b9d226-15b7-41fc-8c9a-cb651ac20ecd
-ms.openlocfilehash: 19a37b2d988ba779c4373ba296b43f6508db5925
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5b234a00f3194fcf40a33d25302cff16d5999b05
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54731272"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59082987"
 ---
 # <a name="hosting-in-windows-process-activation-service"></a>Windows Process Activation Service에서의 호스팅
 Windows 프로세스 활성화 서비스 (WAS)는 정품 인증 및 호스트 Windows Communication Foundation (WCF) 서비스를 사용 하는 응용 프로그램을 포함 하는 작업자 프로세스의 수명을 관리 합니다. WAS 프로세스 모델은 HTTP에 대한 종속성을 제거하여 HTTP 서버의 [!INCLUDE[iis601](../../../../includes/iis601-md.md)] 프로세스 모델을 일반화합니다. 이렇게 하면 WCF services HTTP 및 메시지 기반 활성화를 지원 하 고 많은 수의 지정된 된 컴퓨터에서 응용 프로그램을 호스트 하는 기능을 제공 하는 호스팅 환경에서 Net.TCP와 같은 HTTP가 아닌 프로토콜을 모두 사용할 수 있습니다.  
@@ -52,8 +52,9 @@ Windows 프로세스 활성화 서비스 (WAS)는 정품 인증 및 호스트 Wi
  응용 프로그램은 주소 지정 및 관리를 위해 사이트로 구성됩니다. 런타임에 응용 프로그램은 또한 응용 프로그램 풀로 그룹화됩니다. 응용 프로그램 풀에는 여러 다른 사이트의 여러 다른 응용 프로그램을 보유할 수 있습니다. 응용 프로그램 풀에 있는 모든 응용 프로그램은 공용 런타임 특성 집합을 공유합니다. 예를 들어, 이러한 응용 프로그램은 같은 버전의 CLR(공용 언어 런타임)에서 모두 실행되며 공통 프로세스 ID를 공유합니다. 각 응용 프로그램 풀은 작업자 프로세스(w3wp.exe)의 인스턴스에 해당합니다. 관리되는 각 응용 프로그램은 공유 응용 프로그램 풀에서 실행되며 CLR AppDomain을 사용하여 다른 응용 프로그램과 격리됩니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [WAS Activation 아키텍처](../../../../docs/framework/wcf/feature-details/was-activation-architecture.md)
-- [WCF와 함께 사용하도록 WAS 구성](../../../../docs/framework/wcf/feature-details/configuring-the-wpa--service-for-use-with-wcf.md)
-- [방법: 설치 하 고 WCF Activation 구성 요소를 구성 합니다.](../../../../docs/framework/wcf/feature-details/how-to-install-and-configure-wcf-activation-components.md)
+- [WCF에서 사용하도록 WAS 구성](../../../../docs/framework/wcf/feature-details/configuring-the-wpa--service-for-use-with-wcf.md)
+- [방법: WCF 활성화 구성 요소 설치 및 구성](../../../../docs/framework/wcf/feature-details/how-to-install-and-configure-wcf-activation-components.md)
 - [방법: WAS에서 WCF 서비스 호스팅](../../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-was.md)
 - [Windows Server App Fabric 호스팅 기능](https://go.microsoft.com/fwlink/?LinkId=201276)

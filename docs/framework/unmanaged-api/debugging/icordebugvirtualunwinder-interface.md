@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: a09e9ccc-0b37-43e3-95c1-bc5fa7ee5f42
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9db6b83e2feedd761b95dec455213051e37366e1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 639cfc514d2a206f0de72db4b0bac02b53305ae3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54684147"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59083402"
 ---
 # <a name="icordebugvirtualunwinder-interface"></a>ICorDebugVirtualUnwinder 인터페이스
 스택 해제에 도움이 되는 메서드를 제공합니다.  
@@ -37,5 +37,6 @@ ms.locfileid: "54684147"
  **.NET Framework 버전:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
 ## <a name="see-also"></a>참고자료
+
 - [디버깅 인터페이스](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
 - [디버깅](../../../../docs/framework/unmanaged-api/debugging/index.md)

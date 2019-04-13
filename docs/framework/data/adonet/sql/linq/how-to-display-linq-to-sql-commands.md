@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 1decb05e-37ad-4ed6-ab2f-071eb4c4f628
-ms.openlocfilehash: a70f1e0dd471e86afe2e744c157d4aed2a217deb
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d71eaf834ebf36d462f8581f0074b2f6a90bae17
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54630829"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59211610"
 ---
 # <a name="how-to-display-linq-to-sql-commands"></a>방법: LINQ to SQL 명령 표시
 <xref:System.Data.Linq.DataContext.GetCommand%2A>를 사용하여 SQL 명령 및 기타 정보를 표시합니다.  
@@ -49,4 +49,5 @@ Connection: System.Data.SqlClient.SqlConnection
 ```  
   
 ## <a name="see-also"></a>참고자료
+
 - [디버깅 지원](../../../../../../docs/framework/data/adonet/sql/linq/debugging-support.md)

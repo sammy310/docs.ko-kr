@@ -2,12 +2,12 @@
 title: '방법: LINQ 쿼리 (Visual Basic)에 대 한 사용자 지정 메서드 추가'
 ms.date: 07/20/2015
 ms.assetid: 099b2e2a-83cd-45c6-aa4d-01b398b5faaf
-ms.openlocfilehash: a58ced83a01e41be707f2483cabe9c8e867e2c1a
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: f61db6c17fa3ead1e9dbc47c172a2cef91c042eb
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58829176"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59123307"
 ---
 # <a name="how-to-add-custom-methods-for-linq-queries-visual-basic"></a>방법: LINQ 쿼리 (Visual Basic)에 대 한 사용자 지정 메서드 추가
 <xref:System.Collections.Generic.IEnumerable%601> 인터페이스에 확장 메서드를 추가하여 LINQ 쿼리에 사용할 수 있는 메서드 집합을 확장할 수 있습니다. 예를 들어 표준 평균 또는 최대 작업 외에 사용자 지정 집계 메서드를 만들어 값 시퀀스에서 단일 값을 계산할 수 있습니다. 값 시퀀스에 대한 특정 데이터 변환 또는 사용자 지정 필터로 작동하고 새 시퀀스를 반환하는 메서드를 만들 수도 있습니다. 이러한 메서드의 예로는 <xref:System.Linq.Enumerable.Distinct%2A>, <xref:System.Linq.Enumerable.Skip%2A> 및 <xref:System.Linq.Enumerable.Reverse%2A>가 있습니다.  
@@ -68,7 +68,6 @@ Console.WriteLine("Double: Median = " & query1)
 '  
 ' Double: Median = 4.85  
 ```  
-  
 
 ### <a name="overloading-an-aggregate-method-to-accept-various-types"></a>다양한 형식을 허용하도록 집계 메서드 오버로드  
  다양한 형식의 시퀀스를 허용하도록 집계 메서드를 오버로드할 수 있습니다. 표준 접근법은 각 형식에 대한 오버로드를 만드는 것입니다. 또 다른 접근법은 제네릭 형식을 사용하고 대리자를 통해 이를 특정 형식으로 변환할 오버로드를 만드는 것입니다. 두 가지 접근법을 결합할 수도 있습니다.  
@@ -108,8 +107,7 @@ Console.WriteLine("Integer: Median = " & query2)
 ' Double: Median = 4.85  
 ' Integer: Median = 3  
 ```  
-  
- 
+
 #### <a name="to-create-a-generic-overload"></a>제네릭 오버로드를 만들려면  
  제네릭 개체의 시퀀스를 허용하는 오버로드를 만들 수도 있습니다. 이 오버로드는 대리자를 매개 변수로 사용하여 제네릭 형식의 개체 시퀀스를 특정 형식으로 변환합니다.  
   

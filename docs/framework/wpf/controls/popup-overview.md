@@ -5,18 +5,16 @@ helpviewer_keywords:
 - controls [WPF], Popup
 - Popup control [WPF], about Popup control
 ms.assetid: 774f53ca-bff8-470e-9ce9-3928b4cf3d4c
-ms.openlocfilehash: 4d480adbbd35084b30e2ca1c74d7392814b87783
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 370970c80221e371db5a97303ef2650d14300b14
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57358472"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59102780"
 ---
 # <a name="popup-overview"></a>Popup 개요
 <xref:System.Windows.Controls.Primitives.Popup> 컨트롤은 지정 된 요소 또는 화면 좌표를 기준으로 현재 응용 프로그램 창 위에 떠 있는 별도 창에서 콘텐츠를 표시 하는 방법을 제공 합니다. 이 항목에서는 소개를 <xref:System.Windows.Controls.Primitives.Popup> 제어 하 고 해당 사용에 대 한 정보를 제공 합니다.  
-  
- 
-  
+
 <a name="What_Is_a_Popup_"></a>   
 ## <a name="what-is-a-popup"></a>Popup이란?  
  <xref:System.Windows.Controls.Primitives.Popup> 컨트롤 요소 또는 화면에서 점을 기준으로 별도 창에서 콘텐츠를 표시 합니다. 경우는 <xref:System.Windows.Controls.Primitives.Popup> 표시 되는 <xref:System.Windows.Controls.Primitives.Popup.IsOpen%2A> 속성이 `true`.  
@@ -89,6 +87,7 @@ ms.locfileid: "57358472"
  합니다 <xref:System.Windows.Controls.Primitives.Popup> 컨트롤에 대 한 참조를 유지 관리는 <xref:System.Windows.Controls.Primitives.Popup.Child%2A> 논리 자식으로 콘텐츠. 새 창이 만들어지면, 내용의 <xref:System.Windows.Controls.Primitives.Popup> 창의 시각적 자식이 되 고의 논리적 자식 남아 <xref:System.Windows.Controls.Primitives.Popup>합니다. 반대로 <xref:System.Windows.Controls.Primitives.Popup> 의 논리적 부모를 유지 해당 <xref:System.Windows.Controls.Primitives.Popup.Child%2A> 콘텐츠입니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Windows.Controls.Primitives.Popup>
 - <xref:System.Windows.Controls.Primitives.PopupPrimaryAxis>
 - <xref:System.Windows.Controls.Primitives.PlacementMode>

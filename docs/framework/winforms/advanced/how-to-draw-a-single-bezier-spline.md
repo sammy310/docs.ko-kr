@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Bezier splines [Windows Forms], drawing
 - drawing [Windows Forms], Bezier splines
 ms.assetid: f4f3fe30-f0a6-4743-ac91-11310cebea9f
-ms.openlocfilehash: 0731595dc25b1afb4b3dbcc7eedbfb92ef32d267
-ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
+ms.openlocfilehash: ebb53e7df979a553ed4a44deba34345c9ecac772
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/16/2019
-ms.locfileid: "58126281"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59171680"
 ---
 # <a name="how-to-draw-a-single-b233zier-spline"></a>방법: 단일 B를 그리는&#233;zier 스플라인
 베 지 어 스플라인을 4 개의 점으로 정의: 시작점, 두 개의 제어점 및 끝점.  
@@ -32,6 +32,7 @@ ms.locfileid: "58126281"
  앞의 예제는 Windows forms에서 사용하도록 설계되었으며 <xref:System.Windows.Forms.Control.Paint> 이벤트 처리기의 매개 변수인 <xref:System.Windows.Forms.PaintEventArgs> `e`가 필요합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Drawing.Graphics.DrawBezier%2A>
 - [GDI+의 3차원 곡선 스플라인](bezier-splines-in-gdi.md)
-- [방법: 일련의 3 차원 곡선 스플라인 그리기](how-to-draw-a-sequence-of-bezier-splines.md)
+- [방법: 일련의 3차원 곡선 스플라인 그리기](how-to-draw-a-sequence-of-bezier-splines.md)

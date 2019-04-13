@@ -7,12 +7,12 @@ helpviewer_keywords:
 - client coordinates
 - coordinates [Windows Forms], Windows Forms
 ms.assetid: cc06e61f-43b6-4408-a676-2542dcfcd96e
-ms.openlocfilehash: a6f082eb57a9cfe1af0d4207cbf5226637191c90
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6feabadff17538f4a7368c348f7b72226e2d678e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54556053"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59116141"
 ---
 # <a name="windows-forms-coordinates"></a>Windows Forms 좌표
 Windows 폼을 위한 좌표계 장치 좌표를 기준으로 하며 Windows Forms에서 그릴 때의 기본 단위는 장치 단위 (일반적으로 픽셀)입니다. 지점은 화면에서 오른쪽, 위쪽에서 아래쪽 증가 y 좌표를 증가 하는 x 좌표를 사용 하 여 x 및 y 좌표 쌍에 의해 설명 되어 있습니다. 화면을 기준으로 원본 위치의 클라이언트 또는 화면 좌표를 지정 하는 여부에 따라 달라 집니다.  
@@ -29,5 +29,6 @@ Windows 폼을 위한 좌표계 장치 좌표를 기준으로 하며 Windows For
  경우에 따라 클라이언트 좌표를 화면 좌표에서 지도를 해야 합니다. 사용 하 여 쉽게 수행할 수 있습니다 합니다 <xref:System.Windows.Forms.Control.PointToClient%2A> 및 <xref:System.Windows.Forms.Control.PointToScreen%2A> 에서 사용할 수 있는 메서드는 <xref:System.Windows.Forms.Control> 클래스입니다. 예를 들어를 <xref:System.Windows.Forms.Control.MousePosition%2A> 의 속성 <xref:System.Windows.Forms.Control> 화면 좌표에서 보고 되는 클라이언트 좌표로 변환할 필요할 수 있습니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Windows.Forms.Control.PointToClient%2A>
 - <xref:System.Windows.Forms.Control.PointToScreen%2A>

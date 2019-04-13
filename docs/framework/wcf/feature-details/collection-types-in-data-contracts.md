@@ -9,12 +9,12 @@ helpviewer_keywords:
 - data contracts [WCF], collection types
 - collection types [WCF]
 ms.assetid: 9b45b28e-0a82-4ea3-8c33-ec0094aff9d5
-ms.openlocfilehash: c0e65a6286ef4756bba305d41dce6ef2a85401dd
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e7c7dd72c733036031fcf28d0dd2c1bc023d6552
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54516134"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59106745"
 ---
 # <a name="collection-types-in-data-contracts"></a>데이터 계약의 컬렉션 형식
 *컬렉션* 은 특정 형식의 항목으로 구성된 목록입니다. [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]의 경우 이러한 목록은 배열이나 여러 형식(제네릭 목록, 제네릭 <xref:System.ComponentModel.BindingList%601>, <xref:System.Collections.Specialized.StringCollection>또는 <xref:System.Collections.ArrayList>)을 사용하여 나타낼 수 있습니다. 예를 들어, 컬렉션은 지정된 고객에 대한 주소 목록을 보유할 수 있습니다. 실제 형식에 관계없이 이러한 컬렉션을 *목록 컬렉션*이라고 합니다.  
@@ -273,8 +273,8 @@ svcutil.exe MyService.wsdl MyServiceSchema.xsd /r:C:\full_path_to_system_dll\Sys
 |---------------------|----------------------------------------------|-------------|----------------------|  
 |제네릭이 아닌 형식 또는 폐쇄형 제네릭 형식(매개 변수 수에는 제한 없음)|제네릭이 아닌 형식|`MyType : IList`<br /><br /> 또는<br /><br /> `MyType<T> : IList`<br /><br /> 여기서 T= `int`|`Object` 의 폐쇄형 제네릭 형식(예: `IList<object>`)|  
 |제네릭이 아닌 형식 또는 폐쇄형 제네릭 형식(컬렉션 형식과 일치하지 않아도 되는 임의의 수의 매개 변수)|폐쇄형 제네릭 형식|`MyType : IList<string>`<br /><br /> 또는<br /><br /> `MyType<T> : IList<string>` 여기서 T=`int`|폐쇄형 제네릭 형식(예: `IList<string>`)|  
-|여러 개의 매개 변수가 있는 폐쇄형 제네릭 형식|형식의 매개 변수 중 하나를 사용하는 개방형 제네릭 형식|`MyType<T,U,V> : IList<U>`<br /><br /> 여기서 T=`int`, U=`string`, V=`bool`|폐쇄형 제네릭 형식(예: `IList<string>`)|  
-|하나의 매개 변수가 있는 개방형 제네릭 형식|형식의 매개 변수를 사용하는 개방형 제네릭 형식|`MyType<T> : IList<T>`, T는 개방형|개방형 제네릭 형식(예: `IList<T>`)|  
+|여러 개의 매개 변수가 있는 폐쇄형 제네릭 형식|형식의 매개 변수 중 하나를 사용하는 개방형 제네릭 형식|`MyType<T,U,V> : IList<U>`<br /><br /> 여기서 T =`int`, U =`string`, V =`bool`|폐쇄형 제네릭 형식(예: `IList<string>`)|  
+|하나의 매개 변수가 있는 개방형 제네릭 형식|형식의 매개 변수를 사용하는 개방형 제네릭 형식|`MyType<T> : IList<T>`T는 개방형|개방형 제네릭 형식(예: `IList<T>`)|  
   
  형식에서 두 개 이상의 목록 컬렉션 인터페이스를 구현하는 경우 다음 제한 사항이 적용됩니다.  
   
@@ -286,11 +286,11 @@ svcutil.exe MyService.wsdl MyServiceSchema.xsd /r:C:\full_path_to_system_dll\Sys
   
 |참조된 형식|참조된 형식으로 구현된 인터페이스|예제|처리되는 형식|  
 |---------------------|----------------------------------------------|-------------|---------------------|  
-|제네릭이 아닌 형식 또는 폐쇄형 제네릭 형식(매개 변수 수에는 제한 없음)|<xref:System.Collections.IDictionary>|`MyType : IDictionary`<br /><br /> 또는<br /><br /> `MyType<T> : IDictionary` 여기서 T=`int`|폐쇄형 제네릭 형식(예: `IDictionary<object,object>`)|  
-|폐쇄형 제네릭 형식(여러 개의 매개 변수)|<xref:System.Collections.Generic.IDictionary%602>, 폐쇄형|`MyType<T> : IDictionary<string, bool>` 여기서 T=`int`|폐쇄형 제네릭 형식(예: `IDIctionary<string,bool>`)|  
-|폐쇄형 제네릭 형식(여러 개의 매개 변수)|제네릭 <xref:System.Collections.Generic.IDictionary%602>, 값 또는 키 중 하나가 폐쇄형이며, 나머지 하나는 개방형이고 형식의 매개 변수 중 하나를 사용|`MyType<T,U,V> : IDictionary<string,V>` 여기서 T=`int`, U=`float`, V=`bool`<br /><br /> 또는<br /><br /> `MyType<Z> : IDictionary<Z,bool>` 여기서 Z=`string`|폐쇄형 제네릭 형식(예: `IDictionary<string,bool>`)|  
-|폐쇄형 제네릭 형식(여러 개의 매개 변수)|제네릭 <xref:System.Collections.Generic.IDictionary%602>, 키와 값 모두 개방형이고 각각은 형식의 매개 변수 중 하나를 사용|`MyType<T,U,V> : IDictionary<V,U>` 여기서 T=`int`, U=`bool`, V=`string`|폐쇄형 제네릭 형식(예: `IDictionary<string,bool>`)|  
-|개방형 제네릭 형식(두 개의 매개 변수)|제네릭 <xref:System.Collections.Generic.IDictionary%602>, 개방형, 형식의 제네릭 매개 변수가 나타나는 순서대로 두 개의 매개 변수 모두 사용|`MyType<K,V> : IDictionary<K,V>`, K와 V 모두 개방형|개방형 제네릭 형식(예: `IDictionary<K,V>`)|  
+|제네릭이 아닌 형식 또는 폐쇄형 제네릭 형식(매개 변수 수에는 제한 없음)|<xref:System.Collections.IDictionary>|`MyType : IDictionary`<br /><br /> 또는<br /><br /> `MyType<T> : IDictionary` 여기서 T=`int`|폐쇄형 제네릭 형식 `IDictionary<object,object>`|  
+|폐쇄형 제네릭 형식(여러 개의 매개 변수)|<xref:System.Collections.Generic.IDictionary%602>를 닫을|`MyType<T> : IDictionary<string, bool>` 여기서 T=`int`|폐쇄형 제네릭 형식(예: `IDIctionary<string,bool>`)|  
+|폐쇄형 제네릭 형식(여러 개의 매개 변수)|제네릭 <xref:System.Collections.Generic.IDictionary%602>, 값 또는 키 중 하나가 폐쇄형이며, 나머지 하나는 개방형이고 형식의 매개 변수 중 하나를 사용|`MyType<T,U,V> : IDictionary<string,V>` 여기서 T =`int`, U =`float`, V =`bool`<br /><br /> 또는<br /><br /> `MyType<Z> : IDictionary<Z,bool>` 여기서 Z=`string`|폐쇄형 제네릭 형식(예: `IDictionary<string,bool>`)|  
+|폐쇄형 제네릭 형식(여러 개의 매개 변수)|제네릭 <xref:System.Collections.Generic.IDictionary%602>, 키와 값 모두 개방형이고 각각은 형식의 매개 변수 중 하나를 사용|`MyType<T,U,V> : IDictionary<V,U>` 여기서 T =`int`, U =`bool`, V =`string`|폐쇄형 제네릭 형식(예: `IDictionary<string,bool>`)|  
+|개방형 제네릭 형식(두 개의 매개 변수)|제네릭 <xref:System.Collections.Generic.IDictionary%602>, 개방형, 형식의 제네릭 매개 변수가 나타나는 순서대로 두 개의 매개 변수 모두 사용|`MyType<K,V> : IDictionary<K,V>`K와 V 모두 개방형|개방형 제네릭 형식(예: `IDictionary<K,V>`)|  
   
  형식에서 <xref:System.Collections.IDictionary> 및 제네릭 <xref:System.Collections.Generic.IDictionary%602>를 모두 구현하는 경우 제네릭 <xref:System.Collections.Generic.IDictionary%602> 만 고려됩니다.  
   
@@ -327,7 +327,7 @@ svcutil.exe MyService.wsdl MyServiceSchema.xsd /r:C:\full_path_to_system_dll\Sys
 |제네릭 <xref:System.Collections.Generic.ICollection%601>|열거자|제네릭 Add|  
 |<xref:System.Collections.IList>|<xref:System.Collections.IList> 인덱서|`Add`|  
 |제네릭 <xref:System.Collections.Generic.IEnumerable%601>|`GetEnumerator`|적절한 형식(제네릭 매개 변수의 형식 또는 기본 형식 중 하나)의 매개 변수 하나를 사용하는 `Add`라는 비정적 메서드가 호출됩니다. 해당 메서드는 serialization 및 deserialization을 수행하는 동안 serializer에서 컬렉션 형식을 컬렉션으로 처리하도록 존재해야 합니다.|  
-|<xref:System.Collections.IEnumerable> 및 여기서 파생된 <xref:System.Collections.ICollection>|`GetEnumerator`|`Add` 형식의 매개 변수 하나를 사용하는 `Object`라는 비정적 메서드가 호출됩니다. 해당 메서드는 serialization 및 deserialization을 수행하는 동안 serializer에서 컬렉션 형식을 컬렉션으로 처리하도록 존재해야 합니다.|  
+|<xref:System.Collections.IEnumerable> (및 따라서 <xref:System.Collections.ICollection>에서 파생 된)|`GetEnumerator`|`Add` 형식의 매개 변수 하나를 사용하는 `Object`라는 비정적 메서드가 호출됩니다. 해당 메서드는 serialization 및 deserialization을 수행하는 동안 serializer에서 컬렉션 형식을 컬렉션으로 처리하도록 존재해야 합니다.|  
   
  위 표에는 컬렉션 인터페이스의 우선 순위가 내림차순으로 나열되어 있습니다. 예를 들어, 형식에서 <xref:System.Collections.IList> 및 제네릭 <xref:System.Collections.Generic.IEnumerable%601>을 모두 구현하는 경우 컬렉션은 다음과 같은 <xref:System.Collections.IList> 규칙에 따라 serialize되고 deserialize됩니다.  
   
@@ -396,4 +396,5 @@ svcutil.exe MyService.wsdl MyServiceSchema.xsd /r:C:\full_path_to_system_dll\Sys
  serializer가 개체 참조를 유지하는 모드에서 작동하는 경우 개체 참조 유지도 컬렉션에 적용됩니다. 특히 개체 ID는 전체 컬렉션 및 컬렉션에 포함된 개별 항목 모두에 대해 유지됩니다. 사전의 경우 개체 ID는 키/값 쌍 개체, 개별 키 개체 및 값 개체 모두에 대해 유지됩니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Runtime.Serialization.CollectionDataContractAttribute>

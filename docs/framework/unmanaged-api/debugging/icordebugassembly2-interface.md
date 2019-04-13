@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6980b78dc416e03df578756b7a2ee45a48a4fd5a
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 70eac63855f16205c3d5dbcb28305481b986484c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56967141"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59201171"
 ---
 # <a name="icordebugassembly2-interface"></a>ICorDebugAssembly2 인터페이스
 
@@ -48,4 +48,5 @@ ms.locfileid: "56967141"
  **.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>참고자료
+
 - [디버깅 인터페이스](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

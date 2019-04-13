@@ -2,12 +2,12 @@
 title: <webSocketSettings>
 ms.date: 03/30/2017
 ms.assetid: bbf97e02-8dd1-4922-acac-3cd33397b249
-ms.openlocfilehash: 298bf27b171772bb039b11b5e5de70e7d45b061d
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 1101d021f3c7436c4f45a22a48e50f6d1553f753
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55258451"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59226874"
 ---
 # <a name="websocketsettings"></a>\<webSocketSettings>
 WebSocket 설정을 지정하는 데 사용되는 구성 요소입니다.  
@@ -54,7 +54,7 @@ WebSocket 설정을 지정하는 데 사용되는 구성 요소입니다.
 |값|설명|  
 |-----------|-----------------|  
 |WhenDuplex|이중 계약인 경우 WebSocket 프로토콜을 사용합니다.|  
-|Always|계약과 관계없이 항상 WebSocket 프로토콜을 사용합니다.|  
+|항상|계약과 관계없이 항상 WebSocket 프로토콜을 사용합니다.|  
 |Never|WebSocket 프로토콜을 사용하지 않습니다.|  
   
 ### <a name="child-elements"></a>자식 요소  
@@ -85,6 +85,7 @@ WebSocket 설정을 지정하는 데 사용되는 구성 요소입니다.
 ```  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.ServiceModel.Channels.Binding>
 - <xref:System.ServiceModel.Channels.BindingElement>
 - <xref:System.ServiceModel.BasicHttpBinding>

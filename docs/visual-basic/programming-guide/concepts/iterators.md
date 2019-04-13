@@ -40,7 +40,7 @@ End Function
   
  Visual Basic 반복기 함수 또는 `get` 접근자 선언에 포함 된 [반복기](../../../visual-basic/language-reference/modifiers/iterator.md) 한정자입니다.  
   
- 반복기는 Visual basic Visual Studio 2012에서 도입 되었습니다.  
+ 반복기는 Visual Basic Visual Studio 2012에서 도입 되었습니다.  
   
  **항목 내용**  
   
@@ -254,7 +254,7 @@ End Function
  경우는 `For Each` 본문 (반복기 메서드) 하는 대신 예외를 throw를 `Catch` 반복기 함수에는 블록이 실행 되지 않습니다 하지만 `Finally` 반복기 함수에는 블록이 실행 됩니다. `Catch` 블록은 반복기 함수 내에서 반복기 함수 내에서 발생 하는 예외만 catch 합니다.  
   
 ## <a name="BKMK_AnonymousMethods"></a> 무명 메서드  
- Visual basic에서는 익명 함수는 반복기 함수를 수 있습니다. 다음은 이에 대한 예입니다.  
+ Visual Basic에서는 익명 함수는 반복기 함수를 수 있습니다. 다음은 이에 대한 예입니다.  
   
 ```vb  
 Dim iterateSequence = Iterator Function() _  
@@ -420,7 +420,7 @@ End Class
   
  Visual Basic의 반복기 메서드를 사용할 수 없습니다 `ByRef` 매개 변수입니다.  
   
- Visual basic의 경우 "Yield"는 예약어 아니며에서 사용 하는 경우에 특별 한 의미가 있는 `Iterator` 메서드 또는 `get` 접근자입니다.  
+ Visual Basic의 경우 "Yield"는 예약어 아니며에서 사용 하는 경우에 특별 한 의미가 있는 `Iterator` 메서드 또는 `get` 접근자입니다.  
   
 ## <a name="BKMK_Technical"></a> 기술 구현  
  반복기를 메서드로 작성하는 경우에도 컴파일러는 실제로 상태 시스템인 중첩 클래스로 변환합니다. 이 클래스는 클라이언트 코드의 `For Each...Next` 루프가 계속되는 한 반복기의 위치를 추적합니다.  

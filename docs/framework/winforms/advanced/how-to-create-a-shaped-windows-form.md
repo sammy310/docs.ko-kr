@@ -1,5 +1,5 @@
 ---
-title: '방법: 모양이 가진된 Windows Form 만들기'
+title: '방법: 도형이 있는 Windows Form 만들기'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -18,14 +18,14 @@ helpviewer_keywords:
 - Windows Forms, circular
 - forms [Windows Forms], custom shapes
 ms.assetid: 6e6041e0-8e67-4487-b1e9-e410dbd1ef6c
-ms.openlocfilehash: a130614b0977aab6191f195c93454c527e6be9b8
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 03fcbb97db180e71283810e2daeab9be272b9d5d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57710071"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59087257"
 ---
-# <a name="how-to-create-a-shaped-windows-form"></a>방법: 모양이 가진된 Windows Form 만들기
+# <a name="how-to-create-a-shaped-windows-form"></a>방법: 도형이 있는 Windows Form 만들기
 이 예제에서는 폼을 타원 양식을 사용 하 여 크기를 조정 합니다.  
   
 ## <a name="example"></a>예제  
@@ -41,6 +41,7 @@ ms.locfileid: "57710071"
  이 예제에서는 재정의 <xref:System.Windows.Forms.Control.OnPaint%2A> 폼의 모양을 변경 하는 방법입니다. 이 코드를 사용 하려면 메서드 선언 뿐만 아니라 메서드 내에서 그리기 코드를 복사 합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Windows.Forms.Control.OnPaint%2A>
 - <xref:System.Drawing.Region>
 - <xref:System.Drawing>

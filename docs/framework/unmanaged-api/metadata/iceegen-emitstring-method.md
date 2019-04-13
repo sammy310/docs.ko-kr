@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 63ddd3b5cc79cedba6d6acc6a9b6b70c00d917fc
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 1eabf5631fcfe7a187d0e203d64c7a7f4f5a819a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57476232"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59209959"
 ---
 # <a name="iceegenemitstring-method"></a>ICeeGen::EmitString 메서드
 코드 베이스에 지정된 된 문자열을 내보냅니다.  
@@ -55,4 +55,5 @@ HRESULT EmitString (
  **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>참고자료
+
 - [ICeeGen 인터페이스](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md)

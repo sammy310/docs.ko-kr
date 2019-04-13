@@ -12,12 +12,12 @@ helpviewer_keywords:
 - declared elements [Visual Basic], visibility
 - visibility [Visual Basic], variables
 ms.assetid: 44b7f62a-cb5c-4d50-bce9-60ae68f87072
-ms.openlocfilehash: ef7957a991718112fe01c4fa3a85f29b9226abd3
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 24a7ae3b8f3400beeaedb20ea6352ea44bdb7597
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58818725"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59324320"
 ---
 # <a name="how-to-control-the-scope-of-a-variable-visual-basic"></a>방법: 변수 (Visual Basic)의 범위 제어
 일반적으로 변수가 *범위*, 또는 참조를 선언 하는 영역 전체에 대 한 표시 합니다. 경우에 따라 변수의 *액세스 수준* 해당 범위에 영향을 줄 수 있습니다.  
@@ -43,19 +43,19 @@ ms.locfileid: "58818725"
   
 #### <a name="to-make-a-variable-visible-throughout-a-module-class-or-structure"></a>변수를 모듈, 클래스 또는 구조 전체에서 볼 수 있도록 하려면  
   
-1.  위치는 `Dim` 모듈, 클래스 또는 구조체 내 서 다른 프로시저 외부 변수에 대 한 문입니다.  
+1. 위치는 `Dim` 모듈, 클래스 또는 구조체 내 서 다른 프로시저 외부 변수에 대 한 문입니다.  
   
-2.  포함 된 [개인](../../../../visual-basic/language-reference/modifiers/private.md) 키워드를 `Dim` 문.  
+2. 포함 된 [개인](../../../../visual-basic/language-reference/modifiers/private.md) 키워드를 `Dim` 문.  
   
-3.  모듈, 클래스 또는 구조체 내에서 아무 곳 이나 있지만 아닌에서 변수를 참조할 수 있습니다 외부입니다.  
+3. 모듈, 클래스 또는 구조체 내에서 아무 곳 이나 있지만 아닌에서 변수를 참조할 수 있습니다 외부입니다.  
   
 #### <a name="to-make-a-variable-visible-throughout-a-namespace"></a>변수를 네임 스페이스 전체에서 볼 수 있도록 하려면  
   
-1.  위치는 `Dim` 모듈, 클래스 또는 구조체 내 서 다른 프로시저 외부 변수에 대 한 문입니다.  
+1. 위치는 `Dim` 모듈, 클래스 또는 구조체 내 서 다른 프로시저 외부 변수에 대 한 문입니다.  
   
-2.  포함 된 [Friend](../../../../visual-basic/language-reference/modifiers/friend.md) 또는 [공용](../../../../visual-basic/language-reference/modifiers/public.md) 키워드는 `Dim` 문.  
+2. 포함 된 [Friend](../../../../visual-basic/language-reference/modifiers/friend.md) 또는 [공용](../../../../visual-basic/language-reference/modifiers/public.md) 키워드는 `Dim` 문.  
   
-3.  어디에서 나 변수를 참조할 수는 모듈, 클래스 또는 구조가 포함 된 네임 스페이스입니다.  
+3. 어디에서 나 변수를 참조할 수는 모듈, 클래스 또는 구조가 포함 된 네임 스페이스입니다.  
   
 ## <a name="example"></a>예제  
  다음 예제에서는 모듈 수준 변수를 선언 하 고 모듈 내에서 코드를 참조할 수 있도록 제한 합니다.  

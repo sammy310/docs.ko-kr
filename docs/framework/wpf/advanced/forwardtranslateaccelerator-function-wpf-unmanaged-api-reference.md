@@ -8,12 +8,12 @@ api_name:
 api_location:
 - PresentationHost_v0400.dll
 ms.assetid: fff47a86-9d9f-4176-9530-10e1876e393f
-ms.openlocfilehash: 2b1914b9a0e478c7ab15fca77b7df952123153ac
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 4bb7e665bb836dc5f95b14f39179f1d4b9f8173d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57502291"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59080256"
 ---
 # <a name="forwardtranslateaccelerator-function-wpf-unmanaged-api-reference"></a>ForwardTranslateAccelerator 함수 (F 관리 되지 않는 API 참조)
 이 API는 Windows Presentation Foundation (WPF) 인프라를 지원 하며 코드에서 직접 사용할 수 없습니다.  
@@ -48,4 +48,5 @@ HRESULT ForwardTranslateAccelerator(
  **.NET framework 버전:** [!INCLUDE[net_current_v30plus](../../../../includes/net-current-v30plus-md.md)]  
   
 ## <a name="see-also"></a>참고자료
-- [F 관리되지 않는 API 참조](wpf-unmanaged-api-reference.md)
+
+- [WPF 비관리형 API 참조](wpf-unmanaged-api-reference.md)

@@ -1,5 +1,5 @@
 ---
-title: '자습서: Win32 응용 프로그램에서 시각적 개체 호스팅'
+title: '자습서: Win32 애플리케이션에서 시각적 개체 호스팅'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,20 +9,18 @@ helpviewer_keywords:
 - Win32 code [WPF], visual objects in
 - hosting [WPF], visual objects in Win32 code
 ms.assetid: f0e1600c-3217-43d5-875d-1864fa7fe628
-ms.openlocfilehash: 68241d679b0f788423b09badfa549a660da0d106
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: b260f96246f0d9e5447b74a05e1396bfef176197
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57377301"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59111464"
 ---
-# <a name="tutorial-hosting-visual-objects-in-a-win32-application"></a>자습서: Win32 응용 프로그램에서 시각적 개체 호스팅
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]에서는 응용 프로그램을 만들기 위한 다양한 환경을 제공합니다. 그러나 상당한 투자 경우 [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] 코드를이 더 효과적일 추가할 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 응용 프로그램 기능을 코드를 다시 작성 하지 않고 있습니다. 에 대 한 지원을 제공 하기 위해 [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] 하 고 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 그래픽 하위 시스템 응용 프로그램에서 동시에 사용할 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 개체의 호스팅 메커니즘을 제공을 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 창.  
+# <a name="tutorial-hosting-visual-objects-in-a-win32-application"></a>자습서: Win32 애플리케이션에서 시각적 개체 호스팅
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 응용 프로그램을 만들기 위한 풍부한 환경을 제공 합니다. 그러나 상당한 투자 경우 [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] 코드를이 더 효과적일 추가할 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 응용 프로그램 기능을 코드를 다시 작성 하지 않고 있습니다. 에 대 한 지원을 제공 하기 위해 [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] 하 고 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 그래픽 하위 시스템 응용 프로그램에서 동시에 사용할 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 개체의 호스팅 메커니즘을 제공을 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 창.  
   
  이 자습서에서는 샘플 응용 프로그램을 작성 하는 방법 설명 [Win32 상호 운용 샘플을 사용 하 여 적중 테스트](https://go.microsoft.com/fwlink/?LinkID=159995), 해당 호스트 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 시각적 개체는 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 창입니다.  
-  
 
-  
 <a name="requirements"></a>   
 ## <a name="requirements"></a>요구 사항  
  이 자습서에서는 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 및 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 프로그래밍에 대한 기본 지식이 있다고 가정합니다. 에 대 한 기본적인 소개 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 프로그래밍 참조 [연습: 내 첫 WPF 데스크톱 응용 프로그램](../getting-started/walkthrough-my-first-wpf-desktop-application.md)합니다. 에 대 한 소개 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 주제에 참조를 특히 프로그래밍 서적 중 하나 *Windows 프로그래밍* Charles petzold가 저술한 합니다.  
@@ -78,6 +76,7 @@ ms.locfileid: "57377301"
  시각적 개체에 대해 적중 테스트에 대 한 자세한 내용은 참조 하세요. [시각적 계층에서 테스트 적중](hit-testing-in-the-visual-layer.md)합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Windows.Interop.HwndSource>
 - [적중 테스트 Win32 상호 운용성 샘플](https://go.microsoft.com/fwlink/?LinkID=159995)
 - [시각적 계층에서 적중 테스트](hit-testing-in-the-visual-layer.md)

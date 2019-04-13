@@ -10,12 +10,12 @@ helpviewer_keywords:
 - printing a form
 - printing [Windows Forms], printing a form
 ms.assetid: c8dff5f8-f56a-4c07-ae31-64643b31f8fc
-ms.openlocfilehash: 80bf88ad048e55a381d034d2a796de6f77f8691c
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 85fb12028687578b76e0f16061deb9b9a4de70e3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57714153"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59121968"
 ---
 # <a name="how-to-print-a-windows-form"></a>방법: Windows Form 인쇄
 개발 프로세스의 일환으로, 일반적으로 하려는 Windows Form의 복사본을 인쇄 합니다. 다음 코드 예제를 사용 하 여 현재 폼의 복사본을 인쇄 하는 방법을 보여 줍니다는 <xref:System.Drawing.Graphics.CopyFromScreen%2A> 메서드.  
@@ -38,6 +38,7 @@ ms.locfileid: "57714153"
  이 코드 예제를 실행 하기 위해 사용할 프린터를 사용 하 여 컴퓨터를 액세스할 수 있는 권한이 있어야 합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Drawing.Printing.PrintDocument>
-- [방법: GDI +를 사용 하 여 이미지를 렌더링 합니다.](how-to-render-images-with-gdi.md)
-- [방법: Windows Forms의 그래픽 인쇄](how-to-print-graphics-in-windows-forms.md)
+- [방법: GDI+를 사용하여 이미지 렌더링](how-to-render-images-with-gdi.md)
+- [방법: Windows Forms에서 그래픽 인쇄](how-to-print-graphics-in-windows-forms.md)

@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - WS-AT protocol [WCF], configuring WS-Atomic Transaction
 ms.assetid: cb9f1c9c-1439-4172-b9bc-b01c3e09ac48
-ms.openlocfilehash: bc21cba7889652a8b485d101205b15d6f189d12d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 987d6c12262fd6530c6ef6f14cedeec269d3f2f8
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54592434"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59315181"
 ---
 # <a name="configuring-ws-atomic-transaction-support"></a>WS-Atomic Transaction 지원 구성
 이 항목에서는 WS-AT 구성 유틸리티를 사용하여 WS-AT(WS-AtomicTransaction) 지원을 구성하는 방법에 대해 설명합니다.  
@@ -56,19 +56,19 @@ ms.locfileid: "54592434"
   
  트러스트를 설정하려면 필요한 인증서가 이미 있어야 합니다. 다음 단계 전에 새 인증서 만들기 및 설치 하는 방법에 알아보려면 참조 [방법: 만들기 및 개발 중 WCF에서 임시 클라이언트 인증서 설치](https://go.microsoft.com/fwlink/?LinkId=158925)합니다.  
   
-1.  컴퓨터 A에서 MMC 인증서 스냅인을 사용하여 기존 인증서(certA)를 LocalMachine\MY(개인 노드) 및 LocalMachine\ROOT 저장소(신뢰할 수 있는 루트 인증 기관 노드)로 가져옵니다. 인증서를 특정 노드로 가져오려면 노드를 마우스 오른쪽 단추로 클릭 및 선택 **All Tasks/Import**합니다.  
+1. 컴퓨터 A에서 MMC 인증서 스냅인을 사용하여 기존 인증서(certA)를 LocalMachine\MY(개인 노드) 및 LocalMachine\ROOT 저장소(신뢰할 수 있는 루트 인증 기관 노드)로 가져옵니다. 인증서를 특정 노드로 가져오려면 노드를 마우스 오른쪽 단추로 클릭 및 선택 **All Tasks/Import**합니다.  
   
-2.  컴퓨터 B에서 MMC 인증서 스냅인을 사용하여 개인 키가 있는 certB 인증서를 만들거나 얻어 LocalMachine\MY(개인 노드) 및 LocalMachine\ROOT 저장소(신뢰할 수 있는 루트 인증 기관 노드)로 가져옵니다.  
+2. 컴퓨터 B에서 MMC 인증서 스냅인을 사용하여 개인 키가 있는 certB 인증서를 만들거나 얻어 LocalMachine\MY(개인 노드) 및 LocalMachine\ROOT 저장소(신뢰할 수 있는 루트 인증 기관 노드)로 가져옵니다.  
   
-3.  아직 수행하지 않은 경우 certA의 공개 키를 파일로 내보냅니다.  
+3. 아직 수행하지 않은 경우 certA의 공개 키를 파일로 내보냅니다.  
   
-4.  아직 수행하지 않은 경우 certB의 공개 키를 파일로 내보냅니다.  
+4. 아직 수행하지 않은 경우 certB의 공개 키를 파일로 내보냅니다.  
   
 ### <a name="establishing-mutual-trust-between-machines"></a>컴퓨터 간의 상호 트러스트 설정  
   
-1.  컴퓨터 A에서 certB의 파일 표현을 LocalMachine\MY 및 LocalMachine\ROOT 저장소로 가져옵니다. 이렇게 하면 컴퓨터 A가 통신할 때 certB를 트러스트합니다.  
+1. 컴퓨터 A에서 certB의 파일 표현을 LocalMachine\MY 및 LocalMachine\ROOT 저장소로 가져옵니다. 이렇게 하면 컴퓨터 A가 통신할 때 certB를 트러스트합니다.  
   
-2.  컴퓨터 B에서 certA의 파일을 LocalMachine\MY 및 LocalMachine\ROOT 저장소로 가져옵니다. 이렇게 하면 컴퓨터 B가 통신할 때 certA를 트러스트합니다.  
+2. 컴퓨터 B에서 certA의 파일을 LocalMachine\MY 및 LocalMachine\ROOT 저장소로 가져옵니다. 이렇게 하면 컴퓨터 B가 통신할 때 certA를 트러스트합니다.  
   
  이 단계를 완료하면 두 컴퓨터 간에 트러스트가 설정되고 WS-AT를 사용하여 서로 통신하도록 구성할 수 있습니다.  
   
@@ -77,9 +77,9 @@ ms.locfileid: "54592434"
   
  MMC WS-AT 스냅인을 사용하여 이 작업을 구성할 수 있습니다. 이 도구에 대 한 자세한 내용은 참조는 [WS-AtomicTransaction 구성 MMC 스냅인](../../../../docs/framework/wcf/ws-atomictransaction-configuration-mmc-snap-in.md) 항목입니다. 다음 단계에서는 MSDTC를 실행하는 두 컴퓨터 간에 트러스트를 설정하는 방법에 대해 설명합니다.  
   
-1.  컴퓨터 A의 설정을 구성합니다. "끝점 인증서"로 certA를 선택 합니다. "허가 된 인증서"로 certB를 선택 합니다.  
+1. 컴퓨터 A의 설정을 구성합니다. "끝점 인증서"로 certA를 선택 합니다. "허가 된 인증서"로 certB를 선택 합니다.  
   
-2.  컴퓨터 B의 설정을 구성합니다. "끝점 인증서"로 certB를 선택 합니다. "허가 된 인증서"로 certA를 선택 합니다.  
+2. 컴퓨터 B의 설정을 구성합니다. "끝점 인증서"로 certB를 선택 합니다. "허가 된 인증서"로 certA를 선택 합니다.  
   
 > [!NOTE]
 >  한 컴퓨터에서 다른 컴퓨터로 메시지를 보낼 때 발신자는 수신자 인증서의 주체 이름과 수신자 컴퓨터의 이름이 일치하는지 확인합니다. 일치하지 않으면 인증서 확인이 실패하고 두 컴퓨터가 통신할 수 없습니다.  
@@ -98,13 +98,13 @@ ms.locfileid: "54592434"
   
  또한 WS-AT 프로토콜 서비스는 ETW 추적 세션을 통해 통합된 ServiceModel 추적을 지원합니다. 이 추적 기능은 기존의 트랜잭션 추적 외에 보다 자세한 통신 관련 추적을 제공합니다.  이러한 추가 추적을 사용하려면 다음 단계를 수행합니다.  
   
-1.  엽니다는 **시작/실행** 메뉴에서 입력된 상자에 "regedit"를 입력 하 고 선택 **확인**합니다.  
+1. 엽니다는 **시작/실행** 메뉴에서 입력된 상자에 "regedit"를 입력 하 고 선택 **확인**합니다.  
   
-2.  에 **레지스트리 편집기**, Hkey_Local_Machine\SOFTWARE\Microsoft\WSAT\3.0\ 왼쪽된 창에서 다음 폴더로 이동  
+2. 에 **레지스트리 편집기**, Hkey_Local_Machine\SOFTWARE\Microsoft\WSAT\3.0\ 왼쪽된 창에서 다음 폴더로 이동  
   
-3.  마우스 오른쪽 단추로 클릭 합니다 `ServiceModelDiagnosticTracing` 값 오른쪽 창에서 선택한 **수정**합니다.  
+3. 마우스 오른쪽 단추로 클릭 합니다 `ServiceModelDiagnosticTracing` 값 오른쪽 창에서 선택한 **수정**합니다.  
   
-4.  에 **값 데이터** 입력 상자를 사용 하도록 설정 하려는 추적 수준을 지정 하려면 유효한 값 중 하나를 입력 합니다.  
+4. 에 **값 데이터** 입력 상자를 사용 하도록 설정 하려는 추적 수준을 지정 하려면 유효한 값 중 하나를 입력 합니다.  
   
 -   0: 해제  
   
@@ -119,5 +119,6 @@ ms.locfileid: "54592434"
 -   31: 자세한 정보  
   
 ## <a name="see-also"></a>참고자료
+
 - [WS-AtomicTransaction 구성 유틸리티(wsatConfig.exe)](../../../../docs/framework/wcf/ws-atomictransaction-configuration-utility-wsatconfig-exe.md)
 - [WS-AtomicTransaction 구성 MMC 스냅인](../../../../docs/framework/wcf/ws-atomictransaction-configuration-mmc-snap-in.md)

@@ -2,12 +2,12 @@
 title: LINQ to Entities에서 쿼리
 ms.date: 03/30/2017
 ms.assetid: c015a609-29eb-4e95-abb1-2ca721c6e2ad
-ms.openlocfilehash: aef82fffda1177d87b7f811ef75f37872c8c3799
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0e005939c8168606c7f58467f11115666cf1ef24
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54528657"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59124750"
 ---
 # <a name="queries-in-linq-to-entities"></a>LINQ to Entities에서 쿼리
 쿼리는 데이터 소스에서 데이터를 검색하는 식입니다. 관계형 데이터베이스에는 SQL이 사용되고 XML에는 XQuery가 사용되는 것과 같이 쿼리는 일반적으로 특수화된 쿼리 언어로 표현됩니다. 따라서 개발자는 쿼리하는 데이터 소스나 데이터 형식에 따라 새로운 쿼리 언어를 배워야 했습니다. LINQ(Language-Integrated Query)는 다양한 데이터 소스 및 형식에 사용할 수 있는 간단하고 일관된 모델을 제공합니다. LINQ 쿼리에서는 항상 프로그래밍 개체가 사용됩니다.  
@@ -24,7 +24,7 @@ ms.locfileid: "54528657"
 ### <a name="query-expression-syntax"></a>쿼리 식 구문  
  쿼리 식은 선언적 쿼리 구문입니다. 이 구문을 사용하면 개발자는 Transact-SQL과 비슷한 높은 수준의 언어로 쿼리를 작성할 수 있습니다. 쿼리 식 구문을 사용하면 최소한의 코드로 데이터 소스에 대해 복잡한 필터링, 정렬 및 그룹화 작업을 수행할 수 있습니다. 자세한 내용은 [기본 쿼리 작업 (Visual Basic)](~/docs/visual-basic/programming-guide/concepts/linq/basic-query-operations.md)합니다. 쿼리 식 구문을 사용하는 방법을 보여 주는 예제는 다음 항목을 참조하세요.  
   
--   [쿼리 식 구문 예제: Projection](../../../../../../docs/framework/data/adonet/ef/language-reference/query-expression-syntax-examples-projection.md)  
+-   [쿼리 식 구문 예제: 프로젝션](../../../../../../docs/framework/data/adonet/ef/language-reference/query-expression-syntax-examples-projection.md)  
   
 -   [쿼리 식 구문 예제: 필터링](../../../../../../docs/framework/data/adonet/ef/language-reference/query-expression-syntax-examples-filtering.md)  
   
@@ -32,7 +32,7 @@ ms.locfileid: "54528657"
   
 -   [쿼리 식 구문 예제: 집계 연산자](../../../../../../docs/framework/data/adonet/ef/language-reference/query-expression-syntax-examples-aggregate-operators.md)  
   
--   [쿼리 식 구문 예제: 분](../../../../../../docs/framework/data/adonet/ef/language-reference/query-expression-syntax-examples-partitioning.md)  
+-   [쿼리 식 구문 예제: 분할](../../../../../../docs/framework/data/adonet/ef/language-reference/query-expression-syntax-examples-partitioning.md)  
   
 -   [쿼리 식 구문 예제: 조인 연산자](../../../../../../docs/framework/data/adonet/ef/language-reference/query-expression-syntax-examples-join-operators.md)  
   
@@ -45,7 +45,7 @@ ms.locfileid: "54528657"
 ### <a name="method-based-query-syntax"></a>메서드 기반 쿼리 구문  
  메서드 기반 쿼리를 사용하여 [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] 쿼리를 작성할 수도 있습니다. 메서드 기반 쿼리 구문은 람다 식을 매개 변수로 전달하는 LINQ 연산자 메서드에 대한 직접 메서드 호출의 시퀀스입니다. 자세한 내용은 [람다 식](~/docs/csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)을 참조하세요. 메서드 기반 구문을 사용하는 방법을 보여 주는 예제는 다음 항목을 참조하세요.  
   
--   [메서드 기반 쿼리 구문 예제: Projection](../../../../../../docs/framework/data/adonet/ef/language-reference/method-based-query-syntax-examples-projection.md)  
+-   [메서드 기반 쿼리 구문 예제: 프로젝션](../../../../../../docs/framework/data/adonet/ef/language-reference/method-based-query-syntax-examples-projection.md)  
   
 -   [메서드 기반 쿼리 구문 예제: 필터링](../../../../../../docs/framework/data/adonet/ef/language-reference/method-based-query-syntax-examples-filtering.md)  
   
@@ -53,7 +53,7 @@ ms.locfileid: "54528657"
   
 -   [메서드 기반 쿼리 구문 예제: 집계 연산자](../../../../../../docs/framework/data/adonet/ef/language-reference/method-based-query-syntax-examples-aggregate-operators.md)  
   
--   [메서드 기반 쿼리 구문 예제: 분](../../../../../../docs/framework/data/adonet/ef/language-reference/method-based-query-syntax-examples-partitioning.md)  
+-   [메서드 기반 쿼리 구문 예제: 분할](../../../../../../docs/framework/data/adonet/ef/language-reference/method-based-query-syntax-examples-partitioning.md)  
   
 -   [메서드 기반 쿼리 구문 예제: 변환](../../../../../../docs/framework/data/adonet/ef/language-reference/method-based-query-syntax-examples-conversion.md)  
   
@@ -66,6 +66,7 @@ ms.locfileid: "54528657"
 -   [메서드 기반 쿼리 구문 예제: 관계 탐색](../../../../../../docs/framework/data/adonet/ef/language-reference/method-based-query-syntax-examples-navigating-relationships.md)  
   
 ## <a name="see-also"></a>참고자료
+
 - [LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/linq-to-entities.md)
 - [C#에서 LINQ 시작](~/docs/csharp/programming-guide/concepts/linq/getting-started-with-linq.md)
 - [Visual Basic에서 LINQ 시작](~/docs/visual-basic/programming-guide/concepts/linq/getting-started-with-linq.md)

@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - IEnumRAWINPUTDEVICE interface [WPF]
 ms.assetid: 88c8b389-a48b-46b9-b895-8ed7b1e26fea
-ms.openlocfilehash: e7bc6f2c96413f3898a17b541733eeecd6a260f7
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 04caca0c580d26fde7fc9a3e3a11b7a8fed26d65
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57375066"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59225523"
 ---
 # <a name="ienumrawinputdevice"></a>IEnumRAWINPUTDEVICE
 이 인터페이스는 원시 입력 장치를 열거하며 PresentationHost.exe에서만 사용됩니다.  
@@ -27,4 +27,5 @@ ms.locfileid: "57375066"
 |[IEnumRAWINPUTDEVIC:Clone](ienumrawinputdevic-clone.md)|현재 열거자와 동일한 상태인 다른 원시 입력 장치 열거자를 만들어 동일한 목록을 반복합니다.|  
   
 ## <a name="see-also"></a>참고자료
+
 - [원시 입력 정보](/windows/desktop/inputdev/about-raw-input)

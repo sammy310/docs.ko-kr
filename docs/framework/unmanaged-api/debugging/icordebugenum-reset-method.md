@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c88b69f672f58f3f9916ad189f6e560d9f4151a5
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: b3f70d2d90df43fdfe759387bebd776736843a1d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56978672"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59087510"
 ---
 # <a name="icordebugenumreset-method"></a>ICorDebugEnum::Reset 메서드
 열거형의 시작 부분에 커서를 이동합니다.  
@@ -43,4 +43,5 @@ HRESULT Reset ();
  **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>참고자료
+
 - [ICorDebugEnum 인터페이스](../../../../docs/framework/unmanaged-api/debugging/icordebugenum-interface1.md)

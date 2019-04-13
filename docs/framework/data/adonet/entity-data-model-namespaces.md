@@ -2,12 +2,12 @@
 title: '엔터티 데이터 모델: 네임스페이스'
 ms.date: 03/30/2017
 ms.assetid: 98ab4226-bb9f-44e7-af46-61a9b1a4e47c
-ms.openlocfilehash: aa11902ece5197905c20e7e572562643c57f51c1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7772172512d35b9ce9cf07a992c1c5f0ecd8c55b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54590109"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59180575"
 ---
 # <a name="entity-data-model-namespaces"></a>엔터티 데이터 모델: 네임스페이스
 엔터티 데이터 모델 (EDM)의 네임 스페이스는 추상 컨테이너입니다 [엔터티 형식](../../../../docs/framework/data/adonet/entity-type.md)를 [복합 형식은](../../../../docs/framework/data/adonet/complex-type.md), 및 [연결](../../../../docs/framework/data/adonet/association-type.md)합니다. EDM의 네임스페이스는 프로그래밍 언어의 네임스페이스와 유사하며, 포함하는 개체에 대한 컨텍스트를 제공하고 이름은 같지만 다른 네임스페이스에 포함된 개체를 구분하는 방법을 제공합니다.  
@@ -18,5 +18,6 @@ ms.locfileid: "54590109"
  [!code-xml[EDM_Example_Model#ImportedNamespace](../../../../samples/snippets/xml/VS_Snippets_Data/edm_example_model/xml/books6.edmx#importednamespace)]  
   
 ## <a name="see-also"></a>참고자료
+
 - [엔터티 데이터 모델의 주요 개념](../../../../docs/framework/data/adonet/entity-data-model-key-concepts.md)
 - [엔터티 데이터 모델](../../../../docs/framework/data/adonet/entity-data-model.md)

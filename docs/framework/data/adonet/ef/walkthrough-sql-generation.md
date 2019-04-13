@@ -2,12 +2,12 @@
 title: '연습: SQL 생성'
 ms.date: 03/30/2017
 ms.assetid: 16c38aaa-9927-4f3c-ab0f-81636cce57a3
-ms.openlocfilehash: 3210fb8872e1610c37070330082b11dddc37aa06
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d88916b06dd1fc01f10889fc94d5bcf8c571c228
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54733443"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59164582"
 ---
 # <a name="walkthrough-sql-generation"></a>연습: SQL 생성
 이 항목에서는 SQL 생성에서 발생 하는 방법을 보여 줍니다.는 [Sample Provider](https://code.msdn.microsoft.com/windowsdesktop/Entity-Framework-Sample-6a9801d0)합니다. 다음 Entity SQL 쿼리는 샘플 공급자에 포함된 모델을 사용합니다.  
@@ -126,11 +126,11 @@ LEFT OUTER JOIN [dbo].[InternationalOrders] AS [Extent5] ON [Extent4].[OrderID] 
   
  ![Diagram](../../../../../docs/framework/data/adonet/ef/media/cd2afa99-7256-4c63-aaa9-c2d13f18a3d8.gif "cd2afa99-7256-4c63-aaa9-c2d13f18a3d8")  
   
- 다음으로, "false"가 IsParentAJoin 스택에 제공되고 조인 조건 Var(Extent1).CategoryID == Var(Extent2).CategoryID가 처리됩니다. 기호 테이블에서 조회한 후 Var(Extenent1)이 <symbol_Extent1>로 확인됩니다. 인스턴스가 단순한 기호로 Var(Extent1) 처리의 결과로으로 확인 되므로 합니다. CategoryID과 함께 SqlBuilder \<symbol1 >. " CategoryID "가 반환 됩니다. 마찬가지로 비교의 다른 쪽이 처리되며, 조인 조건을 방문한 결과가 SelectStatement1의 FROM 절에 추가되고 "false" 값이 IsParentAJoin 스택에서 제공됩니다.  
+ 다음으로, "false"가 IsParentAJoin 스택에 제공되고 조인 조건 Var(Extent1).CategoryID == Var(Extent2).CategoryID가 처리됩니다. Var(Extenent1)에서에서 해결 되었습니다 < symbol_Extent1 >를 조회 한 후 등록 기호 테이블. 인스턴스가 단순한 기호로 Var(Extent1) 처리의 결과로으로 확인 되므로 합니다. CategoryID과 함께 SqlBuilder \<symbol1 >. " CategoryID "가 반환 됩니다. 마찬가지로 비교의 다른 쪽이 처리되며, 조인 조건을 방문한 결과가 SelectStatement1의 FROM 절에 추가되고 "false" 값이 IsParentAJoin 스택에서 제공됩니다.  
   
  이를 통해 Join1이 완전히 처리되었으며 범위가 기호 테이블에서 제공됩니다.  
   
- Join1의 부모인 Join4의 처리로 제어가 반환됩니다. 자식이 SELECT 문을 다시 사용했기 때문에 Join1 익스텐트가 단일 조인 기호 <joinSymbol_Join1>로 대체됩니다. 또한 Join1을 <joinSymbol_Join1>과 연결하기 위해 기호 테이블에 새 항목이 추가됩니다.  
+ Join1의 부모인 Join4의 처리로 제어가 반환됩니다. 자식이 Select 문을 다시 사용, 때문에 Join1 익스텐트가 단일 조인 기호 < joinSymbol_Join1 >으로 바뀝니다. 또한 Join1 < joinSymbol_Join1 > 연결할 기호 테이블에 새 항목이 추가 됩니다.  
   
  처리할 다음 노드는 Join4의 두 번째 자식인 Join3입니다. Join3이 오른쪽 자식이므로 "false"가 IsParentAJoin 스택에 제공됩니다. 이 시점에서 방문자의 상태가 다음 그림에 나와 있습니다.  
   
@@ -148,9 +148,9 @@ LEFT OUTER JOIN [dbo].[InternationalOrders] AS [Extent5] ON [Extent4].[OrderID] 
   
  다음 그림에는 DbPropertyExpression "Var(Join2).Extent4.OrderID"가 처리되기 직전의 방문자의 상태가 나와 있습니다.  
   
- "Var(Join2).Extent4.OrderID"를 방문하는 방식을 살펴보겠습니다. 먼저, 인스턴스 속성 "Var(Join2).Extent4"를 방문합니다. 이 속성은 또 다른 DbPropertyExpression이며 먼저 해당 인스턴스 "Var(Join2)"를 방문합니다. 기호 테이블의 맨 위 범위에서 "Join2"가 <joinSymbol_join2>로 확인됩니다. "Var(Join2).Extent4"를 처리하는 DbPropertyExpression의 방문 메서드에서 인스턴스 방문과 평면화가 필요할 때 조인 기호가 반환되었음을 확인할 수 있습니다.  
+ "Var(Join2).Extent4.OrderID"를 방문하는 방식을 살펴보겠습니다. 먼저, 인스턴스 속성 "Var(Join2).Extent4"를 방문합니다. 이 속성은 또 다른 DbPropertyExpression이며 먼저 해당 인스턴스 "Var(Join2)"를 방문합니다. 기호 테이블에서 대부분의 상위 범위에서 "Join2" < joinSymbol_join2 >를 확인합니다. "Var(Join2).Extent4"를 처리하는 DbPropertyExpression의 방문 메서드에서 인스턴스 방문과 평면화가 필요할 때 조인 기호가 반환되었음을 확인할 수 있습니다.  
   
- 중첩 조인이므로 조인 기호의 NameToExtent 사전에서 "Extent4" 속성을 조회하여 <symbol_Extent4>로 확인하고 새 기호 쌍(<joinSymbol_join2>, <symbol_Extent4>)을 반환합니다. 기호 쌍이 "Var(Join2).Extent4.OrderID"의 인스턴스 처리에서 반환되므로 "OrderID" 속성이 해당 기호 쌍(<symbol_Extent4>)의 ColumnPart에서 확인됩니다. 여기에는 해당 익스텐트의 열 목록이 있습니다. 따라서 "Var(Join2).Extent4.OrderID"는 { <joinSymbol_Join2>, ".", <symbol_OrderID>}로 확인됩니다.  
+ 중첩된 조인 이므로 조인 기호의 NameToExtent 사전에서 "Extent4" 속성을 조회, < symbol_Extent4 >로 확인 하 고 새 기호를 반환 합니다. (< joinSymbol_join2 >, < symbol_Extent4 >). 기호 쌍이 "var(join2)"의 인스턴스 처리에서 반환 되므로. Extent4.OrderID","OrderID"속성이 나타내는 익스텐트의 열 목록이 있는 해당 기호 쌍 (< symbol_Extent4 >)의 ColumnPart에서 확인 됩니다. So, "Var(Join2).Extent4.OrderID" is resolved to { <joinSymbol_Join2>, ".", <symbol_OrderID>}.  
   
  Join4의 조인 조건은 유사하게 처리됩니다. 맨 위의 프로젝트를 처리한 VisitInputExpression 메서드에 제어가 반환됩니다. 반환된 SelectStatement0의 FromExtents를 살펴보면, 입력이 조인으로 식별되며 원래 익스텐트를 제거하고 조인 기호만 포함된 새 익스텐트로 바꿉니다. 기호 테이블도 업데이트되고 그 다음으로 Project의 Projection 부분이 처리됩니다. 속성 확인과 조인 익스텐트 평면화는 앞에서 설명한 바와 같습니다.  
   
@@ -195,9 +195,10 @@ FROM: "[dbo].[Orders]", " AS ", <symbol_Extent4>,
 ### <a name="second-phase-of-sql-generation-generating-the-string-command"></a>SQL 생성의 두 번째 단계: 문자열 명령 생성  
  두 번째 단계에서는 기호의 실제 이름을 생성합니다. 이 경우에는 충돌을 해결해야 하므로 "OrderID"라는 열을 나타내는 기호만 중점적으로 살펴봅니다. 이러한 기호가 SqlSelectStatement에서 강조 표시되어 있습니다. 그림에서 사용된 접미사는 이러한 기호가 서로 다른 인스턴스임을 강조하기 위한 것이며, 새로운 이름을 나타내는 것은 아닙니다. 이 단계에서는 최종 이름(원래 이름과 다를 수 있음)이 아직 할당되지 않았습니다.  
   
- 이름을 바꿔야 하는 발견된 첫 번째 기호는 <symbol_OrderID>입니다. 새 이름이 "OrderID1"로 할당됩니다. 1은 "OrderID"에 마지막으로 사용된 접미사로 표시되며 기호는 이름 바꾸기가 필요하지 않은 것으로 표시됩니다. 다음으로, 처음 사용한 <symbol_OrderID_2>가 발견됩니다. 이 항목은 사용 가능한 다음 접미사("OrderID2")를 사용하도록 이름이 바뀌며, 또한 다음에 사용될 때 이름이 바뀌지 않도록 이름 바꾸기가 필요하지 않은 것으로 표시됩니다. <symbol_OrderID_3>에 대해서도 동일한 작업이 수행됩니다.  
+ 첫 번째 기호는 발견 된 바꿀 < symbol_OrderID > 됩니다. 새 이름이 "OrderID1"로 할당됩니다. 1은 "OrderID"에 마지막으로 사용된 접미사로 표시되며 기호는 이름 바꾸기가 필요하지 않은 것으로 표시됩니다. 다음으로, < symbol_OrderID_2 >의 첫 번째 사용이 발견 됩니다. 이 항목은 사용 가능한 다음 접미사("OrderID2")를 사용하도록 이름이 바뀌며, 또한 다음에 사용될 때 이름이 바뀌지 않도록 이름 바꾸기가 필요하지 않은 것으로 표시됩니다. 이렇게 < symbol_OrderID_3 >에 대 한 너무 합니다.  
   
  두 번째 단계가 끝날 때 최종 SQL 문이 생성됩니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [샘플 공급자의 SQL 생성](../../../../../docs/framework/data/adonet/ef/sql-generation-in-the-sample-provider.md)

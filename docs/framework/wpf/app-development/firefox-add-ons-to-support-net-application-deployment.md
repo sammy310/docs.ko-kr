@@ -7,12 +7,12 @@ helpviewer_keywords:
 - .NET application deployment [WPF], deploying with Firefox add-ons
 - .NET Framework Assistant for Firefox
 ms.assetid: 2403403b-9b14-48e9-b70d-fa288a3c9081
-ms.openlocfilehash: 837ed1cd41869031e8c0b549ffcd26e3285570cd
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 4b0552ab9f565d9118415bc2da2823762f34fe2c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57368066"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59111737"
 ---
 # <a name="firefox-add-ons-to-support-net-application-deployment"></a>.NET 응용 프로그램 배포를 지원하기 위한 Firefox 추가 기능
 Windows Presentation Foundation (WPF) Firefox 및 Firefox에 대 한.NET Framework Assistant에 대 한 플러그 인을 사용 하도록 설정 [!INCLUDE[TLA#tla_winfxwebapp#plural](../../../../includes/tlasharptla-winfxwebappsharpplural-md.md)]느슨한, [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], 및 Mozilla Firefox 브라우저를 사용 하 여 ClickOnce 응용 프로그램입니다.  
@@ -34,6 +34,7 @@ Windows Presentation Foundation (WPF) Firefox 및 Firefox에 대 한.NET Framewo
  Firefox 용.NET Framework Assistant가 포함 된 [!INCLUDE[net_v35SP1_short](../../../../includes/net-v35sp1-short-md.md)]합니다. Firefox 용.NET Framework Assistant를 제거 하는 방법에 대 한 내용은 [Firefox 용.NET Framework Assistant를 제거 하는 방법](https://go.microsoft.com/fwlink/?LinkId=177944)합니다.  
   
 ## <a name="see-also"></a>참고자료
-- [WPF 응용 프로그램 배포](deploying-a-wpf-application-wpf.md)
-- [WPF XAML 브라우저 응용 프로그램 개요](wpf-xaml-browser-applications-overview.md)
+
+- [WPF 애플리케이션 배포](deploying-a-wpf-application-wpf.md)
+- [WPF XAML 브라우저 애플리케이션 개요](wpf-xaml-browser-applications-overview.md)
 - [Firefox용 WPF 플러그 인 설치 여부 확인](how-to-detect-whether-the-wpf-plug-in-for-firefox-is-installed.md)

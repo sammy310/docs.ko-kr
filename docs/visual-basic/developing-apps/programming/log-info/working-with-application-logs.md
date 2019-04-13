@@ -6,12 +6,12 @@ helpviewer_keywords:
 - application event logs, Visual Basic
 - application event logs
 ms.assetid: 2581afd1-5791-4bc4-86b2-46244e9fe468
-ms.openlocfilehash: afd35b67fc11cb556159ed0d37130cd86d72c30f
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 00c54a59ccfe2a49dcf35b322ca077a10a48ae7d
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57354832"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58839641"
 ---
 # <a name="working-with-application-logs-in-visual-basic"></a>Visual Basic에서 애플리케이션 로그 작업
 
@@ -23,11 +23,11 @@ ms.locfileid: "57354832"
 
 다음 다이어그램에서는 `WriteEntry` 메서드에 기록된 메시지가 로그의 추적 수신기의 `WriteLine` 메서드로 전달되는 방식을 보여 줍니다.
 
-![내 로그 호출](../../../../visual-basic/developing-apps/programming/log-info/media/mylogcall.png "MyLogCall")
+![내 로그 호출을 보여주는 다이어그램.](./media/working-with-application-logs/my-log-call-messages.png)
 
 애플리케이션의 구성 파일을 변경하여 로그 및 추적 수신기의 동작을 변경할 수 있습니다. 다음 다이어그램에서는 로그의 각 부분과 구성 파일에서의 해당 위치를 보여 줍니다.
 
-![내 로그 구성](../../../../visual-basic/developing-apps/programming/log-info/media/mylogconfig.png "MyLogConfig")
+![내 로그 구성을 보여주는 다이어그램.](./media/working-with-application-logs/my-log-configuration.png)
 
 ## <a name="where-messages-are-logged"></a>메시지가 기록되는 위치
 

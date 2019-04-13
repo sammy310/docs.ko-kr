@@ -9,12 +9,12 @@ helpviewer_keywords:
 - documents [WPF], tables
 - tables [WPF]
 ms.assetid: 5e1105f4-8fc4-473a-ba55-88c8e71386e6
-ms.openlocfilehash: 4abb6368946f9dac5fdefd6ca44f3adeed55f78f
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: 6485aa9f2094b734f796ff38a33f4e0d3434e004
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58410821"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59317664"
 ---
 # <a name="table-overview"></a>테이블 개요
 <xref:System.Windows.Documents.Table> 유동 문서 콘텐츠의 그리드 기반 프레젠테이션을 지 원하는 블록 수준 요소가입니다. 이 요소의 유연성 덕분에 이 요소는 매우 유용하지만 이해하고 제대로 사용하기가 더 복잡합니다.  
@@ -108,15 +108,15 @@ ms.locfileid: "58410821"
 ### <a name="background-rendering-precedence"></a>백그라운드 렌더링 우선 순위  
  테이블 요소는 다음 순서로 렌더링됩니다(최저부터 최고까지 z 순서). 이 순서는 변경할 수 없습니다. 예를 들어 설정된 순서를 재정의하는 데 사용할 수 있는 다음 요소에 대한 "Z 순서" 속성은 없습니다.  
   
-1.  <xref:System.Windows.Documents.Table>  
+1. <xref:System.Windows.Documents.Table>  
   
-2.  <xref:System.Windows.Documents.TableColumn>  
+2. <xref:System.Windows.Documents.TableColumn>  
   
-3.  <xref:System.Windows.Documents.TableRowGroup>  
+3. <xref:System.Windows.Documents.TableRowGroup>  
   
-4.  <xref:System.Windows.Documents.TableRow>  
+4. <xref:System.Windows.Documents.TableRow>  
   
-5.  <xref:System.Windows.Documents.TableCell>  
+5. <xref:System.Windows.Documents.TableCell>  
   
  테이블에서 이러한 각 요소의 배경색을 정의하는 다음 예제를 살펴보겠습니다.  
   
@@ -176,7 +176,8 @@ ms.locfileid: "58410821"
  [!code-vb[TableSnippets#_TableAddFooterRow](~/samples/snippets/visualbasic/VS_Snippets_Wpf/TableSnippets/VisualBasic/Table.vb#_tableaddfooterrow)]  
   
 ## <a name="see-also"></a>참고자료
+
 - [유동 문서 개요](flow-document-overview.md)
-- [XAML로 테이블 정의](how-to-define-a-table-with-xaml.md)
+- [XAML을 사용하여 테이블 정의](how-to-define-a-table-with-xaml.md)
 - [WPF의 문서](documents-in-wpf.md)
 - [유동 콘텐츠 요소 사용](how-to-use-flow-content-elements.md)

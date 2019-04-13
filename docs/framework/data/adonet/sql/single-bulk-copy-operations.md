@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 5e7ff0be-3f23-4996-a92c-bd54d65c3836
-ms.openlocfilehash: 286199a595e7b34c25fcc13d37c5c913f269304d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b2783779965505d09f73c7203770c19ccaa78d26
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54555195"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59323371"
 ---
 # <a name="single-bulk-copy-operations"></a>단일 대량 복사 작업
 SQL Server 대량 복사 작업을 수행하는 가장 간단한 접근 방식은 데이터베이스에 단일 작업을 수행하는 것입니다. 기본적으로 대량 복사 작업은 격리된 작업으로 수행됩니다. 복사 작업은 롤백할 수 없는 비트랜잭트 방식으로 이루어집니다.  
@@ -22,19 +22,19 @@ SQL Server 대량 복사 작업을 수행하는 가장 간단한 접근 방식�
   
  일반적으로 대량 복사 작업을 수행하는 단계는 다음과 같습니다.  
   
-1.  소스 서버에 연결하고 복사할 데이터를 가져옵니다. 데이터를 <xref:System.Data.IDataReader> 또는 <xref:System.Data.DataTable> 개체에서 검색할 수 있으면 다른 소스에서 가져올 수도 있습니다.  
+1. 소스 서버에 연결하고 복사할 데이터를 가져옵니다. 데이터를 <xref:System.Data.IDataReader> 또는 <xref:System.Data.DataTable> 개체에서 검색할 수 있으면 다른 소스에서 가져올 수도 있습니다.  
   
-2.  대상 서버에 연결 (경우가 아니면 **SqlBulkCopy** 연결 하기).  
+2. 대상 서버에 연결 (경우가 아니면 **SqlBulkCopy** 연결 하기).  
   
-3.  <xref:System.Data.SqlClient.SqlBulkCopy> 개체를 만들고 필요한 속성을 설정합니다.  
+3. <xref:System.Data.SqlClient.SqlBulkCopy> 개체를 만들고 필요한 속성을 설정합니다.  
   
-4.  설정 된 **DestinationTableName** 대량에 대 한 대상 테이블을 나타내는 속성을 삽입 작업입니다.  
+4. 설정 된 **DestinationTableName** 대량에 대 한 대상 테이블을 나타내는 속성을 삽입 작업입니다.  
   
-5.  중 하나를 호출 합니다 **WriteToServer** 메서드.  
+5. 중 하나를 호출 합니다 **WriteToServer** 메서드.  
   
-6.  필요에 따라 속성 및 호출을 업데이트 **WriteToServer** 필요에 따라 다시 합니다.  
+6. 필요에 따라 속성 및 호출을 업데이트 **WriteToServer** 필요에 따라 다시 합니다.  
   
-7.  <xref:System.Data.SqlClient.SqlBulkCopy.Close%2A>를 호출하거나 대량 복사 작업을 `Using` 문 내에 래핑합니다.  
+7. <xref:System.Data.SqlClient.SqlBulkCopy.Close%2A>를 호출하거나 대량 복사 작업을 `Using` 문 내에 래핑합니다.  
   
 > [!CAUTION]
 >  소스 열과 대상 열의 데이터 형식은 일치하는 것이 좋습니다. 데이터 형식이 일치 하지 않는 경우 **SqlBulkCopy** 각 소스 값에서 사용 하는 규칙을 사용 하 여 대상 데이터 형식으로 변환 하려고 시도 <xref:System.Data.SqlClient.SqlParameter.Value%2A>합니다. 변환을 수행하면 성능에 영향을 줄 뿐 아니라 예기치 않은 오류가 발생할 수도 있습니다. 예를 들어, `Double` 데이터 형식은 일반적으로 `Decimal` 데이터 형식으로 변환되지만 항상 그런 것은 아닙니다.  
@@ -80,5 +80,6 @@ command.ExecuteNonQuery();
 ```  
   
 ## <a name="see-also"></a>참고자료
+
 - [SQL Server에서 대량 복사 작업](../../../../../docs/framework/data/adonet/sql/bulk-copy-operations-in-sql-server.md)
 - [ADO.NET 관리되는 공급자 및 데이터 집합 개발자 센터](https://go.microsoft.com/fwlink/?LinkId=217917)

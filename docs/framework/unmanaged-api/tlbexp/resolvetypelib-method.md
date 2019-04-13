@@ -15,12 +15,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5b87460b9e525f2cf91b8f177c06286b5bbb3c52
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: d734f35b5878ec39e4f2159c326283d168e3be2b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57486123"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59197895"
 ---
 # <a name="resolvetypelib-method"></a>ResolveTypeLib 메서드
 해당 정규화 된 경로 반환 하 여 형식 라이브러리의 단순한 이름을 확인 합니다.  
@@ -75,5 +75,6 @@ HRESULT ResolveTypeLib(
  **.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>참고자료
+
 - [Tlbexp 도우미 함수](../../../../docs/framework/unmanaged-api/tlbexp/index.md)
 - [LoadTypeLibEx](https://docs.microsoft.com/previous-versions/windows/desktop/api/oleauto/nf-oleauto-loadtypelibex)

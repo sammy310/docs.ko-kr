@@ -9,12 +9,12 @@ helpviewer_keywords:
 - bitmaps [Windows Forms], loading in Windows Forms applications
 - images [Windows Forms], displaying on Windows Forms
 ms.assetid: 5bc558d7-b326-4050-a834-b8600da0de95
-ms.openlocfilehash: d2e06aa382bc2b01a4308f99735ca533e7a9a3ea
-ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
+ms.openlocfilehash: 90511adf9caffe7952e270d6fe32dd85162a29d7
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58653823"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59089180"
 ---
 # <a name="how-to-draw-an-existing-bitmap-to-the-screen"></a>방법: 화면에 기존 비트맵 그리기
 쉽게 화면의 기존 이미지를 그릴 수 있습니다. 먼저 만들어야를 <xref:System.Drawing.Bitmap> 파일 이름을 사용 하는 비트맵 생성자를 사용 하 여 개체 <xref:System.Drawing.Bitmap.%23ctor%28System.String%29>합니다. 이 생성자는 여러 다른 파일 형식으로 BMP, GIF, JPEG, PNG 및 TIFF 등을 사용 하 여 이미지를 허용 합니다. 만든 후는 <xref:System.Drawing.Bitmap> 개체를 전달 <xref:System.Drawing.Bitmap> 개체를 <xref:System.Drawing.Graphics.DrawImage%2A> 메서드의 <xref:System.Drawing.Graphics> 개체입니다.  
@@ -33,5 +33,6 @@ ms.locfileid: "58653823"
  앞의 예제는 Windows forms에서 사용하도록 설계되었으며 <xref:System.Windows.Forms.Control.Paint> 이벤트 처리기의 매개 변수인 <xref:System.Windows.Forms.PaintEventArgs> `e`가 필요합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [Windows Forms의 그래픽 및 그리기](graphics-and-drawing-in-windows-forms.md)
 - [이미지, 비트맵, 아이콘 및 메타파일 사용](working-with-images-bitmaps-icons-and-metafiles.md)

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 70d7c058-0280-4815-a008-6f290093591a
-ms.openlocfilehash: 26b7fe7448b9338802f8b8f5e2e91486d1883bbd
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b7a2588b9e5082915dff4d371adff2ad3d232d74
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54570241"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59122761"
 ---
 # <a name="find-the-maximum-value-in-a-numeric-sequence"></a>숫자 시퀀스에서 최대값 찾기
 <xref:System.Linq.Enumerable.Max%2A> 연산자를 사용하여 숫자 값 시퀀스에서 최대값을 찾습니다.  
@@ -72,5 +72,6 @@ ms.locfileid: "54570241"
  `Carnarvon Tigers`  
   
 ## <a name="see-also"></a>참고자료
+
 - [집계 쿼리](../../../../../../docs/framework/data/adonet/sql/linq/aggregate-queries.md)
 - [샘플 데이터베이스 다운로드](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md)

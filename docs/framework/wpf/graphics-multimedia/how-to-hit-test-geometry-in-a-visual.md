@@ -1,5 +1,5 @@
 ---
-title: '방법: 시각적 요소의 기하 도형 적중 테스트'
+title: '방법: 시각적 개체의 기하 도형 적중 테스트'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - visual objects [WPF], hit tests on
 - Geometry objects [WPF], visual objects comprising
 ms.assetid: 8bf2643f-d7f9-4cb4-9ea6-5b893c23200d
-ms.openlocfilehash: e51dd73a65666ffee5958325079e8f06f13ac61b
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 87b626e575d889447ef061d1ed62ef28efe5dfeb
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57363802"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59227342"
 ---
-# <a name="how-to-hit-test-geometry-in-a-visual"></a>방법: 시각적 요소의 기하 도형 적중 테스트
+# <a name="how-to-hit-test-geometry-in-a-visual"></a>방법: 시각적 개체의 기하 도형 적중 테스트
 하나 이상의 구성 된 시각적 개체에 대해 적중된 테스트를 수행 하는 방법을 보여 주는이 예제 <xref:System.Windows.Media.Geometry> 개체입니다.  
   
 ## <a name="example"></a>예제  
@@ -36,5 +36,6 @@ ms.locfileid: "57363802"
 >  이 샘플에서는 기하 도형에 적용될 수 있는 변환 또는 클리핑을 고려하지 않습니다. 또한 이 샘플은 직접 연결된 그림이 없으므로 스타일이 적용된 컨트롤에서 작동하지 않습니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [시각적 계층에서 적중 테스트](hit-testing-in-the-visual-layer.md)
 - [기하 도형을 매개 변수로 사용하여 적중 테스트](how-to-hit-test-using-geometry-as-a-parameter.md)

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Windows Communication Foundation [WCF], addresses
 - WCF [WCF], addresses
 ms.assetid: 13f269e3-ebb1-433c-86cf-54fbd866a627
-ms.openlocfilehash: 22af8cd6a8bdce590736ee14705f73bef1dc4d16
-ms.sourcegitcommit: af0a22a4eb11bbcd33baec49150d551955b50a16
+ms.openlocfilehash: f59b8403ecb683dafa6963565da46e517b5a2cbc
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56261104"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59220437"
 ---
 # <a name="endpoint-addresses"></a>엔드포인트 주소
 모든 엔드포인트에는 해당 엔드포인트를 찾아서 식별하는 데 사용되는 연결된 주소가 있습니다. 이 주소는 주로 엔드포인트의 위치를 지정하는 URI(Uniform Resource Identifier)로 구성됩니다. 끝점 주소에서 Windows Communication Foundation (WCF) 프로그래밍 모델에 표시 됩니다는 <xref:System.ServiceModel.EndpointAddress> 선택적인 포함 하는 클래스 <xref:System.ServiceModel.EndpointAddress.Identity%2A> 다른 끝점에서 끝점을 인증할 수 있게 하는 속성을 exchange를 사용 하 여 메시지 및 선택적 집합이 <xref:System.ServiceModel.EndpointAddress.Headers%2A> 서비스에 도달 하는 데 필요한 다른 SOAP 헤더를 정의 하는 속성입니다. 선택적 헤더는 서비스 엔드포인트를 확인하거나 상호 작용하는 데 필요한 추가적인 자세한 주소 지정 정보를 제공합니다. 엔드포인트 주소는 통신 중에 WS-Addressing EPR(엔드포인트 참조)로 표시됩니다.  
@@ -138,5 +138,6 @@ ms.locfileid: "56261104"
  일부 시나리오에서 엔드포인트는 기본 전송에 도착하는 모든 메시지를 받고 해당 `To` 헤더가 있는 메시지는 받지 않습니다. 이 기능을 사용하도록 설정하려면 사용자가 <xref:System.ServiceModel.Dispatcher.MatchAllMessageFilter> 클래스를 사용합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [엔드포인트 주소 지정](../../../../docs/framework/wcf/specifying-an-endpoint-address.md)
 - [서비스 ID 및 인증](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)

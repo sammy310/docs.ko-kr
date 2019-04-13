@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 90ddc540115a60154953ac6e8cb931103a650752
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 49e45085b0fbca10e490f11ce588f68aa8237b46
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57492415"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59139076"
 ---
 # <a name="imetadataemitsave-method"></a>IMetaDataEmit::Save 메서드
 지정된 된 주소에서 파일을 현재 범위에서 모든 메타 데이터를 저장합니다.  
@@ -53,5 +53,6 @@ HRESULT Save (
  **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>참고자료
+
 - [IMetaDataEmit 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
 - [IMetaDataEmit2 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

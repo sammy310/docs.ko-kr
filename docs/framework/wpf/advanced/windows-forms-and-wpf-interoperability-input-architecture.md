@@ -13,12 +13,12 @@ helpviewer_keywords:
 - WindowsFormsHost keyboard and messages [WPF]
 - modeless dialog boxes [WPF]
 ms.assetid: 0eb6f137-f088-4c5e-9e37-f96afd28f235
-ms.openlocfilehash: 50097ef86fb6bc5341d7ea16ccee441b89823401
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 2df754c0c47ea99c0892e0b9365da5589f2eab76
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57352423"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59335721"
 ---
 # <a name="windows-forms-and-wpf-interoperability-input-architecture"></a>Windows Forms 및 WPF 상호 운용성 입력 아키텍처
 간에 상호 운용 합니다 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 및 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 두 기술 모두에서 해당 하는 키보드 입력된 처리 해야 합니다. 이 항목에서는 이러한 기술을 키보드 및 하이브리드 응용 프로그램에 원활한 상호 운용성을 사용 하도록 설정 하기 위해 메시지 처리를 구현 하는 방법을 설명 합니다.  
@@ -57,13 +57,13 @@ ms.locfileid: "57352423"
 ### <a name="surrogate-windows-forms-message-loop"></a>서로게이트 Windows Forms 메시지 루프  
  기본적으로 <xref:System.Windows.Forms.Application?displayProperty=nameWithType> 에 대 한 기본 메시지 루프를 포함 하는 클래스 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 응용 프로그램입니다. 상호 운용성을 하는 동안는 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 메시지 루프는 메시지를 처리 하지 않습니다. 따라서이 논리를 재현해 야 합니다. 에 대 한 처리기를 <xref:System.Windows.Interop.ComponentDispatcher.ThreadFilterMessage?displayProperty=nameWithType> 이벤트에는 다음 단계를 수행 합니다.  
   
-1.  사용 하 여 메시지 필터는 <xref:System.Windows.Forms.IMessageFilter> 인터페이스입니다.  
+1. 사용 하 여 메시지 필터는 <xref:System.Windows.Forms.IMessageFilter> 인터페이스입니다.  
   
-2.  <xref:System.Windows.Forms.Control.PreProcessMessage%2A?displayProperty=nameWithType> 메서드를 호출합니다.  
+2. <xref:System.Windows.Forms.Control.PreProcessMessage%2A?displayProperty=nameWithType> 메서드를 호출합니다.  
   
-3.  변환 하 고 필요한 경우 메시지를 디스패치합니다.  
+3. 변환 하 고 필요한 경우 메시지를 디스패치합니다.  
   
-4.  메시지를 처리 하는 다른 컨트롤이 없는 경우에 호스팅 컨트롤에 메시지를 전달 합니다.  
+4. 메시지를 처리 하는 다른 컨트롤이 없는 경우에 호스팅 컨트롤에 메시지를 전달 합니다.  
   
 ### <a name="ikeyboardinputsink-implementation"></a>IKeyboardInputSink 구현  
  서로게이트 메시지 루프 바로 관리를 처리합니다. 따라서 합니다 <xref:System.Windows.Interop.IKeyboardInputSink.TabInto%2A?displayProperty=nameWithType> 메서드는 유일한 <xref:System.Windows.Interop.IKeyboardInputSink> 에서 구현 되어야 하는 멤버를 <xref:System.Windows.Forms.Integration.WindowsFormsHost> 클래스입니다.  
@@ -72,11 +72,11 @@ ms.locfileid: "57352423"
   
  <xref:System.Windows.Forms.Integration.WindowsFormsHost> 구현의 <xref:System.Windows.Interop.IKeyboardInputSink.TabInto%2A?displayProperty=nameWithType> 메서드는 다음 단계를 수행 합니다.  
   
-1.  찾은 첫 번째 또는 마지막 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 컨트롤에 포함 되는 <xref:System.Windows.Forms.Integration.WindowsFormsHost> 컨트롤과 포커스를 받을 수 있습니다. 컨트롤 선택 통과 정보에 따라 달라 집니다.  
+1. 찾은 첫 번째 또는 마지막 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 컨트롤에 포함 되는 <xref:System.Windows.Forms.Integration.WindowsFormsHost> 컨트롤과 포커스를 받을 수 있습니다. 컨트롤 선택 통과 정보에 따라 달라 집니다.  
   
-2.  컨트롤에 포커스를 설정 하 고 반환 `true`합니다.  
+2. 컨트롤에 포커스를 설정 하 고 반환 `true`합니다.  
   
-3.  컨트롤이 포커스를 받을 수 있습니다 하는 경우 반환 `false`합니다.  
+3. 컨트롤이 포커스를 받을 수 있습니다 하는 경우 반환 `false`합니다.  
   
 ### <a name="windowsformshost-registration"></a>WindowsFormsHost 등록  
  에 대 한 창 핸들을 <xref:System.Windows.Forms.Integration.WindowsFormsHost> 컨트롤을 만든를 <xref:System.Windows.Forms.Integration.WindowsFormsHost> 제어 메시지 루프에 대 한 존재 여부에 따라 등록 하는 내부 정적 메서드를 호출 합니다.  
@@ -129,6 +129,7 @@ ms.locfileid: "57352423"
  메시지에만 보내집니다 <xref:System.Windows.Forms.Integration.ElementHost> 활성 폼에서 컨트롤입니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost.EnableWindowsFormsInterop%2A>
 - <xref:System.Windows.Forms.Integration.ElementHost.EnableModelessKeyboardInterop%2A>
 - <xref:System.Windows.Forms.Integration.ElementHost>

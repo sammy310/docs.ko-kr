@@ -6,33 +6,33 @@ helpviewer_keywords:
 - writing extension methods [Visual Basic]
 - extension methods [Visual Basic]
 ms.assetid: fb2739cc-958d-4ef4-a38b-214a74c93413
-ms.openlocfilehash: d6f8b85945bd400d1f4b54a50260d72c750add8b
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 00d62d275f7afc06e066a375dc1ffcd74b23c9ed
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58819119"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59313764"
 ---
 # <a name="how-to-write-an-extension-method-visual-basic"></a>방법: 확장명 메서드 (Visual Basic) 작성
 확장 메서드를 사용 하면 기존 클래스에 메서드를 추가할 수 있습니다. 해당 클래스의 인스턴스인 것 처럼 확장 메서드를 호출할 수 있습니다.  
   
 ### <a name="to-define-an-extension-method"></a>확장 메서드를 정의 하려면  
   
-1.  Visual Studio에서 새 또는 기존 Visual Basic 응용 프로그램을 엽니다.  
+1. Visual Studio에서 새 또는 기존 Visual Basic 응용 프로그램을 엽니다.  
   
-2.  확장 메서드를 정의 하려는 파일의 맨 위에 있는 다음 import 문을 포함 합니다.  
+2. 확장 메서드를 정의 하려는 파일의 맨 위에 있는 다음 import 문을 포함 합니다.  
   
     ```  
     Imports System.Runtime.CompilerServices  
     ```  
   
-3.  기존 또는 새 응용 프로그램에서 모듈 내에서 확장 특성을 사용 하 여 메서드 정의 시작 합니다.  
+3. 기존 또는 새 응용 프로그램에서 모듈 내에서 확장 특성을 사용 하 여 메서드 정의 시작 합니다.  
   
     ```  
     <Extension()>  
     ```  
   
-4.  일반적인 방법으로 메서드를 선언 합니다 점을 제외 하 고 되는 첫 번째 매개 변수 형식의 확장 하려는 데이터 형식 이어야 합니다.  
+4. 일반적인 방법으로 메서드를 선언 합니다 점을 제외 하 고 되는 첫 번째 매개 변수 형식의 확장 하려는 데이터 형식 이어야 합니다.  
   
     ```  
     <Extension()>   

@@ -7,17 +7,16 @@ dev_langs:
 helpviewer_keywords:
 - WPF application [WPF], building
 ms.assetid: a58696fd-bdad-4b55-9759-136dfdf8b91c
-ms.openlocfilehash: d60b6babebd69e45335ab4c12cb797126ec6b6a3
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: d1aa402ec28fc22654d8f1513366c091215fa4d4
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57364296"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59300959"
 ---
 # <a name="building-a-wpf-application-wpf"></a>WPF 애플리케이션 빌드(WPF)
 Windows Presentation Foundation (WPF) 응용 프로그램으로 빌드할 수 있습니다 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 실행 파일 (.exe), 라이브러리 (.dll) 또는 두 어셈블리 형식의 조합입니다. 이 항목에서는 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 애플리케이션을 빌드하는 방법과 빌드 프로세스의 주요 단계에 대해 설명합니다.  
-  
-  
+
 <a name="Building_a_WPF_Application_using_Command_Line"></a>   
 ## <a name="building-a-wpf-application"></a>WPF 애플리케이션 빌드  
  다음과 같은 방법으로 WPF 애플리케이션을 컴파일할 수 있습니다.  
@@ -58,11 +57,11 @@ Windows Presentation Foundation (WPF) 응용 프로그램으로 빌드할 수 �
   
  이 단계에서 다음 작업은 `Page` 빌드 항목인 모든 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 파일에 대해 수행됩니다.  
   
-1.  [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 파일은 태그 컴파일러에 의해 구문 분석됩니다.  
+1. [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 파일은 태그 컴파일러에 의해 구문 분석됩니다.  
   
-2.  컴파일된 표현은 해당 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]에 대해 만들어져서 obj\Release 폴더에 복사됩니다.  
+2. 컴파일된 표현은 해당 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]에 대해 만들어져서 obj\Release 폴더에 복사됩니다.  
   
-3.  새 partial 클래스의 CodeDOM 표현이 만들어져서 obj\Release 폴더에 복사됩니다.  
+3. 새 partial 클래스의 CodeDOM 표현이 만들어져서 obj\Release 폴더에 복사됩니다.  
   
  또한 모든 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 파일에 대해 언어별 코드 파일이 생성됩니다. 예를 들어, Visual Basic 프로젝트의 Page1.xaml 페이지에 대 한는 Page1.g.vb 생성 됩니다. C# 프로젝트에서의 Page1.xaml 페이지에 대해서는 Page1.g.cs 생성 됩니다. 파일 이름에 ".g"가 있으면 파일이 태그 파일(예: `Page` 또는 `Window`)의 최상위 수준 요소에 대한 partial 클래스 선언을 포함하여 생성된 코드라는 의미입니다. 사용 하는 클래스를 선언 합니다 `partial` C# 한정자 (`Extends` Visual Basic의) 클래스를 다른 위치에 대 한 다른 선언이 나타내기 위해 일반적으로 코드 숨김 파일 Page1.xaml.cs 합니다.  
   
@@ -102,7 +101,7 @@ End Sub
   
 <a name="Pass_2_of_Markup_Compilation"></a>   
 ### <a name="markup-compilationpass-2"></a>태그 컴파일 - 패스 2  
- 일부 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 페이지는 태그 컴파일의 패스 1에서 컴파일됩니다. 이때 로컬로 정의된 형식 참조(동일한 프로젝트의 코드에서 정의된 형식에 대한 참조)가 있는 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 파일은 컴파일에서 제외됩니다. 이는 로컬로 정의된 형식이 소스에만 있어 아직 컴파일되지 않았기 때문입니다. 이를 확인하기 위해 파서는 추론을 사용하여 태그 파일에서 `x:Name`과 같은 항목을 찾습니다. 이러한 인스턴스를 찾은 경우 코드 파일이 컴파일될 때까지 해당 태그 파일의 컴파일이 연기되며 나중에 두 번째 태그 컴파일 패스가 이러한 파일을 처리합니다.  
+ 일부 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 페이지는 태그 컴파일의 패스 1에서 컴파일됩니다. [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 파일을 로컬로 정의 된 형식 참조 (동일한 프로젝트의 코드에 정의 된 형식에 대 한 참조)가 현재 컴파일에서 제외 됩니다. 이는 로컬로 정의된 형식이 소스에만 있어 아직 컴파일되지 않았기 때문입니다. 이를 확인하기 위해 파서는 추론을 사용하여 태그 파일에서 `x:Name`과 같은 항목을 찾습니다. 이러한 인스턴스를 찾은 경우 코드 파일이 컴파일될 때까지 해당 태그 파일의 컴파일이 연기되며 나중에 두 번째 태그 컴파일 패스가 이러한 파일을 처리합니다.  
   
 <a name="File_Classification"></a>   
 ### <a name="file-classification"></a>파일 분류  
@@ -167,7 +166,8 @@ End Sub
 -   모든 항목이 다시 컴파일되지 않습니다(프로젝트의 모든 항목이 변경되지 않음).  
   
 ## <a name="see-also"></a>참고자료
-- [WPF 응용 프로그램 배포](deploying-a-wpf-application-wpf.md)
+
+- [WPF 애플리케이션 배포](deploying-a-wpf-application-wpf.md)
 - [WPF MSBuild 참조](/visualstudio/msbuild/wpf-msbuild-reference)
 - [WPF의 Pack URI](pack-uris-in-wpf.md)
-- [WPF 응용 프로그램 리소스, 콘텐츠 및 데이터 파일](wpf-application-resource-content-and-data-files.md)
+- [WPF 애플리케이션 리소스, 콘텐츠 및 데이터 파일](wpf-application-resource-content-and-data-files.md)

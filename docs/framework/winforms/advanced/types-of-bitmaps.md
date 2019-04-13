@@ -20,12 +20,12 @@ helpviewer_keywords:
 - bitmaps [Windows Forms], file format
 - Exchangeable Image File
 ms.assetid: 6be085a2-2c13-47c8-b80a-c18b32777d8d
-ms.openlocfilehash: a78c84e82ac8507ad40cf3a9fdb44d58858a38d2
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: f41585ba8816e0b1894a9f01163191848ae391e3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57713217"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59089173"
 ---
 # <a name="types-of-bitmaps"></a>비트맵의 유형
 비트맵은 픽셀의 사각형 배열에서 각 픽셀의 색을 지정 하는 비트의 배열입니다. 각 픽셀에 사용 되는 비트 수가 해당 픽셀에 할당할 수 있는 색 수를 결정 합니다. 예를 들어, 각 픽셀을 4 비트로 표현할 경우 다음 지정된 된 픽셀 할당할 수 있습니다 다른 16 색 중 하나로 (2 ^4 = 16). 다음 표에서 지정 된 비트 수를 나타내는 픽셀에 할당할 수 있는 색 수가 몇 가지 예를 보여 줍니다.  
@@ -86,6 +86,7 @@ ms.locfileid: "57713217"
  TIFF는 다양 한 플랫폼 및 이미지 처리 응용 프로그램에서 지원 되는 유연 하 고 확장 가능한 형식입니다. TIFF 파일 임의 개수의 픽셀당 비트 수를 사용 하 여 이미지를 저장할 수 및 다양 한 압축 알고리즘을 사용할 수 있습니다. 여러 이미지를 여러 페이지의 단일 TIFF 파일에 저장할 수 있습니다. (작성 한 스캐너, 호스트 컴퓨터, 압축, 방향, 등에 픽셀 당 샘플 형식) 이미지와 관련 된 정보를 파일에 저장 하 고 태그를 사용 하 여 정렬 될 수 있습니다. TIFF 형식의 승인 및 새 태그를 추가 하 여 필요에 따라 확장할 수 있습니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Drawing.Image?displayProperty=nameWithType>
 - <xref:System.Drawing.Bitmap?displayProperty=nameWithType>
 - <xref:System.Drawing.Imaging.PixelFormat?displayProperty=nameWithType>

@@ -2,12 +2,12 @@
 title: System.ServiceModel.Channels.PeerFlooderReceiveMessageQuotaExceeded
 ms.date: 03/30/2017
 ms.assetid: b8371d0a-843e-440b-b86a-6996db131cb0
-ms.openlocfilehash: 3ce6b3021f47708c222c3ec5a88d474d17106748
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0ca3d198ce225221348ac7b405ea91ad215cd298
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54500994"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59190901"
 ---
 # <a name="systemservicemodelchannelspeerflooderreceivemessagequotaexceeded"></a>System.ServiceModel.Channels.PeerFlooderReceiveMessageQuotaExceeded
 메시지의 인바운드 수신 속도가 너무 빠릅니다.  
@@ -19,6 +19,7 @@ ms.locfileid: "54500994"
  메시 내에서 메시지를 보내는 속도를 줄입니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [추적](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
-- [추적을 사용하여 애플리케이션 문제 해결](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)
+- [추적을 사용하여 응용 프로그램 문제 해결](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)
 - [관리 및 진단](../../../../../docs/framework/wcf/diagnostics/index.md)

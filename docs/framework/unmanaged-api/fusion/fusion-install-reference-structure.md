@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 34349466594381441c11f947d682b018f95461e9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 611b4a543a1de7c6163ec45ff7f17d07726569ba
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54491612"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59110367"
 ---
 # <a name="fusioninstallreference-structure"></a>FUSION_INSTALL_REFERENCE 구조체
 응용 프로그램에 전역 어셈블리 캐시에 설치 하는 어셈블리를 응용 프로그램에는 참조를 나타냅니다.  
@@ -56,5 +56,6 @@ typedef struct _FUSION_INSTALL_REFERENCE_ {
  **.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>참고자료
+
 - [Fusion 구조체](../../../../docs/framework/unmanaged-api/fusion/fusion-structures.md)
 - [전역 어셈블리 캐시](../../../../docs/framework/app-domains/gac.md)

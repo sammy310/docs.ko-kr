@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 125d2ab8-55a4-4e5f-af36-a7d401a37ab0
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 39b7bcec1196a59c47717ec2b5622ca8e0d3cdfc
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 46e2e1c327a683782b68069ace2ad6c40bbc856e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54591988"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59225289"
 ---
 # <a name="security-and-remoting-considerations"></a>보안 및 원격 서비스 고려 사항
 원격 기능을 사용하면 응용 프로그램 도메인, 프로세스 또는 컴퓨터 간에 투명한 호출을 설정할 수 있습니다. 그러나 코드 액세스 보안 스택 워크는 프로세스 또는 시스템 경계를 넘어갈 수 없습니다(동일한 프로세스의 응용 프로그램 도메인 간에 적용됨).  
@@ -38,4 +38,5 @@ ms.locfileid: "54591988"
  일반적으로 기본 응용 프로그램 도메인은 각각 컨트롤 개체가 있는 자식 응용 프로그램 도메인을 만듭니다. 컨트롤 개체는 새 응용 프로그램 도메인을 관리하고 때때로 기본 응용 프로그램 도메인에서 주문을 받지만 실제로 도메인에 직접 연결할 수 없습니다. 때로는 기본 응용 프로그램 도메인이 컨트롤 개체에 대한 프록시를 호출합니다. 그러나 컨트롤 개체가 기본 응용 프로그램 도메인을 다시 호출해야 하는 경우도 있을 수 있습니다. 이러한 경우 기본 응용 프로그램 도메인은 참조 방식 마샬링 콜백 개체를 컨트롤 개체의 생성자에 전달합니다. 이 프록시를 보호하는 것은 컨트롤 개체의 책임입니다. 컨트롤 개체가 공용 클래스의 public 정적 필드에 프록시를 배치하거나 달리 프록시를 공개적으로 노출하는 경우 다른 코드가 기본 응용 프로그램 도메인에 콜백하는 위험한 메커니즘이 개방됩니다. 이런 이유로, 컨트롤 개체는 프록시를 비공개로 유지하기 위해 항상 암시적으로 신뢰됩니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [보안 코딩 지침](../../../docs/standard/security/secure-coding-guidelines.md)

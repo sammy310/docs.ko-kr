@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bba39446d9ca5164d98337e93e83725cfa503903
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7eadb595eb62b4f1a9dcc888225cbb7454119c7c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54515328"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59198493"
 ---
 # <a name="logswitchcallreason-enumeration"></a>LogSwitchCallReason 열거형
 디버깅/추적 스위치에 대해 수행된 작업을 나타냅니다.  
@@ -54,4 +54,5 @@ typedef enum LogSwitchCallReason {
  **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>참고자료
+
 - [디버깅 열거형](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)

@@ -2,12 +2,12 @@
 title: Service Trace Viewer를 사용하여 상호 관련된 추적 보기 및 문제 해결
 ms.date: 03/30/2017
 ms.assetid: 05d2321c-8acb-49d7-a6cd-8ef2220c6775
-ms.openlocfilehash: fc1b75d7f2d97103f99b9dbf0fa8cbbfbe2270cd
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: dd5fe08054b3a10c1663a7dd7dab5f9de5327cbb
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58465063"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59329052"
 ---
 # <a name="using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting"></a>Service Trace Viewer를 사용하여 상호 관련된 추적 보기 및 문제 해결
 이 항목에서는 추적 데이터 형식, 추적 데이터를 보는 방법 및 Service Trace Viewer를 사용하여 응용 프로그램 문제를 해결하는 방법에 대해 설명합니다.  
@@ -152,25 +152,24 @@ ms.locfileid: "58465063"
   
  서비스에서 활동 모델 WCF 개념을 다음과 같이 매핑합니다.  
   
-1.  ServiceHost를 생성하고 엽니다. 이렇게 하면 보안의 경우 여러 호스트 관련 동작을 만들 수 있습니다.  
+1. ServiceHost를 생성하고 엽니다. 이렇게 하면 보안의 경우 여러 호스트 관련 동작을 만들 수 있습니다.  
   
-2.  Open ServiceHost 내부 및 외부로 전송하여 ServiceHost에서 각 수신기에 대한 Listen At 동작을 만듭니다.  
+2. Open ServiceHost 내부 및 외부로 전송하여 ServiceHost에서 각 수신기에 대한 Listen At 동작을 만듭니다.  
   
-3.  수신기 클라이언트에서 시작 된 통신 요청을 감지 하면 클라이언트에서 보낸 모든 바이트가 처리 되는, "Receive Bytes" 동작으로 전송 합니다. 이 동작에서 클라이언트-서비스 상호 작용 중에 발생한 연결 오류가 표시됩니다.  
+3. 수신기 클라이언트에서 시작 된 통신 요청을 감지 하면 클라이언트에서 보낸 모든 바이트가 처리 되는, "Receive Bytes" 동작으로 전송 합니다. 이 동작에서 클라이언트-서비스 상호 작용 중에 발생한 연결 오류가 표시됩니다.  
   
-4.  각 바이트 집합 수신 되는 메시지에 해당 하는,에서는 처리 "메시지 처리" 작업을 이러한 바이트는 WCF 메시지 개체를 만들겠습니다. 이 동작에서 악의적인 메시지 또는 잘못된 봉투와 관련된 오류가 표시됩니다.  
+4. 각 바이트 집합 수신 되는 메시지에 해당 하는,에서는 처리 "메시지 처리" 작업을 이러한 바이트는 WCF 메시지 개체를 만들겠습니다. 이 동작에서 악의적인 메시지 또는 잘못된 봉투와 관련된 오류가 표시됩니다.  
   
-5.  메시지가 형성되면 Process Action 동작으로 전송합니다. `propagateActivity`가 클라이언트와 서버에서 모두 `true`로 설정되는 경우 이 동작에는 클라이언트에서 정의되고 앞에서 설명한 것과 동일한 ID를 갖게 됩니다. 이 단계에서 먼저 끝점을 통해 직접적인 상관 관계의 이점을 활용 하도록 요청에 관련 된 WCF에서 내보낸 모든 추적이 응답 메시지 처리를 포함 하 여 같은 동작에 있으므로 합니다.  
+5. 메시지가 형성되면 Process Action 동작으로 전송합니다. `propagateActivity`가 클라이언트와 서버에서 모두 `true`로 설정되는 경우 이 동작에는 클라이언트에서 정의되고 앞에서 설명한 것과 동일한 ID를 갖게 됩니다. 이 단계에서 먼저 끝점을 통해 직접적인 상관 관계의 이점을 활용 하도록 요청에 관련 된 WCF에서 내보낸 모든 추적이 응답 메시지 처리를 포함 하 여 같은 동작에 있으므로 합니다.  
   
-6.  Out of process 작업에 대 한 WCF에서 내보낸 추적과 사용자 코드에서 내보낸 추적을 격리 하기 위한 "사용자 코드 실행" 작업을 만들겠습니다. 앞의 예제에서 해당 하는 경우 클라이언트가 전파 한 동작이에 없는 사용자 코드 실행"작업의"서비스가 추가 응답을 보냅니다"추적을 내보냅니다.  
+6. Out of process 작업에 대 한 WCF에서 내보낸 추적과 사용자 코드에서 내보낸 추적을 격리 하기 위한 "사용자 코드 실행" 작업을 만들겠습니다. 앞의 예제에서 해당 하는 경우 클라이언트가 전파 한 동작이에 없는 사용자 코드 실행"작업의"서비스가 추가 응답을 보냅니다"추적을 내보냅니다.  
   
  다음 그림에서 왼쪽의 첫 번째 동작은 기본 동작인 루트 동작(0000)입니다. 다음 세 동작은 ServiceHost를 여는 동작입니다. 열 5의 동작은 수신기이고, 나머지 동작(6 - 8)은 바이트 처리부터 사용자 코드 활성화까지 메시지를 처리하는 WCF입니다.  
 
  다음 이미지에는 WCF 서비스 작업의 그래프 뷰를 보여 줍니다.   
 
  ![스크린 샷의 Trace Viewer WCF 서비스 동작의 목록을 표시 합니다.](./media/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting/wcf-service-activities.gif)  
-  
-  
+
  다음 스크린 샷에서는 클라이언트와 서비스 모두의 동작을 보여 주고 여러 프로세스에 걸쳐 Process Action Add 동작을 강조 표시합니다(주황색). 화살표는 클라이언트와 서비스가 보내고 받은 요청 및 응답 메시지를 서로 연결합니다. Process Action의 추적이 그래프에서 프로세스 간에 구분되어 있지만 오른쪽 위 패널에 같은 동작의 일부로 표시되어 있습니다. 이 패널에서 보낸 메시지에 대한 클라이언트 추적을 확인한 다음 받고 처리한 메시지에 대한 서비스 추적을 확인할 수 있습니다.  
   
  다음 이미지는 모두 WCF 클라이언트 및 서비스 동작 그래프 보기를 표시 합니다.  
@@ -189,8 +188,7 @@ ms.locfileid: "58465063"
   
   다음 이미지에는 문제 원인을 찾으려면 빨간색 또는 노란색 작업을 선택 하는 방법을 보여 줍니다.   
  ![문제 원인을 찾기 위한 빨간색 또는 노란색 작업의 스크린샷.](./media/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting/service-trace-viewer.gif)  
- 
-  
+
  오른쪽 위 패널에서는 왼쪽에서 선택한 동작에 대한 추적을 검사할 수 있습니다. 그런 다음 이 패널에서 빨간색 또는 노란색 추적을 검사하고 이들 추적이 상호 연결된 방식을 볼 수 있습니다. 앞의 그래프에서는 동일한 Process Action 동작에서 클라이언트와 서비스 모두에 대한 경고 추적을 볼 수 있습니다.  
   
  이러한 추적이 오류의 근본 원인을 제공하지 않으면 왼쪽 패널에서 선택한 동작(여기서는 Process action)을 두 번 클릭하여 그래프를 사용할 수 있습니다. 그러면 관련된 동작이 있는 그래프가 표시됩니다. 확장할 수 있습니다 다음 관련된 활동 ("+" 기호 클릭) 관련된 작업에서 빨간색 이나 노란색에서 첫 번째로 내보낸된 추적을 찾으려고 합니다. 문제의 근본 원인을 추적할 때까지 빨간색 또는 노란색 추적 바로 전에 발생한 동작을 계속 확장하면서 관련된 동작이나 엔드포인트 간의 메시지 흐름으로의 전송을 살펴 봅니다.  
@@ -207,6 +205,7 @@ ms.locfileid: "58465063"
 문제 해결을 시작 하려면 빨간색 또는 노란색 메시지 추적을 선택 하 고 근본 원인을 추적을 두 번 클릭 합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [종단 간 추적 시나리오](../../../../../docs/framework/wcf/diagnostics/tracing/end-to-end-tracing-scenarios.md)
 - [Service Trace Viewer 도구(SvcTraceViewer.exe)](../../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)
 - [추적](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)

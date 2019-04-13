@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - clients [WCF], consuming services
 ms.assetid: d780af9f-73c5-42db-9e52-077a5e4de7fe
-ms.openlocfilehash: 97340f8583ef0900645f6db5c453475e85549c55
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6bf683cdd0a03a5d1dbc452c28e7b33911464f09
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54620198"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59297254"
 ---
 # <a name="accessing-services-using-a-wcf-client"></a>WCF 클라이언트를 사용하여 서비스 액세스
 
@@ -20,11 +20,11 @@ ms.locfileid: "54620198"
 
  WCF 클라이언트를 만드는 기본 단계는 다음과 같습니다.
 
-1.  서비스 코드를 컴파일합니다.
+1. 서비스 코드를 컴파일합니다.
 
-2.  WCF 클라이언트 프록시를 생성 합니다.
+2. WCF 클라이언트 프록시를 생성 합니다.
 
-3.  WCF 클라이언트 프록시를 인스턴스화합니다.
+3. WCF 클라이언트 프록시를 인스턴스화합니다.
 
 자세한 내용은 서비스 모델 메타 데이터 유틸리티 도구 (SvcUtil.exe)를 사용 하 여 WCF 클라이언트 프록시를 수동으로 생성할 수 있습니다 [ServiceModel Metadata 유틸리티 도구 (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)합니다. Visual Studio 내에서 WCF 클라이언트 프록시를 생성할 수도 있습니다를 사용 하 여 **서비스 참조 추가** 기능입니다. 어떤 방법으로 WCF 클라이언트 프록시를 생성하더라도 서비스가 실행되고 있어야 합니다. 자체 호스팅 서비스의 경우 호스트를 실행해야 합니다. 서비스가 IIS/WAS에서 호스트되는 경우에는 별도의 작업이 필요하지 않습니다.
 
@@ -189,11 +189,11 @@ WCF 클라이언트에서 throw 된 많은 예외는 서비스의 예외로 인�
 ## <a name="see-also"></a>참고자료
 
 - [방법: 클라이언트 만들기](../../../docs/framework/wcf/how-to-create-a-wcf-client.md)
-- [방법: 이중 계약을와 함께 access Services](../../../docs/framework/wcf/feature-details/how-to-access-services-with-a-duplex-contract.md)
-- [방법: 서비스 작업을 비동기적으로 호출](../../../docs/framework/wcf/feature-details/how-to-call-wcf-service-operations-asynchronously.md)
-- [방법: 단방향를 사용 하 여 서비스에 액세스 및 요청-회신 계약](../../../docs/framework/wcf/feature-details/how-to-access-wcf-services-with-one-way-and-request-reply-contracts.md)
-- [방법: WSE 3.0 액세스 서비스](../../../docs/framework/wcf/feature-details/how-to-access-a-wse-3-0-service-with-a-wcf-client.md)
+- [방법: 이중 계약을 사용하여 서비스 액세스](../../../docs/framework/wcf/feature-details/how-to-access-services-with-a-duplex-contract.md)
+- [방법: 비동기적으로 서비스 작업 호출](../../../docs/framework/wcf/feature-details/how-to-call-wcf-service-operations-asynchronously.md)
+- [방법: 단방향 및 요청-회신 계약을 사용하여 서비스 액세스](../../../docs/framework/wcf/feature-details/how-to-access-wcf-services-with-one-way-and-request-reply-contracts.md)
+- [방법: WSE 3.0 서비스 액세스](../../../docs/framework/wcf/feature-details/how-to-access-a-wse-3-0-service-with-a-wcf-client.md)
 - [생성된 클라이언트 코드 이해](../../../docs/framework/wcf/feature-details/understanding-generated-client-code.md)
-- [방법: 시작 시간의 WCF 클라이언트 응용 프로그램 개선 XmlSerializer를 사용 하 여](../../../docs/framework/wcf/feature-details/startup-time-of-wcf-client-applications-using-the-xmlserializer.md)
+- [방법: XmlSerializer를 사용하여 WCF 클라이언트 애플리케이션의 시작 시간 향상](../../../docs/framework/wcf/feature-details/startup-time-of-wcf-client-applications-using-the-xmlserializer.md)
 - [클라이언트 런타임 동작 지정](../../../docs/framework/wcf/specifying-client-run-time-behavior.md)
 - [클라이언트 동작 구성](../../../docs/framework/wcf/configuring-client-behaviors.md)

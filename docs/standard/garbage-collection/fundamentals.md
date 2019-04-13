@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 67c5a20d-1be1-4ea7-8a9a-92b0b08658d2
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9bb09571ea8c9fb3a6d16a9f16c5269326d7f7da
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: f6dcd8e47fcbbee1e17e9e9ca1cb93f6076b4475
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57712476"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58826602"
 ---
 # <a name="fundamentals-of-garbage-collection"></a>가비지 수집 기본 사항
 <a name="top"></a> CLR(공용 언어 런타임)에서 가비지 수집은 자동 메모리 관리자 역할을 합니다. 가비지 수집은 다음과 같은 이점을 제공합니다.  
@@ -261,11 +261,10 @@ ms.locfileid: "57712476"
   
  백그라운드 가비지 수집 중에 임시 가비지 수집이 발생할 수 있으므로 백그라운드 가비지 수집은 동시 가비지 수집에 의해 적용된 할당 제한을 제거합니다. 이는 백그라운드 가비지 수집이 임시 세대에서 비활성 개체를 제거할 수 있고, 필요한 경우 1세대 가비지 수집 중에 힙을 확장할 수도 있음을 의미합니다.  
   
- 다음 그림에서는 워크스테이션의 개별 전용 스레드에서 수행되는 백그라운드 가비지 수집을 보여 줍니다.  
+다음 그림에서는 워크스테이션의 개별 전용 스레드에서 수행되는 백그라운드 가비지 수집을 보여 줍니다.
   
- ![백그라운드 워크스테이션 가비지 수집](../../../docs/standard/garbage-collection/media/backgroundworkstn.png "BackgroundWorkstn")  
-백그라운드 워크스테이션 가비지 수집  
-  
+ ![백그라운드 워크스테이션 가비지 수집을 보여주는 다이어그램.](./media/fundamentals/background-workstation-garbage-collection.png)
+   
  [맨 위로 이동](#top)  
   
 <a name="background_server_garbage_collection"></a>   
@@ -274,8 +273,7 @@ ms.locfileid: "57712476"
   
  다음 그림에서는 서버의 개별 전용 스레드에서 수행되는 백그라운드 가비지 수집을 보여 줍니다.  
   
- ![백그라운드 서버 가비지 수집](../../../docs/standard/garbage-collection/media/backgroundserver.png "BackgroundServer")  
-백그라운드 서버 가비지 수집  
+ ![백그라운드 서버 가비지 수집을 보여주는 다이어그램.](./media/fundamentals/background-server-garbage-collection.png)  
   
 ## <a name="see-also"></a>참고 항목
 

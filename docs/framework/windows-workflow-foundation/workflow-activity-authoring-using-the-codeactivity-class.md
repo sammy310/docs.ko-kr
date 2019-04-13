@@ -2,12 +2,12 @@
 title: CodeActivity 클래스를 사용하여 워크플로 활동 제작
 ms.date: 03/30/2017
 ms.assetid: cfe315c1-f86d-43ec-b9ce-2f8c469b1106
-ms.openlocfilehash: 4954dfa5dba03823d119a456149f0f16cf5ed410
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 549acec8b8101312d48bd20e63a4a988b798ff38
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53127097"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59331288"
 ---
 # <a name="workflow-activity-authoring-using-the-codeactivity-class"></a>CodeActivity 클래스를 사용하여 워크플로 활동 제작
 <xref:System.Activities.CodeActivity>에서 상속하여 만들어진 활동은 <xref:System.Activities.CodeActivity.Execute%2A> 메서드를 재정의하여 기본 명령형 동작을 구현합니다.
@@ -23,28 +23,28 @@ ms.locfileid: "53127097"
 
 #### <a name="to-create-a-custom-activity-that-inherits-from-codeactivity"></a>CodeActivity에서 상속되는 사용자 지정 활동을 만들려면
 
-1.  Visual Studio 2010을 엽니다.
+1. Visual Studio 2010을 엽니다.
 
-2.  선택 **파일**를 **새**를 차례로 **프로젝트**합니다. 선택 **Workflow 4.0** 아래에서 **Visual C#** 에 **프로젝트 형식** 창에서 선택한 합니다 **v2010** 노드. 선택 **활동 라이브러리** 에 **템플릿** 창입니다. 새 프로젝트의 이름을 HelloActivity로 지정합니다.
+2. 선택 **파일**를 **새**를 차례로 **프로젝트**합니다. 선택 **Workflow 4.0** 아래에서 **Visual C#** 에 **프로젝트 형식** 창에서 선택한 합니다 **v2010** 노드. 선택 **활동 라이브러리** 에 **템플릿** 창입니다. 새 프로젝트의 이름을 HelloActivity로 지정합니다.
 
-3.  HelloActivity 프로젝트에서 Activity1.xaml을 마우스 오른쪽 단추로 누르고 **삭제**합니다.
+3. HelloActivity 프로젝트에서 Activity1.xaml을 마우스 오른쪽 단추로 누르고 **삭제**합니다.
 
-4.  HelloActivity 프로젝트를 마우스 오른쪽 단추로 누르고 **추가** 를 차례로 **클래스**합니다. 새 프로젝트의 이름을 HelloActivity.cs로 지정합니다.
+4. HelloActivity 프로젝트를 마우스 오른쪽 단추로 누르고 **추가** 를 차례로 **클래스**합니다. 새 프로젝트의 이름을 HelloActivity.cs로 지정합니다.
 
-5.  HelloActivity.cs 파일에서 다음 `using` 지시문을 추가합니다.
+5. HelloActivity.cs 파일에서 다음 `using` 지시문을 추가합니다.
 
     ```csharp
     using System.Activities;
     using System.Activities.Statements;
     ```
 
-6.  기본 클래스를 클래스 선언에 추가하여 새 클래스를 <xref:System.Activities.CodeActivity>에서 상속하도록 설정합니다.
+6. 기본 클래스를 클래스 선언에 추가하여 새 클래스를 <xref:System.Activities.CodeActivity>에서 상속하도록 설정합니다.
 
     ```csharp
     class HelloActivity : CodeActivity
     ```
 
-7.  <xref:System.Activities.CodeActivity.Execute%2A> 메서드를 추가하여 클래스에 기능을 추가합니다.
+7. <xref:System.Activities.CodeActivity.Execute%2A> 메서드를 추가하여 클래스에 기능을 추가합니다.
 
     ```csharp
     protected override void Execute(CodeActivityContext context)
@@ -53,7 +53,7 @@ ms.locfileid: "53127097"
     }
     ```
 
-8.  <xref:System.Activities.CodeActivityContext>를 사용하여 추적 레코드를 만듭니다.
+8. <xref:System.Activities.CodeActivityContext>를 사용하여 추적 레코드를 만듭니다.
 
     ```csharp
     protected override void Execute(CodeActivityContext context)

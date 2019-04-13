@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 09c19f5f-afc4-4e0c-bffe-cd7147bc7a43
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8c7b70638b963968fb3ed7e294f1767718f9bc34
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: affe67006c9e37d55b0f9d107c92441da44c9ab8
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57501294"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59138796"
 ---
 # <a name="icordebugvariablesymbolgetslotindex-method"></a>ICorDebugVariableSymbol::GetSlotIndex 메서드
 지역 변수의 관리되는 슬롯 인덱스를 가져옵니다.  
@@ -27,7 +27,7 @@ HRESULT GetSlotIndex(
  [out] 지역 변수의 슬롯 인덱스에 대한 포인터입니다.  
   
 ## <a name="return-value"></a>반환 값  
- 성공하는 경우 `S_OK`입니다. 변수가 함수 인수인 경우 `E_FAIL`입니다.  
+ `S_OK` 성공 합니다. `E_FAIL` 변수가 함수 인수입니다.  
   
 ## <a name="remarks"></a>설명  
  지역 변수의 관리되는 슬롯 인덱스를 사용하여 변수의 메타데이터 정보를 검색할 수 있습니다.  
@@ -45,5 +45,6 @@ HRESULT GetSlotIndex(
  **.NET Framework 버전:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
 ## <a name="see-also"></a>참고자료
+
 - [ICorDebugVariableSymbol 인터페이스](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablesymbol-interface.md)
 - [디버깅 인터페이스](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

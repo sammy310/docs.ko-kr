@@ -8,12 +8,12 @@ helpviewer_keywords:
 - applications [WPF], focus
 - focus in applications [WPF]
 ms.assetid: 0230c4eb-0c8a-462b-ac4b-ae3e511659f4
-ms.openlocfilehash: 5853c48ad77131d33cd0ab767c4a58ba56aaa39f
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 72b866d714e6a77020bdb74843c3aaa0ba0c3278
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57369918"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59073886"
 ---
 # <a name="focus-overview"></a>포커스 개요
 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]에는 포커스에 관한 두 가지 주요 개념이 있습니다. 즉, 키보드 포커스와 논리 포커스입니다.  키보드 포커스는 키보드 입력을 수신하는 요소를 나타내고 논리 포커스는 포커스가 있는 포커스 범위의 요소를 나타냅니다.  이러한 개념은 이 개요에서 자세히 설명합니다.  포커스를 얻을 수 있는 여러 영역이 있는 복잡한 애플리케이션을 작성할 때 이 개념의 차이를 이해하는 것이 중요합니다.  
@@ -21,9 +21,7 @@ ms.locfileid: "57369918"
  포커스 관리에 참여 하는 주요 클래스는 <xref:System.Windows.Input.Keyboard> 클래스를 <xref:System.Windows.Input.FocusManager> 클래스 및 기본 요소 클래스와 같은 <xref:System.Windows.UIElement> 및 <xref:System.Windows.ContentElement>합니다.  기본 요소에 대한 자세한 내용은 [기본 요소 개요](base-elements-overview.md)를 참조하세요.  
   
  합니다 <xref:System.Windows.Input.Keyboard> 클래스는 주로 키보드 포커스와 관련 및 <xref:System.Windows.Input.FocusManager> 주로 논리 포커스와 관련 됩니다 있지만 구분 하는 것은 아닙니다.  키보드 포커스가 있는 요소에는 논리 포커스도 있지만, 논리 포커스가 있는 요소에는 키보드 포커스가 없을 수도 있습니다.  사용 하는 경우이 점이 명확해는 <xref:System.Windows.Input.Keyboard> 도 대 한 키보드 포커스가 있는 요소를 설정 하는 클래스 요소에 논리적 포커스를 설정 합니다.  
-  
 
-  
 <a name="Keyboard_Focus"></a>   
 ## <a name="keyboard-focus"></a>키보드 포커스  
  키보드 포커스는 현재 키보드 입력을 수신 중인 요소를 나타냅니다.  키보드 포커스가 있는 전체 데스크탑에는 요소가 하나뿐이어야 합니다.  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]에 키보드 포커스가 있는 요소가 <xref:System.Windows.IInputElement.IsKeyboardFocused%2A> 로 `true`합니다.  정적 속성 <xref:System.Windows.Input.Keyboard.FocusedElement%2A> 에 <xref:System.Windows.Input.Keyboard> 클래스는 현재 키보드 포커스가 있는 요소를 가져옵니다.  
@@ -118,6 +116,7 @@ ms.locfileid: "57369918"
  논리 포커스와 관련 된 이벤트 <xref:System.Windows.UIElement.GotFocus> 고 <xref:System.Windows.UIElement.LostFocus>입니다.  이러한 이벤트에 정의 된 합니다 <xref:System.Windows.Input.FocusManager> 연결 된 이벤트로 하지만 <xref:System.Windows.Input.FocusManager> CLR 이벤트 래퍼를 노출 하지 않습니다.  <xref:System.Windows.UIElement> 및 <xref:System.Windows.ContentElement> 더 편리 하 게 이러한 이벤트를 노출 합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Windows.Input.FocusManager>
 - <xref:System.Windows.UIElement>
 - <xref:System.Windows.ContentElement>

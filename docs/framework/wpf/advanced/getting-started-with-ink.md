@@ -9,12 +9,12 @@ helpviewer_keywords:
 - XAML [WPF], procedural code in lieu of
 - InkCanvas (WPF)
 ms.assetid: 760332dd-594a-475d-865b-01659db8cab7
-ms.openlocfilehash: 2fb3f975fedbae1cf898d5ec2f7c0809e0215ecd
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 4309b1108b2ea96eb298ff3bb876a0f63b80dc32
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57365570"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59343599"
 ---
 # <a name="get-started-with-ink-in-wpf"></a>Wpf에서 잉크 시작
 
@@ -22,7 +22,7 @@ Windows Presentation Foundation (WPF)에 쉽게 앱에 디지털 잉크를 통�
 
 ## <a name="prerequisites"></a>전제 조건
 
-다음 예제에서는 먼저 사용 하도록 [Microsoft Visual Studio 설치](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017)합니다. 또한 기본 WPF 앱을 작성 하는 방법을 알면 도움이 됩니다. WPF 시작 도움말을 참조 하세요. [연습: 내 첫 WPF 데스크톱 응용 프로그램](../getting-started/walkthrough-my-first-wpf-desktop-application.md)합니다.
+다음 예제를 사용 하려면 먼저 설치 [Microsoft Visual Studio](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019)합니다. 또한 기본 WPF 앱을 작성 하는 방법을 알면 도움이 됩니다. WPF 시작 도움말을 참조 하세요. [연습: 내 첫 WPF 데스크톱 응용 프로그램](../getting-started/walkthrough-my-first-wpf-desktop-application.md)합니다.
 
 ## <a name="quick-start"></a>빠른 시작
 

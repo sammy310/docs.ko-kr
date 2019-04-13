@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 734bd51131ea922f00362e7306d34e5241231c13
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 9f988084310b920907bb7f212e7d40ca0d1c91db
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57466841"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59197518"
 ---
 # <a name="iclrpolicymanagersetunhandledexceptionpolicy-method"></a>ICLRPolicyManager::SetUnhandledExceptionPolicy 메서드
 처리 되지 않은 예외가 발생 하는 경우는 CLR (공용 언어 런타임)의 동작을 지정 합니다.  
@@ -63,6 +63,7 @@ HRESULT SetUnhandledExceptionPolicy (
  **.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>참고자료
+
 - [EClrUnhandledException 열거형](../../../../docs/framework/unmanaged-api/hosting/eclrunhandledexception-enumeration.md)
 - [ICLRControl 인터페이스](../../../../docs/framework/unmanaged-api/hosting/iclrcontrol-interface.md)
 - [ICLRPolicyManager 인터페이스](../../../../docs/framework/unmanaged-api/hosting/iclrpolicymanager-interface.md)

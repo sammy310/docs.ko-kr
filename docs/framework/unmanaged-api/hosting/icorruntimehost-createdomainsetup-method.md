@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2758deaabf9db1cbc5465eb9b5976add534e87b4
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 88f5de9882f8a029769d0ccbdac21aec541582a4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57469667"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59157367"
 ---
 # <a name="icorruntimehostcreatedomainsetup-method"></a>ICorRuntimeHost::CreateDomainSetup 메서드
 인터페이스 포인터의 형식에 IAppDomainSetup 가져옵니다는 <xref:System.AppDomainSetup?displayProperty=nameWithType> 인스턴스. `IAppDomainSetup` 만들어지기 전에 응용 프로그램 도메인의 측면을 구성 하는 방법을 제공 합니다.  
@@ -61,6 +61,7 @@ HRESULT CreateDomainSetup (
  **.NET framework 버전:** 1.0, 1.1  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System._AppDomain>
 - <xref:System.AppDomain>
 - <xref:System.AppDomainSetup>

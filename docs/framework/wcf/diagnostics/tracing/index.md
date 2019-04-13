@@ -2,6 +2,12 @@
 title: 추적
 ms.date: 03/30/2017
 ms.assetid: 2649eae2-dbf8-421c-9cfb-cfa9e01de87f
+ms.openlocfilehash: 2379b290494e72b65db5ddc6a7bc5df376d4373f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59093399"
 ---
 # <a name="tracing"></a>추적
 Windows Communication Foundation (WCF) 오류 모니터링 및 분석을 위해 응용 프로그램 계측 및 진단 데이터를 제공합니다. 응용 프로그램의 작동 방법 또는 오류 발생 원인을 이해하기 위해 디버거 대신 추적을 사용할 수 있습니다. 종단 간 환경을 제공하기 위해 전체 구성 요소에서의 오류와 처리를 연결할 수도 있습니다.  
@@ -21,7 +27,7 @@ Windows Communication Foundation (WCF) 오류 모니터링 및 분석을 위해 
   
  이 단원에서는 디버깅을 지원하기 위해 종단 간 상관 관계에 대한 동작 추적 및 전파를 사용할 수 있는 방법에 대해 설명합니다.  
   
- [추적을 사용하여 애플리케이션 문제 해결](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [추적을 사용하여 응용 프로그램 문제 해결](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
   
  이 단원에서는 응용 프로그램을 디버깅하기 위해 추적을 사용할 수 있는 방법에 대해 설명합니다.  
   
@@ -34,4 +40,5 @@ Windows Communication Foundation (WCF) 오류 모니터링 및 분석을 위해 
  이 항목에서는 WCF에 의해 생성 된 모든 추적을 나열 합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [Service Trace Viewer 도구(SvcTraceViewer.exe)](../../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)

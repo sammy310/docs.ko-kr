@@ -10,12 +10,12 @@ api_type:
 ms.assetid: 3eb14c49-68c2-4516-ac89-e5bd7473831c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 082ed24eb65de12f337ab4a379b088da0f6eea5a
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 355e6c7b1cd77936d5ccfa5ccff7312c8e35ac63
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57497381"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59220404"
 ---
 # <a name="certfreeauthenticodetimestamperinfo-function"></a>CertFreeAuthenticodeTimestamperInfo 함수
 에 할당 된 리소스를 해제 합니다 [AXL_AUTHENTICODE_TIMESTAMPER_INFO](../../../../docs/framework/unmanaged-api/authenticode/axl-authenticode-timestamper-info-structure.md) 구조입니다.  
@@ -33,7 +33,8 @@ HRESULT CertFreeAuthenticodeTimestamperInfo (
  [in, out] 해제할 타임스탬퍼 정보입니다. 참조 된 [AXL_AUTHENTICODE_TIMESTAMPER_INFO](../../../../docs/framework/unmanaged-api/authenticode/axl-authenticode-timestamper-info-structure.md) 구조입니다.  
   
 ## <a name="return-value"></a>반환 값  
- 함수가 정상적으로 실행되는 경우 `S_OK`입니다. 그러지 않으면 오류 코드가 반환됩니다.  
+ `S_OK` 함수가 성공 합니다. 그러지 않으면 오류 코드가 반환됩니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [Authenticode](../../../../docs/framework/unmanaged-api/authenticode/index.md)

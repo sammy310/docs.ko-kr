@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: e7733bd3-68da-47f9-82ef-477db5f2e32d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c6c2a9c806b70ab33f68e3213d82ed96aca47d62
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: bb41cc47351ccf22fcd522b7d4291c235312bfaa
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57484201"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59167691"
 ---
 # <a name="icordebugprocess6enablevirtualmodulesplitting-method"></a>ICorDebugProcess6::EnableVirtualModuleSplitting 메서드
 가상 모듈 분할을 사용하거나 사용하지 않도록 설정합니다.  
@@ -24,7 +24,7 @@ HRESULT EnableVirtualModuleSplitting(
   
 ## <a name="parameters"></a>매개 변수  
  `enableSplitting`  
- 가상 모듈 분할을 사용하려면 `true`로 설정하고, 사용하지 않으려면 `false`로 설정합니다.  
+ `true` 가상 모듈 분할을 사용 하도록 설정 하려면 `false` 사용 하지 않도록 합니다.  
   
 ## <a name="remarks"></a>설명  
  가상 모듈 분할 원인 [ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md) 처리 하 고 대형 모듈 하나가 아닌 개별 모듈 그룹으로 표시 하는 빌드 중에 병합 된 모듈을 인식 하도록 합니다. 다양 한 동작을 변경 이렇게 [ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md) 아래 설명 된 방법입니다.  
@@ -113,5 +113,6 @@ HRESULT EnableVirtualModuleSplitting(
  **.NET Framework 버전:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
 ## <a name="see-also"></a>참고자료
+
 - [ICorDebugProcess6 인터페이스](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess6-interface.md)
 - [디버깅 인터페이스](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

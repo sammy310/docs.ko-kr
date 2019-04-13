@@ -6,12 +6,12 @@ helpviewer_keywords:
 - WCF [WCF], architecture
 - architecture [WCF]
 ms.assetid: a3bcb0a1-56ea-4ba6-9736-d260d90dade5
-ms.openlocfilehash: f152ac48c2897259d07222fafd33d17d5287a870
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b0e4f9af0ff84a8d560b332d227b1ba9ae18bd4b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54745387"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59099705"
 ---
 # <a name="windows-communication-foundation-architecture"></a>Windows Communication Foundation 아키텍처
 다음 그림에서는 Windows Communication Foundation (WCF) 아키텍처의 주요 계층을 보여 줍니다.  
@@ -46,5 +46,6 @@ ms.locfileid: "54745387"
  서비스 일 수도 있습니다 *호스팅된*, IIS 또는 was (Windows Activation Service에서)와 같은 외부 에이전트에서 관리 하는 실행 파일에서 실행 합니다. 하면 WCF 응용 프로그램을 실행 하는 컴퓨터에 배포 되 면 자동으로 활성화 된 경우 실행 파일(.exe 파일)을 통해 서비스를 수동으로 실행할 수도 있습니다. 서비스를 Windows 서비스로 자동 실행할 수도 있습니다. COM + 구성 요소를 WCF 서비스로 호스팅될 수도 있습니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [Windows Communication Foundation 정의](../../../docs/framework/wcf/whats-wcf.md)
 - [기본적인 Windows Communication Foundation 개념](../../../docs/framework/wcf/fundamental-concepts.md)

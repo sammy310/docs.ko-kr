@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: c2ce8461-3c15-4c41-8c81-1cb78f5b59a6
-ms.openlocfilehash: b5d9c3362ebd69e587d58104e7ebc9d9e96a9020
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1053a543a23ed36a5c06c45044c8fdbe25a60538
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54603681"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59073964"
 ---
 # <a name="xml-and-adonet-types-in-data-contracts"></a>데이터 계약의 XML 및 ADO.NET 형식
 Windows Communication Foundation (WCF) 데이터 계약 모델에는 직접 XML을 나타내는 특정 형식을 지원 합니다. 이러한 형식이 XML에 serialize되면 serializer는 추가 처리 없이 이러한 형식의 XML 콘텐츠를 씁니다. 지원되는 형식에는 <xref:System.Xml.XmlElement>을 구현하는 형식, <xref:System.Xml.XmlNode> 및 `XmlNode`의 배열이 있습니다. 단, <xref:System.Xml.Serialization.IXmlSerializable> 형식 자체는 지원되지 않습니다. <xref:System.Data.DataSet> 및 <xref:System.Data.DataTable> 형식은 형식화된 데이터 집합과 마찬가지로 데이터베이스 프로그래밍에 자주 사용됩니다. 이러한 형식은 `IXmlSerializable` 인터페이스를 구현하므로 데이터 계약 모델에서 serialize할 수 있습니다. 이러한 형식에 대한 몇 가지 특별한 고려 사항은 이 항목의 끝부분에 나와 있습니다.  
@@ -146,7 +146,7 @@ Windows Communication Foundation (WCF) 데이터 계약 모델에는 직접 XML�
  레거시 데이터 집합 형식에도 동일한 전역 요소 선언 규칙이 적용됩니다. `XmlRootAttribute`는 사용자 지정 코드를 통해 추가된, 즉 스키마 공급자 메서드를 사용하거나 레거시 데이터 집합 형식의 경우 `XmlSchemaSet`를 통해 `GetSchema`에 추가된 전역 요소 선언을 재정의할 수 없습니다.  
   
 ### <a name="ixmlserializable-element-types"></a>IXmlSerializable 요소 형식  
- `IXmlSerializable` 요소 형식은 `IsAny` 속성이 `true`로 설정되어 있거나 스키마 공급자 메서드가 `null`을 반환하도록 합니다.  
+ `IXmlSerializable` 요소 유형 중 하나를 사용할 합니다 `IsAny` 속성으로 설정 `true` 있거나 스키마 공급자 메서드가 반환 `null`합니다.  
   
  요소 형식의 serialize 및 deserialize는 콘텐츠 형식의 serialize 및 deserialize와 유사합니다. 그러나 다음과 같은 중요한 차이가 있습니다.  
   
@@ -158,7 +158,7 @@ Windows Communication Foundation (WCF) 데이터 계약 모델에는 직접 XML�
   
 -   생성 시 루트 이름과 네임스페이스를 지정하지 않고 최상위 수준에서 요소 형식을 serialize하는 경우 <xref:System.Runtime.Serialization.XmlObjectSerializer.WriteStartObject%2A> 및 <xref:System.Runtime.Serialization.XmlObjectSerializer.WriteEndObject%2A>에서 아무 작업도 수행하지 않으며 <xref:System.Runtime.Serialization.XmlObjectSerializer.WriteObjectContent%2A>는 `WriteXml`을 호출합니다. 이 모드에서 serialize되는 개체는 null일 수 없으며 다형적으로 할당할 수 없습니다. 또한 개체 그래프 유지를 활성화할 수 없고 `NetDataContractSerializer`를 사용할 수 없습니다.  
   
--   생성 시 루트 이름과 네임스페이스를 지정하지 않고 최상위 수준에서 요소 형식을 deserialize하는 경우 <xref:System.Runtime.Serialization.XmlObjectSerializer.IsStartObject%2A>가 임의 요소의 시작 부분을 찾으면 `true`를 반환합니다. <xref:System.Runtime.Serialization.XmlObjectSerializer.ReadObject%2A> 매개 변수를 `verifyObjectName`로 설정한 `true`는 실제로 개체를 읽기 전에 `IsStartObject`와 같은 방식으로 동작합니다. 그런 다음 `ReadObject`는 컨트롤을 `ReadXml` 메서드로 전달합니다.  
+-   생성 시 루트 이름과 네임스페이스를 지정하지 않고 최상위 수준에서 요소 형식을 deserialize하는 경우 <xref:System.Runtime.Serialization.XmlObjectSerializer.IsStartObject%2A>가 임의 요소의 시작 부분을 찾으면 `true`를 반환합니다. <xref:System.Runtime.Serialization.XmlObjectSerializer.ReadObject%2A> 사용 하 여 합니다 `verifyObjectName` 매개 변수 설정 `true` 와 동일한 방식으로 동작 `IsStartObject` 실제로 개체를 읽기 전에 합니다. `ReadObject` 그런 다음 컨트롤을 전달 `ReadXml` 메서드.  
   
  요소 형식과 관련해서 내보낸 스키마는 스키마 공급자 메서드가 `XmlElement`에 다른 스키마를 추가할 수 있다는 점을 제외하고 이전 단원에서 설명한 대로 <xref:System.Xml.Schema.XmlSchemaSet> 형식에 대해 콘텐츠 형식과 동일합니다. 요소 형식에 `XmlRootAttribute` 특성을 사용할 수 없으며 이러한 형식에 대해 전역 요소 선언을 내보내지 않습니다.  
   
@@ -187,7 +187,7 @@ Windows Communication Foundation (WCF) 데이터 계약 모델에는 직접 XML�
   
 -   XML 작성기는 XML 문서 선언 일반적으로 허용 하지 않습니다 (예를 들어 \<? xml 버전 ='1.0 '? >) 다른 문서를 작성 하는 중입니다. 전체 XML 문서를 사용하여 `Array` 데이터 멤버의 `XmlNode`로 serialize할 수 없습니다. 이렇게 하려면 문서 선언을 제거하거나 고유의 인코딩 체계를 사용하여 문서 선언을 나타내야 합니다.  
   
--   XML 처리 명령이 거부 모든 WCF와 함께 제공 된 XML 작성기 (\<? … ? >)과 문서 형식 정의 (\<! … >)를 거부합니다. 이들은 SOAP 메시지에서 허용되지 않기 때문입니다. 자체 인코딩 메커니즘을 사용하여 이 제한을 해결할 수도 있습니다. 결과 XML에 이러한 요소를 포함해야 하는 경우 이를 지원하는 XML 작성기를 사용하는 사용자 지정 인코더를 작성할 수 있습니다.  
+-   XML 처리 명령이 거부 모든 WCF와 함께 제공 된 XML 작성기 (\<? … ? >)과 문서 형식 정의 (\<! … >)는 SOAP 메시지에서 허용 되지 않으므로 합니다. 자체 인코딩 메커니즘을 사용하여 이 제한을 해결할 수도 있습니다. 결과 XML에 이러한 요소를 포함해야 하는 경우 이를 지원하는 XML 작성기를 사용하는 사용자 지정 인코더를 작성할 수 있습니다.  
   
 -   `WriteXml`을 구현할 때 XML 작성기에서 <xref:System.Xml.XmlWriter.WriteRaw%2A> 메서드를 호출하지 마세요. 다양 한 XML 인코딩 (바이너리 포함)을 사용 하 여 WCF를 사용 하기가 매우 어렵거나 `WriteRaw` 결과 모든 인코딩을 사용할 수 있도록 합니다.  
   
@@ -203,7 +203,8 @@ Windows Communication Foundation (WCF) 데이터 계약 모델에는 직접 XML�
  데이터 계약 모델에서 형식화된 데이터 집합에 대한 지원은 제한되어 있습니다. 형식화된 데이터 집합은 serialize 및 deserialize할 수 있으며 스키마를 내보낼 수 있습니다. 하지만 데이터 계약 스키마 가져오기에서는 스키마로부터 형식화된 데이터 집합 형식을 새로 생성할 수 없고 기존 형식을 다시 사용할 수만 있습니다. Svcutil.exe에 `/r` 스위치를 사용하면 형식화된 기존 데이터 집합을 가리킬 수 있습니다. 형식화된 데이터 집합을 사용하는 서비스에서 `/r` 스위치 없이 Svcutil.exe를 사용하려 하면 대체 serializer(XmlSerializer)가 자동으로 선택됩니다. DataContractSerializer를 사용해야 하며 스키마에서 데이터 집합을 생성해야 하는 경우에는 다음 절차를 사용할 수 있습니다. 서비스에서 `/d` 스위치와 함께 Xsd.exe 도구를 사용하여 형식화된 데이터 집합 형식을 생성한 다음 Svcutil.exe에서 `/r` 스위치를 사용하여 가리킵니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Runtime.Serialization.DataContractSerializer>
 - <xref:System.Xml.Serialization.IXmlSerializable>
 - [데이터 계약 사용](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)
-- [데이터 계약 직렬 변환기에서 지원하는 형식](../../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md)
+- [데이터 계약 Serializer에서 지원하는 형식](../../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md)

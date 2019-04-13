@@ -24,16 +24,15 @@ helpviewer_keywords:
 - focus [WPF]
 - mouse position [WPF]
 ms.assetid: ee5258b7-6567-415a-9b1c-c0cbe46e79ef
-ms.openlocfilehash: 810417529f71ec366f940c062a416a675bfecd2a
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 9553a66538297db9c2fa134e018f35ab9e2ddf37
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57376821"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59320017"
 ---
 # <a name="input-overview"></a>입력 개요
 <a name="introduction"></a> 합니다 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 하위 시스템은 강력한 제공 [!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)] 다양 한 장치에서에서 입력을 가져오는, 마우스, 키보드, 터치 및 스타일러스를 포함 합니다. 이 항목에서는 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]가 제공하는 서비스에 대해 설명하고 입력 시스템의 아키텍처를 살펴봅니다.
-
 
 <a name="input_api"></a>
 ## <a name="input-api"></a>입력 API
@@ -59,7 +58,7 @@ ms.locfileid: "57376821"
  합니다 <xref:System.Windows.Input.Mouse> 고 <xref:System.Windows.Input.Keyboard> 클래스는이 개요 항목에서 자세히 설명 되어 있습니다.
 
 ### <a name="stylus-input"></a>스타일러스 입력
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 에 대 한 지원을 통합 합니다 <xref:System.Windows.Input.Stylus>합니다.  합니다 <xref:System.Windows.Input.Stylus> 에서 인기 있는 펜 입력을 [!INCLUDE[TLA#tla_tpc](../../../../includes/tlasharptla-tpc-md.md)]입니다.  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 응용 프로그램은 마우스 [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)]를 사용하여 스타일러스를 마우스로 처리할 수 있지만 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]는 키보드 및 마우스와 비슷한 모델을 사용하는 스타일러스 장치 추상화도 노출합니다.  스타일러스와 관련된 모든 [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)]에는 “Stylus”라는 단어가 포함됩니다.
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 에 대 한 지원을 통합 합니다 <xref:System.Windows.Input.Stylus>합니다.  합니다 <xref:System.Windows.Input.Stylus> 에서 인기 있는 펜 입력을 [!INCLUDE[TLA#tla_tpc](../../../../includes/tlasharptla-tpc-md.md)]입니다.  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 응용 프로그램의 마우스를 사용 하 여 마우스 스타일러스 취급할 수 있습니다 [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)], 하지만 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 키보드 및 마우스와 비슷한 모델을 사용 하는 스타일러스 장치 추상화도 노출 합니다.  스타일러스와 관련된 모든 [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)]에는 “Stylus”라는 단어가 포함됩니다.
 
  스타일러스는 마우스처럼 동작할 수 있으므로 마우스 입력만 지원하는 애플리케이션도 약간의 스타일러스 지원을 자동으로 받을 수 있습니다. 이러한 방식으로 스타일러스를 사용하는 경우 애플리케이션은 알맞은 스타일러스 이벤트를 처리한 다음 해당 마우스 이벤트를 처리할 수 있게 됩니다. 뿐만 아니라 스타일러스 디바이스 추상화를 통해 잉크 입력과 같은 높은 수준의 서비스도 사용할 수 있습니다.  잉크 입력에 대한 자세한 내용은 [잉크 시작](getting-started-with-ink.md)을 참조하세요.
 
@@ -69,7 +68,7 @@ ms.locfileid: "57376821"
 
  이벤트 라우팅은 이벤트를 여러 요소로 전달함으로써 경로 상의 특정 개체나 요소가 다른 요소에서 발생시킨 이벤트에 대해 이벤트 처리를 통해 의미 있는 응답을 제공할 수 있도록 하는 프로세스입니다.  라우트된 이벤트는 직접, 버블링, 터널링이라는 세 가지 라우팅 메커니즘 중 하나를 사용합니다.  직접 라우팅에서는 소스 요소만 이벤트에 대한 알림을 받으며 이벤트가 다른 요소로 라우트되지 않습니다. 하지만 직접 라우트된 이벤트도 표준 [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] 이벤트와는 달리 라우트된 이벤트에만 있는 몇몇 추가 기능을 제공합니다. 버블링은 먼저 이벤트에 대해 이벤트를 발생시킨 요소에 알린 다음 부모 요소 등에 알리는 순서로 요소 트리의 위쪽으로 작동합니다.  터널링은 요소 트리의 루트에서 시작하여 아래로 이동한 다음 원래 소스 요소에서 끝납니다.  라우트된 이벤트에 대한 자세한 내용은 [라우트된 이벤트 개요](routed-events-overview.md)를 참조하세요.
 
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 입력 이벤트는 일반적으로 터널링 이벤트와 버블링 이벤트의 쌍으로 구성되어 제공됩니다.  터널링 이벤트는 “Preview” 접두사가 있다는 점에서 버블링 이벤트와 다릅니다.  예를 들어 <xref:System.Windows.Input.Mouse.PreviewMouseMove> 마우스 이동 이벤트의 터널링 버전이 고 <xref:System.Windows.Input.Mouse.MouseMove> 이 이벤트의 버블링 버전입니다. 이 이벤트 쌍은 요소 수준에서 구현되는 규칙이며 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 이벤트 시스템의 본질적인 기능은 아닙니다. 자세한 내용은 [라우트된 이벤트 개요](routed-events-overview.md)의 WPF 입력 이벤트 섹션을 참조하세요.
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 입력된 이벤트는 일반적으로 터널링 이벤트와 버블링 이벤트 이루어진 쌍으로 제공 됩니다.  터널링 이벤트는 “Preview” 접두사가 있다는 점에서 버블링 이벤트와 다릅니다.  예를 들어 <xref:System.Windows.Input.Mouse.PreviewMouseMove> 마우스 이동 이벤트의 터널링 버전이 고 <xref:System.Windows.Input.Mouse.MouseMove> 이 이벤트의 버블링 버전입니다. 이 이벤트 쌍은 요소 수준에서 구현되는 규칙이며 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 이벤트 시스템의 본질적인 기능은 아닙니다. 자세한 내용은 [라우트된 이벤트 개요](routed-events-overview.md)의 WPF 입력 이벤트 섹션을 참조하세요.
 
 <a name="handling_input_events"></a>
 ## <a name="handling-input-events"></a>입력 이벤트 처리
@@ -138,9 +137,9 @@ ms.locfileid: "57376821"
 
 <a name="touch_and_manipulation"></a>
 ## <a name="touch-and-manipulation"></a>터치 및 조작
- Windows 7 운영 체제의 새로운 하드웨어 및 API를 사용하면 애플리케이션이 여러 터치에서 동시에 입력을 수신할 수 있습니다. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]를 사용하면 응용 프로그램에서 터치가 발생할 때 이벤트를 발생시킴으로써 마우스나 키보드와 같은 다른 입력에 응답하는 것과 유사한 방식으로 터치를 감지하고 이에 응답할 수 있습니다.
+ Windows 7 운영 체제의 새로운 하드웨어 및 API를 사용하면 애플리케이션이 여러 터치에서 동시에 입력을 수신할 수 있습니다. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 응용 프로그램 검색 및 터치가 발생할 때 이벤트를 발생 시켜 마우스나 키보드와 같은 다른 입력에 응답 하는 유사한 방식으로 터치에 응답을 사용 하도록 설정 합니다.
 
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]는 터치가 발생할 때 두 가지 형식의 이벤트, 즉 터치 이벤트와 조작 이벤트를 노출합니다. 터치 이벤트는 터치 스크린의 각 손가락과 그 이동에 대한 원시 데이터를 제공합니다. 조작 이벤트는 특정 작업으로 입력을 해석합니다. 이 섹션에서는 두 가지 형식의 이벤트에 대해 모두 설명합니다.
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 두 가지 유형의 터치가 발생할 때 이벤트를 노출 합니다: 터치 이벤트와 조작 이벤트입니다. 터치 이벤트는 터치 스크린의 각 손가락과 그 이동에 대한 원시 데이터를 제공합니다. 조작 이벤트는 특정 작업으로 입력을 해석합니다. 이 섹션에서는 두 가지 형식의 이벤트에 대해 모두 설명합니다.
 
 ### <a name="prerequisites"></a>전제 조건
  터치에 응답하는 애플리케이션을 개발하려면 다음 구성 요소가 필요합니다.
@@ -218,15 +217,15 @@ ms.locfileid: "57376821"
 
  다음 목록은 앞의 그림에서 이벤트 시퀀스를 설명합니다.
 
-1.  <xref:System.Windows.UIElement.TouchEnter> 이벤트 사용자가 요소에서 손가락을 놓고 하는 경우 한 번 발생 합니다.
+1. <xref:System.Windows.UIElement.TouchEnter> 이벤트 사용자가 요소에서 손가락을 놓고 하는 경우 한 번 발생 합니다.
 
-2.  <xref:System.Windows.UIElement.TouchDown> 이벤트가 한 번 발생 합니다.
+2. <xref:System.Windows.UIElement.TouchDown> 이벤트가 한 번 발생 합니다.
 
-3.  <xref:System.Windows.UIElement.TouchMove> 이벤트는 사용자가 손가락을 요소 내에서 여러 번 발생 합니다.
+3. <xref:System.Windows.UIElement.TouchMove> 이벤트는 사용자가 손가락을 요소 내에서 여러 번 발생 합니다.
 
-4.  <xref:System.Windows.UIElement.TouchUp> 이벤트는 사용자가 요소에서 손가락을 뗄 때 한 번 발생 합니다.
+4. <xref:System.Windows.UIElement.TouchUp> 이벤트는 사용자가 요소에서 손가락을 뗄 때 한 번 발생 합니다.
 
-5.  <xref:System.Windows.UIElement.TouchLeave> 이벤트가 한 번 발생 합니다.
+5. <xref:System.Windows.UIElement.TouchLeave> 이벤트가 한 번 발생 합니다.
 
  3개 이상의 손가락이 사용되면 각 손가락마다 이벤트가 발생합니다.
 
@@ -241,7 +240,7 @@ ms.locfileid: "57376821"
 
  둘 이상의 조작 형식이 동시에 발생할 수 있습니다.
 
- 개체가 조작에 응답하게 하면 개체에 관성이 있는 것처럼 보일 수 있습니다. 그러면 개체가 실제 세계를 시뮬레이트하게 만들 수 있습니다. 예를 들어 테이블에서 책을 밀 때 충분히 세게 밀면 책을 놓은 후에도 책이 계속 움직입니다. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]을 사용하면 사용자가 손가락을 개체에서 뗀 후 조작 이벤트를 발생시켜 이 동작을 시뮬레이트할 수 있습니다.
+ 개체가 조작에 응답하게 하면 개체에 관성이 있는 것처럼 보일 수 있습니다. 그러면 개체가 실제 세계를 시뮬레이트하게 만들 수 있습니다. 예를 들어 테이블에서 책을 밀 때 충분히 세게 밀면 책을 놓은 후에도 책이 계속 움직입니다. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 사용자가 손가락을 개체에서 뗀 후 조작 이벤트를 발생 시켜이 동작을 시뮬레이션할 수 있습니다.
 
  사용자가 이동, 크기 조정 및 개체를 회전할 수 있는 응용 프로그램을 만드는 방법에 대 한 자세한 내용은 참조 하세요. [연습: 첫 번째 터치 응용 프로그램을 만들어](walkthrough-creating-your-first-touch-application.md)합니다.
 
@@ -270,17 +269,17 @@ ms.locfileid: "57376821"
 
  다음 목록은 앞의 그림에서 이벤트 시퀀스를 설명합니다.
 
-1.  <xref:System.Windows.UIElement.ManipulationStarting> 사용자 개체에 손가락을 배치 하면 오류가 발생 합니다. 무엇 보다도이 이벤트를 통해 설정 하는 데는 <xref:System.Windows.Input.ManipulationStartingEventArgs.ManipulationContainer%2A> 속성입니다. 후속 이벤트에서 조작의 위치에 상대적인 됩니다는 <xref:System.Windows.Input.ManipulationStartingEventArgs.ManipulationContainer%2A>합니다. 이외의 이벤트에서 <xref:System.Windows.UIElement.ManipulationStarting>,이 속성은 읽기 전용 이므로 <xref:System.Windows.UIElement.ManipulationStarting> 이벤트는에이 속성을 설정할 수 있습니다.
+1. <xref:System.Windows.UIElement.ManipulationStarting> 사용자 개체에 손가락을 배치 하면 오류가 발생 합니다. 무엇 보다도이 이벤트를 통해 설정 하는 데는 <xref:System.Windows.Input.ManipulationStartingEventArgs.ManipulationContainer%2A> 속성입니다. 후속 이벤트에서 조작의 위치에 상대적인 됩니다는 <xref:System.Windows.Input.ManipulationStartingEventArgs.ManipulationContainer%2A>합니다. 이외의 이벤트에서 <xref:System.Windows.UIElement.ManipulationStarting>,이 속성은 읽기 전용 이므로 <xref:System.Windows.UIElement.ManipulationStarting> 이벤트는에이 속성을 설정할 수 있습니다.
 
-2.  <xref:System.Windows.UIElement.ManipulationStarted> 이벤트가 발생 합니다. 이 이벤트는 조작의 출처를 보고합니다.
+2. <xref:System.Windows.UIElement.ManipulationStarted> 이벤트가 발생 합니다. 이 이벤트는 조작의 출처를 보고합니다.
 
-3.  <xref:System.Windows.UIElement.ManipulationDelta> 이벤트는 사용자의 터치 스크린에서 손가락을 움직일 때마다 여러 번 발생 합니다. <xref:System.Windows.Input.ManipulationDeltaEventArgs.DeltaManipulation%2A> 의 속성을 <xref:System.Windows.Input.ManipulationDeltaEventArgs> 클래스 조작이 이동, 확장 또는 변환으로 해석할지를 보고 합니다. 바로 여기서 개체 조작 작업의 대부분이 수행됩니다.
+3. <xref:System.Windows.UIElement.ManipulationDelta> 이벤트는 사용자의 터치 스크린에서 손가락을 움직일 때마다 여러 번 발생 합니다. <xref:System.Windows.Input.ManipulationDeltaEventArgs.DeltaManipulation%2A> 의 속성을 <xref:System.Windows.Input.ManipulationDeltaEventArgs> 클래스 조작이 이동, 확장 또는 변환으로 해석할지를 보고 합니다. 바로 여기서 개체 조작 작업의 대부분이 수행됩니다.
 
-4.  <xref:System.Windows.UIElement.ManipulationInertiaStarting> 이벤트 개체를 사용 하 여 사용자의 손가락 연결이 끊어질 때 발생 합니다. 이 이벤트를 사용하면 관성이 발생하는 동안 수행되는 조작의 감속을 지정할 수 있습니다. 따라서 사용자가 선택한 여러 가지 실제 공간 또는 특성을 개체가 에뮬레이트할 수 있습니다. 예를 들어 애플리케이션에 실제 세계의 항목을 나타내는 개체가 두 개 있고 한 개체가 다른 개체보다 무거운 경우를 가정해 봅니다. 이 경우 무거운 개체가 가벼운 개체보다 더 빠르게 감속되도록 할 수 있습니다.
+4. <xref:System.Windows.UIElement.ManipulationInertiaStarting> 이벤트 개체를 사용 하 여 사용자의 손가락 연결이 끊어질 때 발생 합니다. 이 이벤트를 사용하면 관성이 발생하는 동안 수행되는 조작의 감속을 지정할 수 있습니다. 따라서 사용자가 선택한 여러 가지 실제 공간 또는 특성을 개체가 에뮬레이트할 수 있습니다. 예를 들어 애플리케이션에 실제 세계의 항목을 나타내는 개체가 두 개 있고 한 개체가 다른 개체보다 무거운 경우를 가정해 봅니다. 이 경우 무거운 개체가 가벼운 개체보다 더 빠르게 감속되도록 할 수 있습니다.
 
-5.  <xref:System.Windows.UIElement.ManipulationDelta> 관성 이벤트에 여러 번 발생 합니다. 이 이벤트는 사용자가 터치 스크린에서 손가락을 이동하고 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]에서 관성을 시뮬레이트하는 경우에 발생합니다. 다시 말해 <xref:System.Windows.UIElement.ManipulationDelta> 이전 및 이후에 발생 합니다 <xref:System.Windows.UIElement.ManipulationInertiaStarting> 이벤트입니다. 합니다 <xref:System.Windows.Input.ManipulationDeltaEventArgs.IsInertial%2A?displayProperty=nameWithType> 속성 보고서 여부를 <xref:System.Windows.UIElement.ManipulationDelta> 속성을 확인 하 고 해당 값에 따라 다른 작업을 수행할 수 있도록 관성 도중 이벤트 발생 합니다.
+5. <xref:System.Windows.UIElement.ManipulationDelta> 관성 이벤트에 여러 번 발생 합니다. 이 이벤트는 사용자가 터치 스크린에서 손가락을 이동하고 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]에서 관성을 시뮬레이트하는 경우에 발생합니다. 다시 말해 <xref:System.Windows.UIElement.ManipulationDelta> 이전 및 이후에 발생 합니다 <xref:System.Windows.UIElement.ManipulationInertiaStarting> 이벤트입니다. 합니다 <xref:System.Windows.Input.ManipulationDeltaEventArgs.IsInertial%2A?displayProperty=nameWithType> 속성 보고서 여부를 <xref:System.Windows.UIElement.ManipulationDelta> 속성을 확인 하 고 해당 값에 따라 다른 작업을 수행할 수 있도록 관성 도중 이벤트 발생 합니다.
 
-6.  <xref:System.Windows.UIElement.ManipulationCompleted> 이벤트가 조작 및 관성이 종료 될 때입니다. 즉, 이후 모든은 <xref:System.Windows.UIElement.ManipulationDelta> 이벤트가 발생할는 <xref:System.Windows.UIElement.ManipulationCompleted> 을 조작 완료 되었음을 알리는 이벤트가 발생 합니다.
+6. <xref:System.Windows.UIElement.ManipulationCompleted> 이벤트가 조작 및 관성이 종료 될 때입니다. 즉, 이후 모든은 <xref:System.Windows.UIElement.ManipulationDelta> 이벤트가 발생할는 <xref:System.Windows.UIElement.ManipulationCompleted> 을 조작 완료 되었음을 알리는 이벤트가 발생 합니다.
 
  합니다 <xref:System.Windows.UIElement> 정의 <xref:System.Windows.UIElement.ManipulationBoundaryFeedback> 이벤트입니다. 이 이벤트가 발생할 때를 <xref:System.Windows.Input.ManipulationDeltaEventArgs.ReportBoundaryFeedback%2A> 메서드는 <xref:System.Windows.UIElement.ManipulationDelta> 이벤트. <xref:System.Windows.UIElement.ManipulationBoundaryFeedback> 이벤트를 사용 하면 응용 프로그램이 나 구성 요소는 개체가 경계에 닿을 때 시각적 피드백을 제공 합니다. 예를 들어를 <xref:System.Windows.Window> 핸들 클래스는 <xref:System.Windows.UIElement.ManipulationBoundaryFeedback> 가장자리 발견 될 때 약간 이동 하도록 창에 이벤트입니다.
 
@@ -391,6 +390,7 @@ ms.locfileid: "57376821"
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 프레임워크 요소 및 이벤트 라우팅에 대해 보다 자세히 설명하는 추가 리소스가 있습니다. 자세한 내용은 [명령 개요](commanding-overview.md), [포커스 개요](focus-overview.md), [기본 요소 개요](base-elements-overview.md),[WPF의 트리](trees-in-wpf.md) 및 [라우트된 이벤트 개요](routed-events-overview.md)와 같은 개요를 참조하세요.
 
 ## <a name="see-also"></a>참고자료
+
 - [포커스 개요](focus-overview.md)
 - [명령 개요](commanding-overview.md)
 - [라우트된 이벤트 개요](routed-events-overview.md)

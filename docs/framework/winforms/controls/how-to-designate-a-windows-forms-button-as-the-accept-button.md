@@ -11,12 +11,12 @@ helpviewer_keywords:
 - Button control [Windows Forms], designating as default
 - Windows Forms controls, default button on form
 ms.assetid: 22cc9da6-b913-4e04-9554-dee443ac5c3a
-ms.openlocfilehash: 00d9f4acffb88b5047b40df91799cea1caaf2cf2
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 8e608bb2cb4635ef1d29fd7a0aff3ac95fcd9af5
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57714699"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59309825"
 ---
 # <a name="how-to-designate-a-windows-forms-button-as-the-accept-button"></a>방법: Windows Forms 단추를 적용 단추로 지정
 모든 Windows Form에 지정할 수 있습니다는 <xref:System.Windows.Forms.Button> 컨트롤을 적용 단추가 기본 단추 라고도 합니다. ENTER 키를 누를 때마다 폼에서 다른 컨트롤에 포커스가 관계 없이 기본 단추 클릭 됩니다.  
@@ -26,7 +26,7 @@ ms.locfileid: "57714699"
   
 ### <a name="to-designate-the-accept-button"></a>적용 단추를 지정 하려면  
   
-1.  폼의 설정 <xref:System.Windows.Forms.Form.AcceptButton%2A> 속성을 적절 한 <xref:System.Windows.Forms.Button> 제어 합니다.  
+1. 폼의 설정 <xref:System.Windows.Forms.Form.AcceptButton%2A> 속성을 적절 한 <xref:System.Windows.Forms.Button> 제어 합니다.  
   
     ```vb  
     Private Sub SetDefault(ByVal myDefaultBtn As Button)  
@@ -50,9 +50,10 @@ ms.locfileid: "57714699"
     ```  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Windows.Forms.Form.AcceptButton%2A>
 - [Button 컨트롤 개요](button-control-overview-windows-forms.md)
 - [Windows Forms Button 컨트롤 선택 방법](ways-to-select-a-windows-forms-button-control.md)
 - [방법: Windows Forms 단추 클릭에 응답](how-to-respond-to-windows-forms-button-clicks.md)
-- [방법: Windows Forms 단추를 취소 단추로 지정](how-to-designate-a-windows-forms-button-as-the-cancel-button.md)
+- [방법: Windows Forms Button을 취소 단추로 지정](how-to-designate-a-windows-forms-button-as-the-cancel-button.md)
 - [Button 컨트롤](button-control-windows-forms.md)

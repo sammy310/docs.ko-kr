@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 9ebe40b2-d703-421e-8660-984acc42bfe0
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ed27d8b2ee99d0a9364c577e50120f3c7b4f5929
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 08f67ad363d0bd3efcc7a1eeedd1f48d3bae9407
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54546795"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59114899"
 ---
 # <a name="asynchronousthreadabort-mda"></a>asynchronousThreadAbort MDA
 `asynchronousThreadAbort` MDA(관리 디버깅 도우미)는 스레드가 비동기 중단을 다른 스레드에 도입하려고 할 때 활성화됩니다. 동기 스레드 중단은 `asynchronousThreadAbort` MDA를 활성화하지 않습니다.
@@ -71,5 +71,6 @@ void FireMda()
 ```
 
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Threading.Thread>
 - [관리 디버깅 도우미를 사용하여 오류 진단](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)

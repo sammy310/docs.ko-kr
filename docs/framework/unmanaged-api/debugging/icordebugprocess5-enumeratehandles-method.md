@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9d031754c22a62cb8d37cd5f591619d985773727
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 2b3cc158c48e8bb9f833429bbddaa74ed459f1b6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57498863"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59108833"
 ---
 # <a name="icordebugprocess5enumeratehandles-method"></a>ICorDebugProcess5::EnumerateHandles 메서드
 프로세스에서 개체 핸들에 대 한 열거자를 가져옵니다.  
@@ -62,5 +62,6 @@ HRESULT EnumerateHandles(     [in] CorGCReferenceType types,
  **.NET Framework 버전:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
 ## <a name="see-also"></a>참고자료
+
 - [디버깅 구조체](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)
 - [디버깅](../../../../docs/framework/unmanaged-api/debugging/index.md)

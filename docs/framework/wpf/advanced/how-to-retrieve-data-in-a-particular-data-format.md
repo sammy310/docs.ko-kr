@@ -9,12 +9,12 @@ helpviewer_keywords:
 - DataFormats class [WPF], retrieving data
 - DataObject class [WPF], retrieving data
 ms.assetid: a625acf3-1144-44cd-add7-456aefc3859f
-ms.openlocfilehash: f759677d9aba51fc8a65f030be8ae19eea53c02e
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: b3ec1b8fa873fd449956912e9e77e98b0362cb0e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57379135"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59080022"
 ---
 # <a name="how-to-retrieve-data-in-a-particular-data-format"></a>방법: 특정 데이터 형식의 데이터 검색
 다음 예제에서는 지정 된 형식으로 데이터 개체에서 데이터를 검색 하는 방법을 보여 줍니다.  
@@ -38,5 +38,6 @@ ms.locfileid: "57379135"
  [!code-vb[DragDrop_DragDropMiscCode#_DragDrop_GetSpecificDataFormat_Native](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DragDrop_DragDropMiscCode/visualbasic/window1.xaml.vb#_dragdrop_getspecificdataformat_native)]  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Windows.IDataObject>
 - [끌어서 놓기 개요](drag-and-drop-overview.md)

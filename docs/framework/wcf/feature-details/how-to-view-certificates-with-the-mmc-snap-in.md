@@ -4,12 +4,12 @@ ms.date: 02/25/2019
 helpviewer_keywords:
 - certificates [WCF], viewing with the MMC snap-in
 ms.assetid: 2b8782aa-ebb4-4ee7-974b-90299e356dc5
-ms.openlocfilehash: 6ec86ffca9ae84a9c3276a3dd6de676919dcd2e0
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.openlocfilehash: 69f79b64250ff46524e7b4720d13351774875a3f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57200288"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59167507"
 ---
 # <a name="how-to-view-certificates-with-the-mmc-snap-in"></a>방법: MMC 스냅인을 사용 하 여 인증서 보기
 보안 클라이언트 또는 서비스를 만들 때 사용할 수 있습니다는 [인증서](working-with-certificates.md) 자격 증명으로 합니다. 예를 들어, 일반적인 자격 증명 형식은 X.509 인증서를 사용 하 여 만든는 <xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential.SetCertificate%2A?displayProperty=nameWithType> 메서드. 
@@ -22,7 +22,6 @@ ms.locfileid: "57200288"
 
 - 서비스 계정: 저장소 장치에서 특정 서비스에 로컬입니다.
 
-  
 ## <a name="view-certificates-in-the-mmc-snap-in"></a>MMC 스냅인에서 인증서 보기 
 
 다음 절차에는 적절 한 인증서를 찾으려면 장치의 로컬 저장소를 검사 하는 방법을 보여 줍니다. 
@@ -57,7 +56,6 @@ ms.locfileid: "57200288"
 8. MMC 스냅인에서 인증서를 보려면 선택 **콘솔 루트** 왼쪽된 창에서 확장 **인증서 (로컬 컴퓨터)** 합니다.
 
     각 유형의 인증서에 대 한 디렉터리 목록이 표시 됩니다. 각 인증서 디렉터리에서 보기, 내보내기,를 가져오고 해당 인증서를 삭제 합니다.
-  
 
 ## <a name="view-certificates-with-the-certificate-manager-tool"></a>인증서 관리자 도구를 사용 하 여 인증서 보기
 
@@ -79,8 +77,8 @@ ms.locfileid: "57200288"
   
 2. 아래에서 인증서를 보려면 **인증서-현재 사용자** 왼쪽된 창에서 보려는 인증서 종류에 대 한 디렉터리를 확장 합니다.
 
-  
 ## <a name="see-also"></a>참고자료
+
 - [인증서 작업](working-with-certificates.md)
 - [방법: 개발 중 사용할 임시 인증서 만들기](how-to-create-temporary-certificates-for-use-during-development.md)
 - [방법: 인증서의 지문 검색](how-to-retrieve-the-thumbprint-of-a-certificate.md)

@@ -1,15 +1,15 @@
 ---
-title: 'Custompeerresolverservice: 클라이언트 등록'
+title: 'CustomPeerResolverService 내: 클라이언트 등록'
 ms.date: 03/30/2017
 ms.assetid: 40236953-a916-4236-84a6-928859e1331a
-ms.openlocfilehash: 90d40eb11dbfebf4a19ba4c42e0fd4b45a2b1e7a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b3b5e22ad29f465d82e3d925f7168745fc5d04a4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54541783"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59095791"
 ---
-# <a name="inside-the-custompeerresolverservice-client-registrations"></a>Custompeerresolverservice: 클라이언트 등록
+# <a name="inside-the-custompeerresolverservice-client-registrations"></a>CustomPeerResolverService 내: 클라이언트 등록
 메시의 각 노드는 `Register` 함수를 통해 해당 엔드포인트 정보를 확인자 서비스에 게시합니다. 확인자 서비스는 이 정보를 등록 레코드로 저장합니다. 이 레코드에는 노드의 고유 식별자(RegistrationID) 및 엔드포인트 정보(PeerNodeAddress)가 포함됩니다.  
   
 ## <a name="stale-records-and-expiration-time"></a>잘못된 레코드 및 만료 시간  
@@ -34,4 +34,5 @@ ms.locfileid: "54541783"
  확인자 서비스에 노드가 등록되면 서비스로부터 <xref:System.ServiceModel.PeerResolvers.RegisterResponseInfo> 개체를 받게 됩니다. 이 개체에는 등록이 만료되어 확인자 서비스에 의해 제거되기 전까지 남은 시간을 노드에 알려 주는 `RegistrationLifetime` 속성이 있습니다. 예를 들어, `RegistrationLifetime`이 2분인 경우 노드에서 2분 안에 `Refresh`를 호출해야 레코드가 최신 상태로 유지되어 삭제되지 않습니다. `Refresh` 요청을 받을 경우 확인자 서비스는 레코드를 조회하여 만료 시간을 다시 설정합니다. Refresh는 <xref:System.ServiceModel.PeerResolvers.RefreshResponseInfo> 속성이 지정된 `RegistrationLifetime` 개체를 반환합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [피어 확인자](../../../../docs/framework/wcf/feature-details/peer-resolvers.md)

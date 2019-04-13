@@ -4,23 +4,23 @@ ms.date: 03/30/2017
 ms.assetid: fc9e04e8-2d05-4870-8cd6-5bd276814afc
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 576c7c10b5ce36092dae7ab9cd7d973568168260
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.openlocfilehash: f72a1d6a10c5899a02019bf826dc3cc9d5457bed
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56220954"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59298476"
 ---
 # <a name="getting-started-with-net-native"></a>.NET 네이티브 시작
 새로운 Windows 10용 Windows 앱을 작성하든지 기존 Windows 스토어 앱을 마이그레이션하든지 상관없이 동일한 절차 집합을 따르면 됩니다. [!INCLUDE[net_native](../../../includes/net-native-md.md)] 앱을 만들려면 다음 단계를 수행합니다.  
   
-1.  [Windows 10을 대상으로 하는 UWP(유니버설 Windows 플랫폼) 앱을 개발하고](#Step1)앱의 디버그 빌드를 테스트하여 제대로 작동하는지 확인합니다.  
+1. [Windows 10을 대상으로 하는 UWP(유니버설 Windows 플랫폼) 앱을 개발하고](#Step1)앱의 디버그 빌드를 테스트하여 제대로 작동하는지 확인합니다.  
   
-2.  [추가 리플렉션 및 serialization 사용을 처리합니다](#Step2).  
+2. [추가 리플렉션 및 serialization 사용을 처리합니다](#Step2).  
   
-3.  [앱의 릴리스 빌드를 배포하고 테스트합니다](#Step3).  
+3. [앱의 릴리스 빌드를 배포하고 테스트합니다](#Step3).  
   
-4.  [누락된 메타데이터 문제를 수동으로 해결](#Step4)하고 [3단계](#Step3)를 반복하여 모든 문제를 해결합니다.  
+4. [누락된 메타데이터 문제를 수동으로 해결](#Step4)하고 [3단계](#Step3)를 반복하여 모든 문제를 해결합니다.  
   
 > [!NOTE]
 >  기존 Windows 스토어 앱을 [!INCLUDE[net_native](../../../includes/net-native-md.md)]로 마이그레이션하는 경우 [Windows 스토어 앱을 .NET 네이티브로 마이그레이션](../../../docs/framework/net-native/migrating-your-windows-store-app-to-net-native.md).  
@@ -29,9 +29,9 @@ ms.locfileid: "56220954"
 ## <a name="step-1-develop-and-test-debug-builds-of-your-uwp-app"></a>1단계: 개발 및 UWP 앱의 디버그 빌드를 테스트 합니다.  
  새 앱을 개발하든지 기존 앱을 마이그레이션하든지 상관없이 모든 Windows 앱에 동일한 프로세스를 따릅니다.  
   
-1.  Visual C# 또는 Visual Basic용 유니버설 Windows 앱 템플릿을 사용하여 Visual Studio에서 새 UWP 프로젝트를 만듭니다. 기본적으로 모든 UWP 애플리케이션은 CoreCLR을 대상으로 하며 해당 릴리스 빌드는 .NET 네이티브 도구 체인을 사용하여 컴파일됩니다.  
+1. Visual C# 또는 Visual Basic용 유니버설 Windows 앱 템플릿을 사용하여 Visual Studio에서 새 UWP 프로젝트를 만듭니다. 기본적으로 모든 UWP 애플리케이션은 CoreCLR을 대상으로 하며 해당 릴리스 빌드는 .NET 네이티브 도구 체인을 사용하여 컴파일됩니다.  
   
-2.  .NET 네이티브 도구 체인을 사용하는 UWP 앱 프로젝트 컴파일과 도구 체인이 없는 프로젝트 컴파일 간에 알려진 호환성 문제가 몇 가지 있습니다. 자세한 내용은 [마이그레이션 가이드](../../../docs/framework/net-native/migrating-your-windows-store-app-to-net-native.md) 를 참조하세요.  
+2. .NET 네이티브 도구 체인을 사용하는 UWP 앱 프로젝트 컴파일과 도구 체인이 없는 프로젝트 컴파일 간에 알려진 호환성 문제가 몇 가지 있습니다. 자세한 내용은 [마이그레이션 가이드](../../../docs/framework/net-native/migrating-your-windows-store-app-to-net-native.md) 를 참조하세요.  
   
  이제는 [!INCLUDE[net_native](../../../includes/net-native-md.md)] 노출 영역에 대해 로컬 시스템이나 시뮬레이터에서 실행되는 C# 또는 Visual Basic 코드를 작성할 수 있습니다.  
   
@@ -49,7 +49,7 @@ ms.locfileid: "56220954"
   
  런타임 지시문 파일은 앱에서 런타임에 필요한 메타데이터를 정의하는 데 사용됩니다. 일부 경우에는 파일의 기본 버전이 적절할 수도 있습니다. 그러나 serialization 또는 리플렉션을 사용하는 일부 코드는 런타임 지시문 파일에서 추가 항목을 필요로 할 수 있습니다.  
   
- **serialization**  
+ **Serialization**  
  직렬 변환기에는 두 가지 범주가 있으며 두 범주 모두 런타임 지시문 파일에 추가 항목이 필요합니다.  
   
 -   리플렉션을 기반으로 하지 않는 serializer. <xref:System.Runtime.Serialization.DataContractSerializer>, <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>, <xref:System.Xml.Serialization.XmlSerializer> 클래스와 같이 .NET Framework 클래스 라이브러리에 포함된 serializer는 리플렉션을 사용하지 않습니다. 그러나 serialize 또는 deserialize할 개체에 따라 코드를 생성해야 합니다.  자세한 내용은 [Serialization and Metadata](../../../docs/framework/net-native/serialization-and-metadata.md)의 "Microsoft 직렬 변환기" 섹션을 참조하세요.  
@@ -106,13 +106,14 @@ ms.locfileid: "56220954"
   
  앱을 테스트할 때 발생하는 예외 및 기타 문제를 처리하는 몇 가지 구체적인 예제는 다음 항목을 참조하세요.  
   
--   [예제: 데이터를 바인딩하는 경우 예외를 처리](../../../docs/framework/net-native/example-handling-exceptions-when-binding-data.md)  
+-   [예제: 데이터를 바인딩하는 경우 예외 처리](../../../docs/framework/net-native/example-handling-exceptions-when-binding-data.md)  
   
 -   [예제: 동적 프로그래밍 문제 해결](../../../docs/framework/net-native/example-troubleshooting-dynamic-programming.md)  
   
 -   [.NET 네이티브 앱의 런타임 예외](../../../docs/framework/net-native/runtime-exceptions-in-net-native-apps.md)  
   
 ## <a name="see-also"></a>참고자료
+
 - [런타임 지시문(rd.xml) 구성 파일 참조](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
 - [.NET 네이티브 설치 및 구성](https://docs.microsoft.com/previous-versions/dn600164(v=vs.110))
 - [.NET 네이티브 및 컴파일](../../../docs/framework/net-native/net-native-and-compilation.md)

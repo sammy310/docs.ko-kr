@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8a999dc1850a41612f8896ff9a7ed96cd8c3a2fe
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9ead1c1a91b910e7cfbb09f17ba823fc7a77ce0f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54509137"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59181443"
 ---
 # <a name="getcurrentapartmenttype-function"></a>GetCurrentApartmentType 함수
 호출자가 실행 중인 아파트의 유형을 검색합니다.   
@@ -51,7 +51,6 @@ HRESULT GetCurrentApartmentType (
 
 ## <a name="return-value"></a>반환 값
 
-
 |상수  |값  |설명  |
 |---------|---------|---------|
 | `S_OK` | 0 | 함수는 성공적으로 완료 되었습니다. |
@@ -69,4 +68,5 @@ HRESULT GetCurrentApartmentType (
  **.NET Framework 버전:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>참고자료
-- [WMI 및 성능 카운터 (관리 되지 않는 API 참조)](index.md)
+
+- [WMI 및 성능 카운터(관리되지 않는 API 참조)](index.md)

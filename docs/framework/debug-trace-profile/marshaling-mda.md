@@ -1,5 +1,5 @@
 ---
-title: 마샬링 MDA
+title: marshaling MDA
 ms.date: 03/30/2017
 helpviewer_keywords:
 - marshaling, run-time errors
@@ -9,14 +9,14 @@ helpviewer_keywords:
 ms.assetid: 5433b1f8-b0e5-40c9-a49a-0e5bd213363d
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 37351dadf941e3512249dd8a9f433b63065ae1fb
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 463c8e42e76a61eb0820c1af72c20d004161ad25
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54626890"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59184472"
 ---
-# <a name="marshaling-mda"></a>마샬링 MDA
+# <a name="marshaling-mda"></a>marshaling MDA
 `marshaling` MDA(관리 디버깅 도우미)는 CLR이 메서드 매개 변수 또는 구조체 필드에 대한 마샬링 정보를 설정할 때 활성화됩니다. 이 MDA는 JIT 컴파일된 어셈블리에 대해 작동하지 않습니다.  
   
 ## <a name="effect-on-the-runtime"></a>런타임에 대한 영향  
@@ -51,6 +51,7 @@ name="assembly!Namespace.Class::myChar
 ```  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Runtime.InteropServices.MarshalAsAttribute>
 - [관리 디버깅 도우미를 사용하여 오류 진단](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
-- [interop 마샬링](../../../docs/framework/interop/interop-marshaling.md)
+- [Interop 마샬링](../../../docs/framework/interop/interop-marshaling.md)

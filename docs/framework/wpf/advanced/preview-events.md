@@ -7,12 +7,12 @@ helpviewer_keywords:
 - events [WPF], Preview
 - events [WPF], suppressing
 ms.assetid: b5032308-aa9c-4d02-af11-630ecec8df7e
-ms.openlocfilehash: 95514cfce88764d92d690fb9c0a51c667a49683b
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 75165df94aa8b508ef85cf970933efb98b9d62ca
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57356340"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59211398"
 ---
 # <a name="preview-events"></a>미리 보기 이벤트
 터널링 이벤트, 라고도 미리 보기 이벤트는 라우트된 이벤트에서 이벤트를 발생 시킨 및 이벤트 데이터에서 소스로 보고 되는 요소에 대해 응용 프로그램 루트 경로 방향 이동 하는 위치입니다. 일부 이벤트 시나리오를 지원 또는 미리 보기 이벤트; 필요 이 항목에서는 미리 보기 이벤트 있는, 응용 프로그램 또는 구성 요소 처리 하는 방법을 하는 경우 및 사용자 지정 구성 요소 또는 클래스에서 미리 보기 이벤트를 만들 수 있는 적절 한 사례를 설명 합니다.  
@@ -30,5 +30,6 @@ ms.locfileid: "57356340"
  이러한 각 기법에는 의도 하지 않은 또는 제한 사항 미리 보기 이벤트를 처리 하는 부작용이 버블링 이벤트를 처리 해야 하는 처리기를 비활성화할 수 있습니다 시점 이벤트를 처리 하 고 따라서 제한을는 일반적으로 Previ에 남아 있지만 처리 이벤트를 표시 하는 것이 좋습니다. 활용 하면 초보 부분 경로입니다. 에 대 한 제한 합니다 `handledEventsToo` 지정할 수 없다는 것이 방법은 `handledEventsToo` 처리기에서 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 특성으로 등록 해야 이벤트 처리기 코드에서 연결 처리기가 있는 요소에 대 한 개체 참조를 가져온 후 합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [라우트된 이벤트를 처리된 것으로 표시 및 클래스 처리](marking-routed-events-as-handled-and-class-handling.md)
 - [라우트된 이벤트 개요](routed-events-overview.md)

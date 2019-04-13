@@ -5,12 +5,12 @@ helpviewer_keywords:
 - data grids [Windows Forms], sort modes
 - DataGridView control [Windows Forms], sort mode
 ms.assetid: 43715887-2df9-4da7-bcf1-b9c7c842b2bf
-ms.openlocfilehash: 935251c783bbe74903cee6afd5e14eed4483d69d
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: b8f6048946d367dd79b1ce0d23d84446ffdb1115
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57717858"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59106668"
 ---
 # <a name="column-sort-modes-in-the-windows-forms-datagridview-control"></a>Windows Forms DataGridView 컨트롤의 열 정렬 모드
 <xref:System.Windows.Forms.DataGridView> 열의 경우 세 가지 정렬 모드 각 열에 대 한 정렬 모드를 통해 지정 됩니다 합니다 <xref:System.Windows.Forms.DataGridViewColumn.SortMode%2A> 속성을 다음 중 하나로 설정할 수 있는 열의 <xref:System.Windows.Forms.DataGridViewColumnSortMode> 열거형 값입니다.  
@@ -59,6 +59,7 @@ ms.locfileid: "57717858"
 >  <xref:System.Windows.Forms.DataGridView.SortCompare> 이벤트가 발생 하지 않습니다 경우는 <xref:System.Windows.Forms.DataGridView.DataSource%2A> 속성이 설정 되어 때나 합니다 <xref:System.Windows.Forms.DataGridView.VirtualMode%2A> 속성 값이 `true`.  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridView.Sort%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.DataGridView.SortedColumn%2A?displayProperty=nameWithType>
@@ -66,5 +67,5 @@ ms.locfileid: "57717858"
 - <xref:System.Windows.Forms.DataGridViewColumn.SortMode%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.DataGridViewColumnHeaderCell.SortGlyphDirection%2A?displayProperty=nameWithType>
 - [Windows Forms DataGridView 컨트롤의 데이터 정렬](sorting-data-in-the-windows-forms-datagridview-control.md)
-- [방법: Windows Forms DataGridView 컨트롤의 열 정렬 모드 설정](set-the-sort-modes-for-columns-wf-datagridview-control.md)
+- [방법: Windows Forms DataGridView 컨트롤에서 열 정렬 모드 설정](set-the-sort-modes-for-columns-wf-datagridview-control.md)
 - [방법: Windows Forms DataGridView 컨트롤에서 정렬 사용자 지정](how-to-customize-sorting-in-the-windows-forms-datagridview-control.md)

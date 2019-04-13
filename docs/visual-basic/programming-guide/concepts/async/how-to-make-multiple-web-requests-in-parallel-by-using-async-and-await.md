@@ -2,12 +2,12 @@
 title: '방법: 비동기를 사용 하 여 병렬로 여러 웹 요청 만들기 및 Await (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: a894b99b-7cfd-4a38-adfb-20d24f986730
-ms.openlocfilehash: 3d5a41cab961f2ec054085b02a0047b69b488a1d
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: c799fa83c0157019961da6adcf89b6ab6f906763
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58843150"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59303468"
 ---
 # <a name="how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await-visual-basic"></a>방법: 비동기를 사용 하 여 병렬로 여러 웹 요청 만들기 및 Await (Visual Basic)
 비동기 메서드에서 작업은 만들어질 때 시작됩니다. 합니다 [Await](../../../../visual-basic/language-reference/operators/await-operator.md) 연산자를 계속할 수 없습니다 작업이 완료 될 때까지 메서드 지점에서 작업에 적용 됩니다. 다음 예제와 같이 작업이 생성되는 즉시 대기되는 경우가 많습니다.  
@@ -44,7 +44,7 @@ Dim result = Await myTask
   
 ### <a name="to-set-up-the-project"></a>프로젝트를 설정하려면  
   
-1.  WPF 애플리케이션을 설정하려면 다음 단계를 완료합니다. 이러한 단계에 대한 자세한 지침은 [연습: 비동기를 사용 하 여 웹 서비스에 액세스 하 고 (Visual Basic) Await](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)합니다.  
+1. WPF 애플리케이션을 설정하려면 다음 단계를 완료합니다. 이러한 단계에 대한 자세한 지침은 [연습: 비동기를 사용 하 여 웹 서비스에 액세스 하 고 (Visual Basic) Await](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)합니다.  
   
     -   텍스트 상자와 단추가 포함된 WPF 애플리케이션을 만듭니다. 단추의 이름을 `startButton`, 텍스트 상자의 이름을 `resultsTextBox`로 지정합니다.  
   
@@ -54,9 +54,9 @@ Dim result = Await myTask
   
 ### <a name="to-add-the-code"></a>코드를 추가하려면  
   
-1.  디자인 창 MainWindow.xaml에서에서 만들기 단추를 두 번 클릭 합니다 `startButton_Click` MainWindow.xaml.vb의 이벤트 처리기입니다.  
+1. 디자인 창 MainWindow.xaml에서에서 만들기 단추를 두 번 클릭 합니다 `startButton_Click` MainWindow.xaml.vb의 이벤트 처리기입니다.  
   
-2.  다음 코드를 복사 하 고 본문에 붙여 넣습니다 `startButton_Click` MainWindow.xaml.vb의 합니다.  
+2. 다음 코드를 복사 하 고 본문에 붙여 넣습니다 `startButton_Click` MainWindow.xaml.vb의 합니다.  
   
     ```vb  
     resultsTextBox.Clear()  
@@ -66,11 +66,11 @@ Dim result = Await myTask
   
      코드는 애플리케이션을 구동하는 비동기 메서드 `CreateMultipleTasksAsync`를 호출합니다.  
   
-3.  프로젝트에 다음과 같은 지원 메서드를 추가합니다.  
+3. 프로젝트에 다음과 같은 지원 메서드를 추가합니다.  
   
-    -   `ProcessURLAsync`는 <xref:System.Net.Http.HttpClient> 메서드를 사용하여 웹 사이트 내용을 바이트 배열로 다운로드합니다. 그런 다음 지원 메서드 `ProcessURLAsync`는 배열의 길이를 표시하고 반환합니다.  
+    -   `ProcessURLAsync` 사용 하는 <xref:System.Net.Http.HttpClient> 바이트 배열로 웹 사이트의 콘텐츠를 다운로드 하는 방법입니다. 그런 다음 지원 메서드 `ProcessURLAsync`는 배열의 길이를 표시하고 반환합니다.  
   
-    -   `DisplayResults`에 각 URL에 대한 바이트 배열의 바이트 수가 표시됩니다. 이 표시는 각 작업의 다운로드가 완료된 시간을 보여 줍니다.  
+    -   `DisplayResults` 각 URL에 대 한 바이트 배열의 바이트 수를 표시합니다. 이 표시는 각 작업의 다운로드가 완료된 시간을 보여 줍니다.  
   
      다음 메서드를 복사한 후 붙여넣습니다는 `startButton_Click` MainWindow.xaml.vb의 이벤트 처리기입니다.  
   
@@ -94,7 +94,7 @@ Dim result = Await myTask
     End Sub  
     ```  
   
-4.  마지막으로, 다음 단계를 수행하는 `CreateMultipleTasksAsync` 메서드를 정의합니다.  
+4. 마지막으로, 다음 단계를 수행하는 `CreateMultipleTasksAsync` 메서드를 정의합니다.  
   
     -   이 메서드는 `ProcessURLAsync`의 <xref:System.Net.Http.HttpClient.GetByteArrayAsync%2A> 메서드에 액세스하는 데 필요한 `HttpClient` 개체를 선언합니다.  
   
@@ -136,7 +136,7 @@ Dim result = Await myTask
     End Function  
     ```  
   
-5.  F5 키를 선택하여 프로그램을 실행한 다음 **시작** 단추를 선택합니다.  
+5. F5 키를 선택하여 프로그램을 실행한 다음 **시작** 단추를 선택합니다.  
   
      프로그램을 여러 번 실행하여 세 가지 작업이 항상 동일한 순서로 완료되지는 않으며, 완료되는 순서가 생성 및 대기된 순서와 다를 수도 있음을 확인합니다.  
   

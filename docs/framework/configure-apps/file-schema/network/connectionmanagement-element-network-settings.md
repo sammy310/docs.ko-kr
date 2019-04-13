@@ -1,5 +1,5 @@
 ---
-title: <connectionManagement> 요소(네트워크 설정)
+title: <connectionManagement> 요소 (네트워크 설정)
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/connectionManagement
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - <connectionManagement> element
 - connectionManagement element
 ms.assetid: bedccaab-12a2-4511-8f67-e961f249aec6
-ms.openlocfilehash: 61fd40500934bc7b67d2960f4a64f8ac12466883
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 4412fe30bfb8dcb3d7576df18cb2a472463d935c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55285833"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59125187"
 ---
 # <a name="connectionmanagement-element-network-settings"></a>\<connectionManagement > 요소 (네트워크 설정)
 네트워크 호스트에 대한 최대 연결 수를 지정합니다.  
@@ -40,7 +40,7 @@ ms.locfileid: "55285833"
 |**요소**|**설명**|  
 |-----------------|---------------------|  
 |[add](../../../../../docs/framework/configure-apps/file-schema/network/add-element-for-connectionmanagement-network-settings.md)|연결 관리 목록에 IP 주소 또는 DNS 이름을 추가합니다.|  
-|[clear](../../../../../docs/framework/configure-apps/file-schema/network/clear-element-for-connectionmanagement-network-settings.md)|연결 관리 목록을 지웁니다.|  
+|[지우기](../../../../../docs/framework/configure-apps/file-schema/network/clear-element-for-connectionmanagement-network-settings.md)|연결 관리 목록을 지웁니다.|  
 |[remove](../../../../../docs/framework/configure-apps/file-schema/network/remove-element-for-connectionmanagement-network-settings.md)|연결 관리 목록에서 IP 주소 또는 DNS 이름을 제거합니다.|  
   
 ### <a name="parent-elements"></a>부모 요소  
@@ -70,6 +70,7 @@ ms.locfileid: "55285833"
 ```  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Net.ServicePoint>
 - <xref:System.Net.ServicePointManager>
 - [네트워크 설정 스키마](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

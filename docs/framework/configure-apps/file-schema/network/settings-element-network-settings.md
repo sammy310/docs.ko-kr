@@ -1,5 +1,5 @@
 ---
-title: <settings> 요소(네트워크 설정)
+title: <settings> 요소 (네트워크 설정)
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#settings
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - settings element
 - <settings> element
 ms.assetid: 189ce989-c39b-427d-b004-6b82a668b931
-ms.openlocfilehash: 839907d9339d459070fff12dbca22d3c2df5b020
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: a1733803d1f5a5bf64aeb69d0360cef3de3b3a69
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55260621"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59096929"
 ---
 # <a name="settings-element-network-settings"></a>\<설정 > 요소 (네트워크 설정)
 <xref:System.Net?displayProperty=nameWithType> 네임스페이스에 대한 기본 네트워크 옵션을 구성합니다.  
@@ -51,7 +51,7 @@ ms.locfileid: "55260621"
 |[ipv6](../../../../../docs/framework/configure-apps/file-schema/network/ipv6-element-network-settings.md)|인터넷 프로토콜 버전 6(ipv6)을 지원 합니다.|  
 |[\<performanceCounter > 요소 (네트워크 설정)](../../../../../docs/framework/configure-apps/file-schema/network/performancecounter-element-network-settings.md)|네트워크 성능 카운터를 사용 하도록 설정 합니다.|  
 |[servicePointManager](../../../../../docs/framework/configure-apps/file-schema/network/servicepointmanager-element-network-settings.md)|네트워크 리소스에 대 한 연결을 구성합니다.|  
-|[socket](../../../../../docs/framework/configure-apps/file-schema/network/socket-element-network-settings.md)|소켓 작업 완료 포트를 사용 하는지 여부를 지정 합니다.|  
+|[소켓](../../../../../docs/framework/configure-apps/file-schema/network/socket-element-network-settings.md)|소켓 작업 완료 포트를 사용 하는지 여부를 지정 합니다.|  
 |[\<webProxyScript > 요소 (네트워크 설정)](../../../../../docs/framework/configure-apps/file-schema/network/webproxyscript-element-network-settings.md)|웹 프록시 검색에 사용 되는 스크립트의 특성을 구성 합니다.|  
   
 ### <a name="parent-elements"></a>부모 요소  
@@ -66,5 +66,6 @@ ms.locfileid: "55260621"
  이 요소는 응용 프로그램 구성 파일 또는 컴퓨터 구성 파일(Machine.config)에서 사용할 수 있습니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Net?displayProperty=nameWithType>
 - [네트워크 설정 스키마](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

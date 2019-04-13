@@ -16,22 +16,21 @@ helpviewer_keywords:
 - data templates [WPF]
 - thread [WPF], affinity
 ms.assetid: 8579c10b-76ab-4c52-9691-195ce02333c8
-ms.openlocfilehash: dee88ceb82528955d8809214bff474b92233d28c
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: f4a6e6c2a63e58c40e0cca9c67b12d1f65af0d2e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57362016"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59199429"
 ---
 # <a name="wpf-architecture"></a>WPF 아키텍처
 이 항목에서는 Windows Presentation Foundation (WPF) 클래스 계층의 둘러보기를 제공합니다. 이 항목은 대부분의 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 주요 하위 시스템을 다루며 이들이 어떻게 상호 작용하는지를 설명하고, [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]의 설계자가 선택한 몇 가지 사항에 대해서 자세히 설명합니다.  
-  
-  
+
 <a name="System_Object"></a>   
 ## <a name="systemobject"></a>System.Object  
  기본 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 프로그래밍 모델은 관리 코드를 통해 노출됩니다. [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]의 초기 디자인 단계에서는 시스템의 관리되는 구성 요소와 관리되지 않는 구성 요소를 정확하게 구분하는 방법에 대한 많은 논쟁이 있었습니다. [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)]에서는 보다 생산적이며 강력한 개발 작업을 수행하는 데 유용한 여러 기능(메모리 관리, 오류 처리, 공용 형식 시스템 등)을 제공하지만 이러한 이점에는 대가가 따릅니다.  
   
- [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]의 주요 구성 요소는 아래 그림에 설명되어 있습니다. 다이어그램의 빨간색 섹션(PresentationFramework, PresentationCore 및 milcore)은 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]의 주요 코드 부분입니다. 이 중에서 하나(milcore)만 관리되지 않는 구성 요소입니다. Milcore는 [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)]와의 긴밀한 통합을 위해 비관리 코드로 작성되어 있습니다. [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]에서의 모든 디스플레이는 [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)] 엔진을 통해 수행되므로 효율적인 하드웨어 및 소프트웨어 렌더링을 허용합니다. [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]에는 메모리 및 실행에 대한 세부적인 제어도 필요합니다. milcore에 있는 컴포지션 엔진은 성능의 영향을 크게 받으므로 성능을 높이기 위해 [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)]의 여러 이점을 포기해야 했습니다.  
+ [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]의 주요 구성 요소는 아래 그림에 설명되어 있습니다. 다이어그램의 빨간색 섹션(PresentationFramework, PresentationCore 및 milcore)은 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]의 주요 코드 부분입니다. 이 중에서 하나(milcore)만 관리되지 않는 구성 요소입니다. Milcore는 [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)]와의 긴밀한 통합을 위해 비관리 코드로 작성되어 있습니다. [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]에서의 모든 디스플레이는 [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)] 엔진을 통해 수행되므로 효율적인 하드웨어 및 소프트웨어 렌더링을 허용합니다. [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 메모리 및 실행 세부적으로 제어할도 필요합니다. milcore에 있는 컴포지션 엔진은 성능의 영향을 크게 받으므로 성능을 높이기 위해 [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)]의 여러 이점을 포기해야 했습니다.  
   
  ![.NET Framework 내 WPF의 위치.](./media/wpf-architect1.PNG "wpf_architect1")  
   
@@ -39,7 +38,7 @@ ms.locfileid: "57362016"
   
 <a name="System_Threading_DispatcherObject"></a>   
 ## <a name="systemthreadingdispatcherobject"></a>System.Threading.DispatcherObject  
- 대부분의 개체 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 에서 파생 <xref:System.Windows.Threading.DispatcherObject>, 스레딩 및 동시성 처리에 대 한 기본 생성자를 제공 하는 합니다. [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]는 디스패처에 의해 구현된 메시징 시스템을 기반으로 합니다. 이는 친숙한 [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] 메시지 펌프와 유사하게 작동합니다. 사실 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 디스패처는 User32 메시지를 사용하여 크로스 스레드 호출을 수행합니다.  
+ 대부분의 개체 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 에서 파생 <xref:System.Windows.Threading.DispatcherObject>, 스레딩 및 동시성 처리에 대 한 기본 생성자를 제공 하는 합니다. [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 디스패처로 구현 된 메시징 시스템에 기반 합니다. 이는 친숙한 [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] 메시지 펌프와 유사하게 작동합니다. 사실 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 디스패처는 User32 메시지를 사용하여 크로스 스레드 호출을 수행합니다.  
   
  [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]에서 동시성을 논의할 때는 두 가지 핵심 개념인 디스패처와 스레드 선호도를 반드시 이해해야 합니다.  
   
@@ -59,7 +58,7 @@ ms.locfileid: "57362016"
   
  속성 시스템은 밀도가 낮은 속성 값 스토리지도 제공합니다. 개체에 수십 또는 수백 개의 속성이 있을 수 있고 대부분의 값은 기본 상태(상속됨, 스타일에 의해 설정됨 등)로 되어 있으므로 개체의 모든 인스턴스에서 모든 속성을 정의할 필요는 없습니다.  
   
- 속성 시스템의 마지막 새 기능은 연결된 속성이라는 개념입니다. [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 요소는 컴퍼지션 및 구성 요소 재사용 원칙에 따라 빌드됩니다. 것은 종종 일부 요소를 포함 하 (같은 <xref:System.Windows.Controls.Grid> 레이아웃 요소) (예: 행/열 정보) 동작을 제어할 자식 요소에 추가 데이터가 필요 합니다. 이러한 모든 속성을 모든 요소와 연결하는 대신 개체가 다른 개체에 대한 속성 정의를 제공할 수 있습니다. 이는 JavaScript의 "expando" 기능과 유사합니다.  
+ 속성 시스템의 마지막 새 기능은 연결된 속성이라는 개념입니다. [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 요소는 컴퍼지션 및 구성 요소 재사용 원칙을 기반으로 합니다. 것은 종종 일부 요소를 포함 하 (같은 <xref:System.Windows.Controls.Grid> 레이아웃 요소) (예: 행/열 정보) 동작을 제어할 자식 요소에 추가 데이터가 필요 합니다. 이러한 모든 속성을 모든 요소와 연결하는 대신 개체가 다른 개체에 대한 속성 정의를 제공할 수 있습니다. 이는 JavaScript의 "expando" 기능과 유사합니다.  
   
 <a name="System_Windows_Media_Visual"></a>   
 ## <a name="systemwindowsmediavisual"></a>System.Windows.Media.Visual  
@@ -67,7 +66,7 @@ ms.locfileid: "57362016"
   
  <xref:System.Windows.Media.Visual> 에 대 한 진입점은 실제로 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 컴퍼지션 시스템입니다. <xref:System.Windows.Media.Visual> 관리 되는 두 하위 간의 연결 지점이 [!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)] 및 관리 되지 않는 milcore 합니다.  
   
- [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]는 milcore에 의해 관리되는 관리되지 않는 데이터 구조를 이동하여 데이터를 표시합니다. 컴포지션 노드라고 하는 이 구조는 각 노드에 렌더링 명령이 있는 계층적 디스플레이 트리를 나타냅니다. 아래 그림의 오른쪽에 있는 이 트리에는 메시징 프로토콜을 통해서만 액세스할 수 있습니다.  
+ [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] milcore에 의해 관리 되는 관리 되지 않는 데이터 구조를 이동 하 여 데이터를 표시 합니다. 컴포지션 노드라고 하는 이 구조는 각 노드에 렌더링 명령이 있는 계층적 디스플레이 트리를 나타냅니다. 아래 그림의 오른쪽에 있는 이 트리에는 메시징 프로토콜을 통해서만 액세스할 수 있습니다.  
   
  프로그래밍할 때 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]에서 만든 <xref:System.Windows.Media.Visual> 요소 및이 메시징 프로토콜을 통해 컴포지션 트리와 내부적으로 통신 하는 파생된 형식입니다. 각 <xref:System.Windows.Media.Visual> 에서 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 하나, none, 또는 여러 개의 컴포지션 노드를 만들 수 있습니다.  
   
@@ -79,7 +78,7 @@ ms.locfileid: "57362016"
   
  User32 및 [!INCLUDE[TLA2#tla_gdi](../../../../includes/tla2sharptla-gdi-md.md)]에서 시스템은 즉각적인 모드 클리핑 시스템으로 작동합니다. 구성 요소를 렌더링해야 할 때는 시스템이 구성 요소가 픽셀과 닿을 수 없는 곳의 바깥에 클리핑 경계를 설정한 다음 구성 요소가 해당 상자에서 픽셀을 그려야 합니다. 이 시스템은 무언가 변경될 때 영향을 받는 구성 요소만 처리하면 되기 때문에 메모리가 제약된 시스템에서 잘 작동합니다. 단일 픽셀의 색상에 두 개의 구성 요소가 관여하는 경우는 없습니다.  
   
- [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]는 "페인터 알고리즘" 그리기 모델을 사용합니다. 즉, 각 구성 요소를 클리핑하는 대신 각 구성 요소가 디스플레이의 뒤쪽에서 앞쪽으로 렌더링해야 합니다. 따라서 각 구성 요소가 이전 구성 요소의 디스플레이에 그릴 수 있습니다. 이 모델의 장점은 복잡하고 부분적인 투명 모양이 가능하다는 것입니다. User32/ [!INCLUDE[TLA2#tla_gdi](../../../../includes/tla2sharptla-gdi-md.md)]를 만들었을 때와 달리 오늘날의 현대적인 그래픽 하드웨어에서는 이 모델이 상대적으로 빠릅니다.  
+ [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] "페인 터 알고리즘" 그리기 모델을 사용 합니다. 즉, 각 구성 요소를 클리핑하는 대신 각 구성 요소가 디스플레이의 뒤쪽에서 앞쪽으로 렌더링해야 합니다. 따라서 각 구성 요소가 이전 구성 요소의 디스플레이에 그릴 수 있습니다. 이 모델의 장점은 복잡하고 부분적인 투명 모양이 가능하다는 것입니다. User32/ [!INCLUDE[TLA2#tla_gdi](../../../../includes/tla2sharptla-gdi-md.md)]를 만들었을 때와 달리 오늘날의 현대적인 그래픽 하드웨어에서는 이 모델이 상대적으로 빠릅니다.  
   
  앞에서 언급했듯이 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]의 핵심 방법은 보다 선언적인 "속성 중심의" 프로그래밍 모델로 이동하는 것입니다. 시각적 시스템에서는 두 가지 흥미로운 장소에서 이러한 이동이 눈에 띕니다.  
   
@@ -91,13 +90,13 @@ ms.locfileid: "57362016"
 ## <a name="systemwindowsuielement"></a>System.Windows.UIElement  
  <xref:System.Windows.UIElement> 레이아웃, 입력 및 이벤트를 포함 하 여 핵심 하위 시스템을 정의 합니다.  
   
- 레이아웃은 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]의 핵심 개념입니다. 대부분의 시스템에는 고정된 레이아웃 모델 집합(HTML은 세 가지 레이아웃 모델인 흐름, 절대 및 테이블을 지원함)이 있거나 레이아웃 모델이 아예 없습니다(User32는 실제로 절대 위치 지정만 지원함). [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]는 개발자 및 디자이너가 명령적 논리 대신 속성 값을 중심으로 운영될 수 있는 유연하고 확장 가능한 레이아웃 모델을 원한다는 가정에서 출발했습니다. 에 <xref:System.Windows.UIElement> 수준에서 레이아웃의 기본 계약이 도입 되었습니다 – 사용 하 여 모델 단계는 두 개의 <xref:System.Windows.UIElement.Measure%2A> 및 <xref:System.Windows.UIElement.Arrange%2A> 전달 합니다.  
+ 레이아웃은 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]의 핵심 개념입니다. 대부분의 시스템에는 고정된 레이아웃 모델 집합(HTML은 세 가지 레이아웃 모델인 흐름, 절대 및 테이블을 지원함)이 있거나 레이아웃 모델이 아예 없습니다(User32는 실제로 절대 위치 지정만 지원함). [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 개발자 및 디자이너가 명령적 논리 대신 속성 값으로 결정 될 수 있는 유연 하 고 확장 가능한 레이아웃 모델을 사용 하는 원하는 가정으로 시작 합니다. 에 <xref:System.Windows.UIElement> 수준에서 레이아웃의 기본 계약이 도입 되었습니다 – 사용 하 여 모델 단계는 두 개의 <xref:System.Windows.UIElement.Measure%2A> 및 <xref:System.Windows.UIElement.Arrange%2A> 전달 합니다.  
   
  <xref:System.Windows.UIElement.Measure%2A> 사용 하려는 크기를 결정 하는 구성 요소를 허용 합니다. 별도 단계 <xref:System.Windows.UIElement.Arrange%2A> 되므로 대부분의 경우 여기서 부모 요소 자식을 최적의 위치 및 크기를 확인 하려면 몇 시간을 측정 하도록 묻습니다. 부모 요소가 자식 요소에게 측정을 요구한다는 사실은 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]의 또 다른 주요 방법인 콘텐츠에 맞는 크기를 나타냅니다. [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 내에 있는 모든 컨트롤은 콘텐츠의 기본 크기에 맞게 크기가 조정되는 기능을 지원합니다. 이에 따라 지역화가 훨씬 간단해지고 크기 조정에 따른 요소의 동적 레이아웃이 가능합니다. <xref:System.Windows.UIElement.Arrange%2A> 단계에 배치 하 고 각 자식 항목의 최종 크기를 결정 하는 부모 수 있습니다.  
   
  시간이 많이 종종 할애 하 여의 출력 측면에 대 한 설명 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] – <xref:System.Windows.Media.Visual> 및 관련 개체입니다. 입력 측면에도 새로운 내용이 매우 많습니다. [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]의 입력 모델에서 가장 근본적인 변화는 입력 이벤트가 시스템을 통해 라우트되는 일관된 모델입니다.  
   
- 입력은 커널 모드 디바이스 드라이버의 신호로 시작되며 Windows 커널 및 User32가 관련된 복잡한 프로세스를 통해 올바른 프로세스 및 스레드로 라우트됩니다. 입력에 해당하는 User32 메시지가 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]로 라우트되면 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 원시 입력 메시지로 변환되고 디스패처로 전송됩니다. [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]는 원시 입력 이벤트를 여러 개의 실제 이벤트로 변환하여 "MouseEnter"와 같은 기능이 시스템의 낮은 수준에서 구현될 수 있도록 합니다. 이 경우 이러한 기능의 배달이 보장됩니다.  
+ 입력은 커널 모드 디바이스 드라이버의 신호로 시작되며 Windows 커널 및 User32가 관련된 복잡한 프로세스를 통해 올바른 프로세스 및 스레드로 라우트됩니다. 입력에 해당하는 User32 메시지가 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]로 라우트되면 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 원시 입력 메시지로 변환되고 디스패처로 전송됩니다. [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 원시 입력된 이벤트 배달이 보장된을 사용 하 여 시스템의 낮은 수준에서 구현 될 수 있는 "MouseEnter"와 같은 기능을 사용 하도록 설정 하는 여러 개의 실제 이벤트로 변환할 수 있습니다.  
   
  각 입력 이벤트는 최소한 두 개의 이벤트인 "미리 보기" 이벤트와 실제 이벤트로 변환됩니다. [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]에 있는 모든 이벤트는 요소 트리를 통해 라우트되는 개념입니다. 루트에는 트리의 대상에서 트래버스 하며 루트에서 시작 하는 대상으로 아래로 이동할 경우에 "터널링" 라고 하는 경우 이벤트를 "버블링" 라고 합니다. 입력 미리 보기 이벤트는 터널링되어 트리에 있는 각 요소가 이벤트를 필터링하거나 이벤트에 대한 작업을 수행할 수 있는 기회를 제공합니다. 그런 다음 일반(미리 보기 아님) 이벤트가 대상에서 루트로 위로 버블링됩니다.  
   
@@ -117,7 +116,7 @@ ms.locfileid: "57362016"
   
  가장 중요 한 두 가지는 <xref:System.Windows.FrameworkElement> 소개은 데이터 바인딩 및 스타일.  
   
- [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]의 데이터 바인딩 하위 시스템은 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 또는 [!INCLUDE[TLA#tla_aspnet](../../../../includes/tlasharptla-aspnet-md.md)]을 사용하여 응용 프로그램 [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]를 만든 사용자에게 비교적 친숙해야 합니다. 이러한 각 시스템에는 특정 요소에 있는 하나 이상의 속성을 데이터 조각에 바인딩하려고 한다는 것을 간단하게 표현할 수 있는 방법이 있습니다. [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]는 속성 바인딩, 변환 및 목록 바인딩을 완전히 지원합니다.  
+ [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]의 데이터 바인딩 하위 시스템은 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 또는 [!INCLUDE[TLA#tla_aspnet](../../../../includes/tlasharptla-aspnet-md.md)]을 사용하여 응용 프로그램 [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]를 만든 사용자에게 비교적 친숙해야 합니다. 이러한 각 시스템에는 특정 요소에 있는 하나 이상의 속성을 데이터 조각에 바인딩하려고 한다는 것을 간단하게 표현할 수 있는 방법이 있습니다. [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 속성 바인딩, 변환 및 목록 바인딩을 완전히 지원 합니다.  
   
  [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]에서 데이터 바인딩의 가장 흥미로운 기능 중 하나는 새로 도입된 데이터 템플릿입니다. 데이터 템플릿을 사용하면 어떤 데이터 조각을 시각화해야 하는지를 선언적으로 명시할 수 있습니다. 데이터에 바인딩할 수 있는 사용자 지정 사용자 인터페이스를 만드는 대신 역으로, 생성될 디스플레이를 데이터가 결정하도록 할 수 있습니다.  
   
@@ -135,13 +134,14 @@ ms.locfileid: "57362016"
   
 <a name="Summary"></a>   
 ## <a name="summary"></a>요약  
- [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]는 동적인 데이터 중심 프레젠테이션 시스템을 만들 수 있도록 디자인되었습니다. 시스템의 모든 부분은 동작을 구현하는 속성 집합을 통해 개체를 만듭니다. 데이터 바인딩은 시스템의 기초적인 부분이며 모든 계층과 통합됩니다.  
+ [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 동적인 데이터 중심 프레젠테이션 시스템을 만들 수 있도록 설계 되었습니다. 시스템의 모든 부분은 동작을 구현하는 속성 집합을 통해 개체를 만듭니다. 데이터 바인딩은 시스템의 기초적인 부분이며 모든 계층과 통합됩니다.  
   
  일반 애플리케이션은 디스플레이를 만든 다음 일부 데이터에 바인딩합니다. [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]에서는 컨트롤에 대한 모든 것과 디스플레이의 모든 측면이 일부 데이터 바인딩 형식에 의해 생성됩니다. 단추 내의 텍스트는 단추 내에 구성된 컨트롤을 만들고 해당 디스플레이를 단추의 콘텐츠 속성에 바인딩하여 표시됩니다.  
   
  [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 기반 응용 프로그램의 개발을 시작하면 매우 친숙하다는 느낌을 받을 것입니다. [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 또는 [!INCLUDE[TLA#tla_aspnet](../../../../includes/tlasharptla-aspnet-md.md)] 을 사용하는 것과 거의 똑같은 방법으로 속성을 설정하고, 개체를 사용하고, 데이터를 바인딩할 수 있습니다. [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]의 아키텍처를 보다 자세히 살펴 보면 근본적으로 데이터를 응용 프로그램의 핵심 요소로 처리하는 보다 다양한 응용 프로그램을 만들 수 있는 가능성이 있다는 사실을 발견하게 될 것입니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Windows.Media.Visual>
 - <xref:System.Windows.UIElement>
 - <xref:System.Windows.Input.ICommand>

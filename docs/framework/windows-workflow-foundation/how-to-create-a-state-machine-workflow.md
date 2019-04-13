@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 3ec60e8f-fad4-493e-a426-e7962d7aee8c
-ms.openlocfilehash: d3ec8c1b8c9b30a23dacabeb033d525c34709931
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 654621ab7dd74c26a7fddbd985559a713c0e9df3
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57708264"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59294810"
 ---
 # <a name="how-to-create-a-state-machine-workflow"></a>방법: 상태 시스템 워크플로 만들기
 기본 제공 활동뿐 아니라 사용자 지정 활동에서도 워크플로를 구성할 수 있습니다. 이 항목에서는 같은 모두 기본 제공 활동을 사용 하는 워크플로 만드는 방법을 단계별로 합니다 <xref:System.Activities.Statements.StateMachine> 활동 및 사용자 지정 활동을 이전 [방법: 활동 만들기](how-to-create-an-activity.md) 항목입니다. 이 워크플로는 숫자 추측 게임을 모델링합니다.  
@@ -23,31 +23,31 @@ ms.locfileid: "57708264"
   
 ### <a name="to-create-the-workflow"></a>워크플로를 만들려면  
   
-1.  마우스 오른쪽 단추로 클릭 **NumberGuessWorkflowActivities** 에서 **솔루션 탐색기** 선택한 **추가**하십시오 **새 항목**합니다.  
+1. 마우스 오른쪽 단추로 클릭 **NumberGuessWorkflowActivities** 에서 **솔루션 탐색기** 선택한 **추가**하십시오 **새 항목**합니다.  
   
-2.  에 **설치 됨**를 **공통 항목** 노드를 선택 **워크플로**합니다. 선택 **활동** 에서 합니다 **워크플로** 목록입니다.  
+2. 에 **설치 됨**를 **공통 항목** 노드를 선택 **워크플로**합니다. 선택 **활동** 에서 합니다 **워크플로** 목록입니다.  
   
-3.  형식 `StateMachineNumberGuessWorkflow` 에 **이름** 상자 하 고 클릭 **추가**합니다.  
+3. 형식 `StateMachineNumberGuessWorkflow` 에 **이름** 상자 하 고 클릭 **추가**합니다.  
   
-4.  끌어서를 **StateMachine** 활동에서는 **상태 시스템** 부분을 **도구 상자** 놓습니다를 **여기에 작업 놓기** 에 레이블 워크플로 디자인 화면입니다.  
+4. 끌어서를 **StateMachine** 활동에서는 **상태 시스템** 부분을 **도구 상자** 놓습니다를 **여기에 작업 놓기** 에 레이블 워크플로 디자인 화면입니다.  
   
 ### <a name="to-create-the-workflow-variables-and-arguments"></a>워크플로 변수와 인수를 만들려면  
   
-1.  두 번 클릭 **StateMachineNumberGuessWorkflow.xaml** 에 **솔루션 탐색기** 이미 표시 되지 않으면 워크플로 디자이너에서 표시 합니다.  
+1. 두 번 클릭 **StateMachineNumberGuessWorkflow.xaml** 에 **솔루션 탐색기** 이미 표시 되지 않으면 워크플로 디자이너에서 표시 합니다.  
   
-2.  클릭 **인수** 표시할 워크플로 디자이너 왼쪽 아래에에서는 **인수** 창입니다.  
+2. 클릭 **인수** 표시할 워크플로 디자이너 왼쪽 아래에에서는 **인수** 창입니다.  
   
-3.  클릭 **인수를 만드는**합니다.  
+3. 클릭 **인수를 만드는**합니다.  
   
-4.  형식 `MaxNumber` 에 **이름** 상자에서 **에서** 에서 합니다 **방향** 드롭 다운 목록에서 **Int32** 합니다 에서**인수 형식** 드롭 다운 목록 및 다음 인수를 저장 하려면 ENTER 키를 누릅니다.  
+4. 형식 `MaxNumber` 에 **이름** 상자에서 **에서** 에서 합니다 **방향** 드롭 다운 목록에서 **Int32** 합니다 에서**인수 형식** 드롭 다운 목록 및 다음 인수를 저장 하려면 ENTER 키를 누릅니다.  
   
-5.  클릭 **인수를 만드는**합니다.  
+5. 클릭 **인수를 만드는**합니다.  
   
-6.  형식 `Turns` 에 **이름** 새로 추가 된 아래에 있는 상자 `MaxNumber` 인수 **Out** 에서 **방향** 드롭 다운 목록에서  **Int32** 에서 합니다 **인수 형식** 드롭 다운 목록 및 다음 ENTER 키를 누릅니다.  
+6. 형식 `Turns` 에 **이름** 새로 추가 된 아래에 있는 상자 `MaxNumber` 인수 **Out** 에서 **방향** 드롭 다운 목록에서  **Int32** 에서 합니다 **인수 형식** 드롭 다운 목록 및 다음 ENTER 키를 누릅니다.  
   
-7.  클릭 **인수** 닫으려면 activity designer의 왼쪽 아래에에서는 **인수** 창입니다.  
+7. 클릭 **인수** 닫으려면 activity designer의 왼쪽 아래에에서는 **인수** 창입니다.  
   
-8.  클릭 **변수** 표시할 워크플로 디자이너 왼쪽 아래에에서는 **변수** 창입니다.  
+8. 클릭 **변수** 표시할 워크플로 디자이너 왼쪽 아래에에서는 **변수** 창입니다.  
   
 9. 클릭 **변수를 만듭니다**합니다.  
   
@@ -64,14 +64,14 @@ ms.locfileid: "57708264"
   
 ### <a name="to-add-the-workflow-activities"></a>워크플로 활동을 추가하려면  
   
-1.  클릭 **State1** 하 여 선택 합니다. 에 **속성 창**를 변경 합니다 **DisplayName** 를 `Initialize Target`.  
+1. 클릭 **State1** 하 여 선택 합니다. 에 **속성 창**를 변경 합니다 **DisplayName** 를 `Initialize Target`.  
   
     > [!TIP]
     >  경우는 **속성 창** 표시를 선택 하지 않는 **속성 창** 에서 합니다 **뷰** 메뉴.  
   
-2.  이름을 새로 바꾼 두 번 클릭 **Initialize Target** 확장 하는 데 워크플로 디자이너의 상태입니다.  
+2. 이름을 새로 바꾼 두 번 클릭 **Initialize Target** 확장 하는 데 워크플로 디자이너의 상태입니다.  
   
-3.  끌어서는 **할당** 활동에서를 **기본형** 섹션을 **도구 상자** 놓습니다를 **항목** 상태 섹션. 형식 `Target` 에 **에** 상자 및에 다음 식을 합니다 **C# 식 입력** 또는 **VB 식 입력** 상자입니다.  
+3. 끌어서는 **할당** 활동에서를 **기본형** 섹션을 **도구 상자** 놓습니다를 **항목** 상태 섹션. 형식 `Target` 에 **에** 상자 및에 다음 식을 합니다 **C# 식 입력** 또는 **VB 식 입력** 상자입니다.  
   
     ```vb  
     New System.Random().Next(1, MaxNumber + 1)  
@@ -84,15 +84,15 @@ ms.locfileid: "57708264"
     > [!TIP]
     >  경우는 **도구 상자** 창이 표시 되지 않으면, 선택 **도구 상자** 에서 합니다 **뷰** 메뉴.  
   
-4.  전체 반환 상태 워크플로 디자이너에서 컴퓨터 보기를 클릭 하 여 **StateMachine** 워크플로 디자이너의 맨 위에 있는 이동 경로 표시 합니다.  
+4. 전체 반환 상태 워크플로 디자이너에서 컴퓨터 보기를 클릭 하 여 **StateMachine** 워크플로 디자이너의 맨 위에 있는 이동 경로 표시 합니다.  
   
-5.  끌어서를 **상태** 활동에서는 **상태 시스템** 부분을 **도구 상자** 워크플로 디자이너로 위로 가져갑니다는 **Initialize Target** 상태입니다. 주위에 삼각형 네 개가 표시 됩니다는 참고 합니다 **Initialize Target** 상태 위에 새 상태가 합니다. 바로 아래에 있는 삼각형에 새 상태를 삭제 합니다 **Initialize Target** 상태입니다. 이 새 상태가 워크플로에 배치 및의 전환이 만들어집니다 합니다 **Initialize Target** 새 상태로 상태입니다.  
+5. 끌어서를 **상태** 활동에서는 **상태 시스템** 부분을 **도구 상자** 워크플로 디자이너로 위로 가져갑니다는 **Initialize Target** 상태입니다. 주위에 삼각형 네 개가 표시 됩니다는 참고 합니다 **Initialize Target** 상태 위에 새 상태가 합니다. 바로 아래에 있는 삼각형에 새 상태를 삭제 합니다 **Initialize Target** 상태입니다. 이 새 상태가 워크플로에 배치 및의 전환이 만들어집니다 합니다 **Initialize Target** 새 상태로 상태입니다.  
   
-6.  클릭 **State1** 선택, 변경 합니다 **DisplayName** 에 `Enter Guess`를 차례로 확장 하는 데 워크플로 디자이너의 상태를 두 번 클릭 합니다.  
+6. 클릭 **State1** 선택, 변경 합니다 **DisplayName** 에 `Enter Guess`를 차례로 확장 하는 데 워크플로 디자이너의 상태를 두 번 클릭 합니다.  
   
-7.  끌어서를 **WriteLine** 활동에서를 **기본형** 섹션을 **도구 상자** 놓습니다를 **항목** 상태 섹션.  
+7. 끌어서를 **WriteLine** 활동에서를 **기본형** 섹션을 **도구 상자** 놓습니다를 **항목** 상태 섹션.  
   
-8.  에 다음 식을 입력 합니다 **텍스트** 의 속성 상자를 **WriteLine**합니다.  
+8. 에 다음 식을 입력 합니다 **텍스트** 의 속성 상자를 **WriteLine**합니다.  
   
     ```vb  
     "Please enter a number between 1 and " & MaxNumber  
@@ -183,15 +183,16 @@ ms.locfileid: "57708264"
   
 ### <a name="to-build-the-workflow"></a>워크플로를 빌드하려면  
   
-1.  Ctrl+Shift+B를 눌러 솔루션을 빌드합니다.  
+1. Ctrl+Shift+B를 눌러 솔루션을 빌드합니다.  
   
      워크플로 실행 하는 방법에 대 한 지침은 다음 항목을 참조 하십시오 [방법: 워크플로 실행](how-to-run-a-workflow.md)합니다. 이미 완료 하는 경우는 [방법: 워크플로 실행](how-to-run-a-workflow.md) 이 단계에서 상태 시스템 워크플로 사용 하 여 실행 하려는 워크플로의 다른 스타일을 사용 하 여 단계를 건너 뛰 세요 합니다 [빌드 및 응용 프로그램을 실행 하려면](how-to-run-a-workflow.md#BKMK_ToRunTheApplication) 부분 [하는 방법: 워크플로 실행](how-to-run-a-workflow.md)합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Activities.Statements.Flowchart>
 - <xref:System.Activities.Statements.FlowDecision>
 - [Windows Workflow Foundation 프로그래밍](programming.md)
 - [워크플로 디자인](designing-workflows.md)
 - [초보자를 위한 자습서](getting-started-tutorial.md)
-- [방법: 활동 만들기](how-to-create-an-activity.md)
+- [방법: 작업 만들기](how-to-create-an-activity.md)
 - [방법: 워크플로 실행](how-to-run-a-workflow.md)

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - StatusBar control [Windows Forms], about StatusBar control
 - status bars
 ms.assetid: b7b9852c-633d-4416-bb2e-94852b989c6c
-ms.openlocfilehash: 516462aa92e2cd836820ec34440f34bb4c5b577d
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 5fdefa7d7e7c7ef543f677be7beb61dfee54e077
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57703805"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59077318"
 ---
 # <a name="statusbar-control-overview-windows-forms"></a>StatusBar 컨트롤 개요(Windows Forms)
 > [!IMPORTANT]
@@ -26,6 +26,7 @@ ms.locfileid: "57703805"
  설정 하 여 상태 표시줄에 단일 메시지를 표시할 수 있습니다는 <xref:System.Windows.Forms.StatusBar.ShowPanels%2A> 속성을 `false` (기본값) 설정 하는 <xref:System.Windows.Forms.StatusBar.Text%2A> 상태 표시줄에 표시할 텍스트는 상태 표시줄의 속성입니다. 나눌 수 있습니다 상태 표시줄 패널을 설정 하 여 둘 이상의 유형의 정보를 표시 하는 <xref:System.Windows.Forms.StatusBar.ShowPanels%2A> 속성을 `true` 하 고 사용 하는 <xref:System.Windows.Forms.StatusBar.StatusBarPanelCollection.Add%2A> 메서드의 <xref:System.Windows.Forms.StatusBar.StatusBarPanelCollection>합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Windows.Forms.StatusBar>
 - <xref:System.Windows.Forms.ToolStripStatusLabel>
-- [방법: Windows Forms StatusBar 컨트롤에서 패널 클릭 확인](determine-which-panel-wf-statusbar-control-was-clicked.md)
+- [방법: Windows Forms StatusBar 컨트롤에서 클릭한 패널 확인](determine-which-panel-wf-statusbar-control-was-clicked.md)

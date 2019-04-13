@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ffca8e076fe6fe966a9a07ed915a7e76ea06f37c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 23bda470b8b5812b567081ba268ad503ac39ecaa
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54518074"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59090357"
 ---
 # <a name="corheapinfo-structure"></a>COR_HEAPINFO 구조체
-가비지 컬렉션 힙에 대한 일반 정보(열거 가능 여부 포함)를 제공합니다.  
+가비지 수집 힙에 대한 일반 정보(열거 가능 여부 포함)를 제공합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -63,5 +63,6 @@ typedef struct _COR_HEAPINFO {
  **.NET Framework 버전:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
 ## <a name="see-also"></a>참고자료
+
 - [디버깅 구조체](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)
 - [디버깅](../../../../docs/framework/unmanaged-api/debugging/index.md)

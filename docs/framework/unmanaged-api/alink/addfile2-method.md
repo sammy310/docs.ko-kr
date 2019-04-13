@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c595f59905a369c206da2fa011038d0d95041fa4
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 7a651be40773607e0db215eadf884ed642e6e3b1
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57500683"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59126934"
 ---
 # <a name="addfile2-method"></a>AddFile2 메서드
 어셈블리 파일을 추가합니다. 바인딩되지 않은 모듈을 만드는 데 사용할 수도 있습니다.  
@@ -62,6 +62,7 @@ HRESULT AddFile2(
  Alink.h가 필요합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [IALink2 인터페이스](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
 - [IALink 인터페이스](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
 - [ALink API](../../../../docs/framework/unmanaged-api/alink/index.md)

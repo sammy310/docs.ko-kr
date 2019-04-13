@@ -1,13 +1,13 @@
 ---
-title: <add>의 <defaultPorts>
+title: <add> / <defaultPorts>
 ms.date: 03/30/2017
 ms.assetid: f162ce42-963b-4779-96a7-d6d8b4ea0d2f
-ms.openlocfilehash: 799715ef008274ead6b745e8ab97e769cb59e6b5
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 5200c8893a89488b72c2c71d1a3703bf2aad1235
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55261602"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59136749"
 ---
 # <a name="add-of-defaultports"></a>\<추가 >의 \<a d d >
 클라이언트 응용 프로그램에서 수신하는 기본 통신 엔드포인트입니다.  
@@ -51,4 +51,5 @@ ms.locfileid: "55261602"
 |[\<defaultPorts>](../../../../../docs/framework/configure-apps/file-schema/wcf/defaultports.md)|클라이언트 응용 프로그램에서 수신하는 기본 통신 엔드포인트를 나열하는 기본 포트의 컬렉션입니다.|  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.ServiceModel.Configuration.DefaultPortElement>

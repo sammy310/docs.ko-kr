@@ -10,12 +10,12 @@ helpviewer_keywords:
 - XAML [XAML Services], x:Subclass attribute
 - Subclass attribute in XAML [XAML Services]
 ms.assetid: 99f66072-8107-4362-ab99-8171dc83b469
-ms.openlocfilehash: c348d8fa2bd66a9abbb64c9363bb4dae0933ba34
-ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
+ms.openlocfilehash: 850fe8acf9e47149bd385e78b30e04ba77d7a8b2
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58048006"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59140792"
 ---
 # <a name="xsubclass-directive"></a>x:Subclass 지시문
 XAML 태그 컴파일 동작을 수정 하는 경우 `x:Class` 도 제공 됩니다. 기반이 되는 partial 클래스를 만드는 대신 `x:Class`에 제공 된 `x:Class` 중간 클래스로 만들어집니다 다음 제공 된 파생된 클래스는 기반으로 해야 하 고 `x:Class`입니다.  
@@ -57,5 +57,6 @@ XAML 태그 컴파일 동작을 수정 하는 경우 `x:Class` 도 제공 됩니
  모두 정의 하는 경우 `x:Class` 하 고 `x:Subclass`를 참조 하는 클래스에 대 한 모든 구현을 제공할 필요가 없습니다 `x:Class`. 통해 이름을 지정 해야 하는 `x:Class` 특성 컴파일러에 중간 파일 (이 컴파일러는 기본 이름이 선택 하지)에 생성 되는 클래스에 대 한 몇 가지 지침입니다. 그러나 제공할 수 있습니다 합니다 `x:Class` 클래스는 구현에 아닙니다 모두 사용 하 여 일반적인 시나리오 `x:Class` 및 `x:Subclass`합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [x:Class 지시문](x-class-directive.md)
 - [WPF에 대한 XAML 및 사용자 지정 클래스](../wpf/advanced/xaml-and-custom-classes-for-wpf.md)

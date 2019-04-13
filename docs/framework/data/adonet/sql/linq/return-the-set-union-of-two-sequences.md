@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 8b8bd3cb-86d4-4a3b-9906-61f68726dd1f
-ms.openlocfilehash: a2d51e8052c839ea4cd11dec07a3aef95d59d0f1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0d0d87e2fe14553d468384dfa2cfde1d3ee0d526
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54546964"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59210134"
 ---
 # <a name="return-the-set-union-of-two-sequences"></a>두 시퀀스의 합집합 반환
 <xref:System.Linq.Queryable.Union%2A> 연산자를 사용하여 두 시퀀스의 합집합을 반환합니다.  
@@ -26,5 +26,6 @@ ms.locfileid: "54546964"
 자세한 정보 및 예제를 참조 하세요. <xref:System.Linq.Queryable.Union%2A?displayProperty=nameWithType>합니다.
   
 ## <a name="see-also"></a>참고자료
+
 - [쿼리 예제](../../../../../../docs/framework/data/adonet/sql/linq/query-examples.md)
 - [표준 쿼리 연산자 변환](../../../../../../docs/framework/data/adonet/sql/linq/standard-query-operator-translation.md)

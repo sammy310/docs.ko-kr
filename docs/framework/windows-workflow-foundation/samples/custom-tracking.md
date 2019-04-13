@@ -2,12 +2,12 @@
 title: 사용자 지정 추적
 ms.date: 03/30/2017
 ms.assetid: 2d191c9f-62f4-4c63-92dd-cda917fcf254
-ms.openlocfilehash: a03c36c2f060651dd7b8b9e9aff103ad2a600a4b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7e275af046013dcd76cb61c25ace1d96fd7e4b93
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54523738"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59307637"
 ---
 # <a name="custom-tracking"></a>사용자 지정 추적
 이 샘플에서는 사용자 지정 추적 참가자를 만들고 추적 데이터의 내용을 콘솔에 쓰는 방법을 보여 줍니다. 또한 사용자 정의 데이터로 채워진 <xref:System.Activities.Tracking.CustomTrackingRecord> 개체를 내보내는 방법도 보여 줍니다. 콘솔 기반 추적 참가자는 코드로 만든 추적 프로필 개체를 사용하여 워크플로에서 내보낸 <xref:System.Activities.Tracking.TrackingRecord> 개체를 필터링합니다.
@@ -18,7 +18,7 @@ ms.locfileid: "54523738"
 |구성 요소|설명|
 |---------------|-----------------|
 |추적 런타임|추적 레코드를 내보낼 인프라를 제공합니다.|
-|추적 참가자|추적 레코드를 사용합니다. [!INCLUDE[netfx40_short](../../../../includes/netfx40-short-md.md)]에는 추적 레코드를 ETW(Windows용 이벤트 추적) 이벤트로 기록하는 추적 참가자가 제공됩니다.|
+|추적 참가자|추적 레코드를 사용합니다. [!INCLUDE[netfx40_short](../../../../includes/netfx40-short-md.md)] 이벤트 추적에 대 한 Windows (ETW) 이벤트로 추적 레코드를 기록 하는 추적 참가자가 제공 됩니다.|
 |추적 프로필|추적 참가자가 워크플로 인스턴스에서 내보낸 추적 레코드의 하위 집합을 구독할 수 있도록 하는 필터링 메커니즘입니다.|
 
  다음 표에서는 워크플로 런타임에서 내보내는 추적 레코드에 대해 자세히 설명합니다.
@@ -133,11 +133,11 @@ context.Track(customRecord);
 
 #### <a name="to-use-this-sample"></a>이 샘플을 사용하려면
 
-1.  Visual Studio 2010을 사용 하 여 CustomTrackingSample.sln 솔루션 파일을 엽니다.
+1. Visual Studio 2010을 사용 하 여 CustomTrackingSample.sln 솔루션 파일을 엽니다.
 
-2.  Ctrl+Shift+B를 눌러 솔루션을 빌드합니다.
+2. Ctrl+Shift+B를 눌러 솔루션을 빌드합니다.
 
-3.  Ctrl+F5를 눌러 솔루션을 실행합니다.
+3. Ctrl+F5를 눌러 솔루션을 실행합니다.
 
 > [!IMPORTANT]
 >  컴퓨터에 이 샘플이 이미 설치되어 있을 수도 있습니다. 계속하기 전에 다음(기본) 디렉터리를 확인하세요.  
@@ -149,4 +149,5 @@ context.Track(customRecord);
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Tracking\CustomTracking`  
   
 ## <a name="see-also"></a>참고자료
+
 - [AppFabric 모니터링 샘플](https://go.microsoft.com/fwlink/?LinkId=193959)

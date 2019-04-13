@@ -2,12 +2,12 @@
 title: 활동
 ms.date: 03/30/2017
 ms.assetid: 70471705-f55f-4da1-919f-4b580f172665
-ms.openlocfilehash: 970f2978f65b2c1a2585a207d66e4b97fbe4af1a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b93960d4006499c935c27ee18e066d091632d3d9
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54505590"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59170211"
 ---
 # <a name="activity"></a>활동
 이 항목에서는 Windows Communication Foundation (WCF) 추적 모델의 동작 추적을 설명 합니다. 동작은 실패의 범위를 줄이도록 돕는 처리 단위입니다. 동일한 동작에서 발생하는 오류는 직접적으로 관련됩니다. 예를 들어 메시지 암호 해독이 실패하면 작업이 실패합니다. 작업 실패와 메시지 암호 해독 실패 둘 다에 대한 추적은 동일한 동작에서 나타나며, 암호 해독 오류와 요청 오류 사이의 직접적인 상관 관계를 보여 줍니다.  
@@ -38,9 +38,9 @@ ms.locfileid: "54505590"
 ## <a name="defining-the-scope-of-an-activity"></a>동작 범위 정의  
  동작은 디자인 타임에 정의되며 작업의 논리 단위를 나타냅니다. 동일한 동작 식별자로 내보낸 추적은 동일한 동작의 일부이므로 직접적으로 관련됩니다. 동작(요청)이 엔드포인트 경계를 넘나들 수 있기 때문에 동작에 대해 두 가지 범위가 정의됩니다.  
   
--   응용 프로그램별 `Global` 범위. 이 범위에서는 동작이 128비트 gAId(Globally Unique Activity Identifier)에 의해 식별됩니다. gAid는 엔드포인트 간에 전파됩니다.  
+-   `Global` 응용 프로그램당 범위입니다. 이 범위에서는 동작이 128비트 gAId(Globally Unique Activity Identifier)에 의해 식별됩니다. gAid는 엔드포인트 간에 전파됩니다.  
   
--   엔드포인트별 `Local` 범위. 이 범위에서는 동작이 동작 추적 및 프로세스 ID를 내보내는 추적 소스 이름과 함께 gAId에 의해 식별됩니다. 이 세 가지가 로컬 동작 ID인 lAId를 구성합니다. lAId는 동작의 (로컬) 경계를 정의하는 데 사용합니다.  
+-   `Local` 범위, 끝점당입니다. 이 범위에서는 동작이 동작 추적 및 프로세스 ID를 내보내는 추적 소스 이름과 함께 gAId에 의해 식별됩니다. 이 세 가지가 로컬 동작 ID인 lAId를 구성합니다. lAId는 동작의 (로컬) 경계를 정의하는 데 사용합니다.  
   
 ## <a name="trace-schema"></a>추적 스키마  
  추적은 Microsoft 플랫폼을 통해 스키마를 사용하여 내보낼 수 있습니다. 이때 "e2e"("종단" ("종단 간")에 대 한 자주 사용 되는 스키마입니다. 이 스키마에는 128비트 식별자(gAId), 추적 소스 이름 및 프로세스 ID가 포함됩니다. 관리 코드에서는 <xref:System.Diagnostics.XmlWriterTraceListener>가 E2E 스키마에서 추적을 내보냅니다.  
@@ -98,6 +98,7 @@ traceSource.TraceEvent(TraceEventType.Warning, eventId, "Information");
 -   동작은 동작을 나타내며 반드시 개체를 나타내지는 않습니다. 활동으로 해석 되어야 "이 발생 된 경우. . . (의미 있는 추적 내보내기가 발생할 때) 발생했습니다."로 해석되어야 합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [추적 구성](../../../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md)
 - [Service Trace Viewer를 사용하여 상호 관련된 추적 보기 및 문제 해결](../../../../../docs/framework/wcf/diagnostics/tracing/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting.md)
 - [종단 간 추적 시나리오](../../../../../docs/framework/wcf/diagnostics/tracing/end-to-end-tracing-scenarios.md)

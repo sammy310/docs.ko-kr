@@ -1,5 +1,5 @@
 ---
-title: <webRequestModules> 요소(네트워크 설정)
+title: <webRequestModules> 요소 (네트워크 설정)
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/webRequestModules
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - webRequestModules element
 - <webRequestModules> element
 ms.assetid: 1263de11-3e0a-4f94-97c9-710b2ae53817
-ms.openlocfilehash: fd7c5765665345906597963f8a4b2dbf7fcc7227
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: e5d1780a204b2e99593d51179a479845fd49e608
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55288849"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59187007"
 ---
 # <a name="webrequestmodules-element-network-settings"></a>\<webRequestModules > 요소 (네트워크 설정)
 네트워크 호스트에서 정보를 요청 하는 데는 모듈을 지정 합니다.  
@@ -40,7 +40,7 @@ ms.locfileid: "55288849"
 |**요소**|**설명**|  
 |-----------------|---------------------|  
 |[add](../../../../../docs/framework/configure-apps/file-schema/network/add-element-for-webrequestmodules-network-settings.md)|응용 프로그램에 사용자 지정 웹 요청 모듈을 추가합니다.|  
-|[clear](../../../../../docs/framework/configure-apps/file-schema/network/clear-element-for-webrequestmodules-network-settings.md)|응용 프로그램에서 등록 된 모든 웹 요청 모듈을 제거합니다.|  
+|[지우기](../../../../../docs/framework/configure-apps/file-schema/network/clear-element-for-webrequestmodules-network-settings.md)|응용 프로그램에서 등록 된 모든 웹 요청 모듈을 제거합니다.|  
 |[remove](../../../../../docs/framework/configure-apps/file-schema/network/remove-element-for-webrequestmodules-network-settings.md)|응용 프로그램에서 사용자 지정 웹 요청 모듈을 제거합니다.|  
   
 ### <a name="parent-elements"></a>부모 요소  
@@ -74,6 +74,7 @@ ms.locfileid: "55288849"
 ```  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Net.WebRequest>
 - <xref:System.Net.IWebRequestCreate>
 - [네트워크 설정 스키마](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

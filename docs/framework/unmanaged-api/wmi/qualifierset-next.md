@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 35ab5b64b3c7e364e0dd11c002b87a0a413f4335
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e8b96957467b0acb100f7eea137b3294a60e208a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54532437"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59180910"
 ---
 # <a name="qualifiersetnext-function"></a>QualifierSet_Next 함수
 [QualifierSet_BeginEnumeration](qualifierset-beginenumeration.md) 함수를 호출하여 시작된 열거형의 다음 한정자를 검색합니다.   
@@ -67,7 +67,7 @@ HRESULT QualifierSet_Next (
 
 |상수  |값  |설명  |
 |---------|---------|---------|
-|`WBEM_E_INVALID_PARAMETER` | 0x80041008 | 매개 변수가 잘못된 경우 |
+|`WBEM_E_INVALID_PARAMETER` | 0x80041008 | 매개 변수가 잘못 되었습니다. |
 |`WBEM_E_UNEXPECTED` | 0x8004101d | 호출자에 게 호출 하지 않았습니다 [QualifierSet_BeginEnumeration](qualifierset-beginenumeration.md)합니다. |
 |`WBEM_E_OUT_OF_MEMORY` | 0x80041006 | 새 열거형 시작에 사용할 있는 메모리가 충분 하지 않습니다. |
 | `WBEM_S_NO_MORE_DATA` | 0x40005 | 한정자가 자세한 열거형에 남아 있습니다. |
@@ -89,4 +89,5 @@ HRESULT QualifierSet_Next (
  **.NET Framework 버전:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>참고자료
-- [WMI 및 성능 카운터 (관리 되지 않는 API 참조)](index.md)
+
+- [WMI 및 성능 카운터(관리되지 않는 API 참조)](index.md)

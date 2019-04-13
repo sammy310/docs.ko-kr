@@ -2,12 +2,12 @@
 title: '끝점: Calls Failed Per Second'
 ms.date: 03/30/2017
 ms.assetid: bcbe9da4-c8dd-4e27-b630-11611adc7580
-ms.openlocfilehash: 03fbdd83246fa811424f445823f705a3bef5697a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 52419f45adde768d19d6b46642d52ad0a1844197
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54608039"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59100030"
 ---
 # <a name="endpoint-calls-failed-per-second"></a>끝점: Calls Failed Per Second
 카운터 이름: Calls Failed Per Second.  
@@ -22,4 +22,5 @@ ms.locfileid: "54608039"
  이 카운터는 이 엔드포인트에서 처리되지 않은 예외가 발생할 때마다 증가됩니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [계약 및 서비스에서 오류 지정 및 처리](../../../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)

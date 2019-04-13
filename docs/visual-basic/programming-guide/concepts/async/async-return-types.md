@@ -2,12 +2,12 @@
 title: 비동기 반환 형식 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 07890291-ee72-42d3-932a-fa4d312f2c60
-ms.openlocfilehash: 7a8bc3ba98da830c8415284771460a25e0927895
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 227a187f7046d128a7170b272f90f77cfaac61c7
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58838354"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59313283"
 ---
 # <a name="async-return-types-visual-basic"></a>비동기 반환 형식 (Visual Basic)
 비동기 메서드에는 세 가지 가능한 반환 형식, 즉 <xref:System.Threading.Tasks.Task%601>, <xref:System.Threading.Tasks.Task> 및 void가 있습니다. Visual Basic에서 void 반환 형식은 [Sub](../../../../visual-basic/programming-guide/language-features/procedures/sub-procedures.md) 프로시저로 작성합니다. 비동기 메서드에 대 한 자세한 내용은 참조 하세요. [Async 및 Await (Visual Basic)를 사용한 비동기 프로그래밍](../../../../visual-basic/programming-guide/concepts/async/index.md)합니다.  
@@ -98,7 +98,7 @@ Async Function Task_MethodAsync() As Task
 End Function  
 ```  
   
- 동기 `Sub` 또는 void를 반환하는 메서드에 대한 호출 문과 비슷하게 await 식 대신 await 문을 사용하여 `Task_MethodAsync`가 호출되고 대기됩니다. 응용 프로그램을 `Await` 연산자가 예제의 값을 생성 하지.  
+ `Task_MethodAsync` 호출 되 고 동기에 대 한 호출 문과 비슷하게 await 식 대신 await 문을 사용 하 여 대기 `Sub` 또는 메서드가 void를 반환 합니다. 응용 프로그램을 `Await` 연산자가 예제의 값을 생성 하지.  
   
  다음 코드는 `Task_MethodAsync` 메서드를 호출하고 기다립니다.  
   
@@ -150,23 +150,23 @@ End Sub
   
  프로젝트를 실행하려면 다음 단계를 수행합니다.  
   
-1.  Visual Studio를 시작합니다.  
+1. Visual Studio를 시작합니다.  
   
-2.  메뉴 모음에서 **파일**, **새로 만들기**, **프로젝트**를 차례로 선택합니다.  
+2. 메뉴 모음에서 **파일**, **새로 만들기**, **프로젝트**를 차례로 선택합니다.  
   
      **새 프로젝트** 대화 상자가 열립니다.  
   
-3.  에 **설치 됨**, **템플릿** 범주를 선택 **Visual Basic**를 선택한 후 **Windows**합니다. 프로젝트 형식 목록에서 **WPF 애플리케이션**을 선택합니다.  
+3. 에 **설치 됨**, **템플릿** 범주를 선택 **Visual Basic**를 선택한 후 **Windows**합니다. 프로젝트 형식 목록에서 **WPF 애플리케이션**을 선택합니다.  
   
-4.  프로젝트의 이름으로 `AsyncReturnTypes`를 입력한 다음 **확인** 단추를 선택합니다.  
+4. 프로젝트의 이름으로 `AsyncReturnTypes`를 입력한 다음 **확인** 단추를 선택합니다.  
   
      **솔루션 탐색기**에 새 프로젝트가 표시됩니다.  
   
-5.  Visual Studio 코드 편집기에서 **MainWindow.xaml** 탭을 선택합니다.  
+5. Visual Studio 코드 편집기에서 **MainWindow.xaml** 탭을 선택합니다.  
   
      탭이 표시되지 않는 경우 **솔루션 탐색기**에서 MainWindow.xaml의 바로 가기 메뉴를 열고 **열기**를 선택합니다.  
   
-6.  MainWindow.xaml의 **XAML** 창에서 코드를 다음 코드로 바꿉니다.  
+6. MainWindow.xaml의 **XAML** 창에서 코드를 다음 코드로 바꿉니다.  
   
     ```vb  
     <Window x:Class="MainWindow"  
@@ -183,9 +183,9 @@ End Sub
   
      텍스트 상자와 단추가 포함된 간단한 창이 MainWindow.xaml의 **디자인** 창에 나타납니다.  
   
-7.  **솔루션 탐색기**, MainWindow.xaml.vb에 대 한 바로 가기 메뉴를 열고 선택한 후 **코드 보기**합니다.  
+7. **솔루션 탐색기**, MainWindow.xaml.vb에 대 한 바로 가기 메뉴를 열고 선택한 후 **코드 보기**합니다.  
   
-8.  MainWindow.xaml.vb의 코드를 다음 코드로 바꿉니다.  
+8. MainWindow.xaml.vb의 코드를 다음 코드로 바꿉니다.  
   
     ```vb  
     Class MainWindow  
@@ -296,6 +296,6 @@ End Sub
 
 - <xref:System.Threading.Tasks.Task.FromResult%2A>
 - [연습: 비동기를 사용 하 여 웹 서비스에 액세스 하 고 Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)
-- [비동기 프로그램의 제어 흐름(Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/control-flow-in-async-programs.md)
-- [비동기](../../../../visual-basic/language-reference/modifiers/async.md)
+- [비동기 프로그램 (Visual Basic)의 제어 흐름](../../../../visual-basic/programming-guide/concepts/async/control-flow-in-async-programs.md)
+- [Async](../../../../visual-basic/language-reference/modifiers/async.md)
 - [Await 연산자](../../../../visual-basic/language-reference/operators/await-operator.md)

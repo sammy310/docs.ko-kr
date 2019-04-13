@@ -1,19 +1,19 @@
 ---
-title: Windows Forms DataGridView 컨트롤과 DataGrid 컨트롤의 차이점
+title: Windows Forms DataGridView 및 DataGrid 컨트롤 간의 차이점
 ms.date: 03/30/2017
 helpviewer_keywords:
 - data grids [Windows Forms
 - DataGrid control [Windows Forms], DataGridView control compared
 - DataGridView control [Windows Forms], DataGrid control compared
 ms.assetid: d412c786-140e-4210-8a56-a68467530a55
-ms.openlocfilehash: b7d97431bfdbdafd5e87bfbfb9c5badd9ba273ea
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 6802ef375d8d15826725e68f5065317192523178
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57720490"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59095674"
 ---
-# <a name="differences-between-the-windows-forms-datagridview-and-datagrid-controls"></a>Windows Forms DataGridView 컨트롤과 DataGrid 컨트롤의 차이점
+# <a name="differences-between-the-windows-forms-datagridview-and-datagrid-controls"></a>Windows Forms DataGridView 및 DataGrid 컨트롤 간의 차이점
 합니다 <xref:System.Windows.Forms.DataGridView> 컨트롤은 대체 하는 새 컨트롤을 <xref:System.Windows.Forms.DataGrid> 컨트롤입니다. 합니다 <xref:System.Windows.Forms.DataGridView> 컨트롤에서 누락 된 다양 한 기본 및 고급 기능을 제공 합니다 <xref:System.Windows.Forms.DataGrid> 제어 합니다. 또한 아키텍처는 <xref:System.Windows.Forms.DataGridView> 컨트롤을 사용 하면 훨씬 쉽게 확장 및 보다 사용자 지정할 수는 <xref:System.Windows.Forms.DataGrid> 제어 합니다.  
   
  다음 표에에서 제공 되는 기본 기능 중 몇 가지는 <xref:System.Windows.Forms.DataGridView> 컨트롤에서 누락 된는 <xref:System.Windows.Forms.DataGrid> 컨트롤입니다.  
@@ -33,6 +33,7 @@ ms.locfileid: "57720490"
  때문에 <xref:System.Windows.Forms.DataGridView> 컨트롤에 완전히 새로운 아키텍처를 사용할 수 있도록 간단 하 게 변환 경로가 없는 <xref:System.Windows.Forms.DataGrid> 사용 하 여 사용자 지정을 <xref:System.Windows.Forms.DataGridView> 제어 합니다. 그러나 많은 <xref:System.Windows.Forms.DataGrid> 사용자 지정이 필요 하지는 <xref:System.Windows.Forms.DataGridView> 새 컨트롤에서 사용할 수 있는 기본 제공 기능으로 인해 제어 합니다. 에 대 한 사용자 지정 열 형식을 만든 경우는 <xref:System.Windows.Forms.DataGrid> 컨트롤을 사용 하는 <xref:System.Windows.Forms.DataGridView> 새로운 아키텍처를 사용 하 여 다시 구현 해야 제어 합니다. 자세한 내용은 [Windows Forms DataGridView 컨트롤 사용자 지정](customizing-the-windows-forms-datagridview-control.md)합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGrid>
 - <xref:System.Windows.Forms.BindingSource>
@@ -42,7 +43,7 @@ ms.locfileid: "57720490"
 - [Windows Forms DataGridView 컨트롤의 열 형식](column-types-in-the-windows-forms-datagridview-control.md)
 - [Windows Forms DataGridView 컨트롤의 셀 스타일](cell-styles-in-the-windows-forms-datagridview-control.md)
 - [Windows Forms DataGridView 컨트롤의 데이터 디스플레이 모드](data-display-modes-in-the-windows-forms-datagridview-control.md)
-- [Windows Forms DataGridView 컨트롤의 데이터 형식 지정](data-formatting-in-the-windows-forms-datagridview-control.md)
+- [Windows Forms DataGridView 컨트롤에서 데이터 형식 지정](data-formatting-in-the-windows-forms-datagridview-control.md)
 - [Windows Forms DataGridView 컨트롤의 크기 조정 옵션](sizing-options-in-the-windows-forms-datagridview-control.md)
 - [Windows Forms DataGridView 컨트롤의 열 정렬 모드](column-sort-modes-in-the-windows-forms-datagridview-control.md)
 - [Windows Forms DataGridView 컨트롤의 선택 모드](selection-modes-in-the-windows-forms-datagridview-control.md)

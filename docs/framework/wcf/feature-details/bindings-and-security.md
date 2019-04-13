@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Windows Communication Foundation, security
 - bindings [WCF]
 ms.assetid: 4de03dd3-968a-4e65-af43-516e903d7f95
-ms.openlocfilehash: 5ec801e1e20fdb495537505a71ddaef6218ad5fb
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: bdefc543e90db708ae6c8be29b69381d66235154
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54521376"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59122150"
 ---
 # <a name="bindings-and-security"></a>바인딩 및 보안
 Windows Communication Foundation (WCF)를 사용 하 여 포함 된 시스템 제공 바인딩 WCF 응용 프로그램을 프로그래밍 하는 빠른 방법을 제공 합니다. 한 가지 예외를 통해 모든 바인딩의 기본 보안 스키마가 활성화됩니다. 이 항목은 보안 요구 사항에 적합한 바인딩을 선택하는 데 도움을 줍니다.  
@@ -131,7 +131,7 @@ Windows Communication Foundation (WCF)를 사용 하 여 포함 된 시스템 �
   
 -   Windows 보안을 사용하여 인증.  
   
- 자세한 내용은 <xref:System.ServiceModel.NetNamedPipeSecurity>, <xref:System.ServiceModel.NetNamedPipeSecurityMode> 및 <xref:System.ServiceModel.NamedPipeTransportSecurity>을 참조하세요.  
+ 자세한 내용은 <xref:System.ServiceModel.NetNamedPipeSecurity>, <xref:System.ServiceModel.NetNamedPipeSecurityMode> 및 <xref:System.ServiceModel.NamedPipeTransportSecurity>을 참조하십시오.  
   
 ### <a name="msmqintegrationbinding"></a>MsmqIntegrationBinding  
  코드를 사용 하 여는 <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding> 클래스, 구성에서 사용 합니다 [ \<msmqIntegrationBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/msmqintegrationbinding.md)합니다.  
@@ -224,9 +224,10 @@ Windows Communication Foundation (WCF)를 사용 하 여 포함 된 시스템 �
 |IssuedToken|서비스가 보안 토큰 서비스를 사용하여 사용자 지정 토큰을 제공할 수 있습니다.|  
   
 ## <a name="see-also"></a>참고자료
+
 - [보안 개요](../../../../docs/framework/wcf/feature-details/security-overview.md)
 - [서비스 및 클라이언트에 보안 설정](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
 - [자격 증명 형식 선택](../../../../docs/framework/wcf/feature-details/selecting-a-credential-type.md)
 - [사용자 지정 바인딩을 사용하는 보안 기능](../../../../docs/framework/wcf/feature-details/security-capabilities-with-custom-bindings.md)
 - [보안 동작](../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)
-- [Windows Server appfabric 보안 모델](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+- [Windows Server AppFabric 보안 모델](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

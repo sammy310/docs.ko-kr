@@ -10,7 +10,7 @@ ms.sourcegitcommit: 0aca6c5d166d7961a1e354c248495645b97a1dc5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 04/01/2019
-ms.locfileid: "58634234"
+ms.locfileid: "58759874"
 ---
 # <a name="how-to-compare-strings-in-c"></a>C\#에서 문자열을 비교하는 방법
 

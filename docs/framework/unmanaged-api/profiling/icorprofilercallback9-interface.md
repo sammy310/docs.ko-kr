@@ -10,12 +10,12 @@ api_type:
 - COM
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a6c480af921fb0259ef85beec8d8f65bdd430522
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e1711def5e2aa41fd63912361ef8250ad160fb88
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54689313"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59227758"
 ---
 # <a name="icorprofilercallback9-interface"></a>ICorProfilerCallback9 인터페이스
 [.NET Framework 4.7.2 이상 버전에서 지원 됨]  
@@ -36,6 +36,7 @@ ms.locfileid: "54689313"
 **.NET Framework 버전:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
 
 ## <a name="see-also"></a>참고자료
+
 - [프로파일링 인터페이스](profiling-interfaces.md)
 - [ICorProfilerCallback8 인터페이스](icorprofilercallback9-interface.md)
 - [ICorProfilerCallback8.DynamicMethodJITCompilationStarted 메서드](icorprofilercallback8-dynamicmethodjitcompilationstarted-method.md)

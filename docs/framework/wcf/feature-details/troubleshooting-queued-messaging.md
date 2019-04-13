@@ -2,12 +2,12 @@
 title: 대기 중인 메시지 문제 해결
 ms.date: 03/30/2017
 ms.assetid: a5f2836f-018d-42f5-a571-1e97e64ea5b0
-ms.openlocfilehash: b2193755beddd6c0d0eef4f95ca311b8e2b75b3c
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: c85b0701c870fe2b4a3c11dc384e890e1ed001dd
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58463113"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59322045"
 ---
 # <a name="troubleshooting-queued-messaging"></a>대기 중인 메시지 문제 해결
 이 섹션에서는 일반적인 질문 및 문제 해결 Windows Communication Foundation (WCF)에서 큐를 사용 하는 것에 대 한 도움말을 포함 합니다.  
@@ -96,9 +96,9 @@ ms.locfileid: "58463113"
   
  **A:** 가장 일반적인 이유는 권한입니다.  
   
-1.  `NetMsmqActivator` 프로세스가 실행되고 있으며 `NetMsmqActivator` 프로세스의 ID에 큐에 대한 읽기 및 검색 권한이 있는지 확인하십시오.  
+1. `NetMsmqActivator` 프로세스가 실행되고 있으며 `NetMsmqActivator` 프로세스의 ID에 큐에 대한 읽기 및 검색 권한이 있는지 확인하십시오.  
   
-2.  `NetMsmqActivator`에서 원격 시스템에 있는 큐를 모니터링하는 경우에는 `NetMsmqActivator`가 제한된 토큰에서 실행되고 있지 않은지 확인합니다. 제한되지 않은 토큰으로 `NetMsmqActivator`를 실행하려면:  
+2. `NetMsmqActivator`에서 원격 시스템에 있는 큐를 모니터링하는 경우에는 `NetMsmqActivator`가 제한된 토큰에서 실행되고 있지 않은지 확인합니다. 제한되지 않은 토큰으로 `NetMsmqActivator`를 실행하려면:  
   
     ```  
     sc sidtype NetMsmqActivator unrestricted  
@@ -157,19 +157,19 @@ System.ServiceModel.MsmqPoisonMessageException: The transport channel detected a
   
  **A:** 인증서 모드를 사용 하 여 로컬 컴퓨터 인증서 저장소를 사용할 수 없습니다. 인증서 스냅인을 사용하여 시스템 인증서 저장소에서 현재 사용자 저장소로 인증서를 복사해야 합니다. 인증서 스냅인을 가져오려면 다음을 수행하십시오.  
   
-1.  클릭 **시작**를 선택 **실행**, 유형 `mmc`를 클릭 하 고 **확인**합니다.  
+1. 클릭 **시작**를 선택 **실행**, 유형 `mmc`를 클릭 하 고 **확인**합니다.  
   
-2.  에 **Microsoft Management Console**오픈 합니다 **파일** 메뉴를 선택 **스냅인 추가/제거**.  
+2. 에 **Microsoft Management Console**오픈 합니다 **파일** 메뉴를 선택 **스냅인 추가/제거**.  
   
-3.  에 **스냅인 추가/제거** 대화 상자에서 클릭 합니다 **추가** 단추입니다.  
+3. 에 **스냅인 추가/제거** 대화 상자에서 클릭 합니다 **추가** 단추입니다.  
   
-4.  에 **독립 실행형 스냅인 추가** 대화 상자에서 인증서 선택 및 클릭 **추가**합니다.  
+4. 에 **독립 실행형 스냅인 추가** 대화 상자에서 인증서 선택 및 클릭 **추가**합니다.  
   
-5.  에 **인증서** 스냅인 대화 상자에서 **내 사용자 계정** 클릭 **마침**합니다.  
+5. 에 **인증서** 스냅인 대화 상자에서 **내 사용자 계정** 클릭 **마침**합니다.  
   
-6.  다음으로, 두 번째 인증서 스냅인에서 이전 단계를 사용 하 여 하지만이 이번에 선택 추가 **컴퓨터 계정** 누릅니다 **다음**합니다.  
+6. 다음으로, 두 번째 인증서 스냅인에서 이전 단계를 사용 하 여 하지만이 이번에 선택 추가 **컴퓨터 계정** 누릅니다 **다음**합니다.  
   
-7.  선택 **로컬 컴퓨터** 누릅니다 **마침**합니다. 이제 시스템 인증서 저장소에서 현재 사용자 저장소로 인증서를 끌어서 놓을 수 있습니다.  
+7. 선택 **로컬 컴퓨터** 누릅니다 **마침**합니다. 이제 시스템 인증서 저장소에서 현재 사용자 저장소로 인증서를 끌어서 놓을 수 있습니다.  
   
  **Q:** 내 서비스를 작업 그룹 모드에서 다른 컴퓨터에 있는 큐에서 읽는 경우 인가요 "액세스 거부" 예외가 있습니다.  
   

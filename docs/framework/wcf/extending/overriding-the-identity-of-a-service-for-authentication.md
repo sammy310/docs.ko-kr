@@ -5,22 +5,18 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: d613a22b-07d7-41a4-bada-1adc653b9b5d
-ms.openlocfilehash: 8c0807a7b811cf2cb3a13576018373d135e3e5cd
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a5a32220ad1f638bf2e93051e9b436d8270aec2f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54554467"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59082193"
 ---
 # <a name="overriding-the-identity-of-a-service-for-authentication"></a>인증을 위해 서비스 ID 재정의
 일반적으로 선택한 클라이언트 자격 증명 형식에 따라 서비스 메타데이터에 노출되는 ID 형식이 결정되므로 서비스에 ID를 설정할 필요가 없습니다. 예를 들어 다음 구성 코드에서는 합니다 [ \<wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md) 요소 집합과 `clientCredentialType` Windows 특성.  
-  
-  
-  
+
  다음 WSDL(웹 서비스 기술 언어) 단편에서는 이전에 정의한 엔드포인트의 ID를 보여 줍니다. 이 예제에서는 특정 사용자 계정으로 자체 호스팅 서비스로 서비스 중인지 (username@contoso.com) 한 사용자 계정 이름 (UPN) id의 계정 이름을 포함 합니다. UPN을 Windows 도메인의 사용자 로그온 이름이라고도 합니다.  
-  
-  
-  
+
  Id 설정을 보여 주는 샘플 응용 프로그램을 참조 하세요 [Service Identity 샘플](../../../../docs/framework/wcf/samples/service-identity-sample.md)합니다. 서비스 id에 대 한 자세한 내용은 참조 하세요. [서비스 Id 및 인증](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)합니다.  
   
 ## <a name="kerberos-authentication-and-identity"></a>Kerberos 인증 및 ID  
@@ -52,13 +48,9 @@ ms.locfileid: "54554467"
   
 ### <a name="using-the-identity-element-in-configuration"></a>사용 하 여 \<identity > 구성에서 요소  
  이전에 Certificate에 표시된 바인딩에서 클라이언트 자격 증명 형식을 변경하면`,` 생성된 WSDL에 다음 코드에 표시된 ID 값에 대한 Base64로 serialize된 X.509 인증서가 포함됩니다. 이는 Windows 이외의 모든 클라이언트 자격 증명 형식에 대한 기본값입니다.  
-  
-  
-  
- 구성에 <`identity`> 요소를 사용하거나 코드에서 ID를 설정하여 기본 서비스 ID의 값을 변경하거나 ID 형식을 변경할 수 있습니다. 다음 구성 코드에서는 값 `contoso.com`으로 DNS(Domain Name System) ID를 설정합니다.  
-  
-  
-  
+
+ 기본 서비스 id의 값을 변경 하거나 id 형식을 사용 하 여 변경할 수는 <`identity`> 코드에서 id를 설정 하거나 구성에서 요소입니다. 다음 구성 코드에서는 값 `contoso.com`으로 DNS(Domain Name System) ID를 설정합니다.  
+
 ### <a name="setting-identity-programmatically"></a>프로그래밍 방식으로 ID 설정  
  서비스가 없습니다 identity (id)를 명시적으로 지정 하려면 WCF가 자동으로 결정 되기 때문에. 그러나 WCF 허용 필요한 경우 끝점에서 id를 지정할 수 있습니다. 다음 코드에서는 특정 DNS ID를 사용하여 새 서비스 엔드포인트를 추가합니다.  
   
@@ -66,5 +58,6 @@ ms.locfileid: "54554467"
  [!code-vb[C_Identity#5](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_identity/vb/source.vb#5)]  
   
 ## <a name="see-also"></a>참고자료
-- [방법: 사용자 지정 클라이언트 Id 검증 도구 만들기](../../../../docs/framework/wcf/extending/how-to-create-a-custom-client-identity-verifier.md)
+
+- [방법: 사용자 지정 클라이언트 ID 검증 도구 만들기](../../../../docs/framework/wcf/extending/how-to-create-a-custom-client-identity-verifier.md)
 - [서비스 ID 및 인증](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)

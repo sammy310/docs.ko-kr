@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 09f2e4ee-1d08-4ba8-8936-83394fee319d
-ms.openlocfilehash: b665fc9593cd73e759625bdfd537581958f8734d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5b3aca6a71f88762084934d0d9c7cea15b5366c8
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54595567"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59072599"
 ---
 # <a name="applying-an-xslt-transform-to-a-dataset"></a>XSLT 변형을 DataSet에 적용
-**WriteXml** 메서드는 <xref:System.Data.DataSet> 의 내용을 작성할 수 있습니다를 **데이터 집합** XML 데이터로 합니다. 그런 다음에는 XSLT(XSL transformations)를 사용하여 해당 XML을 다른 형식으로 변형하는 공통적인 작업이 수행됩니다. 그러나 동기화를 **데이터 집합** 사용 하 여는 <xref:System.Xml.XmlDataDocument> XSLT 스타일 시트의 내용에 적용할 수는 **데이터 집합** 의 콘텐츠를 먼저 작성 하지 않고도  **데이터 집합** 사용 하 여 XML 데이터 **WriteXml**합니다.  
+**WriteXml** 메서드는 <xref:System.Data.DataSet> 의 내용을 작성할 수 있습니다를 **데이터 집합** XML 데이터로 합니다. 그런 다음에는 XSLT(XSL transformations)를 사용하여 해당 XML을 다른 형식으로 변환하는 공통적인 작업이 수행됩니다. 그러나 동기화를 **데이터 집합** 사용 하 여는 <xref:System.Xml.XmlDataDocument> XSLT 스타일 시트의 내용에 적용할 수는 **데이터 집합** 의 콘텐츠를 먼저 작성 하지 않고도  **데이터 집합** 사용 하 여 XML 데이터 **WriteXml**합니다.  
   
  다음 예제에서는 **데이터 집합** 테이블 및 관계를 사용 하 여 동기화 합니다 **데이터 집합** 사용 하 여는 **XmlDataDocument**를 쓰고 부분을  **데이터 집합** XSLT 스타일 시트를 사용 하 여 HTML 파일로. 다음은 XSLT 스타일시트의 내용입니다.  
   
@@ -124,5 +124,6 @@ writer.Close();
 ```  
   
 ## <a name="see-also"></a>참고자료
-- [데이터 세트 및 XmlDataDocument 동기화](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataset-and-xmldatadocument-synchronization.md)
+
+- [데이터 집합 및 XmlDataDocument 동기화](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataset-and-xmldatadocument-synchronization.md)
 - [ADO.NET 관리되는 공급자 및 데이터 집합 개발자 센터](https://go.microsoft.com/fwlink/?LinkId=217917)

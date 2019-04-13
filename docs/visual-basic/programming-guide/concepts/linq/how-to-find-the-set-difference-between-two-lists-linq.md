@@ -2,19 +2,19 @@
 title: '방법: (LINQ) (Visual Basic)의 두 목록 간의 차집합 구하기'
 ms.date: 07/20/2015
 ms.assetid: b5b25474-10a8-4df6-aab5-75621bb6b68e
-ms.openlocfilehash: 2d87a2bd882adb6eca144288ace72b0e7c464907
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 3757a588ed37805d6dd2569e1d25b07bd166c2d5
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58829501"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59324060"
 ---
 # <a name="how-to-find-the-set-difference-between-two-lists-linq-visual-basic"></a>방법: (LINQ) (Visual Basic)의 두 목록 간의 차집합 구하기
 이 예제에서는 LINQ를 사용하여 두 개의 문자열 목록을 비교하고 names1.txt에 있지만 names2.txt에는 없는 줄만 출력하는 방법을 보여 줍니다.  
   
 ### <a name="to-create-the-data-files"></a>데이터 파일을 만들려면  
   
-1.  [방법: (LINQ) (Visual Basic) 문자열 컬렉션 결합 및 비교](../../../../visual-basic/programming-guide/concepts/linq/how-to-combine-and-compare-string-collections-linq.md)합니다.  
+1. [방법: (LINQ) (Visual Basic) 문자열 컬렉션 결합 및 비교](../../../../visual-basic/programming-guide/concepts/linq/how-to-combine-and-compare-string-collections-linq.md)합니다.  
   
 ## <a name="example"></a>예제  
   

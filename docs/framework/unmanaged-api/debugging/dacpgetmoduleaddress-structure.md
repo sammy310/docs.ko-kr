@@ -15,12 +15,12 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: c0a12ab638adfccfb6406aa495bd3568911ee969
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: cbea6c0562c68ae5d18247dc97bc53eb9dfbfd7e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54619781"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59104112"
 ---
 # <a name="dacpgetmoduleaddress-structure"></a>DacpGetModuleAddress 구조
 
@@ -60,5 +60,6 @@ struct DacpGetModuleAddress
 **.NET Framework 버전:** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
 
 ## <a name="see-also"></a>참고자료
+
 - [디버깅](../../../../docs/framework/unmanaged-api/debugging/index.md)
 - [디버깅 구조체](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)

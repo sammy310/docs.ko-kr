@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - DataGridView control [Windows Forms], architecture
 ms.assetid: 1c6cabf0-02ee-4bbc-9574-b54bb7f5b19e
-ms.openlocfilehash: 81ac17c9f78baa71d005883c9dd928e398b10a33
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 892168ec282fbf168c43515e0718fe5486a345a8
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58842345"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59130262"
 ---
 # <a name="datagridview-control-architecture-windows-forms"></a>DataGridView 컨트롤 아키텍처(Windows Forms)
 <xref:System.Windows.Forms.DataGridView> 컨트롤과 관련 된 클래스는 테이블 형식 데이터 표시 및 편집에 대 한 유연 하 고 확장 가능한 시스템을 하도록 설계 되었습니다. 이러한 클래스에 포함 된 모든는 <xref:System.Windows.Forms?displayProperty=nameWithType> 네임 스페이스 및 이러한 모든 "DataGridView" 접두사를 사용 하 여 이름이 됩니다.  
@@ -137,6 +137,7 @@ ms.locfileid: "58842345"
  사용 하는 경우는 <xref:System.Windows.Forms.DataGridView> 컨트롤의 <xref:System.Windows.Forms.DataGridView.AllowUserToAddRows%2A> 속성을 새 행을 추가 하기 위한 특별 한 행이 마지막 행으로 나타납니다. 이 행의 일부인는 <xref:System.Windows.Forms.DataGridView.Rows%2A> 컬렉션 하지만 주의가 필요할 수 있는 특별 한 기능이 있습니다. 자세한 내용은 [Windows Forms DataGridView 컨트롤에서 새 레코드에 대 한 행을 사용 하 여](using-the-row-for-new-records-in-the-windows-forms-datagridview-control.md)입니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [DataGridView 컨트롤 개요](datagridview-control-overview-windows-forms.md)
 - [Windows Forms DataGridView 컨트롤 사용자 지정](customizing-the-windows-forms-datagridview-control.md)
-- [Windows Forms DataGridView 컨트롤에서 새 레코드에 행 사용](using-the-row-for-new-records-in-the-windows-forms-datagridview-control.md)
+- [Windows Forms DataGridView 컨트롤에서 새 레코드에 대한 행 사용](using-the-row-for-new-records-in-the-windows-forms-datagridview-control.md)

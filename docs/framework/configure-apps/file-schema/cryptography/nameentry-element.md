@@ -8,12 +8,12 @@ helpviewer_keywords:
 - <nameEntry> element
 - nameEntry element
 ms.assetid: 7d7535e9-4b4a-4b8c-82e2-e40dff5a7821
-ms.openlocfilehash: b5f92ca2956f32382b12c9a1dec4e5d41ea4ee2a
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 97521ba9073820beeea62f5fc7cab480b5422fb0
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55285929"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59225328"
 ---
 # <a name="nameentry-element"></a>\<m t r y > 요소
 클래스 이름을 알고리즘 이름에 매핑하며, 이를 통해 하나의 클래스가 여러 이름을 가질 수 있습니다.  
@@ -38,7 +38,7 @@ ms.locfileid: "55285929"
 |특성|설명|  
 |---------------|-----------------|  
 |**name**|필수 특성입니다.<br /><br /> 암호화 클래스를 구현 하는 알고리즘의 이름을 지정 합니다.|  
-|**class**|필수 특성입니다.<br /><br /> 에 대 한 값을 지정 합니다 **이름** 특성을 [ \<cryptoClass >](../../../../../docs/framework/configure-apps/file-schema/cryptography/cryptoclass-element.md) 요소입니다.|  
+|**클래스**|필수 특성입니다.<br /><br /> 에 대 한 값을 지정 합니다 **이름** 특성을 [ \<cryptoClass >](../../../../../docs/framework/configure-apps/file-schema/cryptography/cryptoclass-element.md) 요소입니다.|  
   
 ### <a name="child-elements"></a>자식 요소  
  없음  
@@ -76,7 +76,8 @@ ms.locfileid: "55285929"
 ```  
   
 ## <a name="see-also"></a>참고자료
+
 - [구성 파일 스키마](../../../../../docs/framework/configure-apps/file-schema/index.md)
 - [암호화 설정 스키마](../../../../../docs/framework/configure-apps/file-schema/cryptography/index.md)
-- [Cryptographic Services](../../../../../docs/standard/security/cryptographic-services.md)
+- [암호화 서비스](../../../../../docs/standard/security/cryptographic-services.md)
 - [암호화 클래스 구성](../../../../../docs/framework/configure-apps/configure-cryptography-classes.md)

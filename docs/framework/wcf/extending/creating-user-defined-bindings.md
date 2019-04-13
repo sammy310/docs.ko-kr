@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - user-defined bindings [WCF]
 ms.assetid: c4960675-d701-4bc9-b400-36a752fdd08b
-ms.openlocfilehash: 6b3a5bbc93fa6465f70295cc6a3d7528039fb787
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 54a1c8e06991729ea8556d82d31897c522f6d173
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54548796"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59188723"
 ---
 # <a name="creating-user-defined-bindings"></a>사용자 정의 바인딩 만들기
 시스템에서 제공하지 않는 바인딩은 다음과 같은 여러 가지 방법으로 만들 수 있습니다.  
@@ -39,7 +39,7 @@ ms.locfileid: "54548796"
 |안정성|<xref:System.ServiceModel.Channels.ReliableSessionBindingElement?displayProperty=nameWithType>|아니요|  
 |보안|<xref:System.ServiceModel.Channels.SecurityBindingElement?displayProperty=nameWithType>|아니요|  
 |복합 이중|<xref:System.ServiceModel.Channels.CompositeDuplexBindingElement?displayProperty=nameWithType>|아니요|  
-|인코딩|텍스트, 이진, MTOM, 사용자 지정|예*|  
+|Encoding|텍스트, 이진, MTOM, 사용자 지정|예*|  
 |전송|TCP, 명명된 파이프, HTTP, HTTPS, MSMQ, 사용자 지정|예|  
   
  * 인코딩은 이므로 각 바인딩의 필수적 요소는 인코딩이 지정 되지 않은 경우, WCF는 기본 인코딩을 추가 합니다. 기본값은 HTTP 및 HTTPS 전송의 경우 텍스트/XML이고 그렇지 않은 경우 이진입니다.  
@@ -119,5 +119,6 @@ public override BindingElementCollection CreateBindingElements()
  완전히 새로운 바인딩 클래스를 만드는 대신 기존의 시스템 제공 바인딩 중 하나를 확장할 수 있습니다. 앞의 경우와 마찬가지로 <xref:System.ServiceModel.Channels.Binding.CreateBindingElements%2A> 메서드 및 <xref:System.ServiceModel.Channels.Binding.Scheme%2A> 속성을 재정의해야 합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.ServiceModel.Channels.Binding>
 - [사용자 지정 바인딩](../../../../docs/framework/wcf/extending/custom-bindings.md)

@@ -12,12 +12,12 @@ helpviewer_keywords:
 - ellipses
 - drawing [Windows Forms], arcs
 ms.assetid: 34f35133-a835-4ca4-81f6-0dfedee8b683
-ms.openlocfilehash: 9f6969f9ad838ae913f049c4fc65d987e1aff9fa
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 8bbc2eda6450128eac55576259880e83f07099ab
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57718482"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59117458"
 ---
 # <a name="ellipses-and-arcs-in-gdi"></a>GDI+의 타원 및 원호
 타원 및 원호를 사용 하 여 쉽게 그릴 수 있습니다는 <xref:System.Drawing.Graphics.DrawEllipse%2A> 하 고 <xref:System.Drawing.Graphics.DrawArc%2A> 의 메서드는 <xref:System.Drawing.Graphics> 클래스입니다.  
@@ -48,6 +48,7 @@ ms.locfileid: "57718482"
  ![타원 및 원호](./media/aboutgdip02-art06.gif "Aboutgdip02_art06")  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Drawing.Graphics?displayProperty=nameWithType>
 - <xref:System.Drawing.Pen?displayProperty=nameWithType>
 - [선, 곡선 및 도형](lines-curves-and-shapes.md)

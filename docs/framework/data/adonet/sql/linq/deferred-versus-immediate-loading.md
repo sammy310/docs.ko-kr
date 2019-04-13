@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: d1d7247f-a3b7-460b-b342-5c1a2365aa1a
-ms.openlocfilehash: c78f608225d64a428b768fbc8d03f71a393d980d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ae20dbe557c3cf56a273556c24578056843e9af6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54516969"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59096994"
 ---
 # <a name="deferred-versus-immediate-loading"></a>지연된 로드 및 즉시 로드 비교
 개체를 쿼리하는 경우 실제로는 요청한 개체만 검색합니다. 합니다 *관련* 개체는 동시에 자동으로 페치 되지 않습니다. (자세한 내용은 [관계 간 쿼리](../../../../../../docs/framework/data/adonet/sql/linq/querying-across-relationships.md).) 관련 개체에 액세스할 때 검색 요청을 생성하기 때문에 관련 개체가 아직 로드되지 않았다는 사실을 확인할 수 없습니다.  
@@ -34,4 +34,5 @@ ms.locfileid: "54516969"
 -   <xref:System.Data.Linq.DataLoadOptions.AssociateWith%2A> 메서드 - 특정 관계에 대해 검색한 개체를 필터링합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [쿼리 개념](../../../../../../docs/framework/data/adonet/sql/linq/query-concepts.md)

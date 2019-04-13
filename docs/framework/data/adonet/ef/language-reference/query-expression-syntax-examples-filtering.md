@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: c27cb89c-1c1d-4988-9f38-950eda3cb275
-ms.openlocfilehash: 3a1f88035dd242c9f92a8a08806232b36f2fd9fd
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.openlocfilehash: eb1680ba8ca2fab5511dc20c94ad997ef04974fe
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55828490"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59134552"
 ---
 # <a name="query-expression-syntax-examples-filtering"></a>쿼리 식 구문 예제: 필터링
 이 항목의 예제에 사용 하는 방법을 보여 줍니다 합니다 `Where` 및 `Where…Contains` 쿼리 하는 메서드는 [AdventureWorks Sales 모델](https://archive.codeplex.com/?p=msftdbprodsamples) 쿼리 식 구문을 사용 합니다. 참고로 위치...`Contains` 일부로 사용할 수 없습니다는 [컴파일된 쿼리](../../../../../../docs/framework/data/adonet/ef/language-reference/compiled-queries-linq-to-entities.md)합니다.  
@@ -22,7 +22,7 @@ ms.locfileid: "55828490"
  [!code-csharp[DP L2E Examples#ImportsUsing](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Examples/CS/Program.cs#importsusing)]
  [!code-vb[DP L2E Examples#ImportsUsing](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Examples/VB/Module1.vb#importsusing)]  
   
-## <a name="where"></a>위치  
+## <a name="where"></a>Where  
   
 ### <a name="example"></a>예제  
  다음 예제에서는 모든 온라인 주문을 반환합니다.  
@@ -66,4 +66,5 @@ ms.locfileid: "55828490"
  [!code-vb[DP L2E ArraysAndListsInQueries#2](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/dp l2e arraysandlistsinqueries/vb/module1.vb#2)]  
   
 ## <a name="see-also"></a>참고자료
+
 - [LINQ to Entities에서 쿼리](../../../../../../docs/framework/data/adonet/ef/language-reference/queries-in-linq-to-entities.md)

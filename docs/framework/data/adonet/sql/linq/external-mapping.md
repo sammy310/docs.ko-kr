@@ -2,12 +2,12 @@
 title: 외부 매핑
 ms.date: 03/30/2017
 ms.assetid: 076606b8-d889-4ba0-b5da-ae577b146f23
-ms.openlocfilehash: 5cc72c360a2dfbb7446a5157cde898be93d29171
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4b493279307f61847b72048c5bfa9dc14a38fe29
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54614616"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59218682"
 ---
 # <a name="external-mapping"></a>외부 매핑
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 지원 *외부 매핑*, 있습니다 사용 하 여 별도 XML 파일을 데이터베이스의 데이터 모델과 개체 모델 간의 매핑을 지정 하는 프로세스입니다. 외부 매핑 파일을 사용하면 다음과 같은 장점이 있습니다.  
@@ -27,7 +27,7 @@ ms.locfileid: "54614616"
   
 -   외부 매핑은 특성 기반 매핑을 재정의합니다. 즉, 외부 매핑 소스를 사용하여 <xref:System.Data.Linq.DataContext>를 만들면 <xref:System.Data.Linq.DataContext>에서는 사용자가 클래스에 만든 모든 매핑 특성을 무시합니다. 이 동작은 외부 매핑 파일에 클래스가 포함되었는지 여부에 관계없이 항상 적용됩니다.  
   
--   [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]에서는 특성 기반 매핑과 외부 매핑의 혼합 사용을 지원하지 않습니다.  
+-   [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 두 가지 매핑 방법 (특성 기반 및 외부)의 혼합 사용을 지원 하지 않습니다.  
   
 ## <a name="xml-schema-definition-file"></a>XML 스키마 정의 파일  
  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]에서 외부 매핑은 다음 XML 스키마 정의에 대해 유효해야 합니다.  
@@ -142,6 +142,7 @@ elementFormDefault="qualified" >
 ```  
   
 ## <a name="see-also"></a>참고자료
+
 - [LINQ to SQL에서 코드 생성](../../../../../../docs/framework/data/adonet/sql/linq/code-generation-in-linq-to-sql.md)
 - [참조](../../../../../../docs/framework/data/adonet/sql/linq/reference.md)
 - [방법: 외부 파일로 개체 모델 생성](../../../../../../docs/framework/data/adonet/sql/linq/how-to-generate-the-object-model-as-an-external-file.md)

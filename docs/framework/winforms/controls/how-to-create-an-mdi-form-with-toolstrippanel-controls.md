@@ -1,5 +1,5 @@
 ---
-title: '방법: ToolStripPanel 컨트롤을 사용 하 여 MDI 폼 만들기'
+title: '방법: ToolStripPanel 컨트롤을 사용하여 MDI 양식 만들기'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,14 +12,14 @@ helpviewer_keywords:
 - ToolStrip control [Windows Forms]
 - MDI forms [Windows Forms], creating
 ms.assetid: d198ef8e-f7c4-4b3f-a7f5-ce858cb90cec
-ms.openlocfilehash: 9b3297acabbb05c25ae195acbb6fb9274ad02651
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 55c2294496800fb8692d3c8215c1c13f7dac9b01
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57725391"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59096968"
 ---
-# <a name="how-to-create-an-mdi-form-with-toolstrippanel-controls"></a>방법: ToolStripPanel 컨트롤을 사용 하 여 MDI 폼 만들기
+# <a name="how-to-create-an-mdi-form-with-toolstrippanel-controls"></a>방법: ToolStripPanel 컨트롤을 사용하여 MDI 양식 만들기
 네 면에서 모두 폼을 프레이밍하는 <xref:System.Windows.Forms.ToolStrip> 컨트롤이 있는 MDI(다중 문서 인터페이스) 폼을 만들 수 있습니다.  
   
 ## <a name="example"></a>예제  
@@ -40,6 +40,7 @@ ms.locfileid: "57725391"
  Visual Basic 또는 Visual C#에 대 한 명령줄에서이 예제를 빌드하는 방법에 대 한 내용은 [명령줄에서 빌드](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) 하거나 [csc.exe를 사용한 명령줄 빌드](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)합니다. 또한 새 프로젝트에 코드를 붙여 넣어 Visual Studio에서이 예제를 빌드할 수 있습니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Windows.Forms.ToolStrip>
 - <xref:System.Windows.Forms.ToolStripPanel>
 - <xref:System.Windows.Forms.ToolStripPanel.Join%2A>

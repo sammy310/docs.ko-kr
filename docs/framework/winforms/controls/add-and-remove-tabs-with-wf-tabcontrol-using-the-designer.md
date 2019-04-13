@@ -1,5 +1,5 @@
 ---
-title: '방법: 디자이너를 사용 하 여 Windows Forms TabControl 사용 하 여 탭 추가 및 제거'
+title: '방법: 디자이너를 사용하여 Windows Forms TabControl에서 탭 추가 및 제거'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - tabs [Windows Forms], removing from pages
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - tabs [Windows Forms], adding to pages
 - tab pages
 ms.assetid: 480633db-413a-45d2-9c8f-0427cc13adbe
-ms.openlocfilehash: f58121455c346b2b615a5cf6e617e916618b4d6e
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 23fe9fa2b8405a6ebe66e8f0cee1d81d45f2395b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57720321"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59219761"
 ---
-# <a name="how-to-add-and-remove-tabs-with-the-windows-forms-tabcontrol-using-the-designer"></a>방법: 디자이너를 사용 하 여 Windows Forms TabControl 사용 하 여 탭 추가 및 제거
+# <a name="how-to-add-and-remove-tabs-with-the-windows-forms-tabcontrol-using-the-designer"></a>방법: 디자이너를 사용하여 Windows Forms TabControl에서 탭 추가 및 제거
 배치 하는 경우는 <xref:System.Windows.Forms.TabControl> 컨트롤이 폼에 기본적으로 두 개의 탭 포함 합니다. 추가 하거나 디자이너를 사용 하 여 탭을 제거할 수 있습니다.  
   
  다음 절차를 수행 하려면을 **Windows 응용 프로그램** 포함 하는 양식을 사용 하 여 프로젝트를 <xref:System.Windows.Forms.TabControl> 제어 합니다. 이러한 프로젝트 설정에 대 한 자세한 내용은 [방법: Windows Forms 응용 프로그램 프로젝트를 만듭니다](/visualstudio/ide/step-1-create-a-windows-forms-application-project) 고 [방법: Windows Forms에 컨트롤 추가](how-to-add-controls-to-windows-forms.md)합니다.  
@@ -32,8 +32,9 @@ ms.locfileid: "57720321"
      에 **속성** 창에서 클릭 합니다 **줄임표** 단추 (![VisualStudioEllipsesButton 스크린 샷](../media/vbellipsesbutton.png "vbEllipsesButton")) 옆에 <xref:System.Windows.Forms.TabControl.TabPages%2A> 열려면 속성을 **TabPage 컬렉션 편집기**합니다. 클릭 합니다 **추가** 하거나 **제거** 단추입니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [TabControl 컨트롤](tabcontrol-control-windows-forms.md)
 - [TabControl 컨트롤 개요](tabcontrol-control-overview-windows-forms.md)
 - [방법: 탭 페이지에 컨트롤 추가](how-to-add-a-control-to-a-tab-page.md)
-- [방법: 탭 페이지를 사용 하지 않도록 설정](how-to-disable-tab-pages.md)
+- [방법: 탭 페이지를 사용하지 않도록 설정](how-to-disable-tab-pages.md)
 - [방법: Windows Forms TabControl의 모양 변경](how-to-change-the-appearance-of-the-windows-forms-tabcontrol.md)

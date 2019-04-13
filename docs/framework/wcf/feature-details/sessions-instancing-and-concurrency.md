@@ -2,12 +2,12 @@
 title: 세션, 인스턴스 및 동시성
 ms.date: 03/30/2017
 ms.assetid: 50797a3b-7678-44ed-8138-49ac1602f35b
-ms.openlocfilehash: 5ccd6fe5e07b2a1bc36b89d1fe14f7990dc7231d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 994b95bb8ebc14a9997e1e9510389fdf16098d12
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54661821"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59229071"
 ---
 # <a name="sessions-instancing-and-concurrency"></a>세션, 인스턴스 및 동시성
 *세션* 은 두 개의 끝점 사이에 전송된 모든 메시지의 상관 관계입니다. *인스턴스 만들기* 는 사용자 정의 서비스 개체와 관련 <xref:System.ServiceModel.InstanceContext> 개체의 수명 제어를 의미합니다. *동시성* 은 <xref:System.ServiceModel.InstanceContext> 에서 동시에 실행되는 스레드 수의 제어를 의미하는 용어입니다.  
@@ -29,11 +29,11 @@ ms.locfileid: "54661821"
   
  에 대해 잘 알고 있다면 합니다 <xref:System.Web.SessionState.HttpSessionState?displayProperty=nameWithType> 클래스의 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 제공 응용 프로그램 및 기능, 해당 유형의 세션 및 WCF 세션 간에 다음과 같은 차이점을 알 수 있습니다.  
   
--   [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 세션은 항상 서버에 의해 실행됩니다.  
+-   [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 세션은 항상 서버에서 시작 합니다.  
   
--   [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 세션은 암시적으로 순서가 지정되지 않습니다.  
+-   [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 세션은 암시적으로 순서가 없습니다.  
   
--   [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 세션은 요청을 통해 일반 데이터 저장소 메커니즘을 제공합니다.  
+-   [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 세션 요청에 대해 일반 데이터 저장소 메커니즘을 제공합니다.  
   
  클라이언트 애플리케이션과 서비스 애플리케이션은 서로 다른 방법으로 세션과 상호 작용합니다. 클라이언트 애플리케이션은 세션을 시작한 다음 세션 내에서 전송된 메시지를 수신하여 처리합니다. 서비스 애플리케이션은 세션을 확장성 지점으로 사용하여 추가 동작을 추가합니다. <xref:System.ServiceModel.InstanceContext> 와 직접 작업하거나 사용자 지정 인스턴스 컨텍스트 공급자를 구현하여 수행합니다.  
   
@@ -108,6 +108,7 @@ public class CalculatorService : ICalculatorConcurrency
 |Single|-세션 채널 동작: 세션 및 하나의 <xref:System.ServiceModel.InstanceContext> 모든 호출에 대 한 합니다.<br />-세션 없는 채널 동작: 예외가 throw됩니다.|-세션 채널 동작: 세션 및 <xref:System.ServiceModel.InstanceContext> 만들거나 사용자 지정 singleton에 대 한 합니다.<br />-세션 없는 채널 동작: <xref:System.ServiceModel.InstanceContext> 만들거나 사용자 지정 singleton에 대 한 합니다.|-세션 채널 동작: 예외가 throw됩니다.<br />-세션 없는 채널 동작: <xref:System.ServiceModel.InstanceContext> 각 만들어진된 singleton 또는 사용자 지정 singleton에 대 한 합니다.|  
   
 ## <a name="see-also"></a>참고자료
+
 - [세션 사용](../../../../docs/framework/wcf/using-sessions.md)
 - [방법: 세션이 필요한 서비스 만들기](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-that-requires-sessions.md)
 - [방법: 서비스 인스턴스 만들기 제어](../../../../docs/framework/wcf/feature-details/how-to-control-service-instancing.md)

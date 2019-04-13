@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrID35
 ms.assetid: 661fdb90-ee7d-40ce-b30b-5e7267bd957a
-ms.openlocfilehash: 6bca368e13a32559bcb7cbb028dcaa1dea0353e3
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 397648618ea3764efafb5cff41deaef320bbeff3
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58819790"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59294680"
 ---
 # <a name="sub-or-function-not-defined-visual-basic"></a>Sub 또는 Function이 정의되지 않았습니다(Visual Basic).
 A `Sub` 또는 `Function` 호출 수를 정의 해야 합니다. 이 오류가 발생하는 원인은 다음과 같습니다.  
@@ -24,11 +24,11 @@ A `Sub` 또는 `Function` 호출 수를 정의 해야 합니다. 이 오류가 �
   
 ## <a name="to-correct-this-error"></a>이 오류를 해결하려면  
   
-1.  프로시저 이름의 철자가 올바른지 확인 합니다.  
+1. 프로시저 이름의 철자가 올바른지 확인 합니다.  
   
-2.  호출할 프로시저를 포함 하는 프로젝트의 이름을 찾으려면 합니다 **참조** 대화 상자. 표시 되지 않으면 클릭 합니다 **찾아보기** 단추에 대 한 검색 합니다. 프로젝트 이름의 왼쪽에 있는 확인란을 선택한 다음 클릭 **확인**합니다.  
+2. 호출할 프로시저를 포함 하는 프로젝트의 이름을 찾으려면 합니다 **참조** 대화 상자. 표시 되지 않으면 클릭 합니다 **찾아보기** 단추에 대 한 검색 합니다. 프로젝트 이름의 왼쪽에 있는 확인란을 선택한 다음 클릭 **확인**합니다.  
   
-3.  루틴의 이름을 확인 합니다.  
+3. 루틴의 이름을 확인 합니다.  
   
 ## <a name="see-also"></a>참고자료
 

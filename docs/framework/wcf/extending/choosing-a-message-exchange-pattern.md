@@ -2,12 +2,12 @@
 title: 메시지 교환 패턴 선택
 ms.date: 03/30/2017
 ms.assetid: 0f502ca1-6a8e-4607-ba15-59198c0e6146
-ms.openlocfilehash: 927324e0f707284e31baefa261d4d90b147e4e24
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 98788fb89fc68dc1220d9bf8d9ad89df5ca69e6e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54594761"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59157783"
 ---
 # <a name="choosing-a-message-exchange-pattern"></a>메시지 교환 패턴 선택
 사용자 지정 전송을 작성 하는 첫 번째 단계를 결정 하는 것 *메시지 교환 패턴* (즉, Mep)을 개발 하는 채널에 대 한 필요 합니다. 이 항목에서는 사용 가능한 옵션과 여러 가지 요구 사항에 대해 설명합니다. 에 설명 된 채널 개발 작업 목록에서 첫 번째 작업 이것이 [개발 채널](../../../../docs/framework/wcf/extending/developing-channels.md)합니다.  
@@ -93,4 +93,5 @@ ms.locfileid: "54594761"
 -   채널에서 <xref:System.ServiceModel.ICommunicationObject.Abort%2A>를 호출하면 I/O가 수행되지 않고 세션이 갑자기 종료됩니다. 위에서 언급한 바와 같이, 이는 수행된 작업이 없거나 네트워크 연결 또는 일부 다른 리소스가 중단될 수 있음을 의미합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [채널 모델 개요](../../../../docs/framework/wcf/extending/channel-model-overview.md)

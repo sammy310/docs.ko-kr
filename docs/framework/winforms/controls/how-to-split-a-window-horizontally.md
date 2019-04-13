@@ -1,5 +1,5 @@
 ---
-title: '방법: 가로로 창 분합니다'
+title: '방법: 가로로 창 분할'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - splitter windows [Windows Forms], horizontal
 - windows [Windows Forms], splitting horizontally
 ms.assetid: a1f74f29-048c-4723-85fa-b9d375ab8f4b
-ms.openlocfilehash: e11e1d6730c6c8c9c0a1ac170aeb5393bf3153b7
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: a43d632a82678f362a1cdf6b3ee4486a8db5adde
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57708043"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59321083"
 ---
-# <a name="how-to-split-a-window-horizontally"></a>방법: 가로로 창 분합니다
+# <a name="how-to-split-a-window-horizontally"></a>방법: 가로로 창 분할
 다음 코드 예제에서는 분할 하는 분할자는 <xref:System.Windows.Forms.SplitContainer> 컨트롤을 가로로 합니다.  
   
 > [!NOTE]
@@ -25,7 +25,7 @@ ms.locfileid: "57708043"
   
 ### <a name="to-split-a-window-horizontally"></a>가로로 창 분할 하려면  
   
-1.  프로시저 내에서 설정 합니다 <xref:System.Windows.Forms.SplitContainer.Orientation%2A> 의 속성을 <xref:System.Windows.Forms.SplitContainer> 컨트롤을 <xref:System.Windows.Forms.Orientation.Horizontal>.  
+1. 프로시저 내에서 설정 합니다 <xref:System.Windows.Forms.SplitContainer.Orientation%2A> 의 속성을 <xref:System.Windows.Forms.SplitContainer> 컨트롤을 <xref:System.Windows.Forms.Orientation.Horizontal>.  
   
     ```vb  
     Sub ShowSplitContainer()  
@@ -56,5 +56,6 @@ ms.locfileid: "57708043"
     ```  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Windows.Forms.SplitContainer>
 - [SplitContainer 컨트롤](splitcontainer-control-windows-forms.md)

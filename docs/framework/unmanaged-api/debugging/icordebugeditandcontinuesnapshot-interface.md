@@ -16,16 +16,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4dbdec05df91547a2dc2c57f7bd902c14600daaf
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: d7fd463a8cc8ad6a88818669de6fb495e12e497b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56968181"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59215146"
 ---
 # <a name="icordebugeditandcontinuesnapshot-interface"></a>ICorDebugEditAndContinueSnapshot 인터페이스
 
-`ICorDebugEditAndContinueSnapshot`는 사용되지 않습니다. 이 인터페이스를 사용하지 마십시오.  
+`ICorDebugEditAndContinueSnapshot` 사용 되지 않습니다. 이 인터페이스를 사용하지 마십시오.  
   
 ## <a name="see-also"></a>참고자료
+
 - [디버깅 인터페이스](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

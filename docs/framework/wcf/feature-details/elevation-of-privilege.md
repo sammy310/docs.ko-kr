@@ -5,12 +5,12 @@ helpviewer_keywords:
 - elevation of privilege [WCF]
 - security [WCF], elevation of privilege
 ms.assetid: 146e1c66-2a76-4ed3-98a5-fd77851a06d9
-ms.openlocfilehash: cf67f3c68acc4cd8838be56d7c814f9e287ce62c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fd5829d2dbb1853bf65f1f6e402b918137bd59e3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54658050"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59099991"
 ---
 # <a name="elevation-of-privilege"></a>권한 높이기
 *권한 상승* 결과에서 공격자가 권한 부여 이상의 처음 부여 된 권한을 제공 합니다. 예를 들어 "읽기 전용" 권한의 권한 집합을 갖는 공격자는 권한 집합이 "읽기 및 쓰기"를 포함하도록 권한을 상승시킵니다.  
@@ -18,7 +18,7 @@ ms.locfileid: "54658050"
 ## <a name="trusted-sts-should-sign-saml-token-claims"></a>신뢰할 수 있는 STS가 SAML 토큰 클레임에 서명해야 함  
  SAML(Security Assertions Markup Language) 토큰은 발급된 토큰의 기본 형식인 제네릭 XML 토큰입니다. SAML 토큰은 최종 웹 서비스가 일반 교환에서 신뢰하는 STS(보안 토큰 서비스)에 의해 생성될 수 있습니다. SAML 토큰에는 문에 클레임이 있습니다. 공격자는 유효한 토큰에서 클레임을 복사하여 새 SAML 토큰을 만들고 이 토큰에 다른 발급자로 서명할 수 있습니다. 그 목적은 서버가 발급자의 유효성을 검사하는지 확인하고, 검사하지 않을 경우 그러한 취약점을 이용하여 신뢰할 수 있는 STS에서 의도한 수준 이상의 권한을 허용하는 SAML 토큰을 생성하기 위한 것입니다.  
   
- <xref:System.IdentityModel.Tokens.SamlAssertion> 클래스는 SAML 토큰 내에 포함된 디지털 서명을 확인하므로 기본 <xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator>를 사용하려면 <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.CertificateValidationMode%2A> 클래스의 <xref:System.ServiceModel.Security.IssuedTokenServiceCredential>가 <xref:System.ServiceModel.Security.X509CertificateValidationMode.ChainTrust>로 설정된 경우 유효한 X.509 인증서에서 서명한 SAML 토큰이 있어야 합니다. SAML 토큰 발급자를 신뢰할 것인지 여부를 판단하는 데 `ChainTrust` 모드만으로는 부족합니다. 보다 세부적인 신뢰 모델이 필요한 서비스에서 인증 및 적용 정책을 사용하여 발급된 토큰 인증에서 생성된 클레임 집합 발급자를 확인하거나 <xref:System.ServiceModel.Security.IssuedTokenServiceCredential>에 대한 X.509 유효성 검사 설정을 사용하여 허용된 서명 인증서 집합을 제한할 수 있습니다. 자세한 내용은 [관리 클레임 및 Id 모델을 사용 하 여 권한 부여](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md) 하 고 [페더레이션 및 발급 된 토큰](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md).  
+ <xref:System.IdentityModel.Tokens.SamlAssertion> 클래스는 SAML 토큰 내에 포함된 디지털 서명을 확인하므로 기본 <xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator>를 사용하려면 <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.CertificateValidationMode%2A> 클래스의 <xref:System.ServiceModel.Security.IssuedTokenServiceCredential>가 <xref:System.ServiceModel.Security.X509CertificateValidationMode.ChainTrust>로 설정된 경우 유효한 X.509 인증서에서 서명한 SAML 토큰이 있어야 합니다. `ChainTrust` SAML 토큰의 발급자를 신뢰할 수 있는지 여부를 확인 하려면 모드 만으로는 부족 합니다. 보다 세부적인 신뢰 모델이 필요한 서비스에서 인증 및 적용 정책을 사용하여 발급된 토큰 인증에서 생성된 클레임 집합 발급자를 확인하거나 <xref:System.ServiceModel.Security.IssuedTokenServiceCredential>에 대한 X.509 유효성 검사 설정을 사용하여 허용된 서명 인증서 집합을 제한할 수 있습니다. 자세한 내용은 [관리 클레임 및 Id 모델을 사용 하 여 권한 부여](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md) 하 고 [페더레이션 및 발급 된 토큰](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md).  
   
 ## <a name="switching-identity-without-a-security-context"></a>보안 컨텍스트 없이 ID 전환  
  다음 항목은 [!INCLUDE[vstecwinfx](../../../../includes/vstecwinfx-md.md)]에만 적용됩니다.  
@@ -83,6 +83,7 @@ ms.locfileid: "54658050"
  이 가능성을 줄이려면 <xref:System.ServiceModel.Security.Tokens.X509KeyIdentifierClauseType.IssuerSerial> 사용 등의 방식으로 X.509 인증서를 참조합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [보안 고려 사항](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md)
 - [정보 공개](../../../../docs/framework/wcf/feature-details/information-disclosure.md)
 - [서비스 거부](../../../../docs/framework/wcf/feature-details/denial-of-service.md)

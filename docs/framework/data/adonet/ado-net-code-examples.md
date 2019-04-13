@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: c119657a-9ce6-4940-91e4-ac1d5f0d9584
-ms.openlocfilehash: aa91646a46807f26053b3d0df28c412bcc5a2f21
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.openlocfilehash: 3bbb2e046054e35cf01fe223318a3bf560ef7253
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55825903"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59180728"
 ---
 # <a name="adonet-code-examples"></a>ADO.NET 코드 예제
 이 항목에 나열된 코드에서는 다음과 같은 ADO.NET 기술을 사용하여 데이터베이스에서 데이터를 검색하는 방법을 보여 줍니다.
@@ -29,7 +29,7 @@ ms.locfileid: "55825903"
 
   - [LINQ to Entities](#linq-to-entities)
 
-  - [형식화 된 ObjectQuery](#typed-objectquery)
+  - [형식화된 ObjectQuery](#typed-objectquery)
 
   - [EntityClient](#entityclient) (`System.Data.EntityClient`)
 
@@ -344,9 +344,10 @@ End Class
 ```
 
 ## <a name="see-also"></a>참고자료
+
 - [ADO.NET 개요](../../../../docs/framework/data/adonet/ado-net-overview.md)
 - [ADO.NET에서 데이터 검색 및 수정](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)
 - [데이터 응용 프로그램 만들기](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/h0y4a0f6(v=vs.120))
-- [엔터티 데이터 모델 (Entity Framework 작업) 쿼리](https://docs.microsoft.com/previous-versions/bb738455(v=vs.90))
+- [엔터티 데이터 모델 쿼리(Entity Framework 작업)](https://docs.microsoft.com/previous-versions/bb738455(v=vs.90))
 - [방법: 익명 형식 개체를 반환 하는 쿼리 실행](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738512(v=vs.100))
 - [ADO.NET 관리되는 공급자 및 데이터 집합 개발자 센터](https://go.microsoft.com/fwlink/?LinkId=217917)

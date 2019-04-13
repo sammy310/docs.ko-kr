@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: 4daa08ce4bbcfe5a7242f19506811e422d0477b7
+ms.sourcegitcommit: 0aca6c5d166d7961a1e354c248495645b97a1dc5
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58760743"
+---
 ### <a name="dataannotationsdatatypeattributedisableregex-app-setting-is-on-by-default-in-net-framework-472"></a>"dataAnnotations:dataTypeAttribute:disableRegEx" 앱 설정은 .NET Framework 4.7.2에서 기본적으로 설정됩니다.
 
 |   |   |

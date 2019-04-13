@@ -2,12 +2,12 @@
 title: 아키텍처 및 디자인
 ms.date: 03/30/2017
 ms.assetid: bd738d39-00e2-4bab-b387-90aac1a014bd
-ms.openlocfilehash: 8b3515fac9ae7f9302ba607fcf842719718f6c55
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a4b597c8a62c661ace4485959589823094b9a08f
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54576332"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59307576"
 ---
 # <a name="architecture-and-design"></a>아키텍처 및 디자인
 SQL 생성 모듈은 [Sample Provider](https://code.msdn.microsoft.com/windowsdesktop/Entity-Framework-Sample-6a9801d0) 명령 트리를 나타내는 식 트리의 방문자로 구현 됩니다. 생성은 식 트리에 대한 단일 패스로 수행됩니다.  
@@ -214,13 +214,13 @@ private bool IsParentAJoin{get}
   
  입력된 별칭 리디렉션을 설명, 참조의 첫 번째 예제 [명령 트리-모범 사례에서에서 sql 문을 생성](../../../../../docs/framework/data/adonet/ef/generating-sql-from-command-trees-best-practices.md)합니다.  이 예제에서 "a"는 프로젝션에서 "b"로 리디렉션되어야 합니다.  
   
- SqlSelectStatement 개체가 만들어지면 노드의 입력인 익스텐트가 SqlSelectStatement의 From 속성에 삽입됩니다. 기호(<symbol_b>)가 이 익스텐트를 나타내기 위해 입력 바인딩 이름("b")을 기반으로 만들어지며 "AS  " + <symbol_b>가 FROM 절에 추가됩니다.  이 기호는 FromExtents 속성에도 추가됩니다.  
+ SqlSelectStatement 개체가 만들어지면 노드의 입력인 익스텐트가 SqlSelectStatement의 From 속성에 삽입됩니다. (< Symbol_b >) 기호는 "AS" 고 익스텐트를 나타내기 위해 입력된 바인딩 이름 ("b")에 따라 만들어집니다 + < symbol_b > From 절에 추가 됩니다.  이 기호는 FromExtents 속성에도 추가됩니다.  
   
- 이 기호는 입력 바인딩 이름을 해당 기호에 연결하기 위해 기호 테이블에도 추가됩니다("b", <symbol_b>).  
+ 기호를 기호 테이블 입력된 바인딩 이름 ("b", < symbol_b >)를 연결에 추가 됩니다.  
   
  이후의 노드는 이 SqlSelectStatement를 다시 사용하는 경우 입력 바인딩 이름을 해당 기호에 연결하기 위해 기호 테이블에 항목을 추가합니다. 이 예에서 입력된 바인딩 이름이 "a" 인 DbProjectExpression은 SqlSelectStatement를 다시 사용 하 고 추가 ("a", \< symbol_b >) 테이블에 있습니다.  
   
- 식에서 SqlSelectStatement를 다시 사용하는 노드의 입력 바인딩 이름을 참조하는 경우 이 참조는 기호 테이블을 사용하여 올바른 리디렉션된 기호로 확인됩니다. "a"를 나타내는 DbVariableReferenceExpression을 방문하는 동안 "a.x"의 "a"가 확인될 때 기호 <symbol_b>로 확인됩니다.  
+ 식에서 SqlSelectStatement를 다시 사용하는 노드의 입력 바인딩 이름을 참조하는 경우 이 참조는 기호 테이블을 사용하여 올바른 리디렉션된 기호로 확인됩니다. "A"에서 "a.x" 문제가 해결 되 면 나타내는 DbVariableReferenceExpression을 방문 하는 동안 "a" < symbol_b > 기호로 확인 됩니다.  
   
 ### <a name="join-alias-flattening"></a>조인 별칭 평면화  
  조인 별칭 평면화는 DbPropertyExpression 단원에 설명된 대로 DbPropertyExpression을 방문할 때 수행됩니다.  
@@ -252,13 +252,13 @@ private bool IsParentAJoin{get}
   
  이러한 노드 방문은 다음과 같은 패턴을 따릅니다.  
   
-1.  관계형 입력을 방문하고 결과로 생성되는 SqlSelectStatement를 가져옵니다. 관계형 노드의 입력은 다음 중 하나일 수 있습니다.  
+1. 관계형 입력을 방문하고 결과로 생성되는 SqlSelectStatement를 가져옵니다. 관계형 노드의 입력은 다음 중 하나일 수 있습니다.  
   
     -   익스텐트(예: DbScanExpression)를 포함하는 관계형 노드. 이러한 노드를 방문하면 SqlSelectStatement가 반환됩니다.  
   
     -   집합 연산 식(예: UNION ALL). 결과는 대괄호로 래핑되어야 하며 새 SqlSelectStatement의 FROM 절에 삽입됩니다.  
   
-2.  입력을 통해 생성되는 SqlSelectStatement에 현재 노드를 추가할 수 있는지 여부를 확인합니다. SQL 문으로 식 그룹화 단원에서 이에 대해 설명합니다. 추가할 수 없는 경우에는 다음 작업이 수행됩니다.  
+2. 입력을 통해 생성되는 SqlSelectStatement에 현재 노드를 추가할 수 있는지 여부를 확인합니다. SQL 문으로 식 그룹화 단원에서 이에 대해 설명합니다. 추가할 수 없는 경우에는 다음 작업이 수행됩니다.  
   
     -   현재 SqlSelectStatement 개체를 꺼냅니다.  
   
@@ -266,13 +266,13 @@ private bool IsParentAJoin{get}
   
     -   스택 맨 위에 새 개체를 삽입합니다.  
   
-3.  입력에서 올바른 기호로 입력 식 바인딩을 리디렉션합니다. 이 정보는 SqlSelectStatement 개체에서 유지 관리됩니다.  
+3. 입력에서 올바른 기호로 입력 식 바인딩을 리디렉션합니다. 이 정보는 SqlSelectStatement 개체에서 유지 관리됩니다.  
   
-4.  새 SymbolTable 범위를 추가합니다.  
+4. 새 SymbolTable 범위를 추가합니다.  
   
-5.  식의 비입력 부분(예: Projection 및 Predicate)을 방문합니다.  
+5. 식의 비입력 부분(예: Projection 및 Predicate)을 방문합니다.  
   
-6.  전역 스택에 추가된 모든 개체를 꺼냅니다.  
+6. 전역 스택에 추가된 모든 개체를 꺼냅니다.  
   
  DbSkipExpression은 SQL에서 직접 해당하는 항목이 없습니다. 논리적으로 DbSkipExpression은 다음으로 변환됩니다.  
   
@@ -301,9 +301,9 @@ ORDER BY sk1, sk2, ...
   
  두 번째 단계로, 입력을 한 번에 하나씩 처리합니다. 각 입력에 대해 다음 작업이 수행됩니다.  
   
-1.  입력을 방문합니다.  
+1. 입력을 방문합니다.  
   
-2.  ProcessJoinInputResult를 호출하여 입력을 방문한 결과를 사후 처리합니다. ProcessJoinInputResult는 조인 식의 자식을 방문하고 자식에 의해 생성된 SqlSelectStatement를 완료한 후 기호 테이블을 유지 관리합니다. 자식의 결과는 다음 중 하나일 수 있습니다.  
+2. ProcessJoinInputResult를 호출하여 입력을 방문한 결과를 사후 처리합니다. ProcessJoinInputResult는 조인 식의 자식을 방문하고 자식에 의해 생성된 SqlSelectStatement를 완료한 후 기호 테이블을 유지 관리합니다. 자식의 결과는 다음 중 하나일 수 있습니다.  
   
     -   부모가 추가될 것과 다른 SqlSelectStatement. 이러한 경우에는 기본 열을 추가하여 SqlSelectStatement를 완성해야 할 수 있습니다. 입력이 조인이면 새 조인 기호를 만들어야 하고, 그렇지 않으면 일반 기호를 만듭니다.  
   
@@ -389,7 +389,7 @@ All(input, x) => Not Exists(Filter(input, not(x))
 ```  
   
 ### <a name="dbnotexpression"></a>DbNotExpression  
- 경우에 따라 입력 식을 사용하여 DbNotExpression의 변환을 축소할 수 있습니다. 예를 들면 다음과 같습니다.  
+ 경우에 따라 입력 식을 사용하여 DbNotExpression의 변환을 축소할 수 있습니다. 예를 들어:  
   
 ```  
 Not(IsNull(a)) =>  "a IS NOT NULL"  
@@ -412,7 +412,8 @@ IsEmpty(inut) = Not Exists(input)
   
  열 이름 바꾸기는 Symbol 개체를 문자열에 쓰는 동안 발생합니다. 첫 번째 단계의 AddDefaultColumns는 특정 열 기호의 이름을 바꿔야 하는지 여부를 확인합니다. 두 번째 단계에서는 생성된 이름이 AllColumnNames에서 사용되는 모든 이름과 충돌하지 않도록 하기 위해서만 이름 바꾸기가 발생합니다.  
   
- 익스텐트 별칭과 열에 고유한 이름을 생성하려면 <existing_name>_n을 사용합니다. 여기서 n은 아직 사용되지 않은 가장 작은 별칭입니다. 모든 별칭의 전역 목록을 사용하면 연속된 이름 바꾸기의 필요성이 증가합니다.  
+ 익스텐트 별칭 및 열에 대 한 고유한 이름을 생성 하려면 여기서 n은 아직 사용 하지 않은 가장 작은 별칭 < existing_name > _n을 사용 합니다. 모든 별칭의 전역 목록을 사용하면 연속된 이름 바꾸기의 필요성이 증가합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [샘플 공급자의 SQL 생성](../../../../../docs/framework/data/adonet/ef/sql-generation-in-the-sample-provider.md)

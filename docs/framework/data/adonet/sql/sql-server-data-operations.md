@@ -2,12 +2,12 @@
 title: ADO.NET에서 SQL Server 데이터 작업
 ms.date: 03/30/2017
 ms.assetid: b864ebc9-ed8e-4059-85fd-36d9198f5521
-ms.openlocfilehash: 66e7a33edfc053760109ded4c18c84950869b4af
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2dd4430e5b7f86253966f2778abe7d9ba58661a1
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54702238"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59143509"
 ---
 # <a name="sql-server-data-operations-in-adonet"></a>ADO.NET에서 SQL Server 데이터 작업
 이 섹션에서는 .NET Framework Data Provider for SQL Server(<xref:System.Data.SqlClient>)와 관련된 SQL Server의 기능 및 특징에 대해 설명합니다.  
@@ -26,6 +26,7 @@ ms.locfileid: "54702238"
  SQL Server 2008에 도입된 테이블 반환 매개 변수를 사용하는 방법에 대해 설명합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [ADO.NET에서 데이터 검색 및 수정](../../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)
 - [SQL Server 및 ADO.NET](../../../../../docs/framework/data/adonet/sql/index.md)
 - [ADO.NET 관리되는 공급자 및 데이터 집합 개발자 센터](https://go.microsoft.com/fwlink/?LinkId=217917)

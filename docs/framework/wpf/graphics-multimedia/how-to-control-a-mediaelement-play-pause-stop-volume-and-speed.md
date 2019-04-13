@@ -10,12 +10,12 @@ helpviewer_keywords:
 - multimedia [WPF], controlling playback of media
 - media [WPF], controlling playback of
 ms.assetid: 6885a730-e054-4c16-8c1e-ffe17b1f7c32
-ms.openlocfilehash: 7fe8107f7b5b65f00f2c5ac029f806aeba758d20
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: bb7319fc7ccec0220cbd79a32d5d015f9f2422d0
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57368508"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59182860"
 ---
 # <a name="how-to-control-a-mediaelement-play-pause-stop-volume-and-speed"></a>방법: MediaElement 제어(재생, 일시 중지, 정지, 볼륨 및 속도)
 다음 예제에서는 사용 하 여 미디어 재생을 제어 하는 방법을 보여 줍니다는 <xref:System.Windows.Controls.MediaElement>합니다. 이 예제에서는 재생, 일시 중지, 중지 및 미디어에서 앞뒤로 건너뛸 뿐만 볼륨 및 속도 비율을 조정할 수 있는 간단한 미디어 플레이어를 만듭니다.  
@@ -35,4 +35,5 @@ ms.locfileid: "57368508"
  [!code-vb[MediaGallery_snip#CodeBehindMediaElementExampleWholePage](~/samples/snippets/visualbasic/VS_Snippets_Wpf/MediaGallery_snip/VB/MediaElementExample.xaml.vb#codebehindmediaelementexamplewholepage)]  
   
 ## <a name="see-also"></a>참고자료
-- [Storyboard를 사용하여 MediaElement 제어](how-to-control-a-mediaelement-by-using-a-storyboard.md)
+
+- [스토리보드를 사용하여 MediaElement 제어](how-to-control-a-mediaelement-by-using-a-storyboard.md)

@@ -1,5 +1,5 @@
 ---
-title: <assemblyBinding>에 대한 <runtime> 요소
+title: <assemblyBinding> 에 대 한 요소 <runtime>
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/runtime/assemblyBinding
@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 964cbb35-ab49-4498-8471-209689e5dada
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e75f8e0561711fea8646c9da84f1b7553b3f7553
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: eec77d4dd42a7b95d1e2cd0e353e2e54746676b7
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55284403"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59225250"
 ---
 # <a name="assemblybinding-element-for-runtime"></a>\<assemblyBinding > 요소에 대 한 \<런타임 >
 어셈블리 버전 리디렉션 및 어셈블리 위치에 대한 정보를 포함합니다.  
@@ -93,6 +93,7 @@ ms.locfileid: "55284403"
 ```  
   
 ## <a name="see-also"></a>참고자료
+
 - [런타임 설정 스키마](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
 - [구성 파일 스키마](../../../../../docs/framework/configure-apps/file-schema/index.md)
 - [어셈블리 버전 리디렉션](../../../../../docs/framework/configure-apps/redirect-assembly-versions.md)

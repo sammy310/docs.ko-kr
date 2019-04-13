@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b9f6bf0dc0fb92d8b5bb7e3f4d017eed85d85338
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fcdcb8d70e04430ac09c78f0ef0ce1d95358db53
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54531208"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59148878"
 ---
 # <a name="iobjecthandle-interface"></a>IObjectHandle 인터페이스
 간접 참조에서 래핑 해제 값으로 마샬링 개체에 대 한 메서드를 제공합니다.  
@@ -42,4 +42,5 @@ ms.locfileid: "54531208"
  **.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>참고자료
+
 - [호스팅 인터페이스](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)

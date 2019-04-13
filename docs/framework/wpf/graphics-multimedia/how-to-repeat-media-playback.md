@@ -7,12 +7,12 @@ helpviewer_keywords:
 - multimedia [WPF], repeating media playback
 - playback of media [WPF], repeating
 ms.assetid: 02ab486d-c6b6-4918-9edd-45a12aca4683
-ms.openlocfilehash: b6df627d8837751a26b48725c25aab8d457caf36
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 788bc6f31d61626f15548791135adb8c60258b49
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57371054"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59184693"
 ---
 # <a name="how-to-repeat-media-playback"></a>방법: 미디어 재생 반복
 이 예제에서는 미디어를 무기한 재생하는 방법, 즉 무한 루프로 재생되도록 설정하는 방법을 보여 줍니다.  
@@ -23,6 +23,7 @@ ms.locfileid: "57371054"
  [!code-xaml[MediaGallery_snippet#SoundRepeatExampleWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/MediaGallery_snippet/CSharp/SoundRepeatExample.xaml#soundrepeatexamplewholepage)]  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Windows.Controls.MediaElement>
 - <xref:System.Windows.Media.MediaTimeline>
 - <xref:System.Windows.Media.Animation.Storyboard>

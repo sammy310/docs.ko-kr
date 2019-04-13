@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 07a1a6e1-db73-4555-81df-bc4054c51492
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 825df88f4e8ee79f7159307d3f22416ddc27ae0a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7a372a9072d2ee18df1efd060d3fd024a92e0bc6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54734343"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59178245"
 ---
 # <a name="net-framework-4-hosting-global-static-functions"></a>.NET Framework 4 호스팅 전역 정적 함수
 [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)] MSCorEE.dll에 새 내보낸된 메서드 하나를 소개 합니다. [CLRCreateIntstance](../../../../docs/framework/unmanaged-api/hosting/clrcreateinstance-function.md)합니다.  
@@ -23,5 +23,6 @@ ms.locfileid: "54734343"
  세 가지 인터페이스 중 하나를 제공 합니다. [ICLRMetaHost](../../../../docs/framework/unmanaged-api/hosting/iclrmetahost-interface.md)하십시오 [ICLRMetaHostPolicy](../../../../docs/framework/unmanaged-api/hosting/iclrmetahostpolicy-interface.md), 또는 [ICLRDebugging](../../../../docs/framework/unmanaged-api/debugging/iclrdebugging-interface.md)합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [호스팅 전역 정적 함수](../../../../docs/framework/unmanaged-api/hosting/hosting-global-static-functions.md)
 - [호스팅](../../../../docs/framework/unmanaged-api/hosting/index.md)

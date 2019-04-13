@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 18a2156b87fb4bf72e8de7c32c7e20d2a017c900
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 61fce3e06b5245872f7061716e8d995dd5f5043c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57479275"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59224886"
 ---
 # <a name="iclrmetahostrequestruntimeloadednotification-method"></a>ICLRMetaHost::RequestRuntimeLoadedNotification 메서드
 공용 언어 런타임 (CLR) 버전을 처음 로드 되었지만 아직 시작 하지 않은 경우 호출할 보장 되는 콜백 함수를 제공 합니다. 이 메서드를 대체 합니다 [LockClrVersion](../../../../docs/framework/unmanaged-api/hosting/lockclrversion-function.md) 함수입니다.  
@@ -44,7 +44,7 @@ HRESULT RequestRuntimeLoadedNotification (
 |HRESULT|설명|  
 |-------------|-----------------|  
 |S_OK|메서드가 완료되었습니다.|  
-|E_POINTER|`pCallbackFunction`가 null입니다.|  
+|E_POINTER|`pCallbackFunction` null입니다.|  
   
 ## <a name="remarks"></a>설명  
  콜백은 다음과 같이 작동합니다.  
@@ -99,5 +99,6 @@ typedef void (__stdcall *RuntimeLoadedCallbackFnPtr)(
  **.NET Framework 버전:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>참고자료
+
 - [ICLRMetaHost 인터페이스](../../../../docs/framework/unmanaged-api/hosting/iclrmetahost-interface.md)
 - [호스팅](../../../../docs/framework/unmanaged-api/hosting/index.md)

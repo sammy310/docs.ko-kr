@@ -5,12 +5,12 @@ helpviewer_keywords:
 - MenuStrip [Windows Forms], merging
 - merging [Windows Forms], general concepts
 ms.assetid: 95e113ba-f362-4dda-8a76-6d95ddc45cee
-ms.openlocfilehash: 292c299bd15cd62eabd9a13db1abab1ed07fe57e
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: dbe1c0325499e7b925d504fc80f9034f9e387475
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57722353"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59231567"
 ---
 # <a name="merging-menu-items-in-the-windows-forms-menustrip-control"></a>Windows Forms MenuStrip 컨트롤의 메뉴 항목 병합
 응용 프로그램을 다중 문서 인터페이스 (MDI)에 있는 경우 부모 폼의 메뉴에 메뉴 항목이 나 자식 폼의 전체 메뉴를 병합할 수 있습니다.  
@@ -54,8 +54,9 @@ ms.locfileid: "57722353"
  활성화 하 여 자동 병합을 트리거할 수 있습니다는 <xref:System.Windows.Forms.MenuStrip> MDI 원본입니다. 활성화 되 면 원본 <xref:System.Windows.Forms.MenuStrip> MDI 대상에 병합 됩니다. 새 폼을 활성화 하는 경우 마지막 폼의 병합 되돌아가고 새 폼에서 트리거됩니다. 설정 하 여이 동작을 제어할 수 있습니다는 <xref:System.Windows.Forms.ToolStripItem.MergeAction%2A> 각각에 필요한 속성을 <xref:System.Windows.Forms.ToolStripItem>를 설정 하 고는 <xref:System.Windows.Forms.ToolStrip.AllowMerge%2A> 각 속성 <xref:System.Windows.Forms.MenuStrip>합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Windows.Forms.ToolStripManager>
 - <xref:System.Windows.Forms.MenuStrip>
 - [MenuStrip 컨트롤](menustrip-control-windows-forms.md)
-- [방법: MenuStrip이 포함 된 MDI 창 목록 만들기](how-to-create-an-mdi-window-list-with-menustrip-windows-forms.md)
-- [방법: MDI 응용 프로그램의 자동 메뉴 병합 설정](how-to-set-up-automatic-menu-merging-for-mdi-applications.md)
+- [방법: MenuStrip을 사용하여 MDI 창 목록 만들기](how-to-create-an-mdi-window-list-with-menustrip-windows-forms.md)
+- [방법: MDI 애플리케이션에 대한 자동 메뉴 병합 설정](how-to-set-up-automatic-menu-merging-for-mdi-applications.md)

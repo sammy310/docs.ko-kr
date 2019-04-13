@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 5fd8f46d-3961-46a7-84af-2eb1f48e75cf
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 485579df9c3976d70d2560c10d74f0402f48492e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: afec37a6510e445f1fe2c430684099af967be0ff
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54590394"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59161072"
 ---
 # <a name="security-transparent-code-level-1"></a>보안 투명 코드, 수준 1
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
@@ -55,7 +55,7 @@ ms.locfileid: "54590394"
 > [!IMPORTANT]
 >  수준 1 투명도는 어셈블리 범위로 제한되고 어셈블리 간에 적용되지 않습니다. 수준 1 투명도는 주로 Microsoft 내에서 보안 감사 목적으로만 사용됩니다. 다른 어셈블리의 보안 투명 코드에서 수준 1 어셈블리 내의 보안에 중요 형식 및 멤버에 액세스할 수 있습니다. 모든 수준 1 보안에 중요 형식 및 멤버에서 완전 신뢰를 위해 링크 요청을 수행해야 합니다. 보안 안전에 중요 형식 및 멤버는 형식 또는 멤버가 액세스하는 보호된 리소스에 대한 권한이 호출자에게 있는지 확인해야 합니다.  
   
- .NET Framework 이전 버전과의 호환성을 위해 투명도 특성을 사용하여 주석으로 처리되지 않은 모든 멤버는 보안 안전에 중요로 간주합니다. 주석으로 처리되지 않은 모든 형식은 투명으로 간주합니다. 투명도의 유효성을 검사하는 정적 분석 규칙은 없습니다. 따라서 런타임에 투명도 오류를 디버그해야 할 수 있습니다.  
+ .NET Framework 이전 버전과의 호환성을 위해 투명도 특성을 사용하여 주석 처리되지 않은 모든 멤버는 보안 안전에 중요로 간주합니다. 주석으로 처리되지 않은 모든 형식은 투명으로 간주합니다. 투명도의 유효성을 검사하는 정적 분석 규칙은 없습니다. 따라서 런타임에 투명도 오류를 디버그해야 할 수 있습니다.  
   
 <a name="transparency_attributes"></a>   
 ## <a name="transparency-attributes"></a>투명도 특성  
@@ -131,5 +131,6 @@ public class B
  명시적으로 보안에 위험으로 표시된 `Critical` 메서드를 제외하고 이전 코드는 투명합니다. 어셈블리 수준 <xref:System.Security.SecurityCriticalAttribute> 특성을 사용해도 투명도는 기본 설정입니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [보안 투명 코드, 수준 2](../../../docs/framework/misc/security-transparent-code-level-2.md)
 - [보안 변경 내용](../../../docs/framework/security/security-changes.md)

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - BindingSource component [Windows Forms], about BindingSource component
 - data binding [Windows Forms], BindingSource component
 ms.assetid: 7bc69c90-8a11-48b1-9336-3adab5b41591
-ms.openlocfilehash: 9348d44697b2c617481b55242faa83ab517e6226
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 81559444b6e3da2861e48bdc637ae01d246c0758
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57707822"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59165349"
 ---
 # <a name="bindingsource-component-architecture"></a>BindingSource 구성 요소 아키텍처
 사용 하 여는 <xref:System.Windows.Forms.BindingSource> 구성 요소를 데이터 원본에 일반적으로 모든 Windows Forms 컨트롤을 바인딩할 수 있습니다.  
@@ -169,11 +169,12 @@ ms.locfileid: "57707822"
  사용할 수는 <xref:System.Windows.Forms.BindingSource> 모든 Windows Forms 컨트롤을 데이터 소스에 바인딩할 구성 요소 이지만 <xref:System.Windows.Forms.BindingNavigator> 컨트롤은 작업을 위해 특별히 설계 되었습니다를 <xref:System.Windows.Forms.BindingSource> 구성 요소입니다. <xref:System.Windows.Forms.BindingNavigator> 제어 하기 위한 사용자 인터페이스를 제공 하는 컨트롤을 <xref:System.Windows.Forms.BindingSource> 구성 요소의 현재 항목입니다. 기본적으로 <xref:System.Windows.Forms.BindingNavigator> 컨트롤에서 탐색 메서드에 해당 하는 단추를 제공 합니다 <xref:System.Windows.Forms.BindingSource> 구성 요소입니다. 자세한 내용은 [방법: Windows Forms BindingNavigator 컨트롤을 사용 하 여 데이터를 이동](how-to-navigate-data-with-the-windows-forms-bindingnavigator-control.md)합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Windows.Forms.BindingSource>
 - <xref:System.Windows.Forms.BindingNavigator>
 - [BindingSource 구성 요소 개요](bindingsource-component-overview.md)
 - [BindingNavigator 컨트롤](bindingnavigator-control-windows-forms.md)
 - [Windows Forms 데이터 바인딩](../windows-forms-data-binding.md)
 - [Windows Forms에 사용할 수 있는 컨트롤](controls-to-use-on-windows-forms.md)
-- [방법: 형식에는 Windows Forms 컨트롤 바인딩](how-to-bind-a-windows-forms-control-to-a-type.md)
-- [방법: BindingSource 사용 하 여 Windows Forms 컨트롤에 데이터 소스 업데이트 내용 반영](reflect-data-source-updates-in-a-wf-control-with-the-bindingsource.md)
+- [방법: 형식에 Windows Forms 컨트롤 바인딩](how-to-bind-a-windows-forms-control-to-a-type.md)
+- [방법: BindingSource가 있는 Windows Forms 컨트롤에서 데이터 원본 업데이트 반영](reflect-data-source-updates-in-a-wf-control-with-the-bindingsource.md)

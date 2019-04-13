@@ -8,17 +8,16 @@ helpviewer_keywords:
 - controls [WPF], Expander
 - Expander control [WPF], about Expander control
 ms.assetid: 877bf425-0e54-49ec-8fd2-13a211377abb
-ms.openlocfilehash: 29003779825b92402fa12b810c1a099731ac8af6
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: ddf6ee550e0eb6af5af44d032e85ecd5b735b951
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58409460"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59130405"
 ---
 # <a name="expander-overview"></a>Expander 개요
 <xref:System.Windows.Controls.Expander> 컨트롤 창과 유사 하 고 헤더를 포함 하는 확장 가능한 영역에 콘텐츠를 제공할 수 있습니다.  
-  
-  
+
 <a name="CreatinganExpanderinXAML"></a>   
 ## <a name="creating-a-simple-expander"></a>단순 확장기 만들기  
  다음 예제에는 간단한을 만드는 방법을 보여 줍니다 <xref:System.Windows.Controls.Expander> 제어 합니다. 이 예제에서는 <xref:System.Windows.Controls.Expander> 앞의 그림 것 같습니다.  
@@ -29,7 +28,7 @@ ms.locfileid: "58409460"
   
 <a name="SettingtheDirectionoftheExpandingWindow"></a>   
 ## <a name="setting-the-direction-of-the-expanding-content-area"></a>확장되는 콘텐츠 영역의 방향 설정  
- 콘텐츠 영역을 설정할 수 있습니다는 <xref:System.Windows.Controls.Expander> 컨트롤 네 방향 중 하나로 확장 하도록 (<xref:System.Windows.Controls.ExpandDirection.Down>, <xref:System.Windows.Controls.ExpandDirection.Up>, <xref:System.Windows.Controls.ExpandDirection.Left>, 또는 <xref:System.Windows.Controls.ExpandDirection.Right>)를 사용 하 여는 <xref:System.Windows.Controls.ExpandDirection> 속성입니다. 경우 콘텐츠 영역을 축소 합니다 <xref:System.Windows.Controls.Expander> <xref:System.Windows.Controls.HeaderedContentControl.Header%2A> 해당 토글 단추만 표시 합니다. <xref:System.Windows.Controls.Button> 방향 화살표를 표시 하는 컨트롤을 확장 하거나 콘텐츠 영역을 축소 토글 단추도 사용 됩니다. 확장 하면는 <xref:System.Windows.Controls.Expander> 창과 같은 영역에서 모든 해당 콘텐츠를 표시 하려고 합니다.  
+ 콘텐츠 영역을 설정할 수 있습니다는 <xref:System.Windows.Controls.Expander> 컨트롤 네 방향 중 하나로 확장 하도록 (<xref:System.Windows.Controls.ExpandDirection.Down>, <xref:System.Windows.Controls.ExpandDirection.Up>, <xref:System.Windows.Controls.ExpandDirection.Left>, 또는 <xref:System.Windows.Controls.ExpandDirection.Right>)를 사용 하 여는 <xref:System.Windows.Controls.ExpandDirection> 속성입니다. 경우 콘텐츠 영역을 축소 된 <xref:System.Windows.Controls.Expander><xref:System.Windows.Controls.HeaderedContentControl.Header%2A> 해당 토글 단추만 표시 합니다. <xref:System.Windows.Controls.Button> 방향 화살표를 표시 하는 컨트롤을 확장 하거나 콘텐츠 영역을 축소 토글 단추도 사용 됩니다. 확장 하면는 <xref:System.Windows.Controls.Expander> 창과 같은 영역에서 모든 해당 콘텐츠를 표시 하려고 합니다.  
   
 <a name="SettingSizeDimensionsonanExpanderinaPanel"></a>   
 ## <a name="controlling-the-size-of-an-expander-in-a-panel"></a>패널에서 확장기의 크기 제어  
@@ -60,6 +59,7 @@ ms.locfileid: "58409460"
  설정 하 여 콘텐츠를 정렬할 수를 <xref:System.Windows.Controls.Control.HorizontalContentAlignment%2A> 및 <xref:System.Windows.Controls.Control.VerticalContentAlignment%2A> 속성에는 <xref:System.Windows.Controls.Expander> 제어 합니다. 이러한 속성을 설정하면 맞춤이 헤더뿐만 아니라 확장된 콘텐츠에도 적용됩니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Windows.Controls.Expander>
 - <xref:System.Windows.Controls.ExpandDirection>
 - [방법 항목](expander-how-to-topics.md)

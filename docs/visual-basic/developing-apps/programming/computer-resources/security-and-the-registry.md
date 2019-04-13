@@ -5,12 +5,12 @@ helpviewer_keywords:
 - security [Visual Basic], registry
 - registry [Visual Basic], security issues
 ms.assetid: 9980aff7-2f69-492b-8f66-29a9a76d3df5
-ms.openlocfilehash: 62e9e68eafe55c4d4c3fb2bba05d54f55df74114
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: dc0071d1fddf99bd712ebe8aea5c61bbc3522f93
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54671631"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58839360"
 ---
 # <a name="security-and-the-registry-visual-basic"></a>보안 및 레지스트리(Visual Basic)
 이 페이지에서는 레지스트리에 데이터를 저장할 경우 보안에 미치는 영향을 설명합니다.  
@@ -39,5 +39,6 @@ ms.locfileid: "54671631"
 >  웹 애플리케이션에서 레지스트리를 읽는 경우 현재 사용자의 ID는 웹 애플리케이션에 구현된 인증 및 가장에 따라 결정됩니다.  
   
 ## <a name="see-also"></a>참고 항목
+
 - <xref:Microsoft.VisualBasic.MyServices.RegistryProxy>
 - [레지스트리 읽기 및 쓰기](../../../../visual-basic/developing-apps/programming/computer-resources/reading-from-and-writing-to-the-registry.md)

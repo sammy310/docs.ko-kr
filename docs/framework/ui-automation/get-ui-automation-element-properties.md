@@ -8,12 +8,12 @@ helpviewer_keywords:
 - properties, retrieving
 - UI Automation, retrieving properties of elements
 ms.assetid: 09576b1a-291f-435c-980e-dee32d899ae1
-ms.openlocfilehash: 87090709068ced015ba607005678995c25bf3403
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: 93e0fba4288ba3231bfed45252bdaa78892d008c
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57679651"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59330768"
 ---
 # <a name="get-ui-automation-element-properties"></a>UI 자동화 요소 속성 가져오기
 > [!NOTE]
@@ -23,15 +23,15 @@ ms.locfileid: "57679651"
   
 ### <a name="get-a-current-property-value"></a>현재 속성 값을 가져오려면  
   
-1.  가져오기는 <xref:System.Windows.Automation.AutomationElement> 가져오려는 속성이 있습니다.  
+1. 가져오기는 <xref:System.Windows.Automation.AutomationElement> 가져오려는 속성이 있습니다.  
   
-2.  호출 <xref:System.Windows.Automation.AutomationElement.GetCurrentPropertyValue%2A>, 검색 또는 <xref:System.Windows.Automation.AutomationElement.Current%2A> 속성 구조 및 해당 멤버 중 하나에서 값을 가져옵니다.  
+2. 호출 <xref:System.Windows.Automation.AutomationElement.GetCurrentPropertyValue%2A>, 검색 또는 <xref:System.Windows.Automation.AutomationElement.Current%2A> 속성 구조 및 해당 멤버 중 하나에서 값을 가져옵니다.  
   
 ### <a name="get-a-cached-property-value"></a>캐시 된 속성 값을 가져오려면  
   
-1.  가져오기는 <xref:System.Windows.Automation.AutomationElement> 가져오려는 속성이 있습니다. 속성에 지정 해야 합니다는 <xref:System.Windows.Automation.CacheRequest>합니다.  
+1. 가져오기는 <xref:System.Windows.Automation.AutomationElement> 가져오려는 속성이 있습니다. 속성에 지정 해야 합니다는 <xref:System.Windows.Automation.CacheRequest>합니다.  
   
-2.  호출 <xref:System.Windows.Automation.AutomationElement.GetCachedPropertyValue%2A>, 검색 또는 <xref:System.Windows.Automation.AutomationElement.Cached%2A> 속성 구조 및 해당 멤버 중 하나에서 값을 가져옵니다.  
+2. 호출 <xref:System.Windows.Automation.AutomationElement.GetCachedPropertyValue%2A>, 검색 또는 <xref:System.Windows.Automation.AutomationElement.Cached%2A> 속성 구조 및 해당 멤버 중 하나에서 값을 가져옵니다.  
   
 ## <a name="example"></a>예제  
  다음 예제에서는 현재 속성을 검색 하는 다양 한 방법은 <xref:System.Windows.Automation.AutomationElement>합니다.  
@@ -40,6 +40,7 @@ ms.locfileid: "57679651"
  [!code-vb[UIAClient_snip#170](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/UIAClient_snip/VisualBasic/ClientForm.vb#170)]  
   
 ## <a name="see-also"></a>참고자료
+
 - [클라이언트의 UI 자동화 속성](../../../docs/framework/ui-automation/ui-automation-properties-for-clients.md)
-- [UI 자동화의 캐싱 사용](../../../docs/framework/ui-automation/use-caching-in-ui-automation.md)
+- [UI 자동화에서 캐싱 사용](../../../docs/framework/ui-automation/use-caching-in-ui-automation.md)
 - [UI 자동화 클라이언트의 캐싱](../../../docs/framework/ui-automation/caching-in-ui-automation-clients.md)

@@ -7,17 +7,18 @@ helpviewer_keywords:
 - controls [WPF], FlowDocumentReader
 - FlowDocumentReader control [WPF]
 ms.assetid: ba7aaa70-f77b-4555-a79d-68a12c8e134b
-ms.openlocfilehash: a0d7adc127c593176ec7b60bf55a8f903c8b6ab7
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: d8201eeceeb39ffea888849eba32e77ee7c25ece
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57364088"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59138192"
 ---
 # <a name="flowdocumentreader"></a>FlowDocumentReader
 합니다 <xref:System.Windows.Controls.FlowDocumentReader> 컨트롤은 보기 데 <xref:System.Windows.Documents.FlowDocument> 콘텐츠입니다. 여러 표시 모드를 지원합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Windows.Controls.FlowDocumentReader>
 - <xref:System.Windows.Controls.FlowDocumentPageViewer>
 - <xref:System.Windows.Controls.FlowDocumentScrollViewer>

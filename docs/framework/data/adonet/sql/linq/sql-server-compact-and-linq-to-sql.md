@@ -2,12 +2,12 @@
 title: SQL Server Compact 및 LINQ to SQL
 ms.date: 03/30/2017
 ms.assetid: 59022359-a5a2-4c42-9a6a-5c0259c3ad17
-ms.openlocfilehash: d7c0b34c431947a3e9f3f6b87e5d66e800c58f44
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
+ms.openlocfilehash: db3f7aef082d965dc27b69f5a966ff038c0ffac0
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56092932"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59145719"
 ---
 # <a name="sql-server-compact-and-linq-to-sql"></a>SQL Server Compact 및 LINQ to SQL
 SQL Server Compact는 기본 데이터베이스를 Visual Studio를 사용 하 여 설치 합니다. 자세한 내용은 [를 사용 하 여 SQL Server Compact (Visual Studio)](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2012/aa983321(v=vs.110))합니다.  
@@ -43,4 +43,5 @@ SQL Server Compact는 기본 데이터베이스를 Visual Studio를 사용 하 �
 -   SQL Server Compact는 부분 신뢰를 지원하지 않습니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [참조](../../../../../../docs/framework/data/adonet/sql/linq/reference.md)

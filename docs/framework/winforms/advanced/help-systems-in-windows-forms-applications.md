@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Help [Windows Forms], Windows Forms
 - HelpProvider component [Windows Forms], providing Help in Windows applications
 ms.assetid: 2a96a278-432c-41fc-9e3c-5bfedf5e1267
-ms.openlocfilehash: 22c07490d0d3b54be96f32d67c9b4aee70306c1d
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 1a02271d59a59f0a6e06a652a34922ba5dcdf1f3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57718315"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59087276"
 ---
 # <a name="help-systems-in-windows-forms-applications"></a>Windows Forms 응용 프로그램의 도움말 시스템
 하나의 가장 중요 한 행위를 응용 프로그램의 개발자는 사용자를 위해 수는 유용한 도움말 시스템입니다. 이것이 혼동 하거나 응용 될 때 설정 됩니다 것입니다. 사용 하 여 쉽게 이루어집니다 Windows 기반 응용 프로그램의 도움말 시스템을 제공 하는 [HelpProvider 구성 요소](../controls/helpprovider-component-windows-forms.md)합니다.  
@@ -24,6 +24,7 @@ ms.locfileid: "57718315"
  HTML Help Workshop을 사용 하 여 HTML 도움말 1.x 파일을 생성할 수 있습니다. HTML 도움말에 대 한 자세한 내용은 "HTML Help Workshop" 또는 MSDN의 다른 "HTML Help" 항목을 참조 하세요.  
   
 ## <a name="see-also"></a>참고자료
+
 - [Windows Forms에 사용자 도움말 통합](integrating-user-help-in-windows-forms.md)
 - [HelpProvider 구성 요소](../controls/helpprovider-component-windows-forms.md)
 - [ToolTip 구성 요소](../controls/tooltip-component-windows-forms.md)

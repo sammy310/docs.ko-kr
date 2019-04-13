@@ -5,12 +5,12 @@ helpviewer_keywords:
 - control patterns, for UI Automation clients
 - UI Automation, clients, control patterns for
 ms.assetid: 8b81645b-8be3-4e26-9c98-4fb0fceca06b
-ms.openlocfilehash: b98735b111d634584ec019a75d942f39e38cc8c5
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: 829df66f49d5df5f5c8cf8d2b6cfa74f0a2172dd
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57679582"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59101135"
 ---
 # <a name="control-pattern-mapping-for-ui-automation-clients"></a>UI 자동화 클라이언트에 대한 컨트롤 패턴 매핑
 > [!NOTE]
@@ -77,4 +77,5 @@ ms.locfileid: "57679582"
 >  컨트롤 형식에 지원되는 컨트롤 패턴이 없지만 조건부로 지원되는 하나 이상의 컨트롤 패턴이 있는 경우, 조건부 컨트롤 패턴 중 하나는 항상 지원됩니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [UI 자동화 개요](../../../docs/framework/ui-automation/ui-automation-overview.md)

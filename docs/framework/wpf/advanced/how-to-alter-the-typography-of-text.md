@@ -8,12 +8,12 @@ helpviewer_keywords:
 - setting Typography attributes [WPF]
 - Typography attribute [WPF], setting
 ms.assetid: 19a3b49b-60a2-4c11-a786-e26b4c965588
-ms.openlocfilehash: eeed93f62802a942915511db060c0e6c029579e0
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 4c027424632f8671ba8d7cae1c899ef3a53edc26
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57365786"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59078865"
 ---
 # <a name="how-to-alter-the-typography-of-text"></a>방법: 텍스트 입력 체계 변경
 다음 예제에서는 설정 하는 방법을 보여 줍니다 합니다 <xref:System.Windows.Documents.TextElement.Typography%2A> 특성을 사용 하 여 <xref:System.Windows.Documents.Paragraph> 를 예제 요소로 합니다.  
@@ -36,4 +36,5 @@ ms.locfileid: "57365786"
  [!code-vb[TextElementSnippets#_TextElement_Typog](~/samples/snippets/visualbasic/VS_Snippets_Wpf/TextElementSnippets/visualbasic/window1.xaml.vb#_textelement_typog)]  
   
 ## <a name="see-also"></a>참고자료
+
 - [유동 문서 개요](flow-document-overview.md)

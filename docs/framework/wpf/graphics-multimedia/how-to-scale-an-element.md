@@ -5,12 +5,12 @@ helpviewer_keywords:
 - scaling [WPF], elements
 - graphics [WPF], scaling elements
 ms.assetid: 18158d94-bbe7-4f6a-814e-84d27fa748bf
-ms.openlocfilehash: 6decc10c954b51d64c6045c01f1264df35429862
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 607b3a11085f746503c1b82552f1740b49d9ef5d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57358615"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59131705"
 ---
 # <a name="how-to-scale-an-element"></a>방법: 요소 배율 조정
 사용 하는 방법을 보여 주는이 예제는 <xref:System.Windows.Media.ScaleTransform> 요소 배율을 조정 합니다.  
@@ -38,6 +38,7 @@ ScaleX 및 ScaleY 값은 같지만 중심은 다른 두 개의 ScaleTransform �
  전체 샘플을 보려면 [2차원 변환 샘플](https://go.microsoft.com/fwlink/?LinkID=158252)을 참조하세요.  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Windows.Media.Transform>
 - <xref:System.Windows.Media.ScaleTransform>
 - [Transform 개요](transforms-overview.md)

@@ -8,19 +8,19 @@ helpviewer_keywords:
 ms.assetid: f04816ab-110d-4e28-9283-845d6d9a4a68
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b6c0ead0715221354970ddee90e89bae7c583266
-ms.sourcegitcommit: b8ace47d839f943f785b89e2fff8092b0bf8f565
+ms.openlocfilehash: 21c24040f7d093aa72738957316a4219539510c5
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "55675428"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59076941"
 ---
 # <a name="runtime-settings-schema"></a>런타임 설정 스키마
 런타임 설정은 공용 언어 런타임에서 .NET Framework를 대상으로 하는 애플리케이션을 구성하는 데 사용됩니다.  
 
 ## <a name="the-runtime-section-and-its-parent-and-child-elements"></a>\<런타임 > 섹션 및 해당 부모 및 자식 요소
   
-[\<구성>](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)  
+[\<configuration>](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)  
 &nbsp;&nbsp;[\<runtime>](../../../../../docs/framework/configure-apps/file-schema/runtime/runtime-element.md)  
 &nbsp;&nbsp;&nbsp;&nbsp;[\<alwaysFlowImpersonationPolicy>](../../../../../docs/framework/configure-apps/file-schema/runtime/alwaysflowimpersonationpolicy-element.md)  
 &nbsp;&nbsp;&nbsp;&nbsp;[\<AppContextSwitchOverrides>](../../../../../docs/framework/configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md)  
@@ -132,6 +132,7 @@ ms.locfileid: "55675428"
 |[\<UseSmallInternalThreadStacks>](../../../../../docs/framework/configure-apps/file-schema/runtime/usesmallinternalthreadstacks-element.md)|런타임이 내부적으로 사용하는 특정 스레드를 만들 때 기본 스택 크기가 아닌 명시적 스택 크기를 사용하도록 요청합니다.|  
   
 ## <a name="see-also"></a>참고자료
+
 - [구성 파일 스키마](../../../../../docs/framework/configure-apps/file-schema/index.md)
 - [동시 가비지 수집을 사용 하지 않도록 설정](gcconcurrent-element.md#to-disable-background-garbage-collection)
 - [어셈블리 버전 리디렉션](../../../../../docs/framework/configure-apps/redirect-assembly-versions.md)

@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - message security [WCF], programming overview
 ms.assetid: 739ec222-4eda-4cc9-a470-67e64a7a3f10
-ms.openlocfilehash: 2b49031b0001ddba01a888806206360c1cbdbacb
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d327605c084cd5fb1c65fbb786e871b421730b83
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54699469"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59313322"
 ---
 # <a name="programming-wcf-security"></a>WCF 보안 프로그래밍
 이 항목에서는 보안 Windows Communication Foundation (WCF) 응용 프로그램을 만드는 데 기본 프로그래밍 작업을 설명 합니다. 이 항목에서는 인증, 기밀성 및 무결성을 통틀어 *전송 보안*합니다. 이 항목에서는 권한 부여 (리소스 또는 서비스에 대 한 액세스 제어);를 다루지 않습니다. 권한 부여에 대 한 내용은 참조 하세요 [권한 부여](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md)합니다.  
@@ -25,11 +25,11 @@ ms.locfileid: "54699469"
 ## <a name="setting-the-security-mode"></a>보안 모드 설정  
  다음에서는 WCF의 보안 모드를 사용 하 여 프로그래밍을 위한 일반 단계를 설명합니다.  
   
-1.  응용 프로그램 요구 사항에 적합한 미리 정의된 바인딩 중 하나를 선택합니다. 바인딩 선택 목록은 참조 하세요 [System-Provided Bindings](../../../../docs/framework/wcf/system-provided-bindings.md)합니다. 기본적으로 거의 모든 바인딩에서 보안을 사용할 수 있습니다. 한 가지 예외는 합니다 <xref:System.ServiceModel.BasicHttpBinding> 클래스 (구성을 사용 하는 [ \<basicHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md)).  
+1. 응용 프로그램 요구 사항에 적합한 미리 정의된 바인딩 중 하나를 선택합니다. 바인딩 선택 목록은 참조 하세요 [System-Provided Bindings](../../../../docs/framework/wcf/system-provided-bindings.md)합니다. 기본적으로 거의 모든 바인딩에서 보안을 사용할 수 있습니다. 한 가지 예외는 합니다 <xref:System.ServiceModel.BasicHttpBinding> 클래스 (구성을 사용 하는 [ \<basicHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md)).  
   
      선택한 바인딩에 따라 전송이 결정됩니다. 예를 들어, <xref:System.ServiceModel.WSHttpBinding>에서는 HTTP를 전송으로 사용하고 <xref:System.ServiceModel.NetTcpBinding>에서는 TCP를 사용합니다.  
   
-2.  바인딩에 대한 보안 모드 중 하나를 선택합니다. 선택한 바인딩에 따라 사용 가능한 모드 선택 사항이 결정됩니다. 예를 들어, <xref:System.ServiceModel.WSDualHttpBinding>에서는 전송 보안을 허용하지 않으므로, 전송 보안은 옵션이 아닙니다. 마찬가지로 <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding>과 <xref:System.ServiceModel.NetNamedPipeBinding>에서는 모두 메시지 보안을 허용하지 않습니다.  
+2. 바인딩에 대한 보안 모드 중 하나를 선택합니다. 선택한 바인딩에 따라 사용 가능한 모드 선택 사항이 결정됩니다. 예를 들어, <xref:System.ServiceModel.WSDualHttpBinding>에서는 전송 보안을 허용하지 않으므로, 전송 보안은 옵션이 아닙니다. 마찬가지로 <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding>과 <xref:System.ServiceModel.NetNamedPipeBinding>에서는 모두 메시지 보안을 허용하지 않습니다.  
   
      다음과 같은 세 가지 선택 옵션이 있습니다.  
   
@@ -47,9 +47,9 @@ ms.locfileid: "54699469"
   
          이 선택 옵션에서는 전송 계층을 사용하여 메시지 전송을 보안하지만, 모든 메시지에 다른 서비스에 필요한 풍부한 자격 증명이 포함되어 있습니다. 이 옵션은 전송 보안의 성능 이점과 메시지 보안의 풍부한 자격 증명 이점을 결합합니다. <xref:System.ServiceModel.BasicHttpBinding>, <xref:System.ServiceModel.WSFederationHttpBinding>, <xref:System.ServiceModel.NetPeerTcpBinding> 및 <xref:System.ServiceModel.WSHttpBinding> 바인딩에서 이 옵션을 사용할 수 있습니다.  
   
-3.  HTTP(HTTPS)에 대해 전송 보안을 사용하려면 SSL 인증서를 사용하여 호스트를 구성하고 포트에서 SSL을 사용하도록 설정해야 합니다. 자세한 내용은 [HTTP 전송 보안](../../../../docs/framework/wcf/feature-details/http-transport-security.md)합니다.  
+3. HTTP(HTTPS)에 대해 전송 보안을 사용하려면 SSL 인증서를 사용하여 호스트를 구성하고 포트에서 SSL을 사용하도록 설정해야 합니다. 자세한 내용은 [HTTP 전송 보안](../../../../docs/framework/wcf/feature-details/http-transport-security.md)합니다.  
   
-4.  <xref:System.ServiceModel.WSHttpBinding>을 사용하고 보안 세션을 설정할 필요가 없는 경우 <xref:System.ServiceModel.NonDualMessageSecurityOverHttp.EstablishSecurityContext%2A> 속성을 `false`로 설정합니다.  
+4. <xref:System.ServiceModel.WSHttpBinding>을 사용하고 보안 세션을 설정할 필요가 없는 경우 <xref:System.ServiceModel.NonDualMessageSecurityOverHttp.EstablishSecurityContext%2A> 속성을 `false`로 설정합니다.  
   
      클라이언트와 서비스에서 대칭 키를 사용하여 채널을 만들 때(클라이언트와 서버가 대화 상자가 닫힐 때까지 대화 기간 동안 동일한 키를 사용), 보안 세션이 발생합니다.  
   
@@ -102,5 +102,6 @@ ms.locfileid: "54699469"
  [!code-vb[c_TcpClient#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_tcpclient/vb/source.vb#1)]  
   
 ## <a name="see-also"></a>참고자료
+
 - [기본 WCF 프로그래밍](../../../../docs/framework/wcf/basic-wcf-programming.md)
 - [일반적인 보안 시나리오](../../../../docs/framework/wcf/feature-details/common-security-scenarios.md)

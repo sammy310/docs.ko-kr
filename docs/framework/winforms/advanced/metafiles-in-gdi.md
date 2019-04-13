@@ -9,12 +9,12 @@ helpviewer_keywords:
 - GDI+, metafiles
 - metafiles
 ms.assetid: 51da872c-c783-440f-8bf6-1e580a966c31
-ms.openlocfilehash: 25ce3fdd98560aba0918431bb77d6f3f23a04784
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: bb972f158496192aa38f10564209bb2781837414
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57722466"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59119862"
 ---
 # <a name="metafiles-in-gdi"></a>GDI+의 메타파일
 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 제공 된 <xref:System.Drawing.Imaging.Metafile> 클래스를 기록 하 고 메타 파일을 표시할 수 있도록 합니다. 벡터 이미지 라고도 불리는 메타 파일 이미지 그리기 명령 및 설정의 시퀀스로 저장 되어 있는 경우 명령 및 설정에 기록를 <xref:System.Drawing.Imaging.Metafile> 개체를 메모리에 저장 하거나 파일 또는 스트림에 저장할 수 있습니다.  
@@ -38,4 +38,5 @@ ms.locfileid: "57722466"
  [!code-vb[System.Drawing.ImagesBitmapsMetafiles#21](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.ImagesBitmapsMetafiles/VB/Class1.vb#21)]  
   
 ## <a name="see-also"></a>참고자료
+
 - [이미지, 비트맵 및 메타파일](images-bitmaps-and-metafiles.md)

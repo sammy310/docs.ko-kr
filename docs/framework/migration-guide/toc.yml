@@ -17,8 +17,8 @@ items:
     - name: '방법: 설치된 .NET Framework 버전 확인'
       href: how-to-determine-which-versions-are-installed.md
       items:
-      - name: .NET Framework 릴리스 키 및 Windows 운영 체제 버전
-        href: release-keys-and-os-versions.md
+      - name: .NET Framework 버전에서 릴리스 DWORD의 최솟값
+        href: minimum-release-dword.md
     - name: '방법: 설치된 .NET Framework 업데이트 확인'
       href: how-to-determine-which-net-framework-updates-are-installed.md
   - name: '방법: .NET Framework 4 이상 버전을 지원하도록 앱 구성'
@@ -27,9 +27,9 @@ items:
     href: migrating-from-the-net-framework-1-1.md
   - name: .NET Framework 4 마이그레이션 문제
     href: net-framework-4-migration-issues.md
-ms.openlocfilehash: c46b7ac4680e6aa988e39055cb51c80a4bb0e8b4
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: ad5a32ddb015693e5c146e5e3dfea3979013e18e
+ms.sourcegitcommit: 68eb5c4928e2b082f178a42c16f73fedf52c2ab8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58470492"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59054938"

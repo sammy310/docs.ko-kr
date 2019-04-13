@@ -2,12 +2,12 @@
 title: 라우팅 계약
 ms.date: 03/30/2017
 ms.assetid: 9ceea7ae-ea19-4cf9-ba4f-d071e236546d
-ms.openlocfilehash: 593c7a328aba82c35f5876e6e325844c829c08c7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 660652caa804b8c19f6dd18bcba51bf4abc3ba12
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54707715"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59145355"
 ---
 # <a name="routing-contracts"></a>라우팅 계약
 라우팅 계약은 라우팅 서비스에서 처리할 수 있는 메시지 패턴을 정의합니다.  각 계약은 형식이 없으며 메시지 스키마나 동작을 몰라도 서비스에서 메시지를 받을 수 있도록 합니다. 따라서 라우트할 기본 메시지의 세부 사항에 대한 추가 구성 없이 라우팅 서비스에서 일반적인 방식으로 메시지를 라우트할 수 있습니다.  
@@ -27,5 +27,6 @@ ms.locfileid: "54707715"
 |<xref:System.ServiceModel.Routing.IDuplexSessionRouter>|SessionMode=SessionMode.Required<br /><br /> CallbackContract=typeof(ISimplexSession)<br /><br /> AsyncPattern = true<br /><br /> IsOneWay = true<br /><br /> TransactionFlow(TransactionFlowOption.Allowed)|IDuplexSessionChannel -> IDuplexSessionChannel|  
   
 ## <a name="see-also"></a>참고자료
+
 - [라우팅 서비스](../../../../docs/framework/wcf/feature-details/routing-service.md)
 - [라우팅 소개](../../../../docs/framework/wcf/feature-details/routing-introduction.md)

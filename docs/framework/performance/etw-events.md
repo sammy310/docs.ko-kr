@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: d186276f-6afb-4dfd-bf3c-4251edc2c299
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 3ebb95b6131ae28dd453ab79c1c0b7b13fccb8e3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fa36399320a8c396a222619172264a32f3eb3505
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54745937"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59072729"
 ---
 # <a name="etw-events-in-the-net-framework"></a>ETW Events in the .NET Framework
 ETW(Windows용 이벤트 추적)는 Windows 운영 체제에서 제공되는 오버헤드가 낮고 확장 가능한 고성능 추적 시스템입니다. ETW는 .NET Framework에서 제공되는 프로파일링 및 디버깅 지원을 보완하며 다양한 시나리오 관련 문제를 해결하는 데 사용될 수 있습니다.  
@@ -27,6 +27,7 @@ ETW(Windows용 이벤트 추적)는 Windows 운영 체제에서 제공되는 오
  CLR ETW 이벤트가 공용 언어 런타임에서 제공되는 프로파일링 및 디버깅 지원을 보완하는 방법을 설명합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [CLR ETW 이벤트](../../../docs/framework/performance/clr-etw-events.md)
 - [TPL(작업 병렬 라이브러리)](../../../docs/standard/parallel-programming/task-parallel-library-tpl.md)
 - [PLINQ(병렬 LINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)

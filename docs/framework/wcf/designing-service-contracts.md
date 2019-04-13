@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - service contracts [WCF]
 ms.assetid: 8e89cbb9-ac84-4f0d-85ef-0eb6be0022fd
-ms.openlocfilehash: 37639bfc71918dd92a2334f4076dc2b4d6ff9698
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 68ea866b736350b8a393d1f4788e4b08754e5ab4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54583196"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59102741"
 ---
 # <a name="designing-service-contracts"></a>서비스 계약 디자인
 이 항목에서는 서비스 계약의 정의, 서비스 계약을 정의하는 방법, 사용 가능한 작업(및 기본 메시지 교환에 미치는 영향), 사용되는 데이터 형식 및 시나리오 요구 사항을 만족하는 작업을 디자인하는 데 도움이 되는 기타 문제에 대해 설명합니다.  
@@ -270,6 +270,7 @@ End Interface
  이름과 네임스페이스를 명시적으로 설정하지 않는 경우 어셈블리에서 IL 난독 처리를 사용하면 계약 형식 이름과 네임스페이스가 변경되고 WSDL 및 통신 교환이 수정되어 일반적으로 실패하게 됩니다. 계약 이름과 네임스페이스를 명시적으로 설정하지 않고 난독 처리를 사용하려면 <xref:System.Reflection.ObfuscationAttribute> 및 <xref:System.Reflection.ObfuscateAssemblyAttribute> 특성을 사용하여 계약 형식 이름 및 네임스페이스가 수정되지 않게 합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [방법: 요청-회신 계약 만들기](../../../docs/framework/wcf/feature-details/how-to-create-a-request-reply-contract.md)
 - [방법: 단방향 계약 만들기](../../../docs/framework/wcf/feature-details/how-to-create-a-one-way-contract.md)
 - [방법: 이중 계약 만들기](../../../docs/framework/wcf/feature-details/how-to-create-a-duplex-contract.md)

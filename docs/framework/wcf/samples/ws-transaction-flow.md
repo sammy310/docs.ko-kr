@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Transactions
 ms.assetid: f8eecbcf-990a-4dbb-b29b-c3f9e3b396bd
-ms.openlocfilehash: 35af3090c0f898578a5f8dfb81d02d22a0074ad2
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.openlocfilehash: cde5599734dbeb450e10b2b74cf035b41129d653
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47108500"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59296097"
 ---
 # <a name="ws-transaction-flow"></a>WS Transaction Flow
 이 샘플에서는 클라이언트에서 조정하는 트랜잭션의 사용법과 WS-Atomic Transaction 또는 OleTransactions 프로토콜을 사용하는 트랜잭션 흐름의 클라이언트 및 서버 옵션을 보여 줍니다. 이 샘플은 기반 합니다 [Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md) 계산기 서비스를 구현 하는 하지만 작업의 사용을 보여 줍니다에 소요 되는 `TransactionFlowAttribute` 사용 하 여 합니다 **TransactionFlowOption** 트랜잭션 흐름 사용 하도록 설정 된 확인 하는 열거형입니다. 흐름이 지정된 트랜잭션의 범위 내에서는 요청한 작업에 대한 로그가 데이터베이스에 기록되고 클라이언트에서 조정하는 트랜잭션이 완료될 때까지 유지됩니다. 클라이언트 트랜잭션이 완료되지 않으면 웹 서비스 트랜잭션에서 데이터베이스에 적합한 업데이트가 커밋되지 않도록 합니다.  
@@ -188,7 +188,7 @@ Console.WriteLine("Transaction committed");
   
 -   두 번째 `Subtract` 요청은 `TransactionScopeOption.Suppress` 옵션으로 선언된 새 트랜잭션 범위 내에서 수행됩니다. 따라서 클라이언트의 초기 외부 트랜잭션이 표시되지 않고 요청에서 트랜잭션의 흐름을 서비스로 지정하지 않습니다. 이 접근 방식을 사용하면 필요하지 않은 경우 클라이언트에서 트랜잭션 흐름이 실행되지 않도록 하고 트랜잭션 흐름이 서비스로 지정되지 않도록 보호할 수 있습니다. 서비스의 작업은 새 트랜잭션과 연결되지 않은 트랜잭션의 범위 내에서 발생합니다.  
   
--   `Multiply` 클라이언트에서의 정의 생성 하기 때문에 요청이 서비스에 트랜잭션을 전달 되지 않습니다는 `ICalculator` 인터페이스에는 <xref:System.ServiceModel.TransactionFlowAttribute> 로 설정 <xref:System.ServiceModel.TransactionFlowOption> `NotAllowed`.  
+-   `Multiply` 클라이언트에서의 정의 생성 하기 때문에 요청이 서비스에 트랜잭션을 전달 되지 않습니다는 `ICalculator` 인터페이스에는 <xref:System.ServiceModel.TransactionFlowAttribute> 로 설정 <xref:System.ServiceModel.TransactionFlowOption>`NotAllowed`.  
   
 -   `Divide` 요청에서도 `ICalculator` 인터페이스에 대해 클라이언트에서 생성한 정의에 `TransactionFlowAttribute`가 포함되지 않으므로 트랜잭션의 흐름을 서비스로 지정하지 않습니다. 또한 서비스의 작업은 또 다른 새 트랜잭션과 연결되지 않은 트랜잭션의 범위 내에서 발생합니다.  
   
@@ -223,11 +223,11 @@ Press <ENTER> to terminate the service.
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>샘플을 설치, 빌드 및 실행하려면  
   
-1.  지침에 따라 C# 또는 Visual Basic.NET 버전의 솔루션을 빌드하려면 [Windows Communication Foundation 샘플 빌드](../../../../docs/framework/wcf/samples/building-the-samples.md)  
+1. 지침에 따라 C# 또는 Visual Basic.NET 버전의 솔루션을 빌드하려면 [Windows Communication Foundation 샘플 빌드](../../../../docs/framework/wcf/samples/building-the-samples.md)  
   
-2.  SQL Server Express Edition 또는 SQL Server를 설치했고 연결 문자열이 서비스의 응용 프로그램 구성 파일에서 올바르게 설정되었는지 확인합니다. 데이터베이스를 사용하지 않고 샘플을 실행하려면 서비스의 응용 프로그램 구성 파일에서 `usingSql` 값을 `false`로 설정합니다.  
+2. SQL Server Express Edition 또는 SQL Server를 설치했고 연결 문자열이 서비스의 응용 프로그램 구성 파일에서 올바르게 설정되었는지 확인합니다. 데이터베이스를 사용 하지 않고 샘플을 실행 하려면 설정의 `usingSql` 서비스의 응용 프로그램 구성 파일의 값 `false`  
   
-3.  단일 또는 다중 컴퓨터 구성에서 샘플을 실행 하려면의 지침을 따릅니다 [Windows Communication Foundation 샘플 실행](../../../../docs/framework/wcf/samples/running-the-samples.md)합니다.  
+3. 단일 또는 다중 컴퓨터 구성에서 샘플을 실행 하려면의 지침을 따릅니다 [Windows Communication Foundation 샘플 실행](../../../../docs/framework/wcf/samples/running-the-samples.md)합니다.  
   
     > [!NOTE]
     >  다중 컴퓨터 구성의 경우 아래의 지침을 사용하여 DTC(Distributed Transaction Coordinator)를 사용하도록 설정하고 Windows SDK에서 WsatConfig.exe 도구를 사용하여 WCF 트랜잭션 네트워크 지원을 사용하도록 설정합니다. 참조 [Ws-atomic Transaction 지원 구성](https://go.microsoft.com/fwlink/?LinkId=190370) WsatConfig.exe 설정에 대 한 정보에 대 한 합니다.  
@@ -236,7 +236,7 @@ Press <ENTER> to terminate the service.
   
 ### <a name="to-configure-the-microsoft-distributed-transaction-coordinator-msdtc-to-support-running-the-sample"></a>샘플을 실행할 수 있도록 MSDTC(Microsoft Distributed Transaction Coordinator)를 구성하려면  
   
-1.  Windows Server 2003 또는 Windows XP를 실행하는 서비스 컴퓨터에서 다음 지침에 따라 들어오는 네트워크 트랜잭션을 허용하도록 MSDTC를 구성합니다.  
+1. Windows Server 2003 또는 Windows XP를 실행하는 서비스 컴퓨터에서 다음 지침에 따라 들어오는 네트워크 트랜잭션을 허용하도록 MSDTC를 구성합니다.  
   
     1.  **시작** 메뉴에서 이동할 **제어판**, 다음 **관리 도구**를 차례로 **구성 요소 서비스**.  
   
@@ -252,7 +252,7 @@ Press <ENTER> to terminate the service.
   
     7.  **확인** 을 클릭하여 대화 상자를 닫습니다.  
   
-2.  Windows Server 2008 또는 Windows Vista를 실행하는 서비스 컴퓨터에서 다음 지침에 따라 들어오는 네트워크 트랜잭션을 허용하도록 MSDTC를 구성합니다.  
+2. Windows Server 2008 또는 Windows Vista를 실행하는 서비스 컴퓨터에서 다음 지침에 따라 들어오는 네트워크 트랜잭션을 허용하도록 MSDTC를 구성합니다.  
   
     1.  **시작** 메뉴에서 이동할 **제어판**, 다음 **관리 도구**를 차례로 **구성 요소 서비스**.  
   
@@ -266,7 +266,7 @@ Press <ENTER> to terminate the service.
   
     6.  **확인** 을 클릭하여 대화 상자를 닫습니다.  
   
-3.  클라이언트 컴퓨터에서 나가는 네트워크 트랜잭션을 허용하도록 MSDTC를 구성합니다.  
+3. 클라이언트 컴퓨터에서 나가는 네트워크 트랜잭션을 허용하도록 MSDTC를 구성합니다.  
   
     1.  **시작** 메뉴에서 이동할 `Control Panel`, 다음 **관리 도구**를 차례로 **구성 요소 서비스**.  
   

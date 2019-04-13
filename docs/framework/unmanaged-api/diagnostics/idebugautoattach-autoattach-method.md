@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 16ccc56579a1ebe45ada61a9565cc8ade335333d
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 5064e66708044d82e3a097c8235b5b28a3412200
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57469680"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59077136"
 ---
 # <a name="idebugautoattachautoattach-method"></a>IDebugAutoAttach::AutoAttach 메서드
 서버에서 호출한 디버거 자동 수행 연결 합니다.  
@@ -63,4 +63,5 @@ HRESULT AutoAttach
  **헤더:** DbgAutoAttach.h  
   
 ## <a name="see-also"></a>참고자료
+
 - [IDebugAutoAttach 인터페이스](../../../../docs/framework/unmanaged-api/diagnostics/idebugautoattach-interface.md)

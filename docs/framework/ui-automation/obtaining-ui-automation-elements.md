@@ -5,12 +5,12 @@ helpviewer_keywords:
 - UI Automation, obtaining elements
 - elements, UI Automation, obtaining
 ms.assetid: c2caaf45-e59c-42a1-bc9b-77a6de520171
-ms.openlocfilehash: 24a9c63b8d52ef05c386e5bfefe81e33245ece91
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: 89c9397ba579f04d81eee7af6363f8fee3abfe1d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57674486"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59191278"
 ---
 # <a name="obtaining-ui-automation-elements"></a>UI 자동화 요소 가져오기
 > [!NOTE]
@@ -34,9 +34,9 @@ ms.locfileid: "57674486"
 ## <a name="conditions"></a>조건  
  [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 요소를 검색할 때 사용할 수 있는 대부분의 기술에 대해, 검색할 요소가 무엇인지 정의하는 기준 집합인 <xref:System.Windows.Automation.Condition>을 지정해야 합니다.  
   
- 가장 간단한 조건은 <xref:System.Windows.Automation.Condition.TrueCondition>으로서, 검색 범위 내의 모든 요소가 반환되도록 하는 미리 정의된 개체입니다. <xref:System.Windows.Automation.Condition.FalseCondition>과는 반대로 <xref:System.Windows.Automation.Condition.TrueCondition>은 요소가 검색되지 않도록 하기 때문에 그다지 유용하지 않습니다.  
+ 가장 간단한 조건은 <xref:System.Windows.Automation.Condition.TrueCondition>으로서, 검색 범위 내의 모든 요소가 반환되도록 하는 미리 정의된 개체입니다. <xref:System.Windows.Automation.Condition.FalseCondition>에 반대로 <xref:System.Windows.Automation.Condition.TrueCondition>, 요소가 검색 되지 못하는 것은 그다지 유용 합니다.  
   
- 단독으로 또는 다른 조건과 함께 사용할 수 있는 기타 미리 정의된 3개의 조건으로 <xref:System.Windows.Automation.Automation.ContentViewCondition>, <xref:System.Windows.Automation.Automation.ControlViewCondition>및 <xref:System.Windows.Automation.Automation.RawViewCondition>이 있습니다. 단독으로 사용되는<xref:System.Windows.Automation.Automation.RawViewCondition>은 <xref:System.Windows.Automation.Condition.TrueCondition>또는 <xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.IsControlElement%2A> 속성별로 요소를 필터링하지 않기 때문에 <xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.IsContentElement%2A> 에 해당합니다.  
+ 단독으로 또는 다른 조건과 함께 사용할 수 있는 기타 미리 정의된 3개의 조건으로 <xref:System.Windows.Automation.Automation.ContentViewCondition>, <xref:System.Windows.Automation.Automation.ControlViewCondition>및 <xref:System.Windows.Automation.Automation.RawViewCondition>이 있습니다. <xref:System.Windows.Automation.Automation.RawViewCondition>를 단독으로 사용 하면 동일 <xref:System.Windows.Automation.Condition.TrueCondition>요소를 필터링 하지 않기 때문에 해당 <xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.IsControlElement%2A> 또는 <xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.IsContentElement%2A> 속성.  
   
  하나 이상의 <xref:System.Windows.Automation.PropertyCondition> 개체에서 기타 조건이 생성되고, 각 조건은 속성 값을 지정합니다. 예를 들어, <xref:System.Windows.Automation.PropertyCondition> 은 요소가 활성화되도록 지정하거나 특정 컨트롤 패턴을 지원하도록 지정할 수 있습니다.  
   
@@ -97,6 +97,7 @@ ms.locfileid: "57674486"
  정적 <xref:System.Windows.Automation.AutomationElement> 속성에서 포커스가 있는 컨트롤을 나타내는 <xref:System.Windows.Automation.AutomationElement.FocusedElement%2A> 를 검색할 수 있습니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [속성 조건을 기반으로 UI 자동화 요소 찾기](../../../docs/framework/ui-automation/find-a-ui-automation-element-based-on-a-property-condition.md)
 - [TreeWalker를 사용하여 UI 자동화 요소 간 탐색](../../../docs/framework/ui-automation/navigate-among-ui-automation-elements-with-treewalker.md)
 - [UI 자동화 트리 개요](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)

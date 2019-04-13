@@ -2,12 +2,12 @@
 title: 클라이언트 구성
 ms.date: 03/30/2017
 ms.assetid: 5da5bd3b-65d9-43b7-91b9-cc9e989b1350
-ms.openlocfilehash: 1cd7a066622c7d317b1a9c62658531521082c964
-ms.sourcegitcommit: af0a22a4eb11bbcd33baec49150d551955b50a16
+ms.openlocfilehash: b9975c6caeedc94bf4a7773e71a95eb0d8c7aed2
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56261806"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59144692"
 ---
 # <a name="client-configuration"></a>클라이언트 구성
 주소, 바인딩, 동작 및 계약, 서비스 끝점에 연결을 사용 하는 클라이언트는 클라이언트 끝점의 "ABC" 속성을 지정 하려면 Windows Communication Foundation (WCF) 클라이언트 구성을 사용할 수 있습니다. 합니다 [ \<클라이언트 >](../../configure-apps/file-schema/wcf/client.md) 요소에는 [ \<끝점 >](../../configure-apps/file-schema/wcf/endpoint-of-client.md) 해당 특성이 끝점 Abc를 구성에 사용 되는 요소입니다. 이러한 특성에 설명 되어는 [끝점 구성](#configuring-endpoints) 섹션입니다.  
@@ -80,12 +80,11 @@ ms.locfileid: "56261806"
 </configuration>  
 ```  
   
- 선택적 `name` 특성은 지정된 계약의 끝점을 고유하게 식별합니다. 이 특성은 <xref:System.ServiceModel.ChannelFactory%601.%23ctor%2A> 또는 <xref:System.ServiceModel.ClientBase%601.%23ctor%2A>가 서비스에 대한 채널을 만들 때 로드해야 하는 대상 엔드포인트를 클라이언트 구성에서 지정하는 데 사용됩니다. 와일드 카드 끝점 구성 이름 "\*"는 사용할 수 있으며 나타냅니다는 <xref:System.ServiceModel.ChannelFactory.ApplyConfiguration%2A> 하나인 정확 하 게 사용 가능 하 고 그렇지 않으면 제공 된 모든 끝점 구성 파일에서 로드 하도록 하는 메서드에서 예외가 throw 됩니다. 이 특성을 생략하면 해당하는 엔드포인트가 지정된 계약 형식과 연결된 기본 엔드포인트로 사용됩니다. `name` 특성의 기본값은 다른 이름과 마찬가지로 일치되는 빈 문자열입니다.  
+ 선택적 `name` 특성은 지정된 계약의 엔드포인트를 고유하게 식별합니다. 이 특성은 <xref:System.ServiceModel.ChannelFactory%601.%23ctor%2A> 또는 <xref:System.ServiceModel.ClientBase%601.%23ctor%2A>가 서비스에 대한 채널을 만들 때 로드해야 하는 대상 엔드포인트를 클라이언트 구성에서 지정하는 데 사용됩니다. 와일드 카드 끝점 구성 이름 "\*"는 사용할 수 있으며 나타냅니다는 <xref:System.ServiceModel.ChannelFactory.ApplyConfiguration%2A> 하나인 정확 하 게 사용 가능 하 고 그렇지 않으면 제공 된 모든 끝점 구성 파일에서 로드 하도록 하는 메서드에서 예외가 throw 됩니다. 이 특성을 생략하면 해당하는 엔드포인트가 지정된 계약 형식과 연결된 기본 엔드포인트로 사용됩니다. `name` 특성의 기본값은 다른 이름과 마찬가지로 일치되는 빈 문자열입니다.  
   
  모든 엔드포인트에는 해당 엔드포인트를 찾아서 식별할 수 있는 연결된 주소가 있어야 합니다. `address` 특성을 사용하면 엔드포인트의 위치를 제공하는 URL을 지정할 수 있습니다. URI(Uniform Resource Identifier)를 만든 다음 <xref:System.ServiceModel.ServiceHost> 메서드 중 하나를 사용하여 <xref:System.ServiceModel.ServiceHost.AddServiceEndpoint%2A>에 추가하여 서비스 엔드포인트의 주소를 코드로 지정할 수도 있습니다. 자세한 내용은 [주소](../../../../docs/framework/wcf/feature-details/endpoint-addresses.md)합니다. 소개에 표시 된 대로 합니다 [ \<헤더 >](../../../../docs/framework/configure-apps/file-schema/wcf/headers.md) 및 [ \<identity >](../../../../docs/framework/configure-apps/file-schema/wcf/identity.md) 의 일부인 요소를 <xref:System.ServiceModel.EndpointAddress> 에서 설명 하 고는 [ 주소](../../../../docs/framework/wcf/feature-details/endpoint-addresses.md) 항목입니다.  
   
- `binding` 특성은 서비스에 연결할 때 사용할 엔드포인트 바인딩 형식을 나타냅니다. 형식에 등록된 구성 섹션이 있어야 형식을 참조할 수 있습니다. 이 이전 예제에서는 합니다 [ \<wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md) 끝점에서 사용 하는 섹션을 <xref:System.ServiceModel.WSHttpBinding>. 그러나 엔드포인트에서 사용할 수 있는 지정된 형식의 바인딩이 여러 개 있을 수도 있습니다. 이러한 각각의 고유한 [ \<바인딩 >](../../../../docs/framework/misc/binding.md) (바인딩) 형식 요소 내의 요소입니다. 
-  `bindingconfiguration` 특성은 동일한 형식의 바인딩을 구분하는 데 사용됩니다. 해당 값과 일치 합니다 `name` 특성을 [ \<바인딩 >](../../../../docs/framework/misc/binding.md) 요소입니다. 클라이언트를 구성 하는 방법에 대 한 자세한 내용은 참조 구성을 사용 하 여 바인딩 [방법: 구성에서 클라이언트 바인딩 지정](../../../../docs/framework/wcf/how-to-specify-a-client-binding-in-configuration.md)합니다.  
+ `binding` 특성은 서비스에 연결할 때 사용할 엔드포인트 바인딩 형식을 나타냅니다. 형식에 등록된 구성 섹션이 있어야 형식을 참조할 수 있습니다. 이 이전 예제에서는 합니다 [ \<wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md) 끝점에서 사용 하는 섹션을 <xref:System.ServiceModel.WSHttpBinding>. 그러나 엔드포인트에서 사용할 수 있는 지정된 형식의 바인딩이 여러 개 있을 수도 있습니다. 이러한 각각의 고유한 [ \<바인딩 >](../../../../docs/framework/misc/binding.md) (바인딩) 형식 요소 내의 요소입니다. `bindingconfiguration` 특성은 동일한 형식의 바인딩을 구분하는 데 사용됩니다. 해당 값과 일치 합니다 `name` 특성을 [ \<바인딩 >](../../../../docs/framework/misc/binding.md) 요소입니다. 클라이언트를 구성 하는 방법에 대 한 자세한 내용은 참조 구성을 사용 하 여 바인딩 [방법: 구성에서 클라이언트 바인딩 지정](../../../../docs/framework/wcf/how-to-specify-a-client-binding-in-configuration.md)합니다.  
   
  합니다 `behaviorConfiguration` 특성은 지정 하는 데 [ \<동작 >](../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md) 의 합니다 [ \<endpointBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/endpointbehaviors.md) 끝점에서 사용 해야 합니다. 해당 값과 일치 합니다 `name` 특성을 [ \<동작 >](../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md) 요소입니다. 구성을 사용 하 여 클라이언트 동작을 지정 하는 예제를 보려면 [클라이언트 동작 구성](../../../../docs/framework/wcf/configuring-client-behaviors.md)합니다.  
   
@@ -95,5 +94,6 @@ ms.locfileid: "56261806"
  합니다 [ \<메타 데이터 >](../../../../docs/framework/configure-apps/file-schema/wcf/metadata.md) 요소 확장을 가져오기 하는 메타 데이터를 등록 하는 데 사용 되는 설정을 지정 하는 합니다. 메타 데이터 시스템 확장에 대 한 자세한 내용은 참조 하세요. [메타 데이터 시스템 확장](../../../../docs/framework/wcf/extending/extending-the-metadata-system.md)합니다.  
   
 ## <a name="see-also"></a>참고자료
-- [끝점: 주소, 바인딩 및 계약](../../../../docs/framework/wcf/feature-details/endpoints-addresses-bindings-and-contracts.md)
+
+- [엔드포인트: 주소, 바인딩 및 계약](../../../../docs/framework/wcf/feature-details/endpoints-addresses-bindings-and-contracts.md)
 - [클라이언트 동작 구성](../../../../docs/framework/wcf/configuring-client-behaviors.md)

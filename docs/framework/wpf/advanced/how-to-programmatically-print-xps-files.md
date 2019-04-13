@@ -8,12 +8,12 @@ helpviewer_keywords:
 - printing XPS files programmatically [WPF]
 - XPS files [WPF], printing programmatically
 ms.assetid: 0b1c0a3f-b19e-43d6-bcc9-eb3ec4e555ad
-ms.openlocfilehash: c00a12000dd10ba32bd550186377547b3ef72d25
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 1d6d45289c9278271a7c7bef5225ad024a5ab0fe
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57372726"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59312074"
 ---
 # <a name="how-to-programmatically-print-xps-files"></a>방법: 프로그래밍 방식으로 XPS 파일 인쇄
 한 오버 로드를 사용할 수는 <xref:System.Printing.PrintQueue.AddJob%2A> 인쇄 하는 방법 [!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)] 열지 않고 파일을 <xref:System.Windows.Controls.PrintDialog> 또는 원칙적으로 모든 [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] 전혀 합니다.  
@@ -25,13 +25,13 @@ ms.locfileid: "57372726"
 ## <a name="example"></a>예제  
  3-매개 변수를 사용 하는 주요 단계 <xref:System.Printing.PrintQueue.AddJob%28System.String%2CSystem.String%2CSystem.Boolean%29> 메서드는 다음과 같습니다. 아래 예제에서 자세히 설명합니다.  
   
-1.  프린터가 XPSDrv 프린터인지 확인합니다. XPSDrv에 대한 자세한 내용은 [인쇄 개요](printing-overview.md)를 참조하세요.  
+1. 프린터가 XPSDrv 프린터인지 확인합니다. XPSDrv에 대한 자세한 내용은 [인쇄 개요](printing-overview.md)를 참조하세요.  
   
-2.  프린터가 XPSDrv 프린터가 아닌 경우 스레드 아파트를 단일 스레드로 설정합니다.  
+2. 프린터가 XPSDrv 프린터가 아닌 경우 스레드 아파트를 단일 스레드로 설정합니다.  
   
-3.  인쇄 서버 및 인쇄 대기열 개체를 인스턴스화합니다.  
+3. 인쇄 서버 및 인쇄 대기열 개체를 인스턴스화합니다.  
   
-4.  작업 이름, 인쇄할 파일을 지정 하는 메서드를 호출 및 <xref:System.Boolean> 프린터가 XPSDrv 프린터 여부를 나타내는 플래그입니다.  
+4. 작업 이름, 인쇄할 파일을 지정 하는 메서드를 호출 및 <xref:System.Boolean> 프린터가 XPSDrv 프린터 여부를 나타내는 플래그입니다.  
   
  아래 예제에서는 디렉터리에서 [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] 파일을 모두 일괄 처리 인쇄하는 방법을 보여 줍니다. 3-매개 변수가 디렉터리를 지정 하 라는 메시지를 응용 프로그램 이지만 <xref:System.Printing.PrintQueue.AddJob%28System.String%2CSystem.String%2CSystem.Boolean%29> 메서드에 필요 하지 않습니다는 [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]합니다. 전달할 수 있는는 [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] 파일 이름 및 경로가 있는 코드 경로에서 사용할 수 있습니다.  
   
@@ -59,13 +59,14 @@ ms.locfileid: "57372726"
  **참고** 편의 위해 위의 예제에서는의 현재 상태는 \*.xps 확장 파일은 테스트로 [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)]합니다. 그러나 [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] 파일이 이 확장명일 필요는 없습니다. [isXPS.exe(isXPS 규칙 도구)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/aa348104(v=vs.100))는 [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)]의 유효성을 검사하기 위해 파일을 테스트하는 한 가지 방법입니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Printing.PrintQueue>
 - <xref:System.Printing.PrintQueue.AddJob%2A>
 - <xref:System.Threading.ApartmentState>
 - <xref:System.STAThreadAttribute>
 - [XPS 문서](/windows/desktop/printdocs/documents)
 - [XPS 문서 인쇄](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms771525(v=vs.90))
-- [관리 되는 스레딩과 관리 되지 않는 스레딩](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/5s8ee185(v=vs.100))
+- [관리되는 스레딩과 관리되지 않는 스레딩](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/5s8ee185(v=vs.100))
 - [isXPS.exe(isXPS 규칙 도구)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/aa348104(v=vs.100))
 - [WPF의 문서](documents-in-wpf.md)
 - [인쇄 개요](printing-overview.md)

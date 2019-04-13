@@ -2,12 +2,12 @@
 title: <serviceCertificate> <clientCredentials> 요소
 ms.date: 03/30/2017
 ms.assetid: e50c0ac5-f0df-4c90-b54b-fc602c1f84ea
-ms.openlocfilehash: 7134e8b3d253575bf26f26490372aa94549c73b7
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 4fe196ef8737c7abde939e36c2bb7afd5a0d86b5
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55279684"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59145342"
 ---
 # <a name="servicecertificate-of-clientcredentials-element"></a>\<serviceCertificate >의 \<clientCredentials > 요소
 클라이언트에 대해 서비스를 인증할 때 사용할 인증서를 지정합니다.  
@@ -51,6 +51,7 @@ ms.locfileid: "55279684"
  특성을 `serviceCertificate` 요소의 특성과 동일 합니다 [ \<clientCertificate >](../../../../../docs/framework/configure-apps/file-schema/wcf/clientcertificate-of-clientcredentials-element.md).  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.ServiceModel.Configuration.ClientCredentialsElement>
 - <xref:System.ServiceModel.Configuration.ClientCredentialsElement.ServiceCertificate%2A>
 - <xref:System.ServiceModel.Description.ClientCredentials>

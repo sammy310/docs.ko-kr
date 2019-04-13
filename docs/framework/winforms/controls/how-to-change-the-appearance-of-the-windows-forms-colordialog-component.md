@@ -10,12 +10,12 @@ helpviewer_keywords:
 - ColorDialog component [Windows Forms], formatting appearance
 - color dialog box [Windows Forms], configuring appearance
 ms.assetid: bba4e262-1cd7-4f63-89cf-330a36f7b539
-ms.openlocfilehash: 6bc59f08d811ef542206b5788f251f30f89af301
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: d2bb9e06d9d84a9b61c67510e9c012066f69d55e
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57702791"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59329234"
 ---
 # <a name="how-to-change-the-appearance-of-the-windows-forms-colordialog-component"></a>방법: Windows Forms ColorDialog 구성 요소의 모양 변경
 Windows Forms의 모양에 구성한 <xref:System.Windows.Forms.ColorDialog> 다양 한 해당 속성을 사용 하 여 구성 요소입니다. 대화 상자에는 두 섹션이 있습니다.-기본 색을 사용자 지정 색을 정의할 수 있도록 표시 하는 것입니다.  
@@ -26,7 +26,7 @@ Windows Forms의 모양에 구성한 <xref:System.Windows.Forms.ColorDialog> 다
   
 ### <a name="to-configure-the-appearance-of-the-color-dialog-box"></a>모양의 색 대화 상자를 구성 하려면  
   
-1.  설정 합니다 <xref:System.Windows.Forms.ColorDialog.AllowFullOpen%2A>, <xref:System.Windows.Forms.ColorDialog.AnyColor%2A>를 <xref:System.Windows.Forms.ColorDialog.SolidColorOnly%2A>, 및 <xref:System.Windows.Forms.ColorDialog.ShowHelp%2A> 속성을 원하는 값입니다.  
+1. 설정 합니다 <xref:System.Windows.Forms.ColorDialog.AllowFullOpen%2A>, <xref:System.Windows.Forms.ColorDialog.AnyColor%2A>를 <xref:System.Windows.Forms.ColorDialog.SolidColorOnly%2A>, 및 <xref:System.Windows.Forms.ColorDialog.ShowHelp%2A> 속성을 원하는 값입니다.  
   
     ```vb  
     ColorDialog1.AllowFullOpen = True  
@@ -50,6 +50,7 @@ Windows Forms의 모양에 구성한 <xref:System.Windows.Forms.ColorDialog> 다
     ```  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Windows.Forms.ColorDialog>
 - [ColorDialog 구성 요소](colordialog-component-windows-forms.md)
 - [ColorDialog 구성 요소 개요](colordialog-component-overview-windows-forms.md)

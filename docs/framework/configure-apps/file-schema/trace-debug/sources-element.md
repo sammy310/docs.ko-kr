@@ -9,12 +9,12 @@ helpviewer_keywords:
 - trace sources
 - <sources> element
 ms.assetid: c727b2e2-423a-4463-a223-013f40ff16a3
-ms.openlocfilehash: d7d92f91838a8d1914ffe574f018cc701477d767
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 9104a4a302aa9c6094adbc13396074fdd4db4bbc
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55262506"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59215783"
 ---
 # <a name="sources-element"></a>\<소스 > 요소
 추적 메시지를 시작 하는 추적 소스를 지정 합니다.  
@@ -80,6 +80,7 @@ ms.locfileid: "55262506"
 ```  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Diagnostics.TraceListener>
 - <xref:System.Diagnostics.DefaultTraceListener>
 - <xref:System.Diagnostics.TextWriterTraceListener>

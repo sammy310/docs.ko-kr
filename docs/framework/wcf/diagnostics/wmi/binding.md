@@ -2,12 +2,12 @@
 title: Binding2
 ms.date: 03/30/2017
 ms.assetid: 09511c6c-5749-4bb0-874e-0f0be36bfe04
-ms.openlocfilehash: aaf0dd9d6918f2c248942cee3773eee8332adda9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a040cc6e12833d2c737eb14c591300e5873ddce7
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54552842"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59106524"
 ---
 # <a name="binding"></a>바인딩
 wmi 바인딩  
@@ -29,10 +29,10 @@ class Binding
 ```  
   
 ## <a name="methods"></a>메서드  
- 바인딩 클래스는 메서드를 정의하지 않습니다.  
+ Binding 클래스는 메서드를 정의하지 않습니다.  
   
 ## <a name="properties"></a>속성  
- Binding 클래스에는 다음과 같은 속성이 있습니다.  
+ 바인딩 클래스에는 다음과 같은 속성이 있습니다.  
   
 ### <a name="bindingelements"></a>BindingElements  
  데이터 형식: BindingElement 배열  
@@ -97,4 +97,5 @@ class Binding
 |네임스페이스|root\ServiceModel에 정의되어 있습니다.|  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.ServiceModel.Channels.Binding>

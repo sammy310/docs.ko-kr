@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 74654cf18d87fed8ad5ce9a4cd4249d56fdb4343
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 99bc65b0181a7c0ab7877273b3747ece91544f99
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54693453"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59152505"
 ---
 # <a name="putmethod-function"></a>PutMethod 함수
 메서드를 만듭니다.
@@ -60,7 +60,6 @@ HRESULT PutMethod (
 
 `pSignatureOut`  
 [in]  복사본에 대 한 포인터를 [__Parameters 시스템 클래스](/windows/desktop/WmiSdk/--parameters) 포함 하는 `out` 메서드의 매개 변수입니다. 이 매개 변수는 설정 `null`합니다.
- 
 
 ## <a name="return-value"></a>반환 값
 
@@ -102,4 +101,5 @@ HRESULT PutMethod (
  **.NET Framework 버전:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>참고자료
-- [WMI 및 성능 카운터 (관리 되지 않는 API 참조)](index.md)
+
+- [WMI 및 성능 카운터(관리되지 않는 API 참조)](index.md)

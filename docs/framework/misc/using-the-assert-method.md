@@ -18,17 +18,17 @@ helpviewer_keywords:
 ms.assetid: 1e40f4d3-fb7d-4f19-b334-b6076d469ea9
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5799ab8e827305fca565064a0ae7290c6c19eb01
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: 08b46d96f9fb950602766639559a375a25747010
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58463009"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59073730"
 ---
 # <a name="using-the-assert-method"></a>Assert 메서드 사용
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
   
- <xref:System.Security.CodeAccessPermission.Assert%2A>는 코드 액세스 권한 클래스 및 <xref:System.Security.PermissionSet> 클래스에서 호출할 수 있는 메서드입니다. 사용할 수 있습니다 **Assert** 수행 작업을 수행할 수 있는 권한이 코드의 호출자가 코드 (및 다운스트림 호출자)를 사용 하도록 설정 하려면 없을 권한이 있습니다. 보안 어설션은 보안 검사 중 런타임이 수행하는 일반적인 프로세스를 변경합니다. 사용 권한을 어설션하는 경우 어설션된 권한에 대해 코드의 호출자를 검사하지 않도록 보안 시스템에 지시합니다.  
+ <xref:System.Security.CodeAccessPermission.Assert%2A> 코드 액세스 권한 클래스에서 호출할 수 있는 고 메서드인지를 <xref:System.Security.PermissionSet> 클래스입니다. 사용할 수 있습니다 **Assert** 수행 작업을 수행할 수 있는 권한이 코드의 호출자가 코드 (및 다운스트림 호출자)를 사용 하도록 설정 하려면 없을 권한이 있습니다. 보안 어설션은 보안 검사 중 런타임이 수행하는 일반적인 프로세스를 변경합니다. 사용 권한을 어설션하는 경우 어설션된 권한에 대해 코드의 호출자를 검사하지 않도록 보안 시스템에 지시합니다.  
   
 > [!CAUTION]
 >  어설션은 보안 허점을 열고 보안 제한을 적용하는 런타임 메커니즘을 저해할 수 있으므로 신중하게 사용해야 합니다.  
@@ -168,6 +168,7 @@ namespace LogUtil
 ```  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Security.PermissionSet>
 - <xref:System.Security.Permissions.SecurityPermission>
 - <xref:System.Security.Permissions.FileIOPermission>

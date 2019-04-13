@@ -2,12 +2,12 @@
 title: ServiceDescription 및 WSDL 참조
 ms.date: 03/30/2017
 ms.assetid: eedc025d-abd9-46b1-bf3b-61d2d5c95fd6
-ms.openlocfilehash: 59a7c1aabd3de8cc5948e8dbee3ac113cec658c7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6690bea3d3df0f39a5581c3a6c14723c0f30f40c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54544330"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59182886"
 ---
 # <a name="servicedescription-and-wsdl-reference"></a>ServiceDescription 및 WSDL 참조
 이 항목에서 Windows Communication Foundation (WCF) 웹 서비스 설명 언어 (WSDL) 문서를 매핑하는 방법에 대해 설명 합니다. <xref:System.ServiceModel.Description.ServiceDescription> 인스턴스.  
@@ -31,7 +31,7 @@ ms.locfileid: "54544330"
 ### <a name="serviceendpoint"></a>ServiceEndpoint  
  <xref:System.ServiceModel.Description.ServiceEndpoint> 인스턴스는 `wsdl:port` 요소에 매핑됩니다. <xref:System.ServiceModel.Description.ServiceEndpoint> 인스턴스에는 주소, 바인딩 및 계약이 포함되어 있습니다.  
   
- <xref:System.ServiceModel.Description.IWsdlExportExtension> 인터페이스를 구현하는 끝점 동작은 연결되는 끝점에 대한 `wsdl:port` 요소를 수정할 수 있습니다.  
+ <xref:System.ServiceModel.Description.IWsdlExportExtension> 인터페이스를 구현하는 엔드포인트 동작은 연결되는 엔드포인트에 대한 `wsdl:port` 요소를 수정할 수 있습니다.  
   
 |속성|WSDL 매핑|  
 |----------------|------------------|  
@@ -39,18 +39,18 @@ ms.locfileid: "54544330"
 |`Address`|엔드포인트의 `wsdl:port` 정의에 대한 주소입니다.<br /><br /> 엔드포인트에 대한 전송에 따라 주소 형식이 결정됩니다. 예를 들어 WCF에서 지 원하는 전송에 대 한 때문일 SOAP 주소 또는 끝점 참조일 있습니다.|  
 |`Binding`|엔드포인트에 대한 `wsdl:binding` 정의입니다.<br /><br /> 와 달리 `wsdl:binding` wcf에서 바인딩을 정의 어떠한 계약에 연결 되지 않습니다.|  
 |`Contract`|엔드포인트에 대한 `wsdl:portType` 정의입니다.|  
-|`Behaviors`|<xref:System.ServiceModel.Description.IWsdlExportExtension> 인터페이스를 구현하는 끝점 동작은 끝점에 대한 `wsdl:port`를 수정할 수 있습니다.|  
+|`Behaviors`|<xref:System.ServiceModel.Description.IWsdlExportExtension> 인터페이스를 구현하는 엔드포인트 동작은 엔드포인트에 대한 `wsdl:port`를 수정할 수 있습니다.|  
   
 ### <a name="bindings"></a>바인딩  
  `ServiceEndpoint` 인스턴스에 대한 바인딩 인스턴스가 `wsdl:binding` 정의에 매핑됩니다. 와 달리 `wsdl:binding` 특정 연결 해야 하는 정의 `wsdl:portType` 정의 WCF 바인딩에 계약에 독립적입니다.  
   
- 바인딩은 바인딩 요소의 컬렉션으로 구성됩니다. 각 요소는 끝점이 클라이언트와 통신하는 방법의 일부를 설명합니다. 또한 바인딩에는 끝점에 대한 <xref:System.ServiceModel.Channels.MessageVersion> 및 <xref:System.ServiceModel.EnvelopeVersion>을 나타내는 <xref:System.ServiceModel.Channels.AddressingVersion>이 있습니다.  
+ 바인딩은 바인딩 요소의 컬렉션으로 구성됩니다. 각 요소는 엔드포인트가 클라이언트와 통신하는 방법의 일부를 설명합니다. 또한 바인딩에는 엔드포인트에 대한 <xref:System.ServiceModel.Channels.MessageVersion> 및 <xref:System.ServiceModel.EnvelopeVersion>을 나타내는 <xref:System.ServiceModel.Channels.AddressingVersion>이 있습니다.  
   
 |속성|WSDL 매핑|  
 |----------------|------------------|  
-|`Name`|끝점에 대한 기본 이름에 사용되며, 계약 이름을 밑줄로 구분하여 연결한 바인딩 이름입니다.|  
+|`Name`|엔드포인트에 대한 기본 이름에 사용되며, 계약 이름을 밑줄로 구분하여 연결한 바인딩 이름입니다.|  
 |`Namespace`|`targetNamespace` 정의에 대한 `wsdl:binding`입니다.<br /><br /> 가져오기에서는 정책이 WSDL 포트에 연결되어 있으면 가져온 바인딩 네임스페이스가 `targetNamespace` 정의에 대한 `wsdl:port`에 매핑됩니다.|  
-|`BindingElementCollection`() 메서드에 의해 반환되는 `CreateBindingElements`|`wsdl:binding` 정의에 대한 다양한 도메인별 확장(일반적으로 정책 어설션)입니다.|  
+|`BindingElementCollection`에서 반환한는 `CreateBindingElements`() 메서드|`wsdl:binding` 정의에 대한 다양한 도메인별 확장명(일반적으로 정책 어설션)입니다.|  
 |`MessageVersion`|엔드포인트에 대한 `EnvelopeVersion` 및 `AddressingVersion`입니다.<br /><br /> `MessageVersion.None`이 지정된 경우 WSDL 바인딩은 SOAP 바인딩을 포함하지 않고 WSDL 포트는 WS-Addressing 콘텐츠를 포함하지 않습니다. 이 설정은 일반적으로 POX(Plain Old XML) 엔드포인트에 사용됩니다.|  
   
 #### <a name="bindingelements"></a>BindingElements  
@@ -109,7 +109,7 @@ ms.locfileid: "54544330"
 |속성|WSDL 매핑|  
 |----------------|------------------|  
 |`Action`|작업에 대한 SOAP 또는 WS-Addressing 동작입니다.<br /><br /> "*" 동작 문자열을 사용하는 작업은 WSDL에 표시되지 않습니다.|  
-|`Direction`|`MessageDirection.Input`은 `wsdl:input`에 매핑됩니다.<br /><br /> `MessageDirection.Output`은 `wsdl:output`에 매핑됩니다.|  
+|`Direction`|`MessageDirection.Input` 매핑됩니다 `wsdl:input`합니다.<br /><br /> `MessageDirection.Output` 매핑됩니다 `wsdl:output`합니다.|  
 |`ProtectionLevel`|이 메시지의 `wsdl:message` 정의에 연결되는 보안 정책의 보호 어설션입니다.|  
 |`Body`|메시지의 메시지 본문입니다.|  
 |`Headers`|메시지의 헤더입니다.|  
@@ -152,4 +152,5 @@ ms.locfileid: "54544330"
 |`Name, ContractDescription.Name, OperationDescription.Name,`|파생 시키는 데 사용 합니다 `wsdl:message` /@name 오류 메시지에 대 한 값입니다.|  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.ServiceModel.Description>

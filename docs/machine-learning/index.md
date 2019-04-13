@@ -1,14 +1,14 @@
 ---
 title: ML.NET 콘텐츠 가이드
 description: ML.NET를 사용하여 사용자 지정 AI 솔루션을 빌드하고 .NET 애플리케이션에 통합하는 방법을 알아봅니다.
-ms.date: 01/18/2019
+ms.date: 04/05/2019
 ms.custom: seodec18
-ms.openlocfilehash: fe9129fd6975ba9176ccce025b06f03734803155
-ms.sourcegitcommit: a3db1a9eafca89f95ccf361bc1833b47fbb2bb30
+ms.openlocfilehash: de681daea5a29a121d350271ced4ccc2c0b1b533
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2019
-ms.locfileid: "58920768"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59231333"
 ---
 # <a name="mlnet-content-guide"></a>ML.NET 콘텐츠 가이드
 
@@ -33,7 +33,11 @@ ML.NET에 대해 알아보려면 [ML.NET이란?](what-is-mldotnet.md)을 참조�
 
 [회귀 모델을 사용하여 가격 예측](./tutorials/taxi-fare.md)에서는 기록 데이터의 여러 요소를 사용하여 응답을 판별하는 예측 앱을 빌드하는 방법을 보여줍니다.
 
-[기능으로 아이리스 꽃 분류](./tutorials/iris-clustering.md)에서는 클러스터링 모델을 사용하여 아이리스 데이터 세트를 분석하는 방법을 보여 줍니다. 
+[기능으로 아이리스 꽃 분류](./tutorials/iris-clustering.md)에서는 클러스터링 모델을 사용하여 아이리스 데이터 세트를 분석하는 방법을 보여 줍니다.
+
+[ML.NET을 사용하여 영화 추천 앱 만들기](./tutorials/movie-recommmendation.md)에서는 사용자의 기록을 바탕으로 사용자에게 영화를 추천하는 추천 앱을 빌드하는 방법을 보여 줍니다.
+
+[TensorFlow를 사용하여 ML.NET 사용자 지정 이미지 분류자 빌드](./tutorials/image-classification.md): ML.NET을 사용하여 사용자 지정 이미지 분류자를 만들기 위해 기존 Tensorflow 모델을 재학습하는 방법을 보여 줍니다.
 
 ## <a name="how-to-guide"></a>방법 가이드
 
@@ -46,7 +50,6 @@ ML.NET에 대해 알아보려면 [ML.NET이란?](what-is-mldotnet.md)을 참조�
 [기계 학습 작업](./resources/tasks.md)에서는 분류 및 변칙 검색과 같은 작업을 설명합니다. 
 
 [데이터 변환](./resources/transforms.md)에서는 ML.NET의 데이터 준비 기능을 설명합니다.
-
 
 ## <a name="api-reference"></a>API 참조
 

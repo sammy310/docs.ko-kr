@@ -1,5 +1,5 @@
 ---
-title: <mailSettings> 요소(네트워크 설정)
+title: <mailSettings> 요소 (네트워크 설정)
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#mailSettings
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - mailSettings element
 - <mailSettings> element
 ms.assetid: 54f0f153-17e5-4f49-afdc-deadb940c9c1
-ms.openlocfilehash: 0e71284e914dac2d28448f3d8bd4bdc7a9f6b325
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 54fb68ab0bf8aa2665d70391350c626131ccb4bc
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55277617"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59180631"
 ---
 # <a name="mailsettings-element-network-settings"></a>\<mailSettings > 요소 (네트워크 설정)
 메일 보내기 옵션을 구성 합니다.  
@@ -46,7 +46,7 @@ ms.locfileid: "55277617"
   
 |**요소**|**설명**|  
 |-----------------|---------------------|  
-|[\<system.Net> 요소(네트워크 설정)](../../../../../docs/framework/configure-apps/file-schema/network/system-net-element-network-settings.md)|.NET Framework의 네트워크 연결 방법을 지정하는 설정을 포함합니다.|  
+|[\<system.Net > 요소 (네트워크 설정)](../../../../../docs/framework/configure-apps/file-schema/network/system-net-element-network-settings.md)|.NET Framework의 네트워크 연결 방법을 지정하는 설정을 포함합니다.|  
   
 ## <a name="example"></a>예제  
  다음 예제에서는 기본 네트워크 자격 증명을 사용 하 여 전자 메일을 보내는 해당 SMTP 매개 변수를 지정 합니다.  
@@ -68,5 +68,6 @@ ms.locfileid: "55277617"
 ```  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Net.Mail.SmtpClient>
 - [네트워크 설정 스키마](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

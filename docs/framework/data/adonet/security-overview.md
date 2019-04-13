@@ -2,12 +2,12 @@
 title: 보안 개요 2
 ms.date: 03/30/2017
 ms.assetid: 33e09965-61d5-48cc-9e8c-3b047cc4f194
-ms.openlocfilehash: 0b5b86aad2365c76351ff748228826ba703223dc
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
+ms.openlocfilehash: b93b78a5fabbcf60eefb386144ec90e877cfed0e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56091801"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59089863"
 ---
 # <a name="security-overview"></a>보안 개요
 응용 프로그램 보안은 지속적인 프로세스입니다. 새로운 기술로 인해 앞으로 어떠한 공격이 가해질지 예측할 수 없기 때문에 개발자가 응용 프로그램이 모든 공격으로부터 안전하다고 장담하는 것은 불가능합니다. 반대로, 아직까지 아무도 시스템의 보안 허점을 발견(또는 발표)하지 않았더라도 허점이 없다고 할 수는 없습니다. 보안 계획은 프로젝트 디자인 단계에서 수립해야 하며 아울러 응용 프로그램의 수명이 다할 때까지 이러한 보안을 어떻게 유지할지도 계획해야 합니다.  
@@ -41,7 +41,7 @@ ms.locfileid: "56091801"
   
 |리소스|설명|  
 |--------------|-----------------|  
-|[응용 프로그램 보안](/visualstudio/ide/securing-applications)|일반 보안 항목에 대한 링크를 제공합니다. 분산 응용 프로그램, 웹 응용 프로그램, 모바일 응용 프로그램 및 데스크톱 응용 프로그램을 보호하는 방법에 대해 설명하는 항목에 대한 링크도 제공합니다.|  
+|[애플리케이션 보안](/visualstudio/ide/securing-applications)|일반 보안 항목에 대한 링크를 제공합니다. 분산 응용 프로그램, 웹 응용 프로그램, 모바일 응용 프로그램 및 데스크톱 응용 프로그램을 보호하는 방법에 대해 설명하는 항목에 대한 링크도 제공합니다.|  
   
 ## <a name="code-access-security-cas"></a>CAS(코드 액세스 보안)  
  CAS(코드 액세스 보안)는 보호된 리소스 및 작업에 대한 코드의 액세스를 제한하는 데 도움이 되는 메커니즘입니다. .NET Framework에서 CAS는 다음 기능을 수행합니다.  
@@ -102,6 +102,7 @@ ms.locfileid: "56091801"
 |[보안 정책에 대 한 유용한 정보](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/sa4se9bc(v=vs.100))|보안 정책을 관리하는 방법에 대해 설명하는 링크를 제공합니다.|  
   
 ## <a name="see-also"></a>참고자료
+
 - [ADO.NET 응용 프로그램 보안](../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
 - [.NET의 보안](../../../standard/security/index.md)
 - [SQL Server 보안](../../../../docs/framework/data/adonet/sql/sql-server-security.md)

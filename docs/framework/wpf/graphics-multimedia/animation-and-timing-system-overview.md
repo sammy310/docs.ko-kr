@@ -5,12 +5,12 @@ helpviewer_keywords:
 - timing system [WPF]
 - animation [WPF]
 ms.assetid: 172cd5a8-a333-4c81-9456-fafccc19f382
-ms.openlocfilehash: 36a71213b2c96d2ea1aa7597216f420f47493f43
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: f64431e7804ba6e068a3d05f512c6ead089d7712
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57360513"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59079320"
 ---
 # <a name="animation-and-timing-system-overview"></a>애니메이션 및 타이밍 시스템 개요
 이 항목에서는 타이밍 시스템이 애니메이션을 사용 하는 방법에 대해 설명 합니다. <xref:System.Windows.Media.Animation.Timeline>, 및 <xref:System.Windows.Media.Animation.Clock> 클래스 속성에 애니메이션 효과를 합니다.  
@@ -83,6 +83,7 @@ ClockGroup
  속성에 애니메이션 효과 주는 경우 합니다 <xref:System.Windows.Media.Animation.AnimationClock> 속성의 설정 *현재* 값입니다. 해당 CLR 접근자를 통해 속성의 값을 검색 또는 <xref:System.Windows.DependencyObject.GetValue%2A> 의 출력을 반환 하는 메서드를 <xref:System.Windows.Media.Animation.AnimationClock> 때 합니다 <xref:System.Windows.Media.Animation.AnimationClock> 은 <xref:System.Windows.Media.Animation.ClockState.Active> 또는 <xref:System.Windows.Media.Animation.ClockState.Filling>합니다. 사용 하 여 속성의 기준 값을 검색할 수 있습니다는 <xref:System.Windows.Media.Animation.IAnimatable.GetAnimationBaseValue%2A> 메서드.  
   
 ## <a name="see-also"></a>참고자료
+
 - [애니메이션 개요](animation-overview.md)
 - [타이밍 이벤트 개요](timing-events-overview.md)
 - [타이밍 동작 개요](timing-behaviors-overview.md)

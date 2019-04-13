@@ -1,5 +1,5 @@
 ---
-title: '방법: 만들기, 초기화 및 추적 스위치 구성'
+title: '방법: 추적 스위치 만들기, 초기화 및 구성'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -13,14 +13,14 @@ helpviewer_keywords:
 ms.assetid: 5a0e41bf-f99c-4692-8799-f89617f5bcf9
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c42d7d13c630a0aef8a6ca65bd391fb232b48bfb
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 87170035df47e7605d25531df4b0759bf121ad80
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54739617"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59325711"
 ---
-# <a name="how-to-create-initialize-and-configure-trace-switches"></a>방법: 만들기, 초기화 및 추적 스위치 구성
+# <a name="how-to-create-initialize-and-configure-trace-switches"></a>방법: 추적 스위치 만들기, 초기화 및 구성
 추적 스위치를 사용하여 추적 출력을 활성화, 비활성화 및 필터링할 수 있습니다.  
   
 <a name="create"></a>   
@@ -31,9 +31,9 @@ ms.locfileid: "54739617"
   
 #### <a name="to-create-and-initialize-a-trace-switch"></a>추적 스위치를 만들고 초기화하려면  
   
-1.  스위치를 <xref:System.Diagnostics.BooleanSwitch?displayProperty=nameWithType> 형식 또는 <xref:System.Diagnostics.TraceSwitch?displayProperty=nameWithType> 형식으로 정의하고 스위치의 이름과 설명을 설정합니다.  
+1. 스위치를 <xref:System.Diagnostics.BooleanSwitch?displayProperty=nameWithType> 형식 또는 <xref:System.Diagnostics.TraceSwitch?displayProperty=nameWithType> 형식으로 정의하고 스위치의 이름과 설명을 설정합니다.  
   
-2.  추적 스위치를 구성합니다. 자세한 내용은 [추적 스위치 구성](#configure)을 참조하세요.  
+2. 추적 스위치를 구성합니다. 자세한 내용은 [추적 스위치 구성](#configure)을 참조하세요.  
   
      다음 코드에서는 각 형식당 하나씩, 두 개의 스위치를 만듭니다.  
   
@@ -71,13 +71,13 @@ ms.locfileid: "54739617"
   
 #### <a name="to-configure-trace-switches"></a>추적 스위치를 구성 하려면  
   
-1.  추적 스위치를 사용하려면 [추적 스위치 만들기 및 초기화](#create) 섹션의 설명대로 추적 스위치를 만들고 코드에 배치해야 합니다.  
+1. 추적 스위치를 사용하려면 [추적 스위치 만들기 및 초기화](#create) 섹션의 설명대로 추적 스위치를 만들고 코드에 배치해야 합니다.  
   
-2.  프로젝트에 구성 파일(app.config 또는 Web.config)이 없는 경우 **프로젝트** 메뉴에서 **새 항목 추가**를 선택합니다.  
+2. 프로젝트에 구성 파일(app.config 또는 Web.config)이 없는 경우 **프로젝트** 메뉴에서 **새 항목 추가**를 선택합니다.  
   
     -   **Visual Basic:** 에 **새 항목 추가** 대화 상자에서 **응용 프로그램 구성 파일**합니다.  
   
-         응용 프로그램 구성 파일이 만들어져 열립니다. 이 파일은 루트 요소가 `<configuration>.`인 XML 문서입니다.  
+         응용 프로그램 구성 파일이 만들어져 열립니다. 이 해당 루트 요소는 XML 문서 `<configuration>.`  
   
     -   **Visual C#:** 에 **새 항목 추가** 대화 상자에서 **XML 파일**합니다. 이 파일 이름을 **app.config**로 지정합니다. XML 편집기에서 XML 선언 뒤에 다음 XML을 추가합니다.  
   
@@ -88,7 +88,7 @@ ms.locfileid: "54739617"
   
          프로젝트를 컴파일하면 app.config 파일이 프로젝트 출력 폴더에 복사되고 이름이 *applicationname*.exe.config로 바뀝니다.  
   
-3.  `<configuration>` 태그 뒤, `</configuration>` 태그 앞에 적절한 XML을 추가하여 스위치를 구성합니다. 다음 예제에서는 **DisplayName** 속성이 `DataMessageSwitch`인 **BooleanSwitch** 및 **DisplayName** 속성이 `TraceLevelSwitch`인 **TraceSwitch**를 보여 줍니다.  
+3. `<configuration>` 태그 뒤, `</configuration>` 태그 앞에 적절한 XML을 추가하여 스위치를 구성합니다. 다음 예제에서는 **DisplayName** 속성이 `DataMessageSwitch`인 **BooleanSwitch** 및 **DisplayName** 속성이 `TraceLevelSwitch`인 **TraceSwitch**를 보여 줍니다.  
   
     ```xml  
     <system.diagnostics>  
@@ -101,11 +101,11 @@ ms.locfileid: "54739617"
   
      이 구성에서는 두 스위치가 모두 해제되어 있습니다.  
   
-4.  이전 예제에 표시된 `DataMessagesSwitch`와 같은 **BooleanSwitch**를 설정해야 하는 경우 **Value**를 0이 아닌 임의의 정수로 변경합니다.  
+4. 이전 예제에 표시된 `DataMessagesSwitch`와 같은 **BooleanSwitch**를 설정해야 하는 경우 **Value**를 0이 아닌 임의의 정수로 변경합니다.  
   
-5.  이전 예제에 표시된 `TraceLevelSwitch`와 같은 **TraceSwitch**를 설정해야 하는 경우 **Value**를 적절한 수준 설정(1-4)으로 변경합니다.  
+5. 이전 예제에 표시된 `TraceLevelSwitch`와 같은 **TraceSwitch**를 설정해야 하는 경우 **Value**를 적절한 수준 설정(1-4)으로 변경합니다.  
   
-6.  최종 사용자가 스위치를 적절하게 구성하기 위해 변경할 값을 명확하게 이해할 수 있도록 .config 파일에 주석을 추가합니다.  
+6. 최종 사용자가 스위치를 적절하게 구성하기 위해 변경할 값을 명확하게 이해할 수 있도록 .config 파일에 주석을 추가합니다.  
   
      다음 예제에서는 주석을 포함하는 최종 코드의 모양을 보여 줍니다.  
   
@@ -126,7 +126,8 @@ ms.locfileid: "54739617"
     ```  
   
 ## <a name="see-also"></a>참고자료
+
 - [응용 프로그램 추적 및 조율](../../../docs/framework/debug-trace-profile/tracing-and-instrumenting-applications.md)
-- [방법: 응용 프로그램 코드에 Trace 문 추가](../../../docs/framework/debug-trace-profile/how-to-add-trace-statements-to-application-code.md)
+- [방법: 애플리케이션 코드에 추적 문 추가](../../../docs/framework/debug-trace-profile/how-to-add-trace-statements-to-application-code.md)
 - [추적 스위치](../../../docs/framework/debug-trace-profile/trace-switches.md)
 - [추적 및 디버그 설정 스키마](../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)

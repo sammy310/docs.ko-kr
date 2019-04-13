@@ -1,5 +1,5 @@
 ---
-title: '방법: SecurityBindingElement를 사용 하 여 사용자 지정 바인딩 만들기'
+title: '방법: SecurityBindingElement를 사용하여 사용자 지정 바인딩 만들기'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,18 +7,18 @@ dev_langs:
 helpviewer_keywords:
 - security [WCF], creating custom bindings
 ms.assetid: 203a9f9e-3a73-427c-87aa-721c56265b29
-ms.openlocfilehash: 2c2aa5703e31b2529e0b98d909a763b8b4b23035
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7966c1fe4cd94408455c6bb146fdd3ea55757702
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54576159"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59316806"
 ---
-# <a name="how-to-create-a-custom-binding-using-the-securitybindingelement"></a>방법: SecurityBindingElement를 사용 하 여 사용자 지정 바인딩 만들기
+# <a name="how-to-create-a-custom-binding-using-the-securitybindingelement"></a>방법: SecurityBindingElement를 사용하여 사용자 지정 바인딩 만들기
 Windows Communication Foundation (WCF)를 구성할 수 있지만 WCF 지 원하는 모든 보안 옵션을 구성할 때 완전 한 유연성을 제공 하지 않습니다는 여러 시스템 제공 바인딩이 포함 되어 있습니다. 이 항목에서는 개별 바인딩 요소에서 직접 사용자 지정 바인딩을 만드는 방법에 대해 설명하고, 이와 같은 바인딩을 만들 때 지정할 수 있는 일부 보안 설정에 대해 강조합니다. 사용자 지정 바인딩을 만드는 방법에 대 한 자세한 내용은 참조 하세요. [바인딩 확장](../../../../docs/framework/wcf/extending/extending-bindings.md)합니다.  
   
 > [!WARNING]
->  <xref:System.ServiceModel.Channels.SecurityBindingElement>는 <xref:System.ServiceModel.Channels.IDuplexSessionChannel>가 <xref:System.ServiceModel.TransferMode>로 설정된 경우 TCP 전송에서 사용하는 기본 채널 셰이프인 <xref:System.ServiceModel.TransferMode.Buffered> 채널 셰이프를 지원하지 않습니다. 이 시나리오에서 <xref:System.ServiceModel.TransferMode>를 사용하려면 <xref:System.ServiceModel.TransferMode.Streamed>를 <xref:System.ServiceModel.Channels.SecurityBindingElement>으로 설정해야 합니다.  
+>  <xref:System.ServiceModel.Channels.SecurityBindingElement> 지원 하지 않습니다는 <xref:System.ServiceModel.Channels.IDuplexSessionChannel> 채널 셰이프는 TCP가 기본 채널 셰이프 사용 되는 경우 전송 <xref:System.ServiceModel.TransferMode> 로 설정 되어 <xref:System.ServiceModel.TransferMode.Buffered>. 이 시나리오에서 <xref:System.ServiceModel.TransferMode>를 사용하려면 <xref:System.ServiceModel.TransferMode.Streamed>를 <xref:System.ServiceModel.Channels.SecurityBindingElement>으로 설정해야 합니다.  
   
 ## <a name="creating-a-custom-binding"></a>사용자 지정 바인딩 만들기  
  WCF의 모든 바인딩에 이루어져 *바인딩 요소*합니다. 각 바인딩 요소는 <xref:System.ServiceModel.Channels.BindingElement> 클래스에서 파생됩니다. 표준 시스템 제공 바인딩의 경우 바인딩 요소가 자동으로 생성되어 구성되지만 일부 속성 설정을 사용자 지정할 수 있습니다.  
@@ -59,20 +59,20 @@ Windows Communication Foundation (WCF)를 구성할 수 있지만 WCF 지 원하
 |||HttpsTransportBindingElement|HttpsTransportBindingElement||  
 ||TCP||||  
 |||OneWayBindingElement|||  
-|||@FSHO1@SSL 또는 Windows StreamSecurityBindingElement|@FSHO1@SSL 또는 Windows StreamSecurityBindingElement|@FSHO1@SSL 또는 Windows StreamSecurityBindingElement|  
+|||SSL 또는 Windows StreamSecurityBindingElement|SSL 또는 Windows StreamSecurityBindingElement|SSL 또는 Windows StreamSecurityBindingElement|  
 |||TcpTransportBindingElement|TcpTransportBindingElement|TcpTransportBindingElement|  
-|메시지|Http|SymmetricSecurityBindingElement|SymmetricSecurityBindingElement|@FSHO1@SymmetricSecurityBindingElement(인증 모드 = SecureConversation)|  
+|메시지|Http|SymmetricSecurityBindingElement|SymmetricSecurityBindingElement|SymmetricSecurityBindingElement (인증 모드 = SecureConversation)|  
 |||||CompositeDuplexBindingElement|  
 |||OneWayBindingElement||OneWayBindingElement|  
 |||HttpTransportBindingElement|HttpTransportBindingElement|HttpTransportBindingElement|  
-||Tcp|SecurityBindingElement|SecurityBindingElement|@FSHO1@SymmetricSecurityBindingElement(인증 모드 = SecureConversation)|  
+||Tcp|SecurityBindingElement|SecurityBindingElement|SymmetricSecurityBindingElement (인증 모드 = SecureConversation)|  
 |||TcpTransportBindingElement|TcpTransportBindingElement|TcpTransportBindingElement|  
 |혼합(메시지 자격 증명을 사용한 전송)|Https|TransportSecurityBindingElement|TransportSecurityBindingElement||  
 |||OneWayBindingElement|||  
 |||HttpsTransportBindingElement|HttpsTransportBindingElement||  
-||TCP|TransportSecurityBindingElement|@FSHO1@SymmetricSecurityBindingElement(인증 모드 = SecureConversation)|@FSHO1@SymmetricSecurityBindingElement(인증 모드 = SecureConversation)|  
+||TCP|TransportSecurityBindingElement|SymmetricSecurityBindingElement (인증 모드 = SecureConversation)|SymmetricSecurityBindingElement (인증 모드 = SecureConversation)|  
 |||OneWayBindingElement|||  
-|||@FSHO1@SSL 또는 Windows StreamSecurityBindingElement|@FSHO1@SSL 또는 Windows StreamSecurityBindingElement|@FSHO1@SSL 또는 Windows StreamSecurityBindingElement|  
+|||SSL 또는 Windows StreamSecurityBindingElement|SSL 또는 Windows StreamSecurityBindingElement|SSL 또는 Windows StreamSecurityBindingElement|  
 |||TcpTransportBindingElement|TcpTransportBindingElement|TcpTransportBindingElement|  
   
  SecurityBindingElement에 대해 구성 가능한 설정이 많이 있습니다. 자세한 내용은 [SecurityBindingElement 인증 모드](../../../../docs/framework/wcf/feature-details/securitybindingelement-authentication-modes.md)합니다.  
@@ -83,19 +83,19 @@ Windows Communication Foundation (WCF)를 구성할 수 있지만 WCF 지 원하
   
 #### <a name="to-create-a-custom-binding-that-uses-a-symmetricsecuritybindingelement"></a>SymmetricSecurityBindingElement를 사용하여 사용자 지정 바인딩을 만들려면  
   
-1.  이름이 <xref:System.ServiceModel.Channels.BindingElementCollection>인 `outputBec` 클래스의 인스턴스를 만듭니다.  
+1. 이름이 <xref:System.ServiceModel.Channels.BindingElementCollection>인 `outputBec` 클래스의 인스턴스를 만듭니다.  
   
-2.  `M:System.ServiceModel.Channels.SecurityBindingElement.CreateSspiNegotiationBindingElement(true)` 클래스의 인스턴스를 반환하는 정적 메서드 <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement>를 호출합니다.  
+2. `M:System.ServiceModel.Channels.SecurityBindingElement.CreateSspiNegotiationBindingElement(true)` 클래스의 인스턴스를 반환하는 정적 메서드 <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement>를 호출합니다.  
   
-3.  <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> 클래스의 `outputBec`에서 `Add` 메서드를 호출하여 <xref:System.Collections.ObjectModel.Collection%601>를 컬렉션(<xref:System.ServiceModel.Channels.BindingElement>)에 추가합니다.  
+3. <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> 클래스의 `outputBec`에서 `Add` 메서드를 호출하여 <xref:System.Collections.ObjectModel.Collection%601>를 컬렉션(<xref:System.ServiceModel.Channels.BindingElement>)에 추가합니다.  
   
-4.  <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement> 클래스의 인스턴스를 만들고 이를 컬렉션(`outputBec`)에 추가합니다. 이를 통해 바인딩에서 사용하는 인코딩이 지정됩니다.  
+4. <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement> 클래스의 인스턴스를 만들고 이를 컬렉션(`outputBec`)에 추가합니다. 이를 통해 바인딩에서 사용하는 인코딩이 지정됩니다.  
   
-5.  <xref:System.ServiceModel.Channels.HttpTransportBindingElement>를 만들고 이를 컬렉션(`outputBec`)에 추가합니다. 이를 통해 바인딩이 HTTP 전송을 사용하도록 지정됩니다.  
+5. <xref:System.ServiceModel.Channels.HttpTransportBindingElement>를 만들고 이를 컬렉션(`outputBec`)에 추가합니다. 이를 통해 바인딩이 HTTP 전송을 사용하도록 지정됩니다.  
   
-6.  <xref:System.ServiceModel.Channels.CustomBinding> 클래스의 인스턴스를 만들고 `outputBec` 컬렉션을 생성자에게 전달함으로써 새 사용자 지정 바인딩을 만듭니다.  
+6. <xref:System.ServiceModel.Channels.CustomBinding> 클래스의 인스턴스를 만들고 `outputBec` 컬렉션을 생성자에게 전달함으로써 새 사용자 지정 바인딩을 만듭니다.  
   
-7.  결과 사용자 지정 바인딩은 표준 <xref:System.ServiceModel.WSHttpBinding>과 동일한 특징을 많이 공유합니다. 메시지 수준 보안 및 Windows 자격 증명을 지정하지만 보안 세션은 사용하지 않도록 설정하고, 서비스 자격 증명은 대역 외로 지정되어야 하며, 서명을 암호화하지 않습니다. 마지막 항목은 4단계에서처럼 <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement.MessageProtectionOrder%2A> 속성의 설정을 통해서만 제어할 수 있습니다. 다른 두 가지는 표준 바인딩의 설정을 사용하여 제어할 수 있습니다.  
+7. 결과 사용자 지정 바인딩은 표준 <xref:System.ServiceModel.WSHttpBinding>과 동일한 특징을 많이 공유합니다. 메시지 수준 보안 및 Windows 자격 증명을 지정하지만 보안 세션은 사용하지 않도록 설정하고, 서비스 자격 증명은 대역 외로 지정되어야 하며, 서명을 암호화하지 않습니다. 마지막 항목은 4단계에서처럼 <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement.MessageProtectionOrder%2A> 속성의 설정을 통해서만 제어할 수 있습니다. 다른 두 가지는 표준 바인딩의 설정을 사용하여 제어할 수 있습니다.  
   
 ## <a name="example"></a>예제  
   
@@ -107,9 +107,10 @@ Windows Communication Foundation (WCF)를 구성할 수 있지만 WCF 지 원하
  [!code-vb[c_CustomBinding#20](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_custombinding/vb/source.vb#20)]  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.ServiceModel.Channels.SecurityBindingElement>
 - <xref:System.ServiceModel.Channels.TransportSecurityBindingElement>
 - <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement>
 - <xref:System.ServiceModel.Channels.CustomBinding>
-- [바인딩 확장](../../../../docs/framework/wcf/extending/extending-bindings.md)
+- [바인딩 확장명](../../../../docs/framework/wcf/extending/extending-bindings.md)
 - [시스템 제공 바인딩](../../../../docs/framework/wcf/system-provided-bindings.md)

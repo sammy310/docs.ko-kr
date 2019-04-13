@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 1d971dd7-10fc-4692-8dac-30ca308fc0fa
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5e6ce15c344ecd6e5f8d73cb98a06c8ccb40c9e7
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: 22f6c6827b2574ba887839f749df8fc7ae6605ea
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58466441"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59328636"
 ---
 # <a name="whats-new-in-the-net-framework"></a>.NET Framework의 새로운 기능
 
@@ -162,7 +162,7 @@ Private Shared Function DeriveKey(password As String, ByRef iterations As Intege
 End Function
 ```
 
-**임시 키에 대한 지원**
+**임시 키 지원**
 
 필요에 따라 PFX 가져오기는 하드 드라이브를 무시하고 메모리에서 직접 개인 키를 로드할 수 있습니다. 새로운 <xref:System.Security.Cryptography.X509Certificates.X509KeyStorageFlags.EphemeralKeySet?displayProperty=nameWithType> 플래그가 <xref:System.Security.Cryptography.X509Certificates.X509Certificate2> 생성자 또는 <xref:System.Security.Cryptography.X509Certificates.X509Certificate2.Import%2A?displayProperty=nameWithType> 메서드의 오버로드 중 하나에 지정되는 경우 개인 키는 임시 키로 로드됩니다. 이렇게 하면 키가 디스크에 표시되지 않습니다. 단,
 
@@ -180,7 +180,7 @@ End Function
 
 **새 SignerInfo 멤버**
 
-.NET Framework 4.7.2부터 <xref:System.Security.Cryptography.Pkcs.SignerInfo> 클래스는 서명에 대한 자세한 정보를 공개합니다. <xref:System.Security.Cryptography.Pkcs.SignerInfo.SignatureAlgorithm?displayProperty=fullName> 속성의 값을 검색하여 서명자가 사용한 서명 알고리즘을 결정할 수 있습니다. <xref:System.Security.Cryptography.Pkcs.SignerInfo.GetSignature%2A?displayProperty=nameWithType>를 호출하여 이 서명자에 대한 암호화 서명의 복사본을 가져올 수 있습니다.
+.NET Framework 4.7.2부터 <xref:System.Security.Cryptography.Pkcs.SignerInfo> 클래스는 서명에 대한 자세한 정보를 공개합니다. <xref:System.Security.Cryptography.Pkcs.SignerInfo.SignatureAlgorithm?displayProperty=fullName> 속성의 값을 검색하여 서명자가 사용한 서명 알고리즘을 결정할 수 있습니다. <xref:System.Security.Cryptography.Pkcs.SignerInfo.GetSignature%2A?displayProperty=nameWithType> 호출하여 이 서명자에 대한 암호화 시그니처의 복사본을 가져올 수 있습니다.
 
 **CryptoStream을 삭제한 후 래핑된 스트림이 열려있음**
 
@@ -313,13 +313,13 @@ c.SameSite = SameSiteMode.Lax
 
 .NET Framework 4.7.2는 enclave 기반 Always Encrypted에 대한 지원을 추가합니다. Always Encrypted의 원래 버전은 암호화 키가 항상 클라이언트에게 있는 클라이언트 쪽 암호화 기술입니다. enclave 기반 Always Encrypted에서는 클라이언트가 SQL Server의 일부로 간주될 수 있으나 조작할 수는 없는 보안 계산 항목인 보안 enclave에 암호화 키를 선택적으로 전송할 수 있습니다. enclave 기반 Always Encrypted를 지원하기 위해 .NET Framework 4.7.2는 다음과 같은 형식 및 멤버를 <xref:System.Data.SqlClient> 네임스페이스에 추가합니다.
 
-- <xref:System.Data.SqlClient.SqlConnectionStringBuilder.EnclaveAttestationUrl?displayProperty=nameWithType> - enclave 기반 Always Encrypted에 대한 URI를 지정합니다.
+- <xref:System.Data.SqlClient.SqlConnectionStringBuilder.EnclaveAttestationUrl?displayProperty=nameWithType>- enclave 기반 Always Encrypted에 대한 URI를 지정합니다.
 
-- <xref:System.Data.SqlClient.SqlColumnEncryptionEnclaveProvider> - 모든 enclave 공급자가 파생되는 추상 클래스입니다.
+- <xref:System.Data.SqlClient.SqlColumnEncryptionEnclaveProvider>- 모든 enclave 공급자가 파생되는 추상 클래스입니다.
 
-- <xref:System.Data.SqlClient.SqlEnclaveSession> - 주어진 enclave 세션에 대한 상태를 캡슐화합니다.
+- <xref:System.Data.SqlClient.SqlEnclaveSession>- 주어진 enclave 세션에 대한 상태를 캡슐화합니다.
 
-- <xref:System.Data.SqlClient.SqlEnclaveAttestationParameters> - 특정 증명 프로토콜을 실행하는 데 필요한 정보를 얻기 위해 SQL Server에서 사용하는 증명 매개 변수를 제공합니다.
+- <xref:System.Data.SqlClient.SqlEnclaveAttestationParameters>- 특정 증명 프로토콜을 실행하는 데 필요한 정보를 얻기 위해 SQL Server에서 사용하는 증명 매개 변수를 제공합니다.
 
 그런 다음, 애플리케이션 구성 파일에서 enclave 공급자에 대한 기능을 제공하는 추상 <xref:System.Data.SqlClient.SqlColumnEncryptionEnclaveProvider?displayProperty=nameWithType> 클래스의 구체적인 구현을 지정합니다. 예:
 
@@ -443,7 +443,7 @@ Windows Forms 애플리케이션의 경우 애플리케이션 매니페스트가
 
 #### <a name="core"></a>코어
 
-**.NET Standard 2.0에 대한 지원**
+**.NET 표준 2.0에 대한 지원**
 
 [.NET Standard](~/docs/standard/net-standard.md)는 해당 버전의 표준을 지원하는 각 .NET 구현에서 사용할 수 있어야 하는 API 집합을 정의합니다. .NET Framework 4.7.1은 .NET Standard 2.0을 완전히 지원하며 .NET Standard 2.0에 정의되어 있지만 .NET Framework 4.6.1, 4.6.2 및 4.7에서는 제공하지 않았던 [약 200개의 API](https://github.com/dotnet/standard/blob/master/netstandard/src/ApiCompatBaseline.net461.txt)를 추가했습니다. (이러한 .NET Framework 버전은 대상 시스템에 추가적인 .NET Standard 지원 파일도 배포된 경우에만 .NET Standard 2.0을 지원합니다.) 자세한 내용은 [.NET Framework 4.7.1 Runtime and Compiler Features](https://devblogs.microsoft.com/dotnet/net-framework-4-7-1-runtime-and-compiler-features/)(.NET Framework 4.7.1 런타임 및 컴파일러 기능) 블로그 게시물의 "BCL - .NET Standard 2.0 Support"(BCL - .NET Standard 2.0 지원)를 참조하세요.
 
@@ -493,7 +493,7 @@ ASP.NET은 23개 이벤트가 포함된 미리 정의된 파이프라인의 요�
 
 .NET Framework 4.7.1에는 문자열에서 <xref:System.Web.HttpCookie> 개체를 만들고 만료 날짜 및 경로와 같은 쿠키 값을 정확하게 할당하는 표준화된 방법을 제공하는 <xref:System.Web.HttpCookie.TryParse%2A?displayProperty=nameWithType>이라는 새로운 메서드가 포함되어 있습니다. 자세한 내용은 [.NET Framework 4.7.1 ASP.NET and Configuration Features](https://devblogs.microsoft.com/dotnet/net-framework-4-7-1-asp-net-and-configuration-features/)(.NET Framework 4.7.1 ASP.NET 및 구성 기능) 블로그 게시물의 "ASP.NET HttpCookie parsing"(ASP.NET HttpCookie 구문 분석)을 참조하세요.
 
-**ASP.NET 양식 인증 자격 증명에 대한 SHA-2 해시 지원**
+**ASP.NET 양식 인증 자격 증명에 대한 SHA-2 해시 옵션**
 
 .NET Framework 4.7 및 이전 버전에서는 개발자가 MD5 또는 SHA1을 사용하여 구성 파일에 해시 암호와 사용자 자격 증명을 저장할 수 있었습니다. .NET Framework 4.7.1부터 ASP.NET은 SHA256, SHA384 및 SHA512 같은 새로운 보안 SHA-2 해시 옵션도 지원합니다. SHA1은 기본값을 유지하며, 기본값이 아닌 해시 알고리즘은 웹 구성 파일에 정의할 수 있습니다. 예:
 
@@ -574,7 +574,7 @@ NET Framework 4.7에서 ASP.NET에는 다음과 같은 새 기능이 포함됩�
 
 WCF(Windows Communication Foundation)는 다음과 같은 기능 및 변경 내용을 추가합니다.
 
-**TLS1.1.1 또는 TLS1.2에 대한 기본 메시지 보안 설정 구성 가능**
+**TLS 1.1 또는 TLS 1.2에 대한 기본 메시지 보안 설정 구성 가능**
 
 .NET Framework 4.7부터 WCF에서 SSL 3.0 및 TSL 1.0 외에도 TSL 1.1 또는 TLS 1.2를 기본 메시지 보안 프로토콜로 구성할 수 있습니다. 이것은 옵트인 설정으로 이 기능을 사용하려면 애플리케이션 구성 파일에 다음 항목을 추가해야 합니다.
 
@@ -653,17 +653,17 @@ WISP(Windows 잉크 서비스 플랫폼) 대신 [WM_POINTER 메시지](https://d
 
 [!INCLUDE[net_v462](../../../includes/net-v462-md.md)]의 ASP.NET에는 다음과 같은 향상된 기능이 포함되어 있습니다.
 
-**데이터 주석 유효성 검사기의 지역화된 오류 메시지에 대한 지원 개선**
+**데이터 주석 유효성 검사기의 지역화된 오류 메시지에 대한 지원 향상**
 
 데이터 주석 유효성 검사기를 통해 클래스 속성에 하나 이상의 특성을 추가하여 유효성 검사를 수행할 수 있습니다. 특성의 <xref:System.ComponentModel.DataAnnotations.ValidationAttribute.ErrorMessage%2A?displayProperty=nameWithType> 요소는 유효성 검사가 실패할 경우에 표시할 오류 메시지의 텍스트를 정의합니다. [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] 이상에서는 ASP.NET을 사용하여 오류 메시지를 쉽게 지역화할 수 있습니다. 다음과 같은 경우에 오류 메시지를 지역화합니다.
 
-1.  <xref:System.ComponentModel.DataAnnotations.ValidationAttribute.ErrorMessage%2A?displayProperty=nameWithType>가 유효성 검사 특성에 제공되는 경우
+1. <xref:System.ComponentModel.DataAnnotations.ValidationAttribute.ErrorMessage%2A?displayProperty=nameWithType>가 유효성 검사 특성에 제공되는 경우
 
-2.  리소스 파일 App_LocalResources 폴더에 저장되어 있는 경우
+2. 리소스 파일 App_LocalResources 폴더에 저장되어 있는 경우
 
-3.  지역화된 리소스 파일의 이름이 `DataAnnotation.Localization.{`*이름*`}.resx` 형식인 경우(여기서 *이름*은 *languageCode*`-`*country/regionCode* 또는 *languageCode* 형식의 문화권 이름임)
+3. 지역화된 리소스 파일의 이름이 `DataAnnotation.Localization.{`*이름*`}.resx` 형식인 경우(여기서 *이름*은 *languageCode*`-`*country/regionCode* 또는 *languageCode* 형식의 문화권 이름임)
 
-4.  리소스의 키 이름이 <xref:System.ComponentModel.DataAnnotations.ValidationAttribute.ErrorMessage%2A?displayProperty=nameWithType> 특성에 할당된 문자열이고 해당 값이 지역화된 오류 메시지인 경우
+4. 리소스의 키 이름이 <xref:System.ComponentModel.DataAnnotations.ValidationAttribute.ErrorMessage%2A?displayProperty=nameWithType> 특성에 할당된 문자열이고 해당 값이 지역화된 오류 메시지인 경우
 
 예를 들어, 다음 데이터 주석 특성은 잘못된 등급에 대한 기본 문화권의 오류 메시지를 정의합니다.
 
@@ -865,7 +865,7 @@ URI 상수가 <xref:System.Security.Cryptography.Xml.SignedXml>에 모두 노출
 
 .NET Framework Data Provider for SQL Server(<xref:System.Data.SqlClient?displayProperty=nameWithType>)는 [!INCLUDE[net_v462](../../../includes/net-v462-md.md)]에 다음과 같은 새로운 기능이 포함되어 있습니다.
 
-**Azure SQL Database와의 연결 풀링 및 시간 초과**
+**Azure SQL 데이터베이스와의 연결 풀링 및 시간 초과**
 
 연결 풀링을 사용하도록 설정한 상태에서 시간 초과 또는 다른 오류가 발생할 경우 예외가 캐시되고 다음에 연결하려고 시도할 때 캐시된 예외가 5초-1분 동안 throw됩니다.  자세한 내용은 [SQL Server 연결 풀링(ADO.NET)](../data/adonet/sql-server-connection-pooling.md)을 참조하십시오.
 
@@ -893,7 +893,7 @@ Azure SQL Database에 연결하는 애플리케이션에 대한 연결 풀 차�
 
 연결 풀 차단 기간이 항상 비활성화됩니다.
 
-**상시 암호화 기능 향상**
+**Always Encrypted 기능 향상**
 
 SQLClient에서는 상시 암호화에 대한 두 가지 향상된 기능을 도입했습니다.
 
@@ -931,7 +931,7 @@ Const DisableCngCertificates As String = "Switch.System.ServiceModel.DisableCngC
 AppContext.SetSwitch(disableCngCertificates, False)
 ```
 
-**DataContractJsonSerializer 클래스에 의한 여러 일광 절약 시간 조정 규칙에 대한 지원 개선**
+**DataContractJsonSerializer 클래스에 의한 여러 일광 절약 시간 조정 규칙에 대한 지원 향상**
 
 고객이 응용 프로그램 구성 설정을 사용하여 <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> 클래스에서 단일 표준 시간대에 대해 여러 조정 규칙을 지원하는지 여부를 결정할 수 있습니다. 이 기능은 옵트인 기능입니다. 이 기능을 사용하려면 app.config 파일에 다음 설정을 추가합니다.
 
@@ -941,7 +941,7 @@ AppContext.SetSwitch(disableCngCertificates, False)
 </runtime>
 ```
 
-이 기능을 사용하도록 설정한 경우 <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> 개체에서는 <xref:System.TimeZone> 형식 대신 <xref:System.TimeZoneInfo> 형식을 사용하여 날짜 및 시간 데이터를 deserialize합니다. <xref:System.TimeZoneInfo>에서는 여러 조정 규칙을 지원하므로 기록 표준 시간대 데이터로 작업할 수 있지만 <xref:System.TimeZone>에서는 그렇지 않습니다.
+이 기능을 사용하도록 설정한 경우 <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> 개체에서는 <xref:System.TimeZone> 형식 대신 <xref:System.TimeZoneInfo> 형식을 사용하여 날짜 및 시간 데이터를 deserialize합니다. <xref:System.TimeZoneInfo> 여러 조정 규칙을 지원하므로 기록 표준 시간대 데이터로 작업할 수 있지만 <xref:System.TimeZone>에서는 그렇지 않습니다.
 
 <xref:System.TimeZoneInfo> 구조 및 시간대 조정에 대한 자세한 내용은 [표준 시간대 개요](../../standard/datetime/time-zone-overview.md)를 참조하세요.
 
@@ -1036,9 +1036,10 @@ WPF 앱에 대해 최근에 확산되는 높은 DPI 및 하이브리드 DPI 환�
 
 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 이상에서 WF는 Visual Studio 디자이너와 코드 워크플로 모두에서 C# 식을 지원합니다. 다시 호스트된 워크플로 디자이너는 Visual Studio 외부 애플리케이션(예: WPF)에서 워크플로 디자이너가 위치할 수 있도록 해주는 WF의 주요 기능입니다.  Windows Workflow Foundation을 사용하면 다시 호스트된 워크플로 디자이너에서 C# 식 및 IntelliSense를 지원할 수 있습니다. 자세한 내용은 [Windows Workflow Foundation 블로그](https://go.microsoft.com/fwlink/?LinkID=809042&clcid=0x409)를 참조하십시오.
 
-`Availability of IntelliSense when a customer rebuilds a workflow project from Visual Studio`[!INCLUDE[net_v462](../../../includes/net-v462-md.md)] 이전 버전의 .NET Framework에서는 고객이 Visual Studio에서 워크플로 프로젝트를 다시 작성할 때 WF Designer IntelliSense가 중단됩니다. 프로젝트가 빌드되면 워크플로 형식을 디자이너에서 찾을 수 없으므로 IntelliSense의 누락된 워크플로 형식에 대한 경고가 **오류 목록** 창에 표시됩니다. [!INCLUDE[net_v462](../../../includes/net-v462-md.md)]에서는 이 문제를 해결하고 IntelliSense를 사용할 수 있도록 해줍니다.
+`Availability of IntelliSense when a customer rebuilds a workflow project from Visual Studio`
+[!INCLUDE[net_v462](../../../includes/net-v462-md.md)] 이전 버전의 .NET Framework에서는 고객이 Visual Studio에서 워크플로 프로젝트를 다시 작성할 때 WF Designer IntelliSense가 중단됩니다. 프로젝트가 빌드되면 워크플로 형식을 디자이너에서 찾을 수 없으므로 IntelliSense의 누락된 워크플로 형식에 대한 경고가 **오류 목록** 창에 표시됩니다. [!INCLUDE[net_v462](../../../includes/net-v462-md.md)]에서는 이 문제를 해결하고 IntelliSense를 사용할 수 있도록 해줍니다.
 
-**워크플로 추적 기능이 설정된 Workflow V1 응용 프로그램을 이제 FIPS 모드로 실행 가능**
+**워크플로 추적 기능이 설정된 Workflow V1 애플리케이션은 이제 FIPS 모드로 실행됩니다.**
 
 이제 FIPS 호환성 모드를 사용하는 컴퓨터에서 워크플로 추적이 설정된 워크플로 버전 1 스타일 애플리케이션을 실행할 수 있습니다. 이 시나리오를 사용하려면 app.config 파일을 다음과 같이 변경해야 합니다.
 
@@ -1048,7 +1049,7 @@ WPF 앱에 대해 최근에 확산되는 높은 DPI 및 하이브리드 DPI 환�
 
 이 시나리오를 사용하지 않도록 설정한 경우 애플리케이션을 실행하면 계속해서 예외가 발생하고 “이 구현은 Windows Platform FIPS 유효성을 검사한 암호화 알고리즘의 일부가 아닙니다.”라는 메시지가 표시됩니다.
 
-**Visual Studio Workflow Designer에서 동적 업데이트를 사용할 때 워크플로 기능 향상**
+**Visual Studio 워크플로 디자이너에서 동적 업데이트를 사용할 때 워크플로 기능 향상**
 
 워크플로 디자이너, 순서도 활동 디자이너 및 기타 워크플로 활동 디자이너는 이제 <xref:System.Activities.DynamicUpdate.DynamicUpdateServices.PrepareForUpdate%2A?displayProperty=nameWithType> 메서드를 호출한 이후에 저장된 워크플로를 로드하여 표시합니다. [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] 이전 버전의 .NET Framework에서는 <xref:System.Activities.DynamicUpdate.DynamicUpdateServices.PrepareForUpdate%2A?displayProperty=nameWithType> 호출 후에 저장된 워크플로에 대한 XAML 파일을 Visual Studio에서 로드하면 다음과 같은 문제가 발생할 수 있습니다.
 
@@ -1130,7 +1131,7 @@ ECDSA는 RSA보다 더 향상된 성능과 더 안전한 암호화 알고리즘�
 
 ADO.NET에는 다음이 추가되었습니다.
 
-**하드웨어로 보호된 키에 대해 Always Encrypted 지원**
+**하드웨어로 보호된 키에 대해 상시 암호화 지원**
 
 ADO.NET은 이제 상시 암호화 열 마스터 키를 HSM(하드웨어 보안 모듈)에 고유하게 저장할 수 있습니다. 이 지원을 통해 고객은 사용자 지정 열 마스터 키 저장소 공급자를 작성하고 애플리케이션에 등록하지 않고도 HSM에 저장된 비동기 키를 활용할 수 있습니다.
 
@@ -1150,7 +1151,7 @@ Windows Presentation Foundation에는 많은 향상된 기능 및 변경 내용�
 
 [!INCLUDE[net_v461](../../../includes/net-v461-md.md)]에서 터치 이벤트를 발생시킬 때의 지연이 수정되었습니다. 또한 빠른 입력 중 <xref:System.Windows.Controls.RichTextBox> 컨트롤에 입력한 내용이 더 이상 렌더링 스레드에 연결되지 않습니다.
 
-**향상된 맞춤법 검사**
+**맞춤법 검사 향상**
 
 Windows 8.1 이상 버전에서는 추가 언어 맞춤법 검사에 대한 운영 체제 지원을 사용하도록 WPF의 맞춤법 검사기 기능이 업데이트되었습니다.  Windows 8.1 이전의 Windows 버전에 대해서는 기능이 변경되지 않았습니다.
 
@@ -1249,7 +1250,7 @@ Ngen PDB를 사용하면 NGen이 IL PDB에 대한 종속성 없이 IL-네이티�
 
          이제 ASP.NET이 비동기 응답 플러시에 대한 간단한 작업 기반 API인 <xref:System.Web.HttpResponse.FlushAsync%2A?displayProperty=nameWithType>를 제공합니다. 이를 통해 해당 언어의 `async/await` 지원을 사용하여 응답을 비동기적으로 플러시할 수 있습니다.
 
-    - **모델 바인딩의 태스크 반환 메서드 지원**
+    - **모델 바인딩의 작업 반환 메서드 지원**
 
          [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]에 ASP.NET이 Web Forms 페이지 및 사용자 정의 컨트롤에서 CRUD 기반 데이터 작업으로 확장 가능하고 코드 중심의 접근이 가능하도록 모델 바인딩 기능을 추가했습니다. 이제 모델 바인딩 시스템이 <xref:System.Threading.Tasks.Task>를 반환하는 모델 바인딩 메서드를 지원합니다. 이 기능으로 Web Forms 개발자가 Entity Framework를 포함하여 새 버전의 ORM을 사용하는 경우 간편한 데이터 바인딩 시스템과 함께 비동기의 확장성 이점을 얻을 수 있습니다.
 
@@ -1561,7 +1562,7 @@ Ngen PDB를 사용하면 NGen이 IL PDB에 대한 종속성 없이 IL-네이티�
 
 - **코드 페이지 인코딩 지원**
 
-     [!INCLUDE[net_core](../../../includes/net-core-md.md)]에서는 주로 유니코드 인코딩을 지원하며, 기본적으로 코드 페이지 인코딩에 대한 제한된 지원을 제공합니다. <xref:System.Text.Encoding.RegisterProvider%2A?displayProperty=nameWithType> 메서드로 코드 페이지 인코딩을 등록하여 .NET Framework에서 사용할 수 있지만 [!INCLUDE[net_core](../../../includes/net-core-md.md)]에서 지원되지 않는 코드 페이지 인코딩에 대한 지원을 추가할 수 있습니다. 자세한 내용은 <xref:System.Text.CodePagesEncodingProvider?displayProperty=nameWithType>을 참조하세요.
+     [!INCLUDE[net_core](../../../includes/net-core-md.md)] 주로 유니코드 인코딩을 지원하며, 기본적으로 코드 페이지 인코딩을 제한적으로 지원합니다. <xref:System.Text.Encoding.RegisterProvider%2A?displayProperty=nameWithType> 메서드로 코드 페이지 인코딩을 등록하여 .NET Framework에서 사용할 수 있지만 [!INCLUDE[net_core](../../../includes/net-core-md.md)]에서 지원되지 않는 코드 페이지 인코딩에 대한 지원을 추가할 수 있습니다. 자세한 내용은 <xref:System.Text.CodePagesEncodingProvider?displayProperty=nameWithType>을 참조하세요.
 
 - **.NET 네이티브**
 
@@ -1612,7 +1613,7 @@ Ngen PDB를 사용하면 NGen이 IL PDB에 대한 종속성 없이 IL-네이티�
 
 - **프로파일링 기능 향상.** 다음과 같은 관리되지 않는 새로운 프로파일링 API를 통해 더욱 강력한 프로파일링 기능이 제공됩니다.
 
-    - [COR_PRF_ASSEMBLY_REFERENCE_INFO 구조체](../unmanaged-api/profiling/cor-prf-assembly-reference-info-structure.md)
+    - [COR_PRF_ASSEMBLY_REFERENCE_INFO 구조](../unmanaged-api/profiling/cor-prf-assembly-reference-info-structure.md)
     - [COR_PRF_HIGH_MONITOR 열거형](../unmanaged-api/profiling/cor-prf-high-monitor-enumeration.md)
     - [GetAssemblyReferences 메서드](../unmanaged-api/profiling/icorprofilercallback6-getassemblyreferences-method.md)
     - [GetEventMask2 메서드](../unmanaged-api/profiling/icorprofilerinfo5-geteventmask2-method.md)
@@ -1634,7 +1635,7 @@ Ngen PDB를 사용하면 NGen이 IL PDB에 대한 종속성 없이 IL-네이티�
 
 - **트랜잭션을 승격하고 지속적인 인리스트먼트로 변환**
 
-     <xref:System.Transactions.Transaction.PromoteAndEnlistDurable%2A?displayProperty=nameWithType>은 .NET Framework 4.5.2 및 4.6에 추가된 새로운 API입니다.
+     <xref:System.Transactions.Transaction.PromoteAndEnlistDurable%2A?displayProperty=nameWithType> .NET Framework 4.5.2 및 4.6에 추가된 새로운 API입니다.
 
     ```csharp
     [System.Security.Permissions.PermissionSetAttribute(System.Security.Permissions.SecurityAction.LinkDemand, Name = "FullTrust")]
@@ -1664,7 +1665,7 @@ Ngen PDB를 사용하면 NGen이 IL PDB에 대한 종속성 없이 IL-네이티�
 
      이러한 변경 내용에 대한 자세한 내용은 [이식 가능한 클래스 라이브러리](../../standard/cross-platform/cross-platform-development-with-the-portable-class-library.md)을 참조하십시오.
 
-- 이제 Windows 앱 빌드 및 배포를 위한 미리 컴파일 기술인 [!INCLUDE[net_native](../../../includes/net-native-md.md)]에 대한 설명서가 .NET Framework 콘텐츠 집합에 포함되었습니다. [!INCLUDE[net_native](../../../includes/net-native-md.md)]는 앱을 중간 언어가 아닌 네이티브 코드로 직접 컴파일하여 더 나은 성능을 제공합니다. 자세한 내용은 [.NET 네이티브로 앱 컴파일](../net-native/index.md)을 참조하십시오.
+- 이제 Windows 앱 빌드 및 배포를 위한 미리 컴파일 기술인 [!INCLUDE[net_native](../../../includes/net-native-md.md)]에 대한 설명서가 .NET Framework 콘텐츠 집합에 포함되었습니다. [!INCLUDE[net_native](../../../includes/net-native-md.md)] 앱을 IL(중간 언어)이 아닌 네이티브 코드로 직접 컴파일하여 더 나은 성능을 제공합니다. 자세한 내용은 [.NET 네이티브로 앱 컴파일](../net-native/index.md)을 참조하십시오.
 
 - [.NET Framework 참조 소스](https://referencesource.microsoft.com/)에서는 새로운 검색 환경과 향상된 기능을 제공합니다. 온라인에서 .NET Framework 소스 코드를 검색하여, [참조를 다운로드](https://referencesource.microsoft.com/download.html)해 오프라인에서 살펴보고, 디버그 시 소스(패치 및 업데이트 포함)를 단계별로 실행할 수 있습니다. 자세한 내용은 블로그 항목 [.NET 참조 소스의 새로운 디자인](https://devblogs.microsoft.com/dotnet/a-new-look-for-net-reference-source/)을 참조하십시오.
 
@@ -1858,7 +1859,7 @@ ASP.NET 4.5 및 4.5.1은 Web Forms, WebSocket 지원, 비동기 처리기, 성�
 
 - XML 편집기 도구 설명
 
-- <xref:System.ServiceModel.ChannelFactory> 캐싱 지원
+- <xref:System.ServiceModel.ChannelFactory> 캐싱 지원.
 
 - 이진 인코더 압축 지원
 

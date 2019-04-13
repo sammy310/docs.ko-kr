@@ -21,17 +21,16 @@ helpviewer_keywords:
 - decoding image formats [WPF]
 - rotating images [WPF]
 ms.assetid: 72aad87a-e6f3-4937-94cd-a18b7766e990
-ms.openlocfilehash: 45214b5f0e6827c36f87a4d45592ff0989c9a877
-ms.sourcegitcommit: 5c2176883dc3107445702724a7caa7ac2f6cb0d3
+ms.openlocfilehash: dba2f8b07134560abd77832293ce2a81e55e4875
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/03/2019
-ms.locfileid: "58890812"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59209712"
 ---
 # <a name="imaging-overview"></a>이미징 개요
 이 항목에서는 [!INCLUDE[TLA#tla_wic](../../../../includes/tlasharptla-wic-md.md)]를 소개합니다. [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)] 표시, 변환 및 이미지의 서식을 지정 하는 개발자를 수 있습니다.  
-  
-  
+
 <a name="_wpfImaging"></a>   
 ## <a name="wpf-imaging-component"></a>WPF Imaging Component  
  [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)] 중요 한에서 향상 된 이미징 기능을 제공 [!INCLUDE[TLA#tla_win](../../../../includes/tlasharptla-win-md.md)]합니다. 비트맵을 표시하거나 공용 컨트롤에서 이미지를 사용하는 것과 같은 이미징 기능에는 이전에는 [!INCLUDE[TLA#tla_gdi](../../../../includes/tlasharptla-gdi-md.md)] 또는 [!INCLUDE[TLA#tla_gdiplus](../../../../includes/tlasharptla-gdiplus-md.md)] 라이브러리가 필요했습니다. 이러한 [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)]는 기준 이미징 기능은 제공했지만 코덱 확장성 및 고품질 이미지 지원 등과 같은 기능이 없었습니다. [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)] 단점을 극복 하도록 디자인 된 [!INCLUDE[TLA2#tla_gdi](../../../../includes/tla2sharptla-gdi-md.md)] 하 고 [!INCLUDE[TLA2#tla_gdiplus](../../../../includes/tla2sharptla-gdiplus-md.md)] 의 새 집합을 제공 하 고 [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] 표시 하 고 응용 프로그램 내에서 이미지를 사용 합니다.  
@@ -190,6 +189,7 @@ ms.locfileid: "58890812"
 >  시스템이 코덱을 인식하려면 디지털로 서명되어야 합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Windows.Media.Imaging.BitmapSource>
 - <xref:System.Windows.Media.Imaging.BitmapImage>
 - <xref:System.Windows.Controls.Image>

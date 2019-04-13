@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 2d534ae381e0dc105731cf0a537f81afe80d87e0
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fabc8f77b12865d0d971b5934d7de27b52f3e813
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54732741"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59159486"
 ---
 # <a name="symlinedelta-structure"></a>SYMLINEDELTA 구조체
 편집 결과로 이동 된 메서드에 대 한 기호 처리기에 대 한 정보를 제공 합니다.  
@@ -47,4 +47,5 @@ typedef struct _SYMLINEDELTA
  **헤더:** CorSym.idl  
   
 ## <a name="see-also"></a>참고자료
+
 - [진단 기호 저장소 구조체](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-structures.md)

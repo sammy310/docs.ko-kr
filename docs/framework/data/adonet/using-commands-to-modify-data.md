@@ -2,12 +2,12 @@
 title: 명령을 사용하여 데이터 수정
 ms.date: 03/30/2017
 ms.assetid: f4160389-b9ff-4b74-b655-437c76dcd586
-ms.openlocfilehash: cec079d16c6dc3d98cee9bf17b4201654e9ba10a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f2e3d162bfbdcb79cfecefa4ddc8e6a0dc46ee3c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54509269"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59102455"
 ---
 # <a name="using-commands-to-modify-data"></a>명령을 사용하여 데이터 수정
 .NET Framework 데이터 공급자를 사용하여 저장 프로시저나 CREATE TABLE 및 ALTER COLUMN과 같은 데이터 정의 언어 문을 실행하여 데이터베이스 또는 카탈로그의 스키마를 조작할 수 있습니다. 이러한 명령에서는 쿼리에서와 같이 행을 반환 하지 않습니다 때문 **명령** 개체를 제공는 **ExecuteNonQuery** 처리 하도록 합니다.  
@@ -24,6 +24,7 @@ ms.locfileid: "54509269"
  데이터베이스 스키마를 수정하는 명령을 실행하는 방법을 설명합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [ADO.NET에서 데이터 검색 및 수정](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)
 - [명령 및 매개 변수](../../../../docs/framework/data/adonet/commands-and-parameters.md)
 - [ADO.NET 관리되는 공급자 및 데이터 집합 개발자 센터](https://go.microsoft.com/fwlink/?LinkId=217917)

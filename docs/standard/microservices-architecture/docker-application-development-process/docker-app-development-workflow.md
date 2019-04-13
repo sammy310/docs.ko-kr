@@ -4,12 +4,12 @@ description: Docker 기반 애플리케이션 개발 워크플로의 세부 정�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 01/07/2019
-ms.openlocfilehash: a8016b2b55313cb6e1d84bfb2c50a62347858de9
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: d494dba829d8065e2bc1424bc9bcc11e265fbcc0
+ms.sourcegitcommit: a3db1a9eafca89f95ccf361bc1833b47fbb2bb30
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58464361"
+ms.lasthandoff: 04/04/2019
+ms.locfileid: "58921093"
 ---
 # <a name="development-workflow-for-docker-apps"></a>Docker 앱에 대한 개발 워크플로
 
@@ -97,14 +97,14 @@ Visual Studio와 Docker용 도구를 사용하면 마우스 클릭 몇 번으로
 
 일반적으로 [Docker Hub](https://hub.docker.com/) 레지스트리 같은 공식 리포지토리에서 얻을 수 있는 기본 이미지를 기반으로 컨테이너에 대한 사용자 지정 이미지를 빌드합니다. Visual Studio에서 Docker 지원을 사용하도록 설정하면 내부에서 이와 같은 일이 발생합니다. Dockerfile은 기존 `aspnetcore` 이미지를 사용합니다.
 
-앞에서 선택하는 프레임워크 및 운영 체제에 따라 어떤 Docker 이미지와 리포지토리를 사용할 수 있는지 설명했습니다. 예를 들어 ASP.NET Core(Linux 또는 Windows)를 사용하려는 경우 사용할 이미지는 `microsoft/dotnet:2.2-aspnetcore-runtime`입니다. 따라서 컨테이너에 사용할 기본 Docker 이미지만 지정하면 됩니다. 이렇게 하려면 `FROM microsoft/dotnet:2.2-aspnetcore-runtime`을 Dockerfile에 추가하세요. 이 작업은 Visual Studio가 자동으로 수행하지만, 버전을 업데이트하려면 직접 이 값을 업데이트합니다.
+앞에서 선택하는 프레임워크 및 운영 체제에 따라 어떤 Docker 이미지와 리포지토리를 사용할 수 있는지 설명했습니다. 예를 들어 ASP.NET Core(Linux 또는 Windows)를 사용하려는 경우 사용할 이미지는 `mcr.microsoft.com/dotnet/core/aspnet:2.2`입니다. 따라서 컨테이너에 사용할 기본 Docker 이미지만 지정하면 됩니다. 이렇게 하려면 `FROM mcr.microsoft.com/dotnet/core/aspnet:2.2`을 Dockerfile에 추가하세요. 이 작업은 Visual Studio가 자동으로 수행하지만, 버전을 업데이트하려면 직접 이 값을 업데이트합니다.
 
 버전 번호가 있는 Docker Hub의 공식 .NET 이미지 리포지토리를 사용하면 모든 컴퓨터에서(개발, 테스트 및 프로덕션 포함) 동일한 언어 기능을 사용할 수 있습니다.
 
 다음 예제에서는 ASP.NET Core 컨테이너에 대한 샘플 Dockerfile을 보여줍니다.
 
 ```Dockerfile
-FROM microsoft/dotnet:2.2-aspnetcore-runtime
+FROM mcr.microsoft.com/dotnet/core/aspnet:2.2
 ARG source
 WORKDIR /app
 EXPOSE 80
@@ -112,7 +112,7 @@ COPY ${source:-obj/Docker/publish} .
 ENTRYPOINT ["dotnet", " MySingleContainerWebApp.dll "]
 ```
 
-이 예에서 이미지는 공식 ASP.NET Core Docker 버전 2.2 이미지(Linux 및 Windows용 다중 아키텍처)를 기반으로 합니다. 이것은 설정 `FROM microsoft/dotnet:2.2-aspnetcore-runtime`입니다. (이 기본 이미지에 대한 자세한 내용은 [.NET Core Docker 이미지](https://hub.docker.com/r/microsoft/dotnet/) 페이지를 참조하세요.) 또한 Dockerfile에서, 런타임에 사용할 TCP 포트(이 예에서는 EXPOSE 설정을 사용하여 구성한 대로 포트 80)에서 수신 대기하라고 Docker에 지시해야 합니다.
+이 예에서 이미지는 공식 ASP.NET Core Docker 버전 2.2 이미지(Linux 및 Windows용 다중 아키텍처)를 기반으로 합니다. 이것은 설정 `FROM mcr.microsoft.com/dotnet/core/aspnet:2.2`입니다. (이 기본 이미지에 대한 자세한 내용은 [.NET Core Docker 이미지](https://hub.docker.com/_/microsoft-dotnet-core/) 페이지를 참조하세요.) 또한 Dockerfile에서, 런타임에 사용할 TCP 포트(이 예에서는 EXPOSE 설정을 사용하여 구성한 대로 포트 80)에서 수신 대기하라고 Docker에 지시해야 합니다.
 
 사용하는 언어 및 프레임워크에 따라 Dockerfile에서 추가 구성 설정을 지정할 수 있습니다. 예를 들어 `["dotnet", "MySingleContainerWebApp.dll"]`이 포함된 ENTRYPOINT 줄은 Docker에 .NET Core 애플리케이션을 실행하라고 알려줍니다. SDK 및 .NET Core CLI(dotnet CLI)를 사용하여 .NET 애플리케이션을 빌드하고 실행하는 경우 이 설정이 달라집니다. 결론적으로 ENTRYPOINT 줄 및 기타 설정은 개발자가 애플리케이션에 대해 선택하는 언어 및 플랫폼에 따라 달라집니다.
 
@@ -132,7 +132,7 @@ ENTRYPOINT ["dotnet", " MySingleContainerWebApp.dll "]
 
 ### <a name="using-multi-arch-image-repositories"></a>다중 아키텍처 이미지 리포지토리 사용
 
-단일 리포지토리는 Linux 이미지 및 Windows 이미지 같은 플랫폼 변형을 포함할 수 있습니다. 이 기능을 통해 Microsoft 같은 공급업체(기본 이미지 작성자)는 여러 플랫폼(즉, Linux 및 Windows)을 처리하는 단일 리포지토리를 만들 수 있습니다. 예를 들어 Docker Hub 레지스트리에서 제공되는 [microsoft/dotnet](https://hub.docker.com/r/microsoft/dotnet/) 리포지토리는 동일한 리포지토리 이름을 사용하여 Linux 및 Windows Nano Server에 대한 지원을 제공합니다.
+단일 리포지토리는 Linux 이미지 및 Windows 이미지 같은 플랫폼 변형을 포함할 수 있습니다. 이 기능을 통해 Microsoft 같은 공급업체(기본 이미지 작성자)는 여러 플랫폼(즉, Linux 및 Windows)을 처리하는 단일 리포지토리를 만들 수 있습니다. 예를 들어 Docker Hub 레지스트리에서 제공되는 [dotnet/core](https://hub.docker.com/_/microsoft-dotnet-core/) 리포지토리는 동일한 리포지토리 이름을 사용하여 Linux 및 Windows Nano Server에 대한 지원을 제공합니다.
 
 태그를 지정하는 경우 다음과 같이 명시적인 플랫폼을 대상으로 지정합니다.
 
@@ -174,11 +174,11 @@ Dockerfile은 배치 스크립트와 비슷합니다. 명령줄에서 머신을 
 초기 Dockerfile의 모습은 다음과 같을 수 있습니다.
 
 ```Dockerfile
- 1  FROM microsoft/dotnet:2.2-aspnetcore-runtime AS base
+ 1  FROM mcr.microsoft.com/dotnet/core/aspnet:2.2 AS base
  2  WORKDIR /app
  3  EXPOSE 80
  4
- 5  FROM microsoft/dotnet:2.2-sdk AS build
+ 5  FROM mcr.microsoft.com/dotnet/core/sdk:2.2 AS build
  6  WORKDIR /src
  7  COPY src/Services/Catalog/Catalog.API/Catalog.API.csproj …
  8  COPY src/BuildingBlocks/HealthChecks/src/Microsoft.AspNetCore.HealthChecks … 
@@ -255,9 +255,9 @@ RUN dotnet restore
 
 1) **.dockerignore**에 다음 줄을 추가합니다.
 
-   - `*.sln` - 기본 폴더 트리의 모든 솔루션 파일 무시
+   - `*.sln`- 기본 폴더 트리의 모든 솔루션 파일 무시
 
-   - `!eShopOnContainers-ServicesAndWebApps.sln` - 이 솔루션 파일만 포함
+   - `!eShopOnContainers-ServicesAndWebApps.sln`- 이 솔루션 파일만 포함
 
 2) `dotnet restore`에 `/ignoreprojectextensions:.dcproj` 인수를 포함하여 docker-compose 프로젝트를 무시하고 eShopOnContainers-ServicesAndWebApps 솔루션의 패키지만 복원하도록 합니다.
 
@@ -266,11 +266,11 @@ RUN dotnet restore
 결과 파일은 다음과 같습니다.
 
 ```Dockerfile
- 1  FROM microsoft/dotnet:2.2-aspnetcore-runtime AS base
+ 1  FROM mcr.microsoft.com/dotnet/core/aspnet:2.2 AS base
  2  WORKDIR /app
  3  EXPOSE 80
  4
- 5  FROM microsoft/dotnet:2.2-sdk AS publish
+ 5  FROM mcr.microsoft.com/dotnet/core/sdk:2.2 AS publish
  6  WORKDIR /src
  7  COPY . .
  8  RUN dotnet restore /ignoreprojectextensions:.dcproj

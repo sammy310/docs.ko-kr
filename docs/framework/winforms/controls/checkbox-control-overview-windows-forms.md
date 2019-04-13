@@ -8,12 +8,12 @@ helpviewer_keywords:
 - data binding [Windows Forms], checkbox controls
 - check boxes [Windows Forms], about check boxes
 ms.assetid: 085a4e0b-9046-473f-b141-d0edddfb2ebb
-ms.openlocfilehash: 003e57db16c35b519d3948fc24e82a94a5c3744d
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 2a18327d9836d1dbbcd5d5d6e73f217637736d20
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57713451"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59121797"
 ---
 # <a name="checkbox-control-overview-windows-forms"></a>CheckBox 컨트롤 개요(Windows Forms)
 Windows Forms <xref:System.Windows.Forms.CheckBox> 컨트롤은 특정 조건이 설정 또는 해제되었는지를 나타냅니다. 일반적으로 예/아니요 또는 True/False 선택을 사용자에게 제공하는 데 사용됩니다. 확인란 컨트롤을 그룹으로 사용하여 사용자가 하나 이상 선택할 수 있는 여러 선택 항목을 표시할 수 있습니다.  
@@ -25,7 +25,8 @@ Windows Forms <xref:System.Windows.Forms.CheckBox> 컨트롤은 특정 조건이
  합니다 <xref:System.Windows.Forms.CheckBox> 컨트롤에 두 개의 중요 한 속성인 <xref:System.Windows.Forms.CheckBox.Checked%2A> 및 <xref:System.Windows.Forms.CheckBox.CheckState%2A>합니다. 합니다 <xref:System.Windows.Forms.CheckBox.Checked%2A> 속성 중 하나를 반환 합니다. `true` 또는 `false`합니다. <xref:System.Windows.Forms.CheckBox.CheckState%2A> 속성 중 하나를 반환 합니다. <xref:System.Windows.Forms.CheckState.Checked> 또는 <xref:System.Windows.Forms.CheckState.Unchecked>; 또는 합니다 <xref:System.Windows.Forms.CheckBox.ThreeState%2A> 속성이로 설정 되어 `true`, <xref:System.Windows.Forms.CheckBox.CheckState%2A> 반환할 수도 있습니다. <xref:System.Windows.Forms.CheckState.Indeterminate>합니다. 비활성화 된 상태의 상자를 나타내는 옵션을 사용할 수 없는 흐리게 모양으로 표시 됩니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Windows.Forms.CheckBox>
-- [방법: Windows Forms CheckBox 컨트롤을 사용 하 여 옵션 설정](how-to-set-options-with-windows-forms-checkbox-controls.md)
-- [방법: Windows Forms CheckBox 클릭에 응답](how-to-respond-to-windows-forms-checkbox-clicks.md)
+- [방법: Windows Forms CheckBox 컨트롤을 사용하여 옵션 설정](how-to-set-options-with-windows-forms-checkbox-controls.md)
+- [방법: Windows Forms 확인란 클릭에 응답](how-to-respond-to-windows-forms-checkbox-clicks.md)
 - [CheckBox 컨트롤](checkbox-control-windows-forms.md)

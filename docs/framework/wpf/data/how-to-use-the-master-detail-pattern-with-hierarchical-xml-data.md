@@ -1,18 +1,18 @@
 ---
-title: '방법: 계층적 XML 데이터에 마스터-세부 패턴 사용'
+title: '방법: 계층적 XML 데이터에서 마스터-세부 정보 패턴 사용'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - data binding [WPF], Master-Detail data paradigm
 - Master-Detail data paradigm
 ms.assetid: eb8dbdd8-5871-42bb-a16b-04e655fea677
-ms.openlocfilehash: 2b1ed34fe363f44a3a9eb80dc56d721868329717
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: ba6c932f519ffa5c3c70ecb21eb9b5d08c40fb28
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57378108"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59086262"
 ---
-# <a name="how-to-use-the-master-detail-pattern-with-hierarchical-xml-data"></a>방법: 계층적 XML 데이터에 마스터-세부 패턴 사용
+# <a name="how-to-use-the-master-detail-pattern-with-hierarchical-xml-data"></a>방법: 계층적 XML 데이터에서 마스터-세부 정보 패턴 사용
 이 예제에 사용 하 여 마스터-세부 시나리오를 구현 하는 방법을 보여 줍니다 [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] 데이터입니다.  
   
 ## <a name="example"></a>예제  
@@ -22,5 +22,6 @@ ms.locfileid: "57378108"
 [!code-xaml[MasterDetailXml#HowTo2](~/samples/snippets/csharp/VS_Snippets_Wpf/MasterDetailXml/CS/Window1.xaml#howto2)]  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Windows.HierarchicalDataTemplate>
 - [방법 항목](data-binding-how-to-topics.md)

@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: 242a9952cb47d170aceffa1aa392071eb40cc6ab
+ms.sourcegitcommit: 0aca6c5d166d7961a1e354c248495645b97a1dc5
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58760651"
+---
 ### <a name="rsacng-and-dsacng-are-once-again-usable-in-partial-trust-scenarios"></a>RSACng 및 DSACng는 부분 신뢰 시나리오에서 다시 사용할 수 있습니다.
 
 |   |   |

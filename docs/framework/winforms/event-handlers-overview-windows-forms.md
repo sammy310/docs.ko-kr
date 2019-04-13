@@ -10,12 +10,12 @@ helpviewer_keywords:
 - event handling [Windows Forms], Windows Forms
 - event handlers [Windows Forms], about event handlers
 ms.assetid: 228112e1-1711-42ee-8ffa-ff3555bffe66
-ms.openlocfilehash: 6dbcffadfd484dc33db2fcd3ee3f680dcc0740e5
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 05acbfaf427060d015c2445360a7d73ebe97d070
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57703389"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59186084"
 ---
 # <a name="event-handlers-overview-windows-forms"></a>이벤트 처리기 개요(Windows Forms)
 이벤트 처리기는 이벤트에 바인딩된 메서드입니다. 이벤트가 발생 하면 이벤트 처리기 내의 코드가 실행 됩니다. 각 이벤트 처리기는 이벤트를 제대로 처리할 수 있도록 하는 두 개의 매개 변수를 제공 합니다. 다음 예제에서는 이벤트 처리기를 <xref:System.Windows.Forms.Button> 컨트롤의 <xref:System.Windows.Forms.Control.Click> 이벤트입니다.  
@@ -49,5 +49,6 @@ private:
  또한 다른 컨트롤에 대해 동일한 이벤트를 처리 하려면 동일한 이벤트 처리기를 사용할 수 있습니다. 예를 들어, 그룹에 있는 경우 <xref:System.Windows.Forms.RadioButton> 폼에서 컨트롤에 대 한 단일 이벤트 처리기를 만들 수 있습니다 합니다 <xref:System.Windows.Forms.Control.Click> 이벤트 각 컨트롤의 <xref:System.Windows.Forms.Control.Click> 이벤트를 단일 이벤트 처리기를 바인딩할 합니다. 자세한 내용은 [방법: Windows Forms에서 단일 이벤트 처리기에 여러 이벤트 연결](how-to-connect-multiple-events-to-a-single-event-handler-in-windows-forms.md)합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [Windows Forms에서 이벤트 처리기 만들기](creating-event-handlers-in-windows-forms.md)
 - [이벤트 개요](events-overview-windows-forms.md)

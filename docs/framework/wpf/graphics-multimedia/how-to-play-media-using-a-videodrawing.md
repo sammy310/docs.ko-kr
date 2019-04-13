@@ -5,12 +5,12 @@ helpviewer_keywords:
 - playback of media [WPF]
 - classes [WPF], MediaPlayer
 ms.assetid: 165d47ed-22ce-4ded-aa6a-aa9b7467de87
-ms.openlocfilehash: 2397662c79af208f2528f6eedcd5995cfac9526c
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 186c9ae8167dafd09f029418c1d23f81f7a9e906
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57363100"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59203615"
 ---
 # <a name="how-to-play-media-using-a-videodrawing"></a>방법: VideoDrawing을 사용하여 미디어 재생
 오디오 또는 비디오 파일을 재생 하려면 사용 하는 <xref:System.Windows.Media.VideoDrawing> 및 <xref:System.Windows.Media.MediaPlayer>합니다. 미디어를 로드하고 재생하는 방법에는 다음 두 가지가 있습니다. 첫 번째 사용 하는 것을 <xref:System.Windows.Media.MediaPlayer> 및 <xref:System.Windows.Media.VideoDrawing> 고 두 번째 방법은 직접 만들어보십시오 <xref:System.Windows.Media.MediaTimeline> 를 사용 하는 <xref:System.Windows.Media.MediaPlayer> 및 <xref:System.Windows.Media.VideoDrawing>합니다.  
@@ -33,5 +33,6 @@ ms.locfileid: "57363100"
  이때 사용 하는 경우를 <xref:System.Windows.Media.MediaTimeline>, 대화형를 사용 하 여 <xref:System.Windows.Media.Animation.ClockController> 에서 반환 된를 <xref:System.Windows.Media.Animation.Clock.Controller%2A> 의 속성을 <xref:System.Windows.Media.MediaClock> 의 대화형 메서드 대신 미디어 재생을 제어 하 <xref:System.Windows.Media.MediaPlayer>.  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Windows.Media.VideoDrawing>
 - [Drawing 개체 개요](drawing-objects-overview.md)

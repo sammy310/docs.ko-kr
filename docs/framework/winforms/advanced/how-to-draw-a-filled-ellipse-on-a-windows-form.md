@@ -1,5 +1,5 @@
 ---
-title: '방법: Windows Form에 채워진된 타원 그리기'
+title: '방법: Windows Form에서 채워진 타원 그리기'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -15,14 +15,14 @@ helpviewer_keywords:
 - shapes [Windows Forms], drawing
 - forms [Windows Forms], drawing ellipses
 ms.assetid: 781db806-950d-4c5b-b022-493f7fd0c4a8
-ms.openlocfilehash: 42316cd0d55b5154b21b4462157e044b30674ebd
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 2e7be3f2c4c710bb24568dd2e70f6f5cc4706c63
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57716290"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59171010"
 ---
-# <a name="how-to-draw-a-filled-ellipse-on-a-windows-form"></a>방법: Windows Form에 채워진된 타원 그리기
+# <a name="how-to-draw-a-filled-ellipse-on-a-windows-form"></a>방법: Windows Form에서 채워진 타원 그리기
 이 예제에서는 폼에 채워진된 타원을 그립니다.  
   
 ## <a name="example"></a>예제  
@@ -37,6 +37,7 @@ ms.locfileid: "57716290"
  항상 호출 해야 <xref:System.IDisposable.Dispose%2A> 와 같은 시스템 리소스를 사용 하는 모든 개체에 <xref:System.Drawing.Brush> 고 <xref:System.Drawing.Graphics> 개체입니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [Windows Forms의 그래픽 및 그리기](graphics-and-drawing-in-windows-forms.md)
 - [그래픽 프로그래밍 시작](getting-started-with-graphics-programming.md)
 - [선 및 채우기 알파 혼합](alpha-blending-lines-and-fills.md)

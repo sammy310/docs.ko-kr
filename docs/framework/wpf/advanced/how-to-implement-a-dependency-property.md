@@ -8,12 +8,12 @@ helpviewer_keywords:
 - dependency properties [WPF], backing properties with
 - properties [WPF], backing with dependency properties
 ms.assetid: 855fd6d7-19ac-493c-bf5e-2f40b57cdc92
-ms.openlocfilehash: 8ee944c521b7e4ec75394c821e8bd509dd4eca74
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: e2f18cb3941be2ebf4315a844c05b91ff49c6aa2
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57374416"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59223803"
 ---
 # <a name="how-to-implement-a-dependency-property"></a>방법: 종속성 속성 구현
 백업 하는 방법을 보여 주는이 예제는 [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] 속성을 <xref:System.Windows.DependencyProperty> 필드, 따라서 종속성 속성을 정의 합니다. 고유 속성을 정의하고 스타일, 데이터 바인딩, 상속, 애니메이션 및 기본값을 포함한 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 기능의 여러 측면을 지원하려면 해당 속성을 종속성 속성으로 구현해야 합니다.  
@@ -33,5 +33,6 @@ ms.locfileid: "57374416"
  개인 필드가 있는 [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] 속성을 단지 백업하는 것과는 반대로 종속성 속성을 구현하는 방법과 이유에 대한 자세한 내용은 [종속성 속성 개요](dependency-properties-overview.md)를 참조하세요.  
   
 ## <a name="see-also"></a>참고자료
+
 - [종속성 속성 개요](dependency-properties-overview.md)
 - [방법 항목](properties-how-to-topics.md)

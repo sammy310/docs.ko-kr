@@ -1,19 +1,19 @@
 ---
-title: '방법: 디자이너를 사용 하 여 Windows Forms DataGrid 컨트롤을 사용 하 여 마스터-세부 목록 만들기'
+title: '방법: 디자이너를 사용하여 Windows Forms DataGrid 컨트롤에 마스터-세부 목록 만들기'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - master-details lists
 - DataGrid control [Windows Forms], master-details lists
 - related tables [Windows Forms], displaying in DataGrid control
 ms.assetid: 19438ba2-f687-4417-a2fb-ab1cd69d4ded
-ms.openlocfilehash: 0bf967ed364447782c8e8df4c86ac32371ac880f
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: f586572c850927ffe71566287986e6db6112c689
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57705157"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59332081"
 ---
-# <a name="how-to-create-master-details-lists-with-the-windows-forms-datagrid-control-using-the-designer"></a>방법: 디자이너를 사용 하 여 Windows Forms DataGrid 컨트롤을 사용 하 여 마스터-세부 목록 만들기
+# <a name="how-to-create-master-details-lists-with-the-windows-forms-datagrid-control-using-the-designer"></a>방법: 디자이너를 사용하여 Windows Forms DataGrid 컨트롤에 마스터-세부 목록 만들기
 
 > [!NOTE]
 >  <xref:System.Windows.Forms.DataGridView> 컨트롤은 <xref:System.Windows.Forms.DataGrid> 컨트롤을 대체하고 여기에 다른 기능을 추가하여 새로 도입된 컨트롤이지만 이전 버전과의 호환성 및 이후 사용 가능성을 고려하여 <xref:System.Windows.Forms.DataGrid> 컨트롤을 계속 유지하도록 선택할 수 있습니다. 자세한 내용은 [Windows Forms DataGridView 및 DataGrid 컨트롤의 차이점](differences-between-the-windows-forms-datagridview-and-datagrid-controls.md)을 참조하십시오.  
@@ -27,33 +27,34 @@ ms.locfileid: "57705157"
   
 ### <a name="to-create-a-master-details-list-in-the-designer"></a>디자이너에서 마스터-세부 정보 목록을 만들려면  
   
-1.  두 개의 추가 <xref:System.Windows.Forms.DataGrid> 폼에 컨트롤을 합니다. 자세한 내용은 [방법: Windows Forms에 컨트롤 추가](how-to-add-controls-to-windows-forms.md)합니다. Visual Studio 2005에는 <xref:System.Windows.Forms.DataGrid> 컨트롤에 없는 경우는 **도구 상자** 기본적으로. 자세한 내용은 [방법: 도구 상자 항목 추가](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms165355(v=vs.100))합니다.  
+1. 두 개의 추가 <xref:System.Windows.Forms.DataGrid> 폼에 컨트롤을 합니다. 자세한 내용은 [방법: Windows Forms에 컨트롤 추가](how-to-add-controls-to-windows-forms.md)합니다. Visual Studio 2005에는 <xref:System.Windows.Forms.DataGrid> 컨트롤에 없는 경우는 **도구 상자** 기본적으로. 자세한 내용은 [방법: 도구 상자 항목 추가](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms165355(v=vs.100))합니다.  
   
     > [!NOTE]
     >  다음 단계를 사용 하는 Visual Studio 2005에 적용 되지 않습니다.는 **데이터 원본** 디자인 타임 데이터 바인딩에 대 한 창. 자세한 내용은 [Visual Studio에서 데이터에 컨트롤 바인딩](/visualstudio/data-tools/bind-controls-to-data-in-visual-studio) 고 [방법: 관련 데이터에는 Windows Forms 응용 프로그램 표시](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/57tx3hhe(v=vs.120))합니다.  
   
-2.  두 개 이상의 테이블을 끌어 **서버 탐색기** 폼입니다.  
+2. 두 개 이상의 테이블을 끌어 **서버 탐색기** 폼입니다.  
   
-3.  **데이터** 메뉴에서 **데이터 집합 생성**합니다.  
+3. **데이터** 메뉴에서 **데이터 집합 생성**합니다.  
   
-4.  XML 디자이너를 사용 하 여 테이블 간의 관계를 설정 합니다. 세부 정보를 참조 하세요. "방법: 만들 XML 스키마 및 데이터 집합에 일 대 다 관계 MSDN에서 ".  
+4. XML 디자이너를 사용 하 여 테이블 간의 관계를 설정 합니다. 세부 정보를 참조 하세요. "방법: 만들 XML 스키마 및 데이터 집합에 일 대 다 관계 MSDN에서 ".  
   
-5.  선택 하 여 관계를 저장할 **모두 저장** 에서 합니다 **파일** 메뉴.  
+5. 선택 하 여 관계를 저장할 **모두 저장** 에서 합니다 **파일** 메뉴.  
   
-6.  구성 된 <xref:System.Windows.Forms.DataGrid> 는 마스터 데이터를 다음과 같이 지정 하려는 컨트롤:  
+6. 구성 된 <xref:System.Windows.Forms.DataGrid> 는 마스터 데이터를 다음과 같이 지정 하려는 컨트롤:  
   
     1.  선택 된 <xref:System.Data.DataSet> 드롭 다운 목록에서를 <xref:System.Windows.Forms.DataGrid.DataSource%2A> 속성입니다.  
   
     2.  드롭다운 목록에서 마스터 테이블 (예: "고객")을 선택 합니다 <xref:System.Windows.Forms.DataGrid.DataMember%2A> 속성입니다.  
   
-7.  구성 된 <xref:System.Windows.Forms.DataGrid> 세부 정보 표에서 다음과 같이 지정 하려는 컨트롤:  
+7. 구성 된 <xref:System.Windows.Forms.DataGrid> 세부 정보 표에서 다음과 같이 지정 하려는 컨트롤:  
   
     1.  선택 된 <xref:System.Data.DataSet> 드롭 다운 목록에서를 <xref:System.Windows.Forms.DataGrid.DataSource%2A> 속성입니다.  
   
     2.  드롭다운 목록에서 마스터 및 세부 테이블 간의 관계 (예: "Customers.CustOrd")를 선택 합니다 <xref:System.Windows.Forms.DataGrid.DataMember%2A> 속성입니다. 관계를 표시 하려면 더하기를 클릭 하 여 노드를 확장 (**+**) 드롭다운 목록에서 마스터 테이블 옆에 있는 기호입니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [DataGrid 컨트롤](datagrid-control-windows-forms.md)
 - [DataGrid 컨트롤 개요](datagrid-control-overview-windows-forms.md)
-- [방법: 데이터 소스에 Windows Forms DataGrid 컨트롤 바인딩](how-to-bind-the-windows-forms-datagrid-control-to-a-data-source.md)
+- [방법: 데이터 원본에 Windows Forms DataGrid 컨트롤 바인딩](how-to-bind-the-windows-forms-datagrid-control-to-a-data-source.md)
 - [Visual Studio에서 데이터에 컨트롤 바인딩](/visualstudio/data-tools/bind-controls-to-data-in-visual-studio)

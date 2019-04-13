@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - classes [WPF], SystemParameters
 ms.assetid: 02e7a5de-94eb-4953-b91c-52e6c872ad5b
-ms.openlocfilehash: a05e2d08c989da70dd7763ad2df238aac03fded4
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 344fb54b48bcbf188b36a29d8205c21deff713c4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57375157"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59199858"
 ---
 # <a name="how-to-use-systemparameters"></a>방법: SystemParameters 사용
 액세스 속성을 사용 하는 방법을 보여주는이 예제 <xref:System.Windows.SystemParameters> 스타일을 지정 하거나 단추를 사용자 지정 합니다.  
@@ -32,8 +32,9 @@ ms.locfileid: "57375157"
  [!code-vb[SystemRes_snip#ParameterResourcesCode](~/samples/snippets/visualbasic/VS_Snippets_Wpf/SystemRes_snip/VisualBasic/Pane1.xaml.vb#parameterresourcescode)]  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Windows.SystemParameters>
-- [시스템 브러시로 영역 그리기](../graphics-multimedia/how-to-paint-an-area-with-a-system-brush.md)
+- [시스템 브러시로 영역 칠하기](../graphics-multimedia/how-to-paint-an-area-with-a-system-brush.md)
 - [SystemFonts 사용](how-to-use-systemfonts.md)
 - [시스템 매개 변수 키 사용](how-to-use-system-parameters-keys.md)
 - [방법 항목](resources-how-to-topics.md)
